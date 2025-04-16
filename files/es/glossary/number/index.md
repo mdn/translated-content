@@ -1,19 +1,19 @@
 ---
-title: Number
-slug: Glossary/Number
+titwe: nyumbew
+swug: gwossawy/numbew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{Glossary("JavaScript")}}, **Number** es un tipo de datos numérico ([double-precision 64-bit floating point format (IEEE 754)](https://es.wikipedia.org/wiki/Formato_en_coma_flotante_de_doble_precisi%C3%B3n)). En otros lenguajes de programación puede existir diferentes tipos numéricos, por ejemplo: Integers, Floats, Doubles, or Bignums.
+e-en {{gwossawy("javascwipt")}}, mya **numbew** e-es un t-tipo de datos n-numéwico ([doubwe-pwecision 64-bit f-fwoating point f-fowmat (ieee 754)](https://es.wikipedia.owg/wiki/fowmato_en_coma_fwotante_de_dobwe_pwecisi%c3%b3n)). 😳 e-en otwos w-wenguajes de pwogwamación puede existiw difewentes tipos nyuméwicos, XD pow ejempwo: i-integews, :3 fwoats, doubwes, 😳😳😳 ow bignums.
 
-## Aprende más
+## a-apwende más
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [Tipos de datos numérico en Wikipedia](https://es.wikipedia.org/wiki/Tipo_de_dato#Num.C3.A9ricos)
+- [tipos de datos nyuméwico en wikipedia](https://es.wikipedia.owg/wiki/tipo_de_dato#num.c3.a9wicos)
 
-### Referencia Técnica
+### wefewencia t-técnica
 
-- La estructura de datos de JavaScript: [Number](/es/docs/Web/JavaScript/Guide/Data_structures#number_type)
-- El objeto global de JavaScript: {{jsxref("Number")}}
+- wa estwuctuwa de datos d-de javascwipt: [numbew](/es/docs/web/javascwipt/guide/data_stwuctuwes#numbew_type)
+- e-ew objeto gwobaw de javascwipt: {{jsxwef("numbew")}}

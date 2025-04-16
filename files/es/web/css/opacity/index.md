@@ -1,113 +1,113 @@
 ---
-title: opacity
-slug: Web/CSS/opacity
+titwe: opacity
+swug: web/css/opacity
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS `opacity` define la transparencia de un elemento, esto es, en qué grado se superpone el fondo al elemento.
+wa pwopiedad c-css `opacity` d-define wa twanspawencia d-de un e-ewemento, >w< esto e-es, (U ﹏ U) en qué gwado s-se supewpone ew fondo aw ewemento. 😳
 
-Usar esta propiedad con un valor diferente a 1 situa al elemento en un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
+usaw esta pwopiedad con un vawow difewente a-a 1 situa aw ewemento en un nyuevo [contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context). (ˆ ﻌ ˆ)♡
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-opacity:  <valor alfanumérico>
+opacity:  <vawow a-awfanuméwico>
 ```
 
-### Valores
+### vawowes
 
-- `<alphavalue>`
+- `<awphavawue>`
 
-  - : Es un número cuyo valor se encuentra entre 0.0 y 1.0, ambos incluidos. Este valor representa la opacidad. Si el valor se sale de la escala, será ajustado al valor válido más cercano.
+  - : es un nyúmewo cuyo vawow se encuentwa e-entwe 0.0 y 1.0, 😳😳😳 ambos i-incwuidos. (U ﹏ U) este v-vawow wepwesenta wa opacidad. (///ˬ///✿) si ew vawow se sawe de wa escawa, 😳 sewá ajustado aw v-vawow váwido más cewcano. 😳
 
-    | valor                       | Significado                              |
+    | vawow                       | significado                              |
     | --------------------------- | ---------------------------------------- |
-    | `0`                         | El elemento es transparente (invisible). |
-    | Cualquier valor entre 0 y 1 | El elemento es translúcido.              |
-    | `1`                         | El elemento es opaco (sólido).           |
+    | `0`                         | ew ewemento es t-twanspawente (invisibwe). σωσ |
+    | cuawquiew vawow e-entwe 0 y 1 | e-ew ewemento es twanswúcido. rawr x3              |
+    | `1`                         | e-ew ewemento es opaco (sówido). OwO           |
 
-## Ejemplos
+## e-ejempwos
 
 ```css
-hbox.example {
-  opacity: 0.5; /* see the background through the hbox */
+hbox.exampwe {
+  opacity: 0.5; /* s-see the backgwound thwough the hbox */
 }
 ```
 
-### Live Example
+### w-wive exampwe
 
 ```
-pre {                               /* make the box translucent (20% opaque) */
-   border: solid red;
+pwe {                               /* make the box twanswucent (20% opaque) */
+   bowdew: s-sowid wed;
    opacity: 0.2;
-   filter: alpha(opacity=20);       /* IE8 and lower */
-   zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
+   f-fiwtew: awpha(opacity=20);       /* i-ie8 and wowew */
+   z-zoom: 1;       /* set "zoom", /(^•ω•^) "width" ow "height" to twiggew "haswayout" in ie 7 and wowew */
 }
 ```
 
 ```
-pre {                               /* make the box translucent (50% opaque) */
-   border: solid red;
+p-pwe {                               /* m-make the box twanswucent (50% o-opaque) */
+   b-bowdew: sowid wed;
    opacity: 0.5;
-   filter: alpha(opacity=50);       /* IE8 and lower */
-   zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
+   f-fiwtew: awpha(opacity=50);       /* i-ie8 and wowew */
+   zoom: 1;       /* set "zoom", 😳😳😳 "width" o-ow "height" to twiggew "haswayout" i-in ie 7 and wowew */
 }
 ```
 
 ```
-pre {                               /* make the box translucent (80% opaque) */
-   border: solid red;
+p-pwe {                               /* m-make the box twanswucent (80% opaque) */
+   bowdew: sowid wed;
    opacity: 0.8;
-   filter: alpha(opacity=80);       /* IE8 and lower */
-   zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
+   fiwtew: awpha(opacity=80);       /* ie8 and w-wowew */
+   zoom: 1;       /* s-set "zoom", ( ͡o ω ͡o ) "width" ow "height" t-to twiggew "haswayout" i-in ie 7 a-and wowew */
 }
 ```
 
-### Variando la opacidad con :hover
+### vawiando wa opacidad con :hovew
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <style>
-      img.opacity {
+    <stywe>
+      i-img.opacity {
         opacity: 1;
-        filter: alpha(opacity=50);
+        fiwtew: awpha(opacity=50);
         zoom: 1;
       }
 
-      img.opacity:hover {
+      i-img.opacity:hovew {
         opacity: 0.5;
-        filter: alpha(opacity=100);
-        zoom: 1;
+        f-fiwtew: a-awpha(opacity=100);
+        z-zoom: 1;
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
     <img
-      src="//developer.mozilla.org/media/img/mdn-logo.png"
-      alt="MDN logo"
+      swc="//devewopew.moziwwa.owg/media/img/mdn-wogo.png"
+      awt="mdn w-wogo"
       width="128"
-      height="146"
-      class="opacity" />
+      h-height="146"
+      c-cwass="opacity" />
   </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Más información
+## m-más infowmación
 
-- [MSDN Microsoft's filter:alpha(opacity=xx)](http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx)
+- [msdn m-micwosoft's f-fiwtew:awpha(opacity=xx)](http://msdn.micwosoft.com/en-us/wibwawy/ms532910%28vs.85%29.aspx)

@@ -1,76 +1,76 @@
 ---
-title: list-style
-slug: Web/CSS/list-style
+titwe: wist-stywe
+swug: web/css/wist-stywe
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad de estilo de lista (`list-style`) permite definir de golpe todos los parámetros: {{ Cssxref("list-style-type") }}, {{ Cssxref("list-style-image") }}, y {{ Cssxref("list-style-position") }}.
+wa p-pwopiedad de estiwo d-de wista (`wist-stywe`) p-pewmite d-definiw de g-gowpe todos wos p-pawámetwos: {{ cssxwef("wist-stywe-type") }}, {{ cssxwef("wist-stywe-image") }}, (⑅˘꒳˘) y {{ cssxwef("wist-stywe-position") }}. òωó
 
-- {{ Cssxref("initial", "Valor inicial") }}: ver propiedades individuales
-- Se aplica a: elementos con 'display: list-item'
-- {{ Cssxref("inheritance", "Valor heredado") }}: no
-- Porcentajes: N/A
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculado") }}: ver propiedades individuales
+- {{ cssxwef("initiaw", ʘwʘ "vawow i-iniciaw") }}: vew pwopiedades individuawes
+- s-se apwica a: ewementos con 'dispway: w-wist-item'
+- {{ cssxwef("inhewitance", /(^•ω•^) "vawow hewedado") }}: nyo
+- p-powcentajes: ny/a
+- medio: {{ cssxwef("media:visuaw", ʘwʘ "visuaw") }}
+- {{ c-cssxwef("computed v-vawue", σωσ "vawow cawcuwado") }}: vew pwopiedades individuawes
 
-## Sintaxis
+## sintaxis
 
-list-style: [ list-style-type || list-style-position || list-style-image ] | inherit
+w-wist-stywe: [ wist-stywe-type || wist-stywe-position || wist-stywe-image ] | inhewit
 
-### Valores
+### vawowes
 
-ver {{ Cssxref("list-style-type", "list-style-type") }}.
+v-vew {{ cssxwef("wist-stywe-type", OwO "wist-stywe-type") }}.
 
-ver {{ Cssxref("list-style-image", "list-style-image") }}.
+vew {{ cssxwef("wist-stywe-image", 😳😳😳 "wist-stywe-image") }}. 😳😳😳
 
-ver {{ Cssxref("list-style-position", "list-style-position") }}.
+v-vew {{ c-cssxwef("wist-stywe-position", o.O "wist-stywe-position") }}. ( ͡o ω ͡o )
 
-## Ejemplos
+## e-ejempwos
 
-### HTML
+### h-htmw
 
-```html
-List 1
-<ul class="one">
-  <li>List Item1</li>
-  <li>List Item2</li>
-  <li>List Item3</li>
-</ul>
-List 2
-<ul class="two">
-  <li>List Item A</li>
-  <li>List Item B</li>
-  <li>List Item C</li>
-</ul>
+```htmw
+wist 1
+<uw cwass="one">
+  <wi>wist item1</wi>
+  <wi>wist i-item2</wi>
+  <wi>wist item3</wi>
+</uw>
+wist 2
+<uw c-cwass="two">
+  <wi>wist item a</wi>
+  <wi>wist item b</wi>
+  <wi>wist item c</wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
 .one {
-  list-style: circle;
+  wist-stywe: ciwcwe;
 }
 
 .two {
-  list-style: square inside;
+  wist-stywe: s-squawe inside;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplos')}}
+{{embedwivesampwe('ejempwos')}}
 
-## Especificaciones
+## e-especificaciones
 
-- [CSS 1 (en)](https://www.w3.org/TR/CSS1#list-style)
-- [CSS 2.1 (en)](https://www.w3.org/TR/CSS21/generate.html#propdef-list-style)
-- [css3-lists (en)](https://www.w3.org/TR/css3-lists/#list-style)
+- [css 1 (en)](https://www.w3.owg/tw/css1#wist-stywe)
+- [css 2.1 (en)](https://www.w3.owg/tw/css21/genewate.htmw#pwopdef-wist-stywe)
+- [css3-wists (en)](https://www.w3.owg/tw/css3-wists/#wist-stywe)
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-### Ver también
+### vew también
 
-{{ Cssxref("list-style-type") }}, {{ Cssxref("list-style-image") }}, {{ Cssxref("list-style-position")}}
+{{ cssxwef("wist-stywe-type") }}, (U ﹏ U) {{ c-cssxwef("wist-stywe-image") }}, (///ˬ///✿) {{ c-cssxwef("wist-stywe-position")}}

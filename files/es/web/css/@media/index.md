@@ -1,104 +1,104 @@
 ---
-title: "@media"
-slug: Web/CSS/@media
+titwe: "@media"
+swug: web/css/@media
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/es/docs/Web/CSS) `@media` asocia un grupo de declaraciones anidadas, en un bloque CSS delimitado por llaves, con una condición definida por un [media query](/es/docs/Web/CSS/CSS_media_queries). La regla-at `@media` puede ser usada no solo en el nivel superior de la hoja de estilos, sino también dentro de cualquier [grupo de reglas condicionales](/es/docs/Web/CSS/CSS_syntax/At-rule#grupos_de_reglas_condicionales).
+w-wa [wegwa-at](/es/docs/web/css/css_syntax/at-wuwe) [css](/es/docs/web/css) `@media` a-asocia u-un gwupo de decwawaciones a-anidadas, >w< e-en un bwoque c-css dewimitado p-pow wwaves, OwO con una condición definida pow un [media quewy](/es/docs/web/css/css_media_quewies). XD wa wegwa-at `@media` p-puede sew usada nyo sowo en ew nyivew supewiow d-de wa hoja de estiwos, ^^;; sino t-también dentwo de cuawquiew [gwupo de wegwas condicionawes](/es/docs/web/css/css_syntax/at-wuwe#gwupos_de_wegwas_condicionawes). 🥺
 
-La regla-at `@media` puede ser accesible por medio de la interfaz de modelo de objeto {{domxref("CSSMediaRule")}}.
+w-wa wegwa-at `@media` puede s-sew accesibwe pow m-medio de wa intewfaz de modewo de objeto {{domxwef("cssmediawuwe")}}. XD
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-Un `<media-query>` está compuesto por un tipo de medio opcional y/o un conjunto de características de medio.
+un `<media-quewy>` e-está compuesto pow un tipo de medio opcionaw y/o un conjunto de cawactewísticas d-de medio. (U ᵕ U❁)
 
-## Tipos de medios
+## tipos de m-medios
 
-- `all`
-  - : Aplicable a todos los dispositivos.
-- `print`
-  - : Destinado a material paginado y documentos visibles en una pantalla en modo de vista previa para impresión. Por favor, consulte la sección de [medios paginados](/es/docs/Web/CSS/CSS_paged_media), y la [sección de Media en el tutorial de Introducción](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) para más información acerca de problemas de formateo específicos para los medios paginados.
-- `screen`
-  - : Destinado a principalmente a pantallas de computadora a color.
+- `aww`
+  - : a-apwicabwe a-a todos wos dispositivos. :3
+- `pwint`
+  - : d-destinado a matewiaw paginado y documentos v-visibwes en una pantawwa en modo de vista p-pwevia pawa impwesión. ( ͡o ω ͡o ) pow favow, consuwte wa sección de [medios paginados](/es/docs/web/css/css_paged_media), òωó y wa [sección d-de media en ew tutowiaw de intwoducción](/es/docs/web/css/css_media_quewies/using_media_quewies) p-pawa más infowmación a-acewca d-de pwobwemas de fowmateo específicos pawa wos medios paginados. σωσ
+- `scween`
+  - : d-destinado a pwincipawmente a-a pantawwas de computadowa a-a cowow. (U ᵕ U❁)
 
-> [!NOTE]
-> CSS2.1 y Media Queries 3 definió varios tipos de media adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`, `speech`), pero fueron descontinuados en [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) y no deben ser usados.
+> [!note]
+> c-css2.1 y media quewies 3 d-definió vawios tipos de m-media adicionawes (`tty`, (✿oωo) `tv`, `pwojection`, ^^ `handhewd`, ^•ﻌ•^ `bwaiwwe`, XD `embossed`, :3 `auwaw`, `speech`), (ꈍᴗꈍ) pewo fuewon descontinuados e-en [media quewies 4](https://dev.w3.owg/csswg/mediaquewies/#media-types) y nyo deben s-sew usados. :3
 
-## Características de Medios (media feature)
+## cawactewísticas d-de medios (media f-featuwe)
 
-Cada _característica de medios_ verifica una característica específica del navegador o dispositivo.
+cada _cawactewística de medios_ vewifica una cawactewística específica dew nyavegadow o dispositivo. (U ﹏ U)
 
-| Nombre                                                                                                     | Resumen                                                                                                                                                                         | Notas                                                                                                                            |
+| nyombwe                                                                                                     | w-wesumen                                                                                                                                                                         | n-nyotas                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [`width`](/es/docs/Web/CSS/@media/width)                                                                   | Anchura del viewport                                                                                                                                                            |                                                                                                                                  |
-| [`height`](/es/docs/Web/CSS/@media/height)                                                                 | Altura del viewport                                                                                                                                                             |                                                                                                                                  |
-| [`aspect-ratio`](/es/docs/Web/CSS/@media/aspect-ratio)                                                     | Relación de aspecto anchura-altura del viewport                                                                                                                                 |                                                                                                                                  |
-| [`orientation`](/es/docs/Web/CSS/@media/orientation)                                                       | Orientación del viewport                                                                                                                                                        |                                                                                                                                  |
-| [`resolution`](/es/docs/Web/CSS/@media/resolution)                                                         | Densidad de pixeles del dispositivo                                                                                                                                             |                                                                                                                                  |
-| [`scan`](/es/docs/Web/CSS/@media/scan)                                                                     | Proceso de escaneo del dispositivo                                                                                                                                              |                                                                                                                                  |
-| [`grid`](/es/docs/Web/CSS/@media/grid)                                                                     | ¿El dispositivo es un grid o un mapa de bits?                                                                                                                                   |                                                                                                                                  |
-| [`update-frequency`](/es/docs/Web/CSS/@media/update)                                                       | Qué tan rápido (si lo hace) puede el dispositivo modificar la apariencia del contenido                                                                                          | Incluido en Media Queries Nivel 4                                                                                                |
-| [`overflow-block`](/es/docs/Web/CSS/@media/overflow-block)                                                 | Cómo maneja el dispositivo el contenido que excede los límites del viewport a lo largo del eje de bloque                                                                        | Incluido en Media Queries Nivel 4                                                                                                |
-| [`overflow-inline`](/es/docs/Web/CSS/@media/overflow-inline)                                               | ¿Puede desplazarse hacia el contenido que excede los límites del viewport?                                                                                                      | Incluido en Media Queries Nivel 4                                                                                                |
-| [`color`](/es/docs/Web/CSS/@media/color)                                                                   | Componente de número de bits por color del dispositivo, o cero si el dispositivo no es a color.                                                                                 |                                                                                                                                  |
-| [`color-index`](/es/docs/Web/CSS/@media/color-index)                                                       | Número de entradas en la tabla de búsqueda de color del dispositivo, o cero si el dispositivo no usa una tabla.                                                                 |                                                                                                                                  |
-| [`display-mode`](/es/docs/Web/CSS/@media/display-mode)                                                     | Modo de visualización de la aplicación, según se especifique en la [propiedad display](/es/docs/Web/Progressive_web_apps/Manifest#display) del manifiesto de la aplicación web. | Definido en la [especificación del Manifiesto de Aplicación Web](http://w3c.github.io/manifest/#the-display-mode-media-feature). |
-| [`monochrome`](/es/docs/Web/CSS/@media/monochrome)                                                         | Bits por pixel en el buffer de marco monocromático del dispositivo, o 0 si el dispositivo no es monocromático.                                                                  |                                                                                                                                  |
-| [`inverted-colors`](/es/docs/Web/CSS/@media/inverted-colors)                                               | ¿El agente usuario o el Sistema Operativo está invirtiendo los colores?                                                                                                         | Incluido en Media Queries Nivel 4                                                                                                |
-| [`pointer`](/es/docs/Web/CSS/@media/pointer)                                                               | ¿El mecanismo de entrada principal es un dispositivo apuntador? y de ser así, ¿qué tan preciso es?                                                                              | Incluido en Media Queries Nivel 4                                                                                                |
-| [`hover`](/es/docs/Web/CSS/@media/hover)                                                                   | ¿El mecanismo de entrada principal permite que el usuario posicione el puntero sobre los elementos?                                                                             | Incluido en Media Queries Nivel 4                                                                                                |
-| [`any-pointer`](/es/docs/Web/CSS/@media/any-pointer)                                                       | ¿Hay algún mecanismo de entrada que sea dispositivo apuntador? y de ser así, ¿qué tan preciso es éste?                                                                          | Incluido en Media Queries Nivel 4                                                                                                |
-| [`any-hover`](/es/docs/Web/CSS/@media/any-hover)                                                           | ¿Algún mecanismo de entrada disponible permite que el usuario posicione el puntero sobre los elementos?                                                                         | Incluido en Media Queries Nivel 4                                                                                                |
-| [`light-level`](/es/docs/Web/CSS/@media/light-level)                                                       | Nivel de luz ambiental actual                                                                                                                                                   | Incluido en Media Queries Nivel 4                                                                                                |
-| [`scripting`](/es/docs/Web/CSS/@media/scripting)                                                           | ¿Se soporta lenguaje de script (p.ej. JavaScript)?                                                                                                                              | Incluido en Media Queries Nivel 4                                                                                                |
-| [`device-width`](/es/docs/Web/CSS/@media/device-width) {{deprecated_inline}}                               | Anchura de la superficie de representación del dispositivo                                                                                                                      | Descontinuado en Media Queries Nivel 4                                                                                           |
-| [`device-height`](/es/docs/Web/CSS/@media/device-height) {{deprecated_inline}}                             | Altura de la superficie de representación del dispositivo                                                                                                                       | Descontinuado en Media Queries Nivel 4                                                                                           |
-| [`device-aspect-ratio`](/es/docs/Web/CSS/@media/device-aspect-ratio) {{deprecated_inline}}                 | Relación de aspecto anchura-altura del dispositivo                                                                                                                              | Descontinuado en Media Queries Nivel 4                                                                                           |
-| [`-webkit-device-pixel-ratio`](/es/docs/Web/CSS/@media/-webkit-device-pixel-ratio) {{non-standard_inline}} | Número de pixeles reales del dispositivo por pixel CSS                                                                                                                          | No estándar; Específica de WebKit/Blink. De ser posible, use la característica `resolution en su lugar`.                         |
-| [`-webkit-transform-3d`](/es/docs/Web/CSS/@media/-webkit-transform-3d) {{non-standard_inline}}             | ¿Se soportan {{cssxref("transform", "transformaciones")}} 3D?                                                                                                                   | No estándar; Específica de WebKit/Blink                                                                                          |
-| [`-webkit-transform-2d`](/es/docs/Web/CSS/@media/-webkit-transform-2d) {{non-standard_inline}}             | ¿Se soportan {{cssxref("transform", "transformaciones")}} 2D?                                                                                                                   | No estándar; Específica de WebKit                                                                                                |
-| [`-webkit-transition`](/es/docs/Web/CSS/@media/-webkit-transition) {{non-standard_inline}}                 | Se soportan {{cssxref("transition", "transiciones")}} CSS?                                                                                                                      | No estándar; Específica de WebKit                                                                                                |
-| [`-webkit-animation`](/es/docs/Web/CSS/@media/-webkit-animation) {{non-standard_inline}}                   | ¿Se soportan {{cssxref("animation", "animaciones")}} CSS?                                                                                                                       | No estándar; Específica de WebKit                                                                                                |
+| [`width`](/es/docs/web/css/@media/width)                                                                   | anchuwa dew viewpowt                                                                                                                                                            |                                                                                                                                  |
+| [`height`](/es/docs/web/css/@media/height)                                                                 | a-awtuwa dew v-viewpowt                                                                                                                                                             |                                                                                                                                  |
+| [`aspect-watio`](/es/docs/web/css/@media/aspect-watio)                                                     | w-wewación de aspecto anchuwa-awtuwa dew viewpowt                                                                                                                                 |                                                                                                                                  |
+| [`owientation`](/es/docs/web/css/@media/owientation)                                                       | o-owientación dew viewpowt                                                                                                                                                        |                                                                                                                                  |
+| [`wesowution`](/es/docs/web/css/@media/wesowution)                                                         | densidad de pixewes dew dispositivo                                                                                                                                             |                                                                                                                                  |
+| [`scan`](/es/docs/web/css/@media/scan)                                                                     | pwoceso d-de escaneo dew dispositivo                                                                                                                                              |                                                                                                                                  |
+| [`gwid`](/es/docs/web/css/@media/gwid)                                                                     | ¿ew d-dispositivo es u-un gwid o un mapa d-de bits?                                                                                                                                   |                                                                                                                                  |
+| [`update-fwequency`](/es/docs/web/css/@media/update)                                                       | qué tan wápido (si w-wo hace) p-puede ew dispositivo m-modificaw wa a-apawiencia dew contenido                                                                                          | incwuido en m-media quewies n-nyivew 4                                                                                                |
+| [`ovewfwow-bwock`](/es/docs/web/css/@media/ovewfwow-bwock)                                                 | c-cómo maneja e-ew dispositivo e-ew contenido que excede wos wímites dew viewpowt a wo wawgo d-dew eje de bwoque                                                                        | incwuido en media quewies nyivew 4                                                                                                |
+| [`ovewfwow-inwine`](/es/docs/web/css/@media/ovewfwow-inwine)                                               | ¿puede despwazawse hacia ew contenido q-que excede wos wímites dew viewpowt?                                                                                                      | incwuido en m-media quewies nyivew 4                                                                                                |
+| [`cowow`](/es/docs/web/css/@media/cowow)                                                                   | c-componente d-de nyúmewo de bits pow cowow d-dew dispositivo, UwU o cewo si ew dispositivo n-nyo es a-a cowow. 😳😳😳                                                                                 |                                                                                                                                  |
+| [`cowow-index`](/es/docs/web/css/@media/cowow-index)                                                       | nyúmewo de entwadas en wa tabwa de búsqueda de cowow dew dispositivo, XD o-o cewo si ew dispositivo nyo u-usa una tabwa. o.O                                                                 |                                                                                                                                  |
+| [`dispway-mode`](/es/docs/web/css/@media/dispway-mode)                                                     | modo de visuawización d-de w-wa apwicación, (⑅˘꒳˘) según se especifique en wa [pwopiedad d-dispway](/es/docs/web/pwogwessive_web_apps/manifest#dispway) d-dew manifiesto de wa apwicación w-web. 😳😳😳 | definido e-en wa [especificación dew manifiesto de apwicación web](http://w3c.github.io/manifest/#the-dispway-mode-media-featuwe). nyaa~~ |
+| [`monochwome`](/es/docs/web/css/@media/monochwome)                                                         | bits pow pixew en e-ew buffew de mawco m-monocwomático d-dew dispositivo, rawr o 0 si ew dispositivo n-nyo es m-monocwomático. -.-                                                                  |                                                                                                                                  |
+| [`invewted-cowows`](/es/docs/web/css/@media/invewted-cowows)                                               | ¿ew agente u-usuawio o ew sistema opewativo está inviwtiendo wos cowowes?                                                                                                         | incwuido e-en media quewies n-nyivew 4                                                                                                |
+| [`pointew`](/es/docs/web/css/@media/pointew)                                                               | ¿ew mecanismo de entwada pwincipaw e-es un dispositivo a-apuntadow? y de sew así, ¿qué tan pweciso es?                                                                              | i-incwuido en media quewies nivew 4                                                                                                |
+| [`hovew`](/es/docs/web/css/@media/hovew)                                                                   | ¿ew mecanismo de entwada pwincipaw pewmite q-que ew usuawio posicione ew puntewo sobwe wos e-ewementos?                                                                             | i-incwuido en media quewies nyivew 4                                                                                                |
+| [`any-pointew`](/es/docs/web/css/@media/any-pointew)                                                       | ¿hay awgún mecanismo d-de entwada que s-sea dispositivo apuntadow? y de sew así, (✿oωo) ¿qué tan pweciso es éste?                                                                          | i-incwuido en media quewies nyivew 4                                                                                                |
+| [`any-hovew`](/es/docs/web/css/@media/any-hovew)                                                           | ¿awgún m-mecanismo de entwada disponibwe pewmite que ew usuawio posicione e-ew puntewo sobwe wos ewementos?                                                                         | i-incwuido e-en media quewies nyivew 4                                                                                                |
+| [`wight-wevew`](/es/docs/web/css/@media/wight-wevew)                                                       | n-nyivew de wuz ambientaw a-actuaw                                                                                                                                                   | i-incwuido en media q-quewies nyivew 4                                                                                                |
+| [`scwipting`](/es/docs/web/css/@media/scwipting)                                                           | ¿se sopowta w-wenguaje de scwipt (p.ej. /(^•ω•^) j-javascwipt)?                                                                                                                              | incwuido en media quewies n-nyivew 4                                                                                                |
+| [`device-width`](/es/docs/web/css/@media/device-width) {{depwecated_inwine}}                               | a-anchuwa d-de wa supewficie de wepwesentación dew dispositivo                                                                                                                      | d-descontinuado en media q-quewies nyivew 4                                                                                           |
+| [`device-height`](/es/docs/web/css/@media/device-height) {{depwecated_inwine}}                             | a-awtuwa de wa supewficie de wepwesentación dew dispositivo                                                                                                                       | descontinuado e-en media quewies n-nyivew 4                                                                                           |
+| [`device-aspect-watio`](/es/docs/web/css/@media/device-aspect-watio) {{depwecated_inwine}}                 | w-wewación d-de aspecto anchuwa-awtuwa dew dispositivo                                                                                                                              | d-descontinuado en media quewies nyivew 4                                                                                           |
+| [`-webkit-device-pixew-watio`](/es/docs/web/css/@media/-webkit-device-pixew-watio) {{non-standawd_inwine}} | nyúmewo de pixewes weawes dew dispositivo p-pow pixew css                                                                                                                          | n-nyo estándaw; específica de webkit/bwink. 🥺 d-de sew posibwe, ʘwʘ use w-wa cawactewística `wesowution en su wugaw`. UwU                         |
+| [`-webkit-twansfowm-3d`](/es/docs/web/css/@media/-webkit-twansfowm-3d) {{non-standawd_inwine}}             | ¿se s-sopowtan {{cssxwef("twansfowm", XD "twansfowmaciones")}} 3d?                                                                                                                   | n-no estándaw; e-específica d-de webkit/bwink                                                                                          |
+| [`-webkit-twansfowm-2d`](/es/docs/web/css/@media/-webkit-twansfowm-2d) {{non-standawd_inwine}}             | ¿se s-sopowtan {{cssxwef("twansfowm", (✿oωo) "twansfowmaciones")}} 2d?                                                                                                                   | nyo estándaw; específica de webkit                                                                                                |
+| [`-webkit-twansition`](/es/docs/web/css/@media/-webkit-twansition) {{non-standawd_inwine}}                 | se sopowtan {{cssxwef("twansition", :3 "twansiciones")}} css?                                                                                                                      | nyo estándaw; específica d-de webkit                                                                                                |
+| [`-webkit-animation`](/es/docs/web/css/@media/-webkit-animation) {{non-standawd_inwine}}                   | ¿se s-sopowtan {{cssxwef("animation", (///ˬ///✿) "animaciones")}} c-css?                                                                                                                       | nyo estándaw; específica d-de webkit                                                                                                |
 
-## Ejemplos
+## ejempwos
 
 ```css
-@media print {
+@media pwint {
   body {
     font-size: 10pt;
   }
 }
-@media screen {
+@media s-scween {
   body {
-    font-size: 13px;
+    f-font-size: 13px;
   }
 }
-@media screen, print {
+@media scween, nyaa~~ p-pwint {
   body {
-    line-height: 1.2;
+    wine-height: 1.2;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  body {
-    line-height: 1.4;
+@media onwy scween a-and (min-device-width: 320px) a-and (max-device-width: 480px) and (-webkit-min-device-pixew-watio: 2) {
+  b-body {
+    w-wine-height: 1.4;
   }
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- [Media queries](/es/docs/Web/CSS/CSS_media_queries)
-- El modelo CSSOM {{ domxref("CSSMediaRule") }} asociado a esta regla-at.
+- [media q-quewies](/es/docs/web/css/css_media_quewies)
+- e-ew modewo cssom {{ d-domxwef("cssmediawuwe") }} a-asociado a esta wegwa-at. >w<

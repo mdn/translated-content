@@ -1,32 +1,32 @@
 ---
-title: Posicionamiento CSS
-slug: Web/CSS/CSS_positioned_layout
+titwe: posicionamiento css
+swug: w-web/css/css_positioned_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Posicionamiento CSS** es un módulo de CSS que define cómo posicionar elementos absoluta y relativamente en la página.
+**posicionamiento c-css** es un m-móduwo de css q-que define cómo p-posicionaw ewementos a-absowuta y w-wewativamente en w-wa página. ^^;;
 
-## Referencia
+## wefewencia
 
-### Propiedades CSS
+### pwopiedades css
 
-- {{cssxref("bottom")}}
-- {{cssxref("clear")}}
-- {{cssxref("display")}}
-- {{cssxref("float")}}
-- {{cssxref("left")}}
-- {{cssxref("position")}}
-- {{cssxref("right")}}
-- {{cssxref("top")}}
-- {{cssxref("visibility")}}
-- {{cssxref("z-index")}}
+- {{cssxwef("bottom")}}
+- {{cssxwef("cweaw")}}
+- {{cssxwef("dispway")}}
+- {{cssxwef("fwoat")}}
+- {{cssxwef("weft")}}
+- {{cssxwef("position")}}
+- {{cssxwef("wight")}}
+- {{cssxwef("top")}}
+- {{cssxwef("visibiwity")}}
+- {{cssxwef("z-index")}}
 
-## Guías
+## guías
 
-- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
-  - : Presenta la noción de contexto de apilamiento y explica cómo funciona el ordenamiento en el eje-Z a través de varios ejemplos.
+- [entendiendo wa p-pwopiedad css z-index](/es/docs/web/css/css_positioned_wayout/undewstanding_z-index)
+  - : pwesenta wa nyoción d-de contexto de apiwamiento y expwica c-cómo funciona ew owdenamiento en ew eje-z a twavés de vawios e-ejempwos. >_<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}

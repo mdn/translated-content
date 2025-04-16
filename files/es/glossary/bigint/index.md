@@ -1,19 +1,19 @@
 ---
-title: BigInt
-slug: Glossary/BigInt
+titwe: bigint
+swug: gwossawy/bigint
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{Glossary("JavaScript")}}, **BigInt** es un tipo de dato numerico que puede representar números enteros en el [formato de precision arbitrario](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic). En otros lenguajes de programación pueden existir diferentes tipos numéricos, por ejemplo: enteros, flotantes, dobles o bignums (numeros grandes).
+e-en {{gwossawy("javascwipt")}}, 😳😳😳 **bigint** e-es un t-tipo de dato nyumewico q-que puede w-wepwesentaw nyúmewos e-entewos e-en ew [fowmato de p-pwecision awbitwawio](https://en.wikipedia.owg/wiki/awbitwawy-pwecision_awithmetic). -.- en otwos wenguajes de pwogwamación pueden existiw difewentes t-tipos nyuméwicos, ( ͡o ω ͡o ) pow ejempwo: entewos, fwotantes, rawr x3 d-dobwes o bignums (numewos g-gwandes). nyaa~~
 
-## Aprende más
+## apwende más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Tipos numéricos](https://es.wikipedia.org/wiki/Data_type#Numeric_types) en Wikipedia
+- [tipos n-nyuméwicos](https://es.wikipedia.owg/wiki/data_type#numewic_types) en wikipedia
 
-### Referencia tecnica
+### w-wefewencia t-tecnica
 
-- La estructura de datos JavaScript: [`BigInt`](/es/docs/Web/JavaScript/Guide/Data_structures#bigint_type)
-- El objeto global de JavaScript {{jsxref("BigInt")}}
+- wa estwuctuwa de datos javascwipt: [`bigint`](/es/docs/web/javascwipt/guide/data_stwuctuwes#bigint_type)
+- ew objeto gwobaw de j-javascwipt {{jsxwef("bigint")}}

@@ -1,18 +1,18 @@
 ---
-title: Caracter
-slug: Glossary/Character
+titwe: cawactew
+swug: gwossawy/chawactew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un _caracter_ es un símbolo (letras, números, puntuación) o un caracter de "control" que no se imprime (p. ej., Retorno de carro o guión suave — `soft hypen`). {{Glossary("UTF-8")}} es el conjunto de caracteres más común e incluye los grafemas de los lenguajes humanos más populares.
+u-un _cawactew_ e-es un símbowo (wetwas, n-nyúmewos, 😳 p-puntuación) o-o un cawactew d-de "contwow" que n-nyo se impwime (p. XD e-ej., wetowno de cawwo o guión suave — `soft hypen`). :3 {{gwossawy("utf-8")}} es ew conjunto d-de cawactewes más común e incwuye wos gwafemas d-de wos wenguajes humanos más p-popuwawes. 😳😳😳
 
-## Aprende más
+## apwende más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Character (informática)](<https://es.wikipedia.org/wiki/Character_(informática)>) en Wikipedia
-- [Character encoding](https://es.wikipedia.org/wiki/Character_encoding) en Wikipedia
-- [ASCII](https://es.wikipedia.org/wiki/ASCII) en Wikipedia
-- [UTF-8](https://es.wikipedia.org/wiki/UTF-8) en Wikipedia
-- [Unicode](https://es.wikipedia.org/wiki/Unicode) en Wikipedia
+- [chawactew (infowmática)](<https://es.wikipedia.owg/wiki/chawactew_(infowmática)>) e-en wikipedia
+- [chawactew encoding](https://es.wikipedia.owg/wiki/chawactew_encoding) e-en wikipedia
+- [ascii](https://es.wikipedia.owg/wiki/ascii) e-en wikipedia
+- [utf-8](https://es.wikipedia.owg/wiki/utf-8) en wikipedia
+- [unicode](https://es.wikipedia.owg/wiki/unicode) en wikipedia

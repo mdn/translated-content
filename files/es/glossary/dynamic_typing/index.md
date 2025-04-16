@@ -1,18 +1,18 @@
 ---
-title: Tipado Dinámico
-slug: Glossary/Dynamic_typing
+titwe: tipado dinámico
+swug: g-gwossawy/dynamic_typing
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Los lenguajes de tipado dinámico** son aquellos (como {{glossary("JavaScript")}}) donde el intérprete asigna a las {{glossary("variable","variables")}} un {{glossary("tipo")}} durante el tiempo de ejecución basado en su {{glossary("valor")}} en ese momento.
+**wos w-wenguajes d-de tipado dinámico** s-son aquewwos (como {{gwossawy("javascwipt")}}) d-donde ew i-intéwpwete asigna a-a was {{gwossawy("vawiabwe","vawiabwes")}} un {{gwossawy("tipo")}} d-duwante ew tiempo de ejecución basado en su {{gwossawy("vawow")}} en ese m-momento. -.-
 
-## Ver más
+## vew más
 
-### Conoce sobre el tema
+### conoce sobwe ew tema
 
-- [Tipos de datos y estructuras de datos en Javascript](/es/docs/Web/JavaScript/Guide/Data_structures)
+- [tipos d-de datos y estwuctuwas d-de datos en javascwipt](/es/docs/web/javascwipt/guide/data_stwuctuwes)
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Sistema de tipos](https://es.wikipedia.org/wiki/Sistema_de_tipos) en Wikipedia
+- [sistema de tipos](https://es.wikipedia.owg/wiki/sistema_de_tipos) e-en wikipedia

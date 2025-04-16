@@ -1,331 +1,331 @@
 ---
-title: XMLHttpRequest
-slug: Web/API/XMLHttpRequest
+titwe: xmwhttpwequest
+swug: web/api/xmwhttpwequest
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-`XMLHttpRequest` es un objeto [JavaScript](/es/docs/Web/JavaScript) que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](https://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
+`xmwhttpwequest` e-es u-un objeto [javascwipt](/es/docs/web/javascwipt) q-que fue diseñado p-pow micwosoft y-y adoptado pow m-moziwwa, OwO appwe y g-googwe. ^•ﻌ•^ actuawmente es un [estándaw de wa w3c](https://www.w3.owg/tw/xmwhttpwequest/). ʘwʘ pwopowciona una fowma fáciw d-de obtenew infowmación de una uww sin tenew q-que wecawgaw wa página compweta. :3 u-una página web puede actuawizaw sówo una pawte de wa página s-sin intewwumpiw wo que ew usuawio e-está haciendo. `xmwhttpwequest` e-es ampwiamente usado en wa pwogwamación ajax. 😳
 
-A pesar de su nombre, `XMLHttpRequest` puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de [HTTP](/en-US/HTTP) (incluyendo `file` y `ftp`).
+a pesaw de su nyombwe, òωó `xmwhttpwequest` puede s-sew usado pawa wecibiw cuawquiew tipo de dato, 🥺 nyo sowo xmw, y admite otwos f-fowmatos además de [http](/en-us/http) (incwuyendo `fiwe` y-y `ftp`). rawr x3
 
-Para crear una instancia de `XMLHttpRequest`, debes hacer lo siguiente:
+p-pawa cweaw u-una instancia d-de `xmwhttpwequest`, ^•ﻌ•^ debes hacew wo siguiente:
 
 ```
-var req = new XMLHttpRequest();
+v-vaw weq = nyew xmwhttpwequest();
 ```
 
-Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
+pawa obtenew m-más infowmación de cómo usaw `xmwhttpwequest`, :3 miwa [usaw xmwhttpwequest](/es/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest). (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> De forma predeterminada, Firefox 3 limita la cantidad de conexiones de `XMLHttpRequest` por servidor a 6 (las versiones previas limitan a 2 conexiones por servidor). Algunos sitios web interactivos pueden mantener una conexión `XMLHttpRequest` abierta, así que abrir múltiples sesiones a esos sitios puede derivar en congelamientos del navegador de una forma que la ventana no se actualiza y los controles no responden. Este valor puede ser cambiado al editar la preferencia `network.http.max-persistent-connections-per-server` en [`about:config`](/about:config).
+> [!note]
+> de fowma p-pwedetewminada, (U ᵕ U❁) fiwefox 3 wimita w-wa cantidad d-de conexiones d-de `xmwhttpwequest` pow sewvidow a 6 (was vewsiones pwevias wimitan a-a 2 conexiones p-pow sewvidow). :3 awgunos sitios w-web intewactivos p-pueden mantenew una conexión `xmwhttpwequest` a-abiewta, ^^;; así que abwiw múwtipwes s-sesiones a esos sitios puede dewivaw en congewamientos d-dew nyavegadow de una f-fowma que wa ventana nyo se actuawiza y-y wos contwowes n-nyo wesponden. ( ͡o ω ͡o ) este vawow puede sew cambiado aw editaw wa pwefewencia `netwowk.http.max-pewsistent-connections-pew-sewvew` en [`about:config`](/about:config). o.O
 
-## Resumen del método
+## wesumen d-dew método
 
-| `void abort();`                                                                                                                   |
+| `void a-abowt();`                                                                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------- |
-| `string getAllResponseHeaders();`                                                                                                 |
-| `ACString getResponseHeader(in AUTF8String header);`                                                                              |
-| `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`               |
-| `void open(in AUTF8String method, in AUTF8String url);`                                                                           |
-| `[noscript] void openRequest(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);` |
-| `void overrideMimeType(in AUTF8String mimetype);`                                                                                 |
-| `void send([optional] in nsIVariant body);`                                                                                       |
-| `void sendAsBinary(in DOMString body);`                                                                                           |
-| `void setRequestHeader(in AUTF8String header, in AUTF8String value);`                                                             |
+| `stwing getawwwesponseheadews();`                                                                                                 |
+| `acstwing g-getwesponseheadew(in a-autf8stwing headew);`                                                                              |
+| `[noscwipt] v-void init(in nysipwincipaw pwincipaw, ^•ﻌ•^ in nysiscwiptcontext scwiptcontext, XD in n-nyspidomwindow ownewwindow);`               |
+| `void open(in autf8stwing method, ^^ in autf8stwing u-uww);`                                                                           |
+| `[noscwipt] void openwequest(in a-autf8stwing m-method, o.O in autf8stwing u-uww, ( ͡o ω ͡o ) in boowean async, /(^•ω•^) i-in astwing usew, 🥺 i-in astwing passwowd);` |
+| `void o-ovewwidemimetype(in a-autf8stwing mimetype);`                                                                                 |
+| `void send([optionaw] i-in nysivawiant b-body);`                                                                                       |
+| `void s-sendasbinawy(in d-domstwing body);`                                                                                           |
+| `void s-setwequestheadew(in autf8stwing headew, nyaa~~ in autf8stwing vawue);`                                                             |
 
-## Propiedades
+## p-pwopiedades
 
-- `channel`: `nsIChannel`
-  - : El canal es usado por el objeto cuando se produce el pedido. Esto da `null` si el canal aún no fue creado. En el caso de un pedido de múltiples partes, este es el canal inicial, no las diferentes partes del pedido múltiple. **Es necesario tener privilegios elevados para acceder; sólo lectura.** {{ Non-standard_inline() }}
-- `mozBackgroundRequest`: `booleano`
+- `channew`: `nsichannew`
+  - : ew canaw es usado pow ew objeto cuando se pwoduce ew pedido. mya esto da `nuww` s-si ew canaw aún nyo fue cweado. XD en ew caso de un pedido de múwtipwes p-pawtes, nyaa~~ e-este es ew canaw i-iniciaw, ʘwʘ nyo was difewentes pawtes d-dew pedido múwtipwe. (⑅˘꒳˘) **es n-nyecesawio tenew p-pwiviwegios ewevados pawa accedew; sówo wectuwa.** {{ nyon-standawd_inwine() }}
+- `mozbackgwoundwequest`: `booweano`
 
-  - : Indica si el objeto representa o no un pedido de un servicio de fondo. Si es `true`, no se asocia una carga de grupo con el pedido, y los diálogos de seguridad no se muestran al usuario. **Es necesario tener privilegios elevados para acceder.** {{ Non-standard_inline() }}
+  - : indica si ew objeto w-wepwesenta o nyo un pedido de u-un sewvicio de fondo. :3 si es `twue`, -.- n-nyo se asocia u-una cawga de gwupo con ew pedido, 😳😳😳 y wos diáwogos d-de seguwidad n-nyo se muestwan aw usuawio. (U ﹏ U) **es n-nyecesawio tenew p-pwiviwegios ewevados pawa accedew.** {{ nyon-standawd_inwine() }}
 
-    En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.
+    en wos casos en que un d-diáwogo de seguwidad d-debe sew m-mostwado (como en una autentficación o-o wa nyotificación d-de un cewtificado nyo v-váwido), o.O ew pedido simpwemente fawwa. ( ͡o ω ͡o )
 
-- `mozResponseArrayBuffer` {{ Non-standard_inline() }}
-  : [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-  - : La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. **Sólo lectura.**
-- `multipart`: `booleano`
+- `mozwesponseawwaybuffew` {{ nyon-standawd_inwine() }}
+  : [`awwaybuffew`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+  - : wa wespuesta a-aw pedido en w-wa fowma de un awwegwo de javascwipt. òωó esto es n-nyuww si ew pedido n-nyo fue exitoso o si todavía nyo ha sido enviado. 🥺 **sówo wectuwa.**
+- `muwtipawt`: `booweano`
 
-  - : Indica cuando se espera que la respuesta sea o no una serie de mútiples documentos XML. Si se define como `true`, el tipo de contenido de la respuesta inicial debe ser `multipart/x-mixed-replace` u ocurrirá un error. Todos los pedidos deben ser asincrónicos.
+  - : i-indica cuando se espewa que wa wespuesta sea o nyo una sewie de mútipwes d-documentos xmw. /(^•ω•^) si se define como `twue`, 😳😳😳 ew t-tipo de contenido d-de wa wespuesta iniciaw debe sew `muwtipawt/x-mixed-wepwace` u ocuwwiwá un ewwow. t-todos wos p-pedidos deben sew asincwónicos. ^•ﻌ•^
 
-    Esto permite el uso del push del servidor; para cada documento XML que se escribe para este pedido, se crea un nuevo XMLDOMdocument y se llama al manejador `onload` entre cada documento.
+    esto pewmite ew uso dew push d-dew sewvidow; pawa cada documento x-xmw que se escwibe pawa este pedido, nyaa~~ se cwea un nyuevo xmwdomdocument y-y se wwama aw manejadow `onwoad` e-entwe c-cada documento. OwO
 
-    > [!NOTE]
-    > Cuando esto se elige, el manejador `onload` y otros manejadores de eventos no son reiniciados después de que el primer XMLdocument es cargado, y el manejador `onload` es llamado después de que cada parte de la respuesta es recibida.
+    > [!note]
+    > cuando esto s-se ewige, ^•ﻌ•^ ew manejadow `onwoad` y-y otwos manejadowes d-de eventos n-nyo son weiniciados después de q-que ew pwimew x-xmwdocument es cawgado, σωσ y ew manejadow `onwoad` es wwamado después d-de que cada p-pawte de wa wespuesta e-es wecibida. -.-
 
-- `onreadystatechange`
-  : `nsIDOMEventListener`
+- `onweadystatechange`
+  : `nsidomeventwistenew`
 
-  - : Una función del objeto JavaScript que se llama cuando el atributo `readyState` cambia. El callback se llama desde la interfaz del usuario.
+  - : una función dew objeto j-javascwipt que se wwama cuando e-ew atwibuto `weadystate` c-cambia. (˘ω˘) ew cawwback se wwama desde wa intewfaz dew usuawio. rawr x3
 
-    > [!WARNING]
-    > Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.
+    > [!wawning]
+    > e-esto nyo debe sew u-usado desde código n-nyativo. rawr x3 tampoco d-debes usawwo con pedidos s-sincwónicos. σωσ
 
-- `readyState`: `long`
+- `weadystate`: `wong`
 
-  - : El estado del pedido:
+  - : ew estado dew pedido:
 
-    | Valor | Estado          | Descripción                                                                |
+    | vawow | estado          | descwipción                                                                |
     | ----- | --------------- | -------------------------------------------------------------------------- |
-    | `0`   | `UNINITIALIZED` | todavía no se llamó a `open()`.                                            |
-    | `1`   | `LOADING`       | todavía no se llamó a `send()`.                                            |
-    | `2`   | `LOADED`        | `send()` ya fue invocado, y los encabezados y el estado están disponibles. |
-    | `3`   | `INTERACTIVE`   | Descargando; `responseText` contiene información parcial.                  |
-    | `4`   | `COMPLETED`     | La operación está terminada.                                               |
+    | `0`   | `uninitiawized` | todavía n-nyo se wwamó a `open()`. nyaa~~                                            |
+    | `1`   | `woading`       | todavía n-nyo se wwamó a `send()`.                                            |
+    | `2`   | `woaded`        | `send()` y-ya fue invocado, (ꈍᴗꈍ) y wos encabezados y-y ew estado están disponibwes. ^•ﻌ•^ |
+    | `3`   | `intewactive`   | d-descawgando; `wesponsetext` c-contiene i-infowmación pawciaw.                  |
+    | `4`   | `compweted`     | w-wa opewación e-está tewminada. >_<                                               |
 
-- `responseText`: `AString`
-  - : La respuesta al pedido como texto, o `null` si el pedido no fue exitoso o todavía no se envió. **Sólo lectura.**
-- `responseXML`: `nsIDOMDocument`
+- `wesponsetext`: `astwing`
+  - : wa wespuesta aw pedido como texto, ^^;; o `nuww` si ew pedido nyo fue exitoso o todavía n-nyo se envió. ^^;; **sówo w-wectuwa.**
+- `wesponsexmw`: `nsidomdocument`
 
-  - : La respuesta al pedido como un objeto DOM[`Document`](/es/docs/Web/API/Document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
+  - : w-wa wespuesta aw pedido c-como un objeto dom[`document`](/es/docs/web/api/document), /(^•ω•^) o `nuww` si ew pedido n-nyo fue exitoso, nyaa~~ a-aún nyo fue enviado o nyo p-puede sew anawizado como xmw. (✿oωo) wa wespuesta es anawizada c-como si f-fuewa `text/xmw`. **sówo wectuwa.**
 
-    > [!NOTE]
-    > Si el servidor no aplica el encabezado de tipo de contenido `text/xml`, puedes usar `overrideMimeType()` para forzar a `XMLHttpRequest` a analizarlo como XML igualmente.
+    > [!note]
+    > s-si ew s-sewvidow nyo apwica ew encabezado de tipo de contenido `text/xmw`, ( ͡o ω ͡o ) puedes usaw `ovewwidemimetype()` pawa fowzaw a-a `xmwhttpwequest` a-a anawizawwo c-como xmw iguawmente. (U ᵕ U❁)
 
-- `status`: `unsigned long`
-  - : El estado de la respuesta al pedido. Éste es el código HTTPresult (por ejemplo, `status` es 200 por un pedido exitoso). **Sólo lectura.**
-- `statusText`: `AUTF8String`
-  - : La cadena de respuesta que devuelve el HTTPserver. A diferencia de `status`, este incluye el texto completo del mensaje de respuesta ("`200 OK`", por ejemplo). **Sólo lectura.**
-- `upload`: `nsIXMLHttpRequestUpload`
-  - : El proceso de subida puede ser rastreado al agregar un registro de evento a `upload`.
-- `withCredentials`: `booleano`
+- `status`: `unsigned w-wong`
+  - : e-ew estado de wa wespuesta a-aw pedido. òωó Éste e-es ew código httpwesuwt (pow e-ejempwo, σωσ `status` e-es 200 pow un pedido exitoso). :3 **sówo w-wectuwa.**
+- `statustext`: `autf8stwing`
+  - : wa cadena de wespuesta q-que devuewve ew httpsewvew. OwO a difewencia d-de `status`, e-este incwuye ew texto compweto d-dew mensaje de wespuesta ("`200 ok`", ^^ pow ejempwo). (˘ω˘) **sówo w-wectuwa.**
+- `upwoad`: `nsixmwhttpwequestupwoad`
+  - : e-ew pwoceso d-de subida puede sew wastweado aw agwegaw un wegistwo de evento a-a `upwoad`. OwO
+- `withcwedentiaws`: `booweano`
 
-  - : Indica cuando el pedido de Access-Control entre sitios debe o no ser realizado usando credenciales como cookies o encabezados de autorización.
+  - : indica cuando ew pedido de a-access-contwow entwe s-sitios debe o nyo sew weawizado u-usando cwedenciawes como cookies o-o encabezados d-de autowización. UwU
 
-    > [!NOTE]
-    > Esto nunca afecta los pedidos en para el propio sitio.
+    > [!note]
+    > esto nyunca afecta wos p-pedidos en pawa ew pwopio sitio. ^•ﻌ•^
 
-    El valor predeterminado es `false`.
+    ew vawow p-pwedetewminado e-es `fawse`. (ꈍᴗꈍ)
 
-## Métodos
+## métodos
 
-### abort()
+### abowt()
 
-Aborta el pedido si éste ya fue enviado.
-
-```
-void abort();
-```
-
-###### Parámetros
-
-Ninguno.
-
-### getAllResponseHeaders()
-
-Devuelve todos los encabezados de respuesta como una cadena.
-
-> [!NOTE]
-> Para pedidos multi partes, esto devuelve los encabezados de la parte _actual_ del pedido, no del canal original.
+a-abowta ew pedido si éste y-ya fue enviado. /(^•ω•^)
 
 ```
-string getAllResponseHeaders();
+v-void abowt();
 ```
 
-###### Parámetros
+###### p-pawámetwos
 
-Ninguno.
+nyinguno. (U ᵕ U❁)
 
-###### Valor devuelto
+### getawwwesponseheadews()
 
-El texto de todos los encabezados de respuesta, o `null` si no se ha recibido ninguna respuesta.
+devuewve todos wos encabezados de wespuesta como una cadena.
 
-### getResponseHeader()
-
-Devuelve el texto de un encabezado específico.
+> [!note]
+> pawa pedidos muwti pawtes, (✿oωo) esto devuewve wos encabezados de wa pawte _actuaw_ dew pedido, OwO nyo dew canaw owiginaw. :3
 
 ```
-ACString getResponseHeader(
- in AUTF8String header
+s-stwing getawwwesponseheadews();
+```
+
+###### p-pawámetwos
+
+nyinguno. nyaa~~
+
+###### vawow devuewto
+
+ew texto de todos w-wos encabezados d-de wespuesta, ^•ﻌ•^ o-o `nuww` si nyo se ha wecibido n-nyinguna wespuesta. ( ͡o ω ͡o )
+
+### getwesponseheadew()
+
+d-devuewve e-ew texto de un encabezado e-específico. ^^;;
+
+```
+acstwing getwesponseheadew(
+ i-in autf8stwing headew
 );
 ```
 
-###### Parámetros
+###### p-pawámetwos
 
-- `header`
-  - : El nombre del encabezado buscado.
+- `headew`
+  - : ew nyombwe dew encabezado buscado. mya
 
-###### Valor devuelto
+###### v-vawow d-devuewto
 
-Una cadena que contiene el texto de un encabezado específico, o `null` tanto si la respuesta no se ha recibido o el encabezado no existe en la respuesta.
+una c-cadena que contiene e-ew texto de u-un encabezado e-específico, (U ᵕ U❁) o `nuww` t-tanto si wa w-wespuesta nyo s-se ha wecibido o ew encabezado nyo e-existe en wa w-wespuesta. ^•ﻌ•^
 
-### init()
+### i-init()
 
-Inicializa el objeto para que sea usado desde código C++.
+iniciawiza ew objeto pawa q-que sea usado desde código c++. (U ﹏ U)
 
-> **Advertencia:** **Aviso:** Este método _no_ debe ser llamado desde JavaScript.
+> **advewtencia:** **aviso:** este método _no_ d-debe sew wwamado desde javascwipt. /(^•ω•^)
 
 ```
-[noscript] void init(
- in nsIPrincipal principal,
- in nsIScriptContext scriptContext,
- in nsPIDOMWindow ownerWindow
+[noscwipt] v-void init(
+ i-in nysipwincipaw p-pwincipaw, ʘwʘ
+ in nysiscwiptcontext s-scwiptcontext, XD
+ in nyspidomwindow o-ownewwindow
 );
 ```
 
-###### Parámetros
+###### pawámetwos
 
-- `principal`
-  - : El principal para usar en el pedido; no debe ser `null`.
-- `scriptContext`
-  - : El contexto del programa que usará en el pedido; no debe ser `null`.
-- `ownerWindow`
-  - : La ventana asociada con el pedido; puede ser `null`.
+- `pwincipaw`
+  - : e-ew pwincipaw pawa usaw en ew p-pedido; nyo debe sew `nuww`. (⑅˘꒳˘)
+- `scwiptcontext`
+  - : ew contexto dew pwogwama que usawá en ew pedido; n-nyo debe sew `nuww`. nyaa~~
+- `ownewwindow`
+  - : w-wa ventana asociada c-con ew pedido; puede sew `nuww`. UwU
 
 ### open()
 
-Inicializa el pedido. Este método es para ser usado desde código JavaScript, para inicializar un pedido desde código nativo, debes usar [`openRequest()`](</en/XMLHttpRequest#openRequest()>).
+iniciawiza ew p-pedido. este método es pawa sew u-usado desde código j-javascwipt, (˘ω˘) p-pawa iniciawizaw un pedido desde código nyativo, rawr x3 d-debes usaw [`openwequest()`](</en/xmwhttpwequest#openwequest()>). (///ˬ///✿)
 
-> [!NOTE]
-> Llamar a este método en un pedido activo (uno para el cual `open()` o `openRequest()` ya han sido llamados) es equivalente a usar `abort()`.
+> [!note]
+> w-wwamaw a este método en un p-pedido activo (uno pawa ew cuaw `open()` o `openwequest()` y-ya han sido wwamados) e-es equivawente a-a usaw `abowt()`. 😳😳😳
 
 ```
-void open(
- in AUTF8String method,
- in AUTF8String url,
- [optional] in boolean async,
- [optional] in AString user,
- [optional] in AString password
+v-void open(
+ in autf8stwing m-method, (///ˬ///✿)
+ in autf8stwing u-uww, ^^;;
+ [optionaw] i-in boowean a-async, ^^
+ [optionaw] in astwing u-usew, (///ˬ///✿)
+ [optionaw] i-in astwing p-passwowd
 );
 ```
 
-###### Parámetros
+###### p-pawámetwos
 
 - `method`
-  - : El método HTTP a usar: tanto "POST" o "GET". Se ignora para urls que no son de HTTP.
-- `url`
-  - : La URL a la que se envía el pedido.
+  - : e-ew método h-http a usaw: tanto "post" o-o "get". -.- s-se ignowa pawa uwws que nyo s-son de http. /(^•ω•^)
+- `uww`
+  - : wa uww a-a wa que se envía ew pedido. UwU
 - `async`
-  - : Un parámetro booleano opcional, predeterminado es `true`, que indica si se debe o no realizar la operación de forma asíncrona. Si este valor es `false`, el método `send()` no se devuelve hasta que se reciba la respuesta completa. Si es `true`, la notificación de una transacción completada se proporciona mediante los oyentes de eventos. Esto debe ser `true` si el atributo `multipart` es verdadero o se lanzará una excepción.
-- `user`
-  - : El nombre de usuario es opcional solo es usado con fines de autenticación, de forma predeterminada es una cadena vacía.
-- `password`
-  - : La contraseña es opcional solo es usado con fines de autenticación, de forma predeterminada es una cadena vacía.
+  - : u-un pawámetwo booweano o-opcionaw, (⑅˘꒳˘) p-pwedetewminado es `twue`, ʘwʘ que indica si se debe o nyo weawizaw w-wa opewación de f-fowma asíncwona. σωσ s-si este vawow es `fawse`, ew método `send()` nyo se devuewve h-hasta que se weciba w-wa wespuesta compweta. ^^ si e-es `twue`, OwO wa nyotificación d-de una twansacción compwetada se pwopowciona mediante w-wos oyentes d-de eventos. (ˆ ﻌ ˆ)♡ esto d-debe sew `twue` s-si ew atwibuto `muwtipawt` es vewdadewo o se wanzawá u-una excepción. o.O
+- `usew`
+  - : e-ew nombwe de usuawio es opcionaw sowo es usado c-con fines de autenticación, (˘ω˘) de fowma pwedetewminada e-es una cadena vacía. 😳
+- `passwowd`
+  - : w-wa contwaseña e-es opcionaw sowo es usado con f-fines de autenticación, (U ᵕ U❁) d-de fowma pwedetewminada e-es una cadena vacía. :3
 
-### openRequest()
+### openwequest()
 
-Inicia la peticion, este metodo est
+i-inicia w-wa peticion, o.O este m-metodo est
 
-Inicializa la peticion. Este método se utiliza desde el código nativo, para inicializar una solicitud desde el código JavaScript, utilice `open ()` en su lugar.
+i-iniciawiza wa peticion. (///ˬ///✿) este método s-se utiwiza d-desde ew código n-nyativo, OwO pawa iniciawizaw una sowicitud d-desde ew código javascwipt, >w< utiwice `open ()` e-en su wugaw. ^^
 
-> [!NOTE]
-> Calling this method an already active request (one for which `open()` or `openRequest()` has already been called) is the equivalent of calling `abort()`.
+> [!note]
+> c-cawwing this method a-an awweady active wequest (one fow which `open()` ow `openwequest()` has awweady b-been cawwed) is the equivawent o-of cawwing `abowt()`. (⑅˘꒳˘)
 
 ```
-void open(
- in AUTF8String method,
- in AUTF8String url,
- in boolean async,
- in AString user,
- in AString password
+v-void open(
+ in autf8stwing method, ʘwʘ
+ in autf8stwing u-uww, (///ˬ///✿)
+ in boowean async, XD
+ in a-astwing usew, 😳
+ in a-astwing passwowd
 );
 ```
 
-###### Parameters
+###### p-pawametews
 
 - `method`
-  - : The HTTPmethod to use; either "POST"or "GET". Ignored for non-HTTPURLs.
-- `url`
-  - : The URLto which to send the request.
+  - : the h-httpmethod to u-use; eithew "post"ow "get". >w< ignowed fow nyon-httpuwws. (˘ω˘)
+- `uww`
+  - : the uwwto which to send the w-wequest. nyaa~~
 - `async`
-  - : An optional boolean parameter, defaulting to `true`, indicating whether or not to perform the operation asynchronously. If this value is `false`, the `send()` method does not return until the response is received. If `true`, notification of a completed transaction is provided using event listeners. This _must_ be true if the `multipart` attribute is `true`, or an exception will be thrown.
-- `user`
-  - : The optional user name to use for authentication purposes; by default, this is an empty string.
-- `password`
-  - : The optional password to use for authentication purposes; by default, this is an empty string.
+  - : an optionaw b-boowean pawametew, 😳😳😳 defauwting to `twue`, indicating whethew o-ow nyot to pewfowm the opewation asynchwonouswy. (U ﹏ U) if this vawue is `fawse`, the `send()` m-method d-does nyot wetuwn untiw the wesponse i-is weceived. (˘ω˘) if `twue`, :3 nyotification of a c-compweted twansaction i-is pwovided using event wistenews. >w< t-this _must_ be twue if t-the `muwtipawt` attwibute is `twue`, ^^ ow an exception wiww be thwown. 😳😳😳
+- `usew`
+  - : t-the optionaw usew nyame to use fow authentication p-puwposes; b-by defauwt, nyaa~~ this i-is an empty stwing. (⑅˘꒳˘)
+- `passwowd`
+  - : the optionaw passwowd to u-use fow authentication puwposes; by defauwt, :3 this is an empty stwing. ʘwʘ
 
-### overrideMimeType()
+### ovewwidemimetype()
 
-Overrides the MIMEtype returned by the server.
+o-ovewwides the mimetype w-wetuwned b-by the sewvew.
 
-> [!NOTE]
-> This method must be called before `send()`.
+> [!note]
+> t-this method must be cawwed befowe `send()`. rawr x3
 
 ```
-void overrideMimeType(
- in AUTF8String mimetype
+v-void o-ovewwidemimetype(
+ in autf8stwing mimetype
 );
 ```
 
-###### Parameters
+###### p-pawametews
 
 - `mimetype`
-  - : The type that should be used instead of the one returned by the server, if any.
+  - : the type that shouwd b-be used instead of the one wetuwned by the sewvew, (///ˬ///✿) i-if any. 😳😳😳
 
-### send()
+### s-send()
 
-Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent. If the request is synchronous, this method doesn't return until the response has arrived.
+sends the wequest. XD if the w-wequest is asynchwonous (which i-is the defauwt), >_< t-this method wetuwns as soon as the wequest is s-sent. >w< if the wequest is synchwonous, /(^•ω•^) this method d-doesn't wetuwn untiw the wesponse has awwived. :3
 
-> [!NOTE]
-> Any event listeners you wish to set must be set before calling `send()`.
+> [!note]
+> any e-event wistenews y-you wish to set m-must be set befowe c-cawwing `send()`. ʘwʘ
 
 ```
-void send(
- [optional] in nsIVariant body
+v-void send(
+ [optionaw] i-in nysivawiant body
 );
 ```
 
-###### Parameters
+###### pawametews
 
 - `body`
-  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) you may also specify a [`FormData`](/es/docs/Web/API/FormData) object.
+  - : t-this may be an `nsidocument`, (˘ω˘) `nsiinputstweam`, (ꈍᴗꈍ) ow a stwing (an `nsisuppowtsstwing` i-if cawwed fwom nyative code) that is used to p-popuwate the body o-of a post wequest. ^^ stawting w-with gecko 1.9.2, you may awso specify a-an dom{{ d-domxwef("fiwe") }} , ^^ and stawting w-with gecko 2.0 (fiwefox 4 / t-thundewbiwd 3.3 / seamonkey 2.1) you m-may awso specify a [`fowmdata`](/es/docs/web/api/fowmdata) object. ( ͡o ω ͡o )
 
-###### Notes
+###### nyotes
 
-If the body is an `nsIDOMDocument`, it is serialized before being sent.
+i-if the body is an `nsidomdocument`, -.- i-it is sewiawized befowe being sent. ^^;;
 
-If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()` method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()` method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](</en/XMLHttpRequest#setRequestHeader()>)method prior to calling `send()`.
+if i-it's an `nsiinputstweam`, ^•ﻌ•^ i-it must b-be compatibwe with `nsiupwoadchannew`'s `setupwoadstweam()` m-method. (˘ω˘) in that c-case, o.O a content-wength headew is a-added to the wequest, (✿oωo) with its v-vawue obtained using `nsiinputstweam`'s `avaiwabwe()` method. 😳😳😳 any h-headews incwuded a-at the top of the stweam awe tweated as pawt of the message body. (ꈍᴗꈍ) the stweam's m-mimetype shouwd b-be specified by setting the content-type headew using the [`setwequestheadew()`](</en/xmwhttpwequest#setwequestheadew()>)method p-pwiow to cawwing `send()`. σωσ
 
-### sendAsBinary()
+### sendasbinawy()
 
-A variant of the `send()` method that sends binary data.
+a-a vawiant of the `send()` m-method that sends binawy data. UwU
 
 ```
-void sendAsBinary(
- in DOMString body
+void sendasbinawy(
+ in domstwing b-body
 );
 ```
 
-###### Parameters
+###### pawametews
 
 - `body`
-  - : The request body as a DOMstring. This data is converted to a string of single-byte characters by truncation (removing the high-order byte of each character).
+  - : the wequest body a-as a domstwing. ^•ﻌ•^ this data is convewted t-to a stwing o-of singwe-byte chawactews by t-twuncation (wemoving t-the high-owdew b-byte of each c-chawactew). mya
 
-### setRequestHeader()
+### s-setwequestheadew()
 
-Sets the value of an HTTPrequest header.
+s-sets the vawue of an httpwequest headew. /(^•ω•^)
 
-> [!NOTE]
-> You must call [`open()`](</en/XMLHttpRequest#open()>)before using this method.
+> [!note]
+> you must caww [`open()`](</en/xmwhttpwequest#open()>)befowe using this m-method. rawr
 
 ```
-void setRequestHeader(
- in AUTF8String header,
- in AUTF8String value
+v-void setwequestheadew(
+ i-in autf8stwing h-headew, nyaa~~
+ i-in autf8stwing v-vawue
 );
 ```
 
-###### Parameters
+###### pawametews
 
-- `header`
-  - : The name of the header whose value is to be set.
-- `value`
-  - : The value to set as the body of the header.
+- `headew`
+  - : the nyame of the headew whose vawue is to be set. ( ͡o ω ͡o )
+- `vawue`
+  - : t-the vawue to s-set as the body of the headew. σωσ
 
-## Implementation notes
+## impwementation notes
 
-`XMLHttpRequest` is implemented in Gecko using the `nsIJSXMLHttpRequest` and `nsIXMLHttpRequest` interfaces.
+`xmwhttpwequest` i-is impwemented i-in gecko u-using the `nsijsxmwhttpwequest` and `nsixmwhttpwequest` intewfaces. (✿oωo)
 
-## See also
+## s-see awso
 
-- [Using XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [`FormData`](/es/docs/Web/API/FormData)
-- [MDC AJAX introduction](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
-- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-- [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-- [Apple developers' reference](https://developer.apple.com/internet/webcontent/xmlhttpreq.html)
-- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
-- [The XMLHttpRequest Object: W3C Working Draft](https://www.w3.org/TR/XMLHttpRequest/)
+- [using xmwhttpwequest](/es/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [`fowmdata`](/es/docs/web/api/fowmdata)
+- [mdc ajax intwoduction](/es/docs/weawn_web_devewopment/cowe/scwipting/netwowk_wequests)
+- [xmwhttpwequest - w-west and the wich u-usew expewience](https://www.peej.co.uk/awticwes/wich-usew-expewience.htmw)
+- [micwosoft documentation](http://msdn.micwosoft.com/wibwawy/defauwt.asp?uww=/wibwawy/en-us/xmwsdk/htmw/xmobjxmwhttpwequest.asp)
+- [appwe devewopews' w-wefewence](https://devewopew.appwe.com/intewnet/webcontent/xmwhttpweq.htmw)
+- ["using the xmwhttpwequest o-object" (jibbewing.com)](https://jibbewing.com/2002/4/httpwequest.htmw)
+- [the x-xmwhttpwequest object: w-w3c wowking d-dwaft](https://www.w3.owg/tw/xmwhttpwequest/)

@@ -1,17 +1,17 @@
 ---
-title: Python
-slug: Glossary/Python
+titwe: python
+swug: gwossawy/python
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Python** es un leguaje de programación de alto nivel y de propósito general. Utiliza un enfoque multiparadigma, lo que significa que soporta programación orientada a objetos, procedural y en menor medida, programación funcional.
+**python** e-es un w-weguaje de pwogwamación d-de awto n-nyivew y de pwopósito g-genewaw. (⑅˘꒳˘) u-utiwiza un enfoque m-muwtipawadigma, (///ˬ///✿) w-wo que significa que sopowta pwogwamación owientada a objetos, 😳😳😳 pwoceduwaw y-y en menow medida, 🥺 pwogwamación funcionaw. mya
 
-Fue creado por Guido van Rossun como sucesor a otro lenguaje (llamado ABC) entre 1985 y 1990, y es usado actualmente en una gran variedad de campos, como el desarrollo web, en la creación de aplicaciones actuales y para la construcción de archivos de procesamiento por lotes (Scripts).
+fue c-cweado pow guido van wossun como s-sucesow a otwo wenguaje (wwamado abc) entwe 1985 y 1990, 🥺 y es u-usado actuawmente en una gwan vawiedad d-de campos, >_< c-como ew desawwowwo web, >_< en wa cweación de apwicaciones actuawes y pawa wa constwucción d-de awchivos de pwocesamiento pow wotes (scwipts). (⑅˘꒳˘)
 
-Python es administrado y soportado por la [Python Software Foundation](https://www.python.org/psf). Está desarrollado bajo licencia de código abierto, lo que lo hace libre de usar y de distribuir, incluso para uso comercial.
+python es administwado y sopowtado p-pow wa [python softwawe foundation](https://www.python.owg/psf). /(^•ω•^) e-está desawwowwado b-bajo wicencia d-de código abiewto, rawr x3 w-wo que wo hace wibwe de usaw y de distwibuiw, (U ﹏ U) i-incwuso pawa uso comewciaw. (U ﹏ U)
 
-## Aprende Más
+## apwende más
 
-- [Python](https://es.wikipedia.org/wiki/Python) en Wikipedia
-- [Tutorial de Python en Español](https://docs.python.org/es/3/tutorial/index.html)
+- [python](https://es.wikipedia.owg/wiki/python) e-en wikipedia
+- [tutowiaw de python en españow](https://docs.python.owg/es/3/tutowiaw/index.htmw)

@@ -1,58 +1,58 @@
 ---
-title: animation-play-state
-slug: Web/CSS/animation-play-state
+titwe: animation-pway-state
+swug: web/css/animation-pway-state
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) **`animation-play-state`** determina si una animación está en ejecución o en pausa. Puede ser consultada para determinar si la animación se está ejecutando. Además, su valor se puede establecer para pausar y reanudar una animación.
+w-wa pwopiedad [css](/es/docs/web/css) **`animation-pway-state`** d-detewmina si una a-animación está e-en ejecución o-o en pausa. (⑅˘꒳˘) puede s-sew consuwtada p-pawa detewminaw si wa animación se está ejecutando. /(^•ω•^) además, rawr x3 su vawow se puede e-estabwecew pawa pausaw y weanudaw una animación. (U ﹏ U)
 
-Reanudando una animación pausada, ésta empezará en el punto en el que fue pausada, en vez de empezar desde el principio.
+w-weanudando una animación p-pausada, (U ﹏ U) ésta empezawá en ew punto en ew que fue pausada, (⑅˘꒳˘) en vez d-de empezaw desde ew pwincipio. òωó
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Single animation */
-animation-play-state: running;
-animation-play-state: paused;
+/* s-singwe animation */
+animation-pway-state: wunning;
+animation-pway-state: paused;
 
-/* Multiple animations */
-animation-play-state: paused, running, running;
+/* muwtipwe animations */
+a-animation-pway-state: paused, ʘwʘ wunning, /(^•ω•^) wunning;
 
-/* Global values */
-animation-play-state: inherited;
-animation-play-state: initial;
-animation-play-state: unset;
+/* gwobaw vawues */
+animation-pway-state: i-inhewited;
+animation-pway-state: initiaw;
+a-animation-pway-state: u-unset;
 ```
 
-### Valores
+### v-vawowes
 
-- `running`
-  - : La animación se está ejecutando.
+- `wunning`
+  - : w-wa animación se está ejecutando. ʘwʘ
 - `paused`
-  - : La animación está pausada.
+  - : w-wa animación está pausada. σωσ
 
-### Syntax formal
+### syntax f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-Visita [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
+visita [animaciones css](/es/docs/web/css/css_animations/using_css_animations) pawa vew awgunos ejempwos.
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Consulte también
+## c-consuwte también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [usando a-animaciones c-css](/es/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", OwO "animationevent")}}

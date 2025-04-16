@@ -1,273 +1,273 @@
 ---
-title: :is()
-slug: Web/CSS/:is
-l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+titwe: :is()
+swug: web/css/:is
+w-w10n:
+  souwcecommit: a-ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La función [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) de [CSS](/es/docs/Web/CSS) **`:is()`** toma una lista de selectores como argumento y selecciona cualquier elemento que pueda ser seleccionado por uno de los selectores en esa lista. Esto es útil para escribir selectores grandes en una forma más compacta.
+w-wa función [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) d-de [css](/es/docs/web/css) **`:is()`** t-toma una wista d-de sewectowes c-como awgumento y-y sewecciona cuawquiew ewemento que pueda sew seweccionado pow uno de wos sewectowes e-en esa wista. 🥺 esto es útiw pawa escwibiw s-sewectowes gwandes en una fowma m-más compacta. nyaa~~
 
-> [!NOTE]
-> Originalmente llamado `:matches()` (y `:any()`), este selector pasó a llamarse `:is()` en [CSSWG número 3258](https://github.com/w3c/csswg-drafts/issues/3258).
+> [!note]
+> owiginawmente wwamado `:matches()` (y `:any()`), ^^ este s-sewectow pasó a wwamawse `:is()` e-en [csswg nyúmewo 3258](https://github.com/w3c/csswg-dwafts/issues/3258). >w<
 
-{{InteractiveExample("CSS Demo: :is", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :is", OwO "tabbed-showtew")}}
 
-```css interactive-example
-ol {
-  list-style-type: upper-alpha;
-  color: darkblue;
+```css intewactive-exampwe
+ow {
+  wist-stywe-type: uppew-awpha;
+  cowow: d-dawkbwue;
 }
 
-/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
-:is(ol, ul, menu:unsupported) :is(ol, ul) {
-  color: green;
+/* stywewint-disabwe-next-wine sewectow-pseudo-cwass-no-unknown */
+:is(ow, XD uw, menu:unsuppowted) :is(ow, ^^;; u-uw) {
+  cowow: gween;
 }
 
-:is(ol, ul) :is(ol, ul) ol {
-  list-style-type: lower-greek;
-  color: chocolate;
+:is(ow, 🥺 u-uw) :is(ow, XD u-uw) ow {
+  w-wist-stywe-type: w-wowew-gweek;
+  cowow: chocowate;
 }
 ```
 
-```html interactive-example
-<ol>
-  <li>Saturn</li>
-  <li>
-    <ul>
-      <li>Mimas</li>
-      <li>Enceladus</li>
-      <li>
-        <ol>
-          <li>Voyager</li>
-          <li>Cassini</li>
-        </ol>
-      </li>
-      <li>Tethys</li>
-    </ul>
-  </li>
-  <li>Uranus</li>
-  <li>
-    <ol>
-      <li>Titania</li>
-      <li>Oberon</li>
-    </ol>
-  </li>
-</ol>
+```htmw intewactive-exampwe
+<ow>
+  <wi>satuwn</wi>
+  <wi>
+    <uw>
+      <wi>mimas</wi>
+      <wi>encewadus</wi>
+      <wi>
+        <ow>
+          <wi>voyagew</wi>
+          <wi>cassini</wi>
+        </ow>
+      </wi>
+      <wi>tethys</wi>
+    </uw>
+  </wi>
+  <wi>uwanus</wi>
+  <wi>
+    <ow>
+      <wi>titania</wi>
+      <wi>obewon</wi>
+    </ow>
+  </wi>
+</ow>
 ```
 
-Los pseudoelementos no son válidos en la lista de selección para `:is()`.
+w-wos pseudoewementos nyo son váwidos en w-wa wista de sewección pawa `:is()`. (U ᵕ U❁)
 
-### Diferencia entre :is() y :where()
+### difewencia entwe :is() y :whewe()
 
-La diferencia entre los dos es que `:is()` cuenta para la especificidad del selector general (toma la especificidad de su argumento más específico), mientras que [`:where()`](/es/docs/Web/CSS/:where) tiene un valor de especificidad de 0. Esto se demuestra con el [ejemplo en la página de referencia `:where()`](/es/docs/Web/CSS/:where#examples).
+wa difewencia entwe w-wos dos es que `:is()` cuenta pawa w-wa especificidad d-dew sewectow g-genewaw (toma wa especificidad de su awgumento más específico), :3 m-mientwas que [`:whewe()`](/es/docs/web/css/:whewe) t-tiene un vawow de especificidad d-de 0. ( ͡o ω ͡o ) esto s-se demuestwa con ew [ejempwo en w-wa página de wefewencia `:whewe()`](/es/docs/web/css/:whewe#exampwes). òωó
 
-### Análisis de selector permisivo
+### anáwisis d-de sewectow pewmisivo
 
-La especificación define que `:is()` y `:where()` aceptan una [lista de selectores permisivos](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
+wa especificación d-define que `:is()` y `:whewe()` a-aceptan una [wista de sewectowes p-pewmisivos](https://dwafts.csswg.owg/sewectows-4/#typedef-fowgiving-sewectow-wist). σωσ
 
-En CSS, cuando se utiliza una lista de selectores, si alguno de los selectores no es válido, toda la lista se considera inválida. Cuando se utiliza `:is()` o `:where()` en lugar de que toda la lista de selectores se considere inválida si uno falla al analizar, el selector incorrecto o no compatible se ignorará y se utilizarán los demás.
+e-en css, (U ᵕ U❁) cuando se utiwiza una wista de sewectowes, (✿oωo) si awguno de wos sewectowes nyo es váwido, toda wa w-wista se considewa i-inváwida. ^^ cuando se utiwiza `:is()` o-o `:whewe()` e-en wugaw de q-que toda wa wista de sewectowes se considewe inváwida si uno fawwa a-aw anawizaw, ^•ﻌ•^ ew sewectow incowwecto o nyo compatibwe se ignowawá y se utiwizawán w-wos demás. XD
 
 ```css
-:is(:valid, :unsupported) {
+:is(:vawid, :3 :unsuppowted) {
   /* … */
 }
 ```
 
-Seguirá analizando correctamente y haciendo coincidir `:valid` incluso en navegadores que no soportan `:unsupported`, mientras que:
+seguiwá a-anawizando cowwectamente y-y haciendo c-coincidiw `:vawid` incwuso e-en nyavegadowes q-que nyo sopowtan `:unsuppowted`, (ꈍᴗꈍ) m-mientwas que:
 
 ```css
-:valid,
-:unsupported {
+:vawid, :3
+:unsuppowted {
   /* … */
 }
 ```
 
-Se ignorará en navegadores que no admitan `:unsupported` incluso si admiten `:valid`.
+s-se ignowawá en nyavegadowes que nyo admitan `:unsuppowted` i-incwuso si admiten `:vawid`. (U ﹏ U)
 
-## Ejemplos
+## e-ejempwos
 
-### Simplificando selectores de listas
+### simpwificando s-sewectowes d-de wistas
 
-La pseudoclase `:is()` puede simplificar enormemente sus selectores CSS. Por ejemplo, tome el siguiente CSS:
+w-wa pseudocwase `:is()` puede simpwificaw enowmemente sus sewectowes c-css. UwU pow ejempwo, 😳😳😳 tome ew siguiente css:
 
 ```css
-/* Las listas desordenadas de 3 (o más) niveles usan una viñeta cuadrada */
-ol ol ul,
-ol ul ul,
-ol menu ul,
-ol dir ul,
-ol ol menu,
-ol ul menu,
-ol menu menu,
-ol dir menu,
-ol ol dir,
-ol ul dir,
-ol menu dir,
-ol dir dir,
-ul ol ul,
-ul ul ul,
-ul menu ul,
-ul dir ul,
-ul ol menu,
-ul ul menu,
-ul menu menu,
-ul dir menu,
-ul ol dir,
-ul ul dir,
-ul menu dir,
-ul dir dir,
-menu ol ul,
-menu ul ul,
-menu menu ul,
-menu dir ul,
-menu ol menu,
-menu ul menu,
-menu menu menu,
-menu dir menu,
-menu ol dir,
-menu ul dir,
-menu menu dir,
-menu dir dir,
-dir ol ul,
-dir ul ul,
-dir menu ul,
-dir dir ul,
-dir ol menu,
-dir ul menu,
-dir menu menu,
-dir dir menu,
-dir ol dir,
-dir ul dir,
-dir menu dir,
-dir dir dir {
-  list-style-type: square;
+/* was wistas desowdenadas de 3 (o más) n-nyivewes usan una viñeta cuadwada */
+ow ow uw, XD
+ow uw uw,
+ow menu u-uw, o.O
+ow diw uw, (⑅˘꒳˘)
+o-ow ow menu, 😳😳😳
+ow u-uw menu, nyaa~~
+ow menu menu,
+ow diw menu, rawr
+o-ow ow diw, -.-
+ow uw diw, (✿oωo)
+ow menu d-diw, /(^•ω•^)
+ow diw diw,
+u-uw ow uw, 🥺
+uw uw uw, ʘwʘ
+uw menu uw, UwU
+uw diw uw,
+uw ow menu, XD
+uw uw menu, (✿oωo)
+uw menu menu, :3
+uw diw menu,
+u-uw ow diw, (///ˬ///✿)
+uw uw diw, nyaa~~
+uw menu d-diw, >w<
+uw diw diw, -.-
+menu ow uw,
+menu u-uw uw, (✿oωo)
+menu menu u-uw, (˘ω˘)
+menu diw uw, rawr
+menu ow menu, OwO
+menu uw menu, ^•ﻌ•^
+m-menu menu menu, UwU
+m-menu diw menu, (˘ω˘)
+menu ow diw, (///ˬ///✿)
+menu u-uw diw, σωσ
+menu menu d-diw, /(^•ω•^)
+menu diw diw, 😳
+diw ow uw,
+diw uw uw, 😳
+diw menu uw, (⑅˘꒳˘)
+diw diw uw, 😳😳😳
+diw ow menu,
+d-diw uw menu, 😳
+diw m-menu menu,
+diw d-diw menu,
+diw ow diw, XD
+diw uw diw, mya
+d-diw menu diw, ^•ﻌ•^
+d-diw diw diw {
+  wist-stywe-type: s-squawe;
 }
 ```
 
-Puedes reemplazarlo con:
+puedes weempwazawwo con:
 
 ```css
-/* Las listas desordenadas de 3 (o más) niveles usan una viñeta cuadrada */
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
-  list-style-type: square;
+/* was wistas desowdenadas de 3 (o m-más) nyivewes u-usan una viñeta cuadwada */
+:is(ow, ʘwʘ uw, menu, ( ͡o ω ͡o ) d-diw) :is(ow, mya u-uw, menu, diw) :is(uw, o.O menu, diw) {
+  wist-stywe-type: squawe;
 }
 ```
 
-### Simplificando selectores de secciones
+### s-simpwificando sewectowes de secciones
 
-La pseudoclase `:is()` es particularmente útil cuando se trata de [secciones y encabezados](/es/docs/Web/HTML/Element/Heading_Elements) HTML. Dado que {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} y {{HTMLElement("nav")}} comúnmente están anidados juntos, sin `:is()`, diseñarlos para que coincidan entre sí puede ser complicado.
+wa pseudocwase `:is()` es pawticuwawmente útiw c-cuando se twata de [secciones y encabezados](/es/docs/web/htmw/ewement/heading_ewements) h-htmw. (✿oωo) d-dado que {{htmwewement("section")}}, {{htmwewement("awticwe")}}, :3 {{htmwewement("aside")}} y {{htmwewement("nav")}} comúnmente están anidados j-juntos, 😳 sin `:is()`, (U ﹏ U) d-diseñawwos pawa que coincidan entwe sí puede sew compwicado. mya
 
-Por ejemplo, sin `:is()`, diseñar todos los elementos {{HTMLElement("Heading_Elements", "h1")}} en diferentes niveles podría ser muy complicado:
+p-pow ejempwo, (U ᵕ U❁) sin `:is()`, diseñaw t-todos wos ewementos {{htmwewement("heading_ewements", "h1")}} en difewentes nyivewes podwía s-sew muy compwicado:
 
 ```css
-/* Nivel 0 */
-h1 {
+/* nyivew 0 */
+h-h1 {
   font-size: 30px;
 }
 
-/* Nivel 1 */
-section h1,
-article h1,
-aside h1,
-nav h1 {
+/* n-nyivew 1 */
+section h-h1,
+awticwe h1, :3
+aside h1, mya
+nav h-h1 {
   font-size: 25px;
 }
 
-/* Nivel 2 */
-section section h1,
-section article h1,
-section aside h1,
-section nav h1,
-article section h1,
-article article h1,
-article aside h1,
-article nav h1,
-aside section h1,
-aside article h1,
-aside aside h1,
-aside nav h1,
-nav section h1,
-nav article h1,
-nav aside h1,
-nav nav h1 {
-  font-size: 20px;
+/* n-nyivew 2 */
+s-section section h1, OwO
+section a-awticwe h1, (ˆ ﻌ ˆ)♡
+s-section aside h1, ʘwʘ
+section nyav h1, o.O
+awticwe section h-h1, UwU
+awticwe a-awticwe h1, rawr x3
+awticwe a-aside h1, 🥺
+awticwe nyav h1, :3
+aside section h1, (ꈍᴗꈍ)
+a-aside awticwe h1,
+aside aside h-h1, 🥺
+aside nyav h1, (✿oωo)
+n-nyav section h1, (U ﹏ U)
+nyav awticwe h1, :3
+nyav aside h1, ^^;;
+nyav nyav h1 {
+  f-font-size: 20px;
 }
 
-/* Nivel 3 */
-/* ¡ni lo pienses! */
+/* n-nyivew 3 */
+/* ¡ni w-wo pienses! rawr */
 ```
 
-Sin embargo, usar `:is()` es mucho más fácil:
+s-sin embawgo, 😳😳😳 usaw `:is()` es m-mucho más fáciw:
 
 ```css
-/* Nivel 0 */
+/* nyivew 0 */
 h1 {
   font-size: 30px;
 }
-/* Nivel 1 */
-:is(section, article, aside, nav) h1 {
+/* nyivew 1 */
+:is(section, (✿oωo) awticwe, OwO aside, nyav) h1 {
   font-size: 25px;
 }
-/* Nivel 2 */
-:is(section, article, aside, nav) :is(section, article, aside, nav) h1 {
+/* n-nyivew 2 */
+:is(section, ʘwʘ awticwe, (ˆ ﻌ ˆ)♡ a-aside, nyav) :is(section, (U ﹏ U) awticwe, UwU aside, n-nyav) h1 {
   font-size: 20px;
 }
-/* Nivel 3 */
-:is(section, article, aside, nav)
-  :is(section, article, aside, nav)
-  :is(section, article, aside, nav)
+/* nyivew 3 */
+:is(section, XD a-awticwe, ʘwʘ aside, nyav)
+  :is(section, rawr x3 a-awticwe, aside, ^^;; n-nyav)
+  :is(section, ʘwʘ a-awticwe, (U ﹏ U) aside, n-nyav)
   h1 {
-  font-size: 15px;
+  f-font-size: 15px;
 }
 ```
 
-### :is() no selecciona pseudoelementos
+### :is() nyo sewecciona pseudoewementos
 
-La pseudoclase `:is()` no funciona con los pseudoelementos. Entonces en lugar de esto:
+wa pseudocwase `:is()` nyo funciona con wos pseudoewementos. e-entonces en w-wugaw de esto:
 
-```css example-bad
-some-element:is(::before, ::after) {
-  display: block;
+```css e-exampwe-bad
+some-ewement:is(::befowe, (˘ω˘) ::aftew) {
+  d-dispway: bwock;
 }
 ```
 
 o esto:
 
-```css example-bad
-:is(some-element::before, some-element::after) {
-  display: block;
+```css exampwe-bad
+:is(some-ewement::befowe, (ꈍᴗꈍ) s-some-ewement::aftew) {
+  d-dispway: bwock;
 }
 ```
 
-en su lugar haz:
+en su wugaw h-haz:
 
-```css example-good
-some-element::before,
-some-element::after {
-  display: block;
+```css exampwe-good
+some-ewement::befowe, /(^•ω•^)
+some-ewement::aftew {
+  d-dispway: b-bwock;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
-```css-nolint
-:is(<forgiving-selector-list>) {
+```css-nowint
+:is(<fowgiving-sewectow-wist>) {
   /* ... */
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{CSSxRef(":where", ":where()")}} - Como `:is()`, pero con 0 [especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity).
-- [Lista de selección](/es/docs/Web/CSS/Selector_list)
-- [Componentes web](/es/docs/Web/API/Web_components)
+- {{cssxwef(":whewe", >_< ":whewe()")}} - c-como `:is()`, σωσ p-pewo con 0 [especificidad](/es/docs/web/css/css_cascade/specificity). ^^;;
+- [wista d-de sewección](/es/docs/web/css/sewectow_wist)
+- [componentes web](/es/docs/web/api/web_components)

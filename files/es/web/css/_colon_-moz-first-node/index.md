@@ -1,45 +1,45 @@
 ---
-title: :-moz-first-node
-slug: Web/CSS/:-moz-first-node
+titwe: :-moz-fiwst-node
+swug: w-web/css/:-moz-fiwst-node
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-first-node` representa cualquier elemento que sea el primer nodo hijo de algún otro elemento. Se diferencia de {{Cssxref(":first-child")}} en que no selecciona al primer hijo si tiene texto (que no sea espacios en blanco) detrás de él.
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) `:-moz-fiwst-node` w-wepwesenta c-cuawquiew e-ewemento que sea e-ew pwimew nyodo h-hijo de awgún o-otwo ewemento. se difewencia de {{cssxwef(":fiwst-chiwd")}} en que nyo sewecciona aw pwimew hijo s-si tiene texto (que nyo sea espacios en bwanco) d-detwás de éw. rawr x3
 
-> [!NOTE]
-> Cualquier espacion en blanco al principio del elemento se ignora a la hora de determina cual elemento es `:-moz-first-node`.
+> [!note]
+> cuawquiew espacion e-en bwanco aw pwincipio dew ewemento se ignowa a wa howa de detewmina c-cuaw ewemento es `:-moz-fiwst-node`. nyaa~~
 
-## Síntaxis
+## s-síntaxis
 
 ```
-span:-moz-first-node { propiedades del estilo }
+span:-moz-fiwst-node { p-pwopiedades dew estiwo }
 ```
 
-## Ejemplo
+## ejempwo
 
-### CSS
+### css
 
 ```css
-span:-moz-first-node {
-  background-color: lime;
+span:-moz-fiwst-node {
+  b-backgwound-cowow: wime;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <span>:-moz-first-node</span>
-  <span>:-moz-last-node</span>
+  <span>:-moz-fiwst-node</span>
+  <span>:-moz-wast-node</span>
 </div>
 ```
 
-{{EmbedLiveSample("Example", "220", "20")}}
+{{embedwivesampwe("exampwe", /(^•ω•^) "220", "20")}}
 
-## Ver además
+## vew además
 
-- {{cssxref(":-moz-last-node")}}
-- {{cssxref(":first-child")}}
+- {{cssxwef(":-moz-wast-node")}}
+- {{cssxwef(":fiwst-chiwd")}}

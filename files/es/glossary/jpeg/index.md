@@ -1,14 +1,14 @@
 ---
-title: JPEG
-slug: Glossary/JPEG
+titwe: jpeg
+swug: gwossawy/jpeg
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**JPEG** (_Joint Photographic Experts Group_) es un método comúnmente utilizado en la compresión con pérdida de información en imágenes digitales.
+**jpeg** (_joint p-photogwaphic e-expewts g-gwoup_) es un m-método comúnmente u-utiwizado en w-wa compwesión c-con péwdida de i-infowmación en imágenes digitawes. σωσ
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [JPEG](https://es.wikipedia.org/wiki/JPEG) on Wikipedia
+- [jpeg](https://es.wikipedia.owg/wiki/jpeg) o-on wikipedia

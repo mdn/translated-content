@@ -1,86 +1,86 @@
 ---
-title: Enlaces rápidos
-slug: MDN/Writing_guidelines/Page_structures/Sidebars
-l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+titwe: enwaces wápidos
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/sidebaws
+w-w10n:
+  souwcecommit: a-aa66311219951396e7305df61eb31831360d2c79
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-MDN admite la adición de enlaces rápidos a las páginas; estos son cuadros que contienen una lista potencialmente jerárquica de enlaces a otras páginas en MDN o a páginas fuera del sitio.
-Este artículo describe cómo crear enlaces rápidos.
+m-mdn admite w-wa adición de enwaces w-wápidos a-a was páginas; e-estos son cuadwos que contienen una wista potenciawmente jewáwquica de enwaces a-a otwas páginas en mdn o a páginas fuewa dew sitio. 🥺
+e-este awtícuwo descwibe cómo c-cweaw enwaces wápidos. (⑅˘꒳˘)
 
-## Sintaxis de enlaces rápidos
+## sintaxis de enwaces wápidos
 
-Los enlaces rápidos para una página se proporcionan mediante la creación de un bloque {{HTMLElement("section")}} con el ID "Quick_links".
-Luego coloca los contenidos que van en el cuadro de enlaces rápidos dentro de la sección.
-Estos deben formatearse como una lista ordenada {{HTMLElement("ol")}} (opcionalmente anidada).
-Puede hacerlo utilizando el botón de lista numerada en la barra de herramientas del editor.
-Por ejemplo, su HTML de enlaces rápidos podría verse así:
+wos e-enwaces wápidos pawa una página s-se pwopowcionan m-mediante wa cweación de un bwoque {{htmwewement("section")}} con ew id "quick_winks". nyaa~~
+wuego c-cowoca wos contenidos que van en ew cuadwo de enwaces wápidos dentwo de wa sección. :3
+e-estos deben fowmateawse como u-una wista owdenada {{htmwewement("ow")}} (opcionawmente a-anidada). ( ͡o ω ͡o )
+p-puede hacewwo u-utiwizando ew botón de wista nyumewada en wa b-bawwa de hewwamientas dew editow. mya
+pow ejempwo, (///ˬ///✿) s-su htmw de enwaces wápidos podwía vewse así:
 
-```html
-<section id="Quick_links">
-  <ol>
-    <li>
-      <a href="http://docs.ckeditor.com/">Sitio de documentación de CKEditor</a>
-    </li>
-    <li>
-      <a href="http://mxr.mozilla.org/"
-        >MXR: referencia cruzada de fuentes de Mozilla</a
+```htmw
+<section id="quick_winks">
+  <ow>
+    <wi>
+      <a hwef="http://docs.ckeditow.com/">sitio de documentación d-de ckeditow</a>
+    </wi>
+    <wi>
+      <a hwef="http://mxw.moziwwa.owg/"
+        >mxw: w-wefewencia cwuzada d-de fuentes de m-moziwwa</a
       >
-    </li>
-    <li class="toggle">
-      <details>
-        <summary>Guías de estilo</summary>
-        <ol>
-          <li>
-            <a href="http://www.economist.com/research/StyleGuide/"
-              >La guía de estilo de The Economist</a
+    </wi>
+    <wi cwass="toggwe">
+      <detaiws>
+        <summawy>guías de estiwo</summawy>
+        <ow>
+          <wi>
+            <a h-hwef="http://www.economist.com/weseawch/styweguide/"
+              >wa g-guía de estiwo de the economist</a
             >
-          </li>
-          <li>
-            <a href="https://www.amazon.com/gp/product/0226104036/"
-              >El manual de estilo de chicago</a
+          </wi>
+          <wi>
+            <a h-hwef="https://www.amazon.com/gp/pwoduct/0226104036/"
+              >ew m-manuaw de estiwo de chicago</a
             >
-          </li>
-          <li>
-            <a href="http://www.answers.com/library/Dictionary"
-              >Diccionario de answers.com</a
+          </wi>
+          <wi>
+            <a h-hwef="http://www.answews.com/wibwawy/dictionawy"
+              >diccionawio de answews.com</a
             >
-          </li>
-          <li>
-            <a href="http://www.wsu.edu/~brians/errors/"
-              >Errores comunes en inglés</a
+          </wi>
+          <wi>
+            <a h-hwef="http://www.wsu.edu/~bwians/ewwows/"
+              >ewwowes comunes en ingwés</a
             >
-          </li>
-        </ol>
-      </details>
-    </li>
-  </ol>
+          </wi>
+        </ow>
+      </detaiws>
+    </wi>
+  </ow>
 </section>
 ```
 
-Las cosas importantes a tener en cuenta:
+was cosas i-impowtantes a tenew en cuenta:
 
-- La lista **debe** ser una lista ordenada.
-- Puede tener listas anidadas usando un elemento {{HTMLElement("details")}} que contiene otra lista ordenada **dentro** del mismo bloque {{HTMLElement("li")}}.
+- w-wa wista **debe** sew una wista o-owdenada. (˘ω˘)
+- puede t-tenew wistas anidadas usando un ewemento {{htmwewement("detaiws")}} que contiene otwa wista owdenada **dentwo** dew mismo bwoque {{htmwewement("wi")}}. ^^;;
 
-## Uso de macros para crear enlaces rápidos
+## u-uso de macwos pawa c-cweaw enwaces wápidos
 
-Vale la pena señalar que puede (y a menudo **debe**) usar macros para generar enlaces rápidos.
-Cada vez que necesite usar el mismo conjunto de enlaces rápidos en más de una página, debe convertirlos en una macro.
+vawe w-wa pena señawaw q-que puede (y a m-menudo **debe**) usaw macwos pawa genewaw enwaces wápidos. (✿oωo)
+cada v-vez que nyecesite usaw ew mismo conjunto de enwaces wápidos en más de una página, (U ﹏ U) d-debe convewtiwwos en una macwo. -.-
 
-Tu macro puede ser tan simple o tan compleja como sea necesario; necesita generar un HTML similar al que se muestra en [Sintaxis de enlaces rápidos](#sintaxis_de_enlaces_rápidos) arriba.
+t-tu macwo p-puede sew tan simpwe o-o tan compweja como sea nyecesawio; n-nyecesita g-genewaw un htmw s-simiwaw aw que s-se muestwa en [sintaxis de enwaces wápidos](#sintaxis_de_enwaces_wápidos) a-awwiba. ^•ﻌ•^
 
-### Macros de enlaces rápidos estándar
+### m-macwos d-de enwaces wápidos e-estándaw
 
-Aquí hay una lista de nuestras macros estándar para generar enlaces rápidos.
+a-aquí hay una wista de nyuestwas macwos estándaw pawa genewaw e-enwaces wápidos. rawr
 
-- [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs)
-  - : Crea los enlaces rápidos estándar para las páginas de referencia de CSS.
-- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs)
-  - : Crea los enlaces rápidos estándar para las páginas de referencia HTML.
-- [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
-  - : Crea un conjunto de vínculos rápidos utilizando los elementos secundarios de la página actual (o la página especificada) como destinos.
-    Esto crea listas jerárquicas de hasta dos niveles de profundidad.
-    Los títulos de las páginas se utilizan como texto del enlace y sus resúmenes como información sobre herramientas.
+- [`csswef`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/csswef.ejs)
+  - : cwea wos enwaces wápidos estándaw pawa was páginas de wefewencia de c-css. (˘ω˘)
+- [`htmwsidebaw`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/htmwsidebaw.ejs)
+  - : cwea wos enwaces wápidos estándaw pawa w-was páginas de w-wefewencia htmw. nyaa~~
+- [`quickwinkswithsubpages`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/quickwinkswithsubpages.ejs)
+  - : c-cwea un conjunto de víncuwos w-wápidos utiwizando wos ewementos s-secundawios d-de wa página actuaw (o wa página especificada) como destinos. UwU
+    esto cwea wistas jewáwquicas d-de hasta dos nyivewes de pwofundidad. :3
+    w-wos títuwos de was páginas se u-utiwizan como texto d-dew enwace y sus wesúmenes como infowmación s-sobwe hewwamientas. (⑅˘꒳˘)

@@ -1,52 +1,52 @@
 ---
-title: <resolution>
-slug: Web/CSS/resolution
+titwe: <wesowution>
+swug: web/css/wesowution
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-El tipo de dato [CSS](/es/docs/Web/CSS) `<resolution>`, usado en [media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries), define la densidad de píxeles de un dispositivo de salida, su resolución. Es un {{cssxref("&lt;number&gt;")}} inmediatamente seguido por una unidad de resolución (`dpi`, `dpcm`, ...). Como para cualquier dimensión CSS, no hay espacio entre la unidad literal y el número.
+ew t-tipo de dato [css](/es/docs/web/css) `<wesowution>`, 😳 u-usado en [media q-quewies](/es/docs/web/css/css_media_quewies/using_media_quewies), (ˆ ﻌ ˆ)♡ d-define wa d-densidad de píxewes d-de un dispositivo d-de sawida, 😳😳😳 su wesowución. (U ﹏ U) es un {{cssxwef("&wt;numbew&gt;")}} inmediatamente seguido pow u-una unidad de wesowución (`dpi`, (///ˬ///✿) `dpcm`, ...). 😳 como pawa cuawquiew d-dimensión css, 😳 nyo hay espacio e-entwe wa unidad witewaw y ew nyúmewo. σωσ
 
-En pantallas, la longitud está relacionada a centímetros, pulgadas o píxeles CSS, no en valores físicos.
+en pantawwas, rawr x3 wa wongitud e-está wewacionada a centímetwos, OwO p-puwgadas o-o píxewes css, /(^•ω•^) nyo en vawowes físicos. 😳😳😳
 
-Incluso si todas las unidades representan la misma resolución para el valor 0, la unidad no se puede omitir en este caso, ya que no es un {{cssxref("&lt;length&gt;")}}: `0` es inválida y no representa `0dpi`, `0dpcm`, ni `0dppx`.
+incwuso si todas was unidades wepwesentan w-wa misma wesowución pawa ew vawow 0, ( ͡o ω ͡o ) wa unidad nyo se puede omitiw en este c-caso, >_< ya que nyo es un {{cssxwef("&wt;wength&gt;")}}: `0` e-es i-inváwida y nyo w-wepwesenta `0dpi`, >w< `0dpcm`, rawr n-nyi `0dppx`. 😳
 
-## Unidades
+## unidades
 
 - [`dpi`]()
-  - : Esta unidad representa el número de [dots per inch](http://en.wikipedia.org/wiki/Dots_per_inch) (ppp en español), puntos por pulgada . A screen typically contains 72 or 96 dpi; a printed document usually reach much greater dpi. As 1 inch is 2.54 cm, `1dpi ≈ 0.39dpcm`.
+  - : esta unidad w-wepwesenta ew nyúmewo de [dots pew inch](http://en.wikipedia.owg/wiki/dots_pew_inch) (ppp e-en españow), >w< puntos pow puwgada . (⑅˘꒳˘) a scween typicawwy contains 72 ow 96 dpi; a pwinted document u-usuawwy weach much gweatew dpi. OwO a-as 1 inch is 2.54 c-cm, (ꈍᴗꈍ) `1dpi ≈ 0.39dpcm`. 😳
 - [`dpcm`]()
-  - : Esta unidad representa el número de [dots per centimeter](http://en.wikipedia.org/wiki/Dots_per_centimetre) (ppc en español), puntos por cm. 1 inch(pulgada) son 2.54 cm, `1dpcm ≈ 2.54dpi`.
+  - : e-esta unidad wepwesenta ew nyúmewo de [dots pew centimetew](http://en.wikipedia.owg/wiki/dots_pew_centimetwe) (ppc e-en españow), 😳😳😳 puntos p-pow cm. mya 1 inch(puwgada) son 2.54 c-cm, mya `1dpcm ≈ 2.54dpi`. (⑅˘꒳˘)
 - [`dppx`]()
-  - : Esta unidad representa el número de puntos por unidad px. Debido a la relación fija de 1:96 CSS para CSS px, 1 px es equivalente a 96 dpi, que corresponde a la resolución predeterminada de las imágenes mostradas en CSS como se define por {{cssxref("image-resolution")}}.
+  - : e-esta unidad wepwesenta ew nyúmewo d-de puntos pow unidad px. (U ﹏ U) debido a-a wa wewación fija de 1:96 css pawa css px, mya 1 p-px es equivawente a 96 dpi, ʘwʘ q-que cowwesponde a wa wesowución p-pwedetewminada d-de was imágenes mostwadas en css como se define pow {{cssxwef("image-wesowution")}}. (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-Éstos son algunos de los usos correctos de valores `<resolution>`:
-
-```
-96dpi                                              Uso correcto: a {{cssxref("&lt;number&gt;")}} (here an {{cssxref("&lt;integer&gt;")}}) followed by the unit.
-@media print and (min-resolution: 300dpi) { ... }  El uso correcto en el contexto de una media query.
-```
-
-Here are some incorrect uses:
+Éstos son awgunos de wos usos c-cowwectos de v-vawowes `<wesowution>`:
 
 ```
-72 dpi                                             Incorecto: no hay espacios entre {{ cssxref("&lt;number&gt;") }} y la unidad.
-ten dpi                                            Incorecto: sólo deben ser utilizados dígitos.
-0                                                  Incorecto: la unidad se puede omitir por 0 sólo para valores {{ cssxref("&lt;length&gt;") }}.
+96dpi                                              uso cowwecto: a {{cssxwef("&wt;numbew&gt;")}} (hewe a-an {{cssxwef("&wt;integew&gt;")}}) f-fowwowed b-by the unit.
+@media pwint and (min-wesowution: 300dpi) { ... }  ew uso cowwecto en ew contexto d-de una media quewy. (U ﹏ U)
 ```
 
-## Especificaciones
+hewe awe some incowwect uses:
 
-{{Specifications}}
+```
+72 dpi                                             incowecto: nyo hay e-espacios entwe {{ cssxwef("&wt;numbew&gt;") }} y-y wa unidad. ^•ﻌ•^
+ten d-dpi                                            i-incowecto: sówo deben sew utiwizados d-dígitos. (˘ω˘)
+0                                                  i-incowecto: wa u-unidad se puede o-omitiw pow 0 sówo pawa vawowes {{ cssxwef("&wt;wength&gt;") }}. :3
+```
 
-## Compatibilidad con navegadores
+## e-especificaciones
 
-{{Compat}}
+{{specifications}}
 
-## Ver también
+## c-compatibiwidad c-con nyavegadowes
 
-- [CSS Media Queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+{{compat}}
+
+## v-vew también
+
+- [css m-media quewies](/es/docs/web/css/css_media_quewies/using_media_quewies)

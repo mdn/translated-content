@@ -1,108 +1,108 @@
 ---
-title: grid-template-areas
-slug: Web/CSS/grid-template-areas
+titwe: gwid-tempwate-aweas
+swug: w-web/css/gwid-tempwate-aweas
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`La propiedad CSS grid-template-areas` especifica nombres para cada una de las {{glossary("grid areas")}}.
+`wa p-pwopiedad css g-gwid-tempwate-aweas` e-especifica n-nyombwes pawa c-cada una de was {{gwossawy("gwid a-aweas")}}. nyaa~~
 
 ```css
-/* Keyword value */
-grid-template-areas: none;
+/* k-keywowd vawue */
+gwid-tempwate-aweas: nyone;
 
-/* <string> values */
-grid-template-areas: "a b";
-grid-template-areas:
-  "a b b"
+/* <stwing> vawues */
+gwid-tempwate-aweas: "a b";
+gwid-tempwate-aweas:
+  "a b-b b"
   "a c d";
 
-/* Global values */
-grid-template-areas: inherit;
-grid-template-areas: initial;
-grid-template-areas: unset;
+/* gwobaw vawues */
+gwid-tempwate-aweas: i-inhewit;
+gwid-tempwate-aweas: i-initiaw;
+gwid-tempwate-aweas: unset;
 ```
 
-Estas áreas no están asociadas a ningún elemento particular de la cuadrícula, pero pueden referenciarse desde otras propiedades de posicionamiento en la cuadrícula: {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, y sus formas abreviadas {{cssxref("grid-row")}}, {{cssxref("grid-column")}}, and {{cssxref("grid-area")}}.
+estas áweas n-no están asociadas a nyingún e-ewemento pawticuwaw d-de wa cuadwícuwa, (✿oωo) pewo pueden wefewenciawse desde otwas pwopiedades de posicionamiento e-en wa cuadwícuwa: {{cssxwef("gwid-wow-stawt")}}, ʘwʘ {{cssxwef("gwid-wow-end")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("gwid-cowumn-stawt")}}, 😳😳😳 {{cssxwef("gwid-cowumn-end")}}, :3 y sus fowmas abweviadas {{cssxwef("gwid-wow")}}, OwO {{cssxwef("gwid-cowumn")}}, (U ﹏ U) and {{cssxwef("gwid-awea")}}. >w<
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-### Valores
+### vawowes
 
 - `none`
-  - : El contenedor de la cuadrícula no define ningún nombre para las áreas de la cuadrícula.
-- `<string>+`
-  - : Las filas se crean listando líneas de cadenas separadas, mientras que las columnas se reflejan en cada una de las celdas que aparecen en la cadena. Multiple named cell tokens within and between rows create a single named grid area that spans the corresponding grid cells. Unless those cells form a rectangle, the declaration is invalid.
+  - : ew c-contenedow de w-wa cuadwícuwa nyo d-define nyingún n-nyombwe pawa was áweas de wa cuadwícuwa. (U ﹏ U)
+- `<stwing>+`
+  - : w-was fiwas se cwean wistando wíneas de cadenas s-sepawadas, 😳 mientwas que was cowumnas se wefwejan en cada una de was cewdas que apawecen en wa cadena. (ˆ ﻌ ˆ)♡ m-muwtipwe nyamed ceww tokens w-within and between w-wows cweate a-a singwe nyamed gwid awea that spans the cowwesponding gwid cewws. 😳😳😳 u-unwess those c-cewws fowm a wectangwe, (U ﹏ U) the decwawation i-is invawid.
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Example
+## e-exampwe
 
-### HTML
+### htmw
 
-```html
-<section id="page">
-  <header>Header</header>
-  <nav>Navigation</nav>
-  <main>Main area</main>
-  <footer>Footer</footer>
+```htmw
+<section i-id="page">
+  <headew>headew</headew>
+  <nav>navigation</nav>
+  <main>main awea</main>
+  <footew>footew</footew>
 </section>
 ```
 
-### CSS
+### css
 
 ```css
 #page {
-  display: grid;
+  d-dispway: gwid;
   width: 100%;
-  height: 250px;
-  grid-template-areas:
-    "head head"
-    "nav  main"
+  h-height: 250px;
+  gwid-tempwate-aweas:
+    "head h-head"
+    "nav  m-main"
     "nav  foot";
-  grid-template-rows: 50px 1fr 30px;
-  grid-template-columns: 150px 1fr;
+  gwid-tempwate-wows: 50px 1fw 30px;
+  gwid-tempwate-cowumns: 150px 1fw;
 }
 
-#page > header {
-  grid-area: head;
-  background-color: #8ca0ff;
+#page > headew {
+  gwid-awea: head;
+  backgwound-cowow: #8ca0ff;
 }
 
-#page > nav {
-  grid-area: nav;
-  background-color: #ffa08c;
+#page > n-nyav {
+  g-gwid-awea: nyav;
+  backgwound-cowow: #ffa08c;
 }
 
-#page > main {
-  grid-area: main;
-  background-color: #ffff64;
+#page > m-main {
+  g-gwid-awea: main;
+  b-backgwound-cowow: #ffff64;
 }
 
-#page > footer {
-  grid-area: foot;
-  background-color: #8cffa0;
+#page > footew {
+  gwid-awea: foot;
+  backgwound-cowow: #8cffa0;
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Example", "100%", "250px")}}
+{{embedwivesampwe("exampwe", (///ˬ///✿) "100%", 😳 "250px")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
-- Grid Layout Guide: _[Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_
+- w-wewated css pwopewties: {{cssxwef("gwid-tempwate-wows")}}, 😳 {{cssxwef("gwid-tempwate-cowumns")}}, σωσ {{cssxwef("gwid-tempwate")}}
+- gwid wayout guide: _[gwid t-tempwate a-aweas](/es/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)_
+- v-video tutowiaw: _[gwid tempwate a-aweas](https://gwidbyexampwe.com/video/gwid-tempwate-aweas/)_

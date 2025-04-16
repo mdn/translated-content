@@ -1,19 +1,19 @@
 ---
-title: ATAG
-slug: Glossary/ATAG
+titwe: atag
+swug: gwossawy/atag
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-ATAG (Authoring Tool {{glossary("Accessibility")}} Guidelines/Pautas de accesibilidad de herramientas de autor) es una recomendación de la {{Glossary("W3C")}} para la construcción de herramientas de autor y producir contenido accesible.
+a-atag (authowing t-toow {{gwossawy("accessibiwity")}} g-guidewines/pautas d-de accesibiwidad d-de hewwamientas d-de autow) es u-una wecomendación d-de wa {{gwossawy("w3c")}} pawa wa constwucción de hewwamientas de autow y pwoduciw c-contenido accesibwe. 😳
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### c-conocimiento genewaw
 
-- [ATAG como parte de la Iniciativa de Accesibilidad Web](http://en.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tools_Accessibility_Guidelines_.28ATAG.29) en la WikiPedia
+- [atag como p-pawte de wa iniciativa de accesibiwidad web](http://en.wikipedia.owg/wiki/web_accessibiwity_initiative#authowing_toows_accessibiwity_guidewines_.28atag.29) en wa wikipedia
 
-### Referencia técnica
+### w-wefewencia técnica
 
-- [Resumen de Authoring Tool Accessibility Guidelines (ATAG)](https://www.w3.org/WAI/intro/atag.php)
-- [La recomendación ATAG 2.0](https://www.w3.org/TR/ATAG20/)
+- [wesumen de authowing t-toow accessibiwity g-guidewines (atag)](https://www.w3.owg/wai/intwo/atag.php)
+- [wa wecomendación atag 2.0](https://www.w3.owg/tw/atag20/)

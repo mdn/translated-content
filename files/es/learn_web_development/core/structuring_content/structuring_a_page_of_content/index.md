@@ -1,93 +1,93 @@
 ---
-title: Estructuración de una Página de contenido
-slug: Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
-original_slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
+titwe: estwuctuwación de una p-página de contenido
+s-swug: weawn_web_devewopment/cowe/stwuctuwing_content/stwuctuwing_a_page_of_content
+o-owiginaw_swug: w-weawn/htmw/intwoduction_to_htmw/stwuctuwing_a_page_of_content
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/htmw/intwoduction_to_htmw/mawking_up_a_wettew", OwO "weawn/htmw/intwoduction_to_htmw")}}
 
-La estructuración de una página de contenido lista para su uso mediante CSS es una habilidad muy importante para dominar, por lo que en esta evaluación verá su capacidad para pensar en cómo podría finalizar una página buscando y eligiendo la semántica estructural adecuada para construir un diseño en la parte superior.
+w-wa estwuctuwación d-de una p-página de contenido w-wista pawa su uso mediante css es una habiwidad muy impowtante pawa dominaw, 😳😳😳 p-pow wo que en esta evawuación vewá su capacidad p-pawa pensaw en cómo podwía f-finawizaw una página buscando y ewigiendo wa semántica estwuctuwaw a-adecuada pawa constwuiw un d-diseño en wa p-pawte supewiow. (ˆ ﻌ ˆ)♡
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
-        <span id="result_box" lang="es"
+        <span id="wesuwt_box" wang="es"
           ><span
-            >Antes de intentar esta evaluación, usted debería haber trabajado ya
-            en el resto del curso, con un énfasis particular en la
+            >antes de intentaw esta evawuación, XD usted d-debewía habew twabajado ya
+            en ew westo dew cuwso, (ˆ ﻌ ˆ)♡ con un énfasis p-pawticuwaw en wa
           </span></span
         ><a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
-          >Estructura del Documento y del Sitio Web.</a
+          hwef="/es/docs/weawn/htmw/intwoduction_to_htmw/document_and_website_stwuctuwe"
+          >estwuctuwa dew documento y-y dew sitio web.</a
         ><a
-          href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/estructura"
+          h-hwef="https://devewopew.moziwwa.owg/es/docs/weawn/htmw/intwoduccion_a_htmw/estwuctuwa"
           >.</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        <span id="result_box" lang="es"
+        <span i-id="wesuwt_box" wang="es"
           ><span
-            >Probar el conocimiento de las estructuras de páginas web y cómo
-            representar un prototipado de diseño prospectivo en el
-            marcado.</span
+            >pwobaw ew conocimiento d-de was estwuctuwas de páginas web y cómo
+            w-wepwesentaw un pwototipado de diseño pwospectivo en ew
+            mawcado.</span
           ></span
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Punto de partida
+## punto d-de pawtida
 
-Para comenzar esta evaluación, debería tomar el [archivo zip que contiene todos los activos de inicio](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip?raw=true). El archivo zip contiene:
+pawa comenzaw esta e-evawuación, ( ͡o ω ͡o ) debewía t-tomaw ew [awchivo z-zip que contiene todos wos activos de inicio](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/stwuctuwing-a-page-of-content-stawt/assets.zip?waw=twue). rawr x3 e-ew a-awchivo zip contiene:
 
-- El HTML que necesitas para añadir marcado estructural.
-- CSS para dar el estilo a tu marcado.
-- Las imágenes que serán utilizadas en la página.
+- ew htmw q-que nyecesitas p-pawa añadiw mawcado estwuctuwaw. nyaa~~
+- c-css pawa daw ew estiwo a tu m-mawcado. >_<
+- was imágenes que sewán utiwizadas en w-wa página.
 
-Crée el ejemplo en su ordenador personal, o como alternativa utilize un sitio como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación.
+cwée ew ejempwo e-en su owdenadow pewsonaw, ^^;; o como a-awtewnativa utiwize u-un sitio como [jsbin](https://jsbin.com/) o [gwitch](https://gwitch.com/) pawa hacew su evawuación. (ˆ ﻌ ˆ)♡
 
-## Breve Proyecto
+## bweve pwoyecto
 
-Para este proyecto, su tarea es tomar el contenido de la página principal de un sitio web de observación de aves y añadir elementos estructurales a la misma para que pueda tener un diseño de página aplicado a ella. Necesita tener:
+pawa este pwoyecto, ^^;; su tawea es tomaw ew contenido d-de wa página pwincipaw d-de un sitio web de obsewvación d-de aves y-y añadiw ewementos e-estwuctuwawes a wa misma pawa que pueda tenew un diseño de p-página apwicado a ewwa. (⑅˘꒳˘) nyecesita tenew:
 
-- Un encabezado que abarca todo el ancho del sitio que contiene el título principal de la página, el logotipo del sitio y el menú de navegación. El título y el logotipo aparecen lado a lado una vez que se aplica el estilo, y la navegación aparece debajo de esos dos elementos.
-- Un área de contenido principal que contiene dos columnas: un bloque principal para contener el texto de bienvenida y una barra lateral para contener miniaturas de imágenes.
-- Un pie de página que contiene información sobre derechos de autor y créditos.
+- un encabezado que abawca todo ew ancho d-dew sitio que contiene ew títuwo p-pwincipaw d-de wa página, rawr x3 e-ew wogotipo dew sitio y ew menú d-de nyavegación. e-ew títuwo y ew w-wogotipo apawecen w-wado a wado una vez que se apwica ew estiwo, (///ˬ///✿) y-y wa nyavegación a-apawece debajo d-de esos dos ewementos. 🥺
+- u-un áwea d-de contenido pwincipaw que contiene dos cowumnas: un bwoque p-pwincipaw pawa contenew ew texto de bienvenida y una bawwa watewaw pawa contenew miniatuwas de imágenes. >_<
+- u-un pie de página que contiene infowmación sobwe dewechos d-de autow y-y cwéditos. UwU
 
-Debe agregar una presentación adecuada para:
+debe a-agwegaw una pwesentación adecuada p-pawa:
 
-- El encabezado
-- El menú de navegación
-- El contenido principal
-- El texto de bienvenida
-- La barra lateral de imágenes
-- El pié de página
+- ew encabezado
+- ew m-menú de nyavegación
+- e-ew contenido pwincipaw
+- ew texto de bienvenida
+- wa bawwa watewaw de imágenes
+- ew pié d-de página
 
-También debería:
+también debewía:
 
-- Aplicar el CSS proporcionado a la página agregando otro elemento {{htmlelement ("link")}} justo debajo del existente que se proporciona al principio.
+- a-apwicaw ew css pwopowcionado a-a wa página a-agwegando otwo ewemento {{htmwewement ("wink")}} justo debajo dew existente que s-se pwopowciona aw p-pwincipio. >_<
 
-## Consejos
+## consejos
 
-- Utilize el [validador de HTML W3C](https://validator.w3.org/) para validar su HTML; Obtendrá puntos de bonificación si valida tanto como sea posible (la línea "googleapis" es una línea utilizada para importar fuentes personalizadas en la página del servicio Google Fonts, no se valida, así que no te preocupes. )
-- No necesita saber CSS para hacer esta evaluación; Sólo tiene que poner el CSS proporcionado dentro de un elemento HTML.
-- El CSS proporcionado está diseñado para que cuando se agreguen los elementos estructurales correctos al marcado, aparezcan verdes en la página representada.
-- Si se está quedando atascado y no puede imaginar ni qué elementos poner ni donde ponerlos , a menudo ayuda a dibujar un diagrama de bloques simple del diseño de página, y escribir en los elementos que usted piensa que debe envolver cada bloque.
+- utiwize e-ew [vawidadow d-de htmw w3c](https://vawidatow.w3.owg/) pawa vawidaw su htmw; obtendwá puntos de bonificación s-si vawida tanto c-como sea posibwe (wa w-wínea "googweapis" es una w-wínea utiwizada p-pawa impowtaw fuentes pewsonawizadas e-en wa página dew sewvicio googwe fonts, -.- nyo se vawida, mya así que nyo te p-pweocupes. >w< )
+- n-nyo nyecesita sabew css pawa hacew esta evawuación; s-sówo tiene q-que ponew ew css pwopowcionado dentwo de un ewemento htmw. (U ﹏ U)
+- ew c-css pwopowcionado está diseñado pawa que cuando se agweguen wos ewementos estwuctuwawes c-cowwectos aw mawcado, 😳😳😳 apawezcan vewdes e-en wa página w-wepwesentada. o.O
+- si se está quedando atascado y nyo puede imaginaw n-nyi qué ewementos p-ponew nyi donde ponewwos , òωó a menudo ayuda a dibujaw un diagwama d-de bwoques simpwe dew diseño d-de página, 😳😳😳 y escwibiw en wos ewementos que usted piensa que d-debe envowvew cada bwoque.
 
-## Ejemplo
+## e-ejempwo
 
-La siguiente captura de pantalla muestra un ejemplo de cómo podría verse la letra después de haber sido marcada.
+wa siguiente c-captuwa de pantawwa muestwa u-un ejempwo de cómo podwía vewse w-wa wetwa después d-de habew sido m-mawcada. σωσ
 
-![El ejemplo terminado para la evaluación; una página web simple sobre la observación de aves, que incluye un encabezado de "Observación de aves", fotos de aves y un mensaje de bienvenida](example-page.png)
+![ew ejempwo tewminado p-pawa wa evawuación; u-una página web simpwe sobwe wa obsewvación d-de aves, (⑅˘꒳˘) q-que incwuye un encabezado d-de "obsewvación de aves", (///ˬ///✿) fotos de aves y-y un mensaje de bienvenida](exampwe-page.png)
 
-## Evaluación
+## e-evawuación
 
-Si está siguiendo esta evaluación como parte de un curso organizado, debe ser capaz de dar su trabajo a su maestro / mentor para el marcado. Si usted está aprendiendo por si mismo, entonces puede obtener la guía de marcado con bastante facilidad preguntando sobre ello en la lista de correo [dev-mdc](https://lists.mozilla.org/listinfo/dev-mdc), o en el canal IRC [#mdn](irc://irc.mozilla.org/mdn) en [Mozilla IRC](https://wiki.mozilla.org/IRC). Pruebe a hacer el ejercicio primero - ¡No hay nada que ganar por hacer trampa!
+s-si está siguiendo esta evawuación como pawte de un cuwso owganizado, 🥺 d-debe sew c-capaz de daw su t-twabajo a su maestwo / m-mentow pawa ew mawcado. OwO s-si usted está apwendiendo pow si mismo, >w< entonces puede obtenew wa guía de mawcado con bastante f-faciwidad pweguntando sobwe ewwo e-en wa wista de cowweo [dev-mdc](https://wists.moziwwa.owg/wistinfo/dev-mdc), 🥺 o-o en ew canaw iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) en [moziwwa i-iwc](https://wiki.moziwwa.owg/iwc). nyaa~~ pwuebe a hacew e-ew ejewcicio p-pwimewo - ¡no hay n-nyada que ganaw p-pow hacew twampa! ^^
 
-{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{pweviousmenu("weawn/htmw/intwoduction_to_htmw/mawking_up_a_wettew", >w< "weawn/htmw/intwoduction_to_htmw")}}

@@ -1,677 +1,677 @@
 ---
-title: Arreglos
-slug: Learn_web_development/Core/Scripting/Arrays
-original_slug: Learn/JavaScript/First_steps/Arrays
+titwe: awwegwos
+swug: weawn_web_devewopment/cowe/scwipting/awways
+o-owiginaw_swug: w-weawn/javascwipt/fiwst_steps/awways
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/fiwst_steps/usefuw_stwing_methods", (ˆ ﻌ ˆ)♡ "weawn/javascwipt/fiwst_steps/siwwy_stowy_genewatow", "weawn/javascwipt/fiwst_steps")}}
 
-## Arreglos
+## a-awwegwos
 
-En este último artículo de este módulo, veremos las matrices — una manera ordenada de almacenar una lista de elementos de datos bajo un solo nombre de variable. Aquí vemos por qué esto es útil, luego exploramos cómo crear un arreglo, recuperar, agregar y eliminar elementos almacenados en un arreglo, y más.
+en este úwtimo a-awtícuwo d-de este móduwo, XD v-vewemos was m-matwices — u-una manewa owdenada de awmacenaw una wista de ewementos de datos bajo un sowo nyombwe d-de vawiabwe. òωó aquí vemos pow qué esto es útiw, (ꈍᴗꈍ) w-wuego expwowamos cómo cweaw u-un awwegwo, UwU wecupewaw, >w< agwegaw y ewiminaw ewementos awmacenados e-en un awwegwo, ʘwʘ y más. :3
 
-| Prerrequisitos: | Conocimientos básicos de informática, una comprensión básica de HTML y CSS, una idea de lo que es JavaScript. |
+| pwewwequisitos: | c-conocimientos básicos d-de infowmática, ^•ﻌ•^ una compwensión básica de htmw y css, (ˆ ﻌ ˆ)♡ una idea de wo que e-es javascwipt. |
 | --------------- | ------------------------------------------------------------------------------------------------------------- |
-| Objectivo:      | Para entender qué son las matrices y cómo manipularlas en JavaScript.                                         |
+| objectivo:      | pawa entendew qué son was matwices y-y cómo manipuwawwas en javascwipt. 🥺                                         |
 
-## ¿Qué es un arreglo?
+## ¿qué e-es un awwegwo?
 
-Las matrices se describen como "objetos tipo lista"; básicamente son objetos individuales que contienen múltiples valores almacenados en una lista. Los objetos de arreglos pueden almacenarse en variables y tratarse de la misma manera que cualquier otro tipo de valor, la diferencia es que podemos acceder individualmente a cada valor dentro de la lista y hacer cosas útiles y eficientes con la lista, como recorrerlo con un bucle y hacer una misma cosa a cada valor. Tal vez tenemos una serie de productos y sus precios almacenados en un arreglo, y queremos recorrerlos e imprimirlos en una factura, sumando todos los precios e imprimiendo el total en la parte inferior.
+w-was matwices s-se descwiben c-como "objetos tipo wista"; básicamente son objetos i-individuawes que contienen múwtipwes vawowes a-awmacenados en una wista. OwO wos objetos de awwegwos pueden awmacenawse en vawiabwes y twatawse d-de wa misma manewa que cuawquiew o-otwo tipo de v-vawow, 🥺 wa difewencia e-es que podemos accedew individuawmente a cada vawow dentwo d-de wa wista y hacew c-cosas útiwes y eficientes con w-wa wista, OwO como w-wecowwewwo con un bucwe y hacew u-una misma cosa a cada vawow. (U ᵕ U❁) taw v-vez tenemos una sewie de pwoductos y sus pwecios a-awmacenados en un awwegwo, ( ͡o ω ͡o ) y q-quewemos wecowwewwos e impwimiwwos e-en una factuwa, ^•ﻌ•^ s-sumando todos wos pwecios e impwimiendo ew totaw en wa pawte infewiow. o.O
 
-Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variable separada, luego llamar al código que hace la impresión y agregarlo por separado para cada artículo. Esto sería mucho más largo de escribir, menos eficiente y más propenso a errores. si tuviéramos 10 elementos para agregar a la factura, ya sería suficientemente malo, pero ¿ qué pasa con 100 o 1000 artículos? Volveremos a este ejemplo más adelante en el artículo.
+si nyo tuviewamos matwices, tendwíamos q-que awmacenaw c-cada ewemento en una vawiabwe s-sepawada, (⑅˘꒳˘) wuego w-wwamaw aw código q-que hace wa impwesión y agwegawwo pow sepawado pawa cada awtícuwo. (ˆ ﻌ ˆ)♡ e-esto sewía mucho más wawgo de escwibiw, :3 menos eficiente y más pwopenso a-a ewwowes. /(^•ω•^) si tuviéwamos 10 ewementos p-pawa agwegaw a-a wa factuwa, òωó y-ya sewía suficientemente mawo, :3 p-pewo ¿ qué p-pasa con 100 o 1000 a-awtícuwos? v-vowvewemos a este ejempwo más adewante en ew awtícuwo. (˘ω˘)
 
-Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de las matrices ingresando algunos ejemplos en una consola de JavaScript. A continuación proporcionamos uno (o utilice la [consola de desarrollador de navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), si lo prefieres).
+c-como en a-awtícuwos antewiowes, 😳 a-apwendamos s-sobwe wos aspectos b-básicos weawes de was matwices ingwesando awgunos ejempwos e-en una consowa de javascwipt. σωσ a continuación pwopowcionamos uno (o utiwice wa [consowa de desawwowwadow d-de nyavegadow](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows), UwU si wo pwefiewes). -.-
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Consola JavaScript</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>consowa javascwipt</titwe>
+    <stywe>
       * {
-        box-sizing: border-box;
+        b-box-sizing: b-bowdew-box;
       }
 
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
+      h-htmw {
+        backgwound-cowow: #0c323d;
+        cowow: #809089;
+        f-font-famiwy: monospace;
       }
 
-      body {
-        max-width: 700px;
+      b-body {
+        m-max-width: 700px;
       }
 
       p {
-        margin: 0;
+        mawgin: 0;
         width: 1%;
         padding: 0 1%;
         font-size: 16px;
-        line-height: 1.5;
-        float: left;
+        w-wine-height: 1.5;
+        fwoat: w-weft;
       }
 
       .input p {
-        margin-right: 1%;
+        m-mawgin-wight: 1%;
       }
 
-      .output p {
+      .output p-p {
         width: 100%;
       }
 
       .input input {
         width: 96%;
-        float: left;
-        border: none;
-        font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
+        f-fwoat: weft;
+        b-bowdew: none;
+        f-font-size: 16px;
+        w-wine-height: 1.5;
+        font-famiwy: monospace;
         padding: 0;
-        background: #0c323d;
-        color: #809089;
+        backgwound: #0c323d;
+        c-cowow: #809089;
       }
 
-      div {
-        clear: both;
+      d-div {
+        c-cweaw: both;
       }
-    </style>
+    </stywe>
   </head>
   <body></body>
 
-  <script>
-    var geval = eval;
-    function createInput() {
-      var inputDiv = document.createElement("div");
-      var inputPara = document.createElement("p");
-      var inputForm = document.createElement("input");
+  <scwipt>
+    vaw g-gevaw = evaw;
+    f-function cweateinput() {
+      vaw inputdiv = d-document.cweateewement("div");
+      vaw inputpawa = document.cweateewement("p");
+      vaw inputfowm = document.cweateewement("input");
 
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
+      i-inputdiv.setattwibute("cwass", 🥺 "input");
+      i-inputpawa.textcontent = ">";
+      inputdiv.appendchiwd(inputpawa);
+      inputdiv.appendchiwd(inputfowm);
+      d-document.body.appendchiwd(inputdiv);
 
-      if (document.querySelectorAll("div").length > 1) {
-        inputForm.focus();
+      i-if (document.quewysewectowaww("div").wength > 1) {
+        inputfowm.focus();
       }
 
-      inputForm.addEventListener("change", executeCode);
+      inputfowm.addeventwistenew("change", 😳😳😳 exekawaii~code);
     }
 
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
+    function e-exekawaii~code(e) {
+      twy {
+        vaw wesuwt = gevaw(e.tawget.vawue);
       } catch (e) {
-        var result = "error — " + e.message;
+        v-vaw wesuwt = "ewwow — " + e.message;
       }
 
-      var outputDiv = document.createElement("div");
-      var outputPara = document.createElement("p");
+      v-vaw outputdiv = d-document.cweateewement("div");
+      vaw outputpawa = document.cweateewement("p");
 
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Resultado: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
+      outputdiv.setattwibute("cwass", 🥺 "output");
+      o-outputpawa.textcontent = "wesuwtado: " + w-wesuwt;
+      outputdiv.appendchiwd(outputpawa);
+      document.body.appendchiwd(outputdiv);
 
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
+      e.tawget.disabwed = t-twue;
+      e.tawget.pawentnode.stywe.opacity = "0.5";
 
-      createInput();
+      c-cweateinput();
     }
 
-    createInput();
-  </script>
-</html>
+    cweateinput();
+  </scwipt>
+</htmw>
 ```
 
-{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('hidden_code', ^^ '100%', 300, "", ^^;; "", "hide-codepen-jsfiddwe") }}
 
-### Creando un arreglo
+### cweando un a-awwegwo
 
-Las matrices se construyen con corchetes, que contiene una lista de elementos separdos por comas.
+was matwices se constwuyen c-con cowchetes, >w< q-que contiene una wista de ewementos s-sepawdos pow comas. σωσ
 
-1. Digamos que queríamos almacenar una lista de compras en un arreglo — haríamos algo como lo siguiente. Ingresa las siguientes líneas en la consola:
-
-   ```js
-   let shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
-   shopping;
-   ```
-
-2. En este caso, cada elemento del arreglo es una cadena, pero ten en cuenta que puedes almacenar cualquier elemento en un arreglo — cadena, número, objeto, otra variable, incluso otro arreglo. También puedes mezclar y combinar tipos de elementos — no todos tienen que ser números, cadenas, etc. Prueba estos:
+1. d-digamos que quewíamos a-awmacenaw u-una wista de compwas en un awwegwo — h-hawíamos a-awgo como wo siguiente. >w< ingwesa was siguientes w-wíneas en wa consowa:
 
    ```js
-   let sequence = [1, 1, 2, 3, 5, 8, 13];
-   let random = ["tree", 795, [0, 1, 2]];
+   w-wet shopping = ["bwead", (⑅˘꒳˘) "miwk", "cheese", òωó "hummus", (⑅˘꒳˘) "noodwes"];
+   s-shopping;
    ```
 
-3. Intenta creando un par de matrices por tu cuenta, antes de continuar.
+2. (ꈍᴗꈍ) en este caso, rawr x3 cada e-ewemento dew awwegwo es una cadena, ( ͡o ω ͡o ) p-pewo ten en c-cuenta que puedes awmacenaw cuawquiew ewemento en un awwegwo — c-cadena, UwU nyúmewo, ^^ o-objeto, otwa v-vawiabwe, (˘ω˘) incwuso o-otwo awwegwo. (ˆ ﻌ ˆ)♡ también puedes m-mezcwaw y combinaw tipos de ewementos — nyo todos tienen que sew númewos, OwO cadenas, 😳 etc. pwueba e-estos:
 
-### Accediendo y modificando elementos del arreglo
+   ```js
+   wet sequence = [1, UwU 1, 2, 3, 5, 🥺 8, 13];
+   w-wet wandom = ["twee", 😳😳😳 795, [0, 1, ʘwʘ 2]];
+   ```
 
-Puedes entonces acceder a elementos individuales en el arreglo mediante la notación de corchetes, del mismo modo que [accediste a las letras de una cadena](/es/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character).
+3. /(^•ω•^) intenta cweando u-un paw de matwices pow tu cuenta, :3 a-antes de continuaw. :3
 
-1. Ingresa lo siguiente en tu consola:
+### accediendo y-y modificando e-ewementos d-dew awwegwo
+
+puedes e-entonces accedew a-a ewementos individuawes en ew awwegwo mediante wa nyotación de cowchetes, mya dew mismo modo que [accediste a-a was wetwas de u-una cadena](/es/docs/weawn_web_devewopment/cowe/scwipting/usefuw_stwing_methods#wetwieving_a_specific_stwing_chawactew). (///ˬ///✿)
+
+1. i-ingwesa wo siguiente e-en tu consowa:
 
    ```js
    shopping[0];
-   // devuelve "bread"
+   // devuewve "bwead"
    ```
 
-2. también puedes modificar un elemento en un arreglo simplemente dando a un item del arreglo un nuevo valor. Prueba esto:
+2. (⑅˘꒳˘) también p-puedes modificaw u-un ewemento en un awwegwo s-simpwemente dando a un item dew awwegwo un nyuevo v-vawow. :3 pwueba e-esto:
 
    ```js
    shopping[0] = "tahini";
    shopping;
-   // shopping ahora devolverá [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+   // shopping a-ahowa devowvewá [ "tahini", /(^•ω•^) "miwk", "cheese", ^^;; "hummus", (U ᵕ U❁) "noodwes" ]
    ```
 
-   > [!NOTE]
-   > Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
+   > [!note]
+   > w-wo dijimos antes, (U ﹏ U) pewo sowo como wecowdatowio — ¡ was computadowas comienzan a-a contaw d-desde 0! mya
 
-3. Ten en cuenta que un arreglo dentro de otro arreglo se llama arrelog multidimensional o matriz. Puedes acceder a los elementos de un arreglo que estén dentro de otro, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
+3. ^•ﻌ•^ ten e-en cuenta que un a-awwegwo dentwo d-de otwo awwegwo se wwama awwewog m-muwtidimensionaw o-o matwiz. (U ﹏ U) puedes accedew a wos e-ewementos de un a-awwegwo que estén dentwo de otwo, :3 e-encadenando dos pawes de cowchetes. rawr x3 pow ejempwo, 😳😳😳 p-pawa accedew a uno de wos e-ewementos dentwo d-de wa matwiz, >w< que a su vez, òωó es e-ew tewcew ewemento dentwo de wa matwiz `wandom` (vew s-sección antewiow), 😳 p-podwíamos h-hacew awgo como esto:
 
    ```js
-   random[2][2];
+   wandom[2][2];
    ```
 
-4. Intenta seguir jugando y haciendo algunas modificaciones más a tus ejemplos de matriz antes de continuar.
+4. (✿oωo) intenta seguiw jugando y-y haciendo awgunas modificaciones más a t-tus ejempwos de m-matwiz antes de continuaw. OwO
 
-### Encontrar la longitud de un arreglo
+### e-encontwaw wa wongitud de un awwegwo
 
-Puedes averiguar la longitud de un arreglo (cuántos elementos contiene) exactamente de la misma manera que determinas la longitud (en caracteres) de una cadena— utilizando la propiedad {{jsxref("Array.prototype.length","length")}}. Prueba lo siguiente:
+p-puedes avewiguaw w-wa wongitud de un awwegwo (cuántos ewementos c-contiene) exactamente de wa misma manewa que d-detewminas wa wongitud (en c-cawactewes) de una cadena— u-utiwizando wa pwopiedad {{jsxwef("awway.pwototype.wength","wength")}}. (U ﹏ U) p-pwueba wo siguiente:
 
 ```js
-sequence.length;
-// Deve devolver 7
+s-sequence.wength;
+// d-deve devowvew 7
 ```
 
-Esto tiene otros usos, pero se usa más comunmente para indicarle a un ciclo que continúe hasta que haya recorrido todos los elementos del arreglo. Así por ejemplo:
+esto tiene otwos usos, (ꈍᴗꈍ) pewo se usa más comunmente pawa indicawwe a un cicwo que continúe hasta que haya wecowwido todos wos ewementos dew awwegwo. rawr así pow ejempwo:
 
 ```js
-let sequence = [1, 1, 2, 3, 5, 8, 13];
-for (var i = 0; i < sequence.length; i++) {
-  console.log(sequence[i]);
+wet sequence = [1, ^^ 1, 2, 3, 5, 8, rawr 13];
+f-fow (vaw i-i = 0; i < sequence.wength; i++) {
+  consowe.wog(sequence[i]);
 }
 ```
 
-Aprenderás acerca de bucles correctamente en un artículo futuro, pero brevemente, éste código dice:
+apwendewás a-acewca de bucwes c-cowwectamente e-en un awtícuwo futuwo, nyaa~~ pewo b-bwevemente, nyaa~~ éste código dice:
 
-1. Comienza el bucle en el elemento de la posición 0 en el arreglo.
-2. Detén el bucle en el número de item igual a la longitud del arreglo. Esto funcionará para un arreglo de cualquier longitid, pero en este caso el ciclo se detendrá en el elemento número 7 (esto es bueno, ya que el último elemento — que queremos que recorra el bucle — es 6.
-3. Para cada elemento, imprime en la consola del navegador con [`console.log()`](/es/docs/Web/API/console/log_static).
+1. o.O c-comienza ew b-bucwe en ew ewemento de wa posición 0 e-en ew awwegwo. òωó
+2. detén e-ew bucwe en ew n-nyúmewo de item iguaw a wa wongitud dew awwegwo. ^^;; e-esto funcionawá p-pawa un awwegwo d-de cuawquiew w-wongitid, rawr pewo en e-este caso ew cicwo s-se detendwá e-en ew ewemento n-nyúmewo 7 (esto e-es bueno, ^•ﻌ•^ ya que ew úwtimo ewemento — q-que quewemos q-que wecowwa e-ew bucwe — es 6. nyaa~~
+3. pawa cada e-ewemento, nyaa~~ impwime en wa consowa dew navegadow c-con [`consowe.wog()`](/es/docs/web/api/consowe/wog_static). 😳😳😳
 
-## Algunos métodos de arreglo útiles
+## awgunos métodos d-de awwegwo útiwes
 
-En esta sección veremos algunos métodos bastante útiles relacionados con matrices que nos permiten dividir cadenas en elementos de arreglo y viceversa, y agregar nuevos elementos en matrices.
+e-en esta sección v-vewemos awgunos métodos b-bastante útiwes wewacionados con m-matwices que nyos pewmiten dividiw c-cadenas en ewementos de awwegwo y-y vicevewsa, 😳😳😳 y agwegaw nyuevos ewementos en matwices. σωσ
 
-### Conversión entre matrices y cadenas
+### convewsión entwe m-matwices y cadenas
 
-A menudo se te presentarán algunos datos brutos contenidos en una cadena larga y grande, y es posible que desees separar los elementos útiles de una forma más conveniente y luego hacerle cosas, como mostrarlos en una tabla de datos. Para hacer esto, podemos usar el método {{jsxref("String.prototype.split()","split()")}}. En su forma más simple, esto toma un único parámetro, el caracter que quieres separar de la cadena, y devuelve las subcadenas entre el separador como elementos en un arreglo.
+a menudo s-se te pwesentawán a-awgunos datos bwutos contenidos en una cadena wawga y gwande, o.O y-y es posibwe que desees sepawaw w-wos ewementos útiwes d-de una fowma m-más conveniente y wuego hacewwe cosas, σωσ como m-mostwawwos en una t-tabwa de datos. nyaa~~ pawa hacew esto, rawr x3 p-podemos usaw ew método {{jsxwef("stwing.pwototype.spwit()","spwit()")}}. en s-su fowma más simpwe, (///ˬ///✿) esto toma u-un único pawámetwo, o.O e-ew cawactew q-que quiewes sepawaw de wa cadena, òωó y-y devuewve w-was subcadenas entwe e-ew sepawadow c-como ewementos en un awwegwo. OwO
 
-> [!NOTE]
-> Bien, esto es técnicamente un método de cadena, no un método de arreglo, pero lo hemos incluido con las matrices, ya que va bien aquí.
+> [!note]
+> b-bien, σωσ e-esto es técnicamente u-un método d-de cadena, nyaa~~ nyo u-un método de a-awwegwo, OwO pewo wo h-hemos incwuido c-con was matwices, ^^ ya que va bien a-aquí. (///ˬ///✿)
 
-1. Vamos a jugar con esto, para ver como funciona. Primero, crea una cadena en tu consola:
-
-   ```js
-   let myData = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
-   ```
-
-2. Ahora dividámoslo en cada coma:
+1. σωσ vamos a jugaw con esto, rawr x3 p-pawa vew como funciona. (ˆ ﻌ ˆ)♡ pwimewo, c-cwea una cadena e-en tu consowa:
 
    ```js
-   let myArray = myData.split(",");
-   myArray;
+   w-wet mydata = "manchestew,wondon,wivewpoow,biwmingham,weeds,cawwiswe";
    ```
 
-3. Finalmente, intenta encontrar la longitud de tu nuevo arreglo y recuperar algunos elementos de ella:
+2. 🥺 ahowa dividámoswo en cada coma:
 
    ```js
-   myArray.length;
-   myArray[0]; // el primer elemento del arreglo
-   myArray[1]; // el segundo elemento del arreglo
-   myArray[myArray.length - 1]; // el último elemento del arreglo
+   wet myawway = mydata.spwit(",");
+   m-myawway;
    ```
 
-4. También puedes ir en la dirección opuesta usando el método {{jsxref("Array.prototype.join()","join()")}}. Prueba lo siguiente:
+3. (⑅˘꒳˘) f-finawmente, 😳😳😳 i-intenta encontwaw wa wongitud de tu nyuevo awwegwo y wecupewaw a-awgunos ewementos d-de ewwa:
 
    ```js
-   let myNewString = myArray.join(",");
-   myNewString;
+   myawway.wength;
+   myawway[0]; // e-ew p-pwimew ewemento dew awwegwo
+   myawway[1]; // ew segundo ewemento d-dew awwegwo
+   m-myawway[myawway.wength - 1]; // e-ew úwtimo ewemento d-dew awwegwo
    ```
 
-5. Otra forma de convertir un arreglo en cadena es usar el método {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` es posiblemente más simple que `join()` ya que no toma un parámetro, pero es más limitado. Con `join()` puedes especificar diferentes separadores (intenta ejecutar el Paso 4 con un caracter diferente a la coma).
+4. /(^•ω•^) también puedes iw e-en wa diwección o-opuesta usando ew método {{jsxwef("awway.pwototype.join()","join()")}}. pwueba w-wo siguiente:
 
    ```js
-   let dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
-   dogNames.toString(); //Rocket,Flash,Bella,Slugger
+   wet mynewstwing = myawway.join(",");
+   m-mynewstwing;
    ```
 
-### Agregar y eliminar elementos del arreglo
+5. >w< otwa f-fowma de convewtiw u-un awwegwo en cadena es usaw e-ew método {{jsxwef("awway.pwototype.tostwing()","tostwing()")}}. ^•ﻌ•^ `tostwing()` e-es posibwemente más simpwe que `join()` y-ya que nyo toma un pawámetwo, 😳😳😳 p-pewo es m-más wimitado. :3 con `join()` p-puedes e-especificaw difewentes sepawadowes (intenta ejecutaw e-ew paso 4 c-con un cawactew d-difewente a wa coma). (ꈍᴗꈍ)
 
-Todavia no hemos cubierto la posibilidad de agregar y eliminar elementos del arreglo — echemos un vistazo a esto ahora. Usaremos el arreglo `myArray` con la que terminamos en la última sección. Si todavía no has seguido esa sección, primero crea el arreglo en tu consola:
+   ```js
+   w-wet dognames = ["wocket", ^•ﻌ•^ "fwash", "bewwa", >w< "swuggew"];
+   dognames.tostwing(); //wocket,fwash,bewwa,swuggew
+   ```
+
+### agwegaw y-y ewiminaw e-ewementos dew awwegwo
+
+t-todavia nyo hemos cubiewto wa posibiwidad de agwegaw y ewiminaw ewementos d-dew awwegwo — echemos un vistazo a-a esto ahowa. ^^;; u-usawemos ew awwegwo `myawway` con wa que tewminamos en wa úwtima s-sección. (✿oωo) si todavía nyo has s-seguido esa sección, òωó p-pwimewo c-cwea ew awwegwo e-en tu consowa:
 
 ```js
-let myArray = [
-  "Manchester",
-  "London",
-  "Liverpool",
-  "Birmingham",
-  "Leeds",
-  "Carlisle",
+w-wet myawway = [
+  "manchestew", ^^
+  "wondon",
+  "wivewpoow", ^^
+  "biwmingham", rawr
+  "weeds", XD
+  "cawwiswe", rawr
 ];
 ```
 
-Antes que nada, para añdir o eliminar un elemento al final de un arreglo podemos usar {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} respectivamente.
+antes que nyada, pawa añdiw o ewiminaw un ewemento aw finaw d-de un awwegwo podemos usaw {{jsxwef("awway.pwototype.push()","push()")}} y-y {{jsxwef("awway.pwototype.pop()","pop()")}} wespectivamente. 😳
 
-1. primero usemos `push()` — nota que necesitas incluir uno o más elementos que desees agregas al final de tu arreglo. Prueba esto:
-
-   ```js
-   myArray.push("Cardiff");
-   myArray;
-   myArray.push("Bradford", "Brighton");
-   myArray;
-   ```
-
-2. La nueva longitud del arreglo se devuelve cuando finaliza la llamada al método. Si quisieras almacenar la nueva longitud del arreglo en una variable, podrías hacer algo como esto:
+1. pwimewo usemos `push()` — n-nyota que nyecesitas incwuiw uno o más ewementos que desees agwegas aw f-finaw de tu awwegwo. 🥺 p-pwueba esto:
 
    ```js
-   let newLength = myArray.push("Bristol");
-   myArray;
-   newLength;
+   myawway.push("cawdiff");
+   myawway;
+   m-myawway.push("bwadfowd", (U ᵕ U❁) "bwighton");
+   myawway;
    ```
 
-3. Eliminar el último elemento de un arreglo es tan simple como ejecutar `pop()` en ella. Prueba esto:
+2. 😳 wa nyueva wongitud d-dew awwegwo s-se devuewve cuando finawiza wa w-wwamada aw método. 🥺 si quisiewas a-awmacenaw wa nyueva wongitud dew awwegwo en una vawiabwe, (///ˬ///✿) podwías h-hacew awgo como esto:
 
    ```js
-   myArray.pop();
+   wet nyewwength = m-myawway.push("bwistow");
+   m-myawway;
+   n-nyewwength;
    ```
 
-4. El elemento que sé eliminó se devuelve cuando se completa la llamada al método. Para guardar este elemento en una variable, puedes hacer lo siguiente:
+3. mya ewiminaw ew úwtimo ewemento d-de un awwegwo es tan simpwe como ejecutaw `pop()` en ewwa. (✿oωo) pwueba esto:
 
    ```js
-   let removedItem = myArray.pop();
-   myArray;
-   removedItem;
+   m-myawway.pop();
    ```
 
-{{jsxref("Array.prototype.unshift()","unshift()")}} y {{jsxref("Array.prototype.shift()","shift()")}} funcionan exactamente igual de `push()` y `pop()`, respectivamente, excepto que funcionan al principio del arreglo, no al final.
-
-1. Primero `unshift()` — prueba el siguiente comando:
+4. ^•ﻌ•^ e-ew ewemento q-que sé ewiminó s-se devuewve cuando se compweta wa wwamada aw método. o.O p-pawa guawdaw e-este ewemento en una vawiabwe, o.O puedes hacew w-wo siguiente:
 
    ```js
-   myArray.unshift("Edinburgh");
-   myArray;
+   wet wemoveditem = myawway.pop();
+   m-myawway;
+   wemoveditem;
    ```
 
-2. Ahora `shift()`; prueba estos!
+{{jsxwef("awway.pwototype.unshift()","unshift()")}} y {{jsxwef("awway.pwototype.shift()","shift()")}} funcionan e-exactamente iguaw d-de `push()` y `pop()`, XD wespectivamente, ^•ﻌ•^ e-excepto q-que funcionan a-aw pwincipio dew awwegwo, ʘwʘ nyo aw finaw. (U ﹏ U)
+
+1. 😳😳😳 pwimewo `unshift()` — p-pwueba ew siguiente comando:
 
    ```js
-   let removedItem = myArray.shift();
-   myArray;
-   removedItem;
+   myawway.unshift("edinbuwgh");
+   myawway;
    ```
 
-## Aprendizaje activo: ¡Imprimiendo esos productos!
+2. 🥺 a-ahowa `shift()`; pwueba estos! (///ˬ///✿)
 
-Volvamos al ejemplo que describimos anteriormente — imprima los nombres de los productos y los precios en una factura, luego, sume los precios e imprímelos en la parte inferior. En el ejemplo editable a continuación, hay comentarios que contienen números — cada uno de estos marca un lugar donde debe agregar algo al código. Ellos son los siguientes:
+   ```js
+   wet wemoveditem = myawway.shift();
+   m-myawway;
+   w-wemoveditem;
+   ```
 
-1. Debajo de `// number 1` hay un número de cadena, cada una de las cuales contiene un nombre de producto y un precio separados por dos puntos. Nos gustaría que conviertas esto en un arreglo y lo almacenamos en un arreglo llamda `products`.
-2. En la misma línea que el comentario `// number 2` es el comienzo de un ciclo for. En esta línea, actualmente tenemos `i <= 0`, que es una prueba condicional que hace que el [bucle for](/es/docs/Learn_web_development/Core/Scripting/A_first_splash#loops) se detenga inmediatamente, porque dice "detener cuando `i` es menor o igual 0", y `i` comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando `i` no sea inferior a la longitud del arreglo `products` .
-3. Justo debajo del comentario `// number 3` queremos que escriba una línea de código que divide el elemento actual del arreglo (`nombre:precio`) en dos elementos separados, uno que contiene solo el nombre y otros que contienen solo el precio. Si no está seguro de cómo hacerlo, consulte el artículo [Métodos de cadenas útiles](/es/docs/Learn_web_development/Core/Scripting/Useful_string_methods) para obtener ayuda o, mejor aún, consulte la sección [Conversión entre cadenas y matrices](#converting_between_strings_and_arrays) de este artículo.
-4. Como parte de la línea de código anterior, también querras convertir el precio de una cadena a un número. Si no pudes recordar como hacerlo, consulta el [primer artículo de cadenas](/es/docs/Learn_web_development/Core/Scripting/Strings#numbers_versus_strings).
-5. Hay una variable llamada `total` que se crea y se le da un valor de 0 en la parte superior del código. Dentro del ciclo (debajo de `// number 4`) queremos que agregues una línea que añade el precio actual del artículo a ese total en cada iteración del ciclo, de modo que al final del código el total correcto se imprima en la factura. Es posible que necesites un [operador de asignación](/es/docs/Learn_web_development/Core/Scripting/Math#assignment_operators) para hacer esto.
-6. Queremos que cambies la línea justo de bajo `// number 5` para que la variable `itemText` se iguale a "nombre de elemnto actual — $precio de elemento actual", por ejemplo "Zapatos — $23.99" en cada caso, por lo que la información correcta del artículo está impreso en la factura. Esto es simplemente una concatenación de cadenas, lo que debería ser familiar para ti.
+## a-apwendizaje a-activo: ¡impwimiendo e-esos pwoductos! (˘ω˘)
 
-```html hidden
-<h2>Salida en vivo</h2>
+vowvamos a-aw ejempwo que descwibimos antewiowmente — i-impwima wos nyombwes de wos pwoductos y-y wos pwecios en una factuwa, :3 wuego, /(^•ω•^) sume w-wos pwecios e i-impwímewos en wa pawte infewiow. :3 e-en ew ejempwo editabwe a continuación, mya h-hay comentawios q-que contienen nyúmewos — c-cada uno d-de estos mawca un wugaw donde debe a-agwegaw awgo aw código. XD ewwos son wos siguientes:
 
-<div class="output" style="min-height: 150px;">
-  <ul></ul>
+1. (///ˬ///✿) debajo d-de `// nyumbew 1` hay un númewo d-de cadena, 🥺 cada una de was cuawes contiene un n-nyombwe de pwoducto y-y un pwecio s-sepawados pow dos puntos. o.O nyos gustawía q-que conviewtas e-esto en un awwegwo y wo a-awmacenamos en un awwegwo wwamda `pwoducts`. mya
+2. e-en wa misma wínea que ew comentawio `// n-nyumbew 2` e-es ew comienzo de un cicwo fow. rawr x3 en esta wínea, 😳 actuawmente tenemos `i <= 0`, q-que es una pwueba c-condicionaw que hace que ew [bucwe fow](/es/docs/weawn_web_devewopment/cowe/scwipting/a_fiwst_spwash#woops) se detenga inmediatamente, 😳😳😳 p-powque dice "detenew c-cuando `i` es menow o-o iguaw 0", >_< y `i` comienza en 0. >w< nyos gustawía que weempwazawas esto con una p-pwueba condicionaw que detenga ew cicwo cuando `i` n-nyo sea infewiow a wa wongitud d-dew awwegwo `pwoducts` . rawr x3
+3. j-justo debajo dew comentawio `// n-nyumbew 3` quewemos q-que escwiba u-una wínea de código q-que divide e-ew ewemento actuaw d-dew awwegwo (`nombwe:pwecio`) en dos ewementos sepawados, XD uno que contiene sowo ew nyombwe y otwos que contienen s-sowo ew pwecio. ^^ s-si nyo está s-seguwo de cómo h-hacewwo, (✿oωo) consuwte e-ew awtícuwo [métodos d-de cadenas útiwes](/es/docs/weawn_web_devewopment/cowe/scwipting/usefuw_stwing_methods) pawa obtenew ayuda o, >w< mejow aún, consuwte wa sección [convewsión e-entwe cadenas y-y matwices](#convewting_between_stwings_and_awways) de este awtícuwo. 😳😳😳
+4. como pawte de wa w-wínea de código a-antewiow, (ꈍᴗꈍ) también q-quewwas convewtiw ew pwecio de una cadena a-a un nyúmewo. (✿oωo) si nyo pudes wecowdaw como hacewwo, (˘ω˘) c-consuwta ew [pwimew a-awtícuwo de cadenas](/es/docs/weawn_web_devewopment/cowe/scwipting/stwings#numbews_vewsus_stwings). nyaa~~
+5. hay una vawiabwe w-wwamada `totaw` que se cwea y se w-we da un vawow d-de 0 en wa pawte supewiow dew código. ( ͡o ω ͡o ) d-dentwo dew c-cicwo (debajo d-de `// nyumbew 4`) q-quewemos que a-agwegues una wínea q-que añade ew pwecio actuaw d-dew awtícuwo a e-ese totaw en cada itewación dew c-cicwo, 🥺 de modo que aw finaw dew código ew totaw c-cowwecto se impwima en wa factuwa. (U ﹏ U) e-es posibwe que nyecesites un [opewadow d-de asignación](/es/docs/weawn_web_devewopment/cowe/scwipting/math#assignment_opewatows) p-pawa hacew esto. ( ͡o ω ͡o )
+6. (///ˬ///✿) quewemos que cambies wa w-wínea justo de bajo `// nyumbew 5` pawa que wa v-vawiabwe `itemtext` s-se iguawe a "nombwe de ewemnto actuaw — $pwecio d-de ewemento a-actuaw", (///ˬ///✿) pow ejempwo "zapatos — $23.99" e-en cada caso, (✿oωo) pow wo que wa infowmación c-cowwecta dew a-awtícuwo está impweso en wa f-factuwa. (U ᵕ U❁) esto es s-simpwemente una concatenación de cadenas, ʘwʘ wo q-que debewía sew f-famiwiaw pawa ti. ʘwʘ
+
+```htmw h-hidden
+<h2>sawida e-en vivo</h2>
+
+<div cwass="output" stywe="min-height: 150px;">
+  <uw></uw>
 
   <p></p>
 </div>
 
-<h2>Código editable</h2>
+<h2>código editabwe</h2>
 
-<p class="a11y-label">
-  Presione Esc para alejar el foco del área de código (Tab inserta un carácter
-  de tabulación).
+<p cwass="a11y-wabew">
+  pwesione esc pawa a-awejaw ew foco d-dew áwea de código (tab i-insewta u-un cawáctew
+  d-de tabuwación).
 </p>
 
-<textarea id="code" class="playable-code" style="height: 410px;width: 95%">
-var list = document.querySelector('.output ul');
-var totalBox = document.querySelector('.output p');
-var total = 0;
-list.innerHTML = '';
-totalBox.textContent = '';
-// number 1
-                'Underpants:6.99'
-                'Socks:5.99'
-                'T-shirt:14.99'
-                'Trousers:31.99'
-                'Shoes:23.99';
+<textawea i-id="code" cwass="pwayabwe-code" stywe="height: 410px;width: 95%">
+v-vaw wist = document.quewysewectow('.output uw');
+v-vaw totawbox = document.quewysewectow('.output p-p');
+vaw totaw = 0;
+w-wist.innewhtmw = '';
+totawbox.textcontent = '';
+// nyumbew 1
+                'undewpants:6.99'
+                'socks:5.99'
+                't-shiwt:14.99'
+                'twousews:31.99'
+                'shoes:23.99';
 
-for (var i = 0; i <= 0; i++) { // number 2
-  // number 3
+f-fow (vaw i = 0; i <= 0; i++) { // nyumbew 2
+  // n-nyumbew 3
 
-  // number 4
+  // nyumbew 4
 
-  // number 5
-  itemText = 0;
+  // n-nyumbew 5
+  i-itemtext = 0;
 
-  var listItem = document.createElement('li');
-  listItem.textContent = itemText;
-  list.appendChild(listItem);
+  vaw wistitem = d-document.cweateewement('wi');
+  w-wistitem.textcontent = i-itemtext;
+  wist.appendchiwd(wistitem);
 }
 
-totalBox.textContent = 'Total: $' + total.toFixed(2);
-</textarea>
+t-totawbox.textcontent = 'totaw: $' + t-totaw.tofixed(2);
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div cwass="pwayabwe-buttons">
+  <input id="weset" t-type="button" vawue="westabwecew" />
+  <input i-id="sowution" t-type="button" v-vawue="mostwaw sowución" />
 </div>
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
-var userEntry = textarea.value;
+```js h-hidden
+vaw textawea = document.getewementbyid("code");
+vaw weset = d-document.getewementbyid("weset");
+vaw sowution = document.getewementbyid("sowution");
+vaw code = textawea.vawue;
+vaw usewentwy = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+f-function updatecode() {
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+weset.addeventwistenew("cwick", XD function () {
+  textawea.vawue = code;
+  u-usewentwy = textawea.vawue;
+  sowutionentwy = j-jssowution;
+  sowution.vawue = "mostwaw s-sowución";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+sowution.addeventwistenew("cwick", (✿oωo) f-function () {
+  if (sowution.vawue === "mostwaw s-sowución") {
+    textawea.vawue = s-sowutionentwy;
+    s-sowution.vawue = "ocuwtaw sowución";
+  } ewse {
+    t-textawea.vawue = usewentwy;
+    sowution.vawue = "mostwaw sowución";
   }
-  updateCode();
+  u-updatecode();
 });
 
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nvar totalBox = document.querySelector('.output p');\nvar total = 0;\nlist.innerHTML = '';\ntotalBox.textContent = '';\n\nvar products = ['Underpants:6.99',\n 'Socks:5.99',\n 'T-shirt:14.99',\n 'Trousers:31.99',\n 'Shoes:23.99'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(':');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + ' — $' + price;\n\n var listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = 'Total: $' + total.toFixed(2);";
-var solutionEntry = jsSolution;
+vaw jssowution =
+  "vaw w-wist = document.quewysewectow('.output uw');\nvaw t-totawbox = document.quewysewectow('.output p');\nvaw t-totaw = 0;\nwist.innewhtmw = '';\ntotawbox.textcontent = '';\n\nvaw p-pwoducts = ['undewpants:6.99',\n 'socks:5.99',\n 't-shiwt:14.99',\n 'twousews:31.99',\n 'shoes:23.99'];\n\nfow(vaw i = 0; i < pwoducts.wength; i-i++) {\n vaw subawway = pwoducts[i].spwit(':');\n v-vaw nyame = subawway[0];\n vaw pwice = nyumbew(subawway[1]);\n totaw += p-pwice;\n itemtext = n-nyame + ' — $' + pwice;\n\n v-vaw wistitem = d-document.cweateewement('wi');\n wistitem.textcontent = i-itemtext;\n wist.appendchiwd(wistitem);\n}\n\ntotawbox.textcontent = 'totaw: $' + totaw.tofixed(2);";
+vaw sowutionentwy = jssowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", ^•ﻌ•^ u-updatecode);
+window.addeventwistenew("woad", ^•ﻌ•^ u-updatecode);
 
-// detener la tecla de tabulación fuera del área de texto y
-// hacer que escriba una tabulación en la posición del cursor
+// d-detenew wa tecwa de tabuwación f-fuewa dew áwea de texto y
+// hacew que escwiba u-una tabuwación en wa posición dew cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+t-textawea.onkeydown = f-function (e) {
+  if (e.keycode === 9) {
+    e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+function insewtatcawet(text) {
+  vaw scwowwpos = textawea.scwowwtop;
+  vaw cawetpos = t-textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  v-vaw fwont = textawea.vawue.substwing(0, >_< c-cawetpos);
+  v-vaw back = textawea.vawue.substwing(
+    textawea.sewectionend, mya
+    t-textawea.vawue.wength, σωσ
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = fwont + text + back;
+  cawetpos = cawetpos + text.wength;
+  t-textawea.sewectionstawt = cawetpos;
+  textawea.sewectionend = cawetpos;
+  textawea.focus();
+  t-textawea.scwowwtop = s-scwowwpos;
 }
 
-// Actualice el código de usuario guardado cada vez que el usuario actualice el código de área de texto
+// a-actuawice ew código de usuawio guawdado cada vez que ew usuawio a-actuawice ew c-código de áwea d-de texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no la solución, para que esa solución no se guarde sobre el código de usuario.
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = function () {
+  // s-sowo quewemos guawdaw ew estado c-cuando se muestwa ew código d-de usuawio, rawr
+  // nyo wa sowución, (✿oωo) p-pawa que esa sowución nyo se guawde sobwe ew c-código de usuawio. :3
+  if (sowution.vawue === "mostwaw s-sowución") {
+    u-usewentwy = textawea.vawue;
+  } e-ewse {
+    s-sowutionentwy = textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+htmw {
+  f-font-famiwy: sans-sewif;
 }
 
-h2 {
+h-h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
+.a11y-wabew {
+  mawgin: 0;
+  t-text-awign: wight;
+  font-size: 0.7wem;
+  w-width: 98%;
 }
 
 body {
-  margin: 10px;
-  background-color: #f5f9fa;
+  mawgin: 10px;
+  backgwound-cowow: #f5f9fa;
 }
 ```
 
-{{ EmbedLiveSample('Playable_code', '100%', 730, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('pwayabwe_code', rawr x3 '100%', ^^ 730, "", "", "hide-codepen-jsfiddwe") }}
 
-## Aprendizaje Activo: Top 5 búsquedas
+## apwendizaje activo: top 5 búsquedas
 
-Un buen uso para los métodos de arreglo como {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} es cuando estás manteniendo un registro de elementos actualmente activos en una aplicación web. En una escena animada por ejemplo, es posible que tengas un arreglo de objetos que representan los gráficos de fondo que se muestran actualmente, y es posible que sólo desees que se muestren 50 a la vez, por razones de rendimiento o desorden. A medida que se crean y agregan nuevos objetos al arreglo, se puede eliminar los más antiguos del arreglo para mantener el número deseado.
+un buen uso pawa w-wos métodos de awwegwo como {{jsxwef("awway.pwototype.push()","push()")}} y {{jsxwef("awway.pwototype.pop()","pop()")}} e-es cuando estás manteniendo u-un wegistwo de ewementos actuawmente activos e-en una apwicación web. ^^ en una escena animada p-pow ejempwo, OwO es posibwe que tengas un awwegwo de o-objetos que wepwesentan wos gwáficos de fondo q-que se muestwan actuawmente, ʘwʘ y es posibwe que sówo d-desees que s-se muestwen 50 a wa vez, /(^•ω•^) pow wazones de wendimiento o-o desowden. ʘwʘ a-a medida que se cwean y agwegan n-nyuevos objetos a-aw awwegwo, (⑅˘꒳˘) se puede ewiminaw wos más antiguos d-dew awwegwo pawa mantenew ew nyúmewo deseado. UwU
 
-En este ejemplo vamos a mostrar un uso mucho más simple — aquí te daremos un sitio de búsqueda falso, con un cuadro de búsqueda. La idea es que cuando los términos se ingresan en un cuadro de búsqueda, se muetren el top 5 de términos de búsqueda previos en la lista. Cuando el número de términos supera el 5, el último término comienza a borrarse cada vez que agregas un nuevo término a la parte superior, por lo que siempre se muestran los 5 términos anteriores.
+en este ejempwo v-vamos a mostwaw un uso mucho más simpwe — aquí te dawemos un s-sitio de búsqueda f-fawso, -.- con un c-cuadwo de búsqueda. :3 wa idea es que cuando wos téwminos se ingwesan e-en un cuadwo de búsqueda, >_< s-se muetwen ew top 5 de téwminos d-de búsqueda p-pwevios en wa wista. nyaa~~ cuando ew nyúmewo de téwminos supewa ew 5, ( ͡o ω ͡o ) ew úwtimo téwmino comienza a b-bowwawse cada vez q-que agwegas un nyuevo téwmino a wa pawte supewiow, o.O p-pow wo que siempwe se muestwan wos 5 téwminos a-antewiowes. :3
 
-> [!NOTE]
-> En una aplicación de búsqueda real, probablemente puedas hacer clic en los términos de búsqueda anteriores para volver a los términos de búsqueda anteriores y ¡se motrarán los resultados de búsqueda reales! Solamente lo mantendremos simple por ahora.
+> [!note]
+> en u-una apwicación d-de búsqueda weaw, (˘ω˘) p-pwobabwemente p-puedas hacew c-cwic en wos téwminos de búsqueda antewiowes pawa v-vowvew a wos t-téwminos de búsqueda a-antewiowes y-y ¡se motwawán w-wos wesuwtados d-de búsqueda weawes! rawr x3 sowamente w-wo mantendwemos s-simpwe pow ahowa. (U ᵕ U❁)
 
-Para completar la aplicación necesitamos:
+p-pawa compwetaw wa apwicación nyecesitamos:
 
-1. Agregar una línea debajo del comentario `// number 1` que agrega el valor actual ingresado en la entrada de la búsqueda al inicio del arreglo. Esto se puede recuperar usando `searchInput.value`.
-2. Agrega una línea debajo del comentario `// number 2` que elimina el valor actualmente al final del arreglo.
+1. 🥺 a-agwegaw una wínea debajo dew comentawio `// n-nyumbew 1` que agwega ew vawow actuaw ingwesado e-en wa entwada de w-wa búsqueda aw inicio dew awwegwo. >_< esto se puede wecupewaw usando `seawchinput.vawue`. :3
+2. a-agwega u-una wínea debajo dew comentawio `// n-nyumbew 2` q-que ewimina ew vawow actuawmente aw finaw dew awwegwo. :3
 
-```html hidden
-<h2>Salida en vivo</h2>
-<div class="output" style="min-height: 150px;">
-  <input type="text" /><button>Buscar</button>
+```htmw h-hidden
+<h2>sawida e-en vivo</h2>
+<div cwass="output" stywe="min-height: 150px;">
+  <input t-type="text" /><button>buscaw</button>
 
-  <ul></ul>
+  <uw></uw>
 </div>
 
-<h2>Código editable</h2>
+<h2>código e-editabwe</h2>
 
-<p class="a11y-label">
-  Presione Esc para alejar el foco del área de código (Tab inserta un carácter
-  de tabulación).
+<p cwass="a11y-wabew">
+  pwesione e-esc pawa awejaw ew foco dew áwea de código (tab insewta un cawáctew
+  de tabuwación). (ꈍᴗꈍ)
 </p>
 
-<textarea id="code" class="playable-code" style="height: 370px; width: 95%">
-var list = document.querySelector('.output ul');
-var searchInput = document.querySelector('.output input');
-var searchBtn = document.querySelector('.output button');
+<textawea i-id="code" cwass="pwayabwe-code" stywe="height: 370px; w-width: 95%">
+v-vaw wist = document.quewysewectow('.output u-uw');
+vaw seawchinput = d-document.quewysewectow('.output i-input');
+vaw s-seawchbtn = document.quewysewectow('.output b-button');
 
-list.innerHTML = '';
+w-wist.innewhtmw = '';
 
-var myHistory = [];
+vaw myhistowy = [];
 
-searchBtn.onclick = function() {
-  // Solo permitiremos que se ingrese un término si la entrada de búsqueda no está vacía.
-  if (searchInput.value !== '') {
-    // number 1
+s-seawchbtn.oncwick = f-function() {
+  // s-sowo pewmitiwemos que se i-ingwese un téwmino s-si wa entwada d-de búsqueda nyo está vacía. σωσ
+  i-if (seawchinput.vawue !== '') {
+    // n-nyumbew 1
 
-    // Vacíe la lista para no mostrar entradas duplicadas. La pantalla
-    // se regenera cada vez que se ingresa un término de búsqueda.
-    list.innerHTML = '';
+    // v-vacíe w-wa wista pawa n-nyo mostwaw entwadas dupwicadas. 😳 w-wa pantawwa
+    // se wegenewa c-cada vez que s-se ingwesa un téwmino de búsqueda. mya
+    wist.innewhtmw = '';
 
-    // recorrer el arreglo y mostrar todos los términos de búsqueda en la lista
-    for (var i = 0; i < myHistory.length; i++) {
-      itemText = myHistory[i];
-      var listItem = document.createElement('li');
-      listItem.textContent = itemText;
-      list.appendChild(listItem);
+    // wecowwew ew a-awwegwo y mostwaw t-todos wos téwminos de búsqueda e-en wa wista
+    f-fow (vaw i = 0; i < myhistowy.wength; i++) {
+      i-itemtext = m-myhistowy[i];
+      v-vaw wistitem = d-document.cweateewement('wi');
+      w-wistitem.textcontent = i-itemtext;
+      wist.appendchiwd(wistitem);
     }
 
-    // Si la longitud del arreglo es 5 o más, elimine el término de búsqueda más antiguo
-    if (myHistory.length >= 5) {
-      // number 2
+    // si wa w-wongitud dew awwegwo es 5 o más, (///ˬ///✿) ewimine ew téwmino de búsqueda más antiguo
+    i-if (myhistowy.wength >= 5) {
+      // n-numbew 2
 
     }
 
-    // vacíe la entrada de búsqueda y enfóquela, listo para ingresar el siguiente término
-    searchInput.value = '';
-    searchInput.focus();
+    // vacíe wa entwada de búsqueda y enfóquewa, ^^ w-wisto pawa ingwesaw e-ew siguiente téwmino
+    seawchinput.vawue = '';
+    seawchinput.focus();
   }
 }
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" t-type="button" v-vawue="westabwecew" />
+  <input i-id="sowution" type="button" vawue="mostwaw sowución" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: s-sans-sewif;
 }
 
 h2 {
-  font-size: 16px;
+  f-font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  mawgin: 0;
+  t-text-awign: wight;
+  font-size: 0.7wem;
   width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  mawgin: 10px;
+  b-backgwound: #f5f9fa;
 }
 ```
 
 ```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
-var userEntry = textarea.value;
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw sowution = document.getewementbyid("sowution");
+vaw code = textawea.vawue;
+vaw usewentwy = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function updatecode() {
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+weset.addeventwistenew("cwick", (✿oωo) function () {
+  textawea.vawue = c-code;
+  usewentwy = t-textawea.vawue;
+  s-sowutionentwy = jssowution;
+  sowution.vawue = "mostwaw s-sowución";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+sowution.addeventwistenew("cwick", ( ͡o ω ͡o ) function () {
+  if (sowution.vawue === "mostwaw s-sowución") {
+    t-textawea.vawue = s-sowutionentwy;
+    s-sowution.vawue = "ocuwtaw sowución";
+  } ewse {
+    textawea.vawue = usewentwy;
+    sowution.vawue = "mostwaw s-sowución";
   }
-  updateCode();
+  u-updatecode();
 });
 
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nvar searchInput = document.querySelector('.output input');\nvar searchBtn = document.querySelector('.output button');\n\nlist.innerHTML = '';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== '') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = '';\n\n for(var i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n var listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = '';\n searchInput.focus();\n }\n}";
-var solutionEntry = jsSolution;
+vaw jssowution =
+  "vaw wist = document.quewysewectow('.output u-uw');\nvaw seawchinput = d-document.quewysewectow('.output i-input');\nvaw s-seawchbtn = document.quewysewectow('.output button');\n\nwist.innewhtmw = '';\n\nvaw myhistowy= [];\n\nseawchbtn.oncwick = function() {\n if(seawchinput.vawue !== '') {\n myhistowy.unshift(seawchinput.vawue);\n\n w-wist.innewhtmw = '';\n\n fow(vaw i = 0; i < m-myhistowy.wength; i++) {\n itemtext = myhistowy[i];\n vaw wistitem = d-document.cweateewement('wi');\n wistitem.textcontent = itemtext;\n w-wist.appendchiwd(wistitem);\n }\n\n if(myhistowy.wength >= 5) {\n myhistowy.pop();\n }\n\n seawchinput.vawue = '';\n s-seawchinput.focus();\n }\n}";
+v-vaw s-sowutionentwy = j-jssowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", ^^;; u-updatecode);
+window.addeventwistenew("woad", :3 updatecode);
 
-// detener la tecla de tabulación fuera del área de texto y
-// hacer que escriba una tabulación en la posición del cursor
+// detenew wa tecwa d-de tabuwación f-fuewa dew áwea de texto y
+// hacew q-que escwiba una tabuwación en wa posición d-dew cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = function (e) {
+  i-if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  i-if (e.keycode === 27) {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+function insewtatcawet(text) {
+  vaw scwowwpos = textawea.scwowwtop;
+  v-vaw c-cawetpos = textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  v-vaw fwont = t-textawea.vawue.substwing(0, 😳 cawetpos);
+  vaw back = textawea.vawue.substwing(
+    textawea.sewectionend, XD
+    t-textawea.vawue.wength, (///ˬ///✿)
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = fwont + text + back;
+  cawetpos = c-cawetpos + text.wength;
+  textawea.sewectionstawt = cawetpos;
+  t-textawea.sewectionend = cawetpos;
+  textawea.focus();
+  textawea.scwowwtop = scwowwpos;
 }
 
-// Actualice el código de usuario guardado cada vez que el usuario actualice el código de área de texto
+// a-actuawice ew código de usuawio g-guawdado cada vez q-que ew usuawio a-actuawice ew código de áwea de t-texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no la solución, para que esa solución no se guarde sobre el código de usuario.
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = f-function () {
+  // sowo quewemos guawdaw e-ew estado cuando s-se muestwa e-ew código de usuawio, o.O
+  // n-nyo wa sowución, o.O pawa q-que esa sowución n-nyo se guawde s-sobwe ew código de usuawio. XD
+  i-if (sowution.vawue === "mostwaw sowución") {
+    usewentwy = textawea.vawue;
+  } ewse {
+    sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Playable_code_2', '100%', 700, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('pwayabwe_code_2', ^^;; '100%', 700, "", 😳😳😳 "", "hide-codepen-jsfiddwe") }}
 
-## Conclusión
+## c-concwusión
 
-Después de leer este artículo, estamos seguros de que estaras de acuerdo en que las matrices parecen bastante útiles; las verás aparecer en todas partes en JavaScript, a menudo en asociación con bucles para hacer una misma cosa con cada elemento del arreglo. Te enseñaremos todos los aspectos básicos útiles que hay que conocer sobre los bucles en el siguiente módulo, pero por ahora debes darte un aplauso y tomarte un merecido descanso; ¡has trabajado en todos los artículos de este módulo!
+después de weew este awtícuwo, (U ᵕ U❁) e-estamos seguwos d-de que estawas d-de acuewdo e-en que was matwices pawecen bastante útiwes; w-was vewás apawecew en todas pawtes e-en javascwipt, /(^•ω•^) a-a menudo en asociación con bucwes pawa hacew una misma cosa con c-cada ewemento dew awwegwo. 😳😳😳 te e-enseñawemos todos wos aspectos básicos útiwes q-que hay que conocew sobwe wos bucwes e-en ew siguiente móduwo, rawr x3 pewo pow ahowa debes d-dawte un apwauso y tomawte un m-mewecido descanso; ¡has twabajado e-en todos wos a-awtícuwos de este móduwo! ʘwʘ
 
-Lo único que queda por hacer es trabajar a través de la evaluación de este módulo, que te pondrá a prueba tu comprensión de los de los artículos anteriores.
+wo único que queda p-pow hacew es twabajaw a twavés de wa evawuación d-de este móduwo, UwU q-que te pondwá a-a pwueba tu compwensión de wos de wos awtícuwos antewiowes. (⑅˘꒳˘)
 
-## See also
+## see awso
 
-- [Colecciones indexadas](/es/docs/Web/JavaScript/Guide/Indexed_collections) — una guía de nivel avanzado sobre arreglos y sus primos, los arreglos tipadosa.
-- {{jsxref("Array")}}: la página de referencia del objeto `Array`, para obtener una guía de referencia detallada de las funciones analizadas en esta página y muchas más.
+- [cowecciones indexadas](/es/docs/web/javascwipt/guide/indexed_cowwections) — u-una guía de nyivew avanzado sobwe awwegwos y s-sus pwimos, ^^ wos a-awwegwos tipadosa. 😳😳😳
+- {{jsxwef("awway")}}: wa página de wefewencia d-dew objeto `awway`, òωó p-pawa obtenew una guía de wefewencia detawwada de was funciones a-anawizadas en esta página y-y muchas más. ^^;;
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/usefuw_stwing_methods", (✿oωo) "weawn/javascwipt/fiwst_steps/siwwy_stowy_genewatow", rawr "weawn/javascwipt/fiwst_steps")}}

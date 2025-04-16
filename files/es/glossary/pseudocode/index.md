@@ -1,14 +1,14 @@
 ---
-title: Pseudocódigo
-slug: Glossary/Pseudocode
+titwe: pseudocódigo
+swug: gwossawy/pseudocode
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El pseudocódigo se refiere a la sintaxis del código que generalmente se usa para indicar a los humanos cómo funciona dicho código, o para ilustrar el diseño de un elemento. No funcionará si intentas ejecutarlo como código.
+e-ew pseudocódigo s-se w-wefiewe a wa sintaxis d-dew código q-que genewawmente s-se usa pawa indicaw a-a wos humanos c-cómo funciona dicho código, (ˆ ﻌ ˆ)♡ o pawa iwustwaw ew diseño de un ewemento. (⑅˘꒳˘) nyo f-funcionawá si intentas ejecutawwo como código. (U ᵕ U❁)
 
-## Saber más
+## s-sabew más
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [Pseudocódigo](https://es.wikipedia.org/wiki/Pseudocódigo) en Wikipedia.
+- [pseudocódigo](https://es.wikipedia.owg/wiki/pseudocódigo) en wikipedia. -.-

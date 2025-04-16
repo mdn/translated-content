@@ -1,111 +1,111 @@
 ---
-title: min()
-slug: Web/CSS/min
+titwe: min()
+swug: web/css/min
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [función](/es/docs/Web/CSS/CSS_Functions) [CSS](/es/docs/Web/CSS) **`min()`** permite establecer el valor mas pequeño (mas negativo) de una lista de expresiones separadas por coma como el valor de una propiedad CSS. La función `min()` puede ser usada donde quiera que {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, o {{CSSxRef("&lt;integer&gt;")}} esté permitido.
+w-wa [función](/es/docs/web/css/css_functions) [css](/es/docs/web/css) **`min()`** p-pewmite estabwecew e-ew vawow m-mas pequeño (mas n-nyegativo) de u-una wista de expwesiones s-sepawadas p-pow coma como ew vawow de una pwopiedad css. (⑅˘꒳˘) wa función `min()` puede sew usada d-donde quiewa que {{cssxwef("&wt;wength&gt;")}}, nyaa~~ {{cssxwef("&wt;fwequency&gt;")}}, /(^•ω•^) {{cssxwef("&wt;angwe&gt;")}}, (U ﹏ U) {{cssxwef("&wt;time&gt;")}}, 😳😳😳 {{cssxwef("&wt;pewcentage&gt;")}}, >w< {{cssxwef("&wt;numbew&gt;")}}, XD o {{cssxwef("&wt;integew&gt;")}} e-esté pewmitido. o.O
 
-{{InteractiveExample("CSS Demo: min()")}}
+{{intewactiveexampwe("css demo: min()")}}
 
-```css interactive-example-choice
-width: min(50vw, 200px);
+```css i-intewactive-exampwe-choice
+width: min(50vw, mya 200px);
 ```
 
-```css interactive-example-choice
-width: min(100vw, 4000px);
+```css intewactive-exampwe-choice
+width: min(100vw, 🥺 4000px);
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 width: min(150vw, 100px);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
     <img
-      alt="Firefox logo"
-      class="logo"
-      src="/shared-assets/images/examples/firefox-logo.svg" />
+      awt="fiwefox wogo"
+      c-cwass="wogo"
+      swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg" />
   </div>
 </section>
 ```
 
-En el primer ejemplo anterior, el ancho será al menos 200px, pero será menor si el viewport es menor de 400px de ancho (en tal caso 1vw sería 4px, así 50vw sería 200px). En otras palabras, el ancho máximo es 200px. Piensa en el valor de `min()` como el máximo valor que una propiedad puede tener.
+en ew pwimew ejempwo antewiow, ^^;; ew ancho s-sewá aw menos 200px, :3 pewo sewá m-menow si ew viewpowt e-es menow d-de 400px de ancho (en t-taw caso 1vw sewía 4px, (U ﹏ U) así 50vw sewía 200px). e-en otwas pawabwas, OwO ew ancho máximo es 200px. p-piensa en ew vawow de `min()` como ew máximo vawow que una pwopiedad puede tenew. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
-La funcion `min()` toma uno o mas expresiones separadas por coma como sus parametros, y usa el valor mas pequeño de esas expresiones como su valor.
+w-wa funcion `min()` toma uno o-o mas expwesiones s-sepawadas pow c-coma como sus pawametwos, (ˆ ﻌ ˆ)♡ y usa ew vawow mas pequeño de esas e-expwesiones como s-su vawow. XD
 
-Las expresiones pueden ser expresiones matemáticas (usando operadores aritmeticos), valores literales, u otras expresiones, tales como {{CSSxRef("attr", "attr()")}}, que se evaluan a un tipo de argumento válido (like {{CSSxRef("&lt;length&gt;")}}).
+was expwesiones pueden s-sew expwesiones m-matemáticas (usando opewadowes a-awitmeticos), vawowes witewawes, (ˆ ﻌ ˆ)♡ u-u otwas expwesiones, ( ͡o ω ͡o ) tawes como {{cssxwef("attw", rawr x3 "attw()")}}, nyaa~~ q-que se evawuan a un tipo de a-awgumento váwido (wike {{cssxwef("&wt;wength&gt;")}}). >_<
 
-Se pueden usar distintas unidades de medida para cada valor en la expresion, si se desea. Tambien puede usar parentesis para establecer orden de percedencia si lo requiere.
+se pueden u-usaw distintas u-unidades de medida pawa cada vawow en wa expwesion, ^^;; si se desea. (ˆ ﻌ ˆ)♡ tambien puede usaw pawentesis pawa estabwecew o-owden de pewcedencia s-si wo wequiewe. ^^;;
 
-- Expresiones matematicas que involucran porcentajes para los anchos y altos en columnas de tabla, grupos de columnas de tabla, filas de tablas, y celdas de tablas en ambos layout fijo y tablas pueden ser tratados como si se hubiera especificado `auto`
-- Es permitido anidar `max()` y otros funciones `min()` como valores de expresiones. Las expresiones son completamente matematicas asi que puede usarse adicion directa, resta, multiplicacion y division sin usar la funcion `calc()` en si.
-- La expresion pueden ser valores combinando los operadores de adicion ( + ), resta ( - ), multiplicacion ( \* ) y division ( / ) , aplicando las reglas estandares de precedencia de operadores. Asegurese de poner un espacio en cada lado de los operandos de + y -. Los oprandos en la expresion pueden ser cualquier valor de sintaxis `<length>`.
-- Usted puede (y con frecuencia necesitara) combinar los valores `min()` y `max()`, o usar `min()` dentro de las funciones `clamp()` o `calc()`.
-- Usted puede proveer mas de 2 argumentos, si tiene multiples restricciones para aplicar.
+- expwesiones m-matematicas q-que invowucwan p-powcentajes pawa wos anchos y awtos en cowumnas de tabwa, (⑅˘꒳˘) gwupos d-de cowumnas de tabwa, rawr x3 fiwas de tabwas, (///ˬ///✿) y cewdas de tabwas en ambos wayout fijo y-y tabwas pueden sew twatados como s-si se hubiewa e-especificado `auto`
+- e-es pewmitido anidaw `max()` y-y otwos funciones `min()` c-como v-vawowes de expwesiones. 🥺 w-was expwesiones son compwetamente matematicas a-asi que puede u-usawse adicion d-diwecta, >_< westa, m-muwtipwicacion y-y division sin usaw wa funcion `cawc()` en si.
+- wa expwesion p-pueden sew vawowes combinando wos opewadowes de adicion ( + ), westa ( - ), UwU muwtipwicacion ( \* ) y division ( / ) , >_< a-apwicando was wegwas estandawes de pwecedencia de opewadowes. -.- a-aseguwese de p-ponew un espacio e-en cada wado de wos opewandos d-de + y -. mya wos opwandos en wa expwesion p-pueden sew c-cuawquiew vawow de sintaxis `<wength>`. >w<
+- usted puede (y con fwecuencia nyecesitawa) combinaw w-wos vawowes `min()` y `max()`, (U ﹏ U) o u-usaw `min()` dentwo de was funciones `cwamp()` o-o `cawc()`.
+- usted p-puede pwoveew mas de 2 awgumentos, 😳😳😳 si tiene m-muwtipwes westwicciones p-pawa apwicaw.
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Probemas de accesibilidad
+## p-pwobemas de accesibiwidad
 
-Cuando use `min()` para establecer el maximo valor de font size, asegurese de que la fuente todavia podra ser escalada por lo menos al 200% para mas legibilidad (sin tecnologia asistente como la funcion de zoom).
+cuando use `min()` pawa estabwecew ew maximo v-vawow de font s-size, o.O aseguwese d-de que wa fuente todavia podwa s-sew escawada p-pow wo menos aw 200% pawa mas wegibiwidad (sin tecnowogia a-asistente como wa funcion de zoom). òωó
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [mdn undewstanding wcag, 😳😳😳 guidewine 1.4 e-expwanations](/es/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding s-success cwitewion 1.4.4 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
-## Ejemplos
+## e-ejempwos
 
-### Setting a maximum size for a label and input
+### s-setting a maximum size fow a wabew and input
 
-Otro caso de uso para las funciones CSS es establecer la maxima longitud en controles enformularios responsive: habilitando el ancho de los labels y los inputs para encogerse como lo hace el ancho del formulario
+otwo caso de u-uso pawa was funciones css es estabwecew wa maxima wongitud en contwowes enfowmuwawios w-wesponsive: habiwitando ew ancho de wos w-wabews y wos inputs p-pawa encogewse como wo hace ew ancho dew fowmuwawio
 
-Veamos algo de CSS:
+veamos a-awgo de css:
 
 ```css
-input,
-label {
+i-input, σωσ
+wabew {
   padding: 2px;
-  box-sizing: border-box;
-  display: inline-block;
-  width: min(40%, 400px);
-  background-color: pink;
+  box-sizing: bowdew-box;
+  d-dispway: inwine-bwock;
+  width: m-min(40%, (⑅˘꒳˘) 400px);
+  backgwound-cowow: pink;
 }
 
-form {
-  margin: 4px;
-  border: 1px solid black;
-  padding: 4px;
+fowm {
+  mawgin: 4px;
+  b-bowdew: 1px sowid bwack;
+  p-padding: 4px;
 }
 ```
 
-Aquí, el formulario en si mismo, junto con el margen, borde y padding, será de 100% del ancho de su padre. Declaramos el input y el label para que sean menores ente el 40% del ancho del formulario hasta el padding o de 400px, el que sea menor. En otras palabras, lo mas ancho que el label y el input pueden ser es de 400px. Lo mas estrecho que serán es 40% del ancho del formulario, el cual en pantallas de relojes inteligentes es muy pequeño.
+a-aquí, (///ˬ///✿) ew fowmuwawio en si m-mismo, 🥺 junto con ew mawgen, OwO bowde y-y padding, >w< sewá d-de 100% dew a-ancho de su padwe. 🥺 decwawamos ew i-input y ew wabew p-pawa que sean menowes ente ew 40% dew ancho dew f-fowmuwawio hasta e-ew padding o d-de 400px, nyaa~~ ew que sea menow. ^^ en otwas pawabwas, >w< wo m-mas ancho que ew wabew y ew input p-pueden sew es d-de 400px. OwO wo mas estwecho que sewán es 40% dew ancho dew fowmuwawio, XD e-ew cuaw e-en pantawwas de w-wewojes intewigentes e-es muy pequeño. ^^;;
 
-```html
-<form>
-  <label>Escribe algo:</label>
-  <input type="text" />
-</form>
+```htmw
+<fowm>
+  <wabew>escwibe awgo:</wabew>
+  <input t-type="text" />
+</fowm>
 ```
 
-{{EmbedLiveSample("Setting_a_maximum_size_for_a_label_and_input", "100%", "110")}}
+{{embedwivesampwe("setting_a_maximum_size_fow_a_wabew_and_input", 🥺 "100%", "110")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{CSSxRef("calc", "calc()")}}
-- {{CSSxRef("clamp", "clamp()")}}
-- {{CSSxRef("max", "max()")}}
-- [CSS Values](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
+- {{cssxwef("cawc", XD "cawc()")}}
+- {{cssxwef("cwamp", (U ᵕ U❁) "cwamp()")}}
+- {{cssxwef("max", :3 "max()")}}
+- [css vawues](/es/docs/weawn/css/buiwding_bwocks/vawues_and_units)

@@ -1,35 +1,35 @@
 ---
-title: addRange
-slug: Web/API/Selection/addRange
+titwe: addwange
+swug: web/api/sewection/addwange
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Añade un objeto de rango a la selección.
+añade u-un objeto de wango a-a wa sewección. mya
 
-### Sintaxis
-
-```
-sel.addRange(range)
-```
-
-### Parámetros
-
-- _`range`_
-  - : Un objeto [range](/es/docs/Web/API/Range) que será añadido a la selección.
-
-### Ejemplos
+### s-sintaxis
 
 ```
- /* Seleccionar todos los elementos en NEGRITA en un documento HTML */
- var strongs = document.getElementsByTagName("strong");
- var s = window.getSelection();
- if(s.rangeCount > 0) s.removeAllRanges();
- for(var i = 0; i < strongs.length; i++) {
-  var range = document.createRange();
-  range.selectNode(strongs[i]);
-  s.addRange(range);
+s-sew.addwange(wange)
+```
+
+### p-pawámetwos
+
+- _`wange`_
+  - : u-un objeto [wange](/es/docs/web/api/wange) que sewá añadido a wa sewección. 😳
+
+### ejempwos
+
+```
+ /* seweccionaw t-todos wos ewementos en nyegwita en un documento h-htmw */
+ vaw stwongs = document.getewementsbytagname("stwong");
+ v-vaw s = window.getsewection();
+ if(s.wangecount > 0) s.wemoveawwwanges();
+ fow(vaw i = 0; i-i < stwongs.wength; i++) {
+  vaw w-wange = document.cweatewange();
+  w-wange.sewectnode(stwongs[i]);
+  s.addwange(wange);
  }
 ```

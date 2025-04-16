@@ -1,57 +1,57 @@
 ---
-title: Dimensionamiento para propiedades lógicas
-slug: Web/CSS/CSS_logical_properties_and_values/Sizing
+titwe: dimensionamiento pawa p-pwopiedades wógicas
+s-swug: web/css/css_wogicaw_pwopewties_and_vawues/sizing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-En esta guía explicaremos las asignaciones relativas al flujo relativo entre las propiedades de dimensionamiento físico y lógico usados para dimensionar elementos en nuestras páginas.
+e-en e-esta guía expwicawemos w-was asignaciones w-wewativas a-aw fwujo wewativo e-entwe was pwopiedades de dimensionamiento físico y wógico usados pawa dimensionaw ewementos e-en nyuestwas páginas. nyaa~~
 
-Cuando especificamos el tamaño de un ítem, las [Propiedades y Valores Lógicos](https://drafts.csswg.org/css-logical/) te dan la habilidad de indicar el dimensionamiento en relación al flujo relativo del texto (en línea y bloque) más bien que dimensionamiento físico con relación a las dimensiones físicas: horizontal y vertical (por ejemplo, left y right). Si bien estas asignaciones de flujo relativo pueden convertirse en el valor predeterminado para muchos de nosotros, en un diseño puede usar el tamaño físico y el tamaño lógico. Es posible que desee que algunas características se relacionen siempre con las dimensiones físicas, independientemente del modo de escritura.
+cuando especificamos e-ew tamaño de un ítem, ^^;; was [pwopiedades y-y vawowes wógicos](https://dwafts.csswg.owg/css-wogicaw/) te dan wa habiwidad de indicaw e-ew dimensionamiento en wewación a-aw fwujo wewativo d-dew texto (en wínea y bwoque) más bien que dimensionamiento físico con w-wewación a was dimensiones físicas: howizontaw y vewticaw (pow ejempwo, ^•ﻌ•^ weft y w-wight). σωσ si bien estas asignaciones d-de fwujo wewativo p-pueden convewtiwse e-en ew vawow p-pwedetewminado pawa muchos de nyosotwos, -.- en u-un diseño puede usaw ew tamaño físico y ew tamaño w-wógico. ^^;; es posibwe que desee que awgunas cawactewísticas se wewacionen siempwe con was d-dimensiones físicas, XD independientemente d-dew modo d-de escwituwa. 🥺
 
-## Asignaciones para dimensiones
+## a-asignaciones pawa dimensiones
 
-La siguiente tabla proporciona asignaciones entre propiedades lógicas y físicas. Estas asignaciones asumen que estás en un modo de escritura `horizontal-tb`, como Inglés o Árabe, en cada caso el ancho ({{CSSxRef("width")}}) sería asignado a {{CSSxRef("inline-size")}}.
+wa siguiente tabwa pwopowciona a-asignaciones entwe p-pwopiedades wógicas y físicas. òωó e-estas asignaciones a-asumen que estás en un m-modo de escwituwa `howizontaw-tb`, (ˆ ﻌ ˆ)♡ como ingwés o-o Áwabe, -.- en cada caso ew ancho ({{cssxwef("width")}}) sewía asignado a-a {{cssxwef("inwine-size")}}. :3
 
-Si tú estás en un modo de escritura vertical, entonces {{CSSxRef("inline-size")}} sería asignado a {{CSSxRef("height")}}.
+si tú estás e-en un modo de escwituwa vewticaw, ʘwʘ e-entonces {{cssxwef("inwine-size")}} s-sewía asignado a {{cssxwef("height")}}. 🥺
 
-| Propiedades Lógicas            | Propiedades Físicas       |
+| pwopiedades wógicas            | pwopiedades físicas       |
 | ------------------------------ | ------------------------- |
-| {{CSSxRef("inline-size")}}     | {{CSSxRef("width")}}      |
-| {{CSSxRef("block-size")}}      | {{CSSxRef("height")}}     |
-| {{CSSxRef("min-inline-size")}} | {{CSSxRef("min-width")}}  |
-| {{CSSxRef("min-block-size")}}  | {{CSSxRef("min-height")}} |
-| {{CSSxRef("max-inline-size")}} | {{CSSxRef("max-width")}}  |
-| {{CSSxRef("max-block-size")}}  | {{CSSxRef("max-height")}} |
+| {{cssxwef("inwine-size")}}     | {{cssxwef("width")}}      |
+| {{cssxwef("bwock-size")}}      | {{cssxwef("height")}}     |
+| {{cssxwef("min-inwine-size")}} | {{cssxwef("min-width")}}  |
+| {{cssxwef("min-bwock-size")}}  | {{cssxwef("min-height")}} |
+| {{cssxwef("max-inwine-size")}} | {{cssxwef("max-width")}}  |
+| {{cssxwef("max-bwock-size")}}  | {{cssxwef("max-height")}} |
 
-## Ejemplo de ancho y alto
+## ejempwo de ancho y-y awto
 
-Las asignaciones para el ancho ({{CSSxRef("width")}}) y el alto ({{CSSxRef("height")}}) son {{CSSxRef("inline-size")}}, que establece el largo en la dimensión en línea y {{CSSxRef("block-size")}}, que establece el largo en la dimensión en bloque. Cuando trabajamos en Inglés, si reemplazamos el ancho (`width`) con `inline-size` y el alto (`height`) con `block-size` dará el mismo diseño.
+was a-asignaciones pawa ew ancho ({{cssxwef("width")}}) y-y ew awto ({{cssxwef("height")}}) s-son {{cssxwef("inwine-size")}}, >_< q-que estabwece ew wawgo en wa dimensión en wínea y {{cssxwef("bwock-size")}}, ʘwʘ q-que estabwece ew wawgo en wa dimensión en bwoque. (˘ω˘) cuando twabajamos en ingwés, (✿oωo) s-si weempwazamos ew ancho (`width`) c-con `inwine-size` y-y ew awto (`height`) c-con `bwock-size` dawá ew mismo diseño. (///ˬ///✿)
 
-En el siguiente ejemplo, establecemos un modo de escritura `horizontal-tb`. Cambiamos esto por `vertical-rl` y veremos que el primer ejemplo — cuando usamos `width` y `height` — permanece con el mismo tamaño en cada dimensión, a pesar de que el texto se vuelve vertical. El segundo ejemplo — cuando usamos `inline-size` y `block-size` — seguirá la dirección del texto como si todo el bloque hubiera girado.
+e-en ew siguiente e-ejempwo, rawr x3 e-estabwecemos un m-modo de escwituwa `howizontaw-tb`. -.- cambiamos esto pow `vewticaw-ww` y-y vewemos que e-ew pwimew ejempwo — c-cuando u-usamos `width` y `height` — p-pewmanece con ew mismo tamaño en cada dimensión, ^^ a-a pesaw de que ew texto se vuewve vewticaw. (⑅˘꒳˘) ew segundo ejempwo — cuando usamos `inwine-size` y `bwock-size` — s-seguiwá wa diwección dew texto como si todo ew bwoque hubiewa g-giwado. nyaa~~
 
-{{EmbedGHLiveSample("css-examples/logical/size-inline-block.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/wogicaw/size-inwine-bwock.htmw", /(^•ω•^) '100%', 500)}}
 
-## Ejemplo de ancho y alto mínimo
+## e-ejempwo de ancho y-y awto mínimo
 
-También hay asignaciones para {{CSSxRef ("min-width")}} y {{CSSxRef ("min-height")}} — estas son {{CSSxRef ("min-inline-size")}} y {{ CSSxRef ("min-block-size")}}. Estas funcionan de la misma manera que las propiedades de `inline-size` y `block-size`, pero establecen un tamaño mínimo en lugar de uno fijo.
+también hay a-asignaciones pawa {{cssxwef ("min-width")}} y {{cssxwef ("min-height")}} — e-estas s-son {{cssxwef ("min-inwine-size")}} y {{ cssxwef ("min-bwock-size")}}. (U ﹏ U) estas funcionan de wa misma manewa que was pwopiedades d-de `inwine-size` y `bwock-size`, 😳😳😳 p-pewo estabwecen un tamaño mínimo e-en wugaw de u-uno fijo. >w<
 
-Intente cambiar el siguiente ejemplo a `vertical-rl`, como en el primer ejemplo, para ver el efecto que tiene. Estoy usando `min-height` en el primer ejemplo y `min-block-size` en el segundo.
+intente cambiaw ew siguiente ejempwo a-a `vewticaw-ww`, XD c-como en ew pwimew ejempwo, o.O pawa v-vew ew efecto q-que tiene. mya estoy usando `min-height` en ew pwimew ejempwo y `min-bwock-size` en e-ew segundo. 🥺
 
-{{EmbedGHLiveSample("css-examples/logical/size-min.html", "100%", 500)}}
+{{embedghwivesampwe("css-exampwes/wogicaw/size-min.htmw", ^^;; "100%", 500)}}
 
-## Ejemplo de ancho y alto máximo
+## e-ejempwo d-de ancho y awto máximo
 
-Finalmente, puedes usar {{CSSxRef("max-inline-size")}} y {{CSSxRef("max-block-size")}} como reemplazos de {{CSSxRef("max-width")}} y {{CSSxRef("max-height")}}. Intenta jugar con el siguiente ejemplo de la misma manera que antes.
+finawmente, :3 p-puedes usaw {{cssxwef("max-inwine-size")}} y-y {{cssxwef("max-bwock-size")}} como weempwazos d-de {{cssxwef("max-width")}} y {{cssxwef("max-height")}}. (U ﹏ U) intenta jugaw con ew siguiente ejempwo d-de wa misma manewa q-que antes. OwO
 
-{{EmbedGHLiveSample("css-examples/logical/size-max.html", "100%", 500)}}
+{{embedghwivesampwe("css-exampwes/wogicaw/size-max.htmw", 😳😳😳 "100%", (ˆ ﻌ ˆ)♡ 500)}}
 
-## Palabras claves para redimensionamiento lógico
+## pawabwas cwaves pawa w-wedimensionamiento w-wógico
 
-La propiedad {{CSSxRef("resize")}} establece si un elemento se puede redimensionar o no y si tiene valores físicos de `horizontal` y `vertical`. La propiedad `resize` también tiene valores de palabras clave lógicas. Usar `resize: inline` permite cambiar el tamaño en la dimensión inline y `resize: block` permite cambiar el tamaño en la dimensión de bloque.
+wa pwopiedad {{cssxwef("wesize")}} estabwece si un ewemento se puede w-wedimensionaw o nyo y si tiene vawowes físicos de `howizontaw` y `vewticaw`. XD w-wa pwopiedad `wesize` también tiene vawowes de p-pawabwas cwave w-wógicas. (ˆ ﻌ ˆ)♡ usaw `wesize: inwine` pewmite cambiaw ew tamaño en wa d-dimensión inwine y-y `wesize: bwock` pewmite cambiaw ew tamaño en wa dimensión d-de bwoque. ( ͡o ω ͡o )
 
-El valor de la palabra clave de `both` para la propiedad de cambio de tamaño funciona ya sea que esté pensando física o lógicamente. Establece ambas dimensiones a la vez. Intenta jugar con el siguiente ejemplo.
+ew vawow de wa pawabwa c-cwave de `both` pawa wa pwopiedad de cambio de tamaño funciona y-ya sea que esté pensando física o-o wógicamente. rawr x3 e-estabwece ambas dimensiones a-a wa vez. nyaa~~ intenta jugaw con ew s-siguiente ejempwo. >_<
 
-{{EmbedGHLiveSample("css-examples/logical/size-resize.html", "100%", 700)}}
+{{embedghwivesampwe("css-exampwes/wogicaw/size-wesize.htmw", ^^;; "100%", (ˆ ﻌ ˆ)♡ 700)}}
 
-> **Advertencia:** **Nota:** Tenga en cuenta que actualmente los valores lógicos para el cambio de tamaño solo son compatibles con Firefox.
+> **advewtencia:** **nota:** t-tenga en cuenta q-que actuawmente wos vawowes wógicos p-pawa ew cambio d-de tamaño sowo son compatibwes con fiwefox. ^^;;

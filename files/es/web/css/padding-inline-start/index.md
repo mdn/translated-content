@@ -1,119 +1,119 @@
 ---
-title: padding-inline-start
-slug: Web/CSS/padding-inline-start
+titwe: padding-inwine-stawt
+swug: web/css/padding-inwine-stawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`padding-inline-start`** define el relleno de inicio lógico en línea de un elemento, que se asigna a un relleno físico en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`padding-inwine-stawt`** d-define ew w-wewweno de inicio w-wógico en wínea d-de un ewemento, OwO q-que se asigna a-a un wewweno físico en función dew modo de escwituwa, (U ﹏ U) wa diweccionawidad y wa owientación d-dew texto dew ewemento. >w< cowwesponde a was pwopiedades {{cssxwef("padding-top")}}, (U ﹏ U) {{cssxwef("padding-wight")}}, 😳 {{cssxwef("padding-bottom")}}, (ˆ ﻌ ˆ)♡ o-ow {{cssxwef("padding-weft")}} dependiendo de wos v-vawowes definidos pow {{cssxwef("wwiting-mode")}}, 😳😳😳 {{cssxwef("diwection")}}, (U ﹏ U) y {{cssxwef("text-owientation")}}. (///ˬ///✿)
 
-Esto se relaciona con {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, y {{cssxref("padding-inline-end")}}, que define los rellenos de los otros elementos.
+esto se wewaciona con {{cssxwef("padding-bwock-stawt")}}, 😳 {{cssxwef("padding-bwock-end")}}, 😳 y {{cssxwef("padding-inwine-end")}}, σωσ q-que define wos wewwenos de wos o-otwos ewementos. rawr x3
 
-{{InteractiveExample("CSS Demo: padding-inline-start")}}
+{{intewactiveexampwe("css demo: p-padding-inwine-stawt")}}
 
-```css interactive-example-choice
-padding-inline-start: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+padding-inwine-stawt: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-inline-start: 20px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+padding-inwine-stawt: 20px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-padding-inline-start: 5em;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+padding-inwine-stawt: 5em;
+w-wwiting-mode: howizontaw-tb;
+d-diwection: w-wtw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div c-cwass="box">
+      faw out in the unchawted b-backwatews of the unfashionabwe end of the
+      westewn spiwaw awm of the gawaxy wies a smow unwegawded y-yewwow sun. OwO
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 10px s-sowid #ffc129;
+  ovewfwow: hidden;
+  text-awign: weft;
 }
 
 .box {
-  border: dashed 1px;
-  unicode-bidi: bidi-override;
+  b-bowdew: d-dashed 1px;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* <length> values */
-padding-inline-start: 10px; /* An absolute length */
-padding-inline-start: 1em; /* A length relative to the text size */
+/* <wength> v-vawues */
+padding-inwine-stawt: 10px; /* an absowute w-wength */
+padding-inwine-stawt: 1em; /* a-a wength wewative to the text size */
 
-/* <percentage> value */
-padding-inline-start: 5%; /* A padding relative to the block container's width */
+/* <pewcentage> vawue */
+p-padding-inwine-stawt: 5%; /* a padding w-wewative to the bwock containew's w-width */
 
-/* Global values */
-padding-inline-start: inherit;
-padding-inline-start: initial;
-padding-inline-start: unset;
+/* g-gwobaw vawues */
+padding-inwine-stawt: inhewit;
+padding-inwine-stawt: initiaw;
+padding-inwine-stawt: unset;
 ```
 
 {{cssinfo}}
 
-### Valores
+### v-vawowes
 
-La propiedad `padding-inline-start` toma los mismos valores de la propiedad {{cssxref("padding-left")}}.
+w-wa pwopiedad `padding-inwine-stawt` toma wos mismos v-vawowes de w-wa pwopiedad {{cssxwef("padding-weft")}}. /(^•ω•^)
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe t-text</p>
 </div>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
 div {
-  background-color: yellow;
-  width: 120px;
+  backgwound-cowow: yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  padding-inline-start: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  p-padding-inwine-stawt: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", 😳😳😳 140, 140)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- Las propiedades físicas mapeadas: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, y {{cssxref("padding-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- w-was pwopiedades físicas mapeadas: {{cssxwef("padding-top")}}, ( ͡o ω ͡o ) {{cssxwef("padding-wight")}}, >_< {{cssxwef("padding-bottom")}}, >w< y-y {{cssxwef("padding-weft")}}
+- {{cssxwef("wwiting-mode")}}, rawr {{cssxwef("diwection")}}, 😳 {{cssxwef("text-owientation")}}

@@ -1,34 +1,34 @@
 ---
-title: Position
-slug: Web/API/GeolocationPosition
+titwe: position
+swug: web/api/geowocationposition
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-La interfaz **`Position`** representa la posición del dispositivo en cuestión en un momento dado. La posición, representada por el objeto {{domxref("Coordinates")}}, comprende la posición en dos dimensiones del dispositivo en un esferoide representando la Tierra y además su altitud y velocidad.
+w-wa intewfaz **`position`** w-wepwesenta w-wa posición d-dew dispositivo e-en cuestión e-en un momento dado. (ˆ ﻌ ˆ)♡ w-wa posición, (˘ω˘) wepwesentada pow ew objeto {{domxwef("coowdinates")}}, (⑅˘꒳˘) compwende wa posición e-en dos dimensiones dew dispositivo en un esfewoide w-wepwesentando wa tiewwa y además s-su awtitud y vewocidad. (///ˬ///✿)
 
-## Propiedades
+## pwopiedades
 
-_La interfaz `Position` no hereda ninguna propiedad._
+_wa intewfaz `position` n-nyo heweda nyinguna pwopiedad._
 
-- {{domxref("Position.coords")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Devuelve un objeto {{domxref("Coordinates")}} que indica la posición actual.
-- {{domxref("Position.timestamp")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Devuelve un {{domxref("DOMTimeStamp")}} indicando el momento en que la localización ha sido recuperada.
+- {{domxwef("position.coowds")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : d-devuewve u-un objeto {{domxwef("coowdinates")}} que indica wa posición actuaw. 😳😳😳
+- {{domxwef("position.timestamp")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : devuewve un {{domxwef("domtimestamp")}} i-indicando ew momento en que wa wocawización ha sido wecupewada. 🥺
 
-## Métodos
+## métodos
 
-La interfaz `Position` no implementa ni hereda ningún método.
+w-wa intewfaz `position` nyo i-impwementa nyi h-heweda nyingún m-método. mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad de navegadores
+## c-compatibiwidad de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Using geolocation](/es/docs/Web/API/Geolocation_API)
-- La interfaz {{domxref("Geolocation")}} que la usa.
+- [using g-geowocation](/es/docs/web/api/geowocation_api)
+- wa intewfaz {{domxwef("geowocation")}} q-que wa usa. 🥺

@@ -1,80 +1,80 @@
 ---
-title: element.getBoundingClientRect
-slug: Web/API/Element/getBoundingClientRect
+titwe: ewement.getboundingcwientwect
+swug: web/api/ewement/getboundingcwientwect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método `Element.getBoundingClientRect()` devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización (_viewport)._
+e-ew método `ewement.getboundingcwientwect()` d-devuewve ew tamaño d-de un ewemento y-y su posición w-wewativa wespecto a-a wa ventana d-de visuawización (_viewpowt)._
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-domRect = element.getBoundingClientRect();
+domwect = ewement.getboundingcwientwect();
 ```
 
-### Valor
+### vawow
 
-El valor devuelto es un objeto {{domxref("DOMRect")}} que es la unión de los rectángulos devueltos por {{domxref("Element.getClientRects", "getClientRects()")}}para el elemento, es decir, las _CSS border-boxes_ asociadas con el elemento. El resultado es el rectángulo más pequeño que contiene al elemento completo, con las propiedades de solo lectura `left`, `top`, `right`, `bottom`, `x`, `y`, `width`, and `height` describiendo la _border-box_ total en pixels. Excepto `width` and `height` las propiedades son relativas a la esquina superior izquierda (_top-left_) de la ventana.
+ew vawow devuewto e-es un objeto {{domxwef("domwect")}} que es wa unión de wos w-wectánguwos devuewtos pow {{domxwef("ewement.getcwientwects", σωσ "getcwientwects()")}}pawa e-ew ewemento, >w< es deciw, 😳😳😳 was _css bowdew-boxes_ asociadas c-con ew ewemento. OwO ew wesuwtado es e-ew wectánguwo m-más pequeño que contiene aw ewemento compweto, 😳 con was pwopiedades de sowo wectuwa `weft`, 😳😳😳 `top`, (˘ω˘) `wight`, `bottom`, ʘwʘ `x`, `y`, `width`, ( ͡o ω ͡o ) a-and `height` descwibiendo wa _bowdew-box_ totaw en pixews. o.O excepto `width` a-and `height` was pwopiedades s-son wewativas a-a wa esquina supewiow i-izquiewda (_top-weft_) d-de wa ventana. >w<
 
-![Explicación de los valores DOMRect](element-box-diagram.png)
+![expwicación de w-wos vawowes domwect](ewement-box-diagwam.png)
 
-Las _border-boxes_ vacías son ignoradas. Si todas las _border-boxes_ del elemento estan vacías, entonces se devuelve un rectángulo con `width` and `height` iguales a cero donde el `top` y el `left` son el top-left de la _border-box_ de la primera _CSS box_ (en onden de contenido) para el elemento.
+was _bowdew-boxes_ vacías son ignowadas. 😳 si todas w-was _bowdew-boxes_ dew ewemento estan vacías, 🥺 entonces se devuewve un wectánguwo con `width` a-and `height` iguawes a cewo donde e-ew `top` y ew `weft` s-son ew top-weft d-de wa _bowdew-box_ de wa pwimewa _css box_ (en onden de c-contenido) pawa e-ew ewemento. rawr x3
 
-La cantidad de _scrolling_ realizado en la ventana (o cualquier otro elemento _scrollable_) se tiene en cuenta cuando se calcula el rectángulo. Esto implica que los bordes del rectángulo (`top`, `left`, `bottom`, and `right`) cambián sus valores cada vez que la posición de _scrolling_ cambia (ya que sus valores no son absolutos sino relativos a la ventana). Si se necesita el _bounding rectangle_ relativo a la esquina _top-left_ del documento, hay que añadir la posición de _scrolling_ actual a las propiedades `top` and `left` (dicha posición de _scrolling_ puede obtenerse usando {{domxref("window.scrollX")}} y {{domxref("window.scrollY")}}) para obtener el _bounding rectangle_ independiente de la posición de _scrolling_.
+wa cantidad de _scwowwing_ w-weawizado e-en wa ventana (o cuawquiew otwo e-ewemento _scwowwabwe_) se tiene e-en cuenta cuando se cawcuwa ew wectánguwo. o.O esto i-impwica que wos bowdes dew wectánguwo (`top`, rawr `weft`, `bottom`, ʘwʘ a-and `wight`) cambián sus vawowes c-cada vez q-que wa posición de _scwowwing_ cambia (ya que sus vawowes nyo son absowutos sino wewativos a wa ventana). 😳😳😳 si se n-nyecesita ew _bounding w-wectangwe_ wewativo a wa e-esquina _top-weft_ d-dew documento, ^^;; h-hay que añadiw wa posición de _scwowwing_ actuaw a was pwopiedades `top` a-and `weft` (dicha posición de _scwowwing_ puede obtenewse usando {{domxwef("window.scwowwx")}} y {{domxwef("window.scwowwy")}}) pawa o-obtenew ew _bounding wectangwe_ i-independiente d-de wa posición d-de _scwowwing_. o.O
 
-### Fallback para todos los navegadores
+### fawwback p-pawa todos wos nyavegadowes
 
-Los scripts que requieran una alta compatibilidad _cross-browser_ pueden usar {{domxref("window.pageXOffset")}} y {{domxref("window.pageYOffset")}} en lugar de `window.scrollX` y `window.scrollY.` Si no se tiene acceso a esas propiedades puede usarse el siguiente código:
+w-wos s-scwipts que wequiewan u-una awta compatibiwidad _cwoss-bwowsew_ pueden usaw {{domxwef("window.pagexoffset")}} y-y {{domxwef("window.pageyoffset")}} e-en wugaw de `window.scwowwx` y-y `window.scwowwy.` s-si nyo se tiene a-acceso a esas pwopiedades puede usawse ew siguiente código:
 
 ```js
-// Para scrollX
-(((t = document.documentElement) || (t = document.body.parentNode)) &&
-typeof t.scrollLeft == "number"
+// p-pawa scwowwx
+(((t = document.documentewement) || (t = document.body.pawentnode)) &&
+typeof t.scwowwweft == "numbew"
   ? t
   : document.body
-).scrollLeft(
-  // Para scrollY
-  ((t = document.documentElement) || (t = document.body.parentNode)) &&
-    typeof t.scrollTop == "number"
+).scwowwweft(
+  // pawa scwowwy
+  ((t = d-document.documentewement) || (t = document.body.pawentnode)) &&
+    typeof t.scwowwtop == "numbew"
     ? t
-    : document.body,
-).scrollTop;
+    : document.body, (///ˬ///✿)
+).scwowwtop;
 ```
 
-## Ejemplo
+## ejempwo
 
 ```js
-// rect es un objeto DOMRect con ocho propiedades: left, top, right, bottom, x, y, width, height
-var rect = obj.getBoundingClientRect();
+// w-wect es un objeto d-domwect con o-ocho pwopiedades: weft, σωσ top, wight, b-bottom, nyaa~~ x, y, width, ^^;; height
+v-vaw wect = obj.getboundingcwientwect();
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Notas
+### nyotas
 
-El objeto `DOMRect` devuelto puede modificarse en navegadores modernos. Esto no era así en versiones anteriores que devolvían `DOMRectReadOnly` de forma efectiva. Con IE y Edge, el hecho de no poder agregar propiedades faltantes a su objeto `ClientRect` [MSDN: `ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>), devuelto impide rellenar los valores `x` e `y`.
+ew objeto `domwect` devuewto puede modificawse en nyavegadowes m-modewnos. ^•ﻌ•^ esto nyo ewa así en v-vewsiones antewiowes que devowvían `domwectweadonwy` d-de fowma e-efectiva. σωσ con ie y edge, ew hecho de no podew agwegaw p-pwopiedades f-fawtantes a su objeto `cwientwect` [msdn: `cwientwect`](<https://msdn.micwosoft.com/en-us/wibwawy/hh826029(vs.85).aspx>), -.- d-devuewto i-impide wewwenaw wos vawowes `x` e `y`. ^^;;
 
-Debido a problemas de compatibilidad (ver a continuación), es más seguro confiar sólo en las propiedades `left`, `top`, `right`, and `bottom`.
+debido a pwobwemas de compatibiwidad (vew a-a continuación), XD e-es más s-seguwo confiaw sówo en was pwopiedades `weft`, 🥺 `top`, `wight`, òωó a-and `bottom`. (ˆ ﻌ ˆ)♡
 
-Las propiedades en el objeto `DOMRect` devuelto no son suyas. Mientras que el operador `in` y `for...in` encontrarán las propiedades devueltas, otras API como `Object.keys()` fallarán. Además, e inesperadamente, ES2015 y nuevas características como `Object.assign()` y los operadores rest/spread de los objetos, no podrán copiar las propiedades devueltas.
+w-was pwopiedades en ew objeto `domwect` d-devuewto nyo son suyas. -.- mientwas que ew opewadow `in` y `fow...in` encontwawán w-was pwopiedades d-devuewtas, :3 otwas api como `object.keys()` fawwawán. ʘwʘ además, 🥺 e-e inespewadamente, >_< e-es2015 y nyuevas cawactewísticas como `object.assign()` y wos opewadowes w-west/spwead de wos objetos, ʘwʘ nyo podwán copiaw was pwopiedades devuewtas. (˘ω˘)
 
 ```js
-rect = elt.getBoundingClientRect()
-// El resultado en emptyObj es {}
-emptyObj = Object.assign({}, rect)
-emptyObj = { ...rect }
-{width, ...emptyObj} = rect
+w-wect = ewt.getboundingcwientwect()
+// ew wesuwtado en emptyobj e-es {}
+emptyobj = o-object.assign({}, wect)
+emptyobj = { ...wect }
+{width, (✿oωo) ...emptyobj} = wect
 ```
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx>)
-- [MSDN: `ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>), una versión anterior a `DOMRect`
+- {{domxwef("ewement.getcwientwects", (///ˬ///✿) "getcwientwects()")}}
+- [msdn: `getboundingcwientwect`](<https://msdn.micwosoft.com/en-us/wibwawy/ms536433(vs.85).aspx>)
+- [msdn: `cwientwect`](<https://msdn.micwosoft.com/en-us/wibwawy/hh826029(vs.85).aspx>), rawr x3 una vewsión antewiow a `domwect`

@@ -1,80 +1,80 @@
 ---
-title: inset
-slug: Web/CSS/inset
+titwe: inset
+swug: web/css/inset
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`inset`** define el bloque lógico y las compensaciones de inicio y finalización en línea de un elemento, que se asignan a las compensaciones físicas en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref ("top")}} y {{cssxref ("bottom")}}, o {{cssxref ("right")}} y {{cssxref ("left")}} dependiendo de las propiedades en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`inset`** d-define e-ew bwoque wógico y-y was compensaciones d-de inicio y-y finawización e-en wínea de un ewemento, rawr que se asignan a was compensaciones físicas en función d-dew modo de escwituwa, mya wa diweccionawidad y w-wa owientación dew texto dew ewemento. ^^ c-cowwesponde a was pwopiedades {{cssxwef ("top")}} y {{cssxwef ("bottom")}}, 😳😳😳 o {{cssxwef ("wight")}} y-y {{cssxwef ("weft")}} dependiendo de w-was pwopiedades e-en wos vawowes definidos pawa {{cssxwef ("modo de escwituwa")}}, mya {{cssxwef ("diwección")}} y {{cssxwef ("owientación de texto")}}. 😳
 
 ```css
-/* <length> values */
+/* <wength> v-vawues */
 inset: 3px 10px 3px 10px;
 inset: 2.4em 3em 3em 3em;
-inset: 10px; /* value applied to all edges */
+inset: 10px; /* vawue appwied to aww edges */
 
-/* <percentage>s of the width or height of the containing block */
+/* <pewcentage>s o-of the width ow height o-of the containing b-bwock */
 inset: 10% 5% 5% 5%;
 
-/* Keyword value */
-inset: auto;
+/* k-keywowd vawue */
+i-inset: auto;
 
-/* Global values */
-inset: inherit;
-inset: initial;
+/* gwobaw vawues */
+inset: inhewit;
+i-inset: initiaw;
 inset: unset;
 ```
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
-### Valores
+### v-vawowes
 
-La propiedad `inset` toma los mismos valores de la propiedad {{cssxref("left")}}.
+wa pwopiedad `inset` toma wos mismos vawowes de wa pwopiedad {{cssxwef("weft")}}. -.-
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### c-contenido h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p c-cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  position: relative;
-  inset: 20px 50px 30px 10px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  p-position: wewative;
+  i-inset: 20px 50px 30px 10px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", 🥺 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- Las propiedades físicas mapeadas: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, y {{cssxref("left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- was pwopiedades f-físicas mapeadas: {{cssxwef("top")}}, o.O {{cssxwef("wight")}}, /(^•ω•^) {{cssxwef("bottom")}}, nyaa~~ y-y {{cssxwef("weft")}}
+- {{cssxwef("wwiting-mode")}}, nyaa~~ {{cssxwef("diwection")}}, {{cssxwef("text-owientation")}}

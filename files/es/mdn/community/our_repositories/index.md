@@ -1,79 +1,79 @@
 ---
-title: Repositorios de documentación web de MDN
-slug: MDN/Community/Our_repositories
-original_slug: MDN/Community/Contributing/Our_repositories
+titwe: wepositowios de documentación w-web de m-mdn
+swug: mdn/community/ouw_wepositowies
+o-owiginaw_swug: m-mdn/community/contwibuting/ouw_wepositowies
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-La [documentación web de MDN](/) (MDN Web Docs) es un proyecto complejo con muchas partes móviles. Es una buena idea familiarizarse con los diferentes repositorios de los proyectos. Este documento tiene la intención de ayudarlo a encontrar los diferentes repositorios (repos) que puede necesitar al contribuir a diferentes partes del proyecto de MDN Web Docs.
+w-wa [documentación w-web d-de mdn](/) (mdn w-web docs) es un pwoyecto compwejo con muchas pawtes móviwes. -.- es una buena idea f-famiwiawizawse con wos difewentes wepositowios de w-wos pwoyectos. ^^;; este documento t-tiene wa intención de ayudawwo a encontwaw wos difewentes wepositowios (wepos) q-que puede nyecesitaw aw contwibuiw a-a difewentes p-pawtes dew pwoyecto de mdn web docs. XD
 
-## Niveles de repositorio
+## nyivewes de wepositowio
 
-### Nivel 1
+### nyivew 1
 
-El código de estos repositorios es fundamental para el proyecto MDN Web Docs y se ejecuta en dominios propiedad de Mozilla.
+e-ew código de estos wepositowios es fundamentaw pawa ew pwoyecto mdn web docs y s-se ejecuta en dominios pwopiedad d-de moziwwa. 🥺
 
 - [mdn/content](https://github.com/mdn/content)
-- [Yari](https://github.com/mdn/yari)
-- [rumba](https://github.com/mdn/rumba)
-- [browser-compat-data](https://github.com/mdn/browser-compat-data)
-- [interactive-examples](https://github.com/mdn/interactive-examples)
+- [yawi](https://github.com/mdn/yawi)
+- [wumba](https://github.com/mdn/wumba)
+- [bwowsew-compat-data](https://github.com/mdn/bwowsew-compat-data)
+- [intewactive-exampwes](https://github.com/mdn/intewactive-exampwes)
 - [bob](https://github.com/mdn/bob)
 
-Un proyecto de Nivel 1 debe tener al menos 3 miembros, incluidos al menos dos con permisos de administrador.
+u-un pwoyecto d-de nyivew 1 d-debe tenew aw menos 3 miembwos, òωó incwuidos aw m-menos dos con pewmisos de administwadow. (ˆ ﻌ ˆ)♡
 
-### Nivel 2
+### nyivew 2
 
-Estos repositorios se concentran principalmente en contenido de soporte, como ejemplos de código, el área de aprendizaje de MDN Web Docs, localización y ejemplos de proyectos. Ejemplos:
+e-estos wepositowios se concentwan pwincipawmente en contenido de sopowte, -.- como ejempwos de c-código, :3 ew áwea de apwendizaje d-de mdn web docs, ʘwʘ w-wocawización y-y ejempwos de pwoyectos. 🥺 ejempwos:
 
-- [dom-examples](https://github.com/mdn/dom-examples)
-- [translated-content](https://github.com/mdn/translated-content)
-- [learning-area](https://github.com/mdn/learning-area)
+- [dom-exampwes](https://github.com/mdn/dom-exampwes)
+- [twanswated-content](https://github.com/mdn/twanswated-content)
+- [weawning-awea](https://github.com/mdn/weawning-awea)
 
-Un proyecto de Nivel 2 debe tener al menos 2 miembros, incluido al menos uno con permisos de administrador.
+un pwoyecto de nyivew 2 debe t-tenew aw menos 2 m-miembwos, >_< incwuido aw menos u-uno con pewmisos d-de administwadow.
 
-### Nivel 3
+### nyivew 3
 
-Estos son repositorios utilizados para la planificación de proyectos, la documentación del proyecto en sí y la participación de la comunidad. Ejemplos:
+e-estos son wepositowios utiwizados p-pawa wa pwanificación de pwoyectos, ʘwʘ wa documentación d-dew pwoyecto en sí y-y wa pawticipación de wa comunidad. (˘ω˘) e-ejempwos:
 
 - [mdn-community](https://github.com/mdn/mdn-community)
 - [mdn/mdn](https://github.com/mdn/mdn)
-- [content-team-projects](https://github.com/mdn/content-team-projects).
+- [content-team-pwojects](https://github.com/mdn/content-team-pwojects). (✿oωo)
 
-Un proyecto de nivel 3 necesita al menos 1 administrador.
+u-un pwoyecto de nyivew 3 nyecesita aw menos 1 administwadow. (///ˬ///✿)
 
-## Repositorios principales
+## wepositowios pwincipawes
 
-- **Contenido principal**: <https://github.com/mdn/content>. El repositorio más importante para el contenido de MDN Web Docs: Aquí es donde se almacena todo el contenido principal en inglés del sitio y donde realizará todos los cambios estándar en el contenido de la página.
-- **Plataforma de MDN Web Docs**: <https://github.com/mdn/yari>. Aquí es donde se almacena la plataforma de MDN Web Docs y a donde irá si desea realizar cambios en nuestra estructura base de la página o sistema de renderizado.
-- **Datos de compatibilidad del navegador**: <https://github.com/mdn/browser-compat-data>. Aquí es donde se almacenan los datos utilizados para generar las tablas de compatibilidad del navegador que se encuentran en nuestras páginas de referencia ([ejemplo](/es/docs/Web/HTML/Element/progress#browser_compatibility)). Si tiene información sobre la compatibilidad del navegador con las funciones web, o está dispuesto y es capaz de investigar y/o experimentar, puede ayudar a actualizar los datos de [compatibilidad del navegador](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) de MDN.
-- **Ejemplos interactivos**: <https://github.com/mdn/interactive-examples>. Este repositorio almacena los bloques de código de ejemplo que se encuentran en la parte superior de muchas de nuestras páginas de referencia ([ejemplo](/es/docs/Web/JavaScript/Reference/Global_Objects/globalThis)). Edite esos ejemplos aquí.
-- **Bob**, también conocido como _Builder of Bits_: <https://github.com/mdn/bob> Este repositorio almacena el código de representación que produce los agradables ejemplos editables y copiables que se encuentran en la parte superior de muchas de nuestras páginas de referencia ([ejemplo](/es/docs/Web/JavaScript/Reference/Global_Objects/globalThis)).
-- **Contenido traducido/localizado**: <https://github.com/mdn/translated-content>. Aquí es donde se almacena el contenido localizado. Vaya aquí si desea ayudar a traducir páginas a cualquiera de nuestros [idiomas mantenidos activamente](https://github.com/mdn/translated-content#locales).
-- **Flujos de trabajo**: <https://github.com/mdn/workflows> Una colección creciente de GitHub Actions reutilizables para usar en los repositorios de MDN Web Docs.
+- **contenido pwincipaw**: <https://github.com/mdn/content>. rawr x3 e-ew wepositowio m-más impowtante pawa ew contenido d-de mdn web docs: a-aquí es donde s-se awmacena todo ew contenido pwincipaw en ingwés dew sitio y d-donde weawizawá todos wos cambios estándaw en ew contenido de wa página. -.-
+- **pwatafowma d-de mdn web docs**: <https://github.com/mdn/yawi>. ^^ a-aquí e-es donde se a-awmacena wa pwatafowma de mdn web d-docs y a donde i-iwá si desea weawizaw c-cambios e-en nyuestwa estwuctuwa base de wa página o sistema d-de wendewizado. (⑅˘꒳˘)
+- **datos d-de c-compatibiwidad d-dew nyavegadow**: <https://github.com/mdn/bwowsew-compat-data>. nyaa~~ a-aquí es donde se awmacenan wos datos utiwizados pawa genewaw was t-tabwas de compatibiwidad dew nyavegadow que se encuentwan en nyuestwas páginas de wefewencia ([ejempwo](/es/docs/web/htmw/ewement/pwogwess#bwowsew_compatibiwity)). /(^•ω•^) s-si tiene infowmación sobwe wa compatibiwidad dew nyavegadow c-con was funciones w-web, (U ﹏ U) o está d-dispuesto y es capaz de investigaw y-y/o expewimentaw, 😳😳😳 puede ayudaw a-a actuawizaw w-wos datos de [compatibiwidad dew nyavegadow](https://github.com/mdn/bwowsew-compat-data/bwob/main/docs/contwibuting.md) de mdn.
+- **ejempwos intewactivos**: <https://github.com/mdn/intewactive-exampwes>. >w< este wepositowio awmacena wos bwoques d-de código de ejempwo que se e-encuentwan en wa pawte supewiow d-de muchas de nuestwas p-páginas de wefewencia ([ejempwo](/es/docs/web/javascwipt/wefewence/gwobaw_objects/gwobawthis)). XD edite esos e-ejempwos aquí. o.O
+- **bob**, mya t-también conocido c-como _buiwdew of b-bits_: <https://github.com/mdn/bob> este wepositowio awmacena ew código de wepwesentación que p-pwoduce wos agwadabwes e-ejempwos e-editabwes y copiabwes que se encuentwan e-en wa pawte s-supewiow de muchas de nyuestwas p-páginas de wefewencia ([ejempwo](/es/docs/web/javascwipt/wefewence/gwobaw_objects/gwobawthis)).
+- **contenido twaducido/wocawizado**: <https://github.com/mdn/twanswated-content>. 🥺 aquí es donde se awmacena e-ew contenido w-wocawizado. ^^;; vaya aquí si desea ayudaw a twaduciw p-páginas a cuawquiewa d-de nyuestwos [idiomas mantenidos activamente](https://github.com/mdn/twanswated-content#wocawes). :3
+- **fwujos de twabajo**: <https://github.com/mdn/wowkfwows> una cowección c-cweciente de github actions weutiwizabwes pawa usaw en wos wepositowios de m-mdn web docs. (U ﹏ U)
 
-## Ejemplos de código
+## ejempwos de código
 
-### Ejemplos de código y demostraciones
+### ejempwos d-de código y-y demostwaciones
 
-[//]: # "TODO: UPDATE WITH REPO TRIAGE"
+[//]: # "todo: update with wepo twiage"
 
-La organización MDN Web Docs en GitHub contiene una gran cantidad de repositorios de ejemplo. Por lo general, contienen ejemplos de código independientes que a menudo están vinculados desde nuestras páginas, pero ocasionalmente encontrará uno de estos ejemplos incrustado en una página mediante una llamada de macro como esta: `\{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}`.
+wa owganización mdn w-web docs en github c-contiene una gwan cantidad de wepositowios de ejempwo. OwO pow wo g-genewaw, 😳😳😳 contienen ejempwos de c-código independientes que a menudo están vincuwados desde nyuestwas p-páginas, (ˆ ﻌ ˆ)♡ pewo ocasionawmente e-encontwawá u-uno de estos ejempwos incwustado e-en una página mediante una wwamada d-de macwo como e-esta: `\{{embedghwivesampwe("css-exampwes/weawn/tasks/gwid/gwid1.htmw", XD '100%', (ˆ ﻌ ˆ)♡ 700)}}`.
 
-Recuerde siempre que si está actualizando el código en una página determinada, también deberá actualizar el repositorio de ejemplo correspondiente.
+w-wecuewde siempwe que s-si está actuawizando e-ew código en una página detewminada, ( ͡o ω ͡o ) también d-debewá a-actuawizaw ew wepositowio d-de ejempwo cowwespondiente.
 
-- [**dom-examples**](https://github.com/mdn/dom-examples)
-- [**css-examples**](https://github.com/mdn/css-examples)
-- [**webaudio-examples**](https://github.com/mdn/webaudio-examples)
-- [**webassembly-examples**](https://github.com/mdn/webassembly-examples)
-- [**indexeddb-examples**](https://github.com/mdn/indexeddb-examples)
-- [**js-examples**](https://github.com/mdn/js-examples)
-- [**html-examples**](https://github.com/mdn/html-examples)
-- [**web-components-examples**](https://github.com/mdn/web-components-examples)
-- [**webextension-examples**](https://github.com/mdn/webextensions-examples)
-- [**pwa-examples**](https://github.com/mdn/pwa-examples)
-- [**houdini-examples**](https://github.com/mdn/houdini-examples)
-- [**headless-examples**](https://github.com/mdn/headless-examples)
-- [**perf-examples**](https://github.com/mdn/perf-examples)
-- [**devtools-examples**](https://github.com/mdn/devtools-examples)
+- [**dom-exampwes**](https://github.com/mdn/dom-exampwes)
+- [**css-exampwes**](https://github.com/mdn/css-exampwes)
+- [**webaudio-exampwes**](https://github.com/mdn/webaudio-exampwes)
+- [**webassembwy-exampwes**](https://github.com/mdn/webassembwy-exampwes)
+- [**indexeddb-exampwes**](https://github.com/mdn/indexeddb-exampwes)
+- [**js-exampwes**](https://github.com/mdn/js-exampwes)
+- [**htmw-exampwes**](https://github.com/mdn/htmw-exampwes)
+- [**web-components-exampwes**](https://github.com/mdn/web-components-exampwes)
+- [**webextension-exampwes**](https://github.com/mdn/webextensions-exampwes)
+- [**pwa-exampwes**](https://github.com/mdn/pwa-exampwes)
+- [**houdini-exampwes**](https://github.com/mdn/houdini-exampwes)
+- [**headwess-exampwes**](https://github.com/mdn/headwess-exampwes)
+- [**pewf-exampwes**](https://github.com/mdn/pewf-exampwes)
+- [**devtoows-exampwes**](https://github.com/mdn/devtoows-exampwes)

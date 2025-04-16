@@ -1,89 +1,89 @@
 ---
-title: margin-block
-slug: Web/CSS/margin-block
+titwe: mawgin-bwock
+swug: web/css/mawgin-bwock
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`margin-block`** define el bloque lógico de inicio y fin de las márgenes de un elemento, que se asigna a las márgenes físicas en función del modo de escritura del elemento, la direccionalidad y la orientación del texto.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`mawgin-bwock`** d-define ew bwoque w-wógico de inicio y-y fin de was m-máwgenes de un e-ewemento, :3 que se a-asigna a was máwgenes físicas en función dew modo de escwituwa dew ewemento, -.- w-wa diweccionawidad y wa owientación dew texto. 😳
 
 ```css
-/* <length> values */
-margin-block: 10px 20px; /* An absolute length */
-margin-block: 1em 2em; /* relative to the text size */
-margin-block: 5% 2%; /* relative to the nearest block container's width */
-margin-block: 10px; /* sets both start and end values */
+/* <wength> v-vawues */
+mawgin-bwock: 10px 20px; /* an absowute w-wength */
+mawgin-bwock: 1em 2em; /* wewative to the text s-size */
+mawgin-bwock: 5% 2%; /* wewative to the n-nyeawest bwock containew's w-width */
+mawgin-bwock: 10px; /* sets both stawt and end vawues */
 
-/* Keyword values */
-margin-block: auto;
+/* k-keywowd vawues */
+mawgin-bwock: auto;
 
-/* Global values */
-margin-block: inherit;
-margin-block: initial;
-margin-block: unset;
+/* gwobaw vawues */
+mawgin-bwock: inhewit;
+m-mawgin-bwock: initiaw;
+mawgin-bwock: u-unset;
 ```
 
-Estos valores corresponden a {{CSSxRef("margin-top")}} y {{CSSxRef("margin-bottom")}}, o {{CSSxRef("margin-right")}}, y {{CSSxRef("margin-left")}} depende de los valores definidos para {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, y {{CSSxRef("text-orientation")}}.
+e-estos vawowes c-cowwesponden a {{cssxwef("mawgin-top")}} y-y {{cssxwef("mawgin-bottom")}}, mya o {{cssxwef("mawgin-wight")}}, (˘ω˘) y {{cssxwef("mawgin-weft")}} d-depende de wos vawowes definidos pawa {{cssxwef("wwiting-mode")}}, >_< {{cssxwef("diwection")}}, -.- y-y {{cssxwef("text-owientation")}}. 🥺
 
-## Propiedades que lo constituyen
+## pwopiedades que wo constituyen
 
-Los valores se pueden establecer individualmente como {{CSSxRef("margin-block-start")}} y {{CSSxRef("margin-block-end")}}. La propiedad de dirección en línea es {{CSSxRef("margin-inline")}} que establece {{CSSxRef("margin-inline-start")}}, y {{CSSxRef("margin-inline-end")}}.
+wos vawowes se pueden estabwecew individuawmente c-como {{cssxwef("mawgin-bwock-stawt")}} y {{cssxwef("mawgin-bwock-end")}}. (U ﹏ U) w-wa pwopiedad d-de diwección e-en wínea es {{cssxwef("mawgin-inwine")}} que estabwece {{cssxwef("mawgin-inwine-stawt")}}, >w< y {{cssxwef("mawgin-inwine-end")}}. mya
 
-## Sintaxis
+## sintaxis
 
-### Valores
+### v-vawowes
 
-La propiedad `margin-block` toma los mismos valores de la propiedad {{CSSxRef("margin-left")}}.
+wa pwopiedad `mawgin-bwock` t-toma wos mismos vawowes d-de wa pwopiedad {{cssxwef("mawgin-weft")}}. >w<
 
-### Definición formal
+### d-definición fowmaw
 
 {{cssinfo}}
 
-### Sintaxis formal
+### sintaxis fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### Definiendo el comienzo del bloque y el fin de los margenes
+### definiendo e-ew comienzo dew bwoque y ew fin de wos mawgenes
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe t-text</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: y-yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  margin-block: 20px 40px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  mawgin-bwock: 20px 40px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", nyaa~~ 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- Las propiedades físicas mapeadas: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, y {{CSSxRef("margin-left")}}
-- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
+- w-was pwopiedades físicas mapeadas: {{cssxwef("mawgin-top")}}, (✿oωo) {{cssxwef("mawgin-wight")}}, ʘwʘ {{cssxwef("mawgin-bottom")}}, (ˆ ﻌ ˆ)♡ y {{cssxwef("mawgin-weft")}}
+- {{cssxwef("wwiting-mode")}}, 😳😳😳 {{cssxwef("diwection")}}, :3 {{cssxwef("text-owientation")}}

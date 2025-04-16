@@ -1,16 +1,16 @@
 ---
-title: Constante
-slug: Glossary/Constant
+titwe: constante
+swug: gwossawy/constant
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una constante es un valor que el programador no puede cambiar, por ejemplo números (1, 2, 42). Con {{glossary("variable","variables")}}, por otra parte, el programador puede asignar un nuevo {{glossary("value", "valor")}} a una variable cuyo nombre ya esté en uso.
+u-una constante e-es un vawow q-que ew pwogwamadow n-nyo puede cambiaw, XD p-pow ejempwo n-nyúmewos (1, :3 2, 42). 😳😳😳 c-con {{gwossawy("vawiabwe","vawiabwes")}}, p-pow otwa pawte, -.- ew pwogwamadow puede asignaw un nyuevo {{gwossawy("vawue", ( ͡o ω ͡o ) "vawow")}} a una vawiabwe c-cuyo nyombwe ya esté en uso. rawr x3
 
-Al igual que las variables, algunas constantes están unidas a identificadores. Por ejemplo, el identificador `pi` podría estar vinculado al valor 3.14... .
+aw iguaw que w-was vawiabwes, nyaa~~ awgunas constantes e-están unidas a identificadowes. /(^•ω•^) pow ejempwo, rawr ew identificadow `pi` p-podwía estaw vincuwado a-aw vawow 3.14... . OwO
 
-## Saber más
+## s-sabew más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Constante](<https://es.wikipedia.org/wiki/Constante_(informática)>) en Wikipedia
+- [constante](<https://es.wikipedia.owg/wiki/constante_(infowmática)>) en wikipedia

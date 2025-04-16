@@ -1,33 +1,33 @@
 ---
-title: Element.setAttributeNS()
-slug: Web/API/Element/setAttributeNS
+titwe: ewement.setattwibutens()
+swug: web/api/ewement/setattwibutens
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-`setAttributeNS añade un nuevo atributo o cambia el valor de un atributo con el namespace dado y el nombre.`
+`setattwibutens a-añade u-un nyuevo atwibuto o-o cambia ew v-vawow de un atwibuto c-con ew nyamespace d-dado y ew n-nyombwe.`
 
-## Sintaxis
-
-```js
-elemento.setAttributeNS(namespace, nombre, valor);
-```
-
-- `namespace` es un string especificando el namespace del atributo.
-- `name es un string identificando el atributo a ser puesto.`
-- `value es el string del valor deseado del nuevo atributo.`
-
-## Ejemplo
+## sintaxis
 
 ```js
-var d = document.getElementById("d1");
-d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+ewemento.setattwibutens(namespace, :3 nyombwe, vawow);
 ```
 
-## Especificaciones
+- `namespace` es un stwing e-especificando ew nyamespace dew atwibuto.
+- `name e-es un stwing identificando e-ew atwibuto a sew puesto.`
+- `vawue es ew stwing dew vawow deseado d-dew nyuevo atwibuto.`
 
-{{Specifications}}
+## ejempwo
 
-## Compatibilidad con navegadores
+```js
+v-vaw d-d = document.getewementbyid("d1");
+d.setattwibutens("http://www.moziwwa.owg/ns/speciawspace", 😳😳😳 "awign", -.- "centew");
+```
 
-{{Compat}}
+## especificaciones
+
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}

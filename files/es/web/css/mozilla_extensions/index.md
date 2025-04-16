@@ -1,592 +1,592 @@
 ---
-title: Extensiones CSS de Mozilla
-slug: Web/CSS/Mozilla_Extensions
+titwe: extensiones css de moziwwa
+s-swug: web/css/moziwwa_extensions
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Mozilla soporta ciertas extensiones de [CSS](/es/docs/Web/CSS) con el prefijo`-moz-`.
+m-moziwwa sopowta c-ciewtas extensiones d-de [css](/es/docs/web/css) c-con ew pwefijo`-moz-`. σωσ
 
-Algunas de estas propiedades han sido incluidas en una especificación de CSS en borrador para incluirlas en la recomendación final, pero aún están en proceso experimental. La propiedad final estándar puede ser diferente de la implementación actual con prefijo. Algunas de estas propiedades no estándares solo son aplicables en elementos XUL.
+a-awgunas d-de estas pwopiedades h-han sido incwuidas en una especificación de css en bowwadow pawa incwuiwwas e-en wa wecomendación finaw, (U ᵕ U❁) pewo aún están e-en pwoceso expewimentaw. (U ﹏ U) wa p-pwopiedad finaw estándaw puede sew difewente de wa impwementación a-actuaw con pwefijo. :3 awgunas d-de estas pwopiedades n-nyo estándawes sowo son apwicabwes en ewementos xuw. ( ͡o ω ͡o )
 
-Cuando se estandarizan y se añade el soporte para la variante sin prefijo, las propiedades prefijadas se abandonan.
+cuando se estandawizan y-y se añade ew sopowte pawa wa vawiante sin pwefijo, σωσ was pwopiedades pwefijadas s-se abandonan. >w<
 
-## Propiedades estándares prefijadas de Mozilla
+## pwopiedades e-estándawes pwefijadas d-de moziwwa
 
-A
+a-a
 
-- {{Cssxref("-moz-appearance")}}
+- {{cssxwef("-moz-appeawance")}}
 
-B
+b-b
 
-- {{Cssxref("-moz-background-inline-policy")}}
-- {{cssxref("box-sizing", "-moz-box-sizing")}}
+- {{cssxwef("-moz-backgwound-inwine-powicy")}}
+- {{cssxwef("box-sizing", 😳😳😳 "-moz-box-sizing")}}
 
-C D E
+c d e
 
-- {{Cssxref("clip-path")}} (aplicado en SVG y otros)
-- {{Cssxref("-moz-column-count")}}
-- {{Cssxref("-moz-column-fill")}}
-- {{Cssxref("-moz-column-gap")}}
-- {{Cssxref("-moz-column-width")}}
-- {{Cssxref("-moz-column-rule")}}
-- {{Cssxref("-moz-column-rule-width")}}
-- {{Cssxref("-moz-column-rule-style")}}
-- {{Cssxref("-moz-column-rule-color")}}
+- {{cssxwef("cwip-path")}} (apwicado e-en svg y otwos)
+- {{cssxwef("-moz-cowumn-count")}}
+- {{cssxwef("-moz-cowumn-fiww")}}
+- {{cssxwef("-moz-cowumn-gap")}}
+- {{cssxwef("-moz-cowumn-width")}}
+- {{cssxwef("-moz-cowumn-wuwe")}}
+- {{cssxwef("-moz-cowumn-wuwe-width")}}
+- {{cssxwef("-moz-cowumn-wuwe-stywe")}}
+- {{cssxwef("-moz-cowumn-wuwe-cowow")}}
 
-F G
+f g
 
-- {{Cssxref("filter")}} (aplicado en SVG y otros)
-- {{Cssxref("-moz-font-feature-settings")}}
-- {{cssxref("-moz-font-language-override")}}
+- {{cssxwef("fiwtew")}} (apwicado e-en svg y otwos)
+- {{cssxwef("-moz-font-featuwe-settings")}}
+- {{cssxwef("-moz-font-wanguage-ovewwide")}}
 
-H
+h
 
-- {{Cssxref("-moz-hyphens")}}
+- {{cssxwef("-moz-hyphens")}}
 
-I—O
+i—o
 
-- {{Cssxref("mask")}} (aplicado en SVG y otros)
+- {{cssxwef("mask")}} (apwicado en svg y otwos)
 
-P
+p
 
-- {{Cssxref("pointer-events")}} (aplicado en SVG y otros)
+- {{cssxwef("pointew-events")}} (apwicado en svg y otwos)
 
-Q—T
+q—t
 
-- {{cssxref("-moz-text-align-last")}}
-- {{Cssxref("text-decoration-color","-moz-text-decoration-color")}}
-- {{Cssxref("text-decoration-line","-moz-text-decoration-line")}}
-- {{Cssxref("text-decoration-style","-moz-text-decoration-style")}}
+- {{cssxwef("-moz-text-awign-wast")}}
+- {{cssxwef("text-decowation-cowow","-moz-text-decowation-cowow")}}
+- {{cssxwef("text-decowation-wine","-moz-text-decowation-wine")}}
+- {{cssxwef("text-decowation-stywe","-moz-text-decowation-stywe")}}
 
-## Propiedades no estándar prefijadas propietarias de Mozilla (no usar en sitios web)
+## p-pwopiedades nyo estándaw pwefijadas p-pwopietawias d-de moziwwa (no u-usaw en sitios web)
 
-A B
+a b
 
-- {{Cssxref("-moz-binding")}}
-- {{Cssxref("-moz-border-bottom-colors")}}
-- {{Cssxref("-moz-border-end")}}
-- {{Cssxref("-moz-border-end-color")}}
-- {{Cssxref("-moz-border-end-style")}}
-- {{Cssxref("-moz-border-end-width")}}
-- {{Cssxref("-moz-border-left-colors")}}
-- {{Cssxref("-moz-border-right-colors")}}
-- {{Cssxref("-moz-border-start")}}
-- {{Cssxref("-moz-border-start-color")}}
-- {{Cssxref("-moz-border-start-style")}}
-- {{Cssxref("-moz-border-start-width")}}
-- {{Cssxref("-moz-border-top-colors")}}
-- {{Cssxref("-moz-box-align")}}
-- {{Cssxref("-moz-box-direction")}}
-- {{Cssxref("-moz-box-flex")}}
-- {{Cssxref("-moz-box-ordinal-group")}}
-- {{Cssxref("-moz-box-orient")}}
-- {{Cssxref("-moz-box-pack")}}
+- {{cssxwef("-moz-binding")}}
+- {{cssxwef("-moz-bowdew-bottom-cowows")}}
+- {{cssxwef("-moz-bowdew-end")}}
+- {{cssxwef("-moz-bowdew-end-cowow")}}
+- {{cssxwef("-moz-bowdew-end-stywe")}}
+- {{cssxwef("-moz-bowdew-end-width")}}
+- {{cssxwef("-moz-bowdew-weft-cowows")}}
+- {{cssxwef("-moz-bowdew-wight-cowows")}}
+- {{cssxwef("-moz-bowdew-stawt")}}
+- {{cssxwef("-moz-bowdew-stawt-cowow")}}
+- {{cssxwef("-moz-bowdew-stawt-stywe")}}
+- {{cssxwef("-moz-bowdew-stawt-width")}}
+- {{cssxwef("-moz-bowdew-top-cowows")}}
+- {{cssxwef("-moz-box-awign")}}
+- {{cssxwef("-moz-box-diwection")}}
+- {{cssxwef("-moz-box-fwex")}}
+- {{cssxwef("-moz-box-owdinaw-gwoup")}}
+- {{cssxwef("-moz-box-owient")}}
+- {{cssxwef("-moz-box-pack")}}
 
-C—F
+c—f
 
-- {{Cssxref("-moz-float-edge")}}
-- {{Cssxref("-moz-force-broken-image-icon")}}
+- {{cssxwef("-moz-fwoat-edge")}}
+- {{cssxwef("-moz-fowce-bwoken-image-icon")}}
 
-G H I
+g h i
 
-- {{Cssxref("-moz-image-region")}}
+- {{cssxwef("-moz-image-wegion")}}
 
-J—M
+j—m
 
-- {{Cssxref("-moz-margin-end")}}
-- {{Cssxref("-moz-margin-start")}}
+- {{cssxwef("-moz-mawgin-end")}}
+- {{cssxwef("-moz-mawgin-stawt")}}
 
-N O
+n-ny o-o
 
-- {{cssxref("-moz-orient")}}
-- {{Cssxref("-moz-outline-radius")}}
-- {{Cssxref("-moz-outline-radius-bottomleft")}}
-- {{Cssxref("-moz-outline-radius-bottomright")}}
-- {{Cssxref("-moz-outline-radius-topleft")}}
-- {{Cssxref("-moz-outline-radius-topright")}}
+- {{cssxwef("-moz-owient")}}
+- {{cssxwef("-moz-outwine-wadius")}}
+- {{cssxwef("-moz-outwine-wadius-bottomweft")}}
+- {{cssxwef("-moz-outwine-wadius-bottomwight")}}
+- {{cssxwef("-moz-outwine-wadius-topweft")}}
+- {{cssxwef("-moz-outwine-wadius-topwight")}}
 
-P Q R
+p q w
 
-- {{Cssxref("-moz-padding-end")}}
-- {{Cssxref("-moz-padding-start")}}
+- {{cssxwef("-moz-padding-end")}}
+- {{cssxwef("-moz-padding-stawt")}}
 
-S
+s-s
 
-- {{Cssxref("-moz-script-level")}}
-- {{Cssxref("-moz-script-min-size")}}
-- {{Cssxref("-moz-script-size-multiplier")}}
-- {{Cssxref("-moz-stack-sizing")}}
+- {{cssxwef("-moz-scwipt-wevew")}}
+- {{cssxwef("-moz-scwipt-min-size")}}
+- {{cssxwef("-moz-scwipt-size-muwtipwiew")}}
+- {{cssxwef("-moz-stack-sizing")}}
 
-T U V
+t-t u v
 
-- {{Cssxref("-moz-user-focus")}}
-- {{Cssxref("-moz-user-input")}}
-- {{Cssxref("-moz-user-modify")}}
-- {{Cssxref("-moz-user-select")}}
+- {{cssxwef("-moz-usew-focus")}}
+- {{cssxwef("-moz-usew-input")}}
+- {{cssxwef("-moz-usew-modify")}}
+- {{cssxwef("-moz-usew-sewect")}}
 
-W—Z
+w-w—z
 
-- {{Cssxref("-moz-window-shadow")}}
+- {{cssxwef("-moz-window-shadow")}}
 
-## Propiedades prefijadas anteriormente, ahora estándar
+## pwopiedades p-pwefijadas antewiowmente, ahowa estándaw
 
-- {{Cssxref("animation", "-moz-animation")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-delay", "-moz-animation-delay")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-direction", "-moz-animation-direction")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-duration", "-moz-animation-duration")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-fill-mode", "-moz-animation-fill-mode")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-iteration-count", "-moz-animation-iteration-count")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-name", "-moz-animation-name")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-play-state", "-moz-animation-play-state")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-timing-function","-moz-animation-timing-function")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("backface-visibility", "-moz-backface-visibility")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("background-clip", "-moz-background-clip")}}
-- {{Cssxref("background-origin", "-moz-background-origin")}}
-- {{Cssxref("background-size", "-moz-background-size")}}
-- {{Cssxref("border-image","-moz-border-image")}}
-- {{Cssxref("opacity","-moz-opacity")}}
-- {{Cssxref("outline","-moz-outline")}}
-- {{Cssxref("outline-color","-moz-outline-color")}}
-- {{Cssxref("outline-offset","-moz-outline-offset")}}
-- {{Cssxref("outline-style","-moz-outline-style")}}
-- {{Cssxref("outline-width","-moz-outline-width")}}
-- {{Cssxref("perspective", "-moz-perspective")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("perspective-origin","-moz-perspective-origin")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("transform", "-moz-transform")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("transform-origin", "-moz-transform-origin")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("transform-style", "-moz-transform-style")}} \[Aún se acepta la versión con prefijo]
-- {{cssxref("transition", "-moz-transition")}} \[Aún se acepta la versión con prefijo]
-- {{cssxref("transition-delay", "-moz-transition-delay")}} \[Aún se acepta la versión con prefijo]
-- {{cssxref("transition-duration", "-moz-transition-duration")}} \[Aún se acepta la versión con prefijo]
-- {{cssxref("transition-property", "-moz-transition-property")}} \[Aún se acepta la versión con prefijo]
-- {{cssxref("transition-timing-function", "-moz-transition-timing-function")}} \[Aún se acepta la versión con prefijo]
+- {{cssxwef("animation", OwO "-moz-animation")}} \[aún s-se acepta wa vewsión con pwefijo]
+- {{cssxwef("animation-deway", 😳 "-moz-animation-deway")}} \[aún s-se acepta wa vewsión con p-pwefijo]
+- {{cssxwef("animation-diwection", 😳😳😳 "-moz-animation-diwection")}} \[aún s-se acepta wa vewsión con pwefijo]
+- {{cssxwef("animation-duwation", "-moz-animation-duwation")}} \[aún se acepta wa vewsión con pwefijo]
+- {{cssxwef("animation-fiww-mode", (˘ω˘) "-moz-animation-fiww-mode")}} \[aún se acepta wa vewsión con p-pwefijo]
+- {{cssxwef("animation-itewation-count", ʘwʘ "-moz-animation-itewation-count")}} \[aún s-se acepta wa vewsión c-con pwefijo]
+- {{cssxwef("animation-name", ( ͡o ω ͡o ) "-moz-animation-name")}} \[aún se a-acepta wa vewsión c-con pwefijo]
+- {{cssxwef("animation-pway-state", o.O "-moz-animation-pway-state")}} \[aún se acepta wa vewsión con pwefijo]
+- {{cssxwef("animation-timing-function","-moz-animation-timing-function")}} \[aún s-se acepta wa vewsión con pwefijo]
+- {{cssxwef("backface-visibiwity", >w< "-moz-backface-visibiwity")}} \[aún se acepta wa vewsión con pwefijo]
+- {{cssxwef("backgwound-cwip", 😳 "-moz-backgwound-cwip")}}
+- {{cssxwef("backgwound-owigin", 🥺 "-moz-backgwound-owigin")}}
+- {{cssxwef("backgwound-size", rawr x3 "-moz-backgwound-size")}}
+- {{cssxwef("bowdew-image","-moz-bowdew-image")}}
+- {{cssxwef("opacity","-moz-opacity")}}
+- {{cssxwef("outwine","-moz-outwine")}}
+- {{cssxwef("outwine-cowow","-moz-outwine-cowow")}}
+- {{cssxwef("outwine-offset","-moz-outwine-offset")}}
+- {{cssxwef("outwine-stywe","-moz-outwine-stywe")}}
+- {{cssxwef("outwine-width","-moz-outwine-width")}}
+- {{cssxwef("pewspective", o.O "-moz-pewspective")}} \[aún s-se acepta wa vewsión c-con pwefijo]
+- {{cssxwef("pewspective-owigin","-moz-pewspective-owigin")}} \[aún s-se acepta wa v-vewsión con pwefijo]
+- {{cssxwef("twansfowm", rawr "-moz-twansfowm")}} \[aún se acepta w-wa vewsión c-con pwefijo]
+- {{cssxwef("twansfowm-owigin", ʘwʘ "-moz-twansfowm-owigin")}} \[aún se a-acepta wa vewsión c-con pwefijo]
+- {{cssxwef("twansfowm-stywe", 😳😳😳 "-moz-twansfowm-stywe")}} \[aún se acepta wa vewsión con pwefijo]
+- {{cssxwef("twansition", ^^;; "-moz-twansition")}} \[aún s-se acepta w-wa vewsión c-con pwefijo]
+- {{cssxwef("twansition-deway", o.O "-moz-twansition-deway")}} \[aún s-se acepta wa vewsión c-con pwefijo]
+- {{cssxwef("twansition-duwation", (///ˬ///✿) "-moz-twansition-duwation")}} \[aún se acepta wa vewsión con pwefijo]
+- {{cssxwef("twansition-pwopewty", σωσ "-moz-twansition-pwopewty")}} \[aún s-se acepta wa vewsión con pwefijo]
+- {{cssxwef("twansition-timing-function", nyaa~~ "-moz-twansition-timing-function")}} \[aún se acepta wa vewsión con pwefijo]
 
-## Valores
+## vawowes
 
-### Para todas las propiedades
+### p-pawa todas was pwopiedades
 
-- {{cssxref("initial","-moz-initial")}}
+- {{cssxwef("initiaw","-moz-initiaw")}}
 
-### {{Cssxref("-moz-appearance")}}
+### {{cssxwef("-moz-appeawance")}}
 
 - `button`
-- `button-arrow-down`
-- `button-arrow-next`
-- `button-arrow-previous`
-- `button-arrow-up`
-- `button-bevel`
+- `button-awwow-down`
+- `button-awwow-next`
+- `button-awwow-pwevious`
+- `button-awwow-up`
+- `button-bevew`
 - `checkbox`
-- `checkbox-container`
-- `checkbox-label`
+- `checkbox-containew`
+- `checkbox-wabew`
 - `checkmenuitem`
-- `dialog`
-- `groupbox`
-- `listbox`
-- `menuarrow`
+- `diawog`
+- `gwoupbox`
+- `wistbox`
+- `menuawwow`
 - `menucheckbox`
 - `menuimage`
 - `menuitem`
 - `menuitemtext`
-- `menulist`
-- `menulist-button`
-- `menulist-text`
-- `menulist-textfield`
+- `menuwist`
+- `menuwist-button`
+- `menuwist-text`
+- `menuwist-textfiewd`
 - `menupopup`
-- `menuradio`
-- `menuseparator`
-- `-moz-mac-unified-toolbar`
-- `-moz-win-borderless-glass`
-- `-moz-win-browsertabbar-toolbox`
-- `-moz-win-communications-toolbox`
-- `-moz-win-glass`
-- `-moz-win-media-toolbox`
+- `menuwadio`
+- `menusepawatow`
+- `-moz-mac-unified-toowbaw`
+- `-moz-win-bowdewwess-gwass`
+- `-moz-win-bwowsewtabbaw-toowbox`
+- `-moz-win-communications-toowbox`
+- `-moz-win-gwass`
+- `-moz-win-media-toowbox`
 - `-moz-window-button-box`
 - `-moz-window-button-box-maximized`
-- `-moz-window-button-close`
+- `-moz-window-button-cwose`
 - `-moz-window-button-maximize`
 - `-moz-window-button-minimize`
-- `-moz-window-button-restore`
-- `-moz-window-titlebar`
-- `-moz-window-titlebar-maximized`
-- `progressbar`
-- `progresschunk`
-- `radio`
-- `radio-container`
-- `radio-label`
-- `radiomenuitem`
-- `resizer`
-- `resizerpanel`
-- `scale-horizontal`
-- `scalethumb-horizontal`
-- `scalethumb-vertical`
-- `scale-vertical`
-- `scrollbarbutton-down`
-- `scrollbarbutton-left`
-- `scrollbarbutton-right`
-- `scrollbarbutton-up`
-- `scrollbar-small`
-- `scrollbarthumb-horizontal`
-- `scrollbarthumb-vertical`
-- `scrollbartrack-horizontal`
-- `scrollbartrack-vertical`
-- `separator`
-- `spinner`
-- `spinner-downbutton`
-- `spinner-textfield`
-- `spinner-upbutton`
-- `statusbar`
-- `statusbarpanel`
+- `-moz-window-button-westowe`
+- `-moz-window-titwebaw`
+- `-moz-window-titwebaw-maximized`
+- `pwogwessbaw`
+- `pwogwesschunk`
+- `wadio`
+- `wadio-containew`
+- `wadio-wabew`
+- `wadiomenuitem`
+- `wesizew`
+- `wesizewpanew`
+- `scawe-howizontaw`
+- `scawethumb-howizontaw`
+- `scawethumb-vewticaw`
+- `scawe-vewticaw`
+- `scwowwbawbutton-down`
+- `scwowwbawbutton-weft`
+- `scwowwbawbutton-wight`
+- `scwowwbawbutton-up`
+- `scwowwbaw-smow`
+- `scwowwbawthumb-howizontaw`
+- `scwowwbawthumb-vewticaw`
+- `scwowwbawtwack-howizontaw`
+- `scwowwbawtwack-vewticaw`
+- `sepawatow`
+- `spinnew`
+- `spinnew-downbutton`
+- `spinnew-textfiewd`
+- `spinnew-upbutton`
+- `statusbaw`
+- `statusbawpanew`
 - `tab`
-- `tabpanels`
-- `tab-scroll-arrow-back`
-- `tab-scroll-arrow-forward`
-- `textfield`
-- `textfield-multiline`
-- `toolbar`
-- `toolbarbutton-dropdown`
-- `toolbox`
-- `tooltip`
-- `treeheadercell`
-- `treeheadersortarrow`
-- `treeitem`
-- `treetwisty`
-- `treetwistyopen`
-- `treeview`
+- `tabpanews`
+- `tab-scwoww-awwow-back`
+- `tab-scwoww-awwow-fowwawd`
+- `textfiewd`
+- `textfiewd-muwtiwine`
+- `toowbaw`
+- `toowbawbutton-dwopdown`
+- `toowbox`
+- `toowtip`
+- `tweeheadewceww`
+- `tweeheadewsowtawwow`
+- `tweeitem`
+- `tweetwisty`
+- `tweetwistyopen`
+- `tweeview`
 - `window`
 
-### {{cssxref("background-image")}}
+### {{cssxwef("backgwound-image")}}
 
-- Gradientes
+- gwadientes
 
-  - {{cssxref("-moz-linear-gradient")}}
-  - {{cssxref("-moz-radial-gradient")}}
+  - {{cssxwef("-moz-wineaw-gwadient")}}
+  - {{cssxwef("-moz-wadiaw-gwadient")}}
 
-- Elementos
+- ewementos
 
-  - {{cssxref("-moz-element")}}
+  - {{cssxwef("-moz-ewement")}}
 
-- Sub-imágenes
+- s-sub-imágenes
 
-  - {{cssxref("-moz-image-rect")}}
+  - {{cssxwef("-moz-image-wect")}}
 
-### {{Cssxref("border-color")}}
+### {{cssxwef("bowdew-cowow")}}
 
-- `-moz-use-text-color` {{Deprecated_inline}} Usar {{Cssxref("currentColor")}}
+- `-moz-use-text-cowow` {{depwecated_inwine}} u-usaw {{cssxwef("cuwwentcowow")}}
 
-### {{Cssxref("border-style")}} y {{Cssxref("outline-style")}}
+### {{cssxwef("bowdew-stywe")}} y-y {{cssxwef("outwine-stywe")}}
 
-- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid`{{deprecated_inline}} abandonado en Gecko 1.9 (Firefox 3.0)
+- `-moz-bg-inset | -moz-bg-outset | -moz-bg-sowid`{{depwecated_inwine}} abandonado en gecko 1.9 (fiwefox 3.0)
 
-### Palabras clave de {{cssxref("&lt;color&gt;")}}
+### p-pawabwas cwave de {{cssxwef("&wt;cowow&gt;")}}
 
-- `-moz-activehyperlinktext`
-- `-moz-hyperlinktext`
-- `-moz-visitedhyperlinktext`
-- `-moz-buttondefault`
-- `-moz-buttonhoverface`
-- `-moz-buttonhovertext`
-- `-moz-default-background-color`
-- `-moz-default-color`
-- `-moz-cellhighlight`
-- `-moz-cellhighlighttext`
-- `-moz-field`
-- `-moz-fieldtext`
-- `-moz-dialog`
-- `-moz-dialogtext`
-- `-moz-dragtargetzone`
-- `-moz-mac-accentdarkestshadow`
-- `-moz-mac-accentdarkshadow`
+- `-moz-activehypewwinktext`
+- `-moz-hypewwinktext`
+- `-moz-visitedhypewwinktext`
+- `-moz-buttondefauwt`
+- `-moz-buttonhovewface`
+- `-moz-buttonhovewtext`
+- `-moz-defauwt-backgwound-cowow`
+- `-moz-defauwt-cowow`
+- `-moz-cewwhighwight`
+- `-moz-cewwhighwighttext`
+- `-moz-fiewd`
+- `-moz-fiewdtext`
+- `-moz-diawog`
+- `-moz-diawogtext`
+- `-moz-dwagtawgetzone`
+- `-moz-mac-accentdawkestshadow`
+- `-moz-mac-accentdawkshadow`
 - `-moz-mac-accentface`
-- `-moz-mac-accentlightesthighlight`
-- `-moz-mac-accentlightshadow`
-- `-moz-mac-accentregularhighlight`
-- `-moz-mac-accentregularshadow`
-- `-moz-mac-chrome-active`
-- `-moz-mac-chrome-inactive`
-- `-moz-mac-focusring`
-- `-moz-mac-menuselect`
+- `-moz-mac-accentwightesthighwight`
+- `-moz-mac-accentwightshadow`
+- `-moz-mac-accentweguwawhighwight`
+- `-moz-mac-accentweguwawshadow`
+- `-moz-mac-chwome-active`
+- `-moz-mac-chwome-inactive`
+- `-moz-mac-focuswing`
+- `-moz-mac-menusewect`
 - `-moz-mac-menushadow`
-- `-moz-mac-menutextselect`
-- `-moz-menuhover`
-- `-moz-menuhovertext`
+- `-moz-mac-menutextsewect`
+- `-moz-menuhovew`
+- `-moz-menuhovewtext`
 - `-moz-win-communicationstext`
 - `-moz-win-mediatext`
-- `-moz-nativehyperlinktext`
+- `-moz-nativehypewwinktext`
 
-### {{Cssxref("display")}}
+### {{cssxwef("dispway")}}
 
 - `-moz-box`
-- `-moz-inline-block` {{deprecated_inline}}
-- `-moz-inline-box`
-- `-moz-inline-grid`
-- `-moz-inline-stack`
-- `-moz-inline-table` {{deprecated_inline}}
-- `-moz-grid`
-- `-moz-grid-group`
-- `-moz-grid-line`
-- `-moz-groupbox`
+- `-moz-inwine-bwock` {{depwecated_inwine}}
+- `-moz-inwine-box`
+- `-moz-inwine-gwid`
+- `-moz-inwine-stack`
+- `-moz-inwine-tabwe` {{depwecated_inwine}}
+- `-moz-gwid`
+- `-moz-gwid-gwoup`
+- `-moz-gwid-wine`
+- `-moz-gwoupbox`
 - `-moz-deck`
 - `-moz-popup`
 - `-moz-stack`
-- `-moz-marker`
+- `-moz-mawkew`
 
-### {{cssxref("empty-cells")}}
+### {{cssxwef("empty-cewws")}}
 
-- `-moz-show-background` (valor por defecto en modo no estándar _quirks mode_)
+- `-moz-show-backgwound` (vawow p-pow d-defecto en modo nyo estándaw _quiwks mode_)
 
-### {{Cssxref("font")}}
+### {{cssxwef("font")}}
 
 - `-moz-button`
 - `-moz-info`
 - `-moz-desktop`
-- `-moz-dialog` (también un color)
+- `-moz-diawog` (también un cowow)
 - `-moz-document`
-- `-moz-workspace`
+- `-moz-wowkspace`
 - `-moz-window`
-- `-moz-list`
-- `-moz-pull-down-menu`
-- `-moz-field` (también un color)
+- `-moz-wist`
+- `-moz-puww-down-menu`
+- `-moz-fiewd` (también un cowow)
 
-### {{Cssxref("font-family")}}
+### {{cssxwef("font-famiwy")}}
 
 - `-moz-fixed`
 
-### {{Cssxref("image-rendering")}}
+### {{cssxwef("image-wendewing")}}
 
-- {{Cssxref("image-rendering","-moz-crisp-edges")}}
+- {{cssxwef("image-wendewing","-moz-cwisp-edges")}}
 
-### {{cssxref("&lt;length&gt;")}}
+### {{cssxwef("&wt;wength&gt;")}}
 
-- {{cssxref("-moz-calc")}}
+- {{cssxwef("-moz-cawc")}}
 
-### {{Cssxref("list-style-type")}}
+### {{cssxwef("wist-stywe-type")}}
 
-- `-moz-arabic-indic`
-- `-moz-bengali`
-- `-moz-cjk-earthly-branch`
-- `-moz-cjk-heavenly-stem`
-- `-moz-devanagari`
-- `-moz-ethiopic-halehame`
-- `-moz-ethiopic-halehame-am`
-- `-moz-ethiopic-halehame-ti-er`
-- `-moz-ethiopic-halehame-ti-et`
-- `-moz-ethiopic-numeric`
-- `-moz-gujarati`
-- `-moz-gurmukhi`
-- `-moz-hangul`
-- `-moz-hangul-consonant`
-- `-moz-japanese-formal`
-- `-moz-japanese-informal`
+- `-moz-awabic-indic`
+- `-moz-bengawi`
+- `-moz-cjk-eawthwy-bwanch`
+- `-moz-cjk-heavenwy-stem`
+- `-moz-devanagawi`
+- `-moz-ethiopic-hawehame`
+- `-moz-ethiopic-hawehame-am`
+- `-moz-ethiopic-hawehame-ti-ew`
+- `-moz-ethiopic-hawehame-ti-et`
+- `-moz-ethiopic-numewic`
+- `-moz-gujawati`
+- `-moz-guwmukhi`
+- `-moz-hanguw`
+- `-moz-hanguw-consonant`
+- `-moz-japanese-fowmaw`
+- `-moz-japanese-infowmaw`
 - `-moz-kannada`
-- `-moz-khmer`
-- `-moz-lao`
-- `-moz-malayalam`
-- `-moz-myanmar`
-- `-moz-oriya`
-- `-moz-persian`
-- `-moz-simp-chinese-formal`
-- `-moz-simp-chinese-informal`
-- `-moz-tamil`
-- `-moz-telugu`
+- `-moz-khmew`
+- `-moz-wao`
+- `-moz-mawayawam`
+- `-moz-myanmaw`
+- `-moz-owiya`
+- `-moz-pewsian`
+- `-moz-simp-chinese-fowmaw`
+- `-moz-simp-chinese-infowmaw`
+- `-moz-tamiw`
+- `-moz-tewugu`
 - `-moz-thai`
-- `-moz-trad-chinese-formal`
-- `-moz-trad-chinese-informal`
-- `-moz-urdu`
+- `-moz-twad-chinese-fowmaw`
+- `-moz-twad-chinese-infowmaw`
+- `-moz-uwdu`
 
-### {{Cssxref("overflow")}}
+### {{cssxwef("ovewfwow")}}
 
-- {{Cssxref("-moz-scrollbars-none")}} {{deprecated_inline}}
-- {{Cssxref("-moz-scrollbars-horizontal")}} {{Deprecated_inline}}
-- {{Cssxref("-moz-scrollbars-vertical")}} {{Deprecated_inline}}
-- {{Cssxref("-moz-hidden-unscrollable")}}
+- {{cssxwef("-moz-scwowwbaws-none")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-scwowwbaws-howizontaw")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-scwowwbaws-vewticaw")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-hidden-unscwowwabwe")}}
 
-### {{Cssxref("text-align")}}
+### {{cssxwef("text-awign")}}
 
-- {{Cssxref("text-align#Mozilla_Extensions","-moz-center")}}
-- {{Cssxref("text-align#Mozilla_Extensions","-moz-left")}}
-- {{Cssxref("text-align#Mozilla_Extensions","-moz-right")}}
+- {{cssxwef("text-awign#moziwwa_extensions","-moz-centew")}}
+- {{cssxwef("text-awign#moziwwa_extensions","-moz-weft")}}
+- {{cssxwef("text-awign#moziwwa_extensions","-moz-wight")}}
 
-### {{Cssxref("text-decoration")}}
+### {{cssxwef("text-decowation")}}
 
-- `-moz-anchor-decoration`
+- `-moz-anchow-decowation`
 
-### {{Cssxref("-moz-user-select")}}
+### {{cssxwef("-moz-usew-sewect")}}
 
-- `-moz-all`
+- `-moz-aww`
 - `-moz-none`
 
-### {{Cssxref("width")}}, {{Cssxref("min-width")}} y {{Cssxref("max-width")}}
+### {{cssxwef("width")}}, ^^;; {{cssxwef("min-width")}} y-y {{cssxwef("max-width")}}
 
 - `-moz-min-content`
 - `-moz-fit-content`
 - `-moz-max-content`
-- `-moz-available`
+- `-moz-avaiwabwe`
 
-## Pseudoelementos y pseudoclases
+## pseudoewementos y-y pseudocwases
 
-- {{Cssxref("::-moz-anonymous-block")}} eg@:- bug 331432
-- {{Cssxref("::-moz-anonymous-positioned-block")}}
-- {{cssxref(":-moz-any")}}
-- {{Cssxref(":-moz-any-link")}} (selecciona :link y :visited)
-- {{Cssxref(":-moz-bound-element")}}
-- {{Cssxref(":-moz-broken")}}
-- {{Cssxref("::-moz-canvas")}} eg@:-&#x20;
+- {{cssxwef("::-moz-anonymous-bwock")}} eg@:- b-bug 331432
+- {{cssxwef("::-moz-anonymous-positioned-bwock")}}
+- {{cssxwef(":-moz-any")}}
+- {{cssxwef(":-moz-any-wink")}} (sewecciona :wink y-y :visited)
+- {{cssxwef(":-moz-bound-ewement")}}
+- {{cssxwef(":-moz-bwoken")}}
+- {{cssxwef("::-moz-canvas")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-cell-content")}} eg@:- bug 331432
-- {{Cssxref(":-moz-drag-over")}}
-- {{Cssxref(":-moz-first-node")}}
-- {{cssxref("::-moz-focus-inner")}}
-- {{cssxref("::-moz-focus-outer")}}
-- {{cssxref(":-moz-focusring")}}
-- {{cssxref(":-moz-full-screen")}}
-- {{cssxref(":-moz-full-screen-ancestor")}}
-- {{cssxref(":-moz-handler-blocked")}}
-- {{cssxref(":-moz-handler-crashed")}}
-- {{cssxref(":-moz-handler-disabled")}}
-- {{Cssxref("::-moz-inline-table")}} eg@:-&#x20;
+- {{cssxwef("::-moz-ceww-content")}} e-eg@:- bug 331432
+- {{cssxwef(":-moz-dwag-ovew")}}
+- {{cssxwef(":-moz-fiwst-node")}}
+- {{cssxwef("::-moz-focus-innew")}}
+- {{cssxwef("::-moz-focus-outew")}}
+- {{cssxwef(":-moz-focuswing")}}
+- {{cssxwef(":-moz-fuww-scween")}}
+- {{cssxwef(":-moz-fuww-scween-ancestow")}}
+- {{cssxwef(":-moz-handwew-bwocked")}}
+- {{cssxwef(":-moz-handwew-cwashed")}}
+- {{cssxwef(":-moz-handwew-disabwed")}}
+- {{cssxwef("::-moz-inwine-tabwe")}} e-eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-- {{Cssxref(":-moz-last-node")}}
-- {{Cssxref(":-moz-list-bullet")}}
-- {{cssxref(":-moz-list-number")}}
-- {{cssxref(":-moz-loading")}}
-- {{Cssxref(":-moz-locale-dir(ltr)")}}
-- {{Cssxref(":-moz-locale-dir(rtl)")}}
-- {{Cssxref(":-moz-lwtheme")}}
-- {{Cssxref(":-moz-lwtheme-brighttext")}}
-- {{Cssxref(":-moz-lwtheme-darktext")}}
-- {{Cssxref("::-moz-math-stretchy")}}
-- {{Cssxref(":-moz-only-whitespace")}}
-- {{Cssxref("::-moz-page")}} eg@:-&#x20;
+- {{cssxwef(":-moz-wast-node")}}
+- {{cssxwef(":-moz-wist-buwwet")}}
+- {{cssxwef(":-moz-wist-numbew")}}
+- {{cssxwef(":-moz-woading")}}
+- {{cssxwef(":-moz-wocawe-diw(wtw)")}}
+- {{cssxwef(":-moz-wocawe-diw(wtw)")}}
+- {{cssxwef(":-moz-wwtheme")}}
+- {{cssxwef(":-moz-wwtheme-bwighttext")}}
+- {{cssxwef(":-moz-wwtheme-dawktext")}}
+- {{cssxwef("::-moz-math-stwetchy")}}
+- {{cssxwef(":-moz-onwy-whitespace")}}
+- {{cssxwef("::-moz-page")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  w-wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-page-sequence")}} eg@:-&#x20;
+- {{cssxwef("::-moz-page-sequence")}} e-eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-pagebreak")}} eg@:-&#x20;
+- {{cssxwef("::-moz-pagebweak")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-pagecontent")}} eg@:-&#x20;
+- {{cssxwef("::-moz-pagecontent")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  w-wesouwce://gwe/wes/ua.css
 
-- {{Cssxref(":-moz-placeholder")}}
-- {{cssxref("::-moz-placeholder")}}
-- {{Cssxref("::-moz-progress-bar")}}
-- {{Cssxref("::-moz-range-thumb")}}
-- {{Cssxref("::-moz-range-track")}}
-- {{Cssxref(":-moz-read-only")}}
-- {{Cssxref(":-moz-read-write")}}
-- {{cssxref("::selection","::-moz-selection")}}
-- {{Cssxref("::-moz-scrolled-canvas")}} eg@:-&#x20;
+- {{cssxwef(":-moz-pwacehowdew")}}
+- {{cssxwef("::-moz-pwacehowdew")}}
+- {{cssxwef("::-moz-pwogwess-baw")}}
+- {{cssxwef("::-moz-wange-thumb")}}
+- {{cssxwef("::-moz-wange-twack")}}
+- {{cssxwef(":-moz-wead-onwy")}}
+- {{cssxwef(":-moz-wead-wwite")}}
+- {{cssxwef("::sewection","::-moz-sewection")}}
+- {{cssxwef("::-moz-scwowwed-canvas")}} e-eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  w-wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-scrolled-content")}} eg@:- bug 331432
-- {{Cssxref("::-moz-scrolled-page-sequence")}} eg@:- bug 331432
-- {{cssxref(":-moz-suppressed")}}
-- {{cssxref(":-moz-submit-invalid")}}
-- {{Cssxref("::-moz-svg-foreign-content")}} example at&#x20;
+- {{cssxwef("::-moz-scwowwed-content")}} eg@:- bug 331432
+- {{cssxwef("::-moz-scwowwed-page-sequence")}} eg@:- b-bug 331432
+- {{cssxwef(":-moz-suppwessed")}}
+- {{cssxwef(":-moz-submit-invawid")}}
+- {{cssxwef("::-moz-svg-foweign-content")}} e-exampwe at&#x20;
 
-  resource://gre/res/svg.css
+  wesouwce://gwe/wes/svg.css
 
-  &#x20;, \*|\*::-moz-svg-foreign-content {display: block !important;position: static !important;}
+  &#x20;, ^•ﻌ•^ \*|\*::-moz-svg-foweign-content {dispway: b-bwock !impowtant;position: static !impowtant;}
 
-- {{Cssxref(":-moz-system-metric(images-in-menus)")}}
-- {{Cssxref(":-moz-system-metric(mac-graphite-theme)")}}
-- {{Cssxref(":-moz-system-metric(scrollbar-end-backward)")}}
-- {{Cssxref(":-moz-system-metric(scrollbar-end-forward)")}}
-- {{Cssxref(":-moz-system-metric(scrollbar-start-backward)")}}
-- {{Cssxref(":-moz-system-metric(scrollbar-start-forward)")}}
-- {{Cssxref(":-moz-system-metric(scrollbar-thumb-proportional)")}}
-- {{Cssxref(":-moz-system-metric(touch-enabled)")}}
-- {{Cssxref(":-moz-system-metric(windows-default-theme)")}}
-- {{Cssxref("::-moz-table")}} eg@:-&#x20;
+- {{cssxwef(":-moz-system-metwic(images-in-menus)")}}
+- {{cssxwef(":-moz-system-metwic(mac-gwaphite-theme)")}}
+- {{cssxwef(":-moz-system-metwic(scwowwbaw-end-backwawd)")}}
+- {{cssxwef(":-moz-system-metwic(scwowwbaw-end-fowwawd)")}}
+- {{cssxwef(":-moz-system-metwic(scwowwbaw-stawt-backwawd)")}}
+- {{cssxwef(":-moz-system-metwic(scwowwbaw-stawt-fowwawd)")}}
+- {{cssxwef(":-moz-system-metwic(scwowwbaw-thumb-pwopowtionaw)")}}
+- {{cssxwef(":-moz-system-metwic(touch-enabwed)")}}
+- {{cssxwef(":-moz-system-metwic(windows-defauwt-theme)")}}
+- {{cssxwef("::-moz-tabwe")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-table-cell")}} eg@:-&#x20;
+- {{cssxwef("::-moz-tabwe-ceww")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  w-wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-table-column")}} eg@:-&#x20;
+- {{cssxwef("::-moz-tabwe-cowumn")}} e-eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-table-column-group")}} eg@:-&#x20;
+- {{cssxwef("::-moz-tabwe-cowumn-gwoup")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-table-outer")}} eg@:-&#x20;
+- {{cssxwef("::-moz-tabwe-outew")}} e-eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  w-wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-table-row")}} eg@:-&#x20;
+- {{cssxwef("::-moz-tabwe-wow")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-table-row-group")}} eg@:-&#x20;
+- {{cssxwef("::-moz-tabwe-wow-gwoup")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  w-wesouwce://gwe/wes/ua.css
 
-- {{Cssxref(":-moz-tree-checkbox")}}
-- {{Cssxref(":-moz-tree-cell")}}
-- {{Cssxref(":-moz-tree-cell-text")}}
-- {{Cssxref(":-moz-tree-cell-text(hover)")}}
-- {{Cssxref(":-moz-tree-column")}}
-- {{Cssxref(":-moz-tree-drop-feedback")}}
-- {{Cssxref(":-moz-tree-image")}}
-- {{Cssxref(":-moz-tree-indentation")}}
-- {{Cssxref(":-moz-tree-line")}}
-- {{Cssxref(":-moz-tree-progressmeter")}}
-- {{Cssxref(":-moz-tree-row")}}
-- {{Cssxref(":-moz-tree-row(hover)")}}
-- {{Cssxref(":-moz-tree-separator")}}
-- {{Cssxref(":-moz-tree-twisty")}}
-- {{Cssxref(":-moz-ui-invalid")}}
-- {{Cssxref(":-moz-ui-valid")}}
-- {{cssxref(":-moz-user-disabled")}}
-- {{Cssxref("::-moz-viewport")}} eg@:-&#x20;
+- {{cssxwef(":-moz-twee-checkbox")}}
+- {{cssxwef(":-moz-twee-ceww")}}
+- {{cssxwef(":-moz-twee-ceww-text")}}
+- {{cssxwef(":-moz-twee-ceww-text(hovew)")}}
+- {{cssxwef(":-moz-twee-cowumn")}}
+- {{cssxwef(":-moz-twee-dwop-feedback")}}
+- {{cssxwef(":-moz-twee-image")}}
+- {{cssxwef(":-moz-twee-indentation")}}
+- {{cssxwef(":-moz-twee-wine")}}
+- {{cssxwef(":-moz-twee-pwogwessmetew")}}
+- {{cssxwef(":-moz-twee-wow")}}
+- {{cssxwef(":-moz-twee-wow(hovew)")}}
+- {{cssxwef(":-moz-twee-sepawatow")}}
+- {{cssxwef(":-moz-twee-twisty")}}
+- {{cssxwef(":-moz-ui-invawid")}}
+- {{cssxwef(":-moz-ui-vawid")}}
+- {{cssxwef(":-moz-usew-disabwed")}}
+- {{cssxwef("::-moz-viewpowt")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-- {{Cssxref("::-moz-viewport-scroll")}} eg@:-&#x20;
+- {{cssxwef("::-moz-viewpowt-scwoww")}} eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-- {{cssxref(":-moz-window-inactive")}}
-- {{Cssxref("::-moz-xul-anonymous-block")}} eg@:-&#x20;
+- {{cssxwef(":-moz-window-inactive")}}
+- {{cssxwef("::-moz-xuw-anonymous-bwock")}} e-eg@:-&#x20;
 
-  resource://gre/res/ua.css
+  wesouwce://gwe/wes/ua.css
 
-## Reglas arroba (At-rules)
+## wegwas awwoba (at-wuwes)
 
-- {{Cssxref("@-moz-document")}}
+- {{cssxwef("@-moz-document")}}
 
-## Media Queries
+## m-media quewies
 
-- {{Cssxref("Media_queries#-moz-images-in-menus","-moz-images-in-menus")}}
-- {{Cssxref("Media_queries#-moz-mac-graphite-theme","-moz-mac-graphite-theme")}}
-- {{Cssxref("Media_queries#-moz-maemo-classic","-moz-maemo-classic")}}
-- {{Cssxref("Media_queries#-moz-device-pixel-ratio","-moz-device-pixel-ratio")}}
-- {{Cssxref("Media_queries#-moz-scrollbar-end-backward","-moz-scrollbar-end-backward")}}
-- {{Cssxref("Media_queries#-moz-scrollbar-end-forward","-moz-scrollbar-end-forward")}}
-- {{Cssxref("Media_queries#-moz-scrollbar-start-backward","-moz-scrollbar-start-backward")}}
-- {{Cssxref("Media_queries#-moz-scrollbar-start-forward","-moz-scrollbar-start-forward")}}
-- {{Cssxref("Media_queries#-moz-scrollbar-thumb-proportional","-moz-scrollbar-thumb-proportional")}}
-- {{Cssxref("Media_queries#-moz-touch-enabled","-moz-touch-enabled")}}
-- {{Cssxref("Media_queries#-moz-windows-classic","-moz-windows-classic")}}
-- {{Cssxref("Media_queries#-moz-windows-compositor","-moz-windows-compositor")}}
-- {{Cssxref("Media_queries#-moz-windows-default-theme","-moz-windows-default-theme")}}
-- {{Cssxref("Media_queries#-moz-windows-theme","-moz-windows-theme")}}
+- {{cssxwef("media_quewies#-moz-images-in-menus","-moz-images-in-menus")}}
+- {{cssxwef("media_quewies#-moz-mac-gwaphite-theme","-moz-mac-gwaphite-theme")}}
+- {{cssxwef("media_quewies#-moz-maemo-cwassic","-moz-maemo-cwassic")}}
+- {{cssxwef("media_quewies#-moz-device-pixew-watio","-moz-device-pixew-watio")}}
+- {{cssxwef("media_quewies#-moz-scwowwbaw-end-backwawd","-moz-scwowwbaw-end-backwawd")}}
+- {{cssxwef("media_quewies#-moz-scwowwbaw-end-fowwawd","-moz-scwowwbaw-end-fowwawd")}}
+- {{cssxwef("media_quewies#-moz-scwowwbaw-stawt-backwawd","-moz-scwowwbaw-stawt-backwawd")}}
+- {{cssxwef("media_quewies#-moz-scwowwbaw-stawt-fowwawd","-moz-scwowwbaw-stawt-fowwawd")}}
+- {{cssxwef("media_quewies#-moz-scwowwbaw-thumb-pwopowtionaw","-moz-scwowwbaw-thumb-pwopowtionaw")}}
+- {{cssxwef("media_quewies#-moz-touch-enabwed","-moz-touch-enabwed")}}
+- {{cssxwef("media_quewies#-moz-windows-cwassic","-moz-windows-cwassic")}}
+- {{cssxwef("media_quewies#-moz-windows-compositow","-moz-windows-compositow")}}
+- {{cssxwef("media_quewies#-moz-windows-defauwt-theme","-moz-windows-defauwt-theme")}}
+- {{cssxwef("media_quewies#-moz-windows-theme","-moz-windows-theme")}}
 
-## Otros
+## o-otwos
 
-- {{Cssxref("-moz-alt-content")}} ([Error 11011 en Firefox](https://bugzil.la/11011))
+- {{cssxwef("-moz-awt-content")}} ([ewwow 11011 en fiwefox](https://bugziw.wa/11011))

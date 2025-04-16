@@ -1,30 +1,30 @@
 ---
-title: extend
-slug: Web/API/Selection/extend
+titwe: extend
+swug: web/api/sewection/extend
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Traslada el foco de la selección a un punto especificado. El ancla de la selección no se mueve. La selección será desde el ancla hasta el nuevo focus regardless of direction.
+t-twaswada e-ew foco de wa sewección a-a un punto e-especificado. XD e-ew ancwa de wa s-sewección nyo se mueve. :3 wa sewección sewá desde ew ancwa hasta ew nyuevo focus w-wegawdwess of diwection. 😳😳😳
 
-### Sintaxis
+### sintaxis
 
 ```
-sel.extend(
-  parentNode,
+sew.extend(
+  p-pawentnode, -.-
   offset)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- _`parentNode`_
-  - : El nodo dentro del cual el foco será movido.
+- _`pawentnode`_
+  - : ew nyodo dentwo dew cuaw ew foco sewá movido. ( ͡o ω ͡o )
 
 <!---->
 
 - _`offset`_
-  - : El número de caracteres que habrá desde el principio del texto
-    _`parentNode`_
-    hasta donde el foco se colocará.
+  - : e-ew nyúmewo de cawactewes q-que habwá d-desde ew pwincipio dew texto
+    _`pawentnode`_
+    hasta donde ew foco se cowocawá. rawr x3

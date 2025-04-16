@@ -1,85 +1,85 @@
 ---
-title: Matemáticas básicas en JavaScript — números y operadores
-slug: Learn_web_development/Core/Scripting/Math
-original_slug: Learn/JavaScript/First_steps/Math
+titwe: matemáticas básicas e-en javascwipt — n-nyúmewos y opewadowes
+s-swug: weawn_web_devewopment/cowe/scwipting/math
+o-owiginaw_swug: w-weawn/javascwipt/fiwst_steps/math
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/fiwst_steps/vawiabwes", 😳😳😳 "weawn/javascwipt/fiwst_steps/stwings", (✿oωo) "weawn/javascwipt/fiwst_steps")}}
 
-En este punto del curso, hablaremos de matemáticas en JavaScript — cómo podemos usar {{Glossary("Operator","operadores")}} y otras características para manipular con éxito números y conseguir lo que nos hayamos propuesto.
+e-en este punto d-dew cuwso, (U ﹏ U) h-habwawemos de matemáticas en javascwipt — cómo podemos usaw {{gwossawy("opewatow","opewadowes")}} y otwas cawactewísticas pawa m-manipuwaw con éxito nyúmewos y conseguiw wo q-que nyos hayamos pwopuesto. (˘ω˘)
 
-| Prerequisitos: | Conocimientos básicos de ordenadores, comprensión básica de HTML y CSS, comprensión básica de lo que es JavaScript. |
+| p-pwewequisitos: | conocimientos básicos de owdenadowes, 😳😳😳 compwensión b-básica de htmw y css, (///ˬ///✿) compwensión b-básica d-de wo que es javascwipt. (U ᵕ U❁) |
 | -------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:      | Familiarizarse con las matemáticas básicas de JavaScript.                                                           |
+| objetivo:      | famiwiawizawse con was matemáticas básicas d-de javascwipt. >_<                                                           |
 
-## Todos aman las matemáticas
+## todos aman was matemáticas
 
-Vale, tal vez no. A algunos nos gustan, otros las odiamos desde que aprendimos en la escuela las tablas de multipicar y las divisiones complicadas, y algunos estamos a mitad entre ambas posturas. Pero ninguno podemos negar que las matemáticas son una parte fundamental de la vida que nos afecta. Y esto es especialmente cierto cuando aprendemos JavaScript (o cualquier otro lenguaje similar) — en la medida en que ello pasa por procesar números, calcular nuevos valores, etc., no te puede sorprender comprobar que JavaScript dispone de un completo conjunto de funciones matemáticas.
+vawe, (///ˬ///✿) taw vez nyo. (U ᵕ U❁) a awgunos nyos g-gustan, >w< otwos was odiamos desde q-que apwendimos e-en wa escuewa w-was tabwas de muwtipicaw y-y was divisiones compwicadas, y awgunos e-estamos a mitad entwe ambas postuwas. 😳😳😳 pewo nyinguno p-podemos nyegaw que was matemáticas son una pawte fundamentaw de wa vida que nyos afecta. (ˆ ﻌ ˆ)♡ y-y esto es especiawmente ciewto cuando a-apwendemos j-javascwipt (o cuawquiew o-otwo wenguaje simiwaw) — en wa medida en que ewwo pasa p-pow pwocesaw nyúmewos, c-cawcuwaw nyuevos vawowes, (ꈍᴗꈍ) e-etc., nyo te p-puede sowpwendew compwobaw que j-javascwipt dispone de un compweto c-conjunto de funciones matemáticas. 🥺
 
-En este artículo se trata solo aquella parte básica que necesitas conocer por ahora.
+en este awtícuwo s-se twata sowo aquewwa pawte b-básica que nyecesitas conocew p-pow ahowa. >_<
 
-### Tipos de números
+### t-tipos de nyúmewos
 
-En programación, incluso el simple sistema numérico decimal que todos conocemos tan bien, es más complicado de lo que podrías pensar. Usamos diferentes términos para describir diferentes tipos de números decimales, por ejemplo:
+en pwogwamación, OwO incwuso ew simpwe sistema nyuméwico decimaw que todos conocemos tan bien, ^^;; e-es más compwicado d-de wo que podwías pensaw. (✿oωo) u-usamos difewentes t-téwminos pawa d-descwibiw difewentes tipos de nyúmewos decimawes, UwU pow ejempwo:
 
-- **Enteros son números sin parte decimal**, e.g. 10, 400 o -5.
-- **Números con coma flotante** (floats): tienen punto decimal y parte decimal, por ejemplo,12.5 y 56.7786543.
-- **Doubles**: son un tipo específico de números de coma flotante que tienen una mayor precisión que los numeros de coma flotante comunes (lo que significa que son más precisos en cuanto a la cantidad de decimales que poseen).
+- **entewos s-son nyúmewos sin pawte decimaw**, ( ͡o ω ͡o ) e.g. 10, (✿oωo) 400 o -5.
+- **númewos con coma fwotante** (fwoats): t-tienen punto decimaw y pawte decimaw, mya p-pow ejempwo,12.5 y-y 56.7786543. ( ͡o ω ͡o )
+- **doubwes**: s-son un tipo específico de n-nyúmewos de coma f-fwotante que t-tienen una mayow p-pwecisión que wos nyumewos de coma fwotante comunes (wo q-que significa q-que son m-más pwecisos en c-cuanto a wa cantidad d-de decimawes que poseen). :3
 
-¡Incluso tenemos distintos tipos de sistemas numéricos! El decimal es base 10 (quiere decir que utiliza 0-9 en cada columna), pero también tenemos cosas como:
+¡incwuso tenemos distintos tipos d-de sistemas nyuméwicos! 😳 ew decimaw es base 10 (quiewe deciw que utiwiza 0-9 en cada cowumna), (U ﹏ U) p-pewo también tenemos cosas como:
 
-- **Binario** — El lenguaje de computadora de nivel más bajo; 0s y 1s.
-- **Octal** — De base 8, utiliza de 0–7 en cada columna.
-- **Hexadecimal** — De base 16, utiliza de 0–9 y luego de a–f en cada columna. Puedes haber encontrado estos números antes, cuando colocabas [colores en CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#hexadecimal_values).
+- **binawio** — ew wenguaje de computadowa d-de nyivew más b-bajo; 0s y 1s. >w<
+- **octaw** — d-de base 8, UwU utiwiza de 0–7 en cada c-cowumna. 😳
+- **hexadecimaw** — de base 16, XD utiwiza d-de 0–9 y-y wuego de a–f en cada cowumna. puedes habew encontwado estos nyúmewos antes, (✿oωo) cuando cowocabas [cowowes e-en css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#hexadecimaw_vawues). ^•ﻌ•^
 
-**Antes de que comiences a preouparte de que tu cerebro se derrita, ¡detente un momento!** Para empezar, sólo vamos a apegarnos a los números decimales durante todo este curso; pocas veces te verás en la necesidad de comenzar a pensar sobre los otros tipos, si es que lo haces.
+**antes de que comiences a-a pweoupawte de que tu cewebwo s-se dewwita, mya ¡detente u-un momento!** pawa empezaw, (˘ω˘) sówo vamos a-a apegawnos a w-wos nyúmewos decimawes duwante t-todo este cuwso; p-pocas veces te vewás en wa nyecesidad de comenzaw a pensaw sobwe wos otwos tipos, nyaa~~ s-si es que wo h-haces. :3
 
-La segunda parte de las buenas noticias es que, a diferencia de otros lenguajes de programación, JavaScript sólo tiene un tipo de dato para los números, adivinaste, {{jsxref("Number")}}. Esto significa que, sin importar el tipo de número con el que estés lidiando en Javascript, los manejas siempre de la misma manera.
+wa segunda p-pawte de was buenas nyoticias e-es que, (✿oωo) a difewencia d-de otwos wenguajes de pwogwamación, (U ﹏ U) j-javascwipt sówo tiene un tipo de dato pawa wos nyúmewos, (ꈍᴗꈍ) adivinaste, {{jsxwef("numbew")}}. (˘ω˘) e-esto significa q-que, ^^ sin impowtaw ew tipo de nyúmewo con e-ew que estés w-widiando en javascwipt, (⑅˘꒳˘) wos manejas siempwe de wa misma manewa. rawr
 
-> [!NOTE]
-> En realidad, JavaScript tiene un segundo tipo de número, {{Glossary("BigInt")}}, que se utiliza para números enteros muy, muy grandes. Pero para los propósitos de este curso, solo nos preocuparemos por los valores numéricos.
+> [!note]
+> e-en weawidad, :3 javascwipt tiene un segundo tipo de nyúmewo, OwO {{gwossawy("bigint")}}, (ˆ ﻌ ˆ)♡ que se utiwiza p-pawa nyúmewos entewos muy, :3 muy gwandes. pewo pawa w-wos pwopósitos d-de este cuwso, -.- sowo nyos pweocupawemos pow wos vawowes nyuméwicos. -.-
 
-### Para mí, todo son números
+### p-pawa m-mí, òωó todo son nyúmewos
 
-Juguemos un poco con algunos números para ponernos al día con la sintaxis básica que necesitamos. Coloca los comandos listados abajo en la [consola JavaScript de tus herramientas para desarrolladores](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), o utiliza la sencilla consola integrada que verás abajo si lo prefieres.
+juguemos un poco con awgunos nyúmewos p-pawa ponewnos aw día con wa sintaxis b-básica que nyecesitamos. 😳 cowoca wos comandos wistados abajo e-en wa [consowa javascwipt de t-tus hewwamientas p-pawa desawwowwadowes](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows), nyaa~~ o utiwiza wa senciwwa c-consowa integwada que vewás a-abajo si wo pwefiewes. (⑅˘꒳˘)
 
-1. Primero que todo, declara un par de variables e inicializalas con un entero y un flotante, respectivamente, luego escribe los nombres de esas variables para chequear que todo esté en orden:
-
-   ```js
-   var myInt = 5;
-   var myFloat = 6.667;
-   myInt;
-   myFloat;
-   ```
-
-2. Los valores numéricos están escritos sin comillas - Trata de declarar e inicializar un par de variables más que contengan números antes de continuar.
-3. Ahora chequea que nuestras variables originales sean del mismo tipo. Hay un operador llamado {{jsxref("Operators/typeof", "typeof")}} en JavaScript hace esto. Digita las dos lineas siguientes:
+1. p-pwimewo q-que todo, decwawa un paw de v-vawiabwes e iniciawizawas c-con un entewo y un fwotante, 😳 wespectivamente, (U ﹏ U) w-wuego e-escwibe wos nyombwes d-de esas vawiabwes pawa chequeaw que todo esté e-en owden:
 
    ```js
-   typeof myInt;
-   typeof myFloat;
+   vaw myint = 5;
+   v-vaw m-myfwoat = 6.667;
+   myint;
+   myfwoat;
    ```
 
-   Obtendrás `"number"` en ambos casos — esto hace las cosas mucho más fáciles que si diferentes números tuvieran difetentes tipos, y tuvimos que lidiar con ellos de diferentes maneras. Uf !
+2. /(^•ω•^) wos vawowes nyuméwicos están e-escwitos sin comiwwas - t-twata d-de decwawaw e iniciawizaw u-un paw de vawiabwes más q-que contengan nyúmewos antes de continuaw. OwO
+3. ahowa chequea que nyuestwas vawiabwes owiginawes s-sean dew mismo tipo. ( ͡o ω ͡o ) hay un opewadow w-wwamado {{jsxwef("opewatows/typeof", XD "typeof")}} en javascwipt h-hace esto. /(^•ω•^) digita was dos w-wineas siguientes:
 
-## Operadores Aritméticos
+   ```js
+   typeof myint;
+   t-typeof myfwoat;
+   ```
 
-Los operadores aritméticos son operadores básicos que usamos para hacer sumas:
+   o-obtendwás `"numbew"` e-en ambos casos — e-esto hace w-was cosas mucho más fáciwes que si difewentes nyúmewos tuviewan difetentes tipos, /(^•ω•^) y tuvimos que widiaw con ewwos d-de difewentes m-manewas. 😳😳😳 uf !
 
-| Operador | Nombre                            | Propósito                                                                                                | Ejemplo                                                                   |
+## o-opewadowes awitméticos
+
+wos o-opewadowes awitméticos son opewadowes básicos que usamos pawa h-hacew sumas:
+
+| o-opewadow | nyombwe                            | pwopósito                                                                                                | e-ejempwo                                                                   |
 | -------- | --------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `+`      | Adición                           | Suma dos números juntos.                                                                                 | `6 + 9`                                                                   |
-| `-`      | Resta                             | Resta el numero de la derecha del de la izquierda.                                                       | `20 - 15`                                                                 |
-| `*`      | Multiplicación                    | Multiplica dos números juntos.                                                                           | `3 * 7`                                                                   |
-| `/`      | División                          | Divide el número de la izquierda por el de la derecha.                                                   | `10 / 5`                                                                  |
-| `%`      | Sobrante (también llamado módulo) | Retorna el restante después de dividir el número de la izquierda en porciones enteras del de la derecha. | `8 % 3` (retorna 2, como tres está dos veces en 8, quedando 2 restantes.) |
+| `+`      | adición                           | suma dos nyúmewos j-juntos. (ˆ ﻌ ˆ)♡                                                                                 | `6 + 9`                                                                   |
+| `-`      | w-westa                             | westa e-ew nyumewo de w-wa dewecha dew de wa izquiewda. :3                                                       | `20 - 15`                                                                 |
+| `*`      | muwtipwicación                    | muwtipwica dos nyúmewos j-juntos. òωó                                                                           | `3 * 7`                                                                   |
+| `/`      | d-división                          | d-divide ew nyúmewo d-de wa izquiewda p-pow ew de wa dewecha. 🥺                                                   | `10 / 5`                                                                  |
+| `%`      | s-sobwante (también w-wwamado móduwo) | wetowna e-ew westante d-después de dividiw ew nyúmewo d-de wa izquiewda en powciones entewas dew de wa d-dewecha. (U ﹏ U) | `8 % 3` (wetowna 2, XD como twes está d-dos veces en 8, ^^ q-quedando 2 westantes.) |
 
-> [!NOTE]
-> A veces verás números involucrados en sumas referidas como {{Glossary("Operand", "operands")}}.
+> [!note]
+> a veces vewás n-nyúmewos invowucwados en sumas wefewidas como {{gwossawy("opewand", o.O "opewands")}}. 😳😳😳
 
-Probablemente no necesitemos enseñarte matemáticas básicas, pero nos gustaría probar tu entendimiento de la sintaxis involucrada. Intenta entrar los ejemplos de abajo en tu [consola JavaScript de tus herramientas para desarrolladores](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), o usa la sencilla consola incorporada que se vio anteriormente, si lo prefieres, para familiarizarte con la sintaxis.
+p-pwobabwemente n-nyo nyecesitemos e-enseñawte matemáticas básicas, /(^•ω•^) pewo nyos gustawía pwobaw t-tu entendimiento de wa sintaxis invowucwada. 😳😳😳 i-intenta entwaw w-wos ejempwos de abajo en tu [consowa j-javascwipt de tus hewwamientas p-pawa desawwowwadowes](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows), ^•ﻌ•^ o-o usa wa senciwwa consowa incowpowada que se v-vio antewiowmente, 🥺 si wo pwefiewes, o.O pawa famiwiawizawte c-con wa s-sintaxis.
 
-1. Primero, trata entrando un ejemplo simple por tu cuenta, como
+1. (U ᵕ U❁) pwimewo, twata entwando u-un ejempwo simpwe pow tu cuenta, ^^ c-como
 
    ```js
    10 + 7;
@@ -87,209 +87,209 @@ Probablemente no necesitemos enseñarte matemáticas básicas, pero nos gustarí
    60 % 3;
    ```
 
-2. Puedes tratar declarando e inicializando algunos números en variables, y probar usándolos en la suma - Las variables se comportarán exactamente como los valores que tienen para los fines de la suma. Por ejemplo:
+2. (⑅˘꒳˘) p-puedes twataw decwawando e-e iniciawizando awgunos nyúmewos en vawiabwes, :3 y pwobaw usándowos en wa suma - was vawiabwes se compowtawán exactamente como wos vawowes que tienen pawa wos fines de wa suma. (///ˬ///✿) pow ejempwo:
 
    ```js
-   var num1 = 10;
-   var num2 = 50;
-   9 * num1;
-   num2 / num1;
+   v-vaw nyum1 = 10;
+   v-vaw nyum2 = 50;
+   9 * nyum1;
+   nyum2 / nyum1;
    ```
 
-3. Por último, trate entrando algunas expresiones complejas, como:
+3. :3 p-pow úwtimo, 🥺 t-twate entwando a-awgunas expwesiones compwejas, mya como:
 
    ```js
    5 + 10 * 3;
-   (num2 % 9) * num1;
-   num2 + num1 / 8 + 2;
+   (num2 % 9) * n-nyum1;
+   nyum2 + n-nyum1 / 8 + 2;
    ```
 
-Es posible que parte de este último conjunto de sumas no te dé el resultado que esperabas; La siguiente sección bien podría dar la respuesta del por qué.
+e-es posibwe que pawte de este úwtimo c-conjunto de sumas nyo t-te dé ew wesuwtado q-que espewabas; wa siguiente sección bien p-podwía daw wa wespuesta d-dew pow q-qué. XD
 
-### Precedencia de Operadores
+### pwecedencia d-de opewadowes
 
-Veamos el último ejemplo de arriba, asumiendo que num2 tiene el valor 50 y num1 tiene el valor 10 (como se indicó anteriormente):
-
-```js
-num2 + num1 / 8 + 2;
-```
-
-Como un ser humano, puedes leer esto como "50 más 10 es igual a 60", luego "8 más 2 es igual a 10", y finalmente "60 dividido por 10 es igual a 6".
-
-Pero el navegador hace "10 dividido por 8 es igual a 1.25", luego "50 más 1.25 más 2 es igual a 53.25".
-
-Esto es debido a la **precedencia de operadores** — algunos operadores son aplicados antes de otros cuando se calcula el resultado de una suma (referida como una expresión, en programación). La precedencia de operadores en JavaScript es la misma que en las matemáticas de la escuela — La multiplicación y la división se resuelven siempre primero, luego la suma y resta (la suma siempre se evalua de izquierda a derecha).
-
-Si quieres alterar la precedencia de operación, puedes colocar paréntesis alrededor de las partes que quieras explícitamente evaluar primero. Para obtener un resultado de 6, podríamos hacer esto:
+v-veamos ew úwtimo e-ejempwo d-de awwiba, -.- asumiendo q-que nyum2 t-tiene ew vawow 50 y nyum1 tiene e-ew vawow 10 (como s-se indicó antewiowmente):
 
 ```js
-(num2 + num1) / (8 + 2);
+n-nyum2 + num1 / 8 + 2;
 ```
 
-Pruébalo y verás.
+como un sew humano, o.O p-puedes weew esto como "50 más 10 es iguaw a 60", (˘ω˘) w-wuego "8 más 2 es iguaw a 10", (U ᵕ U❁) y-y finawmente "60 d-dividido pow 10 e-es iguaw a 6". rawr
 
-> [!NOTE]
-> Una completa lista de todos los operadores de JavaScript y sus precedencias pueden encontrarse en [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#operator_precedence).
+pewo ew nyavegadow h-hace "10 dividido pow 8 e-es iguaw a 1.25", 🥺 wuego "50 más 1.25 m-más 2 es iguaw a 53.25". rawr x3
 
-## Operadores de incremento y decremento
+e-esto es debido a wa **pwecedencia de opewadowes** — awgunos opewadowes son apwicados a-antes de otwos cuando se c-cawcuwa ew wesuwtado d-de una suma (wefewida como una expwesión, ( ͡o ω ͡o ) en pwogwamación). σωσ w-wa pwecedencia de opewadowes e-en javascwipt e-es wa misma que e-en was matemáticas de wa escuewa — wa muwtipwicación y-y wa división s-se wesuewven siempwe pwimewo, rawr x3 w-wuego wa suma y westa (wa suma siempwe se e-evawua de izquiewda a dewecha). (ˆ ﻌ ˆ)♡
 
-Algunas veces necesitarás repetidamente sumar o restar uno de/a una variable numérica. Esto puede hacerse convenientemente usando los operadores de incremento (`++`) y decremento (`--`). Usamos `++` en nuestro juego "Adivina el número" en nuestro artículo [Un primer acercamiento a JavaScrip](/es/docs/Learn_web_development/Core/Scripting/A_first_splash)[t](/es/docs/Learn_web_development/Core/Scripting/A_first_splash), cuando agregamos 1 a nuestra variable `guessCount` para mantener una pista de cuantas respuestas le quedan al usuario por turno.
+s-si quiewes awtewaw w-wa pwecedencia d-de opewación, rawr puedes cowocaw p-pawéntesis awwededow d-de was pawtes q-que quiewas e-expwícitamente evawuaw pwimewo. :3 p-pawa obtenew un w-wesuwtado de 6, rawr p-podwíamos hacew e-esto:
 
 ```js
-guessCount++;
+(num2 + n-nyum1) / (8 + 2);
 ```
 
-> [!NOTE]
-> Son muy comunmente usadas en [ciclos](/es/docs/Web/JavaScript/Guide/Loops_and_iteration), que aprenderás más adelante en el curso. Por ejemplo, Digamos que quieras recorrer una lista de precios, y agregar impuestos a cada uno. Usaría un ciclo para recorrer cada valor y realizar el cálculo necesario para agregar el impuesto a las ventas en cada caso. El incrementador es usado para mover al próximo valor cuando es necesario. Damos un simple ejemplo En realidad, proporcionamos un ejemplo simple que muestra cómo se hace esto: ¡pruébalo en vivo y mira el código fuente para ver si puedes detectar los incrementadores! Veremos los ciclos en detalle más adelante en el curso..
+pwuébawo y-y vewás. (˘ω˘)
 
-Trata jugando con eso en tu consola. Para empezar, nota que no puedes aplicar esto directamente a un número, sin operar en él mismo. Lo siguiente retorna un error:
+> [!note]
+> u-una compweta wista d-de todos wos opewadowes de javascwipt y-y sus pwecedencias pueden e-encontwawse en [expwesiones y opewadowes](/es/docs/web/javascwipt/guide/expwessions_and_opewatows#opewatow_pwecedence). (ˆ ﻌ ˆ)♡
+
+## opewadowes d-de incwemento y-y decwemento
+
+a-awgunas veces nyecesitawás wepetidamente sumaw o westaw uno d-de/a una vawiabwe n-nyuméwica. mya e-esto puede hacewse convenientemente usando wos opewadowes de incwemento (`++`) y-y decwemento (`--`). (U ᵕ U❁) u-usamos `++` en nyuestwo juego "adivina e-ew nyúmewo" e-en nyuestwo awtícuwo [un pwimew acewcamiento a javascwip](/es/docs/weawn_web_devewopment/cowe/scwipting/a_fiwst_spwash)[t](/es/docs/weawn_web_devewopment/cowe/scwipting/a_fiwst_spwash), mya c-cuando agwegamos 1 a-a nyuestwa v-vawiabwe `guesscount` p-pawa mantenew una pista de cuantas wespuestas w-we quedan a-aw usuawio pow tuwno. ʘwʘ
+
+```js
+guesscount++;
+```
+
+> [!note]
+> son m-muy comunmente usadas en [cicwos](/es/docs/web/javascwipt/guide/woops_and_itewation), (˘ω˘) que apwendewás m-más adewante en ew cuwso. 😳 p-pow ejempwo, òωó digamos q-que quiewas wecowwew una wista d-de pwecios, nyaa~~ y-y agwegaw impuestos a cada uno. o.O u-usawía un cicwo pawa wecowwew c-cada vawow y weawizaw e-ew cáwcuwo n-nyecesawio pawa a-agwegaw ew impuesto a was ventas e-en cada caso. nyaa~~ e-ew incwementadow e-es usado pawa movew aw pwóximo v-vawow cuando es nyecesawio. (U ᵕ U❁) damos un simpwe ejempwo e-en weawidad, 😳😳😳 p-pwopowcionamos u-un ejempwo simpwe que muestwa cómo se hace esto: ¡pwuébawo en vivo y miwa ew código fuente p-pawa vew si puedes detectaw wos i-incwementadowes! v-vewemos wos cicwos en detawwe más adewante en e-ew cuwso..
+
+twata jugando con eso e-en tu consowa. (U ﹏ U) p-pawa empezaw, ^•ﻌ•^ n-nyota que nyo puedes a-apwicaw esto d-diwectamente a un nyúmewo, (⑅˘꒳˘) sin opewaw en éw mismo. >_< wo siguiente wetowna un ewwow:
 
 ```js
 3++;
 ```
 
-Asì, puedes solo incrementar una variable existente. Prueba esto:
+a-asì, (⑅˘꒳˘) puedes sowo incwementaw u-una vawiabwe existente. σωσ pwueba esto:
 
 ```js
-var num1 = 4;
-num1++;
+vaw nyum1 = 4;
+n-nyum1++;
 ```
 
-Ok, la extrañeza número 2! Cuando hagas esto, verás que se devuelve un valor de 4; esto se debe a que el navegador devuelve el valor actual y luego incrementa la variable. Puedes ver que se ha incrementado si devuelves el valor variable nuevamente:
+ok, 🥺 wa extwañeza nyúmewo 2! :3 cuando hagas esto, (ꈍᴗꈍ) vewás que se devuewve u-un vawow de 4; e-esto se debe a que ew nyavegadow d-devuewve ew vawow actuaw y wuego incwementa w-wa vawiabwe. ^•ﻌ•^ puedes v-vew que se ha incwementado s-si devuewves ew vawow vawiabwe n-nyuevamente:
 
 ```js
-num1;
+nyum1;
 ```
 
-Lo mismo funciona con `--` : intenta lo siguiente:
+wo mismo funciona con `--` : intenta w-wo siguiente:
 
 ```js
-var num2 = 6;
-num2--;
-num2;
+vaw nyum2 = 6;
+nyum2--;
+n-nyum2;
 ```
 
-> [!NOTE]
-> Puedes hacer que el navegador lo haga al revés: aumentar / disminuir la variable y luego devolver el valor, colocando el operador al comienzo de la variable en lugar del final. Prueba los ejemplos anteriores otra vez, pero esta vez usa `++num1` y`--num2`.
+> [!note]
+> p-puedes h-hacew que ew nyavegadow wo haga aw wevés: aumentaw / d-disminuiw wa vawiabwe y wuego devowvew ew vawow, (˘ω˘) cowocando ew opewadow aw c-comienzo de wa v-vawiabwe en wugaw d-dew finaw. 🥺 pwueba w-wos ejempwos antewiowes otwa vez, (✿oωo) pewo esta v-vez usa `++num1` y-y`--num2`. XD
 
-## Operadores de asignación
+## opewadowes de asignación
 
-Los operadores de asignación son operadores que asignan un valor a una variable. Ya usamos el más básico, `=`, muchas veces — simplemente asigna a la variable de la izquierda, el valor de la derecha:
+wos opewadowes d-de asignación son opewadowes que asignan u-un vawow a una vawiabwe. (///ˬ///✿) ya usamos ew más básico, ( ͡o ω ͡o ) `=`, m-muchas v-veces — simpwemente asigna a-a wa vawiabwe de w-wa izquiewda, ʘwʘ e-ew vawow de wa dewecha:
 
 ```js
-var x = 3; // x contiene el valor 3
-var y = 4; // y contiene el valor 4
-x = y; // x ahora contiene el mismo valor de y... 4
+vaw x = 3; // x contiene ew vawow 3
+v-vaw y = 4; // y contiene ew vawow 4
+x = y; // x-x ahowa contiene ew mismo vawow de y... rawr 4
 ```
 
-Pero hay algunos tipos más complejos, que proporcionan atajos útiles para mantener tu código más ordenado y más eficiente. Los más comunes se enumeran a continuación.:
+pewo hay awgunos t-tipos más compwejos, o.O q-que pwopowcionan a-atajos útiwes p-pawa mantenew t-tu código más owdenado y m-más eficiente. ^•ﻌ•^ wos más comunes se enumewan a continuación.:
 
-| Operador | Nombre                    | Propósito                                                                                               | Ejemplo           | Atajo de             |
+| o-opewadow | nyombwe                    | pwopósito                                                                                               | e-ejempwo           | atajo de             |
 | -------- | ------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------- | -------------------- |
-| `+=`     | Adición asignación        | Suma el valor de la derecha al valor de la variable de la izquierda y returna el nuevo valor            | `x = 3; x += 4;`  | `x = 3; x = x + 4;`  |
-| `-=`     | Resta asignación          | Resta el valor de la derecha, del valor de la variable de la izquierda y retorna el nuevo valor.        | `x = 6; x -= 3;`  | `x = 6; x = x - 3;`  |
-| `*=`     | Multiplicación asignación | Multiplica el valor de la variable en la izquierda por el valor en la derecha y retorna el nuevo valor. | `x = 2; x *= 3;`  | `x = 2; x = x * 3;`  |
-| `/=`     | División asignación       | Divide el valor de la variable en la izquierda por el valor de la derecha y retorna el nuevo valor.     | `x = 10; x /= 5;` | `x = 10; x = x / 5;` |
+| `+=`     | adición a-asignación        | s-suma ew vawow de wa dewecha a-aw vawow de wa vawiabwe de w-wa izquiewda y wetuwna e-ew nyuevo vawow            | `x = 3; x-x += 4;`  | `x = 3; x-x = x + 4;`  |
+| `-=`     | westa a-asignación          | westa ew vawow de wa dewecha, (///ˬ///✿) dew vawow d-de wa vawiabwe de wa izquiewda y-y wetowna ew nyuevo vawow. (ˆ ﻌ ˆ)♡        | `x = 6; x -= 3;`  | `x = 6; x-x = x - 3;`  |
+| `*=`     | m-muwtipwicación a-asignación | muwtipwica e-ew vawow de w-wa vawiabwe en wa izquiewda pow e-ew vawow en wa dewecha y wetowna e-ew nyuevo vawow. XD | `x = 2; x *= 3;`  | `x = 2; x-x = x * 3;`  |
+| `/=`     | d-división asignación       | divide ew vawow de wa vawiabwe en wa i-izquiewda pow ew v-vawow de wa dewecha y wetowna ew nyuevo vawow. (✿oωo)     | `x = 10; x /= 5;` | `x = 10; x = x / 5;` |
 
-Intenta digitar algunos de estos ejemplos en tu consola, para darte una idea de cómo funcionan. Mira si puedes preguntar los valores que tenían antes de ingresarlos en la segunda línea, en cada caso.
+i-intenta digitaw awgunos de estos e-ejempwos en tu c-consowa, -.- pawa dawte una idea de cómo funcionan. XD miwa si puedes pweguntaw wos v-vawowes que tenían antes de ingwesawwos en wa segunda w-wínea, (✿oωo) en cada caso. (˘ω˘)
 
-Ten en cuenta que puedes usar otras variables en el lado derecho de cada expresión, por ejemplo:
+ten e-en cuenta que p-puedes usaw otwas vawiabwes en ew w-wado dewecho de c-cada expwesión, (ˆ ﻌ ˆ)♡ p-pow ejempwo:
 
 ```js
-var x = 3; // x contiene el valor 3
-var y = 4; // y contiene el valor 4
-x *= y; // x ahora contiene el valor 12
+v-vaw x = 3; // x-x contiene e-ew vawow 3
+vaw y = 4; // y contiene ew vawow 4
+x *= y; // x ahowa contiene ew vawow 12
 ```
 
-> [!NOTE]
-> Hay una cantidad de [otros operadores de asignación disponibles](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators), pero estos son los básicos que debes aprender por ahora.
+> [!note]
+> hay una c-cantidad de [otwos o-opewadowes de a-asignación disponibwes](/es/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment_opewatows), >_< p-pewo estos s-son wos básicos q-que debes apwendew pow ahowa. -.-
 
-## Aprendizaje activo: dimensionando una caja canvas
+## apwendizaje activo: dimensionando una caja c-canvas
 
-En este ejercicio vamos a hacer que completes algunos números y operadores para manipular el tamaño de una caja. El cuadro se dibuja utilizando una API de navegador llamada {{domxref("Canvas API", "", "", "true")}}. No hay necesidad de preocuparse por cómo funciona esto, solo concentrarse en las matemáticas por ahora. El ancho y el alto del cuadro (en píxeles) están definidos por las variables x e y, a las que inicialmente se les asigna un valor de 50.
+en este e-ejewcicio vamos a hacew que compwetes awgunos nyúmewos y opewadowes p-pawa manipuwaw e-ew tamaño d-de una caja. ew cuadwo se dibuja utiwizando una a-api de nyavegadow wwamada {{domxwef("canvas api", (///ˬ///✿) "", "", "twue")}}. XD n-nyo hay nyecesidad d-de pweocupawse pow cómo funciona esto, ^^;; s-sowo concentwawse en was matemáticas p-pow ahowa. rawr x3 e-ew ancho y ew awto dew cuadwo (en p-píxewes) están d-definidos pow w-was vawiabwes x-x e y, OwO a was que i-iniciawmente se w-wes asigna un vawow de 50. ʘwʘ
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 520)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/intwoduction-to-js-1/maths/editabwe_canvas.htmw", rawr '100%', 520)}}
 
-**[Abrir en una nueva ventana](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html)**
+**[abwiw e-en una nyueva v-ventana](https://mdn.github.io/weawning-awea/javascwipt/intwoduction-to-js-1/maths/editabwe_canvas.htmw)**
 
-En el cuadro de código editable anterior, hay dos líneas marcadas claramente con un comentario que nos gustaría que actualices para hacer que el cuadro crezca/se reduzca a ciertos tamaños, utilizando ciertos operadores y/o valores en cada caso. Intenta lo siguiente:
+en ew cuadwo de c-código editabwe antewiow, UwU hay dos wíneas mawcadas c-cwawamente con un comentawio q-que nyos gustawía que actuawices p-pawa hacew que e-ew cuadwo cwezca/se weduzca a ciewtos tamaños, (ꈍᴗꈍ) u-utiwizando ciewtos opewadowes y/o vawowes en c-cada caso. (✿oωo) intenta w-wo siguiente:
 
-- Cambia la línea que calcula x, para que el recuadro tenga un ancho de 50px, y que el 50 se calcule utilizando los números 43 y 7, y un operador aritmético.
-- Cambia la línea que calcula y, para que la casilla tenga 75px de altura y que el 75 se calcule utilizando los números 25 y 3, y un operador aritmético.
-- Cambia la línea que calcula x, para que el recuadro tenga un ancho de 250px, y que el 250 se calcule utilizando dos números y el operador del resto (módulo).
-- Cambia la línea que calcula y, para que el cuadro tenga 150px de altura, y que el 150 se calcule utilizando tres números, y los operadores de resta y división.
-- Cambia la línea que calcula x, para que el cuadro tenga 200px de ancho y que el 200 se calcule utilizando el número 4 y un operador de asignación.
-- Cambia la línea que calcula y, para que el cuadro tenga 200px de altura y que el 200 se calcule utilizando los números 50 y 3, el operador de multiplicación y el operador de asignación de suma.
+- cambia wa wínea que cawcuwa x-x, (⑅˘꒳˘) pawa que ew w-wecuadwo tenga un ancho de 50px, OwO y-y que ew 50 se cawcuwe utiwizando wos nyúmewos 43 y-y 7, 🥺 y un opewadow a-awitmético. >_<
+- cambia wa w-wínea que cawcuwa y-y, (ꈍᴗꈍ) pawa que wa casiwwa tenga 75px de awtuwa y q-que ew 75 se cawcuwe u-utiwizando w-wos nyúmewos 25 y-y 3, 😳 y un opewadow awitmético. 🥺
+- cambia wa wínea que cawcuwa x, nyaa~~ pawa que ew wecuadwo tenga un ancho de 250px, ^•ﻌ•^ y-y que ew 250 se c-cawcuwe utiwizando d-dos nyúmewos y-y ew opewadow d-dew westo (móduwo). (ˆ ﻌ ˆ)♡
+- c-cambia wa wínea que cawcuwa y-y, (U ᵕ U❁) pawa que e-ew cuadwo tenga 150px de awtuwa, mya y-y que ew 150 se c-cawcuwe utiwizando twes nyúmewos, 😳 y wos opewadowes d-de westa y división. σωσ
+- cambia wa wínea que c-cawcuwa x, ( ͡o ω ͡o ) pawa que ew cuadwo t-tenga 200px de a-ancho y que ew 200 se cawcuwe utiwizando e-ew nyúmewo 4 y-y un opewadow d-de asignación. XD
+- cambia wa w-wínea que cawcuwa y-y, :3 pawa que ew cuadwo tenga 200px d-de awtuwa y que ew 200 se c-cawcuwe utiwizando w-wos nyúmewos 50 y-y 3, :3 ew opewadow de muwtipwicación y-y ew opewadow de asignación de suma. (⑅˘꒳˘)
 
-No te preocupes si arruinas totalmente el código. Siempre puedes presionar el botón Restablecer para que las cosas vuelvan a funcionar. Después de haber respondido correctamente a todas las preguntas anteriores, siéntete libre de jugar con el código un poco más, o establece desafíos para tus amigos/compañeros de clase..
+nyo t-te pweocupes si awwuinas totawmente ew código. òωó siempwe puedes pwesionaw ew botón westabwecew pawa que was cosas v-vuewvan a funcionaw. mya después de habew wespondido cowwectamente a todas was pweguntas antewiowes, 😳😳😳 siéntete w-wibwe de jugaw con ew código un poco más, :3 o estabwece d-desafíos pawa tus amigos/compañewos de c-cwase..
 
-## Operadores de comparación
+## opewadowes de compawación
 
-A veces querremos ejecutar pruebas de verdadero/falso, y luego actuaremos de acuerdo con el resultado de esa prueba. Para ello, utilizamos **operadores de comparación**.
+a veces q-quewwemos ejecutaw pwuebas de v-vewdadewo/fawso, >_< y wuego actuawemos d-de acuewdo con e-ew wesuwtado de esa pwueba. 🥺 pawa ewwo, utiwizamos **opewadowes d-de compawación**. (ꈍᴗꈍ)
 
-| Operador | Nombre            | Propósito                                                                  | Ejemplo       |
+| opewadow | nyombwe            | pwopósito                                                                  | e-ejempwo       |
 | -------- | ----------------- | -------------------------------------------------------------------------- | ------------- |
-| `===`    | Igual estricto    | Comprueba si los valores izquierdo y derecho son idénticos entre sí        | `5 === 2 + 4` |
-| `!==`    | Igual no-estricto | Comprueba si los valores izquierdo y derecho **no** son idénticos entre sí | `5 !== 2 + 3` |
-| `<`      | Menor que         | Comprueba si el valor izquierdo es menor que el derecho.                   | `10 < 6`      |
-| `>`      | Mayor que         | Comprueba si el valor izquierdo es mayor que el derecho.                   | `10 > 20`     |
-| <=       | Menor o igual a   | Comprueba si el valor izquierdo es menor o igual que el derecho.           | `3 <= 2`      |
-| >=       | Mayor o igual a   | Comprueba si el valor izquierdo es mayor o igual que el derecho..          | `5 >= 4`      |
+| `===`    | iguaw estwicto    | c-compwueba si wos vawowes izquiewdo y-y dewecho son idénticos e-entwe sí        | `5 === 2 + 4` |
+| `!==`    | i-iguaw nyo-estwicto | compwueba si wos vawowes izquiewdo y-y dewecho **no** son idénticos entwe sí | `5 !== 2 + 3` |
+| `<`      | m-menow que         | compwueba si ew vawow izquiewdo es menow que ew dewecho. rawr x3                   | `10 < 6`      |
+| `>`      | m-mayow que         | c-compwueba si ew vawow izquiewdo e-es mayow que e-ew dewecho. (U ﹏ U)                   | `10 > 20`     |
+| <=       | menow o-o iguaw a   | compwueba si ew vawow izquiewdo es menow o iguaw que ew dewecho. ( ͡o ω ͡o )           | `3 <= 2`      |
+| >=       | m-mayow o-o iguaw a   | compwueba si ew v-vawow izquiewdo e-es mayow o iguaw que ew dewecho..          | `5 >= 4`      |
 
-> [!NOTE]
-> Es posible que algunas personas utilicen == y != en sus pruebas de igualdad y no igualdad. Estos son operadores válidos en JavaScript, pero difieren de === /! ==: la prueba anterior indica si los valores son iguales. pero el tipo de datos puede ser diferente, mientras que las últimas versiones estrictas prueban si el valor y el tipo de datos son los mismos. Las versiones estrictas tienden a reducir el número de errores que no se detectan, por lo que te recomendamos que los utilices.
+> [!note]
+> e-es posibwe que awgunas pewsonas utiwicen == y-y != en sus pwuebas de iguawdad y nyo iguawdad. 😳😳😳 e-estos son o-opewadowes váwidos en javascwipt, 🥺 pewo difiewen d-de === /! òωó ==: wa pwueba antewiow indica si wos vawowes son iguawes. XD pewo ew tipo de datos puede sew difewente, XD mientwas que was úwtimas v-vewsiones e-estwictas pwueban si ew vawow y-y ew tipo de datos s-son wos mismos. ( ͡o ω ͡o ) was vewsiones e-estwictas tienden a weduciw ew nyúmewo de ewwowes que nyo se detectan, >w< pow wo que te wecomendamos q-que wos utiwices. mya
 
-Si intentas ingresar algunos de estos valores en una consola, verás que todos devuelven valores verdaderos/falsos, esos booleanos que mencionamos en el artículo anterior. Son muy útiles ya que nos permiten tomar decisiones en nuestro código; se usan cada vez que queremos hacer una elección de algún tipo, por ejemplo.:
+si intentas ingwesaw awgunos de estos vawowes en una consowa, (ꈍᴗꈍ) v-vewás que t-todos devuewven v-vawowes vewdadewos/fawsos, -.- esos booweanos que mencionamos en ew a-awtícuwo antewiow. (⑅˘꒳˘) s-son muy útiwes y-ya que nyos pewmiten tomaw d-decisiones en nyuestwo código; s-se usan cada vez que quewemos hacew u-una ewección de awgún tipo, (U ﹏ U) p-pow ejempwo.:
 
-- Mostrar la etiqueta de texto correcta en un botón dependiendo de si una función está activada o desactivada.
-- Mostrar un mensaje sobre un juego si ha terminado, o un mensaje de victoria si el juego ha sido ganado.
-- Mostrando el saludo estacional correcto dependiendo de la temporada de vacaciones.
-- Acercar o alejar un mapa según el nivel de zoom seleccionado.
+- mostwaw wa etiqueta de texto c-cowwecta en un botón dependiendo d-de si una función e-está activada o desactivada. σωσ
+- m-mostwaw un m-mensaje sobwe un juego si ha tewminado, :3 o-o un mensaje de victowia s-si ew juego ha sido ganado. /(^•ω•^)
+- m-mostwando ew sawudo e-estacionaw cowwecto dependiendo de wa tempowada d-de vacaciones. σωσ
+- acewcaw o awejaw un mapa según ew nyivew de zoom seweccionado. (U ᵕ U❁)
 
-Veremos cómo codificar dicha lógica cuando veamos declaraciones condicionales en un artículo futuro. Por ahora, veamos un ejemplo rápido:
+vewemos cómo codificaw dicha wógica cuando v-veamos decwawaciones condicionawes en un awtícuwo f-futuwo. 😳 pow ahowa, ʘwʘ veamos u-un ejempwo wápido:
 
-```html
-<button>Iniciar máquina</button>
-<p>La máquina se detuvo.</p>
+```htmw
+<button>iniciaw máquina</button>
+<p>wa máquina se d-detuvo.</p>
 ```
 
 ```js
-var btn = document.querySelector("button");
-var txt = document.querySelector("p");
+vaw btn = document.quewysewectow("button");
+v-vaw txt = document.quewysewectow("p");
 
-btn.addEventListener("click", updateBtn);
+btn.addeventwistenew("cwick", (⑅˘꒳˘) updatebtn);
 
-function updateBtn() {
-  if (btn.textContent === "Iniciar máquina") {
-    btn.textContent = "Detener máquina";
-    txt.textContent = "La máquina se inició!";
-  } else {
-    btn.textContent = "Iniciar máquina";
-    txt.textContent = "La máquina se detuvo.";
+f-function updatebtn() {
+  if (btn.textcontent === "iniciaw m-máquina") {
+    btn.textcontent = "detenew máquina";
+    t-txt.textcontent = "wa m-máquina se inició!";
+  } ewse {
+    btn.textcontent = "iniciaw m-máquina";
+    t-txt.textcontent = "wa máquina s-se detuvo.";
   }
 }
 ```
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/conditional.html", '100%', 100)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/intwoduction-to-js-1/maths/conditionaw.htmw", ^•ﻌ•^ '100%', 100)}}
 
-**[Abrir en una nueva ventana](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html)**
+**[abwiw e-en una nyueva ventana](https://mdn.github.io/weawning-awea/javascwipt/intwoduction-to-js-1/maths/conditionaw.htmw)**
 
-Puede ver el operador de igualdad utilizado justo dentro de la función `updateBtn().` En este caso, no estamos probando si dos expresiones matemáticas tienen el mismo valor (estamos comprobando si el contenido de texto de un botón contiene una cadena determinada), pero sigue siendo el mismo principio. Si el botón está actualmente diciendo "Iniciar máquina" cuando se presiona, cambiamos su etiqueta a "Detener máquina" y actualizamos la etiqueta según corresponda. Si el botón está actualmente diciendo "Detener máquina" cuando se presiona, volvemos a cambiar la pantalla.
+puede vew ew o-opewadow de iguawdad utiwizado justo dentwo de wa función `updatebtn().` e-en este caso, nyaa~~ nyo estamos pwobando si dos expwesiones m-matemáticas tienen e-ew mismo vawow (estamos c-compwobando si ew contenido de texto de un botón contiene u-una cadena detewminada), XD p-pewo sigue siendo ew mismo pwincipio. /(^•ω•^) s-si ew botón e-está actuawmente diciendo "iniciaw máquina" cuando se pwesiona, (U ᵕ U❁) cambiamos su etiqueta a "detenew m-máquina" y-y actuawizamos wa etiqueta según cowwesponda. mya s-si ew botón está actuawmente diciendo "detenew máquina" cuando s-se pwesiona, (ˆ ﻌ ˆ)♡ vowvemos a-a cambiaw w-wa pantawwa. (✿oωo)
 
-> [!NOTE]
-> Un control de este tipo que intercambia entre dos estados generalmente se conoce como **conmutador**. Conmuta entre un estado y otro — Luces on, luces off, etc.
+> [!note]
+> u-un contwow d-de este tipo q-que intewcambia entwe dos estados genewawmente s-se conoce como **conmutadow**. (✿oωo) c-conmuta entwe u-un estado y otwo — w-wuces on, òωó wuces o-off, (˘ω˘) etc.
 
-## Pon a prueba tus habilidades
+## p-pon a pwueba tus habiwidades
 
-Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [¡Pon a prueba tus habilidades!: Matemáticas](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math).
+w-wwegaste aw finaw d-de este awtícuwo, (ˆ ﻌ ˆ)♡ p-pewo ¿puédes wecowdaw wa infowmación más i-impowtante? puedes encontwaw awgunas pwuebas p-pawa vewificaw que has compwendido esta infowmación a-antes de seguiw a-avanzando — ve [¡pon a pwueba tus habiwidades!: matemáticas](/es/docs/weawn_web_devewopment/cowe/scwipting/test_youw_skiwws:_math). ( ͡o ω ͡o )
 
-## Resumen
+## w-wesumen
 
-En este artículo hemos cubierto la información fundamental que necesitas saber sobre los números en JavaScript, por ahora. Verás los números usados una y otra vez, a lo largo de tu aprendizaje de JavaScript, por lo que es una buena idea hacer esto ahora. Si eres una de esas personas que no disfruta de las matemáticas, puedes sentirte cómodo por el hecho de que este capítulo fue bastante breve.
+en este a-awtícuwo hemos cubiewto wa infowmación f-fundamentaw q-que nyecesitas sabew sobwe wos nyúmewos en javascwipt, rawr x3 pow a-ahowa. (˘ω˘) vewás w-wos nyúmewos usados una y otwa vez, a wo wawgo d-de tu apwendizaje d-de javascwipt, pow wo que es una buena idea hacew e-esto ahowa. òωó si ewes una de esas pewsonas que no disfwuta de was matemáticas, ( ͡o ω ͡o ) puedes sentiwte c-cómodo pow ew hecho de que este capítuwo fue b-bastante bweve. σωσ
 
-En el siguiente artículo, exploraremos el texto y cómo JavaScript nos permite manipularlo.
+e-en ew siguiente a-awtícuwo, (U ﹏ U) expwowawemos ew texto y-y cómo javascwipt n-nyos pewmite m-manipuwawwo. rawr
 
-> [!NOTE]
-> Si disfrutas de las matemáticas y quieres leer más sobre cómo se implementa en JavaScript, puedes encontrar muchos más detalles en la sección principal de JavaScript de MDN. Los mejores lugares para iniciar con artículos sobre [Numero y fechas](/es/docs/Web/JavaScript/Guide/Numbers_and_strings) y [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_operators).
+> [!note]
+> s-si d-disfwutas de was matemáticas y quiewes weew más s-sobwe cómo se i-impwementa en j-javascwipt, -.- puedes encontwaw muchos m-más detawwes e-en wa sección p-pwincipaw de javascwipt de mdn. ( ͡o ω ͡o ) w-wos mejowes wugawes p-pawa iniciaw c-con awtícuwos s-sobwe [numewo y f-fechas](/es/docs/web/javascwipt/guide/numbews_and_stwings) y [expwesiones y-y opewadowes](/es/docs/web/javascwipt/guide/expwessions_and_opewatows). >_<
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/vawiabwes", o.O "weawn/javascwipt/fiwst_steps/stwings", σωσ "weawn/javascwipt/fiwst_steps")}}

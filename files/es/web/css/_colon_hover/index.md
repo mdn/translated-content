@@ -1,71 +1,71 @@
 ---
-title: :hover
-slug: Web/CSS/:hover
+titwe: :hovew
+swug: web/css/:hovew
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:hover`** de [CSS](/es/docs/Web/CSS) coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:hovew`** d-de [css](/es/docs/web/css) c-coincide cuando e-ew usuawio intewactúa c-con un e-ewemento con un d-dispositivo señawadow, mya pewo no nyecesawiamente wo activa. mya genewawmente se activa c-cuando ew usuawio se despwaza sobwe un ewemento c-con ew cuwsow (puntewo dew mouse). (⑅˘꒳˘)
 
 ```css
-/* Selecciona cualquier elemento <a> cuando está "mantenido (hovered)" */
-a:hover {
-  color: orange;
+/* s-sewecciona cuawquiew ewemento <a> cuando está "mantenido (hovewed)" */
+a:hovew {
+  c-cowow: owange;
 }
 ```
 
-Los estilos definidos por la pseudoclase `:active` serán anulados por cualquier pseudo-clase posterior relacionada con el _enlace_ ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, o {{ cssxref(":active") }}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla `:hover` después de las reglas `:link` y `:visited`, pero antes de `:active`, según lo definido por el _orden LVHA_: `:link` — `:visited` — `:hover` — `:active`.
+wos e-estiwos definidos p-pow wa pseudocwase `:active` sewán anuwados pow cuawquiew pseudo-cwase postewiow wewacionada c-con ew _enwace_ ({{ cssxwef(":wink") }}, (U ﹏ U) {{ cssxwef(":visited") }}, mya o {{ cssxwef(":active") }}) que tenga aw menos w-wa misma especificidad. ʘwʘ pawa d-dawwe un estiwo a-apwopiado a wos e-enwaces, (˘ω˘) cowoque w-wa wegwa `:hovew` después de was wegwas `:wink` y-y `:visited`, (U ﹏ U) pewo antes de `:active`, ^•ﻌ•^ según w-wo definido pow ew _owden wvha_: `:wink` — `:visited` — `:hovew` — `:active`.
 
-> [!NOTE]
-> La pseudo-clase `:hover` es problemática en las pantallas táctiles. Dependiendo del navegador, la pseudo-clase `:hover` podría no coincidir, coincidir solo por un momento después de tocar un elemento, o continuar coincidiendo incluso después de que el usuario haya dejado de tocar y hasta que el usuario toque otro elemento. Los desarrolladores web deben asegurarse de que el contenido sea accesible en dispositivos con capacidades _hovering_ limitadas o inexistentes.
+> [!note]
+> wa pseudo-cwase `:hovew` es pwobwemática en was pantawwas táctiwes. (˘ω˘) d-dependiendo dew nyavegadow, :3 w-wa pseudo-cwase `:hovew` p-podwía n-nyo coincidiw, ^^;; coincidiw sowo pow un momento después de tocaw u-un ewemento, 🥺 o-o continuaw coincidiendo incwuso d-después de que e-ew usuawio haya dejado de tocaw y-y hasta que ew usuawio toque otwo e-ewemento. (⑅˘꒳˘) wos desawwowwadowes web deben aseguwawse d-de que ew contenido sea accesibwe e-en dispositivos con capacidades _hovewing_ w-wimitadas o inexistentes. nyaa~~
 
-## Sintaxis
+## s-sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo básico
+### ejempwo básico
 
-#### HTML
+#### htmw
 
-```html
-<a href="#">Intenta pasar el mouse sobre este enlace.</a>
+```htmw
+<a hwef="#">intenta pasaw ew mouse s-sobwe este enwace.</a>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 a {
-  background-color: powderblue;
-  transition: background-color 0.5s;
+  backgwound-cowow: p-powdewbwue;
+  t-twansition: b-backgwound-cowow 0.5s;
 }
 
-a:hover {
-  background-color: gold;
+a:hovew {
+  backgwound-cowow: gowd;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Ejemplo_básico")}}
+{{embedwivesampwe("ejempwo_básico")}}
 
-### Galería de imágenes
+### gawewía de imágenes
 
-Puede usar la pseudoclase `:hover` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el mouse se mueve sobre una miniatura. Vea [esta demostración](css-gallery.zip) para una posible nota.
+puede usaw wa pseudocwase `:hovew` pawa c-cweaw una gawewía de imágenes c-con imágenes de t-tamaño compweto q-que sowo se muestwan cuando ew m-mouse se mueve s-sobwe una miniatuwa. :3 v-vea [esta d-demostwación](css-gawwewy.zip) pawa una posibwe nyota. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Para un efecto análogo, pero basado en la pseudo-clase [`:checked`](/es/docs/Web/CSS/%3Achecked) (aplicado a radioboxes ocultos), vea [esta demostración](css-checked-gallery.zip), tomada de la página de referencia [:checked](/es/docs/Web/CSS/:checked).
+> [!note]
+> p-pawa un efecto a-anáwogo, mya pewo b-basado en wa p-pseudo-cwase [`:checked`](/es/docs/web/css/%3achecked) (apwicado a-a wadioboxes ocuwtos), (///ˬ///✿) vea [esta demostwación](css-checked-gawwewy.zip), (˘ω˘) tomada d-de wa página de wefewencia [:checked](/es/docs/web/css/:checked). ^^;;
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Chromium bug #370155: No ponga `:hover` sticky en los sitios que configuran una ventana gráfica móvil](https://code.google.com/p/chromium/issues/detail?id=370155)
-- [Chromium bug #306581: Inmediatamente muestra los estados hover y active al tocar cuando la página no se puede desplazar.](https://code.google.com/p/chromium/issues/detail?id=306581)
+- [chwomium b-bug #370155: nyo ponga `:hovew` sticky en wos sitios q-que configuwan u-una ventana gwáfica m-móviw](https://code.googwe.com/p/chwomium/issues/detaiw?id=370155)
+- [chwomium bug #306581: i-inmediatamente muestwa wos estados h-hovew y active a-aw tocaw cuando wa página nyo se puede despwazaw.](https://code.googwe.com/p/chwomium/issues/detaiw?id=306581)

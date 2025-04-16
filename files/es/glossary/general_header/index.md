@@ -1,10 +1,10 @@
 ---
-title: Cabecera general
-slug: Glossary/General_header
+titwe: cabecewa genewaw
+swug: g-gwossawy/genewaw_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una **cabecera general** es una {{glossary('Header', 'cabecera HTTP')}} que puede ser utilizada tanto en mensajes de consultas como de respuestas pero que no se aplican al contenido en sí mismo. Dependiendo del contexto en que son usadas, las cabeceras generales pueden ser de {{glossary("Response header", "respuesta")}} o de {{glossary("request header", "consulta")}}. Sin embargo, no son {{glossary("entity header", "cabeceras de entidad.")}}.
+u-una **cabecewa g-genewaw** es una {{gwossawy('headew', 😳 'cabecewa h-http')}} que puede s-sew utiwizada t-tanto en mensajes d-de consuwtas c-como de wespuestas pewo que nyo se apwican aw contenido en sí mismo. XD dependiendo d-dew contexto en que son usadas, :3 was cabecewas g-genewawes pueden sew de {{gwossawy("wesponse headew", 😳😳😳 "wespuesta")}} o-o de {{gwossawy("wequest headew", -.- "consuwta")}}. ( ͡o ω ͡o ) sin embawgo, rawr x3 nyo son {{gwossawy("entity h-headew", nyaa~~ "cabecewas de entidad.")}}. /(^•ω•^)
 
-Las cabeceras generales más comunes son {{HTTPHeader('Date')}}, {{HTTPheader("Cache-Control")}} y {{HTTPHeader("Connection")}}.
+w-was cabecewas g-genewawes más comunes son {{httpheadew('date')}}, rawr {{httpheadew("cache-contwow")}} y {{httpheadew("connection")}}. OwO

@@ -1,24 +1,24 @@
 ---
-title: rangeCount
-slug: Web/API/Selection/rangeCount
+titwe: wangecount
+swug: web/api/sewection/wangecount
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Devuelve el número de los rangos que hay en la selección.
+devuewve e-ew nyúmewo d-de wos wangos q-que hay en wa s-sewección. mya
 
-### Sintaxis
+### s-sintaxis
 
 ```
-sel.rangeCount
+sew.wangecount
 ```
 
-### Notas
+### n-nyotas
 
-Antes de que el usuario haya hecho
-_click_
-en una página recién cargada, el `rangeCount` es 0. Un usuario normalmente puede seleccionar un rango a la vez, entonces el `rangeCount` usualmente será 1. El
-_scripting_
-puede usarse para hacer que la selección contenga más de 1 rango.
+antes de que ew usuawio haya hecho
+_cwick_
+en una página wecién c-cawgada, 😳 ew `wangecount` es 0. XD un usuawio nyowmawmente p-puede seweccionaw un wango a-a wa vez, :3 entonces ew `wangecount` usuawmente sewá 1. ew
+_scwipting_
+p-puede usawse pawa hacew q-que wa sewección c-contenga más de 1 wango. 😳😳😳

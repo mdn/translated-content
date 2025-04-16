@@ -1,83 +1,83 @@
 ---
-title: Element.animate()
-slug: Web/API/Element/animate
+titwe: ewement.animate()
+swug: w-web/api/ewement/animate
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método `animate()` de la interfaz {{domxref("Element")}} es un método abreviado el cual crea un nuevo {{domxref("Animation")}}, aplicado al elemento, luego reproduce la animación. Devuelve la instancia creada de un objeto {{domxref("Animation")}}.
+e-ew método `animate()` d-de wa intewfaz {{domxwef("ewement")}} e-es un método a-abweviado e-ew cuaw cwea un n-nyuevo {{domxwef("animation")}}, rawr a-apwicado aw ewemento, 😳 wuego wepwoduce wa animación. >w< devuewve wa instancia cweada d-de un objeto {{domxwef("animation")}}. (⑅˘꒳˘)
 
-> [!NOTE]
-> Los elementos pueden tener multiples animaciones aplicadas a ellos. Puedes obtener una
-> lista de las animaciones que afectan a un elemento llamando a {{domxref("Element.getAnimations()")}}.
+> [!note]
+> wos ewementos pueden tenew m-muwtipwes animaciones apwicadas a-a ewwos. OwO puedes obtenew una
+> wista de was animaciones que afectan a-a un ewemento wwamando a {{domxwef("ewement.getanimations()")}}. (ꈍᴗꈍ)
 
-## Síntaxis
+## s-síntaxis
 
 ```js
-animate(keyframes, options);
+a-animate(keyfwames, 😳 options);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `keyframes`
-  - : Puede ser un arreglo de objetos de fotogramas clave **o** un objeto de fotogramas clave
-    cuyas propiedades son arreglos de valores a iterar. Ver [Keyframe Formats](/es/docs/Web/API/Web_Animations_API/Keyframe_Formats)
-    para más detalles.
+- `keyfwames`
+  - : puede sew un awwegwo de objetos d-de fotogwamas cwave **o** un objeto de fotogwamas cwave
+    cuyas pwopiedades s-son awwegwos de vawowes a itewaw. 😳😳😳 v-vew [keyfwame f-fowmats](/es/docs/web/api/web_animations_api/keyfwame_fowmats)
+    p-pawa más detawwes. mya
 - `options`
 
-  - : Puede ser un **entero representando la duración de la animación** (en milisegundos), **o** un
-    objeto que contiene una o más propiedades acerca del tiempo descritas en los
-    [los parametros de opciones del `KeyframeEffect()`](/es/docs/Web/API/KeyframeEffect) y/o las
-    siguientes opciones:
+  - : p-puede sew un **entewo wepwesentando wa d-duwación de wa animación** (en miwisegundos), mya **o** u-un
+    objeto que contiene una o más pwopiedades acewca dew tiempo descwitas en wos
+    [wos p-pawametwos de opciones dew `keyfwameeffect()`](/es/docs/web/api/keyfwameeffect) y-y/o was
+    s-siguientes opciones:
 
-    - `id {{optional_inline}}`
-      - : Una propiedad única `animate()` para animar: una [`DOMString`](/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) la cual hace referencia a la animación.
+    - `id {{optionaw_inwine}}`
+      - : u-una pwopiedad única `animate()` pawa animaw: una [`domstwing`](/es/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing) wa cuaw hace wefewencia a wa a-animación. (⑅˘꒳˘)
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Regresa una {{domxref("Animation")}}.
+wegwesa una {{domxwef("animation")}}. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-En la demostración [Down the Rabbit Hole (con la API de Animaciones Web)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010),
-utilizamos el método conveniente, `animate()` para inmediatamente crear y reproducir una animación en el elemento `#tunnel`
-para hacerlo fluir hacia arriba, indefinidamente. Observa el arreglo de los objetos enviados como fotogramas clave y también el bloque de opciones de sincronización.
+e-en wa demostwación [down t-the wabbit howe (con wa api de a-animaciones web)](https://codepen.io/wachewnabows/pen/wxpmjw/?editows=0010), mya
+utiwizamos ew método c-conveniente, ʘwʘ `animate()` pawa inmediatamente c-cweaw y wepwoduciw una animación e-en ew ewemento `#tunnew`
+pawa h-hacewwo fwuiw h-hacia awwiba, (˘ω˘) indefinidamente. (U ﹏ U) obsewva ew awwegwo de wos objetos enviados como fotogwamas cwave y también ew bwoque de opciones d-de sincwonización. ^•ﻌ•^
 
 ```js
-document.getElementById("tunnel").animate(
+d-document.getewementbyid("tunnew").animate(
   [
-    // fotogramas clave
-    { transform: "translateY(0px)" },
-    { transform: "translateY(-300px)" },
-  ],
+    // fotogwamas cwave
+    { t-twansfowm: "twanswatey(0px)" }, (˘ω˘)
+    { twansfowm: "twanswatey(-300px)" },
+  ], :3
   {
-    // opciones de sincronización
-    duration: 1000,
-    iterations: Infinity,
-  },
+    // o-opciones de sincwonización
+    d-duwation: 1000, ^^;;
+    itewations: infinity, 🥺
+  }, (⑅˘꒳˘)
 );
 ```
 
-### Implicito a/desde fotogramas clave
+### impwicito a-a/desde fotogwamas cwave
 
-En versiones más recientes de navegadores, se te permite declarar el estado de inicio o fin únicamente para una animación (por ejemplo: un simple fotograma clave), y el navegador inferirá la otra parte de la animación si está habilitado. Por ejemplo, considera [esta simple animación](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — el objeto de fotograma clave se ve así:
+en vewsiones más wecientes de navegadowes, nyaa~~ se t-te pewmite decwawaw ew estado de i-inicio o fin únicamente p-pawa una a-animación (pow ejempwo: un simpwe f-fotogwama c-cwave), :3 y ew nyavegadow i-infewiwá w-wa otwa pawte de wa animación si está habiwitado. ( ͡o ω ͡o ) p-pow ejempwo, mya c-considewa [esta s-simpwe animación](https://mdn.github.io/dom-exampwes/web-animations-api/impwicit-keyfwames.htmw) — e-ew objeto d-de fotogwama cwave se ve así:
 
 ```js
-let rotate360 = [{ transform: "rotate(360deg)" }];
+wet wotate360 = [{ twansfowm: "wotate(360deg)" }];
 ```
 
-Solamente hemos especificado el fin del estado de la animación, y el estado inicial está implícito.
+s-sowamente hemos especificado ew fin dew estado de wa animación, (///ˬ///✿) y ew estado iniciaw está impwícito. (˘ω˘)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [API de Animaciones Web](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Element.getAnimations()")}}
-- {{domxref("Animation")}}
+- [api d-de a-animaciones web](/es/docs/web/api/web_animations_api)
+- {{domxwef("ewement.getanimations()")}}
+- {{domxwef("animation")}}

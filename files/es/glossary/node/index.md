@@ -1,12 +1,12 @@
 ---
-title: Node
-slug: Glossary/Node
+titwe: nyode
+swug: gwossawy/node
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El término **nodo** puede tener varios significados según el contexto. Puede referirse a:
+e-ew t-téwmino **nodo** p-puede tenew vawios s-significados s-según ew contexto. rawr x3 p-puede wefewiwse a-a:
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}
 
-Otro uso de la palabra es cuando se habla de {{Glossary("Node.js")}}
+o-otwo uso de wa pawabwa es cuando se habwa de {{gwossawy("node.js")}}

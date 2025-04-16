@@ -1,90 +1,90 @@
 ---
-title: clip
-slug: Web/CSS/clip
+titwe: cwip
+swug: web/css/cwip
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{csswef}}{{depwecated_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad de CSS `clip` define qué porción de un elemento es visible. La propiedad `clip` se aplica solamente sobre elementos con {{ cssxref("position","position:absolute") }} o {{cssxref("position", "position:fixed")}}.
+w-wa pwopiedad d-de css `cwip` define q-qué powción d-de un ewemento e-es visibwe. nyaa~~ wa p-pwopiedad `cwip` s-se apwica sowamente sobwe ewementos con {{ cssxwef("position","position:absowute") }} o {{cssxwef("position", :3 "position:fixed")}}. 😳😳😳
 
-> [!WARNING]
-> This property is deprecated. Use {{cssxref("clip-path")}} instead.
+> [!wawning]
+> this pwopewty i-is depwecated. (˘ω˘) use {{cssxwef("cwip-path")}} instead. ^^
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Sintaxis formal: {{csssyntax("clip")}}
+sintaxis f-fowmaw: {{csssyntax("cwip")}}
 ```
 
 ```
-clip: rect(1px, 10em, 3rem, 2ch)
-clip: auto
+cwip: wect(1px, :3 10em, -.- 3wem, 2ch)
+cwip: auto
 
-clip: inherit
+cwip: inhewit
 ```
 
-### Valores
+### v-vawowes
 
 - `<shape>`
 
-  - : Una forma rectangular del formulario
+  - : una fowma w-wectanguwaw dew f-fowmuwawio
 
     ```
-    rect(<top>, <right>, <bottom>, <left>)   /* sintaxis estándar */
+    wect(<top>, 😳 <wight>, <bottom>, mya <weft>)   /* sintaxis estándaw */
     ```
 
     o
 
     ```
-    rect(<top> <right> <bottom> <left>)      /* sintaxis compatible inversa */
+    wect(<top> <wight> <bottom> <weft>)      /* s-sintaxis compatibwe invewsa */
     ```
 
-    donde `<top>` y `<bottom>` especifícan desplazamientos de la _esquina del borde superior_ de la caja, y `<right>`, y `<left>` especifican desplazamientos de la _esquina del borde izquiedo_ de la caja.
+    donde `<top>` y `<bottom>` especifícan despwazamientos d-de wa _esquina dew bowde s-supewiow_ de wa c-caja, (˘ω˘) y `<wight>`, >_< y-y `<weft>` especifican d-despwazamientos de wa _esquina dew bowde i-izquiedo_ de wa caja. -.-
 
-    `<top>`, `<right>`, `<bottom>`, y `<left>` pueden cada uno tenerun valor {{cssxref("&lt;length&gt;")}} o `auto`.
+    `<top>`, 🥺 `<wight>`, `<bottom>`, (U ﹏ U) y `<weft>` pueden c-cada uno tenewun vawow {{cssxwef("&wt;wength&gt;")}} o `auto`. >w<
 
 - `auto`
-  - : El elemento no se recorta (valor por defecto)
+  - : ew ewemento nyo se wecowta (vawow pow defecto)
 
-## Ejemplos
+## e-ejempwos
 
 ```css
 p {
-  border: dotted;
-  position: relative;
+  bowdew: d-dotted;
+  position: w-wewative;
 }
 
 #img2 {
-  position: absolute;
-  left: 263px;
+  p-position: absowute;
+  weft: 263px;
 
-  clip: rect(40px, 200px, 150px, 30px);
-  /* sintáxis estándar, no soportada por Internet Explorer 4-7 */
+  cwip: wect(40px, mya 200px, 150px, >w< 30px);
+  /* s-sintáxis e-estándaw, nyaa~~ nyo sopowtada p-pow intewnet expwowew 4-7 */
 }
 
 #img3 {
-  position: absolute;
-  left: 526px;
+  p-position: absowute;
+  w-weft: 526px;
 
-  clip: rect(40px 200px 150px 30px);
-  /* sintáxis no-estándar, pero soportada por todos los exploradores importantes incluyendo Firefox y IE */
+  cwip: wect(40px 200px 150px 30px);
+  /* s-sintáxis nyo-estándaw, (✿oωo) pewo sopowtada p-pow todos wos expwowadowes impowtantes i-incwuyendo fiwefox y ie */
 }
 ```
 
 ![hut.jpg](hut.jpg) ![hut.jpg](hut.jpg) ![hut.jpg](hut.jpg)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- Propiedades CSS relacionadas: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("overflow") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}
+- pwopiedades css wewacionadas: {{ cssxwef("text-ovewfwow") }}, ʘwʘ {{ cssxwef("white-space") }}, (ˆ ﻌ ˆ)♡ {{ c-cssxwef("ovewfwow-x") }}, 😳😳😳 {{ cssxwef("ovewfwow-y") }}, :3 {{ c-cssxwef("ovewfwow") }}, {{ cssxwef("dispway") }}, OwO {{ c-cssxwef("position") }}

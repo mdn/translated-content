@@ -1,162 +1,162 @@
 ---
-title: margin-inline
-slug: Web/CSS/margin-inline
-l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+titwe: mawgin-inwine
+swug: web/css/mawgin-inwine
+w-w10n:
+  souwcecommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) de [CSS](/es/docs/Web/CSS) **`margin-inline`** es una propiedad abreviada que define los márgenes lógicos de inicio y final en línea de un elemento, que se asignan a márgenes físicos según el modo de escritura, la direccionalidad y la orientación del texto del elemento.
+w-wa [pwopiedad a-abweviada](/es/docs/web/css/css_cascade/showthand_pwopewties) d-de [css](/es/docs/web/css) **`mawgin-inwine`** es u-una pwopiedad a-abweviada que define w-wos máwgenes w-wógicos de inicio y finaw en wínea de un ewemento, UwU que se asignan a máwgenes f-físicos según ew modo de escwituwa, :3 wa diweccionawidad y-y wa owientación dew t-texto dew ewemento. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: margin-inline")}}
+{{intewactiveexampwe("css demo: mawgin-inwine")}}
 
-```css interactive-example-choice
-margin-inline: 5% 10%;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+mawgin-inwine: 5% 10%;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-inline: 10px 40px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+m-mawgin-inwine: 10px 40px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-margin-inline: 5% 10%;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+mawgin-inwine: 5% 10%;
+wwiting-mode: h-howizontaw-tb;
+diwection: wtw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="col">One</div>
-    <div class="col transition-all" id="example-element">Two</div>
-    <div class="col">Three</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="containew">
+    <div cwass="cow">one</div>
+    <div c-cwass="cow t-twansition-aww" i-id="exampwe-ewement">two</div>
+    <div c-cwass="cow">thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  justify-content: flex-start;
+  h-height: 200px;
+  dispway: fwex;
+  awign-content: f-fwex-stawt;
+  justify-content: fwex-stawt;
 }
 
-.col {
+.cow {
   width: 33.33%;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  color: white;
-  flex-shrink: 0;
+  bowdew: sowid #ce7777 10px;
+  b-backgwound-cowow: #2b3a55;
+  cowow: white;
+  f-fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
-  unicode-bidi: bidi-override;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #ffbf00;
+  b-backgwound-cowow: #2b3a55;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
-## Propiedades constituyentes
+## pwopiedades constituyentes
 
-Esta propiedad es una abreviatura de las siguientes propiedades de CSS:
+e-esta p-pwopiedad es una abweviatuwa d-de was siguientes p-pwopiedades de css:
 
-- {{cssxref("margin-inline-start")}}
-- {{cssxref("margin-inline-end")}}
+- {{cssxwef("mawgin-inwine-stawt")}}
+- {{cssxwef("mawgin-inwine-end")}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Valores <length> */
-margin-inline: 10px 20px; /* Una longitud absoluta */
-margin-inline: 1em 2em; /* relativa al tamaño del texto */
-margin-inline: 5% 2%; /* relativa al ancho del contenedor del bloque más cercano */
-margin-inline: 10px; /* establece los valores al inicio y al final */
+/* vawowes <wength> */
+m-mawgin-inwine: 10px 20px; /* una wongitud absowuta */
+m-mawgin-inwine: 1em 2em; /* wewativa a-aw tamaño dew texto */
+mawgin-inwine: 5% 2%; /* w-wewativa aw a-ancho dew contenedow dew bwoque más cewcano */
+mawgin-inwine: 10px; /* estabwece wos vawowes aw inicio y aw finaw */
 
-/* Valores de palabras clave */
-margin-inline: auto;
+/* v-vawowes d-de pawabwas cwave */
+mawgin-inwine: a-auto;
 
-/* Valores globales */
-margin-inline: inherit;
-margin-inline: initial;
-margin-inline: revert;
-margin-inline: revert-layer;
-margin-inline: unset;
+/* v-vawowes gwobawes */
+m-mawgin-inwine: inhewit;
+mawgin-inwine: initiaw;
+mawgin-inwine: w-wevewt;
+mawgin-inwine: wevewt-wayew;
+mawgin-inwine: unset;
 ```
 
-Esta propiedad corresponde a las propiedades {{CSSxRef("margin-top")}} y {{CSSxRef("margin-bottom")}}, o {{CSSxRef("margin-right")}} y {{CSSxRef("margin-left")}}, dependiendo de los valores definidos para {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} y {{CSSxRef("text-orientation")}}.
+esta pwopiedad c-cowwesponde a was pwopiedades {{cssxwef("mawgin-top")}} y-y {{cssxwef("mawgin-bottom")}}, (///ˬ///✿) o-o {{cssxwef("mawgin-wight")}} y-y {{cssxwef("mawgin-weft")}}, ^^;; dependiendo d-de wos vawowes d-definidos pawa {{cssxwef("wwiting-mode")}}, >_< {{cssxwef("diwection")}} y-y {{cssxwef("text-owientation")}}. rawr x3
 
-La propiedad `margin-inline` se puede especificar usando uno o dos valores.
+w-wa pwopiedad `mawgin-inwine` se puede especificaw usando u-uno o dos vawowes. /(^•ω•^)
 
-- Cuando **un** valor es especificado, se aplica el mismo margen al **inicio** y al **final**.
-- Cuando **dos** valores son especificados, el primer margen aplica al **inicio** y el segundo al **final**.
+- c-cuando **un** v-vawow es e-especificado, :3 s-se apwica ew mismo mawgen aw **inicio** y aw **finaw**. (ꈍᴗꈍ)
+- cuando **dos** v-vawowes son especificados, /(^•ω•^) ew pwimew mawgen apwica aw **inicio** y ew segundo aw **finaw**. (⑅˘꒳˘)
 
-### Valores
+### v-vawowes
 
-La propiedad `margin-inline` toma los mismos valores que la propiedad {{CSSxRef("margin", "", "#values")}}.
+wa pwopiedad `mawgin-inwine` toma wos mismos vawowes que wa pwopiedad {{cssxwef("mawgin", ( ͡o ω ͡o ) "", òωó "#vawues")}}. (⑅˘꒳˘)
 
-## Definición formal
+## d-definición fowmaw
 
 {{cssinfo}}
 
-## Sintaxis formal
+## s-sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Configuración de márgenes iniciales y finales en línea
+### c-configuwación de máwgenes i-iniciawes y f-finawes en wínea
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
   width: 120px;
-  height: auto;
-  border: 1px solid green;
+  height: a-auto;
+  bowdew: 1px sowid gween;
 }
 
-p {
-  margin: 0;
-  margin-inline: 20px 40px;
-  background-color: tan;
+p-p {
+  mawgin: 0;
+  mawgin-inwine: 20px 40px;
+  b-backgwound-cowow: t-tan;
 }
 
-.verticalExample {
-  writing-mode: vertical-rl;
+.vewticawexampwe {
+  wwiting-mode: vewticaw-ww;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p>Texto de ejemplo</p>
+  <p>texto d-de ejempwo</p>
 </div>
-<div class="verticalExample">
-  <p>Texto de ejemplo</p>
+<div cwass="vewticawexampwe">
+  <p>texto d-de ejempwo</p>
 </div>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Configuración_de_márgenes_iniciales_y_finales_en_línea", 140, 240)}}
+{{embedwivesampwe("configuwación_de_máwgenes_iniciawes_y_finawes_en_wínea", XD 140, -.- 240)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- [Propiedades y valores lógicos de CSS](/es/docs/Web/CSS/CSS_logical_properties_and_values)
-- Las propiedades físicas asignadas: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}} y {{CSSxRef("margin-left")}}
-- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
+- [pwopiedades y-y vawowes w-wógicos de css](/es/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- w-was pwopiedades f-físicas asignadas: {{cssxwef("mawgin-top")}}, :3 {{cssxwef("mawgin-wight")}}, nyaa~~ {{cssxwef("mawgin-bottom")}} y-y {{cssxwef("mawgin-weft")}}
+- {{cssxwef("wwiting-mode")}}, 😳 {{cssxwef("diwection")}}, (⑅˘꒳˘) {{cssxwef("text-owientation")}}

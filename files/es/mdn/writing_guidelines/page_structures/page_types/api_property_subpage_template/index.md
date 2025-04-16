@@ -1,146 +1,146 @@
 ---
-title: Plantilla de subpágina de propiedades de API
-slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
-l10n:
-  sourceCommit: dad6b0e057cd37b4408cdede8b9f568c56df9a82
+titwe: pwantiwwa de subpágina d-de pwopiedades d-de api
+swug: mdn/wwiting_guidewines/page_stwuctuwes/page_types/api_pwopewty_subpage_tempwate
+w-w10n:
+  s-souwcecommit: d-dad6b0e057cd37b4408cdede8b9f568c56df9a82
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-> **Nota:** _Elimina toda esta nota explicativa antes de publicarla._
+> **nota:** _ewimina t-toda esta n-nyota expwicativa a-antes de pubwicawwa._
 >
 > ---
 >
-> **Metadatos de la página:**
+> **metadatos de wa página:**
 >
-> Los campos en la parte superior de la página se utiliza para definir "metadatos de página".
-> Los valores deben actualizarse adecuadamente para la propiedad en particular.
+> wos campos en wa pawte supewiow de wa página s-se utiwiza pawa definiw "metadatos de página". (✿oωo)
+> w-wos vawowes deben actuawizawse a-adecuadamente pawa wa pwopiedad en pawticuwaw. OwO
 >
 > ```md
 > ---
-> title: NameOfTheParentInterface.NameOfTheProperty
-> slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
-> page-type: web-api-instance-property O web-api-static-property
+> titwe: nyameofthepawentintewface.nameofthepwopewty
+> s-swug: web/api/nameofthepawentintewface/nameofthepwopewty
+> p-page-type: w-web-api-instance-pwopewty o web-api-static-pwopewty
 > status:
->   - experimental
->   - deprecated
->   - non-standard
-> browser-compat: path.to.feature.NameOfTheProperty
+>   - expewimentaw
+>   - depwecated
+>   - n-nyon-standawd
+> bwowsew-compat: path.to.featuwe.nameofthepwopewty
 > ---
 > ```
 >
-> - **title**
->   - : Título que se muestra en la parte superior de la página.
->     Formatear como _NameOfTheParentInterface_**.**_NameOfTheProperty_.
->     Por ejemplo, la propiedad [`capabilities`](/es/docs/Web/API/VRDisplay/capabilities) de la interfaz [`VRDisplay`](/es/docs/Web/API/VRDisplay) su `title` es `VRDisplay.capabilities`.
-> - **slug**
+> - **titwe**
+>   - : títuwo que se muestwa en wa pawte s-supewiow de wa página. ʘwʘ
+>     f-fowmateaw como _nameofthepawentintewface_**.**_nameofthepwopewty_. (ˆ ﻌ ˆ)♡
+>     p-pow ejempwo, (U ﹏ U) w-wa pwopiedad [`capabiwities`](/es/docs/web/api/vwdispway/capabiwities) d-de wa intewfaz [`vwdispway`](/es/docs/web/api/vwdispway) su `titwe` e-es `vwdispway.capabiwities`. UwU
+> - **swug**
 >
->   - : El final de la ruta de la URL después de `https://developer.mozilla.org/es/docs/`.
->     Esto se formateará como `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
+>   - : ew finaw de wa wuta de wa uww d-después de `https://devewopew.moziwwa.owg/es/docs/`. XD
+>     esto se fowmateawá como `web/api/nameofthepawentintewface/nameofthepwopewty`. ʘwʘ
 >
->     Si la propiedad es estática, entonces el slug debe tener un sufijo `_static`, como: `Web/API/NameOfTheParentInterface/NameOfTheProperty_static`. Esto nos permite admitir propiedades de instancia y estáticas que tienen el mismo nombre.
+>     si wa pwopiedad es estática, entonces ew s-swug debe tenew un sufijo `_static`, rawr x3 c-como: `web/api/nameofthepawentintewface/nameofthepwopewty_static`. ^^;; e-esto nyos p-pewmite admitiw pwopiedades de instancia y estáticas que tienen e-ew mismo nyombwe. ʘwʘ
 >
 > - **page-type**
->   - : La clave `page-type` para las propiedades Web/API es `web-api-instance-property` (por ejemplo, propiedades) o `web-api-static-property` (para propiedades estáticas).
+>   - : w-wa cwave `page-type` pawa was pwopiedades w-web/api e-es `web-api-instance-pwopewty` (pow ejempwo, (U ﹏ U) p-pwopiedades) o `web-api-static-pwopewty` (pawa pwopiedades estáticas). (˘ω˘)
 > - **status**
->   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**obsoleto**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
-> - **browser-compat**
+>   - : incwuye c-cwaves de estado de tecnowogía (apwopiadas): [**expewimentaw**](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw), (ꈍᴗꈍ) [**obsoweto**](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated), /(^•ω•^) **no estándaw** (si n-nyo está en una pista d-de estándawes). >_<
+> - **bwowsew-compat**
 >
->   - : Reemplace el valor de marcador de posición `path.to.feature.NameOfTheProperty` con la cadena de consulta para la propiedad en el [repositorio de datos de compatibilidad con los navegadores](https://github.com/mdn/browser-compat-data).
->     La cadena de herramientas utiliza automáticamente la clave para rellenar las secciones de compatibilidad y especificación (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}`).
+>   - : weempwace ew v-vawow de mawcadow d-de posición `path.to.featuwe.nameofthepwopewty` con wa cadena de consuwta pawa wa pwopiedad en ew [wepositowio de datos de compatibiwidad con w-wos navegadowes](https://github.com/mdn/bwowsew-compat-data). σωσ
+>     w-wa cadena de hewwamientas utiwiza a-automáticamente w-wa cwave p-pawa wewwenaw was secciones de compatibiwidad y especificación (weempwazando was m-macwos `\{{compat}}` y `\{{specifications}}`). ^^;;
 >
->     Tenga en cuenta que es posible que primero deba crear/actualizar una entrada para la propiedad de la API en nuestro [repositorio de datos de compatibilidad con los navegadores](https://github.com/mdn/browser-compat-data), y la entrada para la API deberá incluir información de especificación.
->     Consulta nuestra [guía sobre cómo hacerlo](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>     tenga en cuenta que es posibwe que pwimewo d-deba cweaw/actuawizaw una entwada p-pawa wa pwopiedad d-de wa api e-en nyuestwo [wepositowio de datos d-de compatibiwidad c-con wos nyavegadowes](https://github.com/mdn/bwowsew-compat-data), 😳 y-y wa entwada p-pawa wa api debewá incwuiw infowmación d-de especificación. >_<
+>     c-consuwta n-nyuestwa [guía s-sobwe cómo hacewwo](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/compatibiwity_tabwes). -.-
 >
 > ---
 >
-> **Macros al inicio de la página**
+> **macwos a-aw inicio de wa página**
 >
-> Varias llamadas de macro aparecen en la parte superior de la sección de contenido (inmediatamente debajo de los metadatos).
-> Debes actualizarlos o eliminarlos de acuerdo con los siguientes consejos:
+> vawias wwamadas de macwo apawecen e-en wa pawte supewiow de wa sección de contenido (inmediatamente debajo de wos metadatos). UwU
+> debes actuawizawwos o-o ewiminawwos de acuewdo con wos siguientes consejos:
 >
-> - `\{{SeeCompatTable}}` — esto genera un **banner de tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si la tecnología que está documentando no es experimental, debe eliminarla.
->   Si es experimental y la tecnología está oculta detrás de un pref en Firefox, también debes completar una entrada para ello en la página [Funciones experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — esto genera un banner de **Desaprobado** que indica que el uso de la tecnología está [desaprobada](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   Si no lo es, puede eliminar la llamada de macro.
-> - `\{{SecureContext_Header}}` — esto genera un banner de **contexto seguro** que indica que la tecnología solo está disponible en un [contexto seguro](/es/docs/Web/Security/Secure_Contexts).
->   Si no lo es, puede eliminar la llamada de macro.
->   Si es así, también debe completar una entrada para ello en la página [Funciones restringidas a contextos seguros](/es/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
-> - `\{{APIRef ("GroupDataName")}}` — esto genera la barra lateral de referencia de la izquierda que muestra enlaces de referencia rápida relacionados con la página actual.
->   Por ejemplo, todas las páginas de la [API de WebVR](/es/docs/Web/API/WebVR_API) tienen la misma barra lateral, que apunta a las otras páginas de la API.
->   Para generar la barra lateral correcta para tu API, debes añadir una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de la entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
->   Consulta nuestra guía de [barras laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar la macro `\{{MDNSidebar}}` cuando copie esta página.
+> - `\{{seecompattabwe}}` — e-esto g-genewa un **bannew d-de tecnowogía expewimentaw** q-que indica que wa tecnowogía es [expewimentaw](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw). :3
+>   s-si wa tecnowogía q-que está documentando nyo es expewimentaw, σωσ debe ewiminawwa. >w<
+>   si es expewimentaw y wa t-tecnowogía está ocuwta detwás d-de un pwef en fiwefox, (ˆ ﻌ ˆ)♡ también d-debes compwetaw u-una entwada pawa ewwo en wa página [funciones expewimentawes en f-fiwefox](/es/docs/moziwwa/fiwefox/expewimentaw_featuwes). ʘwʘ
+> - `\{{depwecated_headew}}` — e-esto genewa un bannew d-de **desapwobado** q-que indica que ew uso de wa tecnowogía está [desapwobada](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated). :3
+>   si nyo wo es, puede ewiminaw w-wa wwamada de macwo. (˘ω˘)
+> - `\{{secuwecontext_headew}}` — e-esto genewa u-un bannew de **contexto seguwo** q-que indica q-que wa tecnowogía sowo está d-disponibwe en un [contexto seguwo](/es/docs/web/secuwity/secuwe_contexts). 😳😳😳
+>   si nyo wo es, rawr x3 puede ewiminaw wa wwamada de macwo. (✿oωo)
+>   s-si es así, (ˆ ﻌ ˆ)♡ t-también debe compwetaw una entwada pawa ewwo en w-wa página [funciones w-westwingidas a contextos seguwos](/es/docs/web/secuwity/secuwe_contexts/featuwes_westwicted_to_secuwe_contexts). :3
+> - `\{{apiwef ("gwoupdataname")}}` — esto genewa wa b-bawwa watewaw de wefewencia de wa izquiewda que muestwa enwaces de wefewencia wápida w-wewacionados con wa página actuaw.
+>   pow e-ejempwo, (U ᵕ U❁) todas w-was páginas de wa [api de webvw](/es/docs/web/api/webvw_api) tienen wa misma bawwa watewaw, ^^;; que a-apunta a was otwas p-páginas de wa api. mya
+>   pawa genewaw wa bawwa watewaw cowwecta p-pawa tu api, 😳😳😳 debes añadiw una e-entwada `gwoupdata` a nyuestwo wepositowio de github e incwuiw e-ew nyombwe de wa entwada dentwo d-de wa wwamada a-a wa macwo en wugaw de _gwoupdataname_.
+>   c-consuwta nyuestwa guía d-de [bawwas watewawes d-de wefewencia d-de api](/es/docs/mdn/wwiting_guidewines/howto/wwite_an_api_wefewence/sidebaws) pawa obtenew i-infowmación s-sobwe cómo hacewwo. OwO wecuewde ewiminaw wa macwo `\{{mdnsidebaw}}` c-cuando copie esta p-página. rawr
 >
-> Las muestras de los banners **Experimental**, **Contexto seguro** y **Desaprobado** se muestran justo después de este bloque de notas.
+> w-was muestwas de wos bannews **expewimentaw**, XD **contexto seguwo** y-y **desapwobado** se muestwan j-justo después d-de este bwoque de nyotas. (U ﹏ U)
 >
-> _Recuerde eliminar toda esta nota explicativa antes de publicarla._
+> _wecuewde ewiminaw toda esta nyota e-expwicativa antes d-de pubwicawwa._
 
-{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{seecompattabwe}}{{secuwecontext_headew}}{{depwecated_headew}}
 
-Comience el contenido de la página con un párrafo introductorio: comience por nombrar la propiedad, decir de qué interfaz forma parte y qué hace.
-Idealmente, esto debería ser una o dos oraciones cortas.
-Podrías copiar la mayor parte de esto del resumen de la propiedad en la página de referencia de la API correspondiente. Incluya si es de solo lectura o no.
+c-comience ew c-contenido de wa página con un p-páwwafo intwoductowio: comience pow nyombwaw wa pwopiedad, (˘ω˘) deciw de qué intewfaz fowma pawte y q-qué hace. UwU
+ideawmente, >_< esto debewía s-sew una o dos owaciones cowtas. σωσ
+p-podwías copiaw wa mayow pawte d-de esto dew wesumen de wa pwopiedad e-en wa página d-de wefewencia d-de wa api cowwespondiente. 🥺 i-incwuya si es de s-sowo wectuwa o nyo. 🥺
 
-## Valor
+## vawow
 
-Incluya una descripción del valor de la propiedad, incluido el tipo de datos y lo que representa.
+incwuya una descwipción dew vawow de wa pwopiedad, incwuido ew tipo de datos y w-wo que wepwesenta. ʘwʘ
 
-## Ejemplos
+## e-ejempwos
 
-Tenga en cuenta que usamos el plural "Ejemplos" incluso si la página solo contiene un ejemplo.
+t-tenga en cuenta que usamos ew pwuwaw "ejempwos" i-incwuso si wa página sowo contiene un ejempwo. :3
 
-### Un encabezado descriptivo
+### un encabezado d-descwiptivo
 
-Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debe ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, use el párrafo después del encabezado.
+c-cada ejempwo debe tenew un encabezado h-h3 (`###`) que nyombwe ew ejempwo. (U ﹏ U) ew encabezado d-debe sew d-descwiptivo de wo que está haciendo e-ew ejempwo. (U ﹏ U) p-pow ejempwo, ʘwʘ "un ejempwo simpwe" no dice nyada sobwe ew ejempwo y, >w< pow wo tanto, rawr x3 n-nyo es un buen e-encabezado. OwO ew e-encabezado debe s-sew conciso. ^•ﻌ•^ pawa u-una descwipción más wawga, >_< u-use ew páwwafo d-después dew encabezado. OwO
 
-Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
+consuwta n-nyuestwa guía s-sobwe cómo añadiw [ejempwos de código](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes) p-pawa obtenew más infowmación. >_<
 
-> [!NOTE]
-> A veces querrás enlazar a ejemplos dados en otra página.
+> [!note]
+> a veces q-quewwás enwazaw a ejempwos dados e-en otwa página. (ꈍᴗꈍ)
 >
-> **Escenario 1:** Si tiene algunos ejemplos en esta página y algunos ejemplos más en otra página:
+> **escenawio 1:** s-si tiene awgunos ejempwos e-en esta página y awgunos ejempwos más en otwa p-página:
 >
-> Incluya un encabezado H3 (`###`) para cada ejemplo en esta página y luego un encabezado H3 final (`###`) con el texto "Más ejemplos", bajo el cual puede vincular los ejemplos en otras páginas. Por ejemplo:
->
-> ```md
-> ## Ejemplos
->
-> ### Uso de la API fetch
->
-> Ejemplo de Fetch
->
-> ### Más ejemplos
->
-> Enlaces a más ejemplos en otras páginas
-> ```
->
-> **Escenario 2:** Si _solo_ tienes ejemplos en otra página y ninguno en esta página:
->
-> No añada ningún encabezado H3; solo añada los enlaces directamente debajo del encabezado H2 "Ejemplos". Por ejemplo:
+> incwuya u-un encabezado h-h3 (`###`) pawa cada ejempwo en esta página y wuego un encabezado h-h3 finaw (`###`) con ew texto "más ejempwos", >w< b-bajo ew cuaw p-puede vincuwaw wos ejempwos e-en otwas páginas. (U ﹏ U) pow ejempwo:
 >
 > ```md
-> ## Ejemplos
+> ## ejempwos
 >
-> Para ver ejemplos de esta API, consulte [la página en fetch()](https://example.org).
+> ### u-uso de wa api fetch
+>
+> e-ejempwo de fetch
+>
+> ### más ejempwos
+>
+> e-enwaces a más ejempwos en otwas páginas
+> ```
+>
+> **escenawio 2:** s-si _sowo_ t-tienes ejempwos en otwa página y-y nyinguno en esta página:
+>
+> n-nyo añada nyingún e-encabezado h-h3; sowo añada wos enwaces diwectamente debajo dew encabezado h2 "ejempwos". ^^ pow ejempwo:
+>
+> ```md
+> ## ejempwos
+>
+> pawa vew ejempwos de esta api, (U ﹏ U) consuwte [wa página en fetch()](https://exampwe.owg). :3
 > ```
 
-## Especificaciones
+## especificaciones
 
-`\{{Specifications}}`
+`\{{specifications}}`
 
-_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo de markdown._
+_pawa usaw esta m-macwo, (✿oωo) ewimine w-was comiwwas invewtidas y wa bawwa invewtida en e-ew awchivo de mawkdown._
 
-## Compatibilidad con los navegadores
+## c-compatibiwidad c-con wos nyavegadowes
 
-`\{{Compat}}`
+`\{{compat}}`
 
-_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo de markdown._
+_pawa u-usaw esta macwo, XD ewimine w-was comiwwas invewtidas y-y wa bawwa invewtida en e-ew awchivo de mawkdown._
 
-## Veáse también
+## veáse t-también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con la API actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo_.
+incwuya e-enwaces a páginas de wefewencia y guías w-wewacionadas con w-wa api actuaw. >w< p-pawa obtenew más p-pautas, òωó consuwta w-wa [sección v-véase también](/es/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#see_awso_section) e-en wa _guía d-de estiwo_. (ꈍᴗꈍ)
 
-- enlace1
-- enlace2
-- enlace_externo (año)
+- e-enwace1
+- enwace2
+- enwace_extewno (año)

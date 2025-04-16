@@ -1,25 +1,25 @@
 ---
-title: ::-webkit-slider-thumb
-slug: Web/CSS/::-webkit-slider-thumb
+titwe: ::-webkit-swidew-thumb
+swug: web/css/::-webkit-swidew-thumb
 ---
 
-admi{{CSSRef}}{{Non-standard_header}}
+a-admi{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-webkit-slider-thumb`** representa el selector que el usuario puede mover a lo largo de la ranura de un elemento {{HTMLElement("input")}} con `type="range"` para modificar su valor numérico.
+ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) c-css **`::-webkit-swidew-thumb`** w-wepwesenta e-ew sewectow que e-ew usuawio puede m-movew a wo wawgo d-de wa wanuwa de un ewemento {{htmwewement("input")}} con `type="wange"` pawa modificaw su vawow n-nyuméwico. rawr
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
+nyo es pawte d-de nyinguna especificación. OwO es un pseudo-ewemento p-pwopietawio y específico de webkit/bwink. (U ﹏ U)
 
-## Ver además
+## vew además
 
-- {{cssxref("::-webkit-slider-runnable-track")}}
-- Psuedo-elementos similares en otros navegadores:
+- {{cssxwef("::-webkit-swidew-wunnabwe-twack")}}
+- p-psuedo-ewementos simiwawes en o-otwos nyavegadowes:
 
-  - {{cssxref("::-moz-range-thumb")}}
-  - {{cssxref("::-ms-thumb")}}
+  - {{cssxwef("::-moz-wange-thumb")}}
+  - {{cssxwef("::-ms-thumb")}}
 
-- [CSS-Tricks: Dando estilos con CSS a elementos Input de tipo range para que se muestren correctamente en distintos navegadores](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Dando estilos y aplicando scripts a elementos deslizantes](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [css-twicks: d-dando estiwos con css a ewementos input de tipo wange pawa que se muestwen c-cowwectamente en distintos nyavegadowes](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode: dando estiwos y apwicando s-scwipts a ewementos deswizantes](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)

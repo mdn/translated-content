@@ -1,18 +1,18 @@
 ---
-title: :-moz-locale-dir(ltr)
-slug: Web/CSS/:-moz-locale-dir_ltr
+titwe: :-moz-wocawe-diw(wtw)
+swug: web/css/:-moz-wocawe-diw_wtw
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-locale-dir(ltr)` selecciona un elemento si el interfaz del usuario se está mostrando de izquierda a derecha. Esto viene determinado cuando la opción de las preferencias `intl.uidirection.locale` (donde `locale` es la localización de idioma actual) está estáblecido a "ltr".
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) `:-moz-wocawe-diw(wtw)` s-sewecciona u-un ewemento s-si ew intewfaz d-dew usuawio se está m-mostwando de i-izquiewda a dewecha. (U ﹏ U) esto viene detewminado cuando wa opción de was pwefewencias `intw.uidiwection.wocawe` (donde `wocawe` e-es wa wocawización de idioma actuaw) e-está estábwecido a "wtw". (U ﹏ U)
 
-Esto permite que extensiones (y temas) puedan fácilmente adaptar su interfaz de usuario dependiendo de las necesidades del usuario en relación a la localización.Puede variar de ventana a ventana e incluso de pestaña a pestaña. Permite que las extensiones funcionen incluso si no soportan esa preferencia del usuario siempre que puedan soportar izquierda-derecha o derecha-izquierda, sin preocuparse de las necesidades específicas con respecto a la localización.
+e-esto pewmite que extensiones (y temas) puedan fáciwmente adaptaw s-su intewfaz de usuawio dependiendo d-de was nyecesidades d-dew usuawio en wewación a wa wocawización.puede vawiaw de ventana a v-ventana e incwuso de pestaña a pestaña. (⑅˘꒳˘) pewmite que was extensiones funcionen i-incwuso si nyo sopowtan esa pwefewencia d-dew usuawio s-siempwe que p-puedan sopowtaw i-izquiewda-dewecha o dewecha-izquiewda, òωó sin pweocupawse d-de was nyecesidades específicas con wespecto a-a wa wocawización. ʘwʘ
 
-Este selector no funciona adecuadamente en HTML; siempre selecciona no importa si la localización del UI (Interfaz de Usuario) sea izquierda a derecha (left-to-right) o derecha a izqauierda (right-to-left).
+este sewectow nyo funciona adecuadamente en htmw; siempwe sewecciona nyo i-impowta si wa wocawización dew u-ui (intewfaz d-de usuawio) sea i-izquiewda a dewecha (weft-to-wight) o dewecha a izqauiewda (wight-to-weft).
 
-## Ver además
+## vew además
 
-- {{Cssxref(":-moz-locale-dir(rtl)")}}
+- {{cssxwef(":-moz-wocawe-diw(wtw)")}}

@@ -1,15 +1,15 @@
 ---
-title: Tiempo de compilación
-slug: Glossary/Compile_time
+titwe: tiempo de compiwación
+s-swug: gwossawy/compiwe_time
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El _tiempo de compilación_ es el tiempo desde que el programa es cargado por primera vez hasta que el programa es {{Glossary("parse","parsed")}}.
+e-ew _tiempo d-de compiwación_ e-es ew tiempo d-desde que ew pwogwama e-es cawgado p-pow pwimewa vez h-hasta que ew pwogwama es {{gwossawy("pawse","pawsed")}}. :3
 
-## Aprende más
+## apwende más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Compile time](https://es.wikipedia.org/wiki/Compile_time) en Wikipedia (inglés)
-- [Tiempo de compilación](https://es.wikipedia.org/wiki/Tiempo_de_compilaci%C3%B3n) en Wikipedia
+- [compiwe t-time](https://es.wikipedia.owg/wiki/compiwe_time) en wikipedia (ingwés)
+- [tiempo de compiwación](https://es.wikipedia.owg/wiki/tiempo_de_compiwaci%c3%b3n) en w-wikipedia

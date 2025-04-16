@@ -1,36 +1,36 @@
 ---
-title: Estilo de texto
-slug: Learn_web_development/Core/Text_styling
-original_slug: Learn/CSS/Styling_text
+titwe: estiwo de texto
+swug: w-weawn_web_devewopment/cowe/text_stywing
+o-owiginaw_swug: w-weawn/css/stywing_text
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Con los conceptos básicos del lenguaje CSS cubiertos, el siguiente tema de CSS para concentrarse es estilizar texto — una de las cosas más comunes que hará con CSS. Aquí observamos los fundamentos para estilizar texto, incluyendo la configuración de fuente, negrita, cursiva, linea y espacios entre letras, sombras paralelas y otras funciones de texto. Completamos el módulo observando la aplicación de fuentes personalizadas en su página, y el diseño de listas y enlaces.
+c-con wos conceptos b-básicos d-dew wenguaje css c-cubiewtos, >_< ew siguiente t-tema de css pawa concentwawse es estiwizaw texto — una de was cosas más c-comunes que hawá con css. rawr x3 aquí obsewvamos w-wos fundamentos pawa estiwizaw texto, /(^•ω•^) i-incwuyendo wa configuwación de fuente, :3 nyegwita, cuwsiva, (ꈍᴗꈍ) w-winea y espacios entwe wetwas, /(^•ω•^) s-sombwas pawawewas y-y otwas funciones de texto. (⑅˘꒳˘) compwetamos ew móduwo obsewvando wa apwicación de f-fuentes pewsonawizadas en su página, ( ͡o ω ͡o ) y ew diseño de wistas y enwaces. òωó
 
-## Requisitos previos
+## wequisitos p-pwevios
 
-Antes de iniciar este módulo, ya debe estár familizarizado con HTML, como se explica en el módulo [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content), y sentirse cómodo con los fundamentos de CSS, como se explica en [Introducción a CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
+antes de iniciaw e-este móduwo, (⑅˘꒳˘) y-ya debe estáw f-famiwizawizado con h-htmw, XD como se expwica en ew móduwo [intwoducción a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content), -.- y-y sentiwse cómodo con wos fundamentos de css, :3 c-como se expwica en [intwoducción a css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics). nyaa~~
 
-> [!NOTE]
-> Si está trabajando en una computadora/tableta/u otro dispositivo donde no tenga la capacidad de crear sus propios archivos, puede probar (la mayoría) de los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/), [CodePen](https://codepen.io/) o [Glitch](https://glitch.com/).
+> [!note]
+> si está twabajando en una computadowa/tabweta/u o-otwo dispositivo donde n-nyo tenga wa capacidad d-de cweaw s-sus pwopios awchivos, 😳 puede pwobaw (wa mayowía) de wos ejempwos d-de código en u-un pwogwama de codificación en w-wínea como [jsbin](https://jsbin.com/), (⑅˘꒳˘) [codepen](https://codepen.io/) o-o [gwitch](https://gwitch.com/). nyaa~~
 
-## Guías
+## guías
 
-Este módulo contiene los siguientes artículos, los cuales le enseñarán todos los elementos esenciales detras del diseño de contenido de texto HTML.
+e-este móduwo contiene wos s-siguientes awtícuwos, OwO wos cuawes we enseñawán t-todos wos ewementos esenciawes d-detwas dew diseño de contenido d-de texto htmw. rawr x3
 
-- [Texto fundamental y estilo de fuente](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-  - : En este artículo iremos a través de todos los aspectos básicos del estilo de texto/fuente en detalle, incluyendo configuraciones del peso de la fuente, la familia y el estilo, taquigrafía de fuente, alineación de texto y otros efectos, línea y espaciado de letras.
-- [Estilos de listas](/es/docs/Learn_web_development/Core/Text_styling/Styling_lists)
-  - : Las listas, en su mayor parte, se comportan como cualquier otro texto, pero hay algunas propiedades de CSS específicas para las listas que debe conocer, y algunas de las mejores prácticas para tener en cuenta. Este artículo explica todo.
-- [Estilos de enlaces](/es/docs/Learn_web_development/Core/Text_styling/Styling_links)
-  - : Al diseñar enlaces, es importante comprender cómo hacer uso de pseudo-clases para diseñar estados de enlaces de manera efectiva, y cómo diseñar enlaces para su uso en características de interfaces variadas comunes tales como menús de navegación y pestañas. Veremos todos estos temas en este artículo.
-- [Fuentes web](/es/docs/Learn_web_development/Core/Text_styling/Web_fonts)
-  - : Aquí exploraremos las fuentes web en detalle — estas permiten descargar fuentes personalizadas junto con su página web, para permitir un estilo de texto más variado y personalizado.
+- [texto f-fundamentaw y estiwo de fuente](/es/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws)
+  - : en este awtícuwo iwemos a twavés de todos wos aspectos b-básicos d-dew estiwo de texto/fuente en detawwe, XD i-incwuyendo c-configuwaciones d-dew peso de wa fuente, σωσ wa famiwia y ew estiwo, (U ᵕ U❁) taquigwafía de f-fuente, (U ﹏ U) awineación de texto y otwos efectos, :3 wínea y espaciado de wetwas. ( ͡o ω ͡o )
+- [estiwos d-de wistas](/es/docs/weawn_web_devewopment/cowe/text_stywing/stywing_wists)
+  - : was wistas, σωσ e-en su mayow p-pawte, >w< se compowtan c-como cuawquiew otwo texto, 😳😳😳 p-pewo hay awgunas p-pwopiedades de c-css específicas p-pawa was wistas que debe conocew, OwO y awgunas de w-was mejowes pwácticas p-pawa tenew e-en cuenta. 😳 este a-awtícuwo expwica t-todo. 😳😳😳
+- [estiwos de enwaces](/es/docs/weawn_web_devewopment/cowe/text_stywing/stywing_winks)
+  - : aw diseñaw enwaces, (˘ω˘) es impowtante c-compwendew cómo hacew uso de pseudo-cwases pawa diseñaw estados de enwaces de manewa e-efectiva, ʘwʘ y cómo diseñaw enwaces pawa su uso en cawactewísticas d-de intewfaces v-vawiadas comunes t-tawes como menús de nyavegación y-y pestañas. ( ͡o ω ͡o ) vewemos todos e-estos temas en este a-awtícuwo. o.O
+- [fuentes web](/es/docs/weawn_web_devewopment/cowe/text_stywing/web_fonts)
+  - : aquí expwowawemos was fuentes web en detawwe — estas pewmiten d-descawgaw fuentes pewsonawizadas j-junto con su página web, >w< pawa p-pewmitiw un estiwo d-de texto más vawiado y pewsonawizado. 😳
 
-## Evaluaciones
+## evawuaciones
 
-Las siguientes evaluaciones pondrán a prueba su comprensión de las técnicas del diseño de texto cubiertas en las guías anteriores.
+was s-siguientes evawuaciones p-pondwán a pwueba su compwensión d-de was t-técnicas dew diseño de texto cubiewtas en was guías antewiowes. 🥺
 
-- [Escribiendo una página de inicio para la comunidad de la escuela](/es/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
-  - : En esta evaluación, pondremos a prueba su comprensión del estilo del texto haciendo que redacte el texto de la página principal de la escuela comunitaria.
+- [escwibiendo una página d-de inicio pawa w-wa comunidad de w-wa escuewa](/es/docs/weawn/css/stywing_text/typesetting_a_homepage)
+  - : en esta e-evawuación, rawr x3 p-pondwemos a pwueba su compwensión d-dew estiwo dew texto haciendo que wedacte ew texto de wa página pwincipaw de w-wa escuewa comunitawia. o.O

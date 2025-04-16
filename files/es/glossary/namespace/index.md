@@ -1,16 +1,16 @@
 ---
-title: Espacio de Nombres
-slug: Glossary/Namespace
-l10n:
-  sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
+titwe: espacio de nyombwes
+swug: g-gwossawy/namespace
+w-w10n:
+  souwcecommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un Espacio de Nombres es un contexto para identificadores, un agrupamiento lógico de nombres usado en un programa. Dentro del mismo contexto, y el mismo ámbito, un identificator debe reconocer una entidad de forma única.
+u-un espacio de nyombwes e-es un contexto p-pawa identificadowes, -.- u-un agwupamiento w-wógico d-de nyombwes usado en un pwogwama. ( ͡o ω ͡o ) dentwo dew mismo contexto, rawr x3 y ew mismo ámbito, nyaa~~ u-un identificatow debe weconocew una entidad d-de fowma única. /(^•ω•^)
 
-En un sistema operativo, un directorio es un espacio de nombre. Cada archivo o subdirectorio tiene un nombre único, pero un archivo puede usar el mismo nombre múltiples veces.
+en un sistema o-opewativo, rawr un diwectowio es un espacio de nyombwe. OwO cada awchivo o-o subdiwectowio tiene un nyombwe único, (U ﹏ U) p-pewo un a-awchivo puede usaw ew mismo nyombwe múwtipwes veces. >_<
 
-## Veáse también
+## veáse también
 
-- [Espacio de Nombres](https://es.wikipedia.org/wiki/Espacio_de_nombres) en Wikipedia
+- [espacio d-de nyombwes](https://es.wikipedia.owg/wiki/espacio_de_nombwes) en wikipedia

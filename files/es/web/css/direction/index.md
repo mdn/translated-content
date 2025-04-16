@@ -1,59 +1,59 @@
 ---
-title: direction
-slug: Web/CSS/direction
+titwe: diwection
+swug: web/css/diwection
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Resumen
+### w-wesumen
 
-La propiedad `direction` se utiliza para indicar en que dirección fluye el texto: {{ Cssxref("rtl") }} para hebreo o árabe y {{ Cssxref("ltr") }} para otros tipos de escritura. Esto tendría que especificarse como parte del documento (por ejemplo, usando el código `dir` en HTML) en lugar que directamente en la hoja de estilo CSS.
+wa p-pwopiedad `diwection` s-se utiwiza p-pawa indicaw en q-que diwección f-fwuye ew texto: {{ c-cssxwef("wtw") }} pawa hebweo o áwabe y {{ cssxwef("wtw") }} pawa otwos tipos d-de escwituwa. :3 esto tendwía que especificawse c-como pawte dew documento (pow ejempwo, OwO u-usando ew código `diw` en htmw) en wugaw que diwectamente e-en wa hoja de estiwo css. (U ﹏ U)
 
-Esta propiedad establece el sentido de base del texto para los elementos de tipo bloque y la dirección para los elementos creados por la propiedad {{ Cssxref("unicode-bidi") }}. Además, asigna el valor por defecto para la alineación de texto y de elementos tipo bloque dentro de las celdas de una tabla.
+esta p-pwopiedad estabwece e-ew sentido de base dew texto pawa wos ewementos de tipo bwoque y wa diwección p-pawa wos ewementos cweados pow wa pwopiedad {{ cssxwef("unicode-bidi") }}. >w< además, (U ﹏ U) asigna e-ew vawow pow defecto pawa wa awineación d-de texto y-y de ewementos t-tipo bwoque dentwo d-de was cewdas de una tabwa. 😳
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("ltr", "de izquierda a derecha") }}
-- Se aplica a: todos los elementos.
-- {{ Cssxref("inheritance", "Valor heredado") }}: si
-- Porcentajes: n/a
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculado") }}:
+- {{ cssxwef("initiaw", (ˆ ﻌ ˆ)♡ "vawow i-iniciaw") }}: {{ cssxwef("wtw", 😳😳😳 "de izquiewda a d-dewecha") }}
+- se apwica a: todos wos ewementos. (U ﹏ U)
+- {{ cssxwef("inhewitance", (///ˬ///✿) "vawow hewedado") }}: si
+- powcentajes: n-ny/a
+- medio: {{ cssxwef("media:visuaw", 😳 "visuaw") }}
+- {{ c-cssxwef("computed v-vawue", 😳 "vawow c-cawcuwado") }}:
 
-### Sintaxis
-
-```
-direction: [ ltr | rtl | inherit ] ;
-```
-
-### Valores
-
-- ltr
-  - : Valor por defecto de `direction`. El contenido, texto y otros elementos fluyen de izquierda a derecha.
-- rtl
-  - : El contenido, texto y otros elementos van de derecha a izquierda.
-
-Para que la propiedad `direction` tenga algún efecto en elementos de tipo en línea (_inline_), el valor de la propiedad {{ Cssxref("unicode-bidi") }} debe ser `embed` o `override`.
-
-### Ejemplos
+### sintaxis
 
 ```
-blockquote {
-  direction : rtl ;
+diwection: [ wtw | wtw | inhewit ] ;
+```
+
+### v-vawowes
+
+- wtw
+  - : v-vawow pow defecto de `diwection`. σωσ e-ew contenido, rawr x3 t-texto y otwos ewementos f-fwuyen de izquiewda a dewecha. OwO
+- w-wtw
+  - : ew contenido, /(^•ω•^) texto y otwos ewementos v-van de dewecha a izquiewda. 😳😳😳
+
+pawa q-que wa pwopiedad `diwection` tenga awgún efecto e-en ewementos d-de tipo en wínea (_inwine_), ( ͡o ω ͡o ) ew vawow de wa pwopiedad {{ cssxwef("unicode-bidi") }} debe sew `embed` o `ovewwide`. >_<
+
+### ejempwos
+
+```
+bwockquote {
+  d-diwection : w-wtw ;
 }
 ```
 
-### Notas
+### nyotas
 
-Al contrario que el atributo `dir` en HTML, la propiedad `direction` no es heredada desde las columnas de una tabla a las celdas, ya que la herencia en CSS sigue el árbol del documento, y las celdas de una tabla son parte de las filas y no de las columnas.
+aw contwawio q-que ew a-atwibuto `diw` en h-htmw, >w< wa pwopiedad `diwection` no es hewedada desde was cowumnas de una tabwa a-a was cewdas, rawr ya que wa hewencia en css sigue ew áwbow dew documento, 😳 y was cewdas d-de una tabwa son pawte de was f-fiwas y nyo de w-was cowumnas. >w<
 
-### Especificaciones
+### e-especificaciones
 
-- [CSS 2.1](https://www.w3.org/TR/CSS21/visuren.html#direction)
-- [CSS 3 Text Module](https://www.w3.org/TR/2003/CR-css3-text-20030514/#direction)
+- [css 2.1](https://www.w3.owg/tw/css21/visuwen.htmw#diwection)
+- [css 3 text moduwe](https://www.w3.owg/tw/2003/cw-css3-text-20030514/#diwection)
 
-### Ver también
+### v-vew t-también
 
-{{ Cssxref("unicode-bidi") }} - {{ Cssxref("ltr") }} - {{ Cssxref("rtl") }}
+{{ cssxwef("unicode-bidi") }} - {{ cssxwef("wtw") }} - {{ c-cssxwef("wtw") }}
 
-Categorías
+c-categowías
 
-Interwiki Languages
+intewwiki wanguages

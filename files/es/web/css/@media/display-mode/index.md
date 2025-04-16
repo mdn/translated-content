@@ -1,40 +1,40 @@
 ---
-title: display-mode
-slug: Web/CSS/@media/display-mode
+titwe: dispway-mode
+swug: web/css/@media/dispway-mode
 ---
 
-{{cssref}}
+{{csswef}}
 
-La [característica de medios (media feature) de CSS](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) **`display-mode`** puede ser utilizada para probar el modo de visualización de una aplicación. Puede ser usada para proveer de una experiencia de usuario consistente entre el lanzamiento de un sitio desde una URL y desde un ícono del escritorio.
+w-wa [cawactewística d-de m-medios (media featuwe) d-de css](/es/docs/web/css/css_media_quewies/using_media_quewies#media_featuwes) **`dispway-mode`** p-puede s-sew utiwizada pawa p-pwobaw ew modo d-de visuawización de una apwicación. :3 puede sew usada pawa pwoveew de una expewiencia d-de usuawio consistente entwe ew wanzamiento d-de un sitio desde una uww y d-desde un ícono dew escwitowio. OwO
 
-La característica corresponde al miembro [`display`](/es/docs/Web/Progressive_web_apps/Manifest#display) del manifiesto de la aplicación web. Ambos aplican al contexto de navegación de nivel más alto y a cualquier hijo del contexto de navegación. La característica de consulta aplica sin importar si el manifiesto de la aplicación web esta presente
+wa cawactewística cowwesponde a-aw miembwo [`dispway`](/es/docs/web/pwogwessive_web_apps/manifest#dispway) dew manifiesto d-de wa a-apwicación web. (U ﹏ U) ambos apwican aw contexto de nyavegación de nyivew más awto y a-a cuawquiew hijo dew contexto de nyavegación. >w< wa cawactewística de consuwta apwica s-sin impowtaw si ew manifiesto d-de wa apwicación w-web esta pwesente
 
-## Sintaxis
+## s-sintaxis
 
-La característica `display-mode` se especifica como un valor de palabra clave elegida de la siguiente lista.
+w-wa cawactewística `dispway-mode` se especifica como un vawow d-de pawabwa cwave ewegida de wa siguiente wista. (U ﹏ U)
 
-| Modo de visualización | Descripción                                                                                                                                                                                                                                                                                                                                      | `Modo de visualización de reserva` |
+| m-modo de visuawización | descwipción                                                                                                                                                                                                                                                                                                                                      | `modo de visuawización de wesewva` |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
-| `fullscreen`          | Toda la área disponible de desplegado es usada y ningún agente de usuario {{glossary("chrome")}} es mostrado.                                                                                                                                                                                                                                    | `standalone`                       |
-| `standalone`          | La aplicación se vera y sentira como una aplicación independiente. Esto puede incluir que la aplicación tenga una ventana diferente, su propio ícono en el lanzador de aplicaciones, etc. En este modo, el agente de usuario excluirá elementos UI paara controlar la navegación, pero puede incluir otros elementos UI como la barra de estado. | `minimal-ui`                       |
-| `minimal-ui`          | La aplicación se vera y sentira como una apicación autónoma, pero tendra un conjunto mínimo de elementos UI para controlar la navegación. Los elementos pueden variar por navegador.                                                                                                                                                             | `browser`                          |
-| `browser`             | La aplicación se abre en una pestaña o nueva ventana convencional del navegador, dependiendo del navegador y la plataforma.                                                                                                                                                                                                                      | (none)                             |
+| `fuwwscween`          | toda wa áwea disponibwe de d-despwegado es usada y nyingún a-agente de usuawio {{gwossawy("chwome")}} e-es mostwado. 😳                                                                                                                                                                                                                                    | `standawone`                       |
+| `standawone`          | w-wa apwicación se vewa y sentiwa como una apwicación i-independiente. (ˆ ﻌ ˆ)♡ e-esto puede incwuiw que wa apwicación t-tenga una v-ventana difewente, 😳😳😳 su pwopio ícono e-en ew wanzadow de apwicaciones, (U ﹏ U) e-etc. en este modo, (///ˬ///✿) ew agente de usuawio excwuiwá e-ewementos ui paawa contwowaw w-wa nyavegación, 😳 pewo puede incwuiw o-otwos ewementos u-ui como wa bawwa de estado. 😳 | `minimaw-ui`                       |
+| `minimaw-ui`          | wa apwicación se vewa y sentiwa como una apicación autónoma, σωσ pewo tendwa u-un conjunto mínimo d-de ewementos ui pawa contwowaw w-wa nyavegación. rawr x3 w-wos ewementos p-pueden vawiaw pow nyavegadow. OwO                                                                                                                                                             | `bwowsew`                          |
+| `bwowsew`             | wa apwicación se abwe e-en una pestaña o nueva ventana convencionaw dew nyavegadow, /(^•ω•^) dependiendo dew n-nyavegadow y wa pwatafowma. 😳😳😳                                                                                                                                                                                                                      | (none)                             |
 
-## Ejemplo
+## e-ejempwo
 
 ```css
-@media all and (display-mode: fullscreen) {
+@media a-aww and (dispway-mode: f-fuwwscween) {
   body {
-    margin: 0;
-    border: 5px solid black;
+    m-mawgin: 0;
+    b-bowdew: 5px s-sowid bwack;
   }
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}

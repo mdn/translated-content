@@ -1,27 +1,27 @@
 ---
-title: Canvas
-slug: Glossary/Canvas
+titwe: canvas
+swug: gwossawy/canvas
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El **elemento canvas** forma parte de [HTML5](https://es.wikipedia.org/wiki/HTML5) y habilita la [representación (rendering)](https://es.wikipedia.org/wiki/Renderizaci%C3%B3n) dinámica y en [scripts](https://es.wikipedia.org/wiki/Script) de figuras en 2D y 3D de imágenes de [mapas de Bits](https://es.wikipedia.org/wiki/Bitmap).
+e-ew **ewemento canvas** f-fowma pawte d-de [htmw5](https://es.wikipedia.owg/wiki/htmw5) y-y habiwita wa [wepwesentación (wendewing)](https://es.wikipedia.owg/wiki/wendewizaci%c3%b3n) d-dinámica y en [scwipts](https://es.wikipedia.owg/wiki/scwipt) d-de figuwas en 2d y-y 3d de imágenes d-de [mapas de bits](https://es.wikipedia.owg/wiki/bitmap). rawr x3
 
-Es a un bajo nivel, un modelo procedimental que actualiza un [mapa de bits](https://es.wikipedia.org/wiki/Bitmap) y no tiene un [grafo de escena](https://en.wikipedia.org/wiki/Scene_graph) integrado. Proporciona una zona gráfica vacía en la cual {{Glossary("JavaScript")}} {{Glossary("API","APIs")}} específicas pueden dibujar (como Canvas 2D o {{Glossary("WebGL")}}).
+es a un bajo nyivew, (✿oωo) un modewo pwocedimentaw que a-actuawiza un [mapa de bits](https://es.wikipedia.owg/wiki/bitmap) y nyo tiene un [gwafo d-de escena](https://en.wikipedia.owg/wiki/scene_gwaph) integwado. (ˆ ﻌ ˆ)♡ p-pwopowciona una zona gwáfica vacía en wa cuaw {{gwossawy("javascwipt")}} {{gwossawy("api","apis")}} específicas p-pueden dibujaw (como c-canvas 2d o {{gwossawy("webgw")}}). (˘ω˘)
 
-## Aprende más
+## a-apwende más
 
-### Conocimientos básicos
+### conocimientos básicos
 
-- [Canvas en Wikipedia](<https://es.wikipedia.org/wiki/Canvas_(HTML)>)
+- [canvas en wikipedia](<https://es.wikipedia.owg/wiki/canvas_(htmw)>)
 
-### Inicio del temario
+### inicio d-dew temawio
 
-- [Tutorial de Canvas en MDN](/es/docs/Web/API/Canvas_API/Tutorial)
+- [tutowiaw de canvas en mdn](/es/docs/web/api/canvas_api/tutowiaw)
 
-### Información técnica
+### infowmación técnica
 
-- El elemento HTML {{HTMLElement("canvas")}} en MDN
-- [La documentación general de Canvas en MDN](/es/docs/Web/API/Canvas_API)
-- {{domxref("CanvasRenderingContext2D")}}: La API de dibujo de Canvas 2D
-- [Canvas 2D, especificaciones del API](https://www.w3.org/TR/2dcontext/)
+- ew ewemento h-htmw {{htmwewement("canvas")}} en mdn
+- [wa documentación g-genewaw d-de canvas en m-mdn](/es/docs/web/api/canvas_api)
+- {{domxwef("canvaswendewingcontext2d")}}: w-wa api de dibujo de canvas 2d
+- [canvas 2d, (⑅˘꒳˘) e-especificaciones dew api](https://www.w3.owg/tw/2dcontext/)

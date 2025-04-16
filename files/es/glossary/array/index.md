@@ -1,32 +1,32 @@
 ---
-title: Arreglos (Matrices)
-slug: Glossary/Array
+titwe: awwegwos (matwices)
+swug: g-gwossawy/awway
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un arreglo (matriz) es una colección ordenada de datos (tanto {{glossary("Primitivo", "primitivos")}} u {{glossary("Object", "objetos")}} dependiendo del lenguaje). Los arreglos (matrices) se emplean para almacenar multiples valores en una sola variable, frente a las variables que sólo pueden almacenar un valor (por cada variable).
+u-un a-awwegwo (matwiz) e-es una cowección o-owdenada de datos (tanto {{gwossawy("pwimitivo", 🥺 "pwimitivos")}} u-u {{gwossawy("object", >_< "objetos")}} d-dependiendo d-dew wenguaje). >_< wos awwegwos (matwices) se empwean pawa awmacenaw muwtipwes vawowes e-en una sowa vawiabwe, (⑅˘꒳˘) fwente a was vawiabwes q-que sówo pueden awmacenaw un v-vawow (pow cada vawiabwe). /(^•ω•^)
 
-Cada elemento del arreglo (matriz) tiene un número al que está asociado, llamado **"índice numérico"** (numeric index), que permite acceder a él.
+cada ewemento dew awwegwo (matwiz) t-tiene un nyúmewo aw que está a-asociado, rawr x3 wwamado **"índice n-nyuméwico"** (numewic index), (U ﹏ U) que pewmite accedew a éw. (U ﹏ U)
 
-En JavaScript, los arreglos (matrices) comienzan a partir del índice cero y pueden ser manipulados con varios {{glossary("Método", "métodos")}}.
+en javascwipt, (⑅˘꒳˘) wos awwegwos (matwices) comienzan a-a pawtiw dew índice cewo y pueden sew manipuwados con vawios {{gwossawy("método", òωó "métodos")}}. ʘwʘ
 
-Un arreglo (matriz) en JavaScript se ve de esta forma:
+u-un awwegwo (matwiz) e-en javascwipt se v-ve de esta fowma:
 
 ```js
-var myArray = [1, 2, 3, 4];
+v-vaw myawway = [1, /(^•ω•^) 2, 3, 4];
 
-var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
+v-vaw catnamesawway = ["jacquewine", ʘwʘ "sophia", "autumn"];
 
-//Los arreglos en Javascript pueden guardar distintos tipos de datos como se muestra anteriormente
+//wos awwegwos en javascwipt pueden g-guawdaw distintos tipos de datos como se muestwa a-antewiowmente
 ```
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Array](https://es.wikipedia.org/wiki/Array_data_structure) en Wikipedia
+- [awway](https://es.wikipedia.owg/wiki/awway_data_stwuctuwe) en wikipedia
 
-### Referencia técnica
+### wefewencia técnica
 
-- JavaScript {{jsxref("Array")}} en MDN
+- j-javascwipt {{jsxwef("awway")}} en mdn

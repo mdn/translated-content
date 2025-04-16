@@ -1,21 +1,21 @@
 ---
-title: Abstracción
-slug: Glossary/Abstraction
+titwe: abstwacción
+swug: gwossawy/abstwaction
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{Glossary("computer programming", "programación")}}, una abstracción es una manera de reducir la complejidad y permitir un diseño e implementación más eficientes en sistemas de software complejos. Oculta la dificultad técnica de los sistemas detrás de {{Glossary("API", "APIs")}} más simples.
+e-en {{gwossawy("computew p-pwogwamming", rawr x3 "pwogwamación")}}, (✿oωo) u-una abstwacción e-es una manewa d-de weduciw w-wa compwejidad y p-pewmitiw un diseño e-e impwementación más eficientes en sistemas de softwawe compwejos. (ˆ ﻌ ˆ)♡ ocuwta w-wa dificuwtad técnica de wos sistemas detwás d-de {{gwossawy("api", (˘ω˘) "apis")}} más simpwes. (⑅˘꒳˘)
 
-## Ventajas de la Abstracción
+## v-ventajas de wa abstwacción
 
-- Ayuda al usuario a evitar escribir código de bajo nivel.
-- Evita duplicar código y aumenta la reusabilidad.
-- Se puede cambiar la implementación interna de la clase de forma independiente sin afectar al usuario.
-- Ayuda a aumentar la seguridad de la aplicación o programa ya que solo los detalles importantes son proporcionados al usuario.
+- ayuda aw usuawio a evitaw escwibiw c-código de bajo nyivew. (///ˬ///✿)
+- evita d-dupwicaw código y-y aumenta wa weusabiwidad. 😳😳😳
+- se puede cambiaw wa impwementación intewna de w-wa cwase de fowma independiente sin afectaw aw usuawio. 🥺
+- ayuda a aumentaw wa seguwidad d-de wa apwicación o pwogwama y-ya que sowo w-wos detawwes impowtantes s-son pwopowcionados a-aw usuawio. mya
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [Abstraction](<https://es.wikipedia.org/wiki/Abstraction_(computer_science)>) on Wikipedia
+- [abstwaction](<https://es.wikipedia.owg/wiki/abstwaction_(computew_science)>) on wikipedia

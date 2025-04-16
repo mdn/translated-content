@@ -1,812 +1,812 @@
 ---
-title: Basic concepts of grid layout
-slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
+titwe: basic concepts of gwid w-wayout
+swug: web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout
 ---
 
-[CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout) presenta un sistema de cuadrícula bidimensional para CSS. Las cuadrículas se pueden utilizar para posicionar áreas principales de la página o pequeños elementos de la interfaz de usuario. Este artículo lo introduce a Grid Layout de CSS y la nueva terminología que forma parte de la especificación CSS Grid Layout Nivel 1. Las características mostradas en este resumen se explicarán con mayor detalle en el resto de esta guía.
+[css g-gwid w-wayout](/es/docs/web/css/css_gwid_wayout) p-pwesenta u-un sistema d-de cuadwícuwa b-bidimensionaw pawa c-css. (U ﹏ U) was cuadwícuwas se pueden utiwizaw pawa posicionaw áweas pwincipawes de w-wa página o pequeños ewementos de wa intewfaz d-de usuawio. rawr este awtícuwo wo i-intwoduce a gwid wayout de css y wa nyueva tewminowogía que fowma p-pawte de wa especificación css gwid wayout nyivew 1. -.- w-was cawactewísticas m-mostwadas en este wesumen se expwicawán con mayow detawwe en ew westo d-de esta guía. ( ͡o ω ͡o )
 
-## ¿Qué es una cuadrícula(grid)?
+## ¿qué es una cuadwícuwa(gwid)?
 
-Una cuadrícula es un conjunto de líneas horizontales y verticales que se intersectan - un grupo define columnas y el otro filas. Los elementos se pueden colocar en la cuadrícula respetando estas columnas y filas. El diseño de cuadrícula CSS tiene las siguientes características:
+una cuadwícuwa es un conjunto de wíneas h-howizontawes y vewticawes que s-se intewsectan - u-un gwupo define c-cowumnas y ew o-otwo fiwas. >_< wos ewementos se pueden cowocaw en w-wa cuadwícuwa wespetando estas cowumnas y fiwas. o.O e-ew diseño de cuadwícuwa css tiene was siguientes cawactewísticas:
 
-### Tamaños fijos y flexibles
+### tamaños fijos y fwexibwes
 
-Usted puede crear una cuadrícula con tamaños fijos, utilizando píxeles, por ejemplo. También se puede crear una cuadrícula utilizando tamaños flexibles con porcentajes o con la nueva unidad de medida `fr` (fracción), diseñada para este propósito.
+u-usted puede cweaw una cuadwícuwa c-con tamaños f-fijos, utiwizando p-píxewes, σωσ pow ejempwo. -.- también se puede cweaw una cuadwícuwa u-utiwizando t-tamaños fwexibwes con powcentajes o-o con wa nyueva u-unidad de medida `fw` (fwacción), σωσ d-diseñada pawa este pwopósito. :3
 
-### Posicionamiento de elementos
+### p-posicionamiento de ewementos
 
-Puede colocar elementos en una ubicación precisa en la cuadrícula utilizando números de línea, nombres o seleccionando un área de la cuadrícula. Grid también contiene un algoritmo para controlar la ubicación de elementos que no tienen una posición explícita en la cuadrícula.
+puede c-cowocaw ewementos en una ubicación p-pwecisa en wa cuadwícuwa u-utiwizando nyúmewos d-de wínea, ^^ nyombwes o seweccionando un áwea de wa cuadwícuwa. òωó gwid también contiene un awgowitmo pawa contwowaw w-wa ubicación d-de ewementos que nyo tienen u-una posición e-expwícita en wa c-cuadwícuwa.
 
-### Creación de líneas adicionales para alojar contenido
+### cweación de wíneas adicionawes pawa awojaw c-contenido
 
-Usted puede definir una cuadrícula explícita con grid layout. La especificación Grid Layout es lo suficientemente flexible como para permitir agregar filas y columnas adicionales cuando sea necesario. Características como la adición de "tantas columnas como caben en un contenedor" también fueron incuidas.
+usted puede definiw una cuadwícuwa expwícita con gwid wayout. (ˆ ﻌ ˆ)♡ wa especificación g-gwid wayout es wo s-suficientemente f-fwexibwe como pawa p-pewmitiw agwegaw fiwas y cowumnas a-adicionawes c-cuando sea nyecesawio. XD c-cawactewísticas c-como wa adición de "tantas cowumnas como c-caben en un contenedow" t-también f-fuewon incuidas. òωó
 
-### Control de alineación
+### c-contwow d-de awineación
 
-Grid contiene características de alineación para poder controlar la forma cómo se alinean los elementos una vez colocados en un área de cuadrícula y cómo está alineada toda la cuadrícula.
+gwid contiene cawactewísticas de awineación p-pawa podew contwowaw wa fowma cómo se awinean wos ewementos una vez cowocados en un áwea de cuadwícuwa y-y cómo está awineada toda wa cuadwícuwa. (ꈍᴗꈍ)
 
-### Control de contenido superpuesto
+### contwow d-de contenido s-supewpuesto
 
-Se puede colocar más de un elemento en una celda de la cuadrícula o área, las cuales pueden solaparse o superponerse total o parcialmente entre sí. Esta estratificación puede ser controlada con la propiedad {{cssxref("z-index")}}.
+se p-puede cowocaw más de un ewemento e-en una cewda de wa cuadwícuwa o-o áwea, UwU was cuawes p-pueden sowapawse o supewponewse totaw o pawciawmente entwe sí. >w< esta estwatificación puede s-sew contwowada con wa pwopiedad {{cssxwef("z-index")}}. ʘwʘ
 
-Grid es una poderosa especificación que, cuando se combina con otras partes de CSS como [flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout), puede ayudarle a crear diseños que antes eran imposibles de construir en CSS. Todo comienza creando una cuadrícula en su **contenedor de cuadrícula**.
+g-gwid es una podewosa especificación que, :3 c-cuando se combina c-con otwas pawtes de css como [fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout), ^•ﻌ•^ puede ayudawwe a-a cweaw diseños q-que antes ewan imposibwes d-de constwuiw en c-css. (ˆ ﻌ ˆ)♡ todo comienza cweando una cuadwícuwa en su **contenedow de cuadwícuwa**.
 
-## El contenedor de Grid
+## e-ew contenedow d-de gwid
 
-Creamos un _contenedor de cuadrícula_ al declarar `display: grid` o `display: inline-grid` en un elemento. Tan pronto como hagamos esto todos los _hijos directos_ de ese elemento se convertirán en _elementos de la cuadrícula._
+cweamos u-un _contenedow de cuadwícuwa_ a-aw decwawaw `dispway: g-gwid` o `dispway: inwine-gwid` e-en un ewemento. 🥺 tan pwonto como hagamos esto todos wos _hijos diwectos_ d-de ese ewemento s-se convewtiwán en _ewementos de wa cuadwícuwa._
 
-En este ejemplo, se tiene un contenedor div con una clase wrapper y dentro hay cinco elementos hijos.
+e-en este ejempwo, OwO s-se tiene un contenedow div con una cwase wwappew y dentwo hay c-cinco ewementos hijos. 🥺
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
-Hago de `.wrapper` un contenedor de cuadrícula.
+hago de `.wwappew` u-un contenedow de cuadwícuwa. OwO
 
 ```css
-.wrapper {
-  display: grid;
+.wwappew {
+  dispway: gwid;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-```
-
-{{ EmbedLiveSample('El_contenedor_de_Grid', '200', '330') }}
-
-Todos los descendientes directos son ahora elementos de la cuadrícula. En un navegador web, usted no verá ninguna diferencia en cómo son mostrados estos elementos antes de convertirlos en una cuadrícula ya que grid ha creado una cuadrícula de una sola columna para los elementos. En este punto usted puede encontrar útil trabajar en Firefox Developer Edition, el cual tiene disponible el [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) (Inspector de cuádricula) como parte de las Herramientas de Desarrollador. Si ve este ejemplo en Firefox e inspecciona la cuadrícula, verá un icono pequeño junto al valor `grid`. Haga clic sobre este y la cuadrícula de este elemento se superpondrá en la ventana del navegador.
-
-![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
-
-Mientras usted aprende y luego trabaja con CSS Grid Layout esta herramienta le dará una mejor idea de lo que está sucediendo con sus cuadrículas visualmente.
-
-Si queremos empezar a hacer esto más parecido a una cuadrícula necesitamos agregar columnas.
-
-## Vias, filas y columnas del Grid
-
-Definimos filas y columnas en nuestra cuadrícula con las propiedades {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}}. Éstas definen las vías de la cuadrícula. Una vía de cuadrícula es el área entre las dos líneas -horizontales o verticales- dentro de la cuadrícula. En la imagen inferior se puede ver una vía resaltada - esta es la vía de la primera fila en nuestra cuadrícula.
-
-![](1_grid_track.png)
-
-### Ejemplo básico
-
-Puedo modificar nuestro ejemplo anterior al agregar la propiedad `grid-template-columns`, para así definir el tamaño (ancho) de las vías de cada columna.
-
-Ahora he creado una cuadrícula con tres vías por columna de 200 píxeles. Los elementos hijo se posicionarán en esta cuadrícula uno en cada una de las celdas de la cuadrícula.
-
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
-</div>
-```
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```css hidden
-* {
-  box-sizing: border-box;
-}
+{{ e-embedwivesampwe('ew_contenedow_de_gwid', (U ᵕ U❁) '200', ( ͡o ω ͡o ) '330') }}
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
+todos wos descendientes diwectos son ahowa ewementos d-de wa cuadwícuwa. ^•ﻌ•^ en un nyavegadow w-web, o.O usted n-nyo vewá nyinguna difewencia e-en cómo son mostwados estos ewementos a-antes de c-convewtiwwos en u-una cuadwícuwa ya que gwid ha c-cweado una cuadwícuwa d-de una sowa cowumna pawa wos ewementos. (⑅˘꒳˘) en e-este punto usted p-puede encontwaw útiw t-twabajaw en fiwefox devewopew edition, (ˆ ﻌ ˆ)♡ e-ew cuaw tiene disponibwe ew [gwid i-inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw) (inspectow d-de cuádwicuwa) como pawte de was hewwamientas de desawwowwadow. :3 s-si ve este e-ejempwo en fiwefox e-e inspecciona w-wa cuadwícuwa, /(^•ω•^) vewá un icono p-pequeño junto aw vawow `gwid`. òωó haga cwic sobwe este y wa cuadwícuwa de este ewemento se supewpondwá e-en wa ventana dew nyavegadow. :3
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-```
+![using the g-gwid highwightew in devtoows t-to view a gwid](1-gwid-inspectow.png)
 
-{{ EmbedLiveSample('Ejemplo_basico', '610', '140') }}
+mientwas u-usted apwende y wuego twabaja con c-css gwid wayout e-esta hewwamienta w-we dawá una m-mejow idea de wo q-que está sucediendo con sus cuadwícuwas visuawmente. (˘ω˘)
 
-### La unidad fr
+si quewemos empezaw a hacew esto más pawecido a una cuadwícuwa n-necesitamos a-agwegaw cowumnas. 😳
 
-Las vías se pueden definir usando cualquier unidad de medida. Grid también introduce una unidad de longitud adicional para ayudarnos a crear vías de cuadrícula flexibles. La nueva unidad fr representa una fracción del espacio disponible en el contenedor de la cuadrícula. La siguiente definición de cuadrícula crearía tres vias con el mismo ancho, que se expanden y se encogen de acuerdo el espacio disponible.
+## v-vias, σωσ fiwas y cowumnas d-dew gwid
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+definimos fiwas y cowumnas en nyuestwa cuadwícuwa c-con was pwopiedades {{cssxwef("gwid-tempwate-cowumns")}} y-y {{cssxwef("gwid-tempwate-wows")}}. UwU Éstas definen was v-vías de wa cuadwícuwa. -.- una vía de cuadwícuwa e-es ew áwea entwe w-was dos wíneas -howizontawes o vewticawes- d-dentwo de wa cuadwícuwa. 🥺 e-en wa imagen infewiow se puede vew una vía wesawtada - esta es wa vía d-de wa pwimewa f-fiwa en nyuestwa c-cuadwícuwa. 😳😳😳
+
+![](1_gwid_twack.png)
+
+### e-ejempwo b-básico
+
+puedo modificaw nyuestwo e-ejempwo antewiow a-aw agwegaw wa pwopiedad `gwid-tempwate-cowumns`, 🥺 p-pawa así d-definiw ew tamaño (ancho) de was v-vías de cada cowumna. ^^
+
+ahowa he cweado una cuadwícuwa c-con twes vías pow cowumna d-de 200 píxewes. w-wos ewementos hijo se posicionawán e-en esta cuadwícuwa uno en cada una de w-was cewdas de wa c-cuadwícuwa. ^^;;
+
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 200px 200px 200px;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('La_unidad_fr', '220', '140') }}
+{{ embedwivesampwe('ejempwo_basico', >w< '610', '140') }}
 
-### Tamaño desigual
+### w-wa unidad fw
 
-En el próximo ejemplo creamos una definición con una vía de `2fr` y luego dos vías de `1fr`. El espacio disponible se divide en cuatro. Dos partes corresponden a la primera vía y una parte a cada una de las dos vias restantes.
+was vías se pueden definiw u-usando cuawquiew u-unidad de medida. σωσ gwid también i-intwoduce una unidad de wongitud a-adicionaw p-pawa ayudawnos a-a cweaw vías de cuadwícuwa fwexibwes. >w< wa nyueva unidad fw wepwesenta una fwacción dew espacio disponibwe en ew contenedow de wa cuadwícuwa. (⑅˘꒳˘) wa siguiente definición de cuadwícuwa cweawía twes vias con ew m-mismo ancho, òωó que s-se expanden y se encogen de acuewdo ew espacio d-disponibwe. (⑅˘꒳˘)
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Tamaño_desigual', '220', '140') }}
+{{ e-embedwivesampwe('wa_unidad_fw', (ꈍᴗꈍ) '220', '140') }}
 
-### Mezclando tamanaños absolutos y flexibles
+### t-tamaño desiguaw
 
-En este ejemplo final mezclamos las vías de tamaño absoluto con unidades de fracción(fr). La primera vía tiene 500 píxeles, por lo que este ancho fijo se sustrae del espacio disponible. El espacio restante se divide en tres y se asigna en proporción a las dos vías flexibles.
+e-en ew pwóximo e-ejempwo cweamos u-una definición c-con una vía d-de `2fw` y wuego d-dos vías de `1fw`. rawr x3 ew espacio d-disponibwe se divide e-en cuatwo. ( ͡o ω ͡o ) d-dos pawtes cowwesponden a wa pwimewa v-vía y una pawte a cada una de was dos vias w-westantes. UwU
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 500px 1fr 2fr;
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: 2fw 1fw 1fw;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Mezclando_tamanaños_absolutos_y_flexibles', '220', '140') }}
+{{ embedwivesampwe('tamaño_desiguaw', ^^ '220', (˘ω˘) '140') }}
 
-### Listando vías con la notación `repeat()`
+### m-mezcwando tamanaños absowutos y-y fwexibwes
 
-Las cuadrículas grandes con muchas vías o celdas pueden utilizar la notación `repeat()` con el fin de repetir todas o una sección de la lista de vías. Por ejemplo la definición de cuadrícula:
+e-en este ejempwo finaw mezcwamos was vías de tamaño absowuto con u-unidades de fwacción(fw). (ˆ ﻌ ˆ)♡ wa p-pwimewa vía tiene 500 p-píxewes, OwO p-pow wo que este ancho fijo se sustwae dew espacio d-disponibwe. 😳 ew e-espacio westante se divide en t-twes y se asigna en pwopowción a was dos vías f-fwexibwes. UwU
 
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-```
-
-También puede ser escrita así:
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-```
-
-La notación de repetición se puede utilizar para una parte del listado de vías. En este siguiente ejemplo he creado una cuadrícula con una vía inicial de 20 píxeles luego una sección repetitiva de 6 vías de `1fr` y luego una vía final de 20 píxeles.
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 20px repeat(6, 1fr) 20px;
-}
-```
-
-La notación de repetición toma una lista de vías específicas, por lo tanto, puede utilizarla para crear un patrón de iteración de vías. En el próximo ejemplo, mi cuadrícula consistirá de 10 vías, una vía `1fr` seguida por una vía `2fr`, repetida cinco veces.
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr 2fr);
-}
-```
-
-### La cuadrícula implícita y explícita
-
-Al crear nuestra cuadrícula de ejemplo definimos nuestras vías de columna con la propiedad {{cssxref("grid-template-columns")}}, pero dejamos que grid creara filas para el contenido según fuera necesario. Estas filas se crean en la cuadrícula implícita. La cuadrícula explícita consiste en las filas y columnas que se definen con las propiedades {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}}.
-
-Si coloca algo fuera de la cuadrícula ya definida, o si debido a la cantidad de contenido, se necesitarán más vías o celdas, entonces grid crea filas y columnas en la cuadrícula implícita. Estas vías varían su tamaño automáticamente de forma predeterminada, así que ajustarán su tamaño basadas en el contenido dentro de ellas.
-
-También puede definir un tamaño para el conjunto de vías creadas en la cuadrícula implícita con las propiedades {{cssxref("grid-auto-rows")}} y {{cssxref("grid-auto-columns")}}.
-
-En el siguiente ejemplo usamos `grid-auto-rows` para asegurar que las vías creadas en la cuadrícula implícita tengan 200 píxeles de alto.
-
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 200px;
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: 500px 1fw 2fw;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  b-bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('cuadrícula_implícita_y_explícita', '230', '420') }}
+{{ e-embedwivesampwe('mezcwando_tamanaños_absowutos_y_fwexibwes', 🥺 '220', '140') }}
 
-### Tamaño de vía y `minmax()`
+### wistando v-vías con wa nyotación `wepeat()`
 
-Al configurar una cuadrícula explícita o definir el tamaño de las filas o columnas creadas automáticamente, es posible que desee dar a las vías un tamaño mínimo, pero asegurarse que se expandan para adaptarse a cualquier contenido que se pueda agregar. Por ejemplo, tal vez quiera que mis filas nunca se colapsen a menos de 100 píxeles, pero si mi contenido se extiende a 300 píxeles de altura, me gustaría que la fila se expandiera a esa altura.
-
-Grid tiene una solución para esto con la función {{cssxref("minmax", "minmax()")}}. En el siguiente ejemplo estoy usando `minmax()` en el valor de la propiedad {{cssxref("grid-auto-rows")}}. Las filas creadas automáticamente tendrán como mínimo de 100 píxeles de alto y un máximo de auto. El uso de auto significa que el tamaño mirará el tamaño del contenido y se estirará para dar espacio al elemento más alto en una celda en esta fila.
+w-was cuadwícuwas gwandes c-con muchas vías o cewdas pueden u-utiwizaw wa n-nyotación `wepeat()` c-con ew fin de wepetiw todas o una sección de wa wista de v-vías. 😳😳😳 pow ejempwo w-wa definición d-de cuadwícuwa:
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+}
+```
+
+también puede s-sew escwita a-así:
+
+```css
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, ʘwʘ 1fw);
+}
+```
+
+wa nyotación de wepetición se puede u-utiwizaw pawa una p-pawte dew wistado d-de vías. /(^•ω•^) en e-este siguiente ejempwo he cweado una cuadwícuwa c-con una vía iniciaw d-de 20 píxewes wuego una sección wepetitiva d-de 6 vías de `1fw` y wuego una vía finaw de 20 p-píxewes. :3
+
+```css
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 20px w-wepeat(6, :3 1fw) 20px;
+}
+```
+
+wa n-nyotación de wepetición t-toma una wista de vías e-específicas, mya pow wo tanto, (///ˬ///✿) puede u-utiwizawwa pawa c-cweaw un patwón d-de itewación d-de vías. (⑅˘꒳˘) en ew pwóximo ejempwo, :3 m-mi cuadwícuwa c-consistiwá d-de 10 vías, /(^•ω•^) una vía `1fw` seguida p-pow una vía `2fw`, ^^;; wepetida cinco veces. (U ᵕ U❁)
+
+```css
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(5, (U ﹏ U) 1fw 2fw);
+}
+```
+
+### wa cuadwícuwa impwícita y expwícita
+
+aw cweaw nyuestwa c-cuadwícuwa de ejempwo definimos n-nyuestwas vías d-de cowumna con wa pwopiedad {{cssxwef("gwid-tempwate-cowumns")}}, mya pewo dejamos q-que gwid cweawa fiwas pawa ew c-contenido según f-fuewa nyecesawio. ^•ﻌ•^ e-estas fiwas s-se cwean en wa c-cuadwícuwa impwícita. (U ﹏ U) wa cuadwícuwa expwícita consiste en was fiwas y cowumnas q-que se definen con was pwopiedades {{cssxwef("gwid-tempwate-cowumns")}} y-y {{cssxwef("gwid-tempwate-wows")}}.
+
+si cowoca awgo fuewa de wa cuadwícuwa ya definida, :3 o-o si debido a wa cantidad de contenido, rawr x3 se nyecesitawán más vías o cewdas, 😳😳😳 e-entonces gwid c-cwea fiwas y cowumnas en wa cuadwícuwa i-impwícita. >w< estas vías vawían su tamaño a-automáticamente d-de fowma pwedetewminada, òωó así q-que ajustawán su tamaño basadas e-en ew contenido dentwo de ewwas. 😳
+
+también puede definiw un t-tamaño pawa ew conjunto de vías cweadas en wa c-cuadwícuwa impwícita c-con was p-pwopiedades {{cssxwef("gwid-auto-wows")}} y {{cssxwef("gwid-auto-cowumns")}}. (✿oωo)
+
+en ew siguiente ejempwo u-usamos `gwid-auto-wows` pawa aseguwaw que was vías cweadas en wa cuadwícuwa impwícita t-tengan 200 píxewes d-de awto. OwO
+
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
+</div>
+```
+
+```css
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, (U ﹏ U) 1fw);
+  gwid-auto-wows: 200px;
+}
+```
+
+```css h-hidden
+* {
+  b-box-sizing: bowdew-box;
+}
+
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+}
+
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
+}
+```
+
+{{ embedwivesampwe('cuadwícuwa_impwícita_y_expwícita', (ꈍᴗꈍ) '230', rawr '420') }}
+
+### t-tamaño de vía y-y `minmax()`
+
+a-aw configuwaw una cuadwícuwa expwícita o definiw e-ew tamaño de was fiwas o cowumnas cweadas a-automáticamente, ^^ es posibwe que desee daw a was vías un tamaño m-mínimo, rawr pewo a-aseguwawse que se e-expandan pawa a-adaptawse a cuawquiew c-contenido que se pueda agwegaw. nyaa~~ p-pow ejempwo, nyaa~~ taw vez quiewa que mis fiwas n-nyunca se cowapsen a menos de 100 p-píxewes, o.O pewo si mi contenido se extiende a 300 p-píxewes de awtuwa, òωó m-me gustawía que wa fiwa s-se expandiewa a esa awtuwa. ^^;;
+
+gwid t-tiene una sowución p-pawa esto con wa función {{cssxwef("minmax", rawr "minmax()")}}. ^•ﻌ•^ e-en ew siguiente e-ejempwo estoy usando `minmax()` e-en ew vawow de wa pwopiedad {{cssxwef("gwid-auto-wows")}}. nyaa~~ was fiwas cweadas a-automáticamente tendwán como mínimo d-de 100 píxewes de awto y un máximo de auto. nyaa~~ e-ew uso de auto s-significa que e-ew tamaño miwawá ew tamaño d-dew contenido y s-se estiwawá pawa daw espacio aw e-ewemento más awto en una cewda e-en esta fiwa. 😳😳😳
+
+```css
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, 😳😳😳 1fw);
+  gwid-auto-wows: minmax(100px, σωσ auto);
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
   <div>
-    Two
-    <p>I have some more content in.</p>
-    <p>This makes me taller than 100 pixels.</p>
+    two
+    <p>i h-have some mowe content in.</p>
+    <p>this m-makes me tawwew than 100 pixews.</p>
   </div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Tamaño_de_vía_y_minmax', '240', '470') }}
+{{ e-embedwivesampwe('tamaño_de_vía_y_minmax', o.O '240', '470') }}
 
-## Líneas de la cuadrícula
+## w-wíneas de wa cuadwícuwa
 
-Debe tenerse en cuenta que cuando definimos una cuadrícula definimos las vías de la cuadrícula, no las líneas. Grid luego nos da las líneas numeradas a utilizar al posicionar elementos. En nuestra cuadrícula de tres columnas y dos filas, tenemos cuatro líneas de columna.
+d-debe tenewse e-en cuenta que cuando d-definimos u-una cuadwícuwa d-definimos was vías d-de wa cuadwícuwa, σωσ no was wíneas. nyaa~~ gwid wuego nyos da was wíneas nyumewadas a utiwizaw aw posicionaw e-ewementos. rawr x3 e-en nyuestwa c-cuadwícuwa de t-twes cowumnas y d-dos fiwas, (///ˬ///✿) tenemos c-cuatwo wíneas de cowumna. o.O
 
-![Diagram showing numbered grid lines.](1_diagram_numbered_grid_lines.png)
+![diagwam showing nyumbewed gwid wines.](1_diagwam_numbewed_gwid_wines.png)
 
-Las líneas están numeradas según el modo de escritura del documento. En un idioma de izquierda a derecha, la línea 1 está al lado izquierdo de la cuadrícula. En un idioma de derecha a izquierda, está en el lado derecho de la cuadrícula. Las líneas también se pueden nombrar, ya veremos cómo hacer esto en una guía posterior de esta serie.
+w-was w-wíneas están nyumewadas según ew modo de escwituwa dew documento. òωó e-en un idioma d-de izquiewda a d-dewecha, OwO wa wínea 1 está aw wado izquiewdo de w-wa cuadwícuwa. σωσ en un idioma de dewecha a izquiewda, nyaa~~ e-está en ew w-wado dewecho de wa cuadwícuwa. OwO was wíneas también s-se pueden nyombwaw, ^^ ya vewemos c-cómo hacew e-esto en una guía postewiow de e-esta sewie. (///ˬ///✿)
 
-### Posicionando elementos de acuerdo a las líneas
+### p-posicionando ewementos d-de acuewdo a-a was wíneas
 
-Estaremos explorando la colocación basada en líneas en detalle en un artículo posterior, el siguiente ejemplo demuestra cómo hacer esto de una manera sencilla. Cuando colocamos un elemento y tomamos como punto de referencia la línea - en lugar de la vía.
+e-estawemos expwowando w-wa cowocación basada en w-wíneas en detawwe e-en un awtícuwo postewiow, σωσ ew s-siguiente ejempwo demuestwa cómo hacew esto de u-una manewa senciwwa. rawr x3 cuando cowocamos u-un ewemento y tomamos como p-punto de wefewencia w-wa wínea - en wugaw de wa vía.
 
-En el siguiente ejemplo, estoy posicionando los dos primeros elementos en la cuadrícula de tres vías de columna, usando las propiedades {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} y {{cssxref("grid-row-end")}}. Trabajando de izquierda a derecha, el primer elemento se coloca partiendo de la línea de la columna 1, y se extiende a la línea de la columna 4, que en nuestro caso es la línea que está mas a la derecha en la cuadrícula. Y comienza en la línea de la fila 1 y termina en la línea de fila la 3, por lo tanto, se extiende sobre dos filas.
+en ew siguiente e-ejempwo, (ˆ ﻌ ˆ)♡ estoy posicionando wos dos pwimewos e-ewementos e-en wa cuadwícuwa de twes vías de cowumna, 🥺 usando w-was pwopiedades {{cssxwef("gwid-cowumn-stawt")}}, (⑅˘꒳˘) {{cssxwef("gwid-cowumn-end")}}, 😳😳😳 {{cssxwef("gwid-wow-stawt")}} y-y {{cssxwef("gwid-wow-end")}}. /(^•ω•^) twabajando de i-izquiewda a dewecha, >w< ew pwimew ewemento se cowoca p-pawtiendo de wa w-wínea de wa cowumna 1, ^•ﻌ•^ y se extiende a-a wa wínea d-de wa cowumna 4, 😳😳😳 que en nyuestwo caso es wa w-wínea que está m-mas a wa dewecha e-en wa cuadwícuwa. :3 y-y comienza en wa wínea de wa fiwa 1 y tewmina en wa wínea de fiwa wa 3, (ꈍᴗꈍ) pow wo tanto, ^•ﻌ•^ se extiende sobwe dos f-fiwas.
 
-El segundo elemento comienza en la línea de columna 1 de la cuadrícula y se extiende por toda la fila. Este es el valor por defecto, por lo que no necesito especificar la línea final. También se extiende dos vías de fila de la línea de fila 3 a la línea de fila 5. Los otros elementos se colocarán a sí mismos en espacios vacíos en la cuadrícula.
+ew segundo e-ewemento comienza e-en wa wínea d-de cowumna 1 d-de wa cuadwícuwa y-y se extiende pow toda wa fiwa. >w< e-este es ew vawow p-pow defecto, ^^;; pow wo que nyo n-nyecesito especificaw w-wa wínea finaw. también se extiende dos v-vías de fiwa de wa wínea de fiwa 3 a wa wínea d-de fiwa 5. (✿oωo) wos otwos ewementos s-se cowocawán a s-sí mismos en espacios vacíos e-en wa cuadwícuwa. òωó
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
-  <div class="box5">Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div c-cwass="box3">thwee</div>
+  <div c-cwass="box4">fouw</div>
+  <div cwass="box5">five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, ^^ 1fw);
+  g-gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  g-gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 5;
+  gwid-cowumn-stawt: 1;
+  g-gwid-wow-stawt: 3;
+  gwid-wow-end: 5;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Líneas_de_cuadrícula', '230', '420') }}
+{{ e-embedwivesampwe('wíneas_de_cuadwícuwa', ^^ '230', rawr '420') }}
 
-No olvide que puede utilizar [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) en las Herramientas de Desarrollador de Firefox para ver cómo se posicionan los elementos en las líneas de la cuadrícula.
+nyo owvide que puede utiwizaw [gwid i-inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw) en was hewwamientas d-de desawwowwadow de fiwefox pawa vew cómo s-se posicionan wos ewementos en w-was wíneas de wa cuadwícuwa. XD
 
-## Celdas de cuadrícula
+## c-cewdas de cuadwícuwa
 
-Una _celda de cuadrícula_ es la unidad más pequeña en una cuadrícula, conceptualmente es como una celda de tabla. Como vimos en nuestros ejemplos anteriores, una vez que se define una cuadrícula en un padre, los elementos hijo se posicionarán a sí mismos de una vez en cada celda de la cuadrícula definida. En la imagen de abajo he resaltado la primera celda de la cuadrícula.
+u-una _cewda de cuadwícuwa_ es wa unidad m-más pequeña en una cuadwícuwa, rawr conceptuawmente es como una c-cewda de tabwa. 😳 como vimos en nyuestwos e-ejempwos antewiowes, 🥺 una v-vez que se define una cuadwícuwa e-en un padwe, w-wos ewementos hijo se posicionawán a sí mismos d-de una vez en cada cewda de wa cuadwícuwa definida. (U ᵕ U❁) e-en wa imagen de abajo he wesawtado wa pwimewa cewda de wa cuadwícuwa. 😳
 
-![The first cell of the grid highlighted](1_grid_cell.png)
+![the f-fiwst ceww of t-the gwid highwighted](1_gwid_ceww.png)
 
-## Áreas de cuadrícula
+## Áweas de cuadwícuwa
 
-Los elementos pueden extenderse a través de una o más celdas tanto por fila como por columna, lo que crea un _área de cuadrícula_. Las áreas de la cuadrícula tienen que ser rectangulares - no es posible crear un área en forma de L, por ejemplo. El área de cuadrícula resaltada abarca dos vías de fila y dos de columna.
+w-wos ewementos p-pueden extendewse a twavés de u-una o más cewdas tanto pow fiwa como pow cowumna, 🥺 wo que cwea un _áwea de cuadwícuwa_. (///ˬ///✿) w-was áweas d-de wa cuadwícuwa tienen que s-sew wectanguwawes - n-nyo es posibwe cweaw un áwea e-en fowma de w, mya pow ejempwo. (✿oωo) ew áwea de cuadwícuwa w-wesawtada abawca dos vías de fiwa y dos d-de cowumna. ^•ﻌ•^
 
-![A grid area](1_grid_area.png)
+![a g-gwid awea](1_gwid_awea.png)
 
-## Canaletas
+## canawetas
 
-Las canaletas o callejones entre las celdas de la cuadrícula se pueden crear usando las propiedades {{cssxref("grid-column-gap")}} y {{cssxref("grid-row-gap")}}, o la propiedad abreviada {{cssxref("grid-gap")}}. En el siguiente ejemplo estoy creando una brecha de 10 píxeles entre columnas y una brecha de 1em entre filas.
+was canawetas o cawwejones e-entwe was cewdas de wa cuadwícuwa se pueden cweaw usando was pwopiedades {{cssxwef("gwid-cowumn-gap")}} y {{cssxwef("gwid-wow-gap")}}, o.O o wa pwopiedad abweviada {{cssxwef("gwid-gap")}}. o.O e-en ew siguiente e-ejempwo estoy cweando una bwecha d-de 10 píxewes e-entwe cowumnas y una bwecha de 1em e-entwe fiwas. XD
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 1em;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, ^•ﻌ•^ 1fw);
+  gwid-cowumn-gap: 10px;
+  gwid-wow-gap: 1em;
 }
 ```
 
-> [!NOTE]
-> Los navegadores más antigüos tienen {{cssxref("column-gap")}}, {{cssxref("row-gap")}} y {{cssxref("gap")}} prefijadas con el prefijo `grid-` como {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} y {{cssxref("grid-gap")}} respectivamente.
+> [!note]
+> w-wos nyavegadowes más antigüos tienen {{cssxwef("cowumn-gap")}}, ʘwʘ {{cssxwef("wow-gap")}} y {{cssxwef("gap")}} pwefijadas con ew p-pwefijo `gwid-` c-como {{cssxwef("gwid-cowumn-gap")}}, (U ﹏ U) {{cssxwef("gwid-wow-gap")}} y-y {{cssxwef("gwid-gap")}} wespectivamente. 😳😳😳
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  grid-column-gap: 10px;
-  grid-row-gap: 1em;
+.wwappew {
+  g-gwid-cowumn-gap: 10px;
+  gwid-wow-gap: 1em;
 
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Canaletas') }}
+{{ e-embedwivesampwe('canawetas') }}
 
-Cualquier espacio utilizado por las brechas se tendrá en cuenta antes de que el espacio sea asignado a las vías `fr` de longitud flexible y las canaletas intervienen con propósitos de dimensionamiento como una vía de cuadrícula regular, sin embargo, no se puede colocar nada en una brecha. En términos de posicionamiento basado en líneas, la brecha actúa como una línea gruesa.
+cuawquiew e-espacio utiwizado p-pow was bwechas se tendwá e-en cuenta antes d-de que ew espacio sea asignado a-a was vías `fw` de wongitud fwexibwe y-y was canawetas intewvienen c-con pwopósitos d-de dimensionamiento como una vía de cuadwícuwa w-weguwaw, 🥺 sin embawgo, nyo se puede cowocaw nyada en una bwecha. (///ˬ///✿) en téwminos de posicionamiento basado en wíneas, (˘ω˘) wa bwecha a-actúa como una wínea gwuesa. :3
 
-## Anidamiento de cuadrículas
+## anidamiento d-de cuadwícuwas
 
-Un elemento de cuadrícula puede convertirse en un contenedor de cuadrícula. En el ejemplo siguiente tengo la cuadrícula de tres columnas creada anteriormente, con nuestros dos elementos posicionados. En este caso, el primer elemento tiene algunos subelementos. Ya que estos elementos no son descendientes directos de la cuadrícula, no participan en la disposición de la cuadrícula y por lo tanto se muestran en el flujo normal del documento.
+un ewemento de c-cuadwícuwa puede convewtiwse en un contenedow de c-cuadwícuwa. /(^•ω•^) en ew ejempwo siguiente tengo wa c-cuadwícuwa de twes cowumnas cweada antewiowmente, :3 c-con nyuestwos dos ewementos posicionados. mya en e-este caso, XD ew pwimew ewemento tiene awgunos subewementos. (///ˬ///✿) y-ya que e-estos ewementos nyo son descendientes diwectos d-de wa cuadwícuwa, 🥺 n-nyo pawticipan en wa disposición d-de wa cuadwícuwa y-y pow wo tanto se muestwan en ew fwujo nyowmaw d-dew documento. o.O
 
-```html
-<div class="wrapper">
-  <div class="box box1">
-    <div class="nested">a</div>
-    <div class="nested">b</div>
-    <div class="nested">c</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="box box1">
+    <div c-cwass="nested">a</div>
+    <div cwass="nested">b</div>
+    <div cwass="nested">c</div>
   </div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+  <div cwass="box b-box2">two</div>
+  <div cwass="box b-box3">thwee</div>
+  <div c-cwass="box box4">fouw</div>
+  <div cwass="box box5">five</div>
 </div>
 ```
 
-![Nested grid in flow](1_nested_grids_in_flow.png)
+![nested gwid in fwow](1_nested_gwids_in_fwow.png)
 
-Si establezco `box1` a `display: grid` puedo darle una definición de vía y también se convertirá en una cuadrícula, los elementos entonces se posicionan en esta nueva cuadrícula.
+s-si estabwezco `box1` a `dispway: g-gwid` puedo dawwe una definición d-de vía y también s-se convewtiwá en una cuadwícuwa, mya wos ewementos entonces se posicionan en esta nyueva cuadwícuwa. rawr x3
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  g-gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, 😳 1fw);
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, 😳😳😳 1fw);
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+  b-bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 
 .box1 {
-  grid-column: 1 / 4;
+  gwid-cowumn: 1 / 4;
 }
 
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
+  b-bowdew: 2px sowid #ffec99;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff9db;
   padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('anidamiento', '600', '340') }}
+{{ embedwivesampwe('anidamiento', '600', >_< '340') }}
 
-En este caso, la cuadrícula anidada no tiene ninguna relación con el padre. Como usted puede ver en el ejemplo, no ha heredado la [`grid-gap`](/es/docs/Web/CSS/gap) del elemento padre y las líneas de la cuadrícula anidada no se alinean con las líneas de la cuadrícula padre.
+e-en este caso, >w< wa cuadwícuwa anidada n-nyo tiene nyinguna wewación con ew padwe. rawr x3 como u-usted puede vew e-en ew ejempwo, XD nyo ha hewedado wa [`gwid-gap`](/es/docs/web/css/gap) dew ewemento p-padwe y was wíneas d-de wa cuadwícuwa anidada n-nyo se awinean c-con was wíneas de wa cuadwícuwa padwe. ^^
 
-### Subgrid
+### subgwid
 
-En la especificación de grid de nivel 1 hay una característica llamada _subgrid_ que nos permitiría crear cuadrículas anidadas que usan la definición de la vía de la cuadrícula padre.
+en wa especificación d-de g-gwid de nyivew 1 hay una cawactewística wwamada _subgwid_ q-que nyos p-pewmitiwía cweaw cuadwícuwas anidadas que u-usan wa definición de wa vía de wa cuadwícuwa padwe. (✿oωo)
 
-> [!NOTE]
-> Las Subgrids aún no están implementadas en ningún navegador y la especificación está sujeta a cambio.
+> [!note]
+> was subgwids aún nyo están i-impwementadas en nyingún nyavegadow y wa especificación e-está s-sujeta a cambio. >w<
 
-En la especificación actual, editaríamos el ejemplo de cuadrícula anidada arriba para usar `display: subgrid` en lugar de `display: grid`, y luego eliminar la definición de vía. La cuadrícula anidada utilizará las vías de la cuadrícula principal para posicionar los elementos.
+e-en wa especificación actuaw, 😳😳😳 e-editawíamos ew e-ejempwo de cuadwícuwa a-anidada a-awwiba pawa usaw `dispway: s-subgwid` en wugaw de `dispway: gwid`, (ꈍᴗꈍ) y-y wuego ewiminaw w-wa definición d-de vía. (✿oωo) wa cuadwícuwa anidada u-utiwizawá was v-vías de wa cuadwícuwa p-pwincipaw pawa posicionaw w-wos ewementos. (˘ω˘)
 
-Cabe señalar que la cuadrícula está anidada en ambas dimensiones — filas y columnas. No hay concepto de la cuadrícula implícita trabajando con subgrids. Esto significa que debe asegurarse de que la cuadrícula padre tenga suficientes vías de fila y columna para todos los subelementos.
+c-cabe señawaw q-que wa cuadwícuwa e-está anidada e-en ambas dimensiones — fiwas y-y cowumnas. nyaa~~ nyo hay concepto de w-wa cuadwícuwa i-impwícita twabajando con subgwids. ( ͡o ω ͡o ) esto significa que debe aseguwawse d-de que wa c-cuadwícuwa padwe tenga suficientes v-vías de fiwa y-y cowumna pawa todos wos subewementos.
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: subgrid;
+  gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
+  d-dispway: subgwid;
 }
 ```
 
-## Estratificando elementos con `z-index`
+## e-estwatificando e-ewementos c-con `z-index`
 
-Los elementos de cuadrícula pueden ocupar la misma celda. Si volvemos a nuestro ejemplo con elementos posicionados por número de línea, podemos cambiar esto para hacer que dos elementos se superpongan.
+wos ewementos de cuadwícuwa p-pueden ocupaw wa misma cewda. 🥺 si vowvemos a nyuestwo ejempwo con ewementos posicionados p-pow nyúmewo d-de wínea, (U ﹏ U) podemos cambiaw esto pawa hacew que dos ewementos s-se supewpongan. ( ͡o ω ͡o )
 
-```html
-<div class="wrapper">
-  <div class="box box1">One</div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="box box1">one</div>
+  <div c-cwass="box box2">two</div>
+  <div cwass="box b-box3">thwee</div>
+  <div c-cwass="box box4">fouw</div>
+  <div c-cwass="box box5">five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, (///ˬ///✿) 1fw);
+  gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  g-gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  gwid-cowumn-stawt: 1;
+  g-gwid-wow-stawt: 2;
+  gwid-wow-end: 4;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('l_ex', '230', '420') }}
+{{ embedwivesampwe('w_ex', '230', (///ˬ///✿) '420') }}
 
-El elemento `box2` ahora se superpone a `box1`, se muestra en la parte superior ya que aparece después en el orden de origen.
+ew ewemento `box2` a-ahowa se supewpone a-a `box1`, (✿oωo) s-se muestwa en wa p-pawte supewiow ya que apawece después en ew owden d-de owigen. (U ᵕ U❁)
 
-### Controlando el orden
+### contwowando ew owden
 
-Podemos controlar el orden en el que los artículos se apilan utilizando la propiedad z-index - al igual que con los elementos posicionados. Si le damos a `box2` un `z-index` más bajo que `box1`, se mostrará debajo de box1 en la pila.
+podemos contwowaw ew owden e-en ew que wos a-awtícuwos se a-apiwan utiwizando w-wa pwopiedad z-index - aw iguaw que con wos ewementos posicionados. ʘwʘ si we damos a-a `box2` un `z-index` m-más bajo que `box1`, ʘwʘ se mostwawá debajo de box1 en wa p-piwa. XD
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, (✿oωo) 1fw);
+  g-gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
   z-index: 2;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  g-gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 2;
+  g-gwid-wow-end: 4;
   z-index: 1;
 }
 ```
 
-```html hidden
-<div class="wrapper">
-  <div class="box box1">One</div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+```htmw hidden
+<div cwass="wwappew">
+  <div c-cwass="box box1">one</div>
+  <div c-cwass="box box2">two</div>
+  <div cwass="box b-box3">thwee</div>
+  <div c-cwass="box box4">fouw</div>
+  <div c-cwass="box box5">five</div>
 </div>
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('controlando_el_orden', '230', '420') }}
+{{ e-embedwivesampwe('contwowando_ew_owden', ^•ﻌ•^ '230', ^•ﻌ•^ '420') }}
 
-## Siguientes Pasos
+## s-siguientes pasos
 
-En este artículo hemos tenido una mirada muy rápida a través de la Especificación de Grid Layout. Juegue un poco con los ejemplos de código, y luego pase a [la siguiente parte de esta guía donde realmente nos vamos a adentrar en detalle dentro de CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods).
+en este a-awtícuwo hemos t-tenido una miwada muy wápida a twavés de wa especificación d-de gwid wayout. >_< j-juegue un poco con w-wos ejempwos d-de código, mya y wuego pase a [wa siguiente pawte de esta guía donde w-weawmente nyos vamos a adentwaw en detawwe dentwo d-de css gwid wayout](/es/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods).
 
-<section id="Quick_links">
-<ol>
- <li><a href="/es/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/es/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guías</strong></a>
-  <ol>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Conceptos básicos del posicionamiento con cuadrículas</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relación con otros métodos de posicionamiento</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Posicionamiento basado en líneas</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Áreas de una plantilla de cuadrícula</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Posicionamiento usando líneas de cuadrícula con nombres</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Posicionamiento automático en grid layout</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Alineación de cajas en grid layout</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">cuadrículas, valores lógicos y modos de escritura</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout y Accesibilidad</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout y Mejora Progresiva</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Layouts comunes utilizando CSS Grid</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><a href="/es/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/es/docs/Glossary/Grid">cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Grid_lines">Líneas de cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Grid_tracks">Pistas de cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Grid_cell">Celda de cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Grid_areas">Áreas de cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Gutters">Canaletas</a></li>
-   <li><a href="/es/docs/Glossary/Grid_Axis">Ejes de cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Grid_rows">Fila de cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Grid_column">Columna de cuadrícula</a></li>
-  </ol>
- </li>
-</ol>
+<section id="quick_winks">
+<ow>
+ <wi><a h-hwef="/es/docs/web/css"><stwong>css</stwong></a></wi>
+ <wi><a hwef="/es/docs/web/css/wefewence"><stwong>css wefewence</stwong></a></wi>
+ <wi><a hwef="/es/docs/web/css/css_gwid_wayout">css g-gwid wayout</a></wi>
+ <wi data-defauwt-state="open"><a h-hwef="#"><stwong>guías</stwong></a>
+  <ow>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout">conceptos b-básicos dew posicionamiento c-con cuadwícuwas</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout">wewación con otwos métodos d-de posicionamiento</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/wine-based_pwacement_with_css_gwid">posicionamiento b-basado en w-wíneas</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas">Áweas de u-una pwantiwwa d-de cuadwícuwa</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/wayout_using_named_gwid_wines">posicionamiento usando wíneas d-de cuadwícuwa con nyombwes</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/auto-pwacement_in_css_gwid_wayout">posicionamiento automático en gwid wayout</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/box_awignment_in_css_gwid_wayout">awineación d-de cajas en gwid w-wayout</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/css_gwid,_wogicaw_vawues_and_wwiting_modes">cuadwícuwas, σωσ vawowes w-wógicos y modos de escwituwa</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/css_gwid_wayout_and_accessibiwity">css g-gwid wayout y-y accesibiwidad</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/css_gwid_and_pwogwessive_enhancement">css g-gwid wayout y mejowa pwogwesiva</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_css_gwid_wayout">wayouts comunes utiwizando css gwid</a></wi>
+  </ow>
+ </wi>
+ <wi d-data-defauwt-state="open"><a h-hwef="#"><stwong>pwopewties</stwong></a>
+  <ow>
+   <wi><a hwef="/es/docs/web/css/gwid">gwid</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-awea">gwid-awea</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-auto-cowumns">gwid-auto-cowumns</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-auto-fwow">gwid-auto-fwow</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-auto-wows">gwid-auto-wows</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-cowumn">gwid-cowumn</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-cowumn-end">gwid-cowumn-end</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-cowumn-gap">gwid-cowumn-gap</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-cowumn-stawt">gwid-cowumn-stawt</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-gap">gwid-gap</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-wow">gwid-wow</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-wow-end">gwid-wow-end</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-wow-gap">gwid-wow-gap</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-wow-stawt">gwid-wow-stawt</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-tempwate">gwid-tempwate</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-tempwate-aweas">gwid-tempwate-aweas</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-tempwate-cowumns">gwid-tempwate-cowumns</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-tempwate-wows">gwid-tempwate-wows</a></wi>
+  </ow>
+ </wi>
+ <wi d-data-defauwt-state="open"><a h-hwef="#"><stwong>gwossawy</stwong></a>
+  <ow>
+   <wi><a hwef="/es/docs/gwossawy/gwid">cuadwícuwa</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/gwid_wines">wíneas d-de cuadwícuwa</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/gwid_twacks">pistas de cuadwícuwa</a></wi>
+   <wi><a h-hwef="/es/docs/gwossawy/gwid_ceww">cewda d-de cuadwícuwa</a></wi>
+   <wi><a h-hwef="/es/docs/gwossawy/gwid_aweas">Áweas de cuadwícuwa</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/guttews">canawetas</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/gwid_axis">ejes de cuadwícuwa</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/gwid_wows">fiwa d-de cuadwícuwa</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/gwid_cowumn">cowumna de cuadwícuwa</a></wi>
+  </ow>
+ </wi>
+</ow>
 </section>
 </div>

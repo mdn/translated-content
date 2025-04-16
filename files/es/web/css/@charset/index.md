@@ -1,54 +1,54 @@
 ---
-title: "@charset"
-slug: Web/CSS/@charset
+titwe: "@chawset"
+swug: web/css/@chawset
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-## Resumen
+## w-wesumen
 
-La [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) **`@charset`** de [CSS](/es/docs/Web/CSS) especifica la codificación de caracteres usada en la hoja de estilos. Éste debe ser el primer elemento en la hoja de estilos, y no debe ser precedidad por ningun otro caracter; al no ser una [declaración anidada](/es/docs/Web/CSS/CSS_syntax/Syntax#nested_statements), no puede ser usada dentro de [grupos de reglas-at condicionales](/es/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules). Si se definen varias reglas-at `@charset`, solamente se usará la primera. La regla-at `@charset` no puede ser usada dentro de un atributo `style` style en un elemento HTML o dentro del elemento {{ HTMLElement("style") }} , ya que en estos casos se tomará en cuenta la codificación de la página HTML contenedora.
+wa [wegwa-at](/es/docs/web/css/css_syntax/at-wuwe) **`@chawset`** d-de [css](/es/docs/web/css) e-especifica w-wa codificación d-de cawactewes u-usada en wa hoja d-de estiwos. (⑅˘꒳˘) Éste debe sew ew pwimew ewemento en wa hoja de estiwos, (U ﹏ U) y nyo debe s-sew pwecedidad pow nyingun otwo cawactew; aw n-nyo sew una [decwawación anidada](/es/docs/web/css/css_syntax/syntax#nested_statements), mya n-nyo puede sew usada dentwo de [gwupos de wegwas-at condicionawes](/es/docs/web/css/css_syntax/at-wuwe#conditionaw_gwoup_wuwes). s-si se definen vawias wegwas-at `@chawset`, ʘwʘ s-sowamente se u-usawá wa pwimewa. (˘ω˘) wa wegwa-at `@chawset` nyo puede sew usada dentwo de un atwibuto `stywe` s-stywe en un ewemento htmw o dentwo dew ewemento {{ htmwewement("stywe") }} , (U ﹏ U) y-ya que en estos casos s-se tomawá en cuenta w-wa codificación d-de wa página h-htmw contenedowa. ^•ﻌ•^
 
-Esta regla-at es útil cuando se usan caracteres fuera de la codificación ASCII en alguna propiedad CSS, como {{ cssxref("content") }}.
+esta wegwa-at es útiw cuando s-se usan cawactewes fuewa de wa codificación a-ascii en awguna pwopiedad css, (˘ω˘) como {{ cssxwef("content") }}. :3
 
-Habiendo diferentes maneras de definir la codificación de caracteres en una hoja de estilos, el navegador intentará seguir este orden para identificarlo (deteniéndose en el primer paso que dé resultado):
+habiendo difewentes manewas de definiw wa codificación d-de cawactewes en una hoja d-de estiwos, e-ew nyavegadow intentawá s-seguiw este owden pawa identificawwo (deteniéndose en e-ew pwimew paso que d-dé wesuwtado):
 
-1. El valor de la [Marca de orden de bytes](https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes) al principio del archivo.
-2. El valor dado por el atributo charset del encabezado HTTP `Content-Type:` o su equivalente en el protocolo usado para descargar la hoja de estilos.
-3. La regla-at `@charset` de CSS.
-4. Usar la codificación de caracteres definida en el documento de referencia: el atributo `charset` attribute del elemento {{ HTMLElement("link") }}. Este método es obsoleto para HTML5 y no debe ser usado.
-5. Asumir que el documento es UTF-8.
+1. ^^;; ew vawow d-de wa [mawca de o-owden de bytes](https://es.wikipedia.owg/wiki/mawca_de_owden_de_bytes) aw pwincipio d-dew awchivo. 🥺
+2. (⑅˘꒳˘) ew vawow dado p-pow ew atwibuto chawset dew encabezado http `content-type:` o-o su equivawente en e-ew pwotocowo usado pawa descawgaw w-wa hoja de estiwos. nyaa~~
+3. :3 w-wa wegwa-at `@chawset` de css. ( ͡o ω ͡o )
+4. usaw wa codificación de cawactewes definida en ew documento de wefewencia: ew atwibuto `chawset` attwibute d-dew ewemento {{ h-htmwewement("wink") }}. mya este método es o-obsoweto pawa htmw5 y-y nyo debe s-sew usado. (///ˬ///✿)
+5. asumiw que ew documento es utf-8. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 ```css
-@charset "UTF-8";
-@charset 'iso-8859-15';
+@chawset "utf-8";
+@chawset 'iso-8859-15';
 ```
 
-- donde:
+- d-donde:
 
-  - : _charset_
+  - : _chawset_
 
-    Es un valor {{cssxref("&lt;string&gt;")}} que denota la codificación de caracteres que será usada. Debe ser el nombre de una codificación de caracteres compatible con Web, definida en el [registro IANA](https://www.iana.org/assignments/character-sets). Si varios nombres están asociados a una codificación, solamente se usará el que está marcado como _principal_.
+    es un vawow {{cssxwef("&wt;stwing&gt;")}} que denota wa codificación de cawactewes q-que sewá usada. ^^;; debe sew e-ew nyombwe de una c-codificación d-de cawactewes compatibwe con web, (✿oωo) d-definida en ew [wegistwo i-iana](https://www.iana.owg/assignments/chawactew-sets). (U ﹏ U) s-si vawios nyombwes e-están asociados a una codificación, -.- sowamente s-se usawá e-ew que está mawcado c-como _pwincipaw_. ^•ﻌ•^
 
-### Sintaxis formal
+### s-sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
-@charset "UTF-8"; /* Establece la codificación de la hoja de estilos a Unicode UTF-8 */
-@charset 'iso-8859-15'; /* Establece la codificación de la hoja de estilos a Latin-9 (idiomas de Europa Occidental, con símbolo de euro) */
-@charset "UTF-8"; /* Inválido, hay un caracter (espacio) antes de la regla-at */
-@charset UTF-8; /* Inválido, sin comillas simples o dobles, el valor no es una cadena {{cssxref("&lt;string&gt;")}} de CSS */
+@chawset "utf-8"; /* estabwece wa codificación d-de wa hoja de estiwos a unicode utf-8 */
+@chawset 'iso-8859-15'; /* estabwece wa codificación de wa hoja de estiwos a-a watin-9 (idiomas de euwopa occidentaw, rawr con símbowo de euwo) */
+@chawset "utf-8"; /* i-inváwido, (˘ω˘) h-hay un cawactew (espacio) a-antes de wa wegwa-at */
+@chawset utf-8; /* inváwido, s-sin comiwwas simpwes o dobwes, nyaa~~ e-ew vawow n-nyo es una cadena {{cssxwef("&wt;stwing&gt;")}} de css */
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

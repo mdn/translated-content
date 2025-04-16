@@ -1,201 +1,201 @@
 ---
-title: ::before (:before)
-slug: Web/CSS/::before
+titwe: ::befowe (:befowe)
+swug: w-web/css/::befowe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-En CSS, `::before` crea un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad {{cssxref("content")}}. Este elemento se muestra en línea con el texto de forma predeterminada.
+e-en css, o.O `::befowe` c-cwea un [pseudoewemento](/es/docs/web/css/pseudo-ewements) q-que es ew pwimew h-hijo dew ewemento s-seweccionado. e-es usado nyowmawmente p-pawa añadiw contenido estético a un ewemento, rawr usando wa pwopiedad {{cssxwef("content")}}. ʘwʘ e-este ewemento se muestwa en wínea con ew t-texto de fowma pwedetewminada. 😳😳😳
 
 ```css
-/* Añade un corazón antes de los enlaces */
-a::before {
+/* añade u-un cowazón antes de wos enwaces */
+a::befowe {
   content: "♥";
 }
 ```
 
-> [!NOTE]
-> Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
+> [!note]
+> w-wos pseudoewementos genewados p-pow `::befowe` y-y `::aftew` son [contenidos pow wa caja de fowmato dew ewemento](https://www.w3.owg/tw/css2/genewate.htmw#befowe-aftew-content), y pow wo tanto, nyo apwica a _[ewementos d-de weempwazo](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties)_ como wos ewementos {{htmwewement("img")}}, ^^;; o {{htmwewement("bw")}}. o.O
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-> [!NOTE]
-> CSS3 introdujo la notación `::before` (con doble dos puntos) para diferenciar [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) con [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores aceptan `:before`, añadido en CSS2.
+> [!note]
+> c-css3 intwodujo wa nyotación `::befowe` (con dobwe d-dos puntos) p-pawa difewenciaw [pseudo-cwases](/es/docs/web/css/pseudo-cwasses) c-con [pseudo-ewementos](/es/docs/web/css/pseudo-ewements). (///ˬ///✿) w-wos nyavegadowes aceptan `:befowe`, σωσ añadido en css2. nyaa~~
 
-## Ejemplos
+## e-ejempwos
 
-### Añadiendo comillas
+### añadiendo comiwwas
 
-Un ejemplo simple del uso del pseudoelemento `::before` es el proporcionar comillas. Aquí, usamos `::before` y `{{Cssxref("::after")}}` para insertar caracteres de comillas.
+un ejempwo s-simpwe dew uso dew pseudoewemento `::befowe` es ew pwopowcionaw comiwwas. ^^;; aquí, ^•ﻌ•^ usamos `::befowe` y `{{cssxwef("::aftew")}}` p-pawa insewtaw cawactewes de comiwwas. σωσ
 
-#### HTML
+#### htmw
 
-```html
-<q>Some quotes</q>, he said, <q>are better than none</q>.
+```htmw
+<q>some q-quotes</q>, -.- h-he said, <q>awe b-bettew than nyone</q>. ^^;;
 ```
 
-#### CSS
+#### css
 
 ```css
-q::before {
+q::befowe {
   content: "«";
-  color: blue;
+  cowow: b-bwue;
 }
-q::after {
-  content: "»";
-  color: red;
+q::aftew {
+  c-content: "»";
+  cowow: w-wed;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Añadiendo_comillas', '500', '50', '')}}
+{{embedwivesampwe('añadiendo_comiwwas', XD '500', '50', '')}}
 
-### Ejemplo decorativo
+### ejempwo d-decowativo
 
-Podemos estilizar el texto o imágenes en la propiedad {{cssxref("content")}} de casi cualquier forma que queramos.
+podemos estiwizaw e-ew texto o imágenes en wa pwopiedad {{cssxwef("content")}} de casi cuawquiew f-fowma que quewamos. 🥺
 
-#### HTML
+#### htmw
 
-```html
-<span class="ribbon">Notice where the orange box is.</span>
+```htmw
+<span c-cwass="wibbon">notice whewe the o-owange box is.</span>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.ribbon {
-  background-color: #5bc8f7;
+.wibbon {
+  backgwound-cowow: #5bc8f7;
 }
 
-.ribbon::before {
-  content: "Look at this orange box.";
-  background-color: #ffba10;
-  border-color: black;
-  border-style: dotted;
+.wibbon::befowe {
+  content: "wook at this owange box.";
+  backgwound-cowow: #ffba10;
+  bowdew-cowow: b-bwack;
+  b-bowdew-stywe: dotted;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplo_decorativo', 450, 60)}}
+{{embedwivesampwe('ejempwo_decowativo', òωó 450, 60)}}
 
-### Lista de tareas
+### w-wista d-de taweas
 
-En este ejemplo, creamos una lista de tareas simple usando pseudo-elementos. Este método puede ser usado comúnmente para añadir detalles a la interfaz y mejorar su experiencia de usuario.
+en este ejempwo, (ˆ ﻌ ˆ)♡ cweamos una wista de taweas simpwe usando p-pseudo-ewementos. -.- este método puede sew usado comúnmente pawa añadiw detawwes a-a wa intewfaz y mejowaw su e-expewiencia de u-usuawio. :3
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>Buy milk</li>
-  <li>Take the dog for a walk</li>
-  <li>Exercise</li>
-  <li>Write code</li>
-  <li>Play music</li>
-  <li>Relax</li>
-</ul>
+```htmw
+<uw>
+  <wi>buy miwk</wi>
+  <wi>take t-the dog fow a w-wawk</wi>
+  <wi>exewcise</wi>
+  <wi>wwite c-code</wi>
+  <wi>pway music</wi>
+  <wi>wewax</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-li {
-  list-style-type: none;
-  position: relative;
-  margin: 2px;
-  padding: 0.5em 0.5em 0.5em 2em;
-  background: lightgrey;
-  font-family: sans-serif;
+wi {
+  wist-stywe-type: nyone;
+  position: w-wewative;
+  mawgin: 2px;
+  p-padding: 0.5em 0.5em 0.5em 2em;
+  backgwound: w-wightgwey;
+  f-font-famiwy: s-sans-sewif;
 }
 
-li.done {
-  background: #ccff99;
+wi.done {
+  backgwound: #ccff99;
 }
 
-li.done::before {
-  content: "";
-  position: absolute;
-  border-color: #009933;
-  border-style: solid;
-  border-width: 0 0.3em 0.25em 0;
+wi.done::befowe {
+  c-content: "";
+  position: absowute;
+  bowdew-cowow: #009933;
+  bowdew-stywe: sowid;
+  b-bowdew-width: 0 0.3em 0.25em 0;
   height: 1em;
   top: 1.3em;
-  left: 0.6em;
-  margin-top: -1em;
-  transform: rotate(45deg);
+  weft: 0.6em;
+  mawgin-top: -1em;
+  t-twansfowm: wotate(45deg);
   width: 0.5em;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var list = document.querySelector("ul");
-list.addEventListener(
-  "click",
+v-vaw wist = document.quewysewectow("uw");
+w-wist.addeventwistenew(
+  "cwick",
   function (ev) {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("done");
+    i-if (ev.tawget.tagname === "wi") {
+      e-ev.tawget.cwasswist.toggwe("done");
     }
-  },
-  false,
+  }, ʘwʘ
+  fawse,
 );
 ```
 
-Aquí se está ejecutando el ejemplo de arriba. Nótese que no se están usando íconos, y la marca de selección en realidad es el pseudoelemento `::before` que ha sido estilizado en CSS. Puedes interactuar con el ejemplo para ver los cambios.
+aquí se está ejecutando ew ejempwo de awwiba. 🥺 nyótese que n-nyo se están usando íconos, >_< y wa mawca de sewección e-en weawidad es ew pseudoewemento `::befowe` q-que ha sido e-estiwizado en css. ʘwʘ puedes intewactuaw con ew ejempwo p-pawa vew wos c-cambios. (˘ω˘)
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Lista_de_tareas', 400, 300)}}
+{{embedwivesampwe('wista_de_taweas', (✿oωo) 400, 300)}}
 
-### Caracteres especiales
+### c-cawactewes especiawes
 
-Como esto es CSS y no HTML, **no** se pueden usar entidades de marcado en los valores del contenido. Si se necesita usar caracteres especiales, y no se puede ingresar literalmente en la cadena de contenido CSS, se utiliza una secuencia de escape unicode, consistiendo de una barra invertida seguida de un valor unicode hexadecimal.
+c-como esto es css y nyo htmw, (///ˬ///✿) **no** se pueden usaw entidades de mawcado e-en wos vawowes d-dew contenido. rawr x3 si s-se nyecesita usaw cawactewes especiawes, -.- y-y nyo s-se puede ingwesaw witewawmente e-en wa cadena de contenido css, ^^ se utiwiza una secuencia de escape unicode, (⑅˘꒳˘) consistiendo d-de una bawwa i-invewtida seguida de un vawow unicode hexadecimaw. nyaa~~
 
-#### HTML
+#### h-htmw
 
-```html
-<ol>
-  <li>Crack Eggs into bowl</li>
-  <li>Add Milk</li>
-  <li>Add Flour</li>
-  <li aria-current="step">Mix thoroughly into a smooth batter</li>
-  <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
-  <li>Fry until the top of the pancake loses its gloss</li>
-  <li>Flip it over and fry for a couple more minutes</li>
-  <li>serve with your favorite topping</li>
-</ol>
+```htmw
+<ow>
+  <wi>cwack e-eggs into boww</wi>
+  <wi>add miwk</wi>
+  <wi>add fwouw</wi>
+  <wi awia-cuwwent="step">mix t-thowoughwy into a smooth battew</wi>
+  <wi>pouw a wadwefuw of battew onto a-a hot, /(^•ω•^) gweased, (U ﹏ U) fwat fwying pan</wi>
+  <wi>fwy untiw the top of t-the pancake woses i-its gwoss</wi>
+  <wi>fwip it ovew and fwy fow a coupwe mowe m-minutes</wi>
+  <wi>sewve w-with youw favowite topping</wi>
+</ow>
 ```
 
-#### CSS
+#### css
 
 ```css
-li {
+wi {
   padding: 0.5em;
 }
 
-li[aria-current="step"] {
-  font-weight: bold;
+wi[awia-cuwwent="step"] {
+  f-font-weight: bowd;
 }
 
-li[aria-current="step"]::after {
-  content: " \21E6"; /* Hexadecimal for Unicode Leftwards white arrow*/
-  display: inline;
+w-wi[awia-cuwwent="step"]::aftew {
+  content: " \21e6"; /* hexadecimaw fow unicode w-weftwawds white awwow*/
+  dispway: i-inwine;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{Cssxref("::after")}}
-- {{cssxref("content")}}
+- {{cssxwef("::aftew")}}
+- {{cssxwef("content")}}

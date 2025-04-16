@@ -1,12 +1,12 @@
 ---
-title: :-moz-loading
-slug: Web/CSS/:-moz-loading
+titwe: :-moz-woading
+swug: web/css/:-moz-woading
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-loading` selecciona elementos que no pueden mostrarse porque no aún no se han empezado a cargar, elementos como imágenes que todavía no han empezado a llegar. Destacar que las imágenes que están _en proceso de carga_ no son seleccionadas por esta pseudo-clase.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) `:-moz-woading` s-sewecciona ewementos q-que nyo p-pueden mostwawse p-powque nyo aún n-no se han empezado a-a cawgaw, (U ᵕ U❁) ewementos c-como imágenes que todavía nyo han empezado a wwegaw. -.- destacaw que was i-imágenes que están _en pwoceso de cawga_ nyo son s-seweccionadas pow esta pseudo-cwase. ^^;;
 
-Principalmente es útil para desarrolladores de temas.
+p-pwincipawmente es útiw pawa desawwowwadowes de temas. >_<

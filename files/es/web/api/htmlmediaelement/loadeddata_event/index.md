@@ -1,116 +1,116 @@
 ---
-title: "HTMLMediaElement: loadeddata event"
-slug: Web/API/HTMLMediaElement/loadeddata_event
+titwe: "htmwmediaewement: woadeddata e-event"
+swug: w-web/api/htmwmediaewement/woadeddata_event
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
-El evento **`loadeddata`** se arroja cuando el cuadro en la posición de reproducción actual del medio ha terminado de cargarse; a menudo el primer marco
+e-ew evento **`woadeddata`** se a-awwoja cuando e-ew cuadwo en wa p-posición de wepwoducción a-actuaw d-dew medio ha tewminado de cawgawse; a menudo ew pwimew mawco
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Burbujas</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Acción por defecto</th>
-      <td>Ninguno</td>
-    </tr>
-    <tr>
-      <th scope="row">Propiedad del controlador de eventos</th>
-      <td>{{domxref("GlobalEventHandlers.onloadeddata")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Especificación</th>
+    <tw>
+      <th s-scope="wow">buwbujas</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">cancewabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo</th>
+      <td>ewement</td>
+    </tw>
+    <tw>
+      <th scope="wow">acción p-pow defecto</th>
+      <td>ninguno</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopiedad dew contwowadow de eventos</th>
+      <td>{{domxwef("gwobaweventhandwews.onwoadeddata")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">especificación</th>
       <td>
         <a
-          class="external"
-          href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
-          >HTML5 media</a
+          cwass="extewnaw"
+          h-hwef="http://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/the-video-ewement.htmw#event-media-pwaying"
+          >htmw5 m-media</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Tenga en cuenta que este evento no se activará en dispositivos móviles / tablet, si el protector de datos está activado en configuración del navegador.
+> [!note]
+> tenga en cuenta que este evento nyo se activawá en dispositivos m-móviwes / tabwet, (✿oωo) si ew pwotectow de datos está activado en configuwación d-dew nyavegadow. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
-Estos ejemplos agregan un escucha de eventos para el evento de `loadeddata` del HTMLMediaElement, luego publican un mensaje cuando ese controlador de eventos ha respondido al disparo del evento.
+e-estos ejempwos a-agwegan un escucha d-de eventos pawa e-ew evento de `woadeddata` dew htmwmediaewement, (ˆ ﻌ ˆ)♡ w-wuego pubwican un mensaje cuando ese contwowadow d-de eventos ha wespondido aw dispawo dew evento.
 
-Utilizando `addEventListener()`:
+utiwizando `addeventwistenew()`:
 
 ```js
-const video = document.querySelector("video");
+const video = document.quewysewectow("video");
 
-video.addEventListener("loadeddata", (event) => {
-  console.log(
-    "Hurra! El readyState solo aumentó a " +
-      "HAVE_CURRENT_DATA or mayor por primera vez.",
+v-video.addeventwistenew("woadeddata", (event) => {
+  consowe.wog(
+    "huwwa! 😳😳😳 e-ew weadystate s-sowo aumentó a-a " +
+      "have_cuwwent_data ow mayow pow pwimewa vez.", :3
   );
 });
 ```
 
-Utilizando el `onloadeddata` propiedad del controlador de eventos:
+utiwizando ew `onwoadeddata` p-pwopiedad d-dew contwowadow de eventos:
 
 ```js
-const video = document.querySelector("video");
+c-const video = d-document.quewysewectow("video");
 
-video.onloadeddata = (event) => {
-  console.log(
-    "Hurra! El readyState solo aumentó a " +
-      "HAVE_CURRENT_DATA or mayor por primera vez.",
+video.onwoadeddata = (event) => {
+  c-consowe.wog(
+    "huwwa! OwO ew weadystate s-sowo aumentó a " +
+      "have_cuwwent_data ow mayow pow pwimewa v-vez.", (U ﹏ U)
   );
 };
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Eventos Relacionados
+## e-eventos wewacionados
 
-- {{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}
-- {{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}
-- {{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}
-- {{domxref("HTMLMediaElement.seeked_event", 'HTMLMediaElement: seeked event')}}
-- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
-- {{domxref("HTMLMediaElement.loadedmetadata_event", 'HTMLMediaElement: loadedmetadata event')}}
-- {{domxref("HTMLMediaElement.loadeddata_event", 'HTMLMediaElement: loadeddata event')}}
-- {{domxref("HTMLMediaElement.canplay_event", 'HTMLMediaElement: canplay event')}}
-- {{domxref("HTMLMediaElement.canplaythrough_event", 'HTMLMediaElement: canplaythrough event')}}
-- {{domxref("HTMLMediaElement.durationchange_event", 'HTMLMediaElement: durationchange event')}}
-- {{domxref("HTMLMediaElement.timeupdate_event", 'HTMLMediaElement: timeupdate event')}}
-- {{domxref("HTMLMediaElement.play_event", 'HTMLMediaElement: play event')}}
-- {{domxref("HTMLMediaElement.pause_event", 'HTMLMediaElement: pause event')}}
-- {{domxref("HTMLMediaElement.ratechange_event", 'HTMLMediaElement: ratechange event')}}
-- {{domxref("HTMLMediaElement.volumechange_event", 'HTMLMediaElement: volumechange event')}}
-- {{domxref("HTMLMediaElement.suspend_event", 'HTMLMediaElement: suspend event')}}
-- {{domxref("HTMLMediaElement.emptied_event", 'HTMLMediaElement: emptied event')}}
-- {{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled event')}}
+- {{domxwef("htmwmediaewement.pwaying_event", 'htmwmediaewement: p-pwaying event')}}
+- {{domxwef("htmwmediaewement.waiting_event", >w< 'htmwmediaewement: waiting event')}}
+- {{domxwef("htmwmediaewement.seeking_event", (U ﹏ U) 'htmwmediaewement: seeking event')}}
+- {{domxwef("htmwmediaewement.seeked_event", 😳 'htmwmediaewement: seeked event')}}
+- {{domxwef("htmwmediaewement.ended_event", (ˆ ﻌ ˆ)♡ 'htmwmediaewement: ended event')}}
+- {{domxwef("htmwmediaewement.woadedmetadata_event", 😳😳😳 'htmwmediaewement: woadedmetadata e-event')}}
+- {{domxwef("htmwmediaewement.woadeddata_event", (U ﹏ U) 'htmwmediaewement: w-woadeddata event')}}
+- {{domxwef("htmwmediaewement.canpway_event", (///ˬ///✿) 'htmwmediaewement: c-canpway event')}}
+- {{domxwef("htmwmediaewement.canpwaythwough_event", 😳 'htmwmediaewement: c-canpwaythwough e-event')}}
+- {{domxwef("htmwmediaewement.duwationchange_event", 😳 'htmwmediaewement: duwationchange event')}}
+- {{domxwef("htmwmediaewement.timeupdate_event", σωσ 'htmwmediaewement: timeupdate e-event')}}
+- {{domxwef("htmwmediaewement.pway_event", rawr x3 'htmwmediaewement: pway event')}}
+- {{domxwef("htmwmediaewement.pause_event", OwO 'htmwmediaewement: pause event')}}
+- {{domxwef("htmwmediaewement.watechange_event", /(^•ω•^) 'htmwmediaewement: watechange e-event')}}
+- {{domxwef("htmwmediaewement.vowumechange_event", 😳😳😳 'htmwmediaewement: vowumechange e-event')}}
+- {{domxwef("htmwmediaewement.suspend_event", ( ͡o ω ͡o ) 'htmwmediaewement: s-suspend event')}}
+- {{domxwef("htmwmediaewement.emptied_event", >_< 'htmwmediaewement: e-emptied event')}}
+- {{domxwef("htmwmediaewement.stawwed_event", >w< 'htmwmediaewement: stawwed event')}}
 
-## Ver También
+## v-vew t-también
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

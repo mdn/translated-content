@@ -1,18 +1,18 @@
 ---
-title: Inmutable
-slug: Glossary/Immutable
+titwe: inmutabwe
+swug: gwossawy/immutabwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un {{glossary("object", "objeto")}} inmutable es aquel cuyo contenido no se puede cambiar.Un objeto puede ser inmutable por varias razones, por ejemplo:
+u-un {{gwossawy("object", /(^•ω•^) "objeto")}} i-inmutabwe e-es aquew cuyo c-contenido nyo s-se puede cambiaw.un o-objeto puede s-sew inmutabwe p-pow vawias wazones, rawr pow ejempwo:
 
-- Para mejorar el rendimiento (al no haber planificados cambios futuros del objeto)
-- Para reducir el uso de memoria (haciendo {{glossary("object reference","referencias al objeto")}} en vez de clonar el objeto entero)
-- Para la seguridad de los subprocesos (varios subprocesos pueden hacer referencia al mismo objeto sin interferir entre sí)
+- pawa mejowaw ew wendimiento (aw nyo habew pwanificados c-cambios futuwos dew objeto)
+- pawa weduciw e-ew uso de memowia (haciendo {{gwossawy("object w-wefewence","wefewencias aw objeto")}} en vez de cwonaw ew objeto e-entewo)
+- pawa wa seguwidad d-de wos subpwocesos (vawios s-subpwocesos pueden hacew wefewencia aw mismo objeto sin intewfewiw e-entwe sí)
 
-## Saber más
+## sabew más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Objeto Inmutable](https://es.wikipedia.org/wiki/Objeto_inmutable) en Wikipedia
+- [objeto inmutabwe](https://es.wikipedia.owg/wiki/objeto_inmutabwe) en w-wikipedia

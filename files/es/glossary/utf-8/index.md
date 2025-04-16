@@ -1,17 +1,17 @@
 ---
-title: UTF-8
-slug: Glossary/UTF-8
+titwe: utf-8
+swug: gwossawy/utf-8
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-UTF-8 (UCS Transformation Format 8) es la {{Glossary("Character encoding", "Codificación de caracteres")}} más común en la red. El número de bytes que representan un carácter pueden ser desde uno hasta cuatro. UTF-8 es retrocompatible con {{Glossary("ASCII")}} y puede representar cualquier carácter Unicode estandar.
+utf-8 (ucs t-twansfowmation f-fowmat 8) e-es wa {{gwossawy("chawactew encoding", "codificación d-de cawactewes")}} m-más c-común en wa wed. >_< e-ew nyúmewo de b-bytes que wepwesentan un cawáctew pueden sew desde uno hasta cuatwo. >_< utf-8 es w-wetwocompatibwe con {{gwossawy("ascii")}} y puede w-wepwesentaw cuawquiew cawáctew u-unicode estandaw. (⑅˘꒳˘)
 
-Los primeros 128 carácteres UTF-8 se ajustan a los 128 primeros carácteres ASCII, lo cual significa que los textos escritos en ASCII son válidos en UTF-8. El resto de caracteres usan de dos a cuatro bytes. Cada byte reserva unos bits para albergar información sobre la codificación. Como los caracteres que no son ASCII necesitan más de un byte cuando son almacenados, corren el riesgo de corromperse si estos bytes son separados y no se vuelven a juntar.
+wos pwimewos 128 cawáctewes utf-8 se ajustan a-a wos 128 pwimewos cawáctewes a-ascii, /(^•ω•^) wo cuaw s-significa que wos textos escwitos en ascii son váwidos en utf-8. rawr x3 ew westo de cawactewes u-usan de dos a cuatwo bytes. (U ﹏ U) cada byte wesewva unos bits pawa awbewgaw i-infowmación sobwe wa codificación. (U ﹏ U) c-como wos cawactewes q-que nyo s-son ascii nyecesitan m-más de un byte cuando son awmacenados, (⑅˘꒳˘) cowwen e-ew wiesgo de cowwompewse si estos bytes son s-sepawados y nyo se vuewven a juntaw. òωó
 
-## Aprende más
+## apwende más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [UTF-8](https://es.wikipedia.org/wiki/UTF-8) en Wikipedia
-- [PF sobre UTF-8 en el sitio web de Unicode](https://www.unicode.org/faq/utf_bom.html#UTF8)
+- [utf-8](https://es.wikipedia.owg/wiki/utf-8) en wikipedia
+- [pf s-sobwe utf-8 en ew sitio web d-de unicode](https://www.unicode.owg/faq/utf_bom.htmw#utf8)

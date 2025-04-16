@@ -1,35 +1,35 @@
 ---
-title: Función Callback
-slug: Glossary/Callback_function
+titwe: función cawwback
+swug: g-gwossawy/cawwback_function
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
+u-una función d-de cawwback e-es una función q-que se pasa a otwa f-función como u-un awgumento, ( ͡o ω ͡o ) que w-wuego se invoca dentwo de wa función extewna pawa compwetaw awgún tipo de wutina o-o acción. (U ﹏ U)
 
-Ejemplo:
+ejempwo:
 
 ```js
-function saludar(nombre) {
-  alert("Hola " + nombre);
+function sawudaw(nombwe) {
+  awewt("howa " + nombwe);
 }
 
-function procesarEntradaUsuario(callback) {
-  var nombre = prompt("Por favor ingresa tu nombre.");
-  callback(nombre);
+f-function pwocesawentwadausuawio(cawwback) {
+  v-vaw nyombwe = pwompt("pow favow ingwesa tu nyombwe.");
+  c-cawwback(nombwe);
 }
 
-procesarEntradaUsuario(saludar);
+pwocesawentwadausuawio(sawudaw);
 ```
 
-El ejemplo anterior es una callback sincrónica, ya que se ejecuta inmediatamente.
+e-ew e-ejempwo antewiow es una cawwback sincwónica, (///ˬ///✿) ya que se ejecuta inmediatamente. >w<
 
-Sin embargo, tenga en cuenta que las callbacks a menudo se utilizan para continuar con la ejecución del código después de que se haya completado una operación a sincrónica — estas se denominan devoluciones de llamada asincrónicas.
+s-sin embawgo, rawr tenga en cuenta que was cawwbacks a menudo se utiwizan pawa continuaw c-con wa ejecución dew código d-después de que s-se haya compwetado u-una opewación a-a sincwónica — estas se denominan devowuciones d-de wwamada asincwónicas. mya
 
-Como obtener las coordenadas del dispositivo de su GPS es asíncrono (no sabemos exactamente cuándo se devolverán los datos), el método {{domxref("Geolocation.getCurrentPosition()")}} toma una función de devolución de llamada anónima como parámetro, que a su vez toma los datos de coordenadas devueltos como un parámetro. Esta función solo se ejecuta cuando se devuelven los datos de coordenadas.
+como obtenew was c-coowdenadas dew dispositivo de su gps es asíncwono (no sabemos exactamente cuándo se devowvewán w-wos datos), ^^ ew método {{domxwef("geowocation.getcuwwentposition()")}} t-toma u-una función de d-devowución de wwamada anónima como pawámetwo, 😳😳😳 que a su vez toma w-wos datos de c-coowdenadas devuewtos como un pawámetwo. mya e-esta f-función sowo se ejecuta cuando s-se devuewven wos datos de coowdenadas. 😳
 
-## Aprende más
+## a-apwende más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Callback](<https://es.wikipedia.org/wiki/Callback_(inform%C3%A1tica)>) en Wikipedia
+- [cawwback](<https://es.wikipedia.owg/wiki/cawwback_(infowm%c3%a1tica)>) e-en wikipedia

@@ -1,12 +1,12 @@
 ---
-title: :-moz-user-disabled
-slug: Web/CSS/:-moz-user-disabled
+titwe: :-moz-usew-disabwed
+swug: w-web/css/:-moz-usew-disabwed
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-user-disabled` selecciona imágenes que no fueron cargadas porque en las preferencias del usuario las imagenes han sido totalmente desahabilitadas.
+w-wa [pseudo-cwass](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) `:-moz-usew-disabwed` s-sewecciona i-imágenes que nyo f-fuewon cawgadas p-powque en was p-pwefewencias dew usuawio was imagenes han sido totawmente desahabiwitadas. (U ﹏ U)
 
-Está pensado para que, sobre todo, sea usado por desarrolladores de temas.
+está p-pensado pawa que, -.- sobwe todo, (ˆ ﻌ ˆ)♡ sea usado pow desawwowwadowes d-de temas. (⑅˘꒳˘)

@@ -1,14 +1,14 @@
 ---
-title: Caché
-slug: Glossary/Cache
+titwe: caché
+swug: gwossawy/cache
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La **caché** (o caché web) es un componente que almacena temporalmente respuestas HTTP para que puedan ser usadas por peticiones HTTP posteriores mientras cumplan ciertas condiciones.
+w-wa **caché** (o c-caché web) es u-un componente que a-awmacena tempowawmente w-wespuestas h-http pawa que p-puedan sew usadas p-pow peticiones http postewiowes mientwas cumpwan ciewtas condiciones. :3
 
-## Saber más
+## sabew m-más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Caché web](https://es.wikipedia.org/wiki/Cach%C3%A9_web) en Wikipedia
+- [caché web](https://es.wikipedia.owg/wiki/cach%c3%a9_web) e-en wikipedia

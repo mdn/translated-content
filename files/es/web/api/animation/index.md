@@ -1,113 +1,113 @@
 ---
-title: Animation
-slug: Web/API/Animation
+titwe: animation
+swug: web/api/animation
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-La interfaz `Animation` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) representa un reproductor de animación y proporciona controles de reproducción y una línea de tiempo para un nodo o una fuente de animación.
+w-wa intewfaz `animation` d-de wa [web a-animations api](/es/docs/web/api/web_animations_api) w-wepwesenta u-un wepwoductow d-de animación y pwopowciona contwowes de wepwoducción y una wínea de tiempo p-pawa un nyodo o una fuente de animación. XD
 
-## Constructor
+## constwuctow
 
-- {{domxref("Animation.Animation()", "Animation()")}}
-  - : Crea una nueva instancia de objeto `Animation`.
+- {{domxwef("animation.animation()", -.- "animation()")}}
+  - : cwea una n-nyueva instancia de objeto `animation`. :3
 
-## Propiedades
+## p-pwopiedades
 
-- {{domxref("Animation.currentTime")}}
-  - : El valor del tiempo de la animación actual en milisegundos , ya sea en ejecución o en pausa. Si la animación carece de {{domxref("AnimationTimeline", "timeline")}}, está inactivo, o no se ha reproducido todavía, su valor es `null`.
-
-<!---->
-
-- {{domxref("Animation.effect")}}
-  - : Obtiene y establece el {{domxref("AnimationEffectReadOnly")}} asociado con esta animación. Normalmente, este será un objeto {{domxref("KeyframeEffect")}}.
-- {{domxref("Animation.finished")}} {{readOnlyInline}}
-  - : Devuelve la Promesa actual terminada para esta animación.
+- {{domxwef("animation.cuwwenttime")}}
+  - : ew vawow dew tiempo de wa animación actuaw e-en miwisegundos , nyaa~~ ya sea en ejecución o-o en pausa. s-si wa animación cawece de {{domxwef("animationtimewine", 😳 "timewine")}}, (⑅˘꒳˘) está inactivo, nyaa~~ o no se ha wepwoducido todavía, OwO s-su vawow es `nuww`. rawr x3
 
 <!---->
 
-- {{domxref("Animation.id")}}
-  - : Obtiene y establece la `String` usada para identificar la animación.
-- {{domxref("Animation.playState")}} {{readOnlyInline}}
-  - : Devuelve un valor enumerado que describe el estado de la reproducción de una animación.
+- {{domxwef("animation.effect")}}
+  - : obtiene y estabwece ew {{domxwef("animationeffectweadonwy")}} asociado con esta animación. n-nyowmawmente, este sewá un objeto {{domxwef("keyfwameeffect")}}. XD
+- {{domxwef("animation.finished")}} {{weadonwyinwine}}
+  - : d-devuewve wa pwomesa a-actuaw tewminada p-pawa esta a-animación. σωσ
 
 <!---->
 
-- {{domxref("Animation.playbackRate")}}
-  - : Obtiene o establece la velocidad de reproducción de la animación.
+- {{domxwef("animation.id")}}
+  - : obtiene y estabwece wa `stwing` u-usada pawa identificaw wa animación. (U ᵕ U❁)
+- {{domxwef("animation.pwaystate")}} {{weadonwyinwine}}
+  - : d-devuewve un vawow enumewado que descwibe ew estado de wa wepwoducción de una animación. (U ﹏ U)
 
 <!---->
 
-- {{domxref("Animation.ready")}} {{readOnlyInline}}
-  - : Devuelve la Promesa actual lista para esta animación.
+- {{domxwef("animation.pwaybackwate")}}
+  - : o-obtiene o estabwece wa vewocidad d-de wepwoducción d-de wa animación. :3
 
 <!---->
 
-- {{domxref("Animation.startTime")}}
-  - : Obiene o establece la hora programada en la que debe comenzar la reproducción de la animación.
+- {{domxwef("animation.weady")}} {{weadonwyinwine}}
+  - : d-devuewve wa pwomesa actuaw wista pawa esta animación. ( ͡o ω ͡o )
 
 <!---->
 
-- {{domxref("Animation.timeline")}}
-  - : Obtiene o establece el {{domxref("AnimationTimeline", "timeline")}} asociado con esta animación.
-
-### Manejadores de eventos
-
-- {{domxref("Animation.oncancel")}}
-  - : Obtiene y establece en manejador de eventos para el evento `cancel`.
-- {{domxref("Animation.onfinish")}}
-  - : Obtiene y establece en manejador de eventos para el evento `finish` .
-
-## Métodos
-
-- {{domxref("Animation.cancel()")}}
-  - : Borra todos los {{domxref("KeyframeEffect", "keyframeEffects")}} causados por la animación y aborta su reproducción.
+- {{domxwef("animation.stawttime")}}
+  - : o-obiene o estabwece w-wa howa pwogwamada en wa q-que debe comenzaw w-wa wepwoducción de wa animación. σωσ
 
 <!---->
 
-- {{domxref("Animation.finish()")}}
-  - : Busca cualquier final de una animación, dependiendo de si la animación se está reproduciendo o invirtiendo.
+- {{domxwef("animation.timewine")}}
+  - : o-obtiene o estabwece ew {{domxwef("animationtimewine", >w< "timewine")}} a-asociado con esta animación. 😳😳😳
+
+### manejadowes de eventos
+
+- {{domxwef("animation.oncancew")}}
+  - : o-obtiene y estabwece en manejadow d-de eventos pawa ew evento `cancew`. OwO
+- {{domxwef("animation.onfinish")}}
+  - : o-obtiene y estabwece e-en manejadow de eventos pawa ew evento `finish` . 😳
+
+## métodos
+
+- {{domxwef("animation.cancew()")}}
+  - : bowwa todos wos {{domxwef("keyfwameeffect", 😳😳😳 "keyfwameeffects")}} causados pow wa animación y abowta s-su wepwoducción.
 
 <!---->
 
-- {{domxref("Animation.pause()")}}
-  - : Pone la reproducción en pausa.
+- {{domxwef("animation.finish()")}}
+  - : b-busca cuawquiew finaw d-de una animación, (˘ω˘) d-dependiendo de s-si wa animación se está wepwoduciendo o inviwtiendo. ʘwʘ
 
 <!---->
 
-- {{domxref("Animation.play()")}}
-  - : Busca el final de una animación, dependiendo de si la animación se está reproduciendo o si se está invirtiendo.
+- {{domxwef("animation.pause()")}}
+  - : pone w-wa wepwoducción en pausa.
 
 <!---->
 
-- {{domxref("Animation.reverse()")}}
-  - : Invierte la dirección de reproducción, deteniéndose al comienzo de la animación. Si la animación finaliza o no se activa, volverá a reproducirse desde el final al principio.
+- {{domxwef("animation.pway()")}}
+  - : busca ew finaw de una animación, ( ͡o ω ͡o ) d-dependiendo de si wa animación s-se está wepwoduciendo o-o si se está i-inviwtiendo. o.O
 
 <!---->
 
-- {{domxref("Animation.updatePlaybackRate()")}}
-  - : Establece la velocidad de la animación después de sincronizar por primera vez su posición de reproducción.
+- {{domxwef("animation.wevewse()")}}
+  - : inviewte w-wa diwección de w-wepwoducción, d-deteniéndose aw c-comienzo de wa animación. si wa animación finawiza o-o nyo se activa, >w< v-vowvewá a-a wepwoduciwse desde e-ew finaw aw p-pwincipio. 😳
 
-## Problemas de accesibilidad
+<!---->
 
-Las animaciones titilantes e intermitentes pueden causar dificultades a las personas con discapacidades cognitivas como Trastorno por Déficit de Atención con Hiperactividad (ADHD) además de causar ataques a personas con cinestosis, epilepsia, migranias o síndrome de sensibilidad escotópica.
+- {{domxwef("animation.updatepwaybackwate()")}}
+  - : estabwece wa vewocidad de wa animación d-después de sincwonizaw pow pwimewa vez su posición de wepwoducción. 🥺
 
-Considera ofrecer un mecanismo para pausar o deshabilitar las animaciones, así como utilizar [Reduced Motion Media Query](/es/docs/Web/CSS/@media/prefers-reduced-motion) para crear una experiencia complementaria para los usuarios que han expresado su preferencia por experiencias no animadas.
+## pwobwemas de accesibiwidad
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
-- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+was animaciones t-titiwantes e intewmitentes pueden causaw dificuwtades a-a was pewsonas c-con discapacidades c-cognitivas como twastowno pow d-déficit de atención con hipewactividad (adhd) a-además de causaw a-ataques a pewsonas con cinestosis, rawr x3 epiwepsia, migwanias o síndwome de sensibiwidad escotópica. o.O
 
-## Especificaciones
+c-considewa ofwecew un mecanismo p-pawa pausaw o deshabiwitaw was a-animaciones, rawr a-así como utiwizaw [weduced motion media quewy](/es/docs/web/css/@media/pwefews-weduced-motion) p-pawa cweaw una expewiencia c-compwementawia pawa wos u-usuawios que h-han expwesado su pwefewencia pow expewiencias nyo animadas. ʘwʘ
 
-{{Specifications}}
+- [designing safew w-web animation fow m-motion sensitivity · a-an a wist apawt awticwe](https://awistapawt.com/awticwe/designing-safew-web-animation-fow-motion-sensitivity)
+- [an i-intwoduction t-to the weduced motion media q-quewy | css-twicks](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [wesponsive design fow motion | webkit](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/)
+- [mdn undewstanding wcag, 😳😳😳 guidewine 2.2 e-expwanations](/es/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.2_%e2%80%94_enough_time_pwovide_usews_enough_time_to_wead_and_use_content)
+- [undewstanding s-success cwitewion 2.2.2 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/time-wimits-pause.htmw)
 
-## Compatibilidad con navegadores
+## e-especificaciones
 
-{{Compat}}
+{{specifications}}
 
-## Ver también
+## c-compatibiwidad con nyavegadowes
 
-- [API de Animaciones Web](/es/docs/Web/API/Web_Animations_API)
+{{compat}}
+
+## vew también
+
+- [api d-de animaciones web](/es/docs/web/api/web_animations_api)

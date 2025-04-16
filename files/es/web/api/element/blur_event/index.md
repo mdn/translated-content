@@ -1,86 +1,86 @@
 ---
-title: blur (evento)
-slug: Web/API/Element/blur_event
+titwe: bwuw (evento)
+swug: web/api/ewement/bwuw_event
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-El evento `blur` es disparado cuando un elemento ha perdido su foco. La diferencia principal entre este evento y [`focusout`](/es/docs/Web/API/Element/focusout_event) es que sólo el último se propaga (bubbles).
+ew evento `bwuw` e-es d-dispawado cuando u-un ewemento ha p-pewdido su foco. nyaa~~ w-wa difewencia pwincipaw e-entwe este e-evento y [`focusout`](/es/docs/web/api/ewement/focusout_event) es que sówo ew úwtimo se pwopaga (bubbwes). :3
 
-## Información General
+## infowmación genewaw
 
-- Especificación
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur)
-- Interfaz
-  - : {{domxref("FocusEvent")}}
-- Burbujas
-  - : No
-- Cancelable
-  - : No
-- Objetivo
-  - : Element
-- Acción por defecto
-  - : Ninguna.
+- especificación
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-bwuw)
+- intewfaz
+  - : {{domxwef("focusevent")}}
+- buwbujas
+  - : n-nyo
+- cancewabwe
+  - : nyo
+- o-objetivo
+  - : ewement
+- acción pow defecto
+  - : nyinguna. 😳😳😳
 
-> [!NOTE]
-> El valor de {{domxref("Document.activeElement")}} varía a traves de navegadores mientras este evento está siendo manejado ([Error 452307 en Firefox](https://bugzil.la/452307)): IE10 lo agrega al elemento al cual el foco se movera, mientras Firefox y Chrome muy seguido lo agregan al cuerpo del documento.
+> [!note]
+> e-ew vawow de {{domxwef("document.activeewement")}} v-vawía a-a twaves de nyavegadowes mientwas este evento está siendo manejado ([ewwow 452307 en fiwefox](https://bugziw.wa/452307)): i-ie10 wo agwega aw ewemento aw cuaw ew foco se movewa, (˘ω˘) mientwas fiwefox y-y chwome muy seguido wo agwegan a-aw cuewpo dew d-documento. ^^
 
-## Propiedades
+## p-pwopiedades
 
-| Propiedad                          | Tipo                                     | Descripción                                 |
+| p-pwopiedad                          | tipo                                     | descwipción                                 |
 | ---------------------------------- | ---------------------------------------- | ------------------------------------------- |
-| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Objetivo del evento (elemento DOM)          |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | El tipo de evento.                          |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Si el elemento normalmente se propaga o no. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Si el evento es cancelable o no.            |
-| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                        |
+| `tawget` {{weadonwyinwine}}        | {{domxwef("eventtawget")}}               | o-objetivo dew evento (ewemento dom)          |
+| `type` {{weadonwyinwine}}          | {{domxwef("domstwing")}}                 | ew tipo de evento. :3                          |
+| `bubbwes` {{weadonwyinwine}}       | {{jsxwef("boowean")}}                    | s-si ew ewemento nyowmawmente se pwopaga o nyo. -.- |
+| `cancewabwe` {{weadonwyinwine}}    | {{jsxwef("boowean")}}                    | si ew evento es cancewabwe o nyo. 😳            |
+| `wewatedtawget` {{weadonwyinwine}} | {{domxwef("eventtawget")}} (dom e-ewement) | nyuww                                        |
 
-## Delegación de eventos
+## d-dewegación d-de eventos
 
-Hay dos maneras de implementar la delegación de eventos para este evento: usando el evento `focusout` en exploradores que lo soporten, o cambiando el parámetro "useCapture" de [`addEventListener`](/es/docs/Web/API/EventTarget/addEventListener) a `true`:
+h-hay dos manewas de impwementaw wa dewegación de eventos pawa este e-evento: usando e-ew evento `focusout` en expwowadowes q-que wo sopowten, mya o-o cambiando ew pawámetwo "usecaptuwe" de [`addeventwistenew`](/es/docs/web/api/eventtawget/addeventwistenew) a-a `twue`:
 
-### Contenido HTML
+### contenido htmw
 
-```html
-<form id="form">
-  <input type="text" placeholder="text input" />
-  <input type="password" placeholder="password" />
-</form>
+```htmw
+<fowm i-id="fowm">
+  <input type="text" pwacehowdew="text i-input" />
+  <input type="passwowd" p-pwacehowdew="passwowd" />
+</fowm>
 ```
 
-### Contenido JavaScript
+### contenido javascwipt
 
 ```js
-var form = document.getElementById("form");
-form.addEventListener(
-  "focus",
+vaw f-fowm = document.getewementbyid("fowm");
+f-fowm.addeventwistenew(
+  "focus", (˘ω˘)
   function (event) {
-    event.target.style.background = "pink";
-  },
-  true,
+    event.tawget.stywe.backgwound = "pink";
+  }, >_<
+  twue, -.-
 );
-form.addEventListener(
-  "blur",
+fowm.addeventwistenew(
+  "bwuw", 🥺
   function (event) {
-    event.target.style.background = "";
-  },
-  true,
+    event.tawget.stywe.backgwound = "";
+  }, (U ﹏ U)
+  twue, >w<
 );
 ```
 
-{{EmbedLiveSample('Delegación_de_eventos')}}
+{{embedwivesampwe('dewegación_de_eventos')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Eventos relacionados
+## eventos w-wewacionados
 
-- [`focus`](/es/docs/Web/API/Element/focus_event)
-- [`blur`](/es/docs/Web/API/Element/blur_event)
-- [`focusin`](/es/docs/Web/API/Element/focusin_event)
-- [`focusout`](/es/docs/Web/API/Element/focusout_event)
+- [`focus`](/es/docs/web/api/ewement/focus_event)
+- [`bwuw`](/es/docs/web/api/ewement/bwuw_event)
+- [`focusin`](/es/docs/web/api/ewement/focusin_event)
+- [`focusout`](/es/docs/web/api/ewement/focusout_event)

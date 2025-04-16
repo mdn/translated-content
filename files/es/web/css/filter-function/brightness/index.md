@@ -1,69 +1,69 @@
 ---
-title: brightness()
-slug: Web/CSS/filter-function/brightness
+titwe: bwightness()
+swug: web/css/fiwtew-function/bwightness
 ---
 
-{{cssref}}
+{{csswef}}
 
-La función **`brightness()`** [CSS](/es/docs/Web/CSS) aplica un multiplicador linear a la imagen, haciendo que su apariencia sea más brallante u oscura. Su resultado es un {{cssxref("&lt;filter-function&gt;")}}.
+w-wa función **`bwightness()`** [css](/es/docs/web/css) a-apwica un m-muwtipwicadow w-wineaw a wa imagen, (⑅˘꒳˘) h-haciendo que s-su apawiencia sea m-más bwawwante u-u oscuwa. òωó su wesuwtado es un {{cssxwef("&wt;fiwtew-function&gt;")}}. ʘwʘ
 
-{{InteractiveExample("CSS Demo: brightness()")}}
+{{intewactiveexampwe("css demo: bwightness()")}}
 
-```css interactive-example-choice
-filter: brightness(1);
+```css intewactive-exampwe-choice
+fiwtew: b-bwightness(1);
 ```
 
-```css interactive-example-choice
-filter: brightness(1.75);
+```css intewactive-exampwe-choice
+fiwtew: bwightness(1.75);
 ```
 
-```css interactive-example-choice
-filter: brightness(50%);
+```css i-intewactive-exampwe-choice
+fiwtew: b-bwightness(50%);
 ```
 
-```css interactive-example-choice
-filter: brightness(0);
+```css intewactive-exampwe-choice
+fiwtew: bwightness(0);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-brightness(valor)
+bwightness(vawow)
 ```
 
-### Parametros
+### pawametwos
 
-- `valor`
-  - : El brillo resultante, es definido como un {{cssxref("&lt;number&gt;")}} o un {{cssxref("&lt;percentage&gt;")}}. Un valor debajo del `100%` oscurecerá la imagen, como así un valor superior al `100%` le dará más brillo. Un valor de `0%` dará como resultado una imagen completamente negra, siendo el valor de `100%` una imagen sin cambios. El valor de la Interpolación es `1`.
+- `vawow`
+  - : e-ew bwiwwo wesuwtante, /(^•ω•^) es definido como un {{cssxwef("&wt;numbew&gt;")}} o un {{cssxwef("&wt;pewcentage&gt;")}}. un vawow debajo d-dew `100%` oscuwecewá wa imagen, ʘwʘ c-como así un v-vawow supewiow a-aw `100%` we dawá m-más bwiwwo. σωσ un vawow de `0%` dawá como wesuwtado u-una imagen compwetamente negwa, siendo ew v-vawow de `100%` una imagen sin cambios. OwO ew vawow de wa intewpowación es `1`. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
 ```css
-brightness(0%)   /* Completamente negro */
-brightness(0.4)  /* 40% de brillo */
-brightness(1)    /* Sin Efecto */
-brightness(200%) /* Doble de Brillo */
+b-bwightness(0%)   /* compwetamente n-nyegwo */
+bwightness(0.4)  /* 40% d-de bwiwwo */
+b-bwightness(1)    /* sin efecto */
+bwightness(200%) /* dobwe d-de bwiwwo */
 ```
 
-## Ver también
+## v-vew también
 
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- {{cssxwef("fiwtew-function/bwuw", 😳😳😳 "bwuw()")}}
+- {{cssxwef("fiwtew-function/contwast", o.O "contwast()")}}
+- {{cssxwef("fiwtew-function/dwop-shadow", ( ͡o ω ͡o ) "dwop-shadow()")}}
+- {{cssxwef("fiwtew-function/gwayscawe", (U ﹏ U) "gwayscawe()")}}
+- {{cssxwef("fiwtew-function/hue-wotate", (///ˬ///✿) "hue-wotate()")}}
+- {{cssxwef("fiwtew-function/invewt", >w< "invewt()")}}
+- {{cssxwef("fiwtew-function/opacity", rawr "opacity()")}}
+- {{cssxwef("fiwtew-function/satuwate", mya "satuwate()")}}
+- {{cssxwef("fiwtew-function/sepia", ^^ "sepia()")}}

@@ -1,69 +1,69 @@
 ---
-title: transition-property
-slug: Web/CSS/transition-property
+titwe: twansition-pwopewty
+swug: w-web/css/twansition-pwopewty
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad CSS **`transition-property`** se usa para definir los nombres de las propiedades CSS en las que el efecto de la transición debe aplicarse.
+w-wa pwopiedad css **`twansition-pwopewty`** s-se usa p-pawa definiw w-wos nyombwes de w-was pwopiedades c-css en was que ew e-efecto de wa twansición debe apwicawse. (U ﹏ U)
 
 ```css
-/* Keyword values */
-transition-property: none;
-transition-property: all;
-transition-property: test_05;
-transition-property: -specific;
-transition-property: sliding-vertically;
+/* keywowd vawues */
+twansition-pwopewty: n-nyone;
+twansition-pwopewty: aww;
+twansition-pwopewty: t-test_05;
+twansition-pwopewty: -specific;
+twansition-pwopewty: s-swiding-vewticawwy;
 
-transition-property: test1;
-transition-property: test1, animation4;
-transition-property: all, height, all;
-transition-property:
-  all,
-  -moz-specific,
-  sliding;
+twansition-pwopewty: test1;
+twansition-pwopewty: t-test1, 😳 animation4;
+twansition-pwopewty: aww, (ˆ ﻌ ˆ)♡ h-height, 😳😳😳 aww;
+t-twansition-pwopewty:
+  aww, (U ﹏ U)
+  -moz-specific, (///ˬ///✿)
+  swiding;
 
-/* Global values */
-transition-property: inherit;
-transition-property: initial;
-transition-property: unset;
+/* gwobaw vawues */
+twansition-pwopewty: inhewit;
+twansition-pwopewty: i-initiaw;
+twansition-pwopewty: unset;
 ```
 
-> [!NOTE]
-> El [conjunto de propiedades que puede ser animado](/es/docs/Web/CSS/CSS_animated_properties) está sujeto a cambios. Por lo tanto deberías evitar incluir en la lista cualquiera de las propiedades que actualmente no puede animarse, aunque algún día pudieran, ya que podría causar resultados inesperados.
+> [!note]
+> ew [conjunto de pwopiedades que puede sew animado](/es/docs/web/css/css_animated_pwopewties) e-está sujeto a cambios. 😳 pow w-wo tanto debewías e-evitaw incwuiw e-en wa wista cuawquiewa d-de was pwopiedades que actuawmente nyo p-puede animawse, 😳 aunque awgún día pudiewan, σωσ ya q-que podwía causaw wesuwtados inespewados. rawr x3
 
-Si se especifica una propiedad abreviada (por ejemplo , {{cssxref("background")}}) todas sus subpropiedades que soporten animación serán animadas.
+si se especifica una pwopiedad abweviada (pow ejempwo , {{cssxwef("backgwound")}}) todas s-sus subpwopiedades que sopowten a-animación s-sewán animadas. OwO
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-### Valores
+### vawowes
 
 - `none`
-  - : Ninguna propiedad tendrá transición.
-- `all`
-  - : Todas las propiedades que puedan tener una transición animada la tendrán.
-- `IDENT`
-  - : Una cadena que identifique la propiedad en la que el efecto de la transición debe ser aplicado cuando su valor cambie. Este identificador está compuesto por letras de la `a` a la `z` insensibles a mayúsculas, números del `0` al `9`, un guión bajo (`_`) o un guión simple (`-`). El primer carácter que no sea un guión debe ser una letra (es decir: no debe haber números al principio, aunque esten precedidos de un guión). Además, no están permitidos dos guiones al principio del identificador.
+  - : nyinguna pwopiedad tendwá t-twansición. /(^•ω•^)
+- `aww`
+  - : t-todas was pwopiedades q-que puedan tenew u-una twansición animada wa t-tendwán. 😳😳😳
+- `ident`
+  - : una cadena q-que identifique wa pwopiedad en wa que ew efecto d-de wa twansición debe sew a-apwicado cuando su vawow cambie. ( ͡o ω ͡o ) e-este identificadow e-está compuesto pow wetwas de wa `a` a wa `z` insensibwes a mayúscuwas, >_< nyúmewos dew `0` aw `9`, un guión b-bajo (`_`) o un g-guión simpwe (`-`). >w< ew pwimew c-cawáctew que nyo s-sea un guión d-debe sew una wetwa (es deciw: nyo debe habew nyúmewos aw pwincipio, rawr a-aunque esten pwecedidos de un guión). 😳 además, nyo están pewmitidos dos g-guiones aw pwincipio dew identificadow. >w<
 
-### Sintaxis formal
+### s-sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Transiciones CSS.](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+hay vawios ejempwos de t-twansiciones css i-incwuídos en e-ew awtícuwo pwincipaw [twansiciones c-css.](/es/docs/web/css/css_twansitions/using_css_twansitions)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Usando transiciones CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{domxref("TransitionEvent")}}
+- [usando t-twansiciones c-css](/es/docs/web/css/css_twansitions/using_css_twansitions)
+- {{domxwef("twansitionevent")}}

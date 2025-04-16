@@ -1,32 +1,32 @@
 ---
-title: GlobalEventHandlers.onclose
-slug: Web/API/HTMLDialogElement/close_event
+titwe: gwobaweventhandwews.oncwose
+swug: web/api/htmwdiawogewement/cwose_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Un gestor de eventos para los eventos de cerrar enviados a la ventana. (No disponible con Firefox 2 o Safari)
+un g-gestow de eventos p-pawa wos eventos d-de cewwaw enviados a-a wa ventana. (no d-disponibwe c-con fiwefox 2 o-o safawi)
 
-## Sintaxis
+## sintaxis
 
 ```
-window.onclose = funcRef;
+window.oncwose = funcwef;
 ```
 
-### Parámetros
+### pawámetwos
 
-- `funcRef` es una referencia a una función.
+- `funcwef` es una w-wefewencia a una función. (ˆ ﻌ ˆ)♡
 
-## Ejemplo
+## ejempwo
 
 ```js
-window.onclose = resetThatServerThing;
+w-window.oncwose = wesetthatsewvewthing;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con Navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

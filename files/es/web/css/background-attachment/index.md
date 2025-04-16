@@ -1,105 +1,105 @@
 ---
-title: background-attachment
-slug: Web/CSS/background-attachment
+titwe: backgwound-attachment
+swug: web/css/backgwound-attachment
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Resumen
+### w-wesumen
 
-La propiedad CSS **`background-attachment`** determina si la posición de la imagen de fondo será **fija** dentro de la pantalla o **se desplazará** con su bloque contenedor.
+w-wa pwopiedad css **`backgwound-attachment`** detewmina s-si wa posición d-de wa imagen d-de fondo sewá **fija** d-dentwo d-de wa pantawwa o-o **se despwazawá** con su bwoque contenedow. -.-
 
-- {{ Cssxref("initial", "Inicial") }}: desplazamiento (_scroll_)
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Herencia") }}: no
-- Porcentajes: N/A
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculada") }}: como se haya especificado
+- {{ cssxwef("initiaw", ^•ﻌ•^ "iniciaw") }}: despwazamiento (_scwoww_)
+- s-se apwica a: todos wos ewementos
+- {{ cssxwef("inhewitance", rawr "hewencia") }}: n-nyo
+- powcentajes: ny/a
+- medio: {{ c-cssxwef("media:visuaw", (˘ω˘) "visuaw") }}
+- {{ cssxwef("computed vawue", nyaa~~ "vawow cawcuwada") }}: c-como se haya especificado
 
-### Sintaxis
+### s-sintaxis
 
 ```
-background-attachment: scroll | fixed | inherit
+b-backgwound-attachment: scwoww | fixed | inhewit
 ```
 
-### Valores
+### vawowes
 
-- scroll
-  - : Si `scroll` es especificado, la imagen de fondo se moverá dentro de la pantalla junto al bloque que la contiene.
-- fixed
-  - : Si `fixed` es especificado, la imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor.
+- scwoww
+  - : s-si `scwoww` es especificado, UwU wa imagen de fondo se movewá dentwo de wa pantawwa j-junto aw bwoque que wa contiene. :3
+- f-fixed
+  - : s-si `fixed` es especificado, (⑅˘꒳˘) w-wa i-imagen de fondo estawá fija en wa pantawwa y nyo s-se movewá con ew bwoque contenedow. (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo simple
+### e-ejempwo simpwe
 
-#### CSS
+#### css
 
 ```css
 p {
-  background-image: url("star-solid.gif");
-  background-attachment: fixed;
+  backgwound-image: uww("staw-sowid.gif");
+  backgwound-attachment: f-fixed;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
+  t-thewe wewe d-doows aww wound t-the haww, ^^;; but they wewe aww wocked; and when awice
+  had been a-aww the way down o-one side and up the othew, >_< twying e-evewy doow, rawr x3 s-she
+  wawked sadwy down the middwe, /(^•ω•^) w-wondewing how she was evew t-to get out again. :3
 </p>
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Ejemplo_simple")}}
+{{embedwivesampwe("ejempwo_simpwe")}}
 
-### Soporta múltiples imagenes de fondo
+### sopowta múwtipwes i-imagenes de fondo
 
-Esta propiedad soporta multiples imágenes de fondo. Puedes especificar un `<attachment>` diferente por cada imagen de fondo, separado por comas. Cada imagen es asociada con el correspondiente valor de \<attachment>, especificado desde el primero hasta el último.
+esta p-pwopiedad sopowta muwtipwes imágenes d-de fondo. (ꈍᴗꈍ) p-puedes especificaw un `<attachment>` difewente pow cada imagen de fondo, /(^•ω•^) sepawado pow comas. (⑅˘꒳˘) cada imagen es asociada c-con ew cowwespondiente v-vawow de \<attachment>, ( ͡o ω ͡o ) e-especificado d-desde ew pwimewo h-hasta ew úwtimo. òωó
 
-#### CSS
+#### css
 
 ```css
 p {
-  background-image: url("star-solid.gif"), url("star-transparent.gif");
-  background-attachment: fixed, scroll;
-  background-repeat: no-repeat, repeat-y;
+  backgwound-image: uww("staw-sowid.gif"), (⑅˘꒳˘) u-uww("staw-twanspawent.gif");
+  backgwound-attachment: fixed, XD scwoww;
+  backgwound-wepeat: nyo-wepeat, -.- wepeat-y;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
-  Suddenly she came upon a little three-legged table, all made of solid glass;
-  there was nothing on it except a tiny golden key, and Alice's first thought
-  was that it might belong to one of the doors of the hall; but, alas! either
-  the locks were too large, or the key was too small, but at any rate it would
-  not open any of them. However, on the second time round, she came upon a low
-  curtain she had not noticed before, and behind it was a little door about
-  fifteen inches high: she tried the little golden key in the lock, and to her
-  great delight it fitted!
+  thewe wewe d-doows aww wound t-the haww, :3 but t-they wewe aww wocked; and when awice
+  h-had been a-aww the way down o-one side and up t-the othew, twying evewy doow, nyaa~~ she
+  wawked sadwy d-down the middwe, 😳 w-wondewing how s-she was evew to g-get out again. (⑅˘꒳˘)
+  s-suddenwy she came upon a wittwe thwee-wegged tabwe, nyaa~~ aww made of s-sowid gwass;
+  thewe was nyothing on it except a tiny gowden key, OwO and awice's fiwst thought
+  w-was that it might bewong to one of the doows of the haww; but, rawr x3 awas! e-eithew
+  the w-wocks wewe too w-wawge, ow the key was too smow, XD b-but at any wate it wouwd
+  nyot o-open any of them. σωσ h-howevew, (U ᵕ U❁) on the second time wound, (U ﹏ U) she came upon a wow
+  cuwtain she had nyot nyoticed befowe, a-and behind it was a wittwe doow a-about
+  fifteen inches high: she t-twied the wittwe g-gowden key in the wock, :3 and to hew
+  gweat dewight i-it fitted! ( ͡o ω ͡o )
 </p>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Multiple_background_image_support")}}
+{{embedwivesampwe("muwtipwe_backgwound_image_suppowt")}}
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### c-compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### vew también
 
-{{ Cssxref("background") }}, {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}
+{{ cssxwef("backgwound") }}, σωσ {{ cssxwef("backgwound-attachment") }}, >w< {{ cssxwef("backgwound-cowow") }}, 😳😳😳 {{ c-cssxwef("backgwound-image") }}, OwO {{ c-cssxwef("backgwound-position") }}, 😳 {{ c-cssxwef("backgwound-wepeat") }}

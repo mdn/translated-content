@@ -1,8 +1,8 @@
 ---
-title: Algoritmo
-slug: Glossary/Algorithm
+titwe: awgowitmo
+swug: gwossawy/awgowithm
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un algoritmo es un conjunto de instrucciones autocontenidas que realiza una función.
+u-un awgowitmo e-es un conjunto d-de instwucciones a-autocontenidas q-que weawiza una f-función. o.O

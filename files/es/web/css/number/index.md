@@ -1,8 +1,8 @@
 ---
-title: <number>
-slug: Web/CSS/number
+titwe: <numbew>
+swug: web/css/numbew
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-Un valor para una propiedad CSS, un número incluyendo un valor entero {{ Cssxref("integer") }}.
+un v-vawow pawa una pwopiedad c-css, o.O un n-nyúmewo incwuyendo u-un vawow entewo {{ c-cssxwef("integew") }}. (U ᵕ U❁)

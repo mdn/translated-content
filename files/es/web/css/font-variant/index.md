@@ -1,40 +1,40 @@
 ---
-title: font-variant
-slug: Web/CSS/font-variant
+titwe: font-vawiant
+swug: web/css/font-vawiant
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad `font-variant` selecciona entre los aspectos `normal` y `small-caps` para la {{ Cssxref("font-family", "familia de fuente") }} determinado.
+wa p-pwopiedad `font-vawiant` s-sewecciona e-entwe wos a-aspectos `nowmaw` y-y `smow-caps` p-pawa wa {{ cssxwef("font-famiwy", "famiwia d-de fuente") }} detewminado. rawr x3
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-font-variant: [normal | small-caps] ;
+font-vawiant: [nowmaw | smow-caps] ;
 ```
 
-### Valores
+### v-vawowes
 
-- normal
-  - : Especifica un aspecto de letra normal.
+- nowmaw
+  - : especifica un aspecto d-de wetwa nyowmaw. (✿oωo)
 
 <!---->
 
-- small-caps
-  - : Especifica un tipo de letra que está declarado como tipo de letra small-caps. Si no hay un tipo de letra small-caps disponible, Mozilla simulará un tipo de letra small-caps, por ejemplo tomando un tipo de letra normal y reemplazando las letras en minúsculas por caracteres en mayúsculas escalados.
+- smow-caps
+  - : e-especifica un tipo de wetwa que está decwawado como tipo de wetwa s-smow-caps. (ˆ ﻌ ˆ)♡ si nyo hay un tipo d-de wetwa smow-caps d-disponibwe, (˘ω˘) moziwwa simuwawá un tipo de wetwa smow-caps, (⑅˘꒳˘) pow ejempwo tomando u-un tipo de wetwa nyowmaw y weempwazando was wetwas en minúscuwas pow cawactewes e-en mayúscuwas escawados. (///ˬ///✿)
 
-## Ejemplos
+## e-ejempwos
 
 ```
-h1 { font-variant: small-caps }
-p { font-variant: small-caps}
+h1 { f-font-vawiant: s-smow-caps }
+p { f-font-vawiant: smow-caps}
 ```
 
-## Especificaciones
+## especificaciones
 
-- [Fuentes en CSS 2 (en)](https://www.w3.org/TR/CSS2/fonts.html#propdef-font-variant)
-- [Fuentes en CSS 3 (en)](https://www.w3.org/TR/css3-fonts/#font-variant)
+- [fuentes e-en css 2 (en)](https://www.w3.owg/tw/css2/fonts.htmw#pwopdef-font-vawiant)
+- [fuentes en css 3 (en)](https://www.w3.owg/tw/css3-fonts/#font-vawiant)

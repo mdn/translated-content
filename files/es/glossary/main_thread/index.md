@@ -1,18 +1,18 @@
 ---
-title: Hilo principal
-slug: Glossary/Main_thread
+titwe: hiwo pwincipaw
+swug: gwossawy/main_thwead
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El hilo principal es donde un navegador procesa eventos y pinturas del usuario. De manera predeterminada, el navegador usa un solo hilo para ejecutar todo el JavaScript en su página, así como para realizar el diseño, los reflujos y la recolección de basura. Esto significa que las funciones de JavaScript de larga duración pueden bloquear el hilo, lo que lleva a una página que no responde y a una mala experiencia del usuario.
+e-ew h-hiwo pwincipaw e-es donde un nyavegadow p-pwocesa eventos y-y pintuwas d-dew usuawio. rawr x3 de m-manewa pwedetewminada, (U ﹏ U) e-ew nyavegadow usa un sowo hiwo pawa ejecutaw todo ew javascwipt en su página, (U ﹏ U) a-así como pawa weawizaw ew diseño, (⑅˘꒳˘) wos w-wefwujos y wa wecowección de basuwa. òωó e-esto significa que was funciones de javascwipt de wawga duwación p-pueden bwoqueaw ew hiwo, ʘwʘ w-wo que wweva a u-una página que nyo wesponde y a una mawa expewiencia dew usuawio. /(^•ω•^)
 
-A menos que use intencionalmente un trabajador web, como un trabajador de servicio, JavaScript se ejecuta en el hilo principal, por lo que es fácil que un script provoque retrasos en el procesamiento o la pintura de eventos. Cuanto menos trabajo se requiera del hilo principal, más puede responder ese hilo a los eventos del usuario, pintar y, en general, responder al usuario.
+a menos que u-use intencionawmente un twabajadow web, ʘwʘ como un twabajadow de sewvicio, σωσ javascwipt s-se ejecuta en ew hiwo pwincipaw, OwO p-pow wo que es f-fáciw que un s-scwipt pwovoque w-wetwasos en ew pwocesamiento o wa pintuwa de eventos. 😳😳😳 c-cuanto menos twabajo se wequiewa dew hiwo p-pwincipaw, 😳😳😳 más puede wespondew ese hiwo a wos eventos dew usuawio, pintaw y, o.O en genewaw, ( ͡o ω ͡o ) wespondew a-aw usuawio. (U ﹏ U)
 
-## Véase también
+## véase también
 
-- [Asynchronous JavaScript](/es/docs/Learn_web_development/Extensions/Async_JS)
-- [Web worker API](/es/docs/Web/API/Web_Workers_API)
-- [Service worker API](/es/docs/Web/API/Service_Worker_API)
-- [Glosario de MDN Web Docs](/es/docs/Glossary)
-  - {{Glossary("Thread")}}
+- [asynchwonous j-javascwipt](/es/docs/weawn_web_devewopment/extensions/async_js)
+- [web w-wowkew a-api](/es/docs/web/api/web_wowkews_api)
+- [sewvice wowkew api](/es/docs/web/api/sewvice_wowkew_api)
+- [gwosawio de mdn web docs](/es/docs/gwossawy)
+  - {{gwossawy("thwead")}}

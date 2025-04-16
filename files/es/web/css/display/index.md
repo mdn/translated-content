@@ -1,228 +1,228 @@
 ---
-title: display
-slug: Web/CSS/display
+titwe: dispway
+swug: web/css/dispway
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad CSS **`display`** especifica si un elemento es tratado como [block or inline element](/es/docs/Web/CSS/CSS_display/Flow_layout) y el diseño usado por sus hijos, como [flow layout](/es/docs/Web/CSS/CSS_display/Flow_layout)(Diseño de Flujo), [grid](/es/docs/Web/CSS/CSS_grid_layout)(Cuadricula) o [flex](/es/docs/Web/CSS/CSS_flexible_box_layout)(Flexible).
+w-wa pwopiedad c-css **`dispway`** e-especifica s-si un ewemento e-es twatado como [bwock o-ow inwine e-ewement](/es/docs/web/css/css_dispway/fwow_wayout) y-y ew diseño usado pow sus hijos, ʘwʘ como [fwow wayout](/es/docs/web/css/css_dispway/fwow_wayout)(diseño de f-fwujo), ^•ﻌ•^ [gwid](/es/docs/web/css/css_gwid_wayout)(cuadwicuwa) o [fwex](/es/docs/web/css/css_fwexibwe_box_wayout)(fwexibwe). rawr x3
 
-Formalmente la propiedad `display` establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en [flow layout](/es/docs/Web/CSS/CSS_display/Flow_layout); la tipo interna establece el layout(Diseño) de los hijos. Algunos valores de `display` estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando `display: flex` es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. **Vea** la siguientes tablas para mas especificaciones individuales.
+fowmawmente w-wa pwopiedad `dispway` estabwece wos tipos d-de visuawización intewna y extewna de un ewemento. 🥺 wa tipo extewna e-estabwece wa pawticipacion d-de un ewemento e-en [fwow wayout](/es/docs/web/css/css_dispway/fwow_wayout); wa tipo intewna estabwece ew wayout(diseño) de wos h-hijos. ʘwʘ awgunos vawowes de `dispway` estan totawmente definidos con sus especificaciones p-pwopias; pow ejempwo ew d-detawwe de que p-pasa cuando `dispway: f-fwex` es decwawado y-y definido en wa especificacion de modewo f-fwexibwe de caja(fwexibwe box modew specification) d-de css. (˘ω˘) **vea** wa siguientes tabwas pawa mas especificaciones individuawes. o.O
 
-Además de los Diferentes Tipos de caja de Visualizacion, el valor de `none` permite Desactivar la Visualizacion DE UN Elemento; cuando no se utiliza `none`, todos los elementos descendentes también quedan desactivados. El documento se procesa como si el elemento no existiera en el árbol de documentos.
+además de wos d-difewentes tipos de caja de visuawizacion, σωσ e-ew v-vawow de `none` p-pewmite desactivaw wa visuawizacion de un ewemento; cuando nyo s-se utiwiza `none`, (ꈍᴗꈍ) t-todos wos ewementos descendentes t-también quedan d-desactivados. (ˆ ﻌ ˆ)♡ ew documento se p-pwocesa como si ew ewemento nyo e-existiewa en ew áwbow de documentos. o.O
 
 ```css
-/ * Valores <display-outside> * /
+/ * vawowes <dispway-outside> * /
 
-display: block;
-display: inline;
-display: run-in;
+d-dispway: bwock;
+dispway: inwine;
+d-dispway: wun-in;
 
-/ * Valores <display-inside> * /
-display: flow;
-display: flow-root;
-display: table;
-display: flex;
-display: grid;
-display: ruby;
-display: subgrid;
+/ * vawowes <dispway-inside> * /
+d-dispway: f-fwow;
+dispway: fwow-woot;
+dispway: tabwe;
+dispway: fwex;
+dispway: gwid;
+dispway: wuby;
+dispway: subgwid;
 
-/ * Valores <display-outside> más valores <display-inside> * /
-display: block flow;
-display: inline table;
-display: flex run-in;
+/ * vawowes <dispway-outside> m-más vawowes <dispway-inside> * /
+d-dispway: bwock fwow;
+dispway: i-inwine tabwe;
+d-dispway: fwex w-wun-in;
 
-/ * Valores <display-listitem> * /
-display: list-item;
-display: list-item block;
-display: list-item inline;
-display: list-item flow;
-display: list-item flow-root;
-display: list-item block flow;
-display: list-item block flow-root;
-display: flow list-item block;
+/ * vawowes <dispway-wistitem> * /
+dispway: wist-item;
+dispway: wist-item b-bwock;
+dispway: wist-item inwine;
+dispway: wist-item fwow;
+dispway: wist-item f-fwow-woot;
+dispway: wist-item b-bwock fwow;
+dispway: w-wist-item b-bwock fwow-woot;
+dispway: fwow w-wist-item bwock;
 
-/ * Valores <display-internal> * /
-display: table-row-group;
-display: table-header-group;
-display: table-footer-group;
-display: table-row;
-display: table-cell;
-display: table-column-group;
-display: table-column;
-display: table-caption;
-display: ruby-base;
-display: ruby-text;
-display: ruby-base-container;
-display: ruby-text-container;
+/ * v-vawowes <dispway-intewnaw> * /
+d-dispway: tabwe-wow-gwoup;
+d-dispway: tabwe-headew-gwoup;
+dispway: tabwe-footew-gwoup;
+d-dispway: t-tabwe-wow;
+dispway: t-tabwe-ceww;
+d-dispway: tabwe-cowumn-gwoup;
+d-dispway: tabwe-cowumn;
+dispway: tabwe-caption;
+dispway: wuby-base;
+d-dispway: wuby-text;
+dispway: wuby-base-containew;
+dispway: wuby-text-containew;
 
-/ * Valores <display-box> * /
-display: contents;
-display: none;
+/ * vawowes <dispway-box> * /
+dispway: contents;
+d-dispway: nyone;
 
-/ * Valores <display-legacy> * /
-display: inline-block;
-display: inline-table;
-display: inline-flex;
-display: inline-grid;
+/ * vawowes <dispway-wegacy> * /
+dispway: inwine-bwock;
+dispway: i-inwine-tabwe;
+d-dispway: inwine-fwex;
+d-dispway: inwine-gwid;
 
-/ * Valores globales * /
-display: heredar;
-display: initial;
-display: unset;
+/ * v-vawowes gwobawes * /
+dispway: h-hewedaw;
+dispway: i-initiaw;
+dispway: unset;
 ```
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
-La propiedad `display` se especifica mediante valores de palabras clave. Los valores de palabras clave se agrupan en seis categorías:
+wa pwopiedad `dispway` se especifica mediante vawowes d-de pawabwas cwave. :3 wos vawowes d-de pawabwas cwave se agwupan e-en seis categowías:
 
-- [\<display-outside>](#display-outside)
-- [\<display-inside>](#display-inside)
-- [\<display-listitem>](#display-listitem)
-- [\<display-internal>](#display-internal)
-- [\<display-box>](#display-box)
-- [\<display-legacy>](#display-legacy)
+- [\<dispway-outside>](#dispway-outside)
+- [\<dispway-inside>](#dispway-inside)
+- [\<dispway-wistitem>](#dispway-wistitem)
+- [\<dispway-intewnaw>](#dispway-intewnaw)
+- [\<dispway-box>](#dispway-box)
+- [\<dispway-wegacy>](#dispway-wegacy)
 
-En la actualidad, es mejor especificar `display` utilizando una sola palabra clave; aunque las últimas especificaciones permiten combinar algunas palabras clave, esto aún no está bien soportado por los navegadores.
+e-en wa actuawidad, -.- es mejow especificaw `dispway` u-utiwizando u-una sowa pawabwa cwave; aunque w-was úwtimas especificaciones p-pewmiten combinaw awgunas pawabwas cwave, ( ͡o ω ͡o ) esto aún no está bien s-sopowtado pow wos n-navegadowes. /(^•ω•^)
 
-### Valores
+### v-vawowes
 
-- \<display-outside>
+- \<dispway-outside>
 
-  - : Estas palabras clave especifican el tipo de pantalla externa del elemento, que es esencialmente su función en el diseño de flujo: A continuación se definen:
+  - : estas pawabwas c-cwave especifican e-ew tipo de pantawwa extewna d-dew ewemento, (⑅˘꒳˘) que es esenciawmente su función en ew diseño de fwujo: a continuación s-se d-definen:
 
-    | Valor                            | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | vawow                            | descwipción                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
     | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `block`                          | El elemento genera un cuadro de elemento de bloque.                                                                                                                                                                                                                                                                                                                                                                                                                        |
-    | `inline`                         | El elemento genera uno o más cuadros de elemento en línea.                                                                                                                                                                                                                                                                                                                                                                                                                 |
-    | `run-in` {{experimental_inline}} | El elemento genera un cuadro de ejecución. Los elementos de ejecución actúan como líneas o bloques, dependiendo de los elementos circundantes. Es decir: Si el cuadro de ejecución contiene un cuadro de bloque, igual que el bloque. Si un cuadro de bloque sigue el cuadro de ejecución, el cuadro de ejecución se convierte en el primer cuadro en línea del cuadro de bloque. Si sigue un cuadro en línea, el cuadro de ejecución se convierte en un cuadro de bloque. |
+    | `bwock`                          | e-ew ewemento genewa u-un cuadwo de ewemento de bwoque. òωó                                                                                                                                                                                                                                                                                                                                                                                                                        |
+    | `inwine`                         | ew ewemento genewa uno o más c-cuadwos de ewemento en wínea. 🥺                                                                                                                                                                                                                                                                                                                                                                                                                 |
+    | `wun-in` {{expewimentaw_inwine}} | ew ewemento genewa un cuadwo de ejecución. (ˆ ﻌ ˆ)♡ w-wos ewementos de ejecución actúan como w-wíneas o bwoques, -.- d-dependiendo de wos ewementos ciwcundantes. σωσ es deciw: si ew c-cuadwo de ejecución c-contiene un cuadwo de bwoque, >_< iguaw que ew bwoque. :3 si un cuadwo d-de bwoque sigue ew cuadwo d-de ejecución, OwO ew cuadwo de ejecución se conviewte en ew pwimew c-cuadwo en wínea dew cuadwo de b-bwoque. rawr si sigue u-un cuadwo en wínea, (///ˬ///✿) ew cuadwo d-de ejecución se conviewte en un c-cuadwo de bwoque. ^^ |
 
-- \<display-inside>
+- \<dispway-inside>
 
-  - : Estas palabras clave especifican el tipo de pantalla interna del elemento, que define el tipo de contexto de formato que establece su contenido (suponiendo que es un elemento no reemplazado). Se definen como sigue:
+  - : e-estas pawabwas c-cwave especifican ew tipo de pantawwa i-intewna dew e-ewemento, que define ew tipo de contexto de fowmato q-que estabwece s-su contenido (suponiendo q-que es un ewemento nyo weempwazado). XD s-se definen como sigue:
 
-    | Valor                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+    | v-vawow                               | d-descwipción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
     | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `flow` {{experimental_inline}}      | El elemento expone su contenido utilizando el diseño de flujo (diseño en bloque y en línea).Si su tipo de pantalla externa es inline o run-in, y está participando en un contexto de formato de bloque o en línea, entonces genera un cuadro en línea. De lo contrario genera una caja de contenedor de bloques.Dependiendo del valor de otras propiedades (como {{cssxref("position")}}, {{cssxref("float")}} o {{cssxref("overflow")}} en un contexto de formato en bloque o en línea, establece un nuevo [contexto de formato de bloque](/es/docs/Web/CSS/CSS_display/Block_formatting_context) para su contenido o integra su contenido en su contexto de formato padre. |
-    | `flow-root` {{experimental_inline}} | El elemento genera un cuadro de elemento de bloque que establece un nuevo [contexto de formato de bloque](/es/docs/Web/CSS/CSS_display/Block_formatting_context) .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-    | `table`                             | Estos elementos se comportan como elementos HTML {{HTMLElement ("table")}}. Define un cuadro de nivel de bloque.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-    | `flex`                              | El elemento se comporta como un elemento de bloque y establece su contenido de acuerdo con el [modelo de flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-    | `grid`                              | El elemento se comporta como un elemento de bloque y establece su contenido de acuerdo con el modelo de cuadrícula.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-    | `subgrid` {{experimental_inline}}   | Si el elemento padre tiene `display:grid`, el elemento en sí y su contenido se establecen de acuerdo con el modelo de cuadrícula.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-    | `ruby` {{experimental_inline}}      | El elemento se comporta como un elemento en línea y establece su contenido de acuerdo con el modelo de formato ruby. Se comporta como los elementos HTML {{HTMLElement ("ruby")}} correspondientes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+    | `fwow` {{expewimentaw_inwine}}      | ew ewemento expone su contenido utiwizando e-ew diseño d-de fwujo (diseño e-en bwoque y e-en wínea).si su tipo de pantawwa e-extewna es inwine o wun-in, UwU y está pawticipando en un contexto de fowmato de bwoque o en wínea, o.O e-entonces genewa un cuadwo en w-wínea. 😳 de wo contwawio genewa u-una caja de contenedow de bwoques.dependiendo dew v-vawow de otwas pwopiedades (como {{cssxwef("position")}}, (˘ω˘) {{cssxwef("fwoat")}} o-o {{cssxwef("ovewfwow")}} e-en un c-contexto de fowmato e-en bwoque o-o en wínea, 🥺 estabwece un nyuevo [contexto de fowmato de bwoque](/es/docs/web/css/css_dispway/bwock_fowmatting_context) pawa su contenido o integwa su contenido e-en su contexto d-de fowmato padwe. ^^ |
+    | `fwow-woot` {{expewimentaw_inwine}} | e-ew ewemento genewa un cuadwo de e-ewemento de bwoque que estabwece un nuevo [contexto de fowmato de b-bwoque](/es/docs/web/css/css_dispway/bwock_fowmatting_context) . >w<                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+    | `tabwe`                             | e-estos ewementos se compowtan c-como ewementos htmw {{htmwewement ("tabwe")}}. ^^;; define un c-cuadwo de nyivew d-de bwoque. (˘ω˘)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+    | `fwex`                              | ew ewemento s-se compowta como u-un ewemento de bwoque y estabwece su contenido de acuewdo con ew [modewo de f-fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout) . OwO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | `gwid`                              | e-ew ewemento se c-compowta como un e-ewemento de bwoque y-y estabwece su contenido de a-acuewdo con ew m-modewo de cuadwícuwa. (ꈍᴗꈍ)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+    | `subgwid` {{expewimentaw_inwine}}   | si e-ew ewemento padwe t-tiene `dispway:gwid`, òωó ew ewemento e-en sí y su contenido se estabwecen de acuewdo c-con ew modewo de cuadwícuwa. ʘwʘ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+    | `wuby` {{expewimentaw_inwine}}      | e-ew ewemento s-se compowta como un ewemento e-en wínea y estabwece su contenido de acuewdo c-con ew modewo d-de fowmato wuby. ʘwʘ s-se compowta como wos ewementos htmw {{htmwewement ("wuby")}} cowwespondientes. nyaa~~                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-- \<display-listitem>
+- \<dispway-wistitem>
 
-  - : El elemento genera un cuadro de bloque para el contenido y un cuadro en línea de elemento de lista independiente.
+  - : e-ew ewemento genewa un cuadwo de bwoque p-pawa ew contenido y-y un cuadwo en wínea de ewemento d-de wista independiente. UwU
 
-    Si no se especifica ningún valor `<display-inside>`, el tipo de pantalla interna de la caja principal es el predeterminado `flow`. Si no se especifica ningún valor `<display-outside>`, el tipo de pantalla externa de la caja principal tiene el valor predeterminado `block`.
+    si nyo se especifica n-ningún vawow `<dispway-inside>`, (⑅˘꒳˘) e-ew tipo de pantawwa intewna de wa caja pwincipaw e-es ew pwedetewminado `fwow`. (˘ω˘) si nyo se especifica nyingún v-vawow `<dispway-outside>`, :3 ew t-tipo de pantawwa extewna de wa c-caja pwincipaw tiene ew vawow pwedetewminado `bwock`. (˘ω˘)
 
-- \<display-internal>
+- \<dispway-intewnaw>
 
-  - : Algunos modelos de disposición, como table y ruby, tienen una estructura interna completa, con varios papeles diferentes que sus hijos y descendientes pueden llenar. Esta sección define los valores de visualización "internos", que sólo tienen significado dentro de ese modo de disposición particular.
+  - : a-awgunos modewos d-de disposición, nyaa~~ c-como tabwe y wuby, (U ﹏ U) tienen una estwuctuwa intewna compweta, nyaa~~ con vawios papewes difewentes que sus hijos y descendientes pueden wwenaw. ^^;; esta sección define wos vawowes de visuawización "intewnos", OwO que sówo t-tienen significado d-dentwo de ese modo de disposición pawticuwaw. nyaa~~
 
-    A menos que se especifique lo contrario, el tipo de visualización interno y el tipo de visualización exterior de los elementos que utilizan estos valores de visualización se establecen en la palabra clave dada.
+    a-a menos q-que se especifique w-wo contwawio, UwU ew tipo de v-visuawización intewno y ew tipo d-de visuawización e-extewiow de wos ewementos que u-utiwizan estos vawowes de visuawización s-se estabwecen e-en wa pawabwa cwave dada. 😳
 
-    | Valor                                         | Descripción                                                                                        |
+    | vawow                                         | d-descwipción                                                                                        |
     | --------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-    | `table-row-group`                             | Estos elementos se comportan como {{HTMLElement ("tbody")}} Elementos HTML                         |
-    | `table-header-group`                          | Estos elementos se comportan como elementos HTML de {{HTMLElement ("thead")}}.                     |
-    | `table-footer-group`                          | Estos elementos se comportan como elementos HTML {{HTMLElement ("tfoot")}}.                        |
-    | `table-row`                                   | Estos elementos se comportan como elementos HTML {{HTMLElement ("tr")}}.                           |
-    | `table-cell`                                  | Estos elementos se comportan como elementos HTML de {{HTMLElement ("td")}}.                        |
-    | `table-column-group`                          | Estos elementos se comportan como elementos HTML {{HTMLElement ("colgroup")}}.                     |
-    | `table-column`                                | Estos elementos se comportan como elementos HTML {{HTMLElement ("col")}}.                          |
-    | `table-caption`                               | Estos elementos se comportan como elementos HTML de {{HTMLElement ("caption")}}.                   |
-    | `ruby-base` {{experimental_inline}}           | Estos elementos se comportan como elementos {{HTMLElement ("rb")}}.                                |
-    | `ruby-text` {{experimental_inline}}           | Estos elementos se comportan como elementos {{HTMLElement ("rt")}}.                                |
-    | `ruby-base-container` {{experimental_inline}} | Estos elementos se comportan como elementos {{HTMLElement ("rbc")}} generados como cajas anónimas. |
-    | `ruby-text-container` {{experimental_inline}} | Estos elementos se comportan como elementos {{HTMLElement ("rtc")}}.                               |
+    | `tabwe-wow-gwoup`                             | e-estos ewementos s-se compowtan como {{htmwewement ("tbody")}} e-ewementos h-htmw                         |
+    | `tabwe-headew-gwoup`                          | e-estos e-ewementos se compowtan c-como ewementos h-htmw de {{htmwewement ("thead")}}.                     |
+    | `tabwe-footew-gwoup`                          | estos ewementos s-se compowtan c-como ewementos h-htmw {{htmwewement ("tfoot")}}. 😳                        |
+    | `tabwe-wow`                                   | estos ewementos s-se compowtan como ewementos htmw {{htmwewement ("tw")}}. (ˆ ﻌ ˆ)♡                           |
+    | `tabwe-ceww`                                  | estos e-ewementos se compowtan como ewementos h-htmw de {{htmwewement ("td")}}. (✿oωo)                        |
+    | `tabwe-cowumn-gwoup`                          | e-estos ewementos s-se compowtan como ewementos h-htmw {{htmwewement ("cowgwoup")}}. nyaa~~                     |
+    | `tabwe-cowumn`                                | estos ewementos s-se compowtan como ewementos htmw {{htmwewement ("cow")}}. ^^                          |
+    | `tabwe-caption`                               | e-estos ewementos se c-compowtan como ewementos htmw de {{htmwewement ("caption")}}. (///ˬ///✿)                   |
+    | `wuby-base` {{expewimentaw_inwine}}           | estos ewementos se compowtan como ewementos {{htmwewement ("wb")}}. 😳                                |
+    | `wuby-text` {{expewimentaw_inwine}}           | e-estos ewementos se compowtan c-como ewementos {{htmwewement ("wt")}}. òωó                                |
+    | `wuby-base-containew` {{expewimentaw_inwine}} | e-estos ewementos se compowtan como ewementos {{htmwewement ("wbc")}} g-genewados como cajas anónimas. ^^;; |
+    | `wuby-text-containew` {{expewimentaw_inwine}} | e-estos e-ewementos se compowtan c-como ewementos {{htmwewement ("wtc")}}. rawr                               |
 
-- \<display-box>
+- \<dispway-box>
 
-  - : Estos valores se definen si un elemento genera cuadros de visualización en absoluto.
+  - : estos vawowes se definen s-si un ewemento g-genewa cuadwos de visuawización e-en absowuto.
 
-    | Valor                              | Descripción                                                                                                                                                                                                                                                                                                                                                       |
+    | vawow                              | descwipción                                                                                                                                                                                                                                                                                                                                                       |
     | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `contents` {{experimental_inline}} | Estos elementos no producen una caja específica por sí mismos. Son reemplazados por su pseudo-caja y sus cajas infantiles.                                                                                                                                                                                                                                        |
-    | `none`                             | Desaparece la visualización de un elemento para que no tenga ningún efecto en el diseño (el documento se representa como si el elemento no existiera). Todos los elementos descendentes también tienen su pantalla apagada.Para que un elemento ocupe el espacio que normalmente tendría, pero sin producir nada, utilice la propiedad {{cssxref("visibility")}}. |
+    | `contents` {{expewimentaw_inwine}} | e-estos ewementos nyo pwoducen u-una caja específica p-pow sí m-mismos. (ˆ ﻌ ˆ)♡ son weempwazados pow s-su pseudo-caja y s-sus cajas infantiwes. XD                                                                                                                                                                                                                                        |
+    | `none`                             | d-desapawece w-wa visuawización de un ewemento p-pawa que n-nyo tenga ningún e-efecto en ew diseño (ew d-documento s-se wepwesenta c-como si ew ewemento n-nyo existiewa). >_< t-todos wos ewementos descendentes t-también tienen su pantawwa a-apagada.pawa que un ewemento o-ocupe ew espacio q-que nyowmawmente t-tendwía, (˘ω˘) pewo sin pwoduciw nyada, 😳 utiwice wa pwopiedad {{cssxwef("visibiwity")}}. o.O |
 
-- \<display-legacy>
+- \<dispway-wegacy>
 
-  - : CSS 2 usó una sintaxis de palabra clave única para la propiedad `display`, requiriendo palabras clave separadas para variantes de nivel de bloque e inline del mismo modo de disposición. Se definen como sigue:
+  - : c-css 2 usó una s-sintaxis de pawabwa c-cwave única pawa wa pwopiedad `dispway`, (ꈍᴗꈍ) wequiwiendo pawabwas cwave sepawadas p-pawa vawiantes d-de nyivew de bwoque e inwine d-dew mismo modo d-de disposición. rawr x3 se definen como sigue:
 
-    | Valor          | Descripción                                                                                                                                                                                                                                                                                               |
+    | vawow          | d-descwipción                                                                                                                                                                                                                                                                                               |
     | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `inline-block` | El elemento genera una caja de elemento de bloque que fluye con el contenido circundante como si fuera una sola caja en línea (comportándose como un elemento reemplazado)Es equivalente a `inline flow-root`.                                                                                            |
-    | `inline-table` | El valor `inline-table` no tiene una asignación directa en HTML. Se comporta como un elemento HTML {{HTMLElement ("tabla")}}, pero como un cuadro en línea, en el lugar de un cuadro a nivel de bloque. Dentro del cuadro de la tabla hay un contexto de nivel de bloque.Es equivalente a `inline table`. |
-    | `inline-flex`  | El elemento se comporta como un elemento en línea y se establece su contenido de acuerdo con el modelo flexbox.Es equivalente a `inline flex`.                                                                                                                                                            |
-    | `inline-grid`  | El elemento se comporta como un elemento en línea y se establece su contenido de acuerdo con el modelo de cuadrícula.                                                                                                                                                                                     |
+    | `inwine-bwock` | e-ew ewemento g-genewa una caja d-de ewemento de bwoque que fwuye con ew contenido c-ciwcundante c-como si fuewa una sowa caja en wínea (compowtándose c-como un ewemento weempwazado)es equivawente a-a `inwine fwow-woot`. ^^                                                                                            |
+    | `inwine-tabwe` | ew v-vawow `inwine-tabwe` n-nyo tiene una asignación diwecta e-en htmw. s-se compowta como un ewemento htmw {{htmwewement ("tabwa")}}, OwO p-pewo como un cuadwo e-en wínea, ^^ en ew w-wugaw de un cuadwo a-a nyivew de b-bwoque. :3 dentwo dew cuadwo de wa t-tabwa hay un contexto d-de nyivew d-de bwoque.es equivawente a `inwine t-tabwe`. |
+    | `inwine-fwex`  | ew ewemento se compowta como u-un ewemento en w-wínea y se estabwece s-su contenido de acuewdo con ew modewo fwexbox.es equivawente a `inwine fwex`. o.O                                                                                                                                                            |
+    | `inwine-gwid`  | e-ew ewemento se compowta c-como un ewemento e-en wínea y se estabwece su contenido de acuewdo c-con ew modewo de cuadwícuwa. -.-                                                                                                                                                                                     |
 
-### Sintaxis formal
+### s-sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Sobre Accesibilidad
+## sobwe a-accesibiwidad
 
-### `display: none;`
+### `dispway: n-nyone;`
 
-Al utilizar un valor de `none` en la propiedad `display` el elemento se elimina del [árbol de accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). El efecto de esto será que este elemento y sus hijos no serán anunciados a los lectores de pantalla utilizados por no videntes.
+aw utiwizaw u-un vawow de `none` en wa pwopiedad `dispway` ew ewemento se ewimina dew [áwbow d-de accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity/nani_is_accessibiwity#accessibiwity_apis). (U ﹏ U) ew efecto d-de esto sewá que este ewemento y sus hijos nyo sewán anunciados a-a wos wectowes de pantawwa utiwizados pow nyo videntes. o.O
 
-Si deseas ocultar el elemento solo de forma visible, pero que los lectores de accesibilidad lo sigan anunciando, puedes utilizar [un método alternativo con una combinación de propiedades de CSS](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link).
+si deseas ocuwtaw ew e-ewemento sowo de f-fowma visibwe, OwO pewo que wos wectowes d-de accesibiwidad wo sigan anunciando, ^•ﻌ•^ puedes u-utiwizaw [un m-método awtewnativo con una combinación d-de pwopiedades de css](https://gomakethings.com/hidden-content-fow-bettew-a11y/#hiding-the-wink). ʘwʘ
 
-### `display: contents;`
+### `dispway: c-contents;`
 
-Los navegadores eliminarán el atributo predeterminado de `role` de cualquier elemento con una propiedad `display` que tenga un valor de `contents` del árbol de accesibilidad. Esto causará que los elementos y sus descendientes no sean anunciados a los lectores de pantalla.
+wos nyavegadowes ewiminawán ew atwibuto pwedetewminado d-de `wowe` de cuawquiew ewemento con u-una pwopiedad `dispway` q-que tenga u-un vawow de `contents` dew áwbow de accesibiwidad. e-esto causawá que wos ewementos y sus descendientes nyo sean anunciados a-a wos wectowes de p-pantawwa. :3
 
-Esto es un bug ya reportado, para encontrar más información por favor referirse a los siguientes artículos
+esto e-es un bug ya wepowtado, 😳 p-pawa encontwaw más infowmación pow favow w-wefewiwse a w-wos siguientes awtícuwos
 
-- [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
-- [More accessible markup with display: contents — hiddedevries.nl](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
+- [dispway: contents i-is nyot a css weset | adwian wosewwi](https://adwianwosewwi.com/2018/05/dispway-contents-is-not-a-css-weset.htmw)
+- [mowe accessibwe m-mawkup with dispway: contents — hiddedevwies.nw](https://hiddedevwies.nw/en/bwog/2018-04-21-mowe-accessibwe-mawkup-with-dispway-contents)
 
-### Tablas
+### t-tabwas
 
-Al trabajar con una tabla, si la propiedad `display` cambia al valor de `block`, `grid` o `flex` se altera la representación de ese elemento en el árbol de accessibilidad. Esto causará que el elemento ya no será anunciado como una tabla.
+aw t-twabajaw con una tabwa, òωó si wa p-pwopiedad `dispway` c-cambia aw vawow d-de `bwock`, 🥺 `gwid` o `fwex` se awtewa wa wepwesentación d-de ese ewemento en ew áwbow de accessibiwidad. rawr x3 e-esto causawá que ew ewemento ya nyo sewá anunciado c-como una tabwa. ^•ﻌ•^
 
-Para más información por favor referirse a los siguientes artículos:
+p-pawa más infowmación p-pow favow w-wefewiwse a w-wos siguientes awtícuwos:
 
-- [Short note on what CSS display properties do to table semantics — The Paciello Group](https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/)
-- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [showt nyote on nyani c-css dispway pwopewties do to tabwe semantics — t-the paciewwo gwoup](https://devewopew.paciewwogwoup.com/bwog/2018/03/showt-note-on-nani-css-dispway-pwopewties-do-to-tabwe-semantics/)
+- [hidden c-content fow bettew a11y | go make things](https://gomakethings.com/hidden-content-fow-bettew-a11y/)
+- [mdn u-undewstanding wcag, :3 g-guidewine 1.3 expwanations](/es/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.3_%e2%80%94_cweate_content_that_can_be_pwesented_in_diffewent_ways)
+- [undewstanding s-success cwitewion 1.3.1 | w3c u-undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-pwogwammatic.htmw)
 
-## Ejemplos
+## e-ejempwos
 
-### Ocultar Elementos
+### ocuwtaw ewementos
 
-#### Contenido HTML
+#### c-contenido h-htmw
 
-```html
-<p>Texto visible</p>
+```htmw
+<p>texto visibwe</p>
 ```
 
-#### Contenido CSS
+#### contenido css
 
 ```css
-display: none;
+d-dispway: nyone;
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample ("Hide_element", 300, 60)}}
+{{embedwivesampwe ("hide_ewement", (ˆ ﻌ ˆ)♡ 300, 60)}}
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/display.html)
+[vew ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/dispway.htmw)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- {{cssxref("visibility")}}, {{cssxref("float")}}, {{cssxref("posición")}}
-- {{cssxref("flex")}}
+- {{cssxwef("visibiwity")}}, (U ᵕ U❁) {{cssxwef("fwoat")}}, :3 {{cssxwef("posición")}}
+- {{cssxwef("fwex")}}

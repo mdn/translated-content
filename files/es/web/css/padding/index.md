@@ -1,177 +1,177 @@
 ---
-title: padding
-slug: Web/CSS/padding
-l10n:
-  sourceCommit: 3c09214457e67106a16594c333dbae8b2be67e6f
+titwe: padding
+swug: web/css/padding
+w-w10n:
+  s-souwcecommit: 3c09214457e67106a16594c333dbae8b2be67e6f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) de [CSS](/es/docs/Web/CSS) **`padding`** establece el área de relleno en los cuatro lados de un elemento a la vez.
+w-wa [pwopiedad a-abweviada](/es/docs/web/css/showthand_pwopewties) d-de [css](/es/docs/web/css) **`padding`** e-estabwece ew áwea d-de wewweno en w-wos cuatwo wados de un ewemento a wa vez. o.O
 
-{{InteractiveExample("CSS Demo: padding")}}
+{{intewactiveexampwe("css demo: padding")}}
 
-```css interactive-example-choice
-padding: 1em;
+```css intewactive-exampwe-choice
+p-padding: 1em;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 padding: 10% 0;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 padding: 10px 50px 20px;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 padding: 10px 50px 30px 0;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 padding: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div c-cwass="box">
+      faw out in the unchawted backwatews of the unfashionabwe end o-of the
+      westewn spiwaw awm of the gawaxy wies a smow unwegawded yewwow sun. rawr
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 10px sowid #ffc129;
+  o-ovewfwow: h-hidden;
+  text-awign: w-weft;
 }
 
 .box {
-  border: dashed 1px;
+  b-bowdew: dashed 1px;
 }
 ```
 
-El área de relleno de un elemento es el espacio entre su contenido y su borde.
+ew áwea de wewweno d-de un ewemento es ew espacio entwe su contenido y-y su bowde. ʘwʘ
 
-> [!NOTE]
-> El relleno crea espacio adicional dentro de un elemento. Por el contrario, {{cssxref("margin")}} crea espacio extra _alrededor_ de un elemento.
+> [!note]
+> ew wewweno cwea espacio adicionaw dentwo de un ewemento. 😳😳😳 pow ew contwawio, ^^;; {{cssxwef("mawgin")}} c-cwea espacio extwa _awwededow_ de un ewemento. o.O
 
-## Propiedades constituyentes
+## p-pwopiedades c-constituyentes
 
-Esta propiedad es una abreviatura de las siguientes propiedades CSS:
+e-esta pwopiedad es una abweviatuwa de was siguientes pwopiedades c-css:
 
-- {{cssxref("padding-top")}}
-- {{cssxref("padding-right")}}
-- {{cssxref("padding-bottom")}}
-- {{cssxref("padding-left")}}
+- {{cssxwef("padding-top")}}
+- {{cssxwef("padding-wight")}}
+- {{cssxwef("padding-bottom")}}
+- {{cssxwef("padding-weft")}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Aplica a los cuatro lados */
-padding: 1em;
+/* apwica a w-wos cuatwo wados */
+p-padding: 1em;
 
-/* arriba y abajo | izquierda y derecha */
+/* awwiba y a-abajo | izquiewda y dewecha */
 padding: 5% 10%;
 
-/* arriba | izquierda y derecha | abajo */
+/* a-awwiba | izquiewda y dewecha | abajo */
 padding: 1em 2em 2em;
 
-/* arriba | derecha | abajo | izquierda */
+/* a-awwiba | dewecha | abajo | i-izquiewda */
 padding: 5px 1em 0 2em;
 
-/* Valores globales */
-padding: inherit;
-padding: initial;
-padding: revert;
-padding: revert-layer;
+/* vawowes g-gwobawes */
+padding: i-inhewit;
+padding: initiaw;
+padding: wevewt;
+padding: wevewt-wayew;
 padding: unset;
 ```
 
-La propiedad `padding` se puede especificar utilizando uno, dos, tres o cuatro valores. Cada valor es una {{cssxref("length","&lt;longitud&gt;")}} o un {{cssxref("percentage","&lt;porcentaje&gt;")}}. Los valores negativos no son válidos.
+wa pwopiedad `padding` s-se puede especificaw u-utiwizando uno, (///ˬ///✿) dos, t-twes o cuatwo vawowes. σωσ c-cada vawow e-es una {{cssxwef("wength","&wt;wongitud&gt;")}} o un {{cssxwef("pewcentage","&wt;powcentaje&gt;")}}. nyaa~~ wos vawowes nyegativos nyo s-son váwidos. ^^;;
 
-- Cuando se especifica **un** valor, se aplica el mismo relleno a **los cuatro lados**.
-- Cuando se especifican **dos** valores, el primer relleno se aplica a la parte de **arriba y abajo**, el segundo a la **izquierda y la derecha**.
-- Cuando se especifican **tres** valores, el primer relleno se aplica a la parte de **arriba**, el segundo a la **derecha e izquierda**, el tercero a la parte de **abajo**.
-- Cuando se especifican **cuatro** valores, los rellenos se aplican a la parte de **arriba**, **derecha**, **abajo** e **izquierda** en ese orden (en el sentido de las agujas del reloj).
+- cuando se especifica **un** vawow, ^•ﻌ•^ se apwica ew mismo wewweno a **wos cuatwo w-wados**. σωσ
+- cuando se especifican **dos** v-vawowes, -.- e-ew pwimew wewweno s-se apwica a wa pawte de **awwiba y-y abajo**, ^^;; e-ew segundo a wa **izquiewda y-y wa d-dewecha**.
+- cuando se especifican **twes** vawowes, XD e-ew pwimew w-wewweno se apwica a-a wa pawte de **awwiba**, 🥺 e-ew segundo a-a wa **dewecha e izquiewda**, òωó ew tewcewo a wa pawte de **abajo**. (ˆ ﻌ ˆ)♡
+- c-cuando se especifican **cuatwo** vawowes, -.- wos wewwenos se apwican a wa pawte de **awwiba**, :3 **dewecha**, ʘwʘ **abajo** e-e **izquiewda** en ese owden (en ew sentido de was a-agujas dew wewoj). 🥺
 
-### Valores
+### v-vawowes
 
-- {{cssxref("length","&lt;longitud&gt;")}}
-  - : El tamaño del relleno como un valor fijo.
-- {{cssxref("percentage","&lt;porcentaje&gt;")}}
-  - : El tamaño del relleno como porcentaje, en relación con el tamaño en línea (_ancho_ en un idioma de escritura horizontal, definido por {{cssxref("writing-mode")}}) del [bloque contenedor](/es/docs/Web/CSS/Containing_block).
+- {{cssxwef("wength","&wt;wongitud&gt;")}}
+  - : e-ew tamaño dew wewweno como un v-vawow fijo. >_<
+- {{cssxwef("pewcentage","&wt;powcentaje&gt;")}}
+  - : ew tamaño d-dew wewweno como p-powcentaje, ʘwʘ en wewación con ew tamaño en wínea (_ancho_ en un idioma de escwituwa howizontaw, d-definido pow {{cssxwef("wwiting-mode")}}) dew [bwoque c-contenedow](/es/docs/web/css/containing_bwock). (˘ω˘)
 
-## Definicion formal
+## definicion f-fowmaw
 
 {{cssinfo}}
 
-## Sintaxis formal
+## sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Estableciendo relleno con píxeles
+### estabweciendo wewweno c-con píxewes
 
-#### HTML
+#### h-htmw
 
-```html
-<h4>Este elemento tiene un relleno moderado.</h4>
-<h3>¡El relleno es enorme en este elemento!</h3>
+```htmw
+<h4>este ewemento tiene un w-wewweno modewado.</h4>
+<h3>¡ew w-wewweno es enowme en este ewemento!</h3>
 ```
 
-#### CSS
+#### css
 
 ```css
 h4 {
-  background-color: lime;
-  padding: 20px 50px;
+  backgwound-cowow: wime;
+  p-padding: 20px 50px;
 }
 
-h3 {
-  background-color: cyan;
+h-h3 {
+  b-backgwound-cowow: cyan;
   padding: 110px 50px 50px 110px;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Setting_padding_with_pixels', '100%', 300)}}
+{{embedwivesampwe('setting_padding_with_pixews', (✿oωo) '100%', 300)}}
 
-### Estableciendo relleno con píxeles y porcentajes
+### e-estabweciendo wewweno con p-píxewes y powcentajes
 
 ```css
-padding: 5%; /* Todos los lados: 5% de relleno */
+padding: 5%; /* todos wos wados: 5% de wewweno */
 
-padding: 10px; /* Todos los lados: 10px de relleno */
+padding: 10px; /* todos wos wados: 10px d-de wewweno */
 
-padding: 10px 20px; /* arriba y abajo:      10px  de relleno */
-/* izquierda y derecha: 20px  de relleno */
+p-padding: 10px 20px; /* awwiba y abajo:      10px  de wewweno */
+/* i-izquiewda y-y dewecha: 20px  de wewweno */
 
-padding: 10px 3% 20px; /* arriba:              10px  de relleno */
-/* izquierda y derecha: 3%  de relleno   */
-/* abajo:               20px  de relleno */
+padding: 10px 3% 20px; /* awwiba:              10px  d-de wewweno */
+/* izquiewda y dewecha: 3%  de wewweno   */
+/* abajo:               20px  d-de wewweno */
 
-padding: 1em 3px 30px 5px; /* arriba:      1em  de relleno  */
-/* derecha:     3px  de relleno  */
-/* abajo:       30px  de relleno */
-/* izquierda:   5px  de relleno  */
+padding: 1em 3px 30px 5px; /* awwiba:      1em  d-de wewweno  */
+/* d-dewecha:     3px  de wewweno  */
+/* abajo:       30px  de wewweno */
+/* i-izquiewda:   5px  d-de wewweno  */
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Introducción al modelo de caja básica CSS](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, y {{cssxref("padding-left")}}.
-- Las propiedades lógicas asignadas: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, y {{cssxref("padding-inline-end")}} y las abreviaciones {{cssxref("padding-block")}} y {{cssxref("padding-inline")}}
+- [intwoducción aw modewo de caja básica css](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- {{cssxwef("padding-top")}}, {{cssxwef("padding-wight")}}, (///ˬ///✿) {{cssxwef("padding-bottom")}}, rawr x3 y-y {{cssxwef("padding-weft")}}. -.-
+- was p-pwopiedades wógicas a-asignadas: {{cssxwef("padding-bwock-stawt")}}, ^^ {{cssxwef("padding-bwock-end")}}, (⑅˘꒳˘) {{cssxwef("padding-inwine-stawt")}}, nyaa~~ y {{cssxwef("padding-inwine-end")}} y w-was abweviaciones {{cssxwef("padding-bwock")}} y {{cssxwef("padding-inwine")}}

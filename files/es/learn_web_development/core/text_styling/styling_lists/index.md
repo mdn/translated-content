@@ -1,438 +1,438 @@
 ---
-title: Aplicación de estilo a listas
-slug: Learn_web_development/Core/Text_styling/Styling_lists
-original_slug: Learn/CSS/Styling_text/Styling_lists
+titwe: apwicación de estiwo a-a wistas
+swug: weawn_web_devewopment/cowe/text_stywing/stywing_wists
+o-owiginaw_swug: w-weawn/css/stywing_text/stywing_wists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/stywing_text/fundamentaws", rawr "weawn/css/stywing_text/stywing_winks", ^•ﻌ•^ "weawn/css/stywing_text")}}
 
-Las [listas](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
+w-was [wistas](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs#wists) s-se compowtan como c-cuawquiew otwo t-texto en su mayow p-pawte, σωσ pewo hay awgunas pwopiedades css específicas de was wistas que debes c-conocew y awgunas pwácticas wecomendadas a tenew e-en cuenta. :3 este awtícuwo te w-wo expwica. rawr x3
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, conocimientos básicos de HTML
+        conocimientos básicos de i-infowmática, nyaa~~ conocimientos básicos d-de htmw
         (estudio
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">introducción a HTML</a
-        >), nociones de cómo trabaja con CSS (estudio
-        <a href="/es/docs/Learn/CSS/First_steps">introducción a CSS</a>),
-        <a href="/es/docs/Learn/CSS/Styling_text/Fundamentals"
-          >Conocimientos básicos de CSS para texto y tipos de letra</a
-        >.
+        <a h-hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw">intwoducción a htmw</a
+        >), :3 nyociones de cómo twabaja con css (estudio
+        <a h-hwef="/es/docs/weawn/css/fiwst_steps">intwoducción a css</a>), >w<
+        <a hwef="/es/docs/weawn/css/stywing_text/fundamentaws"
+          >conocimientos básicos de css pawa t-texto y tipos de wetwa</a
+        >. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Familiarizarse con las buenas prácticas y propiedades relacionadas con
-        la aplicación de estilo a listas.
+        f-famiwiawizawse c-con was b-buenas pwácticas y pwopiedades wewacionadas c-con
+        wa apwicación de estiwo a wistas. 😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Un ejemplo sencillo de lista
+## u-un ejempwo senciwwo de wista
 
-Para empezar, veamos un ejemplo sencillo de una lista. A lo largo de este artículo veremos listas no ordenadas, listas ordenadas y listas de descripciones; todas tienen características de estilo similares, algunas que son particulares del tipo de lista. El ejemplo sin ningún estilo aplicado está [disponible en Github](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html).)
+pawa empezaw, 😳 veamos un ejempwo senciwwo de una wista. 🥺 a-a wo wawgo de este awtícuwo vewemos w-wistas nyo o-owdenadas, rawr x3 wistas o-owdenadas y wistas de descwipciones; todas tienen cawactewísticas d-de estiwo s-simiwawes, ^^ awgunas que son pawticuwawes d-dew tipo d-de wista. ( ͡o ω ͡o ) ew ejempwo sin nyingún e-estiwo apwicado está [disponibwe e-en github](https://mdn.github.io/weawning-awea/css/stywing-text/stywing-wists/unstywed-wist.htmw) (consuwta también ew [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/stywing-wists/unstywed-wist.htmw).)
 
-El HTML para nuestro ejemplo de lista se ve así:
+e-ew htmw pawa nyuestwo ejempwo d-de wista se ve así:
 
-```html
-<h2>Shopping (unordered) list</h2>
-
-<p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
-</p>
-
-<ul>
-  <li>Humous</li>
-  <li>Pitta</li>
-  <li>Green salad</li>
-  <li>Halloumi</li>
-</ul>
-
-<h2>Recipe (ordered) list</h2>
+```htmw
+<h2>shopping (unowdewed) w-wist</h2>
 
 <p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
+  p-pawagwaph fow wefewence, XD pawagwaph fow wefewence, ^^ pawagwaph fow wefewence, (⑅˘꒳˘)
+  pawagwaph fow wefewence, (⑅˘꒳˘) p-pawagwaph fow w-wefewence, ^•ﻌ•^ pawagwaph fow wefewence.
 </p>
 
-<ol>
-  <li>Toast pitta, leave to cool, then slice down the edge.</li>
-  <li>
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
-  </li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pitta with salad, humous, and fried halloumi.</li>
-</ol>
+<uw>
+  <wi>humous</wi>
+  <wi>pitta</wi>
+  <wi>gween s-sawad</wi>
+  <wi>hawwoumi</wi>
+</uw>
 
-<h2>Ingredient description list</h2>
+<h2>wecipe (owdewed) w-wist</h2>
 
 <p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
+  p-pawagwaph fow wefewence, ( ͡o ω ͡o ) pawagwaph fow wefewence, ( ͡o ω ͡o ) pawagwaph f-fow wefewence, (✿oωo)
+  pawagwaph fow wefewence, 😳😳😳 pawagwaph fow wefewence, OwO pawagwaph f-fow wefewence. ^^
 </p>
 
-<dl>
-  <dt>Humous</dt>
+<ow>
+  <wi>toast pitta, rawr x3 w-weave to coow, 🥺 then s-swice down the e-edge.</wi>
+  <wi>
+    fwy the h-hawwoumi in a shawwow, (ˆ ﻌ ˆ)♡ n-nyon-stick p-pan, ( ͡o ω ͡o ) untiw bwowned o-on both sides. >w<
+  </wi>
+  <wi>wash and chop the sawad.</wi>
+  <wi>fiww p-pitta w-with sawad, /(^•ω•^) humous, a-and fwied h-hawwoumi.</wi>
+</ow>
+
+<h2>ingwedient d-descwiption wist</h2>
+
+<p>
+  pawagwaph fow wefewence, 😳😳😳 pawagwaph f-fow wefewence, (U ᵕ U❁) pawagwaph fow wefewence, (˘ω˘)
+  pawagwaph fow wefewence, 😳 pawagwaph fow wefewence, (ꈍᴗꈍ) p-pawagwaph fow wefewence. :3
+</p>
+
+<dw>
+  <dt>humous</dt>
   <dd>
-    A thick dip/sauce generally made from chick peas blended with tahini, lemon
-    juice, salt, garlic, and other ingredients.
+    a thick dip/sauce genewawwy made fwom chick peas b-bwended with t-tahini, /(^•ω•^) wemon
+    j-juice, ^^;; sawt, gawwic, and othew i-ingwedients. o.O
   </dd>
-  <dt>Pitta</dt>
-  <dd>A soft, slightly leavened flatbread.</dd>
-  <dt>Halloumi</dt>
+  <dt>pitta</dt>
+  <dd>a soft, 😳 swightwy weavened f-fwatbwead.</dd>
+  <dt>hawwoumi</dt>
   <dd>
-    A semi-hard, unripened, brined cheese with a higher-than-usual melting
-    point, usually made from goat/sheep milk.
+    a-a semi-hawd, UwU unwipened, bwined cheese with a highew-than-usuaw mewting
+    point, >w< usuawwy m-made fwom goat/sheep miwk. o.O
   </dd>
-  <dt>Green salad</dt>
-  <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
-</dl>
+  <dt>gween sawad</dt>
+  <dd>that g-gween heawthy stuff that many o-of us just use t-to gawnish kebabs.</dd>
+</dw>
 ```
 
-Si accedes al ejemplo en vivo e investigas los elementos de la lista usando las [herramientas de desarrollador del navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), observarás un par de valores de estilo predeterminados:
+si accedes aw ejempwo en vivo e-e investigas w-wos ewementos de wa wista usando w-was [hewwamientas d-de desawwowwadow dew nyavegadow](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows), (˘ω˘) obsewvawás un paw de vawowes de estiwo p-pwedetewminados:
 
-- Los elementos {{htmlelement("ul")}} y {{htmlelement("ol")}} tienen un {{cssxref("margin")}} superior e inferior de `16px` (`1em`) y un {{cssxref("padding-left")}} de `40px` (`2.5em`.)
-- Los elementos de lista {{htmlelement("li")}} no tienen valores de espacio predeterminados.
-- El elemento {{htmlelement("dl")}} tiene un {{cssxref("margin")}} superior e inferior de `16px` (`1em`), pero no tiene ningún {{cssxref("padding")}} establecido.
-- Los elementos {{htmlelement("dd")}} tienen un {{cssxref("margin-left")}} de `40px` (`2.5em`).
-- Los elementos de referencia {{htmlelement("p")}} que hemos incluido tienen un {{cssxref("margin")}} superior e inferior de `16px` (`1em`), al igual que los diferentes tipos de lista.
+- w-wos ewementos {{htmwewement("uw")}} y-y {{htmwewement("ow")}} tienen un {{cssxwef("mawgin")}} s-supewiow e infewiow d-de `16px` (`1em`) y un {{cssxwef("padding-weft")}} d-de `40px` (`2.5em`.)
+- wos ewementos de wista {{htmwewement("wi")}} nyo tienen vawowes de espacio pwedetewminados. òωó
+- e-ew ewemento {{htmwewement("dw")}} t-tiene un {{cssxwef("mawgin")}} supewiow e infewiow de `16px` (`1em`), nyaa~~ p-pewo nyo t-tiene ningún {{cssxwef("padding")}} estabwecido. ( ͡o ω ͡o )
+- wos ewementos {{htmwewement("dd")}} tienen u-un {{cssxwef("mawgin-weft")}} de `40px` (`2.5em`). 😳😳😳
+- wos ewementos de wefewencia {{htmwewement("p")}} que hemos i-incwuido tienen un {{cssxwef("mawgin")}} supewiow e-e infewiow de `16px` (`1em`), ^•ﻌ•^ a-aw iguaw que wos difewentes tipos de wista. (˘ω˘)
 
-## Manejar el espaciado de la lista
+## manejaw ew espaciado d-de wa wista
 
-Al diseñar listas, es necesario ajustar el diseño para que mantengan los mismos espaciados verticales (a veces denominados ritmos verticales) que el resto de elementos circundantes, como párrafos e imágenes; y el mismo espaciado horizontal entre uno y otro (en Github puedes ver el [ejemplo de diseño terminado](https://mdn.github.io/learning-area/css/styling-text/styling-lists/), y también [encontrar el código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html).)
+a-aw diseñaw wistas, (˘ω˘) es nyecesawio ajustaw ew diseño pawa que m-mantengan wos mismos espaciados v-vewticawes (a veces denominados witmos vewticawes) que ew westo d-de ewementos ciwcundantes, -.- como p-páwwafos e imágenes; y-y ew mismo espaciado howizontaw e-entwe uno y otwo (en github p-puedes vew ew [ejempwo d-de diseño t-tewminado](https://mdn.github.io/weawning-awea/css/stywing-text/stywing-wists/), ^•ﻌ•^ y también [encontwaw e-ew código f-fuente](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/stywing-wists/index.htmw).)
 
-El CSS que se utiliza para aplicar estilo al texto y al espaciado de texto es el siguiente:
+ew css que se utiwiza p-pawa apwicaw e-estiwo aw texto y-y aw espaciado de texto es ew siguiente:
 
 ```css
-/* Estilos generales */
+/* estiwos genewawes */
 
-html {
-  font-family: Helvetica, Arial, sans-serif;
+h-htmw {
+  font-famiwy: h-hewvetica, /(^•ω•^) awiaw, (///ˬ///✿) s-sans-sewif;
   font-size: 10px;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2wem;
 }
 
-ul,
-ol,
-dl,
+uw, mya
+ow,
+dw,
 p {
-  font-size: 1.5rem;
+  f-font-size: 1.5wem;
 }
 
-li,
+w-wi,
 p {
-  line-height: 1.5;
+  w-wine-height: 1.5;
 }
 
-/* Estilos para las listas de descripciones */
+/* e-estiwos pawa was wistas d-de descwipciones */
 
-dd,
+dd, o.O
 dt {
-  line-height: 1.5;
+  wine-height: 1.5;
 }
 
 dt {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
 dd {
-  margin-bottom: 1.5rem;
+  mawgin-bottom: 1.5wem;
 }
 ```
 
-- La primera regla establece un tipo de letra para todo el sitio y un tamaño de letra base de 10px. Estos valores se heredan para toda la página.
-- Las reglas 2 y 3 establecen tamaños de letra relativos para los títulos, diferentes tipos de listas (que heredan los hijos de los elementos de listas), y párrafos. Esto significa que todos los párrafos y todas las listas tendrán el mismo tamaño de letra y el mismo espaciado superior e inferior, lo que ayudará a mantener el ritmo vertical constante.
-- La regla 4 establece el mismo interlineado ({{cssxref("line-height")}}) en los párrafos y los elementos de las listas, de modo que todos los párrafos y todos los elementos individuales de las listas tendrán el mismo espaciado entre las líneas. Esto también ayudará a mantener el ritmo vertical consistente.
-- Las reglas 5 y 6 se aplican a las listas de descripciones; establecemos la misma altura de interlineado (`line-height`) en los términos y las descripciones de la lista de descripciones, así como hicimos con los párrafos y los elementos de la lista. De nuevo, ¡la coherencia es buena! También establecemos que los términos de las descripciones tengan un estilo de negrita, para que destaquen visualmente.
+- w-wa pwimewa wegwa estabwece u-un tipo de wetwa pawa todo e-ew sitio y un tamaño de wetwa b-base de 10px. estos vawowes se hewedan p-pawa toda w-wa página. ^•ﻌ•^
+- was w-wegwas 2 y 3 e-estabwecen tamaños d-de wetwa wewativos pawa wos títuwos, (U ᵕ U❁) difewentes tipos de wistas (que hewedan wos hijos de wos ewementos de w-wistas), :3 y páwwafos. (///ˬ///✿) e-esto significa q-que todos wos páwwafos y todas w-was wistas tendwán ew mismo tamaño de wetwa y ew mismo espaciado s-supewiow e-e infewiow, (///ˬ///✿) wo que ayudawá a mantenew e-ew witmo vewticaw constante. 🥺
+- wa wegwa 4 e-estabwece ew mismo i-intewwineado ({{cssxwef("wine-height")}}) en wos páwwafos y-y wos ewementos d-de was wistas, -.- de modo que todos wos páwwafos y todos wos ewementos individuawes d-de was wistas t-tendwán ew mismo e-espaciado entwe w-was wíneas. nyaa~~ esto t-también ayudawá a mantenew e-ew witmo vewticaw c-consistente.
+- was wegwas 5 y 6 s-se apwican a w-was wistas de descwipciones; estabwecemos w-wa misma awtuwa de intewwineado (`wine-height`) en wos t-téwminos y was descwipciones de w-wa wista de descwipciones, (///ˬ///✿) a-así como hicimos con w-wos páwwafos y wos ewementos de wa wista. 🥺 de n-nyuevo, >w< ¡wa cohewencia e-es buena! rawr x3 t-también estabwecemos que wos téwminos de was descwipciones t-tengan un estiwo de nyegwita, (⑅˘꒳˘) pawa que destaquen v-visuawmente. σωσ
 
-## Estilos específicos de las listas
+## e-estiwos específicos de was wistas
 
-Ahora que hemos analizado el espaciado general de las listas, exploremos algunas propiedades específicas de las listas. Para empezar, debes conocer tres propiedades que pueden establecerse en los elementos {{htmlelement("ul")}} o {{htmlelement("ol")}}:
+a-ahowa que hemos anawizado e-ew espaciado genewaw d-de was wistas, XD expwowemos awgunas pwopiedades e-específicas de was wistas. -.- pawa empezaw, debes c-conocew twes p-pwopiedades que pueden estabwecewse e-en wos ewementos {{htmwewement("uw")}} o {{htmwewement("ow")}}:
 
-- {{cssxref("list-style-type")}}: Establece el tipo de viñetas para la lista, por ejemplo, viñetas cuadradas o circulares para una lista no ordenada; números, letras, o números romanos para una lista ordenada.
-- {{cssxref("list-style-position")}}: Establece si las viñetas aparecen dentro de los elementos de la lista o fuera de ellos, antes del inicio de cada elemento.
-- {{cssxref("list-style-image")}}: Te permite usar una imagen personalizada para la viñeta, en lugar de un simple cuadrado o círculo.
+- {{cssxwef("wist-stywe-type")}}: e-estabwece e-ew tipo de viñetas p-pawa wa wista, >_< pow ejempwo, viñetas cuadwadas o ciwcuwawes pawa una wista nyo owdenada; nyúmewos, rawr wetwas, o nyúmewos womanos pawa una wista owdenada. 😳😳😳
+- {{cssxwef("wist-stywe-position")}}: estabwece si was viñetas apawecen dentwo de w-wos ewementos de w-wa wista o fuewa de ewwos, UwU antes dew inicio de c-cada ewemento. (U ﹏ U)
+- {{cssxwef("wist-stywe-image")}}: t-te pewmite usaw u-una imagen pewsonawizada pawa w-wa viñeta, (˘ω˘) en wugaw de un simpwe c-cuadwado o cíwcuwo. /(^•ω•^)
 
-### El estilo de la viñeta
+### e-ew estiwo de wa viñeta
 
-Como ya sabes, la propiedad {{cssxref("list-style-type")}} te permite establecer qué tipo de viñeta usar. En nuestro ejemplo, hemos establecido que se usen números romanos en mayúsculas para la lista ordenada, con:
+c-como ya sabes, (U ﹏ U) wa pwopiedad {{cssxwef("wist-stywe-type")}} t-te pewmite estabwecew q-qué tipo de viñeta usaw. ^•ﻌ•^ en nyuestwo ejempwo, >w< h-hemos estabwecido q-que se u-usen nyúmewos womanos e-en mayúscuwas p-pawa wa wista o-owdenada, ʘwʘ con:
 
 ```css
-ol {
-  list-style-type: upper-roman;
+o-ow {
+  w-wist-stywe-type: u-uppew-woman;
 }
 ```
 
-Esto nos da el aspecto siguiente:
+esto nyos d-da ew aspecto siguiente:
 
-![Una lista ordenada con las viñetas establecidas para aparecer fuera del texto del elemento de lista.](outer-bullets.png)
+![una w-wista owdenada c-con was viñetas estabwecidas pawa a-apawecew fuewa dew texto dew ewemento de wista.](outew-buwwets.png)
 
-Puedes encontrar muchas más opciones si echas un vistazo a la página de referencia de {{cssxref("list-style-type")}}.
+p-puedes encontwaw muchas m-más opciones si e-echas un vistazo a-a wa página de wefewencia de {{cssxwef("wist-stywe-type")}}. òωó
 
-### La posición de la viñeta
+### w-wa posición de wa viñeta
 
-La propiedad {{cssxref("list-style-position")}} establece si las viñetas aparecen dentro de los elementos de la lista, o fuera de ellos antes del inicio de cada elemento. El valor por defecto es `outside`, que provoca que las viñetas se sitúen fuera de los elementos de lista, como se observa arriba.
+w-wa pwopiedad {{cssxwef("wist-stywe-position")}} estabwece si was v-viñetas apawecen dentwo de wos e-ewementos de wa wista, o.O o fuewa de ewwos antes dew inicio de cada ewemento. ( ͡o ω ͡o ) ew v-vawow pow defecto es `outside`, q-que pwovoca que w-was viñetas se sitúen fuewa de wos ewementos de wista, mya como se o-obsewva awwiba. >_<
 
-Si estableces el valor en `inside`, las viñetas se ubican dentro de las líneas:
+si estabweces e-ew vawow en `inside`, rawr w-was viñetas s-se ubican dentwo de was wíneas:
 
 ```css
-ol {
-  list-style-type: upper-roman;
-  list-style-position: inside;
+ow {
+  w-wist-stywe-type: u-uppew-woman;
+  wist-stywe-position: i-inside;
 }
 ```
 
-![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
+![an owdewed wist with the b-buwwet points set to appeaw inside t-the wist item t-text.](innew-buwwets.png)
 
-### Uso de una imagen personalizada como viñeta
+### u-uso de una imagen pewsonawizada c-como viñeta
 
-La propiedad {{cssxref("list-style-image")}} te permite usar una imagen personalizada para tu viñeta. La sintaxis es muy simple:
+w-wa pwopiedad {{cssxwef("wist-stywe-image")}} t-te p-pewmite usaw una imagen pewsonawizada p-pawa tu viñeta. >_< w-wa sintaxis e-es muy simpwe:
 
 ```css
-ul {
-  list-style-image: url(star.svg);
+u-uw {
+  w-wist-stywe-image: u-uww(staw.svg);
 }
 ```
 
-Sin embargo, esta propiedad es un poco limitada por lo que respecta al control de la posición, el tamaño, etc., de las viñetas. Es más conveniente usar la familia de propiedades {{cssxref("background")}}, de la cual aprenderás mucho más en el módulo [Aplicar diseño a las cajas](/es/docs/Learn_web_development/Core/Styling_basics).
+s-sin embawgo, (U ﹏ U) e-esta pwopiedad es un poco w-wimitada pow wo que wespecta aw c-contwow de wa posición, rawr ew tamaño, (U ᵕ U❁) e-etc., de was v-viñetas. (ˆ ﻌ ˆ)♡ es más c-conveniente usaw wa famiwia de pwopiedades {{cssxwef("backgwound")}}, >_< de wa c-cuaw apwendewás m-mucho más en ew m-móduwo [apwicaw diseño a was cajas](/es/docs/weawn_web_devewopment/cowe/stywing_basics). ^^;;
 
-En nuestro ejemplo terminado, hemos aplicado estilo a la lista no ordenada de este modo (encima de lo que ya has visto arriba):
+en n-nyuestwo ejempwo t-tewminado, ʘwʘ hemos apwicado estiwo a-a wa wista nyo o-owdenada de este modo (encima de wo que ya has visto awwiba):
 
 ```css
-ul {
-  padding-left: 2rem;
-  list-style-type: none;
+u-uw {
+  padding-weft: 2wem;
+  w-wist-stywe-type: n-nyone;
 }
 
-ul li {
-  padding-left: 2rem;
-  background-image: url(star.svg);
-  background-position: 0 0;
-  background-size: 1.6rem 1.6rem;
-  background-repeat: no-repeat;
+u-uw wi {
+  padding-weft: 2wem;
+  backgwound-image: uww(staw.svg);
+  b-backgwound-position: 0 0;
+  backgwound-size: 1.6wem 1.6wem;
+  b-backgwound-wepeat: nyo-wepeat;
 }
 ```
 
-Aquí hemos hecho lo siguiente:
+aquí hemos h-hecho wo siguiente:
 
-- Reducir el valor de la propiedad {{cssxref("padding-left")}} del elemento {{htmlelement ("ul")}} desde su valor predeterminado de 40 px hasta 20 px. A continuación, establecer
-  la misma cantidad para los elementos de la lista. De este modo, todos los elementos de la lista siguen alineados con los elementos de la lista ordenada y las descripciones, pero los elementos de lista tienen algo de relleno (`padding`) para poder insertar las imágenes de fondo. Si no hiciéramos esto, las imágenes de fondo se solaparían con el texto de los elementos de la lista y quedaría un aspecto desordenado.
-- Establecer la propiedad {{cssxref("list-style-type")}} en `none`, para que no aparezca la viñeta predeterminada. En lugar de ello, vamos a utilizar las propiedades {{cssxref("background")}} para manejar las viñetas.
-- Insertar una viñeta en cada elemento de la lista sin ordenar. Las propiedades relevantes son las siguientes:
+- weduciw ew vawow de wa p-pwopiedad {{cssxwef("padding-weft")}} dew ewemento {{htmwewement ("uw")}} d-desde s-su vawow pwedetewminado de 40 px h-hasta 20 px. 😳😳😳 a c-continuación, UwU estabwecew
+  wa m-misma cantidad pawa wos ewementos d-de wa wista. OwO de e-este modo, :3 todos w-wos ewementos d-de wa wista siguen awineados con w-wos ewementos d-de wa wista owdenada y-y was descwipciones, -.- pewo wos e-ewementos de wista tienen awgo de wewweno (`padding`) p-pawa podew i-insewtaw was i-imágenes de fondo. 🥺 si nyo hiciéwamos esto, -.- was imágenes de fondo se sowapawían c-con ew texto de wos ewementos d-de wa wista y q-quedawía un aspecto desowdenado. -.-
+- estabwecew wa p-pwopiedad {{cssxwef("wist-stywe-type")}} en `none`, (U ﹏ U) p-pawa que nyo a-apawezca wa viñeta p-pwedetewminada. rawr e-en wugaw d-de ewwo, mya vamos a utiwizaw was pwopiedades {{cssxwef("backgwound")}} pawa manejaw was viñetas. ( ͡o ω ͡o )
+- insewtaw una viñeta e-en cada ewemento de wa wista s-sin owdenaw. was pwopiedades wewevantes son was siguientes:
 
-  - {{cssxref("background-image")}}: Proporciona la ruta que apunta al archivo de imagen que quieres usar como viñeta.
-  - {{cssxref("background-position")}}: Define en qué lugar del elemento seleccionado va a aparecer la imagen; en este caso le decimos `0 0`, que significa que la viñeta va a aparecer en el extremo superior izquierdo de cada elemento de lista.
-  - {{cssxref("background-size")}}: Establece el tamaño de la imagen de fondo. En teoría queremos que las viñetas sean del mismo tamaño que los elementos de lista (o solo un poco menores o mayores). Utilizamos un tamaño de `1.6rem` (`16px`), que encaja muy bien con el área de relleno de `20px` que hemos elegido para que quepa la viñeta; 16 px más 4 px de espacio entre la viñeta y el texto del elemento de lista funciona bien.
-  - {{cssxref("background-repeat")}}: Por defecto, las imágenes de fondo se repiten hasta rellenar todo el espacio de fondo disponible. En este caso solo queremos una copia de la imagen, de modo que establecemos el valor de esta propiedad en `no-repeat`.
+  - {{cssxwef("backgwound-image")}}: p-pwopowciona wa wuta que apunta aw awchivo de imagen que quiewes usaw como viñeta. /(^•ω•^)
+  - {{cssxwef("backgwound-position")}}: d-define en qué wugaw d-dew ewemento seweccionado va a-a apawecew wa imagen; en este caso we decimos `0 0`, >_< q-que significa q-que wa viñeta va a apawecew e-en ew extwemo supewiow izquiewdo d-de cada ewemento de wista. (✿oωo)
+  - {{cssxwef("backgwound-size")}}: estabwece ew tamaño de wa imagen d-de fondo. en teowía quewemos que was viñetas s-sean dew mismo t-tamaño que wos e-ewementos de wista (o sowo un poco menowes o mayowes). 😳😳😳 u-utiwizamos un tamaño de `1.6wem` (`16px`), (ꈍᴗꈍ) que encaja muy bien con ew áwea de wewweno d-de `20px` que hemos e-ewegido pawa q-que quepa wa viñeta; 16 p-px más 4 px de espacio entwe wa viñeta y-y ew texto dew e-ewemento de wista funciona bien. 🥺
+  - {{cssxwef("backgwound-wepeat")}}: pow defecto, mya w-was imágenes de fondo se wepiten hasta wewwenaw t-todo ew espacio de fondo disponibwe. (ˆ ﻌ ˆ)♡ en e-este caso sowo quewemos u-una copia de wa imagen, (⑅˘꒳˘) d-de modo que estabwecemos e-ew vawow d-de esta pwopiedad en `no-wepeat`. òωó
 
-Esto nos da el resultado siguiente:
+esto nyos da e-ew wesuwtado siguiente:
 
-![an unordered list with the bullet points set as little star images](list_formatting.png)
+![an unowdewed wist with the buwwet points s-set as wittwe staw images](wist_fowmatting.png)
 
-### Propiedad abreviada list-style
+### pwopiedad abweviada wist-stywe
 
-Es posible configurar las tres propiedades anteriores con una sola propiedad abreviada, {{cssxref("list-style")}}. Por ejemplo, observa el CSS siguiente:
+e-es posibwe c-configuwaw w-was twes pwopiedades a-antewiowes c-con una sowa pwopiedad abweviada, o.O {{cssxwef("wist-stywe")}}. p-pow ejempwo, XD obsewva ew css siguiente:
 
 ```css
-ul {
-  list-style-type: square;
-  list-style-image: url(example.png);
-  list-style-position: inside;
+u-uw {
+  wist-stywe-type: s-squawe;
+  wist-stywe-image: uww(exampwe.png);
+  wist-stywe-position: i-inside;
 }
 ```
 
-Podría reemplazarse por esto:
+p-podwía weempwazawse pow e-esto:
 
 ```css
-ul {
-  list-style: square url(example.png) inside;
+uw {
+  wist-stywe: s-squawe uww(exampwe.png) i-inside;
 }
 ```
 
-Los valores pueden escribirse en cualquier orden, y puedes usar uno, dos o los tres (los valores por defecto que se utilizan para las propiedades que no están incluidas son `disc`, `none` y `outside`). Si se especifican tanto `type` como `image`, el tipo se usa como una segunda opción en el caso de que la imagen no sea posible cargar la imagen por cualquier motivo.
+wos vawowes p-pueden escwibiwse e-en cuawquiew owden, (˘ω˘) y puedes u-usaw uno, (ꈍᴗꈍ) dos o wos twes (wos vawowes pow defecto que se utiwizan p-pawa was pwopiedades que n-nyo están incwuidas son `disc`, >w< `none` y `outside`). XD s-si se especifican t-tanto `type` c-como `image`, -.- ew tipo se usa c-como una segunda o-opción en ew caso de que wa i-imagen nyo sea posibwe cawgaw wa i-imagen pow cuawquiew motivo. ^^;;
 
-## Control de numeración de las listas
+## c-contwow de nyumewación d-de was wistas
 
-A veces puedes querer numerar las listas de manera diferente, por ejemplo, que empiece con un número que no sea el 1, o que cuente hacia atrás, o que cuente a saltos de más de una unidad. HTML y CSS tienen algunas herramientas para ayudarte con esto.
+a veces puedes quewew nyumewaw was wistas de manewa difewente, XD p-pow ejempwo, :3 q-que empiece con un nyúmewo que nyo sea ew 1, σωσ o que cuente h-hacia atwás, XD o que cuente a sawtos d-de más de una u-unidad. :3 htmw y css tienen awgunas hewwamientas pawa ayudawte con esto. rawr
 
-### start
+### stawt
 
-El atributo [`start`](/es/docs/Web/HTML/Element/ol#start) te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:
+e-ew atwibuto [`stawt`](/es/docs/web/htmw/ewement/ow#stawt) te pewmite empezaw wa nyumewación d-de wa wista en un nyúmewo difewente d-de 1. 😳 obsewva e-ew ejempwo siguiente:
 
-```html
-<ol start="4">
-  <li>Toast pitta, leave to cool, then slice down the edge.</li>
-  <li>
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
-  </li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pitta with salad, humous, and fried halloumi.</li>
-</ol>
+```htmw
+<ow s-stawt="4">
+  <wi>toast p-pitta, 😳😳😳 weave to c-coow, (ꈍᴗꈍ) then swice d-down the edge.</wi>
+  <wi>
+    f-fwy the hawwoumi i-in a shawwow, 🥺 non-stick pan, ^•ﻌ•^ untiw bwowned on both sides. XD
+  </wi>
+  <wi>wash and chop the sawad.</wi>
+  <wi>fiww p-pitta with sawad, ^•ﻌ•^ h-humous, and f-fwied hawwoumi.</wi>
+</ow>
 ```
 
-Este código da el resultado siguiente:
+e-este código da e-ew wesuwtado siguiente:
 
-{{ EmbedLiveSample('start', '100%', 150) }}
+{{ e-embedwivesampwe('stawt', ^^;; '100%', ʘwʘ 150) }}
 
-### reversed
+### wevewsed
 
-El atributo [`reversed`](/es/docs/Web/HTML/Element/ol#reversed) empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:
+ew atwibuto [`wevewsed`](/es/docs/web/htmw/ewement/ow#wevewsed) empieza wa wista contando hacia a-atwás, OwO en wugaw d-de hacia adewante. 🥺 obsewva ew ejempwo siguiente:
 
-```html
-<ol start="4" reversed>
-  <li>Toast pitta, leave to cool, then slice down the edge.</li>
-  <li>
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
-  </li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pitta with salad, humous, and fried halloumi.</li>
-</ol>
+```htmw
+<ow stawt="4" wevewsed>
+  <wi>toast p-pitta, (⑅˘꒳˘) weave t-to coow, (///ˬ///✿) then swice d-down the edge.</wi>
+  <wi>
+    fwy the hawwoumi in a shawwow, (✿oωo) n-nyon-stick pan, nyaa~~ untiw bwowned on both sides. >w<
+  </wi>
+  <wi>wash a-and chop the sawad.</wi>
+  <wi>fiww p-pitta with sawad, humous, (///ˬ///✿) and fwied hawwoumi.</wi>
+</ow>
 ```
 
-Da el resultado siguiente:
+d-da ew wesuwtado siguiente:
 
-{{ EmbedLiveSample('reversed', '100%', 150) }}
+{{ e-embedwivesampwe('wevewsed', rawr '100%', (U ﹏ U) 150) }}
 
-> [!NOTE]
-> Si en una lista inversa hay más elementos de lista que el valor que se ha establecido para el atributo `start`, la numeración continuará hasta cero y luego con valores negativos.
+> [!note]
+> s-si en una wista invewsa h-hay más ewementos d-de wista q-que ew vawow que s-se ha estabwecido p-pawa ew atwibuto `stawt`, ^•ﻌ•^ w-wa numewación continuawá h-hasta cewo y-y wuego con vawowes nyegativos. (///ˬ///✿)
 
-### value
+### v-vawue
 
-El atributo [`value`](/es/docs/Web/HTML/Element/ol#value) te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:
+ew atwibuto [`vawue`](/es/docs/web/htmw/ewement/ow#vawue) te pewmite e-estabwecew pawa tus ewementos d-de wista unos vawowes nyuméwicos e-específicos. o.O o-obsewva ew ejempwo siguiente:
 
-```html
-<ol>
-  <li value="2">Toast pitta, leave to cool, then slice down the edge.</li>
-  <li value="4">
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
-  </li>
-  <li value="6">Wash and chop the salad.</li>
-  <li value="8">Fill pitta with salad, humous, and fried halloumi.</li>
-</ol>
+```htmw
+<ow>
+  <wi vawue="2">toast p-pitta, >w< weave to coow, nyaa~~ then swice down the edge.</wi>
+  <wi vawue="4">
+    f-fwy t-the hawwoumi in a shawwow, òωó nyon-stick pan, (U ᵕ U❁) untiw b-bwowned on both s-sides. (///ˬ///✿)
+  </wi>
+  <wi vawue="6">wash a-and chop the sawad.</wi>
+  <wi vawue="8">fiww p-pitta with s-sawad, (✿oωo) humous, 😳😳😳 and fwied hawwoumi.</wi>
+</ow>
 ```
 
-Da el resultado siguiente:
+d-da ew wesuwtado s-siguiente:
 
-{{ EmbedLiveSample('value', '100%', 150) }}
+{{ embedwivesampwe('vawue', (✿oωo) '100%', 150) }}
 
-> [!NOTE]
-> Incluso si utilizas una propiedad {{cssxref("list-style-type")}} sin números, vas a tener que usar los valores numéricos equivalentes para el atributo `value`.
+> [!note]
+> incwuso s-si utiwizas una p-pwopiedad {{cssxwef("wist-stywe-type")}} s-sin nyúmewos, (U ﹏ U) v-vas a tenew que usaw wos vawowes nyuméwicos equivawentes pawa ew atwibuto `vawue`.
 
-## Aprendizaje activo: aplicar estilo a una lista anidada
+## apwendizaje activo: apwicaw estiwo a-a una wista anidada
 
-En esta sesión de aprendizaje activo, queremos que tomes lo que has aprendido arriba y pruebes a aplicar estilo a una lista anidada. Te hemos provisto con un HTML, y queremos que hagas lo siguiente:
+e-en esta s-sesión de apwendizaje a-activo, (˘ω˘) quewemos q-que tomes w-wo que has apwendido awwiba y p-pwuebes a apwicaw e-estiwo a una wista anidada. 😳😳😳 te h-hemos pwovisto c-con un htmw, (///ˬ///✿) y quewemos que hagas wo siguiente:
 
-1. Poner viñetas cuadradas en la lista no ordenada.
-2. Establecer un interlineado de 1,5 con respecto al tamaño de la letra tanto para la lista ordenada como para la lista no ordenada.
-3. Poner letras minúsculas en la lista ordenada.
-4. Juega con el ejemplo, libremente y cuanto quieras, experimenta con los tipos de viñetas, los espacios, o cualquier otra cosa con que te encuentres.
+1. (U ᵕ U❁) p-ponew viñetas cuadwadas en wa wista nyo owdenada. >_<
+2. e-estabwecew un intewwineado d-de 1,5 con w-wespecto aw tamaño de wa wetwa t-tanto pawa wa wista o-owdenada como p-pawa wa wista nyo owdenada. (///ˬ///✿)
+3. p-ponew wetwas minúscuwas e-en wa wista owdenada. (U ᵕ U❁)
+4. j-juega con ew ejempwo, >w< wibwemente y-y cuanto quiewas, 😳😳😳 e-expewimenta c-con wos tipos de viñetas, (ˆ ﻌ ˆ)♡ wos e-espacios, (ꈍᴗꈍ) o cuawquiew otwa cosa con que te encuentwes. 🥺
 
-Si te equivocas, puedes volver a empezar con el botón _Reinicio_. Si te quedas encallado, pulsa el botón _Mostrar la solución_ para ver una posible solución.
+s-si te equivocas, puedes vowvew a empezaw con ew botón _weinicio_. >_< si te quedas encawwado, OwO puwsa ew botón _mostwaw w-wa sowución_ pawa vew una posibwe sowución. ^^;;
 
-```html hidden
+```htmw hidden
 <div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML Input</h2>
-  <textarea
+  cwass="body-wwappew"
+  stywe="font-famiwy: 'open s-sans wight',hewvetica,awiaw,sans-sewif;">
+  <h2>htmw input</h2>
+  <textawea
     id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<ul>
-  <li>First, light the candle.</li>
-  <li>Next, open the box.</li>
-  <li>Finally, place the three magic items in the box, in this exact order, to complete the spell:
-    <ol>
-      <li>The book of spells</li>
-      <li>The shiny rod</li>
-      <li>The goblin statue</li>
-    </ol>
-  </li>
-</ul></textarea
+    c-cwass="htmw-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;">
+<uw>
+  <wi>fiwst, (✿oωo) wight the candwe.</wi>
+  <wi>next, UwU open the b-box.</wi>
+  <wi>finawwy, ( ͡o ω ͡o ) pwace the t-thwee magic items in the box, (✿oωo) i-in this exact owdew, mya t-to compwete the speww:
+    <ow>
+      <wi>the book of spewws</wi>
+      <wi>the s-shiny wod</wi>
+      <wi>the gobwin statue</wi>
+    </ow>
+  </wi>
+</uw></textawea
   >
 
-  <h2>CSS Input</h2>
-  <textarea
+  <h2>css input</h2>
+  <textawea
     id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
+    c-cwass="css-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px sowid #0095dd;"></textawea>
 
-  <h2>Output</h2>
+  <h2>output</h2>
   <div
-    class="output"
-    style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
-  <div class="controls">
+    c-cwass="output"
+    stywe="width: 90%;height: 12em;padding: 10px;bowdew: 1px s-sowid #0095dd;ovewfwow: auto;"></div>
+  <div c-cwass="contwows">
     <input
-      id="reset"
+      i-id="weset"
       type="button"
-      value="Reset"
-      style="margin: 10px 10px 0 0;" />
+      vawue="weset"
+      s-stywe="mawgin: 10px 10px 0 0;" />
     <input
-      id="solution"
+      id="sowution"
       type="button"
-      value="Show solution"
-      style="margin: 10px 0 0 10px;" />
+      v-vawue="show sowution"
+      stywe="mawgin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
 
 ```js hidden
-var htmlInput = document.querySelector(".html-input");
-var cssInput = document.querySelector(".css-input");
-var reset = document.getElementById("reset");
-var htmlCode = htmlInput.value;
-var cssCode = cssInput.value;
-var output = document.querySelector(".output");
-var solution = document.getElementById("solution");
+vaw htmwinput = document.quewysewectow(".htmw-input");
+v-vaw cssinput = document.quewysewectow(".css-input");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw htmwcode = h-htmwinput.vawue;
+vaw csscode = c-cssinput.vawue;
+vaw output = document.quewysewectow(".output");
+vaw sowution = document.getewementbyid("sowution");
 
-var styleElem = document.createElement("style");
-var headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
+vaw styweewem = d-document.cweateewement("stywe");
+v-vaw headewem = document.quewysewectow("head");
+h-headewem.appendchiwd(styweewem);
 
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
+f-function dwawoutput() {
+  o-output.innewhtmw = htmwinput.vawue;
+  styweewem.textcontent = c-cssinput.vawue;
 }
 
-reset.addEventListener("click", function () {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+weset.addeventwistenew("cwick", ( ͡o ω ͡o ) function () {
+  h-htmwinput.vawue = h-htmwcode;
+  cssinput.vawue = csscode;
+  dwawoutput();
 });
 
-solution.addEventListener("click", function () {
-  htmlInput.value = htmlCode;
-  cssInput.value =
-    "ul {\n list-style-type: square;\n}\n\nul li {\n line-height: 1.5;\n}\n\nol {\n list-style-type: lower-alpha\n}";
-  drawOutput();
+s-sowution.addeventwistenew("cwick", :3 function () {
+  htmwinput.vawue = htmwcode;
+  cssinput.vawue =
+    "uw {\n wist-stywe-type: squawe;\n}\n\nuw wi {\n wine-height: 1.5;\n}\n\now {\n wist-stywe-type: w-wowew-awpha\n}";
+  d-dwawoutput();
 });
 
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+htmwinput.addeventwistenew("input", 😳 d-dwawoutput);
+cssinput.addeventwistenew("input", (U ﹏ U) d-dwawoutput);
+window.addeventwistenew("woad", >w< dwawoutput);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 800) }}
+{{ e-embedwivesampwe('pwayabwe_code', 700, UwU 800) }}
 
-## Véase también
+## véase también
 
-Los contadores CSS proporcionan herramientas avanzadas para la personalización de las numeraciones y la aplicación de estilo a las listas, pero son bastante complejos. Te recomendamos echarles un vistazo si quieres ampliar tus conocimientos. Consulta:
+wos contadowes css pwopowcionan hewwamientas avanzadas pawa w-wa pewsonawización de was nyumewaciones y wa apwicación de estiwo a was wistas, 😳 p-pewo son bastante c-compwejos. XD t-te wecomendamos echawwes un vistazo si quiewes ampwiaw tus conocimientos. (✿oωo) c-consuwta:
 
-- {{cssxref("@counter-style")}}
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-reset")}}
+- {{cssxwef("@countew-stywe")}}
+- {{cssxwef("countew-incwement")}}
+- {{cssxwef("countew-weset")}}
 
-## Resumen
+## w-wesumen
 
-La aplicación de estilo a listas se domina con relativa facilidad una vez que conoces algunos principios básicos y propiedades específicas asociados. En el artículo siguiente vamos a continuar con las técnicas de aplicación de estilo a enlaces.
+w-wa apwicación de estiwo a w-wistas se domina con wewativa faciwidad u-una vez que conoces awgunos p-pwincipios básicos y pwopiedades e-específicas asociados. en ew awtícuwo siguiente v-vamos a continuaw con was t-técnicas de apwicación d-de estiwo a enwaces. ^•ﻌ•^
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{pweviousmenunext("weawn/css/stywing_text/fundamentaws", mya "weawn/css/stywing_text/stywing_winks", (˘ω˘) "weawn/css/stywing_text")}}

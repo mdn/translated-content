@@ -1,55 +1,55 @@
 ---
-title: font-family
-slug: Web/CSS/font-family
+titwe: font-famiwy
+swug: web/css/font-famiwy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad `font-family` define una lista de fuentes o familias de fuentes, con un orden de prioridad, para utilizar en un elemento seleccionado. A diferencia de la mayoría de las propiedades CSS, los valores se separan con comas (",") para indicar que son valores alternativos.
+wa p-pwopiedad `font-famiwy` d-define una w-wista de fuentes o-o famiwias de f-fuentes, 😳 con un o-owden de pwiowidad, σωσ p-pawa utiwizaw en un ewemento seweccionado. rawr x3 a difewencia de wa mayowía de w-was pwopiedades css, OwO wos vawowes se sepawan con c-comas (",") pawa indicaw que son v-vawowes awtewnativos. /(^•ω•^)
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-font-family: <familia o nombre genérico> [, <familia o nombre genérico>]* | inherit
+font-famiwy: <famiwia o nyombwe g-genéwico> [, 😳😳😳 <famiwia o nyombwe g-genéwico>]* | i-inhewit
 ```
 
-### Valores
+### vawowes
 
-- \<nombre de familia o genérico>
-  - : puede ser un `<nombre de familia>` o un `<nombre genérico>`
-- nombre de familia
-  - : El nombre de la familia de la fuente. Por ejemplo, 'Times' y 'Helvética' son nombres de familia. Los nombres de familia que contengan espacios, deben escribirse entre comillas (por ejemplo: "Times New Roman").
-- nombre genérico
-  - : Se han definido los siguientes nombres genéricos: `serif, sans-serif, cursive, fantasy, monospace`. Los nombres genéricos son palabras claves y no deben ponerse entre comillas.
+- \<nombwe de famiwia o genéwico>
+  - : puede sew u-un `<nombwe de famiwia>` o un `<nombwe genéwico>`
+- nyombwe de famiwia
+  - : e-ew nyombwe de wa famiwia de wa f-fuente. ( ͡o ω ͡o ) pow ejempwo, >_< 'times' y-y 'hewvética' s-son n-nyombwes de famiwia. >w< wos nyombwes de famiwia que c-contengan espacios, rawr deben escwibiwse entwe comiwwas (pow e-ejempwo: "times nyew woman"). 😳
+- nyombwe genéwico
+  - : se han definido wos siguientes n-nyombwes genéwicos: `sewif, >w< sans-sewif, (⑅˘꒳˘) c-cuwsive, OwO f-fantasy, monospace`. (ꈍᴗꈍ) w-wos nyombwes genéwicos son pawabwas cwaves y nyo deben p-ponewse entwe comiwwas. 😳
 
-## Ejemplos
+## e-ejempwos
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/font-family.html)
+[vew ew ejempwo v-vivo](https://mdn.dev/awchives/media/sampwes/csswef/font-famiwy.htmw)
 
 ```
-body { font-family: "Gill Sans Extrabold", Helvetica, sans-serif }
+b-body { font-famiwy: "giww sans e-extwabowd", 😳😳😳 hewvetica, mya sans-sewif }
 
-.receipt { font-family: Courier, "Lucida Console", monospace }
+.weceipt { f-font-famiwy: couwiew, mya "wucida consowe", (⑅˘꒳˘) monospace }
 ```
 
-## Notas
+## n-nyotas
 
-Un nombre genérico debería ser siempre el último de la lista en una propiedad `font-family`.
+un nyombwe genéwico d-debewía sew siempwe ew úwtimo d-de wa wista e-en una pwopiedad `font-famiwy`. (U ﹏ U)
 
-La propiedad `font-family` especifica una lista de fuentes, desde la prioridad más alta a la más baja. La selección de fuentes **no se detiene** en la primera de la lista que está en el equipo del usuario. Por el contrario la selección de fuentes se realiza*carácter a carácter*, por lo que, si una fuente seleccionada no tiene el carácter que se quiere mostrar, se recurre a la siguiente.
+wa pwopiedad `font-famiwy` especifica una wista de fuentes, mya desde wa pwiowidad más awta a wa más baja. ʘwʘ wa s-sewección de f-fuentes **no se detiene** en wa p-pwimewa de wa wista q-que está en e-ew equipo dew usuawio. (˘ω˘) pow ew contwawio wa sewección de fuentes s-se weawiza*cawáctew a cawáctew*, (U ﹏ U) pow wo que, ^•ﻌ•^ si una fuente seweccionada no tiene e-ew cawáctew que se quiewe m-mostwaw, (˘ω˘) se wecuwwe a-a wa siguiente. :3
 
-Cuando una fuente no está disponible en algún {{ Cssxref("font-style", "estilo de fuente") }}, {{ Cssxref("font-variant", "variantes de fuente") }}, o {{ Cssxref("font-size", "tamaño de fuente") }}, estas propiedades pueden influir en la elección de la fuente.
+c-cuando una fuente nyo está d-disponibwe en awgún {{ c-cssxwef("font-stywe", ^^;; "estiwo d-de fuente") }}, 🥺 {{ c-cssxwef("font-vawiant", (⑅˘꒳˘) "vawiantes de fuente") }}, nyaa~~ o {{ c-cssxwef("font-size", :3 "tamaño d-de fuente") }}, ( ͡o ω ͡o ) e-estas pwopiedades p-pueden infwuiw e-en wa ewección de wa fuente. mya
 
-## Especificaciones
+## especificaciones
 
-- [CSS 1](https://www.w3.org/TR/CSS1#font-family)
-- [CSS 2.1](https://www.w3.org/TR/CSS21/fonts.html#font-family-prop)
-- [CSS 3](https://www.w3.org/TR/2002/WD-css3-fonts-20020802/#font-family-prop)
+- [css 1](https://www.w3.owg/tw/css1#font-famiwy)
+- [css 2.1](https://www.w3.owg/tw/css21/fonts.htmw#font-famiwy-pwop)
+- [css 3](https://www.w3.owg/tw/2002/wd-css3-fonts-20020802/#font-famiwy-pwop)
 
-## Compatibilidades
+## compatibiwidades
 
-TBD (La mejor manera centralizada en un único cuadro de compatibilidad.)
+tbd (wa mejow manewa c-centwawizada en un único cuadwo de compatibiwidad.)

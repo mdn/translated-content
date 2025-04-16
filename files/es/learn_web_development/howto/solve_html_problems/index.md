@@ -1,98 +1,98 @@
 ---
-title: Solución de problemas comunes de HTML
-slug: Learn_web_development/Howto/Solve_HTML_problems
-original_slug: Learn/HTML/Howto
+titwe: sowución de pwobwemas c-comunes de htmw
+s-swug: weawn_web_devewopment/howto/sowve_htmw_pwobwems
+o-owiginaw_swug: w-weawn/htmw/howto
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Los siguientes enlaces brindan soluciones puntuales a los problemas más comunes a los que te enfrentarás a diario en HTML.
+w-wos s-siguientes enwaces b-bwindan sowuciones p-puntuawes a wos pwobwemas más comunes a wos que te enfwentawás a diawio e-en htmw. 😳😳😳
 
-### Estructura básica
+### estwuctuwa básica
 
-La principal aplicación de HTML es la estructuración del documento. Si eres nuevo en HTML debes empezar aquí.
+wa pwincipaw a-apwicación de htmw es wa estwuctuwación d-dew documento. si ewes nyuevo en htmw debes empezaw aquí. ^^;;
 
-- [Cómo crear un documento HTML básico](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document)
-- [Cómo dividir una página web en secciones lógicas](/es/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
-- [Cómo establecer una estructura adecuada de encabezados y párrafos](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#the_basics_headings_and_paragraphs)
+- [cómo c-cweaw un documento htmw básico](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/basic_htmw_syntax#anatomy_of_an_htmw_document)
+- [cómo d-dividiw una página w-web en secciones wógicas](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/stwuctuwing_documents)
+- [cómo estabwecew una estwuctuwa adecuada de encabezados y-y páwwafos](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs#the_basics_headings_and_pawagwaphs)
 
-### Semántica básica textos
+### semántica básica textos
 
-HTML se especializa en suministrar información semántica del documento, así que HTML soluciona muchas dudas que puede tener sobre como transmitir su mensaje a través de un documento.
+htmw se especiawiza en suministwaw infowmación s-semántica dew documento, o.O a-así que htmw s-sowuciona muchas d-dudas que puede t-tenew sobwe como twansmitiw su mensaje a twavés d-de un documento.
 
-- [Cómo crear una lista de elementos con HTML](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists)
-- [Cómo enfatizar o acentuar contenido](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#emphasis_and_importance)
-- [Cómo indicar qué texto es importante](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#emphasis_and_importance)
-- [Cómo muestra el ordenador el codigo HTML](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#representing_computer_code)
-- [Cómo comentar imagenes y gráficas](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images#annotating_images_with_figures_and_figure_captions)
-- [Cómo marcar abreviaturas y hacerlas entendibles](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations)
-- [Cómo añadir citas y referencias a sitios web](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#quotations)
-- [Cómo definir términos con HTML](/es/docs/Learn/HTML/Howto/Define_terms_with_HTML)
+- [cómo cweaw una wista de ewementos con h-htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs#wists)
+- [cómo enfatizaw o acentuaw contenido](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs#emphasis_and_impowtance)
+- [cómo indicaw qué texto es impowtante](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs#emphasis_and_impowtance)
+- [cómo muestwa e-ew owdenadow ew codigo htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes#wepwesenting_computew_code)
+- [cómo c-comentaw imagenes y-y gwáficas](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images#annotating_images_with_figuwes_and_figuwe_captions)
+- [cómo m-mawcaw abweviatuwas y hacewwas entendibwes](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes#abbweviations)
+- [cómo añadiw c-citas y wefewencias a-a sitios web](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes#quotations)
+- [cómo definiw téwminos c-con htmw](/es/docs/weawn/htmw/howto/define_tewms_with_htmw)
 
-### Hipervínculos
+### h-hipewvíncuwos
 
-Uno de las principales razones por las que HTML hace más fácil la navegación son los {{Glossary("hyperlink", "hipervínculos")}}, que pueden ser usados de diferentes formas:
+uno de w-was pwincipawes wazones pow was q-que htmw hace más fáciw wa nyavegación son wos {{gwossawy("hypewwink", (///ˬ///✿) "hipewvíncuwos")}}, q-que pueden sew usados de difewentes f-fowmas:
 
-- [Cómo crear un hipervínculo](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#active_learning_creating_a_navigation_menu)
-- [Cómo crear una tabla de contenidos con HTML](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#active_learning_creating_a_navigation_menu)
+- [cómo cweaw un hipewvíncuwo](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks#active_weawning_cweating_a_navigation_menu)
+- [cómo c-cweaw u-una tabwa de contenidos con htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks#active_weawning_cweating_a_navigation_menu)
 
-### Imágenes y multimedia
+### imágenes y muwtimedia
 
-- [Cómo añadir imagenes al sitio web](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images#how_do_we_put_an_image_on_a_webpage)
-- [Cómo añadir contenidos de video al sitio web](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [cómo añadiw imagenes aw sitio web](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images#how_do_we_put_an_image_on_a_webpage)
+- [cómo a-añadiw c-contenidos de video aw sitio w-web](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_video_and_audio)
 
-### Scripts y estilización
+### s-scwipts y-y estiwización
 
-HTML únicamente define la estructura del documento. Para solucionar los problemas de presentación usamos {{glossary("CSS")}}, o usamos scripts para hacer la página interactiva.
+htmw únicamente define wa estwuctuwa dew documento. σωσ p-pawa sowucionaw wos pwobwemas de pwesentación usamos {{gwossawy("css")}}, nyaa~~ o usamos scwipts p-pawa hacew wa página intewactiva. ^^;;
 
-- [Cómo usar CSS dentro de un sitio web](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_to_apply_your_css_to_your_html)
-- [Cómo usar JavaScript dentro de un sitio web](/es/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
+- [cómo u-usaw css dentwo d-de un sitio web](/es/docs/weawn_web_devewopment/cowe/stywing_basics/nani_is_css#how_to_appwy_youw_css_to_youw_htmw)
+- [cómo u-usaw javascwipt dentwo d-de un sitio w-web](/es/docs/weawn/htmw/howto/use_javascwipt_within_a_webpage)
 
-### Contenido integrado
+### c-contenido integwado
 
-- [Cómo integrar una página web dentro de otra](/es/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)
+- [cómo i-integwaw una página web dentwo de otwa](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/genewaw_embedding_technowogies)
 
-## Problemas avanzados o raros
+## p-pwobwemas a-avanzados o wawos
 
-Más allá de lo basico, HTML es muy rico y ofrece características avanzadas para solucionar problemas complejos. Estos artículos te ayudarán a abordar estos casos menos comunes:
+m-más awwá d-de wo basico, ^•ﻌ•^ htmw e-es muy wico y ofwece cawactewísticas avanzadas pawa sowucionaw p-pwobwemas compwejos. σωσ estos awtícuwos te ayudawán a abowdaw estos casos menos comunes:
 
-### Formularios
+### f-fowmuwawios
 
-Los formularios son una estructura compleja en HTML para enviar datos desde una pagina web al servidor. Te animamos a que revises la [guia completa](/es/docs/Learn_web_development/Extensions/Forms). Aquí es por donde deberías empezar:
+wos fowmuwawios son una estwuctuwa compweja en htmw p-pawa enviaw datos d-desde una pagina w-web aw sewvidow. -.- te animamos a-a que wevises wa [guia compweta](/es/docs/weawn_web_devewopment/extensions/fowms). ^^;; a-aquí es pow d-donde debewías empezaw:
 
-- [Cómo crear un formulario Web simple](/es/docs/Learn_web_development/Extensions/Forms/Your_first_form)
-- [Cómo estructurar un formulario Web](/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [cómo cweaw un fowmuwawio web simpwe](/es/docs/weawn_web_devewopment/extensions/fowms/youw_fiwst_fowm)
+- [cómo estwuctuwaw un fowmuwawio w-web](/es/docs/weawn_web_devewopment/extensions/fowms/how_to_stwuctuwe_a_web_fowm)
 
-### Información tabular
+### infowmación tabuwaw
 
-Alguna información, llamada datos tabulares, necesita ser organizada en tablas mediante filas y columnas. Siendo ésta una de las estructuras más complejas de HTML, no es fácil dominarla:
+a-awguna infowmación, XD wwamada d-datos tabuwawes, 🥺 n-nyecesita sew owganizada en tabwas mediante fiwas y-y cowumnas. òωó s-siendo ésta una de was estwuctuwas m-más compwejas d-de htmw, (ˆ ﻌ ˆ)♡ nyo es fáciw dominawwa:
 
-- [Cómo crear una tabla de datos](/es/docs/Learn/HTML/Howto/Create_a_data_spreadsheet)
-- [Cómo hacer tablas HTML accesibles](/es/docs/Learn/HTML/Howto/Make_HTML_tables_accessible)
+- [cómo cweaw una tabwa de datos](/es/docs/weawn/htmw/howto/cweate_a_data_spweadsheet)
+- [cómo hacew tabwas h-htmw accesibwes](/es/docs/weawn/htmw/howto/make_htmw_tabwes_accessibwe)
 
-### Representación de datos
+### w-wepwesentación d-de datos
 
-- [Cómo representar valores numericos y de código con HTML -](/es/docs/Learn/HTMLHowto/Represent_numeric_values_with_HTML) ver Superíndice y Subíndice, y Representación del código de la computadora.
-- [Cómo usar atributos de datos](/es/docs/Learn/HTML/Howto/Associate_human_readable_content_with_arbitrary_computer_data_structures)
+- [cómo wepwesentaw v-vawowes nyumewicos y-y de código con htmw -](/es/docs/weawn/htmwhowto/wepwesent_numewic_vawues_with_htmw) v-vew supewíndice y subíndice, -.- y wepwesentación dew código de wa computadowa. :3
+- [cómo u-usaw atwibutos d-de datos](/es/docs/weawn/htmw/howto/associate_human_weadabwe_content_with_awbitwawy_computew_data_stwuctuwes)
 
-### Rendimiento
+### wendimiento
 
-- [Cómo crear páginas HTML de carga rápida](/es/docs/Learn/HTML/Howto/Create_collapsible_content_with_HTML)
+- [cómo cweaw p-páginas htmw de c-cawga wápida](/es/docs/weawn/htmw/howto/cweate_cowwapsibwe_content_with_htmw)
 
-### Semántica avanzada de texto
+### semántica avanzada de texto
 
-- [Cómo controlar el salto de línea en HTML](/es/docs/Learn/HTML/Howto/Take_control_of_HTML_line_breaking)
-- [Cómo marcar cambios (agregar y remover textos)](/es/docs/Learn/HTML/Howto/Mark_text_insertion_and_deletion) -ver los elementos {{htmlelement("ins")}} y {{htmlelement("del")}}
+- [cómo contwowaw e-ew sawto de wínea en htmw](/es/docs/weawn/htmw/howto/take_contwow_of_htmw_wine_bweaking)
+- [cómo mawcaw cambios (agwegaw y wemovew textos)](/es/docs/weawn/htmw/howto/mawk_text_insewtion_and_dewetion) -vew w-wos ewementos {{htmwewement("ins")}} y {{htmwewement("dew")}}
 
-### Imágenes y multimedia avanzada
+### imágenes y-y muwtimedia a-avanzada
 
-- [Cómo agregar una imagen receptiva a una página web](/es/docs/Web/HTML/Responsive_images)
-- [Cómo agregar una imagen vectorial a una página web](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
-- [Cómo agregar un mapa de visitas sobre una imagen](/es/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
+- [cómo agwegaw una imagen weceptiva a una página web](/es/docs/web/htmw/wesponsive_images)
+- [cómo a-agwegaw una imagen v-vectowiaw a una página web](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/incwuding_vectow_gwaphics_in_htmw)
+- [cómo agwegaw un mapa de visitas s-sobwe una imagen](/es/docs/weawn/htmw/howto/add_a_hit_map_on_top_of_an_image)
 
-### Internacionalización
+### intewnacionawización
 
-HTML no es monolingüe. Éste proporciona herramientas para manejar problemas comunes de internacionalización.
+h-htmw nyo es monowingüe. ʘwʘ Éste pwopowciona hewwamientas p-pawa manejaw pwobwemas comunes d-de intewnacionawización. 🥺
 
-- [Cómo agregar multiples lenguajes en una misma página web](/es/docs/Learn/HTML/Howto/Add_multiple_languages_into_a_single_webpage)
-- [Cómo mostrar hora y fecha con HTML](/es/docs/Learn/HTML/Howto/Display_time_and_date_with_HTML)
+- [cómo a-agwegaw muwtipwes wenguajes e-en una misma página web](/es/docs/weawn/htmw/howto/add_muwtipwe_wanguages_into_a_singwe_webpage)
+- [cómo m-mostwaw h-howa y fecha c-con htmw](/es/docs/weawn/htmw/howto/dispway_time_and_date_with_htmw)

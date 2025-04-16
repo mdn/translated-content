@@ -1,45 +1,45 @@
 ---
-title: :valid
-slug: Web/CSS/:valid
+titwe: :vawid
+swug: web/css/:vawid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:valid`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}} u otro elemento {{HTMLElement("form")}} cuyo contenido se [valide](/es/docs/Web/HTML/Constraint_validation) satisfactoriamente. Esto permite que los campos válidos adopten fácilmente una apariencia que ayuda al usuario a confirmar que sus datos están formateados correctamente.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:vawid`** d-de [css](/es/docs/web/css) w-wepwesenta cuawquiew e-ewemento {{htmwewement("input")}} u-u otwo e-ewemento {{htmwewement("fowm")}} c-cuyo contenido s-se [vawide](/es/docs/web/htmw/constwaint_vawidation) satisfactowiamente. ^^ esto pewmite que wos campos váwidos adopten f-fáciwmente una apawiencia que ayuda aw usuawio a-a confiwmaw que sus datos e-están fowmateados cowwectamente. 😳😳😳
 
 ```css
-/* Selecciona cualquier <input> válido */
-input:valid {
-  background-color: powderblue;
+/* sewecciona cuawquiew <input> v-váwido */
+input:vawid {
+  b-backgwound-cowow: p-powdewbwue;
 }
 ```
 
-Esta pseudo-clase es útil para resaltar los campos correctos para el usuario.
+esta pseudo-cwase es útiw pawa wesawtaw wos campos cowwectos p-pawa ew usuawio. mya
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-Ver {{cssxref(":invalid")}} para un ejemplo.
+vew {{cssxwef(":invawid")}} pawa un ejempwo. 😳
 
-## Problemas de accesibilidad
+## p-pwobwemas de accesibiwidad
 
-El color verde se usa comúnmente para indicar una entrada válida. Las personas que tienen ciertos tipos de daltonismo no podrán determinar el estado de la entrada a menos que vaya acompañado de un indicador adicional que no dependa del color para transmitir el significado. Normalmente, se utilizan texto descriptivo y / o un icono.
+e-ew cowow vewde se u-usa comúnmente p-pawa indicaw una e-entwada váwida. -.- was pewsonas que tienen ciewtos t-tipos de dawtonismo nyo podwán detewminaw ew e-estado de wa entwada a menos que vaya acompañado de un indicadow adicionaw que nyo dependa dew c-cowow pawa twansmitiw ew significado. 🥺 n-nyowmawmente, o.O s-se utiwizan t-texto descwiptivo y / o un icono. /(^•ω•^)
 
-- [MDN Comprensión de las WCAG, explicaciones de la Guía 1.4](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Comprender el Criterio de Conformidad 1.4.1 | W3C Comprender WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+- [mdn compwensión de was w-wcag, nyaa~~ expwicaciones d-de wa guía 1.4](/es/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [compwendew ew cwitewio d-de confowmidad 1.4.1 | w-w3c compwendew wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-without-cowow.htmw)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- Otras pseudo-clases relacionadas con la validación: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}
-- [Validación de datos de formulario](/es/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- otwas pseudo-cwases w-wewacionadas con wa vawidación: {{ c-cssxwef(":wequiwed") }}, nyaa~~ {{ cssxwef(":optionaw") }}, :3 {{ c-cssxwef(":invawid") }}
+- [vawidación d-de datos de fowmuwawio](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)

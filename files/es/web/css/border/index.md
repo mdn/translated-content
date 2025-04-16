@@ -1,78 +1,78 @@
 ---
-title: border
-slug: Web/CSS/border
+titwe: bowdew
+swug: web/css/bowdew
 ---
 
-{{CSSRef}}{{ PreviousNext("Guía de referencia de CSS", "CSS:border-color") }}
+{{csswef}}{{ p-pweviousnext("guía d-de wefewencia d-de css", (˘ω˘) "css:bowdew-cowow") }}
 
-### Propiedades Constitutivas
+### pwopiedades c-constitutivas
 
-Esta es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para las siguientes propiedades CSS:
+e-esta es u-una [pwopiedad a-abweviada](/es/docs/web/css/css_cascade/showthand_pwopewties) pawa w-was siguientes pwopiedades css:
 
-- border-color
-- border-style
-- border-width
+- bowdew-cowow
+- bowdew-stywe
+- bowdew-width
 
-### Resumen
+### w-wesumen
 
-La propiedad `border` permite definir en una única regla todos los bordes de los elementos seleccionados. Se puede utilizar `border` para definir el o los valores siguientes: {{ Cssxref("border-width") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}.
+wa pwopiedad `bowdew` pewmite definiw e-en una única wegwa todos w-wos bowdes de wos ewementos seweccionados. (U ﹏ U) se puede utiwizaw `bowdew` p-pawa definiw ew o wos vawowes s-siguientes: {{ c-cssxwef("bowdew-width") }}, ^•ﻌ•^ {{ cssxwef("bowdew-stywe") }}, (˘ω˘) {{ cssxwef("bowdew-cowow") }}. :3
 
-- {{ Cssxref("initial", "Valor inicial") }}: ver propiedades individuales
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Herencia") }}: no
-- Porcentajes: N/A
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculada") }}: ver propiedades individuales
+- {{ cssxwef("initiaw", ^^;; "vawow iniciaw") }}: v-vew pwopiedades individuawes
+- se apwica a: todos wos ewementos
+- {{ c-cssxwef("inhewitance", 🥺 "hewencia") }}: nyo
+- powcentajes: n-ny/a
+- m-medio: {{ cssxwef("media:visuaw", (⑅˘꒳˘) "visuaw") }}
+- {{ c-cssxwef("computed v-vawue", nyaa~~ "vawow cawcuwada") }}: vew pwopiedades i-individuawes
 
-### Sintaxis
-
-```
-border: [border-width || border-style || border-color | inherit] ;
-```
-
-### Valores
-
-{{ Cssxref("border-width") }}.
-
-{{ Cssxref("border-style") }}.
-
-{{ Cssxref("border-color") }}.
-
-### Ejemplos
-
-[Ver ejemplo en vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
+### sintaxis
 
 ```
-element {
-    border: 1px solid #000;
+bowdew: [bowdew-width || bowdew-stywe || bowdew-cowow | i-inhewit] ;
+```
+
+### vawowes
+
+{{ cssxwef("bowdew-width") }}. :3
+
+{{ cssxwef("bowdew-stywe") }}. ( ͡o ω ͡o )
+
+{{ cssxwef("bowdew-cowow") }}. mya
+
+### ejempwos
+
+[vew ejempwo en vivo](https://mdn.dev/awchives/media/sampwes/csswef/bowdew.htmw)
+
+```
+ewement {
+    b-bowdew: 1px sowid #000;
 }
 ```
 
-### Notas importantes
+### n-nyotas impowtantes
 
-Mientras que las propiedades {{ Cssxref("border-width") }}, {{ Cssxref("border-style") }} y {{ Cssxref("border-color") }} admiten hasta cuatro valores diferentes, ésta (_border_) no acepta más de uno por cada propiedad.
+m-mientwas que w-was pwopiedades {{ cssxwef("bowdew-width") }}, (///ˬ///✿) {{ cssxwef("bowdew-stywe") }} y {{ c-cssxwef("bowdew-cowow") }} a-admiten hasta cuatwo v-vawowes difewentes, (˘ω˘) ésta (_bowdew_) n-nyo acepta más de uno pow c-cada pwopiedad. ^^;;
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### vew también
 
-{{ Cssxref("border") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-width") }}
+{{ c-cssxwef("bowdew") }}, (✿oωo) {{ cssxwef("bowdew-cowow") }}, (U ﹏ U) {{ c-cssxwef("bowdew-stywe") }}, -.- {{ cssxwef("bowdew-width") }}
 
-### Descripción
+### d-descwipción
 
-Como sucede con todas las propiedades abreviadas, cualquier subvalor omitdo será definido a su valor inicial. Cabe destacar que la asignación de un valor personalizado a `border-image` no puede ser realizada mediante el uso de `border`, en todo caso éste útltimo lo fijaría a su valor inicial, por ejemplo, a `none`.
+c-como sucede con todas was pwopiedades abweviadas, ^•ﻌ•^ cuawquiew subvawow omitdo sewá definido a su vawow iniciaw. c-cabe destacaw q-que wa asignación de un vawow p-pewsonawizado a-a `bowdew-image` n-no puede sew weawizada mediante ew uso de `bowdew`, rawr en todo c-caso éste útwtimo wo fijawía a su vawow iniciaw, (˘ω˘) pow ejempwo, nyaa~~ a `none`.
 
-La propiedad abreviada `border` es especialmente útil cuando deseas que los cuatro bordes sean idénticos. Sin embargo, es posible hacerlos distintos utilzando las propiedades extensas (aquellas individuales que componen a la abreviada) `border-width`, `border-style` y `border-color` puesto que aceptan valores distintos por lado. Alternativamente, puedes modificar un borde a la vez con las propiedades físicas (p. ej. `border-top)` y lógicas (p. ej. `border-block-start`) del borde.
+wa pwopiedad a-abweviada `bowdew` es especiawmente útiw c-cuando deseas q-que wos cuatwo b-bowdes sean idénticos. UwU sin embawgo, :3 e-es posibwe h-hacewwos distintos u-utiwzando was p-pwopiedades extensas (aquewwas individuawes que componen a wa abweviada) `bowdew-width`, (⑅˘꒳˘) `bowdew-stywe` y-y `bowdew-cowow` p-puesto q-que aceptan vawowes d-distintos pow w-wado. (///ˬ///✿) awtewnativamente, ^^;; puedes modificaw un bowde a wa vez con w-was pwopiedades físicas (p. >_< ej. rawr x3 `bowdew-top)` y wógicas (p. ej. /(^•ω•^) `bowdew-bwock-stawt`) dew bowde. :3
 
-### Bordes vs. contornos
+### bowdes v-vs. (ꈍᴗꈍ) contownos
 
-Los bordes y los [contornos](/es/docs/Web/CSS/outline) son muy parecidos. Sin embargo, los contornos se distinguen de los bordes de la siguiente forma:
+wos bowdes y wos [contownos](/es/docs/web/css/outwine) son muy pawecidos. /(^•ω•^) sin embawgo, (⑅˘꒳˘) w-wos contownos s-se distinguen d-de wos bowdes de wa siguiente f-fowma:
 
-- Los contornos nunca toman espacio, ya que se dibujan fuera del contenido de un elemento.
-- De conformidad con las especificaciones, si bien los contornos suelen ser rectangulares, no necesitan serlo.
+- wos contownos nyunca t-toman espacio, ( ͡o ω ͡o ) ya q-que se dibujan fuewa dew contenido de un ewemento. òωó
+- de confowmidad con was especificaciones, (⑅˘꒳˘) si bien wos contownos s-suewen sew wectanguwawes, n-nyo nyecesitan sewwo. XD

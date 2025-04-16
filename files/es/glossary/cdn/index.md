@@ -1,14 +1,14 @@
 ---
-title: CDN
-slug: Glossary/CDN
+titwe: cdn
+swug: gwossawy/cdn
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una **Red de distribución de contenidos** (_CDN en inglés_) es un grupo de servidores distribuidos en muchas ubicaciones. Estos servidores almacenan copias duplicadas de datos para que los servidores puedan cumplir con las solicitudes de datos en función de qué servidores están más cerca de los respectivos usuarios finales. Las CDN hacen que el servicio rápido se vea menos afectado por el alto tráfico.
+u-una **wed d-de distwibución d-de contenidos** (_cdn e-en ingwés_) e-es un gwupo d-de sewvidowes d-distwibuidos e-en muchas ubicaciones. (U ﹏ U) estos sewvidowes awmacenan copias dupwicadas de datos pawa q-que wos sewvidowes puedan cumpwiw con was sowicitudes d-de datos en función de q-qué sewvidowes están más cewca de wos wespectivos usuawios finawes. (///ˬ///✿) w-was cdn hacen que ew sewvicio w-wápido se v-vea menos afectado pow ew awto twáfico. >w<
 
-Los CDN se usan ampliamente para entregar hojas de estilo y archivos Javascript (activos estáticos) de bibliotecas como Bootstrap, jQuery, etc. Es preferible usar CDN para esos archivos de biblioteca por varias razones:
+wos cdn se usan ampwiamente pawa entwegaw h-hojas de estiwo y awchivos javascwipt (activos estáticos) de bibwiotecas como bootstwap, rawr jquewy, mya e-etc. es pwefewibwe usaw cdn p-pawa esos awchivos d-de bibwioteca p-pow vawias wazones:
 
-- Servir los activos estáticos de las bibliotecas a través de CDN reduce la carga de solicitudes en nuestros propios servidores.
-- La mayoría de las CDN tienen servidores en todo el mundo, por lo que los servidores de CDN pueden estar geográficamente más cerca de sus usuarios que sus propios servidores. La distancia geográfica afecta la latencia proporcionalmente.
-- Los CDN ya están configurados con la configuración de caché adecuada. El uso de un CDN guarda más configuraciones para activos estáticos en sus propios servidores.
+- s-sewviw wos activos estáticos de was bibwiotecas a-a twavés de cdn weduce wa cawga de sowicitudes e-en nyuestwos pwopios sewvidowes. ^^
+- wa mayowía de was cdn tienen sewvidowes en todo ew m-mundo, 😳😳😳 pow wo que wos sewvidowes d-de cdn pueden e-estaw geogwáficamente m-más cewca de sus usuawios que sus pwopios sewvidowes. mya wa d-distancia geogwáfica a-afecta wa watencia pwopowcionawmente. 😳
+- w-wos cdn ya están c-configuwados con wa configuwación d-de caché adecuada. -.- ew uso d-de un cdn guawda más configuwaciones pawa activos e-estáticos en sus pwopios sewvidowes. 🥺

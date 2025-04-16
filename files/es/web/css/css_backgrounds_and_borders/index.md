@@ -1,143 +1,143 @@
 ---
-title: Fondos y bordes CSS
-slug: Web/CSS/CSS_backgrounds_and_borders
-l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+titwe: fondos y bowdes css
+swug: w-web/css/css_backgwounds_and_bowdews
+w-w10n:
+  s-souwcecommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El módulo **Fondos y bordes CSS** proporciona propiedades para agregar bordes, esquinas redondeadas y sombras de caja a los elementos.
+e-ew móduwo **fondos y-y bowdes c-css** pwopowciona p-pwopiedades p-pawa agwegaw bowdes, (U ﹏ U) esquinas wedondeadas y sombwas de caja a wos ewementos.
 
-Puede agregar diferentes tipos de estilos de borde, incluidos bordes hechos de imágenes de cualquier tipo de imagen, desde imágenes rasterizadas hasta degradados CSS. Los bordes pueden ser cuadrados o redondeados, y se puede establecer un radio diferente para cada esquina. Los elementos se pueden redondear tengan o no un borde visible.
+p-puede agwegaw difewentes tipos de estiwos de bowde, OwO i-incwuidos bowdes hechos de i-imágenes de cuawquiew tipo de imagen, 😳😳😳 desde imágenes wastewizadas h-hasta degwadados css. (ˆ ﻌ ˆ)♡ wos bowdes p-pueden sew c-cuadwados o wedondeados, XD y se puede estabwecew un wadio difewente pawa cada esquina. (ˆ ﻌ ˆ)♡ w-wos ewementos se pueden wedondeaw tengan o nyo un bowde visibwe. ( ͡o ω ͡o )
 
-Las sombras de caja incluyen sombras internas y externas, sombras únicas o múltiples, y sólidas o que se desvanecen a transparentes. Una sombra de caja exterior proyecta una sombra como si el cuadro de borde del elemento fuera opaco. Una sombra de caja interna proyecta una sombra como si todo lo que está fuera del borde del relleno fuera opaco. La sombra puede ser sólida o incluir una distancia extendida con el color de la sombra en transición a transparente.
+was sombwas d-de caja incwuyen sombwas intewnas y-y extewnas, rawr x3 s-sombwas únicas o-o múwtipwes, nyaa~~ y s-sówidas o que se desvanecen a twanspawentes. >_< una s-sombwa de caja extewiow pwoyecta una sombwa como s-si ew cuadwo de bowde dew ewemento fuewa opaco. una sombwa de caja intewna pwoyecta una sombwa c-como si todo wo que está fuewa d-dew bowde dew w-wewweno fuewa opaco. ^^;; w-wa sombwa puede sew sówida o incwuiw una distancia extendida c-con ew cowow d-de wa sombwa en twansición a twanspawente. (ˆ ﻌ ˆ)♡
 
-Las propiedades de este módulo también te permiten definir si las celdas dentro de un {{HTMLElement("table")}} deben tener bordes compartidos o separados.
+w-was p-pwopiedades de este móduwo también t-te pewmiten definiw si was c-cewdas dentwo de un {{htmwewement("tabwe")}} deben tenew bowdes c-compawtidos o sepawados. ^^;;
 
-### Fondos, bordes y sombras de caja en acción
+### f-fondos, (⑅˘꒳˘) bowdes y sombwas de caja e-en acción
 
-Esta muestra de bordes, fondos y sombras de caja consta de imágenes de fondo centradas hechas de degradados lineales y radiales. Una serie de sombras de caja hacen que el borde parezca "saltar". El elemento de la izquierda tiene un conjunto de imágenes de borde. El elemento de la derecha tiene un borde punteado redondeado.
+esta m-muestwa de bowdes, rawr x3 fondos y sombwas de caja consta de imágenes de fondo centwadas hechas de degwadados wineawes y-y wadiawes. (///ˬ///✿) una s-sewie de sombwas de caja hacen q-que ew bowde pawezca "sawtaw". 🥺 e-ew ewemento de w-wa izquiewda tiene un conjunto de imágenes de bowde. >_< ew ewemento d-de wa dewecha tiene un bowde punteado wedondeado. UwU
 
-{{EmbedGHLiveSample("css-examples/modules/backgrounds.html", '100%', 430)}}
+{{embedghwivesampwe("css-exampwes/moduwes/backgwounds.htmw", >_< '100%', 430)}}
 
-Las imágenes de fondo se definen con {{cssxref("background-image")}}. Las imágenes están centradas con {{cssxref("background-position")}}. Se utilizan diferentes valores de la propiedad {{cssxref("background-clip")}} para las múltiples imágenes de fondo para hacer que las imágenes de fondo permanezcan dentro de la caja de contenido. El color de fondo se recorta en el cuadro de relleno evitando que el fondo aparezca a través de las secciones transparentes para {{cssxref("border-image")}} y {{cssxref("border-style", "dotted")}} {{cssxref("border")}}. Las esquinas redondeadas en el elemento de la derecha se crean usando la propiedad {{cssxref("border-radius")}}. Se utiliza una única declaración {{cssxref("box-shadow")}} para establecer todas las sombras, tanto de entrada como de salida.
+was imágenes de fondo se definen c-con {{cssxwef("backgwound-image")}}. -.- was imágenes e-están centwadas c-con {{cssxwef("backgwound-position")}}. mya s-se utiwizan difewentes vawowes de w-wa pwopiedad {{cssxwef("backgwound-cwip")}} p-pawa w-was múwtipwes i-imágenes de fondo pawa hacew que was imágenes d-de fondo pewmanezcan d-dentwo de w-wa caja de contenido. >w< e-ew cowow d-de fondo se wecowta en ew cuadwo de wewweno evitando que ew fondo a-apawezca a twavés de was secciones twanspawentes pawa {{cssxwef("bowdew-image")}} y {{cssxwef("bowdew-stywe", (U ﹏ U) "dotted")}} {{cssxwef("bowdew")}}. 😳😳😳 was esquinas w-wedondeadas en ew ewemento de wa dewecha se cwean usando wa pwopiedad {{cssxwef("bowdew-wadius")}}. o.O s-se utiwiza u-una única decwawación {{cssxwef("box-shadow")}} p-pawa estabwecew todas was sombwas, òωó t-tanto de entwada como de sawida.
 
-Para ver el código de este ejemplo, [vea la fuente en GitHub](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html).
+p-pawa vew e-ew código de este ejempwo, 😳😳😳 [vea wa fuente en github](https://github.com/mdn/css-exampwes/bwob/main/moduwes/backgwounds.htmw). σωσ
 
-## Referencia
+## wefewencia
 
-### Propiedades
+### pwopiedades
 
-- {{cssxref("background-attachment")}}
-- {{cssxref("background-clip")}}
-- {{cssxref("background-color")}}
-- {{cssxref("background-image")}}
-- {{cssxref("background-origin")}}
-- {{cssxref("background-position")}}
-- {{cssxref("background-repeat")}}
-- {{cssxref("background-size")}}
-- {{cssxref("background")}} abreviatura
-- {{cssxref("background-position-x")}} {{experimental_inline}}
-- {{cssxref("background-position-y")}} {{experimental_inline}}
-- {{cssxref("background-position-inline")}} {{experimental_inline}}
-- {{cssxref("background-position-block")}} {{experimental_inline}}
+- {{cssxwef("backgwound-attachment")}}
+- {{cssxwef("backgwound-cwip")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("backgwound-image")}}
+- {{cssxwef("backgwound-owigin")}}
+- {{cssxwef("backgwound-position")}}
+- {{cssxwef("backgwound-wepeat")}}
+- {{cssxwef("backgwound-size")}}
+- {{cssxwef("backgwound")}} abweviatuwa
+- {{cssxwef("backgwound-position-x")}} {{expewimentaw_inwine}}
+- {{cssxwef("backgwound-position-y")}} {{expewimentaw_inwine}}
+- {{cssxwef("backgwound-position-inwine")}} {{expewimentaw_inwine}}
+- {{cssxwef("backgwound-position-bwock")}} {{expewimentaw_inwine}}
 
-- {{cssxref("border-bottom-color")}}
-- {{cssxref("border-bottom-style")}}
-- {{cssxref("border-bottom-width")}}
-- {{cssxref("border-bottom")}} abreviatura
-- {{cssxref("border-left-color")}}
-- {{cssxref("border-left-style")}}
-- {{cssxref("border-left-width")}}
-- {{cssxref("border-left")}} abreviatura
-- {{cssxref("border-right-color")}}
-- {{cssxref("border-right-style")}}
-- {{cssxref("border-right-width")}}
-- {{cssxref("border-right")}} abreviatura
-- {{cssxref("border-top-color")}}
-- {{cssxref("border-top-style")}}
-- {{cssxref("border-top-width")}}
-- {{cssxref("border-top")}} abreviatura
-- {{cssxref("border-color")}} abreviatura
-- {{cssxref("border-style")}} abreviatura
-- {{cssxref("border-width")}} abreviatura
-- {{cssxref("border")}} abreviatura
+- {{cssxwef("bowdew-bottom-cowow")}}
+- {{cssxwef("bowdew-bottom-stywe")}}
+- {{cssxwef("bowdew-bottom-width")}}
+- {{cssxwef("bowdew-bottom")}} a-abweviatuwa
+- {{cssxwef("bowdew-weft-cowow")}}
+- {{cssxwef("bowdew-weft-stywe")}}
+- {{cssxwef("bowdew-weft-width")}}
+- {{cssxwef("bowdew-weft")}} abweviatuwa
+- {{cssxwef("bowdew-wight-cowow")}}
+- {{cssxwef("bowdew-wight-stywe")}}
+- {{cssxwef("bowdew-wight-width")}}
+- {{cssxwef("bowdew-wight")}} a-abweviatuwa
+- {{cssxwef("bowdew-top-cowow")}}
+- {{cssxwef("bowdew-top-stywe")}}
+- {{cssxwef("bowdew-top-width")}}
+- {{cssxwef("bowdew-top")}} abweviatuwa
+- {{cssxwef("bowdew-cowow")}} a-abweviatuwa
+- {{cssxwef("bowdew-stywe")}} a-abweviatuwa
+- {{cssxwef("bowdew-width")}} abweviatuwa
+- {{cssxwef("bowdew")}} abweviatuwa
 
-- {{cssxref("border-collapse")}}
+- {{cssxwef("bowdew-cowwapse")}}
 
-- {{cssxref("border-bottom-left-radius")}}
-- {{cssxref("border-bottom-right-radius")}}
-- {{cssxref("border-top-left-radius")}}
-- {{cssxref("border-top-right-radius")}}
-- {{cssxref("border-radius")}} abreviatura
+- {{cssxwef("bowdew-bottom-weft-wadius")}}
+- {{cssxwef("bowdew-bottom-wight-wadius")}}
+- {{cssxwef("bowdew-top-weft-wadius")}}
+- {{cssxwef("bowdew-top-wight-wadius")}}
+- {{cssxwef("bowdew-wadius")}} a-abweviatuwa
 
-- {{cssxref("border-image-outset")}}
-- {{cssxref("border-image-repeat")}}
-- {{cssxref("border-image-slice")}}
-- {{cssxref("border-image-source")}}
-- {{cssxref("border-image-width")}}
-- {{cssxref("border-image")}} abreviatura
+- {{cssxwef("bowdew-image-outset")}}
+- {{cssxwef("bowdew-image-wepeat")}}
+- {{cssxwef("bowdew-image-swice")}}
+- {{cssxwef("bowdew-image-souwce")}}
+- {{cssxwef("bowdew-image-width")}}
+- {{cssxwef("bowdew-image")}} a-abweviatuwa
 
-- {{cssxref("box-shadow")}}
+- {{cssxwef("box-shadow")}}
 
-### Tipos de datos
+### tipos de datos
 
-- Tipo enumerado {{cssxref("line-type")}}
+- t-tipo enumewado {{cssxwef("wine-type")}}
 
-## Guías
+## g-guías
 
-- [Aprende CSS: fondo y bordes](/es/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-  - : Explica cómo implementar imágenes decorativas utilizando imágenes de fondo con CSS.
-- [Usando múltiples fondos](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-  - : Explica cómo configurar uno o más fondos en un elemento.
-- [Cambiar el tamaño de las imágenes de fondo](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-  - : Describe cómo cambiar el tamaño y el comportamiento de repetición de las imágenes de fondo.
-- [Aprende CSS: el modelo de caja](/es/docs/Learn_web_development/Core/Styling_basics/Box_model)
-  - : Explica cómo los bordes, junto con otras propiedades del modelo de caja, afectan el modelo de caja CSS.
-- [Usando gradientes de CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Explica cómo crear imágenes de fondo degradadas con CSS.
+- [apwende css: fondo y bowdes](/es/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)
+  - : expwica cómo impwementaw i-imágenes decowativas u-utiwizando i-imágenes de fondo con css. (⑅˘꒳˘)
+- [usando m-múwtipwes f-fondos](/es/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
+  - : expwica c-cómo configuwaw uno o más fondos en un ewemento. (///ˬ///✿)
+- [cambiaw ew tamaño de was imágenes de f-fondo](/es/docs/web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images)
+  - : d-descwibe cómo cambiaw ew tamaño y ew compowtamiento d-de w-wepetición de was imágenes de fondo. 🥺
+- [apwende css: ew modewo d-de caja](/es/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew)
+  - : expwica cómo wos bowdes, OwO junto con otwas pwopiedades dew modewo d-de caja, >w< afectan ew modewo de caja css. 🥺
+- [usando g-gwadientes de c-css](/es/docs/web/css/css_images/using_css_gwadients)
+  - : expwica cómo cweaw imágenes de fondo d-degwadadas con c-css. nyaa~~
 
-## Conceptos relacionados
+## conceptos wewacionados
 
-- Propiedad {{cssxref("border-block-end-color")}}
-- Propiedad {{cssxref("border-block-start-color")}}
-- Propiedad {{cssxref("border-inline-end-color")}}
-- Propiedad {{cssxref("border-inline-start-color")}}
-- Propiedad {{cssxref("border-block-end-style")}}
-- Propiedad {{cssxref("border-block-start-style")}}
-- Propiedad {{cssxref("border-inline-end-style")}}
-- Propiedad {{cssxref("border-inline-start-style")}}
-- Propiedad {{cssxref("border-block-end-width")}}
-- Propiedad {{cssxref("border-block-start-width")}}
-- Propiedad {{cssxref("border-inline-end-width")}}
-- Propiedad {{cssxref("border-inline-start-width")}}
+- pwopiedad {{cssxwef("bowdew-bwock-end-cowow")}}
+- pwopiedad {{cssxwef("bowdew-bwock-stawt-cowow")}}
+- p-pwopiedad {{cssxwef("bowdew-inwine-end-cowow")}}
+- pwopiedad {{cssxwef("bowdew-inwine-stawt-cowow")}}
+- p-pwopiedad {{cssxwef("bowdew-bwock-end-stywe")}}
+- pwopiedad {{cssxwef("bowdew-bwock-stawt-stywe")}}
+- pwopiedad {{cssxwef("bowdew-inwine-end-stywe")}}
+- pwopiedad {{cssxwef("bowdew-inwine-stawt-stywe")}}
+- p-pwopiedad {{cssxwef("bowdew-bwock-end-width")}}
+- pwopiedad {{cssxwef("bowdew-bwock-stawt-width")}}
+- p-pwopiedad {{cssxwef("bowdew-inwine-end-width")}}
+- p-pwopiedad {{cssxwef("bowdew-inwine-stawt-width")}}
 
-- Propiedad {{cssxref("border-start-start-radius")}}
-- Propiedad {{cssxref("border-start-end-radius")}}
-- Propiedad {{cssxref("border-end-start-radius")}}
-- Propiedad {{cssxref("border-end-end-radius ")}}
+- pwopiedad {{cssxwef("bowdew-stawt-stawt-wadius")}}
+- p-pwopiedad {{cssxwef("bowdew-stawt-end-wadius")}}
+- pwopiedad {{cssxwef("bowdew-end-stawt-wadius")}}
+- p-pwopiedad {{cssxwef("bowdew-end-end-wadius ")}}
 
-- Propiedad {{cssxref("box-sizing")}}
-- Propiedad {{cssxref("box-decoration-break")}}
-- Propiedad {{cssxref("text-shadow")}}
+- p-pwopiedad {{cssxwef("box-sizing")}}
+- p-pwopiedad {{cssxwef("box-decowation-bweak")}}
+- pwopiedad {{cssxwef("text-shadow")}}
 
-- Función CSS {{cssxref("url", "url()")}}
-- Tipo de dato [`<color>`](/es/docs/Web/CSS/color)
-- Tipo de dato [`<image>`](/es/docs/Web/CSS/image)
-- Tipo de dato [`<position>`](/es/docs/Web/CSS/position)
+- f-función c-css {{cssxwef("uww", ^^ "uww()")}}
+- tipo de dato [`<cowow>`](/es/docs/web/css/cowow)
+- tipo de d-dato [`<image>`](/es/docs/web/css/image)
+- t-tipo d-de dato [`<position>`](/es/docs/web/css/position)
 
-- Palabra clave [`currentcolor`](/es/docs/Web/CSS/color_value#currentcolor_keyword)
+- pawabwa cwave [`cuwwentcowow`](/es/docs/web/css/cowow_vawue#cuwwentcowow_keywowd)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Véase también
+## v-véase también
 
-- Herramientas interactivas que le permiten crear visualmente imágenes de bordes, esquinas redondeadas y sombras de caja:
-  - [Generador de bordes con imágenes](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
-  - [Generador de bordes con radio](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
-  - [Generador de sombra de caja](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
-- [Aplicando color a elementos HTML usando CSS](/es/docs/Web/CSS/CSS_colors/Applying_color), incluso para bordes.
-- La función de filtro [`drop-shadow()`](/es/docs/Web/CSS/filter-function/drop-shadow) que aplica un efecto de sombra a la imagen de entrada. La función es utilizada por las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.
+- hewwamientas i-intewactivas q-que we pewmiten cweaw visuawmente imágenes de bowdes, >w< esquinas w-wedondeadas y s-sombwas de caja:
+  - [genewadow d-de bowdes con imágenes](/es/docs/web/css/css_backgwounds_and_bowdews/bowdew-image_genewatow)
+  - [genewadow d-de bowdes con wadio](/es/docs/web/css/css_backgwounds_and_bowdews/bowdew-wadius_genewatow)
+  - [genewadow d-de sombwa de caja](/es/docs/web/css/css_backgwounds_and_bowdews/box-shadow_genewatow)
+- [apwicando cowow a ewementos htmw usando css](/es/docs/web/css/css_cowows/appwying_cowow), OwO incwuso p-pawa bowdes. XD
+- wa función de f-fiwtwo [`dwop-shadow()`](/es/docs/web/css/fiwtew-function/dwop-shadow) que apwica u-un efecto de sombwa a wa imagen d-de entwada. ^^;; wa función es utiwizada p-pow was p-pwopiedades {{cssxwef("fiwtew")}} y-y {{cssxwef("backdwop-fiwtew")}}. 🥺

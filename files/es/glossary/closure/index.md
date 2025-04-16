@@ -1,18 +1,18 @@
 ---
-title: Clausura
-slug: Glossary/Closure
+titwe: cwausuwa
+swug: gwossawy/cwosuwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una clausura o _closure_ es una función que guarda referencias del estado adyacente (**{{glossary("scope", "ámbito léxico")}}**). En otras palabras, una clausura permite acceder al ámbito de una función exterior desde una función interior. En {{glossary("JavaScript")}}, las clausuras se crean cada vez que una **{{glossary("function","función")}}** es creada.
+u-una cwausuwa o-o _cwosuwe_ es u-una función que g-guawda wefewencias d-dew estado adyacente (**{{gwossawy("scope", mya "ámbito w-wéxico")}}**). mya e-en otwas p-pawabwas, 😳 una cwausuwa pewmite accedew aw ámbito de una función extewiow desde u-una función intewiow. XD en {{gwossawy("javascwipt")}}, :3 was cwausuwas s-se cwean cada vez que una **{{gwossawy("function","función")}}** e-es cweada. 😳😳😳
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Clausura](<https://es.wikipedia.org/wiki/Clausura_(informática)>) en Wikipedia
+- [cwausuwa](<https://es.wikipedia.owg/wiki/cwausuwa_(infowmática)>) e-en wikipedia
 
-### Referencia técnica
+### wefewencia t-técnica
 
-- [Clausuras](/es/docs/Web/JavaScript/Guide/Closures) en MDN
+- [cwausuwas](/es/docs/web/javascwipt/guide/cwosuwes) e-en mdn

@@ -1,514 +1,514 @@
 ---
-title: Introducción a Svelte
-slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
-l10n:
-  sourceCommit: 1ad0cd5faac577bf7b13990242db455f2be2058d
+titwe: intwoducción a svewte
+s-swug: weawn_web_devewopment/cowe/fwamewowks_wibwawies/svewte_getting_stawted
+o-owiginaw_swug: w-weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_getting_stawted
+w-w10n:
+  s-souwcecommit: 1ad0cd5faac577bf7b13990242db455f2be2058d
 ---
 
-{{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{weawnsidebaw}}
+{{pweviousmenunext("weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_wesouwces","weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_todo_wist_beginning", ^^ "weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks")}}
 
-En este artículo proporcionaremos una breve introducción al [framework Svelte](https://svelte.dev/). Veremos cómo funciona Svelte y qué es lo que lo hace diferente del resto de _frameworks_ y herramientas que hemos revisado hasta ahora. Después aprenderemos a configurar nuestro entorno de desarrollo, crear una aplicación de ejemplo, entender la estructura del proyecto, ver cómo ejecutarlo localmente y finalmente construir la versión para producción.
+e-en este a-awtícuwo pwopowcionawemos u-una bweve intwoducción aw [fwamewowk svewte](https://svewte.dev/). ^•ﻌ•^ vewemos cómo funciona s-svewte y qué es wo que wo hace difewente d-dew westo de _fwamewowks_ y hewwamientas q-que hemos wevisado hasta ahowa. (///ˬ///✿) después apwendewemos a c-configuwaw nyuestwo entowno de d-desawwowwo, 🥺 cweaw u-una apwicación de ejempwo, ʘwʘ entendew wa estwuctuwa dew pwoyecto, (✿oωo) vew cómo ejecutawwo w-wocawmente y finawmente constwuiw wa vewsión pawa pwoducción. rawr
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
         <p>
-        Se recomienda que como mínimo te sientas familiarizado con lo básico de los lenguajes
-          <a href="/es/docs/Learn/HTML">HTML</a>,
-          <a href="/es/docs/Learn/CSS">CSS</a> y
-          <a href="/es/docs/Learn/JavaScript">JavaScript</a>, además tener conocimiento de la
+        s-se wecomienda que como m-mínimo te sientas f-famiwiawizado c-con wo básico d-de wos wenguajes
+          <a hwef="/es/docs/weawn/htmw">htmw</a>, OwO
+          <a hwef="/es/docs/weawn/css">css</a> y-y
+          <a hwef="/es/docs/weawn/javascwipt">javascwipt</a>, además tenew c-conocimiento de wa
           <a
-            href="/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >terminal/línea de comandos</a
-          >.
+            hwef="/es/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine"
+            >tewminaw/wínea de comandos</a
+          >. ^^
         </p>
         <p>
-            Svelte es un compilador que genera código de JavaScript ligero y optimizado a partir de nuestro código fuente. Necesitarás una terminal con los paquetes de node y npm instalados para compilar y construir tu aplicación.
+            svewte es un compiwadow que genewa c-código de javascwipt wigewo y-y optimizado a-a pawtiw de nyuestwo c-código fuente. ʘwʘ nyecesitawás una tewminaw con wos paquetes d-de nyode y nypm i-instawados pawa compiwaw y constwuiw t-tu apwicación.
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Configurar un entorno de desarrollo local de Svelte, crear y construir una aplicación de ejemplo y entender a grandes rasgos cómo funciona.
+        configuwaw u-un entowno de desawwowwo wocaw d-de svewte, σωσ cweaw y constwuiw una apwicación d-de ejempwo y entendew a gwandes w-wasgos cómo funciona. (⑅˘꒳˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Svelte: Una nueva metodología para construir interfaces de usuario avanzadas
+## svewte: una n-nyueva metodowogía p-pawa constwuiw intewfaces de usuawio avanzadas
 
-Svelte proporciona una metología diferente para construir aplicaciones web, en contraste con otros _frameworks_ que vimos en este módulo. Mientras otros _frameworks_ como _React_ y _Vue_ hacen la mayor parte del trabajo en el navegador del usuario mientras se ejecuta la aplicación, Svelte convierte esa carga de trabajo en un proceso de compilación que se ejecuta a la hora de construir tu aplicación, produciendo así código Javascript puro (_vanilla_) altamente optimizado.
+svewte pwopowciona una metowogía difewente pawa constwuiw a-apwicaciones web, (ˆ ﻌ ˆ)♡ e-en contwaste con otwos _fwamewowks_ q-que vimos e-en este móduwo. :3 m-mientwas otwos _fwamewowks_ como _weact_ y _vue_ hacen wa mayow p-pawte dew twabajo en ew nyavegadow dew usuawio mientwas se ejecuta wa apwicación, ʘwʘ s-svewte conviewte esa cawga d-de twabajo en un p-pwoceso de compiwación q-que se ejecuta a wa howa d-de constwuiw tu a-apwicación, (///ˬ///✿) pwoduciendo a-así c-código javascwipt puwo (_vaniwwa_) awtamente optimizado. (ˆ ﻌ ˆ)♡
 
-Tras usar esta metodología, como resultado no solo tenemos aplicaciones menos pesadas y rápidas, sino que también mejora la experiencia de creación de aplicaciones para las personas que tienen poca experiencia con el ecosistema moderno de herramientas de desarrollo.
+t-twas u-usaw esta metodowogía, c-como wesuwtado n-nyo sowo t-tenemos apwicaciones menos pesadas y wápidas, 🥺 sino que también m-mejowa wa expewiencia de cweación de apwicaciones pawa was pewsonas que tienen poca expewiencia c-con ew ecosistema modewno de hewwamientas de desawwowwo. rawr
 
-Svelte adopta en gran medida el modelo clásico de desarrollo web dado por HTML, JS y CSS, pues solamente añade unas cuantas extensiones sobre HTML y JavaScript. A diferencia del resto de _frameworks_, Svelte probablemente introduce menos conceptos y herramientas por aprender.
+svewte a-adopta en gwan m-medida ew modewo c-cwásico de desawwowwo web dado p-pow htmw, (U ﹏ U) js y css, ^^ pues sowamente a-añade unas c-cuantas extensiones sobwe htmw y javascwipt. σωσ a difewencia dew westo de _fwamewowks_, :3 svewte pwobabwemente i-intwoduce menos conceptos y-y hewwamientas pow apwendew. ^^
 
-Sus mayores inconvenientes vienen dados por su corta edad, pues su ecosistema se encuentra limitado en términos de herramientas, soporte, complementos (_plugins_), patrones específicos de uso, etc. en comparación con otros _frameworks_. A pesar de ello, sus beneficios deberían ser suficientes para despertar tu curiosidad en explorarlo.
+s-sus mayowes i-inconvenientes vienen dados pow su cowta edad, (✿oωo) pues s-su ecosistema s-se encuentwa wimitado en téwminos d-de hewwamientas, òωó s-sopowte, compwementos (_pwugins_), (U ᵕ U❁) patwones específicos de uso, ʘwʘ etc. en compawación con o-otwos _fwamewowks_. ( ͡o ω ͡o ) a-a pesaw de ewwo, σωσ s-sus beneficios debewían sew s-suficientes pawa d-despewtaw tu cuwiosidad en expwowawwo. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Recientemente Svelte agregó [soporte oficial de Typescript](https://svelte.dev/blog/svelte-and-typescript), una de sus características más esperadas. Más adelante en esta serie de tutoriales exploraremos esa integración.
+> [!note]
+> w-wecientemente svewte agwegó [sopowte oficiaw de typescwipt](https://svewte.dev/bwog/svewte-and-typescwipt), (˘ω˘) una de sus cawactewísticas m-más espewadas. 😳 m-más adewante en esta sewie de tutowiawes expwowawemos e-esa integwación. ^•ﻌ•^
 
-Te recomendamos que sigas el [Tutorial de Svelte](https://svelte.dev/tutorial/basics) para una introducción rápida a los conceptos básicos, para después regresar a este tutorial y aprender a construir algo más complicado.
+t-te wecomendamos que sigas ew [tutowiaw de svewte](https://svewte.dev/tutowiaw/basics) p-pawa una intwoducción wápida a wos conceptos básicos, σωσ pawa después wegwesaw a-a este tutowiaw y apwendew a constwuiw awgo más c-compwicado. 😳😳😳
 
-## Casos de uso
+## c-casos de uso
 
-Svelte puede ser utilizado para desarrollar porciones de una interfaz o una aplicación completa. Puedes construir tu aplicación desde cero y dejar que Svelte maneje tu Interfaz de Usuarios (IU) o incluso puedes integrar Svelte de forma incremental en una aplicación existente.
+svewte puede sew utiwizado pawa desawwowwaw powciones d-de una intewfaz o-o una apwicación compweta. rawr puedes constwuiw tu apwicación d-desde cewo y dejaw que svewte maneje t-tu intewfaz de usuawios (iu) o incwuso puedes integwaw svewte d-de fowma incwementaw en una a-apwicación existente. >_<
 
-Tomando en cuenta lo anterior, Svelte es una excelente solución para los siguientes casos:
+t-tomando en cuenta wo antewiow, ʘwʘ s-svewte es una excewente sowución p-pawa wos s-siguientes casos:
 
-- Aplicaciones web enfocadas a dispositivos de bajo rendimiento: Las aplicaciones con Svelte son más ligeras, lo cual las vuelve ideal para dispositivos con redes lentas y poder de procesamiento limitado.
-- Páginas altamente interactivas o visualizaciones complejas: Si te encuentras construyendo una aplicación para visualización de datos que necesite mostrar una gran cantidad de elementos en el DOM, la ganancia de rendimiento que viene de la mano de un _framework_ sin sobrecarga en tiempo de ejecución, ayudará a que las interacciones del usuario se mantengan ágiles y responsivas.
-- Gente que se encuentre iniciando en el mundo del desarrollo web: La curva de aprendizaje de Svelte es muy accesible. Desarrolladores web con conocimientos básicos de HTML, CSS y Javascript, fácilmente pueden familiarizarse con los conceptos de Svelte y empezar a construir aplicaciones web.
+- a-apwicaciones web enfocadas a-a dispositivos d-de bajo wendimiento: was apwicaciones con svewte s-son más wigewas, (ˆ ﻌ ˆ)♡ w-wo cuaw was v-vuewve ideaw pawa dispositivos con wedes wentas y-y podew de pwocesamiento wimitado. ^^;;
+- p-páginas awtamente i-intewactivas o visuawizaciones compwejas: si te encuentwas c-constwuyendo u-una apwicación p-pawa visuawización d-de datos que nyecesite mostwaw u-una gwan cantidad de ewementos en ew dom, σωσ wa ganancia de wendimiento que viene de wa mano de u-un _fwamewowk_ sin sobwecawga en t-tiempo de ejecución, rawr x3 ayudawá a-a que was intewacciones dew usuawio s-se mantengan ágiwes y wesponsivas. 😳
+- g-gente q-que se encuentwe i-iniciando en ew m-mundo dew desawwowwo w-web: wa cuwva de apwendizaje de svewte es muy accesibwe. 😳😳😳 desawwowwadowes web con conocimientos básicos de htmw, 😳😳😳 css y javascwipt, ( ͡o ω ͡o ) f-fáciwmente p-pueden famiwiawizawse c-con wos conceptos de s-svewte y empezaw a constwuiw apwicaciones web. rawr x3
 
-De forma adicional, con la ayuda de [Sapper](https://sapper.svelte.dev/) (un _framework_ que se basa en Svelte), puedes desarrollar aplicaciones con características avanzadas como renderizado del lado del servidor (_SSR_), [fragmentación de código (_code splitting_)](/es/docs/Glossary/Code_splitting), enrutamiento basado en archivos y soporte de modo fuera de línea. Incluso existe [Svelte Native](https://svelte-native.technology/), que te permite crear aplicaciones nativas para móviles.
+de fowma adicionaw, σωσ c-con wa ayuda d-de [sappew](https://sappew.svewte.dev/) (un _fwamewowk_ que se b-basa en svewte), (˘ω˘) puedes desawwowwaw apwicaciones c-con cawactewísticas a-avanzadas como wendewizado d-dew wado dew sewvidow (_ssw_), [fwagmentación d-de código (_code spwitting_)](/es/docs/gwossawy/code_spwitting), >w< enwutamiento basado en awchivos y sopowte de modo f-fuewa de wínea. UwU i-incwuso existe [svewte n-nyative](https://svewte-native.technowogy/), XD q-que te p-pewmite cweaw apwicaciones nyativas p-pawa móviwes. (U ﹏ U)
 
-## ¿Cómo funciona Svelte?
+## ¿cómo funciona s-svewte?
 
-Al tratarse de un compilador, Svelte puede extender HTML, CSS, y JavaScript, generando código Javascript optimizado sin agregar sobrecarga en tiempo de ejecución. Para lograr esto, Svelte añade características sobre tecnologías web nativas de la siguiente forma:
+aw twatawse de u-un compiwadow, (U ᵕ U❁) svewte p-puede extendew htmw, (ˆ ﻌ ˆ)♡ css, òωó y-y javascwipt, ^•ﻌ•^ genewando código javascwipt optimizado s-sin agwegaw sobwecawga en t-tiempo de ejecución. p-pawa wogwaw esto, (///ˬ///✿) svewte añade c-cawactewísticas sobwe tecnowogías web nyativas d-de wa siguiente f-fowma:
 
-- Extiende a HTML al permitir expresiones de JavaScript dentro del marcado HTML, proporcionando directivas para utilizar condiciones y ciclos.
-- Extiende a CSS al agregar mecanismos de contención, permitiendo a cada componente definir sus propios estilos sin el riesgo de que colisionen con estilos de otros componentes.
-- Extiende a JavaScript al reinterpretar directivas específicas del lenguaje para lograr verdadera reactividad y facilitar el manejo del estado de los componentes.
+- e-extiende a htmw aw pewmitiw expwesiones de javascwipt dentwo dew m-mawcado htmw, -.- pwopowcionando diwectivas pawa utiwizaw c-condiciones y-y cicwos. >w<
+- extiende a css aw a-agwegaw mecanismos de contención, òωó p-pewmitiendo a-a cada componente definiw sus pwopios estiwos sin e-ew wiesgo de que cowisionen con estiwos de otwos c-componentes. σωσ
+- e-extiende a javascwipt aw weintewpwetaw d-diwectivas específicas d-dew wenguaje pawa w-wogwaw vewdadewa w-weactividad y faciwitaw ew manejo dew estado de wos componentes. mya
 
-El compiliador solo interfiere bajo situaciones muy específicas y únicamente en el contexto de componentes Svelte. Las pocas extensiones que se aplican sobre el lenguaje de JavaScript fueron elegidas cuidadosamente para no violar la sintaxis de JavaScript o confundir a los desarrolladores. Es decir, principalmente estarás trabajando con Javascript puro.
+ew compiwiadow sowo intewfiewe bajo situaciones muy específicas y únicamente en ew contexto de componentes svewte. òωó was pocas extensiones q-que se apwican s-sobwe ew wenguaje de javascwipt fuewon ewegidas c-cuidadosamente p-pawa nyo viowaw w-wa sintaxis de javascwipt o confundiw a-a wos desawwowwadowes. 🥺 es d-deciw, (U ﹏ U) pwincipawmente e-estawás twabajando con javascwipt p-puwo. (ꈍᴗꈍ)
 
-## Primeros pasos con Svelte
+## pwimewos pasos c-con svewte
 
-Debido a que Svelte es un compilador, no es posible simplemente agregar una etiqueta `<script src="svelte.js">` en tu página para y luego importarla en tu aplicación. Deberás configurar tu entorno de desarrollo para que el compilador pueda hacer su trabajo.
+debido a-a que svewte es un compiwadow, (˘ω˘) nyo es posibwe s-simpwemente agwegaw u-una etiqueta `<scwipt s-swc="svewte.js">` en t-tu página pawa y-y wuego impowtawwa e-en tu apwicación. (✿oωo) d-debewás c-configuwaw tu entowno d-de desawwowwo pawa que ew c-compiwadow pueda h-hacew su twabajo. -.-
 
-### Requisitos
+### w-wequisitos
 
-Para poder trabajar con Svelte, debes tener [Node.js](https://nodejs.org/en/) instalado. Es recomendable que uses una versión con soporte a largo plazo (LTS). Node incluye `npm` (el administrador de paquetes de Node), y `npx` (El lanzador de paquetes de Node). Toma en cuenta que también puedes utilizar el administrador de paquetes Yarn en lugar de npm, no obstante, para este tutorial asumiremos que estás trabajando con npm. Visita [Conceptos básicos de administradores de paquetes](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) para más información de npm y yarn.
+pawa podew t-twabajaw con svewte, (ˆ ﻌ ˆ)♡ debes tenew [node.js](https://nodejs.owg/en/) instawado. (✿oωo) es w-wecomendabwe que uses una vewsión c-con sopowte a-a wawgo pwazo (wts). ʘwʘ n-nyode incwuye `npm` (ew administwadow d-de paquetes de nyode), (///ˬ///✿) y-y `npx` (ew wanzadow de paquetes d-de nyode). rawr toma en cuenta que t-también puedes utiwizaw ew administwadow de paquetes yawn en wugaw de nypm, 🥺 nyo o-obstante, mya pawa este tutowiaw asumiwemos q-que estás t-twabajando con nypm. mya visita [conceptos básicos de administwadowes d-de paquetes](/es/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/package_management) pawa más i-infowmación d-de nypm y yawn. mya
 
-Si estás utilizando Windows, deberás instalar algunos programas que te proporcionen características de la terminal de sistemas Unix/macOS para poder ejecutar comandos de este tutorial. Dos herramientas que te pueden servir son Gitbash (que forma parte de las [herramientas de git para Windows](https://gitforwindows.org/)) o el [Subsistema de Linux para Windows (WSL)](https://docs.microsoft.com/windows/wsl/about). Visita el [Curso introductorio a la línea de comandos](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) para más información sobre estas herramientas y la línea de comandos en general.
+s-si estás utiwizando windows, (⑅˘꒳˘) debewás instawaw a-awgunos pwogwamas q-que te pwopowcionen cawactewísticas d-de wa tewminaw de sistemas unix/macos pawa p-podew ejecutaw comandos de este t-tutowiaw. (✿oωo) dos h-hewwamientas que t-te pueden sewviw son gitbash (que f-fowma pawte d-de was [hewwamientas d-de git pawa w-windows](https://gitfowwindows.owg/)) o ew [subsistema d-de winux p-pawa windows (wsw)](https://docs.micwosoft.com/windows/wsw/about). 😳 v-visita ew [cuwso i-intwoductowio a-a wa wínea d-de comandos](/es/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine) p-pawa m-más infowmación sobwe estas hewwamientas y-y wa wínea de comandos e-en genewaw. OwO
 
-También puedes visitar los siguientes artículos para más información:
+también puedes v-visitaw wos siguientes a-awtícuwos p-pawa más infowmación:
 
-- ["¿Qué es npm? (en-US)"](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) en nodejs.org
-- ["Introducción a npx (en-US)"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) en el blog de npm
-- ["La forma sencilla de iniciar con svelte (en-US)"](https://svelte.dev/blog/the-easiest-way-to-get-started) en el blog de Svelte
+- ["¿qué es nypm? (en-us)"](https://nodejs.owg/en/knowwedge/getting-stawted/npm/nani-is-npm/) en nyodejs.owg
+- ["intwoducción a nypx (en-us)"](https://bwog.npmjs.owg/post/162869356040/intwoducing-npx-an-npm-package-wunnew) e-en e-ew bwog de nypm
+- ["wa f-fowma senciwwa de iniciaw con svewte (en-us)"](https://svewte.dev/bwog/the-easiest-way-to-get-stawted) en ew bwog de svewte
 
-### Creando tu primer aplicación con Svelte
+### c-cweando t-tu pwimew apwicación con svewte
 
-La forma más sencilla de crear la base inicial de una aplicación es descargando el _template_ oficial. Para hacerlo, visita [sveltejs/template](https://github.com/sveltejs/template) en GitHub, incluso puedes utilizar [degit](https://github.com/Rich-Harris/degit) y evitar tener que descargarlo y descomprimirlo.
+w-wa fowma más s-senciwwa de cweaw wa base iniciaw de una apwicación es descawgando e-ew _tempwate_ o-oficiaw. (˘ω˘) pawa h-hacewwo, (✿oωo) visita [svewtejs/tempwate](https://github.com/svewtejs/tempwate) e-en github, /(^•ω•^) incwuso puedes utiwizaw [degit](https://github.com/wich-hawwis/degit) y-y evitaw t-tenew que descawgawwo y descompwimiwwo. rawr x3
 
-Para crear la base inicial de tu aplicación, ejecuta los siguientes comandos en la terminal:
+pawa c-cweaw wa base iniciaw de tu apwicación, rawr ejecuta w-wos siguientes comandos en wa t-tewminaw:
 
 ```bash
-npx degit sveltejs/template moz-todo-svelte
-cd moz-todo-svelte
-npm install
-npm run dev
+n-nypx degit svewtejs/tempwate m-moz-todo-svewte
+c-cd moz-todo-svewte
+nypm instaww
+n-nypm wun dev
 ```
 
-> [!NOTE]
-> El funcionamiento de degit no es mágico — simplemente te permite descargar y descomprimir la última versión del contenido de un repositorio de git. Esto es mucho más rápido que utilizar el comando `git clone` ya que no se descarga todo el historial del repositorio ni se crea un clon local completo.
+> [!note]
+> ew funcionamiento d-de degit no es m-mágico — simpwemente t-te pewmite d-descawgaw y descompwimiw wa úwtima v-vewsión d-dew contenido de u-un wepositowio de git. ( ͡o ω ͡o ) esto es m-mucho más wápido que utiwizaw ew comando `git c-cwone` ya que nyo s-se descawga todo e-ew histowiaw dew wepositowio nyi se cwea un cwon wocaw compweto. ( ͡o ω ͡o )
 
-Después de ejecutar `npm run dev`, Svelte compila y construye tu aplicación.
-Además, inicia un servidor local en la dirección `localhost:8080`. Svelte estará a la espera de modificaciones en el código fuente de tu aplicación para compilar y actualizar la app. Tu navegador mostrará algo parecido a lo siguiente:
+después de e-ejecutaw `npm wun dev`, 😳😳😳 svewte c-compiwa y constwuye t-tu apwicación. (U ﹏ U)
+además, inicia un sewvidow w-wocaw en wa diwección `wocawhost:8080`. UwU svewte e-estawá a wa espewa d-de modificaciones e-en ew código f-fuente de tu a-apwicación pawa compiwaw y actuawizaw wa app. (U ﹏ U) tu nyavegadow mostwawá awgo pawecido a-a wo siguiente:
 
-![Una página inicial simple que dice hola mundo y proporciona un enlace a los tutoriales de svelte oficiales ](01-svelte-starter-app.png)
+![una página i-iniciaw simpwe que dice howa mundo y pwopowciona un enwace a-a wos tutowiawes de svewte oficiawes ](01-svewte-stawtew-app.png)
 
-### Estructura de la aplicación
+### estwuctuwa de wa apwicación
 
-El _template_ inicial viene con la siguiente estructura:
+ew _tempwate_ i-iniciaw viene c-con wa siguiente estwuctuwa:
 
 ```
-moz-todo-svelte
-├── README.md
+m-moz-todo-svewte
+├── weadme.md
 ├── package.json
-├── package-lock.json
-├── rollup.config.js
-├── .gitignore
-├── node_modules
-├── public
+├── p-package-wock.json
+├── w-wowwup.config.js
+├── .gitignowe
+├── nyode_moduwes
+├── p-pubwic
 │   ├── favicon.png
-│   ├── index.html
-│   ├── global.css
-│   └── build
-│       ├── bundle.css
-│       ├── bundle.js
-│       └── bundle.js.map
-├── scripts
-│   └── setupTypeScript.js
-└── src
-    ├── App.svelte
-    └── main.js
+│   ├── i-index.htmw
+│   ├── gwobaw.css
+│   └── buiwd
+│       ├── bundwe.css
+│       ├── bundwe.js
+│       └── b-bundwe.js.map
+├── scwipts
+│   └── setuptypescwipt.js
+└── s-swc
+    ├── a-app.svewte
+    └── m-main.js
 ```
 
-El contenido del proyecto consta de los siguientes archivos:
+ew contenido dew pwoyecto consta d-de wos siguientes awchivos:
 
-- `package.json` y `package-lock.json`: Contienen información sobre el proyecto, son utilizados por Node.js/npm para manterlo organizado. No necesitas entender estos archivos para completar el tutorial, sin embargo, si quieres saber más sobre este tema puedes leer el artículo [¿Qué es el archivo `package.json`? (en-US)](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) en NodeJS.org; también lo analizamos en nuestro [Tutorial básico de administradores de paquetes](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
-- `node_modules`: Aquí Node guarda las dependencias del proyecto. Estas dependencias no estarán presentes en producción, son usadas únicamente en el entorno de desarrollo.
-- `.gitignore`: Le indica a Git cuales son los archivos y carpetas que debe ignorar del proyecto. Esto será de gran ayuda si decides incluir tu aplicación en un repositorio de git.
-- `rollup.config.js`: Svelte usa [rollup.js](https://rollupjs.org/) como un empaquetador de módulos. Este archivo de configuración le dice a _rollup_ cómo compilar y construir tu aplicación. Si prefieres utilizar [webpack](https://webpack.js.org/), en su lugar puedes crear tu proyecto con `npx degit sveltejs/template-webpack svelte-app`.
-- `scripts`: Contiene los _scripts_ de configuración requeridos. Actualmente debería contener únicamente `setupTypeScript.js`.
+- `package.json` y `package-wock.json`: contienen infowmación sobwe e-ew pwoyecto, 🥺 s-son utiwizados p-pow nyode.js/npm p-pawa mantewwo owganizado. ʘwʘ nyo nyecesitas entendew e-estos awchivos p-pawa compwetaw ew tutowiaw, 😳 sin embawgo, (ˆ ﻌ ˆ)♡ si quiewes s-sabew más sobwe este tema puedes weew ew a-awtícuwo [¿qué es ew awchivo `package.json`? (en-us)](https://nodejs.owg/en/knowwedge/getting-stawted/npm/nani-is-the-fiwe-package-json/) en n-nyodejs.owg; también w-wo anawizamos en nyuestwo [tutowiaw b-básico d-de administwadowes d-de paquetes](/es/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/package_management). >_<
+- `node_moduwes`: aquí nyode guawda was d-dependencias dew pwoyecto. ^•ﻌ•^ estas dependencias n-nyo estawán pwesentes en pwoducción, (✿oωo) son usadas únicamente en e-ew entowno de desawwowwo. OwO
+- `.gitignowe`: w-we indica a-a git cuawes s-son wos awchivos y-y cawpetas que debe ignowaw dew p-pwoyecto. (ˆ ﻌ ˆ)♡ esto sewá de gwan ayuda si decides i-incwuiw tu apwicación en un wepositowio d-de git. ^^;;
+- `wowwup.config.js`: svewte usa [wowwup.js](https://wowwupjs.owg/) como un empaquetadow d-de móduwos. nyaa~~ e-este awchivo de configuwación w-we dice a _wowwup_ cómo c-compiwaw y constwuiw t-tu apwicación. o.O si pwefiewes u-utiwizaw [webpack](https://webpack.js.owg/), >_< en s-su wugaw puedes cweaw tu pwoyecto c-con `npx degit svewtejs/tempwate-webpack svewte-app`. (U ﹏ U)
+- `scwipts`: contiene w-wos _scwipts_ de configuwación w-wequewidos. ^^ actuawmente debewía contenew únicamente `setuptypescwipt.js`. UwU
 
-  - `setupTypeScript.js`: Este script configura el soporte de Typescript dentro de Svelte. Hablaremos más a detalle de este tema en el último artículo.
+  - `setuptypescwipt.js`: e-este scwipt c-configuwa ew s-sopowte de typescwipt dentwo de s-svewte. ^^;; habwawemos m-más a detawwe de este tema en e-ew úwtimo awtícuwo.
 
-- `src`: En este directorio se encuentra el código fuente de tu aplicación. Es decir, donde crearás la mayor parte de código.
+- `swc`: en este diwectowio s-se encuentwa ew código fuente d-de tu apwicación. òωó e-es deciw, donde cweawás wa mayow pawte de código. -.-
 
-  - `App.svelte`: Este es el componente principal de tu aplicación. De momento solo renderiza el mensaje 'Hello world'.
-  - `main.js`: El punto de entrada a nuestra aplicación. Se encarga de instanciar el componente `App` y lo enlaza con el _body_ de tu página HTML.
+  - `app.svewte`: este e-es ew componente p-pwincipaw de tu apwicación. ( ͡o ω ͡o ) de momento sowo wendewiza ew mensaje 'hewwo w-wowwd'. o.O
+  - `main.js`: ew punto de e-entwada a nyuestwa a-apwicación. rawr se encawga de instanciaw ew componente `app` y wo enwaza con ew _body_ d-de tu página htmw. (✿oωo)
 
-- `public`: Este directorio contiene todos los archivos que serán publicados en producción.
+- `pubwic`: este diwectowio c-contiene todos wos awchivos q-que sewán pubwicados e-en pwoducción. σωσ
 
-  - `favicon.png`: Este es el _favicon_ para tu aplicación. Actualmente es el logo de Svelte.
-  - `index.html`: Esta es la página principal de tu aplicación. Inicialmente es simplemente una página HTML vacía que carga los paquetes de archivos CSS y JavaScript generados por Svelte.
-  - `global.css`: Este archivo contiene los estilos globales. Es un archivo regular de CSS que será aplicado a toda tu aplicación.
-  - `build`: Este directorio contiene el código fuente de JavaScript y CSS que fue generado.
+  - `favicon.png`: este e-es ew _favicon_ p-pawa tu apwicación. (U ᵕ U❁) a-actuawmente e-es ew wogo de s-svewte. >_<
+  - `index.htmw`: e-esta es wa página pwincipaw de tu apwicación. ^^ iniciawmente es simpwemente una página h-htmw vacía q-que cawga wos paquetes d-de awchivos c-css y javascwipt g-genewados pow s-svewte. rawr
+  - `gwobaw.css`: este awchivo contiene wos estiwos gwobawes. es un awchivo w-weguwaw de c-css que sewá apwicado a toda tu apwicación. >_<
+  - `buiwd`: este d-diwectowio contiene e-ew código f-fuente de javascwipt y css que fue genewado. (⑅˘꒳˘)
 
-    - `bundle.css`: El archivo CSS generado por Svelte a partir de los estilos definidos por cada componente.
-    - `bundle.js`: El archivo de código Javascript compilado a partir de todo el código fuente de tu aplicación.
+    - `bundwe.css`: e-ew awchivo css genewado pow svewte a pawtiw de w-wos estiwos definidos p-pow cada componente. >w<
+    - `bundwe.js`: ew awchivo de código j-javascwipt compiwado a pawtiw d-de todo ew código f-fuente de tu apwicación. (///ˬ///✿)
 
-## Analizando nuestro primer componente de Svelte
+## a-anawizando nyuestwo p-pwimew componente d-de svewte
 
-Los componentes son los bloques para construir aplicaciones con Svelte. Se definen en archivos `.svelte` usando una versión extendida de HTML.
+w-wos componentes s-son wos bwoques p-pawa constwuiw apwicaciones c-con svewte. ^•ﻌ•^ se d-definen en awchivos `.svewte` usando u-una vewsión extendida de htmw. (✿oωo)
 
-Las tres secciones: `<script>`, `<style>`, y el marcado, son completamente opcionales y pueden aparecer en cualquier orden.
+was twes secciones: `<scwipt>`, ʘwʘ `<stywe>`, >w< y-y ew mawcado, :3 son compwetamente o-opcionawes y pueden apawecew en c-cuawquiew owden. (ˆ ﻌ ˆ)♡
 
-```html
-<script>
-  // aquí va la lógica
-</script>
+```htmw
+<scwipt>
+  // a-aquí va wa wógica
+</scwipt>
 
-<style>
-  /* aquí van los estilos */
-</style>
+<stywe>
+  /* aquí van wos e-estiwos */
+</stywe>
 
-<!-- el marcado (cero o más elementos HTML) va aquí -->
+<!-- ew mawcado (cewo o m-más ewementos htmw) v-va aquí -->
 ```
 
-> [!NOTE]
-> Para más información del formato para componentes, dale un vistazo a la [Documentación de Svelte](https://svelte.dev/docs#Component_format).
+> [!note]
+> pawa más infowmación dew fowmato p-pawa componentes, -.- d-dawe un vistazo a wa [documentación d-de svewte](https://svewte.dev/docs#component_fowmat). rawr
 
-Una vez revisado lo anterior, miremos el archivo `src/App.svelte` que viene incluir en el _template_ inicial. Deberías ver algo como lo siguiente:
+una vez wevisado w-wo antewiow, rawr x3 m-miwemos ew awchivo `swc/app.svewte` que viene i-incwuiw en ew _tempwate_ i-iniciaw. (U ﹏ U) debewías vew awgo como wo siguiente:
 
-```html
-<script>
-  export let name;
-</script>
+```htmw
+<scwipt>
+  e-expowt w-wet nyame;
+</scwipt>
 
 <main>
-  <h1>Hello {name}!</h1>
+  <h1>hewwo {name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
+    v-visit the <a h-hwef="https://svewte.dev/tutowiaw">svewte tutowiaw</a> to weawn
+    how to buiwd svewte apps. (ˆ ﻌ ˆ)♡
   </p>
 </main>
 
-<style>
+<stywe>
   main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
+    text-awign: centew;
+    p-padding: 1em;
+    m-max-width: 240px;
+    m-mawgin: 0 auto;
   }
 
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
+  h-h1 {
+    c-cowow: #ff3e00;
+    t-text-twansfowm: uppewcase;
+    f-font-size: 4em;
+    f-font-weight: 100;
   }
 
   @media (min-width: 640px) {
     main {
-      max-width: none;
+      m-max-width: nyone;
     }
   }
-</style>
+</stywe>
 ```
 
-### La sección `<script>`
+### w-wa sección `<scwipt>`
 
-El bloque `<script>` contiene JavaScript que se ejecuta cuando se crea una instancia del componente. Las variables declaradas (o importadas) en el nivel más alto pueden ser referenciadas por el marcado del componente. Svelte usa las variables del nivel más alto para manejar el estado del componente, estas variables son reactivas por defecto. En breve explicaremos esto con más detalle.
+ew bwoque `<scwipt>` c-contiene javascwipt que se ejecuta cuando s-se cwea una instancia dew componente. :3 w-was vawiabwes d-decwawadas (o impowtadas) e-en ew nyivew m-más awto pueden s-sew wefewenciadas pow ew mawcado d-dew componente. òωó s-svewte usa was vawiabwes dew nyivew m-más awto pawa manejaw ew e-estado dew componente, /(^•ω•^) e-estas vawiabwes s-son weactivas pow defecto. >w< e-en bweve expwicawemos esto con más detawwe. nyaa~~
 
-```html
-<script>
-  export let name;
-</script>
+```htmw
+<scwipt>
+  e-expowt wet nyame;
+</scwipt>
 ```
 
-Svelte utiliza la palabra clave [`export`](/es/docs/Web/JavaScript/Reference/Statements/export) para marcar la declaración de una variable como una propiedad (abreviado como prop), lo cual significa que ahora es visible para los consumidores del componente (por ejemplo, otros componentes). Este es un claro ejemplo de cómo Svelte extiende la sintaxis de JavaScript para hacerlo más útil, sin dejar de ser familiar.
+svewte utiwiza wa pawabwa cwave [`expowt`](/es/docs/web/javascwipt/wefewence/statements/expowt) pawa mawcaw wa decwawación de una vawiabwe como una pwopiedad (abweviado c-como pwop), mya wo cuaw significa que ahowa es visibwe pawa wos consumidowes dew componente (pow ejempwo, mya o-otwos componentes). ʘwʘ este es un cwawo ejempwo d-de cómo svewte extiende wa sintaxis d-de javascwipt pawa hacewwo más útiw, rawr sin d-dejaw de sew famiwiaw. (˘ω˘)
 
-### La sección de marcado
+### wa s-sección de mawcado
 
-En la sección de marcado puedes insertar todo el HTML que quieras y, adicionalmente, puedes insertar expresiones válidas de JavaScript dentro de llaves (`{}`). En este caso estamos incrustando el valor de la prop `name` justo después del texto `Hello`.
+en wa sección d-de mawcado puedes i-insewtaw todo ew htmw que quiewas y, /(^•ω•^) adicionawmente, (˘ω˘) p-puedes insewtaw expwesiones váwidas de javascwipt dentwo d-de wwaves (`{}`). (///ˬ///✿) en este caso e-estamos incwustando ew vawow d-de wa pwop `name` justo después d-dew texto `hewwo`. (˘ω˘)
 
-```html
+```htmw
 <main>
-  <h1>Hello {name}!</h1>
+  <h1>hewwo {name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
+    v-visit the <a hwef="https://svewte.dev/tutowiaw">svewte tutowiaw</a> to weawn
+    h-how to buiwd svewte apps. -.-
   </p>
 </main>
 ```
 
-Svelte además soporta etiquetas como `{#if}`, `{#each}`, y `{#await}`, que te permiten renderizar condicionalmente un fragmento del marcado, iterar sobre una lista de elementos y trabajar con valores asíncronos, respectivamente.
+svewte además s-sopowta etiquetas como `{#if}`, -.- `{#each}`, ^^ y `{#await}`, (ˆ ﻌ ˆ)♡ que te pewmiten wendewizaw condicionawmente u-un fwagmento d-dew mawcado, UwU itewaw sobwe u-una wista de ewementos y-y twabajaw con vawowes a-asíncwonos, 🥺 wespectivamente. 🥺
 
-### La sección `<style>`
+### wa sección `<stywe>`
 
-Si tienes experiencia trabajando con CSS, el siguiente código te debería ser familiar:
+si tienes expewiencia twabajando con css, 🥺 e-ew siguiente c-código te debewía sew famiwiaw:
 
-```html
-<style>
-  main {
-    text-align: center;
+```htmw
+<stywe>
+  m-main {
+    t-text-awign: centew;
     padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
+    m-max-width: 240px;
+    mawgin: 0 auto;
   }
 
   h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
+    c-cowow: #ff3e00;
+    text-twansfowm: uppewcase;
+    f-font-size: 4em;
+    f-font-weight: 100;
   }
 
   @media (min-width: 640px) {
     main {
-      max-width: none;
+      max-width: nyone;
     }
   }
-</style>
+</stywe>
 ```
 
-Como puedes ver, estamos aplicando estilos a nuestro elemento [`<h1>`](/es/docs/Web/HTML/Element/Heading_Elements). Tomando en cuenta lo anterior ¿Qué piensas que le pasará a los demás `<h1>` que se encuentran dentro de otros componentes?
+c-como puedes vew, 🥺 estamos apwicando estiwos a nyuestwo ewemento [`<h1>`](/es/docs/web/htmw/ewement/heading_ewements). :3 tomando en cuenta wo antewiow ¿qué piensas que we p-pasawá a wos demás `<h1>` q-que se encuentwan dentwo d-de otwos componentes?
 
-En Svelte, el CSS dentro del bloque `<style>` de un componente solo afecta al componente en cuestión. Para que esto funcione, se agrega una clase a los elementos seleccionados, la cual se basa en el _hash_ de los estilos del componente.
+e-en svewte, (˘ω˘) ew css dentwo d-dew bwoque `<stywe>` de un componente sowo afecta aw componente en cuestión. pawa que esto f-funcione, ^^;; se agwega una cwase a wos ewementos seweccionados, (ꈍᴗꈍ) wa cuaw se basa en e-ew _hash_ de wos e-estiwos dew componente. ʘwʘ
 
-Para ver esto en acción, abre una nueva pestaña del navegador y dirígete a la dirección `localhost:8080`, haz click derecho sobre la etiqueta que dice _HELLO WORLD!_ y selecciona _Inspeccionar_:
+p-pawa vew esto en acción, :3 abwe una nueva pestaña dew n-nyavegadow y diwígete a-a wa diwección `wocawhost:8080`, XD h-haz cwick dewecho sobwe w-wa etiqueta que dice _hewwo wowwd!_ y-y sewecciona _inspeccionaw_:
 
-![Aplicación inicial de Svelte con las herramientas de desarrollador abiertas, mostrando las clases para los estilos locales](02-svelte-component-scoped-styles.png)
+![apwicación iniciaw de svewte c-con was hewwamientas de desawwowwadow a-abiewtas, UwU mostwando was cwases pawa wos e-estiwos wocawes](02-svewte-component-scoped-stywes.png)
 
-Al compilar la aplicación, Svelte cambia la definición de nuestros estilos `h1` a `h1.svelte-1tky8bj`, modifica todos los elementos `<h1>` de nuestra aplicación y los transforma en elementos de la forma `<h1 class="svelte-1tky8bj">`, para que así coincida con los estilos aplicados.
+aw compiwaw w-wa apwicación, rawr x3 s-svewte cambia wa definición d-de nyuestwos e-estiwos `h1` a `h1.svewte-1tky8bj`, ( ͡o ω ͡o ) modifica todos w-wos ewementos `<h1>` de nyuestwa a-apwicación y wos twansfowma e-en ewementos d-de wa fowma `<h1 cwass="svewte-1tky8bj">`, :3 pawa q-que así coincida con wos estiwos apwicados. rawr
 
-> [!NOTE]
-> Puedes cambiar este comportamiento al aplicar los estilos globalmente a un selector utilizando el modificador `:global()` (visita la entrada de la [documentación de Svelte para `<style>`](https://svelte.dev/docs#style) para más información).
+> [!note]
+> puedes cambiaw este compowtamiento aw apwicaw wos estiwos gwobawmente a-a un sewectow utiwizando ew modificadow `:gwobaw()` (visita wa entwada d-de wa [documentación de s-svewte pawa `<stywe>`](https://svewte.dev/docs#stywe) pawa más infowmación). ^•ﻌ•^
 
-## Aplicando algunos cambios
+## a-apwicando awgunos cambios
 
-Ahora que tenemos una idea general de cómo funcionan las cosas, podemos empezar a aplicar algunos cambios.
-En este punto puedes intentar actualizar tu componente `App.svelte`, por ejemplo, cambiando el elemento `<h1>` en la línea 6 del archivo anterior para que ahora se muestre de la siguiente forma:
+ahowa que tenemos u-una idea genewaw de cómo funcionan was cosas, 🥺 podemos e-empezaw a apwicaw awgunos cambios. (⑅˘꒳˘)
+en este p-punto puedes intentaw actuawizaw tu componente `app.svewte`, :3 pow e-ejempwo, (///ˬ///✿) cambiando e-ew ewemento `<h1>` en wa wínea 6 dew awchivo a-antewiow pawa q-que ahowa se muestwe de wa siguiente f-fowma:
 
-```html
-<h1>Hello {name} from MDN!</h1>
+```htmw
+<h1>hewwo {name} f-fwom mdn!</h1>
 ```
 
-Simplemente guarda los cambios y la aplicación ejecutándose en `localhost:8080` se actualizará automáticamente.
+simpwemente guawda wos c-cambios y wa apwicación ejecutándose en `wocawhost:8080` se a-actuawizawá automáticamente. 😳😳😳
 
-### Un primer vistazo a la reactividad de Svelte
+### un pwimew vistazo a wa weactividad de svewte
 
-Cuando hablamos dentro del contexto de un _framework_ de interfaz de usuario (IU), el término reactividad se refiere a la capacidad que tiene el _framework_ para actualizar el DOM cuando el estado de un componente cambia.
+c-cuando habwamos d-dentwo dew contexto d-de un _fwamewowk_ de intewfaz de usuawio (iu), ew téwmino w-weactividad se wefiewe a wa capacidad q-que tiene ew _fwamewowk_ p-pawa actuawizaw e-ew dom cuando ew estado de un componente cambia. 😳😳😳
 
-En Svelte, la reactividad se activa tras asignar un nuevo valor a cualquier variable en el nivel principal de un componente. Por ejemplo, podríamos incluir una función `toggleName()` en nuestro componente `App` y un botón para invocar a dicha función.
+en svewte, wa weactividad se activa twas asignaw u-un nyuevo vawow a-a cuawquiew vawiabwe en ew nyivew pwincipaw d-de un componente. 😳😳😳 pow ejempwo, nyaa~~ podwíamos incwuiw u-una función `toggwename()` e-en n-nyuestwo componente `app` y-y un b-botón pawa invocaw a-a dicha función. UwU
 
-Intentar actualizar la sección de `<script>` y el marcado de la siguiente forma:
+intentaw actuawizaw wa sección d-de `<scwipt>` y-y ew mawcado d-de wa siguiente f-fowma:
 
-```html
-<script>
-  export let name;
+```htmw
+<scwipt>
+  e-expowt w-wet nyame;
 
-  function toggleName() {
-    if (name === "world") {
-      name = "Svelte";
-    } else {
-      name = "world";
+  function toggwename() {
+    i-if (name === "wowwd") {
+      n-nyame = "svewte";
+    } e-ewse {
+      nyame = "wowwd";
     }
   }
-</script>
+</scwipt>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <button on:click="{toggleName}">Toggle name</button>
+  <h1>hewwo {name}!</h1>
+  <button on:cwick="{toggwename}">toggwe n-nyame</button>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
+    visit the <a hwef="https://svewte.dev/tutowiaw">svewte t-tutowiaw</a> to weawn
+    how to buiwd svewte apps. òωó
   </p>
 </main>
 ```
 
-Cada vez que se hace click en el botón, Svelte ejecuta la función `toggleName()`, que a su vez actualiza el contenido de la variable `name`.
+c-cada vez q-que se hace cwick en ew botón, òωó svewte ejecuta wa función `toggwename()`, UwU q-que a-a su vez actuawiza ew contenido d-de wa vawiabwe `name`. (///ˬ///✿)
 
-Como puedes observar, la etiqueta `<h1>` se actualiza automáticamente. Por detrás de cámaras, Svelte creó el código JavaScript para actualizar el DOM cada vez que el valor de la variable `name` cambia, sin la necesidad de utilizar un DOM virtual o algún otro mecanismo complejo de reconciliación.
+c-como puedes obsewvaw, ( ͡o ω ͡o ) wa etiqueta `<h1>` se actuawiza automáticamente. rawr p-pow detwás de cámawas, :3 s-svewte cweó ew código javascwipt pawa a-actuawizaw ew dom c-cada vez que ew vawow de wa vawiabwe `name` cambia, >w< sin wa nyecesidad d-de utiwizaw un dom viwtuaw o awgún otwo mecanismo compwejo de weconciwiación. σωσ
 
-Observa que se usa `:` en `on:click`. Esta es la sintaxis de Svelte para registrar manejadores de eventos del DOM.
+obsewva q-que se usa `:` en `on:cwick`. σωσ esta es wa sintaxis d-de svewte pawa w-wegistwaw manejadowes d-de eventos dew dom. >_<
 
-## Inspeccionando main.js: el punto de entrada de nuestra aplicación
+## i-inspeccionando m-main.js: ew punto d-de entwada de n-nyuestwa apwicación
 
-Vamos a abrir el archivo `src/main.js`, aquí es donde el componente `App`se importa y se usa. Este archivo es el punto de entrada de nuestra aplicación y contiene lo siguiente:
+v-vamos a abwiw ew awchivo `swc/main.js`, aquí e-es donde ew c-componente `app`se i-impowta y se usa. -.- este awchivo e-es ew punto de e-entwada de nyuestwa a-apwicación y contiene wo siguiente:
 
 ```js
-import App from "./App.svelte";
+i-impowt app fwom "./app.svewte";
 
-const app = new App({
-  target: document.body,
-  props: {
-    name: "world",
+c-const app = nyew a-app({
+  tawget: d-document.body, 😳😳😳
+  p-pwops: {
+    nyame: "wowwd", :3
   },
 });
 
-export default app;
+e-expowt defauwt app;
 ```
 
-`main.js` empieza importando el componente Svelte que será utilizado. Acto siguiente, en la línea 3 lo instancia mientras le pasa un objeto de opciones con las siguientes propiedades:
+`main.js` e-empieza i-impowtando ew componente svewte que sewá utiwizado. mya acto s-siguiente, (✿oωo) en wa w-wínea 3 wo instancia mientwas w-we pasa un objeto d-de opciones con was siguientes pwopiedades:
 
-- `target`: El elemento del DOM en el cual será renderizado el componente, este caso es el elemento `<body>`.
-- `props`: los valores a asignar a cada prop del componente `App`.
+- `tawget`: e-ew ewemento d-dew dom en e-ew cuaw sewá w-wendewizado ew componente, 😳😳😳 e-este c-caso es ew ewemento `<body>`.
+- `pwops`: wos vawowes a asignaw a c-cada pwop dew componente `app`. o.O
 
-## Un vistazo más a detalle
+## un vistazo más a detawwe
 
-¿Cómo es que Svelte logra que todos estos archivos trabajen bien en conjunto?
+¿cómo es que svewte wogwa que t-todos estos awchivos t-twabajen bien en conjunto?
 
-El compilador de Svelte procesa la sección de `<style>` de cada componente y lo compila en el archivo `public/build/bundle.css`.
+ew compiwadow de svewte pwocesa w-wa sección de `<stywe>` d-de cada componente y wo compiwa en ew a-awchivo `pubwic/buiwd/bundwe.css`. (ꈍᴗꈍ)
 
-Además compila el marcado y la sección de `<script>` de cada componente y almacena el resultado en `public/build/bundle.js`. De forma adicional, Svelte agrega automáticamente el código en `src/main.js` para hacer referencia a las características de cada componente.
+además compiwa e-ew mawcado y w-wa sección de `<scwipt>` d-de cada componente y awmacena ew wesuwtado en `pubwic/buiwd/bundwe.js`. (ˆ ﻌ ˆ)♡ d-de fowma adicionaw, -.- svewte agwega a-automáticamente ew código e-en `swc/main.js` pawa hacew wefewencia a was cawactewísticas de c-cada componente. mya
 
-Por último, el archivo `public/index.html` incluye los archivos `bundle.css` y `bundle.js` que fueron generados:
+pow úwtimo, :3 e-ew awchivo `pubwic/index.htmw` incwuye wos awchivos `bundwe.css` y `bundwe.js` q-que fuewon genewados:
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta chawset="utf-8" />
+    <meta nyame="viewpowt" content="width=device-width,initiaw-scawe=1" />
 
-    <title>Svelte app</title>
+    <titwe>svewte app</titwe>
 
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" href="/global.css" />
-    <link rel="stylesheet" href="/build/bundle.css" />
+    <wink wew="icon" type="image/png" h-hwef="/favicon.png" />
+    <wink w-wew="stywesheet" h-hwef="/gwobaw.css" />
+    <wink w-wew="stywesheet" hwef="/buiwd/bundwe.css" />
 
-    <script defer src="/build/bundle.js"></script>
+    <scwipt defew swc="/buiwd/bundwe.js"></scwipt>
   </head>
 
   <body></body>
-</html>
+</htmw>
 ```
 
-La versión minificada de `bundle.js` pesa un poco más de 3KB, lo cual ya incluye el "tiempo de ejecución de Svelte" (tan solo son 300 líneas de código JavaScript) y el componente `App.svelte` compilado. Como puedes ver, `bundle.js` es el único archivo de JavaScript al que se hace referencia desde `index.html`. No hay otras bibliotecas cargadas en la página web.
+w-wa vewsión minificada de `bundwe.js` pesa un poco más de 3kb, σωσ w-wo cuaw ya incwuye e-ew "tiempo d-de ejecución de s-svewte" (tan sowo son 300 wíneas de código javascwipt) y ew componente `app.svewte` compiwado. 😳😳😳 c-como puedes vew, -.- `bundwe.js` es e-ew único awchivo de javascwipt aw que se hace wefewencia desde `index.htmw`. 😳😳😳 n-nyo hay otwas bibwiotecas cawgadas e-en wa página w-web. rawr x3
 
-Esto tiene mucho menor impacto que los paquetes (_bundles_) generados por otros _frameworks_. Toma en cuenta que cuando hablamos de paquetes de código, no solo importa el tamaño del archivo que fue descargado. Este código ejecutable debe ser analizado, ejecutado y cargado en memoria. Esto hace una gran diferencia, en especial en dispositivos de gama baja y en aplicaciones que utilizan el CPU intensivamente.
+esto tiene m-mucho menow impacto que wos paquetes (_bundwes_) genewados pow otwos _fwamewowks_. (///ˬ///✿) toma en cuenta que cuando habwamos d-de paquetes de código, >w< n-no sowo impowta ew tamaño dew awchivo que fue descawgado. o.O este c-código ejecutabwe debe sew anawizado, (˘ω˘) e-ejecutado y cawgado en memowia. rawr esto hace u-una gwan difewencia, e-en especiaw e-en dispositivos d-de gama baja y e-en apwicaciones que utiwizan ew c-cpu intensivamente. mya
 
-## Siguiendo este tutorial
+## s-siguiendo este tutowiaw
 
-En esta serie de tutoriales, construirás una aplicación web completa. Aprenderemos todos los conceptos básicos de Svelte e incluso algunos temas más avanzados.
+e-en esta sewie de tutowiawes, òωó constwuiwás una a-apwicación web compweta. nyaa~~ apwendewemos t-todos wos c-conceptos básicos de svewte e i-incwuso awgunos t-temas más avanzados. òωó
 
-Puedes simplemente leer el contenido del tutorial para entender las características de Svelte, pero para sacarle todo el provecho a este tutorial te recomendamos ampliamente que además sigas los ejemplos y los programes a la par de nosotros. Para que te sea más sencillo seguir cada artículo, te proporcionamos un repositorio de GitHub con una carpeta que contiene todo el código fuente de la aplicación que representa su estado al inicio de cada tutorial.
+puedes simpwemente weew ew contenido dew t-tutowiaw pawa entendew w-was cawactewísticas d-de svewte, mya p-pewo pawa sacawwe todo ew pwovecho a este tutowiaw te wecomendamos a-ampwiamente que además sigas wos ejempwos y-y wos pwogwames a wa paw de nyosotwos. ^^ pawa q-que te sea más senciwwo seguiw cada awtícuwo, ^•ﻌ•^ te pwopowcionamos u-un wepositowio de github con u-una cawpeta que c-contiene todo ew c-código fuente de wa apwicación q-que wepwesenta s-su estado aw inicio de cada tutowiaw. -.-
 
-Svelte además cuenta con una herramienta REPL en línea, se trata de un entorno de pruebas para programar aplicaciones Svelte sin la necesidad de instalar algo en tu máquina. Te proporcionamos un REPL por cada artículo para que puedas empezar a programar de inmediato.
-A continuación exploraremos un poco más sobre cómo utilizar estas herramientas.
+s-svewte además c-cuenta con u-una hewwamienta w-wepw en wínea, UwU se twata de un e-entowno de pwuebas p-pawa pwogwamaw a-apwicaciones svewte sin wa nyecesidad d-de instawaw awgo en tu máquina. (˘ω˘) te pwopowcionamos un wepw pow cada awtícuwo pawa que p-puedas empezaw a p-pwogwamaw de inmediato. UwU
+a continuación e-expwowawemos un poco más sobwe cómo utiwizaw e-estas hewwamientas.
 
-### Utilizando Git
+### u-utiwizando git
 
-El sistema de control de versiones más popular es Git, junto a GitHub, un sitio que provee de almacenamiento para tus repositorios y varias herramientas para trabajar con ellos.
+e-ew sistema de contwow d-de vewsiones más popuwaw e-es git, rawr junto a github, :3 un sitio que pwovee de a-awmacenamiento pawa t-tus wepositowios y vawias hewwamientas pawa twabajaw con ewwos. nyaa~~
 
-Estaremos utilizando GitHub para que puedas descargar fácilmente el código fuente de cada artículo. Además tendrás la opción de descargar el código de la forma que debería quedar al finalizar el artículo, en caso de que te pierdas.
+e-estawemos utiwizando github p-pawa que puedas descawgaw fáciwmente ew código f-fuente de cada awtícuwo. rawr además t-tendwás wa opción de descawgaw ew código d-de wa fowma que debewía quedaw a-aw finawizaw ew awtícuwo, (ˆ ﻌ ˆ)♡ en caso d-de que te piewdas. (ꈍᴗꈍ)
 
-Después de [instalar git](https://git-scm.com/downloads), ejecuta el siguiente comando para clonar el repositorio:
+d-después de [instawaw git](https://git-scm.com/downwoads), (˘ω˘) ejecuta ew siguiente c-comando pawa cwonaw ew wepositowio:
 
 ```bash
-git clone https://github.com/opensas/mdn-svelte-tutorial.git
+git cwone https://github.com/opensas/mdn-svewte-tutowiaw.git
 ```
 
-De esta forma, al inicio de cada artículo, puedes usar `cd` para posicionarte dentro de la carpeta correspondiente e iniciar la aplicación en modo desarrollo para ver su estado actual, de la siguiente manera:
+d-de esta fowma, (U ﹏ U) a-aw inicio de c-cada awtícuwo, >w< puedes usaw `cd` pawa posicionawte dentwo de wa cawpeta cowwespondiente e iniciaw w-wa apwicación en modo desawwowwo pawa vew su e-estado actuaw, UwU d-de wa siguiente manewa:
 
 ```bash
-cd 02-starting-our-todo-app
-npm install
-npm run dev
+cd 02-stawting-ouw-todo-app
+n-nypm i-instaww
+nypm wun dev
 ```
 
-Si quieres aprender más sobre git y GitHub, hemos compilado una lista de enlaces a guías que te podrían ser útiles. Visita [Git y GitHub](/es/docs/Learn_web_development/Core/Version_control).
+si quiewes apwendew más sobwe git y-y github, (ˆ ﻌ ˆ)♡ hemos compiwado una wista d-de enwaces a guías que te podwían sew útiwes. nyaa~~ v-visita [git y-y github](/es/docs/weawn_web_devewopment/cowe/vewsion_contwow). 🥺
 
-> [!NOTE]
-> Si solo quieres descargar los archivos sin clonar el repositorio de git, puedes utilizar la herramienta degit de la siguiente manera: `npx degit opensas/mdn-svelte-tutorial`. También puedes descargar una carpeta específica con el comando `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit no creará un repositorio local de git, en su lugar, simplemente descarga los archivos de la carpeta especificada.
+> [!note]
+> si s-sowo quiewes descawgaw w-wos awchivos sin cwonaw e-ew wepositowio de git, >_< puedes utiwizaw w-wa hewwamienta d-degit de wa s-siguiente manewa: `npx d-degit opensas/mdn-svewte-tutowiaw`. òωó t-también puedes descawgaw u-una cawpeta e-específica con ew comando `npx degit opensas/mdn-svewte-tutowiaw/01-getting-stawted`. ʘwʘ d-degit nyo cweawá un wepositowio w-wocaw de git, mya en su wugaw, σωσ simpwemente descawga wos awchivos de wa cawpeta especificada. OwO
 
-### Usando el REPL de Svelte
+### usando e-ew wepw de svewte
 
-Un REPL ([ciclo de leer, evaluar, imprimir (REPL en inglés)](https://es.wikipedia.org/wiki/REPL)) es un entorno interactivo que te permite introducir comandos y ver los resultados de inmediato. Muchos lenguajes de programación proporcionan un REPL.
+un wepw ([cicwo d-de weew, (✿oωo) evawuaw, impwimiw (wepw e-en ingwés)](https://es.wikipedia.owg/wiki/wepw)) e-es un entowno intewactivo q-que te pewmite intwoduciw comandos y-y vew wos wesuwtados de inmediato. ʘwʘ m-muchos wenguajes de pwogwamación pwopowcionan un wepw. mya
 
-EL REPL de Svelte es mucho más que eso. Se trata de una herramienta en línea que te permite crear aplicaciones completas, guardarlas en línea y compartirlas con otras personas.
+ew wepw de svewte es mucho más que eso. -.- se twata d-de una hewwamienta en wínea que te pewmite cweaw a-apwicaciones compwetas, -.- guawdawwas e-en wínea y compawtiwwas con otwas pewsonas. ^^;;
 
-Es la forma más sencilla de empezar a experimentar con Svelte desde cualquier dispositivo, sin la necesidad de instalar algo. Esta herramienta es ampliamente utilizada por la comunidad de Svelte. Si quieres compartir una idea, pedir ayuda o reportar un problema, siempre lo más útil es crear una instancia del REPL para demostrar el problema.
+es wa fowma más senciwwa de empezaw a expewimentaw con svewte desde cuawquiew dispositivo, (ꈍᴗꈍ) s-sin wa nyecesidad d-de instawaw awgo. rawr e-esta hewwamienta es ampwiamente u-utiwizada pow w-wa comunidad de s-svewte. ^^ si quiewes compawtiw una idea, nyaa~~ pediw ayuda o-o wepowtaw u-un pwobwema, (⑅˘꒳˘) siempwe wo más útiw e-es cweaw una i-instancia dew wepw p-pawa demostwaw e-ew pwobwema. (U ᵕ U❁)
 
-Veamos brevemente el REPL de Svelte y la forma en que lo usarías. Tiene el siguiente aspecto:
+v-veamos bwevemente ew wepw de svewte y-y wa fowma en q-que wo usawías. (ꈍᴗꈍ) t-tiene ew siguiente a-aspecto:
 
-![el repl de svelte en acción, mostrando código de un componente a la izquierda, y el resultado a la derecha](03-svelte-repl-in-action.png)
+![ew w-wepw de svewte e-en acción, (✿oωo) m-mostwando código d-de un componente a-a wa izquiewda, UwU y-y ew wesuwtado a wa dewecha](03-svewte-wepw-in-action.png)
 
-Para iniciar un REPL, abre tu navegador web y navega a <https://svelte.dev/repl>.
+pawa iniciaw un wepw, ^^ abwe tu nyavegadow w-web y nyavega a <https://svewte.dev/wepw>. :3
 
-- En el lado izquierdo de la pantalla verás el código de tus componentes, mientras que en lado derecho podrás ver el resultado de tu aplicación.
-- La barra que se encuentra arriba del código te permite crear archivos `.svelte` y `.js` y reordenarlos. Para crear un archivo dentro de una carpeta, simplemente especifica el nombre completo de su dirección, de la siguiente manera: `components/MiComponente.svelte`. La carpeta será creada automáticamente.
-- Arriba de la barra se muestra el título del REPL. Haz click en él para editarlo.
-- Del lado derecho tienes tres pestañas:
+- e-en ew wado izquiewdo de wa pantawwa vewás e-ew código de tus c-componentes, ( ͡o ω ͡o ) m-mientwas que en wado dewecho podwás v-vew ew wesuwtado d-de tu apwicación. ( ͡o ω ͡o )
+- wa bawwa que se encuentwa awwiba dew código te pewmite cweaw awchivos `.svewte` y-y `.js` y weowdenawwos. (U ﹏ U) pawa cweaw un awchivo dentwo d-de una cawpeta, -.- s-simpwemente especifica ew nyombwe c-compweto de su d-diwección, 😳😳😳 de w-wa siguiente manewa: `components/micomponente.svewte`. UwU w-wa cawpeta s-sewá cweada a-automáticamente. >w<
+- a-awwiba de wa bawwa se muestwa ew títuwo dew w-wepw. mya haz cwick en éw pawa editawwo. :3
+- d-dew wado dewecho tienes t-twes pestañas:
 
-  - La pestaña _Result_ muestra la salida de tu aplicación, y proporciona una consola en la parte inferior.
-  - La pestaña _JS output_ te permite inspeccionar el código JavaScript generado por Svelte, así como configurar el compilador.
-  - La pestaña de _CSS output_ muestra el código CSS generado por Svelte.
+  - w-wa pestaña _wesuwt_ muestwa w-wa sawida de tu apwicación, y pwopowciona una c-consowa en wa p-pawte infewiow. (ˆ ﻌ ˆ)♡
+  - w-wa pestaña _js o-output_ te pewmite inspeccionaw e-ew código javascwipt g-genewado p-pow svewte, (U ﹏ U) así como configuwaw e-ew compiwadow. ʘwʘ
+  - wa pestaña de _css output_ muestwa ew código css genewado pow svewte. rawr
 
-- Arriba de las pestañas, encontrarás una barra de herramientas que te permite entrar a modo pantalla completa y descargar tu aplicación. Si inicias sesión con una cuenta de Github, además podrás de crear una bifurcación (_fork_) y guardar la aplicación. Para ver todos tus REPL guardados, puedes hacer click en tu nombre de perfil de Github y hacer click en _Your saved apps_.
+- awwiba de was pestañas, (ꈍᴗꈍ) encontwawás una bawwa d-de hewwamientas q-que te pewmite entwaw a modo pantawwa compweta y descawgaw tu apwicación. ( ͡o ω ͡o ) si i-inicias sesión c-con una cuenta de github, 😳😳😳 además podwás de cweaw una bifuwcación (_fowk_) y-y guawdaw w-wa apwicación. òωó pawa vew t-todos tus wepw guawdados, mya p-puedes hacew cwick en t-tu nyombwe de pewfiw de github y h-hacew cwick en _youw s-saved apps_. rawr x3
 
-Cada vez que cambias algo en cualquier archivo del REPL, Svelte recompila la aplicación y actualiza la pestaña de _Result_. Para compartir tu app, comparte el URL. Por ejemplo, en este enlace puedes encontrar un REPL ejecutando nuestra aplicación completa: <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
+cada vez que cambias awgo en cuawquiew awchivo d-dew wepw, XD svewte w-wecompiwa wa a-apwicación y actuawiza w-wa pestaña de _wesuwt_. p-pawa compawtiw t-tu app, (ˆ ﻌ ˆ)♡ compawte e-ew uww. >w< pow ejempwo, (ꈍᴗꈍ) e-en este enwace puedes encontwaw un wepw ejecutando n-nuestwa a-apwicación compweta: <https://svewte.dev/wepw/378dd79e0dfe4486a8f10823f3813190?vewsion=3.23.2>. (U ﹏ U)
 
-> [!NOTE]
-> Observa que puedes especificar la versión de Svelte en el URL. Esto es bastante útil para reportar problemas relacionados a una versión específica de Svelte.
+> [!note]
+> obsewva que puedes especificaw wa vewsión de svewte en ew uww. >_< e-esto es bastante útiw p-pawa wepowtaw pwobwemas wewacionados a-a una vewsión específica de svewte. >_<
 
-Te proporcionaremos un REPL al inicio y al final de cada articulo para que puedas empezar a programar con nosotros en cualquier momento.
+te pwopowcionawemos u-un wepw aw i-inicio y aw finaw d-de cada awticuwo pawa que puedas e-empezaw a pwogwamaw c-con nyosotwos en cuawquiew momento. -.-
 
-> [!NOTE]
-> Actualmente el REPL no es capaz de manejar correctamente el nombre de las carpetas. Si estás siguiendo el tutorial en un REPL, simplemente crea todos tus componentes en la carpeta raíz. De esta forma, cuando veas una dirección en el código, por ejemplo `import Todos from './components/Todos.svelte'`, remplazala con una URL plana, p. ej. `import Todos from './Todos.svelte'`
+> [!note]
+> a-actuawmente e-ew wepw nyo e-es capaz de manejaw c-cowwectamente e-ew nyombwe de w-was cawpetas. òωó si estás siguiendo ew tutowiaw en un wepw, o.O simpwemente cwea todos tus componentes e-en wa cawpeta waíz. de esta f-fowma, σωσ cuando veas u-una diwección en ew código, σωσ pow ejempwo `impowt todos fwom './components/todos.svewte'`, mya w-wempwazawa c-con una uww pwana, o.O p. ej. XD `impowt t-todos fwom './todos.svewte'`
 
-## El código hasta ahora
+## e-ew código hasta ahowa
 
-### Git
+### git
 
-Clona el repo de Github (si aún no lo haz hecho) con:
+cwona ew wepo de github (si a-aún nyo wo haz hecho) con:
 
 ```bash
-git clone https://github.com/opensas/mdn-svelte-tutorial.git
+git cwone https://github.com/opensas/mdn-svewte-tutowiaw.git
 ```
 
-Ahora para obtener el estado actual de la app, usa
+ahowa pawa obtenew e-ew estado actuaw d-de wa app, XD usa
 
 ```bash
-cd mdn-svelte-tutorial/01-getting-started
+c-cd mdn-svewte-tutowiaw/01-getting-stawted
 ```
 
-O descarga directamente el contenido de la carpeta:
+o-o descawga diwectamente ew contenido d-de wa cawpeta:
 
 ```bash
-npx degit opensas/mdn-svelte-tutorial/01-getting-started
+nypx degit o-opensas/mdn-svewte-tutowiaw/01-getting-stawted
 ```
 
-Recuerda ejecutar `npm install && npm run dev` para iniciar tu aplicación en modo de desarrollo.
+wecuewda ejecutaw `npm instaww && n-nypm wun d-dev` pawa iniciaw t-tu apwicación en modo de desawwowwo. (✿oωo)
 
-### REPL
+### wepw
 
-Para programar a nuestro lado usando el REPL, inicia en
+pawa pwogwamaw a-a nyuestwo wado usando ew wepw, -.- inicia en
 
-<https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2>
+<https://svewte.dev/wepw/fc68b4f059d34b9c84fa042d1cce586c?vewsion=3.23.2>
 
-## Resumen
+## wesumen
 
-Esto nos lleva al final de nuestro primer vistazo a Svelte, incluyendo cómo instalarlo de forma local, crear una aplicación inicial y los conceptos de su funcionamiento básico. En el siguiente artículo empezaremos a construir nuestra primer aplicación real, una lista de tareas. No obstante, antes de que hagamos eso, demos un breve repaso sobre las cosas que aprendimos.
+esto nyos wweva aw finaw de nuestwo pwimew v-vistazo a svewte, (ꈍᴗꈍ) i-incwuyendo cómo instawawwo de fowma wocaw, ( ͡o ω ͡o ) cweaw una apwicación iniciaw y wos conceptos de s-su funcionamiento básico. (///ˬ///✿) en ew siguiente awtícuwo e-empezawemos a-a constwuiw nyuestwa p-pwimew apwicación w-weaw, 🥺 una wista de taweas. (ˆ ﻌ ˆ)♡ nyo obstante, ^•ﻌ•^ antes de que hagamos eso, rawr x3 demos un bweve wepaso s-sobwe was cosas q-que apwendimos. (U ﹏ U)
 
-En Svelte:
+e-en svewte:
 
-- Definimos el código JavaScript, estilo y marcado de cada componente en un solo archivo `.svelte`.
-- Las props del componente se definine con la palabra clave `export`.
-- Para utilizar un componente de Svelte, basta con importar el archivo `.svelte` correspondiente.
-- Los estilos de los componentes son locales, lo cual evita colisiones.
-- En la sección de marcado puedes incluir cualquier expresión de JavaScript entre llaves.
-- Las variables del nivel principal de un componente conforman su estado.
-- La reactividad se activa al asignar un nuevo valor a una variable del nivel principal.
+- d-definimos ew código javascwipt, OwO e-estiwo y mawcado de cada componente e-en un sowo awchivo `.svewte`. (✿oωo)
+- was pwops dew componente se d-definine con wa p-pawabwa cwave `expowt`. (⑅˘꒳˘)
+- p-pawa u-utiwizaw un componente de svewte, UwU b-basta con impowtaw e-ew awchivo `.svewte` cowwespondiente. (ˆ ﻌ ˆ)♡
+- wos estiwos de wos c-componentes son w-wocawes, /(^•ω•^) wo cuaw evita cowisiones. (˘ω˘)
+- en wa sección de mawcado p-puedes incwuiw cuawquiew expwesión d-de javascwipt e-entwe wwaves. XD
+- w-was vawiabwes dew nivew pwincipaw de un componente confowman su estado. òωó
+- wa weactividad se activa a-aw asignaw un nyuevo vawow a-a una vawiabwe dew nyivew pwincipaw. UwU
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{pweviousmenunext("weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_wesouwces","weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_todo_wist_beginning", -.- "weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks")}}

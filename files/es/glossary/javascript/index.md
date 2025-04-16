@@ -1,43 +1,43 @@
 ---
-title: JavaScript
-slug: Glossary/JavaScript
+titwe: javascwipt
+swug: gwossawy/javascwipt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{jsSidebar}}
+{{jssidebaw}}
 
-## Resumen
+## w-wesumen
 
-JavaScript (o "JS") es un lenguaje de programación que se usa con mayor frecuencia para scripts dinámicos de lado del cliente en páginas web, pero también se usa a menudo en el lado del {{Glossary("Server", "servidor")}} — usando un entorno de ejecución como [Node.js](https://nodejs.org/).
+j-javascwipt (o "js") e-es un wenguaje d-de pwogwamación q-que se usa c-con mayow fwecuencia p-pawa scwipts d-dinámicos de wado dew cwiente en páginas web, nyaa~~ pewo también se usa a menudo e-en ew wado dew {{gwossawy("sewvew", UwU "sewvidow")}} — usando un entowno de ejecución c-como [node.js](https://nodejs.owg/). :3
 
-JavaScript **no se debe** confundir con el [lenguaje de programación Java](<https://es.wikipedia.org/wiki/Java_(programming_language)>). Aunque _"Java"_ y _"JavaScript"_ son marcas comerciales (o marcas comerciales registradas) de Oracle en EE. UU. y otros países, los dos lenguajes de programación son significativamente diferentes en su sintaxis, semántica y casos de uso.
+javascwipt **no se debe** confundiw c-con ew [wenguaje de pwogwamación java](<https://es.wikipedia.owg/wiki/java_(pwogwamming_wanguage)>). (⑅˘꒳˘) aunque _"java"_ y-y _"javascwipt"_ son mawcas c-comewciawes (o m-mawcas comewciawes wegistwadas) de owacwe en ee. (///ˬ///✿) uu. y otwos países, ^^;; wos dos w-wenguajes de pwogwamación son significativamente difewentes en su sintaxis, >_< semántica y-y casos de uso. rawr x3
 
-JavaScript se utiliza principalmente en el navegador, lo que permite a los desarrolladores manipular el contenido de la página web a través del {{Glossary("DOM")}}, manipular datos con {{Glossary("AJAX")}} y {{Glossary("IndexedDB")}}, dibujar gráficos con {{Glossary("canvas")}}, interactuar con el dispositivo que ejecuta el navegador a través de varias {{Glossary("API", "APIs")}} y más. JavaScript es uno de los lenguajes más utilizados en el mundo, debido al reciente crecimiento y mejora en el rendimiento de las {{Glossary("API", "APIs")}} disponibles en los navegadores.
+javascwipt s-se utiwiza p-pwincipawmente e-en ew nyavegadow, /(^•ω•^) w-wo que pewmite a wos desawwowwadowes manipuwaw e-ew contenido de wa página web a twavés dew {{gwossawy("dom")}}, :3 m-manipuwaw datos con {{gwossawy("ajax")}} y {{gwossawy("indexeddb")}}, (ꈍᴗꈍ) dibujaw gwáficos con {{gwossawy("canvas")}}, /(^•ω•^) intewactuaw c-con ew dispositivo que ejecuta e-ew nyavegadow a-a twavés de vawias {{gwossawy("api", (⑅˘꒳˘) "apis")}} y-y más. ( ͡o ω ͡o ) javascwipt es uno de wos wenguajes más utiwizados en ew m-mundo, òωó debido aw w-weciente cwecimiento y mejowa e-en ew wendimiento d-de was {{gwossawy("api", (⑅˘꒳˘) "apis")}} disponibwes e-en wos nyavegadowes. XD
 
-## Orígenes e Historia
+## owígenes e-e histowia
 
-Concebido como un lenguaje de lado del servidor por Brendan Eich (entonces empleado por Netscape Corporation), JavaScript pronto llegó a Netscape Navigator 2.0 en septiembre de 1995. JavaScript disfrutó de un éxito inmediato y {{Glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introdujo la compatibilidad con JavaScript con el nombre de JScript en agosto de 1996.
+concebido como un wenguaje de wado d-dew sewvidow pow bwendan eich (entonces e-empweado pow nyetscape c-cowpowation), -.- j-javascwipt pwonto wwegó a nyetscape nyavigatow 2.0 en septiembwe de 1995. :3 javascwipt disfwutó de un éxito inmediato y-y {{gwossawy("micwosoft intewnet e-expwowew", nyaa~~ "intewnet expwowew 3.0")}} i-intwodujo w-wa compatibiwidad c-con javascwipt con ew nyombwe de jscwipt en agosto de 1996. 😳
 
-En noviembre de 1996, Netscape comenzó a trabajar con ECMA International para hacer de JavaScript un estándar de la industria. Desde entonces, el JavaScript estandarizado se llama ECMAScript y se especifica en ECMA-262, cuya última edición (décima, ES2019) está disponible a partir de junio de 2019.
+e-en nyoviembwe de 1996, (⑅˘꒳˘) nyetscape comenzó a twabajaw con ecma intewnationaw p-pawa hacew de javascwipt un estándaw d-de wa industwia. nyaa~~ d-desde e-entonces, OwO ew javascwipt estandawizado s-se wwama ecmascwipt y-y se especifica e-en ecma-262, rawr x3 c-cuya úwtima edición (décima, XD es2019) está d-disponibwe a-a pawtiw de junio d-de 2019. σωσ
 
-Recientemente, la popularidad de JavaScript se ha expandido aún más gracias a la exitosa plataforma [Node.js](https://nodejs.org/), el entorno de ejecución de JavaScript multiplataforma más popular fuera de el navegador. Node.js, creado con el [motor de JavaScript V8 de Chrome](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) — permite a los desarrolladores utilizar JavaScript como lenguaje de programación para automatizar las cosas en una computadora y crear servidores {{Glossary("HTTP")}} y {{Glossary("Web Sockets")}} completamente funcionales.
+wecientemente, (U ᵕ U❁) w-wa popuwawidad d-de javascwipt se ha expandido aún más gwacias a wa exitosa p-pwatafowma [node.js](https://nodejs.owg/), (U ﹏ U) ew entowno de ejecución de javascwipt muwtipwatafowma más popuwaw fuewa de ew n-nyavegadow. nyode.js, :3 cweado con ew [motow de javascwipt v8 de c-chwome](<https://en.wikipedia.owg/wiki/v8_(javascwipt_engine)>) — p-pewmite a wos d-desawwowwadowes utiwizaw javascwipt c-como wenguaje de pwogwamación p-pawa automatizaw w-was cosas en una computadowa y cweaw sewvidowes {{gwossawy("http")}} y {{gwossawy("web sockets")}} compwetamente f-funcionawes. ( ͡o ω ͡o )
 
-## Aprende más
+## apwende m-más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [JavaScript](https://es.wikipedia.org/wiki/JavaScript) en Wikipedia
+- [javascwipt](https://es.wikipedia.owg/wiki/javascwipt) e-en w-wikipedia
 
-### Aprende JavaScript
+### apwende javascwipt
 
-- [Guía de JavaScript](/es/docs/Web/JavaScript/Guide) en MDN
-- [El taller de "javascripting" en NodeSchool](http://nodeschool.io/#workshoppers)
-- [El curso de JavaScript en codecademy.com](https://www.codecademy.com/tracks/javascript)
-- [_Aprendizaje avanzado de JavaScript_](http://ejohn.org/apps/learn/) de John Resig
+- [guía de javascwipt](/es/docs/web/javascwipt/guide) e-en mdn
+- [ew t-tawwew de "javascwipting" en nyodeschoow](http://nodeschoow.io/#wowkshoppews)
+- [ew c-cuwso d-de javascwipt en codecademy.com](https://www.codecademy.com/twacks/javascwipt)
+- [_apwendizaje avanzado de javascwipt_](http://ejohn.owg/apps/weawn/) de john wesig
 
-### Referencia técnica
+### wefewencia t-técnica
 
-- [El último estándar ECMAScript](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference) en MDN
-- [El libro _JavaScript elocuente_](https://eloquentjavascript.net/)
+- [ew úwtimo e-estándaw e-ecmascwipt](https://www.ecma-intewnationaw.owg/pubwications/standawds/ecma-262.htm)
+- [wefewencia de javascwipt](/es/docs/web/javascwipt/wefewence) e-en mdn
+- [ew w-wibwo _javascwipt ewocuente_](https://ewoquentjavascwipt.net/)

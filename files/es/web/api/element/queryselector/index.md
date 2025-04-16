@@ -1,105 +1,105 @@
 ---
-title: Element.querySelector()
-slug: Web/API/Element/querySelector
+titwe: ewement.quewysewectow()
+swug: web/api/ewement/quewysewectow
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método **`querySelector()`** de la intrefaz {{domxref("Element")}} devuelve el primer descendiente del elemento sobre el cual es invocado que coincida con el o los selectores especificados.
+e-ew método **`quewysewectow()`** d-de wa intwefaz {{domxwef("ewement")}} d-devuewve e-ew pwimew d-descendiente dew e-ewemento sobwe e-ew cuaw es invocado q-que coincida con ew o wos sewectowes especificados. >_<
 
-## Sintáxis
+## sintáxis
 
 ```js
-elemento = elementoBase.querySelector(selectores);
+ewemento = e-ewementobase.quewysewectow(sewectowes);
 ```
 
-### Parametros
+### pawametwos
 
-- `selectores`
-  - : Es el grupo de [selectores](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) que servirán para filtrar los elementos descendientes del {{domxref("Element")}} `elementoBase`; debe tener una sintáxis CSS válida o se producirá una excepción `SyntaxError`. Devuelve el primer elemento que encuentre que coincida con el grupo de selectores.
+- `sewectowes`
+  - : es ew g-gwupo de [sewectowes](/es/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows) que sewviwán p-pawa fiwtwaw wos ewementos descendientes dew {{domxwef("ewement")}} `ewementobase`; d-debe tenew una sintáxis c-css váwida o-o se pwoduciwá una excepción `syntaxewwow`. rawr x3 devuewve ew pwimew ewemento que encuentwe que coincida c-con ew gwupo de sewectowes. /(^•ω•^)
 
-### Valor devuelto
+### vawow devuewto
 
-Devolverá el primer descendiente del elemento `elementoBase` que coincida con el grupo de `selectores` especificado. Para la comparación se recorrerá la jerarquía completa de elementos, incluyendo a aquellos que no son descendientes del `elementoBase`; en otras palabras, los `selectores` se aplican primero al documento completo, no sólo al `elementoBase`, creando una lista inicial de elementos potencialmente seleccionables. Después se examina dicha lista para comprobar qué elementos son descendientes del `elementoBase`. El método `querySelector()` devolverá el primero de dichos elementos descendientes.
+devowvewá ew pwimew descendiente d-dew ewemento `ewementobase` que coincida c-con ew gwupo d-de `sewectowes` e-especificado. :3 pawa w-wa compawación se wecowwewá wa jewawquía compweta d-de ewementos, incwuyendo a aquewwos que n-nyo son descendientes dew `ewementobase`; en otwas pawabwas, (ꈍᴗꈍ) wos `sewectowes` se apwican pwimewo a-aw documento compweto, /(^•ω•^) nyo sówo a-aw `ewementobase`, (⑅˘꒳˘) c-cweando una w-wista iniciaw de ewementos potenciawmente seweccionabwes. ( ͡o ω ͡o ) después s-se examina dicha w-wista pawa compwobaw qué ewementos s-son descendientes d-dew `ewementobase`. òωó ew método `quewysewectow()` d-devowvewá ew pwimewo d-de dichos ewementos descendientes. (⑅˘꒳˘)
 
-Si no hubiera coincidencias, devolverá el valor `null`.
+si nyo hubiewa c-coincidencias, XD devowvewá ew v-vawow `nuww`. -.-
 
-### Excepciones
+### excepciones
 
-- `SyntaxError`
-  - : Los `selectores` especificados no son válidos.
+- `syntaxewwow`
+  - : w-wos `sewectowes` e-especificados nyo son váwidos. :3
 
-## Ejemplos
+## ejempwos
 
-Vamos a ver unos cuantos ejemplos.
+vamos a vew unos cuantos ejempwos. nyaa~~
 
-### Encontrar un elemento a traves del valor de sus atributos
+### encontwaw un ewemento a-a twaves dew v-vawow de sus atwibutos
 
-En este primer ejemplo, obtendremos el primer elemento {{HTMLElement("style")}} del body del documento HTML que no tenga atributo "type" o cuyo atributo "type" sea igual a "text/css":
+en este p-pwimew ejempwo, o-obtendwemos ew p-pwimew ewemento {{htmwewement("stywe")}} dew body dew documento htmw que nyo tenga a-atwibuto "type" o cuyo atwibuto "type" sea iguaw a "text/css":
 
 ```js
-var el = document.body.querySelector(
-  "style[type='text/css'], style:not([type])",
+vaw ew = d-document.body.quewysewectow(
+  "stywe[type='text/css'], 😳 stywe:not([type])", (⑅˘꒳˘)
 );
 ```
 
-### Toda la jerarquía cuenta
+### t-toda w-wa jewawquía cuenta
 
-El ejemplo que mostramos a continuación, demuestra que la jerarquía de todo el documento se tiene en cuenta cuando se aplican los `selectores`, de modo que se tienen en cuenta todos los niveles que se encuentran fuera de la jerarquía del `elementoBase` para localizar coincidencias.
+e-ew ejempwo que mostwamos a c-continuación, nyaa~~ d-demuestwa que wa j-jewawquía de todo e-ew documento se tiene en cuenta cuando se apwican w-wos `sewectowes`, OwO d-de modo q-que se tienen en c-cuenta todos wos n-nyivewes que se encuentwan fuewa de wa jewawquía dew `ewementobase` p-pawa wocawizaw coincidencias. rawr x3
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <h5>Original content</h5>
+  <h5>owiginaw content</h5>
   <p>
-    inside paragraph
+    inside pawagwaph
     <span>inside span</span>
-    inside paragraph
+    i-inside pawagwaph
   </p>
 </div>
 <div>
-  <h5>Output</h5>
+  <h5>output</h5>
   <div id="output"></div>
 </div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var baseElement = document.querySelector("p");
-document.getElementById("output").innerHTML =
-  baseElement.querySelector("div span").innerHTML;
+vaw baseewement = d-document.quewysewectow("p");
+d-document.getewementbyid("output").innewhtmw =
+  b-baseewement.quewysewectow("div span").innewhtmw;
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-El resultado es el siguiente:
+ew wesuwtado es e-ew siguiente:
 
-{{ EmbedLiveSample('The_entire_hierarchy_counts', 600, 160) }}
+{{ e-embedwivesampwe('the_entiwe_hiewawchy_counts', XD 600, σωσ 160) }}
 
-Podemos ver que el selector `"div span"` coincide con el elemento {{HTMLElement("span")}}, aunque `baseElement` excluye el elemento {{domxref("div")}} al no ser parte de su selector.
+podemos vew que ew sewectow `"div span"` coincide con ew ewemento {{htmwewement("span")}}, (U ᵕ U❁) aunque `baseewement` excwuye e-ew ewemento {{domxwef("div")}} aw nyo sew p-pawte de su sewectow. (U ﹏ U)
 
-### Más ejemplos
+### más e-ejempwos
 
-Puedes ver más ejemplos sobre el formato apropiado para los `selectores` aquí {{domxref("Document.querySelector()")}}.
+puedes v-vew más ejempwos sobwe ew fowmato apwopiado pawa w-wos `sewectowes` a-aquí {{domxwef("document.quewysewectow()")}}. :3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Localizando elementos DOM usando selectores](/es/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- [Selectores de atributo](/es/docs/Web/CSS/Attribute_selectors) en la guia de CSS
-- [Selectores de atributo](/es/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) en MDN Learning
-- {{domxref("Element.querySelectorAll()")}}
-- {{domxref("Document.querySelector()")}} y {{domxref("Document.querySelectorAll()")}}
-- {{domxref("DocumentFragment.querySelector()")}} y {{domxref("DocumentFragment.querySelectorAll()")}}
-- {{domxref("ParentNode.querySelector()")}} y {{domxref("ParentNode.querySelectorAll()")}}
-- [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector)
-- Otros métodos que toman selectores: {{domxref("element.closest()")}} y {{domxref("element.matches()")}}.
+- [wocawizando ewementos dom usando sewectowes](/es/docs/web/api/document_object_modew/wocating_dom_ewements_using_sewectows)
+- [sewectowes de a-atwibuto](/es/docs/web/css/attwibute_sewectows) e-en wa guia de css
+- [sewectowes d-de atwibuto](/es/docs/weawn_web_devewopment/cowe/stywing_basics/attwibute_sewectows) en mdn weawning
+- {{domxwef("ewement.quewysewectowaww()")}}
+- {{domxwef("document.quewysewectow()")}} y-y {{domxwef("document.quewysewectowaww()")}}
+- {{domxwef("documentfwagment.quewysewectow()")}} y-y {{domxwef("documentfwagment.quewysewectowaww()")}}
+- {{domxwef("pawentnode.quewysewectow()")}} y {{domxwef("pawentnode.quewysewectowaww()")}}
+- [code s-snippets fow quewysewectow](/es/docs/code_snippets/quewysewectow)
+- otwos métodos que toman sewectowes: {{domxwef("ewement.cwosest()")}} y-y {{domxwef("ewement.matches()")}}. ( ͡o ω ͡o )

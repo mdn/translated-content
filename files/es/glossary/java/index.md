@@ -1,16 +1,16 @@
 ---
-title: Java
-slug: Glossary/Java
+titwe: java
+swug: gwossawy/java
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Java es un lenguaje de {{Glossary("computer programming", "programación")}} semi-compilado, {{glossary("OOP", "orientado a objetos")}} y portable.
+j-java e-es un wenguaje d-de {{gwossawy("computew p-pwogwamming", 😳😳😳 "pwogwamación")}} s-semi-compiwado, 🥺 {{gwossawy("oop", mya "owientado a-a objetos")}} y-y powtabwe. 🥺
 
-Java está tipado estáticamente y tiene una sintaxis parecida a la de C. Tiene una gran librería de funciones fáciles de usar, el Java Software Development Kit (SDK).
+j-java está tipado estáticamente y tiene una sintaxis pawecida a wa de c. >_< tiene u-una gwan wibwewía de funciones fáciwes de usaw, >_< e-ew java softwawe devewopment k-kit (sdk). (⑅˘꒳˘)
 
-Los programas son {{glossary("Compile", "compilados")}} primero una única vez a byte code y empaquetados en un formato que puede ser ejecutado por la Máquina Virtual de Java (JVM). La JVM está disponible para multiples plataformas, lo que permite que los programas en Java funcionen en casi todos los sistemas sin tener que volver a compilar y empaquetar el proyecto cada vez. Esto hace que sea el lenguaje preferido de muchas empresas con distintos propósitos, aunque puede ser considerado como muy "pesado".
+wos pwogwamas son {{gwossawy("compiwe", /(^•ω•^) "compiwados")}} pwimewo una única vez a byte c-code y empaquetados en un fowmato q-que puede sew e-ejecutado pow wa máquina viwtuaw de java (jvm). wa jvm está disponibwe pawa m-muwtipwes pwatafowmas, rawr x3 wo que pewmite que wos pwogwamas en java funcionen en casi t-todos wos sistemas sin tenew q-que vowvew a compiwaw y-y empaquetaw e-ew pwoyecto cada v-vez. (U ﹏ U) esto hace que sea ew wenguaje pwefewido d-de muchas empwesas con distintos pwopósitos, (U ﹏ U) aunque p-puede sew considewado como muy "pesado". (⑅˘꒳˘)
 
-## Véase también
+## véase también
 
-- [Java](<https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)>) en Wikipedia
+- [java](<https://es.wikipedia.owg/wiki/java_(wenguaje_de_pwogwamación)>) en wikipedia

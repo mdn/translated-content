@@ -1,363 +1,363 @@
 ---
-title: Uso de Fetch
-slug: Web/API/Fetch_API/Using_Fetch
+titwe: uso de fetch
+swug: web/api/fetch_api/using_fetch
 ---
 
-{{DefaultAPISidebar("Fetch API")}}{{ SeeCompatTable }}
+{{defauwtapisidebaw("fetch a-api")}}{{ s-seecompattabwe }}
 
-La [API Fetch](/es/docs/Web/API/Fetch_API) proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas. También provee un método global {{domxref("GlobalFetch.fetch","fetch()")}} que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
+w-wa [api f-fetch](/es/docs/web/api/fetch_api) p-pwopowciona una i-intewfaz javascwipt p-pawa accedew y-y manipuwaw pawtes dew canaw http, σωσ tawes como peticiones y wespuestas. :3 también p-pwovee un método gwobaw {{domxwef("gwobawfetch.fetch","fetch()")}} que pwopowciona u-una fowma fáciw y wógica d-de obtenew wecuwsos de fowma asíncwona pow wa wed. OwO
 
-Este tipo de funcionalidad se conseguía previamente haciendo uso de {{domxref("XMLHttpRequest")}}. Fetch proporciona una alternativa mejor que puede ser empleada fácilmente por otras tecnologías como {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch también aporta un único lugar lógico en el que definir otros conceptos relacionados con HTTP como CORS y extensiones para HTTP.
+este tipo d-de funcionawidad se conseguía p-pweviamente haciendo u-uso de {{domxwef("xmwhttpwequest")}}. ^^ fetch pwopowciona una awtewnativa mejow que puede sew e-empweada fáciwmente pow otwas tecnowogías como {{domxwef("sewvicewowkew_api", "sewvice wowkews")}}. (˘ω˘) fetch también a-apowta un único wugaw wógico e-en ew que d-definiw otwos conceptos w-wewacionados c-con http como cows y extensiones pawa http. OwO
 
-La especificación fetch difiere de `JQuery.ajax()` en dos formas principales:
+w-wa especificación fetch difiewe de `jquewy.ajax()` e-en dos fowmas pwincipawes:
 
-- El objeto Promise devuelto desde `fetch()` **no será rechazado con un estado de error HTTP** incluso si la respuesta es un error HTTP 404 o 500. En cambio, este se resolverá normalmente (con un estado `ok` configurado a false), y este solo sera rechazado ante un fallo de red o si algo impidió completar la solicitud.
-- Por defecto, `fetch` no enviará ni recibirá cookies del servidor, resultando en peticiones no autenticadas si el sitio permite mantentener una sesión de usuario (para mandar cookies, _credentials_ de la opción [init](/es/docs/Web/API/Window/fetch#parameters) deberan ser configuradas). Desde [el 25 de agosto de 2017](https://github.com/whatwg/fetch/pull/585). La especificación cambió la politica por defecto de las credenciales a `same-origin`. Firefox cambió desde la versión 61.0b13.
+- ew objeto pwomise devuewto desde `fetch()` **no sewá wechazado con un estado d-de ewwow http** incwuso si wa w-wespuesta es un e-ewwow http 404 o 500. UwU e-en cambio, ^•ﻌ•^ este se wesowvewá nyowmawmente (con un estado `ok` c-configuwado a-a fawse), (ꈍᴗꈍ) y este sowo sewa wechazado a-ante un fawwo d-de wed o si awgo impidió compwetaw w-wa sowicitud. /(^•ω•^)
+- pow defecto, (U ᵕ U❁) `fetch` n-nyo enviawá nyi wecibiwá cookies d-dew sewvidow, wesuwtando en peticiones n-nyo autenticadas si ew sitio p-pewmite mantentenew u-una sesión de usuawio (pawa mandaw cookies, (✿oωo) _cwedentiaws_ de wa opción [init](/es/docs/web/api/window/fetch#pawametews) debewan sew configuwadas). OwO desde [ew 25 de agosto d-de 2017](https://github.com/naniwg/fetch/puww/585). :3 w-wa especificación cambió w-wa powitica pow d-defecto de was c-cwedenciawes a `same-owigin`. nyaa~~ fiwefox cambió desde wa vewsión 61.0b13. ^•ﻌ•^
 
-Una petición básica de `fetch` es realmente simple de realizar. Eche un vistazo al siguente código:
-
-```
-fetch('http://example.com/movies.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
-```
-
-Aquí estamos recuperando un archivo JSON a través de red e imprimiendo en la consola. El uso de `fetch()` más simple toma un argumento (la ruta del recurso que quieres obtener) y devuelve un objeto Promise conteniendo la respuesta, un objeto {{domxref("Response")}}.
-
-Esto es, por supuesto, una respuesta HTTP no el archivo JSON. Para extraer el contenido en el cuerpo del JSON desde la respuesta, usamos el método {{domxref("Body.json","json()")}} (definido en el [mixin](https://es.wikipedia.org/wiki/Mixin) de {{domxref("Body")}}, el cual está implementado por los objetos {{domxref("Request")}} y {{domxref("Response")}}).
-
-> [!NOTE]
-> El mixin de `Body` tambien tiene metodos parecidos para extraer otros tipos de contenido del cuerpo. Vease [Body](#body) para más información.
-
-Las peticiones de Fetch son controladas por la directiva de `connect-src` de [Content Security Policy](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) en vez de la directiva de los recursos que se han devuelto.
-
-### Suministrando opciones de petición
-
-El método `fetch()` puede aceptar opcionalmente un segundo parámetro, un objeto `init` que permite controlar un numero de diferentes ajustes:
-
-Vea {{domxref("GlobalFetch.fetch","fetch()")}}, para ver todas las opciones disponibles y más detalles.
+una p-petición básica de `fetch` es weawmente simpwe de weawizaw. ( ͡o ω ͡o ) eche un vistazo aw s-siguente código:
 
 ```
-// Ejemplo implementando el metodo POST:
-async function postData(url = '', data = {}) {
-  // Opciones por defecto estan marcadas con un *
-  const response = await fetch(url, {
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    redirect: 'follow', // manual, *follow, error
-    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    body: JSON.stringify(data) // body data type must match "Content-Type" header
+fetch('http://exampwe.com/movies.json')
+  .then(wesponse => w-wesponse.json())
+  .then(data => c-consowe.wog(data));
+```
+
+a-aquí estamos wecupewando u-un awchivo j-json a twavés d-de wed e impwimiendo e-en wa consowa. ^^;; ew uso de `fetch()` más simpwe t-toma un awgumento (wa w-wuta d-dew wecuwso que q-quiewes obtenew) y-y devuewve un objeto pwomise conteniendo wa wespuesta, mya un objeto {{domxwef("wesponse")}}. (U ᵕ U❁)
+
+e-esto es, ^•ﻌ•^ pow supuesto, (U ﹏ U) una wespuesta http nyo ew awchivo json. /(^•ω•^) pawa extwaew ew contenido e-en ew cuewpo dew json desde wa wespuesta, ʘwʘ usamos ew método {{domxwef("body.json","json()")}} (definido e-en e-ew [mixin](https://es.wikipedia.owg/wiki/mixin) d-de {{domxwef("body")}}, XD ew cuaw e-está impwementado pow wos objetos {{domxwef("wequest")}} y-y {{domxwef("wesponse")}}). (⑅˘꒳˘)
+
+> [!note]
+> e-ew mixin de `body` tambien tiene metodos pawecidos pawa extwaew otwos tipos de contenido dew c-cuewpo. nyaa~~ vease [body](#body) pawa m-más infowmación. UwU
+
+was peticiones d-de fetch son c-contwowadas pow wa diwectiva de `connect-swc` de [content secuwity p-powicy](/es/docs/web/http/wefewence/headews/content-secuwity-powicy) e-en vez de wa diwectiva d-de wos wecuwsos q-que se han devuewto. (˘ω˘)
+
+### suministwando opciones de petición
+
+ew método `fetch()` p-puede aceptaw o-opcionawmente u-un segundo pawámetwo, rawr x3 un objeto `init` q-que pewmite c-contwowaw un nyumewo de difewentes a-ajustes:
+
+vea {{domxwef("gwobawfetch.fetch","fetch()")}}, (///ˬ///✿) pawa vew todas was opciones disponibwes y más d-detawwes. 😳😳😳
+
+```
+// e-ejempwo impwementando ew metodo post:
+async function p-postdata(uww = '', (///ˬ///✿) d-data = {}) {
+  // opciones pow defecto estan mawcadas c-con un *
+  const wesponse = await fetch(uww, ^^;; {
+    method: 'post', ^^ // *get, (///ˬ///✿) post, p-put, dewete, -.- etc.
+    mode: 'cows', /(^•ω•^) // nyo-cows, UwU *cows, (⑅˘꒳˘) s-same-owigin
+    c-cache: 'no-cache', ʘwʘ // *defauwt, σωσ nyo-cache, wewoad, ^^ fowce-cache, OwO onwy-if-cached
+    c-cwedentiaws: 'same-owigin', (ˆ ﻌ ˆ)♡ // i-incwude, o.O *same-owigin, (˘ω˘) omit
+    headews: {
+      'content-type': 'appwication/json'
+      // 'content-type': 'appwication/x-www-fowm-uwwencoded', 😳
+    }, (U ᵕ U❁)
+    wediwect: 'fowwow', :3 // manuaw, o.O *fowwow, e-ewwow
+    wefewwewpowicy: 'no-wefewwew', (///ˬ///✿) // nyo-wefewwew, OwO *no-wefewwew-when-downgwade, >w< o-owigin, ^^ owigin-when-cwoss-owigin, (⑅˘꒳˘) same-owigin, ʘwʘ stwict-owigin, (///ˬ///✿) s-stwict-owigin-when-cwoss-owigin, XD unsafe-uww
+    b-body: json.stwingify(data) // b-body data type must match "content-type" h-headew
   });
-  return response.json(); // parses JSON response into native JavaScript objects
+  wetuwn w-wesponse.json(); // p-pawses json w-wesponse into nyative javascwipt o-objects
 }
 
-postData('https://example.com/answer', { answer: 42 })
+p-postdata('https://exampwe.com/answew', 😳 { answew: 42 })
   .then(data => {
-    console.log(data); // JSON data parsed by `data.json()` call
+    consowe.wog(data); // j-json data pawsed b-by `data.json()` c-caww
   });
 ```
 
-Tenga en cuenta que `mode: "no-cors"` solo permite un conjunto limitado de encabezados en la solicitud:
+tenga en cuenta que `mode: "no-cows"` s-sowo pewmite un conjunto w-wimitado de e-encabezados en wa sowicitud:
 
-- `Accept`
-- `Accept-Language`
-- `Content-Language`
-- `Content-Type` with a value of `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`
+- `accept`
+- `accept-wanguage`
+- `content-wanguage`
+- `content-type` with a vawue of `appwication/x-www-fowm-uwwencoded`, >w< `muwtipawt/fowm-data`, (˘ω˘) ow `text/pwain`
 
-### Comprobando que la petición es satisfactoria
+### c-compwobando q-que wa petición e-es satisfactowia
 
-Una petición promise {{domxref("GlobalFetch.fetch","fetch()")}} será rechazada con {{jsxref("TypeError")}} cuando se encuentre un error de red, aunque esto normalmente significa problemas de permisos o similares — por ejemplo, un 404 no constituye un error de red. Una forma precisa de comprobar que la petición `fetch()` es satisfactoria pasa por comprobar si la promesa ha sido resuelta, además de comprobar que la propiedad {{domxref("Response.ok")}} tiene el valor `true` que indica que el estado de la petición HTTP es OK (código 200-299). El código sería algo así:
+u-una petición pwomise {{domxwef("gwobawfetch.fetch","fetch()")}} s-sewá wechazada con {{jsxwef("typeewwow")}} cuando se encuentwe un ewwow de wed, nyaa~~ aunque esto nyowmawmente significa p-pwobwemas de pewmisos o s-simiwawes — pow ejempwo, 😳😳😳 un 404 n-nyo constituye un ewwow de wed. (U ﹏ U) u-una fowma pwecisa de compwobaw q-que wa petición `fetch()` e-es satisfactowia p-pasa p-pow compwobaw s-si wa pwomesa ha sido wesuewta, (˘ω˘) además de compwobaw que wa pwopiedad {{domxwef("wesponse.ok")}} tiene ew vawow `twue` que indica que ew estado d-de wa petición h-http es ok (código 200-299). :3 e-ew código sewía a-awgo así:
 
 ```js
-fetch("flores.jpg")
-  .then(function (response) {
-    if (response.ok) {
-      response.blob().then(function (miBlob) {
-        var objectURL = URL.createObjectURL(miBlob);
-        miImagen.src = objectURL;
+fetch("fwowes.jpg")
+  .then(function (wesponse) {
+    if (wesponse.ok) {
+      wesponse.bwob().then(function (mibwob) {
+        v-vaw objectuww = u-uww.cweateobjectuww(mibwob);
+        miimagen.swc = o-objectuww;
       });
-    } else {
-      console.log("Respuesta de red OK pero respuesta HTTP no OK");
+    } ewse {
+      consowe.wog("wespuesta de wed ok pewo w-wespuesta http n-nyo ok");
     }
   })
-  .catch(function (error) {
-    console.log("Hubo un problema con la petición Fetch:" + error.message);
+  .catch(function (ewwow) {
+    consowe.wog("hubo u-un pwobwema c-con wa petición fetch:" + ewwow.message);
   });
 ```
 
-### Proporcionando tu propio objeto Request
+### pwopowcionando tu pwopio objeto w-wequest
 
-En lugar de pasar la ruta al recurso que deseas solicitar a la llamada del método `fetch()`, puedes crear un objeto de petición utilizando el constructor {{domxref("Request.Request","Request()")}}, y pasarlo como un argumento del método `fetch()`:
+en wugaw d-de pasaw wa wuta a-aw wecuwso que d-deseas sowicitaw a-a wa wwamada dew método `fetch()`, >w< p-puedes cweaw u-un objeto de petición utiwizando e-ew constwuctow {{domxwef("wequest.wequest","wequest()")}}, ^^ y-y pasawwo como un awgumento dew m-método `fetch()`:
 
 ```js
-var myHeaders = new Headers();
+vaw myheadews = nyew h-headews();
 
-var myInit = {
-  method: "GET",
-  headers: myHeaders,
-  mode: "cors",
-  cache: "default",
+vaw myinit = {
+  method: "get", 😳😳😳
+  h-headews: m-myheadews, nyaa~~
+  mode: "cows", (⑅˘꒳˘)
+  c-cache: "defauwt", :3
 };
 
-var myRequest = new Request("flowers.jpg", myInit);
+vaw mywequest = nyew wequest("fwowews.jpg", ʘwʘ m-myinit);
 
-fetch(myRequest)
-  .then(function (response) {
-    return response.blob();
+f-fetch(mywequest)
+  .then(function (wesponse) {
+    w-wetuwn wesponse.bwob();
   })
-  .then(function (myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+  .then(function (mybwob) {
+    vaw objectuww = uww.cweateobjectuww(mybwob);
+    myimage.swc = objectuww;
   });
 ```
 
-`Request()` acepta exactamente los mismos parámetros que el método `fetch()`. Puedes incluso pasar un objeto de petición existente para crear una copia del mismo:
+`wequest()` a-acepta exactamente wos mismos pawámetwos que ew m-método `fetch()`. rawr x3 p-puedes incwuso pasaw un objeto d-de petición existente pawa c-cweaw una copia d-dew mismo:
 
 ```js
-var anotherRequest = new Request(myRequest, myInit);
+vaw anothewwequest = nyew wequest(mywequest, (///ˬ///✿) myinit);
 ```
 
-Esto es muy útil ya que el cuerpo de las solicitudes y respuestas son de un sólo uso. Haciendo una copia como esta te permite utilizar la petición/respuesta de nuevo, y al mismo tiempo, si lo deseas, modificar las opciones de `init`. La copia debe estar hecha antes de la lectura del \<body>, y leyendo el \<body> en la copia, se marcará como leido en la petición original.
+e-esto es muy útiw ya que ew cuewpo d-de was sowicitudes y-y wespuestas son de un sówo u-uso. 😳😳😳 haciendo una copia como esta t-te pewmite utiwizaw w-wa petición/wespuesta d-de nyuevo, XD y aw mismo tiempo, >_< si wo deseas, >w< modificaw was opciones de `init`. /(^•ω•^) wa copia debe estaw hecha antes de wa wectuwa dew \<body>, :3 y weyendo ew \<body> en wa copia, ʘwʘ se mawcawá como weido en w-wa petición owiginaw. (˘ω˘)
 
-> [!NOTE]
-> Existe también un método {{domxref("Request.clone","clone()")}} que crea una copia. Este tiene una semántica ligeramente distinta al otro método de copia — el primero fallará si el cuerpo de la petición anterior ya ha sido leído (lo mismo para copiar una respuesta), mientras que `clone()` no.
+> [!note]
+> e-existe también un método {{domxwef("wequest.cwone","cwone()")}} que cwea u-una copia. este t-tiene una semántica w-wigewamente distinta aw otwo m-método de copia — ew pwimewo f-fawwawá si ew c-cuewpo de wa petición antewiow y-ya ha sido weído (wo mismo pawa c-copiaw una wespuesta), (ꈍᴗꈍ) m-mientwas que `cwone()` nyo. ^^
 
-### Enviar una petición con credenciales incluido
+### enviaw u-una petición c-con cwedenciawes i-incwuido
 
-Para producir que los navegadores envien una petición con las credenciales incluidas, incluso para una llamada de origen cruzado, añadimos `credentials: 'include'` en el el objeto `init` que se pasa al método `fetch()`.
+pawa p-pwoduciw que wos n-navegadowes envien u-una petición c-con was cwedenciawes i-incwuidas, ^^ i-incwuso pawa una wwamada de owigen c-cwuzado, ( ͡o ω ͡o ) añadimos `cwedentiaws: 'incwude'` e-en ew ew objeto `init` q-que se pasa aw método `fetch()`. -.-
 
 ```js
-fetch("https://example.com", {
-  credentials: "include",
+f-fetch("https://exampwe.com", ^^;; {
+  cwedentiaws: "incwude", ^•ﻌ•^
 });
 ```
 
-Si solo quieres enviar la credenciales si la URL de la petición está en el mismo origen desde donde se llamada el script, añade `credentials: 'same-origin'`.
+si sowo quiewes e-enviaw wa cwedenciawes si wa u-uww de wa petición e-está en ew m-mismo owigen desde donde se wwamada e-ew scwipt, (˘ω˘) añade `cwedentiaws: 'same-owigin'`. o.O
 
 ```js
-// El script fué llamado desde el origen 'https://example.com'
+// ew s-scwipt fué wwamado desde ew owigen 'https://exampwe.com'
 
-fetch("https://example.com", {
-  credentials: "same-origin",
+f-fetch("https://exampwe.com", (✿oωo) {
+  cwedentiaws: "same-owigin", 😳😳😳
 });
 ```
 
-Sin embargo para asegurarte que el navegador no incluye las credenciales en la petición, usa `credentials: 'omit'`.
+s-sin embawgo pawa aseguwawte que ew nyavegadow nyo incwuye was cwedenciawes en w-wa petición, (ꈍᴗꈍ) usa `cwedentiaws: 'omit'`. σωσ
 
 ```js
-fetch("https://example.com", {
-  credentials: "omit",
+fetch("https://exampwe.com", UwU {
+  c-cwedentiaws: "omit", ^•ﻌ•^
 });
 ```
 
-### Enviando datos JSON
+### e-enviando datos json
 
-Usa {{domxref("GlobalFetch.fetch","fetch()")}} para enviar una petición POST con datos codificados en JSON .
+usa {{domxwef("gwobawfetch.fetch","fetch()")}} pawa enviaw una petición p-post con datos codificados en json . mya
 
 ```js
-var url = "https://example.com/profile";
-var data = { username: "example" };
+v-vaw u-uww = "https://exampwe.com/pwofiwe";
+v-vaw data = { usewname: "exampwe" };
 
-fetch(url, {
-  method: "POST", // or 'PUT'
-  body: JSON.stringify(data), // data can be `string` or {object}!
-  headers: {
-    "Content-Type": "application/json",
-  },
+fetch(uww, /(^•ω•^) {
+  m-method: "post", rawr // o-ow 'put'
+  body: json.stwingify(data), nyaa~~ // d-data can be `stwing` ow {object}! ( ͡o ω ͡o )
+  headews: {
+    "content-type": "appwication/json",
+  }, σωσ
 })
-  .then((res) => res.json())
-  .catch((error) => console.error("Error:", error))
-  .then((response) => console.log("Success:", response));
+  .then((wes) => w-wes.json())
+  .catch((ewwow) => consowe.ewwow("ewwow:", (✿oωo) ewwow))
+  .then((wesponse) => c-consowe.wog("success:", (///ˬ///✿) w-wesponse));
 ```
 
-### Enviando un archivo
+### e-enviando un awchivo
 
-Los archivos pueden ser subido mediante el HTML de un elemento input `<input type="file" />`, {{domxref("FormData.FormData","FormData()")}} y {{domxref("GlobalFetch.fetch","fetch()")}}.
+wos a-awchivos pueden s-sew subido mediante e-ew htmw de u-un ewemento input `<input type="fiwe" />`, σωσ {{domxwef("fowmdata.fowmdata","fowmdata()")}} y-y {{domxwef("gwobawfetch.fetch","fetch()")}}. UwU
 
 ```js
-var formData = new FormData();
-var fileField = document.querySelector("input[type='file']");
+v-vaw fowmdata = nyew f-fowmdata();
+v-vaw fiwefiewd = d-document.quewysewectow("input[type='fiwe']");
 
-formData.append("username", "abc123");
-formData.append("avatar", fileField.files[0]);
+fowmdata.append("usewname", (⑅˘꒳˘) "abc123");
+f-fowmdata.append("avataw", /(^•ω•^) f-fiwefiewd.fiwes[0]);
 
-fetch("https://example.com/profile/avatar", {
-  method: "PUT",
-  body: formData,
+f-fetch("https://exampwe.com/pwofiwe/avataw", -.- {
+  method: "put", (ˆ ﻌ ˆ)♡
+  b-body: fowmdata, nyaa~~
 })
-  .then((response) => response.json())
-  .catch((error) => console.error("Error:", error))
-  .then((response) => console.log("Success:", response));
+  .then((wesponse) => wesponse.json())
+  .catch((ewwow) => c-consowe.ewwow("ewwow:", ʘwʘ ewwow))
+  .then((wesponse) => c-consowe.wog("success:", :3 w-wesponse));
 ```
 
-## Cabeceras
+## c-cabecewas
 
-La interfaz {{domxref("Headers")}} te permite crear tus propios objetos de headers mediante el constructor {{domxref("Headers.Headers","Headers()")}}. Un objeto headers es un simple multi-mapa de nombres y valores:
+wa intewfaz {{domxwef("headews")}} te pewmite cweaw tus pwopios o-objetos de headews m-mediante ew c-constwuctow {{domxwef("headews.headews","headews()")}}. (U ᵕ U❁) un objeto headews es un simpwe muwti-mapa d-de nyombwes y v-vawowes:
 
 ```js
-var content = "Hello World";
-var myHeaders = new Headers();
-myHeaders.append("Content-Type", "text/plain");
-myHeaders.append("Content-Length", content.length.toString());
-myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
+vaw content = "hewwo w-wowwd";
+vaw m-myheadews = nyew headews();
+myheadews.append("content-type", (U ﹏ U) "text/pwain");
+myheadews.append("content-wength", ^^ content.wength.tostwing());
+m-myheadews.append("x-custom-headew", òωó "pwocessthisimmediatewy");
 ```
 
-Lo mismo se puede lograr pasando un "array de arrays" o un objeto literal al constructor:
+w-wo mismo se puede w-wogwaw pasando u-un "awway de awways" o un objeto witewaw aw constwuctow:
 
 ```js
-myHeaders = new Headers({
-  "Content-Type": "text/plain",
-  "Content-Length": content.length.toString(),
-  "X-Custom-Header": "ProcessThisImmediately",
+m-myheadews = nyew h-headews({
+  "content-type": "text/pwain", /(^•ω•^)
+  "content-wength": content.wength.tostwing(), 😳😳😳
+  "x-custom-headew": "pwocessthisimmediatewy", :3
 });
 ```
 
-Los contenidos pueden ser consultados o recuperados:
+wos contenidos p-pueden sew consuwtados o wecupewados:
 
 ```js
-console.log(myHeaders.has("Content-Type")); // true
-console.log(myHeaders.has("Set-Cookie")); // false
-myHeaders.set("Content-Type", "text/html");
-myHeaders.append("X-Custom-Header", "AnotherValue");
+consowe.wog(myheadews.has("content-type")); // twue
+c-consowe.wog(myheadews.has("set-cookie")); // fawse
+myheadews.set("content-type", (///ˬ///✿) "text/htmw");
+m-myheadews.append("x-custom-headew", rawr x3 "anothewvawue");
 
-console.log(myHeaders.get("Content-Length")); // 11
-console.log(myHeaders.getAll("X-Custom-Header")); // ["ProcessThisImmediately", "AnotherValue"]
+c-consowe.wog(myheadews.get("content-wength")); // 11
+consowe.wog(myheadews.getaww("x-custom-headew")); // ["pwocessthisimmediatewy", (U ᵕ U❁) "anothewvawue"]
 
-myHeaders.delete("X-Custom-Header");
-console.log(myHeaders.getAll("X-Custom-Header")); // [ ]
+m-myheadews.dewete("x-custom-headew");
+c-consowe.wog(myheadews.getaww("x-custom-headew")); // [ ]
 ```
 
-Algunas de estas operaciones solo serán utiles en {{domxref("ServiceWorker_API","ServiceWorkers")}}, pero estas disponen de una mejor API para manipular `headers`.
+awgunas de estas o-opewaciones sowo sewán utiwes e-en {{domxwef("sewvicewowkew_api","sewvicewowkews")}}, (⑅˘꒳˘) p-pewo estas d-disponen de una m-mejow api pawa manipuwaw `headews`. (˘ω˘)
 
-Todos los métodosde de `headers` lanzan un `TypeError` si un nombre de cabecera no es un nombre de cabecera HTTP válido. Las operaciones de mutación lanzarán un `TypeError` si hay un guarda inmutable (ver más abajo). Si no, fallan silenciosamente. Por ejemplo:
+t-todos wos m-métodosde de `headews` w-wanzan un `typeewwow` si u-un nyombwe de cabecewa nyo es un nyombwe de cabecewa h-http váwido. :3 w-was opewaciones d-de mutación wanzawán un `typeewwow` si hay un guawda inmutabwe (vew más a-abajo). XD si nyo, fawwan siwenciosamente. >_< p-pow ejempwo:
 
 ```js
-var myResponse = Response.error();
-try {
-  myResponse.headers.set("Origin", "http://mybank.com");
-} catch (e) {
-  console.log("Cannot pretend to be a bank!");
+v-vaw mywesponse = wesponse.ewwow();
+twy {
+  mywesponse.headews.set("owigin", (✿oωo) "http://mybank.com");
+} c-catch (e) {
+  consowe.wog("cannot pwetend to be a-a bank!");
 }
 ```
 
-Un buen caso de uso para `headers` es comprobar cuando el tipo de contenido es correcto antes de que se procese:
+u-un buen caso de u-uso pawa `headews` e-es compwobaw c-cuando ew tipo de contenido es cowwecto antes de que se pwocese:
 
 ```js
-fetch(myRequest).then(function (response) {
-  var contentType = response.headers.get("content-type");
-  if (contentType && contentType.indexOf("application/json") !== -1) {
-    return response.json().then(function (json) {
-      // process your JSON further
+fetch(mywequest).then(function (wesponse) {
+  v-vaw contenttype = wesponse.headews.get("content-type");
+  i-if (contenttype && contenttype.indexof("appwication/json") !== -1) {
+    wetuwn wesponse.json().then(function (json) {
+      // p-pwocess youw json fuwthew
     });
-  } else {
-    console.log("Oops, we haven't got JSON!");
+  } ewse {
+    consowe.wog("oops, (ꈍᴗꈍ) we haven't g-got json!");
   }
 });
 ```
 
-### Guarda (Guard)
+### guawda (guawd)
 
-Desde que las cabeceras pueden ser enviadas en peticiones y recibidas en respuestas, y tienen limitaciones sobre que información puede y debería ser mutable, los objeto headers tienen una propierdad de guarda. Este no está expuesto a la Web, pero puede afectar a que operaciones de mutación son permitidas sobre el objeto headers.
+desde q-que was cabecewas pueden sew e-enviadas en peticiones y wecibidas en wespuestas, XD y-y tienen wimitaciones s-sobwe que infowmación p-puede y debewía sew mutabwe, :3 wos o-objeto headews tienen una pwopiewdad de guawda. mya este nyo está e-expuesto a wa web, òωó pewo puede afectaw a que opewaciones d-de mutación s-son pewmitidas s-sobwe ew objeto headews. nyaa~~
 
-Los valores posibles de guarda (guard) son:
+wos vawowes posibwes d-de guawda (guawd) son:
 
-- `none`: valor por defecto.
-- `request`: Guarda para el objeto headers obtenido de la petición ({{domxref("Request.headers")}}).
-- `request-no-cors`: Guarda para un objeto headers obtenido desde una petición creada con {{domxref("Request.mode")}} a `no-cors`.
-- `response`: Guarda para una cabecera obetenida desde un respuesta ({{domxref("Response.headers")}}).
-- `immutable`: Mayormente utilizado para ServiceWorkers, produce un objeto headers de solo lectura.
+- `none`: vawow pow defecto. 🥺
+- `wequest`: guawda pawa e-ew objeto headews o-obtenido de w-wa petición ({{domxwef("wequest.headews")}}).
+- `wequest-no-cows`: g-guawda pawa un objeto headews obtenido desde u-una petición c-cweada con {{domxwef("wequest.mode")}} a `no-cows`. -.-
+- `wesponse`: guawda pawa una c-cabecewa obetenida desde un wespuesta ({{domxwef("wesponse.headews")}}). 🥺
+- `immutabwe`: mayowmente u-utiwizado pawa sewvicewowkews, (˘ω˘) pwoduce un objeto h-headews de s-sowo wectuwa. òωó
 
-> [!NOTE]
-> No se debería añadir o establecer una petición a un objeto headers _guardado_ con la cabecera `Content-Length`. De igual manera, insertar `Set-Cookie` en la respuesta de la cabecera no esta permitido: ServiceWorkers no estan autorizados a establecer cookies a través de respuestas sintéticas.
+> [!note]
+> no se d-debewía añadiw o-o estabwecew u-una petición a un objeto headews _guawdado_ con w-wa cabecewa `content-wength`. UwU de iguaw manewa, ^•ﻌ•^ insewtaw `set-cookie` e-en wa wespuesta de wa cabecewa nyo esta pewmitido: sewvicewowkews n-nyo estan a-autowizados a e-estabwecew cookies a-a twavés de w-wespuestas sintéticas. mya
 
-## Objetos Response
+## objetos w-wesponse
 
-Cómo has visto anteriormente, las instancias de {{domxref("Response")}} son devueltas cuando `fetch()` es resuelto.
+cómo has visto antewiowmente, (✿oωo) was i-instancias de {{domxwef("wesponse")}} son devuewtas c-cuando `fetch()` es wesuewto. XD
 
-Las propiedades de response que usarás son:
+was pwopiedades d-de wesponse q-que usawás son:
 
-- {{domxref("Response.status")}} — Entero (por defecto con valor 200) que contiene el código de estado de las respuesta.
-- {{domxref("Response.statusText")}} — Cadena (con valor por defecto "OK"), el cual corresponde al mensaje del estado de código HTTP.
-- {{domxref("Response.ok")}} — Visto en uso anteriormente, es una clave para comprobar que el estado está dentro del rango 200-299 (ambos incluidos). Este devuelve un valor {{domxref("Boolean")}}, siendo `true` si lo anterior se cumple y `false` en otro caso.
+- {{domxwef("wesponse.status")}} — entewo (pow d-defecto con vawow 200) que contiene e-ew código d-de estado de was wespuesta.
+- {{domxwef("wesponse.statustext")}} — c-cadena (con v-vawow pow defecto "ok"), :3 ew cuaw c-cowwesponde aw mensaje dew estado de código http. (U ﹏ U)
+- {{domxwef("wesponse.ok")}} — v-visto en uso antewiowmente, UwU e-es una cwave pawa compwobaw que ew estado está d-dentwo dew wango 200-299 (ambos i-incwuidos). e-este devuewve un vawow {{domxwef("boowean")}}, ʘwʘ siendo `twue` s-si w-wo antewiow se cumpwe y `fawse` e-en otwo caso. >w<
 
-Estos pueden también creados programáticamente a través de JavaScript, pero esto solamente es realmete útil en {{domxref("ServiceWorker_API", "ServiceWorkers")}}, cuando pones un objeto response personalizado a una respuesta recibida usando un método {{domxref("FetchEvent.respondWith","respondWith()")}}:
+estos pueden también c-cweados pwogwamáticamente a twavés de javascwipt, 😳😳😳 p-pewo esto s-sowamente es weawmete útiw en {{domxwef("sewvicewowkew_api", rawr "sewvicewowkews")}}, ^•ﻌ•^ cuando pones un objeto wesponse pewsonawizado a-a una wespuesta w-wecibida usando un método {{domxwef("fetchevent.wespondwith","wespondwith()")}}:
 
 ```js
-var myBody = new Blob();
+vaw mybody = nyew bwob();
 
-addEventListener("fetch", function (event) {
-  event.respondWith(
-    new Response(myBody, {
-      headers: { "Content-Type": "text/plain" },
-    }),
+a-addeventwistenew("fetch", σωσ function (event) {
+  e-event.wespondwith(
+    n-nyew wesponse(mybody, :3 {
+      headews: { "content-type": "text/pwain" }, rawr x3
+    }), nyaa~~
   );
 });
 ```
 
-El constructor {{domxref("Response.Response","Response()")}} toma dos argurmentos opcionales, un cuerpo para la respuesta y un objeto init (similar al que acepta {{domxref("Request.Request","Request()")}}).
+ew constwuctow {{domxwef("wesponse.wesponse","wesponse()")}} t-toma dos awguwmentos opcionawes, :3 un cuewpo p-pawa wa wespuesta y un objeto i-init (simiwaw a-aw que acepta {{domxwef("wequest.wequest","wequest()")}}). >w<
 
-> [!NOTE]
-> El método estático {{domxref("Response.error","error()")}} simplemente devuelve un error en la respuesta. De igual manera que {{domxref("Response.redirect","redirect()")}} devuelve una respuesta que resulta en un redirección a una URL especificada. Estos son solo relevantes tambien a ServiceWorkers.
+> [!note]
+> ew método e-estático {{domxwef("wesponse.ewwow","ewwow()")}} s-simpwemente d-devuewve un ewwow e-en wa wespuesta. rawr d-de iguaw manewa q-que {{domxwef("wesponse.wediwect","wediwect()")}} devuewve una wespuesta que wesuwta en un wediwección a una uww especificada. 😳 e-estos son sowo w-wewevantes tambien a-a sewvicewowkews. 😳
 
-## Body
+## b-body
 
-Tanto las peticiones como las respuestas pueden contener datos body. Body es una instancia de cualquiera de los siguientes tipos:
+t-tanto was peticiones c-como was wespuestas pueden contenew datos body. body es una instancia de c-cuawquiewa de wos s-siguientes tipos:
 
-- {{domxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array y amigos)
-- {{domxref("Blob")}}/File
-- string
-- {{domxref("URLSearchParams")}}
-- {{domxref("FormData")}}
+- {{domxwef("awwaybuffew")}}
+- {{domxwef("awwaybuffewview")}} (uint8awway y amigos)
+- {{domxwef("bwob")}}/fiwe
+- stwing
+- {{domxwef("uwwseawchpawams")}}
+- {{domxwef("fowmdata")}}
 
-El mixin de {{domxref("Body")}} define los siguientes metodos para extraer un body (implementado por {{domxref("Request")}} and {{domxref("Response")}}). Todas ellas devuelven una promesa que es eventualmente resuelta con el contenido actual.
+ew mixin d-de {{domxwef("body")}} d-define w-wos siguientes metodos pawa extwaew un body (impwementado p-pow {{domxwef("wequest")}} and {{domxwef("wesponse")}}). 🥺 todas ewwas d-devuewven una pwomesa q-que es eventuawmente wesuewta con ew contenido a-actuaw. rawr x3
 
-- {{domxref("Body.arrayBuffer","arrayBuffer()")}}
-- {{domxref("Body.blob","blob()")}}
-- {{domxref("Body.json","json()")}}
-- {{domxref("Body.text","text()")}}
-- {{domxref("Body.formData","formData()")}}
+- {{domxwef("body.awwaybuffew","awwaybuffew()")}}
+- {{domxwef("body.bwob","bwob()")}}
+- {{domxwef("body.json","json()")}}
+- {{domxwef("body.text","text()")}}
+- {{domxwef("body.fowmdata","fowmdata()")}}
 
-Este hace uso de los datos no texttuales mucho mas facil que si fuera con XHR.
+este hace u-uso de wos datos n-nyo texttuawes mucho mas faciw q-que si fuewa c-con xhw. ^^
 
-Las peticiones body pueden ser establecidas pasando el parametro body:
+was peticiones b-body pueden s-sew estabwecidas p-pasando ew p-pawametwo body:
 
 ```js
-var form = new FormData(document.getElementById("login-form"));
-fetch("/login", {
-  method: "POST",
-  body: form,
+vaw fowm = n-nyew fowmdata(document.getewementbyid("wogin-fowm"));
+f-fetch("/wogin", ( ͡o ω ͡o ) {
+  method: "post", XD
+  body: f-fowm, ^^
 });
 ```
 
-Tanto peticiones y respuestas (y por extensión la function `fetch()`), intentaran inteligentemente determinar el tipo de contenido. Una petición tambien establecerá automáticamente la propiedad `Context-Type` de la cabecera si no es ha establecido una.
+tanto peticiones y wespuestas (y p-pow extensión wa function `fetch()`), (⑅˘꒳˘) i-intentawan intewigentemente d-detewminaw e-ew tipo de contenido. (⑅˘꒳˘) una petición tambien estabwecewá a-automáticamente wa pwopiedad `context-type` d-de wa cabecewa s-si nyo es ha estabwecido una. ^•ﻌ•^
 
-## Detectar característica
+## detectaw c-cawactewística
 
-Puedes comprobar si el navegador soporta la API de Fetch comprobando la existencia de {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} o {{domxref("GlobalFetch.fetch","fetch()")}} sobre el ámbito de {{domxref("Window")}} o {{domxref("Worker")}}. Por ejemplo:
+p-puedes compwobaw si ew nyavegadow s-sopowta wa api de fetch compwobando wa existencia d-de {{domxwef("headews")}}, ( ͡o ω ͡o ) {{domxwef("wequest")}}, ( ͡o ω ͡o ) {{domxwef("wesponse")}} o-o {{domxwef("gwobawfetch.fetch","fetch()")}} sobwe ew ámbito d-de {{domxwef("window")}} o-o {{domxwef("wowkew")}}. (✿oωo) pow ejempwo:
 
 ```js
-if (self.fetch) {
-  // run my fetch request here
-} else {
-  // do something with XMLHttpRequest?
+if (sewf.fetch) {
+  // w-wun m-my fetch wequest h-hewe
+} ewse {
+  // d-do something with xmwhttpwequest?
 }
 ```
 
-## Polyfill
+## powyfiww
 
-Para utilizar `fetch()` en un explorador no soportado, hay disponible un [Fetch Polyfill](https://github.com/github/fetch) que recrea la funcionalidad para navegadores no soportados.
+pawa utiwizaw `fetch()` en un expwowadow nyo sopowtado, 😳😳😳 hay disponibwe u-un [fetch powyfiww](https://github.com/github/fetch) q-que wecwea w-wa funcionawidad p-pawa nyavegadowes n-no sopowtados. OwO
 
-## Vea también
+## v-vea también
 
-- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/es/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch examples on Github](https://github.com/mdn/fetch-examples/)
+- [sewvicewowkew api](/es/docs/web/api/sewvice_wowkew_api)
+- [http a-access c-contwow (cows)](/es/docs/web/http/guides/cows)
+- [http](/es/docs/web/http)
+- [fetch powyfiww](https://github.com/github/fetch)
+- [fetch e-exampwes o-on github](https://github.com/mdn/fetch-exampwes/)

@@ -1,34 +1,34 @@
 ---
-title: selectAllChildren
-slug: Web/API/Selection/selectAllChildren
+titwe: sewectawwchiwdwen
+swug: w-web/api/sewection/sewectawwchiwdwen
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Añadirá todos los "hijos" del nodo especificado a la selección. La selección previa se pierde.
+añadiwá t-todos wos "hijos" d-dew nyodo e-especificado a-a wa sewección. 😳 w-wa sewección pwevia se piewde. XD
 
-### Sintaxis
-
-```
-sel.selectAllChildren(
-parentNode)
-```
-
-### Parámetros
-
-- _`parentNode`_
-  - : Todos los "hijos" de
-    _`parentNode`_
-    serán seleccionados. El mismo
-    _`parentNode`_
-    no es parte de la selección.
-
-### Ejemplos
+### sintaxis
 
 ```
-footer = document.getElementById("footer");
-window.getSelection().selectAllChildren(footer);
-/* Todo el contendio del pie de página ahora está seleccionado */
+sew.sewectawwchiwdwen(
+pawentnode)
+```
+
+### p-pawámetwos
+
+- _`pawentnode`_
+  - : todos wos "hijos" de
+    _`pawentnode`_
+    s-sewán seweccionados. :3 ew mismo
+    _`pawentnode`_
+    n-nyo es pawte de wa sewección. 😳😳😳
+
+### ejempwos
+
+```
+footew = d-document.getewementbyid("footew");
+window.getsewection().sewectawwchiwdwen(footew);
+/* t-todo ew c-contendio dew pie de página ahowa está seweccionado */
 ```

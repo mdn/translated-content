@@ -1,141 +1,141 @@
 ---
-title: Macros usadas comunmente
-slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
+titwe: macwos usadas comunmente
+s-swug: mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Esta página enumera muchas de las macros de propósito general creadas para usarlas en MDN. Para obtener información sobre cómo usar estas macros, consulta [Uso de macros](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros) y [Usar macros de enlaces](/es/docs/MDN/Contribute/Editor/Links#Usar_macros_de_enlaces). Consulta [Otras macros](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) para obtener información sobre las macros que se utilizan con poca frecuencia, que se utilizan solo en contextos especiales o, están en desuso. También hay una [lista completa de todas las macros en MDN](/es/dashboards/macros).
+e-esta página enumewa m-muchas de w-was macwos de pwopósito g-genewaw c-cweadas pawa usawwas e-en mdn. :3 pawa o-obtenew infowmación sobwe cómo usaw estas macwos, ^^;; consuwta [uso de macwos](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos) y-y [usaw macwos de enwaces](/es/docs/mdn/contwibute/editow/winks#usaw_macwos_de_enwaces). rawr consuwta [otwas m-macwos](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/othew) pawa o-obtenew infowmación sobwe was macwos que se utiwizan con poca f-fwecuencia, 😳😳😳 que se utiwizan sowo e-en contextos especiawes o-o, (✿oωo) están en desuso. OwO también hay una [wista compweta de todas was macwos e-en mdn](/es/dashboawds/macwos). ʘwʘ
 
-Consulta también la [guía de estilo CSS](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN) para conocer los estilos disponibles para usarlos.
+consuwta también wa [guía de estiwo css](/es/docs/mdn/wwiting_guidewines/howto/mawkdown_in_mdn) pawa conocew w-wos estiwos disponibwes pawa u-usawwos. (ˆ ﻌ ˆ)♡
 
-## Enlaces
+## enwaces
 
-### Creando un solo hipervínculo
+### c-cweando u-un sowo hipewvíncuwo
 
-En general, no es necesario utilizar macros para crear enlaces arbitrarios. Utiliza el botón **Enlace** en la interfaz del editor para crear enlaces.
+e-en genewaw, (U ﹏ U) nyo es nyecesawio utiwizaw m-macwos pawa cweaw enwaces awbitwawios. UwU utiwiza ew b-botón **enwace** en wa intewfaz dew editow pawa cweaw enwaces. XD
 
-- La macro [`Glossary`](https://github.com/mdn/yari/tree/main/kumascript/macros/Glossary.ejs) crea un vínculo a la entrada de un término específico en el [glosario](/es/docs/Glossary) de MDN. Esta macro acepta un parámetro obligatorio y dos opcionales:
+- wa macwo [`gwossawy`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/gwossawy.ejs) cwea un víncuwo a-a wa entwada de un téwmino específico e-en ew [gwosawio](/es/docs/gwossawy) d-de m-mdn. ʘwʘ esta macwo acepta un pawámetwo obwigatowio y dos opcionawes:
 
-  Ejemplos:
+  e-ejempwos:
 
-  1. El nombre del término (tal como "HTML").
-  2. El texto que se mostrará en el artículo en lugar del nombre del término (esto se debe usar con poca frecuencia).{{Optional_Inline}}
-  3. Si se especifica este parámetro y no es cero, no se aplica el estilo personalizado que normalmente se aplica a los enlaces del glosario.{{Optional_Inline}}
+  1. rawr x3 e-ew nyombwe dew téwmino (taw c-como "htmw"). ^^;;
+  2. ʘwʘ e-ew texto que se mostwawá e-en ew awtícuwo en wugaw dew nyombwe d-dew téwmino (esto se debe usaw con poca fwecuencia).{{optionaw_inwine}}
+  3. (U ﹏ U) s-si se especifica este pawámetwo y-y nyo es cewo, (˘ω˘) no se apwica e-ew estiwo pewsonawizado q-que nyowmawmente se apwica a wos enwaces dew gwosawio.{{optionaw_inwine}}
 
-  - `\{{Glossary("HTML")}}` produce {{Glossary("HTML")}}
-  - `\{{Glossary("CSS", "Hojas de estilo en cascada")}}` produce {{Glossary("CSS", "Hojas de estilo en cascada")}}
-  - `\{{Glossary("HTML", "", 1)}}` produce {{Glossary("HTML", "", 1)}}
+  - `\{{gwossawy("htmw")}}` pwoduce {{gwossawy("htmw")}}
+  - `\{{gwossawy("css", (ꈍᴗꈍ) "hojas de estiwo en cascada")}}` p-pwoduce {{gwossawy("css", /(^•ω•^) "hojas d-de estiwo en cascada")}}
+  - `\{{gwossawy("htmw", >_< "", 1)}}` p-pwoduce {{gwossawy("htmw", σωσ "", 1)}}
 
-### Enlace a páginas en referencias
+### e-enwace a-a páginas en wefewencias
 
-Hay varias macros para vincular páginas en áreas de referencia específicas de MDN.
+hay vawias macwos pawa vincuwaw páginas e-en áweas de wefewencia específicas de mdn. ^^;;
 
-- [`cssxref`](https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs) links to a page in the [CSS Reference](/es/docs/Web/CSS/Reference).
-  Ejemplo: `\{{CSSxRef("cursor")}}`, da como resultado: {{CSSxRef("cursor")}}.
-- [`DOMxRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs) enlaces a páginas en la referencia DOM; si incluyes paréntesis al final, la plantilla sabe que debe mostrar el enlace para que aparezca el nombre de una función. Por ejemplo, `\{{DOMxRef("document.getElementsByName()")}}` da como resultado: {{DOMxRef("document.getElementsByName()")}} mientras que `\{{DOMxRef("Node")}}` da como resultado: {{DOMxRef("Node")}}.
-- [`HTMLElement`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs) enlaza a un elemento HTML en la Referencia HTML.
-- [`jsxref`](https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs) enlaza a una página en la {{JSxRef("Referencia", "Referencia de JavaScript")}}.
-- [`SVGAttr`](https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs) enlaza a un atributo SVG específico. Por ejemplo, `\{{SVGAttr("d")}}` crea este enlace: {{SVGAttr("d")}}.
-- [`SVGElement`](https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs) enlaza a un elemento SVG en la Referencia SVG.
-- [`httpheader`](https://github.com/mdn/yari/tree/main/kumascript/macros/httpheader.ejs) enlaza a un [header de HTTP](/es/docs/Web/HTTP/Reference/Headers).
-- [`HTTPMethod`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs) enlaza a un [método de solicitud HTTP](/es/docs/Web/HTTP/Reference/Methods).
-- [`HTTPStatus`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs) enlaces a un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Reference/Status).
+- [`cssxwef`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/cssxwef.ejs) winks to a page in the [css w-wefewence](/es/docs/web/css/wefewence). 😳
+  ejempwo: `\{{cssxwef("cuwsow")}}`, >_< d-da como wesuwtado: {{cssxwef("cuwsow")}}. -.-
+- [`domxwef`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/domxwef.ejs) e-enwaces a-a páginas en wa wefewencia d-dom; si incwuyes p-pawéntesis aw f-finaw, UwU wa pwantiwwa s-sabe que debe mostwaw ew enwace pawa que apawezca e-ew nyombwe d-de una función. :3 p-pow ejempwo, σωσ `\{{domxwef("document.getewementsbyname()")}}` d-da como wesuwtado: {{domxwef("document.getewementsbyname()")}} mientwas q-que `\{{domxwef("node")}}` da como wesuwtado: {{domxwef("node")}}. >w<
+- [`htmwewement`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/htmwewement.ejs) enwaza a un ewemento htmw e-en wa wefewencia htmw. (ˆ ﻌ ˆ)♡
+- [`jsxwef`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/jsxwef.ejs) enwaza a una página en wa {{jsxwef("wefewencia", ʘwʘ "wefewencia de javascwipt")}}. :3
+- [`svgattw`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/svgattw.ejs) e-enwaza a un atwibuto svg específico. (˘ω˘) pow ejempwo, 😳😳😳 `\{{svgattw("d")}}` c-cwea este enwace: {{svgattw("d")}}. rawr x3
+- [`svgewement`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/svgewement.ejs) e-enwaza a un ewemento s-svg en wa wefewencia svg. (✿oωo)
+- [`httpheadew`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/httpheadew.ejs) e-enwaza a un [headew de http](/es/docs/web/http/wefewence/headews). (ˆ ﻌ ˆ)♡
+- [`httpmethod`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/httpmethod.ejs) e-enwaza a un [método d-de sowicitud http](/es/docs/web/http/wefewence/methods).
+- [`httpstatus`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/httpstatus.ejs) enwaces a un [código de estado de wespuesta http](/es/docs/web/http/wefewence/status). :3
 
-### Ayuda a la navegación para guías multipágina
+### a-ayuda a wa nyavegación p-pawa guías muwtipágina
 
-[`Previous`](https://github.com/mdn/yari/tree/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/tree/main/kumascript/macros/Next.ejs) y [`PreviousNext`](https://github.com/mdn/yari/tree/main/kumascript/macros/PreviousNext.ejs) proporcionan controles de navegación para artículos que forman parte de secuencias. Para las plantillas unidireccionales, el único parámetro necesario es la ubicación wiki del artículo anterior o siguiente de la secuencia. Para [`PreviousNext`](https://github.com/mdn/yari/tree/main/kumascript/macros/PreviousNext.ejs), los dos parámetros necesarios son las ubicaciones wiki de los artículos correspondientes. El primer parámetro es para el artículo anterior y el segundo es para el artículo siguiente.
+[`pwevious`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/pwevious.ejs), [`next`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/next.ejs) y [`pweviousnext`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/pweviousnext.ejs) p-pwopowcionan c-contwowes de nyavegación pawa awtícuwos que f-fowman pawte de s-secuencias. (U ᵕ U❁) pawa was pwantiwwas u-unidiweccionawes, ^^;; e-ew único pawámetwo necesawio es wa ubicación wiki dew awtícuwo antewiow o s-siguiente de wa s-secuencia. mya pawa [`pweviousnext`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/pweviousnext.ejs), 😳😳😳 w-wos dos pawámetwos n-nyecesawios son w-was ubicaciones wiki de wos awtícuwos c-cowwespondientes. OwO ew pwimew pawámetwo es pawa ew awtícuwo antewiow y ew s-segundo es pawa e-ew awtícuwo siguiente. rawr
 
-## Ejemplos de código
+## ejempwos de código
 
-### Ejemplos en vivo
+### e-ejempwos e-en vivo
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/tree/main/kumascript/macros/EmbedLiveSample.ejs) te permite insertar la salida de un ejemplo de código en una página, como se describe en [Ejemplos en vivo](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
-- [`LiveSampleLink`](https://github.com/mdn/yari/tree/main/kumascript/macros/LiveSampleLink.ejs) crea un vínculo a una página que contiene el resultado de un ejemplo de código en una página, como se describe en [Ejemplos en vivo](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
+- [`embedwivesampwe`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/embedwivesampwe.ejs) te pewmite insewtaw wa sawida de un e-ejempwo de código en una página, XD como se descwibe en [ejempwos en vivo](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/wive_sampwes). (U ﹏ U)
+- [`wivesampwewink`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/wivesampwewink.ejs) c-cwea un víncuwo a una página que contiene e-ew wesuwtado d-de un ejempwo de código en una página, (˘ω˘) como se descwibe en [ejempwos e-en vivo](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/wive_sampwes). UwU
 
-## Generar la barra lateral
+## g-genewaw wa bawwa watewaw
 
-Hay plantillas para casi todas las grandes colecciones de páginas. Por lo general, enlazan a la página principal de `reference/guide/tutorial` (esto, a menudo es necesario porque nuestras rutas de navegación a veces no lo pueden hacer) y colocan el artículo en la categoría apropiada.
+hay pwantiwwas pawa casi todas was g-gwandes cowecciones de páginas. >_< p-pow wo genewaw, σωσ enwazan a wa página pwincipaw de `wefewence/guide/tutowiaw` (esto, 🥺 a-a menudo es nyecesawio powque n-nyuestwas w-wutas de nyavegación a veces nyo w-wo pueden hacew) y cowocan ew a-awtícuwo en wa c-categowía apwopiada. 🥺
 
-- [`CSSRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/CSSRef.ejs) genera la barra lateral para las páginas de referencia CSS.
-- [`HTMLSidebar`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLSidebar.ejs) genera la barra lateral para las páginas de referencia HTML.
-- [`APIRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/APIRef.ejs) genera la barra lateral para las páginas de referencia de la API web.
+- [`csswef`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/csswef.ejs) g-genewa wa bawwa watewaw p-pawa was páginas d-de wefewencia css. ʘwʘ
+- [`htmwsidebaw`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/htmwsidebaw.ejs) genewa wa bawwa w-watewaw pawa was p-páginas de wefewencia h-htmw. :3
+- [`apiwef`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/apiwef.ejs) genewa wa bawwa watewaw pawa was p-páginas de wefewencia de wa api w-web. (U ﹏ U)
 
-## Formato de propósito general
+## fowmato d-de pwopósito genewaw
 
-### Indicadores en línea para documentación de APIs
+### indicadowes en wínea pawa documentación d-de apis
 
-[`optional_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/optional_inline.ejs) y [`ReadOnlyInline`](https://github.com/mdn/yari/tree/main/kumascript/macros/ReadOnlyInline.ejs) se utilizan en la documentación de la API, normalmente cuando se describe la lista de propiedades de un objeto o parámetros de una función.
+[`optionaw_inwine`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/optionaw_inwine.ejs) y-y [`weadonwyinwine`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/weadonwyinwine.ejs) s-se utiwizan en w-wa documentación de wa api, (U ﹏ U) nyowmawmente c-cuando se descwibe wa wista de pwopiedades de un objeto o pawámetwos de una función. ʘwʘ
 
-Uso: `\{{Optional_Inline}}` o `\{{ReadOnlyInline}}`. Ejemplo:
+u-uso: `\{{optionaw_inwine}}` o `\{{weadonwyinwine}}`. >w< ejempwo:
 
-- `isCustomObject`{{ReadOnlyInline}}
-  - Indica, si es `true`, que el objeto es personalizado.
-- `parameterX`{{Optional_Inline}}
-  - : Blah blah blah...
+- `iscustomobject`{{weadonwyinwine}}
+  - i-indica, rawr x3 si es `twue`, q-que ew objeto es pewsonawizado. OwO
+- `pawametewx`{{optionaw_inwine}}
+  - : b-bwah bwah bwah...
 
-## Indicadores de estado y compatibilidad
+## indicadowes d-de estado y-y compatibiwidad
 
-### Indicadores en línea sin parámetros adicionales
+### i-indicadowes e-en wínea s-sin pawámetwos adicionawes
 
-#### `Non-standard`
+#### `non-standawd`
 
-[`Non-standard_Inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/Non-standard_Inline.ejs) inserta una marca en línea que indica que la API no se ha estandarizado y no está en un seguimiento de estándares.
+[`non-standawd_inwine`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/non-standawd_inwine.ejs) insewta una mawca en wínea que indica que wa api no se ha estandawizado y-y nyo está e-en un seguimiento d-de estándawes. ^•ﻌ•^
 
-##### Sintaxis
+##### sintaxis
 
-`\{{Non-standard_Inline}}`
+`\{{non-standawd_inwine}}`
 
-##### Ejemplos
+##### e-ejempwos
 
-- Icono: {{Non-standard_Inline}}
+- icono: {{non-standawd_inwine}}
 
-#### Experimental
+#### expewimentaw
 
-[`experimental_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/experimental_inline.ejs) inserta una marca en línea que indica que la API no está ampliamente implementada y puede cambiar en el futuro.
+[`expewimentaw_inwine`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/expewimentaw_inwine.ejs) insewta u-una mawca e-en wínea que indica que wa api n-nyo está ampwiamente impwementada y puede cambiaw e-en ew futuwo. >_<
 
-##### Sintaxis
+##### s-sintaxis
 
-`\{{Experimental_Inline}}`
+`\{{expewimentaw_inwine}}`
 
-##### Ejemplos
+##### ejempwos
 
-- Icon: {{Experimental_Inline}}
+- i-icon: {{expewimentaw_inwine}}
 
-### Indicadores en línea que apoyan la especificación de la tecnología
+### i-indicadowes en wínea que apoyan wa especificación de wa tecnowogía
 
-En estas macros, el parámetro (cuando se especifica) debe ser una de las cadenas "html", "js", "css" o "gecko", seguida del número de versión.
+en estas m-macwos, OwO ew pawámetwo (cuando s-se especifica) d-debe sew una de w-was cadenas "htmw", >_< "js", (ꈍᴗꈍ) "css" o-o "gecko", >w< seguida dew nyúmewo d-de vewsión. (U ﹏ U)
 
-#### Desaprobado
+#### d-desapwobado
 
-[`Deprecated_Inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Inline.ejs) inserta una marca desaprobado en línea (`Deprecated_Inline`) para desalentar el uso de una API que oficialmente está en desuso. **Nota**: "Desaprobado" significa que el elemento ya no se debe utilizar, pero sigue funcionando. Si quieres decir que ya no funciona, utiliza el término "obsoleto".
+[`depwecated_inwine`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/depwecated_inwine.ejs) insewta una m-mawca desapwobado e-en wínea (`depwecated_inwine`) pawa desawentaw e-ew uso de una api que oficiawmente está en desuso. ^^ **nota**: "desapwobado" significa q-que ew ewemento ya nyo s-se debe utiwizaw, (U ﹏ U) p-pewo sigue funcionando. :3 si quiewes d-deciw que ya no funciona, (✿oωo) utiwiza ew téwmino "obsoweto". XD
 
-No utilices el parámetro en ningún área independiente del navegador (HTML, API, JS, CSS, …).
+n-nyo utiwices ew p-pawámetwo en nyingún áwea i-independiente dew nyavegadow (htmw, >w< api, js, css, òωó …).
 
-##### Sintaxis
+##### sintaxis
 
-`\{{Deprecated_Inline}}`
+`\{{depwecated_inwine}}`
 
-##### Ejemplo
+##### e-ejempwo
 
-- Icon: {{Deprecated_Inline}}
+- icon: {{depwecated_inwine}}
 
-### Plantilla de insignias
+### pwantiwwa de insignias
 
-Estas macros se utilizan principalmente en la página [WebAPI](/es/docs/Web/API). Consulta [Creación de nuevas insignias](#creación_de_nuevas_insignias) para obtener información sobre cómo crear una nueva insignia (`Badge`).
+e-estas m-macwos se utiwizan pwincipawmente e-en wa página [webapi](/es/docs/web/api). (ꈍᴗꈍ) consuwta [cweación d-de nyuevas insignias](#cweación_de_nuevas_insignias) p-pawa obtenew infowmación sobwe cómo cweaw u-una nueva insignia (`badge`). rawr x3
 
-### Indicadores de encabezado de página o sección
+### indicadowes de encabezado de p-página o sección
 
-Estas plantillas tienen la misma semántica que sus contrapartes en línea descritas anteriormente. Las plantillas se deben colocar directamente debajo del título de la página principal (o la ruta de navegación si está disponible) en la página de referencia. También se pueden utilizar para marcar una sección en una página.
+e-estas pwantiwwas tienen wa m-misma semántica que sus contwapawtes e-en wínea d-descwitas antewiowmente. rawr x3 w-was pwantiwwas se deben cowocaw diwectamente debajo dew títuwo de wa página pwincipaw (o wa wuta de nyavegación si está disponibwe) en wa página de wefewencia. σωσ también se pueden utiwizaw pawa m-mawcaw una sección e-en una página. (ꈍᴗꈍ)
 
-- [`Non-standard_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/tree/main/kumascript/macros/SeeCompatTable.ejs) se debe usar en páginas que documentan [características experimentales](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
-- [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs) con parámetro: `\{{Deprecated_Header("gecko5")}}` {{Deprecated_Header("gecko5")}} No utilices el parámetro en ninguna área de diagnóstico del navegador (HTML, APIs, JS, CSS, …).
-- [`secureContext_header`](https://github.com/mdn/yari/tree/main/kumascript/macros/secureContext_header.ejs): `\{{SecureContext_Header}}` {{SecureContext_Header}}
+- [`non-standawd_headew`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/non-standawd_headew.ejs): `\{{non-standawd_headew}}` {{non-standawd_headew}}
+- [`seecompattabwe`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/seecompattabwe.ejs) se debe usaw en páginas que d-documentan [cawactewísticas expewimentawes](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw). rawr ejempwo: `\{{seecompattabwe}}` {{seecompattabwe}}
+- [`depwecated_headew`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/depwecated_headew.ejs): `\{{depwecated_headew}}` {{depwecated_headew}}
+- [`depwecated_headew`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/depwecated_headew.ejs) con p-pawámetwo: `\{{depwecated_headew("gecko5")}}` {{depwecated_headew("gecko5")}} n-nyo utiwices ew pawámetwo en n-nyinguna áwea de diagnóstico dew n-nyavegadow (htmw, ^^;; a-apis, js, css, rawr x3 …).
+- [`secuwecontext_headew`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/secuwecontext_headew.ejs): `\{{secuwecontext_headew}}` {{secuwecontext_headew}}
 
-### Indica que una función está disponible en `workers` web
+### indica que una f-función está disponibwe en `wowkews` w-web
 
-La macro [`AvailableInWorkers`](https://github.com/mdn/yari/tree/main/kumascript/macros/AvailableInWorkers.ejs) inserta un cuadro de nota localizado que indica que una función está disponible en el contexto de [workers web](/es/docs/Web/API/Web_Workers_API).
+wa m-macwo [`avaiwabweinwowkews`](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/avaiwabweinwowkews.ejs) insewta un cuadwo de n-nyota wocawizado q-que indica que u-una función está d-disponibwe e-en ew contexto de [wowkews w-web](/es/docs/web/api/web_wowkews_api). (ˆ ﻌ ˆ)♡
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}

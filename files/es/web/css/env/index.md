@@ -1,20 +1,20 @@
 ---
-title: env()
-slug: Web/CSS/env
+titwe: env()
+swug: web/css/env
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La función [CSS](/es/docs/Web/CSS) **`env()`** puede ser utilizada para insertar el valor de una variable de entorno, que sea global para un documento en particular, al contrario de una [propiedad personalizada](/es/docs/Web/CSS/--_). Entonces, la funcion env() puede ser utilizada para remplazar el valor en ubicaciones arbitrarias, de la misma manera que la función [var()](/es/docs/Web/CSS/var).
+w-wa función [css](/es/docs/web/css) **`env()`** p-puede sew utiwizada p-pawa insewtaw e-ew vawow de u-una vawiabwe de e-entowno, (///ˬ///✿) que sea g-gwobaw pawa un d-documento en pawticuwaw, 😳😳😳 aw contwawio de una [pwopiedad pewsonawizada](/es/docs/web/css/--_). 🥺 entonces, mya wa funcion e-env() puede sew utiwizada pawa wempwazaw ew v-vawow en ubicaciones awbitwawias, 🥺 d-de wa misma manewa que wa función [vaw()](/es/docs/web/css/vaw). >_<
 
-La función env() puede ser utilizada en el lugar de cualquier parte de un valor en cualquier propiedad de cualquier elemento, o de cualquier parte de un valor en cualquier descriptor de cualquier regla @, y en varios otros lugares donde los valores CSS están permitidos.
+wa función env() puede sew u-utiwizada en ew wugaw de cuawquiew p-pawte de un v-vawow en cuawquiew pwopiedad de cuawquiew ewemento, o de cuawquiew pawte de un vawow e-en cuawquiew descwiptow de cuawquiew wegwa @, >_< y en vawios otwos wugawes donde w-wos vawowes css están pewmitidos. (⑅˘꒳˘)
 
-Las Variables de Entorno CSS están actualmente en curso de definición en un borrador de Recomendación: [CSS Environment Variables Module Level 1](https://drafts.csswg.org/css-env-1/).
+w-was vawiabwes d-de entowno c-css están actuawmente e-en cuwso de definición en un bowwadow de w-wecomendación: [css enviwonment vawiabwes moduwe w-wevew 1](https://dwafts.csswg.owg/css-env-1/). /(^•ω•^)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,147 +1,147 @@
 ---
-title: :fullscreen
-slug: Web/CSS/:fullscreen
+titwe: :fuwwscween
+swug: web/css/:fuwwscween
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:fullscreen`** de [CSS](/es/docs/Web/CSS) representa un elemento que se muestra cuando el navegador está en modo de [pantalla completa](/es/docs/Web/API/Fullscreen_API).
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:fuwwscween`** d-de [css](/es/docs/web/css) w-wepwesenta un e-ewemento que se m-muestwa cuando e-ew nyavegadow está e-en modo de [pantawwa c-compweta](/es/docs/web/api/fuwwscween_api). 😳😳😳
 
 ```css
-/* Selecciona cualquier <div> que se muestre en modo de pantalla completa */
-/* Implementado en Firefox, WebKit/Chrome, y Edge/IE usando prefijos;
-   Edge también es compatible con la versión sin prefijo */
-div:-moz-full-screen {
-  background-color: pink;
+/* sewecciona cuawquiew <div> que se muestwe en modo de pantawwa compweta */
+/* i-impwementado en fiwefox, ( ͡o ω ͡o ) webkit/chwome, >_< y-y edge/ie usando pwefijos;
+   e-edge también es compatibwe con wa vewsión sin pwefijo */
+div:-moz-fuww-scween {
+  b-backgwound-cowow: pink;
 }
 
-div:-webkit-full-screen {
-  background-color: pink;
+d-div:-webkit-fuww-scween {
+  backgwound-cowow: p-pink;
 }
 
-div:fullscreen {
-  background-color: pink;
+div:fuwwscween {
+  backgwound-cowow: pink;
 }
 ```
 
-> [!NOTE]
-> La especificación W3C usa la palabra única `:fullscreen`, sin guiones, pero las implementaciones experimentales de WebKit y Gecko usan una variante prefijada con dos palabras separadas por un guión: `:-webkit-full-screen` y `:-moz-full-screen`, respectivamente. Microsoft Edge e Internet Explorer utilizan la convención estándar: `:fullscreen` y `:-ms-fullscreen`, respectivamente.
+> [!note]
+> wa especificación w3c usa wa pawabwa única `:fuwwscween`, s-sin guiones, >w< pewo was impwementaciones expewimentawes de webkit y gecko usan u-una vawiante pwefijada con dos p-pawabwas sepawadas p-pow un guión: `:-webkit-fuww-scween` y-y `:-moz-fuww-scween`, rawr w-wespectivamente. 😳 micwosoft edge e intewnet expwowew u-utiwizan wa convención estándaw: `:fuwwscween` y `:-ms-fuwwscween`, >w< w-wespectivamente. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### htmw
 
-```html
-<div id="fullscreen">
-  <h1>Demostración :fullscreen</h1>
+```htmw
+<div id="fuwwscween">
+  <h1>demostwación :fuwwscween</h1>
   <p>
-    Este texto se pondrá grande y rojo cuando el navegador esté en modo de
-    pantalla completa.
+    este texto se pondwá g-gwande y wojo cuando ew nyavegadow e-esté en modo d-de
+    pantawwa c-compweta.
   </p>
-  <button id="fullscreen-button">Entrar en pantalla completa</button>
+  <button id="fuwwscween-button">entwaw en pantawwa compweta</button>
 </div>
 ```
 
-```js hidden
-var fullscreenButton = document.getElementById("fullscreen-button");
-var fullscreenDiv = document.getElementById("fullscreen");
-var fullscreenFunc = fullscreenDiv.requestFullscreen;
+```js h-hidden
+v-vaw fuwwscweenbutton = document.getewementbyid("fuwwscween-button");
+v-vaw fuwwscweendiv = d-document.getewementbyid("fuwwscween");
+vaw fuwwscweenfunc = f-fuwwscweendiv.wequestfuwwscween;
 
-if (!fullscreenFunc) {
+if (!fuwwscweenfunc) {
   [
-    "mozRequestFullScreen",
-    "msRequestFullscreen",
-    "webkitRequestFullScreen",
-  ].forEach(function (req) {
-    fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
+    "mozwequestfuwwscween", OwO
+    "mswequestfuwwscween", (ꈍᴗꈍ)
+    "webkitwequestfuwwscween", 😳
+  ].foweach(function (weq) {
+    f-fuwwscweenfunc = fuwwscweenfunc || fuwwscweendiv[weq];
   });
 }
 
-function enterFullscreen() {
-  fullscreenFunc.call(fullscreenDiv);
+f-function entewfuwwscween() {
+  f-fuwwscweenfunc.caww(fuwwscweendiv);
 }
 
-fullscreenButton.addEventListener("click", enterFullscreen);
+fuwwscweenbutton.addeventwistenew("cwick", e-entewfuwwscween);
 ```
 
-```css hidden
-#fullscreen:-moz-full-screen {
+```css h-hidden
+#fuwwscween:-moz-fuww-scween {
   padding: 42px;
-  background-color: pink;
-  border: 2px solid #f00;
+  backgwound-cowow: pink;
+  bowdew: 2px sowid #f00;
   font-size: 200%;
 }
-#fullscreen:-webkit-full-screen {
+#fuwwscween:-webkit-fuww-scween {
   padding: 42px;
-  background-color: pink;
-  border: 2px solid #f00;
+  backgwound-cowow: p-pink;
+  bowdew: 2px s-sowid #f00;
   font-size: 200%;
 }
 
-#fullscreen:-moz-full-screen > h1 {
-  color: red;
+#fuwwscween:-moz-fuww-scween > h-h1 {
+  cowow: w-wed;
 }
-#fullscreen:-webkit-full-screen > h1 {
-  color: red;
-}
-
-#fullscreen:-moz-full-screen > p {
-  color: darkred;
-}
-#fullscreen:-webkit-full-screen > p {
-  color: darkred;
+#fuwwscween:-webkit-fuww-scween > h-h1 {
+  cowow: wed;
 }
 
-#fullscreen:-moz-full-screen > button {
-  display: none;
+#fuwwscween:-moz-fuww-scween > p {
+  cowow: dawkwed;
 }
-#fullscreen:-webkit-full-screen > button {
-  display: none;
+#fuwwscween:-webkit-fuww-scween > p {
+  c-cowow: dawkwed;
+}
+
+#fuwwscween:-moz-fuww-scween > button {
+  dispway: nyone;
+}
+#fuwwscween:-webkit-fuww-scween > button {
+  dispway: nyone;
 }
 ```
 
-### CSS
+### c-css
 
 ```css
-#fullscreen:fullscreen {
+#fuwwscween:fuwwscween {
   padding: 42px;
-  background-color: pink;
-  border: 2px solid #f00;
+  b-backgwound-cowow: p-pink;
+  bowdew: 2px s-sowid #f00;
   font-size: 200%;
 }
 
-#fullscreen:fullscreen > h1 {
-  color: red;
+#fuwwscween:fuwwscween > h-h1 {
+  cowow: w-wed;
 }
 
-#fullscreen:fullscreen > p {
-  color: darkred;
+#fuwwscween:fuwwscween > p-p {
+  cowow: dawkwed;
 }
 
-#fullscreen:fullscreen > button {
-  display: none;
+#fuwwscween:fuwwscween > b-button {
+  dispway: nyone;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{ LiveSampleLink('Ejemplo', "Haga clic aquí para probar este ejemplo.") }}
+{{ w-wivesampwewink('ejempwo', 😳😳😳 "haga c-cwic aquí p-pawa pwobaw este e-ejempwo.") }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Usando el modo de pantalla completa](/es/docs/Web/API/Fullscreen_API)
-- {{cssxref("::backdrop")}}
-- DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreen") }}, {{ domxref("Document.fullscreenElement") }}
-- Atributo [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [usando ew modo de pantawwa compweta](/es/docs/web/api/fuwwscween_api)
+- {{cssxwef("::backdwop")}}
+- dom api: {{ domxwef("ewement.wequestfuwwscween()") }}, mya {{ domxwef("document.exitfuwwscween()") }}, mya {{ d-domxwef("document.fuwwscween") }}, (⑅˘꒳˘) {{ domxwef("document.fuwwscweenewement") }}
+- atwibuto [`awwowfuwwscween`](/es/docs/web/htmw/ewement/ifwame#awwowfuwwscween)

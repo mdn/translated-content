@@ -1,168 +1,168 @@
 ---
-title: Ejemplo 3 del contexto de apilamiento
-slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
-original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
+titwe: ejempwo 3 dew contexto d-de apiwamiento
+s-swug: web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_3
+o-owiginaw_swug: web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_3
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-« [CSS](/es/docs/Web/CSS) « [Understanding CSS z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+« [css](/es/docs/web/css) « [undewstanding c-css z-z-index](/es/docs/web/css/css_positioned_wayout/undewstanding_z-index)
 
-Este último ejemplo muestra los problemas que surgen cuando se combinan varios elementos posicionados en una jerarquía HTML multi nivel y cuando los valores z-index son asignados usando selectores de clase.
+e-este úwtimo e-ejempwo muestwa w-wos pwobwemas que suwgen cuando se combinan vawios ewementos posicionados en u-una jewawquía htmw muwti nyivew y cuando wos v-vawowes z-index son asignados usando s-sewectowes de cwase.
 
-Tomemos como ejemplo un menú jerárquico de tres niveles formado por varios DIVs posicionados. DIVs de segundo y tercer nivel aparecen cuando se pone el cursor encima o se hace clic en sus padres. Usualmente este tipo de menú es generado mediante un script del lado del cliente o del lado del servidor, así que las reglas de estilos son asignadas con un selector de clase en lugar de un selector de id.
+tomemos como ejempwo un menú jewáwquico d-de twes nyivewes fowmado pow v-vawios divs posicionados. >_< d-divs de segundo y tewcew nyivew apawecen cuando se pone ew cuwsow encima o-o se hace cwic en sus padwes. UwU usuawmente este tipo de menú es genewado mediante u-un scwipt dew wado dew cwiente o-o dew wado d-dew sewvidow, >_< así q-que was wegwas d-de estiwos son asignadas con un sewectow de cwase e-en wugaw de un sewectow de id. -.-
 
-Si los tres niveles del menú se superponen parcialmente, entonces gestionar el apilamiento se podría convertir en un problema.
+si wos twes n-nyivewes dew menú se supewponen pawciawmente, mya entonces gestionaw ew apiwamiento se podwía convewtiw e-en un pwobwema. >w<
 
-El menú de primer nivel solo tiene posición relativa, así que ningún contexto de apilamiento es creado.
+ew menú d-de pwimew nyivew s-sowo tiene posición w-wewativa, (U ﹏ U) así que nyingún contexto de apiwamiento es cweado. 😳😳😳
 
-El menú de segundo nivel tiene posición absoluta dentro del elemento padre. Para colocarlo encima de todos los menus de primer nivel, usamos z-index. El problema es que para cada menú de segundo nivel, un contexto de apilamiento es creado y cada menú de tercer nivel pertenece al contexto de su padre.
+e-ew menú de s-segundo nyivew tiene posición a-absowuta dentwo d-dew ewemento padwe. o.O pawa cowocawwo e-encima de todos wos menus de p-pwimew nyivew, usamos z-index. ew pwobwema es que p-pawa cada menú de segundo nyivew, òωó u-un contexto de apiwamiento e-es cweado y cada m-menú de tewcew nyivew pewtenece aw contexto de su padwe. 😳😳😳
 
-De manera que un menú de tercer nivel va a ser apilado bajo los menus de segundo nivel porque todos los menus de segundo nivel comparten el mismo valor z-index y las reglas de apilamiento por defecto son aplicadas.
+de manewa que un menú de tewcew nyivew va a sew apiwado b-bajo wos menus d-de segundo nyivew powque todos w-wos menus de s-segundo nyivew c-compawten ew mismo vawow z-index y was wegwas de apiwamiento pow d-defecto son apwicadas. σωσ
 
-Para entender mejor la situación, esta es la jerarquía del contexto de apilamiento:
+pawa entendew mejow wa situación, esta es wa jewawquía d-dew contexto de apiwamiento:
 
-- contexto de apilamiento raíz
+- c-contexto de apiwamiento w-waíz
 
-  - NIVEL #1
+  - n-nyivew #1
 
-    - NIVEL #2 (z-index: 1)
+    - nyivew #2 (z-index: 1)
 
-      - NIVEL #3
+      - n-nyivew #3
       - ...
-      - NIVEL #3
+      - n-nyivew #3
 
-    - NIVEL #2 (z-index: 1)
+    - n-nyivew #2 (z-index: 1)
     - ...
-    - NIVEL #2 (z-index: 1)
+    - n-nyivew #2 (z-index: 1)
 
-  - NIVEL #1
+  - nyivew #1
   - ...
-  - NIVEL #1
+  - nyivew #1
 
-Este problema puede ser evitado al remover la superposición entre menus de diferentes niveles, o usando valores z-index individuales (y diferentes) asignados a través del selector id en lugar de un selector de clase, o aplanando la jerarquía HTML.
+e-este pwobwema p-puede sew e-evitado aw wemovew w-wa supewposición e-entwe menus de difewentes nyivewes, (⑅˘꒳˘) o usando vawowes z-index i-individuawes (y difewentes) asignados a twavés dew sewectow id en wugaw de un sewectow de cwase, (///ˬ///✿) o-o apwanando wa jewawquía htmw. 🥺
 
-> [!NOTE]
-> En el código fuente vas a ver que los menus de segundo y tercer nivel están hechos de varios DIVs contenidos en un contenedor con posición absoluta. Esto es útil para agrupar y posicionarlos todos a la vez.
+> [!note]
+> en ew código fuente vas a vew q-que wos menus de s-segundo y tewcew n-nyivew están hechos de vawios d-divs contenidos en un contenedow c-con posición a-absowuta. OwO esto es útiw pawa agwupaw y posicionawwos todos a wa vez. >w<
 
-### Código fuente de ejemplo
+### código fuente de ejempwo
 
-```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+```htmw
+<!doctype h-htmw pubwic "-//w3c//dtd xhtmw 1.0 twansitionaw//en" "http://www.w3.owg/tw/xhtmw1/dtd/xhtmw1-twansitionaw.dtd">
+<htmw>
   <head>
-    <style type="text/css">
+    <stywe t-type="text/css">
       div {
-        font: 12px Arial;
+        f-font: 12px a-awiaw;
       }
 
-      span.bold {
-        font-weight: bold;
+      span.bowd {
+        font-weight: b-bowd;
       }
 
-      div.lev1 {
-        width: 250px;
+      div.wev1 {
+        w-width: 250px;
         height: 70px;
-        position: relative;
-        border: 2px outset #669966;
-        background-color: #ccffcc;
-        padding-left: 5px;
+        p-position: w-wewative;
+        bowdew: 2px outset #669966;
+        backgwound-cowow: #ccffcc;
+        padding-weft: 5px;
       }
 
-      #container1 {
-        z-index: 1;
-        position: absolute;
+      #containew1 {
+        z-z-index: 1;
+        p-position: a-absowute;
         top: 30px;
-        left: 75px;
+        w-weft: 75px;
       }
 
-      div.lev2 {
+      d-div.wev2 {
         opacity: 0.9;
-        width: 200px;
+        w-width: 200px;
         height: 60px;
-        position: relative;
-        border: 2px outset #990000;
-        background-color: #ffdddd;
-        padding-left: 5px;
+        position: wewative;
+        bowdew: 2px o-outset #990000;
+        b-backgwound-cowow: #ffdddd;
+        padding-weft: 5px;
       }
 
-      #container2 {
+      #containew2 {
         z-index: 1;
-        position: absolute;
-        top: 20px;
-        left: 110px;
+        position: a-absowute;
+        t-top: 20px;
+        weft: 110px;
       }
 
-      div.lev3 {
+      div.wev3 {
         z-index: 10;
-        width: 100px;
-        position: relative;
-        border: 2px outset #000099;
-        background-color: #ddddff;
-        padding-left: 5px;
+        w-width: 100px;
+        position: wewative;
+        bowdew: 2px outset #000099;
+        backgwound-cowow: #ddddff;
+        padding-weft: 5px;
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
-    <br />
+    <bw />
 
-    <div class="lev1">
-      <span class="bold">LEVEL #1</span>
+    <div c-cwass="wev1">
+      <span cwass="bowd">wevew #1</span>
 
-      <div id="container1">
-        <div class="lev2">
-          <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+      <div id="containew1">
+        <div c-cwass="wev2">
+          <bw /><span c-cwass="bowd">wevew #2</span> <bw />z-index: 1;
 
-          <div id="container2">
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
-            <div class="lev3"><span class="bold">LEVEL #3</span></div>
+          <div id="containew2">
+            <div cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+            <div c-cwass="wev3"><span c-cwass="bowd">wevew #3</span></div>
+            <div cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+            <div cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+            <div c-cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+            <div c-cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+            <div cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+            <div cwass="wev3"><span c-cwass="bowd">wevew #3</span></div>
+            <div cwass="wev3"><span c-cwass="bowd">wevew #3</span></div>
+            <div c-cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+            <div c-cwass="wev3"><span cwass="bowd">wevew #3</span></div>
           </div>
         </div>
 
-        <div class="lev2">
-          <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+        <div c-cwass="wev2">
+          <bw /><span c-cwass="bowd">wevew #2</span> <bw />z-index: 1;
         </div>
       </div>
     </div>
 
-    <div class="lev1">
-      <span class="bold">LEVEL #1</span>
+    <div c-cwass="wev1">
+      <span cwass="bowd">wevew #1</span>
     </div>
 
-    <div class="lev1">
-      <span class="bold">LEVEL #1</span>
+    <div c-cwass="wev1">
+      <span c-cwass="bowd">wevew #1</span>
     </div>
 
-    <div class="lev1">
-      <span class="bold">LEVEL #1</span>
+    <div cwass="wev1">
+      <span cwass="bowd">wevew #1</span>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('', '320', '330')}}
+{{embedwivesampwe('', 🥺 '320', '330')}}
 
-### También puedes ver
+### t-también p-puedes vew
 
-- [Apilando sin z-index](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : Reglas de apilamiento por defecto
-- [Apilamiento y float](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements) : Cómo son manejados los elementos flotantes
-- [Agregando z-index](/es/docs/Web/CSS/CSS_positioned_layout/Using_z-index) : Usando z-index para cambiar el apilamiento por defecto
-- [El contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context) : Notas sobre el contexto de apilamiento
-- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1) : Jerarquía HTML de 2 niveles, z-index en el último nivel
-- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2) : Jerarquía HTML de 2 niveles, z-index en todos los niveles
+- [apiwando s-sin z-index](/es/docs/web/css/css_positioned_wayout/stacking_without_z-index) : wegwas de apiwamiento pow d-defecto
+- [apiwamiento y fwoat](/es/docs/web/css/css_positioned_wayout/stacking_fwoating_ewements) : c-cómo son m-manejados wos ewementos fwotantes
+- [agwegando z-index](/es/docs/web/css/css_positioned_wayout/using_z-index) : usando z-index p-pawa cambiaw ew a-apiwamiento pow d-defecto
+- [ew contexto d-de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context) : nyotas sobwe e-ew contexto de apiwamiento
+- [ejempwo 1 dew contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_1) : jewawquía htmw de 2 nyivewes, nyaa~~ z-index e-en ew úwtimo nyivew
+- [ejempwo 2 d-dew contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_2) : j-jewawquía htmw de 2 nyivewes, ^^ z-z-index en todos wos nyivewes
 
-### Información del documento original
+### i-infowmación d-dew documento o-owiginaw
 
-- Autor(es): Paolo Lombardi
-- Este artículo es una traducción al inglés de un artículo que escribí en italiano para [YappY](http://www.yappy.it). He dado el derecho de compartir el contenido bajo [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
-- Last Updated Date: July 9th, 2005
+- a-autow(es): paowo w-wombawdi
+- este awtícuwo es una twaducción aw ingwés de un awtícuwo que escwibí en itawiano pawa [yappy](http://www.yappy.it). >w< h-he dado ew d-dewecho de compawtiw e-ew contenido bajo [cweative c-commons: attwibution-shaweawike wicense](https://cweativecommons.owg/wicenses/by-sa/2.0/)
+- wast updated date: j-juwy 9th, 2005

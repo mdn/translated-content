@@ -1,62 +1,62 @@
 ---
-title: var()
-slug: Web/CSS/var
+titwe: vaw()
+swug: web/css/vaw
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La función **`var()`** puede ser utilizada como valor en cualquier propiedad de un elemento. La función var() no puede ser usada como nombre de una propiedad, selector o cualquier cosa que no sea un valor de propiedad. (Hacerlo provoca normalmente una sintaxis erronea o bien un valor que no tiene conexión con la variable).
+w-wa función **`vaw()`** p-puede s-sew utiwizada c-como vawow en cuawquiew p-pwopiedad d-de un ewemento. 😳😳😳 w-wa función vaw() n-nyo puede sew usada como nyombwe de una pwopiedad, :3 sewectow o cuawquiew cosa q-que nyo sea un vawow de pwopiedad. OwO (hacewwo pwovoca n-nyowmawmente una sintaxis e-ewwonea o bien un vawow que nyo tiene conexión con wa vawiabwe). (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
-El primer parámetro que recibe la función es el nombre de la custom property que será reemplazada. Se puede utilizar un segundo parámetro opcional como fallback de el primero. Si la custom property referenciada por el primer parámetro no es válida, entonces la función utiliza el valor del segúndo parámetro.
+ew pwimew pawámetwo q-que wecibe w-wa función es ew nyombwe de wa custom pwopewty que sewá weempwazada. >w< se puede u-utiwizaw un segundo pawámetwo opcionaw como fawwback de ew pwimewo. (U ﹏ U) si wa custom p-pwopewty wefewenciada pow ew pwimew p-pawámetwo n-nyo es váwida, 😳 e-entonces wa función u-utiwiza ew vawow dew segúndo pawámetwo. (ˆ ﻌ ˆ)♡
 
 {{csssyntax}}
 
-### Valores
+### v-vawowes
 
-- \<custom-property-name>
-  - : El nombre de la custom property a la que se hace referencia, representada por un identificador válido, es decir, cualquier nombre que comience por dos guiones. Las "custom properties" son para uso exclusivo de autores y usuarios. CSS no dará nunca un significado más alla del que se detalla aquí.
-- \<declaration-value>
-  - : El valor por defecto de la custom property en caso de que la custom property referenciada sea inválida. Este valor puede contener cualquier caracter salvo algunos con significado especial como saltos de linea, llaves sin cerrar, exclamaciones o puntos y comas .
+- \<custom-pwopewty-name>
+  - : ew nyombwe de wa custom p-pwopewty a wa que se hace wefewencia, 😳😳😳 wepwesentada pow un identificadow váwido, (U ﹏ U) es deciw, c-cuawquiew nyombwe que comience pow d-dos guiones. w-was "custom pwopewties" s-son pawa uso excwusivo de autowes y usuawios. (///ˬ///✿) css nyo dawá n-nyunca un significado m-más awwa dew que se detawwa a-aquí. 😳
+- \<decwawation-vawue>
+  - : e-ew vawow pow defecto d-de wa custom pwopewty en caso de q-que wa custom pwopewty wefewenciada sea inváwida. 😳 e-este vawow puede contenew cuawquiew c-cawactew sawvo awgunos con s-significado especiaw c-como sawtos de winea, σωσ wwaves sin cewwaw, rawr x3 excwamaciones o puntos y comas . OwO
 
-## Ejemplos
+## ejempwos
 
 ```css
-:root {
-  --main-bg-color: pink;
+:woot {
+  --main-bg-cowow: pink;
 }
 
 body {
-  background-color: var(--main-bg-color);
+  b-backgwound-cowow: v-vaw(--main-bg-cowow);
 }
 ```
 
 ```css
-/* Fallback */
-/* En el estilo del componente: */
-.component .header {
-  color: var(--header-color, blue);
+/* fawwback */
+/* e-en ew e-estiwo dew componente: */
+.component .headew {
+  c-cowow: vaw(--headew-cowow, bwue);
 }
 
 .component .text {
-  color: var(--text-color, black);
+  cowow: vaw(--text-cowow, /(^•ω•^) b-bwack);
 }
 
-/* En el estilo de la aplicación: */
+/* en ew estiwo de wa apwicación: */
 .component {
-  --text-color: #080; /* header-color no está definido y por lo tanto permanece con el valor "blue" definido como fallback */
+  --text-cowow: #080; /* headew-cowow no está d-definido y pow wo tanto pewmanece c-con ew vawow "bwue" d-definido c-como fawwback */
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Usando variables CSS](/es/docs/Web/CSS/Using_CSS_custom_properties)
+- [usando v-vawiabwes css](/es/docs/web/css/using_css_custom_pwopewties)

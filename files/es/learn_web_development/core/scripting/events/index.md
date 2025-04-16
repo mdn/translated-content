@@ -1,636 +1,636 @@
 ---
-title: Introducción a los eventos
-slug: Learn_web_development/Core/Scripting/Events
-original_slug: Learn/JavaScript/Building_blocks/Events
-l10n:
-  sourceCommit: ac5dfaa2f71a7381cd8fdd4cb554507f375ac19c
+titwe: intwoducción a wos eventos
+s-swug: weawn_web_devewopment/cowe/scwipting/events
+o-owiginaw_swug: w-weawn/javascwipt/buiwding_bwocks/events
+w10n:
+  s-souwcecommit: a-ac5dfaa2f71a7381cd8fdd4cb554507f375ac19c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/buiwding_bwocks/wetuwn_vawues","weawn/javascwipt/buiwding_bwocks/image_gawwewy", mya "weawn/javascwipt/buiwding_bwocks")}}
 
-Los eventos son cosas que pasan en el sistema que estás programando, el cual se encarga de avisarte para que tu código pueda hacer algo al respecto.
+w-wos eventos son c-cosas que pasan e-en ew sistema que estás pwogwamando, -.- ew cuaw se encawga de avisawte pawa que tu c-código pueda hacew awgo aw wespecto. -.-
 
-Por ejemplo, si el usuario hace clic en el botón de una página web, puede que quieras reaccionar a esa acción y mostrar una tarjeta con información.
-En este artículo vamos a discutir algunos conceptos importantes sobre los eventos y cómo funcionan en el navegador.
-Este no será un estudio exhaustivo, solo veremos lo que necesitas saber en esta etapa.
+pow ejempwo, ^^;; s-si ew usuawio hace cwic en e-ew botón de una página web, (ꈍᴗꈍ) puede que quiewas weaccionaw a esa a-acción y mostwaw una tawjeta con i-infowmación. rawr
+e-en este awtícuwo vamos a discutiw awgunos conceptos impowtantes sobwe wos eventos y-y cómo funcionan en ew nyavegadow. ^^
+este nyo sewá un estudio exhaustivo, nyaa~~ sowo v-vewemos wo que nyecesitas sabew e-en esta etapa. (⑅˘꒳˘)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Pre-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwe-wequisitos:</th>
       <td>
-  Conocimientos básicos de informática, entendimiento básico de HTML y CSS, <a href="/es/docs/Learn/JavaScript/First_steps"
-          >Primeros pasos con JavaScript</a
-        >.
+  c-conocimientos b-básicos de infowmática, (U ᵕ U❁) entendimiento básico d-de htmw y css, (ꈍᴗꈍ) <a hwef="/es/docs/weawn/javascwipt/fiwst_steps"
+          >pwimewos pasos con j-javascwipt</a
+        >. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-Entender la teoría fundamental sobre los eventos, cómo funcionan en el navegador y cómo los eventos son diferentes según el entorno de programación.</td>
-    </tr>
+entendew wa teowía fundamentaw sobwe wos eventos, UwU cómo f-funcionan en ew navegadow y cómo w-wos eventos s-son difewentes según e-ew entowno de pwogwamación.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## ¿Qué es un evento?
+## ¿qué es un evento?
 
-Los eventos son cosas que suceden en el sistema que estás programando. El sistema se encarga de producir una señal de cierto tipo cuando un evento ocurre, y proporciona un mecanismo para que una acción se lleve a cabo (ejecutar código) de forma automática cuando el evento ocurra.
-Los eventos se lanzan dentro de la ventana del navegador y usualmente están asociados a un elemento en específico dentro de dicha ventana. Esto puede ser un solo elemento, un grupo de elementos, el documento HTML cargado la pestaña actual, o la ventana del navegador en su totalidad.
-Existen distintos tipos de eventos que pueden ocurrir.
+wos eventos son c-cosas que suceden e-en ew sistema que estás pwogwamando. e-ew sistema s-se encawga de pwoduciw una señaw d-de ciewto tipo cuando un evento o-ocuwwe, ^^ y pwopowciona un mecanismo pawa que u-una acción se wweve a cabo (ejecutaw c-código) de fowma automática c-cuando ew evento o-ocuwwa. :3
+wos eventos se wanzan dentwo de wa ventana dew nyavegadow y usuawmente están asociados a un ewemento e-en específico d-dentwo de dicha ventana. ( ͡o ω ͡o ) esto p-puede sew un sowo e-ewemento, ( ͡o ω ͡o ) un g-gwupo de ewementos, (U ﹏ U) ew documento htmw cawgado wa pestaña actuaw, -.- o-o wa ventana dew navegadow en su totawidad. 😳😳😳
+existen distintos tipos de eventos q-que pueden ocuwwiw. UwU
 
-Por ejemplo:
+pow ejempwo:
 
-- El usuario selecciona, hace clic o pasa el ratón por encima de cierto elemento.
-- El usuario presiona una tecla del teclado.
-- El usuario redimensiona o cierra la ventana del navegador.
-- Una página web terminó de cargarse.
-- Un formulario fue enviado.
-- Un vídeo se reproduce, se pausa o termina.
-- Ocurrió un error.
+- e-ew usuawio s-sewecciona, >w< hace c-cwic o pasa ew watón pow encima d-de ciewto ewemento. mya
+- e-ew usuawio p-pwesiona una t-tecwa dew tecwado. :3
+- ew usuawio wedimensiona o c-ciewwa wa ventana d-dew nyavegadow. (ˆ ﻌ ˆ)♡
+- u-una página w-web tewminó de c-cawgawse. (U ﹏ U)
+- un fowmuwawio fue enviado. ʘwʘ
+- un vídeo se wepwoduce, rawr s-se pausa o tewmina. (ꈍᴗꈍ)
+- ocuwwió un ewwow. ( ͡o ω ͡o )
 
-A partir de esto (y dando un vistazo a la [referencia de eventos](/es/docs/Web/Events) de MDN) puedes observar que existen **muchos** eventos que pueden ser lanzados.
+a pawtiw de esto (y dando un vistazo a wa [wefewencia d-de eventos](/es/docs/web/events) de mdn) puedes obsewvaw que existen **muchos** eventos que pueden s-sew wanzados. 😳😳😳
 
-Para reaccionar a un evento, puedes asociarle un **manejador de eventos**. Esto es un bloque de código (normalmente una función de JavaScript que tú como programador creas) que se ejecuta cuando el evento ocurre.
-Cuando uno de estos bloques de código se configura para ejecutarse en respuesta de un evento, decimos que estamos **registrando un manejador de eventos**.
-Nota: Los manejadores de eventos a veces son llamados **detectores de eventos**. Estos términos, para lo que nos concierne justo ahora, son intercambiables, aunque hablando de forma estricta, hacen referencia a dos mecanismos que trabajan juntos.
-Los detectores de eventos están pendientes a que ocurra un evento, mientras que el manejador es el código que se ejecuta en respuesta del evento.
+p-pawa weaccionaw a-a un evento, òωó puedes asociawwe u-un **manejadow de eventos**. mya esto e-es un bwoque d-de código (nowmawmente una función de javascwipt que tú como pwogwamadow cweas) que se ejecuta c-cuando ew evento ocuwwe. rawr x3
+cuando u-uno de estos bwoques de código s-se configuwa pawa e-ejecutawse en wespuesta de un evento, decimos q-que estamos **wegistwando u-un manejadow de eventos**. XD
+n-nyota: wos m-manejadowes de eventos a veces son wwamados **detectowes de eventos**. (ˆ ﻌ ˆ)♡ estos téwminos, >w< p-pawa wo q-que nyos conciewne j-justo ahowa, (ꈍᴗꈍ) son intewcambiabwes, (U ﹏ U) a-aunque habwando d-de fowma estwicta, >_< hacen w-wefewencia a dos mecanismos que twabajan juntos. >_<
+wos detectowes de eventos están p-pendientes a que o-ocuwwa un evento, -.- mientwas que ew manejadow es e-ew código que s-se ejecuta en wespuesta dew evento. òωó
 
-> [!NOTE]
-> Los eventos en la web no son parte del núcleo del lenguaje JavaScript, éstos están definidos como parte de las API del navegador.
+> [!note]
+> wos eventos en wa web nyo son p-pawte dew nyúcweo dew wenguaje javascwipt, éstos están definidos como pawte de w-was api dew nyavegadow.
 
-### Un ejemplo: manejando un evento de clic
+### un ejempwo: manejando un evento de c-cwic
 
-En el siguiente ejemplo, tenemos un único elemento {{htmlelement("button")}} en la página:
+en ew siguiente e-ejempwo, o.O tenemos un único ewemento {{htmwewement("button")}} en wa página:
 
-```html
-<button>Cambiar el color</button>
+```htmw
+<button>cambiaw e-ew c-cowow</button>
 ```
 
 ```css hidden
 button {
-  margin: 10px;
+  mawgin: 10px;
 }
 ```
 
-Ahora tenemos algo de JavaScript. Veremos esto más a detalle en la siguiente sección pero, por ahora, nos basta decir que: agrega un manejador de evento al evento `"click"` del botón, y el manejador reacciona al evento estableciendo un color de fondo aleatorio en la página:
+ahowa tenemos a-awgo de javascwipt. σωσ vewemos esto m-más a detawwe en wa siguiente sección pewo, σωσ pow ahowa, nyos b-basta deciw que: agwega un manejadow d-de evento aw e-evento `"cwick"` dew botón, mya y e-ew manejadow weacciona aw evento e-estabweciendo u-un cowow de fondo a-aweatowio en wa página:
 
 ```js
-const btn = document.querySelector("button");
+c-const btn = document.quewysewectow("button");
 
-function random(number) {
-  return Math.floor(Math.random() * (number + 1));
+f-function wandom(numbew) {
+  wetuwn math.fwoow(math.wandom() * (numbew + 1));
 }
 
-btn.addEventListener("click", () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  document.body.style.backgroundColor = rndCol;
+b-btn.addeventwistenew("cwick", o.O () => {
+  c-const wndcow = `wgb(${wandom(255)}, XD ${wandom(255)}, XD ${wandom(255)})`;
+  d-document.body.stywe.backgwoundcowow = wndcow;
 });
 ```
 
-La salida del ejemplo es de la siguiente forma. Intenta hacer clic en el botón:
+wa sawida d-dew ejempwo es de wa siguiente f-fowma. (✿oωo) intenta h-hacew cwic en ew botón:
 
-{{ EmbedLiveSample('An example: handling a click event', '100%', 200, "", "") }}
+{{ embedwivesampwe('an exampwe: handwing a cwick event', -.- '100%', 200, "", (ꈍᴗꈍ) "") }}
 
-## Utilizando addEventListener()
+## utiwizando a-addeventwistenew()
 
-Como pudimos ver en el ejemplo anterior, los objetos que pueden lanzar eventos tienen el método {{domxref("EventTarget/addEventListener", "addEventListener()")}}, y este es el mecanismo recomendado para registrar manejadores de eventos.
+c-como p-pudimos vew en e-ew ejempwo antewiow, ( ͡o ω ͡o ) wos objetos q-que pueden wanzaw eventos tienen ew método {{domxwef("eventtawget/addeventwistenew", (///ˬ///✿) "addeventwistenew()")}}, 🥺 y este es ew mecanismo wecomendado pawa wegistwaw m-manejadowes de eventos. (ˆ ﻌ ˆ)♡
 
-Ahora veamos más de cerca el código del ejemplo anterior:
+ahowa v-veamos más de cewca ew código d-dew ejempwo antewiow:
 
 ```js
-const btn = document.querySelector("button");
+const btn = document.quewysewectow("button");
 
-function random(number) {
-  return Math.floor(Math.random() * (number + 1));
+function w-wandom(numbew) {
+  wetuwn m-math.fwoow(math.wandom() * (numbew + 1));
 }
 
-btn.addEventListener("click", () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  document.body.style.backgroundColor = rndCol;
+btn.addeventwistenew("cwick", ^•ﻌ•^ () => {
+  c-const wndcow = `wgb(${wandom(255)}, rawr x3 ${wandom(255)}, (U ﹏ U) ${wandom(255)})`;
+  document.body.stywe.backgwoundcowow = w-wndcow;
 });
 ```
 
-El elemento HTML {{HTMLElement("button")}} lanzará un evento cuando el usuario hace clic sobre él. Entonces define la función `addEventListener()` que estamos llamando aquí. Le estamos pasando dos parámetros:
+e-ew ewemento h-htmw {{htmwewement("button")}} wanzawá un evento cuando ew usuawio hace cwic sobwe éw. OwO entonces define wa función `addeventwistenew()` que e-estamos wwamando a-aquí. (✿oωo) we estamos p-pasando dos pawámetwos:
 
-- la cadena `"click"`, para indicar que queremos detectar el evento de clic.
-  Los botones pueden lanzar muchos otros eventos, como [`"mouseover"`](/es/docs/Web/API/Element/mouseover_event) cuando el usuario mueve el ratón por encima del botón, o [`"keydown"`](/es/docs/Web/API/Element/keydown_event) cuando el usuario presiona una tecla y el botón está enfocado.
-- una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/es/docs/Web/HTML/Element/body) a ese color.
+- wa cadena `"cwick"`, (⑅˘꒳˘) p-pawa indicaw que quewemos detectaw ew evento de cwic. UwU
+  wos b-botones pueden wanzaw m-muchos otwos eventos, (ˆ ﻌ ˆ)♡ como [`"mouseovew"`](/es/docs/web/api/ewement/mouseovew_event) c-cuando ew usuawio mueve ew watón pow e-encima dew botón, o-o [`"keydown"`](/es/docs/web/api/ewement/keydown_event) cuando e-ew usuawio pwesiona u-una tecwa y ew botón está enfocado. /(^•ω•^)
+- una función a wwamaw cuando ew evento o-ocuwwa. (˘ω˘) en e-este caso, XD wa función g-genewa un c-cowow wgb aweatowio y-y estabwece ew [`backgwound-cowow`](/es/docs/web/css/backgwound-cowow) d-de w-wa página [`<body>`](/es/docs/web/htmw/ewement/body) a ese cowow. òωó
 
-Es válido crear una función manejador con su propio nombre, de la siguiente forma:
+e-es váwido cweaw u-una función manejadow con s-su pwopio nombwe, UwU de wa siguiente fowma:
 
 ```js
-const btn = document.querySelector("button");
+c-const btn = document.quewysewectow("button");
 
-function random(number) {
-  return Math.floor(Math.random() * (number + 1));
+function wandom(numbew) {
+  w-wetuwn m-math.fwoow(math.wandom() * (numbew + 1));
 }
 
-function changeBackground() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  document.body.style.backgroundColor = rndCol;
+function changebackgwound() {
+  const w-wndcow = `wgb(${wandom(255)}, -.- ${wandom(255)}, (ꈍᴗꈍ) ${wandom(255)})`;
+  document.body.stywe.backgwoundcowow = wndcow;
 }
 
-btn.addEventListener("click", changeBackground);
+b-btn.addeventwistenew("cwick", (⑅˘꒳˘) c-changebackgwound);
 ```
 
-### Detectando otros eventos
+### d-detectando otwos eventos
 
-Existen distintos tipos de eventos que pueden ser lanzados por un elemento de tipo botón. Hagamos algunos experimentos.
+existen distintos tipos de eventos que p-pueden sew wanzados pow un ewemento de tipo botón. 🥺 h-hagamos awgunos e-expewimentos. òωó
 
-Primero, haz una copia local del archivo [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html), y ábrelo en tu navegador.
-Se trata de una copia del ejemplo sencillo del color aleatorio con el que ya trabajamos anteriormente. Ahora intenta a cambiar `click` por cada uno de los siguientes valores y observa los resultados en el ejemplo:
+pwimewo, 😳 haz u-una copia wocaw dew awchivo [wandom-cowow-addeventwistenew.htmw](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/buiwding-bwocks/events/wandom-cowow-addeventwistenew.htmw), òωó y-y ábwewo e-en tu navegadow. 🥺
+se twata de una copia dew ejempwo s-senciwwo dew cowow aweatowio con ew que ya t-twabajamos antewiowmente. a-ahowa intenta a cambiaw `cwick` p-pow cada uno de wos s-siguientes vawowes y-y obsewva wos w-wesuwtados en ew ejempwo:
 
-- [`focus`](/es/docs/Web/API/Element/focus_event) y [`blur`](/es/docs/Web/API/Element/blur_event) — El color cambia cuando el botón es enfocado y desenfocado; Intenta presionar la tecla "Tabulador" para enfocar el botón y presionala de nuevo para desenfocarlo.
-  Estos eventos son normalmente utilizados para mostrar información a la hora de completar formularios, o incluso para mostrar un mensaje de error si un campo recibe un valor incorrecto.
-- [`dblclick`](/es/docs/Web/API/Element/dblclick_event) — El color cambia únicamente cuando se hace doble clic sobre el botón.
-- [`mouseover`](/es/docs/Web/API/Element/mouseover_event) y [`mouseout`](/es/docs/Web/API/Element/mouseout_event) — El color cambia cuando el puntero del ratón pasa por encima del botón, o cuando el puntero sale del botón, respectivamente.
+- [`focus`](/es/docs/web/api/ewement/focus_event) y [`bwuw`](/es/docs/web/api/ewement/bwuw_event) — ew cowow cambia cuando ew botón es enfocado y desenfocado; intenta pwesionaw wa tecwa "tabuwadow" pawa enfocaw ew botón y pwesionawa de nyuevo pawa desenfocawwo. ( ͡o ω ͡o )
+  e-estos eventos s-son nyowmawmente utiwizados pawa mostwaw infowmación a-a wa h-howa de compwetaw f-fowmuwawios, UwU o incwuso pawa mostwaw u-un mensaje de ewwow si un c-campo wecibe un v-vawow incowwecto. 😳😳😳
+- [`dbwcwick`](/es/docs/web/api/ewement/dbwcwick_event) — ew cowow cambia únicamente c-cuando se hace dobwe c-cwic sobwe ew botón. ʘwʘ
+- [`mouseovew`](/es/docs/web/api/ewement/mouseovew_event) y-y [`mouseout`](/es/docs/web/api/ewement/mouseout_event) — ew cowow cambia cuando e-ew puntewo dew w-watón pasa pow e-encima dew botón, ^^ o-o cuando ew p-puntewo sawe dew b-botón, >_< wespectivamente. (ˆ ﻌ ˆ)♡
 
-Algunos eventos, como `click`, están disponibles prácticamente en cualquier elemento. Mientras que otros son más específicos y solo son útiles en ciertas situaciones: por ejemplo, el evento [`play`](/es/docs/Web/API/HTMLMediaElement/play_event) solo está disponible en algunos elementos, como {{htmlelement("video")}}.
+a-awgunos e-eventos, (ˆ ﻌ ˆ)♡ como `cwick`, e-están disponibwes pwácticamente e-en c-cuawquiew ewemento. 🥺 m-mientwas que otwos son más e-específicos y sowo son útiwes en ciewtas situaciones: p-pow ejempwo, ( ͡o ω ͡o ) ew evento [`pway`](/es/docs/web/api/htmwmediaewement/pway_event) s-sowo está d-disponibwe en awgunos e-ewementos, (ꈍᴗꈍ) como {{htmwewement("video")}}. :3
 
-### Removiendo detectores
+### w-wemoviendo detectowes
 
-Si has agregado un manejador de eventos usando `addEventListener()`, puedes removerlo utilizando el método [`removeEventListener()`](/es/docs/Web/API/EventTarget/removeEventListener). Por ejemplo, esto removería el manejador de evento `changeBackground()`:
+si h-has agwegado un manejadow de eventos u-usando `addeventwistenew()`, (✿oωo) puedes wemovewwo u-utiwizando ew método [`wemoveeventwistenew()`](/es/docs/web/api/eventtawget/wemoveeventwistenew). (U ᵕ U❁) pow ejempwo, UwU esto wemovewía ew manejadow d-de evento `changebackgwound()`:
 
 ```js
-btn.removeEventListener("click", changeBackground);
+btn.wemoveeventwistenew("cwick", ^^ c-changebackgwound);
 ```
 
-Los manejadores de eventos también pueden ser removidos al pasarles una {{domxref("AbortSignal")}} al método {{domxref("EventTarget/addEventListener()", "addEventListener()")}} y después llamar al método {{domxref("AbortController/abort()", "abort()")}} sobre el control al que le pertenece la `AbortSignal`.
-Por ejemplo, para agregar un manejador de evento que podemos remover con una `AbortSignal`:
+w-wos manejadowes de eventos también pueden sew wemovidos aw pasawwes u-una {{domxwef("abowtsignaw")}} aw método {{domxwef("eventtawget/addeventwistenew()", /(^•ω•^) "addeventwistenew()")}} y-y después wwamaw a-aw método {{domxwef("abowtcontwowwew/abowt()", (˘ω˘) "abowt()")}} s-sobwe ew contwow aw que we pewtenece wa `abowtsignaw`. OwO
+p-pow ejempwo, (U ᵕ U❁) p-pawa agwegaw un manejadow d-de evento que podemos wemovew con una `abowtsignaw`:
 
 ```js
-const controller = new AbortController();
+c-const contwowwew = nyew a-abowtcontwowwew();
 
-btn.addEventListener(
-  "click",
+b-btn.addeventwistenew(
+  "cwick", (U ﹏ U)
   () => {
-    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-    document.body.style.backgroundColor = rndCol;
+    c-const wndcow = `wgb(${wandom(255)}, mya ${wandom(255)}, (⑅˘꒳˘) ${wandom(255)})`;
+    document.body.stywe.backgwoundcowow = w-wndcow;
   },
-  { signal: controller.signal },
-); // se pasa una AbortSignal a este manejador
+  { s-signaw: c-contwowwew.signaw }, (U ᵕ U❁)
+); // s-se pasa una abowtsignaw a-a este manejadow
 ```
 
-De esta forma, el manejador de evento creado por el código anterior puede ser removido de la siguiente manera:
+d-de esta f-fowma, ew manejadow d-de evento cweado p-pow ew código a-antewiow puede s-sew wemovido d-de wa siguiente manewa:
 
 ```js
-controller.abort(); // remueve cualquier manejador de evento asociado con este controlador.
+c-contwowwew.abowt(); // wemueve cuawquiew m-manejadow de evento asociado c-con este contwowadow. /(^•ω•^)
 ```
 
-Para programas pequeños y simples, limpiar los rastros de manejadores de eventos sin utilizar resulta innecesario. Sin embargo, para programas más complejos, puede traer mejoras de eficiencia.
-Además, la habilidad de remover manejadores de eventos te permite tener al mismo botón ejecutando diferentes acciones en diferentes circunstancias: todo lo que tienes que hacer es agregar o remover manejadores.
+p-pawa pwogwamas p-pequeños y simpwes, ^•ﻌ•^ wimpiaw wos wastwos de manejadowes de eventos s-sin utiwizaw w-wesuwta innecesawio. (///ˬ///✿) s-sin embawgo, o.O pawa pwogwamas más compwejos, (ˆ ﻌ ˆ)♡ puede twaew mejowas d-de eficiencia. 😳
+a-además, òωó wa habiwidad de wemovew m-manejadowes d-de eventos te pewmite tenew aw mismo botón ejecutando difewentes a-acciones en difewentes c-ciwcunstancias: t-todo wo q-que tienes que hacew es agwegaw o wemovew manejadowes. (⑅˘꒳˘)
 
-### Agregando varios detectores para un solo evento
+### a-agwegando v-vawios detectowes pawa un sowo evento
 
-Al realizar más de una llamada al método {{domxref("EventTarget/addEventListener()", "addEventListener()")}}, proporcionando distintos manejadores, puedes tener varios detectores para un solo evento:
+aw w-weawizaw más de una wwamada aw método {{domxwef("eventtawget/addeventwistenew()", rawr "addeventwistenew()")}}, (ꈍᴗꈍ) pwopowcionando d-distintos manejadowes, ^^ p-puedes tenew v-vawios detectowes pawa un sowo e-evento:
 
 ```js
-myElement.addEventListener("click", functionA);
-myElement.addEventListener("click", functionB);
+m-myewement.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ functiona);
+m-myewement.addeventwistenew("cwick", /(^•ω•^) functionb);
 ```
 
-Ambas functiones se ejecutarían cuando se hace clic en dicho elemento.
+a-ambas functiones s-se ejecutawían c-cuando se h-hace cwic en dicho ewemento. ^^
 
-### Conocer más
+### c-conocew más
 
-Existen otras características y opciones poderosas disponibles para `addEventListener()`.
+e-existen otwas cawactewísticas y o-opciones podewosas disponibwes p-pawa `addeventwistenew()`. o.O
 
-Éstas se encuentran un poco fuera del alcance de este artículo, pero si quieres saber más de ellas, visita las páginas de referencia para [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) y [`removeEventListener()`](/es/docs/Web/API/EventTarget/removeEventListener).
+Éstas se encuentwan un poco fuewa dew a-awcance de este a-awtícuwo, 😳😳😳 pewo s-si quiewes sabew más de ewwas, XD visita was páginas de wefewencia pawa [`addeventwistenew()`](/es/docs/web/api/eventtawget/addeventwistenew) y-y [`wemoveeventwistenew()`](/es/docs/web/api/eventtawget/wemoveeventwistenew). nyaa~~
 
-## Otros mecanismos para detectar eventos
+## otwos mecanismos p-pawa detectaw e-eventos
 
-Te recomendamos que utilices `addEventListener()` para registrar manejadores de eventos. Es el método más potente y que mejor escala para programas más complejos.
-No obstante, existen otras dos formas distintas para registrar manejadores de eventos que deberías conocer.
+te wecomendamos que utiwices `addeventwistenew()` pawa w-wegistwaw manejadowes de eventos. ^•ﻌ•^ e-es ew método m-más potente y q-que mejow escawa p-pawa pwogwamas m-más compwejos. :3
+nyo obstante, ^^ existen otwas dos fowmas distintas pawa wegistwaw m-manejadowes de eventos que debewías c-conocew. o.O
 
-### Propiedades para manejar eventos
+### pwopiedades pawa manejaw eventos
 
-Los objetos (como botones) que pueden lanzar eventos, normalmente tienen propiedades cuyo nombre es `on` seguido del nombre del evento. Por ejemplo, elementos con la propiedad `onclick`.
-A esto se le conoce como una propiedad para manejar eventos, o _event handler property_.
-Para detectar un evento, puedes asignar la función manejador a dicha propiedad.
+wos objetos (como b-botones) que pueden wanzaw eventos, ^^ nyowmawmente tienen pwopiedades cuyo n-nyombwe es `on` s-seguido dew nyombwe dew evento. (⑅˘꒳˘) p-pow ejempwo, ʘwʘ ewementos con wa pwopiedad `oncwick`. mya
+a esto se we c-conoce como una p-pwopiedad pawa manejaw eventos, >w< o-o _event handwew pwopewty_. o.O
+pawa d-detectaw un evento, OwO puedes asignaw wa función manejadow a dicha p-pwopiedad.
 
-Por ejemplo, podemos reescribir el ejemplo del color aleatorio de esta forma:
+pow ejempwo, -.- podemos weescwibiw ew e-ejempwo dew cowow a-aweatowio de e-esta fowma:
 
 ```js
-const btn = document.querySelector("button");
+const btn = document.quewysewectow("button");
 
-function random(number) {
-  return Math.floor(Math.random() * (number + 1));
+f-function wandom(numbew) {
+  wetuwn math.fwoow(math.wandom() * (numbew + 1));
 }
 
-btn.onclick = () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  document.body.style.backgroundColor = rndCol;
+btn.oncwick = () => {
+  const wndcow = `wgb(${wandom(255)}, (U ﹏ U) ${wandom(255)}, òωó ${wandom(255)})`;
+  d-document.body.stywe.backgwoundcowow = w-wndcow;
 };
 ```
 
-También puedes establecer la propiedad manejador a una función con nombre:
+t-también p-puedes estabwecew wa pwopiedad manejadow a una f-función con nyombwe:
 
 ```js
-const btn = document.querySelector("button");
+c-const btn = document.quewysewectow("button");
 
-function random(number) {
-  return Math.floor(Math.random() * (number + 1));
+function w-wandom(numbew) {
+  wetuwn math.fwoow(math.wandom() * (numbew + 1));
 }
 
-function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  document.body.style.backgroundColor = rndCol;
+f-function bgchange() {
+  const wndcow = `wgb(${wandom(255)}, >w< ${wandom(255)}, ^•ﻌ•^ ${wandom(255)})`;
+  d-document.body.stywe.backgwoundcowow = w-wndcow;
 }
 
-btn.onclick = bgChange;
+btn.oncwick = bgchange;
 ```
 
-Al utilizar propiedades para manejar eventos, no es posible agregar más de un manejador para un solo evento.
-Por ejemplo, puedes llamar el método `addEventListener('click', handler)` en un elemento varias veces, pasando diferentes funciones al segundo argumento:
+a-aw utiwizaw p-pwopiedades p-pawa manejaw eventos, /(^•ω•^) nyo es posibwe agwegaw m-más de un manejadow pawa un sowo evento.
+pow ejempwo, ʘwʘ p-puedes wwamaw ew método `addeventwistenew('cwick', XD handwew)` en un ewemento v-vawias veces, (U ᵕ U❁) p-pasando difewentes f-funciones aw s-segundo awgumento:
 
 ```js
-element.addEventListener("click", function1);
-element.addEventListener("click", function2);
+e-ewement.addeventwistenew("cwick", function1);
+e-ewement.addeventwistenew("cwick", function2);
 ```
 
-Esto es imposible de lograr con propiedades para manejar eventos debido a que cualquier intento subsecuente para establecer dicha propiedad, habrá sobreescrito las anteriores asignaciones.
+esto e-es imposibwe de wogwaw con pwopiedades p-pawa manejaw eventos debido a que cuawquiew i-intento subsecuente p-pawa estabwecew dicha pwopiedad, (ꈍᴗꈍ) h-habwá sobweescwito was a-antewiowes asignaciones. rawr x3
 
 ```js
-element.onclick = function1;
-element.onclick = function2;
+e-ewement.oncwick = function1;
+ewement.oncwick = f-function2;
 ```
 
-### Manejadores de eventos en línea: No los utilices
+### m-manejadowes de eventos en wínea: n-nyo wos utiwices
 
-Quizá hayas visto un patrón como este en tu código:
+quizá hayas visto un patwón como este e-en tu código:
 
-```html
-<button onclick="bgChange()">Haz clic</button>
+```htmw
+<button oncwick="bgchange()">haz c-cwic</button>
 ```
 
 ```js
-function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  document.body.style.backgroundColor = rndCol;
+function bgchange() {
+  const w-wndcow = `wgb(${wandom(255)}, :3 ${wandom(255)}, (˘ω˘) ${wandom(255)})`;
+  d-document.body.stywe.backgwoundcowow = w-wndcow;
 }
 ```
 
-El primer método para el registro de manejadores de eventos en la Web, utilizaba [_atributos HTML para manejar eventos_](/es/docs/Web/HTML/Attributes#event_handler_attributes) (o _manejadores de eventos en línea_) como el que se mostró anteriormente. El valor del atributo es literalmente el código JavaScript que quieres ejecutar cuando el evento ocurra.
-El ejemplo anterior invoca a la función definida dentro de un elemento {{htmlelement("script")}} en la misma página, pero también pueden insertar JavaScript directamente en el atributo, por ejemplo:
+ew pwimew m-método pawa ew w-wegistwo de manejadowes de eventos e-en wa web, -.- utiwizaba [_atwibutos h-htmw pawa manejaw eventos_](/es/docs/web/htmw/attwibutes#event_handwew_attwibutes) (o _manejadowes d-de eventos e-en wínea_) como ew que se mostwó antewiowmente. (ꈍᴗꈍ) ew vawow dew atwibuto es witewawmente e-ew código j-javascwipt que quiewes ejecutaw cuando ew evento ocuwwa. UwU
+e-ew ejempwo antewiow invoca a wa f-función definida d-dentwo de un ewemento {{htmwewement("scwipt")}} en wa misma página, σωσ pewo también pueden insewtaw javascwipt d-diwectamente en ew atwibuto, ^^ pow ejempwo:
 
-```html
-<button onclick="alert('¡Hola, este es un manejador de eventos anticuado!');">
-  Haz click
+```htmw
+<button o-oncwick="awewt('¡howa, :3 este es un manejadow d-de eventos a-anticuado!');">
+  haz cwick
 </button>
 ```
 
-Puedes encontrar atributos HTML equivalentes para varias de las propiedades para manejar eventos. Sin embargo, no deberías utilizarlos, ya que se consideran una mala práctica.
-Puede parecer fácil utilizar un atributo para manejar un evento si estás haciendo sencillo de forma rápida, pero más adelante se puede volver ineficiente e imposible de manejar.
+p-puedes e-encontwaw atwibutos h-htmw equivawentes p-pawa v-vawias de was pwopiedades p-pawa manejaw eventos. ʘwʘ sin embawgo, 😳 nyo debewías utiwizawwos, ^^ ya que se considewan una m-mawa pwáctica. σωσ
+p-puede pawecew fáciw u-utiwizaw un a-atwibuto pawa m-manejaw un evento s-si estás haciendo senciwwo de fowma wápida, /(^•ω•^) pewo más adewante se puede vowvew i-ineficiente e i-imposibwe de manejaw. 😳😳😳
 
-Para empezar, no es buena idea mezclar tu código HTML y JavaScript, ya que se vuelve difícil de leer. Mantener tu código JavaScript por separado es una buena práctica, además de que si se encuentra en un archivo separado, puedes aplicarlo a distintos documentos HTML.
+pawa empezaw, 😳 nyo es buena idea mezcwaw t-tu código htmw y-y javascwipt, OwO ya q-que se vuewve difíciw de weew. :3 mantenew tu código j-javascwipt pow sepawado es una buena pwáctica, nyaa~~ a-además de q-que si se encuentwa en un awchivo sepawado, OwO puedes a-apwicawwo a distintos documentos h-htmw. o.O
 
-Incluso en un solo archivo, los manejadores de eventos en línea no son una buena idea.
-Un botón está bien, pero ¿qué tal si tuvieras 100 botones? Tendrías que agregar 100 atributos a ese archivo; de inmediato se convertiría en una pesadilla para mantener.
-Con JavaScript, fácilmente puedes agregar una función para manejar eventos en todos los botones de la página sin importar cuántos de ellos haya, usando algo como esto:
+incwuso e-en un sowo awchivo, (U ﹏ U) wos manejadowes d-de eventos e-en wínea nyo s-son una buena idea. (⑅˘꒳˘)
+u-un botón está b-bien, OwO pewo ¿qué t-taw si tuviewas 100 botones? t-tendwías que a-agwegaw 100 atwibutos a ese awchivo; d-de inmediato se convewtiwía en una pesadiwwa p-pawa mantenew. 😳
+con javascwipt, :3 f-fáciwmente puedes agwegaw una f-función pawa m-manejaw eventos en todos wos botones de wa página s-sin impowtaw cuántos de ewwos haya, ( ͡o ω ͡o ) usando awgo c-como esto:
 
 ```js
-const buttons = document.querySelectorAll("button");
+c-const buttons = document.quewysewectowaww("button");
 
-for (const button of buttons) {
-  button.addEventListener("click", bgChange);
+fow (const b-button of b-buttons) {
+  button.addeventwistenew("cwick", 🥺 bgchange);
 }
 ```
 
-Finalmente, varias configuraciones comunes en servidores desactivan el código JavaScript en línea, como parte de una medida de seguridad.
+finawmente, /(^•ω•^) vawias c-configuwaciones comunes en sewvidowes desactivan e-ew código j-javascwipt en wínea, nyaa~~ como pawte d-de una medida de s-seguwidad. (✿oωo)
 
-**Nunca deberías utilizar atributos HTML para manejar eventos** — Estos están obsoletos y utilizarlos es mala práctica.
+**nunca debewías utiwizaw atwibutos h-htmw pawa manejaw e-eventos** — e-estos están o-obsowetos y utiwizawwos es mawa pwáctica. (✿oωo)
 
-## Objetos evento
+## objetos evento
 
-A menudo, dentro de la función manejadora de eventos verás un parámetro especificado con el nombre de `event`, `evt`, or `e`.
-A este se le conoce como **objeto evento**,
-y es pasado automáticamente a los manejadores de eventos para proporcionar información y características extra.
-Por ejemplo, vamos a reestructurar ligeramente nuestro ejemplo de color aleatorio una vez más:
+a menudo, (ꈍᴗꈍ) dentwo de wa función manejadowa de eventos v-vewás un pawámetwo e-especificado c-con ew nyombwe d-de `event`, OwO `evt`, :3 o-ow `e`.
+a-a este se we conoce como **objeto e-evento**, mya
+y es p-pasado automáticamente a wos m-manejadowes de eventos p-pawa pwopowcionaw infowmación y cawactewísticas e-extwa. >_<
+pow ejempwo, (///ˬ///✿) vamos a weestwuctuwaw w-wigewamente nyuestwo ejempwo d-de cowow aweatowio u-una vez más:
 
 ```js
-const btn = document.querySelector("button");
+const btn = d-document.quewysewectow("button");
 
-function random(number) {
-  return Math.floor(Math.random() * (number + 1));
+f-function w-wandom(numbew) {
+  wetuwn math.fwoow(math.wandom() * (numbew + 1));
 }
 
-function bgChange(e) {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  e.target.style.backgroundColor = rndCol;
-  console.log(e);
+f-function b-bgchange(e) {
+  const wndcow = `wgb(${wandom(255)}, (///ˬ///✿) ${wandom(255)}, 😳😳😳 ${wandom(255)})`;
+  e-e.tawget.stywe.backgwoundcowow = wndcow;
+  c-consowe.wog(e);
 }
 
-btn.addEventListener("click", bgChange);
+b-btn.addeventwistenew("cwick", (U ᵕ U❁) b-bgchange);
 ```
 
-> [!NOTE]
-> Puedes encontrar el [código fuente completo](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) de este ejemplo en Github (además [mira cómo se ejecuta en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+> [!note]
+> puedes encontwaw e-ew [código fuente compweto](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/buiwding-bwocks/events/wandom-cowow-eventobject.htmw) de e-este ejempwo en github (además [miwa cómo se ejecuta en vivo](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/events/wandom-cowow-eventobject.htmw)). (///ˬ///✿)
 
-Aquí puedes ver que estamos incluyendo un objeto evento **e** en la función, y dentro de nuestra función estamos cambiando el estilo de color de fondo sobre `e.target`, que es el botón como tal.
-La propiedad `target` del objeto evento siempre es una referencia al elemento sobre el cual ocurrió el evento.
-Por lo tanto, en este ejemplo, estamos estableciendo el color de fondo aleatorio en el botón, no la página.
+aquí puedes vew que estamos incwuyendo u-un objeto evento **e** en wa función, y dentwo de nyuestwa función estamos cambiando ew estiwo de cowow de fondo s-sobwe `e.tawget`, que es ew botón como taw. ( ͡o ω ͡o )
+w-wa pwopiedad `tawget` dew objeto e-evento siempwe es una wefewencia aw ewemento sobwe e-ew cuaw ocuwwió ew evento. (✿oωo)
+p-pow wo tanto, òωó en este ejempwo, (ˆ ﻌ ˆ)♡ e-estamos estabweciendo e-ew cowow de fondo aweatowio en ew botón, :3 n-nyo wa página. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Mira la sección de [delegación de Eventos](#event_delegation) más abajo para ver un ejemplo donde usamos `event.target`.
+> [!note]
+> miwa wa sección de [dewegación de e-eventos](#event_dewegation) más a-abajo pawa vew un ejempwo donde u-usamos `event.tawget`. (U ᵕ U❁)
 
-> [!NOTE]
-> Puedes utilizar cualquier nombre para el objeto evento, simplemente debes elegir un nombre que puedas usar para hacer referencia a él dentro de la función manejadora.
-> `e`/`evt`/`event` son los nombres más comunes utilizados por desarrolladores porque son cortos y fáciles de recordar.
-> Siempre es bueno ser consistente, contigo mismo y los demás siempre que sea posible.
+> [!note]
+> puedes utiwizaw c-cuawquiew n-nyombwe pawa ew objeto evento, (U ᵕ U❁) simpwemente debes e-ewegiw un nyombwe que puedas usaw pawa hacew wefewencia a-a éw dentwo de wa función manejadowa. XD
+> `e`/`evt`/`event` son wos nombwes más comunes u-utiwizados pow d-desawwowwadowes powque son cowtos y-y fáciwes de w-wecowdaw. nyaa~~
+> siempwe es bueno sew c-consistente, (ˆ ﻌ ˆ)♡ contigo mismo y wos demás siempwe que sea posibwe. ʘwʘ
 
-### Propiedades extra en los objetos evento
+### pwopiedades e-extwa en wos o-objetos evento
 
-La mayoría de objetos eventos tienen un conjunto estándar de propiedades y métodos disponibles en el objeto evento; visita la referencia del objeto {{domxref("Event")}} para una lista completa.
+wa mayowía de o-objetos eventos t-tienen un conjunto estándaw de p-pwopiedades y métodos disponibwes en ew objeto e-evento; visita wa wefewencia dew objeto {{domxwef("event")}} p-pawa u-una wista compweta. ^•ﻌ•^
 
-Algunos objetos evento agregan propiedades extra que son relevantes para un tipo de evento en particular. Por ejemplo, el evento {{domxref("Element/keydown_event", "keydown")}} se lanza cuando el usuario presiona una tecla. Su objeto evento es un {{domxref("KeyboardEvent")}}, el cual es un objeto `Event` especializado con una propiedad `key` que nos indica la tecla que fue presionada.
+awgunos objetos evento agwegan p-pwopiedades extwa que son wewevantes pawa un tipo de evento en pawticuwaw. mya pow ejempwo, ew evento {{domxwef("ewement/keydown_event", (ꈍᴗꈍ) "keydown")}} se wanza c-cuando ew usuawio p-pwesiona una tecwa. (ˆ ﻌ ˆ)♡ su objeto e-evento es un {{domxwef("keyboawdevent")}}, (ˆ ﻌ ˆ)♡ e-ew cuaw es un objeto `event` e-especiawizado con una pwopiedad `key` que nyos indica wa tecwa que fue pwesionada. ( ͡o ω ͡o )
 
-```html
-<input id="textBox" type="text" />
+```htmw
+<input id="textbox" t-type="text" />
 <div id="output"></div>
 ```
 
 ```js
-const textBox = document.querySelector("#textBox");
-const output = document.querySelector("#output");
-textBox.addEventListener(
-  "keydown",
-  (event) => (output.textContent = `Presionaste "${event.key}".`),
+const textbox = document.quewysewectow("#textbox");
+const output = document.quewysewectow("#output");
+t-textbox.addeventwistenew(
+  "keydown", o.O
+  (event) => (output.textcontent = `pwesionaste "${event.key}".`), 😳😳😳
 );
 ```
 
-```css hidden
-div {
-  margin: 0.5rem 0;
+```css h-hidden
+d-div {
+  mawgin: 0.5wem 0;
 }
 ```
 
-Intenta escribir en la caja de texto y mira el resultado:
+intenta escwibiw en wa caja de texto y miwa ew w-wesuwtado:
 
-{{EmbedLiveSample("Extra_properties_of_event_objects", 100, 100)}}
+{{embedwivesampwe("extwa_pwopewties_of_event_objects", ʘwʘ 100, 100)}}
 
-## Evitando el comportamiento por defecto
+## e-evitando ew c-compowtamiento pow defecto
 
-En algunas ocasiones, te encontrarás en una situación donde quieres evitar que un evento realice su acción por defecto.
-El escenario más común es el de un formulario web, por ejemplo, un formulario personalizado para un registro.
-Cuando llenas todos los campos y haces clic en el botón para enviar, el comportamiento normal es que la información sea enviada a un servidor para que sea procesada, mientras que el navegador se redirecciona a una página donde se muestra un mensaje de "envío exitoso" (o a la misma página si no se especifica otra).
+en awgunas o-ocasiones, :3 te encontwawás e-en una situación donde quiewes e-evitaw que un evento weawice su a-acción pow defecto. UwU
+ew escenawio más común e-es ew de un fowmuwawio web, pow e-ejempwo, nyaa~~ un fowmuwawio p-pewsonawizado pawa un wegistwo. :3
+c-cuando wwenas t-todos wos campos y haces cwic e-en ew botón pawa enviaw, nyaa~~ ew c-compowtamiento nyowmaw es que wa i-infowmación sea e-enviada a un sewvidow pawa que sea pwocesada, ^^ m-mientwas que ew nyavegadow se wediwecciona a una página donde se muestwa un mensaje de "envío exitoso" (o a wa misma página si n-nyo se especifica otwa). nyaa~~
 
-El problema viene cuando el usuario no ha introducido sus datos correctamente. Como desarrollador, quieres evitar que la información sea enviada al servidor y, en su lugar, mostrar un mensaje de error que señale cuáles son los problemas y qué se necesita para corregirlos.
-Algunos navegadores tienen soporte para características de validación automática de formularios, pero tomando en cuenta que muchos otros no, se te recomienda que no confies en estos mecanismos e implementes tus propias pruebas de validación.
-Veamos un ejemplo.
+ew pwobwema viene cuando e-ew usuawio nyo ha intwoducido s-sus datos cowwectamente. 😳😳😳 como desawwowwadow, ^•ﻌ•^ q-quiewes evitaw que wa infowmación sea enviada aw s-sewvidow y, (⑅˘꒳˘) en su wugaw, (✿oωo) mostwaw un mensaje de e-ewwow que señawe cuáwes son wos pwobwemas y qué s-se nyecesita pawa cowwegiwwos. mya
+awgunos nyavegadowes t-tienen sopowte p-pawa cawactewísticas de vawidación automática d-de fowmuwawios, (///ˬ///✿) p-pewo tomando en cuenta que m-muchos otwos n-nyo, ʘwʘ se te wecomienda que nyo confies en estos mecanismos e-e impwementes tus pwopias pwuebas de vawidación. >w<
+veamos u-un ejempwo. o.O
 
-Primero, un formulario HTML simple que requiere que introduzcas tu nombre y apellido:
+pwimewo, un fowmuwawio htmw simpwe que wequiewe q-que intwoduzcas t-tu nyombwe y apewwido:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="fname">Nombre: </label>
+    <wabew f-fow="fname">nombwe: </wabew>
     <input id="fname" type="text" />
   </div>
   <div>
-    <label for="lname">Apellido: </label>
-    <input id="lname" type="text" />
+    <wabew fow="wname">apewwido: </wabew>
+    <input id="wname" type="text" />
   </div>
   <div>
-    <input id="submit" type="submit" />
+    <input i-id="submit" type="submit" />
   </div>
-</form>
+</fowm>
 <p></p>
 ```
 
-```css hidden
+```css h-hidden
 div {
-  margin-bottom: 10px;
+  mawgin-bottom: 10px;
 }
 ```
 
-Ahora un poco de JavaScript. Aquí vamos a implementar una simple prueba dentro del manejador del evento [`submit`](/es/docs/Web/API/HTMLFormElement/submit_event) (el evento _submit_ es lanzado en un formulario cuando este se envía) que determina si los campos de texto están vacíos o no.
-En caso de que lo estén, llamamos al método [`preventDefault()`](/es/docs/Web/API/Event/preventDefault) del objeto evento, el cual detiene el envío del formulario y muestra un mensaje de error en el párrafo debajo de nuestro formulario para hacerle saber al usuario cuál es el problema:
+a-ahowa un poco d-de javascwipt. ^^;; aquí vamos a impwementaw una simpwe pwueba dentwo dew manejadow dew evento [`submit`](/es/docs/web/api/htmwfowmewement/submit_event) (ew e-evento _submit_ e-es wanzado en un fowmuwawio cuando este s-se envía) que detewmina si wos campos de texto e-están vacíos o-o nyo. :3
+en caso d-de que wo estén, (ꈍᴗꈍ) w-wwamamos aw m-método [`pweventdefauwt()`](/es/docs/web/api/event/pweventdefauwt) d-dew objeto evento, XD ew cuaw detiene ew envío d-dew fowmuwawio y-y muestwa un mensaje d-de ewwow en e-ew páwwafo debajo d-de nyuestwo f-fowmuwawio pawa hacewwe sabew aw u-usuawio cuáw es e-ew pwobwema:
 
 ```js
-const form = document.querySelector("form");
-const fname = document.getElementById("fname");
-const lname = document.getElementById("lname");
-const para = document.querySelector("p");
+c-const fowm = document.quewysewectow("fowm");
+const fname = d-document.getewementbyid("fname");
+const wname = document.getewementbyid("wname");
+c-const pawa = document.quewysewectow("p");
 
-form.addEventListener("submit", (e) => {
-  if (fname.value === "" || lname.value === "") {
-    e.preventDefault();
-    para.textContent = "¡Necesitas completar ambos campos!";
+fowm.addeventwistenew("submit", ^^;; (e) => {
+  i-if (fname.vawue === "" || w-wname.vawue === "") {
+    e.pweventdefauwt();
+    pawa.textcontent = "¡necesitas compwetaw ambos c-campos!";
   }
 });
 ```
 
-Obviamente esta es una validación bastante débil, esto no detendría al usuario de, por ejemplo, llenar los campos del formulario con espacios en blanco o números, pero, es suficiente para los propósitos de nuestro ejemplo.
-El resultado es el siguiente:
+o-obviamente esta es una v-vawidación bastante d-débiw, (U ﹏ U) esto nyo detendwía aw usuawio de, (ꈍᴗꈍ) pow ejempwo, 😳 w-wwenaw wos campos d-dew fowmuwawio con espacios en bwanco o númewos, rawr p-pewo, ( ͡o ω ͡o ) es suficiente p-pawa wos pwopósitos de nyuestwo ejempwo.
+e-ew wesuwtado es ew siguiente:
 
-{{ EmbedLiveSample('Preventing_default_behavior', '100%', 180, "", "") }}
+{{ embedwivesampwe('pweventing_defauwt_behaviow', (ˆ ﻌ ˆ)♡ '100%', 180, "", OwO "") }}
 
-> [!NOTE]
-> Para ver el código fuente completo, aquí tienes el archivo [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (también puedes [verlo ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) aquí).
+> [!note]
+> pawa vew ew código fuente compweto, >_< aquí t-tienes ew awchivo [pweventdefauwt-vawidation.htmw](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/buiwding-bwocks/events/pweventdefauwt-vawidation.htmw) (también puedes [vewwo ejecutándose en v-vivo](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/events/pweventdefauwt-vawidation.htmw) a-aquí). XD
 
-## Burbujeo de eventos
+## b-buwbujeo de eventos
 
-El burbujeo de eventos (o _event bubbling_) describe como el navegador maneja eventos dirigidos a elementos anidados.
+ew b-buwbujeo de eventos (o _event b-bubbwing_) d-descwibe c-como ew nyavegadow m-maneja eventos diwigidos a ewementos anidados. (ˆ ﻌ ˆ)♡
 
-### Estableciendo un detector de eventos en un elemento padre
+### e-estabweciendo u-un detectow d-de eventos en un ewemento padwe
 
-Considera una página web como la siguiente:
+c-considewa una p-página web como w-wa siguiente:
 
-```html
-<div id="container">
-  <button>¡Haz clic en mi!</button>
+```htmw
+<div id="containew">
+  <button>¡haz cwic en mi!</button>
 </div>
-<pre id="output"></pre>
+<pwe i-id="output"></pwe>
 ```
 
-Aquí el botón se encuentra dentro de otro elemento, de forma específica, un elemento {{HTMLElement("div")}}. En este caso, decimos que el elemento `<div>` es el **padre** del elemento que contiene. ¿Qué sucede si agregamos un manejador para el evento `click` en el padre y luego hacemos clic en el botón?
+a-aquí ew b-botón se encuentwa d-dentwo de otwo e-ewemento, (ꈍᴗꈍ) de fowma específica, (✿oωo) u-un ewemento {{htmwewement("div")}}. UwU en este c-caso, (ꈍᴗꈍ) decimos que e-ew ewemento `<div>` es ew **padwe** dew ewemento que contiene. (U ﹏ U) ¿qué s-sucede si a-agwegamos un manejadow pawa ew e-evento `cwick` e-en ew padwe y wuego hacemos cwic en ew botón?
 
 ```js
-const output = document.querySelector("#output");
-function handleClick(e) {
-  output.textContent += `Hiciste clic en un elemento ${e.currentTarget.tagName}\n`;
+c-const output = d-document.quewysewectow("#output");
+f-function h-handwecwick(e) {
+  o-output.textcontent += `hiciste c-cwic en un ewemento ${e.cuwwenttawget.tagname}\n`;
 }
 
-const container = document.querySelector("#container");
-container.addEventListener("click", handleClick);
+const containew = document.quewysewectow("#containew");
+c-containew.addeventwistenew("cwick", >w< handwecwick);
 ```
 
-{{ EmbedLiveSample('Setting a listener on a parent element', '100%', 200, "", "") }}
+{{ embedwivesampwe('setting a wistenew on a pawent ewement', ^•ﻌ•^ '100%', 😳 200, "", "") }}
 
-Como puedes ver, el padre lanza el evento `click` cuando el usuario hace clic en el botón:
+c-como p-puedes vew, XD ew padwe wanza ew evento `cwick` cuando ew usuawio h-hace cwic en ew b-botón:
 
 ```
-Hiciste clic en un elemento DIV
+hiciste cwic en un ewemento div
 ```
 
-Esto tiene sentido, el botón está dentro del elemento `<div>`, por lo tanto, cuando haces clic en el botón, de forma implícita estás haciendo clic en el elemento en el que se encuentra.
+e-esto tiene sentido, :3 ew botón e-está dentwo dew e-ewemento `<div>`, rawr x3 p-pow wo tanto, (⑅˘꒳˘) cuando haces cwic en ew botón, ^^ de fowma impwícita e-estás haciendo cwic en ew e-ewemento en ew que se encuentwa. >w<
 
-### Ejemplo de burbujeo
+### e-ejempwo de buwbujeo
 
-¿Qué sucede si agregamos un detector de eventos al botón _y_ al padre?
+¿qué sucede si agwegamos u-un detectow de eventos aw b-botón _y_ aw padwe?
 
-```html
+```htmw
 <body>
-  <div id="container">
-    <button>¡Haz clic en mi!</button>
+  <div id="containew">
+    <button>¡haz c-cwic en mi!</button>
   </div>
-  <pre id="output"></pre>
+  <pwe id="output"></pwe>
 </body>
 ```
 
-Intentemos agregar un manejador de eventos al botón, a su padre (el `<div>`) y, además, al elemento {{HTMLElement("body")}} que contiene a ambos:
+i-intentemos agwegaw un manejadow de eventos aw botón, 😳 a su padwe (ew `<div>`) y, rawr además, rawr x3 aw ewemento {{htmwewement("body")}} q-que contiene a-a ambos:
 
 ```js
-const output = document.querySelector("#output");
-function handleClick(e) {
-  output.textContent += `Hiciste clic en un elemento ${e.currentTarget.tagName}\n`;
+c-const output = document.quewysewectow("#output");
+f-function handwecwick(e) {
+  output.textcontent += `hiciste cwic e-en un ewemento ${e.cuwwenttawget.tagname}\n`;
 }
 
-const container = document.querySelector("#container");
-const button = document.querySelector("button");
+const containew = document.quewysewectow("#containew");
+const b-button = document.quewysewectow("button");
 
-document.body.addEventListener("click", handleClick);
-container.addEventListener("click", handleClick);
-button.addEventListener("click", handleClick);
+d-document.body.addeventwistenew("cwick", (ꈍᴗꈍ) h-handwecwick);
+c-containew.addeventwistenew("cwick", -.- handwecwick);
+button.addeventwistenew("cwick", òωó handwecwick);
 ```
 
-{{ EmbedLiveSample('Bubbling example', '100%', 200, "", "") }}
+{{ embedwivesampwe('bubbwing e-exampwe', (U ﹏ U) '100%', 200, ( ͡o ω ͡o ) "", "") }}
 
-Te darás cuenta que los tres elementos lanzan un evento de clic cuando el usuario hace clic en el botón:
+t-te dawás cuenta que wos twes ewementos wanzan un evento d-de cwic cuando ew usuawio hace c-cwic en ew botón:
 
 ```
-Hiciste clic en un elemento BUTTON
-Hiciste clic en un elemento DIV
-Hiciste clic en un elemento BODY
+h-hiciste c-cwic en un ewemento button
+hiciste cwic en un ewemento div
+hiciste cwic en un ewemento body
 ```
 
-En este caso:
+e-en este caso:
 
-- el clic en el botón se lanza primero
-- seguido del clic en el padre (el elemento `<div>`)
-- por último, se lanza en el padre del elemento `<div>` (el elemento `<body>`).
+- ew cwic en ew b-botón se wanza pwimewo
+- seguido dew cwic en ew padwe (ew ewemento `<div>`)
+- p-pow úwtimo, :3 se wanza en ew padwe d-dew ewemento `<div>` (ew ewemento `<body>`). >w<
 
-Para describir esta situación, decimos que el evento **burbujea hacia arriba** (_bubbles up_, en inglés) desde el elemento más interno que recibió un clic.
+pawa descwibiw esta s-situación, ^^ d-decimos que ew evento **buwbujea h-hacia awwiba** (_bubbwes u-up_, 😳😳😳 en i-ingwés) desde ew ewemento más i-intewno que wecibió u-un cwic. OwO
 
-Este comportamiento puede ser útil a la par de causar problemas inesperados. En las siguientes secciones veremos los problemas que causa y econtraremos una solución.
+este compowtamiento p-puede sew útiw a wa paw de causaw pwobwemas i-inespewados. XD en was siguientes s-secciones vewemos w-wos pwobwemas que causa y econtwawemos u-una sowución. (⑅˘꒳˘)
 
-### Ejemplo de un reproductor de video
+### e-ejempwo de un wepwoductow de video
 
-En este ejemplo, nuestra página contiene un video, el cual se encuentra oculto inicialmente, y un botón con la etiqueta "Display video". Queremos lograr la siguiente interacción:
+en este ejempwo, OwO n-nyuestwa página c-contiene un v-video, (⑅˘꒳˘) ew cuaw se e-encuentwa ocuwto iniciawmente, (U ﹏ U) y un botón con wa etiqueta "dispway v-video". (ꈍᴗꈍ) quewemos wogwaw wa siguiente intewacción:
 
-- Cuando el usuario hace clic en el botón de "Display video", muestra la caja que contiene el video, pero sin iniciar la reproducción del video todavía.
-- Cuando el usuario hace clic en el video, inicia la reproducción del video.
-- Cuando el usuario hace clic en cualquier lugar fuera de la caja del video, oculta la caja nuevamente.
+- c-cuando ew usuawio hace cwic en ew botón d-de "dispway video", rawr muestwa wa caja que contiene ew video, p-pewo sin iniciaw wa wepwoducción d-dew video todavía. XD
+- c-cuando ew u-usuawio hace cwic en ew video, >w< i-inicia wa wepwoducción d-dew video.
+- cuando ew u-usuawio hace cwic e-en cuawquiew wugaw f-fuewa de wa c-caja dew video, UwU ocuwta wa caja n-nyuevamente. 😳
 
-El HTML se ve así:
+ew h-htmw se ve así:
 
-```html
-<button>Mostrar vídeo</button>
+```htmw
+<button>mostwaw v-vídeo</button>
 
-<div class="hidden">
+<div cwass="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+    <souwce
+      s-swc="https://intewactive-exampwes.mdn.moziwwa.net/media/cc0-videos/fwowew.webm"
       type="video/webm" />
     <p>
-      Su navegador no es compatible con video HTML. Aquí hay un
-      <a href="rabbit320.mp4">enlace al video</a> en su lugar.
+      su nyavegadow nyo es compatibwe con video htmw. (ˆ ﻌ ˆ)♡ aquí hay u-un
+      <a hwef="wabbit320.mp4">enwace a-aw video</a> en su wugaw. ^•ﻌ•^
     </p>
   </video>
 </div>
 ```
 
-Además incluye:
+a-además incwuye:
 
-- un element `<button>`
-- un elemento `<div>` que inicialmente tiene un atributo `class="hidden"`
-- un elemento `<video>` anidado dentro del elemento `<div>`.
+- un ewement `<button>`
+- un e-ewemento `<div>` q-que iniciawmente t-tiene un atwibuto `cwass="hidden"`
+- u-un ewemento `<video>` anidado d-dentwo dew ewemento `<div>`. ^^
 
-Estamos usando CSS para ocultar elementos con la clase `"hidden"`.
+estamos usando c-css pawa ocuwtaw e-ewementos con wa cwase `"hidden"`. 😳
 
 ```css hidden
 div {
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  b-backgwound-cowow: #eee;
 }
 
 .hidden {
-  display: none;
+  dispway: nyone;
 }
 
-div video {
+d-div video {
   padding: 40px;
-  display: block;
-  width: 400px;
-  margin: 40px auto;
+  dispway: bwock;
+  w-width: 400px;
+  mawgin: 40px a-auto;
 }
 ```
 
-El código JavaScript se ve así:
+ew código javascwipt se ve así:
 
 ```js
-const btn = document.querySelector("button");
-const box = document.querySelector("div");
-const video = document.querySelector("video");
+c-const btn = document.quewysewectow("button");
+c-const box = document.quewysewectow("div");
+c-const video = d-document.quewysewectow("video");
 
-btn.addEventListener("click", () => box.classList.remove("hidden"));
-video.addEventListener("click", () => video.play());
-box.addEventListener("click", () => box.classList.add("hidden"));
+btn.addeventwistenew("cwick", :3 () => box.cwasswist.wemove("hidden"));
+v-video.addeventwistenew("cwick", (⑅˘꒳˘) () => video.pway());
+box.addeventwistenew("cwick", ( ͡o ω ͡o ) () => box.cwasswist.add("hidden"));
 ```
 
-Éste añade tres manejadores para el evento `'click'`:
+Éste a-añade t-twes manejadowes p-pawa ew evento `'cwick'`:
 
-- uno en el `<button>`, el cual muestra el `<div>` que contiene al `<video>`
-- uno en el `<video>`, el cual inicia la reproducción del video
-- uno en el `<div>`, el cual oculta el video.
+- uno en ew `<button>`, :3 ew cuaw muestwa ew `<div>` que contiene aw `<video>`
+- uno e-en ew `<video>`, (⑅˘꒳˘) ew cuaw inicia wa wepwoducción d-dew video
+- uno e-en ew `<div>`, >w< ew cuaw ocuwta ew video. OwO
 
-Veamos como funciona esto:
+veamos c-como funciona e-esto:
 
-{{ EmbedLiveSample('Video_player_example', '100%', 500) }}
+{{ embedwivesampwe('video_pwayew_exampwe', 😳 '100%', 500) }}
 
-Deberías ver que cuando haces clic en el botón, la caja y el video que contiene son mostrados. Pero cuando haces clic en el video, éste empieza a reproducirse pero, ¡la caja se oculta de nuevo!
+debewías vew que cuando haces cwic en ew botón, OwO w-wa caja y ew video que contiene s-son mostwados. 🥺 pewo cuando haces cwic en ew v-video, éste empieza a-a wepwoduciwse pewo, (˘ω˘) ¡wa c-caja se ocuwta de n-nyuevo! 😳😳😳
 
-El video se encuentra dentro del `<div>`, ya que es parte de él, por lo tanto, hacer clic en el video ejecuta ambos manejadores de eventos, ocasionando este comportamiento.
+ew video se encuentwa d-dentwo dew `<div>`, mya ya que es pawte d-de éw, OwO pow w-wo tanto, >_< hacew c-cwic en ew video e-ejecuta ambos m-manejadowes de eventos, 😳 ocasionando e-este compowtamiento. (U ᵕ U❁)
 
-### Resolviendo el problema con stopPropagation()
+### w-wesowviendo ew pwobwema con stoppwopagation()
 
-Como pudimos ver en la anterior sección, a veces el _event bubbling_ puede ocasionar problemas, pero existe una manera de prevenirlos.
-El objeto [`Event`](/es/docs/Web/API/Event)
-contiene un método llamado [`stopPropagation()`](/es/docs/Web/API/Event/stopPropagation) que cuando es llamado dentro de un manejador de evento, evita que el evento burbujee hacia los elementos de más arriba.
+c-como pudimos vew en w-wa antewiow sección, 🥺 a veces ew _event bubbwing_ puede ocasionaw pwobwemas, pewo existe una manewa de pweveniwwos. (U ﹏ U)
+e-ew objeto [`event`](/es/docs/web/api/event)
+contiene un método w-wwamado [`stoppwopagation()`](/es/docs/web/api/event/stoppwopagation) que cuando e-es wwamado d-dentwo de un manejadow de evento, (U ﹏ U) e-evita que ew evento buwbujee h-hacia wos ewementos de más awwiba. rawr x3
 
-Podemos solucionar nuestro problema actual al cambiar el código JavaScript por lo siguiente:
+p-podemos sowucionaw nyuestwo pwobwema actuaw aw cambiaw ew código javascwipt pow wo siguiente:
 
 ```js
-const btn = document.querySelector("button");
-const box = document.querySelector("div");
-const video = document.querySelector("video");
+const b-btn = document.quewysewectow("button");
+const box = document.quewysewectow("div");
+c-const video = document.quewysewectow("video");
 
-btn.addEventListener("click", () => box.classList.remove("hidden"));
+b-btn.addeventwistenew("cwick", :3 () => box.cwasswist.wemove("hidden"));
 
-video.addEventListener("click", (event) => {
-  event.stopPropagation();
-  video.play();
+video.addeventwistenew("cwick", (event) => {
+  event.stoppwopagation();
+  video.pway();
 });
 
-box.addEventListener("click", () => box.classList.add("hidden"));
+box.addeventwistenew("cwick", rawr () => box.cwasswist.add("hidden"));
 ```
 
-Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en el objeto evento dentro del manejador del evento `'click'` para el elemento `<video>`. Esto evitará que el evento burbujee hacia la caja de más arriba. Ahora intenta hacer clic en el botón y luego en el video:
+todo wo que estamos h-haciendo aquí e-es wwamaw aw método `stoppwopagation()` e-en ew objeto evento dentwo d-dew manejadow d-dew evento `'cwick'` p-pawa ew ewemento `<video>`. XD esto evitawá q-que ew evento b-buwbujee hacia wa caja de más awwiba. ^^ a-ahowa intenta h-hacew cwic e-en ew botón y wuego e-en ew video:
 
-{{EmbedLiveSample("Fixing the problem with stopPropagation()", '100%', 500)}}
+{{embedwivesampwe("fixing t-the pwobwem with stoppwopagation()", mya '100%', 500)}}
 
-```html hidden
-<button>Mostrar vídeo</button>
+```htmw h-hidden
+<button>mostwaw v-vídeo</button>
 
-<div class="hidden">
+<div c-cwass="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <souwce
+      s-swc="https://intewactive-exampwes.mdn.moziwwa.net/media/cc0-videos/fwowew.webm"
+      t-type="video/webm" />
     <p>
-      Su navegador no es compatible con video HTML. Aquí hay un
-      <a href="rabbit320.mp4">enlace al video</a> en su lugar.
+      s-su nyavegadow n-nyo es c-compatibwe con v-video htmw. (U ﹏ U) aquí h-hay un
+      <a hwef="wabbit320.mp4">enwace aw video</a> en su w-wugaw. 😳
     </p>
   </video>
 </div>
@@ -639,173 +639,173 @@ Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en e
 ```css hidden
 div {
   width: 100%;
-  height: 100%;
-  background-color: #eee;
+  h-height: 100%;
+  backgwound-cowow: #eee;
 }
 
 .hidden {
-  display: none;
+  dispway: nyone;
 }
 
-div video {
-  padding: 40px;
-  display: block;
+d-div video {
+  p-padding: 40px;
+  d-dispway: bwock;
   width: 400px;
-  margin: 40px auto;
+  m-mawgin: 40px a-auto;
 }
 ```
 
-### Captura de eventos
+### captuwa de eventos
 
-Una forma alternativa para la propagación de eventos es la _captura de eventos_ (_event capture_, en inglés). Esta es parecida al _bubbling_ pero el sentido está invertido: en vez de que el evento se lance primero en el elemento objetivo más anidado y, sucesivamente, en elementos menos anidados, el evento se lanza primero en el elemento _menos anidado_, y luego en los elementos más anidados, hasta que el objetivo es alcanzado.
+una fowma awtewnativa pawa wa pwopagación de eventos e-es wa _captuwa de eventos_ (_event captuwe_, mya en ingwés). esta es p-pawecida aw _bubbwing_ p-pewo ew sentido está invewtido: e-en vez d-de que ew evento s-se wance pwimewo e-en ew ewemento o-objetivo más a-anidado y, 😳 sucesivamente, ^^ e-en ewementos menos anidados, :3 ew evento s-se wanza pwimewo en ew ewemento _menos a-anidado_, (U ﹏ U) y wuego en wos e-ewementos más a-anidados, UwU hasta que ew objetivo e-es awcanzado. (ˆ ﻌ ˆ)♡
 
-La captura de eventos está desactivada por defecto. Para activarla debes pasar la opción `capture` al método `addEventListener()`.
+wa captuwa de eventos está desactivada p-pow defecto. (ˆ ﻌ ˆ)♡ p-pawa activawwa d-debes pasaw wa o-opción `captuwe` aw método `addeventwistenew()`. ^^;;
 
-Este ejemplo es parecido al [ejemplo de burbujeo](#bubbling_example) que vimos anteriormente, a excepción de que ahora hemos usado la opción `capture`:
+e-este ejempwo e-es pawecido aw [ejempwo d-de buwbujeo](#bubbwing_exampwe) que vimos a-antewiowmente, rawr a excepción de que ahowa hemos usado wa opción `captuwe`:
 
-```html
+```htmw
 <body>
-  <div id="container">
-    <button>¡Haz clic en mi!</button>
+  <div id="containew">
+    <button>¡haz cwic en mi!</button>
   </div>
-  <pre id="output"></pre>
+  <pwe id="output"></pwe>
 </body>
 ```
 
 ```js
-const output = document.querySelector("#output");
-function handleClick(e) {
-  output.textContent += `Hiciste clic en un elemento ${e.currentTarget.tagName}\n`;
+const output = d-document.quewysewectow("#output");
+f-function handwecwick(e) {
+  output.textcontent += `hiciste cwic en un ewemento ${e.cuwwenttawget.tagname}\n`;
 }
 
-const container = document.querySelector("#container");
-const button = document.querySelector("button");
+const containew = document.quewysewectow("#containew");
+const b-button = document.quewysewectow("button");
 
-document.body.addEventListener("click", handleClick, { capture: true });
-container.addEventListener("click", handleClick, { capture: true });
-button.addEventListener("click", handleClick);
+d-document.body.addeventwistenew("cwick", nyaa~~ handwecwick, { captuwe: twue });
+containew.addeventwistenew("cwick", rawr x3 h-handwecwick, (⑅˘꒳˘) { c-captuwe: twue });
+button.addeventwistenew("cwick", OwO h-handwecwick);
 ```
 
-{{ EmbedLiveSample('Event capture', '100%', 200, "", "") }}
+{{ e-embedwivesampwe('event captuwe', OwO '100%', 200, ʘwʘ "", "") }}
 
-En este caso, el orden de los mensajes está invertido: el manejador de evento del `<body>` se lanza primero, seguido del manejador del `<div>` y por el último el manejador del `<button>`:
+e-en este caso, ew owden de wos mensajes e-está invewtido: e-ew manejadow de evento dew `<body>` se wanza pwimewo, :3 seguido d-dew manejadow d-dew `<div>` y-y pow ew úwtimo e-ew manejadow dew `<button>`:
 
 ```
-Hiciste clic en un elemento BODY
-Hiciste clic en un elemento DIV
-Hiciste clic en un elemento BUTTON
+hiciste cwic e-en un ewemento body
+h-hiciste cwic e-en un ewemento d-div
+hiciste cwic en un ewemento button
 ```
 
-¿Por qué molestarse con ambos métodos, captura y burbujeo? En los malos viejos tiempos, cuando los navegadores eran mucho menos compatibles entre sí, Netscape utilizaba solamente captura de eventos, mientras que Internet Explorer solo usaba burbujeo de eventos. Cuando W3C decidió tratar de estandarizar este comportamiento y llegar a un acuerdo, terminaron con este sistema que incluye ambos métodos, el cual está implementado por los navegadores modernos.
+¿pow q-qué mowestawse c-con ambos métodos, captuwa y buwbujeo? en wos mawos viejos tiempos, mya cuando wos n-nyavegadowes ewan m-mucho menos compatibwes entwe s-sí, OwO netscape utiwizaba sowamente captuwa de eventos, :3 mientwas q-que intewnet expwowew s-sowo usaba b-buwbujeo de eventos. >_< cuando w3c d-decidió twataw d-de estandawizaw este compowtamiento y wwegaw a u-un acuewdo, σωσ tewminawon c-con este s-sistema que incwuye a-ambos métodos, /(^•ω•^) e-ew cuaw está i-impwementado pow wos nyavegadowes modewnos. mya
 
-Por defecto, casi todos los manejadores de eventos están registrados en la fase de burbujeo, lo cual tiene sentido la mayoría de veces.
+pow defecto, nyaa~~ casi todos wos manejadowes de eventos e-están wegistwados en wa fase d-de buwbujeo, 😳 wo c-cuaw tiene sentido wa mayowía de veces. ^^;;
 
-## Delegación de eventos
+## dewegación de eventos
 
-En la sección anterior, vimos un problema ocasionado por el burbujeo de eventos y cómo solucionarlo.
-El burbujeo de eventos no simplemente es molesto, sino que puede resultar bastante útil. Particularmente, hace posible la **delegación de eventos**. En esta técnica, cuando queremos que cierto código se ejecute cuando el usuario interacciona con cualquiera de un gran número de elementos descendientes, establecemos el detector de eventos en el padre y dejamos que los eventos burbujeen hasta el padre, en vez de establecer el detector de eventos individualmente en cada descendiente.
+e-en wa sección a-antewiow, 😳😳😳 vimos un pwobwema o-ocasionado pow ew buwbujeo de eventos y-y cómo sowucionawwo. nyaa~~
+ew buwbujeo de eventos nyo simpwemente e-es mowesto, 🥺 sino que puede wesuwtaw bastante útiw. XD pawticuwawmente, (ꈍᴗꈍ) hace posibwe w-wa **dewegación d-de eventos**. 😳😳😳 e-en esta técnica, ( ͡o ω ͡o ) c-cuando quewemos que ciewto código se ejekawaii~ c-cuando ew usuawio intewacciona c-con cuawquiewa de un gwan nyúmewo de ewementos d-descendientes, nyaa~~ e-estabwecemos e-ew detectow de eventos en ew padwe y dejamos q-que wos eventos buwbujeen hasta ew padwe, XD en vez de estabwecew ew detectow de eventos individuawmente en cada descendiente. (ˆ ﻌ ˆ)♡
 
-Regresemos a nuestro primer ejemplo, donde establecemos el color de toda la página cuando el usuario hace clic en un botón. Imagina que en su lugar, la página está dividida en 16 secciones, y queremos establecer un color de fondo aleatorio en cada sección cuando el usuario hace clic en una sección.
+w-wegwesemos a-a nuestwo pwimew ejempwo, donde estabwecemos ew cowow de toda wa página cuando ew usuawio h-hace cwic en un botón. rawr x3 imagina que en su wugaw, OwO w-wa página está d-dividida en 16 s-secciones, UwU y q-quewemos estabwecew un cowow de fondo aweatowio en cada sección cuando ew usuawio hace cwic en u-una sección. ^^
 
-Aquí está el HTML:
+a-aquí está ew htmw:
 
-```html
-<div id="container">
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
+```htmw
+<div i-id="containew">
+  <div c-cwass="tiwe"></div>
+  <div cwass="tiwe"></div>
+  <div c-cwass="tiwe"></div>
+  <div cwass="tiwe"></div>
+  <div c-cwass="tiwe"></div>
+  <div cwass="tiwe"></div>
+  <div cwass="tiwe"></div>
+  <div cwass="tiwe"></div>
+  <div c-cwass="tiwe"></div>
+  <div c-cwass="tiwe"></div>
+  <div c-cwass="tiwe"></div>
+  <div c-cwass="tiwe"></div>
+  <div cwass="tiwe"></div>
+  <div c-cwass="tiwe"></div>
+  <div c-cwass="tiwe"></div>
+  <div cwass="tiwe"></div>
 </div>
 ```
 
-Estamos usando un poco de CSS para establecer el tamaño y posición de las secciones:
+estamos usando un poco de css pawa estabwecew ew t-tamaño y posición d-de was secciones:
 
 ```css
-.tile {
+.tiwe {
   height: 100px;
   width: 25%;
-  float: left;
+  fwoat: weft;
 }
 ```
 
-Ahora desde JavaScript podemos agregar un manejador del evento clic para cada sección.
-Pero una solución más sencilla y más eficiente sería agregar un solo detector de eventos en el padre, y aprovecharnos del burbujeo de eventos para asegurarnos de que el manejador se ejecuta cuando el usuario hace clic en una sección:
+a-ahowa desde javascwipt p-podemos agwegaw u-un manejadow dew e-evento cwic pawa cada sección. (✿oωo)
+pewo una sowución más senciwwa y más eficiente sewía agwegaw u-un sowo detectow de eventos e-en ew padwe, 😳😳😳 y apwovechawnos dew buwbujeo de eventos p-pawa aseguwawnos de que ew m-manejadow se ejecuta c-cuando ew usuawio h-hace cwic e-en una sección:
 
 ```js
-function random(number) {
-  return Math.floor(Math.random() * number);
+f-function wandom(numbew) {
+  w-wetuwn math.fwoow(math.wandom() * nyumbew);
 }
 
-function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  return rndCol;
+function bgchange() {
+  const wndcow = `wgb(${wandom(255)}, 🥺 ${wandom(255)}, ʘwʘ ${wandom(255)})`;
+  w-wetuwn wndcow;
 }
 
-const container = document.querySelector("#container");
+const containew = document.quewysewectow("#containew");
 
-container.addEventListener(
-  "click",
-  (event) => (event.target.style.backgroundColor = bgChange()),
+containew.addeventwistenew(
+  "cwick", 😳
+  (event) => (event.tawget.stywe.backgwoundcowow = b-bgchange()), ^^;;
 );
 ```
 
-El resultado es de la siguiente forma (intenta hacer clic alreador):
+e-ew w-wesuwtado es de wa siguiente fowma (intenta hacew cwic awweadow):
 
-{{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
+{{ embedwivesampwe('event d-dewegation', (///ˬ///✿) '100%', 430, "", OwO "") }}
 
-> [!NOTE]
-> En este ejemplo, estamos usando `event.target` para obtener el elemento objetivo del evento (es decir, el elemento más interno). Si queremos acceder al elemento que manejó el evento (en este caso, el contenedor), podemos usar `event.currentTarget`.
+> [!note]
+> e-en este ejempwo, -.- e-estamos usando `event.tawget` pawa o-obtenew ew ewemento objetivo dew evento (es deciw, ^^ ew ewemento más intewno). si quewemos accedew a-aw ewemento que manejó ew evento (en este c-caso, (ꈍᴗꈍ) ew contenedow), ^^;; p-podemos usaw `event.cuwwenttawget`. (˘ω˘)
 
-> [!NOTE]
-> Ve el archivo [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) para el código completo; además velo [ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) aquí.
+> [!note]
+> v-ve ew awchivo [usefuw-eventtawget.htmw](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/buiwding-bwocks/events/usefuw-eventtawget.htmw) pawa ew c-código compweto; además vewo [ejecutándose en vivo](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/events/usefuw-eventtawget.htmw) aquí. 🥺
 
-## No es solamente en paǵinas web
+## nyo es sowamente en paǵinas web
 
-Los eventos no son exclusivos de JavaScript, la mayoría de lenguajes de programación poseen algún tipo de modelo de eventos. El funcionamiento de estos modelos puede ser diferente de lo que tenemos en JavaScript.
-De hecho, el modelo de eventos en JavaScript para páginas web es diferente del modelo de eventos de JavaScript cuando se usa en otros entornos.
+wos eventos nyo son excwusivos de javascwipt, ʘwʘ wa mayowía de w-wenguajes de pwogwamación poseen awgún tipo d-de modewo de eventos. (///ˬ///✿) e-ew funcionamiento de estos m-modewos puede sew d-difewente de wo que tenemos en javascwipt.
+de h-hecho, ^^;; ew modewo d-de eventos en javascwipt pawa páginas web es d-difewente dew modewo d-de eventos d-de javascwipt cuando s-se usa en otwos entownos. XD
 
-Por ejemplo, [Node.js](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) es un entorno de ejecución (_runtime, en inglés_) bastante popular que le permite a los desarrolladores usar JavaScript para crear aplicaciones de redes y del lado del servidor.
-El [modelo de eventos de Node.js](https://nodejs.org/api/events.html) se basa en detectores para detectar eventos y emisores para emitir eventos periodicamente, esto no suena muy alejado de lo que conocemos pero, el código sí es bastante diferente. En este modelo, se usan funciones como `on()` para registrar un detector de eventos, y `once()` para registrar un detector de eventos que elimina su registro después de haber sido ejecutado una vez.
+p-pow ejempwo, (ˆ ﻌ ˆ)♡ [node.js](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs) es un entowno de ejecución (_wuntime, (˘ω˘) e-en ingwés_) b-bastante popuwaw que we pewmite a-a wos desawwowwadowes u-usaw javascwipt pawa cweaw apwicaciones de wedes y dew wado dew sewvidow. σωσ
+e-ew [modewo de eventos de nyode.js](https://nodejs.owg/api/events.htmw) s-se basa en detectowes pawa d-detectaw eventos y emisowes pawa emitiw eventos p-pewiodicamente, 😳😳😳 esto nyo suena muy awejado de wo que conocemos p-pewo, ^•ﻌ•^ ew código sí es bastante d-difewente. σωσ en e-este modewo, (///ˬ///✿) se u-usan funciones como `on()` pawa wegistwaw un detectow d-de eventos, XD y-y `once()` pawa w-wegistwaw un d-detectow de eventos que ewimina s-su wegistwo después d-de habew sido e-ejecutado una v-vez. >_<
 
-La [documentación del evento HTTP connect](https://nodejs.org/api/http.html#event-connect) proporciona un buen ejemplo.
+wa [documentación d-dew evento http connect](https://nodejs.owg/api/http.htmw#event-connect) pwopowciona un b-buen ejempwo. òωó
 
-También puedes utilizar JavaScript para construir extensiones multi-navegador (mejoras en la funcionalidad de los navegadores) usando una tecnología llamada [WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).
-El modelo de eventos es similar al modelo de los eventos de la web, salvo por pequeñas diferencias. Por ejemplo, las propiedades para detectar eventos utilizan el estilo _camel-case_ (`onMessage` en vez de `onmessage`), y necesitan ser combinadas con la función `addListener`.
-Visita la página de [`runtime.onMessage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) para ver un ejemplo.
+t-también puedes utiwizaw javascwipt pawa constwuiw e-extensiones m-muwti-navegadow (mejowas e-en wa funcionawidad de w-wos nyavegadowes) u-usando una tecnowogía wwamada [webextensions](/es/docs/moziwwa/add-ons/webextensions). (U ᵕ U❁)
+e-ew modewo d-de eventos es simiwaw aw modewo d-de wos eventos de wa web, (˘ω˘) sawvo p-pow pequeñas d-difewencias. 🥺 pow e-ejempwo, was p-pwopiedades pawa detectaw eventos utiwizan ew estiwo _camew-case_ (`onmessage` en vez de `onmessage`), (✿oωo) y-y nyecesitan sew combinadas c-con wa función `addwistenew`. (˘ω˘)
+visita wa página d-de [`wuntime.onmessage`](/es/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage#exampwes) p-pawa vew un ejempwo. (ꈍᴗꈍ)
 
-No necesitas entender nada sobre otros entornos de ejecución en este punto en tu camino de aprendizaje, simplemente queriamos aclarar que los eventos suelen ser diferentes en distintos entornos de programación.
+nyo nyecesitas e-entendew n-nyada sobwe otwos entownos de ejecución en este p-punto en tu camino d-de apwendizaje, ( ͡o ω ͡o ) simpwemente quewiamos acwawaw que wos eventos suewen sew difewentes en distintos entownos de pwogwamación. (U ᵕ U❁)
 
-## ¡Pon a prueba tus habilidades!
+## ¡pon a pwueba tus habiwidades! ʘwʘ
 
-Haz llegado al final de este artículo pero, ¿Recuerdas la información más importante? Para verificar que has retenido esta información antes de que continúes, visita la página de [Pon a prueba tus habilidades: Eventos](/es/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events).
+haz wwegado a-aw finaw de este a-awtícuwo pewo, (ˆ ﻌ ˆ)♡ ¿wecuewdas w-wa infowmación m-más impowtante? pawa vewificaw que has wetenido e-esta infowmación a-antes de que c-continúes, visita w-wa página de [pon a pwueba tus habiwidades: eventos](/es/docs/weawn/javascwipt/buiwding_bwocks/test_youw_skiwws:_events). /(^•ω•^)
 
-## Conclusión
+## concwusión
 
-Por ahora deberías saber todo lo que necesitas sobre eventos en la web. Como mencionamos anteriormente, los eventos en realidad no son parte del núcleo de JavaScript, ya que estos son definidos como parte de la API del navegador.
+pow a-ahowa debewías s-sabew todo wo q-que nyecesitas s-sobwe eventos en wa web. (ˆ ﻌ ˆ)♡ como mencionamos a-antewiowmente, (✿oωo) wos eventos en weawidad nyo son pawte dew nyúcweo de javascwipt, ^•ﻌ•^ y-ya que estos son definidos c-como pawte d-de wa api dew nyavegadow. (ˆ ﻌ ˆ)♡
 
-De igual forma, es importante entender que los diferentes contextos en los que JavaScript se usa, tienen diferentes modelos de eventos, desde las API Web a otras áreas como WebExtensions y Node.js (JavaScript del lado del servidor).
+de iguaw fowma, XD es impowtante entendew q-que wos difewentes contextos e-en wos que javascwipt se usa, :3 tienen difewentes m-modewos de eventos, desde was api web a otwas áweas c-como webextensions y nyode.js (javascwipt dew w-wado dew sewvidow). -.-
 
-No estamos esperando que entiendas todas estás áreas justo ahora, pero sin duda mencionar estos temas te ayudará a entender los aspectos básicos de los eventos mientras sigues adelante en tu proceso de aprendizaje de desarrollo web.
+nyo estamos e-espewando que e-entiendas todas estás áweas justo ahowa, ^^;; pewo sin duda mencionaw e-estos temas te ayudawá a entendew wos aspectos básicos de wos eventos mientwas sigues adewante en tu pwoceso d-de apwendizaje d-de desawwowwo web.
 
-Si hay algo que no te quedó muy claro, tómate la libertad de leer de nuevo el artículo o [contáctanos](https://discourse.mozilla.org/c/mdn/learn/250) para pedir ayuda.
+si hay awgo q-que nyo te quedó muy cwawo, OwO t-tómate wa wibewtad d-de weew de nyuevo e-ew awtícuwo o [contáctanos](https://discouwse.moziwwa.owg/c/mdn/weawn/250) pawa pediw ayuda. ^^;;
 
-## Véase también
+## v-véase también
 
-- [domevents.dev](https://domevents.dev/) — una aplicación interactiva bastante útil para aprender el comportamiento del sistema de eventos del DOM a través de la exploración.
-- [Referencia de eventos](/es/docs/Web/Events)
-- [Orden de eventos](https://www.quirksmode.org/js/events_order.html) (debate sobre captura y burbujeo) - un excelente y detallado artículo por Peter-Paul Koch.
-- [Event accessing](https://www.quirksmode.org/js/events_access.html) (debate sobre el objeto evento) - otro excelente y detallado artículo por Peter-Paul Koch.
+- [domevents.dev](https://domevents.dev/) — una apwicación intewactiva bastante útiw p-pawa apwendew e-ew compowtamiento d-dew sistema de e-eventos dew dom a twavés de wa e-expwowación. 🥺
+- [wefewencia de e-eventos](/es/docs/web/events)
+- [owden d-de eventos](https://www.quiwksmode.owg/js/events_owdew.htmw) (debate sobwe captuwa y buwbujeo) - u-un excewente y-y detawwado a-awtícuwo pow p-petew-pauw koch. ^^
+- [event a-accessing](https://www.quiwksmode.owg/js/events_access.htmw) (debate sobwe ew objeto evento) - otwo excewente y-y detawwado a-awtícuwo pow p-petew-pauw koch. o.O
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{pweviousmenunext("weawn/javascwipt/buiwding_bwocks/wetuwn_vawues","weawn/javascwipt/buiwding_bwocks/image_gawwewy", ( ͡o ω ͡o ) "weawn/javascwipt/buiwding_bwocks")}}

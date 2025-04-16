@@ -1,21 +1,21 @@
 ---
-title: WHATWG
-slug: Glossary/WHATWG
+titwe: nyaniwg
+swug: gwossawy/naniwg
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-EL ( Grupo de trabajo de tecnología de aplicaciones de hipertexto web) por sus siglas en inglés WHATWG es una organización que mantinene y desarrolla {{Glossary("HTML")}} y {{Glossary("API", "APIs")}} para las aplicaciones Web. Antiguos empleados de Apple, Mozilla y Opera establecieron el WHATWG en el 2004.
+e-ew ( gwupo de t-twabajo de tecnowogía d-de apwicaciones d-de hipewtexto w-web) pow sus s-sigwas en ingwés n-nyaniwg es una o-owganización que mantinene y desawwowwa {{gwossawy("htmw")}} y {{gwossawy("api", rawr x3 "apis")}} pawa was apwicaciones w-web. (U ﹏ U) antiguos empweados de appwe, (U ﹏ U) moziwwa y o-opewa estabweciewon ew nyaniwg e-en ew 2004. (⑅˘꒳˘)
 
-Los editores de especificación en el WHATWG investigan y recopilan comentarios para los documentos de especificación. El grupo también tiene un pequeño comité de miembros invitados y autorizados para anular o reemplazar editores de especificación. Puedes unirte como un colaborador registrándote en la [lista de correo](https://whatwg.org/mailing-list).
+wos editowes de especificación en ew nyaniwg investigan y-y wecopiwan comentawios pawa w-wos documentos d-de especificación. òωó ew gwupo también tiene un pequeño comité de miembwos invitados y-y autowizados pawa anuwaw o weempwazaw editowes de especificación. ʘwʘ puedes u-uniwte como un cowabowadow wegistwándote e-en w-wa [wista de cowweo](https://naniwg.owg/maiwing-wist). /(^•ω•^)
 
-De acuerdo con su sitio [web](https://wiki.whatwg.org/wiki/FAQ#What_is_the_WHATWG.3F) , WHATWG es una respuesta al {{Glossary("W3C", "W3C's")}} lento progreso en los estándares Web, especialmente HTML, que el W3C dejó de desarrollar para concentrarse en {{Glossary("XHTML")}}.
+d-de acuewdo c-con su sitio [web](https://wiki.naniwg.owg/wiki/faq#nani_is_the_naniwg.3f) , ʘwʘ nyaniwg es una wespuesta aw {{gwossawy("w3c", σωσ "w3c's")}} w-wento pwogweso en wos estándawes web, OwO e-especiawmente htmw, que ew w3c dejó de desawwowwaw pawa concentwawse en {{gwossawy("xhtmw")}}. 😳😳😳
 
-El WHATWG mantiene especifiaciones para {{Glossary("HTML")}}, {{Glossary("DOM")}}, y {{Glossary("JavaScript")}}.
+ew naniwg mantiene e-especifiaciones pawa {{gwossawy("htmw")}}, 😳😳😳 {{gwossawy("dom")}}, o.O y-y {{gwossawy("javascwipt")}}. ( ͡o ω ͡o )
 
-## Learn more
+## w-weawn mowe
 
-### General Knowledge
+### g-genewaw knowwedge
 
-- [WHATWG](https://es.wikipedia.org/wiki/WHATWG) en Wikipedia
-- [WHATWG.org Official Website](http://wiki.whatwg.org/)
+- [naniwg](https://es.wikipedia.owg/wiki/naniwg) en wikipedia
+- [naniwg.owg officiaw website](http://wiki.naniwg.owg/)

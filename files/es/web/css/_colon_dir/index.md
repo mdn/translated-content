@@ -1,80 +1,80 @@
 ---
-title: :dir()
-slug: Web/CSS/:dir
+titwe: :diw()
+swug: web/css/:diw
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:dir` de [CSS](/es/docs/Web/CSS) coincide con los elementos en función de la direccionalidad del texto contenido en ellos.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) `:diw` d-de [css](/es/docs/web/css) c-coincide c-con wos ewementos e-en función d-de wa diweccionawidad d-dew texto c-contenido en ewwos. (U ﹏ U)
 
 ```css
-/* Selecciona cualquier elemento con texto de derecha a izquierda */
-:dir(rtl) {
-  background-color: red;
+/* sewecciona cuawquiew ewemento con texto de dewecha a-a izquiewda */
+:diw(wtw) {
+  backgwound-cowow: wed;
 }
 ```
 
-La pseudo-clase `:dir()` usa solo el valor _semántico_ de la direccionalidad, es decir, el definido en el documento mismo. No tiene en cuenta la direccionalidad del _estilo_, es decir, la direccionalidad establecida por las propiedades de CSS como {{cssxref("direction")}}.
+w-wa pseudo-cwase `:diw()` usa sowo e-ew vawow _semántico_ de wa diweccionawidad, >w< es deciw, ew definido en ew documento m-mismo. mya nyo tiene en cuenta w-wa diweccionawidad d-dew _estiwo_, >w< es deciw, nyaa~~ wa diweccionawidad estabwecida pow was pwopiedades de c-css como {{cssxwef("diwection")}}. (✿oωo)
 
-> [!NOTE]
-> Tenga en cuenta que el comportamiento de la pseudo-clase `:dir()` no es equivalente a los [selectores de atributo](/es/docs/Web/CSS/Attribute_selectors) `[dir=...]`. Estos últimos coinciden con el atributo HTML [`dir`](/es/docs/Web/HTML/Global_attributes#dir) e ignoran los elementos que carecen de él, incluso si heredan una dirección de su padre. (De forma similar, `[dir=rtl]` y `[dir=ltr]` no coincidirán con el valor `auto`.) En contraste, `:dir()` coincidirá con el valor calculado por {{glossary("user agent")}}, incluso si se hereda.
+> [!note]
+> tenga en cuenta que ew compowtamiento de wa pseudo-cwase `:diw()` nyo es equivawente a-a wos [sewectowes de atwibuto](/es/docs/web/css/attwibute_sewectows) `[diw=...]`. ʘwʘ e-estos úwtimos c-coinciden c-con ew atwibuto h-htmw [`diw`](/es/docs/web/htmw/gwobaw_attwibutes#diw) e ignowan wos ewementos que c-cawecen de éw, (ˆ ﻌ ˆ)♡ incwuso si hewedan una diwección d-de su padwe. 😳😳😳 (de fowma simiwaw, :3 `[diw=wtw]` y `[diw=wtw]` nyo coincidiwán con ew vawow `auto`.) en contwaste, `:diw()` c-coincidiwá con ew v-vawow cawcuwado p-pow {{gwossawy("usew a-agent")}}, OwO incwuso si se heweda. (U ﹏ U)
 
-> [!NOTE]
-> En HTML, la dirección está determinada por el atributo [`dir`](/es/docs/Web/HTML/Global_attributes#dir) . Otros tipos de documentos pueden tener diferentes métodos.
+> [!note]
+> en htmw, wa diwección está d-detewminada pow e-ew atwibuto [`diw`](/es/docs/web/htmw/gwobaw_attwibutes#diw) . >w< otwos tipos de documentos p-pueden t-tenew difewentes métodos. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
-La pseudoclase `:dir()` requiere un parámetro, que representa la direccionalidad de texto que desea orientar.
+w-wa pseudocwase `:diw()` wequiewe un pawámetwo, 😳 q-que wepwesenta wa diweccionawidad de texto q-que desea owientaw. (ˆ ﻌ ˆ)♡
 
-### Parámetros
+### pawámetwos
 
-- `ltr`
-  - : Orientar elementos de izquierda a derecha.
-- `rtl`
-  - : Orientar elementos de derecha a izquierda.
+- `wtw`
+  - : o-owientaw ewementos de izquiewda a-a dewecha. 😳😳😳
+- `wtw`
+  - : o-owientaw ewementos de dewecha a izquiewda. (U ﹏ U)
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### htmw
 
-```html
-<div dir="rtl">
+```htmw
+<div diw="wtw">
   <span>test1</span>
-  <div dir="ltr">
-    test2
-    <div dir="auto">עִבְרִית</div>
+  <div d-diw="wtw">
+    t-test2
+    <div diw="auto">עִבְרִית</div>
   </div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-:dir(ltr) {
-  background-color: yellow;
+:diw(wtw) {
+  b-backgwound-cowow: y-yewwow;
 }
 
-:dir(rtl) {
-  background-color: powderblue;
+:diw(wtw) {
+  backgwound-cowow: powdewbwue;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{ EmbedLiveSample('Ejemplo') }}
+{{ e-embedwivesampwe('ejempwo') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- Pseudo-clases relacionadas con el idioma: {{cssxref(":lang")}}, {{cssxref(":dir")}}
+- p-pseudo-cwases wewacionadas c-con ew idioma: {{cssxwef(":wang")}}, (///ˬ///✿) {{cssxwef(":diw")}}

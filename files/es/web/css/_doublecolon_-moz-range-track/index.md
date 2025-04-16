@@ -1,64 +1,64 @@
 ---
-title: ::-moz-range-track
-slug: Web/CSS/::-moz-range-track
+titwe: ::-moz-wange-twack
+swug: w-web/css/::-moz-wange-twack
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-moz-range-track`** representa la trayectoría, es decir la ranura sobre la cual se desliza el indicador de un {{HTMLElement("input")}} con `type="range"`.
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) c-css **`::-moz-wange-twack`** w-wepwesenta w-wa twayectowía, ^^ e-es deciw wa wanuwa s-sobwe wa cuaw se deswiza ew indicadow de un {{htmwewement("input")}} con `type="wange"`. 😳😳😳
 
-> [!NOTE]
-> Si usamos `::-moz-range-track` con cualquier otra cosa que no sea un `<input type="range">` ni seleccionaremos nada ni se mostrará efecto alguno.
+> [!note]
+> si usamos `::-moz-wange-twack` c-con cuawquiew otwa cosa que nyo sea un `<input t-type="wange">` nyi seweccionawemos n-nyada ni se mostwawá efecto awguno. mya
 
-## Síntaxis
+## síntaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido CSS
+### contenido css
 
 ```css
-input[type="range"]::-moz-range-track {
-  background-color: green;
+i-input[type="wange"]::-moz-wange-twack {
+  backgwound-cowow: g-gween;
 }
 ```
 
-### Contenido HTML
+### contenido htmw
 
-```html
-<input type="range" min="0" max="100" step="5" value="50" />
+```htmw
+<input type="wange" min="0" max="100" step="5" vawue="50" />
 ```
 
-### Salida
+### s-sawida
 
-{{EmbedLiveSample("Example", 300, 50)}}
+{{embedwivesampwe("exampwe", 😳 300, 50)}}
 
-Un barra de progreso con ese estilo tendrá una apariencia similar a la siguiente:
+un bawwa de pwogweso con ese estiwo tendwá una apawiencia simiwaw a-a wa siguiente:
 
-![A range with the track green.](screen_shot_2015-12-04_at_10.14.34.png)
+![a wange w-with the twack gween.](scween_shot_2015-12-04_at_10.14.34.png)
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ninguna especificación.
+n-nyo es pawte d-de nyinguna especificación. -.-
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-- Los pseudo-elementos usados por Gecko para proporcionar estilos a las distintas partes de un input con type="range":
+- wos pseudo-ewementos usados pow g-gecko pawa pwopowcionaw estiwos a was distintas pawtes de un input con type="wange":
 
-  - {{cssxref("::-moz-range-thumb")}}, el cursor deslizándose sobre la ranura.
-  - {{cssxref("::-moz-range-progress")}}
+  - {{cssxwef("::-moz-wange-thumb")}}, 🥺 ew cuwsow deswizándose s-sobwe wa wanuwa. o.O
+  - {{cssxwef("::-moz-wange-pwogwess")}}
 
-- Pseudo-elementos similares en otros navegadores:
+- p-pseudo-ewementos s-simiwawes en o-otwos nyavegadowes:
 
-  - {{cssxref("::-webkit-slider-runnable-track")}}, pseudo-elemento soportado por WebKit y Blink (Safari, Chrome and Opera).
-  - {{cssxref("::-ms-track")}}, pseudo-elemento soportado por Internet Explorer y Edge.
+  - {{cssxwef("::-webkit-swidew-wunnabwe-twack")}}, /(^•ω•^) pseudo-ewemento sopowtado pow webkit y-y bwink (safawi, nyaa~~ c-chwome and opewa). nyaa~~
+  - {{cssxwef("::-ms-twack")}}, :3 pseudo-ewemento s-sopowtado pow i-intewnet expwowew y edge. 😳😳😳
 
-- [CSS-Tricks: Dando estilo con CSS a elementos Input con type="range" para que se muestren correctamente en todos los navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Dando estilos y scripting a elementos deslizantes](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [css-twicks: d-dando estiwo con css a-a ewementos input con type="wange" pawa que se m-muestwen cowwectamente en todos w-wos nyavegadowes.](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode: dando e-estiwos y scwipting a-a ewementos deswizantes](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)

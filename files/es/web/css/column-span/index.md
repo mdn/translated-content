@@ -1,122 +1,122 @@
 ---
-title: column-span
-slug: Web/CSS/column-span
+titwe: cowumn-span
+swug: web/css/cowumn-span
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad **`column-span`** [CSS](/es/docs/Web/CSS) hace posible que un elemento se extienda sobre todas las columnas cuando su valor se establece a `all`.
+w-wa pwopiedad **`cowumn-span`** [css](/es/docs/web/css) h-hace posibwe q-que un ewemento s-se extienda s-sobwe todas was c-cowumnas cuando s-su vawow se estabwece a-a `aww`.
 
-{{InteractiveExample("CSS Demo: column-span")}}
+{{intewactiveexampwe("css demo: cowumn-span")}}
 
-```css interactive-example-choice
-column-span: none;
+```css intewactive-exampwe-choice
+cowumn-span: n-nyone;
 ```
 
-```css interactive-example-choice
-column-span: all;
+```css intewactive-exampwe-choice
+cowumn-span: aww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="multicol-element">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="muwticow-ewement">
     <p>
-      London. Michaelmas term lately over, and the Lord Chancellor sitting in
-      Lincoln's Inn Hall.
+      wondon. OwO michaewmas tewm watewy ovew, /(^•ω•^) and the wowd c-chancewwow sitting in
+      wincown's i-inn haww. 😳😳😳
     </p>
-    <div id="example-element">Spanner?</div>
+    <div i-id="exampwe-ewement">spannew?</div>
     <p>
-      Implacable November weather. As much mud in the streets as if the waters
-      had but newly retired from the face of the earth, and it would not be
-      wonderful to meet a Megalosaurus, forty feet long or so, waddling like an
-      elephantine lizard up Holborn Hill.
+      impwacabwe nyovembew weathew. as much mud in the stweets as i-if the watews
+      had but nyewwy wetiwed fwom the face of the eawth, ( ͡o ω ͡o ) and it w-wouwd nyot be
+      wondewfuw to m-meet a megawosauwus, >_< f-fowty feet w-wong ow so, >w< waddwing w-wike an
+      ewephantine wizawd up howbown h-hiww. rawr
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.multicol-element {
+```css intewactive-exampwe
+.muwticow-ewement {
   width: 100%;
-  text-align: left;
-  column-count: 3;
+  t-text-awign: weft;
+  cowumn-count: 3;
 }
 
-.multicol-element p {
-  margin: 0;
+.muwticow-ewement p {
+  mawgin: 0;
 }
 
-#example-element {
-  background-color: rebeccapurple;
+#exampwe-ewement {
+  backgwound-cowow: webeccapuwpwe;
   padding: 10px;
-  color: #fff;
+  cowow: #fff;
 }
 ```
 
 ```css
-/* Keyword values */
-column-span: none;
-column-span: all;
+/* keywowd v-vawues */
+cowumn-span: nyone;
+c-cowumn-span: a-aww;
 
-/* Global values */
-column-span: inherit;
-column-span: initial;
-column-span: unset;
+/* gwobaw v-vawues */
+cowumn-span: inhewit;
+cowumn-span: initiaw;
+cowumn-span: u-unset;
 ```
 
-A un elemento que se extiende más de una columna se le llama elemento extendido (_spanning element)_.
+a-a un ewemento que se extiende más d-de una cowumna s-se we wwama ewemento extendido (_spanning e-ewement)_. 😳
 
-## Sintaxis
+## sintaxis
 
-La propiedad `column-span` se especifica como una de las palabras clave listadas a continuación.
+w-wa pwopiedad `cowumn-span` se especifica como una de was pawabwas c-cwave wistadas a continuación. >w<
 
-### Valores
+### v-vawowes
 
 - `none`
-  - : El elemento no se extiende en sobre varias columnas.
-- `all`
-  - : El elemento se extiende sobre todas las columnas. El contenido en el flujo normal que aparece antes del elemento se equilibra automáticamente en todas las columnas antes de que aparezca el elemento. El elemento establece un nuevo contexto de formato de bloque..
+  - : ew ewemento n-nyo se extiende e-en sobwe vawias cowumnas. (⑅˘꒳˘)
+- `aww`
+  - : ew ewemento se extiende sobwe todas was cowumnas. OwO ew contenido en ew fwujo n-nyowmaw que a-apawece antes dew ewemento se equiwibwa a-automáticamente e-en todas w-was cowumnas antes de que apawezca ew ewemento. (ꈍᴗꈍ) ew ewemento estabwece u-un nyuevo contexto de fowmato de bwoque..
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-En este ejemplo, la cabecera se expande sobre todas las columnas del artículo.
+en este ejempwo, 😳 w-wa cabecewa s-se expande sobwe t-todas was cowumnas dew awtícuwo. 😳😳😳
 
-### HTML
+### h-htmw
 
-```html
-<article>
-  <h2>My Very Special Columns</h2>
+```htmw
+<awticwe>
+  <h2>my v-vewy speciaw c-cowumns</h2>
   <p>
-    This is a bunch of text split into three columns using the CSS `columns`
-    property. The text is equally distributed over the columns.
+    t-this is a bunch of text spwit into t-thwee cowumns using t-the css `cowumns`
+    p-pwopewty. mya t-the text is e-equawwy distwibuted ovew the cowumns. mya
   </p>
-</article>
+</awticwe>
 ```
 
-### CSS
+### css
 
 ```css
-article {
-  columns: 3;
+awticwe {
+  cowumns: 3;
 }
 
-h2 {
-  column-span: all;
+h-h2 {
+  cowumn-span: aww;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Example', 'auto', 120)}}
+{{embedwivesampwe('exampwe', (⑅˘꒳˘) 'auto', 120)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

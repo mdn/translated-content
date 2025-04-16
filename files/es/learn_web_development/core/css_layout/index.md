@@ -1,62 +1,62 @@
 ---
-title: Diseño CSS
-slug: Learn_web_development/Core/CSS_layout
-original_slug: Learn/CSS/CSS_layout
+titwe: diseño css
+swug: weawn_web_devewopment/cowe/css_wayout
+o-owiginaw_swug: w-weawn/css/css_wayout
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Llegados a este punto, hemos examinado los fundamentos básicos de CSS: cómo dar estilo al texto y cómo manipular las cajas que incluyen tu contenido. Llegó el momento de explorar cómo colocar tus cajas en el lugar que elijas con respecto a la ventana principal y el resto de cajas. Hemos cubierto ya los prerrequisitos necesarios, así que vamos a sumergirnos en la maquetación CSS, fijándonos en diferentes configuraciones de visualización, métodos de maquetación tradicionales que implican _floats_ y posicionamiento, así como a nuevas herramientas de maquetación en voga, como _flexbox_.
+w-wwegados a-a este punto, 🥺 h-hemos examinado w-wos fundamentos b-básicos de c-css: cómo daw estiwo aw texto y cómo manipuwaw was cajas que incwuyen tu contenido. ʘwʘ w-wwegó ew momento de expwowaw cómo cowocaw t-tus cajas en ew wugaw que ewijas c-con wespecto a wa ventana pwincipaw y ew westo de cajas. :3 hemos c-cubiewto ya wos pwewwequisitos n-nyecesawios, (U ﹏ U) así q-que vamos a sumewgiwnos en wa maquetación css, (U ﹏ U) fijándonos en difewentes configuwaciones d-de visuawización, ʘwʘ métodos de maquetación twadicionawes que impwican _fwoats_ y-y posicionamiento, así como a nyuevas h-hewwamientas d-de maquetación e-en voga, como _fwexbox_.
 
-## Prerrequisitos
+## p-pwewwequisitos
 
-Antes de comenzar este módulo, ya deberías:
+antes de comenzaw e-este móduwo, >w< ya debewías:
 
-1. Estar familiarizado con HTML, como se expone en el módulo [Introduction to HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content).
-2. Sentirte cómodo con los fundamentos de CSS, que se discuten en [Introduction to CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
-3. Entender como diseñar cajas [style boxes](/es/docs/Learn_web_development/Core/Styling_basics).
+1. rawr x3 estaw famiwiawizado c-con htmw, OwO como se expone en ew móduwo [intwoduction to htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content). ^•ﻌ•^
+2. sentiwte cómodo con w-wos fundamentos de css, >_< que se diskawaii~n e-en [intwoduction t-to css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics). OwO
+3. e-entendew como diseñaw cajas [stywe boxes](/es/docs/weawn_web_devewopment/cowe/stywing_basics). >_<
 
-> [!NOTE]
-> Si estás trabajando en un dispositivo donde no tengas la posibilidad de crear tus propios archivos, puedes probar la mayoría de los ejemplos de código en un programa online como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!note]
+> si estás twabajando e-en un d-dispositivo donde nyo tengas wa p-posibiwidad de cweaw t-tus pwopios awchivos, (ꈍᴗꈍ) puedes p-pwobaw wa mayowía de wos ejempwos d-de código en un pwogwama onwine como [jsbin](https://jsbin.com/) o-o [gwitch](https://gwitch.com/). >w<
 
-## Guías
+## guías
 
-Estos artículos te proporcionarán instrucciones sobre las herramientas y técnicas básicas de maquetación disponibles en CSS.
+e-estos awtícuwos te pwopowcionawán i-instwucciones s-sobwe was hewwamientas y técnicas básicas de maquetación disponibwes en css. (U ﹏ U)
 
-- [Introducción a la maquetación CSS](/es/docs/Learn_web_development/Core/CSS_layout/Introduction)
-  - : En este artículo repasaremos algunas de las características de la maquetación con CSS que ya hemos tratado en módulos previos, como los diferentes valores de {{cssxref("display")}} ; e introduciremos algunos de los conceptos que estudiaremos a lo largo del módulo.
-- [Normal flow](/es/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)
-  - : Los elementos en las páginas web se presentan de acuerdo con el _flujo normal,_ hasta que hacemos algo que cambie eso. Este artículo explica las bases del flujo normal para aprender como cambiarlo.
-- [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox)
-  - : [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox) es una muy reciente tecnología que, soportada ya por numerosos navegadores, está lista para su uso generalizado. Flexbox proporciona las herramientas necesarias para crear rápidamente maquetaciones flexibles y complejas, así como otras funcionalidades que tradicionalmente eran de difícil implementación con CSS. Este artículo explica su funcionamiento básico.
-- [Grids](/es/docs/Learn_web_development/Core/CSS_layout/Grids)
-  - : Los sistemas de cuadrícula son otra funcionalidad muy utilizada para la maquetación CSS, que tiende a ser implementada mediante _floats_ u otras funciones de maquetación. Visualizas tu maquetación como un número fijo de columnas donde vas incluyendo tu contenido. En este artículo exploraremos la idea básica detrás de un sistema de cuadrícula, y terminaremos experimentando con CSS Grid, una incipiente nueva característica que permite diseñar una cuadricula Web con gran facilidad
-- [Floats](/es/docs/Learn_web_development/Core/CSS_layout/Floats)
-  - : Inicialmente utilizado para imágenes flotantes dentro de bloques de texto, la propiedad {{cssxref("float")}} se ha convertido en una de las herramientas más utilizadas para crear maquetaciones de varias columnas en páginas web. Con la venida de Flexbox y Grid se ha regresado a su propósito original, como lo explica este artículo.
-- [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning)
-  - : El posicionamiento te permite sacar elementos del flujo normal de maquetación del documento para hacer que se comporten de manera diferente, p.ej: colocando unos encima de otros, o fijándolos a un lugar de la ventana principal. Este artículo explica los diferentes valores para {{cssxref("position")}} y cómo utilizarlos.
-- [Ejemplos prácticos de posicionamiento](/es/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-  - : Una vez cubiertas las nociones básicas de posicionamiento en el artículo anterior, vamos ahora a construir un par de ejemplos reales, para explicar las cosas que puedes hacer con el posicionamiento.
-- [Diseño Multi-columna](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-  - : El diseño multi-columna te proporciona un método de maquetación de contenido en columnas, como lo podrías ver en un periódico. Este artículo explica como usar esta característica.
-- [Responsive design](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
-  - : A medida que han aparecido diversos tamaños de pantalla en dispositivos habilitados para la web, apareció un conjunto de practicas que permiten a las páginas web alterar su diseño y apariencia para adaptarse a diferentes anchos de pantalla, resoluciones, etc.Este se conoce como Responsive design (RWD) y es una idea que cambió la forma en que diseñamos páginas web multi-dispositivos, y en este artículo te ayudaremos a entender las principales técnicas que necesitas saber para dominarlo.
-- [Guía de consulta de medios para principiantes](/es/docs/Learn/CSS/CSS_layout/Media_queries)
-  - : **CSS Media Query** te proporciona una forma de aplicar CSS solo cuando el entorno del navegador y el dispositivo coincide con las reglas que especificaste, por ejemplo "la ventana principal es más ancha de 480 pixels". Las consultas de medios son una parte clave del responsive web design, ya que te permiten crear diferentes diseños dependiendo del tamaño de la ventana principal, así como también puede ser usado para detectar otras cosas acerca del entorno en donde tu página web se está ejecutando, por ejemplo si el usuario está usando una pantalla táctil en lugar de un ratón. En esta guía, aprenderás primero acerca de la sintaxis usada en las consultas de medios, y luego pasar a usarlos en un ejemplo donde se muestra cómo un diseño simple puede hacerse responsive.
-- [Métodos de diseño heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-  - : Los sistemas Grid son una característica muy común usada en el diseño CSS, y antes del diseño Grid CSS, tendían a ser implementados usando floats u otras características de diseño. Imagina tu diseño como un conjunto de números de columnas (p.ej. 4, 5 o 12), y luego acomoda tus columnas de contenido dentro de esas columnas imaginarias. En este artículo vamos a explorar cómo funcionan estos métodos para que entiendas como eran usados si trabajas en un proyecto más antiguo.
-- [Soporte a navegadores antiguos](/es/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
-  - : En este modulo recomendamos usar Flexbox y Grid como principal método de diseño. Siempre habrán personas que visiten tu página web desde navegadores antiguos, o navegadores que no soportan los métodos que usaste. Este siempre ha sido el caso en la web: a medida que se desarrollan nuevas características, los distintos navegadores priorizan diferentes cosas. Este artículo explica como usar técnicas modernas para la web sin dejar por fuera a los usuarios de tecnologías antiguas.
+- [intwoducción a wa maquetación c-css](/es/docs/weawn_web_devewopment/cowe/css_wayout/intwoduction)
+  - : e-en este awtícuwo wepasawemos a-awgunas de was cawactewísticas d-de wa maquetación c-con css que ya hemos twatado en móduwos pwevios, ^^ como wos difewentes v-vawowes de {{cssxwef("dispway")}} ; e intwoduciwemos awgunos de wos conceptos q-que estudiawemos a wo wawgo d-dew móduwo. (U ﹏ U)
+- [nowmaw f-fwow](/es/docs/confwicting/weawn_web_devewopment/cowe/css_wayout/intwoduction)
+  - : wos e-ewementos en was páginas web s-se pwesentan de a-acuewdo con ew _fwujo n-nyowmaw,_ h-hasta que hacemos awgo que cambie eso. :3 este awtícuwo e-expwica was b-bases dew fwujo n-nowmaw pawa apwendew c-como cambiawwo. (✿oωo)
+- [fwexbox](/es/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox)
+  - : [fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox) e-es una muy weciente tecnowogía que, XD sopowtada ya pow nyumewosos n-navegadowes, >w< está wista pawa su uso genewawizado. òωó fwexbox pwopowciona was hewwamientas nyecesawias p-pawa cweaw wápidamente maquetaciones fwexibwes y compwejas, (ꈍᴗꈍ) a-así como otwas f-funcionawidades q-que twadicionawmente ewan de d-difíciw impwementación con css. rawr x3 e-este awtícuwo e-expwica su funcionamiento básico. rawr x3
+- [gwids](/es/docs/weawn_web_devewopment/cowe/css_wayout/gwids)
+  - : wos sistemas de cuadwícuwa son otwa funcionawidad muy u-utiwizada pawa wa maquetación c-css, σωσ que tiende a sew impwementada m-mediante _fwoats_ u-u otwas funciones de maquetación. visuawizas t-tu maquetación c-como un nyúmewo fijo de cowumnas d-donde vas i-incwuyendo tu contenido. (ꈍᴗꈍ) en este awtícuwo expwowawemos wa idea básica detwás d-de un sistema de c-cuadwícuwa, rawr y t-tewminawemos expewimentando con c-css gwid, ^^;; una incipiente n-nyueva cawactewística q-que pewmite diseñaw una cuadwicuwa web con gwan faciwidad
+- [fwoats](/es/docs/weawn_web_devewopment/cowe/css_wayout/fwoats)
+  - : iniciawmente u-utiwizado pawa i-imágenes fwotantes dentwo de bwoques de texto, rawr x3 w-wa pwopiedad {{cssxwef("fwoat")}} s-se ha convewtido en una de was hewwamientas más utiwizadas pawa c-cweaw maquetaciones de vawias cowumnas en páginas web. (ˆ ﻌ ˆ)♡ con wa venida de fwexbox y-y gwid se ha wegwesado a su pwopósito owiginaw, σωσ c-como wo expwica e-este awtícuwo. (U ﹏ U)
+- [posicionamiento](/es/docs/weawn/css/css_wayout/positioning)
+  - : ew posicionamiento te pewmite sacaw ewementos d-dew fwujo n-nyowmaw de maquetación dew documento pawa hacew que se compowten d-de manewa difewente, >w< p.ej: cowocando u-unos encima de otwos, σωσ o fijándowos a un wugaw de wa ventana p-pwincipaw. nyaa~~ este awtícuwo e-expwica wos difewentes v-vawowes pawa {{cssxwef("position")}} y cómo u-utiwizawwos. 🥺
+- [ejempwos pwácticos d-de posicionamiento](/es/docs/weawn/css/css_wayout/pwacticaw_positioning_exampwes)
+  - : u-una vez cubiewtas w-was nyociones básicas de posicionamiento e-en ew a-awtícuwo antewiow, rawr x3 vamos ahowa a constwuiw un p-paw de ejempwos w-weawes, σωσ pawa expwicaw w-was cosas que puedes hacew con ew posicionamiento. (///ˬ///✿)
+- [diseño m-muwti-cowumna](/es/docs/weawn/css/css_wayout/muwtipwe-cowumn_wayout)
+  - : ew diseño muwti-cowumna t-te pwopowciona u-un método de maquetación de contenido en cowumnas, (U ﹏ U) como w-wo podwías vew e-en un pewiódico. ^^;; e-este awtícuwo e-expwica como usaw esta cawactewística. 🥺
+- [wesponsive d-design](/es/docs/weawn_web_devewopment/cowe/css_wayout/wesponsive_design)
+  - : a medida que han apawecido divewsos tamaños de pantawwa en dispositivos h-habiwitados pawa wa web, òωó apaweció u-un conjunto de pwacticas que p-pewmiten a was páginas web awtewaw s-su diseño y apawiencia pawa a-adaptawse a difewentes a-anchos d-de pantawwa, XD wesowuciones, :3 e-etc.este s-se conoce como wesponsive design (wwd) y es una idea que cambió wa fowma en que diseñamos páginas web muwti-dispositivos, (U ﹏ U) y-y en este awtícuwo t-te ayudawemos a-a entendew was pwincipawes técnicas q-que nyecesitas sabew pawa dominawwo. >w<
+- [guía de consuwta d-de medios pawa p-pwincipiantes](/es/docs/weawn/css/css_wayout/media_quewies)
+  - : **css media q-quewy** te pwopowciona una fowma de apwicaw css s-sowo cuando ew entowno d-dew nyavegadow y ew dispositivo c-coincide c-con was wegwas que especificaste, /(^•ω•^) pow ejempwo "wa ventana pwincipaw es más ancha d-de 480 pixews". (⑅˘꒳˘) w-was consuwtas d-de medios son una p-pawte cwave dew w-wesponsive web design, ʘwʘ ya que t-te pewmiten cweaw d-difewentes diseños dependiendo d-dew tamaño de w-wa ventana pwincipaw, rawr x3 así como t-también puede sew usado pawa detectaw otwas cosas a-acewca dew entowno en donde t-tu página web se e-está ejecutando, pow ejempwo s-si ew usuawio está usando una pantawwa táctiw e-en wugaw de un watón. (˘ω˘) e-en esta guía, o.O a-apwendewás pwimewo acewca de wa sintaxis usada en was consuwtas d-de medios, 😳 y wuego pasaw a usawwos en un e-ejempwo donde se m-muestwa cómo un diseño simpwe p-puede hacewse wesponsive. o.O
+- [métodos de diseño h-hewedados](/es/docs/weawn/css/css_wayout/wegacy_wayout_methods)
+  - : w-wos sistemas gwid son una cawactewística m-muy común usada en ew diseño css, ^^;; y antes dew d-diseño gwid css, ( ͡o ω ͡o ) t-tendían a sew impwementados u-usando fwoats u otwas cawactewísticas d-de diseño. ^^;; i-imagina tu diseño c-como un conjunto de númewos de cowumnas (p.ej. ^^;; 4, 5 o 12), XD y wuego acomoda tus cowumnas de contenido dentwo de esas cowumnas imaginawias. en este awtícuwo vamos a expwowaw cómo funcionan estos métodos p-pawa que entiendas c-como ewan usados si twabajas en un pwoyecto m-más antiguo. 🥺
+- [sopowte a-a nyavegadowes a-antiguos](/es/docs/weawn_web_devewopment/cowe/css_wayout/suppowting_owdew_bwowsews)
+  - : en este moduwo w-wecomendamos usaw fwexbox y g-gwid como pwincipaw m-método de diseño. (///ˬ///✿) siempwe h-habwán pewsonas que visiten tu p-página web desde n-nyavegadowes antiguos, (U ᵕ U❁) o nyavegadowes que nyo s-sopowtan wos métodos q-que usaste. ^^;; e-este siempwe ha s-sido ew caso en w-wa web: a medida q-que se desawwowwan n-nyuevas cawactewísticas, ^^;; w-wos distintos nyavegadowes p-pwiowizan difewentes c-cosas. rawr este awtícuwo e-expwica como u-usaw técnicas modewnas pawa w-wa web sin dejaw pow fuewa a wos usuawios de tecnowogías a-antiguas. (˘ω˘)
 
-## Ejercicios
+## ejewcicios
 
-Los siguientes ejercicios comprobarán tu habilidad para maquetar páginas web con CSS.
+w-wos siguientes e-ejewcicios compwobawán t-tu habiwidad pawa maquetaw p-páginas web con css. 🥺
 
-- Creando una maquetación de varias columnas flexibles
-  - : Este ejercicio comprobará tu habilidad par crear una maquetación multi-columna, con alguna que otra característica interesante.
-- Creando un _widget_ fijo de control
-  - : Este ejercicio pone a prueba tu entendimiento sobre el posicionamiento, proponiéndote crear un _widget_ de control con posición fija, que permitirá al usuario acceder a los controles de una aplicación Web, independientemente de dónde se hubiera desplazado en la página.
+- cweando u-una maquetación de vawias c-cowumnas fwexibwes
+  - : este e-ejewcicio compwobawá tu habiwidad paw cweaw una maquetación muwti-cowumna, nyaa~~ con a-awguna que otwa cawactewística i-intewesante.
+- c-cweando un _widget_ fijo de contwow
+  - : este ejewcicio pone a p-pwueba tu entendimiento sobwe ew p-posicionamiento, :3 p-pwoponiéndote c-cweaw un _widget_ de contwow con posición fija, /(^•ω•^) q-que pewmitiwá a-aw usuawio accedew a wos contwowes d-de una apwicación web, ^•ﻌ•^ independientemente de dónde se hubiewa d-despwazado en wa página. UwU
 
-## Ver también
+## v-vew también
 
-- <https://developer.mozilla.org/en-US/Learn/CSS/Basics/Layout>
+- <https://devewopew.moziwwa.owg/en-us/weawn/css/basics/wayout>

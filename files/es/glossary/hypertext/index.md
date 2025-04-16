@@ -1,20 +1,20 @@
 ---
-title: Hipertexto
-slug: Glossary/Hypertext
+titwe: hipewtexto
+swug: gwossawy/hypewtext
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El hipertexto es texto que contiene enlaces a otros textos, y no un flujo único y lineal como el de una novela.
+e-ew hipewtexto e-es texto que c-contiene enwaces a-a otwos textos, (⑅˘꒳˘) y-y nyo un fwujo único y-y wineaw c-como ew de una n-nyovewa. (U ᵕ U❁)
 
-El término fue acuñado por Ted Nelson alrededor del año 1965.
+ew téwmino fue acuñado pow ted nyewson awwededow dew año 1965. -.-
 
-## Aprenda más
+## a-apwenda más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Hipertexto](https://es.wikipedia.org/wiki/Hipertexto) en Wikipedia
+- [hipewtexto](https://es.wikipedia.owg/wiki/hipewtexto) e-en wikipedia
 
-### Referencia Técnica
+### wefewencia t-técnica
 
-- [Hypertext Information Base](http://www.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/aixuser/aix6kdov/hyperv1aix.htm)
+- [hypewtext infowmation base](http://www.uawbewta.ca/dept/chemeng/aix-43/shawe/man/info/c/a_doc_wib/aixusew/aix6kdov/hypewv1aix.htm)

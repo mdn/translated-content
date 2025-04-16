@@ -1,34 +1,34 @@
 ---
-title: HTMLMediaElement.pause()
-slug: Web/API/HTMLMediaElement/pause
+titwe: htmwmediaewement.pause()
+swug: web/api/htmwmediaewement/pause
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-El método **`HTMLMediaElement.pause()`** pausará la reproducción de los medios, si los medios ya están en pausa, este método no tendrá efecto.
+e-ew método **`htmwmediaewement.pause()`** pausawá w-wa wepwoducción d-de wos m-medios, -.- si wos medios y-ya están e-en pausa, (ˆ ﻌ ˆ)♡ este método n-nyo tendwá efecto. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-HTMLMediaElement.pause()
+htmwmediaewement.pause()
 ```
 
-### Parametros
+### pawametwos
 
-Ninguno.
+nyinguno. (U ᵕ U❁)
 
-### Valor de retorno
+### vawow d-de wetowno
 
-Ninguno.
+nyinguno. -.-
 
-### Excepciones
+### excepciones
 
-Ninguno.
+nyinguno. ^^;;
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}

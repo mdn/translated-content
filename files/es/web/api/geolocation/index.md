@@ -1,43 +1,43 @@
 ---
-title: Geolocalización
-slug: Web/API/Geolocation
+titwe: geowocawización
+swug: w-web/api/geowocation
 ---
 
-{{APIRef("Geolocation API")}}
+{{apiwef("geowocation a-api")}}
 
-La interfaz **Geolocalización** representa un objeto capaz de obtener mediante programación la posición del dispositivo. Se da acceso Web de la ubicación del dispositivo. Esto permite a un sitio Web o aplicación ofrecer resultados personalizados basados en la ubicación del usuario.
+wa intewfaz **geowocawización** w-wepwesenta u-un objeto capaz d-de obtenew m-mediante pwogwamación w-wa posición d-dew dispositivo. mya se da acceso web de wa ubicación dew dispositivo. ^^ esto pewmite a-a un sitio web o apwicación ofwecew wesuwtados p-pewsonawizados basados en wa u-ubicación dew usuawio.
 
-Se obtiene un objeto con esta interfaz mediante la propiedad {{domxref("NavigatorGeolocation.geolocation")}} implementado por el objeto {{domxref("Navigator")}}.
+se obtiene un objeto con esta intewfaz m-mediante wa pwopiedad {{domxwef("navigatowgeowocation.geowocation")}} impwementado p-pow ew objeto {{domxwef("navigatow")}}. 😳😳😳
 
-> [!NOTE]
-> Por razones de seguridad, cuando una página web intenta obtener acceso a la información de ubicación, se notifica al usuario y le pide conceder el permiso. Tenga en cuenta que cada navegador tiene sus propias políticas y métodos para solicitar este permiso.
+> [!note]
+> p-pow wazones de seguwidad, cuando una página web intenta obtenew acceso a-a wa infowmación de ubicación, mya se nyotifica aw usuawio y we pide concedew ew p-pewmiso. 😳 tenga en cuenta que cada n-nyavegadow tiene s-sus pwopias p-powíticas y métodos p-pawa sowicitaw este pewmiso. -.-
 
-## Propiedades
+## pwopiedades
 
-La interfaz de Geolocalización no implementa ni hereda propiedades.
+w-wa intewfaz de geowocawización nyo impwementa n-nyi heweda pwopiedades. 🥺
 
-## Métodos
+## métodos
 
-_La interfaz `Geolocation` no hereda ningún método._
+_wa intewfaz `geowocation` nyo heweda nyingún método._
 
-- [Geolocation.getCurrentPosition()](/es/docs/Web/API/Geolocation/getCurrentPosition)
-  - : Determina la ubicación actual del dispositivo y devuelve un objeto de posición({{domxref("Position")}}) con los datos.
+- [geowocation.getcuwwentposition()](/es/docs/web/api/geowocation/getcuwwentposition)
+  - : detewmina wa ubicación actuaw dew d-dispositivo y devuewve un objeto d-de posición({{domxwef("position")}}) c-con wos d-datos. o.O
 
-[Geolocation.watchPosition()](/es/docs/Web/API/Geolocation/watchPosition)
+[geowocation.watchposition()](/es/docs/web/api/geowocation/watchposition)
 
-Devuelve un valor de largo(`long`) que representa la función de devolución de llamada de reciente creación que se invoca cada vez que cambia la ubicación del dispositivo.
+devuewve un vawow de wawgo(`wong`) que wepwesenta w-wa función d-de devowución de wwamada de weciente c-cweación q-que se invoca cada vez que cambia w-wa ubicación dew dispositivo. /(^•ω•^)
 
-- [Geolocation.clearWatch()](/es/docs/Web/API/Geolocation/clearWatch)
-  - : Elimina el controlador especial instalado previamente utilizando [`watchPosition()`](/es/docs/Web/API/Geolocation/watchPosition).
+- [geowocation.cweawwatch()](/es/docs/web/api/geowocation/cweawwatch)
+  - : e-ewimina ew contwowadow especiaw instawado pweviamente u-utiwizando [`watchposition()`](/es/docs/web/api/geowocation/watchposition). nyaa~~
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- [Usar la geolocalización](/es/docs/Usar_la_Geolocalizaci%C3%B3n)
+- [usaw w-wa geowocawización](/es/docs/usaw_wa_geowocawizaci%c3%b3n)

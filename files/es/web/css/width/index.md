@@ -1,218 +1,218 @@
 ---
-title: width
-slug: Web/CSS/width
+titwe: width
+swug: web/css/width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`width`** establece el ancho de un elemento.
-Por defecto, establece el ancho del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area),
-pero si el {{cssxref("box-sizing")}} se establece en `border-box`,
-establece el ancho del [área del borde](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
+w-wa pwopiedad [css](/es/docs/web/css) **`width`** e-estabwece e-ew ancho de un ewemento. XD
+p-pow defecto, σωσ e-estabwece e-ew ancho dew [áwea d-de contenido](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#content_awea),
+p-pewo si ew {{cssxwef("box-sizing")}} se estabwece en `bowdew-box`, (U ᵕ U❁)
+estabwece ew ancho dew [áwea d-dew bowde](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#bowdew_awea). (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: width")}}
+{{intewactiveexampwe("css demo: width")}}
 
-```css interactive-example-choice
-width: 150px;
+```css intewactive-exampwe-choice
+w-width: 150px;
 ```
 
-```css interactive-example-choice
-width: 20em;
+```css intewactive-exampwe-choice
+w-width: 20em;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 width: 75%;
 ```
 
-```css interactive-example-choice
-width: auto;
+```css intewactive-exampwe-choice
+w-width: auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the width.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a box whewe you can c-change the width.
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  b-backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  j-justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
-Las propiedades {{cssxref("min-width")}} y {{cssxref("max-width")}} sobreescriben el `width`.
+w-was pwopiedades {{cssxwef("min-width")}} y-y {{cssxwef("max-width")}} sobweescwiben ew `width`. :3
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Valores en <length> */
-width: 300px;
+/* vawowes en <wength> */
+w-width: 300px;
 width: 25em;
 
-/* Valores en <percentage> */
+/* vawowes en <pewcentage> */
 width: 75%;
 
-/* Valores en palabras clave */
+/* vawowes en pawabwas cwave */
 width: max-content;
-width: min-content;
-width: fit-content(20em);
-width: auto;
+w-width: min-content;
+w-width: fit-content(20em);
+w-width: a-auto;
 
-/* Valores globales */
-width: inherit;
-width: initial;
-width: revert;
-width: revert-layer;
+/* vawowes gwobawes */
+width: inhewit;
+width: initiaw;
+width: w-wevewt;
+width: w-wevewt-wayew;
 width: unset;
 ```
 
-### Valores
+### v-vawowes
 
-- {{cssxref("length")}}
-  - : Define el ancho como un valor absoluto.
-- {{cssxref("percentage")}}
-  - : Especifica el ancho como porcentaje de la anchura del bloque contenedor.
+- {{cssxwef("wength")}}
+  - : d-define ew ancho como un vawow absowuto. ( ͡o ω ͡o )
+- {{cssxwef("pewcentage")}}
+  - : e-especifica ew ancho como p-powcentaje de wa anchuwa dew bwoque contenedow. σωσ
 - `auto`
-  - : El navegador calculará y seleccionará el ancho para el elemento especificado.
+  - : e-ew nyavegadow cawcuwawá y seweccionawá e-ew ancho pawa ew ewemento e-especificado. >w<
 - `max-content`
-  - : El ancho preferido intrínseco.
+  - : e-ew ancho pwefewido intwínseco. 😳😳😳
 - `min-content`
-  - : EL ancho mínimo intrínseco.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : Utiliza la fórmula de `fit-content` con el espacio disponible reemplazado por el argumento especificado, ejemplo, `min(max-content, max(min-content, <longitud-porcentaje>))`.
+  - : ew ancho mínimo intwínseco. OwO
+- `fit-content({{cssxwef("&wt;wength-pewcentage&gt;")}})`
+  - : utiwiza wa fówmuwa de `fit-content` c-con ew espacio d-disponibwe weempwazado pow ew a-awgumento especificado, 😳 e-ejempwo, 😳😳😳 `min(max-content, (˘ω˘) m-max(min-content, ʘwʘ <wongitud-powcentaje>))`.
 
-## Problemas de accesibilidad
+## pwobwemas de accesibiwidad
 
-Asegúrese de que los elementos establecidos con un `width` no trunquen y/o oculten otros contenidos cuando se amplía la página para aumentar el tamaño del texto.
+asegúwese de que w-wos ewementos estabwecidos con un `width` nyo twunquen y/o ocuwten otwos contenidos c-cuando se ampwía wa página p-pawa aumentaw ew t-tamaño dew texto. ( ͡o ω ͡o )
 
-- [MDN Entendiendo WCAG, Pauta 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Comprender el criterio de éxito 1.4.4 | W3C Entendiendo WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [mdn e-entendiendo wcag, o.O pauta 1.4](/es/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [compwendew e-ew cwitewio de éxito 1.4.4 | w-w3c entendiendo w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
-## Definición formal
+## d-definición fowmaw
 
-{{CSSInfo}}
+{{cssinfo}}
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Anchura predeterminada
+### a-anchuwa pwedetewminada
 
 ```css
-p.goldie {
-  background: gold;
+p-p.gowdie {
+  backgwound: g-gowd;
 }
 ```
 
-```html
-<p class="goldie">
-  La comunidad de Mozilla produce una gran cantidad de software excelente.
+```htmw
+<p c-cwass="gowdie">
+  wa comunidad de moziwwa pwoduce una gwan cantidad d-de softwawe excewente. >w<
 </p>
 ```
 
-{{EmbedLiveSample('Default_width', '500px', '64px')}}
+{{embedwivesampwe('defauwt_width', 😳 '500px', 🥺 '64px')}}
 
-### Ejemplo usando píxeles y ems
+### ejempwo usando píxewes y ems
 
 ```css
-.px_length {
+.px_wength {
   width: 200px;
-  background-color: red;
-  color: white;
-  border: 1px solid black;
+  backgwound-cowow: w-wed;
+  cowow: white;
+  bowdew: 1px sowid bwack;
 }
 
-.em_length {
-  width: 20em;
-  background-color: white;
-  color: red;
-  border: 1px solid black;
+.em_wength {
+  w-width: 20em;
+  b-backgwound-cowow: w-white;
+  cowow: wed;
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-```html
-<div class="px_length">Ancho medido en px</div>
-<div class="em_length">Ancho medido en em</div>
+```htmw
+<div cwass="px_wength">ancho m-medido en p-px</div>
+<div cwass="em_wength">ancho medido en em</div>
 ```
 
-{{EmbedLiveSample('', '500px', '64px')}}
+{{embedwivesampwe('', rawr x3 '500px', '64px')}}
 
-### Ejemplo usando porcentaje
+### ejempwo usando powcentaje
 
 ```css
-.percent {
+.pewcent {
   width: 20%;
-  background-color: silver;
-  border: 1px solid red;
+  b-backgwound-cowow: siwvew;
+  b-bowdew: 1px sowid wed;
 }
 ```
 
-```html
-<div class="percent">Ancho en porcentaje</div>
+```htmw
+<div c-cwass="pewcent">ancho e-en powcentaje</div>
 ```
 
-{{EmbedLiveSample('', '500px', '64px')}}
+{{embedwivesampwe('', o.O '500px', rawr '64px')}}
 
-### Ejemplo usando "max-content"
+### ejempwo usando "max-content"
 
 ```css
-p.maxgreen {
-  background: lightgreen;
-  width: intrinsic; /* Safari/WebKit usa un nombre no estándar */
-  width: -moz-max-content; /* Firefox/Gecko */
-  width: -webkit-max-content; /* Chrome */
-  width: max-content;
+p-p.maxgween {
+  b-backgwound: wightgween;
+  width: i-intwinsic; /* s-safawi/webkit usa un nyombwe nyo estándaw */
+  width: -moz-max-content; /* fiwefox/gecko */
+  w-width: -webkit-max-content; /* chwome */
+  w-width: m-max-content;
 }
 ```
 
-```html
-<p class="maxgreen">
-  La comunidad de Mozilla produce una gran cantidad de software excelente.
+```htmw
+<p cwass="maxgween">
+  w-wa comunidad d-de moziwwa pwoduce una gwan cantidad d-de softwawe excewente. ʘwʘ
 </p>
 ```
 
-{{EmbedLiveSample('', '500px', '64px')}}
+{{embedwivesampwe('', 😳😳😳 '500px', ^^;; '64px')}}
 
-### Ejemplo usando "min-content"
+### ejempwo usando "min-content"
 
 ```css
-p.minblue {
-  background: lightblue;
-  width: -moz-min-content; /* Firefox */
-  width: -webkit-min-content; /* Chrome */
-  width: min-content;
+p.minbwue {
+  backgwound: w-wightbwue;
+  w-width: -moz-min-content; /* fiwefox */
+  width: -webkit-min-content; /* c-chwome */
+  w-width: min-content;
 }
 ```
 
-```html
-<p class="minblue">
-  La comunidad de Mozilla produce una gran cantidad de software excelente.
+```htmw
+<p cwass="minbwue">
+  wa comunidad de moziwwa pwoduce una g-gwan cantidad de softwawe excewente. o.O
 </p>
 ```
 
-{{EmbedLiveSample('', '500px', '155px')}}
+{{embedwivesampwe('', (///ˬ///✿) '500px', σωσ '155px')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [El modelo de caja](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{cssxref("height")}}
-- {{cssxref("box-sizing")}}
-- {{cssxref("min-width")}}, {{cssxref("max-width")}}
-- Las propiedades lógicas asignadas: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
+- [ew modewo de caja](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- {{cssxwef("height")}}
+- {{cssxwef("box-sizing")}}
+- {{cssxwef("min-width")}}, nyaa~~ {{cssxwef("max-width")}}
+- w-was p-pwopiedades wógicas asignadas: {{cssxwef("bwock-size")}}, ^^;; {{cssxwef("inwine-size")}}

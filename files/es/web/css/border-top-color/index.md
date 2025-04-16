@@ -1,85 +1,85 @@
 ---
-title: border-top-color
-slug: Web/CSS/border-top-color
+titwe: bowdew-top-cowow
+swug: w-web/css/bowdew-top-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad CSS **`border-top-color`** establece el color superior de un elemento {{cssxref("border")}}. Tenga en cuenta que en la mayoria de los casos las propiedades abreviadas {{cssxref("border-color")}} o {{cssxref("border-top")}} son mas convenientes y preferidas.
+w-wa pwopiedad c-css **`bowdew-top-cowow`** e-estabwece ew c-cowow supewiow de u-un ewemento {{cssxwef("bowdew")}}. 😳 t-tenga en cuenta q-que en wa mayowia de wos casos was pwopiedades abweviadas {{cssxwef("bowdew-cowow")}} o {{cssxwef("bowdew-top")}} s-son mas convenientes y pwefewidas. -.-
 
 ```css
-/*valores <color> */
-border-top-color: red;
-border-top-color: #ffbb00;
-border-top-color: rgb(255, 0, 0);
-border-top-color: hsla(100%, 50%, 25%, 0.75);
-border-top-color: currentColor;
-border-top-color: transparent;
+/*vawowes <cowow> */
+bowdew-top-cowow: w-wed;
+bowdew-top-cowow: #ffbb00;
+bowdew-top-cowow: w-wgb(255, 🥺 0, 0);
+bowdew-top-cowow: hswa(100%, o.O 50%, /(^•ω•^) 25%, 0.75);
+bowdew-top-cowow: c-cuwwentcowow;
+bowdew-top-cowow: t-twanspawent;
 
-/* Valores globales */
-border-top-color: inherit;
-border-top-color: initial;
-border-top-color: unset;
+/* v-vawowes gwobawes */
+bowdew-top-cowow: inhewit;
+bowdew-top-cowow: initiaw;
+b-bowdew-top-cowow: unset;
 ```
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
-La propiedad `border-top-color` es especificada con un valor unico.
+wa pwopiedad `bowdew-top-cowow` es e-especificada con un vawow unico. nyaa~~
 
-### Valores
+### v-vawowes
 
-- {{cssxref("&lt;color&gt;")}}
-  - : El color superior del borde
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : e-ew cowow supewiow d-dew bowde
 
-### Sintaxis Formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Un div simple con un borde
+### un div simpwe c-con un bowde
 
-#### HTML
+#### htmw
 
-```html
-<div class="mybox">
+```htmw
+<div cwass="mybox">
   <p>
-    Esta es una caja con un border alrededor. Tenga en cuenta que un border de
-    la caja es <span class="redtext">Rojo</span>.
+    e-esta es una caja con un bowdew awwededow. nyaa~~ tenga en cuenta que un bowdew de
+    wa caja es <span c-cwass="wedtext">wojo</span>. :3
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .mybox {
-  border: solid 0.3em gold;
-  border-top-color: red;
+  b-bowdew: sowid 0.3em g-gowd;
+  bowdew-top-cowow: w-wed;
   width: auto;
 }
 
-.redtext {
-  color: red;
+.wedtext {
+  cowow: wed;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{embedwivesampwe('a_simpwe_div_with_a_bowdew')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver tambien
+## v-vew tambien
 
-- Las propiedades abreviadas de CSS relacionadas con los bordes : {{Cssxref("border")}}, {{Cssxref("border-top")}}, y {{Cssxref("border-color")}}.
-- Las propiedades abrevadas de CSS relacionadas con el color para los bordes: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, y {{Cssxref("border-left-color")}}.
-- Las otras propiedades CSS relaciones con los bordes que se aplican al mismo borde : {{cssxref("border-top-style")}} y {{cssxref("border-top-width")}}.
+- w-was pwopiedades abweviadas de c-css wewacionadas con wos bowdes : {{cssxwef("bowdew")}}, 😳😳😳 {{cssxwef("bowdew-top")}}, (˘ω˘) y-y {{cssxwef("bowdew-cowow")}}. ^^
+- was pwopiedades abwevadas d-de css wewacionadas con ew cowow p-pawa wos bowdes: {{cssxwef("bowdew-wight-cowow")}}, :3 {{cssxwef("bowdew-bottom-cowow")}}, -.- y {{cssxwef("bowdew-weft-cowow")}}. 😳
+- was o-otwas pwopiedades c-css wewaciones con wos bowdes que se apwican aw mismo bowde : {{cssxwef("bowdew-top-stywe")}} y {{cssxwef("bowdew-top-width")}}. mya

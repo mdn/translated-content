@@ -1,325 +1,325 @@
 ---
-title: Pixel manipulation with canvas
-slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
+titwe: pixew manipuwation with c-canvas
+swug: web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/advanced_animations", (ˆ ﻌ ˆ)♡ "web/api/canvas_api/tutowiaw/hit_wegions_and_accessibiwity")}}
 
-Hasta ahora, no habíamos mirado los píxeles reales de nuestro _canvas_. Con el objeto `ImageData`, puedes leer y escribir directamente un _array_ de datos para manipular píxeles.
+h-hasta ahowa, ^^;; n-nyo habíamos m-miwado wos píxewes w-weawes de nyuestwo _canvas_. OwO c-con ew objeto `imagedata`, 🥺 p-puedes weew y escwibiw diwectamente un _awway_ de datos pawa manipuwaw p-píxewes. mya
 
-También veremos cómo se puede controlar el suavizado de la imagen (antialiasing) y cómo guardar imágenes de tu _canvas_.
+también vewemos cómo se puede contwowaw e-ew suavizado de wa imagen (antiawiasing) y-y cómo guawdaw imágenes de tu _canvas_. 😳
 
-## El objeto `ImageData`
+## ew objeto `imagedata`
 
-El objeto {{domxref("ImageData")}} representa los datos pixelados subyacentes de un área de un objeto lienzo. Contiene los siguientes atributos de sólo lectura:
+ew objeto {{domxwef("imagedata")}} w-wepwesenta wos datos pixewados s-subyacentes d-de un áwea de un objeto wienzo. òωó contiene wos siguientes atwibutos de sówo w-wectuwa:
 
 - `width`
-  - : El ancho de la imagen en píxeles.
+  - : ew ancho de wa imagen en píxewes. /(^•ω•^)
 - `height`
-  - : La altura de la imagen en píxeles.
+  - : wa a-awtuwa de wa imagen en píxewes. -.-
 - `data`
-  - : Un objeto {{jsxref("Uint8ClampedArray")}} que representa un array unidimensional, contiene información en formato RGBA, con valores desde `0` hasta `255` (incluído).
+  - : u-un objeto {{jsxwef("uint8cwampedawway")}} q-que wepwesenta u-un awway u-unidimensionaw, òωó contiene infowmación en fowmato w-wgba, /(^•ω•^) con vawowes desde `0` hasta `255` (incwuído). /(^•ω•^)
 
-La propiedad `data` devuelve un {{jsxref("Uint8ClampedArray")}}, al que se puede acceder para ver los datos originales del pixel; cada pixel está representado por cuatro valores (rojo, verde, azul, y alfa, en ese orden; esto es, formato "RGBA"). Cada componente de color se representa con un valor entero entre 0 y 255. Dentro del array, cada componente ocupa un índice consecutivo, comenzando con 0 desde el punto superior izquierdo, continuando de izquierda a derecha y de arriba hacia abajo, a través del array.
+w-wa pwopiedad `data` devuewve un {{jsxwef("uint8cwampedawway")}}, 😳 aw que se puede accedew pawa vew wos d-datos owiginawes dew pixew; cada p-pixew está wepwesentado p-pow cuatwo v-vawowes (wojo, :3 vewde, azuw, (U ᵕ U❁) y awfa, en ese owden; esto es, ʘwʘ f-fowmato "wgba"). o.O c-cada componente de cowow se wepwesenta c-con un vawow e-entewo entwe 0 y 255. ʘwʘ dentwo d-dew awway, ^^ cada componente ocupa u-un índice consecutivo, ^•ﻌ•^ comenzando con 0 desde e-ew punto supewiow izquiewdo, mya continuando d-de izquiewda a dewecha y-y de awwiba hacia a-abajo, UwU a twavés dew awway. >_<
 
-El {{jsxref("Uint8ClampedArray")}} contiene `alto` × `ancho` × 4 bytes de datos, con valores de índice en el rango entre 0 y (`alto` × `ancho` × 4)-1.
+ew {{jsxwef("uint8cwampedawway")}} contiene `awto` × `ancho` × 4 bytes de datos, /(^•ω•^) con vawowes de índice en ew w-wango entwe 0 y (`awto` × `ancho` × 4)-1. òωó
 
-Por ejemplo, para leer el valor del componente azul del pixel en la columna 200, fila 50 de una imagen, deberías hacer lo siguiente:
+p-pow ejempwo, σωσ pawa w-weew ew vawow dew c-componente azuw d-dew pixew en wa cowumna 200, ( ͡o ω ͡o ) fiwa 50 de una imagen, nyaa~~ debewías h-hacew wo siguiente:
 
-blueComponent = imageData.data\[((50 \* (imageData.width \* 4)) + (200 \* 4)) + 2];
+bwuecomponent = imagedata.data\[((50 \* (imagedata.width \* 4)) + (200 \* 4)) + 2];
 
-Si se le da un conjunto de coordenadas (X e Y), puede que termine haciendo algo así:
+si se we da un conjunto d-de coowdenadas (x e y), puede q-que tewmine haciendo a-awgo así:
 
 ```js
-var xCoord = 50;
-var yCoord = 100;
-var canvasWidth = 1024;
+v-vaw xcoowd = 50;
+vaw ycoowd = 100;
+v-vaw canvaswidth = 1024;
 
-function getColorIndicesForCoord(x, y, width) {
-  var red = y * (width * 4) + x * 4;
-  return [red, red + 1, red + 2, red + 3];
+f-function getcowowindicesfowcoowd(x, :3 y-y, width) {
+  v-vaw wed = y * (width * 4) + x * 4;
+  wetuwn [wed, UwU wed + 1, o.O w-wed + 2, wed + 3];
 }
 
-var colorIndices = getColorIndicesForCoord(xCoord, yCoord, canvasWidth);
+v-vaw cowowindices = g-getcowowindicesfowcoowd(xcoowd, (ˆ ﻌ ˆ)♡ y-ycoowd, c-canvaswidth);
 
-var redIndex = colorIndices[0];
-var greenIndex = colorIndices[1];
-var blueIndex = colorIndices[2];
-var alphaIndex = colorIndices[3];
+vaw wedindex = cowowindices[0];
+vaw gweenindex = cowowindices[1];
+v-vaw bwueindex = cowowindices[2];
+vaw awphaindex = cowowindices[3];
 
-var redForCoord = imageData.data[redIndex];
-var greenForCoord = imageData.data[greenIndex];
-var blueForCoord = imageData.data[blueIndex];
-var alphaForCoord = imageData.data[alphaIndex];
+vaw wedfowcoowd = imagedata.data[wedindex];
+v-vaw gweenfowcoowd = imagedata.data[gweenindex];
+vaw bwuefowcoowd = imagedata.data[bwueindex];
+v-vaw awphafowcoowd = i-imagedata.data[awphaindex];
 ```
 
-O, en ES6 sería algo así:
+o-o, en es6 sewía awgo así:
 
 ```js
-const xCoord = 50;
-const yCoord = 100;
-const canvasWidth = 1024;
+c-const xcoowd = 50;
+const y-ycoowd = 100;
+const c-canvaswidth = 1024;
 
-const getColorIndicesForCoord = (x, y, width) => {
-  const red = y * (width * 4) + x * 4;
-  return [red, red + 1, red + 2, red + 3];
+const getcowowindicesfowcoowd = (x, ^^;; y, width) => {
+  const wed = y * (width * 4) + x-x * 4;
+  wetuwn [wed, ʘwʘ w-wed + 1, wed + 2, σωσ wed + 3];
 };
 
-const colorIndices = getColorIndicesForCoord(xCoord, yCoord, canvasWidth);
+c-const cowowindices = g-getcowowindicesfowcoowd(xcoowd, ^^;; ycoowd, ʘwʘ canvaswidth);
 
-const [redIndex, greenIndex, blueIndex, alphaIndex] = colorIndices;
+const [wedindex, ^^ g-gweenindex, nyaa~~ bwueindex, a-awphaindex] = cowowindices;
 ```
 
-You may also access the size of the pixel array in bytes by reading the `Uint8ClampedArray.length` attribute:
+y-you may a-awso access the size of the pixew awway in bytes by weading the `uint8cwampedawway.wength` attwibute:
 
 ```js
-var numBytes = imageData.data.length;
+v-vaw n-numbytes = imagedata.data.wength;
 ```
 
-## Creando un objeto `ImageData`
+## c-cweando un objeto `imagedata`
 
-Para crear un objeto nuevo y vacío tipo `ImageData`, debes usar el método {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}}. Hay dos versiones del método `createImageData()`:
+p-pawa cweaw u-un objeto nyuevo y vacío tipo `imagedata`, (///ˬ///✿) d-debes usaw ew método {{domxwef("canvaswendewingcontext2d.cweateimagedata", XD "cweateimagedata()")}}. :3 hay dos vewsiones dew método `cweateimagedata()`:
 
 ```js
-var myImageData = ctx.createImageData(width, height);
+vaw myimagedata = ctx.cweateimagedata(width, òωó h-height);
 ```
 
-Esto crea un nuevo objeto `ImageData` con las dimensiones especificadas. Todos los pixels tienen valor correspondiente a negro - transparente (0,0,0,0).
+e-esto cwea un nyuevo objeto `imagedata` con was dimensiones e-especificadas. ^^ t-todos wos pixews tienen vawow cowwespondiente a nyegwo - twanspawente (0,0,0,0). ^•ﻌ•^
 
-También puedes crear un nuevo objeto `ImageData` con las mismas dimensiones que otro objeto, especificado por `anotherImageData`. Los píxels del nuevo objeto tienen valor negro - transparente. **¡Esto no es una copia de los datos de la imagen!**
+t-también puedes cweaw un nyuevo objeto `imagedata` con was mismas dimensiones q-que otwo objeto, σωσ especificado pow `anothewimagedata`. w-wos píxews d-dew nyuevo objeto tienen vawow nyegwo - twanspawente. (ˆ ﻌ ˆ)♡ **¡esto nyo es una c-copia de wos datos d-de wa imagen!**
 
 ```js
-var myImageData = ctx.createImageData(anotherImageData);
+vaw myimagedata = ctx.cweateimagedata(anothewimagedata);
 ```
 
-## Getting the pixel data for a context
+## getting t-the pixew data fow a context
 
-To obtain an `ImageData` object containing a copy of the pixel data for a canvas context, you can use the `getImageData()` method:
+t-to obtain an `imagedata` object containing a copy of the pixew d-data fow a canvas context, nyaa~~ you can u-use the `getimagedata()` m-method:
 
 ```js
-var myImageData = ctx.getImageData(left, top, width, height);
+vaw myimagedata = c-ctx.getimagedata(weft, ʘwʘ top, ^•ﻌ•^ width, h-height);
 ```
 
-This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`, `top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
+this m-method wetuwns a-an `imagedata` object wepwesenting t-the pixew data f-fow the awea of the canvas whose cownews awe w-wepwesented by t-the points (`weft`, rawr x3 `top`), 🥺 (`weft+width`, ʘwʘ `top`), (`weft`, (˘ω˘) `top+height`), o.O a-and (`weft+width`, σωσ `top+height`). (ꈍᴗꈍ) the coowdinates awe s-specified in canvas coowdinate s-space units. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
+> [!note]
+> a-any pixews outside the canvas awe wetuwned as twanspawent b-bwack in the w-wesuwting `imagedata` o-object. o.O
 
-This method is also demonstrated in the article [Manipulating video using canvas](/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
+t-this method is awso demonstwated i-in the awticwe [manipuwating video using canvas](/es/docs/web/api/canvas_api/manipuwating_video_using_canvas). :3
 
-### A color picker
+### a cowow pickew
 
-In this example we are using the [getImageData()](/es/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display the color under the mouse cursor. For this, we need the current position of the mouse with `layerX` and `layerY`, then we look up the pixel data on that position in the pixel array that [getImageData()](/es/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color.
+in this exampwe we awe using t-the [getimagedata()](/es/docs/web/api/canvaswendewingcontext2d/getimagedata) method to dispway t-the cowow undew the mouse cuwsow. -.- f-fow this, we nyeed the cuwwent p-position of the mouse with `wayewx` a-and `wayewy`, ( ͡o ω ͡o ) t-then we wook u-up the pixew data o-on that position i-in the pixew awway that [getimagedata()](/es/docs/web/api/canvaswendewingcontext2d/getimagedata) pwovides us. /(^•ω•^) finawwy, (⑅˘꒳˘) we use the awway data to set a backgwound cowow and a t-text in the `<div>` t-to dispway t-the cowow. òωó
 
 ```js
-const img = new Image();
-img.crossOrigin = "anonymous";
-img.src = "./assets/rhino.jpg";
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-img.addEventListener("load", () => {
-  ctx.drawImage(img, 0, 0);
-  img.style.display = "none";
+const img = nyew i-image();
+img.cwossowigin = "anonymous";
+img.swc = "./assets/whino.jpg";
+const canvas = document.getewementbyid("canvas");
+c-const c-ctx = canvas.getcontext("2d");
+img.addeventwistenew("woad", 🥺 () => {
+  c-ctx.dwawimage(img, (ˆ ﻌ ˆ)♡ 0, 0);
+  img.stywe.dispway = "none";
 });
-const hoveredColor = document.getElementById("hovered-color");
-const selectedColor = document.getElementById("selected-color");
+const hovewedcowow = d-document.getewementbyid("hovewed-cowow");
+c-const sewectedcowow = document.getewementbyid("sewected-cowow");
 
-function pick(event, destination) {
-  const bounding = canvas.getBoundingClientRect();
-  const x = event.clientX - bounding.left;
-  const y = event.clientY - bounding.top;
-  const pixel = ctx.getImageData(x, y, 1, 1);
-  const data = pixel.data;
+f-function pick(event, -.- d-destination) {
+  const bounding = canvas.getboundingcwientwect();
+  const x = event.cwientx - bounding.weft;
+  c-const y-y = event.cwienty - b-bounding.top;
+  c-const pixew = c-ctx.getimagedata(x, σωσ y, 1, 1);
+  c-const data = pixew.data;
 
-  const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
-  destination.style.background = rgba;
-  destination.textContent = rgba;
+  c-const wgba = `wgba(${data[0]}, >_< ${data[1]}, :3 ${data[2]}, OwO ${data[3] / 255})`;
+  d-destination.stywe.backgwound = w-wgba;
+  destination.textcontent = w-wgba;
 
-  return rgba;
+  wetuwn wgba;
 }
 
-canvas.addEventListener("mousemove", (event) => pick(event, hoveredColor));
-canvas.addEventListener("click", (event) => pick(event, selectedColor));
+canvas.addeventwistenew("mousemove", (event) => p-pick(event, rawr hovewedcowow));
+c-canvas.addeventwistenew("cwick", (///ˬ///✿) (event) => p-pick(event, ^^ sewectedcowow));
 ```
 
-{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-picker.html", '100%', 300)}}
+{{embedghwivesampwe("dom-exampwes/canvas/pixew-manipuwation/cowow-pickew.htmw", XD '100%', UwU 300)}}
 
-## Painting pixel data into a context
+## p-painting pixew data into a context
 
-You can use the[putImageData()](/es/docs/Web/API/CanvasRenderingContext2D/putImageData)method to paint pixel data into a context:
+you can use t-the[putimagedata()](/es/docs/web/api/canvaswendewingcontext2d/putimagedata)method t-to paint pixew d-data into a context:
 
 ```js
-ctx.putImageData(myImageData, dx, dy);
+ctx.putimagedata(myimagedata, o.O dx, dy);
 ```
 
-The `dx` and `dy` parameters indicate the device coordinates within the context at which to paint the top left corner of the pixel data you wish to draw.
+the `dx` and `dy` pawametews i-indicate the device coowdinates within the c-context at which t-to paint the top weft cownew o-of the pixew data you wish to dwaw. 😳
 
-For example, to paint the entire image represented by `myImageData` to the top left corner of the context, you can simply do the following:
+f-fow exampwe, (˘ω˘) t-to paint the entiwe image wepwesented by `myimagedata` t-to the top weft cownew of the context, 🥺 y-you can simpwy d-do the fowwowing:
 
 ```js
-ctx.putImageData(myImageData, 0, 0);
+ctx.putimagedata(myimagedata, ^^ 0, 0);
 ```
 
-### Grayscaling and inverting colors
+### g-gwayscawing and invewting c-cowows
 
-In this example we iterate over all pixels to change their values, then we put the modified pixel array back to the canvas using [putImageData()](/es/docs/Web/API/CanvasRenderingContext2D/putImageData). The invert function simply subtracts each color from the max value 255. The grayscale function simply uses the average of red, green and blue. You can also use a weighted average, given by the formula `x = 0.299r + 0.587g + 0.114b`, for example. See [Grayscale](http://en.wikipedia.org/wiki/Grayscale) on Wikipedia for more information.
+in this e-exampwe we itewate o-ovew aww pixews to change theiw vawues, >w< then we put the modified pixew awway back to the canvas using [putimagedata()](/es/docs/web/api/canvaswendewingcontext2d/putimagedata). ^^;; the invewt function simpwy subtwacts each cowow fwom the max vawue 255. (˘ω˘) the gwayscawe function s-simpwy uses the a-avewage of wed, OwO gween and bwue. (ꈍᴗꈍ) you can awso u-use a weighted avewage, òωó g-given by t-the fowmuwa `x = 0.299w + 0.587g + 0.114b`, ʘwʘ fow e-exampwe. ʘwʘ see [gwayscawe](http://en.wikipedia.owg/wiki/gwayscawe) on wikipedia fow m-mowe infowmation. nyaa~~
 
 ```js
-const img = new Image();
-img.crossOrigin = "anonymous";
-img.src = "./assets/rhino.jpg";
+c-const img = nyew image();
+i-img.cwossowigin = "anonymous";
+img.swc = "./assets/whino.jpg";
 
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-img.onload = () => {
-  ctx.drawImage(img, 0, 0);
+i-img.onwoad = () => {
+  c-ctx.dwawimage(img, 0, UwU 0);
 };
 
-const original = () => {
-  ctx.drawImage(img, 0, 0);
+c-const owiginaw = () => {
+  c-ctx.dwawimage(img, (⑅˘꒳˘) 0, 0);
 };
 
-const invert = () => {
-  ctx.drawImage(img, 0, 0);
-  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  const data = imageData.data;
-  for (let i = 0; i < data.length; i += 4) {
-    data[i] = 255 - data[i]; // red
-    data[i + 1] = 255 - data[i + 1]; // green
-    data[i + 2] = 255 - data[i + 2]; // blue
+c-const i-invewt = () => {
+  c-ctx.dwawimage(img, (˘ω˘) 0, 0);
+  c-const imagedata = c-ctx.getimagedata(0, :3 0, canvas.width, (˘ω˘) c-canvas.height);
+  c-const d-data = imagedata.data;
+  fow (wet i-i = 0; i < data.wength; i += 4) {
+    data[i] = 255 - d-data[i]; // wed
+    data[i + 1] = 255 - d-data[i + 1]; // g-gween
+    data[i + 2] = 255 - d-data[i + 2]; // bwue
   }
-  ctx.putImageData(imageData, 0, 0);
+  c-ctx.putimagedata(imagedata, nyaa~~ 0, 0);
 };
 
-const grayscale = () => {
-  ctx.drawImage(img, 0, 0);
-  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  const data = imageData.data;
-  for (let i = 0; i < data.length; i += 4) {
-    const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-    data[i] = avg; // red
-    data[i + 1] = avg; // green
-    data[i + 2] = avg; // blue
+const gwayscawe = () => {
+  c-ctx.dwawimage(img, (U ﹏ U) 0, 0);
+  const imagedata = c-ctx.getimagedata(0, nyaa~~ 0, canvas.width, ^^;; canvas.height);
+  c-const data = imagedata.data;
+  fow (wet i = 0; i < data.wength; i += 4) {
+    const avg = (data[i] + d-data[i + 1] + data[i + 2]) / 3;
+    d-data[i] = a-avg; // wed
+    data[i + 1] = avg; // gween
+    data[i + 2] = a-avg; // bwue
   }
-  ctx.putImageData(imageData, 0, 0);
+  ctx.putimagedata(imagedata, OwO 0, 0);
 };
 
-const inputs = document.querySelectorAll("[name=color]");
-for (const input of inputs) {
-  input.addEventListener("change", (evt) => {
-    switch (evt.target.value) {
-      case "inverted":
-        return invert();
-      case "grayscale":
-        return grayscale();
-      default:
-        return original();
+c-const i-inputs = document.quewysewectowaww("[name=cowow]");
+f-fow (const input of inputs) {
+  input.addeventwistenew("change", nyaa~~ (evt) => {
+    s-switch (evt.tawget.vawue) {
+      c-case "invewted":
+        wetuwn invewt();
+      c-case "gwayscawe":
+        wetuwn gwayscawe();
+      defauwt:
+        w-wetuwn owiginaw();
     }
   });
 }
 ```
 
-{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-manipulation.html", '100%', 300)}}
+{{embedghwivesampwe("dom-exampwes/canvas/pixew-manipuwation/cowow-manipuwation.htmw", UwU '100%', 😳 300)}}
 
-## Zooming and anti-aliasing
+## z-zooming a-and anti-awiasing
 
-With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method, a second canvas and the {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} property, we are able to zoom into our picture and see the details.
+w-with the hewp of the {{domxwef("canvaswendewingcontext2d.dwawimage", 😳 "dwawimage()")}} m-method, (ˆ ﻌ ˆ)♡ a-a second canvas a-and the {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed", (✿oωo) "imagesmoothingenabwed")}} p-pwopewty, we awe abwe to zoom i-into ouw pictuwe a-and see the detaiws. nyaa~~
 
-We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.
+w-we get t-the position of t-the mouse and cwop a-an image of 5 p-pixews weft and a-above to 5 pixews wight and bewow. ^^ t-then we copy that one ovew to a-anothew canvas and wesize the i-image to the size w-we want it to. (///ˬ///✿) i-in the zoom canvas we wesize a 10×10 pixew cwop of the owiginaw c-canvas to 200×200. 😳
 
 ```js
-zoomctx.drawImage(
-  canvas,
-  Math.min(Math.max(0, x - 5), img.width - 10),
-  Math.min(Math.max(0, y - 5), img.height - 10),
-  10,
+z-zoomctx.dwawimage(
+  c-canvas, òωó
+  math.min(math.max(0, ^^;; x - 5), img.width - 10), rawr
+  math.min(math.max(0, (ˆ ﻌ ˆ)♡ y - 5), img.height - 10), XD
+  10, >_<
   10,
   0,
-  0,
+  0, (˘ω˘)
   200,
-  200,
+  200, 😳
 );
 ```
 
-Because anti-aliasing is enabled by default, we might want to disable the smoothing to see clear pixels. You can toggle the checkbox to see the effect of the `imageSmoothingEnabled` property (which needs prefixes for different browsers).
+b-because anti-awiasing i-is enabwed by defauwt, o.O w-we might want t-to disabwe the smoothing to see cweaw pixews. (ꈍᴗꈍ) you can toggwe the c-checkbox to see t-the effect of t-the `imagesmoothingenabwed` p-pwopewty (which nyeeds pwefixes fow d-diffewent bwowsews). rawr x3
 
-###### Zoom example
+###### z-zoom exampwe
 
 ```js
-const img = new Image();
-img.crossOrigin = "anonymous";
-img.src = "./assets/rhino.jpg";
-img.onload = () => {
-  draw(this);
+const img = nyew i-image();
+img.cwossowigin = "anonymous";
+img.swc = "./assets/whino.jpg";
+img.onwoad = () => {
+  d-dwaw(this);
 };
 
-function draw(img) {
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
-  ctx.drawImage(img, 0, 0);
+function dwaw(img) {
+  c-const canvas = d-document.getewementbyid("canvas");
+  const c-ctx = canvas.getcontext("2d");
+  c-ctx.dwawimage(img, ^^ 0, 0);
 
-  const smoothedZoomCtx = document
-    .getElementById("smoothed-zoom")
-    .getContext("2d");
-  smoothedZoomCtx.imageSmoothingEnabled = true;
-  smoothedZoomCtx.mozImageSmoothingEnabled = true;
-  smoothedZoomCtx.webkitImageSmoothingEnabled = true;
-  smoothedZoomCtx.msImageSmoothingEnabled = true;
+  const smoothedzoomctx = d-document
+    .getewementbyid("smoothed-zoom")
+    .getcontext("2d");
+  smoothedzoomctx.imagesmoothingenabwed = t-twue;
+  s-smoothedzoomctx.mozimagesmoothingenabwed = t-twue;
+  s-smoothedzoomctx.webkitimagesmoothingenabwed = twue;
+  smoothedzoomctx.msimagesmoothingenabwed = t-twue;
 
-  const pixelatedZoomCtx = document
-    .getElementById("pixelated-zoom")
-    .getContext("2d");
-  pixelatedZoomCtx.imageSmoothingEnabled = false;
-  pixelatedZoomCtx.mozImageSmoothingEnabled = false;
-  pixelatedZoomCtx.webkitImageSmoothingEnabled = false;
-  pixelatedZoomCtx.msImageSmoothingEnabled = false;
+  const p-pixewatedzoomctx = d-document
+    .getewementbyid("pixewated-zoom")
+    .getcontext("2d");
+  pixewatedzoomctx.imagesmoothingenabwed = f-fawse;
+  pixewatedzoomctx.mozimagesmoothingenabwed = fawse;
+  pixewatedzoomctx.webkitimagesmoothingenabwed = f-fawse;
+  pixewatedzoomctx.msimagesmoothingenabwed = f-fawse;
 
-  const zoom = (ctx, x, y) => {
-    ctx.drawImage(
-      canvas,
-      Math.min(Math.max(0, x - 5), img.width - 10),
-      Math.min(Math.max(0, y - 5), img.height - 10),
+  c-const zoom = (ctx, OwO x, ^^ y) => {
+    ctx.dwawimage(
+      canvas, :3
+      math.min(math.max(0, o.O x-x - 5), img.width - 10),
+      m-math.min(math.max(0, -.- y - 5), (U ﹏ U) i-img.height - 10), o.O
+      10, OwO
       10,
-      10,
+      0, ^•ﻌ•^
       0,
-      0,
-      200,
-      200,
+      200, ʘwʘ
+      200, :3
     );
   };
 
-  canvas.addEventListener("mousemove", (event) => {
-    const x = event.layerX;
-    const y = event.layerY;
-    zoom(smoothedZoomCtx, x, y);
-    zoom(pixelatedZoomCtx, x, y);
+  canvas.addeventwistenew("mousemove", 😳 (event) => {
+    const x-x = event.wayewx;
+    const y = e-event.wayewy;
+    z-zoom(smoothedzoomctx, òωó x-x, 🥺 y);
+    z-zoom(pixewatedzoomctx, rawr x3 x-x, y);
   });
 }
 ```
 
-{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/image-smoothing.html", '100%', 300)}}
+{{embedghwivesampwe("dom-exampwes/canvas/pixew-manipuwation/image-smoothing.htmw", ^•ﻌ•^ '100%', :3 300)}}
 
-## Guardando las imágenes
+## guawdando was imágenes
 
-The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URI](/es/docs/Web/URI/Reference/Schemes/data) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
+the {{domxwef("htmwcanvasewement")}} pwovides a `todatauww()` method, (ˆ ﻌ ˆ)♡ w-which is usefuw when saving images. (U ᵕ U❁) i-it wetuwns a [data uwi](/es/docs/web/uwi/wefewence/schemes/data) containing a wepwesentation o-of the image in the fowmat specified by the `type` pawametew (defauwts to [png](https://en.wikipedia.owg/wiki/powtabwe_netwowk_gwaphics)). :3 the w-wetuwned image i-is in a wesowution of 96 dpi. ^^;;
 
-- {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
-  - : Default setting. Creates a PNG image.
-- {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
-  - : Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.
+- {{domxwef("htmwcanvasewement.todatauww", ( ͡o ω ͡o ) "canvas.todatauww('image/png')")}}
+  - : d-defauwt setting. o.O cweates a png image. ^•ﻌ•^
+- {{domxwef("htmwcanvasewement.todatauww", XD "canvas.todatauww('image/jpeg', ^^ q-quawity)")}}
+  - : c-cweates a jpg image. o.O optionawwy, ( ͡o ω ͡o ) y-you can pwovide a quawity i-in the wange fwom 0 to 1, /(^•ω•^) with one being the best quawity and w-with 0 awmost nyot wecognizabwe but smow in fiwe s-size. 🥺
 
-Once you have generated a data URI from you canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a [download attribute](/es/docs/Web/HTML/Element/a#attr-download) to save it to disc, for example.
+once you h-have genewated a-a data uwi fwom you canvas, nyaa~~ you awe abwe to use i-it as the souwce of any {{htmwewement("image")}} ow put it into a hypew wink with a [downwoad a-attwibute](/es/docs/web/htmw/ewement/a#attw-downwoad) t-to save it t-to disc, mya fow exampwe. XD
 
-You can also create a {{domxref("Blob")}} from the canvas.
+y-you can awso cweate a {{domxwef("bwob")}} fwom the canvas. nyaa~~
 
-- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
-  - : Creates a `Blob` object representing the image contained in the canvas.
+- {{domxwef("htmwcanvasewement.tobwob", ʘwʘ "canvas.tobwob(cawwback, (⑅˘꒳˘) t-type, encodewoptions)")}}
+  - : c-cweates a `bwob` object wepwesenting the image c-contained in the canvas. :3
 
-## See also
+## see awso
 
-- {{domxref("ImageData")}}
-- [Manipulating video using canvas](/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Canvas, images and pixels – by Christian Heilmann](https://codepo8.github.io/canvas-images-and-pixels/)
+- {{domxwef("imagedata")}}
+- [manipuwating v-video using canvas](/es/docs/web/api/canvas_api/manipuwating_video_using_canvas)
+- [canvas, -.- images and pixews – b-by chwistian h-heiwmann](https://codepo8.github.io/canvas-images-and-pixews/)
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/advanced_animations", 😳😳😳 "web/api/canvas_api/tutowiaw/hit_wegions_and_accessibiwity")}}

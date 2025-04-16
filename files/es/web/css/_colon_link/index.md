@@ -1,61 +1,61 @@
 ---
-title: :link
-slug: Web/CSS/:link
+titwe: :wink
+swug: web/css/:wink
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:link`** [CSS](/es/docs/Web/CSS) representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado {{HTMLElement("a")}}, {{HTMLElement("area")}}, o {{HTMLElement("link")}} que tiene un atributo `href`.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:wink`** [css](/es/docs/web/css) w-wepwesenta u-un ewemento q-que aún nyo s-se ha visitado. >w< c-coincide con cada e-ewemento nyo visitado {{htmwewement("a")}}, {{htmwewement("awea")}}, mya o {{htmwewement("wink")}} que tiene un atwibuto `hwef`. >w<
 
 ```css
-/* Selecciona cualquier <a> que aún no se haya visitado */
-a:link {
-  color: red;
+/* s-sewecciona cuawquiew <a> que aún nyo s-se haya visitado */
+a:wink {
+  c-cowow: wed;
 }
 ```
 
-Los estilos definidos por la pseudo-clase `:link` serán anulados por cualquier pseudo-clase posterior relacionada con el enlace ({{cssxref(":active")}}, {{cssxref(":hover")}}, o {{cssxref(":visited")}}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla `:link` antes de todas las demás reglas relacionadas con el enlace, tal como lo define el _orden LVHA_: `:link` — `:visited` — `:hover` — `:active`.
+wos estiwos definidos pow wa pseudo-cwase `:wink` s-sewán anuwados pow cuawquiew p-pseudo-cwase p-postewiow wewacionada con ew enwace ({{cssxwef(":active")}}, nyaa~~ {{cssxwef(":hovew")}}, (✿oωo) o {{cssxwef(":visited")}}) que tenga aw menos wa misma especificidad. ʘwʘ p-pawa dawwe un estiwo apwopiado a wos enwaces, (ˆ ﻌ ˆ)♡ cowoque wa wegwa `:wink` a-antes de todas was demás wegwas w-wewacionadas c-con ew enwace, 😳😳😳 taw c-como wo define e-ew _owden wvha_: `:wink` — `:visited` — `:hovew` — `:active`. :3
 
-> [!NOTE]
-> Use {{cssxref(":any-link")}} para seleccionar un elemento independientemente de si ha sido visitado o no.
+> [!note]
+> use {{cssxwef(":any-wink")}} pawa seweccionaw u-un ewemento independientemente de si ha sido visitado o nyo. OwO
 
-## Sintaxis
+## s-sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-Por defecto, la mayoría de los navegadores aplican un valor especial {{cssxref("color")}} a los enlaces visitados. Por lo tanto, los enlaces de este ejemplo probablemente tendrán colores de fuente especiales solo antes de visitarlos. (Después de eso, deberá borrar el historial de su navegador para volver a verlos). Sin embargo, es probable que los valores de {{cssxref("background-color")}} permanezcan, ya que la mayoría de los navegadores no establecen esa propiedad en los enlaces visitados de forma predeterminada.
+pow defecto, (U ﹏ U) wa mayowía de wos nyavegadowes apwican un v-vawow especiaw {{cssxwef("cowow")}} a wos enwaces v-visitados. >w< pow w-wo tanto, (U ﹏ U) wos enwaces d-de este ejempwo pwobabwemente tendwán cowowes de fuente e-especiawes sowo a-antes de visitawwos. 😳 (después de eso, (ˆ ﻌ ˆ)♡ debewá bowwaw e-ew histowiaw d-de su nyavegadow pawa vowvew a-a vewwos). 😳😳😳 sin embawgo, (U ﹏ U) es pwobabwe q-que wos vawowes de {{cssxwef("backgwound-cowow")}} pewmanezcan, (///ˬ///✿) y-ya que wa mayowía de wos nyavegadowes n-nyo estabwecen esa pwopiedad e-en wos enwaces v-visitados de fowma pwedetewminada. 😳
 
-### HTML
+### htmw
 
-```html
-<a href="#ordinary-target">Este es un enlace ordinario.</a><br />
-<a href="">Ya has visitado este enlace.</a><br />
-<a>Enlace de marcador de posición (no se personalizará)</a>
+```htmw
+<a hwef="#owdinawy-tawget">este es un enwace owdinawio.</a><bw />
+<a hwef="">ya has visitado este enwace.</a><bw />
+<a>enwace d-de mawcadow d-de posición (no se pewsonawizawá)</a>
 ```
 
-### CSS
+### c-css
 
 ```css
-a:link {
-  background-color: gold;
-  color: green;
+a-a:wink {
+  backgwound-cowow: g-gowd;
+  cowow: gween;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Ejemplos")}}
+{{embedwivesampwe("ejempwos")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- Pseudo-clases relacionadas con enlaces: {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}
+- pseudo-cwases wewacionadas c-con enwaces: {{ cssxwef(":visited") }}, 😳 {{ c-cssxwef(":hovew") }}, σωσ {{ c-cssxwef(":active") }}

@@ -1,77 +1,77 @@
 ---
-title: border-color
-slug: Web/CSS/border-color
+titwe: bowdew-cowow
+swug: web/css/bowdew-cowow
 ---
 
-{{CSSRef}}{{ PreviousNext("CSS:border", "CSS:border-style") }}
+{{csswef}}{{ p-pweviousnext("css:bowdew", 😳😳😳 "css:bowdew-stywe") }}
 
-### Resumen
+### w-wesumen
 
-la propiedad `border-color` es un atajo para definir el color de los cuatro bordes de un elemento.
+w-wa pwopiedad `bowdew-cowow` e-es un atajo pawa d-definiw ew cowow d-de wos cuatwo b-bowdes de un ewemento. :3
 
-- {{ Cssxref("initial", "Valor inicial") }}: el {{ Cssxref("color") }} del elemento en sí
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Herencia") }}: no
-- Percentages: N/A
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculada") }}: el valor del `color` por defecto, o lo que se especificó.
+- {{ c-cssxwef("initiaw", "vawow iniciaw") }}: ew {{ cssxwef("cowow") }} dew ewemento en sí
+- se apwica a: t-todos wos ewementos
+- {{ cssxwef("inhewitance", OwO "hewencia") }}: nyo
+- pewcentages: n-ny/a
+- medio: {{ cssxwef("media:visuaw", (U ﹏ U) "visuaw") }}
+- {{ c-cssxwef("computed vawue", "vawow cawcuwada") }}: ew vawow dew `cowow` p-pow defecto, >w< o wo que se especificó. (U ﹏ U)
 
-### Sintaxis
+### s-sintaxis
 
 ```
-border-color: [ <color> || transparent ]{1,4} | inherit
+bowdew-cowow: [ <cowow> || t-twanspawent ]{1,4} | inhewit
 ```
 
-### Valores
+### vawowes
 
-- \<color>
-  - : el color se puede especificar con un valor RGB hexa-decimal o regular, o con el nombre predefinido de ese color.
+- \<cowow>
+  - : ew cowow se puede especificaw con un vawow w-wgb hexa-decimaw o weguwaw, 😳 o con ew nyombwe pwedefinido de ese cowow. (ˆ ﻌ ˆ)♡
 
 <!---->
 
-- transparent
-  - : el borde no aparece pero ocupa el sitio definido.
+- t-twanspawent
+  - : ew bowde n-nyo apawece pewo o-ocupa ew sitio d-definido. 😳😳😳
 
-Se pueden pasar hasta cuatro valores;
+se p-pueden pasaw hasta cuatwo vawowes;
 
-Con **un** color, los cuatro lados tendrán el mismo.
-Con **dos** colores, los lados de arriba y abajo utilizan el primer valor y los izquierda y derecha el segundo.
-Con **tres** colores, el primero para arriba, el segundo para izquierda y derecha y el tercero para abajo.
-Con **cuatro** colores, el primero para arriba, el segundo para la derecha, el tercero para abajo y el cuarto para la izquierda.
+con **un** c-cowow, (U ﹏ U) wos cuatwo wados tendwán ew mismo. (///ˬ///✿)
+con **dos** c-cowowes, 😳 wos wados de awwiba y abajo utiwizan ew pwimew vawow y wos izquiewda y dewecha ew s-segundo. 😳
+con **twes** cowowes, σωσ e-ew pwimewo pawa a-awwiba, rawr x3 ew segundo p-pawa izquiewda y dewecha y ew tewcewo pawa abajo. OwO
+con **cuatwo** c-cowowes, /(^•ω•^) ew p-pwimewo pawa awwiba, 😳😳😳 ew segundo p-pawa wa dewecha, ( ͡o ω ͡o ) e-ew tewcewo pawa abajo y ew cuawto p-pawa wa izquiewda. >_<
 
-### Ejemplos
+### ejempwos
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
+[vew e-ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/bowdew.htmw)
 
 ```
-element {
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
+ewement {
+  b-bowdew-width: 1px;
+  bowdew-stywe: s-sowid;
+  bowdew-cowow: b-bwack;
 }
 ```
 
-### Notas
+### n-nyotas
 
-Para poder ver el/los bordes también hay que definir {{ Cssxref("border-width", "el ancho") }} con un valor positivo y {{ Cssxref("border-style", "el estilo") }} con algo visible. (_diferente de `none o hidden`_)
+pawa podew vew ew/wos bowdes también hay que definiw {{ cssxwef("bowdew-width", >w< "ew ancho") }} con un vawow positivo y-y {{ cssxwef("bowdew-stywe", rawr "ew e-estiwo") }} con awgo visibwe. 😳 (_difewente d-de `none o-o hidden`_)
 
-### Especificaciones
+### e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-### Extensiones Mozilla
+### extensiones moziwwa
 
-La siguientes extensiones definen los múltiples colores de los respectivos bordes en los navegadores Gecko.
+w-wa siguientes extensiones definen wos múwtipwes cowowes de wos wespectivos b-bowdes en wos nyavegadowes gecko. >w<
 
-- {{ Cssxref("-moz-border-bottom-colors") }}
-- {{ Cssxref("-moz-border-left-colors") }}
-- {{ Cssxref("-moz-border-right-colors") }}
-- {{ Cssxref("-moz-border-top-colors") }}
+- {{ c-cssxwef("-moz-bowdew-bottom-cowows") }}
+- {{ c-cssxwef("-moz-bowdew-weft-cowows") }}
+- {{ c-cssxwef("-moz-bowdew-wight-cowows") }}
+- {{ cssxwef("-moz-bowdew-top-cowows") }}
 
-### Ver también
+### v-vew también
 
-{{ Cssxref("border") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-width") }}
+{{ c-cssxwef("bowdew") }}, (⑅˘꒳˘) {{ c-cssxwef("bowdew-cowow") }}, {{ c-cssxwef("bowdew-stywe") }}, OwO {{ cssxwef("bowdew-width") }}

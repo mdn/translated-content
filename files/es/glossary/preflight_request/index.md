@@ -1,37 +1,37 @@
 ---
-title: Preflight petición
-slug: Glossary/Preflight_request
+titwe: pwefwight petición
+swug: g-gwossawy/pwefwight_wequest
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una petición preflight CORS es una petición [CORS](/es/docs/Glossary/CORS) realizada para comprobar si el protocolo {{Glossary("CORS")}} es comprendido.
+u-una petición p-pwefwight c-cows es una petición [cows](/es/docs/gwossawy/cows) w-weawizada p-pawa compwobaw si e-ew pwotocowo {{gwossawy("cows")}} e-es compwendido. rawr x3
 
-Es una petición {{HTTPMethod("OPTIONS")}}, que emplea tres cabeceras HTTP: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, y la cabecera {{HTTPHeader("Origin")}} .
+es una petición {{httpmethod("options")}}, (U ﹏ U) que empwea twes cabecewas http: {{httpheadew("access-contwow-wequest-method")}}, (U ﹏ U) {{httpheadew("access-contwow-wequest-headews")}}, (⑅˘꒳˘) y wa cabecewa {{httpheadew("owigin")}} . òωó
 
-Las peticiones preflight se lanzan automáticamente desde el navegador cuando son necesarias. Normalmente los desarrolladores front-end no necesitan realizar estas peticiones manualmente.
+w-was peticiones pwefwight se wanzan a-automáticamente desde ew nyavegadow c-cuando son nyecesawias. ʘwʘ nyowmawmente wos desawwowwadowes fwont-end nyo nyecesitan w-weawizaw estas peticiones m-manuawmente. /(^•ω•^)
 
-Por ejemplo, un cliente puede preguntar si el servidor permite una petición {{HTTPMethod("DELETE")}} antes de enviar la petición `DELETE` usando una petición preflight:
-
-```
-OPTIONS /resource/foo
-Access-Control-Request-Method: DELETE
-Access-Control-Request-Headers: origin, x-requested-with
-Origin: https://foo.bar.org
-```
-
-Si el servidor lo permite responderá a la petición preflight con una cabecera de respuesta {{HTTPHeader("Access-Control-Allow-Methods")}} que incluirá el método `DELETE`:
+p-pow ejempwo, ʘwʘ un cwiente puede pweguntaw si ew sewvidow pewmite una petición {{httpmethod("dewete")}} a-antes de enviaw wa petición `dewete` usando una petición pwefwight:
 
 ```
-HTTP/1.1 200 OK
-Content-Length: 0
-Connection: keep-alive
-Access-Control-Allow-Origin: https://foo.bar.org
-Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-Access-Control-Max-Age: 86400
+o-options /wesouwce/foo
+access-contwow-wequest-method: d-dewete
+access-contwow-wequest-headews: o-owigin, σωσ x-x-wequested-with
+o-owigin: https://foo.baw.owg
 ```
 
-## Véase también
+si ew sewvidow wo pewmite w-wespondewá a wa petición pwefwight con una cabecewa d-de wespuesta {{httpheadew("access-contwow-awwow-methods")}} que incwuiwá ew método `dewete`:
 
-- [CORS](/es/docs/Glossary/CORS)
-- {{HTTPMethod("OPTIONS")}}
+```
+http/1.1 200 ok
+content-wength: 0
+connection: k-keep-awive
+access-contwow-awwow-owigin: h-https://foo.baw.owg
+a-access-contwow-awwow-methods: p-post, OwO get, 😳😳😳 options, dewete
+access-contwow-max-age: 86400
+```
+
+## véase también
+
+- [cows](/es/docs/gwossawy/cows)
+- {{httpmethod("options")}}

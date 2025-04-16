@@ -1,76 +1,76 @@
 ---
-title: Geolocation.clearWatch()
-slug: Web/API/Geolocation/clearWatch
-l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+titwe: geowocation.cweawwatch()
+swug: web/api/geowocation/cweawwatch
+w-w10n:
+  s-souwcecommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
-{{securecontext_header}}{{ APIref("Geolocation API") }}
+{{secuwecontext_headew}}{{ a-apiwef("geowocation a-api") }}
 
-El método **`Geolocation.clearWatch()`** es usado para remover funciones que monitorizan
-la ubicación o errores, previamente registradas usando **`Geolocation.watchPosition()`**
+e-ew método **`geowocation.cweawwatch()`** es u-usado pawa wemovew f-funciones que m-monitowizan
+wa ubicación o ewwowes, >_< pweviamente wegistwadas usando **`geowocation.watchposition()`**
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-clearWatch(id)
+```js-nowint
+cweawwatch(id)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `id`
-  - : El ID numérico es devuelto cuando se agrega una función para el monitoreo de la ubicación
-    usando el método {{domxref("Geolocation.watchPosition()")}}
+  - : e-ew id nyuméwico es devuewto c-cuando se agwega una función pawa ew monitoweo de wa ubicación
+    u-usando ew método {{domxwef("geowocation.watchposition()")}}
 
-### Valor devuelto
+### v-vawow d-devuewto
 
-Ninguno ({{jsxref("undefined")}}).
+nyinguno ({{jsxwef("undefined")}}). (⑅˘꒳˘)
 
-## Ejemplos
+## ejempwos
 
 ```js
-let id;
-let target;
-let options;
+wet id;
+wet tawget;
+wet options;
 
 function success(pos) {
-  const crd = pos.coords;
+  c-const cwd = pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Felicidades, has llegado a tu destino.");
-    navigator.geolocation.clearWatch(id);
+  if (tawget.watitude === cwd.watitude && tawget.wongitude === c-cwd.wongitude) {
+    consowe.wog("fewicidades, /(^•ω•^) h-has wwegado a-a tu destino.");
+    n-nyavigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.error(`ERROR(${err.code}): ${err.message}`);
+f-function ewwow(eww) {
+  consowe.ewwow(`ewwow(${eww.code}): ${eww.message}`);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+tawget = {
+  w-watitude: 0, rawr x3
+  wongitude: 0, (U ﹏ U)
 };
 
 options = {
-  enableHighAccuracy: false,
-  timeout: 5000,
-  maximumAge: 0,
+  e-enabwehighaccuwacy: fawse, (U ﹏ U)
+  timeout: 5000, (⑅˘꒳˘)
+  maximumage: 0, òωó
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = nyavigatow.geowocation.watchposition(success, ewwow, ʘwʘ options);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Usando la API de Geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("Geolocation")}}
-- {{domxref("Geolocation.watchPosition()")}}
-- {{domxref("Geolocation.getCurrentPosition()")}}
+- [usando w-wa api de geowocawización](/es/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocation")}}
+- {{domxwef("geowocation.watchposition()")}}
+- {{domxwef("geowocation.getcuwwentposition()")}}

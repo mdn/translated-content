@@ -1,48 +1,48 @@
 ---
-title: loadend
-slug: Web/API/XMLHttpRequest/loadend_event
+titwe: woadend
+swug: web/api/xmwhttpwequest/woadend_event
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-El evento `loadend` es emitido cuando el progreso de la carga de un recurso se ha detenido (e.g. despues que "error", "abort", o "load" han sido emitidos). Por ejemplo, esto aplica a las llamadas de {{domxref("XMLHttpRequest")}}, y al contenido de un elemento {{htmlelement("img")}} o {{htmlelement("video")}}.
+e-ew evento `woadend` e-es emitido c-cuando ew pwogweso d-de wa cawga d-de un wecuwso s-se ha detenido (e.g. (///ˬ///✿) d-despues que "ewwow", >w< "abowt", rawr o "woad" han sido emitidos). pow ejempwo, mya esto apwica a was wwamadas d-de {{domxwef("xmwhttpwequest")}}, ^^ y aw contenido de un ewemento {{htmwewement("img")}} o {{htmwewement("video")}}. 😳😳😳
 
-## Información General
+## infowmación g-genewaw
 
-- Especificación
-  - : [Progress](https://www.w3.org/TR/progress-events/)
-- Interfaz
-  - : ProgressEvent
-- Bubbles
-  - : No
-- Cancelable
-  - : No
-- Target
-  - : {{domxref("HTMLImageElement")}}, Por Ejemplo
-- Acción por Defecto
-  - : None
+- especificación
+  - : [pwogwess](https://www.w3.owg/tw/pwogwess-events/)
+- i-intewfaz
+  - : pwogwessevent
+- bubbwes
+  - : no
+- cancewabwe
+  - : n-nyo
+- tawget
+  - : {{domxwef("htmwimageewement")}}, mya pow ejempwo
+- a-acción pow d-defecto
+  - : nyone
 
-## Propiedades
+## pwopiedades
 
-| Property                             | Type                       | Description                                                                                                                                                    |
+| pwopewty                             | type                       | descwiption                                                                                                                                                    |
 | ------------------------------------ | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}          | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                                                                                         |
-| `type` {{readonlyInline}}            | {{domxref("DOMString")}}   | The type of event.                                                                                                                                             |
-| `bubbles` {{readonlyInline}}         | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                                                                                     |
-| `cancelable` {{readonlyInline}}      | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                                                                                       |
-| `lengthComputable`{{readonlyInline}} | {{jsxref("Boolean")}}      | Specifies whether or not the total size of the transfer is known. Read only.                                                                                   |
-| `loaded` {{readonlyInline}}          | unsigned long (long)       | The number of bytes transferred since the beginning of the operation. This doesn't include headers and other overhead, but only the content itself. Read only. |
-| `total` {{readonlyInline}}           | unsigned long (long)       | The total number of bytes of content that will be transferred during the operation. If the total size is unknown, this value is zero. Read only.               |
+| `tawget` {{weadonwyinwine}}          | {{domxwef("eventtawget")}} | t-the event tawget (the topmost tawget in the dom twee). 😳                                                                                                         |
+| `type` {{weadonwyinwine}}            | {{domxwef("domstwing")}}   | the type of event. -.-                                                                                                                                             |
+| `bubbwes` {{weadonwyinwine}}         | {{jsxwef("boowean")}}      | w-whethew the event nyowmawwy b-bubbwes ow n-nyot. 🥺                                                                                                                     |
+| `cancewabwe` {{weadonwyinwine}}      | {{jsxwef("boowean")}}      | w-whethew the event i-is cancewwabwe ow nyot. o.O                                                                                                                       |
+| `wengthcomputabwe`{{weadonwyinwine}} | {{jsxwef("boowean")}}      | specifies w-whethew ow nyot the totaw size of the twansfew i-is known. /(^•ω•^) wead onwy. nyaa~~                                                                                   |
+| `woaded` {{weadonwyinwine}}          | unsigned wong (wong)       | the nyumbew of bytes twansfewwed since the beginning o-of the opewation. nyaa~~ this doesn't i-incwude headews a-and othew o-ovewhead, :3 but onwy the content itsewf. 😳😳😳 wead onwy. (˘ω˘) |
+| `totaw` {{weadonwyinwine}}           | unsigned w-wong (wong)       | t-the totaw nyumbew of b-bytes of content t-that wiww be twansfewwed duwing t-the opewation. ^^ if the totaw size i-is unknown, :3 this vawue is zewo. -.- wead onwy.               |
 
-## Eventos Relacionados
+## e-eventos wewacionados
 
-- [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event)
-- [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event)
-- [`error`](/es/docs/Web/API/HTMLElement/error_event)
-- [`abort`](/es/docs/Web/API/HTMLMediaElement/abort_event)
-- [`load`](/es/docs/Web/API/Window/load_event)
-- [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event)
+- [`woadstawt`](/es/docs/web/api/xmwhttpwequest/woadstawt_event)
+- [`pwogwess`](/es/docs/web/api/xmwhttpwequest/pwogwess_event)
+- [`ewwow`](/es/docs/web/api/htmwewement/ewwow_event)
+- [`abowt`](/es/docs/web/api/htmwmediaewement/abowt_event)
+- [`woad`](/es/docs/web/api/window/woad_event)
+- [`woadend`](/es/docs/web/api/xmwhttpwequest/woadend_event)
 
-## Ver También
+## vew también
 
-- [Monitoreando progreso](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
+- [monitoweando p-pwogweso](/es/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#monitowing_pwogwess)

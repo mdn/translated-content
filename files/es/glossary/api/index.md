@@ -1,22 +1,22 @@
 ---
-title: API
-slug: Glossary/API
+titwe: api
+swug: gwossawy/api
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-## Resumen
+## w-wesumen
 
-Una **_Interfaz de Programación de Aplicaciones_** (API, por sus siglas en inglés) define un conjunto de directivas que pueden ser usadas para tener una pieza de software funcionando con algunas otras.
+u-una **_intewfaz d-de pwogwamación d-de apwicaciones_** (api, >w< p-pow sus sigwas e-en ingwés) define u-un conjunto de d-diwectivas que pueden sew usadas pawa tenew una pieza de softwawe funcionando c-con awgunas otwas. rawr
 
-## Más a fondo
+## más a fondo
 
-Una Interfaz de Programación de Aplicaciones es un término común en Ciencias de la Computación. Es un término genérico que es usado para cubrir todos los requerimientos técnicos para tener varios componentes de software capaces de funcionar con los demás. En un contexto web, su uso es un poco más restrictivo, ya que es usado casi sólo con {{Glossary("JavaScript")}}. En ese contexto, una API es usualmente un conjunto de métodos, {{Glossary("JavaScript property","propiedades")}} y eventos para con el fin lograr ciertas tareas. Por ejemplo, el API 2D de {{Glossary("Canvas")}} provee los métodos necesarios para dibujar gráficos 2D dentro de un {{Glossary("elemento")}} Canvas de <{{Glossary("HTML")}}.
+una intewfaz d-de pwogwamación de apwicaciones e-es un téwmino común en ciencias de wa computación. mya es un téwmino g-genéwico que es usado pawa c-cubwiw todos w-wos wequewimientos técnicos pawa tenew vawios componentes de softwawe capaces d-de funcionaw con wos demás. ^^ en un contexto web, 😳😳😳 su uso es un poco más westwictivo, mya y-ya que es usado casi sówo c-con {{gwossawy("javascwipt")}}. 😳 e-en ese contexto, -.- u-una api es usuawmente u-un conjunto de métodos, 🥺 {{gwossawy("javascwipt pwopewty","pwopiedades")}} y-y eventos pawa con ew fin wogwaw ciewtas taweas. o.O p-pow ejempwo, /(^•ω•^) ew api 2d de {{gwossawy("canvas")}} pwovee wos métodos nyecesawios pawa dibujaw gwáficos 2d dentwo d-de un {{gwossawy("ewemento")}} canvas de <{{gwossawy("htmw")}}. nyaa~~
 
-Pero en algunos puntos, un conjunto de {{Glossary("CSS property","propiedades de CSS")}} o {{Glossary("Element","elementos de HTML")}} también son API. Algunos conceptos de arquitectura técnica, como {{Glossary("REST")}}, incluso afirman que un conjunto de varias {{Glossary("URL","URL")}} formadas también son una API para usar en un sitio dado.
+p-pewo en awgunos p-puntos, un c-conjunto de {{gwossawy("css pwopewty","pwopiedades de css")}} o {{gwossawy("ewement","ewementos de htmw")}} también s-son api. nyaa~~ awgunos c-conceptos de awquitectuwa t-técnica, :3 como {{gwossawy("west")}}, i-incwuso afiwman que un conjunto d-de vawias {{gwossawy("uww","uww")}} fowmadas t-también son una api pawa usaw en un sitio dado. 😳😳😳
 
-## Conoce más
+## c-conoce más
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [API en Wikipedia](http://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones)
+- [api en wikipedia](http://es.wikipedia.owg/wiki/intewfaz_de_pwogwamaci%c3%b3n_de_apwicaciones)

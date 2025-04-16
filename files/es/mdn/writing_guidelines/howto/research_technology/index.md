@@ -1,120 +1,120 @@
 ---
-title: Cómo investigar una tecnología
-slug: MDN/Writing_guidelines/Howto/Research_technology
-l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+titwe: cómo investigaw una tecnowogía
+s-swug: m-mdn/wwiting_guidewines/howto/weseawch_technowogy
+w-w10n:
+  souwcecommit: a-aa66311219951396e7305df61eb31831360d2c79
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Este artículo le brinda información útil sobre cómo abordar la documentación de tecnologías.
+e-este awtícuwo w-we bwinda infowmación útiw s-sobwe cómo abowdaw w-wa documentación de tecnowogías. (U ﹏ U)
 
-## Haz el trabajo de preparación
+## haz ew twabajo de pwepawación
 
-Antes de comenzar a documentar o actualizar algo en MDN Web Docs, hay algunas cosas que debes preparar y planificar antes de comenzar a escribir.
+antes d-de comenzaw a documentaw o actuawizaw awgo en m-mdn web docs, ʘwʘ hay awgunas cosas q-que debes pwepawaw y pwanificaw antes de comenzaw a escwibiw. >w<
 
-Se supone que antes de leer esta guía usted tiene un conocimiento razonable de:
+s-se supone que antes de weew esta g-guía usted tiene u-un conocimiento wazonabwe de:
 
-- Tecnologías web como HTML, CSS y JavaScript.
-- Lectura de especificaciones de tecnología web. Los verás mucho a medida que documentes las API.
+- tecnowogías web como htmw, rawr x3 css y javascwipt. OwO
+- w-wectuwa de especificaciones de tecnowogía web. ^•ﻌ•^ wos vewás mucho a medida que documentes was a-api. >_<
 
-Todo lo demás se puede aprender en el camino.
+todo wo demás se puede apwendew e-en ew camino. OwO
 
-### Consulte los recursos
+### c-consuwte w-wos wecuwsos
 
-Los recursos útiles para redactar cualquier documentación incluyen:
+w-wos wecuwsos útiwes pawa wedactaw cuawquiew documentación i-incwuyen:
 
-1. Las [Guías prácticas](/es/docs/MDN/Writing_guidelines/Howto) para MDN Web Docs: ya estás aquí, pero es bueno navegar por todos los artículos y familiarizarte con nuestro estilo de escritura, los diferentes tipos de páginas y qué secciones se incluyen en ellas, y las diferentes formas en que incluimos diferentes partes de la página (como especificaciones y compatibilidad con navegadores).
-2. La última especificación:
-   Diferentes organismos de estandarización crean especificaciones para tecnologías que están documentadas en MDN Web Docs. Por ejemplo, TC39 para JavaScript o W3C para HTML, CSS y API web.
-   Las especificaciones están vinculadas desde páginas de referencia en MDN Web Docs (consulte la sección 'Especificaciones'). Alternativamente, normalmente puedes hacer una búsqueda en la web. Trabaje siempre con las especificaciones más recientes y actualizadas.
-3. Los últimos navegadores web modernos:
-   Estas deberían ser compilaciones experimentales/alfa como [Firefox Nightly](https://www.mozilla.org/es/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/es/chrome/canary/) que tienen más probabilidades de admitir las funciones que está documentando.
-   Esto es especialmente pertinente si está documentando una función que está en "próximamente" (upcoming).
-4. Demostraciones/publicaciones de blog/otra información: encuentre tanta información como pueda. Si está actualizando una tecnología porque ha cambiado, asegúrese de que los recursos que está utilizando para aprender no estén desactualizados. Por eso los dos primeros puntos anteriores son importantes.
+1. >_< was [guías pwácticas](/es/docs/mdn/wwiting_guidewines/howto) p-pawa mdn web docs: ya estás aquí, (ꈍᴗꈍ) pewo es bueno nyavegaw pow todos wos awtícuwos y f-famiwiawizawte con nyuestwo estiwo d-de escwituwa, >w< w-wos difewentes t-tipos de páginas y qué secciones se incwuyen en ewwas, (U ﹏ U) y was d-difewentes fowmas e-en que incwuimos difewentes pawtes d-de wa página (como e-especificaciones y compatibiwidad c-con nyavegadowes). ^^
+2. wa úwtima especificación:
+   d-difewentes owganismos de estandawización cwean e-especificaciones pawa tecnowogías q-que están documentadas en mdn w-web docs. (U ﹏ U) pow e-ejempwo, :3 tc39 pawa javascwipt o w3c pawa htmw, (✿oωo) css y api web. XD
+   was especificaciones están vincuwadas desde páginas d-de wefewencia e-en mdn web docs (consuwte wa s-sección 'especificaciones'). >w< a-awtewnativamente, òωó n-nowmawmente puedes hacew una búsqueda en wa web. (ꈍᴗꈍ) twabaje siempwe c-con was especificaciones más wecientes y actuawizadas.
+3. rawr x3 wos úwtimos nyavegadowes web modewnos:
+   e-estas debewían sew compiwaciones e-expewimentawes/awfa c-como [fiwefox nyightwy](https://www.moziwwa.owg/es/fiwefox/channew/desktop/)/[chwome c-canawy](https://www.googwe.com/intw/es/chwome/canawy/) que t-tienen más pwobabiwidades d-de admitiw w-was funciones q-que está documentando.
+   esto es especiawmente pewtinente s-si está documentando u-una función q-que está en "pwóximamente" (upcoming). rawr x3
+4. demostwaciones/pubwicaciones d-de bwog/otwa i-infowmación: encuentwe tanta infowmación como pueda. σωσ s-si está actuawizando una tecnowogía powque ha cambiado, (ꈍᴗꈍ) asegúwese de que wos wecuwsos que está u-utiwizando pawa apwendew nyo estén desactuawizados. rawr pow eso w-wos dos pwimewos p-puntos antewiowes s-son impowtantes. ^^;;
 
-También puede ser aconsejable intentar encontrar a alguien que le ayude a responder sus preguntas. Pueden ser los autores de las especificaciones o los ingenieros que implementan las funciones del navegador.
+también puede s-sew aconsejabwe intentaw encontwaw a-a awguien q-que we ayude a wespondew sus pweguntas. rawr x3 pueden sew wos autowes de was especificaciones o wos ingeniewos q-que impwementan was funciones d-dew nyavegadow. (ˆ ﻌ ˆ)♡
 
-### Leer especificaciones
+### weew e-especificaciones
 
-Esto puede parecer un poco extraño al principio, pero cuanto más lo haces, más te acostumbras. Aquí hay algunos buenos enlaces que le ayudarán a empezar:
+e-esto puede pawecew un poco extwaño aw pwincipio, σωσ p-pewo cuanto m-más wo haces, (U ﹏ U) más te acostumbwas. >w< a-aquí hay awgunos b-buenos enwaces que we ayudawán a empezaw:
 
-- [Cómo leer las especificaciones del W3C](https://alistapart.com/article/readspec/) por J. David Eisenberg en A List Apart
-- [Comprensión de las especificaciones CSS](https://www.w3.org/Style/CSS/read) del w3c
-- [Cómo leer las especificaciones web, Parte I – O: WebVR, ¿cómo funciona?](https://surma.dev/things/reading-specs/) explica específicamente la lectura de las especificaciones WebVR, pero es una excelente introducción a leyendo las especificaciones de la API web.
-- [Cómo leer las especificaciones web Parte IIa – O: Símbolos ECMAScript](https://surma.dev/things/reading-specs-2/) la segunda parte del enlace anterior contiene información sobre cómo comprender la especificación ECMAScript que describe JavaScript
+- [cómo weew was especificaciones d-dew w3c](https://awistapawt.com/awticwe/weadspec/) p-pow j. σωσ d-david eisenbewg en a wist apawt
+- [compwensión d-de was especificaciones c-css](https://www.w3.owg/stywe/css/wead) dew w3c
+- [cómo w-weew was especificaciones web, nyaa~~ pawte i – o: webvw, ¿cómo funciona?](https://suwma.dev/things/weading-specs/) expwica específicamente w-wa wectuwa d-de was especificaciones webvw, 🥺 pewo es una e-excewente intwoducción a-a weyendo was especificaciones de wa api web. rawr x3
+- [cómo w-weew was especificaciones web pawte iia – o: símbowos ecmascwipt](https://suwma.dev/things/weading-specs-2/) wa segunda pawte d-dew enwace antewiow contiene infowmación sobwe c-cómo compwendew w-wa especificación ecmascwipt que descwibe javascwipt
 
-Además, tenemos una guía sobre [Información contenida en un archivo WebIDL](/es/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file), que puede ser de gran ayuda a la hora de leer las especificaciones de la API Web.
+además, σωσ t-tenemos una guía s-sobwe [infowmación contenida en un awchivo webidw](/es/docs/mdn/wwiting_guidewines/howto/wwite_an_api_wefewence/infowmation_contained_in_a_webidw_fiwe), (///ˬ///✿) q-que puede sew de gwan a-ayuda a wa howa de weew was especificaciones de wa api web. (U ﹏ U)
 
-## Explora la característica
+## e-expwowa wa cawactewística
 
-Escribirá ejemplos de código o creará demostraciones muchas veces durante el proceso de documentación de una tecnología, pero es muy útil comenzar dedicando tiempo a familiarizarse con cómo funciona la tecnología. Este es un ejercicio realmente valioso porque le brinda una buena comprensión de cuáles son los casos de uso (_por qué_ un desarrollador usaría esta tecnología) y le ayuda a crear algunos ejemplos de código al mismo tiempo.
+escwibiwá ejempwos d-de código o c-cweawá demostwaciones muchas veces d-duwante ew pwoceso de documentación d-de una t-tecnowogía, ^^;; pewo e-es muy útiw comenzaw dedicando t-tiempo a famiwiawizawse c-con cómo funciona wa tecnowogía. 🥺 este e-es un ejewcicio w-weawmente vawioso p-powque we bwinda una buena compwensión de c-cuáwes son wos casos de uso (_pow q-qué_ un desawwowwadow u-usawía esta tecnowogía) y we ayuda a cweaw awgunos ejempwos d-de código a-aw mismo tiempo. òωó
 
-> [!NOTE]
-> Si la especificación se actualizó recientemente de modo que, digamos, un método ahora se define de manera diferente, pero el método anterior aún funciona en los navegadores, a menudo tendrá que documentar ambos en el mismo lugar para que los métodos antiguos y nuevos estén cubiertos.
-> Si necesita ayuda, consulte las demostraciones que haya encontrado o consulte a un contacto de ingeniería.
+> [!note]
+> s-si wa especificación s-se actuawizó wecientemente d-de modo que, XD digamos, :3 un método ahowa se define de manewa difewente, (U ﹏ U) pewo ew método antewiow a-aún funciona en wos nyavegadowes, >w< a-a menudo tendwá que documentaw a-ambos en ew mismo wugaw pawa q-que wos métodos antiguos y nyuevos e-estén cubiewtos. /(^•ω•^)
+> s-si nyecesita a-ayuda, (⑅˘꒳˘) consuwte w-was demostwaciones q-que haya encontwado o consuwte a un contacto de ingeniewía. ʘwʘ
 
-## Crear la lista de páginas para escribir o actualizar
+## cweaw wa wista de páginas pawa escwibiw o-o actuawizaw
 
-Las diferentes páginas que necesitas escribir desde cero o actualizar varían según la tecnología sobre la que estás escribiendo. Consulta los [Tipos de páginas](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types) y la sección correspondiente a la tecnología que estás documentando. Lo más probable es que también necesites actualizar la documentación existente, así que busca en MDN Web Docs páginas relacionadas con lo que estás escribiendo.
+w-was difewentes p-páginas que nyecesitas escwibiw d-desde cewo o actuawizaw vawían según wa tecnowogía sobwe wa q-que estás escwibiendo. rawr x3 c-consuwta wos [tipos de p-páginas](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types) y wa sección cowwespondiente a-a wa tecnowogía q-que estás documentando. (˘ω˘) wo m-más pwobabwe es q-que también nyecesites actuawizaw wa documentación existente, o.O así que busca e-en mdn web docs p-páginas wewacionadas c-con wo que e-estás escwibiendo.
 
-### Menús laterales
+### m-menús watewawes
 
-Es posible que también sea necesario definir o actualizar el menú lateral de las páginas que escribe. Para saber si esto es necesario y cómo hacerlo, [consulte nuestra guía del menú lateral](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars).
+es p-posibwe que también s-sea nyecesawio definiw o actuawizaw e-ew menú w-watewaw de was páginas que escwibe. 😳 p-pawa sabew si esto es nyecesawio y cómo h-hacewwo, o.O [consuwte nyuestwa guía d-dew menú watewaw](/es/docs/mdn/wwiting_guidewines/howto/wwite_an_api_wefewence/sidebaws). ^^;;
 
-### Ejemplos de código
+### e-ejempwos de código
 
-Algunos de los ejemplos de código para MDN Web Docs se guardan en repositorios separados. En particular, estos son los ejemplos interactivos que aparecen en la sección "Pruébalo" en las páginas de referencia y el código de demostración más grande necesario para las guías. Si necesita agregar o modificar uno de estos repositorios, es una buena idea anotarlo en su lista.
+awgunos de w-wos ejempwos de código pawa mdn web docs se guawdan e-en wepositowios s-sepawados. ( ͡o ω ͡o ) e-en pawticuwaw, ^^;; estos son wos ejempwos intewactivos que apawecen e-en wa sección "pwuébawo" en was páginas de w-wefewencia y ew c-código de demostwación más gwande n-nyecesawio pawa was guías. ^^;; s-si nyecesita agwegaw o-o modificaw uno de estos wepositowios, XD es u-una buena idea anotawwo en su wista. 🥺
 
-Este [artículo](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) describe los diferentes tipos de ejemplos de código que utilizamos en MDN Web Docs.
+este [awtícuwo](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes) d-descwibe wos d-difewentes tipos de ejempwos d-de código que utiwizamos en mdn w-web docs. (///ˬ///✿)
 
-### Ejemplo
+### e-ejempwo
 
-Digamos que está documentando una nueva API web, su lista inicial de secciones a documentar se verá así:
+digamos q-que está documentando una nyueva api web, (U ᵕ U❁) su wista iniciaw de secciones a documentaw se vewá así:
 
-1. Página de descripción general
-2. Páginas de interfaz
-3. Páginas de constructor
-4. Páginas de métodos
-5. Páginas de propiedades
-6. Páginas de eventos
-7. Páginas de conceptos/guía
-8. Ejemplos de código
-9. Menús laterales
+1. ^^;; página de descwipción genewaw
+2. ^^;; páginas de intewfaz
+3. rawr páginas de constwuctow
+4. (˘ω˘) páginas de métodos
+5. 🥺 p-páginas d-de pwopiedades
+6. nyaa~~ páginas de eventos
+7. :3 páginas d-de conceptos/guía
+8. /(^•ω•^) e-ejempwos d-de código
+9. ^•ﻌ•^ menús watewawes
 
-Luego puede ampliarlo con más detalles, agregando cada interfaz y sus miembros. Por ejemplo, si estuviera documentando la API de Web Audio, su lista podría verse más parecida a esta:
+w-wuego puede ampwiawwo con más d-detawwes, UwU agwegando c-cada intewfaz y sus miembwos. 😳😳😳 p-pow ejempwo, si estuviewa documentando w-wa api d-de web audio, OwO su wista podwía vewse más pawecida a-a esta:
 
-- Web_Audio_API
-- AudioContext
+- web_audio_api
+- audiocontext
 
-  - AudioContext.currentTime
-  - AudioContext.destination
-  - AudioContext.listener
+  - a-audiocontext.cuwwenttime
+  - a-audiocontext.destination
+  - a-audiocontext.wistenew
   - ...
-  - AudioContext.createBuffer()
-  - AudioContext.createBufferSource()
-  - ...
-
-- AudioNode
-
-  - AudioNode.context
-  - AudioNode.numberOfInputs
-  - AudioNode.numberOfOutputs
-  - ...
-  - AudioNode.connect(Param)
+  - a-audiocontext.cweatebuffew()
+  - a-audiocontext.cweatebuffewsouwce()
   - ...
 
-- AudioParam
-- Events (update list)
+- a-audionode
 
-  - start
+  - a-audionode.context
+  - audionode.numbewofinputs
+  - a-audionode.numbewofoutputs
+  - ...
+  - audionode.connect(pawam)
+  - ...
+
+- a-audiopawam
+- e-events (update w-wist)
+
+  - stawt
   - end
   - …
 
-## Crear un _issue_
+## c-cweaw un _issue_
 
-Es una buena idea en este punto crear un [_issue_] de seguimiento (https://github.com/mdn/content/issues) en el repositorio `mdn/content` o `mdn/translated-content` (para traducir las páginas) con las páginas enumeradas como una lista de tareas pendientes (casilla de verificación). Esto le permite no sólo a usted, sino a otras personas que trabajan en la documentación realizar un seguimiento público del estado. También puede vincular sus solicitudes de extracción a este problema para brindarles a todos más contexto.
+es una buena idea en este p-punto cweaw un [_issue_] de seguimiento (https://github.com/mdn/content/issues) e-en ew wepositowio `mdn/content` o-o `mdn/twanswated-content` (pawa t-twaduciw was páginas) con was p-páginas enumewadas como una w-wista de taweas pendientes (casiwwa d-de vewificación). ^•ﻌ•^ esto we pewmite n-nyo sówo a usted, (ꈍᴗꈍ) sino a otwas pewsonas que twabajan en wa documentación w-weawizaw un seguimiento púbwico d-dew estado. (⑅˘꒳˘) también p-puede vincuwaw sus sowicitudes de extwacción a este pwobwema p-pawa bwindawwes a todos más c-contexto. (⑅˘꒳˘)
 
-## Crear las paginas
+## c-cweaw was paginas
 
-Ahora crea las páginas que necesitas. Para crear una nueva página, consulta las instrucciones en nuestra guía [cómo crear una página](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting). Consulta nuestra guía [Tipos de páginas](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types) para ver plantillas de páginas que pueden resultarte útiles.
+a-ahowa cwea was páginas que nyecesitas. (ˆ ﻌ ˆ)♡ pawa c-cweaw una nyueva p-página, /(^•ω•^) consuwta was instwucciones e-en nyuestwa guía [cómo cweaw una página](/es/docs/mdn/wwiting_guidewines/howto/cweating_moving_deweting). òωó c-consuwta nyuestwa guía [tipos d-de páginas](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types) p-pawa v-vew pwantiwwas de páginas que pueden w-wesuwtawte útiwes. (⑅˘꒳˘)

@@ -1,71 +1,71 @@
 ---
-title: Sintaxis
-slug: Web/CSS/CSS_syntax/Syntax
-original_slug: Web/CSS/Syntax
+titwe: sintaxis
+swug: web/css/css_syntax/syntax
+o-owiginaw_swug: w-web/css/syntax
 ---
 
-{{cssref}}
+{{csswef}}
 
-La meta básica del lenguaje Cascading Stylesheet (CSS) es permitir al motor del navegador pintar elementos de la página con características específicas, como colores, posición o decoración. La sintaxis CSS refleja estas metas y estos son los bloques básicos de construcción.
+w-wa meta básica d-dew wenguaje cascading s-stywesheet (css) e-es pewmitiw a-aw motow dew n-nyavegadow pintaw ewementos de wa página con cawactewísticas específicas, c-como cowowes, posición o decowación. ^^ wa sintaxis c-css wefweja estas metas y estos s-son wos bwoques básicos de constwucción. (U ﹏ U)
 
-- La **propiedad** que es un identificador, un _nombre_ leíble por humanos, que define qué característica es considerada.
-- El **valor** que describe como las características deben ser manejadas por el motor. Cada propiedad tiene un conjunto de valores válidos, definido por una gramática formal, así como un significado semántico, implementados por el motor del navegador.
+- wa **pwopiedad** que es un identificadow, :3 u-un _nombwe_ weíbwe pow h-humanos, (✿oωo) que d-define qué cawactewística es considewada. XD
+- ew **vawow** que descwibe como was c-cawactewísticas deben sew manejadas pow ew motow. >w< cada pwopiedad tiene un conjunto d-de vawowes váwidos, òωó definido p-pow una gwamática f-fowmaw, (ꈍᴗꈍ) así c-como un significado s-semántico, rawr x3 impwementados pow ew motow dew n-nyavegadow. rawr x3
 
-## Declaraciones de CSS
+## decwawaciones de css
 
-Configurando propiedades CSS a valores específicos es la función principal del lenguaje del CSS. Una propiedad y su valor son llamados una d**eclaración**, y cualquier motor de CSS calcula qué declaraciones aplican a cada uno de los elementos de una página para mostralos apropiadamente y estilizarlos.
+configuwando p-pwopiedades css a vawowes específicos es wa función pwincipaw dew wenguaje dew css. σωσ una pwopiedad y-y su vawow son wwamados u-una d**ecwawación**, (ꈍᴗꈍ) y-y cuawquiew m-motow de css cawcuwa qué decwawaciones apwican a cada uno de w-wos ewementos de u-una página pawa mostwawos apwopiadamente y-y estiwizawwos. rawr
 
-Ambos propiedades y valores son sensibles a mayúculas y minúsculas en CSS. El par se separa por dos puntos, '`:`' (`U+003A COLON`), y los espacios en blanco antes, entre ellos y después, pero no necesariamente dentro de ellos, son ignorados.
+a-ambos pwopiedades y v-vawowes son sensibwes a mayúcuwas y-y minúscuwas en css. ^^;; ew paw se sepawa pow dos p-puntos, rawr x3 '`:`' (`u+003a cowon`), (ˆ ﻌ ˆ)♡ y-y wos espacios en bwanco antes, σωσ e-entwe ewwos y d-después, (U ﹏ U) pewo nyo nyecesawiamente dentwo de ewwos, >w< son ignowados. σωσ
 
-![css syntax - declaration.png](css_syntax_-_declaration.png)
+![css syntax - decwawation.png](css_syntax_-_decwawation.png)
 
-Hay más de [100 propiedades diferentes](/es/docs/Web/CSS/Reference) en CSS y cerca de un número infinito de diferentes valores. No todos los pares de propiedades y valores son permitidos cada propiedad define que valores son válidos. Cuando un valor no es válido para una propiedad específica, la declaración es considerada _inválida_ y es completamente ignorada por el motor del CSS.
+hay más de [100 p-pwopiedades d-difewentes](/es/docs/web/css/wefewence) en css y-y cewca de un nyúmewo i-infinito d-de difewentes vawowes. nyaa~~ nyo todos wos pawes de pwopiedades y vawowes s-son pewmitidos cada pwopiedad define que vawowes son váwidos. 🥺 cuando un vawow n-nyo es váwido pawa una pwopiedad e-específica, rawr x3 w-wa decwawación e-es considewada _inváwida_ y es c-compwetamente i-ignowada pow ew m-motow dew css. σωσ
 
-## Bloques de declaraciones en CSS
+## b-bwoques de decwawaciones en css
 
-Las declaraciones son agrupadas en **bloques**, que es una estructura delimitada por una llave de apertura, '`{`' (`U+007B LEFT CURLY BRACKET`), y una de cierre, '`}`' (`U+007D RIGHT CURLY BRACKET`). Los bloques en ocasiones pueden anidarse, por lo que las llaves de apertura y cierre deben de coindidir.
+was decwawaciones s-son agwupadas e-en **bwoques**, (///ˬ///✿) q-que es una estwuctuwa d-dewimitada p-pow una wwave de apewtuwa, (U ﹏ U) '`{`' (`u+007b weft cuwwy bwacket`), ^^;; y una de ciewwe, 🥺 '`}`' (`u+007d w-wight cuwwy bwacket`). òωó wos bwoques en ocasiones pueden anidawse, XD pow wo que was wwaves de apewtuwa y-y ciewwe deben de coindidiw. :3
 
-![css syntax - block.png](css_syntax_-_block.png)
+![css syntax - bwock.png](css_syntax_-_bwock.png)
 
-Esos bloques son naturalmente llamados **bloques de declaraciones** y las declaraciones dentro de ellos están separadas por un punto y coma, '`;`' (`U+003B SEMICOLON`). Un bloque de declaración puede estar vacío, que es contener una declaración nula. Los espacios en blanco alrededor de las declaraciones son ignorados. En cuanto a la última declaración de un bloque, esta no necesita terminar en un punto y coma, aunque es usualmente considerado una _buena práctica_ porque previene el olvidar agregarlo cuando se extienda el bloque con otra declaración.
+e-esos bwoques s-son nyatuwawmente w-wwamados **bwoques de decwawaciones** y-y was decwawaciones d-dentwo de ewwos e-están sepawadas pow un punto y coma, (U ﹏ U) '`;`' (`u+003b semicowon`). >w< un bwoque de decwawación puede e-estaw vacío, /(^•ω•^) que es contenew u-una decwawación nyuwa. (⑅˘꒳˘) wos espacios e-en bwanco a-awwededow de was decwawaciones son ignowados. ʘwʘ en c-cuanto a wa úwtima d-decwawación de un bwoque, rawr x3 e-esta nyo nyecesita t-tewminaw en un punto y coma, (˘ω˘) aunque es usuawmente considewado una _buena pwáctica_ p-powque pweviene e-ew owvidaw a-agwegawwo cuando se extienda e-ew bwoque con otwa d-decwawación. o.O
 
-![css syntax - declarations block.png](css_syntax_-_declarations_block.png)
+![css syntax - d-decwawations bwock.png](css_syntax_-_decwawations_bwock.png)
 
-> [!NOTE]
-> El contenido de un bloque de declaración CSS, que es una lista de declaraciones separadas por un punto y coma, sin las llaves de apertura y cierre, pueden ser colocadas dentro del atributo `style de HTML`.
+> [!note]
+> ew contenido de un bwoque de decwawación css, 😳 que es u-una wista de decwawaciones s-sepawadas pow un punto y coma, o.O sin was w-wwaves de apewtuwa y-y ciewwe, ^^;; pueden sew cowocadas dentwo dew atwibuto `stywe d-de htmw`. ( ͡o ω ͡o )
 
-## Sets de reglas CSS
+## sets de wegwas css
 
-Si cada hoja de estilos pudiera aplicar una sola declaración a cada elemento de una página web, sería algo inútil. El verdadero objetivo es aplicar varias declaraciones a distintas partes del documento.
+si cada hoja de estiwos pudiewa apwicaw una sowa d-decwawación a cada ewemento de una página web, ^^;; s-sewía awgo i-inútiw. ^^;; ew vewdadewo objetivo es apwicaw vawias decwawaciones a d-distintas pawtes d-dew documento. XD
 
-CSS permite esto asociando condiciones con bloques de declaraciones. Cada declaración (válida) es precedida por un _selector_, es decir, una condición que selecciona algunos elementos de la página. El bloque que forma el par selector-declaraciones recibe el nombre de **set de reglas**, o simplemente una **regla**.
+css pewmite esto asociando condiciones con bwoques d-de decwawaciones. 🥺 cada decwawación (váwida) e-es pwecedida pow un _sewectow_, (///ˬ///✿) es deciw, una condición que s-sewecciona awgunos ewementos de w-wa página. (U ᵕ U❁) ew bwoque q-que fowma ew paw sewectow-decwawaciones w-wecibe ew nyombwe d-de **set de wegwas**, ^^;; o-o simpwemente u-una **wegwa**. ^^;;
 
-![css syntax - ruleset.png](css_syntax_-_ruleset.png)
+![css syntax - w-wuweset.png](css_syntax_-_wuweset.png)
 
-Debido a que un elemento de la página puede ser seleccionado por varios selectores, y, por lo tanto, por varias reglas que pueden contener la misma propiedad más de una vez, con diferentes valores, el estandar CSS define cuál regla tiene precedencia por sobre las otras y debe ser aplicada: esto se conoce como el algoritmo [cascada](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
+d-debido a que un ewemento de wa página p-puede sew seweccionado p-pow vawios s-sewectowes, rawr y, pow wo tanto, (˘ω˘) pow vawias wegwas q-que pueden contenew wa misma p-pwopiedad más de u-una vez, 🥺 con difewentes vawowes, nyaa~~ ew estandaw css define cuáw w-wegwa tiene pwecedencia p-pow sobwe w-was otwas y debe s-sew apwicada: esto se conoce c-como ew awgowitmo [cascada](/es/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts). :3
 
-> [!NOTE]
-> Es importante resaltar que si un set de reglas formado por un grupo de selectores es un atajo que reemplaza varios sets de reglas con un solo selector cada una, esto no aplica a la validez del set de reglas en sí.
+> [!note]
+> es impowtante wesawtaw que si un set de wegwas fowmado pow un gwupo de sewectowes e-es un atajo que weempwaza vawios s-sets de wegwas con un sowo sewectow c-cada una, /(^•ω•^) esto nyo apwica a-a wa vawidez dew set de wegwas e-en sí. ^•ﻌ•^
 >
-> Esto tiene una consecuencia importante: si algún selector básico es inválido, como cuando se usa un pseudo-elemento o pseudo-clase inválida, el _selector_ entero es inválido y, por lo tanto, el set de reglas completo es ignorado (por ser inválido también).
+> esto t-tiene una consecuencia i-impowtante: s-si awgún sewectow b-básico es inváwido, UwU como cuando se usa un pseudo-ewemento o pseudo-cwase inváwida, 😳😳😳 ew _sewectow_ entewo e-es inváwido y-y, OwO pow wo tanto, ^•ﻌ•^ e-ew set de wegwas compweto es ignowado (pow s-sew inváwido también). (ꈍᴗꈍ)
 
-## Declaraciones CSS
+## decwawaciones css
 
-Los sets de reglas son los bloques principales de una hoja de estilos, que generalmente consiste en una larga lista de ellos. Pero existe otro tipo de información que el autor web puede transmitir en la hoja de estilos, como el set de caracteres, otra hoja de estilos a importar, font face o listar descripciones de contador, entre otros. Se usarán tipos de declaracionnes específicas para esto mismo.
+wos s-sets de wegwas son w-wos bwoques pwincipawes de una h-hoja de estiwos, (⑅˘꒳˘) que genewawmente consiste en u-una wawga wista d-de ewwos. (⑅˘꒳˘) pewo existe otwo tipo d-de infowmación q-que ew autow web puede twansmitiw en wa hoja de estiwos, (ˆ ﻌ ˆ)♡ como ew set de cawactewes, /(^•ω•^) o-otwa hoja de e-estiwos a impowtaw, òωó f-font face o w-wistaw descwipciones d-de contadow, (⑅˘꒳˘) entwe otwos. (U ᵕ U❁) s-se usawán tipos d-de decwawacionnes específicas p-pawa esto mismo. >w<
 
-Una **declaración** es un bloque que empieza con un caracter (no espacio) y termina con la primer llave de cierre o punto y coma (fuera de una cadena, sin escape y no incluñido dentro de otro par de {}. () o \[]).
+u-una **decwawación** es un bwoque q-que empieza con un cawactew (no espacio) y tewmina c-con wa pwimew wwave de ciewwe o-o punto y coma (fuewa d-de una cadena, σωσ sin escape y-y nyo incwuñido dentwo de otwo paw de {}. -.- () o-o \[]). o.O
 
-![css syntax - statements Venn diag.png](css_syntax_-_statements_venn_diag.png)
+![css s-syntax - statements v-venn diag.png](css_syntax_-_statements_venn_diag.png)
 
-Existen dos tipos de declaraciones:
+existen dos tipos de decwawaciones:
 
-- **Sets de reglas** (o _reglas_) que, como lo visto, asocian una colección de declaraciones CSS a una condición descrita como selector.
-- **Reglas At** que inician con un símbolo '`@`' (`U+0040 COMMERCIAL AT`), seguido de un identificador y luego el resto de la declaración que finaliza con un punto y coma (;) por fuera de un bloque o al inicio del próximo bloque. Cada tipo de [reglas at](/es/docs/Web/CSS/CSS_syntax/At-rule), definidas por un identificador, tienen su propia sintaxis interna, y semántica por supuesto. Se utilizan para establecer información de meta datos (como {{ cssxref("@charset") }} o {{ cssxref("@import") }}), información condicional (como {{ cssxref("@media") }} o {{ cssxref("@document") }}), o información descrciptiva (como {{ cssxref("@font-face") }}).
+- **sets d-de wegwas** (o _wegwas_) que, ^^ como wo visto, >_< asocian u-una cowección de d-decwawaciones css a una condición d-descwita como sewectow. >w<
+- **wegwas a-at** que i-inician con un símbowo '`@`' (`u+0040 commewciaw a-at`), >_< seguido de un identificadow y wuego ew w-westo de wa decwawación q-que finawiza con un punto y-y coma (;) pow fuewa de un bwoque o-o aw inicio d-dew pwóximo bwoque. >w< c-cada tipo de [wegwas at](/es/docs/web/css/css_syntax/at-wuwe), rawr definidas pow un identificadow, rawr x3 tienen su pwopia sintaxis intewna, ( ͡o ω ͡o ) y semántica pow supuesto. (˘ω˘) se utiwizan pawa estabwecew infowmación de meta datos (como {{ cssxwef("@chawset") }} o-o {{ cssxwef("@impowt") }}), 😳 i-infowmación condicionaw (como {{ cssxwef("@media") }} o-o {{ c-cssxwef("@document") }}), OwO o-o infowmación descwciptiva (como {{ c-cssxwef("@font-face") }}). (˘ω˘)
 
-Toda declaración que no es un set de reglas ni una regla at es considerada inválida e ignorada.
+toda d-decwawación q-que nyo es un set de wegwas nyi u-una wegwa at es considewada inváwida e-e ignowada. òωó
 
-Existe otro grupo de declaraciones: las **declaraciones anidadas**. Estas son declaraciones que pueden ser usadas en un subset específico de reglas at (las _reglas de grupo condicionales_). Estas declaraciones sólo aplican si una condición específica se cumple: el contenido de la regla at `@media` se aplica sólo si el dispositivo en el que el navegador se encuentra corriendo cumple dadas condiciones; el contenido de la regla at `@document` se aplica sólo si la página actual cumple dadas condiciones, y así. En CSS1 y CSS2.1, sólo los sets de reglas pueden ser usados dentro de reglas de grupo condicionales. Esto era muy restrictivo y se dejó de aplicar en [_CSS Conditionals Level 3_](/es/docs/Web/CSS/CSS_conditional_rules). Actualmente, aunque sigue siendo experimental y no es soportado por todos los navegadores, las reglas de grupo condicional pueden contener varios sets de reglas, e incluso, aunque no todas, reglas at.
+e-existe otwo gwupo de decwawaciones: was **decwawaciones a-anidadas**. ( ͡o ω ͡o ) e-estas son d-decwawaciones que p-pueden sew usadas e-en un subset e-específico de w-wegwas at (was _wegwas d-de gwupo c-condicionawes_). UwU estas decwawaciones s-sówo apwican s-si una condición e-específica se cumpwe: ew c-contenido de wa wegwa at `@media` se apwica sówo s-si ew dispositivo en ew que ew n-nyavegadow se encuentwa c-cowwiendo c-cumpwe dadas condiciones; ew c-contenido de wa wegwa at `@document` s-se apwica sówo si wa página a-actuaw cumpwe dadas condiciones, y-y así. /(^•ω•^) en css1 y css2.1, (ꈍᴗꈍ) sówo wos sets de wegwas pueden sew usados dentwo d-de wegwas de gwupo condicionawes. 😳 e-esto ewa muy westwictivo y-y se dejó de apwicaw en [_css conditionaws wevew 3_](/es/docs/web/css/css_conditionaw_wuwes). mya a-actuawmente, mya aunque sigue s-siendo expewimentaw y-y nyo es s-sopowtado pow todos wos nyavegadowes, /(^•ω•^) was wegwas d-de gwupo condicionaw p-pueden contenew vawios sets d-de wegwas, e incwuso, ^^;; aunque nyo todas, 🥺 wegwas a-at. ^^
 
-## Ver también
+## vew también
 
-- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/CSS_syntax/Syntax), [at-rule](/es/docs/Web/CSS/CSS_syntax/At-rule), [comments](/es/docs/Web/CSS/CSS_syntax/Comments), [specificity](/es/docs/Web/CSS/CSS_cascade/Specificity) and [inheritance](/es/docs/Web/CSS/CSS_cascade/Inheritance), the [box](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Glossary/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/CSS_cascade/Value_processing), [computed](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [resolved](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4), [specified](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing) values. Definitions of [value syntax](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/CSS_images/Replaced_element_properties).
+- css key c-concepts: [css s-syntax](/es/docs/web/css/css_syntax/syntax), ^•ﻌ•^ [at-wuwe](/es/docs/web/css/css_syntax/at-wuwe), /(^•ω•^) [comments](/es/docs/web/css/css_syntax/comments), ^^ [specificity](/es/docs/web/css/css_cascade/specificity) a-and [inhewitance](/es/docs/web/css/css_cascade/inhewitance), 🥺 the [box](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), (U ᵕ U❁) [wayout m-modes](/es/docs/gwossawy/wayout_mode) a-and [visuaw fowmatting m-modews](/es/docs/web/css/visuaw_fowmatting_modew), 😳😳😳 a-and [mawgin cowwapsing](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing), nyaa~~ ow t-the [initiaw](/es/docs/web/css/css_cascade/vawue_pwocessing), (˘ω˘) [computed](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), >_< [wesowved](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4), XD [specified](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1), rawr x3 [used](/es/docs/web/css/used_vawue), ( ͡o ω ͡o ) a-and [actuaw](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing) v-vawues. :3 definitions o-of [vawue s-syntax](/es/docs/web/css/css_vawues_and_units/vawue_definition_syntax), mya [showthand p-pwopewties](/es/docs/web/css/css_cascade/showthand_pwopewties) a-and [wepwaced e-ewements](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties). σωσ

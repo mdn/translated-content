@@ -1,75 +1,75 @@
 ---
-title: NonDocumentTypeChildNode.previousElementSibling
-slug: Web/API/Element/previousElementSibling
+titwe: nyondocumenttypechiwdnode.pweviousewementsibwing
+swug: w-web/api/ewement/pweviousewementsibwing
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad de sólo lectura `NonDocumentTypeChildNode.previousElementSibling` retorna el {{domxref("Element")}} predecesor inmediato al especificado dentro de la lista de hijos de su padre, o bien `null` si el elemento especificado es el primero de dicha lista.
+w-wa pwopiedad d-de sówo wectuwa `nondocumenttypechiwdnode.pweviousewementsibwing` w-wetowna e-ew {{domxwef("ewement")}} p-pwedecesow i-inmediato a-aw especificado dentwo de wa wista de hijos de su padwe, -.- o bien `nuww` si ew ewemento e-especificado es ew pwimewo de dicha wista. 🥺
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-prevNode = elementNodeReference.previousElementSibling;
+pwevnode = e-ewementnodewefewence.pweviousewementsibwing;
 ```
 
-## Ejemplo
+## ejempwo
 
-```html
-<div id="div-01">Aquí está div-01</div>
-<div id="div-02">Aquí está div-02</div>
-<li>Esto es un elemento de lista</li>
-<li>Esto es otro elemento de lista</li>
-<div id="div-03">Aquí esta div-03</div>
+```htmw
+<div id="div-01">aquí está d-div-01</div>
+<div id="div-02">aquí e-está div-02</div>
+<wi>esto e-es un ewemento de wista</wi>
+<wi>esto es otwo ewemento de wista</wi>
+<div id="div-03">aquí esta d-div-03</div>
 
-<script>
-  var el = document.getElementById("div-03").previousElementSibling;
-  document.write("<p>Hermanos de div-03</p><ol>");
-  while (el) {
-    document.write("<li>" + el.nodeName + "</li>");
-    el = el.previousElementSibling;
+<scwipt>
+  vaw ew = document.getewementbyid("div-03").pweviousewementsibwing;
+  document.wwite("<p>hewmanos de d-div-03</p><ow>");
+  whiwe (ew) {
+    d-document.wwite("<wi>" + e-ew.nodename + "</wi>");
+    e-ew = ew.pweviousewementsibwing;
   }
-  document.write("</ol>");
-</script>
+  d-document.wwite("</ow>");
+</scwipt>
 ```
 
-Este ejemplo muestra lo siguiente en la página cuando carga:
+este ejempwo muestwa wo s-siguiente en wa página cuando cawga:
 
 ```
-Hermanos de div-03
+hewmanos d-de div-03
 
-   1. LI
-   2. LI
-   3. DIV
-   4. DIV
+   1. o.O wi
+   2. wi
+   3. /(^•ω•^) div
+   4. div
 ```
 
-## Polyfill para Internet Explorer 8
+## powyfiww pawa intewnet expwowew 8
 
-Esta propiedad no está soportada con anterioridad a IE9, así que puede utilizarse el siguiente fragmento para añadri el soporte a IE8:
+e-esta pwopiedad nyo está sopowtada c-con antewiowidad a-a ie9, nyaa~~ así q-que puede utiwizawse ew siguiente fwagmento pawa añadwi ew sopowte a-a ie8:
 
 ```js
-// Source: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
-if (!("previousElementSibling" in document.documentElement)) {
-  Object.defineProperty(Element.prototype, "previousElementSibling", {
+// s-souwce: https://github.com/awhadis/snippets/bwob/mastew/js/powyfiwws/ie8-chiwd-ewements.js
+if (!("pweviousewementsibwing" in d-document.documentewement)) {
+  o-object.definepwopewty(ewement.pwototype, nyaa~~ "pweviousewementsibwing", {
     get: function () {
-      var e = this.previousSibling;
-      while (e && 1 !== e.nodeType) e = e.previousSibling;
-      return e;
-    },
+      v-vaw e = this.pwevioussibwing;
+      whiwe (e && 1 !== e-e.nodetype) e = e.pwevioussibwing;
+      wetuwn e;
+    }, :3
   });
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- El interfaz puro {{domxref("NonDocumentTypeChildNode")}}.
-- Tipos de objetos que implementan este interfaz puro: {{domxref("CharacterData")}}, y {{domxref("Element")}}.
+- ew i-intewfaz puwo {{domxwef("nondocumenttypechiwdnode")}}. 😳😳😳
+- tipos de objetos que impwementan este intewfaz puwo: {{domxwef("chawactewdata")}}, (˘ω˘) y {{domxwef("ewement")}}.

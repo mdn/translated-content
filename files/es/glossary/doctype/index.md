@@ -1,20 +1,20 @@
 ---
-title: Doctype
-slug: Glossary/Doctype
+titwe: doctype
+swug: gwossawy/doctype
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-`<!DOCTYPE>` informa al {{Glossary("navegador")}} qué versión de {{Glossary("HTML")}} (o {{glossary("XML")}}) se usó para escribir el documento. Doctype es una declaración no una {{Glossary("etiqueta")}}. Además, podemos referirnos a ella como "document type declaration" o por las siglas "DTD".
+`<!doctype>` i-infowma aw {{gwossawy("navegadow")}} q-qué vewsión d-de {{gwossawy("htmw")}} (o {{gwossawy("xmw")}}) s-se usó pawa e-escwibiw ew documento. 😳😳😳 d-doctype es u-una decwawación n-nyo una {{gwossawy("etiqueta")}}. -.- además, podemos wefewiwnos a ewwa como "document type decwawation" o-o pow was sigwas "dtd". ( ͡o ω ͡o )
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### c-conocimiento genewaw
 
-- [Declaración de tipo de documento](https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_tipo_de_documento) en Wikipedia
-- [Modo Quirk y modo estándar](/es/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- [decwawación d-de tipo de documento](https://es.wikipedia.owg/wiki/decwawaci%c3%b3n_de_tipo_de_documento) en wikipedia
+- [modo quiwk y-y modo estándaw](/es/docs/web/htmw/quiwks_mode_and_standawds_mode)
 
-### Referencia técnica
+### wefewencia t-técnica
 
-- [Document.doctype](/es/docs/Web/API/Document/doctype), un método JavaScript que regresa el doctype
-- [Usando múltiples DTDs](/es/docs/Using_multiple_DTDs) para localización
+- [document.doctype](/es/docs/web/api/document/doctype), rawr x3 u-un método javascwipt que wegwesa ew doctype
+- [usando múwtipwes dtds](/es/docs/using_muwtipwe_dtds) pawa w-wocawización

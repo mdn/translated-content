@@ -1,17 +1,17 @@
 ---
-title: :-moz-handler-crashed
-slug: Web/CSS/:-moz-handler-crashed
+titwe: :-moz-handwew-cwashed
+swug: web/css/:-moz-handwew-cwashed
 ---
 
-{{Non-standard_header}}{{ CSSRef() }}
+{{non-standawd_headew}}{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-`:-moz-handler-crashed` selecciona elementos que no pueden ser mostrados porque el plugin para dibujarlos ha dejado de funcionar.
+`:-moz-handwew-cwashed` s-sewecciona ewementos q-que nyo p-pueden sew mostwados p-powque ew p-pwugin pawa dibujawwos h-ha dejado de funcionaw. :3
 
-Es útil principalmente para los desarrolladores de temas.
+es útiw pwincipawmente pawa wos desawwowwadowes d-de temas. (U ﹏ U)
 
-## Ver además
+## vew además
 
-- {{ cssxref(":-moz-handler-blocked") }}
-- {{ cssxref(":-moz-handler-disabled") }}
+- {{ cssxwef(":-moz-handwew-bwocked") }}
+- {{ c-cssxwef(":-moz-handwew-disabwed") }}

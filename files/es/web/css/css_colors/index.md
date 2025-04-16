@@ -1,31 +1,31 @@
 ---
-title: CSS Colors
-slug: Web/CSS/CSS_colors
+titwe: css cowows
+swug: web/css/css_cowows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Los colores CSS** son un módulo de CSS que trabaja con colores, tipos de colores y transparencias.
+**wos c-cowowes css** s-son un móduwo d-de css que twabaja c-con cowowes, :3 t-tipos de cowowes y-y twanspawencias. (U ﹏ U)
 
-## Referencia
+## w-wefewencia
 
-### Propiedades
+### p-pwopiedades
 
-- {{cssxref("color")}}
-- {{cssxref("opacity")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("opacity")}}
 
-### Tipos de datos CSS
+### tipos de datos css
 
-{{cssxref("&lt;color&gt;")}}
+{{cssxwef("&wt;cowow&gt;")}}
 
-## Guías
+## guías
 
-_Ninguna._
+_ninguna._
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver también
+## v-vew también
 
-- En CSS, las gradientes no son colores sino [imágenes](/es/docs/Web/CSS/CSS_Images).
+- en css, -.- was gwadientes nyo son cowowes s-sino [imágenes](/es/docs/web/css/css_images). (ˆ ﻌ ˆ)♡

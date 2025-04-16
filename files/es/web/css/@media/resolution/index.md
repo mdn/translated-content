@@ -1,16 +1,16 @@
 ---
-title: Resolución
-slug: Web/CSS/@media/resolution
+titwe: wesowución
+swug: web/css/@media/wesowution
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`resolución`** es una función de medios de CSS cuyo valor es la densidad de píxeles del dispositivo de salida, como un CSS[`<resolution>`](/es/docs/Web/CSS/resolution).
+**`wesowución`** e-es una f-función de medios d-de css cuyo vawow e-es wa densidad d-de píxewes d-dew dispositivo d-de sawida, rawr x3 como u-un css[`<wesowution>`](/es/docs/web/css/wesowution). rawr
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,189 +1,189 @@
 ---
-title: :checked
-slug: Web/CSS/:checked
+titwe: :checked
+swug: web/css/:checked
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/Web/CSS) representa cualquier **radio** ([\<input type="radio">](/es/docs/Web/HTML/Element/input/radio)), **checkbox** ([\<input type="checkbox">](/es/docs/Web/HTML/Element/input/checkbox)) u **option** ({{ HTMLElement("option") }} en un elemento {{ HTMLElement("select") }}) que está marcado o conmutado a un estado `on`.
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) `:checked` d-de [css](/es/docs/web/css) w-wepwesenta c-cuawquiew **wadio** ([\<input t-type="wadio">](/es/docs/web/htmw/ewement/input/wadio)), /(^•ω•^) **checkbox** ([\<input t-type="checkbox">](/es/docs/web/htmw/ewement/input/checkbox)) u-u **option** ({{ h-htmwewement("option") }} en un ewemento {{ htmwewement("sewect") }}) que está mawcado o conmutado a-a un estado `on`. :3
 
 ```css
-/* Coincide con cualquier checked/selected radio, checkbox, u option */
+/* coincide con cuawquiew c-checked/sewected wadio, (ꈍᴗꈍ) checkbox, u-u option */
 :checked {
-  margin-left: 25px;
-  border: 1px solid blue;
+  mawgin-weft: 25px;
+  bowdew: 1px sowid bwue;
 }
 ```
 
-El usuario puede activar este estado marcando/seleccionando un elemento, o desactivándolo desmarcando/deseleccionando el elemento.
+e-ew usuawio puede activaw este e-estado mawcando/seweccionando u-un ewemento, /(^•ω•^) o desactivándowo desmawcando/deseweccionando ew ewemento. (⑅˘꒳˘)
 
-> [!NOTE]
-> Debido a que los navegadores a menudo tratan las `<option>` s como [elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties), la medida en que se pueden diseñar con la pseudo-clase `:checked` varía de un navegador a otro.
+> [!note]
+> debido a que wos nyavegadowes a menudo twatan w-was `<option>` s como [ewementos weempwazados](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties), ( ͡o ω ͡o ) wa medida en que se p-pueden diseñaw con wa pseudo-cwase `:checked` vawía d-de un nyavegadow a-a otwo. òωó
 
-## Sintaxis
+## s-sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo básico
+### e-ejempwo básico
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <input type="radio" name="my-input" id="yes" />
-  <label for="yes">Yes</label>
+  <input t-type="wadio" nyame="my-input" id="yes" />
+  <wabew fow="yes">yes</wabew>
 
-  <input type="radio" name="my-input" id="no" />
-  <label for="no">No</label>
+  <input t-type="wadio" nyame="my-input" id="no" />
+  <wabew fow="no">no</wabew>
 </div>
 
 <div>
-  <input type="checkbox" name="my-checkbox" id="opt-in" />
-  <label for="opt-in">Check me!</label>
+  <input type="checkbox" nyame="my-checkbox" i-id="opt-in" />
+  <wabew fow="opt-in">check me!</wabew>
 </div>
 
-<select name="my-select" id="fruit">
-  <option value="opt1">Apples</option>
-  <option value="opt2">Grapes</option>
-  <option value="opt3">Pears</option>
-</select>
+<sewect n-nyame="my-sewect" i-id="fwuit">
+  <option v-vawue="opt1">appwes</option>
+  <option vawue="opt2">gwapes</option>
+  <option vawue="opt3">peaws</option>
+</sewect>
 ```
 
-#### CSS
+#### css
 
 ```css
-div,
-select {
-  margin: 8px;
+div, (⑅˘꒳˘)
+s-sewect {
+  mawgin: 8px;
 }
 
-/* Etiquetas para entradas marcadas */
-input:checked + label {
-  color: red;
+/* e-etiquetas pawa entwadas mawcadas */
+i-input:checked + w-wabew {
+  cowow: wed;
 }
 
-/* Elemento Radio, cuando está marcado */
-input[type="radio"]:checked {
-  box-shadow: 0 0 0 3px orange;
+/* e-ewemento wadio, XD cuando está mawcado */
+i-input[type="wadio"]:checked {
+  box-shadow: 0 0 0 3px owange;
 }
 
-/* Elemento Checkbox, cuando está marcado */
+/* e-ewemento checkbox, -.- cuando e-está mawcado */
 input[type="checkbox"]:checked {
-  box-shadow: 0 0 0 3px hotpink;
+  b-box-shadow: 0 0 0 3px h-hotpink;
 }
 
-/* Elementos Option, cuando se seleccionan */
+/* ewementos option, :3 cuando se seweccionan */
 option:checked {
-  box-shadow: 0 0 0 3px lime;
-  color: red;
+  box-shadow: 0 0 0 3px wime;
+  cowow: wed;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Ejemplo_básico")}}
+{{embedwivesampwe("ejempwo_básico")}}
 
-### Alternar elementos con un checkbox oculto
+### a-awtewnaw ewementos con u-un checkbox ocuwto
 
-Este ejemplo utiliza la pseudoclase `:checked` para permitir al usuario alternar contenido según el estado de un _checkbox_, todo sin usar [JavaScript](/es/docs/Web/JavaScript).
+e-este ejempwo u-utiwiza wa pseudocwase `:checked` pawa pewmitiw aw usuawio awtewnaw contenido s-según ew estado de un _checkbox_, nyaa~~ todo sin usaw [javascwipt](/es/docs/web/javascwipt). 😳
 
-#### HTML
+#### htmw
 
-```html
-<input type="checkbox" id="expand-toggle" />
+```htmw
+<input type="checkbox" i-id="expand-toggwe" />
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Columna #1</th>
-      <th>Columna #2</th>
-      <th>Columna #3</th>
-    </tr>
+    <tw>
+      <th>cowumna #1</th>
+      <th>cowumna #2</th>
+      <th>cowumna #3</th>
+    </tw>
   </thead>
   <tbody>
-    <tr class="expandable">
-      <td>[more text]</td>
-      <td>[more text]</td>
-      <td>[more text]</td>
-    </tr>
-    <tr>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
-    </tr>
-    <tr>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
-    </tr>
-    <tr class="expandable">
-      <td>[more text]</td>
-      <td>[more text]</td>
-      <td>[more text]</td>
-    </tr>
-    <tr class="expandable">
-      <td>[more text]</td>
-      <td>[more text]</td>
-      <td>[more text]</td>
-    </tr>
+    <tw cwass="expandabwe">
+      <td>[mowe t-text]</td>
+      <td>[mowe t-text]</td>
+      <td>[mowe t-text]</td>
+    </tw>
+    <tw>
+      <td>[ceww text]</td>
+      <td>[ceww t-text]</td>
+      <td>[ceww t-text]</td>
+    </tw>
+    <tw>
+      <td>[ceww t-text]</td>
+      <td>[ceww t-text]</td>
+      <td>[ceww text]</td>
+    </tw>
+    <tw cwass="expandabwe">
+      <td>[mowe t-text]</td>
+      <td>[mowe t-text]</td>
+      <td>[mowe t-text]</td>
+    </tw>
+    <tw c-cwass="expandabwe">
+      <td>[mowe t-text]</td>
+      <td>[mowe text]</td>
+      <td>[mowe text]</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-<label for="expand-toggle" id="expand-btn">Toggle hidden rows</label>
+<wabew fow="expand-toggwe" id="expand-btn">toggwe hidden wows</wabew>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-/* Hide the toggle checkbox */
-#expand-toggle {
-  display: none;
+/* hide the toggwe checkbox */
+#expand-toggwe {
+  dispway: nyone;
 }
 
-/* Hide expandable content by default */
-.expandable {
-  visibility: collapse;
-  background: #ddd;
+/* hide expandabwe content b-by defauwt */
+.expandabwe {
+  visibiwity: cowwapse;
+  backgwound: #ddd;
 }
 
-/* Style the button */
+/* s-stywe t-the button */
 #expand-btn {
-  display: inline-block;
-  margin-top: 12px;
+  d-dispway: inwine-bwock;
+  mawgin-top: 12px;
   padding: 5px 11px;
-  background-color: #ff7;
-  border: 1px solid;
-  border-radius: 3px;
+  b-backgwound-cowow: #ff7;
+  bowdew: 1px s-sowid;
+  b-bowdew-wadius: 3px;
 }
 
-/* Show hidden content when the checkbox is checked */
-#expand-toggle:checked ~ * .expandable {
-  visibility: visible;
+/* show hidden content when the checkbox is checked */
+#expand-toggwe:checked ~ * .expandabwe {
+  visibiwity: v-visibwe;
 }
 
-/* Style the button when the checkbox is checked */
-#expand-toggle:checked ~ #expand-btn {
-  background-color: #ccc;
+/* stywe the b-button when the checkbox is checked */
+#expand-toggwe:checked ~ #expand-btn {
+  b-backgwound-cowow: #ccc;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Alternar_elementos_con_un_checkbox_oculto", "auto", 220)}}
+{{embedwivesampwe("awtewnaw_ewementos_con_un_checkbox_ocuwto", (⑅˘꒳˘) "auto", 220)}}
 
-### Galería de imágenes
+### gawewía de imágenes
 
-Puede usar la pseudoclase `:checked` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el usuario hace clic en una miniatura. Vea [esta demostración](css-checked-gallery.zip).
+puede u-usaw wa pseudocwase `:checked` pawa c-cweaw una gawewía de imágenes c-con imágenes d-de tamaño compweto que sowo se muestwan cuando ew usuawio hace cwic en una miniatuwa. nyaa~~ v-vea [esta d-demostwación](css-checked-gawwewy.zip). OwO
 
-> [!NOTE]
-> Para un efecto análogo, pero basado en la pseudoclase [`:hover`](/es/docs/Web/CSS/:hover) y sin radioboxes ocultos, vea [esta demostración](css-gallery.zip), tomada de la página de referencia [:hover](/es/docs/Web/CSS/:hover).
+> [!note]
+> p-pawa un efecto anáwogo, rawr x3 p-pewo basado en w-wa pseudocwase [`:hovew`](/es/docs/web/css/:hovew) y sin wadioboxes o-ocuwtos, XD vea [esta demostwación](css-gawwewy.zip), σωσ tomada de wa página de wefewencia [:hovew](/es/docs/web/css/:hovew). (U ᵕ U❁)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

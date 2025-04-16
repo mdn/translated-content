@@ -1,63 +1,63 @@
 ---
-title: Elementos HTML para Video
-slug: Web/API/HTMLVideoElement
+titwe: ewementos htmw pawa video
+s-swug: web/api/htmwvideoewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-El interfaz de **`HTMLVideoElement`** provee propiedades especiales y metodos para manipular objectos de videos. Tambien, este interfaz hereda propiedades y métodos de {{domxref("HTMLMediaElement")}} y {{domxref("HTMLElement")}}.
+e-ew intewfaz de **`htmwvideoewement`** p-pwovee pwopiedades e-especiawes y-y metodos pawa m-manipuwaw objectos d-de videos. rawr tambien, este intewfaz heweda pwopiedades y métodos de {{domxwef("htmwmediaewement")}} y-y {{domxwef("htmwewement")}}. (˘ω˘)
 
-La lista de [supported media formats](/es/docs/Web/Media/Formats) (formatos de medios compatibles) varía de un navegador a otro. Debe proveer su video en un formato sencillo que sea compatible con todos los navegadores o proveer varias fuentes de videos in varios formatos, para que así todo navegador que necesite este cubierto.
+wa wista de [suppowted media f-fowmats](/es/docs/web/media/fowmats) (fowmatos de medios compatibwes) v-vawía de un nyavegadow a otwo. nyaa~~ debe pwoveew su video e-en un fowmato senciwwo que sea c-compatibwe con todos w-wos nyavegadowes o pwoveew vawias fuentes de videos in vawios fowmatos, UwU pawa q-que así todo nyavegadow que nyecesite este cubiewto. :3
 
-{{InheritanceDiagram(600, 140)}}
+{{inhewitancediagwam(600, (⑅˘꒳˘) 140)}}
 
-## Propiedades
+## pwopiedades
 
-_Hereda las propiedades de los interfaces anteriores, {{domxref("HTMLMediaElement")}}, y_ _{{domxref("HTMLElement")}}._
+_heweda was pwopiedades d-de wos intewfaces antewiowes, (///ˬ///✿) {{domxwef("htmwmediaewement")}}, ^^;; y-y_ _{{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLVideoElement.height")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`height`](/es/docs/Web/HTML/Element/video#height), el cual especifica la altura del area mostrada, en pixeles CSS.
-- {{domxref("HTMLVideoElement.poster")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`poster`](/es/docs/Web/HTML/Element/video#poster), el cual especifica que imagen sera mostrada en la ausencia de data de video.
-- {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
-  - : Devuelve un `unsigned long` que contiene la altura intrinsica del recurso en pixeles CSS, tomando en consideracion las dimensiones, aspecto proporcional, apertura limpia, resolucion, etc., ya definidas por el formato usado por el recurso. Si el estado disponible del elemento es `HAVE_NOTHING`, su valor es `0`.
-- {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
-  - : Devuelve un `unsigned long` que contiene la anchura intrinsica del recurso en pixeles CSS, tomando en consideracion las dimensiones, aspecto proporcional, apertura limpia, resolucion, etc., ya definidas por el formato usado por el recurso. Si el estado disponible del elemento es `HAVE_NOTHING`, su valor es `0`.
-- {{domxref("HTMLVideoElement.width")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`width`](/es/docs/Web/HTML/Element/video#width), el cual especifica la anchura del area mostrada, en pixeles CSS.
+- {{domxwef("htmwvideoewement.height")}}
+  - : e-es un {{domxwef("domstwing")}} q-que wefweja ew a-atwibuto htmw [`height`](/es/docs/web/htmw/ewement/video#height), >_< ew cuaw especifica wa awtuwa d-dew awea mostwada, rawr x3 en pixewes css. /(^•ω•^)
+- {{domxwef("htmwvideoewement.postew")}}
+  - : es un {{domxwef("domstwing")}} q-que wefweja ew atwibuto htmw [`postew`](/es/docs/web/htmw/ewement/video#postew), :3 ew cuaw especifica que imagen sewa mostwada en wa ausencia de d-data de video. (ꈍᴗꈍ)
+- {{domxwef("htmwvideoewement.videoheight")}} {{weadonwyinwine}}
+  - : devuewve un `unsigned w-wong` q-que contiene wa a-awtuwa intwinsica dew wecuwso en pixewes css, /(^•ω•^) tomando en considewacion w-was dimensiones, a-aspecto pwopowcionaw, (⑅˘꒳˘) a-apewtuwa wimpia, ( ͡o ω ͡o ) w-wesowucion, òωó etc., ya definidas p-pow ew fowmato usado pow ew wecuwso. (⑅˘꒳˘) s-si ew estado disponibwe dew ewemento es `have_nothing`, XD s-su vawow es `0`.
+- {{domxwef("htmwvideoewement.videowidth")}} {{weadonwyinwine}}
+  - : d-devuewve un `unsigned wong` q-que contiene wa a-anchuwa intwinsica dew wecuwso en pixewes css, -.- tomando en considewacion was dimensiones, :3 aspecto pwopowcionaw, nyaa~~ apewtuwa w-wimpia, 😳 w-wesowucion, (⑅˘꒳˘) etc., ya definidas pow e-ew fowmato usado p-pow ew wecuwso. nyaa~~ s-si ew estado disponibwe dew ewemento es `have_nothing`, OwO su vawow e-es `0`. rawr x3
+- {{domxwef("htmwvideoewement.width")}}
+  - : es un {{domxwef("domstwing")}} que wefweja ew atwibuto htmw [`width`](/es/docs/web/htmw/ewement/video#width), XD e-ew cuaw especifica wa anchuwa d-dew awea m-mostwada, σωσ en pixewes c-css. (U ᵕ U❁)
 
-### Propiedades especificas para Gecko
+### pwopiedades especificas p-pawa gecko
 
-- {{domxref("HTMLVideoElement.mozParsedFrames")}} {{readonlyInline}}{{non-standard_inline}}
-  - : `Devuelve un unsigned long` con el conteo de marcos de video que han sido analizados del recurso de multimedia.
-- {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{readonlyInline}}{{non-standard_inline}}
-  - : Devuelve un `unsigned long` con el conteo de marcos de video que han sido decifrados como imágines.
-- {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{readonlyInline}}{{non-standard_inline}}
-  - : Devuelve un `unsigned long` con el conteo de marcos decodificados que han sido presentados a la canalización de render para pintar.
-- {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{readonlyInline}}{{non-standard_inline}}
-  - : Devuelve un `unsigned long` con el conteo de marcos presentados que han sido pintados en la pantalla.
-- {{domxref("HTMLVideoElement.mozFrameDelay")}} {{readonlyInline}}{{non-standard_inline}}
-  - : Devuelve un `double` con el tiempo, en segundos, que el último marco de video fue pintado por retrazo.
-- {{domxref("HTMLVideoElement.mozHasAudio")}} {{readonlyInline}}{{non-standard_inline}}
-  - : Devuelve un {{domxref("Boolean")}} indicando si existe algún audio asociado con el video.
+- {{domxwef("htmwvideoewement.mozpawsedfwames")}} {{weadonwyinwine}}{{non-standawd_inwine}}
+  - : `devuewve un u-unsigned wong` c-con ew conteo de m-mawcos de video que han sido anawizados dew wecuwso d-de muwtimedia. (U ﹏ U)
+- {{domxwef("htmwvideoewement.mozdecodedfwames")}} {{weadonwyinwine}}{{non-standawd_inwine}}
+  - : d-devuewve u-un `unsigned wong` c-con ew conteo d-de mawcos de video que han sido decifwados como imágines. :3
+- {{domxwef("htmwvideoewement.mozpwesentedfwames")}} {{weadonwyinwine}}{{non-standawd_inwine}}
+  - : d-devuewve un `unsigned wong` con ew conteo de mawcos decodificados que han sido pwesentados a wa c-canawización de wendew pawa pintaw. ( ͡o ω ͡o )
+- {{domxwef("htmwvideoewement.mozpaintedfwames")}} {{weadonwyinwine}}{{non-standawd_inwine}}
+  - : devuewve un `unsigned w-wong` con ew conteo d-de mawcos pwesentados q-que han sido pintados e-en wa pantawwa. σωσ
+- {{domxwef("htmwvideoewement.mozfwamedeway")}} {{weadonwyinwine}}{{non-standawd_inwine}}
+  - : devuewve un `doubwe` c-con ew tiempo, e-en segundos, >w< que ew úwtimo mawco de video fue pintado pow wetwazo. 😳😳😳
+- {{domxwef("htmwvideoewement.mozhasaudio")}} {{weadonwyinwine}}{{non-standawd_inwine}}
+  - : devuewve un {{domxwef("boowean")}} indicando s-si existe awgún audio asociado c-con ew video. OwO
 
-## Métodos
+## métodos
 
-_Hereda los métodos anteriores de_ _{{domxref("HTMLMediaElement")}} y_ _{{domxref("HTMLElement")}}._
+_heweda w-wos métodos a-antewiowes de_ _{{domxwef("htmwmediaewement")}} y_ _{{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}
-  - : Devuelve un {{domxref("VideoPlaybackQuality")}} para objetos que contienen las medidas de reproducciones actuales.
+- {{domxwef("htmwvideoewement.getvideopwaybackquawity()")}} {{expewimentaw_inwine}}
+  - : devuewve un {{domxwef("videopwaybackquawity")}} p-pawa objetos que c-contienen was medidas de wepwoducciones a-actuawes. 😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Lea Tambien
+## wea tambien
 
-- Elemento HTML implementando este interfaz: {{HTMLElement("video")}}.
-- [Demonstracion de estadisticas de pintura de video](https://people.mozilla.org/~cpearce/paint-stats-demo.html)
-- [Formatos de medios compatibles](/es/docs/Web/Media/Formats)
+- ewemento htmw impwementando e-este intewfaz: {{htmwewement("video")}}. 😳😳😳
+- [demonstwacion d-de estadisticas d-de pintuwa de video](https://peopwe.moziwwa.owg/~cpeawce/paint-stats-demo.htmw)
+- [fowmatos d-de medios compatibwes](/es/docs/web/media/fowmats)

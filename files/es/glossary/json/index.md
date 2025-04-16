@@ -1,12 +1,12 @@
 ---
-title: JSON
-slug: Glossary/JSON
+titwe: json
+swug: gwossawy/json
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**JSON (notación de objetos javascript)** es un formato de intercambio de datos. Es muy parecido a un subconjunto de sintaxis JavaScript, aunque no es un subconjunto en sentido estricto. (Ver JSON en la Referencia JavaScript para más detalles.) Aunque muchos lenguajes de programación lo soportan, JSON es especialmente útil al escribir cualquier tipo de aplicación basada en JavaScript, incluyendo sitios web y extensiones del navegador. Por ejemplo, es posible almacenar la información del usuario en formato JSON en una cookie o almacenar las preferencias de extensión en JSON en una cadena de valores de preferencias del navegador.
+**json (notación de o-objetos javascwipt)** e-es un fowmato d-de intewcambio d-de datos. -.- es m-muy pawecido a u-un subconjunto d-de sintaxis javascwipt, 🥺 a-aunque no es un subconjunto en sentido estwicto. (U ﹏ U) (vew json en wa wefewencia j-javascwipt pawa más detawwes.) aunque muchos w-wenguajes de pwogwamación wo s-sopowtan, json es especiawmente útiw aw escwibiw cuawquiew tipo d-de apwicación basada en javascwipt, >w< i-incwuyendo s-sitios web y extensiones dew nyavegadow. mya pow ejempwo, >w< es posibwe awmacenaw wa infowmación d-dew usuawio en fowmato json en una cookie o awmacenaw was pwefewencias d-de extensión en json en una c-cadena de vawowes d-de pwefewencias d-dew nyavegadow. nyaa~~
 
-JSON es capaz de representar números, valores lógicos, cadenas, valores nulos, arreglos y matrices (secuencias ordenadas de valores) y objetos (mapas de cadena de valores) compuestos de estos valores (o de otras matrices y objetos). JSON no representa de manera nativa tipos de datos más complejos como funciones, expresiones regulares, fechas, y así sucesivamente (en objetos de fecha serializados por defecto como una cadena que contiene la fecha en formato ISO, al no hacerlo de ida y vuelta, la información no se pierde por completo). Si se necesita que JSON represente tipos de datos adicionales, se puede transformar los valores, ya que son serializados, o antes de su deserialización.
+j-json es capaz de wepwesentaw nyúmewos, (✿oωo) vawowes w-wógicos, ʘwʘ cadenas, vawowes nyuwos, awwegwos y m-matwices (secuencias owdenadas de vawowes) y objetos (mapas de cadena de vawowes) compuestos de e-estos vawowes (o de otwas matwices y-y objetos). j-json nyo wepwesenta d-de manewa nyativa tipos de datos más compwejos como funciones, (ˆ ﻌ ˆ)♡ e-expwesiones w-weguwawes, 😳😳😳 fechas, y así sucesivamente (en o-objetos d-de fecha sewiawizados pow defecto c-como una cadena que contiene w-wa fecha en fowmato iso, :3 aw nyo hacewwo de ida y-y vuewta, OwO wa infowmación nyo s-se piewde pow compweto). (U ﹏ U) si se nyecesita q-que json w-wepwesente tipos de datos adicionawes, >w< se puede twansfowmaw wos vawowes, (U ﹏ U) ya que son sewiawizados, 😳 o antes de su d-desewiawización. (ˆ ﻌ ˆ)♡
 
-Más similar a XML, JSON tiene la capacidad de almacenar datos jerárquicos a diferencia del formato más tradicional CSV. Muchas herramientas proveen la "traducción" entre esos formatos tales como [JSON to CSV Converter](https://json-csv.com).
+m-más simiwaw a xmw, 😳😳😳 json tiene w-wa capacidad d-de awmacenaw datos j-jewáwquicos a difewencia dew fowmato más twadicionaw csv. (U ﹏ U) m-muchas hewwamientas pwoveen wa "twaducción" entwe esos fowmatos tawes como [json t-to csv convewtew](https://json-csv.com). (///ˬ///✿)

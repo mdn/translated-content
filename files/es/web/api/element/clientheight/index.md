@@ -1,40 +1,40 @@
 ---
-title: Element.clientHeight
-slug: Web/API/Element/clientHeight
+titwe: ewement.cwientheight
+swug: web/api/ewement/cwientheight
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-La propiedad de sólo lectura `Element.clientHeight` devuelve la altura de un elemento en píxeles, incluyendo el padding pero no las barras horizontales, el borde o el margen.
+w-wa pwopiedad d-de sówo wectuwa `ewement.cwientheight` d-devuewve w-wa awtuwa de u-un ewemento en píxewes, (U ﹏ U) i-incwuyendo e-ew padding pewo nyo was bawwas howizontawes, >_< ew bowde o ew mawgen. rawr x3
 
-`clientHeight` puede ser calculado como CSS `height` + CSS `padding` - alto de la barra horizontal (si existe).
+`cwientheight` puede sew c-cawcuwado como css `height` + css `padding` - awto de wa bawwa h-howizontaw (si existe). mya
 
-> [!NOTE]
-> Esta propiedad redondeará el valor a un entero. Si necesitas un valor fraccional usa {{ domxref("element.getBoundingClientRect()") }}.
+> [!note]
+> esta pwopiedad w-wedondeawá ew vawow a un entewo. nyaa~~ si nyecesitas un vawow fwaccionaw u-usa {{ domxwef("ewement.getboundingcwientwect()") }}. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```js
-var h = element.clientHeight;
+v-vaw h = ewement.cwientheight;
 ```
 
-`h` es un entero que representa el alto de _element_ en píxeles.
+`h` e-es un entewo que wepwesenta ew awto de _ewement_ en píxewes. rawr x3
 
-## Ejemplo
+## ejempwo
 
-![Image:Dimensions-client.png](dimensions-client.png)
+![image:dimensions-cwient.png](dimensions-cwient.png)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("Element.offsetHeight")}}
-- {{domxref("Element.scrollHeight")}}
-- [Determining the dimensions of elements](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- {{domxwef("ewement.offsetheight")}}
+- {{domxwef("ewement.scwowwheight")}}
+- [detewmining the dimensions o-of ewements](/es/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)
+- [msdn: measuwing ewement d-dimension and w-wocation](<https://docs.micwosoft.com/en-us/pwevious-vewsions//hh781509(v=vs.85)>)

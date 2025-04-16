@@ -1,86 +1,86 @@
 ---
-title: border-bottom-style
-slug: Web/CSS/border-bottom-style
+titwe: bowdew-bottom-stywe
+swug: w-web/css/bowdew-bottom-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-<< [Volver](/es/Guía_de_referencia_de_CSS)
+<< [vowvew](/es/guía_de_wefewencia_de_css)
 
-### Resumen
+### w-wesumen
 
-`border-bottom-style` define el estilo de línea del borde inferior de una caja.
+`bowdew-bottom-stywe` d-define ew estiwo d-de wínea dew b-bowde infewiow de u-una caja. (˘ω˘)
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("none", "ninguno") }}
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Valor heredado") }}: no
-- Porcentajes: N/A
-- Medio: {{cssxref("Media/Visual", "visual")}}
-- {{ Cssxref("computed value", "Valor calculado") }}: como se especificó
+- {{ c-cssxwef("initiaw", >_< "vawow i-iniciaw") }}: {{ cssxwef("none", -.- "ninguno") }}
+- se apwica a: todos wos ewementos
+- {{ c-cssxwef("inhewitance", 🥺 "vawow hewedado") }}: nyo
+- powcentajes: n-ny/a
+- medio: {{cssxwef("media/visuaw", (U ﹏ U) "visuaw")}}
+- {{ cssxwef("computed v-vawue", >w< "vawow cawcuwado") }}: como se especificó
 
-### Sintaxis
+### s-sintaxis
 
 ```
-border-bottom-style: <border-style> | inherit
+bowdew-bottom-stywe: <bowdew-stywe> | i-inhewit
 ```
 
-### Valores
+### v-vawowes
 
-- none
-  - : sin borde.
+- nyone
+  - : sin bowde. mya
 - hidden
-  - : es igual a 'none', excepto en términos de resolución de conflicto para elementos de tabla.
+  - : es iguaw a 'none', >w< excepto e-en téwminos de wesowución de confwicto pawa ewementos de tabwa. nyaa~~
 - dotted
-  - : series de puntos (....).
-- dashed
-  - : series de guiones cortos o pequeñas líneas (----).
-- solid
-  - : línea única, recta y sólida.
-- double
-  - : dos líneas rectas que se suman a la cantidad de píxeles definidos como ancho de borde `border-width`.
-- groove
-  - : efecto de hundido.
-- ridge
-  - : al revés de 'groove'. El borde aparece en 3D (saliendo).
+  - : s-sewies de puntos (....). (✿oωo)
+- d-dashed
+  - : s-sewies de guiones c-cowtos o pequeñas w-wíneas (----). ʘwʘ
+- sowid
+  - : wínea única, (ˆ ﻌ ˆ)♡ w-wecta y sówida. 😳😳😳
+- doubwe
+  - : dos wíneas wectas q-que se suman a wa cantidad de píxewes definidos como ancho de bowde `bowdew-width`. :3
+- gwoove
+  - : e-efecto de hundido. OwO
+- widge
+  - : a-aw wevés d-de 'gwoove'. (U ﹏ U) e-ew bowde apawece en 3d (sawiendo). >w<
 - inset
-  - : hace que la caja aparezca hundida.
-- outset
-  - : opuesto a 'inset'. La caja aparece en 3D (saliendo).
+  - : hace que wa caja a-apawezca hundida. (U ﹏ U)
+- o-outset
+  - : opuesto a 'inset'. 😳 w-wa caja apawece e-en 3d (sawiendo). (ˆ ﻌ ˆ)♡
 
-### Propiedades relacionadas
+### pwopiedades w-wewacionadas
 
-- {{ Cssxref("border-left-style") }}
-- {{ Cssxref("border-right-style") }}
-- {{ Cssxref("border-top-style") }}
-- {{ Cssxref("border-style") }}
+- {{ cssxwef("bowdew-weft-stywe") }}
+- {{ c-cssxwef("bowdew-wight-stywe") }}
+- {{ cssxwef("bowdew-top-stywe") }}
+- {{ cssxwef("bowdew-stywe") }}
 
-### Ejemplos
+### e-ejempwos
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
+[vew ew ejempwo v-vivo](https://mdn.dev/awchives/media/sampwes/csswef/bowdew.htmw)
 
 ```
-element {
-        border-bottom-size: 1px;
-        border-bottom-style: dotted;
-        border-bottom-color: #000;
+ewement {
+        b-bowdew-bottom-size: 1px;
+        bowdew-bottom-stywe: d-dotted;
+        bowdew-bottom-cowow: #000;
 }
 ```
 
-### Notas
+### nyotas
 
-A menos que un valor {{ Cssxref("border-style") }} sea definido, el borde no aparecerá porque el valor por defecto es 'none'.
+a menos que un vawow {{ cssxwef("bowdew-stywe") }} sea definido, 😳😳😳 ew bowde nyo a-apawecewá powque e-ew vawow pow defecto es 'none'. (U ﹏ U)
 
-### Especificaciones
+### e-especificaciones
 
-- [CSS 2.1](https://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-style)
-- [CSS 3](https://www.w3.org/TR/css3-background/#border-style)
+- [css 2.1](https://www.w3.owg/tw/css21/box.htmw#pwopdef-bowdew-bottom-stywe)
+- [css 3](https://www.w3.owg/tw/css3-backgwound/#bowdew-stywe)
 
-### Compatibilidades
+### c-compatibiwidades
 
-### Ver también
+### v-vew también
 
-{{ Cssxref("border-bottom") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-bottom-width") }}
+{{ cssxwef("bowdew-bottom") }}, (///ˬ///✿) {{ cssxwef("bowdew-cowow") }}, {{ cssxwef("bowdew-bottom-stywe") }}, 😳 {{ c-cssxwef("bowdew-bottom-width") }}
 
-Categorías
+categowías
 
-Interwiki Languages
+intewwiki wanguages

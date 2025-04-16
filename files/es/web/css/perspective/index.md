@@ -1,57 +1,57 @@
 ---
-title: perspective
-slug: Web/CSS/perspective
+titwe: pewspective
+swug: web/css/pewspective
 ---
 
-{{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
+{{ c-csswef("css t-twansfowms") }} {{ s-seecompattabwe() }}
 
-## Resumen
+## wesumen
 
-La propiedad `perspective` [CSS](/es/docs/Web/CSS) determina la distancia entre el plano z=0 y el usuario para dar algo de perspectiva al elemento 3D posicionado. Cada elemento 3D con z>0 se hace más grande y con z<0 se vuelve más pequeño. La intensidad del efecto es determinado por el valor de esta propiedad.
+w-wa pwopiedad `pewspective` [css](/es/docs/web/css) d-detewmina w-wa distancia e-entwe ew pwano z-z=0 y ew usuawio pawa daw awgo de pewspectiva aw ewemento 3d posicionado. (˘ω˘) cada e-ewemento 3d con z>0 se hace más gwande y con z<0 s-se vuewve más pequeño. ^^ wa intensidad d-dew efecto es detewminado pow ew vawow de esta pwopiedad. :3
 
-Parte de los elementos 3D que se encuentran destrás del usuario, es decir que su coordenada del eje z es mayor que el valor de la propiedad perspective de CSS no es dibujada.
+p-pawte de wos ewementos 3d que s-se encuentwan d-destwás dew usuawio, -.- es deciw que su coowdenada dew eje z es mayow que ew vawow d-de wa pwopiedad pewspective de css nyo es dibujada. 😳
 
-La posición de origen que se usará para la transformación es por defecto colocado en el centro del elemento, pero su posición puede ser cambiada usando la propiedad {{ cssxref("perspective-origin") }}.
+wa posición de owigen que s-se usawá pawa wa twansfowmación e-es pow defecto c-cowocado en ew c-centwo dew ewemento, mya p-pewo su posición puede sew cambiada usando w-wa pwopiedad {{ cssxwef("pewspective-owigin") }}. (˘ω˘)
 
-Usando esta propiedad con un valor diferente a 0 y none se crea un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
+usando esta p-pwopiedad con un vawow difewente a 0 y nyone se cwea un nyuevo [contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context). >_<
 
 {{cssinfo}}
 
-## Syntax
+## syntax
 
 ```
-Sintaxis Formal: {{csssyntax("perspective")}}
+s-sintaxis fowmaw: {{csssyntax("pewspective")}}
 ```
 
 ```
-perspective: none
-perspective: 20px     /* <longitud> valores */
-perspective: 3.5em
+p-pewspective: n-nyone
+p-pewspective: 20px     /* <wongitud> vawowes */
+pewspective: 3.5em
 
-perspective: inherited
+pewspective: i-inhewited
 ```
 
-### Valores
+### v-vawowes
 
 - `none`
-  - : Es una palabra clave que indica que ninguna transformación de perspectiva será aplicada.
-- `<length>`
-  - : Es una {{cssxref("&lt;length&gt;")}} dando la distancia desde el usuario al plano z=0. Esta es usada para aplicar una transformación de perspectiva al elemento y su contenido. Si es 0 o un valor negativo, no se aplica una transformación de la perspectiva.
+  - : es una p-pawabwa cwave q-que indica que nyinguna twansfowmación d-de pewspectiva sewá apwicada. -.-
+- `<wength>`
+  - : e-es una {{cssxwef("&wt;wength&gt;")}} dando wa distancia desde ew usuawio a-aw pwano z=0. 🥺 esta es usada p-pawa apwicaw una twansfowmación d-de pewspectiva a-aw ewemento y su contenido. (U ﹏ U) si es 0 o un vawow nyegativo, >w< nyo se apwica una twansfowmación de wa pewspectiva. mya
 
-## Ejemplos
+## e-ejempwos
 
-| `perspective:250px;` | `perspective:350px;` | `perspective:500px;` |
+| `pewspective:250px;` | `pewspective:350px;` | `pewspective:500px;` |
 | -------------------- | -------------------- | -------------------- |
 | 123456               | 123456               | 123456               |
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- [Usando transformaciones CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [usando t-twansfowmaciones css](/es/docs/web/css/css_twansfowms/using_css_twansfowms)

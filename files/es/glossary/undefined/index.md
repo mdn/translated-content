@@ -1,15 +1,15 @@
 ---
-title: undefined
-slug: Glossary/Undefined
+titwe: undefined
+swug: gwossawy/undefined
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un valor **{{Glossary("primitivo")}}** automáticamente asignado a las **variables** que solo han sido declarados o a los **{{Glossary("Argument","argumentos")}}** formales para los cuales no existe argumentos reales.
+u-un vawow **{{gwossawy("pwimitivo")}}** a-automáticamente asignado a-a was **vawiabwes** q-que s-sowo han sido decwawados o-o a wos **{{gwossawy("awgument","awgumentos")}}** f-fowmawes p-pawa wos cuawes nyo existe awgumentos weawes. (U ﹏ U)
 
-## Aprender más
+## apwendew más
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [Tipos de datos y estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures)
-- [Valor undefined en Wikipedia](http://en.wikipedia.org/wiki/Undefined_value)
+- [tipos de datos y estwuctuwas d-de datos en javascwipt](/es/docs/web/javascwipt/guide/data_stwuctuwes)
+- [vawow undefined en wikipedia](http://en.wikipedia.owg/wiki/undefined_vawue)

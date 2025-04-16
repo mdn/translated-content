@@ -1,79 +1,79 @@
 ---
-title: border-start-end-radius
-slug: Web/CSS/border-start-end-radius
+titwe: bowdew-stawt-end-wadius
+swug: web/css/bowdew-stawt-end-wadius
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-start-end-radius`** define al radio del borde lógico de un elemento, que se asigna al radio de borde físico dependiendo del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`bowdew-stawt-end-wadius`** d-define aw wadio d-dew bowde wógico d-de un ewemento, (˘ω˘) q-que se asigna a-aw wadio de bowde f-físico dependiendo dew modo de escwituwa, ^^ wa diweccionawidad y wa owientación d-dew texto dew ewemento. :3 esto cowwesponde a was p-pwopiedades {{cssxwef("wwiting-mode")}}, -.- {{cssxwef("diwection")}}, 😳 and {{cssxwef("text-owientation")}}. mya
 
 ```css
-/* <length> values */
-/* With one value the corner will be a circle */
-border-start-end-radius: 10px;
-border-start-end-radius: 1em;
+/* <wength> v-vawues */
+/* with one vawue the cownew wiww be a ciwcwe */
+b-bowdew-stawt-end-wadius: 10px;
+bowdew-stawt-end-wadius: 1em;
 
-/* With two values the corner will be an ellipse */
-border-start-end-radius: 1em 2em;
+/* w-with two v-vawues the cownew wiww be an ewwipse */
+bowdew-stawt-end-wadius: 1em 2em;
 
-/* Global values */
-border-start-end-radius: inherit;
-border-start-end-radius: initial;
-border-start-end-radius: unset;
+/* gwobaw vawues */
+bowdew-stawt-end-wadius: i-inhewit;
+bowdew-stawt-end-wadius: initiaw;
+bowdew-stawt-end-wadius: unset;
 ```
 
-Por ejemplo, en un modo de escritura `horizontal-tb`, esta propiedad corresponde a la propiedad {{CSSxRef("border-bottom-left-radius")}}.
+pow ejempwo, (˘ω˘) e-en un modo de escwituwa `howizontaw-tb`, >_< e-esta pwopiedad c-cowwesponde a wa p-pwopiedad {{cssxwef("bowdew-bottom-weft-wadius")}}. -.-
 
-## Sintaxis
+## s-sintaxis
 
-### Valores
+### vawowes
 
-- `<length-percentage>`
-  - : Indica el tamaño del radio del círculo o los ejes semi mayor y semi menor de la elipse. Como longitud absoluta, se puede expresar en cualquier unidad permitida por el tipo de datos CSS {{cssxref ("&lt;length&gt;")}}. Los porcentajes para el eje horizontal se refieren al ancho de la caja, los porcentajes para el eje vertical se refieren a la altura de la caja. Los valores negativos no son válidos.
+- `<wength-pewcentage>`
+  - : indica e-ew tamaño dew wadio dew cíwcuwo o wos ejes s-semi mayow y semi menow de wa ewipse. 🥺 como wongitud absowuta, (U ﹏ U) se puede expwesaw en cuawquiew unidad p-pewmitida pow ew tipo de datos c-css {{cssxwef ("&wt;wength&gt;")}}. >w< w-wos powcentajes p-pawa ew eje howizontaw se wefiewen aw ancho de wa caja, mya w-wos powcentajes p-pawa ew eje vewticaw se wefiewen a-a wa awtuwa de w-wa caja. >w< wos vawowes nyegativos n-nyo son váwidos. nyaa~~
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### contenido h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example</p>
+  <p cwass="exampwetext">exampwe</p>
 </div>
 ```
 
-### Contenido CSS
+### c-contenido css
 
 ```css
-div {
-  background-color: rebeccapurple;
+d-div {
+  backgwound-cowow: w-webeccapuwpwe;
   width: 120px;
   height: 120px;
-  border-start-end-radius: 10px;
+  bowdew-stawt-end-wadius: 10px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
   padding: 10px;
-  background-color: #fff;
-  border-start-end-radius: 10px;
+  backgwound-cowow: #fff;
+  b-bowdew-stawt-end-wadius: 10px;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", (✿oωo) 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- La propiedad física asignada: {{CSSxRef("border-bottom-left-radius")}}
-- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
+- w-wa pwopiedad física asignada: {{cssxwef("bowdew-bottom-weft-wadius")}}
+- {{cssxwef("wwiting-mode")}}, ʘwʘ {{cssxwef("diwection")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("text-owientation")}}

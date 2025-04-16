@@ -1,149 +1,149 @@
 ---
-title: ::after (:after)
-slug: Web/CSS/::after
+titwe: ::aftew (:aftew)
+swug: w-web/css/::aftew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-En CSS, **`::after`** crea un [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad {{CSSxRef("content")}}.Es en linea (inline) de forma predeterminada.
+e-en css, (///ˬ///✿) **`::aftew`** c-cwea un [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) q-que es ew úwtimo h-hijo dew ewemento s-seweccionado. (˘ω˘) e-es comunmente u-usado pawa añadiw contenido cosmético a un ewemento con wa pwopiedad {{cssxwef("content")}}.es e-en winea (inwine) de fowma pwedetewminada. ^^;;
 
 ```css
-/* Añdade una flecha después de los enlaces */
-a::after {
+/* a-añdade una fwecha después d-de wos enwaces */
+a::aftew {
   content: "→";
 }
 ```
 
-> [!NOTE]
-> Los pseudo-elementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto no aplica a _[elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)_ como los elementos {{HTMLElement("img")}}, o {{HTMLElement("br")}}.
+> [!note]
+> wos pseudo-ewementos g-genewados pow `::befowe` y-y `::aftew` s-son [contenidos pow wa caja de fowmato dew ewemento](https://www.w3.owg/tw/css2/genewate.htmw#befowe-aftew-content), (✿oωo) y pow wo tanto nyo apwica a-a _[ewementos weempwazados](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties)_ como wos ewementos {{htmwewement("img")}}, (U ﹏ U) o {{htmwewement("bw")}}. -.-
 
-## Sintaxis
+## s-sintaxis
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-> [!NOTE]
-> CSS3 introdujo la notación `::after` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:after`, añadido en CSS2.
+> [!note]
+> css3 intwodujo w-wa nyotación `::aftew` (con d-dobwe dos puntos) p-pawa distinguiw [pseudo-cwases](/es/docs/web/css/pseudo-cwasses) d-de [pseudo-ewementos](/es/docs/web/css/pseudo-ewements). ^•ﻌ•^ wos navegadowes también a-aceptan `:aftew`, rawr añadido en css2. (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-### Uso simple
+### u-uso simpwe
 
-Crearemos dos clases: una para párrafos aburridos y otra para párrafos interesantes. Después podremos resaltar cada párrafo añadiendo un pseudo-elemento al final del mismo.
+cweawemos dos cwases: una pawa páwwafos abuwwidos y otwa pawa páwwafos i-intewesantes. nyaa~~ después podwemos w-wesawtaw cada páwwafo a-añadiendo u-un pseudo-ewemento aw finaw dew mismo. UwU
 
-#### HTML
+#### htmw
 
-```html
-<p class="boring-text">Here is some plain old boring text.</p>
-<p>Here is some normal text that is neither boring nor exciting.</p>
-<p class="exciting-text">Contributing to MDN is easy and fun.</p>
+```htmw
+<p c-cwass="bowing-text">hewe i-is some pwain owd bowing t-text.</p>
+<p>hewe i-is some nyowmaw text that is n-neithew bowing nyow exciting.</p>
+<p c-cwass="exciting-text">contwibuting to mdn is easy and fun.</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.exciting-text::after {
-  content: " <- EXCITING!";
-  color: green;
+.exciting-text::aftew {
+  content: " <- e-exciting!";
+  cowow: gween;
 }
 
-.boring-text::after {
-  content: " <- BORING";
-  color: red;
+.bowing-text::aftew {
+  c-content: " <- b-bowing";
+  cowow: wed;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Uso_simple', 500, 150)}}
+{{embedwivesampwe('uso_simpwe', :3 500, (⑅˘꒳˘) 150)}}
 
-### Ejemplo decorativo
+### ejempwo decowativo
 
-Podemos estilizar el texto o imágenes de la propiedad {{cssxref("content")}} de casi cualquier forma que queramos.
+podemos estiwizaw ew texto o imágenes d-de wa pwopiedad {{cssxwef("content")}} d-de casi cuawquiew fowma q-que quewamos. (///ˬ///✿)
 
-#### HTML
+#### h-htmw
 
-```html
-<span class="ribbon">Look at the orange box after this text. </span>
+```htmw
+<span c-cwass="wibbon">wook at the owange box aftew this text. ^^;; </span>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.ribbon {
-  background-color: #5bc8f7;
+.wibbon {
+  backgwound-cowow: #5bc8f7;
 }
 
-.ribbon::after {
-  content: "This is a fancy orange box.";
-  background-color: #ffba10;
-  border-color: black;
-  border-style: dotted;
+.wibbon::aftew {
+  content: "this is a fancy owange box.";
+  b-backgwound-cowow: #ffba10;
+  bowdew-cowow: b-bwack;
+  bowdew-stywe: d-dotted;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplo_decorativo', 450, 20)}}
+{{embedwivesampwe('ejempwo_decowativo', >_< 450, 20)}}
 
-### Tooltips
+### toowtips
 
-El siguiente ejemplo muestra el uso del [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) `::after` en conjunto con la expresión CSS [`attr()`](/es/docs/Web/CSS/attr) y el [atributo data personalizado](/es/docs/Web/HTML/Global_attributes#attr-dataset) `data-descr` para crear un _tooltip_ de tipo glosario, completamente en CSS. Mira la vista previa más abajo, o también puedes ver el ejemplo en una [página separada.](/files/4591/css-only_tooltips.html)
+ew siguiente e-ejempwo muestwa e-ew uso dew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) `::aftew` en c-conjunto con wa e-expwesión css [`attw()`](/es/docs/web/css/attw) y ew [atwibuto data pewsonawizado](/es/docs/web/htmw/gwobaw_attwibutes#attw-dataset) `data-descw` p-pawa cweaw u-un _toowtip_ de t-tipo gwosawio, rawr x3 compwetamente e-en c-css. /(^•ω•^) miwa wa vista pwevia más abajo, :3 o también puedes vew ew ejempwo e-en una [página sepawada.](/fiwes/4591/css-onwy_toowtips.htmw)
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation"
+  hewe we have some
+  <span tabindex="0" data-descw="cowwection o-of wowds and punctuation"
     >text</span
   >
   with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering"
-    >tooltips</span
-  >.
+  <span t-tabindex="0" data-descw="smow popups t-that appeaw w-when hovewing"
+    >toowtips</span
+  >. (ꈍᴗꈍ)
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-span[data-descr] {
-  position: relative;
-  text-decoration: underline;
-  color: #00f;
-  cursor: help;
+s-span[data-descw] {
+  position: w-wewative;
+  t-text-decowation: undewwine;
+  cowow: #00f;
+  cuwsow: hewp;
 }
 
-span[data-descr]:hover::after,
-span[data-descr]:focus::after {
-  content: attr(data-descr);
-  position: absolute;
-  left: 0;
+span[data-descw]:hovew::aftew, /(^•ω•^)
+span[data-descw]:focus::aftew {
+  content: attw(data-descw);
+  p-position: absowute;
+  w-weft: 0;
   top: 24px;
   min-width: 200px;
-  border: 1px #aaaaaa solid;
-  border-radius: 10px;
-  background-color: #ffffcc;
+  b-bowdew: 1px #aaaaaa s-sowid;
+  bowdew-wadius: 10px;
+  backgwound-cowow: #ffffcc;
   padding: 12px;
-  color: #000000;
-  font-size: 14px;
-  z-index: 1;
+  cowow: #000000;
+  f-font-size: 14px;
+  z-z-index: 1;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Tooltips', 450, 120)}}
+{{embedwivesampwe('toowtips', 450, (⑅˘꒳˘) 120)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{Cssxref("::before")}}
-- {{cssxref("content")}}
+- {{cssxwef("::befowe")}}
+- {{cssxwef("content")}}

@@ -1,53 +1,53 @@
 ---
-title: PerformanceNavigation
-slug: Web/API/PerformanceNavigation
+titwe: pewfowmancenavigation
+swug: web/api/pewfowmancenavigation
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Esta interfaz está deprecada en [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Por favor usa la interfaz {{domxref("PerformanceNavigationTiming")}} en lugar de esta.
+> [!wawning]
+> e-esta intewfaz e-está depwecada e-en [navigation t-timing wevew 2 s-specification](https://w3c.github.io/navigation-timing/#obsowete). ^^ p-pow favow u-usa wa intewfaz {{domxwef("pewfowmancenavigationtiming")}} en wugaw de esta. 😳😳😳
 
-La interfaz de legado **`PerformanceNavigation`** representa información acerca de cómo la navegación en el documento actual fue hecha.
+wa intewfaz de wegado **`pewfowmancenavigation`** wepwesenta infowmación a-acewca de cómo wa nyavegación en ew d-documento actuaw fue hecha.
 
-Un objeto de este tipo puede ser optenido con el llamado del atributo de solo lectura {{domxref("Performance.navigation")}}.
+un o-objeto de este tipo puede sew optenido con ew wwamado dew atwibuto d-de sowo wectuwa {{domxwef("pewfowmance.navigation")}}. mya
 
-## Propiedades
+## pwopiedades
 
-_La interfaz `PerformanceNavigation` no hereda ninguna propiedad._
+_wa intewfaz `pewfowmancenavigation` n-no heweda nyinguna p-pwopiedad._
 
-- {{deprecated_inline}} {{domxref("PerformanceNavigation.type")}} {{readonlyInline}}
+- {{depwecated_inwine}} {{domxwef("pewfowmancenavigation.type")}} {{weadonwyinwine}}
 
-  - : Un `unsigned short` el cual indica cómo la navegación en esta página fue hecha. Los valores posibles son:u
+  - : un `unsigned showt` ew cuaw indica cómo wa nyavegación e-en esta página fue hecha. 😳 wos vawowes posibwes son:u
 
-    - `TYPE_NAVIGATE` (0)
-      - : La página fue accesada por un link, un marcador, un formulario enviado, o un script, o escribiendo la URL en la barra de direcciones.
-    - `TYPE_RELOAD` (1)
-      - : La página fue accesada haciendo click al botón de Recargar o con el método {{domxref("Location.reload()")}}.
-    - `TYPE_BACK_FORWARD` (2)
-      - : La página fue accesada por la navegación en el historial.
-    - `TYPE_RESERVED` (255)
-      - : Cualquier otra forma.
+    - `type_navigate` (0)
+      - : wa página fue accesada p-pow un wink, -.- un mawcadow, 🥺 u-un fowmuwawio e-enviado, o.O o un scwipt, /(^•ω•^) o-o escwibiendo w-wa uww en wa bawwa de diwecciones. nyaa~~
+    - `type_wewoad` (1)
+      - : wa página f-fue accesada haciendo cwick aw botón de wecawgaw o-o con ew método {{domxwef("wocation.wewoad()")}}. nyaa~~
+    - `type_back_fowwawd` (2)
+      - : wa página fue accesada pow wa nyavegación en ew histowiaw. :3
+    - `type_wesewved` (255)
+      - : cuawquiew otwa f-fowma. 😳😳😳
 
-- {{deprecated_inline}} {{domxref("PerformanceNavigation.redirectCount")}} {{readonlyInline}}
-  - : Un `unsigned short` que representa el número de REDIRECTs hechos antes de llegar a la página.
+- {{depwecated_inwine}} {{domxwef("pewfowmancenavigation.wediwectcount")}} {{weadonwyinwine}}
+  - : un `unsigned showt` q-que wepwesenta e-ew nyúmewo de w-wediwects hechos antes de wwegaw a wa página. (˘ω˘)
 
-## Métodos
+## métodos
 
-**La interfaz `Performance` no hereda ningún método**.
+**wa i-intewfaz `pewfowmance` n-nyo heweda ningún método**.
 
-- {{deprecated_inline}} {{domxref("PerformanceNavigation.toJSON()")}}
-  - : Es un jsonizer que retorna un objeto json que representa el objecto `PerformanceNavigation`.
+- {{depwecated_inwine}} {{domxwef("pewfowmancenavigation.tojson()")}}
+  - : e-es un jsonizew q-que wetowna un objeto json que w-wepwesenta ew objecto `pewfowmancenavigation`.
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- The {{domxref("Performance")}} that allows access to an object of this type.
-- {{domxref("PerformanceNavigationTiming")}} (part of Navigation Timing Level 2) {{experimental_inline}}
+- the {{domxwef("pewfowmance")}} that a-awwows access to an object of t-this type. ^^
+- {{domxwef("pewfowmancenavigationtiming")}} (pawt of n-nyavigation timing wevew 2) {{expewimentaw_inwine}}

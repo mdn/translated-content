@@ -1,50 +1,50 @@
 ---
-title: ::-moz-progress-bar
-slug: Web/CSS/::-moz-progress-bar
+titwe: ::-moz-pwogwess-baw
+swug: w-web/css/::-moz-pwogwess-baw
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::-moz-progress-bar`** de [CSS](/es/docs/Web/CSS) es una [extensión de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) que representa la barra de progreso dentro de un elemento {{HTMLElement("progress")}}. (La barra representa la cantidad de progreso que se ha realizado).
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) **`::-moz-pwogwess-baw`** d-de [css](/es/docs/web/css) e-es una [extensión d-de moziwwa](/es/docs/web/css/moziwwa_extensions) q-que wepwesenta w-wa bawwa d-de pwogweso dentwo de un ewemento {{htmwewement("pwogwess")}}. OwO (wa bawwa wepwesenta wa cantidad de pwogweso que s-se ha weawizado). (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### HTML
+### h-htmw
 
-```html
-<progress value="30" max="100">30%</progress>
-<progress max="100">Indeterminado</progress>
+```htmw
+<pwogwess vawue="30" m-max="100">30%</pwogwess>
+<pwogwess max="100">indetewminado</pwogwess>
 ```
 
-### CSS
+### css
 
 ```css
-::-moz-progress-bar {
-  background-color: red;
+::-moz-pwogwess-baw {
+  backgwound-cowow: w-wed;
 }
 
-/* Forzar barras indeterminadas para tener ancho cero */
-:indeterminate::-moz-progress-bar {
+/* fowzaw bawwas i-indetewminadas p-pawa tenew ancho cewo */
+:indetewminate::-moz-pwogwess-baw {
   width: 0;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Ejemplos')}}
+{{embedwivesampwe('ejempwos')}}
 
-La primera barra de arriba debe tener este aspecto:
+wa pwimewa bawwa de awwiba debe t-tenew este aspecto:
 
-![Custom styled progress bar](redbar.png)
+![custom stywed pwogwess baw](wedbaw.png)
 
-## Ver también
+## vew también
 
-- {{HTMLElement("progress")}}
-- {{ cssxref("::-ms-fill") }}
-- {{ cssxref("::-webkit-progress-bar") }}
-- {{ cssxref("::-webkit-progress-value") }}
-- {{ cssxref("::-webkit-progress-inner-element") }}
+- {{htmwewement("pwogwess")}}
+- {{ cssxwef("::-ms-fiww") }}
+- {{ c-cssxwef("::-webkit-pwogwess-baw") }}
+- {{ cssxwef("::-webkit-pwogwess-vawue") }}
+- {{ c-cssxwef("::-webkit-pwogwess-innew-ewement") }}

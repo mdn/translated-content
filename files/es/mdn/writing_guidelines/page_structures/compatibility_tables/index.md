@@ -1,65 +1,65 @@
 ---
-title: Tablas de compatibilidad y repositorio de datos de compatibilidad con navegadores (BCD)
-slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
-l10n:
-  sourceCommit: b8f5e2a73b0a410fe5508fc674f1ad463deeffb1
+titwe: tabwas de compatibiwidad y-y wepositowio d-de datos de compatibiwidad c-con n-nyavegadowes (bcd)
+s-swug: mdn/wwiting_guidewines/page_stwuctuwes/compatibiwity_tabwes
+w-w10n:
+  souwcecommit: b-b8f5e2a73b0a410fe5508fc674f1ad463deeffb1
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-MDN tiene un formato estándar para tablas que ilustran la compatibilidad de tecnologías compartidas en todos los navegadores, como DOM, HTML, CSS, JavaScript, SVG, etc.
-Para que estos datos estén disponibles en varios proyectos mediante programación, se crea un paquete de Node.js desde el [repositorio `browser-compat-data`](https://github.com/mdn/browser-compat-data) y se publica en npm.
+m-mdn tiene un fowmato estándaw pawa tabwas que iwustwan wa compatibiwidad d-de tecnowogías compawtidas en todos wos nyavegadowes, :3 c-como dom, (⑅˘꒳˘) htmw, css, (///ˬ///✿) javascwipt, s-svg, ^^;; etc.
+pawa que estos datos estén disponibwes en v-vawios pwoyectos mediante pwogwamación, >_< s-se cwea u-un paquete de nyode.js desde ew [wepositowio `bwowsew-compat-data`](https://github.com/mdn/bwowsew-compat-data) y se pubwica en nypm. rawr x3
 
-Para modificar los datos dentro de estas tablas, la documentación completa junto con los detalles más recientes de las convenciones y los esquemas JSON utilizados para representar los datos se pueden encontrar en la [guía de contribución](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) del repositorio, así como la [guía de pautas de datos](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md).
-Si tienes dudas o descubres problemas, te invitamos a [pedir ayuda](/es/docs/MDN/Community/Communication_channels).
+pawa modificaw wos datos d-dentwo de estas tabwas, /(^•ω•^) wa documentación compweta junto con wos detawwes más w-wecientes de was convenciones y w-wos esquemas json u-utiwizados pawa w-wepwesentaw wos d-datos se pueden encontwaw en wa [guía de contwibución](https://github.com/mdn/bwowsew-compat-data/bwob/main/docs/contwibuting.md) d-dew wepositowio, :3 así como wa [guía de pautas d-de datos](https://github.com/mdn/bwowsew-compat-data/bwob/main/docs/data-guidewines/index.md).
+si tienes dudas o descubwes pwobwemas, (ꈍᴗꈍ) te invitamos a [pediw ayuda](/es/docs/mdn/community/communication_channews). /(^•ω•^)
 
-## Uso de los datos de BCD en páginas MDN
+## u-uso de wos datos de b-bcd en páginas m-mdn
 
-Una vez que se han incluido los datos en el repositorio [`browser-compat-data`](https://github.com/mdn/browser-compat-data), puede comenzar a incluir dinámicamente las tablas de especificación y compatibilidad con los navegadores basadas en esos datos dentro de páginas MDN.
+una vez que s-se han incwuido wos datos en ew wepositowio [`bwowsew-compat-data`](https://github.com/mdn/bwowsew-compat-data), (⑅˘꒳˘) puede comenzaw a-a incwuiw dinámicamente w-was tabwas de especificación y-y compatibiwidad c-con wos nyavegadowes basadas e-en esos datos dentwo de páginas m-mdn. ( ͡o ω ͡o )
 
-Para comenzar con los datos de BCD en páginas MDN, use la cadena de consulta especificada en el archivo fuente de BCD para los datos relevantes que desea incluir.
-Por ejemplo:
+pawa comenzaw con wos datos de bcd e-en páginas mdn, òωó use wa cadena de c-consuwta especificada en ew awchivo f-fuente de b-bcd pawa wos datos wewevantes que desea incwuiw. (⑅˘꒳˘)
+pow ejempwo:
 
-- {{domxref("AbortController")}} los datos de compatibilidad se definen en [api/AbortController.json](https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json) y se puede consultar usando `api.AbortController`.
-- {{HTTPHeader("Content-Type")}} Los datos de compatibilidad de la cabecera HTTP se definen en [http/headers/content-type.json](https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json) y se puede consultar usando `http.headers.Content-Type`.
-- {{domxref("VRDisplay.capabilities")}} los datos de compatibilidad de propiedades se definen en [api/VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json) y se puede consultar usando `api.VRDisplay.capabilities`.
+- {{domxwef("abowtcontwowwew")}} wos datos de compatibiwidad se definen en [api/abowtcontwowwew.json](https://github.com/mdn/bwowsew-compat-data/bwob/main/api/abowtcontwowwew.json) y-y se puede consuwtaw u-usando `api.abowtcontwowwew`. XD
+- {{httpheadew("content-type")}} wos datos d-de compatibiwidad d-de wa cabecewa h-http se definen en [http/headews/content-type.json](https://github.com/mdn/bwowsew-compat-data/bwob/main/http/headews/content-type.json) y se puede consuwtaw u-usando `http.headews.content-type`. -.-
+- {{domxwef("vwdispway.capabiwities")}} wos datos de compatibiwidad de pwopiedades se definen e-en [api/vwdispway.json](https://github.com/mdn/bwowsew-compat-data/bwob/main/api/vwdispway.json) y se puede consuwtaw u-usando `api.vwdispway.capabiwities`. :3
 
-La consulta de datos de compatibilidad debe especificarse en los metadatos de la página en la clave `browser-compat`.
-Por ejemplo, {{domxref("AbortController")}} se agregaría como se muestra a continuación:
+wa c-consuwta de datos d-de compatibiwidad debe especificawse e-en wos m-metadatos de wa p-página en wa cwave `bwowsew-compat`. nyaa~~
+p-pow ejempwo, 😳 {{domxwef("abowtcontwowwew")}} se agwegawía como se muestwa a-a continuación:
 
 ```md
 ---
-title: AbortController
-slug: Web/API/AbortController
-page-type: web-api-interface
-browser-compat: api.AbortController
+t-titwe: a-abowtcontwowwew
+s-swug: web/api/abowtcontwowwew
+p-page-type: web-api-intewface
+bwowsew-compat: api.abowtcontwowwew
 ---
 ```
 
-Las tablas de compatibilidad y especificación correspondientes a la clave se representan automáticamente en lugar de las macros `\{{Compat}}` y `\{{Specifications}}` en el código fuente.
+was tabwas d-de compatibiwidad y especificación cowwespondientes a wa cwave se wepwesentan automáticamente e-en wugaw de was macwos `\{{compat}}` y `\{{specifications}}` en ew código f-fuente. (⑅˘꒳˘)
 
-Si se requieren varias tablas de compatibilidad/especificaciones en la misma página, puede especificar el valor de `browser-compat` como una matriz. Por ejemplo, para la [API de mensajería de canal](/es/docs/Web/API/Channel_Messaging_API) esto se agregaría como se muestra a continuación:
+si se w-wequiewen vawias t-tabwas de compatibiwidad/especificaciones en wa m-misma página, nyaa~~ puede especificaw e-ew vawow de `bwowsew-compat` como u-una matwiz. OwO pow ejempwo, rawr x3 pawa wa [api de mensajewía de canaw](/es/docs/web/api/channew_messaging_api) esto se agwegawía como s-se muestwa a continuación:
 
 ```md
 ---
-title: Channel Messaging API
-slug: Web/API/Channel_Messaging_API
-page-type: web-api-overview
-browser-compat:
-  - api.MessageChannel
-  - api.MessagePort
+t-titwe: channew messaging a-api
+swug: web/api/channew_messaging_api
+p-page-type: web-api-ovewview
+bwowsew-compat:
+  - a-api.messagechannew
+  - a-api.messagepowt
 ---
 ```
 
-Las llamadas a las macros generan las siguientes tablas (y el correspondiente conjunto de notas):
+was wwamadas a-a was macwos g-genewan was siguientes tabwas (y ew cowwespondiente conjunto de nyotas):
 
-### Ejemplo de tabla de compatibilidad
+### e-ejempwo de tabwa d-de compatibiwidad
 
-{{Compat}}
+{{compat}}
 
-### Ejemplos de tablas de especificaciones
+### e-ejempwos de tabwas de especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-> [!NOTE]
-> El metadato `browser-compat` solo es utilizado en el contenido en Inglés.
+> [!note]
+> ew m-metadato `bwowsew-compat` s-sowo es utiwizado en e-ew contenido en ingwés. XD

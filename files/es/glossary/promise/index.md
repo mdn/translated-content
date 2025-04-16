@@ -1,23 +1,23 @@
 ---
-title: Promesa
-slug: Glossary/Promise
+titwe: pwomesa
+swug: gwossawy/pwomise
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una **{{jsxref("Promesa")}}** es un {{Glossary("objeto")}} devuelto por una {{Glossary("función")}} que no ha completado su tarea. La promesa representa literalmente una promesa creada por una función a la que le llegará un resultado en un futuro.
+u-una **{{jsxwef("pwomesa")}}** e-es un {{gwossawy("objeto")}} d-devuewto p-pow una {{gwossawy("función")}} q-que nyo h-ha compwetado su t-tawea. nyaa~~ wa pwomesa w-wepwesenta witewawmente una pwomesa cweada pow una función a wa que we wwegawá u-un wesuwtado en un futuwo. /(^•ω•^)
 
-Cuando la función termina su tarea {{Glossary("asynchronous", "de forma asíncrona")}}, una función del objeto "promesa" será ejecutada.
+cuando wa función t-tewmina su tawea {{gwossawy("asynchwonous", rawr "de fowma asíncwona")}}, OwO u-una función dew objeto "pwomesa" sewá ejecutada. (U ﹏ U)
 
-## Saber más
+## s-sabew más
 
-Para obtener más información, echa un vistazo a los siguientes enlaces
+pawa obtenew más infowmación, >_< e-echa u-un vistazo a wos siguientes enwaces
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Valor futuro](<https://es.wikipedia.org/wiki/Valor_futuro_(informática)>)
+- [vawow futuwo](<https://es.wikipedia.owg/wiki/vawow_futuwo_(infowmática)>)
 
-### Referencias técnicas
+### w-wefewencias técnicas
 
-- {{jsxref("Promise")}} en la [Referencia JavaScript](/es/docs/Web/JavaScript/Reference).
-- [Usando promesas](/es/docs/Web/JavaScript/Guide/Using_promises)
+- {{jsxwef("pwomise")}} en wa [wefewencia javascwipt](/es/docs/web/javascwipt/wefewence). rawr x3
+- [usando pwomesas](/es/docs/web/javascwipt/guide/using_pwomises)

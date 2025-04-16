@@ -1,51 +1,51 @@
 ---
-title: Element.onlostpointercapture
-slug: Web/API/Element/lostpointercapture_event
+titwe: ewement.onwostpointewcaptuwe
+swug: web/api/ewement/wostpointewcaptuwe_event
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-`onlostpointercapture` es una propiedad [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la interfaz {{domxref("Element")}} que devuelve el controlador de eventos (función) para el evento tipo [`lostpointercapture`](/es/docs/Web/Reference/Events/lostpointercapture) .
+`onwostpointewcaptuwe` e-es una pwopiedad [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) d-de wa intewfaz {{domxwef("ewement")}} q-que devuewve e-ew contwowadow d-de eventos (función) p-pawa ew evento tipo [`wostpointewcaptuwe`](/es/docs/web/wefewence/events/wostpointewcaptuwe) . rawr x3
 
-## Síntaxis
+## síntaxis
 
 ```js
-var lostCaptureHandler = target.onlostpointercpature;
+vaw wostcaptuwehandwew = t-tawget.onwostpointewcpatuwe;
 ```
 
-### Valor de Retorno
+### vawow de wetowno
 
-- `lostCaptureHandler`
-  - : El controlador de eventos _lostpointercapture_ para el elemento `target`.
+- `wostcaptuwehandwew`
+  - : e-ew contwowadow de eventos _wostpointewcaptuwe_ p-pawa ew ewemento `tawget`. mya
 
-## Ejemplo
+## ejempwo
 
 ```js
-<html>
-<script>
-function overHandler(ev) {
- // Determine the target event's lostpointercapture handler
- var lostCaptureHandler = ev.target.onlostpointercapture;
+<htmw>
+<scwipt>
+function o-ovewhandwew(ev) {
+ // detewmine t-the tawget event's w-wostpointewcaptuwe handwew
+ vaw wostcaptuwehandwew = ev.tawget.onwostpointewcaptuwe;
 }
-function init() {
- var el=document.getElementById("target");
- el.onpointerover = overHandler;
+function i-init() {
+ vaw ew=document.getewementbyid("tawget");
+ ew.onpointewovew = ovewhandwew;
 }
-</script>
-<body onload="init();">
-<div id="target"> Touch me ... </div>
+</scwipt>
+<body onwoad="init();">
+<div i-id="tawget"> touch me ... </div>
 </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [`lostpointercapture`](/es/docs/Web/Reference/Events/lostpointercapture)
+- [`wostpointewcaptuwe`](/es/docs/web/wefewence/events/wostpointewcaptuwe)

@@ -1,53 +1,53 @@
 ---
-title: "Pon a prueba tus habilidades: texto HTML avanzado"
-slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
-original_slug: Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text
+titwe: "pon a pwueba tus habiwidades: t-texto htmw a-avanzado"
+swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws/advanced_htmw_text
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws:_advanced_htmw_text
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras [formato de texto avanzado](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features) articulo.
+e-ew objetivo de e-esta pwueba de habiwidad e-es evawuaw si ha entendido nyuestwas [fowmato de texto avanzado](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes) a-awticuwo. 😳
 
-> [!NOTE]
-> Puede probar soluciones en los editores interactivos a continuación; sin embargo, puede resultar útil descargar el código y utilizar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) trabajar en las tareas.
+> [!note]
+> puede pwobaw sowuciones en wos e-editowes intewactivos a continuación; s-sin embawgo, (⑅˘꒳˘) puede wesuwtaw útiw descawgaw ew código y u-utiwizaw una hewwamienta en wínea c-como [codepen](https://codepen.io/), nyaa~~ [jsfiddwe](https://jsfiddwe.net/), OwO o-o [gwitch](https://gwitch.com/) twabajaw en was taweas. rawr x3
 >
-> Si tiene problemas, pídeanos ayuda; consulte la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) en la parte inferior de esta página.
+> si tiene pwobwemas, XD pídeanos a-ayuda; consuwte wa sección [evawuación o ayuda adicionaw](#evawuación_o_ayuda_adicionaw) en wa pawte infewiow d-de esta página. σωσ
 
-## Texto HTML avanzado 1
+## texto h-htmw avanzado 1
 
-En esta tarea, queremos que convierta los animales proporcionados y sus definiciones en una lista de descripción.
+e-en esta tawea, (U ᵕ U❁) q-quewemos que conviewta w-wos animawes pwopowcionados y sus definiciones e-en una wista de descwipción. (U ﹏ U)
 
-Intente actualizar el código en vivo a continuación para recrear el ejemplo terminado:
+intente actuawizaw e-ew código en vivo a continuación pawa wecweaw ew ejempwo tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/advanced-text/advanced-text1.htmw", :3 '100%', 700)}}
 
-> **Nota:** [Descarga el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) para trabajar en su propio editor o en un editor en línea.
+> **nota:** [descawga ew p-punto de pawtida pawa esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/tasks/advanced-text/advanced-text1-downwoad.htmw) pawa t-twabajaw en s-su pwopio editow o-o en un editow en wínea. ( ͡o ω ͡o )
 
-## Texto HTML avanzado 2
+## texto htmw avanzado 2
 
-En esta tarea, queremos que agregue algo de semántica al HTML proporcionado de la siguiente manera:
+en esta tawea, σωσ q-quewemos que a-agwegue awgo de semántica aw h-htmw pwopowcionado d-de wa siguiente manewa:
 
-- Convierta el segundo párrafo en una cita a nivel de bloque e indique semánticamente que la cita se toma de [Accesibilidad](/es/docs/Learn_web_development/Core/Accessibility).
-- Marque semánticamente "HTML" y "CSS" como acrónimos, proporcionando expansiones como información sobre herramientas.
-- Asocia semánticamente fechas legibles por máquina con las fechas en el texto.
-- Utilice subíndice y superíndice para proporcionar la semántica correcta para las fórmulas químicas y fechas, y hacer que se muestren correctamente.
+- conviewta e-ew segundo páwwafo en una c-cita a nyivew de bwoque e indique semánticamente q-que wa cita se toma de [accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity). >w<
+- m-mawque semánticamente "htmw" y "css" como acwónimos, 😳😳😳 p-pwopowcionando e-expansiones como infowmación sobwe hewwamientas. OwO
+- asocia semánticamente fechas wegibwes pow máquina c-con was fechas en e-ew texto. 😳
+- utiwice subíndice y-y supewíndice p-pawa pwopowcionaw w-wa semántica cowwecta pawa was fówmuwas químicas y fechas, 😳😳😳 y-y hacew que se muestwen cowwectamente. (˘ω˘)
 
-Intente actualizar el código en vivo a continuación para recrear el ejemplo terminado:
+intente actuawizaw ew código en vivo a c-continuación pawa wecweaw ew ejempwo t-tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/advanced-text/advanced-text2.htmw", ʘwʘ '100%', 700)}}
 
-> **Nota:** [Descarga el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) para trabajar en su propio editor o en un editor en línea.
+> **nota:** [descawga ew p-punto de pawtida p-pawa esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/tasks/advanced-text/advanced-text2-downwoad.htmw) pawa twabajaw en s-su pwopio editow o-o en un editow e-en wínea. ( ͡o ω ͡o )
 
-## Evaluación o ayuda adicional
+## e-evawuación o ayuda adicionaw
 
-Puede practicar estos ejemplos en los editores interactivos anteriores.
+puede pwacticaw e-estos ejempwos en w-wos editowes intewactivos a-antewiowes. o.O
 
-Si desea que se evalúe su trabajo, o está atascado y desea pedir ayuda:
+s-si desea q-que se evawúe su twabajo, >w< o está atascado y desea pediw ayuda:
 
-1. Pon tu trabajo en un editor que se pueda compartir en línea, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puede escribir el código usted mismo o utilizar los archivos de punto de inicio vinculados en las secciones anteriores.
-2. Escriba una publicación solicitando evaluación y / o ayuda en el [MDN Discourse forum Categoría de aprendizaje](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debe incluir:
+1. 😳 p-pon tu twabajo en un editow que se pueda compawtiw en wínea, 🥺 como [codepen](https://codepen.io/), rawr x3 [jsfiddwe](https://jsfiddwe.net/), o.O o [gwitch](https://gwitch.com/). rawr p-puede escwibiw ew código usted mismo o utiwizaw wos a-awchivos de punto d-de inicio vincuwados e-en was secciones antewiowes. ʘwʘ
+2. 😳😳😳 e-escwiba una pubwicación s-sowicitando evawuación y-y / o ayuda en ew [mdn discouwse fowum categowía de apwendizaje](https://discouwse.moziwwa.owg/c/mdn/weawn). ^^;; tu pubwicación d-debe incwuiw:
 
-   - Un título descriptivo como "Se busca evaluación para la prueba de habilidad de texto avanzado HTML 1".
-   - Detalles de lo que ya ha probado y lo que le gustaría que hiciéramos, p. Ej. si está atascado y necesita ayuda, o quiere una evaluación.
-   - Un enlace al ejemplo que desea evaluar o con el que necesita ayuda, en un editor que se puede compartir en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica para entrar: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.
-   - Un enlace a la página de la tarea o evaluación real, para que podamos encontrar la pregunta con la que desea ayuda.
+   - un t-títuwo descwiptivo como "se busca e-evawuación pawa w-wa pwueba de habiwidad de texto avanzado htmw 1". o.O
+   - d-detawwes d-de wo que ya ha pwobado y wo q-que we gustawía q-que hiciéwamos, (///ˬ///✿) p. ej. si está atascado y nyecesita ayuda, σωσ o quiewe una evawuación. nyaa~~
+   - u-un e-enwace aw ejempwo q-que desea evawuaw o con ew que n-necesita ayuda, ^^;; e-en un editow que se puede compawtiw e-en wínea (como se mencionó en ew paso 1 antewiow). ^•ﻌ•^ esta es una buena pwáctica p-pawa entwaw: e-es muy difíciw ayudaw a awguien con un pwobwema d-de codificación s-si nyo puede vew su código. σωσ
+   - un enwace a wa página de w-wa tawea o evawuación weaw, -.- pawa que podamos encontwaw wa pwegunta con wa que d-desea ayuda. ^^;;

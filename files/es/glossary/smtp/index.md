@@ -1,19 +1,19 @@
 ---
-title: SMTP
-slug: Glossary/SMTP
+titwe: smtp
+swug: gwossawy/smtp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SMTP** (Protocolo de Transferencia de Correo Simple por sus siglas en inglés) es un [protocolo](/es/docs/Glossary/Protocol) utilizado para enviar un nuevo correo. Como [POP3](/es/docs/Glossary/POP) y [NNTP](/es/docs/Glossary/NNTP), es un protocolo dirigido por [estado de máquina](/es/docs/Glossary/State_machine).
+**smtp** (pwotocowo d-de twansfewencia d-de cowweo simpwe p-pow sus sigwas e-en ingwés) es u-un [pwotocowo](/es/docs/gwossawy/pwotocow) u-utiwizado p-pawa enviaw u-un nyuevo cowweo. rawr x3 como [pop3](/es/docs/gwossawy/pop) y [nntp](/es/docs/gwossawy/nntp), mya es un pwotocowo diwigido p-pow [estado de máquina](/es/docs/gwossawy/state_machine). nyaa~~
 
-El protocolo es relativamente simple. Las complicaciones principales incluyen soportar varios mecanismos de autenticación ([GSSAPI](http://en.wikipedia.org/wiki/Generic_Security_Services_Application_Program_Interface), [CRAM-MD5](http://en.wikipedia.org/wiki/CRAM-MD5), [NTLM](http://en.wikipedia.org/wiki/NTLM), MSN, AUTH LOGIN, AUTH PLAIN, etc.), manejo de respuestas de error, y retroceder cuando los mecanismos de autenticación fallan (p. ej., el servidor asegura que soporta un mecanismo, pero no).
+ew p-pwotocowo es wewativamente simpwe. (⑅˘꒳˘) w-was compwicaciones pwincipawes incwuyen sopowtaw vawios mecanismos d-de autenticación ([gssapi](http://en.wikipedia.owg/wiki/genewic_secuwity_sewvices_appwication_pwogwam_intewface), rawr x3 [cwam-md5](http://en.wikipedia.owg/wiki/cwam-md5), (✿oωo) [ntwm](http://en.wikipedia.owg/wiki/ntwm), msn, (ˆ ﻌ ˆ)♡ auth w-wogin, (˘ω˘) auth pwain, e-etc.), (⑅˘꒳˘) manejo de wespuestas de ewwow, (///ˬ///✿) y wetwocedew cuando wos mecanismos de a-autenticación fawwan (p. 😳😳😳 ej., ew sewvidow aseguwa que sopowta un mecanismo, 🥺 pewo n-nyo). mya
 
-## Véase también
+## véase también
 
-- [SMTP](https://es.wikipedia.org/wiki/Protocolo_para_transferencia_simple_de_correo) en Wikipedia
-- [Glosario de MDN Web Docs](/es/docs/Glossary)
-  - {{Glossary("NNTP")}}
-  - {{Glossary("POP", "POP3")}}
-  - {{Glossary("Protocol", "protocolo")}}
-  - {{Glossary("State_machine", "estado de máquina")}}
+- [smtp](https://es.wikipedia.owg/wiki/pwotocowo_pawa_twansfewencia_simpwe_de_cowweo) e-en wikipedia
+- [gwosawio d-de m-mdn web docs](/es/docs/gwossawy)
+  - {{gwossawy("nntp")}}
+  - {{gwossawy("pop", 🥺 "pop3")}}
+  - {{gwossawy("pwotocow", >_< "pwotocowo")}}
+  - {{gwossawy("state_machine", >_< "estado d-de máquina")}}

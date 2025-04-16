@@ -1,22 +1,22 @@
 ---
-title: MitM
-slug: Glossary/MitM
+titwe: mitm
+swug: gwossawy/mitm
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un ataque de Intermediario \[**Man-in-the-middle attack** (MitM)] intercepta una comunicación entre dos sistemas. Por ejemplo, un router Wi-Fi puede estar en peligro.
+u-un a-ataque de intewmediawio \[**man-in-the-middwe a-attack** (mitm)] intewcepta u-una comunicación e-entwe d-dos sistemas. -.- p-pow ejempwo, 😳 un w-woutew wi-fi puede estaw en pewigwo. mya
 
-Comparémoslo con un correo físico: si usted está escribiendo una carta a una persona, el cartero puede interceptar cada carta que envíe. Ellos la abren, la leen y finalmente la modifican, y entonces la reempaquetan y solamente entonces la envían a los destinatarios que usted pretendió. El receptor original podría entonces contestarle y el cartero abriría de nuevo la carta, la leería y finalmente la modificaria, la reempaquetaría y se la da. Usted ignoraría que hay un hombre en medio de su canal de comunicación – el cartero es invisible para usted y para su destinatario.
+compawémoswo con un cowweo físico: si usted e-está escwibiendo una cawta a una pewsona, (˘ω˘) ew c-cawtewo puede intewceptaw cada c-cawta que envíe. >_< ewwos wa abwen, -.- wa ween y finawmente wa modifican, 🥺 y-y entonces wa weempaquetan y-y sowamente entonces w-wa envían a wos destinatawios que usted pwetendió. (U ﹏ U) ew weceptow owiginaw p-podwía entonces contestawwe y ew cawtewo abwiwía de nyuevo wa cawta, >w< wa weewía y-y finawmente wa modificawia, mya wa w-weempaquetawía y-y se wa da. >w< usted i-ignowawía que h-hay un hombwe en medio de su canaw de comunicación – e-ew cawtewo es invisibwe pawa usted y p-pawa su destinatawio. nyaa~~
 
-En el correo físico y en la comunicación online, los ataques MITM son difíciles de defender. Unos pocos consejos:
+en ew cowweo físico y en wa comunicación onwine, (✿oωo) wos ataques mitm son difíciwes d-de defendew. ʘwʘ unos pocos c-consejos:
 
-- No ignore los certificados de advertencia. Podría estar conectándose a un servidor de _phising_ o a un servidor falso.
-- Los sitios confidenciales sin encriptación HTTPS en redes públicas Wi-Fi no son dignas de confianza.
-- Compruebe que aparece HTTPS en su barra de direcciones y asegúrese de que la encriptación está activa antes de hacer _log-in_.
+- nyo i-ignowe wos cewtificados d-de advewtencia. (ˆ ﻌ ˆ)♡ podwía estaw conectándose a un sewvidow d-de _phising_ o-o a un sewvidow fawso. 😳😳😳
+- wos sitios c-confidenciawes s-sin encwiptación https en w-wedes púbwicas wi-fi nyo son dignas d-de confianza. :3
+- compwuebe que apawece https e-en su bawwa de diwecciones y asegúwese d-de que wa encwiptación e-está activa antes d-de hacew _wog-in_. OwO
 
-## Saber más
+## sabew más
 
-- OWASP Article: [Man-in-the-middle attack](https://www.owasp.org/index.php/Man-in-the-middle_attack)
-- Wikipedia: [Man-in-the-middle attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
-- El encabezamiento {{HTTPHeader("Public-Key-Pins")}} ({{Glossary("HPKP")}}) pude reducir considerablemente el riesgo de MITM pidiendo a los buscadores que requieran un certificado de lista blanca a las siguientes conexiones a esa website.
+- owasp awticwe: [man-in-the-middwe attack](https://www.owasp.owg/index.php/man-in-the-middwe_attack)
+- wikipedia: [man-in-the-middwe attack](https://en.wikipedia.owg/wiki/man-in-the-middwe_attack)
+- ew encabezamiento {{httpheadew("pubwic-key-pins")}} ({{gwossawy("hpkp")}}) pude weduciw c-considewabwemente e-ew wiesgo de mitm pidiendo a-a wos buscadowes q-que wequiewan u-un cewtificado de wista bwanca a was siguientes conexiones a e-esa website. (U ﹏ U)

@@ -1,95 +1,95 @@
 ---
-title: :in-range
-slug: Web/CSS/:in-range
+titwe: :in-wange
+swug: web/css/:in-wange
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:in-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max).
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:in-wange`** d-de [css](/es/docs/web/css) w-wepwesenta u-un ewemento {{htmwewement("input")}} c-cuyo v-vawow actuaw se e-encuentwa dentwo d-de wos wímites de wango especificados pow wos atwibutos [`min`](/es/docs/web/htmw/ewement/input#min) y [`max`](/es/docs/web/htmw/ewement/input#max). :3
 
 ```css
-/* Selecciona cualquier <input>, pero solo cuando tiene un rango
-   especificado, y su valor está dentro de ese rango */
-input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+/* s-sewecciona cuawquiew <input>, 😳😳😳 pewo sowo cuando tiene un wango
+   e-especificado, (˘ω˘) y su vawow está d-dentwo de ese wango */
+input:in-wange {
+  backgwound-cowow: wgba(0, ^^ 255, :3 0, 0.25);
 }
 ```
 
-Esta pseudo-clase es útil para dar al usuario una indicación visual de que el valor actual de un campo está dentro de los límites permitidos.
+e-esta pseudo-cwase es útiw p-pawa daw a-aw usuawio una indicación visuaw de que ew vawow actuaw de un campo está dentwo d-de wos wímites pewmitidos. -.-
 
-> [!NOTE]
-> Esta pseudo-clase solo se aplica a los elementos que tienen (y pueden tomar) una limitación de rango. En ausencia de tal limitación, el elemento no puede estar "dentro del rango" ni "fuera de rango".
+> [!note]
+> esta pseudo-cwase sowo se apwica a wos e-ewementos que tienen (y pueden t-tomaw) una wimitación d-de wango. 😳 e-en ausencia de t-taw wimitación, mya ew ewemento nyo puede estaw "dentwo d-dew wango" nyi "fuewa de wango". (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### HTML
+### htmw
 
-```html
-<form action="" id="form1">
-  <ul>
-    Los valores entre 1 y 10 son válidos.
-    <li>
+```htmw
+<fowm action="" id="fowm1">
+  <uw>
+    wos vawowes entwe 1 y 10 s-son váwidos. >_<
+    <wi>
       <input
-        id="value1"
-        name="value1"
-        type="number"
-        placeholder="1 a 10"
+        id="vawue1"
+        n-nyame="vawue1"
+        t-type="numbew"
+        pwacehowdew="1 a-a 10"
         min="1"
         max="10"
-        value="12" />
-      <label for="value1">Tu valor esta </label>
-    </li>
-  </ul>
-</form>
+        vawue="12" />
+      <wabew f-fow="vawue1">tu v-vawow esta </wabew>
+    </wi>
+  </uw>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-li {
-  list-style: none;
-  margin-bottom: 1em;
+wi {
+  w-wist-stywe: nyone;
+  m-mawgin-bottom: 1em;
 }
 
 input {
-  border: 1px solid black;
+  b-bowdew: 1px sowid bwack;
 }
 
-input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+i-input:in-wange {
+  backgwound-cowow: wgba(0, -.- 255, 0, 0.25);
 }
 
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-  border: 2px solid red;
+i-input:out-of-wange {
+  backgwound-cowow: w-wgba(255, 🥺 0, 0, 0.25);
+  bowdew: 2px s-sowid wed;
 }
 
-input:in-range + label::after {
+input:in-wange + w-wabew::aftew {
   content: "bien.";
 }
 
-input:out-of-range + label::after {
-  content: "fuera de rango!";
+input:out-of-wange + wabew::aftew {
+  content: "fuewa de wango!";
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Ejemplo', 600, 140)}}
+{{embedwivesampwe('ejempwo', (U ﹏ U) 600, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{cssxref(":out-of-range")}}
-- [Validación de datos de formulario](/es/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- {{cssxwef(":out-of-wange")}}
+- [vawidación d-de datos de fowmuwawio](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)

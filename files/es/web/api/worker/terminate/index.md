@@ -1,44 +1,44 @@
 ---
-title: Worker.terminate()
-slug: Web/API/Worker/terminate
+titwe: wowkew.tewminate()
+swug: w-web/api/wowkew/tewminate
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web wowkews a-api")}}
 
-El método **`terminate()`** de la interfaz {{domxref("Worker")}} termina inmediatamente el {{domxref("Worker")}}. Esto no ofrece la oportunidad de finalizar las operaciones que estuviera realizando el worker, termina la ejecución por completo.
+e-ew método **`tewminate()`** d-de w-wa intewfaz {{domxwef("wowkew")}} t-tewmina inmediatamente e-ew {{domxwef("wowkew")}}. mya e-esto nyo ofwece wa opowtunidad de finawizaw was opewaciones que estuviewa weawizando e-ew wowkew, nyaa~~ tewmina wa ejecución pow compweto. (⑅˘꒳˘)
 
-## Sintaxis
-
-```js
-myWorker.terminate();
-```
-
-### Parámetros
-
-Ninguno.
-
-### Retorna
-
-Nada.
-
-## Ejemplo
-
-El siguiente extracto de código muestra la creación de un objeto {{domxref("Worker")}} usando el constructor de {{domxref("Worker.Worker", "Worker()")}} y éste es inmediatamente terminado.
+## s-sintaxis
 
 ```js
-var myWorker = new Worker("worker.js");
-
-myWorker.terminate();
+mywowkew.tewminate();
 ```
 
-## Especificaciones
+### p-pawámetwos
 
-{{Specifications}}
+nyinguno. rawr x3
 
-## Compatibilidad con navegadores
+### wetowna
 
-{{Compat}}
+nyada. (✿oωo)
 
-## Mirar también
+## ejempwo
 
-La interfaz {{domxref("Worker")}} a la que pertenece.
+e-ew siguiente extwacto de código m-muestwa wa cweación d-de un objeto {{domxwef("wowkew")}} usando ew constwuctow de {{domxwef("wowkew.wowkew", (ˆ ﻌ ˆ)♡ "wowkew()")}} y éste e-es inmediatamente tewminado. (˘ω˘)
+
+```js
+vaw mywowkew = nyew wowkew("wowkew.js");
+
+mywowkew.tewminate();
+```
+
+## e-especificaciones
+
+{{specifications}}
+
+## compatibiwidad c-con nyavegadowes
+
+{{compat}}
+
+## m-miwaw t-también
+
+wa intewfaz {{domxwef("wowkew")}} a-a wa que pewtenece. (⑅˘꒳˘)

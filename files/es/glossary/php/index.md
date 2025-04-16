@@ -1,59 +1,59 @@
 ---
-title: PHP
-slug: Glossary/PHP
-l10n:
-  sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
+titwe: php
+swug: gwossawy/php
+w-w10n:
+  souwcecommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-PHP (una inicialización recursiva para PHP: preprocesador de hipertexto) es un lenguaje de script de código abierto del lado del servidor que puede integrarse en HTML para crear aplicaciones web y sitios web dinámicos.
+p-php (una i-iniciawización w-wecuwsiva pawa p-php: pwepwocesadow d-de hipewtexto) e-es un wenguaje d-de scwipt de código abiewto dew wado dew sewvidow que puede integwawse en htmw p-pawa cweaw apwicaciones web y sitios web dinámicos. (⑅˘꒳˘)
 
-## Ejemplos
+## e-ejempwos
 
-### Sintaxis básica
+### sintaxis b-básica
 
 ```php
-// Comienzo del código PHP
+// comienzo dew código php
 <?php
-  // El código PHP va aquí
+  // ew código p-php va aquí
 ?>
-// Fin del código PHP
+// fin dew c-código php
 ```
 
-### Mostrar datos en pantalla
+### m-mostwaw datos en pantawwa
 
 ```php
 <?php
-  echo "¡Hola mundo!";
+  echo "¡howa mundo!";
 ?>
 ```
 
-### Variables PHP
+### vawiabwes php
 
 ```php
 <?php
-  // Variables
-  $nome='Danilo';
-  $sobrenome='Santos';
-  $pais='Brasil';
-  $email='danilocarsan@gmail.com';
+  // vawiabwes
+  $nome='daniwo';
+  $sobwenome='santos';
+  $pais='bwasiw';
+  $emaiw='daniwocawsan@gmaiw.com';
 
-  // Mostrando las variables
+  // m-mostwando was vawiabwes
   echo $nome;
-  echo $sobrenome;
+  echo $sobwenome;
   echo $pais;
-  echo $email;
+  echo $emaiw;
 ?>
 ```
 
-## Véase también
+## v-véase también
 
-- [Página web oficial](https://www.php.net/)
-- [PHP](https://es.wikipedia.org/wiki/PHP) en Wikipedia
-- [Programación PHP](https://en.wikibooks.org/wiki/PHP_Programming) en Wikibooks
-- [Glosario de documentos web de MDN](/es/docs/Glossary)
-  - {{Glossary("Java")}}
-  - {{Glossary("JavaScript")}}
-  - {{Glossary("Python")}}
-  - {{Glossary("Ruby")}}
+- [página web o-oficiaw](https://www.php.net/)
+- [php](https://es.wikipedia.owg/wiki/php) e-en wikipedia
+- [pwogwamación p-php](https://en.wikibooks.owg/wiki/php_pwogwamming) e-en wikibooks
+- [gwosawio de documentos w-web de mdn](/es/docs/gwossawy)
+  - {{gwossawy("java")}}
+  - {{gwossawy("javascwipt")}}
+  - {{gwossawy("python")}}
+  - {{gwossawy("wuby")}}

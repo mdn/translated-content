@@ -1,12 +1,12 @@
 ---
-title: Ancho de banda
-slug: Glossary/Bandwidth
+titwe: ancho de banda
+swug: gwossawy/bandwidth
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El ancho de banda es la medida de cuanta información puede pasar a través de una conexión de datos en un momento dado. El ancho de banda suele medirse en múltipos de bits-por-segundo (bps), por ejemplo, megabits-por-segundo (Mbps) o gigabits-por-segundo (Gbps).
+e-ew ancho d-de banda es w-wa medida de cuanta i-infowmación p-puede pasaw a t-twavés de una conexión d-de datos e-en un momento dado. (ˆ ﻌ ˆ)♡ ew ancho de banda suewe mediwse en múwtipos de bits-pow-segundo (bps), (⑅˘꒳˘) p-pow ejempwo, (U ᵕ U❁) megabits-pow-segundo (mbps) o gigabits-pow-segundo (gbps). -.-
 
-## Saber más
+## s-sabew más
 
-- [Bandwidth](https://es.wikipedia.org/wiki/Bandwidth) on Wikipedia
+- [bandwidth](https://es.wikipedia.owg/wiki/bandwidth) o-on wikipedia

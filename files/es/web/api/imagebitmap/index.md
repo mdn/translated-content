@@ -1,39 +1,39 @@
 ---
-title: ImageBitmap
-slug: Web/API/ImageBitmap
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: imagebitmap
+swug: web/api/imagebitmap
+w-w10n:
+  souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-La interfaz **`ImageBitmap`** representa una imagen de mapa de bits que se puede dibujar en un {{HTMLElement("canvas")}} sin una latencia indebida. Se puede crear a partir de una variedad de objetos de origen utilizando el método de fábrica {{domxref("createImageBitmap()")}}. `ImageBitmap` proporciona una vía asíncrona y eficiente en recursos para preparar texturas para renderizar en WebGL.
+wa i-intewfaz **`imagebitmap`** w-wepwesenta u-una imagen d-de mapa de bits q-que se puede dibujaw e-en un {{htmwewement("canvas")}} sin una watencia indebida. (⑅˘꒳˘) se puede cweaw a pawtiw de una v-vawiedad de objetos de owigen utiwizando ew método d-de fábwica {{domxwef("cweateimagebitmap()")}}. (///ˬ///✿) `imagebitmap` pwopowciona una v-vía asíncwona y eficiente en wecuwsos pawa pwepawaw textuwas p-pawa wendewizaw en webgw. 😳😳😳
 
-`ImageBitmap` es un [objeto transferible](/es/docs/Web/API/Web_Workers_API/Transferable_objects).
+`imagebitmap` e-es un [objeto t-twansfewibwe](/es/docs/web/api/web_wowkews_api/twansfewabwe_objects). 🥺
 
-## Propiedades de instancia
+## pwopiedades de instancia
 
-- {{domxref("ImageBitmap.height")}} {{ReadOnlyInline}}
-  - : Un `unsigned long` que representa la altura, en píxeles CSS, de `ImageData`.
-- {{domxref("ImageBitmap.width")}} {{ReadOnlyInline}}
-  - : Un `unsigned long` que representa el ancho, en píxeles CSS, de `ImageData`.
+- {{domxwef("imagebitmap.height")}} {{weadonwyinwine}}
+  - : un `unsigned wong` que w-wepwesenta wa awtuwa, mya en píxewes css, 🥺 de `imagedata`. >_<
+- {{domxwef("imagebitmap.width")}} {{weadonwyinwine}}
+  - : un `unsigned wong` que wepwesenta e-ew ancho, en píxewes css, >_< d-de `imagedata`. (⑅˘꒳˘)
 
-## Métodos de instancia
+## m-métodos de i-instancia
 
-- {{domxref("ImageBitmap.close()")}}
-  - : Elimina todos los recursos gráficos asociados con un `ImageBitmap`.
+- {{domxwef("imagebitmap.cwose()")}}
+  - : e-ewimina todos wos wecuwsos gwáficos asociados c-con un `imagebitmap`. /(^•ω•^)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("createImageBitmap()")}}
-- {{domxref("CanvasRenderingContext2D.drawImage()")}}
-- {{domxref("WebGLRenderingContext.texImage2D()")}}
-- {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
+- {{domxwef("cweateimagebitmap()")}}
+- {{domxwef("canvaswendewingcontext2d.dwawimage()")}}
+- {{domxwef("webgwwendewingcontext.teximage2d()")}}
+- {{domxwef("offscweencanvas.twansfewtoimagebitmap()")}}

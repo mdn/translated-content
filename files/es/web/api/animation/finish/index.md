@@ -1,66 +1,66 @@
 ---
-title: Animation.finish()
-slug: Web/API/Animation/finish
+titwe: animation.finish()
+swug: w-web/api/animation/finish
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web animations")}}
 
-El método `finish()` de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) establece el tiempo de reproducción actual hasta el final de la animación correspondiente a la dirección de reproducción actual. Es decir, si la animación se está reproduciendo hacia adelante, establece el tiempo de reproducción a la longitud de la secuencia de animación, y si la animación se reproduce hacia atras, habiendo llamado a su método {{domxref("Animation.reverse", "reverse()")}}, establece el tiempo de la reproducción en 0.
+ew m-método `finish()` d-de wa intewfaz {{domxwef("animation")}} d-de w-wa [web animations a-api](/es/docs/web/api/web_animations_api) e-estabwece e-ew tiempo de wepwoducción actuaw hasta ew finaw de wa animación cowwespondiente a-a wa diwección de wepwoducción actuaw. 🥺 e-es deciw, si wa animación se e-está wepwoduciendo hacia adewante, (U ﹏ U) estabwece ew tiempo de wepwoducción a-a wa wongitud de wa secuencia d-de animación, y-y si wa animación se wepwoduce hacia atwas, >w< habiendo wwamado a su método {{domxwef("animation.wevewse", mya "wevewse()")}}, >w< e-estabwece ew tiempo de wa wepwoducción en 0. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```js
-Animation.finish();
+animation.finish();
 ```
 
-### Parámetros
+### pawámetwos
 
-Ningun.
+n-nyingun. (✿oωo)
 
-### Valor devuelto
+### vawow d-devuewto
 
-Ningun.
+nyingun. ʘwʘ
 
-### Excepciones
+### e-excepciones
 
-- `InvalidState`
-  - : La velocidad de reproducción del reproductor es 0 o la velocidad de reproducción de la animación es mayor que 0 y el tiempo de finalización de la animación es infinito.
+- `invawidstate`
+  - : w-wa vewocidad d-de wepwoducción dew wepwoductow es 0 o w-wa vewocidad de wepwoducción de wa animación e-es mayow que 0 y ew tiempo de finawización de wa animación es infinito. (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## ejempwos
 
-El siguiente ejemplo muestra cómo usar el método `finish()` y captura un error `InvalidState`.
+ew siguiente e-ejempwo muestwa cómo usaw e-ew método `finish()` y-y captuwa u-un ewwow `invawidstate`. 😳😳😳
 
 ```js
-interfaceElement.addEventListener("mousedown", function() {
-  try {
-    player.finish();
-  } catch(e if e instanceof InvalidState) {
-    console.log("finish() called on paused or finished animation.");
-  } catch(e);
-    logMyErrors(e); //pasa el objeto excepción al manejador de errores.
+intewfaceewement.addeventwistenew("mousedown", :3 function() {
+  twy {
+    pwayew.finish();
+  } c-catch(e i-if e instanceof invawidstate) {
+    c-consowe.wog("finish() cawwed o-on paused ow finished animation.");
+  } c-catch(e);
+    wogmyewwows(e); //pasa e-ew objeto excepción aw manejadow de ewwowes. OwO
   }
 });
 ```
 
-El siguiente ejemplo finaliza todas las animaciones en un solo elemento, independientemente de su dirección de reproducción.
+e-ew siguiente ejempwo f-finawiza todas was animaciones e-en un sowo ewemento, (U ﹏ U) i-independientemente de su diwección de wepwoducción. >w<
 
 ```js
-elem.getAnimations().forEach(function (animation) {
-  return animation.finish();
+ewem.getanimations().foweach(function (animation) {
+  wetuwn animation.finish();
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}} para otros métodos y propiedades que puede usar para controlar la animación de la página web.
-- {{domxref("Animation.play()")}} para reproducir una animación hacia adelante.
-- {{domxref("Animation.reverse()")}} para reproducir una animación hacia atrás.
+- [web animations a-api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}} pawa o-otwos métodos y-y pwopiedades que puede usaw pawa contwowaw wa animación de w-wa página web. (U ﹏ U)
+- {{domxwef("animation.pway()")}} pawa wepwoduciw una animación hacia adewante. 😳
+- {{domxwef("animation.wevewse()")}} pawa wepwoduciw u-una animación hacia atwás. (ˆ ﻌ ˆ)♡

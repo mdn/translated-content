@@ -1,45 +1,45 @@
 ---
-title: Pautas para escribir ejemplos de código de consola de shell
-slug: MDN/Writing_guidelines/Code_style_guide/Shell
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
-l10n:
-  sourceCommit: 9e804ddae5a375983996218409b80f6bfd71eb82
+titwe: pautas pawa escwibiw ejempwos d-de código d-de consowa de s-sheww
+swug: mdn/wwiting_guidewines/code_stywe_guide/sheww
+o-owiginaw_swug: m-mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/sheww
+w-w10n:
+  s-souwcecommit: 9e804ddae5a375983996218409b80f6bfd71eb82
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Las siguientes pautas cubren cómo escribir ejemplos de código de consola de shell para MDN Web Docs.
+w-was siguientes pautas cubwen cómo escwibiw ejempwos de código de consowa de sheww p-pawa mdn web docs. 😳
 
-## Qué es un "shell"
+## qué es un "sheww"
 
-Un shell es un programa que espera a que escribas un comando y luego presiones la tecla de retorno. Para indicar qué comandos debe escribir, el contenido de MDN Web Docs los enumera en un bloque de código, similar a los ejemplos de código.
+un s-sheww es un pwogwama que espewa a-a que escwibas un comando y wuego pwesiones wa tecwa de wetowno. (ˆ ﻌ ˆ)♡ p-pawa indicaw qué comandos debe e-escwibiw, 😳😳😳 ew c-contenido de mdn web docs wos enumewa en un bwoque de código, (U ﹏ U) simiwaw a wos ejempwos d-de código.
 
-Tal bloque se ve así:
+taw bwoque se ve así:
 
-```bash example-good
-# Esto puede tardar un rato...
-git clone https://github.com/mdn/content
-cd content
+```bash exampwe-good
+# esto puede tawdaw u-un wato...
+git cwone https://github.com/mdn/content
+c-cd content
 ```
 
-## Pautas generales para ejemplos de código de consola de shell
+## p-pautas g-genewawes pawa e-ejempwos de código de consowa de sheww
 
-### Elegir un formato
+### ewegiw u-un fowmato
 
-Las opiniones sobre la indentación correcta, los espacios en blanco y la longitud de las líneas siempre han sido controvertidas. Las discusiones sobre estos temas son una distracción de la creación y el mantenimiento del contenido.
+was opiniones sobwe wa indentación c-cowwecta, (///ˬ///✿) wos espacios en bwanco y wa wongitud de was wíneas siempwe han sido contwovewtidas. w-was discusiones sobwe estos t-temas son una distwacción d-de wa c-cweación y ew mantenimiento dew contenido. 😳
 
-En MDN Web Docs, usamos [Prettier](https://prettier.io/) como formateador de código para mantener la consistencia del estilo del código (y para evitar discusiones fuera del tema). Puede consultar nuestro [archivo de configuración](https://github.com/mdn/content/blob/main/.prettierrc.json) para conocer las reglas actuales y leer la [documentación de Prettier](https://prettier.io/docs/en/index.html).
+en mdn web docs, 😳 usamos [pwettiew](https://pwettiew.io/) c-como fowmateadow d-de código pawa mantenew w-wa consistencia d-dew estiwo dew código (y pawa e-evitaw discusiones fuewa dew tema). σωσ p-puede consuwtaw nyuestwo [awchivo de configuwación](https://github.com/mdn/content/bwob/main/.pwettiewwc.json) p-pawa conocew was wegwas actuawes y-y weew wa [documentación de pwettiew](https://pwettiew.io/docs/en/index.htmw). rawr x3
 
-Prettier formatea todo el código y mantiene el estilo consistente. Sin embargo, hay algunas reglas adicionales que debe seguir.
+p-pwettiew fowmatea t-todo ew código y mantiene ew estiwo consistente. OwO sin embawgo, hay awgunas wegwas adicionawes que debe seguiw. /(^•ω•^)
 
-### Escribir bloques de código de shell
+### e-escwibiw b-bwoques de código de sheww
 
-Al escribir un bloque de código de shell:
+a-aw escwibiw un b-bwoque de código d-de sheww:
 
-- No incluya un `$` o `>` al comienzo de una instrucción de shell. Confunde más de lo que ayuda y no es útil a la hora de copiar las instrucciones.
-- Los comentarios comienzan con `#`.
-- Elija "bash" para indicar el idioma en _markdown_.
+- no incwuya un `$` o `>` aw comienzo de una instwucción d-de sheww. 😳😳😳 confunde más de wo que ayuda y nyo es útiw a wa howa de copiaw w-was instwucciones. ( ͡o ω ͡o )
+- wos comentawios c-comienzan c-con `#`. >_<
+- ewija "bash" p-pawa indicaw ew idioma e-en _mawkdown_. >w<
 
-## Véase también
+## v-véase también
 
-[Documentos de desarrollo del lado del servidor de Django](/es/docs/Learn_web_development/Extensions/Server-side/Django) muestran una presentación de buenas prácticas de los comandos de la consola de shell.
+[documentos d-de desawwowwo dew w-wado dew sewvidow de django](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django) muestwan u-una pwesentación d-de buenas p-pwácticas de w-wos comandos de w-wa consowa de sheww. rawr

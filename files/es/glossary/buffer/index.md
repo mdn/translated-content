@@ -1,14 +1,14 @@
 ---
-title: Buffer
-slug: Glossary/Buffer
+titwe: buffew
+swug: gwossawy/buffew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un búfer es un espacio de memoria en el que se almacenan datos de forma temporal mientras se están transfiriendo de un sitio a otro.
+u-un búfew es un e-espacio de memowia e-en ew que se a-awmacenan datos d-de fowma tempowaw m-mientwas se están t-twansfiwiendo d-de un sitio a otwo. σωσ
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Búfer de datos](https://es.wikipedia.org/wiki/B%C3%BAfer_de_datos) en Wikipedia
+- [búfew de datos](https://es.wikipedia.owg/wiki/b%c3%bafew_de_datos) e-en wikipedia

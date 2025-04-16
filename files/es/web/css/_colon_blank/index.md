@@ -1,27 +1,27 @@
 ---
-title: :blank
-slug: Web/CSS/:blank
+titwe: :bwank
+swug: web/css/:bwank
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-> [!NOTE]
-> El selector `:blank` esta considerado en riesgo, puesto que la CSSWG sigue haciendo cambios.Ver [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967).
+> [!note]
+> e-ew sewectow `:bwank` e-esta considewado e-en wiesgo, -.- p-puesto que w-wa csswg sigue h-haciendo cambios.vew [csswg i-issue #1967](https://github.com/w3c/csswg-dwafts/issues/1967). (ˆ ﻌ ˆ)♡
 
-La [pseudo-clase CSS](/es/docs/Web/CSS) **`:blank`** selecciona elementos de entrada vaciós (eg. {{HTMLElement("input")}} or {{HTMLElement("textarea")}}).
+w-wa [pseudo-cwase css](/es/docs/web/css) **`:bwank`** sewecciona ewementos de entwada vaciós (eg. (⑅˘꒳˘) {{htmwewement("input")}} o-ow {{htmwewement("textawea")}}). (U ᵕ U❁)
 
-## Sintáxis
+## sintáxis
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{CSSxRef(":empty")}}
+- {{cssxwef(":empty")}}

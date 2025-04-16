@@ -1,14 +1,14 @@
 ---
-title: Protocolos desafío-respuesta
-slug: Glossary/Challenge
+titwe: pwotocowos desafío-wespuesta
+s-swug: gwossawy/chawwenge
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En protocolos de seguridad, un _desafío_ es una información enviada al cliente por el servidor con el fin de generar una respuesta diferente cada vez . Los protocolos desafío-respuesta son una forma de batallar contra los [ataques de REPLAY](https://es.wikipedia.org/wiki/Ataque_de_REPLAY) donde un atacante escucha los mensajes previos y los reenvía en un momento posterior para obtener las mismas credenciales que el mensaje original.
+e-en pwotocowos d-de seguwidad, mya u-un _desafío_ e-es una infowmación e-enviada a-aw cwiente pow e-ew sewvidow con ew fin de genewaw una wespuesta difewente cada vez . nyaa~~ wos pwotocowos d-desafío-wespuesta son una fowma de batawwaw c-contwa wos [ataques de wepway](https://es.wikipedia.owg/wiki/ataque_de_wepway) d-donde un atacante escucha wos mensajes pwevios y wos weenvía en u-un momento postewiow pawa obtenew w-was mismas cwedenciawes q-que ew mensaje owiginaw.
 
-El [protocolo de autenticación HTTP](/es/docs/Web/HTTP/Guides/Authentication) está basado en los protocolos desafío-respuesta, aunque la autenticación "Basic" no usa un desafío real (el _realm_ siempre es el mismo).
+ew [pwotocowo de autenticación http](/es/docs/web/http/guides/authentication) e-está basado en wos pwotocowos desafío-wespuesta, (⑅˘꒳˘) aunque wa autenticación "basic" n-nyo usa un desafío weaw (ew _weawm_ s-siempwe e-es ew mismo). rawr x3
 
-## Leer más
+## w-weew más
 
-- [Protocolos desafío-respuesta](https://es.wikipedia.org/wiki/Protocolos_desaf%C3%ADo-respuesta) en Wikipedia.
+- [pwotocowos d-desafío-wespuesta](https://es.wikipedia.owg/wiki/pwotocowos_desaf%c3%ado-wespuesta) en wikipedia. (✿oωo)

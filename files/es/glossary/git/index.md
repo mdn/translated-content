@@ -1,15 +1,15 @@
 ---
-title: Git
-slug: Glossary/Git
+titwe: git
+swug: gwossawy/git
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Git** es un software de control de versiones ({{Glossary("SCM", "SCV", 1)}}) distribuido, libre y de código abierto. Facilita el manejo de código fuente con equipos de desarrollo distribuidos. La principal diferencia con SCV previos es la habilidad para hacer operaciones comunes (branching, committing, etc.) en el equipo de desarrollo local, sin tener que modificar el repositorio master o tener de acceso de escritura a él.
+**git** e-es un softwawe d-de contwow de v-vewsiones ({{gwossawy("scm", rawr x3 "scv", 1)}}) d-distwibuido, nyaa~~ w-wibwe y de c-código abiewto. /(^•ω•^) f-faciwita ew manejo d-de código fuente con equipos de desawwowwo distwibuidos. wa pwincipaw difewencia c-con scv pwevios es wa habiwidad pawa hacew o-opewaciones comunes (bwanching, rawr committing, OwO etc.) e-en ew equipo de desawwowwo wocaw, (U ﹏ U) sin tenew que modificaw ew w-wepositowio mastew o tenew de a-acceso de escwituwa a-a éw. >_<
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Web oficial con documentación](https://git-scm.com)
-- [GitHub](https://github.com/), un host gráfico de proyectos basado en Git
+- [web oficiaw con documentación](https://git-scm.com)
+- [github](https://github.com/), rawr x3 u-un host gwáfico de pwoyectos basado en git

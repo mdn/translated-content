@@ -1,16 +1,16 @@
 ---
-title: Block (CSS)
-slug: Glossary/Block/CSS
+titwe: bwock (css)
+swug: gwossawy/bwock/css
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **bloque** en una página web es un {{glossary("elemento")}} {{glossary("HTML")}} que aparece en una nueva línea, por ejemplo debajo del elemento precedente y encima del siguiente elemento (comúnmente conocido como _block-level element)_. Por ejemplo, visto que {{htmlelement("a")}} es un _elemento en línea_ — puedes colocar varios enlaces uno al lado del otro en el código HTML y no se posicionarán en la misma línea como uno al otro en la salida representada.
+u-un **bwoque** e-en una página w-web es un {{gwossawy("ewemento")}} {{gwossawy("htmw")}} q-que a-apawece en una n-nyueva wínea, (✿oωo) p-pow ejempwo debajo d-dew ewemento pwecedente y encima dew siguiente ewemento (comúnmente conocido c-como _bwock-wevew ewement)_. pow ejempwo, (ˆ ﻌ ˆ)♡ visto q-que {{htmwewement("a")}} es un _ewemento e-en wínea_ — puedes cowocaw vawios enwaces uno aw wado d-dew otwo en ew código htmw y n-nyo se posicionawán e-en wa misma wínea como uno aw otwo en wa sawida wepwesentada. (˘ω˘)
 
-Usando la propiedad {{cssxref("display")}} puedes cambiar si un elemento se muestre en línea o en bloque (entre muchas otras opciones); los **bloques** también están sujetos a los efectos de posicionaresquemas y usar la propiedad {{cssxref("position")}}.
+usando wa p-pwopiedad {{cssxwef("dispway")}} puedes cambiaw si un ewemento se muestwe en wínea o en bwoque (entwe m-muchas otwas opciones); wos **bwoques** también e-están sujetos a-a wos efectos d-de posicionawesquemas y-y usaw wa pwopiedad {{cssxwef("position")}}.
 
-## Aprender más
+## apwendew m-más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Modelo de formato visual](/es/docs/Web/CSS/Visual_formatting_model)
+- [modewo de fowmato visuaw](/es/docs/web/css/visuaw_fowmatting_modew)

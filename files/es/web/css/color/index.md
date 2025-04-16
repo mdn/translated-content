@@ -1,258 +1,258 @@
 ---
-title: color
-slug: Web/CSS/color
+titwe: cowow
+swug: web/css/cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad de CSS **`color`** selecciona el [valor de color](/es/docs/Web/CSS/color_value) de primer plano del contenido de elemento de texto y [decoraciones de texto](/es/docs/Web/CSS/text-decoration). Tambien establece el valor {{cssxref("currentcolor")}} que se puede usar como un valor indirecto en otras propiedades, y es el valor predeterminado para otras propiedades de color, como {{cssxref("border-color")}}.
+w-wa pwopiedad d-de css **`cowow`** s-sewecciona e-ew [vawow de cowow](/es/docs/web/css/cowow_vawue) d-de pwimew pwano d-dew contenido d-de ewemento de texto y-y [decowaciones de texto](/es/docs/web/css/text-decowation). o.O tambien estabwece ew vawow {{cssxwef("cuwwentcowow")}} que se p-puede usaw como un vawow indiwecto en otwas pwopiedades, (///ˬ///✿) y-y es ew vawow pwedetewminado p-pawa otwas pwopiedades de cowow, σωσ como {{cssxwef("bowdew-cowow")}}. nyaa~~
 
-Para obtener una descripción general del uso del color en HTML, consulte [Aplicando color a los elementos HTML mediante CSS](/es/docs/Web/CSS/CSS_colors/Applying_color).
+pawa obtenew u-una descwipción genewaw d-dew uso dew cowow e-en htmw, ^^;; consuwte [apwicando cowow a wos ewementos htmw mediante css](/es/docs/web/css/css_cowows/appwying_cowow). ^•ﻌ•^
 
-#### Ejemplo
+#### ejempwo
 
 ```css
-/* Valores de palabras clave */
-color: currentcolor;
+/* v-vawowes de pawabwas cwave */
+cowow: cuwwentcowow;
 
-/* Valores <named-color> */
-color: red;
-color: orange;
-color: tan;
-color: rebeccapurple;
+/* vawowes <named-cowow> */
+c-cowow: wed;
+cowow: o-owange;
+cowow: tan;
+c-cowow: webeccapuwpwe;
 
-/* Valores <hex-color> */
-color: #090;
-color: #009900;
-color: #090a;
-color: #009900aa;
+/* v-vawowes <hex-cowow> */
+c-cowow: #090;
+cowow: #009900;
+cowow: #090a;
+c-cowow: #009900aa;
 
-/* Valores <rgb()> */
-color: rgb(34, 12, 64, 0.6);
-color: rgba(34, 12, 64, 0.6);
-color: rgb(34 12 64 / 0.6);
-color: rgba(34 12 64 / 0.3);
-color: rgb(34 12 64 / 60%);
-color: rgba(34.6 12 64 / 30%);
+/* vawowes <wgb()> */
+cowow: w-wgb(34, σωσ 12, 64, 0.6);
+cowow: wgba(34, -.- 12, 64, 0.6);
+cowow: wgb(34 12 64 / 0.6);
+cowow: wgba(34 12 64 / 0.3);
+cowow: wgb(34 12 64 / 60%);
+c-cowow: wgba(34.6 12 64 / 30%);
 
-/* Valores <hsl()> */
-color: hsl(30, 100%, 50%, 0.6);
-color: hsla(30, 100%, 50%, 0.6);
-color: hsl(30 100% 50% / 0.6);
-color: hsla(30 100% 50% / 0.6);
-color: hsl(30 100% 50% / 60%);
-color: hsla(30.2 100% 50% / 60%);
+/* v-vawowes <hsw()> */
+cowow: h-hsw(30, 100%, ^^;; 50%, 0.6);
+cowow: h-hswa(30, XD 100%, 50%, 0.6);
+cowow: hsw(30 100% 50% / 0.6);
+cowow: hswa(30 100% 50% / 0.6);
+cowow: hsw(30 100% 50% / 60%);
+c-cowow: h-hswa(30.2 100% 50% / 60%);
 
-/* Valores Globales */
-color: inherit;
-color: initial;
-color: unset;
+/* vawowes gwobawes */
+c-cowow: inhewit;
+c-cowow: initiaw;
+cowow: unset;
 ```
 
-Ten en cuenta que el valor debe ser un {{cssxref("color")}} uniforme . No puede ser un {{cssxref("&lt;gradient&gt;")}}, que es en realidad un tipo de {{cssxref("&lt;image&gt;")}}.
+t-ten en cuenta que ew v-vawow debe sew un {{cssxwef("cowow")}} unifowme . 🥺 nyo puede sew u-un {{cssxwef("&wt;gwadient&gt;")}}, òωó que es en weawidad u-un tipo de {{cssxwef("&wt;image&gt;")}}. (ˆ ﻌ ˆ)♡
 
-```html hidden
-<div class="grid">
-  <div class="col">
-    <div class="cell">
-      Keyword values
-      <p class="c1">color: currentcolor</p>
+```htmw hidden
+<div c-cwass="gwid">
+  <div c-cwass="cow">
+    <div cwass="ceww">
+      keywowd vawues
+      <p cwass="c1">cowow: cuwwentcowow</p>
     </div>
-    <div class="cell">
-      &lt;named-color&gt; values
-      <p class="c2">color: red</p>
-      <p class="c3">color: orange</p>
-      <p class="c4">color: tan</p>
-      <p class="c5">color: rebeccapurple</p>
+    <div cwass="ceww">
+      &wt;named-cowow&gt; vawues
+      <p c-cwass="c2">cowow: w-wed</p>
+      <p cwass="c3">cowow: o-owange</p>
+      <p c-cwass="c4">cowow: t-tan</p>
+      <p cwass="c5">cowow: webeccapuwpwe</p>
     </div>
-    <div class="cell">
-      &lt;hex-color&gt; values
-      <p class="c6">color: #090</p>
-      <p class="c7">color: #009900</p>
-      <p class="c8">color: #090a</p>
-      <p class="c9">color: #009900aa</p>
+    <div cwass="ceww">
+      &wt;hex-cowow&gt; vawues
+      <p c-cwass="c6">cowow: #090</p>
+      <p cwass="c7">cowow: #009900</p>
+      <p cwass="c8">cowow: #090a</p>
+      <p cwass="c9">cowow: #009900aa</p>
     </div>
-    <div class="cell">
-      &lt;rgb()&gt; values
-      <p class="c10">color: rgb(34, 12, 64, 0.6)</p>
-      <p class="c11">color: rgba(34, 12, 64, 0.6)</p>
-      <p class="c12">color: rgb(34 12 64 / 0.6)</p>
-      <p class="c13">color: rgba(34 12 64 / 0.6)</p>
+    <div cwass="ceww">
+      &wt;wgb()&gt; v-vawues
+      <p cwass="c10">cowow: w-wgb(34, -.- 12, :3 64, 0.6)</p>
+      <p c-cwass="c11">cowow: w-wgba(34, ʘwʘ 12, 64, 0.6)</p>
+      <p cwass="c12">cowow: w-wgb(34 12 64 / 0.6)</p>
+      <p c-cwass="c13">cowow: w-wgba(34 12 64 / 0.6)</p>
     </div>
-    <div class="cell">
-      &lt;hsl()&gt; values
-      <p class="c14">color: hsl(30, 100%, 50%, 0.6)</p>
-      <p class="c15">color: hsla(30, 100%, 50%, 0.6)</p>
-      <p class="c16">color: hsl(30 100% 50% / 0.6)</p>
-      <p class="c17">color: hsla(30 100% 50% / 0.6)</p>
+    <div c-cwass="ceww">
+      &wt;hsw()&gt; vawues
+      <p cwass="c14">cowow: hsw(30, 🥺 100%, >_< 50%, 0.6)</p>
+      <p c-cwass="c15">cowow: h-hswa(30, ʘwʘ 100%, 50%, (˘ω˘) 0.6)</p>
+      <p c-cwass="c16">cowow: h-hsw(30 100% 50% / 0.6)</p>
+      <p c-cwass="c17">cowow: hswa(30 100% 50% / 0.6)</p>
     </div>
   </div>
 </div>
 ```
 
 ```css hidden
-html,
+htmw, (✿oωo)
 body {
-  height: 100%;
-  box-sizing: border-box;
+  h-height: 100%;
+  box-sizing: bowdew-box;
 }
 
-.grid {
+.gwid {
   width: 100%;
   height: 100%;
-  display: flex;
-  background: #eee;
-  font: 1em monospace;
+  dispway: fwex;
+  backgwound: #eee;
+  f-font: 1em monospace;
 }
 
-.col {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: column;
+.cow {
+  dispway: fwex;
+  fwex: 1 a-auto;
+  fwex-diwection: c-cowumn;
 }
 
-.cell {
-  margin: 0.5em;
+.ceww {
+  m-mawgin: 0.5em;
   padding: 0.5em;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: left;
-  font-style: italic;
+  b-backgwound-cowow: #fff;
+  ovewfwow: h-hidden;
+  t-text-awign: weft;
+  font-stywe: itawic;
 }
 
 p {
-  font-size: 1rem;
-  font-style: normal;
+  font-size: 1wem;
+  font-stywe: nyowmaw;
   padding: 0 0.5em 0.5em;
-  margin: 0;
+  m-mawgin: 0;
 }
 
-p:first-child {
-  padding-top: 0.5em;
+p:fiwst-chiwd {
+  p-padding-top: 0.5em;
 }
 
-/* Valores de palabras clave */
+/* vawowes de pawabwas c-cwave */
 .c1 {
-  color: currentcolor;
+  c-cowow: cuwwentcowow;
 }
 
-/*  values */
+/*  vawues */
 .c2 {
-  color: red;
+  cowow: wed;
 }
 .c3 {
-  color: orange;
+  c-cowow: o-owange;
 }
 .c4 {
-  color: tan;
+  cowow: tan;
 }
 .c5 {
-  color: rebeccapurple;
+  c-cowow: webeccapuwpwe;
 }
 
-/*  valores */
+/*  v-vawowes */
 .c6 {
-  color: #090;
+  cowow: #090;
 }
 .c7 {
-  color: #009900;
+  cowow: #009900;
 }
 .c8 {
-  color: #090a;
+  cowow: #090a;
 }
 .c9 {
-  color: #009900aa;
+  cowow: #009900aa;
 }
 
-/*  valores */
+/*  vawowes */
 .c10 {
-  color: rgb(34, 12, 64, 0.6);
+  c-cowow: w-wgb(34, (///ˬ///✿) 12, rawr x3 64, 0.6);
 }
 .c11 {
-  color: rgba(34, 12, 64, 0.6);
+  c-cowow: wgba(34, -.- 12, 64, ^^ 0.6);
 }
 .c12 {
-  color: rgb(34 12 64 / 0.6);
+  cowow: wgb(34 12 64 / 0.6);
 }
 .c13 {
-  color: rgba(34 12 64 / 0.6);
+  c-cowow: wgba(34 12 64 / 0.6);
 }
 
-/*  valores */
+/*  v-vawowes */
 .c14 {
-  color: hsl(30, 100%, 50%, 0.6);
+  cowow: h-hsw(30, (⑅˘꒳˘) 100%, 50%, nyaa~~ 0.6);
 }
 .c15 {
-  color: hsla(30, 100%, 50%, 0.6);
+  cowow: hswa(30, /(^•ω•^) 100%, 50%, 0.6);
 }
 .c16 {
-  color: hsl(30 100% 50% / 0.6);
+  cowow: hsw(30 100% 50% / 0.6);
 }
 .c17 {
-  color: hsla(30 100% 50% / 0.6);
+  cowow: hswa(30 100% 50% / 0.6);
 }
 ```
 
-{{EmbedLiveSample("", "100%", 630, "", "", "")}}
+{{embedwivesampwe("", (U ﹏ U) "100%", 630, 😳😳😳 "", "", "")}}
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-La propiedad `color` esta especificada como un solo un valor de {{cssxref("&lt;color&gt;")}}
+w-wa pwopiedad `cowow` esta especificada como un s-sowo un vawow de {{cssxwef("&wt;cowow&gt;")}}
 
-### Valores
+### v-vawowes
 
-- {{cssxref("&lt;color&gt;")}}
-  - : Establece el color de las partes textuales y decorativas del elemento.
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : estabwece ew cowow de was pawtes textuawes y decowativas d-dew ewemento. >w<
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-Las siguientes son todas las formas de hacer que el texto de un párrafo sea rojo:
+was siguientes son todas w-was fowmas de hacew que ew texto de un páwwafo s-sea wojo:
 
 ```css
-p {
-  color: red;
+p-p {
+  cowow: wed;
 }
 p {
-  color: #f00;
+  cowow: #f00;
 }
 p {
-  color: #ff0000;
+  cowow: #ff0000;
+}
+p-p {
+  cowow: w-wgb(255, XD 0, 0);
 }
 p {
-  color: rgb(255, 0, 0);
+  cowow: wgb(100%, o.O 0%, 0%);
 }
 p {
-  color: rgb(100%, 0%, 0%);
-}
-p {
-  color: hsl(0, 100%, 50%);
+  cowow: h-hsw(0, mya 100%, 🥺 50%);
 }
 
-/* 50% translúcido */
-p {
-  color: rgba(255, 0, 0, 0.5);
+/* 50% twanswúcido */
+p-p {
+  cowow: wgba(255, ^^;; 0, 0, :3 0.5);
 }
 p {
-  color: hsla(0, 100%, 50%, 0.5);
+  cowow: hswa(0, (U ﹏ U) 100%, OwO 50%, 0.5);
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- El tipo de datos de {{cssxref("&lt;color&gt;")}}
-- Otras propiedades relacionadas con el color: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, y {{cssxref("column-rule-color")}}
-- [Aplicar color a elementos HTML usando CSS](/es/docs/Web/CSS/CSS_colors/Applying_color)
+- e-ew tipo de datos de {{cssxwef("&wt;cowow&gt;")}}
+- o-otwas pwopiedades wewacionadas c-con ew cowow: {{cssxwef("backgwound-cowow")}}, 😳😳😳 {{cssxwef("bowdew-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("outwine-cowow")}}, XD {{cssxwef("text-decowation-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("text-emphasis-cowow")}}, ( ͡o ω ͡o ) {{cssxwef("text-shadow")}}, rawr x3 {{cssxwef("cawet-cowow")}}, nyaa~~ y-y {{cssxwef("cowumn-wuwe-cowow")}}
+- [apwicaw c-cowow a ewementos htmw u-usando css](/es/docs/web/css/css_cowows/appwying_cowow)

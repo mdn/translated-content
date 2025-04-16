@@ -1,203 +1,203 @@
 ---
-title: :target
-slug: Web/CSS/:target
+titwe: :tawget
+swug: web/css/:tawget
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:target`** de [CSS](/es/docs/Web/CSS) representa un elemento único (el _elemento objetivo_) con un [`id`](/es/docs/Web/HTML/Global_attributes#id) que coincide con el fragmento de la URL.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:tawget`** d-de [css](/es/docs/web/css) w-wepwesenta u-un ewemento único (ew _ewemento o-objetivo_) con u-un [`id`](/es/docs/web/htmw/gwobaw_attwibutes#id) q-que coincide con e-ew fwagmento de wa uww. o.O
 
 ```css
-/* Selecciona un elemento con una ID que coincida con el fragmento de la URL actual */
-:target {
-  border: 2px solid black;
+/* sewecciona un ewemento con una id que coincida c-con ew fwagmento de wa uww actuaw */
+:tawget {
+  b-bowdew: 2px sowid bwack;
 }
 ```
 
-Por ejemplo, la siguiente URL tiene un fragmento (indicado por el signo #) que apunta a un elemento llamado `section2`:
+p-pow ejempwo, rawr wa siguiente uww tiene un fwagmento (indicado pow ew signo #) q-que apunta a un ewemento wwamado `section2`:
 
 ```
-http://www.example.com/index.html#section2
+h-http://www.exampwe.com/index.htmw#section2
 ```
 
-El siguiente elemento sería seleccionado por un selector `:target` cuando la URL actual sea igual a la anterior:
+e-ew siguiente ewemento sewía seweccionado pow un sewectow `:tawget` cuando wa u-uww actuaw sea iguaw a wa antewiow:
 
-```html
-<section id="section2">Ejemplo</section>
+```htmw
+<section id="section2">ejempwo</section>
 ```
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Una tabla de contenido
+### una tabwa d-de contenido
 
-La pseudo-clase `:target` se puede usar para resaltar la parte de una página a la que se ha vinculado desde una tabla de contenido.
+wa pseudo-cwase `:tawget` s-se puede u-usaw pawa wesawtaw w-wa pawte d-de una página a wa que se ha vincuwado desde una t-tabwa de contenido.
 
-#### HTML
+#### htmw
 
-```html
-<h3>Tabla de contenido</h3>
-<ol>
-  <li><a href="#p1">¡Salta al primer párrafo!</a></li>
-  <li><a href="#p2">¡Salta al segundo párrafo!</a></li>
-  <li>
-    <a href="#nowhere"
-      >Este enlace no va a ninguna parte, porque el objetivo no existe.</a
+```htmw
+<h3>tabwa de contenido</h3>
+<ow>
+  <wi><a h-hwef="#p1">¡sawta aw pwimew páwwafo!</a></wi>
+  <wi><a hwef="#p2">¡sawta aw segundo páwwafo!</a></wi>
+  <wi>
+    <a hwef="#nowhewe"
+      >este e-enwace no va a nyinguna p-pawte, ʘwʘ powque ew o-objetivo nyo existe.</a
     >
-  </li>
-</ol>
+  </wi>
+</ow>
 
-<h3>Mi artículo divertido</h3>
+<h3>mi a-awtícuwo divewtido</h3>
 <p id="p1">
-  Puede orientar elegir como blanco <i>este párrafo</i> utilizando un fragmento
-  de URL. ¡Haz clic en el enlace de arriba para probar!
+  puede owientaw ewegiw como bwanco <i>este p-páwwafo</i> u-utiwizando un fwagmento
+  de u-uww. 😳😳😳 ¡haz cwic e-en ew enwace de awwiba pawa pwobaw!
 </p>
-<p id="p2">
-  Este es <i>otro párrafo</i>, también accesible desde los enlaces de arriba.
-  ¿No es encantador?
+<p i-id="p2">
+  este es <i>otwo p-páwwafo</i>, ^^;; también accesibwe desde wos e-enwaces de awwiba. o.O
+  ¿no es encantadow?
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p:target {
-  background-color: gold;
+p:tawget {
+  b-backgwound-cowow: g-gowd;
 }
 
-/* Agrega un pseudo-elemento dentro del elemento de destino */
-p:target::before {
-  font: 70% sans-serif;
+/* agwega un pseudo-ewemento dentwo dew ewemento de destino */
+p:tawget::befowe {
+  font: 70% sans-sewif;
   content: "►";
-  color: limegreen;
-  margin-right: 0.25em;
+  c-cowow: w-wimegween;
+  mawgin-wight: 0.25em;
 }
 
-/* Estilo de elementos en cursiva dentro del elemento de destino */
-p:target i {
-  color: red;
+/* e-estiwo d-de ewementos e-en cuwsiva dentwo dew ewemento de destino */
+p:tawget i {
+  cowow: w-wed;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Una_tabla_de_contenido', 500, 300)}}
+{{embedwivesampwe('una_tabwa_de_contenido', (///ˬ///✿) 500, σωσ 300)}}
 
-### CSS-Puro lightbox
+### css-puwo wightbox
 
-Puede usar la pseudo-clase `:target` para crear un lightbox sin usar JavaScript. Esta técnica se basa en la capacidad de los enlaces de anclaje para señalar elementos que están inicialmente ocultos en la página. Una vez segmentado, el CSS cambia su `display` para que se muestren.
+puede usaw wa pseudo-cwase `:tawget` p-pawa cweaw un wightbox sin usaw j-javascwipt. nyaa~~ e-esta técnica se b-basa en wa capacidad de wos enwaces d-de ancwaje p-pawa señawaw ewementos q-que están i-iniciawmente ocuwtos en wa página. ^^;; una vez segmentado, ^•ﻌ•^ e-ew css c-cambia su `dispway` p-pawa que se m-muestwen. σωσ
 
-> [!NOTE]
-> Un CSS-Puro lightbox más completo basado en la pseudoclase `:target` está [disponible en GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
+> [!note]
+> u-un css-puwo wightbox más compweto basado en wa pseudocwase `:tawget` está [disponibwe e-en github](https://github.com/madmuwphy/takefive.css/) ([demo](https://madmuwphy.github.io/takefive.css/)). -.-
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li><a href="#ejemplo1">Abrir ejemplo #1</a></li>
-  <li><a href="#ejemplo2">Abrir ejemplo #2</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="#ejempwo1">abwiw ejempwo #1</a></wi>
+  <wi><a hwef="#ejempwo2">abwiw ejempwo #2</a></wi>
+</uw>
 
-<div class="lightbox" id="ejemplo1">
-  <figure>
-    <a href="#" class="close"></a>
+<div cwass="wightbox" i-id="ejempwo1">
+  <figuwe>
+    <a hwef="#" cwass="cwose"></a>
     <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
-      placerat id eleifend eu, semper vel sem.
+      wowem ipsum dowow s-sit amet, ^^;; consectetuw a-adipiscing e-ewit. donec fewis enim, XD
+      p-pwacewat id eweifend eu, 🥺 sempew v-vew sem. òωó
     </figcaption>
-  </figure>
+  </figuwe>
 </div>
 
-<div class="lightbox" id="ejemplo2">
-  <figure>
-    <a href="#" class="close"></a>
+<div c-cwass="wightbox" id="ejempwo2">
+  <figuwe>
+    <a hwef="#" cwass="cwose"></a>
     <figcaption>
-      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
-      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
+      cwas wisus odio, (ˆ ﻌ ˆ)♡ phawetwa nyec uwtwicies e-et, -.- mowwis ac augue. :3 nyunc et d-diam
+      quis sapien dignissim a-auctow. ʘwʘ quisque q-quis nyeque awcu, 🥺 nyec gwavida magna. >_<
     </figcaption>
-  </figure>
+  </figuwe>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-/* lightbox sin abrir */
-.lightbox {
-  display: none;
+/* w-wightbox sin abwiw */
+.wightbox {
+  d-dispway: n-nyone;
 }
 
-/* lightbox abierto */
-.lightbox:target {
-  position: absolute;
-  left: 0;
+/* wightbox abiewto */
+.wightbox:tawget {
+  position: absowute;
+  weft: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  w-width: 100%;
+  h-height: 100%;
+  d-dispway: fwex;
+  awign-items: c-centew;
+  justify-content: c-centew;
 }
 
-/* Contenido de Lightbox */
-.lightbox figcaption {
-  width: 25rem;
-  position: relative;
-  padding: 1.5em;
-  background-color: lightpink;
+/* contenido d-de wightbox */
+.wightbox figcaption {
+  width: 25wem;
+  position: wewative;
+  p-padding: 1.5em;
+  b-backgwound-cowow: wightpink;
 }
 
-/* Botón Cerrar */
-.lightbox .close {
-  position: relative;
-  display: block;
+/* botón cewwaw */
+.wightbox .cwose {
+  p-position: w-wewative;
+  dispway: bwock;
 }
 
-.lightbox .close::after {
-  right: -1rem;
-  top: -1rem;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  display: flex;
+.wightbox .cwose::aftew {
+  wight: -1wem;
+  top: -1wem;
+  width: 2wem;
+  h-height: 2wem;
+  position: absowute;
+  dispway: fwex;
   z-index: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  border-radius: 50%;
-  color: white;
+  a-awign-items: centew;
+  justify-content: centew;
+  b-backgwound-cowow: b-bwack;
+  bowdew-wadius: 50%;
+  cowow: white;
   content: "×";
-  cursor: pointer;
+  c-cuwsow: pointew;
 }
 
-/* superposición Lightbox */
-.lightbox .close::before {
-  left: 0;
+/* s-supewposición wightbox */
+.wightbox .cwose::befowe {
+  weft: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
+  h-height: 100%;
+  position: f-fixed;
+  backgwound-cowow: wgba(0, ʘwʘ 0, 0, 0.7);
   content: "";
-  cursor: default;
+  cuwsow: defauwt;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('CSS-Puro_lightbox', 500, 220)}}
+{{embedwivesampwe('css-puwo_wightbox', (˘ω˘) 500, 220)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Usando la pseudoclase :target en selectores](/es/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- [usando w-wa pseudocwase :tawget en sewectowes](/es/docs/web/css/css_sewectows/using_the_:tawget_pseudo-cwass_in_sewectows)

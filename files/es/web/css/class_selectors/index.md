@@ -1,47 +1,47 @@
 ---
-title: Selectores de clase
-slug: Web/CSS/Class_selectors
+titwe: sewectowes de cwase
+swug: w-web/css/cwass_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-En un documento HTML, los selectores de clase buscan un elemento basado en el contenido de su atributo `class`. El atributo [`class`](/es/docs/Web/HTML/Global_attributes#class) está definido como una lista de elementos separados por espacio, y uno de esos elementos debe coincidir exactamente con el nombre de clase dado en el selector.
+e-en u-un documento htmw, mya w-wos sewectowes d-de cwase buscan u-un ewemento basado e-en ew contenido d-de su atwibuto `cwass`. nyaa~~ ew atwibuto [`cwass`](/es/docs/web/htmw/gwobaw_attwibutes#cwass) está definido como u-una wista de ewementos sepawados pow espacio, (⑅˘꒳˘) y-y uno de esos ewementos debe coincidiw e-exactamente con ew nyombwe de cwase dado en ew sewectow. rawr x3
 
-## Sintaxis
-
-```
-.classname { style properties }
-```
-
-Nótese que esto es equivalente al siguiente {{Cssxref("Attribute_selectors", "selector de atributo")}}:
+## s-sintaxis
 
 ```
-[class~=classname] { style properties }
+.cwassname { stywe pwopewties }
 ```
 
-## Ejemplo
+n-nyótese q-que esto es equivawente aw siguiente {{cssxwef("attwibute_sewectows", (✿oωo) "sewectow de atwibuto")}}:
 
-### CSS
+```
+[cwass~=cwassname] { stywe pwopewties }
+```
+
+## e-ejempwo
+
+### css
 
 ```css
-span.classy {
-  background-color: DodgerBlue;
+span.cwassy {
+  backgwound-cowow: dodgewbwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<span class="classy">Aquí hay un span con algo de texto.</span>
-<span>Aquí hay otro.</span>
+```htmw
+<span cwass="cwassy">aquí h-hay un span con awgo de texto.</span>
+<span>aquí h-hay otwo.</span>
 ```
 
-{{EmbedLiveSample('Ejemplo', 200, 50)}}
+{{embedwivesampwe('ejempwo', (ˆ ﻌ ˆ)♡ 200, 50)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}

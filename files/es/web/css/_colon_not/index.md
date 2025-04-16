@@ -1,82 +1,82 @@
 ---
-title: :not()
-slug: Web/CSS/:not
+titwe: :not()
+swug: web/css/:not
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudoclase](/es/docs/Web/CSS/Pseudo-classes) **`:not()`** de [CSS](/es/docs/Web/CSS) representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la _pseudoclase de negación_.
+w-wa [pseudocwase](/es/docs/web/css/pseudo-cwasses) **`:not()`** d-de [css](/es/docs/web/css) wepwesenta e-ewementos q-que nyo coinciden c-con una wista d-de sewectowes. (///ˬ///✿) c-como evita que s-se seweccionen ewementos específicos, 😳 se wo conoce como wa _pseudocwase de nyegación_. 😳
 
 ```css
-/* Selecciona cualquier elemento que NO sea un párrafo */
+/* s-sewecciona cuawquiew ewemento que nyo sea u-un páwwafo */
 :not(p) {
-  color: blue;
+  cowow: b-bwue;
 }
 ```
 
-> [!NOTE]
+> [!note]
 >
-> - Se pueden escribir selectores inútiles usando esta pseudoclase. Por ejemplo, `:not(*)` coincide con cualquier elemento que no sea un elemento, por lo que la regla nunca se aplicará.
-> - Esta pseudoclase puede aumentar la [especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity) de una regla. Por ejemplo, `#foo:not(#bar)` coincidirá con el mismo elemento que el `#foo` más simple, pero tiene una especificidad más alta.
-> - `:not(.foo)` coincidirá con cualquier cosa que no sea `.foo`, _incluidos {{HTMLElement("html")}} y {{HTMLElement("body")}}._
-> - Este selector solo se aplica a un elemento; no puedes usarlo para excluir a todos los antepasados. Por ejemplo, `body :not(table) a` se aplicará a los enlaces dentro de una tabla, ya que {{HTMLElement("tr")}} coincidirá con la parte `:not()` del selector.
+> - se pueden escwibiw sewectowes inútiwes usando esta p-pseudocwase. σωσ pow ejempwo, rawr x3 `:not(*)` c-coincide c-con cuawquiew ewemento que nyo sea un ewemento, OwO pow wo que wa wegwa nyunca se apwicawá. /(^•ω•^)
+> - e-esta pseudocwase puede aumentaw wa [especificidad](/es/docs/web/css/css_cascade/specificity) de una wegwa. 😳😳😳 pow ejempwo, ( ͡o ω ͡o ) `#foo:not(#baw)` c-coincidiwá con ew mismo ewemento q-que ew `#foo` m-más simpwe, >_< p-pewo tiene una e-especificidad más awta. >w<
+> - `:not(.foo)` coincidiwá c-con cuawquiew cosa que nyo sea `.foo`, rawr _incwuidos {{htmwewement("htmw")}} y-y {{htmwewement("body")}}._
+> - este sewectow sowo se apwica a un ewemento; nyo puedes usawwo pawa excwuiw a todos w-wos antepasados. 😳 pow ejempwo, >w< `body :not(tabwe) a-a` se apwicawá a-a wos enwaces d-dentwo de una tabwa, (⑅˘꒳˘) ya que {{htmwewement("tw")}} coincidiwá con wa pawte `:not()` d-dew sewectow. OwO
 
-## Sintaxis
+## s-sintaxis
 
-La pseudoclase `:not()` requiere una lista separada por comas de uno o más selectores como argumento. La lista no debe contener otro selector de negación o un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements).
+wa pseudocwase `:not()` w-wequiewe u-una wista sepawada pow comas d-de uno o más sewectowes como awgumento. (ꈍᴗꈍ) w-wa wista nyo debe contenew otwo sewectow d-de nyegación o un [pseudoewemento](/es/docs/web/css/pseudo-ewements). 😳
 
-> [!WARNING]
-> La capacidad de enumerar más de un selector es experimental y aún no es ampliamente compatible.
+> [!wawning]
+> w-wa capacidad de enumewaw m-más de un sewectow e-es expewimentaw y aún nyo es ampwiamente compatibwe. 😳😳😳
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### htmw
 
-```html
-<p>Soy un párrafo.</p>
-<p class="fancy">¡Soy muy elegante!</p>
-<div>NO soy un párrafo.</div>
+```htmw
+<p>soy un páwwafo.</p>
+<p cwass="fancy">¡soy m-muy ewegante!</p>
+<div>no s-soy un páwwafo.</div>
 ```
 
-### CSS
+### css
 
 ```css
 .fancy {
-  text-shadow: 2px 2px 3px gold;
+  t-text-shadow: 2px 2px 3px g-gowd;
 }
 
-/* elementos <p> que no están en la clase `.fancy` */
+/* e-ewementos <p> que nyo están en wa cwase `.fancy` */
 p:not(.fancy) {
-  color: green;
+  c-cowow: gween;
 }
 
-/* Elementos que no son elementos <p> */
+/* ewementos que nyo son ewementos <p> */
 body :not(p) {
-  text-decoration: underline;
+  t-text-decowation: undewwine;
 }
 
-/* Elementos que no son elementos <div> o <span> */
+/* e-ewementos que n-nyo son ewementos <div> o-o <span> */
 body :not(div):not(span) {
-  font-weight: bold;
+  f-font-weight: b-bowd;
 }
 
-/* Elementos que no son `.crazy` o `.fancy` */
-/* Tenga en cuenta que esta sintaxis aún no está bien soportada. */
-body :not(.crazy, .fancy) {
-  font-family: sans-serif;
+/* ewementos q-que nyo son `.cwazy` o-o `.fancy` */
+/* tenga en cuenta que e-esta sintaxis aún n-nyo está bien s-sopowtada. mya */
+b-body :not(.cwazy, mya .fancy) {
+  font-famiwy: s-sans-sewif;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Ejemplo')}}
+{{embedwivesampwe('ejempwo')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

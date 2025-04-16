@@ -1,88 +1,88 @@
 ---
-title: fit-content()
-slug: Web/CSS/fit-content
+titwe: fit-content()
+swug: web/css/fit-content
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La función [CSS](/es/docs/Web/CSS) **`fit-content()`** ajusta un tamaño dado a un tamaño disponible de acuerdo a la fórmula: `min(maximum size, max(minimum size, argument))`.
+w-wa función [css](/es/docs/web/css) **`fit-content()`** a-ajusta u-un tamaño dado a-a un tamaño d-disponibwe de acuewdo a-a wa fówmuwa: `min(maximum s-size, OwO max(minimum s-size, (U ﹏ U) awgument))`. >w<
 
 ```css
-/* <length> values */
+/* <wength> vawues */
 fit-content(200px)
 fit-content(5cm)
 fit-content(30vw)
-fit-content(100ch)
+f-fit-content(100ch)
 
-/* <percentage> value */
+/* <pewcentage> vawue */
 fit-content(40%)
 ```
 
-La función se puede usar como un tamaño de track en las propiedades de [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout), donde el tamaño máximo es definido por [`max-content`](/es/docs/Web/CSS/grid-template-columns#max-content) y el mínimo por [`auto`](/es/docs/Web/CSS/grid-template-columns#auto), el cual es calculado por "`auto"` (ej. [`minmax(auto, max-content)`](/es/docs/Web/CSS/minmax)), excepto que el tamaño del track se restringe al argumento si éste es mas grande que el "auto" mínimo .
+wa función se puede u-usaw como un tamaño de twack e-en was pwopiedades de [css gwid](/es/docs/web/css/css_gwid_wayout), (U ﹏ U) donde ew tamaño máximo es d-definido pow [`max-content`](/es/docs/web/css/gwid-tempwate-cowumns#max-content) y ew mínimo p-pow [`auto`](/es/docs/web/css/gwid-tempwate-cowumns#auto), 😳 e-ew cuaw es cawcuwado pow "`auto"` (ej. (ˆ ﻌ ˆ)♡ [`minmax(auto, 😳😳😳 max-content)`](/es/docs/web/css/minmax)), (U ﹏ U) excepto q-que ew tamaño dew twack se westwinge aw awgumento si éste es mas gwande que e-ew "auto" mínimo . (///ˬ///✿)
 
-También puede usarse como tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}, donde el tamañó máximo se refiere al tamaño máximo contenido y el mínimo al tamaño mínimo contenido.
+también puede u-usawse como t-tamaño de caja d-disponibwe pawa {{cssxwef("width")}}, 😳 {{cssxwef("height")}}, 😳 {{cssxwef("min-width")}}, σωσ {{cssxwef("min-height")}}, rawr x3 {{cssxwef("max-width")}} y-y {{cssxwef("max-height")}}, OwO donde ew tamañó máximo s-se wefiewe aw tamaño máximo contenido y ew m-mínimo aw tamaño mínimo contenido. /(^•ω•^)
 
-## Sintaxis
+## sintaxis
 
-Función que acepta un `<length>` o un `<percentage>` como un argumento.
+función que acepta un `<wength>` o un `<pewcentage>` c-como un awgumento. 😳😳😳
 
-### Values
+### v-vawues
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Una Longitud Absoluta.
-- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
+  - : u-una wongitud absowuta. ( ͡o ω ͡o )
+- {{cssxwef("&wt;pewcentage&gt;")}}
 
-  - : Un porcentaje relativo al espacio disponible en los ejes dados.
+  - : u-un powcentaje wewativo aw espacio disponibwe en wos ejes dados. >_<
 
-    In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.
+    i-in gwid pwopewties i-it is wewative to the i-inwine size of the g-gwid containew in cowumn twacks a-and to the bwock size of the g-gwid containew fow wow twacks. >w< othewwise it is wewative t-to the avaiwabwe inwine s-size ow bwock size of the waid out b-box depending o-on the wwiting mode. rawr
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### CSS
+### css
 
 ```css
-#container {
-  display: grid;
-  grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
-  grid-gap: 5px;
-  box-sizing: border-box;
-  height: 200px;
-  width: 100%;
-  background-color: #8cffa0;
+#containew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: f-fit-content(300px) fit-content(300px) 1fw;
+  g-gwid-gap: 5px;
+  box-sizing: b-bowdew-box;
+  h-height: 200px;
+  w-width: 100%;
+  backgwound-cowow: #8cffa0;
   padding: 10px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
-  padding: 5px;
+#containew > div {
+  backgwound-cowow: #8ca0ff;
+  p-padding: 5px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="container">
-  <div>Item as wide as the content.</div>
+```htmw
+<div id="containew">
+  <div>item as wide as the content.</div>
   <div>
-    Item con más texto en él. Porque el contenido que es mas grande que el ancho
-    máximo, está restringido a los 300 pixeles.
+    i-item con más texto en éw. 😳 p-powque ew contenido q-que es mas g-gwande que ew ancho
+    máximo, >w< e-está westwingido a-a wos 300 pixewes. (⑅˘꒳˘)
   </div>
-  <div>Flexible item</div>
+  <div>fwexibwe i-item</div>
 </div>
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Ejemplo", "100%", 200)}}
+{{embedwivesampwe("ejempwo", OwO "100%", 200)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}

@@ -1,83 +1,83 @@
 ---
-title: :placeholder-shown
-slug: Web/CSS/:placeholder-shown
+titwe: :pwacehowdew-shown
+swug: w-web/css/:pwacehowdew-shown
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{htmlElement("input")}} o {{htmlElement("textarea")}} que esté mostrando actualmente el [texto de marcador de posición (placeholder)](/es/docs/Web/HTML/Element/input#attr-placeholder).
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:pwacehowdew-shown`** d-de [css](/es/docs/web/css) w-wepwesenta c-cuawquiew ewemento {{htmwewement("input")}} o {{htmwewement("textawea")}} q-que e-esté mostwando a-actuawmente ew [texto de mawcadow de posición (pwacehowdew)](/es/docs/web/htmw/ewement/input#attw-pwacehowdew). o.O
 
 ```css
-/* Selecciona cualquier elemento con un placeholder activo */
-:placeholder-shown {
-  border: 2px solid silver;
+/* sewecciona cuawquiew e-ewemento con un pwacehowdew activo */
+:pwacehowdew-shown {
+  bowdew: 2px sowid s-siwvew;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo básico
+### e-ejempwo básico
 
-#### HTML
+#### htmw
 
-```html
-<input placeholder="¡Escribe algo aquí!" />
+```htmw
+<input pwacehowdew="¡escwibe awgo a-aquí!" />
 ```
 
-#### CSS
+#### css
 
 ```css
-input {
-  border: 2px solid black;
+i-input {
+  bowdew: 2px s-sowid bwack;
   padding: 3px;
 }
 
-input:placeholder-shown {
-  border-color: silver;
+input:pwacehowdew-shown {
+  bowdew-cowow: siwvew;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Ejemplo_básico", 200, 60)}}
+{{embedwivesampwe("ejempwo_básico", ( ͡o ω ͡o ) 200, 60)}}
 
-### Texto desbordante
+### texto desbowdante
 
-En pantallas angostas como teléfonos inteligentes, el ancho de los cuadros de búsqueda y otros campos de formulario pueden acortarse drásticamente. Esto puede provocar que el texto de marcador de posición se recorte de una manera no deseada. A menudo es útil alterar este comportamiento con la propiedad {{cssxref("text-overflow")}}.
+en pantawwas angostas como tewéfonos i-intewigentes, ew ancho de wos c-cuadwos de búsqueda y-y otwos campos d-de fowmuwawio p-pueden acowtawse dwásticamente. (U ﹏ U) esto puede pwovocaw q-que ew texto de mawcadow de posición se w-wecowte de una manewa nyo deseada. (///ˬ///✿) a menudo es útiw awtewaw este compowtamiento con wa pwopiedad {{cssxwef("text-ovewfwow")}}. >w<
 
-#### HTML
+#### h-htmw
 
-```html
-<input placeholder="¡Ingresa algo en este campo, por favor!" />
+```htmw
+<input pwacehowdew="¡ingwesa a-awgo en este campo, rawr p-pow favow!" />
 ```
 
-#### CSS
+#### css
 
 ```css
-input:placeholder-shown {
-  text-overflow: ellipsis;
+i-input:pwacehowdew-shown {
+  text-ovewfwow: ewwipsis;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Texto_desbordante", 200, 60)}}
+{{embedwivesampwe("texto_desbowdante", mya 200, 60)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- El pseudo-elemento {{cssxref("::placeholder")}} estiliza el placeholder _por sí mismo_.
-- Elementos HTML relacionados: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- {{cssxref(":-moz-placeholder")}}, {{cssxref("::-moz-placeholder")}}
-- [Formularios HTML](/es/docs/Learn/Forms)
+- e-ew pseudo-ewemento {{cssxwef("::pwacehowdew")}} estiwiza ew p-pwacehowdew _pow sí mismo_. ^^
+- e-ewementos htmw wewacionados: {{htmwewement("input")}}, 😳😳😳 {{htmwewement("textawea")}}
+- {{cssxwef(":-moz-pwacehowdew")}}, mya {{cssxwef("::-moz-pwacehowdew")}}
+- [fowmuwawios htmw](/es/docs/weawn/fowms)

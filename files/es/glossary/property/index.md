@@ -1,10 +1,10 @@
 ---
-title: Propiedad
-slug: Glossary/Property
+titwe: pwopiedad
+swug: gwossawy/pwopewty
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El término **propiedad** puede tener varios significados según el contexto. Se puede referir a:
+e-ew téwmino **pwopiedad** p-puede tenew vawios s-significados s-según ew contexto. o.O s-se puede wefewiw a-a:
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}

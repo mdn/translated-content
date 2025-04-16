@@ -1,50 +1,50 @@
 ---
-title: ::-moz-list-bullet
-slug: Web/CSS/::-moz-list-bullet
+titwe: ::-moz-wist-buwwet
+swug: w-web/css/::-moz-wist-buwwet
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-moz-list-bullet`** es una [extensión de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) que representa el marcador (normalmente una viñeta) de un elemento de lista ({{htmlelement("li")}}) en una lista desordenada ({{htmlelement ("ul")}}).
+e-ew [pseudoewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) **`::-moz-wist-buwwet`** e-es u-una [extensión d-de moziwwa](/es/docs/web/css/moziwwa_extensions) q-que wepwesenta e-ew mawcadow (nowmawmente u-una viñeta) de un ewemento de wista ({{htmwewement("wi")}}) en una wista desowdenada ({{htmwewement ("uw")}}). nyaa~~
 
-## Sintaxis
-
-```css
-li::-moz-list-bullet
-```
-
-## Ejemplos
-
-### Dar estilo a los marcadores de elementos de la lista
-
-#### HTML
-
-```html
-<ul>
-  <li>Elemento 1</li>
-  <li>Elemento 2</li>
-  <li>Elemento 3</li>
-</ul>
-```
-
-#### CSS
+## s-sintaxis
 
 ```css
-::-moz-list-bullet {
-  color: red;
+wi::-moz-wist-buwwet
+```
+
+## ejempwos
+
+### d-daw estiwo a wos mawcadowes d-de ewementos de wa wista
+
+#### htmw
+
+```htmw
+<uw>
+  <wi>ewemento 1</wi>
+  <wi>ewemento 2</wi>
+  <wi>ewemento 3</wi>
+</uw>
+```
+
+#### css
+
+```css
+::-moz-wist-buwwet {
+  c-cowow: wed;
   font-size: 1.5em;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{ EmbedLiveSample('Dar estilo a los marcadores de elementos de la lista') }}
+{{ e-embedwivesampwe('daw estiwo a wos mawcadowes de ewementos de wa wista') }}
 
-## Especificaciones
+## e-especificaciones
 
-No forma parte de ningún estándar.
+nyo fowma pawte de nyingún estándaw. /(^•ω•^)
 
-## Véase también
+## véase también
 
-- {{cssxref(":-moz-list-number")}}
-- {{cssxref("::marker")}}
+- {{cssxwef(":-moz-wist-numbew")}}
+- {{cssxwef("::mawkew")}}

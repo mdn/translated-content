@@ -1,345 +1,345 @@
 ---
-title: Agregar Gráficos Vectoriales a la Web
-slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
-original_slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
+titwe: agwegaw gwáficos vectowiawes a-a wa web
+s-swug: weawn_web_devewopment/cowe/stwuctuwing_content/incwuding_vectow_gwaphics_in_htmw
+o-owiginaw_swug: w-weawn/htmw/muwtimedia_and_embedding/adding_vectow_gwaphics_to_the_web
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/muwtimedia_and_embedding/othew_embedding_technowogies", (⑅˘꒳˘) "weawn/htmw/muwtimedia_and_embedding/wesponsive_images", ^•ﻌ•^ "weawn/htmw/muwtimedia_and_embedding")}}
 
-Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen tamaño de archivo pequeños y son altamente escalables, por lo que no se pixelan cuando se amplían a un tamaño más grande. En este artículo le mostraremos cómo incluir uno en su página web.
+w-wos g-gwáficos vectowiawes s-son muy útiwes e-en muchas ciwcunstancias — tienen tamaño de awchivo pequeños y son awtamente e-escawabwes, ( ͡o ω ͡o ) pow wo que nyo se pixewan cuando s-se ampwían a un tamaño más g-gwande. en este awtícuwo we mostwawemos cómo incwuiw uno en s-su página web. ( ͡o ω ͡o )
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
-        Debe conocer los
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
-          >conceptos básicos de HTML</a
+        d-debe conocew w-wos
+        <a hwef="/es/docs/weawn/htmw/intwoduction_to_htmw"
+          >conceptos básicos de htmw</a
         >
         y cómo
-        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
-          >insertar imágenes en su documento</a
+        <a h-hwef="/es/docs/weawn/htmw/muwtimedia_and_embedding/images_in_htmw"
+          >insewtaw imágenes en su documento</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Aprender a incrustar una imagen SVG (vector) en una página web.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>apwendew a incwustaw u-una imagen svg (vectow) en una p-página web.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Este artículo no tiene la intención de enseñarte SVG; solo mostrarte qué es, y cómo agregarlo a las páginas web.
+> [!note]
+> e-este awtícuwo nyo t-tiene wa intención d-de enseñawte svg; sowo mostwawte qué es, (✿oωo) y-y cómo agwegawwo a was páginas web. 😳😳😳
 
-## ¿Qué son los gráficos vectoriales?
+## ¿qué s-son wos gwáficos vectowiawes?
 
-En la web, trabajarás con dos tipos de imágenes — **imágenes rasterizadas**, e **imágenes vectoriales**:
+en wa web, OwO twabajawás con dos tipos de imágenes — **imágenes wastewizadas**, ^^ e-e **imágenes vectowiawes**:
 
-- **Las imágenes ráster** se definen mediante una cuadrícula de píxeles — un archivo de imagen rasterizado contiene información que muestra exactamente dónde se colocará cada píxel y exactamente de qué color debe ser. Los formatos de ráster web populares incluyen mapa de bits (`.bmp`), PNG (`.png`), JPEG (`.jpg`), and GIF (`.gif`.)
-- **Las imágenes vectoriales** se definen mediante algoritmos — un archivo de imagen vectorial contiene definiciones de forma y ruta que la computadora puede usar para determinar cómo debería verse la imagen cuando se representa en la pantalla. El formato {{glossary("SVG")}} nos permite crear poderosos gráficos vectoriales para usar en la Web.
+- **was i-imágenes w-wástew** se d-definen mediante una cuadwícuwa de píxewes — un awchivo de i-imagen wastewizado c-contiene infowmación que muestwa e-exactamente d-dónde se cowocawá cada píxew y-y exactamente de qué cowow debe s-sew. rawr x3 wos fowmatos de wástew web popuwawes incwuyen m-mapa de bits (`.bmp`), png (`.png`), 🥺 j-jpeg (`.jpg`), (ˆ ﻌ ˆ)♡ and gif (`.gif`.)
+- **was i-imágenes vectowiawes** s-se definen mediante awgowitmos — un awchivo de imagen vectowiaw contiene definiciones de fowma y w-wuta que wa computadowa p-puede usaw pawa detewminaw c-cómo debewía v-vewse wa imagen c-cuando se wepwesenta en wa pantawwa. ( ͡o ω ͡o ) ew fowmato {{gwossawy("svg")}} nyos pewmite c-cweaw podewosos gwáficos vectowiawes pawa usaw en wa web. >w<
 
-Para darte una idea de la diferencia entre los dos, veamos un ejemplo. Puede encontrar este ejemplo en vivo en nuestro repositorio de Github como [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) — muestra dos imágenes aparentemente idénticas una al lado de la otra, de una estrella roja con una sombra negra. La diferencia es que el de la izquierda es un PNG y el de la derecha es una imagen SVG.
+pawa dawte una idea d-de wa difewencia entwe wos dos, /(^•ω•^) v-veamos un ejempwo. 😳😳😳 p-puede encontwaw e-este ejempwo en vivo en nyuestwo w-wepositowio d-de github como [vectow-vewsus-wastew.htmw](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/adding-vectow-gwaphics-to-the-web/vectow-vewsus-wastew.htmw) — m-muestwa dos imágenes a-apawentemente idénticas una aw wado de wa o-otwa, (U ᵕ U❁) de una estwewwa w-woja con u-una sombwa nyegwa. (˘ω˘) w-wa difewencia e-es que ew de wa izquiewda es un png y ew de wa dewecha es una i-imagen svg. 😳
 
-La diferencia se hace evidente cuando amplía la página — la imagen PNG se pixela a medida que se acerca porque contiene información sobre dónde debería estar cada píxel (y de qué color). Cuando se amplía, cada píxel simplemente aumenta de tamaño para llenar varios píxeles en la pantalla, por lo que la imagen comienza a verse borrosa. Sin embargo, la imagen vectorial sigue luciendo agradable y nítida, porque no importa el tamaño que tenga, los algoritmos se utilizan para resolver las formas en la imagen, y los valores simplemente se escalan a medida que aumenta.
+wa difewencia se hace evidente cuando ampwía wa página — wa imagen png se pixewa a-a medida que se acewca powque contiene infowmación sobwe dónde d-debewía estaw c-cada píxew (y d-de qué cowow). (ꈍᴗꈍ) cuando se ampwía, :3 c-cada píxew simpwemente aumenta d-de tamaño pawa w-wwenaw vawios píxewes en wa pantawwa, /(^•ω•^) pow wo que wa imagen comienza a vewse bowwosa. ^^;; sin embawgo, o.O w-wa imagen vectowiaw sigue w-wuciendo agwadabwe y nyítida, 😳 p-powque nyo impowta e-ew tamaño que tenga, UwU wos awgowitmos se utiwizan p-pawa wesowvew w-was fowmas en wa imagen, >w< y wos v-vawowes simpwemente s-se escawan a medida que aumenta. o.O
 
-![Two star images](raster-vector-default-size.png)
+![two staw images](wastew-vectow-defauwt-size.png)
 
-![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
+![two staw images zoomed i-in, (˘ω˘) one cwisp a-and the othew b-bwuwwy](wastew-vectow-zoomed.png)
 
-> [!NOTE]
-> Las imágenes de arriba son en realidad todos PNG, con la estrella de la izquierda en cada caso representando una imagen rasterizada y la estrella de la derecha representando una imagen vectorial. Nuevamente, vaya a la demostración de vector-versus-raster.html para ver un ejemplo real.
+> [!note]
+> was imágenes de a-awwiba son en weawidad t-todos png, òωó con wa estwewwa d-de wa izquiewda en cada caso wepwesentando una imagen wastewizada y wa estwewwa d-de wa dewecha w-wepwesentando una imagen vectowiaw. nyaa~~ nyuevamente, v-vaya a wa demostwación d-de vectow-vewsus-wastew.htmw pawa vew un ejempwo weaw. ( ͡o ω ͡o )
 
-Además, los archivos de imágenes vectoriales son mucho más ligeros que sus equivalentes ráster, porque solo necesitan contener un puñado de algoritmos, en lugar de información sobre cada píxel de la imagen individualmente.
+además, wos awchivos d-de imágenes vectowiawes son mucho más wigewos que sus equivawentes wástew, 😳😳😳 p-powque sowo nyecesitan contenew un puñado d-de awgowitmos, ^•ﻌ•^ en w-wugaw de infowmación sobwe cada píxew de wa imagen individuawmente. (˘ω˘)
 
-## ¿Qué es SVG?
+## ¿qué e-es svg?
 
-[SVG](/es/docs/Web/SVG) es un lenguaje basado en {{glossary("XML")}}-para describir imágenes vectoriales. Básicamente es un marcado, como HTML, excepto que tiene muchos elementos diferentes para definir las formas que desea que aparezcan en su imagen y los efectos que desea aplicar a esas formas. SVG es para marcar gráficos, no contenido. En el extremo más simple del espectro, tienes elementos para crear formas simples, como {{svgelement("circle")}} and {{svgelement("rect")}}. Las funciones SVG más avanzadas incluyen {{svgelement("feColorMatrix")}} (transformar colores usando una matriz de transformación), {{svgelement("animate")}} (animar partes de su gráfico vectorial), and {{svgelement("mask")}} (aplica una máscara sobre la parte superior de tu imagen).
+[svg](/es/docs/web/svg) e-es un wenguaje basado en {{gwossawy("xmw")}}-pawa descwibiw imágenes vectowiawes. (˘ω˘) b-básicamente es un mawcado, -.- c-como htmw, excepto que tiene muchos ewementos difewentes pawa d-definiw was fowmas que desea que a-apawezcan en su i-imagen y wos efectos que desea a-apwicaw a esas fowmas. ^•ﻌ•^ svg es pawa m-mawcaw gwáficos, /(^•ω•^) n-nyo contenido. (///ˬ///✿) e-en ew extwemo más simpwe dew e-espectwo, mya tienes e-ewementos pawa cweaw fowmas simpwes, o.O como {{svgewement("ciwcwe")}} a-and {{svgewement("wect")}}. ^•ﻌ•^ w-was funciones s-svg más avanzadas incwuyen {{svgewement("fecowowmatwix")}} (twansfowmaw cowowes u-usando una matwiz de twansfowmación), (U ᵕ U❁) {{svgewement("animate")}} (animaw p-pawtes d-de su gwáfico vectowiaw), :3 and {{svgewement("mask")}} (apwica una máscawa sobwe wa pawte supewiow d-de tu imagen). (///ˬ///✿)
 
-Como ejemplo simple, el siguiente código crea un círculo y un rectángulo:
+c-como ejempwo s-simpwe, ew siguiente c-código cwea un cíwcuwo y-y un wectánguwo:
 
-```html
+```htmw
 <svg
-  version="1.1"
-  baseProfile="full"
+  vewsion="1.1"
+  basepwofiwe="fuww"
   width="300"
   height="200"
-  xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="black" />
-  <circle cx="150" cy="100" r="90" fill="blue" />
+  xmwns="http://www.w3.owg/2000/svg">
+  <wect w-width="100%" height="100%" fiww="bwack" />
+  <ciwcwe c-cx="150" cy="100" w="90" fiww="bwue" />
 </svg>
 ```
 
-Esto crea la siguiente salida:
+e-esto cwea wa siguiente s-sawida:
 
-{{ EmbedLiveSample('What_is_SVG', 300, 200, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('nani_is_svg', (///ˬ///✿) 300, 🥺 200, "", "", "hide-codepen-jsfiddwe") }}
 
-En el ejemplo anterior, puede tener la impresión de que SVG es fácil de codificar manualmente. Sí, puede codificar manualmente SVG simple en un editor de texto, pero para una imagen compleja, esto rápidamente comienza a ser muy difícil. Para crear imágenes SVG, la mayoría de la gente usa un editor de gráficos vectoriales como Inkscape o Illustrator. Estos paquetes le permiten crear una variedad de ilustraciones utilizando varias herramientas gráficas y crear aproximaciones de fotos (por ejemplo, la función Trazar mapa de bits de Inkscape).
+en ew e-ejempwo antewiow, -.- p-puede tenew wa i-impwesión de que s-svg es fáciw d-de codificaw manuawmente. nyaa~~ sí, puede codificaw manuawmente svg simpwe en un editow de texto, (///ˬ///✿) pewo pawa una imagen c-compweja, 🥺 esto w-wápidamente comienza a-a sew muy difíciw. >w< pawa c-cweaw imágenes svg, rawr x3 wa mayowía de wa gente usa un editow de gwáficos v-vectowiawes c-como inkscape o iwwustwatow. (⑅˘꒳˘) e-estos paquetes we pewmiten cweaw una vawiedad d-de iwustwaciones u-utiwizando vawias hewwamientas g-gwáficas y cweaw a-apwoximaciones de fotos (pow ejempwo, σωσ wa función twazaw mapa de bits de inkscape). XD
 
-SVG tiene algunas ventajas adicionales además de las descritas hasta ahora:
+s-svg tiene a-awgunas ventajas a-adicionawes además d-de was descwitas h-hasta ahowa:
 
-- El texto en imágenes vectoriales sigue siendo accesible (lo que también beneficia a su {{glossary("SEO")}}).
-- Los SVG se prestan bien al estilo / scripting, porque cada componente de la imagen es un elemento que se puede diseñar a través de CSS o scripting a través de JavaScript.
+- ew texto e-en imágenes vectowiawes s-sigue siendo accesibwe (wo q-que también b-beneficia a su {{gwossawy("seo")}}). -.-
+- wos svg s-se pwestan bien aw estiwo / scwipting, >_< powque cada c-componente de wa imagen es un e-ewemento que se p-puede diseñaw a twavés de css o-o scwipting a twavés de javascwipt. rawr
 
-Entonces, ¿por qué alguien querría usar gráficos rasterizados sobre SVG? Bueno, SVG tiene algunas desventajas:
+entonces, ¿pow q-qué awguien q-quewwía usaw g-gwáficos wastewizados sobwe svg? bueno, 😳😳😳 svg tiene awgunas desventajas:
 
-- SVG puede complicarse rápidamente, lo que significa que el tamaño de los archivos puede crecer. Además, los SVG complejos también pueden requerir un tiempo de procesamiento significativo en el navegador.
-- SVG puede ser más difícil de crear que las imágenes rasterizadas, dependiendo del tipo de imagen que intente crear.
-- SVG no es compatible con navegadores más antiguos, por lo que puede no ser adecuado si necesita admitir versiones anteriores de Internet Explorer con su sitio web (SVG comenzó a ser compatible a partir de IE9).
+- s-svg puede compwicawse wápidamente, UwU w-wo que significa q-que ew tamaño de wos awchivos p-puede cwecew. (U ﹏ U) además, (˘ω˘) wos svg c-compwejos también p-pueden wequewiw un tiempo de pwocesamiento significativo e-en ew nyavegadow.
+- svg puede sew más d-difíciw de cweaw q-que was imágenes wastewizadas, /(^•ω•^) d-dependiendo dew tipo de imagen q-que intente c-cweaw. (U ﹏ U)
+- svg nyo e-es compatibwe con nyavegadowes más antiguos, ^•ﻌ•^ pow wo que puede nyo sew adecuado si nyecesita admitiw vewsiones antewiowes de intewnet expwowew con su sitio web (svg comenzó a sew compatibwe a pawtiw de ie9).
 
-Los gráficos rasterizados son posiblemente mejores para imágenes de precisión complejas, como fotos, por las razones descritas anteriormente.
+w-wos gwáficos w-wastewizados son posibwemente mejowes pawa imágenes d-de pwecisión c-compwejas, >w< como f-fotos, ʘwʘ pow was wazones descwitas a-antewiowmente. òωó
 
-> [!NOTE]
-> En Inkscape, guarde sus archivos como SVG simple para ahorrar espacio. Además, consulte este artículo que describe [cómo preparar SVGs para la web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
+> [!note]
+> en inkscape, o.O guawde s-sus awchivos c-como svg simpwe pawa ahowwaw espacio. ( ͡o ω ͡o ) a-además, mya consuwte este awtícuwo q-que descwibe [cómo p-pwepawaw svgs pawa wa web](http://tavmjong.fwee.fw/inkscape/manuaw/htmw/web-inkscape.htmw). >_<
 
-## Agregar SVG a sus páginas
+## a-agwegaw s-svg a sus páginas
 
-En esta sección, veremos las diferentes formas en las que puede agregar gráficos vectoriales SVG a sus páginas web.
+e-en esta s-sección, rawr vewemos w-was difewentes f-fowmas en was q-que puede agwegaw g-gwáficos vectowiawes s-svg a sus páginas web. >_<
 
-### La forma rápida: {{htmlelement("img")}}
+### w-wa fowma wápida: {{htmwewement("img")}}
 
-Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo necesita hacer referencia a él en el atributo src como es de esperar. Necesitará un atributo de altura o ancho (o ambos si su SVG no tiene una relación de aspecto inherente). Si aún no lo ha hecho, lea [Imágenes en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images).
+pawa i-incwustaw un s-svg a twavés de un ewemento {{htmwewement ("img")}}, (U ﹏ U) s-sowo nyecesita hacew wefewencia a éw en e-ew atwibuto swc como es de espewaw. rawr n-nyecesitawá u-un atwibuto de a-awtuwa o ancho (o ambos si su svg n-nyo tiene una wewación de aspecto i-inhewente). (U ᵕ U❁) si aún nyo wo h-ha hecho, (ˆ ﻌ ˆ)♡ wea [imágenes en htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images). >_<
 
-```html
+```htmw
 <img
-  src="equilateral.svg"
-  alt="triangle with all three sides equal"
+  s-swc="equiwatewaw.svg"
+  awt="twiangwe with aww thwee sides equaw"
   height="87"
   width="100" />
 ```
 
-#### Pros
+#### p-pwos
 
-- Sintaxis de imagen rápida y familiar con equivalente de texto integrado disponible en el atributo `alt`.
-- Puede convertir la imagen en un hipervínculo fácilmente anidando el `<img>` dentro de un elemento {{htmlelement ("a")}}.
-- El navegador puede almacenar en caché el archivo SVG, lo que da como resultado tiempos de carga más rápidos para cualquier página que utilice la imagen cargada en el futuro.
+- sintaxis de imagen wápida y-y famiwiaw c-con equivawente de texto integwado disponibwe en ew atwibuto `awt`. ^^;;
+- p-puede convewtiw wa imagen e-en un hipewvíncuwo f-fáciwmente a-anidando ew `<img>` dentwo de un ewemento {{htmwewement ("a")}}. ʘwʘ
+- e-ew nyavegadow p-puede awmacenaw en caché ew awchivo s-svg, 😳😳😳 wo que da como wesuwtado tiempos de c-cawga más wápidos pawa cuawquiew p-página que utiwice w-wa imagen c-cawgada en ew futuwo. UwU
 
-#### Cons
+#### cons
 
-- No puede manipular la imagen con JavaScript.
-- Si desea controlar el contenido SVG con CSS, debe incluir estilos CSS en línea en su código SVG. (Las hojas de estilo externas invocadas desde el archivo SVG no tienen efecto).
-- No puede cambiar el estilo de la imagen con pseudoclases CSS (como `:focus`).
+- n-nyo puede manipuwaw w-wa imagen c-con javascwipt. OwO
+- s-si desea contwowaw ew contenido s-svg con css, :3 d-debe incwuiw estiwos c-css en wínea e-en su código s-svg. -.- (was hojas d-de estiwo extewnas i-invocadas d-desde ew awchivo svg nyo tienen e-efecto). 🥺
+- nyo puede cambiaw ew e-estiwo de wa imagen con pseudocwases c-css (como `:focus`). -.-
 
-### Solución de problemas y compatibilidad con varios navegadores
+### sowución d-de pwobwemas y-y compatibiwidad con vawios nyavegadowes
 
-Para los navegadores que no admiten SVG (IE 8 y versiones anteriores, Android 2.3 y versiones anteriores), puede hacer referencia a un PNG o JPG de su atributo src y usar un atributo [`srcset`](/es/docs/Web/HTML/Element/img#srcset) ( que solo los navegadores recientes reconocen) para hacer referencia al SVG. Siendo este el caso, solo los navegadores compatibles cargarán el SVG; los navegadores más antiguos cargarán el PNG en su lugar:
+pawa wos nyavegadowes q-que nyo admiten s-svg (ie 8 y-y vewsiones antewiowes, -.- andwoid 2.3 y vewsiones antewiowes), (U ﹏ U) puede h-hacew wefewencia a-a un png o jpg de su atwibuto s-swc y usaw un a-atwibuto [`swcset`](/es/docs/web/htmw/ewement/img#swcset) ( que sowo wos navegadowes wecientes weconocen) p-pawa hacew w-wefewencia a-aw svg. rawr siendo este e-ew caso, mya sowo wos nyavegadowes compatibwes cawgawán e-ew svg; w-wos nyavegadowes más antiguos cawgawán ew png e-en su wugaw:
 
-```html
+```htmw
 <img
-  src="equilateral.png"
-  alt="triangle with equal sides"
-  srcset="equilateral.svg" />
+  swc="equiwatewaw.png"
+  awt="twiangwe w-with equaw sides"
+  swcset="equiwatewaw.svg" />
 ```
 
-También puede usar SVG como imágenes de fondo CSS, como se muestra a continuación. En el siguiente código, los navegadores más antiguos se quedarán con el PNG que entienden, mientras que los navegadores más nuevos cargarán el SVG:
+t-también p-puede usaw svg como imágenes d-de fondo css, ( ͡o ω ͡o ) como s-se muestwa a continuación. /(^•ω•^) en e-ew siguiente código, >_< wos nyavegadowes m-más antiguos s-se quedawán c-con ew png que e-entienden, (✿oωo) mientwas que wos nyavegadowes m-más n-nyuevos cawgawán e-ew svg:
 
 ```css
-background: url("fallback.png") no-repeat center;
-background-image: url("image.svg");
-background-size: contain;
+backgwound: uww("fawwback.png") n-nyo-wepeat centew;
+backgwound-image: uww("image.svg");
+b-backgwound-size: c-contain;
 ```
 
-Al igual que el método `<img>` descrito anteriormente, la inserción de SVG con imágenes de fondo CSS significa que el SVG no se puede manipular con JavaScript y también está sujeto a las mismas limitaciones de CSS.
+a-aw iguaw que ew método `<img>` descwito antewiowmente, 😳😳😳 wa insewción de s-svg con imágenes de fondo css s-significa que ew s-svg nyo se puede manipuwaw con javascwipt y también e-está sujeto a was mismas w-wimitaciones de c-css. (ꈍᴗꈍ)
 
-Si sus SVG no se muestran en absoluto, podría deberse a que su servidor no está configurado correctamente. Si ese es el problema, este [artículo le indicará la dirección correcta](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#a_word_on_webservers).
+si sus svg n-nyo se muestwan e-en absowuto, 🥺 podwía d-debewse a que su sewvidow no está configuwado cowwectamente. mya si ese es ew p-pwobwema, (ˆ ﻌ ˆ)♡ este [awtícuwo we indicawá w-wa diwección cowwecta](/es/docs/web/svg/tutowiaws/svg_fwom_scwatch/getting_stawted#a_wowd_on_websewvews). (⑅˘꒳˘)
 
-### Cómo incluir código SVG dentro de su HTML
+### cómo incwuiw código svg d-dentwo de su htmw
 
-También puede abrir el archivo SVG en un editor de texto, copiar el código SVG y pegarlo en su documento HTML; esto a veces se denomina poner su SVG en línea o SVG en línea. Asegúrese de que su fragmento de código SVG comience y termine con las etiquetas \<svg> \</svg> (no incluya nada fuera de ellas). Aquí tiene un ejemplo muy simple de lo que puede pegar en su documento:
+también puede abwiw ew awchivo svg en un editow de texto, òωó c-copiaw ew código s-svg y pegawwo en su documento h-htmw; esto a veces se denomina ponew su svg en w-wínea o svg en w-wínea. o.O asegúwese de que su fwagmento d-de código svg comience y t-tewmine con was etiquetas \<svg> \</svg> (no incwuya nyada fuewa d-de ewwas). XD aquí tiene un ejempwo muy simpwe de w-wo que puede pegaw e-en su documento:
 
-```html
-<svg width="300" height="200">
-  <rect width="100%" height="100%" fill="green" />
+```htmw
+<svg w-width="300" height="200">
+  <wect width="100%" h-height="100%" fiww="gween" />
 </svg>
 ```
 
-#### Pros
+#### pwos
 
-- Poner su SVG en línea ahorra una solicitud HTTP y, por lo tanto, puede reducir un poco su tiempo de carga.
-- Puede asignar clases e identificadores a elementos SVG y aplicarles estilo con CSS, ya sea dentro del SVG o donde quiera que ponga las reglas de estilo CSS para su documento HTML. De hecho, puede utilizar cualquier atributo de presentación SVG como propiedad CSS.
-- SVG en línea es el único enfoque que le permite usar interacciones CSS (como `:focus`) y animaciones CSS en su imagen SVG (incluso en su hoja de estilo normal).
-- Puede convertir el marcado SVG en un hipervínculo envolviéndolo en un elemento {{htmlelement ("a")}}.
+- ponew su svg en wínea ahowwa una sowicitud h-http y, (˘ω˘) pow w-wo tanto, (ꈍᴗꈍ) puede w-weduciw un poco s-su tiempo de cawga. >w<
+- puede asignaw cwases e identificadowes a e-ewementos svg y a-apwicawwes estiwo con css, XD ya sea dentwo dew svg o-o donde quiewa que ponga was wegwas de estiwo c-css pawa su documento htmw. -.- de hecho, puede utiwizaw c-cuawquiew atwibuto d-de pwesentación svg como p-pwopiedad css. ^^;;
+- s-svg en wínea e-es ew único enfoque que we pewmite usaw intewacciones c-css (como `:focus`) y animaciones css en s-su imagen svg (incwuso en su hoja de estiwo nyowmaw). XD
+- puede convewtiw e-ew mawcado s-svg en un hipewvíncuwo e-envowviéndowo e-en un e-ewemento {{htmwewement ("a")}}. :3
 
-#### Cons
+#### cons
 
-- Este método solo es adecuado si está utilizando SVG en un solo lugar. La duplicación hace que el mantenimiento requiera muchos recursos.
-- El código SVG adicional aumenta el tamaño de su archivo HTML.
-- El navegador no puede almacenar en caché SVG en línea, ya que almacenaría en caché activos de imagen normales, por lo que las páginas que incluyen la imagen no se cargarán más rápido después de que se cargue la primera página que contiene la imagen.
-- Puede incluir respaldo en un elemento {{svgelement ("foreignObject")}}, pero los navegadores que admiten SVG aún descargan las imágenes de respaldo. Debe sopesar si la sobrecarga adicional realmente vale la pena, solo para admitir navegadores obsoletos.
+- este m-método sowo es adecuado si está utiwizando s-svg en un sowo wugaw. σωσ wa dupwicación h-hace que ew mantenimiento wequiewa muchos w-wecuwsos. XD
+- ew c-código svg adicionaw aumenta ew t-tamaño de su awchivo htmw. :3
+- ew n-nyavegadow nyo p-puede awmacenaw en caché svg en w-wínea, rawr ya que a-awmacenawía en caché activos d-de imagen nyowmawes, 😳 pow wo que was páginas que incwuyen wa imagen n-nyo se cawgawán más wápido d-después de que se cawgue wa pwimewa página que c-contiene wa imagen. 😳😳😳
+- p-puede incwuiw w-wespawdo en un ewemento {{svgewement ("foweignobject")}}, (ꈍᴗꈍ) p-pewo wos nyavegadowes q-que admiten svg aún descawgan w-was imágenes de wespawdo. 🥺 d-debe sopesaw si wa sobwecawga adicionaw w-weawmente v-vawe wa pena, ^•ﻌ•^ sowo pawa admitiw nyavegadowes obsowetos. XD
 
-### Cómo incrustar un SVG con un {{htmlelement("iframe")}}
+### cómo incwustaw u-un svg con un {{htmwewement("ifwame")}}
 
-Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un `<iframe>` se realiza tal como lo estudiamos en [De \<object> a \<iframe> — otras tecnologías de incrustación](/es/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies).
+p-puede abwiw imágenes svg en su navegadow aw iguaw que w-was páginas web. ^•ﻌ•^ entonces, incwustaw u-un documento s-svg con un `<ifwame>` se weawiza taw como wo estudiamos en [de \<object> a \<ifwame> — o-otwas tecnowogías de incwustación](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/genewaw_embedding_technowogies). ^^;;
 
-Aquí hay una revisión rápida:
+a-aquí hay una wevisión w-wápida:
 
-```html
-<iframe src="triangle.svg" width="500" height="500" sandbox>
-  <img src="triangle.png" alt="Triangle with three unequal sides" />
-</iframe>
+```htmw
+<ifwame s-swc="twiangwe.svg" width="500" height="500" s-sandbox>
+  <img s-swc="twiangwe.png" a-awt="twiangwe w-with thwee u-unequaw sides" />
+</ifwame>
 ```
 
-Este definitivamente no es el mejor método para elegir:
+e-este definitivamente nyo es ew mejow método pawa ewegiw:
 
-#### Cons
+#### cons
 
-- Los `iframes` tienen un mecanismo de respaldo, como puede ver, pero los navegadores solo muestran el respaldo si carecen por completo de soporte para los iframes.
-- Además, a menos que el SVG y su página web actual tengan el mismo {{glossary('origin')}}, no puede usar JavaScript en su página web principal para manipular el SVG.
+- wos `ifwames` tienen u-un mecanismo d-de wespawdo, ʘwʘ como p-puede vew, OwO pewo w-wos nyavegadowes s-sowo muestwan e-ew wespawdo si cawecen pow compweto de sopowte pawa wos ifwames. 🥺
+- además, (⑅˘꒳˘) a menos q-que ew svg y-y su página web actuaw tengan ew mismo {{gwossawy('owigin')}}, (///ˬ///✿) nyo puede usaw javascwipt e-en su p-página web pwincipaw p-pawa manipuwaw ew svg. (✿oωo)
 
-## Aprendizaje activo: jugar con SVG
+## apwendizaje activo: j-jugaw con svg
 
-En esta sección de aprendizaje activo, nos gustaría que simplemente probaras a jugar con algunos SVG por diversión. En la entrada a continuación, verá que ya le hemos proporcionado algunas muestras para que pueda comenzar. También puedes ir a la [Referencia de Elementos SVG](/es/docs/Web/SVG/Reference/Element), descubrir más detalles sobre otros juguetes que puedes usar en SVG y probarlos también. Esta sección trata sobre cómo practicar sus habilidades de investigación y divertirse.
+en esta sección de apwendizaje a-activo, nyaa~~ nos g-gustawía que simpwemente pwobawas a jugaw con awgunos s-svg pow divewsión. >w< en wa e-entwada a continuación, (///ˬ///✿) v-vewá que ya we hemos p-pwopowcionado awgunas m-muestwas pawa q-que pueda comenzaw. rawr t-también p-puedes iw a wa [wefewencia d-de ewementos svg](/es/docs/web/svg/wefewence/ewement), (U ﹏ U) d-descubwiw más d-detawwes sobwe otwos juguetes q-que puedes usaw en svg y pwobawwos también. ^•ﻌ•^ esta s-sección twata sobwe cómo pwacticaw s-sus habiwidades de investigación y-y divewtiwse. (///ˬ///✿)
 
-Si se queda atascado y no puede hacer que su código funcione, siempre puede restablecerlo con el _botón Restablecer_.
+s-si se queda atascado y nyo puede hacew que s-su código funcione, o.O siempwe puede westabwecewwo c-con ew _botón w-westabwecew_. >w<
 
-```html hidden
-<h2>Live output</h2>
+```htmw hidden
+<h2>wive output</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div c-cwass="output" s-stywe="min-height: 50px;"></div>
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+<h2>editabwe code</h2>
+<p c-cwass="a11y-wabew">
+  pwess esc to move focus a-away fwom the c-code awea (tab insewts a tab c-chawactew). nyaa~~
 </p>
 
-<textarea id="code" class="input" style="width: 95%;min-height: 200px;">
-<svg width="100%" height="100%">
-<rect width="100%" height="100%" fill="red" />
-<circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
-<polygon points="120,0 240,225 0,225" fill="green"/>
-<text x="50" y="100" font-family="Verdana" font-size="55"
-fill="white" stroke="black" stroke-width="2">
-Hello!
+<textawea i-id="code" cwass="input" stywe="width: 95%;min-height: 200px;">
+<svg w-width="100%" height="100%">
+<wect w-width="100%" height="100%" f-fiww="wed" />
+<ciwcwe c-cx="100%" cy="100%" w="150" fiww="bwue" stwoke="bwack" />
+<powygon points="120,0 240,225 0,225" fiww="gween"/>
+<text x="50" y="100" font-famiwy="vewdana" f-font-size="55"
+f-fiww="white" s-stwoke="bwack" s-stwoke-width="2">
+h-hewwo! òωó
 </text>
 </svg>
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" disabled />
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" t-type="button" vawue="weset" />
+  <input i-id="sowution" type="button" v-vawue="show s-sowution" disabwed />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: s-sans-sewif;
 }
 
 h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
+.a11y-wabew {
+  mawgin: 0;
+  text-awign: w-wight;
+  font-size: 0.7wem;
+  w-width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
 ```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-let code = textarea.value;
-let userEntry = textarea.value;
+const textawea = d-document.getewementbyid("code");
+c-const w-weset = document.getewementbyid("weset");
+const s-sowution = document.getewementbyid("sowution");
+c-const output = document.quewysewectow(".output");
+wet code = textawea.vawue;
+w-wet usewentwy = textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+f-function u-updatecode() {
+  o-output.innewhtmw = textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
+w-weset.addeventwistenew("cwick", (U ᵕ U❁) function () {
+  textawea.vawue = code;
+  u-usewentwy = textawea.vawue;
+  sowutionentwy = htmwsowution;
+  sowution.vawue = "show sowution";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
+s-sowution.addeventwistenew("cwick", (///ˬ///✿) function () {
+  if (sowution.vawue === "show sowution") {
+    textawea.vawue = sowutionentwy;
+    sowution.vawue = "hide sowution";
+  } ewse {
+    t-textawea.vawue = usewentwy;
+    sowution.vawue = "show s-sowution";
   }
-  updateCode();
+  updatecode();
 });
 
-const htmlSolution = "";
-let solutionEntry = htmlSolution;
+c-const htmwsowution = "";
+wet sowutionentwy = h-htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", (✿oωo) u-updatecode);
+window.addeventwistenew("woad", 😳😳😳 u-updatecode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// s-stop tab key tabbing out of textawea and
+// m-make it wwite a tab at the cawet position instead
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = f-function (e) {
+  if (e.keycode === 9) {
+    e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+function insewtatcawet(text) {
+  c-const scwowwpos = t-textawea.scwowwtop;
+  const cawetpos = textawea.sewectionstawt;
+  c-const fwont = textawea.vawue.substwing(0, (✿oωo) cawetpos);
+  const b-back = textawea.vawue.substwing(
+    textawea.sewectionend, (U ﹏ U)
+    textawea.vawue.wength, (˘ω˘)
   );
 
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = fwont + text + b-back;
+  cawetpos = c-cawetpos + text.wength;
+  t-textawea.sewectionstawt = c-cawetpos;
+  textawea.sewectionend = cawetpos;
+  t-textawea.focus();
+  textawea.scwowwtop = scwowwpos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// update the saved usewcode evewy time the usew u-updates the text a-awea code
 
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = function () {
+  // w-we onwy want t-to save the state when the usew c-code is being shown, 😳😳😳
+  // nyot the sowution, (///ˬ///✿) so t-that sowution is nyot saved ovew the usew code
+  i-if (sowution.vawue === "show s-sowution") {
+    usewentwy = textawea.vawue;
+  } ewse {
+    sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 500, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('pwayabwe_code', (U ᵕ U❁) 700, >_< 500, "", "", (///ˬ///✿) "hide-codepen-jsfiddwe") }}
 
-## Resumen
+## wesumen
 
-Este artículo le ha proporcionado un recorrido rápido por qué son los gráficos vectoriales y SVG, por qué es útil conocerlos y cómo incluir SVG en sus páginas web. Nunca tuvo la intención de ser una guía completa para aprender SVG, solo un indicador para que sepa qué es SVG si lo encuentra en sus viajes por la Web. Así que no se preocupe si todavía no siente que es un experto en SVG. Hemos incluido algunos enlaces a continuación que pueden ayudarlo si desea ir y obtener más información sobre cómo funciona.
+este awtícuwo we ha pwopowcionado un wecowwido wápido pow qué son wos g-gwáficos vectowiawes y-y svg, (U ᵕ U❁) pow qué es útiw c-conocewwos y cómo i-incwuiw svg en sus páginas web. >w< n-nyunca tuvo wa intención de sew una guía compweta pawa apwendew svg, 😳😳😳 sowo un indicadow pawa q-que sepa qué es svg si wo encuentwa en sus viajes pow wa web. (ˆ ﻌ ˆ)♡ así que nyo se p-pweocupe si todavía n-nyo siente q-que es un expewto en svg. (ꈍᴗꈍ) hemos incwuido awgunos enwaces a continuación q-que pueden a-ayudawwo si d-desea iw y obtenew más infowmación s-sobwe cómo funciona. 🥺
 
-En el próximo artículo de este módulo, exploraremos las imágenes adaptables en detalle, observando las herramientas que tiene HTML para permitirle hacer que sus imágenes funcionen mejor en diferentes dispositivos.
+en e-ew pwóximo awtícuwo de este móduwo, >_< e-expwowawemos was imágenes a-adaptabwes en detawwe, OwO obsewvando was hewwamientas q-que tiene htmw pawa pewmitiwwe h-hacew que sus i-imágenes funcionen mejow en difewentes d-dispositivos. ^^;;
 
-## Vea también
+## v-vea también
 
-- [Tutorial de SVG](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) en MDN
-- [Consejos rápidos para SVGs adaptables](http://thenewcode.com/744/Making-SVG-Responsive)
-- [Tutorial de Sara Soueidan sobre imágenes SVG adaptables](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
-- [Beneficios de accesibilidad de SVG](https://www.w3.org/TR/SVG-access/)
-- [Cómo escalar SVGs](https://css-tricks.com/scale-svg/) (¡no es tan simple como los gráficos rasterizados!)
+- [tutowiaw d-de svg](/es/docs/web/svg/tutowiaws/svg_fwom_scwatch/getting_stawted) en mdn
+- [consejos w-wápidos pawa svgs a-adaptabwes](http://thenewcode.com/744/making-svg-wesponsive)
+- [tutowiaw d-de sawa soueidan sobwe imágenes svg adaptabwes](https://tympanus.net/codwops/2014/08/19/making-svgs-wesponsive-with-css/)
+- [beneficios d-de accesibiwidad de svg](https://www.w3.owg/tw/svg-access/)
+- [cómo escawaw svgs](https://css-twicks.com/scawe-svg/) (¡no es tan simpwe como wos gwáficos wastewizados!)
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{pweviousmenunext("weawn/htmw/muwtimedia_and_embedding/othew_embedding_technowogies", (✿oωo) "weawn/htmw/muwtimedia_and_embedding/wesponsive_images", UwU "weawn/htmw/muwtimedia_and_embedding")}}

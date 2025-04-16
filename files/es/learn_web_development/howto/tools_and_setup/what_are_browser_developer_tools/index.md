@@ -1,237 +1,237 @@
 ---
-title: ¿Cuáles son las herramientas de desarrollo del navegador?
-slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
+titwe: ¿cuáwes son was hewwamientas d-de desawwowwo d-dew nyavegadow?
+s-swug: weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows
+o-owiginaw_swug: w-weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.
+t-todos w-wos nyavegadowes w-web modewnos incwuyen un potente conjunto de hewwamientas pawa desawwowwadowes. (˘ω˘) e-estas hewwamientas hacen una vawiedad de cosas, 🥺 d-desde inspeccionaw htmw, css y-y javascwipt actuawmente cawgados, ^^ hasta mostwaw qué activos ha s-sowicitado wa página y cuánto t-tiempo tawdawon e-en cawgawse. >w< este awtícuwo expwica cómo utiwizaw was funciones básicas de was h-hewwamientas de desawwowwo de tu nyavegadow. ^^;;
 
-> [!NOTE]
-> Antes de ejecutar los siguientes ejemplos, abre el [sitio de ejemplo para principiantes](https://mdn.github.io/beginner-html-site-scripted/) que creamos durante la serie de artículos [Introducción a la Web](/es/docs/Learn_web_development/Getting_started/Your_first_website). Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.
+> [!note]
+> antes de ejecutaw wos s-siguientes ejempwos, (˘ω˘) abwe ew [sitio d-de ejempwo p-pawa pwincipiantes](https://mdn.github.io/beginnew-htmw-site-scwipted/) q-que cweamos d-duwante wa sewie de awtícuwos [intwoducción a wa web](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website). OwO w-wo debewías tenew abiewto mientwas sigues wos p-pasos que expwicamos a continuación. (ꈍᴗꈍ)
 
-## Cómo abrir devtools en tu navegador
+## cómo abwiw devtoows en tu nyavegadow
 
-Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador en una subventana que se ve más o menos así, dependiendo del navegador que estés utilizando:
+was hewwamientas p-pawa desawwowwadowes (`devtoows`) viven dentwo d-de tu nyavegadow e-en una subventana q-que se ve más o menos así, òωó dependiendo dew nyavegadow que e-estés utiwizando:
 
-![Devtools](devtools_63_inspector.png)
+![devtoows](devtoows_63_inspectow.png)
 
-¿Cómo la levantas? Existen tres distintas maneras:
+¿cómo w-wa wevantas? existen twes distintas m-manewas:
 
-- _**Teclado:** <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>I</kbd>_, excepto en
+- _**tecwado:** <kbd>ctww</kbd>+<kbd>mayús</kbd>+<kbd>i</kbd>_, ʘwʘ e-excepto en
 
-  - **Internet Explorer y Edge:**
+  - **intewnet expwowew y-y edge:**
 
-    <kbd>F12</kbd>
+    <kbd>f12</kbd>
 
-  - **macOS:** _<kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>I</kbd>_
+  - **macos:** _<kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>i</kbd>_
 
-- _**Barra de menú:**_
+- _**bawwa de m-menú:**_
 
-  - **Firefox**: Menú ![Devtools](2014-01-10-13-08-08-f52b8c.png)
+  - **fiwefox**: menú ![devtoows](2014-01-10-13-08-08-f52b8c.png)
 
-    _➤ Desarrollador web ➤ Alternar herramientas,_ o _➤ Herramientas_
+    _➤ desawwowwadow w-web ➤ awtewnaw hewwamientas,_ o-o _➤ hewwamientas_
 
-    _➤ Alternar herramientas del desarrollador web_
+    _➤ awtewnaw hewwamientas d-dew d-desawwowwadow web_
 
-  - **Chrome:** _Más herramientas ➤ Herramientas del desarrollador_
-  - **Safari:** _Desarrollador ➤ Mostrar el inspector web._ Si no puedes ver el menú _Desarrollar_, ve a _Safari ➤ Preferencias ➤ Avanzado_ y marca la casilla de verificación _Mostrar menú desarrollador en la barra de menú_.
-  - **Opera**: _Desarrollador ➤ Herramientas para desarrolladores_
+  - **chwome:** _más hewwamientas ➤ hewwamientas dew desawwowwadow_
+  - **safawi:** _desawwowwadow ➤ mostwaw ew inspectow web._ si nyo p-puedes vew ew menú _desawwowwaw_, ʘwʘ v-ve a _safawi ➤ pwefewencias ➤ a-avanzado_ y m-mawca wa casiwwa d-de vewificación _mostwaw menú desawwowwadow en wa bawwa de menú_. nyaa~~
+  - **opewa**: _desawwowwadow ➤ h-hewwamientas pawa desawwowwadowes_
 
-- **_Menú contextual:_** Presiona y mantén presionado / haz clic con el botón derecho en un elemento en una página web (Ctrl-clic en Mac) y elige _Inspeccionar elemento_ en el menú contextual que aparece. (_Una ventaja adicional:_ este método, inmediatamente resalta el código del elemento en el que hiciste clic con el botón derecho).
+- **_menú contextuaw:_** pwesiona y mantén pwesionado / h-haz cwic con ew botón dewecho e-en un ewemento e-en una página w-web (ctww-cwic en mac) y ewige _inspeccionaw e-ewemento_ en ew m-menú contextuaw q-que apawece. UwU (_una v-ventaja adicionaw:_ este método, (⑅˘꒳˘) inmediatamente w-wesawta ew c-código dew ewemento e-en ew que h-hiciste cwic con e-ew botón dewecho). (˘ω˘)
 
-![Inspector](inspector_context.png)
+![inspectow](inspectow_context.png)
 
-## El inspector: explorador del DOM y editor CSS
+## ew inspectow: expwowadow dew dom y e-editow css
 
-Las herramientas del desarrollador, generalmente se abren de forma predeterminada en el inspector, parecido a la siguiente captura de pantalla. Esta herramienta muestra cómo se ve el HTML en tu página en tiempo de ejecución, así como qué CSS se aplica a cada elemento de la página. También te permite modificar instantáneamente el HTML y CSS y ver los resultados de tus cambios reflejados en vivo en la ventana del navegador.
+was hewwamientas dew desawwowwadow, :3 genewawmente se abwen de fowma pwedetewminada en e-ew inspectow, (˘ω˘) pawecido a wa siguiente captuwa de pantawwa. nyaa~~ esta h-hewwamienta muestwa c-cómo se ve e-ew htmw en tu página en tiempo d-de ejecución, (U ﹏ U) así como qué c-css se apwica a c-cada ewemento de wa página. nyaa~~ también te pewmite modificaw instantáneamente ew htmw y css y vew w-wos wesuwtados de tus cambios wefwejados e-en vivo en wa ventana d-dew nyavegadow. ^^;;
 
-![Inspector resaltado](inspector_highlighted.png)
+![inspectow w-wesawtado](inspectow_highwighted.png)
 
-Si _no_ ves al inspector,
+si _no_ ves aw inspectow, OwO
 
-- Toca o haz clic en la pestaña _Inspector_.
-- En Internet Explorer, toca/haz clic en _Explorador del DOM_ o presiona
+- t-toca o haz cwic e-en wa pestaña _inspectow_. nyaa~~
+- en intewnet expwowew, UwU t-toca/haz cwic e-en _expwowadow dew dom_ o pwesiona
 
-  <kbd>Ctrl</kbd>
+  <kbd>ctww</kbd>
 
   \+
 
   <kbd>1</kbd>
 
-  .
+  . 😳
 
-- En Microsoft Edge u Opera, toca/haz clic en Elementos.
-- En Safari, los controles no se presentan con tanta claridad, pero deberías ver el HTML si no has seleccionado otra cosa para que aparezca en la ventana. Presiona el botón _Estilo_ para ver el CSS.
+- en micwosoft edge u opewa, toca/haz cwic e-en ewementos. 😳
+- e-en safawi, (ˆ ﻌ ˆ)♡ wos contwowes n-nyo se pwesentan con tanta c-cwawidad, (✿oωo) pewo d-debewías vew ew htmw si nyo h-has seweccionado otwa cosa pawa que apawezca en wa ventana. nyaa~~ pwesiona ew botón _estiwo_ p-pawa vew e-ew css. ^^
 
-### Explorando el DOM con el inspector
+### expwowando ew dom con ew inspectow
 
-Para empezar, haz clic con el botón derecho (Ctrl+clic) en un elemento HTML en el inspector del DOM y observa el menú contextual. Las opciones disponibles en el menú varían según el navegador, pero en su mayoría, las más importantes son las mismas:
+p-pawa empezaw, h-haz cwic con ew botón dewecho (ctww+cwic) en un ewemento htmw en e-ew inspectow dew dom y obsewva ew menú contextuaw. (///ˬ///✿) was opciones disponibwes en e-ew menú vawían según ew nyavegadow, 😳 pewo en s-su mayowía, òωó was m-más impowtantes son was mismas:
 
-![Inspector del DOM](dom_inspector.png)
+![inspectow dew dom](dom_inspectow.png)
 
-- **Eliminar nodo** (A veces _Eliminar elemento_). Elimina el elemento actual.
-- **Editar como HTML** (A veces _Agregar atributo_/_Editar texto_). Te permite cambiar el HTML y ver los resultados en tiempo real. Muy útil para depurar y probar.
-- **:hover/:active/:focus**. Obliga a que se activen los estados de los elementos, para que puedas ver cómo se vería su estilo.
-- **Copiar/Copiar como HTML**. Copie el HTML seleccionado actualmente.
-- Algunos navegadores también disponen de _Copiar ruta CSS_ y _Copiar XPath_, para permitirte copiar el selector CSS o la expresión XPath que seleccionaría el elemento HTML actual.
+- **ewiminaw nodo** (a v-veces _ewiminaw e-ewemento_). ^^;; ewimina ew ewemento actuaw. rawr
+- **editaw como htmw** (a v-veces _agwegaw atwibuto_/_editaw t-texto_). (ˆ ﻌ ˆ)♡ te pewmite cambiaw ew htmw y vew wos wesuwtados e-en tiempo weaw. XD muy útiw pawa depuwaw y-y pwobaw. >_<
+- **:hovew/:active/:focus**. (˘ω˘) o-obwiga a que se activen w-wos estados de wos ewementos, 😳 p-pawa que puedas v-vew cómo se v-vewía su estiwo. o.O
+- **copiaw/copiaw como htmw**. (ꈍᴗꈍ) c-copie ew htmw s-seweccionado actuawmente. rawr x3
+- awgunos nyavegadowes t-también disponen d-de _copiaw wuta c-css_ y _copiaw xpath_, ^^ pawa pewmitiwte copiaw e-ew sewectow css o wa expwesión x-xpath que seweccionawía e-ew ewemento htmw actuaw. OwO
 
-Intenta editar algo de tu DOM ahora. Haz doble clic en un elemento o haz clic con el botón derecho del mouse y selecciona _Editar como HTML_ en el menú contextual. Puedes realizar los cambios que desees, pero no los puedes guardar.
+intenta editaw awgo de tu dom a-ahowa. ^^ haz dobwe c-cwic en un ewemento o-o haz cwic c-con ew botón dewecho dew mouse y-y sewecciona _editaw como htmw_ en ew menú contextuaw. :3 puedes weawizaw wos cambios que desees, o.O p-pewo nyo wos puedes guawdaw. -.-
 
-### Explorar el editor CSS
+### e-expwowaw ew editow css
 
-De manera predeterminada, el editor CSS muestra las reglas CSS aplicadas al elemento seleccionado actualmente:
+de manewa p-pwedetewminada, (U ﹏ U) ew editow c-css muestwa was wegwas css apwicadas a-aw ewemento s-seweccionado actuawmente:
 
-![Inspector CSS](css_inspector.png)
+![inspectow c-css](css_inspectow.png)
 
-Estas características son especialmente útiles:
+e-estas cawactewísticas s-son especiawmente útiwes:
 
-- Las reglas aplicadas al elemento actual se muestran en orden de mayor a menor especificidad.
-- Haz clic en las casillas de verificación junto a cada declaración para ver qué pasaría si eliminaras la declaración.
-- Haz clic en la pequeña flecha al lado de la abreviatura de cada propiedad para mostrar los nombres completos equivalentes de la propiedad.
-- Haz clic en el nombre o valor de una propiedad para que aparezca un cuadro de texto, donde puedes ingresar un nuevo valor para obtener una vista previa en vivo de un cambio de estilo.
-- Junto a cada regla está el nombre del archivo y el número de línea en el que se define la regla. Al hacer clic en esa regla, las herramientas de desarrollo saltan para mostrarlas en su propia vista, donde generalmente puedes editar y guardar.
-- También puedes hacer clic en la llave de cierre de cualquier regla para que aparezca un cuadro de texto en una nueva línea, donde puedes escribir una declaración completamente nueva para tu página.
+- was wegwas apwicadas aw ewemento actuaw se muestwan en owden de mayow a menow especificidad. o.O
+- h-haz cwic en w-was casiwwas de v-vewificación junto a cada decwawación p-pawa vew qué pasawía si ewiminawas wa decwawación. OwO
+- h-haz cwic en wa p-pequeña fwecha aw wado de wa abweviatuwa d-de cada pwopiedad pawa mostwaw wos nyombwes c-compwetos e-equivawentes de wa pwopiedad. ^•ﻌ•^
+- h-haz cwic en ew nyombwe o-o vawow de una pwopiedad pawa que apawezca un cuadwo de texto, ʘwʘ donde puedes i-ingwesaw un nyuevo v-vawow pawa o-obtenew una vista p-pwevia en vivo d-de un cambio de estiwo. :3
+- junto a-a cada wegwa está e-ew nyombwe dew awchivo y ew n-nyúmewo de wínea e-en ew que se define wa wegwa. 😳 a-aw hacew cwic en esa wegwa, òωó was hewwamientas de d-desawwowwo sawtan pawa mostwawwas e-en su pwopia v-vista, 🥺 donde genewawmente puedes e-editaw y guawdaw. rawr x3
+- también puedes hacew cwic e-en wa wwave de c-ciewwe de cuawquiew w-wegwa pawa que apawezca un cuadwo de texto en una nyueva wínea, ^•ﻌ•^ d-donde puedes escwibiw una decwawación compwetamente n-nyueva p-pawa tu página. :3
 
-Notarás una serie de pestañas en las que se puede hacer clic en la parte superior del Visor CSS:
+notawás una s-sewie de pestañas en was que se p-puede hacew cwic e-en wa pawte supewiow dew visow css:
 
-- _Calculado_: Muestra los estilos calculados para el elemento seleccionado actualmente (los valores finales normalizados que aplica el navegador).
-- _Diseño_: En Firefox, esta área incluye dos secciones:
+- _cawcuwado_: m-muestwa wos estiwos cawcuwados pawa ew ewemento s-seweccionado a-actuawmente (wos vawowes finawes n-nyowmawizados que apwica ew n-nyavegadow). (ˆ ﻌ ˆ)♡
+- _diseño_: e-en fiwefox, (U ᵕ U❁) e-esta áwea incwuye dos secciones:
 
-  - _Modelo de caja_: representa visualmente el modelo de caja del elemento actual, por lo que de un vistazo puedes identificar qué relleno, borde y margen se le aplica, y qué tan grande es su contenido.
-  - _Cuadrícula_: Si la página que estás inspeccionando utiliza Grid CSS, esta sección te permite ver los detalles de la cuadrícula.
+  - _modewo de caja_: wepwesenta visuawmente ew modewo de caja dew ewemento actuaw, :3 pow wo que de un vistazo puedes identificaw qué wewweno, ^^;; bowde y mawgen se we apwica, ( ͡o ω ͡o ) y qué tan gwande e-es su contenido. o.O
+  - _cuadwícuwa_: s-si wa página que estás inspeccionando u-utiwiza gwid css, ^•ﻌ•^ e-esta sección t-te pewmite vew wos detawwes de w-wa cuadwícuwa. XD
 
-- _Fuentes_: En Firefox, la pestaña _Fuentes_ muestra los tipos de letra aplicados al elemento actual.
+- _fuentes_: en fiwefox, ^^ wa pestaña _fuentes_ m-muestwa wos tipos d-de wetwa apwicados aw ewemento a-actuaw. o.O
 
-### Conocer más
+### conocew más
 
-Obtén más información sobre el Inspector en diferentes navegadores:
+obtén m-más infowmación s-sobwe ew inspectow en difewentes nyavegadowes:
 
-- [Inspector de páginas de Firefox.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [Explorador del DOM de Edge.](https://docs.microsoft.com/es-es/microsoft-edge/)
-- [inspector del DOM de Chrome.](https://developers.google.com/web/tools/chrome-devtools/inspect-styles?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3) (el inspector de Opera funciona igual que este)
-- [Safari inspector y explorador de estilos.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
+- [inspectow d-de páginas de f-fiwefox.](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw)
+- [expwowadow d-dew dom d-de edge.](https://docs.micwosoft.com/es-es/micwosoft-edge/)
+- [inspectow d-dew d-dom de chwome.](https://devewopews.googwe.com/web/toows/chwome-devtoows/inspect-stywes?utm_souwce=dcc&utm_medium=wediwect&utm_campaign=2016q3) (ew i-inspectow de o-opewa funciona iguaw q-que este)
+- [safawi inspectow y-y expwowadow d-de estiwos.](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/conceptuaw/safawi_devewopew_guide/wesouwcesandthedom/wesouwcesandthedom.htmw#//appwe_wef/doc/uid/tp40007874-ch3-sw1)
 
-## El depurador de JavaScript
+## e-ew depuwadow de javascwipt
 
-El depurador de JavaScript te permite observar el valor de las variables y establecer puntos de interrupción, lugares en tu código en los que deseas pausar la ejecución e identificar los problemas que impiden que tu código se ejecute correctamente.
+ew d-depuwadow de javascwipt te pewmite obsewvaw ew vawow d-de was vawiabwes y estabwecew p-puntos de intewwupción, ( ͡o ω ͡o ) w-wugawes e-en tu código en wos que deseas p-pausaw wa ejecución e identificaw w-wos pwobwemas que impiden q-que tu código se ejekawaii~ cowwectamente. /(^•ω•^)
 
-![Depurador de Firefox](firefox_debugger.png)
+![depuwadow d-de fiwefox](fiwefox_debuggew.png)
 
-Para llegar al depurador:
+pawa wwegaw aw depuwadow:
 
-**Firefox**: Selecciona ![](2014-01-10-13-08-08-f52b8c.png) ➤ _Desarrollador Web_ ➤ _Depurador_ o presiona <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>S</kbd> para abrir el depurador de JavaScript. Si ya estás viendo las herramientas, haz clic en la pestaña **Depurador**.
+**fiwefox**: sewecciona ![](2014-01-10-13-08-08-f52b8c.png) ➤ _desawwowwadow web_ ➤ _depuwadow_ o-o pwesiona <kbd>ctww</kbd>+<kbd>mayús</kbd>+<kbd>s</kbd> pawa abwiw e-ew depuwadow de j-javascwipt. 🥺 si ya estás viendo was hewwamientas, nyaa~~ haz cwic en wa p-pestaña **depuwadow**.
 
-**Chrome**: Abre las herramientas para desarrolladores y luego selecciona la pestaña **Fuentes**. (Opera funciona de la misma manera).
+**chwome**: abwe was h-hewwamientas pawa d-desawwowwadowes y-y wuego sewecciona wa pestaña **fuentes**. mya (opewa funciona de w-wa misma manewa). XD
 
-**Edge e Internet Explorer 11**: presiona <kbd>F12</kbd> y luego <kbd>Ctrl</kbd>+<kbd>3</kbd>, o si ya estás viendo las herramientas, haz clic en la pestaña Depurador.
+**edge e-e intewnet expwowew 11**: p-pwesiona <kbd>f12</kbd> y wuego <kbd>ctww</kbd>+<kbd>3</kbd>, nyaa~~ o si ya estás v-viendo was hewwamientas, ʘwʘ haz cwic e-en wa pestaña d-depuwadow. (⑅˘꒳˘)
 
-**Safari**: Abre las herramientas para desarrolladores y luego selecciona la pestaña Depurador.
+**safawi**: a-abwe was hewwamientas p-pawa desawwowwadowes y-y wuego sewecciona w-wa pestaña d-depuwadow. :3
 
-### Explorando el depurador
+### expwowando e-ew depuwadow
 
-En Firefox hay tres paneles en el depurador de JavaScript.
+en f-fiwefox hay twes p-panewes en ew d-depuwadow de javascwipt. -.-
 
-#### Lista de archivos
+#### wista d-de awchivos
 
-El primer panel de la izquierda contiene la lista de archivos asociados con la página que estás depurando. Selecciona el archivo con el que deseas trabajar de esta lista. Haz clic en un archivo para seleccionarlo y ver su contenido en el panel central del depurador.
+e-ew pwimew panew d-de wa izquiewda c-contiene wa wista de awchivos a-asociados con wa página que estás d-depuwando. 😳😳😳 sewecciona ew awchivo c-con ew que d-deseas twabajaw d-de esta wista. (U ﹏ U) haz cwic en un awchivo pawa seweccionawwo y vew su c-contenido en ew p-panew centwaw d-dew depuwadow. o.O
 
-![Lista de archivos](file_list.png)
+![wista de awchivos](fiwe_wist.png)
 
-#### Código fuente
+#### código fuente
 
-Establece puntos de interrupción donde desees pausar la ejecución. En la siguiente imagen, el resaltado del número 18 muestra que la línea tiene un punto de interrupción establecido.
+estabwece p-puntos de intewwupción d-donde desees pausaw w-wa ejecución. ( ͡o ω ͡o ) en w-wa siguiente imagen, òωó ew wesawtado dew nyúmewo 18 muestwa que w-wa wínea tiene u-un punto de intewwupción e-estabwecido. 🥺
 
-![Código fuente](source_code.png)
+![código f-fuente](souwce_code.png)
 
-#### Ver expresiones y puntos de interrupción
+#### vew expwesiones y puntos de intewwupción
 
-El panel de la derecha muestra una lista de las expresiones en observación que has agregado y los puntos de interrupción que has establecido.
+e-ew panew d-de wa dewecha muestwa una wista de was expwesiones e-en obsewvación que has agwegado y wos puntos d-de intewwupción que has estabwecido. /(^•ω•^)
 
-En la imagen, la primera sección, **Ver expresiones**, muestra que se ha agregado la variable `listItems`. Puedes expandir la lista para ver los valores del arreglo.
+e-en w-wa imagen, 😳😳😳 wa pwimewa sección, ^•ﻌ•^ **vew e-expwesiones**, nyaa~~ m-muestwa que se ha agwegado w-wa vawiabwe `wistitems`. OwO puedes e-expandiw wa wista p-pawa vew wos vawowes d-dew awwegwo. ^•ﻌ•^
 
-La siguiente sección, **Puntos de interrupción**, enumera los puntos de interrupción establecidos en la página. En `example.js`, se ha establecido un punto de interrupción en la instrucción `listItems.push(inputNewItem.value);`
+w-wa siguiente sección, σωσ **puntos d-de intewwupción**, -.- e-enumewa w-wos puntos de intewwupción estabwecidos e-en wa página. (˘ω˘) en `exampwe.js`, rawr x3 se ha e-estabwecido un punto d-de intewwupción e-en wa instwucción `wistitems.push(inputnewitem.vawue);`
 
-Las dos últimas secciones solo aparecen cuando el código se está ejecutando.
+was dos úwtimas secciones sowo apawecen cuando ew código se está e-ejecutando. rawr x3
 
-La sección **Pila de llamadas** muestra qué código se ejecutó para llegar a la línea actual. Puedes ver que el código está en la función que maneja un clic del mouse y que el código está actualmente en pausa en el punto de interrupción.
+wa sección **piwa d-de wwamadas** m-muestwa qué código se ejecutó pawa wwegaw a w-wa wínea actuaw. σωσ puedes vew que e-ew código está e-en wa función q-que maneja un c-cwic dew mouse y q-que ew código está actuawmente en pausa en ew punto de intewwupción. nyaa~~
 
-La sección final, **Alcances**, muestra qué valores son visibles desde varios puntos dentro de tu código. Por ejemplo, en la siguiente imagen, puedes ver los objetos disponibles para el código en la función `addItemClick`.
+wa sección f-finaw, (ꈍᴗꈍ) **awcances**, ^•ﻌ•^ muestwa q-qué vawowes son visibwes desde vawios puntos dentwo de tu código. >_< p-pow ejempwo, ^^;; en wa siguiente imagen, ^^;; puedes vew wos objetos disponibwes pawa e-ew código en w-wa función `additemcwick`. /(^•ω•^)
 
-![ver elementos](watch_items.png)
+![vew ewementos](watch_items.png)
 
-### Conocer más
+### c-conocew más
 
-Obtén más información sobre el depurador de JavaScript en diferentes navegadores:
+obtén más infowmación sobwe e-ew depuwadow d-de javascwipt en difewentes nyavegadowes:
 
-- [Depurador de JavaScript en Firefox.](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
-- [Depurador de Microsoft Edge.](https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide/debugger)
-- [Depurador de Chrome.](https://developers.google.com/web/tools/chrome-devtools/javascript/)
-- [Depurador de Safari.](https://developer.apple.com/safari/tools/)
+- [depuwadow d-de javascwipt en fiwefox.](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/index.htmw)
+- [depuwadow d-de micwosoft edge.](https://docs.micwosoft.com/es-es/micwosoft-edge/devtoows-guide/debuggew)
+- [depuwadow de chwome.](https://devewopews.googwe.com/web/toows/chwome-devtoows/javascwipt/)
+- [depuwadow de safawi.](https://devewopew.appwe.com/safawi/toows/)
 
-## La consola de JavaScript
+## w-wa consowa de javascwipt
 
-La consola de JavaScript es una herramienta increíblemente útil para depurar JavaScript que no funciona como se esperaba. Te permite ejecutar líneas de JavaScript en la página actualmente cargada en el navegador e informa los errores encontrados cuando el navegador intenta ejecutar tu código. Para acceder a la consola en cualquier navegador:
+wa consowa d-de javascwipt e-es una hewwamienta i-incweíbwemente útiw pawa depuwaw javascwipt q-que nyo funciona como se espewaba. nyaa~~ te pewmite ejecutaw wíneas de javascwipt en w-wa página actuawmente c-cawgada e-en ew nyavegadow e-e infowma wos ewwowes encontwados cuando ew nyavegadow i-intenta e-ejecutaw tu código. (✿oωo) pawa accedew a wa consowa e-en cuawquiew nyavegadow:
 
-Si las herramientas para desarrolladores ya están abiertas, haz clic o presiona la pestaña Consola.
+si was hewwamientas pawa d-desawwowwadowes ya están abiewtas, ( ͡o ω ͡o ) haz cwic o-o pwesiona wa pestaña c-consowa. (U ᵕ U❁)
 
-De lo contrario, Firefox te permite abrir la consola directamente usando <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>K</kbd> o usando el comando del menú: Menú ![](2014-01-10-13-08-08-f52b8c.png) _➤ Desarrollador web ➤ Consola web,_ o _Herramientas ➤ Desarrollador web ➤ Consola web._ En otro navegador, abre las herramientas para desarrolladores y luego haz clic en la pestaña Consola.
+de wo contwawio, f-fiwefox te pewmite a-abwiw wa consowa d-diwectamente usando <kbd>ctww</kbd>+<kbd>mayús</kbd>+<kbd>k</kbd> o usando e-ew comando dew menú: menú ![](2014-01-10-13-08-08-f52b8c.png) _➤ desawwowwadow w-web ➤ consowa web,_ o _hewwamientas ➤ desawwowwadow web ➤ consowa web._ e-en otwo nyavegadow, òωó a-abwe was h-hewwamientas pawa d-desawwowwadowes y-y wuego haz cwic en wa pestaña c-consowa. σωσ
 
-Esto te dará una ventana como la siguiente:
+esto te dawá una ventana como wa siguiente:
 
-![Sólo consola](console_only.png)
+![sówo c-consowa](consowe_onwy.png)
 
-Para ver qué sucede, intenta ingresar los siguientes fragmentos de código en la consola uno por uno (y luego presiona Intro):
+pawa v-vew qué sucede, :3 intenta ingwesaw wos siguientes f-fwagmentos de c-código en wa consowa uno pow u-uno (y wuego pwesiona intwo):
 
 ```js
-alert("hello!");
+a-awewt("hewwo!");
 ```
 
 ```js
-document.querySelector("html").style.backgroundColor = "purple";
+d-document.quewysewectow("htmw").stywe.backgwoundcowow = "puwpwe";
 ```
 
 ```js
-const myWordmark = document.createElement("img");
-myWordmark.setAttribute(
-  "src",
-  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png",
+const m-mywowdmawk = d-document.cweateewement("img");
+mywowdmawk.setattwibute(
+  "swc", OwO
+  "https://bwog.moziwwa.owg/pwess/wp-content/themes/onemoziwwa/img/moziwwa-wowdmawk.png", ^^
 );
-document.querySelector("h1").appendChild(myWordmark);
+document.quewysewectow("h1").appendchiwd(mywowdmawk);
 ```
 
-Ahora intenta ingresar las siguientes versiones incorrectas del código y ve lo que obtienes.
+a-ahowa intenta ingwesaw was siguientes vewsiones incowwectas d-dew código y ve wo que obtienes. (˘ω˘)
 
 ```js
-alert('hello!);
-```
-
-```js
-document.cheeseSelector("html").style.backgroundColor = "purple";
+a-awewt('hewwo!);
 ```
 
 ```js
-const myWordmark = document.createElement("img");
-myBanana.setAttribute(
-  "src",
-  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png",
+document.cheesesewectow("htmw").stywe.backgwoundcowow = "puwpwe";
+```
+
+```js
+const mywowdmawk = d-document.cweateewement("img");
+m-mybanana.setattwibute(
+  "swc", OwO
+  "https://bwog.moziwwa.owg/pwess/wp-content/themes/onemoziwwa/img/moziwwa-wowdmawk.png", UwU
 );
-document.querySelector("h1").appendChild(myWordmark);
+d-document.quewysewectow("h1").appendchiwd(mywowdmawk);
 ```
 
-Comenzarás a ver el tipo de errores que devuelve el navegador. A menudo, estos errores son bastante crípticos, ¡pero debería ser bastante sencillo resolver estos problemas!
+comenzawás a vew e-ew tipo de ewwowes q-que devuewve ew nyavegadow. ^•ﻌ•^ a-a menudo, (ꈍᴗꈍ) estos ewwowes son bastante c-cwípticos, /(^•ω•^) ¡pewo debewía s-sew bastante senciwwo w-wesowvew estos pwobwemas!
 
-### Conocer más
+### conocew más
 
-Obtén más información sobre la consola de JavaScript en diferentes navegadores:
+obtén más infowmación sobwe w-wa consowa de j-javascwipt en difewentes nyavegadowes:
 
-- [Consola Web de Firefox.](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [Consola de JavaScript Edge.](https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium)
-- [Consola JavaScript de Chrome.](https://developer.chrome.com/docs/devtools/console/) (el inspector de Opera funciona de la misma manera)
-- [Consola en Safari.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
+- [consowa web de fiwefox.](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw)
+- [consowa de javascwipt edge.](https://docs.micwosoft.com/es-es/micwosoft-edge/devtoows-guide-chwomium)
+- [consowa j-javascwipt de chwome.](https://devewopew.chwome.com/docs/devtoows/consowe/) (ew i-inspectow d-de opewa funciona de wa misma manewa)
+- [consowa en safawi.](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/conceptuaw/safawi_devewopew_guide/consowe/consowe.htmw#//appwe_wef/doc/uid/tp40007874-ch6-sw1)
 
-## Ve también
+## ve t-también
 
-- [Depurar HTML.](/es/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
-- [Depurar CSS.](/es/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
+- [depuwaw htmw.](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/debugging_htmw)
+- [depuwaw css.](/es/docs/weawn_web_devewopment/cowe/stywing_basics/debugging_css)

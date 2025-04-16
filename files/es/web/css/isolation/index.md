@@ -1,89 +1,89 @@
 ---
-title: Isolation
-slug: Web/CSS/isolation
+titwe: isowation
+swug: web/css/isowation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS **`isolation`** define si el elemento debe crear un nuevo {{glossary("stacking context")}}.
+wa pwopiedad c-css **`isowation`** d-define s-si ew ewemento d-debe cweaw un nyuevo {{gwossawy("stacking c-context")}}. ^^
 
-Esto es especialmente útil en conjunto con {{cssxref("background-blend-mode")}} que solo mezclan fondos en un contexto de apilamiento determinado: permite aislar grupos de elementos de sus fondos más profundos y mezclar sus colores de fondo.
+e-esto es e-especiawmente útiw en conjunto con {{cssxwef("backgwound-bwend-mode")}} que sowo mezcwan fondos e-en un contexto de apiwamiento detewminado: pewmite a-aiswaw gwupos de ewementos de s-sus fondos más pwofundos y mezcwaw sus cowowes de fondo. 😳😳😳
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Keyword values */
-isolation: auto;
-isolation: isolate;
+/* keywowd vawues */
+i-isowation: auto;
+i-isowation: isowate;
 
-/* Global values */
-isolation: inherit;
-isolation: initial;
-isolation: unset;
+/* gwobaw vawues */
+isowation: inhewit;
+isowation: initiaw;
+i-isowation: unset;
 ```
 
-### Valores
+### vawowes
 
 - `auto`
-  - : Es un keyword que indica que un nuevo contexto de apilamiento debe ser creado solo si una de las propiedades aplicadas al elemento lo requiere.
-- `isolate`
-  - : Es un keyword que indica que un nuevo contexto de apilamiento debe ser creado.
+  - : es un keywowd que indica q-que un nyuevo contexto de apiwamiento d-debe sew c-cweado sowo si una d-de was pwopiedades a-apwicadas aw ewemento wo wequiewe. mya
+- `isowate`
+  - : es un k-keywowd que indica que un nyuevo contexto de apiwamiento d-debe sew cweado. 😳
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-```html
-<div id="b" class="a">
-  <div id="d">
-    <div class="a c">auto</div>
+```htmw
+<div id="b" cwass="a">
+  <div i-id="d">
+    <div cwass="a c">auto</div>
   </div>
-  <div id="e">
-    <div class="a c">isolate</div>
+  <div i-id="e">
+    <div c-cwass="a c-c">isowate</div>
   </div>
 </div>
 ```
 
 ```css
 .a {
-  background-color: rgb(0, 255, 0);
+  backgwound-cowow: wgb(0, -.- 255, 0);
 }
 #b {
   width: 200px;
-  height: 210px;
+  h-height: 210px;
 }
 .c {
-  width: 100px;
+  w-width: 100px;
   height: 100px;
-  border: 1px solid black;
+  b-bowdew: 1px s-sowid bwack;
   padding: 2px;
-  mix-blend-mode: difference;
+  m-mix-bwend-mode: diffewence;
 }
 #d {
-  isolation: auto;
+  i-isowation: auto;
 }
 #e {
-  isolation: isolate;
+  isowation: i-isowate;
 }
 ```
 
-{{ EmbedLiveSample('Examples', "230", "230") }}
+{{ embedwivesampwe('exampwes', 🥺 "230", "230") }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-navegadowes
 
-{{Compat}}
+{{compat}}
 
-## También puedes ver
+## t-también puedes vew
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("mix-bwend-mode")}}, {{cssxwef("backgwound-bwend-mode")}}

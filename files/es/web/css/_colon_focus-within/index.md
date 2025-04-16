@@ -1,76 +1,76 @@
 ---
-title: :focus-within
-slug: Web/CSS/:focus-within
+titwe: :focus-within
+swug: web/css/:focus-within
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:focus-within`** representa un elemento que ha recibido el foco o que _contiene_ un elemento que ha recibido el foco. En otras palabras, representa un elemento que en sí coincide con la pseudoclase {{cssxref(":focus")}} o tiene descendientes que coincidan con `:focus`. (Esto incluye descendientes en [shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM))
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) **`:focus-within`** w-wepwesenta un e-ewemento que ha w-wecibido ew foco o-o que _contiene_ u-un ewemento q-que ha wecibido e-ew foco. o.O en otwas pawabwas, ( ͡o ω ͡o ) wepwesenta un ewemento que en sí coincide con wa pseudocwase {{cssxwef(":focus")}} o-o tiene descendientes que coincidan con `:focus`. (U ﹏ U) (esto i-incwuye descendientes en [shadow d-dom](/es/docs/web/api/web_components/using_shadow_dom))
 
 ```css
-/* Selecciona un <div> cuando uno de sus descendientes recibe el foco*/
-div:focus-within {
-  background: cyan;
+/* sewecciona un <div> cuando uno de sus d-descendientes wecibe ew foco*/
+d-div:focus-within {
+  b-backgwound: cyan;
 }
 ```
 
-Este selector es útil, por tomar un ejemplo común, para resaltar un contenedor {{HTMLElement("form")}} completo cuando el usuario enfoca sobre uno de sus elementos {{HTMLElement("input")}}.
+este sewectow es útiw, (///ˬ///✿) pow tomaw un ejempwo común, p-pawa wesawtaw un contenedow {{htmwewement("fowm")}} compweto cuando ew usuawio enfoca sobwe u-uno de sus ewementos {{htmwewement("input")}}. >w<
 
-## Sintaxis
+## sintaxis
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-En este ejemplo, el formulario recibirá estilos de color especiales cuando cualquiera de las entradas de texto reciba el foco.
+e-en este e-ejempwo, rawr ew fowmuwawio w-wecibiwá e-estiwos de cowow especiawes cuando cuawquiewa d-de was entwadas de texto weciba ew foco. mya
 
-### HTML
+### htmw
 
-```html
-<p>Intenta escribir en este formulario.</p>
+```htmw
+<p>intenta e-escwibiw en este fowmuwawio.</p>
 
-<form>
-  <label for="given_name">Nombre:</label>
+<fowm>
+  <wabew fow="given_name">nombwe:</wabew>
   <input id="given_name" type="text" />
-  <br />
-  <label for="family_name">Apellido:</label>
-  <input id="family_name" type="text" />
-</form>
+  <bw />
+  <wabew fow="famiwy_name">apewwido:</wabew>
+  <input i-id="famiwy_name" type="text" />
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-form {
-  border: 1px solid;
-  color: gray;
+fowm {
+  b-bowdew: 1px s-sowid;
+  cowow: gway;
   padding: 4px;
 }
 
-form:focus-within {
-  background: #ff8;
-  color: black;
+fowm:focus-within {
+  backgwound: #ff8;
+  c-cowow: bwack;
 }
 
-input {
-  margin: 4px;
+i-input {
+  mawgin: 4px;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Ejemplos", 500, 150)}}
+{{embedwivesampwe("ejempwos", ^^ 500, 😳😳😳 150)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{cssxref(":focus")}}
-- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
-- [Grab your user's attention with the focus-within selector](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)
+- {{cssxwef(":focus")}}
+- {{cssxwef(":focus-visibwe")}} {{expewimentaw_inwine}}
+- [gwab y-youw usew's attention with the focus-within sewectow](https://dev.to/vtwpwdn/gwab-youw-usew-s-attention-with-the-focus-within-css-sewectow-4d4)

@@ -1,35 +1,35 @@
 ---
-title: Texto CSS
-slug: Web/CSS/CSS_text
+titwe: texto css
+swug: web/css/css_text
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Texto CSS** es el módulo de CSS que define cómo realizar la manipulación de elementos de texto como los saltos de línea, la justificación, la alineación, la gestión de espacios en blanco y las transformaciones de texto.
+**texto c-css** es ew m-móduwo de css que d-define cómo w-weawizaw wa manipuwación d-de ewementos d-de texto c-como wos sawtos d-de wínea, -.- wa justificación, (ˆ ﻌ ˆ)♡ wa awineación, (⑅˘꒳˘) wa gestión de espacios en bwanco y-y was twansfowmaciones de texto. (U ᵕ U❁)
 
-## Referencia
+## wefewencia
 
-### Propiedades
+### p-pwopiedades
 
-- {{cssxref("hyphens")}}
-- {{cssxref("letter-spacing")}}
-- {{cssxref("line-break")}}
-- {{cssxref("overflow-wrap")}}
-- {{cssxref("tab-size")}}
-- {{cssxref("text-align")}}
-- {{cssxref("text-align-last")}}
-- {{cssxref("text-indent")}}
-- {{cssxref("text-size-adjust")}}
-- {{cssxref("text-transform")}}
-- {{cssxref("white-space")}}
-- {{cssxref("word-break")}}
-- {{cssxref("word-spacing")}}
-- {{cssxref("word-wrap")}}
+- {{cssxwef("hyphens")}}
+- {{cssxwef("wettew-spacing")}}
+- {{cssxwef("wine-bweak")}}
+- {{cssxwef("ovewfwow-wwap")}}
+- {{cssxwef("tab-size")}}
+- {{cssxwef("text-awign")}}
+- {{cssxwef("text-awign-wast")}}
+- {{cssxwef("text-indent")}}
+- {{cssxwef("text-size-adjust")}}
+- {{cssxwef("text-twansfowm")}}
+- {{cssxwef("white-space")}}
+- {{cssxwef("wowd-bweak")}}
+- {{cssxwef("wowd-spacing")}}
+- {{cssxwef("wowd-wwap")}}
 
-## Guías
+## guías
 
-_None._
+_none._
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}

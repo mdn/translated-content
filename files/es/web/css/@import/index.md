@@ -1,48 +1,48 @@
 ---
-title: "@import"
-slug: Web/CSS/@import
+titwe: "@impowt"
+swug: web/css/@impowt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La regla-at [CSS](/es/docs/Web/CSS) `@import` permite importar reglas desde otras hojas de estilo. Estas reglas deben preceder a todos los otros tipos de reglas, excepto a las reglas {{ cssxref("@charset") }}; como esto no es una [declaración anidada](/es/docs/Web/CSS/CSS_syntax/Syntax#nested_statements), no puede ser usado dentro de [grupos condicionales de reglas-at](/es/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules).
+w-wa wegwa-at [css](/es/docs/web/css) `@impowt` p-pewmite impowtaw w-wegwas desde o-otwas hojas de e-estiwo. mya estas w-wegwas deben pwecedew a-a todos wos otwos tipos de wegwas, (˘ω˘) excepto a was wegwas {{ cssxwef("@chawset") }}; c-como esto nyo es una [decwawación anidada](/es/docs/web/css/css_syntax/syntax#nested_statements), >_< n-nyo puede sew usado d-dentwo de [gwupos condicionawes de wegwas-at](/es/docs/web/css/css_syntax/at-wuwe#conditionaw_gwoup_wuwes). -.-
 
-Para que los agentes de usuario puedan evitar recuperar recursos para tipos de medios no soportados, los autores pueden especificar reglas dependientes del tipo de medio `@import`. Estas condiciones @import se especifican separando por una coma las [consultas de medios (media query)](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) despues de la _url_. En la ausencia de cualquier consulta de medios (media query), la importación es incondicional. Especificando `all` para el medio tiene el mismo efecto.
+pawa q-que wos agentes de usuawio puedan e-evitaw wecupewaw w-wecuwsos pawa tipos de medios nyo sopowtados, 🥺 wos autowes pueden especificaw w-wegwas dependientes dew tipo de medio `@impowt`. (U ﹏ U) estas condiciones @impowt se e-especifican sepawando pow una coma w-was [consuwtas d-de medios (media q-quewy)](/es/docs/web/css/css_media_quewies/using_media_quewies) d-despues de wa _uww_. en wa ausencia de cuawquiew c-consuwta de medios (media quewy), wa impowtación e-es incondicionaw. >w< especificando `aww` pawa ew medio tiene ew mismo efecto. mya
 
-## Sintaxis
-
-```
-@import url;                      or
-@import url list-of-media-queries;
-```
-
-Dónde :
-
-- _url_
-
-  - : es una {{cssxref("&lt;string&gt;")}} o un {{cssxref("&lt;uri&gt;")}}
-
-    Representa la ubicación del recurso a importar. La _url_ puede ser absoluta o relativa.
-
-- _list-of-media-queries_
-  - : Es una lista separada por comas de [consultas de medios (media query)](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) que condicionan la aplicación de las reglas CSS definidas en el enlace _url_. Si el navegador no soporta cualquiera de estos [consultas de medios (media query)](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries), ni siquiera cargará el recurso vinculado.
-
-## Ejemplos
+## sintaxis
 
 ```
-@import url("fineprint.css") print;
-@import url("bluish.css") projection, tv;
-@import 'custom.css';
-@import "common.css" screen, projection;
-@import url('landscape.css') screen and (orientation:landscape);
+@impowt u-uww;                      ow
+@impowt u-uww wist-of-media-quewies;
 ```
 
-## Especificaciones
+d-dónde :
 
-{{Specifications}}
+- _uww_
 
-## Compatibilidad con navegadores
+  - : e-es una {{cssxwef("&wt;stwing&gt;")}} o un {{cssxwef("&wt;uwi&gt;")}}
 
-{{Compat}}
+    wepwesenta wa u-ubicación dew w-wecuwso a impowtaw. >w< wa _uww_ puede s-sew absowuta o-o wewativa. nyaa~~
+
+- _wist-of-media-quewies_
+  - : es u-una wista sepawada pow comas de [consuwtas d-de medios (media quewy)](/es/docs/web/css/css_media_quewies/using_media_quewies) que c-condicionan wa apwicación de was w-wegwas css definidas en ew enwace _uww_. (✿oωo) s-si ew n-nyavegadow nyo sopowta cuawquiewa de estos [consuwtas de medios (media quewy)](/es/docs/web/css/css_media_quewies/using_media_quewies), ʘwʘ nyi siquiewa cawgawá ew w-wecuwso vincuwado. (ˆ ﻌ ˆ)♡
+
+## e-ejempwos
+
+```
+@impowt uww("finepwint.css") pwint;
+@impowt u-uww("bwuish.css") p-pwojection, 😳😳😳 t-tv;
+@impowt 'custom.css';
+@impowt "common.css" scween, :3 pwojection;
+@impowt uww('wandscape.css') scween and (owientation:wandscape);
+```
+
+## e-especificaciones
+
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}

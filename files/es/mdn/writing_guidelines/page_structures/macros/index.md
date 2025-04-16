@@ -1,38 +1,38 @@
 ---
-title: Utilizando macros
-slug: MDN/Writing_guidelines/Page_structures/Macros
-l10n:
-  sourceCommit: 92cbbdaf81325539eace880b5e78152e3cb8ba49
+titwe: utiwizando macwos
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/macwos
+w-w10n:
+  souwcecommit: 92cbbdaf81325539eace880b5e78152e3cb8ba49
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-La plataforma [Yari](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) en la que se ejecuta MDN, proporciona un sistema de macros, [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) que permite automatizar ciertas tareas. Este artículo proporciona información sobre cómo invocar las macros de MDN dentro de los artículos.
+w-wa pwatafowma [yawi](https://github.com/mdn/yawi/twee/main/docs/nani-yawi-does.md) e-en wa que s-se ejecuta mdn, òωó p-pwopowciona un s-sistema de macwos, (⑅˘꒳˘) [kumascwipt](https://github.com/mdn/yawi/twee/main/docs/kumascwipt) q-que pewmite automatizaw ciewtas taweas. XD este awtícuwo pwopowciona infowmación s-sobwe cómo invocaw was macwos de mdn dentwo d-de wos awtícuwos. -.-
 
-La [guía de KumaScript](https://github.com/mdn/yari/blob/main/docs/kumascript/README.md) proporciona una visión en profundidad de cómo utilizar macros en MDN, por lo que esta sección es más bien una breve visión general.
+wa [guía d-de kumascwipt](https://github.com/mdn/yawi/bwob/main/docs/kumascwipt/weadme.md) pwopowciona una visión en pwofundidad de cómo u-utiwizaw macwos en mdn, :3 pow wo q-que esta sección e-es más bien una bweve visión genewaw. nyaa~~
 
-## Cómo se implementan las macros
+## cómo se impwementan was macwos
 
-Las macros en MDN se implementan utilizando código [JavaScript](/es/docs/Web/JavaScript) ejecutado por el servidor e interpretado usando [Node.js](https://nodejs.org/es/). Sobre esto, hemos implementado una serie de bibliotecas que proporcionan servicios y funciones para que las macros interactúen con la plataforma y el contenido.
+w-was macwos en mdn se impwementan utiwizando código [javascwipt](/es/docs/web/javascwipt) ejecutado pow ew sewvidow e-e intewpwetado usando [node.js](https://nodejs.owg/es/). 😳 s-sobwe e-esto, (⑅˘꒳˘) hemos impwementado u-una s-sewie de bibwiotecas que pwopowcionan sewvicios y-y funciones pawa que was macwos intewactúen con w-wa pwatafowma y ew contenido. nyaa~~
 
-## Utilizar una macro en el contenido
+## utiwizaw una macwo en ew contenido
 
-Para utilizar una macro, encierre la llamada a la macro en un par de llaves dobles incluyendo sus parámetros, si los hay.
+pawa utiwizaw una macwo, OwO e-enciewwe wa wwamada a wa macwo en u-un paw de wwaves d-dobwes incwuyendo s-sus pawámetwos, rawr x3 si wos hay. XD
 
-```plain
-\{{nombredelamacro(lista-de-parámetros)}}
+```pwain
+\{{nombwedewamacwo(wista-de-pawámetwos)}}
 ```
 
-Algunos apuntes sobre la llamada a las macros
+awgunos apuntes sobwe w-wa wwamada a was m-macwos
 
-- Los nombres de las macros son _case-sensitive_ (sensibles a mayúsculas), es decir distinguen entre minúsculas y mayúsculas, pero se intentan corregir los errores comunes de mayúsculas. Puede escribir el nombre completo de una macro en minúsculas incluso si el nombre de la macro utiliza mayúsculas en su interior. Del mismo modo, puede comenzar el nombre de una macro en mayúsculas,incluso cuando éstas generalmente suelen comenzar con una letra minúscula.
-- Los parámetros deben ir separados por comas.
-- Si no hay parámetros, puede omitir por completo los paréntesis. `\{{nombredelamacro()}}` y `\{{nombredelamacro}}` son idénticos.
-- Los parámetros numéricos puede ir entre comillas o no. Depende de ti (sin embargo, si tiene un número de versión con varios decimales, debe ir entre comillas).
-- Si obtienes errores, revisa tu código cuidadosamente. Si sigues sin poder averiguar qué está pasando, consulta [Solución de errores de KumaScript](https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md) para obtener ayuda.
+- wos nyombwes de was m-macwos son _case-sensitive_ (sensibwes a-a mayúscuwas), σωσ es deciw d-distinguen entwe minúscuwas y m-mayúscuwas, (U ᵕ U❁) pewo se intentan cowwegiw wos ewwowes c-comunes de mayúscuwas. (U ﹏ U) puede e-escwibiw ew nyombwe compweto de u-una macwo en minúscuwas i-incwuso si ew nyombwe de wa macwo utiwiza mayúscuwas en su intewiow. :3 dew mismo modo, ( ͡o ω ͡o ) puede comenzaw ew n-nombwe de una m-macwo en mayúscuwas,incwuso cuando éstas g-genewawmente s-suewen comenzaw c-con una wetwa minúscuwa. σωσ
+- wos pawámetwos deben iw sepawados p-pow comas. >w<
+- si nyo hay pawámetwos, puede omitiw pow compweto wos pawéntesis. 😳😳😳 `\{{nombwedewamacwo()}}` y-y `\{{nombwedewamacwo}}` son idénticos. OwO
+- w-wos pawámetwos n-nyuméwicos p-puede iw entwe comiwwas o n-nyo. 😳 depende de t-ti (sin embawgo, 😳😳😳 s-si tiene un nyúmewo d-de vewsión con vawios decimawes, (˘ω˘) debe iw e-entwe comiwwas). ʘwʘ
+- s-si obtienes e-ewwowes, ( ͡o ω ͡o ) wevisa t-tu código cuidadosamente. o.O s-si sigues sin podew avewiguaw qué está pasando, >w< consuwta [sowución d-de ewwowes de kumascwipt](https://github.com/mdn/yawi/bwob/main/docs/kumascwipt/twoubweshooting-ewwows.md) pawa obtenew ayuda.
 
-Las macros son almacenadas en caché de forma considerable. Para cualquier conjunto de valores de entrada (tanto parámetros y valores de entorno como la URL para la que se ejecutó la macro), los resultados se almacenan y se reutilizan. Esto significa que la macro realmente sólo se ejecuta cuando las entradas cambian.
+was macwos son awmacenadas en caché de fowma considewabwe. 😳 p-pawa cuawquiew conjunto de vawowes de entwada (tanto p-pawámetwos y v-vawowes de entowno c-como wa uww pawa wa que se ejecutó w-wa macwo), 🥺 wos wesuwtados s-se awmacenan y s-se weutiwizan. rawr x3 esto significa que wa macwo weawmente sówo se ejecuta cuando was entwadas cambian. o.O
 
-Una macro puede ser algo tan sencillo como insertar un bloque de texto más grande, intercambiar contenidos de otra parte de MDN. Pero también puede ser algo complejo, como crear un índice de contenidos completo para buscar a través de las diferentes secciones del sitio, estilizando el resultado y añadiendo enlaces.
+u-una macwo puede sew awgo tan s-senciwwo como insewtaw un bwoque d-de texto más g-gwande, rawr intewcambiaw contenidos de otwa pawte de m-mdn. ʘwʘ pewo también p-puede sew awgo compwejo, 😳😳😳 como c-cweaw un índice d-de contenidos compweto pawa buscaw a twavés de was difewentes secciones dew s-sitio, ^^;; estiwizando e-ew wesuwtado y-y añadiendo enwaces. o.O
 
-Puede consultar las macros más utilizadas en la página [Macros usadas comúnmente](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros). También puede consultar las [Fuenetes completas para todas las macros](https://github.com/mdn/yari/tree/main/kumascript/macros). La mayoría de las fuentes de macros tienen documentación incorporada en forma de comentarios en la parte superior.
+puede consuwtaw w-was macwos m-más utiwizadas en wa página [macwos u-usadas comúnmente](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos). (///ˬ///✿) también puede consuwtaw was [fuenetes compwetas pawa t-todas was macwos](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos). σωσ w-wa mayowía de was fuentes de macwos t-tienen documentación i-incowpowada en fowma de comentawios en wa pawte supewiow. nyaa~~

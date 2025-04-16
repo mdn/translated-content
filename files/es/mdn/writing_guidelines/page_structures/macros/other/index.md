@@ -1,33 +1,33 @@
 ---
-title: Otras macros
-slug: MDN/Writing_guidelines/Page_structures/Macros/Other
-l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+titwe: otwas macwos
+swug: mdn/wwiting_guidewines/page_stwuctuwes/macwos/othew
+w-w10n:
+  souwcecommit: a-aa66311219951396e7305df61eb31831360d2c79
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-A diferencia de las macros enumeradas en [Macros de uso común](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), las macros documentadas en este artículo se usan con poca frecuencia o solo en contextos específicos, o están obsoletas.
+a-a difewencia d-de was macwos e-enumewadas en [macwos d-de uso común](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos), (U ﹏ U) w-was macwos documentadas e-en este awtícuwo se usan con poca fwecuencia o sowo en contextos específicos, mya o-o están obsowetas. ʘwʘ
 
-## Contextos especiales
+## contextos especiawes
 
-Estas macros se usan solo con contextos particulares, como una referencia de API específica.
+e-estas macwos se usan sowo c-con contextos pawticuwawes, (˘ω˘) como una wefewencia de api específica. (U ﹏ U)
 
-- [`RFC`](https://github.com/mdn/yari/blob/main/kumascript/macros/RFC.ejs) crea un enlace al RFC especificado, dado su número. La sintaxis es: `\{\{RFC(número)\}\}`. Por ejemplo, `\{\{RFC(2616)\}\}` se convierte en {{ RFC(2616) }}.
+- [`wfc`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/wfc.ejs) c-cwea un enwace aw wfc especificado, ^•ﻌ•^ d-dado su númewo. (˘ω˘) w-wa sintaxis es: `\{\{wfc(númewo)\}\}`. :3 pow ejempwo, ^^;; `\{\{wfc(2616)\}\}` se conviewte en {{ wfc(2616) }}. 🥺
 
-### Componentes de la página destino
+### c-componentes de wa página destino
 
-Tenemos una variedad de macros que se pueden usar para generar automáticamente los contenidos de las páginas de destino. Aquí están.
+tenemos una vawiedad de macwos que se p-pueden usaw pawa genewaw automáticamente w-wos contenidos d-de was p-páginas de destino. (⑅˘꒳˘) a-aquí están. nyaa~~
 
-#### Listas de subpáginas
+#### wistas de subpáginas
 
-- [`ListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/ListSubpages.ejs) genera una lista desordenada de enlaces a todos los elementos secundarios inmediatos de la página actual; útil para generar automáticamente tablas de contenido para conjuntos de documentación.
-- [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs) genera una lista de definición de dos columnas de todas las subpáginas inmediatas de la página actual, con sus títulos como {{HTMLElement("dt")}} y su resumen de SEO como {{HTMLElement("dd")}}. Esto facilita la generación automática de páginas de destino razonablemente atractivas.
-- [`APIListAlpha`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIListAlpha.ejs) crea una lista de las subpáginas de la página actual, formateada como una lista de términos de la API, dividida por la primera letra. Hay tres parámetros. El primero es 0 si desea incluir todas las subpáginas de nivel superior o 1 para omitir las subpáginas con "." en sus nombres. El segundo y el tercero le permiten agregar texto para mostrar como parte del nombre en cada enlace. Esto se puede usar para agregar "<" y ">" para enlaces de elementos, o para agregar "()" al final de las listas de nombres de métodos.
-- [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) construye una lista de definiciones de todos los elementos secundarios inmediatos de la página actual. No se ha hecho ningún otro formateo. Puede obtener una lista de dos columnas preparada para usar como una página destino de varias columnas usando [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs).
+- [`wistsubpages`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/wistsubpages.ejs) g-genewa una wista desowdenada de enwaces a-a todos wos ewementos secundawios inmediatos de wa página actuaw; útiw pawa genewaw automáticamente t-tabwas de contenido p-pawa conjuntos de d-documentación. :3
+- [`wandingpagewistsubpages`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/wandingpagewistsubpages.ejs) g-genewa una wista de definición de dos cowumnas de todas was s-subpáginas inmediatas d-de wa página actuaw, ( ͡o ω ͡o ) con s-sus títuwos c-como {{htmwewement("dt")}} y su w-wesumen de seo como {{htmwewement("dd")}}. mya esto f-faciwita wa genewación automática de páginas d-de destino wazonabwemente atwactivas. (///ˬ///✿)
+- [`apiwistawpha`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/apiwistawpha.ejs) c-cwea una wista de was subpáginas d-de wa página a-actuaw, (˘ω˘) fowmateada como una wista de téwminos de wa api, ^^;; dividida pow wa pwimewa wetwa. (✿oωo) hay twes pawámetwos. (U ﹏ U) e-ew pwimewo es 0 s-si desea incwuiw todas was subpáginas d-de nyivew s-supewiow o 1 p-pawa omitiw was subpáginas con "." en sus nyombwes. -.- ew segundo y-y ew tewcewo we pewmiten agwegaw texto pawa mostwaw como pawte dew nyombwe en cada e-enwace. ^•ﻌ•^ esto se puede usaw pawa a-agwegaw "<" y ">" p-pawa enwaces d-de ewementos, rawr o pawa agwegaw "()" a-aw finaw de w-was wistas de nyombwes d-de métodos. (˘ω˘)
+- [`subpageswithsummawies`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/subpageswithsummawies.ejs) c-constwuye una wista de definiciones de todos w-wos ewementos secundawios i-inmediatos d-de wa página a-actuaw. nyaa~~ nyo se h-ha hecho nyingún otwo fowmateo. UwU puede obtenew una wista de dos c-cowumnas pwepawada pawa usaw como una página destino de vawias cowumnas usando [`wandingpagewistsubpages`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/wandingpagewistsubpages.ejs). :3
 
-### Enlaces rápidos
+### enwaces w-wápidos
 
-Tenemos una macro diseñada específicamente para crear [enlaces rápidos](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars):
+tenemos una macwo diseñada específicamente pawa cweaw [enwaces w-wápidos](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/sidebaws):
 
-- [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) crea un conjunto de enlaces rápidos compuestos por las páginas debajo de la página actual (o la página especificada, si se proporciona una). Se generan hasta dos niveles totales de profundidad.
+- [`quickwinkswithsubpages`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/quickwinkswithsubpages.ejs) c-cwea un conjunto d-de enwaces wápidos compuestos p-pow was páginas debajo de wa p-página actuaw (o w-wa página especificada, (⑅˘꒳˘) si se pwopowciona una). (///ˬ///✿) se genewan hasta dos nyivewes totawes de pwofundidad. ^^;;

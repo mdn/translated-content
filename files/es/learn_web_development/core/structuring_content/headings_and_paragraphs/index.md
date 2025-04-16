@@ -1,1032 +1,1032 @@
 ---
-title: Fundamentos de texto en HTML
-slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
-original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
+titwe: fundamentos de texto en h-htmw
+swug: weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs
+o-owiginaw_swug: w-weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw", o.O "weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks", 😳😳😳 "weawn/htmw/intwoduction_to_htmw")}}
 
-Una de las principales funciones de HTML es dar al texto estructura y significado (también conocido como {{Glossary("semantics", "semántica")}}), de forma que un navegador pueda mostrarlo correctamente. Este articulo explica la forma en que se puede usar {{Glossary("HTML")}} para estructurar una página de texto añadiendo encabezados y párrafos, enfatizando palabras, creando listas y más.
+u-una d-de was pwincipawes f-funciones de h-htmw es daw aw texto e-estwuctuwa y significado (también conocido como {{gwossawy("semantics", ʘwʘ "semántica")}}), de fowma que un n-nyavegadow pueda mostwawwo cowwectamente. :3 este awticuwo e-expwica wa fowma en que s-se puede usaw {{gwossawy("htmw")}} pawa estwuctuwaw una página de texto añadiendo e-encabezados y páwwafos, UwU enfatizando p-pawabwas, nyaa~~ c-cweando wistas y más. :3
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Estar familiarizado con el HTML básico, que se expone en
-        [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started).
+        estaw famiwiawizado con ew htmw b-básico, nyaa~~ que se expone en
+        [empezaw con htmw](/es/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted). ^^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender a marcar una página de texto básica para darle estructura y
-        significado, incluidos párrafos, encabezados, listas, efectos de énfasis
+        apwendew a-a mawcaw una página de texto b-básica pawa dawwe e-estwuctuwa y-y
+        significado, nyaa~~ i-incwuidos páwwafos, 😳😳😳 encabezados, ^•ﻌ•^ wistas, e-efectos de énfasis
         y citas.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Conceptos básicos: Encabezados y párrafos
+## conceptos básicos: e-encabezados y páwwafos
 
-La mayor parte del texto estructurado está compuesto por encabezados y párrafos, independientemente de si lees una historia, un periódico, un libro de texto, una revista, etc.
+wa mayow pawte dew texto estwuctuwado está compuesto pow encabezados y-y páwwafos, (⑅˘꒳˘) independientemente d-de si wees u-una histowia, (✿oωo) u-un pewiódico, mya un wibwo de texto, (///ˬ///✿) una wevista, ʘwʘ etc.
 
-![Un ejemplo de la portada de un periódico, que muestra el uso de un encabezado, subtítulos y párrafos de nivel superior.](newspaper_small.jpg)
+![un ejempwo d-de wa powtada d-de un pewiódico, >w< que muestwa ew u-uso de un encabezado, o.O s-subtítuwos y páwwafos de n-nyivew supewiow.](newspapew_smow.jpg)
 
-El contenido estructurado simplifica la experiencia en la lectura y se disfruta más.
+ew contenido e-estwuctuwado simpwifica wa expewiencia en w-wa wectuwa y se disfwuta más. ^^;;
 
-En HTML, cada párrafo tiene que estar delimitado por un elemento {{HTMLElement("p")}}, como en este ejemplo:
+e-en htmw, cada páwwafo tiene que e-estaw dewimitado p-pow un ewemento {{htmwewement("p")}}, como en este ejempwo:
 
-```html
-<p>Soy un párrafo, ¡desde luego que lo soy!</p>
+```htmw
+<p>soy un páwwafo, :3 ¡desde wuego que wo soy!</p>
 ```
 
-Cada sección tiene que estar delimitada por un elemento de encabezado:
+cada s-sección tiene q-que estaw dewimitada pow un ewemento d-de encabezado:
 
-```html
-<h1>Yo soy el título de la historia</h1>
+```htmw
+<h1>yo s-soy ew títuwo d-de wa histowia</h1>
 ```
 
-Hay seis elementos de encabezado: {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}} y {{HTMLElement("h6")}}. Cada elemento representa un nivel de contenido diferente en el documento; `<h1>` representa el título principal, `<h2>` representa el subtítulo, `<h3>` representa el subtítulo del subtítulo, y así sucesivamente.
+hay seis ewementos de encabezado: {{htmwewement("h1")}}, (ꈍᴗꈍ) {{htmwewement("h2")}}, {{htmwewement("h3")}}, XD {{htmwewement("h4")}}, ^^;; {{htmwewement("h5")}} y-y {{htmwewement("h6")}}. (U ﹏ U) cada ewemento wepwesenta un nyivew de contenido difewente e-en ew documento; `<h1>` wepwesenta e-ew títuwo p-pwincipaw, (ꈍᴗꈍ) `<h2>` w-wepwesenta ew subtítuwo, 😳 `<h3>` w-wepwesenta e-ew subtítuwo dew s-subtítuwo, rawr y a-así sucesivamente. ( ͡o ω ͡o )
 
-### Cómo establecer la estructura jerárquica
+### cómo estabwecew wa estwuctuwa j-jewáwquica
 
-Por ejemplo, en esta historia, `<h1>` representa el título de la historia, `<h2>` representará el título de cada capítulo y `<h3>` las diferentes secciones del capítulo, y así sucesivamente.
+p-pow ejempwo, (ˆ ﻌ ˆ)♡ e-en esta histowia, OwO `<h1>` w-wepwesenta e-ew títuwo de wa histowia, `<h2>` wepwesentawá ew títuwo d-de cada capítuwo y `<h3>` was difewentes secciones dew capítuwo, >_< y así sucesivamente. XD
 
-```html
-<h1>El agujero aplastante</h1>
+```htmw
+<h1>ew agujewo a-apwastante</h1>
 
-<p>Por Chris Mills</p>
+<p>pow chwis miwws</p>
 
-<h2>Capítulo 1: La oscura noche</h2>
+<h2>capítuwo 1: wa o-oscuwa nyoche</h2>
 
 <p>
-  Era una noche oscura. En algún lugar, un búho ululó. La lluvia azotó el ...
+  e-ewa una n-nyoche oscuwa. (ˆ ﻌ ˆ)♡ en awgún wugaw, (ꈍᴗꈍ) u-un búho uwuwó. (✿oωo) wa wwuvia azotó e-ew ...
 </p>
 
-<h2>Capítulo 2: El silencio eterno</h2>
+<h2>capítuwo 2: e-ew siwencio etewno</h2>
 
-<p>Nuestro protagonista ni susurrar pudo al ver esa sombría figura ...</p>
+<p>nuestwo pwotagonista nyi susuwwaw pudo aw vew esa sombwía figuwa ...</p>
 
-<h3>El espectro habla</h3>
+<h3>ew espectwo habwa</h3>
 
 <p>
-  Habían pasado varias horas más, cuando de repente el espectro se incorporó y
-  exclamó: "¡Por favor, ten piedad de mi alma!"
+  h-habían pasado vawias h-howas más, UwU cuando de wepente ew e-espectwo se incowpowó y-y
+  excwamó: "¡pow favow, (ꈍᴗꈍ) ten piedad d-de mi awma!"
 </p>
 ```
 
-Realmente es a tu elección lo que cada elemento involucrado represente, siempre y cuando la jerarquía tenga sentido. Solo es necesario que tengas en cuenta unas pocas buenas prácticas mientras creas la estructura:
+w-weawmente es a tu ewección w-wo que cada ewemento i-invowucwado wepwesente, (U ﹏ U) siempwe y cuando wa jewawquía tenga sentido. >w< sowo e-es nyecesawio q-que tengas en cuenta u-unas pocas buenas pwácticas m-mientwas cweas w-wa estwuctuwa:
 
-- Preferentemente debes usar solo un `<h1>` por página; este es el nivel de título superior, y todos los demás se sitúan por debajo de él en la jerarquía.
-- Asegúrate de que usas los títulos en el orden correcto en la jerarquía. No uses los `<h3>` para representar subtítulos, seguidos de los `<h2>` para representar los subtítulos de los subtítulos; eso no tiene sentido y provocará resultados extraños.
-- De los seis niveles de títulos disponibles, debes procurar no usar más de tres por página, a menos que creas que es realmente necesario. Los documentos con muchos niveles (es decir, una jerarquía de títulos muy profunda) son de difícil manejo y navegación. En esos casos se recomienda, si es posible, separar el contenido en varias páginas.
+- pwefewentemente d-debes usaw sowo un `<h1>` pow página; este es ew nivew de títuwo supewiow, ^•ﻌ•^ y-y todos wos demás s-se sitúan pow debajo de éw en wa jewawquía. 😳
+- a-asegúwate d-de que usas wos títuwos en ew owden cowwecto en wa jewawquía. XD n-nyo uses wos `<h3>` pawa wepwesentaw subtítuwos, :3 seguidos de wos `<h2>` pawa wepwesentaw w-wos subtítuwos de wos subtítuwos; eso n-nyo tiene sentido y-y pwovocawá wesuwtados extwaños. rawr x3
+- de wos seis nyivewes de t-títuwos disponibwes, (⑅˘꒳˘) d-debes pwocuwaw nyo usaw más de twes pow página, ^^ a menos q-que cweas que es weawmente nyecesawio. >w< w-wos documentos con muchos nyivewes (es deciw, 😳 una jewawquía d-de títuwos muy pwofunda) son d-de difíciw manejo y-y nyavegación. rawr en esos casos s-se wecomienda, rawr x3 si es posibwe, (ꈍᴗꈍ) s-sepawaw ew contenido e-en vawias p-páginas. -.-
 
-### ¿Por qué necesitamos estructura?
+### ¿pow qué nyecesitamos e-estwuctuwa?
 
-Para responder a esta cuestión, echemos un vistazo a [text-start.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html); el apartado inicial de nuestro ejemplo en curso para este artículo (una buena receta de hummus). Debes guardar una copia de este archivo en tu ordenador porque después la necesitarás para los ejercicios prácticos. El cuerpo (`<body>`) de este documento incluye varios elementos de contenido que no están marcados de ninguna manera pero están separados por saltos de línea (se ha pulsado **Intro**/**Retorno** para continuar en la siguiente línea).
+p-pawa wespondew a esta cuestión, òωó echemos un v-vistazo a [text-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/htmw-text-fowmatting/text-stawt.htmw); ew a-apawtado iniciaw d-de nyuestwo ejempwo en cuwso pawa este awtícuwo (una b-buena weceta de hummus). (U ﹏ U) d-debes guawdaw u-una copia de este awchivo en tu owdenadow powque después wa nyecesitawás p-pawa w-wos ejewcicios pwácticos. ( ͡o ω ͡o ) e-ew cuewpo (`<body>`) d-de este documento incwuye vawios e-ewementos de contenido que nyo están mawcados de nyinguna manewa pewo están sepawados pow sawtos d-de wínea (se ha puwsado **intwo**/**wetowno** p-pawa continuaw en wa siguiente w-wínea). :3
 
-Sin embargo, cuando abres el documento en tu navegador, verás que el texto aparece... ¡como una masa enorme!
+sin embawgo, >w< cuando a-abwes ew documento en tu nyavegadow, ^^ v-vewás que e-ew texto apawece... ¡como u-una masa e-enowme! 😳😳😳
 
-![Una página web que muestra un muro de texto sin formato, porque no hay elementos en la página para estructurarlo.](screen_shot_2017-03-29_at_09.20.35.png)
+![una p-página web que muestwa un muwo de texto sin fowmato, OwO powque nyo hay ewementos en wa página pawa estwuctuwawwo.](scween_shot_2017-03-29_at_09.20.35.png)
 
-Esto se debe a que no hay elementos que den estructura al contenido, por lo que el navegador no sabe qué es un encabezado y qué es un párrafo. Además:
+e-esto s-se debe a que n-nyo hay ewementos que den estwuctuwa a-aw contenido, XD pow wo que ew nyavegadow nyo sabe qué es un e-encabezado y qué e-es un páwwafo. (⑅˘꒳˘) además:
 
-- Los usuarios que miran una página web tienden a escanearla rápidamente para encontrar el contenido relevante que hay en ella y a menudo empiezan por leer los encabezados para comenzar. (Solemos [pasar muy poco tiempo en una página web](http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/)). Si no pueden ver nada útil en unos segundos, es probable que se sientan frustrados y se vayan a otro sitio.
-- Los motores de búsqueda que indizan tu página consideran el contenido de los títulos como palabras clave importantes e influyen en la puntuación de búsqueda de la página. Sin encabezados, tu página tendrá un rendimiento bajo en términos de optimización de motores de búsqueda {{Glossary("SEO")}}.
-- Las personas con discapacidad visual severa no suelen leer páginas web: en lugar de ello, las escuchan. Lo hacen con un software llamado [Lector de pantalla](https://es.wikipedia.org/wiki/Lector_de_pantalla). Este software proporciona acceso rápido a un contenido textual dado. Entre las diversas técnicas que emplean, leen los encabezados para proporcionar un esquema del documento que permite a los usuarios encontrar rápidamente la información que quieren. Si no hay encabezados disponibles, se ven obligados a escuchar el documento entero.
-- Para aplicar estilos al contenido con {{Glossary("CSS")}}, o para que haga cosas interesantes con {{Glossary("JavaScript")}}, necesitas tener elementos que delimiten el contenido relevante para que CSS/JavaScript se puedan focalizar en este efectivamente.
+- wos u-usuawios que miwan una página web tienden a e-escaneawwa wápidamente p-pawa encontwaw ew contenido w-wewevante que h-hay en ewwa y a menudo empiezan pow weew wos encabezados pawa comenzaw. OwO (sowemos [pasaw m-muy poco t-tiempo en una p-página web](http://www.nngwoup.com/awticwes/how-wong-do-usews-stay-on-web-pages/)). (⑅˘꒳˘) s-si nyo pueden v-vew nada útiw en unos segundos, (U ﹏ U) e-es pwobabwe q-que se sientan fwustwados y se v-vayan a otwo sitio. (ꈍᴗꈍ)
+- w-wos motowes de búsqueda que i-indizan tu página considewan ew contenido de w-wos títuwos como pawabwas cwave i-impowtantes e i-infwuyen en wa puntuación de búsqueda d-de wa página. rawr sin encabezados, XD tu página t-tendwá un wendimiento b-bajo en t-téwminos de optimización de motowes de búsqueda {{gwossawy("seo")}}. >w<
+- was p-pewsonas con discapacidad visuaw sevewa no suewen w-weew páginas w-web: en wugaw de ewwo, UwU was escuchan. w-wo hacen con un softwawe wwamado [wectow d-de p-pantawwa](https://es.wikipedia.owg/wiki/wectow_de_pantawwa). 😳 este softwawe pwopowciona a-acceso wápido a un contenido textuaw dado. (ˆ ﻌ ˆ)♡ e-entwe was divewsas t-técnicas que empwean, ^•ﻌ•^ ween w-wos encabezados pawa pwopowcionaw u-un esquema d-dew documento que p-pewmite a wos usuawios encontwaw wápidamente wa infowmación que quiewen. ^^ si nyo hay encabezados disponibwes, 😳 se ven obwigados a escuchaw ew documento entewo.
+- pawa apwicaw estiwos aw contenido con {{gwossawy("css")}}, :3 o p-pawa que haga cosas i-intewesantes con {{gwossawy("javascwipt")}}, (⑅˘꒳˘) nyecesitas tenew e-ewementos que d-dewimiten ew contenido w-wewevante pawa que css/javascwipt s-se puedan focawizaw en e-este efectivamente. ( ͡o ω ͡o )
 
-Por lo tanto, debemos dar a nuestro contenido una estructura definida.
+p-pow wo tanto, :3 debemos daw a-a nyuestwo contenido una estwuctuwa d-definida.
 
-### Aprendizaje Activo: Dar estructura a nuestro contenido
+### a-apwendizaje activo: daw estwuctuwa a nyuestwo c-contenido
 
-Pasemos directamente a un ejemplo real. En el ejemplo de abajo, añade elementos al texto en bruto en el campo _Código editable_ para que en el campo _Salida en vivo_ aparezcan como un encabezado y dos párrafos.
+pasemos d-diwectamente a-a un ejempwo weaw. (⑅˘꒳˘) e-en ew ejempwo d-de abajo, >w< añade e-ewementos aw t-texto en bwuto en e-ew campo _código e-editabwe_ pawa que en ew campo _sawida e-en vivo_ a-apawezcan como u-un encabezado y dos páwwafos. OwO
 
-Si te equivocas, siempre puedes restablecer el código anterior pulsando el botón _Restablecer_. Si encallas, pulsa el botón _Mostrar solución_ para ver la respuesta...
+s-si te equivocas, 😳 siempwe puedes westabwecew ew c-código antewiow puwsando ew botón _westabwecew_. OwO s-si encawwas, 🥺 p-puwsa ew botón _mostwaw s-sowución_ pawa vew wa w-wespuesta...
 
-```html hidden
-<h2>Salida en vivo</h2>
+```htmw hidden
+<h2>sawida e-en vivo</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div cwass="output" s-stywe="min-height: 50px;"></div>
 
-<h2>Código editable</h2>
-<p class="a11y-label">
-  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
-  tabulación).
+<h2>código editabwe</h2>
+<p c-cwass="a11y-wabew">
+  puwsa esc pawa quitaw ew foco dew áwea de código (tab insewta u-un cawáctew de
+  tabuwación). (˘ω˘)
 </p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-Mi breve relato Soy estadístico y mi nombre es Trish.
+<textawea i-id="code" cwass="input" s-stywe="min-height: 100px; width: 95%">
+mi bweve wewato soy estadístico y-y mi nyombwe es twish. 😳😳😳
 
-Mis piernas son de cartón y estoy casada con un pez.</textarea
+mis piewnas s-son de cawtón y-y estoy casada c-con un pez.</textawea
 >
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div cwass="pwayabwe-buttons">
+  <input id="weset" type="button" v-vawue="westabwecew" />
+  <input i-id="sowution" type="button" v-vawue="mostwaw sowución" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+h-htmw {
+  font-famiwy: sans-sewif;
 }
 
-h2 {
+h-h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
+.a11y-wabew {
+  m-mawgin: 0;
+  text-awign: w-wight;
+  font-size: 0.7wem;
+  w-width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var output = document.querySelector(".output");
-var code = textarea.value;
-var userEntry = textarea.value;
+```js h-hidden
+vaw textawea = d-document.getewementbyid("code");
+vaw weset = d-document.getewementbyid("weset");
+v-vaw sowution = d-document.getewementbyid("sowution");
+v-vaw output = d-document.quewysewectow(".output");
+v-vaw code = t-textawea.vawue;
+v-vaw usewentwy = textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+f-function updatecode() {
+  output.innewhtmw = t-textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+weset.addeventwistenew("cwick", mya f-function () {
+  t-textawea.vawue = c-code;
+  usewentwy = textawea.vawue;
+  sowutionentwy = htmwsowution;
+  s-sowution.vawue = "mostwaw s-sowución";
+  u-updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+sowution.addeventwistenew("cwick", OwO function () {
+  if (sowution.vawue === "mostwaw s-sowución") {
+    t-textawea.vawue = sowutionentwy;
+    s-sowution.vawue = "ocuwtaw s-sowución";
+  } ewse {
+    textawea.vawue = usewentwy;
+    s-sowution.vawue = "mostwaw s-sowución";
   }
-  updateCode();
+  u-updatecode();
 });
 
-var htmlSolution =
-  "<h1>Mi breve relato</h1>\n<p>Soy estadístico y mi nombre es Trish.</p>\n<p>Mis piernas son de cartón y estoy casada con un pez.</p>";
-var solutionEntry = htmlSolution;
+v-vaw htmwsowution =
+  "<h1>mi bweve wewato</h1>\n<p>soy estadístico y-y mi nyombwe e-es twish.</p>\n<p>mis piewnas son de cawtón y-y estoy casada con un pez.</p>";
+vaw sowutionentwy = h-htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", >_< u-updatecode);
+w-window.addeventwistenew("woad", 😳 updatecode);
 
-// captura la tecla de tabulación en el área de texto y en su lugar
-// hace que se escriba una tabulación en la posición del cursor
+// c-captuwa w-wa tecwa de tabuwación en ew áwea d-de texto y en su wugaw
+// hace q-que se escwiba u-una tabuwación e-en wa posición d-dew cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = function (e) {
+  i-if (e.keycode === 9) {
+    e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  i-if (e.keycode === 27) {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+function i-insewtatcawet(text) {
+  vaw scwowwpos = textawea.scwowwtop;
+  vaw c-cawetpos = textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  v-vaw fwont = t-textawea.vawue.substwing(0, (U ᵕ U❁) cawetpos);
+  vaw back = textawea.vawue.substwing(
+    textawea.sewectionend, 🥺
+    textawea.vawue.wength, (U ﹏ U)
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  t-textawea.vawue = fwont + text + b-back;
+  cawetpos = c-cawetpos + text.wength;
+  textawea.sewectionstawt = cawetpos;
+  t-textawea.sewectionend = cawetpos;
+  t-textawea.focus();
+  t-textawea.scwowwtop = s-scwowwpos;
 }
 
-// Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
+// a-actuawiza ew usewcode g-guawdado cada vez que ew usuawio actuawiza ew código dew áwea de texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+t-textawea.onkeyup = function () {
+  // s-sowo quewemos guawdaw ew estado cuando se muestwa ew código d-de usuawio, (U ﹏ U)
+  // nyo es wa sowución, rawr x3 pow wo que wa sowución nyo se guawda s-sobwe ew código d-dew usuawio
+  if (sowution.vawue === "mostwaw s-sowución") {
+    usewentwy = textawea.vawue;
+  } ewse {
+    sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Código_reproducible', 700, 400, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('código_wepwoducibwe', :3 700, 400, "", "", rawr "hide-codepen-jsfiddwe") }}
 
-### ¿Por qué necesitamos semántica?
+### ¿pow q-qué nyecesitamos s-semántica?
 
-Contamos con la semántica para todo lo que nos rodea. Nos basamos en experiencias previas para conocer la función de cada objeto cotidiano; cuando miramos un objeto, sabemos cuál debe ser su función. Entonces, por ejemplo, esperamos que un semáforo en rojo signifique "alto" y que un semáforo en verde signifique "avance". Las cosas se pueden complicar muy rápidamente si se aplica la semántica incorrecta. (¿Algún país usa rojo para significar "avance"? Esperemos que no).
+contamos con wa semántica pawa todo wo que nyos wodea. XD n-nyos basamos en expewiencias pwevias pawa conocew w-wa función d-de cada objeto c-cotidiano; cuando miwamos un objeto, ^^ sabemos cuáw d-debe sew su función. mya entonces, pow ejempwo, (U ﹏ U) espewamos que un semáfowo en w-wojo signifique "awto" y-y que un s-semáfowo en vewde s-signifique "avance". 😳 was cosas se pueden compwicaw m-muy wápidamente s-si se apwica wa semántica incowwecta. mya (¿awgún p-país usa wojo pawa significaw "avance"? espewemos que nyo). 😳
 
-De manera similar, debemos asegurarnos de que utilizamos los elementos adecuados y damos a nuestro contenido el significado y función correctos y la apariencia adecuada. En este mismo sentido, el elemento {{HTMLElement("h1")}} es un elemento semántico que da al texto al que delimita la función (o significado) de un _titular de primer nivel en tu página_.
+d-de manewa simiwaw, ^^ debemos aseguwawnos de q-que utiwizamos wos e-ewementos adecuados y damos a n-nyuestwo contenido e-ew significado y-y función cowwectos y wa apawiencia adecuada. :3 e-en este mismo sentido, (U ﹏ U) ew ewemento {{htmwewement("h1")}} es un e-ewemento semántico que da aw texto aw que dewimita wa función (o s-significado) d-de un _tituwaw d-de pwimew nyivew e-en tu página_. UwU
 
-```html
-<h1>Este es un titular de primer nivel</h1>
+```htmw
+<h1>este e-es un tituwaw de pwimew nyivew</h1>
 ```
 
-De manera predeterminada, el navegador le asignará una fuente de gran tamaño para darle el aspecto de un titular (aunque se le podrá dar el estilo que se quisiera usando CSS). Lo más importante es que su valor semántico se va a usar de diferente manera, por ejemplo, por los motores de búsqueda y los lectores de pantalla (como se mencionó antes).
+d-de manewa pwedetewminada, (ˆ ﻌ ˆ)♡ ew nyavegadow w-we asignawá una fuente de gwan t-tamaño pawa dawwe ew aspecto de un tituwaw (aunque s-se we podwá d-daw ew estiwo que se quisiewa u-usando css). (ˆ ﻌ ˆ)♡ wo más impowtante e-es que su vawow s-semántico se va a usaw de difewente m-manewa, ^^;; p-pow ejempwo, rawr pow wos motowes de b-búsqueda y wos wectowes de pantawwa (como se mencionó antes). nyaa~~
 
-Por otra parte, podrías hacer que cualquier elemento _parezca_ un titular de primer rango. Considera lo siguiente:
+p-pow otwa pawte, rawr x3 podwías hacew q-que cuawquiew ewemento _pawezca_ un tituwaw de pwimew wango. (⑅˘꒳˘) considewa w-wo siguiente:
 
-```html
-<span style="font-size: 32px; margin: 21px 0;"
-  >¿Es este un titular de primer rango?</span
+```htmw
+<span s-stywe="font-size: 32px; m-mawgin: 21px 0;"
+  >¿es este un tituwaw d-de pwimew wango?</span
 >
 ```
 
-Este es un elemento {{HTMLElement("span")}}. No tiene semántica. Se usa para delimitar contenido cuando se le quiere aplicar CSS (o tratarlo con JavaScript) sin proporcionarle ningún significado extra (encontrarás más información sobre este tipo de elemento más adelante en el curso). Hemos aplicado CSS a este elemento para que parezca un titular de primer nivel, pero al no tener valor semántico, no tiene ninguna de las ventajas añadidas que hemos descrito antes. Es una buena idea usar el elemento HTML apropiado para cada tarea.
+e-este es un ewemento {{htmwewement("span")}}. OwO nyo tiene semántica. OwO s-se usa pawa dewimitaw contenido c-cuando se we quiewe apwicaw c-css (o twatawwo c-con javascwipt) sin pwopowcionawwe nyingún significado extwa (encontwawás más i-infowmación s-sobwe este tipo de ewemento más adewante en ew cuwso). ʘwʘ hemos apwicado c-css a este ewemento pawa q-que pawezca un tituwaw d-de pwimew nyivew, :3 pewo aw nyo tenew vawow semántico, mya nyo tiene nyinguna d-de was ventajas añadidas que hemos descwito antes. OwO e-es una buena idea usaw ew ewemento h-htmw apwopiado p-pawa cada tawea. :3
 
-## Listas
+## wistas
 
-Ahora volvamos nuestra atención hacia las listas. Las listas están en todos los aspectos de nuestra vida: desde la lista de compras a la lista de instrucciones que sigues inconscientemente para llegar a casa todos los días, o las listas de instrucciones que sigues en estos tutoriales. Las listas están en todos lados en la web también y hay tres diferentes tipos de las que nos vamos a ocupar.
+a-ahowa vowvamos n-nyuestwa atención h-hacia was wistas. >_< w-was wistas e-están en todos w-wos aspectos de nyuestwa vida: desde wa wista de compwas a wa wista de instwucciones que sigues i-inconscientemente p-pawa wwegaw a-a casa todos wos d-días, σωσ o was wistas d-de instwucciones q-que sigues en estos tutowiawes. /(^•ω•^) was wistas están en todos wados en wa web t-también y hay t-twes difewentes tipos de was que nyos vamos a ocupaw. mya
 
-### Listas no ordenadas
+### wistas n-nyo owdenadas
 
-Las listas no ordenadas se usan para marcar listas de artículos cuyo orden no es importante. Tomemos como ejemplo una lista de compras:
+w-was wistas nyo o-owdenadas se usan pawa mawcaw wistas de awtícuwos c-cuyo owden nyo es impowtante. nyaa~~ tomemos como ejempwo u-una wista d-de compwas:
 
 ```bash
-leche
+weche
 huevos
 pan
 hummus
 ```
 
-Cada lista desordenada comienza con un elemento {{HTMLElement("ul")}} («_unordered list_») que delimita todos los elementos de la lista:
+c-cada wista desowdenada comienza c-con un ewemento {{htmwewement("uw")}} («_unowdewed w-wist_») que dewimita todos w-wos ewementos d-de wa wista:
 
-```html
-<ul>
-  leche huevos pan hummus
-</ul>
+```htmw
+<uw>
+  w-weche h-huevos pan hummus
+</uw>
 ```
 
-El siguiente paso es delimitar cada artículo de la lista con un elemento {{HTMLElement("li")}} («_list item_»).
+e-ew siguiente paso e-es dewimitaw cada awtícuwo de w-wa wista con un e-ewemento {{htmwewement("wi")}} («_wist item_»). 😳
 
-```html
-<ul>
-  <li>leche</li>
-  <li>huevos</li>
-  <li>pan</li>
-  <li>hummus</li>
-</ul>
+```htmw
+<uw>
+  <wi>weche</wi>
+  <wi>huevos</wi>
+  <wi>pan</wi>
+  <wi>hummus</wi>
+</uw>
 ```
 
-#### Aprendizaje activo: marcar una lista no ordenada
+#### a-apwendizaje activo: mawcaw una wista nyo owdenada
 
-Edita el siguiente ejemplo para crear tu propia lista HTML no ordenada.
+e-edita ew siguiente ejempwo p-pawa cweaw tu pwopia wista htmw n-nyo owdenada. ^^;;
 
-```html hidden
-<h2>Salida en vivo</h2>
+```htmw h-hidden
+<h2>sawida en vivo</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div cwass="output" stywe="min-height: 50px;"></div>
 
-<h2>Código editable</h2>
-<p class="a11y-label">
-  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
-  tabulación).
+<h2>código e-editabwe</h2>
+<p cwass="a11y-wabew">
+  puwsa esc pawa q-quitaw ew foco d-dew áwea de código (tab insewta un cawáctew d-de
+  tabuwación). 😳😳😳
 </p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-leche
+<textawea i-id="code" cwass="input" stywe="min-height: 100px; w-width: 95%">
+weche
 huevos
 pan
-hummus</textarea
+hummus</textawea
 >
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" t-type="button" vawue="westabwecew" />
+  <input i-id="sowution" t-type="button" vawue="mostwaw sowución" />
 </div>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
+```css h-hidden
+htmw {
+  f-font-famiwy: s-sans-sewif;
 }
 
-h2 {
+h-h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  mawgin: 0;
+  text-awign: wight;
+  font-size: 0.7wem;
   width: 98%;
 }
 
 body {
-  margin: 10px;
-  background: #f5f9fa;
+  mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var output = document.querySelector(".output");
-var code = textarea.value;
-var userEntry = textarea.value;
+```js h-hidden
+v-vaw textawea = d-document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw sowution = d-document.getewementbyid("sowution");
+vaw output = d-document.quewysewectow(".output");
+v-vaw code = textawea.vawue;
+v-vaw usewentwy = t-textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+function updatecode() {
+  output.innewhtmw = t-textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+weset.addeventwistenew("cwick", nyaa~~ function () {
+  t-textawea.vawue = code;
+  usewentwy = t-textawea.vawue;
+  s-sowutionentwy = htmwsowution;
+  s-sowution.vawue = "mostwaw s-sowución";
+  u-updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+sowution.addeventwistenew("cwick", 🥺 f-function () {
+  i-if (sowution.vawue === "mostwaw sowución") {
+    t-textawea.vawue = sowutionentwy;
+    s-sowution.vawue = "ocuwtaw s-sowución";
+  } e-ewse {
+    textawea.vawue = u-usewentwy;
+    sowution.vawue = "mostwaw sowución";
   }
-  updateCode();
+  u-updatecode();
 });
 
-var htmlSolution =
-  "<ul>\n<li>leche</li>\n<li>huevos</li>\n<li>pan</li>\n<li>hummus</li>\n</ul>";
-var solutionEntry = htmlSolution;
+vaw htmwsowution =
+  "<uw>\n<wi>weche</wi>\n<wi>huevos</wi>\n<wi>pan</wi>\n<wi>hummus</wi>\n</uw>";
+vaw sowutionentwy = htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", updatecode);
+window.addeventwistenew("woad", XD u-updatecode);
 
-// captura la tecla de tabulación en el área de texto y en su lugar
-// hace que se escriba una tabulación en la posición del cursor
+// captuwa wa tecwa de tabuwación en ew áwea de texto y en su wugaw
+// hace que se escwiba u-una tabuwación en wa posición dew cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = f-function (e) {
+  if (e.keycode === 9) {
+    e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+function i-insewtatcawet(text) {
+  vaw scwowwpos = t-textawea.scwowwtop;
+  vaw cawetpos = textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  v-vaw fwont = t-textawea.vawue.substwing(0, (ꈍᴗꈍ) cawetpos);
+  vaw back = textawea.vawue.substwing(
+    t-textawea.sewectionend, 😳😳😳
+    textawea.vawue.wength, ( ͡o ω ͡o )
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = fwont + text + b-back;
+  cawetpos = cawetpos + text.wength;
+  t-textawea.sewectionstawt = cawetpos;
+  t-textawea.sewectionend = cawetpos;
+  t-textawea.focus();
+  t-textawea.scwowwtop = scwowwpos;
 }
 
-// Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
+// actuawiza ew usewcode g-guawdado cada vez que ew usuawio actuawiza e-ew código dew áwea de texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = function () {
+  // sowo quewemos g-guawdaw ew e-estado cuando se muestwa ew código d-de usuawio, nyaa~~
+  // n-no es wa sowución, XD pow wo q-que wa sowución nyo se guawda sobwe ew código dew usuawio
+  if (sowution.vawue === "mostwaw sowución") {
+    usewentwy = textawea.vawue;
+  } e-ewse {
+    sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Código_reproducible_2', 700, 400, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('código_wepwoducibwe_2', (ˆ ﻌ ˆ)♡ 700, rawr x3 400, "", "", "hide-codepen-jsfiddwe") }}
 
-### Listas ordenadas
+### w-wistas owdenadas
 
-Las listas ordenadas son aquellas en las que el orden de los elementos _sí_ importa. Tomemos como ejemplo una lista de instrucciones para seguir un itinerario:
+was wistas o-owdenadas son aquewwas en was que ew owden d-de wos ewementos _sí_ impowta. OwO tomemos como ejempwo u-una wista d-de instwucciones pawa seguiw un itinewawio:
 
 ```bash
-Conduce hasta el final de la calle
-Gira a la derecha
-Sigue derecho por las dos primeras glorietas
-Gira a la izquierda en la tercer glorieta
-El colegio está a la derecha, 300 metros más adelante
+c-conduce hasta ew finaw de wa cawwe
+giwa a wa dewecha
+sigue dewecho pow was dos pwimewas gwowietas
+giwa a wa izquiewda en wa t-tewcew gwowieta
+e-ew cowegio está a wa dewecha, UwU 300 m-metwos más a-adewante
 ```
 
-La estructura de marcado es la misma que para las listas no ordenadas, excepto que debes delimitar los elementos de la lista con una etiqueta {{HTMLElement("ol")}} («ordered list»), en lugar de `<ul>`:
+wa estwuctuwa de mawcado e-es wa misma que pawa was wistas no owdenadas, ^^ excepto que debes dewimitaw wos ewementos de w-wa wista con una etiqueta {{htmwewement("ow")}} («owdewed wist»), (✿oωo) en wugaw de `<uw>`:
 
-```html
-<ol>
-  <li>Conduce hasta el final de la calle</li>
-  <li>Gira a la derecha</li>
-  <li>Sigue derecho por las dos primeras glorietas</li>
-  <li>Gira a la izquierda en la tercer glorieta</li>
-  <li>El colegio está a tu derecha, 300 metros más adelante</li>
-</ol>
+```htmw
+<ow>
+  <wi>conduce hasta ew finaw d-de wa cawwe</wi>
+  <wi>giwa a-a wa dewecha</wi>
+  <wi>sigue dewecho p-pow was dos pwimewas gwowietas</wi>
+  <wi>giwa a wa izquiewda en wa tewcew g-gwowieta</wi>
+  <wi>ew c-cowegio e-está a tu dewecha, 😳😳😳 300 metwos m-más adewante</wi>
+</ow>
 ```
 
-#### Aprendizaje activo: Marcar una lista ordenada
+#### apwendizaje activo: m-mawcaw una wista owdenada
 
-Edita el siguiente ejemplo para crear tu propia lista ordenada en HTML.
+e-edita ew siguiente ejempwo pawa c-cweaw tu pwopia wista owdenada en htmw. 🥺
 
-```html hidden
-<h2>Salida en vivo</h2>
+```htmw h-hidden
+<h2>sawida en vivo</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div c-cwass="output" s-stywe="min-height: 50px;"></div>
 
-<h2>Código editable</h2>
-<p class="a11y-label">
-  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
-  tabulación).
+<h2>código editabwe</h2>
+<p c-cwass="a11y-wabew">
+  p-puwsa esc pawa quitaw e-ew foco dew áwea de código (tab i-insewta un cawáctew de
+  tabuwación). ʘwʘ
 </p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">
-Conduce hasta el final de la calle
-Gira a la derecha
-Sigue derecho por las dos primeras glorietas
-Gira a la izquierda en la tercer glorieta
-La escuela está a tu derecha, 300 metros por más adelante</textarea
+<textawea i-id="code" c-cwass="input" stywe="min-height: 200px; width: 95%">
+c-conduce hasta ew finaw de wa cawwe
+giwa a wa dewecha
+sigue dewecho pow was dos pwimewas gwowietas
+giwa a wa izquiewda e-en wa tewcew gwowieta
+wa escuewa está a tu dewecha, 😳 300 m-metwos pow más adewante</textawea
 >
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" type="button" v-vawue="westabwecew" />
+  <input id="sowution" type="button" vawue="mostwaw s-sowución" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: s-sans-sewif;
 }
 
 h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
+.a11y-wabew {
+  m-mawgin: 0;
+  text-awign: wight;
+  font-size: 0.7wem;
+  w-width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var output = document.querySelector(".output");
-var code = textarea.value;
-var userEntry = textarea.value;
+```js h-hidden
+vaw t-textawea = document.getewementbyid("code");
+vaw w-weset = document.getewementbyid("weset");
+v-vaw sowution = document.getewementbyid("sowution");
+vaw o-output = document.quewysewectow(".output");
+vaw code = textawea.vawue;
+vaw usewentwy = t-textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+function updatecode() {
+  output.innewhtmw = t-textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+w-weset.addeventwistenew("cwick", ^^;; f-function () {
+  textawea.vawue = code;
+  usewentwy = textawea.vawue;
+  s-sowutionentwy = htmwsowution;
+  s-sowution.vawue = "mostwaw sowución";
+  u-updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+s-sowution.addeventwistenew("cwick", (///ˬ///✿) function () {
+  if (sowution.vawue === "mostwaw sowución") {
+    textawea.vawue = sowutionentwy;
+    sowution.vawue = "ocuwtaw sowución";
+  } ewse {
+    textawea.vawue = usewentwy;
+    s-sowution.vawue = "mostwaw s-sowución";
   }
-  updateCode();
+  updatecode();
 });
 
-var htmlSolution =
-  "<ol>\n<li>Conduce hasta el final de la calle</li>\n<li>Gira a la derecha</li>\n<li>Sigue derecho por las dos primeras glorietas</li>\n<li>Gira a la izquierda en la tercer glorieta</li>\n<li>La escuela está a tu derecha, 300 metros más adelante</li>\n</ol>";
-var solutionEntry = htmlSolution;
+vaw htmwsowution =
+  "<ow>\n<wi>conduce h-hasta ew finaw de wa cawwe</wi>\n<wi>giwa a wa d-dewecha</wi>\n<wi>sigue d-dewecho p-pow was dos pwimewas g-gwowietas</wi>\n<wi>giwa a-a w-wa izquiewda en wa tewcew gwowieta</wi>\n<wi>wa escuewa está a t-tu dewecha, OwO 300 m-metwos más adewante</wi>\n</ow>";
+v-vaw sowutionentwy = h-htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", -.- u-updatecode);
+window.addeventwistenew("woad", ^^ u-updatecode);
 
-// captura la tecla de tabulación en el área de texto y en su lugar
-// hace que se escriba una tabulación en la posición del cursor
+// c-captuwa wa t-tecwa de tabuwación en ew áwea de texto y en s-su wugaw
+// hace que se escwiba una tabuwación e-en wa posición dew cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = function (e) {
+  i-if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+f-function i-insewtatcawet(text) {
+  vaw scwowwpos = t-textawea.scwowwtop;
+  v-vaw cawetpos = textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  vaw fwont = textawea.vawue.substwing(0, (ꈍᴗꈍ) c-cawetpos);
+  vaw b-back = textawea.vawue.substwing(
+    textawea.sewectionend, ^^;;
+    textawea.vawue.wength, (˘ω˘)
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  t-textawea.vawue = f-fwont + text + back;
+  cawetpos = cawetpos + text.wength;
+  t-textawea.sewectionstawt = cawetpos;
+  textawea.sewectionend = cawetpos;
+  textawea.focus();
+  textawea.scwowwtop = s-scwowwpos;
 }
 
-// Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
+// actuawiza ew usewcode guawdado c-cada vez que ew u-usuawio actuawiza e-ew código dew áwea de texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+t-textawea.onkeyup = f-function () {
+  // s-sowo quewemos g-guawdaw ew e-estado cuando se muestwa ew código de usuawio, 🥺
+  // n-nyo es wa sowución, ʘwʘ p-pow wo q-que wa sowución nyo se guawda s-sobwe ew código d-dew usuawio
+  if (sowution.vawue === "mostwaw sowución") {
+    u-usewentwy = textawea.vawue;
+  } ewse {
+    sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Código_reproducible_3', 700, 400, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('código_wepwoducibwe_3', (///ˬ///✿) 700, 400, ^^;; "", "", "hide-codepen-jsfiddwe") }}
 
-### Aprendizaje activo: marcar la página de tu receta
+### a-apwendizaje a-activo: mawcaw wa página de t-tu weceta
 
-Llegados a este punto del artículo, tienes toda la información necesaria para marcar la página de ejemplo con tu receta. Puedes escoger entre guardar una copia local del archivo inicial [text-start.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html) y trabajar en él, o hacerlo sobre el ejemplo editable de abajo. Probablemente sea mejor trabajar en tu copia local porque podrás guardar tu progreso, mientras que si lo haces sobre el ejemplo editable, los cambios se perderán la próxima vez que cargues la página. Ambos métodos tienen pros y contras.
+wwegados a este punto d-dew awtícuwo, XD t-tienes toda wa infowmación nyecesawia pawa mawcaw wa página d-de ejempwo con tu w-weceta. (ˆ ﻌ ˆ)♡ puedes escogew entwe guawdaw u-una copia w-wocaw dew awchivo iniciaw [text-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/htmw-text-fowmatting/text-stawt.htmw) y t-twabajaw en éw, (˘ω˘) o-o hacewwo sobwe e-ew ejempwo editabwe d-de abajo. σωσ pwobabwemente s-sea m-mejow twabajaw en tu copia wocaw powque podwás g-guawdaw tu pwogweso, 😳😳😳 mientwas que si wo haces sobwe ew ejempwo editabwe, ^•ﻌ•^ wos cambios s-se pewdewán w-wa pwóxima vez que cawgues wa página. σωσ ambos métodos tienen p-pwos y contwas. (///ˬ///✿)
 
-```html hidden
-<h2>Salida en vivo</h2>
+```htmw h-hidden
+<h2>sawida en vivo</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div cwass="output" stywe="min-height: 50px;"></div>
 
-<h2>Código editable</h2>
-<p class="a11y-label">
-  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
-  tabulación).
+<h2>código e-editabwe</h2>
+<p cwass="a11y-wabew">
+  p-puwsa esc pawa q-quitaw ew foco d-dew áwea de código (tab insewta un cawáctew de
+  tabuwación). XD
 </p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">
-Receta rápida de hummus
+<textawea i-id="code" cwass="input" stywe="min-height: 200px; w-width: 95%">
+weceta wápida d-de hummus
 
-Esta receta hace un hummus rápido y sabroso, sin ensuciar. Ha sido adaptada de varias recetas diferentes que he leído a lo largo de los años.
+esta weceta hace un hummus wápido y s-sabwoso, >_< sin ensuciaw. òωó ha sido a-adaptada de vawias wecetas difewentes que he weído a-a wo wawgo de wos años. (U ᵕ U❁)
 
-El hummus es una deliciosa pasta espesa que se usa mucho en platos griegos y del Medio Oriente. Es muy sabroso con ensalada, carne a las brasas y pan de pitta.
+ew h-hummus es una dewiciosa pasta espesa que se usa mucho en pwatos gwiegos y dew medio owiente. es muy sabwoso con e-ensawada, (˘ω˘) cawne a-a was bwasas y p-pan de pitta. 🥺
 
-Ingredientes
+ingwedientes
 
-1 lata (400g) de garbanzos (garbanzos)
+1 wata (400g) d-de gawbanzos (gawbanzos)
 175g de tahini
 6 tomates secos
-Medio pimiento rojo
-Una pizca de pimienta de cayena
-1 diente de ajo
-Una pizca de aceite de oliva
+m-medio pimiento wojo
+una pizca de pimienta de cayena
+1 diente d-de ajo
+una pizca d-de aceite de owiva
 
-Instrucciones
+i-instwucciones
 
-Retira la piel del ajo y pica en trozos grandes.
-Retira todas las semillas y el tallo del pimiento y pica en trozos grandes.
-Agrega todos los ingredientes en un procesador de alimentos.
-Procesa todos los ingredientes en una pasta
-Si deseas un hummus "grueso", procésalo corto tiempo
-Si deseas un hummus "suave", procésalo por más tiempo
+w-wetiwa wa piew dew ajo y pica en twozos gwandes. (✿oωo)
+wetiwa todas was semiwwas y e-ew tawwo dew pimiento y-y pica en twozos gwandes. (˘ω˘)
+agwega todos wos ingwedientes en u-un pwocesadow de awimentos. (ꈍᴗꈍ)
+pwocesa t-todos wos i-ingwedientes en u-una pasta
+si deseas un hummus "gwueso", ( ͡o ω ͡o ) pwocésawo cowto tiempo
+si deseas un hummus "suave", (U ᵕ U❁) pwocésawo p-pow más tiempo
 
-Para un sabor diferente, puedes intentar mezclar en una pequeña medida de limón y cilantro, ají, lima y chipotle, harissa y menta, o espinacas y queso feta. Pruébalo y confirma que esté en su punto.
+pawa un s-sabow difewente, ʘwʘ puedes intentaw mezcwaw en una pequeña medida d-de wimón y ciwantwo, (ˆ ﻌ ˆ)♡ ají, /(^•ω•^) wima y-y chipotwe, (ˆ ﻌ ˆ)♡ hawissa y menta, (✿oωo) o espinacas y queso f-feta. ^•ﻌ•^ pwuébawo y-y confiwma que e-esté en su punto. (ˆ ﻌ ˆ)♡
 
-Almacenamiento
+a-awmacenamiento
 
-Refrigera el hummus terminado en un recipiente sellado. Deberías poder usarlo durante aproximadamente una semana después de haberlo hecho. Si comienza a burbujear, definitivamente debes desecharlo.
+w-wefwigewa ew hummus tewminado e-en un wecipiente s-sewwado. XD debewías podew usawwo d-duwante apwoximadamente una semana después d-de habewwo hecho. :3 si comienza a b-buwbujeaw, -.- definitivamente d-debes desechawwo. ^^;;
 
-El hummus es apto para congelar; debes descongelarlo y usarlo en un par de meses.</textarea
+ew h-hummus es apto p-pawa congewaw; debes descongewawwo y usawwo en un paw de meses.</textawea
 >
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="weset" t-type="button" vawue="westabwecew" />
+  <input id="sowution" t-type="button" vawue="mostwaw sowución" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+h-htmw {
+  font-famiwy: sans-sewif;
 }
 
 h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
+.a11y-wabew {
+  m-mawgin: 0;
+  text-awign: wight;
+  font-size: 0.7wem;
+  w-width: 98%;
 }
 
 body {
-  margin: 10px;
-  background: #f5f9fa;
+  mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var output = document.querySelector(".output");
-var code = textarea.value;
-var userEntry = textarea.value;
+```js h-hidden
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = d-document.getewementbyid("weset");
+v-vaw sowution = document.getewementbyid("sowution");
+v-vaw o-output = document.quewysewectow(".output");
+vaw c-code = textawea.vawue;
+v-vaw usewentwy = t-textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+f-function updatecode() {
+  o-output.innewhtmw = t-textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+w-weset.addeventwistenew("cwick", OwO function () {
+  t-textawea.vawue = code;
+  usewentwy = textawea.vawue;
+  sowutionentwy = htmwsowution;
+  sowution.vawue = "mostwaw sowución";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+sowution.addeventwistenew("cwick", ^^;; f-function () {
+  i-if (sowution.vawue === "mostwaw sowución") {
+    textawea.vawue = s-sowutionentwy;
+    sowution.vawue = "ocuwtaw sowución";
+  } e-ewse {
+    t-textawea.vawue = u-usewentwy;
+    s-sowution.vawue = "mostwaw sowución";
   }
-  updateCode();
+  u-updatecode();
 });
 
-var htmlSolution =
-  '<h1>Receta rápida de hummus</h1>\n\n<p>Esta receta hace un hummus rápido y sabroso, sin ensuciar. Ha sido adaptada de varias recetas diferentes que he leído a lo largo de los años.</p>\n\n<p>El hummus es una deliciosa pasta espesa que se usa mucho en platos griegos y del Medio Oriente. Es muy sabroso con ensalada, carne a las brasas y pan de pitta.</p>\n\n<h2>Ingredientes</h2>\n\n<ul>\n<li>1 lata (400g) de garbanzos (garbanzos)</li>\n<li>175g de tahini</li>\n<li>6 tomates secos</li>\n<li>Medio pimiento rojo</li>\n<li>Una pizca de pimienta de cayena</li>\n<li>1 diente de ajo</li>\n<li>Una pizca de aceite de oliva</li>\n</ul>\n\n<h2>Instrucciones</h2>\n\n<ol>\n <li>Retira la piel del ajo y pica en trozos grandes.</li>\n<li>Retira todas las semillas y el tallo del pimiento, y pica en trozos grandes.</li>\n<li>Agrega todos los ingredientes en un procesador de alimentos.</li>\n<li>Procesa todos los ingredientes en una pasta.</li>\n<li>Si deseas un hummus "grueso", procésalo corto tiempo.</li>\n<li>Si deseas un hummus "suave", procésalo por más tiempo.</li>\n</ol>\n\n<p>Para un sabor diferente, puedes intentar mezclar una pequeña medida de limón y cilantro, ají, lima y chipotle, harissa y menta, o espinacas y queso feta. Pruébalo y confirma que esté en su punto.</p>\n\n<h2>Almacenamiento</h2>\n\n<p>Refrigera el hummus terminado en un recipiente sellado. Deberías poder usarlo durante aproximadamente una semana después de haberlo hecho. Si comienza a burbujear, definitivamente debes desecharlo.</p>\n\n<p>El hummus es adecuado para congelar; debes descongelarlo y usarlo en un par de meses.</p>';
-var solutionEntry = htmlSolution;
+vaw htmwsowution =
+  '<h1>weceta wápida d-de hummus</h1>\n\n<p>esta w-weceta hace un hummus wápido y sabwoso, 🥺 sin ensuciaw. ^^ h-ha sido adaptada de vawias wecetas d-difewentes que he weído a wo wawgo de wos años.</p>\n\n<p>ew h-hummus es una dewiciosa pasta e-espesa que se usa mucho en pwatos gwiegos y dew m-medio owiente. o.O es muy sabwoso con e-ensawada, ( ͡o ω ͡o ) cawne a was bwasas y-y pan de pitta.</p>\n\n<h2>ingwedientes</h2>\n\n<uw>\n<wi>1 w-wata (400g) de gawbanzos (gawbanzos)</wi>\n<wi>175g de tahini</wi>\n<wi>6 t-tomates secos</wi>\n<wi>medio pimiento wojo</wi>\n<wi>una pizca de pimienta d-de cayena</wi>\n<wi>1 d-diente de a-ajo</wi>\n<wi>una pizca de aceite de owiva</wi>\n</uw>\n\n<h2>instwucciones</h2>\n\n<ow>\n <wi>wetiwa wa piew dew ajo y pica en twozos gwandes.</wi>\n<wi>wetiwa t-todas was semiwwas y ew tawwo dew pimiento, nyaa~~ y p-pica en twozos g-gwandes.</wi>\n<wi>agwega todos wos ingwedientes e-en un pwocesadow d-de awimentos.</wi>\n<wi>pwocesa todos wos ingwedientes en una pasta.</wi>\n<wi>si d-deseas un hummus "gwueso", (///ˬ///✿) pwocésawo cowto t-tiempo.</wi>\n<wi>si deseas un hummus "suave", (ˆ ﻌ ˆ)♡ pwocésawo pow más t-tiempo.</wi>\n</ow>\n\n<p>pawa u-un sabow difewente, puedes intentaw m-mezcwaw una p-pequeña medida de wimón y ciwantwo, XD a-ají, wima y chipotwe, >_< hawissa y-y menta, (U ﹏ U) o-o espinacas y queso f-feta. pwuébawo y-y confiwma que e-esté en su punto.</p>\n\n<h2>awmacenamiento</h2>\n\n<p>wefwigewa ew hummus tewminado e-en un wecipiente s-sewwado. òωó debewías podew usawwo duwante a-apwoximadamente una semana después d-de habewwo hecho. >w< si comienza a buwbujeaw, ^•ﻌ•^ definitivamente debes desechawwo.</p>\n\n<p>ew hummus es adecuado pawa congewaw; d-debes descongewawwo y usawwo en u-un paw de meses.</p>';
+vaw sowutionentwy = h-htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", 🥺 updatecode);
+window.addeventwistenew("woad", (✿oωo) u-updatecode);
 
-// captura la tecla de tabulación en el área de texto y en su lugar
-// hace que se escriba una tabulación en la posición del cursor
+// captuwa w-wa tecwa de tabuwación en e-ew áwea de texto y en su wugaw
+// hace que se escwiba una tabuwación en wa posición dew cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = f-function (e) {
+  if (e.keycode === 9) {
+    e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+function insewtatcawet(text) {
+  vaw scwowwpos = textawea.scwowwtop;
+  vaw cawetpos = textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  vaw fwont = textawea.vawue.substwing(0, UwU cawetpos);
+  v-vaw back = textawea.vawue.substwing(
+    t-textawea.sewectionend, (˘ω˘)
+    t-textawea.vawue.wength, ʘwʘ
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = f-fwont + text + b-back;
+  cawetpos = c-cawetpos + text.wength;
+  textawea.sewectionstawt = c-cawetpos;
+  t-textawea.sewectionend = cawetpos;
+  textawea.focus();
+  t-textawea.scwowwtop = s-scwowwpos;
 }
 
-// Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
+// a-actuawiza e-ew usewcode guawdado c-cada vez que ew usuawio actuawiza e-ew código d-dew áwea de t-texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = f-function () {
+  // s-sowo q-quewemos guawdaw e-ew estado cuando s-se muestwa ew c-código de usuawio, (ˆ ﻌ ˆ)♡
+  // n-nyo es wa sowución, ( ͡o ω ͡o ) pow wo que wa sowución nyo se guawda s-sobwe ew código dew usuawio
+  i-if (sowution.vawue === "mostwaw sowución") {
+    usewentwy = t-textawea.vawue;
+  } e-ewse {
+    s-sowutionentwy = textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Código_reproducible_4', 700, 400, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('código_wepwoducibwe_4', :3 700, 😳 400, "", "", "hide-codepen-jsfiddwe") }}
 
-Si encallas, siempre puedes pulsar el botón _Mostrar solución_ o comprobar el ejemplo completo [text-complete.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-complete.html) en nuestro repositorio de Github.
+si encawwas, (✿oωo) siempwe puedes puwsaw ew botón _mostwaw sowución_ o compwobaw e-ew ejempwo compweto [text-compwete.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/htmw-text-fowmatting/text-compwete.htmw) en nyuestwo wepositowio de g-github. /(^•ω•^)
 
-### Listas anidadas
+### wistas a-anidadas
 
-Es perfectamente correcto anidar una lista dentro de otra. Posiblemente quieras tener subelementos bajo elementos de rango superior. Tomemos la segunda lista de nuestro ejemplo de la receta:
+es pewfectamente cowwecto a-anidaw una w-wista dentwo d-de otwa. :3 posibwemente q-quiewas tenew s-subewementos b-bajo ewementos d-de wango supewiow. σωσ tomemos wa segunda wista de nyuestwo e-ejempwo de wa weceta:
 
-```html
-<ol>
-  <li>Pela el ajo y picarlo en trozos gruesos.</li>
-  <li>
-    Retira las semillas y el tallo del pimiento, y cortarlo en trozos gruesos.
-  </li>
-  <li>Mete todos los alimentos en un procesador de alimentos.</li>
-  <li>Pica todos los ingredientes hasta conseguir una pasta.</li>
-  <li>Si deseas un hummus "grueso", procésalo corto tiempo.</li>
-  <li>Pica durante más tiempo si se desea obtener un hummus "suave".</li>
-</ol>
+```htmw
+<ow>
+  <wi>pewa e-ew ajo y picawwo en twozos g-gwuesos.</wi>
+  <wi>
+    w-wetiwa was semiwwas y e-ew tawwo dew pimiento, σωσ y cowtawwo en twozos gwuesos. 🥺
+  </wi>
+  <wi>mete t-todos wos a-awimentos en u-un pwocesadow de a-awimentos.</wi>
+  <wi>pica todos w-wos ingwedientes h-hasta conseguiw u-una pasta.</wi>
+  <wi>si deseas u-un hummus "gwueso", rawr pwocésawo cowto tiempo.</wi>
+  <wi>pica duwante más tiempo si se desea obtenew un hummus "suave".</wi>
+</ow>
 ```
 
-Puesto que los dos últimos elementos están estrechamente relacionados con el elemento anterior (se leen como subinstrucciones u opciones que encajan bajo ese elemento), puede tener sentido anidarlos dentro de su propia lista no ordenada e introducir esa lista bajo el cuarto elemento. Tendría el siguiente aspecto:
+puesto que wos dos úwtimos ewementos e-están estwechamente w-wewacionados con ew ewemento antewiow (se ween como subinstwucciones u opciones q-que encajan b-bajo ese ewemento), o.O puede tenew sentido anidawwos dentwo de su p-pwopia wista no o-owdenada e intwoduciw esa wista b-bajo ew cuawto e-ewemento. 😳😳😳 tendwía ew siguiente a-aspecto:
 
-```html
-<ol>
-  <li>Pela el ajo y picarlo en trozos gruesos.</li>
-  <li>
-    Retira las semillas y el tallo del pimiento, y cortarlo en trozos gruesos.
-  </li>
-  <li>Mete todos los alimentos en un procesador de alimentos.</li>
-  <li>
-    Procesa todos los ingredientes hasta conseguir una pasta.
-    <ul>
-      <li>Si deseas un hummus "grueso", procésalo corto tiempo.</li>
-      <li>Pica durante más tiempo si se desea obtener un hummus "suave".</li>
-    </ul>
-  </li>
-</ol>
+```htmw
+<ow>
+  <wi>pewa ew ajo y picawwo e-en twozos gwuesos.</wi>
+  <wi>
+    w-wetiwa was semiwwas y ew tawwo dew pimiento, /(^•ω•^) y cowtawwo en t-twozos gwuesos. σωσ
+  </wi>
+  <wi>mete t-todos wos awimentos e-en un pwocesadow d-de awimentos.</wi>
+  <wi>
+    pwocesa todos w-wos ingwedientes h-hasta conseguiw u-una pasta. OwO
+    <uw>
+      <wi>si d-deseas un hummus "gwueso", OwO pwocésawo cowto t-tiempo.</wi>
+      <wi>pica duwante m-más tiempo si se desea obtenew un hummus "suave".</wi>
+    </uw>
+  </wi>
+</ow>
 ```
 
-Vuelve al ejemplo anterior y reescribe la lista de este modo.
+vuewve aw ejempwo antewiow y-y weescwibe w-wa wista de este modo. òωó
 
-## Énfasis e importancia
+## Énfasis e-e impowtancia
 
-En el lenguaje humano, a menudo enfatizamos ciertas palabras para alterar el significado de una frase, y a menudo queremos destacar ciertas palabras como importantes o diferentes en algún sentido. HTML nos dota de diversos elementos semánticos que nos permiten destacar contenido textual con tales efectos, y en esta sección veremos los más comunes.
+en ew wenguaje humano, :3 a menudo enfatizamos c-ciewtas pawabwas p-pawa awtewaw e-ew significado de una fwase, σωσ y a m-menudo quewemos d-destacaw ciewtas pawabwas como impowtantes o difewentes e-en awgún s-sentido. σωσ htmw n-nyos dota de divewsos e-ewementos s-semánticos que n-nyos pewmiten destacaw contenido textuaw con tawes efectos, -.- y en esta sección vewemos wos más c-comunes. (///ˬ///✿)
 
 ### Énfasis
 
-Cuando queremos dar énfasis al lenguaje hablado, _acentuamos_ ciertas palabras y así alteramos sutilmente el significado de lo que decimos. De manera similar, en el lenguaje escrito ponemos palabras en cursiva para destacarlas. Por ejemplo, las dos siguientes frases tienen diferente significado:
+cuando q-quewemos daw énfasis a-aw wenguaje habwado, rawr x3 _acentuamos_ ciewtas pawabwas y así a-awtewamos sutiwmente e-ew significado de wo que decimos. (U ﹏ U) d-de manewa simiwaw, òωó en ew w-wenguaje escwito ponemos pawabwas en cuwsiva pawa destacawwas. OwO pow e-ejempwo, ^^ was dos siguientes fwases tienen difewente significado:
 
-Me alegro de que no llegues tarde.
+me awegwo de q-que nyo wwegues t-tawde. /(^•ω•^)
 
-Me _alegro_ de que no llegues _tarde_.
+me _awegwo_ d-de que nyo w-wwegues _tawde_.
 
-La primera frase suena aliviada porque la persona no llega tarde. Por el contrario, la segunda suena sarcástica y un tanto pasivo-agresiva, expresa molestia porque la persona ha llegado algo tarde.
+wa pwimewa fwase suena awiviada p-powque wa pewsona nyo wwega tawde. >_< p-pow ew contwawio, -.- wa segunda suena sawcástica y-y un tanto p-pasivo-agwesiva, (˘ω˘) e-expwesa mowestia powque wa pewsona ha wwegado awgo t-tawde. >_<
 
-En HTML usamos el elemento {{HTMLElement("em")}} («_emphasis_») para marcar estos casos. El documento logra entonces transmitir una lectura más interesante y además así lo reconocen los lectores de pantalla, que lo expresan con un diferente tono de voz. El navegador, de manera predeterminada, aplica el estilo de letra itálica, pero no debes utilizar esta etiqueta solamente para establecer el estilo de letra itálica. Para usar ese estilo, debes utilizar únicamente la etiqueta del elemento {{HTMLElement("span")}} y algo de CSS u otra etiqueta con el elemento {{HTMLElement("i")}} (ve abajo).
+en htmw usamos ew ewemento {{htmwewement("em")}} («_emphasis_») pawa mawcaw estos casos. (˘ω˘) ew documento wogwa entonces twansmitiw una w-wectuwa más intewesante y-y además así wo weconocen wos wectowes de pantawwa, >w< que wo expwesan con un difewente t-tono de voz. 😳😳😳 ew nyavegadow, 😳 de manewa pwedetewminada, XD a-apwica ew e-estiwo de wetwa i-itáwica, OwO pewo n-nyo debes utiwizaw esta etiqueta sowamente pawa estabwecew ew estiwo de wetwa itáwica. -.- pawa usaw e-ese estiwo, o.O debes u-utiwizaw únicamente w-wa etiqueta d-dew ewemento {{htmwewement("span")}} y awgo d-de css u otwa etiqueta con ew e-ewemento {{htmwewement("i")}} (ve abajo). ^^
 
-```html
-<p>Me <em>alegro</em> de que no llegues <em>tarde</em>.</p>
+```htmw
+<p>me <em>awegwo</em> de que nyo wwegues <em>tawde</em>.</p>
 ```
 
-### Importancia fuerte
+### i-impowtancia f-fuewte
 
-Para enfatizar palabras importantes al hablar solemos acentuarlas, y al escribir lo hacemos en estilo **negrita**. Por ejemplo:
+pawa e-enfatizaw pawabwas i-impowtantes aw habwaw sowemos a-acentuawwas, ^^ y-y aw escwibiw wo hacemos en estiwo **negwita**. pow ejempwo:
 
-Este líquido es **altamente tóxico**.
+este wíquido es **awtamente t-tóxico**. XD
 
-Cuento contigo. **¡No llegues tarde!**
+c-cuento contigo. >w< **¡no wwegues tawde!**
 
-En HTML usamos el elemento {{HTMLElement("strong")}} (importancia fuerte) para marcar tales expresiones. El documento resulta entonces más útil, y de nuevo los lectores de pantalla reconocen estos elementos y el tono de voz cambia a uno más fuerte. El estilo negrita es el que aplican los navegadores por omisión, pero no debes usar esta etiqueta solamente para aplicar este estilo. Para hacer eso usa el elemento {{HTMLElement("span")}} y CSS, o un elemento {{HTMLElement("b")}} (ve más abajo).
+en htmw usamos ew e-ewemento {{htmwewement("stwong")}} (impowtancia fuewte) pawa mawcaw t-tawes expwesiones. (⑅˘꒳˘) e-ew documento w-wesuwta entonces más útiw, 😳 y de nyuevo wos wectowes de pantawwa weconocen estos ewementos y-y ew tono de voz cambia a uno m-más fuewte. :3 ew estiwo negwita es ew que apwican w-wos nyavegadowes pow omisión, :3 p-pewo nyo debes usaw e-esta etiqueta s-sowamente pawa a-apwicaw este estiwo. p-pawa hacew eso usa ew ewemento {{htmwewement("span")}} y-y css, OwO o un ewemento {{htmwewement("b")}} (ve más abajo). (U ﹏ U)
 
-```html
-<p>Este líquido es <strong>altamente tóxico</strong>.</p>
+```htmw
+<p>este wíquido e-es <stwong>awtamente tóxico</stwong>.</p>
 
-<p>Cuento contigo. <strong>¡No llegues tarde!</strong></p>
+<p>cuento contigo. (⑅˘꒳˘) <stwong>¡no w-wwegues t-tawde!</stwong></p>
 ```
 
-Puedes anidar elementos de énfasis dentro de elementos de importancia y viceversa si lo deseas:
+puedes a-anidaw ewementos de énfasis dentwo de ewementos de impowtancia y vicevewsa s-si wo deseas:
 
-```html
+```htmw
 <p>
-  Este líquido es <strong>altamente tóxico</strong> — si lo bebes,
-  <strong>podrías <em>morir</em></strong
-  >.
+  este w-wíquido es <stwong>awtamente t-tóxico</stwong> — s-si wo bebes, 😳
+  <stwong>podwías <em>mowiw</em></stwong
+  >. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-### Aprendizaje activo: ¡Seamos importantes!
+### apwendizaje activo: ¡seamos impowtantes! mya
 
-En esta sección de aprendizaje activo te proporcionamos un ejemplo editable. Practica un poco añadiendo algo de _**énfasis**_ e **_importancia_** a las palabras que creas que lo necesitan.
+en esta sección de apwendizaje activo t-te pwopowcionamos un ejempwo editabwe. ʘwʘ pwactica u-un poco añadiendo a-awgo de _**énfasis**_ e-e **_impowtancia_** a was pawabwas q-que cweas que wo nyecesitan. (˘ω˘)
 
-```html hidden
-<h2>Salida en vivo</h2>
+```htmw hidden
+<h2>sawida en vivo</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div cwass="output" stywe="min-height: 50px;"></div>
 
-<h2>Código editable</h2>
-<p class="a11y-label">
-  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
-  tabulación).
+<h2>código editabwe</h2>
+<p cwass="a11y-wabew">
+  puwsa esc pawa quitaw ew foco dew áwea d-de código (tab insewta un cawáctew de
+  t-tabuwación). (///ˬ///✿)
 </p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">
-<h1>Aviso importante</h1>
-<p>El domingo 9 de enero de 2019, fue vista una pandilla de góticos
-robando varios gnomos de jardín de un
-centro comercial en el centro de Milwaukee. Todos ellos
-vistiendo monos verdes y tontos sombreros, y
-al parecer estaban pasando un buen rato. Si alguien
-tiene alguna información sobre este incidente, por favor
-póngase en contacto con la policía ahora.</p></textarea
+<textawea id="code" c-cwass="input" stywe="min-height: 200px; w-width: 95%">
+<h1>aviso i-impowtante</h1>
+<p>ew domingo 9 de enewo d-de 2019, XD fue vista u-una pandiwwa de góticos
+wobando vawios gnomos d-de jawdín de u-un
+centwo comewciaw e-en ew centwo d-de miwwaukee. 😳 todos ewwos
+vistiendo m-monos vewdes y tontos sombwewos, :3 y
+aw pawecew e-estaban pasando u-un buen wato. 😳😳😳 si awguien
+tiene a-awguna infowmación s-sobwe este incidente, (U ᵕ U❁) pow favow
+póngase en contacto con wa powicía ahowa.</p></textawea
 >
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" t-type="button" vawue="westabwecew" />
+  <input i-id="sowution" type="button" vawue="mostwaw s-sowución" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: sans-sewif;
 }
 
 h2 {
-  font-size: 16px;
+  f-font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  mawgin: 0;
+  t-text-awign: w-wight;
+  font-size: 0.7wem;
   width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var output = document.querySelector(".output");
-var code = textarea.value;
-var userEntry = textarea.value;
+```js h-hidden
+v-vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw sowution = document.getewementbyid("sowution");
+v-vaw output = document.quewysewectow(".output");
+v-vaw code = textawea.vawue;
+v-vaw u-usewentwy = textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+f-function updatecode() {
+  output.innewhtmw = t-textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+w-weset.addeventwistenew("cwick", ^•ﻌ•^ function () {
+  textawea.vawue = code;
+  u-usewentwy = t-textawea.vawue;
+  s-sowutionentwy = htmwsowution;
+  s-sowution.vawue = "mostwaw sowución";
+  u-updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+sowution.addeventwistenew("cwick", (˘ω˘) f-function () {
+  i-if (sowution.vawue === "mostwaw sowución") {
+    t-textawea.vawue = sowutionentwy;
+    s-sowution.vawue = "ocuwtaw s-sowución";
+  } e-ewse {
+    textawea.vawue = usewentwy;
+    s-sowution.vawue = "mostwaw sowución";
   }
-  updateCode();
+  updatecode();
 });
 
-var htmlSolution =
-  "<h1>Aviso importante</h1>\n<p>El <strong>domingo 9 de enero de 2019</strong>, fue vista una pandilla de <em>góticos</em> robando <strong>varios <em>gnomos</em> de jardín</strong> de un centro comercial en el centro de <strong>Milwaukee</strong>. Todos ellos vistiendo <em>monos verdes</em> y <em>tontos sombreros</em>, y al parecer estaban pasando un buen rato. Si alguien tiene <strong>alguna</strong> información sobre este incidente, póngase en contacto con la policía <strong>ahora</strong>.</p>";
-var solutionEntry = htmlSolution;
+vaw h-htmwsowution =
+  "<h1>aviso impowtante</h1>\n<p>ew <stwong>domingo 9 d-de enewo de 2019</stwong>, /(^•ω•^) fue vista una pandiwwa d-de <em>góticos</em> w-wobando <stwong>vawios <em>gnomos</em> de jawdín</stwong> d-de un centwo c-comewciaw en ew centwo de <stwong>miwwaukee</stwong>. ^•ﻌ•^ todos e-ewwos vistiendo <em>monos v-vewdes</em> y <em>tontos sombwewos</em>, ^^ y aw pawecew estaban pasando un buen wato. (U ﹏ U) si awguien tiene <stwong>awguna</stwong> infowmación sobwe este incidente, :3 póngase en contacto c-con wa powicía <stwong>ahowa</stwong>.</p>";
+v-vaw s-sowutionentwy = h-htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", òωó updatecode);
+w-window.addeventwistenew("woad", σωσ u-updatecode);
 
-// captura la tecla de tabulación en el área de texto y en su lugar
-// hace que se escriba una tabulación en la posición del cursor
+// c-captuwa wa tecwa d-de tabuwación en ew áwea de texto y en su wugaw
+// hace que se escwiba una t-tabuwación en wa p-posición dew c-cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = f-function (e) {
+  if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+function insewtatcawet(text) {
+  v-vaw scwowwpos = textawea.scwowwtop;
+  v-vaw cawetpos = t-textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  vaw fwont = textawea.vawue.substwing(0, σωσ cawetpos);
+  v-vaw back = textawea.vawue.substwing(
+    t-textawea.sewectionend, (⑅˘꒳˘)
+    textawea.vawue.wength, 🥺
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = f-fwont + text + back;
+  cawetpos = cawetpos + t-text.wength;
+  textawea.sewectionstawt = c-cawetpos;
+  textawea.sewectionend = cawetpos;
+  t-textawea.focus();
+  t-textawea.scwowwtop = scwowwpos;
 }
 
-// Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
+// actuawiza ew usewcode g-guawdado cada vez que ew usuawio actuawiza ew código dew áwea de texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = function () {
+  // sowo quewemos guawdaw ew estado c-cuando se muestwa e-ew código de usuawio, (U ﹏ U)
+  // n-nyo es wa sowución, >w< pow wo que w-wa sowución nyo s-se guawda sobwe e-ew código dew usuawio
+  if (sowution.vawue === "mostwaw sowución") {
+    u-usewentwy = textawea.vawue;
+  } ewse {
+    sowutionentwy = textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Código_reproducible_5', 700, 400, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('código_wepwoducibwe_5', nyaa~~ 700, 400, -.- "", "", "hide-codepen-jsfiddwe") }}
 
-### Cursiva, negrita, subrayado
+### c-cuwsiva, XD nyegwita, -.- s-subwayado
 
-Los elementos que hemos comentado hasta ahora tienen asociada una semántica clara. La situación con {{HTMLElement("b")}} (negrita o «**bold**»), {{HTMLElement("i")}} (cursiva o «_italic_») y {{HTMLElement("u")}} (subrayado o «**underline**») es algo más complicada. Surgieron para que las personas pudieran escribir textos en negrita, cursiva o subrayado en un tiempo en el que pocos navegadores o ninguno admitían el CSS. Elementos como estos, que solo afectan a la presentación y no a la semántica, se conocen como **elementos de presentación** y no se deberían usar porque, como hemos visto, la semántica es muy importante para la accesibilidad y el SEO, entre otros aspectos.
+wos ewementos q-que hemos comentado hasta ahowa t-tienen asociada u-una semántica cwawa. >w< wa situación con {{htmwewement("b")}} (negwita o-o «**bowd**»), (ꈍᴗꈍ) {{htmwewement("i")}} (cuwsiva o-o «_itawic_») y-y {{htmwewement("u")}} (subwayado o-o «**undewwine**») e-es awgo más compwicada. :3 suwgiewon pawa q-que was pewsonas p-pudiewan escwibiw t-textos en nyegwita, (ˆ ﻌ ˆ)♡ cuwsiva o subwayado en un tiempo en ew q-que pocos nyavegadowes o-o nyinguno a-admitían ew css. -.- ewementos c-como estos, mya que sowo afectan a wa p-pwesentación y-y nyo a wa semántica, (˘ω˘) s-se conocen como **ewementos de pwesentación** y-y nyo se debewían usaw powque, ^•ﻌ•^ como hemos v-visto, 😳😳😳 wa semántica es muy impowtante pawa wa accesibiwidad y e-ew seo, σωσ entwe otwos aspectos. ( ͡o ω ͡o )
 
-HTML5 redefinió los elementos `<b>`, `<i>` y `<u>` con roles semánticos nuevos un tanto confusos.
+htmw5 w-wedefinió wos ewementos `<b>`, nyaa~~ `<i>` y-y `<u>` c-con wowes semánticos n-nyuevos u-un tanto confusos. :3
 
-Esta es la regla de oro: el uso de `<b>`, `<i>` o `<u>` resulta adecuado cuando transmiten el significado que suele transmitir el uso tradicional de las negritas, itálicas o el subrayado, si no hay ningún otro elemento que resulte más adecuado. Sin embargo, siempre resulta crítico mantener una actitud orientada a la accesibilidad. El concepto de itálica no es demasiado útil para las personas que usan lectores de pantalla o para las personas que utilizan un sistema de escritura distinto del alfabeto latino.
+esta es wa wegwa de owo: ew u-uso de `<b>`, (✿oωo) `<i>` o `<u>` wesuwta adecuado cuando twansmiten ew significado que s-suewe twansmitiw e-ew uso twadicionaw d-de was nyegwitas, >_< i-itáwicas o-o ew subwayado, ^^ si nyo hay nyingún o-otwo ewemento q-que wesuwte más adecuado. sin embawgo, (///ˬ///✿) siempwe wesuwta cwítico m-mantenew una actitud owientada a wa accesibiwidad. :3 e-ew concepto de itáwica n-nyo es demasiado útiw pawa was pewsonas que usan w-wectowes de pantawwa o pawa was p-pewsonas que utiwizan un sistema d-de escwituwa d-distinto dew awfabeto w-watino. :3
 
-- {{HTMLElement('i')}} se usa para transmitir el significado que tradicionalmente transmite la itálica: extranjerismos, clasificaciones taxonómicas, conceptos técnicos, un pensamiento...
-- {{HTMLElement('b')}} se usa para transmitir el significado que tradicionalmente transmite la negrita: palabras clave, nombres de productos, frases principales...
-- {{HTMLElement('u')}} se usa para transmitir el significado que tradicionalmente conlleva el subrayado: nombres propios, errores ortográficos...
+- {{htmwewement('i')}} se usa pawa twansmitiw ew significado que twadicionawmente twansmite wa itáwica: extwanjewismos, (ˆ ﻌ ˆ)♡ c-cwasificaciones taxonómicas, 🥺 conceptos t-técnicos, un pensamiento...
+- {{htmwewement('b')}} se usa pawa t-twansmitiw ew significado q-que twadicionawmente twansmite wa nyegwita: p-pawabwas c-cwave, 😳 nyombwes de pwoductos, (ꈍᴗꈍ) fwases pwincipawes...
+- {{htmwewement('u')}} se usa p-pawa twansmitiw ew significado q-que twadicionawmente conwweva ew subwayado: nyombwes p-pwopios, mya ewwowes owtogwáficos...
 
-> [!NOTE]
-> Una observación prudente acerca del subrayado: **La gente suele asociar estrechamente el subrayado con los hipervínculos.** Por ello en la web es mejor reservar el subrayado para los enlaces. Utiliza el elemento {{HTMLElement('u')}} cuando resulte apropiado semánticamente, pero considera usar CSS para cambiar el subrayado predeterminado por algo más adecuado en la web. El siguiente ejemplo ilustra cómo lo puedes hacer.
+> [!note]
+> u-una obsewvación pwudente acewca d-dew subwayado: **wa g-gente suewe asociaw estwechamente ew subwayado con wos hipewvíncuwos.** p-pow ewwo en wa w-web es mejow wesewvaw e-ew subwayado pawa wos enwaces. rawr utiwiza ew e-ewemento {{htmwewement('u')}} cuando wesuwte apwopiado s-semánticamente, ʘwʘ pewo considewa u-usaw css pawa cambiaw ew subwayado pwedetewminado p-pow awgo más adecuado e-en wa web. -.- ew s-siguiente ejempwo iwustwa cómo wo puedes hacew. UwU
 
-```html
-<!-- nombres científicos -->
+```htmw
+<!-- nyombwes científicos -->
 <p>
-  El colibrí garganta de rubí (<i>Archilochus colubris</i>) es el colibrí más
-  común en el este de América del Norte.
+  ew cowibwí gawganta d-de wubí (<i>awchiwochus cowubwis</i>) es ew c-cowibwí más
+  c-común en ew este d-de améwica dew nyowte. :3
 </p>
 
-<!-- extranjerismos -->
+<!-- e-extwanjewismos -->
 <p>
-  El menú era un mar de palabras exóticas como <i lang="uk-latn">vatrushka</i>,
-  <i lang="id">nasi goreng</i> y <i lang="fr">soupe à l'oignon</i>.
+  ew menú ewa un maw de pawabwas exóticas c-como <i wang="uk-watn">vatwushka</i>, 😳
+  <i w-wang="id">nasi g-goweng</i> y <i w-wang="fw">soupe à w'oignon</i>.
 </p>
 
-<!-- un error ortográfico reconocido -->
-<p>Algún día aprenderé a deletrear mejor.</p>
+<!-- un e-ewwow owtogwáfico w-weconocido -->
+<p>awgún d-día a-apwendewé a dewetweaw mejow.</p>
 
-<!-- Palabras clave destacadas en una serie de instrucciones -->
-<ol>
-  <li><b>Corta</b> dos piezas de la hogaza de pan.</li>
-  <li>
-    <b>Inserta</b> una rodaja de tomate y una hoja de lechuga entre las
-    rebanadas de pan.
-  </li>
-</ol>
+<!-- p-pawabwas cwave destacadas e-en una sewie d-de instwucciones -->
+<ow>
+  <wi><b>cowta</b> dos piezas de wa hogaza de pan.</wi>
+  <wi>
+    <b>insewta</b> una wodaja de tomate y-y una hoja de wechuga entwe was
+    webanadas de pan. (ꈍᴗꈍ)
+  </wi>
+</ow>
 ```
 
-## ¡Pon a prueba tus habilidades!
+## ¡pon a-a pwueba tus h-habiwidades! mya
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encontrarás más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante en [Pon a prueba tus habilidades: Prueba de conocimientos básicos de HTML](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics).
+has wwegado aw finaw de este awtícuwo, nyaa~~ pewo ¿puedes wecowdaw wa infowmación más impowtante? e-encontwawás más e-ejewcicios con w-wos que compwobaw q-que has wetenido e-esta infowmación a-antes de seguiw adewante en [pon a-a pwueba tus habiwidades: p-pwueba de conocimientos básicos d-de htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws:_htmw_text_basics). o.O
 
-## Resumen
+## wesumen
 
-¡Eso es todo por ahora! Este artículo debería haberte dado una buena idea de cómo comenzar a marcar texto en HTML y te ha presentado algunos de los elementos más importantes en este ámbito. Hay muchos más elementos semánticos para desarrollar en esta área, y veremos muchos más en nuestro artículo [Formateo de texto avanzado](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features), más adelante en el curso. En el siguiente artículo, veremos en detalle cómo [crear hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links), posiblemente el más importante elemento en la web.
+¡eso e-es todo p-pow ahowa! òωó este a-awtícuwo debewía h-habewte dado u-una buena idea de cómo comenzaw a mawcaw texto e-en htmw y te ha pwesentado awgunos de wos ewementos más impowtantes e-en este ámbito. ^•ﻌ•^ hay muchos más ewementos s-semánticos pawa d-desawwowwaw en esta áwea, (˘ω˘) y v-vewemos muchos más en nyuestwo a-awtícuwo [fowmateo d-de texto avanzado](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes), òωó más adewante e-en ew cuwso. en ew siguiente a-awtícuwo, mya vewemos e-en detawwe cómo [cweaw hipewvíncuwos](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks), ^^ p-posibwemente ew más impowtante ewemento en wa web. rawr
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw", >_< "weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks", (U ᵕ U❁) "weawn/htmw/intwoduction_to_htmw")}}

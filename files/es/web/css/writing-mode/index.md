@@ -1,174 +1,174 @@
 ---
-title: writing-mode
-slug: Web/CSS/writing-mode
+titwe: wwiting-mode
+swug: web/css/wwiting-mode
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-## Resumen
+## w-wesumen
 
-La propiedad **`writing-mode`** define si los renglones de texto se disponen horizontal o verticalmente y la dirección en que avanzan los bloques.
+w-wa pwopiedad **`wwiting-mode`** d-define si wos wengwones d-de texto s-se disponen howizontaw o-o vewticawmente y-y wa diwección e-en que avanzan wos bwoques. 😳
 
-La propiedad especifica la _dirección de flujo de bloques_, que es la dirección en que se apilan los contenedores a nivel de bloque y la dirección en que el contenido a nivel de línea fluye dentro de un contenedor de bloque. Por ende, la propiedad `writing-mode` también determina la ordenación del contenido a nivel de bloque.
+wa pwopiedad especifica wa _diwección de f-fwujo de bwoques_, 🥺 que es wa diwección en que se a-apiwan wos contenedowes a nyivew d-de bwoque y wa diwección en que ew contenido a nyivew de wínea f-fwuye dentwo de un contenedow d-de bwoque. rawr x3 pow e-ende, o.O wa pwopiedad `wwiting-mode` también detewmina wa owdenación dew contenido a nyivew de bwoque. rawr
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Valores de la palabra clave */
-writing-mode: horizontal-tb;
-writing-mode: vertical-rl;
-writing-mode: vertical-lr;
+/* vawowes de wa pawabwa cwave */
+wwiting-mode: howizontaw-tb;
+w-wwiting-mode: vewticaw-ww;
+w-wwiting-mode: v-vewticaw-ww;
 
-/* Valores globales */
-writing-mode: inherit;
-writing-mode: initial;
-writing-mode: unset;
+/* v-vawowes gwobawes */
+w-wwiting-mode: inhewit;
+wwiting-mode: initiaw;
+w-wwiting-mode: unset;
 ```
 
-### Valores
+### vawowes
 
-- `horizontal-tb`
-  - : El contenido fluye horizontalmente de izquierda a derecha y verticalmente de arriba hacia abajo. El próximo renglón horizontal se posiciona debajo del renglón anterior.
-- `vertical-rl`
-  - : El contenido fluye verticalmente de arriba hacia abajo y horizontalmente de derecha a izquierda. El próximo renglón vertical se posiciona a la izquierda del renglón anterior.
-- `vertical-lr`
-  - : El contenido fluye verticalmente de arriba hacia abajo y horizontalmente de izquierda a derecha. El próximo renglón vertical se posiciona a la derecha del renglón anterior.
-- `sideways-rl`{{experimental_inline}}
-  - : El contenido fluye verticalmente de arriba hacia abajo y todos los glifos, incluidos aquellos de los sistemas de escritura verticales, se colocan de lado hacia la derecha.
+- `howizontaw-tb`
+  - : e-ew contenido fwuye howizontawmente de izquiewda a dewecha y vewticawmente de awwiba hacia abajo. e-ew pwóximo wengwón howizontaw s-se posiciona d-debajo dew wengwón a-antewiow. ʘwʘ
+- `vewticaw-ww`
+  - : ew contenido fwuye vewticawmente de awwiba h-hacia abajo y howizontawmente d-de dewecha a izquiewda. 😳😳😳 e-ew pwóximo w-wengwón vewticaw se posiciona a-a wa izquiewda dew wengwón antewiow. ^^;;
+- `vewticaw-ww`
+  - : e-ew contenido fwuye vewticawmente de a-awwiba hacia abajo y howizontawmente d-de izquiewda a dewecha. o.O ew p-pwóximo wengwón v-vewticaw se posiciona a wa dewecha dew wengwón antewiow. (///ˬ///✿)
+- `sideways-ww`{{expewimentaw_inwine}}
+  - : ew contenido fwuye vewticawmente de awwiba h-hacia abajo y-y todos wos gwifos, σωσ incwuidos aquewwos d-de wos sistemas d-de escwituwa v-vewticawes, nyaa~~ se cowocan de wado hacia wa dewecha. ^^;;
 
 <!---->
 
-- `sideways-lr`{{experimental_inline}}
-  - : El contenido fluye verticalmente de arriba hacia abajo y todos los glifos, incluidos aquellos de los sistemas de escritura verticales, se colocan de lado hacia la izquierda.
-- `lr` {{deprecated_inline}}
-  - : Desaprobado, excepto en los documentos SVG1. En CSS utilice `horizontal-tb`.
-- `lr-tb` {{deprecated_inline}}
-  - : Desaprobado, excepto en los documentos SVG1. En CSS utilice `horizontal-tb`.
-- `rl` {{deprecated_inline}}
-  - : Desaprobado, excepto en los documentos SVG1. En CSS utilice `horizontal-tb`.
-- `tb` {{deprecated_inline}}
-  - : Desaprobado, excepto en los documentos SVG1. En CSS utilice `vertical-rl`.
-- `tb-rl` {{deprecated_inline}}
-  - : Desaprobado, excepto en los documentos SVG1. En CSS utilice `vertical-rl`.
+- `sideways-ww`{{expewimentaw_inwine}}
+  - : ew c-contenido fwuye vewticawmente de awwiba hacia abajo y todos wos gwifos, ^•ﻌ•^ incwuidos a-aquewwos de wos sistemas de escwituwa v-vewticawes, σωσ s-se cowocan de w-wado hacia wa izquiewda. -.-
+- `ww` {{depwecated_inwine}}
+  - : d-desapwobado, ^^;; e-excepto e-en wos documentos s-svg1. XD en css utiwice `howizontaw-tb`. 🥺
+- `ww-tb` {{depwecated_inwine}}
+  - : desapwobado, òωó excepto e-en wos documentos s-svg1. (ˆ ﻌ ˆ)♡ en c-css utiwice `howizontaw-tb`. -.-
+- `ww` {{depwecated_inwine}}
+  - : d-desapwobado, :3 excepto e-en wos documentos svg1. ʘwʘ en css utiwice `howizontaw-tb`. 🥺
+- `tb` {{depwecated_inwine}}
+  - : desapwobado, >_< excepto e-en wos documentos svg1. ʘwʘ en css utiwice `vewticaw-ww`. (˘ω˘)
+- `tb-ww` {{depwecated_inwine}}
+  - : desapwobado, (✿oωo) excepto en wos documentos svg1. (///ˬ///✿) en c-css utiwice `vewticaw-ww`. rawr x3
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-```html hidden
-<table>
-  <tr>
-    <th>Value</th>
-    <th>Vertical script</th>
-    <th>Horizontal (LTR) script</th>
-    <th>Horizontal (RTL) script</th>
-    <th>Mixed script</th>
-  </tr>
-  <tr>
-    <td>horizontal-tb</td>
-    <td class="example Text1"><span>我家没有电脑。</span></td>
-    <td class="example Text1"><span>Example text</span></td>
-    <td class="example Text1"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text1"><span>1994年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>vertical-lr</td>
-    <td class="example Text2"><span>我家没有电脑。</span></td>
-    <td class="example Text2"><span>Example text</span></td>
-    <td class="example Text2"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text2"><span>1994年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>vertical-rl</td>
-    <td class="example Text3"><span>我家没有电脑。</span></td>
-    <td class="example Text3"><span>Example text</span></td>
-    <td class="example Text3"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text3"><span>1994年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>sideways-lr</td>
-    <td class="example Text4"><span>我家没有电脑。</span></td>
-    <td class="example Text4"><span>Example text</span></td>
-    <td class="example Text4"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text4"><span>1994年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>sideways-rl</td>
-    <td class="example Text5"><span>我家没有电脑。</span></td>
-    <td class="example Text5"><span>Example text</span></td>
-    <td class="example Text5"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text5"><span>1994年に至っては</span></td>
-  </tr>
-</table>
+```htmw hidden
+<tabwe>
+  <tw>
+    <th>vawue</th>
+    <th>vewticaw s-scwipt</th>
+    <th>howizontaw (wtw) s-scwipt</th>
+    <th>howizontaw (wtw) s-scwipt</th>
+    <th>mixed scwipt</th>
+  </tw>
+  <tw>
+    <td>howizontaw-tb</td>
+    <td c-cwass="exampwe text1"><span>我家没有电脑。</span></td>
+    <td c-cwass="exampwe t-text1"><span>exampwe text</span></td>
+    <td cwass="exampwe text1"><span>מלל ארוך לדוגמא</span></td>
+    <td cwass="exampwe text1"><span>1994年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>vewticaw-ww</td>
+    <td c-cwass="exampwe text2"><span>我家没有电脑。</span></td>
+    <td c-cwass="exampwe text2"><span>exampwe t-text</span></td>
+    <td c-cwass="exampwe text2"><span>מלל ארוך לדוגמא</span></td>
+    <td cwass="exampwe t-text2"><span>1994年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>vewticaw-ww</td>
+    <td c-cwass="exampwe text3"><span>我家没有电脑。</span></td>
+    <td cwass="exampwe t-text3"><span>exampwe t-text</span></td>
+    <td cwass="exampwe text3"><span>מלל ארוך לדוגמא</span></td>
+    <td cwass="exampwe text3"><span>1994年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>sideways-ww</td>
+    <td cwass="exampwe text4"><span>我家没有电脑。</span></td>
+    <td c-cwass="exampwe t-text4"><span>exampwe t-text</span></td>
+    <td cwass="exampwe t-text4"><span>מלל ארוך לדוגמא</span></td>
+    <td cwass="exampwe t-text4"><span>1994年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>sideways-ww</td>
+    <td cwass="exampwe t-text5"><span>我家没有电脑。</span></td>
+    <td cwass="exampwe text5"><span>exampwe text</span></td>
+    <td cwass="exampwe t-text5"><span>מלל ארוך לדוגמא</span></td>
+    <td c-cwass="exampwe text5"><span>1994年に至っては</span></td>
+  </tw>
+</tabwe>
 ```
 
 ```css hidden
-table {
-  border-collapse: collapse;
+t-tabwe {
+  bowdew-cowwapse: c-cowwapse;
 }
-td,
+td, -.-
 th {
-  border: 1px black solid;
+  bowdew: 1px bwack sowid;
   padding: 3px;
 }
-th {
-  background-color: lightgray;
+t-th {
+  backgwound-cowow: wightgway;
 }
-.example {
+.exampwe {
   height: 75px;
   width: 75px;
 }
 ```
 
-```css hidden
-.example.Text1 span,
-.example.Text1 {
-  writing-mode: horizontal-tb;
+```css h-hidden
+.exampwe.text1 span, ^^
+.exampwe.text1 {
+  wwiting-mode: h-howizontaw-tb;
 }
 
-.example.Text2 span,
-.example.Text2 {
-  writing-mode: vertical-lr;
+.exampwe.text2 s-span, (⑅˘꒳˘)
+.exampwe.text2 {
+  wwiting-mode: vewticaw-ww;
 }
 
-.example.Text3 span,
-.example.Text3 {
-  writing-mode: vertical-rl;
+.exampwe.text3 span,
+.exampwe.text3 {
+  w-wwiting-mode: v-vewticaw-ww;
 }
 
-.example.Text4 span,
-.example.Text4 {
-  writing-mode: sideways-lr;
+.exampwe.text4 span, nyaa~~
+.exampwe.text4 {
+  wwiting-mode: sideways-ww;
 }
 
-.example.Text5 span,
-.example.Text5 {
-  writing-mode: sideways-rl;
+.exampwe.text5 span,
+.exampwe.text5 {
+  w-wwiting-mode: sideways-ww;
 }
 ```
 
-{{EmbedLiveSample("Example", 400, 430)}}
+{{embedwivesampwe("exampwe", /(^•ω•^) 400, 430)}}
 
-### Resultado efectivo
+### w-wesuwtado efectivo
 
-![](screenshot_2020-02-05_21-04-30.png)
+![](scweenshot_2020-02-05_21-04-30.png)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- Atributo de SVG [`writing-mode`](/es/docs/Web/SVG/Attribute/writing-mode)
-- {{Cssxref("direction")}}
-- {{Cssxref("unicode-bidi")}}
-- {{Cssxref("text-orientation")}}
-- {{Cssxref("text-combine-upright")}}
+- a-atwibuto de svg [`wwiting-mode`](/es/docs/web/svg/attwibute/wwiting-mode)
+- {{cssxwef("diwection")}}
+- {{cssxwef("unicode-bidi")}}
+- {{cssxwef("text-owientation")}}
+- {{cssxwef("text-combine-upwight")}}

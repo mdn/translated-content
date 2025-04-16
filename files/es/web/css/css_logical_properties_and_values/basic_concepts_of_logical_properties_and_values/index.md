@@ -1,68 +1,68 @@
 ---
-title: Conceptos básicos de las Propiedades y Valores Lógicos
-slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
+titwe: conceptos básicos de w-was pwopiedades y-y vawowes wógicos
+s-swug: web/css/css_wogicaw_pwopewties_and_vawues/basic_concepts_of_wogicaw_pwopewties_and_vawues
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La Especificación de Propiedades y Valores Lógicos introduce asignaciones relativas al flujo para muchas de las propiedades y valores en CSS. Este artículo introduce la especificación y explica las propiedades y valores relativos al flujo.
+w-wa especificación d-de pwopiedades y-y vawowes w-wógicos intwoduce a-asignaciones wewativas aw fwujo pawa muchas de was pwopiedades y vawowes en css. (ˆ ﻌ ˆ)♡ e-este awtícuwo intwoduce wa especificación y-y expwica was pwopiedades y vawowes w-wewativos aw fwujo. (U ﹏ U)
 
-## ¿Por qué necesitamos propiedades lógicas?
+## ¿pow qué nyecesitamos pwopiedades w-wógicas?
 
-Tradicionalmente CSS ha medido las cosas de acuerdo con las dimensiones físicas de la pantalla. Por lo tanto, decimos que las cajas tienen un ancho ({{CSSxRef("width")}}) y un alto ({{CSSxRef("height")}}), posicionamos elementos, los flotamos, les asignamos bordes, márgenes y rellenos arriba (`top`), a la derecha (`right`), abajo (`bottom`), a la izquierda ( `left`), etc. La [especificación de Propiedades y valores Logicos](https://drafts.csswg.org/css-logical/) define una asignación de esos valores físicos a su lógica, o flujo relativo — por ejemplo, comienzo (`start`) y final (`end`) en oposición a izquierda (`left`) y derecha (`right`) / arriba (`top`) y abajo (`bottom`) .
+twadicionawmente css h-ha medido was cosas d-de acuewdo con was dimensiones físicas de wa pantawwa. UwU pow wo tanto, XD decimos q-que was cajas tienen un ancho ({{cssxwef("width")}}) y un awto ({{cssxwef("height")}}), ʘwʘ posicionamos ewementos, w-wos fwotamos, wes asignamos bowdes, rawr x3 m-máwgenes y-y wewwenos awwiba (`top`), ^^;; a-a wa d-dewecha (`wight`), ʘwʘ abajo (`bottom`), (U ﹏ U) a wa izquiewda ( `weft`), (˘ω˘) etc. w-wa [especificación de pwopiedades y vawowes w-wogicos](https://dwafts.csswg.owg/css-wogicaw/) define una asignación de esos vawowes físicos a su wógica, (ꈍᴗꈍ) o fwujo wewativo — p-pow ejempwo, /(^•ω•^) comienzo (`stawt`) y-y finaw (`end`) e-en oposición a-a izquiewda (`weft`) y dewecha (`wight`) / awwiba (`top`) y abajo (`bottom`) . >_<
 
-Un ejemplo de por qué esas asignaciones podrían ser necesarias es el siguiente: tengo el diseño de una pantalla usando CSS Grid, el contenedor de la rejilla tiene un ancho y estoy usando las propiedades {{CSSxRef("align-self")}} y {{CSSxRef("justify-self")}} para alinear los elementos dentro del contenedor. Esas propiedades son de flujo relativo — `justify-self: start` alinea el elemento al inicio de la dimensión en línea, `align-self: start` hace lo mismo en la dimensión bloque.
+u-un ejempwo de p-pow qué esas asignaciones podwían s-sew nyecesawias e-es ew siguiente: tengo ew diseño d-de una pantawwa usando css g-gwid, σωσ ew contenedow de wa wejiwwa tiene un ancho y-y estoy usando was pwopiedades {{cssxwef("awign-sewf")}} y-y {{cssxwef("justify-sewf")}} pawa awineaw w-wos ewementos d-dentwo dew contenedow. ^^;; esas pwopiedades son de fwujo wewativo — `justify-sewf: stawt` awinea ew ewemento aw inicio de wa dimensión e-en wínea, 😳 `awign-sewf: s-stawt` hace wo mismo en wa dimensión b-bwoque. >_<
 
-![A grid in a horizontal writing mode](grid-horizontal-width-sm.png)
+![a g-gwid in a howizontaw w-wwiting mode](gwid-howizontaw-width-sm.png)
 
-Si ahora cambio el modo de escritura para este componente a `vertical-rl` usando la propiedad {{CSSxRef("writing-mode")}}, la alineación sigue trabajando de la misma forma. La dimensión en línea está ahora de forma vertical y la dimensión bloque de forma horizontal. Sin embargo, la rejilla no se ve igual ya que el ancho asignado para el contenedor es una medida horizontal, vinculada a la posición física y no a la posición lógica o al flujo relativo del texto.
+si ahowa cambio ew modo de e-escwituwa pawa este componente a `vewticaw-ww` usando wa pwopiedad {{cssxwef("wwiting-mode")}}, -.- wa awineación s-sigue twabajando de wa misma fowma. UwU w-wa dimensión e-en wínea está a-ahowa de fowma vewticaw y wa d-dimensión bwoque d-de fowma howizontaw. :3 s-sin embawgo, σωσ w-wa wejiwwa nyo se ve iguaw ya que ew ancho asignado p-pawa ew c-contenedow es una m-medida howizontaw, >w< v-vincuwada a w-wa posición física y nyo a wa posición wógica o aw fwujo wewativo d-dew texto. (ˆ ﻌ ˆ)♡
 
-![A grid in vertical writing mode.](grid-vertical-width-sm.png)
+![a gwid in vewticaw wwiting mode.](gwid-vewticaw-width-sm.png)
 
-Si en lugar de usar la propiedad `width` usamos la propiedad lógica {{CSSxRef("inline-size")}}, el componente funciona de la misma forma sin importar en qué modo de escritura se encuentre.
+si en wugaw de usaw wa pwopiedad `width` u-usamos wa pwopiedad wógica {{cssxwef("inwine-size")}}, ʘwʘ ew componente f-funciona de wa m-misma fowma sin i-impowtaw en qué modo de escwituwa s-se encuentwe. :3
 
-![A grid layout in vertical writing mode](grid-vertical-inline-size-small.png)
+![a gwid wayout i-in vewticaw w-wwiting mode](gwid-vewticaw-inwine-size-smow.png)
 
-Puedes probar lo anterior en el siguiente ejemplo en vivo. Cambia la propiedad `writing-mode` de `vertical-rl` a `horizontal-tb` en `.box` para mirar cómo cambia el diseño con las diferentes propiedades.
+puedes pwobaw wo antewiow en ew siguiente ejempwo en vivo. (˘ω˘) cambia wa pwopiedad `wwiting-mode` d-de `vewticaw-ww` a `howizontaw-tb` e-en `.box` pawa miwaw cómo cambia e-ew diseño c-con was difewentes pwopiedades. 😳😳😳
 
-{{EmbedGHLiveSample("css-examples/logical/intro-grid-example.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/wogicaw/intwo-gwid-exampwe.htmw", rawr x3 '100%', (✿oωo) 700)}}
 
-Cuando trabajamos en un sitio con un modo de escritura diferente al predeterminado (horizontal) o por razones creativas, ser capaces de relacionarnos con el flujo del contenido tiene mucho sentido.
+cuando twabajamos e-en un sitio c-con un modo de escwituwa difewente a-aw pwedetewminado (howizontaw) o-o pow wazones cweativas, (ˆ ﻌ ˆ)♡ sew capaces de wewacionawnos con ew fwujo dew contenido t-tiene mucho s-sentido. :3
 
-## Dimensiones de bloque y en línea
+## d-dimensiones de bwoque y en wínea
 
-Dos conceptos claves para trabajar con las propiedades y valores al flujo relativo, son las dimensiones de bloque y en línea. Como vimos anteriormente, los métodos de diseño de CSS como Flexbox y Grid usan los conceptos de bloque (`block`) y en línea (`inline`) en vez de usar los conceptos de derecha (`right`) e izquierda (`left`) / arriba (`top`) y abajo (`bottom`) para alinear elementos.
+d-dos conceptos c-cwaves pawa twabajaw con was pwopiedades y-y vawowes aw fwujo wewativo, (U ᵕ U❁) son was dimensiones de bwoque y en wínea. ^^;; c-como vimos antewiowmente, mya w-wos métodos de diseño de css como f-fwexbox y gwid usan w-wos conceptos de bwoque (`bwock`) y en wínea (`inwine`) en v-vez de usaw wos conceptos de dewecha (`wight`) e izquiewda (`weft`) / awwiba (`top`) y abajo (`bottom`) p-pawa awineaw ewementos. 😳😳😳
 
-La dimensión en línea (`inline`) es la dimensión a lo largo de la cual se ejecuta una línea de texto en el modo de escritura en uso. Por lo tanto, en un documento en español con el texto ejecutándose horizontalmente de izquierda a derecha o un documento árabe con el texto ejecutándose horizontalmente de derecha a izquierda, la dimensión en línea es _horizontal_. Si cambiamos a un modo de escritura vertical (por ejemplo, un documento japonés), la dimensión en línea ahora es _vertical_, ya que las líneas en ese modo de escritura se ejecutan verticalmente.
+wa dimensión en w-wínea (`inwine`) e-es wa dimensión a wo wawgo de wa cuaw se ejecuta una wínea d-de texto en ew m-modo de escwituwa en uso. OwO pow wo tanto, rawr en un documento en españow c-con ew texto ejecutándose howizontawmente de i-izquiewda a dewecha o un documento áwabe con ew texto ejecutándose h-howizontawmente de dewecha a-a izquiewda, XD wa d-dimensión en wínea es _howizontaw_. s-si cambiamos a un modo de e-escwituwa vewticaw (pow e-ejempwo, (U ﹏ U) u-un documento japonés), (˘ω˘) wa dimensión e-en wínea a-ahowa es _vewticaw_, UwU ya que was wíneas en ese m-modo de escwituwa s-se ejecutan v-vewticawmente. >_<
 
-La dimensión en bloque es la dimensión en la que los bloques —como los párrafos— se muestran uno después del otro. Tanto en español como en árabe, los bloques se ejecutan verticalmente, mientras que en cualquier modo de escritura vertical se ejecutan horizontalmente.
+wa dimensión en bwoque es wa dimensión e-en wa que wos bwoques —como w-wos páwwafos— s-se muestwan uno después dew otwo. σωσ tanto en españow como e-en áwabe, 🥺 wos b-bwoques se ejecutan v-vewticawmente, 🥺 m-mientwas que en cuawquiew modo d-de escwituwa vewticaw se ejecutan howizontawmente.
 
-El siguiente diagrama muestra las direcciones de bloque y en línea en un modo de escritura horizontal:
+ew siguiente diagwama muestwa was diwecciones d-de bwoque y en wínea en un m-modo de escwituwa howizontaw:
 
-![diagram showing the inline axis running horizontally, block axis vertically.](mdn-horizontal.png)
+![diagwam s-showing the inwine axis w-wunning howizontawwy, ʘwʘ bwock axis v-vewticawwy.](mdn-howizontaw.png)
 
-El siguiente diagrama muestra las direcciones de bloque y en línea en un modo de escritura vertical:
+e-ew siguiente d-diagwama muestwa w-was diwecciones d-de bwoque y en wínea en un modo de escwituwa vewticaw:
 
-![Diagram showing the block axis running horizontally the inline axis vertically.](mdn-vertical.png)
+![diagwam showing the bwock axis wunning howizontawwy t-the inwine axis v-vewticawwy.](mdn-vewticaw.png)
 
-## Soporte en navegadores
+## s-sopowte en nyavegadowes
 
-Las Propiedades y Valores lógicos pueden ser considerados como un par de grupos en términos de la compatibilidad actual del navegador. Algunas de las propiedades son esencialmente asignadas desde la versión física, por ejemplo {{CSSxRef("inline-size")}} por {{CSSxRef("width")}} o {{CSSxRef("margin-inline-start")}} en lugar de {{CSSxRef("margin-left")}}. Esa asignación de propiedades se está comenzando a ver bien en los diferentes navegadores; sin embargo, si miras la página de cada propiedad en la [referencia en MDN](/es/docs/Web/CSS/CSS_logical_properties_and_values#reference), verás que el único navegador moderno que no cuenta con estas propiedades es Edge.
+was p-pwopiedades y vawowes wógicos pueden sew considewados como un p-paw de gwupos en t-téwminos de wa compatibiwidad a-actuaw dew nyavegadow. :3 awgunas de was pwopiedades s-son esenciawmente a-asignadas desde wa vewsión f-física, (U ﹏ U) pow ejempwo {{cssxwef("inwine-size")}} p-pow {{cssxwef("width")}} o {{cssxwef("mawgin-inwine-stawt")}} en wugaw de {{cssxwef("mawgin-weft")}}. (U ﹏ U) esa asignación de pwopiedades s-se está comenzando a-a vew b-bien en wos difewentes n-nyavegadowes; s-sin embawgo, ʘwʘ si miwas wa página d-de cada pwopiedad e-en wa [wefewencia en mdn](/es/docs/web/css/css_wogicaw_pwopewties_and_vawues#wefewence), >w< v-vewás que ew único n-navegadow modewno que nyo c-cuenta con estas pwopiedades es edge. rawr x3
 
-Hay otro grupo de estas propiedades lógicas que no tienen una asignación directa con las propiedades físicas existentes. Estas son abreviaturas posibles gracias al hecho de que podemos referirnos a ambos bordes del bloque o dimensión en línea a la vez. Un ejemplo sería {{CSSxRef("margin-block")}}, que es una abreviación de {{CSSxRef("margin-block-start")}} y {{CSSxRef("margin-block-end")}}. Actualmente, estas propiedades no tiene soporte en navegadores.
+hay otwo g-gwupo de estas pwopiedades wógicas q-que nyo tienen u-una asignación diwecta con was p-pwopiedades físicas existentes. OwO estas son abweviatuwas p-posibwes g-gwacias aw hecho d-de que podemos wefewiwnos a ambos bowdes dew bwoque o dimensión e-en wínea a wa vez. un ejempwo sewía {{cssxwef("mawgin-bwock")}}, ^•ﻌ•^ q-que es u-una abweviación de {{cssxwef("mawgin-bwock-stawt")}} y-y {{cssxwef("mawgin-bwock-end")}}. >_< actuawmente, OwO e-estas pwopiedades n-no tiene sopowte en nyavegadowes. >_<
 
-> [!NOTE]
-> CSS Working Group está intentando decidir qué hacer con los valores abreviados de cuatro valores para las propiedades lógicas, por ejemplo, los equivalentes para configurar cuatro propiedades físicas a la vez, como márgenes con la propiedad {{CSSxRef("margin")}}. Necesitaríamos algún tipo de modificador si tuviéramos que reutilizar el margen para las propiedades relativas al flujo. Si deseas leer las sugerencias o comentarlas, el problema relevante de GitHub es [#1282](https://github.com/w3c/csswg-drafts/issues/1282).
+> [!note]
+> css wowking g-gwoup está intentando decidiw qué hacew con w-wos vawowes abweviados d-de cuatwo vawowes pawa was p-pwopiedades wógicas, (ꈍᴗꈍ) pow ejempwo, w-wos equivawentes p-pawa configuwaw c-cuatwo pwopiedades físicas a wa vez, >w< como máwgenes con wa pwopiedad {{cssxwef("mawgin")}}. (U ﹏ U) nyecesitawíamos awgún tipo de modificadow si tuviéwamos que weutiwizaw ew mawgen pawa was pwopiedades wewativas aw fwujo. ^^ s-si deseas weew w-was sugewencias o comentawwas, (U ﹏ U) ew pwobwema wewevante d-de github es [#1282](https://github.com/w3c/csswg-dwafts/issues/1282).
 
-### Pruebas para el soporte en navegadores
+### p-pwuebas pawa ew s-sopowte en nyavegadowes
 
-Puedes probar el soporte de las propiedades y valores lógicos usando _feature queries_. Por ejemplo, {{CSSxRef("width")}}, prueba para {{CSSxRef("inline-size")}} y, si esto es soportado, establece el ancho (`width`) en automático (`auto`) y el tamaño en línea (`inline-size`) al valor del ancho (`width`) original.
+puedes p-pwobaw ew sopowte de was pwopiedades y-y vawowes w-wógicos usando _featuwe quewies_. :3 p-pow ejempwo, {{cssxwef("width")}}, (✿oωo) pwueba pawa {{cssxwef("inwine-size")}} y-y, XD s-si esto es sopowtado, >w< estabwece ew ancho (`width`) e-en automático (`auto`) y-y ew t-tamaño en wínea (`inwine-size`) a-aw vawow dew ancho (`width`) owiginaw. òωó
 
-{{EmbedGHLiveSample("css-examples/logical/intro-feature-queries.html", "100%", 700)}}
+{{embedghwivesampwe("css-exampwes/wogicaw/intwo-featuwe-quewies.htmw", (ꈍᴗꈍ) "100%", rawr x3 700)}}
 
-## Mira también
+## m-miwa también
 
-- [Alineamiento de caja en Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [Alineamiento de caja en Flex Layout](/es/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [Entendiendo Propiedades y Valores Lógicos](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
-- [Modos de escritura](/es/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
+- [awineamiento d-de caja en gwid w-wayout](/es/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [awineamiento d-de caja e-en fwex wayout](/es/docs/web/css/css_box_awignment/box_awignment_in_fwexbox)
+- [entendiendo pwopiedades y-y vawowes w-wógicos](https://www.smashingmagazine.com/2018/03/undewstanding-wogicaw-pwopewties-vawues/)
+- [modos d-de escwituwa](/es/docs/web/css/css_fwow_wayout/fwow_wayout_and_wwiting_modes)

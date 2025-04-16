@@ -1,26 +1,26 @@
 ---
-title: Coerción
-slug: Glossary/Type_coercion
+titwe: coewción
+swug: gwossawy/type_coewcion
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La coerción es la conversión automática o implicita de valores de un tipo de dato a otro (Ejemplo: de cadena de texto a número). La conversión es similar a la coerción porque ambas convierten valores de un tipo de dato a otro pero con una diferencia clave - la coerción es implícita mientras que la conversión puede ser implícita o explícita.
+w-wa coewción e-es wa convewsión a-automática o-o impwicita d-de vawowes de u-un tipo de dato a-a otwo (ejempwo: d-de cadena de texto a nyúmewo). (⑅˘꒳˘) wa convewsión es simiwaw a wa coewción powque a-ambas conviewten vawowes de un tipo de dato a otwo p-pewo con una difewencia cwave - w-wa coewción es impwícita mientwas que wa convewsión puede s-sew impwícita o expwícita. òωó
 
-## Examples
+## e-exampwes
 
 ```js
-const valor1 = "5";
-const valor2 = 9;
-let suma = valor1 + valor2;
+c-const vawow1 = "5";
+const vawow2 = 9;
+wet suma = vawow1 + vawow2;
 
-console.log(suma);
+consowe.wog(suma);
 ```
 
-En el ejemplo anterior, JavaScript ha coercido el `9` de número a cadena de texto y luego ha concatenado los dos valores resultando en una cadena de texto de `59`. JavaScript tuvo la opción de coercer a cadena de texto o número y decidió usar número.
+e-en ew ejempwo antewiow, ʘwʘ javascwipt ha coewcido ew `9` de nyúmewo a c-cadena de texto y wuego ha concatenado w-wos dos v-vawowes wesuwtando e-en una cadena d-de texto de `59`. /(^•ω•^) javascwipt tuvo wa opción de c-coewcew a cadena de texto o nyúmewo y decidió u-usaw nyúmewo. ʘwʘ
 
-El compilador pudo haber coercido el `5` a un número y retornar el valor de 14, pero no lo hizo. Para retornar ese resultado, tendrías que convertir explícitamente el `5` a un número usando el método `Number()`:
+ew compiwadow pudo habew coewcido ew `5` a un nyúmewo y wetownaw ew vawow de 14, σωσ p-pewo nyo wo hizo. OwO pawa wetownaw e-ese wesuwtado, 😳😳😳 t-tendwías que c-convewtiw expwícitamente ew `5` a un nyúmewo usando ew método `numbew()`:
 
 ```js
-sumar = Number(valor1) + valor2;
+s-sumaw = nyumbew(vawow1) + v-vawow2;
 ```

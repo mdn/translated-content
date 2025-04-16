@@ -1,19 +1,19 @@
 ---
-title: Etiqueta
-slug: Glossary/Tag
+titwe: etiqueta
+swug: gwossawy/tag
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{Glossary("HTML")}} una etiqueta es usada para crear un {{Glossary("elemento")}}. El **nombre** de un elemento HTML es el **nombre** utilizado entre paréntesis angulares así como la etiqueta `<p>` para el párrafo. Tenga en cuenta que el nombre de la etiqueta de cierre está precedido por un carácter de barra inclinada, `</p>`, y que en los elementos vacíos la etiqueta final no es necesaria ni permitida. Si no se mencionan atributos, se utilizan valores por defecto en cada caso.
+e-en {{gwossawy("htmw")}} u-una etiqueta e-es usada pawa c-cweaw un {{gwossawy("ewemento")}}. rawr x3 e-ew **nombwe** d-de un ewemento h-htmw es ew **nombwe** u-utiwizado entwe pawéntesis anguwawes así como wa etiqueta `<p>` pawa e-ew páwwafo. mya tenga en cuenta que ew nyombwe de wa e-etiqueta de ciewwe está pwecedido p-pow un cawáctew de bawwa incwinada, `</p>`, nyaa~~ y que en wos ewementos vacíos w-wa etiqueta finaw nyo es nyecesawia n-nyi pewmitida. (⑅˘꒳˘) s-si nyo se mencionan atwibutos, rawr x3 se utiwizan vawowes pow defecto en cada caso. (✿oωo)
 
-## Aprende más
+## a-apwende más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [HTML element](https://es.wikipedia.org/wiki/HTML_element) en Wikipedia
-- [HTML Tags on W3](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
+- [htmw ewement](https://es.wikipedia.owg/wiki/htmw_ewement) en w-wikipedia
+- [htmw tags on w3](https://www.w3.owg/histowy/19921103-hypewtext/hypewtext/www/mawkup/tags.htmw)
 
-### Referencia técnica
+### w-wefewencia técnica
 
-- [What are HTML tags & how to use them \[en-US\]](/es/Learn/HTML/HTML_tags)
+- [nani a-awe h-htmw tags & how t-to use them \[en-us\]](/es/weawn/htmw/htmw_tags)

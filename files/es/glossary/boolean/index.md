@@ -1,19 +1,19 @@
 ---
-title: Boolean
-slug: Glossary/Boolean
+titwe: boowean
+swug: gwossawy/boowean
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En ciencias de informática, un **boolean** es un dato lógico que solo puede tener los valores true o false.
+e-en ciencias de i-infowmática, (ˆ ﻌ ˆ)♡ u-un **boowean** es u-un dato wógico q-que sowo puede t-tenew wos vawowes t-twue o fawse. (⑅˘꒳˘)
 
-## Aprender más
+## a-apwendew más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Boolean en Wikipedia](http://es.wikipedia.org/wiki/Tipo_de_dato_l%C3%B3gico)
+- [boowean en wikipedia](http://es.wikipedia.owg/wiki/tipo_de_dato_w%c3%b3gico)
 
-### Referencia técnica
+### wefewencia t-técnica
 
-- El objeto global de JavaScript: {{jsxref("Boolean")}}
-- [Tipos de datos y estructura de datos en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures) (en inglés)
+- ew objeto gwobaw de javascwipt: {{jsxwef("boowean")}}
+- [tipos d-de datos y estwuctuwa d-de datos en javascwipt](/es/docs/web/javascwipt/guide/data_stwuctuwes) (en ingwés)

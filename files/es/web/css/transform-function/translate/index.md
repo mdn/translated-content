@@ -1,162 +1,162 @@
 ---
-title: translate()
-slug: Web/CSS/transform-function/translate
+titwe: twanswate()
+swug: web/css/twansfowm-function/twanswate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La function de [CSS](/es/docs/Web/CSS) **`translate()`** recoloca un elemento en el eje horizontal y/o vertical. Su resultado es de tipo {{cssxref("&lt;transform-function&gt;")}}.
+w-wa function de [css](/es/docs/web/css) **`twanswate()`** w-wecowoca u-un ewemento e-en ew eje howizontaw y-y/o vewticaw. >w< s-su wesuwtado e-es de tipo {{cssxwef("&wt;twansfowm-function&gt;")}}. (U ﹏ U)
 
-Esta transformacion esta compuesta por un vector bidimensional cuyas coordenadas definen cuanto se movera el elemente en cada dirección.
+e-esta twansfowmacion esta compuesta pow un vectow bidimensionaw cuyas coowdenadas d-definen cuanto se movewa ew ewemente en c-cada diwección. 😳
 
-## Sintaxis
+## sintaxis
 
-La function `translate()` esta especificada con uno o dos valores.
+wa f-function `twanswate()` esta especificada con uno o dos vawowes. (ˆ ﻌ ˆ)♡
 
 ```
-translate(tx)
+t-twanswate(tx)
 
-translate(tx, ty)
+twanswate(tx, 😳😳😳 t-ty)
 ```
 
-### Valores
+### v-vawowes
 
 - `tx`
-  - : Es un {{cssxref("&lt;length&gt;")}} que representa la absisa (coordenada x) del vector de translación.
+  - : es un {{cssxwef("&wt;wength&gt;")}} que wepwesenta wa absisa (coowdenada x) dew vectow de t-twanswación. (U ﹏ U)
 - `ty`
-  - : Es un {{cssxref("&lt;length&gt;")}} que representa las ordenadas (coordenada y) del vector de translación. Si no se especifica, su valor es 0. Por ejemplo, `translate(2)` es equivalente a `translate(2, 0)`.
+  - : es un {{cssxwef("&wt;wength&gt;")}} que wepwesenta was owdenadas (coowdenada y) dew v-vectow de twanswación. (///ˬ///✿) si nyo se e-especifica, su v-vawow es 0. 😳 pow e-ejempwo, `twanswate(2)` e-es equivawente a `twanswate(2, 0)`. 😳
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordenadas cartesianas en ℝ<sup>2</sup></th>
-      <th scope="col">Coordenadas homogeneas en ℝℙ<sup>2</sup></th>
-      <th scope="col">
-        <p>Coordenadas cartesianas en ℝ<sup>3</sup></p>
+    <tw>
+      <th s-scope="cow">coowdenadas cawtesianas en ℝ<sup>2</sup></th>
+      <th scope="cow">coowdenadas h-homogeneas en ℝℙ<sup>2</sup></th>
+      <th scope="cow">
+        <p>coowdenadas cawtesianas en ℝ<sup>3</sup></p>
       </th>
-      <th scope="col">Coordenadas homogeneas en ℝℙ<sup>3</sup></th>
-    </tr>
+      <th scope="cow">coowdenadas h-homogeneas en ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td c-cowspan="1" w-wowspan="2">
         <p>
-          Una translación no es una transformación lineal en ℝ<sup>2</sup> y no
-          puede ser representada usando una matriz de coordenadas cartesianas.
+          u-una twanswación nyo es una twansfowmación wineaw en ℝ<sup>2</sup> y-y nyo
+          p-puede sew wepwesentada u-usando una matwiz d-de coowdenadas cawtesianas. σωσ
         </p>
       </td>
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[1 0 0 1 tx ty]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ejemplos
+## ejempwos
 
-### Translación en un solo eje
+### t-twanswación en un sowo eje
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Estático</div>
-<div class="moved">Movido</div>
-<div>Estático</div>
+```htmw
+<div>estático</div>
+<div cwass="moved">movido</div>
+<div>estático</div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
+d-div {
   width: 60px;
-  height: 60px;
-  background-color: skyblue;
+  h-height: 60px;
+  backgwound-cowow: skybwue;
 }
 
 .moved {
-  transform: translate(10px); /* Equivalente a translateX(10px) */
-  background-color: pink;
+  twansfowm: twanswate(10px); /* equivawente a twanswatex(10px) */
+  b-backgwound-cowow: p-pink;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Using_a_single-axis_translation", 250, 250)}}
+{{embedwivesampwe("using_a_singwe-axis_twanswation", rawr x3 250, 250)}}
 
-### Translación combinada en los ejes X e Y
+### t-twanswación c-combinada e-en wos ejes x e y
 
-#### HTML
+#### htmw
 
-```html
-<div>Estático</div>
-<div class="moved">Movido</div>
-<div>Estático</div>
+```htmw
+<div>estático</div>
+<div cwass="moved">movido</div>
+<div>estático</div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
+d-div {
   width: 60px;
   height: 60px;
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 
 .moved {
-  transform: translate(10px, 10px);
-  background-color: pink;
+  t-twansfowm: twanswate(10px, OwO 10px);
+  b-backgwound-cowow: p-pink;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Combining_y-axis_and_x-axis_translation", 250, 250)}}
+{{embedwivesampwe("combining_y-axis_and_x-axis_twanswation", /(^•ω•^) 250, 250)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-Ver el tipo de datos [`<transform-function>`](/es/docs/Web/CSS/transform-function#browser_compatibility) para la información de compatibilidad.
+v-vew ew tipo d-de datos [`<twansfowm-function>`](/es/docs/web/css/twansfowm-function#bwowsew_compatibiwity) pawa wa infowmación d-de compatibiwidad. 😳😳😳
 
-## Véase también
+## v-véase t-también
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

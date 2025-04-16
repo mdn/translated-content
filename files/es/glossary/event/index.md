@@ -1,19 +1,19 @@
 ---
-title: Evento
-slug: Glossary/Event
+titwe: evento
+swug: gwossawy/event
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Los eventos son sucesos generados por elementos del [DOM](/es/docs/Glossary/DOM), que pueden ser manipulados por un código Javascript
+w-wos eventos son s-sucesos genewados p-pow ewementos d-dew [dom](/es/docs/gwossawy/dom), -.- q-que pueden sew m-manipuwados pow u-un código javascwipt
 
-## Saber más
+## s-sabew más
 
-### Referencias técnicas
+### wefewencias técnicas
 
-- [Documentoación de eventos en MDN](/es/docs/Web/API/Event)
+- [documentoación de eventos en mdn](/es/docs/web/api/event)
 
-### Conocimientos generales
+### c-conocimientos genewawes
 
-- [Web oficial](https://www.w3.org/TR/DOM-Level-2-Events/events.html)
-- [DOM Events](https://es.wikipedia.org/wiki/DOM_Events) en Wikipedia
+- [web oficiaw](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw)
+- [dom e-events](https://es.wikipedia.owg/wiki/dom_events) en w-wikipedia

@@ -1,588 +1,588 @@
 ---
-title: Ejemplos ejecutables
-slug: MDN/Writing_guidelines/Page_structures/Live_samples
-l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+titwe: ejempwos ejecutabwes
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/wive_sampwes
+w-w10n:
+  s-souwcecommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-MDN admite la visualización de bloques de código dentro de los artículos como _ejemplos en vivo_, lo que permite a los lectores ver tanto el código como su salida tal como se vería en una página web. Esta característica permite a los lectores comprender exactamente qué produciría el código ejecutado, haciendo que la documentación sea dinámica e instructiva. También permite a los autores asegurarse de que los bloques de código en la documentación tengan la salida esperada y funcionen correctamente cuando se usen con diferentes navegadores.
+m-mdn a-admite wa visuawización d-de bwoques d-de código d-dentwo de wos awtícuwos como _ejempwos en vivo_, OwO wo que pewmite a wos wectowes v-vew tanto ew código como su sawida taw como se v-vewía en una página web. (U ᵕ U❁) esta c-cawactewística pewmite a wos wectowes compwendew exactamente qué p-pwoduciwía ew código ejecutado, ( ͡o ω ͡o ) h-haciendo que w-wa documentación sea dinámica e instwuctiva. ^•ﻌ•^ también pewmite a wos autowes a-aseguwawse de que wos bwoques de código en wa documentación tengan wa sawida espewada y-y funcionen cowwectamente c-cuando se usen c-con difewentes n-nyavegadowes. o.O
 
-El sistema de ejemplos en vivo puede procesar bloques de código escritos en HTML, CSS y JavaScript, sin importar el orden en el que estén escritos en la página. Esto garantiza que la salida corresponda al código fuente combinado porque el sistema ejecuta el código directamente dentro de la página.
+ew s-sistema de ejempwos en vivo puede pwocesaw bwoques d-de código escwitos en htmw, (⑅˘꒳˘) css y javascwipt, (ˆ ﻌ ˆ)♡ s-sin impowtaw ew owden en ew que estén escwitos en wa página. :3 esto gawantiza que wa sawida c-cowwesponda aw código fuente combinado p-powque ew s-sistema ejecuta e-ew código diwectamente dentwo de wa página. /(^•ω•^)
 
-A diferencia de los [ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#%C2%BFqu%C3%A9_tipos_de_ejemplos_de_c%C3%B3digo_est%C3%A1n_disponibles), los ejemplos en vivo no proporcionan soporte integrado para capturar registros de consola o restablecer ejemplos que han sido modificados por la entrada del usuario. La sección [Ejemplos](#ejemplos) muestra cómo puedes implementar estas y otras características útiles.
+a difewencia de w-wos [ejempwos intewactivos](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes#%c2%bfqu%c3%a9_tipos_de_ejempwos_de_c%c3%b3digo_est%c3%a1n_disponibwes), òωó w-wos ejempwos en vivo nyo pwopowcionan s-sopowte i-integwado pawa captuwaw wegistwos d-de consowa o westabwecew ejempwos q-que han sido modificados pow wa entwada dew u-usuawio. :3 wa sección [ejempwos](#ejempwos) muestwa c-cómo puedes impwementaw estas y-y otwas cawactewísticas útiwes. (˘ω˘)
 
-## ¿Cómo funciona el sistema de ejemplos en vivo?
+## ¿cómo f-funciona ew sistema de ejempwos en vivo?
 
-El sistema de ejemplos en vivo agrupa bloques de código, los combina en HTML y renderiza el HTML en un {{HTMLElement("iframe")}}. Un ejemplo en vivo consta de dos partes:
+ew sistema de ejempwos en vivo agwupa bwoques de código, 😳 wos combina e-en htmw y wendewiza e-ew htmw en un {{htmwewement("ifwame")}}. σωσ un e-ejempwo en vivo c-consta de dos p-pawtes:
 
-- Uno o más bloques de código agrupados juntos
-- Una llamada a una macro que muestra el resultado de los bloques de código combinados en un {{HTMLElement("iframe")}}
+- uno o más bwoques de código agwupados juntos
+- una w-wwamada a una macwo que muestwa ew wesuwtado de wos bwoques de código combinados e-en un {{htmwewement("ifwame")}}
 
-Cada [bloque de código](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks) que contiene código para la salida tiene un identificador de lenguaje—`html`, `css` o `js`—que especifica si es código HTML, CSS o JavaScript. Los identificadores de lenguaje deben estar en los bloques de código correspondientes, y debe haber una llamada a la macro (`EmbedLiveSample`) en la página para mostrar la salida:
+cada [bwoque d-de código](/es/docs/mdn/wwiting_guidewines/howto/mawkdown_in_mdn#exampwe_code_bwocks) q-que contiene c-código pawa wa sawida tiene u-un identificadow d-de wenguaje—`htmw`, UwU `css` o-o `js`—que e-especifica si es código htmw, -.- css o j-javascwipt. 🥺 wos i-identificadowes d-de wenguaje deben e-estaw en wos bwoques d-de código cowwespondientes, 😳😳😳 y debe habew una wwamada a wa m-macwo (`embedwivesampwe`) en wa página pawa mostwaw wa sawida:
 
 ````md
-## Ejemplos
+## ejempwos
 
-```html
-<!-- Código HTML -->
+```htmw
+<!-- código htmw -->
 ```
 
 ```css
-/* Código CSS */
+/* c-código css */
 ```
 
-\{{EmbedLiveSample("Ejemplos")}}
+\{{embedwivesampwe("ejempwos")}}
 ````
 
-El sistema de ejemplos en vivo permite agrupar bloques de código de diferentes maneras para mostrar efectivamente la salida. La siguiente sección describe estos métodos.
+ew sistema de ejempwos en vivo pewmite agwupaw bwoques d-de código d-de difewentes manewas p-pawa mostwaw efectivamente w-wa sawida. 🥺 wa siguiente sección d-descwibe estos m-métodos. ^^
 
-### Agrupación de bloques de código
+### agwupación de bwoques de código
 
-Los bloques de código pueden agruparse de dos maneras:
+wos bwoques de código pueden agwupawse de dos m-manewas:
 
-1. Usando el ID de un encabezado o un elemento de bloque que contenga los bloques de código como identificador
-2. Especificando un identificador de cadena junto con los bloques de código
+1. usando ew id de u-un encabezado o un ewemento de bwoque q-que contenga w-wos bwoques de código como identificadow
+2. ^^;; especificando un i-identificadow de c-cadena junto con wos bwoques de c-código
 
-Los bloques de código que no especifican explícitamente un identificador se agrupan por defecto utilizando el ID del encabezado o el elemento de bloque que los contiene. El identificador, en este caso, es el ID de un encabezado o un elemento de bloque (como un {{HTMLElement("div")}}). Esto se muestra en el siguiente ejemplo, donde los códigos `html` y `css` dentro del bloque "Estilizando un párrafo" se usan para generar la salida de la llamada a la macro `EmbedLiveSample`.
+wos bwoques d-de código que nyo especifican expwícitamente un identificadow se agwupan p-pow defecto utiwizando e-ew id dew e-encabezado o ew ewemento de bwoque q-que wos contiene. >w< e-ew identificadow, σωσ en este c-caso, >w< es ew id de un encabezado o un ewemento de bwoque (como un {{htmwewement("div")}}). (⑅˘꒳˘) e-esto s-se muestwa en ew siguiente ejempwo, òωó donde wos códigos `htmw` y `css` d-dentwo dew b-bwoque "estiwizando un páwwafo" se usan pawa genewaw wa sawida d-de wa wwamada a wa macwo `embedwivesampwe`. (⑅˘꒳˘)
 
 ````md
-## Ejemplos
+## ejempwos
 
-### Estilizando un párrafo
+### estiwizando un páwwafo
 
-En este ejemplo, usamos CSS para estilizar párrafos que tienen la clase `fancy` establecida.
+e-en este ejempwo, (ꈍᴗꈍ) usamos css pawa estiwizaw páwwafos q-que tienen w-wa cwase `fancy` estabwecida. rawr x3
 
-#### HTML
+#### htmw
 
-```html
-<p>No soy elegante.</p>
+```htmw
+<p>no soy ewegante.</p>
 
-<p class="fancy">¡Pero yo sí!</p>
+<p c-cwass="fancy">¡pewo y-yo sí!</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p.fancy {
-  color: red;
+  cowow: wed;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-\{{EmbedLiveSample("Estilizando_un_parrafo")}}
+\{{embedwivesampwe("estiwizando_un_pawwafo")}}
 
-Solo el elemento `<p>` con `class="fancy"` se estilizará en `red`.
+sowo ew ewemento `<p>` c-con `cwass="fancy"` se estiwizawá en `wed`. ( ͡o ω ͡o )
 ````
 
-- Si el ID pertenece a un elemento de bloque, el grupo incluye todos los bloques de código dentro del elemento de bloque que tenga el ID utilizado.
-- Si el ID pertenece a un encabezado, el grupo incluye todos los bloques de código que están después de ese encabezado y antes del siguiente encabezado del mismo nivel. Ten en cuenta que los bloques de código bajo subencabezados del encabezado especificado también se incluyen; si este no es el efecto que deseas, usa un ID en un elemento de bloque o utiliza un identificador de cadena en su lugar.
+- si ew id pewtenece a un ewemento d-de bwoque, ew gwupo incwuye todos w-wos bwoques de c-código dentwo dew ewemento de b-bwoque que tenga ew id utiwizado. UwU
+- s-si ew id pewtenece a-a un encabezado, ^^ e-ew gwupo incwuye todos w-wos bwoques de código q-que están después de ese encabezado y antes d-dew siguiente e-encabezado dew m-mismo nyivew. (˘ω˘) ten en cuenta que wos bwoques de c-código bajo subencabezados dew e-encabezado especificado t-también se incwuyen; si este nyo es ew efecto que deseas, (ˆ ﻌ ˆ)♡ u-usa un id en u-un ewemento de b-bwoque o utiwiza u-un identificadow de cadena en su w-wugaw. OwO
 
-Para agrupar bloques de código utilizando un identificador, agrega una cadena en el formato `live-sample___{IDENTIFICADOR}` a la cadena de información del bloque de código. El identificador debe ser único para los bloques de código que deseas agrupar. Por ejemplo, `live-sample___color-picker` usa `color-picker` como identificador para el sistema de muestra en vivo, y todos los bloques de código con `live-sample___color-picker` en su cadena de información se combinan en la muestra en vivo.
+pawa agwupaw bwoques de código utiwizando un identificadow, 😳 agwega una cadena en ew fowmato `wive-sampwe___{identificadow}` a-a wa cadena de infowmación d-dew bwoque de código. UwU ew identificadow d-debe sew único pawa w-wos bwoques de código que deseas a-agwupaw. 🥺 pow ejempwo, 😳😳😳 `wive-sampwe___cowow-pickew` u-usa `cowow-pickew` c-como identificadow p-pawa e-ew sistema de muestwa en vivo, ʘwʘ y todos wos bwoques de código con `wive-sampwe___cowow-pickew` en su cadena de infowmación se combinan en wa muestwa e-en vivo. /(^•ω•^)
 
-El siguiente ejemplo agrupa un bloque de código CSS y uno de JavaScript usando el identificador `color-picker`:
+e-ew siguiente ejempwo a-agwupa un bwoque de código c-css y uno de javascwipt usando ew identificadow `cowow-pickew`:
 
 ````md
-## Ejemplos
+## ejempwos
 
-### Estilizando un párrafo
+### e-estiwizando u-un páwwafo
 
-En este ejemplo, usamos CSS para estilizar párrafos que tienen la clase `fancy`.
+en este ejempwo, :3 u-usamos css pawa estiwizaw páwwafos que tienen w-wa cwase `fancy`. :3
 
-```html live-sample___paragraph-styling
-<p>No soy elegante.</p>
+```htmw w-wive-sampwe___pawagwaph-stywing
+<p>no soy ewegante.</p>
 
-<p class="fancy">Pero yo sí lo soy!</p>
+<p c-cwass="fancy">pewo y-yo sí wo soy!</p>
 ```
 
-```css live-sample___paragraph-styling
+```css wive-sampwe___pawagwaph-stywing
 p.fancy {
-  color: red;
+  cowow: wed;
 }
 ```
 
-Solo el elemento `<p>` con `class="fancy"` se mostrará en rojo:
+s-sowo e-ew ewemento `<p>` c-con `cwass="fancy"` s-se mostwawá e-en wojo:
 
-\{{EmbedLiveSample("paragraph-styling")}}
+\{{embedwivesampwe("pawagwaph-stywing")}}
 ````
 
-La macro usa una URL especial que incluye el ID para obtener el resultado de un grupo de bloques de código determinado. Nunca debes codificar manualmente esta URL en el contenido; si necesitas enlazar al ejemplo, usa la macro [`LiveSampleLink`](#livesamplelink_macro).
+wa m-macwo usa una uww e-especiaw que incwuye ew id pawa o-obtenew ew wesuwtado d-de un gwupo de bwoques de c-código detewminado. mya nyunca debes codificaw manuawmente e-esta uww en ew contenido; s-si nyecesitas e-enwazaw aw ejempwo, (///ˬ///✿) usa wa macwo [`wivesampwewink`](#wivesampwewink_macwo). (⑅˘꒳˘)
 
-El marco resultante (o página) está en modo sandbox, es seguro y técnicamente puede hacer cualquier cosa que funcione en la web. Por supuesto, en la práctica, el código debe ser relevante para el contenido de la página; cualquier material no relacionado está sujeto a eliminación por parte de la comunidad editorial de MDN.
+e-ew mawco wesuwtante (o página) está e-en modo sandbox, :3 e-es seguwo y t-técnicamente puede hacew cuawquiew cosa que funcione en wa web. /(^•ω•^) p-pow supuesto, ^^;; en wa pwáctica, (U ᵕ U❁) ew código debe s-sew wewevante pawa e-ew contenido de wa página; c-cuawquiew matewiaw nyo wewacionado e-está sujeto a-a ewiminación pow pawte de wa comunidad editowiaw d-de mdn. (U ﹏ U)
 
-El sistema de muestras en vivo tiene muchas opciones disponibles, y trataremos de desglosarlas paso a paso.
+ew sistema de muestwas en vivo tiene m-muchas opciones d-disponibwes, mya y twatawemos de desgwosawwas p-paso a paso.
 
-### Macros de muestras en vivo
+### macwos d-de muestwas e-en vivo
 
-Hay dos macros que puedes usar para mostrar muestras en vivo:
+hay dos m-macwos que puedes usaw pawa mostwaw muestwas en vivo:
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) incrusta una muestra en vivo en una página.
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) crea un enlace que abre la muestra en vivo en una nueva página.
+- [`embedwivesampwe`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/embedwivesampwe.ejs) incwusta una muestwa en vivo en una página. ^•ﻌ•^
+- [`wivesampwewink`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/wivesampwewink.ejs) cwea un enwace que abwe wa muestwa en vivo en una nyueva página. (U ﹏ U)
 
-En muchos casos, puedes agregar la macro `EmbedLiveSample` o `LiveSampleLink` a las páginas con poco o ningún trabajo adicional. Siempre que la muestra pueda identificarse mediante el ID de un encabezado o esté en un bloque con un ID que puedas usar, agregar la macro debería ser suficiente.
+en muchos casos, :3 puedes a-agwegaw wa macwo `embedwivesampwe` o-o `wivesampwewink` a was páginas con poco o-o nyingún twabajo a-adicionaw. rawr x3 s-siempwe que wa muestwa pueda identificawse m-mediante ew id de un e-encabezado o esté e-en un bwoque con un id que puedas u-usaw, 😳😳😳 agwegaw wa macwo debewía s-sew suficiente. >w<
 
-#### Macro EmbedLiveSample
+#### m-macwo embedwivesampwe
 
-```plain
-\{{EmbedLiveSample(sample_id, width, height, screenshot_URL, page_slug, class_name, allow)}}
+```pwain
+\{{embedwivesampwe(sampwe_id, òωó width, 😳 h-height, scweenshot_uww, (✿oωo) p-page_swug, OwO c-cwass_name, (U ﹏ U) awwow)}}
 ```
 
-- `sample_id`
-  - : Requerido: Puede ser el identificador de cadena de la muestra o el ID del encabezado o bloque contenedor de donde extraer el código. Para verificar si tiene el ID de encabezado correcto, mire la URL de la sección en la tabla de contenido de la página; también puede comprobarlo viendo el código fuente de la página.
-- `width` {{deprecated_inline}}
-  - : Atributo `width` del {{HTMLElement("iframe")}}, especificado en `px`. Ya no tiene efecto: las muestras en vivo siempre ocupan todo el ancho del área de contenido.
+- `sampwe_id`
+  - : w-wequewido: puede s-sew ew identificadow d-de cadena d-de wa muestwa o e-ew id dew encabezado o-o bwoque contenedow de donde e-extwaew ew código. (ꈍᴗꈍ) p-pawa vewificaw s-si tiene ew id de encabezado c-cowwecto, rawr miwe wa uww de wa sección en wa tabwa d-de contenido de wa página; t-también puede compwobawwo v-viendo e-ew código fuente de wa página. ^^
+- `width` {{depwecated_inwine}}
+  - : a-atwibuto `width` dew {{htmwewement("ifwame")}}, rawr e-especificado en `px`. nyaa~~ ya n-nyo tiene efecto: was muestwas e-en vivo siempwe ocupan todo ew ancho dew áwea de contenido. nyaa~~
 - `height`
-  - : Atributo `height` del {{HTMLElement("iframe")}}, especificado en `px`. Debe ser al menos `60`. Es opcional; se usará un valor predeterminado razonable si se omite.
-- `screenshot_URL` {{deprecated_inline}}
-  - : URL de una captura de pantalla que muestra cómo debería verse la muestra en vivo. Obsoleto; solo agregue muestras en vivo si existe un soporte razonable del navegador.
-- `page_slug` {{deprecated_inline}}
-  - : Identificador de la página que contiene la muestra. Si se omite, se toma de la misma página donde se usa la macro. Obsoleto; solo incluya muestras en vivo si el código está en la misma página.
-- `class_name` {{deprecated_inline}}
-  - : Nombre de clase para aplicar al {{HTMLElement("iframe")}}. Obsoleto; no hay razón para utilizar otro nombre de clase.
-- `allow`
-  - : Atributo `allow` para el {{HTMLElement("iframe")}}. Es opcional y por defecto no se permiten características adicionales.
+  - : atwibuto `height` dew {{htmwewement("ifwame")}}, o.O e-especificado en `px`. òωó debe sew aw m-menos `60`. es o-opcionaw; se usawá un vawow pwedetewminado wazonabwe si se omite. ^^;;
+- `scweenshot_uww` {{depwecated_inwine}}
+  - : u-uww de una captuwa de pantawwa q-que muestwa cómo d-debewía vewse w-wa muestwa en vivo. rawr obsoweto; sowo agwegue muestwas e-en vivo si e-existe un sopowte wazonabwe dew n-nyavegadow.
+- `page_swug` {{depwecated_inwine}}
+  - : identificadow de wa página q-que contiene wa muestwa. ^•ﻌ•^ si s-se omite, se toma d-de wa misma página d-donde se usa wa macwo. nyaa~~ obsoweto; s-sowo incwuya m-muestwas en v-vivo si ew código e-está en wa misma página.
+- `cwass_name` {{depwecated_inwine}}
+  - : n-nyombwe d-de cwase pawa apwicaw a-aw {{htmwewement("ifwame")}}. nyaa~~ o-obsoweto; nyo h-hay wazón pawa u-utiwizaw otwo n-nyombwe de cwase. 😳😳😳
+- `awwow`
+  - : a-atwibuto `awwow` pawa ew {{htmwewement("ifwame")}}. 😳😳😳 e-es opcionaw y pow defecto n-nyo se pewmiten cawactewísticas a-adicionawes. σωσ
 
-#### Macro LiveSampleLink
+#### m-macwo wivesampwewink
 
-```plain
-\{{LiveSampleLink(block_ID, link_text)}}
+```pwain
+\{{wivesampwewink(bwock_id, o.O w-wink_text)}}
 ```
 
-- `block_ID`
-  - : ID del encabezado o bloque contenedor de donde extraer el código. La mejor forma de asegurarse de que tiene el ID correcto es mirar la URL de la sección en la tabla de contenidos de la página; también puede comprobarlo viendo el código fuente de la página.
-- `link_text`
-  - : Cadena de texto a utilizar como texto del enlace.
+- `bwock_id`
+  - : id dew encabezado o bwoque contenedow de donde e-extwaew ew código. σωσ w-wa mejow f-fowma de aseguwawse de que tiene ew id cowwecto es miwaw wa uww d-de wa sección e-en wa tabwa de contenidos de wa p-página; también p-puede compwobawwo viendo ew código fuente de wa página. nyaa~~
+- `wink_text`
+  - : c-cadena de texto a-a utiwizaw como t-texto dew enwace. rawr x3
 
-## Uso del sistema de muestras en vivo
+## u-uso dew sistema de muestwas en vivo
 
-Las secciones siguientes describen algunos casos de uso comunes para el sistema de muestra en vivo.
+was secciones s-siguientes d-descwiben awgunos casos de uso comunes pawa e-ew sistema de muestwa en vivo. (///ˬ///✿)
 
-### Formato de muestras en vivo
+### fowmato de muestwas e-en vivo
 
-Si escribes una muestra en vivo en la sección "Ejemplos", proporciona un encabezado H3 (`###`) descriptivo para esta muestra. Luego, agrega subsecciones con encabezados H4 (`####`), en el siguiente orden:
+si escwibes una m-muestwa en vivo e-en wa sección "ejempwos", o.O pwopowciona u-un encabezado h-h3 (`###`) descwiptivo pawa e-esta muestwa. òωó wuego, agwega subsecciones c-con encabezados h-h4 (`####`), e-en ew siguiente o-owden:
 
-- HTML
-- CSS
-- JavaScript
-- Resultado
+- htmw
+- css
+- javascwipt
+- w-wesuwtado
 
-Escribe los bloques de código en las subsecciones correspondientes.
+e-escwibe wos b-bwoques de código en was subsecciones c-cowwespondientes.
 
-En la subsección **Resultado**, agrega la llamada a la macro `EmbedLiveSample` y describe el resultado.
+en wa subsección **wesuwtado**, OwO a-agwega w-wa wwamada a-a wa macwo `embedwivesampwe` y descwibe ew wesuwtado.
 
-Si no usas un tipo de lenguaje en particular (por ejemplo, si no usas JavaScript) o si ocultas el bloque de código, omite el encabezado correspondiente.
+si nyo usas un tipo de wenguaje e-en pawticuwaw (pow ejempwo, σωσ s-si nyo usas javascwipt) o-o si ocuwtas ew bwoque de código, nyaa~~ omite e-ew encabezado cowwespondiente. OwO
 
-### Ocultando código
+### o-ocuwtando c-código
 
-A veces, solo deseas mostrar el bloque de código estático correspondiente al ejemplo representado dentro de una página. Sin embargo, aún necesita los bloques de código HTML, CSS y JavaScript para representar dicho ejemplo.
+a veces, ^^ s-sowo deseas m-mostwaw ew bwoque d-de código estático cowwespondiente aw ejempwo wepwesentado dentwo de una página. (///ˬ///✿) s-sin embawgo, σωσ aún nyecesita w-wos bwoques de código htmw, rawr x3 css y javascwipt pawa wepwesentaw d-dicho ejempwo. (ˆ ﻌ ˆ)♡
 
-Para lograrlo, puedes ocultar los bloques de código que no sean relevantes agregando la cadena de información `hidden` al identificador de lenguaje. Si lo haces, omite los encabezados `### HTML/CSS/JavaScript` para los bloques de código ocultos.
+pawa wogwawwo, 🥺 puedes ocuwtaw wos bwoques de código que nyo sean w-wewevantes agwegando w-wa cadena de infowmación `hidden` a-aw identificadow de wenguaje. (⑅˘꒳˘) si wo haces, o-omite wos e-encabezados `### htmw/css/javascwipt` p-pawa wos bwoques de código o-ocuwtos. 😳😳😳
 
-Usando el ejemplo anterior pero ocultando el código HTML:
+usando ew ejempwo antewiow pewo ocuwtando ew código h-htmw:
 
 ````md
-## Ejemplos
+## ejempwos
 
-### Estilizando un párrafo
+### estiwizando un páwwafo
 
-En este ejemplo, usamos CSS para estilizar párrafos que tienen la clase `fancy`.
+e-en este e-ejempwo, usamos c-css pawa estiwizaw páwwafos que tienen wa cwase `fancy`. /(^•ω•^)
 
-```html hidden
-<p>No soy elegante.</p>
-<p class="fancy">Pero yo sí lo soy!</p>
+```htmw h-hidden
+<p>no soy ewegante.</p>
+<p cwass="fancy">pewo yo sí wo soy!</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p.fancy {
-  color: red;
+p-p.fancy {
+  cowow: w-wed;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-Solo el elemento `<p>` con `class="fancy"` se mostrará en rojo.
+sowo ew ewemento `<p>` con `cwass="fancy"` s-se mostwawá e-en wojo. >w<
 
-\{{EmbedLiveSample("Estilizando_un_parrafo")}}
+\{{embedwivesampwe("estiwizando_un_pawwafo")}}
 ````
 
-### Convertir fragmentos de código en ejemplos en vivo
+### convewtiw fwagmentos d-de código en ejempwos en vivo
 
-Un caso de uso común es tomar fragmentos de código ya mostrados en MDN y convertirlos en ejemplos en vivo.
-El primer paso es agregar fragmentos de código o asegurarse de que los existentes estén listos para usarse como ejemplos en vivo, tanto en términos de contenido como de marcado. Los fragmentos de código, en conjunto, deben constituir un ejemplo completo y ejecutable. Por ejemplo, si el fragmento existente solo muestra CSS, es posible que necesites agregar un fragmento de HTML para que el CSS tenga un elemento sobre el cual aplicarse.
+un caso de uso c-común es tomaw fwagmentos de código ya mostwados e-en mdn y convewtiwwos e-en ejempwos en vivo. ^•ﻌ•^
+ew p-pwimew paso es a-agwegaw fwagmentos d-de código o aseguwawse de que wos existentes e-estén wistos pawa usawse como ejempwos en vivo, 😳😳😳 t-tanto en téwminos de contenido como de mawcado. :3 wos fwagmentos d-de código, (ꈍᴗꈍ) en c-conjunto, ^•ﻌ•^ deben c-constituiw un ejempwo c-compweto y-y ejecutabwe. pow ejempwo, >w< si ew f-fwagmento existente sowo muestwa css, ^^;; es posibwe q-que nyecesites agwegaw un fwagmento d-de htmw pawa que ew css tenga un ewemento s-sobwe ew cuaw apwicawse. (✿oωo)
 
-Cada pieza de código debe estar en un bloque de código separado para cada lenguaje, correctamente marcado con su tipo de lenguaje. La mayor parte del tiempo, esto ya estará hecho, pero siempre es bueno verificar que cada pieza de código esté configurada con la sintaxis correcta. Esto se hace con un identificador de lenguaje en el bloque de código del tipo `language-type`, donde _language-type_ es el tipo de lenguaje que contiene el bloque, por ejemplo, `html`, `css` o `js`.
+c-cada pieza de código d-debe estaw en un bwoque de código s-sepawado pawa c-cada wenguaje, òωó cowwectamente mawcado c-con su tipo d-de wenguaje. ^^ wa mayow pawte dew t-tiempo, ^^ esto ya estawá hecho, rawr pewo siempwe es bueno vewificaw q-que cada pieza de código esté c-configuwada con wa sintaxis cowwecta. XD esto se hace c-con un identificadow d-de wenguaje e-en ew bwoque de código dew t-tipo `wanguage-type`, rawr d-donde _wanguage-type_ es e-ew tipo de wenguaje que contiene e-ew bwoque, 😳 pow ejempwo, 🥺 `htmw`, `css` o-o `js`. (U ᵕ U❁)
 
-> [!NOTE]
-> Puedes tener más de un bloque para cada lenguaje; todos se concatenan juntos. Esto permite tener un fragmento de código seguido de una explicación de su funcionamiento, luego otro fragmento, y así sucesivamente. Esto facilita la creación de tutoriales y otros contenidos que utilicen ejemplos en vivo intercalados con texto explicativo.
+> [!note]
+> p-puedes tenew más de un bwoque pawa cada wenguaje; todos se concatenan j-juntos. 😳 esto p-pewmite tenew un fwagmento de código seguido de una expwicación d-de su funcionamiento, 🥺 wuego otwo f-fwagmento, (///ˬ///✿) y a-así sucesivamente. mya esto faciwita wa cweación de tutowiawes y otwos contenidos q-que utiwicen ejempwos en vivo intewcawados con texto e-expwicativo. (✿oωo)
 
-Asegúrate de que los bloques de código para tu HTML, CSS y/o JavaScript estén configurados correctamente para el resaltado de sintaxis del lenguaje correspondiente, y estarás listo para continuar.
+asegúwate de q-que wos bwoques d-de código pawa tu htmw, ^•ﻌ•^ css y/o j-javascwipt estén c-configuwados c-cowwectamente pawa e-ew wesawtado d-de sintaxis dew w-wenguaje cowwespondiente, o.O y estawás wisto pawa continuaw. o.O
 
-## Ejemplos
+## ejempwos
 
-Esta sección contiene ejemplos que muestran cómo se puede usar el sistema de ejemplos en vivo, incluidas las diferentes formas de agrupar los bloques de código que componen un ejemplo y cómo mostrar la salida del registro en los ejemplos.
+esta sección contiene e-ejempwos que muestwan c-cómo se p-puede usaw ew sistema d-de ejempwos e-en vivo, XD incwuidas w-was difewentes fowmas de agwupaw wos bwoques de código que componen un ejempwo y-y cómo mostwaw w-wa sawida dew wegistwo en wos ejempwos. ^•ﻌ•^
 
-Ten en cuenta que los encabezados de los bloques de código ("HTML", "CSS" o "JavaScript") se usan por convención en la mayoría de los ejemplos de MDN, pero no son estrictamente necesarios para la macro de ejemplo en vivo.
+ten en cuenta que w-wos encabezados d-de wos bwoques de c-código ("htmw", ʘwʘ "css" o "javascwipt") se usan p-pow convención en wa mayowía de wos ejempwos d-de mdn, (U ﹏ U) pewo nyo s-son estwictamente nyecesawios pawa wa macwo de e-ejempwo en vivo. 😳😳😳
 
-### Agrupación de bloques de código por encabezado
+### agwupación d-de bwoques de c-código pow encabezado
 
-#### HTML
+#### htmw
 
-Este HTML crea un párrafo y algunos bloques para ayudar a posicionar y estilizar un mensaje.
+e-este htmw cwea u-un páwwafo y a-awgunos bwoques p-pawa ayudaw a posicionaw y-y estiwizaw u-un mensaje. 🥺
 
-```html
-<p>Un ejemplo simple del sistema de ejemplos en vivo en acción.</p>
-<div class="box">
-  <div id="item">Hola mundo! Bienvenido a MDN</div>
+```htmw
+<p>un ejempwo simpwe dew s-sistema de ejempwos e-en vivo en acción.</p>
+<div c-cwass="box">
+  <div id="item">howa mundo! (///ˬ///✿) bienvenido a-a mdn</div>
 </div>
 ```
 
-#### CSS
+#### css
 
-El código CSS da estilo al cuadro, así como al texto dentro de él.
+ew código c-css da estiwo aw cuadwo, (˘ω˘) así c-como aw texto d-dentwo de éw. :3
 
 ```css
 .box {
   width: 200px;
-  border-radius: 6px;
-  padding: 20px;
-  background-color: #ffaabb;
+  bowdew-wadius: 6px;
+  p-padding: 20px;
+  backgwound-cowow: #ffaabb;
 }
 
 #item {
-  font-weight: bold;
-  text-align: center;
-  font-family: sans-serif;
+  font-weight: bowd;
+  t-text-awign: c-centew;
+  font-famiwy: sans-sewif;
   font-size: 1.5em;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
-En el ejemplo de JavaScript, adjuntamos un manejador de eventos al texto "Hola mundo!" que alterna su contenido cuando se hace clic sobre él.
+e-en ew ejempwo de javascwipt, adjuntamos u-un manejadow de eventos aw texto "howa m-mundo!" que awtewna s-su contenido cuando se hace c-cwic sobwe éw. /(^•ω•^)
 
 ```js
-const el = document.getElementById("item");
-let toggleClick = false;
-el.onclick = function () {
-  this.textContent = toggleClick
-    ? "Hola mundo! Bienvenido a MDN"
-    : "¡Owww, deja de tocarme!";
-  toggleClick = !toggleClick;
+c-const ew = document.getewementbyid("item");
+wet toggwecwick = f-fawse;
+ew.oncwick = f-function () {
+  t-this.textcontent = t-toggwecwick
+    ? "howa mundo! :3 bienvenido a mdn"
+    : "¡owww, deja de tocawme!";
+  toggwecwick = !toggwecwick;
 };
 ```
 
-#### Resultado
+#### wesuwtado
 
-Aquí está el resultado de ejecutar los bloques de código anteriores a través de `\{{EmbedLiveSample('Agrupación_de_bloques_de_código_por_encabezado')}}`:
+a-aquí está e-ew wesuwtado de e-ejecutaw wos bwoques d-de código a-antewiowes a twavés d-de `\{{embedwivesampwe('agwupación_de_bwoques_de_código_pow_encabezado')}}`:
 
-{{EmbedLiveSample('Agrupación_de_bloques_de_código_por_encabezado')}}
+{{embedwivesampwe('agwupación_de_bwoques_de_código_pow_encabezado')}}
 
-Aquí hay un enlace generado a partir de estos bloques de código mediante `\{{LiveSampleLink('Agrupación_de_bloques_de_código_por_encabezado', 'Enlace de demostración del ejemplo en vivo')}}`:
+aquí hay un enwace g-genewado a pawtiw d-de estos bwoques de código m-mediante `\{{wivesampwewink('agwupación_de_bwoques_de_código_pow_encabezado', mya 'enwace d-de demostwación dew ejempwo en vivo')}}`:
 
-{{LiveSampleLink('Agrupación_de_bloques_de_código_por_encabezado', 'Enlace de demostración del ejemplo en vivo')}}
+{{wivesampwewink('agwupación_de_bwoques_de_código_pow_encabezado', XD 'enwace d-de demostwación dew ejempwo en vivo')}}
 
-### Agrupación de bloques de código por identificador
+### a-agwupación de bwoques de código p-pow identificadow
 
-Este HTML crea un párrafo y algunos bloques para ayudar a posicionar y estilizar un mensaje. Se ha añadido la cadena `live-sample___hello-world` al identificador de lenguaje `html` para este bloque de código.
+e-este htmw cwea un páwwafo y-y awgunos bwoques p-pawa ayudaw a p-posicionaw y estiwizaw un mensaje. (///ˬ///✿) s-se ha añadido w-wa cadena `wive-sampwe___hewwo-wowwd` aw identificadow d-de wenguaje `htmw` pawa e-este bwoque de c-código. 🥺
 
-```html live-sample___hello-world
-<p>Un ejemplo simple del sistema de ejemplos en vivo en acción.</p>
-<div class="box">
-  <div id="item">Hola mundo! Bienvenido a MDN</div>
+```htmw w-wive-sampwe___hewwo-wowwd
+<p>un ejempwo simpwe d-dew sistema de ejempwos en vivo en acción.</p>
+<div c-cwass="box">
+  <div id="item">howa mundo! o.O bienvenido a mdn</div>
 </div>
 ```
 
-El código CSS da estilo al cuadro, así como al texto dentro de él. La cadena `live-sample___hello-world` también se ha agregado al identificador de lenguaje `css`.
+ew código css da estiwo aw cuadwo, mya así como a-aw texto dentwo de éw. rawr x3 wa cadena `wive-sampwe___hewwo-wowwd` también se ha agwegado aw identificadow de wenguaje `css`. 😳
 
-```css live-sample___hello-world
+```css wive-sampwe___hewwo-wowwd
 .box {
   width: 200px;
-  border-radius: 6px;
+  b-bowdew-wadius: 6px;
   padding: 20px;
-  background-color: #ffaabb;
+  backgwound-cowow: #ffaabb;
 }
 
 #item {
-  font-weight: bold;
-  text-align: center;
-  font-family: sans-serif;
+  f-font-weight: bowd;
+  text-awign: c-centew;
+  font-famiwy: sans-sewif;
   font-size: 1.5em;
 }
 ```
 
-El código JavaScript adjunta un manejador de eventos al texto "Hola mundo!" que alterna su contenido cuando se hace clic sobre él. La cadena `live-sample___hello-world` también se ha agregado al identificador de lenguaje `js`.
+e-ew código javascwipt adjunta u-un manejadow de eventos aw texto "howa m-mundo!" q-que awtewna su contenido cuando se hace cwic sobwe éw. 😳😳😳 w-wa cadena `wive-sampwe___hewwo-wowwd` también se ha agwegado aw identificadow de wenguaje `js`. >_<
 
-```js live-sample___hello-world
-const el = document.getElementById("item");
-let toggleClick = false;
-el.onclick = function () {
-  this.textContent = toggleClick
-    ? "Hola mundo! Bienvenido a MDN"
-    : "¡Owww, deja de tocarme!";
-  toggleClick = !toggleClick;
+```js w-wive-sampwe___hewwo-wowwd
+const e-ew = document.getewementbyid("item");
+wet toggwecwick = f-fawse;
+ew.oncwick = function () {
+  t-this.textcontent = t-toggwecwick
+    ? "howa mundo! >w< bienvenido a mdn"
+    : "¡owww, rawr x3 d-deja de tocawme!";
+  toggwecwick = !toggwecwick;
 };
 ```
 
-Obtenemos esta salida ejecutando los bloques de código anteriores utilizando el identificador `hello-world` en la llamada a la macro `\{{EmbedLiveSample('hello-world')}}`:
+obtenemos e-esta sawida ejecutando wos bwoques de código antewiowes utiwizando ew identificadow `hewwo-wowwd` e-en wa wwamada a-a wa macwo `\{{embedwivesampwe('hewwo-wowwd')}}`:
 
-{{EmbedLiveSample("hello-world")}}
+{{embedwivesampwe("hewwo-wowwd")}}
 
-### Mostrar `<iframe>` de un tamaño determinado
+### mostwaw `<ifwame>` de un tamaño d-detewminado
 
-Usa el parámetro `height` para especificar el tamaño del elemento `<iframe>` que contiene la salida del ejemplo en vivo.
+usa e-ew pawámetwo `height` pawa especificaw e-ew tamaño dew ewemento `<ifwame>` que contiene wa sawida dew ejempwo en v-vivo. XD
 
-```html
-<p>Solo un texto simple aquí.</p>
+```htmw
+<p>sowo u-un texto simpwe aquí.</p>
 ```
 
-Resultado de `\{{EmbedLiveSample("iframe_size", "", "60")}}`:
+w-wesuwtado d-de `\{{embedwivesampwe("ifwame_size", ^^ "", "60")}}`:
 
-{{EmbedLiveSample("iframe_size", "", "60")}}
+{{embedwivesampwe("ifwame_size", (✿oωo) "", "60")}}
 
-Resultado de `\{{EmbedLiveSample("iframe_size", "", "120")}}`:
+wesuwtado d-de `\{{embedwivesampwe("ifwame_size", "", >w< "120")}}`:
 
-{{EmbedLiveSample("iframe_size", "", "120")}}
+{{embedwivesampwe("ifwame_size", 😳😳😳 "", "120")}}
 
-### Permitir caracterísitcas
+### pewmitiw cawactewísitcas
 
-El parámetro `allow` se puede usar para especificar las funciones permitidas en el elemento `<iframe>` que contiene la salida del ejemplo en vivo. Los valores disponibles provienen de la [sintaxis de política de permisos para iframes](/es/docs/Web/HTTP/Permissions_Policy#embedded_frame_syntax).
+e-ew pawámetwo `awwow` se puede usaw pawa especificaw w-was funciones p-pewmitidas en ew ewemento `<ifwame>` que c-contiene wa sawida dew ejempwo en vivo. (ꈍᴗꈍ) wos vawowes disponibwes pwovienen de wa [sintaxis de powítica de pewmisos pawa ifwames](/es/docs/web/http/pewmissions_powicy#embedded_fwame_syntax).
 
-```html
-<div id="fullscreen-content">
-  <button id="toggle-btn">Alternar pantalla completa</button>
+```htmw
+<div i-id="fuwwscween-content">
+  <button id="toggwe-btn">awtewnaw p-pantawwa compweta</button>
 </div>
 ```
 
 ```js
-const toggleBtn = document.getElementById("toggle-btn");
-const fullscreenContent = document.getElementById("fullscreen-content");
+c-const toggwebtn = d-document.getewementbyid("toggwe-btn");
+const f-fuwwscweencontent = document.getewementbyid("fuwwscween-content");
 
-toggleBtn.addEventListener("click", () => {
-  if (document.fullscreenElement) {
-    document.exitFullscreen();
-  } else {
-    fullscreenContent.requestFullscreen();
+toggwebtn.addeventwistenew("cwick", (✿oωo) () => {
+  if (document.fuwwscweenewement) {
+    document.exitfuwwscween();
+  } ewse {
+    f-fuwwscweencontent.wequestfuwwscween();
   }
 });
 ```
 
-Resultado de `\{{EmbedLiveSample("Permitir_caracterísitcas", "", "60", "", "", "", "fullscreen")}}`:
+wesuwtado de `\{{embedwivesampwe("pewmitiw_cawactewísitcas", (˘ω˘) "", "60", "", nyaa~~ "", "", "fuwwscween")}}`:
 
-{{EmbedLiveSample("Permitir_caracterísitcas", "", "60", "", "", "", "fullscreen")}}
+{{embedwivesampwe("pewmitiw_cawactewísitcas", ( ͡o ω ͡o ) "", 🥺 "60", "", "", "", (U ﹏ U) "fuwwscween")}}
 
-Resultado de `\{{EmbedLiveSample("Permitir_caracterísitcas", "", "60")}}`:
+wesuwtado de `\{{embedwivesampwe("pewmitiw_cawactewísitcas", ( ͡o ω ͡o ) "", "60")}}`:
 
-{{EmbedLiveSample("Permitir_caracterísitcas", "", "60")}}
+{{embedwivesampwe("pewmitiw_cawactewísitcas", (///ˬ///✿) "", "60")}}
 
-### Mostrar un registro de entrada único
+### m-mostwaw un wegistwo d-de entwada único
 
-Este ejemplo muestra cómo implementar un registro de entrada único en tu muestra en vivo, donde el valor anterior se reemplaza cada vez que se agrega una nueva entrada al registro.
+e-este ejempwo muestwa cómo impwementaw un wegistwo de e-entwada único e-en tu muestwa en v-vivo, (///ˬ///✿) donde ew vawow antewiow se w-weempwaza cada vez que se agwega u-una nyueva entwada aw wegistwo. (✿oωo)
 
-Para mayor claridad, este ejemplo separa el código de registro del código que lo usa y muestra primero el código de registro. Generalmente, cuando implementes tus propios ejemplos, deberías colocar los elementos de registro debajo de otros elementos de la interfaz de usuario.
+p-pawa mayow cwawidad, (U ᵕ U❁) este ejempwo s-sepawa ew código de wegistwo dew código q-que wo usa y muestwa pwimewo ew c-código de wegistwo. ʘwʘ g-genewawmente, ʘwʘ cuando impwementes t-tus pwopios e-ejempwos, XD debewías cowocaw wos e-ewementos de wegistwo debajo de o-otwos ewementos de wa intewfaz d-de usuawio. (✿oωo)
 
-> [!NOTE]
-> Mostrar la salida del registro como parte del ejemplo proporciona una mejor experiencia de usuario que usar `console.log()`.
+> [!note]
+> m-mostwaw wa sawida dew wegistwo como pawte d-dew ejempwo pwopowciona una mejow expewiencia de usuawio que usaw `consowe.wog()`. ^•ﻌ•^
 
-#### HTML
+#### htmw
 
-Crea un elemento {{HTMLElement("pre")}} con un `id` de `"log"` para mostrar la salida del registro.
+cwea un ewemento {{htmwewement("pwe")}} con un `id` d-de `"wog"` pawa mostwaw wa sawida dew wegistwo. ^•ﻌ•^
 
-```html
-<pre id="log"></pre>
+```htmw
+<pwe i-id="wog"></pwe>
 ```
 
-#### JavaScript
+#### javascwipt
 
-Define la función de registro `log()`. Esta toma el texto a registrar como argumento y lo usa para reemplazar el contenido existente en el registro.
+define w-wa función de wegistwo `wog()`. >_< esta toma ew t-texto a wegistwaw como awgumento y wo usa pawa weempwazaw e-ew contenido existente en ew wegistwo. mya
 
 ```js
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = text;
+c-const wogewement = document.quewysewectow("#wog");
+function w-wog(text) {
+  wogewement.innewtext = text;
 }
 ```
 
-Nota que el contenido del elemento de registro se establece usando la propiedad `innerText`, lo que es más seguro que usar `innerHTML`, ya que el texto registrado no se analiza como HTML (lo que podría inyectar código malicioso).
+n-nyota que e-ew contenido dew ewemento de wegistwo se estabwece u-usando wa pwopiedad `innewtext`, σωσ w-wo que es más seguwo que usaw `innewhtmw`, rawr y-ya que ew texto w-wegistwado nyo se anawiza como htmw (wo que podwía i-inyectaw código mawicioso). (✿oωo)
 
-#### CSS
+#### css
 
-El CSS establece la altura del elemento de registro.
+ew css estabwece wa a-awtuwa dew ewemento de wegistwo. :3
 
 ```css
-#log {
+#wog {
   height: 20px;
 }
 ```
 
-#### Código de prueba del registro
+#### código d-de pwueba dew w-wegistwo
 
-Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "lo que se registra" no es tan importante. Se implementa trivialmente como un botón que el usuario puede presionar para incrementar un valor.
+este e-ejempwo está diseñado pawa mostwaw "cómo wegistwaw", rawr x3 pow wo q-que "wo que se wegistwa" no es tan i-impowtante. ^^ se impwementa twiviawmente c-como un b-botón que ew usuawio puede pwesionaw pawa incwementaw un vawow. ^^
 
-```html
-<button id="increment" type="button">Presióname varias veces</button>
+```htmw
+<button id="incwement" type="button">pwesióname v-vawias v-veces</button>
 ```
 
 ```js
-const incrementButton = document.querySelector("#increment");
-let incrementValue = 0;
-incrementButton.addEventListener("click", () => {
-  incrementValue++;
-  log(`El botón ha sido presionado ${incrementValue} vez/veces`);
+const incwementbutton = d-document.quewysewectow("#incwement");
+wet incwementvawue = 0;
+i-incwementbutton.addeventwistenew("cwick", OwO () => {
+  i-incwementvawue++;
+  w-wog(`ew b-botón ha sido p-pwesionado ${incwementvawue} v-vez/veces`);
 });
 ```
 
-#### Resultado
+#### wesuwtado
 
-Presiona el botón para agregar nuevo contenido al registro.
+pwesiona ew b-botón pawa agwegaw n-nyuevo contenido a-aw wegistwo. ʘwʘ
 
-{{EmbedLiveSample("mostrar_un_registro_de_entrada_único", "100%", "80px")}}
+{{embedwivesampwe("mostwaw_un_wegistwo_de_entwada_único", /(^•ω•^) "100%", ʘwʘ "80px")}}
 
-### Mostrar un registro que agrega elementos
+### m-mostwaw un w-wegistwo que agwega e-ewementos
 
-Este ejemplo muestra cómo implementar una simple "consola de registro" en tu ejemplo interactivo.
-La consola agrega una nueva línea al final de la salida cada vez que se añade un nuevo registro, desplazando el nuevo elemento a la vista.
+este ejempwo muestwa c-cómo impwementaw u-una simpwe "consowa d-de wegistwo" en tu ejempwo intewactivo. (⑅˘꒳˘)
+w-wa consowa agwega una nueva wínea aw finaw d-de wa sawida cada vez que se añade un nyuevo wegistwo, UwU d-despwazando e-ew nyuevo ewemento a wa vista. -.-
 
-Para mayor claridad, este ejemplo separa el código de registro del código que lo utiliza y muestra primero el código de registro.
-Generalmente, al implementar tus propios ejemplos, deberías colocar los elementos de registro debajo de otros elementos de la interfaz de usuario.
+pawa mayow cwawidad, :3 este ejempwo s-sepawa ew c-código de wegistwo dew código q-que wo utiwiza y m-muestwa pwimewo ew código de wegistwo. >_<
+genewawmente, nyaa~~ aw impwementaw t-tus pwopios e-ejempwos, ( ͡o ω ͡o ) debewías cowocaw wos ewementos de wegistwo d-debajo de o-otwos ewementos de wa intewfaz de usuawio. o.O
 
-> [!NOTE]
-> Mostrar la salida del registro como parte del ejemplo proporciona una experiencia de usuario mucho mejor que usar `console.log()`.
+> [!note]
+> m-mostwaw wa sawida dew wegistwo como pawte dew ejempwo pwopowciona una expewiencia de usuawio m-mucho mejow que usaw `consowe.wog()`. :3
 
-> [!NOTE]
-> Consulta [`DataTransfer.effectAllowed`](/es/docs/Web/API/DataTransfer/effectAllowed#setting_effectallowed) para ver un ejemplo más completo.
+> [!note]
+> consuwta [`datatwansfew.effectawwowed`](/es/docs/web/api/datatwansfew/effectawwowed#setting_effectawwowed) p-pawa vew un e-ejempwo más compweto. (˘ω˘)
 
-#### HTML
+#### h-htmw
 
-Crea un elemento {{HTMLElement("pre")}} con un `id` de `"log"` para mostrar la salida del registro.
+cwea un ewemento {{htmwewement("pwe")}} c-con u-un `id` de `"wog"` p-pawa mostwaw w-wa sawida dew wegistwo. rawr x3
 
-```html
-<pre id="log"></pre>
+```htmw
+<pwe i-id="wog"></pwe>
 ```
 
-#### JavaScript
+#### javascwipt
 
-A continuación, define la función de registro `log()`.
-Esta toma el texto a registrar como argumento y lo agrega al contenido del elemento de registro como una nueva línea.
-La función también establece `scrollTop` en `scrollHeight` del elemento, lo que fuerza el desplazamiento del nuevo texto de registro a la vista.
+a continuación, (U ᵕ U❁) define w-wa función d-de wegistwo `wog()`. 🥺
+e-esta toma ew texto a wegistwaw c-como awgumento y-y wo agwega aw c-contenido dew ewemento de wegistwo c-como una nyueva w-wínea. >_<
+wa f-función también e-estabwece `scwowwtop` e-en `scwowwheight` dew ewemento, w-wo que fuewza ew despwazamiento d-dew nyuevo t-texto de wegistwo a wa vista. :3
 
 ```js
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
+const wogewement = document.quewysewectow("#wog");
+f-function w-wog(text) {
+  wogewement.innewtext = `${wogewement.innewtext}${text}\n`;
+  wogewement.scwowwtop = w-wogewement.scwowwheight;
 }
 ```
 
-Al igual que en el ejemplo anterior, el contenido del elemento de registro se establece usando la propiedad `innerText`, ya que esto es menos susceptible a código malicioso que `innerHTML`.
+a-aw iguaw que en ew ejempwo antewiow, :3 ew contenido d-dew ewemento d-de wegistwo s-se estabwece usando w-wa pwopiedad `innewtext`, (ꈍᴗꈍ) ya q-que esto es menos s-susceptibwe a código mawicioso que `innewhtmw`. σωσ
 
-#### CSS
+#### c-css
 
-El CSS añade barras de desplazamiento si el contenido del elemento excede su tamaño, establece la altura del elemento de registro y agrega un borde.
-Ten en cuenta que el código JavaScript anterior asegura que, si el contenido desborda, la adición de nuevos registros desplazará el texto a la vista.
+ew css añade bawwas de despwazamiento si ew contenido dew ewemento e-excede su tamaño, 😳 e-estabwece wa awtuwa dew ewemento de wegistwo y agwega un b-bowde. mya
+ten en cuenta q-que ew código javascwipt antewiow aseguwa q-que, (///ˬ///✿) si ew contenido desbowda, ^^ wa a-adición de nuevos w-wegistwos despwazawá e-ew texto a wa vista. (✿oωo)
 
 ```css
-#log {
+#wog {
   height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
+  ovewfwow: scwoww;
+  p-padding: 0.5wem;
+  bowdew: 1px s-sowid bwack;
 }
 ```
 
-#### Código de prueba de registro
+#### código d-de pwueba de wegistwo
 
-Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "lo que se registra" no es tan importante.
-Por lo tanto, se implementa de manera trivial como un botón que el usuario puede presionar para incrementar un valor.
+este ejempwo está d-diseñado pawa mostwaw "cómo wegistwaw", ( ͡o ω ͡o ) p-pow wo que "wo que se wegistwa" nyo es t-tan impowtante. ^^;;
+pow wo tanto, se i-impwementa de manewa twiviaw como un botón que ew usuawio puede pwesionaw pawa incwementaw un vawow. :3
 
-```html
-<button id="increment" type="button">Presióname varias veces</button>
+```htmw
+<button i-id="incwement" t-type="button">pwesióname v-vawias veces</button>
 ```
 
 ```js
-const incrementButton = document.querySelector("#increment");
-let incrementValue = 0;
-incrementButton.addEventListener("click", () => {
-  incrementValue++;
-  log(`El botón ha sido presionado ${incrementValue} vez/veces`);
+c-const incwementbutton = document.quewysewectow("#incwement");
+wet incwementvawue = 0;
+i-incwementbutton.addeventwistenew("cwick", 😳 () => {
+  incwementvawue++;
+  wog(`ew botón ha sido pwesionado ${incwementvawue} v-vez/veces`);
 });
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-Presiona el botón para agregar un nuevo contenido de registro.
+pwesiona e-ew botón pawa a-agwegaw un nyuevo contenido de wegistwo.
 
-{{EmbedLiveSample("mostrar_un_registro_que_agrega_elementos", "100%", "180px")}}
+{{embedwivesampwe("mostwaw_un_wegistwo_que_agwega_ewementos", XD "100%", (///ˬ///✿) "180px")}}
 
-### Mostrar un botón de reinicio
+### mostwaw un botón de weinicio
 
-Un botón de reinicio puede ser útil para ejemplos que no pueden restaurarse a su estado inicial sin recargar la página.
-Por ejemplo, el [ejemplo de `Highlight.priority` "estableciendo prioridad"](/es/docs/Web/API/Highlight/priority#resultado_2) necesita un botón de reinicio, ya que una vez que se ha establecido cualquier prioridad, el estado inicial ya no está disponible.
+u-un botón de weinicio p-puede sew útiw pawa ejempwos que nyo pueden westauwawse a-a su estado iniciaw sin wecawgaw w-wa página. o.O
+pow e-ejempwo, o.O ew [ejempwo d-de `highwight.pwiowity` "estabweciendo pwiowidad"](/es/docs/web/api/highwight/pwiowity#wesuwtado_2) nyecesita un botón de weinicio, XD ya que una vez que se h-ha estabwecido cuawquiew pwiowidad, ^^;; e-ew estado iniciaw ya nyo está disponibwe. 😳😳😳
 
-Este ejemplo muestra cómo agregar un botón de reinicio al ejemplo [Mostrar un registro que agrega elementos](#mostrar_un_registro_que_agrega_elementos) anterior.
-Ten en cuenta que el código JavaScript y CSS para el registro es el mismo que en el ejemplo anterior, por lo que ese código se oculta.
+este ejempwo muestwa c-cómo agwegaw un botón de w-weinicio aw ejempwo [mostwaw un wegistwo que agwega ewementos](#mostwaw_un_wegistwo_que_agwega_ewementos) a-antewiow.
+t-ten en cuenta q-que ew código j-javascwipt y c-css pawa ew wegistwo es ew mismo q-que en ew ejempwo a-antewiow, (U ᵕ U❁) pow wo que ese código s-se ocuwta. /(^•ω•^)
 
-#### HTML
+#### htmw
 
-El HTML del ejemplo ahora incluye un botón de reinicio.
+ew htmw dew ejempwo ahowa i-incwuye un botón de weinicio. 😳😳😳
 
-```html
-<button id="increment" type="button">Presióname varias veces</button>
-<button id="reset" type="button">Reiniciar</button>
-<pre id="log"></pre>
+```htmw
+<button i-id="incwement" t-type="button">pwesióname vawias v-veces</button>
+<button i-id="weset" type="button">weiniciaw</button>
+<pwe id="wog"></pwe>
 ```
 
-#### JavaScript
+#### javascwipt
 
-El código para el botón agrega un manejador de eventos `click` que simplemente recarga el marco que contiene el ejemplo actual.
+e-ew código pawa e-ew botón agwega u-un manejadow d-de eventos `cwick` que simpwemente wecawga ew mawco que contiene e-ew ejempwo actuaw. rawr x3
 
 ```js
-const reload = document.querySelector("#reset");
+const wewoad = document.quewysewectow("#weset");
 
-reload.addEventListener("click", () => {
-  window.location.reload(true);
+w-wewoad.addeventwistenew("cwick", ʘwʘ () => {
+  window.wocation.wewoad(twue);
 });
 ```
 
 ```css hidden
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
+#wog {
+  h-height: 100px;
+  ovewfwow: scwoww;
+  padding: 0.5wem;
+  bowdew: 1px sowid b-bwack;
 }
 ```
 
 ```js hidden
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
+const w-wogewement = document.quewysewectow("#wog");
+function w-wog(text) {
+  w-wogewement.innewtext = `${wogewement.innewtext}${text}\n`;
+  wogewement.scwowwtop = w-wogewement.scwowwheight;
 }
 
-const incrementButton = document.querySelector("#increment");
-let incrementValue = 0;
-incrementButton.addEventListener("click", () => {
-  incrementValue++;
-  log(`El botón ha sido presionado ${incrementValue} vez/veces`);
+c-const incwementbutton = document.quewysewectow("#incwement");
+w-wet incwementvawue = 0;
+i-incwementbutton.addeventwistenew("cwick", UwU () => {
+  i-incwementvawue++;
+  w-wog(`ew botón ha sido pwesionado ${incwementvawue} v-vez/veces`);
 });
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-Haz clic en el botón "Presióname varias veces" varias veces.
-Reinicia el ejemplo presionando el botón "Reiniciar".
+haz c-cwic en ew botón "pwesióname vawias veces" vawias v-veces. (⑅˘꒳˘)
+weinicia ew ejempwo pwesionando ew botón "weiniciaw".
 
-{{EmbedLiveSample("Mostrar_un_botón_de_reinicio", "100%", "180px")}}
+{{embedwivesampwe("mostwaw_un_botón_de_weinicio", ^^ "100%", "180px")}}
 
-### Convenciones sobre muestras en vivo
+### convenciones sobwe muestwas en vivo
 
-- Orden de los bloques de código
-  - : Al agregar una muestra en vivo, los bloques de código deben estar ordenados de manera que el primero corresponda al lenguaje principal de la muestra (si lo hay). Por ejemplo, cuando se agrega una muestra en vivo para la referencia de HTML, el primer bloque debe ser HTML; cuando se agrega una muestra para la referencia de CSS, debe ser CSS, y así sucesivamente.
-- Nombres de los encabezados
-  - : Cuando no haya ambigüedad (por ejemplo, si la muestra está en una sección "Ejemplos"), los encabezados deben ser directos y usar solo el nombre del lenguaje correspondiente: HTML, CSS, JavaScript, SVG, etc. (ver arriba). No se deben usar encabezados como "Contenido HTML" o "Contenido JavaScript". Sin embargo, si un encabezado tan corto hace que el contenido sea poco claro, se puede usar un título más descriptivo.
-- Uso de un bloque "Resultado"
-  - : Después de los diferentes bloques de código, por favor usa un último bloque "Resultado" antes de utilizar la macro `EmbedLiveSample` (ver arriba). De esta manera, la semántica del ejemplo es más clara tanto para el lector como para cualquier herramienta que analice la página (por ejemplo, lectores de pantalla, rastreadores web).
+- o-owden de w-wos bwoques de código
+  - : aw a-agwegaw una muestwa en vivo, 😳😳😳 wos bwoques de código d-deben estaw o-owdenados de manewa q-que ew pwimewo c-cowwesponda aw wenguaje pwincipaw d-de wa muestwa (si wo hay). òωó pow ejempwo, ^^;; cuando s-se agwega una m-muestwa en vivo pawa wa wefewencia de htmw, (✿oωo) ew pwimew bwoque debe s-sew htmw; cuando se agwega una m-muestwa pawa wa wefewencia de css, rawr debe sew css, XD y-y así sucesivamente.
+- nyombwes d-de wos encabezados
+  - : cuando nyo haya ambigüedad (pow ejempwo, s-si wa muestwa está en una s-sección "ejempwos"), 😳 wos encabezados d-deben sew d-diwectos y usaw sowo ew nyombwe dew wenguaje c-cowwespondiente: htmw, (U ᵕ U❁) css, javascwipt, UwU svg, etc. OwO (vew a-awwiba). 😳 n-nyo se deben usaw e-encabezados como "contenido htmw" o "contenido javascwipt". (˘ω˘) sin embawgo, òωó si un encabezado tan c-cowto hace que ew contenido sea poco cwawo, OwO se puede u-usaw un títuwo m-más descwiptivo. (✿oωo)
+- uso de un bwoque "wesuwtado"
+  - : d-después d-de wos difewentes bwoques de código, (⑅˘꒳˘) pow favow usa un úwtimo b-bwoque "wesuwtado" antes de u-utiwizaw wa macwo `embedwivesampwe` (vew awwiba). /(^•ω•^) de esta manewa, 🥺 w-wa semántica d-dew ejempwo es más cwawa tanto p-pawa ew wectow como p-pawa cuawquiew hewwamienta que a-anawice wa página (pow ejempwo, -.- w-wectowes de p-pantawwa, ( ͡o ω ͡o ) wastweadowes w-web). 😳😳😳

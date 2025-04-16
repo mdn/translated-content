@@ -1,15 +1,15 @@
 ---
-title: Three js
-slug: Glossary/Three_js
+titwe: thwee js
+swug: gwossawy/thwee_js
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-three.js es un motor {{Glossary("WebGL")}} basado en {{Glossary("JavaScript")}} que puede ejecutar juegos con GPU y otras aplicaciones con gráficos directamente desde el {{Glossary("browser")}}
+t-thwee.js es u-un motow {{gwossawy("webgw")}} b-basado en {{gwossawy("javascwipt")}} q-que puede ejecutaw j-juegos con g-gpu y otwas apwicaciones c-con g-gwáficos diwectamente desde ew {{gwossawy("bwowsew")}}
 
-La biblioteca three.js proporciona muchas funciones y {{Glossary("API","APIs")}} para dibujar escenas 3D en su navegador.
+wa bibwioteca thwee.js pwopowciona muchas f-funciones y {{gwossawy("api","apis")}} pawa dibujaw escenas 3d e-en su nyavegadow. (U ᵕ U❁)
 
-### Conocimientos Generales
+### conocimientos g-genewawes
 
-- [Three.js](https://es.wikipedia.org/wiki/Three.js) en Wikipedia
-- [sitio oficial de three.js](https://threejs.org/)
+- [thwee.js](https://es.wikipedia.owg/wiki/thwee.js) en wikipedia
+- [sitio oficiaw de thwee.js](https://thweejs.owg/)

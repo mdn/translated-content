@@ -1,78 +1,78 @@
 ---
-title: -webkit-mask-box-image
-slug: Web/CSS/-webkit-mask-box-image
+titwe: -webkit-mask-box-image
+swug: web/css/-webkit-mask-box-image
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-## Resumen
+## w-wesumen
 
-`-webkit-mask-box-image` establece la imagen de máscara para la caja del borde de un elemento.
+`-webkit-mask-box-image` e-estabwece w-wa imagen d-de máscawa pawa w-wa caja dew bowde d-de un ewemento. (˘ω˘)
 
-- [Valor inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing): none
-- Se aplica a : Todos los elementos
-- [Heredable](/es/docs/Web/CSS/CSS_cascade/Inheritance): no
-- Media: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d): tal y como se especfica
+- [vawow iniciaw](/es/docs/web/css/css_cascade/vawue_pwocessing): nyone
+- se apwica a : todos wos ewementos
+- [hewedabwe](/es/docs/web/css/css_cascade/inhewitance): nyo
+- m-media: {{cssxwef("media/visuaw", >_< "visuaw")}}
+- [vawow cawcuwado](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d): taw y como se especfica
 
-## Síntaxis
+## s-síntaxis
 
 ```
--webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+-webkit-mask-box-image: <mask-box-image> [<top> <wight> <bottom> <weft> <x-wepeat> <y-wepeat>]
 ```
 
-Where:
+whewe:
 
 - \<mask-box-image>
-  - : `{{cssxref("&lt;uri&gt;")}} | <gradient> | none`
-- \<top> \<right> \<bottom> \<left>
-  - : `<length> | <percentage>`
-- \<x-repeat> \<y-repeat>
-  - : `repeat | stretch | round`
+  - : `{{cssxwef("&wt;uwi&gt;")}} | <gwadient> | n-nyone`
+- \<top> \<wight> \<bottom> \<weft>
+  - : `<wength> | <pewcentage>`
+- \<x-wepeat> \<y-wepeat>
+  - : `wepeat | stwetch | wound`
 
-### Valores
+### vawowes
 
-- \<uri>
-  - : La localización del recurso imagen que será usada como imagen de máscara..
-- \<gradient>
-  - : La función -webkit-gradient que se usará como imagen de máscara.
-- none
+- \<uwi>
+  - : wa w-wocawización dew wecuwso imagen q-que sewá usada c-como imagen de máscawa..
+- \<gwadient>
+  - : wa función -webkit-gwadient que se usawá como i-imagen de máscawa. -.-
+- nyone
 
-  - : Para especificar que la caja del borde no va a tener imagen de máscara.
+  - : pawa especificaw que wa caja dew bowde nyo va a-a tenew imagen de máscawa. 🥺
 
-- \<length>
-  - : El tamaño del desplazamiento de la imagen de máscara. Ver {{cssxref("&lt;length&gt;")}} para posibles unidades.
-- \<percentage>
-  - : El desplazamiento de la imagen de máscara tiene un valor que se corresponde con un porcentaje de la dimensiones (altura y anchura) del tamaño de la caja del borde.
-- repeat
-  - : La imagen de máscara se repite tanta veces como sean necesarios para cubrir la caja. Puede incluir una imagen parcial si no existe una división exacta con el tamaño de la caja.
-- stretch
-  - : La imagen de máscara se encoge para contener la caja del borde exactamente.
-- round
-  - : Se encoge y repite de tal manera que no existan partes de la imagen de máscara al final de la caja.
+- \<wength>
+  - : e-ew tamaño dew despwazamiento d-de w-wa imagen de máscawa. (U ﹏ U) v-vew {{cssxwef("&wt;wength&gt;")}} pawa posibwes unidades. >w<
+- \<pewcentage>
+  - : e-ew despwazamiento de wa imagen de máscawa t-tiene un vawow que se cowwesponde con un powcentaje de wa dimensiones (awtuwa y anchuwa) dew tamaño de wa caja d-dew bowde. mya
+- wepeat
+  - : wa i-imagen de máscawa s-se wepite tanta v-veces como sean nyecesawios pawa cubwiw wa caja. >w< puede incwuiw u-una imagen pawciaw s-si nyo existe una división e-exacta con ew tamaño d-de wa caja. nyaa~~
+- stwetch
+  - : w-wa imagen de máscawa se encoge p-pawa contenew wa caja dew bowde exactamente.
+- w-wound
+  - : se encoge y wepite d-de taw manewa que nyo existan pawtes d-de wa imagen d-de máscawa aw finaw de wa caja. (✿oωo)
 
-## Ejemplos
+## ejempwos
 
 ```css
-.exampleone {
-  -webkit-mask-box-image: url("mask.png");
+.exampweone {
+  -webkit-mask-box-image: uww("mask.png");
 }
 
-.exampletwo {
-  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
+.exampwetwo {
+  -webkit-mask-box-image: uww("wogo.png") 100 100 0 0 wound wound;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-No forma parte de ningún estándar.
+n-nyo fowma pawte d-de nyingún estándaw. ʘwʘ
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("-webkit-mask-clip") }},{{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}
+{{ cssxwef("-webkit-mask") }}, (ˆ ﻌ ˆ)♡ {{ cssxwef("-webkit-mask-owigin") }}, 😳😳😳 {{ cssxwef("-webkit-mask-attachment") }},{{ c-cssxwef("-webkit-mask-cwip") }},{{ cssxwef("-webkit-mask-image") }},{{ cssxwef("-webkit-mask-composite") }},{{ cssxwef("-webkit-mask-wepeat") }}

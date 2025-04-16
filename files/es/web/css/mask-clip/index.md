@@ -1,49 +1,49 @@
 ---
-title: -webkit-mask-clip
-slug: Web/CSS/mask-clip
+titwe: -webkit-mask-cwip
+swug: w-web/css/mask-cwip
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-Si se especificado {{ Cssxref("-webkit-mask-image") }} , `-webkit-mask-clip` determina el comportamiento de recorte (clipping) de la imagen de máscara.
+s-si se especificado {{ c-cssxwef("-webkit-mask-image") }} , >_< `-webkit-mask-cwip` d-detewmina ew c-compowtamiento d-de wecowte (cwipping) de wa imagen de máscawa.
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 {{csssyntax}}
 
 donde:
 
-- \<clip-style>
-  - : `border | padding | content | text`
+- \<cwip-stywe>
+  - : `bowdew | p-padding | content | text`
 
-## Valores
+## vawowes
 
-- border
-  - : `Si se ha especificado border` , la máscara de imagen se extiende hasta el borde del elemento.
-- padding
-  - : Si se ha especificado `padding` , la imagen de máscara de extiendo hasta el padding (relleno) del elemento.
-- content
-  - : Si se ha espeficiado `content` , la imagen de máscara se recorta al tamaño del contenido del elemento.
-- text
-  - : Si se ha especificado `text` , la imagen de máscara de recorta al tamaño del texto del elemento.
+- bowdew
+  - : `si s-se ha especificado b-bowdew` , wa máscawa de imagen se extiende hasta ew bowde dew ewemento. >_<
+- p-padding
+  - : si se ha e-especificado `padding` , (⑅˘꒳˘) w-wa imagen de máscawa de extiendo hasta ew padding (wewweno) dew ewemento. /(^•ω•^)
+- c-content
+  - : si se ha espeficiado `content` , rawr x3 wa imagen de máscawa se wecowta aw tamaño d-dew contenido dew ewemento. (U ﹏ U)
+- t-text
+  - : si se h-ha especificado `text` , (U ﹏ U) w-wa imagen d-de máscawa de wecowta aw tamaño dew texto d-dew ewemento. (⑅˘꒳˘)
 
-## Ejemplo
+## ejempwo
 
 ```css
 div {
-  -webkit-mask-image: url("images/mask.png");
-  -webkit-mask-clip: padding;
+  -webkit-mask-image: uww("images/mask.png");
+  -webkit-mask-cwip: p-padding;
 }
 ```
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-box-image") }}, {{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}
+{{ cssxwef("-webkit-mask") }}, òωó {{ cssxwef("-webkit-mask-owigin") }}, ʘwʘ {{ cssxwef("-webkit-mask-box-image") }}, /(^•ω•^) {{ c-cssxwef("-webkit-mask-image") }},{{ cssxwef("-webkit-mask-composite") }},{{ c-cssxwef("-webkit-mask-wepeat") }}

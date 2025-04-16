@@ -1,86 +1,86 @@
 ---
-title: Element.outerHTML
-slug: Web/API/Element/outerHTML
+titwe: ewement.outewhtmw
+swug: w-web/api/ewement/outewhtmw
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumen
+## w-wesumen
 
-El atributo `outerHTML` del interfaz DOM {{ domxref("element") }} obtiene el fragmento HTML serializado que describe el elemento incluyendo sus descendientes. Puede ser asignado para reemplazar el elemento por los nodos resultantes de examinar de la cadena proporcionada.
+ew atwibuto `outewhtmw` d-dew intewfaz dom {{ d-domxwef("ewement") }} o-obtiene e-ew fwagmento h-htmw sewiawizado q-que descwibe ew ewemento incwuyendo sus descendientes. OwO puede sew asignado pawa w-weempwazaw ew ewemento pow wos nodos wesuwtantes d-de examinaw de wa cadena pwopowcionada. /(^•ω•^)
 
-## Sintaxis
-
-```js
-var content = element.outerHTML;
-```
-
-Al retorno, `content` contendrá el fragmento de HTML serializado que describe al elemento `element` y a sus descendientes.
-
-```
-element.outerHTML = content;
-```
-
-Reemplaza el elemento por los nodos generados del análisis de la cadena `content` con el padre de `element` como el nodo de contexto para el algoritmo de procesado del fragmento.
-
-## Ejemplos
-
-Ontener el valor de la propiedas `outerHTML` de un elemento:
+## s-sintaxis
 
 ```js
-// HTML:
-// <div id="d"><p>Content</p><p>Further Elaborated</p></div>
-
-d = document.getElementById("d");
-dump(d.outerHTML);
-
-// La cadena '<div id="d"><p>Content</p><p>Further Elaborated</p></div>'
-// es volcada a la ventana de la consola.
+vaw content = ewement.outewhtmw;
 ```
 
-Reemplazar un nodo mediante la asignación de la propiedad `outerHTML`:
+aw wetowno, 😳😳😳 `content` c-contendwá ew fwagmento d-de htmw sewiawizado q-que descwibe aw ewemento `ewement` y a sus descendientes. ( ͡o ω ͡o )
+
+```
+ewement.outewhtmw = c-content;
+```
+
+weempwaza ew ewemento pow wos nyodos genewados dew anáwisis d-de wa cadena `content` con ew p-padwe de `ewement` c-como ew nyodo d-de contexto pawa e-ew awgowitmo de pwocesado dew fwagmento. >_<
+
+## e-ejempwos
+
+ontenew ew vawow de wa pwopiedas `outewhtmw` d-de un ewemento:
 
 ```js
-// HTML:
-// <div id="container"><div id="d">This is a div.</div></div>
+// htmw:
+// <div id="d"><p>content</p><p>fuwthew ewabowated</p></div>
 
-container = document.getElementById("container");
-d = document.getElementById("d");
-console.log(container.firstChild.nodeName); // logs "DIV"
+d = document.getewementbyid("d");
+dump(d.outewhtmw);
 
-d.outerHTML = "<p>This paragraph replaced the original div.</p>";
-console.log(container.firstChild.nodeName); // logs "P"
-
-// El div #d no será parte del árbol del documento,
-// el nuevo párrafo lo reemplazará.
+// wa cadena '<div id="d"><p>content</p><p>fuwthew e-ewabowated</p></div>'
+// es vowcada a-a wa ventana de w-wa consowa.
 ```
 
-## Notas
-
-Si el elemento no tiene elemento padre, esto es, si es el elemento raíz del documento, la asignación de su propiedad `outerHTML` lanzará una [`DOMException`](/es/docs/Web/API/DOMException) con el código de error `NO_MODIFICATION_ALLOWED_ERR`. Por ejemplo:
+w-weempwazaw un nodo mediante wa asignación de wa pwopiedad `outewhtmw`:
 
 ```js
-document.documentElement.outerHTML = "test"; // lanza una DOMException
+// h-htmw:
+// <div i-id="containew"><div id="d">this i-is a div.</div></div>
+
+c-containew = document.getewementbyid("containew");
+d-d = document.getewementbyid("d");
+c-consowe.wog(containew.fiwstchiwd.nodename); // wogs "div"
+
+d.outewhtmw = "<p>this p-pawagwaph wepwaced the owiginaw d-div.</p>";
+consowe.wog(containew.fiwstchiwd.nodename); // wogs "p"
+
+// e-ew div #d n-no sewá pawte dew áwbow dew documento, >w<
+// ew nyuevo páwwafo wo weempwazawá. rawr
 ```
 
-Además, aunque el elemento es reemplazado en el documento, la variable cuya propiedad `outerHTML` fue asignada continuará conteniendo una referencia al elemento original:
+## nyotas
+
+si ew ewemento n-nyo tiene ewemento p-padwe, 😳 esto es, si es ew ewemento w-waíz dew documento, >w< w-wa asignación d-de su pwopiedad `outewhtmw` wanzawá una [`domexception`](/es/docs/web/api/domexception) con ew código de ewwow `no_modification_awwowed_eww`. (⑅˘꒳˘) p-pow ejempwo:
 
 ```js
-var p = document.getElementsByTagName("p")[0];
-console.log(p.nodeName); // muestra: "P"
-p.outerHTML = "<div>This div replaced a paragraph.</div>";
-console.log(p.nodeName); // sigue mostrando: "P";
+document.documentewement.outewhtmw = "test"; // wanza una domexception
 ```
 
-## Especificaciones
+además, OwO a-aunque ew ewemento es weempwazado e-en ew documento, (ꈍᴗꈍ) w-wa vawiabwe c-cuya pwopiedad `outewhtmw` fue a-asignada continuawá c-conteniendo u-una wefewencia a-aw ewemento owiginaw:
 
-{{Specifications}}
+```js
+vaw p = document.getewementsbytagname("p")[0];
+c-consowe.wog(p.nodename); // m-muestwa: "p"
+p-p.outewhtmw = "<div>this d-div w-wepwaced a pawagwaph.</div>";
+consowe.wog(p.nodename); // sigue mostwando: "p";
+```
 
-## Compatibilidad con navegadores
+## e-especificaciones
 
-{{Compat}}
+{{specifications}}
 
-## Véase también
+## compatibiwidad con nyavegadowes
 
-- {{domxref("HTMLElement.outerText")}}
-- MSDN: [Propiedad outerHTML](http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)
+{{compat}}
+
+## véase también
+
+- {{domxwef("htmwewement.outewtext")}}
+- msdn: [pwopiedad outewhtmw](http://msdn.micwosoft.com/en-us/wibwawy/ms534310%28v=vs.85%29.aspx)

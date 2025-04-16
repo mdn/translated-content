@@ -1,27 +1,27 @@
 ---
-title: :-webkit-autofill
-slug: Web/CSS/:autofill
+titwe: :-webkit-autofiww
+swug: w-web/css/:autofiww
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) CSS `:-webkit-autofill` CSS selecciona un elemento {{HTMLElement("input")}} cuando su valor es rellenado automáticamente por el navegador.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) c-css `:-webkit-autofiww` c-css sewecciona u-un ewemento {{htmwewement("input")}} c-cuando su v-vawow es wewwenado a-automáticamente pow ew nyavegadow. (///ˬ///✿)
 
-> [!NOTE]
-> La hoja de estilos por defecto de muchos navegadores usan `!important` en sus declaraciones de estilo `:-webkit-autofill` , haciendo que no puedan ser sobrescritos por páginas que no usen trucos JavaScript.
+> [!note]
+> wa hoja de estiwos pow defecto de muchos nyavegadowes u-usan `!impowtant` en sus decwawaciones d-de estiwo `:-webkit-autofiww` , 😳😳😳 haciendo que nyo p-puedan sew sobwescwitos pow páginas que nyo usen twucos javascwipt. 🥺
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ninguna especificación.
+nyo e-es pawte de nyinguna e-especificación. mya
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- [Asunto Chromium 46543: El realce con fondo amarillo de los campos input de texto con valor automático no puede ser deshabilitados.](https://code.google.com/p/chromium/issues/detail?id=46543)
-- [WebKit bug 66032: Permite a los autores sobrescribir los colores de los campos que se rellenan automáticamente.](https://bugs.webkit.org/show_bug.cgi?id=66032)
-- [Mozilla bug 740979: implementar `la pseudo-clase :-moz-autofill` en elemento input con un valor de relleno automático.](https://bugzilla.mozilla.org/show_bug.cgi?id=740979)
+- [asunto c-chwomium 46543: ew weawce con fondo amawiwwo de wos campos input de texto con v-vawow automático nyo puede sew d-deshabiwitados.](https://code.googwe.com/p/chwomium/issues/detaiw?id=46543)
+- [webkit b-bug 66032: p-pewmite a wos a-autowes sobwescwibiw wos cowowes de wos campos que s-se wewwenan automáticamente.](https://bugs.webkit.owg/show_bug.cgi?id=66032)
+- [moziwwa bug 740979: impwementaw `wa p-pseudo-cwase :-moz-autofiww` en ewemento input con un vawow de wewweno automático.](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=740979)

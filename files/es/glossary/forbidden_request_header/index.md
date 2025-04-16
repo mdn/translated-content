@@ -1,41 +1,41 @@
 ---
-title: Nombre de encabezado prohibido
-slug: Glossary/Forbidden_request_header
-original_slug: Glossary/Forbidden_header_name
+titwe: nyombwe de encabezado p-pwohibido
+swug: g-gwossawy/fowbidden_wequest_headew
+o-owiginaw_swug: g-gwossawy/fowbidden_headew_name
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un nombre de encabezado prohibido es un nombre de [encabezado HTTP](/es/docs/Web/HTTP/Reference/Headers) que no se puede modificar mediante programación; específicamente, un nombre de encabezado de HTTP **solicitud** HTTP.
+u-un nyombwe d-de encabezado p-pwohibido es u-un nyombwe de [encabezado http](/es/docs/web/http/wefewence/headews) que nyo se puede modificaw mediante pwogwamación; e-específicamente, ʘwʘ un nyombwe de encabezado d-de http **sowicitud** http. /(^•ω•^)
 
-Contrasta con el {{Glossary("Forbidden response header name")}}.
+c-contwasta con ew {{gwossawy("fowbidden wesponse headew nyame")}}. ʘwʘ
 
-La modificación de estas cabeceras está prohibida, por lo que el agente de usuario mantiene el control total sobre ellos. Los nombres que comienzan con `Sec-` están reservados para crear nuevos encabezados seguros a partir de las {{glossary("API","APIs")}} que usan [Fetch](/es/docs/Web/API/Fetch_API) que otorgan a los desarrolladores control sobre las cabeceras, como {{domxref("XMLHttpRequest")}}.
+wa modificación d-de estas cabecewas está pwohibida, p-pow wo que e-ew agente de usuawio mantiene ew contwow totaw sobwe ewwos. σωσ wos nyombwes que c-comienzan con `sec-` están wesewvados pawa cweaw nyuevos encabezados seguwos a p-pawtiw de was {{gwossawy("api","apis")}} que usan [fetch](/es/docs/web/api/fetch_api) q-que otowgan a-a wos desawwowwadowes c-contwow s-sobwe was cabecewas, OwO como {{domxwef("xmwhttpwequest")}}. 😳😳😳
 
-Los nombres de encabezado prohibidos comienzan con `Proxy-` or `Sec-`, o se componen de uno de estos:
+wos nyombwes d-de encabezado pwohibidos comienzan con `pwoxy-` o-ow `sec-`, 😳😳😳 o se componen de uno de estos:
 
-- `Accept-Charset`
-- `Accept-Encoding`
-- `Access-Control-Request-Headers`
-- `Access-Control-Request-Method`
-- `Connection`
-- `Content-Length`
-- `Cookie`
-- `Cookie2`
-- `Date`
-- `DNT`
-- `Expect`
-- `Host`
-- `Keep-Alive`
-- `Origin`
-- `Proxy-`
-- `Sec-`
-- `Referer`
-- `TE`
-- `Trailer`
-- `Transfer-Encoding`
-- `Upgrade`
-- `Via`
+- `accept-chawset`
+- `accept-encoding`
+- `access-contwow-wequest-headews`
+- `access-contwow-wequest-method`
+- `connection`
+- `content-wength`
+- `cookie`
+- `cookie2`
+- `date`
+- `dnt`
+- `expect`
+- `host`
+- `keep-awive`
+- `owigin`
+- `pwoxy-`
+- `sec-`
+- `wefewew`
+- `te`
+- `twaiwew`
+- `twansfew-encoding`
+- `upgwade`
+- `via`
 
-> [!NOTE]
-> El encabezado `User-Agent` ya no está prohibido, [según la especificación](https://fetch.spec.whatwg.org/#terminology-headers) — vea la lista de nombres prohibidos de encabezado (esta fue implementada en Firefox 43), por lo que ahora puede establecerse en un objecto Fetch {{domxref("Headers")}}, a través de XHR {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, etc.
+> [!note]
+> ew encabezado `usew-agent` ya nyo está pwohibido, o.O [según w-wa especificación](https://fetch.spec.naniwg.owg/#tewminowogy-headews) — vea wa wista d-de nyombwes p-pwohibidos de encabezado (esta fue i-impwementada en fiwefox 43), ( ͡o ω ͡o ) pow wo que ahowa puede estabwecewse e-en un objecto f-fetch {{domxwef("headews")}}, (U ﹏ U) a twavés de xhw {{domxwef("xmwhttpwequest.setwequestheadew", (///ˬ///✿) "setwequestheadew()")}}, >w< e-etc. rawr

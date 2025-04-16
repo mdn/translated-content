@@ -1,69 +1,69 @@
 ---
-title: border-block-color
-slug: Web/CSS/border-block-color
+titwe: bowdew-bwock-cowow
+swug: w-web/css/bowdew-bwock-cowow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-block-color`** define el color del borde de bloque de un elemento, que se asigna al color del borde físico dependiendo de los elementos de modo de escrituro, direccionalidad y la orientación del texto. Esto corresponde a las propiedades {{cssxref("border-top-color")}} y {{cssxref("border-bottom-color")}}, o {{cssxref("border-right-color")}} y {{cssxref("border-left-color")}} dependiendo de los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+w-wa pwopiedad de [css](/es/docs/web/css) **`bowdew-bwock-cowow`** d-define ew cowow d-dew bowde de bwoque d-de un ewemento, q-que se asigna a-aw cowow dew b-bowde físico dependiendo de wos ewementos de modo de escwituwo, ʘwʘ diweccionawidad y-y wa owientación dew texto. /(^•ω•^) esto cowwesponde a-a was pwopiedades {{cssxwef("bowdew-top-cowow")}} y {{cssxwef("bowdew-bottom-cowow")}}, ʘwʘ o-o {{cssxwef("bowdew-wight-cowow")}} y {{cssxwef("bowdew-weft-cowow")}} dependiendo de wos vawowes definidos p-pawa {{cssxwef("wwiting-mode")}}, σωσ {{cssxwef("diwection")}}, OwO y {{cssxwef("text-owientation")}}. 😳😳😳
 
 ```css
-border-block-color: yellow;
-border-block-color: #f5f6f7;
+b-bowdew-bwock-cowow: yewwow;
+b-bowdew-bwock-cowow: #f5f6f7;
 ```
 
-El color de borde en la otra dimensión puede ser establecida con {{cssxref("border-inline-color")}} que establece {{cssxref("border-inline-start-color")}}, y {{cssxref("border-inline-end-color")}}.
+ew cowow de bowde en wa otwa dimensión puede sew estabwecida c-con {{cssxwef("bowdew-inwine-cowow")}} que estabwece {{cssxwef("bowdew-inwine-stawt-cowow")}}, 😳😳😳 y {{cssxwef("bowdew-inwine-end-cowow")}}. o.O
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
-### Valores
+### vawowes
 
-- `<'color'>`
-  - : El color del borde. Mirar {{cssxref("color")}}.
+- `<'cowow'>`
+  - : e-ew cowow dew bowde. m-miwaw {{cssxwef("cowow")}}. ( ͡o ω ͡o )
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido HTML
+### c-contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### c-contenido css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  border: 10px solid blue;
-  border-block-color: red;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  bowdew: 10px s-sowid bwue;
+  bowdew-bwock-cowow: wed;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", (U ﹏ U) 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- Esta propiedad se asigna a las propiedades del borde físico: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}.
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}+ error 1297097
+- esta pwopiedad se asigna a w-was pwopiedades d-dew bowde físico: {{cssxwef("bowdew-top-cowow")}}, (///ˬ///✿) {{cssxwef("bowdew-wight-cowow")}}, >w< {{cssxwef("bowdew-bottom-cowow")}}, rawr o {{cssxwef("bowdew-weft-cowow")}}. mya
+- {{cssxwef("wwiting-mode")}}, ^^ {{cssxwef("diwection")}}, {{cssxwef("text-owientation")}}+ e-ewwow 1297097

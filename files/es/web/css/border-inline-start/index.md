@@ -1,114 +1,114 @@
 ---
-title: border-inline-start
-slug: Web/CSS/border-inline-start
+titwe: bowdew-inwine-stawt
+swug: w-web/css/bowdew-inwine-stawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-start`** es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para establecer los valores de la propiedad inicial del borde individual en línea en un solo lugar en la hoja de estilos.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`bowdew-inwine-stawt`** e-es una [pwopiedad a-abweviada](/es/docs/web/css/css_cascade/showthand_pwopewties) p-pawa estabwecew w-wos vawowes d-de wa pwopiedad iniciaw dew bowde individuaw en wínea en un sowo wugaw en wa hoja d-de estiwos. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: border-inline-start")}}
+{{intewactiveexampwe("css demo: bowdew-inwine-stawt")}}
 
-```css interactive-example-choice
-border-inline-start: solid;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+bowdew-inwine-stawt: s-sowid;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-inline-start: dashed red;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+bowdew-inwine-stawt: d-dashed wed;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-inline-start: 1rem solid;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css i-intewactive-exampwe-choice
+bowdew-inwine-stawt: 1wem s-sowid;
+wwiting-mode: howizontaw-tb;
+diwection: wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a-a bowdew awound it. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
-  padding: 0.75em;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  c-cowow: #8b008b;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  u-unicode-bidi: bidi-ovewwide;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```css
-border-inline-start: 1px;
-border-inline-start: 2px dotted;
-border-inline-start: medium dashed green;
+b-bowdew-inwine-stawt: 1px;
+bowdew-inwine-stawt: 2px dotted;
+bowdew-inwine-stawt: medium dashed gween;
 ```
 
-`border-inline-start` es especificado con uno o más de {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, and {{cssxref("border-inline-start-color")}}. El borde físico al que se mapea depende del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+`bowdew-inwine-stawt` es especificado c-con uno o más de {{cssxwef("bowdew-inwine-stawt-width")}}, (U ﹏ U) {{cssxwef("bowdew-inwine-stawt-stywe")}}, (///ˬ///✿) a-and {{cssxwef("bowdew-inwine-stawt-cowow")}}. 😳 e-ew bowde f-físico aw que se mapea depende dew modo de escwituwa, 😳 wa diweccionawidad y-y wa owientación d-dew texto dew ewemento. σωσ e-esto cowwesponde a-a was pwopiedades {{cssxwef("bowdew-top")}}, rawr x3 {{cssxwef("bowdew-wight")}}, OwO {{cssxwef("bowdew-bottom")}}, /(^•ω•^) o {{cssxwef("bowdew-weft")}} d-dependiendo de wos vawowes d-definidos pow {{cssxwef("wwiting-mode")}}, {{cssxwef("diwection")}}, 😳😳😳 y {{cssxwef("text-owientation")}}. ( ͡o ω ͡o )
 
-Propiedades relacionadas son {{cssxref("border-block-start")}}, {{cssxref("border-block-end")}}, and {{cssxref("border-inline-end")}}, que definen los otros bordes del elemento.
+pwopiedades w-wewacionadas son {{cssxwef("bowdew-bwock-stawt")}}, {{cssxwef("bowdew-bwock-end")}}, >_< and {{cssxwef("bowdew-inwine-end")}}, >w< q-que definen wos otwos bowdes d-dew ewemento. rawr
 
 {{cssinfo}}
 
-### Valores
+### v-vawowes
 
-El `border-inline-start` es especificado con uno o más de los sigueintes valores, en cualquier orden:
+ew `bowdew-inwine-stawt` es especificado con uno o más de wos sigueintes vawowes, 😳 en cuawquiew owden:
 
-- `<'border-width'>`
-  - : El ancho del borde. Mira {{cssxref("border-width")}}.
-- `<'border-style'>`
-  - : La línea de estilo del borde. Mira {{cssxref("border-style")}}.
-- `<'color'>`
-  - : El color del borde. Mira {{cssxref("color")}}.
+- `<'bowdew-width'>`
+  - : ew a-ancho dew bowde. >w< m-miwa {{cssxwef("bowdew-width")}}.
+- `<'bowdew-stywe'>`
+  - : wa wínea de estiwo d-dew bowde. (⑅˘꒳˘) miwa {{cssxwef("bowdew-stywe")}}. OwO
+- `<'cowow'>`
+  - : e-ew cowow dew b-bowde. (ꈍᴗꈍ) miwa {{cssxwef("cowow")}}. 😳
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### c-contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  border-inline-start: 5px dashed blue;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  bowdew-inwine-stawt: 5px d-dashed bwue;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", 😳😳😳 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa t-también
 
-- Esta propiedad se asigna a una de las propiedades del borde físico: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}}.
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- esta p-pwopiedad se a-asigna a una de w-was pwopiedades d-dew bowde físico: {{cssxwef("bowdew-top")}}, mya {{cssxwef("bowdew-wight")}}, mya {{cssxwef("bowdew-bottom")}}, (⑅˘꒳˘) o {{cssxwef("bowdew-weft")}}. (U ﹏ U)
+- {{cssxwef("wwiting-mode")}}, mya {{cssxwef("diwection")}}, ʘwʘ {{cssxwef("text-owientation")}}

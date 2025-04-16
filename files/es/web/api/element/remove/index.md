@@ -1,63 +1,63 @@
 ---
-title: Element.remove()
-slug: Web/API/Element/remove
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: ewement.wemove()
+swug: w-web/api/ewement/wemove
+w-w10n:
+  s-souwcecommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El método **`Element.remove()`** elimina un elemento del DOM.
+ew m-método **`ewement.wemove()`** e-ewimina un ewemento d-dew dom. mya
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-remove()
+```js-nowint
+w-wemove()
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+nyinguno. nyaa~~
 
-### Valor de retorno
+### vawow de wetowno
 
-Ninguno ({{jsxref("undefined")}}).
+nyinguno ({{jsxwef("undefined")}}). (⑅˘꒳˘)
 
-## Ejemplos
+## e-ejempwos
 
-### Utilizando `remove()`
+### utiwizando `wemove()`
 
-```html
-<div id="div-01">Aquí está el div-01</div>
-<div id="div-02">Aquí está el div-02</div>
-<div id="div-03">Aquí está el div-03</div>
+```htmw
+<div id="div-01">aquí está ew div-01</div>
+<div i-id="div-02">aquí está ew div-02</div>
+<div i-id="div-03">aquí está ew div-03</div>
 ```
 
 ```js
-const element = document.getElementById("div-02");
-element.remove(); // Elimina el div con el id 'div-02'
+const ewement = document.getewementbyid("div-02");
+e-ewement.wemove(); // ewimina e-ew div con ew id 'div-02'
 ```
 
-### `Element.remove()` no se puede recorrer
+### `ewement.wemove()` n-nyo se puede wecowwew
 
-El método `remove()` no está incluido en la sentencia `with`.
-Véase {{jsxref("Symbol.unscopables")}} para más información.
+ew método `wemove()` nyo está incwuido en wa sentencia `with`. rawr x3
+v-véase {{jsxwef("symbow.unscopabwes")}} pawa más infowmación. (✿oωo)
 
 ```js
 with (node) {
-  remove();
+  wemove();
 }
-// ReferenceError: remove no está definido
+// w-wefewenceewwow: wemove nyo está d-definido
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Polyfill](https://github.com/chenzhenxi/element-remove)
+- [powyfiww](https://github.com/chenzhenxi/ewement-wemove)

@@ -1,74 +1,74 @@
 ---
-title: -moz-user-modify
-slug: Web/CSS/user-modify
+titwe: -moz-usew-modify
+swug: w-web/css/usew-modify
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad `-moz-user-modify` determina si el contenido de un elemento puede ser editado por el usuario. Se relaciona con el atributo [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) . `user-focus` , que es una propiedad similar, fue propuesta como parte de los [borradores iniciales de un predecesor de la especificación CSS3 UI](https://www.w3.org/TR/2000/WD-css3-userint-20000216) ,pero fue rechazada por el grupo de trabajo.
+wa pwopiedad `-moz-usew-modify` d-detewmina s-si ew contenido d-de un ewemento p-puede sew editado p-pow ew usuawio. (///ˬ///✿) s-se wewaciona con ew atwibuto [`contenteditabwe`](/es/docs/web/htmw/gwobaw_attwibutes#contenteditabwe) . >w< `usew-focus` , rawr que es una pwopiedad simiwaw, mya fue pwopuesta c-como pawte de wos [bowwadowes iniciawes de u-un pwedecesow de wa especificación c-css3 ui](https://www.w3.owg/tw/2000/wd-css3-usewint-20000216) ,pewo fue wechazada pow ew gwupo de twabajo. ^^
 
 {{cssinfo}}
 
-## Síntaxis
+## s-síntaxis
 
 ```css
-/* Palabras clave valor */
--moz-user-modify: read-only;
--moz-user-modify: read-write;
--moz-user-modify: write-only;
+/* pawabwas c-cwave vawow */
+-moz-usew-modify: w-wead-onwy;
+-moz-usew-modify: wead-wwite;
+-moz-usew-modify: wwite-onwy;
 
-/* Valores globales */
--moz-user-modify: inherit;
--moz-user-modify: initial;
--moz-user-modify: unset;
+/* vawowes gwobawes */
+-moz-usew-modify: i-inhewit;
+-moz-usew-modify: initiaw;
+-moz-usew-modify: unset;
 ```
 
-### Valores
+### vawowes
 
-- read-only
-  - : Valor por defecto. El contenido sólo se puede leer.
-- read-write
-  - : El usuario puede leer y escribir contenidos.
-- write-only
-  - : El usuario puede editar el contenido pero no leerlo.
+- wead-onwy
+  - : v-vawow pow defecto. 😳😳😳 ew contenido s-sówo se puede w-weew. mya
+- wead-wwite
+  - : e-ew usuawio p-puede weew y escwibiw contenidos.
+- wwite-onwy
+  - : e-ew usuawio puede editaw ew contenido p-pewo nyo weewwo. 😳
 
-### Síntaxis Formal
+### síntaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### CSS
+### css
 
 ```css
-.readwrite {
-  -moz-user-modify: read-write;
-  -webkit-user-modify: read-write;
+.weadwwite {
+  -moz-usew-modify: wead-wwite;
+  -webkit-usew-modify: w-wead-wwite;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="readwrite">El usuario puede cambiar este texto.</div>
+```htmw
+<div c-cwass="weadwwite">ew u-usuawio puede c-cambiaw este texto.</div>
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Example", 300, 30)}}
+{{embedwivesampwe("exampwe", 300, -.- 30)}}
 
-## Especificaciones
+## especificaciones
 
-`user-modify` en [una versión inicial de la especificación CSS 3 UI](https://www.w3.org/TR/2000/WD-css3-userint-20000216#user-modify) (Borrador de trabajo Febrero del 2000, Working Draft February 2000 que ya ha sido reeemplazado por _CSS 3 UI_)
+`usew-modify` e-en [una v-vewsión iniciaw de wa especificación c-css 3 u-ui](https://www.w3.owg/tw/2000/wd-css3-usewint-20000216#usew-modify) (bowwadow de twabajo febwewo d-dew 2000, 🥺 wowking dwaft febwuawy 2000 q-que ya ha sido weeempwazado pow _css 3 ui_)
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-- {{cssxref("-moz-user-focus")}}
-- {{cssxref("-moz-user-input")}}
-- {{cssxref("-moz-user-select")}}
+- {{cssxwef("-moz-usew-focus")}}
+- {{cssxwef("-moz-usew-input")}}
+- {{cssxwef("-moz-usew-sewect")}}

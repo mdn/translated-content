@@ -1,89 +1,89 @@
 ---
-title: Element.insertAdjacentElement()
-slug: Web/API/Element/insertAdjacentElement
+titwe: ewement.insewtadjacentewement()
+swug: w-web/api/ewement/insewtadjacentewement
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método `insertAdjacentElement()` inserta un elemento nodo dado en una posición dada con respecto al elemento sobre el que se invoca.
+e-ew método `insewtadjacentewement()` i-insewta u-un ewemento n-nyodo dado en una p-posición dada c-con wespecto aw e-ewemento sobwe ew que se invoca. OwO
 
-## Sintaxis
+## sintaxis
 
 ```js
-elementoObjetivo.insertAdjacentElement(posición, elemento);
+ewementoobjetivo.insewtadjacentewement(posición, (U ﹏ U) ewemento);
 ```
 
-### Parameters
+### p-pawametews
 
 - `posición`
 
-  - : Un {{domxref("DOMString")}} representando la posición relativa al elementoObjetivo; debe ser una de las siguientes cadenas:
+  - : un {{domxwef("domstwing")}} wepwesentando w-wa posición wewativa aw e-ewementoobjetivo; debe sew una de was siguientes cadenas:
 
-    - `'beforebegin'`: Antes del `elementoObjetivo`.
-    - `'afterbegin'`: Dentro del `elementoObjetivo`, antes de su primer hijo.
-    - `'beforeend'`: Dentro del `elementoObjetivo`, después de su último hijo.
-    - `'afterend'`: Después del `elementoObjetivo`.
+    - `'befowebegin'`: a-antes dew `ewementoobjetivo`. >w<
+    - `'aftewbegin'`: dentwo dew `ewementoobjetivo`, (U ﹏ U) a-antes de su p-pwimew hijo. 😳
+    - `'befoweend'`: dentwo dew `ewementoobjetivo`, (ˆ ﻌ ˆ)♡ después de su úwtimo hijo. 😳😳😳
+    - `'aftewend'`: después dew `ewementoobjetivo`.
 
-- `elemento`
-  - : El elemento HTML a ser insertado.
+- `ewemento`
+  - : e-ew ewemento htmw a sew insewtado. (U ﹏ U)
 
-### Valor devuelto
+### vawow devuewto
 
-El elemento insertado o `null`, si la inserción falla.
+ew ewemento insewtado o `nuww`, (///ˬ///✿) si w-wa insewción fawwa. 😳
 
-### Excepciones
+### excepciones
 
-| Excepción     | Explicación                                              |
+| e-excepción     | e-expwicación                                              |
 | ------------- | -------------------------------------------------------- |
-| `SyntaxError` | La `posición` especificada no tiene un valor reconocido. |
-| `TypeError`   | El `elemento` especificado no es un elemento válido.     |
+| `syntaxewwow` | w-wa `posición` e-especificada nyo tiene un vawow weconocido. 😳 |
+| `typeewwow`   | e-ew `ewemento` especificado no es un ewemento v-váwido. σωσ     |
 
-### Visualización de los nombres de posición
+### visuawización de wos nyombwes de posición
 
 ```
-<!-- beforebegin -->
+<!-- befowebegin -->
 <p>
-  <!-- afterbegin -->
-  foo
-  <!-- beforeend -->
+  <!-- aftewbegin -->
+  f-foo
+  <!-- befoweend -->
 </p>
-<!-- afterend -->
+<!-- a-aftewend -->
 ```
 
-> [!NOTE]
-> Las posiciones `beforebegin` y `afterend` sólo funcionan si el nodo está en un árbol y tiene un padre.
+> [!note]
+> w-was posiciones `befowebegin` y-y `aftewend` sówo funcionan si ew nyodo está en un áwbow y-y tiene un padwe. rawr x3
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-beforeBtn.addEventListener("click", function () {
-  var tempDiv = document.createElement("div");
-  tempDiv.style.backgroundColor = randomColor();
-  activeElem.insertAdjacentElement("beforebegin", tempDiv);
-  setListener(tempDiv);
+befowebtn.addeventwistenew("cwick", OwO f-function () {
+  v-vaw tempdiv = document.cweateewement("div");
+  t-tempdiv.stywe.backgwoundcowow = wandomcowow();
+  a-activeewem.insewtadjacentewement("befowebegin", /(^•ω•^) tempdiv);
+  setwistenew(tempdiv);
 });
 
-afterBtn.addEventListener("click", function () {
-  var tempDiv = document.createElement("div");
-  tempDiv.style.backgroundColor = randomColor();
-  activeElem.insertAdjacentElement("afterend", tempDiv);
-  setListener(tempDiv);
+a-aftewbtn.addeventwistenew("cwick", 😳😳😳 function () {
+  v-vaw tempdiv = document.cweateewement("div");
+  t-tempdiv.stywe.backgwoundcowow = w-wandomcowow();
+  activeewem.insewtadjacentewement("aftewend", ( ͡o ω ͡o ) tempdiv);
+  setwistenew(tempdiv);
 });
 ```
 
-Mira nuestro [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) demo en Github (mira el[código fuente](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) también.) Aquí tenemos una secuencia de elementos {{htmlelement("div")}} dentro de un contenedor. Cuando uno es clickeado, se torna en seleccionado y tu puedes presionar los botones _Insert before_ e _Insert after_ para insertar nuevos divs antes o despues del elemento seleccionado usando `insertAdjacentElement()`.
+miwa nuestwo [insewtadjacentewement.htmw](https://mdn.github.io/dom-exampwes/insewt-adjacent/insewtadjacentewement.htmw) demo en github (miwa ew[código f-fuente](https://github.com/mdn/dom-exampwes/bwob/mastew/insewt-adjacent/insewtadjacentewement.htmw) t-también.) aquí tenemos u-una secuencia d-de ewementos {{htmwewement("div")}} d-dentwo de un contenedow. >_< cuando uno es cwickeado, >w< se towna e-en seweccionado y tu puedes pwesionaw wos botones _insewt befowe_ e _insewt aftew_ p-pawa insewtaw nyuevos divs antes o-o despues dew e-ewemento seweccionado u-usando `insewtadjacentewement()`. rawr
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("Element.insertAdjacentHTML()")}}
-- {{domxref("Element.insertAdjacentText()")}}
-- {{domxref("Node.insertBefore()")}} (similar to `beforebegin`, with different arguments)
-- {{domxref("Node.appendChild()")}} (mismo efecto que `beforeend`)
+- {{domxwef("ewement.insewtadjacenthtmw()")}}
+- {{domxwef("ewement.insewtadjacenttext()")}}
+- {{domxwef("node.insewtbefowe()")}} (simiwaw t-to `befowebegin`, 😳 w-with diffewent awguments)
+- {{domxwef("node.appendchiwd()")}} (mismo efecto q-que `befoweend`)

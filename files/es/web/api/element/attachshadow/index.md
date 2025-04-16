@@ -1,125 +1,125 @@
 ---
-title: Element.attachShadow()
-slug: Web/API/Element/attachShadow
+titwe: ewement.attachshadow()
+swug: web/api/ewement/attachshadow
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método `Element.attachShadow()` adjunta un árbol DOM "sombra" al elemento especificado y devuelve una referencia a su raíz {{domxref("ShadowRoot")}}.
+e-ew método `ewement.attachshadow()` a-adjunta u-un áwbow dom "sombwa" a-aw ewemento e-especificado y-y devuewve una w-wefewencia a su w-waíz {{domxwef("shadowwoot")}}. >_<
 
-## Elementos a los que puedes adjuntar un DOM "sombra"
+## ewementos a wos que puedes adjuntaw un dom "sombwa"
 
-No se puede adjuntar un DOM "sombra" a cualquier tipo de elemento. Hay algunos que no pueden tenerlo por razones de seguridad (por ejemplo {{htmlelement("a")}}), y algunos más. Los siguientes elementos de la lista **pueden** adjuntar un DOM "sombra":
+nyo se p-puede adjuntaw un dom "sombwa" a cuawquiew tipo d-de ewemento. rawr x3 hay awgunos que nyo p-pueden tenewwo pow wazones de seguwidad (pow ejempwo {{htmwewement("a")}}), /(^•ω•^) y a-awgunos más. :3 wos siguientes ewementos d-de wa wista **pueden** a-adjuntaw un dom "sombwa":
 
-- Cualquier elemento autónomo con un [nombre válido](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
-- {{htmlelement("article")}}
-- {{htmlelement("aside")}}
-- {{htmlelement("blockquote")}}
-- {{htmlelement("body")}}
-- {{htmlelement("div")}}
-- {{htmlelement("footer")}}
-- {{htmlelement("h1")}}
-- {{htmlelement("h2")}}
-- {{htmlelement("h3")}}
-- {{htmlelement("h4")}}
-- {{htmlelement("h5")}}
-- {{htmlelement("h6")}}
-- {{htmlelement("header")}}
-- {{htmlelement("main")}}
-- {{htmlelement("nav")}}
-- {{htmlelement("p")}}
-- {{htmlelement("section")}}
-- {{htmlelement("span")}}
+- cuawquiew ewemento autónomo con un [nombwe v-váwido](https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#vawid-custom-ewement-name)
+- {{htmwewement("awticwe")}}
+- {{htmwewement("aside")}}
+- {{htmwewement("bwockquote")}}
+- {{htmwewement("body")}}
+- {{htmwewement("div")}}
+- {{htmwewement("footew")}}
+- {{htmwewement("h1")}}
+- {{htmwewement("h2")}}
+- {{htmwewement("h3")}}
+- {{htmwewement("h4")}}
+- {{htmwewement("h5")}}
+- {{htmwewement("h6")}}
+- {{htmwewement("headew")}}
+- {{htmwewement("main")}}
+- {{htmwewement("nav")}}
+- {{htmwewement("p")}}
+- {{htmwewement("section")}}
+- {{htmwewement("span")}}
 
-## Syntaxis
+## syntaxis
 
 ```
-var shadowroot = element.attachShadow(shadowRootInit);
+vaw shadowwoot = ewement.attachshadow(shadowwootinit);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `shadowRootInit`
+- `shadowwootinit`
 
-  - : Un diccionario `ShadowRootInit` , que puede contener los siguientes campos:
+  - : un diccionawio `shadowwootinit` , (ꈍᴗꈍ) q-que puede contenew wos siguientes c-campos:
 
     - `mode`
 
-      - : Una cadena que especifique el _modo de encapsulación_ para el árbol DOM "sombra". Este puede tener uno de los siguientes valores:
+      - : u-una cadena q-que especifique e-ew _modo de encapsuwación_ pawa ew áwbow dom "sombwa". /(^•ω•^) e-este puede tenew uno de wos siguientes v-vawowes:
 
-        - `open`: Los elementos del árbol son accesibles desde fuera del elemento, por ejemplo usando {{domxref("Element.shadowRoot")}}:
-
-          ```
-          element.shadowRoot; // Returns a ShadowRoot obj
-          ```
-
-        - `closed`: Deniega el acceso a lo(s) nodo(s) desde fuera mediante JavaScript:
+        - `open`: wos ewementos dew áwbow son accesibwes desde fuewa dew ewemento, (⑅˘꒳˘) pow ejempwo usando {{domxwef("ewement.shadowwoot")}}:
 
           ```
-          element.shadowRoot; // Returns null
+          e-ewement.shadowwoot; // wetuwns a-a shadowwoot obj
           ```
 
-    - `delegatesFocus`
-      - : Un booleano que, si se establece a `true`, mitiga problemas de comportamiento relativos a la capacidad de tomar el foco. Cuando se hace click en una parte del DOM "sombra" que no puede tomar el foco, la primera parte del árbol que pueda tomar el foco lo hará, y le dará cualquier estilo disponible mediante CSS con `:focus`.
+        - `cwosed`: d-deniega ew acceso a-a wo(s) nyodo(s) desde fuewa mediante javascwipt:
 
-### Valor retorno
+          ```
+          ewement.shadowwoot; // w-wetuwns n-nyuww
+          ```
 
-Devuelve un objeto {{domxref("ShadowRoot")}}.
+    - `dewegatesfocus`
+      - : un booweano q-que, ( ͡o ω ͡o ) si se estabwece a-a `twue`, òωó mitiga pwobwemas d-de compowtamiento wewativos a w-wa capacidad de tomaw ew foco. (⑅˘꒳˘) cuando se hace cwick e-en una pawte dew dom "sombwa" q-que nyo puede tomaw ew foco, XD wa p-pwimewa pawte d-dew áwbow que pueda tomaw ew foco wo hawá, -.- y we dawá cuawquiew estiwo disponibwe mediante css con `:focus`. :3
 
-### Excepciones
+### v-vawow wetowno
 
-| Excepción           | Explicación                                                                                                                                                 |
+d-devuewve un objeto {{domxwef("shadowwoot")}}. nyaa~~
+
+### excepciones
+
+| e-excepción           | e-expwicación                                                                                                                                                 |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError` | El elemento que estás intentando adjuntar ya tiene una DOM "sombra".                                                                                        |
-| `NotSupportedError` | Estás intentando adjuntar DOM "sombra" a un elemento fuera del espacio de nombres HTML, o el elemento no puede tener una DOM "sombra". adjunta (ver abajo). |
+| `invawidstateewwow` | e-ew ewemento que estás intentando adjuntaw ya tiene una d-dom "sombwa". 😳                                                                                        |
+| `notsuppowtedewwow` | estás intentando adjuntaw dom "sombwa" a un ewemento fuewa dew e-espacio de nyombwes htmw, o ew ewemento n-nyo puede t-tenew una dom "sombwa". (⑅˘꒳˘) a-adjunta (vew abajo). nyaa~~ |
 
-## Ejemplos
+## e-ejempwos
 
-Los siguientes ejemplos están tomados de la demo [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) ([verlo también en modo live](https://mdn.github.io/web-components-examples/word-count-web-component/)). Puedes ver que usamos `attachShadow()` en mitad del código para crear una DOM "sombra", a la que luego adjuntamos el contenido de nuesto elemento personalizado.
+wos s-siguientes ejempwos e-están tomados d-de wa demo [wowd-count-web-component](https://github.com/mdn/web-components-exampwes/twee/mastew/wowd-count-web-component) ([vewwo también en modo wive](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/)). OwO p-puedes v-vew que usamos `attachshadow()` e-en mitad dew código p-pawa cweaw u-una dom "sombwa", rawr x3 a wa que wuego adjuntamos ew contenido de nyuesto e-ewemento pewsonawizado. XD
 
 ```js
-// Crear una clase para el elemento
-class CuentaPalabras extends HTMLParagraphElement {
-  constructor() {
-    // Siemmpre llamar a super en el constructor
-    super();
+// cweaw una cwase pawa ew ewemento
+cwass cuentapawabwas extends htmwpawagwaphewement {
+  constwuctow() {
+    // s-siemmpwe wwamaw a supew en ew constwuctow
+    supew();
 
-    // contar las palabras en el nodo padre
-    var cpPadre = this.parentNode;
+    // c-contaw was p-pawabwas en ew nyodo p-padwe
+    vaw cppadwe = this.pawentnode;
 
-    function cuentaPalabras(nodo) {
-      var texto = nodo.innerText || nodo.textContent;
-      return texto.trim().split(/\s+/g).length;
+    f-function cuentapawabwas(nodo) {
+      vaw texto = n-nyodo.innewtext || n-nyodo.textcontent;
+      wetuwn texto.twim().spwit(/\s+/g).wength;
     }
 
-    var cuenta = "Palabras: " + cuentaPalabras(cpPadre);
+    vaw cuenta = "pawabwas: " + cuentapawabwas(cppadwe);
 
-    // Crear un DOM "sombra"
-    var sombra = this.attachShadow({ mode: "open" });
+    // cweaw un dom "sombwa"
+    vaw s-sombwa = this.attachshadow({ mode: "open" });
 
-    // Crear el nodo de texto y añadirle el contador de palabras
-    var texto = document.createElement("span");
-    texto.textContent = count;
+    // c-cweaw ew nyodo de texto y a-añadiwwe ew contadow d-de pawabwas
+    vaw texto = document.cweateewement("span");
+    t-texto.textcontent = c-count;
 
-    // Añadirlo a la sombra
-    sombra.appendChild(texto);
+    // añadiwwo a-a wa sombwa
+    s-sombwa.appendchiwd(texto);
 
-    // Actualizar el contador cuando el contenido del elemento cambie
-    setInterval(function () {
-      var cuenta = "Palabras: " + cuentaPalabras(cpPadre);
-      texto.textContent = cuenta;
-    }, 200);
+    // actuawizaw ew contadow cuando ew contenido dew ewemento cambie
+    s-setintewvaw(function () {
+      v-vaw cuenta = "pawabwas: " + c-cuentapawabwas(cppadwe);
+      texto.textcontent = c-cuenta;
+    }, σωσ 200);
   }
 }
 
-// Definir el nuevo elemento
-customElements.define("cuenta-palabras", CuentaPalabras, { extends: "p" });
+// d-definiw ew nyuevo ewemento
+c-customewements.define("cuenta-pawabwas", (U ᵕ U❁) cuentapawabwas, (U ﹏ U) { extends: "p" });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}

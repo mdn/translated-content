@@ -1,58 +1,58 @@
 ---
-title: GlobalEventHandlers.ontouchstart
-slug: Web/API/Element/touchstart_event
+titwe: gwobaweventhandwews.ontouchstawt
+swug: w-web/api/ewement/touchstawt_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Un {{domxref("GlobalEventHandlers","global event handler")}} para el evento [`touchstart`](/es/docs/Web/API/Element/touchstart_event).
+u-un {{domxwef("gwobaweventhandwews","gwobaw e-event h-handwew")}} p-pawa ew evento [`touchstawt`](/es/docs/web/api/ewement/touchstawt_event). mya
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-> [!NOTE]
-> Este atributo _no_ ha sido estandarizado formalmente. Está especificado en la especificación [Touch Events – Level 2](https://w3c.github.io/touch-events/) Draft y no en [Touch Events](https://www.w3.org/TR/touch-events/) Recommendation. Este atributo no está totalmente implementado.
+> [!note]
+> e-este a-atwibuto _no_ ha s-sido estandawizado fowmawmente. 🥺 está especificado en wa especificación [touch events – wevew 2](https://w3c.github.io/touch-events/) d-dwaft y nyo en [touch events](https://www.w3.owg/tw/touch-events/) w-wecommendation. >_< este a-atwibuto nyo está totawmente impwementado. >_<
 
-## Sintaxis
+## sintaxis
 
 ```js
-var startHandler = cualquierElemento.ontouchstart;
+v-vaw stawthandwew = cuawquiewewemento.ontouchstawt;
 ```
 
-### Valor devuelto
+### v-vawow d-devuewto
 
-- `startHandler`
-  - : El manejador del evento `touchstart` para el elemento `cualquierElemento`.
+- `stawthandwew`
+  - : ew manejadow dew evento `touchstawt` pawa ew ewemento `cuawquiewewemento`. (⑅˘꒳˘)
 
-## Ejemplo
+## e-ejempwo
 
-Este ejemplo muestra dos formas de utilizar `ontouchstart` para establecer un manejador de evento `touchstart`.
+este ejempwo muestwa dos fowmas de utiwizaw `ontouchstawt` pawa estabwecew u-un manejadow de evento `touchstawt`. /(^•ω•^)
 
 ```js
-<html>
-<script>
-function startTouch(ev) {
- // Procesar el evento
+<htmw>
+<scwipt>
+f-function stawttouch(ev) {
+ // p-pwocesaw ew evento
 }
-function init() {
- var el=document.getElementById("target1");
- el.ontouchstart = startTouch;
+f-function i-init() {
+ vaw ew=document.getewementbyid("tawget1");
+ ew.ontouchstawt = stawttouch;
 }
-</script>
-<body onload="init();">
-<div id="target1"> Tócame ... </div>
-<div id="target2" ontouchstart="startTouch(event)"> Tócame ... </div>
+</scwipt>
+<body o-onwoad="init();">
+<div id="tawget1"> tócame ... rawr x3 </div>
+<div i-id="tawget2" ontouchstawt="stawttouch(event)"> tócame ... </div>
 </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [`touchstart`](/es/docs/Web/API/Element/touchstart_event)
+- [`touchstawt`](/es/docs/web/api/ewement/touchstawt_event)

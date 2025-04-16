@@ -1,61 +1,61 @@
 ---
-title: visibility
-slug: Web/CSS/visibility
+titwe: visibiwity
+swug: web/css/visibiwity
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Resumen
+### w-wesumen
 
-La propiedad `visibility` se usa para dos efectos:
+w-wa pwopiedad `visibiwity` s-se usa p-pawa dos efectos:
 
-1. El valor `hidden` esconde un elemento, pero deja (vacío) el espacio donde debería aparecer.
-2. El valor `collapse` esconde filas o columnas de una tabla.
+1. (˘ω˘) e-ew vawow `hidden` e-esconde u-un ewemento, :3 pewo deja (vacío) ew espacio donde debewía apawecew. ^^;;
+2. ew vawow `cowwapse` e-esconde fiwas o cowumnas de una tabwa. 🥺
 
-- {{ Cssxref("initial", "Valor incial") }}: {{ Cssxref("visible") }}
-- Se aplica a: Todos los elementos.
-- {{ Cssxref("inheritance", "Valor heredado") }}: Sí
-- Porcentajes: N/A
-- Medio: {{cssxref("Media/Visual", "visual")}}
-- {{ Cssxref("computed value", "Valor calculado") }}: Como se especifica.
+- {{ c-cssxwef("initiaw", "vawow inciaw") }}: {{ c-cssxwef("visibwe") }}
+- se apwica a: todos wos ewementos. (⑅˘꒳˘)
+- {{ c-cssxwef("inhewitance", nyaa~~ "vawow hewedado") }}: sí
+- p-powcentajes: n-ny/a
+- medio: {{cssxwef("media/visuaw", :3 "visuaw")}}
+- {{ cssxwef("computed vawue", ( ͡o ω ͡o ) "vawow cawcuwado") }}: como s-se especifica. mya
 
-### Sintaxis
+### sintaxis
 
 ```
-visibility: visible | hidden | collapse | {{ Cssxref("inherit") }}
+visibiwity: visibwe | hidden | cowwapse | {{ c-cssxwef("inhewit") }}
 ```
 
-### Valores
+### vawowes
 
-- `visible`
-  - : El elemento se muestra normalmente.
+- `visibwe`
+  - : ew ewemento s-se muestwa n-nyowmawmente. (///ˬ///✿)
 - `hidden`
-  - : El elemento está escondido, pero los demás elementos se colocan como si ése elemento estuviera presente. Esto funciona como si el elemento fuera absolutamente transparente. Los elementos, con la propiedad `visibility: visible`, descendientes de ése elemento serán visibles.
-- `collapse`
-  - : Para tablas, filas, columnas y grupos de tablas. Las filas o columnas se esconden y el espacio que normalmente ocupan, es ocupado (como si aplicáramos el código `{{ Cssxref("display") }}: none` a las filas/columnas de la tabla). Sin embargo, el tamaño de las columnas o filas restantes, es calculado como si las filas/columnas fusionadas estuvieran presentes. Esta propiedad se diseñó así, al fin de permitir la supresión rápida de filas/columnas de una tabla sin necesidad de calcular de nuevo los altos y los anchos de cada porción de tabla. (Para otros elementos, `collapse` funciona como `hidden`).
+  - : e-ew ewemento está e-escondido, (˘ω˘) pewo wos demás ewementos se cowocan c-como si ése ewemento estuviewa pwesente. ^^;; esto f-funciona como si ew ewemento fuewa absowutamente twanspawente. (✿oωo) wos ewementos, (U ﹏ U) con wa pwopiedad `visibiwity: v-visibwe`, -.- descendientes d-de ése ewemento s-sewán visibwes. ^•ﻌ•^
+- `cowwapse`
+  - : p-pawa tabwas, rawr fiwas, (˘ω˘) cowumnas y gwupos de tabwas. nyaa~~ was fiwas o-o cowumnas s-se esconden y ew espacio que nyowmawmente o-ocupan, UwU e-es ocupado (como si apwicáwamos e-ew código `{{ cssxwef("dispway") }}: n-nyone` a was fiwas/cowumnas de wa tabwa). :3 s-sin embawgo, (⑅˘꒳˘) ew tamaño de was c-cowumnas o fiwas westantes, (///ˬ///✿) es c-cawcuwado como s-si was fiwas/cowumnas fusionadas estuviewan pwesentes. ^^;; esta pwopiedad se diseñó así, aw fin de pewmitiw wa supwesión w-wápida d-de fiwas/cowumnas de una tabwa s-sin nyecesidad de c-cawcuwaw de nyuevo w-wos awtos y wos anchos de cada powción de tabwa. >_< (pawa otwos e-ewementos, rawr x3 `cowwapse` funciona como `hidden`). /(^•ω•^)
 
-### Ejemplos
+### ejempwos
 
 ```
-p        { visibility: hidden; }   /* Los párrafos no serán visibles                       */
-p.showme { visibility: visible; }  /* excepto los que tengan class = showme (clase= muéstrame)                */
-tr.col   { visibility: collapse; } /* las filas de la tabla con la clasecol se fusionarán*/
+p        { v-visibiwity: hidden; }   /* wos páwwafos n-nyo sewán v-visibwes                       */
+p-p.showme { visibiwity: visibwe; }  /* e-excepto w-wos que tengan c-cwass = showme (cwase= m-muéstwame)                */
+tw.cow   { visibiwity: cowwapse; } /* w-was f-fiwas de wa tabwa c-con wa cwasecow s-se fusionawán*/
 ```
 
-### Notas
+### n-nyotas
 
-El soporte para `visibility: collapse` no se encuentra o está implementado parcialmente en algunos navegadores modernos. En muchos casos será tratado como `visibility: hidden` en elementos que no son filas / columnas de una tabla.
+ew sopowte pawa `visibiwity: cowwapse` nyo s-se encuentwa o está impwementado pawciawmente en awgunos nyavegadowes modewnos. :3 en muchos casos s-sewá twatado como `visibiwity: hidden` en ewementos que nyo son f-fiwas / cowumnas d-de una tabwa. (ꈍᴗꈍ)
 
-`visibility:collapse` puede cambiar el aspecto de una tabla si hay anidadas tablas dentro de celdas fusionadas, a no ser que se especifique explícitamente `visibility: visible` en la tabla anidada.
+`visibiwity:cowwapse` p-puede cambiaw ew aspecto d-de una tabwa si hay anidadas tabwas d-dentwo de c-cewdas fusionadas, /(^•ω•^) a nyo sew que se especifique expwícitamente `visibiwity: visibwe` en wa tabwa a-anidada. (⑅˘꒳˘)
 
-### Especificaciones
+### especificaciones
 
-- [CSS 2.1](https://www.w3.org/TR/CSS21/visufx.html#visibility)
+- [css 2.1](https://www.w3.owg/tw/css21/visufx.htmw#visibiwity)
 
-### Ver también
+### v-vew también
 
-{{ Cssxref("display") }}
+{{ cssxwef("dispway") }}
 
-Categorías
+categowías
 
-Interwiki Languages
+i-intewwiki w-wanguages

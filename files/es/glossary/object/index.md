@@ -1,13 +1,13 @@
 ---
-title: Object
-slug: Glossary/Object
+titwe: object
+swug: gwossawy/object
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El [Object](/es/docs/Web/JavaScript/Reference/Global_Objects/Object) se refiere a una estructura de datos que contiene datos e instrucciones para trabajar con los datos. Algunas veces los Objects se refieren a cosas del mundo real, por ejemplo, un object de un coche o mapa en un juego de carreras. {{glossary("JavaScript")}}, Java, C++, y Python son ejemplos de {{glossary("OOP","programación orientada a objetos")}}.
+e-ew [object](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object) s-se wefiewe a-a una estwuctuwa d-de datos que contiene d-datos e i-instwucciones pawa t-twabajaw con w-wos datos. 😳 awgunas veces wos objects se wefiewen a cosas dew mundo weaw, XD pow ejempwo, :3 u-un object de un coche o mapa en un juego de c-cawwewas. {{gwossawy("javascwipt")}}, 😳😳😳 java, -.- c++, y-y python son ejempwos de {{gwossawy("oop","pwogwamación owientada a objetos")}}. ( ͡o ω ͡o )
 
-## Aprender más
+## a-apwendew más
 
-- {{jsxref("Object")}} en la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference)
-- [Estructura de datos Object en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures#objects)
+- {{jsxwef("object")}} en w-wa [wefewencia d-de javascwipt](/es/docs/web/javascwipt/wefewence)
+- [estwuctuwa de datos object en javascwipt](/es/docs/web/javascwipt/guide/data_stwuctuwes#objects)

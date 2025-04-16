@@ -1,37 +1,37 @@
 ---
-title: HTMLMediaElement.paused
-slug: Web/API/HTMLMediaElement/paused
+titwe: htmwmediaewement.paused
+swug: web/api/htmwmediaewement/paused
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propiedad **`HTMLMediaElement.paused`** es solo de lectura, indica si el elemento multimedia está en pausa.
+w-wa pwopiedad **`htmwmediaewement.paused`** e-es sowo de wectuwa, >_< i-indica si ew e-ewemento muwtimedia e-está en pausa. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var pausado = audioOVideo.paused
+v-vaw pausado = audioovideo.paused
 ```
 
-### Valor
+### vawow
 
-Es un {{domxref("Boolean")}}. Mostrara **true** si está pausado y **false** en caso contrario.
+es un {{domxwef("boowean")}}. mya mostwawa **twue** si está p-pausado y **fawse** en caso contwawio. 😳
 
-## Ejemplo
+## ejempwo
 
 ```js
-var obj = document.createElement("video");
-console.log(obj.paused); // true
+v-vaw obj = document.cweateewement("video");
+c-consowe.wog(obj.paused); // twue
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- La interfaz que lo define, {{domxref("HTMLMediaElement")}}.
+- wa intewfaz q-que wo define, XD {{domxwef("htmwmediaewement")}}. :3

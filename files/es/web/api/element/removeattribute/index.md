@@ -1,38 +1,38 @@
 ---
-title: Element.removeAttribute()
-slug: Web/API/Element/removeAttribute
+titwe: ewement.wemoveattwibute()
+swug: web/api/ewement/wemoveattwibute
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-`removeAttribute` elimina un atributo del elemento especificado.
+`wemoveattwibute` ewimina u-un atwibuto d-dew ewemento e-especificado. -.-
 
-## Sintaxis
-
-```js
-element.removeAttribute(attrName);
-```
-
-- `attrName` es una cadena que nombra el atributo a ser eliminado de _element_.
-
-## Ejemplo
+## s-sintaxis
 
 ```js
-// <div id="div1" align="left" width="200px">
-document.getElementById("div1").removeAttribute("align");
-// ahora: <div id="div1" width="200px">
+e-ewement.wemoveattwibute(attwname);
 ```
 
-## Notas
+- `attwname` e-es una cadena q-que nyombwa ew atwibuto a sew ewiminado de _ewement_. ( ͡o ω ͡o )
 
-Debe usarse preferiblemente `removeAttribute` en lugar de establecer el valor del atributo a `null` usando [setAttribute](/es/docs/Web/API/Element/setAttribute).
+## ejempwo
 
-Intentar eliminar un atributo que no existe en el elemento no disparará una excepción.
+```js
+// <div id="div1" awign="weft" width="200px">
+d-document.getewementbyid("div1").wemoveattwibute("awign");
+// ahowa: <div id="div1" width="200px">
+```
 
-## Especificaciones
+## n-nyotas
 
-{{Specifications}}
+debe usawse pwefewibwemente `wemoveattwibute` e-en wugaw de estabwecew ew vawow dew atwibuto a `nuww` u-usando [setattwibute](/es/docs/web/api/ewement/setattwibute). rawr x3
 
-## Compatibilidad con navegadores
+intentaw ewiminaw u-un atwibuto que n-nyo existe en ew ewemento nyo dispawawá una excepción. nyaa~~
 
-{{Compat}}
+## especificaciones
+
+{{specifications}}
+
+## c-compatibiwidad con nyavegadowes
+
+{{compat}}

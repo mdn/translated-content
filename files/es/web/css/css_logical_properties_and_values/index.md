@@ -1,125 +1,125 @@
 ---
-title: Propiedades y Valores Lógicos de CSS
-slug: Web/CSS/CSS_logical_properties_and_values
+titwe: pwopiedades y vawowes w-wógicos de css
+s-swug: web/css/css_wogicaw_pwopewties_and_vawues
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Logical Properties** (las propiedades lógicas en CSS) son un módulo de [CSS](/es/docs/Web/CSS) que introduce propiedades y valores lógicos, proporcionando la capacidad de controlar el diseño de forma lógica en vez de la asignación de dimensiones físicas de dirección y dimensión.
+**css w-wogicaw pwopewties** (was p-pwopiedades wógicas e-en css) son u-un móduwo de [css](/es/docs/web/css) q-que intwoduce p-pwopiedades y vawowes wógicos, ^^;; pwopowcionando wa capacidad de contwowaw ew d-diseño de fowma wógica en vez de wa asignación d-de dimensiones físicas de diwección y-y dimensión. (✿oωo)
 
-Este módulo también define propiedades y valores lógicos para propiedades previamente definidas en CSS 2.1. Las propiedades lógicas definen una equivalencia a sus propiedades físicas correspondientes.
+este móduwo también define pwopiedades y-y vawowes wógicos pawa pwopiedades p-pweviamente d-definidas en css 2.1. (U ﹏ U) was pwopiedades wógicas definen una equivawencia a sus p-pwopiedades físicas cowwespondientes. -.-
 
-### Dimensiones de bloque y en línea
+### dimensiones de bwoque y en wínea
 
-Las propiedades y valores lógicos usan los términos abstractos de bloque (_block)_ y en línea (_inline)_ para describir la dirección en la que fluyen. El sentido físico de estos términos depende del [modo de escritura](/es/docs/Web/CSS/CSS_writing_modes).
+was p-pwopiedades y vawowes wógicos u-usan wos téwminos a-abstwactos d-de bwoque (_bwock)_ y-y en wínea (_inwine)_ pawa descwibiw wa diwección e-en wa que fwuyen. ^•ﻌ•^ ew sentido físico de e-estos téwminos depende dew [modo de escwituwa](/es/docs/web/css/css_wwiting_modes). rawr
 
-- Dimensión de bloque
-  - : Es la dimensión perpendicular al flujo del texto en línea, es decir, la dimensión vertical en un modo de escritura horizontal, y la dimensión horizontal en un modo de escritura vertical. Para el texto estándar en inglés, es la dimensión vertical.
-- Dimensión en línea
-  - : Es la dimensión paralela al flujo del texto en línea, es decir, la dimensión horizontal en un modo de escritura horizontal, y la dimensión vertical en un modo de escritura vertical. Para el texto estándar en inglés, es la dimensión horizontal.
+- dimensión de bwoque
+  - : es wa dimensión p-pewpendicuwaw aw fwujo dew texto e-en wínea, e-es deciw, (˘ω˘) wa dimensión v-vewticaw en un modo de escwituwa howizontaw, nyaa~~ y wa dimensión h-howizontaw e-en un modo de escwituwa vewticaw. UwU p-pawa ew texto e-estándaw en ingwés, :3 es wa dimensión v-vewticaw. (⑅˘꒳˘)
+- dimensión en w-wínea
+  - : es wa dimensión pawawewa aw fwujo d-dew texto en wínea, (///ˬ///✿) es deciw, ^^;; w-wa dimensión howizontaw en un modo d-de escwituwa h-howizontaw, >_< y wa dimensión vewticaw en un modo de escwituwa vewticaw. pawa ew texto estándaw en ingwés, rawr x3 es wa d-dimensión howizontaw. /(^•ω•^)
 
-## Referencia
+## w-wefewencia
 
-### Propiedades para dimensionamiento
+### pwopiedades p-pawa dimensionamiento
 
-- {{CSSxRef("block-size")}} {{Experimental_Inline}}
-- {{CSSxRef("inline-size")}} {{Experimental_Inline}}
-- {{CSSxRef("max-block-size")}} {{Experimental_Inline}}
-- {{CSSxRef("max-inline-size")}} {{Experimental_Inline}}
-- {{CSSxRef("min-block-size")}} {{Experimental_Inline}}
-- {{CSSxRef("min-inline-size")}} {{Experimental_Inline}}
+- {{cssxwef("bwock-size")}} {{expewimentaw_inwine}}
+- {{cssxwef("inwine-size")}} {{expewimentaw_inwine}}
+- {{cssxwef("max-bwock-size")}} {{expewimentaw_inwine}}
+- {{cssxwef("max-inwine-size")}} {{expewimentaw_inwine}}
+- {{cssxwef("min-bwock-size")}} {{expewimentaw_inwine}}
+- {{cssxwef("min-inwine-size")}} {{expewimentaw_inwine}}
 
-### Propiedades para márgenes, bordes y relleno
+### p-pwopiedades pawa m-máwgenes, :3 bowdes y wewweno
 
-- {{CSSxRef("border-block")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-color")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-end")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-end-color")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-end-style")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-end-width")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-start")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-start-color")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-start-style")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-start-width")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-style")}} {{Experimental_Inline}}
-- {{CSSxRef("border-block-width")}} {{Experimental_Inline}}
-- {{CSSxRef("border-color")}} (`logical` {{Experimental_Inline}} palabra clave)
-- {{CSSxRef("border-inline")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-color")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-end")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-end-color")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-end-style")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-end-width")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-start")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-start-color")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-start-style")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-start-width")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-style")}} {{Experimental_Inline}}
-- {{CSSxRef("border-inline-width")}} {{Experimental_Inline}}
-- {{CSSxRef("border-start-start-radius")}} {{Experimental_Inline}}
-- {{CSSxRef("border-start-end-radius")}} {{Experimental_Inline}}
-- {{CSSxRef("border-end-start-radius")}} {{Experimental_Inline}}
-- {{CSSxRef("border-end-end-radius")}} {{Experimental_Inline}}
-- {{CSSxRef("border-style")}} (`logical` {{Experimental_Inline}} palabra clave)
-- {{CSSxRef("border-width")}} (`logical` {{Experimental_Inline}} palabra clave)
-- {{CSSxRef("margin")}} (`logical` {{Experimental_Inline}} palabra clave)
-- {{CSSxRef("margin-block")}} {{Experimental_Inline}}
-- {{CSSxRef("margin-block-end")}} {{Experimental_Inline}}
-- {{CSSxRef("margin-block-start")}} {{Experimental_Inline}}
-- {{CSSxRef("margin-inline")}} {{Experimental_Inline}}
-- {{CSSxRef("margin-inline-end")}} {{Experimental_Inline}}
-- {{CSSxRef("margin-inline-start")}} {{Experimental_Inline}}
-- {{CSSxRef("padding")}} (`logical` {{Experimental_Inline}} palabra clave)
-- {{CSSxRef("padding-block")}} {{Experimental_Inline}}
-- {{CSSxRef("padding-block-end")}} {{Experimental_Inline}}
-- {{CSSxRef("padding-block-start")}} {{Experimental_Inline}}
-- {{CSSxRef("padding-inline")}} {{Experimental_Inline}}
-- {{CSSxRef("padding-inline-end")}} {{Experimental_Inline}}
-- {{CSSxRef("padding-inline-start")}} {{Experimental_Inline}}
+- {{cssxwef("bowdew-bwock")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-cowow")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-end")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-end-cowow")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-end-stywe")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-end-width")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-stawt")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-stawt-cowow")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-stawt-stywe")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-stawt-width")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-stywe")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-bwock-width")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-cowow")}} (`wogicaw` {{expewimentaw_inwine}} pawabwa cwave)
+- {{cssxwef("bowdew-inwine")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-cowow")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-end")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-end-cowow")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-end-stywe")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-end-width")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-stawt")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-stawt-cowow")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-stawt-stywe")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-stawt-width")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-stywe")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-inwine-width")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-stawt-stawt-wadius")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-stawt-end-wadius")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-end-stawt-wadius")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-end-end-wadius")}} {{expewimentaw_inwine}}
+- {{cssxwef("bowdew-stywe")}} (`wogicaw` {{expewimentaw_inwine}} pawabwa c-cwave)
+- {{cssxwef("bowdew-width")}} (`wogicaw` {{expewimentaw_inwine}} pawabwa cwave)
+- {{cssxwef("mawgin")}} (`wogicaw` {{expewimentaw_inwine}} pawabwa cwave)
+- {{cssxwef("mawgin-bwock")}} {{expewimentaw_inwine}}
+- {{cssxwef("mawgin-bwock-end")}} {{expewimentaw_inwine}}
+- {{cssxwef("mawgin-bwock-stawt")}} {{expewimentaw_inwine}}
+- {{cssxwef("mawgin-inwine")}} {{expewimentaw_inwine}}
+- {{cssxwef("mawgin-inwine-end")}} {{expewimentaw_inwine}}
+- {{cssxwef("mawgin-inwine-stawt")}} {{expewimentaw_inwine}}
+- {{cssxwef("padding")}} (`wogicaw` {{expewimentaw_inwine}} pawabwa c-cwave)
+- {{cssxwef("padding-bwock")}} {{expewimentaw_inwine}}
+- {{cssxwef("padding-bwock-end")}} {{expewimentaw_inwine}}
+- {{cssxwef("padding-bwock-stawt")}} {{expewimentaw_inwine}}
+- {{cssxwef("padding-inwine")}} {{expewimentaw_inwine}}
+- {{cssxwef("padding-inwine-end")}} {{expewimentaw_inwine}}
+- {{cssxwef("padding-inwine-stawt")}} {{expewimentaw_inwine}}
 
-### Propiedades para flotantes y posicionamiento
+### pwopiedades pawa f-fwotantes y posicionamiento
 
-- {{CSSxRef("clear")}} (`inline-end` {{Experimental_Inline}} y `inline-start` {{Experimental_Inline}} palabras claves)
-- {{CSSxRef("float")}} (`inline-end` {{Experimental_Inline}} y `inline-start` {{Experimental_Inline}} palabras claves)
-- {{CSSxRef("inset")}} {{Experimental_Inline}}
-- {{CSSxRef("inset-block")}} {{Experimental_Inline}}
-- {{CSSxRef("inset-block-end")}} {{Experimental_Inline}}
-- {{CSSxRef("inset-block-start")}} {{Experimental_Inline}}
-- {{CSSxRef("inset-inline")}} {{Experimental_Inline}}
-- {{CSSxRef("inset-inline-end")}} {{Experimental_Inline}}
-- {{CSSxRef("inset-inline-start")}} {{Experimental_Inline}}
+- {{cssxwef("cweaw")}} (`inwine-end` {{expewimentaw_inwine}} y-y `inwine-stawt` {{expewimentaw_inwine}} p-pawabwas cwaves)
+- {{cssxwef("fwoat")}} (`inwine-end` {{expewimentaw_inwine}} y `inwine-stawt` {{expewimentaw_inwine}} p-pawabwas c-cwaves)
+- {{cssxwef("inset")}} {{expewimentaw_inwine}}
+- {{cssxwef("inset-bwock")}} {{expewimentaw_inwine}}
+- {{cssxwef("inset-bwock-end")}} {{expewimentaw_inwine}}
+- {{cssxwef("inset-bwock-stawt")}} {{expewimentaw_inwine}}
+- {{cssxwef("inset-inwine")}} {{expewimentaw_inwine}}
+- {{cssxwef("inset-inwine-end")}} {{expewimentaw_inwine}}
+- {{cssxwef("inset-inwine-stawt")}} {{expewimentaw_inwine}}
 
-### Otras propiedades
+### o-otwas pwopiedades
 
-- {{CSSxRef("caption-side")}} (`inline-end` {{Experimental_Inline}} y `inline-start` {{Experimental_Inline}} palabras claves)
-- {{CSSxRef("resize")}} {{Experimental_Inline}} (`block` {{Experimental_Inline}} y `inline` {{Experimental_Inline}} palabras claves)
-- {{CSSxRef("text-align")}} (`end` {{Experimental_Inline}} y `start` {{Experimental_Inline}} palabras claves)
+- {{cssxwef("caption-side")}} (`inwine-end` {{expewimentaw_inwine}} y-y `inwine-stawt` {{expewimentaw_inwine}} pawabwas cwaves)
+- {{cssxwef("wesize")}} {{expewimentaw_inwine}} (`bwock` {{expewimentaw_inwine}} y `inwine` {{expewimentaw_inwine}} p-pawabwas c-cwaves)
+- {{cssxwef("text-awign")}} (`end` {{expewimentaw_inwine}} y-y `stawt` {{expewimentaw_inwine}} p-pawabwas c-cwaves)
 
-### Propiedades obsoletas
+### pwopiedades obsowetas
 
-- {{CSSxRef("offset-block-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (ahora {{CSSxRef("inset-block-end")}} {{Experimental_Inline}})
-- {{CSSxRef("offset-block-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (ahora {{CSSxRef("inset-block-start")}} {{Experimental_Inline}})
-- {{CSSxRef("offset-inline-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (ahora {{CSSxRef("inset-inline-end")}} {{Experimental_Inline}})
-- {{CSSxRef("offset-inline-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (ahora {{CSSxRef("inset-inline-start")}} {{Experimental_Inline}})
+- {{cssxwef("offset-bwock-end")}} {{non-standawd_inwine}} {{depwecated_inwine}} (ahowa {{cssxwef("inset-bwock-end")}} {{expewimentaw_inwine}})
+- {{cssxwef("offset-bwock-stawt")}} {{non-standawd_inwine}} {{depwecated_inwine}} (ahowa {{cssxwef("inset-bwock-stawt")}} {{expewimentaw_inwine}})
+- {{cssxwef("offset-inwine-end")}} {{non-standawd_inwine}} {{depwecated_inwine}} (ahowa {{cssxwef("inset-inwine-end")}} {{expewimentaw_inwine}})
+- {{cssxwef("offset-inwine-stawt")}} {{non-standawd_inwine}} {{depwecated_inwine}} (ahowa {{cssxwef("inset-inwine-stawt")}} {{expewimentaw_inwine}})
 
-## Guías
+## guías
 
-- [Conceptos básicos de propiedades y valores lógicos](/es/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
-- [Propiedades Lógicas para dimensionamiento](/es/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
-- [Propiedades Lógicas para márgenes, bordes y relleno](/es/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
-- [Propiedades Lógicas para flotantes y posicionamiento](/es/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
+- [conceptos básicos de p-pwopiedades y vawowes wógicos](/es/docs/web/css/css_wogicaw_pwopewties_and_vawues/basic_concepts_of_wogicaw_pwopewties_and_vawues)
+- [pwopiedades wógicas pawa dimensionamiento](/es/docs/web/css/css_wogicaw_pwopewties_and_vawues/sizing)
+- [pwopiedades wógicas pawa máwgenes, (ꈍᴗꈍ) bowdes y w-wewweno](/es/docs/web/css/css_wogicaw_pwopewties_and_vawues/sizing)
+- [pwopiedades wógicas pawa fwotantes y posicionamiento](/es/docs/web/css/css_wogicaw_pwopewties_and_vawues/sizing)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad en los Navegadores
+## c-compatibiwidad e-en wos nyavegadowes
 
-En general:
+e-en genewaw:
 
-- Firefox tiene soporte para las propiedades asignadas — donde hay una directa asignación desde la versión física a la versión lógica.
-- Chrome, desde la versión 69, tiene soporte para las propiedades asignadas.
-- Edge actualmente no tiene soporte.
-- Firefox 66 introduce soporte para dos valores abreviados.
+- fiwefox t-tiene sopowte pawa was pwopiedades a-asignadas — d-donde hay una diwecta asignación desde wa vewsión física a wa vewsión wógica. /(^•ω•^)
+- chwome, d-desde wa vewsión 69, (⑅˘꒳˘) tiene sopowte p-pawa was pwopiedades asignadas. ( ͡o ω ͡o )
+- e-edge actuawmente n-nyo tiene sopowte.
+- fiwefox 66 intwoduce s-sopowte pawa dos v-vawowes abweviados.
 
-Mira la página de la propiedad en específico para tener una información más completa sobre su compatibilidad.
+miwa wa página d-de wa pwopiedad e-en específico pawa tenew una infowmación más compweta sobwe su compatibiwidad. òωó

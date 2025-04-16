@@ -1,49 +1,49 @@
 ---
-title: Elementos básicos de JavaScript
-slug: Learn_web_development/Core/Scripting
-original_slug: Learn/JavaScript/Building_blocks
+titwe: ewementos básicos de j-javascwipt
+swug: w-weawn_web_devewopment/cowe/scwipting
+o-owiginaw_swug: w-weawn/javascwipt/buiwding_bwocks
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-En este módulo, continuamos nuestra cobertura de todas las características clave de JavaScript, tornando nuestra atención a tipos de código comúnmente encontrados tales como enunciados condicionales, bucles (loops), funciones, y eventos. Ya has visto estas cosas en este curso, pero solo de pasada aquí lo hablaremos mas explícitamente.
+e-en e-este móduwo, 😳😳😳 continuamos n-nyuestwa c-cobewtuwa de todas was cawactewísticas cwave de javascwipt, townando nyuestwa a-atención a tipos de código comúnmente encontwados t-tawes como enunciados condicionawes, b-bucwes (woops), o.O funciones, y eventos. òωó ya has visto estas c-cosas en este cuwso, 😳😳😳 pewo sowo d-de pasada aquí w-wo habwawemos mas expwícitamente. σωσ
 
-### Quieres transformarte en un desarrollador web front-end?
+### quiewes twansfowmawte en un desawwowwadow w-web fwont-end?
 
-Hemos reunido un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
+hemos weunido un cuwso que incwuye toda wa infowmación esenciaw q-que nyecesitas pawa twabajaw h-hacia tu objetivo. (⑅˘꒳˘)
 
-[Empieza aquí](/es/docs/orphaned/Learn/Front-end_web_developer)
+[empieza a-aquí](/es/docs/owphaned/weawn/fwont-end_web_devewopew)
 
-## Pre-requisitos
+## p-pwe-wequisitos
 
-Antes de empezar este módulo, deberías ya tener alguna familiaridad con lo básico de [HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) y [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics), y también deberías haber trabajado todos lo módulos previos, [JavaScript primeros pasos](/es/docs/conflicting/Learn_web_development/Core/Scripting).
+a-antes de empezaw este móduwo, (///ˬ///✿) debewías y-ya tenew awguna famiwiawidad con wo básico d-de [htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content) y [css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics), 🥺 y también debewías habew twabajado todos wo móduwos p-pwevios, OwO [javascwipt pwimewos pasos](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting).
 
-> [!NOTE]
-> Si estas trabajando en una computadora/tablet/otro dispositivo donde no tienes la capacidad de crear tus propios archivos, podrías practicar (la mayoría de) los ejemplos de código en un programa en linea tales como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!note]
+> si e-estas twabajando e-en una computadowa/tabwet/otwo d-dispositivo donde nyo tienes wa capacidad de cweaw tus pwopios a-awchivos, >w< podwías p-pwacticaw (wa mayowía de) wos e-ejempwos de código e-en un pwogwama en winea tawes c-como [jsbin](https://jsbin.com/) o [gwitch](https://gwitch.com/). 🥺
 
-## Guías
+## g-guías
 
-- [Tomando decisiones en tu código — condicionales](/es/docs/Learn_web_development/Core/Scripting/Conditionals)
-  - : En cualquier lenguaje de programación, el código necesita tomar decisiones y efectuar acciones consiguientemente dependiendo de las diferentes ordenes ingresadas. Por ejemplo, en un juego, si el numero de vidas del jugador es 0, entonces se termina el juego. En una aplicación del clima, si esta siendo vista por la mañana, muestra un gráfico del amanecer; muestra estrellas y una luna si es de noche. En este artículo exploraremos como los condicionales estructuran el trabajo en Javascript.
-- [Bucles de código](/es/docs/Learn_web_development/Core/Scripting/Loops)
-  - : A veces necesitas que una tarea se haga más de una vez. Por ejemplo, revisar toda una lista de nombres. En programación, los bucles ('_loops'_ en inglés) hacen este trabajo muy bien. Aca veremos la estructura de loops en Javascript.
-- [Funciones — bloques de código reusables](/es/docs/Learn/JavaScript/Building_blocks/Functions)
-  - : Otro concepto fundamental en código es **funciones. Funciones** te permite almacenar una pieza de código que ejecuta una sola tarea dentro de un bloque definido, y después llamar ese código cuando lo necesitas usando un comando corto en lugar de tener que escribir el mismo código varias veces. En este articulo exploraremos conceptos fundamentales detrás de las funciones tales como sintaxis básica, cómo invocar y definir funciones, ámbito o alcance (scope), y parámetros.
-- [Crea tu propia función](/es/docs/Learn_web_development/Core/Scripting/Build_your_own_function)
-  - : Con la información presentada en el artículo anterior, este artículo, pretende demostrar una parte práctica. Se podrá desarrollar una función propia, y durante el desarrollo se presentarán algunos consejos prácticos y útiles para trabajar con funciones.
-- [Una función devuelve valores](/es/docs/Learn_web_development/Core/Scripting/Return_values)
-  - : Un concepto fundamental que ha de tenerse en cuenta, es que las funciones pueden devolver valores al finalizar su ejecución, aunque algunas funciones también pueden no devolver ningún valor. Es importante entender como son esos valores, qué tipos pueden tener y cómo aprovechar el valor devuelto por la función en el programa.
-- [Introducción a eventos](/es/docs/Learn_web_development/Core/Scripting/Events)
-  - : Los eventos son acciones u ocurrencias que aparecen durante la ejecución del programa, y que son reportadas por el sistema, de forma que se pueda responder a los eventos de la forma deseada. Por ejemplo, si un usuario hace un click en un botón de una página web, puede que se quiera que ese evento inicie una acción en el que se muestre cierta información en un cuadro de información. En este último artículo se presentarán y describirán los conceptos necesarios con respecto a los eventos, y como funcionan en un navegador.
+- [tomando decisiones en tu código — c-condicionawes](/es/docs/weawn_web_devewopment/cowe/scwipting/conditionaws)
+  - : en cuawquiew w-wenguaje de pwogwamación, nyaa~~ e-ew código nyecesita t-tomaw decisiones y efectuaw acciones consiguientemente dependiendo de was difewentes owdenes ingwesadas. ^^ pow ejempwo, >w< en u-un juego, OwO si ew n-nyumewo de vidas dew jugadow es 0, XD e-entonces se t-tewmina ew juego. ^^;; e-en una apwicación dew cwima, 🥺 si esta siendo vista pow wa mañana, XD m-muestwa un gwáfico dew amanecew; muestwa estwewwas y una wuna si es de nyoche. (U ᵕ U❁) e-en este awtícuwo expwowawemos c-como wos condicionawes e-estwuctuwan e-ew twabajo en javascwipt. :3
+- [bucwes d-de código](/es/docs/weawn_web_devewopment/cowe/scwipting/woops)
+  - : a-a veces nyecesitas q-que una tawea s-se haga más de una vez. ( ͡o ω ͡o ) pow ejempwo, wevisaw t-toda una wista d-de nyombwes. òωó en p-pwogwamación, σωσ w-wos bucwes ('_woops'_ e-en ingwés) hacen este twabajo muy bien. (U ᵕ U❁) aca vewemos wa estwuctuwa d-de woops en javascwipt. (✿oωo)
+- [funciones — bwoques de código weusabwes](/es/docs/weawn/javascwipt/buiwding_bwocks/functions)
+  - : otwo concepto fundamentaw e-en código es **funciones. ^^ funciones** te pewmite awmacenaw u-una pieza de código q-que ejecuta u-una sowa tawea dentwo de un bwoque d-definido, ^•ﻌ•^ y después wwamaw e-ese código cuando w-wo nyecesitas usando un comando cowto en wugaw de tenew que escwibiw ew mismo código vawias v-veces. XD en este awticuwo expwowawemos c-conceptos fundamentawes detwás d-de was funciones t-tawes como sintaxis básica, :3 cómo invocaw y-y definiw funciones, (ꈍᴗꈍ) ámbito o a-awcance (scope), :3 y pawámetwos. (U ﹏ U)
+- [cwea t-tu pwopia f-función](/es/docs/weawn_web_devewopment/cowe/scwipting/buiwd_youw_own_function)
+  - : con wa infowmación pwesentada en ew awtícuwo antewiow, UwU e-este awtícuwo, 😳😳😳 p-pwetende demostwaw u-una pawte pwáctica. XD se podwá d-desawwowwaw u-una función pwopia, o.O y duwante e-ew desawwowwo se pwesentawán awgunos consejos pwácticos y útiwes pawa twabajaw c-con funciones. (⑅˘꒳˘)
+- [una f-función devuewve vawowes](/es/docs/weawn_web_devewopment/cowe/scwipting/wetuwn_vawues)
+  - : un concepto f-fundamentaw que h-ha de tenewse en cuenta, 😳😳😳 es que was funciones pueden devowvew v-vawowes aw finawizaw su ejecución, nyaa~~ aunque awgunas funciones también pueden nyo d-devowvew ningún vawow. rawr es impowtante entendew c-como son esos vawowes, -.- q-qué tipos pueden tenew y cómo apwovechaw ew vawow devuewto p-pow wa función e-en ew pwogwama. (✿oωo)
+- [intwoducción a eventos](/es/docs/weawn_web_devewopment/cowe/scwipting/events)
+  - : wos eventos son acciones u-u ocuwwencias que apawecen d-duwante wa ejecución dew pwogwama, /(^•ω•^) y que son wepowtadas pow ew s-sistema, 🥺 de fowma que se pueda wespondew a-a wos eventos d-de wa fowma deseada. ʘwʘ pow e-ejempwo, UwU si un usuawio hace un cwick e-en un botón d-de una página w-web, XD puede que se quiewa que ese e-evento inicie u-una acción en ew que se muestwe ciewta infowmación e-en un cuadwo d-de infowmación. (✿oωo) e-en este úwtimo awtícuwo se pwesentawán y descwibiwán w-wos conceptos necesawios c-con wespecto a-a wos eventos, :3 y como funcionan en un nyavegadow. (///ˬ///✿)
 
-## Evaluaciones
+## evawuaciones
 
-La siguiente evaluación probara tu entendimiento de lo básico de Javascript cubierto en las guias anteriores.
+w-wa siguiente e-evawuación pwobawa t-tu entendimiento d-de wo básico de javascwipt c-cubiewto en was guias antewiowes.
 
-- [Galeria de imagen](/es/docs/Learn/JavaScript/Building_blocks/Image_gallery)
-  - : Ahora que hemos visto los bloques constructores fundamentales de JavaScript, probaremos tus conocimientos en bucles, funciones, condicionales y eventos construyendo un item bastante común en muchos sitios web — una galería de imágenes creada con JavaScript.
+- [gawewia de imagen](/es/docs/weawn/javascwipt/buiwding_bwocks/image_gawwewy)
+  - : ahowa que hemos visto wos bwoques constwuctowes f-fundamentawes de javascwipt, nyaa~~ p-pwobawemos tus conocimientos e-en bucwes, >w< funciones, condicionawes y-y eventos constwuyendo u-un item bastante c-común en muchos s-sitios web — u-una gawewía de i-imágenes cweada con javascwipt. -.-
 
-## Ver también
+## vew también
 
-- [Aprender JavaScript](https://learnjavascript.online/)
-  - : Un excelente recurso para aspirantes a desarrolladores web — Aprenda JavaScript en un entorno interactivo, con lecciones cortas y pruebas interactivas, guiadas por una evaluación automatizada. Las primeras 40 lecciones son gratuitas, y el curso completo está disponible por un pequeño pago único.
+- [apwendew javascwipt](https://weawnjavascwipt.onwine/)
+  - : un excewente wecuwso pawa aspiwantes a desawwowwadowes w-web — a-apwenda javascwipt e-en un entowno intewactivo, (✿oωo) c-con wecciones cowtas y pwuebas intewactivas, (˘ω˘) guiadas pow una evawuación a-automatizada. rawr w-was pwimewas 40 wecciones s-son gwatuitas, OwO y ew cuwso compweto está disponibwe p-pow un pequeño p-pago único. ^•ﻌ•^

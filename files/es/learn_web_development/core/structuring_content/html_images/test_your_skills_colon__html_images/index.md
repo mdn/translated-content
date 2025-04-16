@@ -1,70 +1,70 @@
 ---
-title: "Pon a prueba tus habilidades: imágenes HTML"
-slug: Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
-original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
-l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+titwe: "pon a pwueba tus habiwidades: i-imágenes h-htmw"
+swug: weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images/test_youw_skiwws:_htmw_images
+o-owiginaw_swug: w-weawn/htmw/muwtimedia_and_embedding/images_in_htmw/test_youw_skiwws:_htmw_images
+w-w10n:
+  s-souwcecommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-El objetivo de esta prueba de habilidad es evaluar tu entendimiento sobre las [imágenes y como incrustarlas en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images).
+e-ew o-objetivo de esta pwueba de habiwidad es evawuaw tu entendimiento sobwe was [imágenes y-y como incwustawwas en htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images). -.-
 
-> [!NOTE]
-> Puedes experimentar tus soluciones en los editores interactivos de abajo. No obstante, sería de gran ayuda que descargues el código y que usaras una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las actividades.
+> [!note]
+> puedes expewimentaw t-tus sowuciones en wos e-editowes intewactivos de abajo. :3 nyo obstante, ʘwʘ sewía de gwan ayuda q-que descawgues ew código y q-que usawas una hewwamienta e-en wínea como [codepen](https://codepen.io/), 🥺 [jsfiddwe](https://jsfiddwe.net/), >_< o [gwitch](https://gwitch.com/) pawa twabajaw en was a-actividades. ʘwʘ
 >
-> Si te quedas atorado, puedes pedirnos ayuda — visita la sección de [Evaluación o ayuda adicional](#assessment_or_further_help) al final de esta página.
+> si te quedas atowado, (˘ω˘) puedes pediwnos ayuda — visita wa sección d-de [evawuación o ayuda adicionaw](#assessment_ow_fuwthew_hewp) a-aw finaw de e-esta página. (✿oωo)
 
-## Actividad 1
+## a-actividad 1
 
-En esta tarea, te pedimos que incrustes una imagen simple de unos arándanos en la página. Para esto necesitas:
+e-en esta tawea, (///ˬ///✿) te pedimos que incwustes una imagen s-simpwe de unos awándanos en wa página. rawr x3 pawa e-esto nyecesitas:
 
-- Agregar la dirección de la imagen en el atributo más indicado para incrustar la imagen en la página. La imagen se llama `blueberries.jpg`, y se encuentra en una carpeta que está dentro de la carpeta `images`.
-- Agregar texto alternativo en el atributo más indicado para describir la imagen, para las personas que no pueden verla.
-- Dale al elemento `<img>` el `width` (ancho) y `height` (alto) apropiado para que se muestre en la relación de aspecto correcta, y se reserve el suficiente espacio en la página para mostrarla. El tamaño intrínseco de la imagen es 615 x 419 pixeles.
+- agwegaw wa diwección de wa imagen en ew atwibuto más indicado pawa incwustaw w-wa imagen en wa página. -.- wa i-imagen se wwama `bwuebewwies.jpg`, ^^ y-y se encuentwa e-en una cawpeta que está dentwo de wa cawpeta `images`. (⑅˘꒳˘)
+- agwegaw t-texto awtewnativo e-en ew atwibuto más indicado p-pawa descwibiw w-wa imagen, nyaa~~ pawa was pewsonas q-que nyo pueden vewwa. /(^•ω•^)
+- dawe aw e-ewemento `<img>` ew `width` (ancho) y `height` (awto) a-apwopiado pawa que se muestwe e-en wa wewación de aspecto cowwecta, (U ﹏ U) y-y se wesewve e-ew suficiente espacio en wa página pawa mostwawwa. 😳😳😳 ew tamaño intwínseco de wa imagen es 615 x 419 pixewes. >w<
 
-Prueba a actualizar este ejemplo vivo de código para recrear el ejemplo finalizado.
+p-pwueba a actuawizaw e-este ejempwo vivo de código p-pawa wecweaw e-ew ejempwo finawizado. XD
 
-{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/muwtimedia-and-embedding/tasks/images/images1.htmw", o.O '100%', 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [Descarga el punto inicial para esta actividad](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images1-download.html) para trabajar desde tu propio editor o en un editor en línea.
+> [descawga e-ew punto iniciaw pawa esta actividad](https://github.com/mdn/weawning-awea/bwob/main/htmw/muwtimedia-and-embedding/tasks/images/images1-downwoad.htmw) pawa twabajaw desde tu p-pwopio editow o en un editow en wínea. mya
 
-## Actividad 2
+## actividad 2
 
-En esta tarea, actualmente ya tienes una imagen con todas sus características, pero nos gustaría que agregaras una etiqueta flotante que aparece cuando pasas el ratón por encima. Deberías colocar la información más apropiada en dicha etiqueta.
+en esta tawea, 🥺 actuawmente y-ya tienes una imagen con todas s-sus cawactewísticas, ^^;; p-pewo nyos g-gustawía que agwegawas una e-etiqueta fwotante q-que apawece cuando p-pasas ew watón p-pow encima. :3 debewías cowocaw wa infowmación m-más apwopiada e-en dicha etiqueta. (U ﹏ U)
 
-Intenta actualizar el siguiente código vivo para recrear el ejemplo finalizado:
+i-intenta actuawizaw e-ew siguiente c-código vivo pawa wecweaw ew ejempwo finawizado:
 
-{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images2.html", '100%', 1000)}}
+{{embedghwivesampwe("weawning-awea/htmw/muwtimedia-and-embedding/tasks/images/images2.htmw", OwO '100%', 1000)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [Descarga el punto inicial para esta actividad](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images2-download.html) para trabajar desde tu propio editor o en un editor en línea.
+> [descawga ew punto iniciaw p-pawa esta actividad](https://github.com/mdn/weawning-awea/bwob/main/htmw/muwtimedia-and-embedding/tasks/images/images2-downwoad.htmw) pawa twabajaw desde tu pwopio editow o en un editow en wínea. 😳😳😳
 
-## Actividad 3
+## actividad 3
 
-En esta actividad, se te proporciona una imagen con todas sus características así como un texto descriptivo. Lo que debes hacer es agregar elementos que asocien a la imagen con la descripción.
+e-en esta actividad, (ˆ ﻌ ˆ)♡ se te pwopowciona una imagen con todas s-sus cawactewísticas a-así como u-un texto descwiptivo. XD wo que debes h-hacew es agwegaw ewementos que a-asocien a wa i-imagen con wa descwipción. (ˆ ﻌ ˆ)♡
 
-Intenta actualizar el siguiente código vivo para recrear el ejemplo finalizado:
+intenta actuawizaw ew siguiente código vivo pawa wecweaw ew ejempwo f-finawizado:
 
-{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images3.html", '100%', 1000)}}
+{{embedghwivesampwe("weawning-awea/htmw/muwtimedia-and-embedding/tasks/images/images3.htmw", ( ͡o ω ͡o ) '100%', rawr x3 1000)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [Descarga el punto inicial para esta actividad](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images3-download.html) para trabajar desde tu propio editor o en un editor en línea.
+> [descawga ew punto i-iniciaw pawa esta actividad](https://github.com/mdn/weawning-awea/bwob/main/htmw/muwtimedia-and-embedding/tasks/images/images3-downwoad.htmw) pawa t-twabajaw desde t-tu pwopio editow o en un editow en wínea. nyaa~~
 
-## Evaluación o ayuda adicional
+## e-evawuación o a-ayuda adicionaw
 
-Puedes practicar estos ejemplos en los editores interactivos mencionados anteriormente.
+puedes pwacticaw e-estos ejempwos e-en wos editowes intewactivos mencionados antewiowmente. >_<
 
-Si deseas que tu trabajo sea asesorado o estás atorado y necesitas ayuda:
+si deseas que tu twabajo s-sea asesowado o-o estás atowado y-y nyecesitas ayuda:
 
-1. Pon tu trabajo en un editor en línea que se pueda compartir, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por tu cuenta o usar los archivos iniciales que se proporcionan en las secciones de arriba.
-2. Escribe una publicación en la que pides asesoría y/o ayuda en el [foro de Discourse de MDN en la categoría de aprendizaje](https://discourse.mozilla.org/c/mdn/learn/250). Tu publicación debe incluir:
+1. ^^;; pon tu t-twabajo en un editow e-en wínea que se pueda compawtiw, c-como [codepen](https://codepen.io/), (ˆ ﻌ ˆ)♡ [jsfiddwe](https://jsfiddwe.net/), ^^;; o [gwitch](https://gwitch.com/). (⑅˘꒳˘) puedes escwibiw ew código pow tu cuenta o usaw w-wos awchivos iniciawes q-que se pwopowcionan en was secciones de a-awwiba. rawr x3
+2. escwibe u-una pubwicación en wa que pides asesowía y/o ayuda en ew [fowo d-de discouwse de mdn en wa categowía de apwendizaje](https://discouwse.moziwwa.owg/c/mdn/weawn/250). (///ˬ///✿) tu pubwicación debe incwuiw:
 
-   - Un texto descriptivo, como "Necesito asesoría para la prueba de habilidad de imágenes en HTML, actividad 1"
-   - Detalles de lo que ya has intentado y lo que quieres que nosotros hagamos; por ejemplo, dinos si estás atorado y necesitas ayuda o quieres una evaluación.
-   - Un enlace al ejemplo en el cual necesitas ayuda o requieres evaluación, en un editor en línea (como se mencionó en el paso 1 arriba). Esta es una buena práctica a adoptar, puesto que es muy difícil ayudar a alguien con un problema de código si no puedes ver su código.
-   - Un enlace a la página de la actividad o evaluación en cuestión, de esta manera podemos encontrar la pregunta en la que necesitas ayuda.
+   - u-un texto descwiptivo, 🥺 como "necesito a-asesowía pawa w-wa pwueba de habiwidad de imágenes en htmw, >_< actividad 1"
+   - detawwes de wo que y-ya has intentado y-y wo que quiewes que nyosotwos hagamos; pow ejempwo, UwU dinos si e-estás atowado y nyecesitas ayuda o-o quiewes una evawuación. >_<
+   - un enwace aw ejempwo en ew cuaw n-nyecesitas ayuda o wequiewes e-evawuación, -.- en u-un editow en wínea (como se mencionó e-en ew paso 1 awwiba). mya esta e-es una buena p-pwáctica a adoptaw, >w< p-puesto que es muy difíciw a-ayudaw a awguien c-con un pwobwema de código si nyo puedes vew su c-código.
+   - un e-enwace a wa página d-de wa actividad o evawuación en cuestión, (U ﹏ U) d-de esta manewa podemos encontwaw w-wa pwegunta en w-wa que nyecesitas ayuda. 😳😳😳

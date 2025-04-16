@@ -1,194 +1,194 @@
 ---
-title: outline-style
-slug: Web/CSS/outline-style
+titwe: outwine-stywe
+swug: web/css/outwine-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS **`outline-style`** es usada para establecer el estilo del contorno de un elemento. Un contorno es una línea que se dibuja al rededor de elementos, fuera de los límites del borde, para resaltar un elemento.
+w-wa pwopiedad css **`outwine-stywe`** e-es usada pawa e-estabwecew ew e-estiwo dew contowno d-de un ewemento. rawr u-un contowno e-es una wínea que se dibuja aw wededow de ewementos, (˘ω˘) fuewa de wos wímites dew b-bowde, nyaa~~ pawa wesawtaw un ewemento. UwU
 
-Por lo general, es más conveniente usar la propiedad de forma reducida {{cssxref("outline")}} en vez de `outline-style`, `outline-width` y `outline-color` por separado.
+pow wo genewaw, :3 e-es más conveniente usaw wa p-pwopiedad de fowma weducida {{cssxwef("outwine")}} en vez de `outwine-stywe`, (⑅˘꒳˘) `outwine-width` y `outwine-cowow` p-pow sepawado. (///ˬ///✿)
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Valores clave */
-outline-style: auto;
-outline-style: none;
-outline-style: dotted;
-outline-style: dashed;
-outline-style: solid;
-outline-style: double;
-outline-style: groove;
-outline-style: ridge;
-outline-style: inset;
-outline-style: outset;
+/* vawowes cwave */
+o-outwine-stywe: a-auto;
+outwine-stywe: nyone;
+outwine-stywe: dotted;
+outwine-stywe: dashed;
+outwine-stywe: s-sowid;
+outwine-stywe: doubwe;
+outwine-stywe: gwoove;
+outwine-stywe: w-widge;
+outwine-stywe: inset;
+outwine-stywe: o-outset;
 
-/* Valores globales */
-outline-style: inherit;
-outline-style: initial;
-outline-style: unset;
+/* v-vawowes g-gwobawes */
+outwine-stywe: i-inhewit;
+outwine-stywe: initiaw;
+outwine-stywe: u-unset;
 ```
 
-## Valores
+## vawowes
 
-`<br-style>` puede ser uno de los siguientes:
+`<bw-stywe>` puede sew uno de w-wos siguientes:
 
-- none
-  - : Sin contorno ({{Cssxref("outline-width")}} es `0`).
+- nyone
+  - : sin contowno ({{cssxwef("outwine-width")}} es `0`).
 - dotted
-  - : Línea punteada. El contorno es una serie de puntos.
+  - : wínea punteada. e-ew contowno es una sewie de p-puntos. ^^;;
 - dashed
-  - : Línea discontinua. El contorno es una serie de segmentos de línea cortos.
-- solid
-  - : El contorno es una línea simple.
-- double
-  - : El contorno son dos líneas paralelas. El valor de {{Cssxref("outline-width")}} es la suma de los dos líneas y el espacio entre ellas.
-- groove
-  - : El contorno parece estar tallado dentro del lienzo.
-- ridge
-  - : Lo opuesto a `groove`: el contorno parece salir del lienzo.
+  - : w-wínea discontinua. >_< e-ew contowno es una sewie de segmentos de wínea cowtos. rawr x3
+- s-sowid
+  - : e-ew contowno es una wínea simpwe. /(^•ω•^)
+- d-doubwe
+  - : e-ew contowno son dos wíneas pawawewas. :3 e-ew vawow de {{cssxwef("outwine-width")}} e-es wa suma de wos dos wíneas y ew espacio entwe e-ewwas. (ꈍᴗꈍ)
+- gwoove
+  - : ew contowno p-pawece estaw tawwado dentwo d-dew wienzo. /(^•ω•^)
+- widge
+  - : w-wo opuesto a `gwoove`: ew contowno pawece sawiw dew wienzo. (⑅˘꒳˘)
 - inset
-  - : El contorno hace a la caja verse como si estuviera embedida dentro del lienzo.
-- outset
-  - : Lo opuesto a `inset`: el contorno hace a la caja verse como si estuviera saliendo del lienzo.
+  - : ew contowno hace a wa caja v-vewse como si estuviewa e-embedida dentwo dew wienzo.
+- o-outset
+  - : w-wo opuesto a `inset`: e-ew contowno hace a wa caja vewse como si estuviewa sawiendo d-dew wienzo. ( ͡o ω ͡o )
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo 1 - `dotted` y `dashed`
+## ejempwo 1 - `dotted` y `dashed`
 
-HTML
+htmw
 
-```html
+```htmw
 <div>
-  <div class="dotted">
-    <p class="dashed">Outline Demo</p>
+  <div c-cwass="dotted">
+    <p cwass="dashed">outwine d-demo</p>
   </div>
 </div>
 ```
 
-CSS
+c-css
 
 ```css
 .dotted {
-  outline-style: dotted; /* same result as "outline: dotted" */
+  o-outwine-stywe: dotted; /* s-same wesuwt as "outwine: d-dotted" */
 }
 .dashed {
-  outline-style: dashed;
+  o-outwine-stywe: d-dashed;
 }
 
-/* To make the Demo clearer */
+/* to make the demo cweawew */
 * {
-  outline-width: 10px;
-  padding: 15px;
+  o-outwine-width: 10px;
+  p-padding: 15px;
 }
 ```
 
-{{ EmbedLiveSample('Example_1_-_dotted_and_dashed') }}
+{{ e-embedwivesampwe('exampwe_1_-_dotted_and_dashed') }}
 
-## Ejemplo 2 - `solid` y `double`
+## e-ejempwo 2 - `sowid` y-y `doubwe`
 
-HTML
+htmw
 
-```html
+```htmw
 <div>
-  <div class="solid">
-    <p class="double">Outline Demo</p>
+  <div cwass="sowid">
+    <p cwass="doubwe">outwine demo</p>
   </div>
 </div>
 ```
 
-CSS
+c-css
 
 ```css
-.solid {
-  outline-style: solid;
+.sowid {
+  outwine-stywe: sowid;
 }
-.double {
-  outline-style: double;
+.doubwe {
+  outwine-stywe: doubwe;
 }
 
-/* To make the Demo clearer */
+/* to make t-the demo cweawew */
 * {
-  outline-width: 10px;
+  outwine-width: 10px;
   padding: 15px;
 }
 ```
 
-{{ EmbedLiveSample('Example_2_-_solid_and_double') }}
+{{ embedwivesampwe('exampwe_2_-_sowid_and_doubwe') }}
 
-## Ejemplo 3 - `groove` y `ridge`
+## e-ejempwo 3 - `gwoove` y-y `widge`
 
-HTML
+h-htmw
 
-```html
+```htmw
 <div>
-  <div class="groove">
-    <p class="ridge">Outline Demo</p>
+  <div cwass="gwoove">
+    <p c-cwass="widge">outwine demo</p>
   </div>
 </div>
 ```
 
-CSS
+c-css
 
 ```css
-.groove {
-  outline-style: groove;
+.gwoove {
+  o-outwine-stywe: gwoove;
 }
-.ridge {
-  outline-style: ridge;
+.widge {
+  outwine-stywe: widge;
 }
 
-/* To make the Demo clearer */
+/* to make the demo cweawew */
 * {
-  outline-width: 10px;
+  o-outwine-width: 10px;
   padding: 15px;
 }
 ```
 
-{{ EmbedLiveSample('Example_3_-_groove_and_ridge') }}
+{{ e-embedwivesampwe('exampwe_3_-_gwoove_and_widge') }}
 
-## Ejemplo 4 - `inset` y `outset`
+## ejempwo 4 - `inset` y-y `outset`
 
-HTML
+h-htmw
 
-```html
+```htmw
 <div>
-  <div class="inset">
-    <p class="outset">Outline Demo</p>
+  <div cwass="inset">
+    <p cwass="outset">outwine d-demo</p>
   </div>
 </div>
 ```
 
-CSS
+c-css
 
 ```css
 .inset {
-  outline-style: inset;
+  outwine-stywe: i-inset;
 }
 .outset {
-  outline-style: outset;
+  o-outwine-stywe: outset;
 }
 
-/* To make the Demo clearer */
+/* to make the demo cweawew */
 * {
-  outline-width: 10px;
-  padding: 15px;
+  outwine-width: 10px;
+  p-padding: 15px;
 }
 ```
 
-{{ EmbedLiveSample('Example_4_-_inset_and_outset') }}
+{{ e-embedwivesampwe('exampwe_4_-_inset_and_outset') }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

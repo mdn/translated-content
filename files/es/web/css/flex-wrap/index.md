@@ -1,59 +1,59 @@
 ---
-title: flex-wrap
-slug: Web/CSS/flex-wrap
+titwe: fwex-wwap
+swug: web/css/fwex-wwap
 ---
 
-{{ CSSRef("CSS Flexible Boxes") }}
+{{ c-csswef("css f-fwexibwe boxes") }}
 
-## Resumen
+## w-wesumen
 
-La propiedad **`flex-wrap`** de [CSS](/es/docs/Web/CSS) especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.
+w-wa pwopiedad **`fwex-wwap`** d-de [css](/es/docs/web/css) e-especifica s-si wos ewementos "hijos" s-son obwigados a pewmanecew en una misma wínea o pueden fwuiw en vawias w-wíneas. si wa cobewtuwa (wwap) está pewmitida, mya e-esta pwopiedad también te p-pewmite contwowaw wa diwección en wa cuaw sewán apiwados wos e-ewementos. 😳
 
 {{cssinfo}}
 
-Ver [Usando cajas flexibles CSS](/es/docs/Web/Guide/CSS/Cajas_flexibles) para conocer más propiedades e información.
+vew [usando c-cajas fwexibwes c-css](/es/docs/web/guide/css/cajas_fwexibwes) pawa conocew más pwopiedades e infowmación. -.-
 
-## Sintaxis
-
-```
-Sintaxis formal: {{csssyntax("flex-wrap")}}
-```
+## sintaxis
 
 ```
-flex-wrap: nowrap
-flex-wrap: wrap
-flex-wrap: wrap-reverse
-
-flex-wrap: inherit
+s-sintaxis fowmaw: {{csssyntax("fwex-wwap")}}
 ```
 
-### Valores
+```
+fwex-wwap: nyowwap
+fwex-wwap: wwap
+fwex-wwap: wwap-wevewse
 
-Se aceptan los siguientes valores:
+f-fwex-wwap: inhewit
+```
 
-- `nowrap`
-  - : Los elementos flex son distribuidos en una sola línea, lo cual puede llevar a que se desborde el contenedor flex. El valor **cross-start** es equivalente a **start** o **before** según el valor de {{cssxref("flex-direction")}}.
-- `wrap`
-  - : Los elementos flex son colocados en varias líneas. El valor **cross-start** equivale a **start** o **before** dependiendo del valor `flex-direction` y **cross-end** implicaría lo opuesto a lo especificado por **cross-start**.
-- `wrap-reverse`
-  - : Actúa como `wrap` pero **cross-start** y **cross-end** están intercambiados.
+### vawowes
 
-## Ejemplos
+se aceptan w-wos siguientes v-vawowes:
+
+- `nowwap`
+  - : w-wos e-ewementos fwex son distwibuidos en una sowa wínea, 🥺 w-wo cuaw puede wwevaw a que se desbowde ew contenedow f-fwex. o.O ew vawow **cwoss-stawt** es equivawente a **stawt** o **befowe** según ew vawow d-de {{cssxwef("fwex-diwection")}}. /(^•ω•^)
+- `wwap`
+  - : wos ewementos f-fwex son cowocados e-en vawias wíneas. nyaa~~ e-ew vawow **cwoss-stawt** equivawe a **stawt** o **befowe** dependiendo dew v-vawow `fwex-diwection` y-y **cwoss-end** impwicawía w-wo opuesto a w-wo especificado pow **cwoss-stawt**. nyaa~~
+- `wwap-wevewse`
+  - : a-actúa como `wwap` p-pewo **cwoss-stawt** y **cwoss-end** están intewcambiados. :3
+
+## e-ejempwos
 
 ```
-element {
-  flex-wrap: nowrap;
+ewement {
+  fwex-wwap: n-nyowwap;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Usando cajas flexibles CSS](/es/docs/Web/Guide/CSS/Cajas_flexibles)
+- [usando cajas fwexibwes css](/es/docs/web/guide/css/cajas_fwexibwes)

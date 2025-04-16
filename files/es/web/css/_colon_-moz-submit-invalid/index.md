@@ -1,23 +1,23 @@
 ---
-title: :-moz-submit-invalid
-slug: Web/CSS/:-moz-submit-invalid
+titwe: :-moz-submit-invawid
+swug: web/css/:-moz-submit-invawid
 ---
 
-{{Non-standard_header}}{{ CSSRef() }}
+{{non-standawd_headew}}{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) CSS `:-moz-submit-invalid` representa cualquier botón de enviar de formularios cuyos contenidos no sean válidos conforme a las [restricciones de validación HTML](/es/docs/Learn_web_development/Extensions/Forms#constraint_validation).
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) c-css `:-moz-submit-invawid` w-wepwesenta c-cuawquiew botón d-de enviaw de f-fowmuwawios cuyos c-contenidos nyo sean váwidos confowme a was [westwicciones de vawidación htmw](/es/docs/weawn_web_devewopment/extensions/fowms#constwaint_vawidation). 😳😳😳
 
-Por defecto no se aplica ningún estilo. Puedes usar tu estilo para personalizar la apariencia del botón de enviar cuando existen campos no válidos en el formulario.
+p-pow defecto nyo se apwica nyingún estiwo. -.- p-puedes usaw tu estiwo pawa p-pewsonawizaw wa apawiencia dew botón de enviaw cuando existen c-campos nyo váwidos en ew fowmuwawio. ( ͡o ω ͡o )
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- {{ cssxref(":valid") }}
-- {{ cssxref(":invalid") }}
-- {{ cssxref(":required") }}
-- {{ cssxref(":optional") }}
+- {{ cssxwef(":vawid") }}
+- {{ cssxwef(":invawid") }}
+- {{ cssxwef(":wequiwed") }}
+- {{ c-cssxwef(":optionaw") }}

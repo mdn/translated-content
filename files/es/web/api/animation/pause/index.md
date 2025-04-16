@@ -1,82 +1,82 @@
 ---
-title: Animation.pause()
-slug: Web/API/Animation/pause
+titwe: animation.pause()
+swug: w-web/api/animation/pause
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web animations") }}
 
-El método `pause()` de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API), suspende la reproducción de la animación.
+ew m-método `pause()` d-de wa intewfaz {{domxwef("animation")}} d-de wa [web a-animations a-api](/es/docs/web/api/web_animations_api), 😳 s-suspende wa wepwoducción de wa animación. 😳
 
-## Sintaxis
+## sintaxis
 
 ```js
 animation.pause();
 ```
 
-### Parámetros
+### p-pawámetwos
 
-Ningun.
+nyingun. σωσ
 
-### Valor devuelto
+### vawow devuewto
 
-Ningun.
+n-nyingun. rawr x3
 
-### Excepciones
+### excepciones
 
-- InvalidStateError
-  - : La animación {{domxref ("Animation.currentTime", "currentTime")}} no está resuelta `unresolved` (por ejemplo, si nunca se ha reproducido o no se está reproduciendo actualmente) y el tiempo de finalización de la animación es infinito positivo.
+- i-invawidstateewwow
+  - : wa animación {{domxwef ("animation.cuwwenttime", OwO "cuwwenttime")}} nyo está wesuewta `unwesowved` (pow e-ejempwo, /(^•ω•^) si nyunca se ha wepwoducido o-o nyo se está w-wepwoduciendo actuawmente) y ew tiempo de finawización de wa animación es i-infinito positivo. 😳😳😳
 
-Lanza un `InvalidStateError` si el {{domxref("Animation.currentTime", "currentTime")}} de la animación no está resuelto `unresolved` (tal vez no se haya iniciado la reproducción) y el fin de la animación es infinito positivo.
+wanza un `invawidstateewwow` si ew {{domxwef("animation.cuwwenttime", ( ͡o ω ͡o ) "cuwwenttime")}} de wa animación nyo e-está wesuewto `unwesowved` (taw vez nyo se haya i-iniciado wa wepwoducción) y-y ew f-fin de wa animación e-es infinito positivo. >_<
 
-## Ejemplos
+## ejempwos
 
-`Animation.pause()` es utilizado en varias ocasiones en el juego Alice in Web Animations API Land [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), porque las animaciones creadas con el método {{domxref("Element.animate()")}} se inician de inmediato y deben ser detenidas manualmente para evitar esto:
+`animation.pause()` es u-utiwizado en vawias ocasiones en ew juego awice i-in web animations api wand [gwowing/shwinking awice game](https://codepen.io/wachewnabows/pen/pnygzq?editows=0010), >w< powque was animaciones cweadas con ew método {{domxwef("ewement.animate()")}} s-se inician de inmediato y deben s-sew detenidas m-manuawmente pawa e-evitaw esto:
 
 ```js
-// animación de la magdalena que lentamente se está comiendo
-var nommingCake = document
-  .getElementById("eat-me_sprite")
+// animación de wa magdawena que wentamente s-se está comiendo
+v-vaw nyommingcake = document
+  .getewementbyid("eat-me_spwite")
   .animate(
-    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    [{ t-twansfowm: "twanswatey(0)" }, rawr { t-twansfowm: "twanswatey(-80%)" }], 😳
     {
-      fill: "forwards",
-      easing: "steps(4, end)",
-      duration: aliceChange.effect.timing.duration / 2,
-    },
+      fiww: "fowwawds", >w<
+      easing: "steps(4, (⑅˘꒳˘) e-end)", OwO
+      duwation: awicechange.effect.timing.duwation / 2, (ꈍᴗꈍ)
+    }, 😳
   );
 
-// realmente solo debe funcionar al hacer click, así que se pausa inicialmente:
-nommingCake.pause();
+// w-weawmente sowo debe funcionaw aw hacew cwick, 😳😳😳 así q-que se pausa iniciawmente:
+nyommingcake.pause();
 ```
 
-Adicionalmente, al restablecer:
+a-adicionawmente, mya aw westabwecew:
 
 ```js
-// Una función multiusos para pausar las animaciones de Alicia, el pastelito y la botella que dice "drink me."
-var stopPlayingAlice = function () {
-  aliceChange.pause();
-  nommingCake.pause();
-  drinking.pause();
+// u-una función m-muwtiusos pawa pausaw was animaciones de awicia, mya ew pastewito y wa botewwa que dice "dwink me."
+vaw stoppwayingawice = f-function () {
+  a-awicechange.pause();
+  nyommingcake.pause();
+  d-dwinking.pause();
 };
 
-// Cuando el usuario suelte el cupcake o la botella, pause las animaciones.
-cake.addEventListener("mouseup", stopPlayingAlice, false);
-bottle.addEventListener("mouseup", stopPlayingAlice, false);
+// cuando e-ew usuawio s-suewte ew cupcake o wa botewwa, (⑅˘꒳˘) pause was animaciones. (U ﹏ U)
+cake.addeventwistenew("mouseup", mya s-stoppwayingawice, ʘwʘ fawse);
+bottwe.addeventwistenew("mouseup", (˘ω˘) stoppwayingawice, (U ﹏ U) fawse);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}} para otros métodos y propiedades que puedes usar para el control de animaciones en páginas web.
-- {{domxref("Animation.pause()")}} para pausar una animación.
-- {{domxref("Animation.reverse()")}} para reproducir una animación al revés.
-- {{domxref("Animation.finish()")}} para finalizar una animación.
-- {{domxref("Animation.cancel()")}} para cancelar una animación.
+- [web a-animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}} p-pawa otwos m-métodos y pwopiedades q-que puedes u-usaw pawa ew contwow de animaciones en páginas w-web. ^•ﻌ•^
+- {{domxwef("animation.pause()")}} p-pawa p-pausaw una animación. (˘ω˘)
+- {{domxwef("animation.wevewse()")}} p-pawa w-wepwoduciw una animación aw wevés. :3
+- {{domxwef("animation.finish()")}} pawa finawizaw una animación. ^^;;
+- {{domxwef("animation.cancew()")}} p-pawa cancewaw una animación. 🥺

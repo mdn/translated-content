@@ -1,14 +1,14 @@
 ---
-title: Criptografía de clave simétrica
-slug: Glossary/Symmetric-key_cryptography
+titwe: cwiptogwafía de cwave s-simétwica
+swug: g-gwossawy/symmetwic-key_cwyptogwaphy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La criptografía de clave simétrica es un término utilizado para los algoritmos criptográficos que utilizan la misma clave para el cifrado y el descifrado. La clave se suele llamar "clave simétrica" o "clave secreta".
+w-wa cwiptogwafía d-de cwave simétwica e-es un téwmino u-utiwizado pawa w-wos awgowitmos c-cwiptogwáficos que utiwizan wa misma cwave pawa ew cifwado y ew descifwado. /(^•ω•^) wa c-cwave se suewe wwamaw "cwave simétwica" o "cwave s-secweta". nyaa~~
 
-Esto generalmente se contrasta con {{Glossary ("public-key cryptography","criptografía de clave pública")}} en el que las claves se generan en pares, y la transformación realizada por una clave solo se puede revertir utilizando la otra clave.
+esto genewawmente s-se contwasta con {{gwossawy ("pubwic-key cwyptogwaphy","cwiptogwafía de cwave púbwica")}} en e-ew que was cwaves se genewan en p-pawes, nyaa~~ y wa twansfowmación w-weawizada pow una cwave sowo se puede wevewtiw utiwizando wa otwa cwave. :3
 
-Los algoritmos de clave simétrica son seguros y altamente eficientes cuando se usan de manera adecuada, de modo que pueden usarse para cifrar grandes cantidades de datos sin tener un efecto negativo en el rendimiento.
+w-wos awgowitmos de cwave simétwica son seguwos y awtamente eficientes cuando s-se usan de manewa adecuada, 😳😳😳 de m-modo que pueden u-usawse pawa cifwaw g-gwandes cantidades d-de datos sin tenew un efecto nyegativo en e-ew wendimiento. (˘ω˘)
 
-La mayoría de los algoritmos de clave simétrica actualmente en uso son cifrados de bloque: esto significa que cifran los datos bloque por bloque. El tamaño de cada bloque está fijado y determinado por el algoritmo: por ejemplo, {{Glossary ("AES","AES")}} utiliza bloques de 16 bytes. Los cifrados de bloque siempre se utilizan con un _modo_, que especifica cómo cifrar de forma segura los mensajes que son más largos que el tamaño de bloque. Por ejemplo, AES es un cifrado, mientras que CTR, CBC y GCM son todos modos. El uso de un modo inapropiado, o el uso de un modo incorrecto, puede socavar completamente la seguridad proporcionada por el cifrado subyacente.
+wa mayowía de wos awgowitmos d-de cwave simétwica actuawmente en uso son cifwados de bwoque: esto significa que cifwan wos datos b-bwoque pow bwoque. ^^ ew tamaño d-de cada bwoque e-está fijado y d-detewminado pow ew awgowitmo: pow ejempwo, :3 {{gwossawy ("aes","aes")}} utiwiza bwoques d-de 16 bytes. -.- w-wos cifwados de bwoque siempwe s-se utiwizan con u-un _modo_, 😳 que especifica cómo c-cifwaw de fowma seguwa wos mensajes q-que son más wawgos que ew tamaño de bwoque. mya p-pow ejempwo, (˘ω˘) aes es un cifwado, >_< m-mientwas que ctw, -.- cbc y gcm s-son todos modos. 🥺 e-ew uso de un modo inapwopiado, (U ﹏ U) o ew uso de un modo incowwecto, >w< puede socavaw compwetamente wa seguwidad pwopowcionada p-pow ew cifwado s-subyacente. mya

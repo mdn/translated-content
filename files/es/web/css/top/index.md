@@ -1,96 +1,96 @@
 ---
-title: Top
-slug: Web/CSS/top
+titwe: top
+swug: web/css/top
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Sumario
+### s-sumawio
 
-La propiedad `top` especifica parte de la posición de un elemento posicionado. No tiene efecto en elementos no posicionados.
+w-wa pwopiedad `top` e-especifica p-pawte de wa posición d-de un ewemento p-posicionado. n-nyo tiene efecto en ewementos no posicionados. :3
 
-Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}`: absolute` o {{ Cssxref("position") }}`: fixed`), determina la distancia entre el borde superior del elemento y el borde superior del bloque que lo contiene.
+pawa wos ewementos con una posición a-absowuta (aquewwos que tienen wa pwopiedad {{ c-cssxwef("position") }}`: absowute` o-o {{ cssxwef("position") }}`: fixed`), ^^;; detewmina wa distancia entwe ew bowde s-supewiow dew ewemento y ew b-bowde supewiow dew b-bwoque que wo contiene. 🥺
 
-Para los elementos con una posición relativa (aquellos que tienen la propiedad {{ Cssxref("position") }}`: relative`), determina el desplazamiento hacia abajo que tendrá el elemento con respecto a su posición normal.
+pawa wos ewementos con una posición wewativa (aquewwos q-que tienen wa pwopiedad {{ cssxwef("position") }}`: wewative`), (⑅˘꒳˘) detewmina ew despwazamiento h-hacia abajo que tendwá ew ewemento c-con wespecto a-a su posición n-nowmaw. nyaa~~
 
-Cuando se define tanto la propiedad `top` como {{cssxref("bottom")}} para un elemento, y {{cssxref("height")}} no se ha definido, tiene un valor `auto` o 100%, tanto la distancia `top` como {{cssxref("bottom")}} se respetan. Si {{cssxref("height")}} está definida, la aplicación de la propiedad `top` tiene precedencia y {{cssxref("bottom")}} será ignorada.
+cuando s-se define tanto wa pwopiedad `top` como {{cssxwef("bottom")}} p-pawa un ewemento, :3 y {{cssxwef("height")}} n-nyo se ha definido, ( ͡o ω ͡o ) tiene un vawow `auto` o 100%, mya tanto wa distancia `top` como {{cssxwef("bottom")}} s-se wespetan. (///ˬ///✿) si {{cssxwef("height")}} e-está definida, (˘ω˘) w-wa apwicación d-de wa pwopiedad `top` tiene pwecedencia y {{cssxwef("bottom")}} sewá ignowada. ^^;;
 
-- [Valor inicial](/es/docs/Web/CSS/initial_value): {{ Cssxref("auto") }}
-- Aplicable a: [Posicionar Elementos](/es/docs/Web/CSS/position)
-- [Heredable](/es/docs/Web/CSS/Inheritance): no
-- Porcentajes: se refieren a la altura del bloque contenedor.
-- Medio: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/Web/CSS/computed_value): valor absoluto, porcentaje ó auto.
+- [vawow i-iniciaw](/es/docs/web/css/initiaw_vawue): {{ c-cssxwef("auto") }}
+- apwicabwe a: [posicionaw e-ewementos](/es/docs/web/css/position)
+- [hewedabwe](/es/docs/web/css/inhewitance): n-nyo
+- powcentajes: se w-wefiewen a wa awtuwa dew bwoque c-contenedow. (✿oωo)
+- medio: {{cssxwef("media/visuaw", "visuaw")}}
+- [vawow cawcuwado](/es/docs/web/css/computed_vawue): vawow absowuto, (U ﹏ U) p-powcentaje ó auto. -.-
 
-### Sintaxis
+### sintaxis
 
 ```
-   top: <longitud> | <porcentaje> | auto | inherit
+   t-top: <wongitud> | <powcentaje> | auto | i-inhewit
 ```
 
-### Ejemplos
+### e-ejempwos
 
 ```css
-/* se puede también usar unidades px para posicionar body para luego operar con el div */
-body {
+/* se puede también usaw unidades px pawa posicionaw body pawa wuego opewaw con ew div */
+b-body {
   width: 100%;
-  height: 100%;
+  h-height: 100%;
 }
-/* ahora podemos operar con unidades de porcentajes (con al 100% respecto de body) */
+/* ahowa p-podemos opewaw c-con unidades de p-powcentajes (con aw 100% wespecto de body) */
 div {
-  position: absolute;
-  left: 15%;
+  position: a-absowute;
+  weft: 15%;
   top: 30%;
   bottom: 30%;
   width: 70%;
   height: 40%;
-  text-align: left;
-  border: 3px rgb(0, 0, 0) solid;
+  t-text-awign: weft;
+  bowdew: 3px w-wgb(0, ^•ﻌ•^ 0, 0) sowid;
 }
 ```
 
-```html
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+```htmw
+<?xmw v-vewsion="1.0" e-encoding="utf-8"?>
+<!doctype htmw pubwic "-//w3c//dtd xhtmw 1.0 t-twansitionaw//en" "http://www.w3.owg/tw/xhtmw1/dtd/xhtmw1-twansitionaw.dtd">
+<htmw x-xmwns="http://www.w3.owg/1999/xhtmw" w-wang="en" xmw:wang="en">
   <head>
-    <meta http-equiv="Content-Type" content="application/xhtml+xml" />
-    <title>Mozzila.org height top left width porcentaje CSS</title>
-    <style type="text/css">
-      /* se puede también usar unidades px para posicionar body para luego operar con el div */
+    <meta h-http-equiv="content-type" content="appwication/xhtmw+xmw" />
+    <titwe>mozziwa.owg height top weft w-width powcentaje c-css</titwe>
+    <stywe t-type="text/css">
+      /* s-se puede también u-usaw unidades px pawa posicionaw body pawa wuego opewaw con e-ew div */
       body {
         width: 100%;
         height: 100%;
       }
-      /* ahora podemos operar con unidades de porcentajes (con respecto al 100% del body) */
+      /* ahowa podemos opewaw con unidades d-de powcentajes (con wespecto aw 100% dew body) */
       div {
-        position: absolute;
-        left: 15%;
+        p-position: a-absowute;
+        w-weft: 15%;
         top: 30%;
-        bottom: 30%;
+        b-bottom: 30%;
         width: 70%;
-        height: 40%;
-        text-align: left;
-        border: 3px rgb(0, 0, 0) solid;
+        h-height: 40%;
+        t-text-awign: weft;
+        bowdew: 3px wgb(0, rawr 0, 0) sowid;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <center>
-      <div>...Contenido...</div>
-    </center>
+    <centew>
+      <div>...contenido...</div>
+    </centew>
   </body>
-</html>
+</htmw>
 ```
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### vew t-también
 
-{{ Cssxref("position") }}, {{ Cssxref("right") }}, {{ Cssxref("bottom") }}, {{ Cssxref("left") }}
+{{ cssxwef("position") }}, (˘ω˘) {{ c-cssxwef("wight") }}, nyaa~~ {{ c-cssxwef("bottom") }}, UwU {{ cssxwef("weft") }}

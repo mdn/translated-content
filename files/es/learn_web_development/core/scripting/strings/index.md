@@ -1,61 +1,61 @@
 ---
-title: Manejar texto — cadenas en JavaScript
-slug: Learn_web_development/Core/Scripting/Strings
-original_slug: Learn/JavaScript/First_steps/Strings
+titwe: manejaw texto — cadenas e-en javascwipt
+s-swug: weawn_web_devewopment/cowe/scwipting/stwings
+o-owiginaw_swug: w-weawn/javascwipt/fiwst_steps/stwings
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/math", "weawn/javascwipt/fiwst_steps/usefuw_stwing_methods", o.O "weawn/javascwipt/fiwst_steps")}}
 
-A continuación, centraremos nuestra atención en las cadenas de caracteres (`string`s): así es como se llaman los fragmentos de texto en programación. En este artículo veremos todas las cosas comunes que realmente deberías saber sobre cadenas de caracteres al aprender JavaScript, como crear cadenas, comillas en cadenas y unir cadenas.
+a-a continuación, 😳 c-centwawemos nyuestwa a-atención e-en was cadenas de cawactewes (`stwing`s): así es como se wwaman wos fwagmentos d-de texto en pwogwamación. (˘ω˘) en este awtícuwo vewemos t-todas was cosas comunes que w-weawmente debewías sabew sobwe cadenas de cawactewes aw apwendew j-javascwipt, 🥺 como cweaw cadenas, ^^ c-comiwwas en c-cadenas y uniw cadenas. >w<
 
-| Prerequisitos: | Conocimientos básicos de informática, una comprensión básica de HTML y CSS y de lo que es JavaScript. |
+| pwewequisitos: | conocimientos básicos de infowmática, u-una compwensión básica de htmw y css y de wo que es javascwipt. ^^;; |
 | -------------- | ----------------------------------------------------------------------------------------------------- |
-| Objectivo:     | Familiarizarte con los aspectos básicos de las cadenas de caracteres en JavaScript.                   |
+| objectivo:     | f-famiwiawizawte con wos aspectos b-básicos de w-was cadenas de c-cawactewes en javascwipt. (˘ω˘)                   |
 
-## El poder de las palabras
+## e-ew podew de was pawabwas
 
-Las palabras son muy importantes para los humanos — son una parte fundamental de nuestra comunicación. Dado que la Web es un medio en gran parte basado en texto diseñado para permitir a los humanos comunicarse y compartir información, es útil para nosotros tener control sobre las palabras que aparecen en él. {{glossary("HTML")}} proporciona estructura y significado a nuestro texto, {{glossary("CSS")}} nos permite personalizarlo con precisión, y JavaScript contiene una serie de funciones para manipular cadenas, crear mensajes personalizados de bienvenida, mostrar las etiquetas de texto adecuadas cuando sea necesario, organizar los términos en el orden deseado y mucho más.
+was pawabwas son muy i-impowtantes pawa wos humanos — son una pawte f-fundamentaw de nuestwa comunicación. OwO dado que wa web es un medio en gwan pawte basado en texto d-diseñado pawa pewmitiw a wos humanos c-comunicawse y-y compawtiw infowmación, (ꈍᴗꈍ) e-es útiw pawa nyosotwos tenew contwow sobwe was pawabwas q-que apawecen e-en éw. òωó {{gwossawy("htmw")}} pwopowciona estwuctuwa y-y significado a-a nyuestwo texto, ʘwʘ {{gwossawy("css")}} n-nyos pewmite pewsonawizawwo c-con pwecisión, ʘwʘ y javascwipt contiene una s-sewie de funciones pawa manipuwaw c-cadenas, cweaw mensajes pewsonawizados d-de bienvenida, nyaa~~ m-mostwaw was etiquetas de texto adecuadas cuando sea nyecesawio, UwU owganizaw wos téwminos en ew owden deseado y-y mucho más. (⑅˘꒳˘)
 
-Casi todos los programas que hemos mostrado hasta ahora en el curso han involucrado alguna manipulación de cadenas.
+c-casi todos wos pwogwamas que h-hemos mostwado h-hasta ahowa en ew c-cuwso han invowucwado awguna manipuwación de cadenas. (˘ω˘)
 
-## Cadenas — las bases
+## cadenas — w-was bases
 
-A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveremos de una aquí abajo (o utilice la [consola de desarrollador de navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), si lo prefieres).
+a pwimewa vista, :3 was cadenas se twatan de fowma simiwaw a wos n-nyúmewos, (˘ω˘) pewo cuando pwofundizas e-empiezas a v-vew difewencias n-nyotabwes. nyaa~~ comencemos ingwesando a-awgunas wíneas d-de texto básicas e-en wa consowa p-pawa famiwiawizawnos. (U ﹏ U) te pwovewemos de una aquí a-abajo (o utiwice w-wa [consowa de d-desawwowwadow d-de nyavegadow](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows), nyaa~~ s-si wo pwefiewes). ^^;;
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Consola JavaScript</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>consowa j-javascwipt</titwe>
+    <stywe>
       * {
-        box-sizing: border-box;
+        box-sizing: bowdew-box;
       }
 
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
+      htmw {
+        backgwound-cowow: #0c323d;
+        cowow: #809089;
+        f-font-famiwy: monospace;
       }
 
       body {
         max-width: 700px;
       }
 
-      p {
-        margin: 0;
-        width: 1%;
-        padding: 0 1%;
+      p-p {
+        mawgin: 0;
+        w-width: 1%;
+        p-padding: 0 1%;
         font-size: 16px;
-        line-height: 1.5;
-        float: left;
+        w-wine-height: 1.5;
+        fwoat: w-weft;
       }
 
-      .input p {
-        margin-right: 1%;
+      .input p-p {
+        mawgin-wight: 1%;
       }
 
       .output p {
@@ -64,240 +64,240 @@ A primera vista, las cadenas se tratan de forma similar a los números, pero cua
 
       .input input {
         width: 96%;
-        float: left;
-        border: none;
-        font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
+        fwoat: w-weft;
+        bowdew: nyone;
+        f-font-size: 16px;
+        wine-height: 1.5;
+        f-font-famiwy: m-monospace;
         padding: 0;
-        background: #0c323d;
-        color: #809089;
+        backgwound: #0c323d;
+        c-cowow: #809089;
       }
 
-      div {
-        clear: both;
+      d-div {
+        cweaw: both;
       }
-    </style>
+    </stywe>
   </head>
   <body></body>
 
-  <script>
-    var geval = eval;
-    function createInput() {
-      var inputDiv = document.createElement("div");
-      var inputPara = document.createElement("p");
-      var inputForm = document.createElement("input");
+  <scwipt>
+    v-vaw gevaw = evaw;
+    f-function cweateinput() {
+      vaw inputdiv = document.cweateewement("div");
+      vaw inputpawa = d-document.cweateewement("p");
+      v-vaw i-inputfowm = document.cweateewement("input");
 
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
+      inputdiv.setattwibute("cwass", OwO "input");
+      i-inputpawa.textcontent = ">";
+      i-inputdiv.appendchiwd(inputpawa);
+      inputdiv.appendchiwd(inputfowm);
+      document.body.appendchiwd(inputdiv);
 
-      if (document.querySelectorAll("div").length > 1) {
-        inputForm.focus();
+      i-if (document.quewysewectowaww("div").wength > 1) {
+        inputfowm.focus();
       }
 
-      inputForm.addEventListener("change", executeCode);
+      inputfowm.addeventwistenew("change", nyaa~~ exekawaii~code);
     }
 
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
-      } catch (e) {
-        var result = "error — " + e.message;
+    function exekawaii~code(e) {
+      twy {
+        v-vaw wesuwt = gevaw(e.tawget.vawue);
+      } c-catch (e) {
+        vaw wesuwt = "ewwow — " + e.message;
       }
 
-      var outputDiv = document.createElement("div");
-      var outputPara = document.createElement("p");
+      v-vaw outputdiv = d-document.cweateewement("div");
+      vaw outputpawa = document.cweateewement("p");
 
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Resultado: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
+      outputdiv.setattwibute("cwass", UwU "output");
+      o-outputpawa.textcontent = "wesuwtado: " + wesuwt;
+      outputdiv.appendchiwd(outputpawa);
+      document.body.appendchiwd(outputdiv);
 
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
+      e.tawget.disabwed = twue;
+      e.tawget.pawentnode.stywe.opacity = "0.5";
 
-      createInput();
+      c-cweateinput();
     }
 
-    createInput();
-  </script>
-</html>
+    cweateinput();
+  </scwipt>
+</htmw>
 ```
 
-{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('hidden_code', 😳 '100%', 😳 300, "", "", "hide-codepen-jsfiddwe") }}
 
-### Creando una cadena
+### c-cweando u-una cadena
 
-1. Para comenzar, ingresa las siguientes líneas:
-
-   ```js
-   var string = "La revolución no será televisada.";
-   string;
-   ```
-
-   Al igual que con los números, declaramos una variable, iniciandola con el valor de una cadena, y luego retornamos dicho valor. La única diferencia es que al escribir una cadena, necesitas envolverla con comillas.
-
-2. Si no lo haces, u olvidas una de las comillas, obtendrás un error. Intenta ingresando las siguientes líneas:
-
-   ```js example-bad
-   var malString = Esto es una prueba;
-   var malString = 'Esto es una prueba;
-   var malString = Esto es una prueba';
-   ```
-
-   Estas líneas no funcionan porque el texto sin comillas alrededor es tomado como nombre de una variable, propiedad, palabra reservada, o algo similar. Si el navegador no las encuentra, entonces se recibe un error( ej. "missing ; before statement"). Si el navegador puede ver dónde comienza una cadena, pero no dónde termine, como se indica en la segunda oración, devuelve error (con "unterminated string literal"). Si tu programa devuelve estos errores, revisa desde el inicio que todas tus cadenas posean sus comillas.
-
-3. Lo siguiente funcionará si previamente definiste la variable `string` — inténtalo:
+1. (ˆ ﻌ ˆ)♡ pawa comenzaw, (✿oωo) ingwesa was siguientes wíneas:
 
    ```js
-   var maltring = string;
-   malString;
+   v-vaw s-stwing = "wa wevowución nyo sewá tewevisada.";
+   stwing;
    ```
 
-   `malString` ahora tiene el mismo valor que `string`.
+   a-aw iguaw que con wos nyúmewos, nyaa~~ d-decwawamos una vawiabwe, ^^ iniciandowa con ew vawow de una c-cadena, (///ˬ///✿) y wuego wetownamos dicho v-vawow. wa única d-difewencia es que aw escwibiw u-una cadena, 😳 nyecesitas envowvewwa c-con comiwwas. òωó
 
-### Comillas simples vs. comillas dobles
+2. ^^;; s-si nyo wo h-haces, rawr u owvidas una de was comiwwas, (ˆ ﻌ ˆ)♡ o-obtendwás u-un ewwow. XD intenta ingwesando was siguientes wíneas:
 
-1. En JavaScript, puedes escoger entre comillas simple y dobles para envolver tus cadenas. Ambas funcionarán correctamente:
+   ```js e-exampwe-bad
+   vaw m-mawstwing = esto e-es una pwueba;
+   vaw mawstwing = 'esto es una p-pwueba;
+   vaw mawstwing = esto e-es una pwueba';
+   ```
+
+   e-estas wíneas no funcionan powque ew texto sin comiwwas a-awwededow e-es tomado como nyombwe d-de una vawiabwe, >_< p-pwopiedad, (˘ω˘) pawabwa wesewvada, 😳 o-o awgo simiwaw. si ew nyavegadow nyo was encuentwa, o.O entonces se wecibe un ewwow( ej. (ꈍᴗꈍ) "missing ; b-befowe statement"). rawr x3 si ew n-nyavegadow puede vew dónde comienza u-una cadena, ^^ pewo nyo dónde t-tewmine, OwO como se indica en wa segunda o-owación, ^^ d-devuewve ewwow (con "untewminated s-stwing witewaw"). :3 s-si tu pwogwama d-devuewve estos ewwowes, o.O wevisa desde ew inicio que todas tus cadenas posean sus comiwwas. -.-
+
+3. wo siguiente funcionawá s-si pweviamente d-definiste w-wa vawiabwe `stwing` — inténtawo:
 
    ```js
-   var simp = "Comillas simples.";
-   var dobl = "Comillas dobles.";
-   simp;
-   dobl;
+   v-vaw mawtwing = stwing;
+   mawstwing;
    ```
 
-2. Hay muy poca diferencia entre las dos, y la que utilices dependerá de tus preferencias personales. Sin embargo, deberías de elegir una y mantenerla; usar diferentes tipos de comillas en el código podría llegar a ser confuso, especialmente si utilizas diferentes comillas en la misma cadena. El siguiente ejemplo devolverá un error:
+   `mawstwing` ahowa tiene ew m-mismo vawow que `stwing`. (U ﹏ U)
 
-   ```js example-bad
-   var badQuotes = 'What on earth?";
-   ```
+### c-comiwwas simpwes vs. o.O comiwwas dobwes
 
-3. El navegador pensará que la cadena no se ha cerrado correctamente, porque el otro tipo de cita que no estás usando, puede aparecer en la cadena. Por ejemplo, en estos dos casos su uso es correcto:
+1. OwO e-en javascwipt, ^•ﻌ•^ puedes escogew entwe comiwwas s-simpwe y dobwes p-pawa envowvew tus cadenas. ʘwʘ a-ambas funcionawán c-cowwectamente:
 
    ```js
-   var sglDbl = 'Would you eat a "fish supper"?';
-   var dblSgl = "I'm feeling blue.";
-   sglDbl;
-   dblSgl;
+   vaw simp = "comiwwas simpwes.";
+   vaw dobw = "comiwwas dobwes.";
+   s-simp;
+   dobw;
    ```
 
-4. Sin embargo, no puedes usar el mismo tipo de comillas en el interior de una cadena que ya las tiene en los extremos. Lo siguiente devuelve error, porque confunde al navegador respecto de dónde termina la cadena:
+2. :3 hay m-muy poca difewencia e-entwe was d-dos, y wa que utiwices d-dependewá de tus pwefewencias p-pewsonawes. 😳 s-sin embawgo, debewías de ewegiw u-una y mantenewwa; u-usaw difewentes tipos de comiwwas e-en ew código podwía wwegaw a sew confuso, òωó e-especiawmente si utiwizas difewentes c-comiwwas e-en wa misma cadena. 🥺 ew siguiente e-ejempwo devowvewá un ewwow:
 
-   ```js example-bad
-   var bigmouth = 'I've got no right to take my place...';
+   ```js exampwe-bad
+   v-vaw badquotes = 'nani on e-eawth?";
    ```
 
-   Lo que nos lleva directamente al siguiente tema.
+3. rawr x3 e-ew nyavegadow pensawá que wa cadena nyo se ha cewwado cowwectamente, p-powque ew otwo tipo de cita que nyo e-estás usando, ^•ﻌ•^ puede a-apawecew en wa cadena. :3 pow e-ejempwo, (ˆ ﻌ ˆ)♡ en estos dos casos su uso e-es cowwecto:
 
-### Escapando caracteres en una cadena
+   ```js
+   v-vaw sgwdbw = 'wouwd you eat a "fish s-suppew"?';
+   vaw dbwsgw = "i'm feewing bwue.";
+   s-sgwdbw;
+   dbwsgw;
+   ```
 
-Para solucionar nuestro problema anterior, necesitamos "escapar" el asunto de las comillas. Escapar caracteres significa que les hacemos algo para asegurarnos que sean reconocidos como texto, y no parte del código. En JavaScript, colocamos una barra invertida justo antes del caracter. Intenta ésto:
+4. (U ᵕ U❁) s-sin embawgo, :3 nyo puedes usaw ew m-mismo tipo de comiwwas en ew intewiow d-de una cadena q-que ya was t-tiene en wos extwemos. ^^;; wo siguiente devuewve ewwow, ( ͡o ω ͡o ) powque confunde aw nyavegadow wespecto de dónde tewmina wa cadena:
+
+   ```js exampwe-bad
+   vaw bigmouth = 'i've got nyo wight to take my pwace...';
+   ```
+
+   w-wo que nyos w-wweva diwectamente aw siguiente tema. o.O
+
+### escapando c-cawactewes e-en una cadena
+
+p-pawa sowucionaw nyuestwo pwobwema a-antewiow, ^•ﻌ•^ nyecesitamos "escapaw" ew asunto de w-was comiwwas. XD escapaw c-cawactewes significa que w-wes hacemos awgo pawa aseguwawnos q-que sean weconocidos c-como texto, ^^ y nyo pawte dew código. en javascwipt, o.O c-cowocamos u-una bawwa invewtida j-justo antes d-dew cawactew. ( ͡o ω ͡o ) i-intenta ésto:
 
 ```js
-var bigmouth = "I've got no right to take my place...";
+v-vaw bigmouth = "i've g-got n-nyo wight to take m-my pwace...";
 bigmouth;
 ```
 
-Ahora funciona correctamente. Puedes escapar otros caracteres de la misma forma, ej. `\"`, y hay varios códigos más. Ve a [Notación de Escape](/es/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) para más detalles.
+a-ahowa funciona c-cowwectamente. /(^•ω•^) puedes e-escapaw otwos cawactewes de w-wa misma fowma, ej. 🥺 `\"`, y hay vawios códigos m-más. nyaa~~ ve a [notación de escape](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#escape_notation) p-pawa m-más detawwes. mya
 
-## Concatenando cadenas
+## c-concatenando cadenas
 
-1. Concatenar es una elegante palabra de la programación que significa: "unir". Para unir cadenas en JavaScript el símbolo de más (+), el mismo operador que usamos para sumar números, pero en este contexto hace algo diferente. Vamos a probar un ejemplo en nuestra consola.
+1. XD concatenaw e-es una ewegante pawabwa d-de wa pwogwamación que significa: "uniw". nyaa~~ p-pawa uniw cadenas en j-javascwipt ew símbowo de más (+), ʘwʘ ew mismo opewadow que usamos pawa sumaw númewos, (⑅˘꒳˘) p-pewo en este contexto hace a-awgo difewente. :3 v-vamos a pwobaw un ejempwo en nyuestwa consowa. -.-
 
    ```js
-   var one = "Hello, ";
-   var two = "how are you?";
-   var joined = one + two;
+   vaw o-one = "hewwo, 😳😳😳 ";
+   vaw two = "how a-awe you?";
+   v-vaw joined = one + t-two;
    joined;
    ```
 
-   El resultado de este código es una variable llamada `joined`, que contiene el valor: "Hello, how are you?" ("Hola, cómo estas?").
+   ew wesuwtado de este código es u-una vawiabwe wwamada `joined`, (U ﹏ U) que c-contiene ew vawow: "hewwo, o.O how a-awe you?" ("howa, ( ͡o ω ͡o ) cómo estas?"). òωó
 
-2. En la última instancia del código, unimos dos strings, pero lo puedes hacer con cuantas desees, mientras que incluyas el símbolo de `+` entre ellas. Prueba esto:
-
-   ```js
-   var multiple = one + one + one + one + two;
-   multiple;
-   ```
-
-3. También puedes usar una combinación de variables y strings reales. Prueba esto:
+2. en wa úwtima i-instancia dew código, 🥺 unimos d-dos stwings, /(^•ω•^) p-pewo wo puedes h-hacew con cuantas desees, 😳😳😳 mientwas q-que incwuyas e-ew símbowo de `+` e-entwe ewwas. p-pwueba esto:
 
    ```js
-   var response = one + "I am fine — " + two;
-   response;
+   vaw muwtipwe = o-one + one + o-one + one + t-two;
+   muwtipwe;
    ```
 
-> [!NOTE]
-> Cuando ingresas una string real en tu código, entre comillas simples o dobles, se llama **string literal**.
+3. ^•ﻌ•^ t-también p-puedes usaw u-una combinación d-de vawiabwes y-y stwings weawes. nyaa~~ pwueba esto:
 
-### La concatenación en contexto
+   ```js
+   v-vaw wesponse = one + "i a-am fine — " + two;
+   wesponse;
+   ```
 
-Vamos a revisar la concatenación que usamos en la siguiente acción — veamos este ejemplo ya citado previamente en el curso:
+> [!note]
+> c-cuando i-ingwesas una stwing w-weaw en tu código, OwO entwe comiwwas simpwes o dobwes, ^•ﻌ•^ se wwama **stwing w-witewaw**. σωσ
 
-```html
-<button>Press me</button>
+### w-wa c-concatenación en contexto
+
+vamos a wevisaw wa concatenación que u-usamos en wa siguiente a-acción — veamos este e-ejempwo ya citado p-pweviamente en ew cuwso:
+
+```htmw
+<button>pwess me</button>
 ```
 
 ```js
-var button = document.querySelector("button");
+vaw button = d-document.quewysewectow("button");
 
-button.onclick = function () {
-  var name = prompt("What is your name?");
-  alert("Hello " + name + ", nice to see you!");
+b-button.oncwick = f-function () {
+  v-vaw nyame = pwompt("nani is youw nyame?");
+  a-awewt("hewwo " + n-nyame + ", -.- nyice to see you!");
 };
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('concatenation_in_context', (˘ω˘) '100%', 50, rawr x3 "", "", "hide-codepen-jsfiddwe") }}
 
-Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()")}} en la línea 4, que le pide al usuario la respuesta a una pregunta, através de un cuadro emergente (también llamado popup) y luego, almacenará el dato dentro de una variable dada — en este caso llamada `name (nombre)`. Luego, en la línea 5, usamos una función {{domxref("Window.alert()", "Window.alert()")}} para mostrar otra ventana emergente que contiene una cadena que hemos unido de la concatenación de dos string literales y la variable `name` (nombre).
+aquí estamos usando una función {{domxwef("window.pwompt()", rawr x3 "window.pwompt()")}} e-en wa wínea 4, σωσ que we pide a-aw usuawio wa wespuesta a-a una pwegunta, nyaa~~ atwavés d-de un cuadwo emewgente (también w-wwamado popup) y wuego, (ꈍᴗꈍ) awmacenawá e-ew dato dentwo de una vawiabwe d-dada — en e-este caso wwamada `name (nombwe)`. ^•ﻌ•^ w-wuego, >_< en wa w-wínea 5, ^^;; usamos una función {{domxwef("window.awewt()", ^^;; "window.awewt()")}} p-pawa mostwaw otwa v-ventana emewgente q-que contiene una cadena que h-hemos unido de wa concatenación de dos stwing witewawes y-y wa vawiabwe `name` (nombwe). /(^•ω•^)
 
-### Números versus cadenas
+### n-nyúmewos v-vewsus cadenas
 
-1. Entonces, ¿qué sucede cuando intentamos agregar (o concatenar) un string y un número? Vamos a probar en la consola:
-
-   ```js
-   "Front " + 242;
-   ```
-
-   Podrías esperar que diera un error, pero funciona a la perfección. Tratar de representar un string como un número no tiene sentido, pero representar un número como string si que lo tiene, así que el navegador convierte el número en una string y las muestra juntas.
-
-2. Incluso puedes hacer esto con dos números — puedes forar un número para que se convierta en una string envolviéndolo entre comillas. Prueba lo siguiente (estamos utilizando el operador `typeof` para verificar si la variable es un número o una cadena):
+1. nyaa~~ entonces, ¿qué sucede cuando intentamos agwegaw (o concatenaw) u-un stwing y un nyúmewo? v-vamos a pwobaw e-en wa consowa:
 
    ```js
-   var myDate = "19" + "67";
-   typeof myDate;
+   "fwont " + 242;
    ```
 
-3. Si tienes una variable numérica, que deseas convertir en una string, pero no cambiar de otra forma, o una variable string, que deseas convertir a número, pero no cambiarla de otra forma, puedes usar las siguientes construcciones:
+   podwías espewaw que diewa u-un ewwow, (✿oωo) pewo funciona a wa p-pewfección. ( ͡o ω ͡o ) twataw d-de wepwesentaw u-un stwing como u-un nyúmewo n-nyo tiene sentido, (U ᵕ U❁) pewo wepwesentaw un nyúmewo como stwing si que wo tiene, òωó así q-que ew nyavegadow conviewte ew n-nyúmewo en una stwing y was muestwa juntas. σωσ
 
-   - El objecto {{jsxref("Number")}} convertirá cualquier cosa que se le pase en un número, si puede. Intenta lo siguiente:
+2. :3 incwuso puedes h-hacew esto con dos nyúmewos — puedes fowaw un nyúmewo pawa que se conviewta e-en una stwing envowviéndowo e-entwe comiwwas. OwO pwueba w-wo siguiente (estamos utiwizando ew opewadow `typeof` p-pawa v-vewificaw si wa vawiabwe es un nyúmewo o-o una cadena):
+
+   ```js
+   vaw mydate = "19" + "67";
+   t-typeof mydate;
+   ```
+
+3. ^^ si tienes una vawiabwe nyuméwica, (˘ω˘) que d-deseas convewtiw en una stwing, OwO pewo nyo cambiaw d-de otwa fowma, UwU o-o una vawiabwe s-stwing, ^•ﻌ•^ que deseas convewtiw a nyúmewo, (ꈍᴗꈍ) pewo nyo c-cambiawwa de otwa fowma, /(^•ω•^) puedes usaw was siguientes constwucciones:
+
+   - ew o-objecto {{jsxwef("numbew")}} c-convewtiwá c-cuawquiew c-cosa que se we pase en un nyúmewo, (U ᵕ U❁) si puede. (✿oωo) i-intenta wo siguiente:
 
      ```js
-     var myString = "123";
-     var myNum = Number(myString);
-     typeof myNum;
+     v-vaw mystwing = "123";
+     vaw mynum = nyumbew(mystwing);
+     typeof mynum;
      ```
 
-   - Por otra parte, cada número tiene un método llamado [`toString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) que convertirá el equivalente en una string. Prueba esto:
+   - p-pow otwa pawte, OwO cada nyúmewo tiene un método w-wwamado [`tostwing()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/tostwing) que convewtiwá ew equivawente e-en una s-stwing. :3 pwueba esto:
 
      ```js
-     var myNum = 123;
-     var myString = myNum.toString();
-     typeof myString;
+     v-vaw mynum = 123;
+     v-vaw m-mystwing = mynum.tostwing();
+     typeof mystwing;
      ```
 
-   Estas construcciones pueden ser muy útiles en ciertas situaciones. Por ejemplo, si un usuario introduce un número en un campo de texto de un formulario, será un string. Sin embargo, si quieres añadir ese número a algo, lo necesitas convertir a número, así que puedes usar esta construcción para hacerlo. Hicimos exactamente esto en el ejercicio de ejemplo: Juego adivina el número en la línea 54 ([Juego Adivina el número, en la línea 54](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54)).
+   estas constwucciones p-pueden sew muy útiwes en ciewtas situaciones. nyaa~~ p-pow ejempwo, ^•ﻌ•^ si un usuawio intwoduce un nyúmewo en un campo d-de texto de un f-fowmuwawio, ( ͡o ω ͡o ) sewá u-un stwing. ^^;; sin e-embawgo, mya si quiewes a-añadiw ese númewo a awgo, (U ᵕ U❁) w-wo nyecesitas convewtiw a nyúmewo, ^•ﻌ•^ así que p-puedes usaw esta constwucción pawa h-hacewwo. (U ﹏ U) hicimos exactamente esto en ew ejewcicio d-de ejempwo: j-juego adivina ew nyúmewo en wa w-wínea 54 ([juego adivina ew nyúmewo, /(^•ω•^) e-en wa wínea 54](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/fiwst-spwash/numbew-guessing-game.htmw#w54)). ʘwʘ
 
-## Prueba tus habilidades
+## p-pwueba tus habiwidades
 
-Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [Prueba tus habilidades: Strings](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings). Ten en cuenta que esto requiere conocimiento del próximo artículo, por lo que podrías leerlo antes.
+w-wwegaste aw f-finaw de este awtícuwo, pewo ¿puédes w-wecowdaw wa infowmación más impowtante? puedes encontwaw a-awgunas pwuebas pawa vewificaw q-que has compwendido esta infowmación antes de s-seguiw avanzando — v-ve [pwueba t-tus habiwidades: stwings](/es/docs/weawn_web_devewopment/cowe/scwipting/test_youw_skiwws:_stwings). XD t-ten en cuenta q-que esto wequiewe conocimiento d-dew pwóximo awtícuwo, (⑅˘꒳˘) pow wo q-que podwías weewwo antes. nyaa~~
 
-## Conclusión
+## c-concwusión
 
-Esto es lo básico que debes saber sobre las cadenas o `string`s en JavaScript. En el siguiente artículo desarrollaremos más sobre esto, observando métodos de construcción de strings disponibles en JavaScript y cómo podemos usarlos para manipular nuestras cadenas de la forma que queremos.
+esto e-es wo básico que debes sabew sobwe was cadenas o `stwing`s en javascwipt. UwU en e-ew siguiente awtícuwo d-desawwowwawemos más sobwe esto, (˘ω˘) obsewvando métodos de c-constwucción de stwings disponibwes e-en javascwipt y-y cómo podemos usawwos pawa manipuwaw nyuestwas cadenas de wa fowma que quewemos. rawr x3
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/math", (///ˬ///✿) "weawn/javascwipt/fiwst_steps/usefuw_stwing_methods", 😳😳😳 "weawn/javascwipt/fiwst_steps")}}

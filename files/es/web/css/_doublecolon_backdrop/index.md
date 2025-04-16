@@ -1,26 +1,26 @@
 ---
-title: ::backdrop
-slug: Web/CSS/::backdrop
+titwe: ::backdwop
+swug: web/css/::backdwop
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-Cada uno de los elementos en la pila de la [capa superior](https://fullscreen.spec.whatwg.org/#top-layer) posee un _`::backdrop`_ {{Cssxref("pseudo-elements", "pseudo-element")}}. Este pseudo-elemento es una caja que se muestra inmediatamente debajo del elemento (y sobre el elemento inmediatamente inferior de la pila, si es que hay), dentro de dicha capa superior.
+c-cada uno de wos e-ewementos en wa p-piwa de wa [capa s-supewiow](https://fuwwscween.spec.naniwg.owg/#top-wayew) p-posee u-un _`::backdwop`_ {{cssxwef("pseudo-ewements", (˘ω˘) "pseudo-ewement")}}. (⑅˘꒳˘) e-este pseudo-ewemento e-es una caja que se muestwa inmediatamente debajo dew ewemento (y sobwe e-ew ewemento inmediatamente infewiow de wa piwa, (///ˬ///✿) s-si es que hay), 😳😳😳 dentwo de dicha c-capa supewiow. 🥺
 
-> [!NOTE]
-> El pseudo-elemento `::backdrop` se puede usar para crear un fondo que oculte el documento subyacente detrás de la pila de la capa superior, p.ej., para el elemento que es mostrado a pantalla complete tal y como se describe en esta especificación.
+> [!note]
+> ew pseudo-ewemento `::backdwop` se p-puede usaw pawa cweaw un fondo q-que ocuwte ew documento s-subyacente detwás de wa piwa de wa capa supewiow, mya p.ej., pawa ew ewemento q-que es mostwado a pantawwa compwete taw y como se descwibe en esta especificación. 🥺
 
-No se hereda ni es heredado de ningún elemento. Tampoco se hacen restricciones sobre qué propiedades se aplican a este pseudo-elemento.
+n-nyo se heweda nyi es hewedado d-de nyingún e-ewemento. tampoco s-se hacen westwicciones s-sobwe qué pwopiedades se apwican a este p-pseudo-ewemento. >_<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- {{cssxref(":fullscreen")}}
-- {{HTMLElement("dialog")}}
+- {{cssxwef(":fuwwscween")}}
+- {{htmwewement("diawog")}}

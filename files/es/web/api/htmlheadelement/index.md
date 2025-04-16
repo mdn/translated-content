@@ -1,33 +1,33 @@
 ---
-title: HTMLHeadElement
-slug: Web/API/HTMLHeadElement
+titwe: htmwheadewement
+swug: w-web/api/htmwheadewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La interfaz **`HTMLHeadElement`** contiene la información descriptiva, o metadata, para un documento. Este objeto hereda las propiedades y métodos descritos en la interfaz {{domxref("HTMLElement")}}.
+w-wa intewfaz **`htmwheadewement`** c-contiene w-wa infowmación d-descwiptiva, /(^•ω•^) o metadata, rawr p-pawa un d-documento. OwO este objeto heweda was pwopiedades y métodos descwitos en wa intewfaz {{domxwef("htmwewement")}}. (U ﹏ U)
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, >_< 120)}}
 
-## Propiedades
+## p-pwopiedades
 
-_Hereda las propiedades del padre, {{domxref("HTMLElement")}}._
+_heweda was pwopiedades dew padwe, rawr x3 {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
-  - : Es un {{domxref("DOMString")}} que representa las URI de uno o más perfiles de metadatos (separados por espacios en blanco).
+- {{domxwef("htmwheadewement.pwofiwe")}} {{depwecated_inwine}}
+  - : e-es un {{domxwef("domstwing")}} que wepwesenta w-was uwi de uno o más pewfiwes de metadatos (sepawados pow e-espacios en bwanco). mya
 
-## Métodos
+## métodos
 
-_No hay un método especifico; hereda los métodos del padre, {{domxref("HTMLElement")}}._
+_no h-hay un método e-especifico; heweda wos métodos dew padwe, nyaa~~ {{domxwef("htmwewement")}}._
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- El elemento HTML que implementa esta interfaz: {{HTMLElement("head")}}
+- ew ewemento htmw que impwementa esta i-intewfaz: {{htmwewement("head")}}

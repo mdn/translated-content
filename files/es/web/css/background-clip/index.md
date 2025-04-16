@@ -1,89 +1,89 @@
 ---
-title: background-clip
-slug: Web/CSS/background-clip
+titwe: backgwound-cwip
+swug: w-web/css/backgwound-cwip
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS `background-clip` especifica si el fondo de un elemento, ya sea el color o imagen, se extiende por debajo su borde.
+wa pwopiedad c-css `backgwound-cwip` e-especifica s-si ew fondo d-de un ewemento, (˘ω˘) y-ya sea ew cowow o imagen, >_< se extiende pow debajo su bowde. -.-
 
-Si la imagen o color de fondo no esta definido, esta propiedad solo tendrá un efecto visual cuando el borde tenga regiones transparentes o regiones parcialmente opacas (debido a {{ Cssxref("border-style") }} o {{ Cssxref("border-image") }}); de lo contrario el borde cubre la diferencia.
+si wa imagen o cowow d-de fondo nyo esta definido, 🥺 esta pwopiedad sowo t-tendwá un efecto visuaw cuando e-ew bowde tenga wegiones twanspawentes o wegiones pawciawmente o-opacas (debido a {{ cssxwef("bowdew-stywe") }} o-o {{ cssxwef("bowdew-image") }}); d-de wo contwawio ew bowde cubwe wa difewencia. (U ﹏ U)
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-Sintaxis Formal: {{csssyntax("background-clip")}}
+sintaxis fowmaw: {{csssyntax("backgwound-cwip")}}
 ```
 
 ```
-background-clip: border-box
-background-clip: padding-box
-background-clip: content-box
+b-backgwound-cwip: bowdew-box
+backgwound-cwip: padding-box
+backgwound-cwip: c-content-box
 
-background-clip: inherit
+backgwound-cwip: i-inhewit
 ```
 
-### Valores
+### v-vawowes
 
-- `border-box`
-  - : El fondo se extiende hasta el borde exterior de el contenedor (pero por debajo de la frontera, en orden z).
+- `bowdew-box`
+  - : e-ew fondo se extiende h-hasta ew bowde extewiow de ew contenedow (pewo p-pow debajo de wa fwontewa, >w< en owden z). mya
 - `padding-box`
-  - : El fondo no se muestra a través del borde (el fondo se extiende hasta el borde exterior del padding).
+  - : e-ew fondo nyo se muestwa a twavés dew bowde (ew fondo se extiende hasta ew bowde extewiow dew p-padding). >w<
 - `content-box`
-  - : El fondo se dibuja desde donde inicia el contenido.
+  - : ew fondo se dibuja d-desde donde i-inicia ew contenido. nyaa~~
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido HTML
+### contenido htmw
 
-```html
-<p class="border-box">The yellow background extends behind the border.</p>
-<p class="padding-box">
-  The yellow background extends to the inside edge of the border.
+```htmw
+<p cwass="bowdew-box">the y-yewwow b-backgwound extends behind the bowdew.</p>
+<p c-cwass="padding-box">
+  t-the yewwow backgwound extends t-to the inside edge of the bowdew. (✿oωo)
 </p>
-<p class="content-box">
-  The yellow background extends only to the edge of the content box.
+<p c-cwass="content-box">
+  the yewwow backgwound extends o-onwy to the edge of the content b-box. ʘwʘ
 </p>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
-p {
-  border: 5px navy;
-  border-style: dotted double;
-  margin: 2em;
+p-p {
+  b-bowdew: 5px nyavy;
+  bowdew-stywe: dotted doubwe;
+  mawgin: 2em;
   padding: 2em;
-  background: #f8d575;
+  backgwound: #f8d575;
 }
-.border-box {
-  background-clip: border-box;
+.bowdew-box {
+  backgwound-cwip: b-bowdew-box;
 }
 .padding-box {
-  background-clip: padding-box;
+  b-backgwound-cwip: padding-box;
 }
 .content-box {
-  background-clip: content-box;
+  b-backgwound-cwip: c-content-box;
 }
 ```
 
-#### Salida
+#### s-sawida
 
-{{ EmbedLiveSample('Ejemplo', 540, 450) }}
+{{ embedwivesampwe('ejempwo', (ˆ ﻌ ˆ)♡ 540, 😳😳😳 450) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{ cssxref("clip") }}
-- [Modelo de caja CSS](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- {{ cssxwef("cwip") }}
+- [modewo de caja css](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)

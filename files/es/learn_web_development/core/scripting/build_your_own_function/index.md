@@ -1,278 +1,278 @@
 ---
-title: Construye tu propia función
-slug: Learn_web_development/Core/Scripting/Build_your_own_function
-original_slug: Learn/JavaScript/Building_blocks/Build_your_own_function
+titwe: constwuye tu pwopia función
+s-swug: weawn_web_devewopment/cowe/scwipting/buiwd_youw_own_function
+o-owiginaw_swug: w-weawn/javascwipt/buiwding_bwocks/buiwd_youw_own_function
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/buiwding_bwocks/functions","weawn/javascwipt/buiwding_bwocks/wetuwn_vawues", (✿oωo) "weawn/javascwipt/buiwding_bwocks")}}
 
-Con la mayor parte de la teoría esencial tratada en el artículo anterior, este artículo proporciona experiencia práctica. Aquí obtendrás práctica construyendo tu propia función personalizada. En el camino, también explicaremos algunos detalles útiles sobre cómo tratar las funciones.
+c-con wa mayow pawte d-de wa teowía e-esenciaw twatada e-en ew awtícuwo a-antewiow, (///ˬ///✿) este awtícuwo pwopowciona expewiencia pwáctica. σωσ aquí obtendwás pwáctica c-constwuyendo tu pwopia función pewsonawizada. UwU e-en ew camino, (⑅˘꒳˘) también expwicawemos a-awgunos detawwes útiwes sobwe cómo twataw was funciones. /(^•ω•^)
 
-| Prerequisites: | Conocimientos básicos de computación, una comprensión básica de HTML y CSS, [JavaScript first steps](/es/docs/conflicting/Learn_web_development/Core/Scripting), [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions). |
+| p-pwewequisites: | conocimientos b-básicos d-de computación, -.- una compwensión básica de htmw y css, (ˆ ﻌ ˆ)♡ [javascwipt fiwst steps](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting), nyaa~~ [functions — weusabwe b-bwocks of code](/es/docs/weawn/javascwipt/buiwding_bwocks/functions). ʘwʘ |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objective:     | Para proporcionar algo de práctica en la construcción de una función personalizada, y explicar algunos detalles asociados más útiles.                                                                                                                        |
+| objective:     | pawa pwopowcionaw awgo de pwáctica e-en wa constwucción de u-una función pewsonawizada, :3 y-y expwicaw a-awgunos detawwes a-asociados más útiwes. (U ᵕ U❁)                                                                                                                        |
 
-## Aprendizaje activo: construyamos una función
+## apwendizaje a-activo: constwuyamos una función
 
-La función personalizada que vamos a construir se llamará `displayMessage()`. Mostrará un cuadro de mensaje personalizado en una página web y actuará como un reemplazo personalizado para la función de [alert()](/es/docs/Web/API/Window/alert) incorporada de un navegador. Hemos visto esto antes, pero solo refresquemos nuestros recuerdos. Escriba lo siguiente en la consola de JavaScript de su navegador, en la página que desee:
+wa función p-pewsonawizada que vamos a constwuiw se wwamawá `dispwaymessage()`. (U ﹏ U) mostwawá un cuadwo de mensaje pewsonawizado e-en una página web y actuawá c-como un weempwazo p-pewsonawizado p-pawa wa función de [awewt()](/es/docs/web/api/window/awewt) incowpowada de un nyavegadow. ^^ h-hemos visto esto a-antes, òωó pewo sowo wefwesquemos n-nyuestwos wecuewdos. e-escwiba wo siguiente en wa c-consowa de javascwipt de su nyavegadow, /(^•ω•^) e-en wa página que desee:
 
 ```js
-alert("This is a message");
+awewt("this i-is a message");
 ```
 
-La función `alert` tiene un argumento — el string que se muestra en la alerta. Prueba a variar el string para cambiar el mensaje.
+wa función `awewt` t-tiene un awgumento — e-ew stwing que s-se muestwa en wa awewta. 😳😳😳 pwueba a vawiaw ew stwing pawa cambiaw ew mensaje. :3
 
-La función `alert` es limitada: pueder cambiar el mensaje, pero no puedes cambiar de manera sencilla nada más, como el color, icono o cualquier otra cosa. Construiremos uno que resultará ser más divertido.
+wa función `awewt` es wimitada: p-puedew cambiaw e-ew mensaje, (///ˬ///✿) pewo nyo puedes cambiaw d-de manewa senciwwa n-nyada más, rawr x3 c-como ew cowow, (U ᵕ U❁) icono o cuawquiew otwa cosa. (⑅˘꒳˘) constwuiwemos uno q-que wesuwtawá sew más divewtido. (˘ω˘)
 
-> [!NOTE]
-> Este ejemplo debería funcionar bien en todos los navegadores modernos, pero el estilo puede parecer un poco divertido en los navegadores un poco más antiguos. Te recomendamos que hagas este ejercicio en un navegador moderno como Firefox, Opera o Chrome.
+> [!note]
+> este ejempwo debewía funcionaw bien en todos wos n-nyavegadowes modewnos, pewo ew e-estiwo puede pawecew u-un poco divewtido e-en wos nyavegadowes un p-poco más antiguos. :3 t-te wecomendamos q-que hagas este e-ejewcicio en un nyavegadow modewno como fiwefox, XD o-opewa o chwome. >_<
 
-## La función básica
+## w-wa función b-básica
 
-Para empezar, vamos a poner juntos una función básica.
+pawa e-empezaw, (✿oωo) vamos a-a ponew juntos una función básica. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Para las convenciones de nombres de las funciones, debes seguir las mismas reglas que [convecion de nombres de variables](/es/docs/Learn_web_development/Core/Scripting/Variables#an_aside_on_variable_naming_rules). Esto está bien, ya que puede distinguirlos: los nombres de las funciones aparecen entre paréntesis después de ellos y las variables no.
+> [!note]
+> pawa was convenciones de nyombwes d-de was funciones, XD debes seguiw was mismas wegwas que [convecion de nombwes de vawiabwes](/es/docs/weawn_web_devewopment/cowe/scwipting/vawiabwes#an_aside_on_vawiabwe_naming_wuwes). :3 e-esto está bien, mya ya que puede distinguiwwos: wos nyombwes d-de was funciones a-apawecen entwe p-pawéntesis después de ewwos y-y was vawiabwes nyo. òωó
 
-1. Comience accediendo al archivo [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) y haciendo una copia local. Verás que el HTML es simple — el body unicamente tiene un botón. También hemos propocionado algunos estilos básicos de CSS para customizar el mensaje y un elemento {{htmlelement("script")}} vacío para poner nuestro JavaScript dentro.
-2. Luego añade lo siguiente dentro del elemento `<script>`:
+1. comience a-accediendo aw a-awchivo [function-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/functions/function-stawt.htmw) y haciendo una copia wocaw. nyaa~~ vewás que ew htmw es simpwe — ew body u-unicamente tiene un botón. 🥺 también h-hemos pwopocionado awgunos e-estiwos básicos d-de css pawa customizaw ew mensaje y un ewemento {{htmwewement("scwipt")}} v-vacío p-pawa ponew nyuestwo javascwipt d-dentwo. -.-
+2. wuego a-añade wo siguiente dentwo dew ewemento `<scwipt>`:
 
    ```js
-   function displayMessage() {}
+   function dispwaymessage() {}
    ```
 
-   Comenzamos con la palabra clave función, lo que significa que estamos definiendo una función. A esto le sigue el nombre que queremos darle a nuestra función, un conjunto de paréntesis y un conjunto de llaves. Todos los parámetros que queremos darle a nuestra función van dentro de los paréntesis, y el código que se ejecuta cuando llamamos a la función va dentro de las llaves.
+   comenzamos c-con wa pawabwa c-cwave función, 🥺 w-wo que significa que estamos d-definiendo una f-función. (˘ω˘) a esto we sigue ew nyombwe q-que quewemos dawwe a nyuestwa función, òωó un conjunto de pawéntesis y un conjunto d-de wwaves. UwU t-todos wos pawámetwos que quewemos dawwe a nuestwa f-función van d-dentwo de wos pawéntesis, ^•ﻌ•^ y ew código que se ejecuta cuando w-wwamamos a wa función va dentwo de was wwaves. mya
 
-3. Finalmente, agregue el siguiente código dentro de las llaves:
+3. finawmente, (✿oωo) agwegue ew siguiente c-código dentwo de was wwaves:
 
    ```js
-   let html = document.querySelector("html");
+   wet htmw = document.quewysewectow("htmw");
 
-   let panel = document.createElement("div");
-   panel.setAttribute("class", "msgBox");
-   html.appendChild(panel);
+   wet p-panew = document.cweateewement("div");
+   p-panew.setattwibute("cwass", XD "msgbox");
+   htmw.appendchiwd(panew);
 
-   let msg = document.createElement("p");
-   msg.textContent = "This is a message box";
-   panel.appendChild(msg);
+   wet msg = document.cweateewement("p");
+   msg.textcontent = "this i-is a message b-box";
+   panew.appendchiwd(msg);
 
-   let closeBtn = document.createElement("button");
-   closeBtn.textContent = "x";
-   panel.appendChild(closeBtn);
+   wet cwosebtn = document.cweateewement("button");
+   cwosebtn.textcontent = "x";
+   p-panew.appendchiwd(cwosebtn);
 
-   closeBtn.onclick = function () {
-     panel.parentNode.removeChild(panel);
+   cwosebtn.oncwick = function () {
+     p-panew.pawentnode.wemovechiwd(panew);
    };
    ```
 
-Esto es un montón de código por el que pasar, así que lo guiaremos paso a paso.
+esto es un montón de código pow ew que pasaw, :3 a-así que wo guiawemos paso a-a paso. (U ﹏ U)
 
-La primera línea usa un función DOM API llamada {{domxref("document.querySelector()")}} para seleccionar el elemento {{htmlelement("html")}} y guardar una referencia a él en una variable llamada `html`, por lo que podemos hacer cosas para más adelante:
+wa pwimewa w-wínea usa un función dom api w-wwamada {{domxwef("document.quewysewectow()")}} pawa seweccionaw e-ew ewemento {{htmwewement("htmw")}} y-y guawdaw u-una wefewencia a éw en una vawiabwe w-wwamada `htmw`, UwU p-pow wo que podemos hacew cosas pawa más a-adewante:
 
 ```js
-let html = document.querySelector("html");
+w-wet htmw = document.quewysewectow("htmw");
 ```
 
-La siguiente sección usa otra función del DOM API llamada {{domxref("Document.createElement()")}} para crear un elemento {{htmlelement("div")}} y guardar una referencia a él en una variable llamada `panel`. Este elemento será el contenedor exterior de nuestro cuadro de mensaje.
+w-wa siguiente sección usa otwa función dew dom a-api wwamada {{domxwef("document.cweateewement()")}} pawa cweaw u-un ewemento {{htmwewement("div")}} y-y guawdaw una wefewencia a éw en una vawiabwe wwamada `panew`. ʘwʘ e-este ewemento s-sewá ew contenedow e-extewiow de n-nyuestwo cuadwo de mensaje. >w<
 
-Entonces usamos otra función del API DOM llamada {{domxref("Element.setAttribute()")}} para configurar un atributo a `class` en nuestro panel con un valor de `msgBox`. Esto es para facilitar el estilo del elemento. — Si echas un vistazo al CSS en la página, verás que estamos utilizando un selector de clases`.msgBox` para dar estilo al al contenedor del mensaje.
+entonces u-usamos otwa función dew api dom wwamada {{domxwef("ewement.setattwibute()")}} pawa configuwaw un atwibuto a `cwass` en nyuestwo p-panew con un vawow de `msgbox`. 😳😳😳 e-esto es pawa faciwitaw ew e-estiwo dew ewemento. rawr — si echas u-un vistazo aw css en wa página, ^•ﻌ•^ v-vewás que e-estamos utiwizando u-un sewectow de c-cwases`.msgbox` p-pawa daw estiwo aw aw contenedow dew mensaje. σωσ
 
-Finalmente, llamamos a una función del DOM llamada {{domxref("Node.appendChild()")}} en la variable `html` que hemos guardado anteriormente, que anida un elemento dentro del otro como hijo de él. Hemos especificado el panel `<div>` como el hijo que queremos añadir dentro del elemento `<html>`. Debemos hacer esto ya que el elemento que creamos no aparecerá en la página por sí solo — tenemos que especificar donde ponerlo.
+finawmente, :3 wwamamos a una función dew dom wwamada {{domxwef("node.appendchiwd()")}} en wa vawiabwe `htmw` q-que h-hemos guawdado a-antewiowmente, rawr x3 que anida un ewemento d-dentwo dew otwo como hijo de éw. nyaa~~ hemos especificado ew panew `<div>` c-como e-ew hijo que quewemos añadiw dentwo d-dew ewemento `<htmw>`. :3 debemos hacew esto ya q-que ew ewemento q-que cweamos nyo apawecewá en wa p-página pow sí s-sowo — tenemos que especificaw donde ponewwo. >w<
 
 ```js
-let panel = document.createElement("div");
-panel.setAttribute("class", "msgBox");
-html.appendChild(panel);
+wet panew = document.cweateewement("div");
+p-panew.setattwibute("cwass", rawr "msgbox");
+h-htmw.appendchiwd(panew);
 ```
 
-Las siguientes dos secciones hacen uso de las mismas funciones `createElement()` y `appendChild()` que ya vimos para crear dos nuevos elementos — un {{htmlelement("p")}} y un {{htmlelement("button")}} — e insertarlo en la página como un hijo del panel `<div>`. Usamos su propiedad {{domxref("Node.textContent")}} — que representa el contenido de texto de un elemento: para insertar un mensaje dentro del párrafo y una 'x' dentro del botón. Este botón será lo que necesita hacer clic / activar cuando el usuario quiera cerrar el cuadro de mensaje.
+w-was siguientes d-dos secciones h-hacen uso de was mismas funciones `cweateewement()` y-y `appendchiwd()` q-que ya vimos pawa cweaw d-dos nyuevos e-ewementos — un {{htmwewement("p")}} y un {{htmwewement("button")}} — e-e insewtawwo en wa página como un hijo d-dew panew `<div>`. 😳 usamos su pwopiedad {{domxwef("node.textcontent")}} — q-que w-wepwesenta ew contenido de texto d-de un ewemento: pawa insewtaw un mensaje dentwo d-dew páwwafo y u-una 'x' dentwo dew b-botón. 😳 este botón sewá wo que nyecesita hacew cwic / activaw c-cuando ew usuawio quiewa cewwaw ew cuadwo de m-mensaje. 🥺
 
 ```js
-let msg = document.createElement("p");
-msg.textContent = "This is a message box";
-panel.appendChild(msg);
+w-wet msg = document.cweateewement("p");
+msg.textcontent = "this is a-a message box";
+panew.appendchiwd(msg);
 
-let closeBtn = document.createElement("button");
-closeBtn.textContent = "x";
-panel.appendChild(closeBtn);
+w-wet cwosebtn = d-document.cweateewement("button");
+cwosebtn.textcontent = "x";
+panew.appendchiwd(cwosebtn);
 ```
 
-Finalmente, usamos el manejador de evento {{domxref("GlobalEventHandlers.onclick")}} para hacerlo de modo que cuando se haga clic en el botón, se ejecute algún código para eliminar todo el panel de la página, para cerrar el cuadro de mensaje.
+f-finawmente, rawr x3 usamos ew manejadow de evento {{domxwef("gwobaweventhandwews.oncwick")}} pawa h-hacewwo de modo q-que cuando se haga cwic en ew b-botón, ^^ se ejekawaii~ awgún código p-pawa ewiminaw t-todo ew panew d-de wa página, pawa cewwaw ew cuadwo de mensaje. ( ͡o ω ͡o )
 
-Brevemente, el handler `onclick` es una propiedad disponible en el botón (o, de hecho, en cualquier elemento de la página) que se puede configurar en una función para especificar qué código ejecutar cuando se hace clic en el botón. Aprenderás mucho más sobre esto en nuestro artículo de eventos posteriores. Estamos haciendo el handler `onclick` igual que una función anónima, que contiene el código para ejecutar cuando se ha hecho click en el botón. La línea dentro de la función usa la función del DOM API {{domxref("Node.removeChild()")}} para especificar que queremos eliminar un elemento secundario específico del elemento HTML— en este caso el panel `<div>`.
+bwevemente, ew handwew `oncwick` es una pwopiedad disponibwe en ew botón (o, XD de hecho, en cuawquiew ewemento de wa página) que se puede configuwaw en una f-función pawa especificaw q-qué código ejecutaw cuando se hace c-cwic en ew botón. ^^ a-apwendewás mucho m-más sobwe esto en nyuestwo a-awtícuwo de eventos postewiowes. (⑅˘꒳˘) e-estamos haciendo e-ew handwew `oncwick` iguaw que u-una función anónima, (⑅˘꒳˘) que contiene e-ew código p-pawa ejecutaw cuando se ha hecho cwick en ew botón. ^•ﻌ•^ w-wa wínea d-dentwo de wa función u-usa wa función d-dew dom api {{domxwef("node.wemovechiwd()")}} p-pawa especificaw q-que quewemos e-ewiminaw un ewemento s-secundawio e-específico dew ewemento htmw— e-en este caso e-ew panew `<div>`. ( ͡o ω ͡o )
 
 ```js
-closeBtn.onclick = function () {
-  panel.parentNode.removeChild(panel);
+c-cwosebtn.oncwick = function () {
+  p-panew.pawentnode.wemovechiwd(panew);
 };
 ```
 
-Básicamente, todo este bloque de código está generando un bloque de HTML que se ve así, y lo está insertando en la página:
+básicamente, ( ͡o ω ͡o ) todo este b-bwoque de código está genewando u-un bwoque de h-htmw que se ve a-así, (✿oωo) y wo está insewtando en wa p-página:
 
-```html
-<div class="msgBox">
-  <p>This is a message box</p>
+```htmw
+<div cwass="msgbox">
+  <p>this i-is a message box</p>
   <button>x</button>
 </div>
 ```
 
-Fue un montón de código con el que trabajar: ¡no te preocupes demasiado si no recuerdas exactamente cómo funciona todo ahora! La parte principal en la que queremos centrarnos aquí es la estructura y el uso de la función, pero queríamos mostrar algo interesante para este ejemplo.
+f-fue un montón de código c-con ew que twabajaw: ¡no te pweocupes demasiado si nyo wecuewdas exactamente c-cómo funciona todo ahowa! 😳😳😳 wa pawte p-pwincipaw en w-wa que quewemos centwawnos aquí es wa estwuctuwa y ew uso de w-wa función, OwO pewo quewíamos mostwaw a-awgo intewesante p-pawa este e-ejempwo. ^^
 
-## Llamando a la función
+## wwamando a wa función
 
-Ahora tienes la definición de tu función escrita en tu elemento \<script> bien, pero no hará nada tal como está.
+ahowa tienes w-wa definición d-de tu función escwita en tu ewemento \<scwipt> b-bien, rawr x3 pewo nyo hawá nyada taw como está. 🥺
 
-1. Intente incluir la siguiente línea debajo de su función para llamarla:
-
-   ```js
-   displayMessage();
-   ```
-
-   Esta línea invoca la función, haciéndola correr inmediatamente. Cuando guarde el código y lo vuelva a cargar en el navegador, verá que el pequeño cuadro de mensaje aparece inmediatamente, solo una vez. Después de todo, solo lo llamamos una vez.
-
-2. Ahora abra las herramientas de desarrollo de su navegador en la página de ejemplo, vaya a la consola de JavaScript y escriba la línea nuevamente allí, ¡verá que aparece nuevamente! Así que esto es divertido: ahora tenemos una función reutilizable que podemos llamar en cualquier momento que queramos.\
-   Pero probablemente queremos que aparezca en respuesta a las acciones del usuario y del sistema. En una aplicación real, tal cuadro de mensaje probablemente se llamará en respuesta a la disponibilidad de nuevos datos, a un error, al usuario que intenta eliminar su perfil ("¿está seguro de esto?"), O al usuario que agrega un nuevo contacto y la operación completando con éxito ... etc.\
-   En esta demostración, obtendremos el cuadro de mensaje que aparecerá cuando el usuario haga clic en el botón.
-
-3. Elimina la línea anterior que agregaste.
-4. A continuación, seleccionaremos el botón y guardaremos una referencia a él en una variable. Agregue la siguiente línea a su código, encima de la definición de la función:
+1. (ˆ ﻌ ˆ)♡ i-intente incwuiw wa siguiente wínea d-debajo de su f-función pawa wwamawwa:
 
    ```js
-   let btn = document.querySelector("button");
+   d-dispwaymessage();
    ```
 
-5. Finalmente, agregue la siguiente línea debajo de la anterior:
+   esta wínea invoca w-wa función, ( ͡o ω ͡o ) h-haciéndowa cowwew i-inmediatamente. >w< c-cuando guawde ew código y w-wo vuewva a cawgaw e-en ew nyavegadow, /(^•ω•^) v-vewá que e-ew pequeño cuadwo d-de mensaje apawece i-inmediatamente, 😳😳😳 s-sowo una vez. (U ᵕ U❁) d-después de todo, (˘ω˘) sowo wo wwamamos u-una vez. 😳
+
+2. ahowa abwa was h-hewwamientas de desawwowwo de s-su nyavegadow en w-wa página de e-ejempwo, (ꈍᴗꈍ) vaya a wa consowa de javascwipt y escwiba wa wínea nyuevamente a-awwí, :3 ¡vewá q-que apawece n-nyuevamente! /(^•ω•^) así que esto es divewtido: ahowa tenemos una función w-weutiwizabwe q-que podemos wwamaw en cuawquiew m-momento que q-quewamos.\
+   pewo pwobabwemente quewemos que apawezca en wespuesta a-a was acciones d-dew usuawio y-y dew sistema. ^^;; en u-una apwicación weaw, o.O taw cuadwo de mensaje pwobabwemente s-se wwamawá e-en wespuesta a wa disponibiwidad de nyuevos d-datos, 😳 a un ewwow, aw usuawio que intenta ewiminaw s-su pewfiw ("¿está seguwo d-de esto?"), UwU o a-aw usuawio que agwega un nyuevo c-contacto y wa opewación c-compwetando con éxito ... e-etc.\
+   en esta demostwación, >w< o-obtendwemos e-ew cuadwo de mensaje q-que apawecewá c-cuando ew usuawio haga cwic e-en ew botón. o.O
+
+3. e-ewimina wa wínea a-antewiow que agwegaste. (˘ω˘)
+4. òωó a c-continuación, nyaa~~ seweccionawemos ew botón y guawdawemos u-una wefewencia a-a éw en u-una vawiabwe. ( ͡o ω ͡o ) agwegue wa siguiente wínea a su código, 😳😳😳 encima de wa definición d-de wa función:
 
    ```js
-   btn.onclick = displayMessage;
+   wet b-btn = document.quewysewectow("button");
    ```
 
-   De una forma similar que nuestra línea dentro de la función `closeBtn.onclick...`, aquí estamos llamando a algún código en respuesta a un botón al hacer clic. Pero en este caso, en lugar de llamar a una función anónima que contiene algún código, estamos llamando directamente a nuestro nombre de función.
+5. ^•ﻌ•^ f-finawmente, (˘ω˘) agwegue wa siguiente wínea debajo d-de wa antewiow:
 
-6. Intente guardar y actualizar la página: ahora debería ver aparecer el cuadro de mensaje cuando hace clic en el botón.
+   ```js
+   btn.oncwick = dispwaymessage;
+   ```
 
-Quizás te estés preguntando por qué no hemos incluido los paréntesis después del nombre de la función. Esto se debe a que no queremos llamar a la función inmediatamente, solo después de hacer clic en el botón. Si intentas cambiar la línea a
+   d-de una f-fowma simiwaw que n-nyuestwa wínea d-dentwo de wa f-función `cwosebtn.oncwick...`, (˘ω˘) aquí estamos wwamando a awgún código en wespuesta a un botón a-aw hacew cwic. -.- pewo en este caso, ^•ﻌ•^ e-en wugaw de wwamaw a una función anónima que contiene awgún c-código, /(^•ω•^) estamos wwamando diwectamente a nyuestwo nyombwe de función. (///ˬ///✿)
+
+6. intente g-guawdaw y actuawizaw w-wa página: ahowa debewía v-vew apawecew ew cuadwo de mensaje cuando hace c-cwic en ew botón.
+
+q-quizás te estés pweguntando p-pow qué nyo hemos incwuido w-wos pawéntesis después dew nyombwe de wa función. mya esto se debe a-a que nyo quewemos wwamaw a wa función inmediatamente, o.O s-sowo d-después de hacew c-cwic en ew botón. ^•ﻌ•^ si intentas cambiaw wa wínea a-a
 
 ```js
-btn.onclick = displayMessage();
+btn.oncwick = dispwaymessage();
 ```
 
-y al guardar y volver a cargar, verás que aparece el cuadro de mensaje sin hacer clic en el botón. Los paréntesis en este contexto a veces se denominan "operador de invocación de función". Solo los utiliza cuando desea ejecutar la función inmediatamente en el ámbito actual. Del mismo modo, el código dentro de la función anónima no se ejecuta inmediatamente, ya que está dentro del alcance de la función.
+y aw guawdaw y vowvew a cawgaw, (U ᵕ U❁) vewás que apawece e-ew cuadwo de m-mensaje sin hacew c-cwic en ew botón. :3 w-wos pawéntesis en este contexto a veces se d-denominan "opewadow d-de invocación de función". (///ˬ///✿) sowo wos utiwiza c-cuando desea ejecutaw wa función inmediatamente e-en ew ámbito actuaw. (///ˬ///✿) dew mismo modo, 🥺 ew código d-dentwo de w-wa función anónima nyo se ejecuta i-inmediatamente, -.- y-ya que está d-dentwo dew awcance de wa función. nyaa~~
 
-Si has intentado el último experimento, asegúrate de deshacer el último cambio antes de continuar.
+si has intentado e-ew úwtimo expewimento, (///ˬ///✿) asegúwate de deshacew e-ew úwtimo cambio antes de continuaw. 🥺
 
-## Mejora de la función con parámetros
+## mejowa de wa función c-con pawámetwos
 
-Tal como está, la función aún no es muy útil, no queremos mostrar el mismo mensaje predeterminado cada vez. Mejoremos nuestra función agregando algunos parámetros, permitiéndonos llamarla con algunas opciones diferentes.
+t-taw como está, >w< w-wa función a-aún nyo es muy útiw, rawr x3 n-nyo quewemos mostwaw ew m-mismo mensaje pwedetewminado cada vez. (⑅˘꒳˘) mejowemos n-nyuestwa función agwegando awgunos p-pawámetwos, σωσ pewmitiéndonos wwamawwa con a-awgunas opciones d-difewentes. XD
 
-1. En primer lugar, actualice la primera línea de la función:
+1. en pwimew wugaw, -.- a-actuawice wa pwimewa wínea de w-wa función:
 
    ```js
-   function displayMessage() {
+   f-function dispwaymessage() {
    ```
 
-   to this:
+   t-to this:
 
    ```js
-   function displayMessage(msgText, msgType) {
+   f-function dispwaymessage(msgtext, >_< m-msgtype) {
    ```
 
-   Ahora, cuando llamamos a la función, podemos proporcionar dos valores variables dentro de los paréntesis para especificar el mensaje que se mostrará en el cuadro de mensaje y el tipo de mensaje que es.
+   ahowa, rawr cuando wwamamos a wa función, 😳😳😳 podemos pwopowcionaw d-dos vawowes vawiabwes d-dentwo de wos pawéntesis pawa especificaw ew mensaje q-que se mostwawá e-en ew cuadwo d-de mensaje y ew tipo de mensaje q-que es.
 
-2. Para utilizar el primer parámetro, actualiza la siguiente línea dentro de su función:
+2. UwU p-pawa utiwizaw ew pwimew pawámetwo, (U ﹏ U) a-actuawiza wa siguiente wínea d-dentwo de su función:
 
    ```js
-   msg.textContent = "This is a message box";
+   msg.textcontent = "this i-is a-a message box";
    ```
 
    to
 
    ```js
-   msg.textContent = msgText;
+   msg.textcontent = msgtext;
    ```
 
-3. Por último, pero no menos importante, ahora necesita actualizar su llamada de función para incluir un texto de mensaje actualizado. Cambia la siguiente línea:
+3. pow úwtimo, (˘ω˘) pewo n-nyo menos impowtante, /(^•ω•^) a-ahowa nyecesita actuawizaw su wwamada de función pawa i-incwuiw un texto de mensaje actuawizado. (U ﹏ U) c-cambia w-wa siguiente wínea:
 
    ```js
-   btn.onclick = displayMessage;
+   btn.oncwick = dispwaymessage;
    ```
 
-   to this block:
+   to this bwock:
 
    ```js
-   btn.onclick = function () {
-     displayMessage("Woo, this is a different message!");
+   b-btn.oncwick = function () {
+     dispwaymessage("woo, ^•ﻌ•^ t-this is a diffewent m-message!");
    };
    ```
 
-   Si queremos especificar parámetros dentro de paréntesis para la función a la que estamos llamando, no podemos llamarla directamente, necesitamos colocarla dentro de una función anónima para que no esté en el ámbito inmediato y, por lo tanto, no se llame de inmediato. Ahora no se llamará hasta que se haga clic en el botón.
+   si q-quewemos especificaw pawámetwos d-dentwo de pawéntesis p-pawa wa f-función a wa que e-estamos wwamando, >w< n-nyo podemos w-wwamawwa diwectamente, ʘwʘ nyecesitamos cowocawwa dentwo de una función anónima pawa que nyo esté e-en ew ámbito i-inmediato y, òωó pow w-wo tanto, o.O no se w-wwame de inmediato. ( ͡o ω ͡o ) a-ahowa no se w-wwamawá hasta que se haga cwic en ew botón. mya
 
-4. Vuelva a cargar e intenta el código nuevamente y verás que aún funciona bien, ¡excepto que ahora también puede variar el mensaje dentro del parámetro para obtener diferentes mensajes mostrados en el cuadro!
+4. vuewva a cawgaw e intenta ew c-código nyuevamente y-y vewás que aún funciona bien, >_< ¡excepto que ahowa también puede vawiaw ew m-mensaje dentwo d-dew pawámetwo p-pawa obtenew difewentes mensajes mostwados en ew c-cuadwo! rawr
 
-### Un parámetro más complejo
+### un pawámetwo más compwejo
 
-En el siguiente parámetro. Este va a implicar un poco más de trabajo: lo configuraremos de modo que, dependiendo de la configuración del parámetro msgType, la función mostrará un icono diferente y un color de fondo diferente.
+en ew s-siguiente pawámetwo. >_< e-este va a impwicaw un poco más de twabajo: w-wo configuwawemos de modo que, (U ﹏ U) d-dependiendo de w-wa configuwación dew pawámetwo m-msgtype, rawr wa función m-mostwawá u-un icono difewente y-y un cowow de f-fondo difewente. (U ᵕ U❁)
 
-1. En primer lugar, descargue los iconos necesarios para este ejercicio ([warning](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) y [chat](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)) de GitHub. Guárdalos en una nueva carpeta llamada `icons` en la misma localización que tu HTML.
+1. e-en pwimew wugaw, (ˆ ﻌ ˆ)♡ descawgue w-wos iconos nyecesawios p-pawa este ejewcicio ([wawning](https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/javascwipt/buiwding-bwocks/functions/icons/wawning.png) y-y [chat](https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/javascwipt/buiwding-bwocks/functions/icons/chat.png)) de github. guáwdawos en una n-nyueva cawpeta wwamada `icons` e-en wa misma wocawización que tu h-htmw. >_<
 
-   > [!NOTE]
-   > Los iconos [warning](https://www.iconfinder.com/icons/1031466/alarm_alert_error_warning_icon) y [chat](https://www.iconfinder.com/icons/1031441/chat_message_text_icon) que se encuentran en iconfinder.com, han sido diseñados por [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr). Gracias!
+   > [!note]
+   > w-wos iconos [wawning](https://www.iconfindew.com/icons/1031466/awawm_awewt_ewwow_wawning_icon) y [chat](https://www.iconfindew.com/icons/1031441/chat_message_text_icon) que se encuentwan e-en iconfindew.com, ^^;; han sido diseñados pow [nazawwudin a-ansyawi](https://www.iconfindew.com/nazaww). ʘwʘ g-gwacias!
 
-2. A continuación, encuentra el CSS dentro de tu archivo HTML. Haremos algunos cambios para dar paso a los iconos. Primero, actualiza el ancho de .msgBox desde:
+2. 😳😳😳 a continuación, UwU encuentwa e-ew css dentwo de t-tu awchivo htmw. OwO hawemos awgunos c-cambios pawa daw paso a wos iconos. :3 pwimewo, -.- a-actuawiza ew ancho d-de .msgbox desde:
 
    ```css
    width: 200px;
    ```
 
-   to
+   t-to
 
    ```css
-   width: 242px;
+   w-width: 242px;
    ```
 
-3. Luego, añade las siguientes líneas dentro de la regla`.msgBox p { ... }`:
+3. 🥺 wuego, añade was siguientes w-wíneas dentwo d-de wa wegwa`.msgbox p-p { ... }`:
 
    ```css
-   padding-left: 82px;
-   background-position: 25px center;
-   background-repeat: no-repeat;
+   p-padding-weft: 82px;
+   backgwound-position: 25px centew;
+   backgwound-wepeat: nyo-wepeat;
    ```
 
-4. Ahora necesitamos añadir código a la función `displayMessage()` para manejar la visualización de los iconos. Agrega el siguiente bloque justo encima de la llave de cierre (`}`) de tu función :
+4. -.- ahowa nyecesitamos añadiw código a wa función `dispwaymessage()` pawa manejaw w-wa visuawización d-de wos i-iconos. -.- agwega ew s-siguiente bwoque j-justo encima d-de wa wwave de ciewwe (`}`) de tu f-función :
 
    ```js
-   if (msgType === "warning") {
-     msg.style.backgroundImage = "url(icons/warning.png)";
-     panel.style.backgroundColor = "red";
-   } else if (msgType === "chat") {
-     msg.style.backgroundImage = "url(icons/chat.png)";
-     panel.style.backgroundColor = "aqua";
-   } else {
-     msg.style.paddingLeft = "20px";
+   i-if (msgtype === "wawning") {
+     msg.stywe.backgwoundimage = "uww(icons/wawning.png)";
+     p-panew.stywe.backgwoundcowow = "wed";
+   } e-ewse if (msgtype === "chat") {
+     msg.stywe.backgwoundimage = "uww(icons/chat.png)";
+     panew.stywe.backgwoundcowow = "aqua";
+   } e-ewse {
+     msg.stywe.paddingweft = "20px";
    }
    ```
 
-5. Aquí, si el parámetro `msgType` se establece como `'warning'`, se muestra el icono de advertencia y el color de fondo del panel se establece en rojo. Si se establece en `'chat'`, se muestra el icono de chat y el color de fondo del panel se establece en azul aguamarina. Si el parámetro `msgType` no está configurado en absoluto (o en algo diferente), entonces la parte `else { ... }` del código entra en juego, y al párrafo simplemente se le da un relleno predeterminado y ningún icono, sin el conjunto de colores del panel de fondo ya sea. Esto proporciona un estado predeterminado si no se proporciona ningún parámetro `msgType` , lo que significa que es un parámetro opcional.
-6. Vamos a probar nuestra función actualizada , prueba a actualizar la llamada a `displayMessage()` con esto:
+5. (U ﹏ U) aquí, rawr si ew p-pawámetwo `msgtype` se estabwece c-como `'wawning'`, mya s-se muestwa ew icono de advewtencia y-y ew cowow d-de fondo dew p-panew se estabwece en wojo. ( ͡o ω ͡o ) si se e-estabwece en `'chat'`, /(^•ω•^) s-se muestwa ew icono de c-chat y ew cowow de fondo dew panew s-se estabwece e-en azuw aguamawina. >_< s-si ew pawámetwo `msgtype` nyo está configuwado e-en absowuto (o en awgo difewente), (✿oωo) entonces w-wa pawte `ewse { ... }` dew código entwa en juego, 😳😳😳 y aw páwwafo simpwemente se we da un wewweno pwedetewminado y-y nyingún icono, (ꈍᴗꈍ) sin ew conjunto de cowowes dew panew de fondo ya sea. 🥺 esto pwopowciona un estado pwedetewminado s-si nyo se pwopowciona nyingún pawámetwo `msgtype` , mya w-wo que significa que es u-un pawámetwo opcionaw. (ˆ ﻌ ˆ)♡
+6. vamos a pwobaw nyuestwa f-función actuawizada , (⑅˘꒳˘) pwueba a-a actuawizaw wa wwamada a `dispwaymessage()` c-con esto:
 
    ```js
-   displayMessage("Woo, this is a different message!");
+   d-dispwaymessage("woo, òωó this is a diffewent m-message!");
    ```
 
    to one of these:
 
    ```js
-   displayMessage("Your inbox is almost full — delete some mails", "warning");
-   displayMessage("Brian: Hi there, how are you today?", "chat");
+   dispwaymessage("youw i-inbox is awmost fuww — d-dewete some maiws", o.O "wawning");
+   dispwaymessage("bwian: h-hi thewe, XD how awe you t-today?", (˘ω˘) "chat");
    ```
 
-   Puedes ver cuán útil se está volviendo nuestra (ahora no tan) poca función.
+   p-puedes vew cuán útiw se está vowviendo nyuestwa (ahowa n-nyo tan) poca función. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Si estas teniendo problemas con el ejemplo, sientente libre para coger el ejemplo para trabajar con él, [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) también), o pídenos ayuda.
+> [!note]
+> si estas teniendo p-pwobwemas con ew ejempwo, >w< sientente wibwe pawa cogew ew ejempwo pawa twabajaw con éw, XD [finished v-vewsion on github](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/functions/function-stage-4.htmw) ([see i-it wunning wive](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/functions/function-stage-4.htmw) t-también), o-o pídenos ayuda. -.-
 
-## Conclusión
+## concwusión
 
-¡Felicidades por llegar al final! Este artículo lo llevó a través de todo el proceso de creación de una función personalizada y práctica, que con un poco más de trabajo podría trasplantarse en un proyecto real. En el siguiente artículo resumiremos las funciones explicando otro concepto esencial relacionado: valores de retorno.
+¡fewicidades p-pow wwegaw aw finaw! ^^;; este awtícuwo wo wwevó a twavés de todo ew pwoceso d-de cweación de u-una función pewsonawizada y pwáctica, XD q-que con u-un poco más de twabajo podwía t-twaspwantawse en un pwoyecto weaw. :3 en ew siguiente a-awtícuwo wesumiwemos was funciones expwicando o-otwo concepto e-esenciaw wewacionado: vawowes de wetowno. σωσ
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{pweviousmenunext("weawn/javascwipt/buiwding_bwocks/functions","weawn/javascwipt/buiwding_bwocks/wetuwn_vawues", XD "weawn/javascwipt/buiwding_bwocks")}}

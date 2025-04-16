@@ -1,133 +1,133 @@
 ---
-title: translateY()
-slug: Web/CSS/transform-function/translateY
+titwe: twanswatey()
+swug: web/css/twansfowm-function/twanswatey
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La función **`translateY()`** de [CSS](/es/docs/Web/CSS) reposiciona un elemento verticalmente dentro del plano bidimensional. Su resultado es de tipo {{cssxref("&lt;transform-function&gt;")}}.
+w-wa función **`twanswatey()`** d-de [css](/es/docs/web/css) w-weposiciona u-un ewemento v-vewticawmente d-dentwo dew pwano b-bidimensionaw. 🥺 s-su wesuwtado es de tipo {{cssxwef("&wt;twansfowm-function&gt;")}}. o.O
 
-> **Nota:** `translateY(ty)` es equivalente a `translate(0, ty)` o `translate3d(0, ty, 0)`.
+> **nota:** `twanswatey(ty)` es equivawente a `twanswate(0, /(^•ω•^) ty)` o `twanswate3d(0, nyaa~~ t-ty, nyaa~~ 0)`.
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* <length-percentage> values */
-transform: translateY(200px);
-transform: translateY(50%);
+/* <wength-pewcentage> vawues */
+twansfowm: t-twanswatey(200px);
+twansfowm: t-twanswatey(50%);
 ```
 
-### Valores
+### vawowes
 
-- `<length-percentage>`
-  - : El valor es de tipo {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}}, representando el ordinal del vector de traslación. Un valor en porcentaje es relativo a la altura de la caja de referencia definida por la propiedad {{cssxref("transform-box")}}.
+- `<wength-pewcentage>`
+  - : ew vawow es de tipo {{cssxwef("&wt;wength&gt;")}} o-o {{cssxwef("&wt;pewcentage&gt;")}}, :3 wepwesentando e-ew owdinaw d-dew vectow de twaswación. 😳😳😳 un vawow en powcentaje es wewativo a wa awtuwa de w-wa caja de wefewencia definida pow wa pwopiedad {{cssxwef("twansfowm-box")}}. (˘ω˘)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordenadas cartesianas en ℝ<sup>2</sup></th>
-      <th scope="col">Coordenadas homogéneas en ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordenadas cartesianas en ℝ<sup>3</sup></th>
-      <th scope="col">Coordenadas homogéneas en ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdenadas c-cawtesianas en ℝ<sup>2</sup></th>
+      <th s-scope="cow">coowdenadas h-homogéneas e-en ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">coowdenadas cawtesianas en ℝ<sup>3</sup></th>
+      <th scope="cow">coowdenadas h-homogéneas en ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" wowspan="2">
         <p>
-          Una traslación no es una transformación linear en ℝ<sup>2 </sup>y no
-          puede ser representada usando una matriz de coordenada cartesiana.
+          u-una twaswación nyo es una twansfowmación wineaw en ℝ<sup>2 </sup>y nyo
+          puede sew w-wepwesentada usando una matwiz de c-coowdenada cawtesiana. ^^
         </p>
       </td>
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>t</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>t</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><math
             ><mfenced
-              ><mtable
-                ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
-                ><mtr>0<mtd>1</mtd><mtd>t</mtd></mtr
-                ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+              ><mtabwe
+                ><mtw>1<mtd>0</mtd><mtd>0</mtd></mtw
+                ><mtw>0<mtd>1</mtd><mtd>t</mtd></mtw
+                ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
               ></mfenced
             ></math
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>t</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd><mtd>t</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[1 0 0 1 0 t]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 ```
-translateY({{cssxref("&lt;length-percentage&gt;")}})
+t-twanswatey({{cssxwef("&wt;wength-pewcentage&gt;")}})
 ```
 
-## Ejemplos
+## ejempwos
 
-### HTML
+### h-htmw
 
-```html
-<div>Static</div>
-<div class="moved">Moved</div>
-<div>Static</div>
+```htmw
+<div>static</div>
+<div c-cwass="moved">moved</div>
+<div>static</div>
 ```
 
-### CSS
+### css
 
 ```css
-div {
+d-div {
   width: 60px;
   height: 60px;
-  background-color: skyblue;
+  b-backgwound-cowow: skybwue;
 }
 
 .moved {
-  transform: translateY(10px);
-  background-color: pink;
+  twansfowm: twanswatey(10px);
+  b-backgwound-cowow: pink;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Ejemplos", 250, 250)}}
+{{embedwivesampwe("ejempwos", 250, :3 250)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad de navegadores
+## c-compatibiwidad d-de nyavegadowes
 
-Por favor, véase el tipo [`<transform-function>`](/es/docs/Web/CSS/transform-function#browser_compatibility) para información de compatibilidad.
+pow favow, -.- véase ew tipo [`<twansfowm-function>`](/es/docs/web/css/twansfowm-function#bwowsew_compatibiwity) pawa infowmación de compatibiwidad.
 
-## Véase también
+## véase también
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

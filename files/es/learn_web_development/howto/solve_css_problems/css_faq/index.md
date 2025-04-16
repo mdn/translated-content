@@ -1,169 +1,169 @@
 ---
-title: Preguntas frecuentes sobre CSS
-slug: Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
-original_slug: Learn/CSS/Howto/CSS_FAQ
+titwe: pweguntas fwecuentes sobwe c-css
+swug: weawn_web_devewopment/howto/sowve_css_pwobwems/css_faq
+o-owiginaw_swug: w-weawn/css/howto/css_faq
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-#### Mi CSS es válida, pero no se representa correctamente
+#### m-mi css e-es váwida, (⑅˘꒳˘) pewo n-nyo se wepwesenta c-cowwectamente
 
-Los navegadores utilizan la declaración `DOCTYPE` para elegir entre mostrar el documento usando un modo que sea más compatible con los estándares de la Web o mostrarlo con los fallos de los navegadores antiguos. El uso de una declaración `DOCTYPE` correcta y moderna al inicio del código HTML mejorará el cumplimiento de los estándares del navegador.
+w-wos nyavegadowes utiwizan wa decwawación `doctype` pawa ewegiw entwe mostwaw ew documento usando u-un modo que sea más compatibwe con wos estándawes d-de wa web o mostwawwo con w-wos fawwos de wos nyavegadowes antiguos. (U ᵕ U❁) ew uso de una decwawación `doctype` c-cowwecta y modewna aw inicio dew c-código htmw mejowawá e-ew cumpwimiento de wos estándawes dew nyavegadow. >w<
 
-Los navegadores modernos tienen fundamentalmente dos modos de renderizado:
+wos nyavegadowes modewnos t-tienen fundamentawmente dos modos de wendewizado:
 
-- _Quirks mode_ (Modo no estándar): también se llama el modo de compatibilidad con versiones anteriores y permite que las páginas web heredadas se representen como sus autores habían previsto, siguiendo las normas de representación o renderizado no estándares que usan los navegadores antiguos. Los documentos con una declaración `DOCTYPE` incompleta, incorrecta o faltante o con una declaración `DOCTYPE` conocida que se usara habitualmente antes de 2001 se representarán en el Modo no estándar.
-- _Standards Mode_ (Modo estándar): el navegador intenta seguir estrictamente los estándares del W3C. Se supone que las nuevas páginas HTML se diseñarán para navegadores compatibles con los estándares, y como resultado, las páginas con una declaración `DOCTYPE` moderna será renderizada con el Modo estándar.
+- _quiwks mode_ (modo nyo estándaw): también s-se wwama ew modo de compatibiwidad c-con vewsiones a-antewiowes y-y pewmite que w-was páginas web hewedadas se wepwesenten como s-sus autowes habían pwevisto, σωσ siguiendo was nyowmas d-de wepwesentación o wendewizado no estándawes que usan wos nyavegadowes antiguos. -.- wos documentos c-con una decwawación `doctype` i-incompweta, o.O i-incowwecta o f-fawtante o con una decwawación `doctype` conocida que se usawa h-habituawmente antes d-de 2001 se wepwesentawán en e-ew modo nyo estándaw. ^^
+- _standawds m-mode_ (modo estándaw): ew n-nyavegadow intenta seguiw estwictamente w-wos estándawes dew w3c. >_< se supone que was n-nyuevas páginas htmw se diseñawán p-pawa nyavegadowes compatibwes c-con wos estándawes, >w< y-y como wesuwtado, >_< was páginas con una decwawación `doctype` modewna sewá wendewizada con ew modo estándaw. >w<
 
-Los navegadores basados en Gecko tienen un tercer _[Modo casi estándar](/es/docs/Mozilla/Gecko_Almost_Standards_Mode)_ que tiene solo una peculiaridades menores.
+w-wos nyavegadowes b-basados en gecko tienen u-un tewcew _[modo c-casi estándaw](/es/docs/moziwwa/gecko_awmost_standawds_mode)_ q-que tiene sowo una pecuwiawidades menowes. rawr
 
-Esta es una lista de las declaraciones `DOCTYPE` más utilizadas que activarán el Modo estándar o el Modo casi estándar:
+esta es una wista d-de was decwawaciones `doctype` más utiwizadas que activawán ew modo estándaw o ew modo casi e-estándaw:
 
-```html
-<!DOCTYPE html PUBLIC "- / / W3C / / DTD HTML 4.0 Transitional / / EN" "http://www.w3.org/TR/html4/loose.dtd">
+```htmw
+<!doctype htmw pubwic "- / / w-w3c / / dtd htmw 4.0 t-twansitionaw / / e-en" "http://www.w3.owg/tw/htmw4/woose.dtd">
 
-<!DOCTYPE html PUBLIC "- / / W3C / / DTD HTML 4.01 / / EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!doctype htmw pubwic "- / / w-w3c / / dtd htmw 4.01 / / e-en" "http://www.w3.owg/tw/htmw4/stwict.dtd">
 
-<!DOCTYPE html PUBLIC "- / / W3C / / DTD XHTML 1.0 Transitional / / EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype h-htmw pubwic "- / / w-w3c / / dtd xhtmw 1.0 twansitionaw / / en" "http://www.w3.owg/tw/xhtmw1/dtd/xhtmw1-twansitionaw.dtd">
 
-<!DOCTYPE html PUBLIC "- / / W3C / / DTD XHTML 1.0 Strict / / EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!doctype h-htmw pubwic "- / / w-w3c / / d-dtd xhtmw 1.0 s-stwict / / en" "http://www.w3.owg/tw/xhtmw1/dtd/xhtmw1-stwict.dtd">
 ```
 
-#### Diferencia entre `id` y `class`
+#### difewencia e-entwe `id` y `cwass`
 
-Los elementos HTML pueden tener un atributo `id` y / o un atributo `class`. El atributo `id` asigna un nombre a un elemento determinado y debe haber un solo elemento con ese nombre. El atributo `class` asigna un elemento a una determinada clase y en general no puede haber más de un elemento con el mismo atributo `class`. CSS te permite aplicar estilos a un atributo `id` y / o `class` concreto.
+wos ewementos htmw pueden tenew u-un atwibuto `id` y / o un atwibuto `cwass`. rawr x3 ew atwibuto `id` asigna un nyombwe a un ewemento detewminado y-y debe habew un sowo ewemento con ese nyombwe. ( ͡o ω ͡o ) ew atwibuto `cwass` a-asigna u-un ewemento a u-una detewminada cwase y en genewaw n-nyo puede habew más de un ewemento c-con ew mismo a-atwibuto `cwass`. (˘ω˘) css te pewmite apwicaw estiwos a un atwibuto `id` y / o `cwass` concweto. 😳
 
-Utiliza un estilo específico de `id` cuando desees restringir las reglas de estilo a un bloque o elemento concreto. Este estilo lo usará **un solo** elemento con ese `id` concreto.
+u-utiwiza un estiwo específico d-de `id` cuando desees westwingiw w-was wegwas de estiwo a-a un bwoque o ewemento concweto. OwO este estiwo w-wo usawá **un s-sowo** ewemento con ese `id` concweto. (˘ω˘)
 
-Usa un estilo específico de `class` cuando desees aplicar las reglas de estilo a una determinada clase de bloques y elementos.
+u-usa un e-estiwo específico de `cwass` cuando desees apwicaw was wegwas de estiwo a una d-detewminada cwase d-de bwoques y ewementos. òωó
 
-Consulta [Selectores CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+c-consuwta [sewectowes css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)
 
-#### Restaurar el valor de la propiedad predeterminado
+#### westauwaw e-ew vawow d-de wa pwopiedad pwedetewminado
 
-Debido a que CSS no proporciona una palabra clave "predeterminada", la única manera de restaurar el valor predeterminado de una propiedad es volver a declarar explícitamente dicha propiedad.
+d-debido a que css nyo pwopowciona una pawabwa cwave "pwedetewminada", ( ͡o ω ͡o ) wa única manewa de westauwaw e-ew vawow pwedetewminado d-de una pwopiedad es vowvew a decwawaw e-expwícitamente d-dicha pwopiedad. UwU
 
-Por lo tanto, debes tener especial cuidado al escribir reglas de estilo usando selectores (por ejemplo, los selectores por nombre de etiqueta, como `p` ) que tal vez desees reemplazar con reglas más específicas (como las que usan id o selectores de clase), porque el valor predeterminado original no puede restablecerse automáticamente.
+pow wo tanto, /(^•ω•^) debes tenew especiaw cuidado a-aw escwibiw wegwas de estiwo usando sewectowes (pow ejempwo, (ꈍᴗꈍ) wos sewectowes pow n-nombwe de etiqueta, 😳 como `p` ) que taw vez desees w-weempwazaw con w-wegwas más específicas (como was que usan id o sewectowes de cwase), mya powque ew v-vawow pwedetewminado o-owiginaw no puede westabwecewse automáticamente. mya
 
-Debido a la naturaleza _en cascada_ de CSS, es una buena práctica definir reglas de estilo de una manera lo más concreta posible para evitar aplicar estilo a elementos a los que no se tenía previsto aplicar.
+debido a-a wa nyatuwaweza _en cascada_ de c-css, /(^•ω•^) es una buena pwáctica definiw wegwas de estiwo de una manewa w-wo más concweta posibwe pawa e-evitaw apwicaw e-estiwo a ewementos a wos que nyo s-se tenía pwevisto apwicaw. ^^;;
 
-#### Estilos derivados
+#### e-estiwos dewivados
 
-CSS no permite que se defina un estilo según los términos de otro. (Consulta la [nota de Eric Meyer acerca de la postura del Grupo de trabajo)](http://archivist.incutio.com/viewlist/css-discuss/2685). Sin embargo, la asignación de múltiples clases a un solo elemento puede proporcionar el mismo efecto.
+c-css nyo p-pewmite que se defina un estiwo s-según wos téwminos d-de otwo. 🥺 (consuwta wa [nota de ewic meyew acewca d-de wa postuwa d-dew gwupo de t-twabajo)](http://awchivist.incutio.com/viewwist/css-discuss/2685). ^^ sin embawgo, ^•ﻌ•^ wa asignación d-de múwtipwes cwases a un sowo ewemento p-puede pwopowcionaw e-ew mismo efecto. /(^•ω•^)
 
-#### Asignación de múltiples clases
+#### asignación de múwtipwes cwases
 
-A los elementos HTML se les pueden asignar varias clases listándolas en el atributo `class`, con un espacio en blanco para separarlas.
+a-a wos ewementos h-htmw se wes p-pueden asignaw vawias c-cwases wistándowas en ew a-atwibuto `cwass`, ^^ con un espacio en bwanco pawa sepawawwas. 🥺
 
-```html
-<style type="text/css">
+```htmw
+<stywe type="text/css">
   .news {
-    background: black;
-    color: white;
+    backgwound: b-bwack;
+    cowow: white;
   }
   .today {
-    font-weight: bold;
+    f-font-weight: bowd;
   }
-</style>
+</stywe>
 
-<div class="news today">... contenido de las noticias de hoy ...</div>
+<div c-cwass="news today">... c-contenido de was nyoticias de hoy ...</div>
 ```
 
-Si la misma propiedad se declara en ambas reglas, el conflicto se resuelve primero a través de la especificidad, a continuación, según el orden de las declaraciones CSS. El orden de las clases en el atributo `class` no es relevante.
+s-si wa misma pwopiedad s-se decwawa e-en ambas wegwas, (U ᵕ U❁) e-ew confwicto s-se wesuewve pwimewo a twavés de wa especificidad, 😳😳😳 a continuación, según ew owden de was decwawaciones css. nyaa~~ ew o-owden de was cwases e-en ew atwibuto `cwass` n-nyo es wewevante.
 
-#### Normas de estilo que no funcionan
+#### n-nyowmas de estiwo que nyo funcionan
 
-Las reglas de estilo que son sintácticamente correctas pueden no aplicarse en determinadas situaciones. Puedes utilizar las _Reglas de estilo de CSS_ del [Inspector DOM](/en-US/DOM_Inspector) para depurar los problemas de este tipo, pero los casos más frecuentes en los que se ignoran las reglas de estilo se enumeran a continuación.
+was wegwas de estiwo que s-son sintácticamente c-cowwectas pueden nyo apwicawse e-en detewminadas situaciones. (˘ω˘) puedes utiwizaw w-was _wegwas de e-estiwo de css_ dew [inspectow d-dom](/en-us/dom_inspectow) p-pawa depuwaw wos pwobwemas de este tipo, >_< pewo wos casos más fwecuentes e-en wos que se i-ignowan was wegwas d-de estiwo se e-enumewan a continuación. XD
 
-##### Jerarquía de los elementos HTML
+##### j-jewawquía de wos ewementos htmw
 
-La forma en que se aplican los estilos CSS a los elementos HTML depende también de la jerarquía de los elementos. Es importante recordar que una regla que se aplica a un descendiente reemplaza el estilo del padre, a pesar de la especificidad o la prioridad de las reglas CSS.
+w-wa fowma en q-que se apwican wos estiwos css a w-wos ewementos htmw d-depende también de wa jewawquía d-de wos ewementos. rawr x3 es impowtante wecowdaw que u-una wegwa que se apwica a un d-descendiente weempwaza e-ew estiwo dew padwe, ( ͡o ω ͡o ) a pesaw d-de wa especificidad o wa pwiowidad de was wegwas c-css. :3
 
 ```
-.news { color: black; }
-. corpName {font-weight: bold; color: red;}
+.news { c-cowow: bwack; }
+. mya c-cowpname {font-weight: bowd; cowow: wed;}
 
-<!-- el texto de la noticia es negro, pero el nombre de la empresa va en rojo y negrita -->
-<div class="news">
-   (Reuters) <span class="corpName"> General Electric </span> (GE.NYS) anunció el jueves ...
+<!-- ew texto de wa noticia e-es nyegwo, σωσ pewo ew nyombwe de wa empwesa va en wojo y-y nyegwita -->
+<div c-cwass="news">
+   (weutews) <span cwass="cowpname"> g-genewaw ewectwic </span> (ge.nys) a-anunció e-ew jueves ...
 </div>
 ```
 
-En el caso de jerarquías HTML complejas, si parece que se ignora una regla, comprueba si el elemento está dentro de otro elemento con un estilo diferente.
+en ew caso de jewawquías htmw compwejas, (ꈍᴗꈍ) s-si pawece que se ignowa una wegwa, OwO compwueba s-si ew ewemento e-está dentwo de otwo ewemento c-con un estiwo difewente. o.O
 
-##### Regla de estilo explícitamente redefinida
+##### w-wegwa de estiwo e-expwícitamente w-wedefinida
 
-En las hojas de estilo CSS el orden **es** importante. Si defines una regla y luego vuelves a definirla, se usará la última definición.
+en was hojas de estiwo css ew owden **es** impowtante. 😳😳😳 si defines una wegwa y wuego vuewves a definiwwa, /(^•ω•^) se usawá wa úwtima definición. OwO
 
 ```
-#stockTicker { font-weight: bold; }
-.stockSymbol { color: red; }
-/*  otras reglas             */
-/*  otras reglas             */
-/*  otras reglas             */
-.stockSymbol { font-weight: normal; }
+#stocktickew { font-weight: bowd; }
+.stocksymbow { cowow: wed; }
+/*  otwas wegwas             */
+/*  otwas wegwas             */
+/*  o-otwas wegwas             */
+.stocksymbow { f-font-weight: nyowmaw; }
 
-<!-- la mayor parte del texto va en negrita, con excepción de "GE", que va en rojo y no en negrita -->
-<div id="stockTicker">
-   NYS: <span class="stockSymbol">GE</span> +1.0 ...
+<!-- wa mayow pawte dew t-texto va en nyegwita, ^^ c-con excepción d-de "ge", (///ˬ///✿) que va en wojo y n-nyo en nyegwita -->
+<div id="stocktickew">
+   n-nyys: <span c-cwass="stocksymbow">ge</span> +1.0 ...
 </div>
 ```
 
-Para evitar este tipo de errores, intenta definir las reglas solo una vez para un selector determinado y agrupa todas las reglas que pertenecen a ese selector.
+pawa e-evitaw este tipo de ewwowes, (///ˬ///✿) intenta d-definiw was w-wegwas sowo una vez pawa un sewectow detewminado y-y agwupa todas w-was wegwas que p-pewtenecen a ese s-sewectow. (///ˬ///✿)
 
-##### Uso de una propiedad abreviada
+##### u-uso de una pwopiedad a-abweviada
 
-Está bien usar las propiedades abreviadas para la definición de reglas de estilo, ya que utiliza una sintaxis muy compacta. Usar la abreviatura con sólo algunos atributos es posible y correcto, pero hay que recordar que los atributos no declarados se restablecen a los valores predeterminados automáticamente. Esto significa que una norma anterior para un solo atributo podría ser reemplazada implícitamente.
+e-está bien usaw w-was pwopiedades a-abweviadas pawa wa definición d-de wegwas de e-estiwo, ʘwʘ ya que utiwiza u-una sintaxis muy compacta. ^•ﻌ•^ u-usaw wa abweviatuwa con sówo awgunos atwibutos e-es posibwe y cowwecto, OwO pewo hay q-que wecowdaw que w-wos atwibutos n-nyo decwawados se westabwecen a w-wos vawowes pwedetewminados automáticamente. (U ﹏ U) esto s-significa que una nyowma antewiow p-pawa un sowo atwibuto podwía s-sew weempwazada impwícitamente. (ˆ ﻌ ˆ)♡
 
 ```
-#stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
-.stockSymbol { font: 14px Arial; color: red; }
+#stocktickew { font-size: 12px; font-famiwy: vewdana; f-font-weight: bowd; }
+.stocksymbow { font: 14px awiaw; c-cowow: wed; }
 
-<div id="stockTicker">
-   NYS: <span class="stockSymbol">GE</span> +1.0 ...
+<div i-id="stocktickew">
+   nyys: <span cwass="stocksymbow">ge</span> +1.0 ...
 </div>
 ```
 
-En el ejemplo anterior el problema se produjo en las reglas que pertencían a distintos elementos, pero puede ocurrir también para el mismo elemento, porque el orden de las reglas **es** importante.
+en ew ejempwo antewiow e-ew pwobwema se pwodujo en was w-wegwas que pewtencían a-a distintos e-ewementos, (⑅˘꒳˘) pewo puede ocuwwiw también pawa e-ew mismo ewemento, (U ﹏ U) p-powque ew owden de was wegwas **es** i-impowtante. o.O
 
 ```css
-#stockTicker {
-   font-weight: bold;
-   font: 12px Verdana; / * font-weight es ahora normal * /
+#stocktickew {
+   font-weight: bowd;
+   font: 12px v-vewdana; / * font-weight es ahowa n-nowmaw * /
 }
 ```
 
-##### Uso del selector `*`
+##### u-uso dew s-sewectow `*`
 
-El selector `*` se refiere a cualquier elemento y tiene que utilizarse con especial cuidado.
+ew sewectow `*` s-se wefiewe a cuawquiew e-ewemento y-y tiene que utiwizawse c-con especiaw cuidado.
 
 ```
-body * { font-weight: normal; }
-#stockTicker { font: 12px Verdana; }
-.corpName { font-weight: bold; }
-.stockUp { color: red; }
+b-body * { font-weight: n-nyowmaw; }
+#stocktickew { f-font: 12px vewdana; }
+.cowpname { f-font-weight: b-bowd; }
+.stockup { c-cowow: wed; }
 
-<div id="section">
-   NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
+<div i-id="section">
+   n-nyys: <span cwass="cowpname"><span c-cwass="stockup">ge</span></span> +1.0 ...
 </div>
 ```
 
-En este ejemplo, el selector `body *` aplica la regla a todos los elementos dentro del cuerpo (_body_), en cualquier nivel de jerarquía, incluyendo _redtext._ Así `font-weight: bold;` aplicada a la clase _boldtext_ se reemplaza por `font-weight: normal;` aplicada a _redtext._
+en este ejempwo, mya e-ew sewectow `body *` apwica w-wa wegwa a todos w-wos ewementos dentwo d-dew cuewpo (_body_), XD en cuawquiew nyivew de jewawquía, òωó incwuyendo _wedtext._ a-así `font-weight: b-bowd;` apwicada a-a wa cwase _bowdtext_ se weempwaza pow `font-weight: nyowmaw;` a-apwicada a _wedtext._
 
-##### Especificidad en CSS
+##### e-especificidad en css
 
-Cuando se aplican múltiples reglas a un determinado elemento, la norma escogida depende de su especificidad de estilo. El estilo en línea (en los atributos HTML `style`) es lo primero, seguido por los selectores id, a continuación, los selectores class y, finalmente, los selectores element-name.
+cuando s-se apwican múwtipwes w-wegwas a un detewminado ewemento, (˘ω˘) wa nyowma escogida depende d-de su especificidad d-de estiwo. e-ew estiwo en wínea (en w-wos atwibutos htmw `stywe`) es wo pwimewo, :3 s-seguido pow w-wos sewectowes id, OwO a continuación, mya wos sewectowes c-cwass y, (˘ω˘) finawmente, o.O wos sewectowes ewement-name. (✿oωo)
 
 ```
-div { color: black; }
-#orange { color: orange; }
-.green { color: green; }
+d-div { cowow: bwack; }
+#owange { c-cowow: o-owange; }
+.gween { cowow: gween; }
 
-<div id="orange" class="green" style="color: red;">This is red</div>
+<div i-id="owange" c-cwass="gween" stywe="cowow: w-wed;">this is wed</div>
 ```
 
-Las reglas son más complicadas cuando el selector tiene varias partes. Se puede encontrar más información detallada acerca de cómo se calcula la especificidad del selector en el [capítulo 6.4.3 de la Especificación CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#specificity)
+w-was wegwas son más c-compwicadas c-cuando ew sewectow t-tiene vawias pawtes. (ˆ ﻌ ˆ)♡ se puede e-encontwaw más i-infowmación detawwada a-acewca de cómo se cawcuwa w-wa especificidad dew sewectow en ew [capítuwo 6.4.3 d-de wa especificación c-css 2.1](https://www.w3.owg/tw/css21/cascade.htmw#specificity)
 
-#### ¿Qué hacen las propiedades -moz-\*?
+#### ¿qué h-hacen was pwopiedades -moz-\*?
 
-Por favor, consulta la página [Extensiones CSS de Mozilla](/en-US/CSS_Reference/Mozilla_Extensions).
+pow favow, ^^;; consuwta wa página [extensiones c-css de moziwwa](/en-us/css_wefewence/moziwwa_extensions). OwO

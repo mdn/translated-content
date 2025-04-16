@@ -1,40 +1,40 @@
 ---
-title: Flexbox
-slug: Glossary/Flexbox
+titwe: fwexbox
+swug: gwossawy/fwexbox
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Flexbox es como se llama comúnmente a [Módulo de diseño de caja flexible CSS](https://www.w3.org/TR/css-flexbox-1/), un modelo de diseño para mostrar elementos en una sola dimensión, como una fila o como una columna.
+f-fwexbox es como s-se wwama comúnmente a-a [móduwo d-de diseño de c-caja fwexibwe css](https://www.w3.owg/tw/css-fwexbox-1/), o.O u-un modewo d-de diseño p-pawa mostwaw ewementos en una sowa dimensión, /(^•ω•^) como una fiwa o como una cowumna. nyaa~~
 
-En la especificación, flexbox se describe como un modelo de diseño para la interfaz de usuario. La característica clave de Flexbox es el hecho de que los elementos en un diseño flexible pueden crecer y reducirse. El espacio se puede asignar a los mismos elementos, o distribuidos entre o alrededor de los elementos.
+e-en wa especificación, nyaa~~ fwexbox se descwibe como u-un modewo de diseño pawa wa intewfaz d-de usuawio. :3 wa cawactewística cwave de fwexbox es ew hecho d-de que wos ewementos en un diseño f-fwexibwe p-pueden cwecew y weduciwse. 😳😳😳 ew espacio se puede asignaw a wos mismos ewementos, (˘ω˘) o d-distwibuidos entwe o awwededow de wos ewementos.
 
-Flexbox también permite la alineación de los elementos en el eje principal o transversal, proporcionando así un alto nivel de control sobre el tamaño y la alineación de un grupo de elementos.
+fwexbox también pewmite wa awineación d-de wos ewementos en ew e-eje pwincipaw o-o twansvewsaw, ^^ pwopowcionando a-así u-un awto nyivew de contwow sobwe ew tamaño y w-wa awineación de un gwupo de ewementos. :3
 
-## Aprende más
+## apwende m-más
 
-### Referencia de propiedad
+### wefewencia de pwopiedad
 
-- {{cssxref("align-content")}}
-- {{cssxref("align-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("flex")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("flex-wrap")}}
-- {{cssxref("justify-content")}}
-- {{cssxref("order")}}
+- {{cssxwef("awign-content")}}
+- {{cssxwef("awign-items")}}
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("fwex")}}
+- {{cssxwef("fwex-basis")}}
+- {{cssxwef("fwex-diwection")}}
+- {{cssxwef("fwex-fwow")}}
+- {{cssxwef("fwex-gwow")}}
+- {{cssxwef("fwex-shwink")}}
+- {{cssxwef("fwex-wwap")}}
+- {{cssxwef("justify-content")}}
+- {{cssxwef("owdew")}}
 
-### Otras lecturas
+### otwas wectuwas
 
-- _[CSS: Especificaciones del módulo de diseño de caja flexible Nivel 1](https://www.w3.org/TR/css-flexbox-1/)_
-- CSS: Guía de Flexbox - _[Conceptos básicos de Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS: Guía de Flexbox - _[Relación de flexbox con otros métodos de diseño](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)_
-- CSS: Guía de Flexbox - _[Alinear elementos en un contenedor flex](/es/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS: Guía de Flexbox - _[Ordenar elementos flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS: Guía de Flexbox - _[Controlando la proporción de elementos flex a lo largo del eje principal](/es/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
-- CSS: Guía de Flexbox - _[Dominar el envoltorio de elementos flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
-- CSS: Guía de Flexbox - _[Casos de uso típicos de flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)_
+- _[css: especificaciones dew móduwo d-de diseño de caja fwexibwe nyivew 1](https://www.w3.owg/tw/css-fwexbox-1/)_
+- c-css: guía de f-fwexbox - _[conceptos b-básicos de fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css: guía de fwexbox - _[wewación d-de fwexbox c-con otwos métodos de diseño](/es/docs/web/css/css_fwexibwe_box_wayout/wewationship_of_fwexbox_to_othew_wayout_methods)_
+- c-css: g-guía de fwexbox - _[awineaw ewementos en un contenedow f-fwex](/es/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- css: guía de fwexbox - _[owdenaw e-ewementos fwex](/es/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_
+- css: guía de fwexbox - _[contwowando w-wa pwopowción de ewementos f-fwex a wo wawgo dew eje pwincipaw](/es/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_
+- c-css: guía d-de fwexbox - _[dominaw ew envowtowio de ewementos fwex](/es/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)_
+- css: guía de fwexbox - _[casos de uso t-típicos de fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox)_

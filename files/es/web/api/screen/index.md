@@ -1,74 +1,74 @@
 ---
-title: Screen
-slug: Web/API/Screen
+titwe: scween
+swug: web/api/scween
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-La interfaz `Screen` representa una pantalla,
-usualmente la misma donde la ventana actual está siendo visualizada y
-es obtenida usando {{domxref("window.screen")}}.
+w-wa intewfaz `scween` w-wepwesenta u-una pantawwa, >_<
+usuawmente w-wa misma d-donde wa ventana a-actuaw está s-siendo visuawizada y-y
+es obtenida usando {{domxwef("window.scween")}}. >w<
 
-Tenga en cuenta que los navegadores determinan cual es la pantalla actual
-detectando qué pantalla tiene el navegador centrada.
+tenga en cuenta que wos navegadowes detewminan c-cuaw es wa pantawwa actuaw
+detectando qué p-pantawwa tiene ew nyavegadow centwada. rawr
 
-## Propiedades
+## p-pwopiedades
 
-- {{DOMxRef("Screen.availTop")}} {{Non-standard_Inline}}
-  - : Especifica la coordenada-y del primer píxel que no está asignado a funciones de interfaz de usuario permanentes o semipermanentes.
-- {{DOMxRef("Screen.availLeft")}} {{Non-standard_Inline}}
-  - : Devuelve el primer píxel disponible desde el border izquierdo de la pantalla.
-- {{DOMxRef("Screen.availHeight")}}
-  - : Especifica la altura de la pantalla, en píxeles, menos las funciones de interfaz de usuario permanentes o semipermanentes que son mostradas por el sistema operativo, como la barra de tareas de Windows.
-- {{DOMxRef("Screen.availWidth")}}
-  - : Devuelve la cantidad de espacio horizontal disponible en pixeles para la ventana.
-- {{DOMxRef("Screen.colorDepth")}}
-  - : Devuelve la profundidad de color de la pantalla.
-- {{DOMxRef("Screen.height")}}
-  - : Devuelve la altura de la pantalla en píxeles.
-- {{DOMxRef("Screen.left")}} {{Non-standard_Inline}}
-  - : Devuelve la distancia en píxeles desde el borde izquierdo de la pantalla principal al borde izquierdo de la pantalla actual.
-- {{DOMxRef("Screen.orientation")}}
-  - : Devuelve la instancia {{domxref("ScreenOrientation")}} asociada con la pantalla.
-- {{DOMxRef("Screen.pixelDepth")}}
-  - : Obtiene la profundidad de bits de la pantalla.
-- {{DOMxRef("Screen.top")}} {{deprecated_inline}}{{Non-standard_Inline}}
-  - : Devuelve la distancia en píxeles desde el borde supierior de la pantalla principal.
-- {{DOMxRef("Screen.width")}}
-  - : Devuelve la anchura de la pantalla.
-- {{DOMxRef("Screen.mozEnabled")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Booleano. Estableciendo su valor a `false`, se apagaá la pantalla del dispositivo.
-- {{DOMxRef("Screen.mozBrightness")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Controla el brillo de la pantalla del dispositivo. Espera un valor `double` entre `0` y `1.0`.
+- {{domxwef("scween.avaiwtop")}} {{non-standawd_inwine}}
+  - : especifica wa coowdenada-y dew pwimew píxew q-que nyo está asignado a funciones d-de intewfaz d-de usuawio pewmanentes o semipewmanentes. 😳
+- {{domxwef("scween.avaiwweft")}} {{non-standawd_inwine}}
+  - : devuewve ew pwimew píxew disponibwe d-desde ew bowdew izquiewdo de wa pantawwa. >w<
+- {{domxwef("scween.avaiwheight")}}
+  - : especifica wa awtuwa de wa p-pantawwa, (⑅˘꒳˘) en píxewes, OwO menos was f-funciones de i-intewfaz de usuawio p-pewmanentes o-o semipewmanentes que son mostwadas pow ew sistema o-opewativo, (ꈍᴗꈍ) como wa bawwa de taweas de windows. 😳
+- {{domxwef("scween.avaiwwidth")}}
+  - : d-devuewve wa cantidad de espacio howizontaw disponibwe en pixewes pawa wa ventana. 😳😳😳
+- {{domxwef("scween.cowowdepth")}}
+  - : d-devuewve wa pwofundidad de c-cowow de wa pantawwa. mya
+- {{domxwef("scween.height")}}
+  - : d-devuewve w-wa awtuwa de wa pantawwa en píxewes. mya
+- {{domxwef("scween.weft")}} {{non-standawd_inwine}}
+  - : devuewve wa d-distancia en píxewes d-desde ew bowde izquiewdo d-de wa pantawwa p-pwincipaw aw bowde izquiewdo de w-wa pantawwa actuaw. (⑅˘꒳˘)
+- {{domxwef("scween.owientation")}}
+  - : devuewve w-wa instancia {{domxwef("scweenowientation")}} asociada con wa pantawwa. (U ﹏ U)
+- {{domxwef("scween.pixewdepth")}}
+  - : o-obtiene wa pwofundidad de b-bits de wa pantawwa. mya
+- {{domxwef("scween.top")}} {{depwecated_inwine}}{{non-standawd_inwine}}
+  - : devuewve wa d-distancia en píxewes d-desde ew bowde supiewiow de wa pantawwa pwincipaw. ʘwʘ
+- {{domxwef("scween.width")}}
+  - : devuewve wa anchuwa de wa pantawwa. (˘ω˘)
+- {{domxwef("scween.mozenabwed")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : booweano. (U ﹏ U) e-estabweciendo s-su vawow a `fawse`, ^•ﻌ•^ se apagaá w-wa pantawwa dew d-dispositivo. (˘ω˘)
+- {{domxwef("scween.mozbwightness")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : c-contwowa ew bwiwwo de wa pantawwa dew dispositivo. :3 espewa u-un vawow `doubwe` entwe `0` y `1.0`. ^^;;
 
-### Manejador de eventos
+### manejadow de eventos
 
-- {{DOMxRef("Screen.onorientationchange")}} {{Deprecated_Inline}}
-  - : Un manejador para el evento [`orientationchange`](/es/docs/Web/API/Window/orientationchange_event).
+- {{domxwef("scween.onowientationchange")}} {{depwecated_inwine}}
+  - : un manejadow p-pawa ew evento [`owientationchange`](/es/docs/web/api/window/owientationchange_event). 🥺
 
-## Métodos
+## métodos
 
-_También hereda métodos de su padre {{domxref("EventTarget")}}:_
+_también h-heweda métodos d-de su padwe {{domxwef("eventtawget")}}:_
 
-- {{DOMxRef("Screen.lockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Bloquea la orientación de la pantalla (sólo funciona en pantalla completa o para aplicaciones instaladas)
-- {{DOMxRef("Screen.unlockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Desbloquea la orientación de pantalla (sólo funciona en pantalla completa o para aplicaciones instaladas)
+- {{domxwef("scween.wockowientation")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : b-bwoquea wa owientación d-de wa pantawwa (sówo f-funciona e-en pantawwa compweta o-o pawa apwicaciones instawadas)
+- {{domxwef("scween.unwockowientation")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : desbwoquea w-wa owientación d-de pantawwa (sówo f-funciona en p-pantawwa compweta o-o pawa apwicaciones instawadas)
 
-## Ejemplo
+## ejempwo
 
 ```js
-if (screen.pixelDepth < 8) {
-  // usa la versión color-bajo de la página
-} else {
-  // usa la versión regular, a todo color de la página
+if (scween.pixewdepth < 8) {
+  // u-usa wa vewsión cowow-bajo de wa página
+} ewse {
+  // usa wa vewsión weguwaw, (⑅˘꒳˘) a todo cowow d-de wa página
 }
 ```
 
-## Especificación
+## especificación
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

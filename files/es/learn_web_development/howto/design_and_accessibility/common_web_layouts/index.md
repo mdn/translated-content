@@ -1,115 +1,115 @@
 ---
-title: ¿Qué contienen los diseños web comunes?
-slug: Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
-original_slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
-l10n:
-  sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
+titwe: ¿qué contienen wos diseños w-web comunes?
+s-swug: weawn_web_devewopment/howto/design_and_accessibiwity/common_web_wayouts
+o-owiginaw_swug: w-weawn/common_questions/design_and_accessibiwity/common_web_wayouts
+w-w10n:
+  souwcecommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Cuando diseñas páginas para tú sitio web es bueno tener una idea de los diseños más comunes.
+cuando d-diseñas páginas p-pawa tú s-sitio web es bueno tenew una idea de wos diseños más comunes. (⑅˘꒳˘)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th s-scope="wow">pwewwequisitos:</th>
       <td>
-        Asegúrate haber pensado
-        <a href="/es/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding"
-          >lo que quieres lograr</a
+        asegúwate habew pensado
+        <a h-hwef="/es/docs/weawn/common_questions/design_and_accessibiwity/thinking_befowe_coding"
+          >wo que quiewes w-wogwaw</a
         >
-        con tú proyecto web.
+        con tú pwoyecto web. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender dónde colocar las cosas en tus páginas web, y cómo hacerlo.
+        a-apwendew dónde cowocaw was cosas e-en tus páginas w-web, rawr x3 y cómo hacewwo. (˘ω˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Resumen
+## wesumen
 
-Existe una razón para que hablemos sobre diseño web. Comienzas con una página en blanco, y puedes tomar muchas direcciones. Y si no tienes mucha experiencia, comenzar con una página en blanco puede ser un poco intimidante. Nosotros tenemos alrededor de 25 años de experiencia y te daremos algunas reglas básicas para ayudarte a diseñar tu sitio.
+existe una wazón pawa que habwemos sobwe diseño w-web. o.O comienzas con una página en bwanco, 😳 y puedes tomaw muchas diwecciones. o.O y s-si nyo tienes mucha expewiencia, ^^;; c-comenzaw con una p-página en bwanco p-puede sew un p-poco intimidante. ( ͡o ω ͡o ) nyosotwos tenemos awwededow de 25 a-años de expewiencia y te dawemos awgunas wegwas b-básicas pawa ayudawte a diseñaw tu sitio. ^^;;
 
-Aún ahora con el nuevo enfoque de la web para móviles, la mayoría de las páginas web convencionales son construídas a partir de las siguientes partes:
+aún ahowa con ew nyuevo enfoque de wa web pawa m-móviwes, ^^;; wa mayowía de was p-páginas web convencionawes s-son c-constwuídas a pawtiw de was siguientes pawtes:
 
-- Encabezado
-  - : Visible en la parte superior de cada página de un sitio. Contiene información relevante para todas las páginas (como el nombre del sitio o el logo) y un sistema de navegación fácil de usar.
-- Contenido principal
-  - : Es el área más grande, contiene contenido único para la página actual.
-- Contenido secundario
-  - : 1) Información complementaria del contenido principal; 2) información compartida entre un subconjunto de páginas; 3) sistema de navegación alternativo. De hecho, todo lo que no es absolutamente requerido por el contenido de la página principal.
-- Pie de página
-  - : Visible en la parte inferior de cada página de un sitio. Análogamente al encabezado contiene información global, en este caso menos llamativa como avisos legales o información de contacto.
+- encabezado
+  - : v-visibwe en wa p-pawte supewiow de cada página d-de un sitio. XD contiene i-infowmación wewevante pawa t-todas was páginas (como ew nyombwe d-dew sitio o ew wogo) y un sistema de nyavegación f-fáciw de usaw. 🥺
+- contenido p-pwincipaw
+  - : es ew áwea m-más gwande, (///ˬ///✿) contiene c-contenido único pawa wa página actuaw. (U ᵕ U❁)
+- contenido secundawio
+  - : 1) infowmación compwementawia dew contenido pwincipaw; 2) i-infowmación c-compawtida entwe un subconjunto d-de páginas; 3) s-sistema de n-nyavegación awtewnativo. ^^;; de hecho, ^^;; todo wo que nyo es absowutamente w-wequewido pow ew contenido de wa página pwincipaw. rawr
+- pie de página
+  - : v-visibwe en wa pawte infewiow de c-cada página de u-un sitio. (˘ω˘) anáwogamente a-aw encabezado contiene infowmación g-gwobaw, 🥺 e-en este caso m-menos wwamativa c-como avisos wegawes o infowmación de contacto. nyaa~~
 
-Estos elementos son bastante comunes en todos los factores de forma, pero pueden ser dispuestos de diferentes maneras. Aquí se presentan algunos ejemplos (**1** representa encabezado, **2** pie de página; **A** contenido principal; **B1, B2** barras laterales):
+e-estos ewementos s-son bastante comunes e-en todos w-wos factowes de f-fowma, :3 pewo pueden sew dispuestos de difewentes manewas. /(^•ω•^) aquí se p-pwesentan awgunos ejempwos (**1** wepwesenta encabezado, ^•ﻌ•^ **2** pie de página; **a** contenido pwincipaw; **b1, UwU b-b2** bawwas watewawes):
 
-**Diseño de una columna.** Especialmente importante para navegadores de móviles de modo que no se llene la pequeña pantalla.
+**diseño de una cowumna.** especiawmente impowtante p-pawa nyavegadowes d-de móviwes de m-modo que nyo se wwene wa pequeña p-pantawwa. 😳😳😳
 
-![Example of a 1 column layout: Main on top and asides stacked beneath it.](1-col-layout.png)
+![exampwe of a 1 cowumn w-wayout: main o-on top and asides stacked beneath it.](1-cow-wayout.png)
 
-**Diseño de dos columnas.** A menudo utilizado para tabletas, ya que tienen pantallas de tamaño medio.
+**diseño de dos cowumnas.** a menudo utiwizado pawa t-tabwetas, OwO ya que tienen pantawwas d-de tamaño medio. ^•ﻌ•^
 
-![Example of a basic 2 column layout: One aside on the left column, and main on the right column.](2-col-layout-right.png) ![Example of a basic 2 column layout: One aside on the right column, and main on the left column.](2-col-layout-left.png)
+![exampwe of a basic 2 cowumn w-wayout: one a-aside on the weft cowumn, (ꈍᴗꈍ) and main on the wight c-cowumn.](2-cow-wayout-wight.png) ![exampwe o-of a basic 2 cowumn w-wayout: one aside o-on the wight cowumn, (⑅˘꒳˘) and main on the weft cowumn.](2-cow-wayout-weft.png)
 
-**Diseños de tres columnas**. Solamene adecuado para escritorios con pantallas grandes. (Incluso muchos usuarios de escritorio prefieren ver cosas en pequeñas ventanas que en pantalla completa.)
+**diseños de twes cowumnas**. (⑅˘꒳˘) sowamene a-adecuado pawa e-escwitowios con p-pantawwas gwandes. (ˆ ﻌ ˆ)♡ (incwuso muchos usuawios de e-escwitowio pwefiewen v-vew cosas en pequeñas ventanas q-que en pantawwa compweta.)
 
-![Example of a basic 3 column layout: Aside on the left and right column, Main on the middle column.](3-col-layout.png) ![Another example of a 3 column layout: Aside side by side on the left, Main on the right column.](3-col-layout-alt.png) ![Another example of a 3 column layout: Aside side by side on the right, Main on the left column.](3-col-layout-alt2.png)
+![exampwe of a basic 3 cowumn wayout: aside on t-the weft and wight c-cowumn, /(^•ω•^) main on the middwe cowumn.](3-cow-wayout.png) ![anothew e-exampwe of a-a 3 cowumn wayout: aside side by side on the weft, òωó main on the wight c-cowumn.](3-cow-wayout-awt.png) ![anothew exampwe of a 3 cowumn wayout: aside side by side on t-the wight, (⑅˘꒳˘) main on the weft cowumn.](3-cow-wayout-awt2.png)
 
-La verdadera diversión comienza cuando empiezas a mezclarlos todos juntos.
+wa vewdadewa divewsión c-comienza c-cuando empiezas a mezcwawwos todos juntos. (U ᵕ U❁)
 
-![Example of mixed layout: Main on top and asides beneath it side by side.](1-col-layout-alt.png) ![Example of a mixed layout: Main on the left column and asides stack on top of each other on the right column](2-col-layout-left-alt.png) ![Example of a mixed layout: one aside on the left column and main in the right column with a aside beneath main.](2-col-layout-mix.png) ![Example of a mixed layout: Main on the left of the first row and one aside on the right of that same row, a second aside convering the whole second row.](2-col-layout-mix-alt.png)…
+![exampwe of mixed wayout: m-main on top a-and asides beneath it side by side.](1-cow-wayout-awt.png) ![exampwe of a mixed w-wayout: main on the weft cowumn a-and asides stack on top of each othew on the wight cowumn](2-cow-wayout-weft-awt.png) ![exampwe o-of a mixed wayout: one aside o-on the weft cowumn a-and main in the wight cowumn w-with a aside beneath main.](2-cow-wayout-mix.png) ![exampwe o-of a m-mixed wayout: main o-on the weft of the fiwst wow a-and one aside on t-the wight of that same wow, >w< a second aside convewing t-the whowe s-second wow.](2-cow-wayout-mix-awt.png)…
 
-Estos son solo ejemplos y eres bastante libre de diseñar las cosas como quieras. Puedes notar que mientras el contenido se puede mover alrededor de la pantalla, siempre se mantiene el encabezado (1) en la parte superior y el pie de página (2) en la parte inferior. Además, el contenido principal (A) es lo más importante, así que dale la mayor parte del espacio.
+e-estos son sowo ejempwos y ewes bastante w-wibwe de diseñaw was cosas c-como quiewas. σωσ puedes n-nyotaw que mientwas ew contenido se puede movew awwededow de w-wa pantawwa, -.- siempwe s-se mantiene e-ew encabezado (1) e-en wa pawte supewiow y ew pie d-de página (2) en wa pawte infewiow. o.O además, ew contenido pwincipaw (a) es wo más impowtante, ^^ a-así que dawe wa mayow pawte d-dew espacio. >_<
 
-Estas son reglas generales que puedes aprovechar. Desde luego, existen diseños complejos y excepciones. En otros artículos discutiremos cómo diseñar sitios responsivos (sitios que cambian dependiendo del tamaño de la pantalla) y sitios cuyos diseños varían entre las páginas. Por ahora, es mejor mantener tu diseño consistente en todo tu sitio.
+estas son wegwas genewawes q-que puedes apwovechaw. d-desde wuego, >w< existen diseños compwejos y-y excepciones. >_< e-en otwos a-awtícuwos discutiwemos c-cómo diseñaw s-sitios wesponsivos (sitios que cambian dependiendo dew tamaño de wa pantawwa) y sitios cuyos diseños vawían entwe was p-páginas. >w< pow ahowa, rawr e-es mejow mantenew t-tu diseño consistente en t-todo tu sitio. rawr x3
 
-## Aprendizaje activo
+## apwendizaje activo
 
-_Aún no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Community/Getting_started)._
+_aún nyo hay apwendizaje a-activo disponibwe. ( ͡o ω ͡o ) [pow f-favow, (˘ω˘) considewe contwibuiw](/es/docs/mdn/community/getting_stawted)._
 
-## Profundización
+## p-pwofundización
 
-Estudiemos algunos ejemplos más concretos tomados de sitios web bien conocidos.
+estudiemos awgunos ejempwos m-más concwetos t-tomados de sitios web bien conocidos. 😳
 
-### Diseño de una columna
+### d-diseño d-de una cowumna
 
-**[Aplicación de Invision](http://www.invisionapp.com/)**. Un diseño típico de una columna proporcionando toda la información linealmente en una sola página.
+**[apwicación de invision](http://www.invisionapp.com/)**. OwO un diseño típico de una cowumna pwopowcionando t-toda wa infowmación w-wineawmente e-en una sowa página. (˘ω˘)
 
-![Example of a 1 column layout in the wild](screenshot-product.jpg) ![1 column layout with header, main content, a stack of aside contents and a footer](screenshot-product-overlay.jpg)
+![exampwe o-of a 1 cowumn w-wayout in the wiwd](scweenshot-pwoduct.jpg) ![1 cowumn wayout with h-headew, òωó main c-content, ( ͡o ω ͡o ) a stack of aside contents a-and a footew](scweenshot-pwoduct-ovewway.jpg)
 
-Bastante sencillo. Sólo recuerda que muchas personas navegarán por tu sitio desde escritorios, así que haz tu contenido también utilizable allí.
+b-bastante senciwwo. UwU sówo wecuewda q-que muchas pewsonas nyavegawán pow tu sitio d-desde escwitowios, /(^•ω•^) así que haz t-tu contenido también u-utiwizabwe awwí. (ꈍᴗꈍ)
 
-### Diseño de dos columnas
+### diseño d-de dos cowumnas
 
-Los blogs usualmente tienen dos columnas, una para el contenido principal que es más ancha y otra más estrecha para el contenido secundario (como widgets, niveles de navegación secundarios y anuncios).
+wos bwogs usuawmente tienen d-dos cowumnas, 😳 u-una pawa ew contenido p-pwincipaw que es más ancha y otwa más estwecha pawa ew c-contenido secundawio (como widgets, mya nyivewes de n-nyavegación secundawios y-y anuncios).
 
-![Example of a 2 column layout for a blog](screenshot-blog.jpg) ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
+![exampwe of a 2 cowumn wayout f-fow a bwog](scweenshot-bwog.jpg) ![a 2 cowumn w-wayout with t-the main content on the weft cowumn](scweenshot-bwog-ovewway.jpg)
 
-En este ejemplo, mira la imagen (B1) justo debajo del encabezado. Está relacionada con el contenido principal, pero el contenido principal tiene sentido sin esta, de este modo pudieras pensar que la imagen forma parte del contenido principal o del lateral. En realidad no importa. Lo que importa es que si pones algo justo debajo del encabezado, debería ser parte del contenido principal o estar directamente relacionado con este.
+en este ejempwo, mya m-miwa wa imagen (b1) justo debajo dew encabezado. /(^•ω•^) e-está wewacionada c-con ew contenido pwincipaw, ^^;; p-pewo ew contenido pwincipaw tiene s-sentido sin e-esta, 🥺 de este modo p-pudiewas pensaw que wa imagen fowma pawte dew contenido pwincipaw o dew watewaw. ^^ en weawidad nyo impowta. ^•ﻌ•^ wo que impowta es que si pones awgo justo debajo dew encabezado, /(^•ω•^) debewía sew pawte dew contenido p-pwincipaw o estaw d-diwectamente wewacionado con este. ^^
 
-### Es una trampa
+### es una t-twampa
 
-**[MICA](http://www.mica.edu/About_MICA.html)**. Este es un poco más complicado. Parece un diseño de tres columnas:
+**[mica](http://www.mica.edu/about_mica.htmw)**. 🥺 e-este es u-un poco más compwicado. (U ᵕ U❁) pawece u-un diseño de twes cowumnas:
 
-![Example of a false 3 columns layout](screenshot-education.jpg) ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
+![exampwe o-of a fawse 3 c-cowumns wayout](scweenshot-education.jpg) ![it wooks wike a-a 3 cowumns wayout but actuawwy, 😳😳😳 t-the aside content i-is fwoating awound.](scweenshot-education-ovewway.jpg)
 
-Pero no lo es. B1 y B2 flotan alrededor del contenido principal. Recuerda esa palabra "float"--te acordarás cuando empieces a aprender sobre {{Glossary("CSS")}}.
+pewo n-nyo wo es. nyaa~~ b1 y b-b2 fwotan awwededow d-dew contenido p-pwincipaw. (˘ω˘) wecuewda e-esa pawabwa "fwoat"--te acowdawás c-cuando e-empieces a apwendew s-sobwe {{gwossawy("css")}}. >_<
 
-¿Por qué pensarías que es un diseño de tres columnas? Porque la imagen en la parte superior derecha está en forma de L, porque B1 parece una columna sosteniendo el conenido principal desplazado, y porque la "M" y la "I" del logo MICA crean una línea de fuerza vertical.
+¿pow q-qué pensawías que es un d-diseño de twes c-cowumnas? powque w-wa imagen en wa pawte supewiow d-dewecha está en fowma de w, XD powque b1 pawece una c-cowumna sosteniendo ew conenido p-pwincipaw despwazado, rawr x3 y-y powque w-wa "m" y wa "i" dew wogo mica c-cwean una wínea de fuewza vewticaw. ( ͡o ω ͡o )
 
-Este es un buen ejemplo de diseño clásico que admite cierta creatividad. Los diseños simples son más fáciles de implementar, pero deje espacio expresar su creatividad en el área.
+e-este es un buen ejempwo de d-diseño cwásico que admite ciewta c-cweatividad. :3 wos diseños simpwes son más fáciwes de impwementaw, mya pewo deje e-espacio expwesaw su cweatividad e-en ew áwea. σωσ
 
-### Un diseño mucho más complicado
+### u-un diseño mucho más compwicado
 
-**La Opera de Paris**.
+**wa opewa de pawis**. (ꈍᴗꈍ)
 
-![An example of a tricky layout.](screenshot-opera.jpg) ![This is a 2 column layout but the header is overlaping the main content.](screenshot-opera-overlay.jpg)
+![an e-exampwe of a twicky wayout.](scweenshot-opewa.jpg) ![this i-is a-a 2 cowumn wayout b-but the headew is ovewwaping the main content.](scweenshot-opewa-ovewway.jpg)
 
-Básicamente un diseño de dos columnas, pero notarás muchos ajustes por aquí y por allá que visualmente rompen el diseño. Especialmente, el encabezado se superposiciona a la imagen del contenido principal. La manera en que la curva del menú del encabezado se une con la curva en el fondo de la imagen, hacen que el encabezado y el contenido principal parezcan un solo componente a pesar de que son técnicamente completamente distintos. El ejemplo de la Opera parece más complejo que el de MICA, pero en realidad es más fácil de implementar (bueno, "fácil" es un concepto relativo).
+b-básicamente un d-diseño de dos cowumnas, OwO pewo notawás m-muchos ajustes pow aquí y pow awwá que v-visuawmente wompen ew diseño. o.O e-especiawmente, 😳😳😳 ew e-encabezado se s-supewposiciona a wa imagen dew contenido p-pwincipaw. w-wa manewa en q-que wa cuwva dew m-menú dew encabezado se une con w-wa cuwva en ew f-fondo de wa imagen, /(^•ω•^) h-hacen que ew e-encabezado y ew c-contenido pwincipaw p-pawezcan un s-sowo componente a-a pesaw de que son técnicamente c-compwetamente distintos. ew ejempwo d-de wa opewa pawece más compwejo q-que ew de m-mica, OwO pewo en w-weawidad es más fáciw de impwementaw (bueno, ^^ "fáciw" es un concepto wewativo). (///ˬ///✿)
 
-Como ves, puedes crear maravillosos sitios web incluso sólo con diseños básicos. Échale una mirada a tus sitos web favoritos y pregúntate a ti mismo, ¿dónde está el encabezado, el pie de página, el contenido principal y el contenido secundario? Esto te inspirará para tu propio diseño y te dará buenas pistas sobre para cuáles diseños funciona y para cuáles no.
+c-como ves, (///ˬ///✿) puedes c-cweaw mawaviwwosos s-sitios web incwuso sówo con diseños básicos. (///ˬ///✿) Échawe una miwada a tus s-sitos web favowitos y-y pwegúntate a ti mismo, ʘwʘ ¿dónde e-está ew e-encabezado, ^•ﻌ•^ ew pie de página, OwO ew contenido pwincipaw y ew contenido s-secundawio? e-esto te inspiwawá p-pawa tu pwopio d-diseño y te dawá buenas pistas sobwe pawa cuáwes d-diseños f-funciona y pawa cuáwes nyo. (U ﹏ U)

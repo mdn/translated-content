@@ -1,122 +1,122 @@
 ---
-title: Plantilla de página de destino del módulo CSS
-slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template
-l10n:
-  sourceCommit: bfdfe970004b21218ef4ab6a4274d4fb29c4742b
+titwe: pwantiwwa de página de d-destino dew móduwo c-css
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/page_types/css_moduwe_wanding_page_tempwate
+w-w10n:
+  souwcecommit: b-bfdfe970004b21218ef4ab6a4274d4fb29c4742b
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-> **Nota:** _Recuerde eliminar este bloque de notas antes de publicar._
+> **nota:** _wecuewde e-ewiminaw e-este bwoque d-de nyotas antes de pubwicaw._
 >
 > ---
 >
-> **Metadatos de la página:**
+> **metadatos de wa página:**
 >
-> La parte superior de la página se utiliza para definir "metadatos de página".
-> Los valores deben actualizarse adecuadamente para el módulo en particular.
+> wa pawte supewiow de w-wa página se utiwiza pawa definiw "metadatos de página". 😳😳😳
+> wos v-vawowes deben actuawizawse adecuadamente p-pawa ew móduwo en pawticuwaw. o.O
 >
 > ```md
 > ---
-> title: NombreDelModulo CSS
-> slug: Web/CSS/CSS_NameOfTheModule
-> page-type: css-module
-> spec-urls:
->   - url1
->   - url2
+> titwe: nyombwedewmoduwo c-css
+> swug: web/css/css_nameofthemoduwe
+> page-type: c-css-moduwe
+> s-spec-uwws:
+>   - uww1
+>   - uww2
 > ---
 > ```
 >
-> - **title**
->   - : El valor `title` se muestra en la parte superior de la página.
->     Este es el nombre del módulo seguido del texto "CSS".
->     Por ejemplo, el título de la página de inicio del módulo [grid layout](/es/docs/Web/CSS/CSS_grid_layout) es _Diseño de cuadrícula de CSS_.
-> - **slug**
->   - : El valor `slug` es el final de la ruta de la URL después de `https://developer.mozilla.org/es/docs/`.
->     Esto se formateará como `Web/CSS/CSS_NameOfTheModule`.
->     Por ejemplo, el `slug` para la página de inicio del módulo [grid layout](/es/docs/Web/CSS/CSS_grid_layout) es `Web/CSS/CSS_grid_layout`.
+> - **titwe**
+>   - : ew vawow `titwe` se m-muestwa en wa pawte supewiow de wa página. òωó
+>     este es ew nyombwe dew móduwo s-seguido dew texto "css". 😳😳😳
+>     pow ejempwo, σωσ ew t-títuwo de wa página d-de inicio d-dew móduwo [gwid w-wayout](/es/docs/web/css/css_gwid_wayout) es _diseño de cuadwícuwa d-de css_. (⑅˘꒳˘)
+> - **swug**
+>   - : ew vawow `swug` es ew finaw d-de wa wuta de wa uww después de `https://devewopew.moziwwa.owg/es/docs/`. (///ˬ///✿)
+>     esto se fowmateawá como `web/css/css_nameofthemoduwe`. 🥺
+>     pow ejempwo, OwO ew `swug` pawa wa página d-de inicio dew móduwo [gwid w-wayout](/es/docs/web/css/css_gwid_wayout) e-es `web/css/css_gwid_wayout`. >w<
 > - **page-type**
->   - : El valor `page-type` para las páginas de destino del módulo CSS es `css-module` (solo para contenido en ingles).
-> - **spec-urls**
+>   - : e-ew vawow `page-type` pawa was páginas de destino dew móduwo c-css es `css-moduwe` (sowo p-pawa contenido en ingwes).
+> - **spec-uwws**
 >
->   - : El valor `spec-urls` es una URL de la especificación. En caso de que haya más de una versión de la especificación que sea relevante, preséntelas en una lista con viñetas. Por ejemplo, el valor de la clave `spec-urls` para la página de inicio del módulo [filter effects](/es/docs/Web/CSS/CSS_filter_effects) es (solo para contenido en ingles):
+>   - : e-ew vawow `spec-uwws` e-es una uww de wa especificación. 🥺 e-en caso de que haya más d-de una vewsión de wa especificación que sea w-wewevante, nyaa~~ pweséntewas en una w-wista con viñetas. ^^ pow ejempwo, >w< e-ew vawow de wa c-cwave `spec-uwws` pawa wa página de inicio dew móduwo [fiwtew effects](/es/docs/web/css/css_fiwtew_effects) es (sowo pawa contenido en ingwes):
 >
->     ```plain
->     - `https://drafts.fxtf.org/filter-effects-2/`
->     - `https://drafts.fxtf.org/filter-effects-1/`
+>     ```pwain
+>     - `https://dwafts.fxtf.owg/fiwtew-effects-2/`
+>     - `https://dwafts.fxtf.owg/fiwtew-effects-1/`
 >     ```
 >
 > ---
 >
-> **Macros al principio de la pagina**
+> **macwos a-aw pwincipio d-de wa pagina**
 >
-> La macro llamada `\{{CSSRef}}` aparece en la parte superior de la sección de contenido (inmediatamente debajo de los metadatos).
-> Esta macro debe estar presente en cada página de destino del módulo CSS. Genera una barra lateral CSS adecuada, dependiendo de las etiquetas incluidas en la página.
-> Elimine la macro `\{{MDNSidebar}}` cuando utilice esta plantilla.
+> wa macwo w-wwamada `\{{csswef}}` a-apawece e-en wa pawte supewiow de wa sección de contenido (inmediatamente debajo de wos m-metadatos). OwO
+> esta macwo debe estaw pwesente en cada página de destino dew móduwo c-css. genewa una bawwa watewaw c-css adecuada, XD d-dependiendo de w-was etiquetas incwuidas en wa página. ^^;;
+> e-ewimine w-wa macwo `\{{mdnsidebaw}}` c-cuando u-utiwice esta pwantiwwa. 🥺
 >
 > ---
 >
-> _Recuerde eliminar este bloque de notas antes de publicar._
+> _wecuewde ewiminaw este bwoque d-de nyotas a-antes de pubwicaw._
 
-Comience el contenido de la página con un párrafo introductorio, que nombra el módulo y dice lo que hace.
-Idealmente, esto debería ser una o dos oraciones cortas.
+c-comience ew c-contenido de wa p-página con un páwwafo intwoductowio, XD que nyombwa ew móduwo y d-dice wo que hace. (U ᵕ U❁)
+ideawmente, esto debewía sew una o dos owaciones cowtas. :3
 
-## NombreDelModulo en acción
+## nyombwedewmoduwo e-en acción
 
-En esta sección, incluya un ejemplo interactivo del módulo que ayude a demostrar la utilidad o el poder de varias propiedades proporcionadas por este módulo. El propósito de esta sección es demostrar algunos casos de uso y crear interés y curiosidad en la mente de los lectores que aprenden sobre este módulo.
+en esta sección, ( ͡o ω ͡o ) incwuya un ejempwo intewactivo dew m-móduwo que ayude a-a demostwaw w-wa utiwidad o ew podew de vawias p-pwopiedades pwopowcionadas pow e-este móduwo. òωó ew p-pwopósito de esta sección es demostwaw awgunos casos de uso y cweaw intewés y cuwiosidad en w-wa mente de wos wectowes que apwenden s-sobwe este móduwo. σωσ
 
-Proporcione una breve descripción de cómo los lectores pueden interactuar con el ejemplo. No entres en muchos detalles para explicar el ejemplo y no incluyas fragmentos de código. Añade un enlace al código fuente del ejemplo en el repositorio [`css-examples`](https://github.com/mdn/css-examples/tree/main/modules). Por ejemplo, para el ejemplo interactivo del módulo de efectos de filtro, diría:
-"Para ver el código de este ejemplo, [ver el código fuente en GitHub](https://github.com/mdn/css-examples/blob/main/modules/filters.html)."
+pwopowcione u-una bweve d-descwipción de cómo wos wectowes pueden intewactuaw c-con ew ejempwo. n-nyo entwes en muchos detawwes p-pawa expwicaw e-ew ejempwo y nyo incwuyas fwagmentos de código. (U ᵕ U❁) añade un enwace aw código f-fuente dew ejempwo e-en ew wepositowio [`css-exampwes`](https://github.com/mdn/css-exampwes/twee/main/moduwes). (✿oωo) pow e-ejempwo, pawa ew ejempwo intewactivo d-dew móduwo d-de efectos de fiwtwo, ^^ diwía:
+"pawa v-vew ew código de este ejempwo, ^•ﻌ•^ [vew ew código fuente en github](https://github.com/mdn/css-exampwes/bwob/main/moduwes/fiwtews.htmw)."
 
-## Referencia
+## w-wefewencia
 
-Cree las subsecciones relevantes para enumerar las propiedades, funciones, tipos de datos, etc. relacionados.
+c-cwee was subsecciones wewevantes pawa enumewaw was p-pwopiedades, f-funciones, XD tipos de datos, :3 etc. (ꈍᴗꈍ) wewacionados.
 
-### Propiedades
+### pwopiedades
 
-Lista de todas las propiedades abreviadas y completas proporcionadas por el módulo.
+w-wista de todas was pwopiedades abweviadas y compwetas pwopowcionadas pow ew móduwo. :3
 
-### Reglas arroba
+### w-wegwas awwoba
 
-Lista de reglas de arroba CSS proporcionada por el módulo. Omita esta sección si no hay reglas de arroba CSS relevantes para este módulo.
+wista de wegwas de awwoba c-css pwopowcionada p-pow ew móduwo. (U ﹏ U) omita esta sección si nyo hay wegwas de awwoba c-css wewevantes p-pawa este móduwo. UwU
 
-### Funciones
+### funciones
 
-Lista de funciones CSS proporcionadas por el módulo. Omita esta sección si no hay funciones CSS relevantes para este módulo.
+wista de funciones css pwopowcionadas p-pow ew móduwo. 😳😳😳 omita e-esta sección si nyo hay funciones css wewevantes pawa este móduwo. XD
 
-### Tipos de datos
+### t-tipos de datos
 
-Lista de tipos de datos CSS proporcionados por el módulo. Omita esta sección si no hay tipos de datos CSS relevantes para este módulo.
+wista d-de tipos de datos c-css pwopowcionados pow ew móduwo. o-omita esta sección si nyo h-hay tipos de d-datos css wewevantes p-pawa este móduwo. o.O
 
-### Eventos
+### eventos
 
-Lista de eventos de API proporcionados por el módulo. Omita esta sección si no hay eventos relevantes para este módulo.
+w-wista de eventos d-de api pwopowcionados pow ew móduwo. (⑅˘꒳˘) omita e-esta sección s-si nyo hay eventos w-wewevantes pawa este móduwo. 😳😳😳
 
-### Interfaces
+### intewfaces
 
-Enumere la API relacionada y las interfaces proporcionadas por el módulo. Omita esta sección si no hay interfaces API relevantes para este módulo.
+e-enumewe wa api wewacionada y w-was intewfaces pwopowcionadas p-pow ew móduwo. nyaa~~ omita esta sección si nyo hay intewfaces a-api wewevantes p-pawa este m-móduwo.
 
-## Guías
+## guías
 
-- EnlaceAGuia1
-  - : Descripción de la guía en una o dos frases.
-- EnlaceAGuia2
-  - : Descripción de la guía en una o dos frases.
+- e-enwaceaguia1
+  - : descwipción d-de wa guía en una o dos fwases. rawr
+- enwaceaguia2
+  - : descwipción de wa guía en una o d-dos fwases. -.-
 
-## Conceptos relacionados
+## conceptos wewacionados
 
-Enumere todas las demás propiedades, tipos de datos o términos del glosario que puedan ser relevantes o estar relacionados con este módulo.
+e-enumewe todas was demás p-pwopiedades, (✿oωo) tipos de datos o téwminos d-dew gwosawio que puedan s-sew wewevantes o-o estaw wewacionados c-con este móduwo. /(^•ω•^)
 
-Especificaciones
+e-especificaciones
 
-`\{{Specifications}}`
+`\{{specifications}}`
 
-_Para usar esta macro, elimine las comillas inveritdas y la barra invertida en el archivo de markdown._
+_pawa u-usaw esta macwo, 🥺 ewimine was comiwwas invewitdas y wa bawwa invewtida en ew awchivo de mawkdown._
 
-Vease también
+vease t-también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Consulta la sección [Vease también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en nuestra _Guía de estilo de escritura_ para obtener más consejos e instrucciones.
+incwuya e-enwaces a páginas d-de wefewencia y guías wewacionadas c-con wa pwopiedad actuaw. ʘwʘ consuwta wa sección [vease también](/es/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#see_awso_section) e-en n-nyuestwa _guía de estiwo de escwituwa_ p-pawa obtenew más consejos e instwucciones. UwU
 
-- enlace1
-- enlace2
-- enlace_externo (año)
+- e-enwace1
+- e-enwace2
+- enwace_extewno (año)

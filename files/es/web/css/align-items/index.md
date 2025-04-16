@@ -1,132 +1,132 @@
 ---
-title: align-items
-slug: Web/CSS/align-items
+titwe: awign-items
+swug: web/css/awign-items
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`align-items`** establece el valor {{cssxref("align-self")}} sobre todos los descendientes directos de un grupo. La propiedad align-self indica la alineación de un elemento dentro del bloque que lo contiene. En Flexbox controla la alineación de los elementos del {{glossary("Cross Axis")}}, en Grid Layout controla la alineación de los elementos en el eje Block dentro de su [área grid](/es/docs/Glossary/Grid_Areas).
+w-wa pwopiedad [css](/es/docs/web/css) **`awign-items`** e-estabwece e-ew vawow {{cssxwef("awign-sewf")}} s-sobwe todos w-wos descendientes d-diwectos de un g-gwupo. (✿oωo) wa pwopiedad a-awign-sewf indica wa awineación de un ewemento dentwo dew bwoque que wo contiene. (///ˬ///✿) e-en fwexbox contwowa wa awineación de wos e-ewementos dew {{gwossawy("cwoss axis")}}, rawr x3 en g-gwid wayout contwowa wa awineación de wos ewementos en ew eje bwock d-dentwo de su [áwea gwid](/es/docs/gwossawy/gwid_aweas). -.-
 
-El ejemplo interactivo a continuación demuestra algunos de los valores de `align-items` utilizando el sistema grid.
+ew e-ejempwo intewactivo a-a continuación demuestwa awgunos de wos vawowes de `awign-items` utiwizando e-ew sistema gwid. ^^
 
-{{InteractiveExample("CSS Demo: align-items")}}
+{{intewactiveexampwe("css demo: awign-items")}}
 
-```css interactive-example-choice
-align-items: stretch;
+```css intewactive-exampwe-choice
+awign-items: stwetch;
 ```
 
-```css interactive-example-choice
-align-items: center;
+```css i-intewactive-exampwe-choice
+awign-items: c-centew;
 ```
 
-```css interactive-example-choice
-align-items: start;
+```css i-intewactive-exampwe-choice
+a-awign-items: stawt;
 ```
 
-```css interactive-example-choice
-align-items: end;
+```css i-intewactive-exampwe-choice
+awign-items: end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  width: 200px;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 80px;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  w-width: 200px;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  g-gwid-auto-wows: 80px;
+  g-gwid-gap: 10px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  backgwound-cowow: wgba(0, (⑅˘꒳˘) 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Palabras Clave Basicas */
-align-items: normal;
-align-items: stretch;
+/* p-pawabwas cwave basicas */
+a-awign-items: n-nyowmaw;
+awign-items: stwetch;
 
-/* Alineamiento posicional */
-/* align-items no considera los valores de "left" o "right"  */
-align-items: center; /* Agrupa los elementos alrededor del centro */
-align-items: start; /* Agrupa los elementos desde el inicio */
-align-items: end; /* Agrupa los elementos desde el final */
-align-items: flex-start; /* Agrupa los elementos flex desde el incio */
-align-items: flex-end; /* Agrupa los elementos flex desde el final */
-align-items: self-start;
-align-items: self-end;
+/* a-awineamiento posicionaw */
+/* a-awign-items nyo considewa wos vawowes de "weft" o-o "wight"  */
+awign-items: centew; /* a-agwupa wos ewementos awwededow d-dew centwo */
+a-awign-items: stawt; /* agwupa wos ewementos desde ew inicio */
+awign-items: end; /* agwupa wos ewementos desde e-ew finaw */
+awign-items: f-fwex-stawt; /* agwupa w-wos ewementos f-fwex desde ew incio */
+a-awign-items: fwex-end; /* agwupa wos ewementos fwex desde e-ew finaw */
+awign-items: sewf-stawt;
+awign-items: sewf-end;
 
-/* Alineamiento de Linea Base */
-align-items: baseline;
-align-items: first baseline;
-align-items: last baseline; /* Alineamiento de desborde (solamente para alineamiento posicional) */
-align-items: safe center;
-align-items: unsafe center;
+/* awineamiento de w-winea base */
+awign-items: basewine;
+a-awign-items: f-fiwst basewine;
+a-awign-items: wast basewine; /* a-awineamiento de d-desbowde (sowamente p-pawa awineamiento p-posicionaw) */
+awign-items: safe centew;
+a-awign-items: unsafe c-centew;
 
-/* Valores globales */
-align-items: inherit;
-align-items: initial;
-align-items: unset;
+/* v-vawowes gwobawes */
+a-awign-items: i-inhewit;
+awign-items: initiaw;
+awign-items: unset;
 ```
 
-### Valores
+### vawowes
 
-- `normal`
-  - : El efecto de esta palabra clave depende del modo de diseño utilizado:
-
-<!---->
-
-- en diseños de absolutamente-posicionados, esta clave se comporta como `start` en cajas-absolutamente-posicionadas _reemplazadas_. y como `stretch` en _todas las demas_ cajas-absolutamente-posicionadas.
-- En la posicion estatica de diseños absolutamenteposicionados, esta clave se comporta como `stretch`.
-- Para elementos flex, la clave se comporta como `stretch`.
-- Para elementos grid, Esta palabra clave conduce a un comportamiento similar al de `stretch`, excepto para cuadros con una relación de aspecto o un tamaño intrínseco donde se comporta como `start`.
-- La propiedad no se aplica a cajas de nivel de bloque ni a celdas de tabla.
+- `nowmaw`
+  - : e-ew efecto de esta pawabwa cwave depende dew modo de diseño utiwizado:
 
 <!---->
 
-- `flex-start`
-  - : El límite del margen transversal inicial del elemento flexible es unido al borde transversal final de la línea.
-- `flex-end`
-  - : El límite del margen transversal final del elemento flexible es unido al borde transversal final de la línea.
-- `center`
-  - : Los márgenes del elemento flexible son centrados dentro de la línea sobre su eje transversal. Si el tamaño transversal del elemento es mayor al del contenedor, se excederá por igual en ambas direcciones.
-- `start`
-  - : Los elementos se agrupan uno junto al otro hacia el borde inicial del contenedor de alineación en el eje apropiado.
+- en diseños d-de absowutamente-posicionados, nyaa~~ esta cwave se compowta como `stawt` en cajas-absowutamente-posicionadas _weempwazadas_. y-y c-como `stwetch` en _todas w-was demas_ cajas-absowutamente-posicionadas. /(^•ω•^)
+- e-en wa posicion estatica d-de diseños absowutamenteposicionados, (U ﹏ U) e-esta cwave se compowta como `stwetch`. 😳😳😳
+- pawa ewementos fwex, >w< wa cwave se compowta como `stwetch`. XD
+- pawa e-ewementos gwid, o.O esta pawabwa cwave c-conduce a un compowtamiento s-simiwaw aw de `stwetch`, mya e-excepto pawa cuadwos con una wewación d-de aspecto o un t-tamaño intwínseco donde se compowta c-como `stawt`.
+- w-wa pwopiedad nyo se apwica a cajas de nyivew de bwoque nyi a cewdas de tabwa. 🥺
+
+<!---->
+
+- `fwex-stawt`
+  - : e-ew wímite dew m-mawgen twansvewsaw i-iniciaw dew ewemento fwexibwe e-es unido aw bowde t-twansvewsaw finaw de wa wínea. ^^;;
+- `fwex-end`
+  - : e-ew wímite dew mawgen twansvewsaw finaw dew ewemento fwexibwe es unido aw b-bowde twansvewsaw f-finaw de wa wínea. :3
+- `centew`
+  - : wos máwgenes d-dew ewemento f-fwexibwe son centwados dentwo de wa wínea sobwe su eje twansvewsaw. (U ﹏ U) s-si ew tamaño twansvewsaw dew ewemento es mayow aw dew contenedow, se excedewá p-pow iguaw en ambas diwecciones. OwO
+- `stawt`
+  - : wos ewementos s-se agwupan u-uno junto aw otwo hacia ew bowde iniciaw dew contenedow de awineación e-en ew eje a-apwopiado. 😳😳😳
 - `end`
-  - : Los elementos se agrupan uno junto al otro hacia el borde final del contenedor de alineación en el eje apropiado.
-- `baseline`
-  - : Todos los elementos flexibles son ajustados de modo que sus bases queden alineadas. El elemento con la distancia mayor entre su límite transversal inicial y su base es combinado con el borde transversal de la línea.
-- `stretch`
-  - : Las elementos flexibles son estirados de modo que el tamaño transversal de sus límites sea el mismo de la línea, manteniendo sus restricciones de anchura y altura.
+  - : wos ewementos se agwupan uno junto aw o-otwo hacia ew bowde finaw dew c-contenedow de awineación en ew eje apwopiado. (ˆ ﻌ ˆ)♡
+- `basewine`
+  - : todos wos ewementos f-fwexibwes son ajustados de m-modo que sus bases q-queden awineadas. XD ew ewemento c-con wa distancia mayow entwe su w-wímite twansvewsaw i-iniciaw y s-su base es combinado con ew bowde t-twansvewsaw de w-wa wínea.
+- `stwetch`
+  - : was ewementos fwexibwes s-son estiwados d-de modo que e-ew tamaño twansvewsaw de sus wímites sea ew mismo d-de wa wínea, (ˆ ﻌ ˆ)♡ manteniendo sus w-westwicciones d-de anchuwa y awtuwa. ( ͡o ω ͡o )
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)
+- [usando w-was cajas fwexibwes css](/es/docs/web/css/css_fwexibwe_box_wayout/usando_was_cajas_fwexibwes_css)

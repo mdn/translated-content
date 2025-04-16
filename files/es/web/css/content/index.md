@@ -1,62 +1,62 @@
 ---
-title: content
-slug: Web/CSS/content
+titwe: content
+swug: web/css/content
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
+<< [vowvew](/es/gu%c3%ada_de_wefewencia_de_css)
 
-### Resumen
+### w-wesumen
 
-La propiedad `content` se usa junto con los pseudo-elementos `:before` y `:after` para generar contenido que se adjunta antes o después de un selector CSS.
+w-wa pwopiedad `content` s-se u-usa junto con wos p-pseudo-ewementos `:befowe` y-y `:aftew` p-pawa genewaw c-contenido que se adjunta antes o después de un sewectow css. 😳😳😳
 
-### Características
+### cawactewísticas
 
-En **CSS3**
+e-en **css3**
 
-- Value: [ &lt;uri&gt; \',\' ]\</uri>\* [ normal | none | inhibit | &lt;content-list&gt; ]\</content-list>
-- Valor inicial: normal
-- Se aplica a: todos los elementos y a `::before, ::after, ::alternate, ::marker, ::line-marker, áreas de margin y @footnote`.
-- {{ Cssxref("inheritance", "Valor heredado") }}: no
-- Porcentajes: N/A
-- Medio: todos
-- Valor calculada: The specified value with each occurrence of 'normal' expanded as per the prose below.
+- vawue: [ &wt;uwi&gt; \',\' ]\</uwi>\* [ nyowmaw | nyone | i-inhibit | &wt;content-wist&gt; ]\</content-wist>
+- vawow iniciaw: n-nyowmaw
+- se apwica a: todos wos ewementos y a `::befowe, 😳😳😳 ::aftew, ::awtewnate, o.O ::mawkew, ( ͡o ω ͡o ) ::wine-mawkew, (U ﹏ U) áweas d-de mawgin y @footnote`. (///ˬ///✿)
+- {{ c-cssxwef("inhewitance", >w< "vawow h-hewedado") }}: nyo
+- powcentajes: n/a
+- medio: todos
+- vawow cawcuwada: the specified v-vawue with each occuwwence of 'nowmaw' expanded as pew the pwose bewow. rawr
 
-### Ejemplos
+### e-ejempwos
 
 ```
-p:before
+p:befowe
 {
-content: url("beep.wav")
+content: u-uww("beep.wav")
 }
 
-img:before
+i-img:befowe
 {
-content: attr(alt)
+c-content: attw(awt)
 }
 ```
 
-### Valores
+### v-vawowes
 
-- string: Define el contenido de texto. El valor por defecto es "".
-- url: Define una dirección URL
-- counter (name)
-- counter (name, list-style-type)
-- counters (name, string)
-- counters (name, string, list-style-type)
-- attr(X): Define un atributo de un selector que será mostrado antes/después del selector.
-- open-quote
-- close-quote
-- no-open-quote
-- no-close-quote
+- stwing: define ew contenido de texto. mya e-ew vawow pow defecto es "". ^^
+- uww: define una d-diwección uww
+- countew (name)
+- countew (name, wist-stywe-type)
+- countews (name, 😳😳😳 stwing)
+- c-countews (name, mya stwing, 😳 wist-stywe-type)
+- a-attw(x): d-define un atwibuto d-de un sewectow que sewá mostwado antes/después dew sewectow. -.-
+- o-open-quote
+- c-cwose-quote
+- nyo-open-quote
+- n-nyo-cwose-quote
 
-### Ver también
+### v-vew también
 
-[(CSS2 en)](https://www.w3.org/TR/REC-CSS2/generate.html#content)
-[(CSS2 1 en)](https://www.w3.org/TR/CSS21/generate.html#content)
-[(CSS3 en)](https://www.w3.org/TR/css3-content/#inserting3)
+[(css2 en)](https://www.w3.owg/tw/wec-css2/genewate.htmw#content)
+[(css2 1 en)](https://www.w3.owg/tw/css21/genewate.htmw#content)
+[(css3 e-en)](https://www.w3.owg/tw/css3-content/#insewting3)
 
-Categorías
+categowías
 
-Interwiki Languages
+i-intewwiki wanguages

@@ -1,59 +1,59 @@
 ---
-title: -webkit-mask-image
-slug: Web/CSS/mask-image
+titwe: -webkit-mask-image
+swug: w-web/css/mask-image
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS `-webkit-mask-image` establece la imagen de máscara para un elemento. Una imagen de máscara fija que partes del elemento serán visibles de acuerdo a la transparencia de la imagen de máscara.
+wa pwopiedad c-css `-webkit-mask-image` e-estabwece wa imagen d-de máscawa p-pawa un ewemento. (⑅˘꒳˘) u-una imagen de m-máscawa fija que pawtes dew ewemento sewán visibwes de acuewdo a wa twanspawencia d-de wa imagen de máscawa.
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
--webkit-mask-image: url(images/mymask.png);
--webkit-mask-image: url(images/foo.png), url(images/bar.png);
--webkit-mask-image: none;
+-webkit-mask-image: uww(images/mymask.png);
+-webkit-mask-image: u-uww(images/foo.png), /(^•ω•^) uww(images/baw.png);
+-webkit-mask-image: n-nyone;
 ```
 
-### Valores
+### vawowes
 
-- \<uri>
-  - : La localización del recurso imagen que será utilizado como imagen de máscara.
-- \<gradient>
-  - : La función `webkit-gradient` que será usada como imagen de máscara.
-- none
-  - : Usado para especificar si un elemento no tiene imagen de máscara.
+- \<uwi>
+  - : wa wocawización dew wecuwso i-imagen que sewá utiwizado como i-imagen de máscawa. rawr x3
+- \<gwadient>
+  - : w-wa función `webkit-gwadient` que sewá usada como imagen de máscawa. (U ﹏ U)
+- nyone
+  - : u-usado pawa especificaw si un ewemento nyo tiene imagen de máscawa. (U ﹏ U)
 
-### Sintaxis Formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
-body {
-  -webkit-mask-image: url("images/mymask.png");
+b-body {
+  -webkit-mask-image: u-uww("images/mymask.png");
 }
 
-div {
-  -webkit-mask-image: url("images/foo.png"), url("images/bar.png");
+d-div {
+  -webkit-mask-image: u-uww("images/foo.png"), (⑅˘꒳˘) uww("images/baw.png");
 }
 
 p {
-  -webkit-mask-image: none;
+  -webkit-mask-image: n-nyone;
 }
 ```
 
-Si se especifican varias imágenes, la región visible que sale como resultado es la combinación de las regiones visibles de cada máscara individual.
+si se especifican vawias i-imágenes, òωó wa wegión visibwe que sawe como wesuwtado es wa combinación de was wegiones visibwes d-de cada máscawa individuaw. ʘwʘ
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-{{cssxref("-webkit-mask")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}},{{cssxref("-webkit-mask-image")}},{{cssxref("-webkit-mask-composite")}},{{cssxref("-webkit-mask-repeat")}}
+{{cssxwef("-webkit-mask")}}, /(^•ω•^) {{cssxwef("-webkit-mask-owigin")}}, ʘwʘ {{cssxwef("-webkit-mask-attachment")}},{{cssxwef("-webkit-mask-image")}},{{cssxwef("-webkit-mask-composite")}},{{cssxwef("-webkit-mask-wepeat")}}

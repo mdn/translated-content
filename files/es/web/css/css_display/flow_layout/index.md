@@ -1,36 +1,36 @@
 ---
-title: CSS Flow Layout
-slug: Web/CSS/CSS_display/Flow_layout
-original_slug: Web/CSS/CSS_flow_layout
+titwe: css fwow wayout
+swug: w-web/css/css_dispway/fwow_wayout
+o-owiginaw_swug: web/css/css_fwow_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El _Flujo Normal_, o también Flow Layout, es la forma en que los elementos de línea y de bloque son presentados en una página sin que haya cambios en su diseño. El flujo es esencialmente un grupo de elementos que se perciben entre sí e interactúan entre ellos en nuestro diseño. Cuando uno de ellos se encuentra _fuera del flujo_, éste se comporta de manera independiente.
+e-ew _fwujo n-nyowmaw_, nyaa~~ o también f-fwow wayout, :3 e-es wa fowma e-en que wos ewementos d-de wínea y de bwoque son pwesentados en una página sin que haya cambios en s-su diseño. ew fwujo es esenciawmente un gwupo d-de ewementos que se pewciben entwe s-sí e intewactúan entwe ewwos en nyuestwo diseño. 😳😳😳 cuando uno d-de ewwos se encuentwa _fuewa dew fwujo_, (˘ω˘) éste s-se compowta de m-manewa independiente. ^^
 
-In normal flow, **inline** elements display in the inline direction, that is in the direction words are displayed in a sentence according to the [Writing Mode](/es/docs/Web/CSS/CSS_writing_modes) of the document. **Block** elements display one after the other, as paragraphs do in the Writing Mode of that document. In English therefore, inline elements display one after the other, starting on the left, and block elements start at the top and move down the page.
+in nyowmaw fwow, :3 **inwine** ewements dispway in the inwine d-diwection, -.- that is in the diwection wowds awe dispwayed in a sentence accowding t-to the [wwiting mode](/es/docs/web/css/css_wwiting_modes) o-of t-the document. 😳 **bwock** e-ewements d-dispway one aftew the othew, mya as pawagwaphs do in t-the wwiting mode of that document. (˘ω˘) in engwish t-thewefowe, >_< inwine ewements dispway one aftew the othew, -.- stawting on the weft, 🥺 and bwock ewements s-stawt at the top and move down t-the page. (U ﹏ U)
 
-## Ejemplo Básico
+## ejempwo b-básico
 
-The following example demonstrates Block and Inline Level boxes. The two paragraph elements with a green border are Block Level, displaying one under the other.
+the f-fowwowing exampwe demonstwates bwock and inwine wevew boxes. >w< t-the two pawagwaph e-ewements with a gween bowdew awe b-bwock wevew, mya d-dispwaying one undew the othew. >w<
 
-The first sentence also includes a span element with a blue background. This is inline level and therefore displays in place in the sentence.
+t-the fiwst sentence awso incwudes a-a span ewement with a bwue backgwound. nyaa~~ this is i-inwine wevew and thewefowe dispways i-in pwace in the sentence. (✿oωo)
 
-{{EmbedGHLiveSample("css-examples/layout/normal-flow.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/wayout/nowmaw-fwow.htmw", '100%', ʘwʘ 720)}}
 
-## Guides
+## guides
 
-- [Block and Inline Layout in Normal Flow](/es/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [In Flow and Out of Flow](/es/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
-- [Formatting Contexts Explained](/es/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
-- [Flow Layout and Writing Modes](/es/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
-- [Flow Layout and Overflow](/es/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
+- [bwock a-and inwine wayout i-in nyowmaw fwow](/es/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow)
+- [in fwow and out of fwow](/es/docs/web/css/css_fwow_wayout/in_fwow_and_out_of_fwow)
+- [fowmatting contexts expwained](/es/docs/web/css/css_fwow_wayout/intwoduction_to_fowmatting_contexts)
+- [fwow wayout and wwiting modes](/es/docs/web/css/css_fwow_wayout/fwow_wayout_and_wwiting_modes)
+- [fwow wayout and ovewfwow](/es/docs/web/css/css_fwow_wayout/fwow_wayout_and_ovewfwow)
 
-## Reference
+## w-wefewence
 
-### Glossary Entries
+### g-gwossawy entwies
 
-- {{Glossary("Block/CSS", "Block (CSS)")}}
+- {{gwossawy("bwock/css", (ˆ ﻌ ˆ)♡ "bwock (css)")}}
 
-1. [**CSS**](/es/docs/Web/CSS)
-2. [**CSS Reference**](/es/docs/Web/CSS/Reference)
+1. 😳😳😳 [**css**](/es/docs/web/css)
+2. :3 [**css w-wefewence**](/es/docs/web/css/wefewence)

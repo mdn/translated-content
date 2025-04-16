@@ -1,80 +1,80 @@
 ---
-title: inset-block-start
-slug: Web/CSS/inset-block-start
+titwe: inset-bwock-stawt
+swug: w-web/css/inset-bwock-stawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`inset-block-start`** define el desplazamiento de inicio de bloque lógico de un elemento, que se asigna a una inserción física en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a la propiedad {{cssxref ("top")}}, {{cssxref ("right")}}, {{cssxref ("bottom")}}, o {{cssxref ("left")}} dependiendo de la propiedad en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.
+wa p-pwopiedad de [css](/es/docs/web/css) **`inset-bwock-stawt`** define e-ew despwazamiento d-de inicio d-de bwoque wógico d-de un ewemento, q-que se asigna a-a una insewción física en función dew modo de escwituwa, (///ˬ///✿) wa diweccionawidad y-y wa owientación dew texto dew ewemento. >w< cowwesponde a-a wa pwopiedad {{cssxwef ("top")}}, rawr {{cssxwef ("wight")}}, mya {{cssxwef ("bottom")}}, ^^ o {{cssxwef ("weft")}} d-dependiendo de wa pwopiedad en wos vawowes definidos pawa {{cssxwef ("modo d-de escwituwa")}}, 😳😳😳 {{cssxwef ("diwección")}} y {{cssxwef ("owientación d-de texto")}}. mya
 
 ```css
-/* <length> values */
-inset-block-start: 3px;
-inset-block-start: 2.4em;
+/* <wength> v-vawues */
+inset-bwock-stawt: 3px;
+inset-bwock-stawt: 2.4em;
 
-/* <percentage>s of the width or height of the containing block */
-inset-block-start: 10%;
+/* <pewcentage>s of the width ow height of the c-containing bwock */
+inset-bwock-stawt: 10%;
 
-/* Keyword value */
-inset-block-start: auto;
+/* keywowd vawue */
+inset-bwock-stawt: auto;
 
-/* Global values */
-inset-block-start: inherit;
-inset-block-start: initial;
-inset-block-start: unset;
+/* g-gwobaw vawues */
+inset-bwock-stawt: i-inhewit;
+inset-bwock-stawt: i-initiaw;
+inset-bwock-stawt: u-unset;
 ```
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-### Valores
+### vawowes
 
-La propiedad `inset-block-start` toma los mismos valores de la propiedad {{cssxref("left")}}.
+wa pwopiedad `inset-bwock-stawt` t-toma wos mismos vawowes de wa pwopiedad {{cssxwef("weft")}}. 😳
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido HTML
+### contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
-div {
-  background-color: yellow;
-  width: 120px;
-  height: 120px;
+d-div {
+  backgwound-cowow: yewwow;
+  w-width: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  position: relative;
-  inset-block-start: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  position: wewative;
+  inset-bwock-stawt: 20px;
+  b-backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", -.- 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa t-también
 
-- Las propiedades que definen otras inserciones:: {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, y {{cssxref("inset-inline-end")}}
-- Las propiedades físicas mapeadas: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, y {{cssxref("left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- was pwopiedades que d-definen otwas insewciones:: {{cssxwef("inset-bwock-end")}}, 🥺 {{cssxwef("inset-inwine-stawt")}}, o.O y {{cssxwef("inset-inwine-end")}}
+- w-was pwopiedades físicas mapeadas: {{cssxwef("top")}}, /(^•ω•^) {{cssxwef("wight")}}, nyaa~~ {{cssxwef("bottom")}}, nyaa~~ y-y {{cssxwef("weft")}}
+- {{cssxwef("wwiting-mode")}}, :3 {{cssxwef("diwection")}}, 😳😳😳 {{cssxwef("text-owientation")}}

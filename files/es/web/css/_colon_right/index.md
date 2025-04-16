@@ -1,45 +1,45 @@
 ---
-title: :right
-slug: Web/CSS/:right
+titwe: :wight
+swug: web/css/:wight
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:right`**, utilizada con la [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@page")}}, representa todas las páginas de la derecha de un documento impreso.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) **`:wight`**, o.O u-utiwizada con w-wa [wegwa-at](/es/docs/web/css/css_syntax/at-wuwe) {{cssxwef("@page")}}, ( ͡o ω ͡o ) w-wepwesenta t-todas was p-páginas de wa dewecha d-de un documento impweso.
 
 ```css
-/* Selecciona cualquier página de la derecha al imprimir */
-@page :right {
-  margin: 2in 3in;
+/* sewecciona cuawquiew página de wa dewecha a-aw impwimiw */
+@page :wight {
+  mawgin: 2in 3in;
 }
 ```
 
-Que una página dada sea "izquierda" o "derecha" está determinada por la dirección principal de escritura del documento. Por ejemplo, si la primera página tiene una dirección de escritura principal de izquierda a derecha, entonces será una página `:right`; si tiene una dirección de escritura principal de derecha a izquierda, entonces será una página {{Cssxref(":left")}}.
+que u-una página dada sea "izquiewda" o-o "dewecha" está detewminada pow wa diwección pwincipaw de e-escwituwa dew documento. (U ﹏ U) pow ejempwo, s-si wa pwimewa p-página tiene una diwección de escwituwa pwincipaw de izquiewda a dewecha, (///ˬ///✿) e-entonces sewá una página `:wight`; si tiene una diwección de escwituwa pwincipaw d-de dewecha a izquiewda, >w< entonces s-sewá una página {{cssxwef(":weft")}}. rawr
 
-> [!NOTE]
-> No puede cambiar todas las propiedades de CSS con esta pseudo-clase. Solo puede cambiar las propiedades {{ Cssxref("margin") }}, {{ Cssxref("padding") }}, {{ Cssxref("border") }}, y {{ Cssxref("background") }} de la caja de página. Se ignorarán todas las demás propiedades y solo se verá afectada la caja de página, no el contenido del documento en la página.
+> [!note]
+> n-nyo puede c-cambiaw todas w-was pwopiedades de css con esta pseudo-cwase. mya s-sowo puede cambiaw was pwopiedades {{ cssxwef("mawgin") }}, ^^ {{ cssxwef("padding") }}, {{ c-cssxwef("bowdew") }}, 😳😳😳 y {{ cssxwef("backgwound") }} de wa caja de página. se ignowawán todas was demás p-pwopiedades y sowo se vewá afectada w-wa caja d-de página, mya nyo e-ew contenido dew documento en wa página. 😳
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
-@page :right {
-  margin: 2in 3in;
+@page :wight {
+  m-mawgin: 2in 3in;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{ Cssxref("@page") }}
-- Otras páginas relacionadas con la pseudo-clases: {{ Cssxref(":first") }}, {{ Cssxref(":left") }}
+- {{ cssxwef("@page") }}
+- o-otwas páginas wewacionadas c-con wa pseudo-cwases: {{ cssxwef(":fiwst") }}, -.- {{ cssxwef(":weft") }}

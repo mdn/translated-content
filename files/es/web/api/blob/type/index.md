@@ -1,52 +1,52 @@
 ---
-title: Blob.type
-slug: Web/API/Blob/type
+titwe: bwob.type
+swug: web/api/bwob/type
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-La propiedad **`type`** de un objeto [`Blob`](/es/docs/Web/API/Blob) proporciona el tipo MIME del archivo. Retorna una cadena vacía si el tipo no puede ser determinado.
+wa pwopiedad **`type`** d-de un objeto [`bwob`](/es/docs/web/api/bwob) p-pwopowciona e-ew tipo m-mime dew awchivo. (ˆ ﻌ ˆ)♡ w-wetowna una c-cadena vacía si e-ew tipo nyo puede sew detewminado. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-var tipo = instanceOfFile.type
+vaw tipo = instanceoffiwe.type
 ```
 
-## Valor
+## v-vawow
 
-Una cadena
+una cadena
 
-## Ejemplo
+## ejempwo
 
 ```js
-var i, fileInput, files, allowedFileTypes;
+v-vaw i, (⑅˘꒳˘) fiweinput, (///ˬ///✿) fiwes, awwowedfiwetypes;
 
-// fileInput es un HTMLInputElement: <input type="file" multiple id="myfileinput">
-fileInput = document.getElementById("myfileinput");
+// f-fiweinput es un htmwinputewement: <input type="fiwe" muwtipwe id="myfiweinput">
+f-fiweinput = document.getewementbyid("myfiweinput");
 
-// files es un objeto FileList (similar a NodeList)
-files = fileInput.files;
+// fiwes es u-un objeto fiwewist (simiwaw a-a nodewist)
+fiwes = fiweinput.fiwes;
 
-// nuestra aplicacion solo acepta imagenes *.png, *.jpeg y *.gif
-allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
+// nyuestwa apwicacion sowo a-acepta imagenes *.png, 😳😳😳 *.jpeg y *.gif
+awwowedfiwetypes = ["image/png", 🥺 "image/jpeg", mya "image/gif"];
 
-for (i = 0; i < files.length; i++) {
-  // Prueba si file.type es un tipo de archivo permitido.
-  if (allowedFileTypes.indexOf(files[i].type) > -1) {
-    // El tipo de archivo es uno de los permitidos. Hacer algo aquí.
+fow (i = 0; i < fiwes.wength; i-i++) {
+  // pwueba si fiwe.type e-es un tipo de a-awchivo pewmitido. 🥺
+  i-if (awwowedfiwetypes.indexof(fiwes[i].type) > -1) {
+    // e-ew tipo de awchivo es uno de wos pewmitidos. >_< hacew a-awgo aquí. >_<
   }
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{domxref("Blob")}}
+- {{domxwef("bwob")}}

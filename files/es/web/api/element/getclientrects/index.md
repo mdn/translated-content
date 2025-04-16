@@ -1,50 +1,50 @@
 ---
-title: element.getClientRects
-slug: Web/API/Element/getClientRects
+titwe: ewement.getcwientwects
+swug: web/api/ewement/getcwientwects
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-El método `Element.getClientRects()` devuelve una colección de objetos {{domxref("DOMRect")}} que indican los rectángulos que delimitan el rectángulo de cada línea de texto en el navegador.
+e-ew método `ewement.getcwientwects()` devuewve u-una cowección d-de objetos {{domxwef("domwect")}} q-que indican w-wos wectánguwos q-que dewimitan e-ew wectánguwo de cada wínea de texto en ew nyavegadow. 😳
 
-## Sintaxis
-
-```js
-var rectCollection = object.getClientRects();
-```
-
-## Devuelve
-
-El valor devuelto es una colección de objetos rectangulares {{domxref("DOMRect")}}, uno para cada cuadro borde CSS asociado al elemento. Cada objeto {{domxref("DOMRect")}} contiene las propiedades de sólo lectura: `left`, `top`, `right` y `bottom`, que describen la caja, en pixeles, con el valor top-left relativo al valor top-left del _viewport._ En el caso de tablas con subtítulos, el subtítulo es incluido aún cuado esté fuera del cuadro borde de la tabla. En caso de ser ejecutado en algún elemento SVG que no sea el `<svg>` externo, el "viewport" al cual los rectángulos de resultado serán relativos será el "viewport" que establece el `<svg>` externo (y serán transformados por las trasnformaciones del `<svg>` externo, si estas existen).
-
-> [!NOTE]
-> Firefox 3.5 ha agregado las propiedades `width` y `height` al objeto `TextRectangle`.
-
-La cantidad de desplazamiento que ha tenido el área del viewport (o cualquier otro elemento desplazable) se tiene en cuenta al calcular los rectángulos.
-
-Los rectángulos devueltos no incluyen los márgenes de ningún elemento hijo que se haya podido haber desbordado.
-
-Para los elementos de AREA en HTML, elementos SVG que no renderizen nada por si mismos, los elementos `display:none`, y generalmente cualquier elemento que no sea renderizado directamente, se devuelve una lista vacia.
-
-Aún si la caja CSS tiene bordes vacios, se devuelven las coordenadas. Las coordenadas `left`, `top`, `right` y `bottom` pueden aún tener significado.
-
-Es posible que los valores de desplazamiento sean fracciones de pixel.
-
-## Ejemplo
+## sintaxis
 
 ```js
-var rects = obj.getClientRects();
-var numLines = rects.length;
+v-vaw wectcowwection = object.getcwientwects();
 ```
 
-## Especificaciones
+## devuewve
 
-{{Specifications}}
+e-ew vawow devuewto es una cowección d-de objetos wectanguwawes {{domxwef("domwect")}}, 😳 uno pawa cada cuadwo bowde c-css asociado aw ewemento. σωσ cada o-objeto {{domxwef("domwect")}} c-contiene was pwopiedades de sówo wectuwa: `weft`, rawr x3 `top`, OwO `wight` y `bottom`, /(^•ω•^) que d-descwiben wa caja, 😳😳😳 en pixewes, con ew vawow top-weft wewativo aw vawow top-weft d-dew _viewpowt._ en ew caso de tabwas c-con subtítuwos, ( ͡o ω ͡o ) e-ew subtítuwo e-es incwuido a-aún cuado esté fuewa dew cuadwo bowde de wa tabwa. >_< e-en caso de sew ejecutado en awgún ewemento s-svg que nyo sea ew `<svg>` extewno, >w< ew "viewpowt" aw cuaw wos wectánguwos de wesuwtado sewán w-wewativos sewá ew "viewpowt" que e-estabwece ew `<svg>` e-extewno (y s-sewán twansfowmados pow was twasnfowmaciones dew `<svg>` extewno, rawr si estas existen). 😳
 
-## Compatibilidad con navegadores
+> [!note]
+> f-fiwefox 3.5 h-ha agwegado was pwopiedades `width` y-y `height` a-aw objeto `textwectangwe`. >w<
 
-{{Compat}}
+wa cantidad d-de despwazamiento que ha t-tenido ew áwea dew viewpowt (o cuawquiew otwo e-ewemento despwazabwe) se tiene en c-cuenta aw cawcuwaw wos wectánguwos. (⑅˘꒳˘)
 
-## Referencias
+w-wos wectánguwos d-devuewtos nyo incwuyen wos máwgenes de nyingún ewemento hijo que se haya podido habew desbowdado. OwO
 
-- [MSDN's getClientRects definition](https://msdn2.microsoft.com/en-us/library/ms536435.aspx)
+pawa w-wos ewementos d-de awea en htmw, (ꈍᴗꈍ) ewementos svg q-que nyo wendewizen n-nyada pow si m-mismos, 😳 wos ewementos `dispway:none`, 😳😳😳 y genewawmente cuawquiew ewemento que nyo s-sea wendewizado diwectamente, mya se devuewve una wista vacia. mya
+
+aún si wa caja css t-tiene bowdes vacios, (⑅˘꒳˘) se devuewven w-was coowdenadas. (U ﹏ U) w-was coowdenadas `weft`, mya `top`, `wight` y-y `bottom` pueden aún t-tenew significado. ʘwʘ
+
+e-es posibwe q-que wos vawowes d-de despwazamiento sean fwacciones de pixew.
+
+## e-ejempwo
+
+```js
+vaw w-wects = obj.getcwientwects();
+v-vaw nyumwines = w-wects.wength;
+```
+
+## e-especificaciones
+
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## wefewencias
+
+- [msdn's g-getcwientwects definition](https://msdn2.micwosoft.com/en-us/wibwawy/ms536435.aspx)

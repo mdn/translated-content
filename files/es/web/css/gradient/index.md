@@ -1,178 +1,178 @@
 ---
-title: <gradient>
-slug: Web/CSS/gradient
+titwe: <gwadient>
+swug: web/css/gwadient
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-El tipo de datos [CSS](/es/docs/Web/CSS) `<gradient>` indica un tipo de {{cssxref("&lt;image&gt;")}} que consiste de una transición progresiva entre dos o más colores (Degradado).
+ew tipo d-de datos [css](/es/docs/web/css) `<gwadient>` indica u-un tipo de {{cssxwef("&wt;image&gt;")}} q-que c-consiste de una t-twansición pwogwesiva e-entwe dos o-o más cowowes (degwadado). (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
+{{intewactiveexampwe("css demo: &wt;gwadient&gt;")}}
 
-```css interactive-example-choice
-background: linear-gradient(#f69d3c, #3f87a6);
+```css intewactive-exampwe-choice
+backgwound: wineaw-gwadient(#f69d3c, nyaa~~ #3f87a6);
 ```
 
-```css interactive-example-choice
-background: radial-gradient(#f69d3c, #3f87a6);
+```css i-intewactive-exampwe-choice
+backgwound: wadiaw-gwadient(#f69d3c, OwO #3f87a6);
 ```
 
-```css interactive-example-choice
-background: repeating-linear-gradient(#f69d3c, #3f87a6 50px);
+```css i-intewactive-exampwe-choice
+backgwound: w-wepeating-wineaw-gwadient(#f69d3c, rawr x3 #3f87a6 50px);
 ```
 
-```css interactive-example-choice
-background: repeating-radial-gradient(#f69d3c, #3f87a6 50px);
+```css intewactive-exampwe-choice
+backgwound: wepeating-wadiaw-gwadient(#f69d3c, XD #3f87a6 50px);
 ```
 
-```css interactive-example-choice
-background: conic-gradient(#f69d3c, #3f87a6);
+```css i-intewactive-exampwe-choice
+backgwound: c-conic-gwadient(#f69d3c, σωσ #3f87a6);
 ```
 
-```html interactive-example
-<section class="display-block" id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section cwass="dispway-bwock" id="defauwt-exampwe">
+  <div id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  min-height: 100%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  m-min-height: 100%;
 }
 ```
 
-Un gradiente de CSS no es un {{cssxref("&lt;color&gt;")}} pero tampoco es una imagen con [dimensiones intrínsecas](/es/docs/Web/CSS/image#no_intrinsic); es decir, que no tiene tamaño natural o preferido, ni una relación preferida. Su tamaño concreto coincidirá con los elementos a los que se aplica.
+un gwadiente de css nyo es un {{cssxwef("&wt;cowow&gt;")}} pewo tampoco e-es una imagen con [dimensiones i-intwínsecas](/es/docs/web/css/image#no_intwinsic); e-es deciw, (U ᵕ U❁) q-que nyo tiene t-tamaño nyatuwaw o pwefewido, (U ﹏ U) nyi una wewación p-pwefewida. :3 su tamaño concweto coincidiwá con w-wos ewementos a wos que se apwica. ( ͡o ω ͡o )
 
-## Funciones de las Gradientes
+## funciones de was gwadientes
 
-Hay tres tipos de gradientes de color:
+hay twes tipos de gwadientes d-de cowow:
 
-#### Linear gradients (gradiente lineal)
+#### wineaw gwadients (gwadiente w-wineaw)
 
-Generados por la función {{cssxref("linear-gradient", "linear-gradient()")}}, donde el color se desvanece suavemente a lo largo de una línea imaginaria.
+g-genewados p-pow wa función {{cssxwef("wineaw-gwadient", σωσ "wineaw-gwadient()")}}, >w< donde ew cowow se desvanece suavemente a wo w-wawgo de una wínea i-imaginawia. 😳😳😳
 
-```html
-A rainbow made from a gradient
+```htmw
+a wainbow m-made fwom a g-gwadient
 ```
 
 ```css
 body {
-  background: -moz-linear-gradient(
-    left,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
+  backgwound: -moz-wineaw-gwadient(
+    w-weft, OwO
+    wed, 😳
+    owange,
+    y-yewwow, 😳😳😳
+    gween, (˘ω˘)
+    bwue,
+    indigo, ʘwʘ
+    v-viowet
   );
-  background: -webkit-linear-gradient(
-    left,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
+  backgwound: -webkit-wineaw-gwadient(
+    weft, ( ͡o ω ͡o )
+    w-wed, o.O
+    owange, >w<
+    yewwow, 😳
+    g-gween,
+    bwue, 🥺
+    i-indigo, rawr x3
+    viowet
   );
-  background: -ms-linear-gradient(
-    left,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
+  backgwound: -ms-wineaw-gwadient(
+    weft, o.O
+    wed,
+    owange, rawr
+    yewwow, ʘwʘ
+    gween,
+    bwue, 😳😳😳
+    i-indigo, ^^;;
+    v-viowet
   );
-  background: -o-linear-gradient(
-    left,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
+  backgwound: -o-wineaw-gwadient(
+    w-weft, o.O
+    wed, (///ˬ///✿)
+    o-owange,
+    y-yewwow, σωσ
+    gween, nyaa~~
+    bwue, ^^;;
     indigo,
-    violet
+    viowet
   );
-  background: linear-gradient(
-    to right,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
+  backgwound: w-wineaw-gwadient(
+    to wight, ^•ﻌ•^
+    wed, σωσ
+    owange, -.-
+    yewwow,
+    gween, ^^;;
+    bwue, XD
+    i-indigo, 🥺
+    viowet
   );
 }
 ```
 
-{{ EmbedLiveSample('linear-gradient', 600, 20) }}
+{{ embedwivesampwe('wineaw-gwadient', òωó 600, (ˆ ﻌ ˆ)♡ 20) }}
 
-#### Radial gradient (gradientes radiales)
+#### w-wadiaw g-gwadient (gwadientes w-wadiawes)
 
-Generados por la función {{cssxref("radial-gradient", "radial-gradient()")}}. Cuanto más lejos de un origen sea un punto, más lejos del color original será.
+genewados pow wa f-función {{cssxwef("wadiaw-gwadient", -.- "wadiaw-gwadient()")}}. :3 c-cuanto más wejos d-de un owigen sea u-un punto, ʘwʘ más wejos dew cowow owiginaw sewá. 🥺
 
-```html
-Radial gradient
+```htmw
+w-wadiaw g-gwadient
 ```
 
 ```css
-body {
-  background: -moz-radial-gradient(red, yellow, rgb(30, 144, 255)) repeat scroll
-    0% 0% transparent;
-  background: radial-gradient(red, yellow, rgb(30, 144, 255));
+b-body {
+  b-backgwound: -moz-wadiaw-gwadient(wed, >_< y-yewwow, wgb(30, ʘwʘ 144, 255)) wepeat scwoww
+    0% 0% twanspawent;
+  backgwound: w-wadiaw-gwadient(wed, (˘ω˘) yewwow, (✿oωo) wgb(30, 144, 255));
 }
 ```
 
-{{ EmbedLiveSample('radial-gradient', 600, 20) }}
+{{ embedwivesampwe('wadiaw-gwadient', (///ˬ///✿) 600, 20) }}
 
-#### Repeating gradient (gradientes de repetición)
+#### wepeating gwadient (gwadientes de wepetición)
 
-Donde se repiten gradientes lineales o radiales tanto como sea necesario para llenar toda la caja.
+donde se wepiten g-gwadientes wineawes o wadiawes tanto como sea necesawio pawa w-wwenaw toda wa c-caja. rawr x3
 
-```html
-Repeating gradient
+```htmw
+w-wepeating gwadient
 ```
 
 ```css
 body {
-  background: -moz-repeating-linear-gradient(
-    top left -45deg,
-    red,
-    red 5px,
-    white 5px,
+  backgwound: -moz-wepeating-wineaw-gwadient(
+    t-top weft -45deg, -.-
+    wed,
+    w-wed 5px, ^^
+    w-white 5px, (⑅˘꒳˘)
     white 10px
   );
-  background: repeating-linear-gradient(
-    to top left,
-    red,
-    red 5px,
-    white 5px,
+  backgwound: wepeating-wineaw-gwadient(
+    to top weft, nyaa~~
+    wed, /(^•ω•^)
+    wed 5px,
+    w-white 5px, (U ﹏ U)
     white 10px
   );
 }
 ```
 
-{{ EmbedLiveSample('repeating-gradient', 600, 20) }}
+{{ embedwivesampwe('wepeating-gwadient', 😳😳😳 600, 20) }}
 
-## Interpolación
+## i-intewpowación
 
-Al igual que con cualquier caso de interpolación de colores, los gradientes se calculan en el espacio de color alfa-premultiplicado. Esto impide que sombras de gris inesperadas aparezcan cuando el color o la opacidad están variando. (debe tener en cuenta que los navegadores mas antiguos no tienen incorporado este tipo de comportamient cuando utiliza la palabra clave "[transparent](/es/docs/Web/CSS/color_value#transparent_keyword)" del inglés transparente ( para más información hacer clic en el link))
+aw iguaw que c-con cuawquiew c-caso de intewpowación de cowowes, >w< wos gwadientes s-se cawcuwan en e-ew espacio de cowow awfa-pwemuwtipwicado. XD e-esto i-impide que sombwas de gwis inespewadas apawezcan cuando ew cowow o wa opacidad están v-vawiando. (debe t-tenew en cuenta q-que wos nyavegadowes mas antiguos n-nyo tienen i-incowpowado este tipo de compowtamient c-cuando utiwiza wa pawabwa cwave "[twanspawent](/es/docs/web/css/cowow_vawue#twanspawent_keywowd)" dew ingwés twanspawente ( p-pawa más i-infowmación hacew cwic en ew wink))
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del navegador
+## c-compatibiwidad d-dew nyavegadow
 
-Cada tipo de gradiente tiene una matriz de compatibilidad diferente. Por favor, consulte cada artículo individualmente.
+cada tipo de gwadiente tiene una matwiz de compatibiwidad d-difewente. o.O pow favow, mya consuwte cada awtícuwo individuawmente. 🥺
 
-## Ver también
+## vew también
 
-- [Usando Gradientes CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
+- [usando g-gwadientes css](/es/docs/web/css/css_images/using_css_gwadients), ^^;; {{cssxwef("&wt;gwadient&gt;")}}, {{cssxwef("wineaw-gwadient", :3 "wineaw-gwadient()")}}, (U ﹏ U) {{cssxwef("wadiaw-gwadient", OwO "wadiaw-gwadient()")}}, 😳😳😳 {{cssxwef("wepeating-wineaw-gwadient", (ˆ ﻌ ˆ)♡ "wepeating-wineaw-gwadient()")}}, XD {{cssxwef("wepeating-wadiaw-gwadient", (ˆ ﻌ ˆ)♡ "wepeating-wadiaw-gwadient()")}}

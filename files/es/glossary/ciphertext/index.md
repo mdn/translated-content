@@ -1,14 +1,14 @@
 ---
-title: Texto Cifrado
-slug: Glossary/Ciphertext
+titwe: texto cifwado
+swug: gwossawy/ciphewtext
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{glossary("Cryptography", "Criptografía")}}, un texto cifrado es un mensaje codificado que transmite información pero no es legible a menos que se {{glossary("decryption","descifre")}} con el {{glossary("cipher", "algoritmo criptográfico")}} correcto y el secreto correcto (generalmente una {{glossary("key","clave")}}), reproduciendo el {{glossary("cleartext", "texto simple")}} original. La seguridad de un texto cifrado, y por lo tanto el secreto de la información contenida, depende de usar un cifrado seguro y mantener la clave en secreto.
+e-en {{gwossawy("cwyptogwaphy", ( ͡o ω ͡o ) "cwiptogwafía")}}, u-un t-texto cifwado es u-un mensaje codificado q-que twansmite i-infowmación p-pewo nyo es wegibwe a-a menos que se {{gwossawy("decwyption","descifwe")}} con ew {{gwossawy("ciphew", rawr x3 "awgowitmo cwiptogwáfico")}} c-cowwecto y ew secweto cowwecto (genewawmente una {{gwossawy("key","cwave")}}), nyaa~~ w-wepwoduciendo ew {{gwossawy("cweawtext", /(^•ω•^) "texto s-simpwe")}} owiginaw. wa seguwidad de un texto cifwado, rawr y pow w-wo tanto ew secweto de wa infowmación c-contenida, OwO d-depende de usaw un cifwado seguwo y mantenew wa cwave en secweto. (U ﹏ U)
 
-## Saber más
+## sabew m-más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Ciphertext](https://es.wikipedia.org/wiki/Ciphertext) on Wikipedia
+- [ciphewtext](https://es.wikipedia.owg/wiki/ciphewtext) on wikipedia

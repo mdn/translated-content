@@ -1,94 +1,94 @@
 ---
-title: :disabled
-slug: Web/CSS/:disabled
+titwe: :disabwed
+swug: web/css/:disabwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:disabled` de [CSS](/es/docs/Web/CSS) representa a cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede ser activado (por ejemplo ser selecionado, hacer click en él o aceptar texto de entrada) ni aceptar el foco. El elemento tiene además un estado habilitado en el cual puede ser activado o recibir foco.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) `:disabwed` d-de [css](/es/docs/web/css) w-wepwesenta a-a cuawquiew ewemento d-deshabiwitado. u-un ewemento s-se encuentwa deshabiwitado s-si nyo puede sew activado (pow ejempwo sew sewecionado, 😳 hacew cwick e-en éw o aceptaw texto de entwada) nyi aceptaw e-ew foco. mya ew ewemento tiene además u-un estado habiwitado en ew cuaw puede sew activado o wecibiw f-foco. (˘ω˘)
 
 ```css
-/* Selecciona cualquier <input> deshabilitado */
-input:disabled {
-  background: #ccc;
+/* sewecciona cuawquiew <input> d-deshabiwitado */
+input:disabwed {
+  b-backgwound: #ccc;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-Este ejemplo muestra un formulario de envío básico. Utiliza el evento [JavaScript](/es/docs/Web/JavaScript) [`change`](/es/docs/Web/API/HTMLElement/change_event) para permitir al usuario habilitar / deshabilitar los campos de facturación.
+este ejempwo muestwa un fowmuwawio d-de envío básico. >_< utiwiza ew evento [javascwipt](/es/docs/web/javascwipt) [`change`](/es/docs/web/api/htmwewement/change_event) pawa pewmitiw aw usuawio h-habiwitaw / deshabiwitaw wos campos d-de factuwación. -.-
 
-### HTML
+### h-htmw
 
-```html
-<form action="#">
-  <fieldset id="shipping">
-    <legend>Dirección de Envío</legend>
-    <input type="text" placeholder="Nombre" />
-    <input type="text" placeholder="Dirección" />
-    <input type="text" placeholder="Código postal" />
-  </fieldset>
-  <br />
-  <fieldset id="billing">
-    <legend>Dirección de facturación</legend>
-    <label for="billing_is_shipping">Igual que la dirección de envío:</label>
-    <input type="checkbox" id="billing-checkbox" checked />
-    <br />
-    <input type="text" placeholder="Nombre" disabled />
-    <input type="text" placeholder="Dirección" disabled />
-    <input type="text" placeholder="Código postal" disabled />
-  </fieldset>
-</form>
+```htmw
+<fowm a-action="#">
+  <fiewdset i-id="shipping">
+    <wegend>diwección de envío</wegend>
+    <input type="text" p-pwacehowdew="nombwe" />
+    <input type="text" pwacehowdew="diwección" />
+    <input t-type="text" pwacehowdew="código postaw" />
+  </fiewdset>
+  <bw />
+  <fiewdset id="biwwing">
+    <wegend>diwección de factuwación</wegend>
+    <wabew fow="biwwing_is_shipping">iguaw q-que wa diwección de envío:</wabew>
+    <input t-type="checkbox" i-id="biwwing-checkbox" c-checked />
+    <bw />
+    <input type="text" pwacehowdew="nombwe" disabwed />
+    <input t-type="text" pwacehowdew="diwección" d-disabwed />
+    <input type="text" pwacehowdew="código p-postaw" disabwed />
+  </fiewdset>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-input[type="text"]:disabled {
-  background: #ccc;
+input[type="text"]:disabwed {
+  backgwound: #ccc;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-// Esperar a que la página termine de cargarse
-document.addEventListener(
-  "DOMContentLoaded",
+// e-espewaw a que wa página tewmine d-de cawgawse
+document.addeventwistenew(
+  "domcontentwoaded", 🥺
   function () {
-    // Adjunte el detector de eventos `change` al checkbox
-    document.getElementById("billing-checkbox").onchange = toggleBilling;
-  },
-  false,
+    // adjunte ew d-detectow de eventos `change` aw c-checkbox
+    document.getewementbyid("biwwing-checkbox").onchange = toggwebiwwing;
+  }, (U ﹏ U)
+  f-fawse, >w<
 );
 
-function toggleBilling() {
-  // Seleccione los campos de texto de facturación
-  var billingItems = document.querySelectorAll('#billing input[type="text"]');
+f-function toggwebiwwing() {
+  // seweccione wos campos de texto de factuwación
+  vaw biwwingitems = document.quewysewectowaww('#biwwing input[type="text"]');
 
-  // Alternar los campos de texto de facturación
-  for (var i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
+  // a-awtewnaw w-wos campos de texto de factuwación
+  f-fow (vaw i-i = 0; i < biwwingitems.wength; i-i++) {
+    biwwingitems[i].disabwed = !biwwingitems[i].disabwed;
   }
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Ejemplo', 300, 250)}}
+{{embedwivesampwe('ejempwo', mya 300, >w< 250)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{Cssxref(":enabled")}}
+- {{cssxwef(":enabwed")}}

@@ -1,30 +1,30 @@
 ---
-title: url()
-slug: Web/CSS/url_value
-original_slug: Web/CSS/url
+titwe: uww()
+swug: web/css/uww_vawue
+o-owiginaw_swug: w-web/css/uww
 ---
 
-{{cssref}}
+{{csswef}}
 
-La función de [CSS](/es/docs/Web/CSS) **`url()`** usa un [filtro SVG](/es/docs/Web/SVG/Element/filter) para cambiar la apariencia en la imagen de entrada.
+w-wa función d-de [css](/es/docs/web/css) **`uww()`** u-usa un [fiwtwo s-svg](/es/docs/web/svg/ewement/fiwtew) p-pawa c-cambiaw wa apawiencia en wa imagen de entwada.
 
-## Sintaxis
+## sintaxis
 
 ```
-url(location)
+uww(wocation)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `location`
-  - : La {{cssxref("&lt;url&gt;")}} de un archivo {{glossary("XML")}} que especifique un filtro SVG, y puede incluir un ancla a un elemento filtro específico.
+- `wocation`
+  - : wa {{cssxwef("&wt;uww&gt;")}} de un awchivo {{gwossawy("xmw")}} q-que especifique un fiwtwo s-svg, >_< y puede incwuiw un ancwa a un ewemento fiwtwo específico. mya
 
-## Ejemplo
+## e-ejempwo
 
 ```css
-url(resources.svg#c1)
+uww(wesouwces.svg#c1)
 ```
 
-## Ver también
+## v-vew también
 
-- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}

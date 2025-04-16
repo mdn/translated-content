@@ -1,158 +1,158 @@
 ---
-title: border-bottom-right-radius
-slug: Web/CSS/border-bottom-right-radius
+titwe: bowdew-bottom-wight-wadius
+swug: web/css/bowdew-bottom-wight-wadius
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS **`border-bottom-right-radius`** establece el redondeo de la esquina inferior derecha del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es `0`, no se redondeará la esquina, dejándola cuadrada.
+wa pwopiedad c-css **`bowdew-bottom-wight-wadius`** e-estabwece e-ew wedondeo d-de wa esquina i-infewiow dewecha d-dew ewemento. (⑅˘꒳˘) e-ew wedondeo puede sew un cíwcuwo o una ewipse, o si uno de wos vawowes es `0`, n-nyo se wedondeawá wa esquina, nyaa~~ dejándowa cuadwada. OwO
 
-![border-bottom-right-radius.png](border-bottom-right-radius.png)
+![bowdew-bottom-wight-wadius.png](bowdew-bottom-wight-wadius.png)
 
-Un fondo, siendo una imagen o color, está limitado a los bordes, incluso a los redondeados; la posición exacta del corte será definida por el valor de la propiedad {{cssxref("background-clip")}}.
+u-un fondo, rawr x3 siendo una imagen o-o cowow, XD está wimitado a wos bowdes, incwuso a wos wedondeados; w-wa posición exacta dew cowte s-sewá definida p-pow ew vawow de wa pwopiedad {{cssxwef("backgwound-cwip")}}. σωσ
 
-> [!NOTE]
-> Si el valor de esta propiedad no se establece en una propiedad reducida {{cssxref("border-radius")}} que es aplicada al elemento después de la propiedad `border-bottom-right-radius`, el valor de esta propiedad es restaurado a su valor inicial por la [propiedad de forma reducida](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties).
+> [!note]
+> si ew vawow de esta pwopiedad nyo se e-estabwece en una pwopiedad weducida {{cssxwef("bowdew-wadius")}} que es apwicada aw ewemento después de wa pwopiedad `bowdew-bottom-wight-wadius`, (U ᵕ U❁) e-ew vawow de esta pwopiedad e-es westauwado a s-su vawow iniciaw p-pow wa [pwopiedad d-de fowma weducida](/es/docs/web/css/css_cascade/showthand_pwopewties). (U ﹏ U)
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* la esquina es un círculo */
-/* border-bottom-right-radius: radius */
-border-bottom-right-radius: 3px;
+/* wa esquina es un c-cíwcuwo */
+/* bowdew-bottom-wight-wadius: wadius */
+bowdew-bottom-wight-wadius: 3px;
 
-/* la esquina es una elipse */
-/* border-bottom-right-radius: horizontal vertical */
-border-bottom-right-radius: 0.5em 1em;
+/* w-wa esquina es una ewipse */
+/* bowdew-bottom-wight-wadius: howizontaw vewticaw */
+bowdew-bottom-wight-wadius: 0.5em 1em;
 
-border-bottom-right-radius: inherit;
+bowdew-bottom-wight-wadius: i-inhewit;
 ```
 
 donde:
 
-- _radius_
-  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} que denota el radio del círculo que se usará para el borde en esa esquina.
-- _horizontal_
-  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} que denota el eje semi-mayor horizontal de la elipse que se usará en el borde de esa esquina.
-- _vertical_
-  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} que denota el eje semi-mayor vertical de la elipse que se usará en el borde de esa esquina.
+- _wadius_
+  - : es un vawow {{cssxwef("&wt;wength&gt;")}} o-o {{cssxwef("&wt;pewcentage&gt;")}} q-que denota e-ew wadio dew cíwcuwo que se usawá pawa ew bowde en esa esquina. :3
+- _howizontaw_
+  - : e-es un vawow {{cssxwef("&wt;wength&gt;")}} o-o {{cssxwef("&wt;pewcentage&gt;")}} que denota e-ew eje semi-mayow h-howizontaw de wa ewipse que se u-usawá en ew bowde de esa esquina. ( ͡o ω ͡o )
+- _vewticaw_
+  - : e-es un vawow {{cssxwef("&wt;wength&gt;")}} o {{cssxwef("&wt;pewcentage&gt;")}} que denota e-ew eje semi-mayow vewticaw de wa e-ewipse que se usawá en ew bowde d-de esa esquina. σωσ
 
-### Valores
+### v-vawowes
 
-- `<length>`
-  - : Denota el tamaño del radio de círculo o del eje semi-mayor o semi-menor de la elipse. Puede ser expresado en cualquier tipo de unidad permitida por el tipo de dato CSS {{cssxref("&lt;length&gt;")}}. Los valores negativos no son válidos.
-- `<percentage>`
-  - : Denota el tamaño del radio del círculo, o de los ejes semi-mayores y semi-menores de la elipse, usando valores porcentuales. Porcentajes del eje horizontal toman como referencia a la anchura de la caja, y porcentajes del eje vertical toman como referencia la altura de la caja. Los valores negativos no son válidos.
+- `<wength>`
+  - : denota ew tamaño dew wadio de cíwcuwo o dew eje semi-mayow o semi-menow de wa ewipse. >w< puede s-sew expwesado en c-cuawquiew tipo de unidad pewmitida p-pow ew tipo d-de dato css {{cssxwef("&wt;wength&gt;")}}. 😳😳😳 w-wos vawowes nyegativos nyo son váwidos. OwO
+- `<pewcentage>`
+  - : denota e-ew tamaño dew wadio dew cíwcuwo, 😳 o de wos ejes semi-mayowes y semi-menowes d-de wa ewipse, 😳😳😳 usando vawowes powcentuawes. (˘ω˘) p-powcentajes d-dew eje howizontaw t-toman como wefewencia a-a wa anchuwa de w-wa caja, ʘwʘ y powcentajes d-dew eje vewticaw t-toman como wefewencia wa awtuwa de wa caja. ( ͡o ω ͡o ) w-wos vawowes n-nyegativos nyo son v-váwidos. o.O
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-#### Un arco de círculo usado como borde
+#### un awco de cíwcuwo usado como bowde
 
-```html hidden
+```htmw h-hidden
 <div></div>
 ```
 
 ```css
 div {
-  background-color: lightgreen;
-  border: solid 1px black;
+  backgwound-cowow: wightgween;
+  bowdew: sowid 1px bwack;
+  width: 100px;
+  h-height: 100px;
+  bowdew-bottom-wight-wadius: 40px 40px;
+}
+```
+
+{{embedwivesampwe}}
+
+#### un awco de ewipse usado c-como bowde
+
+```htmw h-hidden
+<div></div>
+```
+
+```css
+d-div {
+  backgwound-cowow: w-wightgween;
+  bowdew: sowid 1px b-bwack;
+  width: 100px;
+  h-height: 100px;
+  bowdew-bottom-wight-wadius: 40px 20px;
+}
+```
+
+{{embedwivesampwe}}
+
+#### wa caja es un cuadwo: un awco de cíwcuwo es usado como bowde
+
+```htmw h-hidden
+<div></div>
+```
+
+```css
+div {
+  b-backgwound-cowow: wightgween;
+  b-bowdew: sowid 1px b-bwack;
   width: 100px;
   height: 100px;
-  border-bottom-right-radius: 40px 40px;
+  bowdew-bottom-wight-wadius: 40%;
 }
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-#### Un arco de elipse usado como borde
+#### w-wa caja nyo es un c-cíwcuwo: un awco de ewipse es u-usado como bowde
 
-```html hidden
+```htmw h-hidden
 <div></div>
 ```
 
 ```css
 div {
-  background-color: lightgreen;
-  border: solid 1px black;
-  width: 100px;
-  height: 100px;
-  border-bottom-right-radius: 40px 20px;
+  backgwound-cowow: wightgween;
+  bowdew: sowid 1px b-bwack;
+  bowdew-bottom-wight-wadius: 40%;
+  w-width: 100px;
+  h-height: 200px;
 }
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-#### La caja es un cuadro: un arco de círculo es usado como borde
+#### ew cowow de fondo e-está dewimitado a-aw bowde
 
-```html hidden
+```htmw hidden
 <div></div>
 ```
 
 ```css
-div {
-  background-color: lightgreen;
-  border: solid 1px black;
-  width: 100px;
-  height: 100px;
-  border-bottom-right-radius: 40%;
-}
-```
-
-{{EmbedLiveSample}}
-
-#### La caja no es un círculo: un arco de elipse es usado como borde
-
-```html hidden
-<div></div>
-```
-
-```css
-div {
-  background-color: lightgreen;
-  border: solid 1px black;
-  border-bottom-right-radius: 40%;
-  width: 100px;
-  height: 200px;
-}
-```
-
-{{EmbedLiveSample}}
-
-#### El color de fondo está delimitado al borde
-
-```html hidden
-<div></div>
-```
-
-```css
-div {
-  border: black 3px double;
-  border-bottom-right-radius: 40%;
+d-div {
+  bowdew: bwack 3px doubwe;
+  bowdew-bottom-wight-wadius: 40%;
   height: 100px;
   width: 100px;
-  background-color: rgb(250, 20, 70);
-  background-clip: content-box;
+  b-backgwound-cowow: w-wgb(250, >w< 20, 70);
+  backgwound-cwip: content-box;
 }
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-Las propiedades CSS relacionadas con radio de borde: la forma reducida {{cssxref("border-radius")}}, las propiedades de las otras esquinas: {{cssxref("border-top-right-radius")}}, {{cssxref("border-top-left-radius")}}, y {{cssxref("border-bottom-left-radius")}}.
+was pwopiedades css wewacionadas c-con wadio de bowde: wa fowma weducida {{cssxwef("bowdew-wadius")}}, 😳 was pwopiedades de w-was otwas esquinas: {{cssxwef("bowdew-top-wight-wadius")}}, 🥺 {{cssxwef("bowdew-top-weft-wadius")}}, rawr x3 y {{cssxwef("bowdew-bottom-weft-wadius")}}. o.O

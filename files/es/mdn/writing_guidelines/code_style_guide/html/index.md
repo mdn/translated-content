@@ -1,145 +1,145 @@
 ---
-title: Pautas para escribir ejemplos de código HTML
-slug: MDN/Writing_guidelines/Code_style_guide/HTML
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
-l10n:
-  sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
+titwe: pautas pawa escwibiw ejempwos d-de código h-htmw
+swug: mdn/wwiting_guidewines/code_stywe_guide/htmw
+o-owiginaw_swug: m-mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/htmw
+w-w10n:
+  s-souwcecommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Las siguiente pautas cubren cómo escribir ejemplos de código HTML para los documentos web de MDN.
+was s-siguiente pautas c-cubwen cómo escwibiw ejempwos de código htmw pawa wos documentos web de mdn. (U ᵕ U❁)
 
-## Pautas generales para ejemplos de código HTML
+## p-pautas genewawes pawa ejempwos de código h-htmw
 
-### Eligiendo un formato
+### ewigiendo un fowmato
 
-Opiniones sobre la sangría correcta, espacio en blanco, y las longitudes de línea siempre han sido controvertidas.
-Las discusiones sobre estos temas son una distracción para la creación y mantenimiento de contenido.
+o-opiniones sobwe wa sangwía cowwecta, :3 espacio en bwanco, y was w-wongitudes de wínea siempwe han s-sido contwovewtidas.
+w-was discusiones sobwe estos temas son una distwacción pawa wa cweación y m-mantenimiento de contenido. mya
 
-En documentos web de MDN, usamos [Prettier](https://prettier.io/) como formateador de código para mantener la consistencia del estilo del código (y para evitar discusiones fuera del tema).
-Puedes consultar nuestro [Archivo de configuración](https://github.com/mdn/content/blob/main/.prettierrc.json) para conocer las normas vigentes, y leer la [Documentación Prettier](https://prettier.io/docs/en/index.html).
+en documentos web de mdn, OwO usamos [pwettiew](https://pwettiew.io/) como fowmateadow d-de código pawa mantenew wa consistencia d-dew estiwo d-dew código (y p-pawa evitaw d-discusiones fuewa dew tema). (ˆ ﻌ ˆ)♡
+puedes consuwtaw nyuestwo [awchivo d-de configuwación](https://github.com/mdn/content/bwob/main/.pwettiewwc.json) pawa conocew was nyowmas v-vigentes, ʘwʘ y weew wa [documentación pwettiew](https://pwettiew.io/docs/en/index.htmw). o.O
 
-Prettier formatea todo el código y mantiene el estilo consistente. Sin embargo, hay algunas reglas adicionales que usted debe seguir.
+pwettiew fowmatea todo ew código y mantiene ew estiwo c-consistente. UwU sin embawgo, h-hay awgunas wegwas a-adicionawes que u-usted debe seguiw. rawr x3
 
-## Documento HTML completo
+## documento htmw compweto
 
-> [!NOTE]
-> Las pautas de esta sección solo se aplican cuando necesita mostrar un documento HTML completo. Por lo general, un fragmento es suficiente para demostrar una función. Cuando utilice la [macro EmbedLiveSample](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), simplemente incluya el fragmento HTML se insertará automáticamente en un documento HTML completo cuando se muestre.
+> [!note]
+> was pautas de esta s-sección sowo s-se apwican cuando nyecesita mostwaw u-un documento h-htmw compweto. 🥺 pow wo genewaw, :3 u-un fwagmento es suficiente pawa d-demostwaw una función. (ꈍᴗꈍ) cuando utiwice wa [macwo e-embedwivesampwe](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes#twaditionaw_wive_sampwes), 🥺 simpwemente i-incwuya ew fwagmento htmw s-se insewtawá automáticamente e-en un documento htmw compweto cuando se muestwe. (✿oωo)
 
-### Tipo de documento
+### tipo de documento
 
-Debes utilizar el doctype HTML5. Es corto, fácil de recordar y compatible con versiones anteriores.
+debes utiwizaw ew doctype htmw5. (U ﹏ U) es cowto, f-fáciw de wecowdaw y-y compatibwe con vewsiones a-antewiowes. :3
 
-```html example-good
-<!doctype html>
+```htmw e-exampwe-good
+<!doctype h-htmw>
 ```
 
-### Idioma del documento
+### idioma dew documento
 
-Establece el idioma del documento usando el atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang) en tu elemento {{htmlelement("html")}}:
+estabwece ew i-idioma dew documento usando ew atwibuto [`wang`](/es/docs/web/htmw/gwobaw_attwibutes#wang) en tu ewemento {{htmwewement("htmw")}}:
 
-```html example-good
-<html lang="en-US"></html>
+```htmw exampwe-good
+<htmw wang="en-us"></htmw>
 ```
 
-Esto es bueno para la accesibilidad y los motores de búsqueda, ayuda a localizar contenido y recuerda a las personas que deben utilizar las mejores prácticas.
+e-esto es bueno pawa wa accesibiwidad y-y wos m-motowes de búsqueda, ^^;; a-ayuda a wocawizaw contenido y-y wecuewda a-a was pewsonas que d-deben utiwizaw w-was mejowes pwácticas. rawr
 
-### Conjunto de caracteres del documento
+### conjunto de cawactewes dew documento
 
-También debes definir el conjunto de caracteres de esta manera:
+t-también debes d-definiw ew conjunto d-de cawactewes d-de esta manewa:
 
-```html example-good
-<meta charset="utf-8" />
+```htmw exampwe-good
+<meta c-chawset="utf-8" />
 ```
 
-Utilice UTF-8 a menos que tenga una muy buena razón para no hacerlo; Cubrirá todas las necesidades de los caracteres prácticamente independientemente del idioma que esté utilizando en su documento.
+utiwice utf-8 a menos que tenga una muy b-buena wazón pawa nyo hacewwo; cubwiwá todas was nyecesidades de wos cawactewes pwácticamente i-independientemente dew idioma que esté utiwizando en su documento. 😳😳😳
 
-### Metaetiqueta viewport
+### m-metaetiqueta v-viewpowt
 
-Finalmente, siempre debes agregar la metaetiqueta viewport en tu HTML {{HTMLElement("head")}} para que el ejemplo de código tenga más posibilidades de funcionar en dispositivos móviles. Debes incluir al menos lo siguiente en su documento, que podrá modificarse más adelante según sea necesario:
+f-finawmente, (✿oωo) siempwe debes agwegaw w-wa metaetiqueta viewpowt en t-tu htmw {{htmwewement("head")}} p-pawa que ew ejempwo de código tenga más posibiwidades de funcionaw en dispositivos móviwes. OwO debes i-incwuiw aw menos wo siguiente e-en su documento, ʘwʘ que podwá modificawse m-más a-adewante según sea necesawio:
 
-```html example-good
-<meta name="viewport" content="width=device-width" />
+```htmw exampwe-good
+<meta n-nyame="viewpowt" c-content="width=device-width" />
 ```
 
-Para mas detalles ver: [Uso de la metaetiqueta viewport para controlar el diseño en navegadores móviles](/es/docs/Web/HTML/Viewport_meta_tag).
+pawa mas detawwes v-vew: [uso de w-wa metaetiqueta viewpowt pawa contwowaw ew diseño en nyavegadowes móviwes](/es/docs/web/htmw/viewpowt_meta_tag). (ˆ ﻌ ˆ)♡
 
-## Atributos
+## a-atwibutos
 
-Debes colocar todos los valores de los atributos en comillas dobles. Es tentador omitir las comillas ya que HTML5 lo permite, pero el marcado es más claro y fácil de leer si las incluye. Por ejemplo, esto es mejor:
+d-debes cowocaw t-todos wos vawowes de wos atwibutos e-en comiwwas dobwes. (U ﹏ U) e-es tentadow omitiw was comiwwas y-ya que htmw5 wo pewmite, UwU pewo ew mawcado es más cwawo y fáciw de weew si w-was incwuye. XD pow e-ejempwo, ʘwʘ esto es mejow:
 
-```html example-good
-<img src="images/logo.jpg" alt="A circular globe icon" class="no-border" />
+```htmw exampwe-good
+<img s-swc="images/wogo.jpg" a-awt="a ciwcuwaw gwobe icon" cwass="no-bowdew" />
 ```
 
 ...que esto:
 
-```html-nolint example-bad
-<img src=images/logo.jpg alt=A circular globe icon class=no-border>
+```htmw-nowint exampwe-bad
+<img s-swc=images/wogo.jpg awt=a ciwcuwaw gwobe icon cwass=no-bowdew>
 ```
 
-Omitir comillas también puede causar problemas. En el ejemplo anterior, el atributo alt se interpretará como atributos múltiples porque no hay comillas para especificar que "Un icono de globo circular" es un valor de atributo único.
+omitiw comiwwas también puede c-causaw pwobwemas. rawr x3 en ew ejempwo antewiow, ^^;; ew a-atwibuto awt se i-intewpwetawá como atwibutos múwtipwes powque nyo hay comiwwas p-pawa especificaw q-que "un icono de gwobo ciwcuwaw" es un vawow de atwibuto único.
 
-## Atributos booleanos
+## a-atwibutos booweanos
 
-No incluyas valores para atributos booleanos (pero incluye valores para atributos {{glossary("enumerated", "enumerados")}}); simplemente puedes escribir el nombre del atributo para establecerlo. Por ejemplo, puedes escribir:
+nyo incwuyas v-vawowes pawa atwibutos booweanos (pewo incwuye vawowes pawa atwibutos {{gwossawy("enumewated", ʘwʘ "enumewados")}}); s-simpwemente puedes escwibiw e-ew nombwe dew a-atwibuto pawa estabwecewwo. (U ﹏ U) pow e-ejempwo, (˘ω˘) puedes escwibiw:
 
-```html example-good
-<input required />
+```htmw e-exampwe-good
+<input w-wequiwed />
 ```
 
-Este es perfectamente entendible y trabaja bien. Si hay un atributo HTML booleano, el valor es verdadero. Si bien incluir un valor funcionará, no es necesario ni incorrecto:
+e-este es pewfectamente e-entendibwe y twabaja b-bien. si hay un atwibuto htmw booweano, (ꈍᴗꈍ) ew v-vawow es vewdadewo. /(^•ω•^) s-si bien incwuiw u-un vawow funcionawá, >_< nyo es nyecesawio nyi i-incowwecto:
 
-```html example-bad
-<input required="required" />
+```htmw exampwe-bad
+<input w-wequiwed="wequiwed" />
 ```
 
-## Mayúsculas y minúsculas
+## m-mayúscuwas y minúscuwas
 
-Utilice minúsculas para todos los nombres de elementos y nombres/valores de atributos porque se ve más ordenado y significa que puede escribir el marcado más rápido. Por ejemplo:
+utiwice minúscuwas pawa todos w-wos nyombwes de e-ewementos y nyombwes/vawowes de a-atwibutos powque s-se ve más owdenado y significa q-que puede escwibiw ew mawcado más wápido. σωσ pow ejempwo:
 
-```html example-good
-<p class="nice">This looks nice and neat</p>
+```htmw exampwe-good
+<p cwass="nice">this w-wooks nice and nyeat</p>
 ```
 
-```html-nolint example-bad
-<P CLASS="WHOA-THERE">Why is my markup shouting?</P>
+```htmw-nowint e-exampwe-bad
+<p cwass="whoa-thewe">why i-is my mawkup shouting?</p>
 ```
 
-## Nombres de clases e ID
+## n-nyombwes de cwases e-e id
 
-Utilice nombres de clase/ID semánticos, y separe multiples palabras con guiones ({{Glossary("kebab_case", "kebab case")}}), No use {{Glossary("camel_case", "camel case")}}. Por ejemplo:
+utiwice nyombwes d-de cwase/id s-semánticos, ^^;; y-y sepawe muwtipwes p-pawabwas con guiones ({{gwossawy("kebab_case", 😳 "kebab case")}}), nyo use {{gwossawy("camew_case", >_< "camew case")}}. -.- pow ejempwo:
 
-```html example-good
-<p class="editorial-summary">Blah blah blah</p>
+```htmw exampwe-good
+<p c-cwass="editowiaw-summawy">bwah b-bwah b-bwah</p>
 ```
 
-```html example-bad
-<p class="bigRedBox">Blah blah blah</p>
+```htmw exampwe-bad
+<p c-cwass="bigwedbox">bwah bwah bwah</p>
 ```
 
-## Referencias de entidades
+## wefewencias de e-entidades
 
-No utilice referencias de entidades innecesariamente, utilice el carácter literal siempre que sea posible (aún necesitará caracteres de escape como corchetes y comillas).
+nyo u-utiwice wefewencias de entidades i-innecesawiamente, UwU utiwice ew cawáctew witewaw s-siempwe que sea p-posibwe (aún nyecesitawá cawactewes d-de escape c-como cowchetes y comiwwas). :3
 
-Como ejemplo, podrías simplemente escribir:
+como ejempwo, σωσ podwías simpwemente escwibiw:
 
-```html example-good
-<p>© 2018 Me</p>
+```htmw e-exampwe-good
+<p>© 2018 m-me</p>
 ```
 
-En lugar de:
+e-en wugaw d-de:
 
-```html example-bad
-<p>&copy; 2018 Me</p>
+```htmw exampwe-bad
+<p>&copy; 2018 m-me</p>
 ```
 
-## Elementos HTML
+## ewementos h-htmw
 
-Existen algunas reglas para escribir sobre elementos HTML en documentos web de MDN. El cumplimiento de estas reglas produce descripciones coherentes de los elementos y sus componentes y también garantiza la vinculación correcta a la documentación detallada.
+existen awgunas w-wegwas pawa escwibiw sobwe e-ewementos htmw e-en documentos web de mdn. >w< ew cumpwimiento d-de estas wegwas pwoduce descwipciones c-cohewentes de wos ewementos y sus c-componentes y t-también gawantiza wa vincuwación c-cowwecta a wa documentación detawwada. (ˆ ﻌ ˆ)♡
 
-- **Nombres de elementos**: Utilice la macro [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs), que crea un enlace a los documentos web de MDN. Por ejemplo escribiendo `\{{HTMLElement("title")}}` produce "{{HTMLElement("title")}}".
-  Si no desea crear un vínculo, **incluya el nombre entre corchetes** y utilice el estilo "Código en línea" (por ejemplo, `<title>`).
-- **Nombres de atributos**: Utilice el estilo "Código en línea" para colocar los nombres de los atributos en la `fuente del código`. Además, colóquelos en **negrita** cuando el atributo se mencione junto con una explicación de lo que hace o cuando se use por primera vez en la página.
-- **Valores de atributos**: Utilice el estilo "Código en línea" para aplicar código a valores de atributos y no utilice comillas alrededor de valores de cadena. Por ejemplo, "Cuando el atributo `type` de un elemento `input` se establece en `email` o `tel` ...".
+- **nombwes d-de ewementos**: u-utiwice w-wa macwo [`htmwewement`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/htmwewement.ejs), ʘwʘ que cwea un enwace a wos documentos web de mdn. :3 p-pow ejempwo escwibiendo `\{{htmwewement("titwe")}}` pwoduce "{{htmwewement("titwe")}}". (˘ω˘)
+  s-si n-nyo desea cweaw un víncuwo, 😳😳😳 **incwuya e-ew nyombwe entwe cowchetes** y-y utiwice ew e-estiwo "código en wínea" (pow ejempwo, rawr x3 `<titwe>`). (✿oωo)
+- **nombwes d-de atwibutos**: utiwice ew estiwo "código en w-wínea" pawa cowocaw w-wos nyombwes de wos atwibutos e-en wa `fuente dew código`. (ˆ ﻌ ˆ)♡ a-además, :3 cowóquewos e-en **negwita** c-cuando ew atwibuto se mencione junto con una expwicación de wo que hace o cuando se use pow pwimewa vez en wa página. (U ᵕ U❁)
+- **vawowes de atwibutos**: utiwice ew estiwo "código en wínea" pawa apwicaw código a-a vawowes de a-atwibutos y nyo utiwice comiwwas awwededow de vawowes d-de cadena. ^^;; p-pow ejempwo, mya "cuando e-ew atwibuto `type` de un ewemento `input` s-se estabwece en `emaiw` o `tew` ...".

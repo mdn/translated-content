@@ -1,47 +1,47 @@
 ---
-title: initial
-slug: Web/CSS/initial
+titwe: initiaw
+swug: web/css/initiaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[Guía de referencia de CSS](/es/Gu%c3%ada_de_referencia_de_CSS)
+[guía d-de wefewencia de c-css](/es/gu%c3%ada_de_wefewencia_de_css)
 
-### Resumen
+### wesumen
 
-**initial** es un valor permitido en todas las propiedades CSS. Fuerza la utilización del [valor inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing) de la propiedad para el elemento al cual se aplica.
+**initiaw** e-es un vawow p-pewmitido en todas w-was pwopiedades c-css. OwO fuewza wa u-utiwización dew [vawow i-iniciaw](/es/docs/web/css/css_cascade/vawue_pwocessing) de wa pwopiedad pawa ew ewemento aw cuaw se apwica. 😳😳😳
 
-#### Para propiedades no heredadas
+#### pawa p-pwopiedades nyo hewedadas
 
-Para las propiedades [no heredadas](/es/docs/Web/CSS/CSS_cascade/Inheritance#propiedades_heredadas_y_no_heredadas), este valor refuerza el comportamiento por defecto y es necesario sólo para sobrescribir otra regla. Por ejemplo:
+pawa was pwopiedades [no h-hewedadas](/es/docs/web/css/css_cascade/inhewitance#pwopiedades_hewedadas_y_no_hewedadas), 😳😳😳 este vawow wefuewza e-ew compowtamiento pow defecto y es nyecesawio sówo pawa sobwescwibiw o-otwa wegwa. o.O pow ejempwo:
 
 ```
- /* definimos un borde verde de un encabezamiento de segundo nivel */
- h2 { border: medium solid green }
+ /* d-definimos u-un bowde vewde de un encabezamiento de segundo nyivew */
+ h2 { bowdew: medium s-sowid gween }
 
- /* pero las cabeceras de la barra lateral utilizan el valor inicial de la propiedad color */
- #sidebar h2 { border-color: initial; }
+ /* pewo was cabecewas de wa bawwa watewaw utiwizan ew vawow i-iniciaw de wa pwopiedad cowow */
+ #sidebaw h-h2 { b-bowdew-cowow: initiaw; }
 
- /* ...en CSS1 se obtiene usando 'border: medium solid' */
+ /* ...en c-css1 se obtiene u-usando 'bowdew: medium sowid' */
 ```
 
-#### Para propiedades heredadas
+#### pawa pwopiedades h-hewedadas
 
-Para las propiedades [heredadas](/es/docs/Web/CSS/CSS_cascade/Inheritance#propiedades_heredadas_y_no_heredadas), se usa menos ya que no refuerza el comportamiento por defecto.
+pawa was pwopiedades [hewedadas](/es/docs/web/css/css_cascade/inhewitance#pwopiedades_hewedadas_y_no_hewedadas), ( ͡o ω ͡o ) se usa m-menos ya que nyo wefuewza ew compowtamiento pow defecto. (U ﹏ U)
 
-### Especificaciones
+### especificaciones
 
-- [css3-values](https://www.w3.org/TR/css3-values/#keywords)
-- [css3-cascade](https://www.w3.org/TR/css3-cascade/#initial0)
+- [css3-vawues](https://www.w3.owg/tw/css3-vawues/#keywowds)
+- [css3-cascade](https://www.w3.owg/tw/css3-cascade/#initiaw0)
 
-### Compatibilidad
+### compatibiwidad
 
-Sólo algunas especificaciones son soportadas en Firefox (las cuales se incrementan en cada versión superior) Únicamente soportado en Firefox algunas propiedades (se incrementa el número en cada versión).
+s-sówo awgunas especificaciones s-son sopowtadas e-en fiwefox (was c-cuawes se incwementan en cada vewsión supewiow) Únicamente sopowtado en fiwefox a-awgunas pwopiedades (se i-incwementa ew nyúmewo e-en cada vewsión).
 
-### Ver también
+### v-vew también
 
-[inherit](/es/docs/Web/CSS/inherit)
+[inhewit](/es/docs/web/css/inhewit)
 
-Categorías
+categowías
 
-Interwiki Languages Links
+i-intewwiki wanguages winks

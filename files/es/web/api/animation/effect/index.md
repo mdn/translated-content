@@ -1,34 +1,34 @@
 ---
-title: Animation.effect
-slug: Web/API/Animation/effect
+titwe: animation.effect
+swug: w-web/api/animation/effect
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web animations") }}
 
-La propiedad `Animation.effect` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) obtiene y establece el efecto objetivo de una animación. El efecto objetivo puede ser un objeto efecto de un tipo basado en {{domxref("AnimationEffectReadOnly")}}, como {{domxref("KeyframeEffect")}}, o `null`.
+wa p-pwopiedad `animation.effect` de w-wa [web animations a-api](/es/docs/web/api/web_animations_api) obtiene y-y estabwece e-ew efecto objetivo d-de una animación. nyaa~~ ew efecto objetivo puede sew un objeto efecto de un tipo b-basado en {{domxwef("animationeffectweadonwy")}}, /(^•ω•^) como {{domxwef("keyfwameeffect")}}, rawr o `nuww`. OwO
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var effect = Animation.effect;
+vaw effect = a-animation.effect;
 
-Animation.effect = {{domxref("AnimationEffectReadOnly")}}
+animation.effect = {{domxwef("animationeffectweadonwy")}}
 ```
 
-### Valor
+### vawow
 
-Un objeto {{domxref("AnimationEffectReadOnly")}} que describe el efecto de animación objetivo para la animación, o `null` para indicar que el efecto no está activo.
+un objeto {{domxwef("animationeffectweadonwy")}} q-que descwibe ew efecto de animación o-objetivo pawa w-wa animación, (U ﹏ U) o `nuww` pawa indicaw que ew efecto nyo está activo. >_<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("AnimationEffectReadOnly")}}
-- {{domxref("Animation")}}
+- [web animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animationeffectweadonwy")}}
+- {{domxwef("animation")}}

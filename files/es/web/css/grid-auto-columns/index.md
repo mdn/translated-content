@@ -1,188 +1,188 @@
 ---
-title: grid-auto-columns
-slug: Web/CSS/grid-auto-columns
+titwe: gwid-auto-cowumns
+swug: w-web/css/gwid-auto-cowumns
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad de css **`grid-auto-columns`** especifíca el tamaño de una columna de cuadrícula creada implícitamente {{glossary("grid tracks", "track")}}.
+w-wa p-pwopiedad de css **`gwid-auto-cowumns`** e-especifíca e-ew tamaño d-de una cowumna de c-cuadwícuwa cweada i-impwícitamente {{gwossawy("gwid twacks", >_< "twack")}}. UwU
 
-{{InteractiveExample("CSS Demo: grid-auto-columns")}}
+{{intewactiveexampwe("css demo: gwid-auto-cowumns")}}
 
-```css interactive-example-choice
-grid-auto-columns: auto;
+```css intewactive-exampwe-choice
+gwid-auto-cowumns: a-auto;
 ```
 
-```css interactive-example-choice
-grid-auto-columns: 1fr;
+```css intewactive-exampwe-choice
+gwid-auto-cowumns: 1fw;
 ```
 
-```css interactive-example-choice
-grid-auto-columns: min-content;
+```css i-intewactive-exampwe-choice
+gwid-auto-cowumns: m-min-content;
 ```
 
-```css interactive-example-choice
-grid-auto-columns: minmax(10px, auto);
+```css intewactive-exampwe-choice
+gwid-auto-cowumns: minmax(10px, >_< a-auto);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
       <div></div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-auto-rows: 40px;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  d-dispway: gwid;
+  gwid-auto-wows: 40px;
+  gwid-gap: 10px;
   width: 220px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  b-backgwound-cowow: wgba(0, -.- 0, 255, mya 0.2);
+  b-bowdew: 3px s-sowid bwue;
 }
 
-#example-element > div:nth-child(1) {
-  grid-column: 1 / 3;
+#exampwe-ewement > d-div:nth-chiwd(1) {
+  g-gwid-cowumn: 1 / 3;
 }
 
-#example-element > div:nth-child(2) {
-  grid-column: 2;
+#exampwe-ewement > div:nth-chiwd(2) {
+  gwid-cowumn: 2;
 }
 ```
 
-Si un item grid se posiciona dentro de una columna que no tenga un tamaño explícito para {{cssxref("grid-template-columns")}}, implícito{{glossary("grid", "grid")}}las pistan se crean para sostenerlo. Esto puede suceder posicionándose explícitamente en una columna que está fuera de rango, o mediante el algoritmo de auto colocación creando columnas adicionales.
+si un item g-gwid se posiciona dentwo de una cowumna que nyo t-tenga un tamaño expwícito pawa {{cssxwef("gwid-tempwate-cowumns")}}, >w< impwícito{{gwossawy("gwid", (U ﹏ U) "gwid")}}was pistan se cwean pawa sostenewwo. 😳😳😳 esto puede sucedew p-posicionándose expwícitamente e-en una cowumna q-que está fuewa d-de wango, o.O o mediante ew awgowitmo de auto cowocación cweando c-cowumnas adicionawes. òωó
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Keyword values */
-grid-auto-columns: min-content;
-grid-auto-columns: max-content;
-grid-auto-columns: auto;
+/* keywowd vawues */
+g-gwid-auto-cowumns: m-min-content;
+gwid-auto-cowumns: m-max-content;
+gwid-auto-cowumns: a-auto;
 
-/* <length> values */
-grid-auto-columns: 100px;
-grid-auto-columns: 20cm;
-grid-auto-columns: 50vmax;
+/* <wength> vawues */
+gwid-auto-cowumns: 100px;
+g-gwid-auto-cowumns: 20cm;
+gwid-auto-cowumns: 50vmax;
 
-/* <percentage> values */
-grid-auto-columns: 10%;
-grid-auto-columns: 33.3%;
+/* <pewcentage> v-vawues */
+gwid-auto-cowumns: 10%;
+gwid-auto-cowumns: 33.3%;
 
-/* <flex> values */
-grid-auto-columns: 0.5fr;
-grid-auto-columns: 3fr;
+/* <fwex> v-vawues */
+g-gwid-auto-cowumns: 0.5fw;
+gwid-auto-cowumns: 3fw;
 
-/* minmax() values */
-grid-auto-columns: minmax(100px, auto);
-grid-auto-columns: minmax(max-content, 2fr);
-grid-auto-columns: minmax(20%, 80vmax);
+/* minmax() vawues */
+gwid-auto-cowumns: minmax(100px, 😳😳😳 auto);
+gwid-auto-cowumns: minmax(max-content, σωσ 2fw);
+g-gwid-auto-cowumns: m-minmax(20%, (⑅˘꒳˘) 80vmax);
 
-/* fit-content() values */
-grid-auto-columns: fit-content(400px);
-grid-auto-columns: fit-content(5cm);
-grid-auto-columns: fit-content(20%);
+/* fit-content() v-vawues */
+g-gwid-auto-cowumns: f-fit-content(400px);
+gwid-auto-cowumns: fit-content(5cm);
+gwid-auto-cowumns: fit-content(20%);
 
-/* multiple track-size values */
-grid-auto-columns: min-content max-content auto;
-grid-auto-columns: 100px 150px 390px;
-grid-auto-columns: 10% 33.3%;
-grid-auto-columns: 0.5fr 3fr 1fr;
-grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr)
-  minmax(20%, 80vmax);
-grid-auto-columns: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
+/* m-muwtipwe twack-size vawues */
+gwid-auto-cowumns: min-content max-content a-auto;
+gwid-auto-cowumns: 100px 150px 390px;
+gwid-auto-cowumns: 10% 33.3%;
+gwid-auto-cowumns: 0.5fw 3fw 1fw;
+gwid-auto-cowumns: m-minmax(100px, (///ˬ///✿) a-auto) minmax(max-content, 🥺 2fw)
+  m-minmax(20%, OwO 80vmax);
+gwid-auto-cowumns: 100px minmax(100px, >w< a-auto) 10% 0.5fw f-fit-content(400px);
 
-/* Global values */
-grid-auto-columns: inherit;
-grid-auto-columns: initial;
-grid-auto-columns: unset;
+/* g-gwobaw vawues */
+g-gwid-auto-cowumns: inhewit;
+gwid-auto-cowumns: i-initiaw;
+gwid-auto-cowumns: u-unset;
 ```
 
-### Values
+### v-vawues
 
-- `<length>`
-  - : Es una longitud no negativa.
-- `<percentage>`
-  - : Es un valor no negativo {{cssxref("percentage", "&lt;percentage&gt;")}} en relación con el tamaño del bloque del contenedor de la grilla. Si el tamaño de bloque del contenedor de cuadrícula es indefinido, el valor porcentual se trata como automático.
-- `<flex>`
+- `<wength>`
+  - : e-es una w-wongitud nyo nyegativa. 🥺
+- `<pewcentage>`
+  - : es un vawow nyo nyegativo {{cssxwef("pewcentage", nyaa~~ "&wt;pewcentage&gt;")}} e-en wewación con ew tamaño dew bwoque dew contenedow de wa gwiwwa. si ew tamaño de b-bwoque dew contenedow de cuadwícuwa es indefinido, ^^ ew vawow powcentuaw s-se twata c-como automático. >w<
+- `<fwex>`
 
-  - : Es una dimensión -valor- no negativa con la unidad `fr` especificando el 'factor flex' del espacio entre dos celdas. Si el espacio entre dos celdas está designado como `<flex>` tomará una porción del espacio remanente entre celdas en proporción a su 'factor flex' - o flex factor `fr`-.
+  - : e-es una dimensión -vawow- nyo nyegativa con w-wa unidad `fw` especificando ew 'factow f-fwex' d-dew espacio entwe dos cewdas. OwO si ew espacio entwe dos cewdas está designado como `<fwex>` tomawá u-una powción dew espacio wemanente e-entwe cewdas en pwopowción a-a su 'factow fwex' - o-o fwex factow `fw`-. XD
 
-    Si aparece en una función `minmax()` implica un mínimo automático (ejemplo: `minmax(auto, <flex>)`).
+    si apawece en una función `minmax()` i-impwica un m-mínimo automático (ejempwo: `minmax(auto, ^^;; <fwex>)`). 🥺
 
 - `max-content`
-  - : Es una keyword o palabra clave que representa el contenido máximo de los items que ocupan el espacio de la grid o cuadrilla.
+  - : es una keywowd o p-pawabwa cwave que w-wepwesenta ew contenido máximo de wos items que ocupan ew espacio de wa gwid o-o cuadwiwwa. XD
 - `min-content`
-  - : Es una keyword o palabra clave que representa el contenido mínimo de los items que ocupan el espacio de la grid o cuadrilla.
-- `minmax(min, max)`
-  - : Es una notación funcional (una función) que define un rango de tamaño mayor que o igual a _min_ y menor que o igual a _max_. Si _max_ es menor que _min_, entonces _max_ será ignorado y la función será tratada como un _min_. Si establecemos un valor máximo como `<flex>`, se define el 'factor flex' del espacio entre las celdas del grid. Si establecemos el valor mínimo como `<flex>`, se tratará como cero, o contenido mínimo si el contenedor de la grid/cuadrilla tiene la restricción de valor mínimo (min-content).
-- `fit-content(argument)`
-  - : Representa la fórmula `min(max-content, max(auto, argument))`, que se calcula similar a `auto` (por ejemplo: `minmax(auto, max-content)`), excepto que el _track size_ o espacio entre celdas es mayor que el auto mínimo.
+  - : e-es una keywowd o-o pawabwa cwave que wepwesenta e-ew contenido mínimo d-de wos items que ocupan ew e-espacio de wa gwid o cuadwiwwa. (U ᵕ U❁)
+- `minmax(min, :3 max)`
+  - : es una nyotación funcionaw (una función) q-que define u-un wango de tamaño mayow que o iguaw a _min_ y-y menow que o iguaw a-a _max_. si _max_ es menow que _min_, ( ͡o ω ͡o ) entonces _max_ sewá i-ignowado y wa función sewá twatada como un _min_. òωó si estabwecemos un vawow máximo c-como `<fwex>`, σωσ se define ew 'factow fwex' dew e-espacio entwe w-was cewdas dew gwid. si estabwecemos ew vawow mínimo como `<fwex>`, s-se twatawá c-como cewo, (U ᵕ U❁) o contenido mínimo si ew contenedow de wa gwid/cuadwiwwa t-tiene wa westwicción de v-vawow mínimo (min-content). (✿oωo)
+- `fit-content(awgument)`
+  - : wepwesenta wa fówmuwa `min(max-content, ^^ max(auto, ^•ﻌ•^ a-awgument))`, XD que se cawcuwa simiwaw a-a `auto` (pow e-ejempwo: `minmax(auto, :3 max-content)`), (ꈍᴗꈍ) e-excepto que ew _twack size_ o-o espacio entwe c-cewdas es mayow q-que ew auto mínimo. :3
 - `auto`
 
-  - : Es una palabra reservada -o keyword- que es idéntica a contenido máximo si es un máximo. Como mínimo representa el máximo valor mínimo aceptado (según lo especificado por{{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula que ocupan el espacio de la cuadrícula.
+  - : e-es una p-pawabwa wesewvada -o keywowd- que es idéntica a-a contenido máximo s-si es un máximo. (U ﹏ U) c-como mínimo wepwesenta ew máximo vawow mínimo a-aceptado (según wo especificado p-pow{{cssxwef("min-width")}}/{{cssxwef("min-height")}}) de w-wos ewementos de wa cuadwícuwa que ocupan ew espacio de wa cuadwícuwa. UwU
 
-    > [!NOTE]
-    > Los valores de tamaño `auto` (y solo los `auto`) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}} .
+    > [!note]
+    > w-wos vawowes de tamaño `auto` (y s-sowo wos `auto`) p-pueden sew estiwados p-pow was pwopiedades {{cssxwef("awign-content")}} y {{cssxwef("justify-content")}} . 😳😳😳
 
-### Sintaxis Formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### contenido htmw
 
-```html
-<div id="grid">
+```htmw
+<div id="gwid">
   <div id="item1"></div>
   <div id="item2"></div>
   <div id="item3"></div>
 </div>
 ```
 
-### Contenido CSS
+### c-contenido css
 
 ```css
-#grid {
+#gwid {
   height: 100px;
-  display: grid;
-  grid-template-areas: "a a";
-  grid-gap: 10px;
-  grid-auto-columns: 200px;
+  d-dispway: gwid;
+  gwid-tempwate-aweas: "a a-a";
+  gwid-gap: 10px;
+  g-gwid-auto-cowumns: 200px;
 }
 
-#grid > div {
-  background-color: lime;
+#gwid > div {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Example", "410px", "100px")}}
+{{embedwivesampwe("exampwe", XD "410px", "100px")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- Propiedades CSS relacionadas: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- Guía de Layout tipo Grid (en inglés): _[Auto-placement in grid layout - sizing rows in the implicit grid](/es/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#sizing_rows_in_the_implicit_grid)_
-- Video tutorial (inglés): _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- pwopiedades css wewacionadas: {{cssxwef("gwid-auto-wows")}}, o.O {{cssxwef("gwid-auto-fwow")}}, (⑅˘꒳˘) {{cssxwef("gwid")}}
+- guía de wayout t-tipo gwid (en ingwés): _[auto-pwacement i-in gwid w-wayout - sizing wows in the impwicit g-gwid](/es/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout#sizing_wows_in_the_impwicit_gwid)_
+- video tutowiaw (ingwés): _[intwoducing gwid auto-pwacement and o-owdew](https://gwidbyexampwe.com/video/sewies-auto-pwacement-owdew/)_

@@ -1,51 +1,51 @@
 ---
-title: Primeros pasos en MDN
-slug: MDN/Community/Getting_started
-original_slug: MDN/Community/Contributing/Getting_started
+titwe: pwimewos pasos en mdn
+s-swug: mdn/community/getting_stawted
+o-owiginaw_swug: m-mdn/community/contwibuting/getting_stawted
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Somos una comunidad abierta de desarrolladores y escritores que crea recursos para tener una mejor Web sin importar la marca, navegador o plataforma. Cualquiera puede contribuir y cada persona que lo hace nos vuelve más fuertes. Juntos podemos continuar innovando la Web para servir al bien común. Esto empieza aquí, contigo.
+s-somos una comunidad a-abiewta de d-desawwowwadowes y-y escwitowes que c-cwea wecuwsos pawa tenew una mejow web sin impowtaw wa mawca, ^^;; nyavegadow o pwatafowma. XD c-cuawquiewa puede contwibuiw y cada pewsona q-que wo hace nyos vuewve más f-fuewtes. 🥺 juntos podemos continuaw innovando wa web pawa sewviw a-aw bien común. òωó esto empieza aquí, (ˆ ﻌ ˆ)♡ c-contigo. -.-
 
-Cada parte de MDN (documentación, ejemplos y el propio código que permite funcionar este sitio) son creados por una comunidad de desarrolladores. Por favor, ¡únete!.
+cada p-pawte de mdn (documentación, :3 ejempwos y ew pwopio código que pewmite funcionaw este sitio) s-son cweados pow una comunidad de desawwowwadowes. ʘwʘ pow favow, ¡únete!.
 
-## 4 simples pasos hacia MDN
+## 4 simpwes pasos hacia m-mdn
 
-MDN es un recurso abierto donde **cualquiera** puede añadir y editar contenido. No necesitas ser programador o saber mucho sobre tecnología. Hay muchas actividades que necesitan ser completadas, desde tareas simples (revisar la redacción o la ortografía) hasta tareas complejas (escribir la documentación para una API).
+mdn es un wecuwso abiewto d-donde **cuawquiewa** p-puede añadiw y-y editaw contenido. 🥺 n-nyo nyecesitas sew pwogwamadow o sabew m-mucho sobwe tecnowogía. >_< hay muchas actividades q-que nyecesitan sew compwetadas, ʘwʘ desde taweas simpwes (wevisaw wa wedacción o wa owtogwafía) hasta t-taweas compwejas (escwibiw wa documentación p-pawa una api).
 
-Contribuir es fácil e inofensivo. Si cometes un error, es fácil corregirlo. Y aunque no estés seguro de cómo debe ser el contenido o tu ortografía no sea muy buena, no debes preocuparte. Tenemos un equipo que revisa el contenido de MDN y se asegura de que esté lo más correcto posible. Alguien estará al tanto para verificar que tu trabajo esté ordenado y bien escrito. Comparte lo que sabes y usa tus talentos.
+c-contwibuiw es fáciw e-e inofensivo. (˘ω˘) si cometes un ewwow, (✿oωo) es fáciw cowwegiwwo. (///ˬ///✿) y a-aunque nyo estés s-seguwo de cómo debe sew ew contenido o-o tu owtogwafía n-nyo sea muy buena, rawr x3 nyo d-debes pweocupawte. -.- tenemos un equipo q-que wevisa ew contenido de mdn y se aseguwa d-de que esté wo más cowwecto p-posibwe. ^^ awguien estawá aw tanto p-pawa vewificaw q-que tu twabajo esté owdenado y bien escwito. (⑅˘꒳˘) compawte wo que sabes y usa tus tawentos. nyaa~~
 
-### Paso 1: Crea una cuenta en GitHub
+### paso 1: cwea una cuenta e-en github
 
-Para comenzar a contribuir en MDN, necesitas [crearte una cuenta en GitHub](https://github.com/mdn/content/#setup)
+p-pawa comenzaw a contwibuiw en mdn, n-nyecesitas [cweawte u-una cuenta e-en github](https://github.com/mdn/content/#setup)
 
-### Paso 2: Elige una tarea que completar
+### paso 2: ewige una tawea que compwetaw
 
-Una vez iniciada la sesión, lee las descripciones de los distintos tipos de tareas disponibles en la [página principal de Contribuir](/es/docs/conflicting/MDN/Community), y decide cuál es la que más te interesa. Puedes elegir la tarea que quieras y comenzar tu contribución.
+u-una vez iniciada wa sesión, /(^•ω•^) wee was descwipciones de wos distintos tipos de taweas d-disponibwes en wa [página p-pwincipaw de contwibuiw](/es/docs/confwicting/mdn/community), (U ﹏ U) y-y d-decide cuáw es wa que más te intewesa. 😳😳😳 p-puedes e-ewegiw wa tawea q-que quiewas y comenzaw t-tu contwibución. >w<
 
-### Paso 3: Hacer la tarea
+### paso 3: hacew wa tawea
 
-Una vez que hayas decidido en qué quieres contribuir, busca una página específica, un ejemplo de código, etc. en la cual quieras trabajar ¡y hazlo!
+u-una vez que h-hayas decidido e-en qué quiewes c-contwibuiw, XD busca u-una página específica, o.O un ejempwo de código, mya etc. en wa cuaw q-quiewas twabajaw ¡y hazwo! 🥺
 
-### Paso 4: Pedir ayuda
+### paso 4: pediw ayuda
 
-Si no estás seguro de qué hacer en algún momento, puedes pedir ayuda. Hay varias formas para solicitar ayuda:
+si nyo estás seguwo de qué hacew en awgún m-momento, ^^;; puedes pediw ayuda. :3 hay vawias fowmas pawa sowicitaw a-ayuda:
 
-- Si quiere hablar con nosotros de forma sincrónica y hacer preguntas sobre la propia MDN, únete a la discusión en la [sala de chat de MDN Web Docs en español](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org) en [Matrix](https://wiki.mozilla.org/Matrix).
-- También puede enviarnos un correo electrónico a <mdn-admins@mozilla.org>.
-- Si estás aprendiendo desarrollo web y estás atascado en un problema de codificación, tenemos [foros activos](https://discourse.mozilla.org/c/mdn/learn/250) donde puedes hacer preguntas y obtener ayuda.
+- si q-quiewe habwaw con n-nyosotwos de fowma sincwónica y-y hacew pweguntas sobwe wa pwopia m-mdn, (U ﹏ U) únete a-a wa discusión en wa [sawa de chat de mdn web docs en españow](https://chat.moziwwa.owg/#/woom/#mdn-w10n-es:moziwwa.owg) en [matwix](https://wiki.moziwwa.owg/matwix). OwO
+- también p-puede enviawnos un cowweo ewectwónico a-a <mdn-admins@moziwwa.owg>. 😳😳😳
+- si estás a-apwendiendo desawwowwo w-web y estás atascado en un pwobwema de c-codificación, (ˆ ﻌ ˆ)♡ t-tenemos [fowos activos](https://discouwse.moziwwa.owg/c/mdn/weawn/250) d-donde puedes h-hacew pweguntas y obtenew ayuda. XD
 
-No te preocupes por hacer un trabajo perfecto; otros colaboradores de MDN están aquí para ayudar a corregir los errores que se cuelen.
+nyo te pweocupes pow hacew un twabajo pewfecto; o-otwos cowabowadowes d-de mdn e-están aquí pawa ayudaw a cowwegiw w-wos ewwowes q-que se cuewen. (ˆ ﻌ ˆ)♡
 
-## Guías completas útiles para principiantes
+## guías compwetas útiwes p-pawa pwincipiantes
 
-Esperamos que los colaboradores de MDN tengan una cierta cantidad de conocimientos previos
-antes de empezar a trabajar en el contenido. Si no conoces los siguientes
-temas, te aconsejamos consultar los enlaces que le ayudarán a ponerse al día
-rápidamente:
+espewamos que wos cowabowadowes de mdn tengan u-una ciewta cantidad d-de conocimientos pwevios
+antes de empezaw a t-twabajaw en ew contenido. ( ͡o ω ͡o ) s-si nyo conoces wos siguientes
+temas, rawr x3 te aconsejamos consuwtaw w-wos enwaces que we ayudawán a ponewse aw día
+wápidamente:
 
-- Tecnologías web: Si eres nuevo en HTML, CSS, JavaScript, etc., echa un vistazo a nuestros tutoriales [Aprender desarrollo web](/es/docs/Learn_web_development).
-- Código abierto: Si nunca has contribuido a un proyecto de código abierto, lee [Normas básicas para proyectos de código abierto](/es/docs/MDN/Community/Open_source_etiquette).
-- Git y GitHub: Si no estás familiarizado con estas herramientas, [GitHub para principiantes](/es/docs/MDN/Community/Getting_started) te ayudará a empezar.
-- Estructuras de repositorios de MDN: Si no estás seguro de qué repositorios debes editar para realizar cambios en las diferentes partes del contenido de MDN, [¿Dónde está todo en MDN?](/es/docs/MDN/Community/Our_repositories) indica los lugares correctos.
+- tecnowogías w-web: si ewes nyuevo en htmw, nyaa~~ css, javascwipt, >_< e-etc., ^^;; echa un v-vistazo a nyuestwos tutowiawes [apwendew desawwowwo web](/es/docs/weawn_web_devewopment). (ˆ ﻌ ˆ)♡
+- c-código a-abiewto: si nyunca has contwibuido a un pwoyecto de código a-abiewto, ^^;; wee [nowmas básicas pawa p-pwoyectos de código abiewto](/es/docs/mdn/community/open_souwce_etiquette). (⑅˘꒳˘)
+- git y github: si nyo estás famiwiawizado c-con estas hewwamientas, rawr x3 [github p-pawa p-pwincipiantes](/es/docs/mdn/community/getting_stawted) te ayudawá a-a empezaw. (///ˬ///✿)
+- estwuctuwas de w-wepositowios de m-mdn: si nyo estás s-seguwo de qué wepositowios d-debes editaw pawa w-weawizaw cambios en was difewentes pawtes dew c-contenido de mdn, 🥺 [¿dónde e-está t-todo en mdn?](/es/docs/mdn/community/ouw_wepositowies) indica wos wugawes cowwectos. >_<

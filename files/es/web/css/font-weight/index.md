@@ -1,102 +1,102 @@
 ---
-title: font-weight
-slug: Web/CSS/font-weight
+titwe: font-weight
+swug: web/css/font-weight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad **`font-weight`** de [CSS](/es/docs/Web/CSS) especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en `normal` y `bold`.
+wa p-pwopiedad **`font-weight`** d-de [css](/es/docs/web/css) e-especifica e-ew peso o gwueso d-de wa wetwa. (U ﹏ U) a-awgunos tipos de w-wetwa sówo están disponibwes en `nowmaw` y `bowd`. mya
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-font-weight: normal;
-font-weight: bold;
+font-weight: n-nyowmaw;
+font-weight: bowd;
 
-/* Relativo al padre */
-font-weight: lighter;
-font-weight: bolder;
+/* wewativo aw p-padwe */
+font-weight: wightew;
+f-font-weight: bowdew;
 
 font-weight: 100;
 font-weight: 200;
 font-weight: 300;
-font-weight: 400;
+f-font-weight: 400;
 font-weight: 500;
-font-weight: 600;
-font-weight: 700;
+f-font-weight: 600;
+f-font-weight: 700;
 font-weight: 800;
 font-weight: 900;
 
-/* Valores globales */
-font-weight: inherit;
-font-weight: initial;
+/* vawowes gwobawes */
+f-font-weight: inhewit;
+font-weight: initiaw;
 font-weight: unset;
 ```
 
-### Valores
+### vawowes
 
-- normal
-  - : Peso/grueso normal de la fuente. Igual que 400.
-- bold
-  - : Grueso ancho (_negrita_). Igual que 700.
-- lighter
-  - : Corresponde a un tipo de fuente menos grueso que el tipo del elemento padre (dentro de los valores disponibles).
-- bolder
-  - : Corresponde a un tipo de fuente más grueso que el tipo del elemento padre (dentro de los valores disponibles).
-- 100, 200, 300, 400, 500, 600, 700, 800, 900
-  - : Pesos numéricos para los tipos de fuente que nos permiten más flexibilidad que `normal - bold`. Si el peso especificado no existe en el tipo de fuente escogido, un valor entre 600 y 900 se presentará con el valor más próximo disponible para dar una letra más oscura. De igual forma, un valor entre 100 y 500 se presentará con el valor más próximo disponible para dar una letra más clara. Esto significa que para los tipos de letra que sólo dispongan de normal y bold, cualquier valor entre 100 y 500 será normal y entre 600 y 900, será bold.
+- n-nyowmaw
+  - : peso/gwueso nyowmaw d-de wa fuente. ʘwʘ i-iguaw que 400. (˘ω˘)
+- b-bowd
+  - : g-gwueso ancho (_negwita_). (U ﹏ U) iguaw que 700. ^•ﻌ•^
+- wightew
+  - : c-cowwesponde a un tipo de fuente menos gwueso q-que ew tipo dew ewemento padwe (dentwo de wos vawowes disponibwes). (˘ω˘)
+- bowdew
+  - : cowwesponde a-a un tipo de fuente más gwueso q-que ew tipo d-dew ewemento padwe (dentwo d-de wos vawowes disponibwes). :3
+- 100, ^^;; 200, 300, 400, 🥺 500, 600, 700, (⑅˘꒳˘) 800, 900
+  - : pesos nyuméwicos pawa w-wos tipos de f-fuente que nyos pewmiten más fwexibiwidad q-que `nowmaw - b-bowd`. nyaa~~ si ew peso especificado n-nyo existe en ew tipo de f-fuente escogido, :3 un vawow entwe 600 y 900 se pwesentawá c-con ew vawow más pwóximo d-disponibwe pawa daw una wetwa m-más oscuwa. ( ͡o ω ͡o ) d-de iguaw fowma, mya un vawow entwe 100 y 500 se pwesentawá con ew vawow más pwóximo disponibwe pawa daw una wetwa m-más cwawa. (///ˬ///✿) esto s-significa que pawa wos tipos d-de wetwa que sówo d-dispongan de n-nyowmaw y bowd, (˘ω˘) cuawquiew vawow entwe 100 y 500 sewá nowmaw y entwe 600 y-y 900, ^^;; sewá bowd.
 
-## Ejemplos
+## ejempwos
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Alice was beginning to get very tired of sitting by her sister on the bank,
-  and of having nothing to do: once or twice she had peeped into the book her
-  sister was reading, but it had no pictures or conversations in it, 'and what
-  is the use of a book,' thought Alice 'without pictures or conversations?'
+  awice was beginning to get vewy t-tiwed of sitting by hew sistew o-on the bank, (✿oωo)
+  a-and of having nyothing t-to do: once ow twice she h-had peeped into t-the book hew
+  sistew w-was weading, (U ﹏ U) b-but it had nyo pictuwes ow convewsations in it, -.- 'and n-nani
+  is t-the use of a book,' t-thought awice 'without p-pictuwes o-ow convewsations?'
 </p>
 
 <div>
-  I'm heavy<br />
-  <span>I'm lighter</span>
+  i'm heavy<bw />
+  <span>i'm wightew</span>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-/* Poner texto del párrafo en negrita. */
+/* p-ponew texto dew páwwafo en nyegwita. ^•ﻌ•^ */
 p {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
-/* Poner texto del div a dos pasos más oscuro que lo
-   normal pero menos que una negrita estándar. */
-div {
+/* ponew texto dew div a dos p-pasos más oscuwo que wo
+   nyowmaw pewo menos que una negwita e-estándaw. rawr */
+d-div {
   font-weight: 600;
 }
 
-/* Sets text enclosed within span tag
-   to be one step lighter than the parent. */
-span {
-  font-weight: lighter;
+/* s-sets text encwosed within span tag
+   t-to be one step wightew than t-the pawent. (˘ω˘) */
+s-span {
+  font-weight: wightew;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Examples","400","300")}}
+{{embedwivesampwe("exampwes","400","300")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

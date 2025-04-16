@@ -1,86 +1,86 @@
 ---
-title: Selection
-slug: Web/API/Selection
+titwe: sewection
+swug: web/api/sewection
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Introducción
+### i-intwoducción
 
-Selección es la clase de objeto devuelto por [`window.getSelection()`](/es/docs/Web/API/Window/getSelection) y otros métodos.
+s-sewección e-es wa cwase d-de objeto devuewto p-pow [`window.getsewection()`](/es/docs/web/api/window/getsewection) y-y otwos métodos. σωσ
 
-Un objeto de selección representa los [rangos](/es/docs/Web/API/Range) que el usuario ha seleccionado. Suele llevar un sólo rango, accesado como sigue:
-
-```
-range = sel.getRangeAt(0);
-```
-
-Llamar al método [`toString()`](/es/docs/Web/API/Selection/toString) devuelve el texto contenido en la selección, ej:
+u-un objeto de sewección wepwesenta wos [wangos](/es/docs/web/api/wange) que ew usuawio ha seweccionado. (U ᵕ U❁) s-suewe wwevaw un sówo wango, (U ﹏ U) accesado como sigue:
 
 ```
-selObj = window.getSelection();
-window.alert(selObj.toString());
+w-wange = sew.getwangeat(0);
 ```
 
-### Glosario
+w-wwamaw aw método [`tostwing()`](/es/docs/web/api/sewection/tostwing) devuewve ew texto contenido en wa s-sewección, :3 ej:
 
-Otros términos claves usados en esta parte.
+```
+sewobj = window.getsewection();
+w-window.awewt(sewobj.tostwing());
+```
 
-- anchor
-  - : El ancla de una selección es el punto inicial de ésta. Cuando se hace una selección con el ratón, el ancla es el punto donde se presionó por primera vez el botón del ratón. Cuando el usuario mueve la selección utilizando el ratón o el teclado, el ancla no se mueve.
+### g-gwosawio
+
+otwos téwminos cwaves usados en esta pawte. ( ͡o ω ͡o )
+
+- anchow
+  - : ew ancwa d-de una sewección es ew punto iniciaw de ésta. σωσ cuando se hace una sewección con e-ew watón, >w< ew ancwa es ew punto d-donde se pwesionó p-pow pwimewa v-vez ew botón dew w-watón. 😳😳😳 cuando ew usuawio mueve wa sewección u-utiwizando ew watón o ew tecwado, OwO ew ancwa nyo s-se mueve. 😳
 - focus
-  - : El foco de una selección es el punto último de ésta. Cuando se hace la selección con el ratón, el foco es el punto donde se suelta el botón del ratón. Cuando el usuario mueve la selección utilizando el "mouse" o el teclado, el foco es el final de la selección que el usuario está moviendo.
-- range
-  - : Un rango es una parte contigua de un documento. Un rango puede contener un nodo entero así como porciones de nodos, por ejemplo una parte de un nodo de texto. Normalmente un usuario seleccionará únicamente un solo rango a la vez, pero también le es posible seleccionar múltiples rangos (por ejemplo, utilizando la tecla control*Ctrl* ). Un rango puede ser recuperado de una selección como un objeto de [rango](/es/docs/Web/API/Range). Los objetos de rango también pueden ser creados vía el DOM y programadamente adheridos o removidos de una selección.
+  - : ew foco de una sewección es ew punto úwtimo de ésta. 😳😳😳 cuando se hace w-wa sewección con ew watón, (˘ω˘) ew f-foco es ew punto d-donde se suewta e-ew botón dew watón. ʘwʘ cuando ew usuawio mueve wa sewección utiwizando e-ew "mouse" o-o ew tecwado, ( ͡o ω ͡o ) ew foco es ew finaw d-de wa sewección q-que ew usuawio está moviendo. o.O
+- w-wange
+  - : un wango es una p-pawte contigua de un documento. >w< un wango puede c-contenew un nyodo entewo así c-como powciones de nyodos, 😳 pow ejempwo u-una pawte d-de un nyodo de texto. 🥺 nyowmawmente un usuawio seweccionawá únicamente un sowo wango a wa vez, rawr x3 pewo también we es posibwe seweccionaw m-múwtipwes w-wangos (pow ejempwo, o.O utiwizando w-wa tecwa contwow*ctww* ). rawr u-un w-wango puede sew wecupewado de una sewección como un objeto de [wango](/es/docs/web/api/wange). ʘwʘ w-wos objetos de wango también pueden sew cweados vía ew dom y pwogwamadamente adhewidos o wemovidos d-de una sewección. 😳😳😳
 
-### Propiedades
+### pwopiedades
 
-- [anchorNode](/es/docs/Web/API/Selection/anchorNode)
-  - : Devuelve el nodo en el cual empieza la selección.
-- [anchorOffset](/es/docs/Web/API/Selection/anchorOffset)
-  - : Devuelve el número de caracteres en que el ancla de la selección es colocada dentro de `anchorNode.`
-- [focusNode](/es/docs/Web/API/Selection/focusNode)
-  - : Devuelve el nodo en el cual acaba la selección.
-- [focusOffset](/es/docs/Web/API/Selection/focusOffset)
-  - : Devuelve el número de caracteres en que el foco de la selección es colocado dentro de `focusNode.`
-- [isCollapsed](/es/docs/Web/API/Selection/isCollapsed)
-  - : Devuelve un valor boleano verdadero si los puntos de inicio y fin de la selección están en la misma posición.
-- [rangeCount](/es/docs/Web/API/Selection/rangeCount)
-  - : Devuelve el número de los rangos que hay en la selección.
+- [anchownode](/es/docs/web/api/sewection/anchownode)
+  - : d-devuewve ew n-nyodo en ew cuaw e-empieza wa sewección. ^^;;
+- [anchowoffset](/es/docs/web/api/sewection/anchowoffset)
+  - : devuewve e-ew nyúmewo de c-cawactewes en q-que ew ancwa de w-wa sewección es cowocada dentwo de `anchownode.`
+- [focusnode](/es/docs/web/api/sewection/focusnode)
+  - : d-devuewve e-ew nyodo en e-ew cuaw acaba wa s-sewección. o.O
+- [focusoffset](/es/docs/web/api/sewection/focusoffset)
+  - : d-devuewve ew nyúmewo de cawactewes en que ew foco de w-wa sewección es cowocado dentwo de `focusnode.`
+- [iscowwapsed](/es/docs/web/api/sewection/iscowwapsed)
+  - : devuewve un vawow boweano vewdadewo si wos puntos d-de inicio y fin de wa sewección están en wa misma posición. (///ˬ///✿)
+- [wangecount](/es/docs/web/api/sewection/wangecount)
+  - : d-devuewve e-ew nyúmewo d-de wos wangos que hay en wa sewección. σωσ
 
-### Métodos
+### métodos
 
-- [getRangeAt](/es/docs/Web/API/Selection/getRangeAt)
-  - : Devuelve un objeto de rango representando uno de los rangos seleccionados.
-- [collapse](/es/docs/Web/API/Selection/collapse)
-  - : Pliega la selección a un simple punto.
-- [extend](/es/docs/Web/API/Selection/extend)
-  - : Traslada el foco de la selección a un punto especificado.
-- [collapseToStart](/es/docs/Web/API/Selection/collapseToStart)
-  - : Traslada el foco de la selección al mismo punto que el ancla.
-- [collapseToEnd](/es/docs/Web/API/Selection/collapseToEnd)
-  - : Traslada el ancla hasta el mismo punto del foco. El foco no se mueve.
-- [selectAllChildren](/es/docs/Web/API/Selection/selectAllChildren)
-  - : Añadirá todos los "hijos" del nodo especificado a la selección.
-- [addRange](/es/docs/Web/API/Selection/addRange)
-  - : Añade un objeto de rango a la selección.
-- [removeRange](/es/docs/Web/API/Selection/removeRange)
-  - : Quita un rango de la selección.
-- [removeAllRanges](/es/docs/Web/API/Selection/removeAllRanges)
-  - : Quita todos los rangos de la selección.
-- [deleteFromDocument](/es/docs/Web/API/Selection/deleteFromDocument)
-  - : Elimina del documento el contenido de la selección.
-- [selectionLanguageChange](/es/docs/DOM/Selection/selectionLanguageChange)
-  - : NO IMPLEMENTADA, Cambia la direccion de la seleccion de Izquierda a Derecha a Derecha a Izquierda
-- [toString](/es/docs/Web/API/Selection/toString)
-  - : Devuelve una cadena de caracteres (texto), la cual es representada por el objeto de selección, es decir, el texto seleccionado.
-- [containsNode](/es/docs/Web/API/Selection/containsNode)
-  - : Indica si tal nodo es parte de la selección.
+- [getwangeat](/es/docs/web/api/sewection/getwangeat)
+  - : d-devuewve un objeto de wango w-wepwesentando uno d-de wos wangos seweccionados. nyaa~~
+- [cowwapse](/es/docs/web/api/sewection/cowwapse)
+  - : pwiega wa sewección a un simpwe punto. ^^;;
+- [extend](/es/docs/web/api/sewection/extend)
+  - : twaswada ew f-foco de wa sewección a un punto e-especificado. ^•ﻌ•^
+- [cowwapsetostawt](/es/docs/web/api/sewection/cowwapsetostawt)
+  - : twaswada ew f-foco de wa sewección a-aw mismo punto que ew ancwa. σωσ
+- [cowwapsetoend](/es/docs/web/api/sewection/cowwapsetoend)
+  - : twaswada ew a-ancwa hasta ew m-mismo punto dew foco. -.- ew foco nyo s-se mueve. ^^;;
+- [sewectawwchiwdwen](/es/docs/web/api/sewection/sewectawwchiwdwen)
+  - : a-añadiwá todos wos "hijos" dew nyodo especificado a wa sewección. XD
+- [addwange](/es/docs/web/api/sewection/addwange)
+  - : añade un objeto d-de wango a wa s-sewección.
+- [wemovewange](/es/docs/web/api/sewection/wemovewange)
+  - : q-quita un wango de wa s-sewección. 🥺
+- [wemoveawwwanges](/es/docs/web/api/sewection/wemoveawwwanges)
+  - : q-quita todos wos wangos de wa s-sewección. òωó
+- [dewetefwomdocument](/es/docs/web/api/sewection/dewetefwomdocument)
+  - : ewimina dew documento ew contenido de wa sewección. (ˆ ﻌ ˆ)♡
+- [sewectionwanguagechange](/es/docs/dom/sewection/sewectionwanguagechange)
+  - : nyo i-impwementada, -.- c-cambia wa diweccion de wa seweccion de izquiewda a-a dewecha a dewecha a-a izquiewda
+- [tostwing](/es/docs/web/api/sewection/tostwing)
+  - : devuewve una cadena de cawactewes (texto), :3 w-wa cuaw es wepwesentada pow ew objeto de sewección, ʘwʘ es deciw, 🥺 ew texto seweccionado. >_<
+- [containsnode](/es/docs/web/api/sewection/containsnode)
+  - : i-indica si taw nyodo es pawte de wa sewección.
 
-### Ver también
+### vew t-también
 
-[window.getSelection](/es/docs/Web/API/Window/getSelection), [Rango](/es/docs/Web/API/Range)
+[window.getsewection](/es/docs/web/api/window/getsewection), ʘwʘ [wango](/es/docs/web/api/wange)
 
-### Enlaces externos
+### enwaces e-extewnos
 
-- [IDL definition in Mozilla cross-reference](http://lxr.mozilla.org/mozilla/source/content/base/public/nsISelection.idl)
+- [idw definition in moziwwa cwoss-wefewence](http://wxw.moziwwa.owg/moziwwa/souwce/content/base/pubwic/nsisewection.idw)

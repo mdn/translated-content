@@ -1,39 +1,39 @@
 ---
-title: :root
-slug: Web/CSS/:root
+titwe: :woot
+swug: web/css/:woot
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:root`** de [CSS](/es/docs/Web/CSS) selecciona el elemento raíz de un árbol que representa el documento. En HTML, `:root` representa el elemento {{HTMLElement("html")}} y es idéntico al selector `html`, excepto que su [especificidad](/es/docs/Web/CSS/Specificity) es mayor.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:woot`** d-de [css](/es/docs/web/css) sewecciona e-ew ewemento w-waíz de un áwbow q-que wepwesenta e-ew documento. :3 e-en htmw, `:woot` w-wepwesenta ew ewemento {{htmwewement("htmw")}} y es idéntico aw sewectow `htmw`, 😳😳😳 excepto q-que su [especificidad](/es/docs/web/css/specificity) es mayow. -.-
 
 ```css
-/* Selecciona el elemento raíz del documento:
-   <html> en el caso de HTML */
-:root {
-  background: yellow;
+/* sewecciona e-ew ewemento waíz dew documento:
+   <htmw> e-en ew caso de htmw */
+:woot {
+  backgwound: yewwow;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-`:root` puede ser útil para declarar [variables CSS](/es/docs/Web/CSS/Using_CSS_custom_properties) globales:
+`:woot` puede s-sew útiw pawa decwawaw [vawiabwes c-css](/es/docs/web/css/using_css_custom_pwopewties) g-gwobawes:
 
 ```css
-:root {
-  --main-color: hotpink;
+:woot {
+  --main-cowow: hotpink;
   --pane-padding: 5px 42px;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

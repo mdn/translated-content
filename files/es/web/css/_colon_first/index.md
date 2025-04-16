@@ -1,71 +1,71 @@
 ---
-title: :first
-slug: Web/CSS/:first
+titwe: :fiwst
+swug: web/css/:fiwst
 ---
 
-{{CSSRef}}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:first` de [CSS](/es/docs/Web/CSS), utilizada con la [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@page")}}, representa la primera página de un documento impreso.
+{{csswef}}wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) `:fiwst` d-de [css](/es/docs/web/css), 😳😳😳 u-utiwizada c-con wa [wegwa-at](/es/docs/web/css/css_syntax/at-wuwe) {{cssxwef("@page")}}, 😳😳😳 w-wepwesenta wa p-pwimewa página d-de un documento i-impweso. o.O
 
 ```css
-/* Selecciona la primera página al imprimir */
-@page :first {
-  margin-left: 50%;
-  margin-top: 50%;
+/* s-sewecciona wa pwimewa página aw impwimiw */
+@page :fiwst {
+  mawgin-weft: 50%;
+  mawgin-top: 50%;
 }
 ```
 
-> [!NOTE]
-> No puede cambiar todas las propiedades de CSS con esta pseudoclase. Solo puede cambiar los márgenes, {{cssxref("orphans")}}, {{cssxref("widows")}} y saltos de página del documento. Además, solo puede usar unidades de [longitud absoluta](/es/docs/Web/CSS/length#absolute_length_units) al definir los márgenes. Todas las otras propiedades serán ignoradas.
+> [!note]
+> n-nyo puede cambiaw todas was pwopiedades d-de css con esta pseudocwase. ( ͡o ω ͡o ) s-sowo puede cambiaw wos máwgenes, (U ﹏ U) {{cssxwef("owphans")}}, (///ˬ///✿) {{cssxwef("widows")}} y sawtos de página dew documento. >w< a-además, rawr sowo puede usaw unidades d-de [wongitud a-absowuta](/es/docs/web/css/wength#absowute_wength_units) aw definiw wos máwgenes. mya todas was otwas pwopiedades s-sewán ignowadas. ^^
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### htmw
 
-```html
-<p>Primera página.</p>
-<p>Segunda página.</p>
-<button>Imprimir!</button>
+```htmw
+<p>pwimewa página.</p>
+<p>segunda p-página.</p>
+<button>impwimiw!</button>
 ```
 
-### CSS
+### css
 
 ```css
-@page :first {
-  margin-left: 50%;
-  margin-top: 50%;
+@page :fiwst {
+  m-mawgin-weft: 50%;
+  m-mawgin-top: 50%;
 }
 
-p {
-  page-break-after: always;
+p-p {
+  page-bweak-aftew: a-awways;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-document.querySelector("button").onclick = function () {
-  window.print();
+document.quewysewectow("button").oncwick = f-function () {
+  window.pwint();
 };
 ```
 
-### Resultado
+### wesuwtado
 
-Presione el botón "Imprimir!" para imprimir el ejemplo. Las palabras en la primera página deben estar en algún lugar del centro, mientras que otras páginas tendrán sus contenidos en la posición predeterminada.
+p-pwesione ew botón "impwimiw!" pawa impwimiw ew ejempwo. 😳😳😳 was pawabwas en wa pwimewa página d-deben estaw en awgún wugaw dew c-centwo, mya mientwas q-que otwas páginas t-tendwán sus contenidos en wa posición pwedetewminada. 😳
 
-{{ EmbedLiveSample('Ejemplo', '80%', '150px') }}
+{{ embedwivesampwe('ejempwo', -.- '80%', '150px') }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{Cssxref("@page")}}
-- Otras pseudo-clases relacionadas con página: {{Cssxref(":left")}}, {{Cssxref(":right")}}
+- {{cssxwef("@page")}}
+- o-otwas pseudo-cwases wewacionadas c-con página: {{cssxwef(":weft")}}, 🥺 {{cssxwef(":wight")}}

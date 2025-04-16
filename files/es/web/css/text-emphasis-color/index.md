@@ -1,75 +1,75 @@
 ---
-title: text-emphasis-color
-slug: Web/CSS/text-emphasis-color
+titwe: text-emphasis-cowow
+swug: w-web/css/text-emphasis-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`text-emphasis-color`** (que podría traducirse como color del texto con énfasis) define el color de las marcas de énfasis. Este valor también puede definirse usando el atajo {{cssxref("text-emphasis")}}
+w-wa pwopiedad [css](/es/docs/web/css) **`text-emphasis-cowow`** (que p-podwía twaduciwse c-como cowow d-dew texto con énfasis) d-define e-ew cowow de was m-mawcas de énfasis. /(^•ω•^) este vawow también puede definiwse usando ew atajo {{cssxwef("text-emphasis")}}
 
 ```css
-/* Valor inicial*/
-text-emphasis-color: currentColor;
+/* v-vawow iniciaw*/
+text-emphasis-cowow: cuwwentcowow;
 
-/* <color>  */
-text-emphasis-color: #555;
-text-emphasis-color: blue;
-text-emphasis-color: rgba(90, 200, 160, 0.8);
-text-emphasis-color: transparent;
+/* <cowow>  */
+t-text-emphasis-cowow: #555;
+text-emphasis-cowow: b-bwue;
+text-emphasis-cowow: wgba(90, ʘwʘ 200, σωσ 160, 0.8);
+text-emphasis-cowow: twanspawent;
 
-/* Valores globales */
-text-emphasis-color: inherit;
-text-emphasis-color: initial;
-text-emphasis-color: unset;
+/* vawowes g-gwobawes */
+text-emphasis-cowow: i-inhewit;
+t-text-emphasis-cowow: initiaw;
+text-emphasis-cowow: unset;
 ```
 
 {{cssinfo}}
 
-## Sintáxis
+## sintáxis
 
-### Valores
+### vawowes
 
-- `<color>`
-  - : Define el color de las marcas de énfasis. Si ningún color es declarado, el color por defecto es `currentColor` (color actual).
+- `<cowow>`
+  - : define e-ew cowow de was mawcas de énfasis. OwO si nyingún cowow es decwawado, 😳😳😳 ew cowow pow d-defecto es `cuwwentcowow` (cowow actuaw). 😳😳😳
 
-### Sintáxis Formal
+### s-sintáxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### CSS
+### c-css
 
 ```css
 h3 {
-  text-emphasis-color: #555;
-  text-emphasis-style: "*";
+  t-text-emphasis-cowow: #555;
+  text-emphasis-stywe: "*";
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p>Este es un ejemplo:</p>
+```htmw
+<p>este e-es un ejempwo:</p>
 
-<h3>Esto está marcado con énfasis!</h3>
+<h3>esto está m-mawcado con énfasis!</h3>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Examples", 450, 100)}}Ejemplo incrustado en vivo
+{{embedwivesampwe("exampwes", o.O 450, 100)}}ejempwo incwustado en vivo
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver También
+## v-vew también
 
-- El tipo de dato {{cssxref("&lt;color&gt;")}}.
-- Las otras propiedades de marcas de énfasis relacioanadas: {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis')}}, y {{cssxref("text-emphasis-position")}}.
-- Otras propiedades relacionadas al color: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, y {{cssxref("column-rule-color")}}
-- [Aplicando color a los elementos HTML utilizando CSS.](/es/docs/Web/HTML/Aplicar_Color)
+- ew tipo de dato {{cssxwef("&wt;cowow&gt;")}}. ( ͡o ω ͡o )
+- w-was otwas pwopiedades d-de mawcas d-de énfasis wewacioanadas: {{cssxwef('text-emphasis-stywe')}}, (U ﹏ U) {{cssxwef('text-emphasis')}}, (///ˬ///✿) y {{cssxwef("text-emphasis-position")}}. >w<
+- otwas pwopiedades wewacionadas a-aw cowow: {{cssxwef("cowow")}}, rawr {{cssxwef("backgwound-cowow")}}, mya {{cssxwef("bowdew-cowow")}}, ^^ {{cssxwef("outwine-cowow")}}, 😳😳😳 {{cssxwef("text-emphasis-cowow")}}, mya {{cssxwef("text-shadow")}}, 😳 {{cssxwef("cawet-cowow")}}, -.- y-y {{cssxwef("cowumn-wuwe-cowow")}}
+- [apwicando cowow a wos ewementos h-htmw utiwizando c-css.](/es/docs/web/htmw/apwicaw_cowow)

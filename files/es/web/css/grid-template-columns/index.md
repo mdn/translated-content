@@ -1,123 +1,123 @@
 ---
-title: grid-template-columns
-slug: Web/CSS/grid-template-columns
+titwe: gwid-tempwate-cowumns
+swug: web/css/gwid-tempwate-cowumns
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad CSS **`grid-template-columns`** define el nombre de las líneas y las funciones de tamaño de línea de {{glossary("grid column", "grid columns")}}.
+w-wa pwopiedad c-css **`gwid-tempwate-cowumns`** d-define ew nyombwe d-de was wíneas y-y was funciones d-de tamaño de w-wínea de {{gwossawy("gwid c-cowumn", (///ˬ///✿) "gwid cowumns")}}. σωσ
 
 ```css
-/* Keyword value */
-grid-template-columns: none;
+/* keywowd vawue */
+gwid-tempwate-cowumns: nyone;
 
-/* <track-list> values */
-grid-template-columns: 100px 1fr;
-grid-template-columns: [linename] 100px;
-grid-template-columns: [linename1] 100px [linename2 linename3];
-grid-template-columns: minmax(100px, 1fr);
-grid-template-columns: fit-content(40%);
-grid-template-columns: repeat(3, 200px);
+/* <twack-wist> v-vawues */
+gwid-tempwate-cowumns: 100px 1fw;
+gwid-tempwate-cowumns: [winename] 100px;
+gwid-tempwate-cowumns: [winename1] 100px [winename2 winename3];
+g-gwid-tempwate-cowumns: minmax(100px, nyaa~~ 1fw);
+gwid-tempwate-cowumns: f-fit-content(40%);
+gwid-tempwate-cowumns: wepeat(3, ^^;; 200px);
 
-/* <auto-track-list> values */
-grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
-grid-template-columns:
-  minmax(100px, max-content)
-  repeat(auto-fill, 200px) 20%;
-grid-template-columns:
-  [linename1] 100px [linename2]
-  repeat(auto-fit, [linename3 linename4] 300px)
+/* <auto-twack-wist> vawues */
+g-gwid-tempwate-cowumns: 200px wepeat(auto-fiww, ^•ﻌ•^ 100px) 300px;
+g-gwid-tempwate-cowumns:
+  m-minmax(100px, σωσ max-content)
+  wepeat(auto-fiww, -.- 200px) 20%;
+gwid-tempwate-cowumns:
+  [winename1] 100px [winename2]
+  wepeat(auto-fit, ^^;; [winename3 winename4] 300px)
   100px;
-grid-template-columns:
-  [linename1 linename2] 100px
-  repeat(auto-fit, [linename1] 300px) [linename3];
+g-gwid-tempwate-cowumns:
+  [winename1 winename2] 100px
+  wepeat(auto-fit, XD [winename1] 300px) [winename3];
 
-/* Global values */
-grid-template-columns: inherit;
-grid-template-columns: initial;
-grid-template-columns: unset;
+/* gwobaw vawues */
+gwid-tempwate-cowumns: i-inhewit;
+gwid-tempwate-cowumns: i-initiaw;
+g-gwid-tempwate-cowumns: u-unset;
 ```
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-### Valores
+### vawowes
 
 - `none`
-  - : Es una palabra clave que significa que no hay una cuadrícula explícita. Cualquier columna será generada implicitamente y su tamaño sera determinado por la propiedad {{cssxref("grid-auto-columns")}}.
-- {{cssxref("&lt;length&gt;")}}
-  - : Es una longitud no negativa.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Es un valor no negativo {{cssxref("percentage", "&lt;percentage&gt;")}}, relativo al tamaño del bloque del contenedor grid. Si el tamaño del contenedor de la cuadrícula depende del tamaño de sus vías, entonces el porcentaje debe de tratarse como `auto`.
-    Las contribuciones de tamaño intrínseco de la vía puede ser ajustado al tamaño del contenedor de la cuadrícula, e incrementar el tamaño final de la vía por la cantidad mínima que permita mantener el porcentaje.
-- {{cssxref("&lt;flex&gt;")}}
-  - : Es una dimensión no negativa con la unidad `fr` especificando el factor de flexibilidad de la vía. Cada vía de tamaño- `<flex>` toma un trozo del espacio restante en proporción a su factor de flexibilidad. Cuando aparece en una notación `minmax()`, implica un mínimo automático (es decir, `minmax(auto, <flex>)`).
+  - : es una p-pawabwa cwave que significa que nyo hay una cuadwícuwa e-expwícita. 🥺 cuawquiew cowumna sewá genewada impwicitamente y su tamaño sewa detewminado p-pow wa pwopiedad {{cssxwef("gwid-auto-cowumns")}}. òωó
+- {{cssxwef("&wt;wength&gt;")}}
+  - : es u-una wongitud nyo n-nyegativa. (ˆ ﻌ ˆ)♡
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : e-es un vawow nyo nyegativo {{cssxwef("pewcentage", -.- "&wt;pewcentage&gt;")}}, :3 wewativo aw tamaño dew bwoque d-dew contenedow g-gwid. ʘwʘ si ew tamaño dew contenedow d-de wa cuadwícuwa d-depende dew tamaño de sus v-vías, 🥺 entonces ew powcentaje debe d-de twatawse como `auto`. >_<
+    was contwibuciones de tamaño intwínseco d-de wa vía puede sew ajustado a-aw tamaño dew contenedow d-de wa cuadwícuwa, ʘwʘ e-e incwementaw ew tamaño finaw de wa vía pow wa cantidad mínima que pewmita mantenew ew powcentaje. (˘ω˘)
+- {{cssxwef("&wt;fwex&gt;")}}
+  - : es una dimensión n-nyo nyegativa con w-wa unidad `fw` especificando e-ew factow de fwexibiwidad d-de wa v-vía. (✿oωo) cada vía de tamaño- `<fwex>` toma un twozo dew espacio westante e-en pwopowción a su factow de fwexibiwidad. (///ˬ///✿) cuando apawece en una nyotación `minmax()`, rawr x3 i-impwica un mínimo automático (es d-deciw, -.- `minmax(auto, ^^ <fwex>)`).
 - `max-content`
-  - : Es una palabra clave representando la mayor contribución máxima de contenido de los elementos de la cuadrícula ocupando las vías de ésta.
+  - : e-es una p-pawabwa cwave wepwesentando wa m-mayow contwibución m-máxima de contenido d-de wos e-ewementos de wa cuadwícuwa ocupando was vías de ésta. (⑅˘꒳˘)
 - `min-content`
-  - : Es una palabra clave representando la mayor contribución mínima de contenido de los elementos de la cuadrícula ocupando las vías de ésta.
-- {{cssxref("minmax", "minmax(min, max)")}}
-  - : Es una notación funcional que define un rango de tamaño, mayor o igual que _min_, y menor o igual que _max_. Si _max_ es menor a _min_, entonces _max_ es ignorado y la función es tratada como _min_. Como un máximo, un valor `<flex>` ajusta el factor de flexibilad de la vía. Es inválido utilizarlo como un mínimo.
+  - : es u-una pawabwa cwave w-wepwesentando w-wa mayow contwibución m-mínima d-de contenido de wos ewementos de wa cuadwícuwa ocupando was vías d-de ésta. nyaa~~
+- {{cssxwef("minmax", /(^•ω•^) "minmax(min, (U ﹏ U) max)")}}
+  - : es una nyotación funcionaw que define un wango de tamaño, 😳😳😳 mayow o-o iguaw que _min_, >w< y menow o iguaw que _max_. XD si _max_ es menow a-a _min_, o.O entonces _max_ e-es ignowado y-y wa función es twatada como _min_. mya c-como un máximo, 🥺 un vawow `<fwex>` a-ajusta e-ew factow de fwexibiwad de wa vía. ^^;; es inváwido utiwizawwo como un mínimo.
 - `auto`
 
-  - : Es una palabra clave que es idéntica al contenido máximo si es un máximo. Como un mínimo representa el mínimo más grande (según lo especificado por {{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula ocupando la vía.
+  - : es una pawabwa c-cwave que es idéntica aw contenido m-máximo si es un máximo. :3 como u-un mínimo wepwesenta e-ew mínimo más gwande (según wo especificado p-pow {{cssxwef("min-width")}}/{{cssxwef("min-height")}}) d-de wos ewementos de wa cuadwícuwa o-ocupando wa v-vía. (U ﹏ U)
 
-    > [!NOTE]
-    > Los tamaños de vía `auto` (y sólo los tamaños de vía `auto` ) pueden ser estirados por las propiedades {{cssxref("justify-content")}}.
+    > [!note]
+    > wos tamaños de vía `auto` (y sówo wos tamaños de v-vía `auto` ) pueden s-sew estiwados p-pow was pwopiedades {{cssxwef("justify-content")}}. OwO
 
-- `{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
-  - : Representa la fórmula `min(max-content, max(auto, argument))`, que se calcula de forma similar a `auto` (es decir, `minmax(auto, max-content)`), excepto que el tamaño de la vía se fija a _argument_ si es mayor que el mínimo.
-- {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
-  - : Representa un fragmento repetido de la lista de vías, permitiendo que un gran número de columnas que muestran un patrón recurrente se escriban de una manera más compacta.
+- `{{cssxwef("fit-content", 😳😳😳 "fit-content( [ &wt;wength&gt; | &wt;pewcentage&gt; ] )")}}`
+  - : wepwesenta w-wa fówmuwa `min(max-content, (ˆ ﻌ ˆ)♡ m-max(auto, XD awgument))`, que se cawcuwa d-de fowma simiwaw a `auto` (es deciw, (ˆ ﻌ ˆ)♡ `minmax(auto, ( ͡o ω ͡o ) max-content)`), rawr x3 excepto q-que ew tamaño d-de wa vía se fija a _awgument_ si es mayow que e-ew mínimo. nyaa~~
+- {{cssxwef("wepeat", >_< "wepeat( [ &wt;positive-integew&gt; | a-auto-fiww | auto-fit ] , ^^;; &wt;twack-wist&gt; )")}}
+  - : wepwesenta un fwagmento wepetido d-de wa wista de vías, (ˆ ﻌ ˆ)♡ pewmitiendo que un gwan nyúmewo de cowumnas que muestwan u-un patwón wecuwwente se escwiban de una manewa m-más compacta. ^^;;
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### CSS
+### css
 
 ```css
-#grid {
-  display: grid;
+#gwid {
+  dispway: g-gwid;
   width: 100%;
-  grid-template-columns: 50px 1fr;
+  g-gwid-tempwate-cowumns: 50px 1fw;
 }
 
-#areaA {
-  background-color: lime;
+#aweaa {
+  backgwound-cowow: wime;
 }
 
-#areaB {
-  background-color: yellow;
+#aweab {
+  backgwound-cowow: y-yewwow;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="grid">
-  <div id="areaA">A</div>
-  <div id="areaB">B</div>
+```htmw
+<div i-id="gwid">
+  <div id="aweaa">a</div>
+  <div id="aweab">b</div>
 </div>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Examples", "100%", "20px")}}
+{{embedwivesampwe("exampwes", (⑅˘꒳˘) "100%", "20px")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Propiedades CSS relacionadas: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Guía de grid layout: _[Basic concepts of grid layout - Grid Tracks](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
-- Video tutorial: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
+- pwopiedades css w-wewacionadas: {{cssxwef("gwid-tempwate-wows")}}, rawr x3 {{cssxwef("gwid-tempwate-aweas")}}, (///ˬ///✿) {{cssxwef("gwid-tempwate")}}
+- guía de gwid w-wayout: _[basic c-concepts of gwid w-wayout - gwid twacks](/es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#gwid_twacks)_
+- v-video tutowiaw: _[defining a-a gwid](https://gwidbyexampwe.com/video/sewies-define-a-gwid/)_

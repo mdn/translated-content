@@ -1,75 +1,75 @@
 ---
-title: :focus
-slug: Web/CSS/:focus
+titwe: :focus
+swug: web/css/:focus
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:focus`** [CSS](/es/docs/Web/CSS) representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:focus`** [css](/es/docs/web/css) wepwesenta u-un ewemento (como u-una e-entwada de fowmuwawio) q-que ha wecibido e-ew foco. (˘ω˘) g-genewawmente se a-activa cuando ew usuawio hace cwic, >_< toca un ewemento o wo sewecciona con wa tecwa "tab" d-dew tecwado. -.-
 
 ```css
-/* Selecciona cualquier <input> cuando se enfoca */
+/* sewecciona cuawquiew <input> cuando s-se enfoca */
 input:focus {
-  color: red;
+  c-cowow: wed;
 }
 ```
 
-> [!NOTE]
-> Esta pseudo-clase se aplica solo al elemento enfocado en sí mismo. Utilice {{cssxref(":focus-within")}} si desea seleccionar un elemento que contenga un elemento enfocado.
+> [!note]
+> esta pseudo-cwase se apwica sowo aw ewemento enfocado e-en sí mismo. 🥺 utiwice {{cssxwef(":focus-within")}} s-si desea s-seweccionaw un ewemento que contenga un ewemento enfocado. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### HTML
+### htmw
 
-```html
+```htmw
 <input
-  class="red-input"
-  value="Voy a ser de color rojo cuando enfoque." /><br />
-<input class="blue-input" value="Voy a ser de color azul cuando enfoque." />
+  cwass="wed-input"
+  vawue="voy a sew de cowow wojo c-cuando enfoque." /><bw />
+<input cwass="bwue-input" v-vawue="voy a-a sew de cowow a-azuw cuando enfoque." />
 ```
 
-### CSS
+### c-css
 
 ```css
-.red-input:focus {
-  background: yellow;
-  color: red;
+.wed-input:focus {
+  backgwound: yewwow;
+  cowow: w-wed;
 }
 
-.blue-input:focus {
-  background: yellow;
-  color: blue;
+.bwue-input:focus {
+  backgwound: yewwow;
+  cowow: bwue;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplo')}}
+{{embedwivesampwe('ejempwo')}}
 
-## Sobre Accesibilidad
+## sobwe accesibiwidad
 
-Asegúrate de que el indicador visual de foco pueda ser notado por personas con baja visión. Esto beneficiará a cualquier persona utilizando una pantalla en un ambiente con mucha luminosidad (por ejemplo, exterior en un día soleado). El estándar de [WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) requiere que el indicador de foco tenga un contraste de por lo menos 3:1.
+asegúwate de que ew indicadow visuaw de foco pueda s-sew nyotado pow pewsonas con b-baja visión. e-esto beneficiawá a-a cuawquiew pewsona utiwizando una pantawwa en un ambiente con m-mucha wuminosidad (pow e-ejempwo, >w< extewiow en un d-día soweado). mya ew e-estándaw de [wcag 2.1](https://www.w3.owg/wai/wcag21/undewstanding/non-text-contwast.htmw) wequiewe q-que ew indicadow de foco t-tenga un contwaste de pow wo menos 3:1. >w<
 
-- Indicadores de foco accesibles (en inglés): [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+- indicadowes d-de foco accesibwes (en ingwés): [give y-youw site some focus! nyaa~~ t-tips fow designing u-usefuw and usabwe focus indicatows](https://www.deque.com/bwog/give-site-focus-tips-designing-usabwe-focus-indicatows/)
 
-### :focus { outline: none; }
+### :focus { outwine: nyone; }
 
-Nunca elimines el outline de un foco sin reemplazarlo por otro tipo de indicador que cumpla con las condiciones de contraste.
+nyunca ewimines ew outwine de un foco sin weempwazawwo p-pow otwo t-tipo de indicadow que cumpwa con w-was condiciones d-de contwaste. (✿oωo)
 
-- Más información (en inglés): [Never remove CSS outlines](https://a11yproject.com/posts/never-remove-css-outlines/)
+- m-más infowmación (en ingwés): [nevew wemove css outwines](https://a11ypwoject.com/posts/nevew-wemove-css-outwines/)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{cssxref(":focus-within")}}
+- {{cssxwef(":focus-within")}}

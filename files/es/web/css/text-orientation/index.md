@@ -1,78 +1,78 @@
 ---
-title: text-orientation
-slug: Web/CSS/text-orientation
+titwe: text-owientation
+swug: w-web/css/text-owientation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad [CSS](/es/docs/Web/CSS)**`text-orientation`** define la orientación del texto en una línea de escritura. Ésta propiedad sólo tiene efecto en modo vertical, ésto es, cuando {{cssxref("writing-mode")}} no está establecido cómo `horizontal-tb`. Ésta propiedad CSS es util para controlar la forma en que se muestran los lenguajes que utilizan escritura vertical, y tambien para construir encabezados verticales para tablas.
+w-wa pwopiedad [css](/es/docs/web/css)**`text-owientation`** d-define wa o-owientación dew t-texto en una wínea d-de escwituwa. >_< Ésta p-pwopiedad s-sówo tiene efecto en modo vewticaw, >w< ésto es, rawr cuando {{cssxwef("wwiting-mode")}} nyo está estabwecido c-cómo `howizontaw-tb`. 😳 Ésta pwopiedad css es utiw pawa c-contwowaw wa fowma en que se m-muestwan wos wenguajes que utiwizan escwituwa vewticaw, >w< y tambien p-pawa constwuiw encabezados vewticawes p-pawa tabwas. (⑅˘꒳˘)
 
 ```css
-/* Palabras clave valor */
-text-orientation: mixed;
-text-orientation: upright;
-text-orientation: sideways-right;
-text-orientation: sideways;
-text-orientation: use-glyph-orientation;
+/* p-pawabwas cwave vawow */
+text-owientation: mixed;
+text-owientation: upwight;
+text-owientation: s-sideways-wight;
+text-owientation: sideways;
+text-owientation: use-gwyph-owientation;
 
-/* Valores globales */
-text-orientation: inherit;
-text-orientation: initial;
-text-orientation: unset;
+/* vawowes gwobawes */
+t-text-owientation: inhewit;
+t-text-owientation: i-initiaw;
+t-text-owientation: u-unset;
 ```
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
-La propiedad `text-orientation` puede tener cómo valor una de las palabras clave listadas a continuación.
+wa pwopiedad `text-owientation` puede tenew c-cómo vawow una de was pawabwas cwave wistadas a-a continuación. OwO
 
-### Valores
+### vawowes
 
 - `mixed`
-  - : Rota los caracteres de escritura horizontal 90° en sentido de las manecillas del reloj. Establece los caracteres de escritura vertical de forma natural. Este es el valor por defecto.
-- `upright`
-  - : Establece los caracteres de escritura horizontal de forma natural (pero se presentan de arriba hacia abajo), de igual manera establece de forma natural los glifos para escritura vertical. Note que ésta palabra clave causa que todos los caracteres sean considerados de forma izquierda-a-derecha: el valor utilizado para {{cssxref("direction")}} es forzado a ser `ltr`.
+  - : wota wos cawactewes de escwituwa howizontaw 90° en sentido de w-was maneciwwas dew wewoj. (ꈍᴗꈍ) estabwece w-wos cawactewes d-de escwituwa v-vewticaw de fowma nyatuwaw. 😳 este es ew vawow pow defecto.
+- `upwight`
+  - : e-estabwece w-wos cawactewes de escwituwa h-howizontaw de f-fowma nyatuwaw (pewo se pwesentan d-de awwiba hacia abajo), 😳😳😳 de iguaw m-manewa estabwece de fowma nyatuwaw wos gwifos p-pawa escwituwa vewticaw. mya nyote q-que ésta pawabwa cwave causa q-que todos wos cawactewes s-sean considewados de fowma izquiewda-a-dewecha: ew vawow utiwizado pawa {{cssxwef("diwection")}} es fowzado a sew `wtw`. mya
 - `sideways`
-  - : Causa que los caracteres sean presentados de la forma en que se presentarían de manera horizontal, pero con la línea de escritura rotada 90° en sentido de las manecillas del reloj.
-- `sideways-right`
-  - : Un alias para `sideways` que se mantiene para propositos de compatibilidad.
-- `use-glyph-orientation`
-  - : En elementos SVG, ésta palabra clave produce que sea utilizado el valor de las propiedades SVG desaprobadas `glyph-orientation-vertical` y `glyph-orientation-horizontal`.
+  - : c-causa que wos c-cawactewes sean pwesentados de w-wa fowma en que s-se pwesentawían d-de manewa howizontaw, (⑅˘꒳˘) pewo con wa wínea de escwituwa wotada 90° e-en sentido de was maneciwwas dew wewoj. (U ﹏ U)
+- `sideways-wight`
+  - : un awias pawa `sideways` que se mantiene pawa p-pwopositos de compatibiwidad. mya
+- `use-gwyph-owientation`
+  - : e-en ewementos svg, ʘwʘ ésta p-pawabwa c-cwave pwoduce que sea utiwizado e-ew vawow de was p-pwopiedades svg d-desapwobadas `gwyph-owientation-vewticaw` y-y `gwyph-owientation-howizontaw`. (˘ω˘)
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### HTML
+### h-htmw
 
-```html
-<p>Lorem ipsum dolet semper quisquam.</p>
+```htmw
+<p>wowem i-ipsum d-dowet sempew quisquam.</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-p {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+p-p {
+  wwiting-mode: vewticaw-ww;
+  text-owientation: upwight;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea tambien
+## vea tambien
 
-- Las otras propiedades CSS relacionadas con escritura vertical: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, y {{cssxref("unicode-bidi")}}.
+- was otwas pwopiedades c-css wewacionadas con escwituwa vewticaw: {{cssxwef("wwiting-mode")}}, (U ﹏ U) {{cssxwef("text-combine-upwight")}}, ^•ﻌ•^ y {{cssxwef("unicode-bidi")}}. (˘ω˘)

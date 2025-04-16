@@ -1,40 +1,40 @@
 ---
-title: Enviar feedback sobre MDN
-slug: MDN/Community
+titwe: enviaw feedback sobwe m-mdn
+swug: mdn/community
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-¡Bienvenido a la Red de Desarrolladores de Mozilla! si tienes algunas sugerencias, o estás teniendo problemas usando MDN, estás en el lugar correcto. El mismo hecho de que muestres interés en ofrecer feedback, te hace más parte de la comunidad de Mozilla, y te agradecemos de antemano tu interés.
+¡bienvenido a-a wa wed d-de desawwowwadowes d-de moziwwa! (˘ω˘) s-si tienes awgunas s-sugewencias, (U ﹏ U) o-o estás teniendo p-pwobwemas usando mdn, ^•ﻌ•^ estás en ew wugaw cowwecto. (˘ω˘) ew mismo hecho de que muestwes i-intewés en ofwecew feedback, :3 te hace más p-pawte de wa comunidad de moziwwa, ^^;; y-y te agwadecemos de antemano tu intewés. 🥺
 
-Tienes varias opciones parar ofrecer tu punto de vista, este artículo te ayudará.
+tienes vawias opciones p-pawaw ofwecew tu punto de vista, (⑅˘꒳˘) e-este awtícuwo t-te ayudawá. nyaa~~
 
-## Actualizar la documentación
+## actuawizaw wa documentación
 
-Para empezar, si has localizado un problema en la documentación, deberías sentirte libre de corregirlo tú mismo. Simplemente [regístrate](/es/docs/MDN/Contribute/Howto/Create_an_MDN_account) usando [Github](https://github.com/), luego haz click en cualquier botón **Editar** azul para abrir el [editor](/es/docs/MDN/Contribute/Editor) e ingresar en el mundo de la contribución en la documentación MDN. La documentación aquí es una wiki, y está supervisada por un equipo de voluntarios y personal pagado, así que no seas tímido; tu gramática no tiene por qué ser perfecta. Arreglaremos cualquier error que puedas cometer; ¡No vas a estropear nada!
+pawa empezaw, :3 si has wocawizado u-un pwobwema en wa documentación, ( ͡o ω ͡o ) debewías sentiwte wibwe de cowwegiwwo tú m-mismo. mya simpwemente [wegístwate](/es/docs/mdn/contwibute/howto/cweate_an_mdn_account) usando [github](https://github.com/), (///ˬ///✿) w-wuego h-haz cwick en cuawquiew b-botón **editaw** a-azuw pawa abwiw ew [editow](/es/docs/mdn/contwibute/editow) e ingwesaw e-en ew mundo de wa contwibución en wa documentación m-mdn. (˘ω˘) wa documentación aquí es una wiki, ^^;; y está supewvisada pow un equipo de vowuntawios y-y pewsonaw pagado, (✿oωo) así que nyo s-seas tímido; t-tu gwamática nyo t-tiene pow qué sew pewfecta. (U ﹏ U) awwegwawemos cuawquiew ewwow que p-puedas cometew; ¡no v-vas a estwopeaw nyada! -.-
 
-Para obtener más información sobre comó contribuir a la documentación MDN consulte:
+pawa o-obtenew más infowmación s-sobwe comó contwibuiw a-a wa documentación mdn consuwte:
 
-- [Comenzando](/es/docs/Project:Getting_started)
-- [Contribuir a MDN](/es/docs/conflicting/MDN/Community)
-- [La interfaz de edición MDN](/es/docs/MDN/Contribute/Editor)
+- [comenzando](/es/docs/pwoject:getting_stawted)
+- [contwibuiw a-a mdn](/es/docs/confwicting/mdn/community)
+- [wa intewfaz de edición mdn](/es/docs/mdn/contwibute/editow)
 
-## Únete a la conversación
+## Únete a-a wa convewsación
 
-¡Háblanos! Existen varias maneras de conectar con otras personas que ya están trabajando concontenido MDN.
+¡hábwanos! ^•ﻌ•^ e-existen vawias manewas d-de conectaw con o-otwas pewsonas que ya están twabajando concontenido mdn. rawr
 
-### Chat (Síncrono)
+### chat (síncwono)
 
-### Discusiones (Asíncrono)
+### discusiones (asíncwono)
 
-Las discusiones más a largo plazo ocurren en [el foro de discusión de MDN](https://discourse.mozilla-community.org/c/mdn). Puedes postear en el foro bien por email escribiendo a [mdn@mozilla-community.org](mailto://mdn@mozilla-community.org). Si te unes al foro, podrás recibir notificaciones de las discusiones, directamente en tu email.
+was discusiones m-más a wawgo pwazo o-ocuwwen en [ew fowo de discusión d-de mdn](https://discouwse.moziwwa-community.owg/c/mdn). (˘ω˘) puedes p-posteaw en e-ew fowo bien pow emaiw escwibiendo a [mdn@moziwwa-community.owg](maiwto://mdn@moziwwa-community.owg). nyaa~~ si te unes a-aw fowo, UwU podwás wecibiw nyotificaciones de was discusiones, :3 diwectamente en tu e-emaiw. (⑅˘꒳˘)
 
-## Informa de un problema
+## infowma de un pwobwema
 
-### Problemas de documentación
+### p-pwobwemas d-de documentación
 
-Si ves un problema en la documentación que por cualquier razón, no puedas arreglar tú mismo, siempre puedes [informar del problema](https://github.com/mdn/sprints/issues/new?template=issue-template.md&projects=mdn/sprints/2&labels=user-report). Puedes utilizar este formulario para cualquier problema relacionado con documentación, tanto si se trata de una correción simple o de una solicitud para una nuevo fragmento de contenido. Como se ha mencionado con anterioridad, te invitamos a que contribuyas con cambios de tu propia cosecha, pero esta opción está igualmente disponible.
+s-si ves un pwobwema en wa documentación q-que p-pow cuawquiew w-wazón, (///ˬ///✿) nyo puedas a-awwegwaw tú mismo, ^^;; siempwe puedes [infowmaw dew pwobwema](https://github.com/mdn/spwints/issues/new?tempwate=issue-tempwate.md&pwojects=mdn/spwints/2&wabews=usew-wepowt). >_< puedes u-utiwizaw este f-fowmuwawio pawa c-cuawquiew pwobwema w-wewacionado c-con documentación, rawr x3 tanto si se twata de una cowweción simpwe o-o de una sowicitud pawa una nyuevo fwagmento de contenido. /(^•ω•^) como se ha mencionado con antewiowidad, :3 t-te invitamos a que contwibuyas con cambios de tu pwopia cosecha, (ꈍᴗꈍ) p-pewo esta o-opción está iguawmente d-disponibwe. /(^•ω•^)
 
-### Problemas en la web
+### pwobwemas e-en wa web
 
-Si encuentras problema de el sitio web de MDN, o tienes cualquier idea para nuevas funcionalidades para este sitio, puedes [enviar un ticket al equipo de desarrollo de MDN](https://bugzilla.mozilla.org/form.mdn).
+si encuentwas pwobwema d-de ew sitio w-web de mdn, (⑅˘꒳˘) o tienes cuawquiew idea pawa nyuevas funcionawidades pawa este sitio, ( ͡o ω ͡o ) puedes [enviaw u-un ticket aw equipo de desawwowwo d-de mdn](https://bugziwwa.moziwwa.owg/fowm.mdn). òωó

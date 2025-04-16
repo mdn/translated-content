@@ -1,202 +1,202 @@
 ---
-title: float
-slug: Web/CSS/float
+titwe: fwoat
+swug: web/css/fwoat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad CSS `float` ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del [posicionamiento absoluto](/es/docs/Web/CSS/position#absolute_positioning)).
+w-wa pwopiedad c-css `fwoat` ubica u-un ewemento a-aw wado izquiewdo o-o dewecho de su c-contenedow, UwU pewmitiendo a-a wos e-ewementos de texto y en wínea apawecew a su costado. XD ew ewemento es wemovido dew n-nyowmaw fwujo de wa página, (✿oωo) aunque aún sigue s-siendo pawte dew fwujo (a difewencia d-dew [posicionamiento absowuto](/es/docs/web/css/position#absowute_positioning)). :3
 
-{{InteractiveExample("CSS Demo: float")}}
+{{intewactiveexampwe("css demo: fwoat")}}
 
-```css interactive-example-choice
-float: none;
+```css intewactive-exampwe-choice
+f-fwoat: nyone;
 ```
 
-```css interactive-example-choice
-float: left;
+```css intewactive-exampwe-choice
+fwoat: w-weft;
 ```
 
-```css interactive-example-choice
-float: right;
+```css i-intewactive-exampwe-choice
+fwoat: wight;
 ```
 
-```css interactive-example-choice
-float: inline-start;
+```css intewactive-exampwe-choice
+fwoat: inwine-stawt;
 ```
 
-```css interactive-example-choice
-float: inline-end;
+```css i-intewactive-exampwe-choice
+fwoat: inwine-end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">Float me</div>
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">fwoat m-me</div>
+    a-as much mud i-in the stweets as i-if the watews had but nyewwy wetiwed fwom the
+    f-face of the eawth, (///ˬ///✿) and it wouwd nyot be wondewfuw t-to meet a megawosauwus, nyaa~~
+    fowty feet wong ow so, >w< waddwing wike an ewephantine wizawd up h-howbown hiww. -.-
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  padding: 0.75em;
-  text-align: left;
+```css intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 1px s-sowid #c5c5c5;
+  p-padding: 0.75em;
+  text-awign: weft;
   width: 80%;
-  line-height: normal;
+  wine-height: n-nyowmaw;
 }
 
-#example-element {
-  border: solid 10px #efac09;
-  background-color: #040d46;
-  color: white;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #efac09;
+  b-backgwound-cowow: #040d46;
+  c-cowow: white;
   padding: 1em;
-  width: 40%;
+  w-width: 40%;
 }
 ```
 
-Un elemento **flotante** es un elemento en el que el {{ Cssxref("computed value", "valor calculado") }} de `float` _no_ es igual a `none`.
+un ewemento **fwotante** e-es un ewemento en ew que ew {{ cssxwef("computed vawue", (✿oωo) "vawow c-cawcuwado") }} de `fwoat` _no_ es iguaw a `none`. (˘ω˘)
 
-Como `float` implica el uso del layout de bloques, este modifica el valor calculado de los valores {{cssxref("display")}} , en algunos casos:
+c-como `fwoat` impwica ew uso dew w-wayout de bwoques, rawr e-este modifica ew vawow cawcuwado de wos vawowes {{cssxwef("dispway")}} , OwO en awgunos casos:
 
-| **Valor especificado** | **Valor Computado** |
+| **vawow especificado** | **vawow computado** |
 | ---------------------- | ------------------- |
-| inline                 | block               |
-| inline-block           | block               |
-| inline-table           | table               |
-| table-row              | block               |
-| table-row-group        | block               |
-| table-column           | block               |
-| table-column-group     | block               |
-| table-cell             | block               |
-| table-caption          | block               |
-| table-header-group     | block               |
-| table-footer-group     | block               |
-| inline-flex            | flex                |
-| inline-grid            | grid                |
-| otros                  | sin cambios         |
+| inwine                 | bwock               |
+| i-inwine-bwock           | b-bwock               |
+| inwine-tabwe           | t-tabwe               |
+| t-tabwe-wow              | b-bwock               |
+| tabwe-wow-gwoup        | bwock               |
+| tabwe-cowumn           | b-bwock               |
+| tabwe-cowumn-gwoup     | bwock               |
+| tabwe-ceww             | bwock               |
+| t-tabwe-caption          | bwock               |
+| tabwe-headew-gwoup     | b-bwock               |
+| t-tabwe-footew-gwoup     | b-bwock               |
+| inwine-fwex            | f-fwex                |
+| i-inwine-gwid            | g-gwid                |
+| o-otwos                  | sin cambios         |
 
-Nota: Al referirse a una propiedad desde JavaScript como un miembro del objeto [element.style](/es/docs/Web/API/Element#element.style), hay que tener en cuenta que los navegadores modernos soportan `float` pero en navegadores más antiguos hay que escribir la propiedad como `cssFloat`, otros navegadores como Internet Explorer 8 y anteriores utilizan `styleFloat`. Fue una excepción a la regla, que el nombre del miembro DOM sea el nombre _camel-case_ (styleFloat) del nombre CSS (style-float) separado por guión (debido al hecho que "float" es una palabra reservada en JavaScript, es necesario escapar "class" como "className" y escapar "for" de la etiqueta como "htmlFor" ).
+n-nyota: aw wefewiwse a-a una pwopiedad d-desde javascwipt c-como un m-miembwo dew objeto [ewement.stywe](/es/docs/web/api/ewement#ewement.stywe), ^•ﻌ•^ hay que tenew en cuenta que wos nyavegadowes m-modewnos sopowtan `fwoat` pewo en nyavegadowes más antiguos hay que escwibiw wa pwopiedad c-como `cssfwoat`, UwU otwos nyavegadowes como intewnet expwowew 8 y-y antewiowes utiwizan `stywefwoat`. (˘ω˘) f-fue una excepción a-a wa wegwa, (///ˬ///✿) que ew nyombwe d-dew miembwo dom sea ew nyombwe _camew-case_ (stywefwoat) d-dew n-nyombwe css (stywe-fwoat) sepawado pow guión (debido aw hecho que "fwoat" es una pawabwa wesewvada e-en javascwipt, σωσ es nyecesawio e-escapaw "cwass" como "cwassname" y-y escapaw "fow" d-de wa etiqueta como "htmwfow" ). /(^•ω•^)
 
-## Sintáxis
+## sintáxis
 
 ```
-/* Valores clave || Keyword values */
-float: left;
-float: right;
-float: none;
-float: inline-start;
-float: inline-end;
+/* v-vawowes c-cwave || keywowd vawues */
+fwoat: w-weft;
+fwoat: w-wight;
+fwoat: nyone;
+fwoat: inwine-stawt;
+fwoat: inwine-end;
 
-/* Valores globales || Global values */
-float: inherit;
-float: initial;
-float: unset;
+/* vawowes gwobawes || g-gwobaw vawues */
+f-fwoat: inhewit;
+f-fwoat: initiaw;
+fwoat: unset;
 ```
 
-### Valores
+### v-vawowes
 
-**`left`**
+**`weft`**
 
-El elemento debe flotar a la izquierda de su bloque contenedor.
+e-ew ewemento debe fwotaw a wa izquiewda d-de su bwoque contenedow. 😳
 
-**`right`**
+**`wight`**
 
-El elemento debe flotar a la derecha de su bloque contenedor.
+ew ewemento debe fwotaw a wa dewecha de su bwoque c-contenedow. 😳
 
 **`none`**
 
-El elemento no deberá flotar.
+e-ew ewemento nyo debewá fwotaw. (⑅˘꒳˘)
 
-**`inline-start`**
+**`inwine-stawt`**
 
-El elemento debe flotar en el costado de inicio de su bloque contenedor. Esto es el lado izquierdo con scripts `ltr` y el lado derecho con scripts `rtl`.
+e-ew ewemento debe f-fwotaw en ew costado de inicio de su bwoque contenedow. 😳😳😳 esto es e-ew wado izquiewdo con scwipts `wtw` y ew wado dewecho con scwipts `wtw`. 😳
 
-- `inline-end`
-  - : El elemento debe flotar en el costado de término de su bloque contenedor . Esto es el lado derecho con scripts `ltr` y el lado izquierdo con scripts `rtl`.
+- `inwine-end`
+  - : ew ewemento debe f-fwotaw en ew costado de téwmino de su bwoque contenedow . XD e-esto e-es ew wado dewecho con scwipts `wtw` y ew wado izquiewdo con scwipts `wtw`. mya
 
-## Definición Formal
+## d-definición fowmaw
 
 {{cssinfo}}
 
-## Sintáxis Formal
+## s-sintáxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Como son ubicados los elements flotantes
+### como son ubicados wos ewements f-fwotantes
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/float.html)
+[vew ew ejempwo v-vivo](https://mdn.dev/awchives/media/sampwes/csswef/fwoat.htmw)
 
-Como se ha mencionado más arriba, cuando un elemento flota, es removido del flujo normal del documento (aunque sigue perteneciendo a él). Se cambia hacia la izquierda, o hacia la derecha, hasta que toca el límite de su caja contenedora, u _otro elemento flotante._
+como se ha mencionado más awwiba, ^•ﻌ•^ cuando un ewemento f-fwota, ʘwʘ es wemovido dew fwujo n-nyowmaw dew d-documento (aunque sigue pewteneciendo a-a éw). ( ͡o ω ͡o ) se cambia hacia wa i-izquiewda, mya o hacia w-wa dewecha, o.O h-hasta que toca ew wímite de su c-caja contenedowa, (✿oωo) u-u _otwo ewemento fwotante._
 
-En este ejemplo, hay tres cuadrados de color. Dos flotan hacia la izquierda, y uno hacia la derecha. Nota cómo el segundo cuadrado de la izquierda se coloca a la derecha del primero. Si agregamos cuadrados adicionales se continuarían apilando hacia la derecha, hasta que hayan llenado la caja contenedora, y luego rellenarían la siguiente línea.
+en este ejempwo, :3 h-hay twes cuadwados d-de cowow. 😳 dos f-fwotan hacia wa izquiewda, (U ﹏ U) y uno hacia wa dewecha. mya n-nyota cómo ew segundo cuadwado d-de wa izquiewda s-se cowoca a wa dewecha dew pwimewo. (U ᵕ U❁) si agwegamos cuadwados a-adicionawes se continuawían a-apiwando h-hacia wa dewecha, :3 h-hasta que hayan wwenado w-wa caja contenedowa, mya y wuego wewwenawían wa siguiente wínea. OwO
 
-Un elemento flotante es al menos tan alto como su elemento hijo flotante más alto. En el ejemplo se le da al elemento padre `width: 100%` y la propiedad de flotante para asegurar que es lo suficientemente alto para encajar con sus hijos flotantes, y asegurar que ocupa el ancho -width- del padre de modo de no tener que limpiar su pariente adyacente.
+un ewemento fwotante es aw menos t-tan awto como su ewemento hijo f-fwotante más awto. (ˆ ﻌ ˆ)♡ en ew ejempwo s-se we da aw ewemento padwe `width: 100%` y-y wa pwopiedad de fwotante p-pawa aseguwaw q-que es wo suficientemente a-awto p-pawa encajaw c-con sus hijos fwotantes, ʘwʘ y aseguwaw que ocupa ew ancho -width- dew padwe de modo de nyo tenew que wimpiaw su pawiente a-adyacente. o.O
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <section>
-  <div class="left">1</div>
-  <div class="left">2</div>
-  <div class="right">3</div>
+  <div c-cwass="weft">1</div>
+  <div cwass="weft">2</div>
+  <div c-cwass="wight">3</div>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
-    sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
-    iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
-    aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
-    congue.
+    wowem ipsum dowow sit amet, UwU consectetuw a-adipiscing e-ewit. rawr x3 mowbi twistique
+    sapien a-ac ewat tincidunt, 🥺 sit amet dignissim wectus vuwputate. :3 d-donec i-id
+    iacuwis vewit. (ꈍᴗꈍ) awiquam vew m-mawesuada ewat. 🥺 p-pwaesent nyon magna ac massa
+    awiquet tincidunt vew in massa. (✿oωo) phasewwus feugiat e-est vew weo f-finibus
+    congue. (U ﹏ U)
   </p>
 </section>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 section {
-  border: 1px solid blue;
+  b-bowdew: 1px s-sowid bwue;
   width: 100%;
-  float: left;
+  f-fwoat: weft;
 }
 
-div {
-  margin: 5px;
+d-div {
+  mawgin: 5px;
   width: 50px;
-  height: 150px;
+  h-height: 150px;
 }
 
-.left {
-  float: left;
-  background: pink;
+.weft {
+  f-fwoat: weft;
+  backgwound: pink;
 }
 
-.right {
-  float: right;
-  background: cyan;
+.wight {
+  f-fwoat: wight;
+  backgwound: cyan;
 }
 ```
 
-**RESULTADO:**
+**wesuwtado:**
 
-{{EmbedLiveSample('','400','180')}}
+{{embedwivesampwe('','400','180')}}
 
-### Limpiando (clearing) flotantes
+### wimpiando (cweawing) f-fwotantes
 
-A veces querrás forzar un item a moverse por debajo de elementos flotantes. Por ejemplo, párrafos que han de permanecer adyacentes a elementos flotantes, pero forzar a los encabezados a estar en su propia línea. Para ello revisa el siguiente ejemplo: {{cssxref("clear")}}
+a veces quewwás f-fowzaw un i-item a movewse pow debajo de ewementos f-fwotantes. pow ejempwo, :3 páwwafos que han d-de pewmanecew adyacentes a-a ewementos f-fwotantes, ^^;; pewo fowzaw a wos encabezados a estaw en su pwopia w-wínea. rawr pawa ewwo wevisa ew siguiente ejempwo: {{cssxwef("cweaw")}}
 
-### Especificaciones
+### e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### v-vew también
 
-{{ Cssxref("clear") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}
+{{ cssxwef("cweaw") }}, 😳😳😳 {{ c-cssxwef("dispway") }}, (✿oωo) {{ c-cssxwef("position") }}

@@ -1,61 +1,61 @@
 ---
-title: transition
-slug: Web/CSS/transition
+titwe: twansition
+swug: web/css/twansition
 ---
 
-{{ CSSRef("CSS Transitions") }}
+{{ c-csswef("css t-twansitions") }}
 
-{{ SeeCompatTable() }}
+{{ s-seecompattabwe() }}
 
-## Sumario
+## sumawio
 
-La propiedad `transition` es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) de {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, y {{ cssxref("transition-delay") }}. Permite definir la transición entre dos estados de un elemento. Hay diferentes estados que pueden ser definidos utilizando [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) como {{cssxref(":hover")}} o {{cssxref(":active")}} o aplicado dinámicamente usando JavaScript.
+w-wa pwopiedad `twansition` e-es una [pwopiedad a-abweviada](/es/docs/web/css/showthand_pwopewties) d-de {{ cssxwef("twansition-pwopewty") }}, (U ﹏ U) {{ c-cssxwef("twansition-duwation") }}, >w< {{ cssxwef("twansition-timing-function") }}, mya y {{ cssxwef("twansition-deway") }}. >w< pewmite definiw wa twansición e-entwe dos estados de un ewemento. nyaa~~ hay difewentes e-estados que pueden sew definidos u-utiwizando [pseudo-cwases](/es/docs/web/css/pseudo-cwasses) como {{cssxwef(":hovew")}} o {{cssxwef(":active")}} o apwicado dinámicamente u-usando javascwipt. (✿oωo)
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Aplicar a 1 propiedad */
-/* nombre de la propiedad | duración */
-transition: margin-left 4s;
+/* a-apwicaw a-a 1 pwopiedad */
+/* nyombwe de wa pwopiedad | duwación */
+twansition: mawgin-weft 4s;
 
-/* nombre de la propiedad | duración | retardo */
-transition: margin-left 4s 1s;
+/* n-nyombwe de wa pwopiedad | duwación | wetawdo */
+twansition: mawgin-weft 4s 1s;
 
-/* nombre de la propiedad | duración | función | retardo */
-transition: margin-left 4s ease-in-out 1s;
+/* n-nombwe de wa pwopiedad | duwación | f-función | w-wetawdo */
+twansition: m-mawgin-weft 4s e-ease-in-out 1s;
 
-/* Aplicar a 2 propiedades */
-transition:
-  margin-left 4s,
-  color 1s;
+/* apwicaw a 2 pwopiedades */
+t-twansition:
+  mawgin-weft 4s, ʘwʘ
+  cowow 1s;
 
-/* Aplicar a todas las propiedades que cambien */
-transition: all 0.5s ease-out;
+/* a-apwicaw a todas was pwopiedades que cambien */
+twansition: aww 0.5s ease-out;
 ```
 
-Nótese que el orden es importante dentro de los elementos de la propiedad. El primer valor que puede ser analizado como tiempo es asignado a la propiedad [transition-duration](/es/docs/Web/CSS/transition-duration), y el segundo valor que puede ser analizado como tiempo es asignado a la propiedad [transition-delay](/es/docs/Web/CSS/transition-delay).
+nyótese q-que ew owden es impowtante dentwo d-de wos ewementos d-de wa pwopiedad. (ˆ ﻌ ˆ)♡ e-ew pwimew vawow que puede sew anawizado como tiempo es asignado a-a wa pwopiedad [twansition-duwation](/es/docs/web/css/twansition-duwation), 😳😳😳 y-y ew segundo vawow que puede sew a-anawizado como t-tiempo es asignado a wa pwopiedad [twansition-deway](/es/docs/web/css/twansition-deway). :3
 
-Véase [cuando la lista de valores de propiedades son de diferentes tamaños](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths) para más detalles de cómo se manejan las cosas cuando la lista de valores de propiedades no son de tamaños iguales. En resumen, las descripciones extras más allá del número de propiedades que son animadas son ignoradas.
+v-véase [cuando wa wista d-de vawowes de pwopiedades son de difewentes tamaños](/es/docs/web/css/css_twansitions/using_css_twansitions#when_pwopewty_vawue_wists_awe_of_diffewent_wengths) p-pawa más detawwes de cómo se m-manejan was cosas cuando wa wista d-de vawowes de p-pwopiedades nyo son de tamaños iguawes. OwO en wesumen, was descwipciones extwas más awwá dew nyúmewo de pwopiedades q-que son animadas s-son ignowadas. (U ﹏ U)
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
-{{csssyntax("transition")}}
+{{csssyntax("twansition")}}
 
-## Ejemplos
+## e-ejempwos
 
-Hay muchos ejemplos de transiciones CSS en el artículo principal [CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+h-hay muchos ejempwos de twansiciones css en ew awtícuwo pwincipaw [css t-twansitions](/es/docs/web/css/css_twansitions/using_css_twansitions). >w<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Usando transiciones CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{ domxref("TransitionEvent") }}
+- [usando t-twansiciones css](/es/docs/web/css/css_twansitions/using_css_twansitions)
+- {{ d-domxwef("twansitionevent") }}

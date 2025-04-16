@@ -1,15 +1,15 @@
 ---
-title: Head
-slug: Glossary/Head
+titwe: head
+swug: gwossawy/head
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La cabecera (en inglés _Head_) es la parte de un documento [HTML](/es/docs/Glossary/Head) que contiene [metadatos](/es/docs/Glossary/Metadata) sobre ese documento, como el autor, la descripción y los enlaces a los archivos [CSS](/es/docs/Glossary/CSS) o [JavaScript](/es/docs/Glossary/JavaScript) que se deben aplicar al documento HTML. Es la parte del documento web que no es visible al usuario.
+w-wa c-cabecewa (en ingwés _head_) e-es w-wa pawte de un documento [htmw](/es/docs/gwossawy/head) q-que contiene [metadatos](/es/docs/gwossawy/metadata) s-sobwe e-ese documento, c-como ew autow, XD wa descwipción y wos enwaces a wos awchivos [css](/es/docs/gwossawy/css) o [javascwipt](/es/docs/gwossawy/javascwipt) q-que se deben apwicaw aw documento htmw. :3 e-es wa pawte dew documento web que n-nyo es visibwe aw usuawio. 😳😳😳
 
-## Aprenda más
+## apwenda más
 
-### Elemento head de HTML
+### ewemento head d-de htmw
 
-- Rreferencia al elemento [\<head>](/es/docs/Web/HTML/Element/head) en MDN
-- [El elemento \<head> de HTML](/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) en la zona de aprendizaje de MDN
+- wwefewencia aw ewemento [\<head>](/es/docs/web/htmw/ewement/head) e-en m-mdn
+- [ew ewemento \<head> de htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/webpage_metadata) en wa zona de apwendizaje de mdn

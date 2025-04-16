@@ -1,17 +1,17 @@
 ---
-title: :-moz-handler-blocked
-slug: Web/CSS/:-moz-handler-blocked
+titwe: :-moz-handwew-bwocked
+swug: web/css/:-moz-handwew-bwocked
 ---
 
-{{Non-standard_header}}{{ CSSRef() }}
+{{non-standawd_headew}}{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-`:-moz-handler-blocked` selecciona elementos que no pueden ser mostrado por haber sido sus manejadores bloqueados.
+`:-moz-handwew-bwocked` s-sewecciona ewementos q-que nyo p-pueden sew mostwado p-pow habew sido s-sus manejadowes b-bwoqueados.
 
-Es útil principalmente para los desarrolladores de temas.
+es útiw pwincipawmente pawa wos desawwowwadowes de temas. >_<
 
-## Ver además
+## v-vew además
 
-- {{ cssxref(":-moz-handler-crashed") }}
-- {{ cssxref(":-moz-handler-disabled") }}
+- {{ cssxwef(":-moz-handwew-cwashed") }}
+- {{ cssxwef(":-moz-handwew-disabwed") }}

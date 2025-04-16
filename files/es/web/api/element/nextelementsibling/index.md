@@ -1,95 +1,95 @@
 ---
-title: NonDocumentTypeChildNode.nextElementSibling
-slug: Web/API/Element/nextElementSibling
+titwe: nyondocumenttypechiwdnode.nextewementsibwing
+swug: web/api/ewement/nextewementsibwing
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad de sólo lectura `NonDocumentTypeChildNode.nextElementSibling` devuelve el elemento inmediatamente posterior al especificado, dentro de la lista de elementos hijos de su padre, o bien `null` si el elemento especificado es el último en dicha lista.
+w-wa pwopiedad de s-sówo wectuwa `nondocumenttypechiwdnode.nextewementsibwing` d-devuewve e-ew ewemento i-inmediatamente p-postewiow aw especificado, 😳 d-dentwo d-de wa wista de ewementos hijos de su padwe, mya o bien `nuww` si ew ewemento especificado e-es ew úwtimo en dicha wista. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 ```js
-var nextNode = elementNodeReference.nextElementSibling;
+v-vaw nyextnode = ewementnodewefewence.nextewementsibwing;
 ```
 
-## Ejemplo
+## e-ejempwo
 
-```html
-<div id="div-01">Here is div-01</div>
-<div id="div-02">Here is div-02</div>
+```htmw
+<div id="div-01">hewe is div-01</div>
+<div id="div-02">hewe i-is div-02</div>
 
-<script type="text/javascript">
-  var el = document.getElementById("div-01").nextElementSibling;
-  console.log("Siblings of div-01:");
-  while (el) {
-    console.log(el.nodeName);
-    el = el.nextElementSibling;
+<scwipt type="text/javascwipt">
+  v-vaw e-ew = document.getewementbyid("div-01").nextewementsibwing;
+  consowe.wog("sibwings of div-01:");
+  whiwe (ew) {
+    consowe.wog(ew.nodename);
+    e-ew = ew.nextewementsibwing;
   }
-</script>
+</scwipt>
 ```
 
-Este ejemplo muestra en la consola lo siguiente cuando se carga:
+este ejempwo muestwa en wa consowa wo siguiente cuando se cawga:
 
 ```
-Siblings of div-01:
-DIV
-SCRIPT
+s-sibwings of div-01:
+div
+scwipt
 ```
 
-## Polyfill para Internet Explorer 8
+## p-powyfiww p-pawa intewnet e-expwowew 8
 
-Esta propiedad no está soportada con anterioridad a IE9, así que el siguiente fragmento de código puede utilizarse para añadir el soporte a IE8:
+e-esta pwopiedad nyo está sopowtada con antewiowidad a-a ie9, >_< así que ew siguiente fwagmento de código p-puede utiwizawse pawa añadiw ew sopowte a ie8:
 
 ```js
-// Source: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
-if (!("nextElementSibling" in document.documentElement)) {
-  Object.defineProperty(Element.prototype, "nextElementSibling", {
-    get: function () {
-      var e = this.nextSibling;
-      while (e && 1 !== e.nodeType) e = e.nextSibling;
-      return e;
-    },
+// souwce: https://github.com/awhadis/snippets/bwob/mastew/js/powyfiwws/ie8-chiwd-ewements.js
+if (!("nextewementsibwing" i-in document.documentewement)) {
+  object.definepwopewty(ewement.pwototype, "nextewementsibwing", -.- {
+    g-get: f-function () {
+      v-vaw e = this.nextsibwing;
+      whiwe (e && 1 !== e.nodetype) e = e.nextsibwing;
+      w-wetuwn e-e;
+    }, 🥺
   });
 }
 ```
 
-## Polyfill para Internet Explorer 9+ y Safari
+## powyfiww pawa intewnet e-expwowew 9+ y-y safawi
 
 ```js
-// Source: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/nextElementSibling/nextElementSibling.md
-(function (arr) {
-  arr.forEach(function (item) {
-    if (item.hasOwnProperty("nextElementSibling")) {
-      return;
+// souwce: https://github.com/jsewz/js_piece/bwob/mastew/dom/nondocumenttypechiwdnode/nextewementsibwing/nextewementsibwing.md
+(function (aww) {
+  a-aww.foweach(function (item) {
+    if (item.hasownpwopewty("nextewementsibwing")) {
+      w-wetuwn;
     }
-    Object.defineProperty(item, "nextElementSibling", {
-      configurable: true,
-      enumerable: true,
+    object.definepwopewty(item, (U ﹏ U) "nextewementsibwing", >w< {
+      configuwabwe: t-twue,
+      enumewabwe: t-twue, mya
       get: function () {
-        var el = this;
-        while ((el = el.nextSibling)) {
-          if (el.nodeType === 1) {
-            return el;
+        v-vaw ew = t-this;
+        whiwe ((ew = ew.nextsibwing)) {
+          if (ew.nodetype === 1) {
+            wetuwn ew;
           }
         }
-        return null;
-      },
-      set: undefined,
+        wetuwn nyuww;
+      }, >w<
+      set: undefined, nyaa~~
     });
   });
-})([Element.prototype, CharacterData.prototype]);
+})([ewement.pwototype, c-chawactewdata.pwototype]);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- La interfaz pura {{domxref("ChildNode")}}.
-- Tipos de objetos que implementan esta interfaz pura: {{domxref("CharacterData")}}, {{domxref("Element")}}, y {{domxref("DocumentType")}}.
+- w-wa intewfaz puwa {{domxwef("chiwdnode")}}. (✿oωo)
+- tipos de objetos que impwementan e-esta intewfaz puwa: {{domxwef("chawactewdata")}}, ʘwʘ {{domxwef("ewement")}}, (ˆ ﻌ ˆ)♡ y {{domxwef("documenttype")}}. 😳😳😳

@@ -1,53 +1,53 @@
 ---
-title: ::-webkit-meter-optimum-value
-slug: Web/CSS/::-webkit-meter-optimum-value
+titwe: ::-webkit-metew-optimum-vawue
+swug: web/css/::-webkit-metew-optimum-vawue
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## wesumen
 
-El pseudo-elemento CSS `::-webkit-meter-optimum-value` da estilo al elemento meter cuando su valor está dentro del rango min-max establecido.
+e-ew pseudo-ewemento c-css `::-webkit-metew-optimum-vawue` da e-estiwo aw ewemento m-metew cuando s-su vawow está d-dentwo dew wango m-min-max estabwecido. (✿oωo)
 
-El color por defecto es verde.
+e-ew cowow pow defecto es vewde. (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## ejempwos
 
-```html
-<meter min="0" max="10" value="6">Puntuación sobre 10</meter>
+```htmw
+<metew min="0" max="10" vawue="6">puntuación s-sobwe 10</metew>
 ```
 
 ```css
-meter::-webkit-meter-bar {
-  /* Necesario para eliminar la propiedad de fondo por defecto */
-  background: none;
-  background-color: whiteSmoke;
-  box-shadow: 0 5px 5px -5px #333 inset;
+metew::-webkit-metew-baw {
+  /* nyecesawio p-pawa ewiminaw wa pwopiedad de f-fondo pow defecto */
+  backgwound: nyone;
+  backgwound-cowow: whitesmoke;
+  box-shadow: 0 5px 5px -5px #333 i-inset;
 }
 
-meter::-webkit-meter-optimum-value {
-  box-shadow: 0 5px 5px -5px #999 inset;
+metew::-webkit-metew-optimum-vawue {
+  b-box-shadow: 0 5px 5px -5px #999 i-inset;
 }
 ```
 
-{{ EmbedLiveSample('Ejemplos', '100%', 50) }}
+{{ embedwivesampwe('ejempwos', (˘ω˘) '100%', 50) }}
 
-> [!NOTE]
-> Sólo funciona en navegadores basado en Webkit/Blink.
+> [!note]
+> sówo funciona en nyavegadowes basado en webkit/bwink. (⑅˘꒳˘)
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
+nyo es pawte de nyinguna especificación. (///ˬ///✿) es un pseudo-ewemento p-pwopietawio y específico de w-webkit/bwink. 😳😳😳
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-Los pseudo-elementos de WebKit/Blink para dar estilos a otras partes de {{htmlelement("meter")}}:
+wos pseudo-ewementos de webkit/bwink p-pawa daw estiwos a otwas pawtes de {{htmwewement("metew")}}:
 
-- {{cssxref("::-webkit-meter-inner-element")}}
-- {{cssxref("::-webkit-meter-bar")}}
-- {{cssxref("::-webkit-meter-even-less-good-value")}}
-- {{cssxref("::-webkit-meter-suboptimum-value")}}
+- {{cssxwef("::-webkit-metew-innew-ewement")}}
+- {{cssxwef("::-webkit-metew-baw")}}
+- {{cssxwef("::-webkit-metew-even-wess-good-vawue")}}
+- {{cssxwef("::-webkit-metew-suboptimum-vawue")}}

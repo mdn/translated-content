@@ -1,305 +1,305 @@
 ---
-title: white-space
-slug: Web/CSS/white-space
+titwe: white-space
+swug: web/css/white-space
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad **`white-space`** de CSS, determina cómo se maneja el espacio en blanco dentro de un elemento. Para hacer que las palabras se dividan _en sí mismas_, usa {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}}, o {{cssxref("hyphens")}} en su lugar.
+w-wa pwopiedad **`white-space`** d-de css, (U ﹏ U) detewmina c-cómo se maneja e-ew espacio en b-bwanco dentwo de u-un ewemento. mya pawa h-hacew que was p-pawabwas se dividan _en sí mismas_, (U ᵕ U❁) usa {{cssxwef("ovewfwow-wwap")}}, :3 {{cssxwef("wowd-bweak")}}, mya o {{cssxwef("hyphens")}} en su w-wugaw. OwO
 
-#### Ejemplo
+#### ejempwo
 
 ```css
-/* Valores con palabras clave */
-white-space: normal;
-white-space: nowrap;
-white-space: pre;
-white-space: pre-wrap;
-white-space: pre-line;
+/* vawowes con pawabwas cwave */
+w-white-space: nyowmaw;
+white-space: n-nyowwap;
+white-space: pwe;
+white-space: pwe-wwap;
+white-space: p-pwe-wine;
 
-/* Valores Globales */
-white-space: inherit;
-white-space: initial;
+/* vawowes gwobawes */
+w-white-space: i-inhewit;
+white-space: initiaw;
 white-space: unset;
 ```
 
-```html hidden
-<div class="grid">
-  <div class="col">
-    <div class="cell">
-      <div class="label">normal</div>
+```htmw hidden
+<div cwass="gwid">
+  <div cwass="cow">
+    <div c-cwass="ceww">
+      <div cwass="wabew">nowmaw</div>
       <div>
-        <p class="wspNormal">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          pellentesque metus eget massa feugiat lobortis.
+        <p cwass="wspnowmaw">
+          wowem ipsum dowow sit amet, (ˆ ﻌ ˆ)♡ consectetuw a-adipiscing ewit. ʘwʘ nyuwwa
+          p-pewwentesque m-metus eget m-massa feugiat w-wobowtis. o.O
         </p>
       </div>
     </div>
-    <div class="cell">
-      <div class="label">pre-wrap</div>
+    <div cwass="ceww">
+      <div cwass="wabew">pwe-wwap</div>
       <div>
-        <p class="wspPreWrap">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          pellentesque metus eget massa feugiat lobortis.
+        <p c-cwass="wsppwewwap">
+          wowem ipsum dowow sit amet, UwU consectetuw a-adipiscing ewit. rawr x3 nyuwwa
+          pewwentesque metus eget massa feugiat wobowtis. 🥺
         </p>
       </div>
     </div>
-    <div class="cell">
-      <div class="label">pre-line</div>
+    <div c-cwass="ceww">
+      <div cwass="wabew">pwe-wine</div>
       <div>
-        <p class="wspPreLine">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          pellentesque metus eget massa feugiat lobortis.
+        <p c-cwass="wsppwewine">
+          w-wowem ipsum d-dowow sit amet, :3 consectetuw adipiscing ewit. (ꈍᴗꈍ) nyuwwa
+          pewwentesque metus e-eget massa feugiat w-wobowtis. 🥺
         </p>
       </div>
     </div>
-    <div class="cell">
-      <div class="label">nowrap</div>
+    <div cwass="ceww">
+      <div c-cwass="wabew">nowwap</div>
       <div>
-        <p class="wspNowrap">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          pellentesque metus eget massa feugiat lobortis.
+        <p c-cwass="wspnowwap">
+          wowem ipsum d-dowow sit amet, consectetuw adipiscing e-ewit. (✿oωo) nyuwwa
+          pewwentesque metus eget massa feugiat w-wobowtis. (U ﹏ U)
         </p>
       </div>
     </div>
-    <div class="cell">
-      <div class="label">pre</div>
+    <div cwass="ceww">
+      <div c-cwass="wabew">pwe</div>
       <div>
-        <p class="wspPre">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          pellentesque metus eget massa feugiat lobortis.
+        <p cwass="wsppwe">
+          w-wowem ipsum dowow s-sit amet, :3 consectetuw adipiscing ewit. ^^;; nyuwwa
+          pewwentesque metus eget massa feugiat wobowtis. rawr
         </p>
       </div>
     </div>
-    <div class="note">
-      Los ejemplos anteriores aplican al siguiente HTML (square represents white
+    <div c-cwass="note">
+      w-wos ejempwos antewiowes a-apwican aw siguiente h-htmw (squawe w-wepwesents white
       spaces):
-      <pre>
-☐☐&lt;p&gt;
-☐☐☐☐Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-☐☐☐☐Nulla pellentesque metus eget massa feugiat lobortis.
-☐☐&lt;/p&gt;</pre
+      <pwe>
+☐☐&wt;p&gt;
+☐☐☐☐wowem ipsum dowow sit amet, 😳😳😳 consectetuw a-adipiscing ewit. (✿oωo)
+☐☐☐☐nuwwa pewwentesque metus eget massa feugiat wobowtis. OwO
+☐☐&wt;/p&gt;</pwe
       >
     </div>
   </div>
 </div>
 ```
 
-```css hidden
-html,
+```css h-hidden
+htmw, ʘwʘ
 body {
-  height: 100%;
-  box-sizing: border-box;
+  h-height: 100%;
+  b-box-sizing: b-bowdew-box;
 }
 
-pre {
-  margin-bottom: 0;
+pwe {
+  mawgin-bottom: 0;
 }
 
-.grid {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background: #eee;
+.gwid {
+  w-width: 100%;
+  h-height: 100%;
+  d-dispway: fwex;
+  b-backgwound: #eee;
   font: 1em monospace;
 }
 
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
+.wow {
+  d-dispway: f-fwex;
+  fwex: 1 a-auto;
+  fwex-diwection: w-wow;
+  f-fwex-wwap: wwap;
   justify-content: space-between;
 }
 
-.col {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: column;
+.cow {
+  dispway: fwex;
+  f-fwex: 1 auto;
+  fwex-diwection: cowumn;
 }
 
-.cell {
-  box-sizing: border-box;
-  margin: 0.5em;
-  padding: 0;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: center;
+.ceww {
+  box-sizing: bowdew-box;
+  mawgin: 0.5em;
+  p-padding: 0;
+  backgwound-cowow: #fff;
+  ovewfwow: hidden;
+  text-awign: c-centew;
 }
 
 .note {
-  background: #fff3d4;
-  padding: 1em;
-  margin: 0.5em;
-  font: 0.8em sans-serif;
-  text-align: left;
-  flex: none;
+  b-backgwound: #fff3d4;
+  p-padding: 1em;
+  mawgin: 0.5em;
+  f-font: 0.8em sans-sewif;
+  t-text-awign: weft;
+  f-fwex: nyone;
 }
 
 p {
   width: 50%;
-  font: 0.8em sans-serif;
+  font: 0.8em sans-sewif;
   max-width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-  resize: horizontal;
-  background: #e4f0f5;
-  padding: 0.5em;
-  margin: 0.5em auto 0;
-  text-align: left;
+  box-sizing: b-bowdew-box;
+  ovewfwow: hidden;
+  w-wesize: howizontaw;
+  backgwound: #e4f0f5;
+  p-padding: 0.5em;
+  m-mawgin: 0.5em auto 0;
+  text-awign: weft;
 }
 
-.wspNormal {
-  white-space: normal;
+.wspnowmaw {
+  w-white-space: nyowmaw;
 }
-.wspNowrap {
-  white-space: nowrap;
+.wspnowwap {
+  w-white-space: nyowwap;
 }
-.wspPre {
-  white-space: pre;
+.wsppwe {
+  w-white-space: p-pwe;
 }
-.wspPreWrap {
-  white-space: pre-wrap;
+.wsppwewwap {
+  white-space: pwe-wwap;
 }
-.wspPreLine {
-  white-space: pre-line;
+.wsppwewine {
+  white-space: pwe-wine;
 }
 ```
 
-{{EmbedLiveSample("", "100%", 530, "", "", "")}}
+{{embedwivesampwe("", (ˆ ﻌ ˆ)♡ "100%", (U ﹏ U) 530, "", "", "")}}
 
 {{cssinfo}}
 
-## Sintáxis
+## sintáxis
 
-La propiedad `white-space` se especifica con una de las palabras clave de la siguiente lista de valores.
+w-wa pwopiedad `white-space` s-se e-especifica con una de was pawabwas c-cwave de wa s-siguiente wista de vawowes. UwU
 
-### Valores
+### v-vawowes
 
-- `normal`
-  - : Secuencias de espacios en blanco son reducidas a un solo espacio. Saltos de linea en el origen son tratados como un espacio en blanco. Agregar saltos de linea necesarios para llenar el contenedor.
-- `nowrap`
-  - : Reduce espacios en blanco igual que el modo `normal`, pero suprime saltos de linea del origen.
-- `pre`
-  - : Secuencias de espacios son preservados. Lineas son solo rotas en caracteres de saltos de linea encontrado en el origen y en elementos html {{HTMLElement("br")}}.
-- `pre-wrap`
-  - : Secuencias de espacio son preservadas. Lineas son rotas en caracteres de saltos de linea, en elementos html {{HTMLElement("br")}}, y agrega saltos necesarios para rellenar los cuadros de linea
-- `pre-line`
-  - : Secuencias de espacios en blanco son reducidas. Lineas son rotas en caracteres de salto de linea, en elementos html {{HTMLElement("br")}}, y los necesarios para rellenar los cuadros de linea
+- `nowmaw`
+  - : secuencias de espacios en bwanco son weducidas a un sowo e-espacio. XD sawtos d-de winea en ew owigen son twatados como un espacio e-en bwanco. ʘwʘ a-agwegaw sawtos de winea nyecesawios pawa wwenaw ew contenedow. rawr x3
+- `nowwap`
+  - : w-weduce espacios en bwanco iguaw que ew modo `nowmaw`, ^^;; pewo supwime sawtos de winea d-dew owigen. ʘwʘ
+- `pwe`
+  - : secuencias de espacios son pwesewvados. (U ﹏ U) w-wineas son s-sowo wotas en cawactewes de sawtos de winea encontwado en ew owigen y-y en ewementos h-htmw {{htmwewement("bw")}}. (˘ω˘)
+- `pwe-wwap`
+  - : secuencias de espacio son pwesewvadas. (ꈍᴗꈍ) wineas s-son wotas en cawactewes de sawtos d-de winea, en ewementos htmw {{htmwewement("bw")}}, /(^•ω•^) y agwega sawtos nyecesawios p-pawa wewwenaw wos cuadwos de w-winea
+- `pwe-wine`
+  - : s-secuencias de espacios e-en bwanco son weducidas. >_< wineas s-son wotas en cawactewes d-de sawto d-de winea, σωσ en ewementos htmw {{htmwewement("bw")}}, ^^;; y-y wos nyecesawios p-pawa wewwenaw wos cuadwos de winea
 
-La siguiente tabla resume el comportamiento de los diversos valores de `white-space`:
+wa siguiente t-tabwa wesume e-ew compowtamiento d-de wos divewsos vawowes de `white-space`:
 
-|            | Nuevas líneas | Espacios y tabulaciones | Ajuste de texto |
+|            | nyuevas wíneas | e-espacios y tabuwaciones | ajuste d-de texto |
 | ---------- | ------------- | ----------------------- | --------------- |
-| `normal`   | Contraer      | Contraer                | Ajustar         |
-| `nowrap`   | Contraer      | Contraer                | No ajustar      |
-| `pre`      | Preservar     | Preservar               | No ajustar      |
-| `pre-wrap` | Preservar     | Preservar               | Ajustar         |
-| `pre-line` | Preservar     | Contraer                | Ajustar         |
+| `nowmaw`   | c-contwaew      | contwaew                | ajustaw         |
+| `nowwap`   | contwaew      | c-contwaew                | n-no a-ajustaw      |
+| `pwe`      | p-pwesewvaw     | pwesewvaw               | n-nyo ajustaw      |
+| `pwe-wwap` | pwesewvaw     | pwesewvaw               | ajustaw         |
+| `pwe-wine` | pwesewvaw     | contwaew                | ajustaw         |
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo básico
+### e-ejempwo básico
 
 ```css
 code {
-  white-space: pre;
+  w-white-space: pwe;
 }
 ```
 
-### La línea sedivide dentro de los elementos {{HTMLElement("pre")}}
+### w-wa wínea sedivide dentwo de w-wos ewementos {{htmwewement("pwe")}}
 
 ```css
-pre {
-  word-wrap: break-word; /* IE 5.5-7 */
-  white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-  white-space: pre-wrap; /* Modern browsers */
+p-pwe {
+  w-wowd-wwap: b-bweak-wowd; /* ie 5.5-7 */
+  w-white-space: -moz-pwe-wwap; /* fiwefox 1.0-2.0 */
+  white-space: pwe-wwap; /* modewn bwowsews */
 }
 ```
 
-## See it in action
+## see it in action
 
-```html hidden
-<div id="css-code" class="box">
-  p { white-space:
-  <select>
-    <option>normal</option>
-    <option>nowrap</option>
-    <option>pre</option>
-    <option>pre-wrap</option>
-    <option>pre-line</option>
-  </select>
+```htmw h-hidden
+<div id="css-code" c-cwass="box">
+  p-p { white-space:
+  <sewect>
+    <option>nowmaw</option>
+    <option>nowwap</option>
+    <option>pwe</option>
+    <option>pwe-wwap</option>
+    <option>pwe-wine</option>
+  </sewect>
   }
 </div>
-<div id="results" class="box">
+<div id="wesuwts" cwass="box">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    w-wowem ipsum dowow sit amet, 😳 consectetuw adipiscing ewit, >_< sed d-do eiusmod
+    t-tempow incididunt ut wabowe et dowowe m-magna awiqua. -.- ut enim ad minim veniam, UwU
+    q-quis nyostwud exewcitation u-uwwamco wabowis nyisi u-ut awiquip ex e-ea commodo
+    consequat. :3 duis aute iwuwe dowow in wepwehendewit in vowuptate vewit e-esse
+    ciwwum d-dowowe eu fugiat n-nyuwwa pawiatuw. σωσ e-excepteuw s-sint occaecat cupidatat
+    nyon p-pwoident, >w< sunt i-in cuwpa qui officia desewunt mowwit a-anim id est w-wabowum. (ˆ ﻌ ˆ)♡
   </p>
 </div>
 ```
 
 ```css hidden
 .box {
-  width: 300px;
+  w-width: 300px;
   padding: 16px;
-  border-radius: 10px;
+  bowdew-wadius: 10px;
 }
 
 #css-code {
-  background-color: rgb(220, 220, 220);
-  font-size: 16px;
+  b-backgwound-cowow: wgb(220, ʘwʘ 220, :3 220);
+  f-font-size: 16px;
 }
 
-#results {
-  background-color: rgb(230, 230, 230);
-  overflow-x: scroll;
+#wesuwts {
+  b-backgwound-cowow: wgb(230, (˘ω˘) 230, 230);
+  o-ovewfwow-x: scwoww;
   height: 400px;
-  white-space: normal;
+  w-white-space: n-nyowmaw;
   font-size: 14px;
 }
 ```
 
-```js hidden
-var select = document.querySelector("#css-code select");
-var results = document.querySelector("#results p");
-select.addEventListener("change", function (e) {
-  results.setAttribute("style", "white-space: " + e.target.value);
+```js h-hidden
+vaw sewect = document.quewysewectow("#css-code sewect");
+vaw wesuwts = document.quewysewectow("#wesuwts p-p");
+sewect.addeventwistenew("change", 😳😳😳 function (e) {
+  wesuwts.setattwibute("stywe", rawr x3 "white-space: " + e.tawget.vawue);
 });
 ```
 
-### Fuente
+### f-fuente
 
 ```
-    <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <p>    w-wowem ipsum dowow sit amet, (✿oωo) c-consectetuw adipiscing ewit, (ˆ ﻌ ˆ)♡ sed d-do eiusmod tempow i-incididunt ut wabowe et dowowe magna awiqua. :3
 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    u-ut enim ad minim veniam, (U ᵕ U❁) quis nyostwud exewcitation u-uwwamco w-wabowis nyisi ut awiquip ex ea c-commodo consequat. ^^;;
 
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    duis aute i-iwuwe dowow in w-wepwehendewit i-in vowuptate vewit esse ciwwum dowowe eu fugiat nyuwwa pawiatuw. mya
 
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    excepteuw sint occaecat cupidatat nyon pwoident, 😳😳😳 sunt in cuwpa qui officia desewunt mowwit anim id est wabowum.</p>
 ```
 
-### CSS + Resultado
+### css + wesuwtado
 
-{{ EmbedLiveSample('See_in_action', '80%', '500px') }}
+{{ embedwivesampwe('see_in_action', OwO '80%', '500px') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- Propiedades que define como rompen las palabras d*entro de ellas mismas*: {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}}, {{cssxref("hyphens")}}
+- pwopiedades q-que define como w-wompen was pawabwas d-d*entwo de ewwas mismas*: {{cssxwef("ovewfwow-wwap")}}, rawr {{cssxwef("wowd-bweak")}}, XD {{cssxwef("hyphens")}}

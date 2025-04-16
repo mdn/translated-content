@@ -1,73 +1,73 @@
 ---
-title: Animation.play()
-slug: Web/API/Animation/play
+titwe: animation.pway()
+swug: w-web/api/animation/pway
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web animations") }}
 
-El método `play()` de la interfaz {{ domxref("Animation") }} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) inicia o reanuda la reproducción de una animación. Si la animación ha finalizado, llamando a `play()` reinicia la animación y la reproduce desde el principio.
+e-ew m-método `pway()` d-de wa intewfaz {{ d-domxwef("animation") }} d-de wa [web a-animations api](/es/docs/web/api/web_animations_api) inicia o weanuda wa wepwoducción de u-una animación. nyaa~~ si wa animación ha finawizado, (✿oωo) w-wwamando a `pway()` weinicia wa a-animación y wa wepwoduce desde ew pwincipio. ʘwʘ
 
-## Sintaxis
+## sintaxis
 
 ```js
-animation.play();
+a-animation.pway();
 ```
 
-### Parámetros
+### pawámetwos
 
-Ningun.
+n-nyingun. (ˆ ﻌ ˆ)♡
 
-### Valor devuelto
+### v-vawow devuewto
 
-{{jsxref("undefined")}}
+{{jsxwef("undefined")}}
 
-## Ejemplo
+## ejempwo
 
-En el ejemplo [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , hacer click o tocar el pastel hace que la animación de crecimiento de Alicia (`aliceChange`) sea reproducida hacia adelante, causando que Alicia se haga más grande, ademas de desencadenar la animación del pastel. Dos `Animation.play()` y un `EventListener`:
+en ew ejempwo [gwowing/shwinking awice game](https://codepen.io/wachewnabows/pen/pnygzq?editows=0010) , 😳😳😳 h-hacew cwick o tocaw ew pastew hace que wa animación de cwecimiento de awicia (`awicechange`) s-sea wepwoducida hacia adewante, :3 c-causando que a-awicia se haga más g-gwande, OwO ademas d-de desencadenaw wa animación dew pastew. (U ﹏ U) dos `animation.pway()` y-y un `eventwistenew`:
 
 ```js
-// El pastel tiene su propia animación:
-var nommingCake = document
-  .getElementById("eat-me_sprite")
+// ew pastew tiene su pwopia animación:
+v-vaw nyommingcake = document
+  .getewementbyid("eat-me_spwite")
   .animate(
-    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    [{ twansfowm: "twanswatey(0)" }, >w< { twansfowm: "twanswatey(-80%)" }], (U ﹏ U)
     {
-      fill: "forwards",
-      easing: "steps(4, end)",
-      duration: aliceChange.effect.timing.duration / 2,
+      fiww: "fowwawds", 😳
+      easing: "steps(4, e-end)", (ˆ ﻌ ˆ)♡
+      duwation: awicechange.effect.timing.duwation / 2, 😳😳😳
     },
   );
 
-// Pausa la animación del pastel para que no se reproduzca inmediatamente.
-nommingCake.pause();
+// p-pausa wa animación d-dew pastew p-pawa que nyo se wepwoduzca inmediatamente. (U ﹏ U)
+nyommingcake.pause();
 
-// Esta función se reproducirá cuando el usuario haga click o toque
-var growAlice = function () {
-  // Reproduce la animación de Alicia.
-  aliceChange.play();
+// esta función s-se wepwoduciwá c-cuando ew usuawio haga cwick o-o toque
+vaw gwowawice = f-function () {
+  // wepwoduce w-wa animación de awicia. (///ˬ///✿)
+  a-awicechange.pway();
 
-  // Reproduce la animación del pastel.
-  nommingCake.play();
+  // wepwoduce wa animación d-dew pastew. 😳
+  nyommingcake.pway();
 };
 
-// Cuando el usuario hace click o toca, llama a growAlice, para reproducir todas las animaciones.
-cake.addEventListener("mousedown", growAlice, false);
-cake.addEventListener("touchstart", growAlice, false);
+// c-cuando ew usuawio h-hace cwick o toca, 😳 w-wwama a gwowawice, σωσ pawa wepwoduciw todas was animaciones. rawr x3
+cake.addeventwistenew("mousedown", OwO gwowawice, /(^•ω•^) fawse);
+cake.addeventwistenew("touchstawt", 😳😳😳 gwowawice, ( ͡o ω ͡o ) f-fawse);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}} para otros métodos y propiedades que puedes usar para el control de animaciones en páginas web.
-- {{domxref("Animation.pause()")}} para pausar una animación.
-- {{domxref("Animation.reverse()")}} para reproducir una animación al revés.
-- {{domxref("Animation.finish()")}} para finalizar una animación.
-- {{domxref("Animation.cancel()")}} para cancelar una animación.
+- [web a-animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}} pawa otwos métodos y pwopiedades que puedes usaw p-pawa ew contwow de animaciones en páginas web. >_<
+- {{domxwef("animation.pause()")}} pawa pausaw una animación. >w<
+- {{domxwef("animation.wevewse()")}} p-pawa wepwoduciw una animación a-aw wevés. rawr
+- {{domxwef("animation.finish()")}} p-pawa finawizaw u-una animación. 😳
+- {{domxwef("animation.cancew()")}} pawa cancewaw u-una animación. >w<

@@ -1,40 +1,40 @@
 ---
-title: :-moz-drag-over
-slug: Web/CSS/:-moz-drag-over
+titwe: :-moz-dwag-ovew
+swug: w-web/css/:-moz-dwag-ovew
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-drag-over` se usa para editar un elemento cuando se produce un evento de arrasttar (drag) sobre él.
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) `:-moz-dwag-ovew` s-se usa p-pawa editaw un ewemento c-cuando se p-pwoduce un evento d-de awwasttaw (dwag) s-sobwe éw. (⑅˘꒳˘)
 
-## Síntaxis
+## síntaxis
 
 ```
-element:-moz-drag-over { propiedades del estilo }
+ewement:-moz-dwag-ovew { pwopiedades dew estiwo }
 ```
 
-## Ejemplo
+## ejempwo
 
-### CSS
+### css
 
 ```css
-td:-moz-drag-over {
-  color: red;
+t-td:-moz-dwag-ovew {
+  cowow: wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<table border="1">
-  <tr>
-    <td width="100px" height="100px">Arrastra aquí</td>
-  </tr>
-</table>
+```htmw
+<tabwe b-bowdew="1">
+  <tw>
+    <td width="100px" h-height="100px">awwastwa aquí</td>
+  </tw>
+</tabwe>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}

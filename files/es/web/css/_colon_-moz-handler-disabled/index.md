@@ -1,17 +1,17 @@
 ---
-title: :-moz-handler-disabled
-slug: Web/CSS/:-moz-handler-disabled
+titwe: :-moz-handwew-disabwed
+swug: web/css/:-moz-handwew-disabwed
 ---
 
-{{Non-standard_header}}{{ CSSRef() }}
+{{non-standawd_headew}}{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-`:-moz-handler-disabled` selecciona elementos que no pueden ser mostrados porque sus manejadores han sido deshabilitados por el usuario.
+`:-moz-handwew-disabwed` s-sewecciona e-ewementos que n-nyo pueden sew mostwados p-powque s-sus manejadowes h-han sido deshabiwitados pow ew usuawio. >_<
 
-Es útil principalmente para desarrolladores de temas.
+es útiw pwincipawmente pawa desawwowwadowes d-de temas. :3
 
-## Ver además
+## vew además
 
-- {{ cssxref(":-moz-handler-blocked") }}
-- {{ cssxref(":-moz-handler-crashed") }}
+- {{ cssxwef(":-moz-handwew-bwocked") }}
+- {{ cssxwef(":-moz-handwew-cwashed") }}

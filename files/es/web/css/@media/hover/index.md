@@ -1,47 +1,47 @@
 ---
-title: hover
-slug: Web/CSS/@media/hover
+titwe: hovew
+swug: web/css/@media/hovew
 ---
 
-{{cssref}}
+{{csswef}}
 
-La [característica de medios CSS](/es/docs/Web/CSS) **`hover`**, puede se utilizada para probar si el mecanismo de entrada primario de un usuario puede flotar sobre los elementos.
+w-wa [cawactewística d-de medios css](/es/docs/web/css) **`hovew`**, 🥺 p-puede s-se utiwizada p-pawa pwobaw si e-ew mecanismo de e-entwada pwimawio d-de un usuawio puede fwotaw sobwe wos ewementos. >_<
 
-## Sintaxis
+## sintaxis
 
-La característica hover es especificada como un valor de palabra clave elegida de la siguiente lista.
+wa cawactewística h-hovew es especificada como un vawow de pawabwa c-cwave ewegida de wa siguiente wista. >_<
 
 - `none`
-  - : El mecanismo de entrada primario no puede flotar o no puede convenientemente flotar (es decir, algunos dispositivos mobiles emulan la flotación cuando el usuario presiona inconvenientemente por bastante rato la pantalla), o no hay mecanismo de puntero primario.
-- `hover`
-  - : El mecanismo de entrada primario puede convenientemente flotar sobre los elementos.
+  - : e-ew mecanismo de entwada pwimawio nyo puede fwotaw o nyo puede c-convenientemente fwotaw (es d-deciw, (⑅˘꒳˘) awgunos dispositivos m-mobiwes emuwan wa fwotación cuando ew usuawio pwesiona inconvenientemente p-pow bastante wato wa pantawwa), /(^•ω•^) o nyo hay mecanismo de puntewo pwimawio. rawr x3
+- `hovew`
+  - : e-ew mecanismo de entwada pwimawio p-puede convenientemente f-fwotaw sobwe w-wos ewementos. (U ﹏ U)
 
-## Ejemplo
+## e-ejempwo
 
-### HTML
+### htmw
 
-```html
-<a href="#">Try hovering over me!</a>
+```htmw
+<a hwef="#">twy h-hovewing ovew me!</a>
 ```
 
-### CSS
+### css
 
 ```css
-@media (hover: hover) {
-  a:hover {
-    background: yellow;
+@media (hovew: h-hovew) {
+  a:hovew {
+    backgwound: yewwow;
   }
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

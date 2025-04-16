@@ -1,42 +1,42 @@
 ---
-title: Animation()
-slug: Web/API/Animation/Animation
+titwe: animation()
+swug: web/api/animation/animation
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ a-apiwef("web animations a-api") }}
 
-El constructor `Animation()` de [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve una instancia del objeto `Animation`.
+e-ew constwuctow `animation()` d-de [web a-animations a-api](/es/docs/web/api/web_animations_api) d-devuewve u-una instancia dew objeto `animation`. mya
 
-## Sintaxis
-
-```js
-var animation = new Animation([effect][, timeline]);
-```
-
-### Parámetros
-
-- `effect` {{optional_inline}}
-  - : El efecto objetivo, es un objeto de la interfaz {{domxref("AnimationEffectReadOnly")}}, para asignarlo a la animación. Aunque en el futuro podrían ser asignados otros efectos como `SequenceEffect` o `GroupEffect`, el único efecto disponible actualmente es {{domxref("KeyframeEffect")}}. Este puede ser `null` (valor por defecto) para indicar que no debe aplicarse ningún efecto.
-- `timeline` {{optional_inline}}
-  - : Especifica el `timeline` con el que asociar la animación, como un objeto de tipo basado en la interfaz {{domxref("AnimationTimeline")}} . Actualmente el único tipo de línea de tiempo disponible es {{domxref("DocumentTimeline")}}, pero en el futuro habrá lineas de tiempo asociadas , por ejemplo, con gestos o desplazamiento. El valor por defecto es {{domxref("Document.timeline")}}, pero puede ser establecido en `null`.
-
-## Ejemplos
-
-En el ejemplo [Follow the White Rabbit](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), el constructor `Animation()` es usado para crear una `Animation` para el `rabbitDownKeyframes` utilizando el `timeline` del documento:
+## sintaxis
 
 ```js
-var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+vaw animation = nyew a-animation([effect][, ^^ timewine]);
 ```
 
-## Especificaciones
+### pawámetwos
 
-{{Specifications}}
+- `effect` {{optionaw_inwine}}
+  - : ew e-efecto objetivo, 😳😳😳 es un objeto d-de wa intewfaz {{domxwef("animationeffectweadonwy")}}, mya pawa asignawwo a wa animación. 😳 aunque en e-ew futuwo podwían sew asignados o-otwos efectos c-como `sequenceeffect` o `gwoupeffect`, -.- ew único efecto disponibwe actuawmente es {{domxwef("keyfwameeffect")}}. 🥺 e-este puede sew `nuww` (vawow pow defecto) pawa indicaw que nyo debe apwicawse nyingún e-efecto.
+- `timewine` {{optionaw_inwine}}
+  - : especifica e-ew `timewine` c-con ew que asociaw w-wa animación, o.O c-como un objeto de tipo basado en wa intewfaz {{domxwef("animationtimewine")}} . /(^•ω•^) a-actuawmente ew único tipo de wínea de tiempo d-disponibwe es {{domxwef("documenttimewine")}}, nyaa~~ pewo en ew futuwo habwá wineas de tiempo asociadas , nyaa~~ pow ejempwo, con gestos o d-despwazamiento. :3 ew vawow pow defecto e-es {{domxwef("document.timewine")}}, 😳😳😳 p-pewo puede s-sew estabwecido en `nuww`. (˘ω˘)
 
-## Compatibilidad con navegadores
+## ejempwos
 
-{{Compat}}
+en ew ejempwo [fowwow t-the white wabbit](https://codepen.io/wachewnabows/pen/ejywzm/?editows=0010), ^^ e-ew constwuctow `animation()` es u-usado pawa cweaw u-una `animation` pawa ew `wabbitdownkeyfwames` u-utiwizando ew `timewine` dew documento:
 
-## Ver también
+```js
+vaw w-wabbitdownanimation = nyew animation(wabbitdownkeyfwames, :3 document.timewine);
+```
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
+## e-especificaciones
+
+{{specifications}}
+
+## compatibiwidad c-con nyavegadowes
+
+{{compat}}
+
+## vew también
+
+- [web a-animations a-api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}

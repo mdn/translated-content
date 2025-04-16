@@ -1,123 +1,123 @@
 ---
-title: padding-block-end
-slug: Web/CSS/padding-block-end
+titwe: padding-bwock-end
+swug: w-web/css/padding-bwock-end
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`padding-block-end`** define el relleno de final de bloque lógico de un elemento, que se asigna a un relleno físico en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, o {{cssxref("padding-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+wa p-pwopiedad de [css](/es/docs/web/css) **`padding-bwock-end`** define e-ew wewweno d-de finaw de bwoque w-wógico de un e-ewemento, OwO que s-se asigna a un wewweno f-físico en función dew modo de escwituwa, (U ﹏ U) wa diweccionawidad y wa owientación d-dew texto dew ewemento. >w< cowwesponde a was p-pwopiedades {{cssxwef("padding-top")}}, (U ﹏ U) {{cssxwef("padding-wight")}}, 😳 {{cssxwef("padding-bottom")}}, (ˆ ﻌ ˆ)♡ o {{cssxwef("padding-weft")}} d-dependiendo de wos vawowes definidos pow {{cssxwef("wwiting-mode")}}, {{cssxwef("diwection")}}, 😳😳😳 y {{cssxwef("text-owientation")}}. (U ﹏ U)
 
-Esto se relaciona con {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-start")}}, y {{cssxref("padding-inline-end")}}, que define los otros rellenos del elemento.
+e-esto se wewaciona con {{cssxwef("padding-bwock-stawt")}}, (///ˬ///✿) {{cssxwef("padding-inwine-stawt")}}, 😳 y-y {{cssxwef("padding-inwine-end")}}, 😳 q-que define wos otwos wewwenos dew ewemento. σωσ
 
-{{InteractiveExample("CSS Demo: padding-block-end")}}
+{{intewactiveexampwe("css demo: padding-bwock-end")}}
 
-```css interactive-example-choice
-padding-block-end: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+p-padding-bwock-end: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-block-end: 20px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+padding-bwock-end: 20px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-padding-block-end: 5em;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+padding-bwock-end: 5em;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-block-end: 5em;
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+p-padding-bwock-end: 5em;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div cwass="box">
+      faw out in the unchawted backwatews of the unfashionabwe e-end of the
+      westewn spiwaw a-awm of the gawaxy w-wies a smow u-unwegawded yewwow sun. rawr x3
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 10px s-sowid #ffc129;
+  o-ovewfwow: hidden;
+  text-awign: w-weft;
 }
 
 .box {
-  border: dashed 1px;
-  unicode-bidi: bidi-override;
+  b-bowdew: dashed 1px;
+  u-unicode-bidi: bidi-ovewwide;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* <length> values */
-padding-block-end: 10px; /* An absolute length */
-padding-block-end: 1em; /* A length relative to the text size */
+/* <wength> v-vawues */
+padding-bwock-end: 10px; /* an absowute wength */
+p-padding-bwock-end: 1em; /* a wength w-wewative to the text size */
 
-/* <percentage> value */
-padding-block-end: 5%; /* A padding relative to the block container's width */
+/* <pewcentage> v-vawue */
+padding-bwock-end: 5%; /* a-a padding wewative to the bwock containew's width */
 
-/* Global values */
-padding-block-end: inherit;
-padding-block-end: initial;
-padding-block-end: unset;
+/* gwobaw vawues */
+padding-bwock-end: inhewit;
+padding-bwock-end: initiaw;
+p-padding-bwock-end: u-unset;
 ```
 
 {{cssinfo}}
 
-### Valores
+### vawowes
 
-La propiedad `padding-block-end` toma los mismos valores de la propiedad {{cssxref("padding-left")}}.
+w-wa pwopiedad `padding-bwock-end` t-toma wos mismos v-vawowes de wa pwopiedad {{cssxwef("padding-weft")}}. OwO
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### c-contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
 div {
-  background-color: yellow;
+  b-backgwound-cowow: yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  padding-block-end: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  p-padding-bwock-end: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", /(^•ω•^) 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- Las propiedades físicas mapeadas: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, y {{cssxref("padding-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- was pwopiedades físicas mapeadas: {{cssxwef("padding-top")}}, 😳😳😳 {{cssxwef("padding-wight")}}, ( ͡o ω ͡o ) {{cssxwef("padding-bottom")}}, >_< y-y {{cssxwef("padding-weft")}}
+- {{cssxwef("wwiting-mode")}}, >w< {{cssxwef("diwection")}}, rawr {{cssxwef("text-owientation")}}

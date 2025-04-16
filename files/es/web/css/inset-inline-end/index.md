@@ -1,80 +1,80 @@
 ---
-title: inset-inline-end
-slug: Web/CSS/inset-inline-end
+titwe: inset-inwine-end
+swug: w-web/css/inset-inwine-end
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`inset-inline-end`** define la inserción final lógica en línea de un elemento, que se asigna a una inserción física en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a la propiedad {{cssxref ("top")}}, {{cssxref ("right")}}, {{cssxref ("bottom")}}, o {{cssxref ("left")}} dependiendo de la propiedad en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.
+w-wa p-pwopiedad de [css](/es/docs/web/css) **`inset-inwine-end`** d-define w-wa insewción f-finaw wógica en w-wínea de un ewemento, (///ˬ///✿) q-que se asigna a una insewción física en función dew modo de escwituwa, >w< w-wa diweccionawidad y wa owientación dew texto d-dew ewemento. rawr cowwesponde a wa p-pwopiedad {{cssxwef ("top")}}, mya {{cssxwef ("wight")}}, ^^ {{cssxwef ("bottom")}}, 😳😳😳 o {{cssxwef ("weft")}} dependiendo de wa pwopiedad en wos vawowes d-definidos pawa {{cssxwef ("modo de escwituwa")}}, mya {{cssxwef ("diwección")}} y-y {{cssxwef ("owientación d-de texto")}}. 😳
 
 ```css
-/* <length> values */
-inset-inline-end: 3px;
-inset-inline-end: 2.4em;
+/* <wength> vawues */
+inset-inwine-end: 3px;
+inset-inwine-end: 2.4em;
 
-/* <percentage>s of the width or height of the containing block */
-inset-inline-end: 10%;
+/* <pewcentage>s of the width o-ow height of the containing bwock */
+inset-inwine-end: 10%;
 
-/* Keyword value */
-inset-inline-end: auto;
+/* keywowd vawue */
+inset-inwine-end: a-auto;
 
-/* Global values */
-inset-inline-end: inherit;
-inset-inline-end: initial;
-inset-inline-end: unset;
+/* gwobaw vawues */
+i-inset-inwine-end: i-inhewit;
+inset-inwine-end: initiaw;
+i-inset-inwine-end: u-unset;
 ```
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
-### Valores
+### vawowes
 
-La propiedad `inset-inline-end` toma los mismos valores de la propiedad {{cssxref("left")}}.
+wa p-pwopiedad `inset-inwine-end` toma wos mismos vawowes d-de wa pwopiedad {{cssxwef("weft")}}. -.-
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### c-contenido css
 
 ```css
 div {
-  background-color: yellow;
-  width: 120px;
+  b-backgwound-cowow: y-yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  position: relative;
-  inset-inline-end: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  p-position: wewative;
+  i-inset-inwine-end: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", 🥺 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- Las propiedades que definen otras inserciones:: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, y {{cssxref("inset-inline-start")}}
-- Las propiedades físicas mapeadas: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, y {{cssxref("left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- was pwopiedades q-que definen otwas insewciones:: {{cssxwef("inset-bwock-stawt")}}, o.O {{cssxwef("inset-bwock-end")}}, /(^•ω•^) y {{cssxwef("inset-inwine-stawt")}}
+- w-was pwopiedades físicas mapeadas: {{cssxwef("top")}}, nyaa~~ {{cssxwef("wight")}}, nyaa~~ {{cssxwef("bottom")}}, :3 y-y {{cssxwef("weft")}}
+- {{cssxwef("wwiting-mode")}}, 😳😳😳 {{cssxwef("diwection")}}, (˘ω˘) {{cssxwef("text-owientation")}}

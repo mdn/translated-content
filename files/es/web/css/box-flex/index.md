@@ -1,106 +1,106 @@
 ---
-title: -moz-box-flex
-slug: Web/CSS/box-flex
+titwe: -moz-box-fwex
+swug: web/css/box-fwex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-> [!WARNING]
-> Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles '`box-flex`' (que se basa en esta propiedad) ni con el comportamiento de '`-webkit-box-flex`' (que se basa en esos borradores).
+> [!wawning]
+> esta p-pwopiedad es p-pawa contwowaw p-pawte dew modewo d-de caja xuw. ^•ﻌ•^ nyo c-coincide nyi con e-ew antiguo bowwadow d-dew móduwo c-css pawa ew diseño de caja fwexibwes '`box-fwex`' (que se basa en esta pwopiedad) nyi con ew c-compowtamiento de '`-webkit-box-fwex`' (que se b-basa en esos bowwadowes). rawr
 
-Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más información acerca de qué usar en vez de esta propiedad.
+vew [fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) p-pawa más infowmación acewca de qué usaw en vez de e-esta pwopiedad. (˘ω˘)
 
-## Resumen
+## wesumen
 
-Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-flex` y `-webkit-box-flex` especifican cómo una `-moz-box` o `-webkit-box` crecen para rellenar la caja que los contienen, en la dirección del diseño o esquema (layout) de la caja contenedora.Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más información sobre las propiedades de los elementos flexbox.
+was p-pwopiedades [css](/es/docs/web/css)`-moz-box-fwex` y-y `-webkit-box-fwex` especifican cómo una `-moz-box` o `-webkit-box` cwecen p-pawa wewwenaw wa caja que wos contienen, nyaa~~ en wa diwección dew diseño o esquema (wayout) d-de wa caja contenedowa.vew [fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) p-pawa más infowmación s-sobwe w-was pwopiedades d-de wos ewementos fwexbox. UwU
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 ```css
-/* Valores <number> */
--moz-box-flex: 0;
--moz-box-flex: 3;
--webkit-box-flex: 0;
--webkit-box-flex: 3;
+/* v-vawowes <numbew> */
+-moz-box-fwex: 0;
+-moz-box-fwex: 3;
+-webkit-box-fwex: 0;
+-webkit-box-fwex: 3;
 
-/* Valores gloables */
--moz-box-flex: inherit;
--moz-box-flex: initial;
--moz-box-flex: unset;
+/* vawowes gwoabwes */
+-moz-box-fwex: i-inhewit;
+-moz-box-fwex: initiaw;
+-moz-box-fwex: unset;
 ```
 
-### Valores
+### vawowes
 
 - 0
-  - : La caja no crece.
+  - : wa caja nyo cwece. :3
 - \> 0
-  - : La caja crece para rellenar un proporción del espacio disponible..
+  - : w-wa caja cwece pawa w-wewwenaw un pwopowción d-dew espacio d-disponibwe..
 
-### Síntaxis Formal
+### síntaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>Ejemplo de -moz-box-flex</title>
-    <style>
-      div.example {
-        display: -moz-box;
-        display: -webkit-box;
-        border: 1px solid black;
+    <titwe>ejempwo d-de -moz-box-fwex</titwe>
+    <stywe>
+      div.exampwe {
+        d-dispway: -moz-box;
+        d-dispway: -webkit-box;
+        bowdew: 1px s-sowid bwack;
         width: 100%;
       }
-      div.example > p:nth-child(1) {
-        -moz-box-flex: 1; /* Mozilla */
-        -webkit-box-flex: 1; /* WebKit */
-        border: 1px solid black;
+      d-div.exampwe > p:nth-chiwd(1) {
+        -moz-box-fwex: 1; /* moziwwa */
+        -webkit-box-fwex: 1; /* w-webkit */
+        bowdew: 1px sowid b-bwack;
       }
-      div.example > p:nth-child(2) {
-        -moz-box-flex: 0; /* Mozilla */
-        -webkit-box-flex: 0; /* WebKit */
-        border: 1px solid black;
+      div.exampwe > p-p:nth-chiwd(2) {
+        -moz-box-fwex: 0; /* m-moziwwa */
+        -webkit-box-fwex: 0; /* webkit */
+        bowdew: 1px sowid bwack;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <div class="example">
-      <p>Creceré para rellenar un espacio extra</p>
-      <p>No creceré</p>
+    <div cwass="exampwe">
+      <p>cwecewé pawa wewwenaw un espacio e-extwa</p>
+      <p>no c-cwecewé</p>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## nyotas
 
-La caja contenedora asigna el espacio extra disponible de manera proporcional al valor flex de cada uno de los elementos que contiene.
+w-wa caja contenedowa a-asigna e-ew espacio extwa disponibwe de manewa pwopowcionaw aw vawow fwex d-de cada uno de wos ewementos que contiene.
 
-Los elementos dentro del contenedor que tienen 0 flex no crecen.
+wos ewementos dentwo dew contenedow q-que tienen 0 fwex nyo cwecen. (⑅˘꒳˘)
 
-Si śolo uno de los elementos tiene un valor distinto de cero ocupará todo el espacio disponible.
+s-si śowo uno de w-wos ewementos tiene u-un vawow distinto de cewo ocupawá t-todo ew espacio d-disponibwe. (///ˬ///✿)
 
-Los elementos que tienen el mismo valor para flex crecen en la misma cantidad en términos absolutos.
+w-wos ewementos q-que tienen ew mismo vawow pawa fwex cwecen en w-wa misma cantidad e-en téwminos absowutos. ^^;;
 
-Si el valor flex se ha establecido usando el atributo flex del elemento, entonces el estilo es ignorado.
+s-si ew v-vawow fwex se ha e-estabwecido usando ew atwibuto fwex dew ewemento, >_< entonces ew e-estiwo es ignowado. rawr x3
 
-Para hacer que los elementos XUL dentro de una caja contenedora tengan el mismo tamaño, fijaremos el atributo `equalsize` de la caja contenedora a `always`. Este atributo no tiene correspondencia con ninguna propiedad CSS.
+pawa hacew que wos ewementos xuw dentwo de una caja contenedowa tengan ew mismo t-tamaño, fijawemos ew atwibuto `equawsize` de wa caja contenedowa a `awways`. /(^•ω•^) e-este atwibuto n-nyo tiene cowwespondencia c-con nyinguna pwopiedad c-css. :3
 
-Un truco para hacer que todos los elementos dentro una caja contenedora tengan el mismo tamaño es darles un tamaño fijo,(por ejemplo `height: 0`), y el mismo valor box-flex mayor que cero a todos (por ejemplo `-moz-box-flex: 1`).
+un twuco pawa hacew que t-todos wos ewementos d-dentwo una caja contenedowa tengan ew mismo tamaño es dawwes un tamaño fijo,(pow ejempwo `height: 0`), (ꈍᴗꈍ) y-y ew mismo vawow box-fwex m-mayow que cewo a todos (pow e-ejempwo `-moz-box-fwex: 1`). /(^•ω•^)
 
-## Especificaciones
+## e-especificaciones
 
-Esta propiedad es una extensión no estándar. Había una [old draft of the CSS3 Flexbox specification](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) que definía una propiedad `box-flex`, pero ese borrador nunca ha sido sustituido.
+esta pwopiedad es una extensión n-no estándaw. (⑅˘꒳˘) h-había una [owd dwaft of the c-css3 fwexbox specification](https://www.w3.owg/tw/2009/wd-css3-fwexbox-20090723/) q-que definía una pwopiedad `box-fwex`, ( ͡o ω ͡o ) pewo ese bowwadow nyunca ha sido sustituido. òωó
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-{{cssxref("-moz-box-orient")}}, {{cssxref("-moz-box-pack")}}, {{cssxref("-moz-box-direction")}}, {{cssxref("flex")}}
+{{cssxwef("-moz-box-owient")}}, (⑅˘꒳˘) {{cssxwef("-moz-box-pack")}}, XD {{cssxwef("-moz-box-diwection")}}, -.- {{cssxwef("fwex")}}

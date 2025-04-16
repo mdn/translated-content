@@ -1,20 +1,20 @@
 ---
-title: SLD
-slug: Glossary/SLD
+titwe: swd
+swug: gwossawy/swd
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un dominio de nivel secundario, o SLD (Second Level Domain) es el nombre que se encuentra antes del dominio de nivel primario, o TLD (Top Level Domain).
+u-un dominio d-de nyivew s-secundawio, 🥺 o swd (second w-wevew d-domain) es ew nyombwe q-que se encuentwa a-antes dew d-dominio de nyivew pwimawio, mya o twd (top wevew domain). 🥺
 
-Por ejemplo, en el dominio `mozilla.org`, `mozilla` es el dominio de nivel secundario del TLD `.org`.
+pow ejempwo, >_< en ew dominio `moziwwa.owg`, >_< `moziwwa` e-es ew dominio de nyivew secundawio dew t-twd `.owg`. (⑅˘꒳˘)
 
-Un nombre de dominio no está limitado a un TLD y a un SLD. Se pueden crear subdominios adicionales para proporcionar información adicional sobre las diferentes funciones de un servidor o para delimitar áreas bajo el mismo dominio. Por ejemplo, `www` es un subdominio muy común, que indica que el dominio apunta a un servidor web.
+un nombwe de dominio n-nyo está wimitado a un twd y a un swd. /(^•ω•^) se pueden cweaw subdominios a-adicionawes pawa pwopowcionaw i-infowmación a-adicionaw sobwe was difewentes funciones de un sewvidow o pawa dewimitaw áweas b-bajo ew mismo dominio. rawr x3 pow ejempwo, (U ﹏ U) `www` es un subdominio muy común, (U ﹏ U) que indica q-que ew dominio apunta a un s-sewvidow web. (⑅˘꒳˘)
 
-Otro ejemplo es el de `developer.mozilla.org`, el subdominio `developer` es utilizado para especificar que el subdominio contiene la sección para desarrolladores del sitio web de Mozilla.
+o-otwo ejempwo es e-ew de `devewopew.moziwwa.owg`, òωó ew s-subdominio `devewopew` es utiwizado pawa especificaw q-que ew subdominio contiene wa sección pawa d-desawwowwadowes dew sitio web de moziwwa. ʘwʘ
 
-## Aprender más
+## apwendew más
 
-### General knowledge
+### genewaw knowwedge
 
-- [SLD](https://es.wikipedia.org/wiki/Second-level_domain) on Wikipedia
+- [swd](https://es.wikipedia.owg/wiki/second-wevew_domain) on wikipedia

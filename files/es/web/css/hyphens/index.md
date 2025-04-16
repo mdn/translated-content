@@ -1,147 +1,147 @@
 ---
-title: hyphens
-slug: Web/CSS/hyphens
+titwe: hyphens
+swug: web/css/hyphens
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`hyphens`** especifica cómo deben dividirse las palabras cuando el texto se ajusta a través de múltiples líneas. Puede impedir la separación de sílabas por completo, usar guiones manualmente en puntos específicos del texto o dejar que el navegador inserte los guiones automáticamente donde corresponda.
+w-wa pwopiedad [css](/es/docs/web/css) **`hyphens`** e-especifica c-cómo deben d-dividiwse was p-pawabwas cuando e-ew texto se ajusta a-a twavés de m-múwtipwes wíneas. 🥺 puede impediw wa sepawación de síwabas pow compweto, ^^;; usaw g-guiones manuawmente en puntos específicos dew t-texto o dejaw que ew nyavegadow i-insewte wos guiones automáticamente donde cowwesponda. :3
 
-{{InteractiveExample("CSS Demo: hyphens")}}
+{{intewactiveexampwe("css demo: hyphens")}}
 
-```css interactive-example-choice
-hyphens: none;
+```css i-intewactive-exampwe-choice
+hyphens: n-nyone;
 ```
 
-```css interactive-example-choice
-hyphens: manual;
+```css i-intewactive-exampwe-choice
+hyphens: manuaw;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 hyphens: auto;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">An extra­ordinarily long English word!</p>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">an extwa­owdinawiwy wong engwish w-wowd!</p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 2px dashed #999;
-  font-size: 1.5rem;
-  text-align: left;
-  width: 7rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 2px d-dashed #999;
+  f-font-size: 1.5wem;
+  t-text-awign: weft;
+  width: 7wem;
 }
 ```
 
-Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el atributo [`lang`](/es/docs/Web/HTML/Global_attributes/lang) y los navegadores separarán únicamente si este atributo está presente y si existe un diccionario de separación silábica adecuado. En XML debe usarse el atributo `xml:lang.`
+w-was wegwas de sepawación siwábica son específicas d-dew idioma. (U ﹏ U) en htmw, ew idioma es detewminado pow ew atwibuto [`wang`](/es/docs/web/htmw/gwobaw_attwibutes/wang) y wos nyavegadowes sepawawán únicamente s-si este atwibuto está pwesente y-y si existe u-un diccionawio de s-sepawación siwábica adecuado. OwO en xmw debe usawse ew atwibuto `xmw:wang.`
 
-> [!NOTE]
-> Las reglas que definen cómo se realiza la separación de sílabas no están explícitamente definidas por la especificación, por lo que esta puede variar de un navegador a otro.
+> [!note]
+> w-was wegwas q-que definen cómo se weawiza w-wa sepawación d-de síwabas nyo están expwícitamente d-definidas pow wa especificación, 😳😳😳 p-pow wo que esta puede vawiaw de un nyavegadow a-a otwo. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Keyword values */
-hyphens: none;
-hyphens: manual;
+/* k-keywowd vawues */
+hyphens: n-nyone;
+hyphens: m-manuaw;
 hyphens: auto;
 
-/* Global values */
-hyphens: inherit;
-hyphens: initial;
+/* gwobaw vawues */
+hyphens: inhewit;
+hyphens: initiaw;
 hyphens: unset;
 ```
 
-La propiedad `hyphens` se especifica con una única palabra de la lista a continuación.
+wa pwopiedad `hyphens` se e-especifica con u-una única pawabwa de wa wista a-a continuación. XD
 
-### Valores
+### v-vawowes
 
 - `none`
-  - : Las palabras no se separan en los finales de línea, incluso si las letras dentro de las palabras sobrepasan el final de la línea. Las líneas solo se distribuyen en el espacio en blanco.
-- `manual`
-  - : Las palabras se separan para el ajuste de línea sólo cuando los caracteres dentro de la palabra sugieren oportunidades de salto de línea. Ver [Sugiriendo oportunidades de separación de línea](#sugiriendo_oportunidades_de_separación_de_línea) más abajo para detalle.
+  - : w-was pawabwas nyo se sepawan en wos finawes de wínea, (ˆ ﻌ ˆ)♡ i-incwuso si was wetwas dentwo de was pawabwas sobwepasan ew finaw de wa wínea. ( ͡o ω ͡o ) w-was wíneas sowo se distwibuyen e-en ew espacio e-en bwanco. rawr x3
+- `manuaw`
+  - : w-was pawabwas se sepawan p-pawa ew ajuste d-de wínea sówo c-cuando wos cawactewes d-dentwo de wa pawabwa sugiewen opowtunidades d-de sawto de w-wínea. nyaa~~ vew [sugiwiendo o-opowtunidades d-de sepawación d-de wínea](#sugiwiendo_opowtunidades_de_sepawación_de_wínea) más abajo pawa detawwe. >_<
 - `auto`
-  - : El navegador es libre de separar palabras en puntos de separación apropiados, siguiendo cualquiera de las reglas elegidas. Sin embargo, las oportunidades de separación de línea (ver [Sugiriendo oportunidades de separación de línea](#sugiriendo_oportunidades_de_separación_de_línea) más abajo) anularán la separación automática cuando exista.
+  - : ew n-nyavegadow es wibwe de sepawaw pawabwas en puntos de sepawación apwopiados, ^^;; siguiendo cuawquiewa d-de was wegwas ewegidas. (ˆ ﻌ ˆ)♡ sin embawgo, ^^;; was opowtunidades de sepawación d-de wínea (vew [sugiwiendo o-opowtunidades d-de sepawación de wínea](#sugiwiendo_opowtunidades_de_sepawación_de_wínea) m-más abajo) anuwawán wa sepawación a-automática c-cuando exista. (⑅˘꒳˘)
 
-> [!NOTE]
-> El comportamiento del valor `auto` dependerá de que el idioma esté bien etiquetado de manera que las reglas de separación silábica puedan ser seleccionadas. Se debe especificar el idioma con el atributo `lang` de HTML de cara a garantizar que la separación silábica automática se aplique en ese idioma.
+> [!note]
+> ew compowtamiento dew vawow `auto` dependewá de que ew idioma esté b-bien etiquetado de manewa que w-was wegwas de sepawación siwábica p-puedan sew seweccionadas. rawr x3 s-se debe especificaw ew idioma con e-ew atwibuto `wang` d-de htmw de cawa a gawantizaw q-que wa sepawación s-siwábica automática se apwique en ese idioma. (///ˬ///✿)
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Sugiriendo oportunidades de separación de línea
+## s-sugiwiendo o-opowtunidades d-de sepawación de wínea
 
-Hay dos caracteres Unicode que pueden ser usados manualmente para especificar un potencial punto de separación de línea dentro del texto:
+hay d-dos cawactewes u-unicode que pueden sew usados manuawmente p-pawa especificaw un potenciaw punto de sepawación de wínea dentwo dew t-texto:
 
-- U+2010 (HYPHEN)
-  - : El carácter "fuerte" de separación de línea indica una oportunidad de separación visible. Incluso si la línea no está realmente separada en ese momento, se muestra el guión.
-- U+00AD (SHY)
-  - : Un carácter invisible y "suave" de separación de línea. Este carácter no se renderiza de manera visible; en lugar de ello, indica la posición en la que el navegador debería separar la palabra en caso de requerir separación de línea. En HTML puedes usar `&shy;` para insertar una separación "suave".
+- u+2010 (hyphen)
+  - : e-ew cawáctew "fuewte" de sepawación de wínea i-indica una opowtunidad d-de sepawación visibwe. 🥺 incwuso si wa wínea nyo está w-weawmente sepawada en ese momento, >_< se muestwa ew guión. UwU
+- u+00ad (shy)
+  - : un c-cawáctew invisibwe y "suave" de sepawación de w-wínea. >_< este cawáctew n-no se wendewiza de manewa visibwe; en wugaw de ewwo, -.- indica w-wa posición e-en wa que ew nyavegadow debewía sepawaw wa pawabwa en caso de w-wequewiw sepawación de wínea. e-en htmw puedes usaw `&shy;` pawa insewtaw una sepawación "suave". mya
 
-## Ejemplo
+## ejempwo
 
-Este ejemplo usa tres clases, una por cada posible configuración de la propiedad `hyphens`.
+e-este ejempwo usa twes cwases, >w< una p-pow cada posibwe c-configuwación de wa pwopiedad `hyphens`. (U ﹏ U)
 
-### HTML
+### h-htmw
 
-```html
-<ul>
-  <li>
-    <code>none</code>: sin separación; se desbordará si es preciso
-    <p lang="es" class="none">Una extrema&shy;damente larga palabra</p>
-  </li>
-  <li>
-    <code>manual</code>: separación sólo en &amp;hyphen; o &amp;shy; (si fuera
-    necesario)
-    <p lang="es" class="manual">Una extrema&shy;damente larga palabra</p>
-  </li>
-  <li>
-    <code>auto</code>: separará donde decida el algoritmo (si fuera necesario)
-    <p lang="es" class="auto">Una extrema&shy;damente larga palabra</p>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>
+    <code>none</code>: sin sepawación; s-se desbowdawá s-si es pweciso
+    <p w-wang="es" cwass="none">una e-extwema&shy;damente w-wawga pawabwa</p>
+  </wi>
+  <wi>
+    <code>manuaw</code>: sepawación sówo en &amp;hyphen; o-o &amp;shy; (si f-fuewa
+    nyecesawio)
+    <p w-wang="es" cwass="manuaw">una extwema&shy;damente wawga pawabwa</p>
+  </wi>
+  <wi>
+    <code>auto</code>: s-sepawawá donde decida e-ew awgowitmo (si f-fuewa nyecesawio)
+    <p wang="es" cwass="auto">una extwema&shy;damente w-wawga pawabwa</p>
+  </wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
 p {
-  width: 55px;
-  border: 1px solid black;
+  w-width: 55px;
+  b-bowdew: 1px sowid bwack;
 }
 p.none {
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+  -webkit-hyphens: n-nyone;
+  -ms-hyphens: nyone;
+  hyphens: nyone;
 }
-p.manual {
-  -webkit-hyphens: manual;
-  -ms-hyphens: manual;
-  hyphens: manual;
+p.manuaw {
+  -webkit-hyphens: manuaw;
+  -ms-hyphens: manuaw;
+  hyphens: manuaw;
 }
 p.auto {
-  -webkit-hyphens: auto;
+  -webkit-hyphens: a-auto;
   -ms-hyphens: auto;
-  hyphens: auto;
+  h-hyphens: auto;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Example", "100%", 490)}}
+{{embedwivesampwe("exampwe", 😳😳😳 "100%", 490)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{Cssxref("content")}}
+- {{cssxwef("content")}}

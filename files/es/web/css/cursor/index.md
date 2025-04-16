@@ -1,238 +1,238 @@
 ---
-title: cursor
-slug: Web/CSS/cursor
+titwe: cuwsow
+swug: web/css/cuwsow
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Resumen
+### wesumen
 
-La propiedad [CSS:cursor](/es/docs/Web/CSS/cursor) especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
+w-wa pwopiedad [css:cuwsow](/es/docs/web/css/cuwsow) e-especifica e-ew tipo de c-cuwsow que se mostwawa c-cuando este s-se encuentwe s-sobwe un ewemento. (U ﹏ U)
 
-- [CSS:Valor_inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing): `CSS:auto`
-- Se aplica a: todos los elementos
-- [CSS:inheritance](/es/docs/Web/CSS/CSS_cascade/Inheritance): Si
-- Porcentaje: N/A
-- Media: [CSS:Media:Visual](/es/docs/Web/CSS/@media), [CSS:Media:Interactivo](/es/docs/CSS/Media/Interactivo)
-- [CSS:Valor_calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d):como sea especificado con URLs relativos convertidos a URLs absolutos.
+- [css:vawow_iniciaw](/es/docs/web/css/css_cascade/vawue_pwocessing): `css:auto`
+- se apwica a: todos wos ewementos
+- [css:inhewitance](/es/docs/web/css/css_cascade/inhewitance): si
+- powcentaje: ny/a
+- m-media: [css:media:visuaw](/es/docs/web/css/@media), UwU [css:media:intewactivo](/es/docs/css/media/intewactivo)
+- [css:vawow_cawcuwado](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d):como sea especificado con uwws wewativos c-convewtidos a uwws absowutos. 😳😳😳
 
-### Sintaxis
-
-```
-cursor: <std-cursor-name> | <url> [<x> <y>]? [, <url> [<x> <y>]?]* | CSS:inherit ;
-```
+### s-sintaxis
 
 ```
-cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
+cuwsow: <std-cuwsow-name> | <uww> [<x> <y>]? [, <uww> [<x> <y>]?]* | css:inhewit ;
 ```
 
-### Values
+```
+cuwsow: [<uww> [<x> <y>]?,]*  <std-cuwsow-name> ;
+```
 
-- \<url> [ ]?
-  - : URL del cursor seleccionado mas posición opcional. Mas de un URL puede provocar problemas, in caso de que algunos tipode de imágenes de cursor no puedan ser usados.vea [Uso_de_URL_como_valor_de_la_propiedad_cursor](/es/Uso_de_URL_como_valor_de_la_propiedad_cursor) para mas detalles.
-- \<std-cursor-name>
-  - : Algunos nombres de cursores se encuentra en la siguiente tabla.
+### vawues
 
-#### Supported CSS standard values
+- \<uww> [ ]?
+  - : u-uww dew cuwsow seweccionado m-mas posición o-opcionaw. XD mas de un uww puede pwovocaw pwobwemas, o.O in caso de que awgunos t-tipode de imágenes de cuwsow nyo puedan sew usados.vea [uso_de_uww_como_vawow_de_wa_pwopiedad_cuwsow](/es/uso_de_uww_como_vawow_de_wa_pwopiedad_cuwsow) pawa mas detawwes. (⑅˘꒳˘)
+- \<std-cuwsow-name>
+  - : a-awgunos nyombwes de cuwsowes s-se encuentwa e-en wa siguiente t-tabwa. 😳😳😳
 
-<table class="standard-table">
+#### suppowted c-css standawd vawues
+
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Categoría</th>
-      <th>nombre de CSS</th>
-      <th>Descripción</th>
-    </tr>
-    <tr>
-      <td rowspan="3">General</td>
-      <td style="cursor: auto"><code>auto</code></td>
+    <tw>
+      <th>categowía</th>
+      <th>nombwe d-de css</th>
+      <th>descwipción</th>
+    </tw>
+    <tw>
+      <td wowspan="3">genewaw</td>
+      <td stywe="cuwsow: auto"><code>auto</code></td>
       <td>
-        El browser (user agent) determina el cursor que mostrara basado en el
-        contenido presente.<br />E.g. equivalent to <code>text</code> when
-        hovering text
+        e-ew bwowsew (usew agent) detewmina ew cuwsow que mostwawa basado en ew
+        contenido pwesente.<bw />e.g. nyaa~~ e-equivawent to <code>text</code> w-when
+        h-hovewing t-text
       </td>
-    </tr>
-    <tr>
-      <td style="cursor: default"><code>default</code></td>
-      <td>default cursor (typically an arrow)</td>
-    </tr>
-    <tr>
-      <td style="cursor: none"><code>none</code></td>
-      <td>no cursor is rendered</td>
-    </tr>
-    <tr>
-      <td rowspan="5">Links &#x26; status</td>
-      <td style="cursor: context-menu"><code>context-menu</code></td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: defauwt"><code>defauwt</code></td>
+      <td>defauwt cuwsow (typicawwy a-an awwow)</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: none"><code>none</code></td>
+      <td>no c-cuwsow i-is wendewed</td>
+    </tw>
+    <tw>
+      <td wowspan="5">winks &#x26; s-status</td>
+      <td stywe="cuwsow: context-menu"><code>context-menu</code></td>
       <td>
-        cursor indicating that a context menu is available under the cursor
+        cuwsow i-indicating that a context menu is avaiwabwe u-undew the cuwsow
       </td>
-    </tr>
-    <tr>
-      <td style="cursor: help"><code>help</code></td>
-      <td>cursor indicating help is available</td>
-    </tr>
-    <tr>
-      <td style="cursor: pointer"><code>pointer</code></td>
-      <td>cursor used when over links (typically a hand)</td>
-    </tr>
-    <tr>
-      <td style="cursor: progress"><code>progress</code></td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: h-hewp"><code>hewp</code></td>
+      <td>cuwsow indicating h-hewp is avaiwabwe</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: pointew"><code>pointew</code></td>
+      <td>cuwsow used when ovew winks (typicawwy a hand)</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: pwogwess"><code>pwogwess</code></td>
       <td>
-        cursor indicating that the program is busy in the background but the
-        user can still interact with the interface (unlike for
+        c-cuwsow i-indicating that the pwogwam is b-busy in the backgwound b-but the
+        u-usew can stiww intewact with the intewface (unwike fow
         <code>wait</code>)
       </td>
-    </tr>
-    <tr>
-      <td style="cursor: wait"><code>wait</code></td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: wait"><code>wait</code></td>
       <td>
-        cursor indicating the program is busy (sometimes an hourglass or a
+        cuwsow indicating the pwogwam is busy (sometimes a-an houwgwass ow a
         watch)
       </td>
-    </tr>
-    <tr>
-      <td rowspan="4">Selection</td>
-      <td style="cursor: cell"><code>cell</code></td>
-      <td>cursor indicating that cells can be selected</td>
-    </tr>
-    <tr>
-      <td style="cursor: crosshair"><code>crosshair</code></td>
-      <td>cross cursor, often used to indicate selection in a bitmap</td>
-    </tr>
-    <tr>
-      <td style="cursor: text"><code>text</code></td>
-      <td>cursor indicating text can be selected (typically an I-beam)</td>
-    </tr>
-    <tr>
-      <td style="cursor: vertical-text"><code>vertical-text</code></td>
+    </tw>
+    <tw>
+      <td w-wowspan="4">sewection</td>
+      <td s-stywe="cuwsow: c-ceww"><code>ceww</code></td>
+      <td>cuwsow indicating that c-cewws can be sewected</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: c-cwosshaiw"><code>cwosshaiw</code></td>
+      <td>cwoss c-cuwsow, rawr often used to indicate sewection i-in a bitmap</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: t-text"><code>text</code></td>
+      <td>cuwsow i-indicating text c-can be sewected (typicawwy an i-beam)</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: v-vewticaw-text"><code>vewticaw-text</code></td>
       <td>
-        cursor indicating that vertical text can be selected (typically a
-        sideways I-beam)
+        cuwsow indicating that vewticaw text can be sewected (typicawwy a
+        s-sideways i-beam)
       </td>
-    </tr>
-    <tr>
-      <td rowspan="5">Drag and drop</td>
-      <td style="cursor: alias"><code>alias</code></td>
-      <td>cursor indicating an alias or shortcut is to be created</td>
-    </tr>
-    <tr>
-      <td style="cursor: copy"><code>copy</code></td>
-      <td>cursor indicating that something can be copied</td>
-    </tr>
-    <tr>
-      <td style="cursor: move"><code>move</code></td>
-      <td>the hovered object may be moved</td>
-    </tr>
-    <tr>
-      <td style="cursor: no-drop"><code>no-drop</code></td>
-      <td>cursor showing that a drop is not allowed at the current location</td>
-    </tr>
-    <tr>
-      <td style="cursor: not-allowed"><code>not-allowed</code></td>
-      <td>cursor showing that something cannot be done</td>
-    </tr>
-    <tr>
-      <td rowspan="15">Resize &#x26; scrolling</td>
-      <td style="cursor: all-scroll"><code>all-scroll</code></td>
+    </tw>
+    <tw>
+      <td wowspan="5">dwag and dwop</td>
+      <td stywe="cuwsow: awias"><code>awias</code></td>
+      <td>cuwsow i-indicating a-an awias ow showtcut i-is to be cweated</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: copy"><code>copy</code></td>
+      <td>cuwsow i-indicating t-that something can be copied</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: move"><code>move</code></td>
+      <td>the hovewed object may be m-moved</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: n-nyo-dwop"><code>no-dwop</code></td>
+      <td>cuwsow showing t-that a dwop i-is nyot awwowed at the cuwwent wocation</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: n-nyot-awwowed"><code>not-awwowed</code></td>
+      <td>cuwsow showing that s-something cannot b-be done</td>
+    </tw>
+    <tw>
+      <td wowspan="15">wesize &#x26; scwowwing</td>
+      <td stywe="cuwsow: aww-scwoww"><code>aww-scwoww</code></td>
       <td>
-        cursor showing that something can be scrolled in any direction (panned)
+        cuwsow s-showing that s-something can b-be scwowwed in any diwection (panned)
       </td>
-    </tr>
-    <tr>
-      <td style="cursor: col-resize"><code>col-resize</code></td>
-      <td>cursor for resizing columns horizontally</td>
-    </tr>
-    <tr>
-      <td style="cursor: e-resize"><code>e-resize</code></td>
-      <td>cursor for resizing the right edge of a box</td>
-    </tr>
-    <tr>
-      <td style="cursor: ew-resize"><code>ew-resize</code></td>
-      <td>cursor for resizing left or right</td>
-    </tr>
-    <tr>
-      <td style="cursor: n-resize"><code>n-resize</code></td>
-      <td>cursor for resizing the top edge of a box</td>
-    </tr>
-    <tr>
-      <td style="cursor: ne-resize"><code>ne-resize</code></td>
-      <td>cursor for resizing the top right corner of a box</td>
-    </tr>
-    <tr>
-      <td style="cursor: nesw-resize"><code>nesw-resize</code></td>
-      <td>cursor for resizing in the top-right or bottom-left directions</td>
-    </tr>
-    <tr>
-      <td style="cursor: ns-resize"><code>ns-resize</code></td>
-      <td>cursor for resizing up or down</td>
-    </tr>
-    <tr>
-      <td style="cursor: nw-resize"><code>nw-resize</code></td>
-      <td>cursor for resizing the top left corner of a box</td>
-    </tr>
-    <tr>
-      <td style="cursor: nwse-resize"><code>nwse-resize</code></td>
-      <td>cursor for resizing in the top-left or bottom-right directions</td>
-    </tr>
-    <tr>
-      <td style="cursor: row-resize"><code>row-resize</code></td>
-      <td>cursor for resizing rows vertically</td>
-    </tr>
-    <tr>
-      <td style="cursor: s-resize"><code>s-resize</code></td>
-      <td>cursor for resizing the bottom edge of a box</td>
-    </tr>
-    <tr>
-      <td style="cursor: se-resize"><code>se-resize</code></td>
-      <td>cursor for resizing the bottom right corner of a box</td>
-    </tr>
-    <tr>
-      <td style="cursor: sw-resize"><code>sw-resize</code></td>
-      <td>cursor for resizing the bottom left corner of a box</td>
-    </tr>
-    <tr>
-      <td style="cursor: w-resize"><code>w-resize</code></td>
-      <td>cursor for resizing the left edge of a box</td>
-    </tr>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: c-cow-wesize"><code>cow-wesize</code></td>
+      <td>cuwsow f-fow wesizing cowumns howizontawwy</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: e-wesize"><code>e-wesize</code></td>
+      <td>cuwsow fow wesizing the wight edge of a box</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: e-ew-wesize"><code>ew-wesize</code></td>
+      <td>cuwsow fow wesizing weft ow wight</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: n-ny-wesize"><code>n-wesize</code></td>
+      <td>cuwsow fow wesizing the top edge of a box</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: ne-wesize"><code>ne-wesize</code></td>
+      <td>cuwsow fow wesizing the top wight cownew o-of a box</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: nyesw-wesize"><code>nesw-wesize</code></td>
+      <td>cuwsow f-fow wesizing i-in the top-wight ow bottom-weft diwections</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: n-nys-wesize"><code>ns-wesize</code></td>
+      <td>cuwsow f-fow wesizing up ow down</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: nyw-wesize"><code>nw-wesize</code></td>
+      <td>cuwsow f-fow wesizing the top w-weft cownew of a box</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: nywse-wesize"><code>nwse-wesize</code></td>
+      <td>cuwsow f-fow wesizing in the top-weft o-ow bottom-wight d-diwections</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: w-wow-wesize"><code>wow-wesize</code></td>
+      <td>cuwsow fow wesizing w-wows vewticawwy</td>
+    </tw>
+    <tw>
+      <td s-stywe="cuwsow: s-s-wesize"><code>s-wesize</code></td>
+      <td>cuwsow fow wesizing t-the bottom e-edge of a box</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: se-wesize"><code>se-wesize</code></td>
+      <td>cuwsow f-fow wesizing t-the bottom w-wight cownew of a box</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: s-sw-wesize"><code>sw-wesize</code></td>
+      <td>cuwsow fow wesizing the b-bottom weft cownew o-of a box</td>
+    </tw>
+    <tw>
+      <td stywe="cuwsow: w-wesize"><code>w-wesize</code></td>
+      <td>cuwsow fow wesizing the weft edge of a-a box</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Extended Gecko CSS values
+#### e-extended gecko c-css vawues
 
-| CSS name                                        | Description                                                                                                                   | Deprecation |
+| css n-nyame                                        | descwiption                                                                                                                   | d-depwecation |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [`-moz-alias`](/es/docs/Web/CSS/cursor)         | replaced by standard value `alias` as described in the previous table                                                         | Gecko 1.8a6 |
-| [`-moz-cell`](/es/docs/Web/CSS/cursor)          | replaced by standard value `cell` as described in the previous table                                                          | Gecko 1.8a6 |
-| [`-moz-context-menu`](/es/docs/Web/CSS/cursor)  | replaced by standard value `context-menu` as described in the previous table                                                  | Gecko 1.8a6 |
-| [`-moz-copy`](/es/docs/Web/CSS/cursor)          | replaced by standard value `copy` as described in the previous table                                                          | Gecko 1.8a6 |
-| [`-moz-grab`](/es/docs/Web/CSS/cursor#grab)     | a cursor value that should indicate that an element or an object in a webpage can be grabbed                                  |             |
-| [`-moz-grabbing`](/es/docs/Web/CSS/cursor#grab) | a cursor value that should indicate that an element or an object is currently being grabbed                                   |             |
-| [`-moz-spinning`](/es/docs/Web/CSS/cursor)      | replaced by standard value `progress` as described in the previous table                                                      | Gecko 1.7.1 |
-| [`-moz-zoom-in`](/es/docs/Web/CSS/cursor)       | used to indicate that an element or an object in a webpage is actually being resized, enlarged or is actually being magnified |             |
-| [`-moz-zoom-out`](/es/docs/Web/CSS/cursor)      | used to indicate that an element or an object in a webpage is actually being resized, reduced or is actually being zoomed out |             |
+| [`-moz-awias`](/es/docs/web/css/cuwsow)         | wepwaced by standawd vawue `awias` as descwibed in the pwevious tabwe                                                         | g-gecko 1.8a6 |
+| [`-moz-ceww`](/es/docs/web/css/cuwsow)          | wepwaced b-by standawd vawue `ceww` as descwibed i-in the pwevious tabwe                                                          | g-gecko 1.8a6 |
+| [`-moz-context-menu`](/es/docs/web/css/cuwsow)  | wepwaced b-by standawd vawue `context-menu` a-as descwibed i-in the pwevious t-tabwe                                                  | g-gecko 1.8a6 |
+| [`-moz-copy`](/es/docs/web/css/cuwsow)          | wepwaced by standawd vawue `copy` as descwibed in the pwevious tabwe                                                          | gecko 1.8a6 |
+| [`-moz-gwab`](/es/docs/web/css/cuwsow#gwab)     | a-a cuwsow v-vawue that s-shouwd indicate that an ewement o-ow an object in a webpage can be gwabbed                                  |             |
+| [`-moz-gwabbing`](/es/docs/web/css/cuwsow#gwab) | a cuwsow vawue that s-shouwd indicate t-that an ewement ow an object i-is cuwwentwy being gwabbed                                   |             |
+| [`-moz-spinning`](/es/docs/web/css/cuwsow)      | wepwaced by standawd v-vawue `pwogwess` a-as descwibed in the pwevious t-tabwe                                                      | g-gecko 1.7.1 |
+| [`-moz-zoom-in`](/es/docs/web/css/cuwsow)       | used to indicate that an ewement ow an object in a webpage is a-actuawwy being w-wesized, -.- enwawged o-ow is actuawwy b-being magnified |             |
+| [`-moz-zoom-out`](/es/docs/web/css/cuwsow)      | u-used to indicate that an ewement o-ow an object i-in a webpage is actuawwy being w-wesized, (✿oωo) weduced o-ow is actuawwy being zoomed out |             |
 
-### Examples
+### e-exampwes
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/cursor.html)
+[vew ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/cuwsow.htmw)
 
 ```
-Inline:
+i-inwine:
 
-<span style="cursor: crosshair">Some Text</span>
+<span stywe="cuwsow: c-cwosshaiw">some t-text</span>
 
-External:
+extewnaw:
 
-.pointer {
- cursor: pointer;
+.pointew {
+ c-cuwsow: pointew;
 }
 .move {
- cursor: move;
+ cuwsow: move;
 }
 ```
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

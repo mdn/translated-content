@@ -1,108 +1,108 @@
 ---
-title: column-count
-slug: Web/CSS/column-count
+titwe: cowumn-count
+swug: web/css/cowumn-count
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`column-count`** divide el contenido de un elemento en el número de columnas indicado.
+w-wa pwopiedad [css](/es/docs/web/css) **`cowumn-count`** d-divide e-ew contenido de u-un ewemento en e-ew nyúmewo de c-cowumnas indicado. ʘwʘ
 
-{{InteractiveExample("CSS Demo: column-count")}}
+{{intewactiveexampwe("css d-demo: c-cowumn-count")}}
 
-```css interactive-example-choice
-column-count: 2;
+```css intewactive-exampwe-choice
+cowumn-count: 2;
 ```
 
-```css interactive-example-choice
-column-count: 3;
+```css intewactive-exampwe-choice
+cowumn-count: 3;
 ```
 
-```css interactive-example-choice
-column-count: 4;
+```css i-intewactive-exampwe-choice
+cowumn-count: 4;
 ```
 
-```css interactive-example-choice
-column-count: auto;
-column-width: 8rem;
+```css intewactive-exampwe-choice
+c-cowumn-count: auto;
+cowumn-width: 8wem;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. (ˆ ﻌ ˆ)♡ michaewmas t-tewm watewy ovew, 😳😳😳 and t-the wowd chancewwow s-sitting in
+    wincown's inn haww. :3 impwacabwe nyovembew weathew. OwO as much mud i-in the stweets
+    as if the watews had but nyewwy wetiwed fwom the face of the e-eawth, (U ﹏ U) and it
+    wouwd nyot be w-wondewfuw to meet a-a megawosauwus, >w< f-fowty feet wong o-ow so, (U ﹏ U)
+    waddwing wike an ewephantine wizawd u-up howbown hiww. 😳
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 100%;
-  text-align: left;
+  t-text-awign: weft;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Keyword value */
-column-count: auto;
+/* keywowd vawue */
+cowumn-count: auto;
 
-/* <integer> value */
-column-count: 3;
+/* <integew> v-vawue */
+cowumn-count: 3;
 
-/* Global values */
-column-count: inherit;
-column-count: initial;
-column-count: unset;
+/* g-gwobaw v-vawues */
+cowumn-count: i-inhewit;
+cowumn-count: initiaw;
+cowumn-count: unset;
 ```
 
-### Valores
+### v-vawowes
 
 - `auto`
-  - : El número de columnas es determinado por otras propiedades CSS, como {{cssxref("column-width")}}.
-- `{{cssxref("&lt;integer&gt;")}}`
-  - : Es un {{cssxref("&lt;integer&gt;")}} estrictamente positivo que describe el número ideal de columnas en las que el contenido del elemento va a fluir. Si la propiedad {{cssxref("column-width")}} se establece a un valor que no sea `auto`, se limitará a indicar el número máximo permitido de columnas.
+  - : ew n-nyúmewo de cowumnas es detewminado p-pow otwas p-pwopiedades css, (ˆ ﻌ ˆ)♡ como {{cssxwef("cowumn-width")}}. 😳😳😳
+- `{{cssxwef("&wt;integew&gt;")}}`
+  - : e-es un {{cssxwef("&wt;integew&gt;")}} estwictamente positivo q-que descwibe ew nyúmewo ideaw de cowumnas e-en was que ew contenido dew ewemento v-va a fwuiw. (U ﹏ U) si wa pwopiedad {{cssxwef("cowumn-width")}} s-se estabwece a un v-vawow que nyo sea `auto`, (///ˬ///✿) se wimitawá a indicaw ew númewo máximo pewmitido de cowumnas. 😳
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### HTML
+### h-htmw
 
-```html
-<p class="content-box">
-  This is a bunch of text split into three columns using the CSS `column-count`
-  property. The text is equally distributed over the columns.
+```htmw
+<p cwass="content-box">
+  t-this i-is a bunch of text s-spwit into thwee cowumns using the css `cowumn-count`
+  pwopewty. 😳 t-the text is equawwy distwibuted ovew the cowumns. σωσ
 </p>
 ```
 
-### CSS
+### css
 
 ```css
 .content-box {
-  column-count: 3;
+  cowumn-count: 3;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Example', 'auto', 120)}}
+{{embedwivesampwe('exampwe', rawr x3 'auto', OwO 120)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Diseño con columnas múltiples](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Conceptos básicos de Multicol](/es/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [diseño con cowumnas m-múwtipwes](/es/docs/weawn/css/css_wayout/muwtipwe-cowumn_wayout)
+- [conceptos b-básicos d-de muwticow](/es/docs/web/css/css_muwticow_wayout/basic_concepts)

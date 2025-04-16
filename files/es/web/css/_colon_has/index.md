@@ -1,33 +1,33 @@
 ---
-title: :has
-slug: Web/CSS/:has
+titwe: :has
+swug: web/css/:has
 ---
 
-{{ CSSRef() }}{{SeeCompatTable}}
+{{ c-csswef() }}{{seecompattabwe}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) CSS **`:has()`** representa un elemento si cualquiera de los selectores, en relación con el {{cssxref(":scope")}} del elemento dado, que se pasa como parámetro, coincide con al menos un elemento. La pseudo clase `:has()` tomo un selector como argumento.
+w-wa [pseudo-cwass](/es/docs/web/css/pseudo-cwasses) c-css **`:has()`** w-wepwesenta u-un ewemento s-si cuawquiewa de w-wos sewectowes, ( ͡o ω ͡o ) en wewación con ew {{cssxwef(":scope")}} dew ewemento dado, rawr x3 que s-se pasa como pawámetwo, nyaa~~ coincide con aw menos u-un ewemento. /(^•ω•^) wa pseudo cwase `:has()` t-tomo un sewectow como awgumento. rawr
 
-## Síntaxis
+## síntaxis
 
 ```
-:has(selector_list) { propiedades de estilo }
+:has(sewectow_wist) { pwopiedades de e-estiwo }
 ```
 
-## Ejemplos
+## ejempwos
 
-El siguiente selector selecciona únicamente los elementos {{HTMLElement("a")}} que contienen {{HTMLElement("img")}} hijo:
+ew siguiente s-sewectow s-sewecciona únicamente wos ewementos {{htmwewement("a")}} que contienen {{htmwewement("img")}} hijo:
 
 ```css
 a:has(> img) {
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

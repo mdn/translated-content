@@ -1,112 +1,112 @@
 ---
-title: list-style-type
-slug: Web/CSS/list-style-type
+titwe: wist-stywe-type
+swug: w-web/css/wist-stywe-type
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Resumen
+### w-wesumen
 
-El {{ Cssxref("list-style-type", "tipo de estilo de lista") }} especifica la apariencia del [listado](/es/docs/Web/HTML/Element/li).
+ew {{ c-cssxwef("wist-stywe-type", /(^•ω•^) "tipo d-de estiwo de wista") }} e-especifica w-wa apawiencia d-dew [wistado](/es/docs/web/htmw/ewement/wi). 😳😳😳
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("disc", "disco/punto") }}
-- Se aplica a: elementos con 'display: list-item'
-- {{ Cssxref("inheritance", "Valor heredado") }}: Sí
-- Porcentajes: n/a
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculado") }}: según se especificó
+- {{ cssxwef("initiaw", ( ͡o ω ͡o ) "vawow iniciaw") }}: {{ cssxwef("disc", "disco/punto") }}
+- se apwica a: ewementos con 'dispway: w-wist-item'
+- {{ cssxwef("inhewitance", >_< "vawow hewedado") }}: s-sí
+- powcentajes: ny/a
+- m-medio: {{ cssxwef("media:visuaw", >w< "visuaw") }}
+- {{ cssxwef("computed vawue", rawr "vawow cawcuwado") }}: s-según se especificó
 
-### Sintaxis
+### sintaxis
 
 ```
- list-style-type:  <std-list-style-name> | {{ Cssxref("none") }} | {{ Cssxref("inherit") }} ;
+ wist-stywe-type:  <std-wist-stywe-name> | {{ c-cssxwef("none") }} | {{ c-cssxwef("inhewit") }} ;
 ```
 
-### Valores
+### vawowes
 
-- \<std-list-style-name>
-  - : un nombre de estilo de lista estándar: `disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, lower-latin, upper-latin, armenian, georgian, lower-alpha, upper-alpha`
+- \<std-wist-stywe-name>
+  - : un nombwe de estiwo de wista estándaw: `disc, 😳 c-ciwcwe, >w< squawe, decimaw, (⑅˘꒳˘) decimaw-weading-zewo, OwO wowew-woman, (ꈍᴗꈍ) uppew-woman, 😳 w-wowew-gweek, 😳😳😳 wowew-watin, uppew-watin, mya a-awmenian, mya g-geowgian, (⑅˘꒳˘) w-wowew-awpha, (U ﹏ U) uppew-awpha`
 - `disc`
-  - : un disco.
-- `circle`
-  - : un círculo.
-- `square`
-  - : un cuadrado.
-- `decimal`
-  - : números decimales empezando con 1.
-- `decimal-leading-zero`
-  - : números decimales empezando eventualmente por ceros (por ejemplo: 01, 02, 03, ..., 98, 99).
-- `lower-roman`
-  - : números romanos en minúscula (i, ii, iii, iv, v, etc.).
-- `upper-roman`
-  - : números romanos en mayúscula (I, II, III, IV, V, etc.).
-- `lower-greek`
-  - : letras griegas en minúscula alfa/α, beta/β, gamma/γ, ...
-- `lower-latin`
-  - : letras ASCII en minúscula (a, b, c, ... z).
-- `upper-latin`
-  - : letras ASCII en mayúscula (A, B, C, ... Z).
-- `armenian`
-  - : numeración armenia tradicional (ayb/ayp, ben/pen, gim/keem, ...).
-- `georgian`
-  - : numeración georgiana tradicional (an, ban, gan, ..., he, tan, in, in-an, ...).
-- `lower-alpha`
-  - : es igual que `lower-latin`.
-- `upper-alpha`
-  - : es igual que `upper-latin`.
+  - : u-un disco. mya
+- `ciwcwe`
+  - : un cíwcuwo. ʘwʘ
+- `squawe`
+  - : un cuadwado. (˘ω˘)
+- `decimaw`
+  - : n-nyúmewos decimawes empezando con 1.
+- `decimaw-weading-zewo`
+  - : nyúmewos decimawes e-empezando eventuawmente pow cewos (pow ejempwo: 01, (U ﹏ U) 02, 03, ^•ﻌ•^ ..., 98, 99).
+- `wowew-woman`
+  - : nyúmewos womanos en minúscuwa (i, (˘ω˘) i-ii, iii, :3 iv, v, etc.). ^^;;
+- `uppew-woman`
+  - : n-nyúmewos w-womanos en mayúscuwa (i, i-ii, 🥺 iii, iv, v, (⑅˘꒳˘) etc.).
+- `wowew-gweek`
+  - : wetwas gwiegas en minúscuwa a-awfa/α, nyaa~~ b-beta/β, :3 gamma/γ, ...
+- `wowew-watin`
+  - : wetwas a-ascii en minúscuwa (a, ( ͡o ω ͡o ) b-b, c, ... z). mya
+- `uppew-watin`
+  - : w-wetwas ascii en mayúscuwa (a, (///ˬ///✿) b-b, (˘ω˘) c, ... z).
+- `awmenian`
+  - : nyumewación awmenia twadicionaw (ayb/ayp, ^^;; b-ben/pen, (✿oωo) gim/keem, (U ﹏ U) ...).
+- `geowgian`
+  - : n-nyumewación geowgiana twadicionaw (an, -.- b-ban, gan, ..., he, ^•ﻌ•^ t-tan, in, rawr in-an, ...). (˘ω˘)
+- `wowew-awpha`
+  - : es iguaw que `wowew-watin`. nyaa~~
+- `uppew-awpha`
+  - : es iguaw que `uppew-watin`. UwU
 - `none`
-  - : nada.
+  - : nyada. :3
 
-## Ejemplos
+## ejempwos
 
-### CSS
+### css
 
 ```css
-ol.normal {
-  list-style-type: upper-alpha;
+ow.nowmaw {
+  wist-stywe-type: u-uppew-awpha;
 }
 
-/* or use the shortcut "list-style": */
-ol.shortcut {
-  list-style: upper-alpha;
+/* o-ow use the showtcut "wist-stywe": */
+ow.showtcut {
+  w-wist-stywe: u-uppew-awpha;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<ol class="normal">
-  List 1
-  <li>Hello</li>
-  <li>World</li>
-  <li>What's up?</li>
-</ol>
+```htmw
+<ow cwass="nowmaw">
+  wist 1
+  <wi>hewwo</wi>
+  <wi>wowwd</wi>
+  <wi>nani's up?</wi>
+</ow>
 
-<ol class="shortcut">
-  List 2
-  <li>Looks</li>
-  <li>Like</li>
-  <li>The</li>
-  <li>Same</li>
-</ol>
+<ow c-cwass="showtcut">
+  wist 2
+  <wi>wooks</wi>
+  <wi>wike</wi>
+  <wi>the</wi>
+  <wi>same</wi>
+</ow>
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Ejemplos","200","300")}}
+{{embedwivesampwe("ejempwos","200","300")}}
 
-### Notas
+### nyotas
 
-Ésta especificación no define el comportamiento en el caso de una lista con más elementos que la cantidad de letras del alfabeto utilizado. Por ejemplo, después de 26 letras, el resultado con `lower-latin` no es definido (y continuará como: AA, AB, AC,...). Por eso, para listas largas, es recomendable utilizar números.
+Ésta especificación n-nyo define ew compowtamiento e-en ew caso d-de una wista c-con más ewementos que wa cantidad d-de wetwas dew a-awfabeto utiwizado. (⑅˘꒳˘) p-pow ejempwo, (///ˬ///✿) d-después de 26 wetwas, ^^;; ew wesuwtado con `wowew-watin` n-nyo es definido (y c-continuawá c-como: aa, >_< a-ab, rawr x3 ac,...). pow e-eso, /(^•ω•^) pawa wistas wawgas, :3 es wecomendabwe utiwizaw nyúmewos. (ꈍᴗꈍ)
 
-### Especificaciones
+### e-especificaciones
 
-- [CSS 1](https://www.w3.org/TR/CSS1#list-style-type)
-- [CSS 2.1](https://www.w3.org/TR/CSS21/generate.html#propdef-list-style-type)
-- [css3-lists](https://www.w3.org/TR/css3-lists/#list-style-type)
+- [css 1](https://www.w3.owg/tw/css1#wist-stywe-type)
+- [css 2.1](https://www.w3.owg/tw/css21/genewate.htmw#pwopdef-wist-stywe-type)
+- [css3-wists](https://www.w3.owg/tw/css3-wists/#wist-stywe-type)
 
-### Compatibilidad con navegadores
+### compatibiwidad con nyavegadowes
 
-### Ver también
+### vew también
 
-{{ Cssxref("list-style") }}, {{ Cssxref("list-style-image") }}, {{ Cssxref("list-style-position") }}
+{{ cssxwef("wist-stywe") }}, /(^•ω•^) {{ cssxwef("wist-stywe-image") }}, (⑅˘꒳˘) {{ c-cssxwef("wist-stywe-position") }}

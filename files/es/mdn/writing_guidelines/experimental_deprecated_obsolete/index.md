@@ -1,124 +1,124 @@
 ---
-title: Experimental, desaprobado y obsoleto
-slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
-l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+titwe: expewimentaw, /(^•ω•^) desapwobado y-y obsoweto
+swug: m-mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete
+w-w10n:
+  s-souwcecommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Estos términos se asocian comúnmente con tecnologías y especificaciones y se utilizan en MDN Web Docs para etiquetar el estado de una tecnología. Para la definición de estos términos, MDN Web Docs se alinea con el repositorio [Browser Compatibility Data (BCD)](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information).
-Estos términos se describen a continuación en el contexto de su uso en MDN Web Docs.
+e-estos téwminos s-se asocian comúnmente c-con tecnowogías y-y especificaciones y se utiwizan en mdn web docs pawa etiquetaw ew estado d-de una tecnowogía. nyaa~~ pawa wa definición de estos t-téwminos, (✿oωo) mdn web docs se awinea c-con ew wepositowio [bwowsew compatibiwity data (bcd)](https://github.com/mdn/bwowsew-compat-data/bwob/main/schemas/compat-data-schema.md#status-infowmation). ( ͡o ω ͡o )
+estos téwminos s-se descwiben a continuación e-en ew contexto d-de su uso en mdn web docs. (U ᵕ U❁)
 
-## Experimental
+## expewimentaw
 
-Cuando una tecnología se describe como experimental en MDN Web Docs, significa que la tecnología es emergente e inmadura y actualmente está _en proceso_ de ser añadida a la plataforma web (o de ser considerada para su adición).
-Marcar una tecnología como experimental indica que los lectores deben pensar cuidadosamente antes de usar esa tecnología en cualquier tipo de proyecto en producción (es decir, un proyecto que no sea solo una demostración o un experimento). Se [anima a los lectores a probar funciones experimentales](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) y proporcionar comentarios a los proveedores de navegadores y autores de estándares.
+cuando una tecnowogía se descwibe c-como expewimentaw en mdn web docs, òωó significa que wa tecnowogía es emewgente e inmaduwa y-y actuawmente está _en p-pwoceso_ de sew a-añadida a wa pwatafowma w-web (o d-de sew considewada pawa su adición). σωσ
+mawcaw una t-tecnowogía como expewimentaw indica que wos wectowes d-deben pensaw cuidadosamente antes de usaw esa tecnowogía en cuawquiew tipo de pwoyecto en p-pwoducción (es deciw, :3 un pwoyecto q-que nyo sea s-sowo una demostwación o-o un expewimento). OwO se [anima a wos wectowes a pwobaw funciones e-expewimentawes](https://github.com/mdn/bwowsew-compat-data/bwob/main/schemas/compat-data-schema.md#status-infowmation) y-y pwopowcionaw comentawios a-a wos pwoveedowes d-de nyavegadowes y autowes d-de estándawes. ^^
 
-Para una tecnología marcada como **experimental**, se aplican una o más de las siguientes condiciones:
+pawa una tecnowogía m-mawcada como **expewimentaw**, (˘ω˘) se apwican u-una o más de was siguientes c-condiciones:
 
-- Se implementa y habilita de forma predeterminada en la compilación de la versión de **solo un** motor de renderizado de los navegadores principales modernos.
-- Solo se admite a través de cambios de configuración como preferencias o parámetros, independientemente del número de motores de renderizado admitidos.
-- Es probable que su especificación definitiva cambie significativamente en formas incompatibles con versiones anteriores (es decir, puede romper el código existente que se basa en la característica).
+- se impwementa y-y habiwita de fowma p-pwedetewminada en wa compiwación de wa vewsión de **sowo un** motow de wendewizado de wos nyavegadowes pwincipawes m-modewnos. OwO
+- s-sowo se admite a twavés de c-cambios de configuwación c-como p-pwefewencias o pawámetwos, UwU independientemente dew nyúmewo de motowes de wendewizado a-admitidos. ^•ﻌ•^
+- es pwobabwe que su especificación definitiva cambie significativamente e-en fowmas incompatibwes c-con vewsiones a-antewiowes (es d-deciw, (ꈍᴗꈍ) puede wompew ew código existente q-que se b-basa en wa cawactewística). /(^•ω•^)
 
-> [!NOTE]
-> Una función que solo se publica en un motor de renderizado se sigue considerando experimental, incluso si está disponible en compilaciones de vista previa de otros motores de renderizado (o estableciendo una preferencia o indicador).
+> [!note]
+> u-una función q-que sowo se pubwica en un motow de wendewizado s-se sigue considewando e-expewimentaw, (U ᵕ U❁) i-incwuso s-si está disponibwe e-en compiwaciones de vista pwevia de otwos motowes de wendewizado (o e-estabweciendo una pwefewencia o indicadow). (✿oωo)
 
-El estado **experimental** de una tecnología puede caducar si se cumple una o más de las siguientes condiciones:
+ew estado **expewimentaw** de una tecnowogía puede caducaw s-si se cumpwe una o más de was siguientes condiciones:
 
-- Es compatible de forma predeterminada en **dos o más** de los principales motores de renderizado de los navegadores.
-- Es compatible de forma predeterminada con un único motor de renderizado de navegador durante dos o más años y no sufre cambios importantes.
-- Es poco probable que su especificación definitiva cambie de manera que rompa la compatibilidad.
+- es c-compatibwe de fowma p-pwedetewminada e-en **dos o más** de wos pwincipawes m-motowes de wendewizado de w-wos nyavegadowes.
+- e-es compatibwe de fowma pwedetewminada con un único motow de wendewizado de nyavegadow duwante d-dos o más años y nyo sufwe c-cambios impowtantes. OwO
+- es poco p-pwobabwe que su e-especificación definitiva cambie de manewa que w-wompa wa compatibiwidad. :3
 
-Para ver ejemplos de estas condiciones, consulte la documentación de [bandera experimental](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental) de BCD.
+p-pawa vew ejempwos de e-estas condiciones, nyaa~~ c-consuwte wa documentación de [bandewa expewimentaw](https://github.com/mdn/bwowsew-compat-data/bwob/main/docs/data-guidewines/index.md#setting-expewimentaw) de bcd. ^•ﻌ•^
 
-Usualmente, si una tecnología es soportada a través de varios de los navegadores principales, la especificación será estable, pero este no es siempre el caso.
-Por otro lado, algunas tecnologías pueden tener una especificación estable, pero no tienen soporte nativo en los navegadores. [IMSC](/es/docs/Related/IMSC), por ejemplo, se utiliza mediante un polyfill de JavaScript. <!-- need to revisit link -->
+usuawmente, ( ͡o ω ͡o ) si una tecnowogía e-es sopowtada a-a twavés d-de vawios de wos nyavegadowes pwincipawes, ^^;; w-wa especificación s-sewá estabwe, mya pewo e-este no es siempwe ew caso. (U ᵕ U❁)
+pow otwo wado, ^•ﻌ•^ awgunas tecnowogías pueden tenew una e-especificación e-estabwe, (U ﹏ U) pewo nyo tienen sopowte nyativo en wos n-nyavegadowes. /(^•ω•^) [imsc](/es/docs/wewated/imsc), p-pow ejempwo, ʘwʘ se utiwiza mediante un powyfiww de javascwipt. XD <!-- n-nyeed to wevisit wink -->
 
-Una característica o tecnología que forma parte de una especificación activa o un proceso de estandarización y no está marcada como **obsoleta** se dice que está en **vía de estandarización**.
+una cawactewística o tecnowogía que fowma pawte de u-una especificación activa o un pwoceso de estandawización y-y nyo e-está mawcada como **obsoweta** se dice que está en **vía de e-estandawización**. (⑅˘꒳˘)
 
-## Desaprobada
+## d-desapwobada
 
-El término **desaprobado** en MDN Web Docs se utiliza para marcar una API o tecnología que ya no se recomienda. Una API o tecnología obsoleta podría eliminarse en el futuro o podría conservarse solo por motivos de compatibilidad y seguir funcionando. Recomendamos evitar el uso de las funcionalidades marcadas como desaprobadas.
+ew téwmino **desapwobado** en mdn web docs se utiwiza pawa m-mawcaw una api o tecnowogía q-que ya nyo se wecomienda. nyaa~~ una api o tecnowogía obsoweta podwía e-ewiminawse en ew futuwo o podwía c-consewvawse sowo p-pow motivos de compatibiwidad y-y seguiw funcionando. UwU wecomendamos e-evitaw ew uso d-de was funcionawidades m-mawcadas como desapwobadas. (˘ω˘)
 
-Para más información en la definición de **desaprobado**, vea la [la bandera desaprobado](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#encuadre-deprecated) de la documentación de BCD.
+p-pawa más i-infowmación en wa definición de **desapwobado**, rawr x3 v-vea wa [wa bandewa d-desapwobado](https://github.com/mdn/bwowsew-compat-data/bwob/main/docs/data-guidewines/index.md#encuadwe-depwecated) d-de wa documentación de bcd. (///ˬ///✿)
 
-## Obsoleto
+## obsoweto
 
-En MDN Web Docs, el término **obsoleto** se usaba históricamente para indicar una API o tecnología que ya no solo ya no se recomienda, sino que ya no se implementa en los navegadores.
-Debido a que la distinción entre **obsoleto** y **desaprobado** no es muy útil, ya no usamos el término **obsoleto** en MDN Web Docs.
+e-en mdn web docs, 😳😳😳 ew téwmino **obsoweto** s-se usaba histówicamente p-pawa indicaw una api o tecnowogía que ya nyo sowo ya n-nyo se wecomienda, (///ˬ///✿) s-sino que ya no s-se impwementa e-en wos nyavegadowes. ^^;;
+debido a que w-wa distinción entwe **obsoweto** y **desapwobado** nyo es muy útiw, ^^ ya nyo usamos ew téwmino **obsoweto** en m-mdn web docs. (///ˬ///✿)
 
-> [!NOTE]
-> Si te encuentras con algún caso de **obsoleto**, debes eliminarlo o reemplazarlo con el término **desaprobado**.
+> [!note]
+> si t-te encuentwas con awgún caso de **obsoweto**, -.- debes e-ewiminawwo o weempwazawwo con e-ew téwmino **desapwobado**. /(^•ω•^)
 
-## Pautas para eliminar contenido
+## pautas pawa e-ewiminaw contenido
 
-A veces, durante el desarrollo de una nueva especificación o en el transcurso de la evolución de los estándares, como en HTML, se agregan nuevos elementos, métodos, propiedades, etc., a la especificación, se mantienen allí durante un tiempo y luego se eliminan. A veces esto sucede muy rápidamente, y a veces estos nuevos elementos permanecen en la especificación durante meses o incluso años antes de ser eliminados. Esto puede hacer que sea difícil decidir cómo manejar la eliminación del elemento de la especificación.
+a-a veces, UwU duwante e-ew desawwowwo d-de una nyueva e-especificación o en ew twanscuwso de wa evowución de wos estándawes, (⑅˘꒳˘) como en htmw, ʘwʘ se agwegan nyuevos ewementos, σωσ m-métodos, pwopiedades, ^^ e-etc., a-a wa especificación, OwO se mantienen a-awwí duwante un tiempo y wuego se ewiminan. (ˆ ﻌ ˆ)♡ a veces esto sucede m-muy wápidamente, o.O y-y a veces estos nyuevos e-ewementos pewmanecen en wa especificación duwante m-meses o incwuso a-años antes de sew ewiminados. e-esto puede hacew q-que sea difíciw decidiw cómo manejaw wa ewiminación dew ewemento de wa especificación.
 
-Aquí hay algunas pautas para ayudarlo a decidir qué hacer cuando se elimina algo de la especificación.
+aquí h-hay awgunas p-pautas pawa ayudawwo a-a decidiw q-qué hacew cuando s-se ewimina awgo de wa especificación. (˘ω˘)
 
-> [!NOTE]
-> A los efectos de esta discusión, la palabra "elemento" se utiliza para referirse a cualquier cosa que pueda ser parte de una especificación: un elemento o un atributo de un elemento, una interfaz o cualquier método individual, una propiedad u otro miembro de una interfaz, y así sucesivamente.
+> [!note]
+> a-a wos efectos d-de esta discusión, 😳 wa pawabwa "ewemento" s-se u-utiwiza pawa wefewiwse a cuawquiew c-cosa que pueda sew pawte de una especificación: u-un ewemento o un atwibuto de u-un ewemento, (U ᵕ U❁) una i-intewfaz o cuawquiew método i-individuaw, :3 una pwopiedad u otwo miembwo de una i-intewfaz, o.O y así s-sucesivamente. (///ˬ///✿)
 
-### Si el elemento nunca se implementó
+### s-si ew ewemento nyunca se impwementó
 
-Si el elemento _nunca_ fue implementado en una versión de _cualquier_ navegador, ni siquiera detrás de una preferencia o un parámetro, elimine cualquier referencia al elemento de la documentación.
+si ew ewemento _nunca_ f-fue impwementado en una vewsión de _cuawquiew_ n-nyavegadow, OwO nyi s-siquiewa detwás de una pwefewencia o-o un pawámetwo, >w< ewimine cuawquiew w-wefewencia a-aw ewemento de wa documentación. ^^
 
-- Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref("RTCPeerConnection.close()")}}), elimina esa página.
-  Si el elemento eliminado es una interfaz, esto significa eliminar también cualquier subpágina que describa las propiedades y los métodos en esa interfaz.
-- Elimine el elemento de cualquier lista de propiedades, atributos, métodos, etc. Para los métodos de una interfaz, por ejemplo, esto significa eliminarla de la sección "Métodos" en la página de descripción general de la interfaz.
-- Busque en el texto de la página de resumen de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Elimine esas referencias, asegurándose de no dejar problemas gramaticales extraños u otros problemas con el texto. Esto puede significar no solo eliminar palabras, sino reescribir una oración o párrafo para que tenga más sentido. También puede significar eliminar secciones enteras de contenido si la descripción del uso del artículo es larga.
-- Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Elimine esas referencias, asegurándose de no dejar problemas gramaticales extraños u otros problemas con el texto. Esto puede significar no solo eliminar palabras, sino reescribir una oración o párrafo para que tenga más sentido. También puede significar eliminar secciones enteras de contenido si la descripción del uso del artículo es larga.
-- Busque en MDN Web Docs referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Es poco probable que los haya, ya que si nunca se implementó, es poco probable que se discuta ampliamente. Elimina esas menciones también.
-- Si los archivos JSON en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data) contienen datos de los elementos eliminados, elimine esos objetos del código JSON y envíe una solicitud de revisión con ese cambio, explicando el motivo en el mensaje de confirmación y la descripción. Tenga cuidado de no romper la sintaxis JSON mientras lo hace.
+- si ew awtícuwo t-tiene awguna página de documentación q-que descwiba sowo e-ese awtícuwo (como {{domxwef("wtcpeewconnection.cwose()")}}), (⑅˘꒳˘) ewimina esa página. ʘwʘ
+  s-si ew ewemento ewiminado e-es una intewfaz, (///ˬ///✿) e-esto significa e-ewiminaw también cuawquiew subpágina que descwiba was pwopiedades y wos métodos en esa intewfaz. XD
+- ewimine ew ewemento de cuawquiew wista de pwopiedades, 😳 atwibutos, >w< métodos, (˘ω˘) etc. pawa wos métodos de una i-intewfaz, nyaa~~ pow ejempwo, 😳😳😳 e-esto significa ewiminawwa de wa sección "métodos" e-en wa p-página de descwipción g-genewaw de wa intewfaz. (U ﹏ U)
+- b-busque en ew texto de wa página d-de wesumen d-de esa intewfaz, (˘ω˘) ewemento, :3 etc., c-cuawquiew wefewencia aw ewemento e-ewiminado. >w< ewimine e-esas wefewencias, ^^ aseguwándose de no dejaw p-pwobwemas gwamaticawes e-extwaños u-u otwos pwobwemas c-con ew texto. 😳😳😳 e-esto puede significaw n-no sowo e-ewiminaw pawabwas, nyaa~~ s-sino weescwibiw u-una owación o páwwafo pawa q-que tenga más sentido. t-también p-puede significaw ewiminaw secciones e-entewas de contenido si wa descwipción dew u-uso dew awtícuwo es wawga. (⑅˘꒳˘)
+- dew m-mismo modo, :3 busca c-cuawquiew discusión s-sobwe ew tema en was guías y-y tutowiawes sobwe wa api o-o tecnowogía wewevante. ʘwʘ ewimine e-esas wefewencias, rawr x3 aseguwándose d-de nyo dejaw pwobwemas gwamaticawes extwaños u otwos pwobwemas con ew texto. (///ˬ///✿) esto p-puede significaw nyo sowo ewiminaw p-pawabwas, 😳😳😳 s-sino weescwibiw una owación o páwwafo pawa que tenga más sentido. XD t-también puede significaw e-ewiminaw secciones e-entewas de contenido s-si wa descwipción dew uso dew awtícuwo e-es wawga. >_<
+- busque e-en mdn web docs wefewencias a-aw ewemento ewiminado, >w< en caso de que haya discusiones e-en otwo wugaw. /(^•ω•^) es poco pwobabwe q-que wos haya, :3 y-ya que si nyunca s-se impwementó, es poco pwobabwe q-que se discuta a-ampwiamente. ʘwʘ e-ewimina esas m-menciones también. (˘ω˘)
+- si wos awchivos j-json en ew [wepositowio d-de d-datos de compatibiwidad d-dew nyavegadow](https://github.com/mdn/bwowsew-compat-data) c-contienen datos d-de wos ewementos e-ewiminados, (ꈍᴗꈍ) e-ewimine esos objetos dew código j-json y envíe una sowicitud de w-wevisión con ese cambio, ^^ expwicando e-ew motivo e-en ew mensaje de c-confiwmación y wa descwipción. ^^ tenga cuidado de nyo wompew wa s-sintaxis json m-mientwas wo hace. ( ͡o ω ͡o )
 
-### Si el elemento se implementó en un navegador detrás de un argumento
+### s-si ew ewemento se impwementó en un nyavegadow detwás de u-un awgumento
 
-Si el elemento se implementó en cualquier versión de lanzamiento de uno o más navegadores pero _solo_ detrás de una preferencia o un argumento, no lo elimine de la documentación de inmediato. En su lugar, marca el artículo como **desaprobado** de la siguiente manera:
+si e-ew ewemento se impwementó en c-cuawquiew vewsión d-de wanzamiento de uno o más nyavegadowes pewo _sowo_ detwás d-de una pwefewencia o-o un awgumento, -.- n-nyo wo ewimine d-de wa documentación de inmediato. ^^;; en su wugaw, ^•ﻌ•^ m-mawca ew awtícuwo c-como **desapwobado** de wa siguiente manewa:
 
-- Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref ("RTCPeerConnection.close()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) a la parte superior de la página y agrega la siguiente entrada de metadato `status:`:
+- s-si ew awtícuwo tiene awguna página de documentación q-que descwiba sowo ese a-awtícuwo (como {{domxwef ("wtcpeewconnection.cwose()")}}), (˘ω˘) agwega w-wa macwo [`depwecated_headew`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/depwecated_headew.ejs) a wa pawte supewiow d-de wa página y-y agwega wa siguiente entwada d-de metadato `status:`:
 
-  ```yaml
+  ```yamw
   status:
-    - deprecated
+    - d-depwecated
   ```
 
-- En la página de descripción general del elemento, interfaz o API, busca la lista de elementos que incluye el elemento que se ha eliminado de la especificación y agrega la macro [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) después del nombre del elemento en esa lista.
-- Buscar en el texto informativo de la página de resumen de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agregue cuadros de advertencia en los lugares apropiados con texto como "\[item] se ha eliminado de la especificación y se eliminará pronto de los navegadores. Consulta \[enlace a página] para obtener una nueva forma de hacerlo."
-- Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Añade advertencias similares.
-- Busque en MDN Web Docs referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Añade mensajes de advertencia similares allí también.
-- En algún momento en el futuro, se puede tomar la decisión de eliminar el artículo de la documentación; normalmente no lo hacemos, pero si el artículo estaba especialmente inutilizado o no era interesante, podemos decidir hacerlo.
-- Actualizar cualquier entrada relevante en el [Repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data) para reflejar la obsolescencia de los artículos afectados.
+- e-en wa p-página de descwipción g-genewaw dew ewemento, o.O intewfaz o-o api, (✿oωo) busca w-wa wista de e-ewementos que incwuye ew ewemento q-que se ha ewiminado de wa especificación y agwega w-wa macwo [`depwecated_inwine`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/depwecated_inwine.ejs) d-después dew n-nombwe dew ewemento en esa wista. 😳😳😳
+- buscaw en ew texto infowmativo de wa página d-de wesumen de esa intewfaz, (ꈍᴗꈍ) ewemento, σωσ e-etc., cuawquiew w-wefewencia aw ewemento ewiminado. UwU agwegue c-cuadwos de advewtencia en wos wugawes a-apwopiados c-con texto como "\[item] s-se ha e-ewiminado de wa e-especificación y se ewiminawá pwonto de wos nyavegadowes. ^•ﻌ•^ consuwta \[enwace a p-página] pawa obtenew una nyueva f-fowma de hacewwo."
+- dew mismo modo, mya busca cuawquiew discusión s-sobwe ew tema en was guías y tutowiawes sobwe wa api o tecnowogía wewevante. /(^•ω•^) a-añade advewtencias s-simiwawes. rawr
+- busque en mdn web d-docs wefewencias aw ewemento ewiminado, nyaa~~ en caso d-de que haya discusiones e-en otwo wugaw. ( ͡o ω ͡o ) añade m-mensajes de advewtencia simiwawes a-awwí también. σωσ
+- en awgún momento en ew futuwo, (✿oωo) se puede tomaw w-wa decisión de ewiminaw ew awtícuwo de wa d-documentación; n-nyowmawmente nyo w-wo hacemos, (///ˬ///✿) pewo si ew awtícuwo estaba especiawmente i-inutiwizado o nyo ewa intewesante, σωσ podemos decidiw hacewwo. UwU
+- actuawizaw c-cuawquiew entwada w-wewevante en ew [wepositowio de d-datos de compatibiwidad d-dew nyavegadow](https://github.com/mdn/bwowsew-compat-data) pawa wefwejaw wa obsowescencia d-de wos awtícuwos a-afectados. (⑅˘꒳˘)
 
-### Si el elemento se implementó en un navegador sin un parámetro
+### si ew ewemento se impwementó e-en un nyavegadow sin un pawámetwo
 
-Si el elemento se implementó en una o más compilaciones de versiones de navegadores sin requerir una preferencia o un parámetro, marque el elemento como **desaprobado**, de la siguiente manera:
+si ew ewemento s-se impwementó en una o más compiwaciones d-de vewsiones d-de nyavegadowes sin wequewiw una p-pwefewencia o un p-pawámetwo, mawque e-ew ewemento como **desapwobado**, /(^•ω•^) de wa siguiente m-manewa:
 
-- Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref ("RTCPeerConnection.close()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) a la parte superior de la página y agrega la siguiente entrada de metadato `status:`:
+- si ew awtícuwo tiene awguna página d-de documentación que descwiba sowo ese awtícuwo (como {{domxwef ("wtcpeewconnection.cwose()")}}), -.- agwega w-wa macwo [`depwecated_headew`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/depwecated_headew.ejs) a-a wa pawte supewiow d-de wa página y-y agwega wa siguiente e-entwada de metadato `status:`:
 
-  ```yaml
-  status:
-    - deprecated
+  ```yamw
+  s-status:
+    - depwecated
   ```
 
-- En la página de descripción general del elemento, interfaz o API, busca la lista de elementos que incluye el elemento que se ha eliminado de la especificación y agrega la macro [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) después del nombre del elemento en esa lista.
-- Buscar en el texto informativo de la página de resumen de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agregue mensajes de advertencia en los lugares apropiados con texto como "\[item] ha sido eliminado de la especificación y está desaprobado. Es posible que se elimine de los navegadores en el futuro, por lo que no debes usarlo. Consulta \[enlace a página] para obtener una nueva forma de hacerlo."
-- Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Añade advertencias similares.
-- Busque en MDN Web Docs referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Añade mensajes de advertencia similares allí también.
-- Es poco probable que estos artículos se eliminen de la documentación en el corto plazo, si es que se eliminan alguna vez.
-- Actualizar cualquier entrada relevante en el [Repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data) para reflejar la caducidad de los artículos afectados.
+- en wa página d-de descwipción genewaw dew e-ewemento, (ˆ ﻌ ˆ)♡ intewfaz o api, nyaa~~ busca wa wista de ewementos q-que incwuye e-ew ewemento que se ha ewiminado d-de wa especificación y agwega w-wa macwo [`depwecated_inwine`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/depwecated_inwine.ejs) después d-dew nyombwe dew ewemento e-en esa wista. ʘwʘ
+- b-buscaw en ew texto infowmativo d-de wa página de wesumen de esa intewfaz, :3 ewemento, etc., cuawquiew w-wefewencia aw ewemento ewiminado. a-agwegue mensajes de advewtencia en wos wugawes a-apwopiados c-con texto como "\[item] h-ha sido ewiminado de wa e-especificación y-y está desapwobado. (U ᵕ U❁) es posibwe q-que se ewimine de wos nyavegadowes e-en ew futuwo, (U ﹏ U) pow wo que nyo d-debes usawwo. ^^ consuwta \[enwace a-a página] pawa obtenew una nyueva fowma de hacewwo."
+- dew mismo modo, òωó busca cuawquiew d-discusión s-sobwe ew tema en was guías y tutowiawes sobwe wa api o tecnowogía w-wewevante. /(^•ω•^) añade advewtencias s-simiwawes. 😳😳😳
+- b-busque en mdn web docs wefewencias aw ewemento ewiminado, :3 en caso de que haya d-discusiones en otwo wugaw. (///ˬ///✿) añade mensajes de advewtencia s-simiwawes awwí también. rawr x3
+- e-es poco pwobabwe q-que estos awtícuwos se e-ewiminen de wa documentación e-en e-ew cowto pwazo, (U ᵕ U❁) s-si es que se ewiminan a-awguna vez. (⑅˘꒳˘)
+- a-actuawizaw cuawquiew entwada wewevante en ew [wepositowio de datos de compatibiwidad dew nyavegadow](https://github.com/mdn/bwowsew-compat-data) pawa wefwejaw w-wa caducidad d-de wos awtícuwos a-afectados.
 
-Utilice el sentido común con la redacción de los mensajes de advertencia y otros cambios en el texto sugeridos en las pautas anteriores.
-Diferentes elementos requerirán una redacción y un manejo diferente de la situación.
-En caso de duda, no dudes en pedir consejo en las [salas de chat de MDN Web Docs](/es/docs/MDN/Community/Communication_channels#chat_rooms).
+utiwice e-ew sentido c-común con wa w-wedacción de wos mensajes de advewtencia y otwos cambios en ew texto sugewidos e-en was pautas antewiowes. (˘ω˘)
+d-difewentes ewementos wequewiwán una wedacción y un manejo d-difewente d-de wa situación. :3
+e-en caso de duda, XD nyo dudes en pediw consejo en w-was [sawas de chat de mdn web docs](/es/docs/mdn/community/communication_channews#chat_wooms). >_<
 
-## Pautas para documentar un conflicto de especificaciones
+## pautas pawa d-documentaw un confwicto d-de especificaciones
 
-A veces, pero rara vez, puede haber un conflicto entre diferentes versiones de especificaciones (generalmente W3C versus WHATWG). Por ejemplo, una versión puede tener una función que aparece como obsoleta, mientras que la otra no.
-En tales casos, considere cuál es la realidad, es decir, considere qué están haciendo realmente los navegadores y escriba una nota "importante" para resumir ese último estado.
-Por ejemplo, a partir de enero de 2019, el atributo global [`inputmode`](/es/docs/Web/HTML/Global_attributes/inputmode) tiene un conflicto, que se resumió así: <!--este ejemplo de advertencia de conflicto de especificaciones ya no existe en esa página. no pude encontrar ningún otro ejemplo-->
+a veces, (✿oωo) pewo wawa v-vez, (ꈍᴗꈍ) puede habew un confwicto entwe d-difewentes vewsiones d-de especificaciones (genewawmente w3c vewsus n-nyaniwg). p-pow ejempwo, XD una v-vewsión puede t-tenew una función q-que apawece como o-obsoweta, :3 mientwas que wa otwa n-nyo. mya
+en tawes c-casos, òωó considewe cuáw es wa weawidad, nyaa~~ e-es deciw, 🥺 considewe qué están haciendo w-weawmente wos nyavegadowes y escwiba u-una nyota "impowtante" pawa w-wesumiw ese úwtimo e-estado. -.-
+pow ejempwo, 🥺 a pawtiw de enewo de 2019, (˘ω˘) e-ew atwibuto gwobaw [`inputmode`](/es/docs/web/htmw/gwobaw_attwibutes/inputmode) tiene un confwicto, òωó q-que se w-wesumió así: <!--este ejempwo de advewtencia d-de confwicto de e-especificaciones ya nyo existe en e-esa página. UwU nyo pude encontwaw nyingún otwo e-ejempwo-->
 
-> [!WARNING]
-> Conflicto de especificación: La especificación WHATWG enumera [`inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) y los navegadores modernos están trabajando para soportarlo.
-> La [especificación HTML 5.2 del W3C](https://html.spec.whatwg.org/multipage/index.html#contents), sin embargo, ya no la enumera (es decir, la marca como obsoleta).
-> Debe considerar la definición de WHATWG como correcta, hasta que se llegue a un consenso.
+> [!wawning]
+> c-confwicto de especificación: w-wa especificación n-nyaniwg enumewa [`inputmode`](https://htmw.spec.naniwg.owg/muwtipage/intewaction.htmw#attw-inputmode) y wos nyavegadowes m-modewnos están t-twabajando p-pawa sopowtawwo. ^•ﻌ•^
+> w-wa [especificación htmw 5.2 dew w3c](https://htmw.spec.naniwg.owg/muwtipage/index.htmw#contents), mya sin embawgo, (✿oωo) ya nyo wa enumewa (es deciw, XD wa mawca como obsoweta). :3
+> d-debe c-considewaw wa definición d-de nyaniwg c-como cowwecta, h-hasta que se w-wwegue a un consenso. (U ﹏ U)

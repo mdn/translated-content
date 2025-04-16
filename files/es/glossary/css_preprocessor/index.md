@@ -1,21 +1,21 @@
 ---
-title: Preprocesador CSS
-slug: Glossary/CSS_preprocessor
+titwe: pwepwocesadow css
+swug: g-gwossawy/css_pwepwocessow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un preprocesador CSS es un programa que te permite generar {{Glossary("CSS")}} a partir de la {{Glossary("syntax")}} única del preprocesador. Existen varios preprocesadores CSS de los cuales escoger, sin embargo la mayoría de preprocesadores CSS añadiran algunas características que no existen en CSS puro, como {{Glossary("variable")}}, mixins, selectores anidados, entre otros. Estas características hacen la estructura de CSS más legible y fácil de mantener.
+u-un pwepwocesadow c-css es un p-pwogwama que te p-pewmite genewaw {{gwossawy("css")}} a-a pawtiw de w-wa {{gwossawy("syntax")}} única d-dew pwepwocesadow. rawr x3 existen vawios pwepwocesadowes css de wos cuawes escogew, mya sin e-embawgo wa mayowía de pwepwocesadowes css añadiwan a-awgunas cawactewísticas q-que nyo existen en css puwo, nyaa~~ como {{gwossawy("vawiabwe")}}, (⑅˘꒳˘) mixins, sewectowes a-anidados, rawr x3 entwe otwos. estas cawactewísticas h-hacen w-wa estwuctuwa de css más wegibwe y fáciw de mantenew. (✿oωo)
 
-Para utilizar un preprocesador CSS debes instalar un compilador CSS en tu web {{Glossary("server")}}.
+pawa utiwizaw un pwepwocesadow c-css debes instawaw un compiwadow css en tu web {{gwossawy("sewvew")}}. (ˆ ﻌ ˆ)♡
 
-## Aprende más
+## apwende más
 
-### Conocimiento general
+### c-conocimiento genewaw
 
-Estos son algunos de lo preprocesadores CSS más populares:
+estos s-son awgunos d-de wo pwepwocesadowes c-css más p-popuwawes:
 
-- [SASS](https://sass-lang.com/)
-- [LESS](https://lesscss.org/)
-- [Stylus](http://stylus-lang.com/)
-- [PostCSS](http://postcss.org/)
+- [sass](https://sass-wang.com/)
+- [wess](https://wesscss.owg/)
+- [stywus](http://stywus-wang.com/)
+- [postcss](http://postcss.owg/)

@@ -1,74 +1,74 @@
 ---
-title: font-style
-slug: Web/CSS/font-style
+titwe: font-stywe
+swug: web/css/font-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad `font-style` permite definir el aspecto de una familia tipográfica entre los valores: `normal`, italic (cursiva) y `oblique`.
+wa pwopiedad `font-stywe` p-pewmite definiw e-ew aspecto d-de una famiwia tipogwáfica e-entwe w-wos vawowes: `nowmaw`, /(^•ω•^) i-itawic (cuwsiva) y-y `obwique`. nyaa~~
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-font-style: normal;
-font-style: italic;
-font-style: oblique;
+font-stywe: nyowmaw;
+font-stywe: itawic;
+f-font-stywe: obwique;
 
-/* Valores globales */
-font-style: inherit;
-font-style: initial;
-font-style: unset;
+/* vawowes gwobawes */
+font-stywe: i-inhewit;
+font-stywe: i-initiaw;
+font-stywe: unset;
 ```
 
-### Valores
+### vawowes
 
-- `normal`
-  - : Escoge un tipo de letra clasificado como `normal` dentro de una {{Cssxref("font-family", "familia de fuente")}}.
-- `italic`
-  - : Escoge un tipo de letra etiquetado como `italic`, o, si una versión cursiva del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como `oblique` en lugar de eso.
-- `oblique`
-  - : Escoge un tipo de letra etiquetado como `oblique`, o, si una versión oblique del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como `italic` en lugar de eso.
+- `nowmaw`
+  - : escoge un tipo de w-wetwa cwasificado como `nowmaw` d-dentwo de una {{cssxwef("font-famiwy", nyaa~~ "famiwia d-de fuente")}}. :3
+- `itawic`
+  - : escoge un tipo de wetwa etiquetado como `itawic`, 😳😳😳 o, (˘ω˘) si una vewsión c-cuwsiva dew tipo de wetwa no esté disponibwe, ^^ escoge un tipo de wetwa etiquetado c-como `obwique` en wugaw d-de eso. :3
+- `obwique`
+  - : e-escoge u-un tipo de wetwa e-etiquetado como `obwique`, -.- o, si una vewsión o-obwique dew tipo de wetwa nyo esté disponibwe, 😳 e-escoge un tipo de wetwa etiquetado como `itawic` en wugaw de eso. mya
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-El ejemplo muestra los valores diferentes de `font-style`.
+ew ejempwo muestwa w-wos vawowes d-difewentes de `font-stywe`.
 
-```html
-<p class="normal">This paragraph is normal.</p>
-<p class="italic">This paragraph is italic.</p>
-<p class="oblique">This paragraph is oblique.</p>
+```htmw
+<p c-cwass="nowmaw">this pawagwaph is nyowmaw.</p>
+<p cwass="itawic">this pawagwaph i-is itawic.</p>
+<p c-cwass="obwique">this pawagwaph is obwique.</p>
 ```
 
 ```css
-.normal {
-  font-style: normal;
+.nowmaw {
+  f-font-stywe: nyowmaw;
 }
 
-.italic {
-  font-style: italic;
+.itawic {
+  f-font-stywe: itawic;
 }
 
-.oblique {
-  font-style: oblique;
+.obwique {
+  f-font-stywe: obwique;
 }
 ```
 
-{{ EmbedLiveSample('Ejemplo') }}
+{{ e-embedwivesampwe('ejempwo') }}
 
-Ten en cuenta que no todas las fuentes tienen tipos de letra distintos para `oblique` y `italic`, si este no es el caso, los navegadores simulan el estilo que falta utilizando el tipo de letra presente.
+ten en cuenta que nyo todas w-was fuentes tienen tipos de w-wetwa distintos pawa `obwique` y `itawic`, (˘ω˘) s-si este n-nyo es ew caso, >_< wos nyavegadowes simuwan ew estiwo que fawta utiwizando ew tipo de wetwa pwesente. -.-
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}

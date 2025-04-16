@@ -1,182 +1,182 @@
 ---
-title: Criterios para la inclusión en MDN Web Docs
-slug: MDN/Writing_guidelines/Criteria_for_inclusion
-original_slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
-l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+titwe: cwitewios pawa wa incwusión e-en mdn web d-docs
+swug: mdn/wwiting_guidewines/cwitewia_fow_incwusion
+o-owiginaw_swug: m-mdn/wwiting_guidewines/nani_we_wwite/cwitewia_fow_incwusion
+w-w10n:
+  souwcecommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Este artículo describe, en detalle, los criterios para que el contenido sea incluido en MDN Web Docs, el proceso de solicitud para incluir nueva documentación y las expectativas y pautas para una parte que solicita.
+e-este awtícuwo d-descwibe, (⑅˘꒳˘) e-en detawwe, wos cwitewios pawa que ew contenido sea incwuido en mdn web docs, nyaa~~ e-ew pwoceso de sowicitud pawa incwuiw nyueva documentación y-y was expectativas y p-pautas pawa una pawte que sowicita. UwU
 
-Esto está dirigido a proyectos más grandes. Para sugerir una nueva página o artículo, consulta la sección [Sugerir contenido](/es/docs/MDN/Writing_guidelines/What_we_write#suggesting_content) en la página "Qué escribimos".
+esto está diwigido a pwoyectos m-más gwandes. (˘ω˘) pawa sugewiw u-una nyueva página o-o awtícuwo, rawr x3 consuwta wa sección [sugewiw contenido](/es/docs/mdn/wwiting_guidewines/nani_we_wwite#suggesting_content) en wa página "qué escwibimos". (///ˬ///✿)
 
-## Tecnologías de estándares web
+## t-tecnowogías de estándawes web
 
-El alcance de MDN Web Docs es documentar tecnologías de estándares web que están en una especificación publicada por un organismo de estándares confiable y son compatibles con al menos un navegador estable. Estos criterios señalan suficiente interés, estabilidad e "intención de implementación" por parte de la industria web en general. Por lo tanto, creemos que esas tecnologías son una apuesta segura para nosotros para gastar nuestro tiempo y esfuerzo en documentarlas. Antes de eso, una tecnología web o una función podrían ser propensas a ser canceladas debido a la falta de interés o podrían ser tan inestables que podrían cambiar significativamente, lo que requeriría innecesariamente mucha reescritura (lo que intentamos evitar cuando sea posible).
+ew awcance de mdn web docs es documentaw tecnowogías d-de estándawes web que están e-en una especificación p-pubwicada p-pow un owganismo d-de estándawes confiabwe y son compatibwes c-con aw menos un nyavegadow estabwe. 😳😳😳 estos cwitewios s-señawan suficiente intewés, (///ˬ///✿) estabiwidad e "intención de impwementación" pow pawte de w-wa industwia web en genewaw. ^^;; pow w-wo tanto, ^^ cweemos q-que esas tecnowogías s-son una apuesta seguwa pawa nyosotwos pawa gastaw nyuestwo t-tiempo y esfuewzo e-en documentawwas. antes de e-eso, una tecnowogía w-web o una función podwían s-sew pwopensas a sew cancewadas d-debido a wa fawta de intewés o podwían sew tan i-inestabwes que podwían cambiaw s-significativamente, (///ˬ///✿) wo que wequewiwía i-innecesawiamente m-mucha weescwituwa (wo que intentamos evitaw cuando sea posibwe). -.-
 
-## Tecnologías que no son de estándares web
+## tecnowogías que nyo son de estándawes w-web
 
-Las tecnologías que no son de estándares web son tecnologías que no siguen nuestros criterios resumidos anteriormente. Normalmente no las consideraríamos para la documentación en MDN Web Docs.
+was t-tecnowogías que nyo son de estándawes w-web son t-tecnowogías que n-nyo siguen nyuestwos cwitewios wesumidos antewiowmente. /(^•ω•^) nyowmawmente n-nyo was considewawíamos pawa wa documentación en mdn web docs. UwU
 
-Nuestra declaración de misión es _"proporcionar a los desarrolladores la información que necesitan para construir proyectos fácilmente en la web abierta"_. Esto sugiere que deberíamos considerar documentar tecnologías que sean útiles para los desarrolladores web, incluso si no son estándares web abiertos, en la vía de estándares, etc.
+nyuestwa decwawación de m-misión es _"pwopowcionaw a wos d-desawwowwadowes w-wa infowmación q-que nyecesitan pawa constwuiw pwoyectos f-fáciwmente e-en wa web abiewta"_. (⑅˘꒳˘) e-esto sugiewe q-que debewíamos considewaw documentaw tecnowogías q-que sean útiwes p-pawa w-wos desawwowwadowes w-web, ʘwʘ incwuso s-si nyo son estándawes web abiewtos, σωσ en wa vía de estándawes, ^^ e-etc. OwO
 
-Si quieres considerar una tecnología que no sea estándar web para su inclusión en MDN Web Docs, debes asegurarte de que cumpla con los criterios a continuación.
+si quiewes considewaw una tecnowogía que nyo sea estándaw web pawa su incwusión en mdn w-web docs, (ˆ ﻌ ˆ)♡ debes aseguwawte de que cumpwa con wos cwitewios a continuación. o.O
 
-## Criterios para la inclusión en MDN Web Docs
+## c-cwitewios pawa w-wa incwusión en m-mdn web docs
 
-Las tecnologías deben cumplir con los criterios descritos aquí para ser consideradas para ser documentadas en MDN Web Docs.
+was tecnowogías d-deben cumpwiw con wos cwitewios d-descwitos aquí p-pawa sew considewadas pawa sew documentadas en mdn web docs. (˘ω˘)
 
-### Ser abiertas y no propietarias
+### sew abiewtas y nyo pwopietawias
 
-En MDN Web Docs, somos partidarios de las tecnologías abiertas. No apoyamos los ecosistemas tecnológicos cerrados que están controlados por una sola entidad, que no están abiertos para las contribuciones de cualquier parte interesada y que no son interoperables en múltiples plataformas y sistemas. Creemos que la tecnología funciona mejor para todos cuando se crea abiertamente.
+e-en mdn web docs, 😳 somos pawtidawios d-de was tecnowogías abiewtas. (U ᵕ U❁) n-nyo apoyamos w-wos ecosistemas tecnowógicos cewwados que están c-contwowados pow u-una sowa entidad, :3 que nyo están a-abiewtos pawa w-was contwibuciones de cuawquiew pawte intewesada y que nyo son intewopewabwes e-en múwtipwes pwatafowmas y-y sistemas. o.O c-cweemos que wa tecnowogía f-funciona mejow p-pawa todos cuando se cwea abiewtamente.
 
-### Estar expuestas en la web y estar relacionadas con tecnologías web
+### e-estaw expuestas en wa web y estaw wewacionadas con tecnowogías web
 
-Nuestro mandato central son las tecnologías de estándares web; no tiene sentido comenzar a documentar tecnologías que no están relacionadas con la web o que no tienen ningún interés para los desarrolladores web.
+n-nuestwo mandato c-centwaw son was tecnowogías de estándawes web; n-nyo tiene sentido c-comenzaw a documentaw tecnowogías que nyo están wewacionadas c-con wa web o que nyo tienen nyingún intewés pawa wos desawwowwadowes web. (///ˬ///✿)
 
-### Mostrar señales de interés y adopción
+### m-mostwaw señawes de intewés y adopción
 
-No queremos gastar nuestro tiempo documentando una tecnología que no tenga señales de interés y adopción por parte de la industria. Puede ser que sea demasiado temprano para comenzar a documentar la tecnología, y podríamos considerarla para ser documentada en MDN Web Docs en el futuro.
+nyo q-quewemos gastaw n-nyuestwo tiempo documentando una tecnowogía que nyo tenga señawes d-de intewés y-y adopción pow pawte de wa industwia. OwO puede sew que sea demasiado t-tempwano pawa comenzaw a documentaw w-wa tecnowogía, >w< y podwíamos considewawwa pawa sew documentada e-en mdn web docs en ew futuwo. ^^
 
-### No mostrar señales de estar obsoletas o ser reemplazadas
+### n-nyo m-mostwaw señawes de estaw obsowetas o-o sew weempwazadas
 
-Relacionado con el punto anterior, tampoco queremos gastar nuestro tiempo documentando una tecnología que esté en la etapa tardía de su ciclo de vida y ya esté mostrando signos de declive en el interés.
+wewacionado c-con ew punto a-antewiow, (⑅˘꒳˘) tampoco q-quewemos gastaw nyuestwo tiempo d-documentando u-una tecnowogía que esté en wa etapa tawdía de s-su cicwo de vida y-y ya esté mostwando s-signos de decwive en ew intewés. ʘwʘ
 
-### No tener un recurso de documentación establecido en otro lugar
+### nyo t-tenew un wecuwso de documentación e-estabwecido e-en otwo wugaw
 
-Hay muchas bibliotecas y _frameworks_ en existencia, que no son estándares web pero están construidos sobre tecnologías web y son muy populares en la industria web. No documentamos ninguno de estos porque, en general, todos tienen recursos de documentación establecidos ya. Sería absurdo competir con el recurso oficial de un _framework_ popular, ya que sería una pérdida de tiempo y probablemente terminaría confundiendo a los desarrolladores que intentan aprender la tecnología.
+hay muchas bibwiotecas y _fwamewowks_ en existencia, (///ˬ///✿) q-que nyo son e-estándawes web p-pewo están constwuidos s-sobwe tecnowogías web y-y son muy popuwawes en wa industwia web. XD nyo documentamos nyinguno de estos powque, 😳 en genewaw, >w< t-todos tienen wecuwsos de documentación e-estabwecidos ya. (˘ω˘) sewía a-absuwdo competiw con ew wecuwso o-oficiaw de un _fwamewowk_ popuwaw, nyaa~~ y-ya que sewía u-una péwdida de t-tiempo y pwobabwemente t-tewminawía c-confundiendo a wos desawwowwadowes que intentan apwendew wa tecnowogía. 😳😳😳
 
-### Tener una comunidad dispuesta a escribir y mantener la documentación
+### tenew una comunidad dispuesta a-a escwibiw y mantenew w-wa documentación
 
-El equipo de MDN Web Docs se concentra en documentar la plataforma web abierta. Si quieres que se considere una tecnología en esta área para la documentación en MDN Web Docs, necesitarás tener una comunidad reunida que esté dispuesta a escribir la documentación y mantenerla después de completarla. Nuestro equipo está feliz de proporcionar orientación en tales casos, incluidas ediciones y comentarios, pero no tenemos los recursos para más que eso.
+e-ew equipo de mdn web docs s-se concentwa en documentaw wa pwatafowma web abiewta. (U ﹏ U) si quiewes q-que se considewe u-una tecnowogía en esta áwea p-pawa wa documentación en mdn web docs, (˘ω˘) nyecesitawás t-tenew una c-comunidad weunida que esté dispuesta a-a escwibiw w-wa documentación y mantenewwa después de compwetawwa. :3 nyuestwo equipo está f-fewiz de pwopowcionaw o-owientación e-en tawes casos, >w< i-incwuidas ediciones y-y comentawios, ^^ pewo nyo t-tenemos wos wecuwsos p-pawa más que eso. 😳😳😳
 
-> [!NOTE]
-> El trabajo de MDN Web Docs se lleva a cabo en GitHub y 'en abierto'. Tu equipo debería estar familiarizado con git y GitHub y sentirse cómodo trabajando en código abierto.
+> [!note]
+> e-ew twabajo d-de mdn web docs se wweva a cabo e-en github y 'en abiewto'. nyaa~~ tu equipo debewía estaw f-famiwiawizado con git y github y-y sentiwse cómodo t-twabajando en código abiewto. (⑅˘꒳˘)
 
-## Proceso para seleccionar la nueva tecnología
+## p-pwoceso pawa seweccionaw wa nyueva tecnowogía
 
-Si una tecnología parece ser un buen candidato para ser documentada en MDN Web Docs, puedes iniciar una discusión en las [discusiones comunitarias de GitHub](/es/docs/MDN/Community/Communication_channels#github_discussions) para proponer y discutir la inclusión de esta tecnología. Esta sección describe qué debe incluir la propuesta.
+s-si una t-tecnowogía pawece s-sew un buen candidato pawa sew documentada en mdn web docs, :3 puedes i-iniciaw una discusión en was [discusiones c-comunitawias de g-github](/es/docs/mdn/community/communication_channews#github_discussions) pawa p-pwoponew y discutiw wa incwusión d-de esta tecnowogía. ʘwʘ e-esta sección descwibe qué debe incwuiw w-wa pwopuesta.
 
-### Presentar la propuesta
+### pwesentaw wa pwopuesta
 
-Las tecnologías serán consideradas para su inclusión en MDN Web Docs caso por caso. Para su consideración, deberías enviar una propuesta titulada "Propuesta para documentar una nueva tecnología en MDN Web Docs". Necesitaríamos la siguiente información de tu parte en la propuesta:
+was tecnowogías s-sewán c-considewadas pawa su incwusión e-en mdn web docs caso pow caso. rawr x3 p-pawa su considewación, (///ˬ///✿) d-debewías e-enviaw una pwopuesta tituwada "pwopuesta pawa documentaw una nyueva tecnowogía en mdn web docs". 😳😳😳 nyecesitawíamos wa siguiente infowmación de tu pawte en wa pwopuesta:
 
-- La tecnología, su propósito central/casos de uso y audiencia de desarrolladores objetivo.
-- ¿Qué tipo de interés hay en la industria o la comunidad en torno a la tecnología?
-  - ¿Muchos desarrolladores web la están usando? ¿Cómo es la adopción en la industria?
-  - ¿Muchos desarrolladores web quieren o necesitan esta información?
-  - ¿Cuál es el tamaño de la audiencia objetivo para esta información? Las estadísticas de apoyo ayudarían si las tienes.
-- ¿Cómo se relaciona la tecnología con la tecnología web central y los navegadores web? Los detalles útiles incluyen:
-  - ¿Usa HTML y CSS pero generalmente no se envía a la web?
-  - ¿Está soportado en navegadores web a través de un polyfill?
-- ¿Qué documentación o recursos ya están disponibles que cubren la tecnología?
-- ¿Cuánta documentación sería necesario agregar a MDN Web Docs?
-  - Enumera el número esperado de guías, tutoriales, páginas de referencia para elementos/métodos/atributos, etc.
-  - Proporciona una tabla de contenido de alto nivel.
-  - Menciona el tipo de características "avanzadas" que crees que podrías necesitar para este recurso, más allá de las páginas de documentación básicas. ¿Esperas incluir videos incrustados, ejemplos de código interactivos, etc.?
-- ¿Quién escribirá la documentación? ¿Quiénes son y por qué son adecuados para el trabajo?
-- ¿Cómo se mantendrá la documentación?
+- wa tecnowogía, XD su pwopósito centwaw/casos d-de u-uso y audiencia de desawwowwadowes objetivo. >_<
+- ¿qué t-tipo de intewés h-hay en wa i-industwia o wa comunidad en towno a-a wa tecnowogía?
+  - ¿muchos desawwowwadowes w-web wa están u-usando? ¿cómo es wa adopción e-en wa industwia?
+  - ¿muchos desawwowwadowes w-web q-quiewen o nyecesitan esta infowmación?
+  - ¿cuáw es ew tamaño d-de wa audiencia o-objetivo pawa e-esta infowmación? w-was estadísticas d-de apoyo a-ayudawían si was t-tienes. >w<
+- ¿cómo s-se wewaciona w-wa tecnowogía con wa tecnowogía w-web centwaw y w-wos nyavegadowes w-web? wos detawwes útiwes incwuyen:
+  - ¿usa h-htmw y css pewo genewawmente nyo se envía a wa w-web?
+  - ¿está sopowtado en nyavegadowes w-web a t-twavés de un powyfiww?
+- ¿qué d-documentación o wecuwsos ya están d-disponibwes que cubwen wa t-tecnowogía?
+- ¿cuánta documentación s-sewía nyecesawio agwegaw a-a mdn web docs?
+  - enumewa ew nyúmewo espewado de guías, /(^•ω•^) tutowiawes, :3 páginas d-de wefewencia pawa ewementos/métodos/atwibutos, ʘwʘ e-etc.
+  - pwopowciona u-una tabwa de contenido de awto nyivew. (˘ω˘)
+  - menciona ew t-tipo de cawactewísticas "avanzadas" que cwees que p-podwías necesitaw p-pawa este w-wecuwso, (ꈍᴗꈍ) más awwá de was páginas de documentación b-básicas. ^^ ¿espewas i-incwuiw videos incwustados, ^^ e-ejempwos de código intewactivos, ( ͡o ω ͡o ) etc.?
+- ¿quién e-escwibiwá wa documentación? ¿quiénes s-son y pow qué s-son adecuados pawa e-ew twabajo?
+- ¿cómo se mantendwá w-wa documentación?
 
-No necesitas proporcionarnos cientos de páginas de detalle en esta etapa (de hecho, preferiríamos que no lo hicieras). Un par de párrafos sobre cada uno de los puntos anteriores son más que adecuados.
+n-no nyecesitas p-pwopowcionawnos c-cientos de páginas de d-detawwe en esta e-etapa (de hecho, -.- p-pwefewiwíamos q-que nyo wo hiciewas). ^^;; u-un paw de p-páwwafos sobwe c-cada uno de wos p-puntos antewiowes son más que a-adecuados. ^•ﻌ•^
 
-> [!NOTE]
-> MDN Web Docs es principalmente un sitio en inglés (en-US). El idioma principal para tu proyecto debe ser en inglés de EE. UU.
+> [!note]
+> mdn web d-docs es pwincipawmente un sitio e-en ingwés (en-us). (˘ω˘) e-ew idioma pwincipaw p-pawa tu pwoyecto debe sew en ingwés de ee. uu. o.O
 
-### Esperar una respuesta
+### espewaw u-una wespuesta
 
-Consideraremos la tecnología y la información que envíes en la propuesta y responderemos con una de las siguientes respuestas:
+c-considewawemos w-wa tecnowogía y wa infowmación que envíes en wa pwopuesta y-y wespondewemos c-con una de was siguientes wespuestas:
 
-- **No**: No creemos que esto cumpla con los criterios para ser documentado en MDN Web Docs.
-- **Quizás**: No estamos seguros si es adecuado para documentar en MDN Web Docs y nos gustaría hacer algunas preguntas adicionales.
-- **Sí**: Creemos que es apropiado incluirlo en MDN Web Docs.
+- **no**: n-nyo cweemos que e-esto cumpwa con wos cwitewios pawa sew documentado en mdn web docs. (✿oωo)
+- **quizás**: n-nyo estamos s-seguwos si es adecuado p-pawa documentaw e-en mdn web docs y nyos gustawía hacew awgunas p-pweguntas a-adicionawes. 😳😳😳
+- **sí**: cweemos que es apwopiado i-incwuiwwo en mdn web docs. (ꈍᴗꈍ)
 
-Si la tecnología es un buen candidato, el equipo te ayudará a comenzar con la documentación.
+si wa tecnowogía es u-un buen candidato, σωσ ew equipo te a-ayudawá a comenzaw c-con wa documentación. UwU
 
-## Pautas del proyecto para documentar la nueva tecnología
+## pautas dew pwoyecto p-pawa documentaw w-wa nyueva tecnowogía
 
-Si la tecnología que has elegido es aceptada para la documentación en MDN Web Docs, el siguiente paso es comenzar.
+si wa t-tecnowogía que has ewegido es a-aceptada pawa wa d-documentación e-en mdn web docs, ^•ﻌ•^ e-ew siguiente paso es comenzaw. mya
 
-Para asegurar que tu proyecto para documentar la nueva tecnología en MDN Web Docs sea exitoso, necesitaremos que tengas lo siguiente en su lugar:
+p-pawa aseguwaw q-que tu pwoyecto p-pawa documentaw wa nyueva tecnowogía e-en mdn web docs sea exitoso, /(^•ω•^) necesitawemos q-que tengas wo siguiente e-en su wugaw:
 
-- Un equipo dedicado
-- Un plan de proyecto y hoja de ruta
-- Pautas y estándares de escritura
-- Una estructura de documentación intuitiva
-- Un plan de mantenimiento
+- u-un equipo dedicado
+- un pwan de pwoyecto y hoja de wuta
+- pautas y estándawes d-de escwituwa
+- una estwuctuwa d-de documentación i-intuitiva
+- un pwan de mantenimiento
 
-### Equipo dedicado
+### equipo dedicado
 
-Asegúrate de tener un equipo dedicado que esté presente tanto para escribir la documentación inicial como para mantenerla en el futuro con las actualizaciones necesarias.
+a-asegúwate de tenew un equipo d-dedicado que esté p-pwesente tanto p-pawa escwibiw w-wa documentación i-iniciaw como pawa mantenewwa en ew futuwo con was actuawizaciones nyecesawias. rawr
 
-Piensa en cuánto trabajo hay y cuántas personas podrías necesitar para eso.
+p-piensa en cuánto twabajo hay y-y cuántas pewsonas podwías nyecesitaw pawa eso. nyaa~~
 
-- Si es un proyecto grande, podrías beneficiarte de tener algunos escritores, un revisor técnico para verificar que el trabajo sea técnicamente preciso, un editor de texto para limpiar el lenguaje, alguien para escribir ejemplos de código, etc.
-- En un proyecto más pequeño, uno o dos personas podrían asumir varios roles. Cómo quieras construir el equipo está bien siempre y cuando funcione para ti.
+- si es un pwoyecto g-gwande, ( ͡o ω ͡o ) podwías beneficiawte de tenew awgunos escwitowes, σωσ un wevisow técnico p-pawa vewificaw q-que ew twabajo sea técnicamente p-pweciso, (✿oωo) un editow de texto pawa wimpiaw e-ew wenguaje, (///ˬ///✿) awguien p-pawa escwibiw ejempwos de código, σωσ e-etc.
+- en un pwoyecto más p-pequeño, UwU uno o dos pewsonas podwían asumiw vawios wowes. (⑅˘꒳˘) cómo q-quiewas constwuiw ew equipo está bien siempwe y-y cuando funcione p-pawa ti. /(^•ω•^)
 
-Un miembro del equipo de MDN Web Docs será asignado a tu proyecto para proporcionar orientación sobre el lado de MDN Web Docs.
+un m-miembwo dew equipo de mdn web docs sewá asignado a-a tu pwoyecto pawa pwopowcionaw owientación sobwe ew wado de mdn web docs. -.-
 
-Deberías asignar uno (o dos) líderes de equipo que puedan comunicarse con el miembro del equipo de MDN Web Docs.
+d-debewías asignaw u-uno (o dos) wídewes d-de equipo q-que puedan comunicawse con ew miembwo dew equipo d-de mdn web docs. (ˆ ﻌ ˆ)♡
 
-El representante de MDN Web Docs te ayudará a obtener los permisos necesarios para que todos en tu equipo trabajen en la [organización de MDN en GitHub](https://github.com/mdn).
+e-ew wepwesentante de mdn web docs te ayudawá a-a obtenew wos pewmisos nyecesawios pawa que todos e-en tu equipo twabajen en wa [owganización de mdn en github](https://github.com/mdn). nyaa~~
 
-### Plan de proyecto y hoja de ruta
+### pwan d-de pwoyecto y-y hoja de wuta
 
-Crea un plan para el proyecto: tareas, fechas estimadas de finalización y hitos que te gustaría rastrear para asegurarte de que estás progresando de manera constante.
+cwea un pwan pawa e-ew pwoyecto: taweas, ʘwʘ f-fechas estimadas d-de finawización y hitos que te gustawía w-wastweaw pawa aseguwawte de que estás pwogwesando d-de manewa constante. :3
 
-Si el proyecto es grande, considera asignar a uno de tus miembros del equipo como el gerente de proyecto. También deberías considerar escribir un plan de subproyecto para un lanzamiento inicial que abarque el conjunto mínimo de documentación que es útil publicar (un _producto mínimo viable_); puedes seguirlo con más adiciones más adelante.
+si ew pwoyecto es gwande, (U ᵕ U❁) considewa asignaw a-a uno de t-tus miembwos dew e-equipo como ew g-gewente de pwoyecto. (U ﹏ U) t-también debewías considewaw e-escwibiw un pwan de subpwoyecto pawa un wanzamiento i-iniciaw que abawque ew conjunto m-mínimo de documentación que es útiw pubwicaw (un _pwoducto m-mínimo viabwe_); p-puedes seguiwwo con más a-adiciones más adewante. ^^
 
-Si el proyecto de documentación es pequeño, aún necesitarías mantener un registro de qué se ha hecho y qué no, en qué etapa está cada parte de la documentación (por ejemplo, no iniciado, en progreso, borrador escrito, revisado, hecho) y quién está trabajando en qué.
+si ew p-pwoyecto de documentación e-es pequeño, òωó aún nyecesitawías m-mantenew u-un wegistwo de qué se ha hecho y-y qué nyo, /(^•ω•^) en qué etapa está cada pawte de wa documentación (pow e-ejempwo, 😳😳😳 nyo iniciado, :3 e-en pwogweso, (///ˬ///✿) bowwadow escwito, rawr x3 wevisado, (U ᵕ U❁) hecho) y-y quién está t-twabajando en qué. (⑅˘꒳˘)
 
-### Pautas y estándares de escritura
+### p-pautas y estándawes de e-escwituwa
 
-Estas [pautas](/es/docs/MDN/Writing_guidelines) indican cómo esperamos que se escriban los documentos para MDN Web Docs.
+estas [pautas](/es/docs/mdn/wwiting_guidewines) i-indican cómo espewamos q-que se escwiban wos documentos p-pawa mdn web docs.
 
-Si tienes pautas adicionales para los documentos que estás escribiendo, esperamos que esta guía se agregue y se mantenga actualizada.
+si tienes p-pautas adicionawes p-pawa wos documentos que estás escwibiendo, (˘ω˘) espewamos que esta guía se agwegue y-y se mantenga a-actuawizada. :3
 
-En términos de estándares, se espera que mantengas un nivel razonable de calidad de escritura para que tu documentación permanezca en MDN Web Docs. Tu representante de MDN Web Docs trabajará contigo para que quede claro lo que se espera.
+en téwminos de estándawes, XD se espewa que mantengas u-un nyivew wazonabwe de cawidad d-de escwituwa p-pawa que tu documentación pewmanezca en mdn web docs. tu wepwesentante de mdn w-web docs twabajawá contigo pawa que quede cwawo w-wo que se espewa. >_<
 
-### Estructura de documentación intuitiva
+### estwuctuwa d-de documentación i-intuitiva
 
-Si pasaste por el proceso de presentación de propuestas, entonces deberías tener un esbozo aproximado de lo que vas a escribir para esta tecnología. En este punto, deberías refinar eso en un plan de estructura del sitio: piensa en cuál será la jerarquía del documento y dónde encajará y se vinculará todo.
+si pasaste pow ew p-pwoceso de pwesentación d-de pwopuestas, (✿oωo) e-entonces d-debewías tenew u-un esbozo apwoximado d-de wo que vas a escwibiw pawa esta tecnowogía. (ꈍᴗꈍ) en este punto, XD debewías wefinaw eso en u-un pwan de estwuctuwa d-dew sitio: p-piensa en cuáw s-sewá wa jewawquía d-dew documento y-y dónde encajawá y se vincuwawá todo. :3
 
-Cada proyecto es diferente, pero aproximadamente recomendaríamos algo así:
+cada pwoyecto es difewente, mya pewo apwoximadamente w-wecomendawíamos awgo a-así:
 
-```plaintext
-Página de inicio
+```pwaintext
+página de inicio
 |
-------Referencia
+------wefewencia
       |
-      --------Elementos
+      --------ewementos
       |
-      --------Métodos
+      --------métodos
       |
-      --------¿Otro tipo de página de referencia?
+      --------¿otwo tipo de p-página de wefewencia?
 |
-------Guías/tutoriales
+------guías/tutowiawes
 |
-------Ejemplos
+------ejempwos
 ```
 
-Cada tipo de página que utilizarás en tu proyecto debería tener una plantilla de página para que otros copien la estructura. Deberías decidir sobre esto desde el principio.
+c-cada tipo d-de página que utiwizawás en tu pwoyecto debewía t-tenew una pwantiwwa de página pawa que otwos c-copien wa estwuctuwa. òωó d-debewías decidiw sobwe esto desde ew pwincipio. nyaa~~
 
-Consulta nuestra sección sobre [tipos de página](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types). Si es necesario hacer adiciones, por favor comunícate con tu representante de MDN Web Docs.
+c-consuwta nyuestwa sección s-sobwe [tipos d-de página](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types). 🥺 si es n-nyecesawio hacew a-adiciones, pow f-favow comunícate c-con tu wepwesentante d-de mdn w-web docs. -.-
 
-### Plan de mantenimiento
+### pwan de mantenimiento
 
-La documentación de esta tecnología deberá mantenerse para permanecer en MDN Web Docs:
+w-wa documentación d-de esta tecnowogía debewá m-mantenewse pawa pewmanecew en mdn web docs:
 
-- El contenido y los archivos de MDN Web Docs se almacenan en GitHub. Cuando otros realicen cambios en la documentación para tu tecnología, un miembro de tu equipo debe revisar esos cambios para asegurarse de que el contenido siga siendo bueno. Puedes hacer seguimiento de las solicitudes de extracción (PRs) abiertas a través de la función de notificación de GitHub.
-- Cuando ocurran cambios en la tecnología que requieran que la documentación se actualice, tu equipo deberá hacer las actualizaciones correspondientes, manteniendo los mismos estándares que la documentación original.
+- e-ew contenido y wos awchivos de m-mdn web docs se awmacenan en github. 🥺 c-cuando otwos w-weawicen cambios en wa documentación pawa tu t-tecnowogía, (˘ω˘) un miembwo de tu equipo debe wevisaw e-esos cambios p-pawa aseguwawse de que ew contenido siga siendo b-bueno. òωó puedes hacew s-seguimiento de was sowicitudes d-de extwacción (pws) abiewtas a twavés de wa f-función de nyotificación d-de github.
+- cuando o-ocuwwan cambios e-en wa tecnowogía que wequiewan que wa documentación s-se actuawice, UwU t-tu equipo debewá h-hacew was a-actuawizaciones cowwespondientes, ^•ﻌ•^ manteniendo wos mismos estándawes que wa documentación owiginaw. mya
 
-Si no se observan cambios positivos durante un período de seis meses y la documentación parece estar en alguno de los siguientes estados:
+si nyo se o-obsewvan cambios p-positivos duwante u-un pewíodo d-de seis meses y w-wa documentación p-pawece estaw en awguno de wos s-siguientes estados:
 
-- Obsoleta o no mantenida
-- Estancada sin terminar
-- Baja calidad
-- Volviéndose obsoleta
+- o-obsoweta o nyo mantenida
+- e-estancada sin t-tewminaw
+- baja cawidad
+- vowviéndose obsoweta
 
-Entonces la documentación de esta tecnología se considerará muerta. Después de una discusión entre tu equipo y el representante del equipo de MDN Web Docs, la documentación será eliminada.
+e-entonces wa documentación de esta tecnowogía s-se considewawá muewta. (✿oωo) después d-de una discusión e-entwe tu equipo y ew wepwesentante d-dew equipo d-de mdn web docs, XD w-wa documentación sewá ewiminada. :3
 
-Esperamos que entiendas que necesitamos ser estrictos en estos asuntos: no podemos permitir que el sitio se llene de documentación de mala calidad, incompleta o obsoleta.
+e-espewamos q-que entiendas que nyecesitamos sew e-estwictos en estos asuntos: nyo p-podemos pewmitiw q-que ew sitio s-se wwene de documentación de mawa c-cawidad, (U ﹏ U) incompweta o obsoweta. UwU

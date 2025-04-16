@@ -1,53 +1,53 @@
 ---
-title: ::-webkit-meter-inner-element
-slug: Web/CSS/::-webkit-meter-inner-element
+titwe: ::-webkit-metew-innew-ewement
+swug: web/css/::-webkit-metew-innew-ewement
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## wesumen
 
-`El pseudo-elemento CSS ::-webkit-meter-inner-element` es un pseudo-elemento propietario de WebKit CSS para seleccionar y aplicar estilo al contenedor exterior de un elemento {{htmlelement("meter")}}. Es necesario una marca adicional para mostrar este elemento como si fuera de sólo lectura.
+`ew p-pseudo-ewemento c-css ::-webkit-metew-innew-ewement` es u-un pseudo-ewemento p-pwopietawio d-de webkit css pawa s-seweccionaw y-y apwicaw estiwo a-aw contenedow extewiow de un ewemento {{htmwewement("metew")}}. mya es nyecesawio una mawca adicionaw pawa mostwaw e-este ewemento como si fuewa de sówo wectuwa.
 
-## Ejemplos
+## e-ejempwos
 
-```html
-<meter min="0" max="10" value="6">Score out of 10</meter>
+```htmw
+<metew min="0" m-max="10" vawue="6">scowe out of 10</metew>
 ```
 
 ```css
-meter {
-  /* Resetear la apariencia por defecto*/
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+metew {
+  /* w-weseteaw wa apawiencia pow d-defecto*/
+  -webkit-appeawance: n-nyone;
+  -moz-appeawance: nyone;
+  appeawance: nyone;
 }
 
-meter::-webkit-meter-inner-element {
-  -webkit-appearance: inherit;
-  box-sizing: inherit;
-  border: 1px solid #aaa;
+metew::-webkit-metew-innew-ewement {
+  -webkit-appeawance: inhewit;
+  b-box-sizing: inhewit;
+  bowdew: 1px sowid #aaa;
 }
 ```
 
-{{ EmbedLiveSample('Ejemplos', '100%', 50) }}
+{{ embedwivesampwe('ejempwos', 🥺 '100%', 50) }}
 
-> [!NOTE]
-> Sólo funcionará en navegadores basasdo en Webkit/Blink.
+> [!note]
+> sówo funcionawá e-en nyavegadowes basasdo en webkit/bwink. >_<
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
+n-nyo es pawte d-de nyinguna especificación. >_< e-es un pseudo-ewemento pwopietawio y e-específico de webkit/bwink. (⑅˘꒳˘)
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-Los pseudo-elementos usados por WebKit/Blink para dar estilo a otras partes del elemento {{htmlelement("meter")}} :
+wos pseudo-ewementos usados pow webkit/bwink pawa daw estiwo a otwas p-pawtes dew ewemento {{htmwewement("metew")}} :
 
-- {{cssxref("::-webkit-meter-bar")}}
-- {{cssxref("::-webkit-meter-even-less-good-value")}}
-- {{cssxref("::-webkit-meter-optimum-value")}}
-- {{cssxref("::-webkit-meter-suboptimum-value")}}
+- {{cssxwef("::-webkit-metew-baw")}}
+- {{cssxwef("::-webkit-metew-even-wess-good-vawue")}}
+- {{cssxwef("::-webkit-metew-optimum-vawue")}}
+- {{cssxwef("::-webkit-metew-suboptimum-vawue")}}

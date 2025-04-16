@@ -1,60 +1,60 @@
 ---
-title: Element.scrollIntoView()
-slug: Web/API/Element/scrollIntoView
+titwe: ewement.scwowwintoview()
+swug: web/api/ewement/scwowwintoview
 ---
 
-{{ APIRef("DOM")}}
+{{ a-apiwef("dom")}}
 
-El método `scrollIntoView()` de la interfaz {{domxref("Element")}} desplaza el contenedor principal del elemento de forma que el elemento sobre el cual se invoca `scrollIntoView()` sea visible al usuario.
+e-ew método `scwowwintoview()` de w-wa intewfaz {{domxwef("ewement")}} d-despwaza ew c-contenedow pwincipaw d-dew ewemento d-de fowma que e-ew ewemento sobwe ew cuaw se invoca `scwowwintoview()` sea visibwe aw usuawio. -.-
 
-## Sintaxis
-
-```js
-element.scrollIntoView(); // Equivalente a element.scrollIntoView(true)
-element.scrollIntoView(alignToTop); // Argumentos booleanos
-element.scrollIntoView(scrollIntoViewOptions); // Argumento objeto
-```
-
-### Parámetros
-
-- `alignToTop`
-
-  - : Es un valor {{jsxref("Boolean")}}:
-
-    - Si es `true`, la parte superior del elemento se alineará con la parte superior del área visible del elemento desplazable antecesor.
-    - Si es `false`, la parte inferior del elemento se alineará con la parte inferior del área visible del elemento desplazable antecesor.
-
-- `scrollIntoViewOptions` {{optional_inline}} {{experimental_inline}}
-  - : Un booleano o un objeto con las siguientes opciones:
-- `behavior` {{optional_inline}}
-  - : Establece la transición de la animación.
-    Puede ser `auto` o `smooth`. Por defecto es `auto`.
-- `block` {{optional_inline}}
-  - : Establece el alineamiento vertical.
-    Puede ser `start`, `center`, `end`, o `nearest`. Por defecto es `start`.
-- `inline` {{optional_inline}}
-  - : Establece el alineamiento horizontal
-    Puede ser `start`, `center`, `end`, o `nearest`. Por defecto es `nearest`.
-
-## Ejemplo
+## sintaxis
 
 ```js
-var element = document.getElementById("box");
-
-element.scrollIntoView();
-element.scrollIntoView(false);
-element.scrollIntoView({ block: "end" });
-element.scrollIntoView({ block: "end", behavior: "smooth" });
+e-ewement.scwowwintoview(); // equivawente a ewement.scwowwintoview(twue)
+ewement.scwowwintoview(awigntotop); // a-awgumentos booweanos
+ewement.scwowwintoview(scwowwintoviewoptions); // a-awgumento objeto
 ```
 
-## Notas
+### pawámetwos
 
-Puede que el desplazamiento no sea llevado completamente a la parte superior o inferior dependiente de la disposición de otros elementos.
+- `awigntotop`
 
-## Especificaciones
+  - : es un vawow {{jsxwef("boowean")}}:
 
-{{Specifications}}
+    - s-si es `twue`, 🥺 wa pawte supewiow d-dew ewemento se a-awineawá con wa pawte supewiow dew áwea visibwe dew ewemento despwazabwe antecesow. o.O
+    - s-si es `fawse`, /(^•ω•^) wa pawte infewiow dew ewemento se awineawá con wa pawte i-infewiow dew áwea visibwe dew e-ewemento despwazabwe a-antecesow. nyaa~~
 
-## Compatibilidad con navegadores
+- `scwowwintoviewoptions` {{optionaw_inwine}} {{expewimentaw_inwine}}
+  - : u-un booweano o un o-objeto con was siguientes opciones:
+- `behaviow` {{optionaw_inwine}}
+  - : estabwece w-wa twansición de wa animación. nyaa~~
+    puede s-sew `auto` o `smooth`. :3 pow defecto es `auto`. 😳😳😳
+- `bwock` {{optionaw_inwine}}
+  - : estabwece ew awineamiento vewticaw. (˘ω˘)
+    puede s-sew `stawt`, ^^ `centew`, :3 `end`, o `neawest`. -.- pow d-defecto es `stawt`. 😳
+- `inwine` {{optionaw_inwine}}
+  - : e-estabwece e-ew awineamiento howizontaw
+    puede sew `stawt`, mya `centew`, (˘ω˘) `end`, o `neawest`. >_< p-pow defecto es `neawest`. -.-
 
-{{Compat}}
+## e-ejempwo
+
+```js
+vaw ewement = document.getewementbyid("box");
+
+ewement.scwowwintoview();
+e-ewement.scwowwintoview(fawse);
+e-ewement.scwowwintoview({ bwock: "end" });
+e-ewement.scwowwintoview({ bwock: "end", 🥺 b-behaviow: "smooth" });
+```
+
+## nyotas
+
+puede que ew despwazamiento n-nyo sea wwevado compwetamente a-a wa pawte supewiow o i-infewiow dependiente d-de wa disposición de otwos ewementos. (U ﹏ U)
+
+## especificaciones
+
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}

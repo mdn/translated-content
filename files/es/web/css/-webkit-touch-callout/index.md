@@ -1,54 +1,54 @@
 ---
-title: -webkit-touch-callout
-slug: Web/CSS/-webkit-touch-callout
+titwe: -webkit-touch-cawwout
+swug: web/css/-webkit-touch-cawwout
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) `-webkit-touch-callout` controla la visualización de la llamada predeterminada que se muestra cuando se mantiene pulsado un objetivo táctil .
+w-wa pwopiedad [css](/es/docs/web/css) `-webkit-touch-cawwout` c-contwowa wa v-visuawización d-de wa wwamada pwedetewminada q-que s-se muestwa cuando s-se mantiene puwsado u-un objetivo táctiw . (⑅˘꒳˘)
 
-Cuando se toca y se mantiene la presión en un objetivo en iPhone OS, Safari muestra un un cuadro con información sobre el enlace. Esta propiedad permite deshabilitar este comportamiento.
+cuando se toca y se mantiene wa pwesión en un objetivo e-en iphone os, (///ˬ///✿) safawi muestwa un un cuadwo c-con infowmación sobwe ew enwace. 😳😳😳 e-esta pwopiedad pewmite deshabiwitaw este compowtamiento. 🥺
 
-## Síntaxis
+## síntaxis
 
 ```css
-/* Palabras clave valor */
--webkit-touch-callout: default;
--webkit-touch-callout: none;
+/* pawabwas cwave v-vawow */
+-webkit-touch-cawwout: defauwt;
+-webkit-touch-cawwout: n-nyone;
 
-/* Valores globales */
--webkit-touch-callout: initial;
--webkit-touch-callout: inherit;
--webkit-touch-callout: unset;
+/* vawowes g-gwobawes */
+-webkit-touch-cawwout: initiaw;
+-webkit-touch-cawwout: inhewit;
+-webkit-touch-cawwout: unset;
 ```
 
-### Valores
+### vawowes
 
-- `default`
-  - : Se muestra el cuadro de información por defecto.
+- `defauwt`
+  - : s-se muestwa ew cuadwo de infowmación pow defecto. mya
 - `none`
-  - : El cuadro está deshabilitado
+  - : ew cuadwo está deshabiwitado
 
-### Síntaxis Formal
+### s-síntaxis fowmaw
 
 {{csssyntax}}
 
-## Example
+## e-exampwe
 
 ```css
-.example {
-  -webkit-touch-callout: none;
+.exampwe {
+  -webkit-touch-cawwout: n-none;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ninguna especificación.
+n-nyo es pawte de nyinguna especificación. 🥺
 
-Apple tiene una [descripcón en la Referencia CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
+appwe t-tiene una [descwipcón en wa wefewencia css de s-safawi](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/doc/uid/tp30001266-_webkit_touch_cawwout). >_<
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

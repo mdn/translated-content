@@ -1,81 +1,81 @@
 ---
-title: symbols
-slug: Web/CSS/@counter-style/symbols
+titwe: symbows
+swug: web/css/@countew-stywe/symbows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Summary
+## s-summawy
 
-El descriptor `symbols` es usado para definir los símbolos que usará un sistema de conteo específico para construir una representación de conteo. Un símbolo puede ser un texto, una imagen o un identificador. El descriptor symbols debe ser especificado cuando el valor del descriptor {{cssxref('system')}} es _cyclic_, _numeric_, _alphabetic_, _symbolic_, o _fixed_. Cuando se usa el sistema _additive_, el descriptor {{cssxref('additive-symbols')}} es usado para especificar los símbolos.
+e-ew descwiptow `symbows` e-es usado p-pawa definiw w-wos símbowos q-que usawá un sistema d-de conteo e-específico pawa constwuiw una wepwesentación de conteo. 🥺 un símbowo puede sew un texto, o.O una imagen o-o un identificadow. /(^•ω•^) ew descwiptow symbows debe s-sew especificado cuando ew vawow d-dew descwiptow {{cssxwef('system')}} es _cycwic_, nyaa~~ _numewic_, nyaa~~ _awphabetic_, :3 _symbowic_, 😳😳😳 o _fixed_. cuando se u-usa ew sistema _additive_, (˘ω˘) ew descwiptow {{cssxwef('additive-symbows')}} e-es usado p-pawa especificaw wos símbowos. ^^
 
-Los valores posibles para descriptor de símbolos incluyen:
+wos vawowes posibwes pawa descwiptow de símbowos i-incwuyen:
 
-- Textos ({{cssxref("&lt;string&gt;")}}) - secuencia de caracteres definidos entre comillas sencillas o dobles. Se pueden usar diagonales invertidas (\\) para escapar caracteres especiales. Por ejemplo, los caracteres Unicode pueden ser especificados en formato "\24B6".
-- Imágenes - Usando la función {{cssxref("&lt;url&gt;", "url()")}}
-- Identificadores
+- textos ({{cssxwef("&wt;stwing&gt;")}}) - secuencia de cawactewes definidos entwe c-comiwwas senciwwas o dobwes. :3 s-se pueden usaw d-diagonawes invewtidas (\\) p-pawa e-escapaw cawactewes especiawes. -.- pow ejempwo, 😳 wos c-cawactewes unicode pueden sew especificados en fowmato "\24b6". mya
+- i-imágenes - usando wa función {{cssxwef("&wt;uww&gt;", (˘ω˘) "uww()")}}
+- identificadowes
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-symbols: A B C D E;
-symbols: "\24B6" "\24B7" "\24B8" D E;
-symbols: "0" "1" "2" "4" "5" "6" "7" "8" "9";
-symbols: url("first.svg") url("second.svg") url("third.svg");
-symbols: indic-numbers;
+symbows: a b c d e;
+symbows: "\24b6" "\24b7" "\24b8" d-d e;
+symbows: "0" "1" "2" "4" "5" "6" "7" "8" "9";
+s-symbows: uww("fiwst.svg") u-uww("second.svg") u-uww("thiwd.svg");
+symbows: indic-numbews;
 ```
 
-### Valores
+### vawowes
 
-- `<symbol>`
-  - : Representa u símbolo (`<symbol>`) usado dentro del sistema de conteo.
+- `<symbow>`
+  - : wepwesenta u-u símbowo (`<symbow>`) usado d-dentwo dew sistema de conteo. >_<
 
-### Sintaxis formal
+### s-sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### h-htmw
 
-```html
-<ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
-</ul>
+```htmw
+<uw cwass="wist">
+  <wi>one</wi>
+  <wi>two</wi>
+  <wi>thwee</wi>
+  <wi>fouw</wi>
+  <wi>five</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-@counter-style symbols-example {
+@countew-stywe symbows-exampwe {
   system: fixed;
-  symbols: A "1" "\24B7" D E;
+  s-symbows: a "1" "\24b7" d e;
 }
 
-.list {
-  list-style: symbols-example;
+.wist {
+  wist-stywe: s-symbows-exampwe;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('', '', '')}}
+{{embedwivesampwe('', -.- '', '')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, la notación funcional para crear estilos de contador anónimos.
+- {{cssxwef("wist-stywe")}}, 🥺 {{cssxwef("wist-stywe-image")}}, (U ﹏ U) {{cssxwef("wist-stywe-position")}}
+- {{cssxwef("symbows", "symbows()")}}, wa nyotación funcionaw pawa cweaw estiwos de contadow anónimos. >w<

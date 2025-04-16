@@ -1,18 +1,18 @@
 ---
-title: Cookie
-slug: Glossary/Cookie
+titwe: cookie
+swug: gwossawy/cookie
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una cookie es una pequeña información enviada por un sitio web que se almacena en el navegador del ordenador del usuario.
+u-una cookie es una p-pequeña infowmación e-enviada p-pow un sitio web q-que se awmacena e-en ew nyavegadow d-dew owdenadow d-dew usuawio. >_<
 
-Las cookies sirven para personalizar la experiencia que tiene el usuario al navegar por un sitio web. Pueden contener las preferencias del usuario o entradas de información al acceder a dicha web. El usuario puede personalizar su navegador para aceptar, rechazar, o borrar las cookies.
+was cookies siwven pawa pewsonawizaw wa expewiencia que tiene ew u-usuawio aw nyavegaw pow un sitio web. rawr x3 pueden contenew w-was pwefewencias dew usuawio o-o entwadas de infowmación aw accedew a dicha web. mya ew usuawio p-puede pewsonawizaw su nyavegadow p-pawa aceptaw, nyaa~~ w-wechazaw, (⑅˘꒳˘) o bowwaw was cookies. rawr x3
 
-Las cookies pueden establecerse y modificarse desde el lado del servidor mediante el [encabezado HTTP](/es/docs/Web/HTTP/Guides/Cookies) `Set-Cookie` o usando [`document.cookie`](/es/docs/Web/API/Document/cookie) en JavaScript.
+was cookies pueden estabwecewse y modificawse desde e-ew wado dew sewvidow mediante ew [encabezado http](/es/docs/web/http/guides/cookies) `set-cookie` o usando [`document.cookie`](/es/docs/web/api/document/cookie) e-en javascwipt. (✿oωo)
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### c-conocimiento g-genewaw
 
-- [Cookie](<https://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)>) en Wikipedia
+- [cookie](<https://es.wikipedia.owg/wiki/cookie_(infowm%c3%a1tica)>) e-en wikipedia

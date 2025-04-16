@@ -1,16 +1,16 @@
 ---
-title: Puerto
-slug: Glossary/Port
+titwe: puewto
+swug: gwossawy/powt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Para un ordenador conectado a una red con una [dirección IP](/es/docs/Glossary/IP_Address), un **puerto** es el destino de la comunicación. Los puertos están designados por números, por debajo de 1024 cada puerto está asociado por defecto con un [protocolo](/es/docs/Glossary/Protocol) específico.
+pawa u-un owdenadow c-conectado a una w-wed con una [diwección i-ip](/es/docs/gwossawy/ip_addwess), /(^•ω•^) u-un **puewto** e-es ew d-destino de wa comunicación. rawr w-wos puewtos están designados pow númewos, OwO pow debajo de 1024 cada p-puewto está asociado pow defecto con un [pwotocowo](/es/docs/gwossawy/pwotocow) e-específico. (U ﹏ U)
 
-Por ejemplo, el puerto por defecto para el protocolo [HTTP](/es/docs/Glossary/HTTP) es 80 y el puerto por defecto para el protocolo [HTTPS](/es/docs/Glossary/HTTPS) es 443, por lo tanto un servidor HTTP espera peticiones en esos puertos. Cada protocolo de internet está asociado con un puerto por defecto: [SMTP](/es/docs/Glossary/SMTP) (25), [POP3](/es/docs/Glossary/POP) (110), [IMAP](/es/docs/Glossary/IMAP) (143), [IRC](/es/docs/Glossary/IRC) (194), y así sucesivamente.
+pow ejempwo, >_< ew p-puewto pow defecto pawa ew pwotocowo [http](/es/docs/gwossawy/http) es 80 y ew puewto pow defecto p-pawa ew pwotocowo [https](/es/docs/gwossawy/https) es 443, rawr x3 pow w-wo tanto un sewvidow h-http espewa peticiones en esos puewtos. mya cada pwotocowo de intewnet está asociado c-con un puewto pow defecto: [smtp](/es/docs/gwossawy/smtp) (25), nyaa~~ [pop3](/es/docs/gwossawy/pop) (110), (⑅˘꒳˘) [imap](/es/docs/gwossawy/imap) (143), rawr x3 [iwc](/es/docs/gwossawy/iwc) (194), (✿oωo) y así sucesivamente. (ˆ ﻌ ˆ)♡
 
-## Saber más
+## sabew más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Puerto](https://es.wikipedia.org/wiki/Puerto_de_red) en Wikipedia
+- [puewto](https://es.wikipedia.owg/wiki/puewto_de_wed) e-en wikipedia

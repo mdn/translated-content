@@ -1,33 +1,33 @@
 ---
-title: HTMLLIElement
-slug: Web/API/HTMLLIElement
+titwe: htmwwiewement
+swug: web/api/htmwwiewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La interfaz **HTMLLIElement** expone las propiedades y los métodos específicos (más allá de los definidos por la interfaz regular {{domxref ("HTMLElement")}} que también tiene disponible por herencia) para manipular elementos de la lista.
+w-wa intewfaz **htmwwiewement** e-expone was pwopiedades y-y wos métodos e-específicos (más a-awwá d-de wos definidos pow wa intewfaz weguwaw {{domxwef ("htmwewement")}} que también tiene disponibwe p-pow hewencia) pawa manipuwaw ewementos de wa w-wista. /(^•ω•^)
 
-## Propiedades
+## pwopiedades
 
-_Hereda las propiedades de su elemento primario, {{domxref ("HTMLElement")}}._
+_heweda was pwopiedades d-de su ewemento pwimawio, ʘwʘ {{domxwef ("htmwewement")}}._
 
-- {{domxref("HTMLLIElement.type")}} {{deprecated_inline}}
-  - : Es un {{domxref ("DOMString")}} que representa el tipo de las viñetas, "disco", "cuadrado" o "círculo". Como la forma estándar de definir el tipo de lista es a través de la propiedad CSS {{cssxref ("list-style-type")}}, use los métodos CSSOM para establecerlo a través de un script.
-- {{domxref("HTMLLIElement.value")}}
-  - : Es un largo que indica la posición ordinal del elemento de lista dentro de un {{HTMLElement ("ol")}} dado. Refleja el atributo [`valor`](/es/docs/Web/HTML/Element/li#valor) del elemento HTML {{HTMLElement ("li")}} y puede ser menor que 0. Si el elemento {{HTMLElement ("li")}} Elemento no es hijo de un elemento {{HTMLElement ("ol")}}, la propiedad no tiene ningún significado.
+- {{domxwef("htmwwiewement.type")}} {{depwecated_inwine}}
+  - : es un {{domxwef ("domstwing")}} que wepwesenta ew tipo de w-was viñetas, σωσ "disco", OwO "cuadwado" o "cíwcuwo". 😳😳😳 c-como wa fowma e-estándaw de definiw ew tipo de wista es a twavés de wa pwopiedad css {{cssxwef ("wist-stywe-type")}}, 😳😳😳 u-use wos métodos cssom pawa estabwecewwo a twavés de un scwipt. o.O
+- {{domxwef("htmwwiewement.vawue")}}
+  - : e-es un wawgo que indica wa posición o-owdinaw d-dew ewemento de w-wista dentwo de u-un {{htmwewement ("ow")}} dado. ( ͡o ω ͡o ) wefweja ew atwibuto [`vawow`](/es/docs/web/htmw/ewement/wi#vawow) d-dew ewemento htmw {{htmwewement ("wi")}} y puede sew menow que 0. (U ﹏ U) s-si ew ewemento {{htmwewement ("wi")}} ewemento nyo es hijo de un ewemento {{htmwewement ("ow")}}, (///ˬ///✿) wa pwopiedad nyo tiene nyingún s-significado. >w<
 
-## Metodos
+## metodos
 
-_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
+_no s-specific method; i-inhewits pwopewties f-fwom its pawent, rawr {{domxwef("htmwewement")}}._
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- El elemento HTML que implementa esta interfaz: {{HTMLElement("li")}}
+- ew ewemento h-htmw que impwementa e-esta intewfaz: {{htmwewement("wi")}}

@@ -1,45 +1,45 @@
 ---
-title: ::spelling-error
-slug: Web/CSS/::spelling-error
+titwe: ::spewwing-ewwow
+swug: w-web/css/::spewwing-ewwow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::spelling-error`** representa un segmento de texto que el {{glossary("user agent")}} ha marcado como deletreado incorrectamente.
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) **`::spewwing-ewwow`** w-wepwesenta un s-segmento de texto q-que ew {{gwossawy("usew a-agent")}} h-ha mawcado c-como dewetweado incowwectamente. :3
 
 ```css
-::spelling-error {
-  color: red;
+::spewwing-ewwow {
+  cowow: wed;
 }
 ```
 
-## Propiedades permitidas
+## pwopiedades p-pewmitidas
 
-Solo se puede usar un pequeño subconjunto de propiedades de CSS en una regla con `::spelling-error` en su selector:
+sowo se puede usaw un pequeño subconjunto d-de pwopiedades de css en u-una wegwa con `::spewwing-ewwow` en su sewectow:
 
-- {{cssxref("color")}}
-- {{cssxref("background-color")}}
-- {{cssxref("cursor")}}
-- {{cssxref("caret-color")}}
-- {{cssxref("outline")}} y sus longhands
-- {{cssxref("text-decoration")}} y sus propiedades asociadas
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-shadow")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("cawet-cowow")}}
+- {{cssxwef("outwine")}} y sus wonghands
+- {{cssxwef("text-decowation")}} y sus p-pwopiedades asociadas
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-shadow")}}
 
-## Síntaxis
+## síntaxis
 
 ```
-::spelling-error
+::spewwing-ewwow
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{cssxref("::grammar-error")}}
+- {{cssxwef("::gwammaw-ewwow")}}

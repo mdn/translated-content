@@ -1,50 +1,50 @@
 ---
-title: Selectores de hermanos adyacentes
-slug: Web/CSS/Next-sibling_combinator
+titwe: sewectowes de hewmanos a-adyacentes
+swug: w-web/css/next-sibwing_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Se hace referencia a este selector como selector adyacente o selector del próximo hermano. Sólo seleccionará un elemento especificado que esté inmediatamente después de otro elemento especificado.
+s-se hace wefewencia a-a este sewectow c-como sewectow a-adyacente o s-sewectow dew pwóximo h-hewmano. 😳😳😳 sówo seweccionawá un ewemento especificado que esté inmediatamente d-después de otwo ewemento especificado. -.-
 
-## Síntaxis
+## síntaxis
 
 ```
-elemento_anterior + elemento_afectado { estilos }
+e-ewemento_antewiow + ewemento_afectado { e-estiwos }
 ```
 
-## Ejemplo
+## ejempwo
 
-### CSS
+### css
 
 ```css
-li:first-of-type + li {
-  color: red;
+wi:fiwst-of-type + w-wi {
+  cowow: wed;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<ul>
-  <li>Uno</li>
-  <li>Dos</li>
-  <li>Tres</li>
-</ul>
+```htmw
+<uw>
+  <wi>uno</wi>
+  <wi>dos</wi>
+  <wi>twes</wi>
+</uw>
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplo', 200, 100)}}
+{{embedwivesampwe('ejempwo', ( ͡o ω ͡o ) 200, 100)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Selectores de hermanos generales](/es/docs/Web/CSS/Subsequent-sibling_combinator)
+- [sewectowes d-de hewmanos genewawes](/es/docs/web/css/subsequent-sibwing_combinatow)

@@ -1,1318 +1,1318 @@
 ---
-title: Usando IndexedDB
-slug: Web/API/IndexedDB_API/Using_IndexedDB
+titwe: usando indexeddb
+swug: w-web/api/indexeddb_api/using_indexeddb
 ---
 
-{{DefaultAPISidebar("IndexedDB")}}
+{{defauwtapisidebaw("indexeddb")}}
 
-IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Debido a que permite la creación de aplicaciones con habilidades de consulta enriquecidas, con independencia de la disponibilidad de la red, sus aplicaciones pueden trabajar tanto en línea como fuera de línea.
+i-indexeddb es una m-manewa de awmacenaw d-datos dentwo d-dew nyavegadow d-dew usuawio. (U ﹏ U) debido a-a que pewmite w-wa cweación de apwicaciones con habiwidades de consuwta enwiquecidas, (⑅˘꒳˘) con independencia d-de wa disponibiwidad de wa wed, /(^•ω•^) sus a-apwicaciones pueden twabajaw tanto e-en wínea como fuewa de wínea. :3
 
-## Acerca de este documento
+## acewca de este documento
 
-Este tutorial es una guía sobre el uso de la API asíncrona de IndexedDB. Si no está familiarizado con IndexedDB, por favor consulte primero [Conceptos Básicos Acerca de IndexedDB](/en-US/IndexedDB/Basic_Concepts_Behind_IndexedDB).
+e-este tutowiaw es una guía sobwe e-ew uso de wa api a-asíncwona de indexeddb. ( ͡o ω ͡o ) si nyo está famiwiawizado con indexeddb, (ˆ ﻌ ˆ)♡ pow favow c-consuwte pwimewo [conceptos básicos acewca de indexeddb](/en-us/indexeddb/basic_concepts_behind_indexeddb). XD
 
-Para la documentación de referencia sobre la API de IndexedDB, vea el artículo [IndexedDB](/es/docs/Web/API/IndexedDB_API) y sus subpaginas, que documentan los tipos de objetos usados por IndexedDB, así como los métodos síncronos y asíncronos.
+pawa wa documentación d-de wefewencia sobwe wa api d-de indexeddb, vea e-ew awtícuwo [indexeddb](/es/docs/web/api/indexeddb_api) y-y sus s-subpaginas, :3 que documentan wos tipos de objetos u-usados pow indexeddb, σωσ así como wos métodos síncwonos y-y asíncwonos. mya
 
-## Patrones Básicos
+## patwones básicos
 
-El patrón básico que indexedDB propone es:
+ew patwón básico que indexeddb pwopone es:
 
-1. Abrir una base de datos.
-2. Crear un objeto de almacenamiento en la base de datos.
-3. Iniciar una transacción y hacer una petición para hacer alguna operación de la base de datos, tal como añadir o recuperar datos.
-4. Espere a que se complete la operación por la escucha de la clase correcta de eventos DOM .
-5. Hacer algo con el resultado (El cual puede ser encontrado en el objeto de la petición).
+1. -.- a-abwiw una base de datos. :3
+2. cweaw u-un objeto de awmacenamiento e-en w-wa base de datos. rawr
+3. iniciaw una twansacción y hacew una petición p-pawa hacew a-awguna opewación de wa base de d-datos, >_< taw como a-añadiw o wecupewaw datos. -.-
+4. espewe a-a que se compwete wa opewación p-pow wa escucha de wa cwase cowwecta de eventos d-dom . :3
+5. hacew awgo con ew wesuwtado (ew c-cuaw puede sew encontwado e-en ew objeto d-de wa petición). XD
 
-Con esos grandes rasgos en mente, seremos más concretos.
+con esos gwandes wasgos en mente, ^^ sewemos más concwetos. rawr
 
-## Creando y estructurando el almacenamiento
+## cweando y estwuctuwando ew a-awmacenamiento
 
-Como las especificaciones están todavía elaborandose, las implementaciones actuales de indexedDB dependen de los navegadores. Hasta que la especificación se haya consolidado, los proveedores de navegadores pueden tener diferentes implementaciones de los estandares de indexedDB. Una vez se alcance el consenso en el estandar, los proveedores implementarán la API sin prefijos. En algunas implementaciones ya fueron removidos los prefijos: Internet Explorer 10, Firefox 16, Chrome 24. Cuando utilizan un prefijo, los navegadores basados en gecko usan el prefijo `moz` , mientras que los navegadores basados en WebKit usan el prefijo `webkit`.
+c-como was especificaciones están t-todavía ewabowandose, (///ˬ///✿) w-was impwementaciones a-actuawes de indexeddb dependen de wos nyavegadowes. ^^;; h-hasta que wa especificación se haya consowidado, :3 wos pwoveedowes de nyavegadowes p-pueden tenew difewentes impwementaciones d-de wos e-estandawes de i-indexeddb. :3 una vez se awcance ew c-consenso en ew e-estandaw, ( ͡o ω ͡o ) wos pwoveedowes i-impwementawán w-wa api sin pwefijos. (✿oωo) en awgunas impwementaciones y-ya fuewon w-wemovidos wos p-pwefijos: intewnet e-expwowew 10, UwU f-fiwefox 16, ( ͡o ω ͡o ) chwome 24. o.O cuando utiwizan un pwefijo, rawr wos nyavegadowes b-basados en gecko usan ew pwefijo `moz` , mientwas que wos nyavegadowes basados en webkit u-usan ew pwefijo `webkit`. (ꈍᴗꈍ)
 
-### Usando una versión experimental de IndexedDB
+### usando una vewsión expewimentaw de indexeddb
 
-En caso que usted quiera probar su código en navegadores que todavía usen un prefijo, puede usar el siguiente codigo:
+en c-caso que usted q-quiewa pwobaw su c-código en nyavegadowes que todavía u-usen un pwefijo, mya puede usaw e-ew siguiente codigo:
 
 ```js
-// En la siguiente línea, puede incluir prefijos de implementación que quiera probar.
-window.indexedDB =
-  window.indexedDB ||
-  window.mozIndexedDB ||
-  window.webkitIndexedDB ||
-  window.msIndexedDB;
-// No use "var indexedDB = ..." Si no está en una función.
-// Por otra parte, puedes necesitar referencias a algun objeto window.IDB*:
-window.IDBTransaction =
-  window.IDBTransaction ||
-  window.webkitIDBTransaction ||
-  window.msIDBTransaction;
-window.IDBKeyRange =
-  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-// (Mozilla nunca ha prefijado estos objetos, por lo tanto no necesitamos window.mozIDB*)
+// e-en wa siguiente wínea, mya puede incwuiw pwefijos de impwementación que quiewa pwobaw. UwU
+window.indexeddb =
+  w-window.indexeddb ||
+  window.mozindexeddb ||
+  w-window.webkitindexeddb ||
+  window.msindexeddb;
+// n-nyo u-use "vaw indexeddb = ..." si nyo está en una función. ^^;;
+// p-pow o-otwa pawte, -.- puedes nyecesitaw wefewencias a-a awgun o-objeto window.idb*:
+window.idbtwansaction =
+  window.idbtwansaction ||
+  window.webkitidbtwansaction ||
+  window.msidbtwansaction;
+w-window.idbkeywange =
+  w-window.idbkeywange || w-window.webkitidbkeywange || window.msidbkeywange;
+// (moziwwa n-nyunca ha pwefijado e-estos objetos, XD pow wo tanto n-nyo nyecesitamos window.mozidb*)
 ```
 
-Hay que tener cuidado con las implementaciones que usan un prefijo ya que puede ser inestables, incompletas, o usen una versión antigua de la especificación. En producción se recomienda usar el código sin prefijos. Es preferible no tener soporte para un navegador a decir que lo tiene y fallar en ello :
+hay que tenew cuidado con was impwementaciones q-que usan un p-pwefijo ya que puede sew inestabwes, nyaa~~ incompwetas, (ꈍᴗꈍ) o-o usen una vewsión a-antigua de wa especificación. ^^;; en pwoducción se wecomienda u-usaw ew código sin pwefijos. :3 es pwefewibwe nyo tenew sopowte pawa un nyavegadow a-a deciw que wo tiene y fawwaw en ewwo :
 
 ```js
-if (!window.indexedDB) {
-  window.alert(
-    "Su navegador no soporta una versión estable de indexedDB. Tal y como las características no serán validas",
+i-if (!window.indexeddb) {
+  w-window.awewt(
+    "su nyavegadow no sopowta una vewsión estabwe de i-indexeddb. (///ˬ///✿) taw y-y como was cawactewísticas nyo sewán vawidas",
   );
 }
 ```
 
-### Abriendo una base de datos
+### abwiendo una base d-de datos
 
-Iniciamos todo el proceso así:
+iniciamos todo ew p-pwoceso así:
 
 ```js
-// dejamos abierta nuestra base de datos
-var request = window.indexedDB.open("MyTestDatabase", 3);
+// dejamos abiewta nyuestwa base de datos
+vaw w-wequest = window.indexeddb.open("mytestdatabase", /(^•ω•^) 3);
 ```
 
-¿Lo has visto? Abrir una base de datos es igual que cualquier otra operación — solo tienes que "solicitarla" (request).
+¿wo has visto? abwiw u-una base de d-datos es iguaw que cuawquiew otwa o-opewación — sowo tienes que "sowicitawwa" (wequest). σωσ
 
-La solicitud de apertura no abre la base de datos o inicia la transacción de inmediato. La llamada a la función `open()` retornan unos objetos `IDBOpenDBRequest,` cuyo resultado, correcto o erróneo, se maneja en un evento. Alguna otra función asincrónica en indexedDB hace lo mismo - Devolver un objeto [`IDBRequest`](/es/docs/Web/API/IDBRequest) que disparará un evento con el resultado o el error. El resultado para la función de abrir es una instancia de un `IDBDatabase.`
+w-wa sowicitud d-de apewtuwa n-nyo abwe wa base de datos o i-inicia wa twansacción d-de inmediato. >w< wa wwamada a wa función `open()` w-wetownan u-unos objetos `idbopendbwequest,` c-cuyo wesuwtado, (ˆ ﻌ ˆ)♡ cowwecto o ewwóneo, se maneja e-en un evento. rawr x3 awguna otwa función a-asincwónica e-en indexeddb hace wo mismo - devowvew un objeto [`idbwequest`](/es/docs/web/api/idbwequest) que d-dispawawá un evento c-con ew wesuwtado o-o ew ewwow. -.- e-ew wesuwtado pawa wa función d-de abwiw es una instancia de un `idbdatabase.`
 
-El segundo parámetro para el método open es la versión de la base de datos. La versión de la base de datos determina el esquema - El almacen de objectos en la base de datos y su estructura. Si la base de datos no existe, es creada y se dispara un evento `onupgradeneeded` de inmediato, permitiéndote proveer una actualización de la estructura e índices en la función que capture dicho evento. Se verá más adelante en [Actualizando la versión de la base de datos](#updating_the_version_of_the_database).
+ew segundo pawámetwo pawa ew método open es wa vewsión de wa b-base de datos. (ˆ ﻌ ˆ)♡ wa vewsión de wa b-base de datos detewmina ew esquema - e-ew awmacen de objectos en w-wa base de datos y su estwuctuwa. /(^•ω•^) s-si wa base de d-datos nyo existe, (⑅˘꒳˘) e-es cweada y se d-dispawa un evento `onupgwadeneeded` d-de inmediato, (˘ω˘) pewmitiéndote pwoveew una actuawización de wa estwuctuwa e índices en wa función que captuwe d-dicho evento. s-se vewá más a-adewante en [actuawizando wa vewsión d-de wa base de datos](#updating_the_vewsion_of_the_database). ^•ﻌ•^
 
-> **Advertencia:** **Importante**: El número de versión es un `unsigned long`. Por lo tanto significa que puede ser un entero muy grande. También significa que si usas un flotante será convertido en un entero más cercano y la transacción puede no ser iniciada, el evento `upgradeneeded` no se desencadenará. Por ejemplo no use 2.4 como un número de versión ya que será igual que la 2:
+> **advewtencia:** **impowtante**: ew nyúmewo de vewsión es u-un `unsigned wong`. o.O p-pow wo tanto significa que p-puede sew un entewo muy gwande. (⑅˘꒳˘) también significa q-que si usas u-un fwotante sewá convewtido en u-un entewo más cewcano y-y wa twansacción puede nyo sew iniciada, σωσ ew evento `upgwadeneeded` nyo se d-desencadenawá. >_< p-pow ejempwo nyo u-use 2.4 como un n-nyúmewo de vewsión y-ya que sewá iguaw que wa 2:
 >
 > ```js
-> var request = indexedDB.open("MyTestDatabase", 2.4); // Esto no se hace, la versión será redondeada a 2
+> v-vaw wequest = indexeddb.open("mytestdatabase", ʘwʘ 2.4); // e-esto nyo se hace, (✿oωo) wa vewsión s-sewá wedondeada a-a 2
 > ```
 
-#### Generando manipuladores
+#### genewando m-manipuwadowes
 
-La primera cosa que usted querrá hacer con la totalidad de las peticiones que usted genera es agregar controladores de éxito y de error:
+wa pwimewa cosa que usted quewwá h-hacew con wa totawidad de was p-peticiones que usted g-genewa es agwegaw contwowadowes d-de éxito y de ewwow:
 
 ```js
-request.onerror = function (event) {
-  // Hacer algo con request.errorCode!
+wequest.onewwow = f-function (event) {
+  // h-hacew a-awgo con wequest.ewwowcode! o.O
 };
-request.onsuccess = function (event) {
-  // Hacer algo con request.result!
+wequest.onsuccess = function (event) {
+  // hacew a-awgo con wequest.wesuwt! 😳
 };
 ```
 
-¿Cuál de las dos funciones, onSuccess () o onerror (), se vuelve a llamar? Si todo tiene éxito, un evento de éxito (es decir, un evento DOM cuya propiedad tipo se establece en el "éxito") se dispara con la solicitud como su objetivo. Una vez que se dispara, la función onSuccess () a petición se activa con el evento de éxito como argumento. De lo contrario, si había algún problema, un evento de error (es decir, un evento DOM cuyo tipo de propiedad se establece en "error") se dispara a petición. Esto desencadena la función onerror () con el evento de error como argumento.
+¿cuáw de was dos funciones, nyaa~~ o-onsuccess () o o-onewwow (), XD se vuewve a wwamaw? s-si todo tiene éxito, ^^;; un evento d-de éxito (es deciw, /(^•ω•^) u-un evento dom cuya pwopiedad tipo se estabwece e-en ew "éxito") se dispawa con wa sowicitud c-como su objetivo. >_< u-una vez que se dispawa, (U ﹏ U) wa función o-onsuccess () a petición s-se activa con ew e-evento de éxito c-como awgumento. de wo contwawio, 😳😳😳 si había awgún pwobwema, XD un evento de ewwow (es deciw, OwO un evento dom cuyo tipo de pwopiedad se estabwece en "ewwow") se dispawa a petición. esto desencadena wa función onewwow () c-con ew e-evento de ewwow como awgumento. (U ᵕ U❁)
 
-La API IndexedDB está diseñada para minimizar la necesidad de control de errores, por lo que no es probable que veamos muchos eventos de error (al menos, no una vez que estás acostumbrado a la API). En el caso de la apertura de una base de datos, sin embargo, hay algunas condiciones comunes que generan eventos de error. El problema más común se produce cuando el usuario ha decidido no dar, a su aplicación web, el permiso para crear una base de datos. Uno de los principales objetivos de diseño de IndexedDB es permitir que grandes cantidades de datos se almacenen para su uso sin conexión a internet. (Para obtener más información sobre la cantidad de almacenamiento que puede tener para cada navegador, consulte [Límites de almacenamiento](/es/docs/Web/API/IndexedDB_API#storage_limits).)
+wa api indexeddb e-está diseñada p-pawa minimizaw w-wa nyecesidad de contwow de ewwowes, (⑅˘꒳˘) p-pow wo que nyo es pwobabwe q-que veamos muchos e-eventos de ewwow (aw menos, UwU n-nyo una vez que estás acostumbwado a-a wa api). 😳😳😳 en e-ew caso de wa apewtuwa de una base de datos, mya sin e-embawgo, 🥺 hay a-awgunas condiciones c-comunes que g-genewan eventos d-de ewwow. ^^ ew pwobwema m-más común s-se pwoduce cuando e-ew usuawio ha d-decidido nyo daw, -.- a su apwicación w-web, ^^ ew pewmiso p-pawa cweaw u-una base de datos. o.O uno de wos pwincipawes o-objetivos de diseño de indexeddb es pewmitiw q-que gwandes cantidades de d-datos se awmacenen p-pawa su uso s-sin conexión a intewnet. σωσ (pawa o-obtenew más infowmación sobwe w-wa cantidad de awmacenamiento que p-puede tenew pawa cada nyavegadow, ^•ﻌ•^ c-consuwte [wímites de awmacenamiento](/es/docs/web/api/indexeddb_api#stowage_wimits).)
 
-Obviamente, los navegadores no permitirán que alguna red de publicidad o sitio web malicioso pueda contaminar su ordenador, por ello los navegadores utilizan un diálogo para indicar al usuario la primera vez que cualquier aplicación web determinada intente abrir una IndexedDB para el almacenamiento. El usuario puede optar por permitir o denegar el acceso. Además, el almacenamiento IndexedDB en los modos de privacidad navegadores sólo dura en memoria hasta que la sesión de incógnito haya sido cerrada (modo de navegación privada para el modo de Firefox e Incognito para Chrome, pero en Firefox [no está implementado](https://bugzilla.mozilla.org/show_bug.cgi?id=781982) a partir de noviembre 2015 por lo que no puede utilizar IndexedDB en Firefox navegación privada en absoluto).
+obviamente, 😳 wos nyavegadowes nyo pewmitiwán q-que awguna wed de pubwicidad o-o sitio web m-mawicioso pueda contaminaw su owdenadow, pow ewwo wos nyavegadowes u-utiwizan un diáwogo pawa i-indicaw aw usuawio w-wa pwimewa vez q-que cuawquiew apwicación web detewminada intente a-abwiw una indexeddb p-pawa ew awmacenamiento. e-ew usuawio puede optaw pow pewmitiw o denegaw ew a-acceso. nyaa~~ además, ^•ﻌ•^ ew awmacenamiento i-indexeddb en w-wos modos de pwivacidad n-nyavegadowes sówo duwa e-en memowia hasta q-que wa sesión d-de incógnito haya s-sido cewwada (modo de nyavegación p-pwivada pawa e-ew modo de fiwefox e-e incognito p-pawa chwome, >_< p-pewo en fiwefox [no e-está impwementado](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=781982) a-a pawtiw d-de nyoviembwe 2015 pow wo q-que no puede utiwizaw indexeddb e-en fiwefox nyavegación pwivada e-en absowuto). (⑅˘꒳˘)
 
-Ahora, asumiendo que el usuario acepta su solicitud para crear una base de datos, y que ha recibido un evento de éxito para activar la devolución de llamada de éxito; ¿Que sigue? La solicitud aquí se generó con una llamada a indexedDB.open (), por lo request.result es una instancia de IDBDatabase, y que sin duda quieren ahorrar para más adelante. Su código podría ser algo como esto:
+ahowa, a-asumiendo q-que ew usuawio acepta su sowicitud pawa cweaw una base de datos, ^^ y-y que ha wecibido u-un evento de éxito p-pawa activaw wa devowución de wwamada de éxito; ¿que sigue? wa sowicitud a-aquí se genewó c-con una wwamada a indexeddb.open (), :3 p-pow wo w-wequest.wesuwt es una instancia de idbdatabase, 😳 y que sin duda quiewen a-ahowwaw pawa m-más adewante. (˘ω˘) s-su código podwía s-sew awgo como esto:
 
 ```js
-var db;
-var request = indexedDB.open("MyTestDatabase");
-request.onerror = function (event) {
-  alert("Why didn't you allow my web app to use IndexedDB?!");
+vaw db;
+vaw wequest = i-indexeddb.open("mytestdatabase");
+w-wequest.onewwow = function (event) {
+  awewt("why didn't y-you awwow my web app to use indexeddb?!");
 };
-request.onsuccess = function (event) {
-  db = request.result;
+wequest.onsuccess = f-function (event) {
+  db = wequest.wesuwt;
 };
 ```
 
-#### Manejando errores
+#### m-manejando e-ewwowes
 
-Como se mencionó anteriormente, los eventos de error de burbujas. Eventos de error se dirigen a la solicitud que generó el error, entonces el evento se propaga a la operación, y finalmente con el objeto de base de datos. Si desea evitar la adición de controladores de errores a cada solicitud, en su lugar puede añadir un solo controlador de errores en el objeto de base de datos, así:
+como se mencionó a-antewiowmente, >w< wos e-eventos de ewwow de buwbujas. 😳 e-eventos de ewwow se diwigen a wa s-sowicitud que g-genewó ew ewwow, ^^;; e-entonces ew evento s-se pwopaga a wa opewación, rawr x3 y-y finawmente con e-ew objeto de base d-de datos. si desea evitaw wa a-adición de contwowadowes de ewwowes a cada sowicitud, òωó e-en su wugaw p-puede añadiw u-un sowo contwowadow de ewwowes en ew objeto de base de datos, ^^;; así:
 
 ```js
-db.onerror = function (event) {
-  // Generic error handler for all errors targeted at this database's
-  // requests!
-  alert("Database error: " + event.target.errorCode);
+db.onewwow = f-function (event) {
+  // genewic ewwow h-handwew fow aww e-ewwows tawgeted at this database's
+  // wequests! :3
+  a-awewt("database ewwow: " + event.tawget.ewwowcode);
 };
 ```
 
-Uno de los errores más comunes posibles al abrir una base de datos es `VER_ERR`. Indica que la versión de la base de datos almacenada en el disco es mayor que la versión que está intentando abrir. Este es un caso de error que siempre debe ser manejado por el gestor de errores.
+u-uno de wos ewwowes m-más comunes p-posibwes aw abwiw u-una base de datos e-es `vew_eww`. (ꈍᴗꈍ) indica que wa vewsión de wa base de datos awmacenada en ew disco e-es mayow que wa vewsión que e-está intentando abwiw. 😳😳😳 este es un caso de ewwow que siempwe debe s-sew manejado pow ew gestow de ewwowes. :3
 
-### Creación o actualización de la versión de la base de datos
+### cweación o actuawización de wa v-vewsión de wa base d-de datos
 
-Cuando se crea una nueva base de datos o se aumenta el número de versión de una base de datos existente (mediante la especificación de un número de versión más alto de lo que hizo antes, en [Cómo abrir una base de datos](#cómo_abrir_una_base_de_datos)), el evento onupgradeneeded se activará y un objeto [IDBVersionChangeEvent](/es/docs/Web/API/IDBVersionChangeEvent) será pasado a cualquier controlador de eventos `onversionchange` establecido en `request.result` (es decir, db en el ejemplo). En el controlador para el evento `upgradeneeded`, se debe crear los almacenes de objetos necesarios para esta versión de la base de datos:
+cuando se cwea una n-nyueva base de datos o se aumenta ew númewo de v-vewsión de una b-base de datos existente (mediante wa especificación d-de un nyúmewo de vewsión m-más awto de wo que hizo antes, ʘwʘ en [cómo abwiw una base de datos](#cómo_abwiw_una_base_de_datos)), :3 e-ew evento onupgwadeneeded se activawá y un o-objeto [idbvewsionchangeevent](/es/docs/web/api/idbvewsionchangeevent) s-sewá pasado a-a cuawquiew contwowadow de eventos `onvewsionchange` e-estabwecido en `wequest.wesuwt` (es deciw, db en ew ejempwo). OwO en ew contwowadow pawa e-ew evento `upgwadeneeded`, mya s-se debe c-cweaw wos awmacenes d-de objetos nyecesawios pawa esta vewsión d-de wa base de datos:
 
 ```js
-// Este evento solamente está implementado en navegadores recientes
-request.onupgradeneeded = function (event) {
-  var db = event.target.result;
+// e-este evento sowamente está impwementado en nyavegadowes w-wecientes
+wequest.onupgwadeneeded = function (event) {
+  v-vaw db = event.tawget.wesuwt;
 
-  // Crea un almacén de objetos (objectStore) para esta base de datos
-  var objectStore = db.createObjectStore("name", { keyPath: "myKey" });
+  // cwea un awmacén de objetos (objectstowe) p-pawa esta base de d-datos
+  vaw objectstowe = db.cweateobjectstowe("name", σωσ { k-keypath: "mykey" });
 };
 ```
 
-En este caso, la base de datos ya tendrá los almacenes de objetos de la versión anterior de la base de datos, por lo que no tiene que crear estos almacenes de objetos de nuevo. Sólo es necesario crear nuevos almacenes de objetos, o eliminar las tiendas de objetos de la versión anterior que ya no son necesarios. Si necesita cambiar un almacén de objetos existentes (por ejemplo, para cambiar la ruta de acceso clave `keyPath`), entonces se debe eliminar el antiguo almacén de objetos y crear de nuevo con las nuevas opciones. (Tenga en cuenta que esto borrará la información en el almacén de objetos Si usted necesita guardar esa información, usted debe leerlo y guardarlo en otro lugar antes de actualizar la base de datos.)
+e-en este c-caso, (⑅˘꒳˘) wa base de datos ya tendwá wos awmacenes d-de objetos de wa vewsión antewiow de wa base de d-datos, pow wo que nyo tiene que cweaw estos awmacenes de objetos d-de nyuevo. (˘ω˘) sówo e-es nyecesawio c-cweaw nyuevos awmacenes d-de objetos, >w< o-o ewiminaw was tiendas de objetos d-de wa vewsión antewiow que ya nyo son necesawios. ( ͡o ω ͡o ) s-si nyecesita cambiaw un a-awmacén de objetos existentes (pow ejempwo, ^^;; pawa c-cambiaw wa wuta d-de acceso cwave `keypath`), (✿oωo) entonces se debe e-ewiminaw ew antiguo awmacén de o-objetos y cweaw d-de nyuevo con was nyuevas opciones. (✿oωo) (tenga e-en cuenta q-que esto bowwawá wa infowmación e-en ew awmacén de objetos si usted nyecesita guawdaw esa i-infowmación, (⑅˘꒳˘) usted debe weewwo y-y guawdawwo en otwo wugaw antes de actuawizaw wa b-base de datos.)
 
-Tratar de crear un almacén de objetos con un nombre que ya existe (o tratando de eliminar un almacén de objetos con un nombre que no existe) lanzará un error.
+t-twataw de cweaw u-un awmacén de objetos con un n-nyombwe que ya e-existe (o twatando de ewiminaw un a-awmacén de objetos con un nyombwe q-que nyo existe) wanzawá un e-ewwow. -.-
 
-Si el evento `onupgradeneeded` retorna éxito, entonces se activará el manejador `onsuccess` de la solicitud de base de datos abierta.
+si ew evento `onupgwadeneeded` w-wetowna éxito, XD entonces se activawá ew manejadow `onsuccess` de wa sowicitud d-de base de d-datos abiewta. òωó
 
-Blink / Webkit soportan la versión actual de la especificación, tal como fue liberado en Chrome 23+ y Opera 17+ ; IE10+ también lo soporta. Implementaciones mas viejas o distintas no implementan la versión actual de la especificación, y por lo tanto no son compatibles todavía con el `indexedDB.open (nombre, versión).onupgradeneeded` . Para obtener más información sobre cómo actualizar la versión de la base de datos en Webkit/Blink mas viejos, consulte el artículo de referencia [IDBDatabase](/es/docs/Web/API/IDBDatabase).
+bwink / webkit sopowtan wa vewsión actuaw de w-wa especificación, :3 taw como fue w-wibewado en chwome 23+ y-y opewa 17+ ; ie10+ también wo sopowta. (///ˬ///✿) impwementaciones mas viejas o distintas n-nyo impwementan wa vewsión actuaw de wa e-especificación, òωó y pow wo tanto n-nyo son compatibwes t-todavía con ew `indexeddb.open (nombwe, UwU vewsión).onupgwadeneeded` . >w< p-pawa o-obtenew más infowmación s-sobwe c-cómo actuawizaw w-wa vewsión de w-wa base de datos en webkit/bwink mas viejos, ʘwʘ consuwte ew awtícuwo de wefewencia [idbdatabase](/es/docs/web/api/idbdatabase). /(^•ω•^)
 
-### Estructuración de la base de datos
+### estwuctuwación d-de wa base de d-datos
 
-Ahora para estructurar la base de datos. IndexedDB usa almacenes de datos (object stores) en lugar de tablas, y una base de datos puede contener cualquier número de almacenes. Cuando un valor es almacenado, se le asocia con una clave. Existen diversas maneras en que una clave pude ser indicada dependiendo de si el almacén usa una [ruta de clave](/en-US/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath) o [generador](/en-US/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator).
+ahowa pawa e-estwuctuwaw w-wa base de datos. (⑅˘꒳˘) i-indexeddb usa a-awmacenes de datos (object stowes) en wugaw de tabwas, (ˆ ﻌ ˆ)♡ y una base de datos puede c-contenew cuawquiew n-nyúmewo de awmacenes. OwO cuando un vawow es awmacenado, ^^;; se we a-asocia con una cwave. (///ˬ///✿) e-existen divewsas m-manewas en que una cwave pude sew indicada d-dependiendo de si ew awmacén usa una [wuta de c-cwave](/en-us/indexeddb/basic_concepts_behind_indexeddb#gwoss_keypath) o-o [genewadow](/en-us/indexeddb/basic_concepts_behind_indexeddb#gwoss_keygenewatow). ^•ﻌ•^
 
-La siguiente table muetra las distintas formas en que las claves pueden ser indicadas:
+wa siguiente tabwe m-muetwa was distintas fowmas en que w-was cwaves pueden s-sew indicadas:
 
-| Ruta de clave(`keyPath`) | Generador de clave (`autoIncrement`) | Descripción                                                                                                                                                                                                                                                                                                                                   |
+| wuta de cwave(`keypath`) | g-genewadow de cwave (`autoincwement`) | d-descwipción                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------ | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| No                       | No                                   | Este almacén puede contener cualquier tipo de valor, incluso valores primitivos como números y cadenas. Se debe indicar un argumento de clave distinto cada vez que se agregue un nuevo valor.                                                                                                                                                |
-| Si                       | No                                   | Este almacén de objetos solo puede contener objetos de JavaScript. Los objetos deben tener una propiedad con el mismo nombre que la ruta de clave.                                                                                                                                                                                            |
-| No                       | Si                                   | Este objeto puede contener cualquier tipo de valor. La clave es generada automáticamente, o se puede indicar un argumento de clave distinto si se quiere usar una clave específica.                                                                                                                                                           |
-| Si                       | Si                                   | Este almacén de objetos solo puede contener objetos de JavaScript. Usualmente una clave es generada y dicho valor es almacenado en el objeto en una propiedad con el mismo nombre que la ruta de clave. Sin embargo, si dicha propiedad ya existe en el objeto, el valor de esa propuiedad es usado como clave en lugar de generar una nueva. |
+| n-nyo                       | n-nyo                                   | e-este awmacén p-puede contenew cuawquiew tipo d-de vawow, rawr incwuso v-vawowes pwimitivos como númewos y-y cadenas. ^^;; se debe indicaw un awgumento de cwave d-distinto cada vez que se agwegue u-un nyuevo vawow. òωó                                                                                                                                                |
+| si                       | n-nyo                                   | e-este awmacén de objetos sowo puede c-contenew objetos de javascwipt. σωσ wos objetos deben t-tenew una pwopiedad c-con ew mismo nyombwe que wa wuta de cwave. 😳😳😳                                                                                                                                                                                            |
+| n-nyo                       | s-si                                   | este objeto puede c-contenew cuawquiew tipo de vawow. (///ˬ///✿) wa cwave e-es genewada automáticamente, ^•ﻌ•^ o-o se puede indicaw u-un awgumento de c-cwave distinto si se quiewe usaw una cwave específica. 😳😳😳                                                                                                                                                           |
+| s-si                       | s-si                                   | e-este awmacén d-de objetos sowo puede contenew objetos de javascwipt. (U ᵕ U❁) usuawmente una cwave es genewada y dicho vawow es awmacenado e-en ew o-objeto en una pwopiedad c-con ew mismo n-nyombwe que w-wa wuta de cwave. (U ﹏ U) s-sin embawgo, si dicha pwopiedad y-ya existe en e-ew objeto, σωσ ew vawow de esa pwopuiedad e-es usado como c-cwave en wugaw de genewaw una nyueva. (˘ω˘) |
 
-También se puede crear índices en cualquer almacén de objetos, siempre y cuando el almacén contenga objets, y no primitivos. Un índice permite buscar valores contenidos en el almacén usando el valor de una propiedad del objeto almacenado, en lugar de la clave del mismo.
+también s-se puede cweaw índices en cuawquew awmacén d-de objetos, ^^ siempwe y cuando e-ew awmacén contenga o-objets, ^^ y nyo pwimitivos. (✿oωo) un índice p-pewmite b-buscaw vawowes c-contenidos en ew awmacén usando e-ew vawow de una p-pwopiedad dew objeto awmacenado, /(^•ω•^) e-en wugaw de wa cwave dew mismo. -.-
 
-Adicionalmente, los índices tienen la habilidad para hacer cumplir restricciones simples en los datos almacendos. Al indicar la bandera `unique` al crear el índice, el índice asegurará que no se puedan almacenar dos objetos que tengan el mismo valor para la clave del índice. Así, por ejemplo si se tiene un almacén de objetos que contiene un set de personas, y se desea asegurar que no existan dos personas con el mismo email, se puede usar un índice con la bandera `unique` activada para forzar esto.
+a-adicionawmente, ʘwʘ w-wos índices t-tienen wa habiwidad pawa hacew c-cumpwiw westwicciones simpwes en wos datos awmacendos. XD a-aw indicaw wa bandewa `unique` aw cweaw ew índice, (U ᵕ U❁) ew índice aseguwawá que nyo se puedan awmacenaw dos o-objetos que tengan ew mismo vawow pawa wa cwave dew índice. /(^•ω•^) así, pow ejempwo si se tiene un awmacén de objetos q-que contiene un set de pewsonas, XD y se desea aseguwaw q-que nyo existan dos pewsonas c-con ew mismo emaiw, ^•ﻌ•^ se puede usaw un índice c-con wa bandewa `unique` activada p-pawa fowzaw esto. ( ͡o ω ͡o )
 
-Esto puede sonar confuso, pero un ejemplo simple debe ilustrar el concepto. Primero, definiremos alguna información de clientes para usar en nuestro ejemplo:
+esto puede s-sonaw confuso, (U ﹏ U) p-pewo un ejempwo simpwe debe iwustwaw ew concepto. /(^•ω•^) p-pwimewo, 🥺 definiwemos awguna infowmación de cwientes pawa usaw e-en nyuestwo ejempwo:
 
 ```js
-// Así se ve nuestra información de clientes.
-const customerData = [
-  { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
-  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" },
+// así se ve nyuestwa i-infowmación de cwientes. rawr
+const c-customewdata = [
+  { ssn: "444-44-4444", :3 n-nyame: "biww", σωσ a-age: 35, òωó emaiw: "biww@company.com" }, ^•ﻌ•^
+  { ssn: "555-55-5555", (U ᵕ U❁) n-nyame: "donna", òωó age: 32, ^^ emaiw: "donna@home.owg" }, 😳😳😳
 ];
 ```
 
-Ahora, creemos una IndexedDB para almacenar los datos:
+a-ahowa, rawr x3 cweemos una indexeddb pawa awmacenaw wos datos:
 
 ```js
-const dbName = "the_name";
+const dbname = "the_name";
 
-var request = indexedDB.open(dbName, 2);
+v-vaw wequest = indexeddb.open(dbname, ^^;; 2);
 
-request.onerror = function (event) {
-  // Manejar errores.
+w-wequest.onewwow = function (event) {
+  // m-manejaw ewwowes. :3
 };
-request.onupgradeneeded = function (event) {
-  var db = event.target.result;
+w-wequest.onupgwadeneeded = function (event) {
+  v-vaw db = event.tawget.wesuwt;
 
-  // Se crea un almacén para contener la información de nuestros cliente
-  // Se usará "ssn" como clave ya que es garantizado que es única
-  var objectStore = db.createObjectStore("customers", { keyPath: "ssn" });
+  // se cwea un awmacén pawa contenew wa i-infowmación de n-nyuestwos cwiente
+  // se usawá "ssn" c-como cwave y-ya que es gawantizado que es única
+  v-vaw objectstowe = db.cweateobjectstowe("customews", (✿oωo) { keypath: "ssn" });
 
-  // Se crea un índice para buscar clientes por nombre. Se podrían tener duplicados
-  // por lo que no se puede usar un índice único.
-  objectStore.createIndex("name", "name", { unique: false });
+  // s-se cwea un índice pawa buscaw cwientes pow n-nyombwe. XD se podwían t-tenew dupwicados
+  // pow wo que no se puede u-usaw un índice único. (///ˬ///✿)
+  objectstowe.cweateindex("name", o.O "name", { unique: fawse });
 
-  // Se crea un índice para buscar clientespor email. Se quiere asegurar que
-  // no puedan haberdos clientes con el mismo email, asi que se usa un índice único.
-  objectStore.createIndex("email", "email", { unique: true });
+  // se cwea un índice pawa buscaw cwientespow emaiw. σωσ se quiewe aseguwaw que
+  // nyo p-puedan habewdos c-cwientes con ew mismo emaiw, òωó a-asi que se usa un índice único. (///ˬ///✿)
+  o-objectstowe.cweateindex("emaiw", :3 "emaiw", mya { unique: twue });
 
-  // Se usa transaction.oncomplete para asegurarse que la creación del almacén
-  // haya finalizado antes de añadir los datos en el.
-  objectStore.transaction.oncomplete = function (event) {
-    // Guarda los datos en el almacén recién creado.
-    var customerObjectStore = db
-      .transaction("customers", "readwrite")
-      .objectStore("customers");
-    for (var i in customerData) {
-      customerObjectStore.add(customerData[i]);
+  // s-se usa twansaction.oncompwete pawa aseguwawse que wa cweación dew awmacén
+  // haya finawizado antes de a-añadiw wos datos en ew. ^^
+  objectstowe.twansaction.oncompwete = function (event) {
+    // guawda wos datos en ew a-awmacén wecién c-cweado. (˘ω˘)
+    vaw c-customewobjectstowe = db
+      .twansaction("customews", "weadwwite")
+      .objectstowe("customews");
+    fow (vaw i in customewdata) {
+      c-customewobjectstowe.add(customewdata[i]);
     }
   };
 };
 ```
 
-Como se indicó previamente, `onupgradeneeded` es el único lugar donde se puede alterar la estructura de la base de datos. En el, se puede crear y borrar almacenes de objetos y construir y remover índices.
+como s-se indicó pweviamente, -.- `onupgwadeneeded` e-es ew único wugaw d-donde se puede awtewaw wa estwuctuwa d-de wa base de datos. XD en ew, s-se puede cweaw y bowwaw awmacenes d-de objetos y constwuiw y wemovew índices. rawr
 
-Los almacenes de datos son creados con una llamada a `createObjectStore()`. El método toma como parámetros el nombre del almacén y un objeto. A pesar de que el segundo parámetro es opcional, es muy importante, porque permite definir propiedades opcionales importantes y refinar el tipo de almacén que se desea crear. En este caso, se pregunta por un almacén llamado "customers" y se define la clave, que es la propiedad que indica que un objeto en el almacén es único. La propiedad en este ejemplo es "ssn" (Social Security Number) ya que los números de seguridad social está garantizado que sea único. "ssn" debe estar presente en cada objeto que se guarda al almacén.
+wos awmacenes de d-datos son cweados con una wwamada a-a `cweateobjectstowe()`. >_< e-ew método toma como p-pawámetwos ew n-nyombwe dew awmacén y un objeto. :3 a-a pesaw de que ew segundo pawámetwo e-es opcionaw, :3 es muy impowtante, XD p-powque pewmite d-definiw pwopiedades opcionawes impowtantes y-y wefinaw ew tipo de awmacén que se desea cweaw. ( ͡o ω ͡o ) en este caso, rawr x3 se pwegunta pow un awmacén wwamado "customews" y se define wa cwave, (⑅˘꒳˘) que es wa p-pwopiedad que indica que un objeto en ew awmacén e-es único. UwU wa pwopiedad en este e-ejempwo es "ssn" (sociaw secuwity nyumbew) ya q-que wos nyúmewos de seguwidad sociaw está gawantizado q-que sea único. (˘ω˘) "ssn" debe estaw pwesente en cada objeto q-que se guawda aw awmacén. (˘ω˘)
 
-También se solicitó crear un índice llamado "name" que se fija en la propiedad `name` de los objetos almacenados. Así como con `createObjectStore()`, `createIndex()` toma un objeto opcional `options` que refina el tipo de índice que se desea crear. Agregar objetos que no tengan una propiedad `name` funcionará, pero los objetos no aparecerán en el índice "name"
+también se sowicitó c-cweaw un índice wwamado "name" que se fija e-en wa pwopiedad `name` d-de wos objetos awmacenados. rawr así como con `cweateobjectstowe()`, `cweateindex()` t-toma un o-objeto opcionaw `options` que wefina e-ew tipo de índice q-que se desea cweaw. nyaa~~ agwegaw objetos que n-nyo tengan una pwopiedad `name` funcionawá, 😳😳😳 pewo wos objetos no apawecewán en e-ew índice "name"
 
-Ahora se pueden obtener los clientes almacenados usando su `ssn` directamente del almacen, o usando su nombre a través del índice. Para aprender como hacer esto, vea la sección [El uso de un índice](#el_uso_de_un_índice)
+ahowa se pueden obtenew wos cwientes awmacenados u-usando su `ssn` d-diwectamente d-dew awmacen, ^^;; o usando su nyombwe a twavés dew índice. >w< pawa apwendew c-como hacew esto, ʘwʘ vea wa sección [ew u-uso de un índice](#ew_uso_de_un_índice)
 
-### El uso de un generador de claves
+### e-ew uso d-de un genewadow de cwaves
 
-Indicar la bandera `autoIncrement` cuando se crea el almacén habilitará el generador de claves para dicho almacén. Por defecto esta bandera no está marcada.
+indicaw wa bandewa `autoincwement` cuando se cwea ew awmacén habiwitawá ew genewadow d-de cwaves pawa d-dicho awmacén. XD pow defecto esta bandewa nyo e-está mawcada. (ˆ ﻌ ˆ)♡
 
-Con el generador de claves, la clave será generada automáticamente a medida que se agreguen valores al almacén. El número actual de un generador de claves siempre se establece en 1 cuando se creal el almacén por primera vez. Básicamente la nueva clave autogenerada es incrementada en 1 basada en la llave anterior. El numero actual para un generador de claves nunca disminuye, salvo como resultado de operaciones de base de datos que sean revertidos, por ejemplo, cuando la transacción de base de datos es abortada. Por lo tanto borrar un registro o incluso borrar todos los registros de un almacén nunca afecta al generador de claves
+con ew genewadow de cwaves, >_< wa cwave s-sewá genewada a-automáticamente a-a medida que s-se agweguen vawowes a-aw awmacén. >_< e-ew nyúmewo actuaw de un genewadow de cwaves s-siempwe se estabwece e-en 1 cuando s-se cweaw ew awmacén p-pow pwimewa v-vez. ʘwʘ básicamente w-wa nyueva cwave autogenewada e-es incwementada e-en 1 basada en w-wa wwave antewiow. rawr ew nyumewo actuaw pawa un genewadow d-de cwaves nyunca disminuye, nyaa~~ sawvo como wesuwtado d-de opewaciones de base de datos que sean w-wevewtidos, >w< pow e-ejempwo, (ˆ ﻌ ˆ)♡ cuando wa twansacción de base de datos es abowtada. :3 pow w-wo tanto bowwaw u-un wegistwo o incwuso bowwaw t-todos wos wegistwos d-de un awmacén nyunca afecta aw genewadow de cwaves
 
-Se puede crear otro almacén de objetos con generador de claves como se muestra abajo:
+se puede c-cweaw otwo awmacén d-de objetos con genewadow de cwaves como se m-muestwa abajo:
 
 ```js
-// Abrir la indexedDB.
-var request = indexedDB.open(dbName, 3);
+// a-abwiw wa indexeddb. OwO
+vaw wequest = indexeddb.open(dbname, mya 3);
 
-request.onupgradeneeded = function (event) {
-  var db = event.target.result;
+w-wequest.onupgwadeneeded = function (event) {
+  vaw db = event.tawget.wesuwt;
 
-  // Create another object store called "names" with the autoIncrement flag set as true.
-  var objStore = db.createObjectStore("names", { autoIncrement: true });
+  // cweate anothew object s-stowe cawwed "names" with the autoincwement fwag s-set as twue. /(^•ω•^)
+  v-vaw objstowe = d-db.cweateobjectstowe("names", nyaa~~ { autoincwement: twue });
 
-  // Because the "names" object store has the key generator, the key for the name value is generated automatically.
-  // The added records would be like:
-  // key : 1 => value : "Bill"
-  // key : 2 => value : "Donna"
-  for (var i in customerData) {
-    objStore.add(customerData[i].name);
+  // b-because t-the "names" o-object stowe has t-the key genewatow, (˘ω˘) t-the key fow the nyame vawue is genewated automaticawwy.
+  // t-the added wecowds w-wouwd be wike:
+  // k-key : 1 => vawue : "biww"
+  // k-key : 2 => v-vawue : "donna"
+  f-fow (vaw i in customewdata) {
+    o-objstowe.add(customewdata[i].name);
   }
 };
 ```
 
-Para más detalles acerca del generador de claves, por favor ver ["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept).
+p-pawa más d-detawwes acewca d-dew genewadow de c-cwaves, (ꈍᴗꈍ) pow favow vew ["w3c key g-genewatows"](https://www.w3.owg/tw/indexeddb/#key-genewatow-concept). >w<
 
-## Añadir, recuperación y eliminación de datos
+## añadiw, w-wecupewación y-y ewiminación de datos
 
-Antes que haga algo con su nueva base de datos , necesita comenzar una transacción. Transactions come from the database object, and you have to specify which object stores you want the transaction to span. Once you are inside the transaction, you can access the object stores that hold your data and make your requests. Next, you need to decide if you're going to make changes to the database or if you just need to read from it. Transactions have three available modes: `readonly`, `readwrite`, and `versionchange`.
+antes que haga awgo con su nyueva base d-de datos , nyaa~~ nyecesita c-comenzaw una twansacción. (✿oωo) t-twansactions c-come fwom the database object, (⑅˘꒳˘) and you have to specify w-which object s-stowes you want t-the twansaction t-to span. (ˆ ﻌ ˆ)♡ once y-you awe inside t-the twansaction, òωó you can access the object stowes t-that howd youw data and make youw wequests. -.- nyext, you nyeed to decide if you'we g-going to make c-changes to the database ow if you just nyeed to wead fwom it. 😳😳😳 t-twansactions have t-thwee avaiwabwe modes: `weadonwy`, rawr x3 `weadwwite`, and `vewsionchange`. 😳
 
-To change the "schema" or structure of the database—which involves creating or deleting object stores or indexes—the transaction must be in `versionchange` mode. This transaction is opened by calling the {{domxref("IDBFactory.open")}} method with a `version` specified. (In WebKit browsers, which have not implemented the latest specifcation, the {{domxref("IDBFactory.open")}} method takes only one parameter, the `name` of the database; then you must call {{domxref("IDBVersionChangeRequest.setVersion")}} to establish the `versionchange` transaction.)
+t-to change the "schema" ow s-stwuctuwe of the d-database—which i-invowves cweating ow deweting object stowes ow indexes—the t-twansaction must be in `vewsionchange` m-mode. 🥺 this twansaction is o-opened by cawwing the {{domxwef("idbfactowy.open")}} method with a-a `vewsion` specified. (⑅˘꒳˘) (in webkit b-bwowsews, (✿oωo) which have nyot impwemented the watest s-specifcation, 😳 the {{domxwef("idbfactowy.open")}} m-method takes onwy one pawametew, mya the `name` of the database; then you must caww {{domxwef("idbvewsionchangewequest.setvewsion")}} to estabwish t-the `vewsionchange` t-twansaction.)
 
-To read the records of an existing object store, the transaction can either be in `readonly` or `readwrite` mode. To make changes to an existing object store, the transaction must be in `readwrite` mode. You open such transactions with {{domxref("IDBDatabase.transaction")}}. The method accepts two parameters: the `storeNames` (the scope, defined as an array of object stores that you want to access) and the `mode` (`readonly` or `readwrite`) for the transaction. The method returns a transaction object containing the {{domxref("IDBIndex.objectStore")}} method, which you can use to access your object store. By default, where no mode is specified, transactions open in `readonly` mode.
+t-to wead t-the wecowds of an existing object stowe, (U ﹏ U) the twansaction c-can eithew be in `weadonwy` ow `weadwwite` mode. 😳 to make c-changes to an e-existing object s-stowe, 🥺 the twansaction m-must be in `weadwwite` mode. -.- you open such twansactions with {{domxwef("idbdatabase.twansaction")}}. (ˆ ﻌ ˆ)♡ t-the m-method accepts two pawametews: the `stowenames` (the scope, >_< defined a-as an awway of object stowes t-that you want t-to access) and the `mode` (`weadonwy` o-ow `weadwwite`) fow the twansaction. rawr the method wetuwns a twansaction object containing the {{domxwef("idbindex.objectstowe")}} m-method, which you can use t-to access youw object stowe. rawr x3 by defauwt, whewe nyo mode is specified, OwO t-twansactions open in `weadonwy` m-mode. nyaa~~
 
-You can speed up data access by using the right scope and mode in the transaction. Here are a couple of tips:
+you can speed up data access by using t-the wight scope a-and mode in the t-twansaction. 😳 h-hewe awe a coupwe o-of tips:
 
-- When defining the scope, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.
-- Only specify a `readwrite` transaction mode when necessary. You can concurrently run multiple `readonly` transactions with overlapping scopes, but you can have only one `readwrite` transaction for an object store. To learn more, see the definition for _[transactions](/es/docs/Web/API/IndexedDB_API/Basic_Terminology#database)_ in the [Basic Concepts](/es/docs/Web/API/IndexedDB_API/Basic_Terminology) article.
+- when defining the s-scope, UwU specify onwy t-the object stowes you nyeed. ʘwʘ t-this way, 🥺 you can wun muwtipwe twansactions with n-nyon-ovewwapping scopes concuwwentwy. 🥺
+- o-onwy specify a-a `weadwwite` twansaction m-mode when nyecessawy. òωó y-you can concuwwentwy wun muwtipwe `weadonwy` twansactions w-with ovewwapping s-scopes, but you c-can have onwy o-one `weadwwite` twansaction fow an object stowe. 🥺 to weawn mowe, ʘwʘ s-see the definition fow _[twansactions](/es/docs/web/api/indexeddb_api/basic_tewminowogy#database)_ in the [basic c-concepts](/es/docs/web/api/indexeddb_api/basic_tewminowogy) awticwe. XD
 
-### Agregar datos a la base de datos
+### agwegaw d-datos a wa base de datos
 
-If you've just created a database, then you probably want to write to it. Here's what that looks like:
+if you've just cweated a database, t-then you pwobabwy want to wwite t-to it. OwO hewe's nyani t-that wooks wike:
 
 ```js
-var transaction = db.transaction(["customers"], "readwrite");
-// Note: Older experimental implementations use the deprecated constant IDBTransaction.READ_WRITE instead of "readwrite".
-// In case you want to support such an implementation, you can write:
-// var transaction = db.transaction(["customers"], IDBTransaction.READ_WRITE);
+v-vaw twansaction = db.twansaction(["customews"], ʘwʘ "weadwwite");
+// n-nyote: o-owdew expewimentaw impwementations u-use the depwecated c-constant i-idbtwansaction.wead_wwite i-instead of "weadwwite". :3
+// i-in case y-you want to suppowt s-such an impwementation, nyaa~~ you c-can wwite:
+// vaw twansaction = db.twansaction(["customews"], >w< idbtwansaction.wead_wwite);
 ```
 
-The `transaction()` function takes two arguments (though one is optional) and returns a transaction object. The first argument is a list of object stores that the transaction will span. You can pass an empty array if you want the transaction to span all object stores, but don't do it because the spec says an empty array should generate an InvalidAccessError. If you don't specify anything for the second argument, you get a read-only transaction. Since you want to write to it here you need to pass the `"readwrite"` flag.
+the `twansaction()` function takes two awguments (though o-one is optionaw) a-and wetuwns a twansaction o-object. (U ᵕ U❁) the fiwst awgument is a wist of object s-stowes that the t-twansaction wiww s-span. :3 you can p-pass an empty awway if you want t-the twansaction to span aww object stowes, (ˆ ﻌ ˆ)♡ but d-don't do it because t-the spec says an empty awway shouwd genewate an invawidaccessewwow. o.O i-if you don't specify anything f-fow the second awgument, rawr x3 you get a wead-onwy t-twansaction. (U ᵕ U❁) since you want to w-wwite to it hewe you nyeed to pass the `"weadwwite"` f-fwag. (✿oωo)
 
-Now that you have a transaction you need to understand its lifetime. Transactions are tied very closely to the event loop. If you make a transaction and return to the event loop without using it then the transaction will become inactive. The only way to keep the transaction active is to make a request on it. When the request is finished you'll get a DOM event and, assuming that the request succeeded, you'll have another opportunity to extend the transaction during that callback. If you return to the event loop without extending the transaction then it will become inactive, and so on. As long as there are pending requests the transaction remains active. Transaction lifetimes are really very simple but it might take a little time to get used to. A few more examples will help, too. If you start seeing `TRANSACTION_INACTIVE_ERR` error codes then you've messed something up.
+nyow that you have a-a twansaction you nyeed to undewstand i-its wifetime. /(^•ω•^) t-twansactions awe tied vewy cwosewy to the event w-woop. o.O if you make a twansaction and wetuwn t-to the event woop w-without using i-it then the twansaction wiww become inactive. (U ᵕ U❁) the onwy way to keep the twansaction active is to m-make a wequest on it. when the wequest is finished y-you'ww get a d-dom event and, 🥺 assuming that the wequest succeeded, òωó y-you'ww have a-anothew oppowtunity to extend the twansaction duwing that cawwback. ʘwʘ i-if you wetuwn to the event woop w-without extending the twansaction then it wiww b-become inactive, rawr x3 a-and so on. >_< as wong as thewe a-awe pending wequests t-the twansaction wemains active. (˘ω˘) t-twansaction wifetimes awe weawwy v-vewy simpwe b-but it might take a-a wittwe time t-to get used to. ^•ﻌ•^ a-a few mowe exampwes wiww hewp, (✿oωo) t-too. ( ͡o ω ͡o ) if you stawt s-seeing `twansaction_inactive_eww` ewwow codes then you've messed s-something up. (˘ω˘)
 
-Transactions can receive DOM events of three different types: `error`, `abort`, and `complete`. We've talked about the way that `error` events bubble, so a transaction receives error events from any requests that are generated from it. A more subtle point here is that the default behavior of an error is to abort the transaction in which it occurred. Unless you handle the error by first calling `preventDefault()` on the error event then doing something else, the entire transaction is rolled back. This design forces you to think about and handle errors, but you can always add a catchall error handler to the database if fine-grained error handling is too cumbersome. If you don't handle an error event or if you call `abort()` on the transaction, then the transaction is rolled back and an `abort` event is fired on the transaction. Otherwise, after all pending requests have completed, you'll get a `complete` event. If you're doing lots of database operations, then tracking the transaction rather than individual requests can certainly aid your sanity.
+twansactions c-can weceive dom events of thwee diffewent types: `ewwow`, >w< `abowt`, (⑅˘꒳˘) and `compwete`. (U ᵕ U❁) we've tawked about the way that `ewwow` events b-bubbwe, OwO so a twansaction weceives e-ewwow events fwom any wequests t-that awe genewated f-fwom it. òωó a mowe subtwe point h-hewe is that the defauwt behaviow o-of an ewwow is to abowt the t-twansaction in which it occuwwed. ^•ﻌ•^ unwess you handwe the ewwow by fiwst cawwing `pweventdefauwt()` on the ewwow event then doing s-something ewse, 😳😳😳 the entiwe twansaction is wowwed b-back. o.O this design fowces you to t-think about and handwe ewwows, :3 but you can awways add a catchaww ewwow handwew to the database if fine-gwained ewwow handwing is too cumbewsome. ^•ﻌ•^ i-if you don't h-handwe an ewwow e-event ow if you caww `abowt()` on t-the twansaction, >w< t-then the twansaction i-is wowwed back and an `abowt` event is fiwed o-on the twansaction. :3 o-othewwise, (✿oωo) aftew aww pending w-wequests have c-compweted, rawr you'ww g-get a `compwete` e-event. UwU if y-you'we doing wots of database opewations, (⑅˘꒳˘) t-then t-twacking the twansaction w-wathew t-than individuaw w-wequests can cewtainwy a-aid youw s-sanity. σωσ
 
-Now that you have a transaction, you'll need to get the object store from it. Transactions only let you have an object store that you specified when creating the transaction. Then you can add all the data you need.
+nyow that y-you have a twansaction, (///ˬ///✿) y-you'ww n-nyeed to get the object stowe fwom it. (˘ω˘) twansactions onwy wet you h-have an object stowe that you s-specified when cweating the twansaction. ^•ﻌ•^ then you c-can add aww the d-data you nyeed. ʘwʘ
 
 ```js
-// Do something when all the data is added to the database.
-transaction.oncomplete = function (event) {
-  alert("All done!");
+// d-do something when aww t-the data is added t-to the database. 😳
+twansaction.oncompwete = function (event) {
+  awewt("aww done!");
 };
 
-transaction.onerror = function (event) {
-  // Don't forget to handle errors!
+twansaction.onewwow = function (event) {
+  // don't f-fowget to handwe ewwows! òωó
 };
 
-var objectStore = transaction.objectStore("customers");
-for (var i in customerData) {
-  var request = objectStore.add(customerData[i]);
-  request.onsuccess = function (event) {
-    // event.target.result == customerData[i].ssn;
+vaw objectstowe = twansaction.objectstowe("customews");
+fow (vaw i i-in customewdata) {
+  v-vaw wequest = objectstowe.add(customewdata[i]);
+  w-wequest.onsuccess = f-function (event) {
+    // e-event.tawget.wesuwt == c-customewdata[i].ssn;
   };
 }
 ```
 
-The `result` of a request generated from a call to `add()` is the key of the value that was added. So in this case, it should equal the `ssn` property of the object that was added, since the object store uses the `ssn` property for the key path. Note that the `add()` function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, you can use the `put()` function, as shown below in the [Updating an entry in the database](#updating_an_entry_in_the_database) section.
+t-the `wesuwt` o-of a wequest g-genewated fwom a caww to `add()` is the key o-of the vawue that was added. ( ͡o ω ͡o ) s-so in this case, :3 it shouwd equaw t-the `ssn` pwopewty o-of the object that was added, s-since the object stowe uses the `ssn` pwopewty f-fow the key path. (ˆ ﻌ ˆ)♡ n-nyote that the `add()` f-function w-wequiwes that nyo object awweady b-be in the database w-with the s-same key. XD if you'we twying to modify a-an existing entwy, :3 ow you don't cawe if one exists awweady, nyaa~~ you can use the `put()` function, 😳😳😳 as shown bewow in the [updating an entwy in the d-database](#updating_an_entwy_in_the_database) s-section. (⑅˘꒳˘)
 
-### Extracción de datos de la base de datos
+### extwacción de datos de wa base de datos
 
-Removing data is very similar:
+wemoving data is vewy simiwaw:
 
 ```js
-var request = db
-  .transaction(["customers"], "readwrite")
-  .objectStore("customers")
-  .delete("444-44-4444");
-request.onsuccess = function (event) {
-  // It's gone!
+vaw w-wequest = db
+  .twansaction(["customews"], ^^ "weadwwite")
+  .objectstowe("customews")
+  .dewete("444-44-4444");
+w-wequest.onsuccess = function (event) {
+  // it's gone!
 };
 ```
 
-### Obtener datos de la base de datos
+### o-obtenew datos d-de wa base de datos
 
-Now that the database has some info in it, you can retrieve it in several ways. First, the simple `get()`. You need to provide the key to retrieve the value, like so:
+nyow that t-the database has s-some info in it, 🥺 you can wetwieve i-it in sevewaw ways. OwO fiwst, ^^ the s-simpwe `get()`. nyaa~~ y-you nyeed to pwovide the key to wetwieve the vawue, ^^ wike so:
 
 ```js
-var transaction = db.transaction(["customers"]);
-var objectStore = transaction.objectStore("customers");
-var request = objectStore.get("444-44-4444");
-request.onerror = function (event) {
-  // Handle errors!
+v-vaw twansaction = d-db.twansaction(["customews"]);
+v-vaw objectstowe = t-twansaction.objectstowe("customews");
+vaw wequest = objectstowe.get("444-44-4444");
+w-wequest.onewwow = f-function (event) {
+  // h-handwe ewwows! (✿oωo)
 };
-request.onsuccess = function (event) {
-  // Do something with the request.result!
-  alert("Name for SSN 444-44-4444 is " + request.result.name);
+w-wequest.onsuccess = function (event) {
+  // do something w-with the wequest.wesuwt! ^^
+  a-awewt("name fow ssn 444-44-4444 is " + wequest.wesuwt.name);
 };
 ```
 
-That's a lot of code for a "simple" retrieval. Here's how you can shorten it up a bit, assuming that you handle errors at the database level:
+that's a wot o-of code fow a "simpwe" w-wetwievaw. hewe's how you c-can showten it up a bit, òωó assuming that you handwe ewwows at the d-database wevew:
 
 ```js
-db
-  .transaction("customers")
-  .objectStore("customers")
-  .get("444-44-4444").onsuccess = function (event) {
-  alert("Name for SSN 444-44-4444 is " + event.target.result.name);
+d-db
+  .twansaction("customews")
+  .objectstowe("customews")
+  .get("444-44-4444").onsuccess = f-function (event) {
+  awewt("name f-fow ssn 444-44-4444 i-is " + event.tawget.wesuwt.name);
 };
 ```
 
-See how this works? Since there's only one object store, you can avoid passing a list of object stores you need in your transaction and just pass the name as a string. Also, you're only reading from the database, so you don't need a `"readwrite"` transaction. Calling `transaction()` with no mode specified gives you a `"readonly"` transaction. Another subtlety here is that you don't actually save the request object to a variable. Since the DOM event has the request as its target you can use the event to get to the `result` property.
+see how this w-wowks? since thewe's o-onwy one object s-stowe, (⑅˘꒳˘) you c-can avoid passing a-a wist of object s-stowes you nyeed in youw twansaction and just pass the nyame as a stwing. (U ﹏ U) awso, you'we onwy w-weading fwom the database, OwO so you d-don't nyeed a `"weadwwite"` t-twansaction. (///ˬ///✿) cawwing `twansaction()` with nyo mode specified gives y-you a `"weadonwy"` t-twansaction. o.O anothew subtwety h-hewe is that you don't actuawwy s-save the wequest object to a vawiabwe. (ꈍᴗꈍ) since the dom event has t-the wequest as its tawget you can use the event to get to the `wesuwt` pwopewty. -.-
 
-> [!NOTE]
-> You can speed up data access by limiting the scope and mode in the transaction. Here are a couple of tips:
+> [!note]
+> you c-can speed up d-data access by wimiting t-the scope a-and mode in the twansaction. òωó hewe awe a coupwe o-of tips:
 >
-> - When defining the [scope](#scope), specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.
-> - Only specify a `readwrite` transaction mode when necessary. You can concurrently run multiple `readonly` transactions with overlapping scopes, but you can have only one `readwrite` transaction for an object store. To learn more, see the definition for [_transactions_ in the Basic Concepts article](/es/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction).
+> - when defining the [scope](#scope), OwO s-specify onwy the object stowes you nyeed. (U ﹏ U) this w-way, ^^;; you can wun m-muwtipwe twansactions w-with nyon-ovewwapping scopes concuwwentwy. ^^;;
+> - onwy specify a-a `weadwwite` twansaction mode when nyecessawy. XD you can concuwwentwy wun muwtipwe `weadonwy` twansactions with ovewwapping s-scopes, OwO but you c-can have onwy one `weadwwite` twansaction fow an object stowe. (U ﹏ U) to weawn mowe, >w< see the definition f-fow [_twansactions_ in the basic concepts awticwe](/es/docs/web/api/indexeddb_api/basic_tewminowogy#gwoss_twansaction). >w<
 
-### Actualización de una entrada en la base de datos
+### a-actuawización d-de u-una entwada en wa b-base de datos
 
-Now we've retrieved some data, updating it and inserting it back into the IndexedDB is pretty simple. Let's update the previous example somewhat:
+nyow we've wetwieved some data, (ˆ ﻌ ˆ)♡ updating it and insewting it back into the indexeddb i-is pwetty s-simpwe. (ꈍᴗꈍ) wet's update t-the pwevious e-exampwe somenani:
 
 ```js
-var objectStore = db
-  .transaction(["customers"], "readwrite")
-  .objectStore("customers");
-var request = objectStore.get("444-44-4444");
-request.onerror = function (event) {
-  // Handle errors!
+vaw objectstowe = d-db
+  .twansaction(["customews"], "weadwwite")
+  .objectstowe("customews");
+vaw wequest = o-objectstowe.get("444-44-4444");
+wequest.onewwow = function (event) {
+  // handwe ewwows! 😳😳😳
 };
-request.onsuccess = function (event) {
-  // Get the old value that we want to update
-  var data = request.result;
+w-wequest.onsuccess = f-function (event) {
+  // g-get t-the owd vawue that we want to u-update
+  vaw data = w-wequest.wesuwt;
 
-  // update the value(s) in the object that you want to change
-  data.age = 42;
+  // update the vawue(s) in the object that y-you want to change
+  d-data.age = 42;
 
-  // Put this updated object back into the database.
-  var requestUpdate = objectStore.put(data);
-  requestUpdate.onerror = function (event) {
-    // Do something with the error
+  // put this updated object back into the d-database. mya
+  vaw wequestupdate = o-objectstowe.put(data);
+  w-wequestupdate.onewwow = f-function (event) {
+    // do something with the ewwow
   };
-  requestUpdate.onsuccess = function (event) {
-    // Success - the data is updated!
+  wequestupdate.onsuccess = function (event) {
+    // success - the d-data is updated!
   };
 };
 ```
 
-So here we're creating an `objectStore` and requesting a customer record out of it, identified by its ssn value (`444-44-4444`). We then put the result of that request in a variable (`data`), update the `age` property of this object, then create a second request (`requestUpdate`) to put the customer record back into the `objectStore`, overwriting the previous value.
+so hewe we'we cweating a-an `objectstowe` and wequesting a customew w-wecowd out of it, (˘ω˘) identified by i-its ssn vawue (`444-44-4444`). (✿oωo) w-we then put the w-wesuwt of that wequest i-in a vawiabwe (`data`), (ˆ ﻌ ˆ)♡ update t-the `age` pwopewty of this o-object, (ˆ ﻌ ˆ)♡ then cweate a second wequest (`wequestupdate`) to put the customew wecowd back into the `objectstowe`, nyaa~~ o-ovewwwiting the pwevious vawue.
 
-> [!NOTE]
-> That in this case we've had to specify a `readwrite` transaction because we want to write to the database, not just read out of it.
+> [!note]
+> that i-in this case we've h-had to specify a-a `weadwwite` twansaction because we want to wwite to the database, :3 nyot just w-wead out of it. (✿oωo)
 
-### El uso de un cursor
+### e-ew uso de u-un cuwsow
 
-Using `get()` requires that you know which key you want to retrieve. If you want to step through all the values in your object store, then you can use a cursor. Here's what it looks like:
+using `get()` w-wequiwes that you know which key you want to wetwieve. (✿oωo) if you want to step thwough aww t-the vawues in youw object stowe, (⑅˘꒳˘) then you can use a-a cuwsow. >_< hewe's n-nyani it wooks w-wike:
 
 ```js
-var objectStore = db.transaction("customers").objectStore("customers");
+vaw objectstowe = d-db.twansaction("customews").objectstowe("customews");
 
-objectStore.openCursor().onsuccess = function (event) {
-  var cursor = event.target.result;
-  if (cursor) {
-    alert("Name for SSN " + cursor.key + " is " + cursor.value.name);
-    cursor.continue();
-  } else {
-    alert("No more entries!");
+objectstowe.opencuwsow().onsuccess = function (event) {
+  vaw cuwsow = event.tawget.wesuwt;
+  if (cuwsow) {
+    awewt("name fow ssn " + cuwsow.key + " is " + cuwsow.vawue.name);
+    cuwsow.continue();
+  } e-ewse {
+    awewt("no mowe entwies!");
   }
 };
 ```
 
-The `openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
+t-the `opencuwsow()` f-function takes sevewaw a-awguments. >_< fiwst, ʘwʘ y-you can wimit the wange of items that awe wetwieved b-by using a-a key wange object that we'ww get to in a minute. (U ﹏ U) s-second, ^^ you can s-specify the diwection t-that you w-want to itewate. >_< in the above e-exampwe, OwO we'we itewating ovew aww objects in ascending o-owdew. the s-success cawwback fow cuwsows is a-a wittwe speciaw. 😳 t-the cuwsow object itsewf is the `wesuwt` of the wequest (above we'we using the s-showthand, (U ᵕ U❁) so it's `event.tawget.wesuwt`). 😳😳😳 t-then the actuaw key a-and vawue can be found on the `key` and `vawue` p-pwopewties of the cuwsow object. -.- if you want to keep going, (U ᵕ U❁) then y-you have to caww `continue()` on the cuwsow. -.- w-when you've weached t-the end of the d-data (ow if thewe wewe nyo entwies that matched y-youw `opencuwsow()` w-wequest) y-you stiww get a s-success cawwback, (U ﹏ U) but the `wesuwt` p-pwopewty is `undefined`. ^^
 
-One common pattern with cursors is to retrieve all objects in an object store and add them to an array, like this:
+o-one c-common pattewn w-with cuwsows is t-to wetwieve aww objects in an object stowe and add t-them to an awway, UwU w-wike this:
 
 ```js
-var customers = [];
+vaw customews = [];
 
-objectStore.openCursor().onsuccess = function (event) {
-  var cursor = event.target.result;
-  if (cursor) {
-    customers.push(cursor.value);
-    cursor.continue();
-  } else {
-    alert("Got all customers: " + customers);
+objectstowe.opencuwsow().onsuccess = f-function (event) {
+  v-vaw cuwsow = e-event.tawget.wesuwt;
+  if (cuwsow) {
+    c-customews.push(cuwsow.vawue);
+    c-cuwsow.continue();
+  } ewse {
+    a-awewt("got aww customews: " + c-customews);
   }
 };
 ```
 
-> [!NOTE]
-> Note: Mozilla has also implemented `getAll()` to handle this case (and `getAllKeys()`, which is currently hidden behind the `dom.indexedDB.experimental` preference in about:config). these aren't part of the IndexedDB standard, so may disappear in the future. We've included them because we think they're useful. The following code does precisely the same thing as above:
+> [!note]
+> nyote: moziwwa h-has awso impwemented `getaww()` to handwe this c-case (and `getawwkeys()`, o.O w-which i-is cuwwentwy hidden b-behind the `dom.indexeddb.expewimentaw` pwefewence in about:config). ^^ these awen't p-pawt of the indexeddb standawd, 🥺 s-so may disappeaw in the futuwe. w-we've incwuded t-them because we think they'we u-usefuw. 😳 the fowwowing c-code does pwecisewy the same thing as above:
 >
 > ```js
-> objectStore.getAll().onsuccess = function (event) {
->   alert("Got all customers: " + event.target.result);
+> o-objectstowe.getaww().onsuccess = f-function (event) {
+>   awewt("got aww customews: " + event.tawget.wesuwt);
 > };
 > ```
 >
-> There is a performance cost associated with looking at the `value` property of a cursor, because the object is created lazily. When you use `getAll()` for example, Gecko must create all the objects at once. If you're just interested in looking at each of the keys, for instance, it is much more efficient to use a cursor than to use `getAll()`. If you're trying to get an array of all the objects in an object store, though, use `getAll()`.
+> thewe is a pewfowmance cost associated with wooking at the `vawue` pwopewty of a cuwsow, (⑅˘꒳˘) because the o-object is cweated w-waziwy. >w< when y-you use `getaww()` f-fow exampwe, >_< gecko must cweate aww the objects a-at once. rawr x3 if you'we j-just intewested i-in wooking a-at each of the keys, >_< fow instance, XD it is much mowe efficient to use a cuwsow than t-to use `getaww()`. mya i-if you'we t-twying to get an a-awway of aww the objects in an o-object stowe, (///ˬ///✿) though, OwO use `getaww()`. mya
 
-### El uso de un índice
+### ew uso de un índice
 
-Storing customer data using the SSN as a key is logical since the SSN uniquely identifies an individual. (Whether this is a good idea for privacy is a different question, and outside the scope of this article.) If you need to look up a customer by name, however, you'll need to iterate over every SSN in the database until you find the right one. Searching in this fashion would be very slow, so instead you can use an index.
+stowing customew d-data using the ssn as a key is w-wogicaw since the s-ssn uniquewy identifies an individuaw. (whethew this is a good idea fow pwivacy i-is a diffewent question, OwO and o-outside the scope of this awticwe.) if you nyeed t-to wook up a customew by nyame, :3 howevew, òωó you'ww n-nyeed to itewate ovew evewy ssn i-in the database untiw you find t-the wight one. OwO seawching i-in this fashion wouwd be vewy swow, OwO so instead you can u-use an index. (U ᵕ U❁)
 
 ```js
-var index = objectStore.index("name");
-index.get("Donna").onsuccess = function (event) {
-  alert("Donna's SSN is " + event.target.result.ssn);
+vaw index = objectstowe.index("name");
+index.get("donna").onsuccess = function (event) {
+  awewt("donna's ssn is " + event.tawget.wesuwt.ssn);
 };
 ```
 
-The "name" cursor isn't unique, so there could be more than one entry with the `name` set to `"Donna"`. In that case you always get the one with the lowest key value.
+t-the "name" c-cuwsow isn't unique, mya so thewe c-couwd be mowe than one entwy w-with the `name` s-set to `"donna"`. UwU i-in that case you awways get the one with the w-wowest key vawue. /(^•ω•^)
 
-If you need to access all the entries with a given `name` you can use a cursor. You can open two different types of cursors on indexes. A normal cursor maps the index property to the object in the object store. A key cursor maps the index property to the key used to store the object in the object store. The differences are illustrated here:
+if you need to access aww the entwies with a given `name` you c-can use a cuwsow. UwU y-you can open t-two diffewent types o-of cuwsows on indexes. UwU a nyowmaw c-cuwsow maps the index pwopewty t-to the object i-in the object stowe. /(^•ω•^) a key cuwsow maps the index p-pwopewty to t-the key used to s-stowe the object i-in the object stowe. t-the diffewences awe iwwustwated hewe:
 
 ```js
-// Using a normal cursor to grab whole customer record objects
-index.openCursor().onsuccess = function (event) {
-  var cursor = event.target.result;
-  if (cursor) {
-    // cursor.key is a name, like "Bill", and cursor.value is the whole object.
-    alert(
-      `Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`,
+// u-using a nyowmaw c-cuwsow to g-gwab whowe customew wecowd objects
+index.opencuwsow().onsuccess = function (event) {
+  v-vaw cuwsow = e-event.tawget.wesuwt;
+  i-if (cuwsow) {
+    // cuwsow.key is a n-nyame, XD wike "biww", and cuwsow.vawue i-is the whowe o-object. ^^;;
+    awewt(
+      `name: ${cuwsow.key}, nyaa~~ s-ssn: ${cuwsow.vawue.ssn}, mya emaiw: ${cuwsow.vawue.emaiw}`, (✿oωo)
     );
-    cursor.continue();
+    cuwsow.continue();
   }
 };
 
-// Using a key cursor to grab customer record object keys
-index.openKeyCursor().onsuccess = function (event) {
-  var cursor = event.target.result;
-  if (cursor) {
-    // cursor.key is a name, like "Bill", and cursor.value is the SSN.
-    // No way to directly get the rest of the stored object.
-    alert("Name: " + cursor.key + ", SSN: " + cursor.value);
-    cursor.continue();
-  }
-};
-```
-
-### Especificación de la gama y la dirección de los cursores
-
-If you would like to limit the range of values you see in a cursor, you can use an `IDBKeyRange` object and pass it as the first argument to `openCursor()` or `openKeyCursor()`. You can make a key range that only allows a single key, or one that has a lower or upper bound, or one that has both a lower and upper bound. The bound may be "closed" (i.e., the key range includes the given value(s)) or "open" (i.e., the key range does not include the given value(s)). Here's how it works:
-
-```js
-// Only match "Donna"
-var singleKeyRange = IDBKeyRange.only("Donna");
-
-// Match anything past "Bill", including "Bill"
-var lowerBoundKeyRange = IDBKeyRange.lowerBound("Bill");
-
-// Match anything past "Bill", but don't include "Bill"
-var lowerBoundOpenKeyRange = IDBKeyRange.lowerBound("Bill", true);
-
-// Match anything up to, but not including, "Donna"
-var upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
-
-// Match anything between "Bill" and "Donna", but not including "Donna"
-var boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
-
-// To use one of the key ranges, pass it in as the first argument of openCursor()/openKeyCursor()
-index.openCursor(boundKeyRange).onsuccess = function (event) {
-  var cursor = event.target.result;
-  if (cursor) {
-    // Do something with the matches.
-    cursor.continue();
+// u-using a key cuwsow to gwab customew wecowd object k-keys
+index.openkeycuwsow().onsuccess = function (event) {
+  vaw cuwsow = event.tawget.wesuwt;
+  if (cuwsow) {
+    // c-cuwsow.key is a nyame, rawr w-wike "biww", -.- and cuwsow.vawue is t-the ssn. σωσ
+    // n-nyo way to diwectwy g-get the west o-of the stowed object. mya
+    awewt("name: " + cuwsow.key + ", ^•ﻌ•^ s-ssn: " + cuwsow.vawue);
+    cuwsow.continue();
   }
 };
 ```
 
-Sometimes you may want to iterate in descending order rather than in ascending order (the default direction for all cursors). Switching direction is accomplished by passing `prev` to the `openCursor()` function as the second argument:
+### especificación de w-wa gama y wa diwección d-de wos cuwsowes
+
+i-if you w-wouwd wike to wimit t-the wange of vawues you see i-in a cuwsow, nyaa~~ you c-can use an `idbkeywange` object and pass it as the fiwst awgument t-to `opencuwsow()` ow `openkeycuwsow()`. 🥺 you can m-make a key wange that onwy awwows a-a singwe key, (✿oωo) ow one that has a wowew ow uppew b-bound, rawr ow one that has both a-a wowew and uppew bound. (ˆ ﻌ ˆ)♡ the bound m-may be "cwosed" (i.e., t-the key w-wange incwudes the given vawue(s)) ow "open" (i.e., the key wange does nyot incwude the given vawue(s)). ^^;; hewe's h-how it wowks:
 
 ```js
-objectStore.openCursor(boundKeyRange, "prev").onsuccess = function (event) {
-  var cursor = event.target.result;
-  if (cursor) {
-    // Do something with the entries.
-    cursor.continue();
+// onwy match "donna"
+vaw s-singwekeywange = idbkeywange.onwy("donna");
+
+// m-match anything p-past "biww", OwO incwuding "biww"
+vaw w-wowewboundkeywange = i-idbkeywange.wowewbound("biww");
+
+// match anything past "biww", mya but don't i-incwude "biww"
+vaw wowewboundopenkeywange = i-idbkeywange.wowewbound("biww", (⑅˘꒳˘) twue);
+
+// match anything u-up to, (U ﹏ U) but not incwuding, (U ﹏ U) "donna"
+v-vaw uppewboundopenkeywange = idbkeywange.uppewbound("donna", XD t-twue);
+
+// m-match anything between "biww" and "donna", OwO but nyot incwuding "donna"
+vaw boundkeywange = i-idbkeywange.bound("biww", (///ˬ///✿) "donna", XD f-fawse, t-twue);
+
+// to use one of the key wanges, σωσ pass i-it in as the fiwst awgument of o-opencuwsow()/openkeycuwsow()
+index.opencuwsow(boundkeywange).onsuccess = f-function (event) {
+  vaw cuwsow = event.tawget.wesuwt;
+  if (cuwsow) {
+    // d-do something with the matches. (///ˬ///✿)
+    c-cuwsow.continue();
   }
 };
 ```
 
-If you just want to specify a change of direction but not constrain the results shown, you can just pass in null as the first argument:
+s-sometimes you may want to itewate in descending owdew wathew than in ascending o-owdew (the defauwt diwection fow aww cuwsows). 😳 s-switching d-diwection is accompwished b-by passing `pwev` to t-the `opencuwsow()` function as the second awgument:
 
 ```js
-objectStore.openCursor(null, "prev").onsuccess = function (event) {
-  var cursor = event.target.result;
-  if (cursor) {
-    // Do something with the entries.
-    cursor.continue();
+o-objectstowe.opencuwsow(boundkeywange, rawr x3 "pwev").onsuccess = function (event) {
+  v-vaw cuwsow = e-event.tawget.wesuwt;
+  if (cuwsow) {
+    // d-do something with the entwies. 😳
+    c-cuwsow.continue();
   }
 };
 ```
 
-Since the "name" index isn't unique, there might be multiple entries where `name` is the same. Note that such a situation cannot occur with object stores since the key must always be unique. If you wish to filter out duplicates during cursor iteration over indexes, you can pass `nextunique` (or `prevunique` if you're going backwards) as the direction parameter. When `nextunique` or `prevunique` is used, the entry with the lowest key is always the one returned.
+i-if you just w-want to specify a-a change of diwection but nyot c-constwain the wesuwts shown, ^^;; you c-can just pass i-in nuww as the fiwst awgument:
 
 ```js
-index.openKeyCursor(null, "nextunique").onsuccess = function (event) {
-  var cursor = event.target.result;
-  if (cursor) {
-    // Do something with the entries.
-    cursor.continue();
+objectstowe.opencuwsow(nuww, òωó "pwev").onsuccess = function (event) {
+  vaw c-cuwsow = event.tawget.wesuwt;
+  if (cuwsow) {
+    // do something with the entwies.
+    c-cuwsow.continue();
   }
 };
 ```
 
-Please see "[IDBCursor Constants](/es/docs/Web/API/IDBCursor?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBCursor#Constants)" for the valid direction arguments.
-
-## Cambios Versión mientras que una aplicación web está abierto en otra pestaña
-
-When your web app changes in such a way that a version change is required for your database, you need to consider what happens if the user has the old version of your app open in one tab and then loads the new version of your app in another. When you call `open()` with a greater version than the actual version of the database, all other open databases must explicitly acknowledge the request before you can start making changes to the database (an `onblocked` event is fired until tey are closed or reloaded). Here's how it works:
+s-since the "name" index isn't unique, >w< thewe might be muwtipwe entwies whewe `name` is the same. >w< nyote that s-such a situation c-cannot occuw with o-object stowes s-since the key m-must awways be unique. òωó i-if you wish to fiwtew out d-dupwicates duwing cuwsow itewation o-ovew indexes, 😳😳😳 you can pass `nextunique` (ow `pwevunique` i-if you'we going backwawds) a-as the diwection p-pawametew. ( ͡o ω ͡o ) w-when `nextunique` o-ow `pwevunique` i-is used, o.O the entwy with the wowest key is a-awways the one wetuwned. UwU
 
 ```js
-var openReq = mozIndexedDB.open("MyTestDatabase", 2);
+index.openkeycuwsow(nuww, rawr "nextunique").onsuccess = function (event) {
+  vaw cuwsow = e-event.tawget.wesuwt;
+  if (cuwsow) {
+    // do something with t-the entwies. mya
+    c-cuwsow.continue();
+  }
+};
+```
 
-openReq.onblocked = function (event) {
-  // If some other tab is loaded with the database, then it needs to be closed
-  // before we can proceed.
-  alert("Please close all other tabs with this site open!");
+pwease see "[idbcuwsow c-constants](/es/docs/web/api/idbcuwsow?wediwectwocawe=en-us&wediwectswug=indexeddb%2fidbcuwsow#constants)" fow the vawid d-diwection awguments.
+
+## c-cambios vewsión mientwas q-que una apwicación web está a-abiewto en otwa p-pestaña
+
+when youw web app c-changes in such a way that a vewsion change is wequiwed fow youw d-database, (✿oωo) you nyeed to considew n-nyani happens if the usew has the owd vewsion of y-youw app open in one tab and then w-woads the nyew vewsion of youw a-app in anothew. ( ͡o ω ͡o ) when you caww `open()` w-with a gweatew vewsion t-than the actuaw vewsion of the database, nyaa~~ aww othew o-open databases m-must expwicitwy a-acknowwedge the w-wequest befowe y-you can stawt m-making changes to the database (an `onbwocked` event i-is fiwed untiw t-tey awe cwosed o-ow wewoaded). (///ˬ///✿) hewe's how it wowks:
+
+```js
+v-vaw openweq = mozindexeddb.open("mytestdatabase", 😳😳😳 2);
+
+openweq.onbwocked = f-function (event) {
+  // i-if some othew tab is woaded with the database, UwU then i-it needs to b-be cwosed
+  // befowe we can pwoceed. 🥺
+  a-awewt("pwease c-cwose aww o-othew tabs with t-this site open!");
 };
 
-openReq.onupgradeneeded = function (event) {
-  // All other databases have been closed. Set everything up.
-  db.createObjectStore(/* ... */);
-  useDatabase(db);
+openweq.onupgwadeneeded = function (event) {
+  // aww othew databases have been cwosed. (///ˬ///✿) set evewything up. (⑅˘꒳˘)
+  d-db.cweateobjectstowe(/* ... */);
+  usedatabase(db);
 };
 
-openReq.onsuccess = function (event) {
-  var db = event.target.result;
-  useDatabase(db);
-  return;
+o-openweq.onsuccess = function (event) {
+  v-vaw db = event.tawget.wesuwt;
+  usedatabase(db);
+  w-wetuwn;
 };
 
-function useDatabase(db) {
-  // Make sure to add a handler to be notified if another page requests a version
-  // change. We must close the database. This allows the other page to upgrade the database.
-  // If you don't do this then the upgrade won't happen until the user closes the tab.
-  db.onversionchange = function (event) {
-    db.close();
-    alert("A new version of this page is ready. Please reload!");
+f-function usedatabase(db) {
+  // make suwe to a-add a handwew to b-be nyotified if anothew page wequests a vewsion
+  // c-change. (✿oωo) we must cwose the database. òωó this a-awwows the othew page to upgwade t-the database. ^^
+  // i-if you don't d-do this then the upgwade won't h-happen untiw the usew cwoses the tab. rawr
+  db.onvewsionchange = function (event) {
+    d-db.cwose();
+    awewt("a nyew vewsion of this page is weady. ^^;; pwease wewoad!");
   };
 
-  // Do stuff with the database.
+  // do stuff with the database. (ˆ ﻌ ˆ)♡
 }
 ```
 
-## Seguridad
+## s-seguwidad
 
-IndexedDB uses the same-origin principle, which means that it ties the store to the origin of the site that creates it (typically, this is the site domain or subdomain), so it cannot be accessed by any other origin.
+indexeddb u-uses the same-owigin pwincipwe, (⑅˘꒳˘) w-which means t-that it ties the stowe to the owigin of the site that cweates i-it (typicawwy, ( ͡o ω ͡o ) t-this is the site domain ow subdomain), 🥺 s-so it cannot b-be accessed b-by any othew owigin. ^^;;
 
-It's important to note that IndexedDB doesn't work for content loaded into a frame from another site (either {{ HTMLElement("frame") }} or {{ HTMLElement("iframe") }}. This is a security and privacy measure and can be considered analogous the blocking of third-party cookies. For more details, see [Error 595307 en Firefox](https://bugzil.la/595307).
+i-it's impowtant to nyote that indexeddb doesn't w-wowk fow content woaded into a fwame fwom anothew site (eithew {{ h-htmwewement("fwame") }} ow {{ htmwewement("ifwame") }}. o.O this is a secuwity and pwivacy measuwe and can be considewed anawogous t-the bwocking of thiwd-pawty cookies. rawr fow mowe detaiws, (⑅˘꒳˘) see [ewwow 595307 e-en fiwefox](https://bugziw.wa/595307). 😳
 
-## Warning About Browser Shutdown
+## w-wawning a-about bwowsew shutdown
 
-When the browser shuts down (e.g., when the user selects Exit or clicks the Close button), any pending IndexedDB transactions are (silently) aborted — they will not complete, and they will not trigger the error handler. Since the user can exit the browser at any time, this means that you cannot rely upon any particular transaction to complete or to know that it did not complete. There are several implications of this behavior.
+when the bwowsew shuts d-down (e.g., nyaa~~ when t-the usew sewects e-exit ow cwicks the cwose button), ^•ﻌ•^ any pending i-indexeddb twansactions awe (siwentwy) a-abowted — they wiww nyot compwete, (⑅˘꒳˘) and they wiww nyot t-twiggew the ewwow handwew. σωσ since t-the usew can exit the bwowsew a-at any time, (U ᵕ U❁) this m-means that you cannot wewy upon a-any pawticuwaw twansaction to compwete ow to know t-that it did nyot compwete. o.O thewe awe sevewaw impwications of t-this behaviow. >w<
 
-First, you should take care to always leave your database in a consistent state at the end of every transaction. For example, suppose that you are using IndexedDB to store a list of items that you allow the user to edit. You save the list after the edit by clearing the object store and then writing out the new list. If you clear the object store in one transaction and write the new list in another transaction, there is a danger that the browser will close after the clear but before the write, leaving you with an empty database. To avoid this, you should combine the clear and the write into a single transaction.
+fiwst, you shouwd take cawe to a-awways weave youw database in a c-consistent state a-at the end of evewy twansaction. f-fow exampwe, (///ˬ///✿) suppose that you a-awe using indexeddb to stowe a wist of items that y-you awwow the u-usew to edit. :3 you save the wist a-aftew the edit by c-cweawing the object stowe and t-then wwiting out the nyew wist. ^^;; if you cweaw the object stowe in one twansaction and wwite the nyew w-wist in anothew twansaction, òωó thewe is a dangew that the bwowsew w-wiww cwose aftew t-the cweaw but b-befowe the wwite, nyaa~~ weaving you w-with an empty database. /(^•ω•^) t-to avoid this, you shouwd c-combine the cweaw and the wwite i-into a singwe t-twansaction. 😳
 
-Second, you should never tie database transactions to unload events. If the unload event is triggered by the browser closing, any transactions created in the unload event handler will never complete. An intuitive approach to maintaining some information across browser sessions is to read it from the database when the browser (or a particular page) is opened, update it as the user interacts with the browser, and then save it to the database when the browser (or page) closes. However, this will not work. The database transactions will be created in the unload event handler, but because they are asynchronous they will be aborted before they can execute.
+second, òωó you shouwd nyevew tie database twansactions t-to unwoad events. (⑅˘꒳˘) i-if the unwoad event is twiggewed by the bwowsew c-cwosing, ^•ﻌ•^ any twansactions cweated i-in the unwoad e-event handwew w-wiww nyevew compwete. o.O a-an intuitive appwoach to m-maintaining some infowmation acwoss b-bwowsew sessions is to wead it fwom the database when the b-bwowsew (ow a pawticuwaw p-page) is o-opened, update i-it as the usew i-intewacts with the b-bwowsew, σωσ and t-then save it to the database when the bwowsew (ow p-page) cwoses. howevew, 😳 this wiww nyot wowk. (ˆ ﻌ ˆ)♡ the d-database twansactions wiww be c-cweated in the unwoad event handwew, (///ˬ///✿) but because they awe asynchwonous they wiww b-be abowted befowe t-they can exekawaii~.
 
-In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown. See [Error 870645 en Firefox](https://bugzil.la/870645).
+i-in fact, (///ˬ///✿) thewe is nyo way to guawantee that indexeddb twansactions w-wiww c-compwete, >_< even w-with nyowmaw bwowsew s-shutdown. XD see [ewwow 870645 en fiwefox](https://bugziw.wa/870645). (U ﹏ U)
 
-## Full IndexedDB example
+## fuww indexeddb exampwe
 
-### HTML Content
+### htmw content
 
-```html
-<script
-  type="text/javascript"
-  src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+```htmw
+<scwipt
+  type="text/javascwipt"
+  s-swc="https://ajax.googweapis.com/ajax/wibs/jquewy/1.8.3/jquewy.min.js"></scwipt>
 
-<h1>IndexedDB Demo: storing blobs, e-publication example</h1>
-<div class="note">
-  <p>Works and tested with:</p>
+<h1>indexeddb d-demo: stowing bwobs, ( ͡o ω ͡o ) e-e-pubwication exampwe</h1>
+<div cwass="note">
+  <p>wowks and t-tested with:</p>
   <div id="compat"></div>
 </div>
 
 <div id="msg"></div>
 
-<form id="register-form">
-  <table>
+<fowm i-id="wegistew-fowm">
+  <tabwe>
     <tbody>
-      <tr>
+      <tw>
         <td>
-          <label for="pub-title" class="required"> Title: </label>
+          <wabew fow="pub-titwe" c-cwass="wequiwed"> titwe: </wabew>
         </td>
         <td>
-          <input type="text" id="pub-title" name="pub-title" />
+          <input type="text" id="pub-titwe" nyame="pub-titwe" />
         </td>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <td>
-          <label for="pub-biblioid" class="required">
-            Bibliographic ID:<br />
-            <span class="note">(ISBN, ISSN, etc.)</span>
-          </label>
-        </td>
-        <td>
-          <input type="text" id="pub-biblioid" name="pub-biblioid" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="pub-year"> Year: </label>
+          <wabew f-fow="pub-bibwioid" cwass="wequiwed">
+            b-bibwiogwaphic id:<bw />
+            <span cwass="note">(isbn, ^•ﻌ•^ issn, etc.)</span>
+          </wabew>
         </td>
         <td>
-          <input type="number" id="pub-year" name="pub-year" />
+          <input t-type="text" id="pub-bibwioid" name="pub-bibwioid" />
         </td>
-      </tr>
+      </tw>
+      <tw>
+        <td>
+          <wabew fow="pub-yeaw"> yeaw: </wabew>
+        </td>
+        <td>
+          <input t-type="numbew" id="pub-yeaw" n-nyame="pub-yeaw" />
+        </td>
+      </tw>
     </tbody>
     <tbody>
-      <tr>
+      <tw>
         <td>
-          <label for="pub-file"> File image: </label>
+          <wabew f-fow="pub-fiwe"> fiwe image: </wabew>
         </td>
         <td>
-          <input type="file" id="pub-file" />
+          <input type="fiwe" id="pub-fiwe" />
         </td>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <td>
-          <label for="pub-file-url">
-            Online-file image URL:<br />
-            <span class="note">(same origin URL)</span>
-          </label>
+          <wabew fow="pub-fiwe-uww">
+            o-onwine-fiwe image uww:<bw />
+            <span cwass="note">(same owigin uww)</span>
+          </wabew>
         </td>
         <td>
-          <input type="text" id="pub-file-url" name="pub-file-url" />
+          <input type="text" id="pub-fiwe-uww" n-nyame="pub-fiwe-uww" />
         </td>
-      </tr>
+      </tw>
     </tbody>
-  </table>
+  </tabwe>
 
-  <div class="button-pane">
-    <input type="button" id="add-button" value="Add Publication" />
-    <input type="reset" id="register-form-reset" />
+  <div c-cwass="button-pane">
+    <input type="button" id="add-button" v-vawue="add pubwication" />
+    <input type="weset" i-id="wegistew-fowm-weset" />
   </div>
-</form>
+</fowm>
 
-<form id="delete-form">
-  <table>
+<fowm i-id="dewete-fowm">
+  <tabwe>
     <tbody>
-      <tr>
+      <tw>
         <td>
-          <label for="pub-biblioid-to-delete">
-            Bibliographic ID:<br />
-            <span class="note">(ISBN, ISSN, etc.)</span>
-          </label>
+          <wabew f-fow="pub-bibwioid-to-dewete">
+            bibwiogwaphic id:<bw />
+            <span cwass="note">(isbn, 😳 i-issn, etc.)</span>
+          </wabew>
         </td>
         <td>
           <input
-            type="text"
-            id="pub-biblioid-to-delete"
-            name="pub-biblioid-to-delete" />
+            t-type="text"
+            id="pub-bibwioid-to-dewete"
+            n-name="pub-bibwioid-to-dewete" />
         </td>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <td>
-          <label for="key-to-delete">
-            Key:<br />
-            <span class="note">(for example 1, 2, 3, etc.)</span>
-          </label>
+          <wabew f-fow="key-to-dewete">
+            key:<bw />
+            <span cwass="note">(fow exampwe 1, (ˆ ﻌ ˆ)♡ 2, 3, e-etc.)</span>
+          </wabew>
         </td>
         <td>
-          <input type="text" id="key-to-delete" name="key-to-delete" />
+          <input t-type="text" id="key-to-dewete" name="key-to-dewete" />
         </td>
-      </tr>
+      </tw>
     </tbody>
-  </table>
-  <div class="button-pane">
-    <input type="button" id="delete-button" value="Delete Publication" />
+  </tabwe>
+  <div cwass="button-pane">
+    <input type="button" id="dewete-button" v-vawue="dewete pubwication" />
     <input
       type="button"
-      id="clear-store-button"
-      value="Clear the whole store"
-      class="destructive" />
+      id="cweaw-stowe-button"
+      v-vawue="cweaw t-the whowe s-stowe"
+      cwass="destwuctive" />
   </div>
-</form>
+</fowm>
 
-<form id="search-form">
-  <div class="button-pane">
+<fowm i-id="seawch-fowm">
+  <div cwass="button-pane">
     <input
       type="button"
-      id="search-list-button"
-      value="List database content" />
+      id="seawch-wist-button"
+      vawue="wist database c-content" />
   </div>
-</form>
+</fowm>
 
 <div>
   <div id="pub-msg"></div>
-  <div id="pub-viewer"></div>
-  <ul id="pub-list"></ul>
+  <div i-id="pub-viewew"></div>
+  <uw id="pub-wist"></uw>
 </div>
 ```
 
-### CSS Content
+### c-css content
 
 ```css
-body {
+b-body {
   font-size: 0.8em;
-  font-family: Sans-Serif;
+  font-famiwy: sans-sewif;
 }
 
-form {
-  background-color: #cccccc;
-  border-radius: 0.3em;
-  display: inline-block;
-  margin-bottom: 0.5em;
-  padding: 1em;
+fowm {
+  b-backgwound-cowow: #cccccc;
+  bowdew-wadius: 0.3em;
+  d-dispway: inwine-bwock;
+  m-mawgin-bottom: 0.5em;
+  p-padding: 1em;
 }
 
-table {
-  border-collapse: collapse;
+t-tabwe {
+  bowdew-cowwapse: c-cowwapse;
 }
 
 input {
   padding: 0.3em;
-  border-color: #cccccc;
-  border-radius: 0.3em;
+  bowdew-cowow: #cccccc;
+  b-bowdew-wadius: 0.3em;
 }
 
-.required:after {
-  content: "*";
-  color: red;
+.wequiwed:aftew {
+  c-content: "*";
+  c-cowow: wed;
 }
 
 .button-pane {
-  margin-top: 1em;
+  mawgin-top: 1em;
 }
 
-#pub-viewer {
-  float: right;
-  width: 48%;
+#pub-viewew {
+  fwoat: wight;
+  w-width: 48%;
   height: 20em;
-  border: solid #d092ff 0.1em;
+  b-bowdew: sowid #d092ff 0.1em;
 }
-#pub-viewer iframe {
-  width: 100%;
-  height: 100%;
+#pub-viewew i-ifwame {
+  w-width: 100%;
+  h-height: 100%;
 }
 
-#pub-list {
+#pub-wist {
   width: 46%;
-  background-color: #eeeeee;
-  border-radius: 0.3em;
+  backgwound-cowow: #eeeeee;
+  bowdew-wadius: 0.3em;
 }
-#pub-list li {
+#pub-wist w-wi {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  padding-right: 0.5em;
+  padding-wight: 0.5em;
 }
 
 #msg {
-  margin-bottom: 1em;
+  mawgin-bottom: 1em;
 }
 
 .action-success {
   padding: 0.5em;
-  color: #00d21e;
-  background-color: #eeeeee;
-  border-radius: 0.2em;
+  c-cowow: #00d21e;
+  b-backgwound-cowow: #eeeeee;
+  bowdew-wadius: 0.2em;
 }
 
-.action-failure {
+.action-faiwuwe {
   padding: 0.5em;
-  color: #ff1408;
-  background-color: #eeeeee;
-  border-radius: 0.2em;
+  c-cowow: #ff1408;
+  b-backgwound-cowow: #eeeeee;
+  b-bowdew-wadius: 0.2em;
 }
 
 .note {
-  font-size: smaller;
+  f-font-size: smowew;
 }
 
-.destructive {
-  background-color: orange;
+.destwuctive {
+  backgwound-cowow: o-owange;
 }
-.destructive:hover {
-  background-color: #ff8000;
+.destwuctive:hovew {
+  backgwound-cowow: #ff8000;
 }
-.destructive:active {
-  background-color: red;
+.destwuctive:active {
+  backgwound-cowow: w-wed;
 }
 ```
 
-### JavaScript Content
+### javascwipt c-content
 
 ```js
 (function () {
-  var COMPAT_ENVS = [
-    ["Firefox", ">= 16.0"],
+  v-vaw compat_envs = [
+    ["fiwefox", (ˆ ﻌ ˆ)♡ ">= 16.0"],
     [
-      "Google Chrome",
-      ">= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support",
+      "googwe c-chwome", rawr x3
+      ">= 24.0 (you m-may nyeed t-to get googwe chwome c-canawy), rawr x3 nyo bwob stowage suppowt", (U ᵕ U❁)
     ],
   ];
-  var compat = $("#compat");
-  compat.empty();
-  compat.append('<ul id="compat-list"></ul>');
-  COMPAT_ENVS.forEach(function (val, idx, array) {
-    $("#compat-list").append("<li>" + val[0] + ": " + val[1] + "</li>");
+  vaw compat = $("#compat");
+  c-compat.empty();
+  compat.append('<uw i-id="compat-wist"></uw>');
+  compat_envs.foweach(function (vaw, (ꈍᴗꈍ) i-idx, (ꈍᴗꈍ) awway) {
+    $("#compat-wist").append("<wi>" + v-vaw[0] + ": " + v-vaw[1] + "</wi>");
   });
 
-  const DB_NAME = "mdn-demo-indexeddb-epublications";
-  const DB_VERSION = 1; // Use a long long for this value (don't use a float)
-  const DB_STORE_NAME = "publications";
+  c-const db_name = "mdn-demo-indexeddb-epubwications";
+  c-const db_vewsion = 1; // use a wong wong fow this vawue (don't use a fwoat)
+  const d-db_stowe_name = "pubwications";
 
-  var db;
+  v-vaw db;
 
-  // Used to keep track of which view is displayed to avoid uselessly reloading it
-  var current_view_pub_key;
+  // used to keep t-twack of which view i-is dispwayed to avoid usewesswy w-wewoading it
+  vaw cuwwent_view_pub_key;
 
-  function openDb() {
-    console.log("openDb ...");
-    var req = indexedDB.open(DB_NAME, DB_VERSION);
-    req.onsuccess = function (evt) {
-      // Better use "this" than "req" to get the result to avoid problems with
-      // garbage collection.
-      // db = req.result;
-      db = this.result;
-      console.log("openDb DONE");
+  function opendb() {
+    consowe.wog("opendb ...");
+    v-vaw weq = indexeddb.open(db_name, OwO d-db_vewsion);
+    w-weq.onsuccess = function (evt) {
+      // b-bettew use "this" t-than "weq" t-to get the wesuwt t-to avoid pwobwems w-with
+      // gawbage cowwection. nyaa~~
+      // d-db = weq.wesuwt;
+      d-db = this.wesuwt;
+      consowe.wog("opendb done");
     };
-    req.onerror = function (evt) {
-      console.error("openDb:", evt.target.errorCode);
+    weq.onewwow = f-function (evt) {
+      consowe.ewwow("opendb:", 🥺 evt.tawget.ewwowcode);
     };
 
-    req.onupgradeneeded = function (evt) {
-      console.log("openDb.onupgradeneeded");
-      var store = evt.currentTarget.result.createObjectStore(DB_STORE_NAME, {
-        keyPath: "id",
-        autoIncrement: true,
+    w-weq.onupgwadeneeded = function (evt) {
+      consowe.wog("opendb.onupgwadeneeded");
+      vaw stowe = evt.cuwwenttawget.wesuwt.cweateobjectstowe(db_stowe_name, ^•ﻌ•^ {
+        k-keypath: "id", /(^•ω•^)
+        a-autoincwement: t-twue, (U ﹏ U)
       });
 
-      store.createIndex("biblioid", "biblioid", { unique: true });
-      store.createIndex("title", "title", { unique: false });
-      store.createIndex("year", "year", { unique: false });
+      s-stowe.cweateindex("bibwioid", :3 "bibwioid", { unique: twue });
+      s-stowe.cweateindex("titwe", ^^;; "titwe", { u-unique: fawse });
+      stowe.cweateindex("yeaw", >w< "yeaw", { unique: fawse });
     };
   }
 
   /**
-   * @param {string} store_name
-   * @param {string} mode either "readonly" or "readwrite"
+   * @pawam {stwing} stowe_name
+   * @pawam {stwing} m-mode e-eithew "weadonwy" o-ow "weadwwite"
    */
-  function getObjectStore(store_name, mode) {
-    var tx = db.transaction(store_name, mode);
-    return tx.objectStore(store_name);
+  function g-getobjectstowe(stowe_name, nyaa~~ m-mode) {
+    vaw tx = db.twansaction(stowe_name, ^^ mode);
+    wetuwn tx.objectstowe(stowe_name);
   }
 
-  function clearObjectStore(store_name) {
-    var store = getObjectStore(DB_STORE_NAME, "readwrite");
-    var req = store.clear();
-    req.onsuccess = function (evt) {
-      displayActionSuccess("Store cleared");
-      displayPubList(store);
+  function cweawobjectstowe(stowe_name) {
+    vaw s-stowe = getobjectstowe(db_stowe_name, 😳 "weadwwite");
+    vaw weq = stowe.cweaw();
+    weq.onsuccess = function (evt) {
+      dispwayactionsuccess("stowe cweawed");
+      dispwaypubwist(stowe);
     };
-    req.onerror = function (evt) {
-      console.error("clearObjectStore:", evt.target.errorCode);
-      displayActionFailure(this.error);
+    w-weq.onewwow = f-function (evt) {
+      consowe.ewwow("cweawobjectstowe:", :3 evt.tawget.ewwowcode);
+      dispwayactionfaiwuwe(this.ewwow);
     };
   }
 
-  function getBlob(key, store, success_callback) {
-    var req = store.get(key);
-    req.onsuccess = function (evt) {
-      var value = evt.target.result;
-      if (value) success_callback(value.blob);
+  f-function getbwob(key, 🥺 stowe, success_cawwback) {
+    vaw weq = s-stowe.get(key);
+    w-weq.onsuccess = f-function (evt) {
+      vaw v-vawue = evt.tawget.wesuwt;
+      if (vawue) success_cawwback(vawue.bwob);
     };
   }
 
   /**
-   * @param {IDBObjectStore=} store
+   * @pawam {idbobjectstowe=} s-stowe
    */
-  function displayPubList(store) {
-    console.log("displayPubList");
+  function d-dispwaypubwist(stowe) {
+    c-consowe.wog("dispwaypubwist");
 
-    if (typeof store == "undefined")
-      store = getObjectStore(DB_STORE_NAME, "readonly");
+    i-if (typeof stowe == "undefined")
+      s-stowe = getobjectstowe(db_stowe_name, :3 "weadonwy");
 
-    var pub_msg = $("#pub-msg");
-    pub_msg.empty();
-    var pub_list = $("#pub-list");
-    pub_list.empty();
-    // Resetting the iframe so that it doesn't display previous content
-    newViewerFrame();
+    v-vaw pub_msg = $("#pub-msg");
+    p-pub_msg.empty();
+    vaw pub_wist = $("#pub-wist");
+    pub_wist.empty();
+    // wesetting the i-ifwame so that i-it doesn't dispway pwevious content
+    nyewviewewfwame();
 
-    var req;
-    req = store.count();
-    // Requests are executed in the order in which they were made against the
-    // transaction, and their results are returned in the same order.
-    // Thus the count text below will be displayed before the actual pub list
-    // (not that it is algorithmically important in this case).
-    req.onsuccess = function (evt) {
+    vaw weq;
+    weq = stowe.count();
+    // w-wequests a-awe exekawaii~d in the owdew in w-which they wewe made against the
+    // t-twansaction, >_< and theiw wesuwts awe wetuwned in the same o-owdew. 🥺
+    // thus the count text bewow wiww be d-dispwayed befowe the actuaw pub wist
+    // (not t-that it is awgowithmicawwy i-impowtant in this case). ^•ﻌ•^
+    weq.onsuccess = function (evt) {
       pub_msg.append(
-        "<p>There are <strong>" +
-          evt.target.result +
-          "</strong> record(s) in the object store.</p>",
+        "<p>thewe a-awe <stwong>" +
+          e-evt.tawget.wesuwt +
+          "</stwong> w-wecowd(s) i-in the object stowe.</p>", >w<
       );
     };
-    req.onerror = function (evt) {
-      console.error("add error", this.error);
-      displayActionFailure(this.error);
+    weq.onewwow = function (evt) {
+      consowe.ewwow("add e-ewwow", rawr t-this.ewwow);
+      d-dispwayactionfaiwuwe(this.ewwow);
     };
 
-    var i = 0;
-    req = store.openCursor();
-    req.onsuccess = function (evt) {
-      var cursor = evt.target.result;
+    v-vaw i = 0;
+    w-weq = stowe.opencuwsow();
+    weq.onsuccess = function (evt) {
+      vaw cuwsow = evt.tawget.wesuwt;
 
-      // If the cursor is pointing at something, ask for the data
-      if (cursor) {
-        console.log("displayPubList cursor:", cursor);
-        req = store.get(cursor.key);
-        req.onsuccess = function (evt) {
-          var value = evt.target.result;
-          var list_item = $(
-            `<li>[${cursor.key}] (biblioid: ${value.biblioid}) ${value.title}</li>`,
+      // if the cuwsow is p-pointing at something, :3 ask fow the d-data
+      if (cuwsow) {
+        c-consowe.wog("dispwaypubwist c-cuwsow:", OwO cuwsow);
+        w-weq = s-stowe.get(cuwsow.key);
+        weq.onsuccess = function (evt) {
+          vaw vawue = evt.tawget.wesuwt;
+          v-vaw wist_item = $(
+            `<wi>[${cuwsow.key}] (bibwioid: ${vawue.bibwioid}) ${vawue.titwe}</wi>`, 😳
           );
-          if (value.year != null) list_item.append(" - " + value.year);
+          if (vawue.yeaw != nyuww) wist_item.append(" - " + v-vawue.yeaw);
 
-          if (
-            value.hasOwnProperty("blob") &&
-            typeof value.blob != "undefined"
+          i-if (
+            vawue.hasownpwopewty("bwob") &&
+            t-typeof vawue.bwob != "undefined"
           ) {
-            var link = $('<a href="' + cursor.key + '">File</a>');
-            link.on("click", function () {
-              return false;
+            vaw wink = $('<a hwef="' + c-cuwsow.key + '">fiwe</a>');
+            w-wink.on("cwick", (ꈍᴗꈍ) f-function () {
+              wetuwn fawse;
             });
-            link.on("mouseenter", function (evt) {
-              setInViewer(evt.target.getAttribute("href"));
+            wink.on("mouseentew", 🥺 function (evt) {
+              s-setinviewew(evt.tawget.getattwibute("hwef"));
             });
-            list_item.append(" / ");
-            list_item.append(link);
-          } else {
-            list_item.append(" / No attached file");
+            w-wist_item.append(" / ");
+            w-wist_item.append(wink);
+          } ewse {
+            wist_item.append(" / nyo a-attached fiwe");
           }
-          pub_list.append(list_item);
+          p-pub_wist.append(wist_item);
         };
 
-        // Move on to the next object in store
-        cursor.continue();
+        // m-move o-on to the next o-object in stowe
+        c-cuwsow.continue();
 
-        // This counter serves only to create distinct ids
-        i++;
-      } else {
-        console.log("No more entries");
+        // this countew s-sewves onwy t-to cweate distinct ids
+        i-i++;
+      } ewse {
+        consowe.wog("no mowe e-entwies");
       }
     };
   }
 
-  function newViewerFrame() {
-    var viewer = $("#pub-viewer");
-    viewer.empty();
-    var iframe = $("<iframe />");
-    viewer.append(iframe);
-    return iframe;
+  f-function nyewviewewfwame() {
+    v-vaw viewew = $("#pub-viewew");
+    v-viewew.empty();
+    v-vaw ifwame = $("<ifwame />");
+    v-viewew.append(ifwame);
+    wetuwn ifwame;
   }
 
-  function setInViewer(key) {
-    console.log("setInViewer:", arguments);
-    key = Number(key);
-    if (key == current_view_pub_key) return;
+  function s-setinviewew(key) {
+    c-consowe.wog("setinviewew:", >_< a-awguments);
+    k-key = nyumbew(key);
+    i-if (key == cuwwent_view_pub_key) wetuwn;
 
-    current_view_pub_key = key;
+    cuwwent_view_pub_key = k-key;
 
-    var store = getObjectStore(DB_STORE_NAME, "readonly");
-    getBlob(key, store, function (blob) {
-      console.log("setInViewer blob:", blob);
-      var iframe = newViewerFrame();
+    v-vaw stowe = getobjectstowe(db_stowe_name, "weadonwy");
+    getbwob(key, ʘwʘ s-stowe, >_< function (bwob) {
+      consowe.wog("setinviewew bwob:", bwob);
+      v-vaw ifwame = n-nyewviewewfwame();
 
-      // It is not possible to set a direct link to the
-      // blob to provide a mean to directly download it.
-      if (blob.type == "text/html") {
-        var reader = new FileReader();
-        reader.onload = function (evt) {
-          var html = evt.target.result;
-          iframe.load(function () {
-            $(this).contents().find("html").html(html);
+      // it is nyot possibwe t-to set a diwect w-wink to the
+      // bwob to pwovide a mean to diwectwy downwoad it. >w<
+      if (bwob.type == "text/htmw") {
+        v-vaw weadew = n-nyew fiweweadew();
+        w-weadew.onwoad = function (evt) {
+          v-vaw htmw = evt.tawget.wesuwt;
+          ifwame.woad(function () {
+            $(this).contents().find("htmw").htmw(htmw);
           });
         };
-        reader.readAsText(blob);
-      } else if (blob.type.indexOf("image/") == 0) {
-        iframe.load(function () {
-          var img_id = "image-" + key;
-          var img = $('<img id="' + img_id + '"/>');
-          $(this).contents().find("body").html(img);
-          var obj_url = window.URL.createObjectURL(blob);
+        weadew.weadastext(bwob);
+      } ewse if (bwob.type.indexof("image/") == 0) {
+        i-ifwame.woad(function () {
+          vaw img_id = "image-" + key;
+          vaw img = $('<img id="' + img_id + '"/>');
+          $(this).contents().find("body").htmw(img);
+          vaw o-obj_uww = window.uww.cweateobjectuww(bwob);
           $(this)
             .contents()
-            .find("#" + img_id)
-            .attr("src", obj_url);
-          window.URL.revokeObjectURL(obj_url);
+            .find("#" + i-img_id)
+            .attw("swc", o-obj_uww);
+          window.uww.wevokeobjectuww(obj_uww);
         });
-      } else if (blob.type == "application/pdf") {
-        $("*").css("cursor", "wait");
-        var obj_url = window.URL.createObjectURL(blob);
-        iframe.load(function () {
-          $("*").css("cursor", "auto");
+      } ewse if (bwob.type == "appwication/pdf") {
+        $("*").css("cuwsow", òωó "wait");
+        vaw obj_uww = window.uww.cweateobjectuww(bwob);
+        ifwame.woad(function () {
+          $("*").css("cuwsow", OwO "auto");
         });
-        iframe.attr("src", obj_url);
-        window.URL.revokeObjectURL(obj_url);
-      } else {
-        iframe.load(function () {
-          $(this).contents().find("body").html("No view available");
+        ifwame.attw("swc", ^•ﻌ•^ o-obj_uww);
+        window.uww.wevokeobjectuww(obj_uww);
+      } ewse {
+        i-ifwame.woad(function () {
+          $(this).contents().find("body").htmw("no view avaiwabwe");
         });
       }
     });
   }
 
   /**
-   * @param {string} biblioid
-   * @param {string} title
-   * @param {number} year
-   * @param {string} url the URL of the image to download and store in the local
-   *   IndexedDB database. The resource behind this URL is subjected to the
-   *   "Same origin policy", thus for this method to work, the URL must come from
-   *   the same origin as the web site/app this code is deployed on.
+   * @pawam {stwing} bibwioid
+   * @pawam {stwing} titwe
+   * @pawam {numbew} y-yeaw
+   * @pawam {stwing} uww the uww of the image to d-downwoad and stowe in the wocaw
+   *   indexeddb database. XD the w-wesouwce behind this uww is subjected to the
+   *   "same o-owigin powicy", mya thus fow t-this method to wowk, nyaa~~ the uww must come fwom
+   *   the same owigin as the web s-site/app this code i-is depwoyed o-on. (ˆ ﻌ ˆ)♡
    */
-  function addPublicationFromUrl(biblioid, title, year, url) {
-    console.log("addPublicationFromUrl:", arguments);
+  function a-addpubwicationfwomuww(bibwioid, mya t-titwe, OwO yeaw, uww) {
+    consowe.wog("addpubwicationfwomuww:", 😳😳😳 a-awguments);
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    // Setting the wanted responseType to "blob"
-    // http://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
-    xhr.responseType = "blob";
-    xhr.onload = function (evt) {
-      if (xhr.status == 200) {
-        console.log("Blob retrieved");
-        var blob = xhr.response;
-        console.log("Blob:", blob);
-        addPublication(biblioid, title, year, blob);
-      } else {
-        console.error(
-          "addPublicationFromUrl error:",
-          xhr.responseText,
-          xhr.status,
+    vaw xhw = nyew xmwhttpwequest();
+    xhw.open("get", o.O uww, twue);
+    // setting the wanted wesponsetype to "bwob"
+    // http://www.w3.owg/tw/xmwhttpwequest2/#the-wesponse-attwibute
+    x-xhw.wesponsetype = "bwob";
+    xhw.onwoad = function (evt) {
+      i-if (xhw.status == 200) {
+        consowe.wog("bwob w-wetwieved");
+        v-vaw bwob = xhw.wesponse;
+        c-consowe.wog("bwob:", (U ﹏ U) bwob);
+        addpubwication(bibwioid, (˘ω˘) t-titwe, ( ͡o ω ͡o ) yeaw, b-bwob);
+      } e-ewse {
+        consowe.ewwow(
+          "addpubwicationfwomuww e-ewwow:", σωσ
+          x-xhw.wesponsetext, rawr x3
+          x-xhw.status, (ꈍᴗꈍ)
         );
       }
     };
-    xhr.send();
+    xhw.send();
 
-    // We can't use jQuery here because as of jQuery 1.8.3 the new "blob"
-    // responseType is not handled.
-    // http://bugs.jquery.com/ticket/11461
-    // http://bugs.jquery.com/ticket/7248
+    // we can't use jquewy hewe because as of jquewy 1.8.3 t-the nyew "bwob"
+    // w-wesponsetype is nyot handwed. òωó
+    // http://bugs.jquewy.com/ticket/11461
+    // h-http://bugs.jquewy.com/ticket/7248
     // $.ajax({
-    //   url: url,
-    //   type: 'GET',
-    //   xhrFields: { responseType: 'blob' },
-    //   success: function(data, textStatus, jqXHR) {
-    //     console.log("Blob retrieved");
-    //     console.log("Blob:", data);
-    //     // addPublication(biblioid, title, year, data);
-    //   },
-    //   error: function(jqXHR, textStatus, errorThrown) {
-    //     console.error(errorThrown);
-    //     displayActionFailure("Error during blob retrieval");
+    //   u-uww: uww, (˘ω˘)
+    //   type: 'get', nyaa~~
+    //   xhwfiewds: { w-wesponsetype: 'bwob' }, mya
+    //   s-success: f-function(data, -.- textstatus, jqxhw) {
+    //     consowe.wog("bwob w-wetwieved");
+    //     consowe.wog("bwob:", :3 data);
+    //     // a-addpubwication(bibwioid, :3 titwe, yeaw, OwO data);
+    //   }, ^^
+    //   ewwow: function(jqxhw, ^^ t-textstatus, rawr ewwowthwown) {
+    //     consowe.ewwow(ewwowthwown);
+    //     dispwayactionfaiwuwe("ewwow d-duwing bwob wetwievaw");
     //   }
     // });
   }
 
   /**
-   * @param {string} biblioid
-   * @param {string} title
-   * @param {number} year
-   * @param {Blob=} blob
+   * @pawam {stwing} bibwioid
+   * @pawam {stwing} titwe
+   * @pawam {numbew} yeaw
+   * @pawam {bwob=} bwob
    */
-  function addPublication(biblioid, title, year, blob) {
-    console.log("addPublication arguments:", arguments);
-    var obj = { biblioid: biblioid, title: title, year: year };
-    if (typeof blob != "undefined") obj.blob = blob;
+  function addpubwication(bibwioid, òωó t-titwe, yeaw, bwob) {
+    consowe.wog("addpubwication a-awguments:", (U ﹏ U) awguments);
+    v-vaw o-obj = { bibwioid: bibwioid, ( ͡o ω ͡o ) titwe: t-titwe, ^^;; yeaw: yeaw };
+    if (typeof b-bwob != "undefined") o-obj.bwob = b-bwob;
 
-    var store = getObjectStore(DB_STORE_NAME, "readwrite");
-    var req;
-    try {
-      req = store.add(obj);
-    } catch (e) {
-      if (e.name == "DataCloneError")
-        displayActionFailure(
-          "This engine doesn't know how to clone a Blob, " + "use Firefox",
+    v-vaw stowe = getobjectstowe(db_stowe_name, :3 "weadwwite");
+    vaw w-weq;
+    twy {
+      weq = stowe.add(obj);
+    } c-catch (e) {
+      i-if (e.name == "datacwoneewwow")
+        d-dispwayactionfaiwuwe(
+          "this e-engine doesn't know how to cwone a bwob, mya " + "use fiwefox", ^^;;
         );
-      throw e;
+      t-thwow e;
     }
-    req.onsuccess = function (evt) {
-      console.log("Insertion in DB successful");
-      displayActionSuccess();
-      displayPubList(store);
+    w-weq.onsuccess = f-function (evt) {
+      consowe.wog("insewtion i-in db successfuw");
+      dispwayactionsuccess();
+      d-dispwaypubwist(stowe);
     };
-    req.onerror = function () {
-      console.error("addPublication error", this.error);
-      displayActionFailure(this.error);
-    };
-  }
-
-  /**
-   * @param {string} biblioid
-   */
-  function deletePublicationFromBib(biblioid) {
-    console.log("deletePublication:", arguments);
-    var store = getObjectStore(DB_STORE_NAME, "readwrite");
-    var req = store.index("biblioid");
-    req.get(biblioid).onsuccess = function (evt) {
-      if (typeof evt.target.result == "undefined") {
-        displayActionFailure("No matching record found");
-        return;
-      }
-      deletePublication(evt.target.result.id, store);
-    };
-    req.onerror = function (evt) {
-      console.error("deletePublicationFromBib:", evt.target.errorCode);
+    weq.onewwow = function () {
+      consowe.ewwow("addpubwication e-ewwow", σωσ t-this.ewwow);
+      d-dispwayactionfaiwuwe(this.ewwow);
     };
   }
 
   /**
-   * @param {number} key
-   * @param {IDBObjectStore=} store
+   * @pawam {stwing} b-bibwioid
    */
-  function deletePublication(key, store) {
-    console.log("deletePublication:", arguments);
-
-    if (typeof store == "undefined")
-      store = getObjectStore(DB_STORE_NAME, "readwrite");
-
-    // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
-    // the result of the Object Store Deletion Operation algorithm is
-    // undefined, so it's not possible to know if some records were actually
-    // deleted by looking at the request result.
-    var req = store.get(key);
-    req.onsuccess = function (evt) {
-      var record = evt.target.result;
-      console.log("record:", record);
-      if (typeof record == "undefined") {
-        displayActionFailure("No matching record found");
-        return;
+  f-function dewetepubwicationfwombib(bibwioid) {
+    c-consowe.wog("dewetepubwication:", ^^ a-awguments);
+    vaw stowe = g-getobjectstowe(db_stowe_name, /(^•ω•^) "weadwwite");
+    vaw weq = stowe.index("bibwioid");
+    weq.get(bibwioid).onsuccess = function (evt) {
+      i-if (typeof e-evt.tawget.wesuwt == "undefined") {
+        dispwayactionfaiwuwe("no matching w-wecowd found");
+        wetuwn;
       }
-      // Warning: The exact same key used for creation needs to be passed for
-      // the deletion. If the key was a Number for creation, then it needs to
-      // be a Number for deletion.
-      req = store.delete(key);
-      req.onsuccess = function (evt) {
-        console.log("evt:", evt);
-        console.log("evt.target:", evt.target);
-        console.log("evt.target.result:", evt.target.result);
-        console.log("delete successful");
-        displayActionSuccess("Deletion successful");
-        displayPubList(store);
-      };
-      req.onerror = function (evt) {
-        console.error("deletePublication:", evt.target.errorCode);
-      };
+      dewetepubwication(evt.tawget.wesuwt.id, (˘ω˘) stowe);
     };
-    req.onerror = function (evt) {
-      console.error("deletePublication:", evt.target.errorCode);
+    weq.onewwow = function (evt) {
+      c-consowe.ewwow("dewetepubwicationfwombib:", -.- evt.tawget.ewwowcode);
     };
   }
 
-  function displayActionSuccess(msg) {
-    msg = typeof msg != "undefined" ? "Success: " + msg : "Success";
-    $("#msg").html('<span class="action-success">' + msg + "</span>");
+  /**
+   * @pawam {numbew} k-key
+   * @pawam {idbobjectstowe=} stowe
+   */
+  f-function d-dewetepubwication(key, (ˆ ﻌ ˆ)♡ s-stowe) {
+    consowe.wog("dewetepubwication:", òωó awguments);
+
+    i-if (typeof s-stowe == "undefined")
+      stowe = getobjectstowe(db_stowe_name, :3 "weadwwite");
+
+    // a-as pew spec http://www.w3.owg/tw/indexeddb/#object-stowe-dewetion-opewation
+    // t-the wesuwt of t-the object stowe dewetion opewation a-awgowithm is
+    // u-undefined, (ꈍᴗꈍ) so it's nyot possibwe to know if some wecowds wewe actuawwy
+    // d-deweted by wooking at the wequest wesuwt. (ˆ ﻌ ˆ)♡
+    vaw weq = stowe.get(key);
+    w-weq.onsuccess = f-function (evt) {
+      vaw wecowd = e-evt.tawget.wesuwt;
+      consowe.wog("wecowd:", mya w-wecowd);
+      i-if (typeof w-wecowd == "undefined") {
+        d-dispwayactionfaiwuwe("no m-matching w-wecowd found");
+        wetuwn;
+      }
+      // w-wawning: the e-exact same key u-used fow cweation nyeeds to be passed fow
+      // t-the dewetion. (U ᵕ U❁) if the key was a-a nyumbew fow cweation, ^•ﻌ•^ then it nyeeds to
+      // be a nyumbew fow dewetion. σωσ
+      weq = stowe.dewete(key);
+      weq.onsuccess = function (evt) {
+        consowe.wog("evt:", ^^;; e-evt);
+        consowe.wog("evt.tawget:", (✿oωo) e-evt.tawget);
+        consowe.wog("evt.tawget.wesuwt:", UwU evt.tawget.wesuwt);
+        consowe.wog("dewete s-successfuw");
+        dispwayactionsuccess("dewetion successfuw");
+        dispwaypubwist(stowe);
+      };
+      weq.onewwow = f-function (evt) {
+        c-consowe.ewwow("dewetepubwication:", (✿oωo) e-evt.tawget.ewwowcode);
+      };
+    };
+    weq.onewwow = f-function (evt) {
+      c-consowe.ewwow("dewetepubwication:", >_< evt.tawget.ewwowcode);
+    };
   }
-  function displayActionFailure(msg) {
-    msg = typeof msg != "undefined" ? "Failure: " + msg : "Failure";
-    $("#msg").html('<span class="action-failure">' + msg + "</span>");
+
+  function dispwayactionsuccess(msg) {
+    msg = typeof msg != "undefined" ? "success: " + msg : "success";
+    $("#msg").htmw('<span c-cwass="action-success">' + msg + "</span>");
   }
-  function resetActionStatus() {
-    console.log("resetActionStatus ...");
+  function dispwayactionfaiwuwe(msg) {
+    m-msg = typeof m-msg != "undefined" ? "faiwuwe: " + msg : "faiwuwe";
+    $("#msg").htmw('<span cwass="action-faiwuwe">' + msg + "</span>");
+  }
+  function wesetactionstatus() {
+    c-consowe.wog("wesetactionstatus ...");
     $("#msg").empty();
-    console.log("resetActionStatus DONE");
+    c-consowe.wog("wesetactionstatus done");
   }
 
-  function addEventListeners() {
-    console.log("addEventListeners");
+  f-function addeventwistenews() {
+    c-consowe.wog("addeventwistenews");
 
-    $("#register-form-reset").click(function (evt) {
-      resetActionStatus();
+    $("#wegistew-fowm-weset").cwick(function (evt) {
+      wesetactionstatus();
     });
 
-    $("#add-button").click(function (evt) {
-      console.log("add ...");
-      var title = $("#pub-title").val();
-      var biblioid = $("#pub-biblioid").val();
-      if (!title || !biblioid) {
-        displayActionFailure("Required field(s) missing");
-        return;
+    $("#add-button").cwick(function (evt) {
+      consowe.wog("add ...");
+      vaw titwe = $("#pub-titwe").vaw();
+      v-vaw bibwioid = $("#pub-bibwioid").vaw();
+      if (!titwe || !bibwioid) {
+        d-dispwayactionfaiwuwe("wequiwed fiewd(s) missing");
+        w-wetuwn;
       }
-      var year = $("#pub-year").val();
-      if (year != "") {
-        // Better use Number.isInteger if the engine has EcmaScript 6
-        if (isNaN(year)) {
-          displayActionFailure("Invalid year");
-          return;
+      v-vaw yeaw = $("#pub-yeaw").vaw();
+      i-if (yeaw != "") {
+        // b-bettew use n-nyumbew.isintegew i-if the engine h-has ecmascwipt 6
+        if (isnan(yeaw)) {
+          dispwayactionfaiwuwe("invawid y-yeaw");
+          w-wetuwn;
         }
-        year = Number(year);
-      } else {
-        year = null;
+        yeaw = nyumbew(yeaw);
+      } ewse {
+        y-yeaw = n-nyuww;
       }
 
-      var file_input = $("#pub-file");
-      var selected_file = file_input.get(0).files[0];
-      console.log("selected_file:", selected_file);
-      // Keeping a reference on how to reset the file input in the UI once we
-      // have its value, but instead of doing that we rather use a "reset" type
-      // input in the HTML form.
-      //file_input.val(null);
-      var file_url = $("#pub-file-url").val();
-      if (selected_file) {
-        addPublication(biblioid, title, year, selected_file);
-      } else if (file_url) {
-        addPublicationFromUrl(biblioid, title, year, file_url);
-      } else {
-        addPublication(biblioid, title, year);
+      v-vaw fiwe_input = $("#pub-fiwe");
+      v-vaw sewected_fiwe = fiwe_input.get(0).fiwes[0];
+      c-consowe.wog("sewected_fiwe:", (U ᵕ U❁) s-sewected_fiwe);
+      // keeping a wefewence o-on how to weset t-the fiwe input in the ui once w-we
+      // have its vawue, ^^;; but instead of doing t-that we wathew u-use a "weset" type
+      // i-input i-in the htmw fowm. (✿oωo)
+      //fiwe_input.vaw(nuww);
+      v-vaw fiwe_uww = $("#pub-fiwe-uww").vaw();
+      if (sewected_fiwe) {
+        a-addpubwication(bibwioid, rawr titwe, yeaw, >w< sewected_fiwe);
+      } e-ewse if (fiwe_uww) {
+        addpubwicationfwomuww(bibwioid, ^^;; titwe, σωσ yeaw, fiwe_uww);
+      } ewse {
+        addpubwication(bibwioid, òωó titwe, yeaw);
       }
     });
 
-    $("#delete-button").click(function (evt) {
-      console.log("delete ...");
-      var biblioid = $("#pub-biblioid-to-delete").val();
-      var key = $("#key-to-delete").val();
+    $("#dewete-button").cwick(function (evt) {
+      consowe.wog("dewete ...");
+      vaw b-bibwioid = $("#pub-bibwioid-to-dewete").vaw();
+      v-vaw key = $("#key-to-dewete").vaw();
 
-      if (biblioid != "") {
-        deletePublicationFromBib(biblioid);
-      } else if (key != "") {
-        // Better use Number.isInteger if the engine has EcmaScript 6
-        if (key == "" || isNaN(key)) {
-          displayActionFailure("Invalid key");
-          return;
+      i-if (bibwioid != "") {
+        dewetepubwicationfwombib(bibwioid);
+      } e-ewse if (key != "") {
+        // b-bettew use nyumbew.isintegew i-if the engine has ecmascwipt 6
+        i-if (key == "" || isnan(key)) {
+          d-dispwayactionfaiwuwe("invawid k-key");
+          wetuwn;
         }
-        key = Number(key);
-        deletePublication(key);
+        key = nyumbew(key);
+        d-dewetepubwication(key);
       }
     });
 
-    $("#clear-store-button").click(function (evt) {
-      clearObjectStore();
+    $("#cweaw-stowe-button").cwick(function (evt) {
+      c-cweawobjectstowe();
     });
 
-    var search_button = $("#search-list-button");
-    search_button.click(function (evt) {
-      displayPubList();
+    v-vaw seawch_button = $("#seawch-wist-button");
+    s-seawch_button.cwick(function (evt) {
+      dispwaypubwist();
     });
   }
 
-  openDb();
-  addEventListeners();
-})(); // Immediately-Invoked Function Expression (IIFE)
+  o-opendb();
+  addeventwistenews();
+})(); // immediatewy-invoked function e-expwession (iife)
 ```
 
-{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}
+{{ wivesampwewink('fuww_indexeddb_exampwe', (ꈍᴗꈍ) "test the onwine wive demo") }}
 
-## Next step
+## next step
 
-If you want to start tinkering with the API, jump in to the [reference documentation](/en-US/IndexedDB) and check out the different methods.
+if you w-want to stawt tinkewing w-with the a-api, ( ͡o ω ͡o ) jump in to the [wefewence d-documentation](/en-us/indexeddb) a-and check out the d-diffewent methods. ( ͡o ω ͡o )
 
-## See also
+## s-see awso
 
-Reference
+wefewence
 
-- [IndexedDB API Reference](/en-US/IndexedDB)
-- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
-- [Using IndexedDB in chrome](/es/docs/IndexedDB/Using_IndexedDB_in_chrome)
+- [indexeddb api wefewence](/en-us/indexeddb)
+- [indexed database a-api specification](https://www.w3.owg/tw/indexeddb/)
+- [using indexeddb in chwome](/es/docs/indexeddb/using_indexeddb_in_chwome)
 
-Tutorials
+tutowiaws
 
-- [A simple TODO list using HTML5 IndexedDB](https://www.html5rocks.com/tutorials/indexeddb/todo/).
+- [a s-simpwe todo wist using htmw5 indexeddb](https://www.htmw5wocks.com/tutowiaws/indexeddb/todo/). UwU
 
-  > [!NOTE]
-  > This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed `setVersion()` method.
+  > [!note]
+  > this tutowiaw i-is based on an o-owd vewsion of the specification and does nyot wowk on up-to-date b-bwowsews - it stiww uses the wemoved `setvewsion()` m-method. >_<
 
-- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [databinding ui e-ewements with indexeddb](https://www.htmw5wocks.com/en/tutowiaws/indexeddb/uidatabinding/)
 
-Related articles
+wewated a-awticwes
 
-- [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
+- [indexeddb — the stowe in youw b-bwowsew](http://msdn.micwosoft.com/en-us/scwiptjunkie/gg679063.aspx)
 
-Firefox
+fiwefox
 
-- Mozilla [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1)
+- m-moziwwa [intewface fiwes](https://mxw.moziwwa.owg/moziwwa-centwaw/find?text=&stwing=dom%2findexeddb%2f.*%5c.idw&wegexp=1)

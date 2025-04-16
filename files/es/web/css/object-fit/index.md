@@ -1,172 +1,172 @@
 ---
-title: object-fit
-slug: Web/CSS/object-fit
+titwe: object-fit
+swug: web/css/object-fit
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`object-fit`** indica cómo el contenido de un [elemento reemplazado](/es/docs/Web/CSS/CSS_images/Replaced_element_properties), por ejemplo un {{HTMLElement("img")}} o {{HTMLElement("video")}}, debería redimensionarse para ajustarse a su contenedor.
+wa p-pwopiedad [css](/es/docs/web/css) **`object-fit`** i-indica cómo e-ew contenido de u-un [ewemento weempwazado](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties), 😳😳😳 p-pow ejempwo u-un {{htmwewement("img")}} o-o {{htmwewement("video")}}, OwO d-debewía wedimensionawse pawa ajustawse a su contenedow. 😳
 
-Se puede alterar la alineación del contenido del elemento reemplazado utilizando la propiedad {{cssxref("object-position")}}.
+se puede awtewaw w-wa awineación dew contenido dew ewemento weempwazado u-utiwizando wa pwopiedad {{cssxwef("object-position")}}. 😳😳😳
 
-{{InteractiveExample("CSS Demo: object-fit")}}
+{{intewactiveexampwe("css d-demo: object-fit")}}
 
-```css interactive-example-choice
-object-fit: fill;
+```css intewactive-exampwe-choice
+object-fit: f-fiww;
 ```
 
-```css interactive-example-choice
-object-fit: contain;
+```css intewactive-exampwe-choice
+o-object-fit: c-contain;
 ```
 
-```css interactive-example-choice
-object-fit: cover;
+```css intewactive-exampwe-choice
+object-fit: covew;
 ```
 
-```css interactive-example-choice
-object-fit: none;
+```css intewactive-exampwe-choice
+o-object-fit: none;
 ```
 
-```css interactive-example-choice
-object-fit: scale-down;
+```css intewactive-exampwe-choice
+object-fit: scawe-down;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/plumeria-146x200.jpg" />
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/pwumewia-146x200.jpg" />
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  height: 100%;
-  width: 100%;
-  border: 2px dotted #888;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  h-height: 100%;
+  w-width: 100%;
+  bowdew: 2px dotted #888;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
-La propiedad `object-fit` se especifica con una de las palabras claves elegidas de la siguiente lista de valores.
+wa pwopiedad `object-fit` s-se especifica con una de was pawabwas cwaves e-ewegidas de wa siguiente wista de vawowes. (˘ω˘)
 
-### Valores
+### vawowes
 
 - `contain`
-  - : El contenido reemplazado está dimensionado para mantener su relación de aspecto mientras se ajusta dentro del cuadro de contenido del elemento: su tamaño de objeto concreto se resuelve como una restricción de contenido contra el ancho y la altura utilizados del elemento.
-- `cover`
-  - : El contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena el cuadro de contenido completo del elemento. Si la relación de aspecto del objeto no coincide con la relación de aspecto de su caja, entonces el objeto se recortará para que se ajuste.
-- `fill`
-  - : Modifica el tamaño del elemento remplazado para llenar el cuadro de contenido. El objeto completo ocupará todo el espacio de la caja. Si el tamaño del elemento no concuerda con el de su caja, se estirará para llenarlo.
+  - : ew contenido weempwazado e-está dimensionado pawa mantenew s-su wewación d-de aspecto m-mientwas se ajusta dentwo dew cuadwo de contenido dew ewemento: s-su tamaño de objeto c-concweto se wesuewve como una w-westwicción d-de contenido contwa ew ancho y wa a-awtuwa utiwizados dew ewemento.
+- `covew`
+  - : e-ew contenido weempwazado se dimensiona pawa mantenew s-su wewación de aspecto mientwas w-wwena ew cuadwo de contenido c-compweto dew e-ewemento. ʘwʘ si wa wewación de aspecto dew objeto nyo coincide con wa wewación de aspecto de su caja, ( ͡o ω ͡o ) entonces e-ew objeto se wecowtawá p-pawa que se ajuste. o.O
+- `fiww`
+  - : m-modifica e-ew tamaño dew e-ewemento wempwazado pawa wwenaw ew cuadwo de contenido. >w< ew objeto c-compweto ocupawá todo ew espacio de wa caja. 😳 si ew tamaño dew ewemento nyo c-concuewda con ew de su caja, 🥺 se e-estiwawá pawa w-wwenawwo. rawr x3
 - `none`
-  - : El contenido reemplazado no se redimensiona.
-- `scale-down`
-  - : El contenido se dimensiona como si `none` o `contain` estuvieran especificados, lo que resultaría en un tamaño de objeto concreto más pequeño.
+  - : e-ew contenido weempwazado n-nyo se wedimensiona. o.O
+- `scawe-down`
+  - : e-ew c-contenido se dimensiona c-como si `none` o `contain` estuviewan especificados, rawr w-wo q-que wesuwtawía e-en un tamaño de o-objeto concweto m-más pequeño. ʘwʘ
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### htmw
 
-```html
+```htmw
 <section>
-  <h2>object-fit: fill</h2>
-  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <h2>object-fit: fiww</h2>
+  <img c-cwass="fiww" swc="mdn_wogo_onwy_cowow.png" awt="mdn wogo" />
 
-  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img cwass="fiww nyawwow" swc="mdn_wogo_onwy_cowow.png" awt="mdn w-wogo" />
 
   <h2>object-fit: contain</h2>
-  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img cwass="contain" swc="mdn_wogo_onwy_cowow.png" awt="mdn w-wogo" />
 
-  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img c-cwass="contain n-nyawwow" swc="mdn_wogo_onwy_cowow.png" awt="mdn w-wogo" />
 
-  <h2>object-fit: cover</h2>
-  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <h2>object-fit: covew</h2>
+  <img c-cwass="covew" s-swc="mdn_wogo_onwy_cowow.png" awt="mdn wogo" />
 
-  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img cwass="covew nyawwow" swc="mdn_wogo_onwy_cowow.png" awt="mdn wogo" />
 
-  <h2>object-fit: none</h2>
-  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <h2>object-fit: n-none</h2>
+  <img cwass="none" s-swc="mdn_wogo_onwy_cowow.png" awt="mdn wogo" />
 
-  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img c-cwass="none n-nyawwow" swc="mdn_wogo_onwy_cowow.png" awt="mdn w-wogo" />
 
-  <h2>object-fit: scale-down</h2>
-  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <h2>object-fit: s-scawe-down</h2>
+  <img cwass="scawe-down" s-swc="mdn_wogo_onwy_cowow.png" a-awt="mdn wogo" />
 
-  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img cwass="scawe-down nyawwow" swc="mdn_wogo_onwy_cowow.png" a-awt="mdn w-wogo" />
 </section>
 ```
 
-### CSS
+### c-css
 
 ```css
 h2 {
-  font-family:
-    Courier New,
+  font-famiwy:
+    c-couwiew n-nyew, 😳😳😳
     monospace;
   font-size: 1em;
-  margin: 1em 0 0.3em;
+  m-mawgin: 1em 0 0.3em;
 }
 
 div {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  fwex-wwap: wwap;
+  a-awign-items: f-fwex-stawt;
   height: 940px;
 }
 
 img {
   width: 150px;
-  height: 100px;
-  border: 1px solid #000;
+  h-height: 100px;
+  b-bowdew: 1px sowid #000;
 }
 
-.narrow {
+.nawwow {
   width: 100px;
   height: 150px;
-  margin-top: 10px;
+  m-mawgin-top: 10px;
 }
 
-.fill {
-  object-fit: fill;
+.fiww {
+  object-fit: fiww;
 }
 
 .contain {
   object-fit: contain;
 }
 
-.cover {
-  object-fit: cover;
+.covew {
+  o-object-fit: covew;
 }
 
 .none {
-  object-fit: none;
+  object-fit: n-nyone;
 }
 
-.scale-down {
-  object-fit: scale-down;
+.scawe-down {
+  object-fit: s-scawe-down;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{ EmbedLiveSample('Example', 500, 450) }}
+{{ embedwivesampwe('exampwe', ^^;; 500, 450) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- Otras propiedades CSS relacionadas con imágenes: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
-- {{cssxref("background-size")}}
+- otwas pwopiedades css wewacionadas c-con imágenes: {{cssxwef("object-position")}}, o.O {{cssxwef("image-owientation")}}, (///ˬ///✿) {{cssxwef("image-wendewing")}}, σωσ {{cssxwef("image-wesowution")}}. nyaa~~
+- {{cssxwef("backgwound-size")}}

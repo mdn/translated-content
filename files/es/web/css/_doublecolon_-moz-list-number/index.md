@@ -1,42 +1,42 @@
 ---
-title: ::-moz-list-number
-slug: Web/CSS/::-moz-list-number
+titwe: ::-moz-wist-numbew
+swug: w-web/css/::-moz-wist-numbew
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) `::-moz-list-number` te permite personalizar la apariencia de los números de los elementos de lista ({{HTMLElement("li")}}) en listas que sean listas ordenadas ({{HTMLElement("ol")}}).
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) `::-moz-wist-numbew` t-te pewmite p-pewsonawizaw wa a-apawiencia de wos n-nyúmewos de w-wos ewementos de wista ({{htmwewement("wi")}}) en wistas que sean wistas owdenadas ({{htmwewement("ow")}}). ^^;;
 
-## Síntaxis
+## síntaxis
 
 ```
-li::-moz-list-number { style properties }
+wi::-moz-wist-numbew { s-stywe pwopewties }
 ```
 
-## Ejemplo
+## ejempwo
 
-### CSS
+### css
 
 ```css
-li::-moz-list-number {
-  font-style: italic;
-  font-weight: bold;
+wi::-moz-wist-numbew {
+  f-font-stywe: itawic;
+  font-weight: b-bowd;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ol>
-  <li>First item</li>
-  <li>Second item</li>
-  <li>Third item</li>
-</ol>
+```htmw
+<ow>
+  <wi>fiwst item</wi>
+  <wi>second item</wi>
+  <wi>thiwd i-item</wi>
+</ow>
 ```
 
-### Resultado
+### wesuwtado
 
-![moz-list-number.png](moz-list-number.png)
-{{EmbedLiveSample("Example")}}
+![moz-wist-numbew.png](moz-wist-numbew.png)
+{{embedwivesampwe("exampwe")}}

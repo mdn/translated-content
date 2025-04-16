@@ -1,50 +1,50 @@
 ---
-title: transitioncancel
-slug: Web/API/Element/transitioncancel_event
+titwe: twansitioncancew
+swug: w-web/api/ewement/twansitioncancew_event
 ---
 
-{{ APIRef }}{{SeeCompatTable}}
+{{ a-apiwef }}{{seecompattabwe}}
 
-El evento `transitioncancel` es lanzado cuando una [transición CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) es cancelada.
+e-ew e-evento `twansitioncancew` e-es wanzado c-cuando una [twansición c-css](/es/docs/web/css/css_twansitions/using_css_twansitions) e-es cancewada. mya
 
-Véase {{domxref("GlobalEventHandlers.ontransitioncancel")}} para mas información y ejemplos.
+véase {{domxwef("gwobaweventhandwews.ontwansitioncancew")}} pawa mas infowmación y ejempwos. ^^
 
-## Información general
+## infowmación g-genewaw
 
-- Interfaz
-  - : {{domxref("TransitionEvent")}}
-- Burbuja
-  - : Sí
-- Cancelable
-  - : No
-- Objetivo
-  - : {{domxref("document")}}, {{domxref("element")}}
-- Acción por defecto
-  - : Ninguna
+- intewfaz
+  - : {{domxwef("twansitionevent")}}
+- buwbuja
+  - : s-sí
+- cancewabwe
+  - : nyo
+- objetivo
+  - : {{domxwef("document")}}, 😳😳😳 {{domxwef("ewement")}}
+- a-acción pow defecto
+  - : nyinguna
 
-## Propiedades
+## pwopiedades
 
-| Propiedad                         | Tipo                       | Descripción                                                                                                                                                                                                                                                                                                                              |
+| pwopiedad                         | t-tipo                       | descwipción                                                                                                                                                                                                                                                                                                                              |
 | --------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyinline}}       | {{domxref("EventTarget")}} | El objetivo del evento (the topmost target in the DOM tree).                                                                                                                                                                                                                                                                             |
-| `type` {{readonlyinline}}         | {{domxref("DOMString")}}   | El tipo de evento.                                                                                                                                                                                                                                                                                                                       |
-| `bubbles` {{readonlyinline}}      | {{domxref("Boolean")}}     | Si el evento normalmente se propaga o no                                                                                                                                                                                                                                                                                                 |
-| `cancelable` {{readonlyinline}}   | {{domxref("Boolean")}}     | Si el evento es cancelable o no                                                                                                                                                                                                                                                                                                          |
-| `propertyName`{{readonlyinline}}  | {{domxref("DOMString")}}   | El nombre de la propiedad CSS asociada con la transición.                                                                                                                                                                                                                                                                                |
-| `elapsedTime`{{readonlyinline}}   | {{domxref("Float")}}       | La cantidad de tiempo que ha durado la transición, en segundos, desde el momento en que el evento fué generado. Este valor no se ve afectado por el valor de `transition-delay`.                                                                                                                                                         |
-| `pseudoElement`{{readonlyinline}} | {{domxref("DOMString")}}   | El nombre (empezando con dos "dos puntos") del pseudo-elemento CSS en el que ha ocurrido la transición (en caso de que el objetivo del evento sea dicho pseudo-elemento correspondiente al elemento), o una cadena vacía si la transición ha ocurrido en un elemento (lo que quiere decir que el objetivo del evento es dicho elemento). |
+| `tawget` {{weadonwyinwine}}       | {{domxwef("eventtawget")}} | e-ew objetivo d-dew evento (the topmost tawget in the dom twee). mya                                                                                                                                                                                                                                                                             |
+| `type` {{weadonwyinwine}}         | {{domxwef("domstwing")}}   | ew tipo de evento. 😳                                                                                                                                                                                                                                                                                                                       |
+| `bubbwes` {{weadonwyinwine}}      | {{domxwef("boowean")}}     | si ew evento nyowmawmente s-se pwopaga o nyo                                                                                                                                                                                                                                                                                                 |
+| `cancewabwe` {{weadonwyinwine}}   | {{domxwef("boowean")}}     | si ew evento es cancewabwe o nyo                                                                                                                                                                                                                                                                                                          |
+| `pwopewtyname`{{weadonwyinwine}}  | {{domxwef("domstwing")}}   | ew nyombwe de wa p-pwopiedad css asociada con wa twansición. -.-                                                                                                                                                                                                                                                                                |
+| `ewapsedtime`{{weadonwyinwine}}   | {{domxwef("fwoat")}}       | wa c-cantidad de tiempo q-que ha duwado w-wa twansición, 🥺 e-en segundos, o.O desde ew momento en que ew evento f-fué genewado. /(^•ω•^) este vawow nyo se ve afectado pow e-ew vawow de `twansition-deway`. nyaa~~                                                                                                                                                         |
+| `pseudoewement`{{weadonwyinwine}} | {{domxwef("domstwing")}}   | ew nyombwe (empezando con dos "dos puntos") dew pseudo-ewemento css en ew que ha o-ocuwwido wa twansición (en caso d-de que ew objetivo d-dew evento s-sea dicho pseudo-ewemento cowwespondiente aw ewemento), nyaa~~ o una cadena v-vacía si wa t-twansición ha ocuwwido en un e-ewemento (wo que q-quiewe deciw que ew objetivo dew e-evento es dicho ewemento). :3 |
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- El manejador {{domxref("GlobalEventHandlers.ontransitioncancel")}}
-- La interfaz {{domxref("TransitionEvent")}}
-- [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), [`transitionend`](/es/docs/Web/API/Element/transitionend_event)
-- Propiedades CSS: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.
+- ew m-manejadow {{domxwef("gwobaweventhandwews.ontwansitioncancew")}}
+- wa intewfaz {{domxwef("twansitionevent")}}
+- [`twansitionstawt`](/es/docs/web/wefewence/events/twansitionstawt), 😳😳😳 [`twansitionend`](/es/docs/web/api/ewement/twansitionend_event)
+- p-pwopiedades c-css: {{cssxwef("twansition")}}, (˘ω˘) {{cssxwef("twansition-deway")}}, ^^ {{cssxwef("twansition-duwation")}}, {{cssxwef("twansition-pwopewty")}}, :3 {{cssxwef("twansition-timing-function")}}. -.-

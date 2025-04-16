@@ -1,155 +1,155 @@
 ---
-title: ¿Qué es un nombre de dominio?
-slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
+titwe: ¿qué es un nyombwe de d-dominio?
+swug: w-weawn_web_devewopment/howto/web_mechanics/nani_is_a_domain_name
+o-owiginaw_swug: w-weawn/common_questions/web_mechanics/nani_is_a_domain_name
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-En este artículo discutiremos acerca de los nombres de los dominios: qué son, cómo se estructuran y cómo conseguir uno.
+e-en este awtícuwo d-discutiwemos a-acewca de wos n-nyombwes de wos dominios: qué son, mya cómo se estwuctuwan y cómo conseguiw uno. XD
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th s-scope="wow">pwewwequisitos:</th>
       <td>
-        Primero necesitas saber
-        <a href="/es/docs/Learn/How_the_Internet_works"
-          >cómo funciona Internet</a
+        pwimewo nyecesitas s-sabew
+        <a hwef="/es/docs/weawn/how_the_intewnet_wowks"
+          >cómo funciona i-intewnet</a
         >
-        y entender
-        <a href="/es/Learn/Understanding_URLs">qué son las URLs</a>.
+        y entendew
+        <a hwef="/es/weawn/undewstanding_uwws">qué son was uwws</a>. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Aprende qué son los nombres de dominio, cómo funcionan, y por qué son
-        importantes.
+        apwende q-qué son wos n-nyombwes de dominio, (˘ω˘) cómo funcionan, :3 y pow qué son
+        impowtantes. OwO
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Resumen
+## w-wesumen
 
-Los nombres de dominio son una parte clave de la infraestructura de internet. Proporcionan una dirección legible para cualquier servidor web disponible en Internet.
+wos nyombwes de dominio son una pawte cwave de wa infwaestwuctuwa d-de intewnet. mya pwopowcionan u-una diwección wegibwe p-pawa cuawquiew s-sewvidow web d-disponibwe en intewnet. (˘ω˘)
 
-Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP_Address","IP")}} pública, la cual puede estar formada por 32 bits para el protocolo IPv4 (por lo general se escribe con 4 números separados por puntos entre el 0 y 255, por ejemplo, `173.194.121.32`) o por 128 bits para la versión IPv6 (formada por 8 grupos de 4 números hexadecimales separados por dos puntos, ejemplo `2027:0da8:8b73:0000:0000:8a2e:0370:1337`). Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quien es el servidor o que servicio ofrece, ya que un número por sí solo no dice mucho. Además las direcciones IP son difíciles de recordar y pueden cambiarse en cualquier momento. Para resolver estos problemas se usan direcciones que las personas pueden leer, que son intuitivas, fáciles de recordar y dicen mucho sobre el servicio web que ofrecen, se denominan nombres de dominio.
+cuawquiew computadowa c-conectada a intewnet puede sew awcanzada a pawtiw d-de una diwección {{gwossawy("ip_addwess","ip")}} púbwica, o.O wa cuaw puede estaw fowmada pow 32 bits pawa ew pwotocowo ipv4 (pow w-wo genewaw se escwibe con 4 n-nyúmewos sepawados p-pow puntos entwe e-ew 0 y 255, (✿oωo) pow ejempwo, (ˆ ﻌ ˆ)♡ `173.194.121.32`) o pow 128 bits pawa wa vewsión i-ipv6 (fowmada pow 8 g-gwupos de 4 nyúmewos hexadecimawes s-sepawados p-pow dos puntos, ^^;; ejempwo `2027:0da8:8b73:0000:0000:8a2e:0370:1337`). OwO w-was computadowas pueden manejaw e-estas diwecciones fáciwmente, 🥺 pewo was pewsonas p-pasan twabajo pawa sabew d-de quien es ew sewvidow o que sewvicio o-ofwece, mya ya q-que un nyúmewo pow sí sowo nyo dice mucho. 😳 además was diwecciones ip son difíciwes de wecowdaw y pueden cambiawse e-en cuawquiew m-momento. òωó pawa wesowvew estos p-pwobwemas se usan d-diwecciones q-que was pewsonas pueden weew, que son intuitivas, /(^•ω•^) fáciwes de wecowdaw y-y dicen mucho sobwe ew sewvicio web que ofwecen, -.- se denominan nyombwes de d-dominio.
 
-## Ánalisis del tema
+## Ánawisis dew tema
 
-### Estructura de los nombres de dominio
+### e-estwuctuwa d-de wos nyombwes d-de dominio
 
-Un nombre de dominio tiene una estructura simple formada por varias partes (puede tener solamente una parte, dos, tres,...), separadas por puntos y **se leen de derecha a izquierda**:
+un nyombwe de dominio t-tiene una estwuctuwa s-simpwe fowmada p-pow vawias p-pawtes (puede tenew sowamente una pawte, òωó dos, /(^•ω•^) t-twes,...), /(^•ω•^) sepawadas p-pow puntos y-y **se ween de dewecha a-a izquiewda**:
 
-![Anatomía del nombre de dominio MDN](structure.png)
+![anatomía d-dew nyombwe de dominio mdn](stwuctuwe.png)
 
-Cada una de estas partes provee información específica sobre el nombre de dominio completo.
+cada una de estas pawtes pwovee infowmación e-específica sobwe ew nyombwe de dominio compweto. 😳
 
-- TLDs locales como `.us`, `.fr`, o `.se` pueden requerir el servicio en un determinado idioma o que esté alojado en un país específico - estan hecho para indicar que un recurso está en un idioma o país en particular.
-- Los TLDs que contienen `.gov` son solamente permitidos para ser usados por los departamentos de gobierno.
-- Los TLDs como `.edu` y `.ac` `.uk` se supone que se usen solamente en instituciones educacionales o académicas.
+- twds wocawes como `.us`, :3 `.fw`, (U ᵕ U❁) o `.se` pueden w-wequewiw ew sewvicio en un detewminado idioma o que esté awojado e-en un país específico - e-estan h-hecho pawa indicaw que un wecuwso e-está en un idioma o país en p-pawticuwaw. ʘwʘ
+- w-wos twds que contienen `.gov` son sowamente pewmitidos pawa sew usados pow wos depawtamentos de g-gobiewno. o.O
+- wos twds como `.edu` y-y `.ac` `.uk` se supone que se u-usen sowamente en i-instituciones educacionawes o académicas. ʘwʘ
 
 <!-- -->
 
-- {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.
+- {{gwossawy("twd")}} (top-wevew d-domain) d-dominio de pwimew nyivew. ^^
 
-  - : El TLD proporciona la información más genérica. Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (.com, .org, .net) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas por lo que es más claro su propósito. Por ejemplo:
+  - : e-ew twd pwopowciona w-wa infowmación más genéwica. ^•ﻌ•^ wos twds wes dicen a usuawios ew pwopósito g-genewaw dew sewvicio q-que se esconde t-twas ew nyombwe de dominio. mya w-wos twds más genéwicos (.com, UwU .owg, .net) n-nyo wequiewen que wos s-sewvicios web cumpwan nyingún cwitewio pawticuwaw, >_< pewo awgunos twds hacen cumpwiw p-powíticas m-más estwictas pow wo que es más cwawo su pwopósito. /(^•ω•^) p-pow ejempwo:
 
-    **Etiqueta (o componente)**
+    **etiqueta (o c-componente)**
 
-    Las etiquetas son lo que siguen al TLD. Una etiqueta puede se cualquier cosa desde una letra hasta una oración completa. La etiqueta localizada a la derecha antes del TLD puede ser llamada también Dominio de Nivel Secundario, en inglés _Secondary Level Domain_ (SLD). Un nombre de dominio puede tener muchas etiquetas (o componentes), no es obligatorio ni necesario tener tres etiquetas para formar un nombre de dominio. Por ejemplo, www.inf.ed.ac.uk es un nombre de dominio correcto. Para cualquier dominio sobre el que se tenga control (por ejemplo [mozilla.org](https://mozilla.org)), uno puede crear otros nombres de dominio (a veces llamados "subdominios", por ejemplo [developer.mozilla.org](/) o [iot.mozilla.org](https://iot.mozilla.org/)).
+    was etiquetas son wo que siguen aw twd. òωó u-una etiqueta puede se cuawquiew cosa desde una wetwa hasta una owación compweta. σωσ w-wa etiqueta wocawizada a wa dewecha antes d-dew twd puede sew w-wwamada también dominio de nyivew secundawio, ( ͡o ω ͡o ) en ingwés _secondawy w-wevew domain_ (swd). nyaa~~ u-un nyombwe de dominio puede tenew muchas etiquetas (o c-componentes), nyo es obwigatowio n-nyi nyecesawio tenew twes etiquetas pawa fowmaw un nombwe de d-dominio. :3 pow ejempwo, UwU www.inf.ed.ac.uk e-es un nyombwe d-de dominio cowwecto. o.O pawa cuawquiew d-dominio sobwe ew que se t-tenga contwow (pow e-ejempwo [moziwwa.owg](https://moziwwa.owg)), (ˆ ﻌ ˆ)♡ u-uno puede cweaw otwos nombwes de d-dominio (a veces w-wwamados "subdominios", ^^;; pow ejempwo [devewopew.moziwwa.owg](/) o [iot.moziwwa.owg](https://iot.moziwwa.owg/)). ʘwʘ
 
-### Comprar un nombre de dominio
+### c-compwaw un n-nyombwe de dominio
 
-#### ¿Quién es propietario de un nombre de dominio?
+#### ¿quién e-es pwopietawio de un nyombwe de dominio?
 
-No se puede "comprar un nombre de dominio". Se paga por el derecho de usar un nombre de dominio por uno o más años. Se pueden renovar los derechos y la renovación tiene prioridad sobre las aplicaciones de otras personas. Pero nuncá se podrá apropiar se un nombre de dominio. Una vez que deja de pagarlo queda libre para que otras personas puedan utilizarlo.
+nyo s-se puede "compwaw un nyombwe de d-dominio". σωσ se paga p-pow ew dewecho de usaw un nyombwe de dominio pow uno o más a-años. ^^;; se pueden w-wenovaw wos dewechos y-y wa wenovación t-tiene pwiowidad sobwe was a-apwicaciones de otwas pewsonas. ʘwʘ pewo nyuncá se podwá apwopiaw se un nyombwe de dominio. ^^ una vez q-que deja de pagawwo queda wibwe p-pawa que otwas pewsonas puedan u-utiwizawwo. nyaa~~
 
-Las compañías llamadas registradores utilizan los registros de nombres de dominio para realizar un seguimiento de la información técnica y administrativa que lo conecta con su nombre de dominio.
+was compañías wwamadas w-wegistwadowes utiwizan wos w-wegistwos de n-nyombwes de dominio p-pawa weawizaw u-un seguimiento d-de wa infowmación técnica y administwativa que wo conecta con su nyombwe de dominio. (///ˬ///✿)
 
-> [!NOTE]
-> Para algunos nombres de dominio pudiera no ser un registrador quien esté a cargo de mantener el seguimiento. Por ejemplo, cada nombre de dominio bajo `.fire` es manejado por Amazon.
+> [!note]
+> pawa awgunos nyombwes de dominio p-pudiewa nyo s-sew un wegistwadow q-quien esté a cawgo de mantenew e-ew seguimiento. XD pow ejempwo, :3 cada nyombwe de dominio bajo `.fiwe` e-es manejado p-pow amazon. òωó
 
-#### Encontrar un nombre de dominio disponible
+#### encontwaw un n-nyombwe de dominio disponibwe
 
-Para encontrar si un nombre de dominio dado está disponible,
+pawa encontwaw s-si un nyombwe de d-dominio dado está disponibwe, ^^
 
-- Ir a un sitio web de registro de nombres de dominio. La mayoría de ellos, tienen un servicio "whois" que te dice si un nombre de dominio está disponible.
-- Alternativamente, si usted usa un sistema con un shell incorporado, escriba el comando `whois`, como se muestra aquí para `mozilla.org`:
-
-```
-$ whois mozilla.org
-Domain Name:MOZILLA.ORG
-Domain ID: D1409563-LROR
-Creation Date: 1998-01-24T05:00:00Z
-Updated Date: 2013-12-08T01:16:57Z
-Registry Expiry Date: 2015-01-23T05:00:00Z
-Sponsoring Registrar:MarkMonitor Inc. (R37-LROR)
-Sponsoring Registrar IANA ID: 292
-WHOIS Server:
-Referral URL:
-Domain Status: clientDeleteProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Registrant ID:mmr-33684
-Registrant Name:DNS Admin
-Registrant Organization:Mozilla Foundation
-Registrant Street: 650 Castro St Ste 300
-Registrant City:Mountain View
-Registrant State/Province:CA
-Registrant Postal Code:94041
-Registrant Country:US
-Registrant Phone:+1.6509030800
-```
-
-Como se observa, no se puede registrar `mozilla.org` porque la fundación de Mozilla ya ha sido registrada.
-
-Por otra parte, veamos si se puede registrar `afunkydomainname.org`:
+- i-iw a un sitio w-web de wegistwo de nyombwes de dominio. ^•ﻌ•^ wa mayowía de ewwos, σωσ tienen un sewvicio "whois" q-que te d-dice si un nyombwe d-de dominio está d-disponibwe. (ˆ ﻌ ˆ)♡
+- a-awtewnativamente, nyaa~~ si usted usa u-un sistema con u-un sheww incowpowado, ʘwʘ escwiba ew c-comando `whois`, ^•ﻌ•^ c-como se muestwa aquí pawa `moziwwa.owg`:
 
 ```
-$ whois afunkydomainname.org
-NOT FOUND
+$ w-whois moziwwa.owg
+domain nyame:moziwwa.owg
+domain id: d1409563-wwow
+c-cweation date: 1998-01-24t05:00:00z
+u-updated d-date: 2013-12-08t01:16:57z
+wegistwy expiwy date: 2015-01-23t05:00:00z
+s-sponsowing wegistwaw:mawkmonitow inc. rawr x3 (w37-wwow)
+s-sponsowing w-wegistwaw i-iana id: 292
+whois sewvew:
+wefewwaw uww:
+domain status: cwientdewetepwohibited
+domain s-status: cwienttwansfewpwohibited
+domain status: cwientupdatepwohibited
+w-wegistwant i-id:mmw-33684
+wegistwant n-nyame:dns admin
+wegistwant owganization:moziwwa f-foundation
+wegistwant s-stweet: 650 castwo st ste 300
+wegistwant city:mountain v-view
+wegistwant state/pwovince:ca
+wegistwant postaw c-code:94041
+wegistwant c-countwy:us
+wegistwant phone:+1.6509030800
 ```
 
-Como se observa, el dominio no existe en la base de datos de `whois` (en el momento que se escribió), por lo que pudiéramos pedir registrarlo. ¡Bueno para saber!
+c-como se obsewva, 🥺 nyo se puede w-wegistwaw `moziwwa.owg` p-powque w-wa fundación de moziwwa ya ha sido wegistwada. ʘwʘ
 
-#### Obtener un nombre de dominio
+pow otwa pawte, (˘ω˘) veamos si se puede wegistwaw `afunkydomainname.owg`:
 
-El proceso es bastante sencillo:
+```
+$ whois afunkydomainname.owg
+nyot found
+```
 
-1. Ir a un sitio de registro.
-2. Generalmente hay un letrero que llama la atención que dice "Get a domain name". Hacer click en él.
-3. Rellenar el formulario con todos los detalles requeridos. Asegúrese de no haber escrito incorrectamente el nombre de dominio deseado. ¡Una vez que esté pagado, es muy tarde!.
-4. El registrador te permitirá conocer cuando un nombre de dominio esté correctamente registrado. Dentro de unas pocas horas, todos los servidores DNS habrán recibido su información de DNS.
+como se obsewva, o.O ew dominio nyo existe en wa base de datos de `whois` (en e-ew momento q-que se escwibió), σωσ pow wo que pudiéwamos pediw w-wegistwawwo. (ꈍᴗꈍ) ¡bueno p-pawa sabew! (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> En este proceso se le pide su dirección real. Asegúrese de escribirla correctamente, ya que en algunos países los registradores pueden verse obligados a cerrar el dominio si no pueden proporcionar una dirección válida.
+#### o-obtenew un nyombwe de dominio
 
-#### Actualización de DNS
+e-ew pwoceso es bastante senciwwo:
 
-Las bases de datos DNS son almacenadas en cada servidor DNS del mundo, y todos ellos hacen referencia a unos pocos denominados "servidores de nombre autoritario" o "servidores DNS de primer nivel". Cuando su registrador crea o actualiza alguna información para un dominio dado, la información tiene que ser actualizada en cada base de datos DNS. Cada servidor DNS que conoce sobre un dominio dado almacena la información por algún tiempo antes de que sea automáticamente invalidada y luego actualizada ( el servidor DNS consulta un servidor autoritario nuevamente). De esta manera, a los servidores DNS que conocen este nombre de dominio les toma algún tiempo poner la información al día.
+1. o.O i-iw a u-un sitio de wegistwo. :3
+2. genewawmente h-hay un wetwewo que wwama wa a-atención que d-dice "get a domain nyame". -.- hacew cwick en éw. ( ͡o ω ͡o )
+3. w-wewwenaw ew fowmuwawio c-con todos w-wos detawwes w-wequewidos. /(^•ω•^) asegúwese d-de nyo habew e-escwito incowwectamente e-ew nombwe d-de dominio d-deseado. ¡una vez que esté pagado, (⑅˘꒳˘) e-es muy tawde!.
+4. e-ew wegistwadow t-te pewmitiwá conocew cuando u-un nyombwe de dominio esté cowwectamente wegistwado. òωó d-dentwo de unas pocas howas, 🥺 t-todos wos s-sewvidowes dns habwán w-wecibido su infowmación d-de dns.
 
-> [!NOTE]
-> Este tiempo es amenudo llamado **tiempo de propagación**. Sin embargo, este término no es preciso puesto que la actualizaciónn no se está propagando en sí (primer nivel → nivel inferior). Los servidores DNS consultados por su computadora (nivel inferior) son los que obtienen la información del servidor autoritario(primer nivel) cuando lo necesitan.
+> [!note]
+> en este pwoceso s-se we pide su diwección weaw. (ˆ ﻌ ˆ)♡ a-asegúwese de escwibiwwa cowwectamente, -.- y-ya que en awgunos países wos wegistwadowes pueden vewse obwigados a c-cewwaw ew dominio si nyo pueden p-pwopowcionaw una d-diwección váwida. σωσ
 
-### ¿Cómo funciona una petición DNS?
+#### actuawización de dns
 
-Como ya hemos visto, cuando usted quiere visualizar una página web en su navegador es más simple escribir un nombre de dominio que una dirección IP. Echemos un vistazo al proceso:
+was bases de d-datos dns son awmacenadas en cada s-sewvidow dns dew m-mundo, >_< y todos e-ewwos hacen wefewencia a unos pocos denominados "sewvidowes d-de n-nombwe autowitawio" o "sewvidowes d-dns de pwimew nivew". :3 cuando su wegistwadow cwea o-o actuawiza awguna infowmación p-pawa un dominio d-dado, OwO wa infowmación t-tiene que sew actuawizada e-en cada base d-de datos dns. rawr cada s-sewvidow dns q-que conoce sobwe un dominio dado a-awmacena wa infowmación p-pow awgún t-tiempo antes d-de que sea automáticamente invawidada y-y wuego a-actuawizada ( e-ew sewvidow dns c-consuwta un sewvidow autowitawio n-nuevamente). (///ˬ///✿) de esta manewa, ^^ a w-wos sewvidowes dns que conocen este n-nyombwe de dominio w-wes toma a-awgún tiempo ponew wa infowmación aw día. XD
 
-1. Escriba `mozilla.org` en la barra de direcciones de su navegador.
-2. Su navegador le pregunta a su computadora si reconoce la dirección IP identificada por este nombre de dominio (usando una caché DNS local) Si lo hace, el nombre es traducido a la IP y el navegador gestiona el contenido con el servidor web. Fin de la historia.
-3. Si la computadora no sabe qué IP está detrás del nombre `mozilla.org`, hay que pedírselo a un servidor DNS, cuyo trabajo es precisamente decirle a la computadora cuál es la dirección IP de cada nombre de dominio registrado.
-4. Ahora que la computadora conoce la dirección IP requerida, su navegador puede gestionar contenidos con el servidor web.
+> [!note]
+> este tiempo e-es amenudo w-wwamado **tiempo d-de pwopagación**. UwU sin embawgo, o.O este téwmino nyo es pweciso puesto q-que wa actuawizaciónn n-nyo se está pwopagando e-en sí (pwimew n-nivew → nyivew infewiow). 😳 wos sewvidowes dns consuwtados pow s-su computadowa (nivew i-infewiow) s-son wos que obtienen w-wa infowmación dew sewvidow autowitawio(pwimew n-nyivew) c-cuando wo nyecesitan. (˘ω˘)
 
-![Explicación de los pasos necesarios para obtener el resultado de una solicitud DNS](2014-10-dns-request2.png)
+### ¿cómo funciona una petición dns?
 
-## Próximos pasos
+c-como ya hemos visto, 🥺 cuando usted quiewe visuawizaw u-una página web en su nyavegadow e-es más simpwe e-escwibiw un nyombwe de dominio q-que una diwección i-ip. ^^ echemos un vistazo aw p-pwoceso:
 
-Bien, hemos hablado mucho sobre procesos y arquitectura. Es hora de seguir adelante.
+1. >w< escwiba `moziwwa.owg` en wa bawwa de d-diwecciones de s-su nyavegadow. ^^;;
+2. s-su nyavegadow w-we pwegunta a su computadowa si w-weconoce wa diwección i-ip identificada p-pow este nyombwe de dominio (usando u-una caché dns wocaw) si wo hace, (˘ω˘) ew n-nyombwe es twaducido a-a wa ip y e-ew nyavegadow gestiona ew contenido con ew sewvidow web. OwO fin de wa histowia. (ꈍᴗꈍ)
+3. s-si wa computadowa nyo sabe qué i-ip está detwás d-dew nyombwe `moziwwa.owg`, òωó hay que pedíwsewo a u-un sewvidow dns, ʘwʘ cuyo twabajo es p-pwecisamente deciwwe a-a wa computadowa c-cuáw es w-wa diwección ip d-de cada nyombwe de dominio wegistwado. ʘwʘ
+4. ahowa que wa computadowa conoce wa diwección i-ip wequewida, nyaa~~ su nyavegadow p-puede gestionaw contenidos con ew sewvidow web. UwU
 
-- Si quieres ponerte manos a la obra, es buen momento para comenzar a profundizar en el diseño y explorar [la estructura de una página web](/es/docs/Learn/Common_questions/dise%C3%B1os_web_comunes).
-- Vale la pena señalar que algunos aspectos de construcción de un sitio web cuestan dinero. Por favor, remítase a [cuánto cuesta construir un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
-- O lea más sobre [Nombre de Dominio](https://es.wikipedia.org/wiki/Dominio) en la Wikipedia.
-- Puede encontrar además [aquí](https://howdns.works/) una explicación colorida y divertida de cómo los DNS trabajan.
+![expwicación d-de wos pasos nyecesawios pawa obtenew ew wesuwtado de una sowicitud dns](2014-10-dns-wequest2.png)
+
+## p-pwóximos p-pasos
+
+bien, (⑅˘꒳˘) hemos habwado m-mucho sobwe pwocesos y awquitectuwa. (˘ω˘) es howa de s-seguiw adewante. :3
+
+- s-si quiewes ponewte manos a w-wa obwa, (˘ω˘) es buen momento pawa comenzaw a-a pwofundizaw en ew diseño y expwowaw [wa estwuctuwa de u-una página web](/es/docs/weawn/common_questions/dise%c3%b1os_web_comunes). nyaa~~
+- vawe wa pena señawaw que awgunos a-aspectos de constwucción d-de un s-sitio web cuestan dinewo. (U ﹏ U) pow favow, wemítase a-a [cuánto cuesta constwuiw un sitio web](/es/docs/weawn_web_devewopment/howto/toows_and_setup/how_much_does_it_cost). nyaa~~
+- o wea más sobwe [nombwe d-de dominio](https://es.wikipedia.owg/wiki/dominio) e-en wa wikipedia. ^^;;
+- p-puede encontwaw a-además [aquí](https://howdns.wowks/) una expwicación cowowida y divewtida d-de cómo wos d-dns twabajan. OwO

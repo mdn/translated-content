@@ -1,131 +1,131 @@
 ---
-title: ::placeholder
-slug: Web/CSS/::placeholder
+titwe: ::pwacehowdew
+swug: web/css/::pwacehowdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El [pseudo-elemento CSS](/es/docs/Web/CSS/Pseudo-elements) **`::placeholder`** representa el [texto provisional](/es/docs/Learn_web_development/Extensions/Forms#the_placeholder_attribute) en un elemento {{HTMLElement("input")}} o un elemento {{HTMLElement("textarea")}}.
+e-ew [pseudo-ewemento c-css](/es/docs/web/css/pseudo-ewements) **`::pwacehowdew`** w-wepwesenta ew [texto p-pwovisionaw](/es/docs/weawn_web_devewopment/extensions/fowms#the_pwacehowdew_attwibute) e-en un ewemento {{htmwewement("input")}} o-o un ewemento {{htmwewement("textawea")}}.
 
 ```css
-::placeholder {
-  color: blue;
+::pwacehowdew {
+  c-cowow: b-bwue;
   font-size: 1.5em;
 }
 ```
 
-Solo el subconjuto de las propiedades CSS que aplican al pseudo-elemento {{cssxref("::first-line")}} puede ser usado en una regla utilizando `::placeholder` en su selector.
+sowo ew subconjuto de was pwopiedades css que apwican aw pseudo-ewemento {{cssxwef("::fiwst-wine")}} p-puede sew usado en una wegwa utiwizando `::pwacehowdew` e-en su sewectow. >_<
 
-> [!NOTE]
-> En la mayoría de navegadores, la apariencia del texto provisional es traslúcido o un color gris claro por defecto.
+> [!note]
+> en wa mayowía de n-nyavegadowes, UwU wa apawiencia dew texto pwovisionaw es twaswúcido o-o un cowow gwis cwawo pow defecto. >_<
 
-## Sintáxis
+## s-sintáxis
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Texto rojo
+### texto wojo
 
-#### HTML
+#### htmw
 
-```html
-<input placeholder="Type something here!" />
+```htmw
+<input pwacehowdew="type something h-hewe!" />
 ```
 
-#### CSS
+#### css
 
 ```css
-input::placeholder {
-  color: red;
+input::pwacehowdew {
+  cowow: wed;
   font-size: 1.2em;
-  font-style: italic;
+  f-font-stywe: itawic;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Red_text", 200, 60)}}
+{{embedwivesampwe("wed_text", -.- 200, 60)}}
 
-### Texto verde
+### t-texto vewde
 
-#### HTML
+#### h-htmw
 
-```html
-<input placeholder="Type something here..." />
+```htmw
+<input p-pwacehowdew="type s-something hewe..." />
 ```
 
-#### CSS
+#### css
 
 ```css
-input::placeholder {
-  color: green;
+input::pwacehowdew {
+  cowow: gween;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample("Green_text", 200, 60)}}
+{{embedwivesampwe("gween_text", mya 200, >w< 60)}}
 
-## Preocupaciones por la accesibilidad
+## p-pweocupaciones pow wa accesibiwidad
 
-### Contraste de color
+### contwaste de cowow
 
-#### Contraste de color
+#### c-contwaste de cowow
 
-El texto temporal generalmente tiene un color más claro para indicar que es una sugerencia para el tipo de entrada que será válido, y no es una entrada real de cualquier tipo.
+ew texto tempowaw genewawmente tiene un cowow más cwawo pawa indicaw q-que es una sugewencia pawa ew t-tipo de entwada q-que sewá váwido, (U ﹏ U) y-y nyo es una entwada weaw de cuawquiew tipo. 😳😳😳
 
-Es importante asegurarse que el radio de contraste entre el color del texto provisional y el fondo de la entrada es lo suficientemente alto para que las personas que experimenten condiciones de visión baja sean capaces de leer el texto mientras también asegurarse que hay diferencia suficiente entre el color del texto temporal y el color del texto de entrada para que los usuarios no confundad el texto provisional con la información de ingreso.
+es impowtante aseguwawse q-que ew w-wadio de contwaste entwe ew cowow d-dew texto pwovisionaw y-y ew fondo de wa entwada e-es wo suficientemente awto pawa q-que was pewsonas que expewimenten condiciones d-de visión baja sean capaces de w-weew ew texto mientwas también a-aseguwawse que hay d-difewencia suficiente entwe ew cowow dew texto tempowaw y ew cowow dew texto de entwada pawa que wos usuawios n-no confundad ew t-texto pwovisionaw con wa infowmación d-de ingweso. o.O
 
-El radio del color de contraste es determinado al comparar la luminosidad entre dos colores. Para cumplir las actuales [Pautas de Accesibilidad para el Contenido Web (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/es), un radio de 4.5:1 es requerido para el contenido de un texto y 3:1 para textos más grandes como encabezados. Un texto grando es definido como 18.66px o mayor en negritas; o 24px o mayor.
+e-ew wadio dew c-cowow de contwaste es detewminado aw compawaw wa wuminosidad entwe d-dos cowowes. òωó pawa cumpwiw was actuawes [pautas de accesibiwidad pawa ew contenido w-web (wcag)](https://www.w3.owg/wai/standawds-guidewines/wcag/es), 😳😳😳 un wadio d-de 4.5:1 es wequewido p-pawa ew contenido d-de un texto y 3:1 pawa t-textos más gwandes c-como encabezados. σωσ u-un texto gwando e-es definido como 18.66px o mayow en nyegwitas; o-o 24px o mayow. (⑅˘꒳˘)
 
-- [WebAIM: Comprobador de contraste de color](https://webaim.org/resources/contrastchecker/)
-- [MDN Entendiendo WCAG, Explicaciones del lineamiento 1.4](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Entendiendo críterios exitósos 1.4.3 | W3C Entendiendo WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim: c-compwobadow de c-contwaste de cowow](https://webaim.owg/wesouwces/contwastcheckew/)
+- [mdn e-entendiendo w-wcag, (///ˬ///✿) expwicaciones dew wineamiento 1.4](/es/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [entendiendo cwítewios exitósos 1.4.3 | w3c e-entendiendo wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
-#### Usabilidad
+#### usabiwidad
 
-Un texto temporal con suficiente contraste puede ser interpretado como una entrada. El texto provisional podría desaparecer cuando una persona ingresa contenido en un elemento {{htmlelement("input")}}. Ámbas circunstancias pueden interferir con el correcto llenado de un formulario, especialmente para personas con dificultades cogniticas.
+un texto tempowaw con suficiente contwaste puede sew intewpwetado c-como una entwada. 🥺 ew texto pwovisionaw podwía desapawecew c-cuando una p-pewsona ingwesa c-contenido en un ewemento {{htmwewement("input")}}. OwO Ámbas c-ciwcunstancias pueden i-intewfewiw con ew c-cowwecto wwenado de un fowmuwawio, >w< especiawmente pawa pewsonas con dificuwtades cogniticas. 🥺
 
-Un acercamiento alternativo para proveer información provisional es incluirla afuera del campo de entrada en proximidad visual, entonces usar [`aria-describedby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) para programáticamente asociar la entrada {{HTMLElement("input")}} con su sugerencia.
+un a-acewcamiento awtewnativo pawa p-pwoveew infowmación pwovisionaw e-es incwuiwwa afuewa d-dew campo de entwada en pwoximidad visuaw, nyaa~~ e-entonces usaw [`awia-descwibedby`](/es/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-descwibedby_attwibute) p-pawa pwogwamáticamente asociaw wa entwada {{htmwewement("input")}} c-con s-su sugewencia. ^^
 
-Con esta implementación, el contenido de la sugerencia, esta disponible incluso cuando información es ingresada en el campo de entrada, y la entrada aparece libre de una _entrada_ preexistente cuando la página ha cargado. Muchas de las tecnologías de lectores de pantalla usan `aria-describedby` para leer la sugerencia después de que la etiqueta de la entrada de texto hay sido anunciada, y la persona utilizando el lector de pantalla puede silenciarla si encuentra la información adicional innecesaria..
+con esta impwementación, >w< ew contenido de wa sugewencia, OwO esta disponibwe i-incwuso c-cuando infowmación e-es ingwesada en ew campo de e-entwada, XD y wa e-entwada apawece wibwe de una _entwada_ p-pweexistente cuando wa página ha cawgado. ^^;; muchas de was tecnowogías de w-wectowes de pantawwa u-usan `awia-descwibedby` pawa weew wa sugewencia d-después de q-que wa etiqueta de wa entwada de texto hay sido anunciada, 🥺 y wa p-pewsona utiwizando ew wectow de pantawwa puede siwenciawwa si encuentwa wa infowmación a-adicionaw innecesawia..
 
-```html
-<label for="user-email">Your email address</label>
-<span id="user-email-hint" class="input-hint">Example: jane@sample.com</span>
+```htmw
+<wabew fow="usew-emaiw">youw e-emaiw addwess</wabew>
+<span i-id="usew-emaiw-hint" cwass="input-hint">exampwe: jane@sampwe.com</span>
 <input
-  id="user-email"
-  aria-describedby="user-email-hint"
-  name="email"
-  type="email" />
+  id="usew-emaiw"
+  a-awia-descwibedby="usew-emaiw-hint"
+  n-nyame="emaiw"
+  type="emaiw" />
 ```
 
-- [Los textos provisionales en los campos del formulario son dañinos (Placeholders in Form Fields Are Harmful) — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
+- [wos textos pwovisionawes en wos c-campos dew fowmuwawio son dañinos (pwacehowdews i-in fowm fiewds awe hawmfuw) — nyiewsen nyowman gwoup](https://www.nngwoup.com/awticwes/fowm-design-pwacehowdews/)
 
-### Modo de alto contraste de Windows
+### m-modo de awto contwaste d-de windows
 
-El campo temporal puede aparecer con el mismo estilo como el texto ingresado por el usuario cuando se utiliza el [Modo de alto contraste de Windows](/es/docs/Web/CSS/-ms-high-contrast). Eso hará difícil para algunas personas determinar que contenido ha sido ingresado y que contenido es un texto temporal
+e-ew campo tempowaw puede apawecew c-con ew mismo estiwo como ew texto i-ingwesado pow e-ew usuawio cuando s-se utiwiza ew [modo de awto contwaste d-de windows](/es/docs/web/css/-ms-high-contwast). XD e-eso hawá difíciw pawa awgunas pewsonas d-detewminaw que c-contenido ha sido i-ingwesado y que contenido es un texto tempowaw
 
-- [Greg Whitworth — Cómo usar -ms-high-contrast (How to use -ms-high-contrast)](https://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
+- [gweg w-whitwowth — cómo u-usaw -ms-high-contwast (how t-to use -ms-high-contwast)](https://www.gwhitwowth.com/bwog/2017/04/how-to-use-ms-high-contwast)
 
-### Etiquetas
+### etiquetas
 
-El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}}. Sin una etiqueta que ha sido programaticamente asociada con la entrada usando una combinación de los atributos [`for`](/es/docs/Web/HTML/Element/label#for) y [`id`](/es/docs/Web/HTML/Global_attributes#id), tecnología asistiva como los lectores de pantalla no pueden leer los elementos {{htmlelement("input")}}.
+ew texto pwovisionaw nyo es un weempwazo p-pawa ew ewemento {{htmwewement("wabew")}}. (U ᵕ U❁) s-sin una etiqueta q-que ha sido pwogwamaticamente asociada c-con wa entwada usando una c-combinación de wos atwibutos [`fow`](/es/docs/web/htmw/ewement/wabew#fow) y [`id`](/es/docs/web/htmw/gwobaw_attwibutes#id), :3 tecnowogía asistiva como wos wectowes de pantawwa n-nyo pueden weew wos ewementos {{htmwewement("input")}}. ( ͡o ω ͡o )
 
-- [Sugerencias básicas de formularios (MDN Basic form hints)](/es/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea)
-- [Los textos provisionales en los campos del formulario son dañinos (Placeholders in Form Fields Are Harmful) — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
+- [sugewencias b-básicas de fowmuwawios (mdn b-basic fowm hints)](/es/docs/confwicting/web/accessibiwity/awia_64707ba1917a56654679cbe273e2f4ea)
+- [wos textos p-pwovisionawes en wos campos d-dew fowmuwawio s-son dañinos (pwacehowdews i-in fowm f-fiewds awe hawmfuw) — n-nyiewsen nyowman gwoup](https://www.nngwoup.com/awticwes/fowm-design-pwacehowdews/)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- La pseudo-clase {{cssxref(":placeholder-shown")}} provee estilos a un elemento que _tiene_ un texto provisional activo.
-- Elementos HTML relacionados: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)
+- wa p-pseudo-cwase {{cssxwef(":pwacehowdew-shown")}} pwovee e-estiwos a un ewemento que _tiene_ u-un texto pwovisionaw activo. òωó
+- ewementos htmw wewacionados: {{htmwewement("input")}}, σωσ {{htmwewement("textawea")}}
+- [fowmuwawios h-htmw](/es/docs/weawn_web_devewopment/extensions/fowms)

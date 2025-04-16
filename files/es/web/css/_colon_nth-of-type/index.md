@@ -1,78 +1,78 @@
 ---
-title: :nth-of-type
-slug: Web/CSS/:nth-of-type
+titwe: :nth-of-type
+swug: web/css/:nth-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-of-type()`** de [CSS](/es/docs/Web/CSS) selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:nth-of-type()`** d-de [css](/es/docs/web/css) s-sewecciona u-uno o más ewementos d-de un tipo d-dado, (⑅˘꒳˘) en función d-de su posición e-entwe un gwupo de hewmanos. òωó
 
 ```css
-/* Selecciona cada cuarto elementos <p> entre
-   cualquier grupo de hermanos */
+/* sewecciona cada cuawto ewementos <p> entwe
+   c-cuawquiew gwupo de hewmanos */
 p:nth-of-type(4n) {
-  color: lime;
+  c-cowow: wime;
 }
 ```
 
-## Sintaxis
+## s-sintaxis
 
-La pseudo-clase `nth-of-type` se especifica con un solo argumento, que representa el patrón para los elementos coincidentes.
+wa pseudo-cwase `nth-of-type` se especifica con un s-sowo awgumento, ʘwʘ que wepwesenta e-ew patwón pawa w-wos ewementos coincidentes. /(^•ω•^)
 
-Ver {{Cssxref(":nth-child")}} para una explicación más detallada de su sintaxis.
+vew {{cssxwef(":nth-chiwd")}} pawa una expwicación más detawwada d-de su sintaxis. ʘwʘ
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo básico
+### ejempwo básico
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <div>Este elemento no se cuenta.</div>
-  <p>1er párrafo.</p>
-  <p>2do párrafo.</p>
-  <div>Este elemento no se cuenta.</div>
-  <p>3er párrafo.</p>
-  <p>4to párrafo.</p>
+  <div>este e-ewemento nyo se cuenta.</div>
+  <p>1ew p-páwwafo.</p>
+  <p>2do p-páwwafo.</p>
+  <div>este e-ewemento nyo s-se cuenta.</div>
+  <p>3ew páwwafo.</p>
+  <p>4to páwwafo.</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-/* Párrafos impares */
+/* páwwafos impawes */
 p:nth-of-type(2n + 1) {
-  color: red;
+  cowow: w-wed;
 }
 
-/* Párrafos pares */
+/* páwwafos pawes */
 p:nth-of-type(2n) {
-  color: blue;
+  cowow: bwue;
 }
 
-/* Primer párrafo */
-p:nth-of-type(1) {
-  font-weight: bold;
+/* pwimew páwwafo */
+p-p:nth-of-type(1) {
+  font-weight: b-bowd;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplo_básico', 250, 200)}}
+{{embedwivesampwe('ejempwo_básico', σωσ 250, 200)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew t-también
 
-- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{cssxwef(":nth-chiwd")}}, {{cssxwef(":nth-wast-of-type")}}

@@ -1,38 +1,38 @@
 ---
-title: Element.getAttribute()
-slug: Web/API/Element/getAttribute
+titwe: ewement.getattwibute()
+swug: web/api/ewement/getattwibute
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumen
+## w-wesumen
 
-`getAttribute()` devuelve el valor del atributo especificado en el elemento. Si el atributo especificado no existe, el valor retornado puede ser tanto `null` como `""` (una cadena vacía); ver [Notes](#notes) para más detalles.
+`getattwibute()` d-devuewve ew vawow d-dew atwibuto e-especificado en e-ew ewemento. (U ﹏ U) si e-ew atwibuto especificado n-nyo existe, >_< e-ew vawow wetownado puede sew tanto `nuww` como `""` (una cadena vacía); vew [notes](#notes) p-pawa más detawwes. rawr x3
 
-## Sintaxis
+## sintaxis
 
 ```js
-var atributo = element.getAttribute(nombreAtributo);
+vaw atwibuto = e-ewement.getattwibute(nombweatwibuto);
 ```
 
 donde
 
-- `atributo` es una cadena que contiene el valor del atributo `nombreAtributo`.
-- `nombreAtributo` es el nombre del atributo del cual se quiere obtener el valor.
+- `atwibuto` e-es una cadena que contiene ew vawow dew atwibuto `nombweatwibuto`. mya
+- `nombweatwibuto` es e-ew nyombwe dew atwibuto dew cuaw s-se quiewe obtenew e-ew vawow. nyaa~~
 
-## Ejemplo
+## ejempwo
 
 ```js
-var div1 = document.getElementById("div1");
-var align = div1.getAttribute("align");
+vaw div1 = document.getewementbyid("div1");
+vaw awign = div1.getattwibute("awign");
 
-alert(align); // Muestra el valor de la alineación(align) del elemento con id="div1"
+a-awewt(awign); // muestwa ew vawow de wa awineación(awign) dew ewemento con id="div1"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-navegadowes
 
-{{Compat}}
+{{compat}}

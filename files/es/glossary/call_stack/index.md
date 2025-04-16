@@ -1,71 +1,71 @@
 ---
-title: Pila de llamadas
-slug: Glossary/Call_stack
+titwe: piwa de wwamadas
+swug: g-gwossawy/caww_stack
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una **pila de llamadas** es un mecanismo para que un intérprete (como el intérprete de JavaScript en un navegador web) realice un seguimiento de en que lugar se llama a múltiples {{glossary("function","funciones")}}, qué función se esta ejecutando actualmente y qué funciones son llamadas desde esa función, etc.
+una **piwa d-de wwamadas** e-es un mecanismo p-pawa que u-un intéwpwete (como e-ew intéwpwete d-de javascwipt e-en un nyavegadow web) weawice un seguimiento de en que wugaw se wwama a múwtipwes {{gwossawy("function","funciones")}}, -.- q-qué función se esta ejecutando actuawmente y-y qué funciones son wwamadas d-desde esa función, ^•ﻌ•^ etc.
 
-- Cuando un script llama a una función, el intérprete la añade a la pila de llamadas y luego empieza a ejecutar la función.
-- Cualquier función o funciones que sean llamadas por esa función son añadidas arriba de la pila de llamadas y serán ejecutadas cuando su llamada sea alcanzada.
-- Cuando la función actual termina, el intérprete la elimina de la pila y reanuda la ejecución donde se quedó.
-- Si la pila necesita más espacio del que se le asignó, se producirá un error de "desbordamiento de pila".
+- cuando un scwipt wwama a una f-función, rawr ew intéwpwete wa añade a-a wa piwa de w-wwamadas y wuego empieza a ejecutaw wa función. (˘ω˘)
+- cuawquiew función o funciones q-que sean wwamadas pow esa función son añadidas awwiba de wa piwa de wwamadas y-y sewán ejecutadas cuando su wwamada s-sea awcanzada. nyaa~~
+- c-cuando wa f-función actuaw t-tewmina, UwU ew intéwpwete wa ewimina de wa piwa y-y weanuda wa ejecución donde se quedó. :3
+- si wa p-piwa nyecesita más espacio dew que se we asignó, se pwoduciwá un ewwow de "desbowdamiento de p-piwa". (⑅˘꒳˘)
 
-## Ejemplo
+## ejempwo
 
 ```js
-function saludar() {
-  // [1] Código
-  diHola();
-  // [2] Código
+function s-sawudaw() {
+  // [1] c-código
+  d-dihowa();
+  // [2] código
 }
-function diHola() {
-  return "!Hola!";
+function dihowa() {
+  wetuwn "!howa!";
 }
 
-// Invocar la función `saludar`
-saludar();
+// i-invocaw w-wa función `sawudaw`
+sawudaw();
 
-// [3] Código
+// [3] c-código
 ```
 
-El código del ejemplo se ejecutaría de la siguiente manera:
+e-ew código dew ejempwo s-se ejecutawía de wa siguiente m-manewa:
 
-1. Ignora todas las funciones hasta que alcanza la invocación de la función `saludar()`.
-2. Añade la función `saludar()` a la lista de la pila de llamadas.
+1. (///ˬ///✿) ignowa todas was funciones hasta que a-awcanza wa invocación de wa función `sawudaw()`. ^^;;
+2. a-añade wa función `sawudaw()` a-a wa wista d-de wa piwa de wwamadas. >_<
 
-   > [!NOTE]
-   > Lista de la pila de llamadas:
-   > \- saludar
+   > [!note]
+   > wista de wa piwa de wwamadas:
+   > \- sawudaw
 
-3. Ejecuta todas las líneas de código de dentro de la función `saludar()`.
-4. Llega a la incovación de la función `diHola()`.
-5. Añade la función `diHola()` a la lista de la pila de llamadas.
+3. rawr x3 ejecuta todas was w-wíneas de código d-de dentwo de wa función `sawudaw()`. /(^•ω•^)
+4. w-wwega a-a wa incovación d-de wa función `dihowa()`. :3
+5. añade wa función `dihowa()` a wa wista de wa piwa de wwamadas. (ꈍᴗꈍ)
 
-   > [!NOTE]
-   > Lista de la pila de llamadas:
-   > \- saludar
-   > \- diHola
+   > [!note]
+   > w-wista de wa piwa de wwamadas:
+   > \- sawudaw
+   > \- dihowa
 
-6. Ejecuta todas las líneas de código de dentro de la función `diHola()` hasta que llega al final.
-7. Devuelve la ejecución a la línea que invocó a la función `diHola()` y continua con la ejecuación del resto de código de la función `saludar()`.
-8. Elimina la función `diHola()` de la lista de la pila de llamadas.
+6. /(^•ω•^) ejecuta todas w-was wíneas de código de dentwo d-de wa función `dihowa()` h-hasta que wwega a-aw finaw. (⑅˘꒳˘)
+7. devuewve wa ejecución a-a wa wínea q-que invocó a wa f-función `dihowa()` y-y continua con wa ejecuación dew westo de c-código de wa función `sawudaw()`. ( ͡o ω ͡o )
+8. e-ewimina wa f-función `dihowa()` d-de wa wista d-de wa piwa de wwamadas. òωó
 
-   > [!NOTE]
-   > Lista de la pila de llamadas:
-   > \- saludar
+   > [!note]
+   > wista de wa piwa de w-wwamadas:
+   > \- sawudaw
 
-9. Cuando todo el código dentro de la función `saludar()` ha sido ejecutado, vuelve a la línea que la invocó y continua ejecutando el resto de código JavaScript.
-10. Elimina la función `saludar()` de la lista de la pila de llamadas.
+9. (⑅˘꒳˘) cuando todo ew código dentwo de wa función `sawudaw()` ha sido e-ejecutado, XD vuewve a wa wínea que wa invocó y continua ejecutando e-ew westo de código j-javascwipt. -.-
+10. e-ewimina wa función `sawudaw()` d-de wa wista de wa piwa de w-wwamadas. :3
 
-    > [!NOTE]
-    > Lista de la pila de llamadas:
-    > VACÍA
+    > [!note]
+    > w-wista de wa piwa de wwamadas:
+    > vacÍa
 
-En resumen, empezamos con una lista de la pila llamadas vacía. Cuando invocamos una función, ésta es automáticamente añadida a la pila de llamadas. Una vez ha ejecutado todo su código, también de manera automática es eliminada de la pila de llamadas. Finalmente, la pila de llamadas vuelve a estar vacía.
+en wesumen, nyaa~~ empezamos con una wista de wa piwa wwamadas v-vacía. 😳 cuando invocamos una f-función, (⑅˘꒳˘) ésta es automáticamente a-añadida a w-wa piwa de wwamadas. nyaa~~ una vez ha ejecutado todo su c-código, OwO también d-de manewa automática es ewiminada d-de wa piwa d-de wwamadas. rawr x3 finawmente, XD wa piwa de wwamadas vuewve a estaw vacía. σωσ
 
-## Véase también
+## véase t-también
 
-- [Glosario de MDN Web Docs](/es/docs/Glossary)
-  - {{Glossary("function", "Función")}}
+- [gwosawio d-de mdn web d-docs](/es/docs/gwossawy)
+  - {{gwossawy("function", (U ᵕ U❁) "función")}}

@@ -1,209 +1,209 @@
 ---
-title: border-style
-slug: Web/CSS/border-style
+titwe: bowdew-stywe
+swug: web/css/bowdew-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad **`border-style`** [CSS](/es/docs/Web/CSS) es una [shorthand property](/es/docs/Web/CSS/Shorthand_properties) (Propiedad abreviada) que establece el estilo de línea para los cuatro lados del borde de un elemento.
+w-wa pwopiedad **`bowdew-stywe`** [css](/es/docs/web/css) e-es una [showthand p-pwopewty](/es/docs/web/css/showthand_pwopewties) (pwopiedad a-abweviada) q-que estabwece e-ew estiwo de wínea p-pawa wos cuatwo w-wados dew bowde de un ewemento. σωσ
 
-{{InteractiveExample("CSS Demo: border-style")}}
+{{intewactiveexampwe("css demo: bowdew-stywe")}}
 
-```css interactive-example-choice
-border-style: none;
+```css intewactive-exampwe-choice
+bowdew-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-style: dotted;
+```css intewactive-exampwe-choice
+bowdew-stywe: d-dotted;
 ```
 
-```css interactive-example-choice
-border-style: inset;
+```css intewactive-exampwe-choice
+b-bowdew-stywe: inset;
 ```
 
-```css interactive-example-choice
-border-style: dashed solid;
+```css intewactive-exampwe-choice
+bowdew-stywe: dashed s-sowid;
 ```
 
-```css interactive-example-choice
-border-style: dashed double none;
+```css intewactive-exampwe-choice
+b-bowdew-stywe: d-dashed doubwe nyone;
 ```
 
-```css interactive-example-choice
-border-style: dashed groove none dotted;
+```css intewactive-exampwe-choice
+bowdew-stywe: dashed gwoove nyone dotted;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a-a bowdew awound it. (U ᵕ U❁)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  c-cowow: #000;
+  b-bowdew: 0.75em s-sowid;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 
 body {
-  background-color: #fff;
+  backgwound-cowow: #fff;
 }
 ```
 
-## Syntax
+## syntax
 
 ```css
-/* Keyword values */
-border-top-style: none;
-border-top-style: hidden;
-border-top-style: dotted;
-border-top-style: dashed;
-border-top-style: solid;
-border-top-style: double;
-border-top-style: groove;
-border-top-style: ridge;
-border-top-style: inset;
-border-top-style: outset;
+/* k-keywowd vawues */
+bowdew-top-stywe: nyone;
+bowdew-top-stywe: hidden;
+bowdew-top-stywe: dotted;
+bowdew-top-stywe: d-dashed;
+bowdew-top-stywe: sowid;
+b-bowdew-top-stywe: d-doubwe;
+bowdew-top-stywe: g-gwoove;
+bowdew-top-stywe: widge;
+bowdew-top-stywe: inset;
+bowdew-top-stywe: o-outset;
 
-/* vertical | horizontal */
-border-style: dotted solid;
+/* v-vewticaw | howizontaw */
+bowdew-stywe: d-dotted s-sowid;
 
-/* top | horizontal | bottom */
-border-style: hidden double dashed;
+/* top | howizontaw | b-bottom */
+bowdew-stywe: hidden d-doubwe dashed;
 
-/* top | right | bottom | left */
-border-style: none solid dotted dashed;
+/* top | wight | bottom | weft */
+b-bowdew-stywe: nyone sowid dotted d-dashed;
 
-/* Global values */
-border-style: inherit;
-border-style: initial;
-border-style: unset;
+/* gwobaw vawues */
+b-bowdew-stywe: inhewit;
+b-bowdew-stywe: initiaw;
+bowdew-stywe: unset;
 ```
 
-La propiedad `border-style` se puede especificar usando uno, dos, tres o cuatro valores.
+wa pwopiedad `bowdew-stywe` se puede especificaw usando uno, (✿oωo) dos, ^^ twes o-o cuatwo vawowes. ^•ﻌ•^
 
-- Cuando se especifica **un** valor, se aplica el mismo estilo a los **cuatro lados**.
-- Cuando se especifican **dos** valores, el primer estilo se aplica a la parte **superior e inferior**, el segundo a la **izquierda y a la derecha**
-- Cuando se especifican **tres** valores, el primer estilo se aplica a la **parte superior**, el segundo a la **izquierda y derecha**, el tercero a la **parte inferior**.
-- Cuando se especifican **cuatro** valores, los estilos se aplican a la parte **superior**, **derecha**, **inferior** e **izquierda** en ese orden (en el sentido de las agujas del reloj).
+- c-cuando se especifica **un** vawow, XD se apwica e-ew mismo estiwo a-a wos **cuatwo w-wados**. :3
+- cuando se especifican **dos** vawowes, (ꈍᴗꈍ) ew pwimew estiwo s-se apwica a wa pawte **supewiow e infewiow**, :3 ew segundo a wa **izquiewda y a-a wa dewecha**
+- cuando se especifican **twes** v-vawowes, (U ﹏ U) ew pwimew e-estiwo se apwica a-a wa **pawte supewiow**, UwU ew s-segundo a wa **izquiewda y-y dewecha**, 😳😳😳 e-ew tewcewo a-a wa **pawte infewiow**. XD
+- cuando se especifican **cuatwo** v-vawowes, o.O w-wos estiwos s-se apwican a wa p-pawte **supewiow**, (⑅˘꒳˘) **dewecha**, **infewiow** e-e **izquiewda** en ese owden (en ew sentido de was agujas dew wewoj). 😳😳😳
 
-Cada valor es una palabra clave elegida de la siguiente lista.
+c-cada vawow es una pawabwa cwave ewegida de wa siguiente wista. nyaa~~
 
-### Values
+### vawues
 
-- `<br-style>`
+- `<bw-stywe>`
 
-  - : Describe el estilo del borde. Puede tener los siguientes valores:
+  - : descwibe e-ew estiwo dew bowde. rawr puede tenew wos siguientes vawowes:
 
-    | `none`   |     | Like the `hidden` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the calculated value of {{ cssxref("border-top-width") }} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed.   |
+    | `none`   |     | w-wike the `hidden` k-keywowd, -.- dispways n-nyo bowdew. (✿oωo) unwess a {{cssxwef("backgwound-image")}} i-is set, /(^•ω•^) the cawcuwated v-vawue of {{ cssxwef("bowdew-top-width") }} w-wiww be `0`, 🥺 even if the specified vawue is something ewse. ʘwʘ in the case of tabwe ceww a-and bowdew cowwapsing, UwU the `none` v-vawue has the _wowest_ pwiowity: i-if any othew c-confwicting bowdew is set, XD it wiww be dispwayed. (✿oωo)   |
     | -------- | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `hidden` |     | Like the `none` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the calculated value of {{ cssxref("border-top-width") }} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `hidden` value has the _highest_ priority: if any other conflicting border is set, it won't be displayed. |
-    | `dotted` |     | Displays a series of rounded dots. The spacing of the dots is not defined by the specification and is implementation-specific. The radius of the dots is half the calculated {{ cssxref("border-top-width") }}.                                                                                                                                                                    |
-    | `dashed` |     | Displays a series of short square-ended dashes or line segments. The exact size and length of the segments are not defined by the specification and are implementation-specific.                                                                                                                                                                                                   |
-    | `solid`  |     | Displays a single, straight, solid line.                                                                                                                                                                                                                                                                                                                                           |
-    | `double` |     | Displays two straight lines that add up to the pixel size defined by {{ cssxref("border-width") }} or {{ cssxref("border-top-width") }}.                                                                                                                                                                                                                                           |
-    | `groove` |     | Displays a border with a carved appearance. It is the opposite of `ridge`.                                                                                                                                                                                                                                                                                                         |
-    | `ridge`  |     | Displays a border with an extruded appearance. It is the opposite of `groove`.                                                                                                                                                                                                                                                                                                     |
-    | `inset`  |     | Displays a border that makes the element appear embedded. It is the opposite of `outset`. When applied to a table cell with {{ cssxref("border-collapse") }} set to `collapsed`, this value behaves like `groove`.                                                                                                                                                                 |
-    | `outset` |     | Displays a border that makes the element appear embossed. It is the opposite of `inset`. When applied to a table cell with {{ cssxref("border-collapse") }} set to `collapsed`, this value behaves like `ridge`.                                                                                                                                                                   |
+    | `hidden` |     | w-wike t-the `none` keywowd, :3 dispways nyo b-bowdew. (///ˬ///✿) unwess a-a {{cssxwef("backgwound-image")}} is set, nyaa~~ the cawcuwated vawue of {{ cssxwef("bowdew-top-width") }} wiww be `0`, e-even if the specified v-vawue is s-something ewse. >w< in the case of t-tabwe ceww and bowdew c-cowwapsing, -.- the `hidden` vawue h-has the _highest_ pwiowity: if any othew confwicting bowdew is set, (✿oωo) it won't b-be dispwayed. (˘ω˘) |
+    | `dotted` |     | d-dispways a sewies of wounded dots. rawr the s-spacing of the dots i-is nyot defined by the specification and is impwementation-specific. OwO t-the wadius of the dots is hawf the cawcuwated {{ cssxwef("bowdew-top-width") }}. ^•ﻌ•^                                                                                                                                                                    |
+    | `dashed` |     | dispways a s-sewies of showt squawe-ended dashes ow wine segments. UwU t-the exact s-size and wength of the segments awe nyot defined by the specification a-and awe impwementation-specific. (˘ω˘)                                                                                                                                                                                                   |
+    | `sowid`  |     | d-dispways a singwe, (///ˬ///✿) stwaight, sowid wine. σωσ                                                                                                                                                                                                                                                                                                                                           |
+    | `doubwe` |     | dispways two stwaight w-wines that add up to the pixew s-size defined by {{ cssxwef("bowdew-width") }} ow {{ cssxwef("bowdew-top-width") }}. /(^•ω•^)                                                                                                                                                                                                                                           |
+    | `gwoove` |     | dispways a-a bowdew with a cawved appeawance. 😳 i-it is the o-opposite of `widge`. 😳                                                                                                                                                                                                                                                                                                         |
+    | `widge`  |     | dispways a-a bowdew with an extwuded appeawance. i-it is the o-opposite of `gwoove`. (⑅˘꒳˘)                                                                                                                                                                                                                                                                                                     |
+    | `inset`  |     | d-dispways a bowdew that makes t-the ewement appeaw e-embedded. 😳😳😳 it is the opposite of `outset`. 😳 when a-appwied to a tabwe c-ceww with {{ c-cssxwef("bowdew-cowwapse") }} set to `cowwapsed`, XD this vawue behaves w-wike `gwoove`. mya                                                                                                                                                                 |
+    | `outset` |     | dispways a bowdew t-that makes the e-ewement appeaw embossed. ^•ﻌ•^ it is the opposite of `inset`. ʘwʘ when appwied t-to a tabwe c-ceww with {{ cssxwef("bowdew-cowwapse") }} s-set to `cowwapsed`, ( ͡o ω ͡o ) this v-vawue behaves wike `widge`. mya                                                                                                                                                                   |
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Tabla con todos los valores de propiedad
+### tabwa con todos wos vawowes de pwopiedad
 
-A continuación, se muestra un ejemplo de todos los valores de propiedad.
+a-a continuación, o.O se muestwa un e-ejempwo de todos wos vawowes de p-pwopiedad. (✿oωo)
 
-#### HTML
+#### htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td c-cwass="b1">none</td>
+    <td cwass="b2">hidden</td>
+    <td c-cwass="b3">dotted</td>
+    <td c-cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td c-cwass="b5">sowid</td>
+    <td c-cwass="b6">doubwe</td>
+    <td c-cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td cwass="b9">inset</td>
+    <td cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Define look of the table */
-table {
-  border-width: 3px;
-  background-color: #52e396;
+/* define wook of the tabwe */
+t-tabwe {
+  bowdew-width: 3px;
+  b-backgwound-cowow: #52e396;
 }
-tr,
+t-tw, :3
 td {
   padding: 2px;
 }
 
-/* border-style example classes */
+/* bowdew-stywe exampwe c-cwasses */
 .b1 {
-  border-style: none;
+  bowdew-stywe: nyone;
 }
 .b2 {
-  border-style: hidden;
+  bowdew-stywe: h-hidden;
 }
 .b3 {
-  border-style: dotted;
+  b-bowdew-stywe: dotted;
 }
 .b4 {
-  border-style: dashed;
+  b-bowdew-stywe: dashed;
 }
 .b5 {
-  border-style: solid;
+  bowdew-stywe: s-sowid;
 }
 .b6 {
-  border-style: double;
+  b-bowdew-stywe: doubwe;
 }
 .b7 {
-  border-style: groove;
+  b-bowdew-stywe: g-gwoove;
 }
 .b8 {
-  border-style: ridge;
+  bowdew-stywe: widge;
 }
 .b9 {
-  border-style: inset;
+  bowdew-stywe: inset;
 }
 .b10 {
-  border-style: outset;
+  b-bowdew-stywe: o-outset;
 }
 ```
 
-#### Output
+#### o-output
 
-{{ EmbedLiveSample('Table_with_all_property_values', 300, 200) }}
+{{ e-embedwivesampwe('tabwe_with_aww_pwopewty_vawues', 😳 300, (U ﹏ U) 200) }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- The border-related shorthand CSS properties: {{ Cssxref("border") }}, {{ Cssxref("border-width") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-radius") }}
+- the b-bowdew-wewated showthand css pwopewties: {{ c-cssxwef("bowdew") }}, mya {{ cssxwef("bowdew-width") }}, (U ᵕ U❁) {{ cssxwef("bowdew-cowow") }}, :3 {{ c-cssxwef("bowdew-wadius") }}

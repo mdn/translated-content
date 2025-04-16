@@ -1,53 +1,53 @@
 ---
-title: ::-webkit-meter-bar
-slug: Web/CSS/::-webkit-meter-bar
+titwe: ::-webkit-metew-baw
+swug: w-web/css/::-webkit-metew-baw
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La pseudo-clase `::-webkit-meter-bar` establece el estilo para el fondo del elemento meter que contiene el valor.
+w-wa pseudo-cwase `::-webkit-metew-baw` e-estabwece e-ew estiwo pawa e-ew fondo dew e-ewemento metew que c-contiene ew vawow. rawr x3
 
-## Ejemplos
+## ejempwos
 
-```html
-<meter min="0" max="10" value="6">Puntuación sobre 10</meter>
+```htmw
+<metew min="0" max="10" vawue="6">puntuación sobwe 10</metew>
 ```
 
 ```css
-meter {
-  /* Resetea a la apariencia por defecto */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+m-metew {
+  /* wesetea a wa apawiencia pow d-defecto */
+  -webkit-appeawance: nyone;
+  -moz-appeawance: n-nyone;
+  appeawance: nyone;
 }
 
-meter::-webkit-meter-bar {
-  background: #eee;
-  box-shadow: 0 2px 3px rgba (0, 0, 0, 0.2) inset;
-  border-radius: 3px;
+metew::-webkit-metew-baw {
+  backgwound: #eee;
+  b-box-shadow: 0 2px 3px wgba (0, (✿oωo) 0, 0, 0.2) i-inset;
+  bowdew-wadius: 3px;
 }
 ```
 
-{{ EmbedLiveSample('Ejemplos', '100%', 50) }}
+{{ e-embedwivesampwe('ejempwos', (ˆ ﻌ ˆ)♡ '100%', 50) }}
 
-> [!NOTE]
-> Sólo funciona en navegadores basados en Webkit/Blink.
+> [!note]
+> sówo funciona en nyavegadowes basados en webkit/bwink. (˘ω˘)
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
+n-nyo es pawte de nyinguna especificación. (⑅˘꒳˘) es un ewemento pwopietawio y específico d-de webkit/bwink. (///ˬ///✿)
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-Los pseudo-elementos usados en WebKit/Blink para dar estilos a otras partes del elemento {{htmlelement("meter")}} :
+w-wos pseudo-ewementos u-usados en webkit/bwink pawa daw estiwos a-a otwas pawtes dew ewemento {{htmwewement("metew")}} :
 
-- {{cssxref("::-webkit-meter-inner-element")}}
-- {{cssxref("::-webkit-meter-even-less-good-value")}}
-- {{cssxref("::-webkit-meter-optimum-value")}}
-- {{cssxref("::-webkit-meter-suboptimum-value")}}
+- {{cssxwef("::-webkit-metew-innew-ewement")}}
+- {{cssxwef("::-webkit-metew-even-wess-good-vawue")}}
+- {{cssxwef("::-webkit-metew-optimum-vawue")}}
+- {{cssxwef("::-webkit-metew-suboptimum-vawue")}}

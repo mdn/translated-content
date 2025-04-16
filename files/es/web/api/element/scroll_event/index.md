@@ -1,71 +1,71 @@
 ---
-title: GlobalEventHandlers.onscroll
-slug: Web/API/Element/scroll_event
+titwe: gwobaweventhandwews.onscwoww
+swug: web/api/ewement/scwoww_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Un manejador de eventos para desplazamiento en `element`.
+u-un manejadow d-de eventos pawa d-despwazamiento e-en `ewement`. (///ˬ///✿)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-element.onscroll = functionReference;
+e-ewement.onscwoww = f-functionwefewence;
 ```
 
-### Parámetros
+### pawámetwos
 
-`functionReference` es una referencia a una función para ser ejecutada cuando `element` es desplazado (enrollado).
+`functionwefewence` es una wefewencia a una función pawa sew ejecutada c-cuando `ewement` es despwazado (enwowwado). 😳😳😳
 
-## Example
+## exampwe
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <style>
-      #container {
-        position: absolute;
+    <meta c-chawset="utf-8" />
+    <stywe>
+      #containew {
+        position: absowute;
         height: auto;
-        top: 0;
+        t-top: 0;
         bottom: 0;
-        width: auto;
-        left: 0;
-        right: 0;
-        overflow: auto;
+        w-width: a-auto;
+        weft: 0;
+        wight: 0;
+        ovewfwow: auto;
       }
 
       #foo {
         height: 1000px;
-        width: 1000px;
-        background-color: #777;
-        display: block;
+        w-width: 1000px;
+        backgwound-cowow: #777;
+        dispway: bwock;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <div id="container">
+    <div id="containew">
       <div id="foo"></div>
     </div>
 
-    <script type="text/javascript">
-      document.getElementById("container").onscroll = function () {
-        console.log("scrolling");
+    <scwipt t-type="text/javascwipt">
+      document.getewementbyid("containew").onscwoww = f-function () {
+        c-consowe.wog("scwowwing");
       };
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## n-nyotas
 
-El evento es generado cuando el usuario realiza desplazamiento (scrolls) sobre el contenido de un elemento. `Element.onscroll` es equivalente a `element.addEventListener("scroll" ... )`.
+ew e-evento es genewado cuando ew usuawio weawiza despwazamiento (scwowws) s-sobwe ew contenido de un ewemento. 🥺 `ewement.onscwoww` es equivawente a-a `ewement.addeventwistenew("scwoww" ... )`. mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

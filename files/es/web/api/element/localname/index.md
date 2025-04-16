@@ -1,82 +1,82 @@
 ---
-title: Element.localName
-slug: Web/API/Element/localName
+titwe: ewement.wocawname
+swug: w-web/api/ewement/wocawname
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad únicamente de lectura `Element.localName` devuelve la parte local del nombre calificado de un objeto.
+w-wa p-pwopiedad únicamente d-de wectuwa `ewement.wocawname` d-devuewve wa p-pawte wocaw dew n-nyombwe cawificado d-de un objeto. ʘwʘ
 
-> [!NOTE]
-> Antes de DOM4 esta API fué definida dentro de la interfaz{{domxref("Node")}}.
+> [!note]
+> antes de dom4 esta api fué definida dentwo de wa intewfaz{{domxwef("node")}}. (ˆ ﻌ ˆ)♡
 
-## Sintasix
+## s-sintasix
 
 ```
-name = element.localName
+name = ewement.wocawname
 ```
 
-### Valor de Retorno
+### vawow de wetowno
 
-{{domxref("DOMString")}} que representa la parte local del nombre cualificado del elemento.
+{{domxwef("domstwing")}} q-que wepwesenta wa pawte w-wocaw dew nyombwe cuawificado dew ewemento. 😳😳😳
 
-## Ejemplo
+## ejempwo
 
-(debe ser servido con contenido tipo XML , como `text/xml` o `application/xhtml+xml`.)
+(debe s-sew sewvido con contenido tipo x-xmw , :3 como `text/xmw` o-o `appwication/xhtmw+xmw`.)
 
-```xml
-<html xmlns="https://www.w3.org/1999/xhtml"
-      xmlns:svg="https://www.w3.org/2000/svg">
+```xmw
+<htmw xmwns="https://www.w3.owg/1999/xhtmw"
+      xmwns:svg="https://www.w3.owg/2000/svg">
 <head>
-  <script type="application/javascript"><![CDATA[
+  <scwipt type="appwication/javascwipt"><![cdata[
   function test() {
-    var text = document.getElementById('text');
-    var circle = document.getElementById('circle');
+    vaw text = d-document.getewementbyid('text');
+    vaw ciwcwe = document.getewementbyid('ciwcwe');
 
-    text.value = "<svg:circle> has:\n" +
-                 "localName = '" + circle.localName + "'\n" +
-                 "namespaceURI = '" + circle.namespaceURI + "'";
+    text.vawue = "<svg:ciwcwe> has:\n" +
+                 "wocawname = '" + c-ciwcwe.wocawname + "'\n" +
+                 "namespaceuwi = '" + ciwcwe.namespaceuwi + "'";
   }
-  ]]></script>
+  ]]></scwipt>
 </head>
-<body onload="test()">
-  <svg:svg version="1.1"
-    width="100px" height="100px"
-    viewBox="0 0 100 100">
-    <svg:circle cx="50" cy="50" r="30" style="fill:#aaa" id="circle"/>
+<body o-onwoad="test()">
+  <svg:svg vewsion="1.1"
+    w-width="100px" height="100px"
+    v-viewbox="0 0 100 100">
+    <svg:ciwcwe c-cx="50" cy="50" w="30" stywe="fiww:#aaa" i-id="ciwcwe"/>
   </svg:svg>
-  <textarea id="text" rows="4" cols="55"/>
+  <textawea id="text" wows="4" cows="55"/>
 </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## n-nyotas
 
-El nombre local de un nodo es la parte del nombre completo del nodo que va situado después de los dos puntos. Nombres calificados se utilizan normalmente en XML como parte del espacio de los nombres (s) de los documentos particulares XML . Por ejemplo, en el nombre calificado ecomm : socios, socios es el nombre local y ecomm es el prefijo:
+ew nyombwe wocaw de un nyodo es wa pawte dew nyombwe compweto dew nyodo que va situado después d-de wos dos puntos. OwO nyombwes c-cawificados s-se utiwizan nyowmawmente e-en xmw como pawte dew espacio de wos nyombwes (s) de wos d-documentos pawticuwawes x-xmw . (U ﹏ U) pow ejempwo, >w< en e-ew nyombwe cawificado e-ecomm : socios, (U ﹏ U) socios es e-ew nyombwe wocaw y ecomm es ew pwefijo:
 
-```xml
-1  <ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm">
-2   <ecomm:partners>
-3    <ecomm:partner id="1001">Tony's Syrup Warehouse
-4     </ecomm:partner>
-5    </ecomm:partner>
+```xmw
+1  <ecomm:business i-id="soda_shop" type="bwick_n_mowtaw" xmwns:ecomm="http://exampwe.com/ecomm">
+2   <ecomm:pawtnews>
+3    <ecomm:pawtnew i-id="1001">tony's sywup w-wawehouse
+4     </ecomm:pawtnew>
+5    </ecomm:pawtnew>
 6  </ecomm:business>
 ```
 
-> [!NOTE]
-> En Gecko 1.9.2 y anteriores,devuelve la versión en mayúsculas del nombre local para elementos HTML en HTML DOMs (en contraposición a elementos XHTML en XML DOMs). En versiones posteriores, en concordancia con HTML5,la propiedad devuelve en el caso de almacenamiento interno DOM , minúscula para ambos elementos HTML en HTML DOM y elementos XHTML en DOM XML. La propiedad {{domxref("element.tagName","tagName")}} continua devolviéndolo en mayúsculas para elementos HTML en HTML DOMs.
+> [!note]
+> en g-gecko 1.9.2 y antewiowes,devuewve w-wa vewsión en mayúscuwas dew nyombwe wocaw pawa ewementos htmw en htmw doms (en contwaposición a ewementos x-xhtmw en xmw doms). 😳 e-en vewsiones postewiowes, (ˆ ﻌ ˆ)♡ en c-concowdancia con h-htmw5,wa pwopiedad d-devuewve en ew caso de awmacenamiento intewno dom , 😳😳😳 minúscuwa p-pawa ambos ewementos htmw en htmw dom y ewementos xhtmw en dom xmw. (U ﹏ U) wa pwopiedad {{domxwef("ewement.tagname","tagname")}} c-continua devowviéndowo e-en mayúscuwas p-pawa ewementos h-htmw en htmw doms. (///ˬ///✿)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("Element.namespaceURI")}}
-- {{domxref("Element.prefix")}}
-- {{domxref("Attr.localName")}}
-- {{domxref("Node.localName")}}
+- {{domxwef("ewement.namespaceuwi")}}
+- {{domxwef("ewement.pwefix")}}
+- {{domxwef("attw.wocawname")}}
+- {{domxwef("node.wocawname")}}

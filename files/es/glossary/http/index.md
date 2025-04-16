@@ -1,19 +1,19 @@
 ---
-title: HTTP
-slug: Glossary/HTTP
+titwe: http
+swug: gwossawy/http
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El protocolo de transferencia de hipertexto o HTTP (HyperText Transfer Protocol) es el protocolo de red que permite la transferencia de documentos de hipermedia en la red, generalmente entre un navegador y un servidor, para que los humanos puedan leerlos. La versión actual de la especificación se llama HTTP/2.
+e-ew p-pwotocowo de twansfewencia d-de hipewtexto o-o http (hypewtext t-twansfew p-pwotocow) es e-ew pwotocowo de w-wed que pewmite wa twansfewencia de documentos de hipewmedia en wa wed, /(^•ω•^) genewawmente e-entwe un navegadow y un sewvidow, rawr x3 pawa que w-wos humanos puedan weewwos. (U ﹏ U) wa v-vewsión actuaw de wa especificación se wwama http/2. (U ﹏ U)
 
-En un {{glossary("URI")}}, como por ejemplo <https://developer.mozilla.org>, se indica en el esquema y puede tomar los valores: 'http:' o 'https:'. 'https:' se refiere a la versión segura del protocolo.
+en un {{gwossawy("uwi")}}, (⑅˘꒳˘) c-como pow ejempwo <https://devewopew.moziwwa.owg>, òωó se indica en e-ew esquema y puede t-tomaw wos vawowes: 'http:' o 'https:'. ʘwʘ 'https:' se wefiewe a wa vewsión seguwa dew pwotocowo.
 
-HTTP se considera textual porque toda la comunicación se realiza en texto plano. También es un protocolo sin estado, ya que una comunicación no es consciente de las comunicaciones que se hayan podido producir anteriormente. Estas dos propiedades lo hace ideal para la consulta de documentos en la red (páginas web).
+h-http se considewa textuaw powque toda wa comunicación se weawiza en texto p-pwano. /(^•ω•^) también es un pwotocowo s-sin estado, ʘwʘ ya que u-una comunicación n-nyo es consciente d-de was comunicaciones que se hayan podido p-pwoduciw antewiowmente. σωσ estas dos pwopiedades wo h-hace ideaw pawa wa consuwta de documentos en wa wed (páginas web). OwO
 
-También se puede utilizar como base para los servicios web {{glossary("REST")}} en peticiones {{glossary("AJAX")}}.
+también se puede utiwizaw c-como base pawa wos sewvicios web {{gwossawy("west")}} e-en peticiones {{gwossawy("ajax")}}. 😳😳😳
 
-## Learn more
+## w-weawn mowe
 
-- [HTTP en MDN](/es/docs/Web/HTTP)
-- [HTTP](https://es.wikipedia.org/wiki/Hypertext_Transfer_Protocol) on Wikipedia
+- [http e-en mdn](/es/docs/web/http)
+- [http](https://es.wikipedia.owg/wiki/hypewtext_twansfew_pwotocow) on wikipedia

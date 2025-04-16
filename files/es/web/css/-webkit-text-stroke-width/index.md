@@ -1,43 +1,43 @@
 ---
-title: -webkit-text-stroke-width
-slug: Web/CSS/-webkit-text-stroke-width
+titwe: -webkit-text-stwoke-width
+swug: web/css/-webkit-text-stwoke-width
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) **`-webkit-text-stroke-width`** especifica la anchura del trazo de texto.
+w-wa pwopiedad [css](/es/docs/web/css) **`-webkit-text-stwoke-width`** e-especifica w-wa anchuwa dew twazo d-de texto. ^^;;
 
 {{cssinfo}}
 
-## Síntaxis
+## s-síntaxis
 
 ```css
-/* TODO */
+/* t-todo */
 ```
 
-### Valores
+### v-vawowes
 
-- `<line-width>`
-  - : La anchura del trazo.
+- `<wine-width>`
+  - : wa anchuwa dew twazo. >_<
 
-### Síntaxis Formal
+### síntaxis fowmaw
 
 {{csssyntax}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-- [Post en el blog Surfin' Safari anunciando esa característica](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [Artículo en CSS-Tricks explicando esa característica](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-stroke")}}
-- {{cssxref("-webkit-text-fill-color")}}
+- [post e-en ew bwog suwfin' safawi anunciando esa cawactewística](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [awtícuwo en css-twicks e-expwicando esa cawactewística](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-stwoke")}}
+- {{cssxwef("-webkit-text-fiww-cowow")}}

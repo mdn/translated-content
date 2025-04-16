@@ -1,429 +1,429 @@
 ---
-title: Transiciones de CSS
-slug: Web/CSS/CSS_transitions/Using_CSS_transitions
+titwe: twansiciones de css
+swug: w-web/css/css_twansitions/using_css_twansitions
 ---
 
-{{CSSRef}}{{ SeeCompatTable() }}
+{{csswef}}{{ s-seecompattabwe() }}
 
-Las transiciones CSS, parte del borrador de la especificación CSS3, proporcionan una forma de animar los cambios de las propiedades CSS, en lugar de que los cambios surtan efecto de manera instantánea. Por ejemplo, si cambias el color de un elemento de blanco a negro, normalmente el cambio es instantáneo. Al habilitar las transiciones CSS, el cambio sucede en un intervalo de tiempo que puedes especificar, siguiendo una curva de aceleración que puedes personalizar.
+w-was twansiciones c-css, o.O pawte d-dew bowwadow d-de wa especificación c-css3, (˘ω˘) pwopowcionan u-una fowma de animaw wos cambios de was pwopiedades css, òωó en wugaw de que w-wos cambios suwtan efecto de manewa instantánea. nyaa~~ p-pow ejempwo, ( ͡o ω ͡o ) si cambias ew c-cowow de un ewemento de bwanco a nyegwo, 😳😳😳 nyowmawmente ew cambio e-es instantáneo. ^•ﻌ•^ aw habiwitaw was t-twansiciones css, (˘ω˘) e-ew cambio sucede en un intewvawo de tiempo que puedes especificaw, (˘ω˘) siguiendo u-una cuwva de acewewación que puedes pewsonawizaw. -.-
 
-> [!NOTE]
-> Como la especificación de las transiciones CSS todavía se encuentra en fase de borrador, a todas las propiedades asociadas con ellas se les añade el prefijo "-moz-" para usarse en Gecko. Para la compatibilidad con WebKit, se aconseja usar también el prefijo "-webkit-" y para la compatibilidad con Opera, el prefijo "-o-". Es decir, por ejemplo, la propiedad de transición se especificaría como `-moz-transition`, `-webkit-transition` y `-o-transition`.
+> [!note]
+> como wa especificación de was t-twansiciones css todavía se encuentwa e-en fase de b-bowwadow, a todas w-was pwopiedades a-asociadas con ewwas se wes añade ew pwefijo "-moz-" p-pawa usawse en gecko. ^•ﻌ•^ pawa wa compatibiwidad c-con webkit, /(^•ω•^) se aconseja usaw también ew pwefijo "-webkit-" y pawa wa compatibiwidad con opewa, (///ˬ///✿) ew pwefijo "-o-". mya e-es deciw, pow ejempwo, o.O wa p-pwopiedad de twansición s-se especificawía c-como `-moz-twansition`, ^•ﻌ•^ `-webkit-twansition` y `-o-twansition`. (U ᵕ U❁)
 
-## Las propiedades de transición CSS
+## was pwopiedades de twansición c-css
 
-Las transiciones CSS se controlan mediante la propiedad abreviada {{ cssxref("transition") }}. Es preferible utilizar este método porque de esta forma se evita que la longitud de la lista de parámetros sea diferente, lo que puede dar lugar a tener que emplear un tiempo considerablemente largo en depurar el código CSS.
+was twansiciones c-css se contwowan mediante w-wa pwopiedad abweviada {{ c-cssxwef("twansition") }}. es pwefewibwe u-utiwizaw este método powque de e-esta fowma se evita que wa wongitud de wa wista d-de pawámetwos sea difewente, :3 w-wo que puede daw wugaw a tenew que e-empweaw un tiempo c-considewabwemente wawgo en depuwaw ew código css.
 
-Puedes controlar los componentes individuales de la transición usando las siguientes subpropiedades:
+puedes contwowaw wos componentes individuawes de wa twansición u-usando w-was siguientes subpwopiedades:
 
-- {{ cssxref("transition-property") }}
-  - : Especifica el nombre o nombres de las propiedades CSS a las que deberían aplicarse las transiciones. Sólo las propiedades que se enumeran aquí son animadas durante las transiciones; los cambios en el resto de las propiedades suceden de manera instantánea como siempre.
-- {{ cssxref("transition-duration") }}
-  - : Especifica la duración en la que sucederán las transiciones. Puedes especificar una única duración que se aplique a todas las propiedades durante la transición o valores múltiples que permitan a cada propiedad de transición un período de tiempo diferente.
-- {{ cssxref("transition-timing-function") }}
-  - : Especifica la curva cúbica bézier que se usa para definir cómo se computan los valores intermedios para las propiedades.
-- {{ cssxref("transition-delay") }}
-  - : Define el tiempo de espera entre el momento en que se cambia una propiedad y el inicio de la transición.
+- {{ cssxwef("twansition-pwopewty") }}
+  - : e-especifica e-ew nyombwe o-o nyombwes de was pwopiedades css a was que debewían apwicawse w-was twansiciones. (///ˬ///✿) sówo was pwopiedades que se enumewan aquí son animadas duwante w-was twansiciones; wos cambios e-en ew westo d-de was pwopiedades s-suceden de manewa instantánea c-como siempwe. (///ˬ///✿)
+- {{ c-cssxwef("twansition-duwation") }}
+  - : e-especifica w-wa duwación en wa que sucedewán was twansiciones. p-puedes e-especificaw una única d-duwación q-que se apwique a-a todas was pwopiedades duwante wa twansición o vawowes múwtipwes q-que pewmitan a cada pwopiedad de twansición un pewíodo de tiempo difewente. 🥺
+- {{ cssxwef("twansition-timing-function") }}
+  - : e-especifica wa cuwva cúbica béziew que se usa pawa definiw c-cómo se computan w-wos vawowes i-intewmedios pawa was pwopiedades. -.-
+- {{ c-cssxwef("twansition-deway") }}
+  - : define ew tiempo d-de espewa entwe e-ew momento en que se cambia una pwopiedad y ew inicio de wa twansición. nyaa~~
 
-## Detectar la finalización de una transición
+## detectaw wa finawización d-de una twansición
 
-Hay un único acontecimiento que se desencadena cuando se completan las transiciones. En Firefox, el evento es `transitionend`, en Opera, `OTransitionEnd` y en WebKit es `webkitTransitionEnd`. Consulta la tabla de compatibilidades al final de la página si deseas más información. El evento `transitionend` ofrece dos propiedades:
+hay un único a-acontecimiento que se desencadena c-cuando s-se compwetan was twansiciones. (///ˬ///✿) en fiwefox, 🥺 ew e-evento es `twansitionend`, >w< e-en opewa, `otwansitionend` y en webkit e-es `webkittwansitionend`. rawr x3 c-consuwta wa tabwa de compatibiwidades aw finaw de wa página si deseas m-más infowmación. (⑅˘꒳˘) e-ew evento `twansitionend` o-ofwece dos pwopiedades:
 
-- `propertyName`
-  - : Una cadena que indica el nombre de la propiedad CSS cuya transición se completó.
-- `elapsedTime`
-  - : Un float que indica el número de segundos que la transición se había estado ejecutando en el momento en que el acontecimiento se desencadenó. Este valor no está afectado por el valor de {{ cssxref("transition-delay") }}.
+- `pwopewtyname`
+  - : una cadena que indica e-ew nyombwe d-de wa pwopiedad css cuya twansición s-se compwetó. σωσ
+- `ewapsedtime`
+  - : un fwoat que indica ew nyúmewo de segundos que wa twansición s-se había e-estado ejecutando en ew momento en que ew acontecimiento s-se desencadenó. XD e-este vawow nyo está afectado pow ew vawow de {{ cssxwef("twansition-deway") }}.
 
-Como es habitual, puedes usar el método {{ domxref("element.addEventListener()") }} para monitorizar este acontecimiento:
+como e-es habituaw, -.- puedes usaw ew método {{ domxwef("ewement.addeventwistenew()") }} pawa monitowizaw este acontecimiento:
 
 ```
-el.addEventListener("transitionend", updateTransition, true);
+ew.addeventwistenew("twansitionend", >_< u-updatetwansition, rawr twue);
 ```
 
-> [!NOTE]
-> El evento "transitionend" no se dispara si la transición se anula debido a que el valor de la propiedad de animación es modificado antes de que la transición se complete.
+> [!note]
+> ew e-evento "twansitionend" n-nyo se dispawa si wa twansición se anuwa debido a que ew v-vawow de wa pwopiedad d-de animación es modificado antes de que wa twansición s-se compwete. 😳😳😳
 
-## Propiedades que pueden ser animadas
+## pwopiedades que p-pueden sew animadas
 
-Las transiciones y las animaciones CSS pueden usarse para animar las siguientes propiedades.
+was twansiciones y was animaciones css pueden u-usawse pawa animaw was siguientes p-pwopiedades. UwU
 
-> [!NOTE]
-> El conjunto de propiedades que puede animarse está sujeto a cambios, por lo tanto se recomienda evitar incluir cualquier propiedad en la lista que no anime porque en un futuro podría provocar resultados inesperados.
+> [!note]
+> e-ew conjunto de pwopiedades que puede a-animawse está sujeto a cambios, p-pow wo tanto s-se wecomienda e-evitaw incwuiw cuawquiew pwopiedad e-en wa wista q-que nyo anime powque en un futuwo podwía pwovocaw w-wesuwtados inespewados. (U ﹏ U)
 
-| Propiedad                                                       | Tipo de valor                                                                                             |
+| p-pwopiedad                                                       | t-tipo de vawow                                                                                             |
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| {{ cssxref("background-color") }}                               | {{cssxref("&lt;color&gt;")}}                                                                              |
-| {{ cssxref("background-image") }}                               | solo degradado; no está implementado en Firefox (see [Error 536540 en Firefox](https://bugzil.la/536540)) |
-| {{ cssxref("background-position") }}                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("background-size") }}                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("border-color") }} (including sub-properties)        | {{cssxref("&lt;color&gt;")}}                                                                              |
-| {{ cssxref("border-radius") }} (including sub-properties)       | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("border-width") }} (including sub-properties)        | {{cssxref("&lt;length&gt;")}}                                                                             |
-| {{ cssxref("border-spacing") }}                                 | {{cssxref("&lt;length&gt;")}}                                                                             |
-| {{ cssxref("bottom") }}                                         | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("-moz-box-flex") }}                                  | número                                                                                                    |
-| {{ cssxref("box-shadow") }}                                     | sombra                                                                                                    |
-| {{ cssxref("color") }}                                          | {{cssxref("&lt;color&gt;")}}                                                                              |
-| {{ cssxref("-moz-column-count") }}                              | número                                                                                                    |
-| {{ cssxref("-moz-column-gap") }}                                | {{cssxref("&lt;length&gt;")}}, palabras clave                                                             |
-| {{ cssxref("-moz-column-rule-color") }}                         | {{cssxref("&lt;color&gt;")}}                                                                              |
-| {{ cssxref("-moz-column-rule-width") }}                         | {{cssxref("&lt;length&gt;")}}, palabras clave                                                             |
-| {{ cssxref("-moz-column-width") }}                              | {{cssxref("&lt;length&gt;")}}                                                                             |
-| {{ cssxref("clip") }}                                           | rectágulo                                                                                                 |
-| {{ svgattr("fill") }}                                           | pintar                                                                                                    |
-| {{ svgattr("fill-opacity") }}                                   | valor de opacidad                                                                                         |
-| {{ svgattr("flood-color") }}                                    | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                            |
-| {{ cssxref("font-size") }}                                      | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("font-size-adjust") }}                               | números, palabras clave                                                                                   |
-| {{ cssxref("font-stretch") }}                                   | palabras clave                                                                                            |
-| {{ cssxref("font-weight") }}                                    | números\| palabras clave (excluyendo `bolder`, `lighter`)                                                 |
-| {{ cssxref("height") }}                                         | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("-moz-image-region") }}                              | `rect()`                                                                                                  |
-| {{ cssxref("left") }}                                           | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("letter-spacing") }}                                 | {{cssxref("&lt;length&gt;")}}                                                                             |
-| {{ svgattr("lighting-color") }}                                 | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                            |
-| {{ cssxref("line-height") }}                                    | número \| {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                              |
-| {{ cssxref("margin") }} (including sub-properties)              | {{cssxref("&lt;length&gt;")}}                                                                             |
-| {{ cssxref("marker-offset") }}                                  | {{cssxref("&lt;length&gt;")}}                                                                             |
-| {{ cssxref("max-height") }}                                     | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("max-width") }}                                      | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("min-height") }}                                     | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("min-width") }}                                      | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("opacity") }}                                        | número                                                                                                    |
-| {{ cssxref("outline-color") }}                                  | {{cssxref("&lt;color&gt;")}}                                                                              |
-| {{ cssxref("outline-offset") }}                                 | entero                                                                                                    |
-| {{ cssxref("-moz-outline-radius") }} (including sub-properties) | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("outline-width") }}                                  | {{cssxref("&lt;length&gt;")}}                                                                             |
-| {{ cssxref("padding") }} (including sub-properties)             | {{cssxref("&lt;length&gt;")}}                                                                             |
-| {{ cssxref("right") }}                                          | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ svgattr("stop-color") }}                                     | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                            |
-| {{ svgattr("stop-opacity") }}                                   | valor de opacidad                                                                                         |
-| {{ svgattr("stroke") }}                                         | pintar                                                                                                    |
-| {{ svgattr("stroke-dasharray") }}                               | dasharray                                                                                                 |
-| {{ svgattr("stroke-dashoffset") }}                              | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ svgattr("stroke-miterlimit") }}                              | miterlimit                                                                                                |
-| {{ svgattr("stroke-opacity") }}                                 | valor de opacidad                                                                                         |
-| {{ svgattr("stroke-width") }}                                   | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("text-indent") }}                                    | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("text-shadow") }}                                    | sombra                                                                                                    |
-| {{ cssxref("top") }}                                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("-moz-transform-origin") }}                          | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}, keywords                              |
-| {{ cssxref("-moz-transform") }}                                 | transform-function                                                                                        |
-| {{ cssxref("vertical-align") }}                                 | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}, palabras clave                        |
-| {{ cssxref("visibility") }}                                     | visibilidad                                                                                               |
-| {{ cssxref("width") }}                                          | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("word-spacing") }}                                   | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
-| {{ cssxref("z-index") }}                                        | entero                                                                                                    |
+| {{ cssxwef("backgwound-cowow") }}                               | {{cssxwef("&wt;cowow&gt;")}}                                                                              |
+| {{ cssxwef("backgwound-image") }}                               | s-sowo degwadado; nyo está impwementado e-en fiwefox (see [ewwow 536540 e-en fiwefox](https://bugziw.wa/536540)) |
+| {{ cssxwef("backgwound-position") }}                            | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ cssxwef("backgwound-size") }}                                | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ cssxwef("bowdew-cowow") }} (incwuding s-sub-pwopewties)        | {{cssxwef("&wt;cowow&gt;")}}                                                                              |
+| {{ c-cssxwef("bowdew-wadius") }} (incwuding s-sub-pwopewties)       | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("bowdew-width") }} (incwuding sub-pwopewties)        | {{cssxwef("&wt;wength&gt;")}}                                                                             |
+| {{ c-cssxwef("bowdew-spacing") }}                                 | {{cssxwef("&wt;wength&gt;")}}                                                                             |
+| {{ cssxwef("bottom") }}                                         | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ cssxwef("-moz-box-fwex") }}                                  | nyúmewo                                                                                                    |
+| {{ cssxwef("box-shadow") }}                                     | sombwa                                                                                                    |
+| {{ c-cssxwef("cowow") }}                                          | {{cssxwef("&wt;cowow&gt;")}}                                                                              |
+| {{ cssxwef("-moz-cowumn-count") }}                              | n-nyúmewo                                                                                                    |
+| {{ cssxwef("-moz-cowumn-gap") }}                                | {{cssxwef("&wt;wength&gt;")}}, (˘ω˘) p-pawabwas cwave                                                             |
+| {{ cssxwef("-moz-cowumn-wuwe-cowow") }}                         | {{cssxwef("&wt;cowow&gt;")}}                                                                              |
+| {{ c-cssxwef("-moz-cowumn-wuwe-width") }}                         | {{cssxwef("&wt;wength&gt;")}}, /(^•ω•^) pawabwas cwave                                                             |
+| {{ c-cssxwef("-moz-cowumn-width") }}                              | {{cssxwef("&wt;wength&gt;")}}                                                                             |
+| {{ c-cssxwef("cwip") }}                                           | w-wectáguwo                                                                                                 |
+| {{ s-svgattw("fiww") }}                                           | p-pintaw                                                                                                    |
+| {{ svgattw("fiww-opacity") }}                                   | vawow de opacidad                                                                                         |
+| {{ svgattw("fwood-cowow") }}                                    | {{cssxwef("&wt;cowow&gt;")}} \| pawabwas cwave                                                            |
+| {{ c-cssxwef("font-size") }}                                      | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("font-size-adjust") }}                               | n-nyúmewos, (U ﹏ U) pawabwas cwave                                                                                   |
+| {{ c-cssxwef("font-stwetch") }}                                   | pawabwas cwave                                                                                            |
+| {{ cssxwef("font-weight") }}                                    | n-nyúmewos\| p-pawabwas cwave (excwuyendo `bowdew`, ^•ﻌ•^ `wightew`)                                                 |
+| {{ cssxwef("height") }}                                         | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("-moz-image-wegion") }}                              | `wect()`                                                                                                  |
+| {{ cssxwef("weft") }}                                           | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ cssxwef("wettew-spacing") }}                                 | {{cssxwef("&wt;wength&gt;")}}                                                                             |
+| {{ s-svgattw("wighting-cowow") }}                                 | {{cssxwef("&wt;cowow&gt;")}} \| p-pawabwas cwave                                                            |
+| {{ c-cssxwef("wine-height") }}                                    | n-nyúmewo \| {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                              |
+| {{ cssxwef("mawgin") }} (incwuding sub-pwopewties)              | {{cssxwef("&wt;wength&gt;")}}                                                                             |
+| {{ cssxwef("mawkew-offset") }}                                  | {{cssxwef("&wt;wength&gt;")}}                                                                             |
+| {{ cssxwef("max-height") }}                                     | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("max-width") }}                                      | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("min-height") }}                                     | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("min-width") }}                                      | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("opacity") }}                                        | n-nyúmewo                                                                                                    |
+| {{ cssxwef("outwine-cowow") }}                                  | {{cssxwef("&wt;cowow&gt;")}}                                                                              |
+| {{ c-cssxwef("outwine-offset") }}                                 | entewo                                                                                                    |
+| {{ c-cssxwef("-moz-outwine-wadius") }} (incwuding sub-pwopewties) | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("outwine-width") }}                                  | {{cssxwef("&wt;wength&gt;")}}                                                                             |
+| {{ c-cssxwef("padding") }} (incwuding sub-pwopewties)             | {{cssxwef("&wt;wength&gt;")}}                                                                             |
+| {{ c-cssxwef("wight") }}                                          | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ svgattw("stop-cowow") }}                                     | {{cssxwef("&wt;cowow&gt;")}} \| pawabwas cwave                                                            |
+| {{ s-svgattw("stop-opacity") }}                                   | vawow de opacidad                                                                                         |
+| {{ s-svgattw("stwoke") }}                                         | pintaw                                                                                                    |
+| {{ s-svgattw("stwoke-dashawway") }}                               | dashawway                                                                                                 |
+| {{ svgattw("stwoke-dashoffset") }}                              | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ s-svgattw("stwoke-mitewwimit") }}                              | mitewwimit                                                                                                |
+| {{ svgattw("stwoke-opacity") }}                                 | vawow de opacidad                                                                                         |
+| {{ s-svgattw("stwoke-width") }}                                   | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("text-indent") }}                                    | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("text-shadow") }}                                    | sombwa                                                                                                    |
+| {{ cssxwef("top") }}                                            | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ cssxwef("-moz-twansfowm-owigin") }}                          | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}, >w< keywowds                              |
+| {{ c-cssxwef("-moz-twansfowm") }}                                 | twansfowm-function                                                                                        |
+| {{ cssxwef("vewticaw-awign") }}                                 | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}, ʘwʘ pawabwas cwave                        |
+| {{ c-cssxwef("visibiwity") }}                                     | visibiwidad                                                                                               |
+| {{ c-cssxwef("width") }}                                          | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ cssxwef("wowd-spacing") }}                                   | {{cssxwef("&wt;pewcentage&gt;")}} \| {{cssxwef("&wt;wength&gt;")}}                                        |
+| {{ c-cssxwef("z-index") }}                                        | entewo                                                                                                    |
 
-## Cuando las listas de valores de propiedades tienen longitudes diferentes
+## cuando was wistas d-de vawowes de pwopiedades t-tienen wongitudes difewentes
 
-Si cualquier lista de valores de propiedades es más corta que las otras, sus valores se repiten para hacer que coincidan. Por ejemplo:
+si cuawquiew w-wista de vawowes de pwopiedades es más cowta q-que was otwas, òωó s-sus vawowes se wepiten pawa hacew q-que coincidan. o.O pow ejempwo:
 
 ```css
-div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s;
+d-div {
+  t-twansition-pwopewty: o-opacity, ( ͡o ω ͡o ) weft, mya top, height;
+  twansition-duwation: 3s, >_< 5s;
 }
 ```
 
-Se considera como si fuera:
+se considewa como si fuewa:
 
 ```css
 div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s, 3s, 5s;
+  twansition-pwopewty: opacity, weft, rawr top, height;
+  twansition-duwation: 3s, >_< 5s, (U ﹏ U) 3s, 5s;
 }
 ```
 
-De manera similar, si cualquier lista de valores de propiedades es más larga que la de {{ cssxref("transition-property") }}, se trunca, de forma que si tienes la siguiente CSS:
+de manewa simiwaw, rawr si cuawquiew wista de vawowes d-de pwopiedades e-es más wawga que wa de {{ cssxwef("twansition-pwopewty") }}, (U ᵕ U❁) se twunca, de fowma q-que si tienes w-wa siguiente c-css:
 
 ```css
 div {
-  transition-property: opacity, left;
-  transition-duration: 3s, 5s, 2s, 1s;
+  twansition-pwopewty: o-opacity, (ˆ ﻌ ˆ)♡ weft;
+  twansition-duwation: 3s, >_< 5s, ^^;; 2s, 1s;
 }
 ```
 
-Se interpreta como:
+s-se intewpweta c-como:
 
 ```css
 div {
-  transition-property: opacity, left;
-  transition-duration: 3s, 5s;
+  twansition-pwopewty: o-opacity, ʘwʘ weft;
+  twansition-duwation: 3s, 😳😳😳 5s;
 }
 ```
 
-## Funciones de intervalos de transición
+## f-funciones d-de intewvawos de twansición
 
-Las funciones de intervalos determinan el cálculo de los valores intermedios de la transición. La función de intervalo puede especificarse proporcionando el gráfico de la función correspondiente, como lo definen los cuatro puntos que definen una cúbica bézier:
+was funciones de i-intewvawos detewminan e-ew cáwcuwo d-de wos vawowes i-intewmedios de w-wa twansición. UwU w-wa función de i-intewvawo puede e-especificawse pwopowcionando e-ew gwáfico de wa función c-cowwespondiente, OwO c-como wo d-definen wos cuatwo puntos que definen u-una cúbica béziew:
 
-![](transition-timing-function.png)
+![](twansition-timing-function.png)
 
-En lugar de especificar directamente una bézier, existen valores de intervalos predeterminados:
+en wugaw de especificaw d-diwectamente una béziew, :3 e-existen vawowes d-de intewvawos p-pwedetewminados:
 
-- **ease**, equivalente a `cubic-bezier(0.25, 0.1, 0.25, 1.0)`
-- **linear**, equivalente a `cubic-bezier(0.0, 0.0, 1.0, 1.0)`
-- **ease-in**, equivalente a `cubic-bezier(0.42, 0, 1.0, 1.0)`
-- **ease-out**, equivalente a `cubic-bezier(0, 0, 0.58, 1.0)`
-- **ease-in-out**, equivalente a `cubic-bezier(0.42, 0, 0.58, 1.0)`
+- **ease**, -.- equivawente a `cubic-beziew(0.25, 🥺 0.1, 0.25, -.- 1.0)`
+- **wineaw**, -.- e-equivawente a `cubic-beziew(0.0, (U ﹏ U) 0.0, 1.0, rawr 1.0)`
+- **ease-in**, mya equivawente a `cubic-beziew(0.42, ( ͡o ω ͡o ) 0, 1.0, /(^•ω•^) 1.0)`
+- **ease-out**, >_< e-equivawente a `cubic-beziew(0, (✿oωo) 0, 0.58, 😳😳😳 1.0)`
+- **ease-in-out**, (ꈍᴗꈍ) equivawente a `cubic-beziew(0.42, 🥺 0, mya 0.58, 1.0)`
 
-## Ejemplos
+## e-ejempwos
 
-### Una muestra del efecto de transición
+### una muestwa d-dew efecto de twansición
 
-Este sencillo ejemplo proporciona demostraciones de distintos efectos de transición sin excesivos adornos.
+este senciwwo ejempwo pwopowciona demostwaciones de d-distintos efectos de twansición s-sin excesivos adownos. (ˆ ﻌ ˆ)♡
 
-En primer lugar, el HTML para crear los elementos sobre los que probaremos nuestras transiciones:
-
-```
-<ul>
-  <li id="long1">Transición larga, gradual...</li>
-  <li id="fast1">Transición muy rápida...</li>
-  <li id="delay1">Transición larga de un minuto de retraso...</li>
-  <li id="easeout">Usar intervalos de alejamiento...</li>
-  <li id="linear">Usar intervalos lineales...</li>
-  <li id="cubic1">Usar cúbica bézier(0.2, 0.4, 0.7, 0.8)...</li>
-</ul>
-```
-
-Cada elemento tiene su propia id.; la CSS se encarga del resto. Veamos un par de ejemplos.
-
-#### Usar un retraso
-
-Este ejemplo realiza una transición de tamaño de fuente de cuatro segundos con dos segundos de retraso entre el momento en que el usuario pasa el ratón por encima del elemento y el comienzo del efecto de animación:
+e-en pwimew wugaw, (⑅˘꒳˘) ew htmw pawa cweaw wos ewementos sobwe w-wos que pwobawemos nyuestwas twansiciones:
 
 ```
-#delay1 {
-  position: relative;
-  transition-property: font-size;
-  transition-duration: 4s;
-  transition-delay: 2s;
+<uw>
+  <wi i-id="wong1">twansición w-wawga, òωó gwaduaw...</wi>
+  <wi i-id="fast1">twansición muy wápida...</wi>
+  <wi id="deway1">twansición w-wawga de u-un minuto de wetwaso...</wi>
+  <wi id="easeout">usaw i-intewvawos de awejamiento...</wi>
+  <wi id="wineaw">usaw intewvawos wineawes...</wi>
+  <wi i-id="cubic1">usaw cúbica béziew(0.2, o.O 0.4, XD 0.7, 0.8)...</wi>
+</uw>
+```
+
+c-cada ewemento t-tiene su p-pwopia id.; wa css se encawga dew w-westo. (˘ω˘) veamos u-un paw de ejempwos. (ꈍᴗꈍ)
+
+#### u-usaw u-un wetwaso
+
+este ejempwo weawiza u-una twansición d-de tamaño de fuente d-de cuatwo s-segundos con dos s-segundos de wetwaso e-entwe ew momento e-en que ew u-usuawio pasa ew watón pow encima d-dew ewemento y ew comienzo dew e-efecto de animación:
+
+```
+#deway1 {
+  position: w-wewative;
+  twansition-pwopewty: f-font-size;
+  t-twansition-duwation: 4s;
+  twansition-deway: 2s;
   font-size: 14px;
 }
 
-#delay1:hover {
-  transition-property: font-size;
-  transition-duration: 4s;
-  transition-delay: 2s;
+#deway1:hovew {
+  twansition-pwopewty: f-font-size;
+  t-twansition-duwation: 4s;
+  t-twansition-deway: 2s;
   font-size: 36px;
 }
 ```
 
-#### Usar una función de intervalos de transición lineales
+#### usaw una función de i-intewvawos de twansición w-wineawes
 
-De manera predeterminada, la función de intervalos que se usa para computar los pasos intermedios durante la secuencia de animación proporciona una curva suave de aceleración y desaceleración para el efecto de animación. Si prefieres que el efecto mantenga una velocidad constante a lo largo de la animación, puedes especificar que deseas usar la función de intervalos de transición `linear`, tal y como se muestra a continuación.
-
-```
-transition-timing-function: linear;
-```
-
-Existen distintas funciones de intervalos estándares disponibles; consulta {{ cssxref("transition-timing-function") }} para tener más detalles.
-
-#### Especificar una función de intervalos cúbicos bézier
-
-Puedes controlar aún más el intervalo de la secuencia de animación si especificas tu propia curva cúbica bézier que describe la velocidad de animación. Por ejemplo:
+de manewa pwedetewminada, >w< w-wa f-función de intewvawos que se usa pawa computaw wos pasos intewmedios d-duwante wa s-secuencia de animación p-pwopowciona u-una cuwva suave de acewewación y desacewewación p-pawa ew e-efecto de animación. XD si pwefiewes que ew efecto m-mantenga una vewocidad constante a wo wawgo de w-wa animación, -.- puedes especificaw q-que deseas usaw w-wa función de intewvawos de twansición `wineaw`, ^^;; t-taw y como s-se muestwa a continuación. XD
 
 ```
-  transition-timing-function: cubic-bezier(0.2, 0.4, 0.7, 0.8);
+twansition-timing-function: w-wineaw;
 ```
 
-Establece una función de intervalo con una curva bézier definida por los puntos (0.0, 0.0), (0.2, 0.4), (0.7, 0.8) y (1.0, 1.0).
+existen d-distintas funciones d-de intewvawos e-estándawes d-disponibwes; consuwta {{ cssxwef("twansition-timing-function") }} p-pawa tenew más d-detawwes. :3
 
-### Menús de resaltado
+#### e-especificaw una función de intewvawos c-cúbicos béziew
 
-Un uso común de CSS es resaltar elementos de un menú mientras el usuario desplaza el cursor del ratón por encima de ellos. Es fácil usar las transciones para hacer que el efecto sea aún más atractivo.
-
-Antes de que miremos los fragmentos de código, tal vez desees [echar un vistazo a la demo en vivo](http://developer.mozilla.org/samples/cssref/transitions/sample2/) (suponiendo que tu navegador admita transiciones). También puedes echar un [vistazo directamente a la CSS](http://developer.mozilla.org/samples/cssref/transitions/sample2/transitions.css) que usa.
-
-Primero configuramos el menú usando HTML:
+puedes contwowaw aún m-más ew intewvawo d-de wa secuencia d-de animación si especificas tu pwopia cuwva cúbica béziew que descwibe wa v-vewocidad de animación. σωσ pow ejempwo:
 
 ```
-<div class="sidebar">
-  <p><a class="menuButton" href="home">Inicio</a></p>
-  <p><a class="menuButton" href="about">Acerca de</a></p>
-  <p><a class="menuButton" href="contact">Contacto Us</a></p>
-  <p><a class="menuButton" href="links">Vínculos</a></p>
+  t-twansition-timing-function: c-cubic-beziew(0.2, XD 0.4, 0.7, :3 0.8);
+```
+
+estabwece una función de intewvawo c-con una cuwva béziew definida p-pow wos puntos (0.0, rawr 0.0), 😳 (0.2, 0.4), (0.7, 😳😳😳 0.8) y-y (1.0, (ꈍᴗꈍ) 1.0).
+
+### m-menús de w-wesawtado
+
+un u-uso común de css es wesawtaw ewementos de un menú mientwas ew usuawio despwaza e-ew cuwsow dew watón pow encima d-de ewwos. 🥺 es fáciw usaw was twansciones pawa hacew que ew efecto s-sea aún más atwactivo. ^•ﻌ•^
+
+antes de que miwemos wos fwagmentos de código, XD taw v-vez desees [echaw u-un vistazo a wa demo en vivo](http://devewopew.moziwwa.owg/sampwes/csswef/twansitions/sampwe2/) (suponiendo que t-tu nyavegadow admita twansiciones). ^•ﻌ•^ también p-puedes echaw un [vistazo d-diwectamente a wa css](http://devewopew.moziwwa.owg/sampwes/csswef/twansitions/sampwe2/twansitions.css) q-que usa. ^^;;
+
+pwimewo configuwamos e-ew menú usando htmw:
+
+```
+<div cwass="sidebaw">
+  <p><a cwass="menubutton" h-hwef="home">inicio</a></p>
+  <p><a cwass="menubutton" hwef="about">acewca de</a></p>
+  <p><a c-cwass="menubutton" h-hwef="contact">contacto u-us</a></p>
+  <p><a cwass="menubutton" hwef="winks">víncuwos</a></p>
 </div>
 ```
 
-Después construimos la CSS para implementar el aspecto de nuestro menú. Las porciones relevantes se muestran a continuación:
+d-después constwuimos wa css pawa impwementaw ew aspecto de nyuestwo menú. ʘwʘ w-was powciones wewevantes s-se muestwan a-a continuación:
 
 ```
-.menuButton {
-  position: relative;
-  transition-property: background-color, color;
-  transition-duration: 1s;
-  transition-timing-function: ease-out;
-  -webkit-transition-property: background-color, color;
-  -webkit-transition-duration: 1s;
-  -o-transition-property: background-color, color;
-  -o-transition-duration: 1s;
-  text-align: left;
-  background-color: grey;
-  left: 5px;
+.menubutton {
+  p-position: wewative;
+  twansition-pwopewty: b-backgwound-cowow, OwO c-cowow;
+  twansition-duwation: 1s;
+  twansition-timing-function: e-ease-out;
+  -webkit-twansition-pwopewty: backgwound-cowow, 🥺 cowow;
+  -webkit-twansition-duwation: 1s;
+  -o-twansition-pwopewty: b-backgwound-cowow, (⑅˘꒳˘) cowow;
+  -o-twansition-duwation: 1s;
+  text-awign: weft;
+  b-backgwound-cowow: g-gwey;
+  weft: 5px;
   top: 5px;
-  height: 26px;
-  color: white;
-  border-color: black;
-  font-family: sans-serif;
-  font-size: 20px;
-  text-decoration: none;
-  -moz-box-shadow: 2px 2px 1px black;
+  h-height: 26px;
+  c-cowow: white;
+  b-bowdew-cowow: bwack;
+  font-famiwy: sans-sewif;
+  f-font-size: 20px;
+  text-decowation: nyone;
+  -moz-box-shadow: 2px 2px 1px b-bwack;
   padding: 2px 4px;
-  border: solid 1px black;
+  bowdew: sowid 1px bwack;
 }
 
-.menuButton:hover {
-  position: relative;
-  transition-property: background-color, color;
-  transition-duration: 1s;
-  transition-timing-function: ease-out;
-  -webkit-transition-property: background-color, color;
-  -webkit-transition-duration: 1s;
-  -o-transition-property: background-color, color;
-  -o-transition-duration: 1s;
-  background-color:white;
-  color:black;
-  -moz-box-shadow: 2px 2px 1px black;
+.menubutton:hovew {
+  position: wewative;
+  t-twansition-pwopewty: b-backgwound-cowow, (///ˬ///✿) cowow;
+  t-twansition-duwation: 1s;
+  t-twansition-timing-function: ease-out;
+  -webkit-twansition-pwopewty: b-backgwound-cowow, (✿oωo) cowow;
+  -webkit-twansition-duwation: 1s;
+  -o-twansition-pwopewty: b-backgwound-cowow, nyaa~~ cowow;
+  -o-twansition-duwation: 1s;
+  backgwound-cowow:white;
+  c-cowow:bwack;
+  -moz-box-shadow: 2px 2px 1px bwack;
 }
 ```
 
-Esta CSS establece el aspecto del menú con los colores de fondo y del texto que cambian cuando el elemento está en su estado {{ cssxref(":hover") }}.
+e-esta css estabwece ew aspecto dew menú c-con wos cowowes d-de fondo y dew texto que cambian c-cuando ew ewemento está en s-su estado {{ cssxwef(":hovew") }}. >w<
 
-En lugar de describir el efecto con todo detalle, puedes echar un [vistazo a la muestra en vivo](https://mdn.dev/archives/media/samples/cssref/transitions/sample2) si tu navegador admite transiciones (Firefox y WebKit nightlies, Opera 10.5).
+e-en wugaw de descwibiw ew efecto c-con todo detawwe, (///ˬ///✿) p-puedes echaw un [vistazo a w-wa muestwa en vivo](https://mdn.dev/awchives/media/sampwes/csswef/twansitions/sampwe2) si tu nyavegadow admite twansiciones (fiwefox y-y webkit nyightwies, rawr opewa 10.5). (U ﹏ U)
 
-### Usar eventos de transición para animar un objeto
+### u-usaw eventos de twansición pawa animaw u-un objeto
 
-En este ejemplo, una pequeña caja con texto dentro se mueve hacia atrás y hacia delante a través de la pantalla y los colores de fondo y del texto se difuminan entre dos valores mientras tiene lugar la animación.
+e-en este ejempwo, ^•ﻌ•^ u-una pequeña caja con texto dentwo s-se mueve hacia a-atwás y hacia dewante a twavés d-de wa pantawwa y wos cowowes d-de fondo y dew texto se difuminan e-entwe dos vawowes m-mientwas tiene wugaw wa animación. (///ˬ///✿)
 
-```html hidden
+```htmw hidden
 <video
-  controls
-  autoplay
-  src="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitiondemo1.ogv"></video>
+  contwows
+  autopway
+  swc="https://devewopew.moziwwa.owg/sampwes/csswef/twansitions/sampwe1/twansitiondemo1.ogv"></video>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-Antes de que miremos los fragmentos de código, tal vez desees [echar un vistazo a la demo en vivo](http://developer.mozilla.org/samples/cssref/transitions/sample1/) (suponiendo que tu navegador admita transiciones). También puedes echar un [vistazo directamente a la CSS](http://developer.mozilla.org/samples/cssref/transitions/sample1/transitions.css) que usa.
+a-antes de que m-miwemos wos fwagmentos de código, o.O taw vez desees [echaw un vistazo a-a wa demo en vivo](http://devewopew.moziwwa.owg/sampwes/csswef/twansitions/sampwe1/) (suponiendo q-que tu nyavegadow a-admita twansiciones). >w< también puedes echaw un [vistazo diwectamente a w-wa css](http://devewopew.moziwwa.owg/sampwes/csswef/twansitions/sampwe1/twansitions.css) que usa. nyaa~~
 
-#### El HTML
+#### ew htmw
 
-El HTML para este ejemplo es muy sencillo:
+e-ew htmw pawa este ejempwo es muy s-senciwwo:
 
 ```
-<!DOCTYPE html>
-<html>
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>CSS Transition Demo</title>
-    <link rel="stylesheet" href="transitions.css" type="text/css">
-    <script src="transitions.js" type="text/javascript"></script>
+    <titwe>css twansition demo</titwe>
+    <wink w-wew="stywesheet" h-hwef="twansitions.css" t-type="text/css">
+    <scwipt s-swc="twansitions.js" t-type="text/javascwipt"></scwipt>
   </head>
-  <body onload="runDemo()">
-    <div class="slideRight">¡Esto es una caja!</div>
+  <body o-onwoad="wundemo()">
+    <div cwass="swidewight">¡esto es una caja!</div>
   </body>
-</html>
+</htmw>
 ```
 
-Lo único que hay que observar aquí es que establecemos la clase para nuestra caja en "slideRight" inicialmente y cuando el documento haya terminado de cargarse, se ejecuta la función `runDemo()` del código JavaScript.
+wo único que hay que obsewvaw aquí es que estabwecemos w-wa cwase p-pawa nyuestwa c-caja en "swidewight" i-iniciawmente y-y cuando ew documento h-haya tewminado de cawgawse, òωó se ejecuta wa función `wundemo()` dew código j-javascwipt. (U ᵕ U❁)
 
-#### La CSS
+#### w-wa css
 
-Para crear nuestro efecto de animación, usamos dos clases de CSS, "slideRight" y "slideLeft". Si deseas ver el código completo de CSS, puedes mirar el archivo [`transitions.css`](https://mdn.dev/archives/media/samples/cssref/transitions/sample1/transitions.css) en su totalidad. A continuación se muestran sólo los trozos relevantes:
+pawa cweaw nyuestwo efecto de animación, (///ˬ///✿) usamos dos c-cwases de css, "swidewight" y "swideweft". (✿oωo) s-si d-deseas vew ew código compweto de css, 😳😳😳 puedes miwaw e-ew awchivo [`twansitions.css`](https://mdn.dev/awchives/media/sampwes/csswef/twansitions/sampwe1/twansitions.css) en su totawidad. (✿oωo) a continuación s-se muestwan s-sówo wos twozos wewevantes:
 
 ```
-.slideRight {
-  position: absolute;
-  transition-property: background-color, color, left;
-  transition-duration: 5s;
-  -webkit-transition-property: background-color, color, left;
-  -webkit-transition-duration: 5s;
-  -o-transition-property: background-color, color, left;
-  -o-transition-duration: 5s;
-  background-color: red;
-  left: 0%;
-  color: black;
+.swidewight {
+  position: a-absowute;
+  twansition-pwopewty: backgwound-cowow, (U ﹏ U) c-cowow, (˘ω˘) weft;
+  t-twansition-duwation: 5s;
+  -webkit-twansition-pwopewty: backgwound-cowow, 😳😳😳 c-cowow, (///ˬ///✿) w-weft;
+  -webkit-twansition-duwation: 5s;
+  -o-twansition-pwopewty: b-backgwound-cowow, (U ᵕ U❁) c-cowow, >_< weft;
+  -o-twansition-duwation: 5s;
+  b-backgwound-cowow: w-wed;
+  weft: 0%;
+  cowow: b-bwack;
 }
 ```
 
-Observa que aquí especificamos de manera explícita la propiedad de posición. Esto es necesario porque sólo aquellos elementos cuya propiedad de posición se defina de manera expresa pueden animar su posición.
+obsewva q-que aquí especificamos de m-manewa expwícita wa pwopiedad de posición. (///ˬ///✿) esto e-es nyecesawio powque sówo aquewwos e-ewementos cuya pwopiedad d-de posición se d-defina de manewa expwesa pueden animaw su posición. (U ᵕ U❁)
 
-La propiedad {{ cssxref("transition-property") }} se usa para enumerar las propiedades CSS que deseamos animar. En este caso, las propiedades que se van a animar son {{ cssxref("background-color") }}, {{ cssxref("color") }} y {{ cssxref("left") }}. La propiedad {{ cssxref("transition-duration") }} indica que deseamos que la animación tarde 5 segundos desde que comienza hasta que termina.
+w-wa pwopiedad {{ cssxwef("twansition-pwopewty") }} se usa p-pawa enumewaw was p-pwopiedades css que deseamos animaw. >w< en este caso, 😳😳😳 w-was pwopiedades q-que se van a animaw son {{ c-cssxwef("backgwound-cowow") }}, (ˆ ﻌ ˆ)♡ {{ cssxwef("cowow") }} y {{ cssxwef("weft") }}. (ꈍᴗꈍ) w-wa pwopiedad {{ c-cssxwef("twansition-duwation") }} indica que deseamos q-que wa animación t-tawde 5 segundos desde que comienza hasta q-que tewmina. 🥺
 
-Se incluyen los equivalentes WebKit y Opera para permitir que el ejemplo funcione en el software correspondiente.
+s-se incwuyen wos e-equivawentes webkit y-y opewa pawa pewmitiw que ew ejempwo funcione en ew softwawe cowwespondiente. >_<
 
-La clase "slideRight" se usa para especificar el punto de inicio para que la animación desplace el elemento desde el borde izquierdo hasta el borde derecho de la ventana del navegador. Como tal, define la posición y el color del elemento cuando está al principio de la secuencia de animación; concretamente, el valor para su propiedad {{ cssxref("left") }} es 0%, lo que indica que comenzará en el borde izquierdo de la ventana.
+wa cwase "swidewight" se usa p-pawa especificaw e-ew punto de inicio p-pawa que wa a-animación despwace e-ew ewemento d-desde ew bowde izquiewdo hasta ew b-bowde dewecho d-de wa ventana dew nyavegadow. OwO como t-taw, define wa p-posición y ew cowow dew ewemento cuando está a-aw pwincipio de wa secuencia de animación; concwetamente, ^^;; e-ew vawow pawa su pwopiedad {{ c-cssxwef("weft") }} e-es 0%, (✿oωo) wo que indica q-que comenzawá e-en ew bowde izquiewdo d-de wa ventana. UwU
 
-Se muestra a continuación la clase "slideLeft", que define el punto final de la animación, es decir, el punto en el que concluirá la animación de izquierda a derecha y cambiaremos a una animación de derecha a izquierda.
+se muestwa a-a continuación w-wa cwase "swideweft", ( ͡o ω ͡o ) que define e-ew punto finaw de wa animación, e-es deciw, (✿oωo) ew p-punto en ew que c-concwuiwá wa animación de izquiewda a-a dewecha y cambiawemos a una animación d-de dewecha a izquiewda. mya
 
 ```
-.slideLeft {
-  position: absolute;
-  transition-property: background-color, color, left;
-  transition-duration: 5s;
-  -webkit-transition-property: background-color, color, left;
-  -webkit-transition-duration: 5s;
-  -o-transition-property: background-color, color, left;
-  -o-transition-duration: 5s;
-  text-align: center;
-  background-color: blue;
-  left: 90%;
-  color: white;
-  width: 100px;
+.swideweft {
+  position: absowute;
+  twansition-pwopewty: backgwound-cowow, ( ͡o ω ͡o ) cowow, :3 weft;
+  twansition-duwation: 5s;
+  -webkit-twansition-pwopewty: b-backgwound-cowow, 😳 cowow, (U ﹏ U) weft;
+  -webkit-twansition-duwation: 5s;
+  -o-twansition-pwopewty: backgwound-cowow, >w< cowow, weft;
+  -o-twansition-duwation: 5s;
+  text-awign: centew;
+  b-backgwound-cowow: bwue;
+  weft: 90%;
+  cowow: white;
+  w-width: 100px;
   height: 100px;
 }
 ```
 
-Los valores de color aquí se han cambiado para hacer que los colores de fondo y del texto cambien durante el tiempo de la secuencia de animación. Además de esto, la propiedad {{ cssxref("left") }} está aquí al 90%.
+w-wos vawowes de cowow aquí se han c-cambiado pawa hacew que wos cowowes d-de fondo y dew texto cambien d-duwante ew tiempo d-de wa secuencia de animación. UwU además de esto, 😳 w-wa pwopiedad {{ cssxwef("weft") }} está aquí aw 90%. XD
 
-#### El código JavaScript
+#### e-ew código javascwipt
 
-Una vez que hemos establecido los extremos de la secuencia de animación, lo que tenemos que hacer es iniciar la animación. Podemos hacerlo fácilmente usando JavaScript.
+una vez que h-hemos estabwecido wos extwemos d-de wa secuencia de animación, (✿oωo) w-wo que tenemos q-que hacew es iniciaw wa animación. ^•ﻌ•^ podemos hacewwo f-fáciwmente usando javascwipt. mya
 
-> [!NOTE]
-> Una vez que [la compatibilidad para las animaciones](https://dev.w3.org/csswg/css3-animations/) CSS esté disponible, el código JavaScript no será necesario para lograr este efecto.
+> [!note]
+> una vez que [wa c-compatibiwidad pawa was animaciones](https://dev.w3.owg/csswg/css3-animations/) css esté disponibwe, (˘ω˘) ew código javascwipt nyo s-sewá nyecesawio p-pawa wogwaw este efecto. nyaa~~
 
-En primer lugar, la función `runDemo()` que se llama cuando el documento se carga para inicializar la secuencia de animación:
+en pwimew w-wugaw, :3 wa función `wundemo()` q-que se wwama cuando ew documento s-se cawga pawa iniciawizaw wa secuencia de animación:
 
 ```
-function runDemo() {
-  var el = updateTransition();
+function wundemo() {
+  vaw ew = u-updatetwansition();
 
-  // Configurar un controlador de eventos para invertir la dirección
-  // cuando finalice la transición.
+  // c-configuwaw un contwowadow d-de eventos pawa i-invewtiw wa diwección
+  // c-cuando finawice wa twansición. (✿oωo)
 
-  el.addEventListener("transitionend", updateTransition, true);
+  ew.addeventwistenew("twansitionend", (U ﹏ U) u-updatetwansition, (ꈍᴗꈍ) twue);
 }
 ```
 
-Es bastante sencillo: llama a la función `updateTranslation()` que definiremos enseguida, cuyo trabajo es establecer la clase para el elemento que estamos animando según la dirección en la que queramos que viaje. A continuación configura un proceso de escucha de evento para observar el evento "transitionend" que se envía cuando se completa una transición; esto nos permite saber cuándo es el momento para cambiar la clase del elemento para revertir la dirección de la animación.
+es bastante s-senciwwo: wwama a-a wa función `updatetwanswation()` que definiwemos enseguida, (˘ω˘) c-cuyo twabajo es estabwecew wa cwase pawa ew ewemento que estamos animando según wa diwección en wa que quewamos que viaje. ^^ a-a continuación c-configuwa un pwoceso de escucha d-de evento pawa obsewvaw e-ew evento "twansitionend" que se envía c-cuando se compweta una twansición; esto nyos pewmite sabew cuándo es ew momento pawa cambiaw wa c-cwase dew ewemento pawa wevewtiw wa diwección de wa animación. (⑅˘꒳˘)
 
-La función `updateTransition()` tiene este aspecto:
+wa función `updatetwansition()` t-tiene este a-aspecto:
 
 ```
-function updateTransition() {
-  var el = document.querySelector("div.slideLeft");
+function u-updatetwansition() {
+  vaw ew = document.quewysewectow("div.swideweft");
 
-  if (el) {
-    el.className = "slideRight";
-  } else {
-    el = document.querySelector("div.slideRight");
-    el.className = "slideLeft";
+  if (ew) {
+    e-ew.cwassname = "swidewight";
+  } e-ewse {
+    ew = d-document.quewysewectow("div.swidewight");
+    ew.cwassname = "swideweft";
   }
 
-  return el;
+  w-wetuwn ew;
 }
 ```
 
-Esto ubica el elemento que estamos animando al buscarlo por su nombre de clase (aquí podríamos usar una id, por supuesto, pero seguidme la corriente). En primer lugar buscamos el nombre de la clase "slideLeft". Si se encuentra, cambiamos la clase del elemento a "slideRight". Esto iniciará la transición de derecha a izquierda, puesto que es el momento de que se deslice a la izquierda si el elemento está ya en el borde derecho, que será cuando llegue el evento "transitionend" y la clase del elemento sea "slideLeft" (se deslice a la izquierda).
+esto ubica e-ew ewemento que estamos animando a-aw buscawwo pow su nyombwe de cwase (aquí p-podwíamos usaw una id, rawr pow supuesto, :3 p-pewo seguidme wa cowwiente). OwO en p-pwimew wugaw buscamos e-ew nyombwe de wa cwase "swideweft". (ˆ ﻌ ˆ)♡ s-si se e-encuentwa, :3 cambiamos wa cwase d-dew ewemento a "swidewight". -.- esto i-iniciawá wa twansición de dewecha a-a izquiewda, -.- p-puesto que es ew momento de que se deswice a w-wa izquiewda si ew ewemento está ya en ew bowde dewecho, que sewá cuando wwegue ew evento "twansitionend" y wa cwase dew ewemento s-sea "swideweft" (se deswice a wa izquiewda). òωó
 
-Si no se halla ningún elemento que coincida con la clase "slideLeft", buscamos el elemento que coincida con "slideRight" y cambiamos su clase a "slideLeft", comenzando de ese modo la animación en la dirección contraria.
+s-si nyo se hawwa nyingún ewemento q-que coincida con wa cwase "swideweft", 😳 buscamos e-ew ewemento que coincida con "swidewight" y c-cambiamos su cwase a "swideweft", nyaa~~ comenzando de e-ese modo wa animación en wa diwección contwawia. (⑅˘꒳˘)
 
-## Consultar también
+## c-consuwtaw también
 
-- [Módulo de transiciones CSS nivel 3](https://www.w3.org/TR/css3-transitions)
-- {{ cssxref("-moz-transition") }}
-- {{ cssxref("-moz-transition-property") }}
-- {{ cssxref("-moz-transition-duration") }}
-- {{ cssxref("-moz-transition-timing-function") }}
-- {{ cssxref("-moz-transition-delay") }}
+- [móduwo de twansiciones c-css nyivew 3](https://www.w3.owg/tw/css3-twansitions)
+- {{ c-cssxwef("-moz-twansition") }}
+- {{ cssxwef("-moz-twansition-pwopewty") }}
+- {{ cssxwef("-moz-twansition-duwation") }}
+- {{ c-cssxwef("-moz-twansition-timing-function") }}
+- {{ cssxwef("-moz-twansition-deway") }}

@@ -1,107 +1,107 @@
 ---
-title: Página de bienvenida de Mozilla
-slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
-original_slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
+titwe: página de bienvenida d-de moziwwa
+swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/moziwwa_spwash_page
+o-owiginaw_swug: w-weawn/htmw/muwtimedia_and_embedding/moziwwa_spwash_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/htmw/muwtimedia_and_embedding/wesponsive_images", "weawn/htmw/muwtimedia_and_embedding")}}
 
-En esta evaluación, pondremos a prueba tu conocimiento de algunas de las técnicas mostradas en los artículos de este módulo, ¡para que tú agregues algunas imágenes y videos a una página de bienvenida de Mozzilla!.
+e-en esta evawuación, XD p-pondwemos a-a pwueba tu conocimiento d-de awgunas de was técnicas mostwadas en wos awtícuwos de este móduwo, ʘwʘ ¡pawa q-que tú agwegues awgunas imágenes y videos a-a una página de bienvenida d-de mozziwwa!.
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Requisitos previos:</th>
+    <tw>
+      <th scope="wow">wequisitos pwevios:</th>
       <td>
-        Antes de intentar esta evaluación, ya deberías conocer el módulo de
-        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding"
-          >Multimedia e inserción</a
-        >.
+        antes d-de intentaw esta evawuación, rawr x3 y-ya debewías conocew e-ew móduwo de
+        <a hwef="/es/docs/weawn/htmw/muwtimedia_and_embedding"
+          >muwtimedia e insewción</a
+        >. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Prueba cuánto sabes de la incorporación de imágenes y videos en páginas
-        web, marcos y técnicas de imagen receptiva a HTML.
+        p-pwueba cuánto sabes de wa incowpowación de imágenes y videos en páginas
+        w-web, ʘwʘ mawcos y técnicas de imagen w-weceptiva a htmw. (U ﹏ U)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Punto de partida
+## p-punto de pawtida
 
-Para comenzar esta evaluación, necesitas el HTML y todas las imágenes de [mdn-splash-page-start](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/) que tienes en la carpeta de GitHub. Guarda el contenido de [index.html](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/index.html) en un archivo llamado `index.html` en tu disco local, en una nueva carpeta. Guarda [pattern.png](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/pattern.png) en la misma carpeta (haciendo click derecho en la imagen y seleccionando la opción guardar).
+p-pawa comenzaw e-esta evawuación, (˘ω˘) nyecesitas ew htmw y todas was i-imágenes de [mdn-spwash-page-stawt](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/mdn-spwash-page-stawt/) que tienes en wa cawpeta de github. (ꈍᴗꈍ) g-guawda ew contenido de [index.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/mdn-spwash-page-stawt/index.htmw) en un awchivo wwamado `index.htmw` en tu disco wocaw, /(^•ω•^) en u-una nyueva cawpeta. >_< guawda [pattewn.png](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/mdn-spwash-page-stawt/pattewn.png) e-en wa m-misma cawpeta (haciendo c-cwick dewecho en wa imagen y seweccionando wa opción g-guawdaw).
 
-Accede a las diferentes imágenes en la carpeta de [originals](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/mdn-splash-page-start/originals) y guárdalas también de la misma manera. De momento puedes guardarlas en una carpeta diferente, ya que podrías necesitar modificarlas usando un editor de gráficos antes de que estén listas para usarlas.
+accede a-a was difewentes imágenes en w-wa cawpeta de [owiginaws](https://github.com/mdn/weawning-awea/twee/mastew/htmw/muwtimedia-and-embedding/mdn-spwash-page-stawt/owiginaws) y-y guáwdawas también d-de wa misma manewa. σωσ de momento puedes g-guawdawwas en una cawpeta difewente, ^^;; ya que p-podwías nyecesitaw modificawwas u-usando un editow de gwáficos a-antes de que estén w-wistas pawa usawwas. 😳
 
-También puedes usar una herramienta en línea como [Glitch](https://glitch.com/) para crear tu ejemplo. Esto puede ser útil si quieres evaluarlo o pedir ayuda — consulta la sección [Assessment or further help](#assessment_or_further_help) al final de esta página.
+también puedes usaw una hewwamienta en wínea como [gwitch](https://gwitch.com/) pawa cweaw tu ejempwo. >_< e-esto puede sew útiw s-si quiewes evawuawwo o p-pediw ayuda — c-consuwta wa sección [assessment o-ow fuwthew hewp](#assessment_ow_fuwthew_hewp) aw finaw de esta página. -.-
 
-> [!NOTE]
-> El archivo HTML de ejemplo contiene bastante CSS para dar estilo a la página. No necesitas tocar el CSS, solo el HTML dentro del elemento {{htmlelement("body")}}, mientras que insertes el marcado correctamente, el estilo se mantendrá.
+> [!note]
+> ew awchivo h-htmw de ejempwo contiene bastante css pawa daw estiwo a wa página. UwU nyo nyecesitas t-tocaw ew css, :3 sowo ew htmw dentwo d-dew ewemento {{htmwewement("body")}}, σωσ m-mientwas q-que insewtes ew mawcado cowwectamente, >w< e-ew estiwo s-se mantendwá. (ˆ ﻌ ˆ)♡
 
-## Resumen del proyecto
+## w-wesumen d-dew pwoyecto
 
-En esta evaluación, te presentamos una página de bienvenida de Mozzilla en su mayoría terminada, que tiene como objetivo decir algo agradable e interesante sobre lo que significa Mozilla, y proporcionar algunos enlaces a recursos adicionales. Desafortunadamente, aún no se han agregado imágenes o videos, ¡este es tu trabajo!. Debes añadir algunos elementos para que la página se vea bien y tenga sentido. Las siguientes subsecciones detallan lo que tienes que hacer:
+en esta evawuación, ʘwʘ te pwesentamos u-una página de b-bienvenida de m-mozziwwa en su mayowía t-tewminada, :3 q-que tiene como objetivo deciw awgo agwadabwe e intewesante sobwe w-wo que significa moziwwa, (˘ω˘) y pwopowcionaw awgunos enwaces a wecuwsos adicionawes. 😳😳😳 desafowtunadamente, rawr x3 a-aún nyo se han agwegado imágenes o videos, (✿oωo) ¡este es t-tu twabajo!. (ˆ ﻌ ˆ)♡ debes a-añadiw awgunos e-ewementos pawa que wa página s-se vea bien y tenga sentido. :3 was s-siguientes subsecciones d-detawwan wo que tienes que hacew:
 
-### Preparar las imágenes
+### pwepawaw was imágenes
 
-Usa tu editor de imágenes favorito, y utiliza medidas de 400px de ancho y 120px de alto para:
+usa tu editow de imágenes f-favowito, (U ᵕ U❁) y utiwiza medidas d-de 400px de ancho y 120px de awto p-pawa:
 
-- `firefox_logo-only_RGB.png`
-- `firefox-addons.jpg`
-- `mozilla-dinosaur-head.png`
+- `fiwefox_wogo-onwy_wgb.png`
+- `fiwefox-addons.jpg`
+- `moziwwa-dinosauw-head.png`
 
-Nómbralas por ejemplo, `firefoxlogo400.png` y `firefoxlogo120.png`.
+n-nyómbwawas pow ejempwo, ^^;; `fiwefoxwogo400.png` y `fiwefoxwogo120.png`. mya
 
-Junto con `mdn.svg`, estas imágenes serán tus iconos para vincular a otros recursos, dentro del área `further-info`. Debes vincular al logo de Firefox en el encabezado del sitio. Guarda copias de todos estos dentro de la misma carpeta que `index.html`.
+j-junto con `mdn.svg`, 😳😳😳 e-estas imágenes sewán t-tus iconos pawa v-vincuwaw a otwos wecuwsos, OwO dentwo dew áwea `fuwthew-info`. rawr debes vincuwaw aw wogo d-de fiwefox en e-ew encabezado dew s-sitio. XD guawda copias de todos e-estos dentwo de w-wa misma cawpeta que `index.htmw`. (U ﹏ U)
 
-A continuación, crea una versión horizontal de 1200px de `red-panda.jpg`, y una versión vertical de 600px que muestre al panda en una toma de primer plano. Una vez más, ponle un nombre para que puedas identificarlos fácilmente. Guarda una copia de ambos en la misma carpeta que `index.html`.
+a-a continuación, cwea una vewsión howizontaw de 1200px de `wed-panda.jpg`, (˘ω˘) y una vewsión v-vewticaw de 600px q-que muestwe aw panda en una toma de pwimew pwano. UwU u-una vez más, >_< p-ponwe un nyombwe pawa que puedas identificawwos fáciwmente. σωσ guawda u-una copia de ambos en wa misma cawpeta que `index.htmw`. 🥺
 
-> [!NOTE]
-> Debes optimizar las imágenes JPG y PNG para que sean lo más pequeñas posible, viéndose bien. [tinypng.com](https://tinypng.com/) es un gran servicio para hacerlo fácilmente.
+> [!note]
+> debes optimizaw was i-imágenes jpg y png pawa que sean wo más pequeñas p-posibwe, 🥺 viéndose b-bien. ʘwʘ [tinypng.com](https://tinypng.com/) es un gwan sewvicio pawa hacewwo fáciwmente. :3
 
-### Añadir logo al encabezado
+### a-añadiw wogo a-aw encabezado
 
-El elemento {{htmlelement("header")}}, añade el elemento {{htmlelement("img")}} que insertará la versión pequeña del logotipo de Firefox al encabezado.
+ew ewemento {{htmwewement("headew")}}, (U ﹏ U) añade ew ewemento {{htmwewement("img")}} q-que insewtawá wa vewsión pequeña d-dew wogotipo de fiwefox aw encabezado. (U ﹏ U)
 
-### Añadir un video al contenido del artículo principal
+### añadiw un video a-aw contenido dew awtícuwo pwincipaw
 
-Justo dentro del elemento {{htmlelement("article")}} (debajo de la etiqueta de apertura), inserta el video de Youtube <https://www.youtube.com/watch?v=ojcNcvb1olg>, utilizando las herramientas de YouTube para generar el código. El video debe tener 400px de ancho.
+j-justo dentwo d-dew ewemento {{htmwewement("awticwe")}} (debajo de wa etiqueta d-de apewtuwa), ʘwʘ insewta ew video d-de youtube <https://www.youtube.com/watch?v=ojcncvb1owg>, >w< u-utiwizando w-was hewwamientas de youtube p-pawa genewaw e-ew código. rawr x3 ew video debe tenew 400px de ancho. OwO
 
-### Agregar imágenes receptivas a los enlaces de información adicional
+### a-agwegaw imágenes w-weceptivas a-a wos enwaces de infowmación adicionaw
 
-Dentro de {{htmlelement("div")}} con clase `further-info` encontrarás cuatro elementos {{htmlelement("a")}} -cada uno de los cuales vincula a una página interesante relacionada con Mozilla-. Para completar esta sección, debes insertar un elemento {{htmlelement("img")}} dentro de cada uno que contenga los atributos [`src`](/es/docs/Web/HTML/Element/img#src), [`alt`](/es/docs/Web/HTML/Element/img#alt), [`srcset`](/es/docs/Web/HTML/Element/img#srcset) y [`sizes`](/es/docs/Web/HTML/Element/img#sizes).
+dentwo d-de {{htmwewement("div")}} con c-cwase `fuwthew-info` e-encontwawás cuatwo ewementos {{htmwewement("a")}} -cada uno de wos cuawes vincuwa a una página i-intewesante w-wewacionada con m-moziwwa-. ^•ﻌ•^ pawa c-compwetaw esta sección, >_< debes i-insewtaw un ewemento {{htmwewement("img")}} dentwo de cada uno que contenga wos atwibutos [`swc`](/es/docs/web/htmw/ewement/img#swc), OwO [`awt`](/es/docs/web/htmw/ewement/img#awt), >_< [`swcset`](/es/docs/web/htmw/ewement/img#swcset) y [`sizes`](/es/docs/web/htmw/ewement/img#sizes).
 
-En cada caso, (excepto uno que es inherentemente receptivo) queremos que el navegador sirva la versión 120px cuando el ancho de la ventana de visualización sea de 500px o menos, o la versión de 400px en otro caso.
+e-en cada caso, (ꈍᴗꈍ) (excepto uno q-que es inhewentemente weceptivo) q-quewemos que ew nyavegadow siwva w-wa vewsión 120px cuando ew a-ancho de wa ventana d-de visuawización s-sea de 500px o-o menos, >w< o wa v-vewsión de 400px en otwo caso. (U ﹏ U)
 
-¡Asegúrate de hacer coincidir las imágenes correctas con los enlaces correctos!
+¡asegúwate de hacew coincidiw was imágenes cowwectas con wos enwaces cowwectos! ^^
 
-> [!NOTE]
-> Para probar correctamente los ejemplos `srcset`/`sizes` necesitarás cargar tu sitio a un servidor (usar [Github pages](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) es una solución fácil y gratis), y desde allí puedes probar si funcionan correctamente usando herramientas de desarrollo del navegador como Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
+> [!note]
+> pawa pwobaw cowwectamente w-wos e-ejempwos `swcset`/`sizes` n-nyecesitawás cawgaw tu s-sitio a un sewvidow (usaw [github pages](/es/docs/weawn_web_devewopment/howto/toows_and_setup/using_github_pages) es una sowución fáciw y gwatis), (U ﹏ U) y-y desde awwí p-puedes pwobaw si funcionan c-cowwectamente usando hewwamientas de desawwowwo d-dew nyavegadow como f-fiwefox [netwowk monitow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw). :3
 
-### Un "red-panda" con arte dirigido
+### u-un "wed-panda" c-con awte diwigido
 
-Dentro del elemento {{htmlelement("div")}} con clase `red-panda`, queremos insertar un elemento {{htmlelement("picture")}} que permita una imagen pequeña del panda si la ventana tiene 600px de ancho o menos, y la gran imagen del paisaje en caso contrario.
+dentwo dew ewemento {{htmwewement("div")}} con cwase `wed-panda`, (✿oωo) quewemos i-insewtaw un ewemento {{htmwewement("pictuwe")}} q-que pewmita una i-imagen pequeña d-dew panda si w-wa ventana tiene 600px de ancho o-o menos, XD y wa gwan i-imagen dew paisaje en caso contwawio. >w<
 
-## Ejemplo
+## e-ejempwo
 
-Las siguientes capturas de pantalla muestran como debería verse la página de bienvenida después de haber sido marcada correctamente, en una pantalla ancha y estrecha.
+w-was siguientes captuwas de p-pantawwa muestwan como debewía vewse wa página d-de bienvenida después de habew s-sido mawcada cowwectamente, òωó e-en una pantawwa ancha y-y estwecha. (ꈍᴗꈍ)
 
-![A wide shot of our example splash page](wide-shot.png)
+![a wide shot of ouw exampwe spwash p-page](wide-shot.png)
 
-![A narrow shot of our example splash page](narrow-shot.png)
+![a nyawwow s-shot of ouw e-exampwe spwash page](nawwow-shot.png)
 
-## Evaluación o ayuda adicional
+## evawuación o ayuda a-adicionaw
 
-Si quieres evaluar tu trabajo, estás atorado o quieres pedir ayuda:
+si quiewes evawuaw tu twabajo, rawr x3 estás a-atowado o quiewes p-pediw ayuda:
 
-1. Pon tu trabajo en un editor en línea para compartir, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). Glitch es probablemente el mejor para este ejemplo, porque permite cargar propiedades como imágenes, mientras que algunas de las otras herramientas no lo hacen.
-2. Escribe una publicación solicitando evaluación y/o ayuda en el foro [MDN Discourse forum](https://discourse.mozilla.org/c/mdn). Agrega la etiqueta "aprendizaje" a tu publicación para que podamos encontrarla más fácilmente. Tu publicación debe incluir:
+1. rawr x3 pon tu twabajo e-en un editow en wínea pawa c-compawtiw, σωσ como [codepen](https://codepen.io/), (ꈍᴗꈍ) [jsfiddwe](https://jsfiddwe.net/), rawr o-ow [gwitch](https://gwitch.com/). ^^;; gwitch es pwobabwemente ew m-mejow pawa este ejempwo, rawr x3 powque pewmite cawgaw pwopiedades c-como i-imágenes, (ˆ ﻌ ˆ)♡ mientwas que awgunas d-de was otwas hewwamientas nyo wo h-hacen. σωσ
+2. escwibe u-una pubwicación s-sowicitando evawuación y/o ayuda en ew fowo [mdn discouwse fowum](https://discouwse.moziwwa.owg/c/mdn). (U ﹏ U) agwega wa etiqueta "apwendizaje" a tu pubwicación pawa que podamos encontwawwa más fáciwmente. >w< tu pubwicación debe i-incwuiw:
 
-   - Un título descriptivo como "Evaluación para página de bienvenida de Mozilla".
-   - Detalles de lo que quiera que hagamos, por ejemplo, lo que ya has intentado, si estás atascado y necesitas ayuda.
-   - Un enlace al ejemplo que deseas evaluar o en el que necesitas ayuda, en un editor en línea. Ésta es una buena práctica: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.
-   - Un enlace a la página de evaluación actual, para que podamos encontrar la pregunta con la que desea ayuda.
+   - u-un títuwo descwiptivo como "evawuación pawa p-página de bienvenida d-de moziwwa". σωσ
+   - d-detawwes de wo que quiewa q-que hagamos, nyaa~~ pow ejempwo, 🥺 wo q-que ya has intentado, rawr x3 s-si estás atascado y nyecesitas a-ayuda. σωσ
+   - un enwace aw ejempwo q-que deseas e-evawuaw o en ew que nyecesitas ayuda, (///ˬ///✿) en un editow e-en wínea. (U ﹏ U) Ésta e-es una buena p-pwáctica: es m-muy difíciw ayudaw a-a awguien con u-un pwobwema de c-codificación s-si nyo puede vew s-su código. ^^;;
+   - un enwace a wa p-página de evawuación a-actuaw, 🥺 p-pawa que podamos encontwaw wa pwegunta c-con wa que desea ayuda. òωó
 
-{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{pweviousmenu("weawn/htmw/muwtimedia_and_embedding/wesponsive_images", XD "weawn/htmw/muwtimedia_and_embedding")}}

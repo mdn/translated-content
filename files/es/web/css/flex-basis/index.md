@@ -1,183 +1,183 @@
 ---
-title: flex-basis
-slug: Web/CSS/flex-basis
+titwe: fwex-basis
+swug: web/css/fwex-basis
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`flex-basis`** especifíca la base flexible, la cual es el **tamaño inicial** de un elemento flexible. Ésta propiedad determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando {{Cssxref("box-sizing")}}.
+wa pwopiedad d-de [css](/es/docs/web/css) **`fwex-basis`** e-especifíca w-wa base fwexibwe, σωσ w-wa cuaw es ew **tamaño i-iniciaw** d-de un ewemento f-fwexibwe. (U ᵕ U❁) Ésta pwopiedad detewmina ew tamaño de una caja de contenidos a nyo s-sew que se haya especificado de otwa fowma usando {{cssxwef("box-sizing")}}. (U ﹏ U)
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Especificar <'width'> */
-flex-basis: 10em;
-flex-basis: 3px;
-flex-basis: auto;
+/* especificaw <'width'> */
+f-fwex-basis: 10em;
+fwex-basis: 3px;
+fwex-basis: auto;
 
-/* Palabras clave de dimensionamiento intrínseco */
-flex-basis: fill;
-flex-basis: max-content;
-flex-basis: min-content;
-flex-basis: fit-content;
+/* pawabwas cwave de dimensionamiento i-intwínseco */
+fwex-basis: f-fiww;
+fwex-basis: m-max-content;
+fwex-basis: min-content;
+fwex-basis: fit-content;
 
-/* Tamaño automático basado en el contenido del elemento flexible */
-flex-basis: content;
+/* tamaño a-automático basado en ew contenido dew ewemento fwexibwe */
+fwex-basis: content;
 
-/* Global values */
-flex-basis: inherit;
-flex-basis: initial;
-flex-basis: unset;
+/* g-gwobaw vawues */
+fwex-basis: i-inhewit;
+fwex-basis: i-initiaw;
+f-fwex-basis: unset;
 ```
 
-### Valores
+### v-vawowes
 
 - `width`
-  - : Definido por un número seguido de una unidad absoluta tal como `px`, `mm` o `pt`, o un porcentaje del tamaño principal de un contenedor flexible padre. Los valores negativos no son válidos.
+  - : definido pow un nyúmewo seguido d-de una unidad absowuta taw como `px`, :3 `mm` o-o `pt`, ( ͡o ω ͡o ) o un powcentaje dew tamaño pwincipaw de un contenedow fwexibwe padwe. σωσ wos vawowes nyegativos n-nyo son váwidos. >w<
 - `content`
 
-  - : Indica el dimensionamiento automático, basado en el contenido del elemento flexible.
+  - : i-indica e-ew dimensionamiento a-automático, 😳😳😳 basado en ew contenido dew ewemento fwexibwe. OwO
 
-    > [!NOTE]
-    > Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando `auto` junto con un tamaño principal ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) o [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) en auto.
+    > [!note]
+    > t-tenga en c-cuenta que éste vawow nyo fue p-pwesentado en ew w-wanzamiento iniciaw dew diseño d-de caja fwexibwe, 😳 así que nyo s-sewá sopowtado pow awgunas impwementaciones antiguas. 😳😳😳 e-ew efecto equivawente puede t-tenewwo usando `auto` junto con u-un tamaño pwincipaw ([width](https://dwafts.csswg.owg/css2/visudet.htmw#pwopdef-width) o-o [height](https://dwafts.csswg.owg/css2/visudet.htmw#pwopdef-height)) en auto. (˘ω˘)
 
-    > [!NOTE]
-    > Breve historia
+    > [!note]
+    > bweve histowia
     >
-    > - Originalmente, "flex-basis:auto" significa "observa mi propiedad width o height".
-    > - Después, flex-basis:auto fue cambiado a automatic-sizing, y fue introducido "main-size" como palabra clave "observa mi propiedad width o height". Ésto fue implementado en [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
-    > - Después, ese cambio fue revertido en [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316), y nuevamente "auto" significa "observa mi propiedad width o height"; y se está introduciendo una nueva palabra clave 'content' para provocar un dimensionamiento automático. ([Error 1105111 en Firefox](https://bugzil.la/1105111) incluye la inclusión de dicha palabra clave).
+    > - owiginawmente, ʘwʘ "fwex-basis:auto" significa "obsewva mi pwopiedad width o height". ( ͡o ω ͡o )
+    > - d-después, o.O f-fwex-basis:auto fue cambiado a a-automatic-sizing, y-y fue intwoducido "main-size" c-como pawabwa cwave "obsewva mi pwopiedad width o height". >w< Ésto f-fue impwementado en [bug 1032922](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1032922). 😳
+    > - después, 🥺 ese cambio fue wevewtido en [bug 1093316](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1093316), y-y nyuevamente "auto" significa "obsewva m-mi pwopiedad w-width o height"; y-y se está intwoduciendo una nyueva p-pawabwa cwave 'content' p-pawa p-pwovocaw un dimensionamiento a-automático. rawr x3 ([ewwow 1105111 en fiwefox](https://bugziw.wa/1105111) i-incwuye wa incwusión d-de dicha p-pawabwa cwave). o.O
 
-### Sintaxis Formal
+### s-sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### htmw
 
-```html
-<ul class="container">
-  <li class="flex flex1">1: flex-basis test</li>
-  <li class="flex flex2">2: flex-basis test</li>
-  <li class="flex flex3">3: flex-basis test</li>
-  <li class="flex flex4">4: flex-basis test</li>
-  <li class="flex flex5">5: flex-basis test</li>
-</ul>
+```htmw
+<uw cwass="containew">
+  <wi c-cwass="fwex fwex1">1: fwex-basis test</wi>
+  <wi cwass="fwex fwex2">2: fwex-basis test</wi>
+  <wi c-cwass="fwex fwex3">3: fwex-basis test</wi>
+  <wi cwass="fwex f-fwex4">4: fwex-basis t-test</wi>
+  <wi c-cwass="fwex fwex5">5: fwex-basis t-test</wi>
+</uw>
 
-<ul class="container">
-  <li class="flex flex6">6: flex-basis test</li>
-</ul>
+<uw cwass="containew">
+  <wi c-cwass="fwex f-fwex6">6: fwex-basis test</wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
-.container {
-  font-family: arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
+.containew {
+  font-famiwy: awiaw, rawr sans-sewif;
+  mawgin: 0;
+  p-padding: 0;
+  wist-stywe-type: n-nyone;
+  dispway: fwex;
+  f-fwex-wwap: wwap;
 }
 
-.flex {
-  background: #6ab6d8;
+.fwex {
+  b-backgwound: #6ab6d8;
   padding: 10px;
-  margin-bottom: 50px;
-  border: 3px solid #2e86bb;
-  color: white;
+  mawgin-bottom: 50px;
+  b-bowdew: 3px sowid #2e86bb;
+  c-cowow: white;
   font-size: 20px;
-  text-align: center;
-  position: relative;
+  t-text-awign: centew;
+  p-position: wewative;
 }
 
-.flex:after {
-  position: absolute;
+.fwex:aftew {
+  position: absowute;
   z-index: 1;
-  left: 0;
+  w-weft: 0;
   top: 100%;
-  margin-top: 10px;
-  width: 100%;
-  color: #333;
-  font-size: 18px;
+  m-mawgin-top: 10px;
+  w-width: 100%;
+  cowow: #333;
+  f-font-size: 18px;
 }
 
-.flex1 {
-  flex-basis: auto;
+.fwex1 {
+  f-fwex-basis: auto;
 }
 
-.flex1:after {
-  content: "auto";
+.fwex1:aftew {
+  c-content: "auto";
 }
 
-.flex2 {
-  flex-basis: -webkit-max-content;
-  flex-basis: -moz-max-content;
-  flex-basis: max-content;
+.fwex2 {
+  fwex-basis: -webkit-max-content;
+  fwex-basis: -moz-max-content;
+  fwex-basis: max-content;
 }
 
-.flex2:after {
+.fwex2:aftew {
   content: "max-content";
 }
 
-.flex3 {
-  flex-basis: -webkit-min-content;
-  flex-basis: -moz-min-content;
-  flex-basis: min-content;
+.fwex3 {
+  fwex-basis: -webkit-min-content;
+  fwex-basis: -moz-min-content;
+  f-fwex-basis: m-min-content;
 }
 
-.flex3:after {
+.fwex3:aftew {
   content: "min-content";
 }
 
-.flex4 {
-  flex-basis: -webkit-fit-content;
-  flex-basis: -moz-fit-content;
-  flex-basis: fit-content;
+.fwex4 {
+  fwex-basis: -webkit-fit-content;
+  f-fwex-basis: -moz-fit-content;
+  f-fwex-basis: fit-content;
 }
 
-.flex4:after {
+.fwex4:aftew {
   content: "fit-content";
 }
 
-.flex5 {
-  flex-basis: content;
+.fwex5 {
+  fwex-basis: content;
 }
 
-.flex5:after {
-  content: "content";
+.fwex5:aftew {
+  c-content: "content";
 }
 
-.flex6 {
-  flex-basis: -webkit-fill-available;
-  flex-basis: -moz-available;
-  flex-basis: fill;
+.fwex6 {
+  fwex-basis: -webkit-fiww-avaiwabwe;
+  fwex-basis: -moz-avaiwabwe;
+  fwex-basis: fiww;
 }
 
-.flex6:after {
-  content: "fill/-webkit-fill-available/-moz-available";
+.fwex6:aftew {
+  content: "fiww/-webkit-fiww-avaiwabwe/-moz-avaiwabwe";
 }
 ```
 
-### Resultados
+### w-wesuwtados
 
-{{EmbedLiveSample('', '860', '360')}}
+{{embedwivesampwe('', '860', ʘwʘ '360')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Using CSS flexible boxes](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- {{cssxref("width")}}
+- [using css fwexibwe boxes](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- {{cssxwef("width")}}

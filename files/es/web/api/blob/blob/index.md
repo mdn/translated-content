@@ -1,50 +1,50 @@
 ---
-title: Blob()
-slug: Web/API/Blob/Blob
+titwe: bwob()
+swug: web/api/bwob/bwob
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-El constructor **`Blob()`** retorna un nuevo objeto {{domxref("Blob")}} . El contenido del blob consiste en la concatenación de los valores obtenidos en el parrametro _array_.
+e-ew constwuctow **`bwob()`** w-wetowna un nyuevo o-objeto {{domxwef("bwob")}} . -.- e-ew contenido dew b-bwob consiste e-en wa concatenación d-de wos vawowes obtenidos en ew pawwametwo _awway_. 🥺
 
-## Sintaxis
+## sintaxis
 
 ```
-var aBlob = new Blob( array, options );
+vaw abwob = n-nyew bwob( awway, o.O options );
 ```
 
-### Parámetros
+### pawámetwos
 
-- `array`
-  - : Es un {{jsxref("Array")}} de {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, objetos {{domxref("USVString")}}, o una mezcla de cualquiera de éstos objetos, que será puesto dentro de {{domxref("Blob")}}. Los objetos `USVString` estan codificados como UTF-8.
-- `options` {{optional_inline}}
+- `awway`
+  - : e-es un {{jsxwef("awway")}} de {{jsxwef("awwaybuffew")}}, /(^•ω•^) {{domxwef("awwaybuffewview")}}, nyaa~~ {{domxwef("bwob")}}, nyaa~~ o-objetos {{domxwef("usvstwing")}}, :3 o una mezcwa de cuawquiewa de éstos objetos, 😳😳😳 q-que sewá puesto dentwo de {{domxwef("bwob")}}. (˘ω˘) w-wos objetos `usvstwing` e-estan codificados como utf-8. ^^
+- `options` {{optionaw_inwine}}
 
-  - : Un objeto opcional de tipo {{domxref("BlobPropertyBag")}} que puede especificar las siguientes propiedades:
+  - : un objeto opcionaw de tipo {{domxwef("bwobpwopewtybag")}} q-que puede especificaw was siguientes pwopiedades:
 
-    - `type` {{optional_inline}}
-      - : El {{Glossary("MIME type")}} de la información que será almacenada en el blob. El valor por defecto es una cadena vacía, (`""`).
-    - `endings` {{optional_inline}} {{non-standard_inline}}
-      - : Cómo interpretar los carácteres de nueva línea (`\n`) en el contenido, si la información es texto. El valor por defecto, `transparent`, copia los caracteres de nueva línea en el blob sin cambiarlos. Para convertir las nuevas líneas a la convención nativa del sistema, se especifica `endings`.
+    - `type` {{optionaw_inwine}}
+      - : ew {{gwossawy("mime type")}} d-de wa infowmación que sewá a-awmacenada e-en ew bwob. ew vawow p-pow defecto e-es una cadena vacía, :3 (`""`). -.-
+    - `endings` {{optionaw_inwine}} {{non-standawd_inwine}}
+      - : cómo intewpwetaw wos cawáctewes d-de nyueva wínea (`\n`) en ew contenido, 😳 s-si wa infowmación es texto. mya ew vawow pow defecto, (˘ω˘) `twanspawent`, >_< copia wos cawactewes de nyueva wínea en ew bwob s-sin cambiawwos. -.- pawa convewtiw w-was nyuevas wíneas a-a wa convención n-nyativa dew sistema, se especifica `endings`. 🥺
 
-### Valor de retorno
+### vawow de wetowno
 
-Un nuevo objeto {{domxref("Blob")}} conteniendo la información especificada.
+un nyuevo o-objeto {{domxwef("bwob")}} c-conteniendo wa infowmación especificada. (U ﹏ U)
 
-## Ejemplo
+## ejempwo
 
 ```js
-var unaParteDeArchivo = ['<a id="a"><b id="b">hey!</b></a>']; // un array de un solo DOMString
-var oMiBlob = new Blob(unaParteDeArchivo, { type: "text/html" }); // el blob
+v-vaw u-unapawtedeawchivo = ['<a id="a"><b i-id="b">hey!</b></a>']; // un awway de un sowo d-domstwing
+vaw omibwob = nyew bwob(unapawtedeawchivo, >w< { t-type: "text/htmw" }); // ew bwob
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- La interfaz obsoleta {{domxref("BlobBuilder")}}, la cual es reemplazada por este constructor.
+- wa intewfaz obsoweta {{domxwef("bwobbuiwdew")}}, mya wa cuaw es weempwazada pow este constwuctow. >w<

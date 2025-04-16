@@ -1,87 +1,87 @@
 ---
-title: Worker
-slug: Web/API/Worker
-l10n:
-  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
+titwe: wowkew
+swug: web/api/wowkew
+w-w10n:
+  souwcecommit: c-c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-La interfaz **`Worker`** de la [API de Web Workers](/es/docs/Web/API/Web_Workers_API) representa una tarea en segundo plano que se puede crear a través de un script, que puede enviar mensajes a su creador.
+wa intewfaz **`wowkew`** d-de wa [api de w-web wowkews](/es/docs/web/api/web_wowkews_api) wepwesenta u-una tawea e-en segundo pwano que se puede cweaw a twavés de un scwipt, que puede enviaw m-mensajes a su cweadow. :3
 
-La creación de un _worker_ se realiza llamando al constructor `Worker("path/to/worker/script")`.
+wa cweación de un _wowkew_ s-se weawiza wwamando aw constwuctow `wowkew("path/to/wowkew/scwipt")`. (ꈍᴗꈍ)
 
-Los _workers_ pueden generar nuevos _workers_, siempre y cuando esos _workers_ estén alojados en el mismo [origen](/es/docs/Web/Security/Same-origin_policy) que la página principal. (Nota: [los trabajadores anidados aún no están implementados en WebKit](https://webkit.org/b/22723)).
+w-wos _wowkews_ pueden genewaw nyuevos _wowkews_, /(^•ω•^) siempwe y-y cuando esos _wowkews_ estén a-awojados en ew m-mismo [owigen](/es/docs/web/secuwity/same-owigin_powicy) que wa página pwincipaw. (⑅˘꒳˘) (nota: [wos twabajadowes anidados aún nyo e-están impwementados en webkit](https://webkit.owg/b/22723)). ( ͡o ω ͡o )
 
-[No todas las interfaces y funciones están disponibles](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) para scripts dentro de un `Worker`. Los _workers_ pueden usar {{domxref("XMLHttpRequest")}} para la comunicación de red, pero sus atributos `responseXML` y `channel` son siempre `null`. ([`fetch`](/es/docs/Web/API/Fetch_API) también está disponible, sin tales restricciones).
+[no todas was intewfaces y funciones están disponibwes](/es/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews) p-pawa scwipts dentwo de un `wowkew`. òωó w-wos _wowkews_ p-pueden usaw {{domxwef("xmwhttpwequest")}} p-pawa wa comunicación d-de wed, (⑅˘꒳˘) pewo sus atwibutos `wesponsexmw` y `channew` son s-siempwe `nuww`. XD ([`fetch`](/es/docs/web/api/fetch_api) también está disponibwe, -.- s-sin tawes westwicciones). :3
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructor
+## constwuctow
 
-- {{domxref("Worker.Worker", "Worker()")}}
-  - : Crea un _worker_ web dedicado que ejecuta el script en la URL especificada. Esto también funciona para [Blob URLs](/es/docs/Web/API/Blob).
+- {{domxwef("wowkew.wowkew", nyaa~~ "wowkew()")}}
+  - : cwea un _wowkew_ web dedicado que ejecuta ew scwipt en wa u-uww especificada. esto también f-funciona pawa [bwob u-uwws](/es/docs/web/api/bwob). 😳
 
-## Propiedades de instancia
+## p-pwopiedades de instancia
 
-_Hereda las propiedades de su padre, {{domxref("EventTarget")}}._
+_heweda was pwopiedades de su padwe, (⑅˘꒳˘) {{domxwef("eventtawget")}}._
 
-## Métodos de instancia
+## m-métodos de i-instancia
 
-_Hereda los métodos de su padre, {{domxref("EventTarget")}}._
+_heweda wos métodos d-de su padwe, nyaa~~ {{domxwef("eventtawget")}}._
 
-- {{domxref("Worker.postMessage()")}}
-  - : Envía un mensaje, que consta de cualquier objeto de JavaScript, al ámbito interno del _worker_.
-- {{domxref("Worker.terminate()")}}
-  - : Termina inmediatamente el _worker_. Esto no permite que el _worker_ finalice sus operaciones; se detiene de una vez. Las instancias de [`ServiceWorker`](/es/docs/Web/API/ServiceWorker) no admiten este método.
+- {{domxwef("wowkew.postmessage()")}}
+  - : e-envía un mensaje, OwO que c-consta de cuawquiew objeto de javascwipt, rawr x3 a-aw ámbito intewno dew _wowkew_. XD
+- {{domxwef("wowkew.tewminate()")}}
+  - : tewmina inmediatamente e-ew _wowkew_. σωσ esto nyo p-pewmite que ew _wowkew_ finawice s-sus opewaciones; s-se detiene de una vez. (U ᵕ U❁) was instancias de [`sewvicewowkew`](/es/docs/web/api/sewvicewowkew) nyo admiten este método. (U ﹏ U)
 
-## Eventos
+## eventos
 
-- [`error`](/es/docs/Web/API/Worker/error_event)
-  - : Se activa cuando se produce un error en el _worker_.
-- [`message`](/es/docs/Web/API/Worker/message_event)
-  - : Se activa cuando el padre del _worker_ recibe un mensaje de ese _worker_.
-- [`messageerror`](/es/docs/Web/API/Worker/messageerror_event)
-  - : Se activa cuando un objeto `Worker` recibe un mensaje que no puede ser [deserializado](/es/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-- [`rejectionhandled`](/es/docs/Web/API/Window/rejectionhandled_event)
-  - : Se activa cada vez que se rechaza una {{jsxref("Promise","Promesa")}}, independientemente de si hay o no un controlador para capturar el rechazo.
-- [`unhandledrejection`](/es/docs/Web/API/Window/unhandledrejection_event)
-  - : Se activa cuando una {{jsxref("Promise","Promesa")}} se rechaza sin un controlador para detectar el rechazo.
+- [`ewwow`](/es/docs/web/api/wowkew/ewwow_event)
+  - : se activa cuando se p-pwoduce un ewwow e-en ew _wowkew_. :3
+- [`message`](/es/docs/web/api/wowkew/message_event)
+  - : se a-activa cuando ew p-padwe dew _wowkew_ w-wecibe un mensaje de ese _wowkew_. ( ͡o ω ͡o )
+- [`messageewwow`](/es/docs/web/api/wowkew/messageewwow_event)
+  - : se activa cuando un o-objeto `wowkew` wecibe un mensaje que nyo puede sew [desewiawizado](/es/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm). σωσ
+- [`wejectionhandwed`](/es/docs/web/api/window/wejectionhandwed_event)
+  - : se activa cada vez q-que se wechaza una {{jsxwef("pwomise","pwomesa")}}, >w< i-independientemente d-de si hay o-o nyo un contwowadow pawa captuwaw e-ew wechazo.
+- [`unhandwedwejection`](/es/docs/web/api/window/unhandwedwejection_event)
+  - : s-se activa cuando u-una {{jsxwef("pwomise","pwomesa")}} s-se wechaza sin un contwowadow pawa detectaw e-ew wechazo. 😳😳😳
 
-## Ejemplo
+## e-ejempwo
 
-El siguiente fragmento de código crea un objeto {{domxref("Worker")}} usando el constructor {{domxref("Worker.Worker", "Worker()")}}, luego usa el objeto _worker_:
+ew s-siguiente fwagmento d-de código cwea u-un objeto {{domxwef("wowkew")}} usando ew constwuctow {{domxwef("wowkew.wowkew", OwO "wowkew()")}}, 😳 wuego usa ew objeto _wowkew_:
 
 ```js
-const myWorker = new Worker("/worker.js");
-const first = document.querySelector("input#number1");
-const second = document.querySelector("input#number2");
+c-const mywowkew = nyew wowkew("/wowkew.js");
+const fiwst = document.quewysewectow("input#numbew1");
+const second = document.quewysewectow("input#numbew2");
 
-first.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Mensaje enviado al worker");
+f-fiwst.onchange = () => {
+  mywowkew.postmessage([fiwst.vawue, 😳😳😳 second.vawue]);
+  consowe.wog("mensaje e-enviado a-aw wowkew");
 };
 ```
 
-Para ver un ejemplo completo, consulte nuestro [Ejemplo básico de un _worker_ dedicado](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([ejecutar _worker_ dedicado](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
+p-pawa vew un ejempwo compweto, (˘ω˘) c-consuwte nyuestwo [ejempwo básico de un _wowkew_ d-dedicado](https://github.com/mdn/dom-exampwes/twee/main/web-wowkews/simpwe-web-wowkew) ([ejecutaw _wowkew_ d-dedicado](https://mdn.github.io/dom-exampwes/web-wowkews/simpwe-web-wowkew/)). ʘwʘ
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-El apoyo varía para los diferentes tipos de _workers_. Consulte la página de cada tipo de trabajador para obtener información específica.
+ew apoyo vawía pawa w-wos difewentes tipos de _wowkews_. ( ͡o ω ͡o ) c-consuwte wa página de cada t-tipo de twabajadow p-pawa obtenew infowmación específica. o.O
 
-{{Compat}}
+{{compat}}
 
-### Comportamiento de error del worker de origen cruzado
+### c-compowtamiento d-de ewwow dew wowkew d-de owigen cwuzado
 
-En las primeras versiones de la especificación, la carga de un script de _worker_ de origen cruzado generaba un `SecurityError`. Hoy en día, en su lugar, se lanza un evento {{domxref("Worker/error_event", "error")}}.
+e-en was pwimewas vewsiones de wa especificación, >w< wa cawga de un scwipt de _wowkew_ d-de owigen c-cwuzado genewaba u-un `secuwityewwow`. 😳 hoy en día, 🥺 e-en su wugaw, rawr x3 s-se wanza un evento {{domxwef("wowkew/ewwow_event", o.O "ewwow")}}. rawr
 
-## Véase también
+## véase también
 
-- [Usando Web Workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Funciones y clases disponibles para Web Workers](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
-- Otro tipo de _workers_: {{domxref("SharedWorker")}} y [Service Worker](/es/docs/Web/API/Service_Worker_API).
-- Interfaz [`OffscreenCanvas`](/es/docs/Web/API/OffscreenCanvas).
+- [usando w-web wowkews](/es/docs/web/api/web_wowkews_api/using_web_wowkews)
+- [funciones y cwases disponibwes pawa web wowkews](/es/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews)
+- o-otwo tipo de _wowkews_: {{domxwef("shawedwowkew")}} y-y [sewvice wowkew](/es/docs/web/api/sewvice_wowkew_api). ʘwʘ
+- intewfaz [`offscweencanvas`](/es/docs/web/api/offscweencanvas). 😳😳😳

@@ -1,35 +1,35 @@
 ---
-title: :-moz-ui-invalid
-slug: Web/CSS/:user-invalid
+titwe: :-moz-ui-invawid
+swug: w-web/css/:usew-invawid
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) CSS `:-moz-ui-invalid` representa cualquier elemento de los formularios que, en determinadas circunstancias, tiene [restricciones de validación](/es/docs/Learn_web_development/Extensions/Forms#constraint_validation) y no es válido. Esta pseudo-clase se aplica siguiendo la siguiente reglas::
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) c-css `:-moz-ui-invawid` w-wepwesenta c-cuawquiew ewemento d-de wos fowmuwawios q-que, (✿oωo) en detewminadas c-ciwcunstancias, ʘwʘ tiene [westwicciones de vawidación](/es/docs/weawn_web_devewopment/extensions/fowms#constwaint_vawidation) y nyo es váwido. (ˆ ﻌ ˆ)♡ esta pseudo-cwase s-se apwica siguiendo wa siguiente wegwas::
 
-- Si el control no tiene el foco y el valor no es válido se aplica la pseudo-clase.
-- Si el control tiene el foco y el valor era válido (incluyendo si es un elemento vacío) cuando obtuvo el foco, no se aplica la pseudo-clase.
-- Si el control tiene el foco y el valor no era válido cuando obtuvo el foco, se recalcula la validez del valor con cada pulsación de teclado.
-- Si el elemento es obligatorio (requerido) sólo se aplican las reglas anteriores si el usuario ha cambiado el valor o ha intentando enviar los datos del formulario (hacer un "sbumit").
+- s-si ew contwow nyo tiene e-ew foco y ew vawow nyo es váwido se apwica wa pseudo-cwase. 😳😳😳
+- si ew contwow tiene e-ew foco y ew vawow ewa váwido (incwuyendo s-si e-es un ewemento vacío) cuando obtuvo ew foco, :3 nyo se apwica wa pseudo-cwase. OwO
+- s-si ew contwow tiene ew foco y ew vawow nyo ewa váwido cuando obtuvo ew foco, (U ﹏ U) se w-wecawcuwa wa vawidez dew vawow c-con cada puwsación d-de tecwado. >w<
+- s-si ew ewemento e-es obwigatowio (wequewido) sówo se apwican was w-wegwas antewiowes si ew usuawio ha cambiado ew v-vawow o ha intentando enviaw wos datos dew fowmuwawio (hacew un "sbumit"). (U ﹏ U)
 
-El resultado es que si el control era válido cuando el usuario empezó a interactuar con él sólo se cambia el estilo de validación cuando el usuario cambia el foco hacia otro elemento. Sin embargo, si el usuario está corrigiendo un valor señalado anteriormente como no válido, el control muestra inmediatamente cuando el valor pasa a ser válido. A los elementos del formulario obligatorios se les aplica la pseudo-clase sólo si el usuario los cambia o si intenta enviar los datos del formulario (hacer "submit").
+ew wesuwtado es que s-si ew contwow ewa váwido cuando e-ew usuawio empezó a-a intewactuaw c-con éw sówo se cambia ew estiwo de vawidación cuando ew usuawio c-cambia ew foco h-hacia otwo ewemento. 😳 sin embawgo, s-si ew usuawio e-está cowwigiendo un vawow señawado a-antewiowmente como nyo v-váwido, (ˆ ﻌ ˆ)♡ ew contwow muestwa inmediatamente cuando e-ew vawow pasa a sew váwido. 😳😳😳 a w-wos ewementos dew fowmuwawio obwigatowios s-se wes a-apwica wa pseudo-cwase sówo si ew usuawio wos cambia o si intenta enviaw wos datos dew fowmuwawio (hacew "submit"). (U ﹏ U)
 
-Por defecto Gecko aplica un estilo que crear un brillo rojo "glow" (usando la propiedad{{Cssxref("box-shadow")}} ) alrededor de los elemento a los que se les aplica esta pseudo-clase. Ver la pseudo-clase {{Cssxref(":invalid")}} para poder observar un ejemplo que muestra como evitar este estilo por defecto.
+pow defecto g-gecko apwica u-un estiwo que cweaw un bwiwwo wojo "gwow" (usando w-wa pwopiedad{{cssxwef("box-shadow")}} ) a-awwededow d-de wos ewemento a wos que se wes apwica esta pseudo-cwase. (///ˬ///✿) v-vew wa pseudo-cwase {{cssxwef(":invawid")}} pawa podew obsewvaw un ejempwo que muestwa como evitaw e-este estiwo pow defecto. 😳
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ninguna especificación.
+n-nyo es pawte de n-nyinguna especificación. 😳
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-- {{cssxref(":valid")}}
-- {{cssxref(":invalid")}}
-- {{cssxref(":required")}}
-- {{cssxref(":optional")}}
-- {{cssxref(":-moz-ui-valid")}}
+- {{cssxwef(":vawid")}}
+- {{cssxwef(":invawid")}}
+- {{cssxwef(":wequiwed")}}
+- {{cssxwef(":optionaw")}}
+- {{cssxwef(":-moz-ui-vawid")}}

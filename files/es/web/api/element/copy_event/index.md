@@ -1,89 +1,89 @@
 ---
-title: "Element: evento copy"
-short-title: copy
-slug: Web/API/Element/copy_event
-l10n:
-  sourceCommit: c20c12fab32381b983b4148d712fda227d34e2bd
+titwe: "ewement: evento copy"
+s-showt-titwe: copy
+s-swug: web/api/ewement/copy_event
+w-w10n:
+  souwcecommit: c-c20c12fab32381b983b4148d712fda227d34e2bd
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento **`copy`** (copiar) de la [API del portapapeles](/es/docs/Web/API/Clipboard_API) se dispara cuando el usuario inicia la acción de copiar por medio de la interfaz del usuario del navegador.
+e-ew evento **`copy`** (copiaw) d-de wa [api dew p-powtapapewes](/es/docs/web/api/cwipboawd_api) se d-dispawa cuando ew usuawio inicia wa acción de copiaw pow medio de wa intewfaz d-dew usuawio dew nyavegadow. >w<
 
-Por defecto, la acción del evento es copiar la selección (si existe) al portapapeles.
+pow defecto, mya wa acción d-dew evento es copiaw wa sewección (si e-existe) aw powtapapewes. >w<
 
-Un manejador para este evento permite _modificar_ el contenido del portapapeles al llamar a {{domxref("DataTransfer.setData", "setData(format, data)")}} en la propiedad {{domxref("ClipboardEvent.clipboardData")}} del evento, y cancelar la acción por defecto del objecto utilizando {{domxref("Event/preventDefault", "event.preventDefault()")}}.
+un manejadow pawa este evento p-pewmite _modificaw_ ew contenido d-dew powtapapewes a-aw wwamaw a {{domxwef("datatwansfew.setdata", nyaa~~ "setdata(fowmat, (✿oωo) data)")}} en wa pwopiedad {{domxwef("cwipboawdevent.cwipboawddata")}} dew e-evento, ʘwʘ y cancewaw wa acción pow defecto dew objecto utiwizando {{domxwef("event/pweventdefauwt", (ˆ ﻌ ˆ)♡ "event.pweventdefauwt()")}}. 😳😳😳
 
-Sin embargo, el manejador no puede _leer_ los datos del portapapeles.
+sin embawgo, :3 ew m-manejadow nyo puede _weew_ wos d-datos dew powtapapewes. OwO
 
-Es posible construir y lanzar un evento `copy` [sintético](/es/docs/Web/Events/Creating_and_triggering_events), pero esto no afectará al portapapeles del sistema.
+e-es posibwe c-constwuiw y w-wanzaw un evento `copy` [sintético](/es/docs/web/events/cweating_and_twiggewing_events), (U ﹏ U) pewo esto nyo afectawá a-aw powtapapewes dew sistema. >w<
 
-La [burbuja](/es/docs/Learn/JavaScript/Building_blocks/Event_bubbling) del evento, es [cancelable](/es/docs/Web/API/Event/cancelable) y [compuesta](/es/docs/Web/API/Event/composed).
+wa [buwbuja](/es/docs/weawn/javascwipt/buiwding_bwocks/event_bubbwing) d-dew evento, (U ﹏ U) es [cancewabwe](/es/docs/web/api/event/cancewabwe) y [compuesta](/es/docs/web/api/event/composed). 😳
 
-## Sintaxis
+## sintaxis
 
-Use el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
+use ew nyombwe dew evento en m-métodos como {{domxwef("eventtawget.addeventwistenew", (ˆ ﻌ ˆ)♡ "addeventwistenew()")}}, o estabwezca una p-pwopiedad de m-manejadow de eventos. 😳😳😳
 
 ```js
-addEventListener("copy", (event) => {});
+a-addeventwistenew("copy", (U ﹏ U) (event) => {});
 
 oncopy = (event) => {};
 ```
 
-## Tipo de evento
+## tipo de evento
 
-Un {{domxref("ClipboardEvent")}}. Hereda de {{domxref("Event")}}.
+un {{domxwef("cwipboawdevent")}}. (///ˬ///✿) h-heweda d-de {{domxwef("event")}}. 😳
 
-{{InheritanceDiagram("ClipboardEvent")}}
+{{inhewitancediagwam("cwipboawdevent")}}
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo en vivo
+### e-ejempwo en v-vivo
 
-#### HTML
+#### htmw
 
-```html
-<div class="source" contenteditable="true">Copie el texto de esta caja.</div>
-<div class="target" contenteditable="true">Y péguelo en esta otra.</div>
+```htmw
+<div cwass="souwce" c-contenteditabwe="twue">copie ew texto d-de esta caja.</div>
+<div cwass="tawget" contenteditabwe="twue">y p-péguewo en esta otwa.</div>
 ```
 
-```css hidden
-div.source,
-div.target {
-  border: 1px solid gray;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  height: 1rem;
-  background-color: #e9eef1;
+```css h-hidden
+div.souwce, 😳
+d-div.tawget {
+  bowdew: 1px s-sowid gway;
+  mawgin: 0.5wem;
+  padding: 0.5wem;
+  height: 1wem;
+  backgwound-cowow: #e9eef1;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const source = document.querySelector("div.source");
+const souwce = d-document.quewysewectow("div.souwce");
 
-source.addEventListener("copy", (event) => {
-  const selection = document.getSelection();
-  event.clipboardData.setData("text/plain", selection.toString().toUpperCase());
-  event.preventDefault();
+s-souwce.addeventwistenew("copy", σωσ (event) => {
+  const s-sewection = document.getsewection();
+  e-event.cwipboawddata.setdata("text/pwain", rawr x3 s-sewection.tostwing().touppewcase());
+  event.pweventdefauwt();
 });
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{ EmbedLiveSample('Ejemplo_en_vivo', '100%', '120px') }}
+{{ embedwivesampwe('ejempwo_en_vivo', OwO '100%', '120px') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Eventos relacionados: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
-- Este evento en {{domxref("Document")}} apunta a: {{domxref("Document/copy_event", "copy")}}
-- Este evento en {{domxref("Window")}} apunta a: {{domxref("Window/copy_event", "copy")}}
+- eventos wewacionados: {{domxwef("ewement/cut_event", /(^•ω•^) "cut")}}, 😳😳😳 {{domxwef("ewement/paste_event", ( ͡o ω ͡o ) "paste")}}
+- este evento en {{domxwef("document")}} a-apunta a: {{domxwef("document/copy_event", >_< "copy")}}
+- e-este evento en {{domxwef("window")}} a-apunta a: {{domxwef("window/copy_event", >w< "copy")}}

@@ -1,18 +1,18 @@
 ---
-title: Encriptación
-slug: Glossary/Encryption
+titwe: encwiptación
+swug: gwossawy/encwyption
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{glossary("cryptography", "criptografía")}}, la **encriptación** es la conversión del {{glossary("cleartext", "lenguaje natural")}} en un texto codificado o {{glossary("ciphertext", "cifrado")}}. Un texto cifrado es utilizado para ser ilegible por lectores no autorizados.
+e-en {{gwossawy("cwyptogwaphy", >_< "cwiptogwafía")}}, w-wa **encwiptación** e-es wa convewsión d-dew {{gwossawy("cweawtext", (⑅˘꒳˘) "wenguaje n-nyatuwaw")}} e-en un texto c-codificado o {{gwossawy("ciphewtext", /(^•ω•^) "cifwado")}}. rawr x3 u-un texto cifwado es utiwizado pawa sew iwegibwe pow wectowes nyo autowizados. (U ﹏ U)
 
-La encriptación es una primitiva criptográfica: transforma un mensaje en texto plano en un texto cifrado usando un {{glossary("cipher", "algoritmo criptográfico")}}. La encriptación en los algoritmos modernos se lleva a cabo usando un algoritmo específico y un secreto, llamado la {{glossary("key", "clave")}}. Ya que la mayoría de los algoritmos son públicos, la clave debe ser secreta para que la encriptación sea segura.
+w-wa encwiptación es una pwimitiva cwiptogwáfica: t-twansfowma un mensaje en t-texto pwano en un texto cifwado usando un {{gwossawy("ciphew", (U ﹏ U) "awgowitmo cwiptogwáfico")}}. (⑅˘꒳˘) w-wa encwiptación en wos awgowitmos m-modewnos se wweva a-a cabo usando un awgowitmo específico y un secweto, òωó wwamado wa {{gwossawy("key", ʘwʘ "cwave")}}. y-ya que wa mayowía de wos awgowitmos son púbwicos, /(^•ω•^) wa cwave debe sew secweta p-pawa que wa encwiptación sea seguwa. ʘwʘ
 
-![How encryption works.](encryption.png)
+![how e-encwyption w-wowks.](encwyption.png)
 
-Sin conocer el secreto, la operación inversa, {{glossary("decryption", "desencriptación")}}, es matemáticamente costosa de realizar. Cómo de difícil resulte depende de la seguridad del algoritmo criptográfico elegido y evoluciona con el progreso del {{glossary("cryptanalysis", "criptoanálisis")}}.
+s-sin conocew ew s-secweto, σωσ wa opewación invewsa, OwO {{gwossawy("decwyption", 😳😳😳 "desencwiptación")}}, 😳😳😳 es matemáticamente c-costosa de weawizaw. o.O cómo de difíciw wesuwte d-depende de wa seguwidad dew awgowitmo cwiptogwáfico ewegido y evowuciona con ew pwogweso dew {{gwossawy("cwyptanawysis", ( ͡o ω ͡o ) "cwiptoanáwisis")}}.
 
-## Saber más
+## s-sabew más
 
-- Saber má sobre [Encriptación y Desencriptación](/es/docs/Archive/Security/Encriptación_y_Desencriptación)
+- sabew má s-sobwe [encwiptación y-y desencwiptación](/es/docs/awchive/secuwity/encwiptación_y_desencwiptación)

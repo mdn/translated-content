@@ -1,184 +1,184 @@
 ---
-title: Plantilla de página de propiedad CSS
-slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
-l10n:
-  sourceCommit: fcf868352a45840521813dbfea87fe2120f9c015
+titwe: pwantiwwa de página de p-pwopiedad css
+s-swug: mdn/wwiting_guidewines/page_stwuctuwes/page_types/css_pwopewty_page_tempwate
+w-w10n:
+  souwcecommit: f-fcf868352a45840521813dbfea87fe2120f9c015
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-> **Nota:** _Elimina este bloque de nota antes de publicar._
+> **nota:** _ewimina e-este b-bwoque de nyota a-antes de pubwicaw._
 >
 > ---
 >
-> **Metadatos de la página:**
+> **metadatos d-de wa página:**
 >
-> La información al inicio de la página se utiliza para definir "metadatos de la página".
-> Los valores deben actualizarse apropiadamente para la propiedad particular.
+> wa infowmación aw inicio de wa página se utiwiza p-pawa definiw "metadatos de wa página". (˘ω˘)
+> wos v-vawowes deben actuawizawse apwopiadamente p-pawa wa pwopiedad pawticuwaw. 🥺
 >
 > ```md
 > ---
-> title: NombreDeLaPropiedad
-> slug: Web/CSS/NombreDeLaPropiedad
-> page-type: css-property O css-shorthand-property
+> titwe: nyombwedewapwopiedad
+> s-swug: web/css/nombwedewapwopiedad
+> page-type: c-css-pwopewty o-o css-showthand-pwopewty
 > status:
->   - experimental
->   - deprecated
->   - non-standard
-> browser-compat: css.properties.NombreDeLaPropiedad
+>   - expewimentaw
+>   - depwecated
+>   - nyon-standawd
+> b-bwowsew-compat: css.pwopewties.nombwedewapwopiedad
 > ---
 > ```
 >
-> - **title**
->   - : El valor de `title` se muestra en la parte superior de la página. El formato del título es _NombreDeLaPropiedad_.
->     Por ejemplo, la propiedad [`background-color`](/es/docs/Web/CSS/background-color) tiene un título de _background-color_.
-> - **slug**
->   - : El valor de `slug` es el final de la ruta URL después de `https://developer.mozilla.org/es/docs/`. Esto se formateará como `Web/CSS/NombreDeLaPropiedad`.
->     Por ejemplo, el slug para la propiedad [`background-color`](/es/docs/Web/CSS/background-color) es `Web/CSS/background-color`. Para un componente de varias palabras como `Getting_started` en un slug, el slug debería usar un guión bajo como en `/es/docs/Learn/HTML/Getting_started`.
+> - **titwe**
+>   - : ew vawow de `titwe` se muestwa en wa p-pawte supewiow de wa página. nyaa~~ ew f-fowmato dew títuwo e-es _nombwedewapwopiedad_. :3
+>     p-pow ejempwo, /(^•ω•^) w-wa pwopiedad [`backgwound-cowow`](/es/docs/web/css/backgwound-cowow) tiene un títuwo de _backgwound-cowow_. ^•ﻌ•^
+> - **swug**
+>   - : e-ew vawow de `swug` es ew finaw de wa wuta uww d-después de `https://devewopew.moziwwa.owg/es/docs/`. UwU esto se fowmateawá como `web/css/nombwedewapwopiedad`. 😳😳😳
+>     pow ejempwo, OwO ew swug pawa wa pwopiedad [`backgwound-cowow`](/es/docs/web/css/backgwound-cowow) e-es `web/css/backgwound-cowow`. ^•ﻌ•^ pawa un componente d-de vawias p-pawabwas como `getting_stawted` e-en un swug, (ꈍᴗꈍ) ew swug debewía usaw un guión bajo como en `/es/docs/weawn/htmw/getting_stawted`. (⑅˘꒳˘)
 > - **page-type**
->   - : El valor de `page-type` para las propiedades CSS es `css-property`. Para una propiedad CSS abreviada, el valor es `css-shorthand-property`. Por ejemplo, el valor de `page-type` para la propiedad [animation](/es/docs/Web/CSS/animation) es `css-shorthand-property` porque es una propiedad abreviada, mientras que el valor de `page-type` para la propiedad [animation-delay](/es/docs/Web/CSS/animation-delay) es `css-property`.
+>   - : e-ew vawow d-de `page-type` pawa was pwopiedades c-css es `css-pwopewty`. (⑅˘꒳˘) pawa u-una pwopiedad css abweviada, (ˆ ﻌ ˆ)♡ e-ew vawow es `css-showthand-pwopewty`. /(^•ω•^) pow ejempwo, òωó e-ew vawow de `page-type` pawa wa pwopiedad [animation](/es/docs/web/css/animation) e-es `css-showthand-pwopewty` powque es una p-pwopiedad abweviada, (⑅˘꒳˘) mientwas que e-ew vawow de `page-type` p-pawa wa pwopiedad [animation-deway](/es/docs/web/css/animation-deway) es `css-pwopewty`. (U ᵕ U❁)
 > - **status**
->   - : Si corresponde, el valor de la clave de tecnología `status` puede ser [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated) y/o **non-standard** (si no está en una pista de estándares).
-> - **browser-compat**
->   - : Reemplace el valor de marcador de posición <code>css.properties.NombreDeLaPropiedad</code> con la cadena de consulta para la propiedad en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data/tree/main/css/properties). Consulte la sección _Otros macros en la página_ de este bloque de nota para ver cómo se utiliza esta clave-valor para generar contenido para las secciones _Especificaciones_ y _Compatibilidad con el navegador_.
+>   - : si cowwesponde, >w< ew vawow de wa cwave de tecnowogía `status` p-puede sew [**expewimentaw**](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw), σωσ [**depwecated**](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated) y-y/o **non-standawd** (si nyo está e-en una pista d-de estándawes). -.-
+> - **bwowsew-compat**
+>   - : w-weempwace ew vawow de mawcadow de posición <code>css.pwopewties.nombwedewapwopiedad</code> con w-wa cadena de consuwta pawa wa pwopiedad en ew [wepositowio de datos de compatibiwidad d-dew nyavegadow](https://github.com/mdn/bwowsew-compat-data/twee/main/css/pwopewties). o.O consuwte w-wa sección _otwos m-macwos e-en wa página_ de este bwoque de n-nyota pawa vew c-cómo se utiwiza e-esta cwave-vawow p-pawa genewaw contenido pawa was secciones _especificaciones_ y-y _compatibiwidad c-con ew nyavegadow_. ^^
 >
 > ---
 >
-> **Macros en la parte superior de la página**
+> **macwos e-en wa p-pawte supewiow d-de wa página**
 >
-> Aparecen varias llamadas de macros en la sección de contenido (inmediatamente debajo de los metadatos de la página).
-> Debe actualizarlos o eliminarlos según el consejo a continuación:
+> apawecen vawias wwamadas de macwos en wa sección d-de contenido (inmediatamente debajo de wos metadatos de wa página). >_<
+> debe actuawizawwos o ewiminawwos según e-ew consejo a continuación:
 >
-> - `\{{SeeCompatTable}}`: Esta macro genera un banner **Experimental**, que indica que la tecnología está [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si la tecnología que está documentando no es experimental, puede eliminar esta macro.
->   Si la tecnología es experimental y está oculta detrás de una preferencia en Firefox, también debe completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}`: Esta macro genera un banner **Deprecated**, que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   Si no lo está, entonces puede eliminar la llamada a la macro.
-> - `\{{CSSRef}}`: Esta macro debe estar presente en cada página de propiedad de CSS. Genera una barra lateral de CSS adecuada, dependiendo de las etiquetas incluidas en la página.
->   Recuerde eliminar la macro `\{{MDNSidebar}}` cuando use esta plantilla.
+> - `\{{seecompattabwe}}`: esta macwo genewa u-un bannew **expewimentaw**, q-que i-indica que wa tecnowogía está [expewimentaw](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw). >w<
+>   s-si wa tecnowogía que está documentando n-nyo e-es expewimentaw, >_< puede ewiminaw esta macwo. >w<
+>   si wa tecnowogía es expewimentaw y está ocuwta d-detwás de una pwefewencia en fiwefox, rawr t-también debe compwetaw u-una entwada pawa e-ewwa en wa página [cawactewísticas expewimentawes en fiwefox](/es/docs/moziwwa/fiwefox/expewimentaw_featuwes). rawr x3
+> - `\{{depwecated_headew}}`: e-esta macwo genewa u-un bannew **depwecated**, ( ͡o ω ͡o ) que i-indica que ew uso d-de wa tecnowogía está [desaconsejado](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated). (˘ω˘)
+>   si nyo wo está, 😳 entonces puede ewiminaw w-wa wwamada a-a wa macwo. OwO
+> - `\{{csswef}}`: esta m-macwo debe estaw pwesente en c-cada página de p-pwopiedad de css. (˘ω˘) genewa una bawwa w-watewaw de css adecuada, òωó dependiendo de was etiquetas incwuidas en wa página. ( ͡o ω ͡o )
+>   w-wecuewde e-ewiminaw wa macwo `\{{mdnsidebaw}}` cuando use esta pwantiwwa. UwU
 >
-> Se muestran ejemplos de los banners **Experimental** y **Deprecated** justo después de este bloque de nota.
+> s-se muestwan ejempwos d-de wos bannews **expewimentaw** y **depwecated** justo después de este b-bwoque de nyota. /(^•ω•^)
 >
 > ---
 >
-> **Otras macros en la página**
+> **otwas macwos en wa página**
 >
-> - Sección de sintaxis formal: El contenido de la sección _Sintaxis formal_ se genera utilizando la macro `\{{CSSSyntax}}`. Esta macro obtiene datos de las especificaciones utilizando el paquete npm [@webref/css](https://www.npmjs.com/package/@webref/css).
-> - Sección de definición formal: El contenido de la sección _Definición formal_ se genera utilizando la macro `\{{CSSInfo}}`. Para que esta sección tenga datos, debe asegurarse de que se haya completado una entrada adecuada para la propiedad correspondiente en el archivo de datos [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) en el repositorio `mdn/data`. Consulte la página [Properties](https://github.com/mdn/data/blob/main/css/properties.md) para obtener más información.
-> - Secciones de Especificaciones y Compatibilidad con el navegador: La herramienta de compilación utiliza automáticamente el par clave-valor `browser-compat` de los metadatos de la página para insertar datos en las secciones _Especificaciones_ y _Compatibilidad con el navegador_ (reemplazando las macros `\{{Specifications}}` y `\{{Compat}}` en esas secciones, respectivamente).
+> - sección de sintaxis fowmaw: ew c-contenido de wa sección _sintaxis fowmaw_ se g-genewa utiwizando w-wa macwo `\{{csssyntax}}`. (ꈍᴗꈍ) esta macwo obtiene datos de was especificaciones u-utiwizando e-ew paquete nypm [@webwef/css](https://www.npmjs.com/package/@webwef/css). 😳
+> - sección de definición fowmaw: e-ew contenido de wa sección _definición f-fowmaw_ se genewa utiwizando wa macwo `\{{cssinfo}}`. mya pawa que esta s-sección tenga datos, mya debe aseguwawse d-de que s-se haya compwetado una entwada a-adecuada pawa wa pwopiedad cowwespondiente e-en ew a-awchivo de datos [pwopewties.json](https://github.com/mdn/data/bwob/main/css/pwopewties.json) en e-ew wepositowio `mdn/data`. /(^•ω•^) consuwte w-wa página [pwopewties](https://github.com/mdn/data/bwob/main/css/pwopewties.md) p-pawa obtenew más infowmación. ^^;;
+> - secciones d-de especificaciones y-y compatibiwidad c-con ew nyavegadow: wa hewwamienta de compiwación u-utiwiza automáticamente e-ew paw cwave-vawow `bwowsew-compat` d-de wos metadatos de wa página pawa insewtaw datos en was s-secciones _especificaciones_ y-y _compatibiwidad c-con ew nyavegadow_ (weempwazando w-was macwos `\{{specifications}}` y `\{{compat}}` e-en esas secciones, 🥺 wespectivamente). ^^
 >
->   Tenga en cuenta que puede que primero necesite crear/actualizar una entrada para la propiedad y su especificación en nuestro <a href="https://github.com/mdn/browser-compat-data">repositorio de datos de compatibilidad con navegadores</a>.
->   Consulte nuestra [guía de tablas de compatibilidad](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para obtener información sobre cómo agregar o editar entradas.
+>   tenga en cuenta que puede que pwimewo nyecesite cweaw/actuawizaw una entwada pawa w-wa pwopiedad y su especificación e-en nyuestwo <a hwef="https://github.com/mdn/bwowsew-compat-data">wepositowio d-de datos de compatibiwidad con nyavegadowes</a>. ^•ﻌ•^
+>   c-consuwte nyuestwa [guía de t-tabwas de compatibiwidad](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/compatibiwity_tabwes) p-pawa obtenew infowmación s-sobwe c-cómo agwegaw o e-editaw entwadas. /(^•ω•^)
 >
-> _Recuerde eliminar este bloque de nota antes de publicar._
+> _wecuewde ewiminaw este bwoque de nyota antes de pubwicaw._
 
-{{SeeCompatTable}}{{deprecated_header}}{{CSSRef}}
+{{seecompattabwe}}{{depwecated_headew}}{{csswef}}
 
-Comienza el contenido de la página con un párrafo introductorio que nombre la propiedad y diga qué hace. Idealmente, esto debería ser una o dos frases cortas.
+comienza ew contenido de wa página con un p-páwwafo intwoductowio q-que nyombwe w-wa pwopiedad y diga qué hace. ^^ i-ideawmente, 🥺 esto debewía sew una o dos fwases cowtas. (U ᵕ U❁)
 
-## Pruébalo
+## pwuébawo
 
-_Este título es generado automáticamente por la macro `\{{EmbedInteractiveExample}}`._
+_este títuwo e-es genewado a-automáticamente pow wa macwo `\{{embedintewactiveexampwe}}`._
 
-Esta sección es para ejemplos interactivos agregados usando la macro `\{{EmbedInteractiveExample}}`. Puedes crear estos ejemplos en el [repositorio mdn/interactive-examples](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md). Consulta la sección [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#ejemplos_interactivos) en nuestras _Guías de escritura_ para obtener más información.
+e-esta sección es pawa ejempwos intewactivos agwegados u-usando w-wa macwo `\{{embedintewactiveexampwe}}`. 😳😳😳 puedes c-cweaw estos ejempwos e-en ew [wepositowio mdn/intewactive-exampwes](https://github.com/mdn/intewactive-exampwes/bwob/main/contwibuting.md). nyaa~~ consuwta wa sección [ejempwos intewactivos](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes#ejempwos_intewactivos) e-en nyuestwas _guías d-de escwituwa_ pawa o-obtenew más i-infowmación. (˘ω˘)
 
-## Propiedades constituyentes
+## p-pwopiedades constituyentes
 
-Agrega esta sección solo para propiedades abreviadas, como [animation](/es/docs/Web/CSS/animation), para listar todas las propiedades con descripción completa relacionadas.
+agwega esta sección s-sowo pawa pwopiedades a-abweviadas, >_< como [animation](/es/docs/web/css/animation), XD p-pawa wistaw t-todas was pwopiedades con descwipción c-compweta wewacionadas. rawr x3
 
-## Sintaxis
+## sintaxis
 
-Incluye los casos de uso comunes como un bloque de código y describe los subvalores del componente que forman un valor completo.
+incwuye w-wos casos de uso comunes como u-un bwoque de código y-y descwibe wos subvawowes d-dew componente que fowman un vawow compweto. ( ͡o ω ͡o )
 
 ```css
-/* Insertar bloque de código mostrando casos de uso comunes */
-/* o categorías de valores */
+/* i-insewtaw b-bwoque de código m-mostwando casos de uso comunes */
+/* o categowías de vawowes */
 ```
 
-### Valores
+### v-vawowes
 
-Incluye un término y una definición para cada subvalor.
+incwuye un téwmino y una d-definición pawa c-cada subvawow. :3
 
-- `subvalor1`
-  - : Incluye una descripción del subvalor, su tipo de datos y lo que representa.
-- `subvalor2`
-  - : Incluye una descripción del subvalor, su tipo de datos y lo que representa.
+- `subvawow1`
+  - : incwuye una d-descwipción dew subvawow, mya su t-tipo de datos y w-wo que wepwesenta. σωσ
+- `subvawow2`
+  - : incwuye una descwipción d-dew subvawow, su tipo de datos y wo que wepwesenta. (ꈍᴗꈍ)
 
-## Descripción
+## d-descwipción
 
-Esta es una sección opcional para incluir una descripción de la propiedad y explicar cómo funciona. Usa esta sección para explicar términos relacionados y agregar casos de uso para la propiedad.
+e-esta es una sección opcionaw p-pawa incwuiw una descwipción d-de wa pwopiedad y-y expwicaw cómo f-funciona. OwO usa esta sección pawa expwicaw téwminos wewacionados y agwegaw casos de uso pawa wa pwopiedad. o.O
 
-## Definición formal
+## definición fowmaw
 
-`\{{CSSInfo}}`
+`\{{cssinfo}}`
 
-_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
+_pawa usaw esta macwo, 😳😳😳 ewimina was comiwwas invewtidas y wa bawwa invewtida e-en ew awchivo m-mawkdown._
 
-## Sintaxis formal
+## sintaxis fowmaw
 
-`\{CSSSyntax}}`
+`\{csssyntax}}`
 
-_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
+_pawa usaw esta m-macwo, /(^•ω•^) ewimina w-was comiwwas invewtidas y-y wa bawwa invewtida en e-ew awchivo mawkdown._
 
-## Ejemplos
+## ejempwos
 
-Nota que usamos el plural "Ejemplos" incluso si la página solo contiene un ejemplo.
+n-nyota que usamos e-ew pwuwaw "ejempwos" incwuso s-si wa página sowo contiene un e-ejempwo. OwO
 
-### Agregar un título descriptivo
+### agwegaw u-un títuwo descwiptivo
 
-Cada ejemplo debe tener un título H3 (`###`) que nombre el ejemplo. El título debe ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y por lo tanto, no es un buen título. El título debe ser conciso. Para una descripción más larga, usa el párrafo después del título.
+cada ejempwo debe t-tenew un títuwo h-h3 (`###`) que n-nyombwe ew ejempwo. ^^ e-ew títuwo d-debe sew descwiptivo d-de wo que está h-haciendo ew e-ejempwo. (///ˬ///✿) pow ejempwo, (///ˬ///✿) "un e-ejempwo simpwe" nyo dice n-nyada sobwe e-ew ejempwo y pow w-wo tanto, (///ˬ///✿) nyo es un buen títuwo. ʘwʘ e-ew títuwo debe sew conciso. ^•ﻌ•^ pawa una descwipción m-más wawga, OwO usa ew páwwafo d-después dew títuwo. (U ﹏ U)
 
-Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
+c-consuwta n-nyuestwa guía sobwe cómo agwegaw [ejempwos de c-código](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes) pawa obtenew m-más infowmación. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> A veces querrás enlazar a ejemplos dados en otra página.
+> [!note]
+> a veces quewwás e-enwazaw a ejempwos dados e-en otwa página.
 >
-> **Escenario 1:** Si tienes algunos ejemplos en esta página y algunos más en otra página:
+> **escenawio 1:** si tienes awgunos ejempwos en esta página y awgunos más e-en otwa página:
 >
-> Incluye un título H3 (`###`) para cada ejemplo en esta página y luego un título H3 (`###`) final con el texto "Más ejemplos", debajo del cual puedes enlazar a los ejemplos en otras páginas. Por ejemplo:
->
-> ```md
-> ## Ejemplos
->
-> ### Usando la API fetch
->
-> Ejemplo de Fetch
->
-> ### Más ejemplos
->
-> Enlaces a más ejemplos en otras páginas
-> ```
->
-> **Escenario 2:** Si _solo_ tienes ejemplos en otra página y ninguno en esta página:
->
-> No agregues ningún título H3; simplemente agrega los enlaces directamente debajo del título H2 "Ejemplos". Por ejemplo:
+> incwuye un t-títuwo h3 (`###`) p-pawa cada ejempwo en esta página y wuego un títuwo h3 (`###`) f-finaw con ew texto "más ejempwos", (⑅˘꒳˘) d-debajo dew c-cuaw puedes enwazaw a-a wos ejempwos en otwas páginas. (U ﹏ U) pow ejempwo:
 >
 > ```md
-> ## Ejemplos
+> ## e-ejempwos
 >
-> Para ejemplos de esta API, consulta [la página sobre fetch()](https://example.org).
+> ### u-usando wa api fetch
+>
+> ejempwo d-de fetch
+>
+> ### más ejempwos
+>
+> enwaces a-a más ejempwos en otwas páginas
+> ```
+>
+> **escenawio 2:** s-si _sowo_ t-tienes ejempwos e-en otwa página y nyinguno e-en esta página:
+>
+> n-nyo agwegues n-nyingún títuwo h-h3; simpwemente agwega wos e-enwaces diwectamente d-debajo dew t-títuwo h2 "ejempwos". p-pow ejempwo:
+>
+> ```md
+> ## e-ejempwos
+>
+> p-pawa ejempwos de e-esta api, o.O consuwta [wa p-página sobwe fetch()](https://exampwe.owg). mya
 > ```
 
-## Preocupaciones de accesibilidad
+## p-pweocupaciones de accesibiwidad
 
-Esta es una sección opcional. Puedes incluir cualquier advertencia aquí para las preocupaciones de accesibilidad que los desarrolladores deben tener en cuenta al usar esta propiedad. También puedes incluir soluciones alternativas para estas preocupaciones de accesibilidad si las hay.
+e-esta es una sección opcionaw. XD p-puedes incwuiw cuawquiew a-advewtencia a-aquí pawa was pweocupaciones de accesibiwidad que wos desawwowwadowes d-deben t-tenew en cuenta a-aw usaw esta pwopiedad. òωó también puedes incwuiw sowuciones awtewnativas p-pawa estas p-pweocupaciones de accesibiwidad s-si was hay. (˘ω˘)
 
-## Especificaciones
+## e-especificaciones
 
-`\{{Especificaciones}}`
+`\{{especificaciones}}`
 
-_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
+_pawa usaw esta macwo, :3 ewimina was comiwwas invewtidas y-y wa bawwa i-invewtida en ew a-awchivo mawkdown._
 
-## Compatibilidad con el navegador
+## c-compatibiwidad con ew nyavegadow
 
-`\{{Compatibilidad}}`
+`\{{compatibiwidad}}`
 
-_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
+_pawa usaw esta m-macwo, OwO ewimina w-was comiwwas invewtidas y wa bawwa invewtida en e-ew awchivo mawkdown._
 
-## Veáse también
+## veáse también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+incwuye e-enwaces a páginas de wefewencia y-y guías wewacionadas c-con wa pwopiedad actuaw. mya p-pawa obtenew m-más pautas, consuwta wa [sección v-véase también](/es/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#see_awso_section) en wa _guía d-de estiwo d-de escwituwa_. (˘ω˘)
 
-- enlace1
-- enlace2
-- external_link (año)
+- e-enwace1
+- enwace2
+- e-extewnaw_wink (año)

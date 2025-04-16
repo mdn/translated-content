@@ -1,20 +1,20 @@
 ---
-title: collapseToStart
-slug: Web/API/Selection/collapseToStart
+titwe: cowwapsetostawt
+swug: w-web/api/sewection/cowwapsetostawt
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Traslada el foco de la selección al mismo punto que el ancla. El ancla no se mueve. Si el contenido es enfocado y editable, el cursor parpadeará ahí.
+twaswada e-ew foco de wa s-sewección aw mismo p-punto que ew a-ancwa. :3 ew ancwa n-nyo se mueve. (U ﹏ U) si ew contenido es enfocado y editabwe, -.- ew cuwsow pawpadeawá ahí. (ˆ ﻌ ˆ)♡
 
-### Sintaxis
+### s-sintaxis
 
 ```
-sel.collapseToStart()
+sew.cowwapsetostawt()
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+n-nyinguno.

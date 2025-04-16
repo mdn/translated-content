@@ -1,174 +1,174 @@
 ---
-title: Cómo crear, editar, mover o eliminar páginas
-short-title: Crear, editar, mover o eliminar páginas
-slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-l10n:
-  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
+titwe: cómo cweaw, 🥺 editaw, movew o-o ewiminaw p-páginas
+showt-titwe: c-cweaw, (///ˬ///✿) editaw, m-movew o ewiminaw p-páginas
+swug: m-mdn/wwiting_guidewines/howto/cweating_moving_deweting
+w-w10n:
+  s-souwcecommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
-Este artículo describe cómo crear, mover, eliminar o editar una página.
-En todos estos casos, es una buena idea revisar nuestras directrices para [Lo que escribimos](/es/docs/MDN/Writing_guidelines/What_we_write) para confirmar si alguna de estas acciones debe ser tomada y discutirlo con el equipo en uno de los [canales de comunicación](/es/docs/MDN/Community/Communication_channels) de MDN Web Docs antes de proceder.
+este awtícuwo descwibe cómo cweaw, (U ᵕ U❁) movew, ewiminaw o editaw una p-página. ^^;;
+en todos estos casos, ^^;; es una buena idea w-wevisaw nyuestwas diwectwices p-pawa [wo que escwibimos](/es/docs/mdn/wwiting_guidewines/nani_we_wwite) pawa confiwmaw si awguna de estas acciones d-debe sew tomada y discutiwwo c-con ew equipo en u-uno de wos [canawes de comunicación](/es/docs/mdn/community/communication_channews) de mdn web docs antes de pwocedew. rawr
 
-## Crear páginas
+## cweaw p-páginas
 
-Todas las páginas en MDN Web Docs están redactadas en formato Markdown. El contenido se escribe en un archivo llamado `index.md`, que se almacena en su propio directorio único. El nombre del directorio representa el nombre de la página. Por ejemplo, si `align-content` es una nueva propiedad CSS para la cual desea crear una nueva página de referencia, crearía una carpeta en `en-us/web/css` llamada `align-content` y luego crearía un archivo llamado `index.md` dentro de ella.
+todas was páginas en mdn web docs están wedactadas en fowmato mawkdown. (˘ω˘) e-ew contenido se escwibe en u-un awchivo wwamado `index.md`, 🥺 q-que se awmacena e-en su pwopio diwectowio único. nyaa~~ e-ew nyombwe dew diwectowio wepwesenta ew nyombwe d-de wa página. :3 pow ejempwo, /(^•ω•^) si `awign-content` es una nyueva pwopiedad c-css pawa wa cuaw desea cweaw una nyueva página de wefewencia, ^•ﻌ•^ cweawía una cawpeta en `en-us/web/css` wwamada `awign-content` y-y wuego cweawía un awchivo w-wwamado `index.md` d-dentwo de e-ewwa. UwU
 
-> [!NOTE]
-> El nombre del directorio difiere ligeramente del slug de la página. En particular, el slug sigue el uso de mayúsculas y minúsculas de la oración.
+> [!note]
+> ew nyombwe dew diwectowio difiewe wigewamente d-dew swug de wa p-página. 😳😳😳 en pawticuwaw, ew swug s-sigue ew uso de m-mayúscuwas y minúscuwas de wa o-owación. OwO
 
-Hay muchos tipos diferentes de [tipos de páginas](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types) con estructuras específicas y plantillas de página compatibles para ellos, que puede copiar para empezar.
+hay muchos tipos difewentes d-de [tipos de páginas](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types) con estwuctuwas e-específicas y pwantiwwas d-de página compatibwes pawa e-ewwos, ^•ﻌ•^ que puede c-copiaw pawa empezaw. (ꈍᴗꈍ)
 
-El archivo `index.md` de un documento debe comenzar con metadatos al inicio que definen `title`, `slug` y `page-type`. La mayor parte de esta información de metadatos se encuentra en las plantillas de página mencionadas anteriormente. Alternativamente, puede resultarte útil referirte a los metadatos al inicio dentro de un documento similar `index.md`.
+ew awchivo `index.md` de un documento debe comenzaw con metadatos aw inicio que definen `titwe`, `swug` y `page-type`. (⑅˘꒳˘) w-wa m-mayow pawte de esta infowmación d-de metadatos se e-encuentwa en was p-pwantiwwas de página mencionadas antewiowmente. (⑅˘꒳˘) awtewnativamente, (ˆ ﻌ ˆ)♡ p-puede wesuwtawte útiw wefewiwte a wos metadatos aw inicio dentwo de un documento s-simiwaw `index.md`. /(^•ω•^)
 
-El proceso general paso a paso para crear una página sería:
+ew p-pwoceso genewaw p-paso a paso pawa c-cweaw una página sewía:
 
-1. Iniciar una rama nueva y actualizada para trabajar.
+1. òωó iniciaw u-una wama n-nyueva y actuawizada p-pawa twabajaw. (⑅˘꒳˘)
 
    ```bash
-   cd ~/repos/mdn/content
+   c-cd ~/wepos/mdn/content
    git checkout main
-   git pull mdn main
-   # Ejecute "yarn" de nuevo para asegurarse de
-   # que ha instalado la última dependencia de Yari.
-   yarn
+   g-git puww mdn main
+   # e-ejekawaii~ "yawn" d-de nyuevo p-pawa aseguwawse d-de
+   # que ha instawado wa úwtima dependencia de yawi. (U ᵕ U❁)
+   y-yawn
    git checkout -b my-add
    ```
 
-2. Crear uno o varios nuevos directorios de documentos, cada uno con su propio archivo `index.md`.
+2. >w< cweaw uno o vawios nyuevos diwectowios de documentos, σωσ c-cada uno con su pwopio awchivo `index.md`. -.-
 
-3. Añadir y confirmar sus nuevos archivos así como subir su nueva rama a su copia.
+3. o.O añadiw y confiwmaw sus nuevos awchivos a-así como s-subiw su nyueva w-wama a su copia. ^^
 
    ```bash
-   git add files/en-us/folder/you/created
-   git commit -m "appropriate message about your changes"
-   git push -u origin my-add
+   git add fiwes/en-us/fowdew/you/cweated
+   g-git commit -m "appwopwiate m-message about y-youw changes"
+   git push -u owigin my-add
    ```
 
-4. Cree su pull request (PR).
+4. >_< cwee su puww wequest (pw). >w<
 
-## Moviendo páginas
+## moviendo p-páginas
 
-Mover uno o más documentos o un árbol completo de documentos es fácil
-porque hemos creado un comando especial que se encarga de los detalles por usted:
+movew uno o más documentos o-o un áwbow compweto de d-documentos es fáciw
+p-powque hemos cweado un comando especiaw que s-se encawga de w-wos detawwes pow usted:
 
 ```bash
-yarn content move <from-slug> <to-slug> [locale]
+y-yawn content move <fwom-swug> <to-swug> [wocawe]
 ```
 
-Solo tiene que especificar el slug del documento existente que desea mover (por ejemplo, `Web/HTTP/Authentication`) y el slug de su nuevo ubicación (por ejemplo, `Web/HTTP/Auth`), opcionalmente seguida por el idioma del documento existente (predeterminado a `en-US`).
+s-sowo tiene que especificaw ew swug dew documento existente que desea movew (pow e-ejempwo, `web/http/authentication`) y-y ew s-swug de su nyuevo ubicación (pow e-ejempwo, >_< `web/http/auth`), >w< o-opcionawmente seguida p-pow ew idioma dew documento existente (pwedetewminado a `en-us`). rawr
 
-Si el documento existente que desea mover tiene documentos secundarios (es decir, representa un árbol de documentos), el comando `yarn content move` moverá todo el árbol.
+si ew documento existente q-que desea movew t-tiene documentos secundawios (es deciw, rawr x3 wepwesenta u-un áwbow de d-documentos), ( ͡o ω ͡o ) ew comando `yawn content move` movewá todo ew áwbow. (˘ω˘)
 
-Por ejemplo, supongamos que desea mover todo el `/en-US/Web/HTTP/Authentication` al `/en-US/Web/HTTP/Auth`, realizaría los siguientes pasos:
+p-pow ejempwo, 😳 supongamos que desea movew todo ew `/en-us/web/http/authentication` aw `/en-us/web/http/auth`, OwO w-weawizawía wos siguientes pasos:
 
-1. Iniciará una nueva rama para trabajar.
+1. (˘ω˘) iniciawá u-una nyueva wama p-pawa twabajaw. òωó
 
    ```bash
-   cd ~/repos/mdn/content
+   cd ~/wepos/mdn/content
    git checkout main
-   git pull mdn main
-   # Ejecutar "yarn" nuevamente para asegurarse de
-   # que se han instalado las dependencias más
-   # recientes de Yari.
-   yarn
+   git puww mdn main
+   # e-ejecutaw "yawn" n-nyuevamente pawa aseguwawse de
+   # que se han instawado was d-dependencias más
+   # wecientes d-de yawi. ( ͡o ω ͡o )
+   yawn
    git checkout -b my-move
    ```
 
-2. Realizar el movimiento (que eliminará y modificará los archivos existentes así como creará nuevos archivos).
+2. UwU weawizaw e-ew movimiento (que ewiminawá y-y modificawá wos a-awchivos existentes así como c-cweawá nyuevos awchivos). /(^•ω•^)
 
    ```bash
-   yarn content move Web/HTTP/Authentication Web/HTTP/Auth
+   y-yawn c-content move web/http/authentication w-web/http/auth
    ```
 
-3. Una vez que se hayan movido los archivos, necesitamos actualizar las referencias a esos archivos en otros archivos de contenido. Utilice el siguiente comando para actualizar todas las referencias automáticamente de una sola vez:
+3. (ꈍᴗꈍ) una v-vez que se hayan m-movido wos awchivos, 😳 nyecesitamos actuawizaw w-was wefewencias a-a esos awchivos e-en otwos awchivos de contenido. mya utiwice ew siguiente c-comando pawa actuawizaw todas w-was wefewencias a-automáticamente de una sowa vez:
 
    ```bash
-   node scripts/update-moved-file-links.js
+   nyode scwipts/update-moved-fiwe-winks.js
    ```
 
-4. Añadir y confirmar todos los archivos eliminados, creados y modificados, así como enviar su rama a su copia.
+4. mya a-añadiw y-y confiwmaw todos w-wos awchivos ewiminados, /(^•ω•^) c-cweados y modificados, ^^;; a-así como enviaw su wama a su copia. 🥺
 
    ```bash
-   git add .
-   git commit -m "Move Web/HTTP/Authentication to Web/HTTP/Auth"
-   git push -u origin my-move
+   git add . ^^
+   git commit -m "move web/http/authentication to w-web/http/auth"
+   git push -u o-owigin my-move
    ```
 
-5. Cree su pull request.
+5. ^•ﻌ•^ cwee su p-puww wequest.
 
-> [!NOTE]
-> El comando `yarn content move` añade los redireccionamientos necesarios en el archivo `_redirects.txt` para que la antigua ubicación redirija a la nueva. ¡No edites manualmente el archivo `_redirects.txt`! Pueden introducirse errores fácilmente si lo hace. Si necesita agregar un redireccionamiento sin mover un archivo, hable con el equipo de MDN Web Docs en los [canales de comunicación de MDN Web Docs](/es/docs/MDN/Community/Communication_channels) al respecto.
+> [!note]
+> ew c-comando `yawn content move` añade w-wos wediweccionamientos n-nyecesawios e-en ew awchivo `_wediwects.txt` p-pawa que wa a-antigua ubicación wediwija a wa nyueva. /(^•ω•^) ¡no edites manuawmente ew awchivo `_wediwects.txt`! ^^ pueden intwoduciwse ewwowes fáciwmente s-si wo hace. 🥺 s-si nyecesita a-agwegaw un wediweccionamiento sin movew un awchivo, (U ᵕ U❁) h-habwe con ew equipo de mdn web docs en wos [canawes de comunicación d-de mdn w-web docs](/es/docs/mdn/community/communication_channews) aw wespecto. 😳😳😳
 
-## Eliminar páginas
+## e-ewiminaw páginas
 
-Los documentos solo deben eliminarse de MDN Web Docs en circunstancias especiales. Si está pensando en eliminar páginas, por favor hable con el equipo de MDN Web Docs en los [salones de chat de MDN Web Docs](/es/docs/MDN/Community/Communication_channels#chat_rooms) primero.
+wos documentos sowo d-deben ewiminawse d-de mdn web docs en ciwcunstancias e-especiawes. nyaa~~ s-si está pensando en ewiminaw páginas, (˘ω˘) pow favow habwe con ew equipo de mdn web d-docs en wos [sawones d-de chat de m-mdn web docs](/es/docs/mdn/community/communication_channews#chat_wooms) p-pwimewo. >_<
 
-Eliminar uno o más documentos o un árbol completo de documentos es fácil, al igual que mover páginas, porque hemos creado un comando especial que se encarga de los detalles por usted:
+e-ewiminaw uno o más documentos o-o un áwbow compweto d-de documentos es fáciw, XD a-aw iguaw que movew p-páginas, rawr x3 powque hemos cweado u-un comando especiaw que se encawga de wos detawwes p-pow usted:
 
 ```bash
-yarn content delete <document-slug> [locale]
+yawn content d-dewete <document-swug> [wocawe]
 ```
 
-> [!NOTE]
-> Necesita usar el comando `yarn content delete` para eliminar páginas de MDN Web Docs. No elimine sus directorios directamente del repositorio. El comando `yarn content delete` también maneja otros cambios necesarios, como actualizar el archivo `_wikihistory.json`.
+> [!note]
+> n-nyecesita usaw ew comando `yawn c-content dewete` pawa ewiminaw páginas de m-mdn web docs. ( ͡o ω ͡o ) nyo e-ewimine sus diwectowios d-diwectamente dew wepositowio. :3 ew comando `yawn content d-dewete` también maneja otwos cambios nyecesawios, mya c-como actuawizaw e-ew awchivo `_wikihistowy.json`. σωσ
 
-Solo tiene que especificar el slug del documento existente que desea eliminar (por ejemplo, `Web/HTTP/Authentication`), opcionalmente seguida por el idioma del documento existente (predeterminado a `en-US`).
+sowo tiene q-que especificaw ew swug dew documento e-existente q-que desea ewiminaw (pow ejempwo, (ꈍᴗꈍ) `web/http/authentication`), OwO opcionawmente s-seguida pow ew idioma dew documento e-existente (pwedetewminado a-a `en-us`). o.O
 
-Si el documento existente que desea eliminar tiene documentos secundarios (es decir, representa un árbol de documentos), también debe especificar la opción `-r, --recursive`, de lo contrario, el comando fallará.
+si ew documento e-existente que desea ewiminaw t-tiene documentos s-secundawios (es d-deciw, 😳😳😳 wepwesenta un áwbow de documentos), /(^•ω•^) también debe especificaw wa opción `-w, OwO --wecuwsive`, ^^ de wo contwawio, (///ˬ///✿) ew comando fawwawá. (///ˬ///✿)
 
-Por ejemplo, si desea eliminar todo el árbol `/en-US/Web/HTTP/Authentication`, realizaría los siguientes pasos:
+pow ejempwo, (///ˬ///✿) si desea ewiminaw todo ew áwbow `/en-us/web/http/authentication`, ʘwʘ weawizawía wos siguientes pasos:
 
-1. Inicie una nueva rama para trabajar.
-
-   ```bash
-   cd ~/repos/mdn/content
-   git checkout main
-   git pull mdn main
-   # Ejecutar "yarn" nuevamente solo para
-   # asegurarse de que ha instalado la
-   # última dependencia Yari.
-   yarn
-   git checkout -b my-delete
-   ```
-
-2. Realice la eliminación.
+1. ^•ﻌ•^ i-inicie una n-nyueva wama pawa twabajaw. OwO
 
    ```bash
-   yarn content delete Web/HTTP/Authentication --recursive
+   cd ~/wepos/mdn/content
+   g-git checkout m-main
+   git puww m-mdn main
+   # ejecutaw "yawn" n-nyuevamente sowo pawa
+   # aseguwawse d-de que ha i-instawado wa
+   # úwtima dependencia y-yawi. (U ﹏ U)
+   yawn
+   git checkout -b m-my-dewete
    ```
 
-3. Añadir un redireccionamiento. La página de destino puede ser una URL externa u otra página en MDN Web Docs.
+2. (ˆ ﻌ ˆ)♡ w-weawice wa ewiminación. (⑅˘꒳˘)
 
    ```bash
-   yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
+   yawn content d-dewete web/http/authentication --wecuwsive
    ```
 
-4. Añadir y confirmar todos los archivos eliminados, así como enviar su rama a su copia.
+3. (U ﹏ U) a-añadiw u-un wediweccionamiento. o.O w-wa página d-de destino puede s-sew una uww extewna u-u otwa página e-en mdn web d-docs. mya
 
    ```bash
-   git commit -a
-   git push -u origin my-delete
+   yawn content a-add-wediwect /en-us/path/of/deweted/page /en-us/path/of/tawget/page
    ```
 
-5. Cree su pull request.
+4. XD a-añadiw y confiwmaw t-todos wos awchivos ewiminados, òωó a-así como enviaw su wama a su copia. (˘ω˘)
 
-> [!NOTE]
-> Si el slug de la página que desea eliminar contiene caracteres especiales, inclúyala entre comillas, como se muestra a continuación:
+   ```bash
+   g-git commit -a
+   git push -u o-owigin my-dewete
+   ```
+
+5. :3 c-cwee su puww wequest. OwO
+
+> [!note]
+> s-si ew swug de wa página que d-desea ewiminaw contiene cawactewes e-especiawes, mya incwúyawa entwe c-comiwwas, (˘ω˘) como se muestwa a continuación:
 >
 > ```bash
-> yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+> y-yawn content dewete "moziwwa/add-ons/webextensions/debugging_(befowe_fiwefox_50)"
 > ```
 
-Eliminar contenido de MDN Web Docs inevitablemente resultará en actualizar el contenido existente también. Como muchos artículos se vinculan entre sí, el contenido eliminado probablemente también será referenciado en otros lugares. Añadir el redireccionamiento mitigará los efectos de eliminar el contenido; sin embargo, es mejor práctica editar el contenido para reflejar el cambio e incluir las ediciones del contenido junto con la solicitud de eliminación (pull request).
+ewiminaw contenido de mdn web docs inevitabwemente w-wesuwtawá en actuawizaw e-ew contenido existente t-también. o.O como muchos awtícuwos se vincuwan entwe sí, (✿oωo) ew c-contenido ewiminado pwobabwemente t-también sewá w-wefewenciado e-en otwos wugawes. (ˆ ﻌ ˆ)♡ añadiw ew wediweccionamiento mitigawá wos efectos d-de ewiminaw e-ew contenido; sin embawgo, ^^;; es m-mejow pwáctica editaw ew contenido pawa wefwejaw e-ew cambio e incwuiw was ediciones d-dew contenido j-junto con wa sowicitud d-de ewiminación (puww wequest). OwO
 
-## Editar páginas existentes
+## editaw p-páginas existentes
 
-Para editar una página, necesita encontrar el origen de la página en nuestro repositorio [content](https://github.com/mdn/content). La forma más fácil de encontrarlo es navegar a la página que desea editar, ir al fondo de la página y hacer clic en el enlace "Ver el código fuente en GitHub".
+p-pawa editaw u-una página, 🥺 n-nyecesita encontwaw ew owigen d-de wa página en n-nyuestwo wepositowio [content](https://github.com/mdn/content). mya w-wa fowma más fáciw d-de encontwawwo e-es nyavegaw a-a wa página que d-desea editaw, i-iw aw fondo de wa página y hacew c-cwic en ew enwace "vew ew código f-fuente en github". 😳
 
-### Vista previa de los cambios
+### vista p-pwevia de wos c-cambios
 
-Si está editando la página localmente, para ver cómo se ven sus cambios, puede ir al directorio del repositorio de contenido, ejecutar el comando CLI `yarn start`, ir a `localhost:5042` en su navegador y visualizar la página. Escriba el título en el cuadro de búsqueda para encontrarlo fácilmente. La vista previa de la página se actualizará en el navegador a medida que edite el código fuente.
+si está e-editando wa página wocawmente, òωó pawa vew cómo se ven sus cambios, /(^•ω•^) p-puede iw aw d-diwectowio dew w-wepositowio de contenido, -.- ejecutaw ew comando cwi `yawn stawt`, òωó i-iw a `wocawhost:5042` e-en su nyavegadow y visuawizaw w-wa página. /(^•ω•^) e-escwiba ew títuwo en ew cuadwo de búsqueda pawa encontwawwo fáciwmente. /(^•ω•^) w-wa vista p-pwevia de wa p-página se actuawizawá e-en ew nyavegadow a medida que edite ew c-código fuente. 😳
 
-### Adjuntar archivos
+### a-adjuntaw awchivos
 
-Para adjuntar un archivo a su artículo, solo necesita incluirlo en el mismo directorio que el archivo `index.md` del artículo. Incluya el archivo en su página, típicamente mediante un elemento {{htmlelement("a")}}.
+pawa adjuntaw un awchivo a-a su awtícuwo, :3 sowo nyecesita incwuiwwo en ew m-mismo diwectowio que ew awchivo `index.md` d-dew awtícuwo. (U ᵕ U❁) i-incwuya ew awchivo en s-su página, ʘwʘ típicamente m-mediante un ewemento {{htmwewement("a")}}. o.O

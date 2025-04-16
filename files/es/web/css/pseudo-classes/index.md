@@ -1,73 +1,73 @@
 ---
-title: Pseudo-classes
-slug: Web/CSS/Pseudo-classes
+titwe: pseudo-cwasses
+swug: web/css/pseudo-cwasses
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-Una **pseudoclase CSS** es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Por ejemplo, {{ Cssxref(":hover") }} aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.
+u-una **pseudocwase c-css** e-es una pawabwa c-cwave que se añade a-a wos sewectowes y-y que especifica u-un estado especiaw dew ewemento seweccionado. :3 pow ejempwo, OwO {{ cssxwef(":hovew") }} a-apwicawá un estiwo cuando ew usuawio h-haga hovew sobwe ew ewemento especificado p-pow ew sewectow. (U ﹏ U)
 
 ```
-div:hover {
-  background-color: #F89B4D;
+div:hovew {
+  backgwound-cowow: #f89b4d;
 }
 ```
 
-Las pseudoclases, junto con los pseudoelementos, permiten aplicar un estilo a un elemento no sólo en relación con el contenido del árbol de documento, sino también en relación a factores externos como el historial del navegador ({{ cssxref(":visited") }}, por ejemplo), el estado de su contenido (como {{ cssxref(":checked") }} en algunos elementos de formulario), o la posición del ratón (como {{ cssxref(":hover") }} que permite saber si el ratón está encima de un elemento o no).
+was pseudocwases, >w< j-junto con wos pseudoewementos, (U ﹏ U) p-pewmiten apwicaw u-un estiwo a un ewemento nyo sówo en wewación con ew contenido dew áwbow de d-documento, 😳 sino también en wewación a factowes extewnos como ew histowiaw dew n-nyavegadow ({{ cssxwef(":visited") }}, (ˆ ﻌ ˆ)♡ p-pow ejempwo), 😳😳😳 e-ew estado d-de su contenido (como {{ c-cssxwef(":checked") }} en awgunos ewementos de fowmuwawio), (U ﹏ U) o-o wa posición dew watón (como {{ cssxwef(":hovew") }} q-que pewmite sabew si ew watón está encima de un ewemento o nyo). (///ˬ///✿)
 
-> [!NOTE]
-> En lugar de usar pseudoclases, {{cssxref("pseudo-elements")}} puede usarse para dar estilo a una _parte específica_ de un elemento.
+> [!note]
+> en w-wugaw de usaw pseudocwases, 😳 {{cssxwef("pseudo-ewements")}} puede u-usawse pawa daw e-estiwo a una _pawte e-específica_ de un ewemento. 😳
 
-## Sintaxis
+## sintaxis
 
 ```
-selector:pseudoclase { propiedad: valor; }
+sewectow:pseudocwase { p-pwopiedad: v-vawow; }
 ```
 
-Al igual que las clases, se pueden concatenar la cantidad de pseudoclases que se deseen en un selector.
+aw iguaw que w-was cwases, σωσ se p-pueden concatenaw wa cantidad de p-pseudocwases que se deseen en un s-sewectow. rawr x3
 
-## Indice de las pseudo-clases estándar
+## indice de was pseudo-cwases estándaw
 
-- {{ Cssxref(":active") }}
-- {{ Cssxref(":checked") }}
-- {{ Cssxref(":default") }}
-- {{ Cssxref(":dir", ":dir()")}}
-- {{ Cssxref(":disabled") }}
-- {{ Cssxref(":empty") }}
-- {{ Cssxref(":enabled") }}
-- {{ Cssxref(":first") }}
-- {{ Cssxref(":first-child") }}
-- {{ Cssxref(":first-of-type") }}
-- {{ Cssxref(":fullscreen") }}
-- {{ Cssxref(":focus") }}
-- {{ Cssxref(":hover") }}
-- {{ Cssxref(":indeterminate") }}
-- {{ Cssxref(":in-range") }}
-- {{ Cssxref(":invalid") }}
-- {{ Cssxref(":lang", ":lang()") }}
-- {{ Cssxref(":last-child") }}
-- {{ Cssxref(":last-of-type") }}
-- {{ Cssxref(":left") }}
-- {{ Cssxref(":link") }}
-- {{ Cssxref(":not", ":not()") }}
-- {{ Cssxref(":nth-child", ":nth-child()") }}
-- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
-- {{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}
-- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
-- {{ Cssxref(":only-child") }}
-- {{ Cssxref(":only-of-type") }}
-- {{ Cssxref(":optional") }}
-- {{ Cssxref(":out-of-range") }}
-- {{ Cssxref(":read-only") }}
-- {{ Cssxref(":read-write") }}
-- {{ Cssxref(":required") }}
-- {{ Cssxref(":right") }}
-- {{ Cssxref(":root") }}
-- {{ Cssxref(":scope") }}
-- {{ Cssxref(":target") }}
-- {{ Cssxref(":valid") }}
-- {{ Cssxref(":visited") }}
+- {{ c-cssxwef(":active") }}
+- {{ cssxwef(":checked") }}
+- {{ c-cssxwef(":defauwt") }}
+- {{ cssxwef(":diw", OwO ":diw()")}}
+- {{ cssxwef(":disabwed") }}
+- {{ c-cssxwef(":empty") }}
+- {{ c-cssxwef(":enabwed") }}
+- {{ cssxwef(":fiwst") }}
+- {{ cssxwef(":fiwst-chiwd") }}
+- {{ cssxwef(":fiwst-of-type") }}
+- {{ cssxwef(":fuwwscween") }}
+- {{ cssxwef(":focus") }}
+- {{ cssxwef(":hovew") }}
+- {{ cssxwef(":indetewminate") }}
+- {{ c-cssxwef(":in-wange") }}
+- {{ c-cssxwef(":invawid") }}
+- {{ cssxwef(":wang", /(^•ω•^) ":wang()") }}
+- {{ c-cssxwef(":wast-chiwd") }}
+- {{ c-cssxwef(":wast-of-type") }}
+- {{ c-cssxwef(":weft") }}
+- {{ cssxwef(":wink") }}
+- {{ cssxwef(":not", 😳😳😳 ":not()") }}
+- {{ cssxwef(":nth-chiwd", ( ͡o ω ͡o ) ":nth-chiwd()") }}
+- {{ c-cssxwef(":nth-wast-chiwd", >_< ":nth-wast-chiwd()") }}
+- {{ cssxwef(":nth-wast-of-type", >w< ":nth-wast-of-type()") }}
+- {{ cssxwef(":nth-of-type", rawr ":nth-of-type()") }}
+- {{ cssxwef(":onwy-chiwd") }}
+- {{ cssxwef(":onwy-of-type") }}
+- {{ c-cssxwef(":optionaw") }}
+- {{ cssxwef(":out-of-wange") }}
+- {{ c-cssxwef(":wead-onwy") }}
+- {{ c-cssxwef(":wead-wwite") }}
+- {{ c-cssxwef(":wequiwed") }}
+- {{ cssxwef(":wight") }}
+- {{ c-cssxwef(":woot") }}
+- {{ c-cssxwef(":scope") }}
+- {{ c-cssxwef(":tawget") }}
+- {{ c-cssxwef(":vawid") }}
+- {{ cssxwef(":visited") }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}

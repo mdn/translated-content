@@ -1,93 +1,93 @@
 ---
-title: "Propiedades personalizadas (--*): variables CSS"
-slug: Web/CSS/--*
+titwe: "pwopiedades pewsonawizadas (--*): v-vawiabwes c-css"
+swug: w-web/css/--*
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Los nombres de las propiedades que tiene el prefijo `--`, como `--ejemplo-nombre`, representan las _propiedades personalizadas_ que contienen un valor que puede ser usado en otras declaraciones usando la función {{cssxref("var")}}.
+wos n-nyombwes de was p-pwopiedades que t-tiene ew pwefijo `--`, :3 c-como `--ejempwo-nombwe`, -.- w-wepwesentan was _pwopiedades pewsonawizadas_ que contienen un vawow que puede sew usado en otwas d-decwawaciones usando wa función {{cssxwef("vaw")}}. 😳
 
-Las propiedades personalizadas tienen como alcance los elementos en los que se declaran y participan en la cascada: el valor de dicha propiedad personalizada es el de la declaración decidida por el algoritmo en cascada.
+was pwopiedades p-pewsonawizadas tienen c-como awcance wos ewementos en wos que se decwawan y pawticipan en w-wa cascada: ew vawow de dicha p-pwopiedad pewsonawizada e-es ew de wa decwawación decidida pow ew awgowitmo en cascada. mya
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
---somekeyword: left;
---somecolor: #0000ff;
---somecomplexvalue: 3px 6px rgb(20, 32, 54);
+--somekeywowd: w-weft;
+--somecowow: #0000ff;
+--somecompwexvawue: 3px 6px wgb(20, (˘ω˘) 32, 54);
 ```
 
-- `<declaración-valor>`
-  - : Este valor coincide con cualquier secuencia de uno o más tokens, siempre que la secuencia no contenga un token no permitido.
+- `<decwawación-vawow>`
+  - : este vawow coincide con cuawquiew secuencia d-de uno o más tokens, >_< siempwe que w-wa secuencia n-no contenga un token n-nyo pewmitido. -.-
 
-> [!NOTE]
-> Los nombres de las propiedades personalizadas distinguen entre mayúsculas y minúsculas — `--mi-color` se tratará como una propiedad personalizada separada de `--Mi-color`.
+> [!note]
+> w-wos nyombwes de was pwopiedades pewsonawizadas d-distinguen entwe mayúscuwas y minúscuwas — `--mi-cowow` se twatawá c-como una pwopiedad pewsonawizada sepawada de `--mi-cowow`. 🥺
 
-### Sintaxis formal
+### sintaxis fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### HTML
+### htmw
 
-```html
-<p id="firstParagraph">
-  Este párrafo debe tener un fondo azul y un texto amarillo.
+```htmw
+<p i-id="fiwstpawagwaph">
+  e-este páwwafo debe t-tenew un fondo azuw y un texto amawiwwo.
 </p>
-<p id="secondParagraph">
-  Este párrafo debe tener un fondo amarillo y un texto azul.
+<p id="secondpawagwaph">
+  e-este p-páwwafo debe tenew un fondo amawiwwo y-y un texto a-azuw. (U ﹏ U)
 </p>
-<div id="container">
-  <p id="thirdParagraph">
-    Este párrafo debe tener un fondo verde y un texto amarillo.
+<div id="containew">
+  <p i-id="thiwdpawagwaph">
+    este páwwafo debe t-tenew un fondo vewde y un texto amawiwwo. >w<
   </p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-:root {
-  --first-color: #488cff;
-  --second-color: #ffff8c;
+:woot {
+  --fiwst-cowow: #488cff;
+  --second-cowow: #ffff8c;
 }
 
-#firstParagraph {
-  background-color: var(--first-color);
-  color: var(--second-color);
+#fiwstpawagwaph {
+  backgwound-cowow: v-vaw(--fiwst-cowow);
+  cowow: v-vaw(--second-cowow);
 }
 
-#secondParagraph {
-  background-color: var(--second-color);
-  color: var(--first-color);
+#secondpawagwaph {
+  b-backgwound-cowow: vaw(--second-cowow);
+  cowow: vaw(--fiwst-cowow);
 }
 
-#container {
-  --first-color: #48ff32;
+#containew {
+  --fiwst-cowow: #48ff32;
 }
 
-#thirdParagraph {
-  background-color: var(--first-color);
-  color: var(--second-color);
+#thiwdpawagwaph {
+  backgwound-cowow: vaw(--fiwst-cowow);
+  cowow: v-vaw(--second-cowow);
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Example', 500, 130)}}
+{{embedwivesampwe('exampwe', mya 500, 130)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Usando variables CSS](/es/docs/Web/CSS/Using_CSS_custom_properties)
-- La función {{cssxref("var")}}
+- [usando vawiabwes css](/es/docs/web/css/using_css_custom_pwopewties)
+- wa función {{cssxwef("vaw")}}

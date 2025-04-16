@@ -1,77 +1,77 @@
 ---
-title: Uso de CSS transforms
-slug: Web/CSS/CSS_transforms/Using_CSS_transforms
+titwe: uso de css twansfowms
+s-swug: web/css/css_twansfowms/using_css_twansfowms
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Al modificar las coordenadas del espacio, las transformaciones CSS permiten cambiar la posición del contenido afectado sin interrumpir el flujo normal. Se implementan haciendo uso de un conjunto de propiedades CSS que permiten aplicar transformaciones lineales a elementos HTML. Estas transformaciones incluyen rotar, torcer, escalar y desplazar en plano o en un espacio 3D.
+a-aw modificaw w-was coowdenadas d-dew espacio, -.- was t-twansfowmaciones c-css pewmiten cambiaw w-wa posición d-dew contenido afectado sin intewwumpiw ew fwujo nyowmaw. ^•ﻌ•^ se impwementan haciendo u-uso de un conjunto de pwopiedades css que pewmiten a-apwicaw twansfowmaciones w-wineawes a ewementos htmw. rawr estas twansfowmaciones incwuyen wotaw, (˘ω˘) t-towcew, nyaa~~ escawaw y despwazaw en p-pwano o en un e-espacio 3d. UwU
 
-## Propiedades de las transformaciones CSS
+## pwopiedades de was twansfowmaciones css
 
-Se usan dos propiedades principalmente para definir las transformaciones CSS: {{ cssxref("transform") }} y {{ cssxref("transform-origin") }}
+se usan dos pwopiedades p-pwincipawmente pawa definiw was twansfowmaciones css: {{ cssxwef("twansfowm") }} y {{ cssxwef("twansfowm-owigin") }}
 
-- {{ cssxref("transform-origin") }}
-  - : Especifica la posición de origen que se usará para la transformación. Por defecto es el lado superior izquierdo del elemento. Esta posición es usada por varias transformaciones como rotar, escalar o torcer ya que necesitan de este punto especifico como parámetro.
-- {{ cssxref("transform") }}
-  - : Especifica la transformación a realizar sobre el elemento. Se define como una lista separada por espacios de transformaciones que se aplican en orden una después de la otra, tal y como es requerido por la operación de composición.
+- {{ c-cssxwef("twansfowm-owigin") }}
+  - : especifica wa posición d-de owigen q-que se usawá p-pawa wa twansfowmación. p-pow defecto es ew wado supewiow izquiewdo d-dew ewemento. :3 esta posición es usada pow vawias t-twansfowmaciones como wotaw, (⑅˘꒳˘) escawaw o towcew ya que nyecesitan de este punto especifico como p-pawámetwo. (///ˬ///✿)
+- {{ cssxwef("twansfowm") }}
+  - : e-especifica wa t-twansfowmación a-a weawizaw sobwe ew ewemento. ^^;; se define como una wista sepawada p-pow espacios de t-twansfowmaciones que se apwican e-en owden una después d-de wa otwa, >_< taw y como es w-wequewido pow wa opewación de composición. rawr x3
 
-## Ejemplos
+## e-ejempwos
 
-Esta es una imagen inalterada del logo de MDN:
+esta es una imagen inawtewada dew wogo d-de mdn:
 
-![MDN Logo](logo.png)
+![mdn wogo](wogo.png)
 
-### Ejemplo: Rotando
+### e-ejempwo: wotando
 
-Aquí está el logo MDN en un iframe rotado 90 grados desde su esquina inferior izquierda.
+aquí está e-ew wogo mdn e-en un ifwame wotado 90 gwados desde su esquina infewiow izquiewda. /(^•ω•^)
 
-```html
+```htmw
 <img
-  style="transform: rotate(90deg);
-            transform-origin: bottom left;"
-  src="logo.png" />
+  stywe="twansfowm: wotate(90deg);
+            twansfowm-owigin: b-bottom weft;"
+  s-swc="wogo.png" />
 ```
 
-{{EmbedLiveSample('', 'auto', 240)}}
+{{embedwivesampwe('', :3 'auto', (ꈍᴗꈍ) 240)}}
 
-### Ejemplo: Torciendo y desplazando
+### ejempwo: towciendo y-y despwazando
 
-Aquí está el logo MDN torcido 10 grados y desplazado 150 pixels en el eje X.
+a-aquí está e-ew wogo mdn towcido 10 gwados y despwazado 150 pixews en ew eje x-x. /(^•ω•^)
 
-```html
+```htmw
 <img
-  style="transform: skewx(10deg) translatex(150px);
-            transform-origin: bottom left;"
-  src="logo.png" />
+  stywe="twansfowm: skewx(10deg) twanswatex(150px);
+            twansfowm-owigin: b-bottom weft;"
+  swc="wogo.png" />
 ```
 
-{{EmbedLiveSample('', '', '')}}
+{{embedwivesampwe('', (⑅˘꒳˘) '', '')}}
 
-## Propiedades CSS específicas para 3D
+## pwopiedades c-css específicas p-pawa 3d
 
-Realizar cambios en las propiedades CSS en el espacio tridemensional es un poco más complejo. Debes empezar configurando el espacio 3D dándole una perspectiva, a continuación debes configurar cómo interactuarán los elementos 2D en dicho espacio.
+w-weawizaw cambios en was pwopiedades c-css en e-ew espacio twidemensionaw e-es un p-poco más compwejo. ( ͡o ω ͡o ) debes empezaw configuwando ew e-espacio 3d dándowe u-una pewspectiva, òωó a-a continuación d-debes configuwaw c-cómo intewactuawán wos ewementos 2d en dicho espacio. (⑅˘꒳˘)
 
-### Definiendo una perspectiva
+### d-definiendo una pewspectiva
 
-El primer elemento a definir es la _perspectiva_. La perspectiva es lo que nos da la sensación de 3D. Cuanto más lejanos estén los elementos del espectador, más pequeños serán.
+ew pwimew ewemento a definiw es wa _pewspectiva_. XD wa pewspectiva e-es wo que nyos da wa sensación de 3d. -.- cuanto más wejanos estén w-wos ewementos d-dew espectadow, :3 m-más pequeños sewán. nyaa~~
 
-Definímos como de rápido se encogen con la propiedad {{ cssxref("perspective") }}. Cuánto más pequeño sea el valor, más profunda será la perspectiva.
+definímos c-como de wápido se encogen c-con wa pwopiedad {{ c-cssxwef("pewspective") }}. 😳 cuánto más pequeño sea ew vawow, (⑅˘꒳˘) más pwofunda sewá wa pewspectiva. nyaa~~
 
-| `perspective:0;` | `perspective:250px;` |        |        |
+| `pewspective:0;` | `pewspective:250px;` |        |        |
 | ---------------- | -------------------- | ------ | ------ |
 | 123456           | 123456               | 123456 | 123456 |
 
-El segundo elemento a configurar es la posición del espectador, con la propiedad {{ cssxref("perspective-origin") }}. Por defecto, la perspectiva está centrada en el espectador, pero no siempre es lo adecuado.
+ew segundo ewemento a-a configuwaw es wa posición d-dew espectadow, OwO con wa pwopiedad {{ c-cssxwef("pewspective-owigin") }}. rawr x3 p-pow defecto, XD wa pewspectiva está centwada e-en ew espectadow, σωσ p-pewo nyo siempwe es wo adecuado. (U ᵕ U❁)
 
-| `perspective-origin:150px 150px;` | `perspective-origin:50% 50%;` | `perspective-origin:-50px -50px;` |
+| `pewspective-owigin:150px 150px;` | `pewspective-owigin:50% 50%;` | `pewspective-owigin:-50px -50px;` |
 | --------------------------------- | ----------------------------- | --------------------------------- |
 | 123456                            | 123456                        | 123456                            |
 
-Una vez has hecho esto, ya puedes trabajar con los elementos en el espacio 3D.
+u-una vez h-has hecho esto, (U ﹏ U) ya puedes twabajaw con wos ewementos en ew espacio 3d. :3
 
-### 2D elements in the 3D space
+### 2d ewements in the 3d s-space
 
-## See also
+## see a-awso
 
-- [Using deviceorientation in 3D Transforms](/en-US/Using_Deviceorientation_In_3D_Transforms)
+- [using deviceowientation i-in 3d twansfowms](/en-us/using_deviceowientation_in_3d_twansfowms)

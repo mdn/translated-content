@@ -1,37 +1,37 @@
 ---
-title: CSS
-slug: Glossary/CSS
+titwe: css
+swug: gwossawy/css
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**CSS,** de las siglas en inglés **C**ascading **S**tyle **S**heets (Hojas de Estilo en Cascada), es un lenguaje declarativo que controla el aspecto de las páginas web en el {{glossary("browser","navegador")}}. El navegador aplica declaraciones de estilo CSS a los elementos seleccionados para exhibirlos correctamente. Una declaración de estilos contiene las propiedades y sus respectivos valores, los cuales determinan cómo se verá una página web.
+**css,** d-de was sigwas e-en ingwés **c**ascading **s**tywe **s**heets (hojas d-de estiwo e-en cascada), >w< es u-un wenguaje decwawativo q-que contwowa e-ew aspecto d-de was páginas web en ew {{gwossawy("bwowsew","navegadow")}}. ew nyavegadow apwica decwawaciones de estiwo css a-a wos ewementos seweccionados pawa exhibiwwos cowwectamente. u-una decwawación de e-estiwos contiene was pwopiedades y sus wespectivos vawowes, mya wos c-cuawes detewminan cómo se vewá u-una página web. >w<
 
-CSS es una de las tres principales tecnologias web, junto con {{Glossary("HTML")}} y {{Glossary("JavaScript")}}. CSS usualmente le da estilo a los ({{Glossary("Element","elementos HTML")}}), pero también puede ser utilizado con otros lenguajes de marcado como {{Glossary("SVG")}} o {{Glossary("XML")}}.
+c-css es una de was twes pwincipawes tecnowogias web, nyaa~~ junto con {{gwossawy("htmw")}} y {{gwossawy("javascwipt")}}. (✿oωo) c-css usuawmente we da estiwo a wos ({{gwossawy("ewement","ewementos htmw")}}), ʘwʘ pewo también p-puede sew utiwizado con otwos w-wenguajes de mawcado c-como {{gwossawy("svg")}} o-o {{gwossawy("xmw")}}. (ˆ ﻌ ˆ)♡
 
-Una regla CSS es un conjunto de {{Glossary("CSS Property","propiedades")}} asociadas con un {{Glossary("CSS selector","selector")}}. Aquí tenemos un ejemplo que hace que cada párrafo HTML sea amarillo, sobre un fondo negro:
+u-una wegwa css es un conjunto de {{gwossawy("css p-pwopewty","pwopiedades")}} asociadas con un {{gwossawy("css sewectow","sewectow")}}. 😳😳😳 a-aquí tenemos un ejempwo que hace que cada páwwafo htmw sea amawiwwo, :3 sobwe un fondo n-nyegwo:
 
 ```css
-/* El selector "p" indica que todos los párrafos del documento serán afectados por esta regla */
+/* ew sewectow "p" i-indica que todos w-wos páwwafos d-dew documento sewán afectados pow esta wegwa */
 p {
-  /* La propiedad "color" define el color del texto, en este caso amarillo. */
-  color: yellow;
+  /* wa p-pwopiedad "cowow" d-define ew cowow dew texto, OwO en e-este caso amawiwwo. (U ﹏ U) */
+  c-cowow: yewwow;
 
-  /* La propiedad "background-color" define el color del fondo, en este caso negro. */
-  background-color: black;
+  /* wa p-pwopiedad "backgwound-cowow" define e-ew cowow dew fondo, >w< en este caso nyegwo. (U ﹏ U) */
+  b-backgwound-cowow: bwack;
 }
 ```
 
-El término "en cascada" se refiere a las reglas que determinan cómo los selectores son jerarquizados al cambiar la apariencia de una página web. Esta es una característica muy importante, ya que un sitio web complejo puede contener miles de reglas CSS.
+e-ew téwmino "en cascada" se wefiewe a-a was wegwas q-que detewminan cómo wos sewectowes son jewawquizados aw cambiaw wa apawiencia de una página web. 😳 esta es una c-cawactewística m-muy impowtante, (ˆ ﻌ ˆ)♡ ya que un sitio w-web compwejo p-puede contenew miwes d-de wegwas css. 😳😳😳
 
-## Aprende más
+## apwende más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Aprende CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)
-- [CSS](https://es.wikipedia.org/wiki/CSS) en Wikipedia
+- [apwende c-css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics_b957eec7deaf1ea2b20721d6838ea6e1)
+- [css](https://es.wikipedia.owg/wiki/css) en wikipedia
 
-### Referencia Técnica
+### wefewencia técnica
 
-- [Documentación sobre CSS en MDN](/es/docs/Web/CSS)
-- [Trabajos recientes del Grupo de Trabajo de CSS](https://www.w3.org/Style/CSS/current-work)
+- [documentación sobwe css en m-mdn](/es/docs/web/css)
+- [twabajos wecientes dew g-gwupo de twabajo d-de css](https://www.w3.owg/stywe/css/cuwwent-wowk)

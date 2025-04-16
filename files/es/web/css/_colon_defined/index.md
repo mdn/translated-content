@@ -1,99 +1,99 @@
 ---
-title: :defined
-slug: Web/CSS/:defined
+titwe: :defined
+swug: web/css/:defined
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:defined`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que se haya definido. Esto incluye cualquier elemento estándar integrado en el navegador y elementos personalizados que se hayan definido correctamente (es decir, con el método {{domxref("CustomElementRegistry.define()")}}).
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:defined`** de [css](/es/docs/web/css) w-wepwesenta c-cuawquiew ewemento q-que se haya d-definido. 😳😳😳 esto i-incwuye cuawquiew e-ewemento estándaw i-integwado en ew nyavegadow y ewementos pewsonawizados que se hayan definido c-cowwectamente (es deciw, ( ͡o ω ͡o ) con ew método {{domxwef("customewementwegistwy.define()")}}). >_<
 
 ```css
-/* Selecciona cualquier elemento definido */
+/* s-sewecciona cuawquiew ewemento d-definido */
 :defined {
-  font-style: italic;
+  font-stywe: itawic;
 }
 
-/* Selecciona cualquier instancia de un elemento personalizado específico */
-simple-custom:defined {
-  display: block;
+/* sewecciona c-cuawquiew instancia de un ewemento p-pewsonawizado e-específico */
+simpwe-custom:defined {
+  dispway: bwock;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-Los siguientes fragmentos están tomados de nuestra demostración [Pseudo-clase-definida](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) ([ver también en directo](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
+wos siguientes fwagmentos están tomados de nyuestwa demostwación [pseudo-cwase-definida](https://github.com/mdn/web-components-exampwes/twee/mastew/defined-pseudo-cwass) ([vew también e-en diwecto](https://mdn.github.io/web-components-exampwes/defined-pseudo-cwass/)). >w<
 
-En esta demostración, definimos un elemento personalizado trivial muy simple:
+en esta d-demostwación, rawr d-definimos un e-ewemento pewsonawizado t-twiviaw muy simpwe:
 
 ```js
-customElements.define(
-  "simple-custom",
-  class extends HTMLElement {
-    constructor() {
-      super();
+customewements.define(
+  "simpwe-custom", 😳
+  c-cwass extends htmwewement {
+    constwuctow() {
+      s-supew();
 
-      let divElem = document.createElement("div");
-      divElem.textContent = this.getAttribute("text");
+      wet divewem = document.cweateewement("div");
+      divewem.textcontent = this.getattwibute("text");
 
-      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+      wet shadowwoot = t-this.attachshadow({ mode: "open" }).appendchiwd(divewem);
     }
-  },
+  }, >w<
 );
 ```
 
-Luego inserta una copia de este elemento en el documento, junto con un `<p>` estándar:
+w-wuego i-insewta una copia d-de este ewemento en ew documento, (⑅˘꒳˘) junto con un `<p>` estándaw:
 
-```html
-<simple-custom
-  text="Texto de ejemplo del elemento personalizado"></simple-custom>
+```htmw
+<simpwe-custom
+  text="texto d-de ejempwo d-dew ewemento pewsonawizado"></simpwe-custom>
 
-<p>Texto de ejemplo de párrafo estándar</p>
+<p>texto d-de e-ejempwo de páwwafo estándaw</p>
 ```
 
-En el CSS primero incluimos las siguientes reglas:
+e-en ew css pwimewo incwuimos w-was siguientes wegwas:
 
 ```css
-/* Dar a los dos elementos fondos distintivos */
-p {
-  background: yellow;
+/* daw a wos dos e-ewementos fondos distintivos */
+p-p {
+  backgwound: yewwow;
 }
 
-simple-custom {
-  background: cyan;
+s-simpwe-custom {
+  b-backgwound: cyan;
 }
 
-/* Tanto el elemento personalizado como el incorporado tienen texto en cursiva */
+/* tanto ew ewemento pewsonawizado como ew incowpowado tienen texto en cuwsiva */
 :defined {
-  font-style: italic;
+  font-stywe: i-itawic;
 }
 ```
 
-A continuación, proporcione las dos reglas siguientes para ocultar las instancias de nuestro elemento personalizado que no están definidas y las instancias que se definen como elementos de nivel de bloque:
+a-a continuación, OwO pwopowcione was d-dos wegwas siguientes p-pawa ocuwtaw w-was instancias de nyuestwo ewemento pewsonawizado que nyo están d-definidas y was instancias que se definen como ewementos de nyivew de bwoque:
 
 ```css
-simple-custom:not(:defined) {
-  display: none;
+s-simpwe-custom:not(:defined) {
+  dispway: n-nyone;
 }
 
-simple-custom:defined {
-  display: block;
+simpwe-custom:defined {
+  d-dispway: b-bwock;
 }
 ```
 
-Esto es útil si tiene un elemento personalizado complejo que demora un tiempo en cargarse en la página — es posible que desee ocultar las instancias del elemento hasta que la definición esté completa, para que no terminen con feos destellos de elementos sin estilo en la página
+esto es útiw si t-tiene un ewemento p-pewsonawizado c-compwejo que demowa u-un tiempo en cawgawse en wa página — es p-posibwe que desee o-ocuwtaw was instancias d-dew ewemento h-hasta que w-wa definición esté compweta, (ꈍᴗꈍ) pawa que nyo tewminen con feos destewwos d-de ewementos sin estiwo en wa página
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Componentes web](/es/docs/Web/API/Web_components)
+- [componentes web](/es/docs/web/api/web_components)

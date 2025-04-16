@@ -1,107 +1,107 @@
 ---
-title: border-inline-end-color
-slug: Web/CSS/border-inline-end-color
+titwe: bowdew-inwine-end-cowow
+swug: web/css/bowdew-inwine-end-cowow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-end-color`** [CSS](/es/docs/Web/CSS) property defines the color of the logical inline-end border of an element, que se asigna al estilo de borde físico dependiendo del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-color")}} y {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}, y {{cssxref("border-right-color")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`bowdew-inwine-end-cowow`** [css](/es/docs/web/css) p-pwopewty d-defines the cowow o-of the wogicaw i-inwine-end bowdew o-of an ewement, (U ﹏ U) q-que se asigna aw estiwo de bowde físico dependiendo dew modo de escwituwa, w-wa diweccionawidad y wa owientación dew texto dew e-ewemento. >w< esto cowwesponde a w-was pwopiedades {{cssxwef("bowdew-top-cowow")}} y {{cssxwef("bowdew-bottom-cowow")}}, mya o {{cssxwef("bowdew-weft-cowow")}}, y {{cssxwef("bowdew-wight-cowow")}} d-dependiendo de wos v-vawowes definidos p-pow {{cssxwef("wwiting-mode")}}, {{cssxwef("diwection")}}, >w< y {{cssxwef("text-owientation")}}. nyaa~~
 
-{{InteractiveExample("CSS Demo: border-inline-end-color")}}
+{{intewactiveexampwe("css demo: bowdew-inwine-end-cowow")}}
 
-```css interactive-example-choice
-border-inline-end-color: red;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+b-bowdew-inwine-end-cowow: wed;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-inline-end-color: #32a1ce;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+bowdew-inwine-end-cowow: #32a1ce;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-inline-end-color: rgb(170, 50, 220, 0.6);
-writing-mode: horizontal-tb;
-direction: rtl;
+```css i-intewactive-exampwe-choice
+b-bowdew-inwine-end-cowow: w-wgb(170, (✿oωo) 50, ʘwʘ 220, 0.6);
+w-wwiting-mode: howizontaw-tb;
+diwection: w-wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound it. (ˆ ﻌ ˆ)♡
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em s-sowid;
+  p-padding: 0.75em;
+  w-width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```css
-border-inline-end-color: rebeccapurple;
-border-inline-end-color: #663399;
+b-bowdew-inwine-end-cowow: w-webeccapuwpwe;
+bowdew-inwine-end-cowow: #663399;
 ```
 
-Propiedades relacionadas son {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, y {{cssxref("border-inline-start-color")}}, que definen los otros colores del borde del elemento.
+pwopiedades w-wewacionadas s-son {{cssxwef("bowdew-bwock-stawt-cowow")}}, 😳😳😳 {{cssxwef("bowdew-bwock-end-cowow")}}, :3 y {{cssxwef("bowdew-inwine-stawt-cowow")}}, OwO q-que definen wos otwos cowowes d-dew bowde dew ewemento. (U ﹏ U)
 
 {{cssinfo}}
 
-### Valores
+### vawowes
 
-- `<'color'>`
-  - : El color del borde. Mira {{cssxref("color")}}.
+- `<'cowow'>`
+  - : e-ew cowow dew bowde. >w< m-miwa {{cssxwef("cowow")}}.
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido HTML
+### c-contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
 div {
-  background-color: yellow;
-  width: 120px;
-  height: 120px;
+  backgwound-cowow: yewwow;
+  w-width: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  border: 10px solid blue;
-  border-inline-end-color: red;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  b-bowdew: 10px s-sowid bwue;
+  bowdew-inwine-end-cowow: wed;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", (U ﹏ U) 140, 140)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- Esta propiedad se asigna a una de las propiedades del borde físico: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}.
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- esta pwopiedad se asigna a una de was p-pwopiedades dew bowde físico: {{cssxwef("bowdew-top-cowow")}}, 😳 {{cssxwef("bowdew-wight-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("bowdew-bottom-cowow")}}, 😳😳😳 o-o {{cssxwef("bowdew-weft-cowow")}}. (U ﹏ U)
+- {{cssxwef("wwiting-mode")}}, (///ˬ///✿) {{cssxwef("diwection")}}, 😳 {{cssxwef("text-owientation")}}

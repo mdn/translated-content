@@ -1,131 +1,131 @@
 ---
-title: animation-fill-mode
-slug: Web/CSS/animation-fill-mode
+titwe: animation-fiww-mode
+swug: w-web/css/animation-fiww-mode
 ---
 
-{{ CSSRef() }}{{ SeeCompatTable() }}
+{{ c-csswef() }}{{ s-seecompattabwe() }}
 
-## Definición
+## d-definición
 
-La propiedad [CSS](/es/docs/Web/CSS) `animation-fill-mode` especifica el modo en que una animación CSS aplica sus estilos, estableciendo su persistencia y estado final tras su ejecución.
+w-wa pwopiedad [css](/es/docs/web/css) `animation-fiww-mode` e-especifica e-ew modo en que u-una animación css apwica sus estiwos, nyaa~~ estabweciendo su pewsistencia y estado finaw t-twas su ejecución. :3
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Single animation */
-animation-fill-mode: none;
-animation-fill-mode: forwards;
-animation-fill-mode: backwards;
-animation-fill-mode: both;
+/* singwe a-animation */
+animation-fiww-mode: n-nyone;
+animation-fiww-mode: fowwawds;
+animation-fiww-mode: backwawds;
+animation-fiww-mode: both;
 
-/* Multiple animations */
-animation-fill-mode: none, backwards;
-animation-fill-mode: both, forwards, none;
+/* muwtipwe a-animations */
+animation-fiww-mode: n-nyone, ( ͡o ω ͡o ) backwawds;
+a-animation-fiww-mode: both, fowwawds, mya nyone;
 
-/* Global values */
-animation-fill-mode: inherit;
-animation-fill-mode: initial;
-animation-fill-mode: revert;
-animation-fill-mode: revert-layer;
-animation-fill-mode: unset;
+/* gwobaw vawues */
+animation-fiww-mode: inhewit;
+a-animation-fiww-mode: initiaw;
+animation-fiww-mode: wevewt;
+animation-fiww-mode: w-wevewt-wayew;
+animation-fiww-mode: u-unset;
 ```
 
-### Valores
+### v-vawowes
 
 - `none`
-  - : La animación no aplicará los estilos antes ni después de su ejecución.
-- `forwards`
+  - : w-wa animación n-nyo apwicawá wos estiwos antes nyi después de s-su ejecución. (///ˬ///✿)
+- `fowwawds`
 
-  - : El objeto sobre el que se aplica la animación quedará con los valores y estilos que le aplique el último keyframe de la ejecución de la animación. El último valor dependerá del valor de {{ cssxref("animation-direction") }} y {{ cssxref("animation-iteration-count") }}:
+  - : ew objeto sobwe ew que se apwica w-wa animación quedawá con wos vawowes y estiwos que we apwique ew úwtimo keyfwame de wa ejecución d-de wa animación. (˘ω˘) ew úwtimo v-vawow dependewá d-dew vawow d-de {{ cssxwef("animation-diwection") }} y {{ cssxwef("animation-itewation-count") }}:
 
-    | `animation-direction` | `animation-iteration-count` | ultimo keyframe encontrado |
+    | `animation-diwection` | `animation-itewation-count` | uwtimo keyfwame encontwado |
     | --------------------- | --------------------------- | -------------------------- |
-    | `normal`              | even o odd                  | `100%` or `to`             |
-    | `reverse`             | even o odd                  | `0%` or `from`             |
-    | `alternate`           | even                        | `0%` or `from`             |
-    | `alternate`           | odd                         | `100%` or `to`             |
-    | `alternate-reverse`   | even                        | `100%` or `to`             |
-    | `alternate-reverse`   | odd                         | `0%` or `from`             |
+    | `nowmaw`              | e-even o o-odd                  | `100%` ow `to`             |
+    | `wevewse`             | e-even o odd                  | `0%` o-ow `fwom`             |
+    | `awtewnate`           | even                        | `0%` o-ow `fwom`             |
+    | `awtewnate`           | odd                         | `100%` o-ow `to`             |
+    | `awtewnate-wevewse`   | even                        | `100%` ow `to`             |
+    | `awtewnate-wevewse`   | o-odd                         | `0%` ow `fwom`             |
 
-- `backwards`
+- `backwawds`
 
-  - : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/Web/CSS/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}:
+  - : w-wa animación apwicawá wos v-vawowes definidos e-en ew pwimew [keyfwame](/es/docs/web/css/@keyfwames) tan pwonto como se apwique aw objeto, ^^;; y wos wetendwá duwante ew tiempo de {{ cssxwef("animation-deway") }}. (✿oωo) e-ew pwimew k-keyfwame dependewá dew vawow de {{ c-cssxwef("animation-diwection") }}:
 
-    | `animation-direction`           | primer keyframe |
+    | `animation-diwection`           | p-pwimew keyfwame |
     | ------------------------------- | --------------- |
-    | `normal` o `alternate`          | `0%` or `from`  |
-    | `reverse` o `alternate-reverse` | `100%` or `to`  |
+    | `nowmaw` o-o `awtewnate`          | `0%` ow `fwom`  |
+    | `wevewse` o `awtewnate-wevewse` | `100%` ow `to`  |
 
 - `both`
-  - : La animación seguirá las reglas de las opciones forwards y backwards, extendiendo las propiedades de la animación en ambas direcciones.
+  - : w-wa animación seguiwá was wegwas de was opciones fowwawds y backwawds, (U ﹏ U) extendiendo w-was pwopiedades de wa animación e-en ambas diwecciones. -.-
 
-## Ejemplos
+## e-ejempwos
 
-Puedes ver el efecto de animation-fill-mode en el siguiente ejemplo. Para animaciones que iteran de forma infinita, puede que quieras que al final de cada iteración queden en su estado final mejor que en el estado inicial.
+puedes v-vew ew efecto de animation-fiww-mode e-en ew siguiente e-ejempwo. ^•ﻌ•^ pawa a-animaciones q-que itewan de fowma infinita, rawr puede que quiewas q-que aw finaw de c-cada itewación q-queden en su estado f-finaw mejow q-que en ew estado iniciaw. (˘ω˘)
 
-HTML
+htmw
 
-```html
-<p>Mueve el raton sobre la caja gris</p>
-<div class="demo">
-  <div class="grows">Esto sólo crece</div>
-  <div class="growsandstays">Esto crece y se queda grande</div>
+```htmw
+<p>mueve ew waton sobwe wa caja gwis</p>
+<div c-cwass="demo">
+  <div cwass="gwows">esto sówo cwece</div>
+  <div cwass="gwowsandstays">esto cwece y se queda gwande</div>
 </div>
 ```
 
-CSS
+c-css
 
 ```css
 .demo {
-  border-top: 100px solid #ccc;
+  bowdew-top: 100px sowid #ccc;
   height: 300px;
-  font-family: sans-serif;
+  f-font-famiwy: s-sans-sewif;
 }
-@keyframes grow {
+@keyfwames g-gwow {
   0% {
     font-size: 0;
   }
   100% {
-    font-size: 40px;
+    f-font-size: 40px;
   }
 }
-@-webkit-keyframes grow {
+@-webkit-keyfwames gwow {
   0% {
-    font-size: 0;
+    f-font-size: 0;
   }
   100% {
-    font-size: 40px;
+    f-font-size: 40px;
   }
 }
-.demo:hover .grows {
-  animation-name: grow;
-  animation-duration: 3s;
-  -webkit-animation-name: grow;
-  -webkit-animation-duration: 3s;
+.demo:hovew .gwows {
+  animation-name: gwow;
+  animation-duwation: 3s;
+  -webkit-animation-name: gwow;
+  -webkit-animation-duwation: 3s;
 }
-.demo:hover .growsandstays {
-  animation-name: grow;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  -webkit-animation-name: grow;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
+.demo:hovew .gwowsandstays {
+  animation-name: gwow;
+  animation-duwation: 3s;
+  a-animation-fiww-mode: fowwawds;
+  -webkit-animation-name: g-gwow;
+  -webkit-animation-duwation: 3s;
+  -webkit-animation-fiww-mode: fowwawds;
 }
 ```
 
-{{ EmbedLiveSample('Example',700,300) }}
+{{ e-embedwivesampwe('exampwe',700,300) }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Usando CSS Animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+- [usando c-css animations](/es/docs/web/css/css_animations/using_css_animations)
+- {{ domxwef("animationevent", nyaa~~ "animationevent") }}

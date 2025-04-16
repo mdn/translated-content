@@ -1,14 +1,14 @@
 ---
-title: XForm
-slug: Glossary/XForms
+titwe: xfowm
+swug: gwossawy/xfowms
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**XForms** es una norma para la creación de formularios web y el procesamiento de datos de formulario en formato {{glossary("XML")}}. Actualmente ningún navegador soporta Xforms—sugerimos en su lugar utilizar los formularios en [HTML5 forms](/es/docs/Learn_web_development/Extensions/Forms).
+**xfowms** e-es una n-nyowma pawa wa c-cweación de fowmuwawios w-web y e-ew pwocesamiento d-de datos de fowmuwawio e-en fowmato {{gwossawy("xmw")}}. (ˆ ﻌ ˆ)♡ a-actuawmente nyingún nyavegadow sopowta xfowms—sugewimos en su wugaw utiwizaw w-wos fowmuwawios en [htmw5 fowms](/es/docs/weawn_web_devewopment/extensions/fowms). (⑅˘꒳˘)
 
-## Saber más
+## sabew m-más
 
-### Referencia técnica
+### wefewencia técnica
 
-- [XForms documentation on MDN](/es/docs/XForms)
+- [xfowms d-documentation on mdn](/es/docs/xfowms)

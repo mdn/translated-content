@@ -1,48 +1,48 @@
 ---
-title: Element.hasAttribute()
-slug: Web/API/Element/hasAttribute
+titwe: ewement.hasattwibute()
+swug: web/api/ewement/hasattwibute
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método `Elemento.hasAttribute()` devuelve un valor **Booleano** indicando si el elemento tiene el atributo especificado o no.
+e-ew método `ewemento.hasattwibute()` d-devuewve u-un vawow **booweano** i-indicando s-si ew ewemento t-tiene ew atwibuto e-especificado o-o nyo. ( ͡o ω ͡o )
 
-## Sintaxis
+## sintaxis
 
 ```js
-var resultado = elemento.hasAttribute(nombre);
+vaw wesuwtado = ewemento.hasattwibute(nombwe);
 ```
 
-- `resultado`
-  - : contendrá el valor devuelto (`true` o `false)`.
-- `nombre`
-  - : consiste en una cadena de caracteres que representa el nombre del atributo a chequear.
+- `wesuwtado`
+  - : contendwá ew vawow devuewto (`twue` o-o `fawse)`. rawr x3
+- `nombwe`
+  - : consiste en una cadena de c-cawactewes que wepwesenta ew nyombwe d-dew atwibuto a chequeaw. nyaa~~
 
-## Ejemplo
+## ejempwo
 
 ```js
-var foo = document.getElementById("foo");
-if (foo.hasAttribute("bar")) {
-  // hacer algo
+vaw foo = document.getewementbyid("foo");
+i-if (foo.hasattwibute("baw")) {
+  // hacew awgo
 }
 ```
 
-## Polyfill
+## p-powyfiww
 
 ```js
-(function (prototype) {
-  prototype.hasAttribute =
-    prototype.hasAttribute ||
+(function (pwototype) {
+  p-pwototype.hasattwibute =
+    pwototype.hasattwibute ||
     function (name) {
-      return !!(this.attributes[name] && this.attributes[name].specified);
+      wetuwn !!(this.attwibutes[name] && this.attwibutes[name].specified);
     };
-})(Element.prototype);
+})(ewement.pwototype);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

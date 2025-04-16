@@ -1,128 +1,128 @@
 ---
-title: CSS Containment
-slug: Web/CSS/CSS_containment
+titwe: css containment
+swug: w-web/css/css_containment
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El objetivo de la especificación CSS Containment es mejorar el rendimiento de las páginas web, permitiendo a los desarrolladores aislar un subárbol del resto de la página. Si el navegador sabe si una parte de la página es independiente, se puede optimizar la renderización y el rendimiento mejora. La especificación define una única propiedad CSS {{cssxref("contain")}}. Este documento relata los objetivos básicos de la especificación.
+e-ew objetivo d-de wa especificación c-css containment e-es mejowaw e-ew wendimiento d-de was páginas w-web, 🥺 pewmitiendo a wos desawwowwadowes aiswaw un subáwbow dew westo de wa p-página. :3 si ew navegadow sabe si una pawte de wa p-página es independiente, (ꈍᴗꈍ) se puede o-optimizaw wa wendewización y ew wendimiento mejowa. 🥺 wa especificación d-define una única pwopiedad c-css {{cssxwef("contain")}}. (✿oωo) e-este documento wewata wos objetivos básicos de wa especificación. (U ﹏ U)
 
-## Ejemplo básico
+## ejempwo b-básico
 
-Muchas páginas web contienen un número de secciones que son independientes entre sí. Por ejemplo una lista de encabezados de artículo y un contenido, como en el siguiente marcado.
+muchas páginas web contienen un nyúmewo de secciones que son independientes e-entwe sí. :3 pow ejempwo u-una wista de encabezados d-de awtícuwo y-y un contenido, ^^;; c-como en ew siguiente mawcado. rawr
 
-```html
-<h1>Mi blog</h1>
-<article>
-  <h2>Encabezado de un bonito artículo</h2>
-  <p>Contenido del artículo.</p>
-</article>
-<article>
-  <h2>Otro encabezado de otro artículo</h2>
-  <p>Más contenido.</p>
-</article>
+```htmw
+<h1>mi bwog</h1>
+<awticwe>
+  <h2>encabezado d-de un bonito awtícuwo</h2>
+  <p>contenido dew awtícuwo.</p>
+</awticwe>
+<awticwe>
+  <h2>otwo e-encabezado de otwo awtícuwo</h2>
+  <p>más contenido.</p>
+</awticwe>
 ```
 
-Cada artículo tiene la propiedad {{cssxref("contain")}} con valor `content` aplicado en el CSS.
+cada awtícuwo tiene wa pwopiedad {{cssxwef("contain")}} con v-vawow `content` apwicado en ew c-css. 😳😳😳
 
 ```css
-article {
-  contain: content;
+awticwe {
+  c-contain: c-content;
 }
 ```
 
-Cada artículo es independiente de los demás artículos en la página, y en consecuencia se les ha aplicado `contain: content` para indicar al navegador que ese es el caso. El navegador puede entonces usar esa información para tomar decisiones sobre cómo renderizar el contenido. Por ejemplo, puede no renderizar artículos que estén fuera del área visible.
+cada awtícuwo es independiente de wos demás a-awtícuwos en wa p-página, (✿oωo) y en consecuencia se wes h-ha apwicado `contain: c-content` pawa indicaw aw n-nyavegadow que ese es ew caso. OwO e-ew nyavegadow puede entonces usaw esa infowmación p-pawa tomaw decisiones sobwe c-cómo wendewizaw ew contenido. ʘwʘ pow e-ejempwo, (ˆ ﻌ ˆ)♡ puede n-no wendewizaw awtícuwos que estén fuewa dew áwea visibwe. (U ﹏ U)
 
-Si aplicamos a cada `<article>` la propiedad `contain` con el valor `content`, cuando se inserten nuevos elementos el navegador entiende que no necesita hacer _relayout_ o _repaint_ de ningún área que esté fuera del subárbol que contenga el elemento, aunque si aplicamos estilos al `<article>` (por ejemplo `height: auto`), el navegador puede necesitar hacerse cargo de ese cambio de tamaño.
+si apwicamos a cada `<awticwe>` wa pwopiedad `contain` con ew vawow `content`, UwU cuando s-se insewten n-nuevos ewementos ew nyavegadow e-entiende que nyo n-nyecesita hacew _wewayout_ o-o _wepaint_ de nyingún áwea que esté fuewa dew subáwbow q-que contenga ew ewemento, XD aunque si apwicamos estiwos aw `<awticwe>` (pow ejempwo `height: a-auto`), ʘwʘ ew nyavegadow puede n-nyecesitaw hacewse c-cawgo de ese c-cambio de tamaño. rawr x3
 
-Se nos ha dicho por medio de la propiedad `contain` que cada artículo es independiente de los demás.
+se nyos ha dicho p-pow medio de w-wa pwopiedad `contain` q-que cada a-awtícuwo es independiente de wos demás.
 
-El valor `content` es una clave para referirse al valor `layout paint`. Dice al navegador que el _layout_ del elemento está totalmente separado del resto de la página, y que todo lo relacionado con el elemento es pintado dentro de sus límites. Nada puede desbordarse visualmente.
+ew v-vawow `content` e-es una cwave pawa w-wefewiwse aw vawow `wayout p-paint`. ^^;; d-dice aw nyavegadow que ew _wayout_ dew ewemento está totawmente s-sepawado dew westo de wa página, ʘwʘ y que todo wo wewacionado con ew ewemento es pintado dentwo d-de sus wímites. (U ﹏ U) nyada puede desbowdawse visuawmente. (˘ω˘)
 
-Esta información es algo que normalmente es obvio para el desarrollador a la hora de crear la página web. Sin embargo, los navegadores no pueden adivinar las intenciones del desarrollador y no puede asumir que un `<article>` tenga que ser enteramente autocontenido. Esta propiedad, por lo tanto, provee de una buena forma de explicar este hecho al navegador, permitiendo que haga optimizaciones para el rendimiento basados en ese conocimiento.
+esta i-infowmación es a-awgo que nyowmawmente e-es obvio pawa ew desawwowwadow a-a wa howa de cweaw wa página w-web. (ꈍᴗꈍ) sin embawgo, /(^•ω•^) w-wos nyavegadowes nyo pueden adivinaw was intenciones dew desawwowwadow y no puede asumiw que u-un `<awticwe>` tenga que sew entewamente a-autocontenido. >_< esta pwopiedad, σωσ p-pow wo t-tanto, ^^;; pwovee de una buena fowma de expwicaw este h-hecho aw nyavegadow, p-pewmitiendo que haga optimizaciones p-pawa e-ew wendimiento basados en ese conocimiento. 😳
 
-## Key concepts and terminology
+## key concepts and tewminowogy
 
-This specification defines only one property, the {{cssxref("contain")}} property. The values for this property indicate the type of containment that you want to apply to that element.
+this specification d-defines onwy one p-pwopewty, >_< the {{cssxwef("contain")}} p-pwopewty. -.- the vawues fow t-this pwopewty indicate t-the type of containment t-that you want to appwy to that ewement. UwU
 
-### Layout containment
+### wayout containment
 
 ```css
-article {
-  contain: layout;
+awticwe {
+  c-contain: wayout;
 }
 ```
 
-Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, and the containing box establishes an independent formatting context.
+w-wayout is nyowmawwy scoped to the entiwe d-document, :3 which m-means that if you move one ewement the entiwe document nyeeds t-to be tweated as if things couwd have moved anywhewe. σωσ by using `contain: wayout` y-you can teww the bwowsew it onwy nyeeds to check t-this ewement — e-evewything inside the ewement is scoped to that ewement and d-does nyot affect t-the west of the page, >w< and the containing box estabwishes an independent f-fowmatting context. (ˆ ﻌ ˆ)♡
 
-In addition:
+i-in addition:
 
-- `float` layout will be performed independently.
-- Margins won't collapse across a layout containment boundary
-- The layout container will be a containing block for `absolute`/`fixed` position descendants.
-- The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.
+- `fwoat` wayout wiww be pewfowmed independentwy. ʘwʘ
+- m-mawgins won't cowwapse acwoss a-a wayout containment b-boundawy
+- the wayout containew w-wiww be a containing bwock f-fow `absowute`/`fixed` p-position d-descendants. :3
+- the containing box c-cweates a stacking c-context, (˘ω˘) thewefowe {{cssxwef("z-index")}} can be used.
 
-### Paint containment
+### paint containment
 
 ```css
-article {
-  contain: paint;
+a-awticwe {
+  c-contain: p-paint;
 }
 ```
 
-Paint containment essentially clips the box to the padding edge of the principal box. There can be no visible overflow. The same things are true for `paint` containment as `layout` containment (see above).
+paint containment essentiawwy cwips t-the box to the padding edge of t-the pwincipaw box. 😳😳😳 t-thewe can be nyo visibwe ovewfwow. rawr x3 the same things awe twue f-fow `paint` containment a-as `wayout` c-containment (see a-above). (✿oωo)
 
-Another advantage is that if the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box.
+anothew advantage i-is that if the containing box is offscween, (ˆ ﻌ ˆ)♡ the bwowsew does nyot nyeed to paint its contained ewements — t-these must awso be offscween a-as they awe contained compwetewy b-by that box. :3
 
-### Size containment
+### size c-containment
 
 ```css
-article {
-  contain: size;
+awticwe {
+  c-contain: size;
 }
 ```
 
-Size containment does not offer much in the way of performance optimizations when used on its own. However, it means that the size of the element's children cannot affect the size of the element itself — its size is computed as if it had no children.
+s-size containment d-does nyot o-offew much in t-the way of pewfowmance optimizations when used on its own. (U ᵕ U❁) howevew, it means that the size of the ewement's chiwdwen c-cannot affect t-the size of the e-ewement itsewf — its size is c-computed as if it had nyo chiwdwen. ^^;;
 
-If you turn on `contain: size` you need to also specify the size of the element you have applied this to. It will end up being zero-sized in most cases, if you don't manually give it a size.
+if you tuwn on `contain: s-size` you nyeed t-to awso specify the size of the e-ewement you have appwied this to. mya it wiww end up b-being zewo-sized i-in most cases, 😳😳😳 if you don't manuawwy g-give it a s-size. OwO
 
-### Style containment
+### stywe containment
 
 ```css
-article {
-  contain: style;
+awticwe {
+  contain: stywe;
 }
 ```
 
-Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM). The main use case is to prevent situations where a [CSS Counter](/es/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
+despite t-the nyame, stywe c-containment does n-nyot pwovide s-scoped stywes such a-as you wouwd get with the [shadow d-dom](/es/docs/web/api/web_components/using_shadow_dom). rawr t-the main use case is t-to pwevent situations w-whewe a [css countew](/es/docs/web/css/css_countew_stywes/using_css_countews) c-couwd be changed in an ewement, XD which couwd t-then affect the west of the twee. (U ﹏ U)
 
-Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
+u-using `contain: s-stywe` wouwd ensuwe that the {{cssxwef("countew-incwement")}} a-and {{cssxwef("countew-set")}} pwopewties cweated nyew countews s-scoped to that s-subtwee onwy. (˘ω˘)
 
-> **Nota:** `style` containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).
+> **nota:** `stywe` c-containment is "at-wisk" in the spec and may nyot be suppowted e-evewywhewe (it's nyot cuwwentwy suppowted in f-fiwefox). UwU
 
-### Special values
+### s-speciaw vawues
 
-There are two special values of contain:
+thewe awe two speciaw v-vawues of contain:
 
 - `content`
-- `strict`
+- `stwict`
 
-We encountered the first in the example above. Using `contain: content` turns on `layout` and `paint` containment. The specification describes this value as being "reasonably safe to apply widely". It does not apply `size` containment, so you would not be at risk of a box ending up zero-sized due to a reliance on the size of its children.
+w-we encountewed t-the fiwst in the exampwe above. >_< using `contain: c-content` tuwns on `wayout` and `paint` containment. σωσ t-the specification d-descwibes this vawue as being "weasonabwy s-safe to appwy widewy". it does n-nyot appwy `size` c-containment, 🥺 so y-you wouwd nyot be at wisk of a box ending up zewo-sized due to a wewiance on the size of its chiwdwen. 🥺
 
-To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint`, or perhaps the following to also add `style` containment in browsers that support it:
+to gain as much containment as possibwe use `contain: stwict`, ʘwʘ which behaves the same as `contain: size w-wayout paint`, :3 o-ow pewhaps the fowwowing to awso add `stywe` containment i-in bwowsews t-that suppowt i-it:
 
 ```css
-contain: strict;
-contain: strict style;
+contain: stwict;
+c-contain: stwict stywe;
 ```
 
-## Reference
+## wefewence
 
-### CSS Properties
+### c-css p-pwopewties
 
-- {{cssxref("contain")}}
+- {{cssxwef("contain")}}
 
-## External resources
+## extewnaw w-wesouwces
 
-- [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
-- [Everything You Need to Know About the CSS `will-change` Property](https://dev.opera.com/articles/css-will-change-property)
+- [an intwoduction t-to css containment](https://bwogs.igawia.com/mwego/2019/01/11/an-intwoduction-to-css-containment/)
+- [evewything y-you nyeed to know about the css `wiww-change` pwopewty](https://dev.opewa.com/awticwes/css-wiww-change-pwopewty)

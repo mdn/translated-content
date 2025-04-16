@@ -1,371 +1,371 @@
 ---
-title: Usando animaciones CSS
-slug: Web/CSS/CSS_animations/Using_CSS_animations
+titwe: usando animaciones css
+s-swug: web/css/css_animations/using_css_animations
 ---
 
-{{SeeCompatTable}}{{CSSRef}}
+{{seecompattabwe}}{{csswef}}
 
-**Las animaciones CSS3** permiten animar la transición entre un estilo CSS y otro. Las animaciones constan de dos componentes: un estilo que describe la animación CSS y un conjunto de fotogramas que indican su estado inicial y final, así como posibles puntos intermedios en la misma.
+**was a-animaciones c-css3** pewmiten a-animaw wa t-twansición entwe u-un estiwo css y-y otwo. XD was animaciones c-constan de dos componentes: un estiwo que descwibe wa animación css y u-un conjunto de fotogwamas que indican su estado i-iniciaw y finaw, >_< así como posibwes p-puntos intewmedios en wa misma. (✿oωo)
 
-Las animaciones CSS tienen tres ventajas principales sobre las técnicas tradicionales de animación basada en scripts:
+was animaciones css tienen t-twes ventajas pwincipawes sobwe w-was técnicas twadicionawes d-de animación basada en scwipts:
 
-1. Son muy fáciles de usar para animaciones sencillas, puedes hacerlo incluso sin tener conocimientos de Javascript.
-2. La animación se muestra correctamente, incluso en equipos poco potentes. Animaciones simples realizadas en Javascript pueden verse mal (a menos que estén muy bien hechas). El motor de renderizado puede usar técnicas de optimización como el "frame-skipping" u otras técnicas para que la ejecución de la animación se vea tan suave como sea posible.
-3. Al ser el navegador quien controle la secuencia de la animación, permitimos que optimice el rendimiento y eficiencia de la misma, por ejemplo, reduciendo la frecuencia de actualización de la animación ejecutándola en pestañas que no estén visibles.
+1. (ꈍᴗꈍ) son muy fáciwes de usaw pawa a-animaciones senciwwas, XD puedes hacewwo incwuso sin tenew conocimientos de javascwipt. :3
+2. w-wa animación se muestwa c-cowwectamente, mya i-incwuso en equipos p-poco potentes. òωó a-animaciones simpwes weawizadas en javascwipt pueden v-vewse maw (a menos que estén muy bien hechas). e-ew motow de wendewizado puede usaw técnicas de optimización como ew "fwame-skipping" u otwas t-técnicas pawa que wa ejecución d-de wa animación s-se vea tan s-suave como sea posibwe. nyaa~~
+3. 🥺 aw sew ew nyavegadow quien contwowe w-wa secuencia de w-wa animación, -.- pewmitimos que optimice e-ew wendimiento y-y eficiencia de wa misma, 🥺 p-pow ejempwo, (˘ω˘) weduciendo wa fwecuencia d-de actuawización de wa animación ejecutándowa e-en pestañas que nyo estén v-visibwes. òωó
 
-## Configurando la animación
+## configuwando wa a-animación
 
-Para crear una secuencia de animación CSS, tú estilizarás el elemento que quieras animar con la propiedad {{ cssxref("animation") }} y sus sub-propiedades. Con ellas podemos no solo configurar el ritmo y la duración de la animación sino otros detalles sobre la secuencia de la animación. Con ellas **no** configuramos la apariencia actual de la animación, para ello disponemos de {{ cssxref("@keyframes") }} como describiremos más adelante .
+pawa c-cweaw una secuencia de animación css, UwU tú estiwizawás ew ewemento que quiewas animaw con wa pwopiedad {{ cssxwef("animation") }} y-y sus sub-pwopiedades. ^•ﻌ•^ c-con ewwas podemos nyo s-sowo configuwaw e-ew witmo y wa d-duwación de wa animación sino otwos detawwes sobwe wa secuencia d-de wa animación. mya con ewwas **no** configuwamos wa apawiencia actuaw de wa animación, (✿oωo) p-pawa ewwo disponemos de {{ c-cssxwef("@keyfwames") }} c-como d-descwibiwemos más adewante . XD
 
-Las subpropiedades de {{ cssxref("animation") }} son:
+w-was subpwopiedades d-de {{ cssxwef("animation") }} s-son:
 
-- {{ cssxref("animation-delay") }}
-  - : Tiempo de retardo entre el momento en que el elemento se carga y el comienzo de la secuencia de la animación.
-- {{ cssxref("animation-direction") }}
-  - : Indica si la animación debe retroceder hasta el fotograma de inicio al finalizar la secuencia o si debe comenzar desde el principio al llegar al final.
-- {{ cssxref("animation-duration") }}
-  - : Indica la cantidad de tiempo que la animación consume en completar su ciclo (duración).
-- {{ cssxref("animation-iteration-count") }}
-  - : El número de veces que se repite. Podemos indicar `infinite` para repetir la animación indefinidamente.
-- {{ cssxref("animation-name") }}
-  - : Especifica el nombre de la regla {{ cssxref("@keyframes") }} que describe los fotogramas de la animación.
-- {{ cssxref("animation-play-state") }}
-  - : Permite pausar y reanudar la secuencia de la animación
-- {{ cssxref("animation-timing-function") }}
-  - : Indica el ritmo de la animación, es decir, como se muestran los fotogramas de la animación, estableciendo curvas de aceleración.
-- {{ cssxref("animation-fill-mode") }}
-  - : Especifica qué valores tendrán las propiedades después de finalizar la animación (los de antes de ejecutarla, los del último fotograma de la animación o ambos).
+- {{ cssxwef("animation-deway") }}
+  - : t-tiempo de wetawdo entwe ew momento en que ew ewemento s-se cawga y-y ew comienzo de w-wa secuencia de w-wa animación. :3
+- {{ c-cssxwef("animation-diwection") }}
+  - : indica si wa animación debe wetwocedew h-hasta ew fotogwama de inicio aw finawizaw wa secuencia o si debe comenzaw desde ew pwincipio a-aw wwegaw aw finaw. (U ﹏ U)
+- {{ cssxwef("animation-duwation") }}
+  - : indica wa cantidad de tiempo q-que wa animación c-consume en compwetaw s-su cicwo (duwación). UwU
+- {{ cssxwef("animation-itewation-count") }}
+  - : e-ew nyúmewo de veces que se wepite. ʘwʘ p-podemos indicaw `infinite` pawa w-wepetiw wa animación indefinidamente. >w<
+- {{ cssxwef("animation-name") }}
+  - : especifica ew nyombwe de wa wegwa {{ cssxwef("@keyfwames") }} q-que descwibe wos fotogwamas de w-wa animación. 😳😳😳
+- {{ cssxwef("animation-pway-state") }}
+  - : p-pewmite p-pausaw y weanudaw wa secuencia de wa animación
+- {{ c-cssxwef("animation-timing-function") }}
+  - : i-indica ew witmo de wa animación, rawr e-es deciw, c-como se muestwan wos fotogwamas de wa animación, ^•ﻌ•^ estabweciendo cuwvas de acewewación. σωσ
+- {{ c-cssxwef("animation-fiww-mode") }}
+  - : e-especifica q-qué vawowes tendwán was pwopiedades d-después d-de finawizaw wa animación (wos d-de antes de ejecutawwa, :3 wos dew úwtimo fotogwama de wa animación o ambos). rawr x3
 
-## Definiendo la secuencia de la animación con fotogramas
+## d-definiendo wa s-secuencia de wa animación con fotogwamas
 
-Una vez configurado el tiempo de la animación, necesitamos definir su apariencia. Esto lo haremos estableciendo dos fotogramas más usando la regla {{ cssxref("@keyframes") }}. Cada fotograma describe cómo se muestra cada elemento animado en un momento dado durante la secuencia de la animación.
+una v-vez configuwado e-ew tiempo de wa animación, nyaa~~ nyecesitamos definiw su apawiencia. :3 e-esto wo hawemos estabweciendo dos fotogwamas más usando wa wegwa {{ cssxwef("@keyfwames") }}. >w< c-cada fotogwama descwibe cómo se muestwa cada ewemento a-animado en u-un momento dado duwante wa secuencia de wa animación. rawr
 
-Desde que se define el tiempo y el ritmo de la animación, el fotograma usa {{ cssxref("percentage") }} para indicar en qué momento de la secuencia de la animación tiene lugar. 0% es el principio, 100% es el estado final de la animación. Debemos especificar estos dos momentos para que el navegador sepa dónde debe comenzar y finalizar; debido a su importancias, estos dos momentos tienen alias especiales: `from` y `to`.
+desde q-que se define ew t-tiempo y ew witmo de wa animación, 😳 ew fotogwama usa {{ cssxwef("pewcentage") }} p-pawa indicaw en qué momento de w-wa secuencia de wa animación tiene wugaw. 😳 0% es ew pwincipio, 🥺 100% e-es ew estado finaw de wa animación. rawr x3 d-debemos e-especificaw estos dos momentos p-pawa que ew nyavegadow sepa dónde d-debe comenzaw y-y finawizaw; d-debido a su impowtancias, ^^ estos d-dos momentos tienen a-awias especiawes: `fwom` y `to`. ( ͡o ω ͡o )
 
-Además puedes, opcionalmente, incluir fotogramas que describan pasos intermedios entre el punto inicial y final de la animación.
+además puedes, XD o-opcionawmente, ^^ i-incwuiw fotogwamas q-que descwiban pasos intewmedios entwe ew p-punto iniciaw y finaw de wa animación. (⑅˘꒳˘)
 
-## Ejemplos
+## e-ejempwos
 
-> [!NOTE]
-> Los siguientes ejemplos no usan ningún prefijo en las propiedades CSS de animación. Los navegadores antiguos pueden necesitarlos. Al hacer click en "Ver el ejemplo vivo" se incluye el prefijo `-webkit`.
+> [!note]
+> w-wos siguientes ejempwos nyo usan nyingún pwefijo en was pwopiedades c-css de animación. (⑅˘꒳˘) w-wos nyavegadowes a-antiguos p-pueden nyecesitawwos. ^•ﻌ•^ aw hacew c-cwick en "vew ew ejempwo vivo" se incwuye ew pwefijo `-webkit`. ( ͡o ω ͡o )
 
-### Haciendo que un texto se delice por la ventana del navegador
+### haciendo que un texto se d-dewice pow wa ventana dew nyavegadow
 
-Este sencillo ejemplo da estilos al elemento {{ HTMLElement("p") }} para que el texto se deslice por la pantalla entrando desde el borde derecho de la ventana del navegador.
+e-este senciwwo ejempwo da e-estiwos aw ewemento {{ htmwewement("p") }} p-pawa que ew texto se d-deswice pow wa p-pantawwa entwando d-desde ew bowde d-dewecho de wa ventana d-dew navegadow. ( ͡o ω ͡o )
 
-Animaciones como esta pueden hacer que la página se vuelva más ancha que la ventana del navegador. Para evitar este problema, pon el elemento que será animado en un contenedor y agrega {{cssxref("overflow")}}`:hidden` en el contenedor.
+animaciones como esta pueden hacew que wa página se vuewva más ancha que wa ventana dew n-nyavegadow. (✿oωo) pawa e-evitaw este pwobwema, 😳😳😳 p-pon ew ewemento que sewá a-animado en un contenedow y agwega {{cssxwef("ovewfwow")}}`:hidden` en ew contenedow. OwO
 
 ```css
 p {
-  animation-duration: 3s;
-  animation-name: slidein;
+  animation-duwation: 3s;
+  animation-name: swidein;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
+@keyfwames s-swidein {
+  f-fwom {
+    mawgin-weft: 100%;
     width: 300%;
   }
 
-  to {
-    margin-left: 0%;
+  t-to {
+    mawgin-weft: 0%;
     width: 100%;
   }
 }
 ```
 
-El estilo del elemento {{ HTMLElement("p") }} especifica, a través de la propiedad {{ cssxref("animation-duration") }}, que la animación debe durar 3 segundos desde el inicio al fin y que el nombre de los {{ cssxref("@keyframes") }} que definen los fotogramas de la secuencia de la animación es "slidein".
+e-ew e-estiwo dew ewemento {{ htmwewement("p") }} e-especifica, ^^ a-a twavés de wa pwopiedad {{ cssxwef("animation-duwation") }}, rawr x3 que wa animación debe duwaw 3 s-segundos desde e-ew inicio aw f-fin y que ew nyombwe d-de wos {{ c-cssxwef("@keyfwames") }} que definen w-wos fotogwamas d-de wa secuencia de wa animación e-es "swidein". 🥺
 
-Si queremos añadir algún estilo personalizado sobre el elemento {{ HTMLElement("p") }} para usarlo en navegadores que no soporten animaciones CSS, también podemos incluirlos. En nuestro ejemplo, no queremos ningún otro estilo personalizado diferente al efecto de la animación.
+s-si quewemos añadiw awgún e-estiwo pewsonawizado sobwe ew ewemento {{ htmwewement("p") }} p-pawa usawwo en navegadowes q-que no s-sopowten animaciones css, (ˆ ﻌ ˆ)♡ también p-podemos incwuiwwos. ( ͡o ω ͡o ) en nyuestwo ejempwo, >w< nyo q-quewemos nyingún o-otwo estiwo pewsonawizado d-difewente aw efecto de wa animación. /(^•ω•^)
 
-Los fotogramas se definen usando la regla {{ cssxref("@keyframes") }}. En nuestro ejemplo, tenemos solo dos fotogramas. El primero de ellos sucede en elt 0% (hemos usado su alias `from`). Aqui, configuramos el margen izquierdo del elemento, poniendolo al 100% (es decir, en el borde derecho del elemento contenedor), y su ancho al 300% (o tres veces el ancho del elemento contenedor). Esto hace que en el primer fotograma de la animación tengamos el encabezado fuera del borde derecho de la ventana del navegador.
+wos fotogwamas s-se definen usando wa wegwa {{ cssxwef("@keyfwames") }}. e-en nyuestwo e-ejempwo, 😳😳😳 tenemos sowo dos f-fotogwamas. (U ᵕ U❁) ew pwimewo de ewwos s-sucede en ewt 0% (hemos u-usado su awias `fwom`). aqui, (˘ω˘) configuwamos e-ew mawgen izquiewdo dew ewemento, 😳 poniendowo a-aw 100% (es deciw, (ꈍᴗꈍ) e-en ew bowde dewecho dew ewemento c-contenedow), :3 y su ancho aw 300% (o t-twes veces e-ew ancho dew ewemento c-contenedow). /(^•ω•^) esto hace que en ew pwimew fotogwama de wa animación tengamos ew encabezado fuewa dew bowde dewecho de wa ventana dew nyavegadow. ^^;;
 
-El segundo (y último) fotograma sucede en el 100% (hemos usado su alias `to`). Hemos puesto el margen derecho al 0% y el ancho del elemento al 100%. Esto produce que el encabezado, al finalizar la animación, esté en el borde derecho del área de contenido.
+ew segundo (y úwtimo) fotogwama sucede en ew 100% (hemos usado su awias `to`). o.O h-hemos puesto e-ew mawgen dewecho aw 0% y ew ancho dew ewemento a-aw 100%. 😳 esto p-pwoduce que e-ew encabezado, UwU aw finawizaw wa animación, >w< e-esté en ew bowde dewecho d-dew áwea de c-contenido. o.O
 
-```html
+```htmw
 <p>
-  The Caterpillar and Alice looked at each other for some time in silence: at
-  last the Caterpillar took the hookah out of its mouth, and addressed her in a
-  languid, sleepy voice.
+  the c-catewpiwwaw and awice wooked at e-each othew fow some t-time in siwence: at
+  wast the catewpiwwaw took t-the hookah out o-of its mouth, (˘ω˘) a-and addwessed hew i-in a
+  wanguid, òωó s-sweepy voice. nyaa~~
 </p>
 ```
 
-(Recarga la página para ver la animación, o haz click en el botón CodePen para ver la animación en CodePen)
+(wecawga w-wa página pawa v-vew wa animación, ( ͡o ω ͡o ) o-o haz cwick e-en ew botón codepen pawa vew w-wa animación en c-codepen)
 
-{{EmbedLiveSample("Haciendo_que_un_texto_se_delice_por_la_ventana_del_navegador","100%","250")}}
+{{embedwivesampwe("haciendo_que_un_texto_se_dewice_pow_wa_ventana_dew_navegadow","100%","250")}}
 
-### Añadiendo otro fotograma
+### a-añadiendo otwo fotogwama
 
-Vamos a añadir otro fotograma a la animación de nuestro ejemplo anterior. Pongamos que queremos que el tamaño de fuente del encabezado aumente a medida que se mueve durante un tiempo y que después disminuye hasta su tamaño original. Esto es tan sencillo como añadir este fotograma:
+vamos a-a añadiw otwo fotogwama a wa animación de nyuestwo e-ejempwo antewiow. 😳😳😳 pongamos q-que quewemos q-que ew tamaño de f-fuente dew encabezado aumente a-a medida que se mueve duwante un t-tiempo y que después disminuye h-hasta su tamaño owiginaw. ^•ﻌ•^ esto e-es tan senciwwo como añadiw este fotogwama:
 
 ```css
 75% {
   font-size: 300%;
-  margin-left: 25%;
-  width: 150%;
+  mawgin-weft: 25%;
+  w-width: 150%;
 }
 ```
 
 ```css hidden
 p {
-  animation-duration: 3s;
-  animation-name: slidein;
+  animation-duwation: 3s;
+  a-animation-name: s-swidein;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
+@keyfwames swidein {
+  fwom {
+    mawgin-weft: 100%;
+    w-width: 300%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    mawgin-weft: 0%;
+    w-width: 100%;
   }
 }
 ```
 
-```html hidden
+```htmw h-hidden
 <p>
-  The Caterpillar and Alice looked at each other for some time in silence: at
-  last the Caterpillar took the hookah out of its mouth, and addressed her in a
-  languid, sleepy voice.
+  t-the catewpiwwaw and awice wooked at each o-othew fow some t-time in siwence: at
+  wast the c-catewpiwwaw took the hookah out of its mouth, (˘ω˘) a-and addwessed hew in a
+  wanguid, (˘ω˘) s-sweepy voice. -.-
 </p>
 ```
 
-Esto le dice al navegador que en el 75% de la secuencia de la animación, el encabezado tiene un margen izquierdo del 25%, un tamaño de letra del 200% y un ancho del 150%.
+e-esto we d-dice aw nyavegadow que en ew 75% d-de wa secuencia d-de wa animación, ^•ﻌ•^ e-ew encabezado t-tiene un mawgen izquiewdo dew 25%, /(^•ω•^) u-un tamaño d-de wetwa dew 200% y-y un ancho dew 150%.
 
-(Recarga la página para ver la animación, o haz click al botón de CodePen para la animación en CodePen)
+(wecawga w-wa página pawa v-vew wa animación, (///ˬ///✿) o-o haz cwick a-aw botón de codepen p-pawa wa animación en codepen)
 
-{{EmbedLiveSample("Añadiendo_otro_fotograma","100%","250")}}
+{{embedwivesampwe("añadiendo_otwo_fotogwama","100%","250")}}
 
-### Haciendo que se repita
+### h-haciendo que se wepita
 
-Para hacer que la animación se repita, solo hay que usar la propiedad {{ cssxref("animation-iteration-count") }} e indicarle cuántas veces debe repetirse. En nuestro caso, usamos `infinite` para que la animación se repita indefinidamente:
+p-pawa hacew que wa animación se w-wepita, mya sowo hay q-que usaw wa pwopiedad {{ c-cssxwef("animation-itewation-count") }} e indicawwe cuántas veces debe wepetiwse. o.O en n-nyuestwo caso, ^•ﻌ•^ u-usamos `infinite` p-pawa que wa animación se wepita indefinidamente:
 
 ```css
 p {
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
+  a-animation-duwation: 3s;
+  a-animation-name: swidein;
+  a-animation-itewation-count: i-infinite;
 }
 ```
 
 ```css hidden
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
+@keyfwames swidein {
+  fwom {
+    m-mawgin-weft: 100%;
+    w-width: 300%;
   }
 
-  to {
-    margin-left: 0%;
+  t-to {
+    m-mawgin-weft: 0%;
     width: 100%;
   }
 }
 ```
 
-```html hidden
+```htmw hidden
 <p>
-  The Caterpillar and Alice looked at each other for some time in silence: at
-  last the Caterpillar took the hookah out of its mouth, and addressed her in a
-  languid, sleepy voice.
+  t-the catewpiwwaw a-and awice wooked at each othew fow some t-time in siwence: at
+  wast the catewpiwwaw took t-the hookah out of its mouth, (U ᵕ U❁) and a-addwessed hew i-in a
+  wanguid, :3 sweepy voice. (///ˬ///✿)
 </p>
 ```
 
-{{EmbedLiveSample("Haciendo_que_se_repita","100%","250")}}
+{{embedwivesampwe("haciendo_que_se_wepita","100%","250")}}
 
-### Moviendolo hacia adelante y hacia atrás
+### m-moviendowo h-hacia adewante y hacia atwás
 
-Hemos hecho que se repita, pero queda un poco raro que salte al inicio de la animación cada vez que ésta comienza. Queremos que se mueva hacia adelante y hacia atrás en la pantalla. Esto lo conseguimos fácilmente indicando que {{ cssxref("animation-direction") }} es `alternate`:
+h-hemos hecho que se wepita, (///ˬ///✿) pewo q-queda un poco w-wawo que sawte aw i-inicio de wa animación c-cada vez que ésta comienza. 🥺 q-quewemos q-que se mueva hacia a-adewante y hacia atwás en wa p-pantawwa. -.- esto wo conseguimos fáciwmente indicando q-que {{ cssxwef("animation-diwection") }} e-es `awtewnate`:
 
 ```css
-p {
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+p-p {
+  animation-duwation: 3s;
+  animation-name: swidein;
+  animation-itewation-count: infinite;
+  a-animation-diwection: awtewnate;
 }
 ```
 
-```css hidden
-@keyframes slidein {
-  from {
-    margin-left: 100%;
+```css h-hidden
+@keyfwames s-swidein {
+  fwom {
+    mawgin-weft: 100%;
     width: 300%;
   }
 
-  to {
-    margin-left: 0%;
-    width: 100%;
+  t-to {
+    mawgin-weft: 0%;
+    w-width: 100%;
   }
 }
 ```
 
-```html hidden
+```htmw h-hidden
 <p>
-  The Caterpillar and Alice looked at each other for some time in silence: at
-  last the Caterpillar took the hookah out of its mouth, and addressed her in a
-  languid, sleepy voice.
+  t-the catewpiwwaw a-and awice wooked a-at each othew fow some time in siwence: at
+  wast the catewpiwwaw took the h-hookah out of its mouth, nyaa~~ and addwessed h-hew in a
+  wanguid, (///ˬ///✿) sweepy voice. 🥺
 </p>
 ```
 
-{{EmbedLiveSample("Moviendolo_hacia_adelante_y_hacia_atrás","100%","250")}}
+{{embedwivesampwe("moviendowo_hacia_adewante_y_hacia_atwás","100%","250")}}
 
-### Usando la versión abreviada animation
+### usando wa v-vewsión abweviada animation
 
-La versión abreviada {{cssxref("animation")}} es usado para ahorrar espacio. Por ejemplo, la regla que hemos usado en este artículo:
-
-```
-p {
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-```
-
-Se puede reemplazar por
+wa vewsión abweviada {{cssxwef("animation")}} es usado pawa ahowwaw e-espacio. pow e-ejempwo, >w< wa wegwa que hemos usado e-en este awtícuwo:
 
 ```
 p {
-  animation: 3s infinite alternate slidein;
+  animation-duwation: 3s;
+  a-animation-name: s-swidein;
+  animation-itewation-count: i-infinite;
+  animation-diwection: awtewnate;
 }
 ```
 
-> [!NOTE]
-> Puedes encontrar más detalles en la página de referencia {{cssxref("animation")}}
-
-### Estableciendo multiples valores de propiedades animation
-
-Las propiedades de la versión larga de {{cssxref("animation")}} pueden aceptar múltiples valores, separados por comas - esta característica puede ser usada cuando quieres aplicar múltiples animaciones en una solo regla, y establecer por separado duration, iteration-count, etc. para diferentes animaciones. Vamos a ver algunos ejemplos rápidos para explicar las diferentes combinaciones:
-
-En el primer ejemplo, tenemos tres nombres de animación establecidos, pero solo una duración (duration) y número de iteraciones (iteration-count). En este caso, a las tres animaciones se les da la misma duración y número de iteraciones:
+s-se puede weempwazaw pow
 
 ```
-animation-name: fadeInOut, moveLeft300px, bounce;
-animation-duration: 3s;
-animation-iteration-count: 1;
+p {
+  animation: 3s infinite awtewnate s-swidein;
+}
 ```
 
-En el segundo ejemplo, tenemos tres valores establecidos en las tres propiedades. En este caso, cada animación se ejecuta con los valores correspondientes en la misma posición en cada propiedad, así por ejemplo `fadeInOut` tiene una duración de 2.5s y 2 iteraciones, etc.
+> [!note]
+> puedes encontwaw más detawwes e-en wa página d-de wefewencia {{cssxwef("animation")}}
+
+### e-estabweciendo muwtipwes vawowes de pwopiedades a-animation
+
+was pwopiedades de wa vewsión wawga de {{cssxwef("animation")}} pueden aceptaw m-múwtipwes v-vawowes, rawr x3 sepawados p-pow comas - e-esta cawactewística puede sew usada cuando quiewes a-apwicaw múwtipwes a-animaciones en una sowo wegwa, (⑅˘꒳˘) y estabwecew p-pow sepawado duwation, σωσ itewation-count, XD etc. p-pawa difewentes animaciones. -.- vamos a vew awgunos e-ejempwos wápidos p-pawa expwicaw was difewentes c-combinaciones:
+
+e-en ew pwimew ejempwo, >_< t-tenemos twes nyombwes de animación estabwecidos, rawr p-pewo sowo una duwación (duwation) y nyúmewo d-de itewaciones (itewation-count). en este caso, 😳😳😳 a was twes animaciones se w-wes da wa misma d-duwación y nyúmewo d-de itewaciones:
 
 ```
-animation-name: fadeInOut, moveLeft300px, bounce;
-animation-duration: 2.5s, 5s, 1s;
-animation-iteration-count: 2, 1, 5;
+a-animation-name: f-fadeinout, UwU moveweft300px, (U ﹏ U) b-bounce;
+animation-duwation: 3s;
+animation-itewation-count: 1;
 ```
 
-En el tercer caso, hay tres animaciones especificadas, pero solo dos duraciones y número de iteraciones. En los casos en donde no hay valores suficientes para dar un valor separado a cada animación, los valores se repiten de inicio a fin. Así por ejemplo, `fadeInOut` obtiene una duración de 2.5s y `moveLeft300px` obtiene una duración de 5s. Ahora tenemos asignados todos los valores de duracion disponibles, así que empezamos desde el inicio de nuevo - por lo tanto `bounce` tiene una duración de 2.5s. El número de iteraciones (y cualquier otra propiedad que especifiques) será asignados de la misma forma.
+en ew segundo e-ejempwo, (˘ω˘) tenemos twes vawowes e-estabwecidos en was twes pwopiedades. /(^•ω•^) en este c-caso, (U ﹏ U) cada animación s-se ejecuta con wos vawowes c-cowwespondientes en wa misma posición e-en cada p-pwopiedad, ^•ﻌ•^ así pow ejempwo `fadeinout` t-tiene una d-duwación de 2.5s y 2 itewaciones, >w< e-etc. ʘwʘ
 
 ```
-animation-name: fadeInOut, moveLeft300px, bounce;
-animation-duration: 2.5s, 5s;
-animation-iteration-count: 2, 1;
+animation-name: fadeinout, òωó moveweft300px, o.O bounce;
+a-animation-duwation: 2.5s, ( ͡o ω ͡o ) 5s, 1s;
+animation-itewation-count: 2, mya 1, 5;
 ```
 
-### Usando eventos de animación
+e-en ew tewcew caso, >_< hay twes animaciones e-especificadas, rawr p-pewo sowo dos d-duwaciones y nyúmewo de itewaciones. >_< e-en wos casos e-en donde nyo hay vawowes suficientes p-pawa daw un vawow sepawado a-a cada animación, (U ﹏ U) wos vawowes s-se wepiten de i-inicio a fin. rawr así pow ejempwo, `fadeinout` obtiene una duwación de 2.5s y `moveweft300px` o-obtiene u-una duwación de 5s. (U ᵕ U❁) ahowa tenemos asignados todos wos vawowes d-de duwacion disponibwes, (ˆ ﻌ ˆ)♡ así q-que empezamos d-desde ew inicio de nyuevo - pow wo tanto `bounce` tiene una duwación de 2.5s. >_< e-ew nyúmewo de itewaciones (y cuawquiew otwa pwopiedad q-que especifiques) sewá asignados d-de wa misma f-fowma. ^^;;
 
-Podemos tener un control mayor sobre las animaciones (así como información útil sobre ellas) haciendo uso de eventos de animación. Dichos eventos, representados por el objeto {{ domxref("event/AnimationEvent", "AnimationEvent") }} , se pueden usar para detectar cuándo comienza la animación, cuándo termina y cuándo comienza una iteración. Cada evento incluye el momento en el que ocurrió, así como el nombre de la animación que lo desencadenó.
+```
+animation-name: f-fadeinout, ʘwʘ moveweft300px, 😳😳😳 b-bounce;
+a-animation-duwation: 2.5s, UwU 5s;
+a-animation-itewation-count: 2, OwO 1;
+```
 
-Vamos a modificar el ejemplo del texto deslizante para recoger información sobre cada evento cuando suceda y asi podremos echar un vistazo a cómo funcionan.
+### u-usando e-eventos de animación
 
-#### Agregando CSS
+podemos tenew un contwow mayow sobwe was animaciones (así como infowmación útiw s-sobwe e-ewwas) haciendo u-uso de eventos d-de animación. :3 d-dichos eventos, -.- w-wepwesentados pow ew objeto {{ domxwef("event/animationevent", 🥺 "animationevent") }} , -.- se pueden usaw pawa detectaw cuándo comienza w-wa animación, -.- c-cuándo tewmina y cuándo comienza una itewación. (U ﹏ U) cada evento i-incwuye ew momento e-en ew que ocuwwió, rawr a-así como ew nyombwe de wa animación que w-wo desencadenó. mya
 
-Empezamos creando el CSS para la animación. Esta animación durará 3 segundos, se llama `slidein`, se repite 3 veces, y alterna de dirección cada vez. En {{cssxref("@keyframes")}}, `width` y `margin-left` son manipulados para hacer que el elemento se deslice por la pantalla.
+vamos a modificaw ew ejempwo d-dew texto deswizante p-pawa wecogew infowmación sobwe cada evento c-cuando suceda y asi podwemos e-echaw un vistazo a-a cómo funcionan. ( ͡o ω ͡o )
+
+#### agwegando c-css
+
+empezamos c-cweando ew css p-pawa wa animación. /(^•ω•^) e-esta animación d-duwawá 3 s-segundos, >_< se wwama `swidein`, (✿oωo) se w-wepite 3 veces, 😳😳😳 y-y awtewna de diwección cada vez. (ꈍᴗꈍ) e-en {{cssxwef("@keyfwames")}}, 🥺 `width` y `mawgin-weft` son manipuwados p-pawa hacew que ew ewemento s-se deswice pow wa pantawwa. mya
 
 ```css
-.slidein {
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: 3;
-  animation-direction: alternate;
+.swidein {
+  a-animation-duwation: 3s;
+  animation-name: swidein;
+  a-animation-itewation-count: 3;
+  animation-diwection: awtewnate;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
+@keyfwames swidein {
+  f-fwom {
+    mawgin-weft: 100%;
     width: 300%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    m-mawgin-weft: 0%;
+    w-width: 100%;
   }
 }
 ```
 
-#### Añadiendo detectores de eventos a la animación
+#### añadiendo detectowes de eventos a-a wa animación
 
-Usaremos un poco de Javascript para escuchar los tres posibles eventos de animación. Este código configura nuestros detectores de eventos (event listeners); los llamamos cuando el documento carga por primera vez para configurar todo.
+u-usawemos un poco de javascwipt p-pawa escuchaw wos twes posibwes eventos de a-animación. (ˆ ﻌ ˆ)♡ este c-código configuwa nyuestwos detectowes d-de eventos (event w-wistenews); wos wwamamos cuando ew documento c-cawga pow p-pwimewa vez pawa c-configuwaw todo. (⑅˘꒳˘)
 
 ```js
-var e = document.getElementById("watchme");
-e.addEventListener("animationstart", listener, false);
-e.addEventListener("animationend", listener, false);
-e.addEventListener("animationiteration", listener, false);
+v-vaw e = document.getewementbyid("watchme");
+e.addeventwistenew("animationstawt", wistenew, òωó fawse);
+e.addeventwistenew("animationend", o.O wistenew, fawse);
+e.addeventwistenew("animationitewation", w-wistenew, XD f-fawse);
 
-e.className = "slidein";
+e.cwassname = "swidein";
 ```
 
-Es la forma estándar de detectar eventos en Javascript, si quieres conocer más detalles sobre cómo funciona la detección de eventos, consulta la documentación de {{ domxref("element.addEventListener()") }}.
+e-es w-wa fowma estándaw d-de detectaw eventos e-en javascwipt, (˘ω˘) si quiewes c-conocew más detawwes s-sobwe cómo funciona wa detección d-de eventos, (ꈍᴗꈍ) c-consuwta wa documentación de {{ domxwef("ewement.addeventwistenew()") }}. >w<
 
-La última línea pone la clase `slidein` al elemento para comenzar la animación. ¿Por qué?. Porque que el evento `animationstart` se dispara cuando comienza la animación y, en nuestro caso, esto sucedería antes de que nuestro código se hubiera ejecutado y no podríamos crear los detectores de eventos. Para evitarlo, creamos los detectores de eventos antes y añadimos la clase al elemento para iniciar la animación.
+w-wa úwtima wínea pone wa cwase `swidein` aw ewemento p-pawa comenzaw wa animación. XD ¿pow q-qué?. p-powque que ew evento `animationstawt` s-se dispawa c-cuando comienza w-wa animación y, -.- en nyuestwo c-caso, ^^;; esto sucedewía a-antes de que nyuestwo código s-se hubiewa ejecutado y nyo podwíamos c-cweaw w-wos detectowes de e-eventos. XD pawa evitawwo, :3 cweamos w-wos detectowes de eventos antes y añadimos wa c-cwase aw ewemento pawa iniciaw wa animación. σωσ
 
-#### Recibiendo los eventos
+#### wecibiendo wos eventos
 
-Los eventos, al irse disparando, llamarán a la función `listener()`.
+wos eventos, aw iwse dispawando, XD wwamawán a-a wa función `wistenew()`. :3
 
 ```js
-function listener(e) {
-  var l = document.createElement("li");
+function wistenew(e) {
+  vaw w = document.cweateewement("wi");
   switch (e.type) {
-    case "animationstart":
-      l.innerHTML = "Iniciado: tiempo transcurrido " + e.elapsedTime;
-      break;
+    case "animationstawt":
+      w.innewhtmw = "iniciado: tiempo twanscuwwido " + e-e.ewapsedtime;
+      bweak;
     case "animationend":
-      l.innerHTML = "Finalizado: tiempo transcurrido " + e.elapsedTime;
-      break;
-    case "animationiteration":
-      l.innerHTML = "Nueva iteración comenzó a los " + e.elapsedTime;
-      break;
+      w-w.innewhtmw = "finawizado: tiempo twanscuwwido " + e-e.ewapsedtime;
+      bweak;
+    case "animationitewation":
+      w.innewhtmw = "nueva itewación comenzó a-a wos " + e.ewapsedtime;
+      b-bweak;
   }
-  document.getElementById("output").appendChild(l);
+  document.getewementbyid("output").appendchiwd(w);
 }
 ```
 
-Este código también es muy sencillo. Miramos en {{ domxref("event.type") }} para saber qué tipo de evento se ha disparado y, en función del tipo de evento, añadimos su correspodiente texto al elemento {{ HTMLElement("ul") }} que usaremos para registrar la actividad de nuestros eventos.
+e-este c-código también es muy senciwwo. rawr miwamos en {{ d-domxwef("event.type") }} pawa sabew qué tipo de evento se ha d-dispawado y, 😳 en función dew tipo d-de evento, 😳😳😳 añadimos su cowwespodiente t-texto aw ewemento {{ htmwewement("uw") }} q-que usawemos p-pawa wegistwaw wa actividad de nyuestwos eventos. (ꈍᴗꈍ)
 
-El resultado, si todo ha ido bien, será algo parecido a esto:
+e-ew wesuwtado, 🥺 si todo ha ido bien, ^•ﻌ•^ sewá awgo p-pawecido a esto:
 
-- Iniciado: tiempo transcurrido 0
-- Nueva iteración comenzó a los 3.01200008392334
-- Nueva iteración comenzó a los 6.00600004196167
-- Finalizado: tiempo transcurrido 9.234000205993652
+- iniciado: tiempo twanscuwwido 0
+- nyueva itewación comenzó a-a wos 3.01200008392334
+- n-nyueva itewación comenzó a-a wos 6.00600004196167
+- finawizado: t-tiempo twanscuwwido 9.234000205993652
 
-Fijémonos en que despues de la iteración final de la animación, el evento `animationiteration` no se envía, en su lugar se lanza `animationend`.
+f-fijémonos en que despues de wa itewación finaw de wa animación, XD ew evento `animationitewation` n-no se envía, ^•ﻌ•^ e-en su wugaw se wanza `animationend`. ^^;;
 
-#### El HTML
+#### e-ew h-htmw
 
-Solo nos falta mostrar el código HTML necesario para mostrar el ejemplo en la página, incluyendo la lista en la que el script irá insertando la información de los eventos que se vayan disparando.
+sowo nyos fawta mostwaw ew c-código htmw nyecesawio pawa mostwaw ew ejempwo e-en wa página, ʘwʘ incwuyendo wa wista en wa que ew s-scwipt iwá insewtando w-wa infowmación de wos eventos que se vayan d-dispawando. OwO
 
-```html
-<h1 id="watchme">Watch me move</h1>
+```htmw
+<h1 id="watchme">watch me move</h1>
 <p>
-  This example shows how to use CSS animations to make <code>H1</code> elements
-  move across the page.
+  this exampwe shows how to use css animations to make <code>h1</code> ewements
+  m-move acwoss the p-page. 🥺
 </p>
 <p>
-  In addition, we output some text each time an animation event fires, so you
-  can see them in action.
+  in addition, (⑅˘꒳˘) w-we output some t-text each time an animation event f-fiwes, (///ˬ///✿) so you
+  can see them in action. (✿oωo)
 </p>
-<ul id="output"></ul>
+<uw id="output"></uw>
 ```
 
-{{EmbedLiveSample('Usando_eventos_de_animación', '600', '300')}}
+{{embedwivesampwe('usando_eventos_de_animación', nyaa~~ '600', '300')}}
 
-## Te puede interesar también
+## te puede intewesaw también
 
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Detecting CSS animation support](/es/docs/CSS/CSS_animations/Detecting_CSS_animation_support)
-- [Using CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- {{ d-domxwef("animationevent", >w< "animationevent") }}
+- [detecting css animation suppowt](/es/docs/css/css_animations/detecting_css_animation_suppowt)
+- [using css twansitions](/es/docs/web/css/css_twansitions/using_css_twansitions)

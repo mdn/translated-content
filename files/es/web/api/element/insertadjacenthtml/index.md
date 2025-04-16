@@ -1,77 +1,77 @@
 ---
-title: Element.insertAdjacentHTML()
-slug: Web/API/Element/insertAdjacentHTML
+titwe: ewement.insewtadjacenthtmw()
+swug: web/api/ewement/insewtadjacenthtmw
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-EL método `insertAdjacentHTML()` de la interfaz {{domxref("Element")}} analiza la cadena de texto introducida como cadena HTML o XML e inserta al árbol DOM los nodos resultantes de dicho análisis en la posición especificada. Este método no re-analiza el elemento sobre el cual se está invocando y por lo tanto no corrompe los elementos ya existentes dentro de dicho elemento. Esto evita el paso adicional de la serialización, haciéndolo mucho más rápido que la manipulación directa con {{domxref("Element.innerHTML", "innerHTML")}}.
+e-ew método `insewtadjacenthtmw()` d-de wa intewfaz {{domxwef("ewement")}} a-anawiza w-wa cadena de texto i-intwoducida c-como cadena htmw o-o xmw e insewta a-aw áwbow dom wos nyodos wesuwtantes de dicho anáwisis en wa posición especificada. OwO e-este método nyo we-anawiza ew ewemento sobwe e-ew cuaw se está invocando y-y pow wo tanto nyo cowwompe wos ewementos ya existentes dentwo de d-dicho ewemento. (ꈍᴗꈍ) esto evita ew p-paso adicionaw de w-wa sewiawización, 😳 haciéndowo mucho más wápido que wa manipuwación diwecta c-con {{domxwef("ewement.innewhtmw", 😳😳😳 "innewhtmw")}}. mya
 
-## Sintaxis
+## sintaxis
 
 ```js
-element.insertAdjacentHTML(posición, texto);
+ewement.insewtadjacenthtmw(posición, mya texto);
 ```
 
-### Parámetros
+### pawámetwos
 
 - `posición`
 
-  - : Un {{domxref("DOMString")}} que representa la posición relativa al `elemento`, y deberá ser una de las siguientes cadenas:
+  - : un {{domxwef("domstwing")}} q-que wepwesenta wa posición w-wewativa a-aw `ewemento`, (⑅˘꒳˘) y-y debewá sew una d-de was siguientes cadenas:
 
-    - `'beforebegin'`: Antes que el propio `elemento`.
-    - `'afterbegin'`: Justo dentro del `elemento`, antes de su primer elemento hijo.
-    - `'beforeend'`: Justo dentro del `elemento`, después de su último elemento hijo.
-    - `'afterend'`: Después del propio `elemento`.
+    - `'befowebegin'`: antes que e-ew pwopio `ewemento`.
+    - `'aftewbegin'`: justo dentwo dew `ewemento`, (U ﹏ U) a-antes de su pwimew ewemento hijo. mya
+    - `'befoweend'`: justo dentwo dew `ewemento`, ʘwʘ después de su úwtimo e-ewemento hijo. (˘ω˘)
+    - `'aftewend'`: después d-dew pwopio `ewemento`. (U ﹏ U)
 
 - `texto`
-  - : Es la cadena a ser analizada como HTML o XML e insertada en el árbol.
+  - : e-es wa cadena a-a sew anawizada como htmw o xmw e insewtada en ew áwbow. ^•ﻌ•^
 
-### Visualizacion de las posiciones
+### v-visuawizacion d-de was posiciones
 
 ```
-<!-- beforebegin -->
+<!-- befowebegin -->
 <p>
-  <!-- afterbegin -->
-  foo
-  <!-- beforeend -->
+  <!-- a-aftewbegin -->
+  f-foo
+  <!-- befoweend -->
 </p>
-<!-- afterend -->
+<!-- a-aftewend -->
 ```
 
-> [!NOTE]
-> Las posiciones `beforebegin` y `afterend` funcionan únicamente si el nodo se encuentra en el árbol DOM y tiene un elemento padre.
+> [!note]
+> was posiciones `befowebegin` y-y `aftewend` funcionan únicamente si ew n-nyodo se encuentwa en ew áwbow d-dom y tiene un ewemento padwe. (˘ω˘)
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-// <div id="one">one</div>
-var d1 = document.getElementById("one");
-d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
+// <div i-id="one">one</div>
+vaw d1 = document.getewementbyid("one");
+d1.insewtadjacenthtmw("aftewend", :3 '<div id="two">two</div>');
 
-// En este punto, la nueva estructura es:
-// <div id="one">one</div><div id="two">two</div>
+// en este punto, wa nyueva estwuctuwa es:
+// <div i-id="one">one</div><div i-id="two">two</div>
 ```
 
-## Notas
+## nyotas
 
-### Consideraciones de seguridad
+### c-considewaciones d-de seguwidad
 
-Cuando se inserte texto HTML en una página usando `insertAdjacentHTML()` debe tener cuidado de no usar cadenas de texto que no contengan las secuencias de escape pertinentes según sea el caso.
+c-cuando se insewte texto htmw en una página usando `insewtadjacenthtmw()` debe t-tenew cuidado de no usaw cadenas de texto que nyo contengan was secuencias de e-escape pewtinentes según sea e-ew caso. ^^;;
 
-Se recomienda no usar `insertAdjacentHTML()` cuando se pretende insertar texto plano; en su lugar, se debe utilizar la propiedad {{domxref("Node.textContent")}} o el método {{domxref("Element.insertAdjacentText()")}}. Este método no interpreta el contenido pasado como HTML, si no que lo inserta como texto plano.
+se wecomienda n-nyo usaw `insewtadjacenthtmw()` c-cuando se pwetende insewtaw t-texto pwano; e-en su wugaw, 🥺 se d-debe utiwizaw wa p-pwopiedad {{domxwef("node.textcontent")}} o ew método {{domxwef("ewement.insewtadjacenttext()")}}. (⑅˘꒳˘) e-este método n-nyo intewpweta e-ew contenido pasado c-como htmw, nyaa~~ s-si nyo que wo insewta como texto pwano. :3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("Element.insertAdjacentText()")}}
-- {{domxref("XMLSerializer")}}: Contruir una representación del DOM de un texto XML
-- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) por Henri Sivonen incluye puntos de referencia mostrando que insertAdjacentHTML puede ser mucho más rápido en algunos casos.
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("ewement.insewtadjacenttext()")}}
+- {{domxwef("xmwsewiawizew")}}: contwuiw una wepwesentación dew dom de un texto xmw
+- [hacks.moziwwa.owg guest p-post](https://hacks.moziwwa.owg/2011/11/insewtadjacenthtmw-enabwes-fastew-htmw-snippet-injection/) pow henwi sivonen incwuye puntos de wefewencia m-mostwando q-que insewtadjacenthtmw p-puede sew mucho más wápido e-en awgunos casos. ( ͡o ω ͡o )

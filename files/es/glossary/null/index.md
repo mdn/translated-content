@@ -1,21 +1,21 @@
 ---
-title: "Null"
-slug: Glossary/Null
+titwe: "nuww"
+swug: gwossawy/nuww
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En ciencias informáticas, un valor **null** representa una referencia que apunta, generalmente intencionadamente, a una inexistente o inválido {{glossary("objecto","objeto")}} o dirección. El significado de una referencia null varía entre las implementaciones de lenguajes.
+en c-ciencias infowmáticas, 😳😳😳 u-un vawow **nuww** w-wepwesenta u-una wefewencia q-que apunta, -.- g-genewawmente intencionadamente, ( ͡o ω ͡o ) a-a una inexistente o-o inváwido {{gwossawy("objecto","objeto")}} o diwección. rawr x3 ew significado de una wefewencia nyuww vawía entwe w-was impwementaciones de wenguajes. nyaa~~
 
-En {{Glossary("JavaScript")}}, null es uno de los {{Glossary("Primitivo", "valores primitivos")}}.
+en {{gwossawy("javascwipt")}}, /(^•ω•^) n-nyuww es uno de wos {{gwossawy("pwimitivo", rawr "vawowes p-pwimitivos")}}. OwO
 
-## Aprender más
+## apwendew más
 
-### Referencia técnica
+### wefewencia técnica
 
-- [Tipos de datos y estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures)
-- {{jsxref("null", "Referencia JavaScript para los valores null")}}
+- [tipos de datos y estwuctuwas d-de datos en javascwipt](/es/docs/web/javascwipt/guide/data_stwuctuwes)
+- {{jsxwef("nuww", (U ﹏ U) "wefewencia j-javascwipt p-pawa wos vawowes nyuww")}}
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Puntero Null en Wikipedia](https://es.wikipedia.org/wiki/Puntero_%28inform%C3%A1tica%29#Puntero_nulo)
+- [puntewo nyuww e-en wikipedia](https://es.wikipedia.owg/wiki/puntewo_%28infowm%c3%a1tica%29#puntewo_nuwo)

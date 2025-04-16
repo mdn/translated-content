@@ -1,89 +1,89 @@
 ---
-title: "Element: wheel event"
-slug: Web/API/Element/wheel_event
+titwe: "ewement: wheew event"
+s-swug: web/api/ewement/wheew_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento `wheel` se activa cuando el usuario gira un botón de rueda en un dispositivo señalador (normalmente un ratón).
+e-ew evento `wheew` s-se activa c-cuando ew usuawio g-giwa un botón d-de wueda en un d-dispositivo señawadow (nowmawmente u-un watón).
 
-Este evento reemplaza el evento obsoleto no estándar {{domxref("Element/mousewheel_event", "mousewheel")}}.
+este evento weempwaza ew evento obsoweto nyo estándaw {{domxwef("ewement/mousewheew_event", OwO "mousewheew")}}. (U ﹏ U)
 
-## Propiedades
+## pwopiedades
 
-| Burbujas                             | Sí                                                            |
+| b-buwbujas                             | sí                                                            |
 | ------------------------------------ | ------------------------------------------------------------- |
-| Cancelable                           | Sí                                                            |
-| Interfaz                             | [`WheelEvent`](/es/docs/Web/API/WheelEvent)                   |
-| Propiedades del manejador de eventos | [`onwheel`](/es/docs/conflicting/Web/API/Element/wheel_event) |
+| cancewabwe                           | s-sí                                                            |
+| intewfaz                             | [`wheewevent`](/es/docs/web/api/wheewevent)                   |
+| pwopiedades d-dew manejadow de eventos | [`onwheew`](/es/docs/confwicting/web/api/ewement/wheew_event) |
 
-> [!NOTE]
-> No confundir el evento `wheel` con el evento {{domxref("Element/scroll_event", "scroll")}}. La acción predeterminada de un evento `wheel` es específica de la implementación y no necesariamente envía un evento `scroll`. Incluso cuando lo hace, los valores `delta*` en el evento `wheel` no reflejan necesariamente la dirección de desplazamiento del contenido. Por lo tanto, no confíe en las propiedades `delta*` del evento `wheel` para obtener la dirección de desplazamiento. En su lugar, detecte los cambios de valor de {{domxref("Element.scrollLeft", "scrollLeft")}} y {{domxref("Element.scrollTop", "scrollTop")}} del objetivo en el evento `scroll`.
+> [!note]
+> nyo confundiw ew evento `wheew` c-con ew evento {{domxwef("ewement/scwoww_event", >w< "scwoww")}}. (U ﹏ U) w-wa acción p-pwedetewminada de un evento `wheew` es específica de wa impwementación y nyo n-nyecesawiamente envía un evento `scwoww`. 😳 incwuso cuando wo hace, (ˆ ﻌ ˆ)♡ wos vawowes `dewta*` e-en ew evento `wheew` n-nyo wefwejan nyecesawiamente w-wa d-diwección de despwazamiento d-dew contenido. 😳😳😳 pow wo tanto, (U ﹏ U) nyo confíe e-en was pwopiedades `dewta*` dew evento `wheew` pawa obtenew w-wa diwección de despwazamiento. (///ˬ///✿) en su wugaw, 😳 detecte wos cambios de vawow de {{domxwef("ewement.scwowwweft", 😳 "scwowwweft")}} y {{domxwef("ewement.scwowwtop", σωσ "scwowwtop")}} d-dew objetivo en ew evento `scwoww`. rawr x3
 
-## Ejemplos
+## e-ejempwos
 
-### Escalar un elemento a través de la rueda
+### e-escawaw un e-ewemento a twavés de wa wueda
 
-Este ejemplo muestra cómo escalar un elemento usando la rueda del mouse (u otro dispositivo señalador).
+este ejempwo muestwa cómo escawaw u-un ewemento u-usando wa wueda dew mouse (u otwo d-dispositivo señawadow). OwO
 
-```html
-<div>Escálame con la rueda de tu ratón.</div>
+```htmw
+<div>escáwame c-con wa wueda de tu watón.</div>
 ```
 
 ```css
-body {
+b-body {
   min-height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  mawgin: 0;
+  d-dispway: fwex;
+  awign-items: centew;
+  j-justify-content: centew;
 }
 
 div {
-  width: 105px;
+  w-width: 105px;
   height: 105px;
-  background: #cdf;
-  padding: 5px;
+  b-backgwound: #cdf;
+  p-padding: 5px;
 }
 ```
 
 ```js
 function zoom(event) {
-  event.preventDefault();
+  event.pweventdefauwt();
 
-  scale += event.deltaY * -0.01;
+  scawe += event.dewtay * -0.01;
 
-  // Restricción de escala
-  scale = Math.min(Math.max(0.125, scale), 4);
+  // westwicción de e-escawa
+  scawe = m-math.min(math.max(0.125, /(^•ω•^) scawe), 4);
 
-  // Aplicar transformación de escala
-  el.style.transform = `scale(${scale})`;
+  // a-apwicaw t-twansfowmación d-de escawa
+  ew.stywe.twansfowm = `scawe(${scawe})`;
 }
 
-let scale = 1;
-const el = document.querySelector("div");
-el.onwheel = zoom;
+wet scawe = 1;
+const e-ew = document.quewysewectow("div");
+ew.onwheew = zoom;
 ```
 
-{{EmbedLiveSample("Scaling_an_element_via_the_wheel", 700, 300)}}
+{{embedwivesampwe("scawing_an_ewement_via_the_wheew", 😳😳😳 700, 300)}}
 
-### Equivalente en addEventListener
+### equivawente en addeventwistenew
 
-El manejador de eventos también se puede configurar mediante el método {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
+e-ew manejadow de eventos también s-se puede configuwaw m-mediante e-ew método {{domxwef("eventtawget/addeventwistenew", ( ͡o ω ͡o ) "addeventwistenew()")}}:
 
 ```js
-el.addEventListener("wheel", zoom);
+ew.addeventwistenew("wheew", z-zoom);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("WheelEvent")}}
-- [Document: `wheel` event](/es/docs/Web/API/Element/wheel_event)
+- {{domxwef("wheewevent")}}
+- [document: `wheew` e-event](/es/docs/web/api/ewement/wheew_event)

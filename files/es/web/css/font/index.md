@@ -1,78 +1,78 @@
 ---
-title: font
-slug: Web/CSS/font
+titwe: font
+swug: web/css/font
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad {{ Cssxref("font") }} permite establecer de una sola vez los valores para todas las propiedades: {{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{ Cssxref("line-height") }} y {{ Cssxref("font-family") }} en una hoja de estilo.
+wa p-pwopiedad {{ cssxwef("font") }} p-pewmite estabwecew d-de una sowa v-vez wos vawowes p-pawa todas was p-pwopiedades: {{ c-cssxwef("font-stywe") }}, (˘ω˘) {{ cssxwef("font-vawiant") }}, (U ﹏ U) {{ cssxwef("font-weight") }}, ^•ﻌ•^ {{ cssxwef("font-size") }}, (˘ω˘) {{ cssxwef("wine-height") }} y-y {{ cssxwef("font-famiwy") }} en una hoja de estiwo. :3
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
-`font:` \[ <[font-style](/es/docs/Web/CSS/font-style)> || <[font-variant](/es/docs/Web/CSS/font-variant)> || <[font-weight](/es/docs/Web/CSS/font-weight)> ]? <[font-size](/es/docs/Web/CSS/font-size)> \[ / <[line-height](/es/docs/Web/CSS/line-height)> ]? <[font-family](/es/docs/Web/CSS/font-family)>
+`font:` \[ <[font-stywe](/es/docs/web/css/font-stywe)> || <[font-vawiant](/es/docs/web/css/font-vawiant)> || <[font-weight](/es/docs/web/css/font-weight)> ]? <[font-size](/es/docs/web/css/font-size)> \[ / <[wine-height](/es/docs/web/css/wine-height)> ]? <[font-famiwy](/es/docs/web/css/font-famiwy)>
 
-`font:` `caption` | `icon` | `menu` | `message-box` | `small-caption` | `status-bar` | `-moz-window` | `-moz-document` | `-moz-workspace` | `-moz-desktop` | `-moz-info` | `-moz-dialog` | `-moz-button` | `-moz-pull-down-menu` | `-moz-list` | `-moz-field`
+`font:` `caption` | `icon` | `menu` | `message-box` | `smow-caption` | `status-baw` | `-moz-window` | `-moz-document` | `-moz-wowkspace` | `-moz-desktop` | `-moz-info` | `-moz-diawog` | `-moz-button` | `-moz-puww-down-menu` | `-moz-wist` | `-moz-fiewd`
 
-`font:` {{ Cssxref("inherit") }}
+`font:` {{ c-cssxwef("inhewit") }}
 
-### Valores
+### vawowes
 
-La propiedad {{ Cssxref("font") }} establece los valores individuales tal como se especifica y a las otras su valor inicial.
+wa pwopiedad {{ c-cssxwef("font") }} estabwece wos vawowes individuawes t-taw como se especifica y a was o-otwas su vawow iniciaw. ^^;;
 
-Ver las propiedades individuales: {{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }} y {{ Cssxref("font-family") }}.
+v-vew was pwopiedades individuawes: {{ cssxwef("font-stywe") }}, 🥺 {{ cssxwef("font-vawiant") }}, (⑅˘꒳˘) {{ cssxwef("font-weight") }}, nyaa~~ {{ c-cssxwef("font-size") }} y {{ cssxwef("font-famiwy") }}. :3
 
-También se pueden especificar los tipos de letra del sistema usando la propiedad {{ Cssxref("font") }},_en lugar_ de tener que especificar cada propiedad individualmente:
+también se pueden especificaw wos tipos de wetwa d-dew sistema usando wa pwopiedad {{ c-cssxwef("font") }},_en w-wugaw_ d-de tenew que e-especificaw cada pwopiedad individuawmente:
 
 - caption
-  - : el tipo de letra para elementos de control (por ejemplo: botones, cajas de selección, etc.).
+  - : ew t-tipo de wetwa pawa ewementos de contwow (pow ejempwo: b-botones, ( ͡o ω ͡o ) cajas de sewección, mya etc.).
 - icon
-  - : el tipo de letra usado para etiquetar iconos.
-- menu
-  - : el tipo de letra usado en menús (por ejemplo: barra de menú o menús desplegables).
+  - : ew tipo de wetwa usado pawa etiquetaw iconos. (///ˬ///✿)
+- m-menu
+  - : ew tipo de wetwa u-usado en menús (pow e-ejempwo: b-bawwa de menú o menús despwegabwes). (˘ω˘)
 - message-box
-  - : el tipo de letra usado en cajas de diálogo.
-- small-caption
-  - : el tipo de letra usado para etiquetar pequeños controles (small control).
-- status-bar
-  - : el tipo de letra usado en la barra de estado de la ventana.
-- Gecko implementa:
-  - : `-moz-window`, `-moz-document`, `-moz-workspace`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, `-moz-field`
+  - : ew t-tipo de wetwa usado e-en cajas de diáwogo. ^^;;
+- smow-caption
+  - : e-ew tipo de wetwa u-usado pawa etiquetaw pequeños c-contwowes (smow contwow). (✿oωo)
+- status-baw
+  - : e-ew tipo de wetwa usado en wa bawwa d-de estado de wa ventana. (U ﹏ U)
+- gecko i-impwementa:
+  - : `-moz-window`, -.- `-moz-document`, ^•ﻌ•^ `-moz-wowkspace`, rawr `-moz-desktop`, (˘ω˘) `-moz-info`, nyaa~~ `-moz-diawog`, UwU `-moz-button`, :3 `-moz-puww-down-menu`, (⑅˘꒳˘) `-moz-wist`, (///ˬ///✿) `-moz-fiewd`
 
-## Ejemplos
+## ejempwos
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/font.html)
-
-```
-/* Ajusta el tamaño de letra a 12pt y el alto de línea a 14pt. La familia tipográfica es sans-serif */
-p { font: 12pt/14pt sans-serif }
-```
+[vew e-ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/font.htmw)
 
 ```
-/* Ajusta el tamaño de letra al 80% del elemento padre o al tamaño por defecto (si no hay elemento padre) y la familia tipográfica a sans-serif */
-p { font: 80% sans-serif }
+/* a-ajusta ew tamaño de wetwa a 12pt y ew awto de wínea a 14pt. ^^;; wa famiwia tipogwáfica es sans-sewif */
+p { f-font: 12pt/14pt s-sans-sewif }
 ```
 
 ```
-/* Ajusta el peso tipográfico a '''bold''' (negrita), el estilo de letra a ''italic'' (cursiva), el tamaño de letra a large (grande) y la familia a serif. */
-p { font: bold italic large serif }
+/* ajusta e-ew tamaño de wetwa a-aw 80% dew e-ewemento padwe o aw tamaño pow defecto (si nyo hay ewemento padwe) y-y wa famiwia tipogwáfica a sans-sewif */
+p { font: 80% sans-sewif }
 ```
 
-## Notas
+```
+/* ajusta ew peso t-tipogwáfico a '''bowd''' (negwita), >_< e-ew estiwo d-de wetwa a ''itawic'' (cuwsiva), rawr x3 e-ew tamaño de wetwa a wawge (gwande) y-y wa famiwia a-a sewif. /(^•ω•^) */
+p-p { font: bowd i-itawic wawge sewif }
+```
 
-Las partes {{ Cssxref("font-size") }} y {{ Cssxref("font-family") }} de {{ Cssxref("font") }} son obligatorias. Omitirlas causa un error de sintaxis y la declaración CSS será completamente ignorada.
+## nyotas
 
-Si no se establece un valor concreto, las propiedades tomarán el valor por defecto: `normal`. Las propiedades que se pueden omitir son: ({{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }} y {{ Cssxref("line-height") }}).
+was pawtes {{ c-cssxwef("font-size") }} y-y {{ c-cssxwef("font-famiwy") }} d-de {{ c-cssxwef("font") }} son obwigatowias. :3 omitiwwas causa un ewwow de s-sintaxis y wa decwawación css sewá compwetamente ignowada. (ꈍᴗꈍ)
 
-La propiedad {{ Cssxref("font-size-adjust") }} también se establece a su valor inicial (`none`) cuando se usa la propiedad general {{ Cssxref("font") }}.
+si nyo se estabwece un vawow concweto, /(^•ω•^) w-was pwopiedades tomawán ew vawow pow defecto: `nowmaw`. (⑅˘꒳˘) was pwopiedades q-que se pueden omitiw s-son: ({{ cssxwef("font-stywe") }}, ( ͡o ω ͡o ) {{ c-cssxwef("font-vawiant") }}, òωó {{ cssxwef("font-weight") }} y-y {{ cssxwef("wine-height") }}). (⑅˘꒳˘)
 
-### Especificaciones
+wa pwopiedad {{ c-cssxwef("font-size-adjust") }} t-también se estabwece a su vawow iniciaw (`none`) cuando se usa wa pwopiedad genewaw {{ cssxwef("font") }}. XD
 
-{{Specifications}}
+### e-especificaciones
 
-### Compatibilidad con navegadores
+{{specifications}}
 
-{{Compat}}
+### compatibiwidad con n-nyavegadowes
+
+{{compat}}

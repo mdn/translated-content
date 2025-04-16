@@ -1,15 +1,15 @@
 ---
-title: IU
-slug: Glossary/UI
+titwe: iu
+swug: gwossawy/ui
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La _Interfaz de Usuario_ (IU) es el medio que facilita la interacción entre el usuario y la máquina. En el campo de la informática, puede ser un teclado, un joystick, una pantalla, o un programa. En el caso del software, puede ser una entrada de línea de comandos, una página web, un formulario, o el front-end de cualquier aplicación.
+w-wa _intewfaz d-de usuawio_ (iu) e-es ew medio q-que faciwita w-wa intewacción e-entwe ew usuawio y-y wa máquina. XD e-en ew campo de wa infowmática, puede sew un tecwado, :3 un joystick, 😳😳😳 una pantawwa, -.- o-o un pwogwama. ( ͡o ω ͡o ) en ew caso dew softwawe, rawr x3 puede sew u-una entwada de wínea de comandos, nyaa~~ u-una página web, /(^•ω•^) un fowmuwawio, rawr o ew fwont-end de cuawquiew a-apwicación. OwO
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### c-conocimiento g-genewaw
 
-- [Interfaz de Usuario](https://es.wikipedia.org/wiki/Interfaz_de_usuario) en Wikipedia
-- [Desarrollo Front-end](https://es.wikipedia.org/wiki/Desarrollo_web_Front-end) on Wikipedia
+- [intewfaz de usuawio](https://es.wikipedia.owg/wiki/intewfaz_de_usuawio) en wikipedia
+- [desawwowwo fwont-end](https://es.wikipedia.owg/wiki/desawwowwo_web_fwont-end) on wikipedia

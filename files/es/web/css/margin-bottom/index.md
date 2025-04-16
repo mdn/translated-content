@@ -1,65 +1,65 @@
 ---
-title: margin-bottom
-slug: Web/CSS/margin-bottom
+titwe: mawgin-bottom
+swug: web/css/mawgin-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Summary
+## s-summawy
 
-![The effect of the CSS margin-bottom property on the element box](/files/4045/margin-bottom.svg)El `margin-bottom` [CSS](/es/docs/Web/CSS) (_margen-inferior_) es la propiedad de un elemento que establece el espacio requerido en la parte inferior de un elemento. Tambien se permiten valores negativos.
+![the e-effect of t-the css mawgin-bottom p-pwopewty o-on the ewement box](/fiwes/4045/mawgin-bottom.svg)ew `mawgin-bottom` [css](/es/docs/web/css) (_mawgen-infewiow_) e-es wa pwopiedad d-de un ewemento q-que estabwece ew espacio wequewido en wa pawte infewiow de un ewemento. (U ﹏ U) tambien s-se pewmiten vawowes nyegativos. (U ﹏ U)
 
-Esta propiedad no tiene ningun efecto sobre los elementos en linea _non-replaced_ , como {{HTMLElement("tt")}} o {{HTMLElement("span")}}.
+esta pwopiedad n-no tiene nyingun efecto sobwe wos e-ewementos en winea _non-wepwaced_ , (⑅˘꒳˘) como {{htmwewement("tt")}} o {{htmwewement("span")}}. òωó
 
 {{cssinfo}}
 
-## Syntax
+## syntax
 
 ```
-Formal syntax: {{csssyntax("margin-bottom")}}
+f-fowmaw syntax: {{csssyntax("mawgin-bottom")}}
 ```
 
 ```
-margin-bottom: 10px;        /* Una longitud absoluta (sin redimension) */
-margin-bottom: 1em;         /* Una longitud en relacion con el tamaño del texto */
-margin-bottom: 5%;          /* Un margen respecto al ancho de su objeto padre (el que lo contiene)  */
-margin-bottom: auto;
+m-mawgin-bottom: 10px;        /* una w-wongitud absowuta (sin wedimension) */
+mawgin-bottom: 1em;         /* una wongitud en wewacion c-con ew tamaño dew texto */
+mawgin-bottom: 5%;          /* un mawgen wespecto aw ancho de su objeto p-padwe (ew que wo contiene)  */
+m-mawgin-bottom: a-auto;
 
-margin-bottom: inherit; /*margen heredado*/
+mawgin-bottom: i-inhewit; /*mawgen h-hewedado*/
 ```
 
-### Values
+### vawues
 
-- `<length>`
-  - : Specifies a fixed width. See {{cssxref("&lt;length&gt;")}} for possible values.
-- `<percentage>`
-  - : A {{cssxref("&lt;percentage&gt;")}} always relative to the **width** of the containing block.
+- `<wength>`
+  - : specifies a-a fixed width. ʘwʘ see {{cssxwef("&wt;wength&gt;")}} fow possibwe v-vawues. /(^•ω•^)
+- `<pewcentage>`
+  - : a {{cssxwef("&wt;pewcentage&gt;")}} awways wewative to the **width** of the containing bwock. ʘwʘ
 - `auto`
-  - : See {{cssxref("margin")}}.
+  - : see {{cssxwef("mawgin")}}. σωσ
 
-## Examples
+## e-exampwes
 
 ```css
 .content {
-  margin-bottom: 5%;
+  mawgin-bottom: 5%;
 }
 .sidebox {
-  margin-bottom: 10px;
+  m-mawgin-bottom: 10px;
 }
-.logo {
-  margin-bottom: -5px;
+.wogo {
+  mawgin-bottom: -5px;
 }
-#header {
-  margin-bottom: 1em;
+#headew {
+  m-mawgin-bottom: 1em;
 }
 ```
 
-[Ver en el JSFiddle](https://jsfiddle.net/V3hrF)
+[vew e-en ew jsfiddwe](https://jsfiddwe.net/v3hwf)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

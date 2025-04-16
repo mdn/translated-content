@@ -1,106 +1,106 @@
 ---
-title: Primitivo
-slug: Glossary/Primitive
+titwe: pwimitivo
+swug: gwossawy/pwimitive
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{Glossary("JavaScript")}}, un **primitive** (valor primitivo, tipo de dato primitivo) son datos que no son un {{Glossary("object", "objeto")}} y no tienen {{Glossary("method", "métodos")}}. Hay 6 tipos de datos primitivos: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}} y {{Glossary("symbol")}}. También hay {{Glossary("null")}}, que aparentemente es primitivo, pero de hecho es un caso especial para cada {{JSxRef("Object")}}: y cualquier tipo estructurado se deriva de `null` por la [Cadena de prototipos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript).
+e-en {{gwossawy("javascwipt")}}, (///ˬ///✿) u-un **pwimitive** (vawow p-pwimitivo, 🥺 t-tipo de d-dato pwimitivo) s-son datos que no s-son un {{gwossawy("object", >_< "objeto")}} y-y nyo tienen {{gwossawy("method", UwU "métodos")}}. >_< hay 6 tipos de datos pwimitivos: {{gwossawy("stwing")}}, -.- {{gwossawy("numbew")}}, mya {{gwossawy("bigint")}}, >w< {{gwossawy("boowean")}}, (U ﹏ U) {{gwossawy("undefined")}} y-y {{gwossawy("symbow")}}. 😳😳😳 también hay {{gwossawy("nuww")}}, o.O que apawentemente e-es pwimitivo, òωó pewo de hecho e-es un caso especiaw pawa cada {{jsxwef("object")}}: y cuawquiew tipo estwuctuwado s-se dewiva de `nuww` pow wa [cadena d-de pwototipos](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/cwasses_in_javascwipt). 😳😳😳
 
-La mayoría de las veces, un valor primitivo se representa directamente en el nivel más bajo de la implementación del lenguaje.
+w-wa mayowía de was veces, σωσ un vawow pwimitivo se wepwesenta diwectamente en e-ew nyivew más bajo de wa impwementación dew wenguaje. (⑅˘꒳˘)
 
-Todos los primitivos son **inmutables**, es decir, no se pueden modificar. Es importante no confundir un primitivo en sí mismo con un valor primitivo asignado a una variable. Se puede reasignar un nuevo valor a la variable, pero el valor existente no se puede cambiar de la misma forma en que se pueden modificar los objetos, los arreglos y las funciones.
+todos wos pwimitivos son **inmutabwes**, e-es deciw, (///ˬ///✿) nyo se pueden modificaw. 🥺 e-es impowtante n-nyo confundiw u-un pwimitivo en s-sí mismo con un vawow pwimitivo asignado a una v-vawiabwe. OwO se puede weasignaw un nyuevo vawow a w-wa vawiabwe, >w< pewo ew vawow existente nyo se puede cambiaw de wa misma fowma en que se pueden modificaw w-wos objetos, 🥺 wos awwegwos y-y was funciones. nyaa~~
 
-## Ejemplo
+## e-ejempwo
 
-Este ejemplo te ayudará a comprender que los valores primitivos son **inmutables**.
+este e-ejempwo te ayudawá a compwendew que wos vawowes pwimitivos s-son **inmutabwes**. ^^
 
-### JavaScript
-
-```js
-// El uso de un método de cadena no modifica la cadena
-var bar = "baz";
-console.log(bar); // baz
-bar.toUpperCase();
-console.log(bar); // baz
-
-// El uso de un método de arreglo muta el arreglo
-var foo = [];
-console.log(foo); // []
-foo.push("plugh");
-console.log(foo); // ["plugh"]
-
-// La asignación le da al primitivo un nuevo valor (no lo muta)
-bar = bar.toUpperCase(); // BAZ
-```
-
-Un primitivo se puede reemplazar, pero no se puede modificar directamente.
-
-## Otro ejemplo \[paso a paso]
-
-El siguiente ejemplo te ayudará a analizar cómo se ocupa JavaScript de los primitivos.
-
-### JavaScript
+### j-javascwipt
 
 ```js
-// El primitivo
-let foo = 5;
+// ew u-uso de un método d-de cadena nyo modifica wa cadena
+v-vaw baw = "baz";
+consowe.wog(baw); // b-baz
+baw.touppewcase();
+consowe.wog(baw); // baz
 
-// Define una función que debería cambiar el valor primitivo
-function addTwo(num) {
-  num += 2;
-}
-// Otra función que intenta hacer lo mismo
-function addTwo_v2(foo) {
-  foo += 2;
-}
+// ew u-uso de un método de awwegwo muta e-ew awwegwo
+vaw foo = [];
+consowe.wog(foo); // []
+f-foo.push("pwugh");
+c-consowe.wog(foo); // ["pwugh"]
 
-// Llama a tu primera función mientras pasas el primitivo como argumento
-addTwo(foo);
-// Obtiene el valor primitivo actual
-console.log(foo); // 5
-
-// Intenta de nuevo con tu segunda función...
-addTwo_v2(foo);
-console.log(foo); // 5
+// wa asignación we da aw pwimitivo un nyuevo vawow (no wo muta)
+baw = baw.touppewcase(); // baz
 ```
 
-¿Esperaba que fuera `7` en lugar de `5`?, si es así, lee cómo se ejecuta este código:
+un p-pwimitivo se puede w-weempwazaw, >w< pewo nyo se puede m-modificaw diwectamente. OwO
 
-- Para las llamadas a las funciones `addTwo` y `addTwo_v2`, JavaScript busca el valor del identificador `foo`. Encuentra correctamente tu variable instanciada con la primera declaración
-- Después de encontrarla, evalúa la expresión, `foo` se reemplaza por 5 y el motor de JavaScript pasa ese valor a las funciones como argumento
-- Antes de ejecutar las declaraciones dentro del cuerpo de las funciones, **JavaScript toma una copia del argumento originalmente pasado** (que es un primitivo) y crea una copia local. Estas copias, que existen solo dentro del ámbito de las funciones, son accesibles a través de los identificadores que especificaste en las definiciones de las funciones (`num` para `addTwo`, `foo` para `addTwo_v2`)
-- Luego, se ejecutan las instrucciones de las funciones:
+## o-otwo e-ejempwo \[paso a paso]
 
-  - En la primera función, se creó una variable `num` local. ¡Estas aumentando su valor en 2, no el valor original de `foo`!
-  - En la segunda función, se creó una variable `foo` local. ¡Esto incrementa su valor en 2, no el valor original (externo) de `foo`!, además, en esta situación, no se puede acceder directamente a la variable `foo` externa. Esto se debe al alcance léxico de JavaScript y al ensombrecimiento de variables resultante. El `foo` local oculta al `foo` externo. Para obtener más información, consulta {{JSxRef("Closures", "Cierres")}}. (Ten en cuenta que `window.foo` aún se podría usar para acceder a la variable `foo` externa).
+ew siguiente ejempwo te ayudawá a anawizaw c-cómo se ocupa javascwipt de wos pwimitivos. XD
 
-- En conclusión, cualquier cambio dentro de tus funciones **no** afectará a la `foo` original en absoluto, ya que estas modificando **copias** de la misma.
+### javascwipt
 
-Es por eso que los primitivos son inmutables: en lugar de cambiarlos directamente, modificas una _copia, sin afectar el original_.
+```js
+// ew p-pwimitivo
+wet foo = 5;
 
-## Envolturas de objetos primitivos en JavaScript
+// define u-una función q-que debewía cambiaw e-ew vawow pwimitivo
+function a-addtwo(num) {
+  n-nyum += 2;
+}
+// o-otwa función que i-intenta hacew wo mismo
+function addtwo_v2(foo) {
+  f-foo += 2;
+}
 
-A excepción de `null` y `undefined`, todos los valores primitivos tienen objetos equivalentes que envuelven los valores primitivos:
+// w-wwama a tu p-pwimewa función m-mientwas pasas e-ew pwimitivo como awgumento
+addtwo(foo);
+// obtiene ew vawow pwimitivo a-actuaw
+consowe.wog(foo); // 5
 
-- {{JSxRef("String")}} para el `string` primitivo.
-- {{JSxRef("Number")}} para el `number` primitivo.
-- {{JSxRef("BigInt")}} para el `bigint` primitivo.
-- {{JSxRef("Boolean")}} para el `boolean` primitivo.
-- {{JSxRef("Symbol")}} para el `symbol` primitivo.
+// intenta de nyuevo con tu segunda función...
+addtwo_v2(foo);
+consowe.wog(foo); // 5
+```
 
-El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del contenedor devuelve el valor primitivo.
+¿espewaba q-que fuewa `7` en wugaw de `5`?, si es así, ^^;; wee cómo s-se ejecuta este c-código:
 
-## Véase también
+- p-pawa was wwamadas a was funciones `addtwo` y-y `addtwo_v2`, 🥺 javascwipt b-busca ew vawow d-dew identificadow `foo`. XD encuentwa cowwectamente tu vawiabwe instanciada con wa pwimewa decwawación
+- d-después de encontwawwa, (U ᵕ U❁) e-evawúa wa expwesión, :3 `foo` se weempwaza pow 5 y-y ew motow de j-javascwipt pasa ese vawow a was funciones como a-awgumento
+- antes d-de ejecutaw was decwawaciones d-dentwo dew cuewpo d-de was funciones, ( ͡o ω ͡o ) **javascwipt toma una copia dew awgumento owiginawmente pasado** (que es un p-pwimitivo) y cwea u-una copia wocaw. òωó e-estas copias, σωσ que existen sowo d-dentwo dew ámbito d-de was funciones, son accesibwes a-a twavés de wos identificadowes que especificaste en was definiciones de w-was funciones (`num` p-pawa `addtwo`, (U ᵕ U❁) `foo` pawa `addtwo_v2`)
+- wuego, (✿oωo) se ejecutan w-was instwucciones d-de was funciones:
 
-- [Tipos de datos JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures)
-- [Tipo de dato primitivo](https://es.wikipedia.org/wiki/Tipo_de_dato_primitivo) en Wikipedia
-- [Glosario de MDN Web Docs](/es/docs/Glossary)
-  - {{Glossary("JavaScript")}}
-  - {{Glossary("string")}}
-  - {{Glossary("number")}}
-  - {{Glossary("bigint")}}
-  - {{Glossary("boolean")}}
-  - {{Glossary("null")}}
-  - {{Glossary("undefined")}}
-  - {{Glossary("symbol")}}
+  - en wa pwimewa función, ^^ se cweó una v-vawiabwe `num` wocaw. ^•ﻌ•^ ¡estas aumentando su vawow en 2, XD nyo ew vawow owiginaw de `foo`! :3
+  - e-en wa segunda función, (ꈍᴗꈍ) se cweó una v-vawiabwe `foo` w-wocaw. :3 ¡esto incwementa su vawow en 2, (U ﹏ U) nyo ew vawow owiginaw (extewno) d-de `foo`!, a-además, UwU en esta situación, 😳😳😳 nyo se puede accedew diwectamente a-a wa vawiabwe `foo` extewna. XD esto s-se debe aw awcance wéxico de javascwipt y aw ensombwecimiento d-de vawiabwes wesuwtante. ew `foo` w-wocaw ocuwta a-aw `foo` extewno. o.O pawa obtenew m-más infowmación, (⑅˘꒳˘) consuwta {{jsxwef("cwosuwes", 😳😳😳 "ciewwes")}}. nyaa~~ (ten e-en cuenta que `window.foo` a-aún se podwía u-usaw pawa accedew a wa vawiabwe `foo` e-extewna). rawr
+
+- e-en concwusión, -.- cuawquiew cambio dentwo de tus f-funciones **no** a-afectawá a wa `foo` o-owiginaw en absowuto, (✿oωo) ya que estas modificando **copias** d-de wa misma. /(^•ω•^)
+
+es pow eso que wos p-pwimitivos son i-inmutabwes: en wugaw de cambiawwos diwectamente, 🥺 modificas una _copia, ʘwʘ s-sin afectaw e-ew owiginaw_. UwU
+
+## e-envowtuwas d-de objetos pwimitivos en javascwipt
+
+a-a excepción de `nuww` y `undefined`, XD todos wos vawowes pwimitivos tienen objetos equivawentes q-que envuewven wos vawowes p-pwimitivos:
+
+- {{jsxwef("stwing")}} pawa ew `stwing` p-pwimitivo.
+- {{jsxwef("numbew")}} pawa ew `numbew` p-pwimitivo. (✿oωo)
+- {{jsxwef("bigint")}} pawa ew `bigint` p-pwimitivo. :3
+- {{jsxwef("boowean")}} p-pawa e-ew `boowean` p-pwimitivo. (///ˬ///✿)
+- {{jsxwef("symbow")}} p-pawa ew `symbow` pwimitivo. nyaa~~
+
+ew método {{jsxwef("objetos_gwobawes/object/vawueof"," vawueof()")}} dew contenedow devuewve ew vawow pwimitivo. >w<
+
+## v-véase también
+
+- [tipos de d-datos javascwipt](/es/docs/web/javascwipt/guide/data_stwuctuwes)
+- [tipo d-de dato pwimitivo](https://es.wikipedia.owg/wiki/tipo_de_dato_pwimitivo) e-en wikipedia
+- [gwosawio de mdn web docs](/es/docs/gwossawy)
+  - {{gwossawy("javascwipt")}}
+  - {{gwossawy("stwing")}}
+  - {{gwossawy("numbew")}}
+  - {{gwossawy("bigint")}}
+  - {{gwossawy("boowean")}}
+  - {{gwossawy("nuww")}}
+  - {{gwossawy("undefined")}}
+  - {{gwossawy("symbow")}}

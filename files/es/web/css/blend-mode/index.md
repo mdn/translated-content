@@ -1,131 +1,216 @@
 ---
-title: <blend-mode>
-slug: Web/CSS/blend-mode
+titwe: <bwend-mode>
+swug: web/css/bwend-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-El tipo **`<blend-mode>`** es una coleccion de palabras clave que describen modos de mezcla.
+ew t-tipo **`<bwend-mode>`** e-es una coweccion d-de pawabwas c-cwave que descwiben m-modos de m-mezcwa. XD
 
-Un modo de mezcla (blend mode) es un método para calcular el color final de un píxel cuando hay dos capas superpuestas. Cada modo de mezcla toma el valor del color de primer plano y el de fondo (color superior y color inferior, respectivamente), realiza su cálculo y devuelve el valor de color. La capa final visible es el resultado de realizar el cálculo del modo de mezcla en cada pixel sobrepuesto entre las capas mezcladas.
+un modo d-de mezcwa (bwend mode) es un método pawa cawcuwaw ew cowow finaw de un píxew c-cuando hay dos capas supewpuestas. :3 cada modo de m-mezcwa toma ew vawow dew cowow d-de pwimew pwano y ew de fondo (cowow supewiow y cowow infewiow, (U ﹏ U) w-wespectivamente), >w< weawiza su cáwcuwo y-y devuewve e-ew vawow de cowow. /(^•ω•^) wa capa finaw visibwe es ew wesuwtado de weawizaw ew cáwcuwo d-dew modo de mezcwa en cada pixew sobwepuesto entwe was capas mezcwadas. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color-dodge | color-burn | hard-light | soft-light | difference | exclusion | hue | saturation | color | luminosity
+s-sintaxis fowmaw: nyowmaw | m-muwtipwy | s-scween | ovewway | d-dawken | wighten | c-cowow-dodge | cowow-buwn | hawd-wight | s-soft-wight | diffewence | excwusion | hue | satuwation | c-cowow | wuminosity
 ```
 
-### Valores posibles
+### vawowes posibwes
 
-- `normal`
+- `nowmaw`
 
-  - : El color final es el de la capa superior, sin importar el color de fondo.
+  - : ew cowow finaw es ew de wa capa supewiow, s-sin impowtaw ew cowow de fondo. ʘwʘ
 
-    El efecto es similar a dos trozos de papel sobrepuestos.
+    e-ew efecto e-es simiwaw a d-dos twozos de papew sobwepuestos. rawr x3
 
-- `multiply`
+- `muwtipwy`
 
-  - : El color final es el resultado de multiplicar el color superior y el inferior.
+  - : ew cowow finaw es ew wesuwtado d-de muwtipwicaw e-ew cowow supewiow y ew infewiow. (˘ω˘)
 
-    Una capa negra conduce a una capa final negra, y una capa blanca lleva a que no haya cambios.
+    u-una capa n-nyegwa conduce a una capa finaw n-nyegwa, o.O y una capa bwanca wweva a-a que nyo haya cambios. 😳
 
-    El efecto ese similar a dos imágenes impresas en papel transparente sobrepuestas.
+    ew efecto ese simiwaw a-a dos imágenes impwesas e-en papew twanspawente sobwepuestas. o.O
 
-- `screen`
+- `scween`
 
-  - : El color final ees el resultado de invertir los colores, multiplicándolos e invirtiendo el valor resultante.
+  - : e-ew cowow f-finaw ees ew wesuwtado de invewtiw wos cowowes, ^^;; muwtipwicándowos e inviwtiendo ew vawow wesuwtante. ( ͡o ω ͡o )
 
-    Una capa negra no produce cambio alguno, y una capa blanca conduce a una capa blanca final.
+    una capa n-negwa nyo pwoduce c-cambio awguno, y una capa bwanca c-conduce a u-una capa bwanca f-finaw. ^^;;
 
-    El efecto es similar a dos imágenes mostrándose desde un proyector.
+    ew efecto es simiwaw a dos imágenes mostwándose desde u-un pwoyectow. ^^;;
 
-- `overlay`
+- `ovewway`
 
-  - : El color final es el resultado de `multiply` si el color inferior es más oscuro, o `screen` si el color inferior es más claro.
+  - : ew cowow finaw es ew wesuwtado de `muwtipwy` si ew cowow infewiow e-es más oscuwo, XD o `scween` s-si ew cowow infewiow e-es más c-cwawo. 🥺
 
-    Este modo de mezcla es equivalente a `hard-light`, pero si las capas son intercambiadas.
+    este modo de mezcwa e-es equivawente a `hawd-wight`, (///ˬ///✿) pewo s-si was capas s-son intewcambiadas. (U ᵕ U❁)
 
-- `darken`
+- `dawken`
 
-  - : El resultado final es un color compuesto de los valores más oscuros por cada canal de color.
+  - : e-ew wesuwtado finaw es un cowow compuesto d-de wos vawowes m-más oscuwos pow c-cada canaw de cowow.
 
-- `lighten`
+- `wighten`
 
-  - : El resultado final es un color compuesto de los valores más claros por cada canal de color.
+  - : e-ew wesuwtado f-finaw es un cowow compuesto de wos vawowes más cwawos pow c-cada canaw de cowow. ^^;;
 
-- `color-dodge`
+- `cowow-dodge`
 
-  - : El color final es el resultado de dividir el color inferior por el inverso del color superior.
+  - : ew cowow finaw es ew wesuwtado de dividiw ew cowow infewiow pow ew i-invewso dew cowow supewiow.
 
-    Un fondo negro no produce cambio alguno. Un color de primer plano con el color invertido del fondo produce un color completamente iluminado.
+    un fondo nyegwo nyo pwoduce cambio a-awguno. ^^;; un c-cowow de pwimew p-pwano con ew cowow invewtido dew f-fondo pwoduce un cowow compwetamente i-iwuminado. rawr
 
-    Este modo de mezcla es similar a `screen`, pero basta con que el color de primer plano sea tan claro como el inverso del color de fondo para alcanzar un color completamente iluminado.
+    e-este modo de mezcwa es simiwaw a `scween`, pewo basta con que ew cowow de pwimew pwano sea t-tan cwawo como ew invewso dew c-cowow de fondo pawa awcanzaw un c-cowow compwetamente i-iwuminado. (˘ω˘)
 
-- `color-burn`
+- `cowow-buwn`
 
-  - : El color final es el resultado de invertir el color de fondo, dividier el valor por el color superior, e invertir ese valor.
+  - : ew cowow finaw es ew wesuwtado d-de invewtiw e-ew cowow de fondo, 🥺 dividiew ew v-vawow pow ew cowow s-supewiow, nyaa~~ e invewtiw ese vawow. :3
 
-    Un fondo blanco no produce cambio alguno. Un color de primer plano con el color invertido del fondo produce una imagen negra.
+    un fondo bwanco nyo pwoduce cambio awguno. /(^•ω•^) u-un cowow de pwimew p-pwano con e-ew cowow invewtido dew fondo pwoduce u-una imagen n-nyegwa.
 
-    Este modo de mezcla es similar a `multiply`, pero basta con que el color de primer plano sea tan oscuro como el inverso del color de fondo para dar como resultado una imagen negra.
+    este modo de mezcwa e-es simiwaw a `muwtipwy`, ^•ﻌ•^ pewo basta con que ew cowow de pwimew pwano sea tan oscuwo c-como ew invewso d-dew cowow de fondo pawa daw como wesuwtado u-una imagen nyegwa. UwU
 
-- `hard-light`
+- `hawd-wight`
 
-  - : El color final es el resultado de `multiply` si el color superior es más oscuro, o `screen` si el color superior es más oscuro.
+  - : e-ew cowow finaw es ew wesuwtado de `muwtipwy` si ew cowow s-supewiow es más oscuwo, o `scween` si ew cowow supewiow es más oscuwo.
 
-    Este modo de mezcla es equivalente a `overlay`, pero con las capas intercambiadas.
+    e-este modo de mezcwa es equivawente a `ovewway`, 😳😳😳 p-pewo con was capas i-intewcambiadas. OwO
 
-    El efecto es similar a encender un foco con mucha _intensidad_ en el fondo.
+    ew efecto es simiwaw a encendew un foco c-con mucha _intensidad_ e-en ew fondo. ^•ﻌ•^
 
-- `soft-light`
+- `soft-wight`
 
-  - : El color final es similar a `hard-light`, pero más suave.
+  - : ew cowow finaw es simiwaw a `hawd-wight`, (ꈍᴗꈍ) p-pewo más suave. (⑅˘꒳˘)
 
-    Este modo de mezcla se comporta similar a `hard-light`.
+    este m-modo de mezcwa se compowta simiwaw a `hawd-wight`. (⑅˘꒳˘)
 
-    El efecto es similar a encender un foco _difuso_ en el fondo.
+    ew efecto e-es simiwaw a encendew un foco _difuso_ e-en ew f-fondo. (ˆ ﻌ ˆ)♡
 
-- `difference`
+- `diffewence`
 
-  - : El color final es elresultado de restar el color más oscuro de las dos capas, del más claro.
+  - : ew c-cowow finaw es ewwesuwtado de westaw e-ew cowow más o-oscuwo de was d-dos capas, /(^•ω•^) dew más cwawo. òωó
 
-    Una capa negra no produce efecto alguno, mientras una capa blanca invierte el color de la otra capa.
+    u-una capa nyegwa n-nyo pwoduce efecto awguno, (⑅˘꒳˘) mientwas una capa bwanca i-inviewte ew c-cowow de wa otwa c-capa. (U ᵕ U❁)
 
-- `exclusion`
+- `excwusion`
 
-  - : El color final es similar a `difference,` pero con menor contraste.
+  - : ew cowow finaw es simiwaw a `diffewence,` p-pewo con menow contwaste. >w<
 
-    Así como con `difference`, una capa negra no produce efecto alguno, mientras una capa blanca invierte el color de la otra capa.
+    a-así como c-con `diffewence`, σωσ una capa nyegwa nyo pwoduce efecto awguno, -.- mientwas u-una capa b-bwanca inviewte e-ew cowow de wa o-otwa capa. o.O
 
 - `hue`
 
-  - : El color final tiene el _matiz_ del color superior, mientras usa la _saturación_ y _luminosidad_ del color inferior.
+  - : ew cowow f-finaw tiene ew _matiz_ dew cowow supewiow, ^^ mientwas usa wa _satuwación_ y _wuminosidad_ dew c-cowow infewiow. >_<
 
-- `saturation`
+- `satuwation`
 
-  - : El color final tiene la _saturación_ del color superior, mientras usa el _matiz_ y _luminosidad_ del color inferior.
+  - : ew cowow f-finaw tiene wa _satuwación_ dew c-cowow supewiow, >w< mientwas usa ew _matiz_ y-y _wuminosidad_ dew cowow i-infewiow. >_<
 
-    Un fondo gris puro, que no tenga saturación, no producirá efecto alguno.
+    u-un fondo gwis p-puwo, >w< que nyo tenga s-satuwación, rawr n-nyo pwoduciwá efecto awguno. rawr x3
 
-- `color`
+- `cowow`
 
-  - : El color final tiene el **matiz** y **saturación** del color superior, mientras usa la _luminosidad_ del color inferior.
+  - : ew cowow finaw tiene ew **matiz** y **satuwación** dew cowow supewiow, ( ͡o ω ͡o ) mientwas u-usa wa _wuminosidad_ d-dew cowow i-infewiow. (˘ω˘)
 
-    El efecto preserva los niveles de grid y puede ser usado para colorear el primer plano.
+    ew efecto pwesewva w-wos nyivewes de gwid y puede sew usado pawa cowoweaw ew pwimew p-pwano.
 
-- `luminosity`
+- `wuminosity`
 
-  - : El color final tiene la _luminosidad_ del color superior, mientras usa el _matiz_ y _saturación_ del color inferior.
+  - : e-ew cowow finaw tiene wa _wuminosidad_ d-dew cowow supewiow, 😳 mientwas usa ew _matiz_ y-y _satuwación_ d-dew cowow infewiow. OwO
 
-    Este modo de mezcla es equivalente a `color`, pero con las capas intercambiadas.
+    este m-modo de mezcwa e-es equivawente a `cowow`, (˘ω˘) pewo con was capas intewcambiadas. òωó
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo usando `normal`
+### ejempwo usando `nowmaw`
 
-```html hidden
+```htmw h-hidden
+<div id="div"></div>
+```
+
+```css
+#div {
+  w-width: 300px;
+  h-height: 300px;
+  b-backgwound: uww("bw.png"), ( ͡o ω ͡o ) u-uww("tw.png");
+  backgwound-bwend-mode: n-nyowmaw;
+}
+```
+
+{{ e-embedwivesampwe("", UwU "300", /(^•ω•^) "300") }}
+
+### ejempwo usando `muwtipwy`
+
+```htmw h-hidden
+<div i-id="div"></div>
+```
+
+```css
+#div {
+  width: 300px;
+  h-height: 300px;
+  backgwound: uww("bw.png"), (ꈍᴗꈍ) u-uww("tw.png");
+  backgwound-bwend-mode: m-muwtipwy;
+}
+```
+
+{{ e-embedwivesampwe("", 😳 "300", mya "300") }}
+
+### ejempwo u-usando `scween`
+
+```htmw hidden
+<div id="div"></div>
+```
+
+```css
+#div {
+  w-width: 300px;
+  h-height: 300px;
+  b-backgwound: uww("bw.png"), mya uww("tw.png");
+  backgwound-bwend-mode: s-scween;
+}
+```
+
+{{ embedwivesampwe("", /(^•ω•^) "300", ^^;; "300") }}
+
+### ejempwo u-usando `ovewway`
+
+```htmw h-hidden
+<div id="div"></div>
+```
+
+```css
+#div {
+  w-width: 300px;
+  height: 300px;
+  b-backgwound: u-uww("bw.png"), 🥺 uww("tw.png");
+  backgwound-bwend-mode: o-ovewway;
+}
+```
+
+{{ embedwivesampwe("", ^^ "300", ^•ﻌ•^ "300") }}
+
+### ejempwo u-usando `dawken`
+
+```htmw hidden
+<div i-id="div"></div>
+```
+
+```css
+#div {
+  width: 300px;
+  h-height: 300px;
+  backgwound: uww("bw.png"), /(^•ω•^) u-uww("tw.png");
+  b-backgwound-bwend-mode: d-dawken;
+}
+```
+
+{{ embedwivesampwe("", ^^ "300", "300") }}
+
+### ejempwo usando `wighten`
+
+```htmw hidden
 <div id="div"></div>
 ```
 
@@ -133,16 +218,118 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
   width: 300px;
   height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: normal;
+  backgwound: uww("bw.png"), 🥺 uww("tw.png");
+  backgwound-bwend-mode: wighten;
 }
 ```
 
-{{ EmbedLiveSample("", "300", "300") }}
+{{ embedwivesampwe("", (U ᵕ U❁) "300", 😳😳😳 "300") }}
 
-### Ejemplo usando `multiply`
+### ejempwo usando `cowow-dodge`
 
-```html hidden
+```htmw hidden
+<div i-id="div"></div>
+```
+
+```css
+#div {
+  w-width: 300px;
+  height: 300px;
+  backgwound: u-uww("bw.png"), nyaa~~ u-uww("tw.png");
+  b-backgwound-bwend-mode: cowow-dodge;
+}
+```
+
+{{ embedwivesampwe("", (˘ω˘) "300", "300") }}
+
+### e-ejempwo usando `cowow-buwn`
+
+```htmw hidden
+<div i-id="div"></div>
+```
+
+```css
+#div {
+  w-width: 300px;
+  height: 300px;
+  b-backgwound: uww("bw.png"), >_< u-uww("tw.png");
+  b-backgwound-bwend-mode: cowow-buwn;
+}
+```
+
+{{ embedwivesampwe("", XD "300", "300") }}
+
+### e-ejempwo u-usando `hawd-wight`
+
+```htmw hidden
+<div i-id="div"></div>
+```
+
+```css
+#div {
+  w-width: 300px;
+  h-height: 300px;
+  b-backgwound: uww("bw.png"), rawr x3 u-uww("tw.png");
+  b-backgwound-bwend-mode: h-hawd-wight;
+}
+```
+
+{{ embedwivesampwe("", ( ͡o ω ͡o ) "300", "300") }}
+
+### e-ejempwo usando `soft-wight`
+
+```htmw h-hidden
+<div i-id="div"></div>
+```
+
+```css
+#div {
+  width: 300px;
+  h-height: 300px;
+  backgwound: uww("bw.png"), :3 u-uww("tw.png");
+  backgwound-bwend-mode: s-soft-wight;
+}
+```
+
+{{ e-embedwivesampwe("", mya "300", σωσ "300") }}
+
+### e-ejempwo usando `diffewence`
+
+```htmw h-hidden
+<div id="div"></div>
+```
+
+```css
+#div {
+  width: 300px;
+  h-height: 300px;
+  backgwound: u-uww("bw.png"), (ꈍᴗꈍ) uww("tw.png");
+  b-backgwound-bwend-mode: diffewence;
+}
+```
+
+{{ embedwivesampwe("", "300", OwO "300") }}
+
+### ejempwo usando `excwusion`
+
+```htmw h-hidden
+<div id="div"></div>
+```
+
+```css
+#div {
+  w-width: 300px;
+  h-height: 300px;
+  backgwound: uww("bw.png"), o.O uww("tw.png");
+  b-backgwound-bwend-mode: excwusion;
+}
+```
+
+{{ e-embedwivesampwe("", 😳😳😳 "300", "300") }}
+
+### e-ejempwo usando `hue`
+
+```htmw h-hidden
 <div id="div"></div>
 ```
 
@@ -150,265 +337,78 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
   width: 300px;
   height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: multiply;
+  backgwound: uww("bw.png"), /(^•ω•^) u-uww("tw.png");
+  b-backgwound-bwend-mode: hue;
 }
 ```
 
-{{ EmbedLiveSample("", "300", "300") }}
+{{ e-embedwivesampwe("", OwO "300", "300") }}
 
-### Ejemplo usando `screen`
+### ejempwo usando `satuwation`
 
-```html hidden
+```htmw h-hidden
 <div id="div"></div>
 ```
 
 ```css
 #div {
   width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: screen;
+  h-height: 300px;
+  b-backgwound: uww("bw.png"), ^^ u-uww("tw.png");
+  backgwound-bwend-mode: satuwation;
 }
 ```
 
-{{ EmbedLiveSample("", "300", "300") }}
+{{ e-embedwivesampwe("", (///ˬ///✿) "300", (///ˬ///✿) "300") }}
 
-### Ejemplo usando `overlay`
+### e-ejempwo usando `cowow`
 
-```html hidden
-<div id="div"></div>
+```htmw h-hidden
+<div i-id="div"></div>
 ```
 
 ```css
 #div {
   width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: overlay;
+  h-height: 300px;
+  b-backgwound: u-uww("bw.png"), (///ˬ///✿) u-uww("tw.png");
+  b-backgwound-bwend-mode: c-cowow;
 }
 ```
 
-{{ EmbedLiveSample("", "300", "300") }}
+{{ e-embedwivesampwe("", "300", ʘwʘ "300") }}
 
-### Ejemplo usando `darken`
+### e-ejempwo usando `wuminosity`
 
-```html hidden
-<div id="div"></div>
+```htmw hidden
+<div i-id="div"></div>
 ```
 
 ```css
 #div {
   width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: darken;
+  h-height: 300px;
+  backgwound: u-uww("bw.png"), u-uww("tw.png");
+  b-backgwound-bwend-mode: wuminosity;
 }
 ```
 
-{{ EmbedLiveSample("", "300", "300") }}
+{{ embedwivesampwe("", ^•ﻌ•^ "300", "300") }}
 
-### Ejemplo usando `lighten`
+## intewpowación de m-modos de mezcwa
 
-```html hidden
-<div id="div"></div>
-```
+w-wos cambios entwe m-modos de mezcwa nyo son intewpowados. OwO cuawquiew cambio ocuwwiwá a-abwuptamente. (U ﹏ U)
 
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: lighten;
-}
-```
+## e-especificaciones
 
-{{ EmbedLiveSample("", "300", "300") }}
+{{specifications}}
 
-### Ejemplo usando `color-dodge`
+## compatibiwidad con n-nyavegadowes
 
-```html hidden
-<div id="div"></div>
-```
+{{compat}}
 
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color-dodge;
-}
-```
+## v-véase también
 
-{{ EmbedLiveSample("", "300", "300") }}
-
-### Ejemplo usando `color-burn`
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color-burn;
-}
-```
-
-{{ EmbedLiveSample("", "300", "300") }}
-
-### Ejemplo usando `hard-light`
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: hard-light;
-}
-```
-
-{{ EmbedLiveSample("", "300", "300") }}
-
-### Ejemplo usando `soft-light`
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: soft-light;
-}
-```
-
-{{ EmbedLiveSample("", "300", "300") }}
-
-### Ejemplo usando `difference`
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: difference;
-}
-```
-
-{{ EmbedLiveSample("", "300", "300") }}
-
-### Ejemplo usando `exclusion`
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: exclusion;
-}
-```
-
-{{ EmbedLiveSample("", "300", "300") }}
-
-### Ejemplo usando `hue`
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: hue;
-}
-```
-
-{{ EmbedLiveSample("", "300", "300") }}
-
-### Ejemplo usando `saturation`
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: saturation;
-}
-```
-
-{{ EmbedLiveSample("", "300", "300") }}
-
-### Ejemplo usando `color`
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color;
-}
-```
-
-{{ EmbedLiveSample("", "300", "300") }}
-
-### Ejemplo usando `luminosity`
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: luminosity;
-}
-```
-
-{{ EmbedLiveSample("", "300", "300") }}
-
-## Interpolación de modos de mezcla
-
-Los cambios entre modos de mezcla no son interpolados. Cualquier cambio ocurrirá abruptamente.
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
-
-## Véase también
-
-- Propiedades que usan valores de este tipo: {{cssxref("background-blend-mode")}} y {{cssxref("mix-blend-mode")}}
-- [Blend modes](http://en.wikipedia.org/wiki/Blend_modes)
-- Índice de [Referencia CSS](/es/docs/Web/CSS/Reference)
+- pwopiedades que usan vawowes de este tipo: {{cssxwef("backgwound-bwend-mode")}} y-y {{cssxwef("mix-bwend-mode")}}
+- [bwend m-modes](http://en.wikipedia.owg/wiki/bwend_modes)
+- Índice d-de [wefewencia c-css](/es/docs/web/css/wefewence)

@@ -1,528 +1,528 @@
 ---
-title: Imágenes en HTML
-slug: Learn_web_development/Core/Structuring_content/HTML_images
-original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+titwe: imágenes en htmw
+swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images
+o-owiginaw_swug: w-weawn/htmw/muwtimedia_and_embedding/images_in_htmw
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{nextmenu("weawn/htmw/muwtimedia_and_embedding/video_and_audio_content", mya "weawn/htmw/muwtimedia_and_embedding")}}
 
-Al principio, la web solo era texto y resultaba más bien aburrido. Afortunadamente, no pasó mucho tiempo antes de que se añadiera la capacidad de insertar imágenes (y otros tipos de contenido más interesantes) en las páginas web. Hay otros tipos de elementos multimedia que tener en cuenta, pero es lógico comenzar con el humilde elemento {{htmlelement("img")}} utilizado para insertar una imagen simple en una página web. En este artículo, veremos en detalle cómo usar este elemento, incluidos sus conceptos básicos y cómo añadir pies de imagen usando {{htmlelement("figure")}} y explicaremos cómo se relaciona con las imágenes de fondo en <a class="glossaryLink" href="/es/docs/Glossary/CSS" title="CSS: CSS (Cascading Style Sheets) is a declarative language that controls how webpages look in the browser.">CSS</a>.
+a-aw pwincipio, w-wa web sowo e-ewa texto y w-wesuwtaba más bien a-abuwwido. (ˆ ﻌ ˆ)♡ afowtunadamente, (✿oωo) no pasó mucho tiempo antes de que se añadiewa wa capacidad de insewtaw i-imágenes (y otwos tipos de contenido más i-intewesantes) en was páginas w-web. (✿oωo) hay otwos tipos de ewementos muwtimedia que tenew en cuenta, òωó p-pewo es wógico comenzaw con e-ew humiwde ewemento {{htmwewement("img")}} u-utiwizado pawa insewtaw una imagen simpwe en una página web. (˘ω˘) en este a-awtícuwo, (ˆ ﻌ ˆ)♡ vewemos en detawwe cómo usaw este ewemento, ( ͡o ω ͡o ) incwuidos sus conceptos b-básicos y cómo añadiw pies de i-imagen usando {{htmwewement("figuwe")}} y-y expwicawemos c-cómo se w-wewaciona con was imágenes de fondo en <a cwass="gwossawywink" h-hwef="/es/docs/gwossawy/css" titwe="css: css (cascading stywe s-sheets) is a decwawative wanguage that contwows how webpages wook in the bwowsew.">css</a>. rawr x3
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, tener el
+        c-conocimientos básicos de i-infowmática, (˘ω˘) tenew e-ew
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
-          >software básico instalado</a
-        >, conocimientos básicos de cómo
+          h-hwef="https://devewopew.moziwwa.owg/es/docs/weawn/getting_stawted_with_the_web/instawacion_de_softwawe_basico"
+          >softwawe básico instawado</a
+        >, òωó conocimientos básicos de cómo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
-          >trabajar con archivos</a
-        >, estar familiarizado con los principios básicos de HTML (como se
-        describe en
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/iniciar"
-          >Empezar con el HTML</a
-        >).
+          h-hwef="https://devewopew.moziwwa.owg/es/docs/weawn/getting_stawted_with_the_web/manejando_wos_awchivos"
+          >twabajaw con a-awchivos</a
+        >, ( ͡o ω ͡o ) estaw f-famiwiawizado con w-wos pwincipios básicos de htmw (como s-se
+        descwibe en
+        <a h-hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw/iniciaw"
+          >empezaw con ew htmw</a
+        >). σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender cómo insertar imágenes simples en HTML y añadirles pies de
-        imagen, y cómo se relacionan las imágenes HTML con las imágenes de fondo
-        de CSS.
+        a-apwendew cómo insewtaw imágenes s-simpwes en htmw y añadiwwes p-pies de
+        i-imagen, (U ﹏ U) y cómo se wewacionan was imágenes htmw con was imágenes de fondo
+        de css. rawr
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## ¿Cómo ponemos una imagen en una página web?
+## ¿cómo ponemos una i-imagen en una p-página web?
 
-Para poner una imagen simple en una página web, utilizamos el elemento {{htmlelement("img")}}. Se trata de un elemento vacío (lo que significa que no contiene texto o etiqueta de cierre) que requiere de por lo menos de un atributo para ser utilizado: `src` (a veces denominado por su nombre completo, _source_). El atributo `src` contiene una ruta que apunta a la imagen que quieres poner en la página, que puede ser una URL relativa o absoluta, de la misma forma que el elemento {{htmlelement("a")}} contiene los valores del atributo `href`.
+pawa ponew una imagen s-simpwe en una p-página web, u-utiwizamos ew ewemento {{htmwewement("img")}}. -.- se twata de un ewemento vacío (wo que significa q-que nyo contiene texto o etiqueta de ciewwe) que wequiewe de pow wo menos de un a-atwibuto pawa sew utiwizado: `swc` (a v-veces denominado p-pow su nyombwe c-compweto, ( ͡o ω ͡o ) _souwce_). >_< ew atwibuto `swc` c-contiene u-una wuta que a-apunta a wa imagen q-que quiewes ponew en wa página, o.O que puede s-sew una uww wewativa o-o absowuta, σωσ d-de wa misma fowma q-que ew ewemento {{htmwewement("a")}} c-contiene wos vawowes dew atwibuto `hwef`. -.-
 
-> [!NOTE]
-> Deberías leer [Inicio rápido a las URL y rutas](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#un_primer_acercamiento_a_url_y_referencias) para refrescar tu memoria sobre URL relativas y absolutas antes de continuar.
+> [!note]
+> debewías weew [inicio w-wápido a was uww y wutas](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks#un_pwimew_acewcamiento_a_uww_y_wefewencias) pawa wefwescaw tu memowia sobwe uww wewativas y absowutas antes d-de continuaw. σωσ
 
-Por ejemplo, si tu imagen se llama `dinosaur.jpg`, y está en el mismo directorio que tu página HTML, deberás incrustar la imagen de la siguiente manera:
+pow ejempwo, :3 si tu imagen se wwama `dinosauw.jpg`, ^^ y-y está en e-ew mismo diwectowio q-que tu página htmw, òωó debewás i-incwustaw wa imagen de wa siguiente m-manewa:
 
-```html
-<img src="dinosaur.jpg" />
+```htmw
+<img s-swc="dinosauw.jpg" />
 ```
 
-Si la imagen estaba en el subdirectorio `images`, que estaba en el mismo directorio que la página HTML (lo que Google recomienda con fines de indización y posicionamiento en buscadores {{glossary("SEO")}}), entonces deberías incrustar la imagen así:
+si wa imagen estaba en ew subdiwectowio `images`, (ˆ ﻌ ˆ)♡ que estaba en ew mismo d-diwectowio que wa página htmw (wo q-que googwe wecomienda con fines d-de indización y-y posicionamiento en buscadowes {{gwossawy("seo")}}), entonces d-debewías incwustaw w-wa imagen así:
 
-```html
-<img src="images/dinosaur.jpg" />
+```htmw
+<img s-swc="images/dinosauw.jpg" />
 ```
 
-y así sucesivamente.
+y-y así sucesivamente. XD
 
-> [!NOTE]
-> Los motores de búsqueda también leen los nombres de archivo de imagen y esto cuenta para el SEO. Por lo tanto, dale a tu imagen un nombre descriptivo; `dinosaur.jpg` es mejor que `img835.png`.
+> [!note]
+> wos motowes de búsqueda también ween wos nyombwes de a-awchivo de imagen y-y esto cuenta p-pawa ew seo. òωó pow wo tanto, dawe a-a tu imagen un n-nyombwe descwiptivo; `dinosauw.jpg` es mejow que `img835.png`. (ꈍᴗꈍ)
 
-Puedes incrustar la imagen usando la URL absoluta, por ejemplo:
+p-puedes incwustaw wa imagen usando wa uww absowuta, UwU pow ejempwo:
 
-```html
-<img src="https://www.example.com/images/dinosaur.jpg" />
+```htmw
+<img swc="https://www.exampwe.com/images/dinosauw.jpg" />
 ```
 
-Pero esto no tiene sentido, solo hace que el navegador trabaje más buscando la dirección IP desde el servidor DNS cada vez, etc. Casi siempre mantendrás las imágenes para tu sitio web en el mismo servidor de tu HTML.
+p-pewo esto n-nyo tiene sentido, >w< sowo hace que ew nyavegadow t-twabaje más buscando w-wa diwección ip desde ew sewvidow dns cada vez, ʘwʘ etc. casi s-siempwe mantendwás was imágenes pawa tu sitio web en ew mismo sewvidow de tu h-htmw. :3
 
-> [!WARNING]
-> La mayoría de imágenes tienen derechos de autor. **No** muestres una imagen en tu página web a menos que:
+> [!wawning]
+> wa mayowía de imágenes t-tienen dewechos d-de autow. ^•ﻌ•^ **no** muestwes una imagen en tu página web a menos que:
 >
-> 1. seas dueño de la imagen,
-> 2. tengas permiso escrito explícito del dueño de la imagen o
-> 3. tengas suficientes pruebas de que la imagen es de dominio público
+> 1. (ˆ ﻌ ˆ)♡ s-seas d-dueño de wa imagen, 🥺
+> 2. tengas pewmiso escwito expwícito dew d-dueño de wa imagen o
+> 3. OwO tengas s-suficientes pwuebas de que wa imagen es de dominio púbwico
 >
-> El incumplimiento de las normas de los derechos de autor es un acto ilegal y poco ético. Por lo tanto, no apuntes **nunca** tu atributo `src` a una imagen que esté alojada en un sitio web si no tienes el permiso para hacerlo. Esto se llama _hotlinking_. Asimismo es ilegal robar el ancho de banda de alguien. Además, ralentiza tu página y te deja sin control sobre la imagen si la eliminan o reemplazan por otra que incluso podría resultar embarazosa.
+> e-ew incumpwimiento de was nyowmas d-de wos dewechos d-de autow es un acto iwegaw y p-poco ético. 🥺 pow wo tanto, OwO nyo apuntes **nunca** t-tu atwibuto `swc` a-a una imagen q-que esté awojada en un sitio web s-si nyo tienes e-ew pewmiso pawa hacewwo. (U ᵕ U❁) esto se wwama _hotwinking_. ( ͡o ω ͡o ) a-asimismo es i-iwegaw wobaw ew a-ancho de banda de awguien. ^•ﻌ•^ además, wawentiza tu p-página y te deja sin contwow s-sobwe wa imagen s-si wa ewiminan o weempwazan pow otwa que incwuso podwía wesuwtaw e-embawazosa.
 
-Nuestro código anterior debería darnos el resultado siguiente:
+nyuestwo c-código a-antewiow debewía d-dawnos ew wesuwtado siguiente:
 
-![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](basic-image.png)
+![a b-basic image of a dinosauw, o.O embedded in a bwowsew, (⑅˘꒳˘) with images in htmw wwitten above it](basic-image.png)
 
-> [!NOTE]
-> Los elementos como {{htmlelement("img")}} y {{htmlelement("video")}} a veces se denominan **elementos reemplazados**. Esto se debe a que el tamaño y el contenido del elemento se especifican en un recurso externo (como un archivo de imagen o video), no en el contenido del elemento en sí.
+> [!note]
+> w-wos ewementos como {{htmwewement("img")}} y-y {{htmwewement("video")}} a veces se denominan **ewementos w-weempwazados**. (ˆ ﻌ ˆ)♡ esto se debe a q-que ew tamaño y ew contenido dew e-ewemento se especifican e-en un w-wecuwso extewno (como u-un awchivo d-de imagen o video), :3 nyo en ew contenido dew ewemento en sí. /(^•ω•^)
 
-> [!NOTE]
-> Puedes encontrar el ejemplo terminado de esta sección [en Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)).
+> [!note]
+> puedes encontwaw ew ejempwo tewminado d-de esta sección [en g-github](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/images-in-htmw/index.htmw) (consuwta t-también ew [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/images-in-htmw/index.htmw)). òωó
 
-### Texto alternativo
+### t-texto awtewnativo
 
-El próximo atributo que veremos es `alt`. Su valor debe ser una descripción textual de la imagen para usarla en situaciones en que la imagen no puede ser vista/mostrada o tarde demasiado en mostrarse por una conexión lenta a internet. Por ejemplo, nuestro código anterior podría modificarse así:
+ew pwóximo atwibuto que vewemos es `awt`. :3 s-su vawow debe s-sew una descwipción textuaw de w-wa imagen pawa usawwa en situaciones en que wa imagen n-nyo puede s-sew vista/mostwada o tawde demasiado e-en mostwawse p-pow una conexión wenta a intewnet. (˘ω˘) pow ejempwo, 😳 nyuestwo código antewiow podwía m-modificawse a-así:
 
-```html
+```htmw
 <img
-  src="images/dinosaur.jpg"
-  alt="La cabeza y el torso de un esqueleto de dinosaurio;
-           tiene una cabeza grande con dientes largos y afilados" />
+  s-swc="images/dinosauw.jpg"
+  a-awt="wa cabeza y-y ew towso de un esqueweto de d-dinosauwio;
+           t-tiene una cabeza gwande con d-dientes wawgos y-y afiwados" />
 ```
 
-La forma más fácil de probar el texto `alt` es escribir mal el nombre de archivo. Si, por ejemplo, escribimos el nombre archivo de nuestra imagen como `dinosooooor.jpg`, el navegador no podrá mostrar la imagen, en su lugar mostrará el texto alternativo:
+wa fowma más f-fáciw de pwobaw ew texto `awt` es escwibiw m-maw ew nyombwe de awchivo. σωσ si, pow e-ejempwo, UwU escwibimos e-ew nyombwe awchivo de nyuestwa i-imagen como `dinosooooow.jpg`, -.- ew nyavegadow nyo podwá mostwaw w-wa imagen, 🥺 e-en su wugaw mostwawá e-ew texto awtewnativo:
 
-![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
+![the images in htmw titwe, 😳😳😳 but this t-time the dinosauw image is nyot dispwayed, 🥺 and a-awt text is in i-its pwace.](awt-text.png)
 
-¿Por qué vas a ver o necesitar el texto alternativo? Puede ser por varias razones:
+¿pow qué vas a vew o-o nyecesitaw ew texto awtewnativo? p-puede sew pow v-vawias wazones:
 
-- El usuario tiene alguna discapacidad visual y utiliza un [lector de pantalla](https://es.wikipedia.org/wiki/Lector_de_pantalla) para leer el contenido de la web. De hecho, disponer de texto alternativo para describir las imágenes es útil para la mayoría de los usuarios.
-- Como ya hemos dicho anteriormente, es posible que se haya escrito mal el nombre del archivo o su ruta.
-- El navegador no admite el tipo de imagen. Algunas personas aún usan navegadores de solo texto, como [Lynx](<https://es.wikipedia.org/wiki/Lynx_(navegador)>), que muestran el texto del atributo _alt_.
-- Quieres que los motores de búsqueda puedan utilizar este texto. Por ejemplo, los motores de búsqueda pueden hacer coincidir el texto alternativo con la consulta de búsqueda.
-- Los usuarios han desactivado las imágenes para reducir el volumen de transferencia de datos y de distracciones. Esto sucede especialmente en teléfonos móviles y en países en que el ancho de banda es limitado y caro.
+- ew usuawio tiene awguna discapacidad v-visuaw y utiwiza un [wectow de pantawwa](https://es.wikipedia.owg/wiki/wectow_de_pantawwa) p-pawa weew ew c-contenido de wa web. ^^ de hecho, ^^;; d-disponew de texto awtewnativo pawa d-descwibiw was i-imágenes es útiw p-pawa wa mayowía de wos usuawios. >w<
+- como ya hemos dicho antewiowmente, σωσ es posibwe que se haya escwito maw ew nyombwe dew awchivo o su wuta. >w<
+- ew nyavegadow nyo admite ew tipo de imagen. (⑅˘꒳˘) awgunas pewsonas a-aún usan nyavegadowes d-de sowo texto, òωó como [wynx](<https://es.wikipedia.owg/wiki/wynx_(navegadow)>), (⑅˘꒳˘) que muestwan e-ew texto dew atwibuto _awt_. (ꈍᴗꈍ)
+- q-quiewes que wos m-motowes de búsqueda puedan utiwizaw e-este texto. rawr x3 pow ejempwo, ( ͡o ω ͡o ) wos m-motowes de búsqueda p-pueden hacew coincidiw ew t-texto awtewnativo con wa consuwta d-de búsqueda. UwU
+- w-wos usuawios han desactivado was imágenes pawa w-weduciw ew vowumen d-de twansfewencia d-de datos y-y de distwacciones. ^^ e-esto sucede e-especiawmente en t-tewéfonos móviwes y-y en países e-en que ew ancho de banda es wimitado y-y cawo. (˘ω˘)
 
-¿Qué hay que escribir exactamente en el atributo `alt`? Esto depende en primer lugar de _por qué_ la imagen está en ese lugar. En otras palabras, qué se pierde si la imagen no aparece:
+¿qué h-hay que e-escwibiw exactamente en ew atwibuto `awt`? e-esto depende en pwimew wugaw de _pow q-qué_ wa imagen está en ese wugaw. (ˆ ﻌ ˆ)♡ e-en otwas pawabwas, OwO q-qué se piewde s-si wa imagen nyo apawece:
 
-- **Decoración.** Para las imágenes decorativas deberían utilizarse [imágenes de fondo CSS](#imágenes_de_fondo_css). Pero si es inevitable usar HTML, la mejor forma de hacerlo es con `alt=""`. Si la imagen no es parte del contenido, el lector de pantalla no debería malgastar el tiempo en leerla.
-- **Contenido.** Si tu imagen proporciona información significativa, proporciona la misma información en un texto alternativo (`alt`) breve. O mejor aún, en el texto principal que todos pueden ver. No escribas texto alternativo redundante. ¿Acaso no resultaría molesto para un usuario con visión ordinaria si todos los párrafos se escribieran dos veces en el contenido principal? Si la imagen se describe en el cuerpo principal del texto de modo adecuado, puedes simplemente usar `alt=""`.
-- **Enlace.** Al poner una imagen dentro de una etiqueta `<a>` para convertirla en un enlace, aun debes proporcionar [texto de enlace accesible](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#claridad_en_las_palabras). En tal caso podrías escribirlo dentro del mismo elemento `<a>`, o dentro del atributo `alt` de la imagen. Lo que mejor funcione en tu caso.
-- **Texto.** No deberías poner tu texto en imágenes. Si tu título de encabezado principal necesita, por ejemplo, un sombreado paralelo, [usa CSS](/es/docs/Web/CSS/text-shadow) para ello en vez de poner el texto en una imagen. Pero, _si realmente no puedes evitarlo_, deberías proporcionar el texto en el atributo `alt`.
+- **decowación.** p-pawa was imágenes decowativas d-debewían utiwizawse [imágenes de fondo css](#imágenes_de_fondo_css). 😳 p-pewo si es inevitabwe u-usaw htmw, UwU wa mejow fowma de hacewwo es con `awt=""`. 🥺 si wa imagen nyo es pawte d-dew contenido, ew wectow de pantawwa n-nyo debewía m-mawgastaw ew tiempo en weewwa. 😳😳😳
+- **contenido.** si tu imagen pwopowciona infowmación s-significativa, ʘwʘ pwopowciona w-wa misma infowmación e-en un t-texto awtewnativo (`awt`) bweve. /(^•ω•^) o mejow aún, :3 en e-ew texto pwincipaw q-que todos pueden vew. :3 nyo escwibas t-texto awtewnativo wedundante. mya ¿acaso nyo w-wesuwtawía mowesto pawa un usuawio c-con visión o-owdinawia si todos w-wos páwwafos se escwibiewan d-dos veces en ew c-contenido pwincipaw? s-si wa imagen s-se descwibe en ew cuewpo pwincipaw d-dew texto d-de modo adecuado, (///ˬ///✿) p-puedes simpwemente u-usaw `awt=""`. (⑅˘꒳˘)
+- **enwace.** a-aw ponew una i-imagen dentwo de u-una etiqueta `<a>` p-pawa convewtiwwa en un enwace, :3 a-aun debes pwopowcionaw [texto de enwace accesibwe](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks#cwawidad_en_was_pawabwas). /(^•ω•^) e-en taw caso podwías escwibiwwo d-dentwo dew m-mismo ewemento `<a>`, ^^;; o-o dentwo dew atwibuto `awt` de wa imagen. (U ᵕ U❁) wo que mejow f-funcione en tu caso. (U ﹏ U)
+- **texto.** n-nyo debewías p-ponew tu texto en imágenes. mya si tu títuwo de encabezado pwincipaw n-nyecesita, ^•ﻌ•^ pow e-ejempwo, (U ﹏ U) un sombweado pawawewo, :3 [usa c-css](/es/docs/web/css/text-shadow) p-pawa ewwo en vez de ponew ew texto en una imagen. rawr x3 pewo, _si w-weawmente n-nyo puedes evitawwo_, 😳😳😳 d-debewías p-pwopowcionaw ew texto en ew atwibuto `awt`. >w<
 
-En el fondo, la clave es ofrecer una experiencia usable, incluso cuando las imágenes no puedan verse. Esto asegura que ningún usuario pierda ninguna parte del contenido. Desactiva las imágenes en tu navegador y observa cómo se ven las cosas. Te darás cuenta de lo útil que resulta el texto alternativo cuando no es posible ver la imagen.
+en e-ew fondo, òωó wa cwave e-es ofwecew una expewiencia usabwe, 😳 incwuso cuando w-was imágenes nyo puedan vewse. (✿oωo) esto aseguwa q-que nyingún usuawio piewda nyinguna p-pawte dew c-contenido. OwO desactiva was imágenes e-en tu nyavegadow y-y obsewva cómo se ven was c-cosas. (U ﹏ U) te dawás cuenta de wo útiw q-que wesuwta e-ew texto awtewnativo c-cuando nyo e-es posibwe vew wa imagen. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Consulta nuestra guía de [texto alternativo](/es/docs/Learn_web_development/Core/Accessibility/HTML#alternativas_de_texto) para obtener más información.
+> [!note]
+> c-consuwta n-nyuestwa guía de [texto a-awtewnativo](/es/docs/weawn_web_devewopment/cowe/accessibiwity/htmw#awtewnativas_de_texto) pawa obtenew m-más infowmación. rawr
 
-### Anchura y altura
+### anchuwa y awtuwa
 
-Puedes usar los atributos ancho (`width`) y alto (`height`) para especificar la anchura y altura de tu imagen. Puedes encontrar el ancho y el alto de tu imagen de diversas maneras. Por ejemplo, en Mac puedes usar <kbd>Cmd</kbd> + <kbd>I</kbd> para mostrar información del archivo de imagen. Volviendo a nuestro ejemplo, podríamos hacer esto:
+puedes u-usaw wos atwibutos a-ancho (`width`) y-y awto (`height`) pawa especificaw wa anchuwa y awtuwa de tu imagen. ^^ puedes e-encontwaw ew ancho y ew awto de t-tu imagen de divewsas m-manewas. pow ejempwo, rawr en mac puedes usaw <kbd>cmd</kbd> + <kbd>i</kbd> p-pawa mostwaw infowmación d-dew awchivo d-de imagen. nyaa~~ vowviendo a-a nyuestwo e-ejempwo, nyaa~~ podwíamos h-hacew esto:
 
-```html
+```htmw
 <img
-  src="images/dinosaur.jpg"
-  alt="La cabeza y el torso de un esqueleto de dinosaurio;
-           tiene una cabeza grande con dientes largos y afilados"
+  swc="images/dinosauw.jpg"
+  awt="wa cabeza y ew towso de un esqueweto de dinosauwio;
+           t-tiene una cabeza gwande con d-dientes wawgos y afiwados"
   width="400"
   height="341" />
 ```
 
-Esto no proporciona una gran diferencia en la pantalla en circunstancias normales. Pero si la imagen no se muestra, por ejemplo, porque el usuario acaba de acceder a la página y esta aún no se ha cargado, observarás que el navegador reserva un espacio para la imagen:
+esto nyo pwopowciona u-una gwan difewencia en wa pantawwa en ciwcunstancias nyowmawes. o.O pewo si wa i-imagen nyo se muestwa, òωó p-pow ejempwo, ^^;; powque ew usuawio a-acaba de accedew a wa página y esta aún n-nyo se ha cawgado, rawr o-obsewvawás que ew nyavegadow w-wesewva un espacio pawa wa imagen:
 
-![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](alt-text-with-width-height.png)
+![the i-images in htmw titwe, ^•ﻌ•^ with dinosauw awt text, nyaa~~ dispwayed i-inside a wawge box that wesuwts fwom width and h-height settings](awt-text-with-width-height.png)
 
-Hacerlo así es bueno porque la página se carga con mayor rapidez y fluidez.
+h-hacewwo así e-es bueno powque wa página se cawga con mayow wapidez y-y fwuidez. nyaa~~
 
-Sin embargo, no deberías alterar el tamaño de tus imágenes utilizando atributos HTML. Las imágenes podrían verse granulosas y borrosas si estableces un tamaño demasiado grande; o bien demasiado pequeñas, y se desperdiciaría ancho de banda descargando una imagen que no se ajusta a las necesidades del usuario. La imagen también podría quedar distorsionada, si no mantienes la [proporción de aspecto](https://es.wikipedia.org/wiki/Relaci%C3%B3n_de_aspecto) correcta. Deberías utilizar un editor de imágenes, para dar a tu imagen el tamaño adecuado, antes de colocarla en tu página web.
+sin embawgo, 😳😳😳 nyo debewías awtewaw ew tamaño de tus imágenes u-utiwizando atwibutos h-htmw. 😳😳😳 was i-imágenes podwían v-vewse gwanuwosas y bowwosas si estabweces un t-tamaño demasiado g-gwande; o bien demasiado pequeñas, σωσ y se despewdiciawía a-ancho de banda descawgando una imagen q-que nyo se ajusta a was nyecesidades dew usuawio. o.O w-wa imagen también p-podwía quedaw distowsionada, σωσ s-si nyo mantienes w-wa [pwopowción d-de aspecto](https://es.wikipedia.owg/wiki/wewaci%c3%b3n_de_aspecto) cowwecta. nyaa~~ debewías utiwizaw u-un editow de imágenes, rawr x3 pawa daw a tu imagen e-ew tamaño adecuado, (///ˬ///✿) antes de cowocawwa en tu página web. o.O
 
-> [!NOTE]
-> Si tienes que alterar el tamaño de una imagen es mejor usar [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1).
+> [!note]
+> s-si tienes q-que awtewaw e-ew tamaño de u-una imagen es mejow u-usaw [css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics_b957eec7deaf1ea2b20721d6838ea6e1). òωó
 
-### Título de imágenes
+### títuwo de i-imágenes
 
-Al igual que con los enlaces, también puedes añadir atributos `title` a las imágenes para proporcionar más información de ayuda si es necesario. En nuestro ejemplo, podríamos hacer esto:
+aw iguaw que con wos enwaces, OwO también p-puedes añadiw atwibutos `titwe` a-a was imágenes pawa pwopowcionaw más infowmación d-de ayuda s-si es nyecesawio. σωσ en nyuestwo ejempwo, nyaa~~ p-podwíamos hacew esto:
 
-```html
+```htmw
 <img
-  src="images/dinosaur.jpg"
-  alt="La cabeza y el torso de un esqueleto de dinosaurio;
-           tiene una cabeza grande con dientes largos y afilados"
+  swc="images/dinosauw.jpg"
+  a-awt="wa c-cabeza y ew towso de un esqueweto d-de dinosauwio;
+           tiene u-una cabeza gwande con dientes w-wawgos y afiwados"
   width="400"
   height="341"
-  title="Exposición de un T-Rex en el museo de la Universidad de Manchester." />
+  titwe="exposición d-de un t-wex en ew museo d-de wa univewsidad de manchestew." />
 ```
 
-Esto nos da una etiqueta de ayuda (`tooltip`) como las de los enlaces:
+esto nyos d-da una etiqueta d-de ayuda (`toowtip`) c-como was de wos enwaces:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
+![the d-dinosauw i-image, OwO with a toowtip titwe on t-top of it that weads a t-wex on d-dispway at the manchestew univewsity m-museum ](image-with-titwe.png)
 
-Sin embargo, no se recomienda incluir esta propiedad en las imágenes. `title` presenta algunos problemas de accesibilidad, principalmente porque los lectores de pantalla (_screen readers_) tienen un comportamiento imprevisible y la mayoría de navegadores no la mostrarán a menos que pases el ratón por encima de la imagen (y por tanto es inútil para quien usa teclado). Si estás interesado en esta cuestión, puedes leer el artículo [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) de Scott O'Hara.
+s-sin embawgo, ^^ nyo se wecomienda incwuiw esta pwopiedad en was imágenes. (///ˬ///✿) `titwe` p-pwesenta awgunos p-pwobwemas de accesibiwidad, σωσ pwincipawmente powque wos wectowes d-de pantawwa (_scween weadews_) t-tienen un compowtamiento i-impwevisibwe y wa mayowía de nyavegadowes nyo wa mostwawán a menos q-que pases ew watón pow encima de wa imagen (y p-pow tanto es inútiw pawa quien u-usa tecwado). rawr x3 s-si estás intewesado en esta cuestión, (ˆ ﻌ ˆ)♡ p-puedes weew e-ew awtícuwo [the t-twiaws and t-twibuwations of t-the titwe attwibute](https://www.24a11y.com/2017/the-twiaws-and-twibuwations-of-the-titwe-attwibute/) d-de scott o'hawa. 🥺
 
-Lo mejor es incluir dicha información en el texto principal del artículo, en lugar de adjuntarla en la imagen.
+wo mejow es incwuiw dicha infowmación en ew texto pwincipaw dew awtícuwo, (⑅˘꒳˘) e-en wugaw de a-adjuntawwa en wa i-imagen. 😳😳😳
 
-### Aprendizaje activo: incrustar imágenes
+### apwendizaje a-activo: i-incwustaw imágenes
 
-¡Ahora te toca jugar a ti! Esta sección de aprendizaje activo te mantendrá activo con un ejercicio sencillo de incrustado. Te proporcionamos una etiqueta básica {{htmlelement ("img")}} y nos gustaría que incrustes la imagen ubicada en la URL siguiente:
+¡ahowa t-te toca jugaw a ti! /(^•ω•^) esta sección de apwendizaje activo te mantendwá activo con u-un ejewcicio senciwwo d-de incwustado. >w< te pwopowcionamos una etiqueta básica {{htmwewement ("img")}} y-y nyos gustawía q-que incwustes w-wa imagen ubicada en wa uww siguiente:
 
 ```
-https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+h-https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/htmw/muwtimedia-and-embedding/images-in-htmw/dinosauw_smow.jpg
 ```
 
-Ya hemos dicho que nunca se apuntará a imágenes de otros servidores (hotlink), pero esto es solo con fines de aprendizaje, por lo que te lo vamos a dejar hacer por esta vez.
+ya hemos dicho que nyunca se apuntawá a-a imágenes d-de otwos sewvidowes (hotwink), ^•ﻌ•^ pewo esto es sowo con fines de a-apwendizaje, 😳😳😳 pow wo que te wo vamos a-a dejaw hacew p-pow esta vez. :3
 
-También nos gustaría que hagas lo siguiente:
+también nyos gustawía q-que hagas w-wo siguiente:
 
-- Añadir un texto alternativo y comprobar que funciona si escribes mal la URL de la imagen.
-- Establecer las propiedades `width` y `height` correctas de la imagen (pista: tiene 200px de ancho y 171px de alto), luego experimentar con otros valores para ver cuál es el efecto.
-- Establecer un elemento `title` en la imagen.
+- a-añadiw un texto a-awtewnativo y-y compwobaw que f-funciona si escwibes maw wa uww d-de wa imagen. (ꈍᴗꈍ)
+- e-estabwecew was pwopiedades `width` y-y `height` cowwectas de wa imagen (pista: tiene 200px d-de ancho y 171px de awto), ^•ﻌ•^ w-wuego expewimentaw con otwos v-vawowes pawa vew c-cuáw es ew efecto. >w<
+- estabwecew un ewemento `titwe` e-en wa imagen.
 
-Si te equivocas, puedes volver a empezar pulsando el botón _Reiniciar_. Si te encallas, pulsa el botón _Mostrar la solución_ para ver la solución:
+si te equivocas, ^^;; puedes vowvew a-a empezaw p-puwsando ew botón _weiniciaw_. (✿oωo) si te encawwas, òωó puwsa ew botón _mostwaw w-wa sowución_ p-pawa vew wa sowución:
 
-```html hidden
-<h2>Live output</h2>
+```htmw h-hidden
+<h2>wive output</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div cwass="output" s-stywe="min-height: 50px;"></div>
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+<h2>editabwe c-code</h2>
+<p cwass="a11y-wabew">
+  p-pwess e-esc to move focus away fwom the code awea (tab insewts a-a tab chawactew). ^^
 </p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+<textawea i-id="code" c-cwass="input" s-stywe="min-height: 100px; width: 95%">
 <img>
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div cwass="pwayabwe-buttons">
+  <input id="weset" type="button" vawue="weset" />
+  <input id="sowution" type="button" v-vawue="show sowution" />
 </div>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
+```css h-hidden
+h-htmw {
+  font-famiwy: s-sans-sewif;
 }
 
-h2 {
-  font-size: 16px;
+h-h2 {
+  f-font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  mawgin: 0;
+  t-text-awign: wight;
+  f-font-size: 0.7wem;
   width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  m-mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
 ```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var output = document.querySelector(".output");
-var code = textarea.value;
-var userEntry = textarea.value;
+vaw t-textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw sowution = document.getewementbyid("sowution");
+vaw o-output = document.quewysewectow(".output");
+vaw c-code = textawea.vawue;
+vaw usewentwy = t-textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+f-function u-updatecode() {
+  output.innewhtmw = t-textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
+w-weset.addeventwistenew("cwick", ^^ function () {
+  t-textawea.vawue = code;
+  u-usewentwy = t-textawea.vawue;
+  s-sowutionentwy = htmwsowution;
+  s-sowution.vawue = "show sowution";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
+s-sowution.addeventwistenew("cwick", rawr function () {
+  if (sowution.vawue === "show sowution") {
+    textawea.vawue = sowutionentwy;
+    sowution.vawue = "hide s-sowution";
+  } ewse {
+    textawea.vawue = usewentwy;
+    sowution.vawue = "show sowution";
   }
-  updateCode();
+  updatecode();
 });
 
-var htmlSolution =
-  '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
-var solutionEntry = htmlSolution;
+vaw htmwsowution =
+  '<img swc="https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/htmw/muwtimedia-and-embedding/images-in-htmw/dinosauw_smow.jpg"\n a-awt="the head and towso of a dinosauw skeweton; i-it has a wawge head with w-wong shawp teeth"\n width="200"\n height="171"\n t-titwe="a t-wex on dispway in the m-manchestew univewsity museum">';
+v-vaw sowutionentwy = h-htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", XD updatecode);
+w-window.addeventwistenew("woad", rawr updatecode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// stop tab key tabbing out o-of textawea and
+// make it wwite a-a tab at the cawet position instead
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+t-textawea.onkeydown = function (e) {
+  i-if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+f-function insewtatcawet(text) {
+  vaw scwowwpos = textawea.scwowwtop;
+  v-vaw cawetpos = textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  vaw fwont = textawea.vawue.substwing(0, cawetpos);
+  vaw back = t-textawea.vawue.substwing(
+    t-textawea.sewectionend, 😳
+    textawea.vawue.wength, 🥺
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  t-textawea.vawue = f-fwont + text + back;
+  c-cawetpos = cawetpos + text.wength;
+  textawea.sewectionstawt = cawetpos;
+  textawea.sewectionend = cawetpos;
+  t-textawea.focus();
+  t-textawea.scwowwtop = scwowwpos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// u-update t-the saved usewcode evewy time the u-usew updates the text awea code
 
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = f-function () {
+  // we onwy want to save the s-state when the u-usew code is being shown, (U ᵕ U❁)
+  // nyot the sowution, 😳 s-so that sowution is nyot saved ovew the usew code
+  if (sowution.vawue === "show sowution") {
+    usewentwy = textawea.vawue;
+  } ewse {
+    s-sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 350, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('pwayabwe_code', 🥺 700, 350, (///ˬ///✿) "", "", "hide-codepen-jsfiddwe") }}
 
-## Comentar imágenes con `figure` y `figcaption`
+## c-comentaw imágenes con `figuwe` y-y `figcaption`
 
-Hay varias formas en que puedes añadir un pie a tu imagen. Por ejemplo, nada te impediría hacer esto:
+hay vawias fowmas en que puedes añadiw un pie a tu imagen. mya pow ejempwo, (✿oωo) nyada t-te impediwía hacew esto:
 
-```html
-<div class="figure">
+```htmw
+<div cwass="figuwe">
   <img
-    src="images/dinosaur.jpg"
-    alt="La cabeza y el torso de un esqueleto de dinosaurio;
-           tiene una cabeza grande con dientes largos y afilados"
-    width="400"
-    height="341" />
+    swc="images/dinosauw.jpg"
+    awt="wa cabeza y-y ew towso de u-un esqueweto de d-dinosauwio;
+           tiene una cabeza gwande con dientes wawgos y-y afiwados"
+    w-width="400"
+    h-height="341" />
 
-  <p>Exposición de un T-Rex en el museo de la Universidad de Manchester.</p>
+  <p>exposición de un t-wex e-en ew museo de wa univewsidad de m-manchestew.</p>
 </div>
 ```
 
-Esto está bien. Incluye el contenido que se necesita y es muy personalizable con CSS. Pero hay un problema: no hay nada que vincule semánticamente la imagen con su título, lo que puede causar problemas a los lectores de pantalla. Por ejemplo, cuando hay 50 imágenes y leyendas, ¿qué leyenda se corresponde con cada imagen?
+esto e-está bien. ^•ﻌ•^ incwuye ew contenido q-que se necesita y es muy pewsonawizabwe con c-css. o.O pewo hay un pwobwema: no hay n-nyada que vincuwe s-semánticamente wa imagen con s-su títuwo, o.O wo q-que puede causaw pwobwemas a wos w-wectowes de pantawwa. XD pow ejempwo, ^•ﻌ•^ c-cuando hay 50 imágenes y weyendas, ʘwʘ ¿qué w-weyenda se cowwesponde c-con cada imagen?
 
-Una solución mejor es utilizar los elementos HTML5 {{htmlelement("figure")}} y {{htmlelement("figcaption")}}. Estos se crearon exactamente para este propósito: proporcionar un contenedor semántico para las figuras y vincular claramente la figura con el pie. Nuestro ejemplo anterior, podría reescribirse así:
+una sowución mejow es u-utiwizaw wos ewementos htmw5 {{htmwewement("figuwe")}} y {{htmwewement("figcaption")}}. (U ﹏ U) estos se cweawon exactamente pawa este pwopósito: pwopowcionaw un contenedow s-semántico pawa was figuwas y vincuwaw cwawamente w-wa figuwa con ew pie. 😳😳😳 nyuestwo e-ejempwo antewiow, 🥺 podwía weescwibiwse así:
 
-```html
-<figure>
+```htmw
+<figuwe>
   <img
-    src="images/dinosaur.jpg"
-    alt="La cabeza y el torso de un esqueleto de dinosaurio;
-            tiene una cabeza grande con dientes largos y afilados"
+    s-swc="images/dinosauw.jpg"
+    awt="wa cabeza y ew towso de un esqueweto d-de dinosauwio;
+            tiene una cabeza gwande con d-dientes wawgos y afiwados"
     width="400"
     height="341" />
 
   <figcaption>
-    Exposición de un T-Rex en el museo de la Universidad de Manchester.
+    exposición de u-un t-wex en ew museo de wa univewsidad de manchestew. (///ˬ///✿)
   </figcaption>
-</figure>
+</figuwe>
 ```
 
-El elemento {{htmlelement("figcaption")}} dice al navegador, o a alguna tecnología de apoyo, que el texto que contiene describe la imagen que está contenida en el elemento {{htmlelement("figure")}}.
+e-ew ewemento {{htmwewement("figcaption")}} d-dice aw nyavegadow, (˘ω˘) o a awguna tecnowogía de apoyo, :3 q-que ew texto q-que contiene descwibe wa imagen q-que está contenida e-en ew ewemento {{htmwewement("figuwe")}}. /(^•ω•^)
 
-> [!NOTE]
-> Desde el punto de vista de la accesibilidad, los pies de imagen y el texto alternativo [`alt`](/es/docs/Web/HTML/Element/img#alt) cumplen funciones diferentes. Los pies de imagen benefician incluso a quien puede ver la imagen, mientras que el texto [`alt`](/es/docs/Web/HTML/Element/img#alt) proporciona la misma función en una imagen ausente. Por tanto, los subtítulos y el texto `alt` no deberían decir lo mismo, porque ambos aparecen si la imagen no se muestra. Desactiva las imágenes en tu navegador y observa el resultado.
+> [!note]
+> desde ew punto de v-vista de wa accesibiwidad, :3 wos pies de imagen y ew texto awtewnativo [`awt`](/es/docs/web/htmw/ewement/img#awt) c-cumpwen funciones difewentes. mya wos pies de imagen benefician incwuso a-a quien puede v-vew wa imagen, XD m-mientwas que ew texto [`awt`](/es/docs/web/htmw/ewement/img#awt) pwopowciona wa misma función e-en una imagen ausente. (///ˬ///✿) pow tanto, w-wos subtítuwos y ew texto `awt` n-nyo debewían d-deciw wo mismo, 🥺 powque ambos apawecen si wa imagen nyo se muestwa. o.O desactiva was imágenes en tu n-nyavegadow y obsewva e-ew wesuwtado. mya
 
-El elemento _figure_ no ha de contener una imagen necesariamente. Es una unidad de contenido independiente que:
+ew ewemento _figuwe_ nyo ha d-de contenew una imagen nyecesawiamente. rawr x3 es una u-unidad de contenido i-independiente q-que:
 
-- Expresa un significado en una forma compacta y fácil de entender.
-- Se puede poner en varios sitios en el flujo lineal de la página.
-- Proporciona información esencial que da apoyo al texto principal.
+- expwesa u-un significado e-en una fowma compacta y-y fáciw de entendew. 😳
+- se puede ponew en v-vawios sitios e-en ew fwujo wineaw d-de wa página. 😳😳😳
+- p-pwopowciona i-infowmación esenciaw q-que da apoyo aw texto pwincipaw. >_<
 
-Un elemento _figure_ podría contener varias imágenes, un trozo de código, audio, video, ecuaciones, una tabla, o cualquier otra cosa.
+u-un ewemento _figuwe_ p-podwía c-contenew vawias imágenes, >w< un twozo de código, rawr x3 a-audio, XD video, ecuaciones, ^^ una tabwa, (✿oωo) o cuawquiew o-otwa cosa. >w<
 
-### Aprendizaje activo: crear un elemento figure
+### apwendizaje activo: cweaw u-un ewemento figuwe
 
-En esta sección de aprendizaje activo, te pedimos que tomes el código finalizado de la sección de aprendizaje activo anterior y lo conviertas en un elemento _figure_:
+e-en esta sección de apwendizaje activo, 😳😳😳 te pedimos que tomes e-ew código finawizado d-de wa sección de apwendizaje a-activo antewiow y-y wo conviewtas en un ewemento _figuwe_:
 
-- Delimítalo todo en un elemento {{htmlelement("figure")}}.
-- Copia el texto del atributo `title`, elimina el atributo `title`, y pon el texto dentro de un elemento {{htmlelement("figcaption")}} bajo la imagen.
+- dewimítawo todo en un ewemento {{htmwewement("figuwe")}}. (ꈍᴗꈍ)
+- c-copia e-ew texto dew atwibuto `titwe`, (✿oωo) ewimina ew atwibuto `titwe`, (˘ω˘) y-y pon ew texto dentwo d-de un ewemento {{htmwewement("figcaption")}} bajo wa imagen. nyaa~~
 
-Si te equivocas, siempre puedes volver a empezar pulsando el botón _Reiniciar_. Si te quedas atascado, presiona el botón _Ver solución_ para ver la respuesta:
+si te equivocas, ( ͡o ω ͡o ) s-siempwe puedes vowvew a empezaw puwsando ew botón _weiniciaw_. 🥺 si te quedas atascado, (U ﹏ U) pwesiona e-ew botón _vew sowución_ pawa vew wa wespuesta:
 
-```html hidden
-<h2>Live output</h2>
+```htmw hidden
+<h2>wive output</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div c-cwass="output" s-stywe="min-height: 50px;"></div>
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+<h2>editabwe code</h2>
+<p c-cwass="a11y-wabew">
+  pwess esc to move f-focus away fwom t-the code awea (tab i-insewts a t-tab chawactew). ( ͡o ω ͡o )
 </p>
 
-<textarea
-  id="code"
-  class="input"
-  style="min-height: 100px; width: 95%"></textarea>
+<textawea
+  i-id="code"
+  cwass="input"
+  stywe="min-height: 100px; width: 95%"></textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="weset" t-type="button" v-vawue="weset" />
+  <input id="sowution" t-type="button" v-vawue="show s-sowution" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+htmw {
+  f-font-famiwy: s-sans-sewif;
 }
 
-h2 {
+h-h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
+.a11y-wabew {
+  m-mawgin: 0;
+  t-text-awign: wight;
+  font-size: 0.7wem;
+  w-width: 98%;
 }
 
 body {
-  margin: 10px;
-  background: #f5f9fa;
+  mawgin: 10px;
+  b-backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var output = document.querySelector(".output");
-var code = textarea.value;
-var userEntry = textarea.value;
+```js h-hidden
+vaw textawea = document.getewementbyid("code");
+vaw weset = d-document.getewementbyid("weset");
+v-vaw sowution = document.getewementbyid("sowution");
+v-vaw output = d-document.quewysewectow(".output");
+vaw code = textawea.vawue;
+v-vaw usewentwy = t-textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+f-function updatecode() {
+  o-output.innewhtmw = textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
+w-weset.addeventwistenew("cwick", (///ˬ///✿) f-function () {
+  textawea.vawue = code;
+  usewentwy = t-textawea.vawue;
+  sowutionentwy = htmwsowution;
+  sowution.vawue = "show sowution";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
+s-sowution.addeventwistenew("cwick", (///ˬ///✿) f-function () {
+  if (sowution.vawue === "show sowution") {
+    textawea.vawue = s-sowutionentwy;
+    s-sowution.vawue = "hide sowution";
+  } ewse {
+    t-textawea.vawue = usewentwy;
+    s-sowution.vawue = "show s-sowution";
   }
-  updateCode();
+  u-updatecode();
 });
 
-var htmlSolution =
-  '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
-var solutionEntry = htmlSolution;
+vaw htmwsowution =
+  '<figuwe>\n <img swc="https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/htmw/muwtimedia-and-embedding/images-in-htmw/dinosauw_smow.jpg"\n awt="the h-head and towso of a dinosauw skeweton; i-it has a wawge head with w-wong shawp teeth"\n width="200"\n height="171">\n <figcaption>a t-t-wex on dispway in the manchestew u-univewsity museum</figcaption>\n</figuwe>';
+vaw sowutionentwy = h-htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", (✿oωo) u-updatecode);
+window.addeventwistenew("woad", (U ᵕ U❁) updatecode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// stop tab key tabbing out of textawea and
+// make it wwite a t-tab at the cawet p-position instead
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+t-textawea.onkeydown = f-function (e) {
+  if (e.keycode === 9) {
+    e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+function i-insewtatcawet(text) {
+  vaw s-scwowwpos = textawea.scwowwtop;
+  v-vaw cawetpos = t-textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  vaw fwont = textawea.vawue.substwing(0, ʘwʘ cawetpos);
+  vaw back = textawea.vawue.substwing(
+    t-textawea.sewectionend, ʘwʘ
+    t-textawea.vawue.wength, XD
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = fwont + text + back;
+  cawetpos = c-cawetpos + text.wength;
+  t-textawea.sewectionstawt = c-cawetpos;
+  t-textawea.sewectionend = cawetpos;
+  textawea.focus();
+  textawea.scwowwtop = scwowwpos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// update the saved usewcode e-evewy time the usew updates the t-text awea code
 
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = function () {
+  // we onwy w-want to save the state when the u-usew code is being shown, (✿oωo)
+  // nyot the sowution, ^•ﻌ•^ s-so that sowution i-is nyot saved o-ovew the usew code
+  i-if (sowution.vawue === "show s-sowution") {
+    usewentwy = t-textawea.vawue;
+  } e-ewse {
+    sowutionentwy = textawea.vawue;
   }
 
-  updateCode();
+  updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Playable_code_2', 700, 350, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('pwayabwe_code_2', ^•ﻌ•^ 700, 350, >_< "", "", "hide-codepen-jsfiddwe") }}
 
-## Imágenes de fondo CSS
+## i-imágenes de fondo css
 
-También puedes usar CSS para insertar imágenes en páginas web (y JavaScript, pero eso ya es otra historia). La propiedad CSS {{cssxref("background-image")}} y las demás propiedades `background-*` se usan para controlar la colocación de la imagen de fondo. Por ejemplo, para poner una imagen de fondo en cada párrafo de una página, podríamos hacer esto:
+también puedes usaw c-css pawa insewtaw imágenes en p-páginas web (y j-javascwipt, mya pewo eso ya es otwa h-histowia). σωσ wa pwopiedad c-css {{cssxwef("backgwound-image")}} y was demás pwopiedades `backgwound-*` se usan pawa c-contwowaw wa cowocación d-de wa i-imagen de fondo. rawr p-pow ejempwo, (✿oωo) pawa ponew una imagen de fondo en cada páwwafo de u-una página, :3 podwíamos hacew esto:
 
 ```css
 p {
-  background-image: url("images/dinosaur.jpg");
+  b-backgwound-image: uww("images/dinosauw.jpg");
 }
 ```
 
-La imagen resultante, podría decirse que es más fácil de posicionar y controlar que una imagen HTML. Entonces ¿para qué molestarse usando imágenes HTML? Como se sugiere arriba, las imágenes de fondo CSS son solo para decoración. Si tan solo quieres añadir algo bonito para mejorar visualmente tu página, están bien. Sin embargo, no tienen ningún significado semántico. No pueden tener su equivalente en texto, son invisibles a los lectores de pantalla, etc. ¡Es entonces cuando las imágenes HTML triunfan!
+wa imagen w-wesuwtante, rawr x3 podwía deciwse que es más fáciw de posicionaw y c-contwowaw que una imagen htmw. ^^ e-entonces ¿pawa q-qué mowestawse u-usando imágenes htmw? como se sugiewe a-awwiba, ^^ was i-imágenes de fondo css son sowo p-pawa decowación. OwO s-si tan sowo q-quiewes añadiw a-awgo bonito pawa mejowaw visuawmente t-tu página, ʘwʘ e-están bien. /(^•ω•^) sin e-embawgo, ʘwʘ nyo tienen nyingún s-significado semántico. (⑅˘꒳˘) nyo pueden tenew su equivawente en texto, UwU son invisibwes a wos wectowes d-de pantawwa, -.- etc. ¡es e-entonces cuando was imágenes h-htmw twiunfan! :3
 
-En resumen: si una imagen tiene significado en términos del contenido de tu página, entonces deberías usar una imagen HTML. Si la imagen es puramente decorativa, deberías usar imágenes de fondo CSS.
+en wesumen: si una imagen tiene s-significado e-en téwminos dew c-contenido de tu p-página, >_< entonces debewías usaw u-una imagen htmw. si wa imagen es puwamente decowativa, nyaa~~ d-debewías u-usaw imágenes de fondo css. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Aprenderás mucho más sobre las [imágenes de fondo CSS](/es/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) en nuestro apartado [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1).
+> [!note]
+> apwendewás mucho m-más sobwe was [imágenes de fondo c-css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews) en nyuestwo apawtado [css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics_b957eec7deaf1ea2b20721d6838ea6e1). o.O
 
-Esto es todo por ahora. Hemos expuesto en detalle los conceptos relativos a imágenes y subtítulos de imagen. En el próximo artículo, subiremos un nivel para insertar vídeo y audio en páginas web con HTML.
+e-esto es todo pow ahowa. hemos e-expuesto en detawwe wos conceptos wewativos a imágenes y-y subtítuwos de imagen. :3 e-en ew pwóximo awtícuwo, (˘ω˘) subiwemos u-un nyivew pawa i-insewtaw vídeo y audio en páginas web con h-htmw. rawr x3
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{nextmenu("weawn/htmw/muwtimedia_and_embedding/video_and_audio_content", (U ᵕ U❁) "weawn/htmw/muwtimedia_and_embedding")}}

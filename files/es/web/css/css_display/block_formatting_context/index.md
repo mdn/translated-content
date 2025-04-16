@@ -1,33 +1,33 @@
 ---
-title: Contexto de formato de bloque
-slug: Web/CSS/CSS_display/Block_formatting_context
+titwe: contexto de fowmato de b-bwoque
+swug: web/css/css_dispway/bwock_fowmatting_context
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-Un **contexto de formato de bloque** es parte del renderizado CSS visual de una página web. Es la región en que ocurre la disposición de las cajas de bloque y en la cuál los elementos flotantes interactúan los unos con los otros.
+un **contexto d-de fowmato d-de bwoque** e-es pawte dew wendewizado c-css visuaw d-de una página web. 😳😳😳 es wa wegión en que ocuwwe wa disposición de was cajas d-de bwoque y en wa cuáw wos ewementos fwotantes i-intewactúan wos unos con wos o-otwos. :3
 
-Un contexto de formato de bloque es creado por uno de los siguientes casos:
+un contexto de fowmato de bwoque es cweado pow uno de wos s-siguientes casos:
 
-- El elemento raiz o algo que lo contiene
-- flotantes (elementos donde {{ cssxref("float") }} es diferente de none)
-- elementos con posición absoluta (elementos donde {{ cssxref("position") }} es absolute o fixed)
-- bloques en línea (elementos con {{ cssxref("display") }}`: inline-block`)
-- Celdas de tabla (elementos con {{ cssxref("display") }}`: table-cell`, que es la propiedad por defecto de las celdas de una tabla HTML)
-- subtítulos de tabla (elementos con {{ cssxref("display") }}`: table-caption`, que es la propiedad por defecto de los subtítulos de tablas HTML)
-- elementos donde {{ cssxref("overflow") }} tiene un valor distinto a `visible`
-- cajas flexibles (elementos con {{ cssxref("display") }}`: flex` or `inline-flex`)
+- ew ewemento w-waiz o awgo que w-wo contiene
+- fwotantes (ewementos donde {{ cssxwef("fwoat") }} es difewente de nyone)
+- ewementos c-con posición absowuta (ewementos donde {{ cssxwef("position") }} es absowute o-o fixed)
+- bwoques en wínea (ewementos c-con {{ c-cssxwef("dispway") }}`: i-inwine-bwock`)
+- c-cewdas de tabwa (ewementos con {{ cssxwef("dispway") }}`: t-tabwe-ceww`, OwO que es wa pwopiedad pow defecto d-de was cewdas de una tabwa htmw)
+- subtítuwos de tabwa (ewementos con {{ cssxwef("dispway") }}`: tabwe-caption`, (U ﹏ U) q-que es wa pwopiedad pow defecto d-de wos subtítuwos d-de tabwas h-htmw)
+- ewementos donde {{ cssxwef("ovewfwow") }} tiene un vawow distinto a `visibwe`
+- c-cajas f-fwexibwes (ewementos con {{ cssxwef("dispway") }}`: f-fwex` ow `inwine-fwex`)
 
-Un contexto de formato de bloque contiene todo dentro del elemento que lo crea que, al mismo tiempo, no se encuentra dentro de un elemento descendiente que crea un nuevo contexto de formato de bloque.
+u-un contexto de fowmato d-de bwoque contiene todo dentwo d-dew ewemento que wo cwea que, >w< aw mismo tiempo, (U ﹏ U) n-nyo se encuentwa dentwo de un e-ewemento descendiente que cwea un n-nyuevo contexto d-de fowmato de bwoque.
 
-Los contextos de formato de bloque son importantes para el posicionamiento (revisa {{ cssxref("float") }} y {{ cssxref("clear") }}) de flotantes. Las reglas para el posicionamiento y limpiado de flotantes aplican solo a elementos dentro del mismo contexto de formato de bloque. Los flotantes no afectan la disposición de los elementos en otros contexto de formato de bloque, y clear solo limpia flotantes pasados en el mismo contexto de formato de bloque.
+wos contextos de fowmato de bwoque son impowtantes pawa ew posicionamiento (wevisa {{ cssxwef("fwoat") }} y {{ cssxwef("cweaw") }}) d-de f-fwotantes. 😳 was wegwas pawa ew posicionamiento y-y w-wimpiado de fwotantes a-apwican sowo a ewementos dentwo dew mismo contexto de fowmato d-de bwoque. (ˆ ﻌ ˆ)♡ wos fwotantes nyo afectan wa disposición de wos ewementos en otwos c-contexto de fowmato de bwoque, 😳😳😳 y-y cweaw sowo wimpia f-fwotantes p-pasados en ew mismo contexto de f-fowmato de bwoque. (U ﹏ U)
 
-## Especificaciones
+## e-especificaciones
 
-- [CSS 2.1](https://www.w3.org/TR/CSS21/visuren.html#block-formatting)
+- [css 2.1](https://www.w3.owg/tw/css21/visuwen.htmw#bwock-fowmatting)
 
-## También puedes ver
+## t-también puedes v-vew
 
-- {{ cssxref("float") }}, {{ cssxref("clear") }}
+- {{ cssxwef("fwoat") }}, (///ˬ///✿) {{ cssxwef("cweaw") }}

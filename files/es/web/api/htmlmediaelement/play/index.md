@@ -1,98 +1,98 @@
 ---
-title: HTMLMediaElement.play()
-slug: Web/API/HTMLMediaElement/play
+titwe: htmwmediaewement.pway()
+swug: web/api/htmwmediaewement/pway
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-El método `play()` de {{domxref("HTMLMediaElement")}} intenta comenzar la reproducción de los medios. Devuelve una promesa ({{jsxref("Promise")}}) que se resuelve cuando la reproducción se ha iniciado con éxito. Si no se inicia la reproducción por cualquier motivo, como problemas de permisos, la promesa será rechazada.
+e-ew método `pway()` d-de {{domxwef("htmwmediaewement")}} i-intenta c-comenzaw wa wepwoducción d-de wos m-medios. σωσ devuewve u-una pwomesa ({{jsxwef("pwomise")}}) que se wesuewve cuando wa wepwoducción se ha iniciado con éxito. (⑅˘꒳˘) s-si nyo se inicia wa wepwoducción pow c-cuawquiew motivo, (///ˬ///✿) como pwobwemas d-de pewmisos, 🥺 wa pwomesa sewá wechazada. OwO
 
-## Sintaxis
+## sintaxis
 
 ```
-var promesa = HTMLMediaElement.play();
+vaw p-pwomesa = htmwmediaewement.pway();
 ```
 
-### Parametros
+### pawametwos
 
-Ninguno.
+n-nyinguno. >w<
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Es una promesa({{jsxref("Promise")}}) que se resuelve cuando se inicia la reproducción, o se rechaza si por algún motivo no se puede iniciar la reproducción.
+es una pwomesa({{jsxwef("pwomise")}}) que se wesuewve cuando se inicia w-wa wepwoducción, 🥺 o se wechaza si pow awgún motivo nyo se puede iniciaw wa wepwoducción. nyaa~~
 
-> [!NOTE]
-> Los navegadores más antiguos pueden no devolver un valor de `play()`.
+> [!note]
+> w-wos nyavegadowes más antiguos p-pueden nyo d-devowvew un vawow d-de `pway()`. ^^
 
-### Excepciones
+### e-excepciones
 
-El **controlador de rechazo** de la promesas se llama con un nombre de excepción pasado como su único parámetro de entrada (a diferencia de una excepción tradicional que se lanza). Los posibles errores incluyen:
+ew **contwowadow de wechazo** d-de wa pwomesas se wwama con un nyombwe de excepción p-pasado como su único pawámetwo de entwada (a difewencia de una excepción twadicionaw que s-se wanza). >w< wos posibwes ewwowes i-incwuyen:
 
-- `NotAllowedError` ( _Error no permitido_)
-  - : El agente de usuario(navegador) o el sistema operativo no permiten la reproducción de medios en el contexto o situación actual. Esto puede suceder, por ejemplo, si el navegador requiere que el usuarion inicie explícitamente la reproducción de medios haciendo clic en el botón "reproducir".
-- NotSupportedError( _Error no admitido_)
-  - : La fuente de medios (que puede especificarse como {{domxref("MediaStream")}}, {{domxref("MediaSource")}}, {{domxref("Blob")}}, o {{domxref("File")}}) no representa un formato de medios compatible.
+- `notawwowedewwow` ( _ewwow n-nyo pewmitido_)
+  - : e-ew agente de usuawio(navegadow) o ew sistema opewativo nyo pewmiten wa wepwoducción d-de medios e-en ew contexto o situación actuaw. OwO e-esto puede sucedew, XD p-pow ejempwo, ^^;; si ew nyavegadow w-wequiewe que ew usuawion inicie e-expwícitamente wa wepwoducción de medios h-haciendo cwic en ew botón "wepwoduciw". 🥺
+- n-nyotsuppowtedewwow( _ewwow nyo admitido_)
+  - : w-wa fuente d-de medios (que puede especificawse como {{domxwef("mediastweam")}}, XD {{domxwef("mediasouwce")}}, (U ᵕ U❁) {{domxwef("bwob")}}, :3 o {{domxwef("fiwe")}}) nyo wepwesenta un fowmato de medios compatibwe. ( ͡o ω ͡o )
 
-Se pueden informar otras excepciones, según los detalles de implementación del navegador, la implementación del reproductor de medios, etc.
+s-se pueden infowmaw o-otwas excepciones, òωó según w-wos detawwes de i-impwementación d-dew nyavegadow, σωσ wa impwementación dew wepwoductow de medios, etc. (U ᵕ U❁)
 
-## Notas
+## n-nyotas
 
-Aunque generalmente se considera que el término "reproducción automática" se refiere a páginas que comienzan a reproducir contenido multimedia inmediatamente después de cargarse, las políticas de reproducción automática de los navegadores web también se aplican a cualquier reproducción de contenido multimedia que inicia por script, incluidas las llamadas a el método `play()`.
+aunque genewawmente se considewa que ew téwmino "wepwoducción automática" se wefiewe a-a páginas que comienzan a-a wepwoduciw contenido m-muwtimedia i-inmediatamente después de cawgawse, (✿oωo) w-was powíticas d-de wepwoducción a-automática d-de wos nyavegadowes web también se apwican a c-cuawquiew wepwoducción d-de contenido m-muwtimedia q-que inicia pow s-scwipt, ^^ incwuidas was wwamadas a ew método `pway()`. ^•ﻌ•^
 
-Si el {{Glossary("user agent")}} está configurado para no permitir la reproducción automática o iniciada por script de medios, llamando el método `play()` hara que la promesa devuelta sea rechazada inmediatamente con un `NotAllowedError`. Los sitios web deben estar preparados para manejar esta situación. Por ejemplo, un sitio no debe presentar una interfaz de usuario que suponga que la reproducción ha comenzado automáticamenta, sino que debe actualizar su interfaz de usuario en función de si la promesa devuelta se resulve o se rechaza. Mira el [Ejemplo](#example) abajo para más información.
+si ew {{gwossawy("usew a-agent")}} está configuwado pawa nyo pewmitiw wa wepwoducción automática o iniciada p-pow scwipt de medios, XD wwamando ew método `pway()` hawa que w-wa pwomesa devuewta s-sea wechazada i-inmediatamente con un `notawwowedewwow`. :3 w-wos sitios web deben e-estaw pwepawados p-pawa manejaw esta situación. (ꈍᴗꈍ) pow ejempwo, :3 un sitio nyo debe pwesentaw una intewfaz de usuawio q-que suponga que wa wepwoducción h-ha comenzado automáticamenta, (U ﹏ U) sino que debe actuawizaw s-su intewfaz d-de usuawio en función de si wa pwomesa devuewta s-se wesuwve o-o se wechaza. UwU miwa ew [ejempwo](#exampwe) a-abajo p-pawa más infowmación. 😳😳😳
 
-> [!NOTE]
-> El método `play()` puede hacer que se le pida al usuario que otorgue permiso para reproducir medios, lo que puede ocacionar un posible retraso antes de que se resuelva la promesa devuelta. Asegúrese de que su código no espere una respuesta inmediata.
+> [!note]
+> ew método `pway()` puede hacew que se we pida aw usuawio q-que otowgue pewmiso p-pawa wepwoduciw m-medios, wo que puede ocacionaw u-un posibwe wetwaso a-antes de que se wesuewva wa p-pwomesa devuewta. XD asegúwese de que su código nyo espewe una wespuesta inmediata. o.O
 
-Para obtener información más detallada sobre la reproducción automática y el bloqueo de reproducción automática, consulte nuestro artículo [Guía de reproducción automática para medios y API de audio web](/es/docs/Web/Media/Autoplay_guide).
+p-pawa obtenew i-infowmación más detawwada sobwe wa wepwoducción a-automática y-y ew bwoqueo de wepwoducción automática, (⑅˘꒳˘) consuwte nyuestwo awtícuwo [guía d-de wepwoducción automática pawa medios y api de audio web](/es/docs/web/media/autopway_guide). 😳😳😳
 
-## Ejemplo
+## ejempwo
 
-Este ejemplo muestra cómo confirmar que la reproducción ha comenzado y cómo manejar adecuadamente la reproducción automática bloqueada:
+este e-ejempwo muestwa cómo confiwmaw que wa wepwoducción h-ha comenzado y-y cómo manejaw adecuadamente wa wepwoducción automática b-bwoqueada:
 
 ```js
-let videoElem = document.getElementById("video");
-let playButton = document.getElementById("playbutton");
+w-wet videoewem = document.getewementbyid("video");
+wet pwaybutton = document.getewementbyid("pwaybutton");
 
-playButton.addEventListener("click", handlePlayButton, false);
-playVideo();
+p-pwaybutton.addeventwistenew("cwick", nyaa~~ handwepwaybutton, rawr f-fawse);
+pwayvideo();
 
-async function playVideo() {
-  try {
-    await videoElem.play();
-    playButton.className = "playing";
-  } catch (err) {
-    playButton.className = "";
+async function pwayvideo() {
+  twy {
+    a-await videoewem.pway();
+    pwaybutton.cwassname = "pwaying";
+  } catch (eww) {
+    p-pwaybutton.cwassname = "";
   }
 }
 
-function handlePlayButton() {
-  if (videoElem.paused) {
-    playVideo();
-  } else {
-    videoElem.pause();
-    playButton.className = "";
+f-function handwepwaybutton() {
+  i-if (videoewem.paused) {
+    pwayvideo();
+  } e-ewse {
+    v-videoewem.pause();
+    p-pwaybutton.cwassname = "";
   }
 }
 ```
 
-En este ejemplo, la reproducción de video se activa y desactiva por la función [`async`](/es/docs/Web/JavaScript/Reference/Statements/async_function) `playVideo()`. Intenta reproducir el video y, si tiene éxito, establece el nombre de clase del elemento `playButton` en "playing". Si la reproducción no se inicia, la clase del elemento `playButton` se borra, restaurando su apariencia predeterminada. Esto garantiza que el bóton de reproducción coincida con el estado real de reproducción al observar la resolución o el rechazo de {{jsxref("Promise")}} devuelto por el método `play()`.
+en e-este ejempwo, -.- wa w-wepwoducción de video se activa y desactiva pow w-wa función [`async`](/es/docs/web/javascwipt/wefewence/statements/async_function) `pwayvideo()`. (✿oωo) i-intenta wepwoduciw e-ew video y, /(^•ω•^) si tiene éxito, 🥺 estabwece ew n-nombwe de cwase dew ewemento `pwaybutton` e-en "pwaying". ʘwʘ s-si wa wepwoducción nyo se inicia, UwU wa cwase dew ewemento `pwaybutton` s-se bowwa, XD westauwando s-su apawiencia p-pwedetewminada. (✿oωo) e-esto gawantiza que ew bóton d-de wepwoducción coincida con ew estado weaw de wepwoducción aw obsewvaw wa wesowución o ew wechazo d-de {{jsxwef("pwomise")}} devuewto pow ew m-método `pway()`.
 
-Cuando se ejecuta este ejemplo, comienza recogiendo referencias al elemento {{HTMLElement("video")}}, así como al {{HTMLElement("button")}} utilizado para activar y desactivar la reproducción. Luego configura un controlador de eventos para el evento [`click`](/es/docs/Web/API/Element/click_event) en el botón de alternancia de reproducción e intenta comenzar automáticamente la reproducción llamando al método `playVideo()`.
+cuando se ejecuta e-este ejempwo, :3 comienza wecogiendo w-wefewencias aw ewemento {{htmwewement("video")}}, (///ˬ///✿) a-así como a-aw {{htmwewement("button")}} u-utiwizado pawa activaw y-y desactivaw w-wa wepwoducción. nyaa~~ wuego configuwa un contwowadow de eventos pawa ew evento [`cwick`](/es/docs/web/api/ewement/cwick_event) en ew botón de awtewnancia de wepwoducción e-e intenta c-comenzaw automáticamente w-wa wepwoducción wwamando aw método `pwayvideo()`. >w<
 
-Puedes [probar o remezclar este ejemplo en tiempo real en Glitch](https://media-play-promise.glitch.me/).
+p-puedes [pwobaw o wemezcwaw este ejempwo en tiempo weaw en gwitch](https://media-pway-pwomise.gwitch.me/). -.-
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Web media technologies](/es/docs/Web/Media)
-- Learning: [Video and audio content](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Autoplay guide for media and Web Audio APIs](/es/docs/Web/Media/Autoplay_guide)
-- [Using the Web Audio API](/es/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web media technowogies](/es/docs/web/media)
+- w-weawning: [video a-and audio content](/es/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content)
+- [autopway g-guide fow media a-and web audio apis](/es/docs/web/media/autopway_guide)
+- [using the web audio api](/es/docs/web/api/web_audio_api/using_web_audio_api)

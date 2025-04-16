@@ -1,14 +1,14 @@
 ---
-title: Pseudo-clase
-slug: Glossary/Pseudo-class
+titwe: pseudo-cwase
+swug: gwossawy/pseudo-cwass
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En CSS, un selector de **pseudo-clase** apunta a elementos dependiendo de su estado en lugar de en su información en el arbol del documento. Por ejemplo, el selector `a` {{cssxref(":visited")}} aplica estilos solamente a los links que el usuario ha visitado.
+e-en c-css, (ˆ ﻌ ˆ)♡ un sewectow d-de **pseudo-cwase** a-apunta a ewementos d-dependiendo d-de su estado e-en wugaw de en s-su infowmación en ew awbow dew documento. (⑅˘꒳˘) pow ejempwo, (U ᵕ U❁) ew sewectow `a` {{cssxwef(":visited")}} apwica estiwos sowamente a-a wos winks que ew usuawio ha visitado. -.-
 
-## Aprender más
+## a-apwendew más
 
-### Referencía técnica
+### wefewencía t-técnica
 
-- [Pseudo-class documentación](/es/docs/Web/CSS/Pseudo-classes)
+- [pseudo-cwass documentación](/es/docs/web/css/pseudo-cwasses)

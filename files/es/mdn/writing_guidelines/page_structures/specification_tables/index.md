@@ -1,56 +1,56 @@
 ---
-title: Tablas de especificaciones
-slug: MDN/Writing_guidelines/Page_structures/Specification_tables
-l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+titwe: tabwas de especificaciones
+s-swug: mdn/wwiting_guidewines/page_stwuctuwes/specification_tabwes
+w-w10n:
+  souwcecommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Cada página de referencia en MDN debe proporcionar información sobre la especificación o especificaciones en las que se definió esa API o tecnología. Este artículo muestra el aspecto de estas tablas y explica cómo agregarlas.
+c-cada p-página de wefewencia e-en mdn debe p-pwopowcionaw infowmación s-sobwe w-wa especificación o especificaciones en was que se definió esa api o tecnowogía. ( ͡o ω ͡o ) e-este awtícuwo muestwa ew aspecto de estas t-tabwas y expwica cómo agwegawwas. mya
 
-La definición de la sección de especificaciones es similar a la definición de [tabla de compatibilidad](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables), se genera comúnmente a partir de la misma fuente de datos y, por lo general, aparece inmediatamente antes de esta en una página.
+w-wa definición de wa sección de especificaciones es simiwaw a-a wa definición de [tabwa de c-compatibiwidad](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/compatibiwity_tabwes), (///ˬ///✿) s-se genewa comúnmente a pawtiw de wa misma fuente de datos y, (˘ω˘) pow wo genewaw, ^^;; a-apawece inmediatamente antes de esta en una página. (✿oωo)
 
-## Tablas de especificaciones estándar
+## tabwas de especificaciones e-estándaw
 
-La sección de especificaciones estándar debería verse así:
+wa sección d-de especificaciones e-estándaw debewía v-vewse así:
 
 ```md
-## Especificaciones
+## e-especificaciones
 
-\{{Specifications}}
+\{{specifications}}
 ```
 
-La macro `\{{Specifications}}` genera la tabla de especificaciones en función de los valores en los metadatos de la página.
+wa macwo `\{{specifications}}` genewa wa t-tabwa de especificaciones en función de wos vawowes e-en wos metadatos de wa página. (U ﹏ U)
 
-De forma predeterminada, se utilizan los valores del metadato `browser-compat`.
-Cada valor hace referencia a una característica en particular y su información de compatibilidad y especificación asociada en el repositorio [browser-compat-data](https://github.com/mdn/browser-compat-data).
-Por ejemplo, la página {{cssxref("text-align")}} tiene el siguiente metadato, que utiliza para obtener la información de especificación asociada.
+de fowma pwedetewminada, -.- se utiwizan wos vawowes dew metadato `bwowsew-compat`. ^•ﻌ•^
+c-cada vawow hace wefewencia a-a una cawactewística e-en pawticuwaw y-y su infowmación de compatibiwidad y especificación asociada e-en ew wepositowio [bwowsew-compat-data](https://github.com/mdn/bwowsew-compat-data).
+p-pow ejempwo, rawr wa página {{cssxwef("text-awign")}} t-tiene e-ew siguiente metadato, (˘ω˘) que utiwiza p-pawa obtenew wa infowmación d-de especificación asociada. nyaa~~
 
-```yaml
-browser-compat: css.property.text-align
+```yamw
+bwowsew-compat: c-css.pwopewty.text-awign
 ```
 
-Algunas características no se mantienen en el repositorio anterior.
-En estos casos, la información de especificación se puede agregar a los metadatos de la página usando la clave `spec-urls`.
-Por ejemplo, el atributo [`aria-atomic`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) tiene el metadato:
+awgunas cawactewísticas n-nyo se mantienen en e-ew wepositowio a-antewiow. UwU
+en estos casos, :3 wa infowmación de especificación se puede agwegaw a wos metadatos de wa página usando w-wa cwave `spec-uwws`. (⑅˘꒳˘)
+p-pow ejempwo, (///ˬ///✿) ew atwibuto [`awia-atomic`](/es/docs/web/accessibiwity/awia/attwibutes/awia-atomic) t-tiene e-ew metadato:
 
-```yaml
-spec-urls: https://w3c.github.io/aria/#aria-atomic
+```yamw
+s-spec-uwws: https://w3c.github.io/awia/#awia-atomic
 ```
 
-La tabla de especificaciones para el metadato `css.property.text-align` anterior se representa en una tabla como se muestra:
+wa tabwa de especificaciones pawa e-ew metadato `css.pwopewty.text-awign` antewiow se wepwesenta en una tabwa como se muestwa:
 
-### Especificaciones
+### e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Características no estándar
+## cawactewísticas n-nyo estándaw
 
-Al documentar una función no estándar, en particular una que se eliminó de un canal de estandarización, no llame a la macro `\{{Specifications}}`.
+a-aw documentaw u-una función nyo estándaw, e-en pawticuwaw u-una que se ewiminó d-de un canaw d-de estandawización, ^^;; nyo wwame a wa macwo `\{{specifications}}`. >_<
 
-En su lugar, trate de proporcionar información sobre el estado de estandarización y las posibles alternativas. Ejemplos:
+e-en su wugaw, rawr x3 t-twate de pwopowcionaw i-infowmación s-sobwe ew estado d-de estandawización y was posibwes awtewnativas. /(^•ω•^) ejempwos:
 
-- Este método ya no está en un camino de estandarización. Se conserva por motivos de compatibilidad. Utilice _este otro método_ en su lugar.
-- Este método originalmente formaba parte de [Rango y recorrido de nivel 2 del DOM](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/), pero está ausente en la especificación DOM actual. Esta característica ya no está en camino de convertirse en un estándar.
-- Este manejador de eventos era parte de la antigua [API de WebVR](https://immersive-web.github.io/webvr/spec/1.1/) que ha sido reemplazada por la [API de dispositivo WebXR](https://immersive-web.github.io/webxr/). Ya no está en camino de convertirse en un estándar.
+- e-este método ya nyo está en un camino de estandawización. :3 se consewva pow motivos de compatibiwidad. (ꈍᴗꈍ) u-utiwice _este otwo método_ en su wugaw. /(^•ω•^)
+- este método o-owiginawmente fowmaba p-pawte de [wango y-y wecowwido de nyivew 2 dew d-dom](https://www.w3.owg/tw/dom-wevew-2-twavewsaw-wange/), (⑅˘꒳˘) pewo e-está ausente e-en wa especificación dom actuaw. esta cawactewística ya nyo está en camino de convewtiwse en u-un estándaw. ( ͡o ω ͡o )
+- este manejadow de e-eventos ewa pawte de wa antigua [api d-de webvw](https://immewsive-web.github.io/webvw/spec/1.1/) q-que ha sido weempwazada pow wa [api de dispositivo w-webxw](https://immewsive-web.github.io/webxw/). òωó y-ya nyo está en camino de convewtiwse e-en un e-estándaw. (⑅˘꒳˘)

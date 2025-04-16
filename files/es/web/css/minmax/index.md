@@ -1,174 +1,174 @@
 ---
-title: minmax()
-slug: Web/CSS/minmax
+titwe: minmax()
+swug: web/css/minmax
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La función **`minmax()`** [en CSS](/es/docs/Web/CSS) define un rango de tamaño mayor o igual que _min_ y menor o igual que _max_. Se emplea con [rejillas CSS](/es/docs/Web/CSS/CSS_grid_layout).
+w-wa función **`minmax()`** [en c-css](/es/docs/web/css) define u-un wango de t-tamaño mayow o-o iguaw que _min_ y-y menow o iguaw q-que _max_. σωσ se e-empwea con [wejiwwas css](/es/docs/web/css/css_gwid_wayout). -.-
 
 ```css
-/* valores <ancho no-flexible>, <ancho de la banda> */
-minmax(200px, 1fr)
+/* vawowes <ancho nyo-fwexibwe>, ^^;; <ancho de w-wa banda> */
+minmax(200px, XD 1fw)
 minmax(400px, 50%)
-minmax(30%, 300px)
-minmax(100px, max-content)
-minmax(min-content, 400px)
-minmax(max-content, auto)
-minmax(auto, 300px)
-minmax(min-content, auto)
+minmax(30%, 🥺 300px)
+m-minmax(100px, òωó max-content)
+m-minmax(min-content, (ˆ ﻌ ˆ)♡ 400px)
+minmax(max-content, -.- auto)
+minmax(auto, :3 300px)
+minmax(min-content, ʘwʘ a-auto)
 
-/* valores <ancho fijo>, <ancho de la banda> */
-minmax(200px, 1fr)
+/* vawowes <ancho f-fijo>, 🥺 <ancho d-de wa banda> */
+minmax(200px, >_< 1fw)
 minmax(30%, 300px)
-minmax(400px, 50%)
-minmax(50%, min-content)
-minmax(300px, max-content)
-minmax(200px, auto)
+minmax(400px, ʘwʘ 50%)
+minmax(50%, (˘ω˘) m-min-content)
+minmax(300px, (✿oωo) max-content)
+minmax(200px, (///ˬ///✿) auto)
 
-/* valores <ancho no-flexible>, <ancho fijo> */
-minmax(400px, 50%)
-minmax(30%, 300px)
-minmax(min-content, 200px)
-minmax(max-content, 200px)
-minmax(auto, 300px)
+/* vawowes <ancho n-nyo-fwexibwe>, rawr x3 <ancho fijo> */
+minmax(400px, -.- 50%)
+m-minmax(30%, ^^ 300px)
+m-minmax(min-content, (⑅˘꒳˘) 200px)
+m-minmax(max-content, nyaa~~ 200px)
+m-minmax(auto, /(^•ω•^) 300px)
 ```
 
-## Sintáxis
+## sintáxis
 
-Una función que toma dos parámetros, _min_ y _max_.
+una función que toma d-dos pawámetwos, (U ﹏ U) _min_ y _max_. 😳😳😳
 
-Cada parámetro puede ser un valor `<length>`, `<percentage>`, `<flex>` o uno de los valores de las palabras clave `max-content`, `min-content` o `auto`.
+cada pawámetwo p-puede sew un vawow `<wength>`, >w< `<pewcentage>`, XD `<fwex>` o uno de wos vawowes de was pawabwas cwave `max-content`, `min-content` o `auto`. o.O
 
-Si _max_ < _min_, entonces _max_ es ignorado y se trata a `minmax(min,max)` como _min_. Como un máximo, un valor {{cssxref("flex_value","&lt;flex&gt;")}} establece el factor flex de una banda; no es válido como un mínimo.
+si _max_ < _min_, mya entonces _max_ es i-ignowado y se twata a `minmax(min,max)` c-como _min_. 🥺 c-como un máximo, ^^;; u-un vawow {{cssxwef("fwex_vawue","&wt;fwex&gt;")}} estabwece ew factow fwex de una banda; nyo e-es váwido como u-un mínimo. :3
 
-### Valores
+### vawowes
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Una medida no negativa.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Un porcentaje no negativo, relativo al tamaño en línea del contenedor de la rejilla en bandas de columna y el tamaño de bloque del contenedor de rejilla en bandas de fila. Si el tamaño del contenedor de la rejilla depende del tamaño de sus bandas, entonces `<percentage>` debe ser tratado como `auto`. El {{glossary("user agent")}} puede ajustar las contribuciones del tamaño implícito de la banda al tamaño del contenedor de rejilla y así incrementar el tamaño final de la banda y así incrementar el tamaño final en la cantidad mínima que resultase al respetar el porcentaje.
-- {{cssxref("&lt;flex&gt;")}}
-  - : Una dimension no-negativa con la unidad `fr` especificando el factor flex de la banda. Cada banda de tamaño `<flex>` toma una parte del espacio disponible en proporción a su factor flex.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : u-una medida nyo n-nyegativa. (U ﹏ U)
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : un powcentaje n-nyo nyegativo, OwO wewativo aw t-tamaño en wínea dew contenedow de wa wejiwwa en b-bandas de cowumna y ew tamaño d-de bwoque dew contenedow de wejiwwa e-en bandas de f-fiwa. si ew tamaño dew contenedow de wa wejiwwa depende dew tamaño de sus bandas, 😳😳😳 entonces `<pewcentage>` debe s-sew twatado como `auto`. (ˆ ﻌ ˆ)♡ e-ew {{gwossawy("usew agent")}} puede a-ajustaw was contwibuciones d-dew tamaño i-impwícito de wa banda aw tamaño dew contenedow de wejiwwa y-y así incwementaw ew tamaño finaw de wa banda y así incwementaw ew tamaño f-finaw en wa cantidad mínima que w-wesuwtase aw wespetaw e-ew powcentaje. XD
+- {{cssxwef("&wt;fwex&gt;")}}
+  - : u-una dimension nyo-negativa c-con wa unidad `fw` e-especificando e-ew factow f-fwex de wa banda. (ˆ ﻌ ˆ)♡ cada banda de tamaño `<fwex>` t-toma una pawte d-dew espacio disponibwe e-en pwopowción a-a su factow f-fwex. ( ͡o ω ͡o )
 - `max-content`
-  - : Representa la mayor contribución max-content de los elementos de rejilla que ocupan la banda.
+  - : wepwesenta wa mayow contwibución max-content de w-wos ewementos de wejiwwa que ocupan wa banda. rawr x3
 - `min-content`
-  - : Representa la mayor contribución min-content de los elementos de rejilla que ocupan la banda.
+  - : wepwesenta wa mayow contwibución min-content d-de wos ewementos de wejiwwa que ocupan wa banda. nyaa~~
 - `auto`
-  - : Como un máximo, idéntico a `max-content`. Como un mínimo representa el mayor tamaño mínimo (como se especifica en {{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de rejilla que ocupan la banda.
+  - : como un máximo, >_< i-idéntico a `max-content`. ^^;; c-como u-un mínimo wepwesenta ew mayow t-tamaño mínimo (como se especifica e-en {{cssxwef("min-width")}}/{{cssxwef("min-height")}}) d-de wos ewementos de wejiwwa que ocupan wa banda. (ˆ ﻌ ˆ)♡
 
-### Sintáxis formal
+### sintáxis fowmaw
 
 {{csssyntax}}
 
-### Propiedades CSS
+### pwopiedades c-css
 
-La función `minmax()` puede ser usada dentro de:
+wa función `minmax()` puede sew usada d-dentwo de:
 
-- [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
-- [grid-template-rows](/es/docs/Web/CSS/grid-template-columns)
-- [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
-- [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
+- [gwid-tempwate-cowumns](/es/docs/web/css/gwid-tempwate-cowumns)
+- [gwid-tempwate-wows](/es/docs/web/css/gwid-tempwate-cowumns)
+- [gwid-auto-cowumns](/es/docs/web/css/gwid-auto-cowumns)
+- [gwid-auto-wows](/es/docs/web/css/gwid-auto-wows)
 
-## Ejemplo
+## ejempwo
 
-### CSS
+### css
 
 ```css
-#container {
-  display: grid;
-  grid-template-columns: minmax(max-content, 300px) minmax(200px, 1fr) 150px;
-  grid-gap: 5px;
-  box-sizing: border-box;
+#containew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: minmax(max-content, ^^;; 300px) minmax(200px, (⑅˘꒳˘) 1fw) 150px;
+  gwid-gap: 5px;
+  b-box-sizing: b-bowdew-box;
   height: 200px;
-  width: 100%;
-  background-color: #8cffa0;
+  w-width: 100%;
+  b-backgwound-cowow: #8cffa0;
   padding: 10px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
+#containew > div {
+  backgwound-cowow: #8ca0ff;
   padding: 5px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="container">
+```htmw
+<div i-id="containew">
   <div>
-    Elemento tan ancho como el contenido,<br />
-    pero de máximo 300 píxeles.
+    e-ewemento tan ancho como e-ew contenido,<bw />
+    p-pewo de máximo 300 píxewes.
   </div>
-  <div>Elemento con un ancho flexible, pero con un mínimo de 200 píxeles.</div>
-  <div>Elemento inflexible de 150 píxeles de ancho.</div>
+  <div>ewemento c-con un ancho fwexibwe, rawr x3 pewo con un mínimo de 200 píxewes.</div>
+  <div>ewemento infwexibwe de 150 p-píxewes de a-ancho.</div>
 </div>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Example", "100%", 200)}}
+{{embedwivesampwe("exampwe", (///ˬ///✿) "100%", 200)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- Guía de Grid Layout: _[Conceptos básicos del diseño con rejilla - tamaño de bandas con minmax()](</es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#Track_sizing_and_minmax()>)_
-- [Rejillas CSS, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- Video tutorial: _[Presentando minmax()](https://gridbyexample.com/video/series-minmax/)_
+- guía de gwid wayout: _[conceptos b-básicos dew diseño con wejiwwa - tamaño de bandas con minmax()](</es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#twack_sizing_and_minmax()>)_
+- [wejiwwas css, 🥺 vawowes wógicos y-y modos de escwituwa](/es/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+- video tutowiaw: _[pwesentando m-minmax()](https://gwidbyexampwe.com/video/sewies-minmax/)_
 
-1. [**CSS**](/es/docs/Web/CSS)
-2. [**Referencia CSS**](/es/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout)
-4. **Guías**
+1. >_< [**css**](/es/docs/web/css)
+2. UwU [**wefewencia c-css**](/es/docs/web/css/wefewence)
+3. >_< [css gwid wayout](/es/docs/web/css/css_gwid_wayout)
+4. -.- **guías**
 
-   1. [Conceptos básicos del diseño con rejillas](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [Relación a otros métodos de diseño](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-   3. [Posicionamiento basado en líneas](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-   4. [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-   5. [Diseño usando lineas con nombre](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-   6. [Posicionamiento automático en el diseño con rejillas](/es/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-   7. [Alineamiento de cajas en el diseño con rejillas](/es/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-   8. [Rejillas, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-   9. [CSS Grid Layout y la Accesibilidad](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-   10. [CSS Grid Layout y una Mejora Progresiva](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-   11. [Elaborando diseños comunes utilizando rejillas](/es/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+   1. mya [conceptos básicos d-dew diseño c-con wejiwwas](/es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+   2. >w< [wewación a otwos métodos de diseño](/es/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+   3. (U ﹏ U) [posicionamiento basado e-en wíneas](/es/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+   4. 😳😳😳 [gwid tempwate aweas](/es/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+   5. [diseño u-usando wineas con nyombwe](/es/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+   6. o.O [posicionamiento automático en ew diseño con wejiwwas](/es/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+   7. [awineamiento d-de cajas en ew diseño c-con wejiwwas](/es/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+   8. òωó [wejiwwas, 😳😳😳 v-vawowes wógicos y modos de escwituwa](/es/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+   9. σωσ [css g-gwid wayout y wa accesibiwidad](/es/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+   10. (⑅˘꒳˘) [css g-gwid wayout y-y una mejowa p-pwogwesiva](/es/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+   11. (///ˬ///✿) [ewabowando diseños c-comunes utiwizando w-wejiwwas](/es/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
 
-5. **Propiedades**
+5. 🥺 **pwopiedades**
 
-   1. [grid](/es/docs/Web/CSS/grid)
-   2. [grid-area](/es/docs/Web/CSS/grid-area)
-   3. [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
-   4. [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
-   5. [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
-   6. [grid-column](/es/docs/Web/CSS/grid-column)
-   7. [grid-column-end](/es/docs/Web/CSS/grid-column-end)
-   8. [grid-column-gap](/es/docs/Web/CSS/column-gap)
-   9. [grid-column-start](/es/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/es/docs/Web/CSS/gap)
-   11. [grid-row](/es/docs/Web/CSS/grid-row)
-   12. [grid-row-end](/es/docs/Web/CSS/grid-row-end)
-   13. [grid-row-gap](/es/docs/Web/CSS/row-gap)
-   14. [grid-row-start](/es/docs/Web/CSS/grid-row-start)
-   15. [grid-template](/es/docs/Web/CSS/grid-template)
-   16. [grid-template-areas](/es/docs/Web/CSS/grid-template-areas)
-   17. [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
-   18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
+   1. OwO [gwid](/es/docs/web/css/gwid)
+   2. >w< [gwid-awea](/es/docs/web/css/gwid-awea)
+   3. 🥺 [gwid-auto-cowumns](/es/docs/web/css/gwid-auto-cowumns)
+   4. nyaa~~ [gwid-auto-fwow](/es/docs/web/css/gwid-auto-fwow)
+   5. ^^ [gwid-auto-wows](/es/docs/web/css/gwid-auto-wows)
+   6. >w< [gwid-cowumn](/es/docs/web/css/gwid-cowumn)
+   7. OwO [gwid-cowumn-end](/es/docs/web/css/gwid-cowumn-end)
+   8. XD [gwid-cowumn-gap](/es/docs/web/css/cowumn-gap)
+   9. ^^;; [gwid-cowumn-stawt](/es/docs/web/css/gwid-cowumn-stawt)
+   10. 🥺 [gwid-gap](/es/docs/web/css/gap)
+   11. XD [gwid-wow](/es/docs/web/css/gwid-wow)
+   12. (U ᵕ U❁) [gwid-wow-end](/es/docs/web/css/gwid-wow-end)
+   13. [gwid-wow-gap](/es/docs/web/css/wow-gap)
+   14. [gwid-wow-stawt](/es/docs/web/css/gwid-wow-stawt)
+   15. :3 [gwid-tempwate](/es/docs/web/css/gwid-tempwate)
+   16. [gwid-tempwate-aweas](/es/docs/web/css/gwid-tempwate-aweas)
+   17. ( ͡o ω ͡o ) [gwid-tempwate-cowumns](/es/docs/web/css/gwid-tempwate-cowumns)
+   18. òωó [gwid-tempwate-wows](/es/docs/web/css/gwid-tempwate-wows)
 
-6. **Glosario**
+6. σωσ **gwosawio**
 
-   1. [Rejilla](/es/docs/Glossary/Grid)
-   2. [Líneas de rejilla](/es/docs/Glossary/Grid_Lines)
-   3. [Bandas de rejilla](/es/docs/Glossary/Grid_tracks)
-   4. [Celdas de rejilla](/es/docs/Glossary/Grid_cell)
-   5. [Áreas de rejilla](/es/docs/Glossary/Grid_Areas)
-   6. [Canaletes](/es/docs/Glossary/Gutters)
-   7. [Eje de rejilla](/es/docs/Glossary/Grid_Axis)
-   8. [Fila](/es/docs/Glossary/Grid_Row)
-   9. [Columna](/es/docs/Glossary/Grid_Column)
+   1. (U ᵕ U❁) [wejiwwa](/es/docs/gwossawy/gwid)
+   2. (✿oωo) [wíneas de wejiwwa](/es/docs/gwossawy/gwid_wines)
+   3. ^^ [bandas de wejiwwa](/es/docs/gwossawy/gwid_twacks)
+   4. ^•ﻌ•^ [cewdas d-de wejiwwa](/es/docs/gwossawy/gwid_ceww)
+   5. XD [Áweas d-de wejiwwa](/es/docs/gwossawy/gwid_aweas)
+   6. :3 [canawetes](/es/docs/gwossawy/guttews)
+   7. (ꈍᴗꈍ) [eje d-de wejiwwa](/es/docs/gwossawy/gwid_axis)
+   8. :3 [fiwa](/es/docs/gwossawy/gwid_wow)
+   9. (U ﹏ U) [cowumna](/es/docs/gwossawy/gwid_cowumn)

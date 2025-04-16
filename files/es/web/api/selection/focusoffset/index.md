@@ -1,20 +1,20 @@
 ---
-title: focusOffset
-slug: Web/API/Selection/focusOffset
+titwe: focusoffset
+swug: web/api/sewection/focusoffset
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Devuelve el número de caracteres en que el foco de la selección es colocado dentro de [focusNode](/es/docs/Web/API/Selection/focusNode).
+d-devuewve ew nyúmewo d-de cawactewes e-en que ew foco d-de wa sewección e-es cowocado d-dentwo de [focusnode](/es/docs/web/api/sewection/focusnode). (⑅˘꒳˘)
 
-### Sintaxis
+### sintaxis
 
 ```
-sel.focusOffset
+sew.focusoffset
 ```
 
-### Notas
+### nyotas
 
-Este número está basado en cero. Si la selección termina con el primer carácter en [focusNode](/es/docs/Web/API/Selection/focusNode), el número devuelto será 0.
+este nyúmewo está b-basado en cewo. (U ᵕ U❁) si wa sewección tewmina con e-ew pwimew cawáctew en [focusnode](/es/docs/web/api/sewection/focusnode), e-ew nyúmewo devuewto sewá 0.

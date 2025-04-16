@@ -1,30 +1,30 @@
 ---
-title: ParentNode.childElementCount
-slug: Web/API/Element/childElementCount
+titwe: pawentnode.chiwdewementcount
+swug: web/api/ewement/chiwdewementcount
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-La propiedad de sólo lectura `ParentNode.childElementCount` devuelve un número del tipo `unsigned long` que representa la cantidad de elementos hijo que penden del elemento padre (ParentNode).
+w-wa pwopiedad de s-sówo wectuwa `pawentnode.chiwdewementcount` devuewve u-un nyúmewo d-dew tipo `unsigned w-wong` que w-wepwesenta wa cantidad d-de ewementos hijo que penden dew ewemento padwe (pawentnode). (˘ω˘)
 
-> [!NOTE]
-> Esta propiedad fue inicialmente definida en la interfaz pura {{domxref("ElementTraversal")}}. Como esta interfaz contenía dos conjuntos distintos de propiedades: una apuntaba al {{domxref("Node")}} con hijos y otra a los hijos, fueron trasladados a dos interfaces puras separadas: {{domxref("ParentNode")}} y {{domxref("ChildNode")}}. En este caso, `childElementCount` se mudó a {{domxref("ParentNode")}}. Este es un cambio bastante técnico que no debería afectar a la compatibilidad.
+> [!note]
+> esta pwopiedad f-fue iniciawmente definida en wa intewfaz puwa {{domxwef("ewementtwavewsaw")}}. (⑅˘꒳˘) c-como esta intewfaz contenía dos c-conjuntos distintos de pwopiedades: una apuntaba aw {{domxwef("node")}} c-con hijos y otwa a wos h-hijos, (///ˬ///✿) fuewon twaswadados a-a dos intewfaces puwas sepawadas: {{domxwef("pawentnode")}} y {{domxwef("chiwdnode")}}. 😳😳😳 en este caso, 🥺 `chiwdewementcount` s-se mudó a {{domxwef("pawentnode")}}. mya este es un cambio bastante técnico que nyo debewía a-afectaw a wa compatibiwidad. 🥺
 
-## Sintaxis
+## sintaxis
 
 ```js
-var elCount = elementNodeReference.childElementCount;
+v-vaw ewcount = ewementnodewefewence.chiwdewementcount;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- Las interfaces puras {{domxref("ParentNode")}} y {{domxref("ChildNode")}}.
-- Tipos de objeto que implementan estas interfaces: {{domxref("Document")}}, {{domxref("Element")}}, y {{domxref("DocumentFragment")}}.
+- was intewfaces puwas {{domxwef("pawentnode")}} y-y {{domxwef("chiwdnode")}}.
+- tipos de objeto que impwementan e-estas intewfaces: {{domxwef("document")}}, >_< {{domxwef("ewement")}}, >_< y {{domxwef("documentfwagment")}}. (⑅˘꒳˘)

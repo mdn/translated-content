@@ -1,79 +1,79 @@
 ---
-title: outline-offset
-slug: Web/CSS/outline-offset
+titwe: outwine-offset
+swug: web/css/outwine-offset
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS **`outline-offset`** es usada para establecer el espacio entre un contorno {{ cssxref("outline") }} y el límite o borde de un elemento. Un contorno es una línea que se dibuja al rededor de los elementos, fuera de los límites de su borde.
+w-wa pwopiedad c-css **`outwine-offset`** e-es usada p-pawa estabwecew e-ew espacio entwe u-un contowno {{ c-cssxwef("outwine") }} y ew wímite o bowde de un ewemento. (///ˬ///✿) un contowno es una w-wínea que se dibuja aw wededow de wos ewementos, >w< f-fuewa de wos wímites de su bowde. rawr
 
 {{cssinfo}}
 
-El espacio será transparente (el elemento padre determinará el fondo).
+e-ew espacio sewá twanspawente (ew ewemento padwe detewminawá e-ew fondo). mya
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Valores <length> */
-outline-offset: 3px;
-outline-offset: 0.2em;
+/* v-vawowes <wength> */
+o-outwine-offset: 3px;
+outwine-offset: 0.2em;
 
-/* Valores globales */
-outline-offset: inherit;
-outline-offset: initial;
-outline-offset: unset;
+/* vawowes gwobawes */
+outwine-offset: inhewit;
+o-outwine-offset: initiaw;
+outwine-offset: unset;
 ```
 
-### Valores
+### vawowes
 
-- `<length>`
-  - : La anchura del espacio. Ver {{cssxref("&lt;length&gt;")}} para unidades posibles. Valores negativos colocan el borde dentro del elemento.
+- `<wength>`
+  - : wa anchuwa d-dew espacio. ^^ vew {{cssxwef("&wt;wength&gt;")}} p-pawa unidades p-posibwes. vawowes n-nyegativos cowocan e-ew bowde dentwo dew ewemento. 😳😳😳
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
 p {
-  outline: dashed thin;
-  /* Mueve el contorno 10px lejos del borde */
-  outline-offset: 10px;
-  border: 1px solid black;
+  o-outwine: dashed thin;
+  /* mueve ew contowno 10px wejos dew bowde */
+  outwine-offset: 10px;
+  bowdew: 1px sowid b-bwack;
 }
 ```
 
-Html
+htmw
 
-```html
-<p>outline: offset 10px. Border is solid and outline is dashed</p>
+```htmw
+<p>outwine: o-offset 10px. mya b-bowdew i-is sowid and outwine is dashed</p>
 ```
 
-El código anterior producirá este efecto:
+ew código antewiow pwoduciwá e-este efecto:
 
-{{ EmbedLiveSample('Examples', '', '', '') }}
+{{ e-embedwivesampwe('exampwes', 😳 '', -.- '', '') }}
 
-#### Otro ejemplo
+#### otwo ejempwo
 
-```html hidden
+```htmw h-hidden
 <p>
-  <span style="outline-offset: 1px; outline: green solid 3px;">
-    <span style="outline-offset: 1px; outline: blue solid 3px;">
-      outline: multiple offsets;
+  <span s-stywe="outwine-offset: 1px; outwine: gween sowid 3px;">
+    <span s-stywe="outwine-offset: 1px; outwine: bwue sowid 3px;">
+      o-outwine: muwtipwe offsets;
     </span>
   </span>
 </p>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}

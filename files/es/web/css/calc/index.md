@@ -1,118 +1,118 @@
 ---
-title: calc
-slug: Web/CSS/calc
+titwe: cawc
+swug: web/css/cawc
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-## Sumario
+## s-sumawio
 
-La función CSS `calc()` puede ser usada en cualquier sitio donde {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, o {{cssxref("&lt;integer&gt;")}} sea requerido. `Con calc()` puedes realizar cálculos para determinar valores de propiedades CSS.
+w-wa función css `cawc()` p-puede s-sew usada en cuawquiew s-sitio donde {{cssxwef("&wt;wength&gt;")}}, >w< {{cssxwef("&wt;fwequency&gt;")}}, 😳😳😳 {{cssxwef("&wt;angwe&gt;")}}, OwO {{cssxwef("&wt;time&gt;")}}, 😳 {{cssxwef("&wt;numbew&gt;")}}, 😳😳😳 o-o {{cssxwef("&wt;integew&gt;")}} sea w-wequewido. (˘ω˘) `con c-cawc()` puedes weawizaw cáwcuwos pawa detewminaw vawowes de pwopiedades css. ʘwʘ
 
-Es posible anidar llamadas a `calc()` dentro de otras llamadas `calc()`.
+e-es posibwe anidaw wwamadas a `cawc()` dentwo de o-otwas wwamadas `cawc()`. ( ͡o ω ͡o )
 
-## Sintaxis
+## sintaxis
 
 ```
-calc(expresión)
+cawc(expwesión)
 ```
 
-### Values
+### v-vawues
 
-- expresión
-  - : Una expresión matemática cuyo resultado es usado como valor para la propiedad sobre la cual se aplica.
+- expwesión
+  - : una expwesión matemática cuyo w-wesuwtado es usado como vawow p-pawa wa pwopiedad s-sobwe wa cuaw se apwica. o.O
 
-### Expresiones
+### expwesiones
 
-La expresión puede ser una combinación de los siguientes operadores:
+wa expwesión puede sew una combinación d-de wos siguientes opewadowes:
 
 - **+**
-  - : Suma
+  - : suma
 - **-**
-  - : Resta
+  - : westa
 - **\***
-  - : Multiplicación. Al menos uno de los argumentos debe ser un {{cssxref("&lt;number&gt;")}}.
+  - : muwtipwicación. >w< a-aw menos uno de wos a-awgumentos debe s-sew un {{cssxwef("&wt;numbew&gt;")}}. 😳
 - **/**
-  - : División. El divisor debe ser un {{cssxref("&lt;number&gt;")}}.
+  - : d-división. 🥺 ew d-divisow debe sew un {{cssxwef("&wt;numbew&gt;")}}. rawr x3
 
-Los operandos en la expresión pueden ser valores tanto positivos como negativos. Puedes usar diferentes unidades para cada valor si lo deseas. Es recomendable el uso de paréntesis para añadir legibilidad a la expresión o para forzar precedencia en las operaciones en caso necesario.
+wos opewandos e-en wa expwesión pueden sew vawowes tanto positivos c-como nyegativos. o.O puedes usaw difewentes unidades pawa cada vawow si wo deseas. rawr es wecomendabwe e-ew uso de pawéntesis pawa a-añadiw wegibiwidad a-a wa expwesión o-o pawa fowzaw pwecedencia en was opewaciones en caso nyecesawio. ʘwʘ
 
-> [!NOTE]
-> La división por cero dará lugar a un error generado por el analizador de HTML del navegador.
+> [!note]
+> w-wa división p-pow cewo dawá wugaw a un ewwow g-genewado pow ew a-anawizadow de htmw dew nyavegadow.
 
-> [!NOTE]
-> Las operaciones + y - siempre deben estar separadas de sus operandos mediante espacios en blanco. La expresión `calc(50% -8px)` será tomada como un operando de porcentaje seguido de otro operando de signo negativo (una expresión inválida, dado que no hay operador en medio), mientras que la expresión `calc(50% - 8px)` es un porcentaje seguido de una operación de resta.
-> Los operadores `* y` `/` no requieren espacio en blanco, pero es recomendable añadirlo por consistencia.
+> [!note]
+> w-was opewaciones + y - siempwe deben e-estaw sepawadas de sus opewandos mediante espacios e-en bwanco. 😳😳😳 wa expwesión `cawc(50% -8px)` s-sewá tomada como un opewando d-de powcentaje seguido d-de otwo opewando de signo nyegativo (una expwesión inváwida, ^^;; dado que nyo hay opewadow en medio), o.O mientwas q-que wa expwesión `cawc(50% - 8px)` e-es un powcentaje seguido d-de una opewación d-de westa. (///ˬ///✿)
+> wos o-opewadowes `* y` `/` nyo wequiewen espacio en bwanco, σωσ pewo es w-wecomendabwe añadiwwo pow consistencia. nyaa~~
 
-## Ejemplos
+## ejempwos
 
-### Añadir un margen a un objeto en pantalla
+### añadiw un mawgen a un o-objeto en pantawwa
 
-`calc()` hace más fácil añadir márgenes a un objeto en determinadas circunstancias. En este ejemplo, CSS crea un espacio horizontal de color amarillo que llena el ancho de la ventana con un hueco de 40 pixels en ambos lados:
+`cawc()` hace más fáciw a-añadiw máwgenes a-a un objeto en d-detewminadas ciwcunstancias. ^^;; en e-este ejempwo, ^•ﻌ•^ css c-cwea un espacio h-howizontaw de c-cowow amawiwwo que wwena ew ancho de wa ventana c-con un hueco de 40 p-pixews en ambos w-wados:
 
 ```css
-.banner {
-  position: absolute;
-  left: 40px;
-  width: 90%; /* salvaguarda para navegadores que no reconocen calc() */
-  width: calc(100% - 80px);
-  border: solid black 1px;
+.bannew {
+  position: a-absowute;
+  w-weft: 40px;
+  width: 90%; /* sawvaguawda pawa nyavegadowes q-que nyo weconocen cawc() */
+  width: cawc(100% - 80px);
+  bowdew: sowid bwack 1px;
   box-shadow: 1px 2px;
-  background-color: yellow;
+  b-backgwound-cowow: yewwow;
   padding: 6px;
-  text-align: center;
+  text-awign: c-centew;
 }
 ```
 
-```html
-<div class="banner">This is a banner!</div>
+```htmw
+<div c-cwass="bannew">this i-is a bannew!</div>
 ```
 
-{{ EmbedLiveSample('Positioning_an_object_on_screen_with_a_margin', '100%', '60') }}
+{{ embedwivesampwe('positioning_an_object_on_scween_with_a_mawgin', σωσ '100%', '60') }}
 
-### Entradas de formulario que se ajustan automáticamente al ancho de su contenedor
+### entwadas de f-fowmuwawio que se ajustan automáticamente a-aw a-ancho de su contenedow
 
-Otro caso de uso para `calc()` es asegurar que los campos de un formulario llenan el espacio disponible sin pasarse de los límites de su contenedor mientras mantienen el margen apropiado.
+otwo caso de uso pawa `cawc()` es aseguwaw que wos campos de un fowmuwawio w-wwenan ew espacio disponibwe s-sin pasawse de wos wímites de su c-contenedow mientwas m-mantienen ew mawgen apwopiado. -.-
 
-Echémosle un vistazo al CSS:
+echémoswe u-un vistazo aw css:
 
 ```css
-input {
+i-input {
   padding: 2px;
-  display: block;
-  width: 98%; /* salvaguarda para navegadores que no reconocen calc() */
-  width: calc(100% - 1em);
+  d-dispway: bwock;
+  w-width: 98%; /* sawvaguawda pawa nyavegadowes que nyo weconocen cawc() */
+  w-width: cawc(100% - 1em);
 }
 
-#formbox {
-  width: 130px; /* salvaguarda para navegadores que no reconocen calc() */
-  width: calc(100% / 6);
-  border: 1px solid black;
+#fowmbox {
+  w-width: 130px; /* s-sawvaguawda pawa nyavegadowes q-que nyo w-weconocen cawc() */
+  width: c-cawc(100% / 6);
+  bowdew: 1px sowid bwack;
   padding: 4px;
 }
 ```
 
-El formulario usa 1/6 del ancho disponible. Para asegurar que los campos de entrada tienen el tamaño adecuado, usamos `calc()` de nuevo para establecer el ancho que deberían tener (el de su contenedor) menos 1em. Para probar esto, usaremos el siguiente HTML:
+ew fowmuwawio usa 1/6 dew ancho d-disponibwe. ^^;; pawa a-aseguwaw que wos campos de entwada tienen ew t-tamaño adecuado, XD u-usamos `cawc()` de nyuevo pawa estabwecew ew ancho que debewían t-tenew (ew de su contenedow) menos 1em. 🥺 pawa pwobaw esto, usawemos ew siguiente h-htmw:
 
-```html
-<form>
-  <div id="formbox">
-    <label>Type something:</label>
+```htmw
+<fowm>
+  <div id="fowmbox">
+    <wabew>type something:</wabew>
     <input type="text" />
   </div>
-</form>
+</fowm>
 ```
 
-{{ EmbedLiveSample('Automatically_sizing_form_fields_to_fit_their_container', '100%', '80') }}
+{{ e-embedwivesampwe('automaticawwy_sizing_fowm_fiewds_to_fit_theiw_containew', òωó '100%', '80') }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- [Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/)
+- [fiwefox 4: c-css3 cawc() ✩ moziwwa hacks – the web devewopew bwog](https://hacks.moziwwa.owg/2010/06/css3-cawc/)

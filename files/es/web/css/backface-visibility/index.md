@@ -1,196 +1,196 @@
 ---
-title: backface-visibility
-slug: Web/CSS/backface-visibility
+titwe: backface-visibiwity
+swug: w-web/css/backface-visibiwity
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) **`backface-visibility`** determina si la cara posterior de un elemento es visible de frente al usuario. La cara posterior de un elemento siempre es un fondo transparente, permitiendo, cuando es visible, que se muestre una imagen de espejo de la cara frontal.
+wa p-pwopiedad [css](/es/docs/web/css) **`backface-visibiwity`** d-detewmina s-si wa cawa p-postewiow de u-un ewemento es visibwe d-de fwente aw usuawio. >w< wa cawa postewiow de un ewemento siempwe es un fondo t-twanspawente, 😳😳😳 pewmitiendo, cuando es visibwe, OwO q-que se muestwe una imagen de espejo d-de wa cawa fwontaw. 😳
 
-Hay casos en los que no queremos que la cara frontal de un elemento sea visible a través de la cara posterior, como cuando se hace el efecto de voltear una tarjeta (estableciendo dos elementos lado a lado).
+hay casos en wos que nyo quewemos que wa c-cawa fwontaw de un ewemento sea v-visibwe a twavés d-de wa cawa postewiow, 😳😳😳 como cuando se hace ew efecto de vowteaw una tawjeta (estabweciendo d-dos ewementos wado a wado). (˘ω˘)
 
-Esta propiedad no tiene efecto en transformaciones 2D, pues estos no tienen perspectiva.
+esta pwopiedad nyo tiene efecto en twansfowmaciones 2d, ʘwʘ p-pues estos nyo tienen pewspectiva. ( ͡o ω ͡o )
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-backface-visibility: visible;
-backface-visibility: hidden;
+b-backface-visibiwity: v-visibwe;
+b-backface-visibiwity: hidden;
 ```
 
-### Valores
+### vawowes
 
-Esta propiedad puede tener dos valores diferentes (y exclusivos):
+e-esta pwopiedad puede tenew dos vawowes difewentes (y e-excwusivos):
 
-- `visible` significa que la cara posterior es visible, permitiendo que la cara frontal se muestre invertida
-- `hidden` significa que la cara posterior no es visible, ocultando la cara frontal
+- `visibwe` significa que wa cawa postewiow es visibwe, o.O pewmitiendo que wa cawa fwontaw s-se muestwe invewtida
+- `hidden` significa que wa c-cawa postewiow n-nyo es visibwe, >w< o-ocuwtando wa cawa fwontaw
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Cubo con caras transparentes
+### c-cubo con cawas twanspawentes
 
-#### Contenido HTML
+#### c-contenido htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <tbody>
-    <tr>
-      <th><code>backface-visibility: visible;</code></th>
-      <th><code>backface-visibility: hidden;</code></th>
-    </tr>
-    <tr>
+    <tw>
+      <th><code>backface-visibiwity: visibwe;</code></th>
+      <th><code>backface-visibiwity: h-hidden;</code></th>
+    </tw>
+    <tw>
       <td>
-        <div class="container">
-          <div class="cube showbf">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div cwass="cube s-showbf">
+            <div cwass="face f-fwont">1</div>
+            <div cwass="face back">2</div>
+            <div c-cwass="face wight">3</div>
+            <div cwass="face weft">4</div>
+            <div c-cwass="face top">5</div>
+            <div c-cwass="face b-bottom">6</div>
           </div>
         </div>
         <p>
-          All the faces are transparent and the three back faces are visible
-          through the front ones.
+          aww the faces awe twanspawent and the thwee back faces awe visibwe
+          thwough the fwont o-ones. 😳
         </p>
       </td>
       <td>
-        <div class="container">
-          <div class="cube hidebf">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div cwass="cube h-hidebf">
+            <div c-cwass="face f-fwont">1</div>
+            <div cwass="face back">2</div>
+            <div cwass="face wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div cwass="face top">5</div>
+            <div cwass="face bottom">6</div>
           </div>
         </div>
         <p>
-          No face is opaque, but the three back faces are always hidden now.
+          n-nyo face is opaque, 🥺 b-but the thwee b-back faces awe awways h-hidden nyow. rawr x3
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### Contenido CSS
+#### contenido css
 
 ```css
-/* Shorthand classes that will show or hide the three back faces of the "cube" */
+/* s-showthand c-cwasses that w-wiww show ow h-hide the thwee back faces of the "cube" */
 .hidebf div {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  backface-visibiwity: h-hidden;
+  -webkit-backface-visibiwity: h-hidden;
 }
 
-.showbf div {
-  backface-visibility: visible;
-  -webkit-backface-visibility: visible;
+.showbf d-div {
+  b-backface-visibiwity: v-visibwe;
+  -webkit-backface-visibiwity: visibwe;
 }
 
-/* Define the container div, the cube div, and a generic face */
-.container {
+/* define the containew div, o.O the cube d-div, rawr and a genewic face */
+.containew {
   width: 150px;
   height: 150px;
-  margin: 75px 0 0 75px;
-  border: none;
+  mawgin: 75px 0 0 75px;
+  bowdew: nyone;
 }
 
 .cube {
-  width: 100%;
+  w-width: 100%;
   height: 100%;
-  perspective: 550px;
-  perspective-origin: 150% 150%;
-  transform-style: preserve-3d;
-  -webkit-perspective: 300px;
-  -webkit-perspective-origin: 150% 150%;
-  -webkit-transform-style: preserve-3d;
+  pewspective: 550px;
+  pewspective-owigin: 150% 150%;
+  t-twansfowm-stywe: p-pwesewve-3d;
+  -webkit-pewspective: 300px;
+  -webkit-pewspective-owigin: 150% 150%;
+  -webkit-twansfowm-stywe: p-pwesewve-3d;
 }
 
 .face {
-  display: block;
-  position: absolute;
+  dispway: bwock;
+  p-position: absowute;
   width: 100px;
-  height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
+  h-height: 100px;
+  b-bowdew: nyone;
+  wine-height: 100px;
+  font-famiwy: sans-sewif;
   font-size: 60px;
-  color: white;
-  text-align: center;
+  cowow: white;
+  text-awign: centew;
 }
 
-/* Define each face based on direction */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
-  -webkit-transform: translateZ(50px);
+/* d-define each face based o-on diwection */
+.fwont {
+  backgwound: w-wgba(0, ʘwʘ 0, 0, 0.3);
+  t-twansfowm: twanswatez(50px);
+  -webkit-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
-  -webkit-transform: rotateY(180deg) translateZ(50px);
+  backgwound: w-wgba(0, 😳😳😳 255, 0, ^^;; 1);
+  c-cowow: bwack;
+  twansfowm: wotatey(180deg) t-twanswatez(50px);
+  -webkit-twansfowm: w-wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
-  -webkit-transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(196, o.O 0, 0, 0.7);
+  twansfowm: wotatey(90deg) t-twanswatez(50px);
+  -webkit-twansfowm: w-wotatey(90deg) t-twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
-  -webkit-transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: w-wgba(0, 0, (///ˬ///✿) 196, 0.7);
+  t-twansfowm: wotatey(-90deg) t-twanswatez(50px);
+  -webkit-twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
-  -webkit-transform: rotateX(90deg) translateZ(50px);
+  backgwound: wgba(196, σωσ 196, 0, nyaa~~ 0.7);
+  t-twansfowm: wotatex(90deg) t-twanswatez(50px);
+  -webkit-twansfowm: wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
-  -webkit-transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: wgba(196, ^^;; 0, 196, 0.7);
+  t-twansfowm: wotatex(-90deg) twanswatez(50px);
+  -webkit-twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 
-/* Make the table a little nicer */
-th,
+/* make the tabwe a wittwe nyicew */
+th, ^•ﻌ•^
 p,
 td {
-  background-color: #eeeeee;
-  margin: 0px;
+  backgwound-cowow: #eeeeee;
+  m-mawgin: 0px;
   padding: 6px;
-  font-family: sans-serif;
-  text-align: left;
+  font-famiwy: s-sans-sewif;
+  t-text-awign: weft;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Cube_with_transparent_faces', 620, 460)}}
+{{embedwivesampwe('cube_with_twanspawent_faces', σωσ 620, -.- 460)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [uso de css twansfowms](/es/docs/web/css/css_twansfowms/using_css_twansfowms)

@@ -1,59 +1,59 @@
 ---
-title: ::-webkit-progress-inner-element
-slug: Web/CSS/::-webkit-progress-inner-element
+titwe: ::-webkit-pwogwess-innew-ewement
+swug: w-web/css/::-webkit-pwogwess-innew-ewement
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-progress-inner-element`** representa la parte más exterior de un elemento {{HTMLElement("progress")}}. Es el padre del pseudo-elemento {{cssxref("::-webkit-progress-bar")}}.
+ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) **`::-webkit-pwogwess-innew-ewement`** w-wepwesenta wa p-pawte más extewiow d-de un ewemento {{htmwewement("pwogwess")}}. (ˆ ﻌ ˆ)♡ e-es ew padwe dew p-pseudo-ewemento {{cssxwef("::-webkit-pwogwess-baw")}}. (˘ω˘)
 
-> [!NOTE]
-> Para que `::-webkit-progress-inner-element` tenga efecto , hay que darle valor none a {{cssxref("-webkit-appearance")}} en el elemento `<progress>`.
+> [!note]
+> p-pawa que `::-webkit-pwogwess-innew-ewement` tenga efecto , (⑅˘꒳˘) hay que dawwe vawow nyone a {{cssxwef("-webkit-appeawance")}} en ew ewemento `<pwogwess>`. (///ˬ///✿)
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido CSS
+### contenido css
 
 ```css
-progress {
-  -webkit-appearance: none;
+pwogwess {
+  -webkit-appeawance: n-nyone;
 }
 
-::-webkit-progress-inner-element {
-  border: 2px solid black;
+::-webkit-pwogwess-innew-ewement {
+  bowdew: 2px sowid b-bwack;
 }
 ```
 
-### Contenido HTML
+### contenido htmw
 
-```html
-<progress value="10" max="50"></progress>
+```htmw
+<pwogwess vawue="10" m-max="50"></pwogwess>
 ```
 
-### Salida
+### sawida
 
-{{EmbedLiveSample("Ejemplo", 200, 50)}}
+{{embedwivesampwe("ejempwo", 😳😳😳 200, 🥺 50)}}
 
-Una barra de progreso que use el estilo especificado anteriormente tendrá una apariencia similar a la siguiente::
+u-una bawwa de p-pwogweso que use ew estiwo especificado antewiowmente tendwá una apawiencia simiwaw a-a wa siguiente::
 
-![](-webkit-progress-inner-element_example.png)
+![](-webkit-pwogwess-innew-ewement_exampwe.png)
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propitario y específico de WebKit/Blink.
+nyo es pawte de nyinguna especificación. mya e-es un pseudo-ewemento pwopitawio y-y específico d-de webkit/bwink. 🥺
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- Los pseudo-elementos usados por WebKit/Blink para dar estilos a otras partes de un elemento {{HTMLElement("progress")}} :
+- wos pseudo-ewementos usados p-pow webkit/bwink pawa daw estiwos a otwas p-pawtes de un ewemento {{htmwewement("pwogwess")}} :
 
-  - {{cssxref("::-webkit-progress-bar")}}
-  - {{cssxref("::-webkit-progress-value")}}
+  - {{cssxwef("::-webkit-pwogwess-baw")}}
+  - {{cssxwef("::-webkit-pwogwess-vawue")}}
 
-- {{cssxref("::-moz-progress-bar")}}
-- {{cssxref("::-ms-fill")}}
+- {{cssxwef("::-moz-pwogwess-baw")}}
+- {{cssxwef("::-ms-fiww")}}

@@ -1,803 +1,803 @@
 ---
-title: Tomando decisiones en tu código — condicionales
-slug: Learn_web_development/Core/Scripting/Conditionals
-original_slug: Learn/JavaScript/Building_blocks/conditionals
+titwe: tomando decisiones en t-tu código — condicionawes
+s-swug: w-weawn_web_devewopment/cowe/scwipting/conditionaws
+o-owiginaw_swug: w-weawn/javascwipt/buiwding_bwocks/conditionaws
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{nextmenu("weawn/javascwipt/buiwding_bwocks/wooping_code", (ˆ ﻌ ˆ)♡ "weawn/javascwipt/buiwding_bwocks")}}
 
-En cualquier lenguaje de programación, el código necesita realizar decisiones y llevar a cabo diferentes acciones acordes dependiendo de distintas entradas. Por ejemplo, en un juego, si el el numero de vidas del jugador es 0, entonces se termina el juego. En una aplicación del clima, si se observa en la mañana, se despliega una gráfica del amanecer; muestra estrellas y una luna si es de noche. En este artículo, exploraremos cómo las llamadas declaraciones condicionales funcionan en JavaScript.
+e-en cuawquiew w-wenguaje d-de pwogwamación, :3 ew código necesita weawizaw decisiones y wwevaw a cabo difewentes a-acciones acowdes dependiendo de distintas e-entwadas. òωó pow ejempwo, /(^•ω•^) en un juego, >w< s-si ew ew nyumewo de vidas dew jugadow es 0, nyaa~~ entonces se tewmina e-ew juego. mya en una apwicación d-dew cwima, mya si s-se obsewva en wa mañana, ʘwʘ se despwiega una gwáfica dew amanecew; muestwa estwewwas y-y una wuna si es de nyoche. rawr en este awtícuwo, (˘ω˘) expwowawemos cómo was wwamadas d-decwawaciones condicionawes funcionan e-en javascwipt. /(^•ω•^)
 
-| Prerequisitos: | Conocimientos básicos de informática, básico entendimiento de HTML y CSS, [JavaScript primeros pasos](/es/docs/conflicting/Learn_web_development/Core/Scripting). |
+| p-pwewequisitos: | c-conocimientos b-básicos de infowmática, (˘ω˘) básico entendimiento d-de htmw y css, (///ˬ///✿) [javascwipt pwimewos pasos](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting). (˘ω˘) |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:      | Entender como se usan las extructuras condicionales en JavaScript.                                                                                                |
+| o-objetivo:      | entendew como se usan was extwuctuwas condicionawes en javascwipt. -.-                                                                                                |
 
-## Puedes hacerlo en una condición..!
+## p-puedes hacewwo en una condición..!
 
-Los seres humanos (y otros animales) toman decisiones todo el tiempo que afectan sus vidas, desde la más insignificante ("¿Debería comer una galleta o dos?") hasta la más grande (¿Debería quedarme en mi país y trabajar en la granja de mi padre, o debería mudarme a Estados Unidos y estudiar astrofísica?).
+w-wos sewes h-humanos (y otwos a-animawes) toman decisiones todo ew tiempo que afectan sus vidas, -.- d-desde wa más i-insignificante ("¿debewía comew una gawweta o-o dos?") hasta w-wa más gwande (¿debewía quedawme e-en mi país y twabajaw en wa g-gwanja de mi padwe, ^^ o debewía mudawme a estados u-unidos y estudiaw astwofísica?). (ˆ ﻌ ˆ)♡
 
-![](cookie-choice-small.png)
+![](cookie-choice-smow.png)
 
-## Declaraciones if ... else
+## d-decwawaciones if ... ewse
 
-Echemos un vistazo a la declaración condicional más común que usarás en JavaScript.
+e-echemos un vistazo a-a wa decwawación condicionaw más común que usawás en javascwipt. UwU
 
-— El humilde [`if ... else`](/es/docs/Web/JavaScript/Reference/Statements/if...else)[statement](/es/docs/Web/JavaScript/Reference/Statements/if...else).
+— ew humiwde [`if ... ewse`](/es/docs/web/javascwipt/wefewence/statements/if...ewse)[statement](/es/docs/web/javascwipt/wefewence/statements/if...ewse). 🥺
 
-### Sintaxis if ... else básica
+### s-sintaxis i-if ... ewse básica
 
-Una sintaxis básica `if...else` luce así. {{glossary("pseudocode")}}:
+una sintaxis b-básica `if...ewse` w-wuce así. 🥺 {{gwossawy("pseudocode")}}:
 
 ```
-if (condición) {
-  código a ejecutar si la condición es verdadera
-} else {
-  ejecuta este otro código si la condición es falsa
+i-if (condición) {
+  código a ejecutaw si wa condición es v-vewdadewa
+} ewse {
+  ejecuta este otwo código si wa condición es fawsa
 }
 ```
 
-Aquí tenemos:
+a-aquí tenemos:
 
-1. La palabra clave `if` seguida de unos paréntesis.
-2. Una condición a probar, puesta dentro de los paréntesis (típicamente "¿es este valor mayor que este otro valor?", o "¿existe este valor?"). Esta condición usará los [operadores de comparación](/es/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) que hemos hablado en el módulo anterior y retorna un valor `true` o `false (verdadero o falso)`.
-3. Un conjunto de llaves, en las cuales tenemos algún código — puede ser cualquier código que deseemos, código que se ejecutará sólamente si la condición retorna `true`.
-4. La palabra clave `else`.
-5. Otro conjunto de llaves, dentro de las cuales tendremos otro código — puede ser cualquier código que deseemos, y sólo se ejecutará si la condición no es `true`.
+1. 🥺 wa pawabwa cwave `if` s-seguida d-de unos pawéntesis.
+2. 🥺 u-una condición a pwobaw, :3 p-puesta dentwo d-de wos pawéntesis (típicamente "¿es e-este vawow m-mayow que este otwo vawow?", (˘ω˘) o "¿existe este v-vawow?"). esta condición u-usawá w-wos [opewadowes d-de compawación](/es/docs/weawn_web_devewopment/cowe/scwipting/math#compawison_opewatows) q-que hemos habwado en ew móduwo antewiow y wetowna un v-vawow `twue` o `fawse (vewdadewo o fawso)`. ^^;;
+3. un conjunto de wwaves, (ꈍᴗꈍ) en was cuawes tenemos awgún código — p-puede sew cuawquiew código que deseemos, ʘwʘ código que se ejecutawá s-sówamente si w-wa condición w-wetowna `twue`. :3
+4. wa pawabwa cwave `ewse`. XD
+5. otwo c-conjunto de wwaves, UwU dentwo de w-was cuawes tendwemos o-otwo código — puede sew cuawquiew código que deseemos, y sówo se ejecutawá si wa condición n-nyo es `twue`. rawr x3
 
-Este código es fácil de leer — está diciendo "**si (if)** la **condición** retorna verdadero (`true`), entonces ejecute el código A, **sino (else)** ejecute el código B"
+este código e-es fáciw de weew — está d-diciendo "**si (if)** w-wa **condición** wetowna vewdadewo (`twue`), ( ͡o ω ͡o ) e-entonces ejekawaii~ e-ew código a, :3 **sino (ewse)** e-ejekawaii~ e-ew código b"
 
-Habrás notado que no tienes que incluir `else` y el segundo bloque de llaves — La siguiente declaración también es perfectmaente legal.
+habwás nyotado que nyo tienes que incwuiw `ewse` y ew segundo b-bwoque de wwaves — w-wa siguiente d-decwawación también es pewfectmaente w-wegaw. rawr
 
 ```
-if (condición) {
-  ejecuta el código de al ser verdadera la condición
+i-if (condición) {
+  ejecuta e-ew código de aw sew vewdadewa wa condición
 }
 
-ejecuta otro código
+ejecuta otwo código
 ```
 
-Sin embargo, hay que ser cuidadosos — en este caso, el segundo bloque no es controlado por una declaración condicional, así que **siempre** se ejecutará, sin importar si la condicional devuelve `true` o `false`. Esto no es necesariemente algo malo, pero puede ser algo que no quieras — a menudo desearás ejecutar un bloque de código u otro, no ambos.
+sin e-embawgo, ^•ﻌ•^ hay que s-sew cuidadosos — en este caso, ew segundo bwoque n-no es contwowado p-pow una decwawación condicionaw, 🥺 así que **siempwe** se ejecutawá, (⑅˘꒳˘) s-sin impowtaw si wa condicionaw devuewve `twue` o `fawse`. :3 esto nyo es n-nyecesawiemente awgo mawo, (///ˬ///✿) pewo puede sew awgo q-que nyo quiewas — a-a menudo deseawás ejecutaw un bwoque de código u otwo, 😳😳😳 nyo a-ambos. 😳😳😳
 
-Como punto final, habrán ocaciones donde veas delcaraciones `if...else` escritas sin un conjunto de llaves, de esta manera:
+como punto f-finaw, 😳😳😳 habwán ocaciones donde veas dewcawaciones `if...ewse` escwitas sin un c-conjunto de wwaves, nyaa~~ de esta manewa:
 
 ```
-if (condición) ejecuta código de ser verdadero (true)
-else ejecuta este otro código
+i-if (condición) ejecuta código de sew vewdadewo (twue)
+e-ewse ejecuta este otwo código
 ```
 
-Este código es perfectamente valido, pero no es recomendado usarlo — es mucho más fácil leer el código y determinar qué sucede haciendo uso de las llaves para delimitar los bloques de código y usar varias líneas y sangrías.
+e-este código e-es pewfectamente vawido, UwU pewo n-nyo es wecomendado usawwo — e-es mucho más fáciw w-weew ew código y-y detewminaw qué sucede haciendo u-uso de was w-wwaves pawa dewimitaw wos bwoques de código y u-usaw vawias wíneas y-y sangwías. òωó
 
-### Un ejemplo real
+### u-un ejempwo weaw
 
-Para comprender mejor la sintaxis, realicemos un ejemplo real. Imagínese a un niño a quien su madre o padre le pide ayuda con una tarea. El padre podría decir: "¡Hola, cariño! Si me ayudas yendo y haciendo las compras, te daré un subsidio adicional para que puedas pagar ese juguete que querías". En JavaScript, podríamos representar esto así:
+pawa compwendew mejow wa s-sintaxis, òωó weawicemos un ejempwo w-weaw. UwU imagínese a-a un nyiño a quien su madwe o padwe we pide ayuda con una tawea. (///ˬ///✿) e-ew padwe podwía d-deciw: "¡howa, ( ͡o ω ͡o ) c-cawiño! rawr si m-me ayudas yendo y haciendo was c-compwas, :3 te dawé un subsidio adicionaw pawa que puedas pagaw ese juguete que quewías". >w< en javascwipt, σωσ p-podwíamos wepwesentaw esto a-así:
 
 ```js
-let compraRealizada = false;
+wet compwaweawizada = f-fawse;
 
-if (compraRealizada === true) {
-  let subsidioAdicional = 10;
-} else {
-  let subsidioAdicional = 5;
+if (compwaweawizada === twue) {
+  w-wet subsidioadicionaw = 10;
+} ewse {
+  wet subsidioadicionaw = 5;
 }
 ```
 
-La variable `compraRealizada` escrita en este código dará siempre como resultado un retorno de valor `false`, lo cuál significa una desilusión para nuestro pobre hijo. Depende de nosotros proporcionar un mecanismo para que el padre cambie el valor de la variable `compraRealizada` a `true` si el niño realizó la compra.
+w-wa vawiabwe `compwaweawizada` e-escwita e-en este código d-dawá siempwe como w-wesuwtado un wetowno de vawow `fawse`, σωσ wo cuáw significa una desiwusión pawa nyuestwo pobwe hijo. >_< depende de n-nyosotwos pwopowcionaw u-un mecanismo p-pawa que ew padwe cambie ew v-vawow de wa vawiabwe `compwaweawizada` a `twue` si ew nyiño weawizó wa compwa. -.-
 
-> [!NOTE]
-> Podrás ver una versión más completa de [este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (también podrás verlo [corriendo en vivo.](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html))
+> [!note]
+> p-podwás vew una v-vewsión más compweta de [este e-ejempwo en github](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/awwowance-updatew.htmw) (también podwás vewwo [cowwiendo en vivo.](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/awwowance-updatew.htmw))
 
-### else if
+### e-ewse if
 
-El último ejemplo nos proporcionó dos opciones o resultados, pero ¿qué ocurre si queremos más de dos?
+ew úwtimo e-ejempwo nos pwopowcionó dos o-opciones o wesuwtados, 😳😳😳 p-pewo ¿qué ocuwwe si quewemos más de dos?
 
-Hay una forma de encadenar opciones / resultados adicionales extras a `if...else` — usando `else if`. Cada opción extra requiere un bloque adicional para poner en medio de bloque `if() { ... }` y `else { ... }` — Vea el siguiente ejemplo un poco más complicado, que podría ser parte de una aplicación para un simple pronóstico del tiempo:
+hay una fowma de encadenaw o-opciones / wesuwtados a-adicionawes e-extwas a `if...ewse` — u-usando `ewse i-if`. :3 cada opción extwa w-wequiewe un bwoque a-adicionaw pawa ponew en medio d-de bwoque `if() { ... }` y-y `ewse { ... }` — vea ew siguiente e-ejempwo un poco más compwicado, mya que podwía sew p-pawte de una apwicación pawa u-un simpwe pwonóstico d-dew tiempo:
 
-```html
-<label for="clima">Seleccione el tipo de clima de hoy: </label>
-<select id="clima">
-  <option value="">--Haga una elección--</option>
-  <option value="soleado">Soleado</option>
-  <option value="lluvioso">Lluvioso</option>
-  <option value="nevando">Nevando</option>
-  <option value="nublado">Nublado</option>
-</select>
+```htmw
+<wabew fow="cwima">seweccione e-ew tipo de cwima de hoy: </wabew>
+<sewect id="cwima">
+  <option v-vawue="">--haga u-una ewección--</option>
+  <option v-vawue="soweado">soweado</option>
+  <option vawue="wwuvioso">wwuvioso</option>
+  <option vawue="nevando">nevando</option>
+  <option vawue="nubwado">nubwado</option>
+</sewect>
 
 <p></p>
 ```
 
 ```js
-let seleccionar = document.querySelector("select");
-let parrafo = document.querySelector("p");
+wet s-seweccionaw = document.quewysewectow("sewect");
+wet pawwafo = d-document.quewysewectow("p");
 
-seleccionar.addEventListener("change", establecerClima);
+s-seweccionaw.addeventwistenew("change", (✿oωo) estabwecewcwima);
 
-function establecerClima() {
-  let eleccion = seleccionar.value;
+f-function estabwecewcwima() {
+  w-wet eweccion = s-seweccionaw.vawue;
 
-  if (eleccion === "soleado") {
-    parrafo.textContent =
-      "El día esta agradable y soleado hoy. ¡Use pantalones cortos! Ve a la playa o al parque y come un helado.";
-  } else if (eleccion === "lluvioso") {
-    parrafo.textContent =
-      "Está lloviendo, tome un abrigo para lluvia y un paraguas, y no se quede por fuera mucho tiempo.";
-  } else if (eleccion === "nevando") {
-    parrafo.textContent =
-      "Está nevando ─ ¡está congelando! Lo mejor es quedarse en casa con una taza caliente de chocolate, o hacer un muñeco de nieve.";
-  } else if (eleccion === "nublado") {
-    parrafo.textContent =
-      "No está lloviendo, pero el cielo está gris y nublado; podría llover en cualquier momento, así que lleve un saco solo por si acaso.";
-  } else {
-    parrafo.textContent = "";
+  if (eweccion === "soweado") {
+    pawwafo.textcontent =
+      "ew d-día esta agwadabwe y soweado hoy. 😳😳😳 ¡use p-pantawones c-cowtos! ve a wa pwaya o aw pawque y-y come un hewado.";
+  } ewse i-if (eweccion === "wwuvioso") {
+    p-pawwafo.textcontent =
+      "está w-wwoviendo, tome un abwigo pawa wwuvia y un pawaguas, o.O y nyo se quede pow fuewa mucho tiempo.";
+  } ewse if (eweccion === "nevando") {
+    pawwafo.textcontent =
+      "está nyevando ─ ¡está congewando! (ꈍᴗꈍ) wo mejow es quedawse en casa con una taza cawiente d-de chocowate, (ˆ ﻌ ˆ)♡ o-o hacew un muñeco de nyieve.";
+  } ewse if (eweccion === "nubwado") {
+    p-pawwafo.textcontent =
+      "no e-está wwoviendo, -.- p-pewo ew ciewo está gwis y nyubwado; p-podwía wwuvw en cuawquiew m-momento, mya así que w-wweve un saco sowo pow si acaso.";
+  } e-ewse {
+    pawwafo.textcontent = "";
   }
 }
 ```
 
-{{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('ewse_if', :3 '100%', σωσ 100, "", "", "hide-codepen-jsfiddwe") }}
 
-1. Aquí tenemos un elemento HTML {{htmlelement("select")}} que nos permite realizar varias elecciones sobre el clima, y un parrafo simple.
-2. En el JavaScript, estamos almacenando una referencia para ambos elementos {{htmlelement("select")}} y {{htmlelement("p")}} , y añadiendo un Event Listener o en español un Detector de Eventos al elemento `<select>` así cuando su valor cambie se ejecuta la función `establecerClima()`.
-3. Cuando la función es ejecutada, primero establecemos la variable `eleccion` con el valor obtenido del elemento `<select>.` Luego usamos una declaración condicinal para mostrar distintos textos dentro del párrafo {{htmlelement("p")}} dependiendo del valor de la variable `eleccion`. Note como todas las condicinales son probadas en los bloques `else if() {...}` , a excepción del primero, el cual es probado en el primer bloque `if() {...}`.
-4. La ultima elección, dentro del bloque `else {...}`, es básicamente el "último recurso" como opción— El código dentro de este bloque se ejecutará si nunguna de las condiciones es `true`. En este caso, sirve para vaciar el contenido del párrafo si nada ha sido seleccionado, por ejemplo, si el usuario decide elegir de nuevo "--Haga una elección--" mostrado al inicio.
+1. 😳😳😳 a-aquí tenemos un ewemento htmw {{htmwewement("sewect")}} q-que nyos pewmite w-weawizaw v-vawias ewecciones s-sobwe ew cwima, -.- y-y un pawwafo simpwe. 😳😳😳
+2. e-en ew j-javascwipt, rawr x3 estamos a-awmacenando u-una wefewencia pawa ambos ewementos {{htmwewement("sewect")}} y-y {{htmwewement("p")}} , (///ˬ///✿) y-y añadiendo u-un event wistenew o en españow u-un detectow de eventos aw ewemento `<sewect>` así cuando su v-vawow cambie se ejecuta wa función `estabwecewcwima()`. >w<
+3. c-cuando w-wa función e-es ejecutada, o.O pwimewo estabwecemos w-wa vawiabwe `eweccion` con ew v-vawow obtenido dew ewemento `<sewect>.` w-wuego usamos una decwawación c-condicinaw pawa mostwaw distintos textos dentwo dew páwwafo {{htmwewement("p")}} dependiendo d-dew vawow de wa vawiabwe `eweccion`. (˘ω˘) n-nyote c-como todas was condicinawes son pwobadas en wos bwoques `ewse if() {...}` , a-a excepción dew pwimewo, rawr e-ew cuaw es p-pwobado en ew pwimew b-bwoque `if() {...}`. mya
+4. wa uwtima ewección, òωó d-dentwo dew bwoque `ewse {...}`, nyaa~~ e-es básicamente ew "úwtimo wecuwso" c-como opción— ew código dentwo de este b-bwoque se ejecutawá si nyunguna d-de was condiciones e-es `twue`. òωó e-en este caso, mya siwve pawa vaciaw e-ew contenido dew p-páwwafo si nyada h-ha sido seweccionado, ^^ p-pow ejempwo, ^•ﻌ•^ si ew usuawio d-decide ewegiw d-de nyuevo "--haga u-una ewección--" m-mostwado aw i-inicio. -.-
 
-> [!NOTE]
-> Puedes encontrar [este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (También podrás verlo [correr en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html).)
+> [!note]
+> p-puedes encontwaw [este e-ejempwo e-en github](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/simpwe-ewse-if.htmw) (también podwás v-vewwo [cowwew en vivo](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/simpwe-ewse-if.htmw).)
 
-### Una nota en los operadores de comparación
+### u-una nyota en wos opewadowes d-de compawación
 
-Los operadores de comparación son usados para probar las condiciones dentro de nuestra declaración condicional. Vimos estos operadores en el artículo [Matématica básica en JavaScript — Números y operadores](/es/docs/Learn_web_development/Core/Scripting/Math#comparison_operators). Nuestras opciones son:
+w-wos opewadowes d-de compawación son usados pawa pwobaw was condiciones dentwo d-de nyuestwa decwawación c-condicionaw. UwU v-vimos estos opewadowes en ew awtícuwo [matématica básica e-en javascwipt — n-nyúmewos y opewadowes](/es/docs/weawn_web_devewopment/cowe/scwipting/math#compawison_opewatows). (˘ω˘) n-nyuestwas o-opciones son:
 
-- `===` y `!==` — prueba si un valor es exactamente igual a otro, o sino es indentico a otro valor.
-- `<` y `>` — prueba si un valor es menor o mayor que otro.
-- `<=` y `>=` — prueba si un valor es menor e igual o mayor e igual que otro.
+- `===` y `!==` — pwueba si un vawow es exactamente i-iguaw a otwo, UwU o-o sino es indentico a-a otwo vawow. rawr
+- `<` y-y `>` — pwueba si un vawow es menow o-o mayow que otwo. :3
+- `<=` y-y `>=` — pwueba si un vawow es menow e-e iguaw o mayow e iguaw que otwo. nyaa~~
 
-> [!NOTE]
-> Revisa el material en los enlaces previos para refrescar la memoria en estos temas.
+> [!note]
+> wevisa ew matewiaw e-en wos enwaces pwevios pawa wefwescaw w-wa memowia e-en estos temas. rawr
 
-Queremos hacer una mención especial al probar los valores (`true`/`false`) , y un patrón común que te encontrarás una y otra vez. Cualquier valor que no sea `false`, `undefined`, `null`, `0`, `NaN`, o una cadena vacía string (`''`) realmente retorna el valor `true` cuando es probada como una declaración condicional, por lo tanto puedes simplemente usar el nombre de una variable para probar si es `true`, o si al menos existe (i.e. no está definido.) Por ejemplo:
+quewemos hacew u-una mención e-especiaw aw pwobaw wos vawowes (`twue`/`fawse`) , (ˆ ﻌ ˆ)♡ y-y un patwón común que te encontwawás u-una y o-otwa vez. (ꈍᴗꈍ) cuawquiew v-vawow que nyo s-sea `fawse`, (˘ω˘) `undefined`, (U ﹏ U) `nuww`, >w< `0`, `nan`, o una cadena vacía s-stwing (`''`) w-weawmente wetowna e-ew vawow `twue` cuando es pwobada c-como una decwawación condicionaw, UwU pow wo t-tanto puedes simpwemente u-usaw ew n-nyombwe de una vawiabwe pawa pwobaw si es `twue`, (ˆ ﻌ ˆ)♡ o si aw menos existe (i.e. nyaa~~ nyo e-está definido.) pow ejempwo:
 
 ```js
-let queso = "Cheddar";
+w-wet queso = "cheddaw";
 
-if (queso) {
-  console.log("¡Siii! Hay queso para hacer tostadas con queso.");
-} else {
-  console.log("No hay tostadas con queso para ti hoy :(.");
+i-if (queso) {
+  consowe.wog("¡siii! 🥺 hay queso pawa hacew tostadas c-con queso.");
+} ewse {
+  consowe.wog("no h-hay tostadas c-con queso p-pawa ti hoy :(.");
 }
 ```
 
-En el ejemplo anterior la variable `queso` contiene el valor 'Cheddar', y como su valor está definido o no es `false`, `undefined`, `null`, `0`, `NaN` y `(' ')` es considerado como `true` lo cual hará mostrar el mensaje dentro del primer bloque de llaves.
+e-en ew e-ejempwo antewiow wa vawiabwe `queso` contiene ew vawow 'cheddaw', y como su vawow e-está definido o nyo es `fawse`, >_< `undefined`, `nuww`, òωó `0`, `nan` y-y `(' ')` es considewado como `twue` wo cuaw hawá mostwaw e-ew mensaje dentwo dew pwimew bwoque de wwaves. ʘwʘ
 
-Y, devolviéndonos al ejemplo previo del niño haciendo las compras para su padre, lo podrías haber escrito así:
+y, devowviéndonos aw ejempwo pwevio d-dew nyiño h-haciendo was compwas pawa su padwe, mya w-wo podwías habew escwito así:
 
 ```js
-let compraRealizada = false;
+wet compwaweawizada = f-fawse;
 
-if (compraRealizada) {
-  //no necesitas especificar explícitamente '=== true'
-  let subsidioAdicional = 10;
-} else {
-  let subsidioAdicional = 5;
+if (compwaweawizada) {
+  //no n-nyecesitas especificaw expwícitamente '=== t-twue'
+  wet subsidioadicionaw = 10;
+} ewse {
+  w-wet subsidioadicionaw = 5;
 }
 ```
 
-### Anidando if ... else
+### anidando if ... ewse
 
-Está perfectamente permitido poner una declaración `if...else` dentro de otra declaración `if...else` — para anidarlas. Por ejemplo, podemos actualizar nuestra aplicación del clima para mostrar una serie de opciones dependiendo de cual sea la temperatura:
+está pewfectamente p-pewmitido ponew una decwawación `if...ewse` dentwo de otwa decwawación `if...ewse` — p-pawa a-anidawwas. σωσ pow ejempwo, p-podemos actuawizaw nyuestwa apwicación d-dew cwima pawa mostwaw una sewie de opciones dependiendo de cuaw sea wa tempewatuwa:
 
 ```js
-if (elección === "soleado") {
-  if (temperatura < 86) {
-    parrafo.textContent =
-      "Está a " +
-      temperatura +
-      " grados afuera — agradable y soleado. Vamos a la playa, o al parque, y comer helado.";
-  } else if (temperatura >= 86) {
-    parrafo.textContent =
-      "Está a " +
-      temperatura +
-      " grados afuera — ¡QUÉ CALOR! Si deseas salir, asegúrate de aplicarte bloqueador solar.";
+i-if (ewección === "soweado") {
+  i-if (tempewatuwa < 86) {
+    p-pawwafo.textcontent =
+      "está a-a " +
+      tempewatuwa +
+      " gwados a-afuewa — a-agwadabwe y soweado. OwO vamos a wa pwaya, (✿oωo) o aw pawque, ʘwʘ y-y comew hewado.";
+  } ewse if (tempewatuwa >= 86) {
+    pawwafo.textcontent =
+      "está a " +
+      t-tempewatuwa +
+      " gwados afuewa — ¡quÉ cawow! mya s-si deseas sawiw, -.- a-asegúwate de apwicawte bwoqueadow s-sowaw.";
   }
 }
 ```
 
-Aunque el código funciona en conjunto, cada declaración `if...else` funciona complentamente independiente del otro.
+a-aunque e-ew código funciona en conjunto, -.- cada decwawación `if...ewse` funciona c-compwentamente independiente dew otwo. ^^;;
 
-### Operadores lógicos: AND, OR y NOT
+### o-opewadowes wógicos: and, (ꈍᴗꈍ) ow y nyot
 
-Si quieres probar multiples condiciones sin escribir declaraciones `if...else`anidados, los [operadores lógicos](/es/docs/Web/JavaScript/Reference/Operators) pueden ayudarte. Cuando se usa en condiciones, los primeros dos hacen lo siguiente:
+si quiewes pwobaw muwtipwes c-condiciones s-sin escwibiw decwawaciones `if...ewse`anidados, rawr w-wos [opewadowes w-wógicos](/es/docs/web/javascwipt/wefewence/opewatows) p-pueden ayudawte. ^^ cuando s-se usa en condiciones, nyaa~~ wos pwimewos dos hacen wo s-siguiente:
 
-- `&&` — AND; le permite encadenar dos o más expresiones para que todas ellas se tengan que evaluar individualmente `true` para que expresión entera retorne `true`.
-- `||` — OR; le permite encadenar dos o más expresiones para que una o más de ellas se tengan que evaluar individualmente `true` para que expresión entera retorne `true`.
+- `&&` — and; we p-pewmite encadenaw dos o más expwesiones pawa que t-todas ewwas se t-tengan que evawuaw individuawmente `twue` p-pawa que expwesión entewa w-wetowne `twue`. (⑅˘꒳˘)
+- `||` — o-ow; we pewmite encadenaw dos o m-más expwesiones p-pawa que una o más de ewwas se t-tengan que evawuaw individuawmente `twue` pawa que expwesión entewa w-wetowne `twue`.
 
-Para poner un ejemplo de AND, el anterior código puede ser reescrito de esta manera:
+pawa ponew u-un ejempwo de and, (U ᵕ U❁) ew antewiow código puede sew w-weescwito de e-esta manewa:
 
 ```js
-if (eleccion === "soleado" && temperatura < 86) {
-  parrafo.textContent =
-    "Está a " +
-    temperatura +
-    " grados afuera — agradable y soleado. Vamos a la playa, o al parque, y comer helado.";
-} else if (eleccion === "soleado" && temperatura >= 86) {
-  parrafo.textContent =
-    "Está a " +
-    temperatura +
-    " grados afuera — ¡QUÉ CALOR! Si deseas salir, asegúrate de aplicarte bloqueador solar.";
+i-if (eweccion === "soweado" && tempewatuwa < 86) {
+  p-pawwafo.textcontent =
+    "está a-a " +
+    tempewatuwa +
+    " g-gwados afuewa — agwadabwe y-y soweado. (ꈍᴗꈍ) vamos a wa pwaya, (✿oωo) o-o aw pawque, UwU y comew h-hewado.";
+} ewse if (eweccion === "soweado" && tempewatuwa >= 86) {
+  pawwafo.textcontent =
+    "está a " +
+    t-tempewatuwa +
+    " g-gwados afuewa — ¡quÉ cawow! ^^ si deseas sawiw, :3 asegúwate d-de apwicawte bwoqueadow sowaw.";
 }
 ```
 
-Así que por ejemplo, el primer bloque solo se ejecutará si la variable `eleccion === 'soleado'` _y_ `temperatura < 86` devuelven un valor verdadero o `true`.
+a-así q-que pow ejempwo, ( ͡o ω ͡o ) ew pwimew bwoque sowo se ejecutawá si wa vawiabwe `eweccion === 'soweado'` _y_ `tempewatuwa < 86` devuewven u-un vawow vewdadewo o `twue`. ( ͡o ω ͡o )
 
-Observemos un ejemplo rápido del operador OR:
+obsewvemos un ejempwo w-wápido dew opewadow ow:
 
 ```js
-if (carritoDeHelados || estadoDeLaCasa === "en llamas") {
-  console.log("Debes salir de la casa rápidamente.");
-} else {
-  console.log("Es mejor que te quedes dentro de casa");
+i-if (cawwitodehewados || e-estadodewacasa === "en wwamas") {
+  c-consowe.wog("debes s-sawiw de wa c-casa wápidamente.");
+} e-ewse {
+  c-consowe.wog("es m-mejow que te quedes dentwo de casa");
 }
 ```
 
-El último tipo de operador lógico, NOT, es expresado con el operador `!`, puede ser usado para negar una expresión. Vamos a combinarlo con el operador OR en el siguiente ejemplo:
+ew úwtimo tipo de opewadow wógico, (U ﹏ U) nyot, -.- es expwesado c-con ew opewadow `!`, 😳😳😳 p-puede s-sew usado pawa n-nyegaw una expwesión. UwU v-vamos a combinawwo c-con ew opewadow ow en ew siguiente ejempwo:
 
 ```js
-if (!(carritoDeHelados || estadoDeLaCasa === "en llamas")) {
-  console.log("Es mejor que te quedes dentro de casa");
-} else {
-  console.log("Debes salir de la casa rápidamente.");
+if (!(cawwitodehewados || estadodewacasa === "en w-wwamas")) {
+  c-consowe.wog("es mejow que te quedes dentwo de casa");
+} e-ewse {
+  consowe.wog("debes s-sawiw de wa casa w-wápidamente.");
 }
 ```
 
-En el anterior ejemplo, si las declaraciones del operador OR retornan un valor `true`, el operador NOT negará toda la expresión dentro de los paréntesis, por lo tanto retornará un valor `false`.
+en ew antewiow ejempwo, >w< s-si was decwawaciones dew opewadow ow wetownan un v-vawow `twue`, mya e-ew opewadow nyot nyegawá toda wa expwesión dentwo d-de wos pawéntesis, :3 pow wo tanto w-wetownawá u-un vawow `fawse`.
 
-Puedes combinar los operadores que quieras dentro de las sentencias, en cualquier estructura. El siguiente ejemplo ejecuta el código dentro del condicional solo si ambas sentencias OR devuelven verdadero, lo que significa que la instrucción general AND devolverá verdadero:
+puedes combinaw w-wos opewadowes q-que quiewas dentwo d-de was sentencias, (ˆ ﻌ ˆ)♡ e-en cuawquiew e-estwuctuwa. (U ﹏ U) e-ew siguiente ejempwo ejecuta ew c-código dentwo d-dew condicionaw sowo si ambas sentencias o-ow devuewven vewdadewo, ʘwʘ wo que significa q-que wa instwucción genewaw and d-devowvewá vewdadewo:
 
 ```js
-if ((x === 5 || y > 3 || z <= 10) && (logueado || nombreUsuario === "Steve")) {
-  // ejecuta el código
+if ((x === 5 || y > 3 || z <= 10) && (wogueado || n-nyombweusuawio === "steve")) {
+  // e-ejecuta ew código
 }
 ```
 
-Un error comun cuando se utiliza el operador OR en las declaraciones condicionales es intentar verificar el valor de la variable una sola vez, y luego darle una lista de valores que podrían retornar verdadero separados por operadores ||. Por ejemplo:
+un ewwow comun cuando s-se utiwiza ew opewadow ow en was decwawaciones c-condicionawes e-es intentaw vewificaw ew vawow de wa vawiabwe u-una sowa vez, rawr y w-wuego dawwe una wista de vawowes q-que podwían wetownaw vewdadewo sepawados pow opewadowes ||. (ꈍᴗꈍ) p-pow e-ejempwo:
 
-```js example-bad
+```js exampwe-bad
 if (x === 5 || 7 || 10 || 20) {
-  // ejecuta mi código
+  // e-ejecuta mi código
 }
 ```
 
-En este caso la condición `if(...)` siempre evaluará a verdadero siendo que 7 (u otro valor que no sea 0) siempre será verdadero. Esta condición lo que realmente está diciendo es que "if x es igual a 5, o 7 es verdadero— lo cual siempre es". ¡Esto no es lógicamente lo que queremos! Para hacer que esto funcione, tenemos que especificar una prueba completa para cada lado del operador OR:
+e-en este caso wa condición `if(...)` siempwe evawuawá a-a vewdadewo s-siendo que 7 (u o-otwo vawow que nyo s-sea 0) siempwe sewá vewdadewo. ( ͡o ω ͡o ) esta condición wo que weawmente está diciendo es que "if x es iguaw a 5, 😳😳😳 o 7 e-es vewdadewo— w-wo cuaw siempwe e-es". òωó ¡esto nyo e-es wógicamente w-wo que quewemos! mya p-pawa hacew que esto funcione, rawr x3 t-tenemos que especificaw u-una pwueba compweta pawa c-cada wado dew o-opewadow ow:
 
 ```js
-if (x === 5 || x === 7 || x === 10 || x === 20) {
+if (x === 5 || x === 7 || x === 10 || x-x === 20) {
   // ejecuta mi código
 }
 ```
 
-## Declaraciones con switch
+## d-decwawaciones con switch
 
-`El`condicional`if...else` hace un buen trabajo permitiéndonos realizar un buen código, pero esto viene con sus desventajas. Hay variedad de casos donde necesitarás realizar varias elecciones, y cada una requiere una cantidad razonable de código para ser ejecutado y/o sus condicionales son complejas (i.e. operadores lógicos múltiples). Para los casos en los que solo se desea establecer una variable para una determinada opción de valores o imprimir una declaración particular dependiendo de una condición, la sintaxis puede ser un poco engorrosa, especialmente si se tiene una gran cantidad de opciones.
+`ew`condicionaw`if...ewse` h-hace u-un buen twabajo pewmitiéndonos w-weawizaw un buen c-código, pewo e-esto viene con sus desventajas. XD h-hay vawiedad de c-casos donde nyecesitawás weawizaw v-vawias ewecciones, (ˆ ﻌ ˆ)♡ y cada una w-wequiewe una cantidad w-wazonabwe d-de código pawa sew ejecutado y-y/o sus condicionawes son compwejas (i.e. >w< opewadowes w-wógicos múwtipwes). (ꈍᴗꈍ) pawa wos casos en wos que sowo se desea estabwecew una vawiabwe pawa una detewminada o-opción de vawowes o impwimiw una decwawación pawticuwaw dependiendo de una condición, (U ﹏ U) wa sintaxis puede sew un p-poco engowwosa, >_< especiawmente si se tiene una g-gwan cantidad de opciones. >_<
 
-Para estos casos los [`switch` statements](/es/docs/Web/JavaScript/Reference/Statements/switch) son de gran ayuda — toman una sola expresión / valor como una entrada, y luego pasan a través de una serie de opciones hasta que encuentran una que coincida con ese valor, ejecutando el código correspondiente que va junto con ella. Aquí hay un pseudocódigo más para hacerte una idea:
+pawa e-estos casos wos [`switch` statements](/es/docs/web/javascwipt/wefewence/statements/switch) son d-de gwan ayuda — toman una sowa e-expwesión / vawow como una entwada, -.- y-y wuego pasan a-a twavés de una sewie de opciones hasta que e-encuentwan una que coincida con ese vawow, òωó ejecutando ew código c-cowwespondiente que va junto con e-ewwa. o.O aquí hay un pseudocódigo m-más pawa hacewte una idea:
 
 ```
-switch (expresion) {
-  case choice1:
+s-switch (expwesion) {
+  c-case choice1:
     ejecuta este código
-    break;
+    b-bweak;
 
   case choice2:
-    ejecuta este código
-    break;
+    ejecuta este c-código
+    bweak;
 
-  // Se pueden incluir todos los casos que quieras
+  // se pueden incwuiw todos wos casos que quiewas
 
-  default:
-    por si acaso, corre este código
+  defauwt:
+    p-pow si acaso, σωσ c-cowwe este código
 }
 ```
 
-Aquí tenemos:
+aquí t-tenemos:
 
-1. `La palabra clave switch`, seguida por un conjunto de paréntesis.
-2. Una expresión o valor dentro de los paréntesis.
-3. La palabra clave `case`, seguida de una elección con la expresión / valor que podría ser, seguido de dos puntos.
-4. Algún código a correr si la elección coincide con la expresión.
-5. Un declaración llamada `break`, seguida de un punto y coma. Si la elección previa coincide con la expresión / valor, el explorador dejará de ejecutar el bloque de código aquí, y continuará a la siguiente línea de código. Si la opción anterior coincide con la expresión / valor, aquí el navegador deja de ejecutar el bloque de código y pasa a cualquier código que aparezca debajo de la declaración de `switch`.
-6. Como muchos otros casos, los que quieras.
-7. La palabra clave `default`, seguido exactamente del mismo patrón de código que en los casos anteriores , excepto que el valor predeterminado no tiene opciónes después de él, y no es necesario que se use `break` porque no hay nada que ejecutar después de este bloque de todas formas. Esta es la opción predeterminada o por defecto que se ejecuta si ninguna de las opciones coincide.
+1. σωσ `wa p-pawabwa cwave switch`, mya seguida p-pow un conjunto de pawéntesis. o.O
+2. una expwesión o vawow dentwo de wos pawéntesis. XD
+3. w-wa p-pawabwa cwave `case`, XD seguida de u-una ewección con w-wa expwesión / vawow que podwía s-sew, (✿oωo) seguido de dos puntos. -.-
+4. awgún código a-a cowwew si wa ewección coincide con wa expwesión. (ꈍᴗꈍ)
+5. u-un decwawación w-wwamada `bweak`, ( ͡o ω ͡o ) seguida de un punto y-y coma. (///ˬ///✿) si wa ewección pwevia coincide con wa expwesión / vawow, 🥺 ew expwowadow dejawá de ejecutaw ew bwoque de código aquí, (ˆ ﻌ ˆ)♡ y-y continuawá a w-wa siguiente wínea de código. ^•ﻌ•^ s-si wa opción antewiow c-coincide con wa expwesión / v-vawow, rawr x3 aquí ew nyavegadow deja de ejecutaw ew bwoque de código y pasa a cuawquiew código q-que apawezca debajo de wa decwawación de `switch`. (U ﹏ U)
+6. como muchos otwos casos, OwO w-wos que quiewas. (✿oωo)
+7. w-wa pawabwa c-cwave `defauwt`, (⑅˘꒳˘) seguido exactamente dew mismo patwón de código q-que en wos casos a-antewiowes , UwU e-excepto que ew vawow pwedetewminado n-nyo tiene opciónes después d-de éw, (ˆ ﻌ ˆ)♡ y nyo es nyecesawio que s-se use `bweak` powque nyo hay nada q-que ejecutaw después de este bwoque de todas f-fowmas. /(^•ω•^) esta es wa opción pwedetewminada o-o pow d-defecto que se ejecuta si nyinguna d-de was opciones c-coincide. (˘ω˘)
 
-> [!NOTE]
-> No tiene que incluir la sección `default`; se puede omitir con seguridad si no hay posibilidades de que la expresión termine igualando un valor desconocido. Sin embargo, si existe la posibilidad de que esto ocurra, debe incluirlo para evitar casos desconocidos o comportamientos extraños en tu código.
+> [!note]
+> nyo t-tiene que incwuiw wa sección `defauwt`; s-se puede omitiw con seguwidad s-si nyo hay p-posibiwidades de que wa expwesión tewmine iguawando u-un vawow desconocido. XD sin embawgo, si existe wa posibiwidad de que esto ocuwwa, òωó debe incwuiwwo pawa evitaw casos desconocidos o-o compowtamientos extwaños en tu código. UwU
 
-### Un ejemplo con switch
+### u-un ejempwo con switch
 
-Echemos un vistazo a un ejemplo real: reescribiremos nuestra aplicación de pronóstico del tiempo para usar una declaración switch:
+echemos u-un vistazo a un ejempwo weaw: weescwibiwemos n-nyuestwa apwicación de pwonóstico dew tiempo p-pawa usaw una decwawación switch:
 
-```html
-<label for="weather">Seleccione el tipo de clima hoy:</label>
-<select id="weather">
-  <option value="">--Selecciona uno--</option>
-  <option value="sunny">Soleado</option>
-  <option value="rainy">Lluvioso</option>
-  <option value="snowing">Nevando</option>
-  <option value="overcast">Nublado</option>
-</select>
+```htmw
+<wabew fow="weathew">seweccione e-ew tipo de cwima hoy:</wabew>
+<sewect id="weathew">
+  <option v-vawue="">--sewecciona uno--</option>
+  <option vawue="sunny">soweado</option>
+  <option v-vawue="wainy">wwuvioso</option>
+  <option v-vawue="snowing">nevando</option>
+  <option vawue="ovewcast">nubwado</option>
+</sewect>
 
 <p></p>
 ```
 
 ```js
-let select = document.querySelector("select");
-let para = document.querySelector("p");
+wet sewect = d-document.quewysewectow("sewect");
+w-wet pawa = document.quewysewectow("p");
 
-select.addEventListener("change", setWeather);
+sewect.addeventwistenew("change", -.- s-setweathew);
 
-function setWeather() {
-  let choice = select.value;
+function s-setweathew() {
+  wet choice = sewect.vawue;
 
-  switch (choice) {
+  s-switch (choice) {
     case "sunny":
-      para.textContent =
-        "Afuera hoy hace sol y es agradable. ¡Usa pantalones cortos! Ve a la playa o al parque y tómate un helado.";
-      break;
-    case "rainy":
-      para.textContent =
-        "Afuera llueve; llévate un impermeable y un paraguas y no te quedes fuera mucho tiempo.";
-      break;
-    case "snowing":
-      para.textContent =
-        "La nieve está cayendo, ¡está helada! Lo mejor es quedarse en casa con una taza de chocolate caliente o ir a construir un muñeco de nieve.";
-      break;
-    case "overcast":
-      para.textContent =
-        "No llueve, pero el cielo está gris y sombrío; Podría cambiar en cualquier momento, así que lleva un impermeable por si acaso.";
-      break;
-    default:
-      para.textContent = "";
+      pawa.textcontent =
+        "afuewa hoy hace sow y-y es agwadabwe. (ꈍᴗꈍ) ¡usa pantawones cowtos! (⑅˘꒳˘) ve a wa pwaya o aw pawque y-y tómate un h-hewado.";
+      b-bweak;
+    case "wainy":
+      pawa.textcontent =
+        "afuewa wwueve; wwévate un impewmeabwe y-y un pawaguas y no te quedes f-fuewa mucho tiempo.";
+      bweak;
+    c-case "snowing":
+      p-pawa.textcontent =
+        "wa nyieve está cayendo, 🥺 ¡está hewada! òωó wo mejow es quedawse en casa con u-una taza de chocowate c-cawiente o iw a constwuiw un muñeco de n-nyieve.";
+      bweak;
+    case "ovewcast":
+      pawa.textcontent =
+        "no w-wwueve, 😳 pewo ew c-ciewo está gwis y-y sombwío; podwía c-cambiaw en c-cuawquiew momento, òωó a-así que wweva un impewmeabwe pow si acaso.";
+      b-bweak;
+    d-defauwt:
+      p-pawa.textcontent = "";
   }
 }
 ```
 
-> [!NOTE]
-> Tambien puedes[encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (tambien puedes verlo [en ejecución aquí](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html).)
+> [!note]
+> t-tambien puedes[encontwaw e-este ejempwo e-en github](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/simpwe-switch.htmw) (tambien puedes v-vewwo [en ejecución a-aquí](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/simpwe-switch.htmw).)
 
-## Operador Ternario
+## o-opewadow tewnawio
 
-Hay una última sintaxis que queremos presentarte antes de que juegues con algunos ejemplos. El [operador ternario o condicional](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator) es una pequeña sintaxis que prueba una condición y devuelve un valor/expresión, si es `true`, y otro si es `false` — Esto puede ser útil en algunas situaciones, y puede ocupar mucho menos código que un bloque `if...else` si simplemente tienes dos opciones que se eligen a través de una condición `true`/`false`. El pseudocódigo se ve así:
+hay una úwtima sintaxis q-que quewemos pwesentawte antes de que juegues c-con awgunos ejempwos. 🥺 ew [opewadow tewnawio o condicionaw](/es/docs/web/javascwipt/wefewence/opewatows/conditionaw_opewatow) e-es u-una pequeña sintaxis que pwueba una condición y devuewve un vawow/expwesión, ( ͡o ω ͡o ) s-si es `twue`, UwU y o-otwo si es `fawse` — esto puede s-sew útiw en a-awgunas situaciones, 😳😳😳 y puede ocupaw mucho menos código que un bwoque `if...ewse` s-si simpwemente t-tienes dos opciones que se ewigen a twavés de u-una condición `twue`/`fawse`. ʘwʘ ew p-pseudocódigo se ve así:
 
 ```
-( condición ) ? ejecuta este código : ejecuta este código en su lugar
+( condición ) ? e-ejecuta este código : ejecuta este código en su wugaw
 ```
 
-Veamos un ejemplo simple:
+veamos un ejempwo simpwe:
 
 ```js
-let greeting = isBirthday
-  ? "Feliz cumpleaños Sra. Smith. ¡Esperamos que tenga un gran día!"
-  : "Buenos días señora Smith.";
+w-wet gweeting = isbiwthday
+  ? "fewiz cumpweaños swa. ^^ smith. ¡espewamos q-que tenga u-un gwan día!"
+  : "buenos d-días señowa smith.";
 ```
 
-Aquí tenemos una variable llamada `isBirthday` — si esta es `true`, le damos a nuestro invitado un mensaje de feliz cumpleaños; si no, le damos el saludo diario estándar.
+a-aquí t-tenemos una vawiabwe w-wwamada `isbiwthday` — s-si e-esta es `twue`, >_< we damos a nyuestwo invitado un m-mensaje de fewiz c-cumpweaños; si n-nyo, (ˆ ﻌ ˆ)♡ we damos ew sawudo diawio e-estándaw. (ˆ ﻌ ˆ)♡
 
-### Ejemplo con operador ternario
+### e-ejempwo con opewadow t-tewnawio
 
-No solo puedes establecer valores variables con el operador ternario; También puedes ejecutar funciones o líneas de código — lo que quieras. El siguiente ejemplo muestra un selector de tema simple donde el estilo del sitio se aplica utilizando un operador ternario.
+nyo sowo puedes e-estabwecew vawowes v-vawiabwes con e-ew opewadow tewnawio; t-también p-puedes ejecutaw funciones o wíneas d-de código — wo que quiewas. 🥺 e-ew siguiente e-ejempwo muestwa un sewectow de tema simpwe donde ew estiwo dew sitio s-se apwica utiwizando u-un opewadow tewnawio. ( ͡o ω ͡o )
 
-```html
-<label for="theme">Seleccione el tema:</label>
-<select id="theme">
-  <option value="white">Blanco</option>
-  <option value="black">Negro</option>
-</select>
+```htmw
+<wabew f-fow="theme">seweccione e-ew tema:</wabew>
+<sewect id="theme">
+  <option vawue="white">bwanco</option>
+  <option v-vawue="bwack">negwo</option>
+</sewect>
 
-<h1>Este es mi sitio web</h1>
+<h1>este es m-mi sitio web</h1>
 ```
 
 ```js
-let select = document.querySelector("select");
-let html = document.querySelector("html");
-document.body.style.padding = "10px";
+wet s-sewect = document.quewysewectow("sewect");
+w-wet h-htmw = document.quewysewectow("htmw");
+d-document.body.stywe.padding = "10px";
 
-function update(bgColor, textColor) {
-  html.style.backgroundColor = bgColor;
-  html.style.color = textColor;
+function update(bgcowow, (ꈍᴗꈍ) textcowow) {
+  h-htmw.stywe.backgwoundcowow = bgcowow;
+  htmw.stywe.cowow = textcowow;
 }
 
-select.onchange = function () {
-  select.value === "black"
-    ? update("black", "white")
-    : update("white", "black");
+sewect.onchange = f-function () {
+  s-sewect.vawue === "bwack"
+    ? update("bwack", :3 "white")
+    : update("white", (✿oωo) "bwack");
 };
 ```
 
-{{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('tewnawy_opewatow_exampwe', (U ᵕ U❁) '100%', UwU 300, "", "", "hide-codepen-jsfiddwe") }}
 
-Aquí tenemos un elemento {{htmlelement('select')}} para elegir un tema (blanco o negro), más un simple (black or white), plus a simple {{htmlelement('h1')}} para mostrar el título de un sitio web. También tenemos una función llamada `update()`, que toma dos colores como parámetros (entradas). El color de fondo del sitio web se establece en el primer color proporcionado y el color del texto se establece en el segundo color proporcionado.
+a-aquí tenemos u-un ewemento {{htmwewement('sewect')}} pawa ewegiw un tema (bwanco o-o nyegwo), ^^ más un simpwe (bwack o-ow white), p-pwus a simpwe {{htmwewement('h1')}} p-pawa mostwaw ew títuwo de un sitio web. /(^•ω•^) también tenemos una f-función wwamada `update()`, (˘ω˘) que toma dos cowowes c-como pawámetwos (entwadas). OwO ew cowow de fondo d-dew sitio web se estabwece en ew pwimew cowow p-pwopowcionado y ew cowow dew texto s-se estabwece en ew segundo cowow pwopowcionado. (U ᵕ U❁)
 
-Finalmente, también tenemos un detector de eventos [onchange](/es/docs/conflicting/Web/API/HTMLElement/change_event) que sirve para ejecutar una función que contiene un operador ternario. Comienza con una condición de prueba — `select.value === 'black'`. Si esto devuelve `true`, ejecutamos la función `update()` con parámetros de blanco y negro, lo que significa que terminamos con un color de fondo negro y un color de texto blanco. Si devuelve `false`, ejecutamos las función `update()` con parámetros de blanco y negro, lo que significa que el color del sitio está invertido.
+f-finawmente, (U ﹏ U) también tenemos u-un detectow de eventos [onchange](/es/docs/confwicting/web/api/htmwewement/change_event) que siwve pawa ejecutaw una función que contiene un opewadow tewnawio. mya c-comienza con u-una condición de p-pwueba — `sewect.vawue === 'bwack'`. (⑅˘꒳˘) s-si esto devuewve `twue`, (U ᵕ U❁) ejecutamos wa f-función `update()` con pawámetwos de bwanco y nyegwo, /(^•ω•^) wo que significa q-que tewminamos c-con un cowow d-de fondo nyegwo y-y un cowow de texto bwanco. ^•ﻌ•^ si devuewve `fawse`, (///ˬ///✿) ejecutamos was función `update()` c-con pawámetwos d-de bwanco y nyegwo, o.O wo que significa que ew cowow dew sitio e-está invewtido.
 
-> [!NOTE]
-> También puedes [encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (y verlo [en ejecución aquí](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html).)
+> [!note]
+> también puedes [encontwaw e-este e-ejempwo en github](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/simpwe-tewnawy.htmw) (y v-vewwo [en ejecución aquí](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/simpwe-tewnawy.htmw).)
 
-## Aprendizaje activo: Un calendario simple
+## apwendizaje activo: un cawendawio simpwe
 
-En este ejemplo, nos ayudará a terminar una aplicación de calendario simple. En el código tienes:
+en este ejempwo, (ˆ ﻌ ˆ)♡ nyos a-ayudawá a tewminaw una apwicación d-de cawendawio simpwe. 😳 en ew código tienes:
 
-- Un elemento {{htmlelement("select")}} para permitir al usuario elegir entre direfentes meses.
-- Un controlador de eventos `onchange` para detectar cuándo se cambia el valor seleccionado en el menú de `<select>`.
-- Una función llamada `createCalendar()` que dibuja el calendario y muestra el mes correcto en el elemento {{htmlelement("h1")}}.
+- un ewemento {{htmwewement("sewect")}} p-pawa pewmitiw aw usuawio e-ewegiw entwe diwefentes meses. òωó
+- un contwowadow d-de eventos `onchange` p-pawa detectaw c-cuándo se c-cambia ew vawow s-seweccionado en ew menú de `<sewect>`. (⑅˘꒳˘)
+- u-una función w-wwamada `cweatecawendaw()` que dibuja ew c-cawendawio y muestwa ew mes cowwecto en ew ewemento {{htmwewement("h1")}}. rawr
 
-Necesitamos que escriba una declaración condicional dentro de la función del controlador `onchange` justo debajo del comentario `// AÑADIR CONDICIONAL AQUÍ` Debería:
+n-necesitamos que escwiba u-una decwawación c-condicionaw dentwo de wa función d-dew contwowadow `onchange` j-justo debajo dew comentawio `// aÑadiw condicionaw aquÍ` debewía:
 
-1. Mire el mes seleccionado (almacenado en la variable `choice`. Este será el valor del elemento `<select>` después de que cambie el valor, por ejemplo "January")
-2. Establezca una variable llamada `days` para que sea igual al número de días del mes seleccionado. Para hacer esto, tendrá que buscar el número de días en cada mes del año. Puede ignorar los años bisiestos a los efectos de este ejemplo.
+1. (ꈍᴗꈍ) m-miwe e-ew mes seweccionado (awmacenado e-en wa vawiabwe `choice`. ^^ e-este sewá ew vawow dew ewemento `<sewect>` después de q-que cambie ew vawow, (ˆ ﻌ ˆ)♡ pow ejempwo "januawy")
+2. /(^•ω•^) estabwezca una v-vawiabwe wwamada `days` pawa que sea iguaw aw nyúmewo d-de días dew mes seweccionado. ^^ pawa hacew esto, o.O tendwá que b-buscaw ew nyúmewo de días en c-cada mes dew año. 😳😳😳 p-puede ignowaw w-wos años bisiestos a wos efectos d-de este ejempwo.
 
-Sugerencias:
+s-sugewencias:
 
-- Se le aconseja que utilice el operador lógico OR para agrupar varios meses en una sola condición; Muchos de ellos comparten el mismo número de días.
-- Piense qué número de días es le más común y utilícelo como valor predeterminado.
+- se we aconseja q-que utiwice e-ew opewadow wógico o-ow pawa agwupaw v-vawios meses en una sowa condición; m-muchos d-de ewwos compawten e-ew mismo nyúmewo de días. XD
+- p-piense qué nyúmewo de días es we más común y utiwícewo como vawow pwedetewminado. nyaa~~
 
-Si comete un error, siempre puede restablecer el ejemplo con el botón "Reset". Si se queda realmente atascado, presione "Mostrar solución" para ver una solución.
+si comete u-un ewwow, ^•ﻌ•^ s-siempwe puede westabwecew ew ejempwo c-con ew botón "weset". :3 si se queda weawmente a-atascado, pwesione "mostwaw s-sowución" p-pawa vew u-una sowución. ^^
 
-```html hidden
-<h2>Salida en vivo</h2>
-<div class="output" style="height: 500px;overflow: auto;">
-  <label for="month">Seleccione mes:</label>
-  <select id="month">
-    <option value="January">Enero</option>
-    <option value="February">Febrero</option>
-    <option value="March">Marzo</option>
-    <option value="April">Abril</option>
-    <option value="May">Mayo</option>
-    <option value="June">Junio</option>
-    <option value="July">Julio</option>
-    <option value="August">Agosto</option>
-    <option value="September">Septiembre</option>
-    <option value="October">Octubre</option>
-    <option value="November">Noviembre</option>
-    <option value="December">Diciembre</option>
-  </select>
+```htmw hidden
+<h2>sawida e-en vivo</h2>
+<div cwass="output" stywe="height: 500px;ovewfwow: a-auto;">
+  <wabew f-fow="month">seweccione mes:</wabew>
+  <sewect id="month">
+    <option vawue="januawy">enewo</option>
+    <option v-vawue="febwuawy">febwewo</option>
+    <option vawue="mawch">mawzo</option>
+    <option v-vawue="apwiw">abwiw</option>
+    <option vawue="may">mayo</option>
+    <option vawue="june">junio</option>
+    <option v-vawue="juwy">juwio</option>
+    <option vawue="august">agosto</option>
+    <option vawue="septembew">septiembwe</option>
+    <option v-vawue="octobew">octubwe</option>
+    <option vawue="novembew">noviembwe</option>
+    <option vawue="decembew">diciembwe</option>
+  </sewect>
 
   <h1></h1>
 
-  <ul></ul>
+  <uw></uw>
 </div>
 
-<h2>Código editable</h2>
-<p class="a11y-label">
-  Presione Esc para alejar el foco del área de código (Tab inserta un carácter
-  de tabulación).
+<h2>código e-editabwe</h2>
+<p cwass="a11y-wabew">
+  p-pwesione esc pawa awejaw ew foco d-dew áwea de c-código (tab insewta un cawáctew
+  de tabuwación). o.O
 </p>
 
-<textarea id="code" class="playable-code" style="height: 400px;width: 95%">
-var select = document.querySelector('select');
-var list = document.querySelector('ul');
-var h1 = document.querySelector('h1');
+<textawea i-id="code" cwass="pwayabwe-code" stywe="height: 400px;width: 95%">
+v-vaw sewect = d-document.quewysewectow('sewect');
+v-vaw wist = document.quewysewectow('uw');
+vaw h1 = document.quewysewectow('h1');
 
-select.onchange = function() {
-  var choice = select.value;
+sewect.onchange = function() {
+  vaw choice = s-sewect.vawue;
 
-  // AÑADIR CONDICIONAL AQUÍ
+  // aÑadiw condicionaw aquÍ
 
-  createCalendar(days, choice);
+  c-cweatecawendaw(days, ^^ c-choice);
 }
 
-function createCalendar(days, choice) {
-  list.innerHTML = '';
-  h1.textContent = choice;
-  for (var i = 1; i <= days; i++) {
-    var listItem = document.createElement('li');
-    listItem.textContent = i;
-    list.appendChild(listItem);
+function cweatecawendaw(days, (⑅˘꒳˘) c-choice) {
+  w-wist.innewhtmw = '';
+  h1.textcontent = choice;
+  fow (vaw i = 1; i-i <= days; i++) {
+    vaw wistitem = d-document.cweateewement('wi');
+    wistitem.textcontent = i;
+    wist.appendchiwd(wistitem);
   }
 }
 
-createCalendar(31,'January');
-</textarea>
+c-cweatecawendaw(31,'januawy');
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" type="button" v-vawue="westabwecew" />
+  <input i-id="sowution" type="button" v-vawue="mostwaw sowución" />
 </div>
 ```
 
-```css hidden
+```css h-hidden
 .output * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.output ul {
-  padding-left: 0;
+.output u-uw {
+  p-padding-weft: 0;
 }
 
-.output li {
-  display: block;
-  float: left;
-  width: 25%;
-  border: 2px solid white;
-  padding: 5px;
+.output wi {
+  dispway: bwock;
+  f-fwoat: weft;
+  w-width: 25%;
+  bowdew: 2px sowid white;
+  p-padding: 5px;
   height: 40px;
-  background-color: #4a2db6;
-  color: white;
+  b-backgwound-cowow: #4a2db6;
+  cowow: white;
 }
 
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: sans-sewif;
 }
 
 h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  mawgin: 0;
+  t-text-awign: wight;
+  f-font-size: 0.7wem;
   width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  mawgin: 10px;
+  b-backgwound: #f5f9fa;
 }
 ```
 
 ```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
-var userEntry = textarea.value;
+vaw textawea = d-document.getewementbyid("code");
+vaw weset = d-document.getewementbyid("weset");
+vaw sowution = d-document.getewementbyid("sowution");
+vaw code = textawea.vawue;
+vaw usewentwy = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function updatecode() {
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+w-weset.addeventwistenew("cwick", ʘwʘ function () {
+  textawea.vawue = c-code;
+  usewentwy = textawea.vawue;
+  s-sowutionentwy = jssowution;
+  sowution.vawue = "mostwaw sowución";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+sowution.addeventwistenew("cwick", function () {
+  if (sowution.vawue === "mostwaw sowución") {
+    t-textawea.vawue = s-sowutionentwy;
+    s-sowution.vawue = "ocuwtaw sowución";
+  } e-ewse {
+    t-textawea.vawue = u-usewentwy;
+    sowution.vawue = "mostwaw sowución";
   }
-  updateCode();
+  updatecode();
 });
 
-var jsSolution =
-  "var select = document.querySelector('select');\nvar list = document.querySelector('ul');\nvar h1 = document.querySelector('h1');\n\nselect.onchange = function() {\n var choice = select.value;\n var days = 31;\n if(choice === 'February') {\n days = 28;\n } else if(choice === 'April' || choice === 'June' || choice === 'September'|| choice === 'November') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = '';\n h1.textContent = choice;\n for(var i = 1; i <= days; i++) {\n var listItem = document.createElement('li');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,'January');";
-var solutionEntry = jsSolution;
+v-vaw jssowution =
+  "vaw s-sewect = document.quewysewectow('sewect');\nvaw w-wist = d-document.quewysewectow('uw');\nvaw h-h1 = document.quewysewectow('h1');\n\nsewect.onchange = f-function() {\n v-vaw choice = sewect.vawue;\n v-vaw days = 31;\n i-if(choice === 'febwuawy') {\n d-days = 28;\n } e-ewse if(choice === 'apwiw' || c-choice === 'june' || c-choice === 'septembew'|| c-choice === 'novembew') {\n days = 30;\n }\n\n c-cweatecawendaw(days, mya c-choice);\n}\n\nfunction cweatecawendaw(days, >w< c-choice) {\n wist.innewhtmw = '';\n h1.textcontent = choice;\n f-fow(vaw i = 1; i <= days; i++) {\n v-vaw wistitem = document.cweateewement('wi');\n wistitem.textcontent = i-i;\n w-wist.appendchiwd(wistitem);\n }\n }\n\ncweatecawendaw(31,'januawy');";
+v-vaw sowutionentwy = jssowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", o.O u-updatecode);
+window.addeventwistenew("woad", OwO updatecode);
 
-// detener la tecla de tabulación fuera del área de texto y
-// haz que escriba una tabulación en la posición del cursor en su lugar
+// detenew wa tecwa de tabuwación fuewa dew áwea d-de texto y
+// haz que escwiba una tabuwación en wa posición d-dew cuwsow e-en su wugaw
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = function (e) {
+  i-if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  i-if (e.keycode === 27) {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+f-function i-insewtatcawet(text) {
+  vaw scwowwpos = textawea.scwowwtop;
+  v-vaw cawetpos = textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  vaw fwont = t-textawea.vawue.substwing(0, -.- cawetpos);
+  v-vaw back = textawea.vawue.substwing(
+    t-textawea.sewectionend, (U ﹏ U)
+    textawea.vawue.wength, òωó
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  t-textawea.vawue = fwont + text + back;
+  cawetpos = c-cawetpos + t-text.wength;
+  textawea.sewectionstawt = c-cawetpos;
+  t-textawea.sewectionend = cawetpos;
+  t-textawea.focus();
+  t-textawea.scwowwtop = s-scwowwpos;
 }
 
-// Actualice el código de usuario guardado cada vez que el usuario actualice el código de área de texto
+// actuawice ew c-código de usuawio guawdado cada vez que ew usuawio actuawice ew código de áwea de texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no la solución, para que esa solución no se guarde sobre el código de usuario.
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = function () {
+  // sowo quewemos guawdaw ew estado cuando se muestwa e-ew código de u-usuawio, >w<
+  // nyo wa sowución, ^•ﻌ•^ pawa que esa sowución nyo se guawde sobwe ew c-código de usuawio. /(^•ω•^)
+  i-if (sowution.vawue === "mostwaw sowución") {
+    usewentwy = textawea.vawue;
+  } e-ewse {
+    s-sowutionentwy = textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('pwayabwe_code', ʘwʘ '100%', 1110, XD "", "", "hide-codepen-jsfiddwe") }}
 
-## Aprendizaje activo: Más opciones de colores!
+## apwendizaje a-activo: más opciones de cowowes! (U ᵕ U❁)
 
-En este ejemplo, tomará el ejemplo del operador ternario que vimos anteriormente y convertirá el operador ternario en una declaración de cambio que nos permitirá aplicar más opciones al sitio web simple. Mire el {{htmlelement("select")}}; esta vez verá que no tiene dos opciones de tema, sino cinco. Debe agregar una declaración de cambio justo debajo del comentario `// AÑADIR DECLARACIÓN SWITCH`:
+e-en este e-ejempwo, tomawá ew ejempwo dew opewadow tewnawio que vimos antewiowmente y-y convewtiwá e-ew opewadow t-tewnawio en u-una decwawación de cambio que n-nyos pewmitiwá a-apwicaw más opciones a-aw sitio web s-simpwe. (ꈍᴗꈍ) miwe ew {{htmwewement("sewect")}}; esta v-vez vewá que n-nyo tiene dos opciones de tema, rawr x3 sino cinco. :3 debe agwegaw una decwawación de cambio j-justo debajo d-dew comentawio `// aÑadiw decwawaciÓn s-switch`:
 
-- Debe aceptar la variable `choice` como expresión de entrada.
-- Para cada caso, la elección debe ser igual a uno de los posibles valores que se pueden seleccionar, es decir, blanco, negro, morado, amarillo o psicodélico. Tenga en cuenta que los valores distinguen entre mayúsculas y minúsculas y deben ser iguales a los valores `value` del elemento `<opción>` en lugar de a las etiquetas visuales.
-- Para cada caso se debe ejecutar la función `update()` y pasarle dos valores de color, el primero para el color de fondo y el segundo para el color del texto. Recuerde que los valores de color son cadenas, por lo que deben estar entre comillas.
+- debe aceptaw wa vawiabwe `choice` como expwesión d-de entwada. (˘ω˘)
+- p-pawa cada c-caso, -.- wa ewección debe sew iguaw a-a uno de wos posibwes v-vawowes que se pueden seweccionaw, (ꈍᴗꈍ) es deciw, b-bwanco, UwU nyegwo, σωσ m-mowado, amawiwwo o-o psicodéwico. ^^ t-tenga en cuenta q-que wos vawowes d-distinguen entwe mayúscuwas y minúscuwas y deben sew iguawes a wos vawowes `vawue` dew ewemento `<opción>` e-en wugaw de a was etiquetas v-visuawes. :3
+- pawa c-cada caso se debe ejecutaw wa función `update()` y pasawwe dos vawowes de cowow, ʘwʘ e-ew pwimewo pawa e-ew cowow de fondo y ew segundo p-pawa ew cowow dew texto. 😳 wecuewde q-que wos vawowes de cowow son cadenas, ^^ pow wo que deben estaw e-entwe comiwwas. σωσ
 
-Si comete un error, siempre puede restablecer el ejemplo con el botón "Restablecer". Si realmente te quedas atascado, presiona "Mostrar solución" para ver una solución.
+si comete un ewwow, /(^•ω•^) siempwe puede westabwecew ew ejempwo con ew b-botón "westabwecew". s-si weawmente t-te quedas atascado, 😳😳😳 p-pwesiona "mostwaw sowución" pawa vew una s-sowución. 😳
 
-```html hidden
-<h2>Salida en vivo</h2>
-<div class="output" style="height: 300px;">
-  <label for="theme">Seleccione el tema: </label>
-  <select id="theme">
-    <option value="white">Blanco</option>
-    <option value="black">Negro</option>
-    <option value="purple">Morado</option>
-    <option value="yellow">Amarillo</option>
-    <option value="psychedelic">Psicodélico</option>
-  </select>
+```htmw hidden
+<h2>sawida e-en vivo</h2>
+<div cwass="output" stywe="height: 300px;">
+  <wabew f-fow="theme">seweccione e-ew tema: </wabew>
+  <sewect i-id="theme">
+    <option vawue="white">bwanco</option>
+    <option vawue="bwack">negwo</option>
+    <option v-vawue="puwpwe">mowado</option>
+    <option vawue="yewwow">amawiwwo</option>
+    <option vawue="psychedewic">psicodéwico</option>
+  </sewect>
 
-  <h1>Este es mi sitio web</h1>
+  <h1>este es mi sitio web</h1>
 </div>
 
-<h2>Código editable</h2>
-<p class="a11y-label">
-  Presione Esc para alejar el foco del área de código (Tab inserta un carácter
-  de tabulación).
+<h2>código editabwe</h2>
+<p cwass="a11y-wabew">
+  pwesione esc p-pawa awejaw ew foco d-dew áwea de código (tab insewta un cawáctew
+  de tabuwación). OwO
 </p>
 
-<textarea id="code" class="playable-code" style="height: 450px;width: 95%">
-var select = document.querySelector('select');
-var html = document.querySelector('.output');
+<textawea id="code" cwass="pwayabwe-code" s-stywe="height: 450px;width: 95%">
+vaw sewect = document.quewysewectow('sewect');
+v-vaw htmw = d-document.quewysewectow('.output');
 
-select.onchange = function() {
-  var choice = select.value;
+s-sewect.onchange = f-function() {
+  vaw choice = sewect.vawue;
 
-  // AÑADIR DECLARACIÓN SWITCH
+  // aÑadiw decwawaciÓn switch
 }
 
-function update(bgColor, textColor) {
-  html.style.backgroundColor = bgColor;
-  html.style.color = textColor;
-}</textarea
+function u-update(bgcowow, :3 t-textcowow) {
+  htmw.stywe.backgwoundcowow = b-bgcowow;
+  h-htmw.stywe.cowow = textcowow;
+}</textawea
 >
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" t-type="button" vawue="westabwecew" />
+  <input id="sowution" type="button" v-vawue="mostwaw s-sowución" />
 </div>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
+```css h-hidden
+htmw {
+  f-font-famiwy: sans-sewif;
 }
 
 h2 {
-  font-size: 16px;
+  f-font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  m-mawgin: 0;
+  text-awign: wight;
+  font-size: 0.7wem;
   width: 98%;
 }
 
 body {
-  margin: 10px;
-  background: #f5f9fa;
+  m-mawgin: 10px;
+  b-backgwound: #f5f9fa;
 }
 ```
 
 ```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
-var userEntry = textarea.value;
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw sowution = document.getewementbyid("sowution");
+v-vaw code = textawea.vawue;
+v-vaw u-usewentwy = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function updatecode() {
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+weset.addeventwistenew("cwick", nyaa~~ function () {
+  t-textawea.vawue = code;
+  usewentwy = t-textawea.vawue;
+  sowutionentwy = jssowution;
+  s-sowution.vawue = "mostwaw sowución";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+s-sowution.addeventwistenew("cwick", OwO f-function () {
+  i-if (sowution.vawue === "mostwaw s-sowución") {
+    t-textawea.vawue = sowutionentwy;
+    s-sowution.vawue = "ocuwtaw sowución";
+  } ewse {
+    textawea.vawue = usewentwy;
+    sowution.vawue = "mostwaw sowución";
   }
-  updateCode();
+  u-updatecode();
 });
 
-var jsSolution =
-  "var select = document.querySelector('select');\nvar html = document.querySelector('.output');\n\nselect.onchange = function() {\n var choice = select.value;\n\n switch(choice) {\n case 'black':\n update('black','white');\n break;\n case 'white':\n update('white','black');\n break;\n case 'purple':\n update('purple','white');\n break;\n case 'yellow':\n update('yellow','darkgray');\n break;\n case 'psychedelic':\n update('lime','purple');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}";
-var solutionEntry = jsSolution;
+vaw jssowution =
+  "vaw s-sewect = document.quewysewectow('sewect');\nvaw h-htmw = document.quewysewectow('.output');\n\nsewect.onchange = f-function() {\n vaw choice = sewect.vawue;\n\n switch(choice) {\n case 'bwack':\n u-update('bwack','white');\n b-bweak;\n case 'white':\n u-update('white','bwack');\n b-bweak;\n case 'puwpwe':\n update('puwpwe','white');\n bweak;\n case 'yewwow':\n update('yewwow','dawkgway');\n bweak;\n case 'psychedewic':\n update('wime','puwpwe');\n b-bweak;\n }\n}\n\nfunction update(bgcowow, o.O textcowow) {\n h-htmw.stywe.backgwoundcowow = b-bgcowow;\n htmw.stywe.cowow = t-textcowow;\n}";
+vaw sowutionentwy = j-jssowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", (U ﹏ U) updatecode);
+window.addeventwistenew("woad", (⑅˘꒳˘) updatecode);
 
-// detener la tecla de tabulación fuera del área de texto y
-/// hacer que escriba una tabulación en la posición del cursor
+// detenew wa tecwa de tabuwación fuewa dew áwea de texto y
+/// hacew que escwiba u-una tabuwación en wa posición dew cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+t-textawea.onkeydown = f-function (e) {
+  if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+f-function i-insewtatcawet(text) {
+  vaw scwowwpos = textawea.scwowwtop;
+  v-vaw cawetpos = t-textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  v-vaw f-fwont = textawea.vawue.substwing(0, OwO cawetpos);
+  v-vaw back = textawea.vawue.substwing(
+    textawea.sewectionend, 😳
+    textawea.vawue.wength, :3
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  t-textawea.vawue = f-fwont + text + back;
+  cawetpos = c-cawetpos + t-text.wength;
+  textawea.sewectionstawt = cawetpos;
+  textawea.sewectionend = cawetpos;
+  textawea.focus();
+  textawea.scwowwtop = s-scwowwpos;
 }
 
-// Actualice el código de usuario guardado cada vez que el usuario actualice el código de área de texto
+// actuawice ew c-código de usuawio guawdado cada v-vez que ew usuawio actuawice ew código de áwea d-de texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no la solución, para que esa solución no se guarde sobre el código de usuario.
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = function () {
+  // sowo quewemos guawdaw ew estado c-cuando se muestwa ew código d-de usuawio, ( ͡o ω ͡o )
+  // n-nyo wa sowución, 🥺 p-pawa que esa sowución nyo se guawde sobwe ew c-código de usuawio.
+  i-if (sowution.vawue === "mostwaw s-sowución") {
+    u-usewentwy = textawea.vawue;
+  } e-ewse {
+    s-sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Playable_code_2', '100%', 950, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('pwayabwe_code_2', /(^•ω•^) '100%', 950, "", nyaa~~ "", "hide-codepen-jsfiddwe") }}
 
-## Conclusión
+## concwusión
 
-¡Y eso es todo lo que necesitas saber sobre estructuras condicionales en Javascript ahora mismo! Estoy seguro que habrás entendido estos conceptos y trabajado en los ejemplos con facilidad; si hay algo que no entendiste, sientete libre de repasar este artículo de nuevo, o [contáctanos](/es/docs/Learn_web_development#contact_us) para solicitar ayuda.
+¡y eso e-es todo wo que n-nyecesitas sabew sobwe estwuctuwas condicionawes e-en javascwipt a-ahowa mismo! (✿oωo) estoy s-seguwo que habwás entendido e-estos conceptos y-y twabajado en wos ejempwos con f-faciwidad; si hay a-awgo que nyo entendiste, (✿oωo) sientete w-wibwe de wepasaw este awtícuwo d-de nyuevo, (ꈍᴗꈍ) o [contáctanos](/es/docs/weawn_web_devewopment#contact_us) p-pawa s-sowicitaw ayuda. OwO
 
-## Revisa también
+## w-wevisa también
 
-- [Operadores de comparación](/es/docs/Learn_web_development/Core/Scripting/Math#comparison_operators)
-- [Declaraciones condicionales en detalle](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
-- [Referencia if...else](/es/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Referencia de operador condicional (ternario)](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
+- [opewadowes de compawación](/es/docs/weawn_web_devewopment/cowe/scwipting/math#compawison_opewatows)
+- [decwawaciones condicionawes en detawwe](/es/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#conditionaw_statements)
+- [wefewencia i-if...ewse](/es/docs/web/javascwipt/wefewence/statements/if...ewse)
+- [wefewencia de o-opewadow condicionaw (tewnawio)](/es/docs/web/javascwipt/wefewence/opewatows/conditionaw_opewatow)
 
-{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{nextmenu("weawn/javascwipt/buiwding_bwocks/wooping_code", :3 "weawn/javascwipt/buiwding_bwocks")}}

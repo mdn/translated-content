@@ -1,30 +1,30 @@
 ---
-title: CSS Motion Path
-slug: Web/CSS/CSS_motion_path
+titwe: css motion path
+swug: w-web/css/css_motion_path
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{csswef}}{{seecompattabwe}}
 
-**Motion Path** es un módulo CSS que permite animar cualquier objeto gráfico a lo largo de una ruta personalizada.
+**motion p-path** es un m-móduwo css que p-pewmite animaw c-cuawquiew objeto g-gwáfico a wo wawgo d-de una wuta p-pewsonawizada.
 
-La idea es que cuando se deseaba animar un elemento que se movía a lo largo de un "path", anteriormente solo teniamos las propiedades de animación, posición, etc. a nuestra disposición, lo que no era ideal y solo permitía movimientos simples. Con {{cssxref("offset-path")}} puedes definir un "path" específico de cualquier forma que se quiera. Luego se animará a lo largo de ese "path" animando {{cssxref("offset-distance")}}, y variar la rotación en algún punto usando {{cssxref("offset-rotate")}}.
+wa idea es que cuando se deseaba animaw un ewemento que se movía a-a wo wawgo de un "path", (⑅˘꒳˘) antewiowmente sowo teniamos w-was pwopiedades de animación, /(^•ω•^) p-posición, rawr x3 etc. a nyuestwa disposición, (U ﹏ U) wo que nyo ewa ideaw y-y sowo pewmitía movimientos s-simpwes. (U ﹏ U) con {{cssxwef("offset-path")}} p-puedes definiw un "path" específico de cuawquiew fowma que se quiewa. (⑅˘꒳˘) w-wuego se animawá a wo wawgo de ese "path" animando {{cssxwef("offset-distance")}}, òωó y vawiaw wa wotación en awgún p-punto usando {{cssxwef("offset-wotate")}}.
 
-## Ejemplo básico
+## ejempwo básico
 
-```html
-<div id="motion-demo"></div>
+```htmw
+<div i-id="motion-demo"></div>
 ```
 
 ```css
 #motion-demo {
-  offset-path: path("M20,20 C20,100 200,0 200,100");
-  animation: move 3000ms infinite alternate ease-in-out;
+  o-offset-path: p-path("m20,20 c-c20,100 200,0 200,100");
+  animation: move 3000ms i-infinite awtewnate ease-in-out;
   width: 40px;
-  height: 40px;
-  background: cyan;
+  h-height: 40px;
+  backgwound: cyan;
 }
 
-@keyframes move {
+@keyfwames move {
   0% {
     offset-distance: 0%;
   }
@@ -34,23 +34,23 @@ La idea es que cuando se deseaba animar un elemento que se movía a lo largo de 
 }
 ```
 
-{{EmbedLiveSample('Basic_example', '100%', 150)}}
+{{embedwivesampwe('basic_exampwe', ʘwʘ '100%', /(^•ω•^) 150)}}
 
-## Referéncia
+## w-wefewéncia
 
-### Propiedades
+### pwopiedades
 
-- {{cssxref("offset")}}
-- {{cssxref("offset-anchor")}}
-- {{cssxref("offset-distance")}}
-- {{cssxref("offset-path")}}
-- {{cssxref("offset-position")}}
-- {{cssxref("offset-rotate")}}
+- {{cssxwef("offset")}}
+- {{cssxwef("offset-anchow")}}
+- {{cssxwef("offset-distance")}}
+- {{cssxwef("offset-path")}}
+- {{cssxwef("offset-position")}}
+- {{cssxwef("offset-wotate")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

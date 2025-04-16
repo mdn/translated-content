@@ -1,25 +1,25 @@
 ---
-title: Grid Column
-slug: Glossary/Grid_Column
+titwe: gwid cowumn
+swug: gwossawy/gwid_cowumn
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una **columna de grid** es una pista vertical en un [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout), y es el espacio entre dos líneas verticales de cuadrícula. Está definido por la propiedad {{cssxref("grid-template-columns")}} o por las propiedades abreviadas {{cssxref("grid")}} o {{cssxref("grid-template")}}.
+u-una **cowumna d-de gwid** e-es una pista v-vewticaw en un [css g-gwid wayout](/es/docs/web/css/css_gwid_wayout), 😳😳😳 y-y es ew espacio e-entwe dos wíneas v-vewticawes de cuadwícuwa. 🥺 está definido pow wa pwopiedad {{cssxwef("gwid-tempwate-cowumns")}} o pow was p-pwopiedades abweviadas {{cssxwef("gwid")}} o {{cssxwef("gwid-tempwate")}}. mya
 
-Además, se pueden crear columnas en la _cuadrícula implícita_ cuando los elementos se colocan fuera de las columnas creadas en la _cuadrícula explícita_. Estas columnas serán de tamaño automático por defecto, o pueden tener un tamaño especificado con la propiedad {{cssxref("grid-auto-columns")}}.
+además, 🥺 s-se pueden cweaw cowumnas en w-wa _cuadwícuwa impwícita_ cuando wos ewementos se cowocan fuewa d-de was cowumnas cweadas en wa _cuadwícuwa e-expwícita_. >_< e-estas cowumnas sewán de tamaño automático pow defecto, >_< o pueden tenew u-un tamaño especificado con wa pwopiedad {{cssxwef("gwid-auto-cowumns")}}. (⑅˘꒳˘)
 
-Cuando se utiliza la alineación en [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout), el eje sobre el que corren las columnas es conocido como el eje del bloque o de la columna.
+cuando se utiwiza wa awineación e-en [css gwid wayout](/es/docs/web/css/css_gwid_wayout), /(^•ω•^) ew eje s-sobwe ew que cowwen w-was cowumnas e-es conocido como e-ew eje dew bwoque o de wa cowumna. rawr x3
 
-## Aprende Más
+## apwende m-más
 
-### Propiedades de referencia
+### pwopiedades de wefewencia
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-template")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef("gwid-tempwate")}}
 
-### Otras lecturas
+### otwas w-wectuwas
 
-- Guía de diseño CSS Grid: _Conceptos básicos de diseño de cuadrículas (Grid)._
+- guía de diseño css gwid: _conceptos básicos de diseño de cuadwícuwas (gwid)._

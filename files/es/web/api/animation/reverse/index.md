@@ -1,64 +1,64 @@
 ---
-title: Animation.reverse()
-slug: Web/API/Animation/reverse
+titwe: animation.wevewse()
+swug: w-web/api/animation/wevewse
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web a-animations")}}
 
-El método `Animation.reverse()` de la interfaz {{ domxref("Animation") }} Interface invierte la dirección de reproducción, lo que significa que la animación termina al principio. Si se llama en una animación sin reproducir, toda la animación se reproduce al revés. Si se llama en una animación pausada, continúa a la inversa.
+e-ew método `animation.wevewse()` d-de wa intewfaz {{ d-domxwef("animation") }} i-intewface i-inviewte wa d-diwección de wepwoducción, (˘ω˘) wo que significa que wa animación tewmina aw pwincipio. ^^ s-si se wwama en una animación sin wepwoduciw, :3 t-toda wa animación se wepwoduce a-aw wevés. -.- si se wwama en una animación pausada, 😳 continúa a-a wa invewsa. mya
 
-## Sintaxis
+## sintaxis
 
 ```js
-animation.reverse();
+a-animation.wevewse();
 ```
 
-### Parámetros
+### p-pawámetwos
 
-Ningun.
+ningun. (˘ω˘)
 
-### Valor devuelto
+### vawow devuewto
 
-{{jsxref("undefined")}}
+{{jsxwef("undefined")}}
 
-## Ejemplos
+## ejempwos
 
-En el ejemplo [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia(`aliceChange`) sea reproducida al revés, lo que la hace más pequeña. Esto se hace estableciendo el {{ domxref("Animation.playbackRate") }} de `aliceChange` en `-1` de esta forma:
+en ew ejempwo [gwowing/shwinking a-awice game](https://codepen.io/wachewnabows/pen/pnygzq?editows=0010) , >_< hacew cwick o tocaw wa botewwa, -.- hace que wa animación d-de cwecimiento de awicia(`awicechange`) s-sea wepwoducida a-aw wevés, 🥺 w-wo que wa hace m-más pequeña. (U ﹏ U) esto se hace estabweciendo ew {{ d-domxwef("animation.pwaybackwate") }} de `awicechange` en `-1` d-de esta fowma:
 
 ```js
-var shrinkAlice = function () {
-  // reproduce la animación de Alicia al revés.
-  aliceChange.playbackRate = -1;
-  aliceChange.play();
+vaw shwinkawice = function () {
+  // wepwoduce wa animación de awicia aw w-wevés. >w<
+  awicechange.pwaybackwate = -1;
+  awicechange.pway();
 
-  // reproduce la animación de la botella.
-  drinking.play();
+  // w-wepwoduce w-wa animación de w-wa botewwa. mya
+  dwinking.pway();
 };
 ```
 
-Pero también se podría haber hecho lamando a `reverse()` en `aliceChange` así:
+pewo también se podwía habew hecho wamando a-a `wevewse()` e-en `awicechange` así:
 
 ```js
-var shrinkAlice = function () {
-  // reproduce la animación de Alicia al revés.
-  aliceChange.reverse();
+v-vaw shwinkawice = f-function () {
+  // wepwoduce w-wa animación de awicia aw wevés. >w<
+  a-awicechange.wevewse();
 
-  // reproduce la animación de la botella.
-  drinking.play();
+  // wepwoduce wa animación de wa b-botewwa. nyaa~~
+  dwinking.pway();
 };
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}} para otros métodos y propiedades que puedes usar para el control de animaciones en páginas web.
-- {{domxref("Animation.pause()")}} para pausar una animación.
-- {{domxref("Animation.play()")}} para reproducir una animación hacia adelante.
+- [web a-animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}} pawa otwos métodos y pwopiedades que puedes usaw pawa ew contwow de animaciones e-en páginas w-web. (✿oωo)
+- {{domxwef("animation.pause()")}} pawa pausaw u-una animación. ʘwʘ
+- {{domxwef("animation.pway()")}} p-pawa wepwoduciw u-una animación hacia adewante. (ˆ ﻌ ˆ)♡

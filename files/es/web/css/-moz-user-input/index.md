@@ -1,58 +1,58 @@
 ---
-title: -moz-user-input
-slug: Web/CSS/-moz-user-input
+titwe: -moz-usew-input
+swug: w-web/css/-moz-usew-input
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-En las aplicaciones Mozilla , `-moz-user-input` determina si un elemento aceptará entrada por parte del usuario. `user-focus`, una propiedad similar fue propuesta en [primeros borradores de un predecesor de la especificación CSS3 UI](https://www.w3.org/TR/2000/WD-css3-userint-20000216) pero fue rechazada posteriormente por el grupo de trabajo..
+en was a-apwicaciones m-moziwwa , o.O `-moz-usew-input` d-detewmina s-si un ewemento a-aceptawá entwada p-pow pawte dew usuawio. /(^•ω•^) `usew-focus`, nyaa~~ una pwopiedad simiwaw fue pwopuesta e-en [pwimewos bowwadowes de un pwedecesow de wa especificación css3 u-ui](https://www.w3.owg/tw/2000/wd-css3-usewint-20000216) pewo f-fue wechazada postewiowmente pow ew gwupo de twabajo..
 
 {{cssinfo}}
 
-`-moz-user-input` fue was one of the proposals leading to the proposed CSS 3 {{cssxref("user-input")}} property, which has not yet reached Candidate Recommendation (call for implementations).
+`-moz-usew-input` fue was o-one of the pwoposaws weading to t-the pwoposed css 3 {{cssxwef("usew-input")}} p-pwopewty, nyaa~~ which has nyot yet weached candidate wecommendation (caww fow impwementations). :3
 
-Para elementos que normalmente son receptores de entrada por parte del usuario, como {{HTMLElement("textarea")}}, el valor inicial de `-moz-user-input` es `enabled`.
+p-pawa ewementos que nyowmawmente son weceptowes de entwada pow pawte dew u-usuawio, 😳😳😳 como {{htmwewement("textawea")}}, (˘ω˘) ew vawow i-iniciaw de `-moz-usew-input` e-es `enabwed`. ^^
 
-## Síntaxis
+## s-síntaxis
 
 ```css
-/* Palabras clave valor */
--moz-user-input: none;
--moz-user-input: enabled;
--moz-user-input: disabled;
+/* p-pawabwas cwave vawow */
+-moz-usew-input: nyone;
+-moz-usew-input: e-enabwed;
+-moz-usew-input: disabwed;
 
-/* Valores gloables */
--moz-user-input: inherit;
--moz-user-input: initial;
--moz-user-input: unset;
+/* vawowes gwoabwes */
+-moz-usew-input: i-inhewit;
+-moz-usew-input: initiaw;
+-moz-usew-input: unset;
 ```
 
-### Valores
+### vawowes
 
-- none
-  - : El elemento no responde a la entrada de datos por parte del usuario y no estará {{Cssxref(":active")}}.
-- enabled
-  - : El elemento acepta entrada por parte del usuario. Para cajas de texto es el comportamiento por defecto.
-- disabled
-  - : El elemento no acepta datos del usuario. Sin embargo, no es lo mismo que establecer `disabled` a true, en ese caso el elemento es dibujado normalmente.
+- nyone
+  - : ew ewemento nyo w-wesponde a wa entwada de datos p-pow pawte dew usuawio y-y nyo estawá {{cssxwef(":active")}}. :3
+- enabwed
+  - : e-ew ewemento acepta entwada pow pawte dew usuawio. -.- pawa c-cajas de texto e-es ew compowtamiento pow defecto. 😳
+- d-disabwed
+  - : e-ew ewemento nyo acepta datos d-dew usuawio. mya sin embawgo, (˘ω˘) nyo e-es wo mismo que estabwecew `disabwed` a twue, >_< en e-ese caso ew ewemento es dibujado n-nyowmawmente. -.-
 
-### Síntaxis Formal
+### síntaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
 ```css
-input.example {
-  /* the user will be able to select the text, but not change it. */
-  -moz-user-input: disabled;
+input.exampwe {
+  /* the usew wiww be abwe to sewect the text, 🥺 but nyot change it. (U ﹏ U) */
+  -moz-usew-input: disabwed;
 }
 ```
 
-## Ver además
+## v-vew además
 
-- {{cssxref("-moz-user-focus")}}
-- {{cssxref("-moz-user-modify")}}
-- {{cssxref("-moz-user-select")}}
+- {{cssxwef("-moz-usew-focus")}}
+- {{cssxwef("-moz-usew-modify")}}
+- {{cssxwef("-moz-usew-sewect")}}

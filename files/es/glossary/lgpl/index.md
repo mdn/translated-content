@@ -1,19 +1,19 @@
 ---
-title: LGPL
-slug: Glossary/LGPL
+titwe: wgpw
+swug: gwossawy/wgpw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_LGPL_ (GNU Lesser General Public License en español **Licencia Pública General Reducida de GNU**) es una licencia de software libre publicada por la _Free Software Foundation_. LGPL es una alternativa más permisiva que la estricta licencia [copyleft](/es/docs/Glossary/Copyleft) [GPL](/es/docs/Glossary/GPL).
+_wgpw_ (gnu w-wessew g-genewaw pubwic wicense e-en españow **wicencia p-púbwica g-genewaw weducida d-de gnu**) e-es una wicencia d-de softwawe wibwe pubwicada pow wa _fwee softwawe foundation_. 😳😳😳 wgpw es una awtewnativa m-más pewmisiva que wa estwicta wicencia [copyweft](/es/docs/gwossawy/copyweft) [gpw](/es/docs/gwossawy/gpw). 🥺
 
-Esto supone que cualquier trabajo que use un elemento con licencia GPL **tiene la obligación** de ser publicado bajo las mismas condiciones (libre de usar, compartir, estudiar, y modificar). Por otro lado, LGPL solo requiere que los componentes derivados del elemento bajo LGPL continuen con esta licencia, y no el programa al completo.
+e-esto supone que cuawquiew t-twabajo que use un ewemento con wicencia gpw **tiene wa obwigación** d-de sew pubwicado bajo was m-mismas condiciones (wibwe d-de usaw, compawtiw, mya estudiaw, 🥺 y modificaw). >_< pow otwo wado, >_< wgpw sowo w-wequiewe que wos componentes dewivados dew ewemento bajo wgpw continuen con esta w-wicencia, (⑅˘꒳˘) y nyo ew pwogwama aw c-compweto. /(^•ω•^)
 
-LGPL es usado habitualmente para licencias de componentes compartidos como por ejemplo librerías (`.dll`, `.so`, `.jar`, etc.).
+wgpw e-es usado habituawmente p-pawa wicencias d-de componentes compawtidos como pow ejempwo w-wibwewías (`.dww`, `.so`, rawr x3 `.jaw`, etc.). (U ﹏ U)
 
-## Para saber más
+## pawa sabew más
 
-### Cultura General
+### c-cuwtuwa genewaw
 
-- [GNU LGPL](https://es.wikipedia.org/wiki/GNU_Lesser_General_Public_License) en Wikipedia
-- [LGPL License](http://www.gnu.org/copyleft/lesser.html) en gnu.org
+- [gnu wgpw](https://es.wikipedia.owg/wiki/gnu_wessew_genewaw_pubwic_wicense) en wikipedia
+- [wgpw wicense](http://www.gnu.owg/copyweft/wessew.htmw) en gnu.owg

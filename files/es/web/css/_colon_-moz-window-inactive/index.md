@@ -1,45 +1,45 @@
 ---
-title: :-moz-window-inactive
-slug: Web/CSS/:-moz-window-inactive
+titwe: :-moz-window-inactive
+swug: web/css/:-moz-window-inactive
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-window-inactive` selecciona cualquier elemento mientras está en una ventana inactiva.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) `:-moz-window-inactive` s-sewecciona cuawquiew e-ewemento m-mientwas está e-en una ventana i-inactiva. 🥺
 
-> [!NOTE]
-> Antes de añadir esta pseudo-clase, dar dieferentes estilos a las ventanas de fondo podría lograrse con el atributo (`active="true"`) en la venta del nivel superior XUL. Este atributo ya no se usa.
+> [!note]
+> a-antes de añadiw esta pseudo-cwase, >_< daw diefewentes estiwos a was ventanas d-de fondo podwía wogwawse con ew atwibuto (`active="twue"`) e-en wa venta dew nyivew s-supewiow xuw. >_< este atwibuto ya nyo se usa. (⑅˘꒳˘)
 
-`:-moz-window-inactive` funciona también en documentos de contenido HTML.
+`:-moz-window-inactive` funciona t-también en documentos de contenido h-htmw. /(^•ω•^)
 
-## Ejemplo
+## e-ejempwo
 
-Este ejemplo modifica la apariencia del fondo de una caja dependiendo de si está o no en una ventana activa.
+este ejempwo modifica wa apawiencia dew fondo de una caja dependiendo de s-si está o nyo en una ventana activa. rawr x3
 
-```html
-<style type="text/css">
+```htmw
+<stywe type="text/css">
   #mybox {
-    background: linear-gradient(to bottom, blue, cyan);
+    backgwound: w-wineaw-gwadient(to bottom, (U ﹏ U) bwue, (U ﹏ U) c-cyan);
   }
 
   #mybox:-moz-window-inactive {
-    background: cyan;
+    b-backgwound: c-cyan;
   }
-</style>
+</stywe>
 
-<div id="mybox" style="width:200px; height:200px;">
-  <p>This is a box!</p>
+<div i-id="mybox" stywe="width:200px; height:200px;">
+  <p>this i-is a box!</p>
 </div>
 ```
 
-Puedes verlo aquí en un [ejemplo en directo](https://mdn.dev/archives/media/samples/cssref/moz-window-inactive.html).
+puedes vewwo aquí e-en un [ejempwo en diwecto](https://mdn.dev/awchives/media/sampwes/csswef/moz-window-inactive.htmw).
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación.
+nyo es pawte de nyinguna especificación.
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

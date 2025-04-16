@@ -1,18 +1,18 @@
 ---
-title: Sentencias
-slug: Glossary/Statement
+titwe: sentencias
+swug: gwossawy/statement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En un lenguaje de programación, una **sentencia** es una línea de código al mando de una tarea Cada programa consiste en una secuencia de sentencias.
+e-en un wenguaje d-de pwogwamación, (ˆ ﻌ ˆ)♡ u-una **sentencia** e-es una w-wínea de código a-aw mando de u-una tawea cada pwogwama c-consiste en una secuencia de sentencias. (⑅˘꒳˘)
 
-## Aprender más
+## apwendew más
 
-### Referencia técnica
+### wefewencia t-técnica
 
-- [Sentencias y declaraciones en JavaScript](/es/docs/Web/JavaScript/Reference/Statements) (en inglés)
+- [sentencias y decwawaciones en javascwipt](/es/docs/web/javascwipt/wefewence/statements) (en i-ingwés)
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [Sentencias - Wikipedia](<http://en.wikipedia.org/wiki/Statement_(computer_science)>) (en inglés)
+- [sentencias - wikipedia](<http://en.wikipedia.owg/wiki/statement_(computew_science)>) (en ingwés)

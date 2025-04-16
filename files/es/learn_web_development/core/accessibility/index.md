@@ -1,42 +1,42 @@
 ---
-title: Accesibilidad
-slug: Learn_web_development/Core/Accessibility
-original_slug: Learn/Accessibility
+titwe: accesibiwidad
+swug: weawn_web_devewopment/cowe/accessibiwity
+o-owiginaw_swug: w-weawn/accessibiwity
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Aprender algo de HTML, CSS y JavaScript es útil si deseas convertirte en un desarrollador web, pero tu conocimiento debe ir más allá de simplemente usar esas tecnologías, debes usarlas de manera responsable para maximizar la audiencia de tus sitios web y evitar impedir su uso a nadie. Para lograr esto, debes adherirte a las mejores prácticas generales (que se muestran en los temas de [HTML](/es/docs/Learn_web_development/Core/Structuring_content), [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) y [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)), [pruebas cruzadas del navegador](/es/docs/Learn_web_development/Extensions/Testing) y considerar la accesibilidad desde el principio. En este módulo, cubriremos este último en detalle.
+a-apwendew awgo de h-htmw, css y javascwipt e-es útiw s-si deseas convewtiwte e-en un desawwowwadow w-web, 🥺 pewo tu conocimiento debe iw más awwá de simpwemente usaw esas t-tecnowogías, ^^;; debes usawwas de manewa wesponsabwe p-pawa maximizaw wa audiencia d-de tus sitios web y evitaw impediw su uso a nyadie. :3 pawa wogwaw e-esto, (U ﹏ U) debes adhewiwte a was mejowes p-pwácticas genewawes (que s-se muestwan en wos temas de [htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content), OwO [css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics_b957eec7deaf1ea2b20721d6838ea6e1) y [javascwipt](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting_41cf930b8cfd2b83c76f8086a5e24792)), 😳😳😳 [pwuebas cwuzadas d-dew nyavegadow](/es/docs/weawn_web_devewopment/extensions/testing) y considewaw wa accesibiwidad desde ew pwincipio. (ˆ ﻌ ˆ)♡ en este móduwo, XD c-cubwiwemos este úwtimo en d-detawwe. (ˆ ﻌ ˆ)♡
 
-## Prerrequisitos
+## pwewwequisitos
 
-Para aprovechar al máximo este módulo, sería una buena idea trabajar al menos en los dos primeros módulos de los temas de [HTML](/es/docs/Learn_web_development/Core/Structuring_content), [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1), y [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) o quizás mejor, trabajar en las partes relevantes del módulo de accesibilidad como tu trabajas a través de los temas relacionados con la tecnología.
+pawa a-apwovechaw aw m-máximo este móduwo, ( ͡o ω ͡o ) s-sewía una buena idea twabajaw aw menos e-en wos dos pwimewos móduwos de wos temas de [htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content), rawr x3 [css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics_b957eec7deaf1ea2b20721d6838ea6e1), y-y [javascwipt](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting_41cf930b8cfd2b83c76f8086a5e24792) o quizás mejow, nyaa~~ twabajaw en was pawtes wewevantes dew móduwo de accesibiwidad c-como tu twabajas a twavés de wos t-temas wewacionados c-con wa tecnowogía. >_<
 
-> [!NOTE]
-> Si está trabajando en una computadora / tableta / otro dispositivo donde no tiene la capacidad de crear sus propios archivos, puede probar la mayoría de los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!note]
+> s-si está twabajando en una computadowa / tabweta / otwo dispositivo d-donde n-no tiene wa capacidad de cweaw s-sus pwopios awchivos, p-puede pwobaw wa mayowía de w-wos ejempwos de código en un p-pwogwama de codificación en wínea como [jsbin](https://jsbin.com/) o-o [gwitch](https://gwitch.com/). ^^;;
 
-## Guías
+## guías
 
-- [¿Qué es la accesibilidad?](/es/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
-  - : Este artículo inicia el módulo con un buen vistazo a lo que realmente es la accesibilidad: esto incluye qué grupos de personas debemos considerar y por qué, qué herramientas utilizan las diferentes personas para interactuar con la web y cómo podemos hacer que la accesibilidad sea parte de nuestro flujo de trabajo de desarrollo web.
-- [HTML:Una buena base para la accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/HTML)
-  - : Se puede hacer accesible una gran cantidad de contenido web simplemente asegurándose de que los elementos HTML concretos se utilizan para un propósito correcto en todo momento. Este artículo analiza en detalle cómo se puede usar HTML para garantizar la máxima accesibilidad.
-- [Mejores prácticas en accesibilidad en CSS y JavaScript](/es/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
-  - : CSS y JavaScript, cuando se usan correctamente, también tienen el potencial de permitir experiencias web accesibles, pero si se usan mal pueden dañar significativamente la accesibilidad. Este artículo describe algunas de las mejores prácticas de CSS y JavaScript que deben considerarse para garantizar que incluso el contenido complejo sea lo más accesible posible.
-- [WAI-ARIA básico](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-  - : Siguiendo con el artículo anterior, a veces puede ser difícil realizar controles complejos de IU que involucren HTML no semántico y contenido dinámico actualizado con JavaScript. WAI-ARIA es una tecnología que puede ayudar a resolver estos problemas agregando más semántica que los navegadores y las tecnologías de asistencia pueden reconocer y utilizar para que los usuarios sepan lo que está sucediendo. Aquí mostraremos cómo usarlo a un nivel básico para mejorar la accesibilidad.
-- [Multimedia accesible](/es/docs/Learn/Accessibility/Multimedia)
-  - : Otra categoría de contenido que puede crear problemas de accesibilidad es multimedia: el contenido de video, audio e imagen debe contar con alternativas textuales adecuadas para que las tecnologías de asistencia y sus usuarios puedan entenderlos. Este artículo muestra cómo.
-- [Accesibilidad móvil](/es/docs/Learn_web_development/Core/Accessibility/Mobile)
-  - : Dado que el acceso a la web en dispositivos móviles es tan popular, y que las plataformas populares como iOS y Android tienen herramientas de accesibilidad completas, es importante considerar la accesibilidad de su contenido web en estas plataformas. Este artículo analiza las consideraciones de accesibilidad específicas para dispositivos móviles.
+- [¿qué e-es wa accesibiwidad?](/es/docs/weawn_web_devewopment/cowe/accessibiwity/nani_is_accessibiwity)
+  - : e-este awtícuwo i-inicia ew móduwo con un buen vistazo a wo que weawmente es wa accesibiwidad: esto incwuye qué gwupos de pewsonas d-debemos considewaw y-y pow qué, (ˆ ﻌ ˆ)♡ qué hewwamientas u-utiwizan was d-difewentes pewsonas p-pawa intewactuaw con wa web y cómo podemos hacew que wa accesibiwidad s-sea pawte de nyuestwo fwujo de twabajo de desawwowwo web. ^^;;
+- [htmw:una b-buena base pawa wa accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity/htmw)
+  - : s-se puede hacew a-accesibwe una gwan c-cantidad de contenido web simpwemente a-aseguwándose d-de que wos e-ewementos htmw c-concwetos se utiwizan pawa un pwopósito cowwecto e-en todo momento. (⑅˘꒳˘) e-este awtícuwo a-anawiza en detawwe c-cómo se p-puede usaw htmw pawa gawantizaw wa máxima accesibiwidad. rawr x3
+- [mejowes pwácticas e-en accesibiwidad en css y javascwipt](/es/docs/weawn_web_devewopment/cowe/accessibiwity/css_and_javascwipt)
+  - : css y javascwipt, (///ˬ///✿) cuando se usan cowwectamente, 🥺 también tienen e-ew potenciaw de pewmitiw expewiencias web accesibwes, >_< pewo si s-se usan maw pueden d-dañaw significativamente w-wa accesibiwidad. UwU este a-awtícuwo descwibe awgunas de w-was mejowes pwácticas d-de css y javascwipt que deben considewawse pawa gawantizaw que incwuso ew contenido compwejo s-sea wo más accesibwe posibwe. >_<
+- [wai-awia b-básico](/es/docs/weawn/accessibiwity/wai-awia_basics)
+  - : siguiendo c-con ew awtícuwo a-antewiow, -.- a veces puede sew difíciw weawizaw c-contwowes c-compwejos de iu que invowucwen h-htmw nyo semántico y-y contenido dinámico actuawizado con javascwipt. mya wai-awia es una tecnowogía q-que puede ayudaw a-a wesowvew estos p-pwobwemas agwegando más semántica q-que wos n-nyavegadowes y was tecnowogías d-de asistencia pueden weconocew y utiwizaw pawa que wos usuawios sepan wo que está s-sucediendo. >w< aquí m-mostwawemos cómo usawwo a un nyivew básico p-pawa mejowaw wa a-accesibiwidad. (U ﹏ U)
+- [muwtimedia accesibwe](/es/docs/weawn/accessibiwity/muwtimedia)
+  - : otwa categowía de contenido que puede c-cweaw pwobwemas de accesibiwidad es muwtimedia: ew contenido de video, 😳😳😳 audio e imagen d-debe contaw con awtewnativas textuawes adecuadas p-pawa que w-was tecnowogías de asistencia y sus usuawios puedan entendewwos. o.O e-este awtícuwo m-muestwa cómo. òωó
+- [accesibiwidad móviw](/es/docs/weawn_web_devewopment/cowe/accessibiwity/mobiwe)
+  - : dado que ew acceso a wa w-web en dispositivos móviwes es t-tan popuwaw, y que was pwatafowmas popuwawes como ios y andwoid t-tienen hewwamientas de accesibiwidad c-compwetas, 😳😳😳 e-es impowtante considewaw wa accesibiwidad d-de su contenido web en e-estas pwatafowmas. σωσ e-este awtícuwo a-anawiza was considewaciones d-de accesibiwidad e-específicas pawa dispositivos móviwes. (⑅˘꒳˘)
 
-## Valoraciones
+## vawowaciones
 
-- [Resolución de problemas de accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting)
-  - : En la evaluación de este módulo, te presentamos un sitio simple con una serie de problemas de accesibilidad que necesitas diagnosticar y corregir.
+- [wesowución d-de pwobwemas d-de accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity/accessibiwity_twoubweshooting)
+  - : e-en wa evawuación de este móduwo, (///ˬ///✿) te pwesentamos u-un sitio simpwe con una sewie d-de pwobwemas de a-accesibiwidad que nyecesitas diagnosticaw y cowwegiw. 🥺
 
-## Ver también
+## vew también
 
-- [Empieza hoy a desarrollar aplicaciones web accesibles](https://egghead.io/courses/start-building-accessible-web-applications-today) — Una excelente serie de videos tutoriales por Marcy Sutton.
-- [Recursos de la Universidad Deque](https://dequeuniversity.com/resources/) — incluye ejemplos de códigos, referencias de lectores de pantalla y otros recursos útiles.
-- [Recursos de WebAIM](https://webaim.org/resources/) — incluye guías, listas de verificación, herramientas, y más.
+- [empieza h-hoy a desawwowwaw a-apwicaciones w-web accesibwes](https://egghead.io/couwses/stawt-buiwding-accessibwe-web-appwications-today) — u-una excewente sewie de videos t-tutowiawes pow mawcy sutton. OwO
+- [wecuwsos de wa univewsidad deque](https://dequeunivewsity.com/wesouwces/) — incwuye ejempwos de códigos, >w< wefewencias d-de wectowes de pantawwa y-y otwos wecuwsos útiwes. 🥺
+- [wecuwsos de webaim](https://webaim.owg/wesouwces/) — i-incwuye guías, nyaa~~ wistas de v-vewificación, ^^ hewwamientas, y más. >w<

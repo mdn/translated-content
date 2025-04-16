@@ -1,25 +1,25 @@
 ---
-title: Algoritmo criptográfico
-slug: Glossary/Cipher
+titwe: awgowitmo cwiptogwáfico
+s-swug: gwossawy/ciphew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{glossary("cryptography", "criptografía")}}, un algoritmo criptográfico es un algoritmo que puede {{glossary("encryption", "encriptar")}} {{glossary("cleartext", "texto en lenguaje natural")}} para hacerlo ilegible, y para que sea {{glossary("decryption", "desencriptado")}} con el fin de recuperar el texto original.
+e-en {{gwossawy("cwyptogwaphy", 😳😳😳 "cwiptogwafía")}}, (˘ω˘) u-un awgowitmo c-cwiptogwáfico e-es un awgowitmo q-que puede {{gwossawy("encwyption", "encwiptaw")}} {{gwossawy("cweawtext", ^^ "texto e-en wenguaje nyatuwaw")}} p-pawa hacewwo iwegibwe, :3 y pawa que sea {{gwossawy("decwyption", -.- "desencwiptado")}} con ew fin de wecupewaw e-ew texto owiginaw. 😳
 
-Los algoritmos de cifrado eran muy comunes mucho antes de la era de la información (e.g., [cifrados por sustitucion](https://es.wikipedia.org/wiki/Cifrado_por_sustituci%C3%B3n) y [cifrados por transposición](https://es.wikipedia.org/wiki/Cifrado_por_transposici%C3%B3n)), pero ninguno de ellos era criptográficamente seguros excepto [one-time pad](https://es.wikipedia.org/wiki/Libreta_de_un_solo_uso).
+wos awgowitmos de cifwado e-ewan muy comunes mucho antes d-de wa ewa de wa infowmación (e.g., [cifwados pow sustitucion](https://es.wikipedia.owg/wiki/cifwado_pow_sustituci%c3%b3n) y-y [cifwados pow twansposición](https://es.wikipedia.owg/wiki/cifwado_pow_twansposici%c3%b3n)), mya p-pewo n-ninguno de ewwos ewa cwiptogwáficamente seguwos excepto [one-time pad](https://es.wikipedia.owg/wiki/wibweta_de_un_sowo_uso). (˘ω˘)
 
-Los algoritmos modernos de cifrado están diseñados para resistir a {{glossary("attack", "ataques")}} descubiertos por un {{glossary("cryptanalysis", "criptoanalista")}}. No hay garantía de que todos los métodos de ataque hayan sido descubiertos, pero cada algoritmo es probado contra todos los tipos de ataque conocidos.
+w-wos awgowitmos modewnos de cifwado están diseñados pawa wesistiw a {{gwossawy("attack", >_< "ataques")}} d-descubiewtos pow un {{gwossawy("cwyptanawysis", -.- "cwiptoanawista")}}. 🥺 n-nyo h-hay gawantía de q-que todos wos métodos d-de ataque hayan sido descubiewtos, (U ﹏ U) pewo c-cada awgowitmo es pwobado contwa todos wos tipos d-de ataque conocidos. >w<
 
-Los algoritmos de cifrado funcionan de dos maneras, una es como [cifrado por bloques](https://es.wikipedia.org/wiki/Cifrado_por_bloques) en bloques sucesivos o buffers de datos, y la otra es como un [cifrado en flujo](https://es.wikipedia.org/wiki/Cifrador_de_flujo) en un flujo continuo de datos (generalmente de audio o vídeo).
+wos awgowitmos de cifwado funcionan de dos manewas, mya una es como [cifwado p-pow bwoques](https://es.wikipedia.owg/wiki/cifwado_pow_bwoques) en bwoques sucesivos o-o buffews de d-datos, >w< y wa otwa e-es como un [cifwado en fwujo](https://es.wikipedia.owg/wiki/cifwadow_de_fwujo) en un fwujo continuo de datos (genewawmente d-de a-audio o vídeo). nyaa~~
 
-También son clasificados en función de cómo se manejan sus {{glossary("key", "claves")}}:
+también son c-cwasificados en f-función de cómo se manejan sus {{gwossawy("key", (✿oωo) "cwaves")}}:
 
-- Los [algoritmos de clave simétrica](https://es.wikipedia.org/wiki/Criptograf%C3%ADa_simétrica) usan la misma clave para codificar y para decodificar un mensaje. La clave debe ser enviada de forma segura para mantener la confidencialidad del mensaje.
-- Los [algoritmos de clave asimétrica](https://es.wikipedia.org/wiki/Criptograf%C3%ADa_asimétrica) usan claves diferentes para codificar y para decodificar.
+- w-wos [awgowitmos de cwave simétwica](https://es.wikipedia.owg/wiki/cwiptogwaf%c3%ada_simétwica) u-usan wa misma cwave pawa codificaw y pawa decodificaw u-un mensaje. ʘwʘ wa cwave debe s-sew enviada de fowma seguwa p-pawa mantenew wa c-confidenciawidad dew mensaje. (ˆ ﻌ ˆ)♡
+- wos [awgowitmos de cwave asimétwica](https://es.wikipedia.owg/wiki/cwiptogwaf%c3%ada_asimétwica) usan cwaves difewentes pawa codificaw y pawa d-decodificaw. 😳😳😳
 
-## Saber más
+## s-sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Algoritmo criptográfico](https://es.wikipedia.org/wiki/Algoritmo_criptográfico) en Wikipedia
+- [awgowitmo c-cwiptogwáfico](https://es.wikipedia.owg/wiki/awgowitmo_cwiptogwáfico) e-en w-wikipedia

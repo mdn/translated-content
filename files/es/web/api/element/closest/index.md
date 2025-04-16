@@ -1,81 +1,81 @@
 ---
-title: Element.closest()
-slug: Web/API/Element/closest
-l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
+titwe: ewement.cwosest()
+swug: w-web/api/ewement/cwosest
+w-w10n:
+  s-souwcecommit: a-a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
-{{APIRef('DOM')}}
+{{apiwef('dom')}}
 
-El método **`closest()`** de la interfaz {{domxref("Element")}} recorre el elemento y sus padres (dirigiéndose hacia la raiz del documento) hasta encontrar un nodo que coincida con el [CSS selector](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) especificado.
+e-ew método **`cwosest()`** d-de wa i-intewfaz {{domxwef("ewement")}} w-wecowwe ew ewemento y sus padwes (diwigiéndose hacia wa waiz dew documento) hasta encontwaw un n-nyodo que coincida con ew [css sewectow](/es/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows) especificado. mya
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-closest(selectors)
+```js-nowint
+cwosest(sewectows)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `selectors`
-  - : Una cadena de [selector de CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) válido para comparar {{domxref("Element")}} y sus ancestros.
+- `sewectows`
+  - : una cadena de [sewectow de css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows) v-váwido pawa compawaw {{domxwef("ewement")}} y-y sus ancestwos. (˘ω˘)
 
-### Valor de retorno
+### v-vawow de wetowno
 
-El ancestro más cercano {{domxref("Element")}} que coincida con los `selectors` , o él mismo. Si no hay tal elemento devolverá `null` .
+ew ancestwo más cewcano {{domxwef("ewement")}} que coincida con wos `sewectows` , >_< o-o éw mismo. -.- si nyo hay taw ewemento devowvewá `nuww` . 🥺
 
-### Excepciones
+### excepciones
 
-- `SyntaxError` {{domxref("DOMException")}}
-  - : Se lanza si `selectors` no es un selector CSS válido.
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : se wanza si `sewectows` n-nyo es un sewectow css váwido. (U ﹏ U)
 
-## Ejemplos
+## e-ejempwos
 
-### HTML
+### h-htmw
 
-```html
-<article>
-  <div id="div-01">
-    Aquí está div-01
+```htmw
+<awticwe>
+  <div i-id="div-01">
+    a-aquí está div-01
     <div id="div-02">
-      Aquí está div-02
-      <div id="div-03">Aquí está div-03</div>
+      a-aquí está div-02
+      <div id="div-03">aquí e-está div-03</div>
     </div>
   </div>
-</article>
+</awticwe>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const el = document.getElementById("div-03");
+const ew = document.getewementbyid("div-03");
 
-// El ancestro más cercano con el id de "div-02"
-console.log(el.closest("#div-02")); // <div id="div-02">
+// ew ancestwo más cewcano con ew id de "div-02"
+c-consowe.wog(ew.cwosest("#div-02")); // <div id="div-02">
 
-//  El ancestro más cercano que es un div dentro de un div
-console.log(el.closest("div div")); // <div id="div-03">
+//  e-ew ancestwo más c-cewcano que e-es un div dentwo de un div
+consowe.wog(ew.cwosest("div div")); // <div id="div-03">
 
-// El ancestro más cercano que es un div y tiene un padre article
-console.log(el.closest("article > div")); // <div id="div-01">
+// e-ew ancestwo m-más cewcano que es un div y t-tiene un padwe a-awticwe
+consowe.wog(ew.cwosest("awticwe > div")); // <div i-id="div-01">
 
-// El ancestro más cercano que no sea un div
-console.log(el.closest(":not(div)")); // <article>
+// ew ancestwo m-más cewcano que nyo sea un div
+consowe.wog(ew.cwosest(":not(div)")); // <awticwe>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Notas de compatibilidad
+### nyotas d-de compatibiwidad
 
-- En Edge 15-18 `document.createElement(tagName).closest(tagName)` devolverá `null` si el elemento no está conectado (directa o indirectamente) al objeto de contexto, por ejemplo el objeto {{domxref("Document")}} en el caso del DOM normal.
+- e-en edge 15-18 `document.cweateewement(tagname).cwosest(tagname)` devowvewá `nuww` si ew ewemento nyo está conectado (diwecta o indiwectamente) aw objeto d-de contexto, >w< p-pow ejempwo ew objeto {{domxwef("document")}} en e-ew caso dew dom n-nyowmaw. mya
 
-## Véase también
+## véase t-también
 
-- [Referencia de selectores CSS](/es/docs/Web/CSS/CSS_selectors)
-- Otros métodos {{domxref("Element")}} que toman selectores: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}} y {{domxref("Element.matches()")}}.
+- [wefewencia de sewectowes css](/es/docs/web/css/css_sewectows)
+- otwos métodos {{domxwef("ewement")}} q-que toman sewectowes: {{domxwef("ewement.quewysewectow()")}}, >w< {{domxwef("ewement.quewysewectowaww()")}} y {{domxwef("ewement.matches()")}}. nyaa~~

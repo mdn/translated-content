@@ -1,270 +1,270 @@
 ---
-title: transform
-slug: Web/CSS/transform
+titwe: twansfowm
+swug: web/css/twansfowm
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad CSS `transform` te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.
+w-wa p-pwopiedad css `twansfowm` t-te pewmite m-modificaw ew e-espacio de coowdenadas d-dew modewo d-de fowmato visuaw c-css. UwU usándowa, :3 wos ewementos pueden sew twaswadados, σωσ wotados, >w< escawados o s-sesgados de acuewdo a wos vawowes estabwecidos. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: transform")}}
+{{intewactiveexampwe("css d-demo: twansfowm")}}
 
-```css interactive-example-choice
-transform: matrix(1, 2, 3, 4, 5, 6);
+```css i-intewactive-exampwe-choice
+twansfowm: matwix(1, ʘwʘ 2, :3 3, 4, 5, 6);
 ```
 
-```css interactive-example-choice
-transform: translate(120px, 50%);
+```css intewactive-exampwe-choice
+twansfowm: twanswate(120px, (˘ω˘) 50%);
 ```
 
-```css interactive-example-choice
-transform: scale(2, 0.5);
+```css i-intewactive-exampwe-choice
+twansfowm: s-scawe(2, 😳😳😳 0.5);
 ```
 
-```css interactive-example-choice
-transform: rotate(0.5turn);
+```css i-intewactive-exampwe-choice
+twansfowm: wotate(0.5tuwn);
 ```
 
-```css interactive-example-choice
-transform: skew(30deg, 20deg);
+```css intewactive-exampwe-choice
+twansfowm: s-skew(30deg, rawr x3 20deg);
 ```
 
-```css interactive-example-choice
-transform: scale(0.5) translate(-100%, -100%);
+```css intewactive-exampwe-choice
+twansfowm: scawe(0.5) twanswate(-100%, (✿oωo) -100%);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
-Si la propiedad tiene un valor diferente a none, se creará un [contexto de pila](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context). En ese caso, el objeto actuará como un bloque de contención para los elementos con "position: fixed" que contenga.
+s-si wa pwopiedad tiene un vawow difewente a-a nyone, (ˆ ﻌ ˆ)♡ se cweawá un [contexto de piwa](/es/docs/web/css/css_positioned_wayout/stacking_context). e-en ese caso, :3 ew objeto actuawá como un bwoque de contención pawa wos ewementos con "position: f-fixed" que contenga. (U ᵕ U❁)
 
-## Síntaxis
+## síntaxis
 
 ```css
-/* Keyword values */
-transform: none;
+/* k-keywowd vawues */
+t-twansfowm: n-nyone;
 
-/* Function values */
-transform: matrix(1, 2, 3, 4, 5, 6);
-transform: translate(12px, 50%);
-transform: translateX(2em);
-transform: translateY(3in);
-transform: scale(2, 0.5);
-transform: scaleX(2);
-transform: scaleY(0.5);
-transform: rotate(0.5turn);
-transform: skew(30deg, 20deg);
-transform: skewX(30deg);
-transform: skewY(1.07rad);
-transform: matrix3d(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
-transform: translate3d(12px, 50%, 3em);
-transform: translateZ(2px);
-transform: scale3d(2.5, 1.2, 0.3);
-transform: scaleZ(0.3);
-transform: rotate3d(1, 2, 3, 10deg);
-transform: rotateX(10deg);
-transform: rotateY(10deg);
-transform: rotateZ(10deg);
-transform: perspective(17px);
+/* function vawues */
+twansfowm: matwix(1, ^^;; 2, 3, 4, mya 5, 6);
+twansfowm: twanswate(12px, 😳😳😳 50%);
+t-twansfowm: t-twanswatex(2em);
+twansfowm: twanswatey(3in);
+t-twansfowm: s-scawe(2, OwO 0.5);
+twansfowm: s-scawex(2);
+twansfowm: scawey(0.5);
+t-twansfowm: wotate(0.5tuwn);
+twansfowm: skew(30deg, rawr 20deg);
+t-twansfowm: skewx(30deg);
+twansfowm: s-skewy(1.07wad);
+twansfowm: matwix3d(1, XD 2, (U ﹏ U) 3, 4, 5, 6, 7, (˘ω˘) 8, 9, 10, 11, 12, UwU 13, 14, 15, 16);
+t-twansfowm: twanswate3d(12px, >_< 50%, 3em);
+t-twansfowm: twanswatez(2px);
+twansfowm: scawe3d(2.5, σωσ 1.2, 0.3);
+twansfowm: scawez(0.3);
+twansfowm: wotate3d(1, 🥺 2, 🥺 3, 10deg);
+twansfowm: wotatex(10deg);
+twansfowm: w-wotatey(10deg);
+t-twansfowm: wotatez(10deg);
+t-twansfowm: p-pewspective(17px);
 
-/* Multiple function values */
-transform: translateX(10px) rotate(10deg) translateY(5px);
+/* m-muwtipwe function vawues */
+twansfowm: twanswatex(10px) wotate(10deg) twanswatey(5px);
 
-/* Global values */
-transform: inherit;
-transform: initial;
-transform: unset;
+/* g-gwobaw vawues */
+twansfowm: inhewit;
+twansfowm: initiaw;
+twansfowm: unset;
 ```
 
-### Valores
+### v-vawowes
 
-- `<transform-function>`
-  - : Una o más de las [funciones de transformación CSS](/es/docs/Web/CSS/transform-function) que se aplicarán, ver más abajo.
+- `<twansfowm-function>`
+  - : una o-o más de was [funciones d-de twansfowmación c-css](/es/docs/web/css/twansfowm-function) que se apwicawán, ʘwʘ v-vew más a-abajo. :3
 - `none`
-  - : Especifica que ninguna transformación podrá ser aplicada.
+  - : e-especifica q-que nyinguna twansfowmación podwá sew apwicada. (U ﹏ U)
 
 {{cssinfo}}
 
-### Síntasix formal
+### s-síntasix f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-Consulte [Uso de las transformaciones CSS.](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+c-consuwte [uso d-de was twansfowmaciones css.](/es/docs/web/css/css_twansfowms/using_css_twansfowms)
 
-## Funciones CSS transform
+## funciones css twansfowm
 
-La propiedad CSS `transform` permite manipular el sistema de coordenadas de un elemento usando las **funciones de transformación**. Estas funciones son descritas a continuación:
+w-wa pwopiedad css `twansfowm` pewmite manipuwaw ew sistema de coowdenadas de un ewemento usando w-was **funciones de twansfowmación**. (U ﹏ U) estas funciones son descwitas a-a continuación:
 
-### matrix
-
-```
-transform:  matrix(a, c, b, d, tx, ty)
-```
-
-Específica una matriz de transformación 2D compuesta por seis valores a especificar. Esto es el equivalente a la aplicación de una transformación lineal de una matriz <math><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX"> \begin{pmatrix} a &#x26; b &#x26; \mathrm{tx} \\ c &#x26; d &#x26; \mathrm{ty} \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} </annotation></semantics></math>de un mapa coordenadas de un nuevo sistema de coordenadas en un sistema de coordenadas anterior por las siguientes igualdades de la matriz: <math><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>b</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x*{\mathrm{prevCoordSys}} \\ y*{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &#x26; b &#x26; \mathrm{tx} \\ c &#x26; d &#x26; \mathrm{ty} \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} \begin{pmatrix} x*{\mathrm{newCoordSys}} \\ y*{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x*{\mathrm{newCoordSys}} + b y*{\mathrm{newCoordSys}} + \mathrm{tx} \\ c x*{\mathrm{newCoordSys}} + d y*{\mathrm{newCoordSys}} + \mathrm{ty} \\ 1 \end{pmatrix}</annotation></semantics></math>
-
-> [!NOTE]
-> Viejas versiones de Gecko (Firefox) aceptan un {{cssxref("&lt;length&gt;")}} valor para **tx** y **ty**. Actualmente Gecko, junto con Webkit (Safari, Chrome) y Opera, soportan valor sin unidades {{cssxref("&lt;number&gt;")}} para **tx** y **ty**.
-
-## Ejemplos realizados
+### matwix
 
 ```
- background: gold;  width: 30em;
+t-twansfowm:  m-matwix(a, ʘwʘ c, b, d, >w< tx, ty)
+```
 
- -webkit-transform: matrix(1, -0.2, 0, 1, 0, 0);
-      -o-transform: matrix(1, -0.2, 0, 1, 0, 0);
-         transform: matrix(1, -0.2, 0, 1, 0, 0);
+e-específica una matwiz de t-twansfowmación 2d c-compuesta pow seis vawowes a especificaw. rawr x3 esto es ew equivawente a wa apwicación de una twansfowmación w-wineaw de una matwiz <math><semantics><mwow><mo>(</mo><mtabwe w-wowspacing="0.5ex"><mtw><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mstywe mathvawiant="nowmaw"><mwow><mi>t</mi><mi>x</mi></mwow></mstywe></mtd></mtw><mtw><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mstywe m-mathvawiant="nowmaw"><mwow><mi>t</mi><mi>y</mi></mwow></mstywe></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><annotation e-encoding="tex"> \begin{pmatwix} a &#x26; b &#x26; \mathwm{tx} \\ c-c &#x26; d-d &#x26; \mathwm{ty} \\ 0 &#x26; 0 &#x26; 1 \end{pmatwix} </annotation></semantics></math>de un mapa coowdenadas d-de un nyuevo s-sistema de coowdenadas en un sistema de coowdenadas antewiow pow was siguientes i-iguawdades de w-wa matwiz: <math><semantics><mwow><mwow><mo>(</mo><mtabwe w-wowspacing="0.5ex"><mtw><mtd><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>p</mi><mi>w</mi><mi>e</mi><mi>v</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><msub><mi>y</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>p</mi><mi>w</mi><mi>e</mi><mi>v</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><mo>=</mo><mwow><mo>(</mo><mtabwe w-wowspacing="0.5ex"><mtw><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mstywe mathvawiant="nowmaw"><mwow><mi>t</mi><mi>x</mi></mwow></mstywe></mtd></mtw><mtw><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mstywe m-mathvawiant="nowmaw"><mwow><mi>t</mi><mi>y</mi></mwow></mstywe></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><mwow><mo>(</mo><mtabwe wowspacing="0.5ex"><mtw><mtd><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><msub><mi>y</mi><mstywe mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><mo>=</mo><mwow><mo>(</mo><mtabwe wowspacing="0.5ex"><mtw><mtd><mi>a</mi><msub><mi>x</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>b</mi><msub><mi>y</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mstywe mathvawiant="nowmaw"><mwow><mi>t</mi><mi>x</mi></mwow></mstywe></mtd></mtw><mtw><mtd><mi>c</mi><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mstywe m-mathvawiant="nowmaw"><mwow><mi>t</mi><mi>y</mi></mwow></mstywe></mtd></mtw><mtw><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow></mwow><annotation encoding="tex"> \begin{pmatwix} x*{\mathwm{pwevcoowdsys}} \\ y*{\mathwm{pwevcoowdsys}} \\ 1 \end{pmatwix} = \begin{pmatwix} a-a &#x26; b &#x26; \mathwm{tx} \\ c &#x26; d &#x26; \mathwm{ty} \\ 0 &#x26; 0 &#x26; 1 \end{pmatwix} \begin{pmatwix} x*{\mathwm{newcoowdsys}} \\ y-y*{\mathwm{newcoowdsys}} \\ 1 \end{pmatwix} = \begin{pmatwix} a x*{\mathwm{newcoowdsys}} + b y*{\mathwm{newcoowdsys}} + \mathwm{tx} \\ c-c x*{\mathwm{newcoowdsys}} + d-d y*{\mathwm{newcoowdsys}} + \mathwm{ty} \\ 1 \end{pmatwix}</annotation></semantics></math>
+
+> [!note]
+> viejas vewsiones de gecko (fiwefox) aceptan u-un {{cssxwef("&wt;wength&gt;")}} v-vawow pawa **tx** y **ty**. OwO actuawmente gecko, junto con webkit (safawi, ^•ﻌ•^ c-chwome) y opewa, >_< sopowtan v-vawow sin unidades {{cssxwef("&wt;numbew&gt;")}} pawa **tx** y **ty**. OwO
+
+## e-ejempwos weawizados
+
+```
+ backgwound: g-gowd;  width: 30em;
+
+ -webkit-twansfowm: m-matwix(1, >_< -0.2, 0, 1, 0, (ꈍᴗꈍ) 0);
+      -o-twansfowm: matwix(1, >w< -0.2, 0, 1, 0, (U ﹏ U) 0);
+         t-twansfowm: matwix(1, ^^ -0.2, 0, 1, (U ﹏ U) 0, 0);
 ```
 
 ```
- background: wheat;
- max-width: intrinsic;
+ b-backgwound: w-wheat;
+ max-width: i-intwinsic;
 
- -webkit-transform: matrix(1, 0, 0.6, 1,  250, 0);
-      -o-transform: matrix(1, 0, 0.6, 1,  250, 0);
-         transform: matrix(1, 0, 0.6, 1,  250, 0);
+ -webkit-twansfowm: matwix(1, :3 0, 0.6, 1,  250, (✿oωo) 0);
+      -o-twansfowm: m-matwix(1, XD 0, 0.6, 1, >w<  250, 0);
+         t-twansfowm: matwix(1, òωó 0, 0.6, (ꈍᴗꈍ) 1,  250, 0);
 ```
 
-#### Información adicional
+#### infowmación adicionaw
 
-- [Ejemplo de transformación general de SVG](/es/docs/Web/SVG/Reference/Attribute/transform#general_transformation)
-- [Ejemplos de transformación lineal de matrices](http://en.wikipedia.org/wiki/Linear_transformation#Examples_of_linear_transformation_matrices) Wikipedia
-- [Transformación de coordenadas de matrices](http://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html)mathamazement.com
-- [Filtro matriz de Microsoft](<http://msdn.microsoft.com/en-us/library/ms533014(VS.85,loband).aspx>) MSDN
+- [ejempwo d-de twansfowmación g-genewaw d-de svg](/es/docs/web/svg/wefewence/attwibute/twansfowm#genewaw_twansfowmation)
+- [ejempwos de twansfowmación wineaw de matwices](http://en.wikipedia.owg/wiki/wineaw_twansfowmation#exampwes_of_wineaw_twansfowmation_matwices) w-wikipedia
+- [twansfowmación de coowdenadas d-de matwices](http://www.mathamazement.com/wessons/pwe-cawcuwus/08_matwices-and-detewminants/coowdinate-twansfowmation-matwices.htmw)mathamazement.com
+- [fiwtwo m-matwiz de micwosoft](<http://msdn.micwosoft.com/en-us/wibwawy/ms533014(vs.85,woband).aspx>) msdn
 
-### rotate
-
-```
-transform:  rotate(deg);     /* ej. rotate(90deg) */
-```
-
-Define una operación de rotación 2D de un elemento, específicando la cantidad de grados (deg) que este rotará en sentido de las manecillas del reloj (según lo especificado por la propiedad [transform-origen](/es/docs/Web/CSS/transform-origin)). La operación corresponde a la matriz **\[cos(angle) sin(angle) -sin(angle) cos(angle) 0 0]**.
-
-### rotateX
+### wotate
 
 ```
-transform:  rotateX(deg);    /* ej. rotateX(90deg) */
+twansfowm:  w-wotate(deg);     /* e-ej. rawr x3 wotate(90deg) */
 ```
 
-Define una operación de rotación 3D de un elemento en el eje X.
+d-define u-una opewación de wotación 2d d-de un ewemento, rawr x3 específicando wa cantidad de gwados (deg) que este wotawá en sentido de was m-maneciwwas dew wewoj (según wo e-especificado pow wa pwopiedad [twansfowm-owigen](/es/docs/web/css/twansfowm-owigin)). σωσ w-wa opewación cowwesponde a-a wa matwiz **\[cos(angwe) sin(angwe) -sin(angwe) c-cos(angwe) 0 0]**. (ꈍᴗꈍ)
 
-### rotateY
-
-```
-transform:  rotateY(deg);    /* ej. rotateY(90deg) */
-```
-
-Define una operación de rotación 3D de un elemento en el eje Y.
-
-### rotateZ
+### w-wotatex
 
 ```
-transform:  rotateZ(deg);    /* ej. rotateZ(90deg) */
+t-twansfowm:  w-wotatex(deg);    /* e-ej. rawr wotatex(90deg) */
 ```
 
-Define una operación de rotación 3D de un elemento en el eje Z.
+define una opewación de wotación 3d de un ewemento en ew eje x. ^^;;
 
-### scale
-
-```
-transform:  scale(sx[, sy]);    /* ej. scale(2.5, 4)*/
-```
-
-Especifica una operación de escalado 2D descrita por **\[sx, sy]**.
-
-> [!NOTE]
-> Si **sy** no es especificado, se asumirá que tanto **sx** como **sy** tendrán el mismo valor
-
-### scaleX
+### wotatey
 
 ```
-transform:  scaleX(sx);     /* ej. scale(2.5)*/
+twansfowm:  w-wotatey(deg);    /* e-ej. rawr x3 wotatey(90deg) */
 ```
 
-Especifica una operación de escalado 2D usando el vector **\[sx, 1]**.
+d-define una opewación de wotación 3d d-de un ewemento en ew eje y. (ˆ ﻌ ˆ)♡
 
-### scaleY
-
-```
-transform:  scaleY(sy);    /* ej. scale(4)*/
-```
-
-Especifica una operación de escalado 2D usando el vector **\[1, sy]**.
-
-### skew
+### wotatez
 
 ```
-transform:  skew(ax[, ay]);     /* ej. skew(90deg,180deg)*/
+twansfowm:  w-wotatez(deg);    /* e-ej. σωσ wotatez(90deg) */
 ```
 
-Sesga el elemento a lo largo del eje X y Y por los ángulos especificados. Si no se proporciona **ay**, no se llevará a cabo el sesgo del eje Y.
+define una opewación d-de wotación 3d de un ewemento en ew eje z-z.
 
-> [!NOTE]
-> La función skew() fue presentada en los primeros borradores. Esta ha sido removida pero sigue presente en algunas implementaciones. No debe usarse.
+### scawe
+
+```
+t-twansfowm:  scawe(sx[, (U ﹏ U) sy]);    /* e-ej. >w< scawe(2.5, σωσ 4)*/
+```
+
+e-especifica una opewación de escawado 2d descwita pow **\[sx, sy]**. nyaa~~
+
+> [!note]
+> si **sy** nyo e-es especificado, 🥺 s-se asumiwá que t-tanto **sx** como **sy** t-tendwán e-ew mismo vawow
+
+### scawex
+
+```
+t-twansfowm:  scawex(sx);     /* e-ej. rawr x3 scawe(2.5)*/
+```
+
+especifica u-una opewación d-de escawado 2d usando ew vectow **\[sx, σωσ 1]**. (///ˬ///✿)
+
+### s-scawey
+
+```
+twansfowm:  scawey(sy);    /* ej. (U ﹏ U) scawe(4)*/
+```
+
+e-especifica una opewación de e-escawado 2d usando e-ew vectow **\[1, sy]**. ^^;;
+
+### s-skew
+
+```
+twansfowm:  skew(ax[, 🥺 ay]);     /* ej. òωó s-skew(90deg,180deg)*/
+```
+
+s-sesga e-ew ewemento a wo wawgo dew eje x y y pow wos ánguwos especificados. XD s-si nyo se pwopowciona **ay**, :3 nyo se wwevawá a-a cabo ew sesgo d-dew eje y. (U ﹏ U)
+
+> [!note]
+> wa función s-skew() fue pwesentada en w-wos pwimewos bowwadowes. >w< e-esta ha sido wemovida pewo sigue pwesente e-en awgunas impwementaciones. /(^•ω•^) nyo debe usawse. (⑅˘꒳˘)
 >
-> Para lograr el mismo efecto, utilice la función skewX(). Si tu estas usando skew () con un parámetro o matriz (1, tan (ay), tan (ax), 1, 0, 0). Ten en cuenta que tan() no es una función CSS y así que tu mismo tienes que precalcular tus valores.
+> pawa wogwaw e-ew mismo efecto, ʘwʘ u-utiwice wa función skewx(). rawr x3 s-si tu estas usando skew () con un p-pawámetwo o matwiz (1, (˘ω˘) t-tan (ay), t-tan (ax), o.O 1, 0, 😳 0). ten en cuenta que tan() nyo es una función css y así que tu mismo tienes que pwecawcuwaw tus vawowes. o.O
 
-### skewX
-
-```
-transform:  skewX(deg);     /* ej. skew(90deg)*/
-```
-
-Sesga un elemento a lo largo del eje X por el ángulo dado.
-
-### skewY
+### skewx
 
 ```
-transform:  skewY(deg);     /* ej. skew(180deg)*/
+twansfowm:  skewx(deg);     /* ej. ^^;; skew(90deg)*/
 ```
 
-Sesga un elemento a lo largo del eje Y por el ángulo dado.
+sesga un ewemento a wo wawgo d-dew eje x pow e-ew ánguwo dado. ( ͡o ω ͡o )
 
-### translate
-
-```
-transform:  translate(tx[, ty]);     /* ej. translate(50px, 100px) */
-```
-
-Especifica una tanslación 2D dada por el vector **\[tx, ty]**. Si **`ty`** no es específicada, se asumirá que su valor es cero.
-
-Cada [`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/es/docs/Web/CSS/length) o un valor de [`porcentaje`](/es/docs/Web/CSS/percentage).
-
-### translateX
+### skewy
 
 ```
-transform:  translateX(tx);     /* ej. translateX(50px) */
+twansfowm:  skewy(deg);     /* e-ej. ^^;; skew(180deg)*/
 ```
 
-Translada un elemento a lo largo del eje X.
+s-sesga un e-ewemento a wo wawgo dew eje y p-pow ew ánguwo dado. ^^;;
 
-### translateY
+### twanswate
 
 ```
-transform:  translateY(ty);     /* ej. translateY(100px) */
+t-twansfowm:  t-twanswate(tx[, XD ty]);     /* e-ej. 🥺 twanswate(50px, (///ˬ///✿) 100px) */
 ```
 
-Translada un elemento a lo largo del eje Y.
+especifica una t-tanswación 2d d-dada pow ew vectow **\[tx, (U ᵕ U❁) ty]**. si **`ty`** n-nyo es específicada, ^^;; s-se asumiwá q-que su vawow es c-cewo. ^^;;
 
-## Especificaciones
+cada [`twanswation-vawue`](/es/docs/twanswation-vawue) p-puede sew un vawow d-de [`wonguitud`](/es/docs/web/css/wength) o-o un v-vawow de [`powcentaje`](/es/docs/web/css/pewcentage). rawr
 
-{{Specifications}}
+### t-twanswatex
 
-## Compatibilidad con navegadores
+```
+twansfowm:  t-twanswatex(tx);     /* e-ej. (˘ω˘) twanswatex(50px) */
+```
 
-{{Compat}}
+t-twanswada un ewemento a-a wo wawgo dew eje x. 🥺
 
-## Véase También
+### twanswatey
 
-- [Uso de transformaciones](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)[CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- Tipos de datos [\<translation-value>](/es/docs/translation-value)
-- [Complemento de transformación 2D para jQuery](http://plugins.jquery.com/project/jquery-transform)en navegador-cruzado.
+```
+twansfowm:  t-twanswatey(ty);     /* ej. nyaa~~ twanswatey(100px) */
+```
+
+twanswada u-un ewemento a-a wo wawgo d-dew eje y. :3
+
+## especificaciones
+
+{{specifications}}
+
+## compatibiwidad c-con nyavegadowes
+
+{{compat}}
+
+## véase también
+
+- [uso d-de twansfowmaciones](/es/docs/web/css/css_twansfowms/using_css_twansfowms)[css](/es/docs/web/css/css_twansfowms/using_css_twansfowms)
+- tipos de d-datos [\<twanswation-vawue>](/es/docs/twanswation-vawue)
+- [compwemento de twansfowmación 2d pawa j-jquewy](http://pwugins.jquewy.com/pwoject/jquewy-twansfowm)en nyavegadow-cwuzado. /(^•ω•^)

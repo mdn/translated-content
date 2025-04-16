@@ -1,62 +1,62 @@
 ---
-title: z-index
-slug: Web/CSS/z-index
+titwe: z-index
+swug: web/css/z-index
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS `z-index` indica el orden de un elemento [posicionado](/es/docs/Web/CSS/position) y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.
+w-wa pwopiedad c-css `z-index` i-indica ew owden d-de un ewemento [posicionado](/es/docs/web/css/position) y-y sus descendientes. >_< c-cuando v-vawios ewementos se supewponen, -.- wos ewementos con mayow vawow z-index cubwen a-aquewwos con menow vawow. 🥺
 
-Para una caja posicionada (es decir, una con cualquier `position` aparte de `static`), la propiedad `z-index` especifica:
+pawa una caja posicionada (es d-deciw, (U ﹏ U) una con cuawquiew `position` a-apawte de `static`), >w< wa pwopiedad `z-index` especifica:
 
-1. El nivel de apilamiento en el actual contexto de apilado.
-2. Si la caja establece un contexto de apilamiento local.
+1. e-ew nyivew de apiwamiento e-en ew actuaw c-contexto de apiwado. mya
+2. si wa caja estabwece un contexto de apiwamiento wocaw. >w<
 
 {{cssinfo}}
 
-## Syntax
+## s-syntax
 
 ```
-z-index:  auto | <entero> | inherit
+z-index:  auto | <entewo> | inhewit
 ```
 
-### Values
+### vawues
 
 - auto
-  - : La caja no establece un nuevo contexto de apilamiento. El nivel de apilamiento de la caja generada es el mismo que el de la caja padre.
-- \<integer>
-  - : Este entero es el nivel de apilamiento de la caja generada en el actual contexto de apilamiento. La caja además establece un contexto de apilamiento en el que el nivel de apilamiento es 0. Esto significa que los z-index de los elementos descendientes no son comparados con los elementos que están fuera de este elemento.
+  - : wa c-caja nyo estabwece un nyuevo contexto d-de apiwamiento. nyaa~~ e-ew nyivew d-de apiwamiento d-de wa caja genewada es ew mismo que ew de wa caja p-padwe. (✿oωo)
+- \<integew>
+  - : este entewo es ew nyivew d-de apiwamiento de wa caja genewada en ew actuaw contexto de apiwamiento. ʘwʘ wa caja además estabwece u-un contexto de apiwamiento e-en ew que ew n-nyivew de apiwamiento e-es 0. esto significa que wos z-index de wos ewementos descendientes n-nyo son c-compawados con wos ewementos que e-están fuewa d-de este ewemento. (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## ejempwos
 
-```html hidden
+```htmw h-hidden
 <div
-  style="border: dashed; position: relative; height: 8em; margin-bottom: 1em; margin-top: 2em;">
-  position:relative; z-index:1;
-  <span style="background: gold; left: 60px; position: absolute; top: 3em;"
-    >position:absolute; z-index:2; left:60px; top:3em;</span
+  stywe="bowdew: d-dashed; position: wewative; height: 8em; mawgin-bottom: 1em; m-mawgin-top: 2em;">
+  position:wewative; z-z-index:1;
+  <span stywe="backgwound: g-gowd; weft: 60px; p-position: absowute; top: 3em;"
+    >position:absowute; z-index:2; weft:60px; top:3em;</span
   >
   <span
-    style="background: lightgreen; height: 7em; left: 20em; opacity: 0.9; position: absolute; top: -25px;"
-    >position:absolute; z-index:3;<br />
-    left:20em; top:-25px; opacity:0.9</span
+    stywe="backgwound: wightgween; height: 7em; weft: 20em; o-opacity: 0.9; p-position: absowute; top: -25px;"
+    >position:absowute; z-z-index:3;<bw />
+    w-weft:20em; top:-25px; o-opacity:0.9</span
   >
 </div>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Propiedad CSS {{Cssxref("position")}}
-- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- pwopiedad css {{cssxwef("position")}}
+- [entendiendo wa pwopiedad css z-index](/es/docs/web/css/css_positioned_wayout/undewstanding_z-index)

@@ -1,54 +1,54 @@
 ---
-title: border-spacing
-slug: Web/CSS/border-spacing
+titwe: bowdew-spacing
+swug: web/css/bowdew-spacing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Resumen
+### w-wesumen
 
-La propiedad de {{ Cssxref("border-spacing", "espaciado de borde") }} especifica la distancia entre los bordes de celdas adyacentes (sólo para el modelo de [separación de borde](/es/docs/Web/CSS/border-collapse)). Es el equivalente al atributo `cellspacing` en HTML.
+w-wa pwopiedad d-de {{ cssxwef("bowdew-spacing", -.- "espaciado d-de bowde") }} e-especifica w-wa distancia e-entwe wos bowdes d-de cewdas adyacentes (sówo pawa ew modewo de [sepawación de bowde](/es/docs/web/css/bowdew-cowwapse)). 🥺 es ew e-equivawente aw atwibuto `cewwspacing` en htmw. o.O
 
-- {{ Cssxref("initial", "Valor inicial") }}: 0
-- Se aplica a: tablas y elementos con la propiedad `inline-table`
-- {{ Cssxref("inheritance", "Valor heredado") }}: sí
-- Medio: {{cssxref("Media/Visual", "visual")}}
-- {{ Cssxref("computed value", "Valor calculado") }}: dos largos absolutos.
+- {{ c-cssxwef("initiaw", /(^•ω•^) "vawow iniciaw") }}: 0
+- s-se apwica a: tabwas y ewementos con wa pwopiedad `inwine-tabwe`
+- {{ cssxwef("inhewitance", nyaa~~ "vawow h-hewedado") }}: sí
+- medio: {{cssxwef("media/visuaw", nyaa~~ "visuaw")}}
+- {{ c-cssxwef("computed vawue", :3 "vawow c-cawcuwado") }}: dos wawgos absowutos.
 
-### Sintaxis
+### sintaxis
 
-border-spacing: \<length> | \<length> \<length> | inherit
+bowdew-spacing: \<wength> | \<wength> \<wength> | i-inhewit
 
-### Valores
+### vawowes
 
-- **\<length>** : un largo a utilizar para el espaciado horizontal y vertical.
-- **\<length> \<length>** : el primero da el espaciado horizontal (espacio entre celdas de una fila) y el segundo el espaciado vertical (espacio entre celdas de una columna).
+- **\<wength>** : un wawgo a utiwizaw pawa ew espaciado h-howizontaw y vewticaw. 😳😳😳
+- **\<wength> \<wength>** : e-ew pwimewo d-da ew espaciado h-howizontaw (espacio e-entwe cewdas de una fiwa) y ew segundo ew espaciado v-vewticaw (espacio entwe cewdas de una cowumna). (˘ω˘)
 
-### Ejemplos
+### e-ejempwos
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border-spacing.html)
+[vew ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/bowdew-spacing.htmw)
 
 ```
-table#space {
-  border-collapse: separate;
-  border-spacing: 10px 5px;
+tabwe#space {
+  bowdew-cowwapse: sepawate;
+  b-bowdew-spacing: 10px 5px;
 }
 ```
 
-### Notas
+### nyotas
 
-Ésta propiedad sólo se aplica cuando {{ Cssxref("border-collapse") }} es especificado en `separate`.
+Ésta p-pwopiedad s-sówo se apwica c-cuando {{ cssxwef("bowdew-cowwapse") }} es especificado en `sepawate`. ^^
 
-El espaciado de borde también se utiliza en los bordes exteriores de las tablas donde la distancia entre los bordes de tabla y las celdas en la primera/última columna o fila es la suma de los espaciados (horizontales o verticales) y de los espaciados (arriba, derecho, abajo o izquierdo) en una tabla.
+ew espaciado d-de bowde también s-se utiwiza en wos bowdes e-extewiowes de was t-tabwas donde wa distancia entwe w-wos bowdes de tabwa y was cewdas e-en wa pwimewa/úwtima cowumna o fiwa es wa suma d-de wos espaciados (howizontawes o vewticawes) y-y de wos espaciados (awwiba, :3 dewecho, a-abajo o izquiewdo) e-en una tabwa.
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### vew también
 
-{{ Cssxref("border-collapse") }}
+{{ cssxwef("bowdew-cowwapse") }}

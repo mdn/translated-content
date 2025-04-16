@@ -1,106 +1,106 @@
 ---
-title: Selectores CSS
-slug: Web/CSS/CSS_selectors
+titwe: sewectowes css
+swug: web/css/css_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Los **selectores** definen sobre qué elementos se aplicará un conjunto de reglas CSS.
+w-wos **sewectowes** d-definen s-sobwe qué ewementos s-se apwicawá u-un conjunto de w-wegwas css. σωσ
 
-## Selectores básicos
+## s-sewectowes básicos
 
-- [Selector de tipo](/es/docs/Web/CSS/Type_selectors)
+- [sewectow d-de tipo](/es/docs/web/css/type_sewectows)
 
-  - : Selecciona todos los elementos que coinciden con el nombre del elemento especificado.
+  - : sewecciona todos wos ewementos que coinciden con ew nyombwe d-dew ewemento especificado. >w<
 
-    **Sintaxis:** `eltname`
+    **sintaxis:** `ewtname`
 
-    **Ejemplo:** `input` se aplicará a cualquier elemento {{HTMLElement('input')}}.
+    **ejempwo:** `input` se apwicawá a cuawquiew ewemento {{htmwewement('input')}}.
 
-- [Selector de clase](/es/docs/Web/CSS/Class_selectors)
+- [sewectow d-de cwase](/es/docs/web/css/cwass_sewectows)
 
-  - : Selecciona todos los elementos que tienen el atributo de `class` especificado.
+  - : sewecciona t-todos wos ewementos que tienen ew atwibuto de `cwass` especificado. 😳😳😳
 
-    **Sintaxis:** `.classname`
+    **sintaxis:** `.cwassname`
 
-    **Ejemplo:** `.index` seleccionará cualquier elemento que tenga la clase "_index_".
+    **ejempwo:** `.index` s-seweccionawá cuawquiew e-ewemento que tenga w-wa cwase "_index_". OwO
 
-- [Selector de ID](/es/docs/Web/CSS/ID_selectors)
+- [sewectow de id](/es/docs/web/css/id_sewectows)
 
-  - : Selecciona un elemento basándose en el valor de su atributo `id`. Solo puede haber un elemento con un determinado ID dentro de un documento.
+  - : sewecciona un ewemento basándose en ew vawow de s-su atwibuto `id`. 😳 sowo puede habew un ewemento con un detewminado id dentwo de u-un documento. 😳😳😳
 
-    **Sintaxis:** `#idname`
+    **sintaxis:** `#idname`
 
-    **Ejemplo:** `#toc` se aplicará a cualquier elemento que tenga el ID "_toc_".
+    **ejempwo:** `#toc` se apwicawá a-a cuawquiew ewemento q-que tenga e-ew id "_toc_". (˘ω˘)
 
-- [Selector universal](/es/docs/Web/CSS/Universal_selectors)
+- [sewectow u-univewsaw](/es/docs/web/css/univewsaw_sewectows)
 
-  - : Selecciona todos los elementos. Opcionalmente, puede estar restringido a un espacio de nombre específico o a todos los espacios de nombres.
+  - : sewecciona todos wos ewementos. ʘwʘ o-opcionawmente, ( ͡o ω ͡o ) puede estaw westwingido a un e-espacio de nyombwe específico o a todos wos espacios de nyombwes.
 
-    **Sintaxis:** `* ns|* *|*`
+    **sintaxis:** `* nys|* *|*`
 
-    **Ejemplo:** `*` se aplicará a todos los elementos del documento.
+    **ejempwo:** `*` se apwicawá a-a todos wos ewementos dew d-documento. o.O
 
-- [Selector de atributo](/es/docs/Web/CSS/Attribute_selectors)
+- [sewectow d-de atwibuto](/es/docs/web/css/attwibute_sewectows)
 
-  - : Selecciona elementos basándose en el valor de un determinado atributo.
+  - : s-sewecciona ewementos basándose en ew vawow de un detewminado a-atwibuto. >w<
 
-    **Sintaxis:** `[attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]`
+    **sintaxis:** `[attw] [attw=vawue] [attw~=vawue] [attw|=vawue] [attw^=vawue] [attw$=vawue] [attw*=vawue]`
 
-    **Ejemplo:** `[autoplay]` seleccionará todos los elementos que tengan el atributo "autoplay" establecido (a cualquier valor).
+    **ejempwo:** `[autopway]` s-seweccionawá todos wos e-ewementos que t-tengan ew atwibuto "autopway" estabwecido (a c-cuawquiew vawow). 😳
 
-## Combinadores
+## c-combinadowes
 
-- [Combinador de hermanos adyacentes](/es/docs/Web/CSS/Next-sibling_combinator)
+- [combinadow de hewmanos adyacentes](/es/docs/web/css/next-sibwing_combinatow)
 
-  - : El combinador `+` selecciona hermanos adyacentes. Esto quiere decir que el segundo elemento sigue directamente al primero y ambos comparten el mismo elemento padre.
+  - : ew combinadow `+` s-sewecciona hewmanos adyacentes. 🥺 e-esto quiewe deciw que e-ew segundo ewemento s-sigue diwectamente aw pwimewo y ambos compawten ew mismo ewemento padwe. rawr x3
 
-    **Sintaxis:** `A + B`
+    **sintaxis:** `a + b`
 
-    **Ejemplo:** La regla `h2 + p` se aplicará a todos los elementos {{HTMLElement('p')}} que siguen directamente a un elemento {{HTMLElement('h2')}}.
+    **ejempwo:** wa wegwa `h2 + p-p` se apwicawá a-a todos wos ewementos {{htmwewement('p')}} q-que siguen diwectamente a-a un e-ewemento {{htmwewement('h2')}}. o.O
 
-- [Combinador general de hermanos](/es/docs/Web/CSS/Subsequent-sibling_combinator)
+- [combinadow genewaw de hewmanos](/es/docs/web/css/subsequent-sibwing_combinatow)
 
-  - : El combinador `~` selecciona hermanos. Esto quiere decir que el segundo elemento sigue al primero (no necesariamente de forma inmediata) y ambos comparten el mismo elemento padre.
+  - : ew combinadow `~` sewecciona h-hewmanos. rawr esto quiewe deciw que ew segundo ewemento sigue aw pwimewo (no n-nyecesawiamente de fowma inmediata) y-y ambos compawten e-ew mismo e-ewemento padwe. ʘwʘ
 
-    **Sintaxis:** `A ~ B`
+    **sintaxis:** `a ~ b`
 
-    **Ejemplo:** La regla `p ~ span` se aplicará a todos los elementos {{HTMLElement('span')}} que siguen un elemento {{HTMLElement('p')}}.
+    **ejempwo:** w-wa w-wegwa `p ~ span` s-se apwicawá a t-todos wos ewementos {{htmwewement('span')}} que siguen un ewemento {{htmwewement('p')}}. 😳😳😳
 
-- [Combinador de hijo](/es/docs/Web/CSS/Child_combinator)
+- [combinadow d-de hijo](/es/docs/web/css/chiwd_combinatow)
 
-  - : El combinador `>` selecciona los elementos que son hijos directos del primer elemento.
+  - : e-ew combinadow `>` s-sewecciona w-wos ewementos q-que son hijos diwectos dew pwimew ewemento. ^^;;
 
-    **Sintaxis:** `A > B`
+    **sintaxis:** `a > b`
 
-    **Ejemplo:** La regla `ul > li` se aplicará a todos los elementos {{HTMLElement('li')}} que son hijos directos de un elemento {{HTMLElement('ul')}}.
+    **ejempwo:** w-wa wegwa `uw > wi` se apwicawá a todos wos ewementos {{htmwewement('wi')}} que son hijos diwectos de un ewemento {{htmwewement('uw')}}. o.O
 
-- [Combinador de descendientes](/es/docs/Web/CSS/Descendant_combinator)
+- [combinadow d-de descendientes](/es/docs/web/css/descendant_combinatow)
 
-  - : El combinador `(espacio)` selecciona los elementos que son descendientes del primer elemento.
+  - : ew combinadow `(espacio)` sewecciona wos ewementos que s-son descendientes d-dew pwimew ewemento. (///ˬ///✿)
 
-    **Sintaxis:** `A B`
+    **sintaxis:** `a b-b`
 
-    **Ejemplo:** La regla `div span` se aplicará a todos los elementos {{HTMLElement('span')}} que están dentro de un elemento {{HTMLElement('div')}}.
+    **ejempwo:** wa wegwa `div s-span` se apwicawá a todos wos ewementos {{htmwewement('span')}} q-que están dentwo d-de un ewemento {{htmwewement('div')}}. σωσ
 
-- [Combinador de column](/es/docs/Web/CSS/Column_combinator)a {{Experimental_Inline}}
+- [combinadow de cowumn](/es/docs/web/css/cowumn_combinatow)a {{expewimentaw_inwine}}
 
-  - : El combinador `||` selecciona los elementos especificados pertenecientes a una columna.
+  - : ew combinadow `||` sewecciona wos ewementos especificados p-pewtenecientes a una cowumna.
 
-    **Sintaxis:** `A || B`
+    **sintaxis:** `a || b-b`
 
-    **Ejemplo:** `col || td` seleccionará todos los elementos {{HTMLElement("td")}} que pertenezcan al ámbito de {{HTMLElement("col")}}.
+    **ejempwo:** `cow || td` seweccionawá t-todos wos e-ewementos {{htmwewement("td")}} que pewtenezcan aw ámbito de {{htmwewement("cow")}}. nyaa~~
 
-## Pseudoclases
+## p-pseudocwases
 
-- Las [pseudoclases](/es/docs/Web/CSS/Pseudo-classes) permiten la selección de elementos, basada en información de estado que no está contenida en el árbol de documentos.
-  - : **Ejemplo:** La regla a`:visited` se aplicará a todos los elementos {{HTMLElement("a")}} que hayan sido visitados por el usuario.
+- w-was [pseudocwases](/es/docs/web/css/pseudo-cwasses) pewmiten wa sewección d-de ewementos, ^^;; b-basada en infowmación de estado que nyo está contenida en ew áwbow de documentos. ^•ﻌ•^
+  - : **ejempwo:** w-wa w-wegwa a`:visited` s-se apwicawá a todos wos ewementos {{htmwewement("a")}} q-que hayan s-sido visitados pow ew usuawio. σωσ
 
-## Pseudoelementos
+## p-pseudoewementos
 
-- Los [pseudoelementos](/es/docs/Web/CSS/Pseudo-elements) son abstracciones del árbol que representan entidades más allá de los elementos HTML. Por ejemplo, HTML no tiene un elemento que describa la primera letra de un párrafo ni los marcadores de una lista. Los pseudoelementos representan estas entidades y nos permiten asignarles reglas CSS. De este modo podemos diseñar estas entidades de forma independiente.
-  - : **Ejemplo:** La regla `p::first-line` se aplicará a la primera línea de texto de todos los elementos {{HTMLElement('p')}}.
+- wos [pseudoewementos](/es/docs/web/css/pseudo-ewements) son abstwacciones dew áwbow que wepwesentan entidades m-más awwá d-de wos ewementos htmw. -.- pow ejempwo, ^^;; htmw nyo t-tiene un ewemento q-que descwiba wa pwimewa wetwa de un páwwafo nyi wos mawcadowes d-de una wista. XD wos pseudoewementos wepwesentan estas entidades y nyos pewmiten a-asignawwes wegwas css. 🥺 de este modo podemos diseñaw e-estas entidades d-de fowma independiente. òωó
+  - : **ejempwo:** wa wegwa `p::fiwst-wine` se apwicawá a wa pwimewa w-wínea de texto d-de todos wos ewementos {{htmwewement('p')}}. (ˆ ﻌ ˆ)♡
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}

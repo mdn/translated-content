@@ -1,78 +1,78 @@
 ---
-title: Preguntas frecuentes
-slug: Learn_web_development/Howto
-original_slug: Learn/Common_questions
+titwe: pweguntas fwecuentes
+swug: w-weawn_web_devewopment/howto
+o-owiginaw_swug: w-weawn/common_questions
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Esta sección del área de aprendizaje está diseñada para proveer respuestas a preguntas frecuentes que pueden surgir, las cuales no son necesariamente parte del núcleo estructurado de formas de aprendizaje (ej. los artículos de aprendizaje de [HTML](/es/docs/Learn_web_development/Core/Structuring_content) o [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)). Éstos artículos están diseñados para trabajar por su cuenta.
+e-esta s-sección dew áwea d-de apwendizaje e-está diseñada p-pawa pwoveew wespuestas a pweguntas fwecuentes que pueden suwgiw, (U ﹏ U) was cuawes n-nyo son nyecesawiamente pawte dew nyúcweo estwuctuwado d-de fowmas de apwendizaje (ej. (˘ω˘) w-wos awtícuwos de apwendizaje de [htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content) o [css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics_b957eec7deaf1ea2b20721d6838ea6e1)). (ꈍᴗꈍ) Éstos a-awtícuwos están diseñados p-pawa twabajaw p-pow su cuenta. /(^•ω•^)
 
-## Cómo funciona la Web
+## cómo funciona wa web
 
-Esta sección cubre los mecanismos de la web -preguntas relativas al conocimiento general del ecosistema de la Web y cómo funciona.
+esta sección cubwe wos mecanismos d-de wa web -pweguntas wewativas aw conocimiento genewaw dew ecosistema de wa web y-y cómo funciona. >_<
 
-- [¿Cómo funciona la Web?](/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
+- [¿cómo funciona wa web?](/es/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk)
 
-  - : **Internet** es la columna vertebral de la Web, la infraestructura técnica que hace la Web posible. Básicamente, Internet es una gran red de ordenadores que se comunican todos entre sí. Este artículo explica cómo funciona, en un nivel básico.
+  - : **intewnet** e-es wa cowumna v-vewtebwaw de w-wa web, σωσ wa infwaestwuctuwa t-técnica que hace wa web posibwe. ^^;; básicamente, 😳 i-intewnet es una gwan wed de owdenadowes q-que se comunican todos entwe sí. >_< este awtícuwo expwica cómo funciona, -.- en un nyivew básico. UwU
 
-- [¿Cúal es la diferencia entre página web, sitio web, servidor web y motor de búsqueda?](/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
-  - : En este artículo se describen varios conceptos relacionados con la web: páginas web, sitios web, servidores web y motores de búsqueda. Estos términos son confundidos habitualmente por los novatos en la Web, o son incorrectamente usados. ¡ Vamos a aprender que significa cada uno de ellos !
-- [¿Qué es una URL?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-  - : Con {{Glossary("Hypertext")}} y {{Glossary("HTTP")}}, URL es uno de los conceptos clave de la Web. Es el mecanismo usado por {{Glossary("Browser","browsers")}} para recoger cualquier recurso publicado en la Web.
-- [¿Qué es un nombre de dominio?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
-  - : Los nombres de dominio son una parte clave de la infraestructura de Internet. Éstos proveen direcciones entendibles por humanos para cualquier servidor web disponible en Internet.
-- [¿Qué es un servidor web?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-  - : El término "servidor Web" puede referirse a hardware o software que sirve sitios web a clientes de la Web - o a ambos trabajando conjuntamente. En este artículo veremos cómo funcionan los servidores web, y por qué son importantes.
-- [¿Qué son los hipervínculos?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks)
-  - : En este artículo, veremos qué son los hipervínculos y por qué importan.
+- [¿cúaw es w-wa difewencia entwe página web, :3 s-sitio web, sewvidow w-web y motow d-de búsqueda?](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/bwowsing_the_web)
+  - : en este awtícuwo se descwiben vawios c-conceptos wewacionados c-con wa web: páginas web, σωσ s-sitios web, >w< sewvidowes w-web y motowes de búsqueda. (ˆ ﻌ ˆ)♡ e-estos téwminos son confundidos h-habituawmente pow wos nyovatos en wa web, ʘwʘ o s-son incowwectamente usados. :3 ¡ v-vamos a apwendew que significa cada u-uno de ewwos ! (˘ω˘)
+- [¿qué e-es una uww?](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww)
+  - : con {{gwossawy("hypewtext")}} y {{gwossawy("http")}}, uww es uno de wos conceptos cwave de wa w-web. 😳😳😳 es ew mecanismo u-usado pow {{gwossawy("bwowsew","bwowsews")}} pawa wecogew cuawquiew w-wecuwso p-pubwicado en wa w-web. rawr x3
+- [¿qué es un nyombwe de dominio?](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_domain_name)
+  - : wos nyombwes d-de dominio son una pawte cwave de wa infwaestwuctuwa de intewnet. (✿oωo) Éstos p-pwoveen diwecciones entendibwes p-pow humanos pawa c-cuawquiew sewvidow w-web disponibwe en intewnet. (ˆ ﻌ ˆ)♡
+- [¿qué e-es un s-sewvidow web?](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_web_sewvew)
+  - : ew t-téwmino "sewvidow w-web" puede wefewiwse a hawdwawe o softwawe q-que siwve sitios w-web a cwientes d-de wa web - o a a-ambos twabajando c-conjuntamente. :3 en este awtícuwo vewemos cómo funcionan wos sewvidowes w-web, (U ᵕ U❁) y pow qué son impowtantes. ^^;;
+- [¿qué son wos hipewvíncuwos?](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_awe_hypewwinks)
+  - : en este awtícuwo, mya vewemos qué son wos h-hipewvíncuwos y pow qué impowtan. 😳😳😳
 
-## Herramientas y Organización
+## hewwamientas y owganización
 
-Preguntas relacionadas con las herramientas/software que puedes usar para hacer páginas web.
+p-pweguntas w-wewacionadas c-con was hewwamientas/softwawe que p-puedes usaw pawa hacew páginas w-web. OwO
 
-- [¿Cúanto cuesta hacer algo en la web?](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-  - : Cuando tú vas a lanzar un sitio web, no deberías malgastar nada de tus costes. En este artículo explicamos cuánto cuesta todo y qué consigues por lo que estás pagando (o no pagando).
-- [¿Qué programas necesito para crear un sitio web?](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-  - : En este artículo explicamos qué componentes software necesitas para editar, subir o ver un sitio web.
-- [¿Qué editores hay disponibles?](/es/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)
-  - : En este artículo nos centramos en algunas cosas para reflexionar cuando elegimos e instalamos un editor de texto para el desarrollo web.
-- [¿Qué son las herramientas de desarrollador del navegador?](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
-  - : Todos los navegadores proveen un set de herramientas de desarrollo para depurar HTML, CSS y otros códigos web. Este artículo explica cómo usar las funciones básicas de herramientas de desarrollador de tu navegador.
-- [¿Cómo configuro un ambiente de trabajo básico?](/es/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
-  - : Cuado trabaje en un proyecto web, querrá probarlo localmente antes de mostrarlo al mundo. Alguno tipos de código requieren un servidor para probarlos, y en este artículo le mostraremos cómo configurar uno. También cubriremos cómo implementar una estructura escalable para que sus archivos se mantengan organizados, incluso cuando su proyecto crezca.
-- [¿Cómo se asegura de que su sitio web funciona correctamente?](/es/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly)
-  - : Así que ha publicado su sitio web en línea, ¡muy bien! ¿Pero estás seguro de que funciona correctamente? Este artículo proporciona algunos pasos básicos para la solución de problemas.
-- [¿Cómo se configura un servidor local de pruebas?](/es/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
-  - : Este artículo explica cómo configurar un servidor local de pruebas simple en su máquina y los conceptos básicos sobre cómo usarlo.
-- [¿Cómo subir archivos a un servidor web?](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
-  - : Este artículo muestra cómo publicar su sitio en línea con herramientas FTP, una de las formas más comunes de obtener un sitio web en línea para que otros puedan acceder a él desde sus computadoras.
-- [¿Cómo uso las páginas de](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)[GitHub?](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)
-  - : Este artículo proporciona una guía básica para publicar contenido utilizando la función gh-pages de GitHub.
-- [¿Cómo alojar tu sitio web en Google App Engine?](/es/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
-  - : ¿Buscas un lugar donde alojar tu sitio web? Aquí hay una guía paso a paso para alojar tu sitio web en Google App Engine.
-- [¿Qué herramientas están disponibles para depurar y mejorar el rendimiento del sitio web?](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
-  - : Este conjunto de artículos le muestra cómo utilizar las herramientas de desarrollo en Firefox para depurar y mejorar el rendimiento de su sitio web, utilizando las herramientas para comprobar el uso de la memoria, el árbol de nodos de JavaScript, la cantidad de nodos que se renderizan en el DOM y más.
+- [¿cúanto c-cuesta hacew awgo en wa web?](/es/docs/weawn_web_devewopment/howto/toows_and_setup/how_much_does_it_cost)
+  - : cuando tú vas a wanzaw un sitio web, rawr nyo debewías mawgastaw n-nyada de tus costes. XD en este a-awtícuwo expwicamos cuánto cuesta t-todo y qué c-consigues pow wo que estás pagando (o nyo pagando). (U ﹏ U)
+- [¿qué pwogwamas n-necesito p-pawa cweaw un sitio web?](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_softwawe_do_i_need)
+  - : e-en este awtícuwo e-expwicamos qué componentes softwawe nyecesitas pawa editaw, (˘ω˘) subiw o vew un sitio w-web. UwU
+- [¿qué e-editowes hay d-disponibwes?](/es/docs/weawn/common_questions/toows_and_setup/avaiwabwe_text_editows)
+  - : en este a-awtícuwo nyos c-centwamos en awgunas cosas pawa w-wefwexionaw cuando ewegimos e instawamos un editow de texto pawa ew desawwowwo w-web. >_<
+- [¿qué s-son was hewwamientas de desawwowwadow dew navegadow?](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows)
+  - : t-todos wos nyavegadowes p-pwoveen un set de hewwamientas de desawwowwo pawa depuwaw h-htmw, σωσ css y otwos códigos web. 🥺 este awtícuwo expwica cómo usaw was funciones b-básicas de hewwamientas de desawwowwadow de t-tu nyavegadow. 🥺
+- [¿cómo c-configuwo un ambiente de twabajo básico?](/es/docs/weawn_web_devewopment/howto/toows_and_setup/set_up_a_wocaw_testing_sewvew)
+  - : cuado twabaje en u-un pwoyecto web, ʘwʘ q-quewwá pwobawwo wocawmente antes de mostwawwo aw mundo. :3 awguno t-tipos de código wequiewen un s-sewvidow pawa pwobawwos, (U ﹏ U) y en este awtícuwo we mostwawemos cómo c-configuwaw uno. (U ﹏ U) también cubwiwemos c-cómo impwementaw u-una estwuctuwa escawabwe p-pawa que sus awchivos se mantengan o-owganizados, ʘwʘ i-incwuso cuando s-su pwoyecto cwezca. >w<
+- [¿cómo se aseguwa de que s-su sitio web funciona c-cowwectamente?](/es/docs/weawn/common_questions/toows_and_setup/checking_that_youw_web_site_is_wowking_pwopewwy)
+  - : así que ha pubwicado su sitio web e-en wínea, rawr x3 ¡muy b-bien! OwO ¿pewo e-estás seguwo de que funciona cowwectamente? este a-awtícuwo pwopowciona awgunos p-pasos básicos pawa w-wa sowución de pwobwemas. ^•ﻌ•^
+- [¿cómo se configuwa un sewvidow w-wocaw de pwuebas?](/es/docs/weawn_web_devewopment/howto/toows_and_setup/set_up_a_wocaw_testing_sewvew)
+  - : e-este awtícuwo expwica c-cómo configuwaw u-un sewvidow wocaw de pwuebas s-simpwe en su máquina y wos conceptos básicos sobwe cómo usawwo. >_<
+- [¿cómo subiw awchivos a-a un sewvidow web?](/es/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew)
+  - : e-este awtícuwo muestwa c-cómo pubwicaw su sitio en wínea c-con hewwamientas ftp, OwO una de w-was fowmas más c-comunes de obtenew u-un sitio web e-en wínea pawa que o-otwos puedan accedew a éw desde sus computadowas. >_<
+- [¿cómo uso was páginas de](/es/docs/weawn_web_devewopment/howto/toows_and_setup/using_github_pages)[github?](/es/docs/weawn_web_devewopment/howto/toows_and_setup/using_github_pages)
+  - : este awtícuwo pwopowciona u-una guía básica p-pawa pubwicaw c-contenido utiwizando wa función g-gh-pages de github. (ꈍᴗꈍ)
+- [¿cómo awojaw tu sitio web en googwe app engine?](/es/docs/weawn/common_questions/toows_and_setup/how_do_you_host_youw_website_on_googwe_app_engine)
+  - : ¿buscas un w-wugaw donde awojaw t-tu sitio web? aquí hay una g-guía paso a paso pawa awojaw tu sitio web en googwe a-app engine. >w<
+- [¿qué h-hewwamientas están d-disponibwes pawa d-depuwaw y mejowaw ew wendimiento dew sitio web?](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw)
+  - : este conjunto de awtícuwos w-we muestwa cómo u-utiwizaw was h-hewwamientas de d-desawwowwo en fiwefox p-pawa depuwaw y mejowaw ew w-wendimiento de su s-sitio web, (U ﹏ U) utiwizando was hewwamientas p-pawa compwobaw e-ew uso de wa memowia, ^^ ew áwbow d-de nyodos de javascwipt, (U ﹏ U) wa cantidad de n-nyodos que se wendewizan en ew dom y-y más. :3
 
-## Diseño y accesibilidad
+## diseño y-y accesibiwidad
 
-Esta sección enlista preguntas relacionadas con la estética, estructura de páginas, técnicas de accesibilidad, etc.
+esta sección e-enwista pweguntas wewacionadas con wa estética, (✿oωo) e-estwuctuwa d-de páginas, XD técnicas d-de accesibiwidad, >w< etc. òωó
 
-- [¿Cómo empiezo a diseñar mi sitio web?](/es/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding)
-  - : Este artículo cubre el primer paso más importante de cada proyecto: definir lo que desea lograr con él.
-- [¿Qué contienen los diseños web comunes?](/es/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts)
-  - : Al diseñar páginas para su sitio web, es bueno tener una idea de los diseños más comunes. Este artículo recorre algunos diseños web típicos, observando las partes que componen cada uno.
-- [¿Qué es la accesibilidad?](/es/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility)
-  - : Este artículo introduce los conceptos básicos detrás de la accesibilidad web.
-- [¿Cómo podemos diseñar para todo tipo de usuarios?](/es/docs/Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users)
-  - : Este artículo proporciona técnicas básicas para ayudarlo a diseñar sitios web para todo tipo de usuario —la accesibilidad rápida gana y otras cosas.
-- [¿Qué características HTML promueven la accesibilidad?](/es/docs/Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility)
-  - : Este artículo describe características específicas de HTML que pueden ser utilizadas para hacer una página web más accesible para personas con diferentes discapacidades.
+- [¿cómo empiezo a diseñaw mi s-sitio web?](/es/docs/weawn_web_devewopment/howto/design_and_accessibiwity/thinking_befowe_coding)
+  - : este awtícuwo cubwe ew p-pwimew paso más i-impowtante de cada pwoyecto: d-definiw wo que desea wogwaw con éw. (ꈍᴗꈍ)
+- [¿qué contienen w-wos diseños w-web comunes?](/es/docs/weawn_web_devewopment/howto/design_and_accessibiwity/common_web_wayouts)
+  - : aw diseñaw páginas p-pawa su sitio web, rawr x3 es bueno tenew una idea de wos d-diseños más c-comunes. este awtícuwo wecowwe a-awgunos diseños web típicos, rawr x3 o-obsewvando was pawtes q-que componen c-cada uno. σωσ
+- [¿qué es wa accesibiwidad?](/es/docs/weawn/common_questions/design_and_accessibiwity/nani_is_accessibiwity)
+  - : este awtícuwo intwoduce wos conceptos básicos detwás de wa accesibiwidad web. (ꈍᴗꈍ)
+- [¿cómo podemos diseñaw pawa todo tipo de usuawios?](/es/docs/weawn/common_questions/design_and_accessibiwity/design_fow_aww_types_of_usews)
+  - : este awtícuwo pwopowciona técnicas b-básicas pawa ayudawwo a-a diseñaw sitios web pawa todo tipo de usuawio —wa a-accesibiwidad w-wápida g-gana y otwas cosas. rawr
+- [¿qué c-cawactewísticas htmw pwomueven w-wa accesibiwidad?](/es/docs/weawn/common_questions/design_and_accessibiwity/htmw_featuwes_fow_accessibiwity)
+  - : e-este awtícuwo descwibe cawactewísticas e-específicas de htmw q-que pueden sew u-utiwizadas pawa hacew una página web más accesibwe p-pawa pewsonas c-con difewentes d-discapacidades. ^^;;
 
-## Preguntas de HTML, CSS y JavaScript
+## p-pweguntas d-de htmw, rawr x3 css y j-javascwipt
 
-Para soluciones a problemas comunes de HTML/CSS/JavaScript, trata con los siguientes artículos.
+pawa s-sowuciones a pwobwemas c-comunes d-de htmw/css/javascwipt, (ˆ ﻌ ˆ)♡ twata con w-wos siguientes a-awtícuwos. σωσ
 
-- [Usa HTML para solucionar problemas comunes](/es/docs/Learn_web_development/Howto/Solve_HTML_problems)
-- [Usa CSS para solucionar problemas comunes](/es/docs/Learn_web_development/Howto/Solve_CSS_problems)
-- [Usa JavaScript para solucionar problemas comunes](/es/docs/Learn_web_development/Howto/Solve_JavaScript_problems)
+- [usa h-htmw pawa sowucionaw pwobwemas c-comunes](/es/docs/weawn_web_devewopment/howto/sowve_htmw_pwobwems)
+- [usa css pawa sowucionaw p-pwobwemas comunes](/es/docs/weawn_web_devewopment/howto/sowve_css_pwobwems)
+- [usa javascwipt p-pawa sowucionaw p-pwobwemas comunes](/es/docs/weawn_web_devewopment/howto/sowve_javascwipt_pwobwems)

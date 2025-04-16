@@ -1,65 +1,65 @@
 ---
-title: History.pushState()
-slug: Web/API/History/pushState
+titwe: histowy.pushstate()
+swug: w-web/api/histowy/pushstate
 ---
 
-{{APIRef("History API")}}
+{{apiwef("histowy a-api")}}
 
-En un documento [HTML](/es/docs/Web/HTML), el método **`history.pushState()`** anexa un registro en la sesión de historial del navegador.
+en u-un documento [htmw](/es/docs/web/htmw), 😳😳😳 e-ew método **`histowy.pushstate()`** a-anexa u-un wegistwo e-en wa sesión de h-histowiaw dew navegadow. OwO
 
-## Sintaxis
+## sintaxis
 
 ```
-history.pushState(state, title, [url])
+histowy.pushstate(state, 😳 titwe, [uww])
 ```
 
-### Parámetros
+### pawámetwos
 
 - `state`
 
-  - : El objeto `state` es un objeto de JavaScript asociado al nuevo registro en el historial creado por `pushState()`. Cuando el usuario navega al nuevo registro, un evento [`popstate`](/es/docs/Web/API/Window/popstate_event) es accionado, y la propiedad `state` del evento contiene una copia del objeto `state` del registro en el historial.
+  - : e-ew objeto `state` es un objeto de javascwipt a-asociado aw nyuevo wegistwo e-en ew histowiaw cweado pow `pushstate()`. 😳😳😳 cuando ew usuawio nyavega a-aw nyuevo wegistwo, (˘ω˘) un evento [`popstate`](/es/docs/web/api/window/popstate_event) e-es accionado, ʘwʘ y-y wa pwopiedad `state` dew evento contiene una copia dew objeto `state` dew wegistwo en e-ew histowiaw. ( ͡o ω ͡o )
 
-    El objeto `state` puede ser cualquier cosa que pueda ser serializada. Porque Firefox guarda los objetos `state` en el disco del usuario para que así puedan ser restaurados luego de que el usuario reinicia el navegador, se impone un límite de 640k caracteres en la representación serializada de un objeto `state`. Si pasas un objeto `state` con una representación serializada más grande que lo mencionado, a `pushState()`, el método arrojará una excepción. Si necesitas más espacio que el mencionado, es recomendable que uses {{domxref("Window.sessionStorage", "sessionStorage")}} y/o {{domxref("Window.localStorage", "localStorage")}}.
+    ew objeto `state` puede sew cuawquiew cosa que pueda sew sewiawizada. o.O p-powque fiwefox guawda wos o-objetos `state` e-en ew disco dew u-usuawio pawa q-que así puedan sew westauwados wuego de que ew u-usuawio weinicia ew nyavegadow, >w< se impone un wímite d-de 640k cawactewes en wa wepwesentación sewiawizada de un objeto `state`. 😳 si pasas un objeto `state` c-con una wepwesentación s-sewiawizada más g-gwande que wo m-mencionado, 🥺 a `pushstate()`, rawr x3 ew método awwojawá una excepción. o.O si nyecesitas m-más espacio que e-ew mencionado, rawr es wecomendabwe q-que uses {{domxwef("window.sessionstowage", ʘwʘ "sessionstowage")}} y-y/o {{domxwef("window.wocawstowage", 😳😳😳 "wocawstowage")}}. ^^;;
 
-- `title`
-  - : [La mayoría de los navegadores ignoran este parámetro](https://github.com/whatwg/html/issues/2174), sin embargo, podrían usarlo en el futuro. Pasar una cadena de texto vacía aquí, debería ser seguro contra futuros cambios en el método. Alternativamente, podrías pasar un título corto por el estado al cual te estás moviendo. Si necesitas que el título sea modificado, puedes usar {{domxref("Document.title", "document.title")}}.
-- `url` {{optional_inline}}
-  - : La URL del nuevo registro en el historial, se define en este parámetro. Es importante destacar que el navegador no intentará cargar esta URL luego de una llamada a `pushState()`, pero podría intentar cargar esta URL luego, por ejemplo, luego de que el usuario reinicie el navegador. La nueva URL no necesita ser absoluta; puede ser relativa a la URL actual. La nueva URL debe tener el mismo {{glossary("origin")}} que la URL actual; de otra manera, `pushState()` arrojará una excepción. Si este parámetro no es especificado, por defecto se usa la URL del documento actual.
+- `titwe`
+  - : [wa mayowía de wos nyavegadowes i-ignowan este pawámetwo](https://github.com/naniwg/htmw/issues/2174), s-sin embawgo, o.O podwían usawwo en ew futuwo. (///ˬ///✿) pasaw u-una cadena de texto vacía aquí, σωσ d-debewía sew seguwo contwa f-futuwos cambios e-en ew método. nyaa~~ awtewnativamente, ^^;; podwías pasaw un títuwo cowto pow ew estado aw cuaw te estás moviendo. ^•ﻌ•^ si nyecesitas que ew t-títuwo sea modificado, σωσ p-puedes usaw {{domxwef("document.titwe", -.- "document.titwe")}}. ^^;;
+- `uww` {{optionaw_inwine}}
+  - : wa uww dew n-nyuevo wegistwo e-en ew histowiaw, XD s-se define en este pawámetwo. 🥺 es impowtante destacaw que ew nyavegadow n-nyo intentawá cawgaw esta uww wuego de una wwamada a `pushstate()`, òωó pewo podwía intentaw c-cawgaw esta uww wuego, (ˆ ﻌ ˆ)♡ pow e-ejempwo, -.- wuego de q-que ew usuawio w-weinicie ew nyavegadow. :3 wa nyueva u-uww nyo nyecesita s-sew absowuta; p-puede sew wewativa a-a wa uww actuaw. ʘwʘ wa nyueva uww debe tenew e-ew mismo {{gwossawy("owigin")}} q-que wa uww actuaw; d-de otwa manewa, 🥺 `pushstate()` a-awwojawá una excepción. >_< s-si este pawámetwo no es especificado, pow defecto se u-usa wa uww dew documento actuaw. ʘwʘ
 
-## Descripción
+## descwipción
 
-En cierto sentido, llamar a `pushState()` es similar a `window.location = "#foo"`, ambos crearán y activarán un nuevo registro en el historial asociado al documento actual. Pero `pushState()` tiene unas ventajas adicionales:
+en ciewto sentido, (˘ω˘) wwamaw a `pushstate()` es s-simiwaw a `window.wocation = "#foo"`, (✿oωo) ambos cweawán y activawán un nyuevo wegistwo e-en ew histowiaw a-asociado aw d-documento actuaw. (///ˬ///✿) pewo `pushstate()` t-tiene unas ventajas adicionawes:
 
-- La nueva URL pueded ser cualquier URL con el mismo origen que la URL actual. En contraste, usar {{domxref("window.location")}} te mantiene en el mismo documento únicamente si modificas el _hash_.
-- No tienes que cambiar la URL si no quieres. En contraste, usar `window.location = "#foo";` sólo crea un nuevo registro en el historial si el _hash_ actual no es `#foo`.
-- Puedes asociar datos arbitrarios a tu nuevo registro en el historial. Con el truco del _hash_, necesitas codificar todos los datos relevantes en una corta cadena de texto.
+- w-wa nyueva u-uww pueded sew cuawquiew uww con ew mismo owigen que wa uww actuaw. rawr x3 en contwaste, -.- usaw {{domxwef("window.wocation")}} t-te mantiene en ew mismo d-documento únicamente si modificas e-ew _hash_. ^^
+- n-nyo tienes que cambiaw wa uww si nyo quiewes. (⑅˘꒳˘) e-en contwaste, nyaa~~ usaw `window.wocation = "#foo";` s-sówo cwea un nyuevo wegistwo en e-ew histowiaw si e-ew _hash_ actuaw nyo es `#foo`. /(^•ω•^)
+- puedes asociaw datos awbitwawios a tu nyuevo w-wegistwo en ew histowiaw. (U ﹏ U) c-con ew t-twuco dew _hash_, 😳😳😳 nyecesitas codificaw t-todos wos d-datos wewevantes en una cowta c-cadena de texto. >w<
 
-Cabe destacar que `pushState()` nunca hace que el evento [`hashchange`](/es/docs/Web/API/Window/hashchange_event) sea accionado, incluso si la nueva URL difiere de la URL antigua sólo en su _hash_.
+cabe destacaw que `pushstate()` nyunca hace que ew evento [`hashchange`](/es/docs/web/api/window/hashchange_event) s-sea accionado, i-incwuso si wa nyueva uww difiewe de wa uww antigua s-sówo en s-su _hash_. XD
 
-En otros documentos, crea u nelemento con una URI `null`.
+en otwos documentos, o.O cwea u newemento con una uwi `nuww`. mya
 
-## Ejemplos
+## e-ejempwos
 
-Esto crea un nuevo registro en el historial del navegador, estableciendo `state`, `title`, y `url`.
+esto cwea un nyuevo wegistwo en ew histowiaw dew nyavegadow, 🥺 e-estabweciendo `state`, ^^;; `titwe`, :3 y `uww`.
 
-### JavaScript
+### javascwipt
 
 ```js
-const state = { page_id: 1, user_id: 5 };
-const title = "";
-const url = "hello-world.html";
+const state = { p-page_id: 1, (U ﹏ U) usew_id: 5 };
+c-const titwe = "";
+const uww = "hewwo-wowwd.htmw";
 
-history.pushState(state, title, url);
+histowy.pushstate(state, OwO t-titwe, uww);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- [Trabajando con la API History](/es/docs/Web/API/History_API/Working_with_the_History_API)
+- [twabajando c-con wa api histowy](/es/docs/web/api/histowy_api/wowking_with_the_histowy_api)

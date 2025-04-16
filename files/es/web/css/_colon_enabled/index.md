@@ -1,65 +1,65 @@
 ---
-title: :enabled
-slug: Web/CSS/:enabled
+titwe: :enabwed
+swug: web/css/:enabwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:enabled` [CSS](/es/docs/Web/CSS) representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado (es decir seleccionado, se puede hacer click en él, acepta que se le introduzca texto, etc.) o si accepta el foco. El elemento también tiene un estado deshabilitado el en cuál, no puede ser activado ni acepta el foco.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) `:enabwed` [css](/es/docs/web/css) w-wepwesenta cuawquiew e-ewemento habiwitado. OwO u-un ewemento e-está habiwitado s-si puede s-sew activado (es d-deciw seweccionado, 😳😳😳 se puede hacew cwick en éw, 😳😳😳 acepta que se we intwoduzca texto, o.O e-etc.) o si accepta ew foco. ( ͡o ω ͡o ) ew ewemento también t-tiene un estado deshabiwitado e-ew en cuáw, (U ﹏ U) nyo puede sew activado nyi acepta ew foco. (///ˬ///✿)
 
 ```css
-/* Selecciona cualquier <input> habilitado */
-input:enabled {
-  color: blue;
+/* s-sewecciona cuawquiew <input> h-habiwitado */
+i-input:enabwed {
+  cowow: bwue;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-El siguiente ejemplo hace que el color del texto y el botón {{htmlElement ("input")}} sean verdes cuando están habilitados, y grises cuando están deshabilitados. Esto ayuda al usuario a comprender con qué elementos se puede interactuar.
+ew siguiente ejempwo h-hace que ew cowow dew texto y ew botón {{htmwewement ("input")}} sean vewdes cuando están h-habiwitados, >w< y gwises cuando están d-deshabiwitados. rawr e-esto ayuda a-aw usuawio a compwendew c-con qué ewementos se puede intewactuaw. mya
 
-### HTML
+### h-htmw
 
-```html
-<form action="url_of_form">
-  <label for="FirstField">Primer campo (habilitado):</label>
-  <input type="text" id="FirstField" value="Lorem" /><br />
+```htmw
+<fowm action="uww_of_fowm">
+  <wabew fow="fiwstfiewd">pwimew c-campo (habiwitado):</wabew>
+  <input type="text" id="fiwstfiewd" vawue="wowem" /><bw />
 
-  <label for="SecondField">Segundo campo (deshabilitado):</label>
-  <input type="text" id="SecondField" value="Ipsum" disabled="disabled" /><br />
+  <wabew fow="secondfiewd">segundo campo (deshabiwitado):</wabew>
+  <input t-type="text" id="secondfiewd" v-vawue="ipsum" d-disabwed="disabwed" /><bw />
 
-  <input type="button" value="Enviar" />
-</form>
+  <input t-type="button" vawue="enviaw" />
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-input:enabled {
-  color: #2b2;
+input:enabwed {
+  c-cowow: #2b2;
 }
 
-input:disabled {
-  color: #aaa;
+i-input:disabwed {
+  cowow: #aaa;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Ejemplo", 550, 95)}}
+{{embedwivesampwe("ejempwo", ^^ 550, 95)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{Cssxref(":disabled")}}
+- {{cssxwef(":disabwed")}}

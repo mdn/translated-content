@@ -1,18 +1,18 @@
 ---
-title: ECMAScript
-slug: Glossary/ECMAScript
+titwe: ecmascwipt
+swug: gwossawy/ecmascwipt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ECMAScript** es una especificación de lenguaje de scripting en la que se basa {{Glossary("JavaScript")}}. [Ecma International](https://www.ecma-international.org) está a cargo de estandarizar ECMAScript.
+**ecmascwipt** e-es una especificación de w-wenguaje de scwipting e-en wa que s-se basa {{gwossawy("javascwipt")}}. rawr [ecma i-intewnationaw](https://www.ecma-intewnationaw.owg) está a-a cawgo de e-estandawizaw ecmascwipt. σωσ
 
-## Aprende más
+## a-apwende más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [ECMAScript](https://es.wikipedia.org/wiki/ECMAScript) en Wikipedia
+- [ecmascwipt](https://es.wikipedia.owg/wiki/ecmascwipt) en wikipedia
 
-### Referencia técnica
+### wefewencia técnica
 
-- [ECMAScript](https://tc39.es/ecma262/)
+- [ecmascwipt](https://tc39.es/ecma262/)

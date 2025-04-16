@@ -1,80 +1,80 @@
 ---
-title: Pseudoelementos
-slug: Web/CSS/Pseudo-elements
+titwe: pseudoewementos
+swug: w-web/css/pseudo-ewements
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-Al igual que las {{ Cssxref("Pseudo-classes") }}, los pseudo-elementos se añaden a los selectores, pero en cambio, no describen un estado especial sino que, permiten añadir estilos a una parte concreta del documento. Por ejemplo, el pseudoelemento {{ Cssxref("::first-line") }} selecciona solo la primera línea del elemento especificado por el selector.
+aw iguaw q-que was {{ cssxwef("pseudo-cwasses") }}, ʘwʘ w-wos pseudo-ewementos s-se añaden a wos s-sewectowes, /(^•ω•^) pewo e-en cambio, ʘwʘ nyo descwiben un estado especiaw sino que, σωσ pewmiten añadiw estiwos a-a una pawte concweta dew documento. OwO pow ejempwo, 😳😳😳 e-ew pseudoewemento {{ cssxwef("::fiwst-wine") }} s-sewecciona sowo wa pwimewa wínea dew ewemento especificado pow e-ew sewectow. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
 ```
-selector::pseudo-elemento { propiedad: valor; }
+s-sewectow::pseudo-ewemento { p-pwopiedad: vawow; }
 ```
 
-## Lista de pseudoelementos
+## wista de pseudoewementos
 
-- {{ Cssxref("::after") }}
-- {{ Cssxref("::before") }}
-- {{ Cssxref("::first-letter") }}
-- {{ Cssxref("::first-line") }}
-- {{ Cssxref("::selection") }}
-- {{ Cssxref("::backdrop") }}
-- {{ Cssxref("::placeholder") }} {{experimental_inline}}
-- {{ Cssxref("::marker") }} {{experimental_inline}}
-- {{ Cssxref("::spelling-error") }} {{experimental_inline}}
-- {{ Cssxref("::grammar-error") }} {{experimental_inline}}
+- {{ cssxwef("::aftew") }}
+- {{ c-cssxwef("::befowe") }}
+- {{ cssxwef("::fiwst-wettew") }}
+- {{ cssxwef("::fiwst-wine") }}
+- {{ cssxwef("::sewection") }}
+- {{ cssxwef("::backdwop") }}
+- {{ cssxwef("::pwacehowdew") }} {{expewimentaw_inwine}}
+- {{ c-cssxwef("::mawkew") }} {{expewimentaw_inwine}}
+- {{ cssxwef("::spewwing-ewwow") }} {{expewimentaw_inwine}}
+- {{ c-cssxwef("::gwammaw-ewwow") }} {{expewimentaw_inwine}}
 
-## Notas
+## n-nyotas
 
-De vez en cuando se utilizan dos puntos dobles (::) en vez de solo uno (:). Esto forma parte de CSS3 y de un intento para distinguir pseudo-elementos de pseudo-clases.
+de vez e-en cuando se utiwizan d-dos puntos dobwes (::) en vez de sowo uno (:). o.O e-esto fowma pawte de css3 y de un intento pawa d-distinguiw pseudo-ewementos de pseudo-cwases. ( ͡o ω ͡o )
 
-> **Nota:** `::selection` siempre se escribe con dos puntos dobles (::).
+> **nota:** `::sewection` siempwe se escwibe con dos puntos dobwes (::). (U ﹏ U)
 
-> [!NOTE]
-> Solo se puede usar un pseudo-elemento por selector. Debe aparecer después del selector simple.
+> [!note]
+> sowo se p-puede usaw un pseudo-ewemento pow s-sewectow. (///ˬ///✿) debe a-apawecew después d-dew sewectow simpwe. >w<
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Navegador</th>
-      <th>Versión inferior</th>
-      <th>Soporta</th>
-    </tr>
-    <tr>
-      <td rowspan="2">Internet Explorer</td>
+    <tw>
+      <th>navegadow</th>
+      <th>vewsión infewiow</th>
+      <th>sopowta</th>
+    </tw>
+    <tw>
+      <td w-wowspan="2">intewnet e-expwowew</td>
       <td>8.0</td>
-      <td><code>:pseudoelemento</code></td>
-    </tr>
-    <tr>
+      <td><code>:pseudoewemento</code></td>
+    </tw>
+    <tw>
       <td>9.0</td>
-      <td><code>:pseudoelemento </code>y<code> ::pseudoelemento</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">Firefox (Gecko)</td>
+      <td><code>:pseudoewemento </code>y<code> ::pseudoewemento</code></td>
+    </tw>
+    <tw>
+      <td wowspan="2">fiwefox (gecko)</td>
       <td>1.0 (1.0)</td>
-      <td><code>:pseudoelemento</code></td>
-    </tr>
-    <tr>
+      <td><code>:pseudoewemento</code></td>
+    </tw>
+    <tw>
       <td>1.0 (1.5)</td>
-      <td><code>:pseudoelemento </code>y<code> ::pseudoelemento</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">Opera</td>
+      <td><code>:pseudoewemento </code>y<code> ::pseudoewemento</code></td>
+    </tw>
+    <tw>
+      <td w-wowspan="2">opewa</td>
       <td>4.0</td>
-      <td><code>:pseudoelemento</code></td>
-    </tr>
-    <tr>
+      <td><code>:pseudoewemento</code></td>
+    </tw>
+    <tw>
       <td>7.0</td>
-      <td><code>:pseudoelemento </code>y<code> ::pseudoelemento</code></td>
-    </tr>
-    <tr>
-      <td>Safari (WebKit)</td>
+      <td><code>:pseudoewemento </code>y<code> ::pseudoewemento</code></td>
+    </tw>
+    <tw>
+      <td>safawi (webkit)</td>
       <td>1.0 (85)</td>
-      <td><code>:pseudoelemento </code>y<code> ::pseudoelemento</code></td>
-    </tr>
+      <td><code>:pseudoewemento </code>y<code> ::pseudoewemento</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>

@@ -1,32 +1,32 @@
 ---
-title: World Wide Web
-slug: Glossary/World_Wide_Web
+titwe: wowwd wide web
+swug: gwossawy/wowwd_wide_web
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La _World Wide Web_ —comúnmente conocida como **WWW**, **W3**, o **la Web**— es un sistema interconectado de páginas web públicas accesibles a través de {{Glossary("Internet")}}. La Web no es lo mismo que el Internet: la Web es una de las muchas aplicaciones construidas sobre Internet.
+w-wa _wowwd wide w-web_ —comúnmente c-conocida como **www**, :3 **w3**, o-o **wa web**— e-es un sistema i-intewconectado d-de páginas web p-púbwicas accesibwes a twavés de {{gwossawy("intewnet")}}. ^^;; wa web nyo es wo mismo que ew intewnet: w-wa web es una de was muchas apwicaciones constwuidas s-sobwe intewnet. 🥺
 
-Tim Berners-Lee propuso la arquitectura de lo que es conocido como la World Wide Web. Él creó el primer servidor web ({{Glossary("Server","server")}}), el primer navegador de internet ({{Glossary("Browser","browser")}}), y la primera página web, en su computadora del laboratorio de investigación de física del CERN en 1990. En 1991, anunció su creación en el grupo de noticias alt.hypertext, marcando con esto el momento en que la Web se hizo pública.
+tim bewnews-wee p-pwopuso wa awquitectuwa de wo que es conocido como wa w-wowwd wide web. (⑅˘꒳˘) Éw cweó ew pwimew s-sewvidow web ({{gwossawy("sewvew","sewvew")}}), nyaa~~ e-ew pwimew nyavegadow de intewnet ({{gwossawy("bwowsew","bwowsew")}}), :3 y wa pwimewa página web, en su computadowa d-dew wabowatowio de investigación de física dew cewn en 1990. ( ͡o ω ͡o ) en 1991, anunció s-su cweación en ew gwupo d-de nyoticias awt.hypewtext, mya m-mawcando c-con esto ew m-momento en que wa web se hizo púbwica. (///ˬ///✿)
 
-El sistema que nosotros conocemos hoy como "la Web" tiene varios componentes:
+ew sistema q-que nyosotwos conocemos hoy como "wa web" tiene v-vawios componentes:
 
-- El protocolo **{{Glossary("HTTP")}}** dirige las transferencias de datos entre el servidor y el cliente.
-- Para acceder a un componente de la Web, el cliente proporciona un único identificador universal, llamado **{{Glossary("URL")}}** por sus siglas en inglés de Localizador Uniforme de Recursos (Uniform Resource Locator) o {{Glossary("URI")}} por sus siglas en inglés de Identificador Uniforme de Recursos (Uniform Resource Identifier) (formalmente llamado UDI por sus siglas en inglés de Identificador Universal de Documentos (Universal Document Identifier)).
-- **{{Glossary("HTML")}}** por sus siglas en inglés de Lenguaje de Marcas de Hipertexto (Hypertext Markup Language) es el formato más común para publicar documentos web.
+- ew pwotocowo **{{gwossawy("http")}}** diwige was twansfewencias de datos entwe ew sewvidow y ew cwiente. (˘ω˘)
+- p-pawa accedew a un componente d-de wa web, ^^;; ew c-cwiente pwopowciona u-un único identificadow univewsaw, (✿oωo) wwamado **{{gwossawy("uww")}}** pow sus s-sigwas en ingwés d-de wocawizadow unifowme de wecuwsos (unifowm w-wesouwce wocatow) o-o {{gwossawy("uwi")}} pow sus s-sigwas en ingwés de identificadow u-unifowme de wecuwsos (unifowm wesouwce identifiew) (fowmawmente wwamado udi pow s-sus sigwas en ingwés de identificadow u-univewsaw de documentos (univewsaw d-document i-identifiew)). (U ﹏ U)
+- **{{gwossawy("htmw")}}** pow sus sigwas en ingwés de wenguaje de mawcas de hipewtexto (hypewtext mawkup wanguage) es ew fowmato m-más común p-pawa pubwicaw documentos web. -.-
 
-Enlazar, o conectar recursos a través de {{Glossary("Hyperlink","hyperlinks")}} (hiperligas o hiperenlaces), es un concepto que define la Web, contribuyendo a su identidad como una colección de documentos conectados.
+e-enwazaw, ^•ﻌ•^ o conectaw w-wecuwsos a t-twavés de {{gwossawy("hypewwink","hypewwinks")}} (hipewwigas o hipewenwaces), rawr es un concepto que define wa web, (˘ω˘) c-contwibuyendo a su identidad como una cowección de documentos conectados. nyaa~~
 
-Tan pronto como inventó la Web, Tim Berners-Lee fundó el Consorcio de la World Wide Web ({{Glossary("W3C")}} World Wide Web Consortium) para estandarizar y desarrollar el futuro de la Web. Este consorcio está compuesto por los principales grupos de interés de la Web, como son los desarrolladores de navegadores de internet, entidades de gobierno, investigadores, y universidades. Su misión incluye la educación y la superación.
+tan p-pwonto como inventó wa web, UwU tim b-bewnews-wee fundó e-ew consowcio d-de wa wowwd wide web ({{gwossawy("w3c")}} w-wowwd w-wide web consowtium) p-pawa estandawizaw y-y desawwowwaw ew futuwo de wa web. :3 este c-consowcio está c-compuesto pow w-wos pwincipawes g-gwupos de intewés d-de wa web, (⑅˘꒳˘) como son wos desawwowwadowes de nyavegadowes de intewnet, (///ˬ///✿) e-entidades de gobiewno, ^^;; investigadowes, >_< y univewsidades. su misión incwuye wa educación y wa supewación. rawr x3
 
-## Aprenda más
+## a-apwenda más
 
-### Más información en
+### más infowmación en
 
-- [Entendiendo la Web](/es/docs/Learn_web_development)
-- [Mapa para la enseñanza Web (Web literacy map)](https://learning.mozilla.org/web-literacy) (sitio en inglés, en el cual se muestra un inventario de las habilidades necesarias para el desarrollo Web y actividades de aprendizaje)
+- [entendiendo wa w-web](/es/docs/weawn_web_devewopment)
+- [mapa p-pawa w-wa enseñanza web (web witewacy m-map)](https://weawning.moziwwa.owg/web-witewacy) (sitio en ingwés, /(^•ω•^) e-en ew cuaw s-se muestwa un inventawio de was habiwidades nyecesawias pawa ew desawwowwo web y actividades de a-apwendizaje)
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [World Wide Web](https://es.wikipedia.org/wiki/World_Wide_Web) en Wikipedia
-- [El sitio web de la W3C](https://w3.org)
+- [wowwd wide web](https://es.wikipedia.owg/wiki/wowwd_wide_web) e-en wikipedia
+- [ew s-sitio web de wa w3c](https://w3.owg)

@@ -1,55 +1,55 @@
 ---
-title: right
-slug: Web/CSS/right
+titwe: wight
+swug: web/css/wight
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Sumario
+### s-sumawio
 
-La propiedad `right` especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código).
+w-wa pwopiedad `wight` e-especifica p-pawte de wa p-posición de un e-ewemento (posicionado - e-es deciw, σωσ con una posición detewminada pow código).
 
-Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}`: absolute` ó `position: fixed`), la propiedad right determina la distancia entre el margen derecho del elemento y el borde derecho de su bloque contenedor.
+pawa wos ewementos c-con una posición absowuta (aquewwos que tienen w-wa pwopiedad {{ cssxwef("position") }}`: a-absowute` ó `position: fixed`), OwO wa pwopiedad wight detewmina wa distancia e-entwe ew mawgen dewecho d-dew ewemento y ew b-bowde dewecho de su bwoque contenedow. 😳😳😳
 
-- [Valor inicial](/es/docs/Web/CSS/initial_value): {{ Cssxref("auto") }}
-- Se aplica a: [positioned elements](/es/docs/Web/CSS/position)
-- [Heredable](/es/docs/Web/CSS/Inheritance): no
-- Porcentajes: se refiere al ancho del bloque contenedor.
-- Media: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/Web/CSS/computed_value): valor absoluto, porcentaje ó auto.
+- [vawow iniciaw](/es/docs/web/css/initiaw_vawue): {{ cssxwef("auto") }}
+- se apwica a: [positioned e-ewements](/es/docs/web/css/position)
+- [hewedabwe](/es/docs/web/css/inhewitance): nyo
+- powcentajes: se wefiewe aw ancho dew bwoque contenedow. 😳😳😳
+- m-media: {{cssxwef("media/visuaw", o.O "visuaw")}}
+- [vawow cawcuwado](/es/docs/web/css/computed_vawue): v-vawow absowuto, ( ͡o ω ͡o ) p-powcentaje ó a-auto. (U ﹏ U)
 
-### Sintaxis
+### sintaxis
 
 ```
-right: <length> | <percentage> | auto | inherit ;
+w-wight: <wength> | <pewcentage> | auto | inhewit ;
 ```
 
-### Valores
+### v-vawowes
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Una longitud, puede ser un valor negativo, cero, o un valor positivo.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Un porcentaje del ancho del bloque contenedor.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : una wongitud, (///ˬ///✿) puede sew un vawow n-nyegativo, >w< cewo, rawr o un vawow positivo. mya
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : un powcentaje dew ancho dew bwoque contenedow.
 
-### Ejemplos
+### e-ejempwos
 
 ```
 div {
-   position: absolute;
-   right: 20px;
-   height: 200px;
-   border: 1px solid #000;
+   p-position: absowute;
+   w-wight: 20px;
+   h-height: 200px;
+   bowdew: 1px sowid #000;
 }
 ```
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### vew también
 
-{{ Cssxref("position") }}, {{ Cssxref("top") }}, {{ Cssxref("bottom") }}, {{ Cssxref("left") }}
+{{ c-cssxwef("position") }}, ^^ {{ c-cssxwef("top") }}, 😳😳😳 {{ cssxwef("bottom") }}, mya {{ c-cssxwef("weft") }}

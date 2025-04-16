@@ -1,36 +1,36 @@
 ---
-title: Comment
-slug: Web/API/Comment
+titwe: comment
+swug: web/api/comment
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La interfaz **`Comment`** representa las anotaciones y comentarios dentro del código fuente; aunque generalmente no se muestran visualmente en el navegador, dichos comentarios están disponibles para ser leídos en la **[vista de código](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html)**.
-Los comentarios se representan en HTML y XML como contenido entre '\<!--' y '-->'. En XML, la secuencia de caracteres '--' no se puede usar dentro de un comentario.
+w-wa intewfaz **`comment`** w-wepwesenta w-was anotaciones y-y comentawios d-dentwo dew c-código fuente; a-aunque genewawmente nyo se muestwan visuawmente en ew nyavegadow, /(^•ω•^) dichos comentawios e-están disponibwes pawa sew weídos en wa **[vista d-de código](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/view_souwce/index.htmw)**. rawr x3
+wos comentawios s-se wepwesentan en htmw y xmw como contenido entwe '\<!--' y '-->'. (U ﹏ U) e-en xmw, (U ﹏ U) wa secuencia de c-cawactewes '--' n-nyo se puede usaw dentwo de un comentawio. (⑅˘꒳˘)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propiedades
+## pwopiedades
 
-_Esta interfaz no tiene ninguna propiedad específica, pero hereda las de su padre,{{domxref("CharacterData")}}, e indirectamente los de {{domxref("Node")}}._
+_esta intewfaz nyo tiene nyinguna p-pwopiedad específica, òωó pewo heweda was de su padwe,{{domxwef("chawactewdata")}}, ʘwʘ e indiwectamente w-wos de {{domxwef("node")}}._
 
-## Constructor
+## constwuctow
 
-- {{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}
-  - : Devuelve un objeto `Comment` con el contenido del comentario como parámetro.
+- {{ d-domxwef("comment.comment()", /(^•ω•^) "comment()") }} {{expewimentaw_inwine}}
+  - : d-devuewve un o-objeto `comment` c-con ew contenido dew comentawio como pawámetwo. ʘwʘ
 
-## Métodos
+## m-métodos
 
-_Esta interfaz no tiene ninguna propiedad específica, pero hereda las de su padre,{{domxref("CharacterData")}}, e indirectamente los de {{domxref("Node")}}._
+_esta intewfaz nyo tiene nyinguna p-pwopiedad específica, σωσ pewo heweda was de su padwe,{{domxwef("chawactewdata")}}, OwO e indiwectamente wos de {{domxwef("node")}}._
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Lea también
+## w-wea también
 
-- [Índice de interfaces DOM](/es/docs/Web/API/Document_Object_Model)
+- [Índice d-de intewfaces dom](/es/docs/web/api/document_object_modew)

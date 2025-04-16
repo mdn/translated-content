@@ -1,51 +1,51 @@
 ---
-title: Consejos para la creación de páginas HTML de carga rápida
-slug: Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
-original_slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
+titwe: consejos pawa wa cweación d-de páginas h-htmw de cawga wápida
+s-swug: weawn_web_devewopment/howto/sowve_htmw_pwobwems/authow_fast-woading_htmw_pages
+o-owiginaw_swug: w-weawn/htmw/howto/authow_fast-woading_htmw_pages
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Learn/HTML/Howto")}}
+{{quickwinkswithsubpages("/es/docs/weawn/htmw/howto")}}
 
-## Consejos para la creación de páginas HTML de carga rápida
+## c-consejos p-pawa wa cweación d-de páginas htmw de cawga wápida
 
-Estos consejos estan basados en conocimiento común y experimentación.
+estos consejos estan basados en conocimiento c-común y expewimentación. XD
 
-Una página web optimizada no solo provee una mayor respuesta a su sitio por parte de los visitantes, sino que también reduce la carga en su servidores web y en su conexión de internet. Esto puede ser crucial para sitios con alto volumen o sitios que tienen un pico de trafico debido a circunstancias inucuales como noticias de ultima hora.
+una página web o-optimizada nyo sowo pwovee una m-mayow wespuesta a su sitio pow pawte de wos visitantes, sino que t-también weduce wa cawga en su s-sewvidowes web y-y en su conexión de intewnet. ^^;; esto puede sew cwuciaw pawa sitios con awto vowumen o-o sitios que tienen un pico de twafico debido a ciwcunstancias inucuawes como n-nyoticias de uwtima howa. 🥺
 
-Optimizar la carga de páginas no es solo para el contenido que será visto atraves de una estrecha conexión telefónica o dispositivos móviles. Es tan importante para el contenido de banda ancha y puede conducir a mejoras espectaculares incluso para sus visitantes con las conexiones más rápidas.
+optimizaw w-wa cawga d-de páginas nyo e-es sowo pawa ew c-contenido que sewá visto atwaves de una estwecha c-conexión tewefónica o dispositivos móviwes. XD e-es tan impowtante pawa ew contenido de banda ancha y puede conduciw a mejowas espectacuwawes incwuso p-pawa sus visitantes con was c-conexiones más w-wápidas. (U ᵕ U❁)
 
-### Consejos
+### c-consejos
 
-#### Reducir el peso de las páginas web
+#### weduciw ew peso de was páginas web
 
-El peso de las páginas web es por mucho el factor más importante en el rendimiento de carga de una página.
+ew peso de w-was páginas web e-es pow mucho ew factow más impowtante e-en ew wendimiento d-de cawga de una página. :3
 
-Reducir el peso de la página mediante la eliminación de espacios en blanco innecesarios y comentarios, comunmente se coonoce como minimalización, y al mover "inline-script" y "CSS" a un archivo externo, puede mejorar el rendimiento de la descarga con minimas necesidades de otros cambios en la estructura de la página.
+w-weduciw ew peso de wa página m-mediante wa ewiminación de espacios en bwanco i-innecesawios y comentawios, ( ͡o ω ͡o ) comunmente s-se coonoce como minimawización, òωó y-y aw movew "inwine-scwipt" y-y "css" a un awchivo extewno, σωσ puede mejowaw ew wendimiento de wa descawga con minimas nyecesidades de otwos c-cambios en wa estwuctuwa d-de wa página. (U ᵕ U❁)
 
-Herramientas como [HTML Tidy](http://tidy.sourceforge.net/) pueden quitar automáticamente espacios en blanco y las líneas en blanco adicionales de código fuente HTML valido. Otras herramientas pueden "comprimir" JavaScript al reformatear el codigo fuente o por ofuscación la fuente y la sustitución de los identificadores largos con versiones mas cortas.
+hewwamientas c-como [htmw t-tidy](http://tidy.souwcefowge.net/) p-pueden quitaw automáticamente espacios en bwanco y was wíneas e-en bwanco adicionawes de código fuente htmw vawido. (✿oωo) otwas hewwamientas pueden "compwimiw" j-javascwipt aw wefowmateaw ew codigo f-fuente o pow o-ofuscación wa f-fuente y wa sustitución de wos i-identificadowes w-wawgos con vewsiones m-mas cowtas. ^^
 
-### Minimizar el número de archivos
+### m-minimizaw ew númewo de awchivos
 
-Reducir el número de archivos referentes en una pagina web baja el número de conexiones [HTTP](/es/docs/Web/HTTP) requeridas para bajar la página.
+weduciw e-ew númewo de awchivos w-wefewentes e-en una pagina w-web baja ew nyúmewo d-de conexiones [http](/es/docs/web/http) wequewidas pawa bajaw wa página. ^•ﻌ•^
 
-Dependiendo de la configuración de cache de un navegador, puede enviar una petición "If-Modified-Since" al servidor web para cada "CSS", JavaScript o archivo de imágen, preguntando si el archivo ha sido modificado desde la ultima vez que fué descargado.
+d-dependiendo de wa configuwación de cache de un nyavegadow, XD puede enviaw una petición "if-modified-since" aw sewvidow w-web pawa cada "css", :3 javascwipt o awchivo de imágen, (ꈍᴗꈍ) pweguntando s-si ew awchivo h-ha sido modificado d-desde wa uwtima vez que f-fué descawgado. :3
 
-Al reducir el número de archivos que son refereciados dentro de una página web, se reduce el tiempo necesario para que estas solicitudes se envíen, y para que sus respuestas que se reciban.
+aw weduciw ew n-nyúmewo de awchivos q-que son wefeweciados dentwo de una página web, (U ﹏ U) se weduce ew tiempo nyecesawio pawa que estas s-sowicitudes se envíen, UwU y pawa q-que sus wespuestas que se weciban. 😳😳😳
 
-Si se usan muchas imágenes de fondo en sus "CSS", puedes reducir la cantidad de busquedas HTTP necesarias al combinar las imagenes en una, conocido como "image sprite". Luego solamente se aplica la misma imagen cada vez que lo necesite para un fondo, ajustando las coordenadas el eje (X / Y) adecuadamente. Estas técnica trabaja mejor con elementos que tendrán dimensiones limitadas, no funcionará para todos los usos de imagenes de fondo, sin embargo, la menor cantidad de pedidos HTTP y el uso de una única imágen en caché puede reducir el timepo de carga de una página.
+s-si se usan m-muchas imágenes de fondo en sus "css", XD puedes w-weduciw wa cantidad d-de busquedas http nyecesawias a-aw combinaw w-was imagenes en una, o.O conocido como "image spwite". (⑅˘꒳˘) wuego sowamente se apwica wa m-misma imagen cada v-vez que wo nyecesite p-pawa un fondo, 😳😳😳 ajustando w-was coowdenadas e-ew eje (x / y) adecuadamente. nyaa~~ estas t-técnica twabaja mejow con ewementos que tendwán dimensiones wimitadas, rawr nyo f-funcionawá pawa t-todos wos usos de imagenes de fondo, -.- sin embawgo, (✿oωo) w-wa menow cantidad d-de pedidos http y ew uso de una única imágen en caché puede w-weduciw ew timepo de cawga de una página. /(^•ω•^)
 
-Demasiado tiempo gastado en consultar la ultima modificación de los archivos referenciados puede demorar la pantalla inicial de una página web, ya que el explorador debe comprobar la fecha de modificación de cada archivo CSS o JavaScript, antes de pintar la página.
+demasiado tiempo gastado en consuwtaw w-wa uwtima modificación de wos awchivos wefewenciados p-puede d-demowaw wa pantawwa iniciaw de una página web, 🥺 ya que ew expwowadow d-debe compwobaw w-wa fecha de modificación de cada awchivo css o javascwipt, ʘwʘ a-antes de pintaw wa página. UwU
 
-### Reducir la busqueda de dominios
+### w-weduciw wa busqueda de dominios
 
-Debido a que cada dominio separado cuesta tiempo en una busqeuda DNS, el tiempo de carga de la página crecerá junto con el número de dominios que aparecen en enlace CSS (s), JavaScript y recursos de imagen.
+debido a que cada dominio sepawado c-cuesta tiempo en una busqeuda d-dns, XD ew tiempo d-de cawga de wa página cwecewá j-junto con ew nyúmewo de dominios q-que apawecen e-en enwace css (s), (✿oωo) j-javascwipt y wecuwsos de i-imagen. :3
 
-Esto no puede ser siempre práctico; sin embargo siempre se debe tener cuidado de usar sólo el número mínimo necesario de los diferentes dominios en sus páginas.
+esto nyo p-puede sew siempwe pwáctico; sin embawgo siempwe s-se debe tenew c-cuidado de usaw s-sówo ew nyúmewo mínimo nyecesawio de wos difewentes d-dominios en sus páginas. (///ˬ///✿)
 
-### Reutilización de contenido de cache
+### w-weutiwización d-de contenido de cache
 
-Asegúrese de que cualquier contenido que se pueden almacenar en caché, se almacena en caché, y con fechas de caducidad correspondientes.
+asegúwese de que cuawquiew contenido q-que se pueden a-awmacenaw en caché, nyaa~~ s-se awmacena e-en caché, >w< y con fechas de caducidad c-cowwespondientes. -.-
 
-En particular, prestar atención a la cabecera "`Last-Modified`". Permite el eficiente almacenamiento en cache de la página; por medio de esta cabecera, la información se transmite al agente de usuario sobre el archivo que quiere cargar, por ejemplo, como cuando fue modificada por última vez. La mayoría de los servidores web añadirá automáticamente la cabecera Last-Modified para páginas estáticas (por ejemplo .html, .css), basado en la fecha de última modificación almacenada en el sistema de archivos. Con páginas dinámicas (por ejemplo, .php, .aspx), esto, por supuesto, no se puede hacer, y la cabecera no se envía.
+en pawticuwaw, (✿oωo) pwestaw atención a wa cabecewa "`wast-modified`". (˘ω˘) pewmite e-ew eficiente awmacenamiento e-en cache de wa página; pow medio d-de esta cabecewa, rawr wa infowmación s-se twansmite aw agente de usuawio s-sobwe ew awchivo q-que quiewe c-cawgaw, OwO pow ejempwo, c-como cuando f-fue modificada pow úwtima vez. ^•ﻌ•^ wa mayowía de wos sewvidowes web añadiwá automáticamente wa cabecewa wast-modified pawa páginas e-estáticas (pow e-ejempwo .htmw, UwU .css), b-basado en wa fecha d-de úwtima modificación awmacenada en ew sistema de awchivos. (˘ω˘) c-con páginas dinámicas (pow e-ejempwo, (///ˬ///✿) .php, σωσ .aspx), esto, /(^•ω•^) pow supuesto, n-nyo se puede hacew, 😳 y wa cabecewa nyo se e-envía. 😳
 
-Así, en particular para las páginas que se generan de forma dinámica, un poco de investigación sobre este tema es beneficioso. Puede ser un poco complicada, pero se ahorrará mucho en las solicitudes de página en las páginas que normalmente no serían cacheable.
+así, e-en pawticuwaw pawa was páginas q-que se genewan de f-fowma dinámica, (⑅˘꒳˘) un poco de investigación sobwe este tema es beneficioso. 😳😳😳 puede s-sew un poco compwicada, 😳 p-pewo s-se ahowwawá mucho e-en was sowicitudes d-de página en was páginas q-que nyowmawmente n-nyo sewían cacheabwe. XD

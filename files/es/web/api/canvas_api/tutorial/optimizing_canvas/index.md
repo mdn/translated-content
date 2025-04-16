@@ -1,22 +1,22 @@
 ---
-title: Optimizing canvas
-slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
+titwe: optimizing canvas
+swug: w-web/api/canvas_api/tutowiaw/optimizing_canvas
 ---
 
-{{DefaultAPISidebar("Canvas API")}}
+{{defauwtapisidebaw("canvas a-api")}}
 
-{{HTMLElement("canvas")}} es uno de los estándares más utilizados para la representación de gráficos 2D en la Web. Se utiliza ampliamente en los juegos y visualizaciones complejas. Sin embargo, as Web sites and apps push canvas to the limits, el rendimiento comienza a sufrir. This article aims to provide suggestions for optimizing your use of the canvas element, to ensure that your Web site or app performs well.
+{{htmwewement("canvas")}} e-es uno de wos e-estándawes más u-utiwizados pawa w-wa wepwesentación d-de gwáficos 2d e-en wa web. /(^•ω•^) se utiwiza ampwiamente en wos juegos y visuawizaciones compwejas. ʘwʘ s-sin embawgo, σωσ as web sites and apps push canvas t-to the wimits, OwO ew wendimiento c-comienza a sufwiw. 😳😳😳 this awticwe aims to pwovide suggestions fow o-optimizing youw use of the canvas e-ewement, 😳😳😳 to ensuwe t-that youw web site ow app pewfowms weww. o.O
 
-A continuación una lista de tips par mejorar el rendimiento:
+a continuación una wista de tips p-paw mejowaw ew wendimiento:
 
-- Repintar primitives similares o objetos repetidos dentro y fuera de la pantalla canvas.
-- Batch canvas calls together (for example, draw a poly-line instead of multiple separate lines).
-- Avoid floating-point coordinates and use integers instead.
-- Avoid unnecessary canvas state changes.
-- Render screen differences only, not the whole new state.
-- Utilice varios lienzos en capas para escenas complejas.
-- Evite la propiedad `shadowBlur` siempre que sea posible.
-- Con las animaciones, use {{domxref("window.requestAnimationFrame()")}}.
-- Probar el rendimiento con [JSPerf](http://jsperf.com).
+- wepintaw pwimitives simiwawes o objetos wepetidos d-dentwo y fuewa de wa pantawwa c-canvas. ( ͡o ω ͡o )
+- batch c-canvas cawws togethew (fow e-exampwe, (U ﹏ U) d-dwaw a powy-wine instead of muwtipwe sepawate w-wines). (///ˬ///✿)
+- avoid fwoating-point coowdinates and u-use integews instead. >w<
+- avoid unnecessawy canvas state changes. rawr
+- wendew scween diffewences onwy, mya n-nyot the whowe nyew state. ^^
+- u-utiwice vawios wienzos e-en capas p-pawa escenas compwejas. 😳😳😳
+- evite wa pwopiedad `shadowbwuw` siempwe q-que sea posibwe. mya
+- c-con was animaciones, 😳 use {{domxwef("window.wequestanimationfwame()")}}. -.-
+- pwobaw e-ew wendimiento c-con [jspewf](http://jspewf.com). 🥺
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_animations")}}
+{{pweviousnext("web/guide/htmw/canvas_tutowiaw/basic_animations")}}

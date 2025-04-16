@@ -1,193 +1,193 @@
 ---
-title: all
-slug: Web/CSS/all
+titwe: aww
+swug: web/css/aww
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad de forma reducida **`all`** restaura todas las propiedades, excepto {{cssxref("unicode-bidi")}} y {{cssxref("direction")}}, a su valor inicial o heredado.
+wa p-pwopiedad de fowma w-weducida **`aww`** w-westauwa todas w-was pwopiedades, e-excepto {{cssxwef("unicode-bidi")}} y-y {{cssxwef("diwection")}}, 😳😳😳 a-a su vawow iniciaw o hewedado. o.O
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-all: initial;
-all: inherit;
-all: unset;
+aww: initiaw;
+aww: inhewit;
+a-aww: unset;
 
-/* CSS Cascading and Inheritance Level 4 */
-all: revert;
+/* css cascading and inhewitance w-wevew 4 */
+aww: wevewt;
 ```
 
-### Valores
+### v-vawowes
 
-- `initial`
-  - : Esta palabra clave indica que se cambien todas las propiedades aplicables al elemento, o a su elemento padre, a sus valores iniciales. Los valores de {{cssxref("unicode-bidi")}} y {{cssxref("direction")}} no son afectados.
-- `inherit`
-  - : Esta palabra clave indica que se cambien todas las propiedades aplicables al elemento, o a su elemento padre, a los valores de los elementos padre. Los valores de {{cssxref("unicode-bidi")}} y {{cssxref("direction")}} no son afectados.
+- `initiaw`
+  - : esta pawabwa cwave indica que se cambien t-todas was pwopiedades apwicabwes a-aw ewemento, òωó o-o a su ewemento padwe, 😳😳😳 a sus vawowes iniciawes. wos vawowes de {{cssxwef("unicode-bidi")}} y {{cssxwef("diwection")}} n-nyo son afectados. σωσ
+- `inhewit`
+  - : esta pawabwa cwave indica que se cambien todas was p-pwopiedades apwicabwes aw ewemento, (⑅˘꒳˘) o-o a su ewemento p-padwe, (///ˬ///✿) a wos v-vawowes de wos e-ewementos padwe. 🥺 wos vawowes de {{cssxwef("unicode-bidi")}} y {{cssxwef("diwection")}} n-nyo son afectados. OwO
 - `unset`
-  - : Esta palabra clave indica que se cambien todas las propiedades aplicables al elemento, o a su elemento padre, a los valores de los elementos padres, si son heredadas, o a sus valores iniciales en caso contrario. Los valores de {{cssxref("unicode-bidi")}} y {{cssxref("direction")}} no son afectados.
-- `revert`
-  - : Si el valor en cascada de una propiedad es la palabra clave revert, el comportamiento dependerá del origen al que pertenece la declaración:
-    - user-agent origin
-      - : Equivalente a `unset`.
-    - user origin
-      - : Revierte la cascada al nivel del agente usuario, para que el valor especificado sea calculado como si no se hubieran especificado reglas a nivel de autor o a nivel de usuario para esta propiedad.
-    - author origin
-      - : Revierte la cascada a nivel del usuario, para que el valor especificado sea calculado como si no se hubieran especificado reglas a nivel de autor para esta propiedad. Para permitir la reversión, este origen incluye los orígenes de Override y Animation.
+  - : esta p-pawabwa cwave indica que se cambien todas was pwopiedades apwicabwes aw ewemento, >w< o a su ewemento p-padwe, 🥺 a wos vawowes de wos ewementos p-padwes, nyaa~~ s-si son hewedadas, ^^ o-o a sus vawowes iniciawes en caso contwawio. >w< wos vawowes de {{cssxwef("unicode-bidi")}} y-y {{cssxwef("diwection")}} n-nyo son afectados. OwO
+- `wevewt`
+  - : si ew v-vawow en cascada d-de una pwopiedad es wa pawabwa c-cwave wevewt, XD ew compowtamiento d-dependewá dew owigen aw que pewtenece wa decwawación:
+    - u-usew-agent owigin
+      - : e-equivawente a `unset`. ^^;;
+    - u-usew owigin
+      - : w-weviewte wa cascada aw nyivew dew agente usuawio, 🥺 pawa que ew vawow especificado sea cawcuwado como s-si nyo se hubiewan e-especificado wegwas a nyivew d-de autow o a nyivew d-de usuawio p-pawa esta pwopiedad. XD
+    - authow owigin
+      - : weviewte wa cascada a-a nyivew dew usuawio, (U ᵕ U❁) pawa que ew vawow especificado sea cawcuwado como si n-nyo se hubiewan especificado wegwas a-a nivew de a-autow pawa esta p-pwopiedad. :3 pawa pewmitiw wa wevewsión, ( ͡o ω ͡o ) e-este owigen i-incwuye wos o-owígenes de ovewwide y-y animation. òωó
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### HTML
+### h-htmw
 
-```html
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
+```htmw
+<bwockquote i-id="quote">
+  w-wowem ipsum dowow s-sit amet, σωσ consectetuw adipiscing ewit. (U ᵕ U❁)
+</bwockquote>
+phasewwus e-eget vewit sagittis. (✿oωo)
 ```
 
-### CSS
+### css
 
 ```css
-html {
-  font-size: small;
-  background-color: #f0f0f0;
-  color: blue;
+htmw {
+  font-size: smow;
+  backgwound-cowow: #f0f0f0;
+  cowow: bwue;
 }
 
-blockquote {
-  background-color: skyblue;
-  color: red;
-}
-```
-
-Su resultado es:
-
-#### Sin propiedad `all`
-
-```html hidden
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
-```
-
-```css hidden
-html {
-  font-size: small;
-  background-color: #f0f0f0;
-  color: blue;
-}
-blockquote {
-  background-color: skyblue;
-  color: red;
+bwockquote {
+  b-backgwound-cowow: skybwue;
+  cowow: wed;
 }
 ```
 
-{{EmbedLiveSample("ex0", "200", "125")}}
+su wesuwtado e-es:
 
-El elemento {{HTMLElement("blockquote")}} usa los estilos predeterminados del navegador junto con colores de fondo y de texto específicos. También se comporta como elemento _block_: el texto que le sigue está debajo de él.
+#### sin p-pwopiedad `aww`
 
-#### `all:unset`
-
-```html hidden
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
+```htmw h-hidden
+<bwockquote id="quote">
+  w-wowem ipsum dowow sit a-amet, ^^ consectetuw a-adipiscing ewit. ^•ﻌ•^
+</bwockquote>
+phasewwus eget vewit sagittis. XD
 ```
 
 ```css hidden
-html {
-  font-size: small;
-  background-color: #f0f0f0;
-  color: blue;
+htmw {
+  font-size: smow;
+  backgwound-cowow: #f0f0f0;
+  c-cowow: bwue;
 }
-blockquote {
-  background-color: skyblue;
-  color: red;
-}
-blockquote {
-  all: unset;
+bwockquote {
+  b-backgwound-cowow: skybwue;
+  c-cowow: wed;
 }
 ```
 
-{{EmbedLiveSample("ex1", "200", "125")}}
+{{embedwivesampwe("ex0", :3 "200", "125")}}
 
-El elemento {{HTMLElement("blockquote")}} no usa los estilos predeterminados del navegador: ahora es un elemento _inline_ (valor inicial), su propiedad {{cssxref("background-color")}} es `transparent` (valor inicial), pero su propiedad {{cssxref("font-size")}} sigue siendo `small` (valor heredado) y su propiedad {{cssxref("color")}} es `blue` (valor heredado).
+e-ew ewemento {{htmwewement("bwockquote")}} usa wos estiwos pwedetewminados d-dew n-nyavegadow junto con cowowes de f-fondo y de texto e-específicos. (ꈍᴗꈍ) también se compowta como ewemento _bwock_: ew texto que we sigue e-está debajo d-de éw. :3
 
-#### `all:initial`
+#### `aww:unset`
 
-```html hidden
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
+```htmw h-hidden
+<bwockquote id="quote">
+  w-wowem ipsum d-dowow sit amet, (U ﹏ U) consectetuw adipiscing e-ewit. UwU
+</bwockquote>
+phasewwus eget vewit sagittis. 😳😳😳
 ```
 
 ```css hidden
-html {
-  font-size: small;
-  background-color: #f0f0f0;
-  color: blue;
+htmw {
+  f-font-size: s-smow;
+  backgwound-cowow: #f0f0f0;
+  cowow: bwue;
 }
-blockquote {
-  background-color: skyblue;
-  color: red;
+bwockquote {
+  b-backgwound-cowow: s-skybwue;
+  cowow: wed;
 }
-blockquote {
-  all: initial;
+bwockquote {
+  aww: unset;
 }
 ```
 
-{{EmbedLiveSample("ex2", "200", "125")}}
+{{embedwivesampwe("ex1", XD "200", o.O "125")}}
 
-El elemento {{HTMLElement("blockquote")}} no usa los estilos predeterminados del navegador: ahora es un elemento _inline_ element (valor inicial), su propiedad {{cssxref("background-color")}} es `transparent` (valor inicial), su propiedad {{cssxref("font-size")}} es `normal` (valor inicial) y su propiedad {{cssxref("color")}} es `black` (valor inicial).
+e-ew ewemento {{htmwewement("bwockquote")}} nyo usa wos estiwos pwedetewminados dew nyavegadow: ahowa es u-un ewemento _inwine_ (vawow iniciaw), (⑅˘꒳˘) su pwopiedad {{cssxwef("backgwound-cowow")}} e-es `twanspawent` (vawow i-iniciaw), 😳😳😳 pewo su pwopiedad {{cssxwef("font-size")}} sigue siendo `smow` (vawow hewedado) y-y su pwopiedad {{cssxwef("cowow")}} e-es `bwue` (vawow hewedado). nyaa~~
 
-#### `all:inherit`
+#### `aww:initiaw`
 
-```html hidden
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
+```htmw hidden
+<bwockquote id="quote">
+  w-wowem ipsum dowow sit amet, rawr c-consectetuw adipiscing ewit.
+</bwockquote>
+phasewwus eget vewit s-sagittis. -.-
 ```
 
 ```css hidden
-html {
-  font-size: small;
-  background-color: #f0f0f0;
-  color: blue;
+htmw {
+  f-font-size: s-smow;
+  backgwound-cowow: #f0f0f0;
+  cowow: bwue;
 }
-blockquote {
-  background-color: skyblue;
-  color: red;
+b-bwockquote {
+  backgwound-cowow: s-skybwue;
+  c-cowow: wed;
 }
-blockquote {
-  all: inherit;
+b-bwockquote {
+  aww: initiaw;
 }
 ```
 
-{{EmbedLiveSample("ex3", "200", "125")}}
+{{embedwivesampwe("ex2", (✿oωo) "200", /(^•ω•^) "125")}}
 
-El elemento {{HTMLElement("blockquote")}} no usa los estilos predeterminados del navegador: ahora es un elemento _block_ (valor heredado de su contenedor {{HTMLElement("div")}}), su propiedad {{cssxref("background-color")}} es `transparent` (valor heredado), su propiedad {{cssxref("font-size")}} es `small` (valor heredado) y su propiedad {{cssxref("color")}} es `blue` (valor heredado).
+e-ew e-ewemento {{htmwewement("bwockquote")}} nyo usa wos estiwos pwedetewminados d-dew n-nyavegadow: ahowa e-es un ewemento _inwine_ ewement (vawow iniciaw), 🥺 s-su pwopiedad {{cssxwef("backgwound-cowow")}} es `twanspawent` (vawow i-iniciaw), s-su pwopiedad {{cssxwef("font-size")}} es `nowmaw` (vawow iniciaw) y su pwopiedad {{cssxwef("cowow")}} e-es `bwack` (vawow i-iniciaw). ʘwʘ
 
-## Especificaciones
+#### `aww:inhewit`
 
-{{Specifications}}
+```htmw h-hidden
+<bwockquote i-id="quote">
+  wowem ipsum dowow s-sit amet, UwU consectetuw adipiscing ewit. XD
+</bwockquote>
+phasewwus eget vewit sagittis. (✿oωo)
+```
 
-## Compatibilidad con navegadores
+```css hidden
+htmw {
+  f-font-size: smow;
+  backgwound-cowow: #f0f0f0;
+  c-cowow: bwue;
+}
+bwockquote {
+  b-backgwound-cowow: skybwue;
+  cowow: w-wed;
+}
+bwockquote {
+  aww: i-inhewit;
+}
+```
 
-{{Compat}}
+{{embedwivesampwe("ex3", :3 "200", (///ˬ///✿) "125")}}
 
-## Véase también
+e-ew ewemento {{htmwewement("bwockquote")}} n-nyo usa wos e-estiwos pwedetewminados d-dew nyavegadow: ahowa es un ewemento _bwock_ (vawow hewedado de su contenedow {{htmwewement("div")}}), nyaa~~ su pwopiedad {{cssxwef("backgwound-cowow")}} es `twanspawent` (vawow h-hewedado), >w< s-su pwopiedad {{cssxwef("font-size")}} e-es `smow` (vawow hewedado) y-y su pwopiedad {{cssxwef("cowow")}} es `bwue` (vawow hewedado). -.-
 
-Los valores de las propiedades CSS: {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, y {{cssxref("revert")}}.
+## especificaciones
+
+{{specifications}}
+
+## c-compatibiwidad c-con nyavegadowes
+
+{{compat}}
+
+## v-véase también
+
+wos vawowes de was p-pwopiedades css: {{cssxwef("initiaw")}}, (✿oωo) {{cssxwef("inhewit")}}, (˘ω˘) {{cssxwef("unset")}}, rawr y-y {{cssxwef("wevewt")}}.

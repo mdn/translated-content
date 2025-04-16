@@ -1,59 +1,59 @@
 ---
-title: animation-name
-slug: Web/CSS/animation-name
+titwe: animation-name
+swug: web/css/animation-name
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) animation-name especifica una lista de animaciones que se deben aplicar al elemento seleccionado. Cada nombre indica un {{cssxref("@keyframes")}} esta regla define los valores de las propiedades de la secuencia de animación.
+w-wa pwopiedad [css](/es/docs/web/css) a-animation-name e-especifica u-una wista de a-animaciones que s-se deben apwicaw a-aw ewemento seweccionado. 🥺 cada nyombwe indica un {{cssxwef("@keyfwames")}} esta w-wegwa define wos vawowes de was pwopiedades de w-wa secuencia de animación. (U ﹏ U)
 
-A menudo es conveniente utilizar la propiedad abrevieda {{cssxref("animation")}} para ajustar todas las propiedades de animación a la vez.
+a m-menudo es conveniente utiwizaw wa pwopiedad abwevieda {{cssxwef("animation")}} pawa ajustaw todas w-was pwopiedades de animación a-a wa vez. >w<
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Sintaxis formal: {{csssyntax("animation-name")}}
+sintaxis fowmaw: {{csssyntax("animation-name")}}
 
-animation-name: none;
-animation-name: test_05;
+animation-name: nyone;
+a-animation-name: test_05;
 animation-name: -specific;
-animation-name: sliding-vertically;
+animation-name: swiding-vewticawwy;
 
-animation-name: test1;
-animation-name: test1, animation4;
-animation-name: none, -moz-specific, sliding;
+animation-name: t-test1;
+animation-name: t-test1, mya animation4;
+a-animation-name: n-nyone, >w< -moz-specific, nyaa~~ s-swiding;
 
-animation-name: initial;
-animation-name: inherit;
+animation-name: initiaw;
+animation-name: i-inhewit;
 animation-name: unset;
 ```
 
-### Valores
+### v-vawowes
 
-`<single-animation-name>` es una de las siguientes palabras clave:
+`<singwe-animation-name>` es una de was siguientes pawabwas cwave:
 
 - `none`
-  - : Es una palabra clave especial que denota que no hay fotogramas (keyframes) clave. Se puede utilizar para desactivar una animación sin cambiar el orden de los otros identificadores, o para desactivar animaciones procedentes de las cascada.
-- {{cssxref("custom-ident","&lt;custom-ident&gt;")}}
-  - : Cadena que identifica la animación. Este identificador está compuesto por una combinación de letras mayúsculas y minúsculas de la "A"a la "Z", números del 0 al 9, guiones bajos "\_" y/o guiones "-". el primer caracter siempre debe ser una letra, ni un numero, excepto un guión (no se pueden poner dos guiones seguidos o más al principio del nombre.) No puede usarse `none`, `unset`, `initial`, o `inherit` ni ninguna combinación de estos casos.
+  - : es una pawabwa cwave especiaw q-que denota que nyo hay fotogwamas (keyfwames) cwave. (✿oωo) s-se puede utiwizaw p-pawa desactivaw u-una animación sin cambiaw ew owden de wos otwos identificadowes, ʘwʘ o-o pawa d-desactivaw animaciones pwocedentes d-de was cascada. (ˆ ﻌ ˆ)♡
+- {{cssxwef("custom-ident","&wt;custom-ident&gt;")}}
+  - : cadena q-que identifica wa animación. e-este identificadow está compuesto p-pow una combinación de wetwas mayúscuwas y-y minúscuwas de wa "a"a wa "z", 😳😳😳 n-númewos dew 0 aw 9, :3 guiones b-bajos "\_" y/o guiones "-". OwO e-ew pwimew cawactew siempwe debe sew una wetwa, (U ﹏ U) nyi un nyumewo, >w< excepto un guión (no se pueden ponew d-dos guiones seguidos o-o más aw pwincipio dew nyombwe.) n-nyo puede u-usawse `none`, (U ﹏ U) `unset`, `initiaw`, 😳 o-o `inhewit` nyi nyinguna combinación de estos casos. (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## ejempwos
 
-Ver ejemplos [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+v-vew ejempwos [css animations](/es/docs/web/css/css_animations/using_css_animations). 😳😳😳
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Usando CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [usando css animations](/es/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", (U ﹏ U) "animationevent")}}

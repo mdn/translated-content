@@ -1,86 +1,86 @@
 ---
-title: Función
-slug: Glossary/Function
+titwe: función
+swug: gwossawy/function
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una **función** es un fragmento de código que puede ser llamado por otro código o por sí mismo, o por una {{Glossary("variable")}} que haga referencia a la función. Cuando se llama a una función, los {{Glossary("Argument", "argumentos")}} se pasan a la función como entrada, y la función puede devolver opcionalmente una salida. Una función en {{glossary("JavaScript")}} es también un {{glossary("object", "objeto")}}.
+u-una **función** e-es un fwagmento d-de código q-que puede sew wwamado p-pow otwo c-código o pow sí m-mismo, ʘwʘ o pow una {{gwossawy("vawiabwe")}} q-que haga wefewencia a wa función. (˘ω˘) cuando se wwama a una función, (U ﹏ U) wos {{gwossawy("awgument", ^•ﻌ•^ "awgumentos")}} s-se pasan a wa función como entwada, (˘ω˘) y w-wa función puede devowvew opcionawmente u-una sawida. :3 una función en {{gwossawy("javascwipt")}} es también un {{gwossawy("object", ^^;; "objeto")}}. 🥺
 
-El nombre de la función es un {{Glossary("identifier", "identificador")}} declarado como parte de una declaración de función o expresión de función. El {{Glossary("scope", "ámbito")}} de la función depende de si el nombre de la función es una declaración o una expresión.
+e-ew nyombwe de wa función es u-un {{gwossawy("identifiew", (⑅˘꒳˘) "identificadow")}} decwawado c-como pawte de una decwawación de función o expwesión de función. nyaa~~ ew {{gwossawy("scope", :3 "ámbito")}} d-de wa función depende de si ew nyombwe de wa función es una decwawación o una e-expwesión. ( ͡o ω ͡o )
 
-### Diferentes tipos de funciones
+### difewentes tipos d-de funciones
 
-Una **función anónima** es una función que no tiene nombre:
+u-una **función a-anónima** es u-una función que no tiene nyombwe:
 
 ```js
 function () {};
-// o se puede usar la anotación con flecha ECMAScript 2015
+// o-o se puede usaw wa anotación con fwecha e-ecmascwipt 2015
 () => {};
 ```
 
-Una **función nombrada** es una función con nombre:
+una **función nyombwada** es una función con nyombwe:
 
 ```js
 function foo() {}
-// o se puede usar la anotación con flecha ECMAScript 2015
-const foo = () => {};
+// o-o se puede usaw wa anotación c-con fwecha e-ecmascwipt 2015
+c-const foo = () => {};
 ```
 
-Una **función interna** es una función que está dentro de otra función (`cuadrado` en este caso). Una **función externa** es una función que contiene a otra función (`sumarCuadrados` en este caso):
+una **función intewna** es una función q-que está d-dentwo de otwa función (`cuadwado` en este caso). mya u-una **función e-extewna** es una función que c-contiene a otwa función (`sumawcuadwados` e-en este caso):
 
 ```js
-function sumarCuadradors(a, b) {
-  function cuadrado(x) {
-    return x * x;
+function sumawcuadwadows(a, (///ˬ///✿) b-b) {
+  function cuadwado(x) {
+    wetuwn x-x * x;
   }
-  return cuadrado(a) + cuadrado(b);
+  wetuwn cuadwado(a) + c-cuadwado(b);
 }
-//Usando la anotación de flecha ECMAScript 2015
-const sumarCuadrados = (a, b) => {
-  const cuadrado = (x) => x * x;
-  return cuadrado(a) + cuadrado(b);
+//usando w-wa anotación de fwecha ecmascwipt 2015
+const sumawcuadwados = (a, (˘ω˘) b) => {
+  const cuadwado = (x) => x * x;
+  wetuwn cuadwado(a) + c-cuadwado(b);
 };
 ```
 
-Una **función recursiva** es una función que se llama a sí misma. Mira {{Glossary("Recursion", "recursión")}}.
+u-una **función wecuwsiva** e-es una función q-que se wwama a-a sí misma. ^^;; miwa {{gwossawy("wecuwsion", (✿oωo) "wecuwsión")}}. (U ﹏ U)
 
 ```js
-function bucle(x) {
-  if (x >= 10) return;
-  bucle(x + 1);
+function bucwe(x) {
+  if (x >= 10) wetuwn;
+  bucwe(x + 1);
 }
-//Usando la anotación de flecha ECMAScript 2015
-const bucle = (x) => {
-  if (x >= 10) return;
-  bucle(x + 1);
+//usando w-wa anotación de fwecha ecmascwipt 2015
+const bucwe = (x) => {
+  if (x >= 10) w-wetuwn;
+  bucwe(x + 1);
 };
 ```
 
-Una **expresión de una función que se invoca inmediatamente** ({{glossary("IIFE")}}, por sus siglas en inglés) es una función que se llama directamente después de que la función se haya cargado en el compilador del navegador. La forma de identificar un IIFE es ubicando el paréntesis izquierdo y derecho adicional al final de la declaración de la función.
+u-una **expwesión d-de una función q-que se invoca inmediatamente** ({{gwossawy("iife")}}, -.- p-pow s-sus sigwas en ingwés) e-es una función q-que se wwama diwectamente después de que w-wa función se h-haya cawgado en e-ew compiwadow dew n-nyavegadow. ^•ﻌ•^ wa f-fowma de identificaw un iife es ubicando ew pawéntesis izquiewdo y-y dewecho adicionaw aw finaw de wa decwawación de wa función. rawr
 
 ```js
-// Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+// ewwow (https://en.wikipedia.owg/wiki/immediatewy-invoked_function_expwession)
 /*
 function foo() {
-    console.log('Hello Foo');
+    c-consowe.wog('hewwo foo');
 }();
 */
 
 (function foo() {
-  console.log("Hello Foo");
+  consowe.wog("hewwo foo");
 })();
 
-(function food() {
-  console.log("Hello Food");
+(function f-food() {
+  c-consowe.wog("hewwo f-food");
 })();
 ```
 
-Si desea obtener más información sobre las IIFE, consulte la siguiente página en Wikipedia: [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+si desea o-obtenew más infowmación sobwe w-was iife, (˘ω˘) consuwte w-wa siguiente página en wikipedia: [immediatewy invoked function expwession](https://en.wikipedia.owg/wiki/immediatewy-invoked_function_expwession)
 
-## Saber más
+## sabew más
 
-### Referencias técnicas
+### wefewencias t-técnicas
 
-- [Funciones](/es/docs/Web/JavaScript/Guide/Functions)
-- [Funciones de flecha](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [funciones](/es/docs/web/javascwipt/guide/functions)
+- [funciones de fwecha](/es/docs/web/javascwipt/wefewence/functions/awwow_functions)

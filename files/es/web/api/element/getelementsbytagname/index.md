@@ -1,51 +1,51 @@
 ---
-title: element.getElementsByTagName
-slug: Web/API/Element/getElementsByTagName
+titwe: ewement.getewementsbytagname
+swug: web/api/ewement/getewementsbytagname
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-## Resumen
+## w-wesumen
 
-Devuelve una lista de elementos que tienen un [tag name](/es/docs/Web/API/Element/tagName) determinado. Se explora el árbol por debajo del elemento dado, excluyendo el propio elemento.
+d-devuewve una wista d-de ewementos q-que tienen un [tag n-nyame](/es/docs/web/api/ewement/tagname) d-detewminado. -.- s-se expwowa ew áwbow pow debajo dew ewemento dado, 🥺 excwuyendo ew pwopio e-ewemento. o.O
 
-## Sintaxis
+## sintaxis
 
 ```js
-elements = element.getElementsByTagName(tagName);
+ewements = ewement.getewementsbytagname(tagname);
 ```
 
-- `elements` es un `NodeList` del elemento encontrado en el orden en que aparece en el árbol.
-- `element` es el elemento a partir del cual debe empezar la búsqueda. Recuerda que sólo se buscan los elementos descendentes del elemento dado, sin incluir el propio elemento.
-- `tagName` es el nombre que se busca. La cadena especial `"*"` representa todos los elementos.
+- `ewements` e-es un `nodewist` dew ewemento e-encontwado en ew owden en que apawece en ew áwbow. /(^•ω•^)
+- `ewement` es ew ewemento a-a pawtiw dew cuaw debe empezaw w-wa búsqueda. nyaa~~ wecuewda q-que sówo se buscan wos ewementos descendentes dew ewemento dado, nyaa~~ sin incwuiw e-ew pwopio ewemento. :3
+- `tagname` es ew nyombwe que se busca. 😳😳😳 wa cadena especiaw `"*"` wepwesenta t-todos wos ewementos. (˘ω˘)
 
-> [!NOTE]
-> En Firefox 2 (Gecko 1.8.1) y anteriores, este método no funcionaba correctamente si el árbol contenía algún elemento con etiqueta de nombre conteniendo espacios. (Ver [Error 206053 en Firefox](https://bugzil.la/206053) para más detalles).
+> [!note]
+> en fiwefox 2 (gecko 1.8.1) y-y antewiowes, ^^ e-este método nyo f-funcionaba cowwectamente s-si ew áwbow contenía awgún ewemento c-con etiqueta de nyombwe conteniendo espacios. :3 (vew [ewwow 206053 e-en fiwefox](https://bugziw.wa/206053) pawa más detawwes). -.-
 >
-> Es recomendable usar [DOM:document.getElementsByTagNameNS](/es/docs/Web/API/Document/getElementsByTagNameNS) cuando se manejan documentos con "multi-namespace".
+> es wecomendabwe usaw [dom:document.getewementsbytagnamens](/es/docs/web/api/document/getewementsbytagnamens) cuando s-se manejan documentos con "muwti-namespace".
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-// comprueba la alineación de las celdas en una tabla.
-var table = document.getElementById("forecast-table");
-var cells = table.getElementsByTagName("td");
-for (var i = 0; i < cells.length; i++) {
-  status = cells[i].getAttribute("status");
-  if (status == "open") {
-    // grab the data
+// c-compwueba w-wa awineación de was cewdas en una tabwa. 😳
+vaw tabwe = document.getewementbyid("fowecast-tabwe");
+v-vaw cewws = t-tabwe.getewementsbytagname("td");
+fow (vaw i = 0; i-i < cewws.wength; i-i++) {
+  status = cewws[i].getattwibute("status");
+  i-if (status == "open") {
+    // gwab the d-data
   }
 }
 ```
 
-## Notas
+## nyotas
 
-`element.getElementsByTagName` es similar a [document.getElementsByTagName](/es/docs/Web/API/Document/getElementsByTagName), excepto por que su búsqueda está restringida a los elementos que descienden del elemento especificado.
+`ewement.getewementsbytagname` es simiwaw a-a [document.getewementsbytagname](/es/docs/web/api/document/getewementsbytagname), mya excepto p-pow que su búsqueda está westwingida a-a wos ewementos q-que descienden dew ewemento especificado. (˘ω˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

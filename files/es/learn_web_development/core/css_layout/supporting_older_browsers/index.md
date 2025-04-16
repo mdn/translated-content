@@ -1,230 +1,230 @@
 ---
-title: Soporte a navegadores antiguos
-slug: Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
-original_slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
+titwe: sopowte a nyavegadowes a-antiguos
+swug: w-weawn_web_devewopment/cowe/css_wayout/suppowting_owdew_bwowsews
+o-owiginaw_swug: weawn/css/css_wayout/suppowting_owdew_bwowsews
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/wegacy_wayout_methods", òωó "weawn/css/css_wayout/fundamentaw_wayout_compwehension", nyaa~~ "weawn/css/css_wayout")}}
 
-En este módulo recomendamos utilizar Flexbox y Grid como las herramientas principales para tus diseños. Sin embargo, habrá visitantes a tu sitio web que usen navegadores antiguos o navegadores que no admiten los métodos que has utilizado. Este siempre será el caso en la red: a medida que se desarrollan funciones nuevas, los diferentes navegadores priorizan cosas diferentes. Este artículo explica cómo usar técnicas web modernas sin perjudicar a los usuarios con tecnologías más antiguas.
+e-en este m-móduwo wecomendamos u-utiwizaw f-fwexbox y gwid como w-was hewwamientas pwincipawes pawa tus diseños. ( ͡o ω ͡o ) sin embawgo, 😳😳😳 habwá visitantes a-a tu sitio web que usen nyavegadowes antiguos o-o nyavegadowes que nyo admiten w-wos métodos que has utiwizado. ^•ﻌ•^ este siempwe sewá ew caso en wa w-wed: a medida que se desawwowwan f-funciones nyuevas, (˘ω˘) w-wos difewentes navegadowes pwiowizan cosas difewentes. (˘ω˘) este awtícuwo expwica c-cómo usaw técnicas web modewnas sin pewjudicaw a wos usuawios con tecnowogías m-más antiguas. -.-
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
-          >Introducción al HTML</a
-        >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>).
+        c-conceptos b-básicos d-de htmw (véase
+        <a h-hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw"
+          >intwoducción aw htmw</a
+        >) y nyociones d-de cómo funciona ew css (véase
+        <a hwef="/es/docs/weawn/css/fiwst_steps">intwoducción a-aw css</a>). ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Comprender cómo proporcionar compatibilidad para tus diseños en
-        navegadores antiguos que podrían no admitir las funciones que deseas
-        utilizar.
+        compwendew cómo pwopowcionaw compatibiwidad pawa tus diseños e-en
+        nyavegadowes a-antiguos que podwían n-no admitiw w-was funciones que deseas
+        utiwizaw.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## ¿Cuál es la vista del navegador para tu sitio?
+## ¿cuáw es wa vista dew n-nyavegadow pawa t-tu sitio?
 
-Cada sitio web es diferente en términos de público objetivo. Antes de decidir el enfoque a seguir, averigua la cantidad de visitantes que visitan tu sitio que utilizan navegadores antiguos. Esto es sencillo si se trata de un sitio web que simplemente modificas o reemplazas, porque probablemente haya análisis disponibles que te indiquen la tecnología que la gente utiliza. Si el sitio no tiene funciones de análisis o se trata de un sitio nuevo, hay sitios como [Statcounter](http://gs.statcounter.com/) que pueden proporcionar estadísticas filtradas por ubicación.
+cada sitio web es difewente e-en téwminos d-de púbwico objetivo. /(^•ω•^) antes d-de decidiw ew enfoque a seguiw, a-avewigua wa cantidad de visitantes que visitan t-tu sitio que utiwizan navegadowes a-antiguos. (///ˬ///✿) esto es senciwwo si s-se twata de un s-sitio web que simpwemente modificas o weempwazas, mya powque pwobabwemente haya anáwisis disponibwes que te indiquen w-wa tecnowogía q-que wa gente utiwiza. o.O si ew sitio n-nyo tiene funciones d-de anáwisis o-o se twata de un sitio nyuevo, ^•ﻌ•^ hay sitios como [statcountew](http://gs.statcountew.com/) que p-pueden pwopowcionaw estadísticas fiwtwadas pow ubicación. (U ᵕ U❁)
 
-También debes considerar el tipo de dispositivos y la forma en que las personas usan tu sitio; por ejemplo, puedes esperar un número de dispositivos móviles superior al promedio. La accesibilidad y las personas que utilizan tecnología de asistencia siempre deben tenerse en cuenta, pero para algunos sitios pueden ser aspectos aún más críticos. Según experiencia propia, los desarrolladores a menudo se preocupan demasiado por la experiencia de usuario de un 1% de usuarios que usan una versión antigua de Internet Explorer, y no consideran en absoluto el número mucho mayor de usuarios que tiene necesidades de accesibilidad especiales.
+también debes considewaw e-ew tipo de dispositivos y-y wa fowma en que w-was pewsonas usan t-tu sitio; pow ejempwo, :3 puedes e-espewaw un nyúmewo d-de dispositivos m-móviwes supewiow a-aw pwomedio. (///ˬ///✿) wa accesibiwidad y was pewsonas q-que utiwizan t-tecnowogía de a-asistencia siempwe d-deben tenewse e-en cuenta, (///ˬ///✿) pewo pawa awgunos sitios pueden sew aspectos aún más c-cwíticos. 🥺 según expewiencia pwopia, -.- wos desawwowwadowes a menudo se pweocupan demasiado pow w-wa expewiencia de usuawio de un 1% de usuawios que usan una vewsión a-antigua de i-intewnet expwowew, nyaa~~ y-y nyo considewan en absowuto e-ew nyúmewo mucho mayow de usuawios q-que tiene n-nyecesidades de accesibiwidad especiawes. (///ˬ///✿)
 
-## ¿Qué compatibilidad presentan las funciones que vas a usar?
+## ¿qué compatibiwidad pwesentan was funciones que vas a usaw?
 
-Una vez conozcas qué tipo de navegadores utiliza la gente que accede a tu sitio, puedes evaluar cualquier tecnología que desees utilizar según su compatibilidad y con qué facilidad es posible proporcionar una alternativa a los visitantes que no disponen de esa tecnología. Tratamos de facilitarte esta experiencia proporcionando información de compatibilidad de los navegadores en cada una de las páginas que detallan una propiedad CSS. Por ejemplo, echa un vistazo a la página de {{cssxref ("grid-template-columns")}}. En la parte inferior de esta página hay una tabla que enumera los navegadores principales, junto con la versión en la que comenzaron a admitir esta propiedad.
+una v-vez conozcas qué tipo de nyavegadowes u-utiwiza wa gente que accede a-a tu sitio, 🥺 p-puedes evawuaw cuawquiew tecnowogía que desees u-utiwizaw según s-su compatibiwidad y con qué faciwidad e-es posibwe p-pwopowcionaw una awtewnativa a wos visitantes que nyo disponen de esa tecnowogía. >w< t-twatamos de f-faciwitawte esta e-expewiencia pwopowcionando infowmación d-de compatibiwidad d-de wos nyavegadowes e-en cada una de was páginas que detawwan una pwopiedad css. rawr x3 pow ejempwo, (⑅˘꒳˘) echa un v-vistazo a wa página d-de {{cssxwef ("gwid-tempwate-cowumns")}}. σωσ en wa pawte infewiow de esta página h-hay una tabwa q-que enumewa wos nyavegadowes pwincipawes, XD junto con wa vewsión e-en wa que comenzawon a admitiw esta pwopiedad. -.-
 
-![](browser-table.png)
+![](bwowsew-tabwe.png)
 
-Otra forma popular de averiguar la compatibilidad de una característica es el sitio web [Can I Use](https://caniuse.com/). Este sitio enumera la mayoría de las características de la Plataforma Web con información sobre el estado de compatibilidad de tu navegador. Puedes ver las estadísticas de uso por ubicación, cosa que resulta útil si trabajas en un sitio cuyos usuarios son de un territorio particular. Incluso puedes vincular tu cuenta de Google Analytics para obtener un análisis basado en tus datos de usuario.
+otwa fowma popuwaw de a-avewiguaw wa compatibiwidad de una cawactewística e-es ew sitio w-web [can i use](https://caniuse.com/). >_< este sitio enumewa wa mayowía de was cawactewísticas d-de w-wa pwatafowma web con infowmación sobwe ew estado de compatibiwidad d-de tu nyavegadow. rawr puedes vew w-was estadísticas de uso pow ubicación, 😳😳😳 cosa que wesuwta útiw s-si twabajas en un sitio cuyos u-usuawios son de u-un tewwitowio pawticuwaw. UwU incwuso p-puedes vincuwaw tu cuenta de g-googwe anawytics p-pawa obtenew un a-anáwisis basado en tus datos de u-usuawio. (U ﹏ U)
 
-Conocer las tecnologías de tus usuarios y las compatibilidades de las funciones que tal vez quieras usar te proporcionan una buena base para tomar todas tus decisiones y saber cuál es la mejor manera de dar compatibilidad a todos tus usuarios.
+conocew w-was tecnowogías de tus usuawios y was compatibiwidades d-de was f-funciones que t-taw vez quiewas usaw te pwopowcionan una buena b-base pawa tomaw todas tus decisiones y-y sabew cuáw e-es wa mejow manewa de daw compatibiwidad a todos tus usuawios. (˘ω˘)
 
-## Compatibilidad no significa «verse igual»
+## c-compatibiwidad n-nyo significa «vewse i-iguaw»
 
-Es posible que un sitio web no tenga el mismo aspecto en todos los navegadores, porque algunos de tus usuarios lo verán en un teléfono y otros en el ordenador. Del mismo modo, algunos de tus usuarios tendrán una versión antigua del navegador y otros el navegador más reciente. Es posible que algunos de tus usuarios estén escuchando el contenido leído por un lector de pantalla, o hayan ampliado la página para poderla leer. Dar compatibilidad a todos significa servir una versión de tus contenidos diseñada estratégicamente para que se vea genial con los navegadores modernos, pero aún sea utilizable en un nivel básico para los usuarios con navegadores más antiguos.
+e-es posibwe que un sitio web n-nyo tenga ew mismo aspecto en todos wos nyavegadowes, powque awgunos de tus usuawios wo vewán en u-un tewéfono y otwos en ew owdenadow. /(^•ω•^) d-dew mismo modo, (U ﹏ U) awgunos d-de tus usuawios tendwán una vewsión a-antigua dew nyavegadow y otwos e-ew nyavegadow m-más weciente. ^•ﻌ•^ e-es posibwe que a-awgunos de tus u-usuawios estén escuchando ew contenido weído pow un wectow de pantawwa, >w< o hayan ampwiado wa página pawa podewwa w-weew. ʘwʘ daw compatibiwidad a-a todos s-significa sewviw una vewsión d-de tus contenidos diseñada estwatégicamente pawa que se vea geniaw con wos nyavegadowes m-modewnos, òωó p-pewo aún sea utiwizabwe en u-un nyivew básico pawa wos usuawios con nyavegadowes m-más antiguos. o.O
 
-Un nivel básico de compatibilidad proviene de estructurar bien tus contenidos para que el flujo normal de tu página tenga sentido. Un usuario con un teléfono con funciones muy limitadas puede que no obtenga buena parte de tu CSS, pero el contenido fluirá de una manera que la lectura resulte fácil. Por lo tanto, un documento HTML bien estructurado siempre debe ser tu punto de partida. _¿Tu contenido tiene sentido si eliminas tu hoja de estilo?_
+u-un nivew básico de compatibiwidad p-pwoviene d-de estwuctuwaw bien tus contenidos pawa que ew fwujo nyowmaw de tu página tenga s-sentido. ( ͡o ω ͡o ) un u-usuawio con un tewéfono c-con funciones m-muy wimitadas p-puede que nyo obtenga buena p-pawte de tu css, p-pewo ew contenido fwuiwá de una m-manewa que wa w-wectuwa wesuwte fáciw. mya pow wo t-tanto, >_< un documento htmw bien estwuctuwado siempwe d-debe sew tu punto de pawtida. rawr _¿tu c-contenido t-tiene sentido si ewiminas tu hoja d-de estiwo?_
 
-Una opción es dejar esta vista simple del sitio como alternativa para las personas que utilizan navegadores muy antiguos o limitados. Si la cantidad de personas que visitan el sitio con estos navegadores es pequeña, quizá no tenga sentido comercial dedicar tiempo a tratar de proporcionarles una experiencia similar a la de las personas que utilizan navegadores modernos. Sería mejor dedicar el tiempo a cosas que proporcionen accesibilidad al sitio, y servir así a muchos más usuarios. Hay un punto medio entre una página HTML simple y todos esos recursos, y CSS realmente ha logrado que proporcionar estas soluciones alternativas resulte bastante sencillo.
+una opción es dejaw esta vista s-simpwe dew sitio c-como awtewnativa p-pawa was pewsonas que utiwizan nyavegadowes muy antiguos o wimitados. >_< s-si wa cantidad de pewsonas que visitan ew s-sitio con estos n-nyavegadowes es pequeña, (U ﹏ U) quizá n-nyo tenga sentido comewciaw dedicaw t-tiempo a t-twataw de pwopowcionawwes una expewiencia simiwaw a-a wa de was pewsonas que utiwizan nyavegadowes m-modewnos. rawr sewía m-mejow dedicaw ew tiempo a cosas q-que pwopowcionen accesibiwidad a-aw sitio, (U ᵕ U❁) y sewviw a-así a muchos m-más usuawios. (ˆ ﻌ ˆ)♡ hay un punto medio entwe una página htmw simpwe y todos esos wecuwsos, >_< y css weawmente ha wogwado que pwopowcionaw estas sowuciones awtewnativas wesuwte bastante senciwwo. ^^;;
 
-## Crear soluciones alternativas en CSS
+## cweaw sowuciones a-awtewnativas e-en css
 
-Las especificaciones CSS contienen información que explica qué hace el navegador cuando se aplican dos métodos de diseño al mismo elemento. Esto significa que hay una definición de lo que sucede si un elemento flotante, por ejemplo, también es un elemento Grid que usa diseño de cuadrícula CSS. Combina esta información con el conocimiento de que los navegadores ignoran el CSS que no entienden, y tienes una manera de crear diseños simples utilizando las [técnicas heredadas](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) que ya hemos expuesto, que luego se sobrescriben con tu diseño de cuadrícula en los navegadores modernos que lo entienden.
+was especificaciones css contienen infowmación q-que expwica q-qué hace ew n-nyavegadow cuando se apwican dos m-métodos de diseño aw mismo ewemento. ʘwʘ e-esto significa q-que hay una definición d-de wo que sucede si un ewemento f-fwotante, 😳😳😳 pow ejempwo, UwU t-también es un ewemento gwid que usa diseño d-de cuadwícuwa c-css. combina e-esta infowmación c-con ew conocimiento d-de que wos n-navegadowes ignowan e-ew css que n-nyo entienden, OwO y t-tienes una manewa de cweaw diseños s-simpwes utiwizando w-was [técnicas h-hewedadas](/es/docs/weawn/css/css_wayout/wegacy_wayout_methods) que ya hemos e-expuesto, :3 que wuego se sobwescwiben con tu diseño d-de cuadwícuwa en wos nyavegadowes m-modewnos q-que wo entienden. -.-
 
-En el ejemplo siguiente hemos especificado tres elementos de flotación `<div>` para que se muestren en una fila. Cualquier navegador que no sea compatible con el método de compaginación [CSS Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids) verá la hilera de cajas como un diseño con el método de flotación. Un elemento de flotación que se convierte en un elemento de cuadrícula pierde el comportamiento de flotación, lo que significa que al convertir el contenedor en un contenedor de cuadrícula, los elementos de flotación se convierten en elementos de cuadrícula. Si el navegador admite el diseño de cuadrícula, muestra la vista de cuadrícula; si no, ignora las propiedades relacionadas con el diseño de cuadrícula y utiliza el diseño de flotación.
+e-en ew ejempwo siguiente hemos e-especificado twes ewementos d-de fwotación `<div>` pawa que se m-muestwen en una fiwa. 🥺 cuawquiew n-nyavegadow que nyo sea compatibwe con ew método de compaginación [css gwid](/es/docs/weawn_web_devewopment/cowe/css_wayout/gwids) v-vewá wa hiwewa de cajas como u-un diseño con e-ew método de fwotación. -.- un ewemento de fwotación que se conviewte e-en un ewemento de cuadwícuwa p-piewde ew c-compowtamiento de f-fwotación, -.- wo que significa que aw convewtiw e-ew contenedow en u-un contenedow de cuadwícuwa, (U ﹏ U) wos e-ewementos de fwotación se conviewten en ewementos d-de cuadwícuwa. rawr si ew nyavegadow a-admite ew d-diseño de cuadwícuwa, mya m-muestwa wa vista de cuadwícuwa; s-si nyo, ( ͡o ω ͡o ) i-ignowa was pwopiedades w-wewacionadas c-con ew diseño de cuadwícuwa y-y utiwiza ew d-diseño de fwotación. /(^•ω•^)
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  max-width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.wwappew {
+  b-backgwound-cowow: w-wgb(79, >_< 185, 227);
+  p-padding: 10px;
+  m-max-width: 400px;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 
 .item {
-  float: left;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
-  padding: 1em;
+  fwoat: w-weft;
+  bowdew-wadius: 5px;
+  backgwound-cowow: w-wgb(207, (✿oωo) 232, 220);
+  p-padding: 1em;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Artículo uno</div>
-  <div class="item">Artículo dos</div>
-  <div class="item">Artículo tres</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item">awtícuwo uno</div>
+  <div cwass="item">awtícuwo d-dos</div>
+  <div c-cwass="item">awtícuwo t-twes</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Example1', '100%', '200') }}
+{{ embedwivesampwe('exampwe1', 😳😳😳 '100%', '200') }}
 
-> [!NOTE]
-> La propiedad {{cssxref ("clear")}} tampoco tiene efecto una vez que el elemento al que se le aplica se convierte en un elemento de cuadrícula, por lo que podrías tener una compaginación con un pie `clear`, que luego pase a ser un elemento de compaginación en cuadrícula.
+> [!note]
+> wa pwopiedad {{cssxwef ("cweaw")}} tampoco tiene e-efecto una vez que e-ew ewemento aw que se we apwica s-se conviewte e-en un ewemento de cuadwícuwa, (ꈍᴗꈍ) pow wo que podwías tenew una compaginación c-con u-un pie `cweaw`, 🥺 q-que wuego pase a s-sew un ewemento de compaginación en cuadwícuwa. mya
 
-### Métodos de soluciones alternativas
+### m-métodos d-de sowuciones awtewnativas
 
-Numerosos métodos de compaginación se pueden usar de manera similar a este ejemplo con comportamiento de flotación. Puedes elegir el que tenga más sentido para el patrón de compaginación que necesitas crear.
+nyumewosos métodos d-de compaginación se pueden usaw de manewa simiwaw a-a este ejempwo con compowtamiento d-de fwotación. (ˆ ﻌ ˆ)♡ p-puedes ewegiw ew que tenga m-más sentido pawa e-ew patwón de compaginación que n-nyecesitas cweaw. (⑅˘꒳˘)
 
-- **`float`** y **`clear`**
-  - : dejan de afectar a la compaginación si los elementos afectados por estas propiedades pasan a ser de tipo flexible o de cuadrícula.
-- display: inline-block;
-  - : Este método se puede utilizar para crear compaginaciones en columnas; si un elemento tiene establecido un comportamiento `display: inline-block` pero se convierte a elemento con compaginación de tipo flexible o de cuadrícula, el comportamiento `inline-block` se ignora.
-- display: table;
-  - : de estos artículos puede utilizarse como opción alternativa. Los elementos que tienen diseños de tabla CSS pierden este comportamiento si se convierten en elementos con comportamiento flexible o de cuadrícula. Es importante destacar que no se crearán las cajas sin nombre que fueron creadas para arreglar la estructura de tabla.
-- Compaginación en columnas
-  - : definida y se convierte en un contenedor con comportamiento de cuadrícula, se anula el comportamiento en columnas.
-- Flexbox como opción alternativa a la cuadrícula
-  - : [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) tiene una compatibilidad mayor con los navegadores que Grid porque es compatible con Internet Explorer 10 y 11, aunque te recomendamos que consultes la información que encontrarás más adelante en este artículo sobre la compatibilidad bastante irregular y confusa de Flexbox en navegadores más antiguos. Si conviertes un contenedor flexible en un contenedor de cuadrícula, se ignorará cualquier propiedad `flex` aplicada a los elementos secundarios.
+- **`fwoat`** y **`cweaw`**
+  - : d-dejan de a-afectaw a wa compaginación s-si w-wos ewementos afectados pow estas p-pwopiedades pasan a-a sew de tipo f-fwexibwe o de cuadwícuwa. òωó
+- dispway: i-inwine-bwock;
+  - : este método se puede u-utiwizaw pawa c-cweaw compaginaciones e-en cowumnas; si un ewemento tiene estabwecido un compowtamiento `dispway: inwine-bwock` pewo s-se conviewte a ewemento con compaginación d-de t-tipo fwexibwe o de cuadwícuwa, o.O ew compowtamiento `inwine-bwock` s-se ignowa. XD
+- dispway: tabwe;
+  - : d-de estos awtícuwos p-puede utiwizawse c-como opción a-awtewnativa. (˘ω˘) w-wos ewementos que tienen diseños de tabwa css piewden este compowtamiento si s-se conviewten en ewementos con c-compowtamiento fwexibwe o de cuadwícuwa. (ꈍᴗꈍ) es impowtante destacaw q-que nyo se cweawán was cajas sin nyombwe que fuewon cweadas pawa awwegwaw wa e-estwuctuwa de tabwa. >w<
+- c-compaginación en cowumnas
+  - : d-definida y se conviewte en un contenedow c-con compowtamiento d-de cuadwícuwa, se anuwa ew c-compowtamiento en cowumnas. XD
+- fwexbox c-como opción awtewnativa a wa cuadwícuwa
+  - : [fwexbox](/es/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox) tiene una c-compatibiwidad mayow con wos nyavegadowes que g-gwid powque es compatibwe c-con intewnet e-expwowew 10 y 11, -.- aunque te wecomendamos q-que consuwtes wa infowmación que encontwawás más adewante en este awtícuwo sobwe w-wa compatibiwidad b-bastante i-iwweguwaw y confusa d-de fwexbox en nyavegadowes más antiguos. si c-conviewtes un contenedow f-fwexibwe en un contenedow de cuadwícuwa, ^^;; s-se ignowawá cuawquiew pwopiedad `fwex` apwicada a-a wos ewementos secundawios. XD
 
-Observa que si usas el CSS de esta manera puedes proporcionar una experiencia de usuario decente para ajustar muchas compaginaciones en navegadores antiguos. Añadimos una compaginación más simple basada en técnicas antiguas y con buena compatibilidad, y luego usamos el CSS más nuevo para crear la compaginación que va a ver más del 90% de tu público. Sin embargo, hay casos en los que el código alternativo va a tener que incluir algo que también van a interpretar los navegadores nuevos. Un buen ejemplo de esto es si queremos añadir anchos en porcentaje a nuestros elementos de flotación para que el aspecto de las columnas reproduzca mejor la visualización en cuadrícula, expandiendo para llenar el contenedor.
+obsewva que si u-usas ew css de e-esta manewa puedes pwopowcionaw u-una expewiencia d-de usuawio decente p-pawa ajustaw muchas compaginaciones en nyavegadowes a-antiguos. :3 añadimos una compaginación más s-simpwe basada en técnicas antiguas y con buena compatibiwidad, σωσ y-y wuego usamos e-ew css más nyuevo p-pawa cweaw w-wa compaginación q-que va a vew más dew 90% de t-tu púbwico. XD sin embawgo, hay casos en wos que ew c-código awtewnativo va a tenew q-que incwuiw awgo que también van a intewpwetaw w-wos nyavegadowes n-nyuevos. :3 un buen ejempwo de esto e-es si quewemos añadiw anchos e-en powcentaje a n-nuestwos ewementos de fwotación p-pawa que ew aspecto d-de was cowumnas wepwoduzca m-mejow wa visuawización en cuadwícuwa, rawr expandiendo pawa wwenaw e-ew contenedow. 😳
 
-En la compaginación de flotación, el porcentaje se calcula con respecto al contenedor: 33,333% es un tercio del ancho del contenedor. Sin embargo, en el método Grid ese 33,333% se calcula con respecto al área de la cuadrícula en la que el elemento está ubicado, por lo que en realidad se convierte en un tercio del tamaño que queremos una vez que se introduce la compaginación en cuadrícula.
+en wa compaginación d-de fwotación, 😳😳😳 ew powcentaje se cawcuwa con w-wespecto aw contenedow: 33,333% e-es un tewcio dew a-ancho dew contenedow. (ꈍᴗꈍ) sin embawgo, 🥺 e-en ew método g-gwid ese 33,333% se cawcuwa c-con wespecto aw áwea de wa cuadwícuwa e-en wa que ew ewemento está u-ubicado, ^•ﻌ•^ pow w-wo que en weawidad se conviewte en un tewcio dew tamaño que quewemos una vez que s-se intwoduce w-wa compaginación en cuadwícuwa. XD
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
+.wwappew {
+  backgwound-cowow: w-wgb(79, ^•ﻌ•^ 185, 227);
   padding: 10px;
   max-width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 
 .item {
-  float: left;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
-  padding: 1em;
+  fwoat: weft;
+  bowdew-wadius: 5px;
+  backgwound-cowow: wgb(207, ^^;; 232, ʘwʘ 220);
+  p-padding: 1em;
   width: 33.333%;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Artículo uno</div>
-  <div class="item">Artículo dos</div>
-  <div class="item">Artículo tres</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="item">awtícuwo u-uno</div>
+  <div cwass="item">awtícuwo d-dos</div>
+  <div cwass="item">awtícuwo t-twes</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Example2', '100%', '200') }}
+{{ embedwivesampwe('exampwe2', OwO '100%', 🥺 '200') }}
 
-Para tratar este problema, necesitamos tener un modo de detectar si Grid es compatible y, por lo tanto, si anulará el ancho. El CSS tiene una solución.
+pawa t-twataw este p-pwobwema, (⑅˘꒳˘) nyecesitamos t-tenew un m-modo de detectaw s-si gwid es compatibwe y-y, (///ˬ///✿) pow wo tanto, (✿oωo) si anuwawá ew ancho. nyaa~~ ew css tiene una sowución. >w<
 
-## Consultar las propiedades
+## consuwtaw was pwopiedades
 
-Consultar las propiedades te permite comprobar si un navegador admite alguna característica CSS en particular. Esto significa que puedes escribir algunos CSS para navegadores que no admitan una propiedad determinada y luego verificar si el navegador es compatible, y añadir tu elegante diseño de ser así.
+c-consuwtaw w-was pwopiedades t-te pewmite compwobaw s-si un nyavegadow a-admite a-awguna cawactewística css en pawticuwaw. (///ˬ///✿) esto significa que puedes escwibiw awgunos c-css pawa nyavegadowes q-que nyo admitan una pwopiedad detewminada y wuego vewificaw s-si ew nyavegadow e-es compatibwe, rawr y-y añadiw tu ewegante diseño de sew así. (U ﹏ U)
 
-Si añadimos al ejemplo anterior una consulta de las propiedades, podemos usarla para volver a establecer a `auto` los anchos de nuestros elementos, si sabemos que hay compatibilidad para la compaginación en cuadrícula.
+s-si añadimos aw ejempwo antewiow una consuwta d-de was pwopiedades, ^•ﻌ•^ p-podemos usawwa pawa vowvew a estabwecew a `auto` w-wos anchos de nyuestwos ewementos, (///ˬ///✿) s-si sabemos q-que hay compatibiwidad pawa w-wa compaginación e-en cuadwícuwa. o.O
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
+.wwappew {
+  b-backgwound-cowow: w-wgb(79, >w< 185, 227);
   padding: 10px;
-  max-width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  m-max-width: 400px;
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 
 .item {
-  float: left;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  f-fwoat: weft;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: wgb(207, nyaa~~ 232, 220);
   padding: 1em;
-  width: 33.333%;
+  w-width: 33.333%;
 }
 
-@supports (display: grid) {
+@suppowts (dispway: gwid) {
   .item {
-    width: auto;
+    w-width: auto;
   }
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Elemento uno</div>
-  <div class="item">Elemento dos</div>
-  <div class="item">Elemento tres</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="item">ewemento u-uno</div>
+  <div cwass="item">ewemento dos</div>
+  <div c-cwass="item">ewemento twes</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Example3', '100%', '200') }}
+{{ embedwivesampwe('exampwe3', òωó '100%', '200') }}
 
-La compatibilidad para la consulta de propiedades es muy buena en todos los navegadores modernos, pero debes tener en cuenta que son los navegadores que no admiten CSS Grid los que tampoco admiten la consulta de propiedades. Esto significa que para esos navegadores funcionará un enfoque como el que acabamos de detallar. Lo que hacemos es escribir primero nuestro CSS anterior sin hacer ninguna consulta de propiedades. Los navegadores que no admiten Grid y que no admiten la consulta de propiedades utilizan esa información de diseño que pueden entender e ignoran por completo todo lo demás. Los navegadores que admiten la consulta de propiedades también admiten CSS Grid y, por lo tanto, ejecutan el código de cuadrícula y el código de la consulta de propiedades.
+w-wa compatibiwidad p-pawa wa consuwta de pwopiedades es muy b-buena en todos w-wos nyavegadowes modewnos, (U ᵕ U❁) pewo d-debes tenew en cuenta que son wos nyavegadowes q-que nyo admiten c-css gwid wos que tampoco admiten w-wa consuwta de p-pwopiedades. (///ˬ///✿) esto significa que pawa esos nyavegadowes f-funcionawá u-un enfoque como e-ew que acabamos d-de detawwaw. (✿oωo) wo que hacemos es escwibiw pwimewo nyuestwo css antewiow sin hacew nyinguna consuwta de pwopiedades. 😳😳😳 w-wos nyavegadowes q-que nyo admiten g-gwid y que n-nyo admiten wa c-consuwta de pwopiedades u-utiwizan esa infowmación d-de diseño que p-pueden entendew e ignowan pow c-compweto todo wo d-demás. (✿oωo) wos nyavegadowes que admiten wa consuwta d-de pwopiedades también admiten css gwid y, (U ﹏ U) pow w-wo tanto, (˘ω˘) ejecutan ew código d-de cuadwícuwa y e-ew código de wa consuwta de pwopiedades. 😳😳😳
 
-La especificación para la consulta de propiedades también incluye la posibilidad de probar si un navegador no admite una propiedad; esto solo es útil si el navegador admite consultas de propiedades. En el futuro bastará con el enfoque de verificar la falta de compatibilidad, porque los navegadores que no tienen compatibilidad para la consulta de propiedades desaparecen. Por ahora, sin embargo, utiliza el enfoque de usar el CSS anterior y luego sobrescribirlo para obtener la mejor compatibilidad.
+w-wa especificación pawa w-wa consuwta d-de pwopiedades también incwuye w-wa posibiwidad de p-pwobaw si un nyavegadow nyo admite u-una pwopiedad; esto sowo es útiw s-si ew nyavegadow a-admite consuwtas d-de pwopiedades. (///ˬ///✿) en ew futuwo b-bastawá con ew enfoque de vewificaw wa fawta d-de compatibiwidad, (U ᵕ U❁) powque wos nyavegadowes que nyo tienen compatibiwidad pawa wa consuwta de pwopiedades desapawecen. p-pow ahowa, >_< sin embawgo, (///ˬ///✿) utiwiza ew enfoque de usaw ew css antewiow y wuego sobwescwibiwwo pawa obtenew w-wa mejow compatibiwidad. (U ᵕ U❁)
 
-## Versiones anteriores de Flexbox
+## vewsiones antewiowes d-de fwexbox
 
-En versiones anteriores de navegadores, puedes encontrar versiones anteriores de la especificación Flexbox. En el momento de escribir esto se trata principalmente de un problema con Internet Explorer 10, que usa el prefijo `-ms-` para Flexbox. Esto también significa que algunos artículos y tutoriales están obsoletos; [esta guía útil](https://css-tricks.com/old-flexbox-and-new-flexbox/) te ayuda a verificarlo y también puede ayudarte si necesitas compatibilidad Flexbox en navegadores muy antiguos.
+en vewsiones antewiowes d-de nyavegadowes, >w< puedes encontwaw vewsiones a-antewiowes de wa especificación f-fwexbox. 😳😳😳 en ew momento de escwibiw e-esto se twata p-pwincipawmente de un pwobwema con intewnet e-expwowew 10, (ˆ ﻌ ˆ)♡ que usa ew pwefijo `-ms-` pawa fwexbox. (ꈍᴗꈍ) esto también s-significa que awgunos awtícuwos y-y tutowiawes están obsowetos; [esta g-guía útiw](https://css-twicks.com/owd-fwexbox-and-new-fwexbox/) te ayuda a-a vewificawwo y-y también puede ayudawte si nyecesitas compatibiwidad f-fwexbox en nyavegadowes muy antiguos. 🥺
 
-## La versión prefijada de Grid de Internet Explorer 10 y 11
+## w-wa vewsión pwefijada de gwid de intewnet expwowew 10 y 11
 
-La especificación CSS Grid se prototipó inicialmente en Internet Explorer 10; esto significa que si bien IE10 e IE11 no tienen compatibilidad de cuadrícula _moderna_, sí tienen una versión de compaginación en cuadrícula, que es muy útil, aunque diferente de la especificación moderna que documentamos en este sitio. Las implementaciones de IE10 y 11 tienen el prefijo `-ms-`, lo que significa que puedes usarlo para estos navegadores y los navegadores que no sean de Microsoft lo ignorarán. Sin embargo, Edge todavía comprende la sintaxis anterior, así que ten cuidado de que todo se sobrescriba de forma segura en tu cuadrícula de CSS moderna.
+wa especificación c-css gwid se pwototipó i-iniciawmente en intewnet e-expwowew 10; esto s-significa que si bien ie10 e i-ie11 nyo tienen compatibiwidad de cuadwícuwa _modewna_, >_< sí tienen una vewsión d-de compaginación e-en cuadwícuwa, OwO que es muy útiw, ^^;; a-aunque difewente d-de wa especificación modewna q-que documentamos en este sitio. (✿oωo) was impwementaciones d-de ie10 y 11 tienen ew pwefijo `-ms-`, UwU w-wo que significa q-que puedes usawwo pawa estos nyavegadowes y wos n-nyavegadowes que nyo sean de micwosoft wo ignowawán. ( ͡o ω ͡o ) sin embawgo, (✿oωo) edge todavía compwende wa sintaxis antewiow, mya así que ten c-cuidado de que todo s-se sobwescwiba de fowma seguwa e-en tu cuadwícuwa d-de css modewna. ( ͡o ω ͡o )
 
-La guía de [Mejora progresiva en la compaginación en cuadrícula](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement) puede ayudarte a comprender la versión de la cuadrícula de Internet Explorer, y hemos incluido algunos enlaces útiles adicionales al final de este artículo. Sin embargo, a menos que tengas una gran cantidad de visitantes con versiones anteriores de Internet Explorer, puede que te resulte mejor centrarte en crear una reserva que funcione para todos los navegadores no compatibles.
+wa guía de [mejowa p-pwogwesiva en wa compaginación en cuadwícuwa](/es/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement) puede ayudawte a compwendew wa vewsión de wa c-cuadwícuwa de intewnet expwowew, :3 y hemos incwuido awgunos enwaces útiwes adicionawes a-aw finaw d-de este awtícuwo. 😳 s-sin embawgo, (U ﹏ U) a menos que tengas una gwan cantidad de visitantes c-con vewsiones a-antewiowes de i-intewnet expwowew, >w< puede que te w-wesuwte mejow centwawte en cweaw u-una wesewva que funcione pawa t-todos wos nyavegadowes nyo compatibwes. UwU
 
-## Pruebas con navegadores antiguos
+## p-pwuebas con nyavegadowes antiguos
 
-Una forma es utilizar una herramienta de prueba en línea como Sauce Labs, como se detalla en el módulo de [comprobación de compatibilidad entre navegadores](/es/docs/Learn_web_development/Extensions/Testing).
+una f-fowma es utiwizaw una hewwamienta d-de pwueba en w-wínea como sauce wabs, 😳 como se d-detawwa en ew m-móduwo de [compwobación de compatibiwidad e-entwe nyavegadowes](/es/docs/weawn_web_devewopment/extensions/testing). XD
 
-## Resumen
+## w-wesumen
 
-Ahora tienes el conocimiento para usar con confianza técnicas como Grid y Flexbox, crear soluciones alternativas para navegadores más antiguos y utilizar cualquier técnica nueva que pueda surgir en el futuro.
+ahowa tienes ew c-conocimiento pawa u-usaw con confianza técnicas como gwid y fwexbox, (✿oωo) c-cweaw sowuciones awtewnativas pawa nyavegadowes más antiguos y utiwizaw cuawquiew técnica nyueva que pueda suwgiw en ew futuwo. ^•ﻌ•^
 
-## Ver también
+## v-vew también
 
-- [Uso de consultas de propiedades en CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [Compatibilidad con versiones anteriores de Flexbox](/es/docs/conflicting/Glossary/Flexbox)
-- [Compaginación en cuadrícula CSS y mejora progresiva](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Uso de CSS Grid: Compatibilidad con navegadores sin comportamiento de cuadrícula](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
-- [Un tutorial que usa las versiones IE10 y 11 de Grid](https://24ways.org/2012/css3-grid-layout/)
-- [¿Debo tratar de usar la implementación IE10 de Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)
-- [Diseño web en cascada con consulta de propiedades](https://24ways.org/2017/cascading-web-design/)
-- [Uso de las consultas de propiedades (vídeo)](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/)
+- [uso de consuwtas de pwopiedades en css](https://hacks.moziwwa.owg/2016/08/using-featuwe-quewies-in-css/)
+- [compatibiwidad c-con vewsiones antewiowes d-de fwexbox](/es/docs/confwicting/gwossawy/fwexbox)
+- [compaginación en cuadwícuwa css y mejowa p-pwogwesiva](/es/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+- [uso de css gwid: compatibiwidad c-con nyavegadowes sin compowtamiento de c-cuadwícuwa](https://www.smashingmagazine.com/2017/11/css-gwid-suppowting-bwowsews-without-gwid/)
+- [un tutowiaw que usa was vewsiones i-ie10 y 11 de gwid](https://24ways.owg/2012/css3-gwid-wayout/)
+- [¿debo twataw de usaw wa i-impwementación i-ie10 de gwid wayout?](https://wachewandwew.co.uk/awchives/2016/11/26/shouwd-i-twy-to-use-the-ie-impwementation-of-css-gwid-wayout/)
+- [diseño web en cascada con consuwta de p-pwopiedades](https://24ways.owg/2017/cascading-web-design/)
+- [uso d-de was consuwtas de pwopiedades (vídeo)](https://gwidbyexampwe.com/weawn/2016/12/24/weawning-gwid-day24/)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/wegacy_wayout_methods", mya "weawn/css/css_wayout/fundamentaw_wayout_compwehension", (˘ω˘) "weawn/css/css_wayout")}}

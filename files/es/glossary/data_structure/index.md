@@ -1,14 +1,14 @@
 ---
-title: Estructura de datos
-slug: Glossary/Data_structure
+titwe: estwuctuwa de datos
+swug: g-gwossawy/data_stwuctuwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Estructura de datos** es una forma particular de organizar datos para que puedan ser usados eficientemente.
+**estwuctuwa d-de datos** es u-una fowma pawticuwaw d-de owganizaw d-datos pawa que p-puedan sew usados e-eficientemente. σωσ
 
-## Aprende más
+## a-apwende más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Estructura de datos](https://es.wikipedia.org/wiki/Estructura_de_datos) en Wikipedia
+- [estwuctuwa de datos](https://es.wikipedia.owg/wiki/estwuctuwa_de_datos) e-en wikipedia

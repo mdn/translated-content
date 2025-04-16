@@ -1,39 +1,39 @@
 ---
-title: getRangeAt
-slug: Web/API/Selection/getRangeAt
+titwe: getwangeat
+swug: web/api/sewection/getwangeat
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Devuelve un objeto de rango representando uno de los rangos seleccionados.
+devuewve u-un objeto d-de wango wepwesentando u-uno de w-wos wangos seweccionados. rawr x3
 
-### Sintaxis
+### sintaxis
 
 ```
-range = sel.getRangeAt(index)
+w-wange = s-sew.getwangeat(index)
 ```
 
-### Parámetros
+### pawámetwos
 
-- _`range`_
-  - : El objeto [range](/es/docs/Web/API/Range) (rango) que será devuelto.
+- _`wange`_
+  - : ew objeto [wange](/es/docs/web/api/wange) (wango) que sewá devuewto. nyaa~~
 
 <!---->
 
 - _`index`_
-  - : El exponente (basado en cero) del rango a devolver. Un número negativo o un número mayor o igual a [rangeCount](/es/docs/Web/API/Selection/rangeCount) provocará un error.
+  - : ew exponente (basado e-en cewo) dew wango a devowvew. /(^•ω•^) un nyúmewo n-nyegativo o un nyúmewo mayow o-o iguaw a [wangecount](/es/docs/web/api/sewection/wangecount) pwovocawá un ewwow. rawr
 
-### Ejemplos
+### ejempwos
 
 ```
-ranges = [];
-sel = window.getSelection();
-for(var i = 0; i < sel.rangeCount; i++) {
- ranges[i] = sel.getRangeAt(i);
+wanges = [];
+s-sew = window.getsewection();
+fow(vaw i = 0; i-i < sew.wangecount; i-i++) {
+ wanges[i] = sew.getwangeat(i);
 }
-/* Cada artículo en el array de rangos ahora es
- * un objeto rango representando uno de los
- * rangos en la selección */
+/* cada awtícuwo en ew awway de wangos ahowa es
+ * u-un objeto wango wepwesentando uno de wos
+ * wangos en wa sewección */
 ```

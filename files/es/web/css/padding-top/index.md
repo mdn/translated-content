@@ -1,45 +1,45 @@
 ---
-title: padding-top
-slug: Web/CSS/padding-top
+titwe: padding-top
+swug: web/css/padding-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Sumario
+## s-sumawio
 
-La propiedad **`padding-top`** [CSS](/es/docs/Web/CSS) establece el espacio de relleno requerido en la parte superior del elemento. El [área de padding](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding) es el espacio entre el contenido del elemento y su borde. Contrariamente de la propiedad **`margin-top`**, valores negativos no son válidos.
+wa p-pwopiedad **`padding-top`** [css](/es/docs/web/css) e-estabwece ew e-espacio de wewweno w-wequewido en w-wa pawte supewiow d-dew ewemento. (⑅˘꒳˘) e-ew [áwea de padding](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#padding) es ew espacio entwe ew contenido dew ewemento y su bowde. (///ˬ///✿) contwawiamente d-de wa pwopiedad **`mawgin-top`**, 😳😳😳 vawowes n-nyegativos nyo son váwidos. 🥺
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* <length> values (valores fijos) */
+/* <wength> vawues (vawowes fijos) */
 padding-top: 0.5em;
 padding-top: 0;
 padding-top: 2cm;
 
-/* <percentage> value (valores porcentuales) */
+/* <pewcentage> v-vawue (vawowes powcentuawes) */
 padding-top: 10%;
 
-/* Global values (valores globales) */
-padding-top: inherit;
-padding-top: initial;
-padding-top: unset;
+/* g-gwobaw vawues (vawowes g-gwobawes) */
+padding-top: inhewit;
+padding-top: initiaw;
+padding-top: u-unset;
 ```
 
-### Valores
+### vawowes
 
-- `<length>`
-  - : Especifica un valor positivo fijo. Veáse {{cssxref("&lt;length&gt;")}} para más detalles.
-- `<percentage>`
-  - : Especifica un porcentaje con respecto al bloque que lo contiene.
+- `<wength>`
+  - : especifica un vawow positivo fijo. veáse {{cssxwef("&wt;wength&gt;")}} p-pawa más detawwes. mya
+- `<pewcentage>`
+  - : e-especifica un p-powcentaje con wespecto a-aw bwoque q-que wo contiene. 🥺
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
 ```css
 .content {
@@ -50,10 +50,10 @@ padding-top: unset;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

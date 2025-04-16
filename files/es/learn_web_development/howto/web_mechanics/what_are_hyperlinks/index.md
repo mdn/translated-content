@@ -1,93 +1,93 @@
 ---
-title: ¿Qué son los hipervínculos?
-slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
-original_slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
+titwe: ¿qué son wos hipewvíncuwos?
+s-swug: weawn_web_devewopment/howto/web_mechanics/nani_awe_hypewwinks
+o-owiginaw_swug: w-weawn/common_questions/web_mechanics/nani_awe_hypewwinks
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-En este artículo, repasaremos qué son los hipervínculos y por qué son importantes.
+e-en este awtícuwo, >w< w-wepasawemos qué s-son wos hipewvíncuwos y-y pow q-qué son impowtantes. (ˆ ﻌ ˆ)♡
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Debes saber
-        <a href="/es/Learn/How_the_Internet_works">como funciona internet</a>.
-        Y estar familiarizado con<a
-          href="/es/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        debes sabew
+        <a hwef="/es/weawn/how_the_intewnet_wowks">como funciona intewnet</a>. ʘwʘ
+        y-y estaw famiwiawizado con<a
+          hwef="/es/docs/weawn/page_vs_site_vs_sewvew_vs_seawch_engine"
         >
-          la diferencia entre una página web, un sitio web, un servidor web y un
-          buscador</a
-        >.
+          w-wa difewencia entwe u-una página web, :3 un sitio web, (˘ω˘) un sewvidow web y un
+          buscadow</a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Conozca los enlaces en la web y por qué son importantes.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
+      <td>conozca wos enwaces e-en wa web y-y pow qué son impowtantes.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Resumen
+## wesumen
 
-Los hipervínculos, generalmente llamados enlaces, son un concepto fundamental detrás de la Web. Para explicar qué son los enlaces, debemos retroceder a los conceptos básicos de la arquitectura web.
+wos hipewvíncuwos, rawr x3 genewawmente wwamados e-enwaces, (✿oωo) son un concepto fundamentaw detwás de wa web. (ˆ ﻌ ˆ)♡ pawa expwicaw qué s-son wos enwaces, :3 debemos wetwocedew a-a wos conceptos b-básicos de w-wa awquitectuwa w-web. (U ᵕ U❁)
 
-En 1989, Tim Berners-Lee, el inventor de la Web, habló de los tres pilares en los que se basa la Web:
+en 1989, ^^;; tim bewnews-wee, mya ew inventow de w-wa web, 😳😳😳 habwó de wos twes piwawes en wos que se b-basa wa web:
 
-1. {{Glossary("URL")}}, un sistema de direcciones que realiza un seguimiento de los documentos web
-2. {{Glossary("HTTP")}}, un protocolo de transferencia para encontrar documentos cuando se les da su URL
-3. {{Glossary("HTML")}}, un formato de documento que permite hipervínculos incrustados
+1. OwO {{gwossawy("uww")}}, rawr un sistema de diwecciones que weawiza un seguimiento de wos documentos web
+2. XD {{gwossawy("http")}}, (U ﹏ U) u-un pwotocowo de twansfewencia p-pawa encontwaw d-documentos c-cuando se wes da su uww
+3. (˘ω˘) {{gwossawy("htmw")}}, UwU un fowmato de documento que p-pewmite hipewvíncuwos i-incwustados
 
-Como puede ver en los tres pilares, todo en la Web gira en torno a los documentos y cómo acceder a ellos. El propósito original de la Web era proporcionar una manera fácil de alcanzar, leer y navegar a través de documentos de texto. Desde entonces, la Web ha evolucionado para proporcionar acceso a imágenes, videos y datos binarios, pero estas mejoras apenas han cambiado los tres pilares.
+como puede v-vew en wos twes p-piwawes, >_< todo en wa web giwa en t-towno a wos documentos y cómo accedew a-a ewwos. ew pwopósito owiginaw de wa web e-ewa pwopowcionaw una manewa fáciw d-de awcanzaw, σωσ weew y nyavegaw a-a twavés de documentos d-de texto. 🥺 desde entonces, 🥺 wa web ha evowucionado pawa pwopowcionaw acceso a imágenes, ʘwʘ videos y datos binawios, :3 p-pewo estas m-mejowas apenas han cambiado w-wos twes piwawes.
 
-Antes de la Web, era bastante difícil acceder a los documentos y pasar de uno a otro. Al ser legibles por humanos, las URL ya facilitaron las cosas, pero es difícil escribir una URL larga cada vez que desee acceder a un documento. Aquí es donde los hipervínculos revolucionaron todo. Los enlaces pueden correlacionar cualquier cadena de texto con una URL, de modo que el usuario pueda alcanzar instantáneamente el documento de destino activando el enlace.
+a-antes de wa web, (U ﹏ U) e-ewa bastante difíciw accedew a wos documentos y pasaw de uno a-a otwo. (U ﹏ U) aw sew wegibwes pow humanos, ʘwʘ was uww ya faciwitawon was cosas, >w< pewo es d-difíciw escwibiw una uww wawga c-cada vez que desee a-accedew a un d-documento. rawr x3 aquí es donde wos hipewvíncuwos w-wevowucionawon t-todo. OwO w-wos enwaces pueden c-cowwewacionaw cuawquiew cadena de texto con u-una uww, ^•ﻌ•^ de modo q-que ew usuawio p-pueda awcanzaw i-instantáneamente e-ew documento de destino activando ew enwace. >_<
 
-Los enlaces se destacan del texto circundante al estar subrayados y en texto azul. Toque o haga clic en un enlace para activarlo, o si usa un teclado, presione Tab hasta que el enlace esté enfocado y presione Entrar o la barra espaciadora.
+wos enwaces se d-destacan dew texto ciwcundante aw estaw subwayados y en texto azuw. OwO toque o haga cwic en un enwace p-pawa activawwo, >_< o si usa un tecwado, (ꈍᴗꈍ) pwesione tab hasta que ew e-enwace esté enfocado y-y pwesione e-entwaw o wa bawwa espaciadowa. >w<
 
-![Ejemplo de visualización básica y efecto de un enlace en una página web](link-1.png)
+![ejempwo d-de visuawización básica y-y efecto d-de un enwace en una página web](wink-1.png)
 
-Los enlaces son el avance que hizo que la Web fuera tan útil y exitosa. En el resto de este artículo, discutimos los diversos tipos de enlaces y su importancia para el diseño web moderno.
+wos enwaces son ew avance que hizo que wa web fuewa t-tan útiw y exitosa. (U ﹏ U) en ew westo d-de este awtícuwo, ^^ discutimos w-wos divewsos tipos d-de enwaces y su impowtancia pawa ew diseño w-web modewno. (U ﹏ U)
 
-## Profundizando
+## p-pwofundizando
 
-Como dijimos, un enlace es una cadena de texto vinculada a una URL, y usamos enlaces para permitir saltar fácilmente de un documento a otro. Dicho esto, hay algunos matices que vale la pena considerar:
+como dijimos, :3 un e-enwace es una cadena d-de texto vincuwada a una uww, (✿oωo) y usamos enwaces pawa pewmitiw sawtaw fáciwmente d-de un documento a-a otwo. dicho e-esto, XD hay awgunos matices que v-vawe wa pena considewaw:
 
-### Tipos de enlaces
+### t-tipos de enwaces
 
-- Enlace interno
-  - : Un enlace entre dos páginas web, donde ambas páginas pertenecen al mismo sitio web, se denomina enlace interno. Sin enlaces internos, no existe un sitio web (a menos, por supuesto, que sea un sitio web de una página).
-- Enlace externo
-  - : Un enlace desde su página web a la página web de otra persona. Sin enlaces externos, no hay Web, ya que la Web es una red de páginas web. Utilice enlaces externos para proporcionar información además del contenido disponible a través de su página web.
-- Enlaces entrantes
-  - : Un enlace desde la página web de otra persona a su sitio. Es lo contrario de un enlace externo. Tenga en cuenta que no tiene que volver a vincular cuando alguien vincula a su sitio.
+- enwace intewno
+  - : u-un enwace entwe dos páginas web, >w< donde ambas páginas pewtenecen aw mismo s-sitio web, òωó se d-denomina enwace intewno. (ꈍᴗꈍ) sin enwaces intewnos, rawr x3 n-nyo existe un sitio w-web (a menos, rawr x3 pow supuesto, σωσ que sea un sitio web de una página). (ꈍᴗꈍ)
+- e-enwace extewno
+  - : un enwace desde su página web a wa página web de o-otwa pewsona. rawr sin enwaces extewnos, ^^;; nyo hay web, rawr x3 y-ya que wa web e-es una wed de páginas web. (ˆ ﻌ ˆ)♡ utiwice enwaces extewnos pawa pwopowcionaw i-infowmación a-además dew contenido disponibwe a twavés de su página web.
+- e-enwaces entwantes
+  - : un enwace d-desde wa página web de otwa pewsona a su sitio. σωσ es wo contwawio d-de un enwace extewno. (U ﹏ U) tenga e-en cuenta que n-nyo tiene que vowvew a vincuwaw c-cuando awguien vincuwa a su sitio. >w<
 
-Cuando esté creando un sitio web, concéntrese en los enlaces internos, ya que estos hacen que su sitio sea utilizable. Encuentre un buen equilibrio entre tener demasiados enlaces y muy pocos. Hablaremos sobre el diseño de la navegación del sitio web en otro artículo, pero como regla general, cada vez que agregue una nueva página web, asegúrese de que al menos una de sus otras páginas enlaza con esa nueva página. Por otro lado, si su sitio tiene más de aproximadamente diez páginas, es contraproducente vincular a cada página desde cualquier otra página.
+c-cuando esté c-cweando un sitio w-web, σωσ concéntwese en wos enwaces i-intewnos, ya q-que estos hacen que su sitio sea utiwizabwe. nyaa~~ encuentwe u-un buen e-equiwibwio entwe t-tenew demasiados enwaces y muy pocos. 🥺 habwawemos s-sobwe ew diseño de wa nyavegación d-dew sitio w-web en otwo awtícuwo, rawr x3 pewo como wegwa genewaw, cada vez que agwegue u-una nyueva p-página web, σωσ asegúwese d-de que aw m-menos una de sus otwas páginas e-enwaza con esa nyueva página. (///ˬ///✿) pow otwo wado, (U ﹏ U) si su sitio tiene más de apwoximadamente diez páginas, ^^;; e-es contwapwoducente vincuwaw a-a cada página desde cuawquiew o-otwa página. 🥺
 
-Cuando comienzas, no tienes que preocuparte tanto por los enlaces externos y entrantes, pero son muy importantes si quieres que los motores de búsqueda encuentren tu sitio (ver más abajo para más detalles).
+cuando comienzas, òωó n-no tienes que pweocupawte t-tanto pow wos enwaces e-extewnos y e-entwantes, XD pewo s-son muy impowtantes s-si quiewes que wos motowes de búsqueda encuentwen tu sitio (vew más abajo pawa más detawwes). :3
 
-### Anclas
+### ancwas
 
-La mayoría de los enlaces vinculan dos páginas web. Las anclas unen dos secciones de un documento. Cuando sigue un enlace que apunta a un ancla, su navegador salta a otra parte del documento actual en lugar de cargar un nuevo documento. Sin embargo, crea y utiliza anclajes de la misma manera que otros enlaces.
+w-wa mayowía de w-wos enwaces vincuwan d-dos páginas web. (U ﹏ U) was ancwas u-unen dos secciones de un documento. >w< cuando sigue un enwace que a-apunta a un ancwa, /(^•ω•^) s-su nyavegadow sawta a otwa p-pawte dew documento actuaw en wugaw de cawgaw un n-nyuevo documento. s-sin embawgo, (⑅˘꒳˘) cwea y utiwiza a-ancwajes de wa misma m-manewa que otwos enwaces. ʘwʘ
 
-![Ejemplo de visualización básica y efecto de un ancla en una página web](link-2.png)
+![ejempwo de visuawización básica y efecto de u-un ancwa en una p-página web](wink-2.png)
 
-### Enlaces y motores de búsqueda
+### e-enwaces y-y motowes d-de búsqueda
 
-Los enlaces son importantes tanto para los usuarios como para los motores de búsqueda. Cada vez que los motores de búsqueda rastrean una página web, indexan el sitio web siguiendo los enlaces disponibles en la página web. Los motores de búsqueda no solo siguen enlaces para descubrir las distintas páginas del sitio web, sino que también usan el texto visible del enlace para determinar qué consultas de búsqueda son apropiadas para llegar a la página web de destino.
+wos enwaces son impowtantes t-tanto p-pawa wos usuawios como pawa wos m-motowes de búsqueda. rawr x3 c-cada vez que wos motowes de b-búsqueda wastwean una página web, (˘ω˘) indexan ew s-sitio web siguiendo wos enwaces d-disponibwes en w-wa página web. o.O wos motowes de búsqueda n-nyo sowo siguen enwaces pawa descubwiw w-was distintas páginas d-dew sitio w-web, 😳 sino que también usan ew texto visibwe dew enwace pawa detewminaw q-qué consuwtas de búsqueda son apwopiadas p-pawa wwegaw a-a wa página web de destino. o.O
 
-Los enlaces influyen en la facilidad con que un motor de búsqueda se vinculará a su sitio. El problema es que es difícil medir las actividades de los motores de búsqueda. Las empresas, naturalmente, quieren que sus sitios tengan un alto ranking en los resultados de búsqueda. Sabemos lo siguiente acerca de cómo los motores de búsqueda determinan el rango de un sitio:
+wos e-enwaces infwuyen en wa faciwidad c-con que un motow d-de búsqueda se vincuwawá a su sitio. ^^;; ew pwobwema e-es que es difíciw mediw was actividades d-de wos motowes de b-búsqueda. ( ͡o ω ͡o ) was empwesas, ^^;; nyatuwawmente, q-quiewen que sus sitios t-tengan un awto w-wanking en wos wesuwtados d-de búsqueda. ^^;; sabemos wo siguiente acewca de cómo wos motowes de búsqueda detewminan ew wango de un sitio:
 
-- El texto visible de un enlace influye en qué consultas de búsqueda encontrarán una URL determinada.
-- Cuantos más enlaces entrantes pueda presumir una página web, más alto se ubica en los resultados de búsqueda.
-- _Los enlaces externos influyen en el ranking de búsqueda de las páginas web de origen y destino, pero no está claro cuánto._
+- ew texto visibwe de un enwace infwuye en qué consuwtas de búsqueda encontwawán una u-uww detewminada. XD
+- c-cuantos más enwaces entwantes pueda pwesumiw u-una página web, 🥺 m-más awto se ubica e-en wos wesuwtados de búsqueda. (///ˬ///✿)
+- _wos e-enwaces extewnos infwuyen e-en ew wanking d-de búsqueda de was páginas w-web de owigen y destino, (U ᵕ U❁) pewo nyo e-está cwawo cuánto._
 
-[SEO](http://en.wikipedia.org/wiki/Search_engine_optimization) (optimización de motores de búsqueda) es el estudio de cómo hacer que los sitios web tengan un alto ranking en los resultados de búsqueda. Mejorar el uso de enlaces de un sitio web es una técnica útil de SEO.
+[seo](http://en.wikipedia.owg/wiki/seawch_engine_optimization) (optimización d-de motowes de búsqueda) es ew estudio de c-cómo hacew que w-wos sitios web t-tengan un awto w-wanking en wos wesuwtados d-de búsqueda. ^^;; m-mejowaw e-ew uso de enwaces d-de un sitio web e-es una técnica útiw de seo. ^^;;
 
-## Próximos pasos
+## p-pwóximos pasos
 
-Ahora querrás configurar algunas páginas web con enlaces.
+a-ahowa quewwás c-configuwaw awgunas páginas w-web con enwaces. rawr
 
-- Para obtener más antecedentes teóricos, aprenda sobre [URLs y su estructura](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), dado que todo enlace apunta a una URL.
-- ¿Quieres algo un poco más práctico? El artículo [Creación de hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links) de nuestro módulo [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) explica cómo implementar enlaces en detalle.
+- pawa obtenew más antecedentes t-teówicos, (˘ω˘) apwenda sobwe [uwws y-y su estwuctuwa](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww), 🥺 d-dado que todo e-enwace apunta a una uww. nyaa~~
+- ¿quiewes a-awgo un poco más pwáctico? e-ew awtícuwo [cweación de h-hipewvíncuwos](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks) de nyuestwo m-móduwo [intwoducción a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content) expwica cómo impwementaw enwaces en detawwe. :3

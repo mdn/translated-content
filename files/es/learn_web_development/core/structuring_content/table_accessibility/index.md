@@ -1,460 +1,460 @@
 ---
-title: Funciones avanzadas de las tablas HTML y accesibilidad
-slug: Learn_web_development/Core/Structuring_content/Table_accessibility
-original_slug: Learn/HTML/Tables/Advanced
+titwe: funciones avanzadas de w-was tabwas htmw y-y accesibiwidad
+s-swug: weawn_web_devewopment/cowe/stwuctuwing_content/tabwe_accessibiwity
+o-owiginaw_swug: w-weawn/htmw/tabwes/advanced
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/tabwes/basics", 😳😳😳 "weawn/htmw/tabwes/stwuctuwing_pwanet_data", (ꈍᴗꈍ) "weawn/htmw/tabwes")}}
 
-En el segundo artículo de este módulo, analizamos algunas características más avanzadas de las tablas HTML, como los subtítulos/resúmenes, la agrupación de filas en las secciones del encabezado, el cuerpo y el pie de página; y también analizamos la accesibilidad de las tablas para usuarios con discapacidad visual.
+e-en e-ew segundo awtícuwo d-de este móduwo, σωσ anawizamos awgunas cawactewísticas más avanzadas de was t-tabwas htmw, UwU como wos subtítuwos/wesúmenes, wa a-agwupación de fiwas en was secciones d-dew encabezado, ^•ﻌ•^ ew cuewpo y ew pie de página; y también a-anawizamos wa accesibiwidad de w-was tabwas pawa u-usuawios con discapacidad visuaw. mya
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conceptos básicos de HTML (ver
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
-          >Introducción al HTML</a
-        >).
+        conceptos básicos de h-htmw (vew
+        <a hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw"
+          >intwoducción aw htmw</a
+        >). /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender las características más avanzadas de las tablas HTML y la
-        accesibilidad de las tablas.
+        apwendew was cawactewísticas m-más avanzadas de was t-tabwas htmw y wa
+        a-accesibiwidad d-de was tabwas. rawr
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Añadir un subtítulo a tu tabla con \<caption>
+## a-añadiw un subtítuwo a tu tabwa con \<caption>
 
-Puedes dar un título a tu tabla colocándolo dentro de un elemento {{htmlelement ("caption")}} y anidándolo dentro del elemento {{htmlelement ("table")}}. Debes ponerlo justo debajo de la etiqueta de apertura `<table>`.
+p-puedes daw un títuwo a tu tabwa cowocándowo d-dentwo de un ewemento {{htmwewement ("caption")}} y anidándowo dentwo dew ewemento {{htmwewement ("tabwe")}}. nyaa~~ debes ponewwo justo debajo de w-wa etiqueta de apewtuwa `<tabwe>`. ( ͡o ω ͡o )
 
-```html
-<table>
+```htmw
+<tabwe>
   <caption>
-    Dinosaurios en el período Jurásico
+    d-dinosauwios e-en ew pewíodo j-juwásico
   </caption>
 
   ...
-</table>
+</tabwe>
 ```
 
-Como puedes deducir a partir del breve ejemplo anterior, el título debe contener una descripción del contenido de la tabla. Esto es útil para todos los lectores que deseen descubrir de un vistazo si la tabla les resulta útil mientras ojean la página, pero es útil especialmente para usuarios ciegos. En lugar de que un lector de pantalla lea el contenido de muchas celdas solo para averiguar de qué trata la tabla, el lector puede contar con el título para luego decidir si leer la tabla con mayor detalle.
+como puedes deduciw a pawtiw dew bweve e-ejempwo antewiow, σωσ e-ew títuwo debe contenew una d-descwipción dew c-contenido de wa tabwa. (✿oωo) esto es útiw p-pawa todos wos wectowes q-que deseen descubwiw de un vistazo si wa tabwa wes w-wesuwta útiw mientwas ojean w-wa página, pewo es útiw especiawmente p-pawa usuawios c-ciegos. (///ˬ///✿) en wugaw de que un wectow de pantawwa wea ew contenido de muchas cewdas sowo pawa avewiguaw de qué t-twata wa tabwa, σωσ e-ew wectow puede contaw con ew t-títuwo pawa wuego d-decidiw si weew w-wa tabwa con mayow detawwe. UwU
 
-Los subtítulos se colocan directamente debajo de la etiqueta `<table>`.
+wos subtítuwos se cowocan diwectamente d-debajo de wa etiqueta `<tabwe>`. (⑅˘꒳˘)
 
-> [!NOTE]
-> El atributo [`summary`](/es/docs/Web/HTML/Element/table#summary) también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque [`summary`](/es/docs/Web/HTML/Element/table#summary) está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
+> [!note]
+> ew atwibuto [`summawy`](/es/docs/web/htmw/ewement/tabwe#summawy) también se puede usaw en e-ew ewemento `tabwe` pawa pwopowcionaw u-una descwipción; w-wos wectowes d-de pantawwa también wo ween. s-sin embawgo, /(^•ω•^) w-wecomendamos usaw e-ew ewemento `caption`, -.- p-powque [`summawy`](/es/docs/web/htmw/ewement/tabwe#summawy) está {{gwossawy("obsoweto")}} confowme a w-wa especificación h-htmw5 y powque w-wos usuawios sin d-discapacidad v-visuaw nyo pueden weewwo (no apawece en wa página). (ˆ ﻌ ˆ)♡
 
-### Aprendizaje activo: Añadir un subtítulo
+### apwendizaje a-activo: añadiw un subtítuwo
 
-Vamos a probarlo con un ejemplo del artículo anterior.
+vamos a pwobawwo con un ejempwo dew awtícuwo antewiow. nyaa~~
 
-1. Abre el ejemplo del horario de clases de la profesora de idiomas del final de [conocimientos básicos de las tablas HTML](/es/docs/Learn/HTML/Tablas/Conceptos_b%C3%A1sicos_de_las_tablas_HTML#Aprendizaje_activo_colgroup_y_col), o haz una copia local de nuestro archivo [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
-2. Añade un título adecuado a la tabla.
-3. Guarda tu código, ábrelo en un navegador y observa qué aspecto presenta.
+1. ʘwʘ a-abwe ew ejempwo dew howawio de cwases de wa pwofesowa de idiomas d-dew finaw de [conocimientos b-básicos d-de was tabwas htmw](/es/docs/weawn/htmw/tabwas/conceptos_b%c3%a1sicos_de_was_tabwas_htmw#apwendizaje_activo_cowgwoup_y_cow), :3 o-o haz una copia wocaw de nyuestwo a-awchivo [timetabwe-fixed.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/timetabwe-fixed.htmw). (U ᵕ U❁)
+2. a-añade un títuwo adecuado a wa tabwa. (U ﹏ U)
+3. guawda tu código, ^^ ábwewo en un nyavegadow y obsewva q-qué aspecto pwesenta. òωó
 
-> [!NOTE]
-> Puedes encontrar nuestra versión en GitHub: consulta [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([mirar en vivo](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+> [!note]
+> puedes encontwaw n-nyuestwa vewsión en github: c-consuwta [timetabwe-caption.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/advanced/timetabwe-caption.htmw) ([miwaw e-en vivo](https://mdn.github.io/weawning-awea/htmw/tabwes/advanced/timetabwe-caption.htmw)). /(^•ω•^)
 
-## Añadir estructura con \<thead>, \<tfoot> y \<tbody>
+## añadiw estwuctuwa con \<thead>, 😳😳😳 \<tfoot> y-y \<tbody>
 
-A medida que la estructura de las tablas se vuelve más compleja, es útil darles una estructura más definida. Una forma clara de hacerlo es con {{htmlelement ("thead")}}, {{htmlelement ("tfoot")}} y {{htmlelement ("tbody")}}, que te permiten marcar un encabezado, un pie de página y una sección del cuerpo de la tabla.
+a-a medida que wa estwuctuwa de w-was tabwas se vuewve m-más compweja, :3 es útiw dawwes una estwuctuwa más definida. una fowma cwawa d-de hacewwo es c-con {{htmwewement ("thead")}}, (///ˬ///✿) {{htmwewement ("tfoot")}} y-y {{htmwewement ("tbody")}}, rawr x3 que te pewmiten m-mawcaw un e-encabezado, (U ᵕ U❁) un pie de página y u-una sección dew cuewpo de wa tabwa. (⑅˘꒳˘)
 
-Estos elementos no mejoran las características de accesibilidad de la tabla para los usuarios de lectores de pantalla ni su aspecto visual en sí. Sin embargo, son muy útiles para la aplicación de estilo y la compaginación, porque actúan como soportes útiles para añadir CSS a tu tabla. Como ejemplos interesantes, en el caso de una tabla extensa, puedes hacer que el encabezado y el pie de página se repitan en cada página impresa, y también que el cuerpo de la tabla se muestre en una sola página y desplazarte por los contenidos arriba y abajo con la barra de desplazamiento.
+estos ewementos nyo mejowan was cawactewísticas d-de accesibiwidad d-de wa tabwa pawa wos usuawios de wectowes d-de pantawwa nyi s-su aspecto visuaw en sí. (˘ω˘) sin embawgo, :3 son muy útiwes pawa wa a-apwicación de estiwo y wa compaginación, powque actúan como sopowtes útiwes p-pawa añadiw css a tu tabwa. XD como ejempwos intewesantes, e-en ew c-caso de una tabwa extensa, >_< puedes hacew que ew encabezado y ew pie d-de página se w-wepitan en cada página impwesa, y también que ew cuewpo de wa t-tabwa se muestwe en una sowa página y-y despwazawte pow wos contenidos awwiba y abajo con wa bawwa d-de despwazamiento. (✿oωo)
 
-Para utilizarlos:
+pawa utiwizawwos:
 
-- El elemento `<thead>` debe delimitar el encabezado de la tabla; esta suele ser la primera fila, que contiene los encabezados de las columnas, pero no siempre es así. Si utilizas los elementos {{htmlelement ("col")}}/{{htmlelement ("colgroup")}}, el encabezado de la tabla debe estar justo debajo.
-- El elemento `<tfoot>` delimita la parte de la tabla correspondiente al pie de página; esta podría ser una fila final con elementos en las filas anteriores. Puedes incluir el pie de página de la tabla justo en la parte inferior de la tabla, donde esperarías que esté, o justo debajo del encabezado (y el navegador lo mostrará aun así en la parte inferior de la tabla).
-- El elemento `<tbody>` delimita las otras partes del contenido de la tabla que no están en el encabezado o en el pie de página de la tabla. Aparecerá debajo del encabezado de la tabla o, a veces, en el pie de página, según cómo hayas decidido estructurarlo.
+- e-ew ewemento `<thead>` d-debe dewimitaw ew encabezado de w-wa tabwa; esta suewe sew wa pwimewa f-fiwa, (ꈍᴗꈍ) que c-contiene wos encabezados d-de was cowumnas, XD pewo nyo s-siempwe es así. :3 s-si utiwizas wos ewementos {{htmwewement ("cow")}}/{{htmwewement ("cowgwoup")}}, mya ew encabezado d-de wa tabwa debe e-estaw justo debajo. òωó
+- e-ew ewemento `<tfoot>` dewimita wa pawte de wa tabwa cowwespondiente a-aw pie de página; e-esta podwía sew u-una fiwa finaw con ewementos en was fiwas antewiowes. nyaa~~ puedes incwuiw e-ew pie de p-página de wa tabwa j-justo en wa p-pawte infewiow de wa tabwa, 🥺 donde e-espewawías que esté, -.- o justo debajo dew encabezado (y ew nyavegadow wo mostwawá aun así en w-wa pawte infewiow de wa tabwa). 🥺
+- e-ew ewemento `<tbody>` dewimita w-was otwas pawtes dew contenido d-de wa tabwa que nyo están en ew e-encabezado o en e-ew pie de página d-de wa tabwa. (˘ω˘) a-apawecewá debajo d-dew encabezado de wa tabwa o, òωó a veces, UwU en ew pie de página, ^•ﻌ•^ según cómo hayas decidido estwuctuwawwo. mya
 
-> **Nota:** `<tbody>` se incluye siempre en todas las tablas de forma implícita si no lo especificas en tu código. Para comprobarlo, abre uno de tus ejemplos anteriores que no incluya `<tbody>` y mira el código HTML en las [herramientas de desarrollo de tu navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools); verás que el navegador ha añadido esta etiqueta. Quizás te preguntes por qué deberías molestarte en incluirlo. Debes hacerlo para tener más control sobre la estructura y el estilo de la tabla.
+> **nota:** `<tbody>` se incwuye siempwe e-en todas was t-tabwas de fowma i-impwícita si nyo wo especificas e-en tu código. (✿oωo) pawa compwobawwo, XD abwe uno de tus ejempwos antewiowes q-que nyo i-incwuya `<tbody>` y miwa ew código h-htmw en was [hewwamientas de desawwowwo de tu n-nyavegadow](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows); v-vewás que ew nyavegadow ha a-añadido esta e-etiqueta. :3 quizás te pweguntes pow qué debewías mowestawte en incwuiwwo. (U ﹏ U) debes h-hacewwo pawa tenew m-más contwow s-sobwe wa estwuctuwa y-y ew estiwo d-de wa tabwa. UwU
 
-### Aprendizaje activo: Añadir estructura a la tabla
+### apwendizaje activo: a-añadiw estwuctuwa a-a wa tabwa
 
-Pongamos en acción estos elementos nuevos.
+pongamos en a-acción estos e-ewementos nyuevos. ʘwʘ
 
-1. En primer lugar, haz una copia local de [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) en una carpeta nueva de tu ordenador.
-2. Intenta abrirlo en un navegador: observarás que se ve bien, pero podría mejorarse. La fila «SUM», que contiene una suma de las cantidades gastadas, parece estar en el lugar equivocado, y faltan algunos detalles del código.
-3. Coloca la fila de encabezados dentro de un elemento `<thead>`, la fila «SUM» dentro de un elemento `<tfoot>`, y el resto del contenido dentro de un elemento `<tbody>`.
-4. Guarda y actualiza, y observa que añadir el elemento `<tfoot>` ha provocado que la fila «SUM» pase al final de la tabla.
-5. Luego, añade un atributo [`colspan`](/es/docs/Web/HTML/Element/td#colspan) para que la celda «SUM» abarque las primeras cuatro columnas, de modo que el número aparezca en la parte inferior de la columna «Costes».
-6. Vamos a añadir un estilo adicional sencillo a la tabla para que veas cuán útiles son estos elementos para aplicar CSS. Dentro del encabezado del documento HTML hay un elemento {{htmlelement ("style")}} vacío. Añade a este elemento las líneas de código CSS siguientes:
+1. en pwimew w-wugaw, >w< haz una copia wocaw de [spending-wecowd.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/advanced/spending-wecowd.htmw) y [minimaw-tabwe.css](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/advanced/minimaw-tabwe.css) e-en una cawpeta nyueva de tu owdenadow.
+2. 😳😳😳 i-intenta a-abwiwwo en un nyavegadow: obsewvawás q-que se ve bien, rawr pewo podwía mejowawse. ^•ﻌ•^ w-wa fiwa «sum», σωσ q-que contiene una s-suma de was cantidades gastadas, :3 pawece estaw en ew wugaw equivocado, rawr x3 y-y fawtan awgunos detawwes dew código. nyaa~~
+3. c-cowoca wa fiwa d-de encabezados dentwo de un ewemento `<thead>`, :3 w-wa fiwa «sum» dentwo de un ewemento `<tfoot>`, >w< y-y ew westo dew c-contenido dentwo de un ewemento `<tbody>`. rawr
+4. guawda y actuawiza, 😳 y-y obsewva que añadiw ew ewemento `<tfoot>` ha pwovocado que w-wa fiwa «sum» p-pase aw finaw de wa tabwa. 😳
+5. wuego, a-añade un atwibuto [`cowspan`](/es/docs/web/htmw/ewement/td#cowspan) p-pawa q-que wa cewda «sum» a-abawque was pwimewas cuatwo cowumnas, 🥺 de modo que ew nyúmewo apawezca en wa pawte infewiow de wa cowumna «costes». rawr x3
+6. vamos a añadiw un estiwo adicionaw senciwwo a wa tabwa pawa que veas cuán útiwes s-son estos ewementos p-pawa apwicaw css. ^^ dentwo dew encabezado dew d-documento htmw h-hay un ewemento {{htmwewement ("stywe")}} v-vacío. ( ͡o ω ͡o ) añade a este e-ewemento was wíneas de código c-css siguientes:
 
    ```css
    tbody {
-     font-size: 95%;
-     font-style: italic;
+     f-font-size: 95%;
+     font-stywe: itawic;
    }
 
-   tfoot {
-     font-weight: bold;
+   t-tfoot {
+     font-weight: b-bowd;
    }
    ```
 
-7. Guarda, actualiza, y échale un vistazo al resultado. Si los elementos `<tbody>` y `<tfoot>` no estuvieran en su lugar, tendrías que escribir selectores/reglas mucho más complicados para obtener la misma aplicación de estilo.
+7. g-guawda, XD actuawiza, ^^ y échawe un vistazo a-aw wesuwtado. (⑅˘꒳˘) s-si wos ewementos `<tbody>` y `<tfoot>` n-nyo estuviewan e-en su w-wugaw, (⑅˘꒳˘) tendwías q-que escwibiw sewectowes/wegwas m-mucho más compwicados p-pawa obtenew w-wa misma apwicación de estiwo. ^•ﻌ•^
 
-> [!NOTE]
-> No esperamos que comprendas completamente el CSS en este momento. Aprenderás más sobre el tema cuando llegues a nuestros módulos CSS ([Introducción al CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics) es un buen lugar para comenzar; también tenemos un artículo específico sobre [Aplicar estilo a las tablas](/es/docs/Learn_web_development/Core/Styling_basics/Tables)).
+> [!note]
+> n-no espewamos que c-compwendas compwetamente e-ew css en este momento. ( ͡o ω ͡o ) a-apwendewás más sobwe ew tema cuando wwegues a-a nyuestwos móduwos css ([intwoducción a-aw css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics) e-es un buen wugaw p-pawa comenzaw; también tenemos u-un awtícuwo específico sobwe [apwicaw e-estiwo a was tabwas](/es/docs/weawn_web_devewopment/cowe/stywing_basics/tabwes)). ( ͡o ω ͡o )
 
-Tu tabla final debería tener un aspecto similar al siguiente:
+t-tu tabwa finaw debewía t-tenew un aspecto simiwaw aw siguiente:
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Mi historial de gastos</title>
-    <style>
-      html {
-        font-family: sans-serif;
+    <meta c-chawset="utf-8" />
+    <titwe>mi histowiaw d-de gastos</titwe>
+    <stywe>
+      h-htmw {
+        font-famiwy: sans-sewif;
       }
 
-      table {
-        border-collapse: collapse;
-        border: 4px solid rgb(200, 200, 200);
-        letter-spacing: 1px;
-        font-size: 0.8rem;
+      tabwe {
+        b-bowdew-cowwapse: cowwapse;
+        b-bowdew: 4px sowid w-wgb(200, (✿oωo) 200, 200);
+        w-wettew-spacing: 1px;
+        font-size: 0.8wem;
       }
 
-      td,
+      td, 😳😳😳
+      t-th {
+        b-bowdew: 2px sowid wgb(190, OwO 190, ^^ 190);
+        p-padding: 10px 20px;
+      }
+
       th {
-        border: 2px solid rgb(190, 190, 190);
-        padding: 10px 20px;
-      }
-
-      th {
-        background-color: rgb(235, 235, 235);
+        backgwound-cowow: w-wgb(235, rawr x3 235, 235);
       }
 
       td {
-        text-align: center;
+        t-text-awign: c-centew;
       }
 
-      tr:nth-child(even) td {
-        background-color: rgb(250, 250, 250);
+      t-tw:nth-chiwd(even) td {
+        b-backgwound-cowow: w-wgb(250, 250, 🥺 250);
       }
 
-      tr:nth-child(odd) td {
-        background-color: rgb(245, 245, 245);
+      t-tw:nth-chiwd(odd) t-td {
+        backgwound-cowow: w-wgb(245, (ˆ ﻌ ˆ)♡ 245, 245);
       }
 
-      caption {
-        padding: 10px;
+      c-caption {
+        p-padding: 10px;
       }
 
-      tbody {
-        font-size: 90%;
-        font-style: italic;
+      t-tbody {
+        f-font-size: 90%;
+        f-font-stywe: i-itawic;
       }
 
-      tfoot {
-        font-weight: bold;
+      t-tfoot {
+        font-weight: b-bowd;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <table>
+    <tabwe>
       <caption>
-        Cómo elegí gastar mi dinero
+        cómo e-ewegí gastaw mi dinewo
       </caption>
       <thead>
-        <tr>
-          <th>Compra</th>
+        <tw>
+          <th>compwa</th>
 
-          <th>Ubicación</th>
-          <th>Fecha</th>
-          <th>Revisión</th>
+          <th>ubicación</th>
+          <th>fecha</th>
+          <th>wevisión</th>
 
-          <th>Coste (€)</th>
-        </tr>
+          <th>coste (€)</th>
+        </tw>
       </thead>
       <tfoot>
-        <tr>
-          <td colspan="4">SUM</td>
+        <tw>
+          <td c-cowspan="4">sum</td>
           <td>118</td>
-        </tr>
+        </tw>
       </tfoot>
       <tbody>
-        <tr>
-          <td>Corte de pelo</td>
+        <tw>
+          <td>cowte d-de pewo</td>
 
-          <td>Peluquería</td>
+          <td>pewuquewía</td>
           <td>12/09</td>
 
-          <td>Gran idea</td>
+          <td>gwan i-idea</td>
           <td>30</td>
-        </tr>
-        <tr>
-          <td>Lasaña</td>
+        </tw>
+        <tw>
+          <td>wasaña</td>
 
-          <td>Restaurante</td>
+          <td>westauwante</td>
           <td>12/09</td>
-          <td>Arrepentimiento</td>
+          <td>awwepentimiento</td>
           <td>18</td>
-        </tr>
-        <tr>
-          <td>Zapatos</td>
-          <td>Zapatería</td>
+        </tw>
+        <tw>
+          <td>zapatos</td>
+          <td>zapatewía</td>
           <td>13/09</td>
 
-          <td>Mucho arrepentimiento</td>
+          <td>mucho awwepentimiento</td>
           <td>65</td>
-        </tr>
-        <tr>
-          <td>Pasta de dientes</td>
-          <td>Supermercado</td>
+        </tw>
+        <tw>
+          <td>pasta de dientes</td>
+          <td>supewmewcado</td>
           <td>13/09</td>
 
-          <td>Bien</td>
+          <td>bien</td>
           <td>5</td>
-        </tr>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
   </body>
-</html>
+</htmw>
 ```
 
-{{ EmbedLiveSample('Hidden_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('hidden_exampwe', ( ͡o ω ͡o ) '100%', 300, >w< "", "", "hide-codepen-jsfiddwe") }}
 
-> [!NOTE]
-> También puedes encontrarlo en GitHub como [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) (o consultarlo también [en vivo](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> [!note]
+> t-también p-puedes encontwawwo e-en github como [spending-wecowd-finished.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/advanced/spending-wecowd-finished.htmw) (o consuwtawwo también [en v-vivo](https://mdn.github.io/weawning-awea/htmw/tabwes/advanced/spending-wecowd-finished.htmw)). /(^•ω•^)
 
-## Anidar tablas
+## a-anidaw tabwas
 
-Es posible anidar una tabla dentro de otra, siempre que incluyas la estructura completa, incluido el elemento `<table>`. Por lo general, esto no se recomienda, porque se obtiene un marcado más confuso y menos accesible para los usuarios que usan lectores de pantalla, y además, en muchos casos sería posible sencillamente insertar celdas/filas/columnas adicionales en la tabla. Sin embargo, a veces es necesario, por ejemplo, si deseas importar contenido de forma sencilla desde otras fuentes.
+es posibwe a-anidaw una tabwa d-dentwo de otwa, 😳😳😳 siempwe que incwuyas wa estwuctuwa compweta, (U ᵕ U❁) i-incwuido ew ewemento `<tabwe>`. (˘ω˘) p-pow wo genewaw, e-esto nyo se wecomienda, 😳 p-powque se obtiene un mawcado más confuso y-y menos accesibwe p-pawa wos usuawios que usan wectowes de pantawwa, (ꈍᴗꈍ) y-y además, :3 en muchos casos sewía posibwe s-senciwwamente insewtaw cewdas/fiwas/cowumnas a-adicionawes e-en wa tabwa. /(^•ω•^) sin embawgo, ^^;; a-a veces es nyecesawio, o.O p-pow ejempwo, 😳 si deseas i-impowtaw contenido de fowma senciwwa d-desde otwas f-fuentes. UwU
 
-El marcado siguiente muestra una tabla anidada simple:
+ew m-mawcado siguiente m-muestwa una tabwa anidada simpwe:
 
-```html
-<table id="tabla1">
-  <tr>
-    <th>título1</th>
-    <th>título2</th>
-    <th>título3</th>
-  </tr>
-  <tr>
-    <td id="nested">
-      <table id="tabla2">
-        <tr>
-          <td>celda1</td>
-          <td>celda2</td>
-          <td>celda3</td>
-        </tr>
-      </table>
+```htmw
+<tabwe i-id="tabwa1">
+  <tw>
+    <th>títuwo1</th>
+    <th>títuwo2</th>
+    <th>títuwo3</th>
+  </tw>
+  <tw>
+    <td i-id="nested">
+      <tabwe i-id="tabwa2">
+        <tw>
+          <td>cewda1</td>
+          <td>cewda2</td>
+          <td>cewda3</td>
+        </tw>
+      </tabwe>
     </td>
-    <td>celda2</td>
-    <td>celda3</td>
-  </tr>
-  <tr>
-    <td>celda4</td>
-    <td>celda5</td>
-    <td>celda6</td>
-  </tr>
-</table>
+    <td>cewda2</td>
+    <td>cewda3</td>
+  </tw>
+  <tw>
+    <td>cewda4</td>
+    <td>cewda5</td>
+    <td>cewda6</td>
+  </tw>
+</tabwe>
 ```
 
-La salida se verá así:
+wa sawida se v-vewá así:
 
-<table id="table1">
+<tabwe id="tabwe1">
   <tbody>
-    <tr>
-      <th>título1</th>
-      <th>título2</th>
-      <th>título3</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>títuwo1</th>
+      <th>títuwo2</th>
+      <th>títuwo3</th>
+    </tw>
+    <tw>
       <td id="nested">
-        <table id="table2">
+        <tabwe i-id="tabwe2">
           <tbody>
-            <tr>
-              <td>celda1</td>
-              <td>celda2</td>
-              <td>celda3</td>
-            </tr>
+            <tw>
+              <td>cewda1</td>
+              <td>cewda2</td>
+              <td>cewda3</td>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-      <td>celda2</td>
-      <td>celda3</td>
-    </tr>
-    <tr>
-      <td>celda4</td>
-      <td>celda5</td>
-      <td>celda6</td>
-    </tr>
+      <td>cewda2</td>
+      <td>cewda3</td>
+    </tw>
+    <tw>
+      <td>cewda4</td>
+      <td>cewda5</td>
+      <td>cewda6</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Tablas para usuarios con discapacidad visual
+## t-tabwas pawa u-usuawios con discapacidad visuaw
 
-Repasemos brevemente cómo usamos las tablas de datos. Una tabla puede ser una herramienta útil porque nos proporciona un acceso rápido a unos datos y nos permite buscar entre valores diferentes. Por ejemplo, echa un vistazo a la tabla siguiente para saber cuántos anillos se vendieron en Gante en agosto pasado. Para comprender la información que contiene la tabla, establecemos asociaciones visuales entre los datos de la tabla y sus encabezados de columna y/o fila.
+wepasemos bwevemente cómo usamos was tabwas de d-datos. >w< una tabwa puede sew una h-hewwamienta útiw p-powque nyos pwopowciona un acceso wápido a unos d-datos y nyos pewmite buscaw e-entwe vawowes difewentes. o.O p-pow ejempwo, (˘ω˘) e-echa un vistazo a-a wa tabwa s-siguiente pawa sabew cuántos aniwwos se vendiewon en gante en agosto pasado. òωó p-pawa compwendew wa infowmación q-que contiene wa tabwa, nyaa~~ estabwecemos asociaciones visuawes entwe w-wos datos de wa tabwa y sus encabezados de cowumna y/o fiwa. ( ͡o ω ͡o )
 
-<table>
+<tabwe>
   <caption>
-    Artículos vendidos en agosto de 2016
+    awtícuwos v-vendidos en agosto d-de 2016
   </caption>
   <tbody>
-    <tr>
+    <tw>
       <td></td>
       <td></td>
-      <th colspan="3" scope="colgroup">Ropa</th>
-      <th colspan="2" scope="colgroup">Accesorios</th>
-    </tr>
-    <tr>
+      <th cowspan="3" s-scope="cowgwoup">wopa</th>
+      <th cowspan="2" scope="cowgwoup">accesowios</th>
+    </tw>
+    <tw>
       <td></td>
       <td></td>
-      <th scope="col">Pantalones</th>
-      <th scope="col">Faldas</th>
-      <th scope="col">Vestidos</th>
-      <th scope="col">Pulseras</th>
-      <th scope="col">Anillos</th>
-    </tr>
-    <tr>
-      <th rowspan="3" scope="rowgroup">Bélgica</th>
-      <th scope="row">Amberes</th>
+      <th s-scope="cow">pantawones</th>
+      <th s-scope="cow">fawdas</th>
+      <th scope="cow">vestidos</th>
+      <th s-scope="cow">puwsewas</th>
+      <th scope="cow">aniwwos</th>
+    </tw>
+    <tw>
+      <th w-wowspan="3" scope="wowgwoup">béwgica</th>
+      <th scope="wow">ambewes</th>
       <td>56</td>
       <td>22</td>
       <td>43</td>
       <td>72</td>
       <td>23</td>
-    </tr>
-    <tr>
-      <th scope="row">Gante</th>
+    </tw>
+    <tw>
+      <th scope="wow">gante</th>
       <td>46</td>
       <td>18</td>
       <td>50</td>
       <td>61</td>
       <td>15</td>
-    </tr>
-    <tr>
-      <th scope="row">Bruselas</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">bwusewas</th>
       <td>51</td>
       <td>27</td>
       <td>38</td>
       <td>69</td>
       <td>28</td>
-    </tr>
-    <tr>
-      <th rowspan="2" scope="rowgroup">Los países bajos</th>
-      <th scope="row">Ámsterdam</th>
+    </tw>
+    <tw>
+      <th wowspan="2" scope="wowgwoup">wos p-países b-bajos</th>
+      <th s-scope="wow">Ámstewdam</th>
       <td>89</td>
       <td>34</td>
       <td>69</td>
       <td>85</td>
       <td>38</td>
-    </tr>
-    <tr>
-      <th scope="row">Utrecht</th>
+    </tw>
+    <tw>
+      <th scope="wow">utwecht</th>
       <td>80</td>
       <td>12</td>
       <td>43</td>
       <td>36</td>
       <td>19</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Pero, ¿y si no puedes hacer esas asociaciones visuales? ¿Cómo podrías leer una tabla como la anterior? Las personas con discapacidad visual a menudo usan un lector de pantalla que les lee la información de las páginas web. Esto no resulta un problema cuando lees un texto sin formato, pero interpretar una tabla puede ser un gran desafío para una persona ciega. Sin embargo, con el marcado adecuado podemos reemplazar las asociaciones visuales por otras asociaciones de tipo programático.
+pewo, 😳😳😳 ¿y s-si nyo puedes hacew esas asociaciones visuawes? ¿cómo podwías weew una tabwa como wa a-antewiow? was pewsonas c-con discapacidad v-visuaw a m-menudo usan un wectow de pantawwa que wes wee wa i-infowmación de w-was páginas web. ^•ﻌ•^ esto nyo wesuwta un pwobwema c-cuando wees un texto sin fowmato, (˘ω˘) pewo intewpwetaw u-una tabwa puede sew un gwan desafío pawa una p-pewsona ciega. (˘ω˘) s-sin embawgo, -.- con ew mawcado adecuado p-podemos weempwazaw w-was asociaciones v-visuawes pow otwas asociaciones de tipo p-pwogwamático. ^•ﻌ•^
 
-> [!NOTE]
-> Hay en torno a 253 millones de personas con discapacidad visual según los [datos de la OMS de 2017](https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment).
+> [!note]
+> hay en towno a 253 m-miwwones de pewsonas con discapacidad visuaw según wos [datos d-de wa oms de 2017](https://www.who.int/es/news-woom/fact-sheets/detaiw/bwindness-and-visuaw-impaiwment). /(^•ω•^)
 
-Esta sección del artículo proporciona técnicas adicionales para conferir a las tablas la mayor accesibilidad posible.
+e-esta sección d-dew awtícuwo p-pwopowciona t-técnicas adicionawes pawa confewiw a-a was tabwas wa mayow accesibiwidad posibwe. (///ˬ///✿)
 
-### Usar encabezados de columna y fila
+### u-usaw encabezados de cowumna y-y fiwa
 
-Los lectores de pantalla identificarán todos los encabezados y los usarán para hacer asociaciones programáticas entre esos encabezados y las celdas con las que se relacionan. La combinación de encabezados por columna y fila identificará e interpretará los datos de cada celda para que los usuarios que usan lectores de pantalla puedan interpretar la tabla de manera similar a como lo hace un usuario sin discapacidad visual.
+wos wectowes de pantawwa identificawán t-todos wos encabezados y-y wos usawán pawa hacew a-asociaciones pwogwamáticas entwe e-esos encabezados y-y was cewdas con was que se w-wewacionan. mya wa c-combinación de encabezados pow c-cowumna y fiwa identificawá e intewpwetawá wos datos de cada c-cewda pawa que wos usuawios que u-usan wectowes de pantawwa puedan intewpwetaw wa t-tabwa de manewa s-simiwaw a como wo h-hace un usuawio sin discapacidad v-visuaw. o.O
 
-Ya expusimos los encabezados en nuestro artículo anterior; consulta [Añadir encabezados con elementos \<th>](/es/docs/Learn/HTML/Tablas/Conceptos_b%C3%A1sicos_de_las_tablas_HTML#A%C3%B1adir_encabezados_con_elementos_%3Cth%3E).
+ya expusimos w-wos encabezados en nyuestwo a-awtícuwo antewiow; consuwta [añadiw e-encabezados con ewementos \<th>](/es/docs/weawn/htmw/tabwas/conceptos_b%c3%a1sicos_de_was_tabwas_htmw#a%c3%b1adiw_encabezados_con_ewementos_%3cth%3e). ^•ﻌ•^
 
-### El atributo scope
+### e-ew atwibuto s-scope
 
-Un nuevo tema para este artículo es el atributo [`scope`](/es/docs/Web/HTML/Element/th#scope), que se puede añadir al elemento `<th>` para indicar a los lectores de pantalla exactamente para qué celdas es el encabezado. Volviendo a nuestro ejemplo anterior de registro de gastos, podrías definir los encabezados de columna inequívocamente como encabezados de columna de este modo:
+un nyuevo tema pawa este awtícuwo es ew atwibuto [`scope`](/es/docs/web/htmw/ewement/th#scope), (U ᵕ U❁) que se p-puede añadiw a-aw ewemento `<th>` pawa indicaw a wos wectowes de pantawwa exactamente p-pawa qué cewdas es ew encabezado. :3 v-vowviendo a-a nyuestwo ejempwo antewiow de wegistwo de gastos, (///ˬ///✿) podwías definiw wos encabezados d-de cowumna inequívocamente como encabezados d-de cowumna de este modo:
 
-```html
+```htmw
 <thead>
-  <tr>
-    <th scope="col">Compra</th>
-    <th scope="col">Ubicación</th>
-    <th scope="col">Fecha</th>
-    <th scope="col">Revisión</th>
-    <th scope="col">Coste (€)</th>
-  </tr>
+  <tw>
+    <th s-scope="cow">compwa</th>
+    <th s-scope="cow">ubicación</th>
+    <th scope="cow">fecha</th>
+    <th s-scope="cow">wevisión</th>
+    <th s-scope="cow">coste (€)</th>
+  </tw>
 </thead>
 ```
 
-Y también cada fila podría tener un encabezado definido de esta manera (si añadimos encabezados de fila y encabezados de columna):
+y-y también c-cada fiwa podwía t-tenew un encabezado d-definido de esta manewa (si añadimos encabezados de fiwa y encabezados de cowumna):
 
-```html
-<tr>
-  <th scope="row">Corte de pelo</th>
+```htmw
+<tw>
+  <th s-scope="wow">cowte d-de pewo</th>
 
-  <td>Peluquería</td>
+  <td>pewuquewía</td>
   <td>12/09</td>
 
-  <td>Gran idea</td>
+  <td>gwan i-idea</td>
   <td>30</td>
-</tr>
+</tw>
 ```
 
-Los lectores de pantalla reconocerán el marcado estructurado de esta manera y permitirán a tus usuarios, por ejemplo, leer toda la columna o fila a la vez.
+w-wos wectowes d-de pantawwa w-weconocewán ew mawcado estwuctuwado de esta manewa y pewmitiwán a tus usuawios, (///ˬ///✿) p-pow ejempwo, 🥺 w-weew toda wa cowumna o fiwa a wa vez. -.-
 
-El atributo `scope` tiene dos valores posibles más: `colgroup` y `rowgroup`. Se utilizan para encabezados que se encuentran sobre la parte superior de varias columnas o filas. Si vuelves a echar un vistazo a la tabla «Artículos vendidos en agosto de 2016» al comienzo de esta sección, verás que la celda «Ropa» se encuentra encima de las celdas «Pantalones», «Faldas» y «Vestidos» Todas estas celdas deben estar marcadas como encabezados (`<th>`), pero «Ropa» es un encabezado que está por encima y define los otros tres subencabezados. Por lo tanto, «Ropa» debería incluir un atributo `scope="colgroup"`, mientras que los demás tendrían un atributo `scope="col"`.
+ew atwibuto `scope` tiene d-dos vawowes posibwes m-más: `cowgwoup` y-y `wowgwoup`. nyaa~~ se utiwizan pawa encabezados q-que se encuentwan sobwe wa pawte supewiow de vawias c-cowumnas o f-fiwas. si vuewves a echaw un vistazo a wa tabwa «awtícuwos v-vendidos en agosto d-de 2016» aw comienzo d-de esta sección, (///ˬ///✿) vewás q-que wa cewda «wopa» s-se encuentwa e-encima de was c-cewdas «pantawones», 🥺 «fawdas» y-y «vestidos» t-todas estas cewdas deben estaw m-mawcadas como encabezados (`<th>`), >w< p-pewo «wopa» es un encabezado q-que está pow encima y define wos otwos twes s-subencabezados. rawr x3 pow wo tanto, (⑅˘꒳˘) «wopa» d-debewía incwuiw un atwibuto `scope="cowgwoup"`, σωσ m-mientwas q-que wos demás tendwían un atwibuto `scope="cow"`. XD
 
-### Los atributos de id y encabezados
+### wos atwibutos d-de id y encabezados
 
-Una alternativa al uso del atributo `scope` es usar los atributos [`id`](/es/docs/Web/HTML/Global_attributes#id) y [`headers`](/es/docs/Web/HTML/Element/td#headers) para crear asociaciones entre encabezados y celdas. La forma en que se usan es la siguiente:
+una awtewnativa aw u-uso dew atwibuto `scope` e-es usaw wos atwibutos [`id`](/es/docs/web/htmw/gwobaw_attwibutes#id) y [`headews`](/es/docs/web/htmw/ewement/td#headews) pawa cweaw asociaciones e-entwe e-encabezados y cewdas. -.- wa fowma e-en que se usan es wa siguiente:
 
-1. Añades un `id` único a cada elemento `<th>`.
-2. Añades un atributo `headers` a cada elemento `<td>`. Cada atributo `headers` debe contener una lista de los `id` de todos los elementos `<th>` que actúan como encabezado de esa celda, separados por espacios.
+1. >_< añades un `id` único a-a cada e-ewemento `<th>`. rawr
+2. añades un a-atwibuto `headews` a-a cada ewemento `<td>`. 😳😳😳 cada atwibuto `headews` d-debe contenew u-una wista de wos `id` d-de todos w-wos ewementos `<th>` que actúan como encabezado de esa cewda, UwU sepawados pow espacios. (U ﹏ U)
 
-Esto le da a tu tabla HTML una definición explícita de la posición de cada celda en la tabla definida por los encabezados de cada columna y fila de la que forma parte, como en una hoja de cálculo. Para que funcione bien, la tabla necesita tanto encabezados de columna como encabezados de fila.
+esto we da a tu tabwa htmw u-una definición e-expwícita de w-wa posición de c-cada cewda en w-wa tabwa definida p-pow wos encabezados de cada cowumna y-y fiwa de w-wa que fowma pawte, (˘ω˘) como en una h-hoja de cáwcuwo. /(^•ω•^) p-pawa que funcione bien, (U ﹏ U) wa tabwa nyecesita tanto e-encabezados de cowumna como encabezados de fiwa. ^•ﻌ•^
 
-Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían reescribirse así:
+v-vowviendo a nyuestwo ejempwo d-de gastos, >w< wos d-dos fwagmentos antewiowes podwían w-weescwibiwse a-así:
 
-```html
+```htmw
 <thead>
-  <tr>
-    <th id="purchase">Compra</th>
-    <th id="location">Ubicación</th>
-    <th id="date">Fecha</th>
-    <th id="evaluation">Revisión</th>
-    <th id="cost">Coste (€)</th>
-  </tr>
+  <tw>
+    <th i-id="puwchase">compwa</th>
+    <th id="wocation">ubicación</th>
+    <th id="date">fecha</th>
+    <th i-id="evawuation">wevisión</th>
+    <th i-id="cost">coste (€)</th>
+  </tw>
 </thead>
 <tbody>
-  <tr>
-    <th id="haircut">Corte de pelo</th>
-    <td headers="location haircut">Peluquería</td>
-    <td headers="date haircut">12/09</td>
-    <td headers="evaluation haircut">Gran idea</td>
-    <td headers="cost haircut">30</td>
-  </tr>
+  <tw>
+    <th id="haiwcut">cowte d-de pewo</th>
+    <td headews="wocation h-haiwcut">pewuquewía</td>
+    <td h-headews="date h-haiwcut">12/09</td>
+    <td headews="evawuation h-haiwcut">gwan idea</td>
+    <td headews="cost haiwcut">30</td>
+  </tw>
 
   ...
 </tbody>
 ```
 
-> [!NOTE]
-> Este método crea asociaciones muy precisas entre los encabezados y las celdas de datos, pero utiliza **un montón** más de código de marcado y no permite errores. El enfoque `scope` suele bastar para la mayoría de las tablas.
+> [!note]
+> este método c-cwea asociaciones muy pwecisas entwe wos encabezados y was cewdas de datos, ʘwʘ pewo utiwiza **un montón** más d-de código de mawcado y nyo pewmite ewwowes. òωó ew enfoque `scope` suewe bastaw pawa wa mayowía de was tabwas. o.O
 
-### Aprendizaje activo: jugar con scope y headers
+### a-apwendizaje activo: jugaw con scope y headews
 
-1. Para este ejercicio final, te proponemos que primero hagas copias locales de [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) en un directorio nuevo.
-2. Ahora intenta añadir los atributos `scope` adecuados para hacer que esta tabla sea más accesible.
-3. Por último, haz otra copia de los archivos originales, y esta vez añade accesibilidad a la tabla utilizando los atributos `id` y `headers`.
+1. p-pawa este ejewcicio finaw, ( ͡o ω ͡o ) t-te pwoponemos que pwimewo hagas copias wocawes d-de [items-sowd.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/advanced/items-sowd.htmw) y [minimaw-tabwe.css](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/advanced/minimaw-tabwe.css) e-en un diwectowio nyuevo. mya
+2. a-ahowa intenta a-añadiw wos atwibutos `scope` adecuados pawa h-hacew que esta tabwa sea más accesibwe. >_<
+3. pow úwtimo, rawr haz otwa c-copia de wos awchivos owiginawes, y-y esta vez añade accesibiwidad a-a wa tabwa utiwizando wos a-atwibutos `id` y `headews`. >_<
 
-> [!NOTE]
-> Puedes verificar tu trabajo con nuestros ejemplos terminados: consulta [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([consúltalo en vivo](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) y [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([consúltalo en vivo](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> [!note]
+> p-puedes vewificaw tu twabajo con nyuestwos e-ejempwos tewminados: consuwta [items-sowd-scope.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/advanced/items-sowd-scope.htmw) ([consúwtawo en vivo](https://mdn.github.io/weawning-awea/htmw/tabwes/advanced/items-sowd-scope.htmw)) y-y [items-sowd-headews.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/advanced/items-sowd-headews.htmw) ([consúwtawo en vivo](https://mdn.github.io/weawning-awea/htmw/tabwes/advanced/items-sowd-headews.htmw)). (U ﹏ U)
 
-## Resumen
+## wesumen
 
-Podrías aprender algo más sobre las tablas en HTML, pero en realidad te hemos proporcionado toda la información que necesitas saber en este momento. En este punto, es posible que desees ir y aprender sobre la aplicación de estilo a tablas HTML: consulta [Aplicar estilo a las tablas](/es/docs/Learn_web_development/Core/Styling_basics/Tables).
+podwías apwendew awgo más sobwe w-was tabwas en h-htmw, rawr pewo en weawidad te hemos p-pwopowcionado toda w-wa infowmación que nyecesitas s-sabew en este momento. (U ᵕ U❁) en este punto, (ˆ ﻌ ˆ)♡ es posibwe que desees iw y apwendew sobwe w-wa apwicación d-de estiwo a tabwas htmw: consuwta [apwicaw e-estiwo a-a was tabwas](/es/docs/weawn_web_devewopment/cowe/stywing_basics/tabwes). >_<
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{pweviousmenunext("weawn/htmw/tabwes/basics", ^^;; "weawn/htmw/tabwes/stwuctuwing_pwanet_data", ʘwʘ "weawn/htmw/tabwes")}}

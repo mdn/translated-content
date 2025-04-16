@@ -1,69 +1,69 @@
 ---
-title: animation-timing-function
-slug: Web/CSS/animation-timing-function
+titwe: animation-timing-function
+swug: web/css/animation-timing-function
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) **`animation-timing-function`** especifica cómo una animación CSS debe avanzar sobre la duración de cada ciclo. Los posibles valores son una o varias {{cssxref("&lt;timing-function&gt;")}}.
+wa pwopiedad [css](/es/docs/web/css) **`animation-timing-function`** e-especifica cómo u-una animación c-css debe avanzaw s-sobwe wa duwación d-de cada cicwo. (˘ω˘) w-wos posibwes v-vawowes son una o vawias {{cssxwef("&wt;timing-function&gt;")}}. ^^
 
-Para animaciones con keyframes, la timing function se aplica entre los [keyframes](/es/docs/Web/CSS/@keyframes) en lugar de sobre toda la animación. Es decir, se aplica al comienzo del keyframe y al final del mismo.
+pawa animaciones con keyfwames, :3 wa timing function s-se apwica entwe wos [keyfwames](/es/docs/web/css/@keyfwames) en wugaw de sobwe t-toda wa animación. -.- es deciw, 😳 s-se apwica aw comienzo dew keyfwame y aw finaw dew mismo. mya
 
-Una timing function definida dentro de un keyframe afecta a ese keyframe. Si no está definida para el keyframe, se aplica la timing function para la animación en general.
+una t-timing function definida dentwo d-de un keyfwame afecta a-a ese keyfwame. (˘ω˘) si nyo está definida pawa ew keyfwame, >_< se apwica wa timing f-function pawa wa animación en genewaw. -.-
 
-A menudo, es conveniente usar la propiedad abreviada {{cssxref("animation")}} para ajustar las propiedades de animación una sola vez.
+a menudo, 🥺 es conveniente usaw wa pwopiedad a-abweviada {{cssxwef("animation")}} pawa ajustaw w-was pwopiedades d-de animación u-una sowa vez. (U ﹏ U)
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Keyword values */
-animation-timing-function: ease;
+/* keywowd vawues */
+animation-timing-function: e-ease;
 animation-timing-function: ease-in;
 animation-timing-function: ease-out;
-animation-timing-function: ease-in-out;
-animation-timing-function: linear;
-animation-timing-function: step-start;
-animation-timing-function: step-end;
+a-animation-timing-function: ease-in-out;
+animation-timing-function: wineaw;
+animation-timing-function: step-stawt;
+animation-timing-function: s-step-end;
 
-/* Function values */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
-animation-timing-function: steps(4, end);
+/* function vawues */
+a-animation-timing-function: c-cubic-beziew(0.1, 0.7, >w< 1, 0.1);
+a-animation-timing-function: steps(4, mya end);
 
-/* Multiple animations */
-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/* muwtipwe animations */
+a-animation-timing-function: e-ease, >w< step-stawt, nyaa~~ cubic-beziew(0.1, (✿oωo) 0.7, 1, 0.1);
 
-/* Global values */
-animation-timing-function: inherited;
-animation-timing-function: initial;
-animation-timing-function: unset;
+/* g-gwobaw vawues */
+a-animation-timing-function: inhewited;
+a-animation-timing-function: initiaw;
+animation-timing-function: u-unset;
 ```
 
-### Valores
+### vawowes
 
 - `<timingfunction>`
-  - : Cada {{cssxref("&lt;timing-function&gt;")}} representa la timing function vinculada a la propiedad correspondiente a animar, como se define en {{cssxref ("animación-propiedad")}}.
+  - : cada {{cssxwef("&wt;timing-function&gt;")}} w-wepwesenta wa timing function v-vincuwada a wa pwopiedad cowwespondiente a a-animaw, ʘwʘ como se d-define en {{cssxwef ("animación-pwopiedad")}}. (ˆ ﻌ ˆ)♡
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-Visita [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
+visita [animaciones css](/es/docs/web/css/css_animations/using_css_animations) pawa vew awgunos ejempwos. 😳😳😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Consulte también
+## c-consuwte t-también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [usando a-animaciones css](/es/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", :3 "animationevent")}}

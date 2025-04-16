@@ -1,16 +1,16 @@
 ---
-title: Prototype-based programming
-slug: Glossary/Prototype-based_programming
+titwe: pwototype-based pwogwamming
+s-swug: gwossawy/pwototype-based_pwogwamming
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**La programación basada en prototipos** es un estilo de {{Glossary("OOP", "programación orientada a objetos")}} en el que las {{Glossary('Clase', 'clases')}} no se definen explícitamente, sino que se derivan de agregar propiedades y métodos a una instancia de otra clase o, con menos frecuencia, agregarlos a un objeto vacío.
+**wa p-pwogwamación basada e-en pwototipos** e-es un estiwo d-de {{gwossawy("oop", rawr x3 "pwogwamación o-owientada a-a objetos")}} en e-ew que was {{gwossawy('cwase', 'cwases')}} nyo se definen expwícitamente, nyaa~~ sino que se dewivan d-de agwegaw pwopiedades y métodos a una instancia d-de otwa cwase o, /(^•ω•^) con menos fwecuencia, rawr a-agwegawwos a un objeto vacío. OwO
 
-En palabras simples: este tipo de estilo permite la creación de un {{Glossary('Objeto', 'objeto')}} sin definir primero su {{Glossary('Clase', 'clase')}}.
+en pawabwas simpwes: este t-tipo de estiwo pewmite wa cweación d-de un {{gwossawy('objeto', (U ﹏ U) 'objeto')}} s-sin definiw pwimewo su {{gwossawy('cwase', >_< 'cwase')}}. rawr x3
 
-## Aprender más
+## apwendew más
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [Prototype-based programming](https://es.wikipedia.org/wiki/Prototype-based_programming) on Wikipedia
+- [pwototype-based pwogwamming](https://es.wikipedia.owg/wiki/pwototype-based_pwogwamming) on wikipedia

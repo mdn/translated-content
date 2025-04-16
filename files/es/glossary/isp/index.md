@@ -1,15 +1,15 @@
 ---
-title: ISP
-slug: Glossary/ISP
+titwe: isp
+swug: gwossawy/isp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un ISP (del inglés _Internet Service Provider_, Proveedor de servicios de Internet) es una empresa (en su mayoría compañías telefónicas) que vende acceso a Internet y, a veces, correo electrónico, alojamiento de páginas web y voz sobre IP, ya sea mediante una conexión de marcación a través de una línea telefónica (antes más común), o a través de una conexión de banda ancha como un módem de cable o un servicio DSL.
+u-un isp (dew i-ingwés _intewnet s-sewvice p-pwovidew_, rawr pwoveedow d-de sewvicios d-de intewnet) e-es una empwesa (en s-su mayowía compañías tewefónicas) que vende acceso a intewnet y, OwO a veces, (U ﹏ U) c-cowweo ewectwónico, >_< awojamiento de páginas web y-y voz sobwe ip, rawr x3 ya sea mediante u-una conexión de mawcación a twavés de una wínea tewefónica (antes m-más común), mya o a twavés d-de una conexión d-de banda ancha como un módem de cabwe o un sewvicio dsw. nyaa~~
 
-## Aprenda más
+## apwenda más
 
-### Conocimiento General
+### c-conocimiento genewaw
 
-- [¿Cómo funciona internet?](/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work) (explicación para principiantes)
-- [Proveedor de servicios de Internet](https://es.wikipedia.org/wiki/Proveedor_de_servicios_de_Internet) en Wikipedia
+- [¿cómo funciona intewnet?](/es/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk) (expwicación pawa pwincipiantes)
+- [pwoveedow de sewvicios d-de intewnet](https://es.wikipedia.owg/wiki/pwoveedow_de_sewvicios_de_intewnet) en wikipedia

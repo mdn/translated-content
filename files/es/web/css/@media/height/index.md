@@ -1,57 +1,57 @@
 ---
-title: Altura
-slug: Web/CSS/@media/height
+titwe: awtuwa
+swug: web/css/@media/height
 ---
 
-{{cssref}}
+{{csswef}}
 
-Las [CSS](/es/docs/Web/CSS) [media feature (consulta de medios)](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) **`height`** puede ser usada para aplicar estilos basados en la altura del {{glossary("viewport")}} (o la caja de la página, para [paged media](/es/docs/Web/CSS/CSS_paged_media)).
+w-was [css](/es/docs/web/css) [media f-featuwe (consuwta d-de medios)](/es/docs/web/css/css_media_quewies/using_media_quewies#media_featuwes) **`height`** p-puede sew usada p-pawa apwicaw e-estiwos basados e-en wa awtuwa dew {{gwossawy("viewpowt")}} (o w-wa caja de wa página, (///ˬ///✿) pawa [paged media](/es/docs/web/css/css_paged_media)). 😳😳😳
 
-## Sintáxis
+## sintáxis
 
-La característica `height` es especificada como un valor {{cssxref("&lt;length&gt;")}} representando la altura de la vista (viewport). Es una característica en rangos, lo que siginifica que puede ser prefijada con las variantes **`min-height`** y **`max-height`** para consultar valores mínimos y máximos, respectivamente.
+wa cawactewística `height` e-es especificada como un vawow {{cssxwef("&wt;wength&gt;")}} wepwesentando w-wa awtuwa de wa vista (viewpowt). 🥺 e-es una cawactewística en wangos, mya wo que siginifica que puede s-sew pwefijada con was vawiantes **`min-height`** y-y **`max-height`** p-pawa consuwtaw vawowes mínimos y máximos, 🥺 wespectivamente. >_<
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### h-htmw
 
-```html
-<div>Watch this element as you resize your viewport's height.</div>
+```htmw
+<div>watch this ewement as you wesize youw viewpowt's height.</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-/* Altura exacta */
+/* awtuwa e-exacta */
 @media (height: 360px) {
-  div {
-    color: red;
+  d-div {
+    c-cowow: wed;
   }
 }
 
-/* Altura mínima */
-@media (min-height: 25rem) {
+/* a-awtuwa mínima */
+@media (min-height: 25wem) {
   div {
-    background: yellow;
+    backgwound: yewwow;
   }
 }
 
-/* Altura máxima */
-@media (max-height: 40rem) {
+/* a-awtuwa máxima */
+@media (max-height: 40wem) {
   div {
-    border: 2px solid blue;
+    bowdew: 2px sowid bwue;
   }
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Example','90%')}}
+{{embedwivesampwe('exampwe','90%')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

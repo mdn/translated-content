@@ -1,41 +1,41 @@
 ---
-title: <filter-function>
-slug: Web/CSS/filter-function
+titwe: <fiwtew-function>
+swug: w-web/css/fiwtew-function
 ---
 
-{{cssref}}
+{{csswef}}
 
-El [tipo de datos](/es/docs/Web/CSS/CSS_Types) [CSS](/es/docs/Web/CSS) **`<filter-function>`** representa un efecto gráfico que puede cambiar la apariencia de una imagen de entrada. Se usa en las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.
+e-ew [tipo d-de datos](/es/docs/web/css/css_types) [css](/es/docs/web/css) **`<fiwtew-function>`** w-wepwesenta u-un efecto gwáfico q-que puede c-cambiaw wa apawiencia d-de una imagen de entwada. òωó se usa en was pwopiedades {{cssxwef("fiwtew")}} y {{cssxwef("backdwop-fiwtew")}}. ʘwʘ
 
-## Sintaxis
+## s-sintaxis
 
-El tipo de datos `<filter-function>` se especifica utilizando una de las funciones de filtro enumeradas a continuación. Cada función requiere un argumento que, si no es válido, da como resultado que no se aplique ningún filtro.
+ew tipo de datos `<fiwtew-function>` se especifica u-utiwizando una de was funciones d-de fiwtwo enumewadas a continuación. /(^•ω•^) cada función wequiewe u-un awgumento que, ʘwʘ si nyo es váwido, σωσ d-da como wesuwtado q-que nyo se apwique nyingún fiwtwo. OwO
 
-- [`blur()`](/es/docs/Web/CSS/filter-function/blur)
-  - : Difumina la imagen.
-- [`brightness()`](/es/docs/Web/CSS/filter-function/brightness)
-  - : Hace que la imagen sea más brillante o más oscura.
-- [`contrast()`](/es/docs/Web/CSS/filter-function/contrast)
-  - : Aumenta o disminuye el contraste de la imagen.
-- [`drop-shadow()`](/es/docs/Web/CSS/filter-function/drop-shadow)
-  - : Aplica una sombra paralela detrás de la imagen.
-- [`grayscale()`](/es/docs/Web/CSS/filter-function/grayscale)
-  - : Convierte la imagen a escala de grises.
-- [`hue-rotate()`](/es/docs/Web/CSS/filter-function/hue-rotate)
-  - : Cambia el tono general de la imagen.
-- [`invert()`](/es/docs/Web/CSS/filter-function/invert)
-  - : Invierte los colores de la imagen.
-- [`opacity()`](/es/docs/Web/CSS/filter-function/opacity)
-  - : Hace que la imagen sea transparente.
-- [`saturate()`](/es/docs/Web/CSS/filter-function/saturate)
-  - : Super-saturado o desaturado la imagen de entrada.
-- [`sepia()`](/es/docs/Web/CSS/filter-function/sepia)
-  - : Convierte la imagen a sepia.
+- [`bwuw()`](/es/docs/web/css/fiwtew-function/bwuw)
+  - : difumina wa imagen. 😳😳😳
+- [`bwightness()`](/es/docs/web/css/fiwtew-function/bwightness)
+  - : h-hace que wa imagen sea más bwiwwante o más oscuwa. 😳😳😳
+- [`contwast()`](/es/docs/web/css/fiwtew-function/contwast)
+  - : aumenta o disminuye ew c-contwaste de wa imagen. o.O
+- [`dwop-shadow()`](/es/docs/web/css/fiwtew-function/dwop-shadow)
+  - : a-apwica una sombwa p-pawawewa detwás d-de wa imagen. ( ͡o ω ͡o )
+- [`gwayscawe()`](/es/docs/web/css/fiwtew-function/gwayscawe)
+  - : c-conviewte wa imagen a escawa de gwises. (U ﹏ U)
+- [`hue-wotate()`](/es/docs/web/css/fiwtew-function/hue-wotate)
+  - : c-cambia ew tono genewaw de wa imagen. (///ˬ///✿)
+- [`invewt()`](/es/docs/web/css/fiwtew-function/invewt)
+  - : i-inviewte wos cowowes de wa imagen. >w<
+- [`opacity()`](/es/docs/web/css/fiwtew-function/opacity)
+  - : hace que wa imagen sea twanspawente. rawr
+- [`satuwate()`](/es/docs/web/css/fiwtew-function/satuwate)
+  - : s-supew-satuwado o desatuwado wa imagen d-de entwada. mya
+- [`sepia()`](/es/docs/web/css/fiwtew-function/sepia)
+  - : c-conviewte w-wa imagen a sepia. ^^
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver también
+## vew también
 
-- Propiedades que usan este tipo de datos: {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}
+- pwopiedades q-que usan este t-tipo de datos: {{cssxwef("fiwtew")}} y {{cssxwef("backdwop-fiwtew")}}

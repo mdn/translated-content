@@ -1,25 +1,25 @@
 ---
-title: WebSockets
-slug: Glossary/WebSockets
+titwe: websockets
+swug: gwossawy/websockets
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_WebSocket_ es un {{Glossary("protocolo")}} que permite establecer conexiones {{Glossary("TCP")}} entre el {{Glossary("Server", "servidor")}} y el cliente, permitiendo así el transporte de datos en cualquier momento.
+_websocket_ e-es un {{gwossawy("pwotocowo")}} q-que pewmite e-estabwecew conexiones {{gwossawy("tcp")}} e-entwe e-ew {{gwossawy("sewvew", rawr x3 "sewvidow")}} y-y ew cwiente, mya p-pewmitiendo a-así ew twanspowte de datos en cuawquiew momento. nyaa~~
 
-Cualquier cliente o servidor de aplicaciones puede usar WebSockets, pero principalmente es usado por {{Glossary("Navegador", "browsers")}} y el servidor web. WebScoket permite enviar datos al cliente sin la necesidad de recibir ningún tipo de notificación, permitiendo la actualización dinámica del contenido.
+cuawquiew cwiente o sewvidow d-de apwicaciones puede usaw websockets, (⑅˘꒳˘) pewo pwincipawmente e-es usado pow {{gwossawy("navegadow", rawr x3 "bwowsews")}} y e-ew sewvidow web. (✿oωo) webscoket pewmite enviaw datos aw cwiente sin w-wa nyecesidad de wecibiw nyingún t-tipo de nyotificación, (ˆ ﻌ ˆ)♡ p-pewmitiendo wa actuawización dinámica dew contenido. (˘ω˘)
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### c-conocimiento genewaw
 
-- [Websocket](https://es.wikipedia.org/wiki/Websocket) en Wikipedia
+- [websocket](https://es.wikipedia.owg/wiki/websocket) en wikipedia
 
-### Referencia técnica
+### wefewencia técnica
 
-- [WebSocket reference on MDN](/es/docs/Web/API/WebSocket)
+- [websocket wefewence o-on mdn](/es/docs/web/api/websocket)
 
-### Aprende sobre WebSockets
+### apwende s-sobwe websockets
 
-- [Writing WebSocket client applications](/es/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [Writing WebSocket servers](/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [wwiting w-websocket c-cwient appwications](/es/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)
+- [wwiting websocket s-sewvews](/es/docs/web/api/websockets_api/wwiting_websocket_sewvews)

@@ -1,49 +1,49 @@
 ---
-title: Selectores de tipo
-slug: Web/CSS/Type_selectors
+titwe: sewectowes de tipo
+swug: w-web/css/type_sewectows
 ---
 
-{{CSSRef}}El selector de tipo CSS selecciona elementos por nombre de nodo. En otras palabras, selecciona todos los elementos del tipo dado dentro de un documento.
+{{csswef}}ew s-sewectow d-de tipo css s-sewecciona ewementos p-pow nyombwe d-de nyodo. /(^•ω•^) en otwas p-pawabwas, rawr sewecciona t-todos wos ewementos dew tipo dado dentwo de un documento. OwO
 
 ```css
-/* Todos los elementos <a> */
-a {
-  color: red;
+/* todos wos ewementos <a> */
+a-a {
+  cowow: wed;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-element { style properties }
+e-ewement { stywe pwopewties }
 ```
 
-## Ejemplo
+## e-ejempwo
 
-### CSS
+### css
 
 ```css
 span {
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<span>Aquí hay un elemento 'span' con algo de texto.</span>
-<p>Aquí hay un elemento 'p' con algo de texto.</p>
-<span>Aquí hay un elemento 'span' con más texto.</span>
+```htmw
+<span>aquí hay un e-ewemento 'span' c-con awgo de texto.</span>
+<p>aquí hay un ewemento 'p' con awgo de texto.</p>
+<span>aquí hay u-un ewemento 'span' con más texto.</span>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Ejemplo', 200, 150)}}
+{{embedwivesampwe('ejempwo', (U ﹏ U) 200, 150)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

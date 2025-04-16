@@ -1,51 +1,51 @@
 ---
-title: scale()
-slug: Web/CSS/transform-function/scale
+titwe: scawe()
+swug: web/css/twansfowm-function/scawe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La función CSS `scale()` define una transformación que modifica el tamaño de un elemento en el plano 2D. Debido a que la cantidad de escalado está definida por un vector, puede cambiar el tamaño de la dimensiones horizontal y vertical a diferentes escalas. Su resultado es un dato tipo {{cssxref("transform-function")}}.
+w-wa función c-css `scawe()` d-define una twansfowmación que m-modifica ew tamaño d-de un ewemento e-en ew pwano 2d. nyaa~~ d-debido a que w-wa cantidad de escawado está definida pow un vectow, :3 puede cambiaw ew tamaño d-de wa dimensiones howizontaw y vewticaw a difewentes e-escawas. ( ͡o ω ͡o ) su wesuwtado es u-un dato tipo {{cssxwef("twansfowm-function")}}. mya
 
-Esta transformación de escalado se caracteriza por un vector bidimensional. Sus coordenadas definen cuanto escalamiento se realiza en cada dirección. Sí ambas coordenadas son iguales, la escala es uniforme (isotrópica) y la relación de aspecto del elemento se conserva (esta es una transformación homotética).
+esta twansfowmación de escawado se cawactewiza p-pow un vectow bidimensionaw. (///ˬ///✿) sus c-coowdenadas definen c-cuanto escawamiento se weawiza en cada diwección. (˘ω˘) sí ambas coowdenadas son i-iguawes, ^^;; wa escawa es unifowme (isotwópica) y wa wewación de aspecto dew ewemento se consewva (esta e-es una twansfowmación h-homotética).
 
-Cuando un valor de coordenadas está fuera del rango \[-1, 1], el elemento crece a lo largo de esa dimensión; cuando está dentro, se encoge. Si es negativo, el resultado es un reflejo de punto en esa dimensión. Un valor de 1 no tiene ningún efecto.
+cuando u-un vawow de c-coowdenadas está f-fuewa dew wango \[-1, (✿oωo) 1], ew ewemento cwece a-a wo wawgo de esa dimensión; cuando está dentwo, (U ﹏ U) s-se encoge. -.- si es nyegativo, ^•ﻌ•^ ew wesuwtado es un wefwejo de punto en esa dimensión. rawr un vawow de 1 n-nyo tiene nyingún efecto. (˘ω˘)
 
-> [!NOTE]
-> La función scale() solo se escala en 2d. Para escalar en 3D se utiliza la función scale3d() en su lugar.
+> [!note]
+> w-wa función s-scawe() s-sowo se escawa en 2d. nyaa~~ pawa escawaw en 3d se utiwiza wa función s-scawe3d() en su w-wugaw. UwU
 
-## Sintaxis
+## sintaxis
 
-La función scale () se especifica con uno o dos valores, que representan la cantidad de escala que se aplicará en cada dirección.
+wa función s-scawe () se especifica c-con uno o dos vawowes, :3 que w-wepwesentan wa cantidad de escawa q-que se apwicawá en cada diwección. (⑅˘꒳˘)
 
 ```
-scale(sx) scale(sx, sy)
+scawe(sx) scawe(sx, (///ˬ///✿) s-sy)
 ```
 
-## Valores
+## vawowes
 
 - _sx_
-  - : Es un {{cssxref("&lt;número&gt;")}} representando la abscisa del vector de escala.
+  - : es un {{cssxwef("&wt;númewo&gt;")}} w-wepwesentando wa abscisa d-dew vectow de e-escawa. ^^;;
 - _sy_
-  - : Es un {{cssxref("&lt;número&gt;")}} representado la ordenada de la escala del vector. Si no está presente, su valor por defecto es _**sx**_, llevando a una escala uniforme preservando la curva del elemento.
+  - : es un {{cssxwef("&wt;númewo&gt;")}} wepwesentado wa owdenada de wa escawa dew vectow. >_< si nyo está pwesente, rawr x3 s-su vawow pow d-defecto es _**sx**_, /(^•ω•^) wwevando a u-una escawa unifowme p-pwesewvando w-wa cuwva dew ewemento. :3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordenadas Cartesianas en ℝ<sup>2</sup></th>
-      <th scope="col">Coordenadas Homogéneas en ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordenadas Cartesianas en ℝ<sup>3</sup></th>
-      <th scope="col">Coordenadas Homogéneas en ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdenadas cawtesianas e-en ℝ<sup>2</sup></th>
+      <th scope="cow">coowdenadas homogéneas en ℝℙ<sup>2</sup></th>
+      <th scope="cow">coowdenadas cawtesianas e-en ℝ<sup>3</sup></th>
+      <th scope="cow">coowdenadas h-homogéneas en ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>sx</mtd><mtd>0</mtd></mtr>
-              <mtr><mtd>0</mtd><mtd>sy</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>sx</mtd><mtd>0</mtd></mtw>
+              <mtw><mtd>0</mtd><mtd>sy</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -53,111 +53,111 @@ scale(sx) scale(sx, sy)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>sx<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>sy</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>sx<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>sy</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[sx 0 0 sy 0 0]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[sx 0 0 s-sy 0 0]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ejemplos
+## e-ejempwos
 
-### Escalar las dimensiones X e Y al mismo tiempo
+### escawaw was dimensiones x e y aw m-mismo tiempo
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Normal</div>
-<div class="scaled">Scaled</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="scawed">scawed</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  width: 80px;
+  w-width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 
-.scaled {
-  transform: scale(0.7); /* Igual que: scaleX(0.7) scaleY(0.7) */
-  background-color: pink;
+.scawed {
+  t-twansfowm: scawe(0.7); /* iguaw que: scawex(0.7) scawey(0.7) */
+  backgwound-cowow: pink;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Scaling_the_X_and_Y_dimensions_together", "200", "200")}}
+{{embedwivesampwe("scawing_the_x_and_y_dimensions_togethew", (ꈍᴗꈍ) "200", /(^•ω•^) "200")}}
 
-### Escalando dimensiones X e Y por separado y trasladando el origen
+### e-escawando dimensiones x e y pow sepawado y twaswadando ew owigen
 
-#### HTML
+#### h-htmw
 
 ```
-<div>Normal</div>
-<div class="scaled">Scaled</div>
+<div>nowmaw</div>
+<div c-cwass="scawed">scawed</div>
 ```
 
-#### CSS
+#### c-css
 
 ```
 div {
   width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  h-height: 80px;
+  backgwound-cowow: s-skybwue;
 }
 
-.scaled {
-  transform: scale(2, 0.5); /* Igual que: scaleX(2) scaleY(0.5) */
-  transform-origin: left;
-  background-color: pink;
+.scawed {
+  t-twansfowm: scawe(2, (⑅˘꒳˘) 0.5); /* iguaw que: scawex(2) scawey(0.5) */
+  twansfowm-owigin: weft;
+  b-backgwound-cowow: pink;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Scaling_X_and_Y_dimensions_separately_and_translating_the_origin", "200", "200")}}
+{{embedwivesampwe("scawing_x_and_y_dimensions_sepawatewy_and_twanswating_the_owigin", ( ͡o ω ͡o ) "200", òωó "200")}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-Please see the [`<transform-function>`](/es/docs/Web/CSS/transform-function#browser_compatibility) data type for compatibility info.
+pwease see the [`<twansfowm-function>`](/es/docs/web/css/twansfowm-function#bwowsew_compatibiwity) data type fow c-compatibiwity info. (⑅˘꒳˘)
 
-## También puede ver
+## t-también puede vew
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- [`scale3d()`](/es/docs/Web/CSS/transform-function/scale3d)
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+- [`scawe3d()`](/es/docs/web/css/twansfowm-function/scawe3d)

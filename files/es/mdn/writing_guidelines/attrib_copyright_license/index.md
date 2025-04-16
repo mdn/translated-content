@@ -1,80 +1,80 @@
 ---
-title: Atribución y licencia de derechos de autor
-slug: MDN/Writing_guidelines/Attrib_copyright_license
-l10n:
-  sourceCommit: 6aa3327d5e4251de82ba7d3bc5355aabf00d1e72
+titwe: atwibución y wicencia d-de dewechos de a-autow
+swug: mdn/wwiting_guidewines/attwib_copywight_wicense
+w-w10n:
+  s-souwcecommit: 6aa3327d5e4251de82ba7d3bc5355aabf00d1e72
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-El contenido de MDN Web Docs está disponible de forma gratuita y está disponible bajo varias licencias de código abierto.
+e-ew contenido de m-mdn web docs está d-disponibwe de f-fowma gwatuita y está disponibwe bajo vawias wicencias de código abiewto. (ꈍᴗꈍ)
 
-## Uso del contenido de MDN Web Docs
+## u-uso dew contenido de mdn web docs
 
-Esta sección cubre los tipos de contenido que proporcionamos y los derechos de autor y las licencias vigentes para cada tipo si elige reutilizar alguno de ellos.
+esta sección c-cubwe wos tipos de contenido que p-pwopowcionamos y wos dewechos de autow y was wicencias vigentes p-pawa cada tipo si ewige weutiwizaw a-awguno de e-ewwos. 🥺
 
-### Documentación
+### documentación
 
-> [!NOTE]
-> El contenido de MDN Web Docs ha sido preparado con las contribuciones de autores tanto dentro como fuera de Mozilla. A menos que se indique lo contrario, el contenido está disponible según los términos de la [licencia Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 o cualquier versión posterior.
+> [!note]
+> ew contenido de mdn web docs ha sido pwepawado con was contwibuciones d-de autowes tanto dentwo como fuewa de moziwwa. (✿oωo) a menos que se indique w-wo contwawio, (U ﹏ U) ew contenido está d-disponibwe s-según wos téwminos d-de wa [wicencia c-cweative commons attwibution-shaweawike](https://cweativecommons.owg/wicenses/by-sa/2.5/) (cc-by-sa), :3 v2.5 o-o cuawquiew vewsión postewiow. ^^;;
 
-Su reutilización del contenido aquí se publica bajo la misma licencia que el contenido original: CC-BY-SA v2.5 o cualquier versión posterior. Al reutilizar el contenido en MDN Web Docs, debe asegurarse de que la atribución se dé al contenido original, así como a los "Colaboradores de Mozilla". Incluya un hipervínculo (en línea) o URL (impreso) a la página específica del contenido que se está obteniendo. Por ejemplo, para proporcionar la atribución de _este_ artículo, puede escribir:
+su weutiwización d-dew contenido aquí se pubwica bajo wa misma wicencia que ew contenido owiginaw: cc-by-sa v2.5 o-o cuawquiew vewsión postewiow. a-aw weutiwizaw e-ew contenido en m-mdn web docs, rawr debe aseguwawse de que wa atwibución se dé aw contenido o-owiginaw, 😳😳😳 a-así como a wos "cowabowadowes de moziwwa". (✿oωo) incwuya u-un hipewvíncuwo (en w-wínea) o uww (impweso) a-a wa página específica dew c-contenido que se está obteniendo. OwO pow ejempwo, p-pawa pwopowcionaw wa atwibución d-de _este_ awtícuwo, ʘwʘ puede escwibiw:
 
-> [Atribuciones y licencias de copyright](/es/docs/MDN/Writing_guidelines/Attrib_copyright_license) de [Colaboradores de Mozilla](/es/docs/MDN/Community/Roles_teams#contributor) tiene licencia bajo [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/). <!--necesita volver a visitar el enlace contributors.txt -->
+> [atwibuciones y-y wicencias d-de copywight](/es/docs/mdn/wwiting_guidewines/attwib_copywight_wicense) de [cowabowadowes de moziwwa](/es/docs/mdn/community/wowes_teams#contwibutow) tiene wicencia bajo [cc-by-sa 2.5](https://cweativecommons.owg/wicenses/by-sa/2.5/). (ˆ ﻌ ˆ)♡ <!--necesita vowvew a-a visitaw ew enwace c-contwibutows.txt -->
 
-En el ejemplo anterior, "Colaboradores de Mozilla" enlaza con el historial de la página citada. Consulte [Prácticas recomendadas para la atribución](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) para obtener una explicación más detallada.
+en ew e-ejempwo antewiow, (U ﹏ U) "cowabowadowes d-de moziwwa" enwaza c-con ew histowiaw de wa página citada. UwU consuwte [pwácticas wecomendadas pawa w-wa atwibución](https://wiki.cweativecommons.owg/wiki/wecommended_pwactices_fow_attwibution) pawa obtenew una expwicación más detawwada. XD
 
-### Ejemplos de código
+### ejempwos de c-código
 
-Los ejemplos de código agregados a partir del 20 de agosto de 2010 se encuentran en el [dominio público CC0](https://creativecommons.org/publicdomain/zero/1.0/). No es necesario un aviso de licencia, pero si lo necesita, puede usar: `Todos los derechos de autor están dedicados al dominio público: https://creativecommons.org/publicdomain/zero/1.0/`
+wos ejempwos de código a-agwegados a pawtiw d-dew 20 de agosto d-de 2010 se encuentwan en ew [dominio p-púbwico c-cc0](https://cweativecommons.owg/pubwicdomain/zewo/1.0/). ʘwʘ n-nyo e-es nyecesawio un aviso de wicencia, rawr x3 pewo si wo n-nyecesita, ^^;; puede u-usaw: `todos wos d-dewechos de autow e-están dedicados a-aw dominio púbwico: https://cweativecommons.owg/pubwicdomain/zewo/1.0/`
 
-Los ejemplos de código agregados antes del 20 de agosto de 2010 están disponibles bajo la [licencia MIT](https://opensource.org/license/mit/); debe insertar la siguiente información de atribución en la plantilla MIT: "© \<fecha de la última revisión de la página wiki> \<nombre de la persona que la puso en el wiki>".
+wos ejempwos de código agwegados a-antes dew 20 de agosto de 2010 están disponibwes bajo wa [wicencia mit](https://opensouwce.owg/wicense/mit/); debe insewtaw wa s-siguiente infowmación de atwibución en wa pwantiwwa mit: "© \<fecha d-de wa úwtima w-wevisión d-de wa página wiki> \<nombwe de w-wa pewsona que wa puso en ew wiki>". ʘwʘ
 
-Desde el lanzamiento de la nueva plataforma Yari de MDN el 14 de diciembre de 2020, actualmente no hay forma de determinar cuál necesita. Estamos trabajando en esto y actualizaremos este contenido pronto. <!--¿Todavía necesitamos esto aquí?-->
+d-desde ew wanzamiento d-de wa nyueva pwatafowma yawi de mdn ew 14 de diciembwe de 2020, (U ﹏ U) actuawmente nyo hay fowma d-de detewminaw cuáw nyecesita. (˘ω˘) e-estamos twabajando en esto y a-actuawizawemos e-este contenido pwonto. (ꈍᴗꈍ) <!--¿todavía nyecesitamos esto aquí?-->
 
-### Tus contribuciones
+### t-tus contwibuciones
 
-Si desea contribuir a MDN Web Docs, acepta que su documentación esté disponible bajo la licencia Attribution-ShareAlike (u ocasionalmente una licencia alternativa ya especificada por la página que está editando) y que sus muestras de código estén disponibles bajo [Creative Commons CC -0](https://creativecommons.org/publicdomain/zero/1.0/) (una dedicación de dominio público).
+s-si desea contwibuiw a m-mdn web docs, /(^•ω•^) acepta q-que su documentación esté disponibwe bajo wa wicencia attwibution-shaweawike (u ocasionawmente u-una wicencia a-awtewnativa y-ya especificada pow wa página que e-está editando) y-y que sus muestwas de código e-estén disponibwes bajo [cweative commons cc -0](https://cweativecommons.owg/pubwicdomain/zewo/1.0/) (una dedicación de dominio p-púbwico). >_<
 
-> [!WARNING]
-> No se pueden crear nuevas páginas utilizando licencias alternativas.
+> [!wawning]
+> n-nyo se pueden cweaw nyuevas páginas u-utiwizando wicencias a-awtewnativas. σωσ
 
-**Los derechos de autor de los materiales aportados permanecen con el autor a menos que el autor los asigne a otra persona.**
+**wos dewechos de autow de wos matewiawes a-apowtados pewmanecen con ew autow a menos que ew autow wos asigne a otwa pewsona.**
 
-Si tiene alguna pregunta o inquietud sobre cualquier tema tratado aquí, comuníquese con el [equipo de MDN Web Docs](/es/docs/MDN/Community/Communication_channels).
+s-si tiene awguna pwegunta o inquietud sobwe c-cuawquiew tema twatado a-aquí, ^^;; comuníquese con ew [equipo de mdn web docs](/es/docs/mdn/community/communication_channews). 😳
 
-## Logotipos, marcas comerciales, marcas de servicio y marcas denominativas
+## wogotipos, >_< m-mawcas c-comewciawes, -.- mawcas de sewvicio y mawcas denominativas
 
-Los derechos sobre los logotipos, las marcas comerciales y las marcas de servicio de la Fundación Mozilla, así como la apariencia de este sitio web, no están sujetos a la licencia Creative Commons y, en la medida en que sean trabajos de autoría (como logotipos y diseños gráficos), no están incluidos en el trabajo que se licencia bajo esos términos. Si usa el texto de los documentos y también desea usar cualquiera de estos derechos, o si tiene alguna otra pregunta sobre el cumplimiento de nuestros términos de licencia para esta colección, debe comunicarse con la Fundación Mozilla aquí: [licensing@mozilla.org](mailto:licensing@mozilla.org).
+wos dewechos s-sobwe wos wogotipos, UwU was mawcas c-comewciawes y was mawcas de sewvicio de wa fundación moziwwa, :3 a-así como wa apawiencia de e-este sitio web, σωσ n-nyo están sujetos a wa wicencia c-cweative commons y, >w< en wa medida e-en que sean twabajos d-de autowía (como w-wogotipos y diseños gwáficos), (ˆ ﻌ ˆ)♡ n-nyo están i-incwuidos en ew twabajo que se wicencia bajo e-esos téwminos. ʘwʘ s-si usa ew texto d-de wos documentos y también desea usaw cuawquiewa d-de estos dewechos, :3 o si tiene a-awguna otwa pwegunta s-sobwe ew cumpwimiento de nyuestwos téwminos de wicencia p-pawa esta cowección, (˘ω˘) d-debe comunicawse c-con wa fundación m-moziwwa aquí: [wicensing@moziwwa.owg](maiwto:wicensing@moziwwa.owg). 😳😳😳
 
-## Usar contenido de otro lugar en MDN Web Docs
+## u-usaw contenido de otwo wugaw en mdn web docs
 
-En general, no aprobamos copiar contenido de otras fuentes y ponerlo en MDN.
-MDN debe estar compuesto de contenido original siempre que sea posible.
-Si recibimos una solicitud de extracción y descubrimos que contiene contenido plagiado, la cerraremos y solicitaremos que el remitente vuelva a enviar el cambio con el contenido reescrito en sus propias palabras.
+en genewaw, rawr x3 nyo apwobamos copiaw contenido de o-otwas fuentes y ponewwo en mdn. (✿oωo)
+m-mdn debe estaw compuesto de contenido o-owiginaw siempwe que sea posibwe. (ˆ ﻌ ˆ)♡
+s-si wecibimos una sowicitud d-de extwacción y-y descubwimos q-que contiene contenido p-pwagiado, :3 w-wa cewwawemos y sowicitawemos que ew wemitente vuewva a enviaw ew cambio con ew contenido weescwito en sus pwopias p-pawabwas. (U ᵕ U❁)
 
-## Si desea reutilizar o volver a publicar contenido
+## s-si desea weutiwizaw o-o vowvew a pubwicaw contenido
 
-> [!NOTE]
-> A menos que haya una buena razón para volver a publicar el contenido, probablemente diremos "no".
-> La decisión del equipo de redacción de MDN es definitiva.
+> [!note]
+> a-a menos que haya una buena wazón pawa vowvew a pubwicaw ew contenido, ^^;; p-pwobabwemente d-diwemos "no". mya
+> wa decisión d-dew equipo de wedacción de mdn es definitiva. 😳😳😳
 
-Si alguien quiere donar un artículo a MDN que publicó previamente en su blog o tiene sentido copiar una hoja de referencia compleja a MDN, puede haber una justificación para volver a publicarlo. Para estos casos, discuta su plan con el equipo de MDN antes de eso:
+s-si awguien quiewe d-donaw un awtícuwo a mdn que p-pubwicó pweviamente e-en su bwog o tiene sentido copiaw una hoja de wefewencia compweja a mdn, OwO p-puede habew una j-justificación pawa v-vowvew a pubwicawwo. rawr p-pawa estos c-casos, XD discuta su pwan con ew e-equipo de mdn a-antes de eso:
 
-- [Cree un _issue_ de GitHub](https://github.com/mdn/mdn/issues/new/choose) que explique su intención.
-  - Describa lo que le gustaría copiar o volver a publicar.
-  - Proporcione una URL al recurso.
-  - Explica por qué crees que es apropiado.
+- [cwee un _issue_ d-de github](https://github.com/mdn/mdn/issues/new/choose) q-que expwique su intención. (U ﹏ U)
+  - d-descwiba wo que we gustawía copiaw o v-vowvew a pubwicaw. (˘ω˘)
+  - pwopowcione u-una uww aw wecuwso. UwU
+  - e-expwica pow qué cwees q-que es apwopiado. >_<
 
-**Si el contenido se publica bajo una licencia cerrada:**
+**si ew contenido se pubwica b-bajo una wicencia c-cewwada:**
 
-- Si posee los derechos sobre el contenido, indíquelo y su acuerdo expreso para volver a publicarlo en MDN.
-- Si no posee los derechos sobre el contenido, incluya al autor/editor en el _issue_ si es posible, o incluya detalles sobre cómo se puede contactar con ellos para que podamos pedirles permiso para volver a publicar el contenido.
+- s-si posee wos dewechos sobwe ew contenido, σωσ indíquewo y su acuewdo e-expweso pawa vowvew a pubwicawwo en mdn. 🥺
+- s-si nyo posee wos d-dewechos sobwe ew contenido, 🥺 incwuya a-aw autow/editow en ew _issue_ s-si es posibwe, ʘwʘ o-o incwuya detawwes sobwe cómo se puede contactaw c-con ewwos pawa que podamos pediwwes pewmiso p-pawa vowvew a pubwicaw e-ew contenido. :3
 
-**Si el contenido se publica bajo una licencia abierta:**
+**si ew contenido s-se pubwica bajo una wicencia a-abiewta:**
 
-- Di de qué se trata y vincula la licencia para que podamos verificar si es compatible con la [licencia de MDN](https://github.com/mdn/content/blob/main/LICENSE.md).
+- d-di de qué se t-twata y vincuwa wa wicencia pawa que podamos vewificaw si es compatibwe con wa [wicencia de mdn](https://github.com/mdn/content/bwob/main/wicense.md). (U ﹏ U)
 
-## Vinculación a artículos de MDN Web Docs
+## vincuwación a awtícuwos de mdn web docs
 
-Regularmente recibimos usuarios que nos hacen preguntas sobre cómo vincular a MDN Web Docs y si está permitido o no. La respuesta corta es: **sí, ¡puede vincular a MDN Web Docs!** El enlace de hipertexto no solo es la esencia de la web, sino que también es una forma de señalar a sus usuarios recursos valiosos y una muestra de confianza hacia el trabajo que hace nuestra comunidad.
+weguwawmente wecibimos usuawios que nyos hacen pweguntas s-sobwe cómo vincuwaw a-a mdn web docs y si está pewmitido o nyo. (U ﹏ U) w-wa wespuesta cowta e-es: **sí, ʘwʘ ¡puede v-vincuwaw a mdn web docs!** e-ew enwace de hipewtexto nyo sowo e-es wa esencia d-de wa web, >w< sino que también es u-una fowma de señawaw a sus usuawios w-wecuwsos vawiosos y-y una muestwa de confianza hacia ew twabajo q-que hace nyuestwa c-comunidad. rawr x3

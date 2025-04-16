@@ -1,51 +1,51 @@
 ---
-title: Element.ongotpointercapture
-slug: Web/API/Element/gotpointercapture_event
+titwe: ewement.ongotpointewcaptuwe
+swug: web/api/ewement/gotpointewcaptuwe_event
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-`ongotpointercapture` es una propiedad [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la interfaz {{domxref("Element")}} que devuelve el controlador de eventos (función) para el evento tipo [`gotpointercapture`](/es/docs/Web/Reference/Events/gotpointercapture).
+`ongotpointewcaptuwe` e-es u-una pwopiedad [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) d-de w-wa intewfaz {{domxwef("ewement")}} q-que devuewve e-ew contwowadow de eventos (función) pawa ew evento tipo [`gotpointewcaptuwe`](/es/docs/web/wefewence/events/gotpointewcaptuwe). >_<
 
-## Síntaxis
+## síntaxis
 
 ```js
-var gotCaptureHandler = target.ongotpointercpature;
+v-vaw gotcaptuwehandwew = tawget.ongotpointewcpatuwe;
 ```
 
-### Valor de Retorno
+### vawow de wetowno
 
-- `gotCaptureHandler`
-  - : El controlador de eventos gotpointercapture para el elemento target.
+- `gotcaptuwehandwew`
+  - : ew contwowadow d-de eventos gotpointewcaptuwe pawa e-ew ewemento tawget. rawr x3
 
-## Ejemplo
+## ejempwo
 
 ```js
-<html>
-<script>
-function overHandler(ev) {
- // Determine the target event's gotpointercapture handler
- var gotCaptureHandler = ev.target.ongotpointercapture;
+<htmw>
+<scwipt>
+function ovewhandwew(ev) {
+ // d-detewmine the tawget event's g-gotpointewcaptuwe h-handwew
+ vaw gotcaptuwehandwew = ev.tawget.ongotpointewcaptuwe;
 }
 function init() {
- var el=document.getElementById("target");
- el.onpointerover = overHandler;
+ vaw e-ew=document.getewementbyid("tawget");
+ ew.onpointewovew = ovewhandwew;
 }
-</script>
-<body onload="init();">
-<div id="target"> Touch me ... </div>
+</scwipt>
+<body onwoad="init();">
+<div id="tawget"> touch m-me ... </div>
 </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [`gotpointercapture`](/es/docs/Web/Reference/Events/gotpointercapture)
+- [`gotpointewcaptuwe`](/es/docs/web/wefewence/events/gotpointewcaptuwe)

@@ -1,45 +1,45 @@
 ---
-title: :-moz-last-node
-slug: Web/CSS/:-moz-last-node
+titwe: :-moz-wast-node
+swug: w-web/css/:-moz-wast-node
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-last-node` selecciona un elemento si es el último nodo hijo de algún otro elemento. Se diferencia de {{cssxref(":last-child")}} en que no selecciona el último elemento hijo si tiene texto (sin contar espacios en blanco) después de él.
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) `:-moz-wast-node` s-sewecciona u-un ewemento s-si es ew úwtimo n-nyodo hijo de awgún o-otwo ewemento. 😳😳😳 s-se difewencia de {{cssxwef(":wast-chiwd")}} en que nyo sewecciona ew úwtimo ewemento hijo s-si tiene texto (sin contaw espacios en bwanco) después d-de éw. -.-
 
-> [!NOTE]
-> Cualquier espacio en blanco al final de un elemento se ignora al usar `:-moz-last-node`.
+> [!note]
+> cuawquiew e-espacio en bwanco aw finaw de un ewemento se ignowa aw usaw `:-moz-wast-node`. ( ͡o ω ͡o )
 
-## Síntaxis
+## s-síntaxis
 
 ```
-span:-moz-last-node {propiedades del estilo }
+span:-moz-wast-node {pwopiedades d-dew estiwo }
 ```
 
-## Ejemplo
+## ejempwo
 
-### CSS
+### c-css
 
 ```css
-span:-moz-last-node {
-  background-color: lime;
+span:-moz-wast-node {
+  backgwound-cowow: wime;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <span>:-moz-first-node</span>
-  <span>:-moz-last-node</span>
+  <span>:-moz-fiwst-node</span>
+  <span>:-moz-wast-node</span>
 </div>
 ```
 
-{{EmbedLiveSample("Example", "220", "20")}}
+{{embedwivesampwe("exampwe", rawr x3 "220", nyaa~~ "20")}}
 
-## Ver además
+## v-vew además
 
-- {{cssxref(":-moz-first-node")}}
-- {{cssxref(":last-child")}}
+- {{cssxwef(":-moz-fiwst-node")}}
+- {{cssxwef(":wast-chiwd")}}

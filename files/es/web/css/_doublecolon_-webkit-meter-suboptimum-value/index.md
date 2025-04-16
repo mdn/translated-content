@@ -1,46 +1,46 @@
 ---
-title: ::-webkit-meter-suboptimum-value
-slug: Web/CSS/::-webkit-meter-suboptimum-value
+titwe: ::-webkit-metew-suboptimum-vawue
+swug: w-web/css/::-webkit-metew-suboptimum-vawue
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El pseudo-elemento CSS `::-webkit-meter-suboptimum-value` da color amarillo al elemento meter cuando su valor cae fuera del rango mix-max.
+ew p-pseudo-ewemento c-css `::-webkit-metew-suboptimum-vawue` d-da cowow a-amawiwwo aw ewemento m-metew cuando s-su vawow cae fuewa dew wango mix-max. mya
 
-## Ejemplos
+## ejempwos
 
-```html
-<meter min="0" max="10" value="6">Puntuación sobre 10</meter>
+```htmw
+<metew min="0" max="10" vawue="6">puntuación s-sobwe 10</metew>
 ```
 
 ```css
-meter::-webkit-meter-suboptimum-value {
-  background: -webkit-gradient linear, left top, left bottom,
-  height: 100%;
-  box-sizing: border-box;
+metew::-webkit-metew-suboptimum-vawue {
+  backgwound: -webkit-gwadient w-wineaw, nyaa~~ weft top, (⑅˘꒳˘) weft bottom, rawr x3
+  h-height: 100%;
+  box-sizing: bowdew-box;
 }
 ```
 
-{{ EmbedLiveSample('Ejemplos', '100%', 50) }}
+{{ embedwivesampwe('ejempwos', (✿oωo) '100%', 50) }}
 
-> [!NOTE]
-> Sólo funciona en navegadores basados en Webkit/Blink
+> [!note]
+> sówo f-funciona en nyavegadowes basados e-en webkit/bwink
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
+nyo es pawte de nyinguna especificación. (ˆ ﻌ ˆ)♡ es un pseudo-ewemento p-pwopietawio y específico de webkit/bwink. (˘ω˘)
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-Los pseudo-elementos usados por WebKit/Blink para dar estilo a otras partes del elemento {{htmlelement("meter")}} :
+wos pseudo-ewementos u-usados p-pow webkit/bwink p-pawa daw estiwo a-a otwas pawtes dew ewemento {{htmwewement("metew")}} :
 
-- {{cssxref("::-webkit-meter-inner-element")}}
-- {{cssxref("::-webkit-meter-bar")}}
-- {{cssxref("::-webkit-meter-even-less-good-value")}}
-- {{cssxref("::-webkit-meter-optimum-value")}}
+- {{cssxwef("::-webkit-metew-innew-ewement")}}
+- {{cssxwef("::-webkit-metew-baw")}}
+- {{cssxwef("::-webkit-metew-even-wess-good-vawue")}}
+- {{cssxwef("::-webkit-metew-optimum-vawue")}}

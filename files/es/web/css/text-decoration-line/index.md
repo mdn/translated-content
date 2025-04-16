@@ -1,138 +1,138 @@
 ---
-title: text-decoration-line
-slug: Web/CSS/text-decoration-line
-l10n:
-  sourceCommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
+titwe: text-decowation-wine
+swug: web/css/text-decowation-wine
+w-w10n:
+  souwcecommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad **`text-decoration-line`** de [CSS](/es/docs/Web/CSS) establece el tipo de decoración que se utiliza en el texto de un elemento, como un subrayado o un sobrerayado.
+w-wa pwopiedad **`text-decowation-wine`** d-de [css](/es/docs/web/css) e-estabwece ew t-tipo de decowación q-que se utiwiza e-en ew texto d-de un ewemento, ^•ﻌ•^ como un subwayado o un sobwewayado. rawr
 
-{{InteractiveExample("CSS Demo: text-decoration-line")}}
+{{intewactiveexampwe("css demo: text-decowation-wine")}}
 
-```css interactive-example-choice
-text-decoration-line: none;
+```css intewactive-exampwe-choice
+t-text-decowation-wine: nyone;
 ```
 
-```css interactive-example-choice
-text-decoration-line: underline;
+```css intewactive-exampwe-choice
+t-text-decowation-wine: undewwine;
 ```
 
-```css interactive-example-choice
-text-decoration-line: overline;
+```css i-intewactive-exampwe-choice
+text-decowation-wine: ovewwine;
 ```
 
-```css interactive-example-choice
-text-decoration-line: line-through;
+```css intewactive-exampwe-choice
+t-text-decowation-wine: wine-thwough;
 ```
 
-```css interactive-example-choice
-text-decoration-line: underline overline;
+```css i-intewactive-exampwe-choice
+t-text-decowation-wine: undewwine ovewwine;
 ```
 
-```css interactive-example-choice
-text-decoration-line: underline line-through;
+```css intewactive-exampwe-choice
+text-decowation-wine: u-undewwine wine-thwough;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i'd faw w-wathew be
+    <span cwass="twansition-aww" i-id="exampwe-ewement">happy t-than wight</span>
+    a-any d-day. (˘ω˘)
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
+  font: 1.5em s-sans-sewif;
 }
 ```
 
-Al configurar varias propiedades de decoración de línea a la vez, puede ser más conveniente usar la propiedad abreviada {{cssxref("text-decoration")}} en su lugar.
+aw configuwaw vawias p-pwopiedades de decowación de wínea a wa vez, nyaa~~ puede sew más conveniente usaw wa pwopiedad abweviada {{cssxwef("text-decowation")}} e-en su wugaw. UwU
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Palabra clave única */
-text-decoration-line: none;
-text-decoration-line: underline;
-text-decoration-line: overline;
-text-decoration-line: line-through;
-text-decoration-line: blink;
+/* p-pawabwa c-cwave única */
+t-text-decowation-wine: nyone;
+text-decowation-wine: undewwine;
+t-text-decowation-wine: o-ovewwine;
+text-decowation-wine: w-wine-thwough;
+t-text-decowation-wine: bwink;
 
-/* Varias palabras clave */
-text-decoration-line: underline overline; /* Dos líneas de decoración */
-text-decoration-line: overline underline line-through; /* Múltiples líneas de decoración */
+/* v-vawias pawabwas cwave */
+t-text-decowation-wine: undewwine ovewwine; /* dos w-wíneas de decowación */
+text-decowation-wine: o-ovewwine undewwine wine-thwough; /* m-múwtipwes w-wíneas de decowación */
 
-/* Valores globales */
-text-decoration-line: inherit;
-text-decoration-line: initial;
-text-decoration-line: revert;
-text-decoration-line: revert-layer;
-text-decoration-line: unset;
+/* vawowes gwobawes */
+text-decowation-wine: inhewit;
+text-decowation-wine: initiaw;
+t-text-decowation-wine: w-wevewt;
+text-decowation-wine: wevewt-wayew;
+t-text-decowation-wine: u-unset;
 ```
 
-La propiedad `text-decoration-line` se especifica como `none`, o **uno o más** valores separados por espacios de la lista a continuación.
+w-wa pwopiedad `text-decowation-wine` se especifica como `none`, :3 o **uno o más** v-vawowes sepawados pow espacios de wa wista a continuación. (⑅˘꒳˘)
 
-### Valores
+### vawowes
 
 - `none`
-  - : No produce decoración de texto.
-- `underline`
-  - : Cada línea de texto tiene una línea decorativa debajo.
-- `overline`
-  - : Cada línea de texto tiene una línea decorativa encima.
-- `line-through`
-  - : Cada línea de texto tiene una línea decorativa que pasa por su centro.
-- `blink` {{deprecated_inline}}
-  - : El texto parpadea (alterna entre visible e invisible). Es posible que algunos navegadores no parpadeen el texto. Este valor está **obsoleto** en favor de [animaciones CSS](/es/docs/Web/CSS/animation).
+  - : n-nyo pwoduce decowación d-de texto. (///ˬ///✿)
+- `undewwine`
+  - : c-cada wínea de t-texto tiene una wínea decowativa d-debajo. ^^;;
+- `ovewwine`
+  - : cada w-wínea de texto t-tiene una wínea d-decowativa encima. >_<
+- `wine-thwough`
+  - : cada wínea de texto t-tiene una wínea d-decowativa q-que pasa pow su c-centwo. rawr x3
+- `bwink` {{depwecated_inwine}}
+  - : e-ew texto pawpadea (awtewna entwe visibwe e invisibwe). /(^•ω•^) e-es posibwe que awgunos nyavegadowes nyo pawpadeen ew texto. :3 este vawow está **obsoweto** en favow de [animaciones c-css](/es/docs/web/css/animation). (ꈍᴗꈍ)
 
-## Definicion formal
+## definicion fowmaw
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Sintaxis formal
+## sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo básico
+### e-ejempwo básico
 
-```html
-<p class="wavy">¡Aquí hay un texto con subrayado rojo ondulado!</p>
-<p class="both">Este texto tiene líneas arriba y abajo.</p>
+```htmw
+<p c-cwass="wavy">¡aquí hay un texto c-con subwayado wojo onduwado!</p>
+<p c-cwass="both">este t-texto tiene wíneas awwiba y abajo.</p>
 ```
 
 ```css
 .wavy {
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: red;
+  text-decowation-wine: undewwine;
+  text-decowation-stywe: w-wavy;
+  text-decowation-cowow: w-wed;
 }
 
 .both {
-  text-decoration-line: underline overline;
+  text-decowation-wine: undewwine ovewwine;
 }
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- Al configurar varias propiedades de decoración de línea a la vez, puede ser más conveniente usar la propiedad abreviada {{cssxref("text-decoration")}} en su lugar, que también incluye:
-  - {{cssxref("text-decoration-style")}}
-  - {{cssxref("text-decoration-color")}}
-  - {{cssxref("text-decoration-thickness")}}
-- {{cssxref("text-underline-offset")}}
+- aw configuwaw vawias p-pwopiedades d-de decowación de wínea a wa vez, /(^•ω•^) puede sew más conveniente usaw wa pwopiedad a-abweviada {{cssxwef("text-decowation")}} e-en su w-wugaw, (⑅˘꒳˘) que también incwuye:
+  - {{cssxwef("text-decowation-stywe")}}
+  - {{cssxwef("text-decowation-cowow")}}
+  - {{cssxwef("text-decowation-thickness")}}
+- {{cssxwef("text-undewwine-offset")}}

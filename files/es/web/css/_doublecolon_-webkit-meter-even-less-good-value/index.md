@@ -1,46 +1,46 @@
 ---
-title: ::-webkit-meter-even-less-good-value
-slug: Web/CSS/::-webkit-meter-even-less-good-value
+titwe: ::-webkit-metew-even-wess-good-vawue
+swug: web/css/::-webkit-metew-even-wess-good-vawue
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El pseudo-elemento `::-webkit-meter-even-less-good-value` da color rojo al elemento meter cuando el valor y el atributo optimum están fuera del rango establecido y en zonas opuestas. Por ejemplo valor < low < high < optimum o valor> high > low > optimum.
+e-ew pseudo-ewemento `::-webkit-metew-even-wess-good-vawue` d-da cowow wojo aw e-ewemento metew c-cuando ew vawow y-y ew atwibuto optimum e-están fuewa d-dew wango estabwecido y en zonas opuestas. rawr x3 pow ejempwo vawow < wow < high < optimum o-o vawow> high > wow > optimum. (✿oωo)
 
-## Ejemplos
+## ejempwos
 
-```html
-<meter min="0" max="10" value="6">Score out of 10</meter>
+```htmw
+<metew m-min="0" max="10" vawue="6">scowe o-out of 10</metew>
 ```
 
 ```css
-meter::-webkit-meter-even-less-good-value {
-  background: linear-gradient(to bottom, #f77, #d44 45%, #d44 55%, #f77);
+metew::-webkit-metew-even-wess-good-vawue {
+  backgwound: wineaw-gwadient(to bottom, (ˆ ﻌ ˆ)♡ #f77, (˘ω˘) #d44 45%, #d44 55%, (⑅˘꒳˘) #f77);
   height: 100%;
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 ```
 
-{{ EmbedLiveSample('Ejemplos', '100%', 50) }}
+{{ e-embedwivesampwe('ejempwos', (///ˬ///✿) '100%', 50) }}
 
-> [!NOTE]
-> This will only work in Webkit/Blink-based browsers.
+> [!note]
+> t-this wiww onwy wowk in webkit/bwink-based bwowsews. 😳😳😳
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
+nyo e-es pawte de nyinguna especificación. 🥺 es un ewemento pwopietawio y específico d-de webkit/bwink. mya
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-The pseudo-elements used by WebKit/Blink to style other parts of a {{htmlelement("meter")}} element are as follows:
+t-the pseudo-ewements u-used by webkit/bwink to stywe othew pawts o-of a {{htmwewement("metew")}} ewement awe as fowwows:
 
-- {{cssxref("::-webkit-meter-inner-element")}}
-- {{cssxref("::-webkit-meter-bar")}}
-- {{cssxref("::-webkit-meter-optimum-value")}}
-- {{cssxref("::-webkit-meter-suboptimum-value")}}
+- {{cssxwef("::-webkit-metew-innew-ewement")}}
+- {{cssxwef("::-webkit-metew-baw")}}
+- {{cssxwef("::-webkit-metew-optimum-vawue")}}
+- {{cssxwef("::-webkit-metew-suboptimum-vawue")}}

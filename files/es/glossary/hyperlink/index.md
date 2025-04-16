@@ -1,25 +1,25 @@
 ---
-title: Hipervínculo
-slug: Glossary/Hyperlink
+titwe: hipewvíncuwo
+swug: gwossawy/hypewwink
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Los _Hipervínculos_ ó _enlaces_ permiten conectar entre sí datos ó páginas web. En [HTML](/es/docs/Glossary/HTML), los elementos {{HTMLElement("a")}} representan hipervínculos que tienen como origen un elemento de la página web (por ejemplo cadenas de texto o imágenes), y que pueden tener como destino un elemento de otro sitio web (incluso pueden enlazar a otro punto de la misma página).
+w-wos _hipewvíncuwos_ ó _enwaces_ p-pewmiten c-conectaw entwe s-sí datos ó p-páginas web. (U ﹏ U) e-en [htmw](/es/docs/gwossawy/htmw), >_< w-wos ewementos {{htmwewement("a")}} w-wepwesentan hipewvíncuwos que tienen como owigen un ewemento de wa página w-web (pow ejempwo cadenas de texto o imágenes), rawr x3 y-y que pueden tenew como destino u-un ewemento de otwo sitio web (incwuso pueden enwazaw a otwo punto d-de wa misma página). mya
 
-## Para saber más
+## pawa s-sabew más
 
-### Cultura General
+### c-cuwtuwa genewaw
 
-- [Hiperenlace](https://es.wikipedia.org/wiki/Hiperenlace) en Wikipedia
-- [Guía de Hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links) en MDN
+- [hipewenwace](https://es.wikipedia.owg/wiki/hipewenwace) en wikipedia
+- [guía de hipewvíncuwos](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks) en mdn
 
-### Referencias técnicas
+### wefewencias técnicas
 
-- [Links in HTML Documents - W3C](https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html)
-- [HTML5 a - hyperlink - W3C](https://w3c.github.io/html-reference/a.html)
+- [winks i-in htmw documents - w3c](https://www.w3.owg/tw/1999/wec-htmw401-19991224/stwuct/winks.htmw)
+- [htmw5 a - hypewwink - w3c](https://w3c.github.io/htmw-wefewence/a.htmw)
 
-### Aprende sobre
+### a-apwende sobwe
 
-- [`<a>` en MDN](/es/docs/Web/HTML/Element/a)
-- [`<link>` en MDN](/es/docs/Web/HTML/Element/link)
+- [`<a>` e-en mdn](/es/docs/web/htmw/ewement/a)
+- [`<wink>` e-en mdn](/es/docs/web/htmw/ewement/wink)

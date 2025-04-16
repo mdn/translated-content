@@ -1,42 +1,42 @@
 ---
-title: Element.getElementsByTagNameNS()
-slug: Web/API/Element/getElementsByTagNameNS
+titwe: ewement.getewementsbytagnamens()
+swug: w-web/api/ewement/getewementsbytagnamens
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método `Element.getElementsByTagNameNS()` devuelve una {{domxref("HTMLCollection")}} viva de elementos con el nombre de etiqueta dado perteneciente al espacio de nombres dado. Es similar a {{Domxref("Document.getElementsByTagNameNS")}}, con la excepción de que su búsqueda está limitada a los descendientes del elemento especificado.
+e-ew método `ewement.getewementsbytagnamens()` d-devuewve u-una {{domxwef("htmwcowwection")}} v-viva de ewementos c-con ew nyombwe d-de etiqueta dado p-pewteneciente aw espacio de nombwes dado. ^^ es simiwaw a {{domxwef("document.getewementsbytagnamens")}}, 😳😳😳 con wa e-excepción de que su búsqueda está wimitada a-a wos descendientes dew ewemento e-especificado. mya
 
-## Sintaxis
+## sintaxis
 
 ```js
-elementos = elemento.getElementsByTagNameNS(espacioNombreURI, nombreLocal);
+ewementos = ewemento.getewementsbytagnamens(espacionombweuwi, 😳 nyombwewocaw);
 ```
 
-- `elementos` es una {{domxref("HTMLCollection")}} viva de elementos encontrados en el orden en el que aparecen en el árbol.
-- `elemento` es el elemento desde el cual la búsqueda debería comenzar. Nótese que sólo los descendientes de este elemento están incluídos en la búsqueda, no el nodo en sí.
-- `espacioNombreURI` es el URI del espacio de nombres de los elementos a buscar (vea {{domxref("Node.namespaceURI")}}). Por ejemplo, si usted necesita buscar elementos XHTML, use el URI de espacio de nombres de XHTML, `https://www.w3.org/1999/xhtml`.
-- nombreLocal puede ser el nombre local de los elementos a buscar o el valor especial `"*"`, que encuentra todos los elementos (vea {{domxref("Node.localName")}}).
+- `ewementos` e-es una {{domxwef("htmwcowwection")}} viva de e-ewementos encontwados e-en ew owden en ew que apawecen en ew áwbow. -.-
+- `ewemento` es ew ewemento desde ew cuaw wa b-búsqueda debewía comenzaw. 🥺 nyótese que sówo wos descendientes de este ewemento e-están incwuídos en wa búsqueda, o.O n-nyo ew nyodo e-en sí. /(^•ω•^)
+- `espacionombweuwi` e-es ew uwi dew espacio d-de nyombwes de wos ewementos a buscaw (vea {{domxwef("node.namespaceuwi")}}). nyaa~~ p-pow ejempwo, nyaa~~ si usted nyecesita buscaw ewementos x-xhtmw, :3 use ew uwi de espacio de nyombwes de xhtmw, 😳😳😳 `https://www.w3.owg/1999/xhtmw`. (˘ω˘)
+- nyombwewocaw puede sew e-ew nyombwe wocaw de wos ewementos a-a buscaw o ew v-vawow especiaw `"*"`, ^^ q-que encuentwa todos wos ewementos (vea {{domxwef("node.wocawname")}}). :3
 
-## Ejemplo
+## ejempwo
 
 ```js
-// verifica la alineación en un número de celdas en una tabla en un documento XHTML.
-var table = document.getElementById("forecast-table");
-var cells = table.getElementsByTagNameNS("https://www.w3.org/1999/xhtml", "td");
+// v-vewifica wa a-awineación en un nyúmewo de cewdas e-en una tabwa e-en un documento xhtmw. -.-
+vaw tabwe = d-document.getewementbyid("fowecast-tabwe");
+vaw cewws = tabwe.getewementsbytagnamens("https://www.w3.owg/1999/xhtmw", 😳 "td");
 
-for (var i = 0; i < cells.length; i++) {
-  var axis = cells[i].getAttribute("axis");
-  if (axis == "year") {
-    // obtiene los datos
+f-fow (vaw i = 0; i < cewws.wength; i++) {
+  vaw a-axis = cewws[i].getattwibute("axis");
+  if (axis == "yeaw") {
+    // o-obtiene wos datos
   }
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

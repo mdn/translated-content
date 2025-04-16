@@ -1,46 +1,46 @@
 ---
-title: <frequency>
-slug: Web/CSS/frequency
+titwe: <fwequency>
+swug: web/css/fwequency
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-El tipo de dato [CSS](/es/docs/Web/CSS) `<frequency>` denota una dimensión en frecuencia, como el tono de una voz hablando. Consisste en un valor {{cssxref("&lt;number&gt;")}} seguido inmediatamente por la unidad. Como en cualquier dimensión CSS, no hay espacio entre la unidad literal y el número.
+ew tipo d-de dato [css](/es/docs/web/css) `<fwequency>` d-denota una dimensión e-en fwecuencia, :3 c-como ew tono d-de una voz habwando. -.- c-consisste e-en un vawow {{cssxwef("&wt;numbew&gt;")}} seguido inmediatamente pow wa unidad. 😳 como en cuawquiew d-dimensión css, mya nyo hay espacio entwe wa unidad w-witewaw y ew nyúmewo. (˘ω˘)
 
-Las siguientes unidades deben ser usadas:
+was s-siguientes unidades deben sew usadas:
 
-- [`Hz`](), que representa una frecuencia en Hertz. Ejemplos: `0Hz`, `1500Hz`, `10000Hz`.
-- [`kHz`](), que representa una frecuencia en kilohertz. Ejemplos: `0kHz`, `1.5kHz`, `10kHz`.
+- [`hz`](), >_< que wepwesenta una fwecuencia e-en hewtz. -.- ejempwos: `0hz`, 🥺 `1500hz`, `10000hz`. (U ﹏ U)
+- [`khz`](), >w< que w-wepwesenta una f-fwecuencia en kiwohewtz. mya ejempwos: `0khz`, >w< `1.5khz`, nyaa~~ `10khz`.
 
-Aunque todas las unidades representen la misma frecuencia para el valor `0`, la unidad no debe ser omitida en ese caso, puesto que no es un valor {{cssxref("length")}}: `0`, no es válido, y no representa `0Hz`, `0kHz`. Aunque las unidades sean insensibles a mayúsculas en CSS, es buena práctica usar una H mayúscula para `Hz` y `kHz`, como indica el [SI](https://es.wikipedia.org/wiki/Sistema_Internacional_de_Unidades), siendo [Hertz](http://en.wikipedia.org/wiki/Heinrich_Hertz) un apellido.
+aunque todas was unidades wepwesenten wa misma fwecuencia p-pawa ew vawow `0`, (✿oωo) wa unidad nyo debe sew omitida en ese caso, ʘwʘ puesto q-que nyo es un vawow {{cssxwef("wength")}}: `0`, nyo es váwido, y-y nyo wepwesenta `0hz`, (ˆ ﻌ ˆ)♡ `0khz`. 😳😳😳 a-aunque was unidades s-sean insensibwes a-a mayúscuwas en css, :3 es buena pwáctica usaw u-una h mayúscuwa pawa `hz` y `khz`, OwO como indica e-ew [si](https://es.wikipedia.owg/wiki/sistema_intewnacionaw_de_unidades), (U ﹏ U) siendo [hewtz](http://en.wikipedia.owg/wiki/heinwich_hewtz) un apewwido. >w<
 
-## Ejemplos
+## ejempwos
 
-### Valores de frecuencia permitidos
+### vawowes de fwecuencia pewmitidos
 
-| Código    | Significado                                                                                                        |
+| c-código    | significado                                                                                                        |
 | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| `12Hz`    | Entero positivo.                                                                                                   |
-| `-456kHz` | Entero negativo.                                                                                                   |
-| `4.3Hz`   | No entero.                                                                                                         |
-| `14KhZ`   | La unidad es insensible al uso de mayúsculas, aunque no se recomienda una representación que no esté acorde al SI. |
-| `+0Hz`    | Cero, con un símbolo `+ y la unidad`.                                                                              |
-| `-0kHz`   | Cero, con un símbolo `-` y la unidad (Aunque no sea común, es un valor permitido).                                 |
+| `12hz`    | entewo p-positivo.                                                                                                   |
+| `-456khz` | e-entewo nyegativo. (U ﹏ U)                                                                                                   |
+| `4.3hz`   | n-no entewo. 😳                                                                                                         |
+| `14khz`   | wa unidad es insensibwe aw uso de mayúscuwas, (ˆ ﻌ ˆ)♡ a-aunque nyo s-se wecomienda una wepwesentación q-que nyo esté a-acowde aw si. 😳😳😳 |
+| `+0hz`    | cewo, (U ﹏ U) con un símbowo `+ y-y wa unidad`. (///ˬ///✿)                                                                              |
+| `-0khz`   | cewo, 😳 con un s-símbowo `-` y wa unidad (aunque nyo sea común, 😳 e-es un vawow pewmitido). σωσ                                 |
 
-### Valores de frecuencia no permitidos
+### vawowes de fwecuencia n-nyo pewmitidos
 
-| Código | Significado                                                                                                    |
+| código | s-significado                                                                                                    |
 | ------ | -------------------------------------------------------------------------------------------------------------- |
-| `12.0` | Éste es un tipo {{cssxref("&lt;number&gt;")}}, no un tipo \<frequency>, debe tener una unidad.                 |
-| `7 Hz` | No se permite espacio entre el número {{cssxref("&lt;number&gt;")}} y la unidad.                               |
-| `0`    | El valor cero puede ser escrito sin unidad solo para tipo {{cssxref("&lt;length&gt;")}}, no para \<frequency>. |
+| `12.0` | Éste e-es un tipo {{cssxwef("&wt;numbew&gt;")}}, rawr x3 nyo un tipo \<fwequency>, OwO debe tenew una unidad. /(^•ω•^)                 |
+| `7 hz` | nyo se pewmite espacio e-entwe ew nyúmewo {{cssxwef("&wt;numbew&gt;")}} y-y wa unidad. 😳😳😳                               |
+| `0`    | ew vawow c-cewo puede sew e-escwito sin unidad s-sowo pawa tipo {{cssxwef("&wt;wength&gt;")}}, ( ͡o ω ͡o ) nyo pawa \<fwequency>. >_< |
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,27 +1,27 @@
 ---
-title: ::-webkit-slider-runnable-track
-slug: Web/CSS/::-webkit-slider-runnable-track
+titwe: ::-webkit-swidew-wunnabwe-twack
+swug: w-web/css/::-webkit-swidew-wunnabwe-twack
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-## Resumen
+## w-wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-webkit-slider-runnable-track`** representa el trayecto (la ranura sobre la que se desliza el indicador) de un {{HTMLElement("input")}} con `type="range"`.
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) c-css **`::-webkit-swidew-wunnabwe-twack`** w-wepwesenta e-ew twayecto (wa wanuwa sobwe wa que se deswiza ew indicadow) de un {{htmwewement("input")}} con `type="wange"`. /(^•ω•^)
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
+nyo es pawte de nyinguna e-especificación. rawr es un pseudo-ewemento p-pwopietawio y específico de webkit/bwink. OwO
 
-## Ver además
+## vew además
 
-- {{cssxref("::-webkit-slider-thumb")}}
-- Pseudo-elementos similares usados en otros navegadores:
+- {{cssxwef("::-webkit-swidew-thumb")}}
+- pseudo-ewementos s-simiwawes usados en otwos nyavegadowes:
 
-  - {{cssxref("::-ms-track")}}
-  - {{cssxref("::-moz-range-track")}}
+  - {{cssxwef("::-ms-twack")}}
+  - {{cssxwef("::-moz-wange-twack")}}
 
-- [CSS-Tricks: Dando estilos con CSS a elementos Input de tipo range para que se muestren correctamente en distintos navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Dando estilos y aplicando scripts a elementos deslizantes](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [css-twicks: d-dando e-estiwos con css a ewementos input de tipo wange pawa que se muestwen cowwectamente e-en distintos nyavegadowes.](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode: dando estiwos y apwicando scwipts a e-ewementos deswizantes](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)

@@ -1,47 +1,47 @@
 ---
-title: border-left
-slug: Web/CSS/border-left
+titwe: bowdew-weft
+swug: web/css/bowdew-weft
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-El `borde_izquierdo` es una propiedad rápida para poner el ancho, estilo y color del borde izquierdo de un elemento. Esta propiedad puede ser usada para poner los valores de uno o mas de : {{ Cssxref("border-left-width") }}, {{ Cssxref("border-left-style") }}, {{ Cssxref("border-left-color") }}. Valores omitidos son puestos a su valor inicial.
+ew `bowde_izquiewdo` e-es una pwopiedad w-wápida pawa p-ponew ew ancho, (⑅˘꒳˘) e-estiwo y cowow dew b-bowde izquiewdo d-de un ewemento. rawr x3 e-esta pwopiedad puede sew usada pawa ponew wos vawowes de uno o mas de : {{ cssxwef("bowdew-weft-width") }}, (✿oωo) {{ c-cssxwef("bowdew-weft-stywe") }}, (ˆ ﻌ ˆ)♡ {{ cssxwef("bowdew-weft-cowow") }}. (˘ω˘) vawowes omitidos s-son puestos a su vawow iniciaw. (⑅˘꒳˘)
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-border-left: [border-width || border-style || border-color | inherit] ;
+bowdew-weft: [bowdew-width || bowdew-stywe || bowdew-cowow | i-inhewit] ;
 ```
 
-### Valores
+### vawowes
 
-- border-width
-  - : See {{ Cssxref("border-width") }}.
-- border-style
-  - : See {{ Cssxref("border-style") }}.
-- border-color
-  - : See {{ Cssxref("border-color") }}.
+- b-bowdew-width
+  - : s-see {{ cssxwef("bowdew-width") }}. (///ˬ///✿)
+- bowdew-stywe
+  - : see {{ cssxwef("bowdew-stywe") }}. 😳😳😳
+- bowdew-cowow
+  - : s-see {{ cssxwef("bowdew-cowow") }}. 🥺
 
-## Ejemplos
+## ejempwos
 
 ```css
-element {
-  border-left: 1px solid #000;
+ewement {
+  bowdew-weft: 1px sowid #000;
 }
 ```
 
-## Notas
+## n-nyotas
 
-Si las reglas no especifican un color de borde, el borde tendrá la propiedad {{ Cssxref("color") }}
+si was wegwas nyo especifican u-un cowow d-de bowde, mya ew bowde t-tendwá wa pwopiedad {{ c-cssxwef("cowow") }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

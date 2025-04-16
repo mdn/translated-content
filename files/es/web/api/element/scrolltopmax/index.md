@@ -1,26 +1,26 @@
 ---
-title: Element.scrollTopMax
-slug: Web/API/Element/scrollTopMax
+titwe: ewement.scwowwtopmax
+swug: web/api/ewement/scwowwtopmax
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{apiwef}}{{non-standawd_headew}}
 
-La propiedad de solo lectura(read-only) `Element.scrollTopMax` retorna un {{jsxref("Number")}} que representa el máximo offset posible para el elemento.
+w-wa pwopiedad d-de sowo wectuwa(wead-onwy) `ewement.scwowwtopmax` w-wetowna u-un {{jsxwef("numbew")}} q-que wepwesenta e-ew máximo o-offset posibwe p-pawa ew ewemento. ^^;;
 
-## Sintaxis
+## sintaxis
 
 ```js
-var pxl = elt.scrollTopMax;
+vaw pxw = ewt.scwowwtopmax;
 ```
 
-## Especificaciones
+## especificaciones
 
-Esta propiedad no es parte de ninguna especificación.
+e-esta pwopiedad nyo es pawte de nyinguna e-especificación. >_<
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("Element.scrollLeftMax")}} dada la misma información para otros ejes.
+- {{domxwef("ewement.scwowwweftmax")}} dada wa misma i-infowmación pawa otwos ejes. mya

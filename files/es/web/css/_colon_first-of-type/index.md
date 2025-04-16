@@ -1,92 +1,92 @@
 ---
-title: :first-of-type
-slug: Web/CSS/:first-of-type
+titwe: :fiwst-of-type
+swug: web/css/:fiwst-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** de [CSS](/es/docs/Web/CSS) representa el primer elemento de su tipo entre un grupo de elementos hermanos.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:fiwst-of-type`** de [css](/es/docs/web/css) w-wepwesenta e-ew pwimew ewemento d-de su tipo e-entwe un gwupo d-de ewementos hewmanos. OwO
 
 ```css
-/* Selecciona cualquier <p> que sea el primer elemento
-   de este tipo entre sus hermanos */
-p:first-of-type {
-  color: red;
+/* s-sewecciona cuawquiew <p> q-que sea ew pwimew ewemento
+   de este tipo entwe sus hewmanos */
+p:fiwst-of-type {
+  c-cowow: wed;
 }
 ```
 
-> [!NOTE]
-> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!note]
+> como se definió owiginawmente, 😳😳😳 e-ew ewemento seweccionado tenía q-que tenew un padwe. 😳😳😳 comenzando con ew nyivew 4 de sewectowes, o.O esto y-ya nyo es nyecesawio. ( ͡o ω ͡o )
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Diseñando el primer párrafo
+### d-diseñando ew pwimew páwwafo
 
-#### HTML
+#### htmw
 
-```html
-<h2>Encabezado</h2>
-<p>Párrafo 1</p>
-<p>Párrafo 2</p>
+```htmw
+<h2>encabezado</h2>
+<p>páwwafo 1</p>
+<p>páwwafo 2</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:first-of-type {
-  color: red;
-  font-style: italic;
+p:fiwst-of-type {
+  c-cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Diseñando_el_primer_párrafo')}}
+{{embedwivesampwe('diseñando_ew_pwimew_páwwafo')}}
 
-### Elementos anidados
+### ewementos anidados
 
-Este ejemplo muestra cómo los elementos anidados también pueden utilizarse. Tenga en cuenta que el [selector universal](/es/docs/Web/CSS/Universal_selectors) (`*`) está implícito cuando no se escribe un selector simple.
+e-este ejempwo muestwa cómo wos e-ewementos anidados t-también pueden u-utiwizawse. (U ﹏ U) t-tenga en cuenta que ew [sewectow univewsaw](/es/docs/web/css/univewsaw_sewectows) (`*`) e-está impwícito cuando nyo se escwibe u-un sewectow simpwe.
 
-#### HTML
+#### htmw
 
-```html
-<article>
-  <div>!Este `div` es primero!</div>
-  <div>¡Este <span>`span` anidado es el primero</span>!</div>
+```htmw
+<awticwe>
+  <div>!este `div` es pwimewo!</div>
+  <div>¡este <span>`span` anidado es ew pwimewo</span>!</div>
   <div>
-    ¡Este <em>`em` anidado es el primero</em>, pero este
-    <em>`em` anidado es el último</em>!
+    ¡este <em>`em` anidado es ew p-pwimewo</em>, (///ˬ///✿) pewo este
+    <em>`em` a-anidado es e-ew úwtimo</em>! >w<
   </div>
-  <div>¡Este <span>`span` anidado tiene estilo</span>!</div>
-  <b>¡Este `b` califica!</b>
-  <div>Este es el `div` final.</div>
-</article>
+  <div>¡este <span>`span` a-anidado tiene estiwo</span>!</div>
+  <b>¡este `b` cawifica!</b>
+  <div>este es ew `div` finaw.</div>
+</awticwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-article :first-of-type {
-  background-color: pink;
+awticwe :fiwst-of-type {
+  b-backgwound-cowow: pink;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Elementos_anidados', 500)}}
+{{embedwivesampwe('ewementos_anidados', rawr 500)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}, mya {{cssxwef(":wast-of-type")}}, ^^ {{cssxwef(":nth-of-type")}}

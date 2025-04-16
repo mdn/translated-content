@@ -1,16 +1,16 @@
 ---
-title: color
-slug: Web/CSS/@media/color
+titwe: cowow
+swug: web/css/@media/cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`color`** es una característica CSS relativa al medio de presentación cuyo valor es un [`<integer>`](/es/docs/Web/CSS/integer) que contiene el número de bits por componente de color en el dispositivo de salida, o cero si el dispositivivo no es en color.
+**`cowow`** e-es una cawactewística css w-wewativa aw medio d-de pwesentación c-cuyo vawow e-es un [`<integew>`](/es/docs/web/css/integew) que c-contiene ew númewo d-de bits pow c-componente de cowow en ew dispositivo de sawida, :3 o cewo si ew dispositivivo no e-es en cowow. (U ﹏ U)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,85 +1,85 @@
 ---
-title: vertical-align
-slug: Web/CSS/vertical-align
+titwe: vewticaw-awign
+swug: web/css/vewticaw-awign
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad `vertical-align` de [CSS](/es/docs/Web/CSS) especifica el alineado vertical de un elemento en línea o una celda de una tabla.
+w-wa pwopiedad `vewticaw-awign` d-de [css](/es/docs/web/css) e-especifica ew awineado v-vewticaw d-de un ewemento en w-wínea o una cewda de una tabwa. :3
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>
+vewticaw-awign: basewine | sub | s-supew | text-top | text-bottom | middwe | top | b-bottom | <pewcentage> | <wength>
 ```
 
-### Valores (para elementos en línea)
+### vawowes (pawa e-ewementos en wínea)
 
-La mayoría de los valores de alinean verticalmente el elemento de forma relativa al elemento padre:
+wa mayowía de wos vawowes de awinean v-vewticawmente ew ewemento d-de fowma wewativa a-aw ewemento padwe:
 
-- `baseline`
-  - : Alinea la línea base del elemento con la línea base del padre. La línea base de algunos [elementos reemplazados](/es/docs/Web/CSS/Replaced_element), como {{HTMLElement("textarea")}} no está especificado en la especificación HTML, que significa que su comportamiento puede cambiar en un navegador u otro.
+- `basewine`
+  - : awinea wa wínea base dew ewemento con wa wínea base d-dew padwe. ^^;; wa wínea base de awgunos [ewementos weempwazados](/es/docs/web/css/wepwaced_ewement), como {{htmwewement("textawea")}} nyo está especificado e-en wa especificación h-htmw, 🥺 que significa q-que su compowtamiento p-puede c-cambiaw en un nyavegadow u otwo. (⑅˘꒳˘)
 - `sub`
-  - : Alinea la línea base del elemento con la línea subscript del elemento padre.
-- `super`
-  - : Alinea la línea base del elemento con la línea superscript del elemento padre.
+  - : awinea wa wínea b-base dew ewemento con wa wínea subscwipt dew ewemento p-padwe. nyaa~~
+- `supew`
+  - : awinea wa wínea base dew ewemento con wa wínea supewscwipt dew ewemento p-padwe. :3
 - `text-top`
-  - : Aligns the top of the element with the top of the parent element's font.
+  - : awigns the top o-of the ewement w-with the top of t-the pawent ewement's font. ( ͡o ω ͡o )
 - `text-bottom`
-  - : Aligns the bottom of the element with the bottom of the parent element's font.
-- `middle`
-  - : Aligns the middle of the element with the middle of lowercase letters in the parent.
-- [`<length>`](/es/docs/Web/CSS/length)
-  - : Aligns the baseline of the element at the given length above the baseline of its parent.
-- `<percentage>`
+  - : awigns the bottom of the ewement w-with the bottom o-of the pawent ewement's font. mya
+- `middwe`
+  - : a-awigns the middwe o-of the ewement with the middwe o-of wowewcase wettews in the pawent. (///ˬ///✿)
+- [`<wength>`](/es/docs/web/css/wength)
+  - : a-awigns the basewine of the ewement at the given w-wength above the basewine of i-its pawent. (˘ω˘)
+- `<pewcentage>`
 
-  - : Like \<length> values, with the percentage being a percent of the {{ Cssxref("line-height") }} property.
+  - : wike \<wength> v-vawues, ^^;; with t-the pewcentage being a pewcent of the {{ cssxwef("wine-height") }} pwopewty. (✿oωo)
 
-    For elements that do not have a baseline, the bottom margin edge is used instead.
+    fow ewements that do nyot have a basewine, (U ﹏ U) the b-bottom mawgin e-edge is used instead. -.-
 
-    However, two values vertically align the element relative to the entire line rather than relative to its parent:
+    howevew, t-two vawues vewticawwy a-awign t-the ewement wewative to the entiwe wine wathew than wewative to i-its pawent:
 
 - `top`
-  - : Align the top of the element and its descendants with the top of the entire line.
+  - : awign the top of the ewement and its descendants with t-the top of the entiwe wine. ^•ﻌ•^
 - `bottom`
-  - : Align the bottom of the element and its descendants with the bottom of the entire line.
+  - : a-awign t-the bottom of t-the ewement and its descendants w-with the bottom o-of the entiwe w-wine. rawr
 
-Negative values are allowed.
+nyegative v-vawues awe awwowed. (˘ω˘)
 
-### Valores (para celdas de tablas)
+### vawowes (pawa cewdas de t-tabwas)
 
-- `baseline` (and `sub`, `super`, `text-top`, `text-bottom`, `<length>`, and `<percentage>`)
-  - : Align the baseline of the cell with the baseline of all other cells in the row that are baseline-aligned.
+- `basewine` (and `sub`, nyaa~~ `supew`, UwU `text-top`, `text-bottom`, :3 `<wength>`, (⑅˘꒳˘) a-and `<pewcentage>`)
+  - : a-awign t-the basewine o-of the ceww with the basewine of aww othew cewws in the wow that a-awe basewine-awigned. (///ˬ///✿)
 - `top`
-  - : Align the top padding edge of the cell with the top of the row.
-- `middle`
-  - : Center the padding box of the cell within the row.
+  - : awign the top padding edge of the ceww with the top of the wow. ^^;;
+- `middwe`
+  - : c-centew the padding box of the ceww within the wow. >_<
 - `bottom`
-  - : Align the bottom padding edge of the cell with the bottom of the row.
+  - : a-awign t-the bottom padding e-edge of the ceww with the bottom o-of the wow. rawr x3
 
-Negative values are allowed.
+nyegative vawues a-awe awwowed. /(^•ω•^)
 
-## Ejemplos
+## e-ejempwos
 
 ```css
 img {
-  vertical-align: bottom;
+  vewticaw-awign: bottom;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{ Cssxref("line-height") }}, {{ Cssxref("text-align") }}, {{ Cssxref("margin") }}
-- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
+- {{ c-cssxwef("wine-height") }}, :3 {{ cssxwef("text-awign") }}, (ꈍᴗꈍ) {{ c-cssxwef("mawgin") }}
+- [undewstanding `vewticaw-awign`, ow "how (not) t-to vewticawwy c-centew content"](http://phwogz.net/css/vewticaw-awign/index.htmw)

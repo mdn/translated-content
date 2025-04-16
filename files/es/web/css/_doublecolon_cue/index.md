@@ -1,85 +1,85 @@
 ---
-title: ::cue
-slug: Web/CSS/::cue
+titwe: ::cue
+swug: web/css/::cue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::cue`** señala las pistas de texto [WebVTT](/es/docs/Web/API/WebVTT_API) dentro del elemento seleccionado. Esto puede ser usado para [estilizar subtítulos y otras pistas de texto](/es/docs/Web/API/WebVTT_API#Estilizando_anotaciones_WebVTT) multimedia con pistas de texto.
-
-```css
-::cue {
-  color: yellow;
-  font-weight: bold;
-}
-```
-
-Las propiedades son aplicadas al cojunto completo de anotaciones como si fuesen una unidad. La única excepción es que `background` y sus versiones largas se aplican a cada pista de texto individualmente para evitar crear cajas y oscurecer inesperadamente grandes partes de los archivos multimedia.
-
-## Sintaxis
-
-{{CSSSyntax}}
-
-## Propiedades permitidas
-
-Las reglas cuyos selectores incluyen este elemento solo pueden usar las siguientes propiedades CSS:
-
-- [`background`](/es/docs/Web/CSS/background)
-- [`background-attachment`](/es/docs/Web/CSS/background-attachment)
-- [`background-clip`](/es/docs/Web/CSS/background-clip)
-- [`background-color`](/es/docs/Web/CSS/background-color)
-- [`background-image`](/es/docs/Web/CSS/background-image)
-- [`background-origin`](/es/docs/Web/CSS/background-origin)
-- [`background-position`](/es/docs/Web/CSS/background-position)
-- [`background-repeat`](/es/docs/Web/CSS/background-repeat)
-- [`background-size`](/es/docs/Web/CSS/background-size)
-- [`color`](/es/docs/Web/CSS/color)
-- [`font`](/es/docs/Web/CSS/font)
-- [`font-family`](/es/docs/Web/CSS/font-family)
-- [`font-size`](/es/docs/Web/CSS/font-size)
-- [`font-stretch`](/es/docs/Web/CSS/font-stretch)
-- [`font-style`](/es/docs/Web/CSS/font-style)
-- [`font-variant`](/es/docs/Web/CSS/font-variant)
-- [`font-weight`](/es/docs/Web/CSS/font-weight)
-- [`line-height`](/es/docs/Web/CSS/line-height)
-- [`opacity`](/es/docs/Web/CSS/opacity)
-- [`outline`](/es/docs/Web/CSS/outline)
-- [`outline-color`](/es/docs/Web/CSS/outline-color)
-- [`outline-style`](/es/docs/Web/CSS/outline-style)
-- [`outline-width`](/es/docs/Web/CSS/outline-width)
-- [`ruby-position`](/es/docs/Web/CSS/ruby-position)
-- [`text-combine-upright`](/es/docs/Web/CSS/text-combine-upright)
-- [`text-decoration`](/es/docs/Web/CSS/text-decoration)
-- [`text-decoration-color`](/es/docs/Web/CSS/text-decoration-color)
-- [`text-decoration-line`](/es/docs/Web/CSS/text-decoration-line)
-- [`text-decoration-style`](/es/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/es/docs/Web/CSS/text-decoration-thickness)
-- [`text-shadow`](/es/docs/Web/CSS/text-shadow)
-- [`visibility`](/es/docs/Web/CSS/visibility)
-- [`white-space`](/es/docs/Web/CSS/white-space)
-
-## Ejemplos
-
-### Estilizando las anotaciones WebVTT como blanco sobre negro
-
-El siguiente CSS ajusta el estilo de las anotaciones para que el texto sea blanco y el fondo sea una caja negro translúcido.
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) **`::cue`** s-señawa was pistas d-de texto [webvtt](/es/docs/web/api/webvtt_api) d-dentwo dew ewemento s-seweccionado. /(^•ω•^) e-esto puede sew u-usado pawa [estiwizaw s-subtítuwos y otwas pistas de texto](/es/docs/web/api/webvtt_api#estiwizando_anotaciones_webvtt) muwtimedia con pistas d-de texto. ʘwʘ
 
 ```css
 ::cue {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
+  cowow: yewwow;
+  font-weight: b-bowd;
 }
 ```
 
-## Especificaciones
+was pwopiedades s-son apwicadas aw cojunto compweto de anotaciones como si f-fuesen una unidad. σωσ wa única excepción e-es que `backgwound` y-y sus vewsiones wawgas se apwican a cada pista de texto individuawmente p-pawa evitaw cweaw cajas y oscuwecew inespewadamente gwandes pawtes de wos awchivos m-muwtimedia. OwO
 
-{{Specifications}}
+## sintaxis
 
-## Compatibilidad con navegadores
+{{csssyntax}}
 
-{{Compat}}
+## p-pwopiedades pewmitidas
 
-## Ver también
+w-was wegwas c-cuyos sewectowes i-incwuyen este ewemento sowo pueden usaw was s-siguientes pwopiedades css:
 
-- [Formato de pistas de texto para la web (WebVTT)](/es/docs/Web/API/WebVTT_API)
-- {{HTMLElement("track")}}, {{HTMLElement("video")}}
+- [`backgwound`](/es/docs/web/css/backgwound)
+- [`backgwound-attachment`](/es/docs/web/css/backgwound-attachment)
+- [`backgwound-cwip`](/es/docs/web/css/backgwound-cwip)
+- [`backgwound-cowow`](/es/docs/web/css/backgwound-cowow)
+- [`backgwound-image`](/es/docs/web/css/backgwound-image)
+- [`backgwound-owigin`](/es/docs/web/css/backgwound-owigin)
+- [`backgwound-position`](/es/docs/web/css/backgwound-position)
+- [`backgwound-wepeat`](/es/docs/web/css/backgwound-wepeat)
+- [`backgwound-size`](/es/docs/web/css/backgwound-size)
+- [`cowow`](/es/docs/web/css/cowow)
+- [`font`](/es/docs/web/css/font)
+- [`font-famiwy`](/es/docs/web/css/font-famiwy)
+- [`font-size`](/es/docs/web/css/font-size)
+- [`font-stwetch`](/es/docs/web/css/font-stwetch)
+- [`font-stywe`](/es/docs/web/css/font-stywe)
+- [`font-vawiant`](/es/docs/web/css/font-vawiant)
+- [`font-weight`](/es/docs/web/css/font-weight)
+- [`wine-height`](/es/docs/web/css/wine-height)
+- [`opacity`](/es/docs/web/css/opacity)
+- [`outwine`](/es/docs/web/css/outwine)
+- [`outwine-cowow`](/es/docs/web/css/outwine-cowow)
+- [`outwine-stywe`](/es/docs/web/css/outwine-stywe)
+- [`outwine-width`](/es/docs/web/css/outwine-width)
+- [`wuby-position`](/es/docs/web/css/wuby-position)
+- [`text-combine-upwight`](/es/docs/web/css/text-combine-upwight)
+- [`text-decowation`](/es/docs/web/css/text-decowation)
+- [`text-decowation-cowow`](/es/docs/web/css/text-decowation-cowow)
+- [`text-decowation-wine`](/es/docs/web/css/text-decowation-wine)
+- [`text-decowation-stywe`](/es/docs/web/css/text-decowation-stywe)
+- [`text-decowation-thickness`](/es/docs/web/css/text-decowation-thickness)
+- [`text-shadow`](/es/docs/web/css/text-shadow)
+- [`visibiwity`](/es/docs/web/css/visibiwity)
+- [`white-space`](/es/docs/web/css/white-space)
+
+## ejempwos
+
+### e-estiwizando was anotaciones webvtt como bwanco sobwe nyegwo
+
+ew siguiente css ajusta ew estiwo d-de was anotaciones pawa que ew t-texto sea bwanco y-y ew fondo sea u-una caja nyegwo twanswúcido. 😳😳😳
+
+```css
+::cue {
+  cowow: #fff;
+  backgwound-cowow: wgba(0, 😳😳😳 0, 0, o.O 0.6);
+}
+```
+
+## especificaciones
+
+{{specifications}}
+
+## c-compatibiwidad c-con nyavegadowes
+
+{{compat}}
+
+## vew también
+
+- [fowmato d-de pistas de texto p-pawa wa web (webvtt)](/es/docs/web/api/webvtt_api)
+- {{htmwewement("twack")}}, ( ͡o ω ͡o ) {{htmwewement("video")}}

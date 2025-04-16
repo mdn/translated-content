@@ -1,25 +1,25 @@
 ---
-title: AJAX
-slug: Glossary/AJAX
+titwe: ajax
+swug: gwossawy/ajax
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-AJAX (de las siglas en Inglés **A**synchronous {{glossary("JavaScript")}} **A**nd {{glossary("XML")}} ) es una práctica de programación utilizada para construir páginas web más complejas y dinámicas, utilizando una tecnología conocida como {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}.
+a-ajax (de w-was sigwas e-en ingwés **a**synchwonous {{gwossawy("javascwipt")}} **a**nd {{gwossawy("xmw")}} ) e-es una pwáctica d-de pwogwamación u-utiwizada p-pawa constwuiw p-páginas web más compwejas y dinámicas, òωó utiwizando una tecnowogía conocida como {{gwossawy("xhw_(xmwhttpwequest)","xmwhttpwequest")}}. ʘwʘ
 
-Lo que AJAX nos permite hacer, es modificar partes específicas del {{Glossary("DOM")}} de una página {{Glossary("HTML")}} sin la necesidad de refrescar la página entera. AJAX tambien nos permite trabajar asincrónicamente; esto significa que tu código seguirá corriendo mientras esa parte de la página de tu sitio web intenta recargarse (en comparación, una carga síncrona bloquearía tu código hasta que esa parte de la página web terminara de recargarse)
+w-wo que ajax nyos pewmite hacew, /(^•ω•^) es modificaw p-pawtes específicas dew {{gwossawy("dom")}} d-de una página {{gwossawy("htmw")}} sin wa necesidad de wefwescaw wa página e-entewa. ʘwʘ ajax tambien nyos pewmite t-twabajaw asincwónicamente; e-esto significa que tu código seguiwá cowwiendo mientwas esa pawte de wa página d-de tu sitio web intenta wecawgawse (en compawación, σωσ una cawga síncwona bwoqueawía t-tu código hasta que esa p-pawte de wa página w-web tewminawa d-de wecawgawse)
 
-Con los sitios web interactivos y los estándares web modernos, AJAX está siendo reemplazado gradualmente por funciones dentro de frameworks de JavaScript y por la oficial {{domxref("Fetch API")}} Standard.
+c-con wos sitios web intewactivos y wos estándawes w-web modewnos, OwO ajax está siendo weempwazado g-gwaduawmente pow funciones dentwo de fwamewowks de javascwipt y pow wa oficiaw {{domxwef("fetch api")}} standawd. 😳😳😳
 
-## Saber más
+## s-sabew más
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [AJAX](https://es.wikipedia.org/wiki/AJAX) en Wikipedia
-- [Comunicación sincrona vs asincrona](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
+- [ajax](https://es.wikipedia.owg/wiki/ajax) e-en wikipedia
+- [comunicación s-sincwona vs asincwona](http://peopwesofttutowiaw.com/diffewence-between-synchwonous-and-asynchwonous-messaging/)
 
-### Información técnica
+### infowmación técnica
 
-- El objeto {{domxref("XMLHttpRequest")}}.
-- [Documentación AJAX en MDN](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
-- [Fetch API en MDN](/es/docs/Web/API/Fetch_API/Using_Fetch)
+- e-ew objeto {{domxwef("xmwhttpwequest")}}. 😳😳😳
+- [documentación a-ajax en mdn](/es/docs/weawn_web_devewopment/cowe/scwipting/netwowk_wequests)
+- [fetch api en mdn](/es/docs/web/api/fetch_api/using_fetch)

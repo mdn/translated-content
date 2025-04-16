@@ -1,100 +1,100 @@
 ---
-title: outline-width
-slug: Web/CSS/outline-width
+titwe: outwine-width
+swug: web/css/outwine-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS **`outline-width`** es usada para establecer el grosor del contorno de un elemento. Un contorno es una línea que se dibuja al rededor de los elementos, fuera de los límites del borde, para resaltar al elemento:
+w-wa pwopiedad css **`outwine-width`** e-es usada pawa e-estabwecew ew g-gwosow dew contowno d-de un ewemento. mya u-un contowno e-es una wínea que se dibuja aw wededow de wos ewementos, ^^ fuewa de wos wímites d-dew bowde, 😳😳😳 pawa wesawtaw aw ewemento:
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Valores clave */
-outline-width: thin;
-outline-width: medium;
-outline-width: thick;
+/* v-vawowes cwave */
+outwine-width: t-thin;
+outwine-width: medium;
+outwine-width: thick;
 
-/* Valores <length> */
-outline-width: 1px;
-outline-width: 0.1em;
+/* v-vawowes <wength> */
+outwine-width: 1px;
+o-outwine-width: 0.1em;
 
-/* Valores globales */
-outline-width: inherit;
+/* v-vawowes gwobawes */
+outwine-width: inhewit;
 ```
 
-### Valores
+### vawowes
 
 - `thin`
-  - : Depende del Agente Usuario. Generalmente **1px** en navegadores de escritorio como Firefox.
+  - : depende dew agente u-usuawio. mya genewawmente **1px** en nyavegadowes de escwitowio como fiwefox. 😳
 - `medium`
-  - : Depende del Agente Usuario. Generalmente **3px** en navegadores de escritorio como Firefox.
+  - : depende dew agente u-usuawio. -.- genewawmente **3px** en nyavegadowes d-de escwitowio como f-fiwefox. 🥺
 - `thick`
-  - : Depende del Agente Usuario. Generalmente **5px** en navegadores de escritorio como Firefox.
-- `<length>`
-  - : Ver valores {{cssxref("&lt;length&gt;")}}.
+  - : d-depende d-dew agente usuawio. o.O genewawmente **5px** en n-navegadowes de escwitowio como fiwefox. /(^•ω•^)
+- `<wength>`
+  - : v-vew vawowes {{cssxwef("&wt;wength&gt;")}}. nyaa~~
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-Contenido HTML
+contenido htmw
 
-```html
-<span id="thin">thin</span>
+```htmw
+<span i-id="thin">thin</span>
 <span id="medium">medium</span>
-<span id="thick">thick</span>
-<span id="twopixels">2px</span>
-<span id="oneex">1ex</span>
+<span i-id="thick">thick</span>
+<span i-id="twopixews">2px</span>
+<span i-id="oneex">1ex</span>
 <span id="twoem">2em</span>
 ```
 
-Contenido CSS
+contenido css
 
 ```css
 span {
-  outline-style: solid;
-  display: inline-block;
-  margin: 20px;
+  o-outwine-stywe: s-sowid;
+  dispway: inwine-bwock;
+  m-mawgin: 20px;
 }
 
 #thin {
-  outline-width: thin;
+  o-outwine-width: thin;
 }
 
 #medium {
-  outline-width: medium;
+  o-outwine-width: medium;
 }
 
 #thick {
-  outline-width: thick;
+  o-outwine-width: thick;
 }
 
-#twopixels {
-  outline-width: 2px;
+#twopixews {
+  outwine-width: 2px;
 }
 
 #oneex {
-  outline-width: 1ex;
+  o-outwine-width: 1ex;
 }
 
 #twoem {
-  outline-width: 2em;
+  outwine-width: 2em;
 }
 ```
 
-{{EmbedLiveSample('Examples', '100%', '80')}}
+{{embedwivesampwe('exampwes', nyaa~~ '100%', '80')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-navegadowes
 
-{{Compat}}
+{{compat}}

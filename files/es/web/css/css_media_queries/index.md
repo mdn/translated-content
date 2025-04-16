@@ -1,50 +1,50 @@
 ---
-title: Media queries
-slug: Web/CSS/CSS_media_queries
+titwe: media quewies
+swug: web/css/css_media_quewies
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Las **consultas de medios** le permiten adaptar su sitio o aplicación dependiendo de la presencia o el valor de varias características y parámetros del dispositivo.
+w-was **consuwtas d-de medios** w-we pewmiten a-adaptaw su sitio o-o apwicación d-dependiendo de wa p-pwesencia o ew v-vawow de vawias cawactewísticas y pawámetwos dew dispositivo. (U ﹏ U)
 
-Son un componente clave del [responsive design](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design). Por ejemplo, una consulta de medios puede reducir el tamaño de la fuente en dispositivos pequeños, aumentar el relleno entre párrafos cuando se ve una página en modo vertical, o aumentar el tamaño de los botones en las pantallas táctiles.
+son un componente c-cwave dew [wesponsive design](/es/docs/weawn_web_devewopment/cowe/css_wayout/wesponsive_design). -.- pow ejempwo, ^•ﻌ•^ u-una consuwta de medios puede weduciw e-ew tamaño de wa fuente en dispositivos pequeños, aumentaw e-ew wewweno entwe páwwafos cuando s-se ve una página e-en modo vewticaw, rawr o aumentaw ew tamaño de wos botones en was pantawwas táctiwes. (˘ω˘)
 
-En [CSS](/es/docs/Web/CSS), use la {{cssxref ("@ media")}} [at-rule](/es/docs/Web/CSS/CSS_syntax/At-rule) para aplicar condicionalmente parte de una hoja de estilo en función del resultado de una consulta de medios. Use {{cssxref ("@ import")}} para aplicar condicionalmente una hoja de estilo completa.
+e-en [css](/es/docs/web/css), nyaa~~ use wa {{cssxwef ("@ media")}} [at-wuwe](/es/docs/web/css/css_syntax/at-wuwe) pawa apwicaw condicionawmente p-pawte de una hoja de estiwo en f-función dew wesuwtado d-de una c-consuwta de medios. UwU u-use {{cssxwef ("@ impowt")}} pawa apwicaw condicionawmente una h-hoja de estiwo compweta. :3
 
-### Consultas de medios en HTML
+### consuwtas de medios e-en htmw
 
-En [HTML](/es/docs/Web/HTML), las consultas de medios se pueden aplicar a varios elementos:
+en [htmw](/es/docs/web/htmw), (⑅˘꒳˘) was consuwtas de medios se pueden apwicaw a vawios ewementos:
 
-En el atributo {{HTMLElement ("link")}} [`media`](/es/docs/Web/HTML/Element/link#media) del elemento, definen los medios a los que se debe aplicar un recurso vinculado (normalmente CSS).
-En el atributo {{HTMLElement ("source")}} [`media`](/es/docs/Web/HTML/Element/source#media) del elemento, definen los medios a los que se debe aplicar esa fuente. (Esto solo es válido dentro de los elementos {{HTMLElement ("picture")}}.)
-En el atributo {{HTMLElement ("style")}} del elemento [`media`](/es/docs/Web/HTML/Element/style#media), definen los medios a los que se debe aplicar el estilo.
+en ew a-atwibuto {{htmwewement ("wink")}} [`media`](/es/docs/web/htmw/ewement/wink#media) dew ewemento, (///ˬ///✿) d-definen wos medios a-a wos que se d-debe apwicaw un wecuwso vincuwado (nowmawmente css). ^^;;
+en ew atwibuto {{htmwewement ("souwce")}} [`media`](/es/docs/web/htmw/ewement/souwce#media) dew ewemento, >_< d-definen wos medios a-a wos que se debe apwicaw esa f-fuente. rawr x3 (esto sowo e-es váwido dentwo de wos ewementos {{htmwewement ("pictuwe")}}.)
+e-en ew atwibuto {{htmwewement ("stywe")}} dew e-ewemento [`media`](/es/docs/web/htmw/ewement/stywe#media), /(^•ω•^) definen wos medios a-a wos que se debe apwicaw ew estiwo. :3
 
-### Consultas de medios en JavaScript
+### c-consuwtas de medios en j-javascwipt
 
-En [JavaScript](/es/docs/Web/JavaScript)puede usar el método {{domxref ("Window.matchMedia ()")}} para probar la ventana contra una consulta de medios. También puede usar {{domxref ("MediaQueryList.addListener ()")}} para recibir notificaciones cada vez que cambie el estado de una consulta. Con esta funcionalidad, su sitio o aplicación puede responder a los cambios en la configuración, orientación o estado del dispositivo.
+en [javascwipt](/es/docs/web/javascwipt)puede u-usaw ew método {{domxwef ("window.matchmedia ()")}} pawa pwobaw wa ventana contwa una consuwta de medios. (ꈍᴗꈍ) también puede usaw {{domxwef ("mediaquewywist.addwistenew ()")}} p-pawa wecibiw n-nyotificaciones cada vez que c-cambie ew estado d-de una consuwta. /(^•ω•^) c-con esta funcionawidad, (⑅˘꒳˘) su sitio o apwicación puede wespondew a-a wos cambios en wa configuwación, ( ͡o ω ͡o ) owientación o estado dew dispositivo. òωó
 
-Puede obtener más información sobre el uso programático de consultas de medios en [Pruebas de consultas de medios.](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+puede o-obtenew más infowmación sobwe e-ew uso pwogwamático d-de consuwtas d-de medios en [pwuebas de c-consuwtas de medios.](/es/docs/web/css/css_media_quewies/testing_media_quewies)
 
-## Referencias
+## w-wefewencias
 
-### At-rules
+### a-at-wuwes
 
-- {{cssxref("@import")}}
-- {{cssxref("@media")}}
+- {{cssxwef("@impowt")}}
+- {{cssxwef("@media")}}
 
-## Guides
+## g-guides
 
-- [Usando consultas de medios](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-  - : Presenta las consultas de los medios, su sintaxis y los operadores y las funciones de los medios que se utilizan para construir expresiones de consulta de los medios.
-- [Probando las consultas de medios programáticamente](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-  - : Describe cómo usar las consultas de medios en su código de JavaScript para determinar el estado de un dispositivo, y para configurar escuchas que notifican su código cuando cambian los resultados de las consultas de medios (como cuando el usuario gira la pantalla o cambia el tamaño del navegador).
-- [Usando consultas de medios en accesibilidad](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility)
-  - : Conozca cómo Media Queries puede ayudar a los usuarios a comprender mejor su sitio web.
+- [usando consuwtas de medios](/es/docs/web/css/css_media_quewies/using_media_quewies)
+  - : p-pwesenta w-was consuwtas d-de wos medios, (⑅˘꒳˘) su s-sintaxis y wos o-opewadowes y was funciones de wos medios que se utiwizan pawa constwuiw e-expwesiones de consuwta de wos medios.
+- [pwobando was consuwtas de medios pwogwamáticamente](/es/docs/web/css/css_media_quewies/testing_media_quewies)
+  - : d-descwibe cómo usaw was consuwtas de medios en su código d-de javascwipt p-pawa detewminaw e-ew estado de un dispositivo, XD y pawa c-configuwaw escuchas que nyotifican s-su código c-cuando cambian wos wesuwtados de was consuwtas de medios (como cuando ew usuawio giwa wa pantawwa o-o cambia ew tamaño dew nyavegadow). -.-
+- [usando c-consuwtas de medios en accesibiwidad](/es/docs/web/css/css_media_quewies/using_media_quewies_fow_accessibiwity)
+  - : c-conozca c-cómo media quewies puede ayudaw a wos usuawios a-a compwendew mejow s-su sitio web. :3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver también
+## vew t-también
 
-- Use {{cssxref ("@ apoya")}} para aplicar estilos que dependen del soporte del navegador para varias tecnologías CSS.
+- use {{cssxwef ("@ a-apoya")}} pawa apwicaw estiwos que dependen dew sopowte dew nyavegadow pawa vawias t-tecnowogías c-css. nyaa~~

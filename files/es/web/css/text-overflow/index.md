@@ -1,484 +1,484 @@
 ---
-title: text-overflow
-slug: Web/CSS/text-overflow
+titwe: text-ovewfwow
+swug: web/css/text-ovewfwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`text-overflow`** determina como el contenido que se desborda y que no es mostrado, va a hacérsele notar a los usuarios. Puede ser cortado, mostrar una elipsis ('`…`', `U+2026 Horizontal Ellipsis`), o mostrar una cadena de texto personalizada.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`text-ovewfwow`** d-detewmina como e-ew contenido que s-se desbowda y que n-nyo es mostwado, v-va a hacéwsewe n-nyotaw a wos usuawios. OwO puede sew cowtado, ^^ mostwaw una ewipsis ('`…`', (///ˬ///✿) `u+2026 howizontaw ewwipsis`), (///ˬ///✿) o-o mostwaw una cadena de texto pewsonawizada. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: text-overflow")}}
+{{intewactiveexampwe("css d-demo: text-ovewfwow")}}
 
-```css interactive-example-choice
-text-overflow: clip;
+```css intewactive-exampwe-choice
+t-text-ovewfwow: cwip;
 ```
 
-```css interactive-example-choice
-text-overflow: ellipsis;
+```css intewactive-exampwe-choice
+text-ovewfwow: ewwipsis;
 ```
 
-```css interactive-example-choice
-text-overflow: "-";
+```css intewactive-exampwe-choice
+t-text-ovewfwow: "-";
 ```
 
-```css interactive-example-choice
-text-overflow: "";
+```css intewactive-exampwe-choice
+t-text-ovewfwow: "";
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element-container">
-    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement-containew">
+    <p id="exampwe-ewement">"is thewe any tea on this spaceship?" h-he asked.</p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element-container {
+```css intewactive-exampwe
+#exampwe-ewement-containew {
   width: 100%;
   max-width: 18em;
 }
 
-#example-element {
-  line-height: 50px;
-  border: 1px solid #c5c5c5;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: sans-serif;
-  padding: 0 0.5em;
-  text-align: left;
+#exampwe-ewement {
+  wine-height: 50px;
+  bowdew: 1px sowid #c5c5c5;
+  o-ovewfwow: hidden;
+  w-white-space: nyowwap;
+  f-font-famiwy: s-sans-sewif;
+  p-padding: 0 0.5em;
+  text-awign: weft;
 }
 ```
 
-La propiedad `text-overflow` no fuerza a que ocurra un desbordamiento. Para hacer que un texto desborde a su contenedor debes poner algunas otras propiedades de CSS. Por ejemplo:
+w-wa pwopiedad `text-ovewfwow` nyo fuewza a que ocuwwa u-un desbowdamiento. ʘwʘ pawa hacew que un texto desbowde a su contenedow debes ponew awgunas otwas p-pwopiedades de css. ^•ﻌ•^ pow ejempwo:
 
 ```css
-overflow: hidden;
-white-space: nowrap;
+o-ovewfwow: h-hidden;
+white-space: n-nyowwap;
 ```
 
-La propiedad `text-overflow` solo afecta al contenido que está rebasando un elemento de contenedor en bloque en su dirección de progresión _inline_ (no así, a un texto que rebase por el _bottom_ del contenedor, por).
+wa pwopiedad `text-ovewfwow` sowo afecta aw contenido que e-está webasando u-un ewemento de contenedow en b-bwoque en su diwección d-de pwogwesión _inwine_ (no así, OwO a un texto q-que webase pow ew _bottom_ d-dew contenedow, pow). (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
-La propiedad `text-overflow` ha de ser especificada usando uno o dos valores. Si se define solo un valor, este determinará el comportamiento del _overflow_ para el final de la línea (el extremo derecho en un texto izquierda-a-derecha o el extremo izquierdo en un texto derecha-a-izquierda). Si se definen dos valores, el primero hará referencia al comportamiento _overflow_ para para el extremo izquierdo y el segundo al extremo derecho de la línea.
+wa pwopiedad `text-ovewfwow` h-ha de sew especificada usando uno o-o dos vawowes. (ˆ ﻌ ˆ)♡ si se define sowo u-un vawow, (⑅˘꒳˘) este d-detewminawá ew compowtamiento dew _ovewfwow_ pawa ew finaw de wa wínea (ew extwemo dewecho en un texto izquiewda-a-dewecha o-o ew extwemo izquiewdo e-en un texto dewecha-a-izquiewda). (U ﹏ U) s-si se definen d-dos vawowes, o.O e-ew pwimewo hawá wefewencia aw compowtamiento _ovewfwow_ pawa p-pawa ew extwemo izquiewdo y ew segundo aw extwemo dewecho de wa wínea. mya
 
-Cada valor se especificará como una de las siguientes opciones:
+cada v-vawow se especificawá como una d-de was siguientes o-opciones:
 
-- Una palabra clave: [`clip`](#clip), [`ellipsis`](#ellipsis), [`fade`](#fade)
-- La función [`fade()`](<#fade( \<length\> | \<percentage\> )>), que recibe {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} para controlar la distancia de desvanecimiento
-- Un [`<string>`](#string).
+- una p-pawabwa cwave: [`cwip`](#cwip), XD [`ewwipsis`](#ewwipsis), òωó [`fade`](#fade)
+- wa f-función [`fade()`](<#fade( \<wength\> | \<pewcentage\> )>), (˘ω˘) q-que w-wecibe {{cssxwef("&wt;wength&gt;")}} o-o {{cssxwef("&wt;pewcentage&gt;")}} pawa contwowaw wa distancia d-de desvanecimiento
+- u-un [`<stwing>`](#stwing). :3
 
-### Valores
+### v-vawowes
 
-- `clip`
-  - : Este es el valor predeterminado para esta propiedad. El valor de la palabra clave truncará el texto en el límite del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), por lo tanto el corte puede darse en medio de una palabra. Para recortar justo en la transición entre caracteres se puede especificar con `text-overflow` como una cadena vacía, si eso es compatible con sus navegadores: `text-overflow: '';`.
-- `ellipsis`
-  - : El valor de la palabra clave mostrará puntos suspensivos (`'…'`, `U+2026 Horizontal Ellipsis`) para representar texto recortado. Los puntos suspensivos se muestran dentro del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), disminuyendo la cantidad de texto mostrado. Si no hay suficiente espacio para mostrar los puntos suspensivos, se recorta.
-- `<string>` {{experimental_inline}}
-  - : El {{cssxref("&lt;string&gt;")}} que será utilizado para representar texto recortado. La cadena se muestra dentro del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), disminuyendo el tamaño del texto mostrado. Si no hay suficiente espacio para mostrar la cadena, se recorta.
-- `fade` {{experimental_inline}}
-  - : El valor de esta palabra clave recorta el contenido en línea del texto que se desborda y aplica un efecto de atenuación cerca del borde de la linea de la caja con total transparencia en el borde.
-- `fade( <length> | <percentage> )` {{experimental_inline}}
+- `cwip`
+  - : e-este es ew vawow p-pwedetewminado pawa esta pwopiedad. OwO ew vawow de wa pawabwa cwave t-twuncawá ew texto en ew wímite dew [áwea de contenido](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), mya pow wo tanto ew cowte puede dawse e-en medio de una pawabwa. (˘ω˘) pawa wecowtaw justo en wa twansición e-entwe cawactewes s-se puede especificaw c-con `text-ovewfwow` como u-una cadena vacía, o.O si eso es compatibwe c-con sus n-nyavegadowes: `text-ovewfwow: '';`. (✿oωo)
+- `ewwipsis`
+  - : ew vawow de wa pawabwa cwave mostwawá puntos suspensivos (`'…'`, (ˆ ﻌ ˆ)♡ `u+2026 howizontaw e-ewwipsis`) pawa wepwesentaw texto w-wecowtado. ^^;; wos puntos suspensivos s-se muestwan d-dentwo dew [áwea de contenido](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), OwO disminuyendo w-wa cantidad de texto m-mostwado. 🥺 si nyo hay suficiente e-espacio pawa m-mostwaw wos puntos suspensivos, se wecowta. mya
+- `<stwing>` {{expewimentaw_inwine}}
+  - : ew {{cssxwef("&wt;stwing&gt;")}} que sewá u-utiwizado pawa w-wepwesentaw texto w-wecowtado. 😳 wa cadena se muestwa d-dentwo dew [áwea d-de contenido](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), disminuyendo e-ew tamaño dew texto mostwado. òωó si nyo hay suficiente espacio pawa mostwaw wa c-cadena, /(^•ω•^) se wecowta. -.-
+- `fade` {{expewimentaw_inwine}}
+  - : e-ew vawow de esta pawabwa cwave wecowta e-ew contenido e-en wínea dew texto que se desbowda y apwica un efecto de atenuación c-cewca dew bowde de wa winea de wa caja con totaw twanspawencia en ew bowde. òωó
+- `fade( <wength> | <pewcentage> )` {{expewimentaw_inwine}}
 
-  - : Esta función recorta el contenido desbordante en línea y aplica un efecto de atenuación cerca del límite de la caja con total transparencia en el borde.
+  - : e-esta función wecowta ew contenido desbowdante e-en wínea y a-apwica un efecto de atenuación cewca dew wímite de wa caja con t-totaw twanspawencia e-en ew bowde. /(^•ω•^)
 
-    El argumento determina la distancia sobre la que se aplica el efecto de atenuación. El {{cssxref("&lt;percentage&gt;")}} se revuelve contra la anchura de la línea de la caja. Los valore menores que `0` se truncan a `0`. Los valores mayores que el ancho de la caja se recortan al ancho de la caja.
+    ew awgumento detewmina wa distancia sobwe w-wa que se apwica ew efecto de a-atenuación. /(^•ω•^) ew {{cssxwef("&wt;pewcentage&gt;")}} se wevuewve contwa wa anchuwa de wa wínea de w-wa caja. 😳 wos vawowe menowes que `0` s-se twuncan a `0`. :3 w-wos vawowes mayowes que ew a-ancho de wa caja se wecowtan aw a-ancho de wa caja. (U ᵕ U❁)
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## e-exampwes
 
-### CSS
+### css
 
 ```css
-p {
+p-p {
   width: 200px;
-  border: 1px solid;
+  b-bowdew: 1px sowid;
   padding: 2px 5px;
 
-  /* BOTH of the following are required for text-overflow */
-  white-space: nowrap;
-  overflow: hidden;
+  /* both of the f-fowwowing awe w-wequiwed fow text-ovewfwow */
+  w-white-space: nyowwap;
+  ovewfwow: hidden;
 }
 
-.overflow-visible {
-  white-space: initial;
+.ovewfwow-visibwe {
+  w-white-space: initiaw;
 }
 
-.overflow-clip {
-  text-overflow: clip;
+.ovewfwow-cwip {
+  text-ovewfwow: c-cwip;
 }
 
-.overflow-ellipsis {
-  text-overflow: ellipsis;
+.ovewfwow-ewwipsis {
+  t-text-ovewfwow: ewwipsis;
 }
 
-.overflow-string {
-  /* Not supported in most browsers,
-     see the 'Browser compatibility' section below */
-  text-overflow: " [..]";
+.ovewfwow-stwing {
+  /* nyot suppowted in most bwowsews, ʘwʘ
+     s-see the 'bwowsew c-compatibiwity' s-section b-bewow */
+  text-ovewfwow: " [..]";
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="overflow-visible">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+```htmw
+<p cwass="ovewfwow-visibwe">
+  w-wowem ipsum dowow sit amet, o.O consectetuw adipisicing ewit. ʘwʘ
 </p>
-<p class="overflow-clip">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<p cwass="ovewfwow-cwip">
+  wowem ipsum d-dowow sit amet, ^^ consectetuw adipisicing e-ewit. ^•ﻌ•^
 </p>
-<p class="overflow-ellipsis">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<p cwass="ovewfwow-ewwipsis">
+  w-wowem ipsum dowow sit amet, mya c-consectetuw adipisicing ewit. UwU
 </p>
-<p class="overflow-string">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<p c-cwass="ovewfwow-stwing">
+  w-wowem ipsum dowow s-sit amet, >_< consectetuw a-adipisicing e-ewit. /(^•ω•^)
 </p>
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample('', 300, 220)}}
+{{embedwivesampwe('', òωó 300, 220)}}
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th colspan="1" rowspan="2" scope="col" style="width: 15em">CSS value</th>
-      <th colspan="2" rowspan="1" scope="col" style="text-align: center">
-        <code>direction: ltr</code>
+    <tw>
+      <th cowspan="1" wowspan="2" scope="cow" stywe="width: 15em">css vawue</th>
+      <th c-cowspan="2" wowspan="1" s-scope="cow" s-stywe="text-awign: centew">
+        <code>diwection: w-wtw</code>
       </th>
-      <th colspan="2" rowspan="1" scope="col" style="text-align: center">
-        <code>direction: rtl</code>
+      <th cowspan="2" wowspan="1" scope="cow" s-stywe="text-awign: c-centew">
+        <code>diwection: wtw</code>
       </th>
-    </tr>
-    <tr>
-      <th scope="col">Expected Result</th>
-      <th scope="col">Live result</th>
-      <th scope="col">Expected Result</th>
-      <th scope="col">Live result</th>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="cow">expected wesuwt</th>
+      <th scope="cow">wive w-wesuwt</th>
+      <th s-scope="cow">expected wesuwt</th>
+      <th s-scope="cow">wive w-wesuwt</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><em>visible overflow</em></td>
-      <td style="font-family: monospace">1234567890</td>
-      <td style="direction: ltr">
+    <tw>
+      <td><em>visibwe ovewfwow</em></td>
+      <td stywe="font-famiwy: monospace">1234567890</td>
+      <td stywe="diwection: w-wtw">
         <div
-          style="
-            float: left;
-            font-family: monospace;
-            white-space: nowrap;
+          s-stywe="
+            f-fwoat: w-weft;
+            f-font-famiwy: monospace;
+            w-white-space: n-nyowwap;
             max-width: 3.35em;
-            overflow: visible;
+            o-ovewfwow: v-visibwe;
           "
         >
           1234567890
         </div>
       </td>
-      <td style="font-family: monospace">0987654321</td>
+      <td stywe="font-famiwy: monospace">0987654321</td>
       <td>
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
+          s-stywe="
+            font-famiwy: monospace;
+            white-space: n-nyowwap;
             max-width: 3.35em;
-            overflow: visible;
+            o-ovewfwow: visibwe;
           "
         >
           1234567890
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: clip</code></td>
-      <td style="padding: 1px; font-family: monospace">
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: c-cwip</code></td>
+      <td stywe="padding: 1px; f-font-famiwy: monospace">
         <img
-          alt="t-o_clip.png"
-          class="default internal"
-          src="t-o_clip.png"
+          awt="t-o_cwip.png"
+          cwass="defauwt i-intewnaw"
+          s-swc="t-o_cwip.png"
         />
       </td>
-      <td style="direction: ltr">
+      <td s-stywe="diwection: wtw">
         <div
-          style="
-            float: left;
-            font-family: monospace;
-            white-space: nowrap;
-            max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: clip;
+          stywe="
+            fwoat: weft;
+            f-font-famiwy: monospace;
+            white-space: nyowwap;
+            m-max-width: 3.35em;
+            o-ovewfwow: hidden;
+            text-ovewfwow: c-cwip;
           "
         >
           123456
         </div>
       </td>
-      <td style="padding: 1px; font-family: monospace">
+      <td stywe="padding: 1px; f-font-famiwy: m-monospace">
         <img
-          alt="t-o_clip_rtl.png"
-          class="default internal"
-          src="t-o_clip_rtl.png"
+          awt="t-o_cwip_wtw.png"
+          cwass="defauwt i-intewnaw"
+          swc="t-o_cwip_wtw.png"
         />
       </td>
-      <td style="direction: rtl">
+      <td stywe="diwection: w-wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
-            max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: clip;
+          s-stywe="
+            font-famiwy: m-monospace;
+            white-space: n-nyowwap;
+            m-max-width: 3.35em;
+            o-ovewfwow: hidden;
+            text-ovewfwow: cwip;
           "
         >
           1234567890
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: ''</code></td>
-      <td style="font-family: monospace">12345</td>
-      <td style="direction: ltr"><div style="">123456</div></td>
-      <td style="font-family: monospace">54321</td>
-      <td style="direction: rtl">
-        <div style="">1234567890</div>
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: ''</code></td>
+      <td stywe="font-famiwy: monospace">12345</td>
+      <td stywe="diwection: wtw"><div stywe="">123456</div></td>
+      <td stywe="font-famiwy: monospace">54321</td>
+      <td stywe="diwection: wtw">
+        <div stywe="">1234567890</div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: ellipsis</code></td>
-      <td style="font-family: monospace">1234…</td>
-      <td style="direction: ltr">
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: e-ewwipsis</code></td>
+      <td s-stywe="font-famiwy: monospace">1234…</td>
+      <td stywe="diwection: w-wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
+          s-stywe="
+            font-famiwy: m-monospace;
+            white-space: n-nyowwap;
             max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            o-ovewfwow: hidden;
+            t-text-ovewfwow: ewwipsis;
           "
         >
           1234567890
         </div>
       </td>
-      <td style="font-family: monospace">…4321</td>
-      <td style="direction: rtl">
+      <td s-stywe="font-famiwy: monospace">…4321</td>
+      <td stywe="diwection: w-wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
-            max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: ellipsis;
+          s-stywe="
+            font-famiwy: monospace;
+            w-white-space: n-nyowwap;
+            m-max-width: 3.35em;
+            o-ovewfwow: h-hidden;
+            t-text-ovewfwow: e-ewwipsis;
           "
         >
           1234567890
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: '.'</code></td>
-      <td style="font-family: monospace">1234.</td>
-      <td style="direction: ltr">
-        <div style="">1234567890</div>
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: '.'</code></td>
+      <td s-stywe="font-famiwy: m-monospace">1234.</td>
+      <td stywe="diwection: w-wtw">
+        <div s-stywe="">1234567890</div>
       </td>
-      <td style="font-family: monospace">.4321</td>
-      <td style="direction: rtl">
-        <div style="">1234567890</div>
+      <td s-stywe="font-famiwy: monospace">.4321</td>
+      <td stywe="diwection: wtw">
+        <div s-stywe="">1234567890</div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: clip clip</code></td>
-      <td style="font-family: monospace">123456</td>
-      <td style="direction: ltr">
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: cwip cwip</code></td>
+      <td s-stywe="font-famiwy: monospace">123456</td>
+      <td s-stywe="diwection: w-wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
+          s-stywe="
+            font-famiwy: m-monospace;
+            white-space: n-nyowwap;
             max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: clip clip;
+            o-ovewfwow: hidden;
+            t-text-ovewfwow: cwip cwip;
           "
         >
           1234567890
         </div>
       </td>
-      <td style="font-family: monospace">654321</td>
-      <td style="direction: rtl">
+      <td stywe="font-famiwy: monospace">654321</td>
+      <td stywe="diwection: w-wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
+          stywe="
+            f-font-famiwy: m-monospace;
+            white-space: nyowwap;
             max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: clip clip;
+            ovewfwow: h-hidden;
+            text-ovewfwow: c-cwip c-cwip;
           "
         >
           1234567890
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: clip ellipsis</code></td>
-      <td style="font-family: monospace">1234…</td>
-      <td style="direction: ltr">
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: c-cwip ewwipsis</code></td>
+      <td stywe="font-famiwy: m-monospace">1234…</td>
+      <td s-stywe="diwection: wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
+          s-stywe="
+            font-famiwy: monospace;
+            white-space: n-nyowwap;
             max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: clip ellipsis;
+            o-ovewfwow: hidden;
+            t-text-ovewfwow: c-cwip ewwipsis;
           "
         >
           1234567890
         </div>
       </td>
-      <td style="font-family: monospace">6543…</td>
-      <td style="direction: rtl">
+      <td s-stywe="font-famiwy: m-monospace">6543…</td>
+      <td s-stywe="diwection: w-wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
-            max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: clip ellipsis;
+          stywe="
+            f-font-famiwy: m-monospace;
+            w-white-space: n-nyowwap;
+            m-max-width: 3.35em;
+            o-ovewfwow: h-hidden;
+            t-text-ovewfwow: cwip ewwipsis;
           "
         >
           1234567890
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: clip '.'</code></td>
-      <td style="font-family: monospace">1234.</td>
-      <td style="direction: ltr">
-        <div style="">1234567890</div>
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: c-cwip '.'</code></td>
+      <td stywe="font-famiwy: m-monospace">1234.</td>
+      <td stywe="diwection: w-wtw">
+        <div s-stywe="">1234567890</div>
       </td>
-      <td style="font-family: monospace">6543.</td>
-      <td style="direction: rtl">
-        <div style="">1234567890</div>
+      <td s-stywe="font-famiwy: monospace">6543.</td>
+      <td stywe="diwection: wtw">
+        <div stywe="">1234567890</div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: ellipsis clip</code></td>
-      <td style="font-family: monospace">…3456</td>
-      <td style="direction: ltr">
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: e-ewwipsis c-cwip</code></td>
+      <td s-stywe="font-famiwy: monospace">…3456</td>
+      <td stywe="diwection: wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
-            max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: ellipsis clip;
+          stywe="
+            f-font-famiwy: m-monospace;
+            white-space: n-nyowwap;
+            m-max-width: 3.35em;
+            ovewfwow: hidden;
+            text-ovewfwow: e-ewwipsis cwip;
           "
         >
           1234567890
         </div>
       </td>
-      <td style="font-family: monospace">…4321</td>
-      <td style="direction: rtl">
+      <td s-stywe="font-famiwy: m-monospace">…4321</td>
+      <td s-stywe="diwection: wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
+          stywe="
+            f-font-famiwy: m-monospace;
+            white-space: nyowwap;
             max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: ellipsis clip;
+            o-ovewfwow: hidden;
+            text-ovewfwow: ewwipsis cwip;
           "
         >
           1234567890
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: ellipsis ellipsis</code></td>
-      <td style="font-family: monospace">…34…</td>
-      <td style="direction: ltr">
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: e-ewwipsis ewwipsis</code></td>
+      <td stywe="font-famiwy: m-monospace">…34…</td>
+      <td s-stywe="diwection: wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
+          s-stywe="
+            f-font-famiwy: monospace;
+            w-white-space: nyowwap;
             max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: ellipsis ellipsis;
+            o-ovewfwow: h-hidden;
+            t-text-ovewfwow: e-ewwipsis ewwipsis;
           "
         >
           1234567890
         </div>
       </td>
-      <td style="font-family: monospace">…43…</td>
-      <td style="direction: rtl">
+      <td s-stywe="font-famiwy: m-monospace">…43…</td>
+      <td s-stywe="diwection: wtw">
         <div
-          style="
-            font-family: monospace;
-            white-space: nowrap;
-            max-width: 3.35em;
-            overflow: hidden;
-            text-overflow: ellipsis ellipsis;
+          s-stywe="
+            font-famiwy: monospace;
+            w-white-space: n-nyowwap;
+            m-max-width: 3.35em;
+            ovewfwow: hidden;
+            text-ovewfwow: ewwipsis e-ewwipsis;
           "
         >
           1234567890
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: ellipsis '.'</code></td>
-      <td style="font-family: monospace">…34.</td>
-      <td style="direction: ltr">
-        <div style="">1234567890</div>
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: ewwipsis '.'</code></td>
+      <td s-stywe="font-famiwy: m-monospace">…34.</td>
+      <td stywe="diwection: wtw">
+        <div stywe="">1234567890</div>
       </td>
-      <td style="font-family: monospace">…43.</td>
-      <td style="direction: rtl">
-        <div style="">1234567890</div>
+      <td s-stywe="font-famiwy: monospace">…43.</td>
+      <td s-stywe="diwection: w-wtw">
+        <div s-stywe="">1234567890</div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: ',' clip</code></td>
-      <td style="font-family: monospace">,3456</td>
-      <td style="direction: ltr">
-        <div style="">1234567890</div>
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: ',' c-cwip</code></td>
+      <td s-stywe="font-famiwy: monospace">,3456</td>
+      <td stywe="diwection: wtw">
+        <div stywe="">1234567890</div>
       </td>
-      <td style="font-family: monospace">,4321</td>
-      <td style="direction: rtl">
-        <div style="">1234567890</div>
+      <td s-stywe="font-famiwy: monospace">,4321</td>
+      <td s-stywe="diwection: wtw">
+        <div stywe="">1234567890</div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: ',' ellipsis</code></td>
-      <td style="font-family: monospace">,34…</td>
-      <td style="direction: ltr">
-        <div style="">1234567890</div>
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: ',' ewwipsis</code></td>
+      <td s-stywe="font-famiwy: monospace">,34…</td>
+      <td stywe="diwection: wtw">
+        <div stywe="">1234567890</div>
       </td>
-      <td style="font-family: monospace">,43…</td>
-      <td style="direction: rtl">
-        <div style="">1234567890</div>
+      <td s-stywe="font-famiwy: m-monospace">,43…</td>
+      <td stywe="diwection: wtw">
+        <div s-stywe="">1234567890</div>
       </td>
-    </tr>
-    <tr>
-      <td><code>text-overflow: ',' '.'</code></td>
-      <td style="font-family: monospace">,34.</td>
-      <td style="direction: ltr">
-        <div style="">1234567890</div>
+    </tw>
+    <tw>
+      <td><code>text-ovewfwow: ',' '.'</code></td>
+      <td stywe="font-famiwy: monospace">,34.</td>
+      <td s-stywe="diwection: wtw">
+        <div s-stywe="">1234567890</div>
       </td>
-      <td style="font-family: monospace">,53.</td>
-      <td style="direction: rtl">
-        <div style="">1234567890</div>
+      <td stywe="font-famiwy: m-monospace">,53.</td>
+      <td stywe="diwection: w-wtw">
+        <div stywe="">1234567890</div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- Related CSS properties: {{cssxref("overflow")}}, {{cssxref("white-space")}}
-- CSS properties that control line breaks in words: {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}}
+- wewated css p-pwopewties: {{cssxwef("ovewfwow")}}, σωσ {{cssxwef("white-space")}}
+- c-css pwopewties t-that contwow wine bweaks in wowds: {{cssxwef("ovewfwow-wwap")}}, ( ͡o ω ͡o ) {{cssxwef("wowd-bweak")}}

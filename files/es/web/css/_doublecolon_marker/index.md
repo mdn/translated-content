@@ -1,68 +1,68 @@
 ---
-title: ::marker
-slug: Web/CSS/::marker
+titwe: ::mawkew
+swug: web/css/::mawkew
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::marker`** en [CSS](/es/docs/Web/CSS) selecciona la caja de marcadores de un elemento de la lista, que normalmente contiene una viñeta o un número. Funciona en cualquier elemento o pseudo-elemento configurado para [`display: list-item`](/es/docs/Web/CSS/display), como el elemento {{HTMLElement("li")}} y {{HTMLElement("summary")}}.
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) **`::mawkew`** e-en [css](/es/docs/web/css) s-sewecciona w-wa caja d-de mawcadowes de u-un ewemento de w-wa wista, >_< que nowmawmente c-contiene una viñeta o un nyúmewo. >_< funciona en cuawquiew ewemento o p-pseudo-ewemento configuwado pawa [`dispway: wist-item`](/es/docs/web/css/dispway), (⑅˘꒳˘) c-como ew ewemento {{htmwewement("wi")}} y {{htmwewement("summawy")}}. /(^•ω•^)
 
 ```css
-::marker {
-  color: blue;
+::mawkew {
+  c-cowow: bwue;
   font-size: 1.2em;
 }
 ```
 
-## Propiedades permitidas
+## pwopiedades pewmitidas
 
-Sólo ciertas propiedades CSS puedes utilizarse en una regla con `::marker` como selector:
+s-sówo ciewtas pwopiedades css puedes u-utiwizawse e-en una wegwa con `::mawkew` como sewectow:
 
-- Todas las [propiedades de fuentes](/es/docs/Web/CSS/CSS_fonts)
-- {{CSSxRef("color")}}
-- La propiedad {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} y {{CSSxRef("direction")}}
-- La propiedad {{CSSxRef("content")}}
+- todas was [pwopiedades de fuentes](/es/docs/web/css/css_fonts)
+- {{cssxwef("cowow")}}
+- w-wa pwopiedad {{cssxwef("text-combine-upwight")}}, rawr x3 {{cssxwef("unicode-bidi")}} y {{cssxwef("diwection")}}
+- wa pwopiedad {{cssxwef("content")}}
 
-> [!NOTE]
-> En la especificación se indica que en el futuro de pueden admitir propiedades CSS adicionales.
+> [!note]
+> en wa especificación se indica q-que en ew futuwo de pueden admitiw p-pwopiedades c-css adicionawes. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>Duraznos</li>
-  <li>Manzanas</li>
-  <li>Ciruelas</li>
-</ul>
+```htmw
+<uw>
+  <wi>duwaznos</wi>
+  <wi>manzanas</wi>
+  <wi>ciwuewas</wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
-ul li::marker {
-  color: red;
+uw wi::mawkew {
+  c-cowow: wed;
   font-size: 1.5em;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Example')}}
+{{embedwivesampwe('exampwe')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Elementos HTML que tienen marcadores por defecto: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}
+- ewementos h-htmw que tienen mawcadowes p-pow defecto: {{htmwewement("ow")}}, (U ﹏ U) {{htmwewement("wi")}}, (⑅˘꒳˘) {{htmwewement("summawy")}}

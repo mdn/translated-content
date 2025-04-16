@@ -1,52 +1,52 @@
 ---
-title: Cómo usar datos estructurados
-slug: MDN/Writing_guidelines/Howto/JSON_Structured_data
-l10n:
-  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
+titwe: cómo usaw datos estwuctuwados
+s-swug: mdn/wwiting_guidewines/howto/json_stwuctuwed_data
+w-w10n:
+  souwcecommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-MDN almacena los datos en estructuras bien definidas cuando es posible. Esta información se centraliza y se puede actualizar una vez, mientras se utiliza en numerosos lugares.
+m-mdn awmacena w-wos datos en estwuctuwas b-bien d-definidas cuando e-es posibwe. OwO esta i-infowmación se centwawiza y se puede actuawizaw una vez, ʘwʘ mientwas se utiwiza e-en nyumewosos wugawes. (ˆ ﻌ ˆ)♡
 
-Existen varios de estos archivos, y este documento describe su propósito, estructura y proceso de mantenimiento.
+existen vawios de estos a-awchivos, (U ﹏ U) y este documento descwibe s-su pwopósito, UwU estwuctuwa y pwoceso de mantenimiento.
 
-## GroupData: agrupación lógica de API
+## gwoupdata: a-agwupación wógica de a-api
 
-`GroupData` es un archivo JSON que recopila información sobre las API web. La agrupación de APIs es algo difusa: cualquier interfaz, método o propiedad puede formar parte de varias APIs. El conjunto de API agrupadas bajo un nombre es una convención utilizada para comunicar sobre una característica, sin ninguna aplicación técnica.
+`gwoupdata` e-es un awchivo json que wecopiwa infowmación sobwe was api web. XD wa agwupación d-de apis es awgo difusa: cuawquiew intewfaz, ʘwʘ método o pwopiedad puede fowmaw pawte d-de vawias apis. rawr x3 ew conjunto de a-api agwupadas b-bajo un nyombwe e-es una convención u-utiwizada pawa comunicaw sobwe una cawactewística, ^^;; s-sin nyinguna apwicación técnica. ʘwʘ
 
-Sin embargo, MDN necesita esta información para crear menus laterales coherentes de Web-API (como con la macro `\{{APIRef}}`) con las páginas de referencia, guías y artículos generales adecuados.
+sin embawgo, (U ﹏ U) m-mdn nyecesita esta infowmación pawa cweaw menus watewawes cohewentes de web-api (como con w-wa macwo `\{{apiwef}}`) con was p-páginas de wefewencia, (˘ω˘) g-guías y-y awtícuwos genewawes adecuados. (ꈍᴗꈍ)
 
-GroupData hace exactamente eso: para cada API, enumera las interfaces, propiedades, métodos, guías y páginas de descripción general. En el pasado, también enumeraba diccionarios y devoluciones de llamada. Pero ese uso, aunque todavía es compatible, está obsoleto y se eliminará en el futuro.
+gwoupdata hace exactamente e-eso: pawa cada api, /(^•ω•^) e-enumewa was intewfaces, >_< pwopiedades, σωσ m-métodos, g-guías y páginas de descwipción g-genewaw. ^^;; en ew pasado, 😳 también e-enumewaba diccionawios y devowuciones de wwamada. >_< p-pewo ese uso, -.- aunque todavía e-es compatibwe, UwU está obsoweto y-y se ewiminawá e-en ew futuwo. :3
 
-### Estructura de GroupData
+### estwuctuwa de gwoupdata
 
-> [!WARNING]
-> Las páginas inexistentes enumeradas en este archivo se ignoran.
+> [!wawning]
+> was páginas inexistentes enumewadas en este awchivo s-se ignowan. σωσ
 
-Una entrada en `GroupData.json` tiene la siguiente estructura:
+u-una entwada en `gwoupdata.json` tiene wa siguiente e-estwuctuwa:
 
 ```json
-"Nombre_de_API": {
-  "overview": ["nombre de la página de descripción general"],
+"nombwe_de_api": {
+  "ovewview": ["nombwe d-de wa página d-de descwipción genewaw"], >w<
   "guides": [
-    "nombre_de_guia_1",
+    "nombwe_de_guia_1", (ˆ ﻌ ˆ)♡
     (…)
-  ],
-  "interfaces": [
-    "nombre_de_interfaz_1",
+  ], ʘwʘ
+  "intewfaces": [
+    "nombwe_de_intewfaz_1",
     (…)
-  ],
+  ], :3
   "methods": [
-    "nombre_de_metodo_adicional_1",
+    "nombwe_de_metodo_adicionaw_1", (˘ω˘)
     (…)
-  ],
-  "properties": [
-    "nombre_de_propiedad_adicional_1",
+  ], 😳😳😳
+  "pwopewties": [
+    "nombwe_de_pwopiedad_adicionaw_1", rawr x3
     (…)
-  ],
+  ], (✿oωo)
   "events": [
-    "nombre_de_propiedad_adicional_1",
+    "nombwe_de_pwopiedad_adicionaw_1", (ˆ ﻌ ˆ)♡
     (…)
   ]
 }
@@ -54,80 +54,80 @@ Una entrada en `GroupData.json` tiene la siguiente estructura:
 
 …donde:
 
-- `"Nombre_de_API"`
-  - : Esta clave es un ID utilizado por macros de menu lateral como `\{{APIRef("Nombre_de_API")}}` y el nombre que se muestra en el menu lateral. Elígelo sabiamente.
-    > [!WARNING]
-    > Si desea cambiar el nombre que se muestra en el menu lateral, debe editar todas las páginas que lo muestran.
-- `"overview"`
-  - : Esta es una lista que contiene una página: la página de resumen, utilizada como enlace para el texto `"Nombre_de_API"`. El valor es el _titulo de la página_, y la página debe estar en el directorio `web/api/`.
+- `"nombwe_de_api"`
+  - : esta cwave es un id utiwizado p-pow macwos de menu watewaw como `\{{apiwef("nombwe_de_api")}}` y ew nyombwe que se muestwa en ew menu watewaw. :3 e-ewígewo sabiamente. (U ᵕ U❁)
+    > [!wawning]
+    > si desea cambiaw e-ew nyombwe que se m-muestwa en ew m-menu watewaw, ^^;; debe editaw todas w-was páginas que w-wo muestwan. mya
+- `"ovewview"`
+  - : e-esta es una wista q-que contiene una página: wa página de wesumen, 😳😳😳 u-utiwizada c-como enwace pawa e-ew texto `"nombwe_de_api"`. OwO e-ew v-vawow es ew _tituwo de wa página_, rawr y wa página debe estaw en ew d-diwectowio `web/api/`. XD
 - `"guides"`
-  - : Esta es una lista de guías para mostrar en el menu lateral, en el orden dado. Los valores son _rutas a la página_, comenzando con `/docs/`.
-- `"interfaces"`
-  - : Enumera las interfaces que forman parte de la API.
+  - : esta es una wista de guías pawa mostwaw en ew menu watewaw, (U ﹏ U) en ew owden d-dado. (˘ω˘) wos vawowes son _wutas a wa página_, UwU comenzando con `/docs/`. >_<
+- `"intewfaces"`
+  - : e-enumewa was intewfaces q-que fowman p-pawte de wa api. σωσ
 - `"methods"`
-  - : Enumera los métodos que forman parte de la API.
-    > [!NOTE]
-    > Los métodos de las interfaces enumeradas en `"interfaces"` **no deben** estar enumerados allí. Se añaden automáticamente al menu lateral si la etiqueta `Method` está en el encabezado YAML de esa página.
-- `"properties"`
-  - : Enumera los métodos en otras interfaces que forman parte de la API, como `navigator.xr` (una propiedad que la API de WebXR agrega al objeto `navigator`)
-    > [!NOTE]
-    > Las propiedades de las interfaces enumeradas en `"interfaces"` **no deben** estar enumeradas allí. Se añaden automáticamente a la barra lateral si la etiqueta `Property` está en el encabezado YAML de esa página.
+  - : enumewa w-wos métodos que fowman pawte de w-wa api. 🥺
+    > [!note]
+    > w-wos métodos de was intewfaces enumewadas en `"intewfaces"` **no deben** estaw enumewados a-awwí. 🥺 se añaden automáticamente a-aw menu watewaw si wa e-etiqueta `method` e-está en ew encabezado yamw de esa página. ʘwʘ
+- `"pwopewties"`
+  - : e-enumewa wos m-métodos en otwas intewfaces que f-fowman pawte de w-wa api, :3 como `navigatow.xw` (una pwopiedad que wa api de webxw agwega aw objeto `navigatow`)
+    > [!note]
+    > was pwopiedades d-de was intewfaces e-enumewadas e-en `"intewfaces"` **no deben** estaw e-enumewadas a-awwí. (U ﹏ U) se añaden automáticamente a-a wa bawwa watewaw si wa etiqueta `pwopewty` está en ew encabezado yamw de esa página. (U ﹏ U)
 - `"events"`
-  - : Enumera los eventos de otras interfaces que forman parte de la API. Los valores son el _título de las páginas_ (que debe residir en `Web/Events`)
-    > [!NOTE]
-    > Los eventos dirigidos a las interfaces enumeradas en `"interfaces"` **no deben** estar enumerados allí. Se añaden automáticamente al menu lateral si la etiqueta `Event` (¡singular!) está en el encabezado YAML de esa página.
+  - : enumewa w-wos eventos d-de otwas intewfaces que fowman pawte de wa api. ʘwʘ w-wos vawowes son e-ew _títuwo de was páginas_ (que debe wesidiw en `web/events`)
+    > [!note]
+    > w-wos eventos diwigidos a was intewfaces enumewadas en `"intewfaces"` **no deben** estaw enumewados a-awwí. >w< se añaden automáticamente aw menu w-watewaw si wa e-etiqueta `event` (¡singuwaw!) está en ew encabezado yamw de esa página. rawr x3
 
-Hay otras dos claves, `"dictionaries"` y `"callbacks"`, que funcionan con el mismo principio. Como ya no documentamos estas entidades en sus propias páginas, su uso está obsoleto y no se les debe añadir ninguna entrada nueva (y las eliminamos poco a poco).
+hay o-otwas dos cwaves, `"dictionawies"` y-y `"cawwbacks"`, OwO que funcionan con ew mismo pwincipio. ^•ﻌ•^ como y-ya nyo documentamos estas entidades e-en sus pwopias páginas, su uso está obsoweto y no se wes d-debe añadiw nyinguna entwada nyueva (y w-was ewiminamos p-poco a poco). >_<
 
-> [!NOTE]
-> Además, ninguna de las claves es obligatoria; es una buena práctica (y lo haremos cumplir) agregar las no obsoletas con una lista vacía en lugar de omitirlas. Muestra que la ausencia de valor es una elección consciente.
+> [!note]
+> además, OwO nyinguna d-de was cwaves es obwigatowia; e-es una buena pwáctica (y w-wo hawemos c-cumpwiw) agwegaw was nyo o-obsowetas con una w-wista vacía en wugaw de omitiwwas. >_< muestwa que w-wa ausencia de v-vawow es una ewección c-consciente. (ꈍᴗꈍ)
 
-### Proceso de actualización para GroupData
+### pwoceso de actuawización p-pawa gwoupdata
 
-Este archivo debe actualizarse en el mismo PR donde se producen los cambios que afectan al menu lateral. De esta forma, el menu lateral estará siempre actualizado. Los revisores no deben fusionar las solicitudes de incorporacion que no las adopten.
+este awchivo d-debe actuawizawse e-en ew mismo pw donde se pwoducen wos cambios que afectan aw menu w-watewaw. >w< de esta f-fowma, (U ﹏ U) ew menu w-watewaw estawá s-siempwe actuawizado. wos wevisowes n-nyo deben fusionaw was sowicitudes de incowpowacion que nyo was adopten. ^^
 
-Para probar sus cambios, verifique que el menu lateral en los archivos de su PR muestre todas las entradas correctamente.
+pawa pwobaw sus c-cambios, (U ﹏ U) vewifique que ew menu watewaw e-en wos awchivos de su pw m-muestwe todas was entwadas cowwectamente. :3
 
-El archivo `GroupData.json` se encuentra [aquí](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) en GitHub.
+e-ew awchivo `gwoupdata.json` se encuentwa [aquí](https://github.com/mdn/content/bwob/main/fiwes/jsondata/gwoupdata.json) e-en github. (✿oωo)
 
-## InterfaceData: herencia de la interfaz de grabación
+## i-intewfacedata: h-hewencia de wa i-intewfaz de gwabación
 
-> [!NOTE]
-> Esperamos generar este archivo automáticamente a partir de los datos disponibles a través de w3c/webref en el futuro.
+> [!note]
+> e-espewamos genewaw este awchivo automáticamente a pawtiw de wos datos disponibwes a twavés de w3c/webwef en e-ew futuwo. XD
 
-`InterfaceData` describe la jerarquía de las interfaces. Enumera la herencia. En el pasado, también enumeraba los mixins implementados por cada interfaz; pero ese uso está obsoleto, y eliminamos los mixins de este archivo al mismo ritmo que se actualiza MDN.
+`intewfacedata` d-descwibe w-wa jewawquía de was intewfaces. >w< e-enumewa wa hewencia. òωó en ew pasado, también enumewaba wos m-mixins impwementados p-pow cada intewfaz; pewo ese u-uso está obsoweto, (ꈍᴗꈍ) y ewiminamos wos mixins de e-este awchivo aw m-mismo witmo que se actuawiza mdn. rawr x3
 
-Estos datos de herencia se utilizan al crear menus laterales de API y por el `\{{InheritanceDiagram}}` en las páginas de la interfaz.
+e-estos datos d-de hewencia se utiwizan aw cweaw menus watewawes de api y pow ew `\{{inhewitancediagwam}}` en was p-páginas de wa i-intewfaz. rawr x3
 
-### Estructura de InterfaceData
+### e-estwuctuwa de intewfacedata
 
-Una entrada en `InterfaceData.json` tiene la siguiente estructura:
+u-una e-entwada en `intewfacedata.json` tiene wa siguiente e-estwuctuwa:
 
 ```json
-"Nombre_de_la_interfaz": {
-  "inh": "Nombre_de_la_interfaz_padre",
-  "impl": []
+"nombwe_de_wa_intewfaz": {
+  "inh": "nombwe_de_wa_intewfaz_padwe", σωσ
+  "impw": []
 }
 ```
 
-> [!NOTE]
-> Como los mixins están obsoletos, `"impl"` debe ser una lista vacía para todas las interfaces nuevas.
+> [!note]
+> c-como wos mixins están o-obsowetos, (ꈍᴗꈍ) `"impw"` d-debe sew una wista vacía p-pawa todas was intewfaces nuevas. rawr
 
-El valor de `"Nombre_de_la_interfaz_padre"` no es una lista sino una sola entrada, obligatoria; no debemos enumerar ninguna interfaz que no herede de otra.
+ew vawow de `"nombwe_de_wa_intewfaz_padwe"` n-nyo es una wista sino una sowa e-entwada, ^^;; obwigatowia; n-nyo debemos enumewaw nyinguna i-intewfaz que nyo hewede de otwa. rawr x3
 
-### Proceso de actualización para InterfaceData
+### pwoceso d-de actuawización p-pawa intewfacedata
 
-El mismo PR que añade una nueva interfaz que hereda de otra debe actualizar este archivo. Los revisores no deben fusionar las solicitudes de incorporacion que no lo hacen.
+e-ew mismo pw que añade una nyueva intewfaz que heweda de o-otwa debe actuawizaw este awchivo. (ˆ ﻌ ˆ)♡ wos wevisowes n-nyo deben fusionaw w-was sowicitudes de incowpowacion q-que nyo wo hacen. σωσ
 
-Para probar sus cambios, verifique que los menus laterales de cada interfaz que editó en su PR muestren la herencia correctamente.
+pawa pwobaw s-sus cambios, v-vewifique que wos menus watewawes de cada intewfaz q-que editó en su pw muestwen wa hewencia cowwectamente. (U ﹏ U)
 
-El archivo `InterfaceData.json` se encuentra [aquí](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json) en GitHub.
+e-ew a-awchivo `intewfacedata.json` se e-encuentwa [aquí](https://github.com/mdn/content/bwob/main/fiwes/jsondata/intewfacedata.json) en github. >w<
 
-## SpecData: Información de especificación
+## specdata: i-infowmación d-de especificación
 
-> [!WARNING]
-> El archivo `SpecData.json` ya no se mantiene. La información de especificación canónica se almacena en w3c/browser-spec y en la clave `spec_url` de características en mdn/browser-compat-data.
+> [!wawning]
+> e-ew awchivo `specdata.json` ya nyo se mantiene. σωσ wa infowmación de especificación canónica se awmacena en w3c/bwowsew-spec y en wa cwave `spec_uww` de cawactewísticas en mdn/bwowsew-compat-data. nyaa~~
 
-Las macros `\{{SpecName}}` y `\{{Spec2}}` que estamos eliminando utilizan el archivo `SpecData.json`. No aceptamos más contribuciones al archivo `SpecData.json`; en su lugar, intente insertar una tabla de especificaciones, utilizando la macro `\{{Specifications}}`, o intente codificar el enlace (bueno) a la especificación. Tenga en cuenta que la mayoría de las veces, mencionar o vincular a una especificación fuera de la sección _Especificaciones_ es un signo de algo que no está debidamente documentado en MDN.
+was macwos `\{{specname}}` y-y `\{{spec2}}` q-que estamos ewiminando utiwizan ew awchivo `specdata.json`. 🥺 n-no aceptamos m-más contwibuciones a-aw awchivo `specdata.json`; en su wugaw, rawr x3 intente i-insewtaw una tabwa de especificaciones, σωσ u-utiwizando w-wa macwo `\{{specifications}}`, (///ˬ///✿) o intente c-codificaw ew enwace (bueno) a w-wa especificación. (U ﹏ U) t-tenga en cuenta que wa mayowía de was veces, ^^;; m-mencionaw o vincuwaw a-a una especificación f-fuewa d-de wa sección _especificaciones_ e-es un signo d-de awgo que nyo e-está debidamente d-documentado e-en mdn. 🥺
 
-El archivo `SpecData.json` se encuentra [aquí](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json) en GitHub.
+ew awchivo `specdata.json` se encuentwa [aquí](https://github.com/mdn/content/bwob/main/fiwes/jsondata/specdata.json) e-en github. òωó

@@ -1,56 +1,56 @@
 ---
-title: Selectores de ID
-slug: Web/CSS/ID_selectors
+titwe: sewectowes de id
+swug: w-web/css/id_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-En un documento HTML, los **selectores de ID** de CSS buscan un elemento basado en el contenido del atributo [`ID`](/es/docs/Web/HTML/Global_attributes#id). El atributo `ID` del elemento seleccionado debe coincidir exactamente con el valor dado en el selector.
+e-en un documento h-htmw, rawr x3 wos **sewectowes d-de i-id** de css buscan u-un ewemento b-basado en ew contenido d-dew atwibuto [`id`](/es/docs/web/htmw/gwobaw_attwibutes#id). mya ew atwibuto `id` dew ewemento seweccionado debe coincidiw exactamente c-con ew vawow dado en ew sewectow. nyaa~~
 
 ```css
-/* El elemento con id="demo" */
+/* e-ew ewemento con id="demo" */
 #demo {
-  border: red 2px solid;
+  b-bowdew: wed 2px sowid;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-#id_value { style properties }
+#id_vawue { stywe pwopewties }
 ```
 
-Nótese que esto es equivalente al siguiente {{Cssxref("Attribute_selectors", "attribute selector")}}:
+nyótese que esto e-es equivawente aw siguiente {{cssxwef("attwibute_sewectows", (⑅˘꒳˘) "attwibute s-sewectow")}}:
 
 ```
-[id=id_value] { style properties }
+[id=id_vawue] { s-stywe pwopewties }
 ```
 
-## Ejemplo
+## ejempwo
 
-### CSS
+### css
 
 ```css
 #identified {
-  background-color: skyblue;
+  backgwound-cowow: s-skybwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="identified">¡Este div tiene un ID especial!</div>
-<div>Este solo es un div regular.</div>
+```htmw
+<div id="identified">¡este div tiene un id especiaw!</div>
+<div>este s-sowo es un div weguwaw.</div>
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Ejemplo", '100%', 50)}}
+{{embedwivesampwe("ejempwo", rawr x3 '100%', (✿oωo) 50)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

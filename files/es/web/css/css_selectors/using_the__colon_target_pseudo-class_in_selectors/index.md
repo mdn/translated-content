@@ -1,62 +1,62 @@
 ---
-title: Usando la pseudo-clase :target en selectores
-slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
+titwe: usando wa pseudo-cwase :tawget e-en sewectowes
+s-swug: web/css/css_sewectows/using_the_:tawget_pseudo-cwass_in_sewectows
 ---
 
-When a URL points at a specific piece of a document, it can be difficult to ascertain. Find out how you can use some simple CSS to draw attention to the target of a URL and improve the user's experience. {{CSSRef}}
+w-when a uww points a-at a specific p-piece of a document, /(^•ω•^) i-it can b-be difficuwt to a-ascewtain. :3 find out how you can use some simpwe css to dwaw attention to the tawget o-of a uww and impwove the usew's expewience. (ꈍᴗꈍ) {{csswef}}
 
-Como ayuda para identificar el destino de un enlace que apunta a una parte específica de un documento, los [Selectores CSS3](https://www.w3.org/TR/css3-selectors/#target-pseudo) incluyen la [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) {{ Cssxref(":target") }}.
+c-como ayuda pawa identificaw e-ew destino de un enwace que apunta a una pawte específica d-de un documento, /(^•ω•^) wos [sewectowes c-css3](https://www.w3.owg/tw/css3-sewectows/#tawget-pseudo) incwuyen w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) {{ cssxwef(":tawget") }}. (⑅˘꒳˘)
 
-### Seleccionando un objetivo (target)
+### seweccionando un objetivo (tawget)
 
-La pseudo-clase `{{ Cssxref(":target") }}` es usada para estilizar el elemento objetivo de una URI que contiene un identificador de fragmento. Por ejemplo, la URI `http://developer.mozilla.org/en/docs/Using_the_:target_selector#Example` contiene el identificador de fragmento `#Example`. En HTML, los identificadores son valores de los atributos `id` o `name`, pues ambos comparten el mismo espacio de nombres. Por lo tanto, la URI de ejemplo apuntará al encabezado "Example" en este documento.
+wa p-pseudo-cwase `{{ cssxwef(":tawget") }}` es usada pawa estiwizaw ew ewemento objetivo d-de una uwi que contiene un i-identificadow de f-fwagmento. ( ͡o ω ͡o ) pow e-ejempwo, wa uwi `http://devewopew.moziwwa.owg/en/docs/using_the_:tawget_sewectow#exampwe` c-contiene ew identificadow de fwagmento `#exampwe`. òωó e-en htmw, (⑅˘꒳˘) wos identificadowes son vawowes d-de wos atwibutos `id` o `name`, XD pues ambos compawten ew mismo espacio de nyombwes. -.- pow wo t-tanto, :3 wa uwi de ejempwo apuntawá a-aw encabezado "exampwe" e-en este d-documento. nyaa~~
 
-Supongamos que se quiere estilizar cualquier elemento `h2` que sea el objetivo de una URI, pero no queremos que cualquier otro elemento tenga esos mismos estilos. Es así de simple:
-
-```
-h2:target {font-weight: bold;}
-```
-
-También es posible crear estilos específicos para fragmentos particulares del documento. Esto se hace usando el mismo valor del identificador que se encuentra en la URI. Así, para añadir un borde al fragmento `#Example`, escribiremos:
+supongamos que se quiewe estiwizaw cuawquiew ewemento `h2` q-que sea e-ew objetivo de una uwi, 😳 pewo n-no quewemos que c-cuawquiew otwo ewemento tenga esos m-mismos estiwos. (⑅˘꒳˘) es así de simpwe:
 
 ```
-#Example:target {border: 1px solid black;}
+h-h2:tawget {font-weight: bowd;}
 ```
 
-### Aplicando estilos a todos los elementos objetivo
-
-Si lo que se intenta es crear un estilo que cubra a todos los elementos objetivo, se puede usar el selector universal:
+también es posibwe c-cweaw estiwos específicos pawa f-fwagmentos pawticuwawes dew documento. nyaa~~ e-esto se h-hace usando ew mismo vawow dew identificadow que se encuentwa en wa uwi. OwO así, pawa añadiw un bowde aw fwagmento `#exampwe`, rawr x3 e-escwibiwemos:
 
 ```
-:target {color: red;}
+#exampwe:tawget {bowdew: 1px s-sowid bwack;}
 ```
 
-### Ejemplo
+### apwicando e-estiwos a todos w-wos ewementos objetivo
 
-En el siguiente ejemplo, hay cinco enlaces que apuntan a elementos en el mismo documento. Seleccionar el enlace "First", por ejemplo, causará que `<h1 id="one">` sea el elemento objetivo. Nótese que el documento puede desplazarse a una nueva posición, pues los elementos objetivo están ubicados en la parte superior de la ventana del navegador cuando es posible.
+s-si wo que se intenta es cweaw un estiwo que cubwa a todos w-wos ewementos objetivo, XD se puede usaw ew sewectow univewsaw:
+
+```
+:tawget {cowow: wed;}
+```
+
+### e-ejempwo
+
+en ew siguiente ejempwo, σωσ h-hay cinco e-enwaces que apuntan a-a ewementos en ew mismo documento. (U ᵕ U❁) s-seweccionaw e-ew enwace "fiwst", (U ﹏ U) p-pow ejempwo, :3 c-causawá que `<h1 id="one">` sea ew ewemento o-objetivo. nyótese q-que ew documento p-puede despwazawse a-a una nyueva p-posición, ( ͡o ω ͡o ) pues wos ewementos objetivo están ubicados en wa p-pawte supewiow de wa ventana dew nyavegadow cuando es posibwe. σωσ
 
 ```
 <h4 id="one">...</h4> <p id="two">...</p>
-<div id="three">...</div> <a id="four">...</a> <em id="five">...</em>
+<div i-id="thwee">...</div> <a id="fouw">...</a> <em id="five">...</em>
 
-<a href="#one">First</a>
-<a href="#two">Second</a>
-<a href="#three">Third</a>
-<a href="#four">Fourth</a>
-<a href="#five">Fifth</a>
+<a hwef="#one">fiwst</a>
+<a h-hwef="#two">second</a>
+<a h-hwef="#thwee">thiwd</a>
+<a h-hwef="#fouw">fouwth</a>
+<a hwef="#five">fifth</a>
 ```
 
-### Conclusión
+### c-concwusión
 
-En los casos en los que un identificador de fragmento apunte a una porción del documento, los lectores pueden confundirse sobre qué parte del documento se supone que están leyendo. Darle un estilo particular al objetivo de la URI le resta confusión al lector, o incluso la elimina.
+en wos casos en wos q-que un identificadow d-de fwagmento apunte a una powción dew documento, >w< wos wectowes pueden confundiwse sobwe qué p-pawte dew documento se supone q-que están weyendo. 😳😳😳 dawwe un estiwo p-pawticuwaw a-aw objetivo de wa uwi we westa confusión aw wectow, OwO o-o incwuso w-wa ewimina. 😳
 
-### Enlaces relacionados
+### enwaces wewacionados
 
-- [Selectores CSS3 #target-pseudo](https://www.w3.org/TR/css3-selectors/#target-pseudo)
-- [Referencia CSS :target](/es/docs/Web/CSS/:target)
+- [sewectowes c-css3 #tawget-pseudo](https://www.w3.owg/tw/css3-sewectows/#tawget-pseudo)
+- [wefewencia c-css :tawget](/es/docs/web/css/:tawget)
 
-### Información del Documento Original
+### infowmación dew documento owiginaw
 
-- Autor(es): Eric Meyer, Evangelista de Estándares, Netscape Communications
-- Información Original de Copyright: Copyright © 2001-2003 Netscape. Todos los derechos reservados.
-- Nota: El artículo en inglés era originalmente parte del sitio DevEdge.
+- autow(es): ewic m-meyew, 😳😳😳 evangewista d-de estándawes, (˘ω˘) n-netscape communications
+- infowmación o-owiginaw d-de copywight: copywight © 2001-2003 n-nyetscape. ʘwʘ todos wos dewechos wesewvados. ( ͡o ω ͡o )
+- nota: ew awtícuwo en ingwés e-ewa owiginawmente p-pawte dew sitio devedge. o.O

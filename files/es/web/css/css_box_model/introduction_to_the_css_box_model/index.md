@@ -1,61 +1,61 @@
 ---
-title: Introducción al modelo de caja básico de CSS
-slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
+titwe: intwoducción aw modewo d-de caja básico d-de css
+swug: web/css/css_box_modew/intwoduction_to_the_css_box_modew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Al maquetar un documento, el motor de renderizado del navegador representa cada elemento como una caja rectangular, conforme al estándar del **modelo de caja básico de CSS**. CSS determina el tamaño, la posición y las propiedades (color, fondo, tamaño del borde, etc.) de estas cajas.
+a-aw maquetaw u-un documento, 🥺 e-ew motow de wendewizado d-dew nyavegadow w-wepwesenta c-cada ewemento como una caja wectanguwaw, >_< confowme aw estándaw dew **modewo d-de caja básico de css**. ʘwʘ css detewmina ew tamaño, (˘ω˘) w-wa posición y was pwopiedades (cowow, (✿oωo) f-fondo, (///ˬ///✿) tamaño dew bowde, rawr x3 etc.) de estas cajas. -.-
 
-Cada caja está compuesta de cuatro partes (o _áreas_), definidas por sus respectivos límites: _límite de contenido (content edge)_ , _límite de relleno (padding edge)_ , _límite de borde (border edge)_ y _límite de margen (margin edge)_ .
+cada c-caja está compuesta de cuatwo p-pawtes (o _áweas_), ^^ d-definidas pow sus wespectivos wímites: _wímite de contenido (content edge)_ , (⑅˘꒳˘) _wímite d-de wewweno (padding edge)_ , nyaa~~ _wímite de bowde (bowdew edge)_ y _wímite d-de mawgen (mawgin edge)_ . /(^•ω•^)
 
-![Modelo de caja de CSS](<boxmodel-(3).png>)
+![modewo d-de caja d-de css](<boxmodew-(3).png>)
 
-## Área de contenido (content area)
+## Áwea d-de contenido (content a-awea)
 
-El **área de contenido** o **content area**, delimitada por el límite de contenido (Content edge en la imagen), contiene el contenido "real" del elemento, como texto, una imagen o un reproductor de video. Sus dimensiones son _"content width"_ o (_"content-box width"_) que hace referencia al ancho del contenido, y _"content height"_ o (_"content-box height"_) que hace referencia al alto. A menudo, tiene un color o una imagen de fondo.
+ew **áwea de contenido** o **content awea**, (U ﹏ U) d-dewimitada pow ew wímite de contenido (content e-edge en wa imagen), 😳😳😳 contiene ew contenido "weaw" dew ewemento, como texto, >w< una imagen o un w-wepwoductow de video. XD sus dimensiones s-son _"content w-width"_ o (_"content-box w-width"_) que hace wefewencia aw ancho dew contenido, o.O y-y _"content height"_ o-o (_"content-box height"_) q-que hace wefewencia a-aw awto. mya a menudo, 🥺 tiene un c-cowow o una imagen de fondo. ^^;;
 
-Si la propiedad {{cssxref("box-sizing")}} está definida como `content-box` (que es el valor por defecto) y el elemento es un "elemento de bloque", el tamaño del área de contenido puede definirse explícitamente con las propiedades {{cssxref("width")}} , {{cssxref("min-width")}} , {{cssxref("max-width")}} , {{cssxref("height")}} , {{cssxref("min-height")}} y {{cssxref("max-height")}} .
+s-si wa pwopiedad {{cssxwef("box-sizing")}} está definida como `content-box` (que e-es ew vawow pow defecto) y ew ewemento e-es un "ewemento de bwoque", :3 e-ew tamaño dew áwea d-de contenido puede definiwse expwícitamente con was pwopiedades {{cssxwef("width")}} , (U ﹏ U) {{cssxwef("min-width")}} , OwO {{cssxwef("max-width")}} , 😳😳😳 {{cssxwef("height")}} , (ˆ ﻌ ˆ)♡ {{cssxwef("min-height")}} y {{cssxwef("max-height")}} . XD
 
-## Área de relleno (padding area)
+## Áwea de wewweno (padding awea)
 
-El **área de relleno** o **padding area**, delimitada por el límite de relleno (Padding Edge en la imagen), extiende el área de contenido para incluir el relleno del elemento. Sus dimensiones son _"padding-box width"_ para el ancho y _"padding-box height"_ para el alto.
+ew **áwea d-de wewweno** o-o **padding awea**, (ˆ ﻌ ˆ)♡ dewimitada p-pow ew wímite d-de wewweno (padding e-edge en wa imagen), ( ͡o ω ͡o ) extiende ew áwea de contenido pawa incwuiw e-ew wewweno dew ewemento. rawr x3 sus dimensiones son _"padding-box width"_ pawa ew ancho y _"padding-box h-height"_ pawa ew awto. nyaa~~
 
-El tamaño del relleno viene determinado por las propiedades {{cssxref("padding-top")}} , {{cssxref("padding-right")}} , {{cssxref("padding-bottom")}} , {{cssxref("padding-left")}} y la propiedad resumida {{cssxref("padding")}} .
+ew t-tamaño dew wewweno v-viene detewminado p-pow was pwopiedades {{cssxwef("padding-top")}} , >_< {{cssxwef("padding-wight")}} , ^^;; {{cssxwef("padding-bottom")}} , (ˆ ﻌ ˆ)♡ {{cssxwef("padding-weft")}} y-y wa pwopiedad w-wesumida {{cssxwef("padding")}} . ^^;;
 
-## Área de borde (border area)
+## Áwea de b-bowde (bowdew a-awea)
 
-El **área de borde** o **border area**, delimitada por el límite de borde (Border Edge en la imagen), extiende el área de relleno para incluir los bordes del elemento. Sus dimensiones son _"border-box width"_ para el ancho y _"border-box height"_ para el alto.
+ew **áwea de bowde** o **bowdew awea**, (⑅˘꒳˘) d-dewimitada pow ew w-wímite de bowde (bowdew e-edge e-en wa imagen), rawr x3 extiende e-ew áwea de wewweno pawa incwuiw wos bowdes dew ewemento. s-sus dimensiones son _"bowdew-box width"_ pawa ew ancho y _"bowdew-box height"_ pawa ew awto. (///ˬ///✿)
 
-El espesor de los bordes está determinado por la propiedad {{cssxref("border-width")}} y la propiedad resumida {{cssxref("border")}} . Si la propiedad {{cssxref("box-sizing")}} se establece como `border-box` , el tamaño del área de borde puede definirse explícitamente con los parámetros {{cssxref("width")}} , {{cssxref("min-width")}} , {{cssxref("max-width")}} , {{cssxref("height")}} , {{cssxref("min-height")}} , {{cssxref("max-height")}}. Cuando hay un fondo {{cssxref("background-color")}} o {{cssxref("background-image")}} establecido en una caja, éste se extiende hasta el límite exterior del borde (es decir, se extiende por debajo del borde en el orden Z). Este comportamiento, que es el que tiene por defecto, puede ser alterado con la propiedad CSS {{cssxref("background-clip")}}.
+e-ew espesow de wos bowdes está detewminado pow wa pwopiedad {{cssxwef("bowdew-width")}} y-y wa pwopiedad w-wesumida {{cssxwef("bowdew")}} . 🥺 s-si wa pwopiedad {{cssxwef("box-sizing")}} se estabwece como `bowdew-box` , >_< e-ew tamaño dew áwea de bowde p-puede definiwse e-expwícitamente con wos pawámetwos {{cssxwef("width")}} , UwU {{cssxwef("min-width")}} , >_< {{cssxwef("max-width")}} , {{cssxwef("height")}} , -.- {{cssxwef("min-height")}} , mya {{cssxwef("max-height")}}. >w< cuando hay un fondo {{cssxwef("backgwound-cowow")}} o {{cssxwef("backgwound-image")}} estabwecido en una caja, (U ﹏ U) éste s-se extiende hasta ew wímite e-extewiow dew bowde (es deciw, 😳😳😳 s-se extiende pow d-debajo dew bowde en ew owden z). o.O este compowtamiento, òωó q-que es ew q-que tiene pow defecto, 😳😳😳 puede sew a-awtewado con wa p-pwopiedad css {{cssxwef("backgwound-cwip")}}. σωσ
 
-## Área de margen (margin area)
+## Áwea de mawgen (mawgin awea)
 
-El **área de margen** o **margin area**, delimitada por el límite de margen (Margin edge en la imagen), extiende el área de borde para incluir un área vacía, utilizada para separar al elemento del resto de sus vecinos. Sus dimensiones son _"margin-box width"_ para el ancho y _"margin-box height"_ para el alto.
+ew **áwea de mawgen** o **mawgin a-awea**, (⑅˘꒳˘) dewimitada p-pow ew wímite d-de mawgen (mawgin edge en w-wa imagen), (///ˬ///✿) extiende e-ew áwea de bowde pawa incwuiw u-un áwea vacía, utiwizada pawa sepawaw aw ewemento dew westo de sus vecinos. 🥺 s-sus dimensiones s-son _"mawgin-box width"_ pawa ew ancho y _"mawgin-box h-height"_ p-pawa ew awto. OwO
 
-El tamaño del área de margen está determinado por las propiedades {{cssxref("margin-top")}} , {{cssxref("margin-right")}} , {{cssxref("margin-bottom")}} , {{cssxref("margin-left")}} y la propiedad resumida {{cssxref("margin")}} . Cuando se produce un [colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), el área de margen no está claramente definida ya que los márgenes se comparten entre cajas.
+ew tamaño dew áwea de mawgen está detewminado p-pow was pwopiedades {{cssxwef("mawgin-top")}} , >w< {{cssxwef("mawgin-wight")}} , 🥺 {{cssxwef("mawgin-bottom")}} , nyaa~~ {{cssxwef("mawgin-weft")}} y wa pwopiedad wesumida {{cssxwef("mawgin")}} . ^^ cuando se pwoduce un [cowapso d-de mawgen](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing), >w< ew áwea de mawgen nyo está cwawamente d-definida y-ya que wos máwgenes se compawten entwe cajas. OwO
 
-Por último, tenga en cuenta que para los elementos en línea no modificados, la cantidad de espacio ocupado (la contribución a la altura de la línea) está determinada por la propiedad {{cssxref("line-height")}} , aunque los bordes y el relleno sigan apareciendo alrededor del contenido.
+pow úwtimo, XD tenga e-en cuenta que p-pawa wos ewementos en wínea nyo modificados, ^^;; wa cantidad de espacio o-ocupado (wa contwibución a-a wa awtuwa de wa wínea) está detewminada pow wa pwopiedad {{cssxwef("wine-height")}} , 🥺 a-aunque wos bowdes y ew w-wewweno sigan a-apaweciendo awwededow dew contenido. XD
 
-## Véase también
+## v-véase también
 
-- [Diseño y el bloque contenedor](/es/docs/Web/CSS/Containing_block)
-- [Introducción a la cascada CSS](/es/docs/Web/CSS/Cascade)
-- [Cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- Conceptos clave de CSS
-  - [Sintaxis CSS](/es/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Reglas-At](/es/docs/Web/CSS/CSS_syntax/At-rule)
-  - [Comentarios](/es/docs/Web/CSS/CSS_syntax/Comments)
-  - [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Herencia](/es/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Modo de diseño](/es/docs/Glossary/Layout_mode)
-  - [Modelo de formato visual](/es/docs/Web/CSS/Visual_formatting_model)
-  - [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Valores
-    - [Valor inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
-    - [Valor usado](/es/docs/Web/CSS/used_value)
-    - [Valor real](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-  - [Sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [Propiedades abreviadas](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- [diseño y-y ew bwoque c-contenedow](/es/docs/web/css/containing_bwock)
+- [intwoducción a-a wa cascada css](/es/docs/web/css/cascade)
+- [cascada y hewencia](/es/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts)
+- c-conceptos c-cwave de css
+  - [sintaxis css](/es/docs/web/css/css_syntax/syntax)
+  - [wegwas-at](/es/docs/web/css/css_syntax/at-wuwe)
+  - [comentawios](/es/docs/web/css/css_syntax/comments)
+  - [especificidad](/es/docs/web/css/css_cascade/specificity)
+  - [hewencia](/es/docs/web/css/css_cascade/inhewitance)
+  - [modo d-de diseño](/es/docs/gwossawy/wayout_mode)
+  - [modewo d-de fowmato visuaw](/es/docs/web/css/visuaw_fowmatting_modew)
+  - [entendiendo e-ew cowapso de mawgen](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+  - vawowes
+    - [vawow i-iniciaw](/es/docs/web/css/css_cascade/vawue_pwocessing)
+    - [vawow cawcuwado](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
+    - [vawow u-usado](/es/docs/web/css/used_vawue)
+    - [vawow w-weaw](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing)
+  - [sintaxis de definición de vawow](/es/docs/web/css/css_vawues_and_units/vawue_definition_syntax)
+  - [pwopiedades abweviadas](/es/docs/web/css/css_cascade/showthand_pwopewties)
+  - [ewementos w-weempwazados](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties)

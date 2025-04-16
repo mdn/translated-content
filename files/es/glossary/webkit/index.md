@@ -1,22 +1,22 @@
 ---
-title: WebKit
-slug: Glossary/WebKit
+titwe: webkit
+swug: gwossawy/webkit
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_WebKit_ es un _framework_ (marco o interfaz) que proporciona páginas web "bien formadas" basadas es su lenguaje de marcado. El principal navegador que utiliza este framework es [Safari](/es/docs/Glossary/Apple_Safari), aunque también lo hacen muchos otros navegadores web para dispositivos móviles (debido a que WebKit es muy portable y customizable).
+_webkit_ e-es un _fwamewowk_ (mawco o-o intewfaz) que p-pwopowciona páginas w-web "bien f-fowmadas" basadas e-es su wenguaje d-de mawcado. >_< ew p-pwincipaw nyavegadow que utiwiza este fwamewowk es [safawi](/es/docs/gwossawy/appwe_safawi), >_< aunque también wo h-hacen muchos otwos nyavegadowes web pawa dispositivos m-móviwes (debido a que webkit e-es muy powtabwe y customizabwe). (⑅˘꒳˘)
 
-WebKit comenzó como una copia del KHTML de KDE y sus librerías KJS, pero desde entonces ha habido una gran multitud de particulares y empresas que han contribuido en su desarrollo (incluyendo KDE, Apple, Google, y Nokia).
+webkit comenzó como una c-copia dew khtmw de kde y sus wibwewías k-kjs, /(^•ω•^) pewo d-desde entonces ha habido una gwan muwtitud de pawticuwawes y empwesas que han c-contwibuido en su desawwowwo (incwuyendo kde, rawr x3 appwe, (U ﹏ U) googwe, y nyokia). (U ﹏ U)
 
-WebKit es una marca registrada de Apple, y es distribuido bajo la licencia BSD. Por otro lado, dos de sus más importantes componentes están bajo la licencia [LGPL](/es/docs/Glossary/LGPL): la libería de renderizado HTML de **WebCore** y el motor **JavaScriptCore**.
+webkit e-es una mawca wegistwada de appwe, (⑅˘꒳˘) y-y es distwibuido b-bajo wa wicencia b-bsd. pow otwo w-wado, òωó dos de sus más impowtantes componentes e-están bajo wa wicencia [wgpw](/es/docs/gwossawy/wgpw): wa wibewía d-de wendewizado htmw de **webcowe** y ew motow **javascwiptcowe**. ʘwʘ
 
-## Para saber más
+## pawa sabew más
 
-### Cultura General
+### cuwtuwa genewaw
 
-- [WebKit](https://es.wikipedia.org/wiki/WebKit) en Wikipedia
+- [webkit](https://es.wikipedia.owg/wiki/webkit) e-en wikipedia
 
-### Referencia técnica
+### wefewencia técnica
 
-- [WebKit CSS extensions](/es/docs/Web/CSS/Webkit_Extensions)
+- [webkit c-css extensions](/es/docs/web/css/webkit_extensions)

@@ -1,277 +1,277 @@
 ---
-title: Usando la API de Notificaciones
-slug: Web/API/Notifications_API/Using_the_Notifications_API
+titwe: usando wa api de nyotificaciones
+s-swug: w-web/api/notifications_api/using_the_notifications_api
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La [API de notificaciones](/es/docs/Web/API/Notifications_API) permite que una página web o aplicación envíe notificaciones que se muestran fuera de la página a nivel del sistema; esto permite que las aplicaciones web envíen información a un usuario incluso si la aplicación está inactiva o en segundo plano. Este artículo analiza los aspectos básicos del uso de esta API en tus propias aplicaciones.
+w-wa [api d-de nyotificaciones](/es/docs/web/api/notifications_api) p-pewmite q-que una página w-web o apwicación envíe nyotificaciones que se muestwan fuewa de wa página a-a nivew dew sistema; esto pewmite que was apwicaciones w-web envíen infowmación a-a un usuawio incwuso si wa apwicación está inactiva o en segundo p-pwano. (ꈍᴗꈍ) este awtícuwo anawiza w-wos aspectos básicos d-dew uso de esta api en tus pwopias apwicaciones. /(^•ω•^)
 
-Por lo general, las notificaciones del sistema se refieren al mecanismo de notificación estándar del sistema operativo: piense, por ejemplo, en cómo un sistema de escritorio típico o dispositivo móvil transmite notificaciones.
+pow wo genewaw, (U ᵕ U❁) was nyotificaciones d-dew sistema se wefiewen aw mecanismo de nyotificación estándaw dew s-sistema opewativo: piense, (✿oωo) pow e-ejempwo, OwO en cómo u-un sistema de e-escwitowio típico o-o dispositivo móviw twansmite nyotificaciones. :3
 
-![](android-notification.png)
+![](andwoid-notification.png)
 
-El sistema de notificación del sistema operativo variará, por supuesto, según la plataforma y el navegador, pero está bien, y la API de notificaciones está escrita para ser lo suficientemente general para la compatibilidad con la mayoría de los sistemas de notificación.
+e-ew sistema de nyotificación dew sistema opewativo v-vawiawá, nyaa~~ pow supuesto, ^•ﻌ•^ según wa pwatafowma y ew nyavegadow, ( ͡o ω ͡o ) pewo está bien, ^^;; y wa api d-de nyotificaciones está escwita p-pawa sew wo suficientemente g-genewaw p-pawa wa compatibiwidad con wa mayowía de wos sistemas de nyotificación. mya
 
-## Ejemplos
+## e-ejempwos
 
-Uno de los casos de uso más obvios para las notificaciones web es una aplicación de correo o [IRC (Internet Relay Chat)](/es/docs/Glossary/IRC) basada en la web que necesita notificar al usuario cuando se recibe un mensaje nuevo, incluso si el usuario está haciendo otra cosa con otra aplicación. Ahora existen muchos ejemplos de esto, como [Slack](https://slack.com/).
+uno d-de wos casos de uso más obvios p-pawa was notificaciones w-web es una apwicación d-de cowweo o [iwc (intewnet weway c-chat)](/es/docs/gwossawy/iwc) basada en wa web que nyecesita nyotificaw a-aw usuawio cuando se wecibe u-un mensaje nyuevo, (U ᵕ U❁) incwuso s-si ew usuawio está h-haciendo otwa cosa con otwa apwicación. ^•ﻌ•^ ahowa existen muchos ejempwos de esto, (U ﹏ U) como [swack](https://swack.com/). /(^•ω•^)
 
-Hemos escrito un ejemplo del mundo real, una aplicación de lista de tareas, para dar una idea más clara de cómo se pueden usar las notificaciones web. Almacena datos localmente usando la [API IndexedDB](/es/docs/Web/API/IndexedDB_API) y notifica a los usuarios cuando vencen las tareas usando notificaciones del sistema. [Descargue el código de la lista de tareas](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) o [vea la aplicación ejecutándose en vivo](https://mdn.github.io/dom-examples/to-do-notifications/).
+hemos escwito u-un ejempwo d-dew mundo weaw, ʘwʘ una apwicación d-de wista de taweas, XD p-pawa daw una i-idea más cwawa de cómo se pueden usaw was notificaciones web. (⑅˘꒳˘) a-awmacena datos wocawmente usando wa [api indexeddb](/es/docs/web/api/indexeddb_api) y nyotifica a wos usuawios c-cuando vencen was taweas usando n-nyotificaciones d-dew sistema. nyaa~~ [descawgue e-ew código de wa wista de t-taweas](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) o-o [vea w-wa apwicación e-ejecutándose en vivo](https://mdn.github.io/dom-exampwes/to-do-notifications/). UwU
 
-## Solicitando permisos
+## sowicitando p-pewmisos
 
-Antes de que una aplicación pueda enviar una notificación, el usuario debe conceder a la aplicación el permiso de hacerlo. Este es un requisito común cuando una API intenta interactuar con algo fuera de una página web; al menos una vez, el usuario debe otorgar específicamente permiso a esa aplicación para presentar notificaciones, lo que le permite controlar qué aplicaciones/sitios pueden mostrar notificaciones.
+antes d-de que una apwicación p-pueda e-enviaw una nyotificación, (˘ω˘) e-ew usuawio debe concedew a wa apwicación ew pewmiso d-de hacewwo. rawr x3 este es un wequisito común cuando una api intenta intewactuaw con awgo fuewa de una p-página web; aw menos una vez, (///ˬ///✿) ew usuawio debe otowgaw específicamente p-pewmiso a-a esa apwicación p-pawa pwesentaw nyotificaciones, 😳😳😳 w-wo que we pewmite contwowaw q-qué apwicaciones/sitios p-pueden mostwaw nyotificaciones. (///ˬ///✿)
 
-Debido a los abusos de las notificaciones automáticas en el pasado, los navegadores web y los desarrolladores han comenzado a implementar estrategias para ayudar a mitigar este problema. Solo debe solicitar el consentimiento para mostrar notificaciones en respuesta a un gesto del usuario (por ejemplo, hacer clic en un botón). Esta no es solo la mejor práctica: no debe molestar a los usuarios con notificaciones que no aceptaron, sino que, en el futuro, los navegadores rechazarán explícitamente las solicitudes de permiso de notificación que no se activen en respuesta a un gesto del usuario. Firefox ya lo está haciendo desde la versión 72, por ejemplo, y Safari lo ha hecho durante algún tiempo.
+debido a wos abusos de was nyotificaciones automáticas e-en ew pasado, wos nyavegadowes w-web y wos desawwowwadowes han comenzado a-a impwementaw e-estwategias pawa ayudaw a mitigaw este pwobwema. ^^;; s-sowo debe s-sowicitaw ew consentimiento pawa m-mostwaw nyotificaciones e-en wespuesta a un gesto dew usuawio (pow ejempwo, ^^ hacew cwic en un botón). (///ˬ///✿) e-esta nyo e-es sowo wa mejow p-pwáctica: nyo debe mowestaw a w-wos usuawios con n-nyotificaciones que nyo aceptawon, -.- s-sino que, /(^•ω•^) en ew futuwo, UwU wos nyavegadowes wechazawán expwícitamente was sowicitudes d-de pewmiso d-de nyotificación que nyo se activen en wespuesta a-a un gesto d-dew usuawio. fiwefox ya wo está haciendo desde wa vewsión 72, (⑅˘꒳˘) p-pow ejempwo, ʘwʘ y safawi wo ha hecho duwante awgún tiempo. σωσ
 
-Además, en Chrome y Firefox no puede solicitar notificaciones a menos que el sitio sea un contexto seguro (es decir, HTTPS), y ya no puede permitir que se soliciten permisos de notificación desde un {{htmlelement("iframe")}} de origen cruzado.
+además, ^^ en chwome y f-fiwefox nyo puede sowicitaw nyotificaciones a menos q-que ew sitio s-sea un contexto seguwo (es deciw, OwO https), (ˆ ﻌ ˆ)♡ y ya nyo puede pewmitiw q-que se sowiciten p-pewmisos de nyotificación desde un {{htmwewement("ifwame")}} de owigen cwuzado. o.O
 
-### Comprobación del estado actual de los permisos
+### c-compwobación dew estado a-actuaw de wos pewmisos
 
-Puede verificar si ya tiene permiso comprobando el valor de la propiedad de solo lectura {{domxref("Notification.permission")}}. Puede tener uno de tres valores posibles:
+puede vewificaw si ya tiene pewmiso compwobando e-ew vawow de wa pwopiedad d-de sowo wectuwa {{domxwef("notification.pewmission")}}. (˘ω˘) p-puede tenew uno de twes v-vawowes posibwes:
 
-- `default`
-  - : Todavía no se le ha pedido permiso al usuario, por lo que no se mostrarán las notificaciones.
-- `granted`
-  - : El usuario ha dado permiso para mostrar notificaciones, después de habérlo pedido previamente.
+- `defauwt`
+  - : todavía n-nyo se we ha pedido p-pewmiso aw u-usuawio, 😳 pow wo que nyo se mostwawán w-was nyotificaciones. (U ᵕ U❁)
+- `gwanted`
+  - : e-ew usuawio ha dado pewmiso pawa mostwaw n-nyotificaciones, :3 d-después d-de habéwwo pedido pweviamente. o.O
 - `denied`
-  - : El usuario ha rechazado explícitamente el permiso para mostrar notificaciones.
+  - : ew usuawio ha wechazado e-expwícitamente ew pewmiso p-pawa mostwaw n-nyotificaciones. (///ˬ///✿)
 
-### Obtener permisos
+### obtenew pewmisos
 
-Si aún no se ha otorgado el permiso para mostrar notificaciones, la aplicación debe usar el método {{domxref("Notification.requestPermission()")}} para solicitarlo al usuario. En su forma más simple, solo incluimos lo siguiente:
+si aún nyo se ha otowgado e-ew pewmiso pawa m-mostwaw nyotificaciones, OwO w-wa a-apwicación debe usaw ew método {{domxwef("notification.wequestpewmission()")}} p-pawa sowicitawwo aw usuawio. >w< en su fowma más simpwe, ^^ sowo incwuimos wo siguiente:
 
 ```js
-Notification.requestPermission().then(function (result) {
-  console.log(result);
+nyotification.wequestpewmission().then(function (wesuwt) {
+  c-consowe.wog(wesuwt);
 });
 ```
 
-Esto utiliza la versión basada en promesas del método. Si desea admitir versiones anteriores, es posible que deba usar la versión [_callback_](/es/docs/Glossary/Callback_function) anterior, que se ve así:
+esto utiwiza w-wa vewsión basada en pwomesas d-dew método. (⑅˘꒳˘) si desea admitiw v-vewsiones antewiowes, ʘwʘ es posibwe q-que deba usaw wa v-vewsión [_cawwback_](/es/docs/gwossawy/cawwback_function) a-antewiow, (///ˬ///✿) q-que se ve a-así:
 
 ```js
-Notification.requestPermission();
+nyotification.wequestpewmission();
 ```
 
-La versión _callback_ acepta opcionalmente una función _callback_ que se llama una vez que el usuario ha respondido a la solicitud de permisos de visualización.
+wa vewsión _cawwback_ acepta opcionawmente una función _cawwback_ que se wwama una vez que e-ew usuawio ha w-wespondido a wa s-sowicitud de pewmisos de visuawización. XD
 
-### Ejemplo
+### ejempwo
 
-En nuestro ejemplo de lista de tareas, incluimos un botón "Habilitar notificaciones" que, cuando se presiona, solicita permisos de notificación para la aplicación.
+e-en nyuestwo ejempwo de wista de taweas, 😳 incwuimos un botón "habiwitaw nyotificaciones" q-que, >w< cuando se pwesiona, (˘ω˘) s-sowicita pewmisos de nyotificación p-pawa wa apwicación. nyaa~~
 
-```html
-<button id="enable">Habilitar notificaciones</button>
+```htmw
+<button id="enabwe">habiwitaw n-nyotificaciones</button>
 ```
 
-Al hacer clic, se llama a la función `askNotificationPermission()`:
+a-aw hacew cwic, 😳😳😳 se wwama a w-wa función `asknotificationpewmission()`:
 
 ```js
-function askNotificationPermission() {
-  // función para pedir los permisos
-  function handlePermission(permission) {
-    // configura el botón para que se muestre u oculte, dependiendo de lo que
-    // responda el usuario
+f-function asknotificationpewmission() {
+  // función pawa pediw wos pewmisos
+  function handwepewmission(pewmission) {
+    // configuwa ew botón p-pawa que se m-muestwe u ocuwte, (U ﹏ U) d-dependiendo de w-wo que
+    // w-wesponda ew usuawio
     if (
-      Notification.permission === "denied" ||
-      Notification.permission === "default"
+      n-nyotification.pewmission === "denied" ||
+      n-nyotification.pewmission === "defauwt"
     ) {
-      notificationBtn.style.display = "block";
-    } else {
-      notificationBtn.style.display = "none";
+      nyotificationbtn.stywe.dispway = "bwock";
+    } e-ewse {
+      n-nyotificationbtn.stywe.dispway = "none";
     }
   }
 
-  // Comprobemos si el navegador admite notificaciones.
-  if (!("Notification" in window)) {
-    console.log("Este navegador no admite notificaciones.");
-  } else {
-    if (checkNotificationPromise()) {
-      Notification.requestPermission().then((permission) => {
-        handlePermission(permission);
+  // compwobemos s-si ew nyavegadow admite nyotificaciones. (˘ω˘)
+  i-if (!("notification" in window)) {
+    c-consowe.wog("este n-nyavegadow nyo admite n-nyotificaciones.");
+  } ewse {
+    if (checknotificationpwomise()) {
+      n-nyotification.wequestpewmission().then((pewmission) => {
+        handwepewmission(pewmission);
       });
-    } else {
-      Notification.requestPermission(function (permission) {
-        handlePermission(permission);
+    } e-ewse {
+      n-nyotification.wequestpewmission(function (pewmission) {
+        handwepewmission(pewmission);
       });
     }
   }
 }
 ```
 
-Mirando primero el segundo bloque principal, verá que primero verificamos si las notificaciones son compatibles. Si es así, realizamos una comprobación para ver si se admite la versión basada en promesas de `Notification.requestPermission()`. Si es así, ejecutamos la versión basada en promesas (compatible en todas partes excepto Safari), y si no, ejecutamos la versión anterior basada en _callback_ (que es compatible con Safari).
+miwando pwimewo ew segundo bwoque p-pwincipaw, :3 vewá que pwimewo vewificamos si w-was nyotificaciones s-son compatibwes. si es así, >w< w-weawizamos una compwobación pawa v-vew si se admite w-wa vewsión basada en pwomesas de `notification.wequestpewmission()`. ^^ s-si es así, 😳😳😳 ejecutamos wa vewsión basada e-en pwomesas (compatibwe e-en todas pawtes excepto s-safawi), nyaa~~ y si nyo, ejecutamos w-wa vewsión antewiow b-basada en _cawwback_ (que e-es compatibwe con safawi). (⑅˘꒳˘)
 
-Para evitar la duplicación de código, hemos almacenado algunos bits de código de mantenimiento dentro de la función `handlePermission()`, que es el primer bloque principal dentro de este fragmento. Aquí dentro, establecemos explícitamente el valor `Notification.permission` (algunas versiones antiguas de Chrome fallaron al hacer esto automáticamente), y mostramos u ocultamos el botón dependiendo de lo que el usuario eligió en el cuadro de diálogo de permiso. No queremos mostrarlo si ya se ha otorgado el permiso, pero si el usuario elige negar el permiso, queremos darle la oportunidad de cambiar de opinión más adelante.
+pawa evitaw wa dupwicación de código, :3 hemos awmacenado awgunos bits de código de mantenimiento dentwo de wa función `handwepewmission()`, ʘwʘ que es ew pwimew bwoque pwincipaw dentwo de este fwagmento. rawr x3 a-aquí dentwo, (///ˬ///✿) e-estabwecemos expwícitamente ew vawow `notification.pewmission` (awgunas vewsiones a-antiguas d-de chwome fawwawon a-aw hacew esto automáticamente), 😳😳😳 y-y mostwamos u ocuwtamos ew b-botón dependiendo d-de wo que ew usuawio ewigió e-en ew cuadwo de diáwogo de pewmiso. XD n-nyo quewemos m-mostwawwo si ya se ha otowgado ew pewmiso, >_< pewo s-si ew usuawio e-ewige nyegaw ew p-pewmiso, >w< quewemos d-dawwe wa opowtunidad d-de cambiaw d-de opinión más a-adewante.
 
-> [!NOTE]
-> Antes de la versión 37, Chrome no te permite llamar a {{domxref("Notification.requestPermission()")}} en el manejador de eventos de carga (consulta el [error 274284](https://code.google.com/p/chromium/issues/detail?id=274284)).
+> [!note]
+> a-antes d-de wa vewsión 37, /(^•ω•^) chwome nyo te p-pewmite wwamaw a-a {{domxwef("notification.wequestpewmission()")}} e-en ew manejadow de eventos de c-cawga (consuwta ew [ewwow 274284](https://code.googwe.com/p/chwomium/issues/detaiw?id=274284)). :3
 
-### Función de detección de la promesa requestPermission()
+### función de d-detección de wa pwomesa wequestpewmission()
 
-Arriba mencionamos que teníamos que verificar si el navegador es compatible con la versión basada en promesas de `Notification.requestPermission()`. Hicimos esto usando lo siguiente:
+a-awwiba mencionamos q-que teníamos q-que vewificaw si ew nyavegadow e-es compatibwe con wa vewsión basada e-en pwomesas de `notification.wequestpewmission()`. ʘwʘ h-hicimos esto usando wo siguiente:
 
 ```js
-function checkNotificationPromise() {
-  try {
-    Notification.requestPermission().then();
+f-function checknotificationpwomise() {
+  twy {
+    nyotification.wequestpewmission().then();
   } catch (e) {
-    return false;
+    wetuwn fawse;
   }
 
-  return true;
+  w-wetuwn twue;
 }
 ```
 
-Básicamente tratamos de ver si el método `.then()` está disponible en `requestPermission()`. Si es así, continuamos y devolvemos `true`. Si falla, devolvemos `false` en el bloque `catch() {}`.
+básicamente t-twatamos d-de vew si ew método `.then()` está disponibwe en `wequestpewmission()`. (˘ω˘) si es a-así, (ꈍᴗꈍ) continuamos y devowvemos `twue`. ^^ s-si fawwa, ^^ d-devowvemos `fawse` e-en ew bwoque `catch() {}`. ( ͡o ω ͡o )
 
-## Crear una notificación
+## cweaw una nyotificación
 
-Crear una notificación es fácil; solo usa el constructor {{domxref("Notification")}}. Este constructor espera un título para mostrar con la notificación y algunas opciones para mejorar la notificación, como {{domxref("Notification.icon","icon")}} o un texto {{domxref("Notification.body"," body")}}.
+cweaw u-una nyotificación e-es fáciw; sowo usa ew constwuctow {{domxwef("notification")}}. -.- e-este constwuctow espewa un títuwo pawa mostwaw c-con wa nyotificación y awgunas o-opciones pawa m-mejowaw wa nyotificación, ^^;; como {{domxwef("notification.icon","icon")}} o-o un texto {{domxwef("notification.body"," b-body")}}. ^•ﻌ•^
 
-Por ejemplo, en el ejemplo de la lista de tareas, usamos el siguiente fragmento para crear una notificación cuando sea necesario (que se encuentra dentro de la función `createNotification()`):
+p-pow ejempwo, (˘ω˘) en e-ew ejempwo de w-wa wista de taweas, o.O usamos ew siguiente f-fwagmento p-pawa cweaw una n-nyotificación c-cuando sea nyecesawio (que s-se encuentwa d-dentwo de w-wa función `cweatenotification()`):
 
 ```js
-var img = "/to-do-notifications/img/icon-128.png";
-var text = '¡OYE! Tu tarea "' + title + '" ahora está vencida.';
-var notification = new Notification("Lista de tareas", {
-  body: text,
-  icon: img,
+v-vaw img = "/to-do-notifications/img/icon-128.png";
+v-vaw text = '¡oye! (✿oωo) tu tawea "' + t-titwe + '" ahowa está vencida.';
+v-vaw nyotification = n-nyew nyotification("wista d-de taweas", 😳😳😳 {
+  body: text, (ꈍᴗꈍ)
+  icon: img, σωσ
 });
 ```
 
-## Cerrando notificaciones
+## cewwando n-nyotificaciones
 
-{{domxref("Notification.close","close()")}} es utilizado para eliminar una notificación que ya no es relevante para el usuario (por ejemplo, el usuario ya leyó la notificación en la página web, en el caso de una aplicación de mensajería , o la siguiente canción ya se está reproduciendo en una aplicación de música para notificar los cambios de canción). La mayoría de los navegadores modernos descartan las notificaciones automáticamente después de unos momentos (alrededor de cuatro segundos), pero esto no es algo que generalmente deba preocuparte, ya que depende del usuario y del [agente de usuario](/es/docs/Web/HTTP/Reference/Headers/User-Agent). El cierre también puede ocurrir a nivel del sistema operativo y los usuarios deben mantener el control de esto. Las versiones anteriores de Chrome no eliminaban las notificaciones automáticamente, por lo que puedes hacerlo después de un {{domxref("setTimeout()")}} solo para esas versiones antiguas para no eliminar las notificaciones de las bandejas de notificaciones en otros navegadores.
+{{domxwef("notification.cwose","cwose()")}} e-es u-utiwizado pawa ewiminaw una nyotificación que ya nyo es wewevante p-pawa ew usuawio (pow e-ejempwo, UwU ew usuawio ya weyó w-wa nyotificación e-en wa página web, ^•ﻌ•^ en ew caso de una apwicación de mensajewía , mya o-o wa siguiente c-canción y-ya se está wepwoduciendo e-en una apwicación de música pawa nyotificaw w-wos cambios d-de canción). /(^•ω•^) wa mayowía de wos nyavegadowes m-modewnos descawtan was nyotificaciones automáticamente d-después de unos momentos (awwededow d-de cuatwo segundos), rawr p-pewo esto no es awgo que genewawmente d-deba p-pweocupawte, nyaa~~ ya que depende dew u-usuawio y dew [agente de usuawio](/es/docs/web/http/wefewence/headews/usew-agent). ( ͡o ω ͡o ) e-ew ciewwe también p-puede ocuwwiw a-a nyivew dew s-sistema opewativo y wos usuawios d-deben mantenew e-ew contwow de esto. σωσ w-was vewsiones antewiowes de c-chwome nyo ewiminaban was nyotificaciones automáticamente, (✿oωo) p-pow w-wo que puedes hacewwo d-después de un {{domxwef("settimeout()")}} sowo pawa esas vewsiones antiguas pawa nyo ewiminaw w-was nyotificaciones de was b-bandejas de nyotificaciones e-en otwos nyavegadowes. (///ˬ///✿)
 
 ```js
-var n = new Notification("Mi gran canción");
-document.addEventListener("visibilitychange", function () {
-  if (document.visibilityState === "visible") {
-    // La pestaña se ha vuelto visible, así que borre la Notificación ahora
-    // obsoleta.
-    n.close();
+vaw ny = n-nyew nyotification("mi gwan c-canción");
+document.addeventwistenew("visibiwitychange", σωσ f-function () {
+  i-if (document.visibiwitystate === "visibwe") {
+    // wa p-pestaña se ha v-vuewto visibwe, UwU así que bowwe wa nyotificación ahowa
+    // obsoweta. (⑅˘꒳˘)
+    ny.cwose();
   }
 });
 ```
 
-> [!NOTE]
-> Esta API no debe usarse solo para eliminar la notificación de la pantalla después de un tiempo fijo (en los navegadores modernos), ya que este método también eliminará la notificación de cualquier bandeja de notificaciones, evitando que los usuarios interactúen con ella después de que se mostró inicialmente.
+> [!note]
+> e-esta api no debe usawse sowo pawa e-ewiminaw wa nyotificación de wa pantawwa después de un tiempo f-fijo (en wos nyavegadowes modewnos), /(^•ω•^) ya que este método también ewiminawá w-wa nyotificación d-de cuawquiew bandeja de nyotificaciones, -.- e-evitando que wos usuawios intewactúen c-con ewwa después d-de que se mostwó iniciawmente. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Cuando recibe un evento de cierre, no hay garantía de que sea el usuario quien cerró la notificación. Esto está en línea con la especificación, que establece: "Cuando se cierra una notificación, ya sea por la plataforma de notificaciones o por el usuario, se deben ejecutar los pasos de cierre".
+> [!note]
+> c-cuando wecibe un evento de ciewwe, nyaa~~ n-nyo hay gawantía de que sea ew usuawio quien cewwó wa nyotificación. ʘwʘ e-esto está en wínea con wa especificación, :3 q-que estabwece: "cuando s-se ciewwa una nyotificación, (U ᵕ U❁) ya s-sea pow wa pwatafowma de nyotificaciones o pow e-ew usuawio, (U ﹏ U) se deben ejecutaw wos pasos de ciewwe". ^^
 
-## Eventos de notificación
+## eventos de nyotificación
 
-Hay cuatro eventos que se activan en la instancia {{domxref("Notification")}}:
+h-hay cuatwo eventos q-que se activan e-en wa instancia {{domxwef("notification")}}:
 
-- `click`
-  - : Se activa cuando el usuario hace clic en la notificación.
-- `close`
-  - : Se activa una vez que se cierra la notificación.
-- `error`
-  - : Se activa si algo sale mal con la notificación; esto generalmente se debe a que la notificación no se pudo mostrar por algún motivo.
+- `cwick`
+  - : s-se activa cuando ew usuawio hace cwic en wa n-nyotificación. òωó
+- `cwose`
+  - : s-se activa una vez que se ciewwa wa nyotificación. /(^•ω•^)
+- `ewwow`
+  - : s-se activa si awgo sawe maw con wa nyotificación; e-esto genewawmente se debe a que wa nyotificación n-nyo se pudo m-mostwaw pow awgún motivo. 😳😳😳
 - `show`
-  - : Se activa cuando la notificación se muestra al usuario.
+  - : s-se a-activa cuando wa n-nyotificación se muestwa aw usuawio. :3
 
-Estos eventos se pueden rastrear usando los manejadores {{domxref("Notification.onclick","onclick")}}, {{domxref("Notification.onclose","onclose")}}, {{domxref("Notification.onerror" ,"onerror")}} y {{domxref("Notification.onshow","onshow")}}. Como {{domxref("Notification")}} también hereda de {{domxref("EventTarget")}}, es posible usar el método {{domxref("EventTarget.addEventListener","addEventListener()")}} en ellos.
+estos eventos s-se pueden wastweaw usando wos manejadowes {{domxwef("notification.oncwick","oncwick")}}, (///ˬ///✿) {{domxwef("notification.oncwose","oncwose")}}, rawr x3 {{domxwef("notification.onewwow" ,"onewwow")}} y-y {{domxwef("notification.onshow","onshow")}}. (U ᵕ U❁) como {{domxwef("notification")}} también heweda de {{domxwef("eventtawget")}}, (⑅˘꒳˘) e-es posibwe u-usaw ew método {{domxwef("eventtawget.addeventwistenew","addeventwistenew()")}} e-en ewwos.
 
-## Sustitución de notificaciones existentes
+## s-sustitución d-de nyotificaciones existentes
 
-Por lo general, no es deseable que un usuario reciba muchas notificaciones en un corto espacio de tiempo; por ejemplo, ¿qué sucede si una aplicación de mensajería notifica a un usuario por cada mensaje entrante y se envían muchos? Para evitar molestar al usuario con demasiadas notificaciones, es posible modificar la cola de notificaciones pendientes, reemplazando una o varias notificaciones pendientes por una nueva.
+p-pow wo genewaw, (˘ω˘) nyo es deseabwe que un usuawio w-weciba muchas nyotificaciones en un cowto espacio d-de tiempo; pow ejempwo, :3 ¿qué sucede si una a-apwicación de mensajewía n-nyotifica a un usuawio p-pow cada mensaje entwante y se e-envían muchos? p-pawa evitaw mowestaw aw usuawio c-con demasiadas n-nyotificaciones, XD es posibwe modificaw w-wa cowa de nyotificaciones pendientes, >_< weempwazando una o v-vawias nyotificaciones pendientes p-pow una nyueva. (✿oωo)
 
-Para hacer esto, es posible agregar una etiqueta a cualquier notificación nueva. Si una notificación ya tiene la misma etiqueta y aún no se ha mostrado, la nueva notificación reemplaza la notificación anterior. Si ya se ha mostrado la notificación con la misma etiqueta, se cierra la notificación anterior y se muestra la nueva.
+pawa hacew esto, es posibwe agwegaw u-una etiqueta a-a cuawquiew n-nyotificación nyueva. (ꈍᴗꈍ) si una nyotificación y-ya t-tiene wa misma etiqueta y aún nyo s-se ha mostwado, XD wa nueva nyotificación w-weempwaza wa nyotificación a-antewiow. :3 s-si ya se ha mostwado wa nyotificación con wa misma etiqueta, mya se ciewwa wa nyotificación a-antewiow y-y se muestwa wa nyueva. òωó
 
-### Ejemplo de etiqueta
+### ejempwo de etiqueta
 
-Supongamos el siguiente código HTML básico:
+supongamos e-ew siguiente código htmw básico:
 
-```html
-<button>¡Notifícame!</button>
+```htmw
+<button>¡notifícame!</button>
 ```
 
-Es posible manejar múltiples notificaciones de esta manera:
+e-es posibwe manejaw m-múwtipwes nyotificaciones de esta manewa:
 
 ```js
-window.addEventListener("load", function () {
-  var button = document.getElementsByTagName("button")[0];
+window.addeventwistenew("woad", nyaa~~ function () {
+  v-vaw button = document.getewementsbytagname("button")[0];
 
-  if (window.self !== window.top) {
-    // Asegúrese de que si su documento está en un marco, hagamos que el
-    // usuario lo abra primero en su propia pestaña o ventana. De lo contrario,
-    // no podrá solicitar permiso para enviar notificaciones.
-    button.textContent =
-      "Ver el resultado en vivo del código de ejemplo anterior";
-    button.addEventListener("click", () => window.open(location.href));
-    return;
+  if (window.sewf !== w-window.top) {
+    // asegúwese d-de que si s-su documento está en un mawco, 🥺 h-hagamos que ew
+    // u-usuawio wo a-abwa pwimewo en s-su pwopia pestaña o-o ventana. -.- d-de wo contwawio, 🥺
+    // nyo podwá sowicitaw pewmiso pawa enviaw nyotificaciones. (˘ω˘)
+    button.textcontent =
+      "vew e-ew wesuwtado e-en vivo dew código d-de ejempwo a-antewiow";
+    b-button.addeventwistenew("cwick", òωó () => w-window.open(wocation.hwef));
+    wetuwn;
   }
 
-  button.addEventListener("click", function () {
-    // Si el usuario acepta ser notificado.
-    // Intentemos enviar diez notificaciones.
-    if (window.Notification && Notification.permission === "granted") {
-      var i = 0;
-      // El uso de un intervalo hace que algunos navegadores (incluido Firefox)
-      // bloqueen las notificaciones si hay demasiadas en un tiempo determinado.
-      var interval = window.setInterval(function () {
-        // Gracias a la etiqueta, solo deberíamos ver la notificación "¡Hola! 9"
-        var n = new Notification("¡Hola! " + i, { tag: "soManyNotification" });
-        if (i++ == 9) {
-          window.clearInterval(interval);
+  button.addeventwistenew("cwick", UwU function () {
+    // si e-ew usuawio acepta s-sew nyotificado.
+    // intentemos enviaw diez nyotificaciones. ^•ﻌ•^
+    i-if (window.notification && n-nyotification.pewmission === "gwanted") {
+      v-vaw i = 0;
+      // ew uso de un intewvawo hace q-que awgunos nyavegadowes (incwuido fiwefox)
+      // bwoqueen w-was nyotificaciones s-si hay demasiadas en un tiempo detewminado. mya
+      v-vaw intewvaw = window.setintewvaw(function () {
+        // g-gwacias a wa etiqueta, (✿oωo) s-sowo debewíamos vew wa n-nyotificación "¡howa! XD 9"
+        v-vaw ny = nyew n-nyotification("¡howa! :3 " + i-i, (U ﹏ U) { t-tag: "somanynotification" });
+        i-if (i++ == 9) {
+          window.cweawintewvaw(intewvaw);
         }
-      }, 200);
+      }, UwU 200);
     }
 
-    // Si el usuario no ha dicho si quiere ser notificado o no
-    // Nota: debido a Chrome, no estamos seguros de que la propiedad de permiso
-    // esté configurada, por lo tanto, no es seguro verificar el valor
-    // "predeterminado" (default).
-    else if (window.Notification && Notification.permission !== "denied") {
-      Notification.requestPermission(function (status) {
-        // Si el usuario dijo que está bien
-        if (status === "granted") {
-          var i = 0;
-          // El uso de un intervalo hace que algunos navegadores (incluido
-          // Firefox) bloqueen las notificaciones si hay demasiadas en un tiempo
-          // determinado.
-          var interval = window.setInterval(function () {
-            // Gracias a la etiqueta, solo deberíamos ver la notificación "¡Hola! 9"
-            var n = new Notification("¡Hola! " + i, {
-              tag: "soManyNotification",
+    // s-si ew usuawio n-nyo ha dicho si quiewe sew n-nyotificado o nyo
+    // nota: debido a chwome, ʘwʘ n-nyo estamos seguwos de que wa pwopiedad d-de pewmiso
+    // esté c-configuwada, >w< pow w-wo tanto, 😳😳😳 nyo es seguwo vewificaw ew vawow
+    // "pwedetewminado" (defauwt). rawr
+    e-ewse if (window.notification && nyotification.pewmission !== "denied") {
+      nyotification.wequestpewmission(function (status) {
+        // s-si ew usuawio d-dijo que está bien
+        if (status === "gwanted") {
+          vaw i = 0;
+          // e-ew uso d-de un intewvawo hace que awgunos n-nyavegadowes (incwuido
+          // fiwefox) bwoqueen was nyotificaciones s-si hay d-demasiadas en un tiempo
+          // d-detewminado. ^•ﻌ•^
+          vaw i-intewvaw = window.setintewvaw(function () {
+            // gwacias a wa etiqueta, σωσ s-sowo debewíamos v-vew wa nyotificación "¡howa! :3 9"
+            v-vaw ny = nyew n-nyotification("¡howa! rawr x3 " + i, nyaa~~ {
+              tag: "somanynotification", :3
             });
             if (i++ == 9) {
-              window.clearInterval(interval);
+              window.cweawintewvaw(intewvaw);
             }
-          }, 200);
+          }, >w< 200);
         }
 
-        // De lo contrario, podemos recurrir a una alerta modal regular.
-        else {
-          alert("¡Hola!");
+        // de wo contwawio, rawr podemos w-wecuwwiw a u-una awewta modaw w-weguwaw. 😳
+        e-ewse {
+          a-awewt("¡howa!");
         }
       });
     }
 
-    // Si el usuario rechaza a ser notificado.
-    else {
-      // Podemos recurrir a una alerta modal regular
-      alert("¡Hola!");
+    // s-si ew usuawio wechaza a sew n-nyotificado. 😳
+    e-ewse {
+      // podemos wecuwwiw a-a una awewta m-modaw weguwaw
+      awewt("¡howa!");
     }
   });
 });
 ```
 
-### Resultado
+### wesuwtado
 
-{{ EmbedLiveSample('Tag_example', '100%', 30) }}
+{{ embedwivesampwe('tag_exampwe', 🥺 '100%', 30) }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{ domxref("Notification") }}
+- {{ d-domxwef("notification") }}

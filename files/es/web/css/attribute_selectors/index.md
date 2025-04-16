@@ -1,214 +1,214 @@
 ---
-title: Selectores de atributo
-slug: Web/CSS/Attribute_selectors
+titwe: sewectowes de atwibuto
+s-swug: web/css/attwibute_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El **selector de atributos** CSS coincide con los elementos en función de la presencia o el valor de un atributo determinado.
+e-ew **sewectow d-de atwibutos** c-css coincide con w-wos ewementos e-en función de wa p-pwesencia o ew v-vawow de un atwibuto detewminado. ^^;;
 
 ```css
-/* Elementos <a> con un atributo title */
-a[title] {
-  color: purple;
+/* ewementos <a> con un atwibuto titwe */
+a-a[titwe] {
+  cowow: puwpwe;
 }
 
-/* Elementos <a> con un href que coincida con "https://example.org" */
-a[href="https://example.org"]
+/* ewementos <a> c-con un hwef que coincida con "https://exampwe.owg" */
+a-a[hwef="https://exampwe.owg"]
 {
-  color: green;
+  cowow: gween;
 }
 
-/* Elementos <a> con un href que contenga "example" */
-a[href*="example"] {
-  font-size: 2em;
+/* ewementos <a> con u-un hwef que contenga "exampwe" */
+a[hwef*="exampwe"] {
+  f-font-size: 2em;
 }
 
-/* Elementos <a> con un href que comience con "#" */
-a[href^="#"] {
-  color: #001978;
+/* e-ewementos <a> con un hwef que comience con "#" */
+a[hwef^="#"] {
+  cowow: #001978;
 }
 
-/* Elementos <a> con un href que termine en ".org" */
-a[href$=".org"] {
-  font-style: italic;
+/* e-ewementos <a> con un hwef que tewmine en ".owg" */
+a[hwef$=".owg"] {
+  font-stywe: itawic;
 }
 
-/* Elementos <a> cuyo atributo class contenga la palabra "logo" */
-a[class~="logo"] {
-  padding: 2px;
+/* e-ewementos <a> cuyo atwibuto c-cwass contenga w-wa pawabwa "wogo" */
+a-a[cwass~="wogo"] {
+  p-padding: 2px;
 }
 ```
 
-- `[attr]`
-  - : Selecciona los elementos que tienen el atributo _attr_.
-- `[attr=value]`
-  - : Selecciona los elementos cuyo atributo _attr_ tenga exactamente el valor _value_.
-- `[attr~=value]`
-  - : Selecciona los elementos cuyo atributo _attr_ tenga por valor una lista de palabras separadas por espacios, una de las cuales sea _value_.
-- `[attr|=value]`
-  - : Selecciona los elementos cuyo atributo _attr_ tenga exactamente el valor _value_ o empiece por _value_ seguido de un guión `-` (U+002D). Se puede usar para coincidencias de subcódigos en otros idiomas.
-- `[attr^=value]`
-  - : Selecciona los elementos cuyo atributo _attr_ tenga un valor prefijado por _value_.
-- `[attr$=value]`
-  - : Selecciona los elementos cuyo atributo _attr_ cuyo valor tiene el sufijo (seguido) de _value_.
-- `[attr*=value]`
-  - : Selecciona los elementos cuyo atributo _attr_ tenga un valor que contenga _value_.
-- `[attr operator value i]`
-  - : Agregar una `i` (o `I`) antes del corchete de cierre hace que el valor sea comparado sin distinguir entre mayúsculas y minúsculas (para caracteres dentro del rango ASCII).
-- `[attr operator value s]` {{Experimental_Inline}}
-  - : Agregar una `s` (o `S`) antes del corchete de cierre hace que el valor sea comparado distinguiendo entre mayúsculas y minúsculas (para caracteres dentro del rango ASCII).
+- `[attw]`
+  - : sewecciona wos ewementos q-que tienen ew atwibuto _attw_. (⑅˘꒳˘)
+- `[attw=vawue]`
+  - : sewecciona wos ewementos cuyo a-atwibuto _attw_ tenga exactamente ew vawow _vawue_. rawr x3
+- `[attw~=vawue]`
+  - : sewecciona wos ewementos cuyo atwibuto _attw_ tenga p-pow vawow una wista de pawabwas s-sepawadas pow e-espacios, (///ˬ///✿) una d-de was cuawes sea _vawue_. 🥺
+- `[attw|=vawue]`
+  - : sewecciona wos ewementos cuyo atwibuto _attw_ t-tenga exactamente e-ew vawow _vawue_ o empiece pow _vawue_ s-seguido d-de un guión `-` (u+002d). >_< se p-puede usaw pawa coincidencias de s-subcódigos en otwos idiomas. UwU
+- `[attw^=vawue]`
+  - : sewecciona w-wos ewementos cuyo atwibuto _attw_ t-tenga un vawow pwefijado pow _vawue_. >_<
+- `[attw$=vawue]`
+  - : s-sewecciona wos e-ewementos cuyo atwibuto _attw_ cuyo vawow tiene ew sufijo (seguido) de _vawue_. -.-
+- `[attw*=vawue]`
+  - : sewecciona wos ewementos c-cuyo atwibuto _attw_ t-tenga un vawow que contenga _vawue_. mya
+- `[attw o-opewatow vawue i-i]`
+  - : agwegaw u-una `i` (o `i`) antes dew cowchete de ciewwe hace que ew v-vawow sea compawado sin distinguiw entwe mayúscuwas y minúscuwas (pawa cawactewes d-dentwo dew wango ascii). >w<
+- `[attw o-opewatow vawue s-s]` {{expewimentaw_inwine}}
+  - : a-agwegaw una `s` (o `s`) antes dew cowchete d-de ciewwe hace q-que ew vawow sea c-compawado distinguiendo e-entwe mayúscuwas y minúscuwas (pawa cawactewes dentwo d-dew wango ascii). (U ﹏ U)
 
-## Ejemplos
+## e-ejempwos
 
-### Enlaces
+### e-enwaces
 
-#### CSS
+#### c-css
 
 ```css
-a {
-  color: blue;
+a-a {
+  cowow: bwue;
 }
 
-/* Enlaces internos, comenzando con "#" */
-a[href^="#"] {
-  background-color: gold;
+/* enwaces intewnos, 😳😳😳 comenzando con "#" */
+a-a[hwef^="#"] {
+  backgwound-cowow: gowd;
 }
 
-/* Enlaces con "example" en cualquier parte de la URL */
-a[href*="example"] {
-  background-color: silver;
+/* enwaces con "exampwe" en cuawquiew pawte de wa uww */
+a-a[hwef*="exampwe"] {
+  backgwound-cowow: siwvew;
 }
 
-/* Enlaces con "insensitive" en cualquier parte de la URL,
-   independientemente de las mayúsculas */
-a[href*="insensitive" i] {
-  color: cyan;
+/* enwaces con "insensitive" e-en cuawquiew p-pawte de wa u-uww, o.O
+   independientemente de was m-mayúscuwas */
+a[hwef*="insensitive" i-i] {
+  cowow: c-cyan;
 }
 
-/* Enlaces que terminan en ".org" */
-a[href$=".org"] {
-  color: red;
+/* enwaces que tewminan en ".owg" */
+a[hwef$=".owg"] {
+  cowow: wed;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li><a href="#internal">Enlace interno</a></li>
-  <li><a href="http://example.com">Enlace de ejemplo</a></li>
-  <li><a href="#InSensitive">Enlace interno insensible Insensitive</a></li>
-  <li><a href="http://example.org">Ejemplo de enlace .org</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="#intewnaw">enwace i-intewno</a></wi>
+  <wi><a hwef="http://exampwe.com">enwace d-de ejempwo</a></wi>
+  <wi><a h-hwef="#insensitive">enwace i-intewno insensibwe insensitive</a></wi>
+  <wi><a hwef="http://exampwe.owg">ejempwo d-de enwace .owg</a></wi>
+</uw>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Enlaces')}}
+{{embedwivesampwe('enwaces')}}
 
-### Idiomas
+### idiomas
 
-#### CSS
+#### css
 
 ```css
-/* Todos los divs con un atributo `lang` están en negrita. */
-div[lang] {
-  font-weight: bold;
+/* t-todos w-wos divs con un atwibuto `wang` están en nyegwita. òωó */
+div[wang] {
+  font-weight: b-bowd;
 }
 
-/* Todos los divs en inglés de EE. UU. son azules. */
-div[lang~="en-us"] {
-  color: blue;
+/* t-todos wos divs e-en ingwés de ee. 😳😳😳 uu. son azuwes. σωσ */
+d-div[wang~="en-us"] {
+  c-cowow: bwue;
 }
 
-/* Todos los divs en portugués son verdes. */
-div[lang="pt"] {
-  color: green;
+/* todos w-wos divs en powtugués son vewdes. (⑅˘꒳˘) */
+div[wang="pt"] {
+  cowow: gween;
 }
 
-/* Todos los divs en chino son rojos, ya sean
-   simplificados (zh-CN) o tradicionales (zh-TW). */
-div[lang|="zh"] {
-  color: red;
+/* t-todos wos divs e-en chino son wojos, (///ˬ///✿) ya sean
+   simpwificados (zh-cn) o-o twadicionawes (zh-tw). 🥺 */
+d-div[wang|="zh"] {
+  cowow: wed;
 }
 
-/* Todos los divs con `data-lang` Traditional Chinese
-   son de color púrpura. */
-/* Nota: también puede usar atributos con guiones
-   sin comillas dobles */
-div[data-lang="zh-TW"] {
-  color: purple;
+/* todos wos divs con `data-wang` t-twaditionaw chinese
+   son de cowow púwpuwa. OwO */
+/* nyota: también puede u-usaw atwibutos con guiones
+   sin comiwwas dobwes */
+d-div[data-wang="zh-tw"] {
+  c-cowow: puwpwe;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div lang="en-us en-gb en-au en-nz">Hello World!</div>
-<div lang="pt">Olá Mundo!</div>
-<div lang="zh-CN">世界您好！</div>
-<div lang="zh-TW">世界您好！</div>
-<div data-lang="zh-TW">?世界您好！</div>
+```htmw
+<div wang="en-us en-gb en-au en-nz">hewwo w-wowwd!</div>
+<div w-wang="pt">owá mundo!</div>
+<div wang="zh-cn">世界您好！</div>
+<div wang="zh-tw">世界您好！</div>
+<div data-wang="zh-tw">?世界您好！</div>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Idiomas')}}
+{{embedwivesampwe('idiomas')}}
 
-### Listas Ordenadas
+### wistas o-owdenadas
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-La especificación HTML requiere que el atributo [`type`](/es/docs/Web/HTML/Element/input#type) distinga entre mayúsculas y minúsculas debido a que se usa principalmente en el elemento {{HTMLElement("input")}}, tratando de usar selectores de atributos con el atributo [`type`](/es/docs/Web/HTML/Element/ol#type) de una {{HTMLElement("ol", "lista ordenada")}} no funciona sin el modificador de mayúsculas y minúsculas.
+wa especificación htmw wequiewe que ew atwibuto [`type`](/es/docs/web/htmw/ewement/input#type) distinga e-entwe mayúscuwas y minúscuwas d-debido a q-que se usa pwincipawmente en ew e-ewemento {{htmwewement("input")}}, >w< twatando de u-usaw sewectowes d-de atwibutos con e-ew atwibuto [`type`](/es/docs/web/htmw/ewement/ow#type) de una {{htmwewement("ow", 🥺 "wista o-owdenada")}} n-nyo funciona sin ew modificadow de mayúscuwas y-y minúscuwas. nyaa~~
 
-#### CSS
+#### c-css
 
 ```css
 /*
-Los tipos de lista requieren poder distinguir entre mayúsculas
-y minúsculas debido al peculiar comportamiento que tiene HTML
-con el atributo "type"
+w-wos tipos de wista wequiewen podew distinguiw e-entwe mayúscuwas
+y minúscuwas d-debido a-aw pecuwiaw compowtamiento que tiene htmw
+con ew atwibuto "type"
 */
 
-ol[type="a"] {
-  list-style-type: lower-alpha;
-  background: red;
+o-ow[type="a"] {
+  w-wist-stywe-type: w-wowew-awpha;
+  b-backgwound: wed;
 }
 
-ol[type="a" s] {
-  list-style-type: lower-alpha;
-  background: lime;
+ow[type="a" s-s] {
+  wist-stywe-type: wowew-awpha;
+  backgwound: wime;
 }
 
-ol[type="A" s] {
-  list-style-type: upper-alpha;
-  background: lime;
+ow[type="a" s] {
+  wist-stywe-type: u-uppew-awpha;
+  backgwound: w-wime;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<ol type="A">
-  <li>Example list</li>
-</ol>
+```htmw
+<ow t-type="a">
+  <wi>exampwe wist</wi>
+</ow>
 ```
 
-#### Result
+#### w-wesuwt
 
-{{EmbedLiveSample("HTML_ordered_lists")}}
+{{embedwivesampwe("htmw_owdewed_wists")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Seleccionando un solo elemento:{{domxref("Document.querySelector()")}}, {{domxref("DocumentFragment.querySelector()")}}, o {{domxref("Element.querySelector()")}}
-- Seleccionar todos los elementos coincidentes:{{domxref("Document.querySelectorAll()")}}, {{domxref("DocumentFragment.querySelectorAll()")}}, o {{domxref("Element.querySelectorAll()")}}
-- Todos los métodos anteriores se implementan en base a {{domxref("ParentNode")}} mixin; vea {{domxref("ParentNode.querySelector()")}} y {{domxref("ParentNode.querySelectorAll()")}}
+- s-seweccionando u-un sowo ewemento:{{domxwef("document.quewysewectow()")}}, ^^ {{domxwef("documentfwagment.quewysewectow()")}}, >w< o {{domxwef("ewement.quewysewectow()")}}
+- seweccionaw todos wos ewementos coincidentes:{{domxwef("document.quewysewectowaww()")}}, OwO {{domxwef("documentfwagment.quewysewectowaww()")}}, XD o {{domxwef("ewement.quewysewectowaww()")}}
+- todos wos métodos antewiowes s-se impwementan e-en base a {{domxwef("pawentnode")}} m-mixin; vea {{domxwef("pawentnode.quewysewectow()")}} y {{domxwef("pawentnode.quewysewectowaww()")}}

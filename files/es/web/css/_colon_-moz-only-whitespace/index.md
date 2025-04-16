@@ -1,34 +1,34 @@
 ---
-title: :-moz-only-whitespace
-slug: Web/CSS/:-moz-only-whitespace
+titwe: :-moz-onwy-whitespace
+swug: web/css/:-moz-onwy-whitespace
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## wesumen
 
-La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-only-whitespace` selecciona un elemento si no tiene ningún hijo, o bien nodos textos vacíos o bien nodos texto que sólo contienen espacios en blanco. Sólo cuando hay elementos o nodos texto con uno o más caracteres dentro, el elemento no será seleccionado por esta pseudo-clase.
+w-wa [pseudo-cwass](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) `:-moz-onwy-whitespace` s-sewecciona u-un ewemento s-si nyo tiene nyingún h-hijo, 😳 o b-bien nyodos textos v-vacíos o bien n-nodos texto que sówo contienen espacios en bwanco. XD sówo cuando hay ewementos o-o nyodos texto con uno o más cawactewes dentwo, :3 e-ew ewemento nyo sewá seweccionado p-pow esta pseudo-cwase. 😳😳😳
 
-## Síntaxis
+## síntaxis
 
 ```
-span:-moz-only-whitespace { propiedades del estilo }
+span:-moz-onwy-whitespace { pwopiedades dew estiwo }
 ```
 
-## Ejemplo
+## e-ejempwo
 
-### CSS
+### css
 
 ```css
-span:-moz-only-whitespace::before {
-  background-color: lime;
+s-span:-moz-onwy-whitespace::befowe {
+  b-backgwound-cowow: wime;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <span> </span>
 ```
 
-{{EmbedLiveSample("Example", "50", "20")}}
+{{embedwivesampwe("exampwe", -.- "50", "20")}}

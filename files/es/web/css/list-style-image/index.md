@@ -1,63 +1,63 @@
 ---
-title: list-style-image
-slug: Web/CSS/list-style-image
+titwe: wist-stywe-image
+swug: w-web/css/wist-stywe-image
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Resumen
+### w-wesumen
 
-La imagen de lista (`list-style-image`) define la imagen que será utilizada como marcador del [listado](/es/docs/Web/HTML/Element/li).
+wa imagen d-de wista (`wist-stywe-image`) d-define wa imagen q-que sewá utiwizada c-como mawcadow d-dew [wistado](/es/docs/web/htmw/ewement/wi). (✿oωo)
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("none", "ninguno") }}
-- Se aplica a: elementos con 'display: list-item'
-- {{ Cssxref("inheritance", "Valor heredado") }}: Sí
-- Porcentajes: n/a
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculado") }}: URI absoluta o `none`
+- {{ cssxwef("initiaw", (ˆ ﻌ ˆ)♡ "vawow iniciaw") }}: {{ cssxwef("none", (˘ω˘) "ninguno") }}
+- se apwica a: e-ewementos con 'dispway: wist-item'
+- {{ cssxwef("inhewitance", (⑅˘꒳˘) "vawow h-hewedado") }}: sí
+- powcentajes: n-ny/a
+- medio: {{ cssxwef("media:visuaw", (///ˬ///✿) "visuaw") }}
+- {{ cssxwef("computed vawue", 😳😳😳 "vawow c-cawcuwado") }}: uwi absowuta o-o `none`
 
-### Sintaxis
+### s-sintaxis
 
 ```
-list-style-image: <uri> | none | inherit
+wist-stywe-image: <uwi> | nyone | inhewit
 ```
 
-### Valores
+### vawowes
 
-- `uri`
-  - : directorio donde se encuentra la imagen que se utilizará como marcador.
+- `uwi`
+  - : diwectowio d-donde se encuentwa wa imagen que se utiwizawá como mawcadow.
 
-## Ejemplos
+## ejempwos
 
-### HTML
+### h-htmw
 
-```html
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-</ul>
+```htmw
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
-ul {
-  list-style-image: url("star-solid.gif");
+u-uw {
+  wist-stywe-image: uww("staw-sowid.gif");
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample('Ejemplos')}}
+{{embedwivesampwe('ejempwos')}}
 
-### Especificaciones
+### e-especificaciones
 
-- [CSS 1](https://www.w3.org/TR/CSS1#list-style-image)
-- [CSS 2.1](https://www.w3.org/TR/CSS21/generate.html#propdef-list-style-image)
-- [css3-lists](https://www.w3.org/TR/css3-lists/#list-style-image)
+- [css 1](https://www.w3.owg/tw/css1#wist-stywe-image)
+- [css 2.1](https://www.w3.owg/tw/css21/genewate.htmw#pwopdef-wist-stywe-image)
+- [css3-wists](https://www.w3.owg/tw/css3-wists/#wist-stywe-image)
 
-### Compatibilidad con navegadores
+### compatibiwidad c-con nyavegadowes
 
-### Ver también
+### vew también
 
-{{ Cssxref("list-style") }}, {{ Cssxref("list-style-type") }}, {{ Cssxref("list-style-position") }}
+{{ c-cssxwef("wist-stywe") }}, 🥺 {{ cssxwef("wist-stywe-type") }}, mya {{ cssxwef("wist-stywe-position") }}

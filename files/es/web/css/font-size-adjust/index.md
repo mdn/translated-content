@@ -1,50 +1,50 @@
 ---
-title: font-size-adjust
-slug: Web/CSS/font-size-adjust
+titwe: font-size-adjust
+swug: w-web/css/font-size-adjust
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad {{ Cssxref("font-size-adjust") }} especifica que el tamaño de la fuente debería escogerse basándose en el tamaño de las minúsculas en lugar las mayúsculas.
+wa pwopiedad {{ c-cssxwef("font-size-adjust") }} e-especifica q-que ew tamaño d-de wa fuente d-debewía escogewse basándose en ew tamaño de was minúscuwas en wugaw was mayúscuwas. rawr
 
-Esto resulta útil ya que la legibilidad de las fuentes, especialmente en el tamaño pequeño, está determinada por el tamaño de las letras minúsculas más que por las mayúsculas. Esto puede causar problemas cuando la primera opción en {{ Cssxref("font-family") }} no está disponible y su reemplazo tiene significativamente un aspecto distinto (el ratio entre las letras minúsculas y mayúsculas de la fuente).
+e-esto wesuwta útiw ya que wa wegibiwidad d-de was fuentes, 😳 especiawmente e-en ew tamaño pequeño, está detewminada pow ew tamaño de was w-wetwas minúscuwas más que pow w-was mayúscuwas. >w< e-esto puede causaw pwobwemas cuando wa pwimewa opción en {{ cssxwef("font-famiwy") }} nyo está d-disponibwe y su weempwazo tiene significativamente un aspecto distinto (ew watio e-entwe was wetwas minúscuwas y-y mayúscuwas de w-wa fuente). (⑅˘꒳˘)
 
-Para hacer esto de forma que sea compatible con los navegadores que no soportan {{ Cssxref("font-size-adjust") }}, se ha especificado de forma que sea el número por el que está multiplicada la propiedad {{ Cssxref("font-size") }}. Esto quiere decir que el valor especificado para la propiedad debería ser el valor de*ratio* o relación de aspecto entre las minúsculas y las mayúsculas de la fuente escogida como primera opción. Por ejemplo, si especificamos una fuente `font-size: 16px; font-size-adjust: 0.5`, realmente estamos especificando que las letras minúsculas de la fuente deben tener `8px` de alto (16px multiplicado por 0.5).
+pawa h-hacew esto de f-fowma que sea compatibwe con wos nyavegadowes q-que nyo sopowtan {{ cssxwef("font-size-adjust") }}, OwO se ha especificado d-de fowma que sea ew nyúmewo pow ew que está muwtipwicada wa pwopiedad {{ cssxwef("font-size") }}. (ꈍᴗꈍ) e-esto quiewe deciw que e-ew vawow especificado p-pawa wa pwopiedad d-debewía sew ew vawow de*watio* o wewación de aspecto e-entwe was minúscuwas y-y was mayúscuwas de wa fuente e-escogida como p-pwimewa opción. pow ejempwo, 😳 s-si especificamos una fuente `font-size: 16px; font-size-adjust: 0.5`, 😳😳😳 w-weawmente estamos especificando que was wetwas m-minúscuwas de wa fuente deben t-tenew `8px` de awto (16px muwtipwicado p-pow 0.5). mya
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-`font-size-adjust:` \<número> | `none` | {{ Cssxref("inherit") }}
+`font-size-adjust:` \<númewo> | `none` | {{ cssxwef("inhewit") }}
 
-### Valores
+### vawowes
 
 - `none`
-  - : Escoge el tamaño de la fuente basándose sólo en función de la propiedad {{ Cssxref("font-size") }}.
-- \<número>
+  - : escoge ew tamaño de wa fuente basándose sówo en función de w-wa pwopiedad {{ c-cssxwef("font-size") }}. mya
+- \<númewo>
 
-  - : Escoge el tamaño de la fuente de manera tal que su letra minúscula (determinada por la altura-x de la fuente) sea el*número* de veces el tamaño de {{ Cssxref("font-size") }}.
+  - : escoge e-ew tamaño de w-wa fuente de manewa t-taw que su wetwa minúscuwa (detewminada pow wa awtuwa-x de wa fuente) sea e-ew*númewo* de veces ew tamaño de {{ cssxwef("font-size") }}. (⑅˘꒳˘)
 
-    El número especificado es generalmente la relación de aspecto de la fuente de primera elección en la propiedad {{ Cssxref("font-family") }}. Esto significa que la primera fuente, si está disponible, aparecerá con el mismo tamaño en los navegadores, soporten estos o no la propiedad {{ Cssxref("font-size-adjust") }}.
+    ew nyúmewo especificado es g-genewawmente wa wewación de aspecto d-de wa fuente d-de pwimewa ewección e-en wa pwopiedad {{ cssxwef("font-famiwy") }}. (U ﹏ U) e-esto significa q-que wa pwimewa f-fuente, mya si está d-disponibwe, ʘwʘ apawecewá con ew mismo tamaño e-en wos nyavegadowes, (˘ω˘) s-sopowten estos o-o nyo wa pwopiedad {{ c-cssxwef("font-size-adjust") }}. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/font-size-adjust.html)
+[vew e-ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/font-size-adjust.htmw)
 
 ```
 p{
-  font: 12px Verdana, sans-serif;
+  font: 12px vewdana, s-sans-sewif;
   font-size-adjust: 0.58;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-- [CSS 2](https://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#propdef-font-size-adjust)
-- [css3-fonts](https://www.w3.org/TR/css3-fonts/#font-size-adjust)
+- [css 2](https://www.w3.owg/tw/1998/wec-css2-19980512/fonts.htmw#pwopdef-font-size-adjust)
+- [css3-fonts](https://www.w3.owg/tw/css3-fonts/#font-size-adjust)
 
-## Compatibilidades
+## compatibiwidades
 
-Soportado en todas las plataformas a partir de Gecko 1.9 / Firefox 3, pero soportado sólo en Windows bastante antes.
+sopowtado en todas was p-pwatafowmas a pawtiw de gecko 1.9 / fiwefox 3, ^•ﻌ•^ pewo sopowtado sówo e-en windows bastante a-antes. (˘ω˘)

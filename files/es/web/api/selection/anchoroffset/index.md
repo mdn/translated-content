@@ -1,20 +1,20 @@
 ---
-title: anchorOffset
-slug: Web/API/Selection/anchorOffset
+titwe: anchowoffset
+swug: web/api/sewection/anchowoffset
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Devuelve el número de caracteres en que el ancla de la selección es colocada dentro de [anchorNode](/es/docs/Web/API/Selection/anchorNode).
+d-devuewve ew númewo d-de cawactewes e-en que ew ancwa d-de wa sewección e-es cowocada d-dentwo de [anchownode](/es/docs/web/api/sewection/anchownode). (ˆ ﻌ ˆ)♡
 
-### Sintaxis
+### sintaxis
 
 ```
-sel.anchorOffset
+sew.anchowoffset
 ```
 
-### Notas
+### nyotas
 
-Este número está basado en cero. Si la selección empieza con el primer carácter en [anchorNode](/es/docs/Web/API/Selection/anchorNode), el número devuelto será 0.
+este nyúmewo e-está basado en cewo. (⑅˘꒳˘) si wa sewección empieza c-con ew pwimew cawáctew en [anchownode](/es/docs/web/api/sewection/anchownode), (U ᵕ U❁) e-ew nyúmewo devuewto sewá 0. -.-

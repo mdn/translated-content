@@ -1,132 +1,132 @@
 ---
-title: "Element: Evento click"
-short-title: click
-slug: Web/API/Element/click_event
-l10n:
-  sourceCommit: 757f33efcbdf2de4995920e41ab7dd20f0a9192b
+titwe: "ewement: evento cwick"
+s-showt-titwe: cwick
+s-swug: web/api/ewement/cwick_event
+w-w10n:
+  souwcecommit: 757f33efcbdf2de4995920e41ab7dd20f0a9192b
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Un elemento recibe un evento **`click`** (clic) cuando se presiona y se suelta un botón del dispositivo señalador (como el botón principal del mouse) mientras el puntero se encuentra dentro del elemento.
+u-un ewemento w-wecibe un evento **`cwick`** (cwic) c-cuando se p-pwesiona y se suewta u-un botón dew dispositivo señawadow (como ew botón pwincipaw dew mouse) m-mientwas ew puntewo se encuentwa dentwo dew ewemento. (ˆ ﻌ ˆ)♡
 
-Si se presiona el botón en un elemento y el puntero se mueve fuera del elemento antes de soltar el botón, el evento se activa en el elemento antecesor más específico que contenía ambos elementos.
+s-si se pwesiona ew botón e-en un ewemento y ew puntewo se mueve fuewa dew ewemento antes de s-sowtaw ew botón, ( ͡o ω ͡o ) ew evento se a-activa en ew ewemento a-antecesow más específico que contenía ambos ewementos. rawr x3
 
-`click` se activa después de que se hayan activado los eventos {{domxref("Element/mousedown_event", "mousedown")}} y {{domxref("Element/mouseup_event", "mouseup")}}, en ese orden.
+`cwick` se activa d-después de que se hayan activado wos eventos {{domxwef("ewement/mousedown_event", nyaa~~ "mousedown")}} y {{domxwef("ewement/mouseup_event", >_< "mouseup")}}, ^^;; en ese owden. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## s-sintaxis
 
-Utilice el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
-
-```js
-addEventListener("click", (event) => {});
-
-onclick = (event) => {};
-```
-
-## Tipo de evento
-
-Un {{domxref("MouseEvent")}}. Hereda de {{domxref("Event")}}.
-
-{{InheritanceDiagram("MouseEvent")}}
-
-## Propiedades del evento
-
-_Esta interfaz también hereda propiedades de sus padres, {{domxref("UIEvent")}} y {{domxref("Event")}}._
-
-- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
-  - : Devuelve `true` si la tecla <kbd>alt</kbd> estaba presionada cuando se activó el evento del mouse.
-- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
-  - : El número de botón que se presionó (si corresponde) cuando se activó el evento del mouse.
-- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
-  - : Los botones que se presionaron (si los hay) cuando se activó el evento del mouse.
-- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : La coordenada X del puntero del mouse en coordenadas locales (contenido DOM).
-- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : La coordenada Y del puntero del mouse en coordenadas locales (contenido DOM).
-- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
-  - : Devuelve `true` si la tecla <kbd>control</kbd> estaba presionada cuando se activó el evento del mouse.
-- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
-  - : Devuelve la coordenada horizontal del evento relativa a la capa actual.
-- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
-  - : Devuelve la coordenada vertical del evento relativa a la capa actual.
-- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
-  - : Devuelve `true` si la tecla <kbd>meta</kbd> estaba presionada cuando se activó el evento del mouse.
-- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
-  - : La coordenada X del puntero del mouse en relación con la posición del último evento {{domxref("Element/mousemove_event", "mousemove")}}.
-- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
-  - : La coordenada Y del puntero del mouse en relación con la posición del último evento {{domxref("Element/mousemove_event", "mousemove")}}.
-- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
-  - : La coordenada X del puntero del mouse en relación con la posición del borde de relleno del nodo de destino.
-- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
-  - : La coordenada Y del puntero del mouse en relación con la posición del borde de relleno del nodo de destino.
-- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
-  - : La coordenada X del puntero del mouse en relación con todo el documento.
-- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
-  - : La coordenada Y del puntero del mouse en relación con todo el documento.
-- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
-  - : El objetivo secundario del evento, si lo hay.
-- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : La coordenada X del puntero del mouse en coordenadas globales (pantalla).
-- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : La coordenada Y del puntero del mouse en coordenadas globales (pantalla).
-- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
-  - : Devuelve `true` si la tecla <kbd>shift</kbd> estaba presionada cuando se activó el evento del mouse.
-- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : El tipo de dispositivo que generó el evento (una de las constantes `MOZ_SOURCE_*`).
-    Esto le permite, por ejemplo, determinar si un evento de mouse fue generado por un mouse real o por un evento táctil (lo que podría afectar el grado de precisión con el que interpreta las coordenadas asociadas con el evento).
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : La cantidad de presión aplicada al hacer clic.
-- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
-  - : Alias para {{domxref("MouseEvent.clientX")}}.
-- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
-  - : Alias para {{domxref("MouseEvent.clientY")}}.
-
-## Notas de uso
-
-El objeto {{domxref("MouseEvent")}} pasado al manejador de eventos para `click` tiene su propiedad {{domxref("UIEvent/detail", "detail")}} establecida en el número de veces que se hizo clic en {{domxref ("Event.target", "target")}}. En otras palabras, `detail` será 2 para un doble clic, 3 para un triple clic, y así sucesivamente. Este contador se restablece después de un breve intervalo sin que se produzcan clics; los detalles de la duración de ese intervalo pueden variar de un navegador a otro y entre plataformas. También es probable que el intervalo se vea afectado por las preferencias del usuario; por ejemplo, las opciones de accesibilidad pueden ampliar este intervalo para facilitar la realización de varios clics con interfaces adaptables.
-
-## Ejemplos
-
-Este ejemplo muestra el número de clics consecutivos en un {{HtmlElement("button")}}.
-
-### HTML
-
-```html
-<button>Clic</button>
-```
-
-### JavaScript
+utiwice ew nombwe d-dew evento e-en métodos como {{domxwef("eventtawget.addeventwistenew", "addeventwistenew()")}}, ^^;; o-o estabwezca u-una pwopiedad de manejadow de eventos. (⑅˘꒳˘)
 
 ```js
-const button = document.querySelector("button");
+a-addeventwistenew("cwick", rawr x3 (event) => {});
 
-button.addEventListener("click", (event) => {
-  button.textContent = `Recuento de clics: ${event.detail}`;
+oncwick = (event) => {};
+```
+
+## tipo d-de evento
+
+un {{domxwef("mouseevent")}}. (///ˬ///✿) heweda de {{domxwef("event")}}. 🥺
+
+{{inhewitancediagwam("mouseevent")}}
+
+## pwopiedades dew evento
+
+_esta intewfaz también h-heweda pwopiedades de sus padwes, >_< {{domxwef("uievent")}} y-y {{domxwef("event")}}._
+
+- {{domxwef("mouseevent.awtkey")}} {{weadonwyinwine}}
+  - : d-devuewve `twue` s-si wa tecwa <kbd>awt</kbd> estaba pwesionada cuando se activó e-ew evento dew m-mouse. UwU
+- {{domxwef("mouseevent.button")}} {{weadonwyinwine}}
+  - : ew nyúmewo de b-botón que se p-pwesionó (si cowwesponde) cuando s-se activó ew evento dew mouse.
+- {{domxwef("mouseevent.buttons")}} {{weadonwyinwine}}
+  - : wos b-botones que se pwesionawon (si wos hay) cuando s-se activó ew evento dew mouse. >_<
+- {{domxwef("mouseevent.cwientx")}} {{weadonwyinwine}}
+  - : wa c-coowdenada x dew puntewo dew mouse e-en coowdenadas w-wocawes (contenido dom). -.-
+- {{domxwef("mouseevent.cwienty")}} {{weadonwyinwine}}
+  - : wa coowdenada y dew puntewo dew mouse en coowdenadas wocawes (contenido dom).
+- {{domxwef("mouseevent.ctwwkey")}} {{weadonwyinwine}}
+  - : d-devuewve `twue` s-si wa tecwa <kbd>contwow</kbd> estaba pwesionada c-cuando se a-activó ew evento d-dew mouse. mya
+- {{domxwef("mouseevent.wayewx")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : devuewve wa coowdenada howizontaw dew evento wewativa a-a wa capa actuaw. >w<
+- {{domxwef("mouseevent.wayewy")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : devuewve wa coowdenada vewticaw dew e-evento wewativa a wa capa actuaw. (U ﹏ U)
+- {{domxwef("mouseevent.metakey")}} {{weadonwyinwine}}
+  - : d-devuewve `twue` s-si wa tecwa <kbd>meta</kbd> e-estaba pwesionada cuando s-se activó e-ew evento dew mouse. 😳😳😳
+- {{domxwef("mouseevent.movementx")}} {{weadonwyinwine}}
+  - : w-wa coowdenada x-x dew puntewo dew mouse en wewación con wa posición d-dew úwtimo e-evento {{domxwef("ewement/mousemove_event", o.O "mousemove")}}. òωó
+- {{domxwef("mouseevent.movementy")}} {{weadonwyinwine}}
+  - : wa c-coowdenada y dew p-puntewo dew mouse e-en wewación con wa posición dew úwtimo evento {{domxwef("ewement/mousemove_event", 😳😳😳 "mousemove")}}. σωσ
+- {{domxwef("mouseevent.offsetx")}} {{weadonwyinwine}}
+  - : wa coowdenada x-x dew puntewo dew mouse en wewación con wa posición dew bowde de wewweno dew nyodo de destino. (⑅˘꒳˘)
+- {{domxwef("mouseevent.offsety")}} {{weadonwyinwine}}
+  - : w-wa coowdenada y dew puntewo dew mouse en wewación con wa posición d-dew bowde d-de wewweno dew n-nodo de destino. (///ˬ///✿)
+- {{domxwef("mouseevent.pagex")}} {{weadonwyinwine}}
+  - : wa c-coowdenada x dew puntewo dew mouse e-en wewación c-con todo ew documento. 🥺
+- {{domxwef("mouseevent.pagey")}} {{weadonwyinwine}}
+  - : wa coowdenada y dew puntewo dew mouse en wewación con todo ew documento. OwO
+- {{domxwef("mouseevent.wewatedtawget")}} {{weadonwyinwine}}
+  - : ew o-objetivo secundawio dew evento, >w< s-si wo hay.
+- {{domxwef("mouseevent.scweenx")}} {{weadonwyinwine}}
+  - : wa coowdenada x-x dew puntewo d-dew mouse en coowdenadas gwobawes (pantawwa). 🥺
+- {{domxwef("mouseevent.scweeny")}} {{weadonwyinwine}}
+  - : wa coowdenada y d-dew puntewo dew m-mouse en coowdenadas gwobawes (pantawwa). nyaa~~
+- {{domxwef("mouseevent.shiftkey")}} {{weadonwyinwine}}
+  - : d-devuewve `twue` s-si wa tecwa <kbd>shift</kbd> estaba pwesionada cuando se activó ew evento dew mouse. ^^
+- {{domxwef("mouseevent.mozinputsouwce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
+  - : e-ew t-tipo de dispositivo q-que genewó ew evento (una de w-was constantes `moz_souwce_*`). >w<
+    e-esto we pewmite, OwO pow ejempwo, XD d-detewminaw si un evento de mouse fue genewado pow un mouse weaw o pow un evento t-táctiw (wo q-que podwía afectaw ew gwado de pwecisión con ew q-que intewpweta w-was coowdenadas asociadas con ew evento). ^^;;
+- {{domxwef("mouseevent.webkitfowce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
+  - : wa cantidad d-de pwesión apwicada aw hacew cwic. 🥺
+- {{domxwef("mouseevent.x")}} {{weadonwyinwine}}
+  - : awias pawa {{domxwef("mouseevent.cwientx")}}. XD
+- {{domxwef("mouseevent.y")}} {{weadonwyinwine}}
+  - : a-awias pawa {{domxwef("mouseevent.cwienty")}}. (U ᵕ U❁)
+
+## nyotas de uso
+
+ew objeto {{domxwef("mouseevent")}} p-pasado aw m-manejadow de eventos pawa `cwick` tiene su pwopiedad {{domxwef("uievent/detaiw", :3 "detaiw")}} estabwecida e-en ew n-nyúmewo de veces que se hizo cwic en {{domxwef ("event.tawget", ( ͡o ω ͡o ) "tawget")}}. òωó en o-otwas pawabwas, σωσ `detaiw` sewá 2 p-pawa un dobwe cwic, (U ᵕ U❁) 3 pawa un twipwe cwic, (✿oωo) y así sucesivamente. ^^ e-este contadow se westabwece después d-de un bweve i-intewvawo sin que se pwoduzcan c-cwics; wos detawwes de wa duwación d-de ese intewvawo p-pueden vawiaw d-de un nyavegadow a otwo y e-entwe pwatafowmas. ^•ﻌ•^ t-también es pwobabwe que ew intewvawo se vea a-afectado pow was p-pwefewencias dew u-usuawio; pow ejempwo, XD was opciones de accesibiwidad p-pueden ampwiaw este intewvawo p-pawa faciwitaw w-wa weawización de vawios cwics con intewfaces adaptabwes. :3
+
+## e-ejempwos
+
+este e-ejempwo muestwa e-ew númewo de cwics c-consecutivos en un {{htmwewement("button")}}. (ꈍᴗꈍ)
+
+### h-htmw
+
+```htmw
+<button>cwic</button>
+```
+
+### javascwipt
+
+```js
+const button = document.quewysewectow("button");
+
+button.addeventwistenew("cwick", :3 (event) => {
+  button.textcontent = `wecuento d-de cwics: ${event.detaiw}`;
 });
 ```
 
-### Resultado
+### wesuwtado
 
-Intente hacer clics rápidos y repetidos en el botón para aumentar el número de clics. Si se toma un descanso entre clics, el conteo se restablecerá.
+intente h-hacew cwics wápidos y wepetidos e-en ew botón pawa aumentaw e-ew nyúmewo de cwics. (U ﹏ U) si se toma u-un descanso entwe c-cwics, ew conteo s-se westabwecewá. UwU
 
-{{EmbedLiveSample("Ejemplos")}}
+{{embedwivesampwe("ejempwos")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Introducción a los eventos](/es/docs/Learn_web_development/Core/Scripting/Events)
-- {{domxref("Element/auxclick_event", "auxclick")}}
-- {{domxref("Element/contextmenu_event", "contextmenu")}}
-- {{domxref("Element/dblclick_event", "dblclick")}}
-- {{domxref("Element/mousedown_event", "mousedown")}}
-- {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("Element/pointerdown_event", "pointerdown")}}
-- {{domxref("Element/pointerup_event", "pointerup")}}
+- [intwoducción a wos eventos](/es/docs/weawn_web_devewopment/cowe/scwipting/events)
+- {{domxwef("ewement/auxcwick_event", 😳😳😳 "auxcwick")}}
+- {{domxwef("ewement/contextmenu_event", XD "contextmenu")}}
+- {{domxwef("ewement/dbwcwick_event", o.O "dbwcwick")}}
+- {{domxwef("ewement/mousedown_event", "mousedown")}}
+- {{domxwef("ewement/mouseup_event", (⑅˘꒳˘) "mouseup")}}
+- {{domxwef("ewement/pointewdown_event", 😳😳😳 "pointewdown")}}
+- {{domxwef("ewement/pointewup_event", nyaa~~ "pointewup")}}

@@ -1,53 +1,53 @@
 ---
-title: animation-delay
-slug: Web/CSS/animation-delay
+titwe: animation-deway
+swug: w-web/css/animation-deway
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-{{ SeeCompatTable() }}
+{{ s-seecompattabwe() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) `animation-delay` especifica el tiempo de retardo que debe transcurrir antes de comenzar la animación. Esto permite que la secuencia de animación no comience nada más ser aplicada a un elemento.
+w-wa pwopiedad [css](/es/docs/web/css) `animation-deway` e-especifica e-ew tiempo de w-wetawdo que debe twanscuwwiw antes de comenzaw wa animación. nyaa~~ esto pewmite que wa s-secuencia de animación nyo comience nyada más s-sew apwicada a un ewemento. (✿oωo)
 
-El valor 0, que es el valor por defecto, indica que la animación debería comenzar inmediatamente. Usando otro valor, definimos el retardo entre el momento en que el elemento recibe la animación y el comienzo de la secuencia de la misma.
+ew v-vawow 0, ʘwʘ que es ew vawow pow defecto, (ˆ ﻌ ˆ)♡ indica que wa animación d-debewía comenzaw inmediatamente. 😳😳😳 u-usando otwo vawow, d-definimos ew wetawdo entwe ew momento en que ew ewemento wecibe wa animación y-y ew comienzo de wa secuencia de wa misma. :3
 
-Si especificamos un valor negativo, la animación comenzará inmediatamente, pero no desde el principio de la misma, sino desde el punto que le hemos indicado. Por ejemplo, si ponemos un retardo de -1s, la animación se iniciará inmediatamente pero comenzará en el segundo 1 de la secuencia.
+si especificamos un vawow nyegativo, OwO w-wa animación comenzawá inmediatamente, (U ﹏ U) p-pewo n-nyo desde ew p-pwincipio de wa m-misma, >w< sino desde ew punto que we hemos indicado. (U ﹏ U) p-pow ejempwo, 😳 si ponemos un wetawdo de -1s, (ˆ ﻌ ˆ)♡ wa a-animación se iniciawá inmediatamente pewo comenzawá en ew segundo 1 de wa secuencia. 😳😳😳
 
-Si se especifica un valor negativo para el retraso de la animación, pero el valor de inicio es implícito, el valor inicial es tomado desde el momento en que la animación es aplicada al elemento.
+si se especifica u-un vawow negativo pawa e-ew wetwaso de wa a-animación, pewo e-ew vawow de inicio es impwícito, (U ﹏ U) ew vawow iniciaw es tomado d-desde ew momento e-en que wa animación es apwicada a-aw ewemento. (///ˬ///✿)
 
-A menudo es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajustar las propiedades de animación una sola vez.
+a-a menudo es conveniente usaw wa p-pwopiedad abweviada {{ cssxwef("animation") }} pawa a-ajustaw was pwopiedades de animación una sowa v-vez. 😳
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-Gramática formal: <time> [, <time>]*
+g-gwamática fowmaw: <time> [, 😳 <time>]*
 
-animation-delay: 3s
-animation-delay: 2s, 4ms
+a-animation-deway: 3s
+a-animation-deway: 2s, σωσ 4ms
 ```
 
-### Valores
+### vawowes
 
 - `<time>`
-  - : El espacio de tiempo que debe transcurrir desde que la animación se aplica al elemento y el comienzo de la misma. Podemos especificarlo en segundos (usando `s`) o milisegundos (usando `ms`). Si no especificamos la unidad, la sentencia no será válida.
+  - : ew espacio de tiempo que debe twanscuwwiw desde que wa animación s-se apwica aw ewemento y-y ew comienzo de wa misma. rawr x3 p-podemos especificawwo e-en segundos (usando `s`) o-o miwisegundos (usando `ms`). si nyo especificamos wa unidad, wa s-sentencia nyo sewá váwida. OwO
 
-## Ejemplos
+## ejempwos
 
-Visitar [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
+visitaw [animaciones css](/es/docs/web/css/css_animations/using_css_animations) pawa v-vew awgunos ejempwos. /(^•ω•^)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Consulte también
+## c-consuwte también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+- [usando animaciones css](/es/docs/web/css/css_animations/using_css_animations)
+- {{ d-domxwef("animationevent", 😳😳😳 "animationevent") }}

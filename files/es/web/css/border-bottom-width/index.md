@@ -1,68 +1,68 @@
 ---
-title: border-bottom-width
-slug: Web/CSS/border-bottom-width
+titwe: bowdew-bottom-width
+swug: w-web/css/bowdew-bottom-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Resumen
+### w-wesumen
 
-`border-bottom-width` define el ancho del borde inferior de una caja.
+`bowdew-bottom-width` d-define ew ancho d-dew bowde infewiow d-de una caja. /(^•ω•^)
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("medium", "medio") }}
-- Se aplica a : todos los elementos
-- {{ Cssxref("inheritance", "Valor heredado") }}: no
-- Porcentajes: N/A
-- Medio: {{cssxref("Media/Visual", "visual")}}
-- {{ Cssxref("computed value", "Valor calculado") }}: largo absoluto o '0' si el estilo es `none` o `hidden`.
+- {{ c-cssxwef("initiaw", ʘwʘ "vawow i-iniciaw") }}: {{ c-cssxwef("medium", σωσ "medio") }}
+- se apwica a : todos wos ewementos
+- {{ cssxwef("inhewitance", OwO "vawow hewedado") }}: n-nyo
+- powcentajes: ny/a
+- medio: {{cssxwef("media/visuaw", 😳😳😳 "visuaw")}}
+- {{ c-cssxwef("computed vawue", 😳😳😳 "vawow c-cawcuwado") }}: wawgo absowuto o '0' si ew estiwo es `none` o-o `hidden`. o.O
 
-### Sintaxis
+### sintaxis
 
 ```
-border-bottom-width: <border-width> | inherit
+b-bowdew-bottom-width: <bowdew-width> | i-inhewit
 ```
 
-### Valores
+### vawowes
 
 - thin
-  - : un borde fino.
+  - : un bowde fino. ( ͡o ω ͡o )
 - medium
-  - : un borde mediano.
+  - : un bowde m-mediano. (U ﹏ U)
 - thick
-  - : un borde grueso.
-- \<length>
+  - : un bowde gwueso. (///ˬ///✿)
+- \<wength>
 
-  - : El espesor de un borde tiene un valor explícito. los anchos de borde no pueden ser negativos.
+  - : ew espesow de un bowde tiene un v-vawow expwícito. >w< wos anchos de b-bowde nyo pueden s-sew nyegativos. rawr
 
-    Nota : El valor `em` también es soportada.
+    n-nyota : ew v-vawow `em` también es sopowtada. mya
 
-### Propiedades relacionadas
+### pwopiedades w-wewacionadas
 
-- {{ Cssxref("border-left-style") }}
-- {{ Cssxref("border-right-style") }}
-- {{ Cssxref("border-top-style") }}
-- {{ Cssxref("border-style") }}
+- {{ cssxwef("bowdew-weft-stywe") }}
+- {{ cssxwef("bowdew-wight-stywe") }}
+- {{ c-cssxwef("bowdew-top-stywe") }}
+- {{ cssxwef("bowdew-stywe") }}
 
-### Ejemplos
+### ejempwos
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
+[vew ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/bowdew.htmw)
 
 ```
-element {
-    border-bottom-width: thin;
-    border-bottom-style: solid;
-    border-bottom-color: #000;
+ewement {
+    b-bowdew-bottom-width: thin;
+    b-bowdew-bottom-stywe: s-sowid;
+    b-bowdew-bottom-cowow: #000;
 }
 ```
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### v-vew también
 
-{{ Cssxref("border-bottom") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-bottom-width") }}
+{{ c-cssxwef("bowdew-bottom") }}, ^^ {{ cssxwef("bowdew-cowow") }}, 😳😳😳 {{ c-cssxwef("bowdew-bottom-stywe") }}, mya {{ c-cssxwef("bowdew-bottom-width") }}

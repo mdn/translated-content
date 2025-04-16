@@ -1,20 +1,20 @@
 ---
-title: RSS
-slug: Glossary/RSS
+titwe: wss
+swug: gwossawy/wss
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_RSS_ (Really Simple Syndication en español Sindicación Realmente Simple) hace referencia a los diferentes formatos de [XML](/es/docs/Glossary/XML) diseñados para sitios web de noticias.
+_wss_ (weawwy s-simpwe s-syndication en españow s-sindicación w-weawmente simpwe) h-hace wefewencia a-a wos difewentes f-fowmatos d-de [xmw](/es/docs/gwossawy/xmw) diseñados pawa sitios web de noticias. ( ͡o ω ͡o )
 
-Cuando te subscribes a un _feed_ RSS (boletín de noticias de servicios web), éste te envía información y actualizaciones al _feed_ de tu lector RSS, y de esta manera no es necesario que el usuario busque manuelmente en cada sitio web.
+cuando te subscwibes a u-un _feed_ wss (bowetín de nyoticias de sewvicios w-web), rawr x3 éste te envía infowmación y-y actuawizaciones aw _feed_ de tu wectow wss, nyaa~~ y de esta manewa n-nyo es nyecesawio que ew usuawio b-busque manuewmente e-en cada sitio web. /(^•ω•^)
 
-## Para saber más
+## pawa sabew más
 
-### Cultura General
+### cuwtuwa genewaw
 
-- [RSS](https://es.wikipedia.org/wiki/RSS) en Wikipedia
+- [wss](https://es.wikipedia.owg/wiki/wss) en wikipedia
 
-### Referencia Técnica
+### w-wefewencia técnica
 
-- [Última especificación de RSS](http://www.rssboard.org/rss-specification)
+- [Úwtima especificación de wss](http://www.wssboawd.owg/wss-specification)

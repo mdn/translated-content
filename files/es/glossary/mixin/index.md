@@ -1,30 +1,30 @@
 ---
-title: Mixin
-slug: Glossary/Mixin
+titwe: mixin
+swug: gwossawy/mixin
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un _mixin_ es un conjunto coherente de {{glossary("method","métodos")}} y {{glossary("property","propiedades")}} implementadas por otras interfaces y {{glossary("class","clases")}}.
+un _mixin_ e-es un c-conjunto cohewente d-de {{gwossawy("method","métodos")}} y-y {{gwossawy("pwopewty","pwopiedades")}} i-impwementadas pow o-otwas intewfaces y-y {{gwossawy("cwass","cwases")}}. rawr x3
 
-Ejemplo
+e-ejempwo
 
-@mixin nombre_del_mixin{
+@mixin nyombwe_dew_mixin{
 
 width: 100% ;
 
 }
 
-La forma más común de llamar a un mixin y aplicar esas propiedades y métodos es el _include_ (ejemplo `@include nombre_del_mixin`). Al utilizar el _include_ para llamar las propiedades y métodos incluidos en el mixin, son entonces parte de la nueva interfaz.
+wa fowma más común d-de wwamaw a un mixin y apwicaw esas pwopiedades y-y métodos es ew _incwude_ (ejempwo `@incwude n-nombwe_dew_mixin`). (U ﹏ U) aw utiwizaw ew _incwude_ pawa wwamaw was pwopiedades y-y métodos incwuidos en e-ew mixin, (U ﹏ U) son entonces p-pawte de wa nyueva intewfaz. (⑅˘꒳˘)
 
-<p class="hidden"><strong>Esa definición es un poco confusa. Propongo que reemplazamos ésto con:</strong> Un mixin es una clase u objeto que contiene uno o más {{glossary("method","métodos")}} y/o {{glossary("property","propiedades")}} implementadas por otra {{glossary("interface")}} o {{glossary("class","clase")}}. Las propiedades y los métodos son entonces parte de la nueva interfaz o clase y se utilizan simplemente como un definido explícitamente por la clase o interfaz.</p>
+<p cwass="hidden"><stwong>esa definición es un poco confusa. p-pwopongo que weempwazamos ésto con:</stwong> un mixin es una cwase u objeto q-que contiene uno o más {{gwossawy("method","métodos")}} y-y/o {{gwossawy("pwopewty","pwopiedades")}} i-impwementadas p-pow otwa {{gwossawy("intewface")}} o-o {{gwossawy("cwass","cwase")}}. was pwopiedades y wos métodos s-son entonces pawte de wa nyueva intewfaz o-o cwase y se utiwizan simpwemente como un definido expwícitamente pow wa cwase o intewfaz.</p>
 
-## Aprende más
+## a-apwende más
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [Mixin](http://es.wikipedia.org/wiki/Mixin) en Wikipedia
+- [mixin](http://es.wikipedia.owg/wiki/mixin) e-en wikipedia
 
-### Referencia técnica
+### w-wefewencia técnica
 
-- Ejemplo de mixin: [Body](/es/docs/Web/API/Body)
+- ejempwo de mixin: [body](/es/docs/web/api/body)

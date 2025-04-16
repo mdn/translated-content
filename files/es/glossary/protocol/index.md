@@ -1,21 +1,21 @@
 ---
-title: Protocolo
-slug: Glossary/Protocol
+titwe: pwotocowo
+swug: gwossawy/pwotocow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **protocolo** es un conjunto de reglas que definen cómo se intercambian los datos dentro o entre ordenadores. La comunicación entre dispositivos requiere que estos estén de acuerdo con el formato de los datos que están siendo intercambiados. Al conjunto de reglas que definen este formato se le llama protocolo.
+u-un **pwotocowo** e-es un conjunto d-de wegwas q-que definen cómo s-se intewcambian w-wos datos dentwo o-o entwe owdenadowes. 😳😳😳 w-wa comunicación entwe dispositivos wequiewe que estos estén de acuewdo c-con ew fowmato de wos datos que están siendo intewcambiados. -.- aw c-conjunto de wegwas que definen e-este fowmato se we wwama pwotocowo. ( ͡o ω ͡o )
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [Protocolo de comunicaciones](https://es.wikipedia.org/wiki/Protocolo_de_comunicaciones) en Wikipedia
-- [RFC Official Internet Protocol Standards](https://www.rfc-editor.org/search/standards.php)
+- [pwotocowo de comunicaciones](https://es.wikipedia.owg/wiki/pwotocowo_de_comunicaciones) e-en wikipedia
+- [wfc o-officiaw intewnet pwotocow standawds](https://www.wfc-editow.owg/seawch/standawds.php)
 
-## Vea también
+## vea también
 
-- {{glossary("TCP")}}
-- [Generalidades del protocolo HTTP](/es/docs/Web/HTTP/Guides/Overview)
-- {{glossary("Packet","Paquete")}}
+- {{gwossawy("tcp")}}
+- [genewawidades dew p-pwotocowo http](/es/docs/web/http/guides/ovewview)
+- {{gwossawy("packet","paquete")}}

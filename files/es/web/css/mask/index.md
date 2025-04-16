@@ -1,74 +1,74 @@
 ---
-title: -webkit-mask
-slug: Web/CSS/mask
+titwe: -webkit-mask
+swug: web/css/mask
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad `-webkit-mask` es una manera corta de establecer, en un único sitio en una hoja de estilos, los valores individuales de máscara. `-webkit-mask` puede ser utilizado para fijar los valores en una o más de las siguiente propiedades: {{Cssxref("-webkit-mask-image")}}, {{Cssxref("-webkit-mask-repeat")}}, {{Cssxref("-webkit-mask-attachment")}}, {{Cssxref("-webkit-mask-position")}}, {{Cssxref("-webkit-mask-origin")}}, y {{Cssxref("-webkit-mask-clip")}}.
+wa p-pwopiedad `-webkit-mask` e-es una m-manewa cowta de e-estabwecew, nyaa~~ en u-un único sitio e-en una hoja de estiwos, (✿oωo) w-wos vawowes individuawes de máscawa. ʘwʘ `-webkit-mask` puede sew utiwizado p-pawa fijaw wos vawowes en una o más de was siguiente p-pwopiedades: {{cssxwef("-webkit-mask-image")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("-webkit-mask-wepeat")}}, 😳😳😳 {{cssxwef("-webkit-mask-attachment")}}, :3 {{cssxwef("-webkit-mask-position")}}, OwO {{cssxwef("-webkit-mask-owigin")}}, (U ﹏ U) y {{cssxwef("-webkit-mask-cwip")}}. >w<
 
 {{cssinfo}}
 
-## Síntaxis
+## s-síntaxis
 
 ```css
-/* Palabras clave valor */
--webkit-mask: none;
+/* pawabwas cwave vawow */
+-webkit-mask: nyone;
 
-/* Valores de imágene */
--webkit-mask: url(mask.png); /* Imagen de pixel usado coo máscara */
--webkit-mask: url(masks.svg#star); /* Elemento dentro de un gráfico SVG usado como máscara */
--webkit-mask: linear-gradient(
-  transparent,
-  black
-); /* Gradiente usado como máscara */
+/* v-vawowes de imágene */
+-webkit-mask: u-uww(mask.png); /* imagen d-de pixew usado coo máscawa */
+-webkit-mask: uww(masks.svg#staw); /* ewemento dentwo de un g-gwáfico svg usado como máscawa */
+-webkit-mask: wineaw-gwadient(
+  twanspawent, (U ﹏ U)
+  bwack
+); /* g-gwadiente usado como máscawa */
 
-/* Valores combinados */
--webkit-mask: url(masks.svg#star) 40px 20px; /* Elemento dentro de un gráfico SVG usado como máscara y posicionado  40px desde la parte superior y 20px a la izquierda */
--webkit-mask: url(masks.svg#star) 0 0/50px 50px; /* Elemento dentro de un gráfico SVG usado como máscara con una anchura y altura de 50px */
--webkit-mask: url(masks.svg#star) repeat-x; /* Elemento dentro de un gráfico SVG usado como una máscara que se repite horizontalmente */
--webkit-mask: url(masks.svg#star) border; /* Elemento dentro de un gráfico SVG usado como una máscara que sobrepasa la caja que rodea el borde */
--webkit-mask: url(masks.svg#star) text; /* Elemento dentro de un gráfico SVG usado como una máscara que recorta el texto que contiene */
+/* v-vawowes combinados */
+-webkit-mask: u-uww(masks.svg#staw) 40px 20px; /* e-ewemento d-dentwo de un gwáfico svg usado como máscawa y-y posicionado  40px desde wa pawte supewiow y 20px a-a wa izquiewda */
+-webkit-mask: uww(masks.svg#staw) 0 0/50px 50px; /* ewemento dentwo de un gwáfico svg usado como máscawa c-con una anchuwa y awtuwa de 50px */
+-webkit-mask: u-uww(masks.svg#staw) w-wepeat-x; /* e-ewemento dentwo de un gwáfico svg usado como una máscawa q-que se wepite howizontawmente */
+-webkit-mask: u-uww(masks.svg#staw) bowdew; /* ewemento d-dentwo de u-un gwáfico svg usado como una m-máscawa que sobwepasa wa caja q-que wodea ew bowde */
+-webkit-mask: uww(masks.svg#staw) text; /* e-ewemento dentwo de un gwáfico s-svg usado como una máscawa que w-wecowta ew texto q-que contiene */
 
-/* Valores globales */
--webkit-mask: inherit;
--webkit-mask: initial;
+/* vawowes gwobawes */
+-webkit-mask: inhewit;
+-webkit-mask: initiaw;
 -webkit-mask: unset;
 ```
 
-### Valores
+### vawowes
 
 - mask-image
-  - : _Requierido_.Ver {{Cssxref("-webkit-mask-image")}}.
-- mask-repeat
-  - : _Opcional_. Ver {{Cssxref("-webkit-mask-repeat")}}.
+  - : _wequiewido_.vew {{cssxwef("-webkit-mask-image")}}. 😳
+- m-mask-wepeat
+  - : _opcionaw_. (ˆ ﻌ ˆ)♡ v-vew {{cssxwef("-webkit-mask-wepeat")}}. 😳😳😳
 - mask-attachment
-  - : _Opcional_ Ver {{Cssxref("-webkit-mask-attachment")}}.
-- mask-position
-  - : _Opcional_. Ver {{Cssxref("-webkit-mask-position")}}.
-- mask-origin
-  - : _Opcional_. Ver {{Cssxref("-webkit-mask-origin")}}.
-- mask-clip
-  - : _Opcional_ Ver {{Cssxref("-webkit-mask-clip")}}.
+  - : _opcionaw_ vew {{cssxwef("-webkit-mask-attachment")}}. (U ﹏ U)
+- m-mask-position
+  - : _opcionaw_. (///ˬ///✿) v-vew {{cssxwef("-webkit-mask-position")}}. 😳
+- m-mask-owigin
+  - : _opcionaw_. 😳 vew {{cssxwef("-webkit-mask-owigin")}}. σωσ
+- mask-cwip
+  - : _opcionaw_ vew {{cssxwef("-webkit-mask-cwip")}}. rawr x3
 
-### Síntaxis Formal
+### s-síntaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
-.example {
-  -webkit-mask: url("mask.png") no-repeat fixed 20px 20px padding padding;
+.exampwe {
+  -webkit-mask: uww("mask.png") nyo-wepeat f-fixed 20px 20px padding padding;
 }
 ```
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con n-navegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-clip")}}, {{cssxref("-webkit-mask-image")}}, {{cssxref("-webkit-mask-composite")}}, {{cssxref("-webkit-mask-repeat")}}
+- {{cssxwef("-webkit-mask-owigin")}}, OwO {{cssxwef("-webkit-mask-box-image")}}, /(^•ω•^) {{cssxwef("-webkit-mask-attachment")}}, 😳😳😳 {{cssxwef("-webkit-mask-cwip")}}, ( ͡o ω ͡o ) {{cssxwef("-webkit-mask-image")}}, >_< {{cssxwef("-webkit-mask-composite")}}, >w< {{cssxwef("-webkit-mask-wepeat")}}

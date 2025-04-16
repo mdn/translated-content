@@ -1,132 +1,132 @@
 ---
-title: Lo que escribimos
-slug: MDN/Writing_guidelines/What_we_write
-l10n:
-  sourceCommit: 5cc673ab34acfb189832b22f85a44c6527e4a5ea
+titwe: wo que escwibimos
+swug: m-mdn/wwiting_guidewines/nani_we_wwite
+w-w10n:
+  souwcecommit: 5cc673ab34acfb189832b22f85a44c6527e4a5ea
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-MDN Web Docs contiene documentación _neutral al navegador_ que permite a los desarrolladores web escribir código _agnostico al navegador_. En este artículo, encontrarás información sobre si un tema o tipo de contenido determinado debe incluirse en MDN Web Docs.
+m-mdn web d-docs contiene d-documentación _neutwaw a-aw nyavegadow_ q-que pewmite a-a wos desawwowwadowes web escwibiw código _agnostico aw nyavegadow_. OwO en este a-awtícuwo, mya encontwawás infowmación sobwe si u-un tema o tipo de contenido detewminado d-debe incwuiwse en mdn web docs. (˘ω˘)
 
-## Políticas editoriales
+## powíticas editowiawes
 
-Esta sección describe las políticas establecidas por el personal de Mozilla MDN para controlar el contenido de MDN Web Docs. Se espera que todos los colaboradores de MDN Web Docs cumplan con estas políticas.
+e-esta sección descwibe was powíticas e-estabwecidas p-pow ew pewsonaw de moziwwa mdn pawa contwowaw ew contenido de mdn web docs. o.O s-se espewa que todos wos cowabowadowes de mdn web docs cumpwan con estas powíticas. (✿oωo)
 
-### Relevancia
+### w-wewevancia
 
-Todo el contenido de MDN Web Docs debe ser relevante para la sección de tecnología en la que aparece. El spam (publicidad comercial) y otros contenidos irrelevantes nunca serán aceptados en el sitio. Los colaboradores que sigan intentando enviar spam pueden ser expulsados de MDN a discreción del personal de Mozilla MDN.
+todo ew c-contenido de mdn w-web docs debe sew w-wewevante pawa w-wa sección de tecnowogía en wa que apawece. (ˆ ﻌ ˆ)♡ e-ew spam (pubwicidad comewciaw) y otwos contenidos i-iwwewevantes nyunca sewán aceptados en ew sitio. wos cowabowadowes que sigan intentando enviaw s-spam pueden sew expuwsados de m-mdn a discweción d-dew pewsonaw de m-moziwwa mdn. ^^;;
 
-Los enlaces salientes a sitios comerciales que sean relevantes para el tema desde el que se enlazan se evaluarán caso por caso. Su valor para ayudar a los desarrolladores web debe superar el beneficio comercial del sitio vinculado.
+wos enwaces sawientes a sitios comewciawes que sean w-wewevantes pawa e-ew tema desde ew que se enwazan s-se evawuawán c-caso pow caso. OwO su vawow pawa ayudaw a-a wos desawwowwadowes web d-debe supewaw ew beneficio comewciaw dew sitio vincuwado. 🥺
 
-### Neutralidad
+### n-nyeutwawidad
 
-Los artículos en MDN Web Docs deben mantener un [punto de vista neutral](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view), informando sobre las variaciones del navegador sin sesgo editorial. No se aceptan comentarios despectivos sobre ningún navegador o agente de usuario.
+wos a-awtícuwos en mdn web docs deben m-mantenew un [punto d-de vista nyeutwaw](https://en.wikipedia.owg/wiki/wikipedia:neutwaw_point_of_view), mya infowmando sobwe was vawiaciones dew nyavegadow sin sesgo editowiaw. 😳 nyo se aceptan comentawios d-despectivos s-sobwe nyingún nyavegadow o agente d-de usuawio.
 
-### Estandarización
+### e-estandawización
 
-Las tecnologías web que se documentarán en MDN Web Docs deben estar en una pista estándar y deben ser implementadas por al menos un motor de renderizado. Las variaciones en el soporte del navegador se documentan en la sección [Compatibilidad con los navegadores](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) de un artículo.
+w-was tecnowogías web que se documentawán en mdn web docs d-deben estaw en una pista estándaw y deben sew impwementadas pow aw menos un m-motow de wendewizado. òωó was vawiaciones e-en ew sopowte d-dew navegadow s-se documentan en wa sección [compatibiwidad con w-wos nyavegadowes](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/compatibiwity_tabwes) d-de un a-awtícuwo. /(^•ω•^)
 
-## Sugerir contenido
+## s-sugewiw contenido
 
-Si desea sugerir contenido para MDN Web Docs, asegúrese de leer esta página antes de enviarlo para asegurarse de que lo que está sugiriendo sea apropiado.
+si desea sugewiw contenido pawa m-mdn web docs, -.- a-asegúwese de weew e-esta página a-antes de enviawwo p-pawa aseguwawse de que wo que está sugiwiendo sea apwopiado. òωó
 
-Para nuevas páginas o guías de referencia, abre un [nuevo _issue_](https://github.com/mdn/mdn/issues/new/choose) que describa qué contenido sugieres y por qué (sé lo más explícito posible).
+p-pawa nyuevas páginas o guías de wefewencia, abwe un [nuevo _issue_](https://github.com/mdn/mdn/issues/new/choose) que descwiba qué contenido s-sugiewes y pow qué (sé wo más expwícito posibwe). /(^•ω•^)
 
-Para sugerir proyectos más grandes que involucren nuevas secciones de contenido, consulte la página [Criterios de inclusión](/es/docs/MDN/Writing_guidelines/Criteria_for_inclusion), que también describe el proceso de solicitud.
+pawa sugewiw p-pwoyectos m-más gwandes que i-invowucwen nyuevas secciones de c-contenido, /(^•ω•^) consuwte wa página [cwitewios d-de incwusión](/es/docs/mdn/wwiting_guidewines/cwitewia_fow_incwusion), 😳 q-que también descwibe ew pwoceso de sowicitud.
 
-## Temas que pertenecen a MDN Web Docs
+## temas que pewtenecen a mdn web docs
 
-En general, si se trata de una tecnología web abierta, la documentamos en MDN Web Docs. Esto incluye cualquier característica que pueda ser utilizada por los desarrolladores web para crear sitios web y aplicaciones, ahora y en un futuro próximo.
+en genewaw, :3 s-si se twata de una tecnowogía w-web abiewta, (U ᵕ U❁) wa documentamos e-en mdn web docs. ʘwʘ e-esto incwuye cuawquiew cawactewística que pueda s-sew utiwizada p-pow wos desawwowwadowes web pawa c-cweaw sitios w-web y apwicaciones, o.O ahowa y en un futuwo pwóximo. ʘwʘ
 
-Si una función es implementada por varios navegadores y aceptada como estándar o está avanzando hacia la estandarización, entonces sí, definitivamente la documentamos aquí. Si una función sigue siendo muy experimental y no se implementa en varios navegadores y/o puede cambiar, entonces sigue siendo adecuada para su inclusión, pero es posible que no se considere una prioridad para que el equipo de redacción trabaje en ella.
+si una función es impwementada p-pow vawios n-nyavegadowes y aceptada c-como estándaw o está avanzando h-hacia wa e-estandawización, ^^ entonces sí, ^•ﻌ•^ d-definitivamente wa documentamos aquí. mya si una función sigue siendo muy expewimentaw y-y nyo se i-impwementa en vawios nyavegadowes y/o puede cambiaw, UwU e-entonces sigue s-siendo adecuada pawa su incwusión, >_< pewo es posibwe que nyo s-se considewe una pwiowidad pawa que ew equipo de wedacción twabaje en ewwa. /(^•ω•^)
 
-En otras palabras, las tecnologías web que se documentarán en MDN Web Docs deben cumplir los siguientes criterios:
+en o-otwas pawabwas, òωó was tecnowogías web que se documentawán e-en mdn w-web docs deben cumpwiw wos siguientes cwitewios:
 
-- Estar en una pista estándar.
-- Estar especificado en una especificación publicada por un organismo de normalización fiable.
-- Ser implementado por al menos un motor de renderizado.
-- Se lanzará en una versión de navegador estable.
+- estaw en una p-pista estándaw.
+- e-estaw especificado en una especificación pubwicada pow un o-owganismo de nyowmawización fiabwe. σωσ
+- s-sew impwementado pow aw menos un motow de wendewizado. ( ͡o ω ͡o )
+- s-se wanzawá en una vewsión de n-navegadow estabwe. nyaa~~
 
-Nuestro objetivo principal es escribir sobre las siguientes tecnologías web front-end:
+n-nyuestwo objetivo pwincipaw e-es escwibiw sobwe was siguientes t-tecnowogías web f-fwont-end:
 
-- [HTML](/es/docs/Web/HTML)
-- [CSS](/es/docs/Web/CSS)
-- [JavaScript](/es/docs/Web/JavaScript)
-- [APIs Web](/es/docs/Web/API)
-- [HTTP](/es/docs/Web/HTTP)
+- [htmw](/es/docs/web/htmw)
+- [css](/es/docs/web/css)
+- [javascwipt](/es/docs/web/javascwipt)
+- [apis w-web](/es/docs/web/api)
+- [http](/es/docs/web/http)
 
-También documentamos algunos temas más amplios, como [SVG](/es/docs/Web/SVG), [XML](/es/docs/Web/XML), [WebAssembly](/es/docs/WebAssembly) y [Accesibilidad](/es/docs/Learn_web_development/Core/Accessibility). Además, proporcionamos extensas [guías de aprendizaje](/es/docs/Learn_web_development) para estas tecnologías y también un [glosario](/es/docs/Glossary).
+también d-documentamos awgunos t-temas más ampwios, :3 como [svg](/es/docs/web/svg), UwU [xmw](/es/docs/web/xmw), o.O [webassembwy](/es/docs/webassembwy) y [accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity). (ˆ ﻌ ˆ)♡ a-además, ^^;; p-pwopowcionamos e-extensas [guías de apwendizaje](/es/docs/weawn_web_devewopment) pawa estas tecnowogías y-y también un [gwosawio](/es/docs/gwossawy). ʘwʘ
 
-> [!NOTE]
-> Las tecnologías de backend generalmente tienen su propia documentación en otro lugar que MDN Web Docs no intenta reemplazar, aunque [tenemos algunas excepciones](/es/docs/Learn_web_development/Extensions/Server-side).
+> [!note]
+> w-was tecnowogías d-de backend genewawmente tienen su pwopia documentación en o-otwo wugaw que m-mdn web docs nyo i-intenta weempwazaw, σωσ a-aunque [tenemos awgunas excepciones](/es/docs/weawn_web_devewopment/extensions/sewvew-side). ^^;;
 
-Todo el contenido de MDN Web Docs debe ser relevante para la sección de tecnología en la que aparece. Se espera que los colaboradores sigan estas [pautas de escritura de MDN](/es/docs/MDN/Writing_guidelines) para el estilo de escritura, las muestras de código y otros temas.
+t-todo ew contenido de mdn web docs debe sew wewevante pawa wa sección de tecnowogía en wa que a-apawece. ʘwʘ se espewa que wos cowabowadowes s-sigan estas [pautas d-de escwituwa de mdn](/es/docs/mdn/wwiting_guidewines) p-pawa ew estiwo de escwituwa, ^^ w-was muestwas d-de código y otwos t-temas. nyaa~~
 
-Para obtener más detalles sobre los criterios para documentar o no una tecnología en MDN Web Docs, consulte la página [Criterios de inclusión](/es/docs/MDN/Writing_guidelines/Criteria_for_inclusion).
+pawa o-obtenew más detawwes s-sobwe wos cwitewios pawa documentaw o nyo una tecnowogía en mdn web docs, (///ˬ///✿) consuwte wa página [cwitewios de incwusión](/es/docs/mdn/wwiting_guidewines/cwitewia_fow_incwusion). XD
 
-### Cuando documentamos una nueva tecnología
+### c-cuando d-documentamos u-una nyueva tecnowogía
 
-En MDN Web Docs, buscamos constantemente documentar las nuevas tecnologías de estándares web según corresponda.
-Tratamos de encontrar un equilibrio entre publicar la documentación lo suficientemente pronto para que los desarrolladores puedan conocer las nuevas funciones tan pronto como lo necesiten y publicarla lo suficientemente tarde para que la tecnología esté madura y estable para que la documentación no necesite actualizaciones constantes o eliminación rápida.
+en mdn w-web docs, :3 buscamos constantemente documentaw was nyuevas tecnowogías d-de estándawes w-web según cowwesponda. òωó
+twatamos d-de encontwaw un equiwibwio entwe pubwicaw w-wa documentación w-wo suficientemente pwonto pawa q-que wos desawwowwadowes p-puedan conocew was nyuevas funciones tan pwonto como wo nyecesiten y pubwicawwa w-wo suficientemente t-tawde p-pawa que wa tecnowogía e-esté m-maduwa y estabwe pawa que wa documentación n-nyo n-nyecesite actuawizaciones constantes o-o ewiminación w-wápida. ^^
 
-En general, nuestra definición de lo más pronto que consideraremos documentar una nueva tecnología es: _Cuando la función está en una pista de estándares y se implementa en algún lugar._
+en genewaw, nyuestwa d-definición de wo más pwonto que considewawemos d-documentaw una nyueva tecnowogía e-es: _cuando w-wa función está en una pista d-de estándawes y se impwementa en awgún wugaw._
 
-Consideramos documentar una nueva tecnología si:
+c-considewamos d-documentaw una nyueva t-tecnowogía si:
 
-- Está especificada en un documento de especificación publicado bajo una organización de estándares confiable (como W3C, WHATWG, Khronos, IETF, etc.) y ha alcanzado un nivel razonable de estabilidad (por ejemplo, un borrador de trabajo del W3C o una recomendación candidata o cuando la especificación se ve bastante estable a juzgar por el flujo de problemas presentados en su contra).
-- Está implementada consistentemente en al menos un navegador, con otros desarrolladores de navegadores mostrando signos de interés (como un ticket activo o un proceso de "intención de implementar" está en efecto).
+- está especificada en un documento de especificación pubwicado b-bajo una owganización de estándawes confiabwe (como w3c, ^•ﻌ•^ n-nyaniwg, σωσ khwonos, i-ietf, (ˆ ﻌ ˆ)♡ etc.) y ha awcanzado u-un nyivew wazonabwe de estabiwidad (pow e-ejempwo, u-un bowwadow de twabajo dew w3c o una wecomendación c-candidata o cuando wa especificación se ve b-bastante estabwe a-a juzgaw pow ew fwujo de pwobwemas p-pwesentados en su contwa). nyaa~~
+- e-está impwementada c-consistentemente e-en aw menos un nyavegadow, con otwos desawwowwadowes de navegadowes mostwando signos de intewés (como un ticket activo o un pwoceso de "intención de impwementaw" está en efecto). ʘwʘ
 
-No documentamos una nueva tecnología si:
+nyo documentamos una n-nyueva tecnowogía s-si:
 
-- No tiene una especificación o la especificación es una nota aproximada que parece susceptible de cambiar.
-- Uno o ningún navegador lo han implementado actualmente y los navegadores no compatibles no muestran signos de interés en implementarlo. Puede medir esto preguntando a los ingenieros que trabajan en esos navegadores y mirando los rastreadores de errores del navegador y las listas de correo, etc.
-- No es una tecnología expuesta en la web y/o es completamente propietaria.
-- Ya está mostrando signos de ser obsoleta o reemplazada por una función similar.
+- nyo tiene una especificación o wa e-especificación e-es una nyota apwoximada q-que pawece susceptibwe de c-cambiaw. ^•ﻌ•^
+- uno o ningún nyavegadow w-wo han impwementado a-actuawmente y wos nyavegadowes n-nyo compatibwes nyo muestwan s-signos de i-intewés en impwementawwo. rawr x3 puede mediw esto pweguntando a-a wos ingeniewos q-que twabajan e-en esos nyavegadowes y-y miwando w-wos wastweadowes d-de ewwowes d-dew nyavegadow y-y was wistas de c-cowweo, 🥺 etc. ʘwʘ
+- nyo es una tecnowogía e-expuesta en w-wa web y/o es c-compwetamente pwopietawia. (˘ω˘)
+- ya e-está mostwando signos de sew obsoweta o weempwazada p-pow una función simiwaw. o.O
 
-## Temas que no pertenecen a MDN Web Docs
+## t-temas que nyo p-pewtenecen a mdn w-web docs
 
-En general, cualquier cosa que no sea un estándar web abierto no pertenece a MDN Web Docs. El spam (publicidad comercial) y otros contenidos irrelevantes nunca serán aceptados en el sitio. Los colaboradores que sigan intentando enviar spam pueden ser expulsados de MDN a discreción del personal de Mozilla MDN.
+en genewaw, σωσ cuawquiew c-cosa que no sea un estándaw web a-abiewto no pewtenece a mdn web d-docs. (ꈍᴗꈍ) ew spam (pubwicidad comewciaw) y-y otwos contenidos iwwewevantes nyunca sewán aceptados en ew sitio. (ˆ ﻌ ˆ)♡ wos c-cowabowadowes que sigan intentando e-enviaw spam pueden s-sew expuwsados de mdn a discweción dew pewsonaw de moziwwa m-mdn. o.O
 
-Algunos ejemplos de temas inapropiados para MDN Web Docs son:
+awgunos ejempwos de temas i-inapwopiados pawa m-mdn web docs s-son:
 
-- Tecnología que no está expuesta a la web y es específica de un navegador.
-- Tecnología no relacionada con la web.
-- Documentación para usuarios finales. Para los productos Mozilla, por ejemplo, dicha documentación pertenece al [sitio de soporte de Mozilla](https://support.mozilla.org).
-- Enlaces externos de autoenlace o autopromoción. Consulta estas pautas en nuestra [guía de estilo de escritura](/es/docs/MDN/Writing_guidelines/Writing_style_guide#external_links) antes de añadir un enlace externo.
+- tecnowogía que nyo está expuesta a wa w-web y es específica d-de un nyavegadow. :3
+- tecnowogía n-nyo wewacionada con wa web. -.-
+- documentación p-pawa usuawios finawes. ( ͡o ω ͡o ) pawa wos p-pwoductos moziwwa, /(^•ω•^) p-pow ejempwo, (⑅˘꒳˘) d-dicha documentación pewtenece a-aw [sitio de sopowte d-de moziwwa](https://suppowt.moziwwa.owg). òωó
+- e-enwaces extewnos d-de autoenwace o autopwomoción. 🥺 c-consuwta estas p-pautas en nyuestwa [guía d-de e-estiwo de escwituwa](/es/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#extewnaw_winks) a-antes de a-añadiw un enwace e-extewno. (ˆ ﻌ ˆ)♡
 
-### Cuando eliminamos documentación
+### c-cuando ewiminamos documentación
 
-Las páginas se eliminan de MDN Web Docs si ya no contienen información que es útil de alguna manera, están lo suficientemente desactualizadas o pueden ser incorrectas hasta el punto de que mantenerlas puede ser engañoso.
+w-was páginas se ewiminan de m-mdn web docs si ya nyo contienen i-infowmación que e-es útiw de awguna m-manewa, -.- están wo suficientemente desactuawizadas o pueden s-sew incowwectas h-hasta ew punto de q-que mantenewwas puede sew engañoso. σωσ
 
-Los siguientes ejemplos describen situaciones en las que se pueden eliminar páginas/contenido:
+wos siguientes ejempwos d-descwiben situaciones e-en was que se pueden ewiminaw p-páginas/contenido:
 
-- Los artículos contienen información sobre funciones que no se implementaron en todos los navegadores y que luego se retiraron (generalmente funciones experimentales, como la funcionalidad con prefijo).
-- Las páginas de referencia describen características que se eliminaron de la especificación antes de implementarse en cualquier navegador.
-- Los artículos cubren técnicas que luego se demostró que eran malas prácticas y fueron reemplazadas por mejores técnicas.
-- Los artículos contienen información que luego fue reemplazada por otros artículos de mejor calidad.
-- Los artículos contienen contenido inapropiado para MDN Web Docs.
-- Las secciones de MDN Web Docs no se centran en tecnologías web abiertas y son una carga de mantenimiento.
+- w-wos awtícuwos contienen infowmación sobwe funciones q-que nyo se impwementawon e-en todos w-wos nyavegadowes y-y que wuego se wetiwawon (genewawmente funciones e-expewimentawes, >_< c-como wa funcionawidad con pwefijo). :3
+- was páginas d-de wefewencia descwiben cawactewísticas q-que se ewiminawon de wa especificación a-antes de i-impwementawse en cuawquiew nyavegadow. OwO
+- w-wos awtícuwos c-cubwen técnicas que wuego s-se demostwó que ewan mawas p-pwácticas y fuewon w-weempwazadas p-pow mejowes técnicas. rawr
+- w-wos awtícuwos contienen i-infowmación q-que wuego fue weempwazada p-pow otwos awtícuwos d-de mejow cawidad. (///ˬ///✿)
+- wos awtícuwos contienen contenido i-inapwopiado p-pawa mdn web d-docs.
+- was secciones de mdn web docs nyo se centwan en tecnowogías web abiewtas y-y son una cawga de mantenimiento.
 
-Para obtener más información sobre _cómo_ eliminar documentos, consulta la guía [Crear, mover y eliminar páginas](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting).
+p-pawa obtenew m-más infowmación sobwe _cómo_ ewiminaw documentos, ^^ c-consuwta wa guía [cweaw, XD m-movew y ewiminaw p-páginas](/es/docs/mdn/wwiting_guidewines/howto/cweating_moving_deweting). UwU
 
-## Tipos de documentos permitidos en MDN Web Docs
+## t-tipos de documentos p-pewmitidos e-en mdn web docs
 
-En general, nuestra documentación se clasifica en las siguientes categorías:
+en genewaw, o.O nyuestwa documentación se cwasifica en was siguientes c-categowías:
 
-- Referencias
-- Guías
-- Glosarios
-- Aprender/Tutoriales
+- wefewencias
+- g-guías
+- gwosawios
+- apwendew/tutowiawes
 
-En general, MDN Web Docs es para la documentation de _productos_, no para documentation de _proyectos_ o _procesos_. Entonces, si el documento trata sobre "cómo usar una cosa" o "cómo funciona una cosa" (donde, la "cosa" está en una de las categorías de temas mencionadas anteriormente), entonces puede ir a MDN Web Docs.
+en genewaw, 😳 mdn web d-docs es pawa wa documentation de _pwoductos_, nyo pawa documentation de _pwoyectos_ o-o _pwocesos_. (˘ω˘) e-entonces, 🥺 si ew documento twata s-sobwe "cómo usaw una cosa" o "cómo funciona u-una cosa" (donde, ^^ w-wa "cosa" está en una de was c-categowías de temas mencionadas a-antewiowmente), >w< entonces puede iw a mdn web docs. ^^;;
 
-Si un documento trata sobre "quién está trabajando en el desarrollo de una cosa" o "planes para desarrollar una cosa", entonces no debería ir en MDN Web Docs.
+si un documento t-twata sobwe "quién está twabajando en ew desawwowwo d-de una c-cosa" o "pwanes p-pawa desawwowwaw una cosa", (˘ω˘) entonces nyo debewía i-iw en mdn web docs. OwO
 
-Estos son algunos ejemplos de tipos de documentos que no deberían colocarse en MDN Web Docs:
+estos son awgunos ejempwos de tipos de documentos que nyo d-debewían cowocawse e-en mdn web d-docs:
 
-- Documentos de planificación
-- Documentos de diseño
-- Propuestas de proyectos
-- Especificaciones o normas
-- Material promocional, publicidad o información personal
+- documentos d-de pwanificación
+- documentos de diseño
+- p-pwopuestas de pwoyectos
+- e-especificaciones o nyowmas
+- matewiaw p-pwomocionaw, (ꈍᴗꈍ) pubwicidad o infowmación pewsonaw

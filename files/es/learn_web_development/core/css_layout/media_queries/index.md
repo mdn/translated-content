@@ -1,629 +1,629 @@
 ---
-title: Fundamentos de las media queries
-short-title: media queries
-slug: Learn_web_development/Core/CSS_layout/Media_queries
-l10n:
-  sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
+titwe: fundamentos de was media q-quewies
+showt-titwe: m-media quewies
+s-swug: weawn_web_devewopment/cowe/css_wayout/media_quewies
+w-w10n:
+  souwcecommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/css_wayout/wesponsive_design", òωó "weawn_web_devewopment/cowe/css_wayout/fundamentaw_wayout_compwehension", ^^;; "weawn_web_devewopment/cowe/css_wayout")}}
 
-Las **media queries (consulta de medios) en CSS** te dan una forma de aplicar CSS solo cuando el navegador y el entorno del dispositivo coinciden con una regla que especifiques, por ejemplo, "el área de visualización es más ancha que 480 píxeles". Las media queries son una parte clave del diseño web adaptativo, ya que te permiten crear diferentes diseños según el tamaño del área de visualización, pero también se pueden utilizar para detectar otras cosas sobre el entorno en el que se está ejecutando tu sitio, por ejemplo, si el usuario está utilizando una pantalla táctil en lugar de un ratón.
+w-was **media q-quewies (consuwta d-de medios) e-en css** te dan una fowma de apwicaw css sowo cuando ew nyavegadow y ew entowno d-dew dispositivo coinciden con una wegwa que especifiques, (✿oωo) p-pow ejempwo, rawr "ew áwea d-de visuawización es más ancha que 480 píxewes". XD was media q-quewies son una pawte cwave dew d-diseño web adaptativo, 😳 y-ya que te pewmiten cweaw difewentes diseños según ew tamaño dew áwea d-de visuawización, (U ᵕ U❁) pewo también se pueden utiwizaw pawa detectaw otwas cosas s-sobwe ew entowno en ew que se está e-ejecutando tu s-sitio, UwU pow ejempwo, OwO s-si ew usuawio e-está utiwizando una pantawwa táctiw en wugaw d-de un watón. 😳
 
-En esta lección, primero aprenderás sobre la sintaxis utilizada en las media queries, y luego pasarás a utilizarlas en ejemplos que muestran cómo un diseño básico podría hacerse adaptativo.
+en esta wección, (˘ω˘) pwimewo apwendewás s-sobwe wa sintaxis utiwizada en was media quewies, òωó y wuego pasawás a utiwizawwas en ejempwos q-que muestwan cómo un diseño b-básico podwía h-hacewse adaptativo. OwO
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Requisitos previos:</th>
+    <tw>
+      <th s-scope="wow">wequisitos pwevios:</th>
       <td>
-        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
-          >Estructuración del contenido con HTML</a
-        >,
-        <a href="/es/docs/Learn_web_development/Core/Styling_basics">Fundamentos del estilo CSS</a>,
-        <a href="/es/docs/Learn_web_development/Core/Text_styling/Fundamentals">Estilo fundamental de texto y fuentes</a>,
-        familiaridad con <a href="/es/docs/Learn_web_development/Core/CSS_layout/Introduction">conceptos fundamentales del diseño CSS</a>.
+        <a hwef="/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content"
+          >estwuctuwación dew contenido c-con htmw</a
+        >, (✿oωo)
+        <a h-hwef="/es/docs/weawn_web_devewopment/cowe/stywing_basics">fundamentos dew estiwo c-css</a>, (⑅˘꒳˘)
+        <a h-hwef="/es/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws">estiwo fundamentaw de t-texto y fuentes</a>, /(^•ω•^)
+        famiwiawidad con <a h-hwef="/es/docs/weawn_web_devewopment/cowe/css_wayout/intwoduction">conceptos fundamentawes dew diseño css</a>. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Resultados del aprendizaje:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wesuwtados dew apwendizaje:</th>
       <td>
-        <ul>
-          <li>La sintaxis de las media queries.</li>
-          <li>Los tipos comunes de media queries.</li>
-          <li>Usar media queries de <code>width</code> y <code>height</code> para crear diseños adaptativos.</li>
-          <li>Elegir breakpoints (puntos de interrupción).</li>
-          <li>Usar media queries para implementar un diseño Mobile First (Centrado en móvil).</li>
-        </ul>
+        <uw>
+          <wi>wa s-sintaxis de was media quewies.</wi>
+          <wi>wos t-tipos comunes d-de media quewies.</wi>
+          <wi>usaw media quewies de <code>width</code> y <code>height</code> pawa cweaw diseños adaptativos.</wi>
+          <wi>ewegiw bweakpoints (puntos de intewwupción).</wi>
+          <wi>usaw m-media quewies p-pawa impwementaw un diseño mobiwe f-fiwst (centwado e-en móviw).</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Conceptos básicos de las media queries
+## c-conceptos básicos de was media quewies
 
-La sintaxis de media query más simple se ve así:
+wa sintaxis de media q-quewy más simpwe se ve así:
 
 ```css
-@media media-type and (media-feature-rule) {
-  /* Las reglas CSS van aquí */
+@media media-type and (media-featuwe-wuwe) {
+  /* was wegwas c-css van aquí */
 }
 ```
 
-Consta de:
+consta d-de:
 
-- Un tipo de medio, que le dice al navegador para qué tipo de medio es este código (por ejemplo, impresión o pantalla).
-- Una expresión de medio, que es una regla, o prueba que debe aprobarse para que se aplique el CSS contenido.
-- Un conjunto de reglas CSS que se aplicarán si la prueba pasa y el tipo de medio es correcto.
+- un tipo d-de medio, -.- que we d-dice aw nyavegadow pawa qué tipo d-de medio es e-este código (pow e-ejempwo, ( ͡o ω ͡o ) impwesión o-o pantawwa). 😳😳😳
+- una expwesión de medio, (˘ω˘) que e-es una wegwa, ^^ o-o pwueba que debe a-apwobawse pawa q-que se apwique e-ew css contenido.
+- un conjunto de wegwas css que se apwicawán s-si wa pwueba pasa y ew tipo de medio es cowwecto. σωσ
 
-### Tipos de medios
+### tipos de medios
 
-Los tipos posibles de medios que puedes especificar son:
+wos tipos posibwes de medios q-que puedes especificaw son:
 
-- `all`
-- `print`
-- `screen`
+- `aww`
+- `pwint`
+- `scween`
 
-La siguiente media query solo establecerá el cuerpo en 12pt si la página se imprime. No se aplicará cuando la página se cargue en un navegador.
+wa siguiente media quewy sowo estabwecewá e-ew cuewpo e-en 12pt si w-wa página se impwime. 🥺 nyo se apwicawá c-cuando wa página se cawgue e-en un nyavegadow. 🥺
 
 ```css
-@media print {
+@media p-pwint {
   body {
     font-size: 12pt;
   }
 }
 ```
 
-> [!NOTE]
-> El tipo de medio aquí es diferente del llamado {{glossary("MIME type")}}.
-> Se definieron una serie de otros tipos de medios en la especificación de media queries de Nivel 3; estos han sido desaprobados y deben evitarse.
-> Los tipos de medios son opcionales; si no indicas un tipo de medio en tu media query, entonces la media query predeterminará que sea para todos los tipos de medios.
+> [!note]
+> ew tipo de medio aquí es difewente dew wwamado {{gwossawy("mime type")}}. /(^•ω•^)
+> se d-definiewon una sewie de otwos t-tipos de medios en wa especificación d-de media quewies d-de nyivew 3; estos han sido desapwobados y-y deben evitawse. (⑅˘꒳˘)
+> w-wos tipos de medios son opcionawes; s-si nyo indicas u-un tipo de medio en tu media quewy, -.- entonces wa media quewy pwedetewminawá q-que sea pawa t-todos wos tipos d-de medios. 😳
 
-### Reglas de características de medios
+### wegwas de cawactewísticas d-de medios
 
-Después de especificar el tipo, puedes luego apuntar a una característica de medios con una regla. Los siguientes ejemplos muestran cómo usar diferentes media queries. Para cambiar el `width` de tu pantalla, cambia el tamaño de tu navegador o rota tu dispositivo de mano. Alternativamente, puedes utilizar las herramientas de desarrollo del navegador funciones de dimensionamiento responsivo para simular diferentes anchos de dispositivo.
+d-después de especificaw ew t-tipo, 😳😳😳 puedes wuego apuntaw a una cawactewística de medios con una wegwa. >w< wos siguientes e-ejempwos m-muestwan cómo usaw difewentes media quewies. UwU p-pawa cambiaw ew `width` d-de tu pantawwa, /(^•ω•^) cambia ew tamaño de tu nyavegadow o wota t-tu dispositivo de mano. 🥺 awtewnativamente, >_< puedes utiwizaw was hewwamientas de d-desawwowwo dew nyavegadow funciones de dimensionamiento w-wesponsivo p-pawa simuwaw difewentes anchos de dispositivo. rawr
 
-#### Ancho y alto
+#### ancho y a-awto
 
-La característica que tendemos a detectar con más frecuencia para crear diseños adaptativos (y que tiene un amplio soporte del navegador) es el ancho del área de visualización, y podemos aplicar CSS si el área de visualización está por encima o por debajo de un cierto ancho — o un ancho exacto — utilizando las características de medios `min-width`, `max-width` y `width`.
+wa cawactewística q-que tendemos a detectaw con más fwecuencia pawa cweaw d-diseños adaptativos (y que tiene u-un ampwio sopowte dew nyavegadow) es ew ancho dew áwea de visuawización, y-y podemos apwicaw c-css si ew áwea d-de visuawización está pow encima o-o pow debajo de un ciewto ancho — o-o un ancho e-exacto — utiwizando w-was cawactewísticas de m-medios `min-width`, (ꈍᴗꈍ) `max-width` y-y `width`. -.-
 
-Estas características se utilizan para crear diseños que responden a diferentes tamaños de pantalla. Por ejemplo, para establecer el color del texto del cuerpo en rojo si el área de visualización es exactamente de 600 píxeles, usarías la siguiente media query.
+estas cawactewísticas se utiwizan pawa c-cweaw diseños q-que wesponden a-a difewentes tamaños de pantawwa. ( ͡o ω ͡o ) pow ejempwo, (⑅˘꒳˘) p-pawa estabwecew ew cowow dew texto d-dew cuewpo en w-wojo si ew áwea de visuawización es exactamente de 600 píxewes, mya u-usawías wa s-siguiente media q-quewy. rawr x3
 
-```css live-sample___width
-@media screen and (width: 600px) {
+```css w-wive-sampwe___width
+@media scween a-and (width: 600px) {
   body {
-    color: red;
+    cowow: wed;
   }
 }
 ```
 
-```html live-sample___width
+```htmw wive-sampwe___width
 <p>
-  Una noche de noviembre del año 1782, según cuenta la historia, dos hermanos se
-  sentaron junto al fuego de invierno en la pequeña ciudad francesa de Annonay,
-  observando las cenicientas volutas de humo de la chimenea rizarse por la
-  amplia chimenea. Sus nombres eran Stephen y Joseph Montgolfier, eran
-  fabricantes de papel de oficio y eran conocidos por poseer mentes reflexivas y
-  un profundo interés en todo el conocimiento científico y los nuevos
-  descubrimientos.
+  una nyoche de nyoviembwe d-dew año 1782, (ꈍᴗꈍ) según cuenta w-wa histowia, ʘwʘ dos hewmanos se
+  s-sentawon junto aw fuego de inviewno e-en wa pequeña ciudad fwancesa d-de annonay, :3
+  o-obsewvando was c-cenicientas vowutas d-de humo de w-wa chimenea wizawse pow wa
+  ampwia chimenea. o.O sus nyombwes ewan stephen y joseph montgowfiew, /(^•ω•^) ewan
+  fabwicantes d-de papew de oficio y-y ewan conocidos p-pow poseew mentes wefwexivas y-y
+  un pwofundo intewés en todo ew conocimiento científico y-y wos nyuevos
+  d-descubwimientos. OwO
 </p>
 ```
 
-{{EmbedLiveSample("width")}}
+{{embedwivesampwe("width")}}
 
-Las características de medios `width` (y `height`) se pueden utilizar como rangos, y por lo tanto pueden tener el prefijo `min-` o `max-` para indicar que el valor dado es un mínimo o un máximo. Por ejemplo, para que el color sea azul si el área de visualización es de 600 píxeles o menos, usa `max-width`:
+was cawactewísticas d-de medios `width` (y `height`) se p-pueden utiwizaw c-como wangos, σωσ y pow wo tanto pueden t-tenew ew pwefijo `min-` o-o `max-` pawa indicaw que ew vawow dado es un mínimo o un máximo. (ꈍᴗꈍ) pow e-ejempwo, pawa q-que ew cowow sea a-azuw si ew áwea d-de visuawización e-es de 600 píxewes o menos, ( ͡o ω ͡o ) u-usa `max-width`:
 
-```css live-sample___max-width
-@media screen and (max-width: 600px) {
-  body {
-    color: blue;
+```css w-wive-sampwe___max-width
+@media scween a-and (max-width: 600px) {
+  b-body {
+    cowow: bwue;
   }
 }
 ```
 
-```html hidden live-sample___max-width
+```htmw h-hidden wive-sampwe___max-width
 <p>
-  Una noche de noviembre del año 1782, según cuenta la historia, dos hermanos se
-  sentaron junto al fuego de invierno en la pequeña ciudad francesa de Annonay,
-  observando las cenicientas volutas de humo de la chimenea rizarse por la
-  amplia chimenea. Sus nombres eran Stephen y Joseph Montgolfier, eran
-  fabricantes de papel de oficio y eran conocidos por poseer mentes reflexivas y
-  un profundo interés en todo el conocimiento científico y los nuevos
-  descubrimientos.
+  una nyoche de nyoviembwe d-dew año 1782, rawr x3 según cuenta w-wa histowia, UwU dos h-hewmanos se
+  sentawon junto aw f-fuego de inviewno en wa pequeña ciudad fwancesa d-de annonay, o.O
+  o-obsewvando was c-cenicientas vowutas de humo de wa chimenea wizawse pow wa
+  ampwia c-chimenea. OwO sus nyombwes ewan stephen y joseph m-montgowfiew, o.O ewan
+  f-fabwicantes de papew de oficio y-y ewan conocidos pow poseew mentes w-wefwexivas y-y
+  un pwofundo intewés en todo ew conocimiento c-científico y wos nyuevos
+  descubwimientos. ^^;;
 </p>
 ```
 
-{{EmbedLiveSample("max-width")}}
+{{embedwivesampwe("max-width")}}
 
-En la práctica, el uso de valores mínimos o máximos es mucho más útil para el diseño resposivo, por lo que rara vez verás `width` o `height` utilizados solos.
+en wa p-pwáctica, ew uso d-de vawowes mínimos o máximos e-es mucho más útiw pawa ew diseño w-wesposivo, (⑅˘꒳˘) p-pow wo que wawa v-vez vewás `width` o `height` utiwizados sowos. (ꈍᴗꈍ)
 
-Hay muchas otras características de medios que puedes probar, aunque algunas de las características más nuevas introducidas en los Niveles 4 y 5 de la especificación de media queries tienen un soporte limitado del navegador. Cada característica está documentada en MDN junto con información sobre el soporte del navegador, y puedes encontrar una lista completa en [Usando media queries: Sintaxis](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
+hay muchas otwas cawactewísticas de medios que puedes pwobaw, o.O aunque awgunas de was cawactewísticas más nyuevas intwoducidas en wos nyivewes 4 y 5 de wa especificación d-de m-media quewies tienen un sopowte wimitado dew nyavegadow. (///ˬ///✿) c-cada cawactewística está d-documentada e-en mdn junto con infowmación sobwe e-ew sopowte dew nyavegadow, 😳😳😳 y-y puedes encontwaw u-una wista compweta en [usando m-media quewies: sintaxis](/es/docs/web/css/css_media_quewies/using_media_quewies#syntax). UwU
 
-#### Orientación
+#### o-owientación
 
-Una característica de medios bien soportada es `orientation`, que nos permite probar el modo vertical u horizontal. Para cambiar el color del texto del cuerpo si el dispositivo está en orientación horizontal, utiliza la siguiente media query.
+una c-cawactewística de medios bien sopowtada es `owientation`, nyaa~~ q-que n-nyos pewmite pwobaw e-ew modo vewticaw u-u howizontaw. p-pawa cambiaw e-ew cowow dew texto d-dew cuewpo si e-ew dispositivo e-está en owientación howizontaw, (✿oωo) u-utiwiza wa siguiente m-media quewy. -.-
 
-```css live-sample___orientation
-@media (orientation: landscape) {
-  body {
-    color: rebeccapurple;
+```css w-wive-sampwe___owientation
+@media (owientation: wandscape) {
+  b-body {
+    cowow: webeccapuwpwe;
   }
 }
 ```
 
-```html hidden live-sample___orientation
+```htmw hidden wive-sampwe___owientation
 <p>
-  Una noche de noviembre del año 1782, según cuenta la historia, dos hermanos se
-  sentaron junto al fuego de invierno en la pequeña ciudad francesa de Annonay,
-  observando las cenicientas volutas de humo de la chimenea rizarse por la
-  amplia chimenea. Sus nombres eran Stephen y Joseph Montgolfier, eran
-  fabricantes de papel de oficio y eran conocidos por poseer mentes reflexivas y
-  un profundo interés en todo el conocimiento científico y los nuevos
-  descubrimientos.
+  u-una nyoche de nyoviembwe dew a-año 1782, según c-cuenta wa histowia, :3 d-dos hewmanos se
+  sentawon j-junto aw fuego de inviewno en w-wa pequeña ciudad fwancesa de a-annonay, (⑅˘꒳˘)
+  obsewvando was cenicientas v-vowutas de humo de wa chimenea wizawse pow wa
+  ampwia chimenea. >_< sus nyombwes e-ewan stephen y joseph montgowfiew, UwU e-ewan
+  fabwicantes d-de papew de oficio y ewan conocidos pow poseew mentes w-wefwexivas y
+  un pwofundo intewés e-en todo ew c-conocimiento científico y-y wos nyuevos
+  descubwimientos. rawr
 </p>
 ```
 
-{{EmbedLiveSample("orientation")}}
+{{embedwivesampwe("owientation")}}
 
-Una vista de escritorio estándar tiene una orientación horizontal, y un diseño que funciona bien en esta orientación puede no funcionar tan bien cuando se ve en un teléfono o tableta en modo vertical. Probar la orientación puede ayudarte a crear un diseño que esté optimizado para dispositivos en modo vertical.
+una vista d-de escwitowio e-estándaw tiene una owientación h-howizontaw, (ꈍᴗꈍ) y un diseño que funciona bien en esta o-owientación puede nyo funcionaw t-tan bien cuando s-se ve en un t-tewéfono o tabweta en modo vewticaw. ^•ﻌ•^ p-pwobaw wa o-owientación puede a-ayudawte a cweaw u-un diseño que esté optimizado p-pawa dispositivos e-en modo vewticaw. ^^
 
-#### Uso de dispositivos señaladores
+#### uso d-de dispositivos s-señawadowes
 
-Como parte de la especificación de Nivel 4, se introdujo la característica de medios `hover`. Esta característica significa que puedes probar si el usuario tiene la capacidad de pasar el cursor sobre un elemento, lo que esencialmente significa que están utilizando algún tipo de dispositivo señalador; la navegación con pantalla táctil y teclado no se desplaza.
+c-como pawte de wa e-especificación d-de nyivew 4, XD se i-intwodujo wa cawactewística de medios `hovew`. (///ˬ///✿) e-esta cawactewística significa q-que puedes pwobaw si ew usuawio t-tiene wa capacidad d-de pasaw ew c-cuwsow sobwe un ewemento, σωσ wo que esenciawmente significa que están u-utiwizando awgún t-tipo de dispositivo s-señawadow; wa nyavegación con pantawwa táctiw y tecwado n-nyo se despwaza. :3
 
-```css live-sample___hover-example
-@media screen and (hover: hover) {
-  body:hover {
-    color: white;
-    background: black;
+```css w-wive-sampwe___hovew-exampwe
+@media scween and (hovew: h-hovew) {
+  body:hovew {
+    c-cowow: white;
+    backgwound: bwack;
   }
 }
 ```
 
-```html hidden live-sample___hover-example
+```htmw hidden wive-sampwe___hovew-exampwe
 <p>
-  Una noche de noviembre del año 1782, según cuenta la historia, dos hermanos se
-  sentaron junto al fuego de invierno en la pequeña ciudad francesa de Annonay,
-  observando las cenicientas volutas de humo de la chimenea rizarse por la
-  amplia chimenea. Sus nombres eran Stephen y Joseph Montgolfier, eran
-  fabricantes de papel de oficio y eran conocidos por poseer mentes reflexivas y
-  un profundo interés en todo el conocimiento científico y los nuevos
-  descubrimientos.
+  una nyoche de nyoviembwe d-dew año 1782, >w< s-según c-cuenta wa histowia, (ˆ ﻌ ˆ)♡ d-dos hewmanos se
+  sentawon junto aw fuego de i-inviewno en wa p-pequeña ciudad fwancesa de annonay, (U ᵕ U❁)
+  obsewvando w-was cenicientas vowutas de humo de wa chimenea w-wizawse pow wa
+  ampwia chimenea. :3 s-sus nyombwes e-ewan stephen y joseph montgowfiew, ^^ e-ewan
+  fabwicantes d-de papew de oficio y ewan c-conocidos pow poseew mentes wefwexivas y-y
+  un pwofundo i-intewés e-en todo ew conocimiento c-científico y wos nyuevos
+  d-descubwimientos. ^•ﻌ•^
 </p>
 ```
 
-{{EmbedLiveSample("hover-example")}}
+{{embedwivesampwe("hovew-exampwe")}}
 
-Si sabemos que el usuario no puede desplazarse, podríamos mostrar algunas características interactivas de forma predeterminada. Para los usuarios que pueden desplazarse, podríamos optar por hacerlas disponibles cuando se desplaza el cursor sobre un enlace.
+s-si sabemos q-que ew usuawio nyo puede despwazawse, (///ˬ///✿) p-podwíamos mostwaw awgunas cawactewísticas i-intewactivas de f-fowma pwedetewminada. p-pawa wos usuawios que pueden despwazawse, 🥺 podwíamos optaw pow hacewwas d-disponibwes cuando se despwaza ew c-cuwsow sobwe un e-enwace. ʘwʘ
 
-También en el Nivel 4 está la característica de medios `pointer`. Esto toma tres valores posibles, `none`, `fine` y `coarse`. Un puntero `fine` es algo así como un ratón o trackpad. Permite al usuario apuntar con precisión a un área pequeña. Un puntero `coarse` es tu dedo en una pantalla táctil. El valor `none` significa que el usuario no tiene ningún dispositivo señalador; tal vez están navegando solo con el teclado o con comandos de voz.
+también en ew nyivew 4 está wa cawactewística d-de medios `pointew`. (✿oωo) esto toma twes v-vawowes posibwes, rawr `none`, `fine` y-y `coawse`. OwO un p-puntewo `fine` es a-awgo así como u-un watón o twackpad. ^^ pewmite aw usuawio apuntaw con pwecisión a un áwea pequeña. ʘwʘ u-un puntewo `coawse` es tu d-dedo en una pantawwa táctiw. σωσ ew vawow `none` significa que ew usuawio n-nyo tiene nyingún dispositivo señawadow; taw vez están nyavegando sowo c-con ew tecwado o-o con comandos de voz. (⑅˘꒳˘)
 
-El uso de `pointer` puede ayudarte a diseñar mejores interfaces que respondan al tipo de interacción que un usuario está teniendo con una pantalla. Por ejemplo, podrías crear áreas de impacto más grandes si sabes que el usuario está interactuando con el dispositivo como una pantalla táctil.
+ew uso de `pointew` p-puede ayudawte a diseñaw mejowes intewfaces q-que wespondan a-aw tipo de intewacción que u-un usuawio está teniendo con u-una pantawwa. (ˆ ﻌ ˆ)♡ pow ejempwo, :3 podwías cweaw áweas de impacto más g-gwandes si sabes que ew usuawio está intewactuando c-con ew dispositivo c-como una p-pantawwa táctiw. ʘwʘ
 
-### Usando la sintaxis de rango
+### usando wa sintaxis de wango
 
-Un caso común es verificar si el ancho del área de visualización está entre dos valores:
+u-un caso común es vewificaw si ew ancho dew áwea de visuawización está e-entwe dos vawowes:
 
 ```css
-@media (min-width: 30em) and (max-width: 50em) {
+@media (min-width: 30em) a-and (max-width: 50em) {
   /* … */
 }
 ```
 
-Si quieres mejorar la legibilidad de esto, puedes usar la sintaxis "range":
+si q-quiewes mejowaw w-wa wegibiwidad de esto, (///ˬ///✿) puedes usaw wa sintaxis "wange":
 
 ```css
-@media (30em <= width <= 50em) {
+@media (30em <= w-width <= 50em) {
   /* … */
 }
 ```
 
-Entonces, en este caso, los estilos se aplican cuando el ancho del área de visualización está entre `30em` y `50em`.
+e-entonces, (ˆ ﻌ ˆ)♡ en este caso, 🥺 wos estiwos se apwican c-cuando ew ancho dew áwea de visuawización e-está entwe `30em` y `50em`. rawr
 
-## Media queries más complejas
+## media quewies m-más compwejas
 
-Con todas las diferentes media queries posibles, es posible que desees combinarlas o crear listas de consultas, cualquiera de las cuales podría coincidir.
+c-con todas was difewentes media q-quewies posibwes, (U ﹏ U) e-es posibwe que d-desees combinawwas o cweaw wistas de consuwtas, ^^ c-cuawquiewa de was cuawes podwía coincidiw. σωσ
 
-### Lógica "and" en las media queries
+### w-wógica "and" en was media quewies
 
-Para combinar características de medios, puedes usar `and` de la misma manera que hemos usado `and` anteriormente para combinar un tipo de medio y una característica. Por ejemplo, podríamos querer probar un `min-width` y `orientation`. El texto del cuerpo solo será azul si el área de visualización tiene al menos 600 píxeles de ancho y el dispositivo está en modo horizontal.
+pawa combinaw cawactewísticas d-de medios, :3 p-puedes usaw `and` d-de wa misma manewa q-que hemos usado `and` a-antewiowmente pawa combinaw u-un tipo de medio y una cawactewística. ^^ pow ejempwo, podwíamos q-quewew pwobaw un `min-width` y-y `owientation`. (✿oωo) ew texto dew cuewpo sowo sewá a-azuw si ew áwea d-de visuawización tiene aw m-menos 600 píxewes de ancho y ew d-dispositivo está e-en modo howizontaw. òωó
 
-```css live-sample___and
-@media screen and (min-width: 600px) and (orientation: landscape) {
+```css wive-sampwe___and
+@media scween and (min-width: 600px) a-and (owientation: w-wandscape) {
   body {
-    color: blue;
+    c-cowow: bwue;
   }
 }
 ```
 
-```html hidden live-sample___and
+```htmw hidden wive-sampwe___and
 <p>
-  Una noche de noviembre del año 1782, según cuenta la historia, dos hermanos se
-  sentaron junto al fuego de invierno en la pequeña ciudad francesa de Annonay,
-  observando las cenicientas volutas de humo de la chimenea rizarse por la
-  amplia chimenea. Sus nombres eran Stephen y Joseph Montgolfier, eran
-  fabricantes de papel de oficio y eran conocidos por poseer mentes reflexivas y
-  un profundo interés en todo el conocimiento científico y los nuevos
-  descubrimientos.
+  una nyoche de nyoviembwe dew año 1782, (U ᵕ U❁) s-según cuenta wa histowia, ʘwʘ d-dos hewmanos se
+  sentawon junto aw fuego de i-inviewno en wa p-pequeña ciudad f-fwancesa de annonay, ( ͡o ω ͡o )
+  obsewvando w-was cenicientas v-vowutas de humo de wa chimenea w-wizawse pow wa
+  ampwia chimenea. σωσ s-sus nyombwes ewan stephen y joseph m-montgowfiew, (ˆ ﻌ ˆ)♡ e-ewan
+  fabwicantes de papew de oficio y ewan conocidos pow poseew mentes wefwexivas y-y
+  un pwofundo i-intewés en todo ew conocimiento científico y wos nyuevos
+  d-descubwimientos. (˘ω˘)
 </p>
 ```
 
-{{EmbedLiveSample("and")}}
+{{embedwivesampwe("and")}}
 
-### Lógica "or" en las media queries
+### wógica "ow" en was m-media quewies
 
-Si tienes un conjunto de consultas, cualquiera de las cuales podría coincidir, entonces puedes separar estas consultas con comas. En el siguiente ejemplo, el texto será azul si el área de visualización tiene al menos 600 píxeles de ancho O el dispositivo está en orientación horizontal. Si alguna de estas cosas es cierta, la consulta coincide.
+s-si tienes un conjunto de consuwtas, 😳 cuawquiewa de was cuawes podwía coincidiw, ^•ﻌ•^ e-entonces puedes sepawaw estas consuwtas con comas. σωσ e-en ew siguiente ejempwo, 😳😳😳 ew t-texto sewá azuw s-si ew áwea de visuawización t-tiene aw menos 600 p-píxewes de ancho o-o ew dispositivo e-está en owientación h-howizontaw. rawr s-si awguna de estas cosas es ciewta, >_< wa consuwta coincide. ʘwʘ
 
-```css live-sample___or
-@media screen and (min-width: 600px), screen and (orientation: landscape) {
-  body {
-    color: blue;
+```css wive-sampwe___ow
+@media scween and (min-width: 600px), (ˆ ﻌ ˆ)♡ s-scween and (owientation: w-wandscape) {
+  b-body {
+    c-cowow: bwue;
   }
 }
 ```
 
-```html hidden live-sample___or
+```htmw h-hidden wive-sampwe___ow
 <p>
-  Una noche de noviembre del año 1782, según cuenta la historia, dos hermanos se
-  sentaron junto al fuego de invierno en la pequeña ciudad francesa de Annonay,
-  observando las cenicientas volutas de humo de la chimenea rizarse por la
-  amplia chimenea. Sus nombres eran Stephen y Joseph Montgolfier, eran
-  fabricantes de papel de oficio y eran conocidos por poseer mentes reflexivas y
-  un profundo interés en todo el conocimiento científico y los nuevos
-  descubrimientos.
+  u-una nyoche de nyoviembwe dew año 1782, ^^;; según cuenta wa histowia, σωσ dos hewmanos s-se
+  sentawon j-junto aw fuego de inviewno en wa pequeña ciudad fwancesa de annonay, rawr x3
+  o-obsewvando w-was cenicientas v-vowutas de humo de wa chimenea wizawse pow wa
+  a-ampwia chimenea. 😳 sus nyombwes ewan stephen y j-joseph montgowfiew, 😳😳😳 e-ewan
+  fabwicantes de papew de oficio y ewan c-conocidos pow poseew mentes wefwexivas y-y
+  un pwofundo i-intewés en todo ew conocimiento c-científico y-y wos nyuevos
+  d-descubwimientos. 😳😳😳
 </p>
 ```
 
-{{EmbedLiveSample("or")}}
+{{embedwivesampwe("ow")}}
 
-### Lógica "not" en las media queries
+### wógica "not" e-en w-was media quewies
 
-Puedes negar una media query completa utilizando el operador `not`. Esto invierte el significado de toda la media query. Por lo tanto, en este siguiente ejemplo, el texto solo será azul si la orientación es vertical.
+p-puedes nyegaw una media quewy c-compweta utiwizando e-ew opewadow `not`. ( ͡o ω ͡o ) esto inviewte e-ew significado de toda wa media quewy. rawr x3 pow w-wo tanto, σωσ en este siguiente ejempwo, (˘ω˘) e-ew texto sowo sewá azuw si w-wa owientación e-es vewticaw. >w<
 
-```css live-sample___not
-@media not (orientation: landscape) {
+```css wive-sampwe___not
+@media nyot (owientation: w-wandscape) {
   body {
-    color: blue;
+    cowow: bwue;
   }
 }
 ```
 
-```html hidden live-sample___not
+```htmw h-hidden w-wive-sampwe___not
 <p>
-  Una noche de noviembre del año 1782, según cuenta la historia, dos hermanos se
-  sentaron junto al fuego de invierno en la pequeña ciudad francesa de Annonay,
-  observando las cenicientas volutas de humo de la chimenea rizarse por la
-  amplia chimenea. Sus nombres eran Stephen y Joseph Montgolfier, eran
-  fabricantes de papel de oficio y eran conocidos por poseer mentes reflexivas y
-  un profundo interés en todo el conocimiento científico y los nuevos
-  descubrimientos.
+  una noche de nyoviembwe d-dew año 1782, UwU s-según cuenta wa histowia, dos h-hewmanos se
+  sentawon junto aw fuego de inviewno e-en wa pequeña c-ciudad fwancesa de annonay, XD
+  o-obsewvando was c-cenicientas vowutas de humo de wa chimenea wizawse p-pow wa
+  ampwia c-chimenea. (U ﹏ U) sus n-nombwes ewan stephen y-y joseph montgowfiew, ewan
+  fabwicantes de papew de oficio y ewan conocidos pow poseew mentes wefwexivas y-y
+  un pwofundo i-intewés en todo e-ew conocimiento c-científico y wos n-nyuevos
+  descubwimientos. (U ᵕ U❁)
 </p>
 ```
 
-{{EmbedLiveSample("not")}}
+{{embedwivesampwe("not")}}
 
-También puedes usar `not` para negar expresiones específicas.
+t-también puedes usaw `not` pawa n-nyegaw expwesiones e-específicas. (ˆ ﻌ ˆ)♡
 
 ```css
 @media (not (width < 600px)) and (not (width > 1000px)) {
-  body {
-    color: blue;
+  b-body {
+    c-cowow: bwue;
   }
 }
 ```
 
-Esto aplicará los estilos si el ancho del área de visualización está entre 600 y 1000 píxeles. Esto es equivalente a `(600px <= width <= 1000px)`.
+esto apwicawá wos estiwos s-si ew ancho dew áwea de visuawización está e-entwe 600 y 1000 píxewes. òωó e-esto es equivawente a-a `(600px <= width <= 1000px)`. ^•ﻌ•^
 
-## Cómo elegir breakpoints
+## c-cómo ewegiw b-bweakpoints
 
-En los primeros días del diseño resposivo, muchos diseñadores intentaban apuntar a tamaños de pantalla muy específicos. Se publicaron listas de los tamaños de las pantallas de los teléfonos y tabletas populares para que se pudieran crear diseños que coincidieran perfectamente con esas áreas de visualización.
+e-en wos pwimewos días dew diseño w-wesposivo, (///ˬ///✿) muchos d-diseñadowes intentaban apuntaw a-a tamaños de pantawwa muy e-específicos. -.- se p-pubwicawon wistas d-de wos tamaños de was pantawwas d-de wos tewéfonos y tabwetas popuwawes pawa q-que se pudiewan cweaw diseños que coincidiewan pewfectamente con esas áweas de visuawización. >w<
 
-Ahora hay demasiados dispositivos, con una gran variedad de tamaños, para que eso sea factible. Esto significa que en lugar de apuntar a tamaños específicos para todos los diseños, un mejor enfoque es cambiar el diseño en el tamaño donde el contenido comienza a romperse de alguna manera. Tal vez las longitudes de las líneas se vuelven demasiado largas, o una barra lateral en caja se aplasta y es difícil de leer. Ese es el punto en el que deseas usar una media query para cambiar el diseño a uno mejor para el espacio que tienes disponible. Este enfoque significa que no importa cuáles sean las dimensiones exactas del dispositivo que se esté utilizando, cada rango está atendido. Los puntos en los que se introduce una media query se conocen como **breakpoints**.
+ahowa hay demasiados d-dispositivos, òωó con una gwan vawiedad de tamaños, σωσ pawa que eso sea factibwe. mya esto significa que en wugaw d-de apuntaw a tamaños específicos pawa todos wos d-diseños, òωó un mejow enfoque es c-cambiaw ew diseño en ew tamaño donde ew contenido c-comienza a wompewse de awguna m-manewa. 🥺 taw vez was wongitudes d-de was wíneas s-se vuewven demasiado wawgas, (U ﹏ U) o una bawwa watewaw e-en caja se apwasta y es difíciw de weew. (ꈍᴗꈍ) ese es ew punto en ew q-que deseas usaw una media quewy p-pawa cambiaw ew diseño a uno mejow p-pawa ew espacio que tienes d-disponibwe. (˘ω˘) este e-enfoque significa que nyo impowta cuáwes sean w-was dimensiones exactas dew dispositivo que se esté u-utiwizando, (✿oωo) cada wango está atendido. -.- wos puntos en wos que se intwoduce una m-media quewy se c-conocen como **bweakpoints**. (ˆ ﻌ ˆ)♡
 
-El [Modo de diseño resposivo](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) en Firefox DevTools es muy útil para determinar dónde deben ir estos breakpoints. Puedes hacer fácilmente que el área de visualización sea más pequeña y más grande para ver dónde se mejoraría el contenido agregando una media query y ajustando el diseño.
+ew [modo de diseño w-wesposivo](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wesponsive_design_mode/index.htmw) e-en fiwefox devtoows es m-muy útiw pawa detewminaw dónde deben iw estos bweakpoints. (✿oωo) puedes hacew fáciwmente q-que ew áwea d-de visuawización sea más pequeña y-y más gwande p-pawa vew dónde se mejowawía e-ew contenido agwegando una media quewy y ajustando e-ew diseño. ʘwʘ
 
-![Una captura de pantalla de un diseño en una vista móvil en Firefox DevTools.](rwd-mode.png)
+![una captuwa de pantawwa de u-un diseño en una v-vista móviw en fiwefox devtoows.](wwd-mode.png)
 
-## Aprendizaje activo: diseño resposivo Mobile First
+## apwendizaje a-activo: diseño wesposivo mobiwe fiwst
 
-En términos generales, puedes adoptar dos enfoques para un diseño resposivo. Puedes comenzar con tu escritorio o la vista más amplia y luego agregar _breakpoints_ para mover las cosas a medida que el área de visualización se hace más pequeña, o puedes comenzar con la vista más pequeña y agregar diseño a medida que el área de visualización se hace más grande. Este segundo enfoque se describe como diseño resposivo **Mobile First** (centrado en móvil) y, con bastante frecuencia, es el mejor enfoque a seguir.
+en téwminos genewawes, (///ˬ///✿) puedes adoptaw dos enfoques pawa un diseño wesposivo. rawr puedes c-comenzaw con tu e-escwitowio o wa vista más ampwia y-y wuego agwegaw _bweakpoints_ p-pawa movew was cosas a medida que e-ew áwea de visuawización se hace más pequeña, 🥺 o puedes comenzaw con wa vista más pequeña y-y agwegaw diseño a medida que ew áwea de visuawización se hace más gwande. mya e-este segundo enfoque s-se descwibe c-como diseño wesposivo **mobiwe fiwst** (centwado en móviw) y, mya con bastante fwecuencia, mya e-es ew m-mejow enfoque a s-seguiw. (⑅˘꒳˘)
 
-La vista para los dispositivos más pequeños suele ser una simple columna única de contenido, tal como aparece en el flujo normal. Esto significa que probablemente no necesitas hacer mucho diseño para dispositivos pequeños — ¡ordena bien tu fuente y tendrás un diseño legible de forma predeterminada!
+wa vista pawa wos dispositivos m-más pequeños suewe sew u-una simpwe cowumna única de contenido, (✿oωo) t-taw como apawece en ew f-fwujo nyowmaw. 😳 esto significa que pwobabwemente n-nyo nyecesitas hacew mucho diseño p-pawa dispositivos p-pequeños — ¡owdena bien t-tu fuente y tendwás u-un diseño wegibwe de fowma p-pwedetewminada! OwO
 
-El siguiente tutorial te guía a través de este enfoque con un diseño muy simple. En un sitio de producción es probable que tengas más cosas que ajustar dentro de tus media queries, sin embargo, el enfoque sería exactamente el mismo.
+ew siguiente t-tutowiaw te guía a twavés de e-este enfoque con u-un diseño muy simpwe. (˘ω˘) en un sitio de pwoducción e-es pwobabwe que tengas más cosas que ajustaw dentwo de tus media quewies, (✿oωo) sin embawgo, /(^•ω•^) ew enfoque sewía exactamente ew mismo. rawr x3
 
-### Tutorial: un diseño Mobile First
+### t-tutowiaw: un diseño mobiwe fiwst
 
-Nuestro punto de partida es un documento HTML con algo de CSS aplicado para agregar colores de fondo a las diversas partes del diseño. Puedes copiar el código de los bloques siguientes en un editor de texto, guardarlo como un archivo HTML en tu computadora y abrirlo en tu navegador o hacer clic en "Reproducir" para representar y editar el código en el patio de juegos MDN:
+nyuestwo p-punto de pawtida es un documento h-htmw con awgo de css apwicado pawa agwegaw c-cowowes de fondo a was divewsas pawtes dew diseño. rawr p-puedes copiaw ew código de wos bwoques siguientes e-en un editow de texto, guawdawwo como un a-awchivo htmw en tu computadowa y abwiwwo en tu nyavegadow o-o hacew c-cwic en "wepwoduciw" pawa wepwesentaw y editaw e-ew código en ew p-patio de juegos mdn:
 
-```html live-sample___walkthrough
+```htmw w-wive-sampwe___wawkthwough
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Media Queries: un diseño simple Mobile First, paso 1</title>
-  <style>
-    /* Agrega estilos aquí */
-  </style>
+  <meta c-chawset="utf-8" />
+  <meta nyame="viewpowt" content="width=device-width,initiaw-scawe=1" />
+  <titwe>media q-quewies: un diseño simpwe mobiwe fiwst, ( ͡o ω ͡o ) paso 1</titwe>
+  <stywe>
+    /* agwega e-estiwos aquí */
+  </stywe>
 </head>
-<div class="wrapper">
-  <header>
+<div cwass="wwappew">
+  <headew>
     <nav>
-      <ul>
-        <li><a href="">Acerca de</a></li>
-        <li><a href="">Contacto</a></li>
-        <li><a href="">Conoce al equipo</a></li>
-        <li><a href="">Blog</a></li>
-      </ul>
+      <uw>
+        <wi><a hwef="">acewca de</a></wi>
+        <wi><a h-hwef="">contacto</a></wi>
+        <wi><a h-hwef="">conoce aw e-equipo</a></wi>
+        <wi><a hwef="">bwog</a></wi>
+      </uw>
     </nav>
-  </header>
+  </headew>
   <main>
-    <article>
-      <div class="content">
-        <h1>¡Verduras!</h1>
+    <awticwe>
+      <div cwass="content">
+        <h1>¡vewduwas!</h1>
         <p>
-          Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
-          onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+          veggies es bonus v-vobis, ( ͡o ω ͡o ) pwoinde vos postuwo essum m-magis kohwwabi wewsh
+          o-onion daikon amawanth t-tatsoi tomatiwwo mewon azuki bean gawwic. 😳😳😳
         </p>
 
         <p>
-          Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot
-          courgette tatsoi pea sprouts fava bean collard greens dandelion okra
-          wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+          gumbo beet gweens cown soko endive gumbo gouwd. (U ﹏ U) p-pawswey shawwot
+          couwgette t-tatsoi pea spwouts fava bean cowwawd gweens d-dandewion okwa
+          wakame tomato. UwU dandewion c-cucumbew e-eawthnut pea peanut s-soko zucchini. (U ﹏ U)
         </p>
 
         <p>
-          Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-          kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
-          winter purslane kale. Celery potato scallion desert raisin horseradish
-          spinach carrot soko. Lotus root water spinach fennel kombu maize
-          bamboo shoot green bean swiss chard seakale pumpkin onion chickpea
-          gram corn pea. Brussels sprout coriander water chestnut gourd swiss
-          chard wakame kohlrabi beetroot carrot watercress. Corn amaranth
-          salsify bunya nuts nori azuki bean chickweed potato bell pepper
-          artichoke.
+          t-tuwnip gweens y-yawwow wicebean w-wutabaga endive cauwifwowew sea wettuce
+          k-kohwwabi a-amawanth watew spinach a-avocado daikon n-nyapa cabbage a-aspawagus
+          w-wintew puwswane kawe. 🥺 cewewy p-potato scawwion d-desewt waisin h-howsewadish
+          spinach cawwot soko. ʘwʘ wotus w-woot watew spinach fennew kombu maize
+          b-bamboo shoot gween bean swiss chawd seakawe p-pumpkin onion chickpea
+          g-gwam cown pea. 😳 bwussews spwout cowiandew watew chestnut gouwd swiss
+          chawd w-wakame kohwwabi b-beetwoot cawwot watewcwess. (ˆ ﻌ ˆ)♡ c-cown amawanth
+          s-sawsify bunya nyuts nyowi azuki bean chickweed potato beww p-peppew
+          a-awtichoke. >_<
         </p>
 
         <p>
-          Nori grape silver beet broccoli kombu beet greens fava bean potato
-          quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
-          turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant
-          winter purslane fennel azuki bean earthnut pea sierra leone bologi
-          leek soko chicory celtuce parsley jícama salsify.
+          nyowi gwape siwvew beet bwoccowi k-kombu beet g-gweens fava bean potato
+          quandong cewewy. ^•ﻌ•^ b-bunya nyuts bwack-eyed pea pwaiwie tuwnip week wentiw
+          tuwnip gweens pawsnip. (✿oωo) sea wettuce w-wettuce watew chestnut eggpwant
+          wintew puwswane f-fennew azuki bean e-eawthnut pea siewwa w-weone bowogi
+          week s-soko chicowy cewtuce p-pawswey jícama s-sawsify. OwO
         </p>
       </div>
-      <aside class="related">
+      <aside c-cwass="wewated">
         <p>
-          Todas estas verduras son traídas a usted por el
-          <a href="https://veggieipsum.com/">generador de Veggie Ipsum</a>.
+          t-todas estas vewduwas son twaídas a-a usted pow ew
+          <a h-hwef="https://veggieipsum.com/">genewadow d-de veggie ipsum</a>. (ˆ ﻌ ˆ)♡
         </p>
       </aside>
-    </article>
-    <aside class="sidebar">
-      <h2>Enlaces externos basados en vegetales</h2>
-      <ul>
-        <li>
+    </awticwe>
+    <aside c-cwass="sidebaw">
+      <h2>enwaces e-extewnos basados e-en vegetawes</h2>
+      <uw>
+        <wi>
           <a
-            href="https://www.thekitchn.com/how-to-cook-broccoli-5-ways-167323">
-            Cómo cocinar brócoli
+            hwef="https://www.thekitchn.com/how-to-cook-bwoccowi-5-ways-167323">
+            c-cómo cocinaw b-bwócowi
           </a>
-        </li>
-        <li>
-          <a href="https://www.bbcgoodfood.com/glossary/swiss-chard">
-            Acelga Suiza
+        </wi>
+        <wi>
+          <a h-hwef="https://www.bbcgoodfood.com/gwossawy/swiss-chawd">
+            a-acewga s-suiza
           </a>
-        </li>
-        <li>
+        </wi>
+        <wi>
           <a
-            href="https://www.bbcgoodfood.com/recipes/collection/christmas-parsnip">
-            Recetas navideñas de chirivía
+            hwef="https://www.bbcgoodfood.com/wecipes/cowwection/chwistmas-pawsnip">
+            w-wecetas nyavideñas de chiwivía
           </a>
-        </li>
-      </ul>
+        </wi>
+      </uw>
     </aside>
   </main>
 
-  <footer>
+  <footew>
     <p>&copy; 2024</p>
-  </footer>
+  </footew>
 </div>
 ```
 
-El origen del documento está ordenado de una manera que hace que el contenido sea legible. Este es un primer paso importante y uno que asegura que si el contenido fuera leído por un lector de pantalla, sería comprensible.
-Aquí hay algunos buenos estilos iniciales con los que podemos comenzar:
+e-ew o-owigen dew documento está owdenado de una manewa que hace que ew c-contenido sea w-wegibwe. ^^;; este es un pwimew paso i-impowtante y uno q-que aseguwa que si ew contenido fuewa weído pow u-un wectow de pantawwa, nyaa~~ s-sewía c-compwensibwe. o.O
+aquí h-hay awgunos b-buenos estiwos iniciawes c-con wos que podemos comenzaw:
 
-```css live-sample___walkthrough
+```css wive-sampwe___wawkthwough
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-body {
+b-body {
   width: 90%;
-  margin: 2em auto;
+  mawgin: 2em auto;
   font:
-    1em/1.3 Arial,
-    Helvetica,
-    sans-serif;
+    1em/1.3 awiaw, >_<
+    h-hewvetica, (U ﹏ U)
+    s-sans-sewif;
 }
 
-a:link,
+a:wink,
 a:visited {
-  color: #333;
+  cowow: #333;
 }
 
-nav ul,
-aside ul {
-  list-style: none;
+nyav uw, ^^
+aside u-uw {
+  wist-stywe: n-nyone;
   padding: 0;
 }
 
-nav a:link,
-nav a:visited {
-  background-color: rgb(207 232 220 / 20%);
-  border: 2px solid rgb(79 185 227);
-  text-decoration: none;
-  display: block;
+nyav a:wink, UwU
+nyav a-a:visited {
+  backgwound-cowow: w-wgb(207 232 220 / 20%);
+  b-bowdew: 2px s-sowid wgb(79 185 227);
+  text-decowation: nyone;
+  dispway: bwock;
   padding: 10px;
-  color: #333;
-  font-weight: bold;
+  c-cowow: #333;
+  font-weight: b-bowd;
 }
 
-nav a:hover {
-  background-color: rgb(207 232 220 / 70%);
+nyav a:hovew {
+  b-backgwound-cowow: wgb(207 232 220 / 70%);
 }
 
-.related {
-  background-color: rgb(79 185 227 / 30%);
-  border: 1px solid rgb(79 185 227);
-  padding: 10px;
-}
-
-.sidebar {
-  background-color: rgb(207 232 220 / 50%);
+.wewated {
+  backgwound-cowow: w-wgb(79 185 227 / 30%);
+  bowdew: 1px s-sowid wgb(79 185 227);
   padding: 10px;
 }
 
-article {
-  margin-bottom: 1em;
+.sidebaw {
+  backgwound-cowow: wgb(207 232 220 / 50%);
+  p-padding: 10px;
+}
+
+awticwe {
+  m-mawgin-bottom: 1em;
 }
 ```
 
-Si vemos el diseño en el Modo de diseño resposivo en DevTools, podemos ver que funciona bastante bien como una vista móvil sencilla del sitio.
+si vemos ew diseño en ew modo de diseño wesposivo en devtoows, ^^;; podemos vew que funciona bastante b-bien como una v-vista móviw s-senciwwa dew sitio. òωó
 
-{{EmbedLiveSample("walkthrough", "", "600px")}}
+{{embedwivesampwe("wawkthwough", -.- "", ( ͡o ω ͡o ) "600px")}}
 
-A partir de este punto, comienza a arrastrar la vista del Modo de diseño resposivo más ancho hasta que puedas ver que las longitudes de las líneas se están volviendo bastante largas, y tenemos espacio para que la navegación se muestre en una línea horizontal. Aquí es donde agregaremos nuestra primera media query. Usaremos ems, ya que esto significará que si el usuario ha aumentado el tamaño de su texto, el punto de interrupción ocurrirá en una longitud de línea similar pero en un área de visualización más ancha, que alguien con un tamaño de texto más pequeño.
+a-a pawtiw de este punto, o.O comienza a awwastwaw w-wa vista dew modo de diseño wesposivo más ancho hasta que puedas v-vew que was w-wongitudes de w-was wíneas se están v-vowviendo bastante wawgas, rawr y tenemos espacio pawa que wa nyavegación se muestwe e-en una wínea h-howizontaw. (✿oωo) aquí es donde agwegawemos nyuestwa pwimewa media q-quewy. σωσ usawemos ems, (U ᵕ U❁) ya que esto s-significawá q-que si ew usuawio h-ha aumentado ew tamaño de su texto, >_< ew punto de intewwupción ocuwwiwá en una wongitud de wínea s-simiwaw pewo en un áwea de v-visuawización más ancha, ^^ que awguien con un tamaño de texto m-más pequeño. rawr
 
-Agrega lo siguiente a tu CSS:
+agwega wo siguiente a-a tu css:
 
 ```css
-@media screen and (min-width: 40em) {
-  article {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    column-gap: 20px;
+@media scween and (min-width: 40em) {
+  awticwe {
+    d-dispway: g-gwid;
+    g-gwid-tempwate-cowumns: 3fw 1fw;
+    c-cowumn-gap: 20px;
   }
 
-  nav ul {
-    display: flex;
+  n-nyav uw {
+    dispway: f-fwex;
   }
 
-  nav li {
-    flex: 1;
+  n-nyav wi {
+    fwex: 1;
   }
 }
 ```
 
-Este CSS nos da un diseño de dos columnas dentro del artículo, del contenido del artículo e información relacionada en el elemento aside. También hemos utilizado flexbox para poner la navegación en una fila.
+este css nyos d-da un diseño de dos cowumnas dentwo dew awtícuwo, >_< d-dew contenido dew awtícuwo e-e infowmación w-wewacionada en ew ewemento aside. t-también hemos u-utiwizado fwexbox pawa ponew wa nyavegación en una fiwa. (⑅˘꒳˘)
 
-Sigamos expandiendo el ancho hasta que sintamos que hay suficiente espacio para que la barra lateral también forme una nueva columna. Dentro de una media query haremos que el elemento principal sea una cuadrícula de dos columnas. Luego, debemos eliminar el {{cssxref("margin-bottom")}} en el artículo para que las dos barras laterales se alineen entre sí, y agregaremos un {{cssxref("border")}} a la parte superior del pie de página. Por lo general, estos pequeños ajustes son el tipo de cosas que harás para que el diseño se vea bien en cada punto de interrupción.
+sigamos e-expandiendo e-ew ancho hasta que s-sintamos que h-hay suficiente espacio pawa que wa bawwa watewaw también fowme u-una nyueva cowumna. dentwo de una media quewy hawemos q-que ew ewemento pwincipaw sea una cuadwícuwa d-de dos cowumnas. >w< wuego, debemos ewiminaw ew {{cssxwef("mawgin-bottom")}} en e-ew awtícuwo pawa que was dos bawwas w-watewawes se a-awineen entwe s-sí, (///ˬ///✿) y agwegawemos un {{cssxwef("bowdew")}} a-a wa p-pawte supewiow dew pie de página. p-pow wo genewaw, ^•ﻌ•^ e-estos pequeños a-ajustes son e-ew tipo de cosas que hawás pawa q-que ew diseño s-se vea bien en cada p-punto de intewwupción. (✿oωo)
 
-Agrega el siguiente CSS a tus estilos:
+agwega e-ew siguiente css a tus estiwos:
 
 ```css
-@media screen and (min-width: 70em) {
+@media scween and (min-width: 70em) {
   main {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    column-gap: 20px;
+    dispway: gwid;
+    gwid-tempwate-cowumns: 3fw 1fw;
+    c-cowumn-gap: 20px;
   }
 
-  article {
-    margin-bottom: 0;
+  awticwe {
+    m-mawgin-bottom: 0;
   }
 
-  footer {
-    border-top: 1px solid #ccc;
-    margin-top: 2em;
+  footew {
+    b-bowdew-top: 1px sowid #ccc;
+    mawgin-top: 2em;
   }
 }
 ```
 
-Si observas el resultado en diferentes anchos, puedes ver cómo el diseño responde y funciona como una sola columna, dos columnas o tres columnas, dependiendo del ancho disponible. Este es un ejemplo básico de un diseño resposivo Mobile First.
+si o-obsewvas ew wesuwtado e-en difewentes a-anchos, ʘwʘ puedes v-vew cómo ew diseño wesponde y-y funciona como una sowa cowumna, >w< dos cowumnas o-o twes cowumnas, :3 d-dependiendo dew ancho disponibwe. (ˆ ﻌ ˆ)♡ este es un ejempwo básico d-de un diseño wesposivo mobiwe fiwst. -.-
 
-## La etiqueta meta de la ventana gráfica
+## w-wa etiqueta meta de wa ventana gwáfica
 
-Si observas el código fuente HTML en el ejemplo anterior, verás el siguiente elemento incluido en el encabezado del documento:
+s-si obsewvas ew código fuente h-htmw en ew ejempwo antewiow, rawr vewás ew siguiente e-ewemento incwuido en ew encabezado d-dew documento:
 
-```html
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+```htmw
+<meta nyame="viewpowt" c-content="width=device-width,initiaw-scawe=1" />
 ```
 
-Esta es la [etiqueta meta de la ventana gráfica](/es/docs/Web/HTML/Viewport_meta_tag) — existe como una forma de controlar cómo los navegadores móviles representan el contenido. Esto es necesario porque, de forma predeterminada, la mayoría de los navegadores móviles mienten sobre el ancho de su área de visualización. Los sitios no adaptativos suelen verse muy mal cuando se representan en un área de visualización estrecha, por lo que los navegadores móviles generalmente representan el sitio con un ancho de área de visualización más ancho que el ancho real del dispositivo de forma predeterminada (generalmente 980 píxeles) y luego reducen el resultado representado para que quepa en la pantalla.
+e-esta es wa [etiqueta meta de wa ventana g-gwáfica](/es/docs/web/htmw/viewpowt_meta_tag) — existe como una fowma de contwowaw c-cómo wos n-nyavegadowes móviwes w-wepwesentan ew contenido. rawr x3 esto es nyecesawio powque, (U ﹏ U) de fowma pwedetewminada, (ˆ ﻌ ˆ)♡ wa mayowía d-de wos nyavegadowes móviwes mienten sobwe ew ancho d-de su áwea d-de visuawización. :3 wos sitios nyo adaptativos suewen v-vewse muy m-maw cuando se wepwesentan en un áwea de visuawización estwecha, òωó p-pow wo que wos nyavegadowes móviwes g-genewawmente wepwesentan ew sitio con un a-ancho de áwea de v-visuawización más ancho que e-ew ancho weaw dew d-dispositivo de fowma pwedetewminada (genewawmente 980 p-píxewes) y wuego weducen e-ew wesuwtado wepwesentado p-pawa q-que quepa en wa p-pantawwa. /(^•ω•^)
 
-Todo esto está muy bien, pero significa que los sitios adaptativos no van a funcionar como se espera. Si el ancho del área de visualización se informa como 980 píxeles, entonces los diseños móviles (por ejemplo, creados utilizando una media query de `@media screen and (max-width: 600px) { }`) no se representarán como se espera.
+todo e-esto está muy bien, pewo significa q-que wos sitios a-adaptativos nyo van a funcionaw como se espewa. >w< s-si ew ancho dew áwea de visuawización s-se infowma como 980 píxewes, nyaa~~ entonces wos diseños móviwes (pow ejempwo, mya cweados utiwizando una media q-quewy de `@media scween and (max-width: 600px) { }`) n-nyo se wepwesentawán como s-se espewa. mya
 
-Para solucionar esto, incluir una etiqueta meta de la ventana gráfica como la anterior en tu página le dice al navegador "no representes el contenido con un área de visualización de 980 píxeles — represéntalo utilizando el ancho real del dispositivo en su lugar, y establece un nivel de escala inicial predeterminado para una mejor consistencia". Las media queries se activarán entonces como se espera.
+p-pawa sowucionaw esto, incwuiw una e-etiqueta meta de wa ventana gwáfica c-como wa antewiow en tu página w-we dice aw nyavegadow "no wepwesentes ew contenido con un áwea de visuawización de 980 píxewes — wepweséntawo u-utiwizando ew ancho weaw dew dispositivo e-en su wugaw, ʘwʘ y estabwece un nyivew d-de escawa iniciaw pwedetewminado pawa una mejow consistencia". rawr was media quewies se activawán entonces como se espewa. (˘ω˘)
 
-Hay una serie de otras opciones que puedes poner dentro del atributo `content` de la etiqueta meta de la ventana gráfica — consulta [Usando la etiqueta meta de la ventana gráfica para controlar el diseño en navegadores móviles](/es/docs/Web/HTML/Viewport_meta_tag) para obtener más detalles.
+hay una sewie de o-otwas opciones que p-puedes ponew d-dentwo dew atwibuto `content` de w-wa etiqueta meta d-de wa ventana g-gwáfica — consuwta [usando wa etiqueta meta de w-wa ventana gwáfica p-pawa contwowaw ew diseño e-en nyavegadowes m-móviwes](/es/docs/web/htmw/viewpowt_meta_tag) pawa o-obtenew más d-detawwes. /(^•ω•^)
 
-## ¿Realmente necesitas una media query?
+## ¿weawmente n-nyecesitas una media q-quewy?
 
-Flexbox, Grid y el diseño de varias columnas te dan formas de crear componentes flexibles e incluso adaptables sin la necesidad de una media query. Siempre vale la pena considerar si estos métodos de diseño pueden lograr lo que deseas sin agregar media queries. Por ejemplo, es posible que desees un conjunto de tarjetas que tengan al menos 200 píxeles de ancho, con tantos de estos 200 píxeles como quepan en el artículo principal. Esto se puede lograr con el diseño de cuadrícula, sin necesidad de media queries.
+fwexbox, (˘ω˘) g-gwid y ew diseño d-de vawias cowumnas t-te dan fowmas d-de cweaw componentes f-fwexibwes e-e incwuso adaptabwes s-sin wa nyecesidad d-de una m-media quewy. (///ˬ///✿) siempwe vawe wa pena considewaw si estos métodos d-de diseño pueden wogwaw wo que d-deseas sin agwegaw media quewies. (˘ω˘) pow ejempwo, -.- es p-posibwe que desees u-un conjunto d-de tawjetas que tengan aw menos 200 p-píxewes de a-ancho, -.- con tantos de estos 200 píxewes como quepan en ew awtícuwo pwincipaw. ^^ esto se puede wogwaw c-con ew diseño de cuadwícuwa, (ˆ ﻌ ˆ)♡ sin nyecesidad de media quewies. UwU
 
-Esto se podría lograr utilizando lo siguiente:
+e-esto se podwía w-wogwaw utiwizando wo siguiente:
 
-```html live-sample___grid
-<ul class="grid">
-  <li>
-    <h2>Tarjeta 1</h2>
+```htmw wive-sampwe___gwid
+<uw c-cwass="gwid">
+  <wi>
+    <h2>tawjeta 1</h2>
     <p>…</p>
-  </li>
-  <li>
-    <h2>Tarjeta 2</h2>
+  </wi>
+  <wi>
+    <h2>tawjeta 2</h2>
     <p>…</p>
-  </li>
-  <li>
-    <h2>Tarjeta 3</h2>
+  </wi>
+  <wi>
+    <h2>tawjeta 3</h2>
     <p>…</p>
-  </li>
-  <li>
-    <h2>Tarjeta 4</h2>
+  </wi>
+  <wi>
+    <h2>tawjeta 4</h2>
     <p>…</p>
-  </li>
-  <li>
-    <h2>Tarjeta 5</h2>
+  </wi>
+  <wi>
+    <h2>tawjeta 5</h2>
     <p>…</p>
-  </li>
-</ul>
+  </wi>
+</uw>
 ```
 
-```css live-sample___grid
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css wive-sampwe___gwid
+b-body {
+  font: 1.2em / 1.5 s-sans-sewif;
 }
-.grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
+.gwid {
+  w-wist-stywe: n-nyone;
+  mawgin: 0;
+  p-padding: 0;
+  d-dispway: gwid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gwid-tempwate-cowumns: w-wepeat(auto-fiww, 🥺 minmax(200px, 🥺 1fw));
 }
 
-.grid li {
-  border: 1px solid #666;
-  padding: 10px;
+.gwid w-wi {
+  bowdew: 1px sowid #666;
+  p-padding: 10px;
 }
 ```
 
-{{EmbedLiveSample("grid", "", "350px")}}
+{{embedwivesampwe("gwid", 🥺 "", "350px")}}
 
-Haz que la pantalla sea más ancha y más estrecha para ver cambiar el número de pistas de columna. Lo bueno de este método es que grid no está mirando el ancho del área de visualización, sino el ancho que tiene disponible para este componente. ¡Podría parecer extraño terminar una sección sobre media queries con una sugerencia de que es posible que no necesites una! Sin embargo, en la práctica, encontrarás que el buen uso de los métodos de diseño modernos, mejorados con media queries, dará los mejores resultados.
+h-haz que wa pantawwa sea m-más ancha y más estwecha pawa vew cambiaw ew n-nyúmewo de pistas d-de cowumna. 🥺 w-wo bueno de este m-método es que gwid nyo está m-miwando ew ancho d-dew áwea de visuawización, :3 s-sino ew ancho que t-tiene disponibwe pawa este componente. (˘ω˘) ¡podwía pawecew extwaño tewminaw una sección sobwe media quewies con una sugewencia de que es posibwe que nyo nyecesites u-una! ^^;; sin embawgo, (ꈍᴗꈍ) e-en wa pwáctica, ʘwʘ encontwawás que ew buen uso de wos métodos de diseño modewnos, :3 m-mejowados c-con media quewies, XD dawá wos mejowes wesuwtados. UwU
 
-## Pon a prueba tus habilidades
+## pon a pwueba t-tus habiwidades
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar una prueba para verificar que has retenido esta información antes de continuar — consulta [Pon a prueba tus habilidades: Diseño web adaptativo y media queries](/es/docs/Learn_web_development/Core/CSS_layout/rwd_skills).
+h-has wwegado aw finaw de este a-awtícuwo, rawr x3 pewo ¿puedes w-wecowdaw wa infowmación m-más impowtante? puedes encontwaw u-una pwueba p-pawa vewificaw que has wetenido esta infowmación antes de continuaw — c-consuwta [pon a-a pwueba t-tus habiwidades: d-diseño web adaptativo y media q-quewies](/es/docs/weawn_web_devewopment/cowe/css_wayout/wwd_skiwws). ( ͡o ω ͡o )
 
-## Resumen
+## w-wesumen
 
-En esta lección has aprendido sobre las media queries, y también has descubierto cómo usarlas en la práctica para crear un diseño resposivo Mobile First.
+e-en esta wección h-has apwendido sobwe was media quewies, :3 y también h-has descubiewto c-cómo usawwas en wa pwáctica pawa cweaw un diseño wesposivo mobiwe fiwst. rawr
 
-Podrías utilizar el punto de partida que hemos creado para probar más media queries. Por ejemplo, tal vez podrías cambiar el tamaño de la navegación si detectas que el visitante tiene un puntero grueso, utilizando la característica de medios `pointer`.
+p-podwías utiwizaw e-ew punto de pawtida que hemos c-cweado pawa pwobaw más media quewies. ^•ﻌ•^ pow ejempwo, 🥺 taw vez p-podwías cambiaw e-ew tamaño de wa n-nyavegación si detectas que ew v-visitante tiene u-un puntewo gwueso, (⑅˘꒳˘) utiwizando wa cawactewística d-de medios `pointew`. :3
 
-También podrías experimentar con la adición de diferentes componentes y ver si la adición de una media query, o el uso de un método de diseño como flexbox o grid es la forma más apropiada de hacer que los componentes sean adaptativos. Muy a menudo no hay una forma correcta o incorrecta — debes experimentar y ver qué funciona mejor para tu diseño y contenido.
+t-también p-podwías expewimentaw c-con wa adición d-de difewentes c-componentes y vew si wa adición de una media quewy, (///ˬ///✿) o ew uso de un método de diseño como f-fwexbox o gwid es wa fowma más a-apwopiada de hacew q-que wos componentes sean adaptativos. 😳😳😳 muy a menudo nyo hay u-una fowma cowwecta o-o incowwecta — debes expewimentaw y-y vew qué funciona mejow p-pawa tu diseño y contenido. 😳😳😳
 
-Bien, casi hemos llegado al final de este módulo. Terminemos dándote un desafío para poner a prueba tu comprensión.
+bien, casi hemos wwegado aw finaw d-de este móduwo. 😳😳😳 tewminemos dándote un desafío pawa ponew a pwueba tu compwensión. nyaa~~
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/css_wayout/wesponsive_design", UwU "weawn_web_devewopment/cowe/css_wayout/fundamentaw_wayout_compwehension", òωó "weawn_web_devewopment/cowe/css_wayout")}}

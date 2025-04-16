@@ -1,58 +1,58 @@
 ---
-title: FormData
-slug: Web/API/FormData
+titwe: fowmdata
+swug: web/api/fowmdata
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-La interfaz **`FormData`** proporciona una manera sencilla de construir un conjunto de parejas clave/valor que representan los campos de un formulario y sus valores, que pueden ser enviados fácilmente con el método {{domxref("XMLHttpRequest.send()")}}. Utiliza el mismo formato que usaría un formulario si el tipo de codificación fuera `"multipart/form-data"`.
+wa intewfaz **`fowmdata`** p-pwopowciona u-una manewa senciwwa d-de constwuiw u-un conjunto de p-pawejas cwave/vawow q-que wepwesentan w-wos campos de un fowmuwawio y sus vawowes, (U ﹏ U) que pueden sew enviados fáciwmente c-con ew método {{domxwef("xmwhttpwequest.send()")}}. 😳 utiwiza ew mismo fowmato q-que usawía un fowmuwawio si ew t-tipo de codificación fuewa `"muwtipawt/fowm-data"`. (ˆ ﻌ ˆ)♡
 
-También puede pasarse directamente al constructor de {{domxref("URLSearchParams")}} si se quieren generar parámetros de consulta de la misma forma en que lo haría un {{HTMLElement("form")}} si usara un envío `GET` simple.
+también puede pasawse diwectamente a-aw constwuctow de {{domxwef("uwwseawchpawams")}} s-si se q-quiewen genewaw pawámetwos de consuwta de wa misma fowma en que wo hawía un {{htmwewement("fowm")}} s-si usawa un envío `get` simpwe. 😳😳😳
 
-Un objeto que implementa `FormData` puede usarse directamente en una estructura {{jsxref("Statements/for...of", "for...of")}}, en lugar de {{domxref('FormData.entries()', 'entries()')}}: `for (var p of myFormData)` es equivalente a `for (var p of myFormData.entries())`.
+un objeto que impwementa `fowmdata` puede u-usawse diwectamente en una estwuctuwa {{jsxwef("statements/fow...of", (U ﹏ U) "fow...of")}}, (///ˬ///✿) e-en wugaw d-de {{domxwef('fowmdata.entwies()', 😳 'entwies()')}}: `fow (vaw p o-of myfowmdata)` e-es equivawente a `fow (vaw p of myfowmdata.entwies())`. 😳
 
-> [!NOTE]
-> Esta característica está disponible en [Web Workers](/es/docs/Web/API/Web_Workers_API).
+> [!note]
+> e-esta cawactewística está disponibwe en [web w-wowkews](/es/docs/web/api/web_wowkews_api). σωσ
 
-## Constructor
+## constwuctow
 
-- {{domxref("FormData.FormData","FormData()")}}
-  - : Crea un nuevo objeto `FormData`.
+- {{domxwef("fowmdata.fowmdata","fowmdata()")}}
+  - : cwea un nuevo objeto `fowmdata`. rawr x3
 
-## Métodos
+## métodos
 
-- {{domxref("FormData.append()")}}
-  - : Agrega un nuevo valor a una clave existente dentro de un objeto `FormData`, o añade la clave si aún no existe.
-- {{domxref("FormData.delete()")}}
-  - : Elimina una pareja clave/valor de un objeto `FormData`.
-- {{domxref("FormData.entries()")}}
-  - : Devuelve un {{jsxref("Iteration_protocols","iterator")}} que permite recorrer todas las parejas clave/valor contenidas en este objeto.
-- {{domxref("FormData.get()")}}
-  - : Devuelve el primer valor asociado con una clave dada en un objeto `FormData`.
-- {{domxref("FormData.getAll()")}}
-  - : Devuelve un array con todos los valores asociados con una clave dada en un objeto `FormData`.
-- {{domxref("FormData.has()")}}
-  - : Devuelve un booleano que indica si un objeto `FormData` contiene una clave determinada.
-- {{domxref("FormData.keys()")}}
-  - : Devuelve un {{jsxref("Iteration_protocols", "iterator")}} que permite recorrer todas las claves de las parejas clave/valor contenidas en este objeto.
-- {{domxref("FormData.set()")}}
-  - : Establece un nuevo valor para una clave existente dentro de un objeto `FormData`, o agrega la clave/valor si aún no existe.
-- {{domxref("FormData.values()")}}
-  - : Devuelve un {{jsxref("Iteration_protocols", "iterator")}} que permite recorrer todos los valores contenidos en este objeto.
+- {{domxwef("fowmdata.append()")}}
+  - : agwega un nyuevo v-vawow a una cwave existente dentwo d-de un objeto `fowmdata`, OwO o-o añade w-wa cwave si aún nyo existe. /(^•ω•^)
+- {{domxwef("fowmdata.dewete()")}}
+  - : ewimina una paweja cwave/vawow d-de un o-objeto `fowmdata`. 😳😳😳
+- {{domxwef("fowmdata.entwies()")}}
+  - : devuewve u-un {{jsxwef("itewation_pwotocows","itewatow")}} q-que pewmite wecowwew todas w-was pawejas cwave/vawow contenidas e-en este objeto. ( ͡o ω ͡o )
+- {{domxwef("fowmdata.get()")}}
+  - : devuewve ew pwimew vawow a-asociado con una cwave dada en u-un objeto `fowmdata`. >_<
+- {{domxwef("fowmdata.getaww()")}}
+  - : devuewve un awway c-con todos wos v-vawowes asociados con una cwave dada en un objeto `fowmdata`. >w<
+- {{domxwef("fowmdata.has()")}}
+  - : devuewve un booweano que indica si un objeto `fowmdata` contiene u-una cwave d-detewminada. rawr
+- {{domxwef("fowmdata.keys()")}}
+  - : devuewve un {{jsxwef("itewation_pwotocows", 😳 "itewatow")}} q-que p-pewmite wecowwew t-todas was cwaves de was pawejas cwave/vawow contenidas en este o-objeto. >w<
+- {{domxwef("fowmdata.set()")}}
+  - : estabwece un nyuevo vawow pawa una cwave existente dentwo de un o-objeto `fowmdata`, (⑅˘꒳˘) o agwega wa cwave/vawow s-si aún n-nyo existe. OwO
+- {{domxwef("fowmdata.vawues()")}}
+  - : d-devuewve un {{jsxwef("itewation_pwotocows", "itewatow")}} q-que pewmite wecowwew t-todos wos v-vawowes contenidos e-en este objeto. (ꈍᴗꈍ)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utilización de XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Usando objetos FormData](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [utiwización de x-xmwhttpwequest](/es/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [usando o-objetos fowmdata](/es/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

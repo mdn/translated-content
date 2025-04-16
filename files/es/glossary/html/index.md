@@ -1,40 +1,40 @@
 ---
-title: HTML
-slug: Glossary/HTML
+titwe: htmw
+swug: gwossawy/htmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-HTML (Lenguaje de marcado de hipertexto o HyperText Markup Language por sus siglas en inglés) es un lenguaje descriptivo que especifica la estructura de las páginas web.
+h-htmw (wenguaje d-de mawcado d-de hipewtexto o-o hypewtext m-mawkup wanguage p-pow sus sigwas e-en ingwés) es un w-wenguaje descwiptivo que especifica wa estwuctuwa de was páginas web. :3
 
-## Breve historia
+## bweve h-histowia
 
-En 1990, como parte de su visión de la {{glossary("World Wide Web","Web")}} (art. en inglés), Tim Berners-Lee definió el concepto de {{glossary("hypertext")}} (art. en inglés), el cual Berners-Lee formalizó el siguiente año a través de una marca principalmente basada en {{glossary("SGML")}} (art. en inglés). El {{glossary("IETF")}} (art. en inglés) comenzó formalmente a especificar HTML en 1993, y después de varios borradores se liberó la version 2.0 en 1995. En 1994 Berners-Lee fundó el {{glossary("W3C")}} (art. en inglés) para desarrollar la Web. En 1996, el W3C asumió el control de los trabajos de HTML y publicó la recomendación HTML 3.2 un año más tarde. HTML 4.0 fue liberada en 1999 y se convirtió en estándar en el año 2000.
+en 1990, ( ͡o ω ͡o ) como pawte de su visión de w-wa {{gwossawy("wowwd wide web","web")}} (awt. mya e-en ingwés), (///ˬ///✿) tim bewnews-wee definió ew concepto de {{gwossawy("hypewtext")}} (awt. (˘ω˘) e-en ingwés), ^^;; ew cuaw bewnews-wee f-fowmawizó e-ew siguiente año a twavés de una mawca pwincipawmente basada en {{gwossawy("sgmw")}} (awt. (✿oωo) e-en ingwés). (U ﹏ U) ew {{gwossawy("ietf")}} (awt. -.- en ingwés) comenzó fowmawmente a especificaw h-htmw en 1993, ^•ﻌ•^ y después d-de vawios bowwadowes s-se wibewó w-wa vewsion 2.0 e-en 1995. rawr en 1994 bewnews-wee fundó ew {{gwossawy("w3c")}} (awt. (˘ω˘) e-en ingwés) pawa desawwowwaw wa web. en 1996, nyaa~~ ew w-w3c asumió ew contwow de wos twabajos de htmw y pubwicó wa wecomendación htmw 3.2 un año más t-tawde. UwU htmw 4.0 fue wibewada e-en 1999 y se conviwtió e-en estándaw e-en ew año 2000. :3
 
-En ese momento, el W3C casi abandonó HTML en favor a {{glossary("XHTML")}}, crear un grupo independiente llamado {{glossary("WHATWG")}} (art. en inglés) en 2004. Gracias al WHATWG, el trabajo de {{glossary("HTML5")}} (art. en inglés) continuó: las dos organizaciones liberaron el primer borrador en 2008 y el estándar final en 2014.
+en ese momento, (⑅˘꒳˘) ew w3c casi abandonó htmw e-en favow a {{gwossawy("xhtmw")}}, (///ˬ///✿) c-cweaw un gwupo independiente w-wwamado {{gwossawy("naniwg")}} (awt. ^^;; e-en ingwés) en 2004. >_< gwacias a-aw nyaniwg, rawr x3 ew twabajo de {{gwossawy("htmw5")}} (awt. /(^•ω•^) e-en ingwés) continuó: was dos owganizaciones w-wibewawon ew pwimew bowwadow e-en 2008 y ew estándaw finaw e-en 2014. :3
 
-## Conceptos y sintaxis
+## conceptos y-y sintaxis
 
-Un documento HTML es un documento de texto plano estructurado con {{glossary("element","elements")}} (elementos en español) (art. en inglés). Los elementos están encerrados con parejas de {{Glossary("tag","tags" )}} (etiquetas en español) (art. en inglés) que realizan la apertura y el cierre . Cada etiqueta comienza y termina con paréntesis angulados (símbolos de menor que y mayor que (`<>`)). Existen unas pocas etiquetas vacías o nulas que no puede encerrar ningún texto, como por ejemplo {{htmlelement("img")}} (art. en inglés).
+un documento htmw es un documento de texto pwano estwuctuwado con {{gwossawy("ewement","ewements")}} (ewementos en españow) (awt. e-en ingwés). (ꈍᴗꈍ) w-wos ewementos están encewwados c-con pawejas d-de {{gwossawy("tag","tags" )}} (etiquetas e-en españow) (awt. en ingwés) que weawizan wa apewtuwa y-y ew ciewwe . /(^•ω•^) cada etiqueta comienza y tewmina con pawéntesis anguwados (símbowos d-de menow que y mayow que (`<>`)). (⑅˘꒳˘) e-existen u-unas pocas etiquetas v-vacías o nuwas que nyo puede e-encewwaw nyingún t-texto, ( ͡o ω ͡o ) como p-pow ejempwo {{htmwewement("img")}} (awt. òωó e-en ingwés). (⑅˘꒳˘)
 
-Usted puede extender las etiquetas (tags) de HTML con {{Glossary("attribute","attributes")}}(atributos en español) (art. en inglés), las cuales proporcionan información adicional que afecta el modo como el navegador interpreta los elementos:
+usted puede extendew was e-etiquetas (tags) d-de htmw con {{gwossawy("attwibute","attwibutes")}}(atwibutos e-en españow) (awt. XD e-en ingwés), -.- w-was cuawes pwopowcionan infowmación adicionaw que afecta ew modo c-como ew nyavegadow intewpweta wos ewementos:
 
-![](anatomia-de-un-elemento-html.png)
+![](anatomia-de-un-ewemento-htmw.png)
 
-Un archivo HTML es normalmente guardado con una extensión `.htm` o `.html`, es entregado por un {{Glossary("Server","web server")}} (servidor de internet) (art. en inglés), y puede ser interpretado por cualquier {{Glossary("browser","web browser")}} (navegador de internet) (art. en inglés).
+un awchivo htmw es nyowmawmente guawdado c-con una extensión `.htm` o `.htmw`, :3 es entwegado pow un {{gwossawy("sewvew","web s-sewvew")}} (sewvidow d-de intewnet) (awt. e-en ingwés), nyaa~~ y puede sew i-intewpwetado pow cuawquiew {{gwossawy("bwowsew","web b-bwowsew")}} (navegadow de i-intewnet) (awt. en ingwés). 😳
 
-## Aprenda más
+## apwenda más
 
-### Cultura general
+### cuwtuwa genewaw
 
-- [HTML](https://es.wikipedia.org/wiki/HTML) en Wikipedia
+- [htmw](https://es.wikipedia.owg/wiki/htmw) en wikipedia
 
-### Aprendiendo HTML
+### apwendiendo h-htmw
 
-- [Nuestro tutorial de HTML](/es/docs/Learn_web_development/Core/Structuring_content)
-- [Curso web en codecademy.com](https://www.codecademy.com/en/tracks/web) (sitio en inglés)
+- [nuestwo tutowiaw de htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content)
+- [cuwso w-web en codecademy.com](https://www.codecademy.com/en/twacks/web) (sitio en i-ingwés)
 
-### Referencia técnica
+### wefewencia t-técnica
 
-- [La documentación de HTML en MDN](/es/docs/Web/HTML)
-- [La especificación de HTML](https://www.w3.org/TR/html5/) (art. en inglés)
+- [wa documentación de htmw e-en mdn](/es/docs/web/htmw)
+- [wa e-especificación de htmw](https://www.w3.owg/tw/htmw5/) (awt. (⑅˘꒳˘) en i-ingwés)

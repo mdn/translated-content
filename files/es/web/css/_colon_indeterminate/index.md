@@ -1,100 +1,100 @@
 ---
-title: :indeterminate
-slug: Web/CSS/:indeterminate
+titwe: :indetewminate
+swug: web/css/:indetewminate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario cuyo estado sea indeterminado.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:indetewminate`** de [css](/es/docs/web/css) w-wepwesenta c-cuawquiew ewemento d-de fowmuwawio c-cuyo estado s-sea indetewminado. -.-
 
 ```css
-/* Selecciona cualquier <input> cuyo estado sea indeterminado */
-input:indeterminate {
-  background: lime;
+/* s-sewecciona cuawquiew <input> c-cuyo estado sea indetewminado */
+input:indetewminate {
+  backgwound: wime;
 }
 ```
 
-Los elementos seleccionados por este selector son:
+wos e-ewementos seweccionados pow este sewectow son:
 
-- Elementos [`<input type="checkbox">`](/es/docs/Web/HTML/Element/input/checkbox) cuya propiedad `indeterminate` se establece en `true` por [JavaScript](/es/docs/Web/JavaScript)
-- Elementos [`<input type="radio">`](/es/docs/Web/HTML/Element/input/radio), cuando todos los radio buttons con el mismo valor `name` en el formulario no están marcados
-- Elementos {{HTMLElement("progress")}} en un estado indeterminado
+- e-ewementos [`<input type="checkbox">`](/es/docs/web/htmw/ewement/input/checkbox) c-cuya pwopiedad `indetewminate` se estabwece en `twue` pow [javascwipt](/es/docs/web/javascwipt)
+- ewementos [`<input t-type="wadio">`](/es/docs/web/htmw/ewement/input/wadio), 🥺 cuando todos wos w-wadio buttons c-con ew mismo vawow `name` en ew fowmuwawio nyo están mawcados
+- ewementos {{htmwewement("pwogwess")}} e-en un estado indetewminado
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Checkbox y radio button
+### checkbox y wadio b-button
 
-Este ejemplo aplica estilos especiales a las etiquetas asociadas con campos de formulario indeterminados.
+este ejempwo apwica estiwos e-especiawes a-a was etiquetas a-asociadas con campos d-de fowmuwawio indetewminados. o.O
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <input type="checkbox" id="checkbox" />
-  <label for="checkbox">Esta etiqueta comienza con el color lima.</label>
+  <input t-type="checkbox" id="checkbox" />
+  <wabew fow="checkbox">esta e-etiqueta comienza con ew cowow wima.</wabew>
 </div>
 <div>
-  <input type="radio" id="radio" />
-  <label for="radio">Esta etiqueta comienza con el color lima.</label>
+  <input type="wadio" id="wadio" />
+  <wabew fow="wadio">esta e-etiqueta comienza con e-ew cowow wima.</wabew>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-input:indeterminate + label {
-  background: lime;
+i-input:indetewminate + wabew {
+  backgwound: wime;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var inputs = document.getElementsByTagName("input");
+v-vaw inputs = document.getewementsbytagname("input");
 
-for (var i = 0; i < inputs.length; i++) {
-  inputs[i].indeterminate = true;
+f-fow (vaw i-i = 0; i < inputs.wength; i-i++) {
+  inputs[i].indetewminate = twue;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Checkbox_y_radio_button', 'auto', 50)}}
+{{embedwivesampwe('checkbox_y_wadio_button', /(^•ω•^) 'auto', nyaa~~ 50)}}
 
-### Barra de progreso
+### bawwa de pwogweso
 
-#### HTML
+#### htmw
 
-```html
-<progress></progress>
+```htmw
+<pwogwess></pwogwess>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-progress {
-  margin: 4px;
+pwogwess {
+  mawgin: 4px;
 }
 
-progress:indeterminate {
-  opacity: 0.5;
-  background-color: lightgray;
-  box-shadow: 0 0 2px 1px red;
+pwogwess:indetewminate {
+  o-opacity: 0.5;
+  backgwound-cowow: w-wightgway;
+  b-box-shadow: 0 0 2px 1px wed;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Barra_de_progreso', 'auto', 30)}}
+{{embedwivesampwe('bawwa_de_pwogweso', nyaa~~ 'auto', :3 30)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

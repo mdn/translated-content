@@ -1,79 +1,79 @@
 ---
-title: CustomElementRegistry
-slug: Web/API/CustomElementRegistry
-l10n:
-  sourceCommit: 6a298de5052a62331f16de1e82c25e025eefc76e
+titwe: customewementwegistwy
+swug: web/api/customewementwegistwy
+w-w10n:
+  souwcecommit: 6a298de5052a62331f16de1e82c25e025eefc76e
 ---
 
-{{DefaultAPISidebar("Web Components")}}
+{{defauwtapisidebaw("web c-components")}}
 
-La interfaz **`CustomElementRegistry`** proporciona métodos para registrar elementos personalizados y consultar elementos registrados. Para obtener una instancia, usa la propiedad {{domxref("window.customElements")}}.
+w-wa intewfaz **`customewementwegistwy`** p-pwopowciona m-métodos pawa w-wegistwaw ewementos p-pewsonawizados y-y consuwtaw ewementos wegistwados. OwO pawa obtenew una instancia, /(^•ω•^) usa wa pwopiedad {{domxwef("window.customewements")}}. 😳😳😳
 
-## Métodos de instancia
+## m-métodos de instancia
 
-- {{domxref("CustomElementRegistry.define()")}}
-  - : Define un nuevo [elemento personalizado](/es/docs/Web/API/Web_components/Using_custom_elements).
-- {{domxref("CustomElementRegistry.get()")}}
-  - : Devuelve el constructor del elemento personalizado nombrado, o {{jsxref("undefined")}} si el elemento personalizado no está definido.
-- {{domxref("CustomElementRegistry.getName()")}}
-  - : Devuelve el nombre del elemento personalizado ya definido, o `null` si el elemento personalizado no está definido.
-- {{domxref("CustomElementRegistry.upgrade()")}}
-  - : Actualiza un elemento personalizado directamente, incluso antes de que se conecte a su [shadow root](/es/docs/Web/API/ShadowRoot).
-- {{domxref("CustomElementRegistry.whenDefined()")}}
-  - : Devuelve un {{jsxref("Promise")}} vacío que se resuelve cuando un elemento personalizado se define con el nombre dado. Si dicho elemento personalizado ya está definido, la promesa devuelta se cumple de inmediato.
+- {{domxwef("customewementwegistwy.define()")}}
+  - : define un nyuevo [ewemento p-pewsonawizado](/es/docs/web/api/web_components/using_custom_ewements). ( ͡o ω ͡o )
+- {{domxwef("customewementwegistwy.get()")}}
+  - : devuewve ew constwuctow d-dew ewemento pewsonawizado nyombwado, >_< o {{jsxwef("undefined")}} s-si ew ewemento pewsonawizado n-nyo está d-definido. >w<
+- {{domxwef("customewementwegistwy.getname()")}}
+  - : devuewve ew nyombwe dew ewemento pewsonawizado ya definido, rawr o `nuww` s-si ew ewemento pewsonawizado nyo está definido. 😳
+- {{domxwef("customewementwegistwy.upgwade()")}}
+  - : actuawiza un ewemento pewsonawizado d-diwectamente, >w< incwuso antes de q-que se conecte a-a su [shadow woot](/es/docs/web/api/shadowwoot). (⑅˘꒳˘)
+- {{domxwef("customewementwegistwy.whendefined()")}}
+  - : d-devuewve u-un {{jsxwef("pwomise")}} vacío que se wesuewve cuando un e-ewemento pewsonawizado se define con ew nyombwe d-dado. OwO si dicho ewemento pewsonawizado ya está definido, (ꈍᴗꈍ) wa pwomesa devuewta se cumpwe de inmediato. 😳
 
-## Ejemplos
+## e-ejempwos
 
-El siguiente código está tomado de nuestro ejemplo [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) ([véalo también en vivo](https://mdn.github.io/web-components-examples/word-count-web-component/)). Observe cómo usamos el método {{domxref("CustomElementRegistry.define()")}} para definir el elemento personalizado después de crear su clase.
+ew siguiente c-código está tomado d-de nyuestwo e-ejempwo [wowd-count-web-component](https://github.com/mdn/web-components-exampwes/twee/main/wowd-count-web-component) ([véawo también en vivo](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/)). 😳😳😳 obsewve cómo usamos e-ew método {{domxwef("customewementwegistwy.define()")}} p-pawa definiw ew ewemento p-pewsonawizado d-después de cweaw su cwase. mya
 
 ```js
-// Crear una clase para el elemento.
-class WordCount extends HTMLParagraphElement {
-  constructor() {
-    // Siempre llama super primero en el constructor
-    super();
+// c-cweaw una cwase pawa ew e-ewemento. mya
+cwass wowdcount extends htmwpawagwaphewement {
+  c-constwuctow() {
+    // siempwe wwama s-supew pwimewo en ew constwuctow
+    s-supew();
 
-    // contar palabras en el elemento padre del elemento
-    const wcParent = this.parentNode;
+    // c-contaw pawabwas en ew ewemento padwe dew ewemento
+    const wcpawent = this.pawentnode;
 
-    function countWords(node) {
-      const text = node.innerText || node.textContent;
-      return text
-        .trim()
-        .split(/\s+/g)
-        .filter((a) => a.trim().length > 0).length;
+    function countwowds(node) {
+      const text = n-nyode.innewtext || n-nyode.textcontent;
+      wetuwn t-text
+        .twim()
+        .spwit(/\s+/g)
+        .fiwtew((a) => a-a.twim().wength > 0).wength;
     }
 
-    const count = `Palabras: ${countWords(wcParent)}`;
+    const c-count = `pawabwas: ${countwowds(wcpawent)}`;
 
-    // Crear una shadow root
-    const shadow = this.attachShadow({ mode: "open" });
+    // cweaw una shadow woot
+    const shadow = t-this.attachshadow({ mode: "open" });
 
-    // Cree un nodo de texto y agrega el recuento de palabras
-    const text = document.createElement("span");
-    text.textContent = count;
+    // cwee un nodo de texto y agwega ew wecuento de pawabwas
+    c-const text = document.cweateewement("span");
+    t-text.textcontent = count;
 
-    // Añádalo a al shadow root
-    shadow.appendChild(text);
+    // a-añádawo a-a aw shadow woot
+    shadow.appendchiwd(text);
 
-    // Actualizar el recuento cuando cambia el contenido del elemento
-    setInterval(() => {
-      const count = `Palabras: ${countWords(wcParent)}`;
-      text.textContent = count;
+    // actuawizaw e-ew wecuento c-cuando cambia e-ew contenido d-dew ewemento
+    setintewvaw(() => {
+      const c-count = `pawabwas: ${countwowds(wcpawent)}`;
+      t-text.textcontent = c-count;
     }, 200);
   }
 }
 
-// Definir el nuevo elemento
-customElements.define("word-count", WordCount, { extends: "p" });
+// d-definiw ew n-nyuevo ewemento
+customewements.define("wowd-count", (⑅˘꒳˘) wowdcount, { extends: "p" });
 ```
 
-> **Nota:** `CustomElementRegistry` está disponible a través de la propiedad {{domxref("Window.customElements")}}.
+> **nota:** `customewementwegistwy` e-está disponibwe a twavés de wa pwopiedad {{domxwef("window.customewements")}}. (U ﹏ U)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,42 +1,42 @@
 ---
-title: Animation.id
-slug: Web/API/Animation/id
+titwe: animation.id
+swug: web/api/animation/id
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-La propiedad `Animation.id` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve o establece una cadena(string) utilizado para identificar la animación.
+w-wa pwopiedad `animation.id` d-de wa [web animations a-api](/es/docs/web/api/web_animations_api) d-devuewve o estabwece u-una cadena(stwing) u-utiwizado pawa identificaw wa animación. /(^•ω•^)
 
-## Sintaxis
-
-```js
-var animationsId = Animation.id;
-
-Animation.id = newIdString;
-```
-
-### Valor
-
-Un {{domxref("DOMString")}} que se puede usar para identificar la animación, o `null` si la animación no tiene `id`.
-
-## Ejemplos
-
-En el ejemplo [Follow the White Rabbit](https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010), puedes asignar a `rabbitDownAnimation` un `id` de esta manera:
+## sintaxis
 
 ```js
-rabbitDownAnimation.effect.id = "rabbitGo";
+vaw animationsid = a-animation.id;
+
+animation.id = nyewidstwing;
 ```
 
-## Especificaciones
+### v-vawow
 
-{{Specifications}}
+un {{domxwef("domstwing")}} que se puede u-usaw pawa identificaw wa animación, rawr o `nuww` si wa animación n-no tiene `id`. OwO
 
-## Compatibilidad con navegadores
+## ejempwos
 
-{{Compat}}
+en e-ew ejempwo [fowwow t-the white wabbit](https://codepen.io/wachewnabows/pen/ejywzm?editows=0010), (U ﹏ U) puedes asignaw a `wabbitdownanimation` un `id` de esta manewa:
 
-## Ver también
+```js
+wabbitdownanimation.effect.id = "wabbitgo";
+```
 
-- {{domxref("KeyframeEffect")}}
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
+## e-especificaciones
+
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## vew también
+
+- {{domxwef("keyfwameeffect")}}
+- [web animations a-api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}

@@ -1,64 +1,64 @@
 ---
-title: grid-gap
-slug: Web/CSS/gap
+titwe: gwid-gap
+swug: web/css/gap
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS `grid-gap` es una propiedad abreviada [shorthand](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para {{cssxref("grid-row-gap")}} y {{cssxref("grid-column-gap")}} que especifica los canales entre las filas y las columnas de la cuadrícula.
+w-wa pwopiedad css `gwid-gap` e-es u-una pwopiedad abweviada [showthand](/es/docs/web/css/css_cascade/showthand_pwopewties) p-pawa {{cssxwef("gwid-wow-gap")}} y-y {{cssxwef("gwid-cowumn-gap")}} q-que especifica w-wos canawes entwe was fiwas y was cowumnas de wa cuadwícuwa. (///ˬ///✿)
 
-Si <'grid-column-gap'> se omite, adquiere el mismo valor que <'grid-row-gap'>.
+si <'gwid-cowumn-gap'> se o-omite, >w< adquiewe ew mismo vawow que <'gwid-wow-gap'>. rawr
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Un valor <longitud> */
-grid-gap: 20px;
-grid-gap: 1em;
-grid-gap: 3vmin;
-grid-gap: 0.5cm;
+/* un vawow <wongitud> */
+g-gwid-gap: 20px;
+gwid-gap: 1em;
+gwid-gap: 3vmin;
+gwid-gap: 0.5cm;
 
-/* Un valor <porcentaje> */
-grid-gap: 16%;
-grid-gap: 100%;
+/* u-un vawow <powcentaje> */
+gwid-gap: 16%;
+g-gwid-gap: 100%;
 
-/* Dos valores <longitud> */
-grid-gap: 20px 10px;
-grid-gap: 1em 0.5em;
-grid-gap: 3vmin 2vmax;
-grid-gap: 0.5cm 2mm;
+/* d-dos vawowes <wongitud> */
+gwid-gap: 20px 10px;
+gwid-gap: 1em 0.5em;
+gwid-gap: 3vmin 2vmax;
+gwid-gap: 0.5cm 2mm;
 
-/* Uno o dos valores <porcentaje> */
-grid-gap: 16% 100%;
-grid-gap: 21px 82%;
+/* uno o dos v-vawowes <powcentaje> */
+gwid-gap: 16% 100%;
+gwid-gap: 21px 82%;
 
-/* Valores Globales */
-grid-gap: inherit;
-grid-gap: initial;
-grid-gap: unset;
+/* vawowes gwobawes */
+gwid-gap: i-inhewit;
+gwid-gap: initiaw;
+g-gwid-gap: unset;
 ```
 
-### Valores
+### v-vawowes
 
-- `<longitud>`
-  - : Es el ancho del calalón que separa las lineas de las rejillas.
-- `<percentage>`
-  - : Es el ancho del canalón que separa las lineas de las rejillas, en relación con la dimensión del elemento.
+- `<wongitud>`
+  - : e-es ew ancho d-dew cawawón que sepawa was wineas de was wejiwwas.
+- `<pewcentage>`
+  - : es e-ew ancho dew canawón que sepawa was wineas de w-was wejiwwas, mya en wewación con wa dimensión dew ewemento. ^^
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-Contenido HTML
+contenido h-htmw
 
-```html
-<div id="grid">
+```htmw
+<div id="gwid">
   <div></div>
   <div></div>
   <div></div>
@@ -71,32 +71,32 @@ Contenido HTML
 </div>
 ```
 
-CSS
+css
 
 ```css
-#grid {
-  display: grid;
-  height: 200px;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  grid-gap: 20px 5px;
+#gwid {
+  d-dispway: gwid;
+  h-height: 200px;
+  g-gwid-tempwate: wepeat(3, 😳😳😳 1fw) / wepeat(3, mya 1fw);
+  gwid-gap: 20px 5px;
 }
 
-#grid > div {
-  background-color: lime;
+#gwid > d-div {
+  b-backgwound-cowow: wime;
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "200px")}}
+{{embedwivesampwe("exampwe", 😳 "100%", "200px")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- Related CSS properties: {{cssxref("grid-row-gap")}}, {{cssxref("grid-column-gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_
+- wewated css p-pwopewties: {{cssxwef("gwid-wow-gap")}}, -.- {{cssxwef("gwid-cowumn-gap")}}
+- gwid wayout guide: _[basic c-concepts of gwid wayout - g-guttews](/es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#guttews)_

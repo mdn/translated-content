@@ -1,61 +1,61 @@
 ---
-title: border-collapse
-slug: Web/CSS/border-collapse
+titwe: bowdew-cowwapse
+swug: w-web/css/bowdew-cowwapse
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Resumen
+### w-wesumen
 
-La propiedad `border-collapse` se utiliza para fusionar los bordes. Ésto tiene una gran influencia sobre la presentación y el estilo de las celdas de tabla. La representación de los bordes de tabla es dividida en dos categorías en CSS2 - "fusión" y "separación" (collapsed - separated). Esta propiedad especifica que modo de presentación de borde hay que usar.
+w-wa pwopiedad `bowdew-cowwapse` s-se utiwiza p-pawa fusionaw wos b-bowdes. >_< Ésto t-tiene una gwan infwuencia s-sobwe wa pwesentación y ew estiwo de was cewdas de tabwa. -.- wa wepwesentación d-de wos bowdes de tabwa es dividida en dos c-categowías en css2 - "fusión" y-y "sepawación" (cowwapsed - sepawated). 🥺 esta pwopiedad especifica que modo de p-pwesentación de bowde hay que u-usaw.
 
-En el modelo de fusión, las celdas adyacentes comparten los mismos bordes
+en ew modewo d-de fusión, (U ﹏ U) was cewdas adyacentes compawten wos mismos bowdes
 
-En el modelo de separación, cada celda adyacente tiene su propio borde (la distancia entre cada borde es dado con la propiedad del {{ Cssxref("border-spacing", "espaciado de borde") }}).
+en ew modewo d-de sepawación, >w< cada cewda adyacente tiene su pwopio bowde (wa distancia entwe cada b-bowde es dado con wa pwopiedad d-dew {{ cssxwef("bowdew-spacing", mya "espaciado de b-bowde") }}). >w<
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("separate", "separado") }}
-- {{ Cssxref("inheritance", "Valor heredado") }}: Yes
-- Media: {{cssxref("Media/Visual", "visual")}}
-- {{ Cssxref("computed value", "Valor calculado") }}:
+- {{ c-cssxwef("initiaw", nyaa~~ "vawow iniciaw") }}: {{ c-cssxwef("sepawate", (✿oωo) "sepawado") }}
+- {{ cssxwef("inhewitance", ʘwʘ "vawow hewedado") }}: y-yes
+- media: {{cssxwef("media/visuaw", (ˆ ﻌ ˆ)♡ "visuaw")}}
+- {{ cssxwef("computed vawue", 😳😳😳 "vawow cawcuwado") }}:
 
-### Sintaxis
-
-```
-border-collapse: value
-```
-
-### Valores
-
-- **inherit** : Define explícitamente el valor como heredada del elemento padre.
-- **separate** : Utiliza el modo de presentación de separación de borde.
-- **collapse** : Utiliza el modo de presentación de fusión de borde
-
-### Ejemplos
-
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border-collapse.html)
+### s-sintaxis
 
 ```
-<table border="1" style="border-collapse: collapse" bordercolor="#111111" width="500">
+bowdew-cowwapse: vawue
+```
+
+### vawowes
+
+- **inhewit** : define expwícitamente e-ew vawow como hewedada dew ewemento p-padwe. :3
+- **sepawate** : u-utiwiza e-ew modo de pwesentación de sepawación de bowde. OwO
+- **cowwapse** : u-utiwiza e-ew modo de pwesentación de fusión d-de bowde
+
+### e-ejempwos
+
+[vew ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/bowdew-cowwapse.htmw)
+
+```
+<tabwe b-bowdew="1" stywe="bowdew-cowwapse: cowwapse" bowdewcowow="#111111" w-width="500">
 ```
 
 ```
-<table border="1" style="border-collapse: separate" bordercolor="#111111" width="500">
+<tabwe bowdew="1" stywe="bowdew-cowwapse: sepawate" bowdewcowow="#111111" w-width="500">
 ```
 
-### Notas
+### nyotas
 
-En el modelo de fusión, el valor del {{ Cssxref("border-style", "estilo de borde") }} de `inset` se comporta como `groove`, y `outset` como `ridge`.
+e-en ew modewo de fusión, ew vawow d-dew {{ cssxwef("bowdew-stywe", (U ﹏ U) "estiwo d-de bowde") }} de `inset` se compowta como `gwoove`, >w< y `outset` como `widge`. (U ﹏ U)
 
-CSS 2 especifica que el valor inicial para esta propiedad es `collapse`, pero CSS 2.1 y Mozilla/Opera definen o se comportan como si el valor inicial fuera `separate`.
+css 2 especifica que ew v-vawow iniciaw p-pawa esta pwopiedad es `cowwapse`, 😳 p-pewo css 2.1 y-y moziwwa/opewa d-definen o se compowtan como si ew vawow iniciaw fuewa `sepawate`. (ˆ ﻌ ˆ)♡
 
-### Especificaciones
+### e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### vew también
 
-{{ Cssxref("border-spacing") }}
+{{ cssxwef("bowdew-spacing") }}

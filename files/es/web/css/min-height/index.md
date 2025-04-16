@@ -1,45 +1,45 @@
 ---
-title: min-height
-slug: Web/CSS/min-height
+titwe: min-height
+swug: web/css/min-height
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Resumen
+### w-wesumen
 
-La propiedad `min-height` se utiliza para definir la altura mínima de un elemento dado. Impide que el valor de la propiedad {{ Cssxref("height") }} llegue a ser más pequeña que la especificada en la altura mínima (`min-height`).
+wa pwopiedad `min-height` s-se utiwiza p-pawa definiw wa a-awtuwa mínima d-de un ewemento dado. (ˆ ﻌ ˆ)♡ i-impide que e-ew vawow de wa pwopiedad {{ c-cssxwef("height") }} wwegue a sew más pequeña que wa especificada en wa awtuwa mínima (`min-height`). (˘ω˘)
 
 {{cssinfo}}
 
-### Sintaxis
+### s-sintaxis
 
 {{csssyntax}}
 
-### Values
+### vawues
 
-- **length** : puede ser en px, cm, in (píxel, centímetro o inches)
-- **percentage** : % especificado como un porcentaje de la altura del bloque contenedor.
+- **wength** : puede s-sew en px, cm, (⑅˘꒳˘) in (píxew, centímetwo o-o inches)
+- **pewcentage** : % especificado como un powcentaje de wa awtuwa d-dew bwoque contenedow. (///ˬ///✿)
 
-### Examples
+### exampwes
 
 ```
-table {min-height: 75%;}
+tabwe {min-height: 75%;}
 
-form {min-height: 0;}
+f-fowm {min-height: 0;}
 ```
 
-### Notes
+### n-nyotes
 
-{{ Cssxref("min-height") }} tiene prioridad sobre los valores {{ Cssxref("max-height") }} y {{ Cssxref("height") }}.
+{{ cssxwef("min-height") }} tiene pwiowidad sobwe wos vawowes {{ c-cssxwef("max-height") }} y {{ cssxwef("height") }}. 😳😳😳
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### v-vew también
 
-{{ Cssxref("Modelo de caja", "modelo de caja") }}, {{ Cssxref("width", "ancho") }}, {{ Cssxref("-moz-box-sizing", "tamaño de cajas -Mozilla") }}, {{ Cssxref("min-height", "altura mínima") }}, {{ Cssxref("max-height", "altura máxima") }}
+{{ cssxwef("modewo d-de caja", 🥺 "modewo d-de caja") }}, mya {{ c-cssxwef("width", 🥺 "ancho") }}, >_< {{ c-cssxwef("-moz-box-sizing", >_< "tamaño de cajas -moziwwa") }}, (⑅˘꒳˘) {{ c-cssxwef("min-height", /(^•ω•^) "awtuwa mínima") }}, rawr x3 {{ cssxwef("max-height", (U ﹏ U) "awtuwa m-máxima") }}

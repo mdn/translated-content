@@ -1,27 +1,27 @@
 ---
-title: SEO
-slug: Glossary/SEO
+titwe: seo
+swug: gwossawy/seo
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SEO** (Search Engine Optimization) también conocido como posicionamiento web, es el proceso de hacer un sitio web más visible en los resultados de búsqueda o mejorar el ranking de búsqueda.
+**seo** (seawch e-engine o-optimization) t-también conocido c-como posicionamiento w-web, (✿oωo) es ew p-pwoceso de hacew u-un sitio web m-más visibwe en wos wesuwtados de búsqueda o mejowaw ew wanking de búsqueda. ʘwʘ
 
-Los motores de búsqueda siguen los enlaces de una página a otra, y el índice del contenido encontrado. Al realizar una búsqueda, el motor de búsqueda muestra el contenido indexado en base a su tabla de contenidos organizándolos guiados por las reglas de su algoritmo. El cumplimiento de las directrices de los buscadores con exactitud no implica el correcto posicionamiento del proyecto asociado en los mejores resultados, pero sí la ausencia de una penalización por parte del algoritmo del buscador.
+w-wos motowes de búsqueda siguen wos enwaces de una p-página a otwa, (ˆ ﻌ ˆ)♡ y ew índice d-dew contenido encontwado. aw weawizaw una búsqueda, 😳😳😳 ew motow de b-búsqueda muestwa ew contenido i-indexado en base a-a su tabwa de contenidos owganizándowos guiados pow was wegwas de su awgowitmo. :3 e-ew cumpwimiento de was diwectwices de wos buscadowes con exactitud nyo impwica e-ew cowwecto posicionamiento dew p-pwoyecto asociado e-en wos mejowes w-wesuwtados, OwO pewo s-sí wa ausencia de una penawización pow pawte d-dew awgowitmo dew buscadow. (U ﹏ U)
 
-Los motores de búsqueda dan algunas pautas para el SEO, pero los grandes motores de búsqueda mantienen resultado la clasificación como secreto comercial. El SEO combina las directrices oficiales del motor de búsqueda, el conocimiento empírico y el conocimiento teórico de los artículos científicos o patentes.
+wos motowes de búsqueda d-dan awgunas pautas pawa ew seo, >w< pewo wos gwandes motowes de búsqueda mantienen wesuwtado w-wa cwasificación como secweto c-comewciaw. (U ﹏ U) ew seo c-combina was diwectwices o-oficiawes dew motow de búsqueda, 😳 ew conocimiento empíwico y-y ew conocimiento t-teówico de wos awtícuwos c-científicos o-o patentes. (ˆ ﻌ ˆ)♡
 
-Métodos de SEO se dividen en dos grandes clases:
+métodos de seo se d-dividen en dos gwandes cwases:
 
-- SEO on Page
-  - : Conjunto de factores que existen en la web a posicionar que influyen en los resultados de búsqueda. Estos factores son tales como titles, descriptions, contenido y calidad del mismo, densidad de términos, correcta estructuración de contenidos...
-- SEO off Page
-  - : Conjunto de factores externos que influyen en los resultados de búsqueda. Estos factores son la experiencia del usuario en la web a posicionar, tráfico y sobre todo los links o enlaces externos que apuntan a tu web.
+- s-seo on page
+  - : conjunto de factowes que existen e-en wa web a posicionaw que i-infwuyen en wos wesuwtados de búsqueda. 😳😳😳 e-estos f-factowes son tawes como titwes, (U ﹏ U) descwiptions, (///ˬ///✿) contenido y cawidad dew mismo, 😳 densidad de téwminos, 😳 cowwecta estwuctuwación d-de c-contenidos...
+- seo off page
+  - : c-conjunto de factowes e-extewnos q-que infwuyen en wos wesuwtados de búsqueda. estos factowes son w-wa expewiencia dew usuawio en wa web a posicionaw, σωσ twáfico y sobwe todo wos winks o-o enwaces extewnos que apuntan a-a tu web. rawr x3
 
-## Aprende más en
+## a-apwende más en
 
-- [SEO](https://es.wikipedia.org/wiki/SEO) on Wikipedia
+- [seo](https://es.wikipedia.owg/wiki/seo) o-on wikipedia
 
-### Aprende SEO
+### apwende s-seo
 
-- [Google Webmaster](https://static.googleusercontent.com/media/www.google.com/es//intl/es/webmasters/docs/guia_optimizacion_motores_busqueda.pdf)
+- [googwe w-webmastew](https://static.googweusewcontent.com/media/www.googwe.com/es//intw/es/webmastews/docs/guia_optimizacion_motowes_busqueda.pdf)

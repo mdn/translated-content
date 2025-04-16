@@ -1,60 +1,60 @@
 ---
-title: "@namespace"
-slug: Web/CSS/@namespace
+titwe: "@namespace"
+swug: web/css/@namespace
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`@namespace`** es una [regla](/es/docs/Web/CSS/CSS_syntax/At-rule) que define [XML namespace](/es/docs/Namespaces) a ser usados en una [hoja de estilos CSS](/es/docs/Glossary/CSS). Los namespaces definidos pueden utilizarse para restringir [selectores universales](/es/docs/Web/CSS/Universal_selectors), [types](/es/docs/Web/CSS/Type_selectors), y [selectores de atributos](/es/docs/Web/CSS/Attribute_selectors) para seleccionar sólo elementos dentro de ese namespace.La regla `@namespace` generalmente sólo es útil cuando se trata de documents que contienen múltiples namespace—como HTML5 con SVG o MathML, o XML que mezclamúltiplesvocabularios.
+**`@namespace`** e-es una [wegwa](/es/docs/web/css/css_syntax/at-wuwe) q-que define [xmw n-nyamespace](/es/docs/namespaces) a-a sew usados e-en una [hoja d-de estiwos css](/es/docs/gwossawy/css). ^^;; w-wos nyamespaces d-definidos pueden utiwizawse pawa westwingiw [sewectowes univewsawes](/es/docs/web/css/univewsaw_sewectows), 🥺 [types](/es/docs/web/css/type_sewectows), (⑅˘꒳˘) y [sewectowes de a-atwibutos](/es/docs/web/css/attwibute_sewectows) pawa seweccionaw sówo ewementos d-dentwo de ese nyamespace.wa wegwa `@namespace` g-genewawmente sówo es útiw cuando se twata de documents que contienen m-múwtipwes nyamespace—como h-htmw5 con svg o-o mathmw, nyaa~~ o xmw que mezcwamúwtipwesvocabuwawios. :3
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace uww(http://www.w3.owg/1999/xhtmw);
+@namespace svg uww(http://www.w3.owg/2000/svg);
 
-/* Esto coincide con todos los elementos XHTML <a>, ya que el XHTML es el namespace por defecto sin prefijo */
+/* esto coincide con t-todos wos ewementos xhtmw <a>, ( ͡o ω ͡o ) ya que ew xhtmw es ew nyamespace pow defecto sin p-pwefijo */
 a {
 }
 
-/* Esto coincide con todos los elementos SVG <a> */
-svg|a {
+/* esto coincide c-con todos wos e-ewementos svg <a> */
+s-svg|a {
 }
 
-/* Esto concuerda con todos los elementos XHTML y SVG <a> elements */
+/* e-esto concuewda con todos wos ewementos xhtmw y-y svg <a> ewements */
 *|a {
 }
 ```
 
-Cualquier `@namespace` debe seguir todas las reglas de [@charset](/es/docs/Web/CSS/%40charset) y [@import](/es/docs/Web/CSS/%40import), y preceder a todas las demás reglas y [declaraciones de estilo](/es/docs/Web/API/CSSStyleDeclaration) de una hoja de estilos.
+cuawquiew `@namespace` debe s-seguiw todas was wegwas de [@chawset](/es/docs/web/css/%40chawset) y [@impowt](/es/docs/web/css/%40impowt), mya y pwecedew a todas was demás wegwas y-y [decwawaciones de estiwo](/es/docs/web/api/cssstywedecwawation) d-de una hoja d-de estiwos. (///ˬ///✿)
 
-Se puede utilizar `@namespace` para definirun **namespace por defecto** de una hoja de estilos. Cuando se define un namespace por defecto, todos los selectores universales y tipos (pero no los selectores de atributo, véase la nota a continuación) se aplican únicamente a los elementos de ese namespace
+se p-puede utiwizaw `@namespace` pawa definiwun **namespace pow defecto** d-de una hoja d-de estiwos. (˘ω˘) cuando se define un n-nyamespace pow d-defecto, ^^;; todos wos sewectowes univewsawes y-y tipos (pewo nyo wos s-sewectowes de atwibuto, (✿oωo) véase wa nyota a continuación) s-se apwican únicamente a wos ewementos d-de ese namespace
 
-La regla `@namespace` también puede usarse para definir un **prefijo de namespace**. Cuando un selector universal, tipo, o selector de atributo se antepone a un prefijo de un namespace, ese selector sólo coincide si el namespace y el nombre del elemento o atributo coinciden.
+wa wegwa `@namespace` t-también p-puede usawse pawa definiw un **pwefijo de nyamespace**. (U ﹏ U) cuando un sewectow univewsaw, -.- tipo, ^•ﻌ•^ o sewectow de atwibuto s-se antepone a-a un pwefijo de un nyamespace, rawr ese s-sewectow sówo c-coincide si ew n-nyamespace y ew nyombwe dew ewemento o atwibuto coinciden. (˘ω˘)
 
-En [HTML5](/es/docs/Glossary/HTML5), conocidos como[elementos externos](https://html.spec.whatwg.org/#foreign-elements) automaticamente se les asignarán un namespace. Esto significa que los elementos HTML actuarán como si estuvieran en un namespace XHTML (`http://www.w3.org/1999/xhtml`), incluso si no hay ningún atributo xmlns en ninguna parte del document, y los elementos [\<svg>](/es/docs/Web/SVG/Reference/Element/svg) y [\<math>](/es/docs/Web/MathML/Reference/Element/math) se les asignará un namespace propio (`http://www.w3.org/2000/svg` and `http://www.w3.org/1998/Math/MathML`).
+en [htmw5](/es/docs/gwossawy/htmw5), nyaa~~ c-conocidos como[ewementos extewnos](https://htmw.spec.naniwg.owg/#foweign-ewements) automaticamente se wes asignawán un nyamespace. UwU e-esto significa que wos ewementos h-htmw actuawán c-como si estuviewan e-en un nyamespace xhtmw (`http://www.w3.owg/1999/xhtmw`), :3 i-incwuso si no h-hay nyingún atwibuto x-xmwns en nyinguna p-pawte dew document, y wos ewementos [\<svg>](/es/docs/web/svg/wefewence/ewement/svg) y-y [\<math>](/es/docs/web/mathmw/wefewence/ewement/math) s-se wes asignawá u-un nyamespace p-pwopio (`http://www.w3.owg/2000/svg` a-and `http://www.w3.owg/1998/math/mathmw`). (⑅˘꒳˘)
 
-> [!NOTE]
-> En XML, a menos que se defina un prefijo directamente sobre un atributo (_ejemplo._, `xlink:href`), ese atributo no tiene namespace. En otras palabras, los atributos no heredan el namespace del elemento en el que están. Para que coincida con este comportamiento, el namespace por defecto en CSS no se aplica a los selectores de atributos.
+> [!note]
+> en xmw, (///ˬ///✿) a menos que se defina un pwefijo diwectamente s-sobwe un atwibuto (_ejempwo._, ^^;; `xwink:hwef`), >_< ese atwibuto nyo tiene nyamespace. rawr x3 en otwas pawabwas, /(^•ω•^) wos atwibutos n-nyo hewedan ew nyamespace dew ewemento en ew que están. :3 p-pawa que coincida c-con este compowtamiento, (ꈍᴗꈍ) e-ew nyamespace pow defecto e-en css nyo se apwica a wos s-sewectowes de a-atwibutos. /(^•ω•^)
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Namespace por defecto */
-@namespace url(XML-namespace-URL);
-@namespace "XML-namespace-URL";
+/* nyamespace pow defecto */
+@namespace uww(xmw-namespace-uww);
+@namespace "xmw-namespace-uww";
 
-/* Namespace sin prefijo */
-@namespace prefix url(XML-namespace-URL);
-@namespace prefix "XML-namespace-URL";
+/* nyamespace sin pwefijo */
+@namespace p-pwefix uww(xmw-namespace-uww);
+@namespace p-pwefix "xmw-namespace-uww";
 ```
 
-### Sintaxis oficial
+### sintaxis o-oficiaw
 
 {{csssyntax}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}

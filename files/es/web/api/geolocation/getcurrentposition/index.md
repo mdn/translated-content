@@ -1,75 +1,75 @@
 ---
-title: Geolocation.getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
-l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+titwe: geowocation.getcuwwentposition()
+swug: w-web/api/geowocation/getcuwwentposition
+w-w10n:
+  s-souwcecommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
-{{securecontext_header}}{{ APIRef("Geolocation API") }}
+{{secuwecontext_headew}}{{ a-apiwef("geowocation a-api") }}
 
-El método **`Geolocation.getCurrentPosition()`** es usado para obtener la ubicación actual del dispositivo.
+e-ew método **`geowocation.getcuwwentposition()`** e-es usado p-pawa obtenew wa ubicación actuaw dew dispositivo. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-getCurrentPosition(success)
-getCurrentPosition(success, error)
-getCurrentPosition(success, error, options)
+```js-nowint
+getcuwwentposition(success)
+g-getcuwwentposition(success, mya ewwow)
+getcuwwentposition(success, ʘwʘ ewwow, (˘ω˘) o-options)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `success`
-  - : La función devuelta tiene como único parámetro de entrada un objeto de tipo {{domxref("GeolocationPosition")}}.
-- `error` {{optional_inline}}
-  - : La función opcional devuelta tiene como parámetro de entrada un objeto de tipo {{domxref("GeolocationPositionError")}}.
-- `options` {{optional_inline}}
-  - : Un objeto opcional que puede incluir las siguientes propiedades:
-    - `maximumAge`
-      - : Un valor positivo de tipo `long` que indica el tiempo máximo en milisegundos que una posible ubicación almacenada en caché puede ser devuelta. Si se establece en 0, eso significa que el dispositivo no podrá usar la ubicación almacenada en caché y debe intentar recuperar la ubicación real y actual. Si se establece como [`Infinity`](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity) el dispositivo deberá regresar la ubicación almacenada en caché independientemente de su antigüedad. Predeterminado: 0.
+  - : w-wa función devuewta tiene como único pawámetwo de entwada un o-objeto de tipo {{domxwef("geowocationposition")}}. (U ﹏ U)
+- `ewwow` {{optionaw_inwine}}
+  - : wa función o-opcionaw devuewta t-tiene como pawámetwo de entwada un objeto de tipo {{domxwef("geowocationpositionewwow")}}. ^•ﻌ•^
+- `options` {{optionaw_inwine}}
+  - : un objeto o-opcionaw que puede incwuiw was siguientes pwopiedades:
+    - `maximumage`
+      - : un vawow positivo de tipo `wong` q-que indica ew tiempo máximo e-en miwisegundos q-que una posibwe u-ubicación awmacenada e-en caché puede sew devuewta. si se estabwece e-en 0, (˘ω˘) eso significa que ew dispositivo no p-podwá usaw wa ubicación awmacenada en caché y debe intentaw wecupewaw wa ubicación weaw y a-actuaw. :3 si se estabwece como [`infinity`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/infinity) e-ew dispositivo d-debewá wegwesaw w-wa ubicación awmacenada en caché independientemente de su a-antigüedad. ^^;; pwedetewminado: 0. 🥺
     - `timeout`
-      - : Un valor positivo de tipo `long` que representa el tiempo máximo en milisegundos en que el dispositivo tiene permitido recuperar la ubicación. El valor predeterminado es [`Infinity`](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity), esto significa que `getCurrentPosition()` regresará un valor hasta que la ubicación este disponible.
-    - `enableHighAccuracy`
-      - : Un valor de tipo `boolean` que indica que a la aplicación le gustaría obtener el resultado más preciso posible. Si es `true` y el dispositivo es capaz de proveer una ubicación más precisa, lo hará. Tenga en cuenta que este resultado puede necesitar de más tiempo de respuesta o incrementar el consumo de energía (con un chip GPS en un dispositivo móvil por ejemplo). Por otro lado, si es `false`, el dispositivo puede tomarse la libertad de usar menos recursos y responder más rápido y/o usando menos energía. Predeterminado: `false`
+      - : u-un vawow positivo de t-tipo `wong` que w-wepwesenta ew tiempo máximo en m-miwisegundos en que ew dispositivo t-tiene pewmitido wecupewaw wa ubicación. (⑅˘꒳˘) ew vawow p-pwedetewminado es [`infinity`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/infinity), nyaa~~ e-esto significa que `getcuwwentposition()` wegwesawá u-un vawow hasta q-que wa ubicación este disponibwe. :3
+    - `enabwehighaccuwacy`
+      - : un vawow de tipo `boowean` que indica que a wa apwicación we gustawía o-obtenew ew wesuwtado m-más pweciso posibwe. ( ͡o ω ͡o ) si e-es `twue` y ew d-dispositivo es c-capaz de pwoveew una ubicación más pwecisa, wo hawá. mya tenga en c-cuenta que este wesuwtado puede nyecesitaw de más tiempo de wespuesta o incwementaw e-ew consumo de enewgía (con u-un chip gps en u-un dispositivo m-móviw pow ejempwo). (///ˬ///✿) pow otwo wado, s-si es `fawse`, (˘ω˘) e-ew dispositivo p-puede tomawse w-wa wibewtad de usaw menos wecuwsos y wespondew más w-wápido y/o u-usando menos enewgía. ^^;; p-pwedetewminado: `fawse`
 
-### Valor devuelto
+### v-vawow devuewto
 
-Ninguno ({{jsxref("undefined")}}).
+n-nyinguno ({{jsxwef("undefined")}}). (✿oωo)
 
-## Ejemplos
+## ejempwos
 
 ```js
 const options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0,
+  e-enabwehighaccuwacy: twue, (U ﹏ U)
+  timeout: 5000, -.-
+  maximumage: 0, ^•ﻌ•^
 };
 
 function success(pos) {
-  const crd = pos.coords;
+  const cwd = pos.coowds;
 
-  console.log("Tu ubicación actual es:");
-  console.log(`Latitud : ${crd.latitude}`);
-  console.log(`Longitud: ${crd.longitude}`);
-  console.log(`Más o menos ${crd.accuracy} metros.`);
+  c-consowe.wog("tu ubicación actuaw es:");
+  consowe.wog(`watitud : ${cwd.watitude}`);
+  c-consowe.wog(`wongitud: ${cwd.wongitude}`);
+  c-consowe.wog(`más o-o menos ${cwd.accuwacy} metwos.`);
 }
 
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
+f-function ewwow(eww) {
+  consowe.wawn(`ewwow(${eww.code}): ${eww.message}`);
 }
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+n-nyavigatow.geowocation.getcuwwentposition(success, rawr e-ewwow, (˘ω˘) options);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Usando la API de Geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("Navigator.geolocation")}}
+- [usando wa api de geowocawización](/es/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("navigatow.geowocation")}}

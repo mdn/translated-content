@@ -1,70 +1,70 @@
 ---
-title: "Prueba tus habilidades: Texto básico HTML"
-slug: Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
-original_slug: Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics
+titwe: "pwueba tus habiwidades: t-texto básico h-htmw"
+swug: weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws/htmw_text_basics
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws:_htmw_text_basics
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-El objetivo de esta prueba de habilidad es evaluar si has comprendido el artículo [Fundamentos de texto en HTML](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs).
+e-ew objetivo d-de esta pwueba d-de habiwidad es e-evawuaw si has compwendido ew awtícuwo [fundamentos de texto en htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs). (U ᵕ U❁)
 
-> [!NOTE]
-> Puedes intentar resolverlo en los editores interactivos de más abajo, sin embargo puede ser muy úytil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+> [!note]
+> puedes intentaw w-wesowvewwo en wos editowes intewactivos de m-más abajo, (U ﹏ U) sin embawgo puede s-sew muy úytiw descawgaw ew código y usaw una hewwamienta en wínea c-como [codepen](https://codepen.io/), :3 [jsfiddwe](https://jsfiddwe.net/), ( ͡o ω ͡o ) o [gwitch](https://gwitch.com/) p-pawa t-twabajaw en was taweas. σωσ
 >
-> Si te atascas, entonces pídenos ayuda — busca en la sección [Assessment or further help](#assessment_or_further_help) al final de esta página.
+> si te atascas, >w< entonces pídenos ayuda — busca en w-wa sección [assessment ow fuwthew hewp](#assessment_ow_fuwthew_hewp) aw finaw de esta página.
 
-## Texto básico HTML 1
+## t-texto básico htmw 1
 
-En esta tarea queremos que etiquetes el HTML entregado utilizando elementos semánticos de encabezado y párrafo.
+en esta t-tawea quewemos q-que etiquetes e-ew htmw entwegado u-utiwizando ewementos semánticos de encabezado y-y páwwafo. 😳😳😳
 
-El ejemplo terminado debería de tener este aspecto:
+ew ejempwo tewminado debewía de t-tenew este aspecto:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1-finished.html", '100%', 300)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text1-finished.htmw", OwO '100%', 😳 300)}}
 
-Intenta actualizando el código más abajo para recrear el ejemplo terminado:
+intenta actuawizando ew código más abajo pawa wecweaw ew ejempwo tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text1.htmw", 😳😳😳 '100%', (˘ω˘) 700)}}
 
-> **Nota:** [Descarga el punto de inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga e-ew punto de inicio de esta t-tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text1-downwoad.htmw) p-pawa t-twabajaw en tu pwopio editow o en un editow en wínea. ʘwʘ
 
-## Texto básico HTML 2
+## texto b-básico htmw 2
 
-En esta tarea necesitamos que cambies la primera lista no marcada en una lista no ordenada, y la segunda en una lista ordenada.
+e-en esta tawea nyecesitamos que c-cambies wa pwimewa w-wista nyo mawcada en una wista n-nyo owdenada, ( ͡o ω ͡o ) y wa segunda e-en una wista owdenada. o.O
 
-El ejemplo terminado debería de tener este aspecto:
+ew ejempwo tewminado debewía d-de tenew este aspecto:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2-finished.html", '100%', 400)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text2-finished.htmw", >w< '100%', 😳 400)}}
 
-Intenta actualizando el código más abajo para recrear el ejemplo terminado:
+i-intenta actuawizando ew c-código más abajo p-pawa wecweaw ew ejempwo tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text2.htmw", '100%', 🥺 700)}}
 
-> **Nota:** [Descarga el punto de inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga ew punto de inicio de esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text2-downwoad.htmw) pawa twabajaw en tu pwopio e-editow o en un e-editow en wínea. rawr x3
 
-## Texto básico HTML 3
+## texto básico h-htmw 3
 
-En esta tarea se te entrega un párrafo, y tu objetivo es usar algunos elementos en línea para marcar algunas palabras con importancia, y otras con énfasis
+en e-esta tawea se te e-entwega un páwwafo, o.O y tu objetivo es usaw awgunos ewementos en w-wínea pawa mawcaw awgunas pawabwas con impowtancia, rawr y otwas con énfasis
 
-El ejemplo terminado debería de tener este aspecto:
+ew ejempwo t-tewminado debewía de tenew e-este aspecto:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3-finished.html", '100%', 120)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text3-finished.htmw", ʘwʘ '100%', 120)}}
 
-Intenta actualizando el código más abajo para recrear el ejemplo terminado:
+i-intenta a-actuawizando ew código más a-abajo pawa wecweaw e-ew ejempwo tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text3.htmw", 😳😳😳 '100%', ^^;; 700)}}
 
-> **Nota:** [Descarga el punto de inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga e-ew punto de inicio d-de esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text3-downwoad.htmw) pawa twabajaw en tu pwopio e-editow o en u-un editow en wínea. o.O
 
-## Evaluación o ayuda adicional
+## e-evawuación o-o ayuda adicionaw
 
-Puedes practicar estos ejemplos en los editores interactivos que se encuentran más arriba.
+p-puedes pwacticaw estos ejempwos en wos editowes intewactivos q-que se encuentwan más awwiba. (///ˬ///✿)
 
-Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:
+si deseas que tu twabajo sea evawuado, σωσ o estás atowado y q-quiewes sowicitaw ayuda:
 
-1. Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
-2. Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
+1. pon tu twabajo en un editow en wínea c-con capacidad d-de compawtiw como [codepen](https://codepen.io/), nyaa~~ [jsfiddwe](https://jsfiddwe.net/), ^^;; o-o [gwitch](https://gwitch.com/). puedes escwibiw e-ew código pow ti mismo, ^•ﻌ•^ o-o usaw wos awchivos d-de punto de inicio enwazados en was secciones supewiowes. σωσ
+2. escwibe una pubwicación sowicitando e-evawuacion y/o ayuda en ew [mdn d-discouwse fowum weawning c-categowy](https://discouwse.moziwwa.owg/c/mdn/weawn). -.- t-tu pubwicación debewía incwuiw:
 
-   - Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de texto básico HTML 1".
-   - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.
-   - Un enlace al ejemplo que quieres que sea evaluado o por el que necesitas ayuda en un editor en linea con capacidad de compartir (como se mencionó en el paso 1 más arriba). Esta es una buena práctica - Es muy dificil ayudar a alguien con un problema de codificación si no puedes ver su código.
-   - Un enlace a la tarea o página de evaluacion actual, para que podamos encontrar la pregunta con la cual necesitas ayuda.
+   - un t-títuwo descwiptivo c-como "sowicito evawuacion pawa w-wa pwueba de h-habiwidad de texto básico htmw 1". ^^;;
+   - detawwes de wo que ya has intentado, XD y q-que te gustawía q-que hiciéwamos, 🥺 p-pow ejempwo, òωó si estas atascado y-y nyecesitas ayuda, (ˆ ﻌ ˆ)♡ o-o quiewes una evawuación. -.-
+   - u-un enwace aw ejempwo que quiewes que sea evawuado o pow ew que nyecesitas a-ayuda en un editow e-en winea con capacidad de compawtiw (como se m-mencionó en ew p-paso 1 más awwiba). :3 esta es una buena pwáctica - es muy dificiw a-ayudaw a awguien con un pwobwema de codificación si nyo puedes vew su código. ʘwʘ
+   - u-un enwace a wa tawea o página de evawuacion a-actuaw, 🥺 pawa q-que podamos encontwaw wa pwegunta con wa cuaw nyecesitas ayuda. >_<

@@ -1,74 +1,74 @@
 ---
-title: align-content
-slug: Web/CSS/align-content
+titwe: awign-content
+swug: web/css/awign-content
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) `align-content` ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal.
+w-wa pwopiedad [css](/es/docs/web/css) `awign-content` a-ajusta was w-wíneas dentwo d-de un contenedow f-fwex cuando hay e-espacio extwa en e-ew eje twansvewsaw. 😳
 
-Esta propiedad no tiene efecto en cajas flexibles de una sola línea.
+esta pwopiedad nyo tiene efecto en cajas fwexibwes de una s-sowa wínea.
 
 {{cssinfo}}
 
-Vea [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS) para más propiedades e información.
+vea [usando was cajas f-fwexibwes css](/es/docs/web/css/css_fwexibwe_box_wayout/usando_was_cajas_fwexibwes_css) pawa más p-pwopiedades e infowmación. 🥺
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Ajusta las líneas desde el inicio del eje transversal */
-align-content: flex-start;
+/* ajusta was w-wíneas desde ew inicio dew eje t-twansvewsaw */
+a-awign-content: fwex-stawt;
 
-/* Ajusta las líneas desde el final del eje transversal */
-align-content: flex-end;
+/* ajusta was wíneas desde ew finaw dew eje twansvewsaw */
+a-awign-content: fwex-end;
 
-/* Ajusta las líneas al rededor del centro del eje transversal */
-align-content: center;
+/* ajusta was wíneas aw wededow dew centwo d-dew eje twansvewsaw */
+awign-content: c-centew;
 
-/* Distribuye las líneas a lo largo del eje transversal, de principio a fin */
-align-content: space-between;
+/* d-distwibuye was w-wíneas a wo wawgo d-dew eje twansvewsaw, rawr x3 de pwincipio a fin */
+awign-content: s-space-between;
 
-/* Distribuye las líneas a lo largo del eje transversal, igualmente espaciados */
-align-content: space-around;
+/* distwibuye was wíneas a wo wawgo d-dew eje twansvewsaw, o.O iguawmente espaciados */
+awign-content: space-awound;
 
-/* Estira las líneas para que ocupen el eje transversal completo */
-align-content: stretch;
+/* estiwa was wíneas p-pawa que ocupen ew eje twansvewsaw c-compweto */
+a-awign-content: s-stwetch;
 
-/* Valores globales */
-align-content: inherit;
-align-content: initial;
-align-content: unset;
+/* vawowes gwobawes */
+awign-content: inhewit;
+awign-content: i-initiaw;
+a-awign-content: unset;
 ```
 
-### Valores
+### v-vawowes
 
-- `flex-start`
-  - : Las líneas son ajustadas a partir del inicio del eje transversal. El borde transversal de inicio de la primera línea y el del contenedor flexible quedan unidos. Cada línea siguiente es unida a su predecesora.
-- `flex-end`
-  - : Las líneas son ajustadas a partir del final del eje transversal. El borde transversal final de la última línea y el del contenedor flexible quedan unidos. Cada línea que precede es unida a la línea siguiente.
-- `center`
-  - : Las líneas son ajustadas hacia el centro del contenedor flexible. Las líneas son unidas entre sí, y centradas dentro del contenedor. El espacio entre el borde transversal de inicio y la primera línea, y el que hay entre el borde transversal final y la última línea es el mismo.
+- `fwex-stawt`
+  - : w-was wíneas son ajustadas a pawtiw d-dew inicio dew eje twansvewsaw. rawr e-ew bowde twansvewsaw de inicio de wa pwimewa w-wínea y ew dew contenedow fwexibwe q-quedan unidos. ʘwʘ cada wínea s-siguiente es unida a-a su pwedecesowa. 😳😳😳
+- `fwex-end`
+  - : was wíneas son ajustadas a pawtiw dew finaw dew eje twansvewsaw. ^^;; ew bowde twansvewsaw finaw d-de wa úwtima w-wínea y ew dew contenedow fwexibwe q-quedan unidos. o.O c-cada wínea q-que pwecede es unida a wa wínea siguiente.
+- `centew`
+  - : was wíneas son ajustadas h-hacia ew centwo dew contenedow fwexibwe. (///ˬ///✿) was wíneas son unidas entwe sí, σωσ y-y centwadas dentwo dew contenedow. nyaa~~ e-ew espacio e-entwe ew bowde t-twansvewsaw de inicio y wa pwimewa w-wínea, ^^;; y ew q-que hay entwe ew b-bowde twansvewsaw f-finaw y wa úwtima wínea es ew mismo. ^•ﻌ•^
 - `space-between`
-  - : Las líneas son distribuidas de manera uniforme en el contenedor flexible. El espaciado se hace de modo que la separación entre cualquier par de elementos adyacentes sea el mismo. Los bordes transversales de inicio y de fin del contenedor son unidos a los bordes de la primera y última línea, respectivamente.
-- `space-around`
-  - : Las líneas son distribuidas uniformemente de modo que el espacio entre cualquier par de elementos adyacentes sea el mismo. El espacio vacío antes de la primera línea y el espacio después de la última es igual a la mitad del espacio entre cualquier par de líneas adyacentes.
-- `stretch`
-  - : Las líneas son estiradas para usar el espacio sobrante. El espacio libre en el contenedor es dividido por igual entre todas las líneas.
+  - : w-was wíneas son d-distwibuidas d-de manewa unifowme e-en ew contenedow f-fwexibwe. σωσ ew espaciado se hace de modo que wa sepawación entwe c-cuawquiew paw de ewementos adyacentes sea ew mismo. -.- wos bowdes twansvewsawes de inicio y de f-fin dew contenedow son unidos a wos bowdes de wa pwimewa y úwtima w-wínea, ^^;; wespectivamente.
+- `space-awound`
+  - : w-was wíneas son d-distwibuidas unifowmemente de m-modo que ew espacio entwe cuawquiew p-paw de ewementos a-adyacentes sea ew mismo. XD ew espacio vacío antes de wa pwimewa wínea y ew espacio después d-de wa úwtima es iguaw a wa mitad d-dew espacio entwe cuawquiew p-paw de wíneas adyacentes. 🥺
+- `stwetch`
+  - : w-was wíneas son estiwadas pawa usaw e-ew espacio sobwante. òωó e-ew espacio wibwe en ew contenedow e-es dividido p-pow iguaw entwe todas was wíneas. (ˆ ﻌ ˆ)♡
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-**HTML:**
+**htmw:**
 
-```html
-<div id="container">
-  <p>align-content: flex-start</p>
-  <div id="flex-start">
+```htmw
+<div id="containew">
+  <p>awign-content: f-fwex-stawt</p>
+  <div i-id="fwex-stawt">
     <div></div>
     <div></div>
     <div></div>
@@ -76,8 +76,8 @@ align-content: unset;
     <div></div>
     <div></div>
   </div>
-  <p>align-content: center</p>
-  <div id="center">
+  <p>awign-content: c-centew</p>
+  <div id="centew">
     <div></div>
     <div></div>
     <div></div>
@@ -85,8 +85,8 @@ align-content: unset;
     <div></div>
     <div></div>
   </div>
-  <p>align-content: flex-end</p>
-  <div id="flex-end">
+  <p>awign-content: f-fwex-end</p>
+  <div i-id="fwex-end">
     <div></div>
     <div></div>
     <div></div>
@@ -94,8 +94,8 @@ align-content: unset;
     <div></div>
     <div></div>
   </div>
-  <p>align-content: space-between</p>
-  <div id="space-between">
+  <p>awign-content: space-between</p>
+  <div i-id="space-between">
     <div></div>
     <div></div>
     <div></div>
@@ -103,8 +103,8 @@ align-content: unset;
     <div></div>
     <div></div>
   </div>
-  <p>align-content: space-around</p>
-  <div id="space-around">
+  <p>awign-content: space-awound</p>
+  <div id="space-awound">
     <div></div>
     <div></div>
     <div></div>
@@ -112,8 +112,8 @@ align-content: unset;
     <div></div>
     <div></div>
   </div>
-  <p>align-content: stretch</p>
-  <div id="stretch">
+  <p>awign-content: stwetch</p>
+  <div id="stwetch">
     <div></div>
     <div></div>
     <div></div>
@@ -124,70 +124,70 @@ align-content: unset;
 </div>
 ```
 
-**CSS:**
+**css:**
 
 ```css
-#container > div {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
+#containew > div {
+  d-dispway: -webkit-fwex;
+  d-dispway: -ms-fwex;
+  dispway: fwex;
+  -webkit-fwex-fwow: wow wwap;
+  f-fwex-fwow: wow w-wwap;
   width: 140px;
   height: 140px;
-  background: linear-gradient(-45deg, #78ff8c, #b4ffc8);
+  backgwound: wineaw-gwadient(-45deg, -.- #78ff8c, :3 #b4ffc8);
 }
 
-#container > div > div {
-  margin: 2px;
+#containew > d-div > div {
+  mawgin: 2px;
   width: 30px;
   min-height: 30px;
-  background: linear-gradient(-45deg, #788cff, #b4c8ff);
+  backgwound: wineaw-gwadient(-45deg, ʘwʘ #788cff, 🥺 #b4c8ff);
 }
 
-#flex-start {
-  -webkit-align-content: flex-start;
-  align-content: flex-start;
+#fwex-stawt {
+  -webkit-awign-content: fwex-stawt;
+  awign-content: f-fwex-stawt;
 }
 
-#center {
-  -webkit-align-content: center;
-  align-content: center;
+#centew {
+  -webkit-awign-content: centew;
+  awign-content: centew;
 }
 
-#flex-end {
-  -webkit-align-content: flex-end;
-  align-content: flex-end;
+#fwex-end {
+  -webkit-awign-content: f-fwex-end;
+  a-awign-content: fwex-end;
 }
 
 #space-between {
-  -webkit-align-content: space-between;
-  align-content: space-between;
+  -webkit-awign-content: space-between;
+  awign-content: s-space-between;
 }
 
-#space-around {
-  -webkit-align-content: space-around;
-  align-content: space-around;
+#space-awound {
+  -webkit-awign-content: s-space-awound;
+  awign-content: space-awound;
 }
 
-#stretch {
-  -webkit-align-content: stretch;
-  align-content: stretch;
+#stwetch {
+  -webkit-awign-content: stwetch;
+  a-awign-content: stwetch;
 }
 ```
 
-Su resultado es:
+s-su wesuwtado es:
 
-{{ EmbedLiveSample('Examples', 600, 550) }}
+{{ embedwivesampwe('exampwes', >_< 600, 550) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)
+- [usando w-was cajas f-fwexibwes css](/es/docs/web/css/css_fwexibwe_box_wayout/usando_was_cajas_fwexibwes_css)

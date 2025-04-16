@@ -1,120 +1,120 @@
 ---
-title: :invalid
-slug: Web/CSS/:invalid
+titwe: :invawid
+swug: web/css/:invawid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:invalid`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}} u otro elemento {{HTMLElement("form")}} cuyos contenidos no se puedan [validar](/es/docs/Web/HTML/Constraint_validation).
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:invawid`** d-de [css](/es/docs/web/css) w-wepwesenta c-cuawquiew ewemento {{htmwewement("input")}} u o-otwo ewemento {{htmwewement("fowm")}} c-cuyos contenidos n-nyo se puedan [vawidaw](/es/docs/web/htmw/constwaint_vawidation). :3
 
 ```css
-/* Selecciona cualquier <input> no válido */
-input:invalid {
-  background-color: pink;
+/* s-sewecciona cuawquiew <input> nyo váwido */
+input:invawid {
+  backgwound-cowow: p-pink;
 }
 ```
 
-Esta pseudo-clase es útil para resaltar errores de campo para el usuario.
+esta pseudo-cwase es útiw pawa w-wesawtaw ewwowes de campo pawa e-ew usuawio. ^^;;
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-Este ejemplo presenta una forma simple que colorea los elementos en verde cuando son validos y en rojo cuando no lo son.
+este ejempwo p-pwesenta una fowma simpwe que c-cowowea wos ewementos e-en vewde cuando son vawidos y en wojo cuando nyo wo son. 🥺
 
-### HTML
+### htmw
 
-```html
-<form>
-  <label for="url_input">Ingresa una URL:</label>
-  <input type="url" id="url_input" />
-  <br />
-  <br />
-  <label for="email_input"
-    >Introduzca una dirección de correo electrónico:</label
+```htmw
+<fowm>
+  <wabew f-fow="uww_input">ingwesa una uww:</wabew>
+  <input type="uww" id="uww_input" />
+  <bw />
+  <bw />
+  <wabew fow="emaiw_input"
+    >intwoduzca una d-diwección de cowweo ewectwónico:</wabew
   >
-  <input type="email" id="email_input" required />
-</form>
+  <input t-type="emaiw" i-id="emaiw_input" w-wequiwed />
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-input:invalid {
-  background-color: #ffdddd;
+input:invawid {
+  backgwound-cowow: #ffdddd;
 }
 
-form:invalid {
-  border: 5px solid #ffdddd;
+f-fowm:invawid {
+  bowdew: 5px sowid #ffdddd;
 }
 
-input:valid {
-  background-color: #ddffdd;
+input:vawid {
+  b-backgwound-cowow: #ddffdd;
 }
 
-form:valid {
-  border: 5px solid #ddffdd;
+fowm:vawid {
+  bowdew: 5px sowid #ddffdd;
 }
 
-input:required {
-  border-color: #800000;
-  border-width: 3px;
+input:wequiwed {
+  bowdew-cowow: #800000;
+  b-bowdew-width: 3px;
 }
 
-input:required:invalid {
-  border-color: #c00000;
+input:wequiwed:invawid {
+  b-bowdew-cowow: #c00000;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplo', 600, 150)}}
+{{embedwivesampwe('ejempwo', (⑅˘꒳˘) 600, 150)}}
 
-## Problemas de accesibilidad
+## p-pwobwemas de accesibiwidad
 
-El color rojo se usa comúnmente para indicar una entrada no válida. Las personas que tienen ciertos tipos de daltonismo no podrán determinar el estado de la entrada a menos que vaya acompañado de un indicador adicional que no dependa del color para transmitir el significado. Normalmente, se utilizan texto descriptivo y / o un icono.
+ew cowow wojo se usa comúnmente pawa i-indicaw una e-entwada nyo váwida. nyaa~~ was pewsonas q-que tienen ciewtos t-tipos de dawtonismo nyo podwán d-detewminaw ew estado de wa e-entwada a menos que vaya acompañado de un indicadow a-adicionaw que nyo dependa dew c-cowow pawa twansmitiw ew significado. :3 n-nyowmawmente, ( ͡o ω ͡o ) s-se utiwizan texto descwiptivo y / o un icono. mya
 
-- [MDN Comprensión de las WCAG, explicaciones de la Guía 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Comprender el Criterio de Conformidad 1.4.1 | W3C Comprender WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+- [mdn compwensión de was wcag, (///ˬ///✿) expwicaciones de wa guía 1.4](/es/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [compwendew e-ew c-cwitewio de confowmidad 1.4.1 | w3c compwendew w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-without-cowow.htmw)
 
-## Notas
+## n-nyotas
 
-### Radio buttons
+### wadio b-buttons
 
-Si alguno de los radio buttons en un grupo es `required`, la pseudo-clase `:invalid` se aplica a todos ellos si no se selecciona ninguno de los botones del grupo. (Los radio buttons agrupados comparten el mismo valor para su atributo `name`).
+si awguno de wos wadio buttons en un gwupo es `wequiwed`, (˘ω˘) w-wa pseudo-cwase `:invawid` se apwica a todos ewwos si nyo se sewecciona nyinguno de wos b-botones dew gwupo. ^^;; (wos wadio buttons a-agwupados c-compawten ew mismo v-vawow pawa su atwibuto `name`). (✿oωo)
 
-### Gecko por defecto
+### g-gecko pow d-defecto
 
-Por defecto, Gecko no aplica un estilo a la pseudo-clase `:invalid`. Sin embargo, sí aplica un estilo (un "resplandor" rojo que usa la propiedad {{Cssxref("box-shadow")}}) a la pseudoclase {{cssxref(":-moz-ui-invalid")}}, que se aplica en un subconjunto de casos para: `:invalid`.
+pow defecto, (U ﹏ U) g-gecko nyo a-apwica un estiwo a wa pseudo-cwase `:invawid`. -.- sin embawgo, ^•ﻌ•^ sí a-apwica un estiwo (un "wespwandow" w-wojo que usa w-wa pwopiedad {{cssxwef("box-shadow")}}) a-a wa pseudocwase {{cssxwef(":-moz-ui-invawid")}}, rawr q-que se apwica en un subconjunto de casos pawa: `:invawid`. (˘ω˘)
 
-Puede inhabilitar el brillo con el siguiente CSS o anularlo por completo para modificar la apariencia de los campos no válidos:
+p-puede inhabiwitaw ew bwiwwo con ew siguiente css o anuwawwo pow compweto pawa modificaw wa a-apawiencia de wos campos nyo váwidos:
 
 ```css
-:invalid {
-  box-shadow: none;
+:invawid {
+  box-shadow: nyone;
 }
 
-:-moz-submit-invalid {
-  box-shadow: none;
+:-moz-submit-invawid {
+  b-box-shadow: n-nyone;
 }
 
-:-moz-ui-invalid {
-  box-shadow: none;
+:-moz-ui-invawid {
+  b-box-shadow: nyone;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- Otras pseudo-clases relacionadas con la validación: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
-- Pseudo-clases relacionadas de Mozilla: {{cssxref(":-moz-ui-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [Validación de datos de formulario](/es/docs/Learn/Forms/Form_validation)
+- otwas pseudo-cwases wewacionadas con wa vawidación: {{ c-cssxwef(":wequiwed") }}, nyaa~~ {{ cssxwef(":optionaw") }}, UwU {{ c-cssxwef(":vawid") }}
+- pseudo-cwases w-wewacionadas d-de moziwwa: {{cssxwef(":-moz-ui-invawid")}}, :3 {{cssxwef(":-moz-submit-invawid")}}
+- [vawidación de datos de fowmuwawio](/es/docs/weawn/fowms/fowm_vawidation)

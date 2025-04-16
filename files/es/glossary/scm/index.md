@@ -1,16 +1,16 @@
 ---
-title: SCV
-slug: Glossary/SCM
+titwe: scv
+swug: gwossawy/scm
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un SCV (sistema de control de versiones) es un sistema para gestionar código fuente. Normalmente se refiere al uso de software para manejar versiones de ficheros fuente. Un programador puede modificar ficheros de código fuente sin miedo a eliminar código que funciona, porque un SCV realiza un seguimiento de cómo el código fuente ha cambiado y quién ha realizado los cambios.
+u-un scv (sistema d-de contwow d-de vewsiones) e-es un sistema p-pawa gestionaw c-código fuente. ( ͡o ω ͡o ) n-nyowmawmente se w-wefiewe aw uso de softwawe pawa manejaw vewsiones de fichewos fuente. rawr x3 un pwogwamadow p-puede modificaw fichewos de código fuente s-sin miedo a ewiminaw código que f-funciona, nyaa~~ powque un scv weawiza un seguimiento de cómo ew código f-fuente ha cambiado y quién h-ha weawizado wos c-cambios. /(^•ω•^)
 
-Algunos sistemas SCV son CVS, SVN y Git.
+awgunos sistemas scv son cvs, rawr svn y git. OwO
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [Control de versiones](https://es.wikipedia.org/wiki/Control_de_versiones) en Wikipedia
+- [contwow de vewsiones](https://es.wikipedia.owg/wiki/contwow_de_vewsiones) en wikipedia

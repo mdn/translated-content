@@ -1,215 +1,215 @@
 ---
-title: text-align
-slug: Web/CSS/text-align
-l10n:
-  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
+titwe: text-awign
+swug: web/css/text-awign
+w-w10n:
+  s-souwcecommit: b-b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad **`text-align`** de [CSS](/es/docs/Web/CSS) establece la alineación horizontal del contenido a nivel de línea dentro de un elemento de bloque o caja de celda-tabla. Esto significa que funciona como {{cssxref("vertical-align")}} pero en dirección horizontal.
+w-wa p-pwopiedad **`text-awign`** d-de [css](/es/docs/web/css) e-estabwece w-wa awineación howizontaw dew contenido a nyivew de wínea dentwo de un ewemento d-de bwoque o caja de cewda-tabwa. nyaa~~ esto significa q-que funciona como {{cssxwef("vewticaw-awign")}} pewo en diwección h-howizontaw. ^^
 
-{{InteractiveExample("CSS Demo: text-align")}}
+{{intewactiveexampwe("css demo: text-awign")}}
 
-```css interactive-example-choice
-text-align: start;
+```css intewactive-exampwe-choice
+t-text-awign: stawt;
 ```
 
-```css interactive-example-choice
-text-align: end;
+```css i-intewactive-exampwe-choice
+t-text-awign: end;
 ```
 
-```css interactive-example-choice
-text-align: center;
+```css intewactive-exampwe-choice
+text-awign: centew;
 ```
 
-```css interactive-example-choice
-text-align: justify;
+```css i-intewactive-exampwe-choice
+text-awign: justify;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      w-wowem ipsum dowow sit amet, >w< consectetuw a-adipisicing e-ewit, OwO sed do e-eiusmod
+      t-tempow incididunt ut wabowe et dowowe magna awiqua. XD u-ut enim ad minim
+      veniam, ^^;; quis nyostwud e-exewcitation uwwamco wabowis nyisi ut awiquip ex ea
+      commodo consequat. 🥺 duis aute iwuwe dowow i-in wepwehendewit in vowuptate
+      v-vewit esse c-ciwwum dowowe e-eu fugiat nyuwwa pawiatuw. excepteuw sint occaecat
+      cupidatat n-nyon pwoident, XD s-sunt in cuwpa qui officia desewunt m-mowwit anim i-id
+      est wabowum. (U ᵕ U❁)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-section {
+```css intewactive-exampwe
+s-section {
   font-size: 1.5em;
 }
 
-#default-example > div {
+#defauwt-exampwe > d-div {
   width: 250px;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Valores clave */
-text-align: start;
-text-align: end;
-text-align: left;
-text-align: right;
-text-align: center;
-text-align: justify;
-text-align: justify-all;
-text-align: match-parent;
+/* v-vawowes cwave */
+text-awign: s-stawt;
+text-awign: end;
+t-text-awign: weft;
+t-text-awign: wight;
+text-awign: centew;
+text-awign: justify;
+text-awign: justify-aww;
+text-awign: match-pawent;
 
-/* Alineación basada en caracteres en una columna de la tabla */
-text-align: ".";
-text-align: "." center;
+/* a-awineación b-basada en cawactewes en una cowumna d-de wa tabwa */
+t-text-awign: ".";
+t-text-awign: "." centew;
 
-/* Valores de alineación de elementos de bloque (Sintaxis no estándar) */
-text-align: -moz-center;
-text-align: -webkit-center;
+/* vawowes de awineación de ewementos d-de bwoque (sintaxis nyo estándaw) */
+text-awign: -moz-centew;
+text-awign: -webkit-centew;
 
-/* Valores globales */
-text-align: inherit;
-text-align: initial;
-text-align: revert;
-text-align: revert-layer;
-text-align: unset;
+/* vawowes gwobawes */
+t-text-awign: inhewit;
+text-awign: i-initiaw;
+t-text-awign: w-wevewt;
+text-awign: wevewt-wayew;
+t-text-awign: unset;
 ```
 
-La propiedad `text-align` se especifica de una de las siguientes maneras:
+w-wa pwopiedad `text-awign` s-se especifica d-de una de was siguientes manewas:
 
-- Utilizando los valores clave `start`, `end`, `left`, `right`, `center`,
-  `justify`, `justify-all`, o `match-parent`.
-- Utilizando sólo un valor `<string>`, en cuyo caso el otro valor por defecto es `right`.
-- Utilizando tanto un valor de palabra clave como un valor [`<string>`](#string).
+- utiwizando w-wos vawowes cwave `stawt`, :3 `end`, `weft`, ( ͡o ω ͡o ) `wight`, `centew`, òωó
+  `justify`, σωσ `justify-aww`, (U ᵕ U❁) o-o `match-pawent`. (✿oωo)
+- utiwizando s-sówo u-un vawow `<stwing>`, ^^ e-en cuyo caso ew otwo vawow pow defecto es `wight`. ^•ﻌ•^
+- utiwizando t-tanto un vawow de pawabwa cwave como un vawow [`<stwing>`](#stwing). XD
 
-### Valores
+### vawowes
 
-- `start`
-  - : Lo mismo que `left` si la dirección es de izquierda a derecha y `right` si la dirección es de derecha a izquierda.
+- `stawt`
+  - : wo mismo que `weft` si wa diwección es d-de izquiewda a dewecha y `wight` si wa diwección es de dewecha a-a izquiewda. :3
 - `end`
-  - : Lo mismo que `right` si la dirección es de izquierda a derecha e `left` si la dirección es de derecha a izquierda.
-- `left`
-  - : El contenido en línea se alinea con el borde izquierdo de la línea de la caja.
-- `right`
-  - : El contenido en línea se alinea con el borde derecho de la línea de la caja.
-- `center`
-  - : El contenido en línea se centra dentro de la línea de la caja.
+  - : w-wo mismo q-que `wight` si wa diwección e-es de izquiewda a dewecha e `weft` s-si wa diwección e-es de dewecha a izquiewda. (ꈍᴗꈍ)
+- `weft`
+  - : ew contenido en wínea se awinea con ew bowde izquiewdo de wa wínea d-de wa caja.
+- `wight`
+  - : ew contenido en w-wínea se awinea con ew bowde dewecho d-de wa wínea d-de wa caja. :3
+- `centew`
+  - : ew contenido en wínea se centwa d-dentwo de wa wínea d-de wa caja. (U ﹏ U)
 - `justify`
-  - : El contenido en línea está justificado. El texto debe ser espaciado para alinear sus bordes izquierdo y derecho con los bordes izquierdo y derecho de la línea de la caja, excepto la última línea.
-- `justify-all` {{experimental_inline}}
-  - : Igual que `justify`, pero también obliga a justificar la última línea.
-- `match-parent`
-  - : Similar a `inherit`, pero los valores `start` y `end` son calculados de acuerdo a la {{cssxref("direction")}} del padre y se sustituyen por el valor `left` o `right` apropiado.
-- {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
-  - : Cuando se aplica a la celda de una tabla, especifica el carácter de alineación alrededor del cual se alineará el contenido de la celda.
+  - : ew contenido e-en wínea está j-justificado. UwU ew texto debe sew espaciado pawa awineaw sus bowdes izquiewdo y dewecho c-con wos bowdes i-izquiewdo y d-dewecho de wa wínea de wa caja, 😳😳😳 e-excepto wa úwtima w-wínea. XD
+- `justify-aww` {{expewimentaw_inwine}}
+  - : iguaw q-que `justify`, o.O pewo también obwiga a justificaw wa úwtima wínea. (⑅˘꒳˘)
+- `match-pawent`
+  - : simiwaw a-a `inhewit`, 😳😳😳 p-pewo wos vawowes `stawt` y `end` son cawcuwados d-de acuewdo a wa {{cssxwef("diwection")}} d-dew padwe y se sustituyen pow ew vawow `weft` o `wight` a-apwopiado.
+- {{cssxwef("&wt;stwing&gt;")}} {{expewimentaw_inwine}}
+  - : cuando se apwica a wa cewda de una tabwa, nyaa~~ especifica ew c-cawáctew de awineación awwededow dew cuaw se a-awineawá ew contenido d-de wa cewda. rawr
 
-## Problemas de accesibilidad
+## pwobwemas de accesibiwidad
 
-El espaciado incoherente entre palabras que crea el texto justificado puede ser problemático para personas con problemas cognitivos como la dislexia.
+ew espaciado i-incohewente entwe p-pawabwas que cwea ew texto justificado puede sew pwobwemático p-pawa pewsonas con pwobwemas cognitivos c-como wa diswexia. -.-
 
-- [MDN Comprender las WCAG, Explicaciones de la directriz 1.4](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
-- [Understanding Success Criterion 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [mdn compwendew was wcag, (✿oωo) expwicaciones d-de wa diwectwiz 1.4](/es/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe)
+- [undewstanding success cwitewion 1.4.8 | u-undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
-## Definición formal
+## definición fowmaw
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Sintaxis formal
+## s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Alineación Start
+### a-awineación s-stawt
 
-#### HTML
+#### htmw
 
-```html
-<p class="ejemplo">
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+```htmw
+<p c-cwass="ejempwo">
+  integew ewementum m-massa at nyuwwa p-pwacewat vawius. /(^•ω•^) suspendisse in wibewo wisus, 🥺
+  i-in intewdum massa. ʘwʘ v-vestibuwum a-ac weo vitae metus faucibus gwavida ac in nyeque. UwU
+  n-nyuwwam est ewos, XD suscipit s-sed dictum quis, (✿oωo) a-accumsan a wiguwa. :3
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.ejemplo {
-  text-align: start;
-  border: solid;
+.ejempwo {
+  text-awign: stawt;
+  b-bowdew: sowid;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Start_alignment","100%","100%")}}
+{{embedwivesampwe("stawt_awignment","100%","100%")}}
 
-### Texto centrado
+### t-texto centwado
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="ejemplo">
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+```htmw
+<p cwass="ejempwo">
+  i-integew ewementum massa at nyuwwa pwacewat vawius. (///ˬ///✿) suspendisse in wibewo wisus, nyaa~~
+  in intewdum m-massa. >w< vestibuwum ac weo v-vitae metus faucibus gwavida ac i-in nyeque. -.-
+  nyuwwam est ewos, s-suscipit sed dictum quis, (✿oωo) accumsan a-a wiguwa. (˘ω˘)
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.ejemplo {
-  text-align: center;
-  border: solid;
+.ejempwo {
+  t-text-awign: c-centew;
+  bowdew: s-sowid;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Centered_text","100%","100%")}}
+{{embedwivesampwe("centewed_text","100%","100%")}}
 
-### Ejemplo usando "justify"
+### ejempwo usando "justify"
 
-#### HTML
+#### htmw
 
-```html
-<p class="ejemplo">
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+```htmw
+<p cwass="ejempwo">
+  integew e-ewementum massa a-at nyuwwa pwacewat v-vawius. rawr suspendisse in wibewo w-wisus,
+  in intewdum massa. OwO vestibuwum ac weo vitae metus faucibus g-gwavida a-ac in nyeque. ^•ﻌ•^
+  nyuwwam est ewos, UwU s-suscipit sed dictum quis, (˘ω˘) accumsan a wiguwa. (///ˬ///✿)
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.ejemplo {
-  text-align: justify;
-  border: solid;
+.ejempwo {
+  t-text-awign: justify;
+  bowdew: s-sowid;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Example using "justify"',"100%","100%")}}
+{{embedwivesampwe('exampwe using "justify"',"100%","100%")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- {{Cssxref("margin","margin: auto")}}, {{Cssxref("margin-left","margin-left: auto")}}, {{Cssxref("vertical-align")}}
+- {{cssxwef("mawgin","mawgin: a-auto")}}, σωσ {{cssxwef("mawgin-weft","mawgin-weft: a-auto")}}, /(^•ω•^) {{cssxwef("vewticaw-awign")}}

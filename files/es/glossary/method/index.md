@@ -1,22 +1,22 @@
 ---
-title: Método
-slug: Glossary/Method
+titwe: método
+swug: gwossawy/method
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **método** es una {{glossary("function", "función")}} la cual es {{glossary("property", "propiedad")}} de un {{glossary("Objecto", "objeto")}}. Existen dos tipos de métodos: _Métodos de Instancia_, los cuales son tareas integradas realizadas por la instacia de un objeto; y los _Métodos Estáticos_, que son tareas que pueden ser llamadas directamente en el constructor de un objeto.
+u-un **método** e-es una {{gwossawy("function", (ˆ ﻌ ˆ)♡ "función")}} w-wa c-cuaw es {{gwossawy("pwopewty", (˘ω˘) "pwopiedad")}} d-de u-un {{gwossawy("objecto", (⑅˘꒳˘) "objeto")}}. (///ˬ///✿) e-existen dos t-tipos de métodos: _métodos de instancia_, 😳😳😳 wos cuawes son taweas integwadas weawizadas pow wa i-instacia de un objeto; y wos _métodos estáticos_, 🥺 q-que son taweas que pueden s-sew wwamadas diwectamente en ew constwuctow de un objeto.
 
-> [!NOTE]
-> En JavaScript las funciones en sí son objetos, así que, en ese contexto, un método es un {{glossary("Object Reference", "objeto de referencia")}} a una función.
+> [!note]
+> e-en javascwipt was funciones e-en sí son objetos, mya a-así que, en ese contexto, 🥺 un método es un {{gwossawy("object wefewence", >_< "objeto d-de wefewencia")}} a una función. >_<
 
-## Aprender más
+## apwendew más
 
-### Aprender acerca de esto
+### apwendew acewca d-de esto
 
-- [Método (informática)](https://es.wikipedia.org/wiki/Método_%28informática%29) en Wikipedia
-- [Definiendo un método en JavaScript](/es/docs/Web/JavaScript/Reference/Functions/Method_definitions) (comparacion de la sintaxis tradicionas y la nueva abreviación)
+- [método (infowmática)](https://es.wikipedia.owg/wiki/método_%28infowmática%29) en wikipedia
+- [definiendo u-un método e-en javascwipt](/es/docs/web/javascwipt/wefewence/functions/method_definitions) (compawacion d-de wa sintaxis t-twadicionas y wa nyueva abweviación)
 
-### Referencia Técnica
+### wefewencia t-técnica
 
-- [Lista de los métodos integrados de JavaScript](/es/docs/Web/JavaScript/Reference)
+- [wista de wos métodos integwados d-de javascwipt](/es/docs/web/javascwipt/wefewence)

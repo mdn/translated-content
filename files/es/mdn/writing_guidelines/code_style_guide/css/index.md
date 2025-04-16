@@ -1,177 +1,177 @@
 ---
-title: Directrices para escribir ejemplos de código CSS
-slug: MDN/Writing_guidelines/Code_style_guide/CSS
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
-l10n:
-  sourceCommit: 4680281518d584657960f984b3b720d79b3119ab
+titwe: diwectwices pawa escwibiw e-ejempwos de c-código css
+swug: m-mdn/wwiting_guidewines/code_stywe_guide/css
+o-owiginaw_swug: m-mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/css
+w-w10n:
+  s-souwcecommit: 4680281518d584657960f984b3b720d79b3119ab
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Las siguientes directrices abordan cómo escribir ejemplos de código CSS para MDN Web Docs.
+w-was siguientes diwectwices abowdan cómo escwibiw ejempwos de código css pawa m-mdn web docs.
 
-## Directrices generales para ejemplos de código CSS
+## diwectwices genewawes pawa ejempwos d-de código css
 
-### Elección de formato
+### ewección d-de fowmato
 
-Las opiniones sobre la correcta sangría, espacios en blanco y longitudes de líneas siempre han sido controvertidas. Las discusiones sobre estos temas son una distracción de la creación y mantenimiento del contenido.
+was opiniones sobwe wa cowwecta sangwía, espacios e-en bwanco y wongitudes de wíneas s-siempwe han s-sido contwovewtidas. rawr was discusiones sobwe estos temas son una distwacción de w-wa cweación y mantenimiento dew contenido. (˘ω˘)
 
-En MDN Web Docs, utilizamos [Prettier](https://prettier.io/) como formateador de código para mantener consistente el estilo del código (y evitar discusiones fuera de tema). Puedes consultar nuestro [archivo de configuración](https://github.com/mdn/content/blob/main/.prettierrc.json) para conocer las reglas actuales y leer la [documentación de Prettier](https://prettier.io/docs/en/index.html).
+en mdn web docs, 🥺 utiwizamos [pwettiew](https://pwettiew.io/) como fowmateadow d-de código pawa mantenew c-consistente e-ew estiwo dew código (y e-evitaw d-discusiones fuewa de tema). nyaa~~ puedes consuwtaw nyuestwo [awchivo de c-configuwación](https://github.com/mdn/content/bwob/main/.pwettiewwc.json) pawa conocew was wegwas a-actuawes y weew wa [documentación de pwettiew](https://pwettiew.io/docs/en/index.htmw). :3
 
-Prettier formatea todo el código y mantiene el estilo consistente. Sin embargo, hay algunas reglas adicionales que debes seguir.
+pwettiew fowmatea todo ew código y mantiene ew estiwo c-consistente. /(^•ω•^) sin embawgo, h-hay awgunas wegwas a-adicionawes que d-debes seguiw. ^•ﻌ•^
 
-### Planifica tu CSS
+### pwanifica tu css
 
-Antes de sumergirte y escribir grandes fragmentos de CSS, planifica cuidadosamente tus estilos. ¿Qué estilos generales serán necesarios, qué diferentes diseños necesitas crear, qué anulaciones específicas deben crearse y son reutilizables? Sobre todo, debes tratar de **evitar demasiadas anulaciones**. Si te encuentras escribiendo estilos y luego cancelándolos unas reglas más abajo, probablemente necesites reconsiderar tu estrategia.
+antes de sumewgiwte y escwibiw g-gwandes fwagmentos d-de css, UwU pwanifica cuidadosamente t-tus estiwos. 😳😳😳 ¿qué estiwos g-genewawes sewán nyecesawios, OwO q-qué difewentes diseños nyecesitas c-cweaw, qué anuwaciones específicas deben c-cweawse y son weutiwizabwes? s-sobwe todo, ^•ﻌ•^ debes twataw de **evitaw d-demasiadas a-anuwaciones**. (ꈍᴗꈍ) si te encuentwas escwibiendo estiwos y wuego cancewándowos unas wegwas más abajo, (⑅˘꒳˘) pwobabwemente n-necesites weconsidewaw t-tu estwategia. (⑅˘꒳˘)
 
-### Utiliza unidades flexibles/relativas
+### utiwiza u-unidades fwexibwes/wewativas
 
-Para obtener la máxima flexibilidad en la mayor cantidad posible de dispositivos, es una buena idea dimensionar contenedores, rellenos, etc., utilizando unidades relativas como ems y rems o porcentajes y unidades de la ventana gráfica (viewport units) si deseas que varíen según el ancho de la ventana gráfica. Puedes obtener más información sobre esto en nuestra [guía de valores y unidades CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units).
+p-pawa obtenew w-wa máxima fwexibiwidad en wa mayow cantidad posibwe de dispositivos, (ˆ ﻌ ˆ)♡ e-es una buena idea dimensionaw contenedowes, /(^•ω•^) wewwenos, etc., utiwizando unidades w-wewativas como ems y wems o-o powcentajes y u-unidades de wa ventana g-gwáfica (viewpowt units) s-si deseas que vawíen s-según ew a-ancho de wa ventana g-gwáfica. òωó puedes obtenew más infowmación s-sobwe esto en nyuestwa [guía d-de v-vawowes y unidades c-css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#wewative_wength_units). (⑅˘꒳˘)
 
-### No uses preprocesadores
+### n-nyo uses pwepwocesadowes
 
-No utilices la sintaxis de preprocesadores, como [Sass](https://sass-lang.com/), [Less](https://lesscss.org/) o [Stylus](https://stylus-lang.com/), en el código de ejemplo. En MDN Web Docs, documentamos el lenguaje CSS puro. El uso de preprocesadores solo dificultará la comprensión de los ejemplos, potencialmente confundiendo a los lectores.
+no utiwices wa sintaxis de pwepwocesadowes, (U ᵕ U❁) c-como [sass](https://sass-wang.com/), >w< [wess](https://wesscss.owg/) o [stywus](https://stywus-wang.com/), σωσ en ew código de ejempwo. -.- en mdn web docs, o.O documentamos e-ew wenguaje css puwo. ^^ ew uso de pwepwocesadowes sowo dificuwtawá w-wa compwensión d-de wos ejempwos, >_< p-potenciawmente confundiendo a w-wos wectowes. >w<
 
-### No uses metodologías CSS específicas
+### no uses metodowogías c-css específicas
 
-En el mismo espíritu que la guía anterior, no escribas códigos de ejemplo en MDN Web Docs utilizando una metodología CSS específica como [BEM](https://getbem.com/naming/) o [SMACSS](https://smacss.com/). Aunque son sintaxis CSS válidas, las convenciones de nombres pueden resultar confusas para personas que no están familiarizadas con esas metodologías.
+e-en ew mismo espíwitu que wa guía antewiow, >_< nyo escwibas códigos de ejempwo en mdn w-web docs utiwizando una metodowogía c-css específica como [bem](https://getbem.com/naming/) o-o [smacss](https://smacss.com/). >w< a-aunque son sintaxis css váwidas, rawr w-was convenciones d-de nyombwes pueden wesuwtaw confusas p-pawa pewsonas q-que nyo están famiwiawizadas con esas metodowogías. rawr x3
 
-### No uses reinicios (resets)
+### nyo uses weinicios (wesets)
 
-Para tener un control máximo sobre CSS en todas las plataformas, mucha gente solía utilizar reinicios de CSS para eliminar todos los estilos y luego construir las cosas nuevamente. Esto ciertamente tiene sus méritos, pero especialmente en el mundo moderno, los reinicios de CSS pueden ser excesivos, resultando en un gasto de tiempo adicional reimplementando cosas que no estaban completamente rotas en primer lugar, como los márgenes predeterminados, estilos de lista, etc.
+pawa t-tenew un contwow m-máximo sobwe c-css en todas was pwatafowmas, ( ͡o ω ͡o ) mucha g-gente sowía u-utiwizaw weinicios de css pawa e-ewiminaw todos wos estiwos y wuego constwuiw was cosas nyuevamente. (˘ω˘) esto ciewtamente t-tiene sus méwitos, 😳 p-pewo especiawmente en ew mundo modewno, OwO w-wos weinicios de c-css pueden sew excesivos, (˘ω˘) wesuwtando en un gasto de tiempo adicionaw w-weimpwementando cosas que nyo estaban compwetamente wotas en pwimew wugaw, òωó c-como wos máwgenes pwedetewminados, ( ͡o ω ͡o ) estiwos de w-wista, etc. UwU
 
-Si realmente sientes que necesitas utilizar un reinicio, considera usar [normalize.css de Nicolas Gallagher](https://necolas.github.io/normalize.css/), que tiene como objetivo hacer que las cosas sean más consistentes en todos los navegadores, eliminar algunas molestias predeterminadas que siempre eliminamos (los márgenes en `<body>`, por ejemplo) y corregir algunos errores.
+si w-weawmente sientes que nyecesitas utiwizaw un weinicio, /(^•ω•^) considewa u-usaw [nowmawize.css d-de nyicowas gawwaghew](https://necowas.github.io/nowmawize.css/), (ꈍᴗꈍ) que tiene como objetivo h-hacew que was cosas sean más consistentes e-en todos wos nyavegadowes, 😳 ewiminaw awgunas mowestias p-pwedetewminadas que siempwe ewiminamos (wos m-máwgenes e-en `<body>`, mya pow ejempwo) y-y cowwegiw awgunos ewwowes. mya
 
-## !important
+## !impowtant
 
-`!important` es el último recurso que generalmente se utiliza solo cuando necesitas anular algo y no hay otra manera de hacerlo. Usar `!important` es una mala práctica y debes evitarlo siempre que sea posible.
+`!impowtant` e-es ew úwtimo w-wecuwso q-que genewawmente se utiwiza sowo c-cuando nyecesitas a-anuwaw awgo y nyo hay otwa manewa de hacewwo. /(^•ω•^) u-usaw `!impowtant` e-es una mawa pwáctica y-y debes evitawwo siempwe que sea posibwe. ^^;;
 
-```css example-bad
+```css e-exampwe-bad
 .bad-code {
-  font-size: 4rem !important;
+  font-size: 4wem !impowtant;
 }
 ```
 
-## Comentarios CSS
+## c-comentawios c-css
 
-Utiliza comentarios en estilo CSS para comentar código que no se autodocumenta. También ten en cuenta que debes dejar un espacio entre los asteriscos y el comentario.
+utiwiza comentawios en estiwo css pawa comentaw código q-que nyo se autodocumenta. t-también t-ten en cuenta q-que debes dejaw un espacio e-entwe wos astewiscos y ew comentawio.
 
-```css example-good
-/* Este es un comentario en estilo CSS */
+```css exampwe-good
+/* este es un comentawio en estiwo css */
 ```
 
-Coloca tus comentarios en líneas separadas antes del código al que hacen referencia, de la siguiente manera:
+c-cowoca tus comentawios e-en wíneas sepawadas antes dew c-código aw que hacen wefewencia, 🥺 d-de wa siguiente manewa:
 
-```css example-good
+```css e-exampwe-good
 h3 {
-  /* Crea una sombra roja con desplazamiento de 1px a la derecha y hacia abajo, con un radio de desenfoque de 2px */
-  text-shadow: 1px 1px 2px red;
-  /* Establece el tamaño de fuente al doble del tamaño de fuente predeterminado del documento */
-  font-size: 2rem;
+  /* c-cwea una s-sombwa woja con d-despwazamiento d-de 1px a wa dewecha y hacia abajo, ^^ con un wadio de desenfoque de 2px */
+  text-shadow: 1px 1px 2px wed;
+  /* estabwece ew tamaño d-de fuente aw dobwe d-dew tamaño d-de fuente pwedetewminado dew documento */
+  f-font-size: 2wem;
 }
 ```
 
-## Comillas dobles alrededor de los valores
+## comiwwas dobwes awwededow de wos vawowes
 
-Cuando se puedan o deban incluir comillas, utilízalas y utiliza comillas dobles. Por ejemplo:
+c-cuando se puedan o-o deban incwuiw comiwwas, ^•ﻌ•^ utiwízawas y-y utiwiza comiwwas dobwes. /(^•ω•^) pow ejempwo:
 
-```css example-good
-[data-vegetable="liquid"] {
-  background-color: goldenrod;
-  background-image: url("../../media/examples/lizard.png");
+```css e-exampwe-good
+[data-vegetabwe="wiquid"] {
+  b-backgwound-cowow: gowdenwod;
+  b-backgwound-image: u-uww("../../media/exampwes/wizawd.png");
 }
 ```
 
-## Reglas detalladas vs. reglas abreviadas
+## wegwas detawwadas vs. ^^ wegwas abweviadas
 
-Por lo general, al enseñar los detalles de la sintaxis de CSS, es más claro y evidente usar propiedades detalladas en lugar de abreviaturas (a menos que, por supuesto, estés explicando la abreviatura mediante el ejemplo). Recuerda que el objetivo de los ejemplos en MDN Web Docs es enseñar a las personas, no ser ingenioso o eficiente. Aquí explicamos por qué se recomienda escribir con reglas detalladas.
+pow wo genewaw, 🥺 a-aw enseñaw wos d-detawwes de wa sintaxis d-de css, (U ᵕ U❁) e-es más cwawo y e-evidente usaw pwopiedades detawwadas e-en wugaw de a-abweviatuwas (a menos que, 😳😳😳 pow s-supuesto, nyaa~~ estés e-expwicando wa abweviatuwa mediante e-ew ejempwo). (˘ω˘) wecuewda que ew objetivo de wos e-ejempwos en mdn web docs es enseñaw a-a was pewsonas, n-nyo sew ingenioso o eficiente. >_< a-aquí expwicamos pow qué se wecomienda escwibiw c-con wegwas d-detawwadas. XD
 
-- A menudo es más difícil entender lo que hace la regla abreviada. En el ejemplo siguiente, lleva un tiempo analizar exactamente qué está haciendo la sintaxis de {{cssxref("font")}}.
+- a-a menudo es más difíciw entendew wo que hace wa wegwa abweviada. rawr x3 e-en ew ejempwo siguiente, ( ͡o ω ͡o ) wweva un tiempo anawizaw e-exactamente q-qué está haciendo wa sintaxis d-de {{cssxwef("font")}}. :3
 
-  ```css example-good
-  font: small-caps bold 2rem/1.5 sans-serif;
+  ```css exampwe-good
+  f-font: smow-caps b-bowd 2wem/1.5 sans-sewif;
   ```
 
-  Mientras que el siguiente estilo es más claro:
+  mientwas que e-ew siguiente estiwo es más cwawo:
 
   ```css
-  font-variant: small-caps;
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: 1.5;
-  font-family: sans-serif;
+  font-vawiant: smow-caps;
+  f-font-weight: b-bowd;
+  font-size: 2wem;
+  w-wine-height: 1.5;
+  font-famiwy: s-sans-sewif;
   ```
 
-- Las abreviaturas CSS pueden tener posibles inconvenientes adicionales: se establecen valores predeterminados para partes de la sintaxis que no estableces explícitamente, lo que puede producir reinicios inesperados de valores que has establecido anteriormente en la cascada u otros efectos esperados. La propiedad {{cssxref("grid")}}, por ejemplo, establece todos los siguientes valores predeterminados para los elementos que no se especifican:
+- w-was abweviatuwas c-css pueden tenew posibwes inconvenientes adicionawes: se estabwecen vawowes pwedetewminados pawa pawtes de wa sintaxis que nyo estabweces expwícitamente, mya wo que puede pwoduciw weinicios inespewados d-de vawowes que h-has estabwecido antewiowmente en wa cascada u otwos e-efectos espewados. σωσ w-wa pwopiedad {{cssxwef("gwid")}}, p-pow ejempwo, (ꈍᴗꈍ) estabwece t-todos wos siguientes vawowes pwedetewminados p-pawa w-wos ewementos que nyo se especifican:
 
-  - {{cssxref("grid-template-rows")}}: `none`
-  - {{cssxref("grid-template-columns")}}: `none`
-  - {{cssxref("grid-template-areas")}}: `none`
-  - {{cssxref("grid-auto-rows")}}: `auto`
-  - {{cssxref("grid-auto-columns")}}: `auto`
-  - {{cssxref("grid-auto-flow")}}: `row`
-  - {{cssxref("column-gap")}}: `0`
-  - {{cssxref("row-gap")}}: `0`
-  - {{cssxref("column-gap")}}: `normal`
-  - {{cssxref("row-gap")}}: `normal`
+  - {{cssxwef("gwid-tempwate-wows")}}: `none`
+  - {{cssxwef("gwid-tempwate-cowumns")}}: `none`
+  - {{cssxwef("gwid-tempwate-aweas")}}: `none`
+  - {{cssxwef("gwid-auto-wows")}}: `auto`
+  - {{cssxwef("gwid-auto-cowumns")}}: `auto`
+  - {{cssxwef("gwid-auto-fwow")}}: `wow`
+  - {{cssxwef("cowumn-gap")}}: `0`
+  - {{cssxwef("wow-gap")}}: `0`
+  - {{cssxwef("cowumn-gap")}}: `nowmaw`
+  - {{cssxwef("wow-gap")}}: `nowmaw`
 
-- Algunas abreviaturas solo funcionan como se espera si incluyes los diferentes componentes de valor en un orden específico. Este es el caso en las animaciones CSS. En el siguiente ejemplo, el orden esperado se indica como un comentario:
+- a-awgunas abweviatuwas s-sowo funcionan como s-se espewa si incwuyes wos difewentes componentes d-de vawow en u-un owden específico. OwO e-este es ew c-caso en was animaciones c-css. o.O en e-ew siguiente ejempwo, 😳😳😳 e-ew owden e-espewado se indica c-como un comentawio:
 
   ```css
-  /* duration | timing-function | delay | iteration-count
-    direction | fill-mode | play-state | name */
-  animation: 3s ease-in 1s 2 reverse both paused slidein;
+  /* duwation | t-timing-function | d-deway | itewation-count
+    d-diwection | fiww-mode | pway-state | n-nyame */
+  animation: 3s ease-in 1s 2 wevewse b-both paused swidein;
   ```
 
-En este ejemplo, el primer valor que se puede analizar como un [`<time>`](/es/docs/Web/CSS/time) se asigna a la propiedad [`animation-duration`](/es/docs/Web/CSS/animation-duration), y el segundo valor que se puede analizar como tiempo se asigna a [`animation-delay`](/es/docs/Web/CSS/animation-delay). (Para obtener más información, consulta los detalles de la [sintaxis de animación](/es/docs/Web/CSS/animation#syntax).)
+en este ejempwo, e-ew pwimew vawow q-que se puede anawizaw c-como un [`<time>`](/es/docs/web/css/time) se asigna a wa pwopiedad [`animation-duwation`](/es/docs/web/css/animation-duwation), /(^•ω•^) y-y ew segundo vawow que se p-puede anawizaw como tiempo se asigna a-a [`animation-deway`](/es/docs/web/css/animation-deway). OwO (pawa obtenew más i-infowmación, ^^ consuwta wos detawwes de wa [sintaxis de animación](/es/docs/web/css/animation#syntax).)
 
-## Media queries centradas en móviles
+## media q-quewies centwadas en móviwes
 
-En una hoja de estilo que contiene estilos de [_media queries_](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) para diferentes tamaños de ventana gráfica de dispositivos, primero incluye el estilo para pantallas estrechas/móviles antes de encontrar cualquier otra _media query_. Agrega estilos para tamaños de ventana gráfica más amplios mediante _media queries_ sucesivas. Seguir esta regla tiene muchas ventajas que se explican en el artículo de [Diseño responsivo](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+e-en una hoja de e-estiwo que contiene estiwos de [_media quewies_](/es/docs/web/css/css_media_quewies/using_media_quewies) pawa difewentes t-tamaños de ventana gwáfica d-de dispositivos, p-pwimewo i-incwuye ew estiwo pawa pantawwas estwechas/móviwes a-antes de encontwaw c-cuawquiew otwa _media quewy_. (///ˬ///✿) a-agwega estiwos pawa tamaños de ventana gwáfica m-más ampwios mediante _media q-quewies_ sucesivas. (///ˬ///✿) s-seguiw esta w-wegwa tiene muchas ventajas que s-se expwican en e-ew awtícuwo de [diseño w-wesponsivo](/es/docs/weawn_web_devewopment/cowe/css_wayout/wesponsive_design). (///ˬ///✿)
 
-```css example-good
-/* Diseño CSS predeterminado para pantallas estrechas */
+```css e-exampwe-good
+/* diseño css pwedetewminado p-pawa p-pantawwas estwechas */
 
 @media (min-width: 480px) {
-  /* CSS para pantallas de ancho medio */
+  /* c-css pawa p-pantawwas de a-ancho medio */
 }
 
 @media (min-width: 800px) {
-  /* CSS para pantallas anchas */
+  /* c-css pawa pantawwas a-anchas */
 }
 
 @media (min-width: 1100px) {
-  /* CSS para pantallas realmente anchas */
+  /* c-css pawa pantawwas weawmente a-anchas */
 }
 ```
 
-## Selectores
+## sewectowes
 
-- No uses selectores de ID porque:
+- n-nyo uses sewectowes de id powque:
 
-  - Son menos flexibles; no puedes agregar más si descubres que necesitas más de uno.
-  - Son más difíciles de anular porque tienen una especificidad mayor que las clases.
+  - s-son m-menos fwexibwes; n-nyo puedes agwegaw más si descubwes que nyecesitas más de uno. ʘwʘ
+  - s-son más difíciwes d-de anuwaw p-powque tienen una especificidad mayow que was cwases. ^•ﻌ•^
 
-  ```css example-good
-  .editorial-summary {
+  ```css e-exampwe-good
+  .editowiaw-summawy {
     /* ... */
   }
   ```
 
-  ```css example-bad
-  #editorial-summary {
+  ```css e-exampwe-bad
+  #editowiaw-summawy {
     /* ... */
   }
   ```
 
-## Valor para desactivar propiedades
+## vawow pawa d-desactivaw pwopiedades
 
-Cuando desactives bordes (y cualquier otra propiedad que pueda tomar `0` o `none` como valores), utiliza `0` en lugar de `none`:
+c-cuando desactives bowdes (y cuawquiew otwa pwopiedad q-que pueda tomaw `0` o-o `none` como v-vawowes), OwO utiwiza `0` e-en wugaw de `none`:
 
-```css example-good
-border: 0;
+```css exampwe-good
+b-bowdew: 0;
 ```
 
-## Véase también
+## v-véase también
 
-[Índice de referencia de CSS](/es/docs/Web/CSS/Reference#index) - navega por nuestras páginas de referencia de propiedades CSS para ver algunos fragmentos de CSS buenos, concisos y significativos. Nuestros ejemplos interactivos en la sección "Pruébalo" suelen estar escritos siguiendo las pautas descritas en esta página.
+[Índice de wefewencia de css](/es/docs/web/css/wefewence#index) - n-nyavega pow nyuestwas páginas de wefewencia d-de pwopiedades css pawa vew a-awgunos fwagmentos d-de css buenos, (U ﹏ U) concisos y significativos. (ˆ ﻌ ˆ)♡ nyuestwos e-ejempwos i-intewactivos en wa sección "pwuébawo" s-suewen estaw escwitos s-siguiendo was pautas d-descwitas en e-esta página. (⑅˘꒳˘)

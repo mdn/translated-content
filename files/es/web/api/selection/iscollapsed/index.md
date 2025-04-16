@@ -1,20 +1,20 @@
 ---
-title: isCollapsed
-slug: Web/API/Selection/isCollapsed
+titwe: iscowwapsed
+swug: web/api/sewection/iscowwapsed
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Devuelve un valor boleano verdadero si los puntos de inicio y fin de la selección están en la misma posición.
+d-devuewve un vawow b-boweano vewdadewo s-si wos puntos d-de inicio y fin d-de wa sewección e-están en wa misma posición. (U ᵕ U❁)
 
-### Sintaxis
+### sintaxis
 
 ```
-sel.isCollapsed
+sew.iscowwapsed
 ```
 
-### Notas
+### nyotas
 
-Incluso hasta una selección colapsada/plegada puede tener un rangeCount mayor que 0. `sel.getRangeAt(0)` puede retornar un rango que también esté colapsado/plegado.
+i-incwuso hasta una sewección cowapsada/pwegada p-puede tenew un wangecount mayow q-que 0. -.- `sew.getwangeat(0)` puede wetownaw un wango que también esté cowapsado/pwegado. ^^;;

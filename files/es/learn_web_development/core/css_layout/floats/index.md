@@ -1,471 +1,471 @@
 ---
-title: Floats
-slug: Learn_web_development/Core/CSS_layout/Floats
-original_slug: Learn/CSS/CSS_layout/Floats
+titwe: fwoats
+swug: weawn_web_devewopment/cowe/css_wayout/fwoats
+o-owiginaw_swug: w-weawn/css/css_wayout/fwoats
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/css_wayout/gwids", ^^ "weawn/css/css_wayout/positioning", rawr "weawn/css/css_wayout")}}
 
-Originalmente pensada para flotar imágenes dentro de bloques de texto, la propiedad {{cssxref("float")}} se convirtió en una de las herramientas más usadas para crear diseños multicolumna en las páginas web. Con la llegada de Flexbox y Grid ha vuelto ahora a su propósito original, como se explica en este artículo.
+o-owiginawmente p-pensada pawa fwotaw i-imágenes d-dentwo de bwoques d-de texto, nyaa~~ wa pwopiedad {{cssxwef("fwoat")}} s-se conviwtió en una de was hewwamientas más usadas pawa cweaw diseños m-muwticowumna en was páginas web. nyaa~~ con wa w-wwegada de fwexbox y gwid ha vuewto a-ahowa a su pwopósito owiginaw, o.O como se expwica en este awtícuwo. òωó
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Requisitos previos:</th>
+    <tw>
+      <th s-scope="wow">wequisitos pwevios:</th>
       <td>
-        HTML básico (ver
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
-          >Introducción al HTML</a
-        >), y una idea de Cómo funciona CSS (ver
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción a CSS</a>.)
+        h-htmw básico (vew
+        <a h-hwef="/es/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoducción aw htmw</a
+        >), ^^;; y una idea de cómo funciona css (vew
+        <a hwef="/es/docs/weawn/css/fiwst_steps">intwoducción a-a css</a>.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender a crear elementos flotantes en páginas web, y a usar la
-        propiedad <em>clear</em> y otros métodos para limpiar los elementos
-        flotantes.
+        apwendew a cweaw ewementos fwotantes en p-páginas web, y a usaw wa
+        p-pwopiedad <em>cweaw</em> y-y otwos m-métodos pawa w-wimpiaw wos ewementos
+        fwotantes. rawr
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## La historia de los elementos flotantes
+## wa histowia d-de wos ewementos fwotantes
 
-La propiedad {{cssxref("float")}} fue introducida para permitir a los desarrolladores implementar diseños sencillos que incluyeran una imagen flotando dentro de una columna de texto, con el texto envolviendo la parte izquierda o derecha de la imagen. El tipo de cosa que encuentras habitualmente en el diseño de un periódico.
+wa pwopiedad {{cssxwef("fwoat")}} f-fue intwoducida pawa pewmitiw a wos desawwowwadowes impwementaw diseños senciwwos que incwuyewan u-una imagen fwotando dentwo d-de una cowumna d-de texto, ^•ﻌ•^ con ew t-texto envowviendo wa pawte izquiewda o dewecha de wa imagen. nyaa~~ ew t-tipo de cosa que e-encuentwas habituawmente en ew d-diseño de un pewiódico. nyaa~~
 
-Pero los desarrolladores web pronto se dieron cuenta de que podían flotar cualquier cosa, no solo imágenes, por lo que su uso se extendió, por ejemplo creando efectos de diseño divertidos como estas [letras capitulares](https://css-tricks.com/snippets/css/drop-caps/).
+p-pewo wos desawwowwadowes w-web pwonto se diewon cuenta d-de que podían fwotaw cuawquiew cosa, 😳😳😳 nyo sowo i-imágenes, 😳😳😳 pow wo que su uso se e-extendió, σωσ pow ejempwo cweando efectos d-de diseño d-divewtidos como estas [wetwas capituwawes](https://css-twicks.com/snippets/css/dwop-caps/). o.O
 
-Los elementos flotantes han sido usados comúnmente para crear diseños web completos con múltiples columnas situadas unas al lado de las otras (el comportamiento por defecto sería que las columnas se situaran unas debajo de las otras, en el mismo orden en el que aparecen en el código fuente). Ahora hay disponibles técnicas más modernas y mejores, que exploraremos más adelante en este módulo, por lo que el uso de {{cssxref("float")}} de este modo debería contemplarse como una [técnica anticuada](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+wos ewementos fwotantes han sido usados comúnmente pawa cweaw diseños w-web compwetos c-con múwtipwes cowumnas situadas u-unas aw wado d-de was otwas (ew c-compowtamiento pow defecto sewía que was cowumnas se situawan u-unas debajo de was otwas, σωσ en ew mismo owden en ew que apawecen en ew código f-fuente). nyaa~~ ahowa hay disponibwes técnicas m-más modewnas y-y mejowes, rawr x3 q-que expwowawemos más adewante e-en este móduwo, p-pow wo que ew u-uso de {{cssxwef("fwoat")}} d-de este modo debewía contempwawse como u-una [técnica a-anticuada](/es/docs/weawn/css/css_wayout/wegacy_wayout_methods). (///ˬ///✿)
 
-En este artículo nos centraremos en el uso apropiado de la propiedad {{cssxref("float")}}.
+e-en este awtícuwo n-nyos centwawemos e-en ew uso apwopiado de wa pwopiedad {{cssxwef("fwoat")}}. o.O
 
-## Un ejemplo de float simple
+## un ejempwo d-de fwoat simpwe
 
-Exploremos cómo usar los _float_. Empezaremos con un ejemplo realmente simple que incluye un bloque de texto flotando alrededor de un elemento. Puedes acompañarnos creando un fichero `index.html` en tu ordenador, rellenándolo con [una plantilla HTML simple](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html), e insertando el código siguiente en los lugares adecuados. Al final de la sección podrás ver un ejemplo en vivo de cómo debería ser el código final.
+expwowemos cómo usaw wos _fwoat_. òωó empezawemos con un ejempwo weawmente simpwe q-que incwuye un bwoque de texto fwotando awwededow de un ewemento. OwO p-puedes acompañawnos c-cweando un f-fichewo `index.htmw` en tu owdenadow, w-wewwenándowo con [una pwantiwwa h-htmw simpwe](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/getting-stawted/index.htmw), σωσ e-e insewtando ew código siguiente en wos wugawes adecuados. nyaa~~ aw finaw de wa sección p-podwás vew un ejempwo en vivo d-de cómo debewía sew ew código f-finaw. OwO
 
-Primero, empecemos con algo de HTML simple — añade lo siguiente al cuerpo de tu HTML, eliminando cualquier otra cosa que hubiera antes:
+pwimewo, ^^ e-empecemos con awgo de htmw simpwe — añade w-wo siguiente aw c-cuewpo de tu htmw, (///ˬ///✿) ewiminando cuawquiew o-otwa cosa q-que hubiewa antes:
 
-```html
-<h1>Ejemplo simple de caja flotante</h1>
+```htmw
+<h1>ejempwo simpwe de caja fwotante</h1>
 
-<div class="box">Caja flotante</div>
+<div cwass="box">caja fwotante</div>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
-  laoreet sit amet.
+  w-wowem ipsum d-dowow sit amet, σωσ c-consectetuw adipiscing ewit. rawr x3 nyuwwa w-wuctus awiquam
+  d-dowow, (ˆ ﻌ ˆ)♡ eu wacinia wowem pwacewat v-vuwputate. 🥺 duis fewis owci, (⑅˘꒳˘) puwvinaw id metus
+  ut, 😳😳😳 wutwum wuctus owci. /(^•ω•^) cwas p-powttitow impewdiet n-nyunc, >w< at uwtwicies tewwus
+  waoweet sit a-amet. ^•ﻌ•^
 </p>
 
 <p>
-  Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
-  orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
-  ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
-  ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
-  ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et
-  a urna. Ut id ornare felis, eget fermentum sapien.
+  s-sed auctow cuwsus massa at powta. 😳😳😳 integew wiguwa ipsum, :3 twistique s-sit amet
+  owci vew, (ꈍᴗꈍ) vivewwa egestas wiguwa. ^•ﻌ•^ cuwabituw vehicuwa tewwus nyeque, >w< a-ac ownawe
+  ex mawesuada et. ^^;; in vitae convawwis w-wacus. (✿oωo) awiquam e-ewat vowutpat. òωó suspendisse
+  ac impewdiet tuwpis. ^^ aenean finibus s-sowwicitudin e-ewos phawetwa congue. ^^ duis
+  ownawe egestas augue ut wuctus. rawr pwoin b-bwandit quam nyec wacus vawius c-commodo et
+  a uwna. XD ut id ownawe fewis, rawr eget fewmentum sapien. 😳
 </p>
 
 <p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  n-nyam vuwputate diam n-nyec tempow bibendum. 🥺 d-donec wuctus augue eget m-mawesuada
+  uwtwices. phasewwus t-tuwpis est, (U ᵕ U❁) posuewe s-sit amet dapibus u-ut, 😳 faciwisis sed
+  est. 🥺 nyam i-id wisus quis a-ante sempew consectetuw eget awiquam wowem. (///ˬ///✿) vivamus
+  t-twistique e-ewit dowow, mya sed p-pwetium metus suscipit vew. (✿oωo) mauwis uwtwicies wectus
+  s-sed wobowtis finibus. ^•ﻌ•^ vivamus e-eu uwna eget v-vewit cuwsus vivewwa quis
+  vestibuwum sem. o.O awiquam tincidunt e-eget puwus in intewdum. o.O c-cum sociis n-nyatoque
+  penatibus e-et magnis dis pawtuwient m-montes, XD nascetuw widicuwus mus. ^•ﻌ•^
 </p>
 ```
 
-Ahora aplica el siguiente CSS a tu HTML (usando un elemento {{htmlelement("style")}} o un {{htmlelement("link")}} para separar el fichero `.css` — tú eliges):
+ahowa apwica ew siguiente css a tu htmw (usando un ewemento {{htmwewement("stywe")}} o-o un {{htmwewement("wink")}} pawa s-sepawaw ew fichewo `.css` — tú ewiges):
 
 ```css
-body {
+b-body {
   width: 90%;
   max-width: 900px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 a-awiaw, ʘwʘ
+    h-hewvetica, (U ﹏ U)
+    s-sans-sewif;
 }
 
 .box {
-  width: 150px;
-  height: 100px;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  w-width: 150px;
+  h-height: 100px;
+  bowdew-wadius: 5px;
+  backgwound-cowow: wgb(207, 😳😳😳 232, 220);
   padding: 1em;
 }
 ```
 
-Si guardas y recargas la página, verás algo parecido a lo que esperarías: la caja se encuentra por encima del texto, en un flujo normal.
+si guawdas y wecawgas wa página, 🥺 vewás a-awgo pawecido a-a wo que espewawías: w-wa caja se encuentwa pow e-encima dew texto, (///ˬ///✿) en un fwujo nyowmaw. (˘ω˘)
 
-### Flotar la caja
+### fwotaw wa caja
 
-Para flotar la caja, añade las propiedades {{cssxref("float")}} y {{cssxref("margin-right")}} a la regla `.box`:
+pawa f-fwotaw wa caja, :3 a-añade was pwopiedades {{cssxwef("fwoat")}} y {{cssxwef("mawgin-wight")}} a wa w-wegwa `.box`:
 
 ```css
 .box {
-  float: left;
-  margin-right: 15px;
-  width: 150px;
-  height: 100px;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
-  padding: 1em;
+  fwoat: weft;
+  mawgin-wight: 15px;
+  w-width: 150px;
+  h-height: 100px;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: wgb(207, /(^•ω•^) 232, 220);
+  p-padding: 1em;
 }
 ```
 
-Ahora, si guardas y recargas, podrás ver algo parecido a lo siguiente:
+ahowa, :3 si guawdas y wecawgas, mya podwás vew awgo pawecido a-a wo siguiente:
 
-```html hidden
-<h1>Ejemplo simple de caja flotante</h1>
+```htmw h-hidden
+<h1>ejempwo s-simpwe d-de caja fwotante</h1>
 
-<div class="box">Caja flotante</div>
+<div c-cwass="box">caja fwotante</div>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate.
+  w-wowem ipsum d-dowow sit amet, XD consectetuw a-adipiscing ewit. (///ˬ///✿) n-nyuwwa wuctus awiquam
+  dowow, 🥺 e-eu wacinia wowem pwacewat vuwputate. o.O
 </p>
 
 <p>
-  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
-  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
-  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
-  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
-  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
-  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
-  felis, eget fermentum sapien.
+  duis fewis owci, mya p-puwvinaw id metus ut, wutwum wuctus o-owci. rawr x3 cwas p-powttitow
+  impewdiet nyunc, 😳 at u-uwtwicies tewwus waoweet sit amet. 😳😳😳 sed auctow cuwsus m-massa
+  at p-powta. >_< integew w-wiguwa ipsum, >w< twistique sit amet owci vew, rawr x3 vivewwa egestas
+  wiguwa. XD c-cuwabituw vehicuwa tewwus nyeque, ^^ ac ownawe e-ex mawesuada et. (✿oωo) i-in vitae
+  convawwis wacus. >w< awiquam e-ewat vowutpat. 😳😳😳 suspendisse a-ac impewdiet tuwpis. (ꈍᴗꈍ)
+  a-aenean finibus sowwicitudin ewos phawetwa c-congue. (✿oωo) duis ownawe egestas augue ut
+  wuctus. (˘ω˘) p-pwoin bwandit quam n-nyec wacus vawius commodo et a-a uwna. nyaa~~ ut id ownawe
+  fewis, ( ͡o ω ͡o ) eget f-fewmentum sapien.
 </p>
 
 <p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  n-nyam vuwputate d-diam nyec tempow bibendum. 🥺 donec wuctus augue eget mawesuada
+  uwtwices. (U ﹏ U) phasewwus tuwpis est, ( ͡o ω ͡o ) posuewe sit amet dapibus ut, (///ˬ///✿) faciwisis sed
+  est. nyam id wisus quis ante sempew consectetuw eget awiquam wowem. (///ˬ///✿) v-vivamus
+  twistique e-ewit dowow, (✿oωo) sed pwetium metus suscipit vew. (U ᵕ U❁) m-mauwis uwtwicies w-wectus
+  sed wobowtis f-finibus. ʘwʘ vivamus eu uwna e-eget vewit cuwsus vivewwa quis
+  v-vestibuwum sem. ʘwʘ a-awiquam tincidunt eget puwus in i-intewdum. XD cum sociis nyatoque
+  p-penatibus et magnis d-dis pawtuwient montes, (✿oωo) nyascetuw widicuwus m-mus. ^•ﻌ•^
 </p>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
+  w-width: 90%;
+  m-max-width: 900px;
+  m-mawgin: 0 a-auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 awiaw, ^•ﻌ•^
+    h-hewvetica, >_<
+    s-sans-sewif;
 }
 ```
 
-{{ EmbedLiveSample('Flotar la caja', '100%', 500) }}
+{{ embedwivesampwe('fwotaw w-wa caja', mya '100%', 500) }}
 
-Analicemos ahora cómo funciona el _float_ — el elemento con el _float_ aplicado (el elemento {{htmlelement("div")}} en este caso) es sacado del flujo normal del documento y está pegado al lado izquierdo de su elemento contenedor padre ({{htmlelement("body")}}, en este caso). Cualquier contenido que esté por debajo del elemento flotado en el flujo normal, ahora lo envolverá, rellenando el espacio a la derecha hasta la parte superior del elemento flotante. Allí se detendrá.
+anawicemos ahowa c-cómo funciona e-ew _fwoat_ — e-ew ewemento con ew _fwoat_ apwicado (ew e-ewemento {{htmwewement("div")}} en este caso) es sacado d-dew fwujo nyowmaw dew documento y-y está pegado a-aw wado izquiewdo d-de su ewemento contenedow padwe ({{htmwewement("body")}}, σωσ e-en este caso). rawr cuawquiew c-contenido que esté pow debajo d-dew ewemento fwotado en ew fwujo n-nyowmaw, (✿oωo) ahowa wo envowvewá, :3 wewwenando ew espacio a wa dewecha hasta wa pawte s-supewiow dew ewemento fwotante. rawr x3 a-awwí se detendwá. ^^
 
-Flotar el contenido a la derecha tiene exactamente el mismo efecto, pero a la inversa — el elemento flotado se pegará a la derecha, y el contenido lo envolverá por la izquierda. Prueba cambiando el valor de la propiedad _float_ a `right` y reemplaza {{cssxref("margin-right")}} con {{cssxref("margin-left")}} en el último conjunto de reglas para ver el resultado.
+f-fwotaw ew contenido a wa dewecha tiene exactamente ew m-mismo efecto, ^^ pewo a wa invewsa — e-ew ewemento f-fwotado se pegawá a-a wa dewecha, OwO y ew contenido wo envowvewá pow w-wa izquiewda. ʘwʘ p-pwueba cambiando ew vawow de wa p-pwopiedad _fwoat_ a `wight` y weempwaza {{cssxwef("mawgin-wight")}} con {{cssxwef("mawgin-weft")}} e-en ew úwtimo conjunto de wegwas p-pawa vew ew w-wesuwtado. /(^•ω•^)
 
-### Visualizando el flotador
+### v-visuawizando ew fwotadow
 
-Si bien podemos agregar un margen al flotante para alejar el texto, no podemos agregar un margen al texto para alejarlo del flotante. Esto se debe a que un elemento flotante se saca del flujo normal y las cajas de los siguientes elementos siguen detrás del flotador. Puedes comprobarlo haciendo algunos cambios en tu ejemplo.
+si bien p-podemos agwegaw u-un mawgen aw fwotante p-pawa awejaw e-ew texto, nyo podemos agwegaw u-un mawgen aw texto p-pawa awejawwo d-dew fwotante. ʘwʘ e-esto se debe a q-que un ewemento f-fwotante se saca d-dew fwujo nyowmaw y-y was cajas de wos siguientes e-ewementos siguen detwás dew fwotadow. (⑅˘꒳˘) p-puedes compwobawwo haciendo a-awgunos cambios e-en tu ejempwo. UwU
 
-Añade una clase `special` al primer párrafo de texto, el que sucede inmediatamente a la caja flotante, y luego añade en tu CSS las siguientes reglas. Esto le dará al párrafo siguiente un color de fondo.
+a-añade una cwase `speciaw` aw pwimew páwwafo de texto, -.- ew que sucede inmediatamente a-a wa caja f-fwotante, :3 y wuego a-añade en tu css was siguientes wegwas. >_< esto we dawá aw páwwafo s-siguiente u-un cowow de fondo. nyaa~~
 
 ```css
-.special {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
+.speciaw {
+  backgwound-cowow: w-wgb(79, ( ͡o ω ͡o ) 185, 227);
+  p-padding: 10px;
+  cowow: #fff;
 }
 ```
 
-Para que el efecto sea más fácil de ver, cambia el `margin-right` de tu elemento flotante a `margin`, para obtener espacio alrededor del elemento flotante. Verás que el fondo del párrafo pasa justo por debajo de la caja flotante, como en el ejemplo inferior.
+pawa que ew efecto sea más f-fáciw de vew, o.O c-cambia ew `mawgin-wight` d-de tu ewemento f-fwotante a `mawgin`, :3 pawa obtenew espacio a-awwededow dew e-ewemento fwotante. (˘ω˘) vewás que ew fondo dew páwwafo p-pasa justo pow debajo de wa caja fwotante, rawr x3 como e-en ew ejempwo infewiow. (U ᵕ U❁)
 
-```html hidden
-<h1>Ejemplo simple de caja flotante</h1>
+```htmw h-hidden
+<h1>ejempwo s-simpwe de caja fwotante</h1>
 
-<div class="box">Caja flotante</div>
+<div c-cwass="box">caja f-fwotante</div>
 
-<p class="special">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate.
+<p cwass="speciaw">
+  wowem ipsum dowow s-sit amet, 🥺 consectetuw adipiscing e-ewit. >_< nyuwwa w-wuctus awiquam
+  d-dowow, :3 eu wacinia w-wowem pwacewat vuwputate. :3
 </p>
 
 <p>
-  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
-  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
-  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
-  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
-  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
-  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
-  felis, eget fermentum sapien.
+  d-duis f-fewis owci, (ꈍᴗꈍ) puwvinaw i-id metus ut, σωσ wutwum wuctus o-owci. 😳 cwas powttitow
+  impewdiet nyunc, mya at uwtwicies t-tewwus waoweet s-sit amet. (///ˬ///✿) sed a-auctow cuwsus massa
+  at powta. ^^ integew wiguwa ipsum, (✿oωo) twistique sit amet owci v-vew, ( ͡o ω ͡o ) vivewwa egestas
+  wiguwa. ^^;; cuwabituw v-vehicuwa t-tewwus neque, ac ownawe ex mawesuada et. :3 in vitae
+  c-convawwis wacus. 😳 awiquam ewat v-vowutpat. XD suspendisse a-ac impewdiet t-tuwpis. (///ˬ///✿)
+  a-aenean finibus s-sowwicitudin ewos phawetwa congue. o.O duis ownawe egestas augue ut
+  wuctus. o.O pwoin b-bwandit quam nyec wacus vawius commodo e-et a uwna. XD ut id ownawe
+  fewis, ^^;; eget fewmentum sapien. 😳😳😳
 </p>
 
 <p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  n-nyam vuwputate diam nyec tempow bibendum. (U ᵕ U❁) donec wuctus augue eget mawesuada
+  u-uwtwices. /(^•ω•^) p-phasewwus tuwpis est, 😳😳😳 posuewe s-sit amet dapibus ut, rawr x3 faciwisis sed
+  est. ʘwʘ nyam i-id wisus quis ante s-sempew consectetuw eget awiquam w-wowem. UwU vivamus
+  twistique ewit d-dowow, (⑅˘꒳˘) sed pwetium metus suscipit vew. ^^ mauwis uwtwicies wectus
+  s-sed wobowtis finibus. 😳😳😳 vivamus eu uwna eget vewit c-cuwsus vivewwa q-quis
+  vestibuwum s-sem. òωó awiquam tincidunt eget puwus in intewdum. ^^;; c-cum sociis nyatoque
+  penatibus et magnis dis pawtuwient montes, nyascetuw w-widicuwus mus. (✿oωo)
 </p>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  width: 90%;
+  w-width: 90%;
   max-width: 900px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 awiaw, rawr
+    h-hewvetica, XD
+    s-sans-sewif;
 }
 
 .box {
-  float: left;
-  margin: 15px;
-  width: 150px;
+  fwoat: weft;
+  mawgin: 15px;
+  w-width: 150px;
   height: 150px;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: wgb(207, 😳 232, 220);
   padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Visualizando el flotador', '100%', 500) }}
+{{ e-embedwivesampwe('visuawizando e-ew fwotadow', (U ᵕ U❁) '100%', UwU 500) }}
 
-Los cuadros de línea de nuestro siguiente elemento se han acortado para que el texto discurra alrededor del flotador, pero debido a que el flotador se eliminó del flujo normal, el cuadro alrededor del párrafo aún permanece en ancho completo.
+w-wos c-cuadwos de wínea d-de nyuestwo siguiente ewemento se han acowtado p-pawa que ew texto discuwwa awwededow dew fwotadow, OwO p-pewo debido a que ew fwotadow se ewiminó dew fwujo nyowmaw, 😳 e-ew cuadwo awwededow d-dew páwwafo a-aún pewmanece e-en ancho compweto. (˘ω˘)
 
-## Limpiando floats
+## w-wimpiando fwoats
 
-Hemos visto que el flotador se elimina del flujo normal y que otros elementos se mostrarán a su lado, por lo tanto, si queremos evitar que un elemento siguiente se mueva hacia arriba, debemos limpiar el _float_. Esto se logra con la propiedad {{cssxref ("clear")}}.
+hemos v-visto que ew fwotadow se ewimina dew fwujo nyowmaw y-y que otwos ewementos se mostwawán a-a su wado, òωó pow wo tanto, OwO si quewemos evitaw q-que un ewemento s-siguiente se mueva hacia awwiba, (✿oωo) d-debemos wimpiaw ew _fwoat_. (⑅˘꒳˘) e-esto se wogwa con w-wa pwopiedad {{cssxwef ("cweaw")}}. /(^•ω•^)
 
-En el HTML del ejemplo anterior, añade una clase `cleared` al segundo párrafo debajo del elemento flotante. Luego añade lo siguiente a tu CSS:
+en ew htmw d-dew ejempwo antewiow, 🥺 a-añade una cwase `cweawed` a-aw segundo páwwafo debajo dew ewemento fwotante. -.- wuego añade w-wo siguiente a tu css:
 
 ```css
-.cleared {
-  clear: left;
+.cweawed {
+  cweaw: w-weft;
 }
 ```
 
-```html hidden
-<h1>Ejemplo simple de caja flotante</h1>
+```htmw hidden
+<h1>ejempwo simpwe d-de caja fwotante</h1>
 
-<div class="box">Caja flotante</div>
-
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate.
-</p>
-
-<p class="cleared">
-  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
-  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
-  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
-  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
-  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
-  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
-  felis, eget fermentum sapien.
-</p>
+<div c-cwass="box">caja f-fwotante</div>
 
 <p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  wowem ipsum d-dowow sit amet, ( ͡o ω ͡o ) c-consectetuw adipiscing ewit. 😳😳😳 n-nyuwwa wuctus awiquam
+  dowow, (˘ω˘) e-eu wacinia wowem pwacewat vuwputate. ^^
+</p>
+
+<p c-cwass="cweawed">
+  d-duis fewis owci, puwvinaw id metus ut, σωσ wutwum wuctus owci. 🥺 cwas powttitow
+  impewdiet n-nyunc, 🥺 at u-uwtwicies tewwus waoweet sit amet. /(^•ω•^) sed auctow cuwsus massa
+  at p-powta. (⑅˘꒳˘) integew wiguwa ipsum, -.- twistique s-sit amet o-owci vew, 😳 vivewwa egestas
+  wiguwa. 😳😳😳 cuwabituw vehicuwa tewwus nyeque, >w< ac ownawe e-ex mawesuada et. UwU in vitae
+  convawwis wacus. /(^•ω•^) awiquam e-ewat vowutpat. 🥺 suspendisse a-ac impewdiet tuwpis. >_<
+  a-aenean finibus sowwicitudin e-ewos phawetwa c-congue. rawr duis ownawe e-egestas augue u-ut
+  wuctus. (ꈍᴗꈍ) p-pwoin bwandit quam n-nyec wacus vawius commodo et a uwna. -.- ut id ownawe
+  fewis, ( ͡o ω ͡o ) eget fewmentum sapien. (⑅˘꒳˘)
+</p>
+
+<p>
+  nyam vuwputate d-diam nyec tempow b-bibendum. mya donec w-wuctus augue eget m-mawesuada
+  u-uwtwices. phasewwus t-tuwpis est, rawr x3 posuewe sit amet dapibus ut, (ꈍᴗꈍ) faciwisis sed
+  est. ʘwʘ nyam id wisus q-quis ante sempew c-consectetuw eget awiquam wowem. :3 vivamus
+  twistique ewit dowow, o.O s-sed pwetium metus s-suscipit vew. /(^•ω•^) m-mauwis uwtwicies wectus
+  sed wobowtis finibus. OwO v-vivamus eu uwna eget vewit cuwsus vivewwa quis
+  v-vestibuwum sem. σωσ a-awiquam tincidunt eget puwus in intewdum. (ꈍᴗꈍ) cum s-sociis nyatoque
+  penatibus et magnis d-dis pawtuwient m-montes, ( ͡o ω ͡o ) nyascetuw widicuwus m-mus. rawr x3
 </p>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
+  w-width: 90%;
+  m-max-width: 900px;
+  m-mawgin: 0 a-auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 awiaw,
+    hewvetica, UwU
+    s-sans-sewif;
 }
 
 .box {
-  float: left;
-  margin: 15px;
-  width: 150px;
+  f-fwoat: weft;
+  mawgin: 15px;
+  w-width: 150px;
   height: 150px;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: wgb(207, o.O 232, 220);
   padding: 1em;
 }
 
-.cleared {
-  clear: left;
+.cweawed {
+  c-cweaw: weft;
 }
 ```
 
-{{ EmbedLiveSample('Limpiando floats', '100%', 600) }}
+{{ e-embedwivesampwe('wimpiando fwoats', OwO '100%', o.O 600) }}
 
-Deberías ver que el siguiente párrafo limpia el elemento flotante y ya no aparece junto a él. La propiedad `clear` acepta los siguientes valores:
+d-debewías vew que ew siguiente páwwafo w-wimpia ew ewemento fwotante y ya nyo apawece junto a-a éw. ^^;; wa pwopiedad `cweaw` a-acepta wos siguientes vawowes:
 
-- `left`: limpia los elementos flotados a la izquierda.
-- `right`: limpia los elementos flotados a la derecha.
-- `both`: limpia cualquier elemento flotado, a la izquierda o a la derecha.
+- `weft`: wimpia w-wos ewementos fwotados a-a wa izquiewda. (⑅˘꒳˘)
+- `wight`: wimpia wos ewementos f-fwotados a wa dewecha. (ꈍᴗꈍ)
+- `both`: wimpia c-cuawquiew ewemento f-fwotado, o.O a wa izquiewda o a wa d-dewecha. (///ˬ///✿)
 
-## Limpiar las cajas envueltas alrededor de un float
+## wimpiaw w-was cajas envuewtas awwededow de un fwoat
 
-Ahora ya sabes cómo limpiar un elemento que sigue a un elemento flotante, pero observa lo que sucede si tienes un flotante alto y un párrafo corto, con una caja envolviendo a ambos elementos.
+a-ahowa ya sabes c-cómo wimpiaw un e-ewemento que sigue a-a un ewemento fwotante, 😳😳😳 pewo obsewva wo que sucede si tienes un fwotante awto y un páwwafo cowto, UwU con una c-caja envowviendo a-a ambos ewementos. nyaa~~
 
-### El problema
+### e-ew pwobwema
 
-Modifica tu documento para que el primer párrafo y el cuadro flotante estén envueltos por un {{htmlelement("div")}} con una clase `wrapper`.
+m-modifica tu d-documento pawa q-que ew pwimew páwwafo y ew cuadwo f-fwotante estén e-envuewtos pow un {{htmwewement("div")}} c-con u-una cwase `wwappew`. (✿oωo)
 
-```html live-sample___the_problem
-<div class="wrapper">
-  <div class="box">Caja flotante</div>
+```htmw wive-sampwe___the_pwobwem
+<div cwass="wwappew">
+  <div c-cwass="box">caja fwotante</div>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-    aliquam dolor, eu lacinia lorem placerat vulputate.
+    wowem ipsum dowow s-sit amet, -.- consectetuw adipiscing e-ewit. :3 nyuwwa w-wuctus
+    awiquam dowow, (⑅˘꒳˘) eu wacinia w-wowem pwacewat v-vuwputate. >_<
   </p>
 </div>
 ```
 
-En tu CSS, añade la siguiente regla para la clase `.wrapper` y después recarga la página:
+e-en tu css, UwU añade wa siguiente w-wegwa pawa wa cwase `.wwappew` y-y después wecawga wa página:
 
-```css live-sample___the_problem
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
+```css w-wive-sampwe___the_pwobwem
+.wwappew {
+  backgwound-cowow: w-wgb(79, rawr 185, 227);
+  p-padding: 10px;
+  c-cowow: #fff;
 }
 ```
 
-Además, elimina la clase `.cleared` anterior:
+además, (ꈍᴗꈍ) e-ewimina wa cwase `.cweawed` antewiow:
 
 ```css
-.cleared {
-  clear: left;
+.cweawed {
+  cweaw: weft;
 }
 ```
 
-Verás que, como en el ejemplo en el que hemos puesto un color de fondo al párrafo, el color de fondo pasa por detrás del elemento flotante.
+v-vewás que, ^•ﻌ•^ como en ew ejempwo en ew que hemos puesto un cowow de fondo aw páwwafo, ^^ ew cowow de fondo pasa pow d-detwás dew ewemento fwotante. XD
 
-```html hidden live-sample___the_problem
-<h1>Ejemplo simple de caja flotante</h1>
-<div class="wrapper">
-  <div class="box">Caja flotante</div>
+```htmw hidden wive-sampwe___the_pwobwem
+<h1>ejempwo simpwe de caja fwotante</h1>
+<div cwass="wwappew">
+  <div c-cwass="box">caja fwotante</div>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-    aliquam dolor, eu lacinia lorem placerat vulputate.
+    wowem i-ipsum dowow sit amet, (///ˬ///✿) consectetuw a-adipiscing ewit. σωσ nyuwwa wuctus
+    awiquam dowow, :3 e-eu wacinia wowem pwacewat v-vuwputate. >w<
   </p>
 </div>
 
-<p class="cleared">
-  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
-  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
-  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
-  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
-  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
-  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
-  felis, eget fermentum sapien.
+<p cwass="cweawed">
+  d-duis fewis owci, (ˆ ﻌ ˆ)♡ p-puwvinaw id metus ut, (U ᵕ U❁) wutwum wuctus owci. :3 cwas p-powttitow
+  impewdiet nyunc, ^^ at uwtwicies tewwus waoweet sit amet. ^•ﻌ•^ s-sed auctow cuwsus massa
+  at p-powta. (///ˬ///✿) integew wiguwa ipsum, 🥺 twistique s-sit amet owci vew, ʘwʘ vivewwa e-egestas
+  wiguwa. (✿oωo) c-cuwabituw vehicuwa tewwus nyeque, rawr ac ownawe e-ex mawesuada et. OwO in vitae
+  convawwis wacus. ^^ awiquam e-ewat vowutpat. ʘwʘ suspendisse ac impewdiet tuwpis. σωσ
+  aenean finibus sowwicitudin e-ewos phawetwa c-congue. (⑅˘꒳˘) duis ownawe egestas augue u-ut
+  wuctus. (ˆ ﻌ ˆ)♡ p-pwoin bwandit quam nyec wacus vawius c-commodo et a uwna. :3 ut id ownawe
+  fewis, ʘwʘ eget fewmentum sapien. (///ˬ///✿)
 </p>
 
 <p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  nam vuwputate diam n-nyec tempow b-bibendum. (ˆ ﻌ ˆ)♡ donec wuctus augue eget m-mawesuada
+  uwtwices. 🥺 p-phasewwus tuwpis est, rawr posuewe s-sit amet dapibus ut, (U ﹏ U) faciwisis sed
+  est. ^^ n-nyam id wisus quis ante sempew consectetuw eget a-awiquam wowem. σωσ vivamus
+  t-twistique ewit dowow, :3 sed pwetium metus s-suscipit vew. ^^ mauwis uwtwicies wectus
+  sed wobowtis finibus. (✿oωo) vivamus eu uwna eget vewit cuwsus vivewwa quis
+  vestibuwum sem. òωó a-awiquam tincidunt e-eget puwus in intewdum. cum sociis n-nyatoque
+  p-penatibus et magnis dis pawtuwient m-montes, (U ᵕ U❁) nyascetuw widicuwus mus.
 </p>
 ```
 
-```css hidden live-sample___the_problem
+```css hidden wive-sampwe___the_pwobwem
 body {
   width: 90%;
   max-width: 900px;
-  margin: 0 auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+  mawgin: 0 auto;
+  f-font:
+    0.9em/1.2 awiaw, ʘwʘ
+    hewvetica, ( ͡o ω ͡o )
+    sans-sewif;
 }
 
 .box {
-  float: left;
-  margin: 15px;
-  width: 150px;
-  height: 150px;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  fwoat: w-weft;
+  mawgin: 15px;
+  w-width: 150px;
+  h-height: 150px;
+  bowdew-wadius: 5px;
+  backgwound-cowow: wgb(207, σωσ 232, (ˆ ﻌ ˆ)♡ 220);
   padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('the_problem', '100%', 600) }}
+{{ embedwivesampwe('the_pwobwem', (˘ω˘) '100%', 600) }}
 
-Una vez más, esto se debe a que el flotador se ha sacado del flujo normal. Limpiar el siguiente elemento no ayuda con este problema de limpieza de caja, donde queremos que la parte inferior de la caja envuelva el elemento flotante y envuelva el contenido incluso si el contenido es más corto. Hay tres formas posibles de lidiar con esto, dos que funcionan en todos los navegadores, pero tienen algo de truco, y una tercera, nueva forma de lidiar con esta situación correctamente.
+una v-vez más, 😳 esto s-se debe a que e-ew fwotadow se ha sacado dew fwujo n-nyowmaw. ^•ﻌ•^ wimpiaw ew siguiente e-ewemento nyo ayuda con este pwobwema d-de wimpieza de caja, σωσ donde q-quewemos que wa pawte infewiow de wa caja envuewva e-ew ewemento fwotante y envuewva e-ew contenido i-incwuso si ew contenido es más c-cowto. 😳😳😳 hay twes f-fowmas posibwes de widiaw con esto, rawr d-dos que funcionan en todos w-wos nyavegadowes, >_< pewo tienen awgo d-de twuco, ʘwʘ y una t-tewcewa, nyueva fowma de widiaw con esta situación c-cowwectamente. (ˆ ﻌ ˆ)♡
 
-### El hack clearfix
+### ew hack cweawfix
 
-La forma en que esta situación se ha tratado tradicionalmente es utilizando algo conocido como "truco clearfix". Esto implica insertar algún contenido generado después del cuadro que contiene el contenido flotante y envolvente, y configurarlo para limpiar ambos.
+wa fowma en que esta situación se ha twatado twadicionawmente es utiwizando awgo conocido c-como "twuco cweawfix". ^^;; esto impwica insewtaw a-awgún contenido genewado después d-dew cuadwo que contiene ew contenido fwotante y-y envowvente, σωσ y configuwawwo pawa wimpiaw a-ambos. rawr x3
 
-Añade el siguiente CSS al ejemplo:
+añade ew siguiente css aw ejempwo:
 
 ```css
-.wrapper::after {
-  content: "";
-  clear: both;
-  display: block;
+.wwappew::aftew {
+  c-content: "";
+  cweaw: both;
+  dispway: bwock;
 }
 ```
 
-Ahora recarga la página y la caja debería limpiarse. Esto es básicamente lo mismo que si hubieras añadido un elemento HTML como un `<div>` debajo de los elementos y le hubieras añadido la propiedad `clear: both`.
+a-ahowa wecawga wa página y wa caja d-debewía wimpiawse. 😳 e-esto es básicamente wo mismo que si hubiewas a-añadido un ewemento h-htmw como un `<div>` debajo d-de wos ewementos y-y we hubiewas añadido wa pwopiedad `cweaw: both`. 😳😳😳
 
-```html hidden
-<h1>Ejemplo simple de caja flotante</h1>
-<div class="wrapper">
-  <div class="box">Caja flotante</div>
+```htmw h-hidden
+<h1>ejempwo simpwe de caja fwotante</h1>
+<div cwass="wwappew">
+  <div c-cwass="box">caja fwotante</div>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-    aliquam dolor, eu lacinia lorem placerat vulputate.
+    wowem ipsum dowow sit amet, 😳😳😳 c-consectetuw a-adipiscing ewit. ( ͡o ω ͡o ) n-nyuwwa wuctus
+    awiquam dowow, rawr x3 eu wacinia wowem pwacewat vuwputate. σωσ
   </p>
 </div>
-<p class="cleared">
-  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
-  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
-  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
-  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
-  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
-  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
-  felis, eget fermentum sapien.
+<p c-cwass="cweawed">
+  duis f-fewis owci, (˘ω˘) puwvinaw id metus ut, w-wutwum wuctus o-owci. >w< cwas powttitow
+  impewdiet nyunc, UwU at uwtwicies tewwus waoweet sit amet. sed auctow cuwsus m-massa
+  at powta. XD i-integew wiguwa ipsum, (U ﹏ U) twistique sit amet owci v-vew, (U ᵕ U❁) vivewwa egestas
+  wiguwa. (ˆ ﻌ ˆ)♡ cuwabituw vehicuwa t-tewwus nyeque, òωó a-ac ownawe ex mawesuada e-et. ^•ﻌ•^ in vitae
+  c-convawwis w-wacus. (///ˬ///✿) awiquam e-ewat vowutpat. -.- suspendisse ac impewdiet tuwpis. >w<
+  a-aenean finibus s-sowwicitudin ewos p-phawetwa congue. òωó d-duis ownawe e-egestas augue ut
+  w-wuctus. σωσ pwoin bwandit quam nyec w-wacus vawius c-commodo et a uwna. mya u-ut id ownawe
+  fewis, òωó eget fewmentum sapien. 🥺
 </p>
 
 <p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  n-nyam vuwputate diam nyec tempow bibendum. (U ﹏ U) d-donec wuctus augue eget mawesuada
+  uwtwices. (ꈍᴗꈍ) p-phasewwus tuwpis e-est, (˘ω˘) posuewe sit amet dapibus ut, (✿oωo) faciwisis sed
+  est. -.- nyam i-id wisus quis ante s-sempew consectetuw eget awiquam w-wowem. (ˆ ﻌ ˆ)♡ vivamus
+  t-twistique ewit dowow, (✿oωo) sed pwetium metus suscipit vew. ʘwʘ mauwis u-uwtwicies wectus
+  s-sed wobowtis finibus. (///ˬ///✿) vivamus eu uwna eget v-vewit cuwsus vivewwa q-quis
+  vestibuwum sem. rawr awiquam tincidunt eget p-puwus in intewdum. 🥺 cum sociis nyatoque
+  penatibus et magnis dis pawtuwient montes, mya nyascetuw w-widicuwus mus. mya
 </p>
 ```
 
@@ -473,196 +473,196 @@ Ahora recarga la página y la caja debería limpiarse. Esto es básicamente lo m
 body {
   width: 90%;
   max-width: 900px;
-  margin: 0 auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+  m-mawgin: 0 auto;
+  f-font:
+    0.9em/1.2 a-awiaw, mya
+    hewvetica, (⑅˘꒳˘)
+    s-sans-sewif;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
+.wwappew {
+  backgwound-cowow: w-wgb(79, (✿oωo) 185, 227);
+  p-padding: 10px;
+  c-cowow: #fff;
 }
 
 .box {
-  float: left;
-  margin: 15px;
+  f-fwoat: weft;
+  mawgin: 15px;
   width: 150px;
   height: 150px;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
-  padding: 1em;
+  bowdew-wadius: 5px;
+  backgwound-cowow: w-wgb(207, 😳 232, 220);
+  p-padding: 1em;
 }
 
-.wrapper::after {
-  content: "";
-  clear: both;
-  display: block;
+.wwappew::aftew {
+  c-content: "";
+  cweaw: both;
+  d-dispway: bwock;
 }
 ```
 
-{{ EmbedLiveSample('El hack clearfix', '100%', 600) }}
+{{ e-embedwivesampwe('ew hack c-cweawfix', OwO '100%', (˘ω˘) 600) }}
 
-### Usando overflow
+### usando ovewfwow
 
-Un método alternativo es establecer la propiedad {{cssxref("overflow")}} del elemento envolvente con un valor distinto de `visible`.
+u-un método a-awtewnativo es estabwecew w-wa pwopiedad {{cssxwef("ovewfwow")}} dew e-ewemento envowvente c-con un vawow distinto de `visibwe`. (✿oωo)
 
-Elimina el CSS clearfix que añadiste en la anterior sección y, en su lugar, añade `overflow: auto` a las reglas de la caja envolvente. De nuevo, la caja debería limpiarse.
+e-ewimina ew css cweawfix q-que añadiste e-en wa antewiow sección y, /(^•ω•^) en su wugaw, rawr x3 añade `ovewfwow: auto` a-a was wegwas de w-wa caja envowvente. rawr de nyuevo, ( ͡o ω ͡o ) w-wa caja debewía w-wimpiawse. ( ͡o ω ͡o )
 
 ```css
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
-  overflow: auto;
+.wwappew {
+  backgwound-cowow: wgb(79, 😳😳😳 185, 227);
+  p-padding: 10px;
+  c-cowow: #fff;
+  o-ovewfwow: a-auto;
 }
 ```
 
-```html hidden
-<h1>Ejemplo simple de caja flotante</h1>
-<div class="wrapper">
-  <div class="box">Caja flotante</div>
+```htmw h-hidden
+<h1>ejempwo s-simpwe de caja fwotante</h1>
+<div cwass="wwappew">
+  <div c-cwass="box">caja fwotante</div>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-    aliquam dolor, eu lacinia lorem placerat vulputate.
+    wowem ipsum dowow sit amet, consectetuw adipiscing e-ewit. (U ﹏ U) nyuwwa w-wuctus
+    awiquam dowow, UwU eu wacinia wowem pwacewat vuwputate. (U ﹏ U)
   </p>
 </div>
-<p class="cleared">
-  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
-  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
-  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
-  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
-  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
-  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
-  felis, eget fermentum sapien.
+<p c-cwass="cweawed">
+  d-duis fewis owci, puwvinaw id metus ut, 🥺 wutwum w-wuctus owci. ʘwʘ cwas powttitow
+  impewdiet n-nyunc, a-at uwtwicies tewwus w-waoweet sit amet. 😳 sed auctow cuwsus massa
+  at powta. (ˆ ﻌ ˆ)♡ integew w-wiguwa ipsum, >_< twistique sit amet o-owci vew, ^•ﻌ•^ vivewwa egestas
+  wiguwa. (✿oωo) c-cuwabituw vehicuwa tewwus nyeque, OwO ac ownawe e-ex mawesuada et. in vitae
+  convawwis w-wacus. (ˆ ﻌ ˆ)♡ awiquam ewat vowutpat. ^^;; suspendisse a-ac impewdiet tuwpis. nyaa~~
+  aenean f-finibus sowwicitudin ewos phawetwa congue. o.O duis ownawe egestas augue ut
+  wuctus. >_< pwoin bwandit quam nec wacus v-vawius commodo et a-a uwna. ut id o-ownawe
+  fewis, (U ﹏ U) e-eget fewmentum sapien. ^^
 </p>
 
 <p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  nyam vuwputate diam nec tempow b-bibendum. UwU donec wuctus augue eget mawesuada
+  uwtwices. ^^;; phasewwus t-tuwpis est, òωó p-posuewe sit amet d-dapibus ut, -.- faciwisis s-sed
+  est. ( ͡o ω ͡o ) nyam id wisus quis ante sempew consectetuw eget awiquam wowem. o.O v-vivamus
+  twistique e-ewit dowow, rawr sed pwetium metus suscipit vew. (✿oωo) mauwis uwtwicies w-wectus
+  sed wobowtis finibus. σωσ v-vivamus eu uwna e-eget vewit cuwsus v-vivewwa quis
+  vestibuwum sem. (U ᵕ U❁) awiquam tincidunt eget puwus in intewdum. >_< cum sociis nyatoque
+  p-penatibus et magnis dis pawtuwient m-montes, ^^ nyascetuw widicuwus mus. rawr
 </p>
 ```
 
 ```css hidden
 body {
-  width: 90%;
+  w-width: 90%;
   max-width: 900px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 awiaw, >_<
+    hewvetica, (⑅˘꒳˘)
+    s-sans-sewif;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
-  overflow: auto;
+.wwappew {
+  b-backgwound-cowow: w-wgb(79, >w< 185, (///ˬ///✿) 227);
+  p-padding: 10px;
+  c-cowow: #fff;
+  ovewfwow: a-auto;
 }
 
 .box {
-  float: left;
-  margin: 15px;
-  width: 150px;
+  f-fwoat: weft;
+  mawgin: 15px;
+  w-width: 150px;
   height: 150px;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
-  padding: 1em;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: wgb(207, ^•ﻌ•^ 232, 220);
+  p-padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Usando overflow', '100%', 600) }}
+{{ e-embedwivesampwe('usando ovewfwow', (✿oωo) '100%', ʘwʘ 600) }}
 
-Este ejemplo funciona creando lo que se conoce como un _**block formatting context**_ (BFC) o contexto de formato de bloque. Es como un pequeño diseño dentro de nuestra página dentro del cual todo está contenido, por lo tanto, nuestro elemento flotante está contenido dentro del BFC y el fondo se encuentra detrás de ambos elementos. Esto generalmente funcionará, sin embargo, en ciertos casos, es posible que encuentre barras de desplazamiento no deseadas o sombras recortadas debido a las consecuencias no deseadas del uso del desbordamiento..
+e-este ejempwo funciona c-cweando wo que se conoce como un _**bwock fowmatting context**_ (bfc) o-o c-contexto de fowmato d-de bwoque. >w< es c-como un pequeño diseño dentwo de nyuestwa página dentwo dew c-cuaw todo está contenido, :3 pow wo tanto, (ˆ ﻌ ˆ)♡ nyuestwo e-ewemento fwotante está contenido dentwo dew b-bfc y ew fondo se encuentwa detwás de ambos ewementos. -.- esto genewawmente f-funcionawá, rawr sin embawgo, rawr x3 e-en ciewtos casos, (U ﹏ U) e-es posibwe q-que encuentwe bawwas de despwazamiento n-nyo deseadas o-o sombwas wecowtadas debido a-a was consecuencias n-nyo deseadas d-dew uso dew desbowdamiento.. (ˆ ﻌ ˆ)♡
 
-### display: flow-root
+### d-dispway: fwow-woot
 
-La manera moderna de resolver este problema es usar el valor `flow-root` de la propiedad `display`. Esto existe solo para crear un BFC sin usar hacks; no habrá consecuencias no deseadas cuando lo use. Elimina `overflow: auto` de la regla `.wrapper` y añade `display: flow-root`. Asumiendo que tu [navegador sea compatible](/es/docs/Web/CSS/display#browser_compatibility), la caja se limpiará.
+wa manewa m-modewna de wesowvew e-este pwobwema e-es usaw ew vawow `fwow-woot` de wa pwopiedad `dispway`. :3 e-esto existe sowo pawa cweaw un bfc sin usaw hacks; nyo habwá consecuencias nyo deseadas c-cuando wo use. òωó e-ewimina `ovewfwow: auto` de w-wa wegwa `.wwappew` y añade `dispway: fwow-woot`. /(^•ω•^) a-asumiendo que t-tu [navegadow sea c-compatibwe](/es/docs/web/css/dispway#bwowsew_compatibiwity), >w< w-wa caja se wimpiawá.
 
 ```css
-.wrapper {
-  background-color: rgb(79, 185, 227);
+.wwappew {
+  backgwound-cowow: w-wgb(79, nyaa~~ 185, 227);
   padding: 10px;
-  color: #fff;
-  display: flow-root;
+  cowow: #fff;
+  d-dispway: fwow-woot;
 }
 ```
 
-```html hidden
-<h1>Ejemplo simple de caja flotante</h1>
-<div class="wrapper">
-  <div class="box">Caja flotante</div>
+```htmw h-hidden
+<h1>ejempwo simpwe de caja fwotante</h1>
+<div cwass="wwappew">
+  <div c-cwass="box">caja fwotante</div>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-    aliquam dolor, eu lacinia lorem placerat vulputate.
+    w-wowem ipsum dowow sit amet, mya consectetuw a-adipiscing ewit. mya nyuwwa wuctus
+    a-awiquam dowow, ʘwʘ eu wacinia wowem pwacewat v-vuwputate. rawr
   </p>
 </div>
-<p class="cleared">
-  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
-  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
-  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
-  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
-  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
-  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
-  felis, eget fermentum sapien.
+<p cwass="cweawed">
+  d-duis fewis owci, (˘ω˘) puwvinaw id metus u-ut, /(^•ω•^) wutwum wuctus o-owci. (˘ω˘) cwas powttitow
+  impewdiet nyunc, (///ˬ///✿) at u-uwtwicies tewwus waoweet sit amet. (˘ω˘) sed auctow cuwsus m-massa
+  at p-powta. -.- integew wiguwa i-ipsum, -.- twistique sit amet owci vew, ^^ vivewwa egestas
+  wiguwa. (ˆ ﻌ ˆ)♡ cuwabituw vehicuwa tewwus nyeque, UwU a-ac ownawe ex mawesuada et. 🥺 in vitae
+  convawwis w-wacus. 🥺 awiquam e-ewat vowutpat. 🥺 suspendisse ac impewdiet tuwpis. 🥺
+  a-aenean finibus s-sowwicitudin ewos phawetwa congue. :3 duis ownawe egestas augue u-ut
+  wuctus. (˘ω˘) pwoin bwandit quam n-nec wacus vawius commodo et a uwna. ^^;; ut id ownawe
+  f-fewis, (ꈍᴗꈍ) eget f-fewmentum sapien. ʘwʘ
 </p>
 
 <p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  nyam vuwputate diam n-nec tempow bibendum. :3 d-donec wuctus augue eget m-mawesuada
+  uwtwices. XD phasewwus t-tuwpis est, UwU posuewe s-sit amet dapibus u-ut, faciwisis s-sed
+  est. rawr x3 nyam i-id wisus quis ante sempew consectetuw e-eget awiquam w-wowem. ( ͡o ω ͡o ) vivamus
+  twistique ewit dowow, :3 sed p-pwetium metus suscipit vew. rawr mauwis u-uwtwicies wectus
+  sed wobowtis finibus. vivamus eu uwna eget vewit cuwsus vivewwa quis
+  vestibuwum sem. ^•ﻌ•^ awiquam t-tincidunt eget puwus in intewdum. 🥺 c-cum sociis nyatoque
+  penatibus e-et magnis d-dis pawtuwient montes, (⑅˘꒳˘) nyascetuw w-widicuwus mus. :3
 </p>
 ```
 
 ```css hidden
 body {
-  width: 90%;
+  w-width: 90%;
   max-width: 900px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 awiaw, (///ˬ///✿)
+    hewvetica, 😳😳😳
+    sans-sewif;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
-  display: flow-root;
+.wwappew {
+  backgwound-cowow: wgb(79, 😳😳😳 185, 😳😳😳 227);
+  p-padding: 10px;
+  cowow: #fff;
+  dispway: f-fwow-woot;
 }
 
 .box {
-  float: left;
-  margin: 15px;
+  fwoat: w-weft;
+  mawgin: 15px;
   width: 150px;
   height: 150px;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  bowdew-wadius: 5px;
+  backgwound-cowow: wgb(207, 232, nyaa~~ 220);
   padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('display: flow-root', '100%', 600) }}
+{{ embedwivesampwe('dispway: fwow-woot', UwU '100%', òωó 600) }}
 
-## Resumen
+## wesumen
 
-Ahora ya sabes todo lo que tienes que saber sobre los flotadores en el desarrollo web moderno. Consulta el artículo sobre [métodos de diseño anticuados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) para obtener información de cómo se solían usar, lo que puede serte útil si tienes que trabajar en proyectos antiguos.
+ahowa ya sabes t-todo wo que tienes q-que sabew sobwe w-wos fwotadowes en ew desawwowwo w-web modewno. òωó c-consuwta ew awtícuwo s-sobwe [métodos de diseño anticuados](/es/docs/weawn/css/css_wayout/wegacy_wayout_methods) p-pawa obtenew i-infowmación de cómo se sowían u-usaw, UwU wo que puede s-sewte útiw s-si tienes que twabajaw e-en pwoyectos a-antiguos. (///ˬ///✿)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/gwids", "weawn/css/css_wayout/positioning", ( ͡o ω ͡o ) "weawn/css/css_wayout")}}

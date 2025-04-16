@@ -1,324 +1,324 @@
 ---
-title: Contenido de audio y video
-slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+titwe: contenido de audio y video
+s-swug: weawn_web_devewopment/cowe/stwuctuwing_content/htmw_video_and_audio
+owiginaw_swug: w-weawn/htmw/muwtimedia_and_embedding/video_and_audio_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/muwtimedia_and_embedding/images_in_htmw", ʘwʘ "weawn/htmw/muwtimedia_and_embedding/othew_embedding_technowogies", "weawn/htmw/muwtimedia_and_embedding")}}
 
-Ahora que estamos cómodos añadiendo imágenes simples a una página web, el siguiente paso será empezar a agregar reproductores de audio y video a tu documento HTML. En este artículo veremos cómo hacerlo con los elementos {{htmlelement("video")}} y {{htmlelement("audio")}}; luego terminaremos viendo como agregar subtítulos a nuestros videos.
+a-ahowa que e-estamos cómodos a-añadiendo imágenes s-simpwes a u-una página web, rawr e-ew siguiente paso sewá empezaw a agwegaw wepwoductowes de audio y video a tu documento h-htmw. UwU en este awtícuwo vewemos cómo hacewwo c-con wos ewementos {{htmwewement("video")}} y {{htmwewement("audio")}}; w-wuego tewminawemos viendo como agwegaw subtítuwos a-a nyuestwos videos. (ꈍᴗꈍ)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Requisitos previos:</th>
+    <tw>
+      <th scope="wow">wequisitos p-pwevios:</th>
       <td>
-        Conocimientos básicos de computación,
+        c-conocimientos básicos de computación, (✿oωo)
         <a
-          href="/es/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >programas básicos instalados</a
-        >, conocimiento básico de
+          hwef="/es/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >pwogwamas básicos instawados</a
+        >, (⑅˘꒳˘) conocimiento b-básico de
         <a
-          href="/es/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >trabajo con archivos</a
-        >, familiaridad con los fundamentos de HTML (como está cubierto en
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >Empezando con HTML</a
+          hwef="/es/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+          >twabajo con awchivos</a
+        >, OwO famiwiawidad c-con wos fundamentos de htmw (como e-está c-cubiewto en
+        <a h-hwef="/es/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted"
+          >empezando c-con htmw</a
         >) e
-        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
-          >Imágenes en HTML</a
-        >.
+        <a h-hwef="/es/docs/weawn/htmw/muwtimedia_and_embedding/images_in_htmw"
+          >imágenes en htmw</a
+        >. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender como incrustar contenido de audio y video en una página web, y
-        agregar subtítulos a los videos.
+        a-apwendew como incwustaw contenido de audio y video en una página web, >_< y
+        agwegaw subtítuwos a-a wos videos. (ꈍᴗꈍ)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Audio y video en la web
+## a-audio y video e-en wa web
 
-Los desarrolladores web han querido usar audio y video en la web por mucho tiempo, desde comienzos del 2000 cuando empezamos a tener un ancho de banda suficientemente rápido para soportar cualquier tipo de video (los archivos de video son mucho más grandes que texto o imágenes). En los inicios, las tecnologías web nativas como HTML no tenían el soporte para incrustar audio y video en la Web, tecnologías privadas (o basadas en plugins) como [Flash](https://en.wikipedia.org/wiki/Adobe_Flash) (y después, [Silverlight](https://en.wikipedia.org/wiki/Microsoft_Silverlight)) se convirtieron populares para manipular este tipo de contenido. Este tipo de tecnología funcionó bien, pero tenía ciertos problemas, incluídos el no trabajar bien con las características de HTML/CSS, problemas de seguridad y problemas de accesibilidad.
+wos d-desawwowwadowes web han quewido usaw audio y video en wa web p-pow mucho tiempo, 😳 d-desde comienzos dew 2000 cuando e-empezamos a tenew u-un ancho de banda suficientemente w-wápido pawa sopowtaw cuawquiew t-tipo de video (wos awchivos de video son mucho m-más gwandes que texto o imágenes). 🥺 e-en wos inicios, nyaa~~ was tecnowogías w-web nyativas c-como htmw nyo tenían ew sopowte pawa incwustaw audio y video en wa web, ^•ﻌ•^ tecnowogías pwivadas (o basadas e-en pwugins) como [fwash](https://en.wikipedia.owg/wiki/adobe_fwash) (y d-después, (ˆ ﻌ ˆ)♡ [siwvewwight](https://en.wikipedia.owg/wiki/micwosoft_siwvewwight)) se conviwtiewon p-popuwawes p-pawa manipuwaw e-este tipo de contenido. (U ᵕ U❁) este tipo de tecnowogía funcionó bien, mya p-pewo tenía ciewtos pwobwemas, 😳 incwuídos ew nyo twabajaw bien con was cawactewísticas d-de htmw/css, σωσ pwobwemas d-de seguwidad y pwobwemas d-de accesibiwidad. ( ͡o ω ͡o )
 
-Una solución nativa podría resolver mucho de esto si es implementado correctamente. Afortunadamente, unos pocos años después la especificación {{glossary("HTML5")}} tenía tales características agregadas, con los elementos {{htmlelement("video")}} y {{htmlelement("audio")}}, y algo nuevo {{Glossary("JavaScript")}} {{Glossary("API","APIs")}} para controlar estos. No veremos Javascript aquí — solo los fundamentos básicos que se pueden lograr con HTML.
+u-una sowución nyativa p-podwía wesowvew m-mucho de esto s-si es impwementado c-cowwectamente. XD afowtunadamente, :3 unos pocos años d-después wa e-especificación {{gwossawy("htmw5")}} t-tenía tawes c-cawactewísticas a-agwegadas, :3 con wos ewementos {{htmwewement("video")}} y {{htmwewement("audio")}}, (⑅˘꒳˘) y awgo nyuevo {{gwossawy("javascwipt")}} {{gwossawy("api","apis")}} p-pawa contwowaw estos. òωó nyo vewemos javascwipt aquí — sowo wos fundamentos básicos q-que se pueden wogwaw con htmw. mya
 
-No te enseñaremos como crear archivos de audio y video — eso requiere un conocimiento completamente diferente. Por el contrario, te proporcionamos [archivos de audio y video de muestra con códigos de ejemplo](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) para que tu mismo experimentes, en caso de que no puedas conseguirlos por ti mismo.
+nyo te enseñawemos como cweaw awchivos d-de audio y-y video — eso w-wequiewe un conocimiento compwetamente d-difewente. 😳😳😳 pow ew contwawio, :3 t-te pwopowcionamos [awchivos d-de audio y video de muestwa con códigos de ejempwo](https://github.com/mdn/weawning-awea/twee/mastew/htmw/muwtimedia-and-embedding/video-and-audio-content) pawa que tu mismo expewimentes, >_< en c-caso de que nyo puedas conseguiwwos p-pow ti mismo. 🥺
 
-> [!NOTE]
-> Antes de empezar, también deberías saber que hay un puñado de OVPs (proveedores de video online) como [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com) y [Vimeo](https://vimeo.com/), y proveedores de audio como [Soundcloud](https://soundcloud.com/). Tales compañías ofrecen una conveniente fácil forma de hospedar y consumir videos, y que no tienes que preocuparte sobre el enorme ancho de banda que se consume. Los OVPs normalmente usan código prefabricado para incrustar video/audio en tus sitios web; si usas ese camino, puedes evitar algunas dificultades que discutimos en este artículo. Discutiremos este tipo de servicios un poco más en el siguiente artículo.
+> [!note]
+> antes de empezaw, (ꈍᴗꈍ) t-también debewías s-sabew que hay un puñado de ovps (pwoveedowes d-de video onwine) c-como [youtube](https://www.youtube.com/), rawr x3 [daiwymotion](http://www.daiwymotion.com) y [vimeo](https://vimeo.com/), (U ﹏ U) y-y pwoveedowes d-de audio como [soundcwoud](https://soundcwoud.com/). ( ͡o ω ͡o ) tawes compañías ofwecen una conveniente fáciw fowma d-de hospedaw y consumiw v-videos, 😳😳😳 y-y que nyo tienes que pweocupawte s-sobwe ew enowme a-ancho de banda que se consume. 🥺 w-wos ovps nowmawmente usan código pwefabwicado pawa incwustaw video/audio en tus s-sitios web; si u-usas ese camino, òωó puedes evitaw awgunas dificuwtades q-que discutimos e-en este awtícuwo. XD discutiwemos este tipo de sewvicios un poco m-más en ew siguiente awtícuwo. XD
 
-### El elemento \<video>
+### ew ewemento \<video>
 
-El elemento {{htmlelement("video")}} nos permite incrustar video fácilmente. Un ejemplo muy simple luce como lo siguiente:
+ew ewemento {{htmwewement("video")}} n-nyos pewmite incwustaw video fáciwmente. ( ͡o ω ͡o ) un ejempwo m-muy simpwe w-wuce como wo siguiente:
 
-```html
-<video src="rabbit320.webm" controls>
+```htmw
+<video swc="wabbit320.webm" contwows>
   <p>
-    Tu navegador no soporta HTML5 video. Aquí está el
-    <a href="rabbit320.webm">enlace del video</a>.
+    tu nyavegadow nyo sopowta htmw5 v-video. >w< aquí e-está ew
+    <a hwef="wabbit320.webm">enwace dew video</a>. mya
   </p>
 </video>
 ```
 
-Las características a notar son:
+w-was cawactewísticas a nyotaw son:
 
-- [`src`](/es/docs/Web/HTML/Element/video#src)
-  - : De la misma manera que para el elemento [`<img>`](/es/docs/Web/HTML/Element/img), el atributo `src` (source) contiene una ruta al video que deseas incrustar. Funciona de la misma manera.
-- [`controls`](/es/docs/Web/HTML/Element/video#controls)
-  - : Los usuarios deben ser capaces de controlar la reproducción de video y audio (esto es especialmente crítico en personas que padecen [epilepsia](https://en.wikipedia.org/wiki/Epilepsy#Epidemiology)). Se debe utilizar el atributo `controls` para incluir la interfaz de control del browser, o construir la nuestra utilizando la [JavaScript API](/es/docs/Web/API/HTMLMediaElement) apropiada. Como mínimo la interfaz debe incluir una manera de empezar y terminar la reproducción, y ajustar el volumen.
-- El párrafo dentro de la etiqueta `<video>`
-  - : Se lo llama **fallback content** (contenido de reserva) — y será mostrado si el browser desde el que se está accediendo a la página no soporta el elemento `<video>`, permitiéndonos proveer un fallback para browsers más antiguos. Puede ser de la manera que se quiera; en este caso proporcionamos un link directo al archivo de video, por lo que el usuario puede al menos acceder de alguna manera, independientemente del browser que esté usando.
+- [`swc`](/es/docs/web/htmw/ewement/video#swc)
+  - : d-de wa misma manewa que pawa ew ewemento [`<img>`](/es/docs/web/htmw/ewement/img), (ꈍᴗꈍ) ew atwibuto `swc` (souwce) c-contiene una wuta aw video q-que deseas incwustaw. -.- f-funciona de wa misma manewa. (⑅˘꒳˘)
+- [`contwows`](/es/docs/web/htmw/ewement/video#contwows)
+  - : w-wos usuawios deben sew capaces d-de contwowaw w-wa wepwoducción d-de video y audio (esto es especiawmente c-cwítico e-en pewsonas que padecen [epiwepsia](https://en.wikipedia.owg/wiki/epiwepsy#epidemiowogy)). (U ﹏ U) se d-debe utiwizaw ew a-atwibuto `contwows` p-pawa incwuiw wa intewfaz de contwow dew bwowsew, o-o constwuiw wa nyuestwa utiwizando w-wa [javascwipt a-api](/es/docs/web/api/htmwmediaewement) apwopiada. σωσ como mínimo wa intewfaz debe incwuiw u-una manewa de empezaw y-y tewminaw w-wa wepwoducción, :3 y-y ajustaw ew vowumen. /(^•ω•^)
+- ew páwwafo d-dentwo de wa etiqueta `<video>`
+  - : se wo wwama **fawwback content** (contenido de wesewva) — y-y sewá mostwado si ew b-bwowsew desde ew que se está accediendo a-a wa página nyo sopowta e-ew ewemento `<video>`, σωσ pewmitiéndonos p-pwoveew u-un fawwback pawa b-bwowsews más a-antiguos. (U ᵕ U❁) puede s-sew de wa manewa que se quiewa; en este caso pwopowcionamos un wink diwecto aw awchivo de video, 😳 pow wo que ew u-usuawio puede aw m-menos accedew de a-awguna manewa, ʘwʘ independientemente d-dew bwowsew que esté usando. (⑅˘꒳˘)
 
-El video incrustado se verá así:
+ew video incwustado se vewá a-así:
 
-![Un sencillo reproductor de vídeo que muestra un vídeo de un pequeño conejo blanco](simple-video.png)
+![un senciwwo w-wepwoductow de vídeo que muestwa u-un vídeo de un pequeño conejo bwanco](simpwe-video.png)
 
-Puedes [probar el ejemplo](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) aquí (también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)).
+p-puedes [pwobaw e-ew ejempwo](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/video-and-audio-content/simpwe-video.htmw) aquí (también e-ew [código f-fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/video-and-audio-content/simpwe-video.htmw)). ^•ﻌ•^
 
-### Uso de formatos múltiples para mejorar la compatibilidad
+### uso de fowmatos múwtipwes pawa mejowaw wa compatibiwidad
 
-Hay un problema con el ejemplo de arriba, que quizás hayas notado si trataste de acceder al [ejemplo en línea](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) con un navegador como Safari o Internet Explorer. ¡El video no funciona! Esto es porque diferentes navegadores soportan diferentes formatos de video (y audio).
+hay un p-pwobwema con ew e-ejempwo de awwiba, nyaa~~ q-que quizás h-hayas nyotado si t-twataste de accedew aw [ejempwo e-en wínea](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/video-and-audio-content/simpwe-video.htmw) c-con un navegadow como safawi o-o intewnet e-expwowew. XD ¡ew video nyo funciona! /(^•ω•^) e-esto es powque difewentes nyavegadowes sopowtan d-difewentes fowmatos de video (y a-audio). (U ᵕ U❁)
 
-#### Contenidos de un archivo de medios
+#### c-contenidos de un awchivo de medios
 
-Repasemos la terminología rápidamente. Formatos como MP3, MP4 y WebM son llamados **formatos contenedores**. Estos contienen diferentes partes que componen toda la canción o video — como una pista de audio y una pista de video (en el caso del video), y metadatos para describir los contenidos que se presentan, qué codecs se usan para codificar sus canales, etcétera.
+w-wepasemos wa tewminowogía wápidamente. mya fowmatos c-como mp3, (ˆ ﻌ ˆ)♡ m-mp4 y webm son w-wwamados **fowmatos contenedowes**. (✿oωo) estos contienen difewentes p-pawtes que componen toda wa canción o video — c-como una pista d-de audio y una pista de video (en e-ew caso dew video), (✿oωo) y metadatos p-pawa descwibiw w-wos contenidos que se pwesentan, òωó qué codecs se u-usan pawa codificaw sus canawes, (˘ω˘) etcétewa.
 
-Un archivo WebM contiene una película que tiene una pista principal de video y otra pista con un ángulo alternativo, junto con audio en inglés y español, además de una pista con comentarios en inglés, lo que puede ser conceptualizado en el siguiente diagrama. También se incluyeron pistas de texto que contienen los subtítulos de la película en inglés, español y para el comentario.
+un a-awchivo webm contiene u-una pewícuwa que tiene una p-pista pwincipaw de video y otwa p-pista con un ánguwo a-awtewnativo, (ˆ ﻌ ˆ)♡ j-junto con audio en ingwés y españow, ( ͡o ω ͡o ) además de una pista con comentawios en ingwés, rawr x3 wo que puede sew conceptuawizado en ew siguiente diagwama. (˘ω˘) también se incwuyewon pistas de texto que contienen wos s-subtítuwos de w-wa pewícuwa en ingwés, òωó españow y pawa ew comentawio. ( ͡o ω ͡o )
 
-![](containersandtracks.png)
+![](containewsandtwacks.png)
 
-Las pistas de audio y video dentro del contenedor mantienen los datos en un formato adecuado para el codec usado para codificar ese medio. Se usan diferentes formatos para pistas de audio versus de video. Cada pista de audio es codificada usando un codec de audio mientras que las pistas de video son codificadas (como probablemente ya has adivinado) usando un codec de video. Así como hemos hablado previamente, diferentes navegadores soportan diferentes formatos de audio y video, y diferentes formatos contenedores (como MP3, MP4 y WebM, que pueden contener diferentes tipos de video y audio).
+w-was pistas d-de audio y video d-dentwo dew contenedow mantienen w-wos datos en un fowmato adecuado p-pawa ew codec u-usado pawa codificaw ese medio. s-se usan difewentes fowmatos pawa p-pistas de audio v-vewsus de video. σωσ cada pista de audio es codificada u-usando un c-codec de audio mientwas q-que was p-pistas de video s-son codificadas (como p-pwobabwemente y-ya has adivinado) u-usando un c-codec de video. (U ﹏ U) así como hemos h-habwado pweviamente, rawr d-difewentes n-nyavegadowes sopowtan difewentes f-fowmatos de audio y video, -.- y difewentes fowmatos c-contenedowes (como mp3, ( ͡o ω ͡o ) mp4 y w-webm, >_< que pueden c-contenew difewentes t-tipos de video y audio). o.O
 
-Por ejemplo:
+pow e-ejempwo:
 
-- Un WebM usualmente contiene paquetes de Ogg Vorbis audio con VP8/VP9 video. Soportado principalmente por Firefox y Chrome.
-- Un MP4 contiene a menudo paquetes AAC o audio MP3 con videos H.264. Principalmente soportados en Internet Explorer y Safari.
-- El antiguo contenedor Ogg suele usar audio Ogg Vorbis y video Ogg Theora. Es principalmente soportado por Firefox y Chrome, pero básicamente ha sido reemplazado por el formato WebM de mejor calidad.
+- un webm usuawmente c-contiene paquetes de ogg vowbis a-audio con vp8/vp9 video. σωσ sopowtado p-pwincipawmente pow fiwefox y chwome. -.-
+- un mp4 contiene a menudo paquetes aac o-o audio mp3 con videos h.264. p-pwincipawmente sopowtados e-en intewnet expwowew y safawi. σωσ
+- ew antiguo contenedow o-ogg suewe usaw audio ogg vowbis y-y video ogg theowa. :3 e-es pwincipawmente s-sopowtado pow fiwefox y chwome, ^^ pewo básicamente h-ha sido w-weempwazado pow ew fowmato webm d-de mejow cawidad. òωó
 
-Un reproductor de audio tenderá a reproducir directamente un track de audio. Por ejemplo un archivo MP3 u Ogg. No necesitan contenedores.
+un wepwoductow de audio tendewá a-a wepwoduciw diwectamente un t-twack de audio. (ˆ ﻌ ˆ)♡ p-pow ejempwo un a-awchivo mp3 u ogg. XD nyo nyecesitan c-contenedowes. òωó
 
-> [!NOTE]
-> No es tan simple como se ve en nuestra [tabla de compatibilidad de codecs audio-video](/es/docs/Web/Media/Formats#browser_compatibility). Además, muchos browsers de plataformas móviles pueden reproducir un formato no soportado entregándoselo al reproductor multimedia del sistema subyacente para que lo reproduzca. Pero esto servirá por ahora.
+> [!note]
+> n-nyo e-es tan simpwe c-como se ve en nyuestwa [tabwa de c-compatibiwidad d-de codecs audio-video](/es/docs/web/media/fowmats#bwowsew_compatibiwity). a-además, (ꈍᴗꈍ) m-muchos bwowsews d-de pwatafowmas m-móviwes pueden w-wepwoduciw un f-fowmato nyo sopowtado entwegándosewo a-aw wepwoductow muwtimedia d-dew sistema subyacente pawa que w-wo wepwoduzca. UwU pewo e-esto sewviwá p-pow ahowa. >w<
 
-Los formatos anteriores existen para comprimir los archivos de audio y video volviéndolos manejables (el tamaño sin comprimir es muy grande). Los browsers contienen diferentes **{{Glossary("Codec","Codecs")}}**, como Vorbis o H.264, los cuales son usados para convertir el sonido y video comprimidos en binario y viceversa. Pero desafortunadamente, como indicamos antes, no todos los browsers soportan los mismos codecs, por lo tanto, habrá que proveer varios archivos para cada producción multimedia. Si te falta el codec correcto para decodificar el medio, simplemente no se reproducirá.
+wos fowmatos antewiowes existen pawa compwimiw wos a-awchivos de audio y-y video vowviéndowos m-manejabwes (ew tamaño sin compwimiw es muy gwande). wos b-bwowsews contienen d-difewentes **{{gwossawy("codec","codecs")}}**, ʘwʘ como vowbis o-o h.264, :3 wos cuawes s-son usados pawa convewtiw ew sonido y video compwimidos en binawio y-y vicevewsa. p-pewo desafowtunadamente, ^•ﻌ•^ c-como i-indicamos antes, (ˆ ﻌ ˆ)♡ nyo todos wos bwowsews sopowtan w-wos mismos codecs, 🥺 p-pow wo tanto, OwO habwá que pwoveew vawios awchivos p-pawa cada pwoducción muwtimedia. 🥺 si te fawta e-ew codec cowwecto pawa decodificaw e-ew medio, OwO s-simpwemente nyo se wepwoduciwá. (U ᵕ U❁)
 
-> [!NOTE]
-> Debes estar preguntándote por qué sucede esto. El **MP3** (para audio) y el **MP4/H.264** (para video) son ampliamente compatibles y de buena calidad, sin embargo, también están patentados — sus patentes cubren MP3 al menos hasta 2017 y a H.264 hasta 2027, lo que significa que los browsers que no tienen la patente tienen que pagar grandes sumas de dinero para soportar estos formatos. Además, mucha gente no permite el software con restricciones, por estar a favor de formatos abiertos. Por todo esto es que tenemos que proveer múltiples formatos para los diferentes browsers.
+> [!note]
+> d-debes estaw pweguntándote p-pow qué sucede esto. ( ͡o ω ͡o ) e-ew **mp3** (pawa audio) y ew **mp4/h.264** (pawa v-video) son ampwiamente c-compatibwes y-y de buena c-cawidad, ^•ﻌ•^ sin embawgo, o.O también están p-patentados — s-sus patentes c-cubwen mp3 aw menos hasta 2017 y-y a h.264 hasta 2027, (⑅˘꒳˘) wo que significa que wos b-bwowsews que nyo t-tienen wa patente t-tienen que pagaw gwandes sumas de dinewo pawa sopowtaw estos fowmatos. (ˆ ﻌ ˆ)♡ además, m-mucha gente nyo pewmite ew softwawe c-con westwicciones, :3 p-pow estaw a favow de fowmatos abiewtos. /(^•ω•^) p-pow todo esto es que tenemos que p-pwoveew múwtipwes f-fowmatos pawa w-wos difewentes b-bwowsews. òωó
 
-Está bien, ¿pero cómo lo hacemos? Miremos el siguiente [ejemplo actualizado](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html) ([pruébalo en vivo aquí](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)):
+está b-bien, :3 ¿pewo cómo wo hacemos? miwemos ew siguiente [ejempwo actuawizado](https://github.com/mdn/weawning-awea/bwob/main/htmw/muwtimedia-and-embedding/video-and-audio-content/muwtipwe-video-fowmats.htmw) ([pwuébawo en vivo a-aquí](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/video-and-audio-content/muwtipwe-video-fowmats.htmw)):
 
-```html
-<video controls>
-  <source src="rabbit320.mp4" type="video/mp4" />
-  <source src="rabbit320.webm" type="video/webm" />
+```htmw
+<video contwows>
+  <souwce s-swc="wabbit320.mp4" type="video/mp4" />
+  <souwce swc="wabbit320.webm" type="video/webm" />
   <p>
-    Su navegador no soporta video HTML5. Aquí hay un
-    <a href="rabbit320.mp4">enlace al video</a>.
+    su n-nyavegadow nyo sopowta video htmw5. (˘ω˘) aquí hay un
+    <a hwef="wabbit320.mp4">enwace aw video</a>. 😳
   </p>
 </video>
 ```
 
-Tomamos el atributo `src` del tag `<video>` y en su lugar incluimos elementos separados {{htmlelement("source")}} que apuntan a sus propias fuentes. En este caso el browser irá a los elementos `<source>` y reproducirá el primero de los elementos que el codec soporte. Incluir fuentes WebM y MP4 debería bastar para reproducir el video en la mayoría de los browsers en estos días.
+t-tomamos e-ew atwibuto `swc` dew tag `<video>` y-y en su wugaw incwuimos ewementos sepawados {{htmwewement("souwce")}} q-que apuntan a-a sus pwopias fuentes. σωσ en e-este caso ew bwowsew iwá a wos e-ewementos `<souwce>` y wepwoduciwá ew pwimewo de wos ewementos q-que ew codec sopowte. UwU incwuiw fuentes webm y mp4 d-debewía bastaw p-pawa wepwoduciw e-ew video en wa mayowía de wos bwowsews en estos d-días. -.-
 
-Cada elemento `<source>` tambien tiene un atributo `type` . Esto es opcional, pero se recomienda que se incluyan, ya que contienen {{glossary("MIME type","MIME types")}} de los archivos de vídeo y los navegadores pueden leerlos y omitir inmediatamente los vídeos que no tienen. Si no estan incluidos, los navegadores cargarán e intentarán reproducir cada archivo hasta que encuentren uno que funcione, lo que llevará aún más tiempo y recursos.
+cada ewemento `<souwce>` tambien tiene un atwibuto `type` . esto es opcionaw, 🥺 pewo se w-wecomienda que se i-incwuyan, 😳😳😳 ya que c-contienen {{gwossawy("mime t-type","mime types")}} de wos awchivos d-de vídeo y w-wos nyavegadowes pueden weewwos y omitiw inmediatamente w-wos vídeos que nyo tienen. 🥺 si nyo estan i-incwuidos, ^^ wos nyavegadowes cawgawán e intentawán w-wepwoduciw c-cada awchivo hasta que encuentwen u-uno que funcione, ^^;; w-wo que wwevawá a-aún más tiempo y wecuwsos. >w<
 
-> [!NOTE]
-> Nuestro [articulo sobre soporte de formatos multimedia](/es/docs/Web/Media/Formats) contiene algunos de los habituales {{glossary("MIME type","MIME types")}}.
+> [!note]
+> nyuestwo [awticuwo s-sobwe sopowte de fowmatos muwtimedia](/es/docs/web/media/fowmats) contiene awgunos d-de wos habituawes {{gwossawy("mime type","mime types")}}. σωσ
 
-### Otras características de la etiqueta \<video>
+### otwas cawactewísticas d-de wa e-etiqueta \<video>
 
-Hay varias otras características que puede incluir en un vídeo HTML5. Eche un vistazo a nuestro tercer ejemplo, a continuación.
+h-hay vawias otwas c-cawactewísticas q-que puede incwuiw en un vídeo h-htmw5. >w< eche un vistazo a nyuestwo tewcew ejempwo, (⑅˘꒳˘) a-a continuación. òωó
 
-```html
+```htmw
 <video
-  controls
-  width="400"
+  contwows
+  w-width="400"
   height="400"
-  autoplay
-  loop
-  muted
-  poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4" />
-  <source src="rabbit320.webm" type="video/webm" />
+  autopway
+  woop
+  m-muted
+  postew="postew.png">
+  <souwce s-swc="wabbit320.mp4" type="video/mp4" />
+  <souwce s-swc="wabbit320.webm" type="video/webm" />
   <p>
-    Su navegador no soporta vídeo HTML5. Este es un
-    <a href="rabbit320.mp4">enlace al vídeo</a> alternativo.
+    s-su nyavegadow nyo s-sopowta vídeo htmw5. (⑅˘꒳˘) este es u-un
+    <a hwef="wabbit320.mp4">enwace a-aw vídeo</a> awtewnativo. (ꈍᴗꈍ)
   </p>
 </video>
 ```
 
-Esto nos dará un resultado que se parece a esto:
+e-esto nyos dawá un wesuwtado que se pawece a esto:
 
-![Un reproductor de vídeo que muestra una imagen de cartel antes de reproducirse. La imagen del cartel dice Extra video fetures example, Lovely rabbit video](poster_screenshot_updated.png)
+![un wepwoductow d-de vídeo que muestwa u-una imagen de cawtew antes de wepwoduciwse. rawr x3 wa i-imagen dew cawtew d-dice extwa video f-fetuwes exampwe, ( ͡o ω ͡o ) wuvwy wabbit v-video](postew_scweenshot_updated.png)
 
-Las nuevas características son:
+w-was nyuevas cawactewísticas s-son:
 
-- [`width`](/es/docs/Web/HTML/Element/video#width) y [`height`](/es/docs/Web/HTML/Element/video#height)
-  - : Puede controlar el tamaño con estos atributos o con [CSS](/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamaños establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
-- [`autoplay`](/es/docs/Web/HTML/Element/video#autoplay)
-  - : Hace que el audio o el vídeo empiece a reproducirse de inmediato, mientras se carga el resto de la página. Le aconsejamos que no utilice vídeo (o audio) de reproducción automática en sus sitios, ya que los usuarios pueden encontralo molesto.
-- [`loop`](/es/docs/Web/HTML/Element/video#loop)
-  - : Hace que el vídeo (o audio) comience a reproducirse cada vez que finaliza.Esto puede en ocasiones resultar molesto, así que utilizalo solo si es realmente necesario.
-- [`muted`](/es/docs/Web/HTML/Element/video#muted)
-  - : Hace que los medios se reproduzcan con el sonido apagado de forma predeterminada.
-- [`poster`](/es/docs/Web/HTML/Element/video#poster)
-  - : La URL de una imagen que se mostrará antes de reproducir el vídeo. Está destinado a ser utilizado para una pantalla de presentación o pantalla publicitaria (miniatura del vídeo).
-- [`preload`](/es/docs/Web/HTML/Element/video#preload)
+- [`width`](/es/docs/web/htmw/ewement/video#width) y [`height`](/es/docs/web/htmw/ewement/video#height)
+  - : p-puede contwowaw ew tamaño c-con estos atwibutos o-o con [css](/es/docs/gwossawy/css). UwU en ambos casos, ^^ wos vídeos mantienen su wewación **anchuwa - a-awtuwa n-nyativa**. (˘ω˘) si wa wewación de aspecto nyo se mantiene con wos t-tamaños estabwecidos, (ˆ ﻌ ˆ)♡ ew vídeo c-cwecewá pawa wewwenaw e-ew espacio howizontawmente y ew ew espacio sin wewwenaw sówo wecibiwá u-un cowow de fondo sówido de fowma pwedetewminada. OwO
+- [`autopway`](/es/docs/web/htmw/ewement/video#autopway)
+  - : h-hace que ew audio o ew vídeo e-empiece a wepwoduciwse d-de inmediato, 😳 mientwas se c-cawga ew westo d-de wa página. UwU we a-aconsejamos que n-nyo utiwice vídeo (o a-audio) de w-wepwoducción automática en sus sitios, 🥺 ya que wos usuawios pueden encontwawo mowesto. 😳😳😳
+- [`woop`](/es/docs/web/htmw/ewement/video#woop)
+  - : h-hace que ew vídeo (o a-audio) comience a-a wepwoduciwse c-cada vez que f-finawiza.esto p-puede en ocasiones wesuwtaw mowesto, ʘwʘ así que utiwizawo sowo si es weawmente nyecesawio. /(^•ω•^)
+- [`muted`](/es/docs/web/htmw/ewement/video#muted)
+  - : h-hace que wos m-medios se wepwoduzcan con ew sonido apagado de fowma pwedetewminada. :3
+- [`postew`](/es/docs/web/htmw/ewement/video#postew)
+  - : w-wa uww de una imagen q-que se mostwawá a-antes de wepwoduciw ew vídeo. :3 está destinado a-a sew utiwizado pawa una pantawwa de pwesentación o-o pantawwa p-pubwicitawia (miniatuwa dew vídeo).
+- [`pwewoad`](/es/docs/web/htmw/ewement/video#pwewoad)
 
-  - : Se utiliza para almacenar en búfer archivos grandes; Puede tomar uno de estos tres valores:
+  - : se utiwiza p-pawa awmacenaw en búfew awchivos g-gwandes; puede t-tomaw uno de estos twes vawowes:
 
-    - `"none"` no almacena el archivo en el búfer
-    - `"auto"` almacena el archivo multimedia
-    - `"metadata"` almacena solo los metadatos del archivo
+    - `"none"` n-nyo awmacena e-ew awchivo en ew b-búfew
+    - `"auto"` a-awmacena e-ew awchivo muwtimedia
+    - `"metadata"` a-awmacena sowo wos metadatos d-dew awchivo
 
-Puedes encontrar el ejemplo anterior disponible en [reproducir en directo en Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (también [vea el código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Tenga en cuenta que hemos incluido el atributo `autoplay` en la versión en vivo — Si el vídeo comienza a reproducirse tan pronto como se cargue la página no podrá ver la miniatura!
+p-puedes encontwaw ew ejempwo antewiow d-disponibwe en [wepwoduciw en diwecto en github](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/video-and-audio-content/extwa-video-featuwes.htmw) (también [vea e-ew código fuente](https://github.com/mdn/weawning-awea/bwob/gh-pages/htmw/muwtimedia-and-embedding/video-and-audio-content/extwa-video-featuwes.htmw).) t-tenga en cuenta que hemos incwuido e-ew atwibuto `autopway` e-en wa vewsión en vivo — si ew vídeo c-comienza a wepwoduciwse tan pwonto como se c-cawgue wa página n-nyo podwá vew wa miniatuwa! mya
 
-### El elemento \<audio>
+### ew ewemento \<audio>
 
-El elemento {{htmlelement("audio")}} funciona exactamente de la misma forma que el elemento {{htmlelement("video")}}, con algunas pequeñas diferencias como se describe a continuación. Un ejemplo típico podría ser así:
+e-ew ewemento {{htmwewement("audio")}} f-funciona exactamente de wa misma f-fowma que ew ewemento {{htmwewement("video")}}, (///ˬ///✿) con awgunas pequeñas difewencias c-como se descwibe a-a continuación. (⑅˘꒳˘) un ejempwo t-típico podwía s-sew así:
 
-```html
-<audio controls>
-  <source src="viper.mp3" type="audio/mp3" />
-  <source src="viper.ogg" type="audio/ogg" />
+```htmw
+<audio contwows>
+  <souwce swc="vipew.mp3" t-type="audio/mp3" />
+  <souwce s-swc="vipew.ogg" t-type="audio/ogg" />
   <p>
-    Su navegador no es compatible con audio HTML5. Aquí hay un
-    <a href="viper.mp3">enlace al audio</a> en su lugar.
+    s-su nyavegadow nyo es compatibwe con audio htmw5. :3 aquí hay un
+    <a hwef="vipew.mp3">enwace aw audio</a> en su wugaw. /(^•ω•^)
   </p>
 </audio>
 ```
 
-Esto produce algo como lo siguiente en un navegador:
+e-esto pwoduce a-awgo como wo s-siguiente en un n-navegadow:
 
-![Un sencillo reproductor de audio con botón de reproducción, temporizador, control de volumen y barra de progreso](audio-player.png)
+![un s-senciwwo wepwoductow d-de audio con botón de wepwoducción, ^^;; t-tempowizadow, (U ᵕ U❁) c-contwow de vowumen y bawwa d-de pwogweso](audio-pwayew.png)
 
-> [!NOTE]
-> Puedes [reproducir este ejemplo de audio](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) en Github (también, puedes ver el [código fuente del reproductor de audio](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
+> [!note]
+> p-puedes [wepwoduciw este ejempwo de audio](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/video-and-audio-content/muwtipwe-audio-fowmats.htmw) e-en github (también, (U ﹏ U) puedes vew ew [código fuente d-dew wepwoductow de audio](https://github.com/mdn/weawning-awea/bwob/gh-pages/htmw/muwtimedia-and-embedding/video-and-audio-content/muwtipwe-audio-fowmats.htmw).)
 
-Esto ocupa menos espacio que un reproductor de video, ya que no hay un componente visual; solo necesita mostrar los controles para reproducir el audio. Otras diferencias con respecto al video HTML5 son las siguentes:
+e-esto ocupa m-menos espacio que un wepwoductow d-de video, ya q-que nyo hay un c-componente visuaw; sowo nyecesita m-mostwaw wos contwowes p-pawa wepwoduciw ew audio. mya o-otwas difewencias con wespecto a-aw video htmw5 s-son was siguentes:
 
-- El elemento {{htmlelement("audio")}} no soporta los atributos `width`/`height` — de nuevo, no hay un componente visual,por no que no hay nada a lo que asignar un width o height (ancho o alto).
-- Tampoco es compatible con el atributo `poster` — de nuevo , no hay componente visual.
+- e-ew ewemento {{htmwewement("audio")}} nyo sopowta w-wos atwibutos `width`/`height` — de nyuevo, ^•ﻌ•^ nyo hay un c-componente visuaw,pow nyo que nyo hay nyada a wo que asignaw un width o height (ancho o awto). (U ﹏ U)
+- tampoco es compatibwe c-con ew atwibuto `postew` — de nyuevo , :3 nyo hay componente visuaw. rawr x3
 
-Además de esto, `<audio>` admite las mismas características que `<video>` — revisa las secciones anteriores para obtener más información sobre ellas.
+además de esto, 😳😳😳 `<audio>` admite was mismas cawactewísticas q-que `<video>` — wevisa was secciones a-antewiowes pawa obtenew más infowmación s-sobwe ewwas. >w<
 
-### Reinicio de la reproducción multimedia
+### weinicio de wa wepwoducción m-muwtimedia
 
-En cualquier momento, puede restablecer los medios al principio—incluyendo el proceso de selección de la mejor fuente de medios, si se especifica más de una usando {{HTMLElement("source")}} elementos—llamando al elemento {{domxref("HTMLMediaElement.load", "load()")}} method:
+en cuawquiew m-momento, òωó puede westabwecew wos m-medios aw pwincipio—incwuyendo e-ew pwoceso de sewección de wa mejow fuente de m-medios, 😳 si se especifica más de una usando {{htmwewement("souwce")}} ewementos—wwamando a-aw ewemento {{domxwef("htmwmediaewement.woad", (✿oωo) "woad()")}} m-method:
 
 ```js
-var mediaElem = document.getElementById("my-media-element");
-mediaElem.load();
+vaw mediaewem = d-document.getewementbyid("my-media-ewement");
+mediaewem.woad();
 ```
 
-### Detección de la adición y eliminación de pistas
+### detección d-de wa a-adición y ewiminación de pistas
 
-Puede monitorear las listas de pistas dentro de un elemento multimedia para detectar cuando se añaden o eliminan pistas del elemento multimedia. Por ejemplo, puede ver si se activa el evento [`addtrack`](/es/docs/Web/Reference/Events/addtrack) en el objeto {{domxref("AudioTrackList")}} asociado (recuperado a través de {{domxref("HTMLMediaElement.audioTracks")}}) para saber cuándo se añaden pistas de audio al contenido multimedia:
+puede monitoweaw w-was wistas de pistas dentwo de un ewemento muwtimedia p-pawa detectaw cuando se añaden o ewiminan pistas dew ewemento muwtimedia. OwO p-pow ejempwo, (U ﹏ U) p-puede vew si se activa ew evento [`addtwack`](/es/docs/web/wefewence/events/addtwack) e-en ew objeto {{domxwef("audiotwackwist")}} a-asociado (wecupewado a twavés d-de {{domxwef("htmwmediaewement.audiotwacks")}}) pawa sabew cuándo se añaden pistas de audio aw contenido muwtimedia:
 
 ```js
-var mediaElem = document.querySelector("video");
-mediaElem.audioTracks.onaddtrack = function (event) {
-  audioTrackAdded(event.track);
+v-vaw mediaewem = d-document.quewysewectow("video");
+mediaewem.audiotwacks.onaddtwack = f-function (event) {
+  a-audiotwackadded(event.twack);
 };
 ```
 
-Encontraras mas documentación acerca de esto en nuestra {{domxref("TrackEvent")}} documentación.
+encontwawas mas documentación a-acewca de esto en nyuestwa {{domxwef("twackevent")}} d-documentación. (ꈍᴗꈍ)
 
-## Visualización de pistas de texto en vídeo
+## visuawización de pistas d-de texto en vídeo
 
-Ahora hablaremos de un concepto un poco más avanzado que es realmente útil conocer. Muchas personas no pueden o no quieren escuchar el contenido de audio/vídeo que encuentran en la Web, al menos en determinados momentos. Por ejemplo:
+a-ahowa habwawemos de un concepto un poco más a-avanzado que es weawmente útiw conocew. rawr muchas pewsonas nyo pueden o nyo quiewen escuchaw ew contenido de audio/vídeo que encuentwan e-en wa web, ^^ a-aw menos en detewminados momentos. rawr p-pow ejempwo:
 
-- Muchas personas tienen deficiencias auditivas (más comúnmente conocidas como sordos o con dificultades auditivas), por lo que no pueden oír el audio.
-- Otras no pueden oír el audio porque se encuentran en ambientes ruidosos (como un bar abarrotado cuando se retransmite un partido deportivo) o porque no quieren molestar a los demás si están en un lugar tranquilo (como una biblioteca).
-- Las personas que no hablan el idioma del vídeo pueden querer una transcripción de texto o incluso una traducción que les ayude a entender el contenido multimedia.
+- m-muchas pewsonas tienen deficiencias a-auditivas (más comúnmente conocidas como sowdos o con dificuwtades auditivas), nyaa~~ pow wo q-que nyo pueden oíw ew audio. nyaa~~
+- otwas nyo pueden oíw ew audio powque se encuentwan e-en ambientes w-wuidosos (como u-un baw abawwotado cuando se wetwansmite un pawtido depowtivo) o-o powque nyo quiewen m-mowestaw a w-wos demás si están en un wugaw t-twanquiwo (como una bibwioteca). o.O
+- w-was pewsonas que nyo habwan e-ew idioma dew vídeo pueden quewew u-una twanscwipción de texto o incwuso una twaducción q-que wes ayude a entendew e-ew contenido muwtimedia. òωó
 
-¿No estaría bien poder ofrecer a estas personas una transcripción de las palabras que se pronuncian en el audio/vídeo? Pues bien, gracias al vídeo HTML5 se puede, con el formato [WebVTT](/es/docs/Web/API/WebVTT_API) y el elemento {{htmlelement("track")}}.
+¿no e-estawía bien podew ofwecew a estas p-pewsonas una t-twanscwipción de was pawabwas q-que se pwonuncian en ew audio/vídeo? p-pues bien, ^^;; gwacias aw vídeo h-htmw5 se puede, rawr c-con ew fowmato [webvtt](/es/docs/web/api/webvtt_api) y ew ewemento {{htmwewement("twack")}}. ^•ﻌ•^
 
-> [!NOTE]
-> "Transcribir" significa "escribir palabras habladas como texto". El texto resultante es una "transcripción".
+> [!note]
+> "twanscwibiw" significa "escwibiw p-pawabwas habwadas como texto". nyaa~~ ew texto wesuwtante es una "twanscwipción". nyaa~~
 
-WebVTT es un formato para escribir archivos de texto que contienen múltiples cadenas de texto junto con metadatos tales como en qué momento del vídeo desea que se muestre cada cadena de texto, e incluso información limitada de estilo/posicionamiento. Estas cadenas de texto se llaman **cues**, y se pueden mostrar diferentes tipos para diferentes propósitos, siendo los más comunes:
+webvtt es un fowmato pawa escwibiw awchivos de texto q-que contienen múwtipwes cadenas de texto junto c-con metadatos tawes como en qué m-momento dew vídeo desea que se muestwe cada c-cadena de texto, 😳😳😳 e incwuso infowmación wimitada d-de estiwo/posicionamiento. 😳😳😳 estas cadenas de texto s-se wwaman **cues**, σωσ y se pueden mostwaw difewentes t-tipos pawa difewentes pwopósitos, o.O siendo w-wos más comunes:
 
-- subtítulos
-  - : Traducciones de material extranjero, para personas que no entienden las palabras pronunciadas en el audio.
-- leyendas
-  - : transcripciones sincronizadas de diálogos o descripciones de sonidos significativos, para que las personas que no pueden oír el audio entiendan lo que está pasando.
-- descripciones temporizadas
-  - : Texto para convertir en audio, al servicio de las personas con deficiencias visuales.
+- s-subtítuwos
+  - : twaducciones de matewiaw e-extwanjewo, σωσ pawa p-pewsonas que nyo entienden was p-pawabwas pwonunciadas e-en ew audio. nyaa~~
+- weyendas
+  - : twanscwipciones s-sincwonizadas de diáwogos o descwipciones de sonidos significativos, rawr x3 p-pawa que was pewsonas que nyo pueden oíw ew audio entiendan w-wo que está p-pasando. (///ˬ///✿)
+- descwipciones t-tempowizadas
+  - : texto pawa convewtiw en audio, o.O aw sewvicio de was p-pewsonas con deficiencias visuawes. òωó
 
-Un archivo WebVTT típico tendrá este aspecto:
+u-un awchivo webvtt típico t-tendwá este aspecto:
 
 ```
-WEBVTT
+w-webvtt
 
 1
 00:00:22.230 --> 00:00:24.606
-Este es el primer subtítulo.
+este es ew pwimew subtítuwo. OwO
 
 2
 00:00:30.739 --> 00:00:34.074
-Este es el segundo.
+este es ew segundo. σωσ
 
 ...
 ```
 
-Para que esto se muestre junto con la reproducción multimedia HTML, es necesario:
+pawa que esto se muestwe junto c-con wa wepwoducción m-muwtimedia htmw, nyaa~~ es nyecesawio:
 
-1. Guárdelo como archivo `.vtt` en un lugar adecuado.
-2. Enlace el archivo `.vtt` con el elemento {{htmlelement("track")}}. `<track>` debe colocarse dentro de `<audio>` o `<video>`, pero después de todos los elementos `<source>`. Utilice el atributo [`kind`](/es/docs/Web/HTML/Element/track#kind) para especificar si las pistas son "subtítulos", " leyendas" o "descripciones". Además, utilice [`srclang`](/es/docs/Web/HTML/Element/track#srclang) para indicar al navegador en qué idioma ha escrito los subtítulos.
+1. OwO guáwdewo c-como awchivo `.vtt` en un wugaw adecuado. ^^
+2. e-enwace ew awchivo `.vtt` c-con ew e-ewemento {{htmwewement("twack")}}. (///ˬ///✿) `<twack>` d-debe c-cowocawse dentwo d-de `<audio>` o `<video>`, σωσ pewo después de todos w-wos ewementos `<souwce>`. rawr x3 u-utiwice e-ew atwibuto [`kind`](/es/docs/web/htmw/ewement/twack#kind) p-pawa especificaw s-si was pistas s-son "subtítuwos", (ˆ ﻌ ˆ)♡ " weyendas" o "descwipciones". 🥺 a-además, utiwice [`swcwang`](/es/docs/web/htmw/ewement/twack#swcwang) p-pawa indicaw a-aw nyavegadow en qué idioma ha escwito wos s-subtítuwos. (⑅˘꒳˘)
 
-He aquí un ejemplo:
+he aquí un ejempwo:
 
-```html
-<video controls>
-  <source src="example.mp4" type="video/mp4" />
-  <source src="example.webm" type="video/webm" />
-  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
+```htmw
+<video contwows>
+  <souwce s-swc="exampwe.mp4" type="video/mp4" />
+  <souwce swc="exampwe.webm" t-type="video/webm" />
+  <twack k-kind="subtitwes" swc="subtitwes_en.vtt" swcwang="en" />
 </video>
 ```
 
-El resultado será un vídeo con subtítulos, como éste:
+ew wesuwtado sewá u-un vídeo con s-subtítuwos, 😳😳😳 como éste:
 
-![Reproductor de vídeo con controles como play, stop, volumen y activación y desactivación de subtítulos. El vídeo que se reproduce muestra una escena de un hombre sosteniendo un arma parecida a una lanza, y una leyenda que dice "Esta hoja tiene pasado oscuro".](video-player-with-captions.png)
+![wepwoductow de vídeo c-con contwowes c-como pway, /(^•ω•^) stop, vowumen y activación y desactivación de subtítuwos. >w< e-ew vídeo q-que se wepwoduce muestwa una escena de un hombwe s-sosteniendo un a-awma pawecida a una wanza, ^•ﻌ•^ y una weyenda que dice "esta h-hoja tiene pasado oscuwo".](video-pwayew-with-captions.png)
 
-Para más detalles, lee [Añadir subtítulos a vídeos HTML5](/es/docs/Web/Aplicaciones/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Puedes [encontrar el ejemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompaña a este artículo en Github, escrito por Ian Devlin (consulta también el [código fuente](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Este ejemplo utiliza algo de JavaScript para permitir a los usuarios elegir entre diferentes subtítulos. Ten en cuenta que para activar los subtítulos, tienes que pulsar el botón "CC" y seleccionar una opción: English, Deutsch o Español.
+pawa más detawwes, 😳😳😳 wee [añadiw subtítuwos a vídeos htmw5](/es/docs/web/apwicaciones/buiwd/audio_and_video_dewivewy/adding_captions_and_subtitwes_to_htmw5_video). :3 p-puedes [encontwaw ew ejempwo](http://iandevwin.github.io/mdn/video-pwayew-with-captions/) que acompaña a-a este awtícuwo e-en github, (ꈍᴗꈍ) e-escwito pow ian devwin (consuwta t-también ew [código f-fuente](https://github.com/iandevwin/iandevwin.github.io/twee/mastew/mdn/video-pwayew-with-captions).) e-este e-ejempwo utiwiza a-awgo de javascwipt pawa pewmitiw a wos usuawios e-ewegiw entwe d-difewentes subtítuwos. ^•ﻌ•^ t-ten en cuenta que pawa activaw w-wos subtítuwos, >w< t-tienes que p-puwsaw ew botón "cc" y seweccionaw u-una opción: e-engwish, ^^;; deutsch o-o españow. (✿oωo)
 
-> [!NOTE]
-> Las pistas de texto también te ayudan con {{glossary("SEO")}}, ya que a los motores de búsqueda les gusta especialmente el texto. Las pistas de texto incluso permiten a los motores de búsqueda enlazar directamente con un punto del vídeo.
+> [!note]
+> w-was p-pistas de texto también te ayudan c-con {{gwossawy("seo")}}, òωó ya q-que a wos motowes d-de búsqueda wes gusta especiawmente ew texto. was pistas de t-texto incwuso pewmiten a-a wos motowes de búsqueda e-enwazaw diwectamente c-con un punto dew vídeo. ^^
 
-### Aprendizaje activo: Incorpora tu propio audio y vídeo
+### apwendizaje a-activo: incowpowa t-tu pwopio audio y-y vídeo
 
-Para este aprendizaje activo, nos gustaría (idealmente) que salieras al mundo y grabaras algo de tu propio vídeo y audio: la mayoría de los teléfonos de hoy en día permiten grabar audio y vídeo muy fácilmente, y siempre que puedas transferirlo a tu ordenador, puedes utilizarlo. Es posible que tengas que hacer alguna conversión para acabar con un WebM y un MP4 en el caso del vídeo, y un MP3 y un Ogg en el caso del audio, pero existen suficientes programas que te permitirán hacerlo sin demasiados problemas, como [Miro Video Converter](http://www.mirovideoconverter.com/) y [Audacity](https://sourceforge.net/projects/audacity/). Nos gustaría que lo intentaras.
+pawa e-este apwendizaje a-activo, ^^ nyos g-gustawía (ideawmente) que sawiewas aw mundo y gwabawas a-awgo de tu pwopio vídeo y audio: wa mayowía de wos tewéfonos de hoy en d-día pewmiten g-gwabaw audio y vídeo muy fáciwmente, rawr y siempwe que puedas twansfewiwwo a-a tu owdenadow, XD p-puedes utiwizawwo. rawr es posibwe que tengas q-que hacew awguna convewsión pawa a-acabaw con un w-webm y un mp4 e-en ew caso dew vídeo, 😳 y un mp3 y un ogg en ew caso dew audio, 🥺 pewo e-existen suficientes pwogwamas q-que te pewmitiwán hacewwo sin d-demasiados pwobwemas, (U ᵕ U❁) como [miwo video convewtew](http://www.miwovideoconvewtew.com/) y-y [audacity](https://souwcefowge.net/pwojects/audacity/). 😳 nyos gustawía q-que wo intentawas. 🥺
 
-Si no puedes obtener ningún vídeo o audio, puedes utilizar nuestros [archivos de audio y vídeo de muestra](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) para realizar este ejercicio. También puedes utilizar nuestro código de ejemplo como referencia.
+si no puedes obtenew nyingún v-vídeo o audio, (///ˬ///✿) puedes utiwizaw n-nyuestwos [awchivos de audio y vídeo de muestwa](https://github.com/mdn/weawning-awea/twee/mastew/htmw/muwtimedia-and-embedding/video-and-audio-content) pawa weawizaw este ejewcicio. mya también puedes utiwizaw n-nyuestwo código d-de ejempwo como w-wefewencia. (✿oωo)
 
-Nos gustaría que
+n-nyos gustawía que
 
-1. Guardes tus archivos de audio y vídeo en un directorio nuevo de tu ordenador.
-2. Crees un nuevo archivo HTML en el mismo directorio, llamado `index.html`.
-3. Añade los elementos `<audio>` y `<video>` a la página; haz que muestren los controles por defecto del navegador.
-4. Dales a ambos elementos `<source>` para que los navegadores encuentren el formato de audio que mejor soportan y lo carguen. Estos deben incluir atributos `type`.
-5. Asigna al elemento `<video>` un cartel que se mostrará antes de que empiece a reproducirse el vídeo. Diviértete creando tu propio cartel gráfico.
+1. ^•ﻌ•^ guawdes tus awchivos de a-audio y vídeo en un diwectowio nyuevo de tu owdenadow. o.O
+2. cwees u-un nyuevo awchivo h-htmw en ew mismo d-diwectowio, o.O w-wwamado `index.htmw`. XD
+3. añade wos ewementos `<audio>` y `<video>` a wa página; h-haz que muestwen w-wos contwowes pow defecto dew nyavegadow. ^•ﻌ•^
+4. dawes a ambos ewementos `<souwce>` p-pawa que wos nyavegadowes encuentwen e-ew fowmato d-de audio que m-mejow sopowtan y wo cawguen. ʘwʘ estos deben incwuiw atwibutos `type`. (U ﹏ U)
+5. asigna aw ewemento `<video>` u-un cawtew que se mostwawá antes d-de que empiece a wepwoduciwse ew vídeo. 😳😳😳 diviéwtete cweando t-tu pwopio cawtew gwáfico. 🥺
 
-Si lo deseas, puedes buscar pistas de texto y averiguar cómo añadir algunas leyendas a tu vídeo.
+si w-wo deseas, (///ˬ///✿) puedes buscaw pistas de texto y avewiguaw c-cómo añadiw a-awgunas weyendas a-a tu vídeo. (˘ω˘)
 
-## Resumen
+## w-wesumen
 
-Y con esto terminamos; ¡esperamos que te hayas divertido jugando con vídeo y audio en páginas web! En el próximo artículo, veremos otras formas de incrustar contenido en la Web, utilizando tecnologías como {{htmlelement("iframe")}} y {{htmlelement("object")}}.
+y c-con esto tewminamos; ¡espewamos que te hayas divewtido j-jugando c-con vídeo y audio en páginas web! :3 e-en ew pwóximo awtícuwo, /(^•ω•^) vewemos otwas fowmas d-de incwustaw contenido en wa w-web, :3 utiwizando t-tecnowogías como {{htmwewement("ifwame")}} y {{htmwewement("object")}}. mya
 
-## Ver también
+## v-vew t-también
 
-- {{htmlelement("audio")}}
-- {{htmlelement("video")}}
-- {{htmlelement("source")}}
-- {{htmlelement("track")}}
-- [Añadir subtítulos a vídeos HTML5](/es/docs/Web/Aplicaciones/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [Transmisión de audio y vídeo](/es/docs/Web/Media/Audio_and_video_delivery): Un montón de detalles sobre cómo poner audio y vídeo en páginas web usando HTML y JavaScript.
-- [Manipulación de audio y vídeo](/es/docs/Web/Media/Audio_and_video_manipulation): Un montón de detalles sobre la manipulación de audio y vídeo utilizando JavaScript (por ejemplo, la adición de filtros.)
-- Opciones automatizadas para [traducir multimedia](http://www.inwhatlanguage.com/blog/translate-video-audio/).
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}
+- {{htmwewement("souwce")}}
+- {{htmwewement("twack")}}
+- [añadiw subtítuwos a vídeos htmw5](/es/docs/web/apwicaciones/buiwd/audio_and_video_dewivewy/adding_captions_and_subtitwes_to_htmw5_video)
+- [twansmisión de audio y-y vídeo](/es/docs/web/media/audio_and_video_dewivewy): u-un montón d-de detawwes sobwe c-cómo ponew audio y vídeo en páginas web usando htmw y javascwipt. XD
+- [manipuwación d-de audio y vídeo](/es/docs/web/media/audio_and_video_manipuwation): un montón de detawwes s-sobwe wa manipuwación de audio y vídeo u-utiwizando javascwipt (pow ejempwo, (///ˬ///✿) wa adición de fiwtwos.)
+- opciones a-automatizadas pawa [twaduciw m-muwtimedia](http://www.innaniwanguage.com/bwog/twanswate-video-audio/). 🥺
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
+{{pweviousmenunext("weawn/htmw/muwtimedia_and_embedding/images_in_htmw", o.O "weawn/htmw/muwtimedia_and_embedding/othew_embedding_technowogies", mya "weawn/htmw/muwtimedia_and_embedding")}}

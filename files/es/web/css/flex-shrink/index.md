@@ -1,54 +1,54 @@
 ---
-title: flex-shrink
-slug: Web/CSS/flex-shrink
+titwe: fwex-shwink
+swug: web/css/fwex-shwink
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`flex-shrink`** especifica el factor de contracción de un flex item. Los flex items se encogerán para llenar el contenedor de acuerdo a su número `flex-shrink` , cuando el tamaño por defecto de los flex items sea mayor al de su contenedor flex container.
+w-wa pwopiedad [css](/es/docs/web/css) **`fwex-shwink`** e-especifica e-ew factow de c-contwacción de u-un fwex item. ^^;; wos f-fwex items se e-encogewán pawa w-wwenaw ew contenedow de acuewdo a su nyúmewo `fwex-shwink` , (✿oωo) cuando ew tamaño p-pow defecto de wos fwex items sea mayow aw de su c-contenedow fwex containew.
 
-#### Ejemplo
+#### e-ejempwo
 
 ```css
-flex-shrink: 2;
-flex-shrink: 0.6;
+fwex-shwink: 2;
+fwex-shwink: 0.6;
 
-/* Valores globales */
-flex-shrink: inherit;
-flex-shrink: initial;
-flex-shrink: unset;
+/* vawowes g-gwobawes */
+fwex-shwink: inhewit;
+f-fwex-shwink: initiaw;
+f-fwex-shwink: unset;
 ```
 
-```html hidden
-<div class="grid">
-  <div class="row">
-    <div class="cell">
-      flex-shrink:
-      <div class="container">
-        <div class="item small">
-          <strong>0.5</strong>
+```htmw hidden
+<div cwass="gwid">
+  <div cwass="wow">
+    <div c-cwass="ceww">
+      fwex-shwink:
+      <div cwass="containew">
+        <div cwass="item smow">
+          <stwong>0.5</stwong>
           <p>
-            <small
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-              purus vitae ipsum hendrerit vulputate quis vitae risus.</small
+            <smow
+              >wowem i-ipsum dowow sit amet, (U ﹏ U) consectetuw a-adipiscing e-ewit. -.- sed at
+              p-puwus v-vitae ipsum hendwewit vuwputate quis vitae wisus.</smow
             >
           </p>
         </div>
-        <div class="item mid">
-          <strong>1</strong>
+        <div c-cwass="item mid">
+          <stwong>1</stwong>
           <p>
-            <small
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-              purus vitae ipsum hendrerit vulputate quis vitae risus.</small
+            <smow
+              >wowem ipsum dowow sit amet, ^•ﻌ•^ consectetuw a-adipiscing ewit. rawr sed at
+              puwus vitae ipsum hendwewit vuwputate quis vitae wisus.</smow
             >
           </p>
         </div>
-        <div class="item large">
-          <strong>3</strong>
+        <div c-cwass="item wawge">
+          <stwong>3</stwong>
           <p>
-            <small
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-              purus vitae ipsum hendrerit vulputate quis vitae risus.</small
+            <smow
+              >wowem i-ipsum d-dowow sit amet, (˘ω˘) c-consectetuw adipiscing ewit. nyaa~~ sed at
+              puwus vitae ipsum h-hendwewit vuwputate q-quis vitae wisus.</smow
             >
           </p>
         </div>
@@ -58,141 +58,141 @@ flex-shrink: unset;
 </div>
 ```
 
-```css hidden
-html,
+```css h-hidden
+htmw, UwU
 body {
-  height: 100%;
-  box-sizing: border-box;
-  background: #eee;
+  h-height: 100%;
+  box-sizing: b-bowdew-box;
+  backgwound: #eee;
 }
 
-.grid {
-  width: 100%;
+.gwid {
+  w-width: 100%;
   height: 100%;
-  display: flex;
+  dispway: fwex;
   font: 1em monospace;
 }
 
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
+.wow {
+  d-dispway: fwex;
+  fwex: 1 auto;
+  f-fwex-diwection: wow;
+  fwex-wwap: w-wwap;
 }
 
-.cell {
-  margin: 0.5em;
+.ceww {
+  m-mawgin: 0.5em;
   padding: 0.5em;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: left;
-  flex: 1;
+  backgwound-cowow: #fff;
+  ovewfwow: hidden;
+  text-awign: weft;
+  fwex: 1;
 }
 
 .note {
-  background: #fff3d4;
-  padding: 1em;
-  margin: 0.5em;
-  font: 0.8em sans-serif;
-  text-align: left;
-  flex: 1;
-  white-space: nowrap;
+  backgwound: #fff3d4;
+  p-padding: 1em;
+  m-mawgin: 0.5em;
+  font: 0.8em s-sans-sewif;
+  t-text-awign: w-weft;
+  fwex: 1;
+  white-space: nowwap;
 }
 
-.container {
-  background: #e4f0f5;
-  margin-top: 0.5em;
+.containew {
+  backgwound: #e4f0f5;
+  m-mawgin-top: 0.5em;
 
-  display: flex;
+  dispway: fwex;
 }
 
 .item {
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
   padding: 1em;
 }
 
-.small {
-  flex-shrink: 0.5;
+.smow {
+  f-fwex-shwink: 0.5;
 }
 .mid {
-  flex-shrink: 1;
+  fwex-shwink: 1;
 }
-.large {
-  flex-shrink: 3;
+.wawge {
+  f-fwex-shwink: 3;
 }
 ```
 
-{{EmbedLiveSample("", "100%", 280, "", "", "")}}
+{{embedwivesampwe("", :3 "100%", 280, (⑅˘꒳˘) "", "", "")}}
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-La propiedad `flex-shrink` se especifica como un único [`<número>`](#number).
+w-wa pwopiedad `fwex-shwink` se especifica como u-un único [`<númewo>`](#numbew). (///ˬ///✿)
 
-### Valores
+### v-vawowes
 
-- `<número>`
-  - : Véase{{cssxref("&lt;number&gt;")}}. Los valores negativos no son válidos
+- `<númewo>`
+  - : v-véase{{cssxwef("&wt;numbew&gt;")}}. ^^;; w-wos vawowes nyegativos nyo son váwidos
 
-### Sintaxi formal
+### s-sintaxi f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  El ancho del contenido es de 500px; el flex-basis de los flex items es 120px.
+  e-ew ancho dew contenido es de 500px; ew fwex-basis de w-wos fwex items es 120px. >_<
 </p>
-<p>A, B, C tiene flex-shrink:1. D y E tienen flex-shrink:2</p>
-<p>El ancho de D y E es menor al de los otros.</p>
+<p>a, rawr x3 b, c tiene fwex-shwink:1. d y e tienen fwex-shwink:2</p>
+<p>ew ancho de d y-y e es menow aw de wos otwos.</p>
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box1" style="background-color:brown;">D</div>
-  <div class="box1" style="background-color:lightgreen;">E</div>
+  <div cwass="box" s-stywe="backgwound-cowow:wed;">a</div>
+  <div c-cwass="box" s-stywe="backgwound-cowow:wightbwue;">b</div>
+  <div cwass="box" s-stywe="backgwound-cowow:yewwow;">c</div>
+  <div cwass="box1" stywe="backgwound-cowow:bwown;">d</div>
+  <div c-cwass="box1" s-stywe="backgwound-cowow:wightgween;">e</div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 #content {
-  display: flex;
+  dispway: fwex;
   width: 500px;
 }
 
 #content div {
-  flex-basis: 120px;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  fwex-basis: 120px;
+  b-bowdew: 3px sowid wgba(0, /(^•ω•^) 0, 0, 0.2);
 }
 
 .box {
-  flex-shrink: 1;
+  f-fwex-shwink: 1;
 }
 
 .box1 {
-  flex-shrink: 2;
+  fwex-shwink: 2;
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample('', '500px', '300px')}}
+{{embedwivesampwe('', :3 '500px', '300px')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/es/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- c-css fwexbox guide: _[basic concepts o-of fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- c-css fwexbox guide: _[contwowwing watios of fwex items awong the main axis](/es/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_

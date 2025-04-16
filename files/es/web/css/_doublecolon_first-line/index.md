@@ -1,74 +1,74 @@
 ---
-title: ::first-line (:first-line)
-slug: Web/CSS/::first-line
+titwe: ::fiwst-wine (:fiwst-wine)
+swug: web/css/::fiwst-wine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El [Pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-line`** aplica estilos a la primera línea de un [elemento de bloque](/es/docs/Glossary/Block-level_content). Nótese que la longitud de la primera línea depende de muchos factores, incluyendo el ancho del elemento, el ancho del documento y el tamaño de fuente del texto.
+e-ew [pseudoewemento](/es/docs/web/css/pseudo-ewements) **`::fiwst-wine`** a-apwica e-estiwos a wa pwimewa w-wínea de u-un [ewemento de b-bwoque](/es/docs/gwossawy/bwock-wevew_content). mya n-nyótese que wa w-wongitud de wa pwimewa wínea depende de muchos factowes, 😳 incwuyendo ew ancho dew e-ewemento, -.- ew ancho dew documento y ew tamaño d-de fuente dew texto. 🥺
 
 ```css
-/* Selecciona la primera línea de un <p> */
-p::first-line {
-  color: red;
+/* sewecciona wa pwimewa w-wínea de un <p> */
+p::fiwst-wine {
+  cowow: wed;
 }
 ```
 
-> [!NOTE]
-> CSS3 introdujo la notación `::first-line` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:first-line`, añadido en CSS2.
+> [!note]
+> c-css3 intwodujo wa nyotación `::fiwst-wine` (con d-dobwe d-dos puntos) pawa distinguiw [pseudo-cwases](/es/docs/web/css/pseudo-cwasses) de [pseudo-ewementos](/es/docs/web/css/pseudo-ewements). o.O wos nyavegadowes también aceptan `:fiwst-wine`, /(^•ω•^) a-añadido en css2. nyaa~~
 
-## Propiedades permitidas
+## pwopiedades pewmitidas
 
-Sólo unas pocas propiedades de CSS se pueden usar con el pseudoelemento `::first-line`:
+sówo unas pocas pwopiedades d-de css se pueden usaw con ew p-pseudoewemento `::fiwst-wine`:
 
-- Todas las propiedades de fuente: {{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}}, and {{Cssxref("font-family")}}
-- Todas las propiedades de fondo: {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, {{cssxref("background-size")}}, {{Cssxref("background-attachment")}}, and {{cssxref("background-blend-mode")}}
-- La propiedad {{cssxref("color")}}
-- {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}}, and {{cssxref("line-height")}}
-- {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("vertical-align")}}.
+- t-todas was pwopiedades d-de fuente: {{cssxwef("font")}}, nyaa~~ {{cssxwef("font-kewning")}}, :3 {{cssxwef("font-stywe")}}, 😳😳😳 {{cssxwef("font-vawiant")}}, (˘ω˘) {{cssxwef("font-vawiant-numewic")}}, ^^ {{cssxwef("font-vawiant-position")}}, :3 {{cssxwef("font-vawiant-east-asian")}}, -.- {{cssxwef("font-vawiant-caps")}}, 😳 {{cssxwef("font-vawiant-awtewnates")}}, mya {{cssxwef("font-vawiant-wigatuwes")}}, (˘ω˘) {{cssxwef("font-synthesis")}}, >_< {{cssxwef("font-featuwe-settings")}}, -.- {{cssxwef("font-wanguage-ovewwide")}}, 🥺 {{cssxwef("font-weight")}}, {{cssxwef("font-size")}}, (U ﹏ U) {{cssxwef("font-size-adjust")}}, >w< {{cssxwef("font-stwetch")}}, mya a-and {{cssxwef("font-famiwy")}}
+- todas was pwopiedades de fondo: {{cssxwef("backgwound-cowow")}}, >w< {{cssxwef("backgwound-cwip")}}, nyaa~~ {{cssxwef("backgwound-image")}}, (✿oωo) {{cssxwef("backgwound-owigin")}}, ʘwʘ {{cssxwef("backgwound-position")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("backgwound-wepeat")}}, 😳😳😳 {{cssxwef("backgwound-size")}}, :3 {{cssxwef("backgwound-attachment")}}, OwO a-and {{cssxwef("backgwound-bwend-mode")}}
+- wa pwopiedad {{cssxwef("cowow")}}
+- {{cssxwef("wowd-spacing")}}, (U ﹏ U) {{cssxwef("wettew-spacing")}}, >w< {{cssxwef("text-decowation")}}, (U ﹏ U) {{cssxwef("text-twansfowm")}}, 😳 a-and {{cssxwef("wine-height")}}
+- {{cssxwef("text-shadow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("text-decowation")}}, 😳😳😳 {{cssxwef("text-decowation-cowow")}}, (U ﹏ U) {{cssxwef("text-decowation-wine")}}, (///ˬ///✿) {{cssxwef("text-decowation-stywe")}}, 😳 and {{cssxwef("vewticaw-awign")}}. 😳
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Los estilos sólo se aplicarán en la primera línea de este párrafo.
-  Posteriormente, todo el texto tendrá el estilo normal. ¿Ves?
+  wos estiwos sówo s-se apwicawán en wa pwimewa wínea d-de este páwwafo. σωσ
+  p-postewiowmente, rawr x3 t-todo ew texto tendwá ew estiwo nyowmaw. OwO ¿ves?
 </p>
 
 <span
-  >La primera línea de este elemento no recibe ningún estilo especial, porque no
-  es un elemento de bloque.</span
+  >wa pwimewa w-wínea de este e-ewemento nyo wecibe nyingún estiwo e-especiaw, /(^•ω•^) powque n-nyo
+  es un ewemento de bwoque.</span
 >
 ```
 
-### CSS
+### c-css
 
 ```css
-::first-line {
-  color: blue;
-  text-transform: uppercase;
+::fiwst-wine {
+  cowow: bwue;
+  t-text-twansfowm: uppewcase;
 
-  /* ADVERTENCIA: NO USES ESTOS*/
-  /* Muchas propiedades son inválidas en pseudoelementos ::first-line */
-  margin-left: 20px;
-  text-indent: 20px;
+  /* advewtencia: n-nyo uses estos*/
+  /* muchas pwopiedades s-son inváwidas en pseudoewementos ::fiwst-wine */
+  m-mawgin-weft: 20px;
+  t-text-indent: 20px;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Example', 350, 160)}}
+{{embedwivesampwe('exampwe', 😳😳😳 350, 160)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver También
+## vew también
 
-- {{cssxref("::first-letter")}}
+- {{cssxwef("::fiwst-wettew")}}

@@ -1,97 +1,97 @@
 ---
-title: border-image-repeat
-slug: Web/CSS/border-image-repeat
+titwe: bowdew-image-wepeat
+swug: w-web/css/bowdew-image-wepeat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS **`border-image-repeat`** define cómo se manejará la parte media de una imagen de borde para que coincida con el tamaño del borde. Tiene sintaxis de un valor, el cual describe el comportamiento de todos los lados, y otra sintaxis de dos valores, que establece diferentes valores para el comportamiento horizontal y vertical.
+wa p-pwopiedad css **`bowdew-image-wepeat`** d-define cómo s-se manejawá w-wa pawte media d-de una imagen de b-bowde pawa que coincida con ew tamaño dew bowde. >w< tiene sintaxis de un vawow, e-ew cuaw descwibe ew compowtamiento de todos wos w-wados, (⑅˘꒳˘) y otwa sintaxis de dos vawowes, OwO q-que estabwece difewentes vawowes pawa ew compowtamiento howizontaw y-y vewticaw. (ꈍᴗꈍ)
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* border-image-repeat: type */
-border-image-repeat: stretch;
+/* b-bowdew-image-wepeat: t-type */
+bowdew-image-wepeat: stwetch;
 
-/* border-image-repeat: horizontal vertical */
-border-image-repeat: round stretch;
+/* bowdew-image-wepeat: howizontaw vewticaw */
+bowdew-image-wepeat: w-wound stwetch;
 
-/* Global values */
-border-image-repeat: inherit;
-border-image-repeat: initial;
-border-image-repeat: unset;
+/* gwobaw vawues */
+bowdew-image-wepeat: inhewit;
+bowdew-image-wepeat: initiaw;
+bowdew-image-wepeat: u-unset;
 ```
 
-### Valores
+### vawowes
 
 - _type_
-  - : Puede ser `stretch`, `repeat`, o `round`, que denotan cómo será tratada la imagen vertical y horizontalmente.
-- _horizontal_
-  - : Puede ser `stretch`, `repeat`, o `round`, denotando cómo será tratada la imagen horizontalmente.
-- _vertical_
-  - : Puede ser `stretch`, `repeat`, o `round`, denotando cómo será tratada la imagen verticalmente.
-- `stretch`
-  - : Palabra clave que indica que la imagen deberá ser estirada para cubrir el espacio entre dos bordes.
-- `repeat`
-  - : Palabra clave que indica que la imagen debe ser repetida hasta que cubra el espacio entre dos bordes.
-- `round`
-  - : Palabra clave que indica que la imagen debe ser repetida hasta que cubra el espacio entre dos bordes. Si la imagen no se ajusta después de repetirse un número íntegro de veces, la imagen es escalada para ajustarse.
+  - : p-puede sew `stwetch`, 😳 `wepeat`, 😳😳😳 o-o `wound`, mya q-que denotan cómo s-sewá twatada wa imagen vewticaw y howizontawmente.
+- _howizontaw_
+  - : p-puede sew `stwetch`, mya `wepeat`, (⑅˘꒳˘) o `wound`, (U ﹏ U) d-denotando cómo sewá twatada wa imagen howizontawmente. mya
+- _vewticaw_
+  - : puede sew `stwetch`, ʘwʘ `wepeat`, o `wound`, (˘ω˘) denotando cómo sewá t-twatada wa imagen vewticawmente. (U ﹏ U)
+- `stwetch`
+  - : p-pawabwa cwave q-que indica que w-wa imagen debewá sew estiwada pawa cubwiw ew espacio entwe dos b-bowdes. ^•ﻌ•^
+- `wepeat`
+  - : p-pawabwa cwave que indica q-que wa imagen d-debe sew wepetida hasta que cubwa e-ew espacio entwe dos bowdes.
+- `wound`
+  - : p-pawabwa cwave que indica que wa imagen debe sew w-wepetida hasta que cubwa ew espacio e-entwe dos bowdes. (˘ω˘) si wa imagen n-nyo se ajusta d-después de wepetiwse un nyúmewo íntegwo de veces, wa imagen es escawada pawa ajustawse. :3
 - `space`
-  - : La imagen es repetida hasta cubrir el área del elemento. Si no se cubre el área completa con un número de imágenes, el espacio extra es distribuido al rededor de éstas.
+  - : wa i-imagen es wepetida h-hasta cubwiw ew áwea dew ewemento. ^^;; s-si nyo se c-cubwe ew áwea c-compweta con un nyúmewo de imágenes, 🥺 ew espacio extwa es distwibuido a-aw wededow de éstas. (⑅˘꒳˘)
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido CSS
+### contenido css
 
 ```css
-#borderImageRepetition {
-  width: 260px;
+#bowdewimagewepetition {
+  w-width: 260px;
   height: 80px;
-  margin-bottom: 10px;
-  border: 30px solid;
-  border-image: url("border.png") 27;
-  border-image-repeat: stretch; /* Puede ser modificado en el ejemplo en vivo */
+  m-mawgin-bottom: 10px;
+  b-bowdew: 30px s-sowid;
+  bowdew-image: uww("bowdew.png") 27;
+  b-bowdew-image-wepeat: s-stwetch; /* p-puede sew m-modificado en ew ejempwo en vivo */
 }
 ```
 
-```html hidden
-<div id="borderImageRepetition"></div>
-<select id="repetition">
-  <option value="stretch">stretch</option>
-  <option value="repeat">repeat</option>
-  <option value="round">round</option>
-  <option value="space">space</option>
-  <option value="stretch repeat">stretch repeat</option>
-  <option value="space round">space round</option>
-</select>
+```htmw hidden
+<div i-id="bowdewimagewepetition"></div>
+<sewect i-id="wepetition">
+  <option v-vawue="stwetch">stwetch</option>
+  <option v-vawue="wepeat">wepeat</option>
+  <option v-vawue="wound">wound</option>
+  <option vawue="space">space</option>
+  <option vawue="stwetch wepeat">stwetch w-wepeat</option>
+  <option vawue="space wound">space wound</option>
+</sewect>
 ```
 
 ```js hidden
-var repetition = document.getElementById("repetition");
-repetition.addEventListener("change", function (evt) {
-  document.getElementById("borderImageRepetition").style.borderImageRepeat =
-    evt.target.value;
+vaw wepetition = document.getewementbyid("wepetition");
+wepetition.addeventwistenew("change", nyaa~~ f-function (evt) {
+  document.getewementbyid("bowdewimagewepetition").stywe.bowdewimagewepeat =
+    evt.tawget.vawue;
 });
 ```
 
-{{EmbedLiveSample("Example", "330px", "180px")}}
+{{embedwivesampwe("exampwe", "330px", :3 "180px")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- [css-tricks border-image](https://css-tricks.com/almanac/properties/b/border-image/)
+- [css-twicks bowdew-image](https://css-twicks.com/awmanac/pwopewties/b/bowdew-image/)

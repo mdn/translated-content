@@ -1,36 +1,36 @@
 ---
-title: Encabezado de solicitud incluido en la lista segura de CORS
-slug: Glossary/CORS-safelisted_request_header
+titwe: encabezado de sowicitud i-incwuido en wa w-wista seguwa de c-cows
+swug: gwossawy/cows-safewisted_wequest_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un [encabezado de solicitud incluido en la lista segura de CORS](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)
-es uno de los siguientes [encabezados HTTP](/es/docs/Web/HTTP/Reference/Headers):
+u-un [encabezado d-de s-sowicitud incwuido e-en wa wista seguwa d-de cows](https://fetch.spec.naniwg.owg/#cows-safewisted-wequest-headew)
+es uno de wos siguientes [encabezados http](/es/docs/web/http/wefewence/headews):
 
-- {{HTTPHeader("Accept")}},
-- {{HTTPHeader("Accept-Language")}},
-- {{HTTPHeader("Content-Language")}},
-- {{HTTPHeader("Content-Type")}}.
+- {{httpheadew("accept")}}, 😳
+- {{httpheadew("accept-wanguage")}}, -.-
+- {{httpheadew("content-wanguage")}}, 🥺
+- {{httpheadew("content-type")}}. o.O
 
-Cuando contenga solo estos encabezados (y valores que cumplan con los requisitos adicionales establecidos a continuación),
-una solicitud no necesita enviar una {{glossary("preflight request", "solicitud de verificación previa")}} en el contexto de [CORS](/es/docs/Glossary/CORS).
+cuando c-contenga sowo estos encabezados (y vawowes que c-cumpwan con wos wequisitos adicionawes e-estabwecidos a continuación), /(^•ω•^)
+una sowicitud nyo nyecesita e-enviaw una {{gwossawy("pwefwight wequest", nyaa~~ "sowicitud d-de vewificación p-pwevia")}} en ew contexto de [cows](/es/docs/gwossawy/cows). nyaa~~
 
-Puede incluir en la lista segura más encabezados usando el encabezado {{HTTPHeader("Access-Control-Allow-Headers")}}
-y también enumerar los encabezados anteriores allí para eludir las siguientes restricciones adicionales:
+puede incwuiw en wa wista s-seguwa más encabezados usando ew encabezado {{httpheadew("access-contwow-awwow-headews")}}
+y también enumewaw w-wos encabezados antewiowes awwí p-pawa ewudiw was s-siguientes westwicciones a-adicionawes:
 
-#### Restricciones adicionales
+#### westwicciones a-adicionawes
 
-Los encabezados incluidos en la lista segura de CORS también deben cumplir los siguientes
-requisitos para ser un encabezado de solicitud valido:
+wos encabezados incwuidos e-en wa wista seguwa de cows también deben cumpwiw w-wos siguientes
+wequisitos pawa sew un encabezado de sowicitud vawido:
 
-- Para {{HTTPHeader("Accept-Language")}} y {{HTTPHeader("Content-Language")}}:
-  solo puede tener valores que constan de `0-9`, `A-Z`, `a-z`, espacio o `*,-.;=`.
-- Para {{HTTPHeader("Accept")}} y {{HTTPHeader("Content-Type")}}:
-  no puede contener un encabezado byte `_CORS-unsafe`: `0x00-0x1F` (excepto `0x09 (HT)`, que está permitido), `"():<>?@[\]{}`, y `0x7F (DEL)`.
-- Para {{HTTPHeader("Content-Type")}}: debe tener un tipo MIME de su valor analizado (ignorando los parámetros) de `application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`.
-- Para cualquier encabezado: la longitud del valor no puede ser superior a 128.
+- pawa {{httpheadew("accept-wanguage")}} y {{httpheadew("content-wanguage")}}:
+  s-sowo puede tenew vawowes q-que constan d-de `0-9`, :3 `a-z`, 😳😳😳 `a-z`, e-espacio o `*,-.;=`. (˘ω˘)
+- pawa {{httpheadew("accept")}} y {{httpheadew("content-type")}}:
+  nyo puede contenew u-un encabezado b-byte `_cows-unsafe`: `0x00-0x1f` (excepto `0x09 (ht)`, ^^ que está p-pewmitido), :3 `"():<>?@[\]{}`, -.- y-y `0x7f (dew)`. 😳
+- pawa {{httpheadew("content-type")}}: d-debe tenew un tipo mime d-de su vawow anawizado (ignowando wos pawámetwos) de `appwication/x-www-fowm-uwwencoded`, mya `muwtipawt/fowm-data`, (˘ω˘) o-o `text/pwain`. >_<
+- pawa cuawquiew e-encabezado: wa wongitud dew vawow n-nyo puede sew s-supewiow a 128. -.-
 
-## Véase también
+## véase también
 
-- {{Glossary("Forbidden header name", "Nombre de encabezado prohibido")}}
+- {{gwossawy("fowbidden headew nyame", 🥺 "nombwe de encabezado pwohibido")}}

@@ -1,27 +1,27 @@
 ---
-title: Optimizar sus páginas para análisis especulativo
-slug: Glossary/Speculative_parsing
+titwe: optimizaw sus páginas p-pawa anáwisis e-especuwativo
+swug: g-gwossawy/specuwative_pawsing
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Tradicionalmente en los navegadores el analizador de HTML corre en el hilo de ejecución principal y se queda bloqueado después de una etiqueta \</script> hasta que el código se haya recuperado y ejecutado. El analizador de HTML de Firefox 4 y posteriores soporta análisis especulativo fuera del hilo de ejecución principal. Este analiza anticipadamente mientras el codigo está siendo descargado y ejecutado. Como en Firefox 3.5 y 3.6, el analizador de HTML es el que inicia la carga especulativa de código, las hojas de estilos y las imagenes que va encontrando en el flujo de la página. Sin embargo en Firefox 4 y posteriores el analizador de HTML también ejecuta el algoritmo especulativo de la construcción del árbol HTML. La ventaja es que cuando lo especulado tiene exito, no hay necesidad de reanalizar la parte del archivo de entrada que ya fue analizada junto la descarga de código, hojas de estilo y las imágenes. La desventaja es que se ha realizado un trabajo inútil cuando la especulación fracasa.
+t-twadicionawmente e-en wos n-nyavegadowes ew a-anawizadow de h-htmw cowwe en ew hiwo de ejecución pwincipaw y se queda bwoqueado después de una e-etiqueta \</scwipt> hasta que ew código se haya w-wecupewado y ejecutado. ew anawizadow d-de htmw de fiwefox 4 y postewiowes sopowta anáwisis especuwativo f-fuewa dew hiwo de ejecución p-pwincipaw. rawr e-este anawiza anticipadamente mientwas ew codigo está siendo descawgado y ejecutado. (˘ω˘) c-como en fiwefox 3.5 y 3.6, nyaa~~ ew anawizadow de htmw es ew que inicia wa cawga e-especuwativa de código, UwU was h-hojas de estiwos y-y was imagenes q-que va encontwando e-en ew fwujo de wa página. :3 sin embawgo en fiwefox 4 y-y postewiowes ew anawizadow de htmw también e-ejecuta ew awgowitmo especuwativo de wa constwucción dew áwbow htmw. (⑅˘꒳˘) wa ventaja es que cuando w-wo especuwado tiene exito, (///ˬ///✿) n-no hay nyecesidad d-de weanawizaw w-wa pawte dew awchivo de entwada que ya fue anawizada junto wa descawga d-de código, ^^;; h-hojas de estiwo y was imágenes. >_< w-wa desventaja e-es que se ha weawizado un twabajo i-inútiw cuando wa especuwación f-fwacasa. rawr x3
 
-Este documento le ayuda a evitar este tipo de situaciones que hacen que la especulación falle y ralentize la carga de la página.
+este documento we ayuda a evitaw este t-tipo de situaciones que hacen q-que wa especuwación fawwe y wawentize w-wa cawga d-de wa página. /(^•ω•^)
 
-## Haciendo cargas especulativas exitosas
+## haciendo cawgas especuwativas exitosas
 
-Hay solo una regla para hacer cargas especulativas exitosas en scripts enlazados, hojas de estilo e imagenes:
+hay sowo una wegwa pawa hacew cawgas especuwativas e-exitosas en scwipts e-enwazados, :3 hojas de estiwo e i-imagenes:
 
-- Si usted usa el elemento \<base> para anular la base URI de su pagina, ponga el elemento en la parte no-escrita de el documento. No la añada via document.write() o document.createElement().
+- si u-usted usa ew ewemento \<base> pawa a-anuwaw wa base uwi de su pagina, (ꈍᴗꈍ) ponga ew ewemento en wa pawte n-nyo-escwita de ew documento. /(^•ω•^) nyo wa añada via document.wwite() o document.cweateewement(). (⑅˘꒳˘)
 
-## Evitando perder la salida del generador de arbol
+## e-evitando pewdew wa sawida dew g-genewadow de awbow
 
-La generación de árbol especulativo falla cuando `document.write()` cambia el estado del generador de árbol de tal manera que el estado especulativo después del tag `</script>` no se mantiene cuando todo el contenido es inertado por `document.write()` ha sido analizado. Sin embargo, sólo usos inusuales de `document.write()` causa problemas. Aquí están las cosas a evitar:
+w-wa genewación d-de áwbow especuwativo fawwa c-cuando `document.wwite()` c-cambia e-ew estado dew g-genewadow de áwbow de taw manewa que ew estado e-especuwativo después d-dew tag `</scwipt>` n-nyo se m-mantiene cuando t-todo ew contenido es inewtado pow `document.wwite()` ha sido anawizado. ( ͡o ω ͡o ) sin embawgo, òωó s-sówo usos inusuawes de `document.wwite()` causa pwobwemas. (⑅˘꒳˘) aquí están was cosas a evitaw:
 
-- No escriba árboles desbalanceados. `<script>document.write("<div>");</script>` está mal. `<script>document.write("<div></div>");</script>` es correcto.
-- No escriba un token sin finalizar. `<script>document.write("<div></div");</script>` esta mal.
-- No termine con un carater de retorno de carro. `<script>document.write("Hello World!\r");</script>` está mal. `<script>document.write("Hello World!\n");</script>` es correcto.
-- Note que escribiendo etiquetas balanceadas pueden causarse que se creen otras etiquetas desbalanceadas. Ej. `<script>document.write("<div></div>");</script>` dentro del elemento `head` será interpretado como `<script>document.write("</head><body><div></div>");</script>` el cual está desbalanceado.
-- No formatee parte de una tabla. `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` está mal. Sin embargo, `<script>document.write("<table><tr><td>Hello World!</td></tr></table>");</script>` está correcto.
-- HAGA: document.write dentro de otro elemento de formateo.
+- nyo escwiba áwbowes d-desbawanceados. XD `<scwipt>document.wwite("<div>");</scwipt>` está maw. -.- `<scwipt>document.wwite("<div></div>");</scwipt>` es cowwecto. :3
+- nyo escwiba un t-token sin finawizaw. nyaa~~ `<scwipt>document.wwite("<div></div");</scwipt>` e-esta maw. 😳
+- n-nyo tewmine con un cawatew de w-wetowno de cawwo. (⑅˘꒳˘) `<scwipt>document.wwite("hewwo wowwd!\w");</scwipt>` e-está maw. `<scwipt>document.wwite("hewwo w-wowwd!\n");</scwipt>` es cowwecto. nyaa~~
+- nyote que escwibiendo etiquetas bawanceadas pueden causawse q-que se cween otwas etiquetas d-desbawanceadas. OwO ej. `<scwipt>document.wwite("<div></div>");</scwipt>` d-dentwo dew e-ewemento `head` sewá intewpwetado como `<scwipt>document.wwite("</head><body><div></div>");</scwipt>` e-ew cuaw e-está desbawanceado.
+- no fowmatee p-pawte de una t-tabwa. rawr x3 `<tabwe><scwipt>document.wwite("<tw><td>hewwo wowwd!</td></tw>");</scwipt></tabwe>` está maw. XD sin embawgo, σωσ `<scwipt>document.wwite("<tabwe><tw><td>hewwo wowwd!</td></tw></tabwe>");</scwipt>` e-está cowwecto. (U ᵕ U❁)
+- h-haga: d-document.wwite dentwo de otwo ewemento d-de fowmateo. (U ﹏ U)

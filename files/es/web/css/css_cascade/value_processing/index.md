@@ -1,27 +1,27 @@
 ---
-title: Valor inicial
-slug: Web/CSS/CSS_cascade/Value_processing
-original_slug: Web/CSS/CSS_cascade/initial_value
+titwe: vawow iniciaw
+swug: web/css/css_cascade/vawue_pwocessing
+o-owiginaw_swug: w-web/css/css_cascade/initiaw_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
+<< [vowvew](/es/gu%c3%ada_de_wefewencia_de_css)
 
-### Resumen
+### w-wesumen
 
-El **Valor inicial** dado en el resumen de cada definición de [propiedad CSS](/es/Gu%c3%ada_de_referencia_de_CSS) tiene un significado distinto según se trate de [propiedades heredadas o no heredadas](/es/docs/Web/CSS/Inheritance#propiedades_heredadas_y_no_heredadas).
+e-ew **vawow iniciaw** d-dado en e-ew wesumen de cada d-definición de [pwopiedad c-css](/es/gu%c3%ada_de_wefewencia_de_css) tiene un significado distinto según se twate de [pwopiedades h-hewedadas o nyo hewedadas](/es/docs/web/css/inhewitance#pwopiedades_hewedadas_y_no_hewedadas). (✿oωo)
 
-Para propiedades [heredadas](/es/docs/Web/CSS/Inheritance#propiedades_heredadas_y_no_heredadas), se usa el valor inicial, para el elemento raíz **solamente**, cuando no se ha especificado ningún valor para el elemento.
+pawa pwopiedades [hewedadas](/es/docs/web/css/inhewitance#pwopiedades_hewedadas_y_no_hewedadas), (ˆ ﻌ ˆ)♡ s-se usa ew vawow iniciaw, (˘ω˘) pawa e-ew ewemento waíz **sowamente**, (⑅˘꒳˘) cuando nyo se ha especificado nyingún vawow p-pawa ew ewemento. (///ˬ///✿)
 
-Para propiedades [no heredadas](/es/docs/Web/CSS/Inheritance#propiedades_heredadas_y_no_heredadas) se usa el valor inicial para **todos** los elementos, cuando no se especificó nigún valor para el elemento.
+pawa pwopiedades [no h-hewedadas](/es/docs/web/css/inhewitance#pwopiedades_hewedadas_y_no_hewedadas) s-se usa ew vawow iniciaw pawa **todos** wos ewementos, 😳😳😳 cuando nyo se especificó n-nyigún vawow pawa ew ewemento. 🥺
 
-En CSS3 se propuso el valor [`initial`](/es/docs/Web/CSS/initial) para permitir a los autores especificar explícitamente éste valor inicial.
+en css3 se pwopuso ew vawow [`initiaw`](/es/docs/web/css/initiaw) pawa pewmitiw a-a wos autowes especificaw e-expwícitamente éste v-vawow iniciaw. mya
 
-### Ver también
+### v-vew t-también
 
-[Propiedades heredadas y no heredadas](/es/docs/Web/CSS/Inheritance#propiedades_heredadas_y_no_heredadas), [`initial`](/es/docs/Web/CSS/initial)
+[pwopiedades hewedadas y nyo hewedadas](/es/docs/web/css/inhewitance#pwopiedades_hewedadas_y_no_hewedadas), 🥺 [`initiaw`](/es/docs/web/css/initiaw)
 
-Categorías
+c-categowías
 
-Interwiki Languages
+intewwiki wanguages

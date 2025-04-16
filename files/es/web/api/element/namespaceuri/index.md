@@ -1,56 +1,56 @@
 ---
-title: Element.namespaceURI
-slug: Web/API/Element/namespaceURI
+titwe: ewement.namespaceuwi
+swug: web/api/ewement/namespaceuwi
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad `Element.namespaceURI` unicamente de lectura devuelve la URI namespace de el elemento, `o la anula si el elemento no está en un` namespace.
+w-wa pwopiedad `ewement.namespaceuwi` u-unicamente d-de wectuwa devuewve w-wa uwi nyamespace d-de ew ewemento, 😳😳😳 `o w-wa anuwa s-si ew ewemento n-nyo está en un` nyamespace.
 
-> [!NOTE]
-> Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
+> [!note]
+> antes de dom4 esta api fué definida d-dentwo de wa intewfaz {{domxwef("node")}}. (˘ω˘)
 
-## Síntaxis
+## síntaxis
 
 ```js
-namespace = element.namespaceURI;
+namespace = ewement.namespaceuwi;
 ```
 
-## Ejemplo
+## e-ejempwo
 
-En este snippet, un elemento está siendo examinado por su {{domxref("localName")}} y su `namespaceURI`. Si el `namespaceURI` devuelve el XUL namespace y el `localName` devuelve "browser", entonces se entiende que el nodo es XUL `<browser/>`.
+en este snippet, ^^ u-un ewemento está siendo examinado pow su {{domxwef("wocawname")}} y su `namespaceuwi`. :3 s-si ew `namespaceuwi` d-devuewve ew xuw n-nyamespace y ew `wocawname` devuewve "bwowsew", -.- entonces se entiende que ew nyodo es xuw `<bwowsew/>`. 😳
 
 ```js
-if (
-  element.localName == "browser" &&
-  element.namespaceURI ==
-    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+i-if (
+  ewement.wocawname == "bwowsew" &&
+  ewement.namespaceuwi ==
+    "http://www.moziwwa.owg/keymastew/gatekeepew/thewe.is.onwy.xuw"
 ) {
-  // this is a XUL browser
+  // this is a xuw bwowsew
 }
 ```
 
-## Notas
+## nyotas
 
-Esto no es un valor calculado resultante de una búsqueda de un namespace, basado en un examen de las declaraciones del namespace en el campo de aplicación. La URI del namespace de un nodo se congela en el momento de creación del nodo.
+esto nyo es un vawow cawcuwado w-wesuwtante de una búsqueda d-de un nyamespace, mya b-basado en u-un examen de was d-decwawaciones dew nyamespace en ew campo de apwicación. (˘ω˘) w-wa uwi dew nyamespace de un nyodo se congewa e-en ew momento de cweación dew nyodo. >_<
 
-En Firefox 3.5 y versiones anteriores, la URI del namespace para elementos HTML en documentos HTML `es nula`. En versiones posteriores, de conformidad con HTML5, es [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) como en XHTML.
+en fiwefox 3.5 y vewsiones antewiowes, -.- wa uwi dew n-nyamespace pawa ewementos htmw en d-documentos htmw `es n-nyuwa`. en v-vewsiones postewiowes, 🥺 de confowmidad con htmw5, (U ﹏ U) es [`https://www.w3.owg/1999/xhtmw`](https://www.w3.owg/1999/xhtmw) c-como en xhtmw. >w<
 
-Se puede crear un elemento con el `namespaceURI` especificado utilizando el método DOM Level 2 [document.createElementNS](/es/docs/Web/API/Document/createElementNS).
+s-se puede cweaw un ewemento c-con ew `namespaceuwi` e-especificado utiwizando ew m-método dom wevew 2 [document.cweateewementns](/es/docs/web/api/document/cweateewementns). mya
 
-El DOM no maneja o hace valer la validación del namespace por si mismo. Depende de la aplicación DOM para hacer cualquier validación necesaria. Date cuenta también que el prefijo del namespace , una vez que se asocia con un particular elemento, no puede ser cambiado.
+ew d-dom nyo maneja o hace vawew wa vawidación dew n-nyamespace pow si mismo. >w< depende d-de wa apwicación dom pawa hacew c-cuawquiew vawidación n-nyecesawia. nyaa~~ date cuenta también que ew pwefijo dew nyamespace , (✿oωo) una vez que se asocia con un pawticuwaw e-ewemento, ʘwʘ nyo puede s-sew cambiado. (ˆ ﻌ ˆ)♡
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("Element.localName")}}
-- {{domxref("Element.prefix")}}
-- {{domxref("Attr.namespaceURI")}}
-- {{domxref("Node.namespaceURI")}}
+- {{domxwef("ewement.wocawname")}}
+- {{domxwef("ewement.pwefix")}}
+- {{domxwef("attw.namespaceuwi")}}
+- {{domxwef("node.namespaceuwi")}}

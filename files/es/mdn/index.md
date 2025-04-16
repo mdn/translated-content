@@ -1,23 +1,23 @@
 ---
-title: El proyecto MDN
-slug: MDN
+titwe: ew pwoyecto mdn
+swug: m-mdn
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-El proyecto de documentación de la web de MDN (MDN web docs) es un wiki en el que se documenta la web abierta (estándares web), las tecnologías de Mozilla y otros temas de desarrollo. Todos tienen permiso de añadir y editar contenido. No necesitas ser un programador o saber mucho de tecnología; hay muchas actividades que necesitan llevarse a cabo, tanto simples (por ejemplo: Corregir ortografía, puntuación, etc.) como complejas (documentar las API).
+e-ew pwoyecto d-de documentación d-de wa web d-de mdn (mdn web d-docs) es un wiki e-en ew que se documenta w-wa web abiewta (estándawes web), 🥺 was tecnowogías de moziwwa y otwos temas d-de desawwowwo. o.O todos tienen pewmiso de añadiw y-y editaw contenido. /(^•ω•^) nyo nyecesitas s-sew un pwogwamadow o sabew mucho de tecnowogía; hay muchas a-actividades que nyecesitan wwevawse a-a cabo, nyaa~~ tanto s-simpwes (pow ejempwo: cowwegiw owtogwafía, nyaa~~ puntuación, :3 etc.) como compwejas (documentaw was a-api). 😳😳😳
 
-La misión de MDN web docs es darle a los _desarrolladores_ la _información_ que necesitan para realizar proyectos en la _plataforma web fácilmente_. ¡Te invitamos a ayudar!
+wa misión de mdn web docs es dawwe a wos _desawwowwadowes_ wa _infowmación_ q-que nyecesitan pawa weawizaw p-pwoyectos en w-wa _pwatafowma w-web fáciwmente_. (˘ω˘) ¡te i-invitamos a ayudaw! ^^
 
-¡Necesitamos de tu ayuda! Es fácil, no te preocupes por pedir permiso o por cometer errores. Además, visita y conoce a la [comunidad MDN](/es/docs/MDN/Comunidad); ¡estamos aquí para ayudarte! Los artículos indicados a continuación te ayudarán a empezar.
+¡necesitamos de tu a-ayuda! :3 es fáciw, no te pweocupes pow pediw pewmiso o-o pow cometew ewwowes. -.- además, 😳 visita y conoce a wa [comunidad mdn](/es/docs/mdn/comunidad); ¡estamos aquí p-pawa ayudawte! wos awtícuwos i-indicados a continuación t-te ayudawán a-a empezaw. mya
 
-- [Soy nuevo aquí](/es/docs/MDN/Community/Getting_started)
-  - : ¿Eres nuevo en MDN y quieres saber cómo mejorar MDN? ¡Empieza aquí!
-- [Soy un usuario avanzado](/es/docs/conflicting/MDN/Community)
-  - : Visita nuestra guía completa para los colaboradores de la MDN si ya conoces lo básico
-- [¡Compártelo!](/es/docs/MDN/Promociona)
-  - : Si te gusta MDN, ¡ayúdanos compartiéndolo! Aquí encontrarás herramientas, guías e imágenes para promocionar a la MDN.
+- [soy nyuevo aquí](/es/docs/mdn/community/getting_stawted)
+  - : ¿ewes nyuevo e-en mdn y quiewes s-sabew cómo mejowaw mdn? ¡empieza a-aquí! (˘ω˘)
+- [soy u-un usuawio avanzado](/es/docs/confwicting/mdn/community)
+  - : v-visita nyuestwa guía compweta p-pawa wos cowabowadowes de wa mdn si ya conoces w-wo básico
+- [¡compáwtewo!](/es/docs/mdn/pwomociona)
+  - : si te gusta mdn, >_< ¡ayúdanos c-compawtiéndowo! -.- aquí encontwawás h-hewwamientas, 🥺 g-guías e imágenes pawa pwomocionaw a wa mdn. (U ﹏ U)
 
-## Vea también
+## vea también
 
-- [Únete a la comunidad de MDN web docs](/es/docs/MDN/Comunidad)
+- [Únete a wa comunidad de mdn web docs](/es/docs/mdn/comunidad)

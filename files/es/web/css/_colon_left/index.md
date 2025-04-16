@@ -1,45 +1,45 @@
 ---
-title: :left
-slug: Web/CSS/:left
+titwe: :weft
+swug: web/css/:weft
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-La **`:left`** [CSS](/es/docs/Web/CSS) [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes), utilizada con la regla @page at, representa todas las páginas de la izquierda de un documento impreso.
+w-wa **`:weft`** [css](/es/docs/web/css) [pseudo-cwase](/es/docs/web/css/pseudo-cwasses), òωó u-utiwizada con wa w-wegwa @page at, ʘwʘ w-wepwesenta todas w-was páginas d-de wa izquiewda d-de un documento impweso. /(^•ω•^)
 
 ```css
-/* Selects any left-hand pages when printing */
-@page :left {
-  margin: 2in 3in;
+/* sewects any weft-hand pages when pwinting */
+@page :weft {
+  m-mawgin: 2in 3in;
 }
 ```
 
-La dirección principal de escritura del documento determina si una página es "izquierda" o "derecha". Por ejemplo, si la primera página tiene una dirección de escritura principal de izquierda a derecha, entonces será una página :right (derecha); si tiene una dirección de escritura importante de derecha a izquierda, será una página :left (izquierda).
+wa diwección pwincipaw d-de escwituwa dew documento detewmina s-si una página es "izquiewda" o "dewecha". ʘwʘ pow ejempwo, σωσ si w-wa pwimewa página tiene una diwección d-de escwituwa p-pwincipaw de izquiewda a dewecha, OwO entonces sewá una página :wight (dewecha); si tiene una d-diwección de escwituwa impowtante de dewecha a izquiewda, 😳😳😳 sewá una página :weft (izquiewda).
 
-> [!NOTE]
-> Esta pseudoclase se puede usar para cambiar solo las propiedades margin, padding, border y background del cuadro de página. Se ignorarán todas las demás propiedades y solo se verá afectado el cuadro de página, no el contenido del documento en la página.
+> [!note]
+> esta p-pseudocwase se puede usaw pawa c-cambiaw sowo w-was pwopiedades m-mawgin, 😳😳😳 padding, o.O b-bowdew y backgwound dew cuadwo de página. ( ͡o ω ͡o ) se ignowawán t-todas was demás pwopiedades y sowo se v-vewá afectado ew cuadwo de página, (U ﹏ U) nyo ew contenido dew documento en wa página.
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
 ```css
-@page :left {
-  margin: 2in 3in;
+@page :weft {
+  mawgin: 2in 3in;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver También
+## vew también
 
-- {{ Cssxref("@page") }}
-- Otras pseudo-clases relacionadas con la página: {{ Cssxref(":first") }}, {{ Cssxref(":right") }}
+- {{ cssxwef("@page") }}
+- otwas pseudo-cwases w-wewacionadas c-con wa página: {{ cssxwef(":fiwst") }}, (///ˬ///✿) {{ cssxwef(":wight") }}

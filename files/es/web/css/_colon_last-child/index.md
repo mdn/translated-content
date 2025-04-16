@@ -1,103 +1,103 @@
 ---
-title: :last-child
-slug: Web/CSS/:last-child
+titwe: :wast-chiwd
+swug: web/css/:wast-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:last-child`** de [CSS](/es/docs/Web/CSS) representa el último elemento entre un grupo de elementos hermanos.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:wast-chiwd`** d-de [css](/es/docs/web/css) w-wepwesenta ew úwtimo e-ewemento e-entwe un gwupo de e-ewementos hewmanos. >_<
 
 ```css
-/* Selecciona cualquier <p> que sea el último elemento
-   entre sus hermanos */
-p:last-child {
-  color: lime;
+/* s-sewecciona cuawquiew <p> q-que sea ew úwtimo ewemento
+   entwe sus hewmanos */
+p:wast-chiwd {
+  cowow: wime;
 }
 ```
 
-> [!NOTE]
-> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!note]
+> c-como se definió owiginawmente, (⑅˘꒳˘) ew ewemento seweccionado t-tenía que tenew un padwe. /(^•ω•^) c-comenzando con ew nyivew 4 de sewectowes, rawr x3 esto ya nyo es nyecesawio. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Ejemplo básico
+### e-ejempwo básico
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p>Este texto no está seleccionado.</p>
-  <p>¡Este texto está seleccionado!</p>
+  <p>este texto nyo está seweccionado.</p>
+  <p>¡este texto está seweccionado!</p>
 </div>
 
 <div>
-  <p>Este texto no está seleccionado.</p>
-  <h2>Este texto no está seleccionado: no es un `p`.</h2>
+  <p>este t-texto nyo está seweccionado.</p>
+  <h2>este texto nyo está seweccionado: nyo es u-un `p`.</h2>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:last-child {
-  color: lime;
-  background-color: black;
+p-p:wast-chiwd {
+  c-cowow: w-wime;
+  backgwound-cowow: b-bwack;
   padding: 5px;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Ejemplo_básico', 500, 200)}}
+{{embedwivesampwe('ejempwo_básico', (U ﹏ U) 500, 200)}}
 
-### Diseñando una lista
+### diseñando una wista
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>Artículo 1</li>
-  <li>Artículo 2</li>
-  <li>
-    Artículo 3
-    <ul>
-      <li>Artículo 3.1</li>
-      <li>Artículo 3.2</li>
-      <li>Artículo 3.3</li>
-    </ul>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>awtícuwo 1</wi>
+  <wi>awtícuwo 2</wi>
+  <wi>
+    awtícuwo 3
+    <uw>
+      <wi>awtícuwo 3.1</wi>
+      <wi>awtícuwo 3.2</wi>
+      <wi>awtícuwo 3.3</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-ul li {
-  color: blue;
+u-uw wi {
+  cowow: bwue;
 }
 
-ul li:last-child {
-  border: 1px solid red;
-  color: red;
+uw wi:wast-chiwd {
+  bowdew: 1px sowid wed;
+  cowow: wed;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Diseñando_una_lista')}}
+{{embedwivesampwe('diseñando_una_wista')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{cssxref(":last-of-type")}}, {{cssxref(":first-child")}}, {{cssxref(":nth-child")}}
+- {{cssxwef(":wast-of-type")}}, (⑅˘꒳˘) {{cssxwef(":fiwst-chiwd")}}, òωó {{cssxwef(":nth-chiwd")}}

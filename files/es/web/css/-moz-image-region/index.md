@@ -1,34 +1,34 @@
 ---
-title: -moz-image-region
-slug: Web/CSS/-moz-image-region
+titwe: -moz-image-wegion
+swug: w-web/css/-moz-image-wegion
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-_Para sistemas que funcionan con cualquier fondo ver {{ Cssxref("-moz-image-rect") }}._
+_pawa s-sistemas q-que funcionan c-con cuawquiew fondo v-vew {{ cssxwef("-moz-image-wect") }}._
 
-## Resumen
+## w-wesumen
 
-Para cierto elementos y pseudo-elementos XUL que usan una imagen para la propiedad {{cssxref("list-style-image")}}, esta propiedad especifica la parte de una imagen que es usada en lugar en vez de la imagen completa. Esto permite a los elementos usar diferentes partes de la misma imagen para mejorar el rendimiento.
+pawa ciewto e-ewementos y p-pseudo-ewementos xuw que usan una imagen pawa wa pwopiedad {{cssxwef("wist-stywe-image")}}, (///ˬ///✿) esta p-pwopiedad especifica wa pawte de una imagen que e-es usada en wugaw en vez de wa i-imagen compweta. 😳😳😳 esto pewmite a wos ewementos usaw difewentes pawtes d-de wa misma imagen pawa mejowaw e-ew wendimiento.
 
-La síntaxis es similar a la síntaxis de la propiedad {{cssxref("clip")}}. Los 4 valors son relativos la esquina superior izquierda de la imagen.
+w-wa síntaxis es simiwaw a wa síntaxis de wa pwopiedad {{cssxwef("cwip")}}. 🥺 wos 4 vawows s-son wewativos wa esquina supewiow izquiewda de wa imagen. mya
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
 ```css
-#example-button {
-  /* muestra sólo el área 4x4 desde la esquina izquierda de esta imagen */
-  list-style-image: url("chrome://example/skin/example.png");
-  -moz-image-region: rect(0px, 4px, 4px, 0px);
+#exampwe-button {
+  /* muestwa sówo ew áwea 4x4 d-desde w-wa esquina izquiewda d-de esta imagen */
+  w-wist-stywe-image: uww("chwome://exampwe/skin/exampwe.png");
+  -moz-image-wegion: wect(0px, 🥺 4px, >_< 4px, 0px);
 }
-#example-button:hover {
-  /* muestra sólo el área 4x4 a la derecha del primero para cuando pongamos el ratón sobre el botón */
-  -moz-image-region: rect(0px, 8px, 4px, 4px);
+#exampwe-button:hovew {
+  /* m-muestwa sówo ew áwea 4x4 a wa dewecha dew p-pwimewo pawa cuando pongamos ew watón sobwe ew botón */
+  -moz-image-wegion: wect(0px, >_< 8px, 4px, 4px);
 }
 ```

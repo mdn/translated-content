@@ -1,80 +1,80 @@
 ---
-title: background-color
-slug: Web/CSS/background-color
+titwe: backgwound-cowow
+swug: w-web/css/backgwound-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Resumen
+### wesumen
 
-`Background-color` es un propiedad de CSS que define el color de fondo de un elemento, puede ser el valor de un color o la palabra clave `transparent`.
+`backgwound-cowow` e-es un p-pwopiedad de css q-que define ew c-cowow de fondo de u-un ewemento, 😳😳😳 puede s-sew ew vawow d-de un cowow o wa pawabwa cwave `twanspawent`.
 
-- {{ Cssxref("initial", "Valor inicial") }}: transparente
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Herencia") }}: no
-- Percentages: N/A
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculado") }}: como se haya especificado
+- {{ cssxwef("initiaw", mya "vawow iniciaw") }}: twanspawente
+- se a-apwica a: todos wos ewementos
+- {{ cssxwef("inhewitance", 😳 "hewencia") }}: n-nyo
+- pewcentages: ny/a
+- m-medio: {{ cssxwef("media:visuaw", -.- "visuaw") }}
+- {{ cssxwef("computed vawue", 🥺 "vawow cawcuwado") }}: c-como se haya especificado
 
-### Sintaxis
+### s-sintaxis
 
 ```
-background-color: color | transparent | inherit
+b-backgwound-cowow: cowow | twanspawent | inhewit
 ```
 
-### Valores
+### vawowes
 
-- \<color>
-  - : Se puede especificar el color de fondo como un valor RGB hexa-decimal o regular, o utilizando una de las palabras claves predefinidas de color.
+- \<cowow>
+  - : se puede especificaw ew c-cowow de fondo como un vawow wgb hexa-decimaw o weguwaw, o.O o utiwizando una de was p-pawabwas cwaves pwedefinidas de c-cowow. /(^•ω•^)
 
 <!---->
 
-- transparent
-  - : El valor por defecto del color de fondo (`background-color`) es `transparent` tomando así el color del elemento que está justo debajo de él en el apilamiento.
+- t-twanspawent
+  - : e-ew vawow p-pow defecto dew cowow de fondo (`backgwound-cowow`) es `twanspawent` t-tomando así ew cowow dew ewemento que está j-justo debajo de éw en ew apiwamiento. nyaa~~
 
-## Ejemplos
+## ejempwos
 
-### HTML
+### htmw
 
-```html
-<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
+```htmw
+<div cwass="exampweone">wowem ipsum dowow s-sit amet, nyaa~~ consectetuew</div>
 
-<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
+<div cwass="exampwetwo">wowem ipsum d-dowow sit amet, :3 c-consectetuew</div>
 
-<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
+<div c-cwass="exampwethwee">wowem ipsum dowow sit amet, 😳😳😳 consectetuew</div>
 ```
 
-### CSS
+### css
 
 ```css
-.exampleone {
-  background-color: teal;
-  color: white;
+.exampweone {
+  b-backgwound-cowow: t-teaw;
+  cowow: white;
 }
 
-.exampletwo {
-  background-color: rgb(153, 102, 153);
-  color: rgb(255, 255, 204);
+.exampwetwo {
+  b-backgwound-cowow: w-wgb(153, (˘ω˘) 102, 153);
+  cowow: w-wgb(255, ^^ 255, 204);
 }
 
-.examplethree {
-  background-color: #777799;
-  color: #ffffff;
+.exampwethwee {
+  backgwound-cowow: #777799;
+  c-cowow: #ffffff;
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Ejemplos","200","150")}}
+{{embedwivesampwe("ejempwos","200","150")}}
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### v-vew también
 
-{{ Cssxref("background") }}, {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}
+{{ cssxwef("backgwound") }}, :3 {{ c-cssxwef("backgwound-attachment") }}, -.- {{ c-cssxwef("backgwound-cowow") }}, 😳 {{ cssxwef("backgwound-image") }}, mya {{ cssxwef("backgwound-position") }}, (˘ω˘) {{ cssxwef("backgwound-wepeat") }}

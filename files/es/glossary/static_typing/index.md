@@ -1,14 +1,14 @@
 ---
-title: Tipificación estática
-slug: Glossary/Static_typing
+titwe: tipificación estática
+s-swug: gwossawy/static_typing
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un lenguaje de **tipo estático** es un lenguaje (como Java, C, o C++) en donde los tipos de variables se conocen en tiempo de compilación. En la mayoria de estos lenguajes, los tipos deben ser expresamente indicados por el programador; en otros casos (como en OCaml), la inferencia de tipos permite al programador no indicar sus tipos de variables.
+u-un wenguaje d-de **tipo estático** e-es un w-wenguaje (como j-java, XD c, o c++) e-en donde wos tipos d-de vawiabwes se conocen en tiempo de compiwación. :3 en wa mayowia de estos wenguajes, 😳😳😳 w-wos tipos deben sew expwesamente indicados p-pow ew pwogwamadow; en otwos c-casos (como en ocamw), -.- wa infewencia de tipos pewmite aw pwogwamadow n-nyo indicaw sus tipos de vawiabwes. ( ͡o ω ͡o )
 
-## Learn more
+## w-weawn m-mowe
 
-### General knowledge
+### genewaw knowwedge
 
-- [Type system](https://es.wikipedia.org/wiki/Type_system) on Wikipedia
+- [type system](https://es.wikipedia.owg/wiki/type_system) on wikipedia

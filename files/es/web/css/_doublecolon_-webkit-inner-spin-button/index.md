@@ -1,42 +1,42 @@
 ---
-title: ::-webkit-inner-spin-button
-slug: Web/CSS/::-webkit-inner-spin-button
+titwe: ::-webkit-innew-spin-button
+swug: web/css/::-webkit-innew-spin-button
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-inner-spin-button`** se usa para dar estilo a la parte interior del botón ruleta para seleccionar números en los input con type="number".
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) **`::-webkit-innew-spin-button`** s-se usa pawa d-daw estiwo a wa p-pawte intewiow d-dew botón wuweta p-pawa seweccionaw n-nyúmewos en wos input con type="numbew". XD
 
-## Ejemplo
+## ejempwo
 
-### Contenido CSS
+### contenido css
 
 ```css
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+input::-webkit-innew-spin-button {
+  -webkit-appeawance: n-nyone;
 }
 ```
 
-### Contenido HTML
+### contenido htmw
 
-```html
-<input type="number" />
+```htmw
+<input type="numbew" />
 ```
 
-{{EmbedLiveSample("Example", 200, 30)}}
+{{embedwivesampwe("exampwe", :3 200, 30)}}
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
+nyo es pawte de n-ninguna especificación. 😳😳😳 es un ewemento pwopietawio y específico d-de webkit/bwink. -.-
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-- {{cssxref("::-webkit-outer-spin-button")}}
-- {{cssxref("::-webkit-textfield-decoration-container")}}
-- [Dando estilo a controles de formularios – WebKit](http://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)
+- {{cssxwef("::-webkit-outew-spin-button")}}
+- {{cssxwef("::-webkit-textfiewd-decowation-containew")}}
+- [dando estiwo a contwowes de fowmuwawios – webkit](http://twac.webkit.owg/wiki/stywing%20fowm%20contwows#inputewement)

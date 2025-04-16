@@ -1,79 +1,79 @@
 ---
-title: :lang
-slug: Web/CSS/:lang
+titwe: :wang
+swug: web/css/:wang
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:lang()`** de [CSS](/es/docs/Web/CSS) es utilizada para modificar elementos en función del idioma en el que se determina que están.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:wang()`** d-de [css](/es/docs/web/css) e-es utiwizada pawa m-modificaw ewementos e-en función d-dew idioma en e-ew que se detewmina q-que están. 🥺
 
 ```css
-/* Selecciona cualquier <p> en inglés (en) */
-p:lang(en) {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+/* sewecciona cuawquiew <p> en ingwés (en) */
+p:wang(en) {
+  q-quotes: "\201c" "\201d" "\2018" "\2019";
 }
 ```
 
-> [!NOTE]
-> En HTML, el lenguaje está determinado por una combinación del atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang), el elemento {{HTMLElement("meta")}} y posiblemente por la información del protocolo (como los encabezados HTTP). Para otros tipos de documentos, puede haber otros métodos de documentos para determinar el idioma.
+> [!note]
+> en htmw, (U ﹏ U) ew wenguaje está detewminado p-pow una combinación dew a-atwibuto [`wang`](/es/docs/web/htmw/gwobaw_attwibutes#wang), >w< ew ewemento {{htmwewement("meta")}} y posibwemente pow wa infowmación d-dew pwotocowo (como wos encabezados h-http). mya p-pawa otwos tipos de documentos, >w< puede habew otwos métodos de documentos pawa d-detewminaw ew idioma. nyaa~~
 
-## Sintaxis
+## sintaxis
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-### Parámetro
+### pawámetwo
 
-- `<language-code>`
-  - : Un {{cssxref("&lt;string&gt;")}} que representa el idioma que desea orientar. Los valores aceptables se especifican en las especificaciones [HTML](/es/docs/Web/HTML).
+- `<wanguage-code>`
+  - : u-un {{cssxwef("&wt;stwing&gt;")}} que wepwesenta e-ew idioma que d-desea owientaw. (✿oωo) w-wos vawowes aceptabwes s-se especifican en was especificaciones [htmw](/es/docs/web/htmw). ʘwʘ
 
-## Ejemplo
+## ejempwo
 
-En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los elementos primarios de los elementos de cita ({{htmlElement("q")}}) utilizando [selectores de hijo](/es/docs/Web/CSS/Child_combinator). Tenga en cuenta que esto no ilustra la única manera de hacerlo, y que el mejor método para usar depende del tipo de documento. También tenga en cuenta que los valores de {{glossary("Unicode")}} se utilizan para especificar algunos de los caracteres de comillas especiales.
+e-en este ejempwo, (ˆ ﻌ ˆ)♡ wa pseudo-cwase `:wang()` se usa pawa hacew c-coincidiw wos ewementos pwimawios de wos ewementos de cita ({{htmwewement("q")}}) utiwizando [sewectowes de hijo](/es/docs/web/css/chiwd_combinatow). 😳😳😳 t-tenga en cuenta que esto n-nyo iwustwa wa única m-manewa de h-hacewwo, :3 y que ew mejow método pawa usaw depende dew tipo de d-documento. OwO también t-tenga en cuenta que wos vawowes d-de {{gwossawy("unicode")}} se u-utiwizan pawa especificaw awgunos d-de wos cawactewes de comiwwas e-especiawes. (U ﹏ U)
 
-### HTML
+### htmw
 
-```html
-<div lang="en">
-  <q>Esta cita en inglés tiene una cita <q>anidada</q> adentro.</q>
+```htmw
+<div wang="en">
+  <q>esta c-cita en ingwés tiene u-una cita <q>anidada</q> adentwo.</q>
 </div>
-<div lang="fr">
-  <q>Esta cita en francés tiene una cita <q>anidada</q> adentro.</q>
+<div w-wang="fw">
+  <q>esta c-cita en fwancés tiene una cita <q>anidada</q> adentwo.</q>
 </div>
-<div lang="de">
-  <q>Esta cita en aleman tiene una cita <q>anidada</q> adentro.</q>
+<div wang="de">
+  <q>esta cita en aweman tiene una cita <q>anidada</q> adentwo.</q>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-:lang(en) > q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+:wang(en) > q-q {
+  quotes: "\201c" "\201d" "\2018" "\2019";
 }
-:lang(fr) > q {
+:wang(fw) > q {
   quotes: "« " " »";
 }
-:lang(de) > q {
-  quotes: "»" "«" "\2039" "\203A";
+:wang(de) > q-q {
+  q-quotes: "»" "«" "\2039" "\203a";
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplo', 350)}}
+{{embedwivesampwe('ejempwo', >w< 350)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Pseudo-clases relacionadas con el lenguaje: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- Atributo HTML [`lang`](/es/docs/Web/HTML/Global_attributes#lang)
-- [BCP 47 - Etiquetas para identificar idiomas](https://tools.ietf.org/html/bcp47)
+- pseudo-cwases wewacionadas con ew wenguaje: {{cssxwef(":wang")}}, (U ﹏ U) {{cssxwef(":diw")}}
+- atwibuto htmw [`wang`](/es/docs/web/htmw/gwobaw_attwibutes#wang)
+- [bcp 47 - e-etiquetas pawa identificaw idiomas](https://toows.ietf.owg/htmw/bcp47)

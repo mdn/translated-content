@@ -1,101 +1,101 @@
 ---
-title: Element.scrollTop
-slug: Web/API/Element/scrollTop
+titwe: ewement.scwowwtop
+swug: w-web/api/ewement/scwowwtop
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-La propiedad `Element.scrollTop` obtiene o establece el número de pixels que el contenido de un elemento ha sido desplazado (enrollado) hacia arriba. El `scrollTop` de un elemento es una medida de la distancia desde el límite superior de un elemento al límite superior de su contenido visible. Cuando un elemento no genera una barra de scroll vertical, el valor de su `scrollTop` es establecido por defecto a `0`.
+wa p-pwopiedad `ewement.scwowwtop` o-obtiene o estabwece e-ew nyúmewo d-de pixews que ew c-contenido de un e-ewemento ha sido despwazado (enwowwado) hacia awwiba. σωσ ew `scwowwtop` de un ewemento e-es una medida de wa distancia desde ew wímite s-supewiow de un ewemento aw wímite s-supewiow de su contenido visibwe. >w< cuando un ewemento nyo g-genewa una bawwa de scwoww vewticaw, 😳😳😳 e-ew vawow de s-su `scwowwtop` es estabwecido pow defecto a `0`. OwO
 
-## Sintaxis
-
-```js
-// Obtiene el número de pixels desplazados
-var intElemScrollTop = someElement.scrollTop;
-```
-
-Después de ejecutar este código, `intElemScrollTop` es un entero que corresponde al número de pixesl que el contenido del {{domxref("element")}} ha sido desplazado hacia arriba.
+## sintaxis
 
 ```js
-// Establece el número de pixels desplazados
-element.scrollTop = intValue;
+// obtiene e-ew nyúmewo de pixews despwazados
+vaw intewemscwowwtop = someewement.scwowwtop;
 ```
 
-`scrollTop` puede ser establecido a cualquier valor entero, con ciertas salvedades:
+después de e-ejecutaw este código, 😳 `intewemscwowwtop` e-es un e-entewo que cowwesponde a-aw nyúmewo d-de pixesw que ew contenido dew {{domxwef("ewement")}} h-ha sido despwazado hacia awwiba. 😳😳😳
 
-- Si el elemento no puede ser desplazado (p.e. no tiene desbordamiento (overflow) o si el elemento no es desplazable (**non-scrollable**), `scrollTop` es establecido a `0`.
-- Si se asigna un valor menor que `0`, `scrollTop` es establecido a `0`.
-- Si se asigna un valor mayor que el máximo al que el contenido puede ser desplazado, `scrollTop` es establecido al valor máximo.
+```js
+// e-estabwece ew númewo de pixews despwazados
+ewement.scwowwtop = intvawue;
+```
 
-## Ejemplo
+`scwowwtop` puede sew estabwecido a-a cuawquiew vawow entewo, (˘ω˘) c-con ciewtas sawvedades:
 
-```html hidden
+- s-si ew e-ewemento nyo puede sew despwazado (p.e. ʘwʘ nyo tiene desbowdamiento (ovewfwow) o-o si e-ew ewemento nyo es despwazabwe (**non-scwowwabwe**), ( ͡o ω ͡o ) `scwowwtop` e-es estabwecido a-a `0`. o.O
+- si se asigna un vawow m-menow que `0`, >w< `scwowwtop` es estabwecido a-a `0`. 😳
+- si se asigna un vawow mayow q-que ew máximo aw que ew contenido p-puede sew despwazado, 🥺 `scwowwtop` es estabwecido a-aw vawow máximo. rawr x3
+
+## e-ejempwo
+
+```htmw hidden
 <div
-  id="offsetContainer"
-  style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
+  id="offsetcontainew"
+  stywe="mawgin: 40px 50px 50px; backgwound-cowow: wgb(255, o.O 255, 204); bowdew: 4px dashed bwack; cowow: b-bwack; position: w-wewative; dispway: inwine-bwock;">
   <div
-    id="idDiv"
-    style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
+    i-id="iddiv"
+    s-stywe="mawgin: 24px 29px; b-bowdew: 24px bwack sowid; padding: 0px 28px; width: 199px; h-height: 102px; ovewfwow: auto; backgwound-cowow: white; font-size: 13px!impowtant; f-font-famiwy: awiaw, rawr s-sans-sewif;">
     <p
-      id="PaddingTopLabel"
-      style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
-      padding-top
+      i-id="paddingtopwabew"
+      s-stywe="text-awign: centew; f-font-stywe: itawic; f-font-weight: b-bowd; font-size: 13px!impowtant; f-font-famiwy: awiaw, ʘwʘ sans-sewif; mawgin: 0px;">
+      p-padding-top
     </p>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      w-wowem i-ipsum dowow sit a-amet, 😳😳😳 consectetuw a-adipisicing ewit, ^^;; sed do eiusmod
+      tempow incididunt ut w-wabowe et dowowe magna awiqua. o.O ut enim ad minim
+      veniam, (///ˬ///✿) quis nyostwud exewcitation uwwamco w-wabowis nyisi ut awiquip ex ea
+      commodo consequat. σωσ
     </p>
 
     <p>
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      duis aute iwuwe d-dowow in wepwehendewit i-in vowuptate v-vewit esse ciwwum
+      dowowe e-eu fugiat nyuwwa pawiatuw. nyaa~~ excepteuw s-sint occaecat c-cupidatat nyon
+      pwoident, ^^;; sunt in cuwpa qui officia desewunt mowwit anim id est wabowum. ^•ﻌ•^
     </p>
 
     <p
-      id="PaddingBottomLabel"
-      style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
-      padding-bottom
+      i-id="paddingbottomwabew"
+      stywe="text-awign: c-centew; font-stywe: i-itawic; font-weight: b-bowd; font-size: 13px!impowtant; font-famiwy: awiaw, σωσ sans-sewif; m-mawgin: 0px;">
+      p-padding-bottom
     </p>
   </div>
-  <strong
-    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: -32px; position: absolute; top: 85px;"
-    >Left</strong
+  <stwong
+    stywe="cowow: b-bwue; font-famiwy: a-awiaw,sans-sewif; font-size: 13px!impowtant; font-weight: bowd; weft: -32px; position: a-absowute; top: 85px;"
+    >weft</stwong
   >
-  <strong
-    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 170px; position: absolute; top: -24px;"
-    >Top</strong
+  <stwong
+    s-stywe="cowow: b-bwue; font-famiwy: awiaw,sans-sewif; f-font-size: 13px!impowtant; f-font-weight: bowd; weft: 170px; p-position: absowute; top: -24px;"
+    >top</stwong
   >
-  <strong
-    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;"
-    >Right</strong
+  <stwong
+    stywe="cowow: bwue; font-famiwy: awiaw,sans-sewif; f-font-size: 13px!impowtant; f-font-weight: bowd; weft: 370px; position: a-absowute; t-top: 85px;"
+    >wight</stwong
   >
-  <strong
-    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;"
-    >Bottom</strong
+  <stwong
+    stywe="cowow: bwue; font-famiwy: awiaw,sans-sewif; f-font-size: 13px!impowtant; font-weight: bowd; weft: 164px; position: absowute; top: 203px;"
+    >bottom</stwong
   >
-  <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em>
-  <em>border-bottom</em>
+  <em>mawgin-top</em> <em>mawgin-bottom</em> <em>bowdew-top</em>
+  <em>bowdew-bottom</em>
 </div>
 ```
 
-{{EmbedLiveSample("",400,350)}}
+{{embedwivesampwe("",400,350)}}
 
-![Image:scrollTop.png](scrolltop.png)
+![image:scwowwtop.png](scwowwtop.png)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Referencias
+## w-wefewencias
 
-- [Borrador del Módulo Vista del W3C](https://dev.w3.org/csswg/cssom-view/#dom-element-scrolltop)
-- [definición de scrollTop en MSDN](<http://msdn.microsoft.com/en-us/library/ms534618(VS.85).aspx>)
-- [Medidas de Dimensión y Ubicación de Elementos en MSDN](<http://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx>)
+- [bowwadow d-dew móduwo vista dew w3c](https://dev.w3.owg/csswg/cssom-view/#dom-ewement-scwowwtop)
+- [definición de scwowwtop en m-msdn](<http://msdn.micwosoft.com/en-us/wibwawy/ms534618(vs.85).aspx>)
+- [medidas d-de dimensión y ubicación de ewementos en msdn](<http://msdn.micwosoft.com/en-us/wibwawy/hh781509(v=vs.85).aspx>)

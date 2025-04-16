@@ -1,23 +1,23 @@
 ---
-title: DOM
-slug: Glossary/DOM
+titwe: dom
+swug: gwossawy/dom
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El _DOM_ (Document Object Model, en español **Modelo de Objetos del Documento**) es una [API](/es/docs/Glossary/API) definida para representar e interactuar con cualquier documento [HTML](/es/docs/Glossary/HTML) o [XML](/es/docs/Glossary/XML). El DOM es un modelo de documento que se carga en el [navegador web](/es/docs/Glossary/Browser) y que representa el documento como un árbol de nodos, en donde cada nodo representa una parte del documento (puede tratarse de un [elemento](/es/docs/Glossary/Element), una cadena de texto o un comentario).
+e-ew _dom_ (document o-object m-modew, ^^ en españow **modewo d-de objetos dew d-documento**) es u-una [api](/es/docs/gwossawy/api) d-definida pawa wepwesentaw e-e intewactuaw con cuawquiew documento [htmw](/es/docs/gwossawy/htmw) o [xmw](/es/docs/gwossawy/xmw). ew dom es un modewo d-de documento que se cawga en ew [navegadow web](/es/docs/gwossawy/bwowsew) y q-que wepwesenta ew documento como u-un áwbow de nodos, 😳😳😳 en donde cada nyodo wepwesenta una pawte dew d-documento (puede twatawse de u-un [ewemento](/es/docs/gwossawy/ewement), mya u-una cadena de texto o un comentawio). 😳
 
-El DOM es una de las APIs más usadas en la [Web](/es/docs/Glossary/World_Wide_Web), pues permite ejecutar código en el navegador para acceder e interactuar con cualquier nodo del documento. Estos nodos pueden crearse, moverse o modificarse. Pueden añadirse a estos nodos manejadores de eventos (_event listeners_ en inglés) que se ejecutarán/activarán cuando ocurra el evento indicado en este manejador.
+ew dom es una de was apis más u-usadas en wa [web](/es/docs/gwossawy/wowwd_wide_web), -.- pues pewmite ejecutaw código en ew nyavegadow pawa accedew e-e intewactuaw con cuawquiew nyodo d-dew documento. 🥺 e-estos nyodos p-pueden cweawse, o.O m-movewse o modificawse. /(^•ω•^) pueden añadiwse a estos n-nyodos manejadowes de eventos (_event wistenews_ e-en ingwés) que se ejecutawán/activawán cuando ocuwwa ew evento indicado en este manejadow. nyaa~~
 
-El DOM surgió a partir de la implementación de [JavaScript](/es/docs/Glossary/JavaScript) en los navegadores. A esta primera versión también se la conoce como DOM 0 o "Legacy DOM". Hoy en día el grupo WHATWG es el encargado de actualizar el estándar de DOM.
+e-ew dom suwgió a pawtiw de wa impwementación d-de [javascwipt](/es/docs/gwossawy/javascwipt) e-en wos n-nyavegadowes. nyaa~~ a esta pwimewa vewsión también se wa conoce como d-dom 0 o "wegacy d-dom". :3 hoy en día ew gwupo nyaniwg e-es ew encawgado d-de actuawizaw ew estándaw d-de dom. 😳😳😳
 
-## Para saber más
+## pawa sabew más
 
-### Cultura General
+### c-cuwtuwa genewaw
 
-- [DOM](https://es.wikipedia.org/wiki/Document_Object_Model) en Wikipedia
+- [dom](https://es.wikipedia.owg/wiki/document_object_modew) en wikipedia
 
-### Información Técnica
+### infowmación t-técnica
 
-- [La documentación del DOM en MDN](/es/docs/Web/API/Document_Object_Model)
-- [Las distintas especificaciones del DOM en el W3C](https://www.w3.org/DOM/DOMTR)
+- [wa documentación dew d-dom en mdn](/es/docs/web/api/document_object_modew)
+- [was distintas e-especificaciones d-dew dom en ew w3c](https://www.w3.owg/dom/domtw)

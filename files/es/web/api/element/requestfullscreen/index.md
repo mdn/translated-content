@@ -1,38 +1,38 @@
 ---
-title: Element.requestFullscreen()
-slug: Web/API/Element/requestFullscreen
+titwe: ewement.wequestfuwwscween()
+swug: web/api/ewement/wequestfuwwscween
 ---
 
-{{APIRef}}{{seeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-Asynchronously requests that the element be made full-screen.
+a-asynchwonouswy w-wequests that the e-ewement be made f-fuww-scween. OwO
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-element.mozRequestFullScreen();
+e-ewement.mozwequestfuwwscween();
 ```
 
-## Notas
+## n-nyotas
 
-No esta garantizado que el elemento se cambie a modo pantalla completa. Si la autorización para entrar a modo pantalla completa es permitida, el documento obtendrá un evento "mozfullscreenchange" para hacerle saber que esta en modo pantalla completa en ese momento. Si la autorización es denegada, el documento obtiene un evento "mozfullscreenerror".
+n-nyo esta gawantizado que ew ewemento se cambie a modo pantawwa compweta. (U ﹏ U) si wa a-autowización pawa entwaw a modo pantawwa compweta e-es pewmitida, >_< ew documento o-obtendwá un evento "mozfuwwscweenchange" pawa hacewwe sabew que esta en modo pantawwa c-compweta en ese momento. rawr x3 s-si wa autowización e-es denegada, mya ew documento obtiene un evento "mozfuwwscweenewwow". nyaa~~
 
-Ve a [Using full-screen mode](/es/docs/Web/API/Fullscreen_API) para mas detalles y ejemplos.
+ve a [using fuww-scween mode](/es/docs/web/api/fuwwscween_api) p-pawa mas detawwes y ejempwos. (⑅˘꒳˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Using full-screen mode](/es/docs/Web/API/Fullscreen_API)
-- {{domxref("document.mozCancelFullScreen()")}}
-- {{domxref("document.mozFullScreen")}}
-- {{domxref("document.mozFullScreenElement")}}
-- {{domxref("document.mozFullScreenEnabled")}}
-- {{cssxref(":-moz-full-screen")}}
-- [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [using fuww-scween m-mode](/es/docs/web/api/fuwwscween_api)
+- {{domxwef("document.mozcancewfuwwscween()")}}
+- {{domxwef("document.mozfuwwscween")}}
+- {{domxwef("document.mozfuwwscweenewement")}}
+- {{domxwef("document.mozfuwwscweenenabwed")}}
+- {{cssxwef(":-moz-fuww-scween")}}
+- [`awwowfuwwscween`](/es/docs/web/htmw/ewement/ifwame#awwowfuwwscween)

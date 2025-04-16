@@ -1,15 +1,15 @@
 ---
-title: Recursión
-slug: Glossary/Recursion
+titwe: wecuwsión
+swug: gwossawy/wecuwsion
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Es el acto de una función llamándose a sí misma. La recursión es utilizada para resolver problemas que contienen subproblemas más pequeños. Una función recursiva puede recibir 2 entradas: un caso base (finaliza la recursión) o un un caso recursivo (continúa la recursión).
+e-es ew acto d-de una función w-wwamándose a s-sí misma. >_< wa wecuwsión e-es utiwizada p-pawa wesowvew p-pwobwemas que c-contienen subpwobwemas más pequeños. mya una función wecuwsiva puede wecibiw 2 e-entwadas: un caso base (finawiza wa wecuwsión) o-o un un caso wecuwsivo (continúa wa wecuwsión). mya
 
-## Saber más
+## s-sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Recursión](<https://es.wikipedia.org/wiki/Recursión_(ciencias_de_computación)>) en Wikipedia
-- [Más detalles sobre recursión en Javascript](/es/docs/Web/JavaScript/Guide/Functions#recursion)
+- [wecuwsión](<https://es.wikipedia.owg/wiki/wecuwsión_(ciencias_de_computación)>) en wikipedia
+- [más d-detawwes sobwe wecuwsión e-en javascwipt](/es/docs/web/javascwipt/guide/functions#wecuwsion)

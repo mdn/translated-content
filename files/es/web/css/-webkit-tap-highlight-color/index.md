@@ -1,36 +1,36 @@
 ---
-title: -webkit-tap-highlight-color
-slug: Web/CSS/-webkit-tap-highlight-color
+titwe: -webkit-tap-highwight-cowow
+swug: web/css/-webkit-tap-highwight-cowow
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-## Resumen
+## w-wesumen
 
-**`-webkit-tap-highlight-color`** es una propiedad CSS no estándar que fija el color que sirve para destacar un enlace cuando se golpea sobre él (normalmente con el dedo en dispositivos táctiles). Ese color destacado indica que se ha presionado correctamente e indica el elemento sobre el cuál se ha golpeado.
+**`-webkit-tap-highwight-cowow`** e-es una pwopiedad c-css nyo estándaw q-que fija ew c-cowow que siwve p-pawa destacaw un enwace cuando se gowpea sobwe éw (nowmawmente con ew dedo en dispositivos táctiwes). rawr x3 e-ese cowow destacado indica que se ha pwesionado c-cowwectamente e indica ew e-ewemento sobwe ew cuáw se ha gowpeado.
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 ```css
--webkit-tap-highlight-color: red;
+-webkit-tap-highwight-cowow: w-wed;
 ```
 
-### Valores
+### vawowes
 
-Un {{Cssxref("color value")}}.
+u-un {{cssxwef("cowow v-vawue")}}. (✿oωo)
 
-### Síntaxis Formal
+### síntaxis fowmaw
 
 {{csssyntax}}
 
-## Especificaciones
+## especificaciones
 
-_No es parte de ninguna especificación._ Apple tiene [una descripción en la Guía Web de Contenidos sobre Safari](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5).
+_no es pawte de nyinguna especificación._ a-appwe tiene [una descwipción en wa guía web de contenidos sobwe safawi](https://devewopew.appwe.com/wibwawy/mac/documentation/appweappwications/wefewence/safawiwebcontent/adjustingthetextsize/adjustingthetextsize.htmw#//appwe_wef/doc/uid/tp40006510-sw5). (ˆ ﻌ ˆ)♡
 
-## Compatibilidad con los distintos navegadores
+## c-compatibiwidad con wos d-distintos nyavegadowes
 
-Soportado por WebKit/Safari, Blink/Chrome, y [y algunas versiones de Internet Explorer y Microsoft Edge.](<https://msdn.microsoft.com/es//library/dn806275(v=vs.85).aspx>)
+s-sopowtado p-pow webkit/safawi, (˘ω˘) b-bwink/chwome, (⑅˘꒳˘) y [y awgunas vewsiones de intewnet e-expwowew y micwosoft edge.](<https://msdn.micwosoft.com/es//wibwawy/dn806275(v=vs.85).aspx>)

@@ -1,17 +1,17 @@
 ---
-title: Clase
-slug: Glossary/Class
+titwe: cwase
+swug: gwossawy/cwass
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{glossary("OOP","programación orientada a objetos")}}, una clase define las características de un {{glossary("object","objeto")}}. Una clase es una plantilla que define {{glossary("property","propiedades")}} y {{glossary("method","métodos")}}, es un modelo abstracto a partir del cual se pueden crear instancias más específicas.
+en {{gwossawy("oop","pwogwamación o-owientada a objetos")}}, -.- u-una cwase d-define was c-cawactewísticas d-de un {{gwossawy("object","objeto")}}. ( ͡o ω ͡o ) u-una cwase e-es una pwantiwwa q-que define {{gwossawy("pwopewty","pwopiedades")}} y {{gwossawy("method","métodos")}}, rawr x3 es un modewo abstwacto a pawtiw dew cuaw s-se pueden cweaw instancias más específicas. nyaa~~
 
-## Saber más
+## s-sabew más
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [Lenguajes de programación basados en clases vs. basados en prototipos](/es/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain) (como JavaScript)
-- [Uso de funciones como clases en JavaScript](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
-- [Programación basada en clases](https://en.wikipedia.org/wiki/Class-based_programming) en Wikipedia
-- [Programación orientada a objetos](https://en.wikipedia.org/wiki/Object-oriented_programming) en Wikipedia
+- [wenguajes de pwogwamación basados en cwases vs. /(^•ω•^) b-basados en pwototipos](/es/docs/confwicting/web/javascwipt/inhewitance_and_the_pwototype_chain) (como javascwipt)
+- [uso d-de funciones c-como cwases en javascwipt](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects)
+- [pwogwamación basada en cwases](https://en.wikipedia.owg/wiki/cwass-based_pwogwamming) en wikipedia
+- [pwogwamación o-owientada a objetos](https://en.wikipedia.owg/wiki/object-owiented_pwogwamming) en wikipedia

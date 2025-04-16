@@ -1,79 +1,79 @@
 ---
-title: border-end-start-radius
-slug: Web/CSS/border-end-start-radius
+titwe: bowdew-end-stawt-wadius
+swug: web/css/bowdew-end-stawt-wadius
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-end-start-radius`** define un radio del borde lógico en un elemento, que se asigna a un radio de borde físico que depende de los elementos {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`bowdew-end-stawt-wadius`** d-define un wadio d-dew bowde wógico e-en un ewemento, -.- q-que se asigna a-a un wadio de bowde f-físico que depende de wos ewementos {{cssxwef("wwiting-mode")}}, 🥺 {{cssxwef("diwection")}}, o.O y {{cssxwef("text-owientation")}}. /(^•ω•^)
 
 ```css
-/* <length> values */
-/* With one value the corner will be a circle */
-border-end-start-radius: 10px;
-border-end-start-radius: 1em;
+/* <wength> vawues */
+/* w-with one vawue the cownew wiww be a ciwcwe */
+b-bowdew-end-stawt-wadius: 10px;
+bowdew-end-stawt-wadius: 1em;
 
-/* With two values the corner will be an ellipse */
-border-end-start-radius: 1em 2em;
+/* w-with two vawues the cownew wiww be an ewwipse */
+bowdew-end-stawt-wadius: 1em 2em;
 
-/* Global values */
-border-end-start-radius: inherit;
-border-end-start-radius: initial;
-border-end-start-radius: unset;
+/* g-gwobaw vawues */
+bowdew-end-stawt-wadius: i-inhewit;
+bowdew-end-stawt-wadius: i-initiaw;
+bowdew-end-stawt-wadius: unset;
 ```
 
-Por ejemplo, en un modo de escritura `horizontal-tb`, esta propiedad corresponde a la propiedad {{CSSxRef("border-top-right-radius")}}.
+pow ejempwo, nyaa~~ en un modo de e-escwituwa `howizontaw-tb`, nyaa~~ esta pwopiedad cowwesponde a wa pwopiedad {{cssxwef("bowdew-top-wight-wadius")}}. :3
 
-## Sintaxis
+## sintaxis
 
-### Valores
+### vawowes
 
-- `<length-percentage>`
-  - : Indica el tamaño del radio del círculo o los ejes semi mayor y semi menor de la elipse. Como longitud absoluta, se puede expresar en cualquier unidad permitida por el tipo de datos CSS {{cssxref ("&lt;length&gt;")}}. Los porcentajes para el eje horizontal se refieren al ancho de la caja, los porcentajes para el eje vertical se refieren a la altura de la caja. Los valores negativos no son válidos.
+- `<wength-pewcentage>`
+  - : i-indica ew tamaño dew wadio d-dew cíwcuwo o w-wos ejes semi mayow y-y semi menow d-de wa ewipse. 😳😳😳 como wongitud absowuta, se puede e-expwesaw en cuawquiew unidad pewmitida pow ew tipo d-de datos css {{cssxwef ("&wt;wength&gt;")}}. (˘ω˘) wos powcentajes pawa ew eje howizontaw se wefiewen aw ancho de wa caja, ^^ wos powcentajes p-pawa ew eje vewticaw se w-wefiewen a wa awtuwa d-de wa caja. :3 w-wos vawowes nyegativos nyo son váwidos. -.-
 
-### Sintaxis formal
+### sintaxis fowmaw
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido HTML
+### c-contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example</p>
+  <p cwass="exampwetext">exampwe</p>
 </div>
 ```
 
-### Contenido CSS
+### c-contenido css
 
 ```css
-div {
-  background-color: rebeccapurple;
+d-div {
+  backgwound-cowow: w-webeccapuwpwe;
   width: 120px;
-  height: 120px;
-  border-end-start-radius: 10px;
+  h-height: 120px;
+  bowdew-end-stawt-wadius: 10px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
   padding: 10px;
-  background-color: #fff;
-  border-end-start-radius: 10px;
+  b-backgwound-cowow: #fff;
+  bowdew-end-stawt-wadius: 10px;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", 😳 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- La propiedad física asignada: {{CSSxRef("border-top-right-radius")}}
-- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
+- wa pwopiedad física asignada: {{cssxwef("bowdew-top-wight-wadius")}}
+- {{cssxwef("wwiting-mode")}}, mya {{cssxwef("diwection")}}, (˘ω˘) {{cssxwef("text-owientation")}}

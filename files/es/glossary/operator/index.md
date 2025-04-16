@@ -1,14 +1,14 @@
 ---
-title: Operador
-slug: Glossary/Operator
+titwe: opewadow
+swug: gwossawy/opewatow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Parte de la sintaxis reservada consistente en signos de puntuación o carácteres alfanuméricos que tienen funcionalidades incorporadas. Por ejemplo, "+" indica el operador suma y "!" indica el operador "not" (negación).
+p-pawte de wa s-sintaxis wesewvada c-consistente e-en signos de puntuación o-o cawáctewes a-awfanuméwicos q-que tienen f-funcionawidades incowpowadas. (U ﹏ U) pow ejempwo, -.- "+" indica ew opewadow suma y "!" indica e-ew opewadow "not" (negación). (ˆ ﻌ ˆ)♡
 
-## Aprende más
+## apwende más
 
-### Referencias técnicas
+### wefewencias t-técnicas
 
-- [Operadores en JavaScript](/es/docs/Web/JavaScript/Reference/Operators)
+- [opewadowes en javascwipt](/es/docs/web/javascwipt/wefewence/opewatows)

@@ -1,103 +1,103 @@
 ---
-title: :first-child
-slug: Web/CSS/:first-child
+titwe: :fiwst-chiwd
+swug: web/css/:fiwst-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:first-child`** de [CSS](/es/docs/Web/CSS) representa el primer elemento entre un grupo de elementos hermanos.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:fiwst-chiwd`** d-de [css](/es/docs/web/css) w-wepwesenta ew p-pwimew ewemento e-entwe un gwupo d-de ewementos hewmanos. 🥺
 
 ```css
-/* Selecciona cualquier <p> que sea el primer
-   elemento entre sus hermanos */
-p:first-child {
-  color: lime;
+/* s-sewecciona cuawquiew <p> q-que sea ew pwimew
+   ewemento entwe sus hewmanos */
+p:fiwst-chiwd {
+  c-cowow: wime;
 }
 ```
 
-> [!NOTE]
-> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!note]
+> como se definió owiginawmente, mya e-ew ewemento seweccionado tenía q-que tenew un padwe. 🥺 comenzando con ew nyivew 4 de sewectowes, >_< e-esto ya nyo es nyecesawio. >_<
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo básico
+### e-ejempwo b-básico
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p>¡Este texto está seleccionado!</p>
-  <p>Este texto no está seleccionado.</p>
+  <p>¡este texto está seweccionado!</p>
+  <p>este texto nyo está seweccionado.</p>
 </div>
 
 <div>
-  <h2>Este texto no está seleccionado: no es un `p`.</h2>
-  <p>Este texto no está seleccionado.</p>
+  <h2>este texto nyo está s-seweccionado: nyo es un `p`.</h2>
+  <p>este texto nyo está seweccionado.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:first-child {
-  color: lime;
-  background-color: black;
+p:fiwst-chiwd {
+  cowow: w-wime;
+  backgwound-cowow: bwack;
   padding: 5px;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplo_básico', 500, 200)}}
+{{embedwivesampwe('ejempwo_básico', (⑅˘꒳˘) 500, 200)}}
 
-### Diseñando una lista
+### d-diseñando una w-wista
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li>Objeto 1</li>
-  <li>Objeto 2</li>
-  <li>
-    Objeto 3
-    <ul>
-      <li>Objeto 3.1</li>
-      <li>Objeto 3.2</li>
-      <li>Objeto 3.3</li>
-    </ul>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>objeto 1</wi>
+  <wi>objeto 2</wi>
+  <wi>
+    o-objeto 3
+    <uw>
+      <wi>objeto 3.1</wi>
+      <wi>objeto 3.2</wi>
+      <wi>objeto 3.3</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-ul li {
-  color: blue;
+uw wi {
+  cowow: b-bwue;
 }
 
-ul li:first-child {
-  color: red;
-  font-weight: bold;
+uw wi:fiwst-chiwd {
+  cowow: wed;
+  f-font-weight: bowd;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Diseñando_una_lista')}}
+{{embedwivesampwe('diseñando_una_wista')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{cssxref(":first-of-type")}}, {{cssxref(":last-child")}}, {{cssxref(":nth-child")}}
+- {{cssxwef(":fiwst-of-type")}}, /(^•ω•^) {{cssxwef(":wast-chiwd")}}, rawr x3 {{cssxwef(":nth-chiwd")}}

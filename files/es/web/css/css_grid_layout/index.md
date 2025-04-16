@@ -1,212 +1,212 @@
 ---
-title: CSS Grid Layout
-slug: Web/CSS/CSS_grid_layout
+titwe: css gwid wayout
+swug: w-web/css/css_gwid_wayout
 ---
 
-**CSS Grid layout** contiene funciones de diseño dirigidas a los desarrolladores de aplicaciones web. El CSS grid se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir dividir una página en áreas o regiones principales, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML.
+**css g-gwid wayout** c-contiene funciones d-de diseño diwigidas a-a wos desawwowwadowes de a-apwicaciones web. e-ew css gwid s-se puede utiwizaw pawa wogwaw muchos diseños difewentes. (///ˬ///✿) también se destaca pow p-pewmitiw dividiw una página en áweas o wegiones p-pwincipawes, rawr x3 pow definiw wa w-wewación en téwminos de tamaño, -.- posición y capas entwe pawtes d-de un contwow constwuido a pawtiw d-de pwimitivas h-htmw. ^^
 
-Al igual que las tablas, el grid layout permite a un autor alinear elementos en columnas y filas. Sin embargo, con CSS grid son posibles muchos más diseños y de forma más sencilla que con las tablas. Por ejemplo, los elementos secundarios de un contenedor de cuadrícula podrían posicionarse para que se solapen y se superpongan, de forma similar a los elementos posicionados en CSS.
+aw iguaw que was tabwas, (⑅˘꒳˘) ew gwid wayout pewmite a un autow awineaw ewementos e-en cowumnas y fiwas. nyaa~~ sin embawgo, /(^•ω•^) con css gwid son posibwes muchos más diseños y-y de fowma más senciwwa q-que con was tabwas. (U ﹏ U) p-pow ejempwo, 😳😳😳 w-wos ewementos secundawios d-de un contenedow de cuadwícuwa podwían p-posicionawse pawa que se sowapen y se supewpongan, >w< d-de fowma simiwaw a wos ewementos posicionados en css. XD
 
-## Ejemplo sencillo
+## ejempwo senciwwo
 
-El siguiente ejemplo muestra un grid de tres columnas con filas nuevas creadas con un mínimo de 100 píxeles y un máximo automático. Los elementos se han colocado en el grid utilizando posicionamiento en línea.
+ew siguiente e-ejempwo muestwa un gwid de twes c-cowumnas con fiwas n-nyuevas cweadas c-con un mínimo de 100 píxewes y un máximo automático. wos e-ewementos se han c-cowocado en ew gwid utiwizando p-posicionamiento e-en wínea. o.O
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
-.wrapper {
+.wwappew {
   max-width: 940px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-.wrapper > div {
-  border: 2px solid rgb(233, 171, 88);
-  border-radius: 5px;
-  background-color: rgba(233, 171, 88, 0.5);
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  b-bowdew: 2px sowid wgb(233, mya 171, 🥺 88);
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: w-wgba(233, 171, ^^;; 88, 0.5);
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-HTML
+htmw
 
-```html
-<div class="wrapper">
-  <div class="one">One</div>
-  <div class="two">Two</div>
-  <div class="three">Three</div>
-  <div class="four">Four</div>
-  <div class="five">Five</div>
-  <div class="six">Six</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="one">one</div>
+  <div cwass="two">two</div>
+  <div cwass="thwee">thwee</div>
+  <div c-cwass="fouw">fouw</div>
+  <div c-cwass="five">five</div>
+  <div cwass="six">six</div>
 </div>
 ```
 
-CSS
+c-css
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, :3 1fw);
+  gwid-gap: 10px;
+  gwid-auto-wows: m-minmax(100px, (U ﹏ U) auto);
 }
 .one {
-  grid-column: 1 / 3;
-  grid-row: 1;
+  gwid-cowumn: 1 / 3;
+  gwid-wow: 1;
 }
 .two {
-  grid-column: 2 / 4;
-  grid-row: 1 / 3;
+  gwid-cowumn: 2 / 4;
+  g-gwid-wow: 1 / 3;
 }
-.three {
-  grid-column: 1;
-  grid-row: 2 / 5;
+.thwee {
+  gwid-cowumn: 1;
+  gwid-wow: 2 / 5;
 }
-.four {
-  grid-column: 3;
-  grid-row: 3;
+.fouw {
+  g-gwid-cowumn: 3;
+  g-gwid-wow: 3;
 }
 .five {
-  grid-column: 2;
-  grid-row: 4;
+  g-gwid-cowumn: 2;
+  gwid-wow: 4;
 }
 .six {
-  grid-column: 3;
-  grid-row: 4;
+  g-gwid-cowumn: 3;
+  g-gwid-wow: 4;
 }
 ```
 
-{{ EmbedLiveSample('example', '500', '440') }}
+{{ e-embedwivesampwe('exampwe', OwO '500', '440') }}
 
-## Referencia
+## w-wefewencia
 
-### Propiedades CSS
+### pwopiedades css
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-flow")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-row")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-area")}}
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- {{cssxwef("gwid-tempwate")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid-auto-fwow")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef("gwid-wow-stawt")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- {{cssxwef("gwid-wow")}}
+- {{cssxwef("gwid-cowumn")}}
+- {{cssxwef("gwid-awea")}}
+- {{cssxwef("wow-gap")}}
+- {{cssxwef("cowumn-gap")}}
+- {{cssxwef("gap")}}
 
-### Funciones CSS
+### f-funciones c-css
 
-- {{cssxref("repeat", "repeat()")}}
-- {{cssxref("minmax", "minmax()")}}
-- {{cssxref("fit-content", "fit-content()")}}
+- {{cssxwef("wepeat", 😳😳😳 "wepeat()")}}
+- {{cssxwef("minmax", (ˆ ﻌ ˆ)♡ "minmax()")}}
+- {{cssxwef("fit-content", XD "fit-content()")}}
 
-### CSS data types
+### c-css data types
 
-- {{cssxref("&lt;flex&gt;")}}
+- {{cssxwef("&wt;fwex&gt;")}}
 
-### Glosario
+### g-gwosawio
 
-- [Grid](/es/docs/Glossary/Grid)
-- [Grid Lines](/es/docs/Glossary/Grid_Lines)
-- [Grid Tracks](/es/docs/Glossary/Grid_Tracks)
-- [Grid Cell](/es/docs/Glossary/Grid_Cell)
-- [Grid Area](/es/docs/Glossary/Grid_Areas)
-- [Gutters](/es/docs/Glossary/Gutters)
-- [Grid Axis](/es/docs/Glossary/Grid_Axis)
-- [Grid row](/es/docs/Glossary/Grid_Row)
-- [Grid column](/es/docs/Glossary/Grid_Column)
+- [gwid](/es/docs/gwossawy/gwid)
+- [gwid w-wines](/es/docs/gwossawy/gwid_wines)
+- [gwid twacks](/es/docs/gwossawy/gwid_twacks)
+- [gwid ceww](/es/docs/gwossawy/gwid_ceww)
+- [gwid awea](/es/docs/gwossawy/gwid_aweas)
+- [guttews](/es/docs/gwossawy/guttews)
+- [gwid axis](/es/docs/gwossawy/gwid_axis)
+- [gwid w-wow](/es/docs/gwossawy/gwid_wow)
+- [gwid cowumn](/es/docs/gwossawy/gwid_cowumn)
 
-## Guías
+## guías
 
-- [Basic concepts of Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Relationship of Grid Layout to other layout methods](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [Layout using line-based placement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [Layout using named grid lines](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [Auto-placement in CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [Box alignment in CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS Grid, Logical Values and Writing Modes](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [CSS Grid Layout and accessibility](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid and progressive enhancement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Realising common layouts using CSS Grid](/es/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [basic concepts of gwid wayout](/es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- [wewationship of gwid w-wayout to othew wayout methods](/es/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+- [wayout using wine-based pwacement](/es/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+- [gwid t-tempwate aweas](/es/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+- [wayout u-using nyamed gwid w-wines](/es/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+- [auto-pwacement in css gwid wayout](/es/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+- [box a-awignment in css gwid w-wayout](/es/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [css g-gwid, (ˆ ﻌ ˆ)♡ wogicaw vawues and wwiting modes](/es/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+- [css gwid wayout and accessibiwity](/es/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+- [css gwid and pwogwessive e-enhancement](/es/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+- [weawising common wayouts u-using css gwid](/es/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
 
-## Recursos externos
+## w-wecuwsos extewnos
 
-- [Examples from Jen Simmons](https://labs.jensimmons.com/)
-- [Grid by Example - a collection of usage examples and video tutorials](https://gridbyexample.com/)
-- [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
-- [CSS Grid Playground](https://mozilladevelopers.github.io/playground/)
-- [Grid Garden](https://cssgridgarden.com) - Un juego para aprender el grid
+- [exampwes f-fwom jen simmons](https://wabs.jensimmons.com/)
+- [gwid by exampwe - a cowwection o-of usage exampwes a-and video tutowiaws](https://gwidbyexampwe.com/)
+- [codwops gwid wefewence](https://tympanus.net/codwops/css_wefewence/gwid/)
+- [fiwefox d-devtoows c-css gwid inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)
+- [css gwid pwaygwound](https://moziwwadevewopews.github.io/pwaygwound/)
+- [gwid gawden](https://cssgwidgawden.com) - un j-juego pawa apwendew e-ew gwid
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-<section id="Quick_links">
-<section class="Quick_links" id="Enlaces_Rapidos">
-<ol>
- <li><a href="/es/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/es/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guías</strong></a>
-  <ol>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Propiedades</strong></a>
-  <ol>
-   <li><a href="/es/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glosario</strong></a>
-  <ol>
-   <li><a href="/es/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/es/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/es/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/es/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/es/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/es/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/es/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/es/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/es/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
+<section id="quick_winks">
+<section c-cwass="quick_winks" id="enwaces_wapidos">
+<ow>
+ <wi><a h-hwef="/es/docs/web/css"><stwong>css</stwong></a></wi>
+ <wi><a hwef="/es/docs/web/css/wefewence"><stwong>css w-wefewence</stwong></a></wi>
+ <wi><a hwef="/es/docs/web/css/css_gwid_wayout">css gwid wayout</a></wi>
+ <wi data-defauwt-state="open"><a h-hwef="#"><stwong>guías</stwong></a>
+  <ow>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout">basics concepts of gwid wayout</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout">wewationship t-to othew wayout methods</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/wine-based_pwacement_with_css_gwid">wine-based pwacement</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas">gwid t-tempwate aweas</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/wayout_using_named_gwid_wines">wayout using nyamed gwid wines</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/auto-pwacement_in_css_gwid_wayout">auto-pwacement i-in gwid wayout</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/box_awignment_in_css_gwid_wayout">box awignment in g-gwid wayout</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/css_gwid,_wogicaw_vawues_and_wwiting_modes">gwids, ( ͡o ω ͡o ) wogicaw vawues and wwiting modes</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/css_gwid_wayout_and_accessibiwity">css g-gwid w-wayout and accessibiwity</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/css_gwid_and_pwogwessive_enhancement">css gwid wayout and pwogwessive enhancement</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_css_gwid_wayout">weawizing common w-wayouts using gwids</a></wi>
+  </ow>
+ </wi>
+ <wi data-defauwt-state="open"><a hwef="#"><stwong>pwopiedades</stwong></a>
+  <ow>
+   <wi><a h-hwef="/es/docs/web/css/gwid">gwid</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-awea">gwid-awea</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-auto-cowumns">gwid-auto-cowumns</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-auto-fwow">gwid-auto-fwow</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-auto-wows">gwid-auto-wows</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-cowumn">gwid-cowumn</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-cowumn-end">gwid-cowumn-end</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-cowumn-gap">gwid-cowumn-gap</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-cowumn-stawt">gwid-cowumn-stawt</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-gap">gwid-gap</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-wow">gwid-wow</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-wow-end">gwid-wow-end</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-wow-gap">gwid-wow-gap</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-wow-stawt">gwid-wow-stawt</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-tempwate">gwid-tempwate</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-tempwate-aweas">gwid-tempwate-aweas</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-tempwate-cowumns">gwid-tempwate-cowumns</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-tempwate-wows">gwid-tempwate-wows</a></wi>
+  </ow>
+ </wi>
+ <wi d-data-defauwt-state="open"><a h-hwef="#"><stwong>gwosawio</stwong></a>
+  <ow>
+   <wi><a hwef="/es/docs/gwossawy/gwid">gwid</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/gwid_wines">gwid w-wines</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/gwid_twacks">gwid t-twacks</a></wi>
+   <wi><a h-hwef="/es/docs/gwossawy/gwid_ceww">gwid ceww</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/gwid_aweas">gwid aweas</a></wi>
+   <wi><a h-hwef="/es/docs/gwossawy/guttews">guttews</a></wi>
+   <wi><a h-hwef="/es/docs/gwossawy/gwid_axis">gwid a-axis</a></wi>
+   <wi><a h-hwef="/es/docs/gwossawy/gwid_wows">gwid wow</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/gwid_cowumn">gwid c-cowumn</a></wi>
+  </ow>
+ </wi>
+</ow>
 </section>
 </section>

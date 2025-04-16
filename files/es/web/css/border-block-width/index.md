@@ -1,70 +1,70 @@
 ---
-title: border-block-width
-slug: Web/CSS/border-block-width
+titwe: bowdew-bwock-width
+swug: w-web/css/bowdew-bwock-width
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-block-width`** [CSS](/es/docs/Web/CSS) property defines the width of the logical block borders of an element, que se asigna al estilo de borde físico dependiendo del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-width")}} y {{cssxref("border-bottom-width")}}, o {{cssxref("border-left-width")}}, y {{cssxref("border-right-width")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+w-wa pwopiedad de [css](/es/docs/web/css) **`bowdew-bwock-width`** [css](/es/docs/web/css) p-pwopewty d-defines the width o-of the wogicaw b-bwock bowdews o-of an ewement, ʘwʘ q-que se asigna aw estiwo de bowde físico dependiendo dew modo de escwituwa, /(^•ω•^) wa d-diweccionawidad y wa owientación dew texto dew e-ewemento. ʘwʘ esto cowwesponde a was p-pwopiedades {{cssxwef("bowdew-top-width")}} y {{cssxwef("bowdew-bottom-width")}}, σωσ o {{cssxwef("bowdew-weft-width")}}, OwO y {{cssxwef("bowdew-wight-width")}} d-dependiendo de wos vawowes d-definidos p-pow {{cssxwef("wwiting-mode")}}, 😳😳😳 {{cssxwef("diwection")}}, 😳😳😳 y {{cssxwef("text-owientation")}}. o.O
 
 ```css
-/* <'border-width'> values */
-border-block-width: 5px;
-border-block-width: thick;
+/* <'bowdew-width'> vawues */
+bowdew-bwock-width: 5px;
+bowdew-bwock-width: t-thick;
 ```
 
-El ancho del borde en otra dimensión puede establecerse con {{cssxref("border-inline-width")}}, que establece {{cssxref("border-inline-start-width")}}, y {{cssxref("border-inline-end-width")}}.
+ew ancho dew bowde en otwa dimensión puede estabwecewse con {{cssxwef("bowdew-inwine-width")}}, ( ͡o ω ͡o ) q-que estabwece {{cssxwef("bowdew-inwine-stawt-width")}}, (U ﹏ U) y-y {{cssxwef("bowdew-inwine-end-width")}}. (///ˬ///✿)
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-### Valores
+### vawowes
 
-- `<'border-width'>`
-  - : El ancho del borde. Mira {{ cssxref("border-width") }}.
+- `<'bowdew-width'>`
+  - : e-ew ancho dew b-bowde. >w< miwa {{ cssxwef("bowdew-width") }}. rawr
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### c-contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### contenido c-css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  border: 1px solid blue;
-  border-block-width: 5px;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  bowdew: 1px sowid b-bwue;
+  bowdew-bwock-width: 5px;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", mya 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- Esta propiedad se asigna a una de las propiedades del borde físico: {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, y {{cssxref("border-left-width")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- esta pwopiedad s-se asigna a una d-de was pwopiedades dew bowde físico: {{cssxwef("bowdew-top-width")}}, ^^ {{cssxwef("bowdew-wight-width")}}, 😳😳😳 {{cssxwef("bowdew-bottom-width")}}, mya y-y {{cssxwef("bowdew-weft-width")}}
+- {{cssxwef("wwiting-mode")}}, 😳 {{cssxwef("diwection")}}, -.- {{cssxwef("text-owientation")}}

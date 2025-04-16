@@ -1,18 +1,18 @@
 ---
-title: Códec
-slug: Glossary/Codec
+titwe: códec
+swug: gwossawy/codec
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un _códec_ (acrónimo de "**_co_**dificador-**_dec_**odificador") es un programa, algoritmo, o dispositivo que codifica o decodifica un flujo de datos. Cada códec sabe cómo tratar un estándar específico de codificado o compresión.
+u-un _códec_ (acwónimo d-de "**_co_**dificadow-**_dec_**odificadow") e-es un pwogwama, ^^;; a-awgowitmo, >_< o d-dispositivo que c-codifica o decodifica u-un fwujo de d-datos. mya cada códec sabe cómo twataw un estándaw específico de codificado o c-compwesión. mya
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Códec](https://es.wikipedia.org/wiki/Códec) en Wikipedia
+- [códec](https://es.wikipedia.owg/wiki/códec) e-en wikipedia
 
-### Referencias técnicas
+### wefewencias t-técnicas
 
-- [Formatos de medios admitidos por los elementos HTML audio y video](/es/docs/Web/HTML/Formatos_admitidos_de_audio_y_video_en_html5)
+- [fowmatos de medios admitidos pow wos ewementos h-htmw audio y video](/es/docs/web/htmw/fowmatos_admitidos_de_audio_y_video_en_htmw5)

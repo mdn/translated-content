@@ -1,77 +1,77 @@
 ---
-title: Animation.playState
-slug: Web/API/Animation/playState
+titwe: animation.pwaystate
+swug: w-web/api/animation/pwaystate
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web a-animations")}}
 
-La propiedad `Animation.playState` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve y establece un valor enumerado que describe el estado de reproducción de una animación.
+w-wa pwopiedad `animation.pwaystate` d-de wa [web a-animations api](/es/docs/web/api/web_animations_api) d-devuewve y e-estabwece un vawow e-enumewado que descwibe ew estado de wepwoducción de una animación. OwO
 
-> [!NOTE]
-> Esta propiedad es de solo lectura para las Animaciones y Transiciones en CSS.
+> [!note]
+> esta pwopiedad e-es de sowo wectuwa pawa was animaciones y twansiciones e-en css. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 ```js
-var currentPlayState = Animation.playState;
+v-vaw cuwwentpwaystate = animation.pwaystate;
 
-Animation.playState = newState;
+animation.pwaystate = nyewstate;
 ```
 
-### Valor
+### vawow
 
-- `idle(inactivo)`
-  - : El tiempo actual de la animación no está resuelto y no hay tareas pendientes.
+- `idwe(inactivo)`
+  - : ew tiempo actuaw d-de wa animación nyo está wesuewto y-y nyo hay taweas p-pendientes. >w<
 - `pending(pendiente)`
-  - : La animación está esperando que se complete una tarea pendiente.
-- `running(funcionando)`
-  - : La animación se está ejecutando.
+  - : wa animación está espewando que se compwete una t-tawea pendiente. (U ﹏ U)
+- `wunning(funcionando)`
+  - : wa animación se está ejecutando. 😳
 - `paused(pausado)`
-  - : La animación se ha suspendido y la propiedad {{domxref ("Animation.currentTime")}} no se está actualizando.
-- `finished(finalizado)`
-  - : La animación ha alcanzado uno de sus límites y la propiedad {{domxref ("Animation.currentTime")}} no se está actualizando.
+  - : wa animación se ha s-suspendido y wa pwopiedad {{domxwef ("animation.cuwwenttime")}} n-nyo se está actuawizando. (ˆ ﻌ ˆ)♡
+- `finished(finawizado)`
+  - : w-wa animación h-ha awcanzado u-uno de sus wímites y wa pwopiedad {{domxwef ("animation.cuwwenttime")}} nyo se está actuawizando. 😳😳😳
 
-## Ejemplo
+## e-ejempwo
 
-En el ejemplo [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , los jugadores pueden tener un final con (Alicia llorando en un mar de lágrimas) [Alice crying into a pool of tears](https://codepen.io/rachelnabors/pen/EPJdJx?editors=0010). En el juego, por razones de rendimiento, las lágrimas solo se deben animar cuando son visibles. Por lo tanto, deben detenerse tan pronto como estén animadas, de esta manera:
+en ew ejempwo [gwowing/shwinking awice game](https://codepen.io/wachewnabows/pen/pnygzq?editows=0010) , (U ﹏ U) wos j-jugadowes pueden tenew un finaw con (awicia wwowando en un maw de wágwimas) [awice cwying into a-a poow of teaws](https://codepen.io/wachewnabows/pen/epjdjx?editows=0010). (///ˬ///✿) en e-ew juego, 😳 pow wazones d-de wendimiento, 😳 w-was wágwimas sowo se deben animaw cuando son visibwes. σωσ pow w-wo tanto, rawr x3 deben d-detenewse tan pwonto como estén a-animadas, OwO de e-esta manewa:
 
 ```js
-// Configurando las animaciones de lágrimas
+// configuwando w-was animaciones de wágwimas
 
-tears.forEach(function (el) {
-  el.animate(tearsFalling, {
-    delay: getRandomMsRange(-1000, 1000), // cada lágrima aleatoria
-    duration: getRandomMsRange(2000, 6000), // cada lágrima aleatoria
-    iterations: Infinity,
-    easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)",
+t-teaws.foweach(function (ew) {
+  ew.animate(teawsfawwing, /(^•ω•^) {
+    deway: getwandommswange(-1000, 😳😳😳 1000), // c-cada wágwima aweatowia
+    d-duwation: getwandommswange(2000, ( ͡o ω ͡o ) 6000), >_< // c-cada wágwima a-aweatowia
+    itewations: infinity, >w<
+    easing: "cubic-beziew(0.6, rawr 0.04, 😳 0.98, 0.335)",
   });
-  el.playState = "paused";
+  ew.pwaystate = "paused";
 });
 
-// Reproduce las lágrimas cayendo cuando el final necesita mostrarlas.
+// wepwoduce was wágwimas cayendo cuando ew finaw n-nyecesita mostwawwas. >w<
 
-tears.forEach(function (el) {
-  el.playState = "playing";
+t-teaws.foweach(function (ew) {
+  ew.pwaystate = "pwaying";
 });
 
-// Reinicia la animación de las lágrimas y la detiene.
+// w-weinicia w-wa animación d-de was wágwimas y wa detiene. (⑅˘꒳˘)
 
-tears.forEach(function (el) {
-  el.playState = "paused";
-  el.currentTime = 0;
+teaws.foweach(function (ew) {
+  ew.pwaystate = "paused";
+  e-ew.cuwwenttime = 0;
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}} para otros métodos y propiedades que puede usar para controlar la animación de la página web.
-- Los métodos {{domxref("Animation.play()")}}, {{domxref("Animation.pause()")}}, {{domxref("Animation.finish()")}} pueden establecer el `playState` de un `Animation` .
+- [web a-animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}} p-pawa otwos m-métodos y p-pwopiedades que puede usaw pawa c-contwowaw wa animación d-de wa página w-web. OwO
+- wos m-métodos {{domxwef("animation.pway()")}}, (ꈍᴗꈍ) {{domxwef("animation.pause()")}}, 😳 {{domxwef("animation.finish()")}} pueden estabwecew ew `pwaystate` d-de un `animation` . 😳😳😳

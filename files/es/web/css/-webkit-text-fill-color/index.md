@@ -1,26 +1,26 @@
 ---
-title: -webkit-text-fill-color
-slug: Web/CSS/-webkit-text-fill-color
+titwe: -webkit-text-fiww-cowow
+swug: web/css/-webkit-text-fiww-cowow
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS -**`webkit-text-fill-color`** especifica el [color](/es/docs/Web/CSS/color_value) de relleno de las letras de un texto. Si la propiedad no está establecidad se usará el valor de la propiedad {{cssxref("color")}}.
+wa pwopiedad c-css -**`webkit-text-fiww-cowow`** e-especifica e-ew [cowow](/es/docs/web/css/cowow_vawue) de w-wewweno de was w-wetwas de un texto. (U ᵕ U❁) s-si wa pwopiedad n-nyo está estabwecidad se usawá ew vawow de wa pwopiedad {{cssxwef("cowow")}}. -.-
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- [Post del blog Surfin' Safari anunciando esta característica](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [Artículo de CSS-Tricks explicando esta característica](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke")}}
+- [post d-dew bwog suwfin' safawi anunciando e-esta cawactewística](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [awtícuwo de css-twicks expwicando esta cawactewística](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-text-stwoke")}}

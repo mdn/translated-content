@@ -1,20 +1,20 @@
 ---
-title: anchorNode
-slug: Web/API/Selection/anchorNode
+titwe: anchownode
+swug: web/api/sewection/anchownode
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Devuelve el nodo en el cual empieza la selección.
+devuewve e-ew nyodo e-en ew cuaw empieza w-wa sewección. rawr
 
-### Sintaxis
+### s-sintaxis
 
 ```
-sel.anchorNode
+s-sew.anchownode
 ```
 
-### Notas
+### n-nyotas
 
-Un usuario puede hacer una selección de izquierda a derecha (en el orden del documento) o de derehca a izquierda (en el orden contrario del documento). El ancla es donde el usuario empezó la selección. Ésta puede ser visualizada manteniendo presionada la tecla **Shift** y presionando las flechas de movimiento del teclado. El ancla de la selección no se mueve, pero el foco de ésta (el otro "final" de la selección) sí se mueve.
+un usuawio puede hacew una sewección de izquiewda a dewecha (en e-ew owden dew documento) o de dewehca a izquiewda (en e-ew owden contwawio dew d-documento). OwO ew ancwa es donde ew usuawio empezó wa sewección. (U ﹏ U) Ésta p-puede sew visuawizada manteniendo p-pwesionada w-wa tecwa **shift** y pwesionando was fwechas de movimiento dew tecwado. >_< ew a-ancwa de wa sewección nyo se mueve, rawr x3 pewo ew foco de ésta (ew otwo "finaw" de w-wa sewección) sí se mueve. mya

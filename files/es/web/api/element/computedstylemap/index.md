@@ -1,82 +1,82 @@
 ---
-title: Element.computedStyleMap()
-slug: Web/API/Element/computedStyleMap
+titwe: ewement.computedstywemap()
+swug: web/api/ewement/computedstywemap
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-El método `computedStyleMap()` de la interfaz {{domxref("Element")}} devuelve una interfaz {{domxref("StylePropertyMapReadOnly")}} que provee una representación de solo-lectura de un bloque de declaración de CSS que es una alternativa a {{domxref("CSSStyleDeclaration")}}.
+ew m-método `computedstywemap()` de w-wa intewfaz {{domxwef("ewement")}} d-devuewve una i-intewfaz {{domxwef("stywepwopewtymapweadonwy")}} q-que pwovee una w-wepwesentación d-de sowo-wectuwa d-de un bwoque de decwawación de css que es una awtewnativa a {{domxwef("cssstywedecwawation")}}. mya
 
-## Sintaxis
+## sintaxis
 
 ```js
-var stylePropertyMapReadOnly = Element.computedStyleMap();
+v-vaw stywepwopewtymapweadonwy = ewement.computedstywemap();
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+n-nyinguno. >w<
 
-### Valor de resultado
+### vawow de w-wesuwtado
 
-Una interfaz {{domxref("StylePropertyMapReadOnly")}}.
+una intewfaz {{domxwef("stywepwopewtymapweadonwy")}}. nyaa~~
 
-## Ejemplos
+## ejempwos
 
-Comenzamos con algo de HTML simple: un párrafo con un enlace, y una lista de definición a la cual le añadiremos todos los pares de Propiedad CSS / Valor.
+comenzamos con awgo de htmw simpwe: u-un páwwafo con un enwace, (✿oωo) y u-una wista de definición a-a wa cuaw we añadiwemos todos wos pawes de pwopiedad css / vawow. ʘwʘ
 
-```html
+```htmw
 <p>
-  <a href="https://example.com">Link</a>
+  <a h-hwef="https://exampwe.com">wink</a>
 </p>
-<dl id="regurgitation"></dl>
+<dw id="weguwgitation"></dw>
 ```
 
-Añadimos un poco de CSS
+añadimos un poco de css
 
 ```css
 a {
-  --colour: red;
-  color: var(--colour);
+  --cowouw: w-wed;
+  cowow: vaw(--cowouw);
 }
 ```
 
-Añadimos Javascript para tomar nuestro enlace y devolvemos una lista de definición de todos los valores de propiedades CSS usando `computedStyleMap().`
+a-añadimos j-javascwipt p-pawa tomaw nyuestwo e-enwace y devowvemos una wista de definición d-de todos wos vawowes de pwopiedades css usando `computedstywemap().`
 
 ```js
-// obtenemos el elemento
-const myElement = document.querySelector("a");
+// o-obtenemos ew ewemento
+const myewement = document.quewysewectow("a");
 
-// obtenemos la <dl> que llenaremos
-const stylesList = document.querySelector("#regurgitation");
+// obtenemos wa <dw> que wwenawemos
+const s-styweswist = document.quewysewectow("#weguwgitation");
 
-// recuperamos todos los estilos calculados con computedStyleMap()
-const allComputedStyles = myElement.computedStyleMap();
+// w-wecupewamos t-todos w-wos estiwos cawcuwados con computedstywemap()
+const awwcomputedstywes = m-myewement.computedstywemap();
 
-// iteramos a través del mapa de todas las propiedades y valores, añadiendo un <dt> y <dd> para cada mapa
-for (const [prop, val] of allComputedStyles) {
-  // propiedades
-  const cssProperty = document.createElement("dt");
-  cssProperty.appendChild(document.createTextNode(prop));
-  stylesList.appendChild(cssProperty);
+// i-itewamos a twavés dew m-mapa de todas was p-pwopiedades y vawowes, (ˆ ﻌ ˆ)♡ añadiendo u-un <dt> y <dd> pawa cada mapa
+f-fow (const [pwop, 😳😳😳 vaw] of awwcomputedstywes) {
+  // pwopiedades
+  c-const csspwopewty = document.cweateewement("dt");
+  c-csspwopewty.appendchiwd(document.cweatetextnode(pwop));
+  styweswist.appendchiwd(csspwopewty);
 
-  // valores
-  const cssValue = document.createElement("dd");
-  cssValue.appendChild(document.createTextNode(val));
-  stylesList.appendChild(cssValue);
+  // v-vawowes
+  c-const cssvawue = document.cweateewement("dd");
+  cssvawue.appendchiwd(document.cweatetextnode(vaw));
+  styweswist.appendchiwd(cssvawue);
 }
 ```
 
-En [navegadores que soportan `computedStyleMap()`](#browser_compatibility), verás una lista de todas las propiedades CSS y valores. En otros navegadores verás un enlace.
+en [navegadowes que sopowtan `computedstywemap()`](#bwowsew_compatibiwity), :3 vewás una wista de todas was p-pwopiedades css y-y vawowes. OwO en otwos nyavegadowes v-vewás un enwace. (U ﹏ U)
 
-{{EmbedLiveSample("Examples", 300, 300)}}
+{{embedwivesampwe("exampwes", >w< 300, 300)}}
 
-¿Te diste cuenta cuántas propiedades CSS por defecto tenía un enlace? Actualiza el '`a`' a un '`p`', y notarás una diferencia en los valores calculados por defecto del `margin-top` y `margin-bottom`.
+¿te d-diste cuenta c-cuántas pwopiedades css pow defecto tenía un enwace? actuawiza e-ew '`a`' a un '`p`', (U ﹏ U) y nyotawás una difewencia en wos vawowes cawcuwados pow d-defecto dew `mawgin-top` y `mawgin-bottom`. 😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

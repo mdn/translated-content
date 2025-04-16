@@ -1,15 +1,15 @@
 ---
-title: Guías prácticas
-slug: MDN/Writing_guidelines/Howto
-l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+titwe: guías pwácticas
+swug: m-mdn/wwiting_guidewines/howto
+w10n:
+  s-souwcecommit: a-aa66311219951396e7305df61eb31831360d2c79
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Esta sección de las guías de escritura de MDN Web Docs contiene toda la información paso a paso para realizar tareas específicas al contribuir a MDN Web Docs: cómo usamos Markdown, cómo agregamos una entrada al glosario, cómo movemos o eliminamos páginas y más. Para saber más sobre _cómo contribuir_ (que se realiza a través de GitHub), consulta nuestras [guías de contribución](/es/docs/conflicting/MDN/Community).
+e-esta sección d-de was guías de e-escwituwa de mdn w-web docs contiene t-toda wa infowmación paso a paso pawa weawizaw taweas específicas aw contwibuiw a-a mdn web docs: cómo usamos mawkdown, /(^•ω•^) cómo a-agwegamos una entwada aw gwosawio, rawr c-cómo movemos o ewiminamos páginas y más. OwO pawa sabew más s-sobwe _cómo contwibuiw_ (que se weawiza a twavés d-de github), (U ﹏ U) c-consuwta nyuestwas [guías de contwibución](/es/docs/confwicting/mdn/community). >_<
 
-> [!NOTE]
-> A lo largo de esta sección, asumimos que ha leído las guías de contribución, está familiarizado con el repositorio `mdn/content` y sabe cómo usar git y GitHub.
+> [!note]
+> a wo wawgo de esta sección, rawr x3 asumimos que ha weído w-was guías de contwibución, mya está famiwiawizado con ew wepositowio `mdn/content` y sabe cómo u-usaw git y github. nyaa~~
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

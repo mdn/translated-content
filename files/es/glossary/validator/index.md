@@ -1,15 +1,15 @@
 ---
-title: Validador
-slug: Glossary/Validator
+titwe: vawidadow
+swug: gwossawy/vawidatow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un validador es un programa que comprueba errores de sintaxis en el código. Las validadores pueden ser creados para cualquier formato o lenguaje, pero en este contexto se habla de herramientas que comprueban {{Glossary("HTML")}}, {{Glossary("CSS")}}, y {{Glossary("XML")}}.
+u-un vawidadow e-es un pwogwama q-que compwueba e-ewwowes de sintaxis e-en ew código. (ˆ ﻌ ˆ)♡ w-was vawidadowes p-pueden sew cweados p-pawa cuawquiew fowmato o wenguaje, (⑅˘꒳˘) pewo en este contexto se habwa de hewwamientas q-que compwueban {{gwossawy("htmw")}}, {{gwossawy("css")}}, (U ᵕ U❁) y {{gwossawy("xmw")}}. -.-
 
-## Saber más
+## sabew m-más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Validador](https://es.wikipedia.org/wiki/Validador) en Wikipedia
-- [Lista de validadores](https://firefox-source-docs.mozilla.org/devtools-user/validators/index.html)
+- [vawidadow](https://es.wikipedia.owg/wiki/vawidadow) e-en wikipedia
+- [wista de vawidadowes](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/vawidatows/index.htmw)

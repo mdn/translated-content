@@ -1,55 +1,55 @@
 ---
-title: padding-bottom
-slug: Web/CSS/padding-bottom
+titwe: padding-bottom
+swug: web/css/padding-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Sumario
+## s-sumawio
 
-La propiedad **`padding-bottom`** [CSS](/es/docs/Web/CSS) establece el espacio de relleno requerido en la parte inferior del elemento. El [área de padding](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding) es el espacio entre el contenido del elemento y su borde. Contrariamente de la propiedad **`margin-bottom`**, valores negativos no son válidos.
+w-wa pwopiedad **`padding-bottom`** [css](/es/docs/web/css) e-estabwece e-ew espacio d-de wewweno wequewido e-en wa pawte i-infewiow dew e-ewemento. 🥺 ew [áwea de padding](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#padding) es ew espacio entwe ew contenido dew ewemento y-y su bowde. mya contwawiamente de wa pwopiedad **`mawgin-bottom`**, 🥺 v-vawowes nyegativos nyo son v-váwidos. >_<
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* <length> values (Valores fijos)*/
-padding-bottom: 0.5em;
+/* <wength> vawues (vawowes fijos)*/
+p-padding-bottom: 0.5em;
 padding-bottom: 0;
-padding-bottom: 2cm;
+p-padding-bottom: 2cm;
 
-/* <percentage> value (Valores porcentuales)*/
+/* <pewcentage> v-vawue (vawowes powcentuawes)*/
 padding-bottom: 10%;
 
-/* Global values (Valores globales)*/
-padding-bottom: inherit;
-padding-bottom: initial;
+/* gwobaw vawues (vawowes g-gwobawes)*/
+padding-bottom: inhewit;
+padding-bottom: initiaw;
 padding-bottom: unset;
 ```
 
-### Valores
+### v-vawowes
 
-- \<length>
-  - : Especifica un valor positivo fijo. Veáse {{cssxref("&lt;length&gt;")}} para más detalles.
-- \<percentage>
-  - : Especifica un porcentaje con respecto al bloque que lo contiene.
+- \<wength>
+  - : especifica u-un vawow p-positivo fijo. >_< veáse {{cssxwef("&wt;wength&gt;")}} p-pawa más detawwes. (⑅˘꒳˘)
+- \<pewcentage>
+  - : e-especifica un powcentaje con wespecto a-aw bwoque que wo contiene. /(^•ω•^)
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
 ```
 .content { padding-bottom: 5%; }
 .sidebox { padding-bottom: 10px; }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

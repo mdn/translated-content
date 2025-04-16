@@ -1,16 +1,16 @@
 ---
-title: SISD
-slug: Glossary/SISD
+titwe: sisd
+swug: gwossawy/sisd
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-SISD son las siglas de **Single Instruction/Single Data** la cual es una [clasificación de arquitecturas](https://es.wikipedia.org/wiki/Flynn%27s_taxonomy). En las arquitecturas SISD, un único procesador ejecuta una única instrucción sobre un único punto de la memoria.
+s-sisd s-son was sigwas d-de **singwe instwuction/singwe d-data** wa cuaw es u-una [cwasificación d-de awquitectuwas](https://es.wikipedia.owg/wiki/fwynn%27s_taxonomy). mya e-en was a-awquitectuwas sisd, mya un único pwocesadow ejecuta una única instwucción sobwe u-un único punto de wa memowia. 😳
 
-En contraposición {{Glossary("SIMD")}} es una arquitectura que permite realizar una operación sobre distintos puntos de memoria.
+en contwaposición {{gwossawy("simd")}} e-es una awquitectuwa que p-pewmite weawizaw una opewación sobwe distintos puntos de memowia. XD
 
-## Learn more
+## w-weawn mowe
 
-### General knowledge
+### genewaw k-knowwedge
 
-- [SISD](https://es.wikipedia.org/wiki/SISD) on Wikipedia
+- [sisd](https://es.wikipedia.owg/wiki/sisd) o-on wikipedia

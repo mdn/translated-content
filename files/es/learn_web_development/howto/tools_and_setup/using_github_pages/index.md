@@ -1,105 +1,105 @@
 ---
-title: ¿Cómo se utiliza Github pages?
-slug: Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
-original_slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
+titwe: ¿cómo se utiwiza github p-pages?
+swug: w-weawn_web_devewopment/howto/toows_and_setup/using_github_pages
+o-owiginaw_swug: weawn/common_questions/toows_and_setup/using_github_pages
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-[GitHub](https://github.com/) es un sitio "social coding". Te permite subir repositorios de código para almacenarlo en el **sistema de control de versiones** [Git](http://git-scm.com/). Tu puedes colaborar en proyectos de código, y el sistema es código abierto por defecto, lo que significa que cualquiera en el mundo puede encontrar tu código en GitHub, usarlo, aprender de el, y mejorarlo. ¡Tú puedes hacer eso con el código de otras personas tambien! Este artículo provee una guía básica para publicar contenido usando la característica gh-pages de Github.
+[github](https://github.com/) e-es un sitio "sociaw c-coding". ^^;; te p-pewmite subiw w-wepositowios de c-código pawa awmacenawwo en ew **sistema de contwow de vewsiones** [git](http://git-scm.com/). mya tu puedes cowabowaw e-en pwoyectos de código, 😳😳😳 y ew sistema es código a-abiewto pow defecto, OwO wo que s-significa que cuawquiewa en ew mundo puede encontwaw tu código e-en github, rawr usawwo, apwendew de ew, XD y-y mejowawwo. (U ﹏ U) ¡tú p-puedes hacew eso con ew código de otwas pewsonas tambien! (˘ω˘) este awtícuwo p-pwovee una guía básica pawa pubwicaw contenido usando wa cawactewística gh-pages d-de github. UwU
 
-## Publicando contenido
+## pubwicando contenido
 
-Github es una comunidad muy importante y útil para involucrarse, y Git/GitHub es un [sistema de control de versiones](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) muy popular — la mayoría de las empresas de tecnología ahora lo utilizan en su flujo de trabajo. GitHub tiene una característica muy útil llamada [GitHub pages](https://pages.github.com/), que te permite publicar el código del sitio en vivo en la Web.
+g-github e-es una comunidad m-muy impowtante y-y útiw pawa invowucwawse, >_< y git/github es un [sistema d-de contwow de vewsiones](http://git-scm.com/book/en/v2/getting-stawted-about-vewsion-contwow) muy popuwaw — w-wa mayowía de was empwesas de tecnowogía ahowa wo utiwizan en su fwujo de twabajo. σωσ github t-tiene una cawactewística muy útiw w-wwamada [github p-pages](https://pages.github.com/), 🥺 q-que te pewmite pubwicaw ew código dew sitio en vivo en w-wa web. 🥺
 
-### Configuración básica de Github
+### configuwación b-básica de github
 
-1. Primero que todo, [instala Git](http://git-scm.com/downloads) en tu máquina. Este es el software del sistema de control de versiones subyacente en el que GitHub funciona.
-2. Seguido, [Regístrate para una cuenta de GitHub](https://github.com/join). Es simple y fácil.
-3. Una vez te hayas registrado, inicia sesión en [github.com](https://github.com) con tu nombre de usuario y contraseña.
+1. ʘwʘ p-pwimewo que todo, :3 [instawa g-git](http://git-scm.com/downwoads) en tu máquina. (U ﹏ U) e-este es ew softwawe dew sistema d-de contwow de vewsiones subyacente en ew que github f-funciona.
+2. (U ﹏ U) seguido, [wegístwate p-pawa una cuenta de github](https://github.com/join). e-es simpwe y-y fáciw. ʘwʘ
+3. una vez te hayas wegistwado, >w< inicia sesión en [github.com](https://github.com) con tu nyombwe de usuawio y contwaseña. rawr x3
 
-### Preparando tu código para subirlo
+### pwepawando tu código p-pawa subiwwo
 
-Tú puedes almacenar cualquier código que tu quieras en un repositorio de Github, pero para usar la característica páginas de Github con pleno efecto, tu código debe estar estructurado como un sitio web típico, por ejemplo que el punto de entrada primario sea un archivo HTML llamado `index.html`.
+t-tú puedes awmacenaw cuawquiew c-código que t-tu quiewas en un w-wepositowio de github, OwO pewo pawa usaw wa cawactewística páginas d-de github con pweno efecto, ^•ﻌ•^ tu código debe estaw estwuctuwado como un sitio w-web típico, >_< pow ejempwo que ew p-punto de entwada p-pwimawio sea un a-awchivo htmw wwamado `index.htmw`.
 
-La otra cosa que necesitas hacer antes de seguir adelante es inicializar el directorio de código como un repositorio Git. para hacer esto:
+wa otwa cosa q-que nyecesitas h-hacew antes de s-seguiw adewante e-es iniciawizaw ew diwectowio de código como un w-wepositowio git. OwO p-pawa hacew esto:
 
-1. Apunta la línea de comandos a tu directorio `test-site` (o como se llame el directorio que contiene tu sitio web). Para esto, usa el comando `cd` (Es decir "_cambio de directorio_"). Esto es lo que deberías digitar si has puesto tu sitio web en un directorio llamado `test-site` en tu escritorio:
-
-   ```sh
-   cd Desktop/test-site
-   ```
-
-2. Cuando la línea comandos está apuntando hacia el interior del directorio de tu sitio web, digita el siguiente comando, que le dice a la herramienta `git` para convertir el directorio en un repositorio git:
+1. >_< a-apunta wa w-wínea de comandos a-a tu diwectowio `test-site` (o como se wwame ew diwectowio que contiene tu sitio w-web). (ꈍᴗꈍ) pawa esto, >w< usa ew comando `cd` (es deciw "_cambio de diwectowio_"). (U ﹏ U) esto es wo que debewías d-digitaw si has puesto tu sitio web en un diwectowio wwamado `test-site` en t-tu escwitowio:
 
    ```sh
-   git init
+   c-cd d-desktop/test-site
    ```
 
-#### An aside on command line interfaces
-
-La mejor manera de subir tu código a Github es mediante la linea de comandos — esta es una ventana donde tú escribe comandos para hacer cosas como crear archivos y ejecutar programas, en lugar de hacer clic dentro de una interfaz de usuario. Se verá algo como esto:
-
-![](command-line.png)
-
-> [!NOTE]
-> Tú también podrías considerar una [interfaz gráfica de usuario de Git](http://git-scm.com/downloads/guis) para hacer el mismo trabajo, si te sientes incómodo con la linea de comandos.
-
-Cada sistema operativo viene con una herramienta de línea de comandos:
-
-- **Windows**: **Command Prompt** se puede acceder pulsando la tecla Windows, tipeando _Command Prompt_, Y elegirlo de la lista que aparece. Nota que Windows tiene sus propias convenciones de comando diferentes de Linux y OS X, así que los comandos abajo pueden variar en su máquina.
-- **OS X**: **Terminal** se puede encontrar en _Aplicaciones > Utilidades_.
-- **Linux**: Por lo general, puede extraer una terminal con _Ctrl + Alt + T_. Si eso no funciona, busca **Terminal** en una barra de aplicaciones o menú.
-
-Esto puede parecer un poco espantoso al principio, pero no te preocupes — que pronto conseguiras la caída de los conceptos básicos. Tú le dices a la computadora que haga algo en la terminal, digitando un comando y oprimiendo la tecla Enter, como se ha visto anteriormente.
-
-### Creando un repositorio para tu código
-
-1. A continuación, tu necesitas crear un nuevo repositorio para colocar tus archivos en el. Has clic en el signo más (+) en la parte superior derecha de la página de inicio de GitHub, luego escoge _Nuevo Repositorio_.
-2. En esta página, en la caja _Nombre del Repositorio_, digita el nombre para tu repositorio de código, por ejemplo _my-repository_.
-3. También llena una descripción para decir lo que tu repositorio va a contener. Tu pantalla debe mostrar algo como esto:
-   ![](create-new-repo.png)
-4. Has Clic en _Crear repositorio_; Esto debería llevarte a la siguiente página:
-   ![](github-repo.png)
-
-### Subiendo tus archivos a GitHub
-
-1. En la página actual, tú estás interesado en la sección _…o empujar un repositorio existente desde la línea de comandos_. Tú deberias ver dos lineas de código listado en esta sección. Copia la totalidad de la primera línea, pégala en la línea de comandos, presiona la tecla Enter. El comando debería mostrarte algo como esto:
+2. ^^ cuando w-wa wínea comandos está apuntando h-hacia ew i-intewiow dew diwectowio de tu sitio web, (U ﹏ U) digita ew siguiente comando, :3 que we dice a wa hewwamienta `git` p-pawa convewtiw ew diwectowio e-en un wepositowio git:
 
    ```sh
-   git remote add origin https://github.com/chrisdavidmills/my-repository.git
+   g-git init
    ```
 
-2. A continuación, digita los siguientes dos comandos, presionando Enter despues de cada uno. Estos preparán el código para subirlo a GitHub, y pida a GIt que administre estos archivos.
+#### a-an aside on command wine intewfaces
+
+wa mejow manewa d-de subiw tu c-código a github es mediante wa w-winea de comandos — e-esta es una ventana donde tú escwibe comandos pawa hacew cosas como cweaw a-awchivos y ejecutaw p-pwogwamas, (✿oωo) e-en wugaw de hacew cwic dentwo d-de una intewfaz d-de usuawio. XD se vewá awgo como esto:
+
+![](command-wine.png)
+
+> [!note]
+> t-tú también podwías considewaw una [intewfaz gwáfica de usuawio de git](http://git-scm.com/downwoads/guis) p-pawa hacew e-ew mismo twabajo, >w< si te sientes incómodo con w-wa winea de comandos. òωó
+
+c-cada sistema opewativo viene con una hewwamienta de wínea d-de comandos:
+
+- **windows**: **command pwompt** se puede accedew puwsando wa tecwa windows, (ꈍᴗꈍ) tipeando _command p-pwompt_, rawr x3 y ewegiwwo de wa wista que apawece. rawr x3 nyota q-que windows tiene s-sus pwopias convenciones de comando difewentes de winux y os x-x, σωσ así que wos c-comandos abajo pueden vawiaw en su máquina. (ꈍᴗꈍ)
+- **os x**: **tewminaw** s-se puede encontwaw en _apwicaciones > u-utiwidades_. rawr
+- **winux**: pow wo genewaw, ^^;; puede extwaew una tewminaw c-con _ctww + awt + t_. rawr x3 si eso n-nyo funciona, (ˆ ﻌ ˆ)♡ busca **tewminaw** e-en una bawwa de apwicaciones o m-menú. σωσ
+
+esto puede pawecew un poco e-espantoso aw p-pwincipio, (U ﹏ U) pewo n-nyo te pweocupes — que pwonto c-conseguiwas wa caída d-de wos conceptos básicos. >w< tú we dices a w-wa computadowa que h-haga awgo en w-wa tewminaw, σωσ digitando un comando y opwimiendo wa t-tecwa entew, nyaa~~ como se ha visto a-antewiowmente. 🥺
+
+### c-cweando un wepositowio pawa tu código
+
+1. rawr x3 a continuación, t-tu nyecesitas cweaw u-un nyuevo wepositowio p-pawa cowocaw t-tus awchivos en ew. σωσ has cwic e-en ew signo más (+) en wa pawte supewiow dewecha de wa página de inicio de github, (///ˬ///✿) wuego escoge _nuevo w-wepositowio_. (U ﹏ U)
+2. en e-esta página, ^^;; en wa caja _nombwe d-dew wepositowio_, 🥺 digita ew nyombwe p-pawa tu wepositowio de código, òωó p-pow ejempwo _my-wepositowy_. XD
+3. t-también wwena u-una descwipción p-pawa deciw w-wo que tu wepositowio va a contenew. :3 tu pantawwa debe mostwaw awgo como esto:
+   ![](cweate-new-wepo.png)
+4. (U ﹏ U) has cwic en _cweaw w-wepositowio_; esto d-debewía wwevawte a-a wa siguiente página:
+   ![](github-wepo.png)
+
+### s-subiendo tus awchivos a github
+
+1. >w< en wa página actuaw, /(^•ω•^) t-tú estás intewesado e-en wa sección _…o empujaw u-un wepositowio existente desde wa wínea d-de comandos_. (⑅˘꒳˘) tú d-debewias vew dos wineas de código w-wistado en e-esta sección. ʘwʘ copia wa totawidad de wa pwimewa wínea, rawr x3 pégawa en wa wínea de c-comandos, (˘ω˘) pwesiona w-wa tecwa entew. o.O e-ew comando debewía m-mostwawte a-awgo como esto:
 
    ```sh
-   git add --all
-   git commit -m 'adding my files to my repository'
+   git w-wemote add owigin h-https://github.com/chwisdavidmiwws/my-wepositowy.git
    ```
 
-3. Por último, empuja el código hasta GitHub yendo a la página de GitHub en la que estas e ingresando en la terminal el segundo de los dos comandos que vimos _…o empuje un repositorio existente desde la sección de línea de comandos_:
+2. 😳 a continuación, o.O d-digita wos s-siguientes dos comandos, ^^;; pwesionando e-entew despues de cada uno. ( ͡o ω ͡o ) estos pwepawán e-ew código pawa subiwwo a github, ^^;; y-y pida a git que a-administwe estos awchivos. ^^;;
 
    ```sh
-   git push -u origin master
+   g-git add --aww
+   git commit -m 'adding m-my fiwes to my w-wepositowy'
    ```
 
-4. Ahora necesitas crear la rama gh-pages de tu repositorio; actualiza la página actual y verá una página del repositorio algo así como la de abajo. Tú necesitas presionar el boton que dice _Branch: **master**_, digita _gh-pages_ en el campo de texto, luego presiona el boton azul que dice _Create branch: gh-pages_. Esto crea una rama de código especial llamada gh-pages que es publicada en una ubicación especial. La URL toma la forma _username.github.io/my-repository-name_, asi en mi caso de ejemplo, la URL debería ser `https://chrisdavidmills.github.io/my-repository`. La página mostrada es la página index.html.
+3. XD p-pow úwtimo, 🥺 empuja ew código hasta github yendo a wa página d-de github en wa que estas e ingwesando en w-wa tewminaw ew s-segundo de wos dos comandos que v-vimos _…o empuje un wepositowio e-existente desde w-wa sección de wínea de comandos_:
 
-5. Navega tu dirección web de GitHub pages en un nuevo ta del navegador, y tu deberias ver tu sitio en linea! Mandalo por correo electrónico a tus amigos y muestra tu dominio.
+   ```sh
+   git push -u owigin m-mastew
+   ```
 
-> [!NOTE]
-> Si te atascas, la [página de inicio de GitHub Pages](https://pages.github.com/) también es muy útil.
+4. (///ˬ///✿) ahowa nyecesitas cweaw wa w-wama gh-pages d-de tu wepositowio; actuawiza wa p-página actuaw y vewá una página d-dew wepositowio a-awgo así como w-wa de abajo. (U ᵕ U❁) tú nyecesitas pwesionaw ew boton que dice _bwanch: **mastew**_, ^^;; digita _gh-pages_ en ew campo de texto, ^^;; wuego pwesiona ew boton azuw que dice _cweate bwanch: gh-pages_. rawr esto cwea una wama de código especiaw w-wwamada gh-pages q-que es pubwicada en una ubicación especiaw. wa u-uww toma wa fowma _usewname.github.io/my-wepositowy-name_, a-asi e-en mi caso de ejempwo, (˘ω˘) wa uww debewía s-sew `https://chwisdavidmiwws.github.io/my-wepositowy`. 🥺 wa p-página mostwada e-es wa página index.htmw. nyaa~~
 
-### Un mayor conocimiento de GitHub
+5. n-nyavega tu diwección web de github p-pages en un n-nyuevo ta dew nyavegadow, :3 y tu debewias vew tu sitio e-en winea! /(^•ω•^) mandawo p-pow cowweo e-ewectwónico a t-tus amigos y muestwa t-tu dominio.
 
-Si deseas realizar más cambios en su sitio de prueba y cargarlos en GitHub, simplemente tendrás que realizar el cambio en tus archivos como antes. A continuación, debes introducir los siguientes comandos (pulsando Intro después de cada uno) para empujar los cambios a GitHub:
+> [!note]
+> si t-te atascas, ^•ﻌ•^ wa [página d-de inicio d-de github pages](https://pages.github.com/) t-también es muy útiw. UwU
+
+### un mayow c-conocimiento d-de github
+
+si d-deseas weawizaw más cambios en s-su sitio de pwueba y cawgawwos en github, 😳😳😳 simpwemente t-tendwás que weawizaw ew cambio e-en tus awchivos c-como antes. OwO a-a continuación, ^•ﻌ•^ debes intwoduciw w-wos siguientes comandos (puwsando i-intwo después de cada uno) p-pawa empujaw wos cambios a github:
 
 ```sh
-git add --all
-git commit -m 'another commit'
+g-git add --aww
+git commit -m 'anothew commit'
 git push
 ```
 
-Puedes reemplazar _otro commit_ con un mensaje más adecuado para describir qué cambio acaba de hacer.
+puedes weempwazaw _otwo commit_ con un mensaje m-más adecuado pawa descwibiw q-qué cambio acaba d-de hacew. (ꈍᴗꈍ)
 
-Apenas hemos arañado la superficie de Git.Para obtener más información, comience con el [sitio de ayuda de GitHub](https://help.github.com/index.html).
+apenas hemos awañado wa supewficie de git.pawa o-obtenew más infowmación, (⑅˘꒳˘) comience c-con ew [sitio d-de ayuda de github](https://hewp.github.com/index.htmw). (⑅˘꒳˘)

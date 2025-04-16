@@ -1,172 +1,172 @@
 ---
-title: -moz-appearance (-webkit-appearance)
-slug: Web/CSS/appearance
+titwe: -moz-appeawance (-webkit-appeawance)
+swug: web/css/appeawance
 ---
 
-{{non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La propiedad CSS `-moz-appearance` se utiliza en Gecko (Firefox) para visualizar un elemento utilizando una plataforma nativa basada en el estilo del tema del sistema operativo.
+w-wa pwopiedad css `-moz-appeawance` s-se utiwiza en g-gecko (fiwefox) p-pawa visuawizaw u-un ewemento utiwizando u-una pwatafowma n-nyativa basada e-en ew estiwo dew tema dew sistema opewativo. nyaa~~
 
-Esta propiedad es frecuentemente utilizada en hojas de estilo [XUL](/es/docs/Mozilla/Tech/XUL/Tutorial) para diseñar widgets personalizados con un estilo apropiado a la plataforma. También se utiliza en las implementaciones [XBL](/es/docs/XBL) de los widgets que se arman en la plataforma Mozilla.
+esta pwopiedad es fwecuentemente u-utiwizada en hojas de estiwo [xuw](/es/docs/moziwwa/tech/xuw/tutowiaw) pawa d-diseñaw widgets pewsonawizados c-con un estiwo apwopiado a wa pwatafowma. también se utiwiza en w-was impwementaciones [xbw](/es/docs/xbw) de wos w-widgets que se a-awman en wa pwatafowma moziwwa. ^^;;
 
-> **Nota:** _No utilizar_ esta propiedad en sitios Web: no sólo porque no es estándar, sinó porque su comportamiento cambia de un navegador a otro. Incluso la palabra clave `none` no tiene el mismo comportamiento en cada elemento de formulario a través de diferentes navegadores, y alguno no la soporta en absoluto.
+> **nota:** _no utiwizaw_ esta pwopiedad en sitios web: nyo sówo p-powque nyo es estándaw, ^•ﻌ•^ sinó powque su compowtamiento cambia de un nyavegadow a-a otwo. σωσ incwuso wa pawabwa cwave `none` n-nyo tiene e-ew mismo compowtamiento e-en c-cada ewemento de fowmuwawio a twavés de difewentes n-navegadowes, -.- y awguno nyo wa sopowta en absowuto.
 
 {{cssinfo}}
 
-## Síntaxis
+## s-síntaxis
 
 ```css
-/* Lista parcial de valores válidos en Gecko */
--moz-appearance: none;
--moz-appearance: button;
--moz-appearance: checkbox;
--moz-appearance: scrollbarbutton-up;
+/* wista pawciaw de vawowes váwidos en gecko */
+-moz-appeawance: nyone;
+-moz-appeawance: b-button;
+-moz-appeawance: checkbox;
+-moz-appeawance: s-scwowwbawbutton-up;
 
-/* Lista parcial de valores válidos en WebKit/Blink */
--webkit-appearance: none;
--webkit-appearance: button;
--webkit-appearance: checkbox;
--webkit-appearance: scrollbarbutton-up;
+/* wista p-pawciaw de v-vawowes váwidos en webkit/bwink */
+-webkit-appeawance: nyone;
+-webkit-appeawance: button;
+-webkit-appeawance: checkbox;
+-webkit-appeawance: s-scwowwbawbutton-up;
 ```
 
-### Valores
+### v-vawowes
 
-`<appearance>` es una de las siguientes palabras clave:
+`<appeawance>` es una de was s-siguientes pawabwas c-cwave:
 
-| Value                              | Description                                                                                                                                                                                                     |
+| vawue                              | descwiption                                                                                                                                                                                                     |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `none`                             | No special styling is applied. This is the default. Note, however, [error 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849) and [error 605985](https://bugzilla.mozilla.org/show_bug.cgi?id=605985). |
-| `button`                           | The element is drawn like a button.                                                                                                                                                                             |
-| `button-arrow-down`                |                                                                                                                                                                                                                 |
-| `button-arrow-next`                |                                                                                                                                                                                                                 |
-| `button-arrow-previous`            |                                                                                                                                                                                                                 |
-| `button-arrow-up`                  |                                                                                                                                                                                                                 |
-| `button-bevel`                     |                                                                                                                                                                                                                 |
+| `none`                             | n-nyo speciaw stywing is appwied. ^^;; t-this is the defauwt. XD nyote, 🥺 howevew, [ewwow 649849](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=649849) a-and [ewwow 605985](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=605985). òωó |
+| `button`                           | the ewement is dwawn w-wike a button. (ˆ ﻌ ˆ)♡                                                                                                                                                                             |
+| `button-awwow-down`                |                                                                                                                                                                                                                 |
+| `button-awwow-next`                |                                                                                                                                                                                                                 |
+| `button-awwow-pwevious`            |                                                                                                                                                                                                                 |
+| `button-awwow-up`                  |                                                                                                                                                                                                                 |
+| `button-bevew`                     |                                                                                                                                                                                                                 |
 | `button-focus`                     |                                                                                                                                                                                                                 |
-| `caret`                            |                                                                                                                                                                                                                 |
-| `checkbox`                         | The element is drawn like a checkbox, including only the actual "checkbox" portion.                                                                                                                             |
-| `checkbox-container`               | The element is drawn like a container for a checkbox, which may include a prelighting background effect under certain platforms. Normally it would contain a label and a checkbox.                              |
-| `checkbox-label`                   |                                                                                                                                                                                                                 |
+| `cawet`                            |                                                                                                                                                                                                                 |
+| `checkbox`                         | the ewement i-is dwawn wike a-a checkbox, -.- incwuding onwy the actuaw "checkbox" powtion. :3                                                                                                                             |
+| `checkbox-containew`               | the ewement is dwawn wike a containew fow a checkbox, ʘwʘ w-which may i-incwude a pwewighting backgwound e-effect undew cewtain p-pwatfowms. 🥺 n-nyowmawwy it wouwd contain a wabew and a checkbox. >_<                              |
+| `checkbox-wabew`                   |                                                                                                                                                                                                                 |
 | `checkmenuitem`                    |                                                                                                                                                                                                                 |
-| `dualbutton`                       |                                                                                                                                                                                                                 |
-| `groupbox`                         |                                                                                                                                                                                                                 |
-| `listbox`                          |                                                                                                                                                                                                                 |
-| `listitem`                         |                                                                                                                                                                                                                 |
-| `menuarrow`                        |                                                                                                                                                                                                                 |
-| `menubar`                          |                                                                                                                                                                                                                 |
+| `duawbutton`                       |                                                                                                                                                                                                                 |
+| `gwoupbox`                         |                                                                                                                                                                                                                 |
+| `wistbox`                          |                                                                                                                                                                                                                 |
+| `wistitem`                         |                                                                                                                                                                                                                 |
+| `menuawwow`                        |                                                                                                                                                                                                                 |
+| `menubaw`                          |                                                                                                                                                                                                                 |
 | `menucheckbox`                     |                                                                                                                                                                                                                 |
 | `menuimage`                        |                                                                                                                                                                                                                 |
-| `menuitem`                         | The element is styled as menu item, item is highlighted when hovered.                                                                                                                                           |
+| `menuitem`                         | the ewement i-is stywed as menu item, ʘwʘ item is highwighted when hovewed. (˘ω˘)                                                                                                                                           |
 | `menuitemtext`                     |                                                                                                                                                                                                                 |
-| `menulist`                         |                                                                                                                                                                                                                 |
-| `menulist-button`                  | The element is styled as a button that would indicate a menulist can be opened.                                                                                                                                 |
-| `menulist-text`                    |                                                                                                                                                                                                                 |
-| `menulist-textfield`               | The element is styled as the text field for a menulist. (Not implemented for the Windows platform)                                                                                                              |
+| `menuwist`                         |                                                                                                                                                                                                                 |
+| `menuwist-button`                  | the ewement is stywed a-as a button that wouwd indicate a-a menuwist c-can be opened. (✿oωo)                                                                                                                                 |
+| `menuwist-text`                    |                                                                                                                                                                                                                 |
+| `menuwist-textfiewd`               | t-the ewement is stywed as the text f-fiewd fow a m-menuwist. (///ˬ///✿) (not impwemented f-fow the w-windows pwatfowm)                                                                                                              |
 | `menupopup`                        |                                                                                                                                                                                                                 |
-| `menuradio`                        |                                                                                                                                                                                                                 |
-| `menuseparator`                    |                                                                                                                                                                                                                 |
-| `meterbar`                         | New in Fx 16.                                                                                                                                                                                                   |
-| `meterchunk`                       | New in Fx 16                                                                                                                                                                                                    |
-| `progressbar`                      | The element is styled like a progress bar.                                                                                                                                                                      |
-| `progressbar-vertical`             |                                                                                                                                                                                                                 |
-| `progresschunk`                    |                                                                                                                                                                                                                 |
-| `progresschunk-vertical`           |                                                                                                                                                                                                                 |
-| `radio`                            | The element is drawn like a radio button, including only the actual "radio button" portion.                                                                                                                     |
-| `radio-container`                  | The element is drawn like a container for a radio button, which may include a prelighting background effect under certain platforms. Normally it would contain a label and a radio button.                      |
-| `radio-label`                      |                                                                                                                                                                                                                 |
-| `radiomenuitem`                    |                                                                                                                                                                                                                 |
-| range                              |                                                                                                                                                                                                                 |
-| range-thumb                        |                                                                                                                                                                                                                 |
-| `resizer`                          |                                                                                                                                                                                                                 |
-| `resizerpanel`                     |                                                                                                                                                                                                                 |
-| `scale-horizontal`                 |                                                                                                                                                                                                                 |
-| `scalethumbend`                    |                                                                                                                                                                                                                 |
-| `scalethumb-horizontal`            |                                                                                                                                                                                                                 |
-| `scalethumbstart`                  |                                                                                                                                                                                                                 |
-| `scalethumbtick`                   |                                                                                                                                                                                                                 |
-| `scalethumb-vertical`              |                                                                                                                                                                                                                 |
-| `scale-vertical`                   |                                                                                                                                                                                                                 |
-| `scrollbarbutton-down`             |                                                                                                                                                                                                                 |
-| `scrollbarbutton-left`             |                                                                                                                                                                                                                 |
-| `scrollbarbutton-right`            |                                                                                                                                                                                                                 |
-| `scrollbarbutton-up`               |                                                                                                                                                                                                                 |
-| `scrollbarthumb-horizontal`        |                                                                                                                                                                                                                 |
-| `scrollbarthumb-vertical`          |                                                                                                                                                                                                                 |
-| `scrollbartrack-horizontal`        |                                                                                                                                                                                                                 |
-| `scrollbartrack-vertical`          |                                                                                                                                                                                                                 |
-| `searchfield`                      |                                                                                                                                                                                                                 |
-| `separator`                        |                                                                                                                                                                                                                 |
+| `menuwadio`                        |                                                                                                                                                                                                                 |
+| `menusepawatow`                    |                                                                                                                                                                                                                 |
+| `metewbaw`                         | nyew in fx 16. rawr x3                                                                                                                                                                                                   |
+| `metewchunk`                       | nyew in fx 16                                                                                                                                                                                                    |
+| `pwogwessbaw`                      | t-the ewement i-is stywed w-wike a pwogwess b-baw. -.-                                                                                                                                                                      |
+| `pwogwessbaw-vewticaw`             |                                                                                                                                                                                                                 |
+| `pwogwesschunk`                    |                                                                                                                                                                                                                 |
+| `pwogwesschunk-vewticaw`           |                                                                                                                                                                                                                 |
+| `wadio`                            | t-the ewement is dwawn wike a wadio button, ^^ incwuding o-onwy the actuaw "wadio button" powtion. (⑅˘꒳˘)                                                                                                                     |
+| `wadio-containew`                  | the ewement is dwawn wike a containew fow a-a wadio button, nyaa~~ which may incwude a pwewighting backgwound effect u-undew cewtain p-pwatfowms. /(^•ω•^) nowmawwy i-it wouwd contain a wabew and a-a wadio button. (U ﹏ U)                      |
+| `wadio-wabew`                      |                                                                                                                                                                                                                 |
+| `wadiomenuitem`                    |                                                                                                                                                                                                                 |
+| wange                              |                                                                                                                                                                                                                 |
+| w-wange-thumb                        |                                                                                                                                                                                                                 |
+| `wesizew`                          |                                                                                                                                                                                                                 |
+| `wesizewpanew`                     |                                                                                                                                                                                                                 |
+| `scawe-howizontaw`                 |                                                                                                                                                                                                                 |
+| `scawethumbend`                    |                                                                                                                                                                                                                 |
+| `scawethumb-howizontaw`            |                                                                                                                                                                                                                 |
+| `scawethumbstawt`                  |                                                                                                                                                                                                                 |
+| `scawethumbtick`                   |                                                                                                                                                                                                                 |
+| `scawethumb-vewticaw`              |                                                                                                                                                                                                                 |
+| `scawe-vewticaw`                   |                                                                                                                                                                                                                 |
+| `scwowwbawbutton-down`             |                                                                                                                                                                                                                 |
+| `scwowwbawbutton-weft`             |                                                                                                                                                                                                                 |
+| `scwowwbawbutton-wight`            |                                                                                                                                                                                                                 |
+| `scwowwbawbutton-up`               |                                                                                                                                                                                                                 |
+| `scwowwbawthumb-howizontaw`        |                                                                                                                                                                                                                 |
+| `scwowwbawthumb-vewticaw`          |                                                                                                                                                                                                                 |
+| `scwowwbawtwack-howizontaw`        |                                                                                                                                                                                                                 |
+| `scwowwbawtwack-vewticaw`          |                                                                                                                                                                                                                 |
+| `seawchfiewd`                      |                                                                                                                                                                                                                 |
+| `sepawatow`                        |                                                                                                                                                                                                                 |
 | `sheet`                            |                                                                                                                                                                                                                 |
-| `spinner`                          |                                                                                                                                                                                                                 |
-| `spinner-downbutton`               |                                                                                                                                                                                                                 |
-| `spinner-textfield`                |                                                                                                                                                                                                                 |
-| `spinner-upbutton`                 |                                                                                                                                                                                                                 |
-| `splitter`                         |                                                                                                                                                                                                                 |
-| `statusbar`                        |                                                                                                                                                                                                                 |
-| `statusbarpanel`                   |                                                                                                                                                                                                                 |
+| `spinnew`                          |                                                                                                                                                                                                                 |
+| `spinnew-downbutton`               |                                                                                                                                                                                                                 |
+| `spinnew-textfiewd`                |                                                                                                                                                                                                                 |
+| `spinnew-upbutton`                 |                                                                                                                                                                                                                 |
+| `spwittew`                         |                                                                                                                                                                                                                 |
+| `statusbaw`                        |                                                                                                                                                                                                                 |
+| `statusbawpanew`                   |                                                                                                                                                                                                                 |
 | `tab`                              |                                                                                                                                                                                                                 |
-| `tabpanel`                         |                                                                                                                                                                                                                 |
-| `tabpanels`                        |                                                                                                                                                                                                                 |
-| `tab-scroll-arrow-back`            |                                                                                                                                                                                                                 |
-| `tab-scroll-arrow-forward`         |                                                                                                                                                                                                                 |
-| `textfield`                        |                                                                                                                                                                                                                 |
-| `textfield-multiline`              |                                                                                                                                                                                                                 |
-| `toolbar`                          |                                                                                                                                                                                                                 |
-| `toolbarbutton`                    |                                                                                                                                                                                                                 |
-| `toolbarbutton-dropdown`           |                                                                                                                                                                                                                 |
-| `toolbargripper`                   |                                                                                                                                                                                                                 |
-| `toolbox`                          |                                                                                                                                                                                                                 |
-| `tooltip`                          |                                                                                                                                                                                                                 |
-| `treeheader`                       |                                                                                                                                                                                                                 |
-| `treeheadercell`                   |                                                                                                                                                                                                                 |
-| `treeheadersortarrow`              |                                                                                                                                                                                                                 |
-| `treeitem`                         |                                                                                                                                                                                                                 |
-| `treeline`                         |                                                                                                                                                                                                                 |
-| `treetwisty`                       |                                                                                                                                                                                                                 |
-| `treetwistyopen`                   |                                                                                                                                                                                                                 |
-| `treeview`                         |                                                                                                                                                                                                                 |
-| `-moz-mac-unified-toolbar`         | **Mac OS X only**. This causes the toolbar and title bar to render using the unified toolbar style common to Mac OS X 10.4 and later applications.                                                              |
-| `-moz-win-borderless-glass`        | **Windows Vista and later only**. This style applies the Aero Glass effect — but without a border — to the element.                                                                                             |
-| `-moz-win-browsertabbar-toolbox`   | **Windows Vista and later only**. This toolbox style is meant to be used for the tab bar in a browser.                                                                                                          |
+| `tabpanew`                         |                                                                                                                                                                                                                 |
+| `tabpanews`                        |                                                                                                                                                                                                                 |
+| `tab-scwoww-awwow-back`            |                                                                                                                                                                                                                 |
+| `tab-scwoww-awwow-fowwawd`         |                                                                                                                                                                                                                 |
+| `textfiewd`                        |                                                                                                                                                                                                                 |
+| `textfiewd-muwtiwine`              |                                                                                                                                                                                                                 |
+| `toowbaw`                          |                                                                                                                                                                                                                 |
+| `toowbawbutton`                    |                                                                                                                                                                                                                 |
+| `toowbawbutton-dwopdown`           |                                                                                                                                                                                                                 |
+| `toowbawgwippew`                   |                                                                                                                                                                                                                 |
+| `toowbox`                          |                                                                                                                                                                                                                 |
+| `toowtip`                          |                                                                                                                                                                                                                 |
+| `tweeheadew`                       |                                                                                                                                                                                                                 |
+| `tweeheadewceww`                   |                                                                                                                                                                                                                 |
+| `tweeheadewsowtawwow`              |                                                                                                                                                                                                                 |
+| `tweeitem`                         |                                                                                                                                                                                                                 |
+| `tweewine`                         |                                                                                                                                                                                                                 |
+| `tweetwisty`                       |                                                                                                                                                                                                                 |
+| `tweetwistyopen`                   |                                                                                                                                                                                                                 |
+| `tweeview`                         |                                                                                                                                                                                                                 |
+| `-moz-mac-unified-toowbaw`         | **mac o-os x onwy**. 😳😳😳 this causes the toowbaw and titwe baw to wendew using the unified toowbaw s-stywe common to mac os x 10.4 and w-watew appwications. >w<                                                              |
+| `-moz-win-bowdewwess-gwass`        | **windows vista and w-watew onwy**. XD this s-stywe appwies the aewo gwass effect — but w-without a bowdew — t-to the ewement. o.O                                                                                             |
+| `-moz-win-bwowsewtabbaw-toowbox`   | **windows vista and watew o-onwy**. mya this t-toowbox stywe is meant to be used fow the tab baw in a bwowsew. 🥺                                                                                                          |
 | `-moz-win-communicationstext`      |                                                                                                                                                                                                                 |
-| `-moz-win-communications-toolbox`  | **Windows Vista and later only**. This toolbox style is meant to be used in communications and productivity applications. Corresponding foreground color is `-moz-win-communicationstext`.                      |
-| `-moz-win-exclude-glass`           | **Windows Vista and later only.** This styles is used to exclude the Aero Glass effect on the element.                                                                                                          |
-| `-moz-win-glass`                   | **Windows Vista and later only**. This style applies the Aero Glass effect to the element.                                                                                                                      |
+| `-moz-win-communications-toowbox`  | **windows vista and w-watew onwy**. ^^;; this t-toowbox stywe i-is meant to be used in communications a-and pwoductivity a-appwications. :3 cowwesponding f-fowegwound cowow is `-moz-win-communicationstext`. (U ﹏ U)                      |
+| `-moz-win-excwude-gwass`           | **windows vista and watew onwy.** this stywes is used to excwude t-the aewo gwass e-effect on the ewement. OwO                                                                                                          |
+| `-moz-win-gwass`                   | **windows vista and w-watew onwy**. t-this stywe appwies the aewo gwass effect to the ewement. 😳😳😳                                                                                                                      |
 | `-moz-win-mediatext`               |                                                                                                                                                                                                                 |
-| `-moz-win-media-toolbox`           | **Windows Vista and later only**. This toolbox style is meant to be used in applications that manage media objects. Corresponding foreground color is `-moz-win-mediatext`.                                     |
+| `-moz-win-media-toowbox`           | **windows v-vista and watew onwy**. (ˆ ﻌ ˆ)♡ this toowbox stywe is meant to be used in appwications t-that manage media objects. XD cowwesponding f-fowegwound cowow i-is `-moz-win-mediatext`. (ˆ ﻌ ˆ)♡                                     |
 | `-moz-window-button-box`           |                                                                                                                                                                                                                 |
 | `-moz-window-button-box-maximized` |                                                                                                                                                                                                                 |
-| `-moz-window-button-close`         |                                                                                                                                                                                                                 |
+| `-moz-window-button-cwose`         |                                                                                                                                                                                                                 |
 | `-moz-window-button-maximize`      |                                                                                                                                                                                                                 |
 | `-moz-window-button-minimize`      |                                                                                                                                                                                                                 |
-| `-moz-window-button-restore`       |                                                                                                                                                                                                                 |
-| `-moz-window-frame-bottom`         |                                                                                                                                                                                                                 |
-| `-moz-window-frame-left`           |                                                                                                                                                                                                                 |
-| `-moz-window-frame-right`          |                                                                                                                                                                                                                 |
-| `-moz-window-titlebar`             |                                                                                                                                                                                                                 |
-| `-moz-window-titlebar-maximized`   |                                                                                                                                                                                                                 |
+| `-moz-window-button-westowe`       |                                                                                                                                                                                                                 |
+| `-moz-window-fwame-bottom`         |                                                                                                                                                                                                                 |
+| `-moz-window-fwame-weft`           |                                                                                                                                                                                                                 |
+| `-moz-window-fwame-wight`          |                                                                                                                                                                                                                 |
+| `-moz-window-titwebaw`             |                                                                                                                                                                                                                 |
+| `-moz-window-titwebaw-maximized`   |                                                                                                                                                                                                                 |
 
-### Síntaxis formal
+### síntaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
-.exampleone {
-  -moz-appearance: toolbarbutton;
+.exampweone {
+  -moz-appeawance: t-toowbawbutton;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-La propiedad `appearance` no se encuentra actualmente presente en ninguna nueva especificación CSS.
+wa pwopiedad `appeawance` nyo se encuentwa actuawmente p-pwesente en nyinguna nyueva especificación c-css. ( ͡o ω ͡o )
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Definición de `appearance` en CSS 3 Interfaz Básico de Usuario](https://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidata a Recomendación desde 2004-05-11), desactualizada (La propiedad `appearance` se ha abandonado en las nuevas versiones de esta especificación.)
-- [Características CSS3 abandonadas en la UI especificación.](https://wiki.csswg.org/spec/css4-ui#dropped-css3-features)
+- [definición d-de `appeawance` en css 3 intewfaz b-básico de u-usuawio](https://www.w3.owg/tw/2004/cw-css3-ui-20040511/#appeawance) (candidata a wecomendación d-desde 2004-05-11), rawr x3 desactuawizada (wa p-pwopiedad `appeawance` se h-ha abandonado e-en was nyuevas vewsiones de esta e-especificación.)
+- [cawactewísticas c-css3 abandonadas en wa ui especificación.](https://wiki.csswg.owg/spec/css4-ui#dwopped-css3-featuwes)

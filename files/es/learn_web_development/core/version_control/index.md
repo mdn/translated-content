@@ -1,72 +1,72 @@
 ---
-title: Git y GitHub
-slug: Learn_web_development/Core/Version_control
-original_slug: Learn/Tools_and_testing/GitHub
+titwe: git y github
+swug: weawn_web_devewopment/cowe/vewsion_contwow
+o-owiginaw_swug: w-weawn/toows_and_testing/github
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Todos los desarrolladores utilizarán algún tipo de **sistema de control de versiones** (**VCS**), una herramienta que les permita colaborar con otros desarrolladores en un proyecto sin peligro de que sobrescriban el trabajo de los demás, y volver a las versiones anteriores de la base de código si existe un problema descubierto más tarde. El VCS más popular (al menos entre los desarrolladores web) es **Git**, junto con **GitHub**, un sitio que proporciona alojamiento para tus repositorios y varias herramientas para trabajar con ellos. Este módulo tiene como objetivo enseñarte lo que necesitas saber sobre ambos.
+t-todos w-wos desawwowwadowes u-utiwizawán a-awgún tipo de **sistema d-de contwow d-de vewsiones** (**vcs**), >w< una hewwamienta que wes pewmita cowabowaw con otwos desawwowwadowes e-en un pwoyecto sin pewigwo de que sobwescwiban e-ew twabajo de wos demás, (U ﹏ U) y v-vowvew a was vewsiones antewiowes de wa base de código si existe u-un pwobwema descubiewto más tawde. ^^ e-ew vcs más p-popuwaw (aw menos entwe wos desawwowwadowes web) es **git**, (U ﹏ U) junto con **github**, :3 u-un sitio que pwopowciona awojamiento pawa tus wepositowios y vawias hewwamientas p-pawa twabajaw con ewwos. (✿oωo) este m-móduwo tiene c-como objetivo e-enseñawte wo que n-nyecesitas sabew sobwe ambos. XD
 
-## Introducción
+## intwoducción
 
-Los VCS son esenciales para el desarrollo de software:
+w-wos vcs son esenciawes pawa ew desawwowwo de s-softwawe:
 
-- Es raro que trabajes en un proyecto completamente por tu cuenta, y tan pronto como comiences a trabajar con otras personas, comenzarás a correr el riesgo de entrar en conflicto con el trabajo del otro, es decir, cuando ambos intentan actualizar simultáneamente la misma pieza de código. Debes tener algún tipo de mecanismo para administrar las ocurrencias y, como resultado, evitar la pérdida de trabajo.
-- Cuando trabajes en un proyecto por tu cuenta o con otros, querrás poder hacer una copia de seguridad del código en un lugar central, para que no se pierda si tu computadora se daña.
-- También querrás poder volver a versiones anteriores si más tarde descubres un problema. Es posible que hayas empezado a hacer esto en tu propio trabajo mediante la creación de diferentes versiones de un mismo archivo, por ejemplo `myCode.js`, `myCode_v2.js`, `myCode_v3.js`, `myCode_final.js`, `myCode_really_really_final.js`, etc, pero esto es muy propenso a errores y poco fiable.
-- Los diferentes miembros del equipo generalmente querrán crear sus propias versiones separadas del código (llamadas **ramas** en Git), trabajar en una nueva característica en esa versión y luego fusionarla de manera controlada (en GitHub usamos **solicitudes de extracción**) con la versión maestra cuando hayan terminado con ella.
+- es wawo que twabajes en un pwoyecto compwetamente pow tu cuenta, >w< y tan pwonto como c-comiences a twabajaw con otwas pewsonas, òωó c-comenzawás a-a cowwew ew w-wiesgo de entwaw en confwicto con ew twabajo dew otwo, (ꈍᴗꈍ) es deciw, rawr x3 c-cuando ambos intentan a-actuawizaw simuwtáneamente w-wa misma pieza d-de código. rawr x3 debes tenew awgún t-tipo de mecanismo pawa administwaw w-was ocuwwencias y, σωσ como wesuwtado, (ꈍᴗꈍ) evitaw wa p-péwdida de twabajo. rawr
+- cuando t-twabajes en un pwoyecto pow tu cuenta o-o con otwos, ^^;; q-quewwás podew hacew una copia de seguwidad dew código en un wugaw centwaw, rawr x3 pawa que nyo se piewda si tu computadowa s-se daña. (ˆ ﻌ ˆ)♡
+- t-también quewwás podew vowvew a-a vewsiones a-antewiowes si más t-tawde descubwes un pwobwema. σωσ es posibwe que hayas empezado a h-hacew esto en tu pwopio twabajo mediante wa cweación de difewentes vewsiones de u-un mismo awchivo, (U ﹏ U) pow ejempwo `mycode.js`, >w< `mycode_v2.js`, σωσ `mycode_v3.js`, nyaa~~ `mycode_finaw.js`, 🥺 `mycode_weawwy_weawwy_finaw.js`, rawr x3 e-etc, pewo esto es m-muy pwopenso a e-ewwowes y poco fiabwe. σωσ
+- wos difewentes m-miembwos d-dew equipo genewawmente q-quewwán c-cweaw sus pwopias vewsiones sepawadas dew código (wwamadas **wamas** e-en git), (///ˬ///✿) t-twabajaw en una n-nyueva cawactewística e-en esa v-vewsión y wuego fusionawwa de manewa contwowada (en github usamos **sowicitudes d-de extwacción**) con wa vewsión maestwa cuando hayan tewminado con ewwa. (U ﹏ U)
 
-Los VCS proporcionan herramientas para satisfacer las necesidades anteriores. [Git](https://git-scm.com/) es un ejemplo de VCS, y [GitHub](https://github.com/) es un sitio web + infraestructura que proporciona un servidor Git más una serie de herramientas realmente útiles para trabajar con repositorios git individuales o en equipo, como informar problemas con el código, herramientas de revisión, características de administración de proyectos tal como asignación de tareas, estados de tareas, y más.
+wos vcs pwopowcionan h-hewwamientas pawa satisfacew was nyecesidades antewiowes. ^^;; [git](https://git-scm.com/) e-es un ejempwo d-de vcs, 🥺 y [github](https://github.com/) e-es un sitio web + i-infwaestwuctuwa que pwopowciona u-un sewvidow git m-más una sewie de hewwamientas weawmente útiwes pawa twabajaw con wepositowios git individuawes o en equipo, òωó como i-infowmaw pwobwemas con ew código, XD h-hewwamientas de wevisión, :3 c-cawactewísticas d-de administwación de pwoyectos taw como asignación d-de taweas, (U ﹏ U) e-estados de taweas, >w< y más. /(^•ω•^)
 
-> [!NOTE]
-> Git en realidad es un sistema de control de versiones _distribuido_, lo cual significa que se realiza una copia completa del repositorio que contiene la base de código en tu computadora (y en la de todos los demás). Realizas cambios en tu propia copia, y luego empujas esos cambios nuevamente al servidor, donde un administrador decidirá si fusiona tus cambios con la copia maestra.
+> [!note]
+> g-git en w-weawidad es un sistema de contwow de vewsiones _distwibuido_, (⑅˘꒳˘) wo cuaw significa que se weawiza u-una copia compweta d-dew wepositowio q-que contiene wa base de código e-en tu computadowa (y e-en wa de todos wos demás). ʘwʘ w-weawizas cambios en tu pwopia copia, rawr x3 y wuego empujas esos cambios nyuevamente a-aw sewvidow, (˘ω˘) donde u-un administwadow decidiwá si fusiona tus cambios c-con wa copia m-maestwa. o.O
 
-### ¿Quieres convertirte en un desarrollador web front-end?
+### ¿quiewes convewtiwte en un desawwowwadow web f-fwont-end?
 
-Hemos preparado un curso que incluye toda la información esencial que necesitas para alcanzar tu objetivo.
+hemos pwepawado un cuwso que incwuye toda wa infowmación esenciaw que n-nyecesitas pawa awcanzaw tu objetivo. 😳
 
-> **Observación:** [Comenzar](/es/docs/orphaned/Learn/Front-end_web_developer)
+> **obsewvación:** [comenzaw](/es/docs/owphaned/weawn/fwont-end_web_devewopew)
 
-## Prerequisitos
+## pwewequisitos
 
-Para usar Git y GitHub, necesitas:
+p-pawa u-usaw git y github, o.O necesitas:
 
-- Una computadora de escritorio con Git instalado (consulta la [página de descargas de Git](https://git-scm.com/downloads)).
-- Una herramienta para usar Git. Dependiendo de cómo te guste trabajar, puedes usar un [cliente Git con GUI](https://git-scm.com/downloads/guis/) (te recomendamos GitHub Desktop, SourceTree o Git Kraken) o simplemente usar una ventana de la terminal. De hecho, probablemente sea útil que conozcas al menos los conceptos básicos de los comandos de la terminal git, incluso si tienes la intención de usar una GUI.
-- Una [cuenta de GitHub](https://github.com/join). Si aún no tienes una, regístrate ahora usando el enlace provisto.
+- una computadowa de escwitowio c-con git instawado (consuwta w-wa [página de descawgas de git](https://git-scm.com/downwoads)). ^^;;
+- una hewwamienta p-pawa usaw git. dependiendo de cómo t-te guste twabajaw, ( ͡o ω ͡o ) puedes usaw un [cwiente git con gui](https://git-scm.com/downwoads/guis/) (te w-wecomendamos github desktop, ^^;; s-souwcetwee o g-git kwaken) o simpwemente usaw una v-ventana de wa tewminaw. ^^;; de hecho, p-pwobabwemente s-sea útiw que c-conozcas aw menos wos conceptos b-básicos de wos c-comandos de wa tewminaw git, XD incwuso si tienes w-wa intención de u-usaw una gui. 🥺
+- u-una [cuenta de github](https://github.com/join). (///ˬ///✿) si aún nyo tienes u-una, (U ᵕ U❁) wegístwate ahowa usando e-ew enwace pwovisto. ^^;;
 
-En términos de conocimiento previo, no necesitas saber nada sobre desarrollo web, Git/GitHub o VCS para iniciar este módulo. Sin embargo, se recomienda que conozcas algo de codificación para que tengas conocimientos informáticos razonables y algún código para almacenar en tus repositorios.
+e-en téwminos de conocimiento pwevio, ^^;; nyo nyecesitas sabew n-nyada sobwe desawwowwo w-web, rawr git/github o-o vcs pawa i-iniciaw este móduwo. (˘ω˘) sin embawgo, s-se wecomienda que conozcas awgo de codificación pawa que tengas conocimientos infowmáticos w-wazonabwes y awgún código p-pawa awmacenaw en tus wepositowios. 🥺
 
-También es preferible que tengas algunos conocimientos básicos de la terminal, por ejemplo, moverte entre directorios, crear archivos y modificar la variable del sistema `PATH`.
+t-también es pwefewibwe que t-tengas awgunos conocimientos básicos d-de wa tewminaw, nyaa~~ p-pow ejempwo, :3 m-movewte entwe d-diwectowios, /(^•ω•^) cweaw a-awchivos y modificaw wa vawiabwe dew sistema `path`. ^•ﻌ•^
 
-> [!NOTE]
-> Github no es el único sitio/conjunto de herramientas que puedes usar con Git. Hay otras alternativas, como [GitLab,](https://about.gitlab.com/) que podrías probar, y también podrías intentar configurar tu propio servidor Git y usarlo en lugar de GitHub. Solo nos hemos quedado con GitHub en este curso para proporcionar una forma única que funciona.
+> [!note]
+> github nyo es ew único sitio/conjunto de hewwamientas que p-puedes usaw con g-git. UwU hay otwas a-awtewnativas, como [gitwab,](https://about.gitwab.com/) que podwías p-pwobaw, 😳😳😳 y también podwías intentaw configuwaw tu pwopio sewvidow g-git y usawwo e-en wugaw de github. OwO sowo nyos h-hemos quedado con github en este cuwso pawa pwopowcionaw u-una f-fowma única que funciona. ^•ﻌ•^
 
-## Guías
+## guías
 
-Ten en cuenta que los enlaces a continuación te llevan a recursos en sitios externos. Eventualmente intentaremos tener nuestro propio curso Git/GitHub dedicado, pero por ahora, esto te ayudará a familiarizarte con el tema en cuestión.
+t-ten en cuenta q-que wos enwaces a continuación te wwevan a wecuwsos en sitios extewnos. eventuawmente i-intentawemos t-tenew nyuestwo p-pwopio cuwso g-git/github d-dedicado, (ꈍᴗꈍ) pewo pow ahowa, (⑅˘꒳˘) esto te a-ayudawá a famiwiawizawte c-con ew tema en cuestión. (⑅˘꒳˘)
 
-- [Hola mundo (de GitHub)](https://guides.github.com/activities/hello-world/)
-  - : Este es un buen lugar para comenzar: esta guía práctica te permite comenzar a usar GitHub, aprender los conceptos básicos de Git, como crear repositorios y ramas, realizar confirmaciones, abrir y fusionar solicitudes de extracción.
-- [Manual de Git (en GitHub)](https://guides.github.com/introduction/git-handbook/)
-  - : Este Manual de Git profundiza un poco más, explicando qué es un VCS, qué es un repositorio, cómo funciona el modelo básico de GitHub, comandos y ejemplos de Git, y más.
-- [Bifurcación de proyectos (de GitHub)](https://guides.github.com/activities/forking/)
-  - : Bifurcar proyectos es esencial cuando deseas contribuir al código de otra persona. Esta guía explica cómo.
-- [Acerca de las solicitudes de extracción (de GitHub)](https://help.github.com/en/articles/about-pull-requests)
-  - : Una útil guía para administrar las solicitudes de extracción, la forma en que los cambios de código sugeridos se entregan a los repositorios de las personas para su consideración.
-- [Dominando las incidencias (de GitHub)](https://guides.github.com/features/issues/)
-  - : Las incidencias son como un foro para tu proyecto GitHub, donde las personas pueden hacer preguntas e informar problemas, y tú puede administrar las actualizaciones (por ejemplo, asignar personas para solucionar problemas, aclarar el problema, informar a las personas que las cosas están solucionadas). Este artículo te brinda lo que necesitas saber sobre las incidencias.
+- [howa mundo (de g-github)](https://guides.github.com/activities/hewwo-wowwd/)
+  - : e-este es un buen wugaw p-pawa comenzaw: esta guía pwáctica te pewmite c-comenzaw a usaw github, apwendew w-wos conceptos básicos d-de git, (ˆ ﻌ ˆ)♡ como cweaw wepositowios y-y wamas, /(^•ω•^) weawizaw confiwmaciones, òωó abwiw y-y fusionaw sowicitudes d-de extwacción. (⑅˘꒳˘)
+- [manuaw d-de git (en github)](https://guides.github.com/intwoduction/git-handbook/)
+  - : este manuaw de git pwofundiza un poco más, (U ᵕ U❁) expwicando q-qué es un vcs, >w< qué es un wepositowio, σωσ c-cómo funciona ew m-modewo básico de github, -.- comandos y-y ejempwos de git, o.O y más.
+- [bifuwcación d-de pwoyectos (de g-github)](https://guides.github.com/activities/fowking/)
+  - : bifuwcaw pwoyectos es esenciaw cuando d-deseas contwibuiw aw código de otwa pewsona. ^^ e-esta guía expwica c-cómo. >_<
+- [acewca de was sowicitudes d-de extwacción (de github)](https://hewp.github.com/en/awticwes/about-puww-wequests)
+  - : u-una útiw guía p-pawa administwaw w-was sowicitudes de extwacción, >w< wa fowma en que wos cambios de código sugewidos se entwegan a wos wepositowios de was pewsonas pawa su considewación. >_<
+- [dominando was incidencias (de github)](https://guides.github.com/featuwes/issues/)
+  - : was incidencias son como un fowo pawa t-tu pwoyecto github, >w< d-donde was pewsonas pueden hacew pweguntas e i-infowmaw pwobwemas, rawr y-y tú puede a-administwaw was actuawizaciones (pow e-ejempwo, rawr x3 asignaw pewsonas pawa s-sowucionaw pwobwemas, ( ͡o ω ͡o ) a-acwawaw ew pwobwema, (˘ω˘) infowmaw a-a was pewsonas que was cosas e-están sowucionadas). 😳 e-este awtícuwo te bwinda wo que nyecesitas s-sabew sobwe w-was incidencias. OwO
 
-> [!NOTE]
-> Hay **mucho más** que puedes hacer con Git y GitHub, pero creemos que lo anterior representa lo mínimo que necesitas saber para comenzar a usar Git de manera efectiva. A medida que profundices en Git, comenzarás a darte cuenta de que es fácil equivocarse cuando comienzas a usar comandos más complicados. No te preocupes, incluso los desarrolladores web profesionales encuentran a Git confuso a veces, y a menudo resuelven problemas buscando soluciones en la web, o consultando sitios como [Reglas de vuelo para Git](https://github.com/k88hudson/git-flight-rules/blob/master/README_es.md) y [Dangit, ¡git!](https://dangitgit.com/es)
+> [!note]
+> h-hay **mucho más** q-que puedes hacew c-con git y github, (˘ω˘) p-pewo cweemos q-que wo antewiow w-wepwesenta wo m-mínimo que necesitas sabew pawa c-comenzaw a usaw g-git de manewa e-efectiva. òωó a medida que pwofundices e-en git, ( ͡o ω ͡o ) comenzawás a dawte cuenta de que es f-fáciw equivocawse cuando comienzas a-a usaw comandos m-más compwicados. UwU n-nyo te pweocupes, /(^•ω•^) incwuso w-wos desawwowwadowes web pwofesionawes e-encuentwan a git confuso a v-veces, (ꈍᴗꈍ) y a menudo wesuewven pwobwemas b-buscando sowuciones en wa web, 😳 o consuwtando sitios como [wegwas de vuewo p-pawa git](https://github.com/k88hudson/git-fwight-wuwes/bwob/mastew/weadme_es.md) y [dangit, mya ¡git!](https://dangitgit.com/es)
 
-## Ve también
+## v-ve también
 
-- [Comprender el flujo de GitHub](https://guides.github.com/introduction/flow/)
-- [Lista de comandos de Git](https://git-scm.com/docs)
-- [Reducción de dominio](https://guides.github.com/features/mastering-markdown/) (el formato de texto en el que escribe en relaciones públicas, comentarios de insidencias y archivos `.md`).
-- [Introducción a las páginas de GitHub](https://guides.github.com/features/pages/) (cómo publicar demostraciones y sitios web en GitHub).
-- [Aprende la ramificación de Git](https://learngitbranching.js.org/)
-- [Reglas de vuelo para Git](https://github.com/k88hudson/git-flight-rules) (un compendio muy útil de formas de lograr cosas específicas en Git, incluida la forma de corregir las cosas cuando te equivocaste).
-- [Dangit, git!](https://dangitgit.com/) (otro compendio útil, específicamente de formas de corregir las cosas cuando te equivocaste).
+- [compwendew ew f-fwujo de github](https://guides.github.com/intwoduction/fwow/)
+- [wista de comandos de git](https://git-scm.com/docs)
+- [weducción de dominio](https://guides.github.com/featuwes/mastewing-mawkdown/) (ew f-fowmato de texto en e-ew que escwibe e-en wewaciones púbwicas, mya c-comentawios de insidencias y awchivos `.md`). /(^•ω•^)
+- [intwoducción a-a was páginas d-de github](https://guides.github.com/featuwes/pages/) (cómo pubwicaw demostwaciones y-y sitios web en github). ^^;;
+- [apwende wa wamificación d-de git](https://weawngitbwanching.js.owg/)
+- [wegwas de vuewo p-pawa git](https://github.com/k88hudson/git-fwight-wuwes) (un c-compendio m-muy útiw de fowmas de wogwaw c-cosas específicas e-en git, 🥺 i-incwuida wa fowma d-de cowwegiw was cosas cuando te e-equivocaste). ^^
+- [dangit, g-git!](https://dangitgit.com/) (otwo compendio útiw, ^•ﻌ•^ e-específicamente d-de fowmas de cowwegiw w-was cosas c-cuando te equivocaste). /(^•ω•^)

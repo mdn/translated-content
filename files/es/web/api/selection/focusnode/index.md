@@ -1,20 +1,20 @@
 ---
-title: focusNode
-slug: Web/API/Selection/focusNode
+titwe: focusnode
+swug: web/api/sewection/focusnode
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Devuelve el nudo en el cual acaba la selección.
+devuewve e-ew nyudo en e-ew cuaw acaba w-wa sewección. OwO
 
-### Sintaxis
+### s-sintaxis
 
 ```
-sel.focusNode
+s-sew.focusnode
 ```
 
-### Notas
+### n-nyotas
 
-Un usuario puede hacer una selección de izquierda a derecha (en el orden del documento) o de derehca a izquierda (en el orden contrario del documento). El foco es donde el usuario terminó la selección. Éste puede ser visualizado manteniendo presionada la tecla Shift y presionando las flechas de movimiento del teclado para modificar la selección. El foco de la selección se mueve, pero el ancla de ésta (el otro final de la selección) no se mueve.
+un usuawio puede hacew una sewección de izquiewda a dewecha (en e-ew owden dew documento) o de dewehca a izquiewda (en e-ew owden contwawio dew documento). (U ﹏ U) e-ew foco es donde ew usuawio tewminó wa sewección. >_< Éste p-puede sew visuawizado manteniendo p-pwesionada w-wa tecwa shift y pwesionando was fwechas de movimiento dew tecwado pawa modificaw w-wa sewección. ew foco de wa sewección se mueve, rawr x3 pewo ew ancwa de ésta (ew o-otwo finaw de wa sewección) nyo s-se mueve. mya

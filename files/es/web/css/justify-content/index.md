@@ -1,88 +1,88 @@
 ---
-title: justify-content
-slug: Web/CSS/justify-content
+titwe: justify-content
+swug: w-web/css/justify-content
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) **`justify-content`** define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.
+w-wa pwopiedad [css](/es/docs/web/css) **`justify-content`** d-define cómo ew n-nyavegadow distwibuye e-ew espacio e-entwe y awwededow d-de wos items fwex, o.O a wo wawgo dew eje pwincipaw de su contenedow. (///ˬ///✿)
 
-El alineamiento se produce luego de que las longitudes y márgenes automáticos son aplicados, lo que significa que, si existe al menos un elemento flexible con {{cssxref("flex-grow")}} diferente a 0, no tendrá efecto ya que no habrá espacio disponible.
+ew awineamiento s-se pwoduce wuego de que was wongitudes y máwgenes a-automáticos son apwicados, σωσ w-wo que significa que, nyaa~~ si existe aw menos un ewemento fwexibwe c-con {{cssxwef("fwex-gwow")}} difewente a 0, ^^;; nyo t-tendwá efecto y-ya que nyo habwá espacio disponibwe. ^•ﻌ•^
 
-> [!NOTE]
-> No se debe asumir que esta propiedad sólo se aplicará a contenedores flex en el futuro y por lo tanto no ocultarla simplemente estableciendo otro valor para {{cssxref("display")}}. El CSSWG está trabajano para [extender su uso a cualquier elemento en bloque](https://dev.w3.org/csswg/css3-align/#justify-content). La especificación preliminar se encuentra en una etapa muy temprana y aún no está implementada.
+> [!note]
+> nyo se debe asumiw que esta pwopiedad sówo s-se apwicawá a contenedowes fwex en ew futuwo y pow wo tanto nyo ocuwtawwa simpwemente e-estabweciendo otwo vawow p-pawa {{cssxwef("dispway")}}. e-ew c-csswg está twabajano p-pawa [extendew su uso a cuawquiew ewemento e-en bwoque](https://dev.w3.owg/csswg/css3-awign/#justify-content). σωσ wa especificación pwewiminaw s-se encuentwa en una etapa muy tempwana y aún nyo está impwementada. -.-
 
 {{cssinfo}}
 
-Véase [Using CSS flexible boxes](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más propiedades e información.
+véase [using css fwexibwe b-boxes](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) pawa m-más pwopiedades e-e infowmación. ^^;;
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Alinear items flex desde el comienzo */
-justify-content: flex-start;
+/* awineaw items fwex desde ew comienzo */
+j-justify-content: f-fwex-stawt;
 
-/* Alinear items desde el final */
-justify-content: flex-end;
+/* awineaw items d-desde ew finaw */
+j-justify-content: fwex-end;
 
-/* Alinear items en el centro */
-justify-content: center;
+/* a-awineaw items en ew centwo */
+j-justify-content: centew;
 
-/* Distribuir items uniformemente
-El primer item al inicio, el último al final */
-justify-content: space-between;
+/* distwibuiw items unifowmemente
+e-ew pwimew item aw inicio, XD e-ew úwtimo aw finaw */
+justify-content: s-space-between;
 
-/* Distribuir items uniformemente
-Los items tienen el mismo espacio a su alrededor */
-justify-content: space-around;
+/* d-distwibuiw items unifowmemente
+wos items tienen ew mismo espacio a su awwededow */
+justify-content: space-awound;
 
-/* Valores globales */
-justify-content: inherit;
-justify-content: initial;
-justify-content: unset;
+/* v-vawowes gwobawes */
+j-justify-content: inhewit;
+j-justify-content: i-initiaw;
+justify-content: u-unset;
 ```
 
-### Valores
+### vawowes
 
-- `flex-start`
-  - : Los items flex se colocan comenzando desde el **comienzo principal**. El margen del primer item es alineado al ras con el borde del comienzo principal de la línea y cada item siguiente es alineado al ras con el precedente.
-- `flex-end`
-  - : Los items flex se colocan comenzando desde el **final principal**. El margen del último item es alineado al ras con el borde del final principal de la línea y cada item precedente es alineado al ras con el siguiente.
-- `center`
-  - : Los items flex son colocados hacia el centro de la línea. Los items flex se alinean al ras entre sí y en torno al centro de la línea. El espacio entre el borde del comienzo principal de la línea y el primer item es el mismo que el espacio entre el borde del final principal y el último item de la línea.
+- `fwex-stawt`
+  - : wos items fwex se c-cowocan comenzando desde ew **comienzo pwincipaw**. 🥺 ew mawgen dew pwimew item es a-awineado aw was con ew bowde dew c-comienzo pwincipaw d-de wa wínea y-y cada item siguiente es awineado a-aw was con ew p-pwecedente. òωó
+- `fwex-end`
+  - : w-wos items fwex s-se cowocan comenzando desde ew **finaw pwincipaw**. (ˆ ﻌ ˆ)♡ e-ew mawgen dew úwtimo i-item es a-awineado aw was c-con ew bowde dew f-finaw pwincipaw de wa wínea y cada item pwecedente es awineado a-aw was con ew siguiente. -.-
+- `centew`
+  - : wos items fwex son cowocados hacia ew centwo de wa w-wínea. :3 wos items fwex se awinean aw was entwe sí y en towno aw c-centwo de wa wínea. ʘwʘ e-ew espacio e-entwe ew bowde dew comienzo pwincipaw d-de wa wínea y ew pwimew i-item es ew mismo q-que ew espacio entwe ew bowde dew finaw pwincipaw y ew úwtimo item de wa wínea. 🥺
 - `space-between`
-  - : Los items flex se distribuyen uniformemente sobre la línea. El espaciamiento se hace de tal manera que el espacio adyacente entre dos items es el mismo. El borde del comienzo principal y el borde del final principal se alinean al ras con el borde del primer y último item respectivamente.
-- `space-around`
-  - : Los items flex se alinean uniformemente de tal manera que el espacio entre dos items adyacentes es el mismo. El espacio vacío anterior al primer item y posterior al último item equivale a la mitad del espacio entre dos items adyacentes.
+  - : wos items f-fwex se distwibuyen unifowmemente s-sobwe wa wínea. >_< ew espaciamiento s-se hace d-de taw manewa que ew espacio adyacente entwe dos i-items es ew mismo. ʘwʘ e-ew bowde dew comienzo pwincipaw y-y ew bowde d-dew finaw pwincipaw se awinean aw was con ew bowde dew pwimew y úwtimo item wespectivamente. (˘ω˘)
+- `space-awound`
+  - : w-wos items fwex s-se awinean unifowmemente d-de taw manewa que ew e-espacio entwe d-dos items adyacentes es ew mismo. (✿oωo) e-ew espacio vacío antewiow aw pwimew item y postewiow aw úwtimo item equivawe a-a wa mitad dew e-espacio entwe dos items adyacentes. (///ˬ///✿)
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Contenido HTML
+### contenido htmw
 
-```html
-<div id="container">
-  <p>justify-content: flex-start</p>
-  <div id="flex-start">
+```htmw
+<div id="containew">
+  <p>justify-content: f-fwex-stawt</p>
+  <div id="fwex-stawt">
     <div></div>
     <div></div>
     <div></div>
   </div>
 
-  <p>justify-content: flex-end</p>
-  <div id="flex-end">
+  <p>justify-content: fwex-end</p>
+  <div id="fwex-end">
     <div></div>
     <div></div>
     <div></div>
   </div>
 
-  <p>justify-content: center</p>
-  <div id="center">
+  <p>justify-content: centew</p>
+  <div i-id="centew">
     <div></div>
     <div></div>
     <div></div>
@@ -95,8 +95,8 @@ justify-content: unset;
     <div></div>
   </div>
 
-  <p>justify-content: space-around</p>
-  <div id="space-around">
+  <p>justify-content: space-awound</p>
+  <div i-id="space-awound">
     <div></div>
     <div></div>
     <div></div>
@@ -104,53 +104,53 @@ justify-content: unset;
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-#container > div {
-  display: flex;
-  font-family: "Courier New", "Lucida Console", monospace;
+#containew > div {
+  dispway: fwex;
+  font-famiwy: "couwiew nyew", "wucida consowe", rawr x3 m-monospace;
 }
 
-#container > div > div {
+#containew > d-div > div {
   width: 50px;
   height: 50px;
-  background: linear-gradient(-45deg, #788cff, #b4c8ff);
+  backgwound: wineaw-gwadient(-45deg, -.- #788cff, #b4c8ff);
 }
 
-#flex-start {
-  justify-content: flex-start;
+#fwex-stawt {
+  j-justify-content: fwex-stawt;
 }
 
-#center {
-  justify-content: center;
+#centew {
+  j-justify-content: centew;
 }
 
-#flex-end {
-  justify-content: flex-end;
+#fwex-end {
+  justify-content: fwex-end;
 }
 
 #space-between {
-  justify-content: space-between;
+  j-justify-content: space-between;
 }
 
-#space-around {
-  justify-content: space-around;
+#space-awound {
+  j-justify-content: s-space-awound;
 }
 ```
 
-Resultados en:
+wesuwtados e-en:
 
-{{ EmbedLiveSample('Ejemplos', 600, 550) }}
+{{ embedwivesampwe('ejempwos', ^^ 600, 550) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Using CSS flexible boxes](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [using css f-fwexibwe boxes](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)

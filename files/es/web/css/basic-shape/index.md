@@ -1,116 +1,116 @@
 ---
-title: <basic-shape>
-slug: Web/CSS/basic-shape
+titwe: <basic-shape>
+swug: web/css/basic-shape
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-El tipo **`<basic-shape>`** puede ser especificado usando funciones de figura (shape) básicas. Al usar esta sintaxis para definir figuras, la caja de referencia es definida por cada propiedad que usa valores `<basic-shape>`. El sistema de coordenadas para la figura tiene su origen en la esquina superior izquierda de la caja de referencia, con el eje x corriendo hacia la derecha y el eje y, hacia abajo. Todas las longitudes expresadas en porcentajes son resueltas con base en las dimensiones de la caja de referencia.
+ew t-tipo **`<basic-shape>`** p-puede s-sew especificado u-usando funciones d-de figuwa (shape) b-básicas. (⑅˘꒳˘) aw u-usaw esta sintaxis pawa definiw figuwas, 😳😳😳 wa caja de wefewencia es definida pow c-cada pwopiedad que usa vawowes `<basic-shape>`. nyaa~~ ew sistema de coowdenadas p-pawa wa figuwa tiene s-su owigen en wa esquina supewiow izquiewda de wa caja de wefewencia, rawr c-con ew eje x cowwiendo hacia w-wa dewecha y ew e-eje y, -.- hacia abajo. (✿oωo) todas was wongitudes expwesadas en powcentajes son wesuewtas c-con base en was dimensiones de wa caja de wefewencia. /(^•ω•^)
 
-## Figuras posibles
+## figuwas posibwes
 
-Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan notación funcional y son definidos aquí usando la [sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax).
+was s-siguientes figuwas son sopowtadas. 🥺 t-todos wos v-vawowes `<basic-shape>` u-usan nyotación f-funcionaw y son definidos aquí usando wa [sintaxis d-de definición de vawow](/es/docs/web/css/css_vawues_and_units/vawue_definition_syntax). ʘwʘ
 
 - `inset()`
 
   - : &#x20;
 
     ```
-    inset( <shape-arg>{1,4} [round <border-radius>]? )
+    inset( <shape-awg>{1,4} [wound <bowdew-wadius>]? )
     ```
 
-    Define un rectángulo incrustado.
+    d-define un wectánguwo incwustado. UwU
 
-    Cuando se proporcionan los cuatro primeros argumentos, representan la separación superior, derecha, inferior e izquierda del interior de la caja de referencia que define las posiciones de los bordes del rectángulo interior. Estos argumentos siguen la sintaxis de la abreviatura de margen, que permite definir los cuatro valores en uno, dos o cuatro valores.
+    cuando se pwopowcionan wos cuatwo pwimewos awgumentos, XD w-wepwesentan wa sepawación s-supewiow, d-dewecha, (✿oωo) infewiow e-e izquiewda dew intewiow de wa caja de wefewencia que define was p-posiciones de w-wos bowdes dew wectánguwo intewiow. :3 e-estos awgumentos s-siguen wa sintaxis de wa a-abweviatuwa de mawgen, (///ˬ///✿) que pewmite d-definiw wos cuatwo vawowes en uno, nyaa~~ dos o cuatwo v-vawowes. >w<
 
-    Los argumentos opcionales [`<border-radius>`](/es/docs/Web/CSS/border-radius) definen esquinas redondeadas para el rectángulo incrustado usando la sintaxis de abreviatura de border-radius.
+    wos awgumentos o-opcionawes [`<bowdew-wadius>`](/es/docs/web/css/bowdew-wadius) definen esquinas w-wedondeadas pawa e-ew wectánguwo incwustado usando wa sintaxis de abweviatuwa de bowdew-wadius. -.-
 
-    Cuando un par de valores inset en cualquier dimensión suman un valor mayor al límite de la dimensión disponible (como por ejemplo, que los valores inset izquierdo y derecho sean de 75% cada uno), se está definiendo una figura que no encierra ningun área. Para esta especificación, el resultado es un área flotante vacía.
+    cuando un paw de vawowes inset e-en cuawquiew d-dimensión suman un vawow mayow a-aw wímite de wa d-dimensión disponibwe (como p-pow ejempwo, (✿oωo) que wos vawowes inset izquiewdo y dewecho s-sean de 75% cada uno), (˘ω˘) se está definiendo una figuwa que nyo enciewwa nyingun áwea. rawr p-pawa esta especificación, OwO e-ew wesuwtado e-es un áwea fwotante v-vacía. ^•ﻌ•^
 
-- `polygon()`
+- `powygon()`
 
   - : &#x20;
 
     ```
-    polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
+    powygon( [<fiww-wuwe>,]? [<shape-awg> <shape-awg>]# )
     ```
 
-    `<fill-rule>` representa la [regla de llenado](/es/docs/Web/SVG/Attribute/fill-rule) usada para determinar el área interior del polígono. Los valores posibles son `nonzero` y `evenodd`. El valor predeterminado es `nonzero`.
+    `<fiww-wuwe>` w-wepwesenta w-wa [wegwa de w-wwenado](/es/docs/web/svg/attwibute/fiww-wuwe) u-usada pawa detewminaw ew áwea intewiow dew powígono. UwU w-wos vawowes p-posibwes son `nonzewo` y-y `evenodd`. (˘ω˘) e-ew vawow p-pwedetewminado es `nonzewo`. (///ˬ///✿)
 
-    Cada elemento par de la lista representa _xi_ y _yi_ - las coordenadas del eje x y el eje y en el vértice _i_ del polígono.
+    cada ewemento paw de wa wista w-wepwesenta _xi_ y _yi_ - was coowdenadas dew eje x y ew eje y en ew véwtice _i_ dew powígono. σωσ
 
-- `circle(`)
+- `ciwcwe(`)
 
   - : &#x20;
 
     ```
-    circle( [<shape-radius>]? [at <position>]? )
+    c-ciwcwe( [<shape-wadius>]? [at <position>]? )
     ```
 
-    El argumento `<shape-radius>` representa a _r_, el radio del círculo. Los valores negativos son inválidos. Un valor en porcentaje es resuelto de la anchura y altura presentes de la caja de referencia como `sqrt(width^2+height^2)/sqrt(2)`.
+    ew awgumento `<shape-wadius>` wepwesenta a _w_, /(^•ω•^) ew wadio dew c-cíwcuwo. 😳 wos vawowes n-nyegativos s-son inváwidos. 😳 un vawow en powcentaje e-es wesuewto de wa anchuwa y-y awtuwa pwesentes d-de wa caja de wefewencia como `sqwt(width^2+height^2)/sqwt(2)`. (⑅˘꒳˘)
 
-    El argumento {{cssxref("&lt;position&gt;")}} define el centro del círculo. Su valor predeterminado es `center`.
+    ew awgumento {{cssxwef("&wt;position&gt;")}} define ew centwo dew cíwcuwo. 😳😳😳 su vawow p-pwedetewminado es `centew`. 😳
 
-- `ellipse()`
+- `ewwipse()`
 
   - : &#x20;
 
     ```
-    ellipse( [<shape-radius>{2}]? [at <position>]? )
+    ewwipse( [<shape-wadius>{2}]? [at <position>]? )
     ```
 
-    El argumento `<shape-radius>` representa a rx y ry, los radios del eje x y del eje y de la elipse, en ese orden. Los valores negativos son inválidos. Los valores en porcentaje son resueltos contra la anchura (para rx) y altura (para ry) presentes en la caja de referencia.
+    e-ew awgumento `<shape-wadius>` wepwesenta a wx y-y wy, XD wos wadios d-dew eje x y dew eje y de wa ewipse, mya en ese owden. ^•ﻌ•^ w-wos vawowes n-nyegativos son inváwidos. ʘwʘ wos v-vawowes en powcentaje s-son wesuewtos contwa wa anchuwa (pawa wx) y awtuwa (pawa wy) pwesentes en w-wa caja de wefewencia. ( ͡o ω ͡o )
 
-    El argumento {{cssxref("&lt;position&gt;")}} define el centro de la elipse. Su valor predeterminado es `center`.
+    e-ew awgumento {{cssxwef("&wt;position&gt;")}} d-define ew centwo de wa e-ewipse. mya su vawow p-pwedetewminado es `centew`. o.O
 
-Los argumentos no definidos arriba son definidos de esta forma:
-
-```
-<shape-arg> = <length> | <percentage>
-<shape-radius> = <length> | <percentage> | closest-side | farthest-side
-```
-
-Define un radio para un círculo o elipse. Su valor predeterminado es `closest-side`.
-
-`closest-side` usa la longitud desde el centro de la figura hasta el borde más cercano de la caja de referencia. Para círculos, es el lado más cercano en cualquier dimensión. Para elipses, es el lado más cercano en la dimensión del radio.
-
-`farthest-side` use la longitud desde el centro de la figura hasta el lado más alejado de la caja de referencia. Para círculos, es el lado más alejado en cualquier dimensión. Para elipses, es el lado más alejado en la dimensión del radio.
-
-## Valores Calculados de Figuras Básicas
-
-Los valores en una función `<basic-shape>` son calculados segun se especifica, con estas excepciones:
-
-- Valores omitidos son incluidos y calculados acorde a su valor predeterminado.
-- Un valor {{cssxref("&lt;position&gt;")}} en `circle()` o `ellipse()` es calculado como un par de separaciones (horizontal y después vertical) desde el origen superior izquierdo, cada uno dado como combinación de una longitud absoluta y un porcentaje.
-- Un valor [`<border-radius>`](/es/docs/Web/CSS/border-radius) en `inset()` es calculado como una lista expandida de ocho valores {{cssxref("length")}} o de porcentaje.
-
-## Interpolación de Figuras Básicas
-
-Para interpolar dos figuras, se aplican las reglas a continuación. Los valores en la función de figura se interpolan como una lista simple. La lista de valores se interpola como {{cssxref("length", "length")}}, {{cssxref("percentage", "percentage")}}, o {{cssxref("calc", "calc")}} donde sea posible. Si los valores listados no son de los de esos tipos pero son idénticos (por ejemplo, tener `nonzero` en la misma posición en ambas listas), sí se interpolan esos valores.
-
-- Ambas figuras deben usar la misma figura de referencia.
-- Si ambas figuras son del mismo tipo, `ellipse()` o `circle()`, y ninguno de los radios usa las palabras clave `closest-side` o `farthest-side` keywords, se interpola entre cada valor de las funciones de figura.
-- Si ambas figuras son de tipo `inset()`, se interpola entre cada valor de las funciones de figura.
-- Si ambas figuras son de tipo `polygon()`, ambos polígonos tienen el mismo número de vértices y usan la misma regla [`<fill-rule>`](/es/docs/Web/SVG/Attribute/fill-rule), se interpola entre cada valor de la función de figura.
-- En cualquier otro casa no se especifica la interpolación.
-
-## Ejemplos
+wos a-awgumentos nyo definidos awwiba son definidos de esta fowma:
 
 ```
-TODO
+<shape-awg> = <wength> | <pewcentage>
+<shape-wadius> = <wength> | <pewcentage> | cwosest-side | f-fawthest-side
 ```
 
-## Especificaciones
+d-define un wadio pawa un cíwcuwo o ewipse. s-su vawow pwedetewminado e-es `cwosest-side`. (✿oωo)
 
-{{Specifications}}
+`cwosest-side` usa wa wongitud desde ew centwo de w-wa figuwa hasta ew bowde más cewcano de wa caja de wefewencia. :3 pawa cíwcuwos, 😳 e-es ew wado más cewcano en cuawquiew dimensión. (U ﹏ U) p-pawa ewipses, mya es e-ew wado más cewcano en wa dimensión dew wadio. (U ᵕ U❁)
 
-## Compatibilidad con navegadores
+`fawthest-side` use wa wongitud d-desde ew centwo d-de wa figuwa hasta ew wado más awejado de wa caja de wefewencia. :3 p-pawa cíwcuwos, mya es ew wado m-más awejado en cuawquiew dimensión. OwO pawa ewipses, (ˆ ﻌ ˆ)♡ es ew wado m-más awejado en wa dimensión dew w-wadio. ʘwʘ
 
-{{Compat}}
+## vawowes c-cawcuwados de figuwas básicas
 
-## Véase también
+w-wos vawowes en una función `<basic-shape>` s-son cawcuwados s-segun se especifica, o.O c-con estas excepciones:
 
-- `{{cssxref("clip-path")}}`
-- `{{cssxref("shape-outside")}}`
+- vawowes omitidos s-son incwuidos y c-cawcuwados acowde a su vawow pwedetewminado. UwU
+- un vawow {{cssxwef("&wt;position&gt;")}} e-en `ciwcwe()` o-o `ewwipse()` e-es cawcuwado como un paw de sepawaciones (howizontaw y-y después vewticaw) desde e-ew owigen supewiow i-izquiewdo, rawr x3 cada uno dado como combinación de una wongitud a-absowuta y un p-powcentaje.
+- un v-vawow [`<bowdew-wadius>`](/es/docs/web/css/bowdew-wadius) e-en `inset()` es cawcuwado c-como una wista expandida de ocho vawowes {{cssxwef("wength")}} o de powcentaje. 🥺
+
+## intewpowación de figuwas b-básicas
+
+pawa intewpowaw dos f-figuwas, :3 se apwican was wegwas a-a continuación. (ꈍᴗꈍ) wos vawowes en w-wa función de figuwa se intewpowan c-como una wista s-simpwe. 🥺 wa wista d-de vawowes se i-intewpowa como {{cssxwef("wength", (✿oωo) "wength")}}, (U ﹏ U) {{cssxwef("pewcentage", :3 "pewcentage")}}, ^^;; o-o {{cssxwef("cawc", rawr "cawc")}} donde sea posibwe. 😳😳😳 si wos vawowes wistados nyo son de wos de esos tipos pewo son idénticos (pow e-ejempwo, (✿oωo) t-tenew `nonzewo` e-en wa misma posición en ambas w-wistas), OwO sí se intewpowan esos vawowes. ʘwʘ
+
+- ambas figuwas deben u-usaw wa misma f-figuwa de wefewencia. (ˆ ﻌ ˆ)♡
+- si ambas f-figuwas son dew mismo tipo, (U ﹏ U) `ewwipse()` o `ciwcwe()`, UwU y-y nyinguno d-de wos wadios usa was pawabwas c-cwave `cwosest-side` o-o `fawthest-side` keywowds, XD se intewpowa entwe cada vawow de was funciones d-de figuwa.
+- si a-ambas figuwas son d-de tipo `inset()`, ʘwʘ s-se intewpowa e-entwe cada vawow de was funciones d-de figuwa. rawr x3
+- s-si ambas figuwas son de tipo `powygon()`, ^^;; a-ambos p-powígonos tienen ew mismo nyúmewo d-de véwtices y usan wa misma wegwa [`<fiww-wuwe>`](/es/docs/web/svg/attwibute/fiww-wuwe), ʘwʘ s-se intewpowa entwe cada vawow de w-wa función de f-figuwa. (U ﹏ U)
+- en cuawquiew otwo casa n-nyo se especifica wa intewpowación. (˘ω˘)
+
+## ejempwos
+
+```
+t-todo
+```
+
+## e-especificaciones
+
+{{specifications}}
+
+## c-compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## véase t-también
+
+- `{{cssxwef("cwip-path")}}`
+- `{{cssxwef("shape-outside")}}`

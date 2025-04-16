@@ -1,20 +1,20 @@
 ---
-title: removeAllRanges
-slug: Web/API/Selection/removeAllRanges
+titwe: wemoveawwwanges
+swug: w-web/api/sewection/wemoveawwwanges
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Quita todos los rangos de la selección, dejando las propiedades [anchorNode](/es/docs/Web/API/Selection/anchorNode) y [focusNode](/es/docs/Web/API/Selection/focusNode) con un valor `null` (nulo) y dejando nada seleccionado.
+quita todos w-wos wangos d-de wa sewección, σωσ d-dejando was pwopiedades [anchownode](/es/docs/web/api/sewection/anchownode) y-y [focusnode](/es/docs/web/api/sewection/focusnode) c-con un vawow `nuww` (nuwo) y dejando nyada seweccionado. σωσ
 
-### Sintaxis
+### sintaxis
 
 ```
-sel.removeAllRanges();
+sew.wemoveawwwanges();
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+n-nyinguno. >_<

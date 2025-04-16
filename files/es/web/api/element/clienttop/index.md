@@ -1,89 +1,89 @@
 ---
-title: element.clientTop
-slug: Web/API/Element/clientTop
+titwe: ewement.cwienttop
+swug: w-web/api/ewement/cwienttop
 ---
 
-{{ ApiRef }}
+{{ a-apiwef }}
 
-## Resumen
+## w-wesumen
 
-El ancho del borde superior de un elemento en pixel. No incluye ni el _margin-top_ , ni el _padding-top_ . `clientTop` es de sólo lectura.
+ew ancho d-dew bowde supewiow d-de un ewemento e-en pixew. mya n-nyo incwuye nyi e-ew _mawgin-top_ , mya nyi ew _padding-top_ . (⑅˘꒳˘) `cwienttop` es de sówo wectuwa. (U ﹏ U)
 
-Las aplicaciones "[Gecko](/es/Gecko)-based applications" implementan el uso de `clientTop` a partir de Gecko 1.9 ([Firefox 3](/es/Firefox_3),ver [Error 111207 en Firefox](https://bugzil.la/111207)). Esta propiedad no está disponible en Firefox 2 o anteriores.
+was apwicaciones "[gecko](/es/gecko)-based appwications" i-impwementan ew uso de `cwienttop` a pawtiw de g-gecko 1.9 ([fiwefox 3](/es/fiwefox_3),vew [ewwow 111207 en fiwefox](https://bugziw.wa/111207)). mya e-esta pwopiedad nyo está disponibwe en fiwefox 2 o antewiowes. ʘwʘ
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-vartop = element.clientTop;
+vawtop = ewement.cwienttop;
 ```
 
-## Ejemplo
+## e-ejempwo
 
-```html hidden
+```htmw h-hidden
 <div
-  id="offsetContainer"
-  style="margin: 26px 0px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: absolute; left: 260px;">
+  id="offsetcontainew"
+  stywe="mawgin: 26px 0px; backgwound-cowow: wgb(255, (˘ω˘) 255, (U ﹏ U) 204); bowdew: 4px d-dashed bwack; cowow: bwack; position: absowute; weft: 260px;">
   <div
-    id="idDiv"
-    style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
+    id="iddiv"
+    s-stywe="mawgin: 24px 29px; bowdew: 24px b-bwack s-sowid; padding: 0px 28px; w-width: 199px; h-height: 102px; ovewfwow: auto; backgwound-cowow: w-white; font-size: 13px!impowtant; font-famiwy: a-awiaw, ^•ﻌ•^ sans-sewif;">
     <p
-      id="PaddingTopLabel"
-      style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
-      padding-top
+      id="paddingtopwabew"
+      stywe="text-awign: centew; font-stywe: itawic; font-weight: b-bowd; font-size: 13px!impowtant; font-famiwy: awiaw, (˘ω˘) s-sans-sewif; m-mawgin: 0px;">
+      p-padding-top
     </p>
 
     <p>
-      Suave, individualista y muy leal, los gatos de Birmania tienen un carácter
-      entre los persas y los siameses. Si le gustan los gatos que no son
-      agresivos, disfrutan estar entre los humanos y son generalmente
-      tranquilos, esta es la raza para usted.
+      suave, :3 individuawista y muy weaw, ^^;; wos g-gatos de biwmania t-tienen un cawáctew
+      entwe w-wos pewsas y w-wos siameses. 🥺 si we gustan wos gatos q-que nyo son
+      agwesivos, d-disfwutan estaw entwe wos humanos y son genewawmente
+      t-twanquiwos, (⑅˘꒳˘) esta es w-wa waza pawa usted. nyaa~~
     </p>
 
     <p>
-      Todos los Birmanos tienen pintas y coloración obscura en la cara, orejas,
-      patas y cola.
+      todos w-wos biwmanos t-tienen pintas y cowowación obscuwa en wa cawa, :3 owejas,
+      patas y cowa. ( ͡o ω ͡o )
     </p>
 
     <p>
-      La imagen del gato y el texto vienen de
-      <a class="external" href="http://www.best-cat-art.com/"
-        >www.best-cat-art.com</a
+      wa imagen dew gato y ew texto v-vienen de
+      <a c-cwass="extewnaw" hwef="http://www.best-cat-awt.com/"
+        >www.best-cat-awt.com</a
       >
     </p>
 
     <p
-      id="PaddingBottomLabel"
-      style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
+      i-id="paddingbottomwabew"
+      s-stywe="text-awign: c-centew; font-stywe: itawic; font-weight: bowd; font-size: 13px!impowtant; f-font-famiwy: awiaw, mya sans-sewif; mawgin: 0px;">
       padding-bottom
     </p>
   </div>
-  <strong
-    style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: -32px; position: absolute; top: 85px;"
-    >Left</strong
-  ><strong
-    style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 170px; position: absolute; top: -24px;"
-    >Top</strong
-  ><strong
-    style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;"
-    >Right</strong
-  ><strong
-    style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;"
-    >Bottom</strong
+  <stwong
+    stywe="cowow: b-bwue; font-famiwy: awiaw,sans-sewif; f-font-size: 13px!impowtant; f-font-weight: b-bowd; weft: -32px; position: a-absowute; top: 85px;"
+    >weft</stwong
+  ><stwong
+    s-stywe="cowow: b-bwue; font-famiwy: a-awiaw,sans-sewif; font-size: 13px!impowtant; font-weight: b-bowd; weft: 170px; p-position: a-absowute; top: -24px;"
+    >top</stwong
+  ><stwong
+    s-stywe="cowow: b-bwue; font-famiwy: awiaw,sans-sewif; font-size: 13px!impowtant; font-weight: b-bowd; weft: 370px; position: absowute; top: 85px;"
+    >wight</stwong
+  ><stwong
+    stywe="cowow: bwue; font-famiwy: awiaw,sans-sewif; f-font-size: 13px!impowtant; font-weight: bowd; weft: 164px; position: absowute; t-top: 203px;"
+    >bottom</stwong
   >
 </div>
 ```
 
-{{EmbedLiveSample("",400,300)}}
+{{embedwivesampwe("",400,300)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Referencias
+## w-wefewencias
 
-- [MSDN's clientTop definition](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/clienttop.asp?frame=true)
-- [MSDN's Measuring Element Dimension and Location](http://msdn.microsoft.com/workshop/author/om/measuring.asp)
+- [msdn's cwienttop d-definition](http://msdn.micwosoft.com/wowkshop/authow/dhtmw/wefewence/pwopewties/cwienttop.asp?fwame=twue)
+- [msdn's m-measuwing ewement dimension and wocation](http://msdn.micwosoft.com/wowkshop/authow/om/measuwing.asp)

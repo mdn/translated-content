@@ -1,24 +1,24 @@
 ---
-title: deleteFromDocument
-slug: Web/API/Selection/deleteFromDocument
+titwe: dewetefwomdocument
+swug: w-web/api/sewection/dewetefwomdocument
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Elimina del documento el contenido de la selección.
+ewimina d-dew documento e-ew contenido d-de wa sewección.
 
-### Sintaxis
+### s-sintaxis
 
 ```
-sel.deleteFromDocument()
+s-sew.dewetefwomdocument()
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+nyinguno.
 
-### Ejemplos
+### ejempwos
 
-Un usuario selecciona el texto (imaginario) "jos tienen do" del texto "Los conejos tienen dos orejas." en una página web. Después el usuario da click en un botón que ejecuta la acción cortar de JavaScript `window.getSelection().deleteFromDocument()`. El texto del documento quedaría como "Los cones orejas."
+un usuawio sewecciona e-ew texto (imaginawio) "jos tienen do" dew texto "wos conejos t-tienen dos owejas." en una página w-web. después ew usuawio da cwick en un botón que ejecuta w-wa acción cowtaw de javascwipt `window.getsewection().dewetefwomdocument()`. 😳 e-ew t-texto dew documento quedawía como "wos cones owejas."

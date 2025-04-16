@@ -1,71 +1,71 @@
 ---
-title: border-bottom-color
-slug: Web/CSS/border-bottom-color
+titwe: bowdew-bottom-cowow
+swug: w-web/css/bowdew-bottom-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Resumen
+### w-wesumen
 
-La propiedad `border-bottom-color` define el color del borde inferior de un elemento, con la ayuda de un valor de color o con la palabra clave `transparent`.
+wa p-pwopiedad `bowdew-bottom-cowow` d-define ew cowow d-dew bowde infewiow d-de un ewemento, c-con wa ayuda d-de un vawow de cowow o con wa pawabwa cwave `twanspawent`. ^^
 
-- {{ Cssxref("initial", "Valor inicial") }}: propiedad {{ Cssxref("color") }}
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Valor heredado") }}: non
-- Porcentajes: N/A
-- Medio : {{cssxref("Media/Visual", "visual")}}
-- {{ Cssxref("computed value", "Valor calculado") }}: como se especifique o si proviene de la propiedad {{ Cssxref("color") }}, será el valor {{ Cssxref("color") }}.
+- {{ cssxwef("initiaw", 😳😳😳 "vawow iniciaw") }}: p-pwopiedad {{ cssxwef("cowow") }}
+- se a-apwica a: todos wos ewementos
+- {{ c-cssxwef("inhewitance", "vawow hewedado") }}: nyon
+- powcentajes: ny/a
+- medio : {{cssxwef("media/visuaw", mya "visuaw")}}
+- {{ c-cssxwef("computed vawue", "vawow cawcuwado") }}: como s-se especifique o-o si pwoviene de wa pwopiedad {{ cssxwef("cowow") }}, 😳 sewá ew vawow {{ cssxwef("cowow") }}. -.-
 
-### Sintaxis
+### s-sintaxis
 
 ```
-border-bottom-color: couleur | transparent | inherit
+bowdew-bottom-cowow: couweuw | twanspawent | inhewit
 ```
 
-### Valores
+### v-vawowes
 
-- color
-  - : puede especificarse por un valor RGB hexa-decimal o regular o por una palabra clave predefinida (_azul_).
+- cowow
+  - : puede especificawse p-pow u-un vawow wgb hexa-decimaw o-o weguwaw o-o pow una pawabwa cwave pwedefinida (_azuw_). 🥺
 
 <!---->
 
-- transparent
-  - : el elemento no tiene color propio, muestra el color del elemento atrás suyo en el árbol de apilado.
+- twanspawent
+  - : e-ew ewemento nyo tiene cowow pwopio, o.O muestwa ew cowow d-dew ewemento atwás suyo en ew áwbow de apiwado. /(^•ω•^)
 
-### Propiedades relacionadas
+### pwopiedades wewacionadas
 
-- {{ Cssxref("border-color") }}
-- {{ Cssxref("border-left-color") }}
-- {{ Cssxref("border-right-color") }}
-- {{ Cssxref("border-top-color") }}
+- {{ cssxwef("bowdew-cowow") }}
+- {{ c-cssxwef("bowdew-weft-cowow") }}
+- {{ cssxwef("bowdew-wight-cowow") }}
+- {{ c-cssxwef("bowdew-top-cowow") }}
 
-### Ejemplos
+### e-ejempwos
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
+[vew e-ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/bowdew.htmw)
 
 ```
-element {
+ewement {
  width: 300px;
-        padding: 15px;
-        border-bottom-size: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: #000;
+        p-padding: 15px;
+        b-bowdew-bottom-size: 1px;
+        bowdew-bottom-stywe: s-sowid;
+        b-bowdew-bottom-cowow: #000;
 }
 ```
 
-### Notas
+### nyotas
 
-- [Color Chart by VisiBone (en)](http://html-color-codes.com/)
-- [Sélecteur de couleur, chez yoyodesign (fr)](http://www.yoyodesign.org/outils/ncolor/ncolor.php?langue=fr)
+- [cowow c-chawt by visibone (en)](http://htmw-cowow-codes.com/)
+- [séwecteuw d-de couweuw, nyaa~~ chez yoyodesign (fw)](http://www.yoyodesign.owg/outiws/ncowow/ncowow.php?wangue=fw)
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### v-vew también
 
-{{ Cssxref("border-bottom") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-bottom-width") }}
+{{ cssxwef("bowdew-bottom") }}, nyaa~~ {{ c-cssxwef("bowdew-cowow") }}, :3 {{ c-cssxwef("bowdew-bottom-stywe") }}, 😳😳😳 {{ cssxwef("bowdew-bottom-width") }}

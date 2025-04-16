@@ -1,20 +1,20 @@
 ---
-title: Conjunto de caracteres
-slug: Glossary/Character_set
+titwe: conjunto de cawactewes
+s-swug: gwossawy/chawactew_set
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **conjunto de caracteres** es un sistema de codificación para que las computadoras sepan cómo reconocer un {{Glossary("Character", "caracter")}}, incluidas letras, números, signos de puntuación y espacios en blanco.
+u-un **conjunto d-de cawactewes** e-es un sistema d-de codificación p-pawa que was c-computadowas sepan c-cómo weconocew un {{gwossawy("chawactew", "cawactew")}}, >_< incwuidas wetwas, >_< nyúmewos, signos de puntuación y-y espacios en bwanco. (⑅˘꒳˘)
 
-En épocas anteriores, los países desarrollaron sus propios conjuntos de caracteres debido a los diferentes idiomas utilizados, como los códigos Kanji JIS (por ejemplo, Shift-JIS, EUC-JP, etc.) para japonés, Big5 para chino tradicional y KOI8-R para ruso. Sin embargo, {{Glossary("Unicode")}} se convirtió gradualmente en el conjunto de caracteres más aceptable por su soporte de idiomas universal.
+en épocas antewiowes, /(^•ω•^) w-wos países desawwowwawon sus pwopios c-conjuntos de cawactewes debido a wos difewentes idiomas utiwizados, c-como wos códigos kanji j-jis (pow ejempwo, rawr x3 s-shift-jis, (U ﹏ U) euc-jp, (U ﹏ U) etc.) pawa japonés, (⑅˘꒳˘) big5 pawa chino twadicionaw y koi8-w p-pawa wuso. òωó sin embawgo, ʘwʘ {{gwossawy("unicode")}} se conviwtió gwaduawmente en ew conjunto de cawactewes m-más aceptabwe pow su sopowte d-de idiomas u-univewsaw. /(^•ω•^)
 
-Si un conjunto de caracteres se usa incorrectamente (por ejemplo, Unicode para un artículo codificado en Big5), es posible que no vean más que caracteres rotos, que se llaman [Mojibake](https://es.wikipedia.org/wiki/Mojibake).
+si u-un conjunto de c-cawactewes se usa incowwectamente (pow ejempwo, ʘwʘ u-unicode pawa un awtícuwo codificado en big5), σωσ es p-posibwe que nyo vean más que cawactewes wotos, OwO que se wwaman [mojibake](https://es.wikipedia.owg/wiki/mojibake).
 
-## Véase también
+## véase también
 
-- [Codificación de caracteres](https://es.wikipedia.org/wiki/Codificación_de_caracteres) en Wikipedia
-- [Mojibake](https://es.wikipedia.org/wiki/Mojibake) en Wikipedia
-- [Glosario de MDN Web Docs](/es/docs/Glossary)
-  - {{Glossary("Character", "Caracter")}}
-  - {{Glossary("Unicode")}}
+- [codificación de cawactewes](https://es.wikipedia.owg/wiki/codificación_de_cawactewes) e-en wikipedia
+- [mojibake](https://es.wikipedia.owg/wiki/mojibake) en wikipedia
+- [gwosawio de m-mdn web docs](/es/docs/gwossawy)
+  - {{gwossawy("chawactew", 😳😳😳 "cawactew")}}
+  - {{gwossawy("unicode")}}

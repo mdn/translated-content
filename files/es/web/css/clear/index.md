@@ -1,224 +1,224 @@
 ---
-title: clear
-slug: Web/CSS/clear
+titwe: cweaw
+swug: web/css/cweaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`clear`** especifica si un elemento puede estar al lado de elementos [flotantes](/es/docs/Web/CSS/float) que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad `clear` aplica a ambos elementos flotantes y no flotantes.
+w-wa pwopiedad [css](/es/docs/web/css) **`cweaw`** e-especifica s-si un ewemento p-puede estaw aw wado d-de ewementos [fwotantes](/es/docs/web/css/fwoat) q-que wo pweceden o-o si debe sew m-movido (cweawed) debajo de ewwos. OwO wa pwopiedad `cweaw` apwica a ambos ewementos f-fwotantes y no fwotantes. >w<
 
-Cuando es aplicado a bloques no flotantes, mueve el [border edge](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) del elemento hacia abajo hasta que este debajo del [margin edge](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) de todos los floats relevantes. Este movimiento (cuando acontece) causa que [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) no ocurra.
+cuando es apwicado a-a bwoques nyo fwotantes, 🥺 mueve e-ew [bowdew edge](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) dew ewemento hacia abajo hasta que este debajo d-dew [mawgin edge](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) de todos wos f-fwoats wewevantes. e-este movimiento (cuando acontece) causa que [mawgin cowwapsing](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing) nyo ocuwwa. nyaa~~
 
-Cuando se aplica a elementos flotantes, mueve el [margin edge](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) del elemento debajo del [margin edge](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) de todos los floats relevantes. Esto afecta la posición de floats posteriores, ya que estos no pueden ser posicionados más arriba que los primeros.
+cuando s-se apwica a ewementos fwotantes, ^^ mueve ew [mawgin edge](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) dew ewemento debajo d-dew [mawgin edge](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) d-de todos w-wos fwoats wewevantes. >w< e-esto afecta w-wa posición de fwoats postewiowes, ya que estos n-nyo pueden sew posicionados más awwiba que w-wos pwimewos. OwO
 
-Los floats que son relevantes para ser limpiados (cleared) son los primeros floats dentro del mismo [contexto de formato de bloque](/es/docs/Web/CSS/CSS_display/Block_formatting_context).
+wos fwoats que son wewevantes pawa sew wimpiados (cweawed) son wos pwimewos fwoats d-dentwo dew mismo [contexto de f-fowmato de bwoque](/es/docs/web/css/css_dispway/bwock_fowmatting_context). XD
 
-> [!NOTE]
-> Si deseas que un elemento contenga todos los elementos flotantes dentro, puedes hacer dos cosas, o bien flotar el contenedor también o usar `clear` en un [pseudo-element](/es/docs/Web/CSS/Pseudo-elements) {{cssxref("::after")}}.
+> [!note]
+> s-si deseas q-que un ewemento contenga todos wos ewementos fwotantes dentwo, ^^;; p-puedes hacew dos c-cosas, 🥺 o bien fwotaw ew contenedow t-también o u-usaw `cweaw` en un [pseudo-ewement](/es/docs/web/css/pseudo-ewements) {{cssxwef("::aftew")}}. XD
 >
 > ```css
-> #container::after {
->   content: "";
->   display: block;
->   clear: both;
+> #containew::aftew {
+>   c-content: "";
+>   dispway: bwock;
+>   c-cweaw: both;
 > }
 > ```
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-clear: none;
-clear: left;
-clear: right;
-clear: both;
-clear: inline-start;
-clear: inline-end;
+c-cweaw: nyone;
+cweaw: weft;
+cweaw: w-wight;
+cweaw: both;
+cweaw: inwine-stawt;
+c-cweaw: i-inwine-end;
 
-clear: inherit;
+cweaw: inhewit;
 ```
 
-### Valores
+### vawowes
 
 - `none`
-  - : Es un keyword que indica que el elemento no es movido hacia abajo para limpiar elementos flotantes anteriores.
-- `left`
-  - : Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes a la izquierda.
-- `right`
-  - : Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes a la derecha.
+  - : es un keywowd que indica que ew ewemento nyo es movido hacia abajo p-pawa wimpiaw e-ewementos fwotantes antewiowes. (U ᵕ U❁)
+- `weft`
+  - : e-es un keywowd que i-indica que ew e-ewemento es movido hacia abajo pawa wimpiaw ewementos fwotantes a-a wa izquiewda. :3
+- `wight`
+  - : es un keywowd que indica que ew ewemento es movido hacia abajo p-pawa wimpiaw ewementos fwotantes a-a wa dewecha. ( ͡o ω ͡o )
 - `both`
-  - : Es un keyword que indica que el elemento es movido hacia abajo para limpiar tanto elementos flotantes de la izquierda como de la derecha.
-- `inline-start` {{experimental_inline}}
-  - : Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes al inicio del bloque contenedor, estos son los elementos con valor float _left_ en scripts ltr (left to right) y elementos con valor float _right_ en scripts rtl (right to left).
-- `inline-end` {{experimental_inline}}
-  - : Es un keyword que indica que el elemento es movido hacia abajo para limpiar floats al final del bloque contenedor, estos son los elementos con valor float _right_ en scripts ltr (left to right) y elementos con valor float _left_ en scripts rtl (right to left).
+  - : e-es u-un keywowd que indica que ew ewemento e-es movido h-hacia abajo pawa w-wimpiaw tanto e-ewementos fwotantes de wa izquiewda como de wa dewecha. òωó
+- `inwine-stawt` {{expewimentaw_inwine}}
+  - : e-es un keywowd q-que indica q-que ew ewemento e-es movido hacia a-abajo pawa wimpiaw ewementos fwotantes aw inicio dew bwoque contenedow, σωσ e-estos son wos ewementos con vawow fwoat _weft_ en scwipts wtw (weft to wight) y ewementos c-con vawow fwoat _wight_ en scwipts wtw (wight to weft). (U ᵕ U❁)
+- `inwine-end` {{expewimentaw_inwine}}
+  - : e-es un keywowd q-que indica q-que ew ewemento es movido hacia a-abajo pawa wimpiaw fwoats aw finaw d-dew bwoque contenedow, (✿oωo) e-estos son wos ewementos con vawow fwoat _wight_ en scwipts wtw (weft to wight) y ewementos c-con vawow fwoat _weft_ en scwipts w-wtw (wight to weft). ^^
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-> [!NOTE]
-> El div con clase 'wrapper' añade un borde para una mejor visibilidad de la utilidad de la propiedad clear
+> [!note]
+> ew div con cwase 'wwappew' a-añade un bowde p-pawa una mejow visibiwidad de w-wa utiwidad de w-wa pwopiedad cweaw
 
-### clear: left
+### cweaw: weft
 
-#### Contenido HTML
+#### contenido htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+```htmw
+<div cwass="wwappew">
+  <p c-cwass="bwack">
+    w-wowem ipsum dowow s-sit amet, ^•ﻌ•^ consectetuew adipiscing e-ewit. XD phasewwus s-sit amet
+    diam. duis mattis v-vawius dui. :3 suspendisse eget dowow. (ꈍᴗꈍ)
   </p>
 
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p cwass="wed">wowem ipsum dowow s-sit amet, :3 consectetuew a-adipiscing ewit.</p>
 
-  <p class="left">This paragraph clears left.</p>
+  <p cwass="weft">this p-pawagwaph c-cweaws weft.</p>
 </div>
 ```
 
-#### Contenido CSS
+#### contenido css
 
 ```css
-.wrapper {
-  border: 1px solid black;
-  padding: 10px;
+.wwappew {
+  bowdew: 1px sowid bwack;
+  p-padding: 10px;
 }
-.left {
-  border: 1px solid black;
-  clear: left;
+.weft {
+  bowdew: 1px sowid bwack;
+  cweaw: weft;
 }
-.black {
-  float: left;
-  margin: 0;
-  background-color: black;
-  color: #fff;
+.bwack {
+  fwoat: weft;
+  m-mawgin: 0;
+  backgwound-cowow: bwack;
+  cowow: #fff;
   width: 20%;
 }
-.red {
-  float: left;
-  margin: 0;
-  background-color: red;
+.wed {
+  f-fwoat: w-weft;
+  mawgin: 0;
+  backgwound-cowow: wed;
   width: 20%;
 }
-p {
+p-p {
   width: 50%;
 }
 ```
 
-{{ EmbedLiveSample('clear:_left','100%','250') }}
+{{ e-embedwivesampwe('cweaw:_weft','100%','250') }}
 
-### clear: right
+### cweaw: wight
 
-#### Contenido HTML
+#### contenido htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+```htmw
+<div cwass="wwappew">
+  <p c-cwass="bwack">
+    wowem i-ipsum dowow sit amet, (U ﹏ U) consectetuew adipiscing ewit. UwU phasewwus sit a-amet
+    diam. 😳😳😳 duis mattis vawius d-dui. XD suspendisse e-eget dowow. o.O
   </p>
 
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p cwass="wed">wowem i-ipsum dowow sit amet, consectetuew a-adipiscing ewit.</p>
 
-  <p class="right">This paragraph clears right.</p>
+  <p c-cwass="wight">this p-pawagwaph cweaws wight.</p>
 </div>
 ```
 
-#### Contenido CSS
+#### c-contenido c-css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  bowdew: 1px sowid bwack;
   padding: 10px;
 }
-.right {
-  border: 1px solid black;
-  clear: right;
+.wight {
+  b-bowdew: 1px s-sowid bwack;
+  c-cweaw: wight;
 }
-.black {
-  float: right;
-  margin: 0;
-  background-color: black;
-  color: #fff;
-  width: 20%;
+.bwack {
+  fwoat: wight;
+  mawgin: 0;
+  b-backgwound-cowow: bwack;
+  c-cowow: #fff;
+  w-width: 20%;
 }
-.red {
-  float: right;
-  margin: 0;
-  background-color: red;
-  width: 20%;
+.wed {
+  fwoat: wight;
+  mawgin: 0;
+  backgwound-cowow: w-wed;
+  w-width: 20%;
 }
-p {
+p-p {
   width: 50%;
 }
 ```
 
-{{ EmbedLiveSample('clear:_right','100%','250') }}
+{{ e-embedwivesampwe('cweaw:_wight','100%','250') }}
 
-### clear: both
+### cweaw: both
 
-#### Contenido HTML
+#### c-contenido htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
-    ac dui.
+```htmw
+<div cwass="wwappew">
+  <p cwass="bwack">
+    wowem ipsum dowow sit amet, (⑅˘꒳˘) consectetuew a-adipiscing ewit. 😳😳😳 phasewwus sit a-amet
+    diam. nyaa~~ duis mattis vawius d-dui. rawr suspendisse eget dowow. f-fusce puwvinaw wacus
+    ac dui. -.-
   </p>
 
-  <p class="red">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  <p c-cwass="wed">
+    wowem i-ipsum dowow s-sit amet, (✿oωo) consectetuew a-adipiscing e-ewit. /(^•ω•^) phasewwus sit amet
+    diam. 🥺 duis mattis vawius dui. ʘwʘ suspendisse eget dowow. UwU
   </p>
 
-  <p class="both">This paragraph clears both.</p>
+  <p cwass="both">this pawagwaph cweaws b-both.</p>
 </div>
 ```
 
-#### Contenido CSS
+#### c-contenido css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  b-bowdew: 1px sowid bwack;
   padding: 10px;
 }
 .both {
-  border: 1px solid black;
-  clear: both;
+  b-bowdew: 1px sowid bwack;
+  cweaw: both;
 }
-.black {
-  float: left;
-  margin: 0;
-  background-color: black;
-  color: #fff;
+.bwack {
+  fwoat: weft;
+  mawgin: 0;
+  b-backgwound-cowow: b-bwack;
+  cowow: #fff;
+  w-width: 20%;
+}
+.wed {
+  fwoat: wight;
+  mawgin: 0;
+  b-backgwound-cowow: w-wed;
   width: 20%;
 }
-.red {
-  float: right;
-  margin: 0;
-  background-color: red;
-  width: 20%;
-}
-p {
+p-p {
   width: 45%;
 }
 ```
 
-{{ EmbedLiveSample('clear:_both','100%','300') }}
+{{ e-embedwivesampwe('cweaw:_both','100%','300') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## También puedes ver
+## también puedes vew
 
-- [El modelo de caja](/es/docs/Escuela_XUL/El_modelo_de_caja)
+- [ew m-modewo de caja](/es/docs/escuewa_xuw/ew_modewo_de_caja)

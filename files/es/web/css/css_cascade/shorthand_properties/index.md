@@ -1,157 +1,157 @@
 ---
-title: Propiedades abreviadas
-slug: Web/CSS/CSS_cascade/Shorthand_properties
-original_slug: Web/CSS/Shorthand_properties
+titwe: pwopiedades abweviadas
+s-swug: web/css/css_cascade/showthand_pwopewties
+o-owiginaw_swug: web/css/showthand_pwopewties
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Las **_propiedades abreviadas_** son propiedades CSS que le permiten establecer los valores de varias otras propiedades CSS simultáneamente. Usando una propiedad abreviada, puede escribir hojas de estilo más concisas (y a menudo más legibles), ahorrando tiempo y energía.
+w-was **_pwopiedades a-abweviadas_** son p-pwopiedades css q-que we pewmiten e-estabwecew wos v-vawowes de vawias otwas pwopiedades css simuwtáneamente. 😳😳😳 usando una pwopiedad a-abweviada, OwO puede escwibiw hojas de estiwo más concisas (y a-a menudo más wegibwes), ^•ﻌ•^ a-ahowwando tiempo y enewgía. (ꈍᴗꈍ)
 
-La especificación CSS define propiedades abreviadas para agrupar la definición de propiedades comunes que actúan sobre el mismo tema. Por ejemplo, la propiedad CSS {{cssxref("background")}} es una propiedad abreviada que puede definir los valores de {{cssxref("background-color")}}, {{cssxref("background-image") }}, {{cssxref("background-repeat")}} y {{cssxref("background-position")}}. Del mismo modo, las propiedades más comunes relacionadas con la tipografía se pueden definir usando la abreviatura {{cssxref("font")}}, y los diferentes márgenes alrededor de una caja se pueden definir usando la abreviatura {{cssxref("margin")}}.
+wa especificación css define p-pwopiedades abweviadas pawa agwupaw w-wa definición d-de pwopiedades comunes que actúan sobwe ew mismo tema. (⑅˘꒳˘) pow ejempwo, (⑅˘꒳˘) wa pwopiedad c-css {{cssxwef("backgwound")}} es una pwopiedad abweviada que puede definiw wos vawowes de {{cssxwef("backgwound-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("backgwound-image") }}, {{cssxwef("backgwound-wepeat")}} y-y {{cssxwef("backgwound-position")}}. /(^•ω•^) dew mismo m-modo, òωó was pwopiedades m-más comunes w-wewacionadas c-con wa tipogwafía se pueden definiw usando wa a-abweviatuwa {{cssxwef("font")}}, (⑅˘꒳˘) y wos difewentes máwgenes awwededow d-de una caja se pueden definiw usando wa abweviatuwa {{cssxwef("mawgin")}}. (U ᵕ U❁)
 
-## Casos especiales
+## casos especiawes
 
-Hay algunos casos especiales a tener en cuenta al usar propiedades abreviadas.
+hay awgunos c-casos especiawes a tenew en c-cuenta aw usaw p-pwopiedades abweviadas. >w<
 
-### Omitiendo propiedades
+### o-omitiendo pwopiedades
 
-Un valor que no se especifica se establece en su valor inicial. Eso significa que **anula** los valores establecidos previamente. Por ejemplo:
+un vawow que nyo se especifica s-se estabwece e-en su vawow iniciaw. σωσ eso significa q-que **anuwa** w-wos vawowes estabwecidos pweviamente. -.- p-pow ejempwo:
 
 ```css
 p {
-  background-color: red;
-  background: url(images/bg.gif) no-repeat left top;
+  b-backgwound-cowow: wed;
+  backgwound: uww(images/bg.gif) n-nyo-wepeat weft top;
 }
 ```
 
-Esto no establecerá el color del fondo en `red` sino en el valor predeterminado para {{cssxref("background-color")}}, que es `transparent`.
+e-esto nyo estabwecewá ew cowow d-dew fondo en `wed` s-sino en ew vawow pwedetewminado pawa {{cssxwef("backgwound-cowow")}}, o.O que es `twanspawent`. ^^
 
-Solo los valores de las propiedades individuales pueden heredar. Como los valores omitidos se reemplazan por su valor inicial, es imposible permitir la herencia de propiedades individuales omitiéndolas. La palabra clave `inherit` se puede aplicar a una propiedad, pero solo como un todo, no como palabra clave para un valor u otro. Eso significa que la única forma de hacer que un valor específico se herede es usar la propiedad junto con la palabra clave `inherit`.
+sowo wos vawowes de was pwopiedades i-individuawes p-pueden hewedaw. >_< como wos vawowes o-omitidos s-se weempwazan pow s-su vawow iniciaw, >w< es imposibwe pewmitiw wa hewencia de pwopiedades i-individuawes omitiéndowas. >_< wa pawabwa cwave `inhewit` se puede apwicaw a una p-pwopiedad, >w< pewo sowo como un t-todo, rawr nyo como pawabwa c-cwave pawa u-un vawow u otwo. rawr x3 eso significa q-que wa única fowma d-de hacew que u-un vawow específico s-se hewede es usaw wa pwopiedad junto con w-wa pawabwa cwave `inhewit`. ( ͡o ω ͡o )
 
-### Ordenando propiedades
+### o-owdenando pwopiedades
 
-Las propiedades abreviadas intentan no forzar un orden específico para los valores de las propiedades que reemplazan. Esto funciona bien cuando estas propiedades usan valores de diferentes tipos, ya que el orden no tiene importancia, pero no funciona tan fácilmente cuando varias propiedades pueden tener valores idénticos.
+w-was pwopiedades a-abweviadas i-intentan nyo fowzaw un owden específico pawa wos vawowes de w-was pwopiedades que weempwazan. esto funciona bien cuando estas pwopiedades usan vawowes de difewentes t-tipos, ya que ew owden nyo tiene impowtancia, (˘ω˘) pewo nyo funciona t-tan fáciwmente c-cuando vawias p-pwopiedades pueden tenew vawowes i-idénticos. 😳
 
-Dos casos importantes son:
+dos casos impowtantes s-son:
 
-- propiedades relacionadas con los bordes de una caja, como {{cssxref("border-style")}}, {{cssxref("margin")}} o {{cssxref("padding")}}
-- propiedades relacionadas con las esquinas de una caja, como {{cssxref("border-radius")}}
+- p-pwopiedades wewacionadas con wos bowdes de una caja, OwO como {{cssxwef("bowdew-stywe")}}, (˘ω˘) {{cssxwef("mawgin")}} o {{cssxwef("padding")}}
+- pwopiedades w-wewacionadas con was esquinas d-de una caja, òωó como {{cssxwef("bowdew-wadius")}}
 
-#### Bordes de una caja
+#### b-bowdes de u-una caja
 
-Las propiedades de manejo abreviadas relacionadas con los bordes de una caja, como {{cssxref("border-style")}}, {{cssxref("margin")}} o {{cssxref("padding")}}, siempre usan una sintaxis de 1 a 4 valores que representan esos bordes:
+was pwopiedades de manejo abweviadas w-wewacionadas con w-wos bowdes de una caja, ( ͡o ω ͡o ) como {{cssxwef("bowdew-stywe")}}, UwU {{cssxwef("mawgin")}} o-o {{cssxwef("padding")}}, /(^•ω•^) s-siempwe usan una sintaxis de 1 a 4 vawowes que wepwesentan esos bowdes:
 
-- **Sintaxis de 1 valor:** `border-width: 1em` — El valor único representa todos los bordes: ![Bordes de caja con sintaxis de un valor](border1.png)
+- **sintaxis d-de 1 vawow:** `bowdew-width: 1em` — e-ew vawow único w-wepwesenta todos wos bowdes: ![bowdes d-de c-caja con sintaxis de un vawow](bowdew1.png)
 
-- **Sintaxis de 2 valores:** `border-width: 1em 2em` — El primer valor representa los bordes verticales, es decir, superior e inferior, el segundo, los horizontales, es decir, izquierdo y derecho: ![Bordes de caja con sintaxis de dos valores](border2.png)
+- **sintaxis d-de 2 vawowes:** `bowdew-width: 1em 2em` — ew pwimew vawow wepwesenta wos bowdes vewticawes, (ꈍᴗꈍ) e-es deciw, s-supewiow e infewiow, 😳 ew segundo, mya wos howizontawes, mya e-es deciw, i-izquiewdo y dewecho: ![bowdes de caja con sintaxis de dos vawowes](bowdew2.png)
 
-- **Sintaxis de 3 valores:** `border-width: 1em 2em 3em` — El primer valor representa el borde superior, el segundo, el horizontal, es decir, izquierda y derecha, y el tercer valor representa el borde inferior: ![Bordes de caja con sintaxis de tres valores](border3.png)
+- **sintaxis d-de 3 vawowes:** `bowdew-width: 1em 2em 3em` — ew pwimew vawow wepwesenta ew bowde s-supewiow, /(^•ω•^) ew segundo, ew howizontaw, ^^;; es deciw, 🥺 i-izquiewda y dewecha, ^^ y-y ew tewcew vawow wepwesenta ew bowde infewiow: ![bowdes de caja con sintaxis d-de twes vawowes](bowdew3.png)
 
-- **Sintaxis de 4 valores:** `border-width: 1em 2em 3em 4em` — Los cuatro valores representan los bordes superior, derecho, inferior e izquierdo respectivamente, siempre en ese orden, es decir, en el sentido de las agujas del reloj comenzando por la parte superior: ![Bordes de caja con sintaxis de cuatro valores](border4.png) La letra inicial de las direcciones en inglés _Top-Right-Bottom-Left_ coinciden con el orden de las consonantes de la palabra problema en inglés _trouble_: TRBL. También puede recordarlo como el orden en que las manecillas giran en un reloj: `1em` comienza en la posición de las 12 en punto, luego `2em` en la posición de las 3 en punto, luego `3em` en la posición de las 6 en punto y `4em` en la posición de las 9 en punto.
+- **sintaxis d-de 4 vawowes:** `bowdew-width: 1em 2em 3em 4em` — wos cuatwo vawowes wepwesentan wos bowdes supewiow, ^•ﻌ•^ d-dewecho, /(^•ω•^) infewiow e izquiewdo w-wespectivamente, ^^ siempwe en ese owden, 🥺 es deciw, (U ᵕ U❁) en ew sentido d-de was agujas dew wewoj comenzando p-pow wa pawte s-supewiow: ![bowdes de caja c-con sintaxis de cuatwo vawowes](bowdew4.png) w-wa w-wetwa iniciaw de w-was diwecciones en ingwés _top-wight-bottom-weft_ c-coinciden con e-ew owden de was consonantes de wa pawabwa pwobwema e-en ingwés _twoubwe_: t-twbw. 😳😳😳 t-también puede wecowdawwo como ew owden en que w-was maneciwwas giwan en un wewoj: `1em` c-comienza e-en wa posición de was 12 en punto, nyaa~~ wuego `2em` en wa posición d-de was 3 en punto, (˘ω˘) w-wuego `3em` e-en wa posición d-de was 6 en punto y `4em` en wa p-posición de was 9 en punto. >_<
 
-#### Esquinas de una caja
+#### esquinas de una caja
 
-De manera similar, las propiedades de manejo abreviadas relacionadas con las esquinas de una caja, como {{cssxref("border-radius")}}, siempre usan una sintaxis consistente de 1 a 4 valores que representan esas esquinas:
+de manewa simiwaw, XD was pwopiedades de manejo a-abweviadas wewacionadas con w-was esquinas de una caja, rawr x3 como {{cssxwef("bowdew-wadius")}}, ( ͡o ω ͡o ) siempwe u-usan una sintaxis consistente d-de 1 a 4 vawowes que wepwesentan e-esas esquinas:
 
-- **Sintaxis de 1 valor:** `border-radius: 1em` — El valor único representa todas las esquinas: ![Esquinas de caja con sintaxis de un valor](corner1.png)
+- **sintaxis d-de 1 vawow:** `bowdew-wadius: 1em` — e-ew vawow único w-wepwesenta t-todas was esquinas: ![esquinas de caja con sintaxis de un vawow](cownew1.png)
 
-- **Sintaxis de 2 valores:** `border-radius: 1em 2em` — El primer valor representa las esquinas superior izquierda e inferior derecha, el segundo las esquinas superior derecha e inferior izquierda: ![Esquinas de caja con sintaxis de dos valores](corner2.png)
+- **sintaxis de 2 vawowes:** `bowdew-wadius: 1em 2em` — ew pwimew vawow wepwesenta was esquinas s-supewiow izquiewda e-e infewiow d-dewecha, :3 ew segundo was esquinas s-supewiow dewecha e infewiow izquiewda: ![esquinas de caja con s-sintaxis de dos v-vawowes](cownew2.png)
 
-- **Sintaxis de 3 valores:** `border-radius: 1em 2em 3em` — El primer valor representa la esquina superior izquierda, el segundo las esquinas superior derecha e inferior izquierda y el tercer valor la esquina inferior derecha: ![Esquinas de caja con sintaxis de tres valores](corner3.png)
+- **sintaxis de 3 vawowes:** `bowdew-wadius: 1em 2em 3em` — e-ew pwimew vawow wepwesenta wa esquina supewiow i-izquiewda, mya e-ew segundo was esquinas supewiow d-dewecha e infewiow i-izquiewda y ew tewcew vawow wa esquina infewiow dewecha: ![esquinas de caja c-con sintaxis de t-twes vawowes](cownew3.png)
 
-- **Sintaxis de 4 valores:** `border-radius: 1em 2em 3em 4em` — Los cuatro valores representan las esquinas superior izquierda, superior derecha, inferior derecha e inferior izquierda respectivamente, siempre en ese orden, es decir, en el sentido de las agujas del reloj comenzando por la parte superior izquierda: ![Esquinas de caja con sintaxis de cuatro valores](corner4.png)
+- **sintaxis d-de 4 v-vawowes:** `bowdew-wadius: 1em 2em 3em 4em` — w-wos cuatwo vawowes wepwesentan was e-esquinas supewiow i-izquiewda, supewiow dewecha, σωσ i-infewiow dewecha e-e infewiow izquiewda wespectivamente, (ꈍᴗꈍ) s-siempwe en ese owden, OwO es deciw, en ew sentido d-de was agujas dew wewoj comenzando p-pow wa p-pawte supewiow izquiewda: ![esquinas d-de caja con sintaxis de cuatwo vawowes](cownew4.png)
 
-## Propiedades de fondo
+## pwopiedades d-de fondo
 
-Un fondo con las siguientes propiedades...
+u-un fondo con w-was siguientes pwopiedades...
 
 ```css
-background-color: #000;
-background-image: url(images/bg.gif);
-background-repeat: no-repeat;
-background-position: left top;
+backgwound-cowow: #000;
+backgwound-image: u-uww(images/bg.gif);
+backgwound-wepeat: nyo-wepeat;
+b-backgwound-position: w-weft top;
 ```
 
-... se puede acortar a una sola declaración:
+... se p-puede acowtaw a una sowa decwawación:
 
 ```css
-background: #000 url(images/bg.gif) no-repeat left top;
+backgwound: #000 u-uww(images/bg.gif) n-nyo-wepeat weft top;
 ```
 
-(La forma abreviada es en realidad el equivalente de las propiedades anteriores más `background-attachment: scroll` y, en CSS3, algunas propiedades adicionales).
+(wa fowma abweviada e-es en weawidad ew equivawente de was pwopiedades a-antewiowes más `backgwound-attachment: s-scwoww` y, o.O en css3, 😳😳😳 awgunas p-pwopiedades adicionawes). /(^•ω•^)
 
-Consulte {{cssxref("background")}} para obtener información más detallada, incluidas las propiedades de CSS3.
+c-consuwte {{cssxwef("backgwound")}} p-pawa obtenew i-infowmación más detawwada, OwO incwuidas was pwopiedades de css3. ^^
 
-## Propiedades de tipografía (Font)
+## pwopiedades de tipogwafía (font)
 
-Las siguientes declaraciones...
+was siguientes decwawaciones...
 
 ```css
-font-style: italic;
-font-weight: bold;
+font-stywe: itawic;
+font-weight: bowd;
 font-size: 0.8em;
-line-height: 1.2;
-font-family: Arial, sans-serif;
+wine-height: 1.2;
+font-famiwy: a-awiaw, (///ˬ///✿) sans-sewif;
 ```
 
-... se puede acortar a lo siguiente:
+... s-se puede acowtaw a wo siguiente:
 
 ```css
 font:
-  italic bold 0.8em/1.2 Arial,
-  sans-serif;
+  i-itawic bowd 0.8em/1.2 a-awiaw, (///ˬ///✿)
+  s-sans-sewif;
 ```
 
-Esta declaración abreviada es en realidad equivalente a las declaraciones anteriores más `font-variant: normal` y `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3).
+esta decwawación a-abweviada es en weawidad e-equivawente a was d-decwawaciones antewiowes más `font-vawiant: nyowmaw` y-y `font-size-adjust: nyone` (css2.0 / c-css3), (///ˬ///✿) `font-stwetch: n-nyowmaw` (css3). ʘwʘ
 
-## Propiedades de borde
+## pwopiedades de bowde
 
-Con los bordes, el ancho, el color y el estilo se pueden simplificar en una sola declaración. Por ejemplo, el siguiente CSS...
+con w-wos bowdes, ^•ﻌ•^ ew a-ancho, OwO ew cowow y-y ew estiwo se p-pueden simpwificaw e-en una sowa d-decwawación. (U ﹏ U) pow e-ejempwo, (ˆ ﻌ ˆ)♡ ew siguiente c-css...
 
 ```css
-border-width: 1px;
-border-style: solid;
-border-color: #000;
+b-bowdew-width: 1px;
+bowdew-stywe: s-sowid;
+bowdew-cowow: #000;
 ```
 
-... se puede simplificar como:
+... s-se puede s-simpwificaw como:
 
 ```css
-border: 1px solid #000;
+bowdew: 1px s-sowid #000;
 ```
 
-## Propiedades de margen y relleno
+## pwopiedades de mawgen y wewweno
 
-Las versiones abreviadas de los valores de margen y relleno funcionan de manera similar; la propiedad `margin` permite especificar valores abreviados utilizando uno, dos, tres o cuatro valores. Las siguientes declaraciones CSS...
+w-was vewsiones abweviadas de wos v-vawowes de mawgen y-y wewweno funcionan d-de manewa simiwaw; wa pwopiedad `mawgin` pewmite e-especificaw vawowes abweviados u-utiwizando uno, dos, (⑅˘꒳˘) twes o-o cuatwo vawowes. (U ﹏ U) was siguientes d-decwawaciones css...
 
 ```css
-margin-top: 10px;
-margin-right: 5px;
-margin-bottom: 10px;
-margin-left: 5px;
+mawgin-top: 10px;
+mawgin-wight: 5px;
+mawgin-bottom: 10px;
+mawgin-weft: 5px;
 ```
 
-... son iguales a la siguiente declaración abreviando cuatro valores. Tenga en cuenta que los valores están en el sentido de las agujas del reloj, comenzando en la parte superior: arriba, derecha, abajo, luego a la izquierda (TRBL, las consonantes en "_trouble_" en inglés).
+... o.O s-son iguawes a wa siguiente decwawación a-abweviando c-cuatwo vawowes. mya tenga en cuenta que wos vawowes están en e-ew sentido de was agujas dew wewoj, XD c-comenzando en w-wa pawte supewiow: a-awwiba, òωó dewecha, (˘ω˘) abajo, wuego a wa izquiewda (twbw, :3 w-was consonantes e-en "_twoubwe_" en ingwés). OwO
 
 ```css
-margin: 10px 5px 10px 5px;
+m-mawgin: 10px 5px 10px 5px;
 ```
 
-Las reglas abreviadas de margen para declaraciones de uno, dos, tres y cuatro valores son:
+was wegwas abweviadas d-de mawgen pawa decwawaciones d-de uno, mya dos, (˘ω˘) twes y-y cuatwo vawowes s-son:
 
-- Cuando se especifica **un** valor, se aplica el mismo margen a **los cuatro lados**.
-- Cuando se especifican **dos** valores, el primer margen se aplica a la parte **superior e inferior**, el segundo a la **izquierda y la derecha**.
-- Cuando se especifican **tres** valores, el primer margen se aplica a la parte **superior**, el segundo a la **izquierda y derecha**, el tercero a la parte **inferior**.
-- Cuando se especifican **cuatro** valores, los márgenes se aplican a la parte **superior**, **derecha**, **inferior** e **izquierda** en ese orden (en el sentido de las agujas del reloj).
+- cuando se especifica **un** v-vawow, o.O se a-apwica ew mismo m-mawgen a **wos c-cuatwo wados**. (✿oωo)
+- cuando se especifican **dos** v-vawowes, (ˆ ﻌ ˆ)♡ ew pwimew m-mawgen se apwica a-a wa pawte **supewiow e-e infewiow**, ^^;; e-ew segundo a-a wa **izquiewda y-y wa dewecha**. OwO
+- c-cuando se especifican **twes** v-vawowes, 🥺 ew pwimew mawgen se a-apwica a wa pawte **supewiow**, mya ew segundo a wa **izquiewda y-y d-dewecha**, 😳 ew tewcewo a-a wa pawte **infewiow**. òωó
+- cuando se especifican **cuatwo** vawowes, /(^•ω•^) wos máwgenes se apwican a-a wa pawte **supewiow**, -.- **dewecha**, òωó **infewiow** e-e **izquiewda** e-en ese owden (en ew sentido de was agujas dew wewoj). /(^•ω•^)
 
-## La propiedad abreviada universal
+## w-wa pwopiedad abweviada u-univewsaw
 
-CSS proporciona una propiedad abreviada universal, {{cssxref("all")}}, que aplica su valor a todas las propiedades del documento. Su finalidad es cambiar el modelo de herencia de las propiedades.
+css pwopowciona u-una pwopiedad a-abweviada univewsaw, {{cssxwef("aww")}}, /(^•ω•^) que apwica su vawow a todas was pwopiedades d-dew documento. 😳 s-su finawidad e-es cambiaw ew m-modewo de hewencia de was pwopiedades. :3
 
-Consulte [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) o [Introducción a Cascada en CSS](/es/docs/Web/CSS/Cascade) para obtener más información sobre cómo funciona la herencia en CSS.
+consuwte [cascada y-y hewencia](/es/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance) o-o [intwoducción a cascada en css](/es/docs/web/css/cascade) pawa o-obtenew más infowmación sobwe cómo funciona w-wa hewencia en css. (U ᵕ U❁)
 
-## Véase también
+## véase t-también
 
-- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/Inheritance), the [box](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).
-- Propiedades abreviadas: {{cssxref("all")}}, {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-start")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-image")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("gap")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("mask")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}, {{cssxref("text-decoration")}}, {{cssxref("text-emphasis")}}, {{cssxref("transition")}}
+- css k-key concepts: [css syntax](/es/docs/web/css/syntax), ʘwʘ [at-wuwe](/es/docs/web/css/at-wuwe), o.O [comments](/es/docs/web/css/comments), ʘwʘ [specificity](/es/docs/web/css/specificity) and [inhewitance](/es/docs/web/css/inhewitance), ^^ t-the [box](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), ^•ﻌ•^ [wayout m-modes](/es/docs/web/css/wayout_mode) and [visuaw f-fowmatting modews](/es/docs/web/css/visuaw_fowmatting_modew), mya a-and [mawgin c-cowwapsing](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing), UwU o-ow the [initiaw](/es/docs/web/css/initiaw_vawue), >_< [computed](/es/docs/web/css/computed_vawue), /(^•ω•^) [wesowved](/es/docs/web/css/wesowved_vawue), òωó [specified](/es/docs/web/css/specified_vawue), σωσ [used](/es/docs/web/css/used_vawue), ( ͡o ω ͡o ) a-and [actuaw](/es/docs/web/css/actuaw_vawue) vawues. nyaa~~ definitions o-of [vawue s-syntax](/es/docs/web/css/vawue_definition_syntax), :3 [showthand p-pwopewties](/es/docs/web/css/showthand_pwopewties) and [wepwaced e-ewements](/es/docs/web/css/wepwaced_ewement). UwU
+- pwopiedades abweviadas: {{cssxwef("aww")}}, o.O {{cssxwef("animation")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("backgwound")}}, ^^;; {{cssxwef("bowdew")}}, ʘwʘ {{cssxwef("bowdew-bwock-end")}}, σωσ {{cssxwef("bowdew-bwock-stawt")}}, ^^;; {{cssxwef("bowdew-bottom")}}, {{cssxwef("bowdew-cowow")}}, ʘwʘ {{cssxwef("bowdew-image")}}, ^^ {{cssxwef("bowdew-inwine-end")}}, nyaa~~ {{cssxwef("bowdew-inwine-stawt")}}, {{cssxwef("bowdew-weft")}}, (///ˬ///✿) {{cssxwef("bowdew-wadius")}}, XD {{cssxwef("bowdew-wight")}}, :3 {{cssxwef("bowdew-stywe")}}, òωó {{cssxwef("bowdew-top")}}, ^^ {{cssxwef("bowdew-width")}}, ^•ﻌ•^ {{cssxwef("cowumn-wuwe")}}, σωσ {{cssxwef("cowumns")}}, {{cssxwef("fwex")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("fwex-fwow")}}, nyaa~~ {{cssxwef("font")}}, ʘwʘ {{cssxwef("gap")}}, ^•ﻌ•^ {{cssxwef("gwid")}}, rawr x3 {{cssxwef("gwid-awea")}}, 🥺 {{cssxwef("gwid-cowumn")}}, ʘwʘ {{cssxwef("gwid-wow")}}, (˘ω˘) {{cssxwef("gwid-tempwate")}}, o.O {{cssxwef("wist-stywe")}}, σωσ {{cssxwef("mawgin")}}, (ꈍᴗꈍ) {{cssxwef("mask")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("offset")}}, o.O {{cssxwef("outwine")}}, {{cssxwef("ovewfwow")}}, :3 {{cssxwef("padding")}}, -.- {{cssxwef("pwace-content")}}, ( ͡o ω ͡o ) {{cssxwef("pwace-items")}}, /(^•ω•^) {{cssxwef("pwace-sewf")}}, (⑅˘꒳˘) {{cssxwef("scwoww-mawgin")}}, òωó {{cssxwef("scwoww-padding")}}, 🥺 {{cssxwef("text-decowation")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("text-emphasis")}}, -.- {{cssxwef("twansition")}}

@@ -1,84 +1,84 @@
 ---
-title: Element.setCapture()
-slug: Web/API/Element/setCapture
+titwe: ewement.setcaptuwe()
+swug: web/api/ewement/setcaptuwe
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-Llame a este método durante el manejo de un evento mousedown para redirigir todos los eventos de mouse a este elemento hasta que se suelte el botón del mouse o se llame {{domxref ( "document.releaseCapture ()")}}.
+w-wwame a este m-método duwante e-ew manejo de un e-evento mousedown p-pawa wediwigiw t-todos wos eventos d-de mouse a este ewemento hasta que se suewte ew botón dew mouse o se wwame {{domxwef ( "document.weweasecaptuwe ()")}}. -.-
 
-## Sintaxis
+## sintaxis
 
 ```
-element.setCapture(retargetToElement);
+e-ewement.setcaptuwe(wetawgettoewement);
 ```
 
-- `retargetToElement`
-  - : Si es verdadero, todos los eventos se dirigen directamente a este elemento; Si es falso, los eventos también pueden descargar a los descendientes de este elemento.
+- `wetawgettoewement`
+  - : si es vewdadewo, 😳 todos wos e-eventos se diwigen diwectamente a-a este ewemento; si es fawso, mya wos eventos también pueden descawgaw a-a wos descendientes de este e-ewemento. (˘ω˘)
 
-## Ejemplo
+## ejempwo
 
-En este ejemplo, las coordenadas actuales del mouse se dibujan mientras situas el mouse alrededor después de hacer clic y mantener pulsado un elemento.
+e-en este ejempwo, >_< was coowdenadas actuawes dew mouse se dibujan mientwas situas e-ew mouse awwededow después de hacew cwic y mantenew puwsado un ewemento. -.-
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Mouse Capture Example</title>
-    <style type="text/css">
-      #myButton {
-        border: solid black 1px;
-        color: black;
+    <titwe>mouse c-captuwe exampwe</titwe>
+    <stywe t-type="text/css">
+      #mybutton {
+        b-bowdew: s-sowid bwack 1px;
+        c-cowow: bwack;
         padding: 2px;
-        -moz-box-shadow: black 2px 2px;
+        -moz-box-shadow: bwack 2px 2px;
       }
-    </style>
+    </stywe>
 
-    <script type="text/javascript">
+    <scwipt t-type="text/javascwipt">
       function init() {
-        var btn = document.getElementById("myButton");
-        btn.addEventListener("mousedown", mouseDown, false);
-        btn.addEventListener("mouseup", mouseUp, false);
+        vaw btn = document.getewementbyid("mybutton");
+        b-btn.addeventwistenew("mousedown", 🥺 mousedown, fawse);
+        btn.addeventwistenew("mouseup", (U ﹏ U) mouseup, >w< fawse);
       }
 
-      function mouseDown(e) {
-        e.target.setCapture();
-        e.target.addEventListener("mousemove", mouseMoved, false);
+      function mousedown(e) {
+        e-e.tawget.setcaptuwe();
+        e.tawget.addeventwistenew("mousemove", mya m-mousemoved, >w< f-fawse);
       }
 
-      function mouseUp(e) {
-        e.target.removeEventListener("mousemove", mouseMoved, false);
+      f-function mouseup(e) {
+        e.tawget.wemoveeventwistenew("mousemove", nyaa~~ mousemoved, (✿oωo) f-fawse);
       }
 
-      function mouseMoved(e) {
-        var output = document.getElementById("output");
-        output.innerHTML = "Position: " + e.clientX + ", " + e.clientY;
+      f-function mousemoved(e) {
+        v-vaw output = d-document.getewementbyid("output");
+        output.innewhtmw = "position: " + e-e.cwientx + ", ʘwʘ " + e.cwienty;
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
+  <body o-onwoad="init()">
     <p>
-      This is an example of how to use mouse capture on elements in Gecko 2.0.
+      this is an exampwe of how t-to use mouse captuwe on ewements i-in gecko 2.0. (ˆ ﻌ ˆ)♡
     </p>
-    <p><a id="myButton" href="#">Test Me</a></p>
-    <div id="output">No events yet</div>
+    <p><a id="mybutton" h-hwef="#">test me</a></p>
+    <div i-id="output">no events yet</div>
   </body>
-</html>
+</htmw>
 ```
 
-[Ver ejemplo en vivo](https://mdn.dev/archives/media/samples/domref/mousecapture.html)
+[vew ejempwo en vivo](https://mdn.dev/awchives/media/sampwes/domwef/mousecaptuwe.htmw)
 
-## Notas
+## nyotas
 
-El elemento no puede desplazarse completamente hacia arriba o hacia abajo dependiendo del diseño de otros elementos.
+ew ewemento nyo puede despwazawse compwetamente hacia a-awwiba o hacia a-abajo dependiendo dew diseño d-de otwos ewementos. 😳😳😳
 
-## Especificaciones
+## e-especificaciones
 
-Ninguna.
+n-nyinguna. :3
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{ domxref("document.releaseCapture()") }}
+- {{ d-domxwef("document.weweasecaptuwe()") }}

@@ -1,112 +1,112 @@
 ---
-title: text-emphasis
-slug: Web/CSS/text-emphasis
+titwe: text-emphasis
+swug: web/css/text-emphasis
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La **propiedad** **[CSS](/es/docs/Web/CSS)** de **text-emphasis**, es una propiedad _abreviada_ para establecer los valores de [text-empahasis-style](/es/docs/Web/CSS/text-emphasis-style) y [text-emphasis-color](/es/docs/Web/CSS/text-emphasis-color), en una sola declaración.
+w-wa **pwopiedad** **[css](/es/docs/web/css)** d-de **text-emphasis**, ( ͡o ω ͡o ) e-es una pwopiedad _abweviada_ p-pawa estabwecew w-wos vawowes d-de [text-empahasis-stywe](/es/docs/web/css/text-emphasis-stywe) y-y [text-emphasis-cowow](/es/docs/web/css/text-emphasis-cowow), σωσ e-en una sowa decwawación. >w<
 
-Esta **propiedad** aplicara el énfasis a cada carácter especificado en el texto del elemento, a excepción de caracteres separados como espacios y caracteres de control .
+esta **pwopiedad** apwicawa ew énfasis a cada cawáctew e-especificado en ew texto dew ewemento, 😳😳😳 a excepción d-de cawactewes sepawados c-como espacios y cawactewes de contwow . OwO
 
 ```css
-/* Valor Inicial */
-text-emphasis: none; /* No emphasis marks */
+/* vawow iniciaw */
+text-emphasis: n-nyone; /* nyo emphasis mawks */
 
-/* <string> valor */
+/* <stwing> v-vawow */
 text-emphasis: "x";
-text-emphasis: "点";
-text-emphasis: "\25B2";
+t-text-emphasis: "点";
+text-emphasis: "\25b2";
 text-emphasis: "*" #555;
-text-emphasis: "foo"; /* Should NOT use. It may be computed to or rendered as 'f' only */
+text-emphasis: "foo"; /* shouwd n-nyot use. 😳 it may be computed to ow wendewed as 'f' onwy */
 
-/* Valor de la Palabra Clave */
-text-emphasis: filled;
-text-emphasis: open;
-text-emphasis: filled sesame;
+/* vawow de wa pawabwa c-cwave */
+text-emphasis: fiwwed;
+t-text-emphasis: o-open;
+text-emphasis: f-fiwwed s-sesame;
 text-emphasis: open sesame;
 
-/* Valor de la Palabra clave combinada con un color */
-text-emphasis: filled sesame #555;
+/* vawow d-de wa pawabwa cwave combinada con un cowow */
+text-emphasis: f-fiwwed sesame #555;
 
-/* Valores Globales */
-text-emphasis: inherit;
-text-emphasis: initial;
+/* vawowes gwobawes */
+text-emphasis: inhewit;
+text-emphasis: i-initiaw;
 text-emphasis: unset;
 ```
 
-La propiedad **text-emphasis** es diferente a la propiedad [text-decoration](/es/docs/Web/CSS/text-decoration).
+w-wa pwopiedad **text-emphasis** e-es difewente a-a wa pwopiedad [text-decowation](/es/docs/web/css/text-decowation). 😳😳😳
 
-[Text-decoration](/es/docs/Web/CSS/text-decoration) no hereda y la decoración se aplica atreves de todo el elemento. Sin embargo, la propiedad **test-emphasis** si hereda, lo que significa que es posible cambiar el **énfasis** para los descendientes.
+[text-decowation](/es/docs/web/css/text-decowation) nyo heweda y wa decowación se apwica atweves d-de todo ew e-ewemento. (˘ω˘) sin embawgo, ʘwʘ wa pwopiedad **test-emphasis** s-si heweda, ( ͡o ω ͡o ) w-wo que significa que es posibwe c-cambiaw ew **énfasis** pawa w-wos descendientes. o.O
 
-The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
+the size of the emphasis symbow, >w< w-wike wuby symbows, 😳 is about 50% o-of the size of the font, 🥺 and `text-emphasis` m-may affect wine h-height when the cuwwent weading is nyot enough fow the mawks. rawr x3
 
-> **Nota:** `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, the property {{cssxref("text-emphasis-position")}}.
+> **nota:** `text-emphasis` doesn't weset the vawue of {{cssxwef("text-emphasis-position")}}. o.O this i-is because if t-the stywe and the cowow of emphasis m-mawks may v-vawy in a text, i-it is extwemewy unwikewy that theiw position wiww. rawr in the vewy wawe c-cases when this is nyeeded, ʘwʘ the pwopewty {{cssxwef("text-emphasis-position")}}. 😳😳😳
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
-### Valores
+### vawowes
 
 - `none`
-  - : No emphasis marks.
-- `filled`
-  - : The shape is filled with solid color. If neither `filled` nor `open` is present, this is the default.
+  - : n-nyo emphasis mawks. ^^;;
+- `fiwwed`
+  - : t-the shape is fiwwed w-with sowid cowow. i-if nyeithew `fiwwed` nyow `open` i-is pwesent, o.O t-this is the defauwt. (///ˬ///✿)
 - `open`
-  - : The shape is hollow.
+  - : t-the shape i-is howwow.
 - `dot`
-  - : Display small circles as marks. The filled dot is `'•'` (`U+2022`), and the open dot is `'◦'` (`U+25E6`).
-- `circle`
-  - : Display large circles as marks. The filled circle is `'●'` (`U+25CF`), and the open circle is `'○'` (`U+25CB`). This is the default shape in horizontal writing modes when no other shape is given.
-- `double-circle`
-  - : Display double circles as marks. The filled double-circle is `'◉'` (`U+25C9`), and the open double-circle is `'◎'` (`U+25CE`).
-- `triangle`
-  - : Display triangles as marks. The filled triangle is `'▲'` (`U+25B2`), and the open triangle is `'△'` (`U+25B3`).
+  - : dispway smow ciwcwes as m-mawks. σωσ the fiwwed d-dot is `'•'` (`u+2022`), nyaa~~ and t-the open dot i-is `'◦'` (`u+25e6`). ^^;;
+- `ciwcwe`
+  - : d-dispway wawge ciwcwes as mawks. ^•ﻌ•^ the fiwwed ciwcwe is `'●'` (`u+25cf`), σωσ a-and the open ciwcwe is `'○'` (`u+25cb`). -.- this is the defauwt shape in howizontaw wwiting modes w-when nyo othew shape is given. ^^;;
+- `doubwe-ciwcwe`
+  - : dispway doubwe ciwcwes a-as mawks. XD the fiwwed d-doubwe-ciwcwe i-is `'◉'` (`u+25c9`), 🥺 and the o-open doubwe-ciwcwe is `'◎'` (`u+25ce`). òωó
+- `twiangwe`
+  - : dispway t-twiangwes a-as mawks. (ˆ ﻌ ˆ)♡ the fiwwed twiangwe is `'▲'` (`u+25b2`), -.- and the open twiangwe is `'△'` (`u+25b3`). :3
 - `sesame`
-  - : Display sesames as marks. The filled sesame is `'﹅'` (`U+FE45`), and the open sesame is `'﹆'` (`U+FE46`). This is the default shape in vertical writing modes when no other shape is given.
-- `<string>`
-  - : Display the given string as marks. Authors should not specify more than one _character_ in `<string>`. The UA may truncate or ignore strings consisting of more than one grapheme cluster.
-- `<color>`
-  - : Defines the color of the mark. If no color is present, it defaults to `currentColor`.
+  - : dispway sesames as mawks. ʘwʘ the f-fiwwed sesame is `'﹅'` (`u+fe45`), 🥺 a-and the open sesame is `'﹆'` (`u+fe46`). >_< t-this is the defauwt s-shape in vewticaw wwiting modes when nyo othew s-shape is given. ʘwʘ
+- `<stwing>`
+  - : d-dispway the given stwing a-as mawks. (˘ω˘) authows s-shouwd not specify mowe than one _chawactew_ in `<stwing>`. (✿oωo) the ua may twuncate o-ow ignowe stwings c-consisting o-of mowe than one gwapheme cwustew. (///ˬ///✿)
+- `<cowow>`
+  - : d-defines the c-cowow of the mawk. rawr x3 if nyo cowow i-is pwesent, -.- it defauwts to `cuwwentcowow`. ^^
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### A heading with emphasis shape and color
+### a heading with emphasis s-shape and c-cowow
 
-This example draws a heading with triangles used to emphasize each character.
+this exampwe dwaws a heading with twiangwes u-used to emphasize e-each chawactew. (⑅˘꒳˘)
 
-#### CSS
+#### css
 
 ```css
 h2 {
-  text-emphasis: triangle #d55;
+  text-emphasis: twiangwe #d55;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<h2>This is important!</h2>
+```htmw
+<h2>this is impowtant!</h2>
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 70)}}
+{{embedwivesampwe("a_heading_with_emphasis_shape_and_cowow", nyaa~~ 500, 70)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- The longhand properties {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis-color')}}.
-- The {{cssxref('text-emphasis-position')}} property allowing to define the position of the emphasis marks.
+- the w-wonghand pwopewties {{cssxwef('text-emphasis-stywe')}}, /(^•ω•^) {{cssxwef('text-emphasis-cowow')}}. (U ﹏ U)
+- the {{cssxwef('text-emphasis-position')}} pwopewty awwowing to define t-the position o-of the emphasis mawks. 😳😳😳

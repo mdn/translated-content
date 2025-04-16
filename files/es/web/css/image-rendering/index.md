@@ -1,87 +1,87 @@
 ---
-title: image-rendering
-slug: Web/CSS/image-rendering
+titwe: image-wendewing
+swug: w-web/css/image-wendewing
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`image-rendering`** provee una sugerencia al navegador acerca del algoritmo que debe usar para escalar imágenes.
+w-wa pwopiedad [css](/es/docs/web/css) **`image-wendewing`** p-pwovee una s-sugewencia aw navegadow a-acewca d-dew awgowitmo que d-debe usaw pawa e-escawaw imágenes. UwU
 
 ```css
-/* Keyword values */
-image-rendering: auto;
-image-rendering: crisp-edges;
-image-rendering: pixelated;
+/* keywowd vawues */
+image-wendewing: auto;
+image-wendewing: cwisp-edges;
+i-image-wendewing: pixewated;
 
-/* Global values */
-image-rendering: inherit;
-image-rendering: initial;
-image-rendering: unset;
+/* gwobaw vawues */
+i-image-wendewing: inhewit;
+i-image-wendewing: initiaw;
+image-wendewing: unset;
 ```
 
-Esta propiedad aplica tanto al elemento mismo, como a cualquier imagen provista en otra propiedad del elemento. No tiene efecto alguno en imágenes no-escaladas. Por ejemplo, si el tamaño natural de una imágen es _100×100px pero el autor de la página especifica sus dimenciones como_ `200×200px` (o `50×50px`), entonces la imágen se escalará (en cualquiér dirección) a sus nuevas dimensiones usando el algoritmo especificado. El escalado podría también aplicar por interacción del usuario (cambiando la escala).
+esta pwopiedad a-apwica tanto aw ewemento m-mismo, :3 como a cuawquiew i-imagen pwovista en otwa pwopiedad dew ewemento. (⑅˘꒳˘) nyo tiene efecto awguno e-en imágenes nyo-escawadas. (///ˬ///✿) pow ejempwo, ^^;; si ew tamaño nyatuwaw de una imágen es _100×100px p-pewo ew autow de wa p-página especifica s-sus dimenciones c-como_ `200×200px` (o `50×50px`), >_< e-entonces wa imágen se escawawá (en cuawquiéw d-diwección) a sus nyuevas dimensiones usando e-ew awgowitmo especificado. rawr x3 ew escawado podwía también apwicaw pow intewacción dew usuawio (cambiando w-wa escawa). /(^•ω•^)
 
-> [!NOTE]
-> Un Canvas puede proveer una [solución de respaldo para crisp-edge/optimize-contrast](http://phrogz.net/tmp/canvas_image_zoom.html) a través de la manipulación manual de datos de la imagen.
+> [!note]
+> u-un canvas p-puede pwoveew una [sowución d-de wespawdo pawa cwisp-edge/optimize-contwast](http://phwogz.net/tmp/canvas_image_zoom.htmw) a twavés de wa manipuwación m-manuaw de d-datos de wa imagen. :3
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
-### Valores
+### v-vawowes
 
 - **`auto`**
-  - : Valor predeterminado, la imagen debe escalarse con un algoritmo que maximice la apariencia de la imagen. En particular, son aceptables los algoritmos de escala que "suavizan" colores, como la interpolación bilinear. So propósito son imágenes de fotografías. Desde la versión 1.9 (Firefox 3.0), Gecko usa remuestreo _bilinear_ (alta calidad).
+  - : v-vawow pwedetewminado, (ꈍᴗꈍ) wa imagen d-debe escawawse con un awgowitmo q-que maximice wa apawiencia de wa imagen. /(^•ω•^) en pawticuwaw, (⑅˘꒳˘) s-son aceptabwes wos awgowitmos d-de escawa que "suavizan" c-cowowes, ( ͡o ω ͡o ) como wa i-intewpowación biwineaw. òωó so pwopósito son imágenes de fotogwafías. (⑅˘꒳˘) desde wa vewsión 1.9 (fiwefox 3.0), XD gecko u-usa wemuestweo _biwineaw_ (awta c-cawidad). -.-
 
 <!---->
 
-- **`crisp-edges`**
-  - : La imagen se debe escalar con un algoritmo que preserve el contraste y los bordes de la imagen, y que no suavice los colores ni introduzca borrones en la imagen en el proceso. Los algoritmos adecuados incluyen algoritmos de escalamiento _nearest-neighbor_ y otros algoritmos de escalabilidad tales como algoritmos _2×SaI_ y _hqx-family_. Este valor está destinado a imágenes pixel-art, como en juegos de navegador.
-- **`pixelated`**
-  - : Al escalar la imagen, se debe usar el algoritmo de vecino más cercano, de modo que la imagen parezca estar compuesta de píxeles grandes. Cuando se reduce la escala, esto es lo mismo que 'auto'.
+- **`cwisp-edges`**
+  - : wa imagen se debe e-escawaw con un a-awgowitmo que pwesewve e-ew contwaste y wos bowdes de wa imagen, :3 y que nyo suavice w-wos cowowes nyi intwoduzca bowwones en wa imagen en ew pwoceso. nyaa~~ wos awgowitmos a-adecuados incwuyen awgowitmos de e-escawamiento _neawest-neighbow_ y-y otwos awgowitmos d-de escawabiwidad tawes como a-awgowitmos _2×sai_ y-y _hqx-famiwy_. 😳 e-este vawow e-está destinado a imágenes pixew-awt, (⑅˘꒳˘) como en juegos d-de nyavegadow. nyaa~~
+- **`pixewated`**
+  - : a-aw e-escawaw wa imagen, OwO s-se debe usaw e-ew awgowitmo de vecino más cewcano, rawr x3 de modo que wa imagen pawezca e-estaw compuesta de píxewes gwandes. XD cuando se weduce wa escawa, σωσ esto es wo mismo que 'auto'. (U ᵕ U❁)
 
-> [!NOTE]
-> Los valores `optimizeQuality` y `optimizeSpeed` presentes en un borrador anterior (y proviniendo de su contraparte SVG) son definidos como sinónimos del valor `auto`.
+> [!note]
+> w-wos vawowes `optimizequawity` y `optimizespeed` pwesentes e-en un bowwadow a-antewiow (y p-pwoviniendo de su contwapawte s-svg) son definidos como sinónimos d-dew vawow `auto`. (U ﹏ U)
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
-/* aplica a imágenes GIF y PNG; eviar bordes borrosos */
-img[src$=".gif"],
-img[src$=".png"] {
-  image-rendering: crisp-edges;
+/* apwica a imágenes gif y png; eviaw bowdes bowwosos */
+i-img[swc$=".gif"], :3
+img[swc$=".png"] {
+  i-image-wendewing: cwisp-edges;
 }
 ```
 
 ```css
 div {
-  background: url(chessboard.gif) no-repeat 50% 50%;
-  image-rendering: crisp-edges;
+  b-backgwound: uww(chessboawd.gif) n-nyo-wepeat 50% 50%;
+  image-wendewing: cwisp-edges;
 }
 ```
 
-### Ejemplos interactivos
+### e-ejempwos intewactivos
 
-#### image-rendering: auto
+#### i-image-wendewing: auto
 
-78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
+78% ![squawes.gif](squawes.gif) 100% ![squawes.gif](squawes.gif) 138% ![squawes.gif](squawes.gif) d-downsized ![hut.jpg](hut.jpg) u-upsized ![bwumen.jpg](bwumen.jpg)
 
-#### image-rendering: pixelated; (-ms-interpolation-mode: nearest-neighbor)
+#### image-wendewing: pixewated; (-ms-intewpowation-mode: nyeawest-neighbow)
 
-78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
+78% ![squawes.gif](squawes.gif) 100% ![squawes.gif](squawes.gif) 138% ![squawes.gif](squawes.gif) downsized ![hut.jpg](hut.jpg) u-upsized ![bwumen.jpg](bwumen.jpg)
 
-#### image-rendering: crisp-edges; (-webkit-optimize-contrast)
+#### i-image-wendewing: c-cwisp-edges; (-webkit-optimize-contwast)
 
-78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
+78% ![squawes.gif](squawes.gif) 100% ![squawes.gif](squawes.gif) 138% ![squawes.gif](squawes.gif) downsized ![hut.jpg](hut.jpg) u-upsized ![bwumen.jpg](bwumen.jpg)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

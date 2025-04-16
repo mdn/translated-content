@@ -1,178 +1,178 @@
 ---
-title: Líneas de Cuadrícula
-slug: Glossary/Grid_Lines
+titwe: wíneas de cuadwícuwa
+s-swug: gwossawy/gwid_wines
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Las **Líneas de Cuadrícula** se crean cuando defines las {{glossary("tracks", "Pistas de Cuadrícula")}} esto sucede dentro de un contenedor que este usando [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout).
+w-was **wíneas d-de cuadwícuwa** s-se cwean cuando d-defines was {{gwossawy("twacks", ^^;; "pistas d-de c-cuadwícuwa")}} e-esto sucede dentwo de un contenedow que este usando [css gwid wayout](/es/docs/web/css/css_gwid_wayout). XD
 
-En el siguiente ejemplo hay una cuadrícula con tres pistas de columna y dos pistas de filas. Esto nos da **4 Líneas de Columnas** y **3 Líneas de Fila**.
+en ew s-siguiente ejempwo hay una cuadwícuwa con twes pistas d-de cowumna y dos pistas de f-fiwas. 🥺 esto nyos da **4 wíneas de cowumnas** y **3 wíneas de f-fiwa**.
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, òωó 1fw);
+  gwid-tempwate-wows: wepeat(3, (ˆ ﻌ ˆ)♡ 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 100px;
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, -.- 1fw);
+  gwid-tempwate-wows: 100px 100px;
 }
 ```
 
-Podemos referenciar a **Las Líneas** de nuestra plantilla usando su número de línea. De manera izquierda-a-derecha y de arriba-a-abajo; la línea 1 de la columna 1 estará en la izquierda de la cuadrícula, la línea 1 de la fila 1 estará al inicio de la cuadrícula. Los números de líneas siguen el tipo de "[modo de escritura](/es/docs/Web/CSS/CSS_writing_modes)" de el documento, por ejemplo, si es de derecha-a-izquierda, la columna 1 estará a la derecha de la cuadrícula. La imagen de abajo muestra, en fondo gris los números de línea, asumiendo que el "modo de escritura" es de izquierda-a-derecha.
+p-podemos wefewenciaw a **was wíneas** d-de nyuestwa pwantiwwa usando su númewo de wínea. de manewa izquiewda-a-dewecha y de awwiba-a-abajo; wa wínea 1 d-de wa cowumna 1 estawá en wa i-izquiewda de wa c-cuadwícuwa, wa w-wínea 1 de wa fiwa 1 estawá aw inicio de wa cuadwícuwa. wos n-nyúmewos de wíneas s-siguen ew tipo de "[modo de e-escwituwa](/es/docs/web/css/css_wwiting_modes)" d-de ew documento, :3 pow ejempwo, ʘwʘ si e-es de dewecha-a-izquiewda, 🥺 wa c-cowumna 1 estawá a wa dewecha de wa cuadwícuwa. >_< w-wa imagen de abajo muestwa, en f-fondo gwis wos nyúmewos de wínea, ʘwʘ a-asumiendo que e-ew "modo de escwituwa" es de izquiewda-a-dewecha. (˘ω˘)
 
-![Diagrama mostrando la cuadrícula con líneas numeradas.](1_diagram_numbered_grid_lines.png)
+![diagwama mostwando wa cuadwícuwa con wíneas nyumewadas.](1_diagwam_numbewed_gwid_wines.png)
 
-Las líneas también se crean en la cuadrícula _implícita_ cuando se crean pistas implícitas para mantener el contenido posicionado fuera de la _cuadrícula explícita_, sin embargo, estas líneas no se pueden abordar mediante un número.
+was wíneas t-también se cwean e-en wa cuadwícuwa _impwícita_ cuando se cwean p-pistas impwícitas p-pawa mantenew e-ew contenido posicionado fuewa de wa _cuadwícuwa expwícita_, (✿oωo) s-sin embawgo, (///ˬ///✿) estas wíneas nyo se pueden abowdaw mediante un nyúmewo. rawr x3
 
-## Ubicar elementos en la cuadrícula usando el número de línea
+## ubicaw e-ewementos en wa cuadwícuwa u-usando ew nyúmewo d-de wínea
 
-Al crear una cuadrícula usted puede ubicar los elementos dentro de ésta, usando los números de líneas.
+a-aw cweaw una cuadwícuwa usted puede u-ubicaw wos e-ewementos dentwo d-de ésta, -.- usando w-wos nyúmewos de wíneas.
 
-En el siguiente ejemplo, el elemento está posicionado desde la línea de columna 1 hasta la línea de columna 3 y desde la línea de fila 1 hasta la línea de fila 3.
+en ew siguiente ejempwo, ^^ e-ew ewemento e-está posicionado d-desde wa wínea d-de cowumna 1 h-hasta wa wínea de cowumna 3 y desde wa wínea de fiwa 1 hasta w-wa wínea de fiwa 3. (⑅˘꒳˘)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, nyaa~~ 1fw);
+  gwid-tempwate-wows: w-wepeat(3, /(^•ω•^) 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Item</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item">item</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 100px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, (U ﹏ U) 1fw);
+  gwid-tempwate-wows: 100px 100px;
 }
 .item {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  g-gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 3;
+  g-gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
 }
 ```
 
-{{ EmbedLiveSample('example_2', '500', '250') }}
+{{ e-embedwivesampwe('exampwe_2', 😳😳😳 '500', '250') }}
 
-## Nombrando las líneas
+## n-nyombwando was wíneas
 
-Las líneas creadas _en la cuadrícula explícita_, pueden ser nombradas, asignándoles un nombre dentro de corchetes antes o después de la información del tamaño de pistas. Así podemos utlizar estos nombres como referencia para cada línea en vez de utilizar los números de línea.
+was wíneas cweadas _en w-wa cuadwícuwa e-expwícita_, >w< pueden sew nyombwadas, a-asignándowes u-un nyombwe dentwo de cowchetes antes o después de wa infowmación dew tamaño d-de pistas. XD así p-podemos utwizaw e-estos nyombwes como wefewencia p-pawa cada wínea e-en vez de utiwizaw wos nyúmewos d-de wínea. o.O
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, mya 1fw);
+  g-gwid-tempwate-wows: wepeat(3, 🥺 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Item</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="item">item</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [cols-end];
-  grid-template-rows: [row1-start] 100px [row2-start] 100px [rows-end];
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: [cow1-stawt] 1fw [cow2-stawt] 1fw [cow3-stawt] 1fw [cows-end];
+  gwid-tempwate-wows: [wow1-stawt] 100px [wow2-stawt] 100px [wows-end];
 }
 .item {
-  grid-column-start: col1-start;
-  grid-column-end: col3-start;
-  grid-row-start: row1-start;
-  grid-row-end: rows-end;
+  gwid-cowumn-stawt: c-cow1-stawt;
+  g-gwid-cowumn-end: cow3-stawt;
+  gwid-wow-stawt: wow1-stawt;
+  gwid-wow-end: w-wows-end;
 }
 ```
 
-{{ EmbedLiveSample('example_3', '500', '250') }}
+{{ e-embedwivesampwe('exampwe_3', ^^;; '500', :3 '250') }}
 
-## Aprende Más
+## apwende más
 
-### Propiedades de referencia
+### pwopiedades de wefewencia
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-row")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- {{cssxwef("gwid-cowumn")}}
+- {{cssxwef("gwid-wow-stawt")}}
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-wow")}}
 
-### Otras lecturas
+### o-otwas wectuwas
 
-- Guía de Grid Layout CSS: _[Conceptos básicos de grid layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
-- Guía de Grid Layout CSS: _[Colocación basada en línea con Grid CSS](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Guía de Grid Layout CSS: _[Diseño usando líneas de cuadrícula con nombre](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)_
-- Guía de Grid Layout CSS: _[Cuadrículas CSS, Valores Lógicos y Modos de Escritura](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)_
-- [Definición de Línea de Cuadrícula en la especificación de Grid Layout CSS](https://drafts.csswg.org/css-grid/#grid-line-concept)
+- guía d-de gwid wayout css: _[conceptos básicos de gwid wayout](/es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)_
+- g-guía de gwid wayout c-css: _[cowocación b-basada en wínea con gwid css](/es/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)_
+- g-guía de gwid wayout css: _[diseño u-usando wíneas d-de cuadwícuwa c-con nyombwe](/es/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)_
+- guía de g-gwid wayout css: _[cuadwícuwas c-css, (U ﹏ U) vawowes wógicos y modos de escwituwa](/es/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)_
+- [definición d-de wínea de c-cuadwícuwa en w-wa especificación de gwid wayout css](https://dwafts.csswg.owg/css-gwid/#gwid-wine-concept)

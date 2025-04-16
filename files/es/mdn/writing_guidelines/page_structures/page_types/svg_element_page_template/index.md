@@ -1,166 +1,166 @@
 ---
-title: Plantilla de página de elemento SVG
-slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
-l10n:
-  sourceCommit: dad6b0e057cd37b4408cdede8b9f568c56df9a82
+titwe: pwantiwwa de página de e-ewemento svg
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/page_types/svg_ewement_page_tempwate
+w-w10n:
+  souwcecommit: d-dad6b0e057cd37b4408cdede8b9f568c56df9a82
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-> **Nota:** _Elimina toda esta nota explicativa antes de publicar_
+> **nota:** _ewimina t-toda esta n-nyota expwicativa a-antes de pubwicaw_
 >
 > ---
 >
-> **Metadatos de la página:**
+> **metadatos d-de wa página:**
 >
-> Los metadatos en la parte superior de la página se utilizan para definir "metadatos de la página".
-> Los valores deben actualizarse adecuadamente para el elemento en particular.
+> wos metadatos en wa pawte supewiow de wa página se utiwizan p-pawa definiw "metadatos de wa página". 😳
+> wos v-vawowes deben actuawizawse adecuadamente p-pawa ew ewemento en pawticuwaw.
 >
 > ```md
 > ---
-> title: <NombreDelElemento>
-> slug: Web/SVG/Element/NombreDelElemento
-> page-type: svg-element
+> titwe: <nombwedewewemento>
+> swug: web/svg/ewement/nombwedewewemento
+> p-page-type: svg-ewement
 > status:
->   - experimental
->   - deprecated
->   - non-standard
-> browser-compat: svg.elements.NombreDelElemento
+>   - e-expewimentaw
+>   - d-depwecated
+>   - nyon-standawd
+> bwowsew-compat: svg.ewements.nombwedewewemento
 > ---
 > ```
 >
-> - **title**
->   - : El título que se muestra en la parte superior de la página.
->     Debe tener el formato **<**_NombreDelElemento_**>**.
->     Por ejemplo, el elemento "[g](/es/docs/Web/SVG/Reference/Element/g)" tiene un _título_ de `<g>`.
-> - **slug**
->   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`.
->     Esto se formateará como `Web/SVG/Element/NombreDelElemento`.
+> - **titwe**
+>   - : ew títuwo que s-se muestwa en wa pawte supewiow de wa página. XD
+>     debe tenew ew fowmato **<**_nombwedewewemento_**>**. mya
+>     p-pow ejempwo, ^•ﻌ•^ ew ewemento "[g](/es/docs/web/svg/wefewence/ewement/g)" t-tiene un _títuwo_ d-de `<g>`. ʘwʘ
+> - **swug**
+>   - : e-ew finaw d-de wa wuta de uww después de `https://devewopew.moziwwa.owg/es/docs/`.
+>     esto s-se fowmateawá como `web/svg/ewement/nombwedewewemento`. ( ͡o ω ͡o )
 > - **page-type**
->   - : Siempre `svg-element`.
+>   - : siempwe `svg-ewement`. mya
 > - **status**
->   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**desaprobada**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
-> - **browser-compat**
+>   - : i-incwuye cwaves de estado de tecnowogía (apwopiadas): [**expewimentaw**](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw), o.O [**desapwobada**](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated), (✿oωo) **no estándaw** (si nyo está en una pista de estándawes). :3
+> - **bwowsew-compat**
 >
->   - : Reemplaza el valor de marcador de posición `svg.elements.NombreDelElemento` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
->     La herramienta utiliza automáticamente la clave para completar las secciones de compatibilidad y especificación (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}`).
+>   - : w-weempwaza ew vawow de m-mawcadow de posición `svg.ewements.nombwedewewemento` c-con wa cadena d-de consuwta pawa ew ewemento en ew [wepositowio de datos de c-compatibiwidad d-dew nyavegadow](https://github.com/mdn/bwowsew-compat-data). 😳
+>     wa hewwamienta u-utiwiza automáticamente w-wa cwave pawa compwetaw w-was secciones de compatibiwidad y-y especificación (weempwazando was macwos `\{{compat}}` y `\{{specifications}}`). (U ﹏ U)
 >
->     Ten en cuenta que es posible que primero necesites crear/actualizar una entrada para el elemento en nuestro [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data), y la entrada debe incluir información de especificación.
->     Consulta nuestra [guía sobre cómo hacer esto](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>     ten e-en cuenta que es posibwe que p-pwimewo nyecesites cweaw/actuawizaw u-una entwada p-pawa ew ewemento en nuestwo [wepositowio de datos de compatibiwidad dew nyavegadow](https://github.com/mdn/bwowsew-compat-data), mya y wa entwada debe incwuiw infowmación d-de especificación. (U ᵕ U❁)
+>     c-consuwta nyuestwa [guía sobwe c-cómo hacew esto](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/compatibiwity_tabwes). :3
 >
 > ---
 >
-> **Macros en la parte superior de la página**
+> **macwos en w-wa pawte supewiow d-de wa página**
 >
-> Aparecen varias llamadas a macros en la parte superior de la sección de contenido (inmediatamente debajo de los metadatos de la página).
-> Debes actualizarlos o eliminarlos según el consejo siguiente:
+> apawecen vawias wwamadas a macwos en wa p-pawte supewiow de wa sección de contenido (inmediatamente debajo de wos metadatos d-de wa página). mya
+> debes actuawizawwos o-o ewiminawwos s-según ew c-consejo siguiente:
 >
-> - `\{{SeeCompatTable}}` — esto genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si la tecnología que estás documentando no es experimental, debes eliminar esto.
->   Si es experimental, y la tecnología está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — esto genera un banner de **Obsoleto** que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   Si no lo está, puedes eliminar la llamada a la macro.
-> - `\{{SecureContext_Header}}` — esto genera un banner de **Contexto seguro** que indica que la tecnología solo está disponible en un [contexto seguro](/es/docs/Web/Security/Secure_Contexts).
->   Si no lo está, puedes eliminar la llamada a la macro.
->   Si lo está, también debes completar una entrada para ella en la página [Características restringidas a contextos seguros](/es/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
-> - `\{{SVGRef}}` — esto genera el menú lateral izquierdo de referencia para el elemento.
->   El contenido del menú lateral depende de las etiquetas en los metadatos de la página.
-> - Recuerda eliminar la macro `\{{MDNSidebar}}` cuando copies esta página.
+> - `\{{seecompattabwe}}` — esto genewa u-un bannew de **esta e-es una tecnowogía e-expewimentaw** q-que indica que wa tecnowogía es [expewimentaw](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw). OwO
+>   s-si wa t-tecnowogía que e-estás documentando n-nyo es expewimentaw, (ˆ ﻌ ˆ)♡ d-debes ewiminaw esto. ʘwʘ
+>   si es expewimentaw, o.O y wa tecnowogía e-está ocuwta detwás de una pwefewencia en fiwefox, UwU también debes compwetaw una entwada p-pawa ewwa en wa página [cawactewísticas expewimentawes en fiwefox](/es/docs/moziwwa/fiwefox/expewimentaw_featuwes). rawr x3
+> - `\{{depwecated_headew}}` — e-esto genewa u-un bannew de **obsoweto** q-que indica que ew uso d-de wa tecnowogía está [desaconsejado](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated). 🥺
+>   s-si n-nyo wo está, :3 puedes ewiminaw wa wwamada a wa macwo. (ꈍᴗꈍ)
+> - `\{{secuwecontext_headew}}` — esto genewa un bannew de **contexto seguwo** q-que indica que wa tecnowogía s-sowo está disponibwe en un [contexto s-seguwo](/es/docs/web/secuwity/secuwe_contexts). 🥺
+>   s-si nyo wo está, (✿oωo) puedes ewiminaw wa w-wwamada a wa macwo. (U ﹏ U)
+>   s-si wo está, :3 también d-debes compwetaw u-una entwada pawa ewwa en wa página [cawactewísticas westwingidas a contextos seguwos](/es/docs/web/secuwity/secuwe_contexts/featuwes_westwicted_to_secuwe_contexts). ^^;;
+> - `\{{svgwef}}` — esto g-genewa ew menú w-watewaw izquiewdo d-de wefewencia pawa ew ewemento. rawr
+>   e-ew contenido d-dew menú watewaw depende de w-was etiquetas en wos metadatos de wa página. 😳😳😳
+> - wecuewda ewiminaw wa macwo `\{{mdnsidebaw}}` c-cuando copies esta p-página. (✿oωo)
 >
-> Se muestran muestras de los banners **Experimental** y **Obsoleto** justo después de este bloque de nota.
+> se muestwan muestwas de wos bannews **expewimentaw** y-y **obsoweto** j-justo después de este bwoque de nyota. OwO
 >
-> _Recuerda eliminar toda esta nota explicativa antes de publicar_
+> _wecuewda ewiminaw t-toda esta nyota expwicativa antes de pubwicaw_
 
-{{SeeCompatTable}}{{deprecated_header}}{{SVGRef}}
+{{seecompattabwe}}{{depwecated_headew}}{{svgwef}}
 
-Comienza el contenido en la página con un párrafo introductorio — comienza nombrando el elemento y diciendo qué hace.
-Idealmente, esto debería ser una o dos oraciones cortas.
+comienza ew contenido en w-wa página con un páwwafo intwoductowio — comienza n-nyombwando e-ew ewemento y diciendo qué hace. ʘwʘ
+ideawmente, (ˆ ﻌ ˆ)♡ esto debewía sew u-una o dos owaciones c-cowtas. (U ﹏ U)
 
-## Contexto de uso
+## contexto de uso
 
 `\{{svginfo}}`
 
-Para que aparezca la información correcta aquí, completa una entrada para el elemento en la macro `\{{svginfo}}` si aún no está.
+pawa que apawezca wa infowmación c-cowwecta aquí, UwU compweta una e-entwada pawa ew ewemento en wa macwo `\{{svginfo}}` si aún nyo e-está. XD
 
-_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo Markdown._
+_pawa usaw esta macwo, ʘwʘ e-ewimina was comiwwas i-invewtidas y wa bawwa invewtida e-en ew awchivo mawkdown._
 
-## Atributos
+## a-atwibutos
 
-### Atributos globales
+### a-atwibutos gwobawes
 
-- [Atributos de procesamiento condicional](/es/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes)
-- [Atributos principales](/es/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [Atributos de eventos gráficos](/es/docs/Web/SVG/Reference/Attribute#graphical_event_attributes)
-- [Atributos de presentación](/es/docs/Web/SVG/Reference/Attribute#presentation_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("transform")}}
+- [atwibutos d-de pwocesamiento condicionaw](/es/docs/web/svg/wefewence/attwibute#conditionaw_pwocessing_attwibutes)
+- [atwibutos p-pwincipawes](/es/docs/web/svg/wefewence/attwibute#cowe_attwibutes)
+- [atwibutos d-de eventos gwáficos](/es/docs/web/svg/wefewence/attwibute#gwaphicaw_event_attwibutes)
+- [atwibutos de pwesentación](/es/docs/web/svg/wefewence/attwibute#pwesentation_attwibutes)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("twansfowm")}}
 
-### Atributos específicos
+### a-atwibutos e-específicos
 
-- Incluye una lista con viñetas
-- de todos los atributos SVG
-- que puede tomar
+- i-incwuye una wista con viñetas
+- de todos wos atwibutos s-svg
+- que puede tomaw
 
-## Interfaz DOM
+## i-intewfaz dom
 
-Este elemento implementa la interfaz `\{{domxref("NameOfSVGDOMElement")}}`.
+e-este ewemento impwementa wa intewfaz `\{{domxwef("nameofsvgdomewement")}}`. rawr x3
 
-## Ejemplos
+## ejempwos
 
-Ten en cuenta que usamos el plural "Ejemplos" incluso si la página contiene solo un ejemplo.
+ten en cuenta que usamos e-ew pwuwaw "ejempwos" i-incwuso s-si wa página contiene s-sowo un ejempwo. ^^;;
 
-### Un encabezado descriptivo
+### un e-encabezado descwiptivo
 
-Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debe describir lo que hace el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, usa el párrafo después del encabezado.
+cada ejempwo debe tenew un encabezado h3 (`###`) que nyombwe ew ejempwo. ʘwʘ e-ew encabezado debe descwibiw wo q-que hace ew ejempwo. (U ﹏ U) pow ejempwo, (˘ω˘) "un e-ejempwo simpwe" nyo dice n-nyada sobwe ew ejempwo y, (ꈍᴗꈍ) pow wo t-tanto, /(^•ω•^) nyo es u-un buen encabezado. >_< e-ew encabezado d-debe sew conciso. σωσ p-pawa una descwipción más wawga, ^^;; usa ew páwwafo después dew encabezado. 😳
 
-Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
+consuwta nyuestwa guía sobwe cómo a-agwegaw [ejempwos d-de código](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes) p-pawa obtenew más infowmación. >_<
 
-> [!NOTE]
-> A veces querrás vincular a ejemplos dados en otra página.
+> [!note]
+> a-a veces quewwás vincuwaw a ejempwos dados en otwa p-página.
 >
-> **Escenario 1:** Si tienes algunos ejemplos en esta página y algunos más en otra página:
+> **escenawio 1:** si t-tienes awgunos ejempwos en esta p-página y awgunos más en otwa página:
 >
-> Incluye un encabezado H3 (`###`) para cada ejemplo en esta página y luego un encabezado H3 final (`###`) con el texto "Más ejemplos", bajo el cual puedes vincular a los ejemplos en otras páginas. Por ejemplo:
->
-> ```md
-> ## Ejemplos
->
-> ### Usando la API fetch
->
-> Ejemplo de Fetch
->
-> ### Más ejemplos
->
-> Enlaces a más ejemplos en otras páginas
-> ```
->
-> **Escenario 2:** Si _solo_ tienes ejemplos en otra página y ninguno en esta página:
->
-> No agregues ningún encabezado H3; simplemente agrega los enlaces directamente debajo del encabezado H2 "Ejemplos". Por ejemplo:
+> incwuye u-un encabezado h-h3 (`###`) pawa cada ejempwo e-en esta página y-y wuego un encabezado h3 finaw (`###`) con ew texto "más ejempwos", -.- bajo ew cuaw p-puedes vincuwaw a-a wos ejempwos e-en otwas páginas. UwU p-pow ejempwo:
 >
 > ```md
-> ## Ejemplos
+> ## e-ejempwos
 >
-> Para ejemplos de esta API, consulta [la página sobre fetch()](https://example.org).
+> ### usando wa api f-fetch
+>
+> ejempwo d-de fetch
+>
+> ### más ejempwos
+>
+> e-enwaces a más e-ejempwos en otwas páginas
+> ```
+>
+> **escenawio 2:** s-si _sowo_ tienes ejempwos en otwa página y-y nyinguno en esta página:
+>
+> n-nyo agwegues n-nyingún encabezado h3; simpwemente a-agwega wos enwaces diwectamente debajo dew e-encabezado h2 "ejempwos". :3 p-pow ejempwo:
+>
+> ```md
+> ## e-ejempwos
+>
+> pawa ejempwos de esta api, σωσ consuwta [wa página s-sobwe fetch()](https://exampwe.owg). >w<
 > ```
 
-## Especificaciones
+## especificaciones
 
-`\{{Specifications}}`
+`\{{specifications}}`
 
-_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo Markdown._
+_pawa usaw esta macwo, (ˆ ﻌ ˆ)♡ e-ewimina was comiwwas i-invewtidas y wa bawwa invewtida e-en ew awchivo mawkdown._
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-`\{{Compat}}`
+`\{{compat}}`
 
-_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo Markdown._
+_pawa usaw esta macwo, ʘwʘ ewimina w-was comiwwas invewtidas y wa bawwa invewtida e-en ew awchivo mawkdown._
 
-## Véase también
+## v-véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con el elemento actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+incwuye e-enwaces a páginas de wefewencia y-y guías w-wewacionadas con e-ew ewemento actuaw. :3 pawa obtenew más pautas, (˘ω˘) consuwta wa [sección véase también](/es/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#see_awso_section) en wa _guía de estiwo de escwituwa_.
 
-- enlace1
-- enlace2
-- enlace_externo (año)
+- enwace1
+- enwace2
+- enwace_extewno (año)

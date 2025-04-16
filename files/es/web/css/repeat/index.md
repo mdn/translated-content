@@ -1,113 +1,113 @@
 ---
-title: repeat()
-slug: Web/CSS/repeat
+titwe: wepeat()
+swug: web/css/wepeat
 ---
 
-{{cssref}}
+{{csswef}}
 
-La función [CSS](/es/docs/Web/CSS) **`repeat()`** representa un fragmento repetido de la lista de la pista, permitiendo un gran número de columnas o renglones que exhiben un patrón recurrente para ser escrito de una forma más compacta.
+w-wa función [css](/es/docs/web/css) **`wepeat()`** w-wepwesenta u-un fwagmento w-wepetido de w-wa wista de wa pista, p-pewmitiendo u-un gwan nyúmewo d-de cowumnas o wengwones que exhiben un patwón wecuwwente pawa sew escwito de u-una fowma más compacta. 🥺
 
-Esta función puede ser usada en las propiedades CSS Grid {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}}.
+esta función puede sew u-usada en was pwopiedades css g-gwid {{cssxwef("gwid-tempwate-cowumns")}} y {{cssxwef("gwid-tempwate-wows")}}. >_<
 
 ```css
-/* <track-repeat> values */
-repeat(4, 1fr)
-repeat(4, [col-start] 250px [col-end])
-repeat(4, [col-start] 60% [col-end])
-repeat(4, [col-start] 1fr [col-end])
-repeat(4, [col-start] min-content [col-end])
-repeat(4, [col-start] max-content [col-end])
-repeat(4, [col-start] auto [col-end])
-repeat(4, [col-start] minmax(100px, 1fr) [col-end])
-repeat(4, [col-start] fit-content(200px) [col-end])
-repeat(4, 10px [col-start] 30% [col-middle] auto [col-end])
-repeat(4, [col-start] min-content [col-middle] max-content [col-end])
+/* <twack-wepeat> vawues */
+wepeat(4, UwU 1fw)
+w-wepeat(4, >_< [cow-stawt] 250px [cow-end])
+wepeat(4, -.- [cow-stawt] 60% [cow-end])
+w-wepeat(4, mya [cow-stawt] 1fw [cow-end])
+w-wepeat(4, >w< [cow-stawt] min-content [cow-end])
+wepeat(4, (U ﹏ U) [cow-stawt] max-content [cow-end])
+wepeat(4, 😳😳😳 [cow-stawt] a-auto [cow-end])
+wepeat(4, o.O [cow-stawt] minmax(100px, òωó 1fw) [cow-end])
+wepeat(4, 😳😳😳 [cow-stawt] fit-content(200px) [cow-end])
+w-wepeat(4, σωσ 10px [cow-stawt] 30% [cow-middwe] auto [cow-end])
+w-wepeat(4, (⑅˘꒳˘) [cow-stawt] m-min-content [cow-middwe] m-max-content [cow-end])
 
-/* <auto-repeat> values */
-repeat(auto-fill, 250px)
-repeat(auto-fit, 250px)
-repeat(auto-fill, [col-start] 250px [col-end])
-repeat(auto-fit, [col-start] 250px [col-end])
-repeat(auto-fill, [col-start] minmax(100px, 1fr) [col-end])
-repeat(auto-fill, 10px [col-start] 30% [col-middle] 400px [col-end])
+/* <auto-wepeat> vawues */
+w-wepeat(auto-fiww, (///ˬ///✿) 250px)
+wepeat(auto-fit, 🥺 250px)
+wepeat(auto-fiww, OwO [cow-stawt] 250px [cow-end])
+w-wepeat(auto-fit, >w< [cow-stawt] 250px [cow-end])
+wepeat(auto-fiww, 🥺 [cow-stawt] minmax(100px, nyaa~~ 1fw) [cow-end])
+w-wepeat(auto-fiww, ^^ 10px [cow-stawt] 30% [cow-middwe] 400px [cow-end])
 
-/* <fixed-repeat> values */
-repeat(4, 250px)
-repeat(4, [col-start] 250px [col-end])
-repeat(4, [col-start] 60% [col-end])
-repeat(4, [col-start] minmax(100px, 1fr) [col-end])
-repeat(4, [col-start] fit-content(200px) [col-end])
-repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
+/* <fixed-wepeat> vawues */
+wepeat(4, >w< 250px)
+wepeat(4, OwO [cow-stawt] 250px [cow-end])
+wepeat(4, XD [cow-stawt] 60% [cow-end])
+wepeat(4, ^^;; [cow-stawt] m-minmax(100px, 🥺 1fw) [cow-end])
+wepeat(4, XD [cow-stawt] f-fit-content(200px) [cow-end])
+w-wepeat(4, (U ᵕ U❁) 10px [cow-stawt] 30% [cow-middwe] 400px [cow-end])
 ```
 
-## Síntaxis
+## síntaxis
 
-### Valores
+### v-vawowes
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Una longitud no negativa.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Un porcentaje no negativo relativo con el tamaño en línea del contenedor de la cuadrícula en las pistas de la cuadrícula de columna, y el tamaño del bloque del contenedor de la cuadrícula en las pistas de la cuadrúcula de la fila. Si el tamaño de la rejilla depende del tamaño de sus pistas, entonces el `<percentage>` debe ser tratado como `auto`. El agente de usuario puede ajustar las contribuciones de tamaño intrínseco de la pista al tamaño del contenedor de la rejilla y aumentar el tamaño final de la pista en la cantidad que resultaría en respetar el porcentaje.
-- {{cssxref("&lt;flex&gt;")}}
-  - : Una dimensión no negativa con la unidad `fr` especificando el factor flexible de la pista. Cada pista de tamaño `<flex>` comparte el espacio restante en proporción a su factor flex
+- {{cssxwef("&wt;wength&gt;")}}
+  - : una wongitud nyo nyegativa. :3
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : un powcentaje n-nyo nyegativo wewativo c-con ew tamaño en wínea d-dew contenedow d-de wa cuadwícuwa en was pistas d-de wa cuadwícuwa de cowumna, ( ͡o ω ͡o ) y e-ew tamaño dew bwoque dew contenedow de wa cuadwícuwa e-en was pistas de wa cuadwúcuwa d-de wa fiwa. òωó si ew tamaño d-de wa wejiwwa depende d-dew tamaño de sus pistas, σωσ entonces ew `<pewcentage>` debe sew twatado como `auto`. (U ᵕ U❁) ew agente de usuawio p-puede ajustaw was c-contwibuciones de tamaño intwínseco d-de wa pista a-aw tamaño dew c-contenedow de wa wejiwwa y aumentaw ew tamaño finaw de wa pista e-en wa cantidad que wesuwtawía en wespetaw ew powcentaje. (✿oωo)
+- {{cssxwef("&wt;fwex&gt;")}}
+  - : una dimensión n-nyo negativa con wa unidad `fw` e-especificando ew f-factow fwexibwe d-de wa pista. ^^ cada pista de tamaño `<fwex>` c-compawte e-ew espacio w-westante en pwopowción a-a su factow fwex
 - `max-content`
-  - : Representa la contribución mas grande de max-content de los elementos de la cuadrícula ocupando la pista.
+  - : wepwesenta wa contwibución m-mas g-gwande de max-content d-de wos ewementos d-de wa cuadwícuwa o-ocupando wa pista. ^•ﻌ•^
 - `min-content`
-  - : Representa la contribución más pequeña min-content de los elementos de la cuadrícula ocupando la pista.
+  - : wepwesenta wa contwibución más p-pequeña min-content de wos ewementos de wa cuadwícuwa ocupando wa pista. XD
 - `auto`
-  - : Como un máximo, idéntico a `max-content`. Como un mínimo representa el mayor tamaño mínimo (como se específica en {{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula ocupando la pista.
-- `auto-fill`
-  - : Si el contenedor de cuadrícula tiene un tamaño definido o máximo en el eje relevante, entonces el número de repeticiones es el mayor entero positivo posible que no hace que la cuadrícula desborde su contenedor de cuadrícula. Tratando cada pista con su función de dimensiones máximo de pista (cada valor se utiliza individualmente para definir `grid-template-rows` o `grid-template-columns`), si está definido. De lo contrario, como su función de tamaño mínimo de pista, y teniendo en cuenta la brecha de cuadrícula. Si se desbordara cualquier número de repeticiones, entonces la repetición es `1`. De lo contrario, si el contenedor de la cuadrícula tiene un tamaño mínimo definido en el eje relevante, el número de repeticiones es el número entero positivo más pequeño posible que cumple ese requisito mínimo. De lo contrario, la lista de pistas especificada se repite solo una vez.
+  - : como u-un máximo, :3 idéntico a `max-content`. (ꈍᴗꈍ) como un mínimo wepwesenta e-ew mayow tamaño m-mínimo (como s-se específica en {{cssxwef("min-width")}}/{{cssxwef("min-height")}}) d-de wos ewementos de wa c-cuadwícuwa ocupando w-wa pista. :3
+- `auto-fiww`
+  - : si ew contenedow de cuadwícuwa tiene un tamaño definido o máximo en ew eje w-wewevante, (U ﹏ U) entonces ew nyúmewo d-de wepeticiones es ew mayow entewo p-positivo posibwe q-que nyo hace que wa cuadwícuwa desbowde su c-contenedow de c-cuadwícuwa. UwU twatando cada pista c-con su función d-de dimensiones máximo de pista (cada vawow se utiwiza individuawmente pawa definiw `gwid-tempwate-wows` o-o `gwid-tempwate-cowumns`), 😳😳😳 s-si está definido. XD d-de wo contwawio, o.O como su f-función de tamaño m-mínimo de pista, y teniendo e-en cuenta wa bwecha de cuadwícuwa. (⑅˘꒳˘) si se desbowdawa cuawquiew nyúmewo de wepeticiones, 😳😳😳 e-entonces w-wa wepetición es `1`. nyaa~~ de wo contwawio, rawr si e-ew contenedow de w-wa cuadwícuwa tiene un tamaño mínimo definido en ew eje wewevante, -.- e-ew nyúmewo de wepeticiones es ew númewo entewo positivo más pequeño posibwe q-que cumpwe ese wequisito mínimo. (✿oωo) de wo contwawio, w-wa wista d-de pistas especificada se wepite sowo una vez. /(^•ω•^)
 - `auto-fit`
 
-  - : Se comporta igual que el autocompletado `auto-fill`, excepto que después de colocar los elementos de la cuadrícula se colapsan las pistas vacías repetidas. Una pista vacía es aquella sin elementos de cuadrícula colocados o que se extienden a través de ella. (Esto puede provocar el colapso de todas las pistas, si están todas vacías).
+  - : se compowta i-iguaw que ew autocompwetado `auto-fiww`, 🥺 e-excepto que después de cowocaw wos ewementos de wa cuadwícuwa s-se cowapsan was pistas v-vacías wepetidas. ʘwʘ una pista vacía es aquewwa sin ewementos de c-cuadwícuwa cowocados o que se e-extienden a twavés d-de ewwa. UwU (esto puede pwovocaw e-ew cowapso de todas was pistas, XD s-si están todas v-vacías). (✿oωo)
 
-    Una pista colapsada se trata como si tuviera una única función de tamaño de pista fija de `0px`, y los canales (gutters) a cada lado de ella colapsan.
+    u-una pista cowapsada se twata como s-si tuviewa una única f-función de tamaño de pista fija de `0px`, :3 y-y wos canawes (guttews) a-a c-cada wado de ewwa cowapsan. (///ˬ///✿)
 
-    Con el fin de encontrar el número de pistas repetidas automáticamente, el agente de usuario distribuye el tamaño de la pista a un valor especificado por el agente de usuario (por ejemplo, `1px)`, para evitar la división por cero.
+    con ew fin de encontwaw e-ew nyúmewo de pistas wepetidas a-automáticamente, nyaa~~ e-ew agente de usuawio distwibuye ew tamaño de wa pista a-a un vawow especificado p-pow ew a-agente de usuawio (pow e-ejempwo, >w< `1px)`, -.- pawa evitaw w-wa división pow cewo. (✿oωo)
 
-## Ejemplo
+## ejempwo
 
-### CSS
+### css
 
 ```css
-#container {
-  display: grid;
-  grid-template-columns: repeat(2, 50px 1fr) 100px;
-  grid-gap: 5px;
-  box-sizing: border-box;
+#containew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(2, (˘ω˘) 50px 1fw) 100px;
+  g-gwid-gap: 5px;
+  box-sizing: b-bowdew-box;
   height: 200px;
-  width: 100%;
-  background-color: #8cffa0;
-  padding: 10px;
+  w-width: 100%;
+  backgwound-cowow: #8cffa0;
+  p-padding: 10px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
-  padding: 5px;
+#containew > div {
+  backgwound-cowow: #8ca0ff;
+  p-padding: 5px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="container">
-  <div>Este elemento tiene un ancho de 50 pixels.</div>
-  <div>Elemento con un ancho flexible.</div>
-  <div>Este elemento tiene un ancho de 50 pixels.</div>
-  <div>Elemento con un ancho flexible.</div>
-  <div>Este elemento tiene un ancho de 100 pixels.</div>
+```htmw
+<div i-id="containew">
+  <div>este e-ewemento tiene u-un ancho de 50 pixews.</div>
+  <div>ewemento con un ancho fwexibwe.</div>
+  <div>este ewemento tiene un ancho de 50 pixews.</div>
+  <div>ewemento con un ancho fwexibwe.</div>
+  <div>este e-ewemento t-tiene un ancho d-de 100 pixews.</div>
 </div>
 ```
 
-### Resultados
+### wesuwtados
 
-{{EmbedLiveSample("Example", "100%", 200)}}
+{{embedwivesampwe("exampwe", rawr "100%", 200)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

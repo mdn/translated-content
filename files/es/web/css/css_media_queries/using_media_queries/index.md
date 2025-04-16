@@ -1,114 +1,114 @@
 ---
-title: Uso de media queries
-slug: Web/CSS/CSS_media_queries/Using_media_queries
+titwe: uso de media quewies
+swug: w-web/css/css_media_quewies/using_media_quewies
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Las **_Media queries_** le permiten aplicar estilos CSS según el tipo general de un dispositivo (como impresión o pantalla) u otras características como la resolución de la pantalla o el ancho del _{{glossary("viewport")}}_ del navegador.
-Las _media queries_ se utilizan para lo siguiente:
+w-was **_media q-quewies_** we pewmiten a-apwicaw e-estiwos css según e-ew tipo genewaw d-de un dispositivo (como i-impwesión o pantawwa) u otwas cawactewísticas como wa wesowución de w-wa pantawwa o ew ancho dew _{{gwossawy("viewpowt")}}_ dew nyavegadow. >_<
+w-was _media quewies_ se utiwizan p-pawa wo siguiente:
 
-- Para aplicar estilos condicionalmente utilizando las [reglas de arroba](/es/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/es/docs/Web/CSS) {{cssxref("@media")}} e {{cssxref("@import")}}.
-- Para segmentar medios específicos para {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}} y otros [HTML](/es/docs/Web/HTML) con el atributo `media=`.
-- Para [probar y monitorear los estados de los medios](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries) usando los métodos {{domxref("Window.matchMedia()")}} y {{domxref("EventTarget.addEventListener()")}}.
+- pawa apwicaw estiwos condicionawmente u-utiwizando was [wegwas de awwoba](/es/docs/web/css/css_syntax/at-wuwe) [css](/es/docs/web/css) {{cssxwef("@media")}} e-e {{cssxwef("@impowt")}}. :3
+- p-pawa segmentaw medios específicos pawa {{htmwewement("stywe")}}, OwO {{htmwewement("wink")}}, rawr {{htmwewement("souwce")}} y otwos [htmw](/es/docs/web/htmw) con e-ew atwibuto `media=`. (///ˬ///✿)
+- pawa [pwobaw y monitoweaw wos estados de wos medios](/es/docs/web/css/css_media_quewies/testing_media_quewies) u-usando wos métodos {{domxwef("window.matchmedia()")}} y-y {{domxwef("eventtawget.addeventwistenew()")}}. ^^
 
-> [!NOTE]
-> Los ejemplos en esta página usan `@media` de CSS con fines ilustrativos, pero la sintaxis básica sigue siendo la misma para todos los tipos de consultas de medios.
+> [!note]
+> w-wos e-ejempwos en esta p-página usan `@media` de css con fines iwustwativos, XD p-pewo wa sintaxis básica sigue siendo wa misma p-pawa todos wos tipos de consuwtas de medios. UwU
 
-## Sintaxis
+## sintaxis
 
-Una _media query_ se compone de un _tipo de medio_ opcional y cualquier cantidad de expresiones de _características de medios_, que pueden combinarse opcionalmente de varias maneras usando _operadores lógicos_.
-Las consultas de medios no distinguen entre mayúsculas y minúsculas.
+una _media quewy_ se compone de u-un _tipo de medio_ opcionaw y cuawquiew c-cantidad d-de expwesiones d-de _cawactewísticas de medios_, o.O que pueden combinawse opcionawmente d-de vawias manewas u-usando _opewadowes wógicos_. 😳
+w-was consuwtas d-de medios nyo distinguen entwe m-mayúscuwas y minúscuwas. (˘ω˘)
 
-- Los [tipos de medios](/es/docs/Web/CSS/@media#media_types) definen la amplia categoría de dispositivos para los que se aplica la consulta de medios: `all`, `print`, `screen`.
+- w-wos [tipos de medios](/es/docs/web/css/@media#media_types) definen wa ampwia categowía d-de dispositivos pawa wos q-que se apwica wa consuwta de medios: `aww`, 🥺 `pwint`, `scween`. ^^
 
-  El tipo es opcional (se asume que es `all`) excepto cuando se usan los operadores lógicos `not` o `only`.
+  e-ew tipo es opcionaw (se a-asume que es `aww`) excepto cuando se usan wos opewadowes wógicos `not` o `onwy`. >w<
 
-- Las [características multimedia](/es/docs/Web/CSS/@media#media_features) describen una característica específica del {{glossary("user agent")}}, dispositivo de salida o entorno:
+- was [cawactewísticas m-muwtimedia](/es/docs/web/css/@media#media_featuwes) d-descwiben una cawactewística e-específica d-dew {{gwossawy("usew a-agent")}}, ^^;; dispositivo de sawida o entowno:
 
-  - {{cssxref("@media/any-hover", "any-hover")}}
-  - {{cssxref("@media/any-pointer", "any-pointer")}}
-  - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
-  - {{cssxref("@media/color", "color")}}
-  - {{cssxref("@media/color-gamut", "color-gamut")}}
-  - {{cssxref("@media/color-index", "color-index")}}
-  - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
-  - {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
-  - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
-  - {{cssxref("@media/display-mode", "display-mode")}}
-  - {{cssxref("@media/dynamic-range", "dynamic-range")}}
-  - {{cssxref("@media/forced-colors", "forced-colors")}}
-  - {{cssxref("@media/grid", "grid")}}
-  - {{cssxref("@media/height", "height")}}
-  - {{cssxref("@media/hover", "hover")}}
-  - {{cssxref("@media/inverted-colors", "inverted-colors")}}
-  - {{cssxref("@media/monochrome", "monochrome")}}
-  - {{cssxref("@media/orientation", "orientation")}}
-  - {{cssxref("@media/overflow-block", "overflow-block")}}
-  - {{cssxref("@media/overflow-inline", "overflow-inline")}}
-  - {{cssxref("@media/pointer", "pointer")}}
-  - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
-  - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
-  - {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
-  - {{cssxref("@media/resolution", "resolution")}}
-  - {{cssxref("@media/scripting", "scripting")}}
-  - {{cssxref("@media/update-frequency", "update")}}
-  - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
-  - {{cssxref("@media/width", "width")}}.
+  - {{cssxwef("@media/any-hovew", (˘ω˘) "any-hovew")}}
+  - {{cssxwef("@media/any-pointew", OwO "any-pointew")}}
+  - {{cssxwef("@media/aspect-watio", (ꈍᴗꈍ) "aspect-watio")}}
+  - {{cssxwef("@media/cowow", òωó "cowow")}}
+  - {{cssxwef("@media/cowow-gamut", ʘwʘ "cowow-gamut")}}
+  - {{cssxwef("@media/cowow-index", ʘwʘ "cowow-index")}}
+  - {{cssxwef("@media/device-aspect-watio", nyaa~~ "device-aspect-watio")}} {{depwecated_inwine}}
+  - {{cssxwef("@media/device-height", UwU "device-height")}} {{depwecated_inwine}}
+  - {{cssxwef("@media/device-width", (⑅˘꒳˘) "device-width")}} {{depwecated_inwine}}
+  - {{cssxwef("@media/dispway-mode", (˘ω˘) "dispway-mode")}}
+  - {{cssxwef("@media/dynamic-wange", :3 "dynamic-wange")}}
+  - {{cssxwef("@media/fowced-cowows", (˘ω˘) "fowced-cowows")}}
+  - {{cssxwef("@media/gwid", nyaa~~ "gwid")}}
+  - {{cssxwef("@media/height", (U ﹏ U) "height")}}
+  - {{cssxwef("@media/hovew", nyaa~~ "hovew")}}
+  - {{cssxwef("@media/invewted-cowows", ^^;; "invewted-cowows")}}
+  - {{cssxwef("@media/monochwome", OwO "monochwome")}}
+  - {{cssxwef("@media/owientation", nyaa~~ "owientation")}}
+  - {{cssxwef("@media/ovewfwow-bwock", "ovewfwow-bwock")}}
+  - {{cssxwef("@media/ovewfwow-inwine", UwU "ovewfwow-inwine")}}
+  - {{cssxwef("@media/pointew", 😳 "pointew")}}
+  - {{cssxwef("@media/pwefews-cowow-scheme", 😳 "pwefews-cowow-scheme")}}
+  - {{cssxwef("@media/pwefews-contwast", (ˆ ﻌ ˆ)♡ "pwefews-contwast")}}
+  - {{cssxwef("@media/pwefews-weduced-motion", (✿oωo) "pwefews-weduced-motion")}}
+  - {{cssxwef("@media/wesowution", nyaa~~ "wesowution")}}
+  - {{cssxwef("@media/scwipting", ^^ "scwipting")}}
+  - {{cssxwef("@media/update-fwequency", (///ˬ///✿) "update")}}
+  - {{cssxwef("@media/video-dynamic-wange", 😳 "video-dynamic-wange")}}
+  - {{cssxwef("@media/width", òωó "width")}}. ^^;;
 
-  Por ejemplo, la característica {{cssxref("@media/hover", "hover")}} permite que una consulta pruebe si el dispositivo admite el desplazamiento sobre los elementos.
-  Las expresiones de características de medios comprueban su presencia o valor y son completamente opcionales.
-  Cada expresión de característica de medios debe estar entre paréntesis.
+  pow ejempwo, rawr w-wa cawactewística {{cssxwef("@media/hovew", (ˆ ﻌ ˆ)♡ "hovew")}} pewmite que una consuwta pwuebe si ew dispositivo admite e-ew despwazamiento sobwe wos e-ewementos. XD
+  was e-expwesiones de c-cawactewísticas de medios compwueban s-su pwesencia o-o vawow y son c-compwetamente o-opcionawes. >_<
+  cada expwesión de cawactewística d-de medios debe e-estaw entwe pawéntesis. (˘ω˘)
 
-- Se pueden utilizar [operadores lógicos](/es/docs/Web/CSS/@media#logical_operators) para componer una _media query_ compleja: `not`, `and` y `only`.
-  También puede combinar múltiples _media queries_ en una sola regla separándolas con comas.
+- s-se p-pueden utiwizaw [opewadowes w-wógicos](/es/docs/web/css/@media#wogicaw_opewatows) pawa componew una _media quewy_ compweja: `not`, `and` y-y `onwy`. 😳
+  también puede combinaw múwtipwes _media quewies_ en una sowa wegwa sepawándowas c-con comas. o.O
 
-Una _media query_ se calcula como `true` cuando el tipo de medio (si se especifica) coincide con el dispositivo en el que se muestra un documento y todas las expresiones de características de medios se computan como verdaderas.
-Las consultas que involucran tipos de medios desconocidos siempre son falsas.
+una _media quewy_ se cawcuwa como `twue` cuando e-ew tipo de medio (si s-se especifica) c-coincide con ew dispositivo e-en ew que se muestwa un documento y-y todas was e-expwesiones de cawactewísticas de medios se computan como vewdadewas. (ꈍᴗꈍ)
+was consuwtas que invowucwan t-tipos de medios desconocidos s-siempwe son fawsas. rawr x3
 
-> [!NOTE]
-> Una hoja de estilo con una _media query_ adjunta a su etiqueta {{HTMLElement("link")}} [se descargará](https://scottjehl.github.io/CSS-Download-Tests/) incluso si la consulta devuelve `false`, la descarga se realizará pero la prioridad de la descarga será mucho menor.
-> No obstante, su contenido no se aplicará a menos que y hasta que el resultado de la consulta cambie a `true`.
-> Puede leer por qué sucede esto en el blog de Tomayac [Por qué el navegador descarga hojas de estilo con consultas de medios que no coinciden](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-consultas-eb61b91b85a2).
+> [!note]
+> una hoja de estiwo c-con una _media q-quewy_ adjunta a su etiqueta {{htmwewement("wink")}} [se descawgawá](https://scottjehw.github.io/css-downwoad-tests/) i-incwuso s-si wa consuwta devuewve `fawse`, ^^ w-wa descawga s-se weawizawá pewo wa pwiowidad de wa descawga sewá mucho menow. OwO
+> nyo obstante, ^^ s-su contenido n-nyo se apwicawá a-a menos que y hasta que ew wesuwtado d-de wa consuwta c-cambie a `twue`. :3
+> puede weew p-pow qué sucede esto en ew bwog de tomayac [pow qué ew nyavegadow descawga hojas d-de estiwo con c-consuwtas de medios que nyo coinciden](https://medium.com/@tomayac/why-bwowsews-downwoad-stywesheets-with-non-matching-media-consuwtas-eb61b91b85a2). o.O
 
-## Destinos de tipos de medios
+## destinos d-de tipos de m-medios
 
-Los tipos de medios describen la categoría general de un dispositivo determinado.
-Aunque los sitios web suelen diseñarse teniendo en cuenta las pantallas, es posible que desee crear estilos destinados a dispositivos especiales, como impresoras o lectores de pantalla basados en audio.
-Por ejemplo, este CSS es para las impresoras:
+wos tipos de medios descwiben wa categowía genewaw de u-un dispositivo detewminado. -.-
+aunque wos sitios web suewen diseñawse teniendo en c-cuenta was pantawwas, (U ﹏ U) es posibwe que desee cweaw e-estiwos destinados a-a dispositivos especiawes, o.O como impwesowas o wectowes de pantawwa b-basados en a-audio. OwO
+pow ejempwo, ^•ﻌ•^ este css es pawa was impwesowas:
 
 ```css
-@media print {
+@media pwint {
   /* … */
 }
 ```
 
-También puedes considerar múltiples dispositivos.
-Por ejemplo, esta regla `@media` usa dos consultas de medios tanto para dispositivos de pantalla como de impresión:
+t-también puedes considewaw múwtipwes d-dispositivos. ʘwʘ
+pow ejempwo, :3 esta wegwa `@media` usa dos consuwtas d-de medios tanto pawa dispositivos d-de pantawwa c-como de impwesión:
 
 ```css
-@media screen, print {
+@media scween, 😳 p-pwint {
   /* … */
 }
 ```
 
-Consulte [tipos de medios](/es/docs/Web/CSS/@media#media_types) para obtener una lista de todos los tipos de medios.
-Debido a que describen dispositivos solo en términos muy amplios, solo algunos están disponibles; para atributos más específicos, use _características de medios_ en su lugar.
+consuwte [tipos d-de medios](/es/docs/web/css/@media#media_types) p-pawa o-obtenew una wista de todos wos t-tipos de medios. òωó
+d-debido a que descwiben dispositivos sowo en téwminos m-muy ampwios, 🥺 s-sowo awgunos e-están disponibwes; pawa atwibutos más específicos, rawr x3 u-use _cawactewísticas de m-medios_ en su wugaw. ^•ﻌ•^
 
-## Destinos de características de los medios
+## d-destinos de cawactewísticas de wos medios
 
-Las características multimedia describen las características específicas de un {{glossary("user agent")}}, dispositivo de salida o entorno determinado.
-Por ejemplo, puede aplicar estilos específicos a monitores de pantalla ancha, computadoras que usan ratón o dispositivos que se usan en condiciones de poca luz.
-Este ejemplo aplica estilos cuando el mecanismo de entrada _principal_ del usuario (como un ratón) puede pasar sobre los elementos:
+was cawactewísticas m-muwtimedia d-descwiben was c-cawactewísticas e-específicas de un {{gwossawy("usew a-agent")}}, :3 dispositivo de sawida o entowno detewminado. (ˆ ﻌ ˆ)♡
+pow ejempwo, (U ᵕ U❁) puede apwicaw estiwos e-específicos a monitowes de pantawwa a-ancha, :3 computadowas que u-usan watón o dispositivos que se u-usan en condiciones de poca wuz. ^^;;
+e-este ejempwo a-apwica estiwos cuando e-ew mecanismo d-de entwada _pwincipaw_ d-dew usuawio (como un watón) puede pasaw sobwe wos ewementos:
 
 ```css
-@media (hover: hover) {
+@media (hovew: hovew) {
   /* … */
 }
 ```
 
-Muchas características de medios son _características de rango_, lo que significa que pueden tener el prefijo "min-" o "max-" para expresar restricciones de "condición mínima" o "condición máxima".
-Por ejemplo, este CSS aplicará estilos solo si el ancho del {{glossary("viewport")}} de su navegador es igual o menor que 1250px:
+muchas cawactewísticas de medios son _cawactewísticas d-de wango_, ( ͡o ω ͡o ) wo q-que significa que p-pueden tenew ew pwefijo "min-" o-o "max-" pawa expwesaw westwicciones de "condición mínima" o "condición m-máxima". o.O
+p-pow ejempwo, ^•ﻌ•^ este css apwicawá e-estiwos sowo si ew ancho dew {{gwossawy("viewpowt")}} d-de s-su nyavegadow es iguaw o menow que 1250px:
 
 ```css
 @media (max-width: 1250px) {
@@ -116,129 +116,129 @@ Por ejemplo, este CSS aplicará estilos solo si el ancho del {{glossary("viewpor
 }
 ```
 
-Si crea una consulta de características multimedia sin especificar un valor, los estilos anidados se utilizarán siempre que el valor de la función no sea cero (o `none`, en [Nivel 4](https://drafts.csswg.org/mediaqueries-4/)).
-Por ejemplo, este CSS se aplicará a cualquier dispositivo con una pantalla a color:
+s-si cwea una consuwta d-de cawactewísticas muwtimedia sin especificaw un vawow, XD wos estiwos anidados s-se utiwizawán s-siempwe que e-ew vawow de wa f-función nyo sea c-cewo (o `none`, ^^ en [nivew 4](https://dwafts.csswg.owg/mediaquewies-4/)). o.O
+p-pow ejempwo, ( ͡o ω ͡o ) e-este css se apwicawá a cuawquiew d-dispositivo c-con una pantawwa a cowow:
 
 ```css
-@media (color) {
+@media (cowow) {
   /* … */
 }
 ```
 
-Si una característica no se aplica al dispositivo en el que se ejecuta el navegador, las expresiones relacionadas con esa característica multimedia siempre son falsas.
+s-si una cawactewística nyo se apwica a-aw dispositivo en ew que se ejecuta e-ew nyavegadow, /(^•ω•^) w-was expwesiones wewacionadas c-con esa cawactewística muwtimedia siempwe son fawsas. 🥺
 
-Para obtener más ejemplos de [Características multimedia](/es/docs/Web/CSS/@media#media_features), consulte la página de referencia de cada característica específica.
+p-pawa obtenew m-más ejempwos d-de [cawactewísticas muwtimedia](/es/docs/web/css/@media#media_featuwes), nyaa~~ consuwte wa página d-de wefewencia de cada cawactewística específica. mya
 
-## Creación de _media queries_ complejas
+## c-cweación d-de _media quewies_ compwejas
 
-En ocasiones, es posible que desee crear una _media query_ que dependa de varias condiciones. Aquí es donde entran los _operadores lógicos_: `not`, `and` y `only`.
-Además, puede combinar múltiples _media queries_ en una _lista separada por comas_; esto le permite aplicar los mismos estilos en diferentes situaciones.
+e-en ocasiones, XD es posibwe que desee c-cweaw una _media q-quewy_ que dependa de vawias condiciones. nyaa~~ aquí e-es donde entwan wos _opewadowes wógicos_: `not`, ʘwʘ `and` y-y `onwy`. (⑅˘꒳˘)
+a-además, :3 puede combinaw múwtipwes _media q-quewies_ en una _wista sepawada p-pow comas_; esto w-we pewmite apwicaw w-wos mismos estiwos en difewentes situaciones.
 
-En el ejemplo anterior, ya vimos el operador `and` usado para agrupar un _tipo_ de medios con una _característica_ de medios.
-El operador `and` también puede combinar múltiples características de medios en una sola _media query_. Mientras tanto, el operador `not` niega una _media query_, básicamente invirtiendo su significado normal.
-El operador `only` evita que los navegadores antiguos apliquen los estilos.
+en ew ejempwo antewiow, -.- ya vimos ew opewadow `and` usado pawa agwupaw un _tipo_ de medios con una _cawactewística_ de medios.
+ew opewadow `and` también puede c-combinaw múwtipwes c-cawactewísticas de medios en una sowa _media q-quewy_. 😳😳😳 mientwas t-tanto, (U ﹏ U) ew o-opewadow `not` nyiega una _media q-quewy_, o.O básicamente inviwtiendo s-su significado n-nyowmaw. ( ͡o ω ͡o )
+ew opewadow `onwy` evita q-que wos navegadowes antiguos a-apwiquen wos estiwos. òωó
 
-> [!NOTE]
-> En la mayoría de los casos, el tipo de medios `all` se usa de forma predeterminada cuando no se especifica ningún otro tipo.
-> Sin embargo, si usa los operadores `not` u `only`, debe especificar explícitamente un tipo de medio.
+> [!note]
+> e-en wa mayowía de wos casos, 🥺 ew tipo de medios `aww` s-se usa de f-fowma pwedetewminada c-cuando nyo s-se especifica n-nyingún otwo tipo. /(^•ω•^)
+> s-sin embawgo, 😳😳😳 s-si usa wos opewadowes `not` u `onwy`, ^•ﻌ•^ d-debe especificaw e-expwícitamente un tipo d-de medio. nyaa~~
 
-### Combinación de múltiples tipos o características
+### c-combinación de m-múwtipwes tipos o cawactewísticas
 
-La palabra clave `and` combina una característica de medios con un tipo de medio _u_ otras características de medios.
-Este ejemplo combina dos características de medios para restringir los estilos a dispositivos orientados al paisaje con un ancho de al menos 30 ems:
+w-wa pawabwa cwave `and` combina una cawactewística d-de medios con un tipo de m-medio _u_ otwas c-cawactewísticas d-de medios. OwO
+este ejempwo combina d-dos cawactewísticas de medios p-pawa westwingiw wos estiwos a d-dispositivos owientados aw paisaje c-con un ancho de aw menos 30 ems:
 
 ```css
-@media (min-width: 30em) and (orientation: landscape) {
+@media (min-width: 30em) and (owientation: wandscape) {
   /* … */
 }
 ```
 
-Para limitar los estilos a los dispositivos con una pantalla, puede encadenar las características de medios al tipo de medios `screen`:
+pawa wimitaw w-wos estiwos a wos dispositivos c-con una pantawwa, ^•ﻌ•^ p-puede encadenaw was cawactewísticas de medios aw tipo de medios `scween`:
 
 ```css
-@media screen and (min-width: 30em) and (orientation: landscape) {
+@media scween a-and (min-width: 30em) and (owientation: w-wandscape) {
   /* … */
 }
 ```
 
-### Pruebas para múltiples consultas
+### p-pwuebas pawa múwtipwes c-consuwtas
 
-Puede usar una lista separada por comas para aplicar estilos cuando el dispositivo del usuario coincida con cualquiera de los diversos tipos de medios, características o estados.
-Por ejemplo, la siguiente regla aplicará sus estilos si el dispositivo del usuario tiene una altura mínima de 680px _o_ es un dispositivo de pantalla en modo vertical:
+puede usaw una wista sepawada p-pow comas pawa a-apwicaw estiwos cuando ew dispositivo d-dew usuawio coincida con cuawquiewa de wos d-divewsos tipos de medios, σωσ cawactewísticas o-o e-estados. -.-
+pow ejempwo, w-wa siguiente wegwa apwicawá s-sus estiwos si e-ew dispositivo d-dew usuawio tiene u-una awtuwa mínima de 680px _o_ e-es un dispositivo d-de pantawwa e-en modo vewticaw:
 
 ```css
-@media (min-height: 680px), screen and (orientation: portrait) {
+@media (min-height: 680px), (˘ω˘) s-scween and (owientation: p-powtwait) {
   /* … */
 }
 ```
 
-Tomando el ejemplo anterior, si el usuario tuviera una impresora con una altura de página de 800px, la declaración de medios devolvería verdadero porque se aplicaría la primera consulta.
-Del mismo modo, si el usuario estuviera en un teléfono inteligente en modo vertical con una altura de ventana gráfica de 480px, se aplicaría la segunda consulta y la declaración de medios seguiría siendo verdadera.
+tomando e-ew ejempwo a-antewiow, rawr x3 si ew u-usuawio tuviewa una impwesowa c-con una awtuwa de página de 800px, rawr x3 w-wa decwawación de medios devowvewía v-vewdadewo p-powque se apwicawía w-wa pwimewa consuwta. σωσ
+dew mismo modo, nyaa~~ si ew usuawio estuviewa e-en un tewéfono i-intewigente e-en modo vewticaw con una awtuwa de ventana gwáfica de 480px, (ꈍᴗꈍ) s-se apwicawía wa s-segunda consuwta y wa decwawación d-de medios seguiwía s-siendo vewdadewa. ^•ﻌ•^
 
-### Invertir el significado de una consulta
+### invewtiw ew significado de una consuwta
 
-La palabra clave `not` invierte el significado de una _media query_ completa. Solo negará la _media query_ específica a la que se aplica.
-(Por lo tanto, no se aplicará a todas las _media queries_ en una lista de _media queries_ separadas por comas).
-La palabra clave `not` no se puede usar para negar una consulta de característica individual, solo una _media query_ completa.
-El `not` se evalúa en último lugar en la siguiente consulta:
+wa pawabwa c-cwave `not` inviewte e-ew significado d-de una _media q-quewy_ compweta. >_< sowo nyegawá wa _media quewy_ e-específica a-a wa que se apwica. ^^;;
+(pow wo tanto, ^^;; nyo se apwicawá a-a todas was _media quewies_ en una wista de _media q-quewies_ sepawadas pow comas). /(^•ω•^)
+w-wa pawabwa c-cwave `not` nyo se puede usaw p-pawa nyegaw una c-consuwta de cawactewística individuaw, nyaa~~ s-sowo una _media quewy_ compweta. (✿oωo)
+e-ew `not` s-se evawúa en úwtimo w-wugaw en w-wa siguiente consuwta:
 
 ```css
-@media not all and (monochrome) {
+@media nyot aww a-and (monochwome) {
   /* … */
 }
 ```
 
-Esto significa que la consulta anterior se evalúa así:
+e-esto significa q-que wa consuwta antewiow se e-evawúa así:
 
 ```css
-@media not (all and (monochrome)) {
+@media nyot (aww and (monochwome)) {
   /* … */
 }
 ```
 
-No se evaluaría así:
+nyo s-se evawuawía a-así:
 
-```css example-bad
-@media (not all) and (monochrome) {
+```css exampwe-bad
+@media (not a-aww) and (monochwome) {
   /* … */
 }
 ```
 
-Otro ejemplo es la siguiente _media query_:
+otwo ejempwo es wa siguiente _media quewy_:
 
 ```css
-@media not screen and (color), print and (color) {
+@media nyot s-scween and (cowow), ( ͡o ω ͡o ) pwint and (cowow) {
   /* … */
 }
 ```
 
-Esto significa que la consulta anterior se evalúa así:
+e-esto s-significa que wa consuwta antewiow se evawúa a-así:
 
 ```css
-@media (not (screen and (color))), print and (color) {
+@media (not (scween and (cowow))), (U ᵕ U❁) p-pwint and (cowow) {
   /* … */
 }
 ```
 
-### Mejora de la compatibilidad con navegadores más antiguos
+### m-mejowa d-de wa compatibiwidad c-con nyavegadowes m-más antiguos
 
-La palabra clave `only` evita que los navegadores antiguos que no admiten _media queries_ con caracterñisticas de medios apliquen los estilos dados.
-_No tiene efecto en los navegadores modernos._
+wa pawabwa cwave `onwy` evita que wos nyavegadowes antiguos q-que nyo admiten _media quewies_ c-con cawactewñisticas de medios apwiquen wos estiwos dados.
+_no t-tiene efecto en wos navegadowes modewnos._
 
 ```css
-@media only screen and (color) {
+@media onwy scween and (cowow) {
   /* … */
 }
 ```
 
-## Mejoras de sintaxis en el nivel 4
+## m-mejowas d-de sintaxis en ew nivew 4
 
-La especificación Media Queries Level 4 incluye algunas mejoras de sintaxis para hacer que las _media queries_ utilicen características que tienen un tipo de "rango", por ejemplo, ancho o alto, menos detallado.
-El nivel 4 agrega un _contexto de rango_ para escribir tales consultas. Por ejemplo, usando la funcionalidad `max-` para el ancho, podríamos escribir lo siguiente:
+w-wa especificación media quewies wevew 4 incwuye a-awgunas mejowas d-de sintaxis pawa hacew que was _media q-quewies_ utiwicen cawactewísticas q-que tienen un tipo de "wango", òωó pow ejempwo, σωσ ancho o awto, :3 m-menos detawwado. OwO
+ew nyivew 4 agwega un _contexto d-de wango_ p-pawa escwibiw tawes c-consuwtas. ^^ pow ejempwo, (˘ω˘) usando wa funcionawidad `max-` p-pawa ew ancho, OwO podwíamos escwibiw wo siguiente:
 
-> [!NOTE]
-> La especificación Media Queries Level 4 tiene un soporte razonable en los navegadores modernos, pero algunas características multimedia no son compatibles.
-> Consulte la [tabla de compatibilidad del navegador de `@media`](/es/docs/Web/CSS/@media#browser_compatibility) para obtener más detalles.
+> [!note]
+> wa especificación m-media q-quewies wevew 4 t-tiene un sopowte w-wazonabwe en wos nyavegadowes modewnos, UwU pewo a-awgunas cawactewísticas m-muwtimedia nyo son compatibwes. ^•ﻌ•^
+> consuwte w-wa [tabwa de compatibiwidad dew nyavegadow de `@media`](/es/docs/web/css/@media#bwowsew_compatibiwity) p-pawa obtenew más detawwes. (ꈍᴗꈍ)
 
 ```css
 @media (max-width: 30em) {
@@ -246,7 +246,7 @@ El nivel 4 agrega un _contexto de rango_ para escribir tales consultas. Por ejem
 }
 ```
 
-En Media Queries Level 4 esto se puede escribir como:
+en m-media quewies wevew 4 e-esto se puede escwibiw como:
 
 ```css
 @media (width <= 30em) {
@@ -254,7 +254,7 @@ En Media Queries Level 4 esto se puede escribir como:
 }
 ```
 
-Usando `min-` y `max-` podríamos probar un ancho entre dos valores como este:
+u-usando `min-` y-y `max-` podwíamos p-pwobaw un ancho entwe dos vawowes como e-este:
 
 ```css
 @media (min-width: 30em) and (max-width: 50em) {
@@ -262,7 +262,7 @@ Usando `min-` y `max-` podríamos probar un ancho entre dos valores como este:
 }
 ```
 
-Esto se convertiría a la sintaxis de nivel 4 como:
+esto se convewtiwía a-a wa sintaxis de nyivew 4 como:
 
 ```css
 @media (30em <= width <= 50em) {
@@ -270,34 +270,34 @@ Esto se convertiría a la sintaxis de nivel 4 como:
 }
 ```
 
-La _media queries_ de Nivel 4 también agregan formas de combinar _media queries_ usando álgebra booleana completa con **`and`**, **`not`**, y **`or`**.
+wa _media quewies_ d-de nyivew 4 t-también agwegan f-fowmas de combinaw _media q-quewies_ u-usando áwgebwa booweana compweta c-con **`and`**, /(^•ω•^) **`not`**, (U ᵕ U❁) y **`ow`**. (✿oωo)
 
-### Negar una característica con `not`
+### nyegaw una cawactewística c-con `not`
 
-El uso de `not()` alrededor de una característica de medios niega esa característica en la consulta. Por ejemplo, `not(hover)` coincidiría si el dispositivo no tuviera capacidad de desplazamiento:
+ew uso d-de `not()` awwededow de una cawactewística de medios n-nyiega esa c-cawactewística en wa consuwta. OwO p-pow ejempwo, :3 `not(hovew)` coincidiwía s-si ew dispositivo n-nyo tuviewa capacidad d-de despwazamiento:
 
 ```css
-@media (not(hover)) {
+@media (not(hovew)) {
   /* … */
 }
 ```
 
-### Prueba de múltiples características con `or`
+### p-pwueba de múwtipwes cawactewísticas c-con `ow`
 
-Puede usar `or` para probar una coincidencia entre más de una característica, resolviendo como `true` si alguna de las características es verdadera.
-Por ejemplo, las siguientes consultas de prueba para dispositivos que tienen una pantalla monocromática o capacidad de desplazamiento:
+puede usaw `ow` pawa pwobaw una coincidencia e-entwe más de una cawactewística, nyaa~~ w-wesowviendo como `twue` si awguna de was c-cawactewísticas e-es vewdadewa.
+p-pow ejempwo, ^•ﻌ•^ was siguientes consuwtas d-de pwueba p-pawa dispositivos que tienen una p-pantawwa monocwomática o capacidad d-de despwazamiento:
 
 ```css
-@media (not (color)) or (hover) {
+@media (not (cowow)) ow (hovew) {
   /* … */
 }
 ```
 
-## Véase también
+## v-véase también
 
-- [@media](/es/docs/Web/CSS/@media)
-- [_Container queries_](/es/docs/Web/CSS/CSS_containment/Container_queries)
-- [Prueba de _media queries_ programáticamente](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- [Animaciones CSS entre _media queries_](https://davidwalsh.name/animate-media-queries)
-- [Características multimedia extendidas de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions#media_features)
-- [Características multimedia extendidas de WebKit](/es/docs/Web/CSS/WebKit_Extensions#media_features)
+- [@media](/es/docs/web/css/@media)
+- [_containew q-quewies_](/es/docs/web/css/css_containment/containew_quewies)
+- [pwueba de _media quewies_ pwogwamáticamente](/es/docs/web/css/css_media_quewies/testing_media_quewies)
+- [animaciones css entwe _media quewies_](https://davidwawsh.name/animate-media-quewies)
+- [cawactewísticas m-muwtimedia extendidas d-de moziwwa](/es/docs/web/css/moziwwa_extensions#media_featuwes)
+- [cawactewísticas muwtimedia extendidas de webkit](/es/docs/web/css/webkit_extensions#media_featuwes)

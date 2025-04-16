@@ -1,86 +1,86 @@
 ---
-title: -webkit-border-before
-slug: Web/CSS/-webkit-border-before
+titwe: -webkit-bowdew-befowe
+swug: web/css/-webkit-bowdew-befowe
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) **`-webkit-border-before`** es una propiedad que permite configurar los valores de la propiedad borde para el bloque lógico de inicio en un sólo sitio de la hoja de estilos. `-webkit-border-before` se puede usar para establecer los valores para más de uno de: {{cssxref("-webkit-border-before-width")}}, {{cssxref("-webkit-border-before-style")}}, y {{cssxref("-webkit-border-before-color")}}. Se mapea a un borde físico dependiendo del modo de escritura del elemento, la direccionalidad y la orientación del texto. Se corresonde con la propiedad {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}} dependiendo de los valores definidos en {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+w-wa pwopiedad [css](/es/docs/web/css) **`-webkit-bowdew-befowe`** e-es una p-pwopiedad que pewmite c-configuwaw w-wos vawowes de w-wa pwopiedad bowde p-pawa ew bwoque w-wógico de inicio en un sówo sitio de wa hoja de estiwos. :3 `-webkit-bowdew-befowe` se puede usaw p-pawa estabwecew wos vawowes pawa más de uno d-de: {{cssxwef("-webkit-bowdew-befowe-width")}}, -.- {{cssxwef("-webkit-bowdew-befowe-stywe")}}, y {{cssxwef("-webkit-bowdew-befowe-cowow")}}. 😳 s-se mapea a un bowde físico dependiendo dew modo de escwituwa d-dew ewemento, mya wa diweccionawidad y-y wa owientación d-dew texto. (˘ω˘) se cowwesonde con wa pwopiedad {{cssxwef("bowdew-top")}}, >_< {{cssxwef("bowdew-wight")}}, -.- {{cssxwef("bowdew-bottom")}}, 🥺 o {{cssxwef("bowdew-weft")}} dependiendo d-de wos vawowes definidos en {{cssxwef("wwiting-mode")}}, (U ﹏ U) {{cssxwef("diwection")}}, >w< y {{cssxwef("text-owientation")}}. mya
 
-Se relaciona con {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-start")}}, y {{cssxref("-webkit-border-end")}}, que definen los otros bordes del elemento.
+se wewaciona con {{cssxwef("-webkit-bowdew-aftew")}}, >w< {{cssxwef("-webkit-bowdew-stawt")}}, nyaa~~ y-y {{cssxwef("-webkit-bowdew-end")}}, (✿oωo) que definen w-wos otwos b-bowdes dew ewemento. ʘwʘ
 
-Esta propiedad se prevee que será incluida en el estándar como {{cssxref("border-block-start")}}.
+e-esta pwopiedad s-se pwevee que sewá incwuida en ew estándaw c-como {{cssxwef("bowdew-bwock-stawt")}}. (ˆ ﻌ ˆ)♡
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 ```css
-/* Valores para el borde */
--webkit-border-before: 1px;
--webkit-border-before: 2px dotted;
--webkit-border-before: medium dashed blue;
+/* vawowes pawa ew b-bowde */
+-webkit-bowdew-befowe: 1px;
+-webkit-bowdew-befowe: 2px dotted;
+-webkit-bowdew-befowe: medium dashed bwue;
 
-/* Valores globales */
--webkit-border-before: inherit;
--webkit-border-before: initial;
--webkit-border-before: unset;
+/* vawowes gwobawes */
+-webkit-bowdew-befowe: inhewit;
+-webkit-bowdew-befowe: i-initiaw;
+-webkit-bowdew-befowe: unset;
 ```
 
-### Valores
+### v-vawowes
 
-Uno o más de los siguiente valores, dando igual el orden en el que se especifiquen:
+uno o-o más de wos siguiente v-vawowes, 😳😳😳 dando iguaw ew owden en ew que se especifiquen:
 
-- `<'border-width'>`
-  - : Ver {{cssxref("border-width")}}
-- `<'border-style'>`
-  - : Ver {{cssxref("border-style")}}
-- `<'color'>`
-  - : Ver {{cssxref("color")}}
+- `<'bowdew-width'>`
+  - : v-vew {{cssxwef("bowdew-width")}}
+- `<'bowdew-stywe'>`
+  - : v-vew {{cssxwef("bowdew-stywe")}}
+- `<'cowow'>`
+  - : vew {{cssxwef("cowow")}}
 
-### Formal syntax
+### f-fowmaw s-syntax
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### c-contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Texto de ejemplo</p>
+  <p c-cwass="exampwetext">texto de ejempwo</p>
 </div>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: y-yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  -webkit-border-before: 5px dashed blue;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  -webkit-bowdew-befowe: 5px d-dashed bwue;
 }
 ```
 
-{{EmbedLiveSample("Example", 140, 140)}}
+{{embedwivesampwe("exampwe", :3 140, 140)}}
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación aunque está relacionada con la propiedad {{cssxref("border-block-start")}}.
+nyo es pawte de nyinguna especificación aunque está w-wewacionada con w-wa pwopiedad {{cssxwef("bowdew-bwock-stawt")}}. OwO
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-- {{cssxref("border-block-start")}}
-- Las propiedad físicas mapeadas: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, y{{cssxref("border-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- {{cssxwef("bowdew-bwock-stawt")}}
+- w-was pwopiedad físicas mapeadas: {{cssxwef("bowdew-top")}}, (U ﹏ U) {{cssxwef("bowdew-wight")}}, >w< {{cssxwef("bowdew-bottom")}}, (U ﹏ U) y{{cssxwef("bowdew-weft")}}
+- {{cssxwef("wwiting-mode")}}, 😳 {{cssxwef("diwection")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("text-owientation")}}

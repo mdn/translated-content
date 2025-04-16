@@ -1,331 +1,331 @@
 ---
-title: Animaciones básicas
-slug: Web/API/Canvas_API/Tutorial/Basic_animations
+titwe: animaciones básicas
+swug: w-web/api/canvas_api/tutowiaw/basic_animations
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/compositing", (˘ω˘) "web/api/canvas_api/tutowiaw/advanced_animations")}}
 
-Ya que estamos usando JavaScript para controlar elementos {{HTMLElement("canvas")}} , también es muy fácil hacer animaciones (interactivas). En este capitulo veremos como hacer algunas animaciones básicas.
+y-ya que e-estamos usando j-javascwipt pawa c-contwowaw ewementos {{htmwewement("canvas")}} , òωó t-también es muy f-fáciw hacew animaciones (intewactivas). ( ͡o ω ͡o ) en este capituwo vewemos como hacew awgunas animaciones b-básicas. UwU
 
-Probablemente la mayor limitación es que una vez que se dibuja una forma, se mantiene de esa manera. Si necesitamos moverlo tenemos que volver a dibujarlo y todo lo que se dibujó antes. Se necesita mucho tiempo para volver a dibujar estructuras complejas y el rendimiento depende en gran medida de la velocidad de la computadora en la que se ejecuta.
+pwobabwemente wa mayow wimitación e-es que una vez que se dibuja una f-fowma, /(^•ω•^) se mantiene de esa manewa. (ꈍᴗꈍ) si nyecesitamos movewwo tenemos q-que vowvew a dibujawwo y todo w-wo que se dibujó a-antes. 😳 se nyecesita mucho tiempo pawa vowvew a dibujaw estwuctuwas compwejas y-y ew wendimiento depende en gwan medida de wa vewocidad de wa computadowa en wa q-que se ejecuta.
 
-## Pasos básicos de animación
+## pasos básicos d-de animación
 
-Estos son los pasos que necesitas para dibujar un cuadro:
+e-estos son wos p-pasos que nyecesitas p-pawa dibujaw un cuadwo:
 
-1. **Limpiar el canvas**
-   A menos que las formas que vas a dibujar llenen el canvas completo (por ejemplo, una imagen de fondo), debes borrar cualquier forma que haya dibujado previamente. La forma más fácil de hacerlo es usar el método {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}.
-2. **Guardar el estado del canvas**
-   Si estás cambiando alguna configuración (como estilos, transformaciones, etc.) que afecte el estado del canvas y deseas asegurarte de que se utiliza el estado original cada vez que se dibuja una figura, debes guardar ese estado original.
-3. **Dibujar formas animadas**
-   El paso en el que realizas el renderizado del cuadro actual.
-4. **Restaurar el estado del canvas**
-   Si has guardado el estado, restáuralo antes de dibujar un nuevo cuadro.
+1. mya **wimpiaw ew canvas**
+   a-a menos que was fowmas que vas a dibujaw w-wwenen ew canvas compweto (pow ejempwo, mya una imagen de fondo), /(^•ω•^) debes bowwaw cuawquiew fowma que h-haya dibujado pweviamente. ^^;; wa f-fowma más fáciw d-de hacewwo es u-usaw ew método {{domxwef("canvaswendewingcontext2d.cweawwect", 🥺 "cweawwect()")}}. ^^
+2. **guawdaw ew estado dew canvas**
+   si estás cambiando awguna c-configuwación (como e-estiwos, ^•ﻌ•^ twansfowmaciones, /(^•ω•^) e-etc.) que afecte e-ew estado dew canvas y deseas a-aseguwawte de que se utiwiza e-ew estado owiginaw cada vez que se dibuja una figuwa, ^^ d-debes guawdaw ese estado owiginaw. 🥺
+3. **dibujaw f-fowmas animadas**
+   ew paso e-en ew que weawizas e-ew wendewizado dew cuadwo actuaw.
+4. (U ᵕ U❁) **westauwaw ew estado dew canvas**
+   si has guawdado ew estado, 😳😳😳 westáuwawo a-antes de d-dibujaw un nyuevo cuadwo. nyaa~~
 
-## Controlando una animación
+## contwowando u-una animación
 
-Las formas se dibujan en el canvas utilizando los métodos de canvas directamente o llamando a funciones personalizadas. En circunstancias normales, solo vemos que estos resultados aparecen en el canvas cuando el script termina de ejecutarse. Por ejemplo, no es posible hacer una animación desde un bucle `for`.
+w-was fowmas s-se dibujan en ew canvas utiwizando wos métodos de canvas d-diwectamente o wwamando a funciones pewsonawizadas. (˘ω˘) en ciwcunstancias nyowmawes, >_< s-sowo vemos que estos wesuwtados a-apawecen en ew c-canvas cuando ew s-scwipt tewmina de ejecutawse. XD pow e-ejempwo, rawr x3 nyo e-es posibwe hacew u-una animación d-desde un bucwe `fow`. ( ͡o ω ͡o )
 
-Eso significa que necesitamos una forma de ejecutar nuestras funciones de dibujo durante un período de tiempo. Hay dos formas de controlar una animación como esta.
+eso significa que nyecesitamos u-una fowma d-de ejecutaw nyuestwas f-funciones d-de dibujo duwante u-un pewíodo de tiempo. :3 hay dos fowmas de contwowaw una animación c-como esta. mya
 
-### Actualizaciones Programadas
+### actuawizaciones pwogwamadas
 
-Primero {{domxref("window.setInterval()")}}, {{domxref("window.setTimeout()")}}, y {{domxref("window.requestAnimationFrame()")}} son funciones que pueden ser usadas para llamar una función especifica en un periodo de tiempo establecido.
+pwimewo {{domxwef("window.setintewvaw()")}}, σωσ {{domxwef("window.settimeout()")}}, (ꈍᴗꈍ) y {{domxwef("window.wequestanimationfwame()")}} son funciones q-que pueden sew usadas pawa wwamaw una función especifica en un p-pewiodo de tiempo e-estabwecido. OwO
 
-- {{domxref("WindowTimers.setInterval", "setInterval(function, delay)")}}
-  - : Ejecuta una función especificada por `function` cada `delay` milisegundos.
-- {{domxref("WindowTimers.setTimeout", "setTimeout(function, delay)")}}
-  - : Ejecuta una función especificada por `function` dentro de `delay` milisegundos.
-- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
-  - : Comunica al navegador que deseas iniciar una animación y requieres que el navegador llame a las funciones especificas para actualizar la misma antes de la siguiente escena.
+- {{domxwef("windowtimews.setintewvaw", o.O "setintewvaw(function, 😳😳😳 deway)")}}
+  - : e-ejecuta una función especificada p-pow `function` cada `deway` miwisegundos. /(^•ω•^)
+- {{domxwef("windowtimews.settimeout", OwO "settimeout(function, ^^ d-deway)")}}
+  - : e-ejecuta una función especificada pow `function` dentwo de `deway` miwisegundos. (///ˬ///✿)
+- {{domxwef("window.wequestanimationfwame()", (///ˬ///✿) "wequestanimationfwame(cawwback)")}}
+  - : comunica aw n-nyavegadow que deseas iniciaw una a-animación y wequiewes que ew n-nyavegadow wwame a-a was funciones especificas pawa actuawizaw wa m-misma antes de wa s-siguiente escena. (///ˬ///✿)
 
-Si no quieres ninguna interacción del usuario puedes usar la función `setInterval()` que repite la ejecución del código suministrado. Si lo que queremos es hacer un juego, podríamos usar eventos de teclado o el mouse para controlar la animación y usar `setTimeout()`. Al establecer los {{domxref("EventListener")}}, capturamos cualquier interacción del usuario y ejecutamos nuestras funciones de animación.
+si nyo quiewes n-nyinguna intewacción d-dew usuawio puedes usaw wa función `setintewvaw()` que wepite wa ejecución d-dew código s-suministwado. ʘwʘ s-si wo que quewemos es hacew un j-juego, ^•ﻌ•^ podwíamos u-usaw eventos de tecwado o ew mouse p-pawa contwowaw wa animación y usaw `settimeout()`. OwO aw estabwecew wos {{domxwef("eventwistenew")}}, (U ﹏ U) c-captuwamos c-cuawquiew intewacción dew usuawio y ejecutamos n-nyuestwas funciones d-de animación. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> En los siguiente ejemplo,usaremos el método para controlar animaciones {{domxref("window.requestAnimationFrame()")}}. El método `requestAnimationFrame` provee formas amigables y mas eficientes para animar llamando cada marco de animación cuando el sistema esta listo para dibujar. La cantidad de devoluciones de llamadas suele ser 60 veces por segundo y podría ser reducido a menor periodo cuando se corre en un segundo plano. Para mas información acerca de los ciclos de animación, especialmente para juegos, Ver el Articulo [Anatomía de un videojuego](/es/docs/Games/Anatomy) en nuestra [GameZona de desarrollo de Juegos](/es/docs/Games).
+> [!note]
+> en wos siguiente ejempwo,usawemos ew método p-pawa contwowaw animaciones {{domxwef("window.wequestanimationfwame()")}}. (⑅˘꒳˘) ew método `wequestanimationfwame` pwovee fowmas amigabwes y-y mas eficientes pawa animaw wwamando cada m-mawco de animación c-cuando ew sistema esta wisto pawa dibujaw. (U ﹏ U) wa cantidad de devowuciones d-de wwamadas s-suewe sew 60 veces pow segundo y podwía sew weducido a m-menow pewiodo cuando se cowwe en u-un segundo pwano. o.O pawa mas infowmación acewca de wos cicwos de a-animación, mya especiawmente pawa j-juegos, XD vew ew awticuwo [anatomía d-de un videojuego](/es/docs/games/anatomy) en n-nyuestwa [gamezona de desawwowwo d-de juegos](/es/docs/games). òωó
 
-## Un sistema solar animado
+## u-un sistema sowaw a-animado
 
-Este ejemplo animado es un pequeño modelo de nuestro sistema solar.
+este ejempwo animado e-es un pequeño modewo d-de nyuestwo sistema sowaw. (˘ω˘)
 
 ```js
-var sun = new Image();
-var moon = new Image();
-var earth = new Image();
+vaw sun = n-nyew image();
+v-vaw moon = nyew i-image();
+vaw eawth = nyew image();
 function init() {
-  sun.src = "canvas_sun.png";
-  moon.src = "canvas_moon.png";
-  earth.src = "canvas_earth.png";
-  window.requestAnimationFrame(draw);
+  s-sun.swc = "canvas_sun.png";
+  moon.swc = "canvas_moon.png";
+  e-eawth.swc = "canvas_eawth.png";
+  w-window.wequestanimationfwame(dwaw);
 }
 
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+function dwaw() {
+  vaw ctx = document.getewementbyid("canvas").getcontext("2d");
 
-  ctx.globalCompositeOperation = "destination-over";
-  ctx.clearRect(0, 0, 300, 300); // limpiar canvas
+  c-ctx.gwobawcompositeopewation = "destination-ovew";
+  c-ctx.cweawwect(0, :3 0, 300, OwO 300); // w-wimpiaw c-canvas
 
-  ctx.fillStyle = "rgba(0,0,0,0.4)";
-  ctx.strokeStyle = "rgba(0,153,255,0.4)";
-  ctx.save();
-  ctx.translate(150, 150);
+  ctx.fiwwstywe = "wgba(0,0,0,0.4)";
+  ctx.stwokestywe = "wgba(0,153,255,0.4)";
+  c-ctx.save();
+  ctx.twanswate(150, mya 150);
 
-  // La tierra
-  var time = new Date();
-  ctx.rotate(
-    ((2 * Math.PI) / 60) * time.getSeconds() +
-      ((2 * Math.PI) / 60000) * time.getMilliseconds(),
+  // wa tiewwa
+  vaw time = nyew date();
+  ctx.wotate(
+    ((2 * math.pi) / 60) * t-time.getseconds() +
+      ((2 * math.pi) / 60000) * t-time.getmiwwiseconds(),
   );
-  ctx.translate(105, 0);
-  ctx.fillRect(0, -12, 50, 24); // Sombra
-  ctx.drawImage(earth, -12, -12);
+  ctx.twanswate(105, (˘ω˘) 0);
+  c-ctx.fiwwwect(0, o.O -12, 50, 24); // sombwa
+  ctx.dwawimage(eawth, (✿oωo) -12, -12);
 
-  // La luna
+  // w-wa wuna
   ctx.save();
-  ctx.rotate(
-    ((2 * Math.PI) / 6) * time.getSeconds() +
-      ((2 * Math.PI) / 6000) * time.getMilliseconds(),
+  ctx.wotate(
+    ((2 * m-math.pi) / 6) * t-time.getseconds() +
+      ((2 * m-math.pi) / 6000) * t-time.getmiwwiseconds(), (ˆ ﻌ ˆ)♡
   );
-  ctx.translate(0, 28.5);
-  ctx.drawImage(moon, -3.5, -3.5);
-  ctx.restore();
+  c-ctx.twanswate(0, ^^;; 28.5);
+  ctx.dwawimage(moon, OwO -3.5, 🥺 -3.5);
+  ctx.westowe();
 
-  ctx.restore();
+  ctx.westowe();
 
-  ctx.beginPath();
-  ctx.arc(150, 150, 105, 0, Math.PI * 2, false); // Órbita terrestre
-  ctx.stroke();
+  ctx.beginpath();
+  ctx.awc(150, mya 150, 😳 105, 0, math.pi * 2, òωó fawse); // Ówbita tewwestwe
+  ctx.stwoke();
 
-  ctx.drawImage(sun, 0, 0, 300, 300);
+  c-ctx.dwawimage(sun, /(^•ω•^) 0, -.- 0, 300, 300);
 
-  window.requestAnimationFrame(draw);
+  w-window.wequestanimationfwame(dwaw);
 }
 
-init();
+i-init();
 ```
 
-```html hidden
-<canvas id="canvas" width="300" height="300"></canvas>
+```htmw hidden
+<canvas id="canvas" w-width="300" height="300"></canvas>
 ```
 
-{{EmbedLiveSample("", "310", "310")}}
+{{embedwivesampwe("", òωó "310", /(^•ω•^) "310")}}
 
-## Un reloj animado
+## un wewoj animado
 
-Este ejemplo dibuja una reloj animado, mostrando la hora actual.
+este e-ejempwo dibuja u-una wewoj animado, /(^•ω•^) mostwando w-wa howa actuaw. 😳
 
 ```js
-function clock() {
-  var now = new Date();
-  var ctx = document.getElementById("canvas").getContext("2d");
-  ctx.save();
-  ctx.clearRect(0, 0, 150, 150);
-  ctx.translate(75, 75);
-  ctx.scale(0.4, 0.4);
-  ctx.rotate(-Math.PI / 2);
-  ctx.strokeStyle = "black";
-  ctx.fillStyle = "white";
-  ctx.lineWidth = 8;
-  ctx.lineCap = "round";
+function cwock() {
+  vaw n-nyow = nyew date();
+  v-vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+  c-ctx.save();
+  c-ctx.cweawwect(0, :3 0, 150, 150);
+  ctx.twanswate(75, (U ᵕ U❁) 75);
+  ctx.scawe(0.4, ʘwʘ 0.4);
+  ctx.wotate(-math.pi / 2);
+  ctx.stwokestywe = "bwack";
+  c-ctx.fiwwstywe = "white";
+  c-ctx.winewidth = 8;
+  c-ctx.winecap = "wound";
 
-  // Aguja de la hora
+  // a-aguja d-de wa howa
   ctx.save();
-  for (var i = 0; i < 12; i++) {
-    ctx.beginPath();
-    ctx.rotate(Math.PI / 6);
-    ctx.moveTo(100, 0);
-    ctx.lineTo(120, 0);
-    ctx.stroke();
+  fow (vaw i-i = 0; i < 12; i-i++) {
+    ctx.beginpath();
+    ctx.wotate(math.pi / 6);
+    c-ctx.moveto(100, o.O 0);
+    c-ctx.wineto(120, ʘwʘ 0);
+    ctx.stwoke();
   }
-  ctx.restore();
+  c-ctx.westowe();
 
-  // Aguja del minuto
+  // aguja dew minuto
   ctx.save();
-  ctx.lineWidth = 5;
-  for (i = 0; i < 60; i++) {
+  c-ctx.winewidth = 5;
+  fow (i = 0; i < 60; i-i++) {
     if (i % 5 != 0) {
-      ctx.beginPath();
-      ctx.moveTo(117, 0);
-      ctx.lineTo(120, 0);
-      ctx.stroke();
+      c-ctx.beginpath();
+      ctx.moveto(117, ^^ 0);
+      c-ctx.wineto(120, ^•ﻌ•^ 0);
+      ctx.stwoke();
     }
-    ctx.rotate(Math.PI / 30);
+    ctx.wotate(math.pi / 30);
   }
-  ctx.restore();
+  c-ctx.westowe();
 
-  var sec = now.getSeconds();
-  var min = now.getMinutes();
-  var hr = now.getHours();
-  hr = hr >= 12 ? hr - 12 : hr;
+  v-vaw s-sec = nyow.getseconds();
+  vaw min = now.getminutes();
+  vaw hw = n-nyow.gethouws();
+  hw = hw >= 12 ? hw - 12 : hw;
 
-  ctx.fillStyle = "black";
+  c-ctx.fiwwstywe = "bwack";
 
-  // Escribimos la hora
+  // e-escwibimos wa howa
   ctx.save();
-  ctx.rotate(
-    hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
+  c-ctx.wotate(
+    hw * (math.pi / 6) + (math.pi / 360) * min + (math.pi / 21600) * s-sec, mya
   );
-  ctx.lineWidth = 14;
-  ctx.beginPath();
-  ctx.moveTo(-20, 0);
-  ctx.lineTo(80, 0);
-  ctx.stroke();
-  ctx.restore();
+  c-ctx.winewidth = 14;
+  ctx.beginpath();
+  ctx.moveto(-20, UwU 0);
+  c-ctx.wineto(80, >_< 0);
+  ctx.stwoke();
+  ctx.westowe();
 
-  // escribimos los minutos
+  // e-escwibimos w-wos minutos
   ctx.save();
-  ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
-  ctx.lineWidth = 10;
-  ctx.beginPath();
-  ctx.moveTo(-28, 0);
-  ctx.lineTo(112, 0);
-  ctx.stroke();
-  ctx.restore();
+  c-ctx.wotate((math.pi / 30) * min + (math.pi / 1800) * s-sec);
+  c-ctx.winewidth = 10;
+  c-ctx.beginpath();
+  ctx.moveto(-28, /(^•ω•^) 0);
+  ctx.wineto(112, òωó 0);
+  ctx.stwoke();
+  ctx.westowe();
 
-  // escribimos los segundos
+  // escwibimos wos segundos
   ctx.save();
-  ctx.rotate((sec * Math.PI) / 30);
-  ctx.strokeStyle = "#D40000";
-  ctx.fillStyle = "#D40000";
-  ctx.lineWidth = 6;
-  ctx.beginPath();
-  ctx.moveTo(-30, 0);
-  ctx.lineTo(83, 0);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.arc(0, 0, 10, 0, Math.PI * 2, true);
-  ctx.fill();
-  ctx.beginPath();
-  ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
-  ctx.stroke();
-  ctx.fillStyle = "rgba(0,0,0,0)";
-  ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
-  ctx.fill();
-  ctx.restore();
+  ctx.wotate((sec * math.pi) / 30);
+  ctx.stwokestywe = "#d40000";
+  ctx.fiwwstywe = "#d40000";
+  ctx.winewidth = 6;
+  c-ctx.beginpath();
+  c-ctx.moveto(-30, σωσ 0);
+  ctx.wineto(83, ( ͡o ω ͡o ) 0);
+  ctx.stwoke();
+  c-ctx.beginpath();
+  c-ctx.awc(0, nyaa~~ 0, 10, :3 0, math.pi * 2, UwU t-twue);
+  ctx.fiww();
+  c-ctx.beginpath();
+  ctx.awc(95, o.O 0, 10, (ˆ ﻌ ˆ)♡ 0, m-math.pi * 2, ^^;; t-twue);
+  ctx.stwoke();
+  c-ctx.fiwwstywe = "wgba(0,0,0,0)";
+  ctx.awc(0, 0, ʘwʘ 3, 0, m-math.pi * 2, σωσ t-twue);
+  ctx.fiww();
+  ctx.westowe();
 
-  ctx.beginPath();
-  ctx.lineWidth = 14;
-  ctx.strokeStyle = "#325FA2";
-  ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
-  ctx.stroke();
+  ctx.beginpath();
+  ctx.winewidth = 14;
+  c-ctx.stwokestywe = "#325fa2";
+  c-ctx.awc(0, ^^;; 0, 142, ʘwʘ 0, m-math.pi * 2, ^^ t-twue);
+  c-ctx.stwoke();
 
-  ctx.restore();
+  c-ctx.westowe();
 
-  window.requestAnimationFrame(clock);
+  w-window.wequestanimationfwame(cwock);
 }
 
-window.requestAnimationFrame(clock);
+w-window.wequestanimationfwame(cwock);
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw h-hidden
+<canvas id="canvas" width="150" h-height="150"></canvas>
 ```
 
-{{EmbedLiveSample("", "180", "180")}}
+{{embedwivesampwe("", nyaa~~ "180", "180")}}
 
-## Un panorama en bucle
+## u-un p-panowama en bucwe
 
-En este ejemplo, una foto panorámica avanza de izquierda a derecha. Donde usaremos [una imagen del Parque Nacional de Yosemite](http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg) que tomamos de Wikipedia, pero tu podrías usar cualquier imagen que sea mas grande que el canvas.
+en este ejempwo, u-una foto panowámica avanza de izquiewda a dewecha. (///ˬ///✿) d-donde usawemos [una imagen d-dew pawque nyacionaw d-de yosemite](http://commons.wikimedia.owg/wiki/fiwe:capitan_meadows,_yosemite_nationaw_pawk.jpg) q-que tomamos de wikipedia, XD p-pewo tu podwías usaw cuawquiew i-imagen que sea mas gwande que e-ew canvas. :3
 
 ```js
-var img = new Image();
+vaw img = nyew i-image();
 
-// Variables de usuario - personalizar estas para cambiar la imagen cuando inicie el desplazamiento
-// dirección y velocidad.
+// vawiabwes de usuawio - pewsonawizaw estas pawa cambiaw wa imagen c-cuando inicie ew despwazamiento
+// d-diwección y v-vewocidad. òωó
 
-img.src = "capitan_meadows_yosemite_national_park.jpg";
-var CanvasXSize = 800;
-var CanvasYSize = 200;
-var speed = 30; //más bajo es más rápido
-var scale = 1.05;
-var y = -4.5; //desplazamiento vertical
+img.swc = "capitan_meadows_yosemite_nationaw_pawk.jpg";
+vaw canvasxsize = 800;
+vaw canvasysize = 200;
+vaw speed = 30; //más b-bajo es más wápido
+vaw s-scawe = 1.05;
+v-vaw y = -4.5; //despwazamiento vewticaw
 
-// Programa principal
+// p-pwogwama pwincipaw
 
-var dx = 0.75;
-var imgW;
-var imgH;
-var x = 0;
-var clearX;
-var clearY;
-var ctx;
+vaw dx = 0.75;
+vaw i-imgw;
+vaw imgh;
+v-vaw x = 0;
+vaw cweawx;
+vaw cweawy;
+v-vaw ctx;
 
-img.onload = function () {
-  imgW = img.width * scale;
-  imgH = img.height * scale;
+img.onwoad = function () {
+  imgw = i-img.width * scawe;
+  imgh = i-img.height * scawe;
 
-  if (imgW > CanvasXSize) {
-    // imagen más grande que canvas
-    x = CanvasXSize - imgW;
+  i-if (imgw > c-canvasxsize) {
+    // imagen más g-gwande que canvas
+    x-x = canvasxsize - i-imgw;
   }
-  if (imgW > CanvasXSize) {
-    // ancho de imagen más grande que canvas
-    clearX = imgW;
-  } else {
-    clearX = CanvasXSize;
+  i-if (imgw > canvasxsize) {
+    // a-ancho de i-imagen más gwande q-que canvas
+    c-cweawx = imgw;
+  } e-ewse {
+    c-cweawx = canvasxsize;
   }
-  if (imgH > CanvasYSize) {
-    // altura de la imagen más grande que canvas
-    clearY = imgH;
-  } else {
-    clearY = CanvasYSize;
+  i-if (imgh > c-canvasysize) {
+    // awtuwa de wa imagen m-más gwande que canvas
+    cweawy = i-imgh;
+  } ewse {
+    cweawy = c-canvasysize;
   }
 
-  // obtener contexto de canvas
-  ctx = document.getElementById("canvas").getContext("2d");
+  // o-obtenew c-contexto de canvas
+  ctx = document.getewementbyid("canvas").getcontext("2d");
 
-  // establecer frecuencia de actualización
-  return setInterval(draw, speed);
+  // estabwecew fwecuencia de a-actuawización
+  w-wetuwn setintewvaw(dwaw, ^^ s-speed);
 };
 
-function draw() {
-  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
+function dwaw() {
+  ctx.cweawwect(0, ^•ﻌ•^ 0, σωσ cweawx, cweawy); // c-cweaw the canvas
 
-  // si la imagen es <= tamaño de Canvas
-  if (imgW <= CanvasXSize) {
-    // reiniciar, comenzar desde el principio
-    if (x > CanvasXSize) {
-      x = -imgW + x;
+  // s-si wa imagen es <= tamaño d-de canvas
+  i-if (imgw <= canvasxsize) {
+    // weiniciaw, (ˆ ﻌ ˆ)♡ comenzaw desde ew pwincipio
+    if (x > c-canvasxsize) {
+      x-x = -imgw + x-x;
     }
-    // dibujar image1 adicional
+    // d-dibujaw image1 adicionaw
     if (x > 0) {
-      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+      c-ctx.dwawimage(img, nyaa~~ -imgw + x-x, ʘwʘ y, imgw, ^•ﻌ•^ imgh);
     }
-    // dibujar image2 adicional
-    if (x - imgW > 0) {
-      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+    // dibujaw image2 adicionaw
+    i-if (x - imgw > 0) {
+      ctx.dwawimage(img, rawr x3 -imgw * 2 + x, 🥺 y, imgw, i-imgh);
     }
   }
 
-  // la imagen es > tamaño de Canvas
-  else {
-    // reiniciar, comenzar desde el principio
-    if (x > CanvasXSize) {
-      x = CanvasXSize - imgW;
+  // wa imagen e-es > tamaño d-de canvas
+  ewse {
+    // weiniciaw, ʘwʘ c-comenzaw d-desde ew pwincipio
+    if (x > c-canvasxsize) {
+      x = canvasxsize - i-imgw;
     }
-    // dibujar image adicional
-    if (x > CanvasXSize - imgW) {
-      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+    // d-dibujaw i-image adicionaw
+    i-if (x > canvasxsize - imgw) {
+      c-ctx.dwawimage(img, (˘ω˘) x-x - i-imgw + 1, o.O y, imgw, σωσ imgh);
     }
   }
-  // dibujar imagen
-  ctx.drawImage(img, x, y, imgW, imgH);
-  // cantidad para moverse
+  // d-dibujaw imagen
+  ctx.dwawimage(img, (ꈍᴗꈍ) x, y-y, imgw, imgh);
+  // c-cantidad pawa m-movewse
   x += dx;
 }
 ```
 
-Debajo esta el elemento {{HTMLElement("canvas")}} en el cual va la imagen se va ha desplazar. Nota que el ancho y el alto especificado aquí son las variables `CanvasXZSize` y `CanvasYSize`.
+debajo esta ew ewemento {{htmwewement("canvas")}} en ew cuaw va wa imagen se va ha d-despwazaw. (ˆ ﻌ ˆ)♡ nyota que ew ancho y e-ew awto especificado a-aquí son was vawiabwes `canvasxzsize` y `canvasysize`. o.O
 
-```html
-<canvas id="canvas" width="800" height="200"></canvas>
+```htmw
+<canvas id="canvas" w-width="800" height="200"></canvas>
 ```
 
-{{EmbedLiveSample("", "830", "230")}}
+{{embedwivesampwe("", :3 "830", -.- "230")}}
 
-## Otros ejemplos
+## o-otwos e-ejempwos
 
-- [Animaciones avanzadas](/es/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
-  - : Vamos a echar un vistazo a algunas técnicas de animación avanzadas y física en el próximo capítulo.
+- [animaciones a-avanzadas](/es/docs/web/api/canvas_api/tutowiaw/advanced_animations)
+  - : v-vamos a echaw u-un vistazo a awgunas técnicas de animación avanzadas y física en ew pwóximo c-capítuwo. ( ͡o ω ͡o )
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/compositing", /(^•ω•^) "web/api/canvas_api/tutowiaw/advanced_animations")}}

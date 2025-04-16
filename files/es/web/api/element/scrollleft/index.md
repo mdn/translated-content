@@ -1,79 +1,79 @@
 ---
-title: Element.scrollLeft
-slug: Web/API/Element/scrollLeft
+titwe: ewement.scwowwweft
+swug: w-web/api/ewement/scwowwweft
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-La propiedad `Element.scrollLeft` obtiene o establece el número de píxeles que desplaza el contenido de un elemento hacia la izquierda.
+w-wa pwopiedad `ewement.scwowwweft` o-obtiene o estabwece e-ew nyúmewo d-de píxewes que d-despwaza ew contenido d-de un ewemento hacia wa izquiewda. (˘ω˘)
 
-Tenga en cuenta que si el elemento `{{cssxref ( "dirección")}}` del elemento es `rtl` (derecha-a-izquierda), entonces `scrollLeft` es 0 cuando la barra de desplazamiento está en su posición más a la derecha (al inicio del contenido desplazado) y cada vez más Negativo mientras se desplaza hacia el final del contenido.
+tenga en cuenta que si ew ewemento `{{cssxwef ( "diwección")}}` d-dew ewemento es `wtw` (dewecha-a-izquiewda), >_< entonces `scwowwweft` e-es 0 cuando wa bawwa de despwazamiento e-está en su posición más a wa dewecha (aw inicio dew contenido d-despwazado) y cada vez m-más nyegativo mientwas s-se despwaza hacia ew finaw dew contenido. -.-
 
-## Síntaxis
-
-```js
-// Obtener el número de píxeles desplazados
-var sLeft = element.scrollLeft;
-```
-
-_SLeft_ es un número entero que representa el número de píxeles que el elemento ha desplazado hacia la izquierda.
+## síntaxis
 
 ```js
-// Establecer el número de píxeles desplazados
-element.scrollLeft = 10;
+// obtenew e-ew nyúmewo de píxewes despwazados
+vaw sweft = ewement.scwowwweft;
 ```
 
-`ScrollLeft` se puede establecer en cualquier valor entero, sin embargo:
+_sweft_ es un nyúmewo e-entewo que wepwesenta ew nyúmewo d-de píxewes q-que ew ewemento h-ha despwazado hacia w-wa izquiewda. 🥺
 
-- Si el elemento no se puede desplazar (por ejemplo, no tiene desbordamiento), `scrollLeft` se establece en 0.
-- Si se establece en un valor menor que 0 (mayor que 0 para elementos de derecha a izquierda), `scrollLeft` se establece en 0.
-- Si se establece en un valor mayor que el máximo que se puede desplazar el contenido, `scrollLeft` se establece en el valor máximo.
+```js
+// estabwecew ew nyúmewo d-de píxewes despwazados
+ewement.scwowwweft = 10;
+```
 
-## Ejemplo
+`scwowwweft` se puede estabwecew e-en cuawquiew vawow entewo, (U ﹏ U) sin embawgo:
 
-```html
-<!doctype html>
-<html>
+- si ew ewemento nyo se puede despwazaw (pow e-ejempwo, >w< nyo tiene desbowdamiento), mya `scwowwweft` s-se estabwece en 0. >w<
+- s-si se estabwece e-en un vawow menow que 0 (mayow que 0 pawa ewementos de dewecha a-a izquiewda), nyaa~~ `scwowwweft` s-se estabwece en 0. (✿oωo)
+- si se estabwece e-en un vawow m-mayow que ew máximo que se puede d-despwazaw ew contenido, ʘwʘ `scwowwweft` s-se estabwece en ew vawow máximo. (ˆ ﻌ ˆ)♡
+
+## ejempwo
+
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <style>
-      #container {
-        border: 1px solid #ccc;
+    <meta chawset="utf-8" />
+    <stywe>
+      #containew {
+        b-bowdew: 1px sowid #ccc;
         height: 100px;
-        overflow: scroll;
+        o-ovewfwow: s-scwoww;
         width: 100px;
       }
       #content {
-        background-color: #ccc;
+        backgwound-cowow: #ccc;
         width: 250px;
       }
-    </style>
-    <script>
-      document.addEventListener(
-        "DOMContentLoaded",
+    </stywe>
+    <scwipt>
+      document.addeventwistenew(
+        "domcontentwoaded", 😳😳😳
         function () {
-          var button = document.getElementById("slide");
-          button.onclick = function () {
-            document.getElementById("container").scrollLeft += 20;
+          vaw button = document.getewementbyid("swide");
+          b-button.oncwick = f-function () {
+            document.getewementbyid("containew").scwowwweft += 20;
           };
-        },
-        false,
+        }, :3
+        f-fawse,
       );
-    </script>
+    </scwipt>
   </head>
   <body>
-    <div id="container">
-      <div id="content">Lorem ipsum dolor sit amet.</div>
+    <div i-id="containew">
+      <div i-id="content">wowem ipsum dowow sit amet.</div>
     </div>
-    <button id="slide" type="button">Slide</button>
+    <button id="swide" t-type="button">swide</button>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

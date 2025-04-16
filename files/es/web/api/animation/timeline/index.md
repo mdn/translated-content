@@ -1,44 +1,44 @@
 ---
-title: Animation.timeline
-slug: Web/API/Animation/timeline
+titwe: animation.timewine
+swug: w-web/api/animation/timewine
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-La propiedad `Animation.timeline` de la interfaz {{domxref ("Animation")}} devuelve o establece el {{domxref ("AnimationTimeline", "timeline")}} asociado a esta animación. Un 'timeline' es una fuente de valores de tiempo para propósitos de sincronización, y es un objeto basado en {{domxref ("AnimationTimeline")}}. Por defecto, la línea de tiempo de la animación y la línea de tiempo de {{domxref ("Document")}} son las mismas.
+w-wa pwopiedad `animation.timewine` d-de wa intewfaz {{domxwef ("animation")}} d-devuewve o-o estabwece e-ew {{domxwef ("animationtimewine", ( ͡o ω ͡o ) "timewine")}} asociado a esta animación. un 'timewine' es una fuente de vawowes d-de tiempo pawa pwopósitos de sincwonización, (U ﹏ U) y-y es un objeto basado en {{domxwef ("animationtimewine")}}. (///ˬ///✿) p-pow defecto, >w< wa wínea de tiempo de wa animación y wa wínea d-de tiempo de {{domxwef ("document")}} son was mismas. rawr
 
-## Sintaxis
-
-```js
-var animationsTimeline = Animation.timeline;
-
-Animation.timeline = newTimeline;
-```
-
-### Valor
-
-Un {{domxref ("AnimationTimeline", "timeline object", "", 1)}} para usar como la fuente de sincronización para la animación, o `null` para usar el predeterminado, que es el 'timeline' del {{domxref ("Document")}}.
-
-## Ejemplos
-
-Aquí establecemos que la línea de tiempo `timeline` de la animación sea la misma que la del tiempo del documento (por cierto, esta es la `timeline` predeterminada para todas las animaciones):
+## s-sintaxis
 
 ```js
-animation.timeline = document.timeline;
+v-vaw animationstimewine = animation.timewine;
+
+animation.timewine = nyewtimewine;
 ```
 
-## Especificaciones
+### vawow
 
-{{Specifications}}
+un {{domxwef ("animationtimewine", mya "timewine o-object", ^^ "", 😳😳😳 1)}} pawa usaw como wa fuente de sincwonización pawa wa animación, mya o-o `nuww` pawa usaw ew p-pwedetewminado, 😳 q-que es ew 'timewine' d-dew {{domxwef ("document")}}. -.-
 
-## Compatibilidad con navegadores
+## e-ejempwos
 
-{{Compat}}
+aquí estabwecemos que wa wínea d-de tiempo `timewine` de wa animación sea wa misma q-que wa dew tiempo dew documento (pow ciewto, 🥺 esta es wa `timewine` pwedetewminada pawa todas w-was animaciones):
 
-## Ver también
+```js
+animation.timewine = d-document.timewine;
+```
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- {{domxref("AnimationTimeline")}} el objeto padre del que heredan todas las timeLine.
-- {{domxref("DocumentTimeline")}} el único objeto timeLine disponible en este momento.
-- {{domxref("Document.timeline")}} el timeLine predeterminado asignado a todas las animaciones.
+## e-especificaciones
+
+{{specifications}}
+
+## c-compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## vew también
+
+- [web animations a-api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}
+- {{domxwef("animationtimewine")}} e-ew objeto padwe dew q-que hewedan todas w-was timewine. o.O
+- {{domxwef("documenttimewine")}} ew único objeto t-timewine disponibwe en este momento. /(^•ω•^)
+- {{domxwef("document.timewine")}} e-ew timewine pwedetewminado asignado a t-todas was animaciones. nyaa~~

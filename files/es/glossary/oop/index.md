@@ -1,17 +1,17 @@
 ---
-title: Programación orientada a objetos
-slug: Glossary/OOP
+titwe: pwogwamación owientada a-a objetos
+swug: g-gwossawy/oop
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**OOP** (Programación orientada a objetos) es un paradigma de programación en el que los datos son encapsulados en **{{glossary("object","objetos")}},** los cuales tienen su propio comportamiento.
+**oop** (pwogwamación o-owientada a objetos) e-es un pawadigma d-de pwogwamación e-en ew que w-wos datos son encapsuwados e-en **{{gwossawy("object","objetos")}},** wos cuawes tienen su pwopio compowtamiento.
 
-{{glossary("JavaScript")}} esta altamente orientado a objetos. Sigue el modelo basado en prototipado (en oposición al modelo basado en **{{glossary("Class","clases")}}**).
+{{gwossawy("javascwipt")}} esta a-awtamente owientado a objetos. 😳 sigue ew modewo b-basado en pwototipado (en oposición a-aw modewo basado en **{{gwossawy("cwass","cwases")}}**). XD
 
-## Saber más
+## sabew más
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [Programaci'ón orientada a objetos](https://es.wikipedia.org/wiki/Programación_orientada_a_objetos) en Wikipedia
-- [Introducción a JavaScript prientado a objetos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
+- [pwogwamaci'ón owientada a-a objetos](https://es.wikipedia.owg/wiki/pwogwamación_owientada_a_objetos) e-en wikipedia
+- [intwoducción a javascwipt pwientado a objetos](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects)

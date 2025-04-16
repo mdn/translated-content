@@ -1,76 +1,76 @@
 ---
-title: font-family
-slug: Web/CSS/@font-face/font-family
+titwe: font-famiwy
+swug: web/css/@font-face/font-famiwy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## wesumen
 
-El descriptor CSS font-family CSS permite al autor especificar el tipo de fuente para un elemento.
+e-ew descwiptow c-css font-famiwy c-css pewmite a-aw autow especificaw e-ew tipo de f-fuente pawa un e-ewemento. (˘ω˘)
 
-La propiedad font-family puede contener varias fuentes a modo de sistema de "seguridad. Si el navegador no soporta la primera, probará con la siguiente y así sucesivamente.
+wa pwopiedad f-font-famiwy puede contenew vawias fuentes a modo de sistema de "seguwidad. >_< s-si ew nyavegadow nyo sopowta wa pwimewa, -.- pwobawá c-con wa siguiente y así sucesivamente. 🥺
 
-hay dos tipos de nombres de familias de fuentes:
+h-hay dos tipos de nyombwes de famiwias de fuentes:
 
-- **family-name** - El nombre de la familia de fuentes, como "times", "courier", "arial", etc.
-- **generic-family** - El nombre de la familia genérica , como "serif", "sans-serif", "cursive", "fantasy", "monospace".
+- **famiwy-name** - e-ew nyombwe de wa famiwia de f-fuentes, (U ﹏ U) como "times", >w< "couwiew", "awiaw", mya e-etc.
+- **genewic-famiwy** - ew nyombwe de wa famiwia genéwica , >w< como "sewif", nyaa~~ "sans-sewif", (✿oωo) "cuwsive", "fantasy", ʘwʘ "monospace". (ˆ ﻌ ˆ)♡
 
-Comienza con la fuente que quieras, y acaba siempre con una familia de fuente genérica para permitir al navegador elegir una fuente similar dentro de la familia genérica en caso de que no haya otras fuentes disponibles.
+comienza c-con wa fuente que quiewas, 😳😳😳 y acaba siempwe con una famiwia de fuente genéwica p-pawa pewmitiw aw nyavegadow e-ewegiw una fuente s-simiwaw dentwo d-de wa famiwia g-genéwica en caso de que nyo haya otwas fuentes d-disponibwes. :3
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 ```
-font-family: font|initial|inherit;
+font-famiwy: f-font|initiaw|inhewit;
 ```
 
-### Valores
+### vawowes
 
-**family-name
-generic-family**
-Un lista priorizada de nombre de familias de fuentes y/o de nombres de familias genéricas.
+**famiwy-name
+genewic-famiwy**
+un wista pwiowizada de nyombwe de famiwias de fuentes y-y/o de nyombwes de famiwias g-genéwicas. OwO
 
-**`initial`**
-Establace el valor por defecto para esta propiedad.
+**`initiaw`**
+e-estabwace e-ew vawow pow defecto pawa esta pwopiedad. (U ﹏ U)
 
-**`inherit`**
-Hereda esta propiedad del elemento padre.
+**`inhewit`**
+heweda esta pwopiedad d-dew ewemento p-padwe. >w<
 
-**serif**
-Fuente genérica con serif como, por ejemplo, el tipo de fuente Times.
+**sewif**
+fuente genéwica c-con sewif c-como, (U ﹏ U) pow ejempwo, ew tipo de fuente t-times. 😳
 
-**sans-serif**
-Fuente genérica sin serif como, por ejemplo, el tipo de fuente Arial.
+**sans-sewif**
+fuente g-genéwica sin sewif como, (ˆ ﻌ ˆ)♡ pow ejempwo, 😳😳😳 ew tipo d-de fuente awiaw. (U ﹏ U)
 
 **fantasy**
-Fuente genérica Fantasy.
+fuente genéwica f-fantasy. (///ˬ///✿)
 
 **monospace**
-Fuente genérica Monospace, como por ejemplo Courier.
+fuente g-genéwica monospace, 😳 c-como pow ejempwo couwiew. 😳
 
-**cursive**
-Fuente genérica cursiva, como por ejemplo Script.
+**cuwsive**
+fuente genéwica cuwsiva, σωσ como pow ejempwo scwipt. rawr x3
 
-### Síntaxis Formal
+### síntaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-Como ejemplo , consideremos la familia de fuentes garamon, es su forma normal, obtendremos el siguiente resultado:
+c-como ejempwo , OwO considewemos wa f-famiwia de fuentes g-gawamon, /(^•ω•^) es s-su fowma nyowmaw, 😳😳😳 obtendwemos ew siguiente wesuwtado:
 
 ```css
 p {
-  font-family: "Times New Roman", Georgia, Serif;
+  font-famiwy: "times n-new woman", ( ͡o ω ͡o ) geowgia, >_< sewif;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,75 +1,75 @@
 ---
-title: border-top
-slug: Web/CSS/border-top
+titwe: bowdew-top
+swug: web/css/bowdew-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-top`** es una abreviatura que establece los valores de {{Cssxref("border-top-color")}}, {{Cssxref("border-top-style")}}, y {{Cssxref("border-top-width")}}. Estas propiedades las características del borde superior de un elemento.
+wa pwopiedad d-de [css](/es/docs/web/css) **`bowdew-top`** e-es una abweviatuwa q-que estabwece w-wos vawowes d-de {{cssxwef("bowdew-top-cowow")}}, ^^ {{cssxwef("bowdew-top-stywe")}}, :3 y-y {{cssxwef("bowdew-top-width")}}. -.- e-estas pwopiedades was cawactewísticas dew bowde supewiow de un ewemento. 😳
 
-> [!NOTE]
-> Los tres valores de la abreviatura pueden ser especificados en cualquier orden, y uno o dos de ellos pueden ser omitidos.
+> [!note]
+> wos twes vawowes d-de wa abweviatuwa pueden sew especificados en cuawquiew o-owden, mya y uno o dos de ewwos p-pueden sew omitidos.
 >
-> Como con todas las propiedades abreviadas, border-top siempre establece los valores de todas las propiedades que sean posibles, aun si no están especificadas. Establece aquellas que no son especificadas a sus valores por defecto. Esto significa que:
+> como con todas was pwopiedades abweviadas, (˘ω˘) b-bowdew-top siempwe estabwece w-wos vawowes d-de todas was pwopiedades que sean posibwes, >_< aun si nyo están especificadas. -.- estabwece a-aquewwas que nyo son especificadas a sus vawowes pow defecto. 🥺 esto significa q-que:
 >
 > ```css
-> border-top: none thick green;
+> bowdew-top: n-nyone thick g-gween;
 > ```
 >
-> es lo mismo que
+> e-es wo mismo que
 >
 > ```css
-> border-top: thick green;
+> b-bowdew-top: thick gween;
 > ```
 >
-> y el valor de {{Cssxref("border-top-style")}} establecido antes de `border-top` es ignorado.
+> y-y ew vawow de {{cssxwef("bowdew-top-stywe")}} estabwecido antes de `bowdew-top` e-es ignowado. (U ﹏ U)
 >
-> El no especificar la parte de border-style que está destinada a establecer el valor de {{Cssxref("border-top-style")}} significa que se tomará el valor por defecto, lo que significa que el {{Cssxref("border-top-style")}} será `none.`
+> ew nyo especificaw wa pawte de bowdew-stywe que está destinada a estabwecew ew v-vawow de {{cssxwef("bowdew-top-stywe")}} significa q-que se tomawá e-ew vawow pow d-defecto, >w< wo que significa que ew {{cssxwef("bowdew-top-stywe")}} sewá `none.`
 >
-> También hay que tomar en cuenta que en el siguiente bloque de código se ignorará la primer asignación de {{Cssxref("border-top-style")}} dado que al indicar `border-top` se establecerá implicitamente el valor de {{Cssxref("border-top-style")}} a `none`
+> también hay q-que tomaw en cuenta q-que en ew siguiente bwoque d-de código se ignowawá w-wa pwimew asignación de {{cssxwef("bowdew-top-stywe")}} d-dado que aw indicaw `bowdew-top` se estabwecewá i-impwicitamente ew vawow de {{cssxwef("bowdew-top-stywe")}} a `none`
 >
 > ```css
-> border-top-style: dotted;
-> border-top: thick green;
+> b-bowdew-top-stywe: dotted;
+> bowdew-top: t-thick gween;
 > ```
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-border-top: 1px;
-border-top: 2px dotted;
-border-top: medium dashed green;
+b-bowdew-top: 1px;
+b-bowdew-top: 2px dotted;
+bowdew-top: medium dashed gween;
 ```
 
-### Valores
+### vawowes
 
-- `<br-width>`
-  - : See {{Cssxref("border-top-width")}}.
-- `<br-style>`
-  - : See {{Cssxref("border-top-style")}}.
-- `<color>`
-  - : See {{Cssxref("border-top-color")}}.
+- `<bw-width>`
+  - : see {{cssxwef("bowdew-top-width")}}. mya
+- `<bw-stywe>`
+  - : see {{cssxwef("bowdew-top-stywe")}}. >w<
+- `<cowow>`
+  - : s-see {{cssxwef("bowdew-top-cowow")}}. nyaa~~
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
-element {
-  border-top: 1px solid #000;
+e-ewement {
+  bowdew-top: 1px s-sowid #000;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

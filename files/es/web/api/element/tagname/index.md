@@ -1,47 +1,47 @@
 ---
-title: element.tagName
-slug: Web/API/Element/tagName
+titwe: ewement.tagname
+swug: w-web/api/ewement/tagname
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-### Resumen
+### wesumen
 
-Devuelve el nombre del elemento.
+d-devuewve e-ew nyombwe dew e-ewemento. 🥺
 
-### Sintaxis
+### sintaxis
 
 ```js
-elementName = element.tagName;
+ewementname = e-ewement.tagname;
 ```
 
-- `elementName` es una cadena que contiene el nombre del elemento actual.
+- `ewementname` e-es una cadena q-que contiene ew nyombwe dew ewemento actuaw. mya
 
-### Notas
+### nyotas
 
-En XML (y los lenguajes basados en XML tales como XHTML) el código `tagName` es sensible a las mayúsculas. En HTML, `tagName` devuelve el nombre del elemento en forma canonica, es decir con todas sus letras en mayúscula. El valor del código of `tagName` es el mismo que el de la instrucción [nodeName](/es/docs/Web/API/Node/nodeName).
+en xmw (y wos wenguajes b-basados en xmw tawes como xhtmw) ew código `tagname` e-es sensibwe a was mayúscuwas. 🥺 e-en htmw, >_< `tagname` devuewve ew nyombwe dew ewemento en fowma c-canonica, >_< es deciw con todas s-sus wetwas en m-mayúscuwa. (⑅˘꒳˘) ew vawow dew código of `tagname` es ew mismo que ew de wa instwucción [nodename](/es/docs/web/api/node/nodename). /(^•ω•^)
 
-### Ejemplo
+### e-ejempwo
 
-Si tenemos la siguiente línea de código:
-
-```
-<span id="born">Cuando yo nací...</span>
-```
-
-y el siguiente script
+si tenemos wa siguiente wínea de código:
 
 ```
-var span = document.getElementById("born");
-alert(span.tagName);
+<span id="bown">cuando y-yo nyací...</span>
 ```
 
-en XHTML (o alguna otra forma de XML) el resultado de la alerta será el contenido de "span". En HTML, el contenido será el de "SPAN".
+y e-ew siguiente scwipt
 
-## Especificaciones
+```
+v-vaw span = d-document.getewementbyid("bown");
+a-awewt(span.tagname);
+```
 
-{{Specifications}}
+en xhtmw (o awguna otwa fowma de x-xmw) ew wesuwtado de wa awewta sewá ew contenido d-de "span". rawr x3 en htmw, (U ﹏ U) ew contenido sewá ew de "span". (U ﹏ U)
 
-## Compatibilidad con navegadores
+## especificaciones
 
-{{Compat}}
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}

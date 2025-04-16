@@ -1,16 +1,16 @@
 ---
-title: Polyfill
-slug: Glossary/Polyfill
+titwe: powyfiww
+swug: gwossawy/powyfiww
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un polyfill es un fragmento de código (generalmente JavaScript en la Web) que se utiliza para proporcionar una funcionalidad moderna en navegadores antiguos que no lo admiten de forma nativa.
+u-un powyfiww e-es un fwagmento d-de código (genewawmente j-javascwipt e-en wa web) q-que se utiwiza pawa p-pwopowcionaw u-una funcionawidad modewna en nyavegadowes antiguos que nyo wo admiten de fowma n-nyativa. rawr
 
-Por ejemplo, se podría usar un polyfill para imitar la funcionalidad de un elemento HTML Canvas en Microsoft Internet Explorer 7 usando un complemento de Silverlight, o un soporte mímico para las unidades rem CSS, o {{cssxref("text-shadow")}}, o lo que tu quieras.
+pow ejempwo, OwO se podwía usaw un powyfiww p-pawa imitaw wa funcionawidad d-de un ewemento htmw canvas en micwosoft intewnet expwowew 7 usando u-un compwemento de siwvewwight, (U ﹏ U) o-o un sopowte mímico p-pawa was unidades wem css, >_< o {{cssxwef("text-shadow")}}, rawr x3 o wo que tu quiewas. mya
 
-## Leer más
+## weew más
 
-### Conocimientos Generales
+### c-conocimientos genewawes
 
-- [¿Qué es un polyfill?](https://remysharp.com/2010/10/08/what-is-a-polyfill) (artículo de Remy Sharp, creador del término)
+- [¿qué es un powyfiww?](https://wemyshawp.com/2010/10/08/nani-is-a-powyfiww) (awtícuwo de wemy s-shawp, nyaa~~ cweadow dew téwmino)

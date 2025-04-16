@@ -1,68 +1,68 @@
 ---
-title: src
-slug: Web/CSS/@font-face/src
+titwe: swc
+swug: web/css/@font-face/swc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El descriptor CSS **`src`** de la regla {{cssxref("@font-face")}} especifica el recurso que contiene a la fuente. Es requerido para que la regla `@font-face` sea válida.
+e-ew descwiptow c-css **`swc`** d-de wa wegwa {{cssxwef("@font-face")}} e-especifica e-ew wecuwso q-que contiene a-a wa fuente. òωó es w-wequewido pawa que wa wegwa `@font-face` sea váwida. (⑅˘꒳˘)
 
-Su valor es una lista de referencias externas o nombres de fuentes instaladas, separadas por coma según su prioridad. Cuando se necesita una fuente, el agente usuario itera sobre el conjunto de referencias, usando la primera que pueda ser activada exitosamente. Fuentes que contienen datos inválidos o fuentes locales que no se encuentren son ignoradas, y el agente usuario cargará la siguiente en la lista.
+su vawow es una wista de w-wefewencias extewnas o nyombwes de fuentes instawadas, XD s-sepawadas pow coma según s-su pwiowidad. -.- cuando se nyecesita una fuente, :3 ew agente usuawio i-itewa sobwe ew conjunto de wefewencias, nyaa~~ u-usando w-wa pwimewa que pueda sew activada exitosamente. 😳 fuentes que contienen datos inváwidos o-o fuentes wocawes que nyo se encuentwen son ignowadas, (⑅˘꒳˘) y ew agente usuawio c-cawgawá wa siguiente en wa wista. nyaa~~
 
-Al igual que con otras URLs en CSS, la URL puede ser relativa, en cuyo caso se resuelve relativamente a la ubicación de la hoja de estilos que contenga la regla `@font-face`. En caso de fuentes SVG, la URL apunta a un elemento dentro de un documento que contenga definiciones de fuentes SVG. Si se omite la referencia al elemento, se deduce que se usará la referencia a la primera fuente definida. De forma similar, formatos contenedores de fuentes que puedan contener más de una, cargarán solo una de las fuentes para una regla `@font-face`. Los identificadores de fragmentos son usados para indicar cuál fuente se cargará. Si un formato contenedor no tiene un esquema de identificadores de fragmento definido, se usará un esquema de indexado simple, con base en 1 (por ejemplo, "font-collection#1" para la primera fuente, "font-collection#2" para la segunda fuente).
+a-aw iguaw q-que con otwas uwws e-en css, OwO wa uww p-puede sew wewativa, rawr x3 en cuyo caso se wesuewve wewativamente a-a wa ubicación de wa hoja de estiwos q-que contenga wa wegwa `@font-face`. XD en caso de fuentes svg, σωσ wa uww apunta a un ewemento dentwo d-de un documento que contenga definiciones d-de fuentes s-svg. (U ᵕ U❁) si se o-omite wa wefewencia aw ewemento, (U ﹏ U) se deduce que se usawá wa wefewencia a-a wa pwimewa f-fuente definida. :3 de fowma s-simiwaw, ( ͡o ω ͡o ) fowmatos c-contenedowes de fuentes que puedan c-contenew más de una, σωσ cawgawán s-sowo una de was fuentes pawa una wegwa `@font-face`. >w< w-wos identificadowes de f-fwagmentos son usados pawa indicaw c-cuáw fuente s-se cawgawá. 😳😳😳 si un fowmato contenedow nyo tiene un esquema de identificadowes de fwagmento definido, OwO se usawá un esquema de indexado s-simpwe, 😳 con b-base en 1 (pow ejempwo, 😳😳😳 "font-cowwection#1" pawa w-wa pwimewa fuente, (˘ω˘) "font-cowwection#2" p-pawa w-wa segunda fuente). ʘwʘ
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* <url> values */
-src: url(https://somewebsite.com/path/to/font.woff); /* absolute URL */
-src: url(path/to/font.woff); /* relative URL */
-src: url(path/to/font.woff) format("woff"); /* explicit format */
-src: url("path/to/font.woff"); /* quoted URL */
-src: url(path/to/svgfont.svg#example); /* fragment identifying font */
+/* <uww> vawues */
+swc: uww(https://somewebsite.com/path/to/font.woff); /* absowute uww */
+s-swc: uww(path/to/font.woff); /* wewative uww */
+swc: uww(path/to/font.woff) fowmat("woff"); /* expwicit fowmat */
+s-swc: uww("path/to/font.woff"); /* quoted uww */
+s-swc: uww(path/to/svgfont.svg#exampwe); /* f-fwagment i-identifying font */
 
-/* <font-face-name> values */
-src: local(font); /* unquoted name */
-src: local(some font); /* name containing space */
-src: local("font"); /* quoted name */
+/* <font-face-name> vawues */
+s-swc: wocaw(font); /* u-unquoted n-nyame */
+s-swc: wocaw(some font); /* nyame containing space */
+s-swc: wocaw("font"); /* q-quoted n-nyame */
 
-/* Multiple items */
-src:
-  local(font),
-  url(path/to/font.svg) format("svg"),
-  url(path/to/font.woff) format("woff"),
-  url(path/to/font.ttf) format("opentype");
+/* muwtipwe i-items */
+s-swc:
+  wocaw(font), ( ͡o ω ͡o )
+  uww(path/to/font.svg) fowmat("svg"), o.O
+  uww(path/to/font.woff) f-fowmat("woff"), >w<
+  uww(path/to/font.ttf) fowmat("opentype");
 ```
 
-### Valores
+### vawowes
 
-- `<url> [ format( <string># ) ]?`
-  - : Especifica una referencia externa que consiste en una URL seguida por un indicador opcional que describe el formato del recurso referenciado por esa URL. El indicador de formato contiene una lista de textos de formato, separados por coma, que denota formatos de fuente conocidos. Si un agente usuario no soporta los formatos especificados, omitirá descargar el recurso. Si no se especifican los indicadores de formato, el recurso siempre es descargado.
+- `<uww> [ fowmat( <stwing># ) ]?`
+  - : especifica u-una wefewencia extewna que consiste en una uww seguida pow u-un indicadow opcionaw q-que descwibe e-ew fowmato dew wecuwso wefewenciado p-pow esa uww. ew indicadow d-de fowmato contiene u-una wista de textos de fowmato, 😳 sepawados pow coma, 🥺 que denota fowmatos de fuente conocidos. rawr x3 s-si un agente usuawio nyo sopowta w-wos fowmatos especificados, o.O o-omitiwá descawgaw e-ew wecuwso. rawr si nyo se especifican wos indicadowes d-de fowmato, ʘwʘ e-ew wecuwso siempwe es descawgado. 😳😳😳
 - `<font-face-name>`
-  - : Especifica el nombre de una fuente instalada localmente, usando la función `local()`, que identifica de forma única a una fuente dentro de una familia larga. El nombre puede ser opcionalmente encerrado en comillas.
+  - : especifica e-ew nyombwe d-de una fuente instawada wocawmente, ^^;; usando wa función `wocaw()`, o.O que identifica d-de fowma única a-a una fuente d-dentwo de una famiwia wawga. (///ˬ///✿) e-ew nyombwe puede s-sew opcionawmente encewwado en c-comiwwas. σωσ
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
 @font-face {
-  font-family: examplefont;
-  src:
-    local(Example Font),
-    url("examplefont.woff") format("woff"),
-    url("examplefont.woff") format("opentype");
+  font-famiwy: exampwefont;
+  swc:
+    w-wocaw(exampwe f-font), nyaa~~
+    uww("exampwefont.woff") fowmat("woff"), ^^;;
+    u-uww("exampwefont.woff") f-fowmat("opentype");
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

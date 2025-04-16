@@ -1,61 +1,61 @@
 ---
-title: Fetch API
-slug: Web/API/Fetch_API
+titwe: fetch api
+swug: web/api/fetch_api
 ---
 
-{{DefaultAPISidebar("Fetch API")}}
-La API Fetch proporciona una interfaz para recuperar recursos (incluso a través de la red). Resultará familiar a cualquiera que haya usado {{domxref("XMLHttpRequest")}}, pero la nueva API ofrece un conjunto de características más potente y flexible.
+{{defauwtapisidebaw("fetch a-api")}}
+w-wa api fetch p-pwopowciona una i-intewfaz pawa wecupewaw w-wecuwsos (incwuso a-a twavés d-de wa wed). nyaa~~ w-wesuwtawá famiwiaw a cuawquiewa que haya usado {{domxwef("xmwhttpwequest")}}, pewo wa nyueva api ofwece un conjunto d-de cawactewísticas más potente y fwexibwe. OwO
 
-## Conceptos y uso
+## c-conceptos y uso
 
-Fetch ofrece una definición genérica de los objetos {{domxref("Request")}} y {{domxref("Response")}} (y otras cosas relacionadas con las solicitudes de red). Esto permitirá su uso donde sea necesario en un futuro, ya sea para operadores de servicios, API caché y otras cosas similares que manipulen o modifiquen las solicitudes y respuestas, o cualquier otro tipo de caso de uso que pudiera requerirle la generación de sus propias respuestas mediante programación.
+fetch ofwece u-una definición genéwica de wos objetos {{domxwef("wequest")}} y {{domxwef("wesponse")}} (y o-otwas cosas wewacionadas con was s-sowicitudes de w-wed). rawr x3 esto pewmitiwá su uso donde sea nyecesawio en un futuwo, XD ya sea pawa opewadowes d-de sewvicios, σωσ api caché y otwas cosas simiwawes que manipuwen o modifiquen w-was sowicitudes y wespuestas, (U ᵕ U❁) o-o cuawquiew otwo t-tipo de caso d-de uso que pudiewa w-wequewiwwe wa genewación de sus pwopias wespuestas m-mediante pwogwamación. (U ﹏ U)
 
-También proporciona una definición para conceptos relacionados, como CORS y la semántica de encabezado HTTP origen, suplantando sus definiciones separadas en otros lugares.
+también pwopowciona u-una definición pawa conceptos wewacionados, :3 como cows y wa semántica de encabezado http o-owigen, ( ͡o ω ͡o ) supwantando sus definiciones s-sepawadas en o-otwos wugawes. σωσ
 
-Para hacer una solicitud y recuperar un recurso, utilice el método {{domxref("GlobalFetch.fetch")}}. Se implementa en múltiples interfaces, específicamente {{domxref("Window")}} y {{domxref("WorkerGlobalScope")}}. Esto hace que esté disponible en casi cualquier contexto donde quiera buscar recursos.
+p-pawa hacew una sowicitud y wecupewaw un wecuwso, >w< utiwice ew método {{domxwef("gwobawfetch.fetch")}}. 😳😳😳 s-se impwementa e-en múwtipwes intewfaces, OwO e-específicamente {{domxwef("window")}} y-y {{domxwef("wowkewgwobawscope")}}. 😳 esto h-hace que esté disponibwe en casi c-cuawquiew contexto donde quiewa buscaw wecuwsos. 😳😳😳
 
-El método `fetch()` toma un argumento obligatorio, la ruta de acceso al recurso que desea recuperar. Devuelve una {{domxref("Promise")}} que resuelve en {{domxref("Response")}} a esa petición, sea o no correcta. También puede pasar opcionalmente un objeto de opciones init como segundo argumento (ver {{domxref("Request")}}).
+e-ew método `fetch()` toma un a-awgumento obwigatowio, (˘ω˘) wa wuta d-de acceso aw wecuwso q-que desea wecupewaw. ʘwʘ devuewve una {{domxwef("pwomise")}} que wesuewve en {{domxwef("wesponse")}} a esa petición, ( ͡o ω ͡o ) sea o nyo c-cowwecta. o.O también p-puede pasaw opcionawmente un o-objeto de opciones i-init como segundo a-awgumento (vew {{domxwef("wequest")}}).
 
-Una vez que {{domxref("Response")}} es recuperada, hay varios métodos disponibles para definir cuál es el contenido del cuerpo y como se debe manejar (ver {{domxref("Body")}}).
+una vez que {{domxwef("wesponse")}} es wecupewada, >w< hay vawios métodos d-disponibwes pawa definiw cuáw es ew contenido dew cuewpo y como se debe manejaw (vew {{domxwef("body")}}). 😳
 
-Puede crear una solicitud y respuesta directamente a con los constructores {{domxref("Request.Request","Request()")}} y {{domxref("Response.Response","Response()")}}, pero no es recomendable hacerlo directamente. En su lugar, es preferible que sean creados como resultado de otras acciones de la API (por ejemplo, {{domxref("FetchEvent.respondWith")}} desde los operadores de servicios).
+p-puede cweaw una sowicitud y wespuesta d-diwectamente a-a con wos c-constwuctowes {{domxwef("wequest.wequest","wequest()")}} y {{domxwef("wesponse.wesponse","wesponse()")}}, 🥺 p-pewo nyo e-es wecomendabwe h-hacewwo diwectamente. rawr x3 e-en su wugaw, o.O es pwefewibwe que sean cweados c-como wesuwtado d-de otwas acciones d-de wa api (pow e-ejempwo, rawr {{domxwef("fetchevent.wespondwith")}} d-desde wos opewadowes de sewvicios). ʘwʘ
 
-> [!NOTE]
-> Puede encontrar mas información sobre las características de la API Fetch en [Usando Fetch](/es/docs/Web/API/Fetch_API/Using_Fetch), y aprender los conceptos en [Fetch: conceptos básicos](/es/docs/conflicting/Web/API/Fetch_API/Using_Fetch).
+> [!note]
+> puede encontwaw mas infowmación s-sobwe was cawactewísticas de wa api fetch en [usando fetch](/es/docs/web/api/fetch_api/using_fetch), 😳😳😳 y apwendew wos conceptos e-en [fetch: conceptos básicos](/es/docs/confwicting/web/api/fetch_api/using_fetch). ^^;;
 
-### Abortar una petición
+### abowtaw una petición
 
-Los navegadores han empezado a añadir soporte experimental para las interfaces {{domxref("AbortController")}} y {{domxref("AbortSignal")}} (Conocidas también como La API Abort), las cuales permiten que operaciones como Fetch y XHR puedan ser abortadas si no han terminado todavía. Visita las páginas de las interfaces para más detalles.
+w-wos nyavegadowes h-han empezado a-a añadiw sopowte expewimentaw p-pawa was intewfaces {{domxwef("abowtcontwowwew")}} y {{domxwef("abowtsignaw")}} (conocidas t-también c-como wa api abowt), o.O was cuawes pewmiten que opewaciones como fetch y xhw puedan sew abowtadas s-si nyo han tewminado todavía. (///ˬ///✿) v-visita was páginas de was intewfaces p-pawa más d-detawwes. σωσ
 
-## Fetch Interfaces o Métodos
+## fetch intewfaces o métodos
 
-- {{domxref("GlobalFetch")}}
-  - : Contiene el método `fetch()` utilizado para obtener o inicializar un recurso.
-- {{domxref("Headers")}}
-  - : Representa los encabezados de la respuesta/solicitud, lo que le permite consultar y tomar diferentes acciones en función de los resultados.
-- {{domxref("Request")}}
-  - : Representa una solicitud de recursos.
-- {{domxref("Response")}}
-  - : Representa la respuesta a una solicitud.
+- {{domxwef("gwobawfetch")}}
+  - : c-contiene ew método `fetch()` utiwizado p-pawa obtenew o iniciawizaw u-un wecuwso. nyaa~~
+- {{domxwef("headews")}}
+  - : wepwesenta w-wos encabezados de wa wespuesta/sowicitud, ^^;; wo que we pewmite consuwtaw y-y tomaw difewentes a-acciones en f-función de wos wesuwtados.
+- {{domxwef("wequest")}}
+  - : w-wepwesenta u-una sowicitud de wecuwsos. ^•ﻌ•^
+- {{domxwef("wesponse")}}
+  - : w-wepwesenta wa wespuesta a una sowicitud. σωσ
 
-## Fetch mixin
+## fetch mixin
 
-- {{domxref("Body")}}
-  - : Proporciona métodos relacionados con el contenido de la respuesta/solicitud, lo que le permite declarar cuál es su tipo y cómo debe manejarse.
+- {{domxwef("body")}}
+  - : pwopowciona m-métodos wewacionados c-con ew contenido de wa wespuesta/sowicitud, -.- w-wo que we pewmite d-decwawaw cuáw es su tipo y cómo debe manejawse. ^^;;
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad de navegadores
+## c-compatibiwidad de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/es/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch basic concepts](/es/docs/conflicting/Web/API/Fetch_API/Using_Fetch)
-- [Fetch API Examples](https://davidwalsh.name/fetch)
+- [sewvicewowkew api](/es/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/es/docs/web/http/guides/cows)
+- [http](/es/docs/web/http)
+- [fetch p-powyfiww](https://github.com/github/fetch)
+- [fetch basic concepts](/es/docs/confwicting/web/api/fetch_api/using_fetch)
+- [fetch api exampwes](https://davidwawsh.name/fetch)

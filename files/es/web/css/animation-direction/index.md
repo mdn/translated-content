@@ -1,57 +1,57 @@
 ---
-title: animation-direction
-slug: Web/CSS/animation-direction
+titwe: animation-diwection
+swug: w-web/css/animation-diwection
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-{{ SeeCompatTable() }}
+{{ s-seecompattabwe() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS `animation-direction` indica si la animación debe retroceder hasta el fotograma de inicio al finalizar la secuencia o si debe comenzar desde el principio al llegar al final.
+wa pwopiedad c-css `animation-diwection` i-indica si wa animación d-debe wetwocedew h-hasta ew fotogwama de inicio aw finawizaw wa secuencia o si debe comenzaw d-desde ew pwincipio aw wwegaw aw finaw. 😳
 
-Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajustar todas las propiedades de animación una sola vez.
+es conveniente u-usaw wa pwopiedad abweviada {{ c-cssxwef("animation") }} pawa ajustaw todas was pwopiedades de animación u-una sowa vez. σωσ
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-Gramática formal: [ normal | reverse | alternate | alternate-reverse ] [, [ normal | reverse | alternate | alternate-reverse ] ]*
+gwamática f-fowmaw: [ n-nyowmaw | wevewse | awtewnate | awtewnate-wevewse ] [, rawr x3 [ nyowmaw | wevewse | a-awtewnate | awtewnate-wevewse ] ]*
 
-animation-direction: normal
-animation-direction: reverse
-animation-direction: alternate
-animation-direction: alternate-reverse
-animation-direction: normal, reverse
-animation-direction: alternate, reverse, normal
+animation-diwection: nyowmaw
+animation-diwection: wevewse
+animation-diwection: a-awtewnate
+animation-diwection: awtewnate-wevewse
+a-animation-diwection: n-nyowmaw, OwO w-wevewse
+animation-diwection: awtewnate, w-wevewse, /(^•ω•^) nowmaw
 ```
 
-### Valores
+### vawowes
 
-- `normal`
-  - : Cada vez que termina un ciclo, la animación se reinicia al estado inicial y comienza desde el principio. Este es el comportamiento por defecto.
-- `alternate`
-  - : La animación, al terminar un ciclo, invierte su dirección. Es decir, los pasos de la animación se ejecutan al revés. Además, las funciones de tiempo también se invierten; por ejemplo una animación `ease-in` se convierte en una animación con `ease-out` cuando se reproduce al revés. El contador que determina si la iteración es par o impar comienza en uno.
-- `reverse`
-  - : Cada ciclo de la animación se reproduce al revés . Cada vez que comienza un ciclo de animación, ésta se posiciona en el estado final y comienza desde ahí.
-- `alternate-reverse`
-  - : Es similar a `alternate` pero la animación se reproduce al revés. Es decir la animación se posiciona en el estado final, comienza a reproducirse al reves y, cuando llega al inicio vuelve a reproducirse de forma normal hasta llegar al final de la secuencia. Y vuelve otra vez a repetirse. El contador que determina si la iteración es par o impar comienza en uno.
+- `nowmaw`
+  - : c-cada vez que tewmina un cicwo, 😳😳😳 wa animación s-se weinicia aw estado iniciaw y comienza desde ew pwincipio. ( ͡o ω ͡o ) este es ew compowtamiento p-pow defecto. >_<
+- `awtewnate`
+  - : wa animación, >w< a-aw tewminaw un c-cicwo, rawr inviewte s-su diwección. 😳 es deciw, wos pasos de wa animación se ejecutan a-aw wevés. >w< además, w-was funciones de tiempo también s-se inviewten; p-pow ejempwo una animación `ease-in` s-se conviewte en una animación c-con `ease-out` cuando se wepwoduce aw wevés. (⑅˘꒳˘) e-ew contadow que detewmina si w-wa itewación es paw o impaw comienza e-en uno. OwO
+- `wevewse`
+  - : c-cada cicwo de wa animación se wepwoduce aw wevés . (ꈍᴗꈍ) cada vez que comienza un cicwo de animación, 😳 ésta se posiciona e-en ew estado f-finaw y comienza desde ahí. 😳😳😳
+- `awtewnate-wevewse`
+  - : e-es s-simiwaw a `awtewnate` p-pewo wa animación se wepwoduce aw wevés. mya es deciw wa animación s-se posiciona en ew estado finaw, mya comienza a wepwoduciwse aw weves y, (⑅˘꒳˘) cuando w-wwega aw inicio vuewve a wepwoduciwse d-de fowma n-nyowmaw hasta w-wwegaw aw finaw de wa secuencia. (U ﹏ U) y-y vuewve otwa v-vez a wepetiwse. mya e-ew contadow que d-detewmina si wa itewación es paw o impaw comienza e-en uno. ʘwʘ
 
-## Ejemplos
+## e-ejempwos
 
-Visitar [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
+visitaw [animaciones c-css](/es/docs/web/css/css_animations/using_css_animations) p-pawa v-vew awgunos ejempwos. (˘ω˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Consulte también
+## c-consuwte también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+- [usando animaciones css](/es/docs/web/css/css_animations/using_css_animations)
+- {{ domxwef("animationevent", (U ﹏ U) "animationevent") }}

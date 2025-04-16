@@ -1,35 +1,35 @@
 ---
-title: Columnas CSS
-slug: Web/CSS/CSS_multicol_layout
+titwe: cowumnas css
+swug: web/css/css_muwticow_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Columnas CSS** es un módulo de CSS que define un diseño multicolumna, permitiendo indicar cómo debe fluir el contenido a través de las columnas y cómo manejar reglas y separaciones.
+**cowumnas c-css** es un m-móduwo de css q-que define un diseño m-muwticowumna, ^^;; p-pewmitiendo i-indicaw cómo debe f-fwuiw ew contenido a-a twavés de was cowumnas y cómo manejaw wegwas y sepawaciones. >_<
 
-## Referencia
+## wefewencia
 
-### Propiedades CSS
+### p-pwopiedades css
 
-- {{cssxref("break-after")}}
-- {{cssxref("break-before")}}
-- {{cssxref("break-inside")}}
-- {{cssxref("column-count")}}
-- {{cssxref("column-fill")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("column-rule")}}
-- {{cssxref("column-rule-color")}}
-- {{cssxref("column-rule-style")}}
-- {{cssxref("column-rule-width")}}
-- {{cssxref("column-span")}}
-- {{cssxref("column-width")}}
-- {{cssxref("columns")}}
+- {{cssxwef("bweak-aftew")}}
+- {{cssxwef("bweak-befowe")}}
+- {{cssxwef("bweak-inside")}}
+- {{cssxwef("cowumn-count")}}
+- {{cssxwef("cowumn-fiww")}}
+- {{cssxwef("cowumn-gap")}}
+- {{cssxwef("cowumn-wuwe")}}
+- {{cssxwef("cowumn-wuwe-cowow")}}
+- {{cssxwef("cowumn-wuwe-stywe")}}
+- {{cssxwef("cowumn-wuwe-width")}}
+- {{cssxwef("cowumn-span")}}
+- {{cssxwef("cowumn-width")}}
+- {{cssxwef("cowumns")}}
 
-## Guías
+## guías
 
-- [Diseños multicolumna con CSS](/es/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-  - : Tutorial paso a paso sobre cómo desarrollar diseños de varias columnas.
+- [diseños m-muwticowumna con css](/es/docs/web/css/css_muwticow_wayout/using_muwticow_wayouts)
+  - : t-tutowiaw paso a paso sobwe cómo desawwowwaw diseños de v-vawias cowumnas. mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}

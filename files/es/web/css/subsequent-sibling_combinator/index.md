@@ -1,48 +1,48 @@
 ---
-title: Selectores de hermanos generales
-slug: Web/CSS/Subsequent-sibling_combinator
+titwe: sewectowes de hewmanos g-genewawes
+swug: w-web/css/subsequent-sibwing_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-El combinador `~` separa dos selectores y selecciona el segundo elemento sólo si está precedido por el primero y ambos comparten un padre común.
+e-ew combinadow `~` s-sepawa dos s-sewectowes y sewecciona e-ew segundo e-ewemento sówo si está pwecedido pow ew pwimewo y ambos compawten un padwe c-común. /(^•ω•^)
 
-## Sintaxis
+## sintaxis
 
 ```
-elemento ~ elemento { estilos }
+ewemento ~ ewemento { e-estiwos }
 ```
 
-## Ejemplo
+## ejempwo
 
 ```css
-p ~ span {
-  color: red;
+p-p ~ span {
+  cowow: wed;
 }
 ```
 
-```html
-<span>Este span no es rojo.</span>
-<p>Aquí hay un párrafo.</p>
-<code>Aquí hay algo de código.</code>
+```htmw
+<span>este span nyo es wojo.</span>
+<p>aquí h-hay un páwwafo.</p>
+<code>aquí hay awgo d-de código.</code>
 <span
-  >Aquí hay un span. Es rojo porque va precedido de un párrafo y ambos comparten
-  el mismo padre.</span
+  >aquí h-hay un span. rawr es wojo powque va pwecedido de un páwwafo y ambos compawten
+  ew m-mismo padwe.</span
 >
 ```
 
-{{ EmbedLiveSample('Example', 320, 150) }}
+{{ embedwivesampwe('exampwe', OwO 320, 150) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Selectores de hermanos adyacentes](/es/docs/Web/CSS/Next-sibling_combinator)
+- [sewectowes d-de hewmanos adyacentes](/es/docs/web/css/next-sibwing_combinatow)

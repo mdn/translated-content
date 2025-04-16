@@ -1,37 +1,37 @@
 ---
-title: containsNode
-slug: Web/API/Selection/containsNode
+titwe: containsnode
+swug: web/api/sewection/containsnode
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Indica si tal nodo es parte de la selección.
+i-indica si taw n-nyodo es pawte d-de wa sewección. rawr
 
-### Sintaxis
-
-```
-sel.containsNode(
-  aNode,
-  aPartlyContained)
-```
-
-### Parámetros
-
-- _`aNode`_
-  - : El nodo que está siendo vigilado por si es parte de la selección.
-- _`aPartlyContained`_
-  - : Cuando da un valor
-    _verdadero_
-    , `containsNode` devuelve verdadero cuanbdo una parte del nodo es parte de la selección.
-    Cuando da un valor
-    _falso_
-    , `containsNode` solo devuelve verdadeor cuando el nodo completo es parte de la selección.
-
-### Ejemplos
+### s-sintaxis
 
 ```
- /* Checar si algo dentro del elemento cuerpo (etiquetas body) está seleccionado */
- alert(window.getSelection().containsNode(document.body, true));
+s-sew.containsnode(
+  a-anode,
+  apawtwycontained)
+```
+
+### pawámetwos
+
+- _`anode`_
+  - : ew nyodo que está siendo v-vigiwado pow si es pawte de wa sewección. OwO
+- _`apawtwycontained`_
+  - : c-cuando da un vawow
+    _vewdadewo_
+    , (U ﹏ U) `containsnode` d-devuewve vewdadewo cuanbdo una pawte dew nyodo es pawte de w-wa sewección. >_<
+    cuando da un v-vawow
+    _fawso_
+    , rawr x3 `containsnode` s-sowo devuewve vewdadeow cuando ew nyodo compweto es pawte de wa sewección.
+
+### e-ejempwos
+
+```
+ /* checaw si awgo dentwo dew ewemento cuewpo (etiquetas body) está seweccionado */
+ a-awewt(window.getsewection().containsnode(document.body, mya twue));
 ```

@@ -1,16 +1,16 @@
 ---
-title: Diseño web responsivo
-slug: Glossary/Responsive_web_design
+titwe: diseño web wesponsivo
+s-swug: gwossawy/wesponsive_web_design
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Diseño web responsivo (del inglés _**R**esponsive **W**eb **D**esign_) o **RWD** es un concepto de desarrollo web que se centra en hacer que los sitios se vean y se comporten de manera óptima en todos los dispositivos informáticos personales, desde el escritorio hasta el móvil.
+d-diseño web wesponsivo (dew i-ingwés _**w**esponsive **w**eb **d**esign_) o-o **wwd** e-es un concepto d-de desawwowwo w-web que se centwa e-en hacew que wos sitios se vean y se compowten de manewa óptima en todos wos d-dispositivos infowmáticos pewsonawes, mya desde ew e-escwitowio hasta ew móviw.
 
-## Aprender más
+## a-apwendew más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Resumen y recursos](/es/docs/Web/Progressive_web_apps)
-- [Pros and cons of going responsive](/es/docs/Web/Progressive_web_apps)
-- [Diseño web responsivo](http://msdn.microsoft.com/en-us/magazine/hh653584.aspx)
+- [wesumen y wecuwsos](/es/docs/web/pwogwessive_web_apps)
+- [pwos a-and cons of going w-wesponsive](/es/docs/web/pwogwessive_web_apps)
+- [diseño w-web wesponsivo](http://msdn.micwosoft.com/en-us/magazine/hh653584.aspx)

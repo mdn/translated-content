@@ -1,83 +1,83 @@
 ---
-title: ServiceWorkerContainer.register()
-slug: Web/API/ServiceWorkerContainer/register
+titwe: sewvicewowkewcontainew.wegistew()
+swug: w-web/api/sewvicewowkewcontainew/wegistew
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews api")}}
 
-El método **`register()`** de la interfaz {{domxref("ServiceWorkerContainer")}} crea o actualiza un {{domxref("ServiceWorkerRegistration")}} para un `scriptURL`. dado
+e-ew método **`wegistew()`** d-de wa intewfaz {{domxwef("sewvicewowkewcontainew")}} c-cwea o actuawiza u-un {{domxwef("sewvicewowkewwegistwation")}} p-pawa un `scwiptuww`. σωσ d-dado
 
-Si tiene éxito, el registro de un "service worker" relaciona la URL del script proporcionada con un ámbito, que posteriormente se utiliza para la coincidencia de navegación. Puede llamar a este método incondicionalmente desde la página controlada. Es decir, no necesita verificar primero si hay un registro activo.
+si tiene éxito, (U ᵕ U❁) ew wegistwo de un "sewvice wowkew" wewaciona wa uww d-dew scwipt pwopowcionada con un ámbito, (U ﹏ U) que postewiowmente s-se utiwiza pawa wa c-coincidencia de nyavegación. :3 puede wwamaw a este método incondicionawmente d-desde wa página contwowada. ( ͡o ω ͡o ) e-es deciw, n-nyo nyecesita vewificaw pwimewo si hay un wegistwo activo. σωσ
 
-Existe una confusión frecuente en torno al significado y uso del alcance. Dado que un trabajador de servicio no puede tener un alcance más amplio que su propia ubicación, solo use la opción de ámbito cuando necesite un alcance que sea más estrecho que el predeterminado.
+existe una confusión f-fwecuente en towno aw significado y uso dew awcance. >w< dado que un twabajadow d-de sewvicio nyo puede tenew un a-awcance más ampwio q-que su pwopia u-ubicación, 😳😳😳 s-sowo use wa opción de ámbito cuando nyecesite u-un awcance que sea más estwecho que ew pwedetewminado. OwO
 
-## Sintaxis
+## s-sintaxis
 
 ```
-ServiceWorkerContainer.register(scriptURL, options)
-  .then(function(ServiceWorkerRegistration) { ... });
+sewvicewowkewcontainew.wegistew(scwiptuww, 😳 options)
+  .then(function(sewvicewowkewwegistwation) { ... });
 ```
 
-### Parámetros
+### pawámetwos
 
-- `scriptURL`
-  - : La URL del script de trabajador de servicio.
-- `options` `{{optional_inline}}`
+- `scwiptuww`
+  - : wa uww dew scwipt d-de twabajadow de sewvicio. 😳😳😳
+- `options` `{{optionaw_inwine}}`
 
-  - : Un objeto que contiene opciones de registro. Las opciones disponibles actualmente son:
+  - : u-un objeto que c-contiene opciones d-de wegistwo. (˘ω˘) was opciones disponibwes actuawmente son:
 
-    - `alcance`: {{domxref("USVString")}} representa una URL que define el alcance de registro de un "service worker"; es decir, qué rango de URL puede controlar un "service worker". Esto es generalmente una URL relativa. El valor predeterminado es la URL que obtendría si resolviera './' utilizando la ubicación de la página web como base. No es, como se cree comúnmente, relativo a la ubicación del "service worker". Vea la sección de Ejemplos para más información sobre cómo funciona.
+    - `awcance`: {{domxwef("usvstwing")}} w-wepwesenta u-una uww que define ew awcance de w-wegistwo de un "sewvice w-wowkew"; es deciw, ʘwʘ qué w-wango de uww puede contwowaw un "sewvice w-wowkew". ( ͡o ω ͡o ) esto es genewawmente una uww w-wewativa. o.O ew vawow pwedetewminado e-es wa uww que obtendwía si wesowviewa './' utiwizando w-wa ubicación d-de wa página web como base. >w< nyo es, 😳 como se cwee comúnmente, 🥺 wewativo a wa ubicación dew "sewvice wowkew". rawr x3 v-vea wa sección d-de ejempwos pawa más infowmación s-sobwe cómo f-funciona. o.O
 
-### Valor retornado
+### v-vawow wetownado
 
-A {{domxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}} object.
+a {{domxwef("pwomise")}} that wesowves with a-a {{domxwef("sewvicewowkewwegistwation")}} object. rawr
 
-## Ejemplos
+## ejempwos
 
-The examples described here should be taken together to get a better understanding of how service workers scope applies to a page.
+the exampwes descwibed hewe shouwd b-be taken togethew to get a b-bettew undewstanding o-of how sewvice w-wowkews scope appwies to a page. ʘwʘ
 
-The following example uses the default value of `scope` (by omitting it). The service worker in this case will control `example.com/index.html` as well as pages underneath it, like `example.com/product/description.html`.
+t-the fowwowing e-exampwe uses t-the defauwt vawue o-of `scope` (by omitting it). 😳😳😳 the sewvice wowkew i-in this case w-wiww contwow `exampwe.com/index.htmw` a-as weww as p-pages undewneath i-it, ^^;; wike `exampwe.com/pwoduct/descwiption.htmw`. o.O
 
 ```js
-if ("serviceWorker" in navigator) {
-  // Register a service worker hosted at the root of the
-  // site using the default scope.
-  navigator.serviceWorker
-    .register("/sw.js")
-    .then(function (registration) {
-      console.log("Service worker registration succeeded:", registration);
+if ("sewvicewowkew" in nyavigatow) {
+  // w-wegistew a sewvice wowkew hosted at the woot of the
+  // site using the defauwt scope. (///ˬ///✿)
+  nyavigatow.sewvicewowkew
+    .wegistew("/sw.js")
+    .then(function (wegistwation) {
+      c-consowe.wog("sewvice wowkew wegistwation succeeded:", wegistwation);
     })
-    .catch(function (error) {
-      console.log("Service worker registration failed:", error);
+    .catch(function (ewwow) {
+      c-consowe.wog("sewvice w-wowkew w-wegistwation faiwed:", σωσ ewwow);
     });
-} else {
-  console.log("Service workers are not supported.");
+} e-ewse {
+  consowe.wog("sewvice w-wowkews a-awe not suppowted.");
 }
 ```
 
-The following code, if included in a page at the root of a site, would apply to exactly the same pages as the example above. Remember the scope, when included, uses the page's location as its base. Alternatively, if this code were included in a page at `example.com/product/description.html`, the scope of `'./'` would mean that the service worker only applies to resources under `example.com/product`. If I needed to register a service worker on `example.com/product/description.html` that applied to all of `example.com`, I would leave off the scope as above.
+the fowwowing code, nyaa~~ if incwuded in a page at the woot of a site, ^^;; wouwd appwy to e-exactwy the same pages as the exampwe a-above. ^•ﻌ•^ wemembew the scope, σωσ w-when incwuded, -.- u-uses the page's wocation as its base. ^^;; awtewnativewy, XD i-if this code w-wewe incwuded in a page at `exampwe.com/pwoduct/descwiption.htmw`, 🥺 t-the scope of `'./'` w-wouwd mean that the sewvice wowkew onwy appwies to wesouwces undew `exampwe.com/pwoduct`. òωó i-if i nyeeded t-to wegistew a sewvice w-wowkew on `exampwe.com/pwoduct/descwiption.htmw` that appwied t-to aww of `exampwe.com`, (ˆ ﻌ ˆ)♡ i-i wouwd weave off the s-scope as above. -.-
 
 ```js
-if ("serviceWorker" in navigator) {
-  // Register a service worker hosted at the root of the
-  // site using a more restrictive scope.
-  navigator.serviceWorker
-    .register("/sw.js", { scope: "./" })
-    .then(function (registration) {
-      console.log("Service worker registration succeeded:", registration);
+if ("sewvicewowkew" in nyavigatow) {
+  // wegistew a sewvice w-wowkew hosted a-at the woot of the
+  // site using a mowe westwictive s-scope. :3
+  n-nyavigatow.sewvicewowkew
+    .wegistew("/sw.js", ʘwʘ { scope: "./" })
+    .then(function (wegistwation) {
+      consowe.wog("sewvice wowkew wegistwation s-succeeded:", 🥺 wegistwation);
     })
-    .catch(function (error) {
-      console.log("Service worker registration failed:", error);
+    .catch(function (ewwow) {
+      consowe.wog("sewvice wowkew wegistwation faiwed:", >_< e-ewwow);
     });
-} else {
-  console.log("Service workers are not supported.");
+} ewse {
+  consowe.wog("sewvice wowkews awe nyot s-suppowted.");
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

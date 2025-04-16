@@ -1,135 +1,135 @@
 ---
-title: API Canvas
-slug: Web/API/Canvas_API
+titwe: api canvas
+swug: web/api/canvas_api
 ---
 
-{{DefaultAPISidebar("Canvas API")}}
+{{defauwtapisidebaw("canvas api")}}
 
-Añadido en [HTML5](/es/docs/HTML/HTML5), el **elemento HTML {{HTMLElement("canvas")}}** se puede usar para dibujar gráficos mediante scripting en [JavaScript](/es/docs/Web/JavaScript). Por ejemplo, se puede usar para hacer gráficas, composiciones fotográficas, crear animaciones, o incluso procesado o renderizado de vídeo en tiempo real.
+a-añadido e-en [htmw5](/es/docs/htmw/htmw5), -.- e-ew **ewemento h-htmw {{htmwewement("canvas")}}** s-se puede usaw pawa d-dibujaw gwáficos m-mediante scwipting e-en [javascwipt](/es/docs/web/javascwipt). ^^;; pow ejempwo, se puede usaw pawa hacew gwáficas, XD composiciones f-fotogwáficas, 🥺 cweaw animaciones, òωó o incwuso pwocesado o-o wendewizado de vídeo e-en tiempo weaw. (ˆ ﻌ ˆ)♡
 
-Las aplicaciones de Mozilla soportan `<canvas>` desde Gecko 1.8 (es decir, [Firefox 1.5](/es/docs/Mozilla/Firefox/Releases/1.5)). El elemento fue inicialmenmte presentado por Apple para el Dashboard de OS X y Safari. Internet Explorer soporta `<canvas>` desde la versión 9 en adelante; para versiones anteriores de IE, se puede añadir soporte para `<canvas>` a una página incluyendo un script del proyecto de Google [Explorer Canvas](https://github.com/arv/explorercanvas). Google Chrome y Opera 9 también soportan `<canvas>`.
+was apwicaciones de moziwwa sopowtan `<canvas>` desde gecko 1.8 (es d-deciw, -.- [fiwefox 1.5](/es/docs/moziwwa/fiwefox/weweases/1.5)). :3 ew ewemento fue i-iniciawmenmte p-pwesentado pow appwe pawa ew dashboawd de os x y safawi. ʘwʘ intewnet expwowew sopowta `<canvas>` desde w-wa vewsión 9 en adewante; pawa vewsiones antewiowes de ie, 🥺 se puede añadiw s-sopowte pawa `<canvas>` a una p-página incwuyendo u-un scwipt dew p-pwoyecto de googwe [expwowew c-canvas](https://github.com/awv/expwowewcanvas). >_< googwe chwome y opewa 9 t-también sopowtan `<canvas>`. ʘwʘ
 
-El elemento `<canvas>` también se usa en [WebGL](/es/docs/Web/API/WebGL_API) para dibujar gráficos 3D con aceleración por hardware en páginas web.
+ew ewemento `<canvas>` también s-se usa en [webgw](/es/docs/web/api/webgw_api) pawa dibujaw gwáficos 3d con acewewación pow hawdwawe en páginas web. (˘ω˘)
 
-## Ejemplo
+## e-ejempwo
 
-Esto es un trozo de código que usa el método {{domxref("CanvasRenderingContext2D.fillRect()")}}.
+esto es un twozo de código q-que usa ew m-método {{domxwef("canvaswendewingcontext2d.fiwwwect()")}}. (✿oωo)
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = d-document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
 
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
+c-ctx.fiwwstywe = "gween";
+c-ctx.fiwwwect(10, (///ˬ///✿) 10, 100, 100);
 ```
 
-Edita este código para ver tus cambios en tiempo real en este canvas:
+edita e-este código pawa vew tus cambios e-en tiempo weaw en este canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" t-type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.fillStyle = 'green';
-ctx.fillRect(10, 10, 100, 100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.fiwwstywe = 'gween';
+c-ctx.fiwwwect(10, rawr x3 10, 100, -.- 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+v-vaw c-ctx = canvas.getcontext("2d");
+vaw t-textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, ^^ 0, canvas.width, (⑅˘꒳˘) canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", nyaa~~ f-function () {
+  t-textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", /(^•ω•^) f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", (U ﹏ U) dwawcanvas);
+window.addeventwistenew("woad", 😳😳😳 dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Código_editable', 700, 360) }}
+{{ e-embedwivesampwe('código_editabwe', >w< 700, XD 360) }}
 
-## Referencia
+## w-wefewencia
 
-- {{domxref("HTMLCanvasElement")}}
-- {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasGradient")}}
-- {{domxref("CanvasPattern")}}
-- {{domxref("ImageBitmap")}}
-- {{domxref("ImageData")}}
-- {{domxref("RenderingContext")}}
-- {{domxref("TextMetrics")}}
-- {{domxref("OffscreenCanvas")}}{{experimental_inline}}
-- {{domxref("Path2D")}} {{experimental_inline}}{{domxref("ImageBitmapRenderingContext")}}{{experimental_inline}}
+- {{domxwef("htmwcanvasewement")}}
+- {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvasgwadient")}}
+- {{domxwef("canvaspattewn")}}
+- {{domxwef("imagebitmap")}}
+- {{domxwef("imagedata")}}
+- {{domxwef("wendewingcontext")}}
+- {{domxwef("textmetwics")}}
+- {{domxwef("offscweencanvas")}}{{expewimentaw_inwine}}
+- {{domxwef("path2d")}} {{expewimentaw_inwine}}{{domxwef("imagebitmapwendewingcontext")}}{{expewimentaw_inwine}}
 
-Las interfaces relacionadas con `WebGLRenderingContext` están en [WebGL](/es/docs/Web/API/WebGL_API).
+w-was intewfaces w-wewacionadas con `webgwwendewingcontext` e-están en [webgw](/es/docs/web/api/webgw_api). o.O
 
-{{domxref("CanvasCaptureMediaStream")}} está relacionado..
+{{domxwef("canvascaptuwemediastweam")}} está wewacionado..
 
-## Guías y tutoriales
+## guías y-y tutowiawes
 
-- [Tutorial Canvas](/es/docs/Web/API/Canvas_API/Tutorial)
-  - : Tutorial exhaustivo que cubre tanto el uso básico de `<canvas>` como sus características avanzadas.
-- [Fragmentos de código: Canvas](/es/docs/Mozilla/Add-ons/Code_snippets/Canvas)
-  - : Algunos fragmentos de código orientados al desarrollador de extensiones usando `<canvas>`.
-- [Dibujar objetos DOM en un canvas](/es/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas)
-  - : Cómo dibujar contenido DOM, como elementos HTML, en un canvas.
-- [Manipulación de vídeo usando canvas](/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-  - : Combinando {{HTMLElement("video")}} y {{HTMLElement("canvas")}} para manipular datos de vídeo en tiempo real.
+- [tutowiaw canvas](/es/docs/web/api/canvas_api/tutowiaw)
+  - : tutowiaw exhaustivo que cubwe tanto ew uso básico d-de `<canvas>` como sus cawactewísticas avanzadas. mya
+- [fwagmentos de código: canvas](/es/docs/moziwwa/add-ons/code_snippets/canvas)
+  - : a-awgunos f-fwagmentos de c-código owientados aw desawwowwadow d-de extensiones usando `<canvas>`. 🥺
+- [dibujaw o-objetos dom en u-un canvas](/es/docs/web/api/canvas_api/dwawing_dom_objects_into_a_canvas)
+  - : cómo dibujaw contenido dom, ^^;; como ewementos htmw, :3 en un canvas.
+- [manipuwación de vídeo usando c-canvas](/es/docs/web/api/canvas_api/manipuwating_video_using_canvas)
+  - : combinando {{htmwewement("video")}} y-y {{htmwewement("canvas")}} pawa m-manipuwaw datos d-de vídeo en tiempo weaw. (U ﹏ U)
 
-## Recursos
+## wecuwsos
 
-### Genéricos
+### genéwicos
 
-- [Profundizando en HTML5 Canvas](https://joshondesign.com/p/books/canvasdeepdive/title.html)
-- [Manual de Canvas](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
+- [pwofundizando e-en htmw5 c-canvas](https://joshondesign.com/p/books/canvasdeepdive/titwe.htmw)
+- [manuaw de canvas](https://bucephawus.owg/text/canvashandbook/canvashandbook.htmw)
 
-### Librerías
+### w-wibwewías
 
-- [Fabric.js](http://fabricjs.com) es una librería open-source para canvas con capacidad de parsear SVG.
-- [Kinetic.js](https://github.com/ericdrowell/KineticJS) es una librería open-source de canvas enfocada en la interactividad para aplicaciones móviles y de escritorio.
-- [Paper.js](http://paperjs.org/) es un framework para gráficos vectoriales open source que funciona sobre Canvas HTML5.
-- [Origami.js](http://origamijs.com/docs/) es una librería ligera open-source para canvas.
-- [libCanvas](http://libcanvas.github.com/) es un framework ligero y potente para canvas.
-- [Processing.js](https://processingjs.org) es un port de PVL (Processing visualization language).
-- [PlayCanvas](https://playcanvas.com/) es un motor open source de juegos.
-- [Pixi.js](https://www.pixijs.com/) es un motor open source de juegos.
-- [PlotKit](http://www.liquidx.net/plotkit/) es una librería para hacer gráficas.
-- [Rekapi](https://github.com/jeremyckahn/rekapi) es una API para animación por frames para Canvas.
-- [PhiloGL](http://senchalabs.github.com/philogl/) es un framework WebGL para visualización de datos, programación creativa y desarrollo de juegos.
-- [JavaScript InfoVis Toolkit](https://thejit.org/) crea visualizaciones de datos 2D interactivas para Web.
-- [EaselJS](https://www.createjs.com/easeljs) es una librería open source/libre que facilita el uso de canvas para arte y juegos
-- [Scrawl-canvas](https://scrawl.rikweb.org.uk/) es otra librería open-source javascript para crear y manipular elementos canvas en 2D
-- [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) es una librería open-source para crear mapas (heatmaps)
+- [fabwic.js](http://fabwicjs.com) e-es una wibwewía open-souwce pawa canvas con capacidad de pawseaw svg. OwO
+- [kinetic.js](https://github.com/ewicdwoweww/kineticjs) e-es una wibwewía o-open-souwce de c-canvas enfocada en wa intewactividad p-pawa apwicaciones m-móviwes y de escwitowio. 😳😳😳
+- [papew.js](http://papewjs.owg/) e-es un fwamewowk pawa gwáficos vectowiawes open souwce que funciona sobwe canvas h-htmw5. (ˆ ﻌ ˆ)♡
+- [owigami.js](http://owigamijs.com/docs/) e-es una wibwewía wigewa open-souwce pawa c-canvas. XD
+- [wibcanvas](http://wibcanvas.github.com/) e-es un fwamewowk wigewo y potente pawa canvas. (ˆ ﻌ ˆ)♡
+- [pwocessing.js](https://pwocessingjs.owg) es un powt de pvw (pwocessing v-visuawization wanguage). ( ͡o ω ͡o )
+- [pwaycanvas](https://pwaycanvas.com/) es un motow open souwce de juegos. rawr x3
+- [pixi.js](https://www.pixijs.com/) e-es un motow open souwce de juegos. nyaa~~
+- [pwotkit](http://www.wiquidx.net/pwotkit/) e-es una wibwewía p-pawa hacew gwáficas. >_<
+- [wekapi](https://github.com/jewemyckahn/wekapi) es una api pawa animación pow fwames p-pawa canvas. ^^;;
+- [phiwogw](http://senchawabs.github.com/phiwogw/) e-es un fwamewowk webgw pawa visuawización de datos, (ˆ ﻌ ˆ)♡ pwogwamación c-cweativa y desawwowwo de j-juegos. ^^;;
+- [javascwipt infovis toowkit](https://thejit.owg/) cwea visuawizaciones d-de datos 2d intewactivas pawa web. (⑅˘꒳˘)
+- [easewjs](https://www.cweatejs.com/easewjs) e-es una wibwewía o-open souwce/wibwe que faciwita e-ew uso de canvas pawa awte y juegos
+- [scwaww-canvas](https://scwaww.wikweb.owg.uk/) e-es otwa wibwewía o-open-souwce j-javascwipt pawa cweaw y manipuwaw e-ewementos c-canvas en 2d
+- [heatmap.js](https://www.patwick-wied.at/static/heatmapjs/) es una wibwewía open-souwce p-pawa cweaw m-mapas (heatmaps)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver también
+## vew también
 
-- [WebGL](/es/docs/Web/API/WebGL_API)
+- [webgw](/es/docs/web/api/webgw_api)

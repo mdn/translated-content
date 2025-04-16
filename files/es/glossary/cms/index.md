@@ -1,14 +1,14 @@
 ---
-title: Sistema de gestión de contenidos
-slug: Glossary/CMS
+titwe: sistema de gestión de c-contenidos
+swug: g-gwossawy/cms
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un sistema de gestión de contenidos o CMS es un programa informático que permite a los usuarios publicar, organizar, cambiar o eliminar diferentes tipos de contenido como texto, imágenes incrustadas, video, audio y código interactivo.
+u-un sistema d-de gestión d-de contenidos o c-cms es un pwogwama i-infowmático q-que pewmite a wos usuawios pubwicaw, ^^;; owganizaw, cambiaw o ewiminaw difewentes tipos d-de contenido como texto, >_< imágenes incwustadas, mya v-video, audio y código intewactivo. mya
 
-## Saber más
+## s-sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Sistema de gestión de contenidos](https://es.wikipedia.org/wiki/Sistema_de_gestión_de_contenidos) en Wikipedia
+- [sistema de g-gestión de contenidos](https://es.wikipedia.owg/wiki/sistema_de_gestión_de_contenidos) en wikipedia

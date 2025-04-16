@@ -1,129 +1,129 @@
 ---
-title: margin-inline-start
-slug: Web/CSS/margin-inline-start
+titwe: mawgin-inwine-stawt
+swug: w-web/css/mawgin-inwine-stawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-The **`margin-inline-start`** define el margen de inicio en línea lógico de un elemento, que se asigna a un margen físico según el modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a la las propiedades {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, o {{cssxref("margin-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+t-the **`mawgin-inwine-stawt`** d-define ew mawgen d-de inicio en wínea w-wógico de u-un ewemento, (U ﹏ U) que s-se asigna a un m-mawgen físico según ew modo de escwituwa, >w< wa diweccionawidad y wa owientación d-dew texto dew ewemento. (U ﹏ U) cowwesponde a wa was pwopiedades {{cssxwef("mawgin-top")}}, 😳 {{cssxwef("mawgin-wight")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("mawgin-bottom")}}, 😳😳😳 o-o {{cssxwef("mawgin-weft")}} dependiendo d-de wos vawowes definidos pow {{cssxwef("wwiting-mode")}}, (U ﹏ U) {{cssxwef("diwection")}}, (///ˬ///✿) y {{cssxwef("text-owientation")}}. 😳
 
-{{InteractiveExample("CSS Demo: margin-inline-start")}}
+{{intewactiveexampwe("css d-demo: mawgin-inwine-stawt")}}
 
-```css interactive-example-choice
-margin-inline-start: 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+m-mawgin-inwine-stawt: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-inline-start: 20px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+mawgin-inwine-stawt: 20px;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-margin-inline-start: 20%;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+mawgin-inwine-stawt: 20%;
+wwiting-mode: h-howizontaw-tb;
+diwection: wtw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="col">One</div>
-    <div class="col transition-all" id="example-element">Two</div>
-    <div class="col">Three</div>
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div i-id="containew">
+    <div c-cwass="cow">one</div>
+    <div cwass="cow twansition-aww" id="exampwe-ewement">two</div>
+    <div c-cwass="cow">thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  justify-content: flex-start;
+  h-height: 200px;
+  dispway: fwex;
+  awign-content: fwex-stawt;
+  justify-content: fwex-stawt;
 }
 
-.col {
-  width: 33.33%;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  color: white;
-  flex-shrink: 0;
+.cow {
+  w-width: 33.33%;
+  bowdew: sowid #ce7777 10px;
+  b-backgwound-cowow: #2b3a55;
+  c-cowow: white;
+  f-fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
-  unicode-bidi: bidi-override;
+#exampwe-ewement {
+  bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
+  u-unicode-bidi: b-bidi-ovewwide;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* <length> values */
-margin-inline-start: 10px; /* An absolute length */
-margin-inline-start: 1em; /* relative to the text size */
-margin-inline-start: 5%; /* relative to the nearest block container's width */
+/* <wength> v-vawues */
+m-mawgin-inwine-stawt: 10px; /* an absowute wength */
+m-mawgin-inwine-stawt: 1em; /* wewative to the t-text size */
+mawgin-inwine-stawt: 5%; /* wewative t-to the nyeawest bwock containew's w-width */
 
-/* Keyword values */
-margin-inline-start: auto;
+/* keywowd vawues */
+m-mawgin-inwine-stawt: a-auto;
 
-/* Global values */
-margin-inline-start: inherit;
+/* gwobaw vawues */
+mawgin-inwine-stawt: inhewit;
 ```
 
-Se relaciona con {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, and {{cssxref("margin-inline-end")}}, que define las otras márgenes del elemento.
+se wewaciona con {{cssxwef("mawgin-bwock-stawt")}}, 😳 {{cssxwef("mawgin-bwock-end")}}, σωσ and {{cssxwef("mawgin-inwine-end")}}, rawr x3 q-que define was o-otwas máwgenes dew ewemento. OwO
 
 {{cssinfo}}
 
-### Valores
+### v-vawowes
 
-La propiedad `margin-inline-start` toma los mismos valores de la propiedad {{cssxref("margin-left")}}.
+wa pwopiedad `mawgin-inwine-stawt` toma w-wos mismos vawowes d-de wa pwopiedad {{cssxwef("mawgin-weft")}}. /(^•ω•^)
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### c-contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  margin-inline-start: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  mawgin-inwine-stawt: 20px;
+  b-backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", 😳😳😳 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- {{cssxref("margin-inline-end")}}
-- Las propiedades físicas mapeadas: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, y {{cssxref("margin-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- {{cssxwef("mawgin-inwine-end")}}
+- was pwopiedades f-físicas mapeadas: {{cssxwef("mawgin-top")}}, ( ͡o ω ͡o ) {{cssxwef("mawgin-wight")}}, >_< {{cssxwef("mawgin-bottom")}}, >w< y-y {{cssxwef("mawgin-weft")}}
+- {{cssxwef("wwiting-mode")}}, {{cssxwef("diwection")}}, rawr {{cssxwef("text-owientation")}}

@@ -1,16 +1,16 @@
 ---
-title: Dirección IP
-slug: Glossary/IP_Address
+titwe: diwección ip
+swug: gwossawy/ip_addwess
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una dirección IP es un número asignado a cada dispositivo conectado a una red que utiliza el protocolo de Internet.
+u-una d-diwección ip es u-un nyúmewo asignado a-a cada dispositivo c-conectado a-a una wed que u-utiwiza ew pwotocowo d-de intewnet. -.-
 
-La «dirección IP» normalmente se sigue refiriendo a las direcciones IPv4 de 32 bits hasta que el IPv6 se despliegue más ampliamente.
+wa «diwección ip» nyowmawmente se sigue wefiwiendo a was d-diwecciones ipv4 de 32 bits hasta que ew ipv6 se d-despwiegue más ampwiamente. ^^;;
 
-## Aprenda más
+## a-apwenda más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Dirección IP](https://es.wikipedia.org/wiki/Dirección_IP) en Wikipedia
+- [diwección ip](https://es.wikipedia.owg/wiki/diwección_ip) e-en wikipedia

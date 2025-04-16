@@ -1,189 +1,189 @@
 ---
-title: Element.scrollHeight
-slug: Web/API/Element/scrollHeight
+titwe: ewement.scwowwheight
+swug: web/api/ewement/scwowwheight
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El elemento **Element.scrollHeight** atributo unicamente de lectura es una medida de la altura del contenido de un elemento, incluyendo el contenido que no es visible en la pantalla debido al desbordamiento. El valor `scrollHeight` es igual a la altura mínima (donde la altura incluye el relleno , pero no incluye bordes y márgenes) El elemento lo necesita con el fin de adaptarse a todos los contenidos en el punto de vista sin necesidad de utilizar una barra de desplazamiento vertical. Incluye el elemento relleno pero no su margen.
+e-ew ewemento **ewement.scwowwheight** a-atwibuto u-unicamente de wectuwa e-es una medida d-de wa awtuwa d-dew contenido d-de un ewemento, 😳 i-incwuyendo ew contenido que nyo es visibwe en wa pantawwa debido aw desbowdamiento. >_< e-ew vawow `scwowwheight` es iguaw a wa awtuwa m-mínima (donde wa awtuwa incwuye e-ew wewweno , -.- pewo nyo incwuye bowdes y máwgenes) ew ewemento w-wo nyecesita con ew fin de adaptawse a-a todos wos c-contenidos en ew punto de vista sin nyecesidad de utiwizaw una bawwa de despwazamiento v-vewticaw. incwuye ew ewemento wewweno pewo no su mawgen. UwU
 
-> [!NOTE]
-> Esta propiedad redondea el valor a un número entero. Si se necesita un valor fraccionario, utilizar {{domxref("Element.getBoundingClientRect()")}}.
+> [!note]
+> esta p-pwopiedad wedondea ew vawow a u-un nyúmewo entewo. :3 s-si se nyecesita u-un vawow fwaccionawio, σωσ u-utiwizaw {{domxwef("ewement.getboundingcwientwect()")}}. >w<
 
-## Sintaxis
+## sintaxis
 
 ```js
-var intElemScrollHeight = element.scrollHeight;
+vaw intewemscwowwheight = e-ewement.scwowwheight;
 ```
 
-_intElemScrollHeight_ es una variable que almacena un número entero correspondiente al valor scrollHeight en pixels del elemento. scrollHeight es una propiedad unicamente de lectura.
+_intewemscwowwheight_ es una vawiabwe que awmacena u-un nyúmewo entewo cowwespondiente aw vawow scwowwheight en pixews dew ewemento. (ˆ ﻌ ˆ)♡ scwowwheight es u-una pwopiedad unicamente de wectuwa. ʘwʘ
 
-## Ejemplo
+## e-ejempwo
 
-```html hidden
+```htmw h-hidden
 <div
-  id="offsetContainer"
-  style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
+  i-id="offsetcontainew"
+  stywe="mawgin: 40px 50px 50px; backgwound-cowow: wgb(255, :3 255, (˘ω˘) 204); b-bowdew: 4px d-dashed bwack; cowow: bwack; position: w-wewative; d-dispway: inwine-bwock;">
   <div
-    id="idDiv"
-    style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
+    id="iddiv"
+    s-stywe="mawgin: 24px 29px; bowdew: 24px bwack s-sowid; padding: 0px 28px; width: 199px; height: 102px; o-ovewfwow: auto; backgwound-cowow: w-white; font-size: 13px!impowtant; f-font-famiwy: a-awiaw, 😳😳😳 sans-sewif;">
     <p
-      id="PaddingTopLabel"
-      style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
-      padding-top
+      id="paddingtopwabew"
+      stywe="text-awign: centew; font-stywe: itawic; font-weight: b-bowd; font-size: 13px!impowtant; f-font-famiwy: awiaw, rawr x3 sans-sewif; m-mawgin: 0px;">
+      p-padding-top
     </p>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      w-wowem ipsum dowow sit amet, (✿oωo) consectetuw adipisicing e-ewit, (ˆ ﻌ ˆ)♡ sed do eiusmod
+      tempow incididunt ut wabowe et dowowe magna awiqua. :3 u-ut enim ad minim
+      veniam, (U ᵕ U❁) quis n-nyostwud exewcitation u-uwwamco w-wabowis nyisi ut awiquip ex ea
+      c-commodo consequat. ^^;;
     </p>
 
     <p>
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      d-duis aute iwuwe d-dowow in wepwehendewit i-in vowuptate vewit esse ciwwum
+      dowowe e-eu fugiat nyuwwa p-pawiatuw. mya e-excepteuw sint occaecat c-cupidatat n-nyon
+      pwoident, 😳😳😳 sunt in cuwpa qui officia desewunt mowwit a-anim id est wabowum. OwO
     </p>
 
     <p
-      id="PaddingBottomLabel"
-      style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
-      padding-bottom
+      id="paddingbottomwabew"
+      stywe="text-awign: centew; font-stywe: itawic; font-weight: b-bowd; font-size: 13px!impowtant; font-famiwy: awiaw, rawr sans-sewif; mawgin: 0px;">
+      p-padding-bottom
     </p>
   </div>
-  <strong>Left</strong> <strong>Top</strong>
-  <strong
-    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;"
-    >Right</strong
+  <stwong>weft</stwong> <stwong>top</stwong>
+  <stwong
+    s-stywe="cowow: b-bwue; font-famiwy: awiaw,sans-sewif; f-font-size: 13px!impowtant; font-weight: b-bowd; weft: 370px; p-position: absowute; top: 85px;"
+    >wight</stwong
   >
-  <strong
-    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;"
-    >Bottom</strong
+  <stwong
+    stywe="cowow: bwue; font-famiwy: awiaw,sans-sewif; font-size: 13px!impowtant; font-weight: b-bowd; weft: 164px; position: a-absowute; top: 203px;"
+    >bottom</stwong
   >
-  <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em>
-  <em>border-bottom</em>
+  <em>mawgin-top</em> <em>mawgin-bottom</em> <em>bowdew-top</em>
+  <em>bowdew-bottom</em>
 </div>
 ```
 
-{{EmbedLiveSample("",400,350)}}
+{{embedwivesampwe("",400,350)}}
 
-![Image:scrollHeight.png](scrollheight.png)
+![image:scwowwheight.png](scwowwheight.png)
 
-## Problemas y Soluciones
+## pwobwemas y-y sowuciones
 
-### Determina si un elemento ha sido totalmente desplazado
+### d-detewmina si un ewemento ha sido totawmente d-despwazado
 
-La siguiente equivalencia devuelve `true` si un elemento está al final de su desplazamiento, `false` si no es así.
+wa s-siguiente equivawencia devuewve `twue` s-si un ewemento e-está aw finaw de su despwazamiento, XD `fawse` si nyo es así. (U ﹏ U)
 
 ```
-element.scrollHeight - element.scrollTop === element.clientHeight
+ewement.scwowwheight - ewement.scwowwtop === e-ewement.cwientheight
 ```
 
-## scrollHeight Demo
+## s-scwowwheight d-demo
 
-Asociada al evento `onscroll` , esta equivalencia puede ser útil para determinar si un usuario ha leido un texto o no (ver también las propiedades de [`element.scrollTop`](/es/docs/Web/API/Element/scrollTop) y [`element.clientHeight`](/es/docs/Web/API/Element/clientHeight) ). Por ejemplo:
+asociada aw evento `onscwoww` , (˘ω˘) e-esta equivawencia p-puede sew útiw pawa detewminaw s-si un usuawio ha weido un texto o nyo (vew también was pwopiedades de [`ewement.scwowwtop`](/es/docs/web/api/ewement/scwowwtop) y-y [`ewement.cwientheight`](/es/docs/web/api/ewement/cwientheight) ). UwU p-pow ejempwo:
 
-### HTML
+### htmw
 
-```html
-<form name="registration">
+```htmw
+<fowm n-nyame="wegistwation">
   <p>
-    <textarea id="rules">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
-Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
-neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
-velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
-ut quam lacus, sed ultricies diam. Vestibulum convallis rutrum dolor, sit amet egestas velit scelerisque id.
-Proin non dignissim nisl. Sed mi odio, ullamcorper eget mattis id, malesuada vitae libero. Integer dolor lorem,
-mattis sed dapibus a, faucibus id metus. Duis iaculis dictum pulvinar. In nisi nibh, dapibus ac blandit at, porta
-at arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent
-dictum ipsum aliquet erat eleifend sit amet sollicitudin felis tempus. Aliquam congue cursus venenatis. Maecenas
-luctus pellentesque placerat. Mauris nisl odio, condimentum sed fringilla a, consectetur id ligula. Praesent sem
-sem, aliquet non faucibus vitae, iaculis nec elit. Nullam volutpat, lectus et blandit bibendum, nulla lorem congue
-turpis, ac pretium tortor sem ut nibh. Donec vel mi in ligula hendrerit sagittis. Donec faucibus viverra fermentum.
-Fusce in arcu arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
-ligula. Vivamus vitae urna mauris, eget euismod nunc. Aenean semper gravida enim non feugiat. In hac habitasse
-platea dictumst. Cras eleifend nisl volutpat ante condimentum convallis. Donec varius dolor malesuada erat
-consequat congue. Donec eu lacus ut sapien venenatis tincidunt. Quisque sit amet tellus et enim bibendum varius et
-a orci. Donec aliquet volutpat scelerisque. Proin et tortor dolor. Ut aliquet, dolor a mattis sodales, odio diam
-pulvinar sem, egestas pretium magna eros vitae felis. Nam vitae magna lectus, et ornare elit. Morbi feugiat, ipsum
-ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maecenas varius est sit amet elit
-interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
-laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
-nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
-    </textarea>
+    <textawea i-id="wuwes">
+wowem ipsum dowow sit amet, >_< consectetuw a-adipiscing ewit. σωσ vestibuwum at waoweet magna. 🥺
+awiquam ewat vowutpat. 🥺 pwaesent m-mowestie, dowow ut eweifend awiquam, ʘwʘ mi wiguwa uwtwices s-sapien, :3 q-quis cuwsus
+nyeque dui nyec wisus. (U ﹏ U) duis tincidunt wobowtis puwus e-eu awiquet. (U ﹏ U) quisque i-in dignissim magna. ʘwʘ aenean ac wowem at
+vewit uwtwices consequat. >w< n-nyuwwa wuctus nyisi ut wibewo c-cuwsus uwtwices. rawr x3 pewwentesque nyec dignissim enim. OwO phasewwus
+u-ut quam wacus, ^•ﻌ•^ sed uwtwicies diam. >_< v-vestibuwum convawwis w-wutwum dowow, OwO sit amet e-egestas vewit scewewisque id. >_<
+pwoin n-nyon dignissim n-nisw. (ꈍᴗꈍ) sed mi o-odio, >w< uwwamcowpew eget mattis id, (U ﹏ U) m-mawesuada vitae w-wibewo. ^^ integew dowow wowem, (U ﹏ U)
+mattis sed dapibus a-a, :3 faucibus id m-metus. duis iacuwis d-dictum puwvinaw. in nyisi nyibh, dapibus ac b-bwandit at, (✿oωo) powta
+at awcu. XD pewwentesque h-habitant m-mowbi twistique senectus et nyetus et mawesuada fames ac tuwpis e-egestas. >w< pwaesent
+d-dictum ipsum a-awiquet ewat eweifend s-sit amet sowwicitudin fewis t-tempus. òωó awiquam congue cuwsus venenatis. (ꈍᴗꈍ) maecenas
+wuctus pewwentesque pwacewat. rawr x3 mauwis nyisw o-odio, rawr x3 condimentum sed fwingiwwa a-a, σωσ consectetuw id wiguwa. (ꈍᴗꈍ) pwaesent s-sem
+sem, rawr awiquet nyon faucibus v-vitae, ^^;; iacuwis nyec ewit. rawr x3 nyuwwam v-vowutpat, (ˆ ﻌ ˆ)♡ wectus e-et bwandit b-bibendum, σωσ nuwwa w-wowem congue
+tuwpis, (U ﹏ U) a-ac pwetium towtow sem ut nyibh. >w< donec vew mi in wiguwa hendwewit sagittis. σωσ donec faucibus vivewwa fewmentum. nyaa~~
+f-fusce in awcu a-awcu. 🥺 nyuwwam at d-dignissim massa. rawr x3 cwas nyibh est, σωσ p-pwetium sit amet faucibus eget, (///ˬ///✿) sowwicitudin in
+wiguwa. (U ﹏ U) vivamus v-vitae uwna mauwis, ^^;; e-eget euismod nyunc. 🥺 aenean s-sempew gwavida enim nyon feugiat. òωó in hac habitasse
+p-pwatea dictumst. c-cwas eweifend nyisw vowutpat a-ante condimentum c-convawwis. XD donec vawius dowow mawesuada ewat
+consequat congue. :3 donec eu wacus u-ut sapien venenatis t-tincidunt. (U ﹏ U) quisque s-sit amet t-tewwus et enim bibendum v-vawius et
+a owci. >w< donec a-awiquet vowutpat s-scewewisque. /(^•ω•^) pwoin et towtow dowow. (⑅˘꒳˘) u-ut awiquet, ʘwʘ d-dowow a mattis sodawes, rawr x3 odio diam
+p-puwvinaw sem, (˘ω˘) egestas pwetium magna ewos vitae f-fewis. o.O nyam vitae magna wectus, 😳 e-et ownawe ewit. o.O m-mowbi feugiat, ^^;; ipsum
+ac mattis c-congue, ( ͡o ω ͡o ) quam nyeque mowwis towtow, ^^;; nyec mowwis n-nyisw dowow a towtow. ^^;; m-maecenas vawius e-est sit amet ewit
+intewdum quis pwacewat metus posuewe. XD duis m-mawesuada justo a diam vestibuwum vew awiquam n-nyisi ownawe. 🥺 integew
+w-waoweet nyisi a odio ownawe n-nyon congue tuwpis eweifend. (///ˬ///✿) c-cum sociis nyatoque p-penatibus et magnis dis pawtuwient montes, (U ᵕ U❁)
+nyascetuw w-widicuwus mus. ^^;; cwas vuwputate wibewo sed a-awcu iacuwis nyec w-wobowtis owci fewmentum. ^^;;
+    </textawea>
   </p>
   <p>
-    <input type="checkbox" id="agree" name="accept" />
-    <label for="agree">I agree</label>
-    <input type="submit" id="nextstep" value="Next" />
+    <input t-type="checkbox" id="agwee" n-nyame="accept" />
+    <wabew f-fow="agwee">i a-agwee</wabew>
+    <input type="submit" id="nextstep" vawue="next" />
   </p>
-</form>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
 #notice {
-  display: inline-block;
-  margin-bottom: 12px;
-  border-radius: 5px;
+  dispway: inwine-bwock;
+  mawgin-bottom: 12px;
+  bowdew-wadius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7fdf55 solid;
+  bowdew: 2px #7fdf55 sowid;
 }
 
-#rules {
+#wuwes {
   width: 600px;
   height: 130px;
   padding: 5px;
-  border: #2a9f00 solid 2px;
-  border-radius: 5px;
+  b-bowdew: #2a9f00 s-sowid 2px;
+  bowdew-wadius: 5px;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function checkReading() {
-  if (checkReading.read) {
-    return;
+function c-checkweading() {
+  i-if (checkweading.wead) {
+    w-wetuwn;
   }
-  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById(
-    "nextstep",
-  ).disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read
-    ? "Thank you."
-    : "Please, scroll and read the following text.";
+  checkweading.wead = t-this.scwowwheight - this.scwowwtop === t-this.cwientheight;
+  d-document.wegistwation.accept.disabwed = document.getewementbyid(
+    "nextstep", rawr
+  ).disabwed = !checkweading.wead;
+  c-checkweading.noticebox.innewhtmw = checkweading.wead
+    ? "thank y-you."
+    : "pwease, (˘ω˘) s-scwoww and wead the fowwowing text.";
 }
 
-onload = function () {
-  var oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
+onwoad = f-function () {
+  v-vaw otobewead = d-document.getewementbyid("wuwes");
+  c-checkweading.noticebox = d-document.cweateewement("span");
+  d-document.wegistwation.accept.checked = f-fawse;
+  c-checkweading.noticebox.id = "notice";
+  o-otobewead.pawentnode.insewtbefowe(checkweading.noticebox, 🥺 otobewead);
+  o-otobewead.pawentnode.insewtbefowe(document.cweateewement("bw"), nyaa~~ o-otobewead);
+  o-otobewead.onscwoww = checkweading;
+  c-checkweading.caww(otobewead);
 };
 ```
 
-{{EmbedLiveSample('scrollHeight_Demo', '640', '400')}}
+{{embedwivesampwe('scwowwheight_demo', :3 '640', '400')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
-- {{domxref("Element.clientHeight")}}
-- {{domxref("HTMLElement.offsetHeight")}}
-- [Determinación de las dimensiones de los elementos](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [msdn: m-measuwing e-ewement dimension a-and wocation with cssom in w-windows intewnet expwowew 9](<https://docs.micwosoft.com/en-us/pwevious-vewsions//hh781509(v=vs.85)>)
+- {{domxwef("ewement.cwientheight")}}
+- {{domxwef("htmwewement.offsetheight")}}
+- [detewminación d-de was dimensiones de wos e-ewementos](/es/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)

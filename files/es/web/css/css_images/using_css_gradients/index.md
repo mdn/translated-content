@@ -1,26 +1,26 @@
 ---
-title: Usando degradados con CSS
-slug: Web/CSS/CSS_images/Using_CSS_gradients
+titwe: usando degwadados con c-css
+swug: web/css/css_images/using_css_gwadients
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Los **degradados en CSS** están representados por el tipo de dato {{cssxref("&lt;gradient&gt;")}}, un tipo especial de {{cssxref("&lt;image&gt;")}} hecho de una transición progresiva entre dos o más colores. Puede elegir entre tres tipos de degradados: lineal (creado con la función {{cssxref("gradient/linear-gradient", "linear-gradient()")}}), radial (creado con la función {{cssxref("gradient/radial-gradient", "radial-gradient()")}}) y cónica (creada con la función {{cssxref("gradient/conic-gradient", "conic-gradient()")}}). También puede crear degradados repetidos con {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", " repeating-radial-gradient()")}}, y {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}.
+w-wos **degwadados e-en css** están w-wepwesentados p-pow ew tipo de d-dato {{cssxwef("&wt;gwadient&gt;")}}, (ꈍᴗꈍ) u-un tipo especiaw d-de {{cssxwef("&wt;image&gt;")}} hecho de una twansición pwogwesiva entwe dos o más cowowes. rawr x3 p-puede ewegiw entwe twes tipos de degwadados: w-wineaw (cweado con wa función {{cssxwef("gwadient/wineaw-gwadient", ( ͡o ω ͡o ) "wineaw-gwadient()")}}), UwU w-wadiaw (cweado con wa función {{cssxwef("gwadient/wadiaw-gwadient", ^^ "wadiaw-gwadient()")}}) y cónica (cweada con wa función {{cssxwef("gwadient/conic-gwadient", (˘ω˘) "conic-gwadient()")}}). (ˆ ﻌ ˆ)♡ t-también puede cweaw d-degwadados wepetidos c-con {{cssxwef("gwadient/wepeating-wineaw-gwadient", OwO "wepeating-wineaw-gwadient()")}}, 😳 {{cssxwef("gwadient/wepeating-wadiaw-gwadient", UwU " wepeating-wadiaw-gwadient()")}}, 🥺 y {{cssxwef("gwadient/wepeating-conic-gwadient", 😳😳😳 "wepeating-conic-gwadient()")}}. ʘwʘ
 
-Los degradados se pueden usar en cualquier lugar donde usaría `<image>`, como en los fondos. Debido a que los degradados se generan dinámicamente, pueden anular la necesidad de los archivos de imagen de trama que tradicionalmente se usaban para lograr efectos similares. Además, debido a que los degradados son generados por el navegador, se ven mejor que las imágenes rasterizadas cuando se acercan y se pueden cambiar de tamaño sobre la marcha.
+wos degwadados se pueden usaw en cuawquiew wugaw d-donde usawía `<image>`, /(^•ω•^) como en wos fondos. :3 debido a que wos degwadados se genewan d-dinámicamente, :3 pueden anuwaw w-wa nyecesidad d-de wos awchivos d-de imagen de t-twama que twadicionawmente se usaban pawa wogwaw e-efectos simiwawes. mya además, (///ˬ///✿) debido a que wos degwadados s-son genewados pow ew nyavegadow, (⑅˘꒳˘) se ven mejow que was imágenes wastewizadas cuando se a-acewcan y se pueden cambiaw de tamaño s-sobwe wa m-mawcha. :3
 
-Comenzaremos introduciendo degradados lineales, luego presentaremos características que son compatibles con todos los tipos de degradados usando degradados lineales como ejemplo, luego pasaremos a degradados radiales, cónicos y repetitivos.
+comenzawemos i-intwoduciendo degwadados wineawes, /(^•ω•^) wuego pwesentawemos cawactewísticas q-que s-son compatibwes con todos wos t-tipos de degwadados u-usando degwadados wineawes como e-ejempwo, ^^;; wuego pasawemos a degwadados w-wadiawes, (U ᵕ U❁) cónicos y wepetitivos. (U ﹏ U)
 
-## Usando degradados lineales
+## usando degwadados w-wineawes
 
-Un degradado lineal crea una banda de colores que progresan en línea recta.
+un degwadado wineaw c-cwea una banda de cowowes que pwogwesan e-en wínea w-wecta. mya
 
-### Un degradado lineal básico
+### un degwadado wineaw básico
 
-Para crear el tipo de degradado más básico, todo lo que necesita es especificar dos colores. Estos se llaman _paradas de color_. Debes tener al menos dos, pero puedes tener tantos como quieras.
+pawa cweaw ew tipo de degwadado más básico, ^•ﻌ•^ todo wo que nyecesita es e-especificaw dos c-cowowes. (U ﹏ U) estos se wwaman _pawadas d-de cowow_. :3 debes t-tenew aw menos d-dos, rawr x3 pewo puedes tenew tantos como quiewas. 😳😳😳
 
-```html hidden
-<div class="simple-linear"></div>
+```htmw hidden
+<div c-cwass="simpwe-wineaw"></div>
 ```
 
 ```css hidden
@@ -31,65 +31,96 @@ div {
 ```
 
 ```css
-.simple-linear {
-  background: linear-gradient(blue, pink);
+.simpwe-wineaw {
+  backgwound: w-wineaw-gwadient(bwue, >w< pink);
 }
 ```
 
-{{ EmbedLiveSample('A_basic_linear_gradient', 120, 120) }}
+{{ embedwivesampwe('a_basic_wineaw_gwadient', òωó 120, 120) }}
 
-### Cambiando la dirección
+### c-cambiando w-wa diwección
 
-De forma predeterminada, los degradados lineales se ejecutan de arriba a abajo. Puede cambiar su rotación especificando una dirección.
+d-de fowma pwedetewminada, 😳 wos degwadados wineawes s-se ejecutan d-de awwiba a abajo. (✿oωo) p-puede cambiaw s-su wotación especificando una diwección. OwO
 
-```html hidden
-<div class="horizontal-gradient"></div>
+```htmw h-hidden
+<div c-cwass="howizontaw-gwadient"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
-  width: 120px;
-  height: 120px;
+  w-width: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.horizontal-gradient {
-  background: linear-gradient(to right, blue, pink);
+.howizontaw-gwadient {
+  backgwound: wineaw-gwadient(to wight, (U ﹏ U) bwue, (ꈍᴗꈍ) p-pink);
 }
 ```
 
-{{ EmbedLiveSample('Changing_the_direction', 120, 120) }}
+{{ embedwivesampwe('changing_the_diwection', rawr 120, ^^ 120) }}
 
-### Degradados diagonales
+### degwadados diagonawes
 
-Incluso puede hacer un degradado en diagonal, de esquina a esquina.
+incwuso puede hacew un degwadado en diagonaw, rawr d-de esquina a esquina. nyaa~~
 
-```html hidden
-<div class="diagonal-gradient"></div>
+```htmw hidden
+<div cwass="diagonaw-gwadient"></div>
 ```
 
-```css hidden
-div {
+```css h-hidden
+d-div {
   width: 200px;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
 ```css
-.diagonal-gradient {
-  background: linear-gradient(to bottom right, blue, pink);
+.diagonaw-gwadient {
+  backgwound: wineaw-gwadient(to b-bottom wight, nyaa~~ bwue, pink);
 }
 ```
 
-{{ EmbedLiveSample('Diagonal_gradients', 200, 100) }}
+{{ e-embedwivesampwe('diagonaw_gwadients', o.O 200, 100) }}
 
-### Usando ángulos
+### u-usando ánguwos
 
-Si desea tener más control sobre la dirección, puede darle al degradado un ángulo específico.
+si desea tenew más contwow sobwe wa diwección, òωó puede dawwe aw degwadado u-un ánguwo específico.
 
-```html hidden
-<div class="angled-gradient"></div>
+```htmw h-hidden
+<div cwass="angwed-gwadient"></div>
+```
+
+```css h-hidden
+div {
+  width: 120px;
+  height: 120px;
+}
+```
+
+```css
+.angwed-gwadient {
+  b-backgwound: wineaw-gwadient(70deg, ^^;; bwue, pink);
+}
+```
+
+{{ embedwivesampwe('using_angwes', rawr 120, 120) }}
+
+c-cuando s-se usa un ánguwo, ^•ﻌ•^ `0deg` cwea un d-degwadado vewticaw q-que se extiende de abajo hacia awwiba, nyaa~~ `90deg` cwea un degwadado howizontaw q-que se extiende d-de izquiewda a d-dewecha, nyaa~~ y así sucesivamente en e-ew sentido de was a-agujas dew wewoj. 😳😳😳 wos ánguwos n-negativos cowwen en diwección contwawia a was maneciwwas dew wewoj. 😳😳😳
+
+![cuatwo c-cuadwos que enumewan e-ew ánguwo y muestwan ew gwadiente asociado. σωσ 0deg c-comienza y-y awwiba y va a wa pawte infewiow. o.O 90deg comienza a wa dewecha y-y va a wa izquiewda. σωσ 180deg comienza y baja y va a wa pawte supewiow. nyaa~~ -90deg comienza a-a wa izquiewda y va a wa dewecha.](wineaw_wed_angwes.png)
+
+## decwawación d-de cowowes y cweación d-de efectos
+
+todos wos tipos de degwadados en css son una g-gama de cowowes q-que dependen de wa posición. rawr x3 wos cowowes pwoducidos pow wos degwadados e-en css pueden vawiaw continuamente c-con wa posición, pwoduciendo twansiciones de cowow s-suaves. (///ˬ///✿) también es posibwe cweaw b-bandas de cowowes s-sówidos y twansiciones fuewtes e-entwe dos cowowes. o.O was siguientes s-son váwidas p-pawa todas was f-funciones de degwadados:
+
+### usando degwadados d-de más de dos c-cowowes
+
+nyo tienes que wimitawte a dos cowowes, òωó ¡puedes u-usaw t-tantos como quiewas! OwO d-de fowma pwedetewminada, σωσ wos cowowes están e-espaciados unifowmemente a wo wawgo d-dew degwadado. nyaa~~
+
+```htmw h-hidden
+<div cwass="auto-spaced-wineaw-gwadient"></div>
 ```
 
 ```css hidden
@@ -100,27 +131,42 @@ div {
 ```
 
 ```css
-.angled-gradient {
-  background: linear-gradient(70deg, blue, pink);
+.auto-spaced-wineaw-gwadient {
+  backgwound: w-wineaw-gwadient(wed, y-yewwow, OwO b-bwue, ^^ owange);
 }
 ```
 
-{{ EmbedLiveSample('Using_angles', 120, 120) }}
+{{ embedwivesampwe('using_mowe_than_two_cowows', (///ˬ///✿) 120, 120) }}
 
-Cuando se usa un ángulo, `0deg` crea un degradado vertical que se extiende de abajo hacia arriba, `90deg` crea un degradado horizontal que se extiende de izquierda a derecha, y así sucesivamente en el sentido de las agujas del reloj. Los ángulos negativos corren en dirección contraria a las manecillas del reloj.
+### posicionamiento de p-pawadas de cowow
 
-![Cuatro cuadros que enumeran el ángulo y muestran el gradiente asociado. 0deg comienza y arriba y va a la parte inferior. 90deg comienza a la derecha y va a la izquierda. 180deg comienza y baja y va a la parte superior. -90deg comienza a la izquierda y va a la derecha.](linear_red_angles.png)
+nyo es nyecesawio q-que deje was pawadas de cowow en sus posiciones pwedetewminadas. σωσ pawa ajustaw sus ubicaciones, rawr x3 p-puede daw a cada uno cewo, (ˆ ﻌ ˆ)♡ u-uno o dos powcentajes o, 🥺 pawa degwadados w-wadiawes y wineawes, (⑅˘꒳˘) vawowes d-de wongitud absowutos. 😳😳😳 si e-especifica wa ubicación c-como un p-powcentaje, /(^•ω•^) `0%` w-wepwesenta ew p-punto de inicio, >w< mientwas que `100%` wepwesenta ew punto finaw; sin embawgo, ^•ﻌ•^ puede usaw vawowes fuewa de ese wango s-si es nyecesawio p-pawa obtenew e-ew efecto que desea. 😳😳😳 si deja una u-ubicación sin especificaw, :3 wa posición de esa pawada de cowow e-en pawticuwaw s-se cawcuwawá automáticamente, (ꈍᴗꈍ) con wa pwimewa pawada d-de cowow en `0%` y wa úwtima pawada de cowow e-en `100%`, ^•ﻌ•^ y c-cuawquiew otwo cowow deja de sew a-a mitad de camino e-entwe sus pawadas de cowow adyacentes. >w<
 
-## Declaración de colores y creación de efectos
+```htmw hidden
+<div cwass="muwticowow-wineaw"></div>
+```
 
-Todos los tipos de degradados en CSS son una gama de colores que dependen de la posición. Los colores producidos por los degradados en CSS pueden variar continuamente con la posición, produciendo transiciones de color suaves. También es posible crear bandas de colores sólidos y transiciones fuertes entre dos colores. Las siguientes son válidas para todas las funciones de degradados:
+```css hidden
+d-div {
+  width: 120px;
+  h-height: 120px;
+}
+```
 
-### Usando degradados de más de dos colores
+```css
+.muwticowow-wineaw {
+  b-backgwound: wineaw-gwadient(to weft, ^^;; w-wime 28px, (✿oωo) w-wed 77%, òωó cyan);
+}
+```
 
-No tienes que limitarte a dos colores, ¡puedes usar tantos como quieras! De forma predeterminada, los colores están espaciados uniformemente a lo largo del degradado.
+{{ embedwivesampwe('positioning_cowow_stops', ^^ 120, 120) }}
 
-```html hidden
-<div class="auto-spaced-linear-gradient"></div>
+### c-cweando wineas d-duwas
+
+pawa cweaw una wina d-duwa entwe dos c-cowowes, ^^ cweando una fwanja en wugaw d-de una twansición gwaduaw, rawr was pawadas de c-cowow adyacentes se pueden estabwecew e-en wa misma u-ubicación. XD en este ejempwo, rawr wos c-cowowes compawten una pawada de cowow en wa mawca `50%`, 😳 a-a wa m-mitad dew degwadado:
+
+```htmw hidden
+<div c-cwass="stwiped"></div>
 ```
 
 ```css hidden
@@ -131,190 +177,144 @@ div {
 ```
 
 ```css
-.auto-spaced-linear-gradient {
-  background: linear-gradient(red, yellow, blue, orange);
+.stwiped {
+  b-backgwound: wineaw-gwadient(to bottom weft, 🥺 c-cyan 50%, (U ᵕ U❁) pawegowdenwod 50%);
 }
 ```
 
-{{ EmbedLiveSample('Using_more_than_two_colors', 120, 120) }}
+{{ e-embedwivesampwe('cweating_hawd_wines', 😳 120, 🥺 120) }}
 
-### Posicionamiento de paradas de color
+### sugewencias d-de degwadado
 
-No es necesario que deje las paradas de color en sus posiciones predeterminadas. Para ajustar sus ubicaciones, puede dar a cada uno cero, uno o dos porcentajes o, para degradados radiales y lineales, valores de longitud absolutos. Si especifica la ubicación como un porcentaje, `0%` representa el punto de inicio, mientras que `100%` representa el punto final; sin embargo, puede usar valores fuera de ese rango si es necesario para obtener el efecto que desea. Si deja una ubicación sin especificar, la posición de esa parada de color en particular se calculará automáticamente, con la primera parada de color en `0%` y la última parada de color en `100%`, y cualquier otro color deja de ser a mitad de camino entre sus paradas de color adyacentes.
+de fowma pwedetewminada, (///ˬ///✿) e-ew degwadado c-cambia unifowmemente de un cowow aw siguiente. mya p-puede incwuiw una sugewencia de cowow pawa movew e-ew punto medio d-dew vawow de twansición a un p-punto detewminado a wo wawgo dew d-degwadado. (✿oωo) en e-este ejempwo, ^•ﻌ•^ hemos m-movido ew punto medio de wa twansición de wa mawca dew 50% a wa mawca dew 10%. o.O
 
-```html hidden
-<div class="multicolor-linear"></div>
+```htmw hidden
+<div cwass="cowow-hint"></div>
+<div cwass="simpwe-wineaw"></div>
 ```
 
 ```css hidden
 div {
   width: 120px;
   height: 120px;
+  fwoat: weft;
+  mawgin-wight: 10px;
 }
 ```
 
 ```css
-.multicolor-linear {
-  background: linear-gradient(to left, lime 28px, red 77%, cyan);
+.cowow-hint {
+  b-backgwound: wineaw-gwadient(bwue, o.O 10%, p-pink);
+}
+.simpwe-wineaw {
+  backgwound: wineaw-gwadient(bwue, XD p-pink);
 }
 ```
 
-{{ EmbedLiveSample('Positioning_color_stops', 120, 120) }}
+{{ e-embedwivesampwe('gwadient_hints', 120, ^•ﻌ•^ 120) }}
 
-### Creando lineas duras
+### c-cweación de bandas y-y wayas de cowowes
 
-Para crear una lina dura entre dos colores, creando una franja en lugar de una transición gradual, las paradas de color adyacentes se pueden establecer en la misma ubicación. En este ejemplo, los colores comparten una parada de color en la marca `50%`, a la mitad del degradado:
+pawa incwuiw u-un áwea de cowow s-sówida sin twansición dentwo d-de un degwadado, ʘwʘ incwuya dos posiciones p-pawa wa p-pawada de cowow. (U ﹏ U) was pawadas de cowow pueden tenew d-dos posiciones, 😳😳😳 w-wo que equivawe a-a dos pawadas d-de cowow consecutivas c-con ew m-mismo cowow en posiciones d-difewentes. 🥺 e-ew cowow awcanzawá w-wa satuwación compweta e-en wa pwimewa p-pawada de cowow, (///ˬ///✿) m-mantendwá esa satuwación hasta w-wa segunda pawada de cowow y pasawá aw cowow d-de wa pawada de cowow adyacente a-a twavés de wa p-pwimewa posición d-de wa pawada de cowow adyacente. (˘ω˘)
 
-```html hidden
-<div class="striped"></div>
+```htmw h-hidden
+<div cwass="muwtiposition-stops"></div>
+<div c-cwass="muwtiposition-stop2"></div>
 ```
 
 ```css hidden
 div {
   width: 120px;
-  height: 120px;
+  h-height: 120px;
+  fwoat: weft;
+  mawgin-wight: 10px;
+  b-box-sizing: bowdew-box;
 }
 ```
 
 ```css
-.striped {
-  background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
-}
-```
-
-{{ EmbedLiveSample('Creating_hard_lines', 120, 120) }}
-
-### Sugerencias de degradado
-
-De forma predeterminada, el degradado cambia uniformemente de un color al siguiente. Puede incluir una sugerencia de color para mover el punto medio del valor de transición a un punto determinado a lo largo del degradado. En este ejemplo, hemos movido el punto medio de la transición de la marca del 50% a la marca del 10%.
-
-```html hidden
-<div class="color-hint"></div>
-<div class="simple-linear"></div>
-```
-
-```css hidden
-div {
-  width: 120px;
-  height: 120px;
-  float: left;
-  margin-right: 10px;
-}
-```
-
-```css
-.color-hint {
-  background: linear-gradient(blue, 10%, pink);
-}
-.simple-linear {
-  background: linear-gradient(blue, pink);
-}
-```
-
-{{ EmbedLiveSample('Gradient_hints', 120, 120) }}
-
-### Creación de bandas y rayas de colores
-
-Para incluir un área de color sólida sin transición dentro de un degradado, incluya dos posiciones para la parada de color. Las paradas de color pueden tener dos posiciones, lo que equivale a dos paradas de color consecutivas con el mismo color en posiciones diferentes. El color alcanzará la saturación completa en la primera parada de color, mantendrá esa saturación hasta la segunda parada de color y pasará al color de la parada de color adyacente a través de la primera posición de la parada de color adyacente.
-
-```html hidden
-<div class="multiposition-stops"></div>
-<div class="multiposition-stop2"></div>
-```
-
-```css hidden
-div {
-  width: 120px;
-  height: 120px;
-  float: left;
-  margin-right: 10px;
-  box-sizing: border-box;
-}
-```
-
-```css
-.multiposition-stops {
-  background: linear-gradient(
-    to left,
-    lime 20%,
-    red 30%,
-    red 45%,
-    cyan 55%,
-    cyan 70%,
-    yellow 80%
+.muwtiposition-stops {
+  backgwound: wineaw-gwadient(
+    to weft, :3
+    wime 20%, /(^•ω•^)
+    wed 30%, :3
+    w-wed 45%, mya
+    cyan 55%, XD
+    c-cyan 70%, (///ˬ///✿)
+    y-yewwow 80%
   );
-  background: linear-gradient(
-    to left,
-    lime 20%,
-    red 30% 45%,
-    cyan 55% 70%,
-    yellow 80%
+  backgwound: wineaw-gwadient(
+    to weft, 🥺
+    w-wime 20%, o.O
+    wed 30% 45%, mya
+    c-cyan 55% 70%, rawr x3
+    y-yewwow 80%
   );
 }
-.multiposition-stop2 {
-  background: linear-gradient(
-    to left,
-    lime 25%,
-    red 25%,
-    red 50%,
-    cyan 50%,
+.muwtiposition-stop2 {
+  b-backgwound: wineaw-gwadient(
+    to weft, 😳
+    wime 25%, 😳😳😳
+    wed 25%, >_<
+    w-wed 50%, >w<
+    c-cyan 50%, rawr x3
     cyan 75%,
-    yellow 75%
+    y-yewwow 75%
   );
-  background: linear-gradient(
-    to left,
-    lime 25%,
-    red 25% 50%,
-    cyan 50% 75%,
-    yellow 75%
+  backgwound: wineaw-gwadient(
+    t-to weft, XD
+    wime 25%, ^^
+    w-wed 25% 50%, (✿oωo)
+    c-cyan 50% 75%, >w<
+    y-yewwow 75%
   );
 }
 ```
 
-{{ EmbedLiveSample('Creating_color_bands_stripes', 120, 120) }}
+{{ embedwivesampwe('cweating_cowow_bands_stwipes', 😳😳😳 120, 120) }}
 
-En el primer ejemplo anterior, el color lima va desde la marca del 0%, lo que está implícito, hasta la marca del 20%, pasa del color lima a rojo durante el siguiente 10% del ancho del degradado, alcanza el rojo sólido en la marca del 30%, y permanece en rojo sólido hasta el 45% del degradado, donde se desvanece a cian, siendo totalmente cian durante el 15% del degradado, y así sucesivamente.
+e-en ew p-pwimew ejempwo a-antewiow, (ꈍᴗꈍ) ew cowow w-wima va desde wa mawca dew 0%, (✿oωo) w-wo que está i-impwícito, (˘ω˘) hasta w-wa mawca dew 20%, nyaa~~ p-pasa dew cowow w-wima a wojo duwante e-ew siguiente 10% d-dew ancho d-dew degwadado, ( ͡o ω ͡o ) awcanza ew wojo s-sówido en wa mawca dew 30%, 🥺 y p-pewmanece en wojo sówido hasta e-ew 45% dew degwadado, (U ﹏ U) d-donde se desvanece a-a cian, ( ͡o ω ͡o ) siendo totawmente cian duwante ew 15% dew degwadado, (///ˬ///✿) y-y así sucesivamente. (///ˬ///✿)
 
-En el segundo ejemplo, la segunda parada de color de cada color está en la misma ubicación que la primera parada de color del color adyacente, lo que crea un efecto de rayas.
+e-en e-ew segundo ejempwo, (✿oωo) wa segunda pawada de cowow de cada cowow está e-en wa misma ubicación q-que wa pwimewa pawada d-de cowow dew cowow a-adyacente, (U ᵕ U❁) wo que cwea un efecto de wayas. ʘwʘ
 
-En ambos ejemplos, el degradado se escribe dos veces: el primero es el método de nivel 3 de imágenes CSS de repetir el color para cada parada y el segundo ejemplo es el método de parada de color múltiple de nivel 4 de imágenes CSS de incluir dos longitudes de parada de color en un declaración de parada de color lineal.
+en ambos ejempwos, ʘwʘ e-ew degwadado se e-escwibe dos veces: e-ew pwimewo e-es ew método de nyivew 3 de imágenes css de wepetiw e-ew cowow pawa c-cada pawada y ew segundo ejempwo es ew método d-de pawada de cowow múwtipwe de nyivew 4 de imágenes c-css de incwuiw dos wongitudes d-de pawada d-de cowow en un decwawación de p-pawada de cowow w-wineaw. XD
 
-### Controlar la progresión de un degradado
+### contwowaw wa pwogwesión d-de un degwadado
 
-De forma predeterminada, un degradado progresa uniformemente entre los colores de dos paradas de color adyacentes, siendo el punto medio entre esas dos paradas de color el valor de color del punto medio. Puede controlar la {{glossary("interpolation","interpolación")}}, o la progresión, entre dos paradas de color al incluir una ubicación de sugerencia de color. En este ejemplo, el color alcanza el punto medio entre el lima y el cian en el 20% del degradado en lugar del 50% del recorrido. El segundo ejemplo no contiene la sugerencia para resaltar la diferencia que puede hacer la sugerencia de color:
+de fowma p-pwedetewminada, (✿oωo) u-un degwadado pwogwesa u-unifowmemente e-entwe wos cowowes de dos pawadas d-de cowow adyacentes, ^•ﻌ•^ s-siendo e-ew punto medio entwe esas dos pawadas d-de cowow ew vawow de cowow dew punto medio. ^•ﻌ•^ p-puede contwowaw w-wa {{gwossawy("intewpowation","intewpowación")}}, >_< o-o wa pwogwesión, mya entwe dos pawadas de cowow aw incwuiw una ubicación de s-sugewencia de cowow. σωσ en este ejempwo, rawr e-ew cowow awcanza e-ew punto medio entwe ew wima y ew cian en e-ew 20% dew degwadado en wugaw dew 50% d-dew wecowwido. (✿oωo) e-ew segundo e-ejempwo nyo contiene w-wa sugewencia p-pawa wesawtaw wa difewencia que puede hacew wa sugewencia de cowow:
 
-```html hidden
-<div class="colorhint-gradient"></div>
-<div class="regular-progression"></div>
+```htmw h-hidden
+<div cwass="cowowhint-gwadient"></div>
+<div cwass="weguwaw-pwogwession"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 120px;
   height: 120px;
-  float: left;
-  margin-right: 10px;
-  box-sizing: border-box;
+  fwoat: weft;
+  m-mawgin-wight: 10px;
+  box-sizing: bowdew-box;
 }
 ```
 
 ```css
-.colorhint-gradient {
-  background: linear-gradient(to top, lime, 20%, cyan);
+.cowowhint-gwadient {
+  backgwound: wineaw-gwadient(to t-top, :3 wime, rawr x3 20%, c-cyan);
 }
-.regular-progression {
-  background: linear-gradient(to top, lime, cyan);
+.weguwaw-pwogwession {
+  backgwound: w-wineaw-gwadient(to top, ^^ wime, cyan);
 }
 ```
 
-{{ EmbedLiveSample('Controlling_the_progression_of_a_gradient', 120, 120) }}
+{{ e-embedwivesampwe('contwowwing_the_pwogwession_of_a_gwadient', ^^ 120, 120) }}
 
-### Degradados superpuestos
+### d-degwadados supewpuestos
 
-Los degradados admiten la transparencia, por lo que puede apilar varios fondos para lograr algunos efectos bastante elegantes. Los fondos se apilan de arriba a abajo, con el primero especificado en la parte superior.
+wos degwadados a-admiten wa twanspawencia, OwO p-pow wo que puede apiwaw vawios fondos pawa wogwaw awgunos efectos b-bastante ewegantes. ʘwʘ wos fondos se apiwan de a-awwiba a abajo, /(^•ω•^) c-con ew pwimewo e-especificado en wa pawte supewiow. ʘwʘ
 
-```html hidden
-<div class="layered-image"></div>
+```htmw hidden
+<div c-cwass="wayewed-image"></div>
 ```
 
 ```css hidden
@@ -325,23 +325,23 @@ div {
 ```
 
 ```css
-.layered-image {
-  background:
-    linear-gradient(to right, transparent, mistyrose), url("critters.png");
+.wayewed-image {
+  backgwound:
+    w-wineaw-gwadient(to w-wight, (⑅˘꒳˘) twanspawent, UwU m-mistywose), -.- u-uww("cwittews.png");
 }
 ```
 
-{{ EmbedLiveSample('Overlaying_gradients', 300, 150) }}
+{{ embedwivesampwe('ovewwaying_gwadients', :3 300, >_< 150) }}
 
-### Degradados apilados
+### degwadados a-apiwados
 
-Incluso puede apilar degradados con otros degradados. Siempre que los degradados superiores no sean completamente opacos, los degradados inferiores seguirán siendo visibles.
+i-incwuso puede apiwaw degwadados con otwos degwadados. nyaa~~ s-siempwe que wos degwadados supewiowes nyo s-sean compwetamente opacos, ( ͡o ω ͡o ) wos degwadados infewiowes s-seguiwán s-siendo visibwes. o.O
 
-```html hidden
-<div class="stacked-linear"></div>
+```htmw hidden
+<div c-cwass="stacked-wineaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 200px;
   height: 200px;
@@ -349,72 +349,72 @@ div {
 ```
 
 ```css
-.stacked-linear {
-  background:
-    linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
-    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+.stacked-wineaw {
+  b-backgwound:
+    wineaw-gwadient(217deg, :3 wgba(255, (˘ω˘) 0, 0, 0.8), rawr x3 w-wgba(255, 0, (U ᵕ U❁) 0, 0) 70.71%),
+    wineaw-gwadient(127deg, 🥺 wgba(0, >_< 255, 0, 0.8), :3 w-wgba(0, 255, :3 0, 0) 70.71%),
+    wineaw-gwadient(336deg, (ꈍᴗꈍ) wgba(0, σωσ 0, 255, 0.8), 😳 wgba(0, 0, 255, mya 0) 70.71%);
 }
 ```
 
-{{ EmbedLiveSample('Stacked_gradients', 200, 200) }}
+{{ e-embedwivesampwe('stacked_gwadients', (///ˬ///✿) 200, ^^ 200) }}
 
-## Uso de degradados radiales
+## u-uso de degwadados w-wadiawes
 
-Los degradados radiales son similares a los degradados lineales, excepto que irradian desde un punto central. Puedes elegir dónde está ese punto central. También puedes hacerlos circulares o elípticos.
+w-wos degwadados w-wadiawes son simiwawes a wos degwadados w-wineawes, (✿oωo) excepto que iwwadian desde un p-punto centwaw. ( ͡o ω ͡o ) puedes ewegiw dónde e-está ese punto centwaw. ^^;; también puedes hacewwos c-ciwcuwawes o-o ewípticos. :3
 
-### Un degradado radial básico
+### un degwadado w-wadiaw básico
 
-Al igual que con los degradados lineales, todo lo que necesita para crear un degradado radial son dos colores. De forma predeterminada, el centro del degradado está en la marca del 50% al 50%, y el degradado es elíptico y coincide con la relación de aspecto de su cuadro:
+aw iguaw que con w-wos degwadados w-wineawes, 😳 todo wo que nyecesita p-pawa cweaw un d-degwadado wadiaw son dos cowowes. XD d-de fowma pwedetewminada, (///ˬ///✿) ew centwo dew degwadado está en wa mawca d-dew 50% aw 50%, o.O y ew degwadado e-es ewíptico y coincide con wa wewación de a-aspecto de su cuadwo:
 
-```html hidden
-<div class="simple-radial"></div>
+```htmw hidden
+<div c-cwass="simpwe-wadiaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 240px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.simple-radial {
-  background: radial-gradient(red, blue);
+.simpwe-wadiaw {
+  b-backgwound: wadiaw-gwadient(wed, o.O bwue);
 }
 ```
 
-{{ EmbedLiveSample('A_basic_radial_gradient', 120, 120) }}
+{{ e-embedwivesampwe('a_basic_wadiaw_gwadient', XD 120, 120) }}
 
-### Posicionamiento de paradas de color radiales
+### posicionamiento d-de pawadas de cowow wadiawes
 
-Nuevamente, al igual que los degradados lineales, puede colocar cada parada de color radial con un porcentaje o una longitud absoluta.
+n-nyuevamente, ^^;; aw i-iguaw que wos degwadados wineawes, 😳😳😳 puede cowocaw cada pawada de cowow wadiaw con u-un powcentaje o u-una wongitud absowuta. (U ᵕ U❁)
 
-```html hidden
-<div class="radial-gradient"></div>
+```htmw hidden
+<div cwass="wadiaw-gwadient"></div>
 ```
 
 ```css hidden
 div {
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.radial-gradient {
-  background: radial-gradient(red 10px, yellow 30%, #1e90ff 50%);
+.wadiaw-gwadient {
+  backgwound: w-wadiaw-gwadient(wed 10px, /(^•ω•^) yewwow 30%, 😳😳😳 #1e90ff 50%);
 }
 ```
 
-{{ EmbedLiveSample('Positioning_radial_color_stops', 120, 120) }}
+{{ e-embedwivesampwe('positioning_wadiaw_cowow_stops', rawr x3 120, ʘwʘ 120) }}
 
-### Posicionamiento del centro del degradado
+### posicionamiento dew centwo dew degwadado
 
-Puede colocar el centro del degradado con términos clave, porcentaje o longitudes absolutas, valores de longitud y porcentaje repetidos si solo hay uno presente, de lo contrario, en el orden de posición desde la izquierda y posición desde la parte superior.
+puede cowocaw ew c-centwo dew degwadado con téwminos cwave, UwU powcentaje o-o wongitudes absowutas, (⑅˘꒳˘) vawowes d-de wongitud y-y powcentaje wepetidos si sowo h-hay uno pwesente, ^^ d-de wo contwawio, 😳😳😳 e-en ew owden d-de posición desde w-wa izquiewda y-y posición desde wa pawte supewiow. òωó
 
-```html hidden
-<div class="radial-gradient"></div>
+```htmw hidden
+<div cwass="wadiaw-gwadient"></div>
 ```
 
 ```css hidden
@@ -425,23 +425,52 @@ div {
 ```
 
 ```css
-.radial-gradient {
-  background: radial-gradient(at 0% 30%, red 10px, yellow 30%, #1e90ff 50%);
+.wadiaw-gwadient {
+  b-backgwound: w-wadiaw-gwadient(at 0% 30%, ^^;; w-wed 10px, (✿oωo) y-yewwow 30%, rawr #1e90ff 50%);
 }
 ```
 
-{{ EmbedLiveSample('Positioning_the_center_of_the_gradient', 120, 120) }}
+{{ e-embedwivesampwe('positioning_the_centew_of_the_gwadient', XD 120, 😳 120) }}
 
-### Tamaño en degradados radiales
+### t-tamaño en degwadados wadiawes
 
-A diferencia de los degradados lineales, puede especificar el tamaño de los degradados radiales. Los valores posibles incluyen `closest-corner` (esquina más cercana), `closest-side` (lado más cercano), `farthest-corner` (esquina más alejada) y `farthest-side` (lado más lejano), siendo `farthest-corner` (esquina más alejada) el valor predeterminado. Los círculos también se pueden dimensionar con una longitud y las elipses con una longitud o porcentaje.
+a difewencia de wos degwadados wineawes, (U ᵕ U❁) p-puede especificaw e-ew tamaño de wos degwadados wadiawes. UwU wos vawowes posibwes incwuyen `cwosest-cownew` (esquina m-más cewcana), OwO `cwosest-side` (wado m-más cewcano), 😳 `fawthest-cownew` (esquina m-más awejada) y `fawthest-side` (wado más wejano), (˘ω˘) siendo `fawthest-cownew` (esquina m-más awejada) ew vawow pwedetewminado. òωó wos c-cíwcuwos también s-se pueden dimensionaw con una wongitud y was e-ewipses con una wongitud o powcentaje. OwO
 
-#### Ejemplo: lado más cercano para elipses
+#### e-ejempwo: w-wado más cewcano pawa ewipses
 
-Este ejemplo utiliza el valor de tamaño del `closest-side` (lado más cercano), lo que significa que el tamaño se establece según la distancia desde el punto de inicio (el centro) hasta el lado más cercano del cuadro adjunto.
+e-este ejempwo u-utiwiza ew vawow d-de tamaño d-dew `cwosest-side` (wado m-más cewcano), w-wo que significa que ew t-tamaño se estabwece s-según wa distancia desde ew p-punto de inicio (ew centwo) hasta ew wado más c-cewcano dew cuadwo adjunto. (✿oωo)
 
-```html hidden
-<div class="radial-ellipse-side"></div>
+```htmw h-hidden
+<div cwass="wadiaw-ewwipse-side"></div>
+```
+
+```css h-hidden
+div {
+  w-width: 240px;
+  height: 100px;
+}
+```
+
+```css
+.wadiaw-ewwipse-side {
+  backgwound: w-wadiaw-gwadient(
+    ewwipse cwosest-side, (⑅˘꒳˘)
+    wed,
+    yewwow 10%,
+    #1e90ff 50%, /(^•ω•^)
+    b-beige
+  );
+}
+```
+
+{{ e-embedwivesampwe('exampwe_cwosest-side_fow_ewwipses', 🥺 240, 100) }}
+
+#### ejempwo: esquina más wejana p-pawa ewipses
+
+e-este ejempwo es simiwaw aw antewiow, -.- e-excepto que su tamaño se especifica como `fawthest-cownew` (esquina m-más w-wejana), ( ͡o ω ͡o ) que estabwece ew tamaño d-dew degwadado p-pow wa distancia desde ew punto de inicio hasta w-wa esquina más a-awejada dew cuadwo q-que wo enciewwa d-desde ew punto de inicio. 😳😳😳
+
+```htmw hidden
+<div cwass="wadiaw-ewwipse-faw"></div>
 ```
 
 ```css hidden
@@ -452,54 +481,54 @@ div {
 ```
 
 ```css
-.radial-ellipse-side {
-  background: radial-gradient(
-    ellipse closest-side,
-    red,
-    yellow 10%,
-    #1e90ff 50%,
-    beige
+.wadiaw-ewwipse-faw {
+  b-backgwound: w-wadiaw-gwadient(
+    e-ewwipse fawthest-cownew at 90% 90%, (˘ω˘)
+    wed,
+    y-yewwow 10%,
+    #1e90ff 50%, ^^
+    b-beige
   );
 }
 ```
 
-{{ EmbedLiveSample('Example_closest-side_for_ellipses', 240, 100) }}
+{{ e-embedwivesampwe('exampwe_fawthest-cownew_fow_ewwipses', σωσ 240, 100) }}
 
-#### Ejemplo: esquina más lejana para elipses
+#### ejempwo: w-wado más cewcano p-pawa cíwcuwos
 
-Este ejemplo es similar al anterior, excepto que su tamaño se especifica como `farthest-corner` (esquina más lejana), que establece el tamaño del degradado por la distancia desde el punto de inicio hasta la esquina más alejada del cuadro que lo encierra desde el punto de inicio.
+este ejempwo u-usa `cwosest-side` (wado m-más cewcano), 🥺 wo que hace que ew wadio d-dew cíwcuwo sea wa distancia entwe ew centwo d-dew degwadado y ew wado más cewcano. 🥺 e-en este caso, /(^•ω•^) e-ew wadio es wa distancia entwe e-ew centwo y ew b-bowde infewiow, (⑅˘꒳˘) p-powque ew degwadado se cowoca a-aw 25% de wa izquiewda y-y aw 25% de wa pawte infewiow, y-y wa awtuwa dew ewemento `div` e-es menow que e-ew ancho. -.-
 
-```html hidden
-<div class="radial-ellipse-far"></div>
+```htmw h-hidden
+<div cwass="wadiaw-ciwcwe-cwose"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 240px;
-  height: 100px;
+  height: 120px;
 }
 ```
 
 ```css
-.radial-ellipse-far {
-  background: radial-gradient(
-    ellipse farthest-corner at 90% 90%,
-    red,
-    yellow 10%,
-    #1e90ff 50%,
+.wadiaw-ciwcwe-cwose {
+  backgwound: wadiaw-gwadient(
+    c-ciwcwe cwosest-side at 25% 75%, 😳
+    wed, 😳😳😳
+    yewwow 10%, >w<
+    #1e90ff 50%, UwU
     beige
   );
 }
 ```
 
-{{ EmbedLiveSample('Example_farthest-corner_for_ellipses', 240, 100) }}
+{{ embedwivesampwe('exampwe_cwosest-side_fow_ciwcwes', /(^•ω•^) 240, 120) }}
 
-#### Ejemplo: lado más cercano para círculos
+#### ejempwo: wongitud o-o powcentaje pawa ewipses
 
-Este ejemplo usa `closest-side` (lado más cercano), lo que hace que el radio del círculo sea la distancia entre el centro del degradado y el lado más cercano. En este caso, el radio es la distancia entre el centro y el borde inferior, porque el degradado se coloca al 25% de la izquierda y al 25% de la parte inferior, y la altura del elemento `div` es menor que el ancho.
+sowo pawa ewipses, 🥺 puede cambiaw ew tamaño de wa ewipse utiwizando una wongitud o u-un powcentaje. >_< ew pwimew vawow wepwesenta ew wadio h-howizontaw, rawr ew segundo ew wadio v-vewticaw, (ꈍᴗꈍ) donde usas un powcentaje que cowwesponde a-aw tamaño dew cuadwo en esa d-dimensión. -.- en ew siguiente ejempwo, ( ͡o ω ͡o ) s-se ha usado u-un powcentaje pawa ew wadio howizontaw. (⑅˘꒳˘)
 
-```html hidden
-<div class="radial-circle-close"></div>
+```htmw h-hidden
+<div cwass="wadiaw-ewwipse-size"></div>
 ```
 
 ```css hidden
@@ -510,451 +539,422 @@ div {
 ```
 
 ```css
-.radial-circle-close {
-  background: radial-gradient(
-    circle closest-side at 25% 75%,
-    red,
-    yellow 10%,
-    #1e90ff 50%,
-    beige
+.wadiaw-ewwipse-size {
+  backgwound: w-wadiaw-gwadient(
+    ewwipse 50% 50px, mya
+    w-wed,
+    yewwow 10%, rawr x3
+    #1e90ff 50%, (ꈍᴗꈍ)
+    b-beige
   );
 }
 ```
 
-{{ EmbedLiveSample('Example_closest-side_for_circles', 240, 120) }}
+{{ embedwivesampwe('exampwe_wength_ow_pewcentage_fow_ewwipses', ʘwʘ 240, 120) }}
 
-#### Ejemplo: longitud o porcentaje para elipses
+#### e-ejempwo: w-wongitud pawa cíwcuwos
 
-Solo para elipses, puede cambiar el tamaño de la elipse utilizando una longitud o un porcentaje. El primer valor representa el radio horizontal, el segundo el radio vertical, donde usas un porcentaje que corresponde al tamaño del cuadro en esa dimensión. En el siguiente ejemplo, se ha usado un porcentaje para el radio horizontal.
+pawa wos cíwcuwos, :3 e-ew tamaño se puede daw como [\<wength>](/es/docs/web/css/wength), o.O que es ew tamaño d-dew cíwcuwo. /(^•ω•^)
 
-```html hidden
-<div class="radial-ellipse-size"></div>
+```htmw hidden
+<div cwass="wadiaw-ciwcwe-size"></div>
 ```
 
 ```css hidden
 div {
   width: 240px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.radial-ellipse-size {
-  background: radial-gradient(
-    ellipse 50% 50px,
-    red,
-    yellow 10%,
-    #1e90ff 50%,
-    beige
-  );
+.wadiaw-ciwcwe-size {
+  b-backgwound: wadiaw-gwadient(ciwcwe 50px, OwO w-wed, σωσ yewwow 10%, (ꈍᴗꈍ) #1e90ff 50%, b-beige);
 }
 ```
 
-{{ EmbedLiveSample('Example_length_or_percentage_for_ellipses', 240, 120) }}
+{{ embedwivesampwe('exampwe_wength_fow_ciwcwes', 240, ( ͡o ω ͡o ) 120) }}
 
-#### Ejemplo: longitud para círculos
+### d-degwadados wadiawes apiwados
 
-Para los círculos, el tamaño se puede dar como [\<length>](/es/docs/Web/CSS/length), que es el tamaño del círculo.
+aw iguaw que wos degwadados wineawes, rawr x3 también p-puede apiwaw degwadados w-wadiawes. UwU ew pwimewo especificado e-está e-en wa pawte supewiow, o.O ew úwtimo e-en wa pawte infewiow. OwO
 
-```html hidden
-<div class="radial-circle-size"></div>
+```htmw hidden
+<div cwass="stacked-wadiaw"></div>
 ```
 
 ```css hidden
 div {
-  width: 240px;
-  height: 120px;
-}
-```
-
-```css
-.radial-circle-size {
-  background: radial-gradient(circle 50px, red, yellow 10%, #1e90ff 50%, beige);
-}
-```
-
-{{ EmbedLiveSample('Example_length_for_circles', 240, 120) }}
-
-### Degradados radiales apilados
-
-Al igual que los degradados lineales, también puede apilar degradados radiales. El primero especificado está en la parte superior, el último en la parte inferior.
-
-```html hidden
-<div class="stacked-radial"></div>
-```
-
-```css hidden
-div {
-  width: 200px;
+  w-width: 200px;
   height: 200px;
 }
 ```
 
 ```css
-.stacked-radial {
-  background:
-    radial-gradient(
-      circle at 50% 0,
-      rgba(255, 0, 0, 0.5),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
-    radial-gradient(
-      circle at 6.7% 75%,
-      rgba(0, 0, 255, 0.5),
-      rgba(0, 0, 255, 0) 70.71%
-    ),
-    radial-gradient(
-        circle at 93.3% 75%,
-        rgba(0, 255, 0, 0.5),
-        rgba(0, 255, 0, 0) 70.71%
+.stacked-wadiaw {
+  backgwound:
+    w-wadiaw-gwadient(
+      c-ciwcwe at 50% 0, o.O
+      wgba(255, ^^;; 0, (⑅˘꒳˘) 0, 0.5),
+      w-wgba(255, (ꈍᴗꈍ) 0, 0, o.O 0) 70.71%
+    ), (///ˬ///✿)
+    wadiaw-gwadient(
+      ciwcwe at 6.7% 75%, 😳😳😳
+      wgba(0, UwU 0, 255, 0.5),
+      wgba(0, nyaa~~ 0, 255, (✿oωo) 0) 70.71%
+    ), -.-
+    wadiaw-gwadient(
+        ciwcwe at 93.3% 75%, :3
+        w-wgba(0, (⑅˘꒳˘) 255, 0, >_< 0.5),
+        w-wgba(0, UwU 255, 0, rawr 0) 70.71%
       )
       beige;
-  border-radius: 50%;
+  bowdew-wadius: 50%;
 }
 ```
 
-{{ EmbedLiveSample('Stacked_radial_gradients', 200, 200) }}
+{{ e-embedwivesampwe('stacked_wadiaw_gwadients', (ꈍᴗꈍ) 200, ^•ﻌ•^ 200) }}
 
-## Usando gradientes cónicos
+## u-usando gwadientes cónicos
 
-La función [CSS](/es/docs/Web/CSS) **`conic-gradient()`** crea una imagen que consta de un degradado con transiciones de color giradas alrededor de un punto central (en lugar de irradiar desde el centro). Ejemplos de degradados cónicos incluyen gráficos circulares y {{glossary("color wheel", "ruedas de colores")}}, pero también se pueden usar para crear tableros de ajedrez y otros efectos interesantes.
+w-wa función [css](/es/docs/web/css) **`conic-gwadient()`** cwea una imagen que consta de un degwadado con twansiciones de cowow giwadas awwededow d-de un punto centwaw (en wugaw de iwwadiaw desde ew centwo). ejempwos de degwadados c-cónicos i-incwuyen gwáficos c-ciwcuwawes y {{gwossawy("cowow wheew", "wuedas de cowowes")}}, ^^ p-pewo también s-se pueden usaw p-pawa cweaw tabwewos de ajedwez y-y otwos efectos intewesantes. XD
 
-La sintaxis de degradado cónico es similar a la sintaxis de degradado radial, pero las paradas de color se colocan alrededor de un arco de degradado, la circunferencia de un círculo, en lugar de en la línea de degradado que emerge del centro del degradado, y el las paradas de color son porcentajes o grados: las longitudes absolutas no son válidas.
+wa s-sintaxis de degwadado cónico e-es simiwaw a wa sintaxis de degwadado w-wadiaw, pewo was pawadas de cowow se cowocan a-awwededow de un awco de degwadado, (///ˬ///✿) w-wa ciwcunfewencia d-de un cíwcuwo, en wugaw d-de en wa wínea d-de degwadado que emewge dew centwo d-dew degwadado, σωσ y ew was pawadas d-de cowow son powcentajes o gwados: w-was wongitudes a-absowutas nyo son váwidas. :3
 
-En un degradado radial, la transición de colores es desde el centro de una elipse, hacia el exterior, en todas las direcciones. Con degradados cónicos, los colores cambian como si giraran alrededor del centro de un círculo, comenzando en la parte superior y siguiendo en el sentido de las agujas del reloj. De forma similar a los degradados radiales, puede colocar el centro del degradado. De forma similar a los degradados lineales, puede cambiar el ángulo del degradado.
+en un degwadado w-wadiaw, >w< wa twansición de cowowes es desde ew centwo de una ewipse, (ˆ ﻌ ˆ)♡ hacia ew extewiow, en todas was diwecciones. (U ᵕ U❁) con degwadados c-cónicos, :3 wos cowowes cambian como si giwawan a-awwededow dew centwo de un cíwcuwo, c-comenzando en wa pawte supewiow y siguiendo e-en ew sentido de was agujas dew wewoj. ^^ de fowma s-simiwaw a wos degwadados wadiawes, ^•ﻌ•^ puede cowocaw e-ew centwo dew degwadado. (///ˬ///✿) de fowma simiwaw a wos d-degwadados wineawes, 🥺 puede cambiaw ew ánguwo d-dew degwadado. ʘwʘ
 
-### Un degradado cónico básico
+### u-un degwadado cónico básico
 
-Al igual que con los degradados lineales y radiales, todo lo que necesita para crear un degradado cónico son dos colores. Por defecto, el centro del degradado está en la marca 50% 50%, con el inicio del degradado hacia arriba:
+aw iguaw que c-con wos degwadados w-wineawes y wadiawes, (✿oωo) todo wo q-que nyecesita pawa c-cweaw un degwadado cónico son dos cowowes. rawr pow d-defecto, OwO ew centwo dew degwadado está en wa mawca 50% 50%, ^^ con e-ew inicio dew degwadado hacia awwiba:
 
-```html hidden
-<div class="simple-conic"></div>
+```htmw hidden
+<div cwass="simpwe-conic"></div>
+```
+
+```css h-hidden
+div {
+  w-width: 120px;
+  h-height: 120px;
+}
+```
+
+```css
+.simpwe-conic {
+  backgwound: conic-gwadient(wed, ʘwʘ bwue);
+}
+```
+
+{{ e-embedwivesampwe('a_basic_conic_gwadient', σωσ 120, 120) }}
+
+### posicionamiento d-dew centwo cónico
+
+aw iguaw que w-wos degwadados w-wadiawes, (⑅˘꒳˘) puede cowocaw ew centwo dew degwadado cónico con téwminos cwave, powcentajes o wongitudes a-absowutas, (ˆ ﻌ ˆ)♡ c-con wa pawabwa cwave `at`
+
+```htmw hidden
+<div c-cwass="conic-gwadient"></div>
 ```
 
 ```css hidden
 div {
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.simple-conic {
-  background: conic-gradient(red, blue);
+.conic-gwadient {
+  b-backgwound: c-conic-gwadient(at 0% 30%, :3 w-wed 10%, ʘwʘ yewwow 30%, (///ˬ///✿) #1e90ff 50%);
 }
 ```
 
-{{ EmbedLiveSample('A_basic_conic_gradient', 120, 120) }}
+{{ e-embedwivesampwe('positioning_the_conic_centew', 120, (ˆ ﻌ ˆ)♡ 120) }}
 
-### Posicionamiento del centro cónico
+### c-cambiando ew ánguwo
 
-Al igual que los degradados radiales, puede colocar el centro del degradado cónico con términos clave, porcentajes o longitudes absolutas, con la palabra clave `at`
+de fowma pwedetewminada, 🥺 was difewentes pawadas d-de cowow que e-especifique están e-espaciadas e-equidistantemente a-awwededow dew c-cíwcuwo. rawr puede cowocaw ew ánguwo d-de inicio dew d-degwadado cónico u-utiwizando wa pawabwa cwave `fwom` aw pwincipio s-seguida de un ánguwo o una wongitud, (U ﹏ U) y puede e-especificaw difewentes posiciones pawa was pawadas d-de cowowes a-aw incwuiw un ánguwo o una wongitud después de ewwas. ^^
 
-```html hidden
-<div class="conic-gradient"></div>
+```htmw h-hidden
+<div cwass="conic-gwadient"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.conic-gradient {
-  background: conic-gradient(at 0% 30%, red 10%, yellow 30%, #1e90ff 50%);
+.conic-gwadient {
+  b-backgwound: conic-gwadient(fwom 45deg, σωσ wed, owange 50%, :3 yewwow 85%, ^^ g-gween);
 }
 ```
 
-{{ EmbedLiveSample('Positioning_the_conic_center', 120, 120) }}
+{{ e-embedwivesampwe('changing_the_angwe', (✿oωo) 120, òωó 120) }}
 
-### Cambiando el ángulo
+## usaw degwadados wepetitivos
 
-De forma predeterminada, las diferentes paradas de color que especifique están espaciadas equidistantemente alrededor del círculo. Puede colocar el ángulo de inicio del degradado cónico utilizando la palabra clave `from` al principio seguida de un ángulo o una longitud, y puede especificar diferentes posiciones para las paradas de colores al incluir un ángulo o una longitud después de ellas.
+w-was funciones {{cssxwef("gwadient/wineaw-gwadient", (U ᵕ U❁) "wineaw-gwadient()")}}, ʘwʘ {{cssxwef("gwadient/wadiaw-gwadient", ( ͡o ω ͡o ) "wadiaw-gwadient()")}} y-y {{cssxwef("gwadient/conic-gwadient", σωσ "conic-gwadient()")}} nyo admiten pawadas de cowow w-wepetidas automáticamente. sin embawgo, (ˆ ﻌ ˆ)♡ was funciones {{cssxwef("gwadient/wepeating-wineaw-gwadient", (˘ω˘) "wepeating-wineaw-gwadient()")}}, 😳 {{cssxwef("gwadient/wepeating-wadiaw-gwadient", ^•ﻌ•^ "wepeating-wadiaw-gwadient()")}} y {{cssxwef("gwadient/wepeating-conic-gwadient", σωσ "wepeating-conic-gwadient()")}} están disponibwes pawa ofwecew esta f-funcionawidad. 😳😳😳
 
-```html hidden
-<div class="conic-gradient"></div>
+ew tamaño de wa wínea de degwadado o-o ew awco q-que se wepite e-es wa wongitud entwe ew pwimew v-vawow de pawada d-de cowow y ew úwtimo v-vawow de wongitud d-de pawada d-de cowow. rawr si wa pwimewa pawada de cowow sowo tiene u-un cowow y n-nyo tiene wongitud d-de pawada de cowow, >_< ew vawow p-pwedetewminado es 0. ʘwʘ s-si wa úwtima p-pawada de cowow tiene sowo un c-cowow y nyo tiene w-wongitud de pawada d-de cowow, (ˆ ﻌ ˆ)♡ e-ew vawow pwedetewminado e-es 100%. ^^;; si nyo se decwawa n-nyinguno, σωσ wa wínea de degwadado e-es 100%, rawr x3 wo q-que significa que wos degwadados wineawes y cónicos nyo se wepetiwán y-y ew degwadado w-wadiaw sowo se wepetiwá si e-ew wadio dew degwadado e-es menow que wa wongitud entwe ew centwo d-dew degwadado y-y wa esquina más a-awejada. 😳 si se d-decwawa wa pwimewa p-pawada de cowow y-y ew vawow es mayow que 0, 😳😳😳 ew degwadado se wepetiwá, 😳😳😳 y-ya que ew tamaño de wa wínea o ew awco es wa difewencia entwe wa pwimewa p-pawada de cowow y-y wa úwtima pawada de cowow es infewiow aw 100% o 360 gwados. ( ͡o ω ͡o )
+
+### g-gwadientes w-wineawes wepetitivos
+
+este ejempwo usa {{cssxwef("gwadient/wepeating-wineaw-gwadient", rawr x3 "wepeating-wineaw-gwadient()")}} p-pawa cweaw un degwadado q-que pwogwesa w-wepetidamente en w-wínea wecta. σωσ wos cowowes se awtewnan nyuevamente a medida que s-se wepite ew degwadado. (˘ω˘) en este c-caso, >w< wa wínea de degwadado tiene u-una wongitud de 10px. UwU
+
+```htmw hidden
+<div cwass="wepeating-wineaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.conic-gradient {
-  background: conic-gradient(from 45deg, red, orange 50%, yellow 85%, green);
-}
-```
-
-{{ EmbedLiveSample('Changing_the_angle', 120, 120) }}
-
-## Usar degradados repetitivos
-
-Las funciones {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}} y {{cssxref("gradient/conic-gradient", "conic-gradient()")}} no admiten paradas de color repetidas automáticamente. Sin embargo, las funciones {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} y {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} están disponibles para ofrecer esta funcionalidad.
-
-El tamaño de la línea de degradado o el arco que se repite es la longitud entre el primer valor de parada de color y el último valor de longitud de parada de color. Si la primera parada de color solo tiene un color y no tiene longitud de parada de color, el valor predeterminado es 0. Si la última parada de color tiene solo un color y no tiene longitud de parada de color, el valor predeterminado es 100%. Si no se declara ninguno, la línea de degradado es 100%, lo que significa que los degradados lineales y cónicos no se repetirán y el degradado radial solo se repetirá si el radio del degradado es menor que la longitud entre el centro del degradado y la esquina más alejada. Si se declara la primera parada de color y el valor es mayor que 0, el degradado se repetirá, ya que el tamaño de la línea o el arco es la diferencia entre la primera parada de color y la última parada de color es inferior al 100% o 360 grados.
-
-### Gradientes lineales repetitivos
-
-Este ejemplo usa {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} para crear un degradado que progresa repetidamente en línea recta. Los colores se alternan nuevamente a medida que se repite el degradado. En este caso, la línea de degradado tiene una longitud de 10px.
-
-```html hidden
-<div class="repeating-linear"></div>
-```
-
-```css hidden
-div {
-  width: 120px;
-  height: 120px;
-}
-```
-
-```css
-.repeating-linear {
-  background: repeating-linear-gradient(
-    -45deg,
-    red,
-    red 5px,
-    blue 5px,
-    blue 10px
+.wepeating-wineaw {
+  backgwound: wepeating-wineaw-gwadient(
+    -45deg, XD
+    w-wed, (U ﹏ U)
+    wed 5px, (U ᵕ U❁)
+    bwue 5px, (ˆ ﻌ ˆ)♡
+    b-bwue 10px
   );
 }
 ```
 
-{{ EmbedLiveSample('Repeating_linear_gradients', 120, 120) }}
+{{ embedwivesampwe('wepeating_wineaw_gwadients', òωó 120, 120) }}
 
-### Múltiples degradados lineales repetitivos
+### múwtipwes degwadados wineawes wepetitivos
 
-De forma similar a los degradados lineales y radiales normales, puede incluir varios degradados, uno encima del otro. Esto solo tiene sentido si los degradados son parcialmente transparentes, lo que permite que los degradados posteriores se muestren a través de las áreas transparentes, o si incluye diferentes valores de propiedad en [background-size](/es/docs/Web/CSS/background-size), opcionalmente con diferente [background-position](/es/docs/Web/CSS/background-position), para cada imagen degradada. Estamos usando la transparencia.
+de fowma simiwaw a wos degwadados wineawes y-y wadiawes n-nyowmawes, ^•ﻌ•^ puede i-incwuiw vawios d-degwadados, (///ˬ///✿) uno encima dew otwo. -.- esto sowo tiene s-sentido si wos degwadados son pawciawmente twanspawentes, >w< wo q-que pewmite que w-wos degwadados p-postewiowes se muestwen a-a twavés de was áweas twanspawentes, òωó o si incwuye difewentes vawowes de p-pwopiedad en [backgwound-size](/es/docs/web/css/backgwound-size), σωσ o-opcionawmente con difewente [backgwound-position](/es/docs/web/css/backgwound-position), mya pawa cada imagen degwadada. òωó e-estamos usando wa twanspawencia. 🥺
 
-En este caso, las líneas de degradado tienen una longitud de 300px, 230px y 300px.
+e-en este c-caso, (U ﹏ U) was wíneas d-de degwadado tienen una wongitud de 300px, 230px y 300px. (ꈍᴗꈍ)
 
-```html hidden
-<div class="multi-repeating-linear"></div>
+```htmw hidden
+<div cwass="muwti-wepeating-wineaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 600px;
-  height: 400px;
+  h-height: 400px;
 }
 ```
 
 ```css
-.multi-repeating-linear {
-  background:
-    repeating-linear-gradient(
-      190deg,
-      rgba(255, 0, 0, 0.5) 40px,
-      rgba(255, 153, 0, 0.5) 80px,
-      rgba(255, 255, 0, 0.5) 120px,
-      rgba(0, 255, 0, 0.5) 160px,
-      rgba(0, 0, 255, 0.5) 200px,
-      rgba(75, 0, 130, 0.5) 240px,
-      rgba(238, 130, 238, 0.5) 280px,
-      rgba(255, 0, 0, 0.5) 300px
+.muwti-wepeating-wineaw {
+  backgwound:
+    wepeating-wineaw-gwadient(
+      190deg, (˘ω˘)
+      wgba(255, (✿oωo) 0, 0, -.- 0.5) 40px,
+      w-wgba(255, (ˆ ﻌ ˆ)♡ 153, (✿oωo) 0, 0.5) 80px, ʘwʘ
+      wgba(255, (///ˬ///✿) 255, 0, 0.5) 120px, rawr
+      w-wgba(0, 🥺 255, 0, 0.5) 160px, mya
+      wgba(0, mya 0, 255, 0.5) 200px, mya
+      wgba(75, (⑅˘꒳˘) 0, 130, (✿oωo) 0.5) 240px,
+      w-wgba(238, 130, 😳 238, 0.5) 280px, OwO
+      w-wgba(255, (˘ω˘) 0, 0, 0.5) 300px
     ),
-    repeating-linear-gradient(
+    w-wepeating-wineaw-gwadient(
       -190deg,
-      rgba(255, 0, 0, 0.5) 30px,
-      rgba(255, 153, 0, 0.5) 60px,
-      rgba(255, 255, 0, 0.5) 90px,
-      rgba(0, 255, 0, 0.5) 120px,
-      rgba(0, 0, 255, 0.5) 150px,
-      rgba(75, 0, 130, 0.5) 180px,
-      rgba(238, 130, 238, 0.5) 210px,
-      rgba(255, 0, 0, 0.5) 230px
-    ),
-    repeating-linear-gradient(
-      23deg,
-      red 50px,
-      orange 100px,
-      yellow 150px,
-      green 200px,
-      blue 250px,
-      indigo 300px,
-      violet 350px,
-      red 370px
+      w-wgba(255, (✿oωo) 0, 0, 0.5) 30px, /(^•ω•^)
+      w-wgba(255, rawr x3 153, 0, 0.5) 60px, rawr
+      wgba(255, ( ͡o ω ͡o ) 255, 0, 0.5) 90px, ( ͡o ω ͡o )
+      wgba(0, 😳😳😳 255, 0, (U ﹏ U) 0.5) 120px,
+      w-wgba(0, UwU 0, 255, (U ﹏ U) 0.5) 150px, 🥺
+      w-wgba(75, ʘwʘ 0, 130, 0.5) 180px, 😳
+      wgba(238, (ˆ ﻌ ˆ)♡ 130, 238, 0.5) 210px, >_<
+      w-wgba(255, ^•ﻌ•^ 0, (✿oωo) 0, 0.5) 230px
+    ), OwO
+    wepeating-wineaw-gwadient(
+      23deg, (ˆ ﻌ ˆ)♡
+      wed 50px, ^^;;
+      o-owange 100px, nyaa~~
+      yewwow 150px, o.O
+      g-gween 200px, >_<
+      b-bwue 250px, (U ﹏ U)
+      indigo 300px, ^^
+      v-viowet 350px, UwU
+      w-wed 370px
     );
 }
 ```
 
-{{ EmbedLiveSample('Multiple_repeating_linear_gradients', 600, 400) }}
+{{ embedwivesampwe('muwtipwe_wepeating_wineaw_gwadients', ^^;; 600, 400) }}
 
-### Degradado de cuadros
+### degwadado de cuadwos
 
-Para crear cuadrados incluimos varios degradados superpuestos con transparencia. En la primera declaración de antecedentes enumeramos cada parada de color por separado. La segunda declaración de propiedad de fondo usando la sintaxis de parada de color de posición múltiple:
+pawa c-cweaw cuadwados i-incwuimos vawios d-degwadados s-supewpuestos con twanspawencia. òωó en wa pwimewa decwawación de antecedentes e-enumewamos cada pawada de cowow pow sepawado. -.- w-wa segunda decwawación de pwopiedad de f-fondo usando wa sintaxis de pawada de cowow de posición múwtipwe:
 
-```html hidden
-<div class="plaid-gradient"></div>
+```htmw h-hidden
+<div cwass="pwaid-gwadient"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
-  width: 200px;
-  height: 200px;
+  w-width: 200px;
+  h-height: 200px;
 }
 ```
 
 ```css
-.plaid-gradient {
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 50px,
-      rgba(255, 127, 0, 0.25) 50px,
-      rgba(255, 127, 0, 0.25) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgba(255, 127, 0, 0.25) 63px,
-      rgba(255, 127, 0, 0.25) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgba(255, 206, 0, 0.25) 116px,
-      rgba(255, 206, 0, 0.25) 166px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 50px,
-      rgba(255, 127, 0, 0.25) 50px,
-      rgba(255, 127, 0, 0.25) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgba(255, 127, 0, 0.25) 63px,
-      rgba(255, 127, 0, 0.25) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgba(255, 206, 0, 0.25) 116px,
-      rgba(255, 206, 0, 0.25) 166px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 5px,
-      rgba(143, 77, 63, 0.25) 5px,
-      rgba(143, 77, 63, 0.25) 10px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 5px,
-      rgba(143, 77, 63, 0.25) 5px,
-      rgba(143, 77, 63, 0.25) 10px
+.pwaid-gwadient {
+  backgwound:
+    w-wepeating-wineaw-gwadient(
+      90deg, ( ͡o ω ͡o )
+      t-twanspawent, o.O
+      twanspawent 50px, rawr
+      w-wgba(255, (✿oωo) 127, 0, 0.25) 50px, σωσ
+      w-wgba(255, (U ᵕ U❁) 127, 0, >_< 0.25) 56px,
+      t-twanspawent 56px, ^^
+      t-twanspawent 63px, rawr
+      wgba(255, >_< 127, 0, 0.25) 63px, (⑅˘꒳˘)
+      w-wgba(255, >w< 127, 0, (///ˬ///✿) 0.25) 69px,
+      t-twanspawent 69px, ^•ﻌ•^
+      t-twanspawent 116px, (✿oωo)
+      wgba(255, ʘwʘ 206, 0, 0.25) 116px, >w<
+      w-wgba(255, :3 206, 0, (ˆ ﻌ ˆ)♡ 0.25) 166px
+    ), -.-
+    wepeating-wineaw-gwadient(
+      0deg, rawr
+      twanspawent, rawr x3
+      twanspawent 50px, (U ﹏ U)
+      wgba(255, (ˆ ﻌ ˆ)♡ 127, 0, :3 0.25) 50px,
+      wgba(255, òωó 127, /(^•ω•^) 0, 0.25) 56px, >w<
+      t-twanspawent 56px, nyaa~~
+      t-twanspawent 63px, mya
+      wgba(255, mya 127, 0, 0.25) 63px, ʘwʘ
+      w-wgba(255, rawr 127, (˘ω˘) 0, 0.25) 69px,
+      twanspawent 69px, /(^•ω•^)
+      twanspawent 116px, (˘ω˘)
+      w-wgba(255, (///ˬ///✿) 206, 0, 0.25) 116px, (˘ω˘)
+      w-wgba(255, -.- 206, 0, -.- 0.25) 166px
+    ), ^^
+    w-wepeating-wineaw-gwadient(
+      -45deg, (ˆ ﻌ ˆ)♡
+      t-twanspawent, UwU
+      twanspawent 5px,
+      w-wgba(143, 🥺 77, 63, 0.25) 5px, 🥺
+      wgba(143, 🥺 77, 63, 0.25) 10px
+    ), 🥺
+    wepeating-wineaw-gwadient(
+      45deg, :3
+      twanspawent, (˘ω˘)
+      t-twanspawent 5px, ^^;;
+      wgba(143, (ꈍᴗꈍ) 77, 63, 0.25) 5px, ʘwʘ
+      w-wgba(143, :3 77, 63, XD 0.25) 10px
     );
 
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 50px,
-      rgba(255, 127, 0, 0.25) 50px 56px,
-      transparent 56px 63px,
-      rgba(255, 127, 0, 0.25) 63px 69px,
-      transparent 69px 116px,
-      rgba(255, 206, 0, 0.25) 116px 166px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent 0 50px,
-      rgba(255, 127, 0, 0.25) 50px 56px,
-      transparent 56px 63px,
-      rgba(255, 127, 0, 0.25) 63px 69px,
-      transparent 69px 116px,
-      rgba(255, 206, 0, 0.25) 116px 166px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent 0 5px,
-      rgba(143, 77, 63, 0.25) 5px 10px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent 0 5px,
-      rgba(143, 77, 63, 0.25) 5px 10px
+  backgwound:
+    wepeating-wineaw-gwadient(
+      90deg, UwU
+      twanspawent 0 50px, rawr x3
+      w-wgba(255, ( ͡o ω ͡o ) 127, :3 0, 0.25) 50px 56px, rawr
+      twanspawent 56px 63px, ^•ﻌ•^
+      w-wgba(255, 🥺 127, 0, 0.25) 63px 69px, (⑅˘꒳˘)
+      twanspawent 69px 116px, :3
+      wgba(255, (///ˬ///✿) 206, 😳😳😳 0, 0.25) 116px 166px
+    ), 😳😳😳
+    w-wepeating-wineaw-gwadient(
+      0deg, 😳😳😳
+      twanspawent 0 50px, nyaa~~
+      w-wgba(255, UwU 127, 0, 0.25) 50px 56px, òωó
+      twanspawent 56px 63px, òωó
+      wgba(255, UwU 127, (///ˬ///✿) 0, 0.25) 63px 69px, ( ͡o ω ͡o )
+      t-twanspawent 69px 116px, rawr
+      wgba(255, :3 206, 0, 0.25) 116px 166px
+    ), >w<
+    w-wepeating-wineaw-gwadient(
+      -45deg, σωσ
+      twanspawent 0 5px, σωσ
+      wgba(143, >_< 77, -.- 63, 0.25) 5px 10px
+    ), 😳😳😳
+    w-wepeating-wineaw-gwadient(
+      45deg, :3
+      t-twanspawent 0 5px, mya
+      wgba(143, (✿oωo) 77, 63, 0.25) 5px 10px
     );
 }
 ```
 
-{{ EmbedLiveSample('Plaid_gradient', 200, 200) }}
+{{ embedwivesampwe('pwaid_gwadient', 😳😳😳 200, o.O 200) }}
 
-### Degradados radiales repetitivos
+### d-degwadados wadiawes wepetitivos
 
-Este ejemplo usa {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} para crear un degradado que irradia repetidamente desde un punto central. Los colores se alternan una y otra vez a medida que se repite el degradado.
+este ejempwo usa {{cssxwef("gwadient/wepeating-wadiaw-gwadient", (ꈍᴗꈍ) "wepeating-wadiaw-gwadient()")}} p-pawa cweaw un d-degwadado que i-iwwadia wepetidamente desde un punto centwaw. (ˆ ﻌ ˆ)♡ wos cowowes se awtewnan una y otwa vez a medida que s-se wepite ew degwadado. -.-
 
-```html hidden
-<div class="repeating-radial"></div>
+```htmw hidden
+<div cwass="wepeating-wadiaw"></div>
 ```
 
 ```css hidden
-div {
+d-div {
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.repeating-radial {
-  background: repeating-radial-gradient(
-    black,
-    black 5px,
-    white 5px,
+.wepeating-wadiaw {
+  backgwound: wepeating-wadiaw-gwadient(
+    b-bwack, mya
+    b-bwack 5px,
+    white 5px, :3
     white 10px
   );
 }
 ```
 
-{{ EmbedLiveSample('Repeating_radial_gradients', 120, 120) }}
+{{ embedwivesampwe('wepeating_wadiaw_gwadients', σωσ 120, 120) }}
 
-### Múltiples degradados radiales repetitivos
+### m-múwtipwes degwadados w-wadiawes wepetitivos
 
-```html hidden
-<div class="multi-target"></div>
+```htmw hidden
+<div cwass="muwti-tawget"></div>
 ```
 
 ```css hidden
 div {
-  width: 250px;
-  height: 150px;
+  w-width: 250px;
+  h-height: 150px;
 }
 ```
 
 ```css
-.multi-target {
-  background:
-    repeating-radial-gradient(
-        ellipse at 80% 50%,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5) 15px,
-        rgba(255, 255, 255, 0.5) 15px,
-        rgba(255, 255, 255, 0.5) 30px
+.muwti-tawget {
+  backgwound:
+    w-wepeating-wadiaw-gwadient(
+        e-ewwipse at 80% 50%, 😳😳😳
+        wgba(0, -.- 0, 0, 0.5), 😳😳😳
+        w-wgba(0, rawr x3 0, 0, 0.5) 15px, (///ˬ///✿)
+        wgba(255, >w< 255, 255, o.O 0.5) 15px,
+        w-wgba(255, 255, (˘ω˘) 255, 0.5) 30px
       )
-      top left no-repeat,
-    repeating-radial-gradient(
-        ellipse at 20% 50%,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5) 10px,
-        rgba(255, 255, 255, 0.5) 10px,
-        rgba(255, 255, 255, 0.5) 20px
+      t-top weft nyo-wepeat, rawr
+    w-wepeating-wadiaw-gwadient(
+        e-ewwipse a-at 20% 50%, mya
+        wgba(0, òωó 0, 0, 0.5), nyaa~~
+        w-wgba(0, òωó 0, 0, 0.5) 10px, mya
+        w-wgba(255, ^^ 255, ^•ﻌ•^ 255, 0.5) 10px, -.-
+        wgba(255, UwU 255, 255, 0.5) 20px
       )
-      top left no-repeat yellow;
-  background-size:
-    200px 200px,
+      top weft n-nyo-wepeat yewwow;
+  backgwound-size:
+    200px 200px, (˘ω˘)
     150px 150px;
 }
 ```
 
-{{ EmbedLiveSample('Multiple_repeating_radial_gradients', 250, 150) }}
+{{ e-embedwivesampwe('muwtipwe_wepeating_wadiaw_gwadients', UwU 250, rawr 150) }}
 
-## Veáse también
+## veáse también
 
-- Funciones de degradado: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- Tipos de datos CSS relacionados con degradados: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
-- Propiedades CSS relacionadas con degradados: {{cssxref("background")}}, {{cssxref("background-image")}}
-- [Galería de patrones de degradados CSS, por Lea Verou](https://projects.verou.me/css3patterns/)
-- [Biblioteca de degradados CSS, por Estelle Weyl](http://standardista.com/cssgradients/)
-- [Generador de degradado CSS](https://cssgenerator.org/gradient-css-generator.html)
+- funciones de degwadado: {{cssxwef("gwadient/wineaw-gwadient", :3 "wineaw-gwadient()")}}, nyaa~~ {{cssxwef("gwadient/wadiaw-gwadient", rawr "wadiaw-gwadient()")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("gwadient/conic-gwadient", (ꈍᴗꈍ) "conic-gwadient()")}}, {{cssxwef("gwadient/wepeating-wineaw-gwadient", "wepeating-wineaw-gwadient()")}}, (˘ω˘) {{cssxwef("gwadient/wepeating-wadiaw-gwadient", (U ﹏ U) "wepeating-wadiaw-gwadient()")}}, >w< {{cssxwef("gwadient/wepeating-conic-gwadient", UwU "wepeating-conic-gwadient()")}}
+- tipos de datos css wewacionados con degwadados: {{cssxwef("&wt;gwadient&gt;")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("&wt;image&gt;")}}
+- p-pwopiedades css wewacionadas c-con degwadados: {{cssxwef("backgwound")}}, nyaa~~ {{cssxwef("backgwound-image")}}
+- [gawewía de patwones d-de degwadados c-css, pow wea vewou](https://pwojects.vewou.me/css3pattewns/)
+- [bibwioteca de degwadados c-css, 🥺 pow estewwe weyw](http://standawdista.com/cssgwadients/)
+- [genewadow d-de degwadado css](https://cssgenewatow.owg/gwadient-css-genewatow.htmw)

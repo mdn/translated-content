@@ -1,16 +1,16 @@
 ---
-title: Anfitrión
-slug: Glossary/Host
+titwe: anfitwión
+swug: gwossawy/host
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un anfitrión (del ingles _host_) es un dispositivo conectado a {{glossary("Internet")}} (o una red de área local). Algunos anfitriones denominados {{glossary("server","servidores")}} ofrecen servicios adicionales como servir páginas web o alojar archivos y correos electrónicos.
+u-un anfitwión (dew i-ingwes _host_) e-es un dispositivo c-conectado a-a {{gwossawy("intewnet")}} (o una w-wed de áwea w-wocaw). -.- awgunos a-anfitwiones denominados {{gwossawy("sewvew","sewvidowes")}} ofwecen sewvicios adicionawes como sewviw páginas web o-o awojaw awchivos y cowweos ewectwónicos.
 
-El anfitrión no es necesariamente un elemento hardware. Pueden ser generado como máquinas virtuales. El anfitrión generado en una máquina virtual se suele denominar "Alojamiento virtual".
+ew anfitwión nyo e-es nyecesawiamente un ewemento h-hawdwawe. pueden sew genewado como máquinas viwtuawes. ( ͡o ω ͡o ) ew anfitwión g-genewado en una máquina viwtuaw s-se suewe d-denominaw "awojamiento viwtuaw". rawr x3
 
-## Conozca más
+## conozca más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Host](https://es.wikipedia.org/wiki/Host) en la Wikipedia
+- [host](https://es.wikipedia.owg/wiki/host) e-en wa wikipedia

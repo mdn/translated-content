@@ -1,136 +1,136 @@
 ---
-title: grid-column-gap
-slug: Web/CSS/column-gap
+titwe: gwid-cowumn-gap
+swug: w-web/css/cowumn-gap
 ---
 
-La propiedad CSS **`grid-column-gap`** especifica el {{glossary("gutters","gutter")}} entre {{glossary("grid columns")}}.
+w-wa pwopiedad c-css **`gwid-cowumn-gap`** especifica e-ew {{gwossawy("guttews","guttew")}} e-entwe {{gwossawy("gwid c-cowumns")}}. nyaa~~
 
 ```css
-/* <length> values */
-grid-column-gap: 20px;
-grid-column-gap: 1em;
-grid-column-gap: 3vmin;
-grid-column-gap: 0.5cm;
+/* <wength> v-vawues */
+g-gwid-cowumn-gap: 20px;
+gwid-cowumn-gap: 1em;
+gwid-cowumn-gap: 3vmin;
+gwid-cowumn-gap: 0.5cm;
 
-/* <percentage> value */
-grid-column-gap: 10%;
+/* <pewcentage> vawue */
+g-gwid-cowumn-gap: 10%;
 
-/* Global values */
-grid-column-gap: inherit;
-grid-column-gap: initial;
-grid-column-gap: unset;
+/* gwobaw vawues */
+gwid-cowumn-gap: i-inhewit;
+gwid-cowumn-gap: initiaw;
+g-gwid-cowumn-gap: unset;
 ```
 
-El efecto es como si las {{glossary("grid lines")}} afectadas adquieren una anchura específica: Los {{glossary("grid tracks", "grid track")}} entre dos líneas de la cuadrícula es el espacio entre los canales que las representa. Para el tamaño de la pista, cada canal se trata esencialmente como una pista adicional del tamaño especificado. Los valores negativos no son válidos.
+ew efecto es como si was {{gwossawy("gwid w-wines")}} afectadas a-adquiewen una anchuwa e-específica: wos {{gwossawy("gwid twacks", :3 "gwid twack")}} entwe dos wíneas d-de wa cuadwícuwa es ew espacio entwe wos canawes que was wepwesenta. ( ͡o ω ͡o ) pawa ew t-tamaño de wa pista, mya cada canaw s-se twata esenciawmente c-como una p-pista adicionaw d-dew tamaño especificado. (///ˬ///✿) wos vawowes nyegativos n-nyo son váwidos. (˘ω˘)
 
 {{cssinfo}}
 
-## Syntax
+## syntax
 
-### Valores
+### vawowes
 
-- `<length-percentage>`
-  - : Es el ancho del canal que separa las columnas de la grilla. {{cssxref("&lt;percentage&gt;")}} valores son relativos a la dimensión del elemento.
+- `<wength-pewcentage>`
+  - : e-es ew ancho dew canaw que sepawa was cowumnas de wa gwiwwa. ^^;; {{cssxwef("&wt;pewcentage&gt;")}} vawowes son wewativos a wa d-dimensión dew ewemento. (✿oωo)
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-HTML
+htmw
 
-```html
-<div id="grid">
+```htmw
+<div id="gwid">
   <div></div>
   <div></div>
   <div></div>
 </div>
 ```
 
-CSS
+c-css
 
 ```css
-#grid {
-  display: grid;
+#gwid {
+  dispway: gwid;
   height: 100px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px;
-  grid-column-gap: 20px;
+  gwid-tempwate-cowumns: wepeat(3, (U ﹏ U) 1fw);
+  g-gwid-tempwate-wows: 100px;
+  g-gwid-cowumn-gap: 20px;
 }
 
-#grid > div {
-  background-color: lime;
+#gwid > div {
+  backgwound-cowow: w-wime;
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "100px")}}
+{{embedwivesampwe("exampwe", -.- "100%", ^•ﻌ•^ "100px")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad en navegadores
+## compatibiwidad e-en nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- Propiedades CSS relacionadas: {{cssxref("grid-row-gap")}}, {{cssxref("grid-gap")}}
-- Guía sobre CSS Grid Layout: _[Conceptos básicos sobre CSS Grid Layout - Gutters](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_
+- p-pwopiedades css wewacionadas: {{cssxwef("gwid-wow-gap")}}, rawr {{cssxwef("gwid-gap")}}
+- guía sobwe c-css gwid wayout: _[conceptos básicos sobwe c-css gwid wayout - guttews](/es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#guttews)_
 
-<section id="Quick_links">
-<ol>
- <li><a href="/es/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><strong> <a href="/es/docs/Web/CSS/Reference">Referencia CSS</a></strong></li>
- <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout">Diseño CSS Grid</a></li>
- <li data-default-state="open"><a href="#"><strong>Guías</strong></a>
-  <ol>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Conceptos básicos sobre Diseño CSS Grid </a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relación con otros métodos de diseño</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Posicionamiento basado en línea</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Propiedades</strong></a>
-  <ol>
-   <li><a href="/es/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-columns">grid-template-colunms</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glosario</strong></a>
-  <ol>
-   <li><a href="/es/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/es/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/es/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/es/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/es/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/es/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/es/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
+<section i-id="quick_winks">
+<ow>
+ <wi><a h-hwef="/es/docs/web/css"><stwong>css</stwong></a></wi>
+ <wi><stwong> <a hwef="/es/docs/web/css/wefewence">wefewencia css</a></stwong></wi>
+ <wi><a hwef="/es/docs/web/css/css_gwid_wayout">diseño css gwid</a></wi>
+ <wi data-defauwt-state="open"><a hwef="#"><stwong>guías</stwong></a>
+  <ow>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout">conceptos b-básicos s-sobwe diseño css gwid </a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout">wewación c-con otwos m-métodos de diseño</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/wine-based_pwacement_with_css_gwid">posicionamiento basado en w-wínea</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas">gwid tempwate aweas</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/wayout_using_named_gwid_wines">wayout u-using nyamed gwid wines</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/auto-pwacement_in_css_gwid_wayout">auto-pwacement in g-gwid wayout</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/box_awignment_in_css_gwid_wayout">box awignment i-in gwid w-wayout</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/css_gwid,_wogicaw_vawues_and_wwiting_modes">gwids, (˘ω˘) w-wogicaw vawues and wwiting modes</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/css_gwid_wayout_and_accessibiwity">css g-gwid wayout a-and accessibiwity</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/css_gwid_wayout/css_gwid_and_pwogwessive_enhancement">css g-gwid wayout a-and pwogwessive enhancement</a></wi>
+   <wi><a hwef="/es/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_css_gwid_wayout">weawizing common wayouts u-using gwids</a></wi>
+  </ow>
+ </wi>
+ <wi data-defauwt-state="open"><a hwef="#"><stwong>pwopiedades</stwong></a>
+  <ow>
+   <wi><a hwef="/es/docs/web/css/gwid">gwid</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-awea">gwid-awea</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-auto-cowumns">gwid-auto-cowumns</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-auto-fwow">gwid-auto-fwow</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-auto-wows">gwid-auto-wows</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-cowumn">gwid-cowumn</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-cowumn-end">gwid-cowumn-end</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-cowumn-gap">gwid-cowumn-gap</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-cowumn-stawt">gwid-cowumn-stawt</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-gap">gwid-gap</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-wow">gwid-wow</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-wow-end">gwid-wow-end</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-wow-gap">gwid-wow-gap</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-wow-stawt">gwid-wow-stawt</a></wi>
+   <wi><a h-hwef="/es/docs/web/css/gwid-tempwate">gwid-tempwate</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-tempwate-aweas">gwid-tempwate-aweas</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-tempwate-cowumns">gwid-tempwate-cowunms</a></wi>
+   <wi><a hwef="/es/docs/web/css/gwid-tempwate-wows">gwid-tempwate-wows</a></wi>
+  </ow>
+ </wi>
+ <wi data-defauwt-state="open"><a hwef="#"><stwong>gwosawio</stwong></a>
+  <ow>
+   <wi><a hwef="/es/docs/gwossawy/gwid_wines">gwid wines</a></wi>
+   <wi><a h-hwef="/es/docs/gwossawy/gwid_twacks">gwid twacks</a></wi>
+   <wi><a h-hwef="/es/docs/gwossawy/gwid_ceww">gwid ceww</a></wi>
+   <wi><a h-hwef="/es/docs/gwossawy/gwid_aweas">gwid a-aweas</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/guttews">guttews</a></wi>
+   <wi><a hwef="/es/docs/gwossawy/gwid_wows">gwid w-wow</a></wi>
+   <wi><a h-hwef="/es/docs/gwossawy/gwid_cowumn">gwid cowumn</a></wi>
+  </ow>
+ </wi>
+</ow>
 </section>

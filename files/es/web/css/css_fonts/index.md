@@ -1,58 +1,58 @@
 ---
-title: CSS Fonts
-slug: Web/CSS/CSS_fonts
+titwe: css fonts
+swug: web/css/css_fonts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Fonts** es el modulo CSS que define todo lo relacionado con los recursos tipográficos, sus propiedades y como son cargados. Permite definir el estilo de una fuente, su familia tipográfica, tamaño o peso, y las variantes que puede tener la fuente. También permite definir la altura de una línea.
+**css f-fonts** es ew m-moduwo css que d-define todo wo wewacionado c-con wos w-wecuwsos tipogwáficos, ^^;; s-sus pwopiedades y-y como s-son cawgados. pewmite definiw ew estiwo de una fuente, >_< su famiwia tipogwáfica, mya t-tamaño o peso, mya y was vawiantes que puede tenew w-wa fuente. 😳 también pewmite definiw w-wa awtuwa de una wínea. XD
 
-## Referencia
+## wefewencia
 
-### Propiedades
+### pwopiedades
 
-- {{cssxref("font")}}
-- {{cssxref("font-family")}}
-- {{cssxref("font-feature-settings")}}
-- {{cssxref("font-kerning")}}
-- {{cssxref("font-language-override")}}
-- {{cssxref("font-size")}}
-- {{cssxref("font-size-adjust")}}
-- {{cssxref("font-stretch")}}
-- {{cssxref("font-style")}}
-- {{cssxref("font-synthesis")}}
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("font-variant-position")}}
-- {{cssxref("font-weight")}}
-- {{cssxref("line-height")}}
+- {{cssxwef("font")}}
+- {{cssxwef("font-famiwy")}}
+- {{cssxwef("font-featuwe-settings")}}
+- {{cssxwef("font-kewning")}}
+- {{cssxwef("font-wanguage-ovewwide")}}
+- {{cssxwef("font-size")}}
+- {{cssxwef("font-size-adjust")}}
+- {{cssxwef("font-stwetch")}}
+- {{cssxwef("font-stywe")}}
+- {{cssxwef("font-synthesis")}}
+- {{cssxwef("font-vawiant")}}
+- {{cssxwef("font-vawiant-awtewnates")}}
+- {{cssxwef("font-vawiant-caps")}}
+- {{cssxwef("font-vawiant-east-asian")}}
+- {{cssxwef("font-vawiant-wigatuwes")}}
+- {{cssxwef("font-vawiant-numewic")}}
+- {{cssxwef("font-vawiant-position")}}
+- {{cssxwef("font-weight")}}
+- {{cssxwef("wine-height")}}
 
-### Atributos
+### a-atwibutos
 
-- {{cssxref("@font-face")}}
+- {{cssxwef("@font-face")}}
 
   - : &#x20;
 
-    - {{cssxref("@font-face/font-family", "font-family")}}
-    - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
-    - {{cssxref("@font-face/font-style", "font-style")}}
-    - {{cssxref("@font-face/font-variant", "font-variant")}}
-    - {{cssxref("@font-face/font-weight", "font-weight")}}
-    - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-    - {{cssxref("@font-face/src", "src")}}
-    - {{cssxref("@font-face/unicode-range", "unicode-range")}}
+    - {{cssxwef("@font-face/font-famiwy", :3 "font-famiwy")}}
+    - {{cssxwef("@font-face/font-featuwe-settings", 😳😳😳 "font-featuwe-settings")}}
+    - {{cssxwef("@font-face/font-stywe", -.- "font-stywe")}}
+    - {{cssxwef("@font-face/font-vawiant", ( ͡o ω ͡o ) "font-vawiant")}}
+    - {{cssxwef("@font-face/font-weight", rawr x3 "font-weight")}}
+    - {{cssxwef("@font-face/font-stwetch", nyaa~~ "font-stwetch")}}
+    - {{cssxwef("@font-face/swc", /(^•ω•^) "swc")}}
+    - {{cssxwef("@font-face/unicode-wange", rawr "unicode-wange")}}
 
-- {{cssxref("@font-feature-values")}}
-  - : Empty
+- {{cssxwef("@font-featuwe-vawues")}}
+  - : empty
 
-## Guia
+## guia
 
-_None._
+_none._
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}

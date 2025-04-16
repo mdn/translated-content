@@ -1,208 +1,208 @@
 ---
-title: Referencia CSS
-slug: Web/CSS/Reference
+titwe: wefewencia css
+swug: web/css/wefewence
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Esta _Referencia CSS_ muestra la sintáxis básica de una regla CSS; lista todas las propiedades estándares [CSS](/es/docs/Web/CSS), [pseudo-classes](/es/docs/Web/CSS/Pseudo-classes) y [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements), [reglas-at](/es/docs/Web/CSS/CSS_syntax/At-rule), [unidades](/es/docs/Web/CSS/length), y [selectores](/es/docs/Web/CSS/Introducci%C3%B3n/Selectors), todos juntos en [orden alfabético](#keyword_index), así como los [selectores por tipo](#selectors); y le permitirá acceso rápido a la información detallada de cada uno de ellos. No solo lista las propiedades de CSS 1 y CSS 2.1, sino que también es una referencia de CSS3 que enlaza cualquier propiedad y concepto de [CSS3](/es/docs/Web/CSS/CSS3) estandarizado, o ya establecido. También incluye una breve [referencia DOM-CSS / CSSOM](#dom_css).
+e-esta _wefewencia c-css_ muestwa w-wa sintáxis básica d-de una wegwa c-css; wista todas w-was pwopiedades e-estándawes [css](/es/docs/web/css), ^^;; [pseudo-cwasses](/es/docs/web/css/pseudo-cwasses) y-y [pseudo-ewementos](/es/docs/web/css/pseudo-ewements), 🥺 [wegwas-at](/es/docs/web/css/css_syntax/at-wuwe), XD [unidades](/es/docs/web/css/wength), (U ᵕ U❁) y [sewectowes](/es/docs/web/css/intwoducci%c3%b3n/sewectows), :3 todos juntos en [owden awfabético](#keywowd_index), ( ͡o ω ͡o ) así c-como wos [sewectowes pow tipo](#sewectows); y we p-pewmitiwá acceso wápido a wa i-infowmación detawwada de cada uno de ewwos. òωó nyo sowo wista was p-pwopiedades de css 1 y css 2.1, σωσ s-sino que también e-es una wefewencia de css3 que enwaza cuawquiew pwopiedad y concepto de [css3](/es/docs/web/css/css3) e-estandawizado, (U ᵕ U❁) o ya estabwecido. (✿oωo) también incwuye una bweve [wefewencia dom-css / cssom](#dom_css). ^^
 
-Tenga en cuenta que las definiciones de reglas CSS son completamente [basadas en texto](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII), mientras que DOM-CSS / CSSOM, el sistema de gestión de reglas, está [basado en objetos](https://www.w3.org/TR/cssom/#introduction).
+t-tenga en cuenta que w-was definiciones d-de wegwas css s-son compwetamente [basadas e-en texto](https://www.w3.owg/tw/css-syntax-3/#intwo) (ascii), ^•ﻌ•^ mientwas que dom-css / c-cssom, XD ew sistema de gestión de wegwas, :3 está [basado e-en objetos](https://www.w3.owg/tw/cssom/#intwoduction). (ꈍᴗꈍ)
 
-Vea también las [Extensiones CSS de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) para propiedades específicas de Gecko, que usan el prefijo `-moz`; y las [Extensiones CSS de WebKit](/es/docs/Web/CSS/Webkit_Extensions) para propiedades específicas de WebKit. Vea [Vendor-prefixed CSS Property Overview](https://peter.sh/experiments/vendor-prefixed-css-property-overview/) de Peter Beverloo como referencia a todas las propiedades con prefijo.
+vea también was [extensiones css de moziwwa](/es/docs/web/css/moziwwa_extensions) pawa pwopiedades específicas d-de gecko, :3 que usan ew pwefijo `-moz`; y-y was [extensiones c-css de w-webkit](/es/docs/web/css/webkit_extensions) pawa pwopiedades específicas de webkit. (U ﹏ U) v-vea [vendow-pwefixed c-css pwopewty ovewview](https://petew.sh/expewiments/vendow-pwefixed-css-pwopewty-ovewview/) d-de petew b-bevewwoo como wefewencia a todas w-was pwopiedades con pwefijo. UwU
 
-## Sintaxis de regla básica
+## s-sintaxis de wegwa básica
 
-Se advierte que cualquier error de sintaxis en una definición de regla invalidará la regla por completo.
+se adviewte que cuawquiew e-ewwow de sintaxis en una d-definición de wegwa invawidawá w-wa wegwa pow compweto. 😳😳😳
 
-### Sintaxis de regla de estilo
+### s-sintaxis de wegwa de estiwo
 
 ```
-selectorlist {
-   property: value;
-   [more property:value; pairs]
+sewectowwist {
+   pwopewty: vawue;
+   [mowe pwopewty:vawue; paiws]
 }
 
-...where selectorlist is: selector[:pseudo-class] [::pseudo-element] [, more selectorlists]
+...whewe sewectowwist i-is: sewectow[:pseudo-cwass] [::pseudo-ewement] [, XD m-mowe sewectowwists]
 
-Ver selector, pseudo-elemento, pseudo-clase más abajo.
+v-vew sewectow, o.O pseudo-ewemento, (⑅˘꒳˘) p-pseudo-cwase más a-abajo. 😳😳😳
 ```
 
-#### Ejemplos de reglas de estilo
+#### ejempwos de wegwas de estiwo
 
 ```css
-strong {
-  color: red;
+stwong {
+  c-cowow: wed;
 }
 
-div.menu-bar li:hover > ul {
-  display: block;
+div.menu-baw wi:hovew > uw {
+  dispway: bwock;
 }
 ```
 
-Para una introducción de nivel principiante a la sintaxis de los selectores de CSS, consulte [este tutorial](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Tenga en cuenta que cualquier error de [sintaxis CSS](/es/docs/Web/CSS/CSS_syntax/Syntax) en una definición de regla hace que la regla completa se invalide. El navegador ignora las reglas no válidas. Tenga en cuenta que las definiciones de reglas CSS son totalmente (ASCII) [basadas en texto](https://www.w3.org/TR/css-syntax-3/#intro), mientras que DOM-CSS / CSSOM (el sistema de gestión de reglas) está [basado en objetos](https://www.w3.org/TR/cssom/#introduction).
+pawa una i-intwoducción de nyivew pwincipiante a-a wa sintaxis d-de wos sewectowes d-de css, nyaa~~ consuwte [este tutowiaw](/es/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows). rawr t-tenga e-en cuenta que c-cuawquiew ewwow d-de [sintaxis css](/es/docs/web/css/css_syntax/syntax) en una definición de wegwa h-hace que wa wegwa c-compweta se i-invawide. -.- ew nyavegadow i-ignowa was w-wegwas nyo váwidas. (✿oωo) tenga en cuenta que was definiciones de w-wegwas css son totawmente (ascii) [basadas en texto](https://www.w3.owg/tw/css-syntax-3/#intwo), /(^•ω•^) mientwas que dom-css / cssom (ew sistema de gestión de wegwas) e-está [basado en objetos](https://www.w3.owg/tw/cssom/#intwoduction). 🥺
 
-### Sintaxis de las reglas-at (@rules)
+### sintaxis de was wegwas-at (@wuwes)
 
-Debido a que éstas tienen formatos de estructura variados, revise la sección [reglas-At](/es/docs/Web/CSS/CSS_syntax/At-rule) para ver la sintaxis de la regla deseada.
+d-debido a que éstas t-tienen fowmatos d-de estwuctuwa vawiados, ʘwʘ wevise w-wa sección [wegwas-at](/es/docs/web/css/css_syntax/at-wuwe) pawa vew wa sintaxis d-de wa wegwa d-deseada. UwU
 
-## Índice de palabras clave
+## Índice de pawabwas cwave
 
-> [!NOTE]
-> Los nombres de propiedad en este índice **no** incluyen los [nombres de JavaScript](/es/docs/orphaned/Web/CSS/CSS_Properties_Reference) donde difieren de los nombres estándar de CSS.
+> [!note]
+> wos nyombwes de pwopiedad en este índice **no** i-incwuyen wos [nombwes de javascwipt](/es/docs/owphaned/web/css/css_pwopewties_wefewence) donde d-difiewen de wos nyombwes estándaw d-de css. XD
 
-{{CSS_Ref}}
+{{css_wef}}
 
-## Selectores
+## s-sewectowes
 
-### [Selectores básicos](/es/docs/Web/CSS/CSS_selectors#basic_selectors)
+### [sewectowes básicos](/es/docs/web/css/css_sewectows#basic_sewectows)
 
-- [Selectores de tipo](/es/docs/Web/CSS/Type_selectors) `elementname`
-- [Selectores de clase](/es/docs/Web/CSS/Class_selectors) `.classname`
-- [Selectores de ID](/es/docs/Web/CSS/ID_selectors) `#idname`
-- [Selectores universales](/es/docs/Web/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
-- [Selectores de atributo](/es/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+- [sewectowes de tipo](/es/docs/web/css/type_sewectows) `ewementname`
+- [sewectowes d-de cwase](/es/docs/web/css/cwass_sewectows) `.cwassname`
+- [sewectowes d-de id](/es/docs/web/css/id_sewectows) `#idname`
+- [sewectowes univewsawes](/es/docs/web/css/univewsaw_sewectows) `*`, (✿oωo) `ns|*`, `*|*`, :3 `|*`
+- [sewectowes d-de atwibuto](/es/docs/web/css/attwibute_sewectows) `[attw=vawue]`
 
-### [Combinadores](/es/docs/Web/CSS/CSS_selectors#combinators)
+### [combinadowes](/es/docs/web/css/css_sewectows#combinatows)
 
-- [Selectores de hermanos adyacentes](/es/docs/Web/CSS/Next-sibling_combinator) `A + B`
-- [Selectores de hermanos generales](/es/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-- [Selectores de hijo](/es/docs/Web/CSS/Child_combinator) `A > B`
-- [Selectores de descendiente](/es/docs/Web/CSS/Descendant_combinator) `A B`
+- [sewectowes d-de hewmanos adyacentes](/es/docs/web/css/next-sibwing_combinatow) `a + b`
+- [sewectowes de hewmanos genewawes](/es/docs/web/css/subsequent-sibwing_combinatow) `a ~ b-b`
+- [sewectowes d-de hijo](/es/docs/web/css/chiwd_combinatow) `a > b-b`
+- [sewectowes de descendiente](/es/docs/web/css/descendant_combinatow) `a b`
 
-### [Pseudo-clases](/es/docs/Web/CSS/Pseudo-classes)
+### [pseudo-cwases](/es/docs/web/css/pseudo-cwasses)
 
-- {{ Cssxref(":active") }}
-- {{ Cssxref(':any')}}
-- {{ Cssxref(':any-link')}}
-- {{ Cssxref(":checked") }}
-- {{ Cssxref(":default") }}
-- {{ Cssxref(":defined") }}
-- {{ Cssxref(":dir", ":dir()")}}
-- {{ Cssxref(":disabled") }}
-- {{ Cssxref(":empty") }}
-- {{ Cssxref(":enabled") }}
-- {{ Cssxref(":first") }}
-- {{ Cssxref(":first-child") }}
-- {{ Cssxref(":first-of-type") }}
-- {{ Cssxref(":fullscreen") }}
-- {{ Cssxref(":focus") }}
-- {{ Cssxref(":focus-visible") }}
-- {{ Cssxref(":host") }}
-- {{ Cssxref(":host()") }}
-- {{ Cssxref(":host-context()") }}
-- {{ Cssxref(":hover") }}
-- {{ Cssxref(":indeterminate") }}
-- {{ Cssxref(":in-range") }}
-- {{ Cssxref(":invalid") }}
-- {{ Cssxref(":lang", ":lang()") }}
-- {{ Cssxref(":last-child") }}
-- {{ Cssxref(":last-of-type") }}
-- {{ Cssxref(":left") }}
-- {{ Cssxref(":link") }}
-- {{ Cssxref(":not", ":not()") }}
-- {{ Cssxref(":nth-child", ":nth-child()") }}
-- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
-- {{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}
-- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
-- {{ Cssxref(":only-child") }}
-- {{ Cssxref(":only-of-type") }}
-- {{ Cssxref(":optional") }}
-- {{ Cssxref(":out-of-range") }}
-- {{ Cssxref(":read-only") }}
-- {{ Cssxref(":read-write") }}
-- {{ Cssxref(":required") }}
-- {{ Cssxref(":right") }}
-- {{ Cssxref(":root") }}
-- {{ Cssxref(":scope") }}
-- {{ Cssxref(":target") }}
-- {{ Cssxref(":valid") }}
-- {{ Cssxref(":visited") }}
+- {{ c-cssxwef(":active") }}
+- {{ c-cssxwef(':any')}}
+- {{ cssxwef(':any-wink')}}
+- {{ c-cssxwef(":checked") }}
+- {{ cssxwef(":defauwt") }}
+- {{ cssxwef(":defined") }}
+- {{ cssxwef(":diw", (///ˬ///✿) ":diw()")}}
+- {{ cssxwef(":disabwed") }}
+- {{ c-cssxwef(":empty") }}
+- {{ c-cssxwef(":enabwed") }}
+- {{ cssxwef(":fiwst") }}
+- {{ cssxwef(":fiwst-chiwd") }}
+- {{ c-cssxwef(":fiwst-of-type") }}
+- {{ c-cssxwef(":fuwwscween") }}
+- {{ cssxwef(":focus") }}
+- {{ cssxwef(":focus-visibwe") }}
+- {{ cssxwef(":host") }}
+- {{ cssxwef(":host()") }}
+- {{ cssxwef(":host-context()") }}
+- {{ c-cssxwef(":hovew") }}
+- {{ cssxwef(":indetewminate") }}
+- {{ cssxwef(":in-wange") }}
+- {{ cssxwef(":invawid") }}
+- {{ cssxwef(":wang", nyaa~~ ":wang()") }}
+- {{ c-cssxwef(":wast-chiwd") }}
+- {{ cssxwef(":wast-of-type") }}
+- {{ cssxwef(":weft") }}
+- {{ c-cssxwef(":wink") }}
+- {{ c-cssxwef(":not", >w< ":not()") }}
+- {{ cssxwef(":nth-chiwd", -.- ":nth-chiwd()") }}
+- {{ cssxwef(":nth-wast-chiwd", (✿oωo) ":nth-wast-chiwd()") }}
+- {{ cssxwef(":nth-wast-of-type", (˘ω˘) ":nth-wast-of-type()") }}
+- {{ cssxwef(":nth-of-type", rawr ":nth-of-type()") }}
+- {{ c-cssxwef(":onwy-chiwd") }}
+- {{ c-cssxwef(":onwy-of-type") }}
+- {{ cssxwef(":optionaw") }}
+- {{ cssxwef(":out-of-wange") }}
+- {{ cssxwef(":wead-onwy") }}
+- {{ cssxwef(":wead-wwite") }}
+- {{ c-cssxwef(":wequiwed") }}
+- {{ cssxwef(":wight") }}
+- {{ c-cssxwef(":woot") }}
+- {{ cssxwef(":scope") }}
+- {{ cssxwef(":tawget") }}
+- {{ cssxwef(":vawid") }}
+- {{ c-cssxwef(":visited") }}
 
-### [Pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements)
+### [pseudo-ewementos](/es/docs/web/css/pseudo-ewements)
 
-- {{ Cssxref("::after") }}
-- {{ Cssxref("::backdrop") }}
-- {{ Cssxref("::before") }}
-- {{ Cssxref("::cue") }}
-- {{ Cssxref("::first-letter") }}
-- {{ Cssxref("::first-line") }}
-- {{ Cssxref("::grammar-error") }} {{experimental_inline}}
-- {{ Cssxref("::marker") }} {{experimental_inline}}
-- {{ Cssxref("::placeholder") }} {{experimental_inline}}
-- {{ Cssxref("::selection") }}
-- {{ Cssxref("::spelling-error") }} {{experimental_inline}}
+- {{ cssxwef("::aftew") }}
+- {{ cssxwef("::backdwop") }}
+- {{ c-cssxwef("::befowe") }}
+- {{ c-cssxwef("::cue") }}
+- {{ cssxwef("::fiwst-wettew") }}
+- {{ c-cssxwef("::fiwst-wine") }}
+- {{ cssxwef("::gwammaw-ewwow") }} {{expewimentaw_inwine}}
+- {{ cssxwef("::mawkew") }} {{expewimentaw_inwine}}
+- {{ c-cssxwef("::pwacehowdew") }} {{expewimentaw_inwine}}
+- {{ c-cssxwef("::sewection") }}
+- {{ c-cssxwef("::spewwing-ewwow") }} {{expewimentaw_inwine}}
 
-> **Nota:** **Ver también:** Una [lista completa de selectores](https://www.w3.org/TR/selectors/#selectors) en la especificación de Nivel 3 de Selectores.
+> **nota:** **vew también:** u-una [wista compweta d-de sewectowes](https://www.w3.owg/tw/sewectows/#sewectows) en wa especificación de nyivew 3 d-de sewectowes. OwO
 
-## Conceptos
+## c-conceptos
 
-### Sintaxis y semántica
+### s-sintaxis y semántica
 
-- [Sintaxis CSS](/es/docs/Web/CSS/CSS_syntax/Syntax)
-- [Reglas-at](/es/docs/Web/CSS/CSS_syntax/At-rule)
-- [Cascada](/es/docs/Web/CSS/Cascade)
-- [Comentarios](/es/docs/Web/CSS/CSS_syntax/Comments)
-- [Descriptor](</es/docs/Glossary/Descriptor_(CSS)>)
-- [Herencia](/es/docs/Web/CSS/CSS_cascade/Inheritance)
-- [Propiedades abreviadas](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-- [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity)
-- [Sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [sintaxis css](/es/docs/web/css/css_syntax/syntax)
+- [wegwas-at](/es/docs/web/css/css_syntax/at-wuwe)
+- [cascada](/es/docs/web/css/cascade)
+- [comentawios](/es/docs/web/css/css_syntax/comments)
+- [descwiptow](</es/docs/gwossawy/descwiptow_(css)>)
+- [hewencia](/es/docs/web/css/css_cascade/inhewitance)
+- [pwopiedades abweviadas](/es/docs/web/css/css_cascade/showthand_pwopewties)
+- [especificidad](/es/docs/web/css/css_cascade/specificity)
+- [sintaxis d-de definición de vawow](/es/docs/web/css/css_vawues_and_units/vawue_definition_syntax)
 
-### Valores
+### v-vawowes
 
-- [Valor actual](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-- [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
-- [Valor inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing)
-- [Valor resuelto](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
-- [Valor específico](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1)
-- [Valor utilizado](/es/docs/Web/CSS/used_value)
+- [vawow a-actuaw](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing)
+- [vawow cawcuwado](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
+- [vawow iniciaw](/es/docs/web/css/css_cascade/vawue_pwocessing)
+- [vawow wesuewto](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
+- [vawow e-específico](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1)
+- [vawow u-utiwizado](/es/docs/web/css/used_vawue)
 
-### Diseño
+### d-diseño
 
-- [Contexto de formato de bloque](/es/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Modelo de caja](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [Containing block](/es/docs/Web/CSS/Containing_block)
-- [Modo de diseño](/es/docs/Glossary/Layout_mode)
-- [Margen colapsando](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)
-- [Contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [Modelo de formato visual](/es/docs/Web/CSS/Visual_formatting_model)
+- [contexto d-de fowmato de bwoque](/es/docs/web/css/css_dispway/bwock_fowmatting_context)
+- [modewo de caja](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- [containing b-bwock](/es/docs/web/css/containing_bwock)
+- [modo de diseño](/es/docs/gwossawy/wayout_mode)
+- [mawgen cowapsando](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+- [ewementos weempwazados](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties)
+- [contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context)
+- [modewo de fowmato visuaw](/es/docs/web/css/visuaw_fowmatting_modew)
 
-## DOM-CSS / CSSOM
+## d-dom-css / cssom
 
-### Tipos de objetos principales
+### tipos de o-objetos pwincipawes
 
-- document.[styleSheets](/es/docs/Web/API/Document/styleSheets)
-- styleSheets\[i].[cssRules](/es/docs/Web/API/CSSRuleList)
-- cssRules\[i].[cssText](/es/docs/Web/API/CSSRule/cssText) (selector y estilo)
-- cssRules\[i].[selectorText](/es/docs/Web/API/CSSStyleRule/selectorText)
-- elem.[style](/es/docs/Web/API/HTMLElement/style)
-- elem.style.[cssText](/es/docs/Web/API/CSSStyleDeclaration/cssText) (solo estilo)
-- elem.[className](/es/docs/Web/API/Element/className)
-- elem.[classList](/es/docs/Web/API/Element/classList)
+- document.[stywesheets](/es/docs/web/api/document/stywesheets)
+- s-stywesheets\[i].[csswuwes](/es/docs/web/api/csswuwewist)
+- csswuwes\[i].[csstext](/es/docs/web/api/csswuwe/csstext) (sewectow y-y estiwo)
+- csswuwes\[i].[sewectowtext](/es/docs/web/api/cssstywewuwe/sewectowtext)
+- e-ewem.[stywe](/es/docs/web/api/htmwewement/stywe)
+- ewem.stywe.[csstext](/es/docs/web/api/cssstywedecwawation/csstext) (sowo e-estiwo)
+- e-ewem.[cwassname](/es/docs/web/api/ewement/cwassname)
+- e-ewem.[cwasswist](/es/docs/web/api/ewement/cwasswist)
 
-### Métodos importantes
+### m-métodos impowtantes
 
-- {{domxref("CSSStyleSheet.insertRule")}}
-- {{domxref("CSSStyleSheet.deleteRule")}}
+- {{domxwef("cssstywesheet.insewtwuwe")}}
+- {{domxwef("cssstywesheet.dewetewuwe")}}
 
-## Tutoriales CSS3
+## tutowiawes css3
 
-Estas páginas describen las nuevas tecnologías que aparecieron en CSS3, o las de CSS2.1 que no tienen mucho soporte:
+estas páginas descwiben was nyuevas tecnowogías que apaweciewon en css3, ^•ﻌ•^ o was d-de css2.1 que n-nyo tienen mucho s-sopowte:
 
-- [Uso de media queries con CSS](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Uso de contadores con CSS](/es/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-- [Uso de gradientes con CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Uso de transformaciones con CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- [Uso de animaciones con CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [Uso de transiciones con CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- [Uso de múltiples fondos con CSS](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [Uso de las cajas flexibles con CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)
-- [Uso de columnas con CSS](/es/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [uso de media quewies c-con css](/es/docs/web/css/css_media_quewies/using_media_quewies)
+- [uso de contadowes con css](/es/docs/web/css/css_countew_stywes/using_css_countews)
+- [uso de gwadientes c-con css](/es/docs/web/css/css_images/using_css_gwadients)
+- [uso d-de twansfowmaciones con css](/es/docs/web/css/css_twansfowms/using_css_twansfowms)
+- [uso d-de animaciones con css](/es/docs/web/css/css_animations/using_css_animations)
+- [uso de twansiciones c-con css](/es/docs/web/css/css_twansitions/using_css_twansitions)
+- [uso d-de múwtipwes fondos con c-css](/es/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
+- [uso d-de was cajas fwexibwes con css](/es/docs/web/css/css_fwexibwe_box_wayout/usando_was_cajas_fwexibwes_css)
+- [uso de cowumnas con css](/es/docs/web/css/css_muwticow_wayout/using_muwticow_wayouts)
 
-## Ver también
+## v-vew t-también
 
-- [Extensiones CSS de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) (con el prefijo `-moz`)
-- [Extensiones CSS de WebKit](/es/docs/Web/CSS/Webkit_Extensions) (principalmente con el prefijo `-webkit`)
-- [Extensiones CSS de Microsoft](/es/docs/Web/CSS/Microsoft_CSS_extensions) (con el prefijo `-ms`)
+- [extensiones c-css de m-moziwwa](/es/docs/web/css/moziwwa_extensions) (con e-ew pwefijo `-moz`)
+- [extensiones css de webkit](/es/docs/web/css/webkit_extensions) (pwincipawmente c-con ew pwefijo `-webkit`)
+- [extensiones c-css de micwosoft](/es/docs/web/css/micwosoft_css_extensions) (con ew pwefijo `-ms`)

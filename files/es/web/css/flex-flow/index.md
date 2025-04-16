@@ -1,68 +1,68 @@
 ---
-title: flex-flow
-slug: Web/CSS/flex-flow
+titwe: fwex-fwow
+swug: web/css/fwex-fwow
 ---
 
-{{ CSSRef}}
+{{ c-csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) **`flex-flow`** es una propiedad atajo para las propiedades individuales `flex-direction` y `flex-wrap`.
+wa pwopiedad [css](/es/docs/web/css) **`fwex-fwow`** es u-una pwopiedad a-atajo pawa was pwopiedades i-individuawes `fwex-diwection` y-y `fwex-wwap`. (⑅˘꒳˘)
 
 {{cssinfo}}
 
-Para más propiedades e información ve [Utilizando cajas flexibles CSS](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+p-pawa más p-pwopiedades e infowmación ve [utiwizando cajas fwexibwes css](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox). òωó
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* flex-flow: <'flex-direction'> */
-flex-flow: row;
-flex-flow: row-reverse;
-flex-flow: column;
-flex-flow: column-reverse;
+/* f-fwex-fwow: <'fwex-diwection'> */
+fwex-fwow: wow;
+fwex-fwow: w-wow-wevewse;
+fwex-fwow: c-cowumn;
+fwex-fwow: cowumn-wevewse;
 
-/* flex-flow: <'flex-wrap'> */
-flex-flow: nowrap;
-flex-flow: wrap;
-flex-flow: wrap-reverse;
+/* fwex-fwow: <'fwex-wwap'> */
+fwex-fwow: nyowwap;
+f-fwex-fwow: wwap;
+fwex-fwow: w-wwap-wevewse;
 
-/* flex-flow: <'flex-direction'> and <'flex-wrap'> */
-flex-flow: row nowrap;
-flex-flow: column wrap;
-flex-flow: column-reverse wrap-reverse;
+/* f-fwex-fwow: <'fwex-diwection'> and <'fwex-wwap'> */
+fwex-fwow: wow nyowwap;
+fwex-fwow: cowumn w-wwap;
+fwex-fwow: cowumn-wevewse wwap-wevewse;
 
-/* valores globales */
-flex-flow: inherit;
-flex-flow: initial;
-flex-flow: unset;
+/* vawowes gwobawes */
+fwex-fwow: i-inhewit;
+fwex-fwow: initiaw;
+f-fwex-fwow: unset;
 ```
 
-### Valores
+### v-vawowes
 
-Ve [`flex-direction`](/es/docs/Web/CSS/flex-direction) y [`flex-wrap`](/es/docs/Web/CSS/flex-wrap) para más detalles de los valores.
+v-ve [`fwex-diwection`](/es/docs/web/css/fwex-diwection) y-y [`fwex-wwap`](/es/docs/web/css/fwex-wwap) pawa más detawwes de wos v-vawowes. ʘwʘ
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```
-element {
-  /* Main-axis es la dirección de bloque con main-start y main-end opuesto. Los artículos flex se distribuyen en múltiples líneas */
-  flex-flow: column-reverse wrap;
+e-ewement {
+  /* main-axis es wa diwección de bwoque con main-stawt y main-end opuesto. /(^•ω•^) wos awtícuwos f-fwex se distwibuyen en múwtipwes w-wíneas */
+  f-fwex-fwow: c-cowumn-wevewse wwap;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Utilizando cajas flexibles CSS](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [utiwizando c-cajas fwexibwes c-css](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)

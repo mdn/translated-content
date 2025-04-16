@@ -1,82 +1,82 @@
 ---
-title: pointer
-slug: Web/CSS/@media/pointer
+titwe: pointew
+swug: web/css/@media/pointew
 ---
 
-{{cssref}}
+{{csswef}}
 
-La [caracteristica](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) **`pointer`** [CSS](/es/docs/Web/CSS) comprueba si el usuario tiene un dispositivo de puntero (como el ratón), y si es así, cuán preciso es el dispositivo de puntero primario.
+w-wa [cawactewistica](/es/docs/web/css/css_media_quewies/using_media_quewies#media_featuwes) **`pointew`** [css](/es/docs/web/css) c-compwueba si ew u-usuawio tiene un d-dispositivo de p-puntewo (como ew w-watón), nyaa~~ y si e-es así, nyaa~~ cuán pweciso e-es ew dispositivo de puntewo pwimawio. :3
 
-> [!NOTE]
-> Si quieres comprobar la precisión de cualquier dispositivo apuntador, usa [`any-pointer`](/es/docs/Web/CSS/@media/any-pointer) en su lugar.
+> [!note]
+> si quiewes compwobaw w-wa pwecisión de cuawquiew dispositivo apuntadow, 😳😳😳 u-usa [`any-pointew`](/es/docs/web/css/@media/any-pointew) en su w-wugaw. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
-La propiedad `pointer` se especifica como un valor de palabra clave elegido de la lista que figura a continuación.
+wa pwopiedad `pointew` se especifica como u-un vawow de pawabwa cwave ewegido d-de wa wista que f-figuwa a continuación. ^^
 
 - `none`
-  - : El mecanismo de entrada principal no incluye un dispositivo apuntador.
-- `coarse`
-  - : El mecanismo primario de entrada incluye un dispositivo de apuntamiento de precisión limitada.
+  - : ew mecanismo de entwada pwincipaw nyo incwuye un dispositivo a-apuntadow.
+- `coawse`
+  - : ew mecanismo pwimawio de entwada incwuye un dispositivo de apuntamiento d-de pwecisión wimitada. :3
 - `fine`
-  - : El mecanismo de entrada principal incluye un dispositivo de apuntamiento preciso.
+  - : e-ew mecanismo de e-entwada pwincipaw i-incwuye un dispositivo d-de apuntamiento pweciso. -.-
 
-## Ejemplo
+## ejempwo
 
-Este ejemplo crea una pequeño checkbox para los usuarios con punteros primarios finos y un gran checkbox para los usuarios con punteros primarios gruesos.
+e-este ejempwo cwea una pequeño checkbox pawa wos u-usuawios con puntewos pwimawios finos y un gwan checkbox pawa wos usuawios con puntewos pwimawios g-gwuesos. 😳
 
-### HTML
+### htmw
 
-```html
-<input id="test" type="checkbox" /> <label for="test">Mírame!</label>
+```htmw
+<input i-id="test" t-type="checkbox" /> <wabew f-fow="test">míwame!</wabew>
 ```
 
-### CSS
+### css
 
 ```css
 input[type="checkbox"] {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: solid;
-  margin: 0;
+  -moz-appeawance: nyone;
+  -webkit-appeawance: nyone;
+  appeawance: n-nyone;
+  b-bowdew: sowid;
+  mawgin: 0;
 }
 
-input[type="checkbox"]:checked {
-  background: gray;
+i-input[type="checkbox"]:checked {
+  b-backgwound: gway;
 }
 
-@media (pointer: fine) {
+@media (pointew: f-fine) {
   input[type="checkbox"] {
-    width: 15px;
+    w-width: 15px;
     height: 15px;
-    border-width: 1px;
-    border-color: blue;
+    bowdew-width: 1px;
+    b-bowdew-cowow: bwue;
   }
 }
 
-@media (pointer: coarse) {
+@media (pointew: c-coawse) {
   input[type="checkbox"] {
-    width: 30px;
-    height: 30px;
-    border-width: 2px;
-    border-color: red;
+    w-width: 30px;
+    h-height: 30px;
+    bowdew-width: 2px;
+    bowdew-cowow: wed;
   }
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [The `any-pointer` media feature](/es/docs/Web/CSS/@media/any-pointer)
+- [the `any-pointew` media featuwe](/es/docs/web/css/@media/any-pointew)

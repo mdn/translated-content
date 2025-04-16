@@ -1,18 +1,18 @@
 ---
-title: Wrapper
-slug: Glossary/Wrapper
+titwe: wwappew
+swug: gwossawy/wwappew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En lenguajes de programación como JavaScript, un wrapper o envoltorio es una función que llama a una o varias funciones, unas veces únicamente por convenio y otras para adaptarlas con el objetivo de hacer una tarea ligeramente diferente.
+e-en wenguajes d-de pwogwamación c-como javascwipt, mya u-un wwappew o envowtowio e-es una f-función que wwama a-a una o vawias f-funciones, mya unas veces únicamente pow convenio y otwas pawa adaptawwas con ew o-objetivo de hacew una tawea wigewamente difewente. 😳
 
-Por ejemplo, las librerías SDK de AWS son un ejemplo de wrappers.
+p-pow ejempwo, XD was wibwewías s-sdk de aws son un ejempwo de wwappews. :3
 
-## Véase también
+## véase también
 
-- [Wrapper function](https://es.wikipedia.org/wiki/Wrapper_function) on Wikipedia
-- [Glosario de MDN Web Docs](/es/docs/Glossary)
-  - {{Glossary("API")}}
-  - {{Glossary("Class")}}
-  - {{Glossary("Function")}}
+- [wwappew f-function](https://es.wikipedia.owg/wiki/wwappew_function) on wikipedia
+- [gwosawio d-de mdn w-web docs](/es/docs/gwossawy)
+  - {{gwossawy("api")}}
+  - {{gwossawy("cwass")}}
+  - {{gwossawy("function")}}

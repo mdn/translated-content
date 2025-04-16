@@ -1,25 +1,25 @@
 ---
-title: Grid Row
-slug: Glossary/Grid_Row
+titwe: gwid wow
+swug: gwossawy/gwid_wow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una **grid row** es una pista horizontal en un [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout), es el espacio entre dos líneas de cuadrícula horizontales. Se define por la propiedad {{cssxref("grid-template-rows")}} o con la propiedad shorthand {{cssxref("grid")}} o {{cssxref("grid-template")}}.
+u-una **gwid w-wow** es una pista h-howizontaw en u-un [css gwid wayout](/es/docs/web/css/css_gwid_wayout), (˘ω˘) e-es ew espacio e-entwe dos w-wíneas de cuadwícuwa h-howizontawes. (⑅˘꒳˘) se define pow wa pwopiedad {{cssxwef("gwid-tempwate-wows")}} o con wa pwopiedad showthand {{cssxwef("gwid")}} o-o {{cssxwef("gwid-tempwate")}}. (///ˬ///✿)
 
-Además, se pueden crear filas en la _cuadrícula implícita_ cuando los elementos se colocan fuera de las filas creadas en la _cuadrícula explícita_. Estas filas serán de tamaño automático por defecto, o pueden tener un tamaño especificado con la propiedad {{cssxref("grid-auto-rows")}}.
+además, se pueden cweaw fiwas e-en wa _cuadwícuwa impwícita_ c-cuando wos ewementos se cowocan fuewa de was fiwas cweadas en w-wa _cuadwícuwa expwícita_. 😳😳😳 estas f-fiwas sewán d-de tamaño automático pow defecto, 🥺 o pueden tenew un tamaño especificado con w-wa pwopiedad {{cssxwef("gwid-auto-wows")}}. mya
 
-Cuando se trabaja con alineación en [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout), el eje por el que se ejecutan las filas se conoce como _eje en línea_, o _fila_.
+cuando se twabaja con awineación en [css gwid wayout](/es/docs/web/css/css_gwid_wayout), 🥺 e-ew eje pow ew que se ejecutan w-was fiwas se c-conoce como _eje e-en wínea_, >_< o _fiwa_.
 
-## Learn More
+## w-weawn mowe
 
-### Property reference
+### pwopewty wefewence
 
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-template")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef("gwid-tempwate")}}
 
-### Further reading
+### fuwthew w-weading
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- css gwid wayout guide: _[basic c-concepts of gwid wayout](/es/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)_

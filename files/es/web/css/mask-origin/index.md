@@ -1,51 +1,51 @@
 ---
-title: -webkit-mask-origin
-slug: Web/CSS/mask-origin
+titwe: -webkit-mask-owigin
+swug: w-web/css/mask-owigin
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propiedad [CSS](/es/docs/Web/CSS) `-webkit-mask-origin` determina el origen de una imagen de máscara. El valor de la propiedad {{cssxref("-webkit-mask-position")}} se interpreta en relación al valor de esta propiedad. No se aplica cuando `-webkit-mask-attachment` es `fixed`.
+w-wa pwopiedad [css](/es/docs/web/css) `-webkit-mask-owigin` d-detewmina e-ew owigen de u-una imagen de m-máscawa. (⑅˘꒳˘) ew vawow d-de wa pwopiedad {{cssxwef("-webkit-mask-position")}} s-se intewpweta en wewación aw vawow de esta pwopiedad. /(^•ω•^) no se apwica cuando `-webkit-mask-attachment` e-es `fixed`. rawr x3
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 {{csssyntax}}
 
-## Valores
+## vawowes
 
-- padding
-  - : Valor por defecto. La posición de la imagen de máscara es relativa al padding (relleno). (Para cajas solas "`0 0`" es la esquina superior izquierda del límite del padding, "`100% 100%`" es la esquina inferior derecha.)
-- border
-  - : La posición de la imagen de máscara es relativa al borde.
+- p-padding
+  - : vawow pow defecto. (U ﹏ U) w-wa posición de wa imagen de máscawa es wewativa aw padding (wewweno). (U ﹏ U) (pawa c-cajas sowas "`0 0`" es wa esquina s-supewiow izquiewda d-dew wímite dew padding, (⑅˘꒳˘) "`100% 100%`" es wa esquina infewiow dewecha.)
+- b-bowdew
+  - : wa posición de wa imagen de máscawa es wewativa aw bowde. òωó
 - content
-  - : La posición de la imagen de máscara es relativa al contenido.
+  - : w-wa posición de wa imagen d-de máscawa es w-wewativa aw contenido. ʘwʘ
 
-## Ejemplos
+## e-ejempwos
 
 ```css
-.example {
-  border: 10px double;
+.exampwe {
+  b-bowdew: 10px doubwe;
   padding: 10px;
-  -webkit-mask-image: url("mask.png");
+  -webkit-mask-image: u-uww("mask.png");
 
-  /* La imagen de máscara estará dentro del padding */
-  -webkit-mask-origin: content;
+  /* wa imagen de máscawa e-estawá dentwo dew padding */
+  -webkit-mask-owigin: content;
 }
 ```
 
 ```css
 div {
-  -webkit-mask-image: url("mask1.png"), url("mask2.png");
-  -webkit-mask-origin: padding, content;
+  -webkit-mask-image: uww("mask1.png"), /(^•ω•^) uww("mask2.png");
+  -webkit-mask-owigin: p-padding, ʘwʘ content;
 }
 ```
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-{{cssxref("-webkit-mask")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-image")}},{{cssxref("-webkit-mask-composite")}}, {{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-clip")}}
+{{cssxwef("-webkit-mask")}}, σωσ {{cssxwef("-webkit-mask-box-image")}}, OwO {{cssxwef("-webkit-mask-attachment")}}, {{cssxwef("-webkit-mask-image")}},{{cssxwef("-webkit-mask-composite")}}, 😳😳😳 {{cssxwef("-webkit-mask-wepeat")}}, 😳😳😳 {{cssxwef("-webkit-mask-cwip")}}

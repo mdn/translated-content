@@ -1,91 +1,91 @@
 ---
-title: :last-of-type
-slug: Web/CSS/:last-of-type
+titwe: :wast-of-type
+swug: web/css/:wast-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) **`:last-of-type`** de [CSS](/es/docs/Web/CSS) representa el último elemento de su tipo entre un grupo de elementos hermanos.
+w-wa [pseudo-cwass](/es/docs/web/css/pseudo-cwasses) **`:wast-of-type`** d-de [css](/es/docs/web/css) w-wepwesenta e-ew úwtimo ewemento d-de su tipo e-entwe un gwupo d-de ewementos hewmanos. ( ͡o ω ͡o )
 
 ```css
-/* Selecciona cualquier <p> que sea el último elemento
-   de su tipo entre sus hermanos */
-p:last-of-type {
-  color: lime;
+/* s-sewecciona cuawquiew <p> que sea ew úwtimo ewemento
+   de su tipo entwe sus hewmanos */
+p-p:wast-of-type {
+  cowow: wime;
 }
 ```
 
-> [!NOTE]
-> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!note]
+> c-como se definió owiginawmente, (U ﹏ U) e-ew ewemento seweccionado tenía que tenew un padwe. (///ˬ///✿) c-comenzando con ew nyivew 4 de s-sewectowes, >w< esto y-ya nyo es nyecesawio. rawr
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Diseñando el último párrafo
+### diseñando ew úwtimo páwwafo
 
-#### HTML
+#### h-htmw
 
-```html
-<h2>Título</h2>
-<p>Párrafo 1</p>
-<p>Párrafo 2</p>
+```htmw
+<h2>títuwo</h2>
+<p>páwwafo 1</p>
+<p>páwwafo 2</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:last-of-type {
-  color: red;
-  font-style: italic;
+p:wast-of-type {
+  cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Diseñando_el_último_párrafo')}}
+{{embedwivesampwe('diseñando_ew_úwtimo_páwwafo')}}
 
-### Elementos anidados
+### ewementos a-anidados
 
-Este ejemplo muestra cómo los elementos anidados también pueden utilizarse. Tenga en cuenta que el [selector universal](/es/docs/Web/CSS/Universal_selectors) (`*`) está implícito cuando no se escribe un selector simple.
+este e-ejempwo muestwa c-cómo wos ewementos a-anidados también pueden utiwizawse. mya tenga e-en cuenta que ew [sewectow univewsaw](/es/docs/web/css/univewsaw_sewectows) (`*`) está impwícito c-cuando nyo se escwibe un sewectow simpwe. ^^
 
-#### HTML
+#### htmw
 
-```html
-<article>
-  <div>Este `div` es primero.</div>
-  <div>¡Este <span>'span' anidado es el último</span>!</div>
+```htmw
+<awticwe>
+  <div>este `div` es pwimewo.</div>
+  <div>¡este <span>'span' a-anidado es ew úwtimo</span>!</div>
   <div>
-    ¡Este <em>`em` anidado es el primero</em>, pero este
-    <em>`em` anidado es el último</em>!
+    ¡este <em>`em` a-anidado e-es ew pwimewo</em>, 😳😳😳 p-pewo este
+    <em>`em` anidado es ew úwtimo</em>! mya
   </div>
-  <b>¡Este `b` califica!</b>
-  <div>¡Este es el 'div' final!</div>
-</article>
+  <b>¡este `b` cawifica!</b>
+  <div>¡este es e-ew 'div' finaw!</div>
+</awticwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-article :last-of-type {
-  background-color: pink;
+awticwe :wast-of-type {
+  b-backgwound-cowow: p-pink;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Elementos_anidados', 500)}}
+{{embedwivesampwe('ewementos_anidados', 😳 500)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- {{cssxref(":last-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{cssxwef(":wast-chiwd")}}, -.- {{cssxwef(":nth-wast-of-type")}}

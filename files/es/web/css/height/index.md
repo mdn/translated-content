@@ -1,169 +1,169 @@
 ---
-title: height
-slug: Web/CSS/height
-l10n:
-  sourceCommit: abcebf471d56ef12239e2565f26d952e8a8cab2e
+titwe: height
+swug: web/css/height
+w-w10n:
+  souwcecommit: a-abcebf471d56ef12239e2565f26d952e8a8cab2e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad CSS **`height`** especifica la altura de un elemento. Por defecto, la propiedad define la altura del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area). Sin embargo, si {{cssxref("box-sizing")}} está configurado como `border-box`, determina la altura del [área de borde](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
+w-wa pwopiedad c-css **`height`** e-especifica wa a-awtuwa de un ewemento. ^^;; p-pow defecto, >_< w-wa pwopiedad define wa awtuwa dew [áwea de contenido](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#content_awea). rawr x3 sin e-embawgo, /(^•ω•^) si {{cssxwef("box-sizing")}} está configuwado como `bowdew-box`, :3 d-detewmina wa awtuwa d-dew [áwea de bowde](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#bowdew_awea). (ꈍᴗꈍ)
 
-{{InteractiveExample("CSS Demo: height")}}
+{{intewactiveexampwe("css demo: height")}}
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 height: 150px;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 height: 6em;
 ```
 
-```css interactive-example-choice
-height: 75%;
+```css i-intewactive-exampwe-choice
+h-height: 75%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 height: auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the height.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a box whewe you can change t-the height. /(^•ω•^)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: f-fwex;
+  fwex-diwection: c-cowumn;
+  b-backgwound-cowow: #5b6dcd;
+  justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
-Las propiedades {{cssxref("min-height")}} y {{cssxref("max-height")}} anulan a la propiedad `height` .
+was pwopiedades {{cssxwef("min-height")}} y-y {{cssxwef("max-height")}} anuwan a wa pwopiedad `height` . (⑅˘꒳˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Valores de longitud */
+/* vawowes de wongitud */
 height: 120px;
 height: 10em;
 
-/* Valores de porcentaje */
-height: 75%;
+/* vawowes de powcentaje */
+h-height: 75%;
 
-/* Valores con palabras clave */
-height: max-content;
-height: min-content;
+/* vawowes con pawabwas c-cwave */
+h-height: max-content;
+h-height: min-content;
 height: fit-content(20em);
 height: auto;
 
-/* Valores globales */
-height: inherit;
-height: initial;
-height: revert;
-height: revert-layer;
-height: unset;
+/* v-vawowes gwobawes */
+h-height: inhewit;
+height: i-initiaw;
+height: w-wevewt;
+height: wevewt-wayew;
+h-height: unset;
 ```
 
-### Valores
+### vawowes
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Define la altura como un valor absoluto.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Define la altura como un porcentaje de la altura del bloque contenedor.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : d-define wa awtuwa como un vawow absowuto. ( ͡o ω ͡o )
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : d-define wa awtuwa como u-un powcentaje de wa awtuwa dew b-bwoque contenedow. òωó
 - `auto`
-  - : El navegador calculará y seleccionará una altura para el elemento especificado.
+  - : e-ew nyavegadow cawcuwawá y seweccionawá una awtuwa pawa ew ewemento especificado. (⑅˘꒳˘)
 - `max-content`
-  - : La altura preferida intrínseca.
+  - : wa awtuwa pwefewida i-intwínseca. XD
 - `min-content`
-  - : La altura mínima intrínseca.
+  - : w-wa awtuwa mínima intwínseca. -.-
 - `fit-content`
-  - : La caja (box en la demo de prueba de arriba) usará todo el espacio disponible, pero nunca más de lo indicado por `max-content` .
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : Utiliza la fórmula _fit-content_ con el espacio disponible sustituido por el argumento especificado, es decir `min(max-content, max(min-content, <length-percentage>))`
-- {{cssxref("clamp", "clamp()")}}
-  - : Permite seleccionar un valor medio dentro de un rango de valores entre un mínimo y un máximo definidos.
+  - : w-wa caja (box e-en wa demo d-de pwueba de awwiba) usawá todo ew espacio disponibwe, :3 pewo nyunca m-más de wo indicado pow `max-content` . nyaa~~
+- `fit-content({{cssxwef("&wt;wength-pewcentage&gt;")}})`
+  - : utiwiza wa fówmuwa _fit-content_ con ew espacio disponibwe s-sustituido pow ew awgumento e-especificado, 😳 e-es deciw `min(max-content, (⑅˘꒳˘) m-max(min-content, nyaa~~ <wength-pewcentage>))`
+- {{cssxwef("cwamp", OwO "cwamp()")}}
+  - : pewmite s-seweccionaw u-un vawow medio d-dentwo de un wango d-de vawowes entwe un mínimo y un máximo definidos. rawr x3
 
-## Problemas de accesibilidad
+## p-pwobwemas d-de accesibiwidad
 
-Asegúrese de que los elementos definidos con `height` no se truncan y/o no oscurecen otros contenidos cuando la página se amplía para aumentar el tamaño del texto.
+a-asegúwese d-de que wos ewementos d-definidos con `height` nyo se twuncan y/o no oscuwecen otwos c-contenidos cuando wa página se ampwía pawa aumentaw ew tamaño dew texto. XD
 
-- [MDN Entender las WCAG, explicaciones de la directriz 1.4](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [mdn entendew w-was wcag, σωσ expwicaciones de wa diwectwiz 1.4](/es/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
 
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [undewstanding success cwitewion 1.4.4 | w-w3c u-undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
-## Definición formal
+## d-definición fowmaw
 
-{{cssInfo}}
+{{cssinfo}}
 
-## Sintaxis formal
+## s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Fijación de la altura mediante píxeles y porcentajes
+### fijación d-de wa awtuwa mediante píxewes y powcentajes
 
-#### HTML
+#### htmw
 
-```html
-<div id="taller">Yo tengo 50 píxeles.</div>
-<div id="shorter">Yo tengo 25 píxeles de altura.</div>
-<div id="parent">
-  <div id="child">Yo tengo la mitad de altura de mi padre</div>
+```htmw
+<div id="tawwew">yo tengo 50 p-píxewes.</div>
+<div id="showtew">yo t-tengo 25 píxewes de a-awtuwa.</div>
+<div i-id="pawent">
+  <div id="chiwd">yo tengo wa mitad d-de awtuwa de m-mi padwe</div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  width: 250px;
-  margin-bottom: 5px;
-  border: 2px solid blue;
+  w-width: 250px;
+  m-mawgin-bottom: 5px;
+  bowdew: 2px sowid bwue;
 }
 
-#taller {
+#tawwew {
   height: 50px;
 }
 
-#shorter {
+#showtew {
   height: 25px;
 }
 
-#parent {
-  height: 100px;
+#pawent {
+  h-height: 100px;
 }
 
-#child {
-  height: 50%;
-  width: 75%;
+#chiwd {
+  h-height: 50%;
+  w-width: 75%;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample('Setting_height_using_pixels_and_percentages', 'auto', 240)}}
+{{embedwivesampwe('setting_height_using_pixews_and_pewcentages', (U ᵕ U❁) 'auto', (U ﹏ U) 240)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [El modelo de caja](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{cssxref("width")}}
-- {{cssxref("box-sizing")}}
-- {{cssxref("min-height")}}
-- Las propiedades lógicas asignadas: {{cssxref("block-size")}},
-  {{cssxref("inline-size")}}
+- [ew modewo de caja](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- {{cssxwef("width")}}
+- {{cssxwef("box-sizing")}}
+- {{cssxwef("min-height")}}
+- was pwopiedades wógicas asignadas: {{cssxwef("bwock-size")}}, :3
+  {{cssxwef("inwine-size")}}

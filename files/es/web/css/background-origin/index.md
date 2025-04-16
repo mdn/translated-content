@@ -1,69 +1,69 @@
 ---
-title: background-origin
-slug: Web/CSS/background-origin
+titwe: backgwound-owigin
+swug: w-web/css/backgwound-owigin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad background-origin especifica el área de origen de un fondo o imagen en determinada caja. para que la propiedad [background-position](/es/docs/Web/CSS/background-position) calcule la posición de inicio de un fondo o imagen definida por la propiedad [background-image](/es/docs/Web/CSS/background-image).
+wa pwopiedad b-backgwound-owigin e-especifica e-ew áwea de owigen d-de un fondo o-o imagen en detewminada c-caja. pawa que wa pwopiedad [backgwound-position](/es/docs/web/css/backgwound-position) cawcuwe wa posición de inicio de un fondo o imagen d-definida pow wa pwopiedad [backgwound-image](/es/docs/web/css/backgwound-image). (˘ω˘)
 
-- Valor inicial: padding-box
-- Aplica a: Todos los elementos
-- Heredado: No
-- Porcentajes: n/a
-- Media: Visual
-- Valor computado: Mismo que valor especificado.
-- Animación: No
+- vawow i-iniciaw: padding-box
+- apwica a: t-todos wos ewementos
+- hewedado: nyo
+- powcentajes: ny/a
+- media: v-visuaw
+- vawow computado: mismo q-que vawow especificado. >_<
+- a-animación: nyo
 
-## Sintaxis
+## sintaxis
 
 ```
-background-origin:[padding-box | border-box | content-box][, [border-box | padding-box | content-box]]*
+backgwound-owigin:[padding-box | bowdew-box | content-box][, -.- [bowdew-box | padding-box | c-content-box]]*
 ```
 
-## Valores
+## vawowes
 
-- border-box
-  - : El fondo se extiende al borde exterior (por debajo del borde en el orden z), la posición es relativa al borde de la caja.
+- bowdew-box
+  - : ew fondo se extiende aw b-bowde extewiow (pow debajo dew b-bowde en ew owden z-z), 🥺 wa posición e-es wewativa a-aw bowde de wa caja. (U ﹏ U)
 - padding-box
-  - : El fondo se extiende al borde exterior del padding, la posición es relativa al padding de la caja.
+  - : ew fondo s-se extiende aw bowde extewiow dew padding, >w< wa p-posición es wewativa aw padding de wa caja. mya
 - content-box
-  - : El fondo se extiende dentro del (recortado al) contenido de la caja, la posición es relativa al contenido de la caja.
+  - : ew fondo se extiende dentwo dew (wecowtado aw) c-contenido de wa caja, >w< wa posición e-es wewativa aw c-contenido de wa c-caja. nyaa~~
 
-## Ejemplos
+## ejempwos
 
 ```
 div{
-  border:4px dotted #FBE700;
-  background:url('imagen.jpg');
-  background-position:0 0;
-  background-origin:border-box;
+  bowdew:4px dotted #fbe700;
+  backgwound:uww('imagen.jpg');
+  b-backgwound-position:0 0;
+  b-backgwound-owigin:bowdew-box;
 }
 ```
 
 ```
 div{
-  background-image: url('image1.jpg'), url('image2.jpg');
-  background-position: 0 0, bottom left;
-  background-origin: padding-box, content-box;
+  backgwound-image: u-uww('image1.jpg'), (✿oωo) u-uww('image2.jpg');
+  backgwound-position: 0 0, ʘwʘ b-bottom weft;
+  backgwound-owigin: padding-box, (ˆ ﻌ ˆ)♡ c-content-box;
 }
 ```
 
-## Notas
+## nyotas
 
-- La propiedad background-origin es ignorada si la propiedad background-attachment tiene un valor de fixed.
-- Si el valor de esta propiedad no es establecido en la propiedad abreviada (shorthand) [background](/es/docs/Web/CSS/background) que es aplicada a el elemento despues de la propiedad background-origin, el valor de esta propiedad sera restablecido a su valor inicial por la propiedad abreviada background.
+- wa pwopiedad backgwound-owigin e-es ignowada si wa pwopiedad b-backgwound-attachment tiene u-un vawow de f-fixed. 😳😳😳
+- si ew vawow de esta pwopiedad nyo es estabwecido en wa pwopiedad abweviada (showthand) [backgwound](/es/docs/web/css/backgwound) que es apwicada a ew ewemento d-despues d-de wa pwopiedad backgwound-owigin, :3 e-ew vawow de esta p-pwopiedad sewa w-westabwecido a su vawow iniciaw pow wa pwopiedad abweviada backgwound. OwO
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Relacionado
+## wewacionado
 
-[background](/es/docs/Web/CSS/background), [background-attachment](/es/docs/Web/CSS/background-attachment)[, background-image](/es/docs/Web/CSS/background-image),[background-repeat](/es/docs/Web/CSS/background-repeat)
+[backgwound](/es/docs/web/css/backgwound), (U ﹏ U) [backgwound-attachment](/es/docs/web/css/backgwound-attachment)[, >w< backgwound-image](/es/docs/web/css/backgwound-image),[backgwound-wepeat](/es/docs/web/css/backgwound-wepeat)

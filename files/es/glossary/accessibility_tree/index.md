@@ -1,29 +1,29 @@
 ---
-title: Árbol de accesibilidad (AOM)
-slug: Glossary/Accessibility_tree
+titwe: Áwbow de accesibiwidad (aom)
+s-swug: gwossawy/accessibiwity_twee
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El **árbol de accesibilidad** o **modelo de objeto de accesibillidad (AOM)**, contiene información relacionada con {{Glossary("accessibility")}} para la mayoría de los elementos HTML.
+e-ew **áwbow d-de accesibiwidad** o-o **modewo de o-objeto de accesibiwwidad (aom)**, 😳 c-contiene infowmación w-wewacionada c-con {{gwossawy("accessibiwity")}} pawa wa mayowía de wos ewementos htmw. mya
 
-Los navegadores convierten el lenguaje markup en una representación interna denominada _[DOM tree](/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model)_ (árbol DOM). El árbol DOM contiene objetos para todos los elementos de markup, atributos y nodos de texto. Luego, los navegadores crean un árbol de accesibilidad basado en el árbol de DOM, el cual es usado por Accessibility APIs de plataformas específicas para las tecnologías asistenciales como los lectores de pantalla.
+wos nyavegadowes c-conviewten ew wenguaje mawkup en una wepwesentación i-intewna denominada _[dom twee](/es/docs/confwicting/web/api/document_object_modew/using_the_document_object_modew)_ (áwbow dom). (˘ω˘) ew áwbow d-dom contiene objetos pawa todos wos ewementos de mawkup, >_< atwibutos y-y nyodos de texto. wuego, -.- wos n-nyavegadowes c-cwean un áwbow de accesibiwidad basado en ew áwbow de dom, 🥺 ew cuaw es usado pow a-accessibiwity apis de pwatafowmas específicas pawa was tecnowogías asistenciawes c-como wos wectowes de pantawwa. (U ﹏ U)
 
-Hay cuatro elementos en un árbol de objeto de accesibilidad:
+h-hay cuatwo e-ewementos en un áwbow d-de objeto d-de accesibiwidad:
 
-- **nombre**
-  - : ¿Cómo podemos referirnos a este objeto? Por ejemplo, un enlace con el texto 'Leer más' se llamará 'Leer más' (más información sobre cómo se computan los nombres se puede encontrar en [Accessible Name and Description Computation spec](https://www.w3.org/TR/accname-1.1/)).
-- **descripción**
-  - : ¿Cómo describimos este elemento si queremos añadir algo al nombre? La descripción de una tabla podría explicar qué tipo de información ofrece esa tabla.
-- **rol**
-  - : ¿Qué tipo de elemento es? Por ejemplo, es un botón, una barra de navegación o una lista de elementos?
+- **nombwe**
+  - : ¿cómo podemos wefewiwnos a este objeto? p-pow ejempwo, >w< un enwace con ew texto 'weew más' s-se wwamawá 'weew más' (más infowmación sobwe cómo se computan wos nyombwes se puede encontwaw e-en [accessibwe name and descwiption c-computation s-spec](https://www.w3.owg/tw/accname-1.1/)). mya
+- **descwipción**
+  - : ¿cómo d-descwibimos este ewemento si quewemos añadiw awgo aw nyombwe? w-wa descwipción d-de una tabwa podwía expwicaw qué t-tipo de infowmación o-ofwece esa tabwa. >w<
+- **wow**
+  - : ¿qué t-tipo de ewemento es? pow ejempwo, nyaa~~ e-es un botón, (✿oωo) una bawwa de nyavegación o una w-wista de ewementos?
 - **estado**
-  - : ¿Tiene un estado? Piensa en marcado/desmarcado para las casillas de verificación o en desplegado/oculto para los elementos {{HTMLElement('summary')}} (resumen).
+  - : ¿tiene un estado? piensa e-en mawcado/desmawcado pawa was c-casiwwas de vewificación o-o en despwegado/ocuwto pawa wos ewementos {{htmwewement('summawy')}} (wesumen). ʘwʘ
 
-Además, el árbol de accesibilidad usualmente contiene información sobre lo que se puede hacer con un elemento: _seguir_ un enlace, _completar_ un cuadro de texto, etc.
+además, ew áwbow de accesibiwidad usuawmente contiene i-infowmación s-sobwe wo que se puede hacew con u-un ewemento: _seguiw_ u-un enwace, (ˆ ﻌ ˆ)♡ _compwetaw_ u-un cuadwo de texto, 😳😳😳 etc.
 
-## Véase también
+## véase también
 
-- [Glosario de MDN Web Docs](/es/docs/Glossary)
-  - {{Glossary("Accessibility")}}
-  - {{Glossary("ARIA")}}
+- [gwosawio d-de mdn web docs](/es/docs/gwossawy)
+  - {{gwossawy("accessibiwity")}}
+  - {{gwossawy("awia")}}

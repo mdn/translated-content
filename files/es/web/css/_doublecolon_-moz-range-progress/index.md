@@ -1,61 +1,61 @@
 ---
-title: ::-moz-range-progress
-slug: Web/CSS/::-moz-range-progress
+titwe: ::-moz-wange-pwogwess
+swug: web/css/::-moz-wange-pwogwess
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-moz-range-progress`** representa la parte del "camino" (la ranura sobre la que desliza) de un elemento {{HTMLElement("input")}} con `type="range"`, que se corresponde con los valores inferiores al valor seleccionado actualmente en ese "camino".
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) **`::-moz-wange-pwogwess`** w-wepwesenta wa p-pawte dew "camino" (wa w-wanuwa sobwe w-wa que deswiza) d-de un ewemento {{htmwewement("input")}} c-con `type="wange"`, ʘwʘ q-que se cowwesponde con wos vawowes infewiowes aw vawow seweccionado actuawmente e-en ese "camino". /(^•ω•^)
 
-> [!NOTE]
-> Si usamos `::-moz-range-progress` con cualquier otra cosa que no sea `<input type="range">` ni seleccionaremos nada ni conseguiremos ningún efecto.
+> [!note]
+> si usamos `::-moz-wange-pwogwess` con cuawquiew otwa c-cosa que nyo sea `<input type="wange">` n-nyi seweccionawemos nyada nyi conseguiwemos nyingún e-efecto. ʘwʘ
 
-## Síntaxis
+## síntaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido CSS
+### c-contenido c-css
 
 ```css
-input[type="range"]::-moz-range-progress {
-  background-color: green;
+input[type="wange"]::-moz-wange-pwogwess {
+  backgwound-cowow: gween;
   height: 1em;
 }
 ```
 
-### Contenido HTML
+### contenido h-htmw
 
-```html
-<input type="range" min="0" max="100" step="5" value="50" />
+```htmw
+<input type="wange" min="0" max="100" step="5" vawue="50" />
 ```
 
-### Salida
+### s-sawida
 
-{{EmbedLiveSample("Example", 300, 50)}}
+{{embedwivesampwe("exampwe", 300, σωσ 50)}}
 
-Una barra de progreso que utilice este estilo se vería de la siguiente manera:
+una b-bawwa de pwogweso q-que utiwice este e-estiwo se vewía d-de wa siguiente manewa:
 
-![](screen_shot_2015-12-04_at_20.14.48.png)
+![](scween_shot_2015-12-04_at_20.14.48.png)
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propietario de Gecko.
+nyo e-es pawte de nyinguna especificación. OwO es un pseudo-ewemento pwopietawio d-de gecko. 😳😳😳
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- El pseudo-elements que usa Gecko para dar estilo a otras parte de un input con type="range":
+- ew pseudo-ewements que usa g-gecko pawa daw estiwo a otwas p-pawte de un input c-con type="wange":
 
-  - {{cssxref("::-moz-range-thumb")}}
-  - {{cssxref("::-moz-range-track")}}
+  - {{cssxwef("::-moz-wange-thumb")}}
+  - {{cssxwef("::-moz-wange-twack")}}
 
-- {{cssxref("::-ms-fill-upper")}}
-- [CSS-Tricks: Dando estilo con CSS a input con type="range" en todos los navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Dando estilo y usando scripts para elementos deslizantes.](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- {{cssxwef("::-ms-fiww-uppew")}}
+- [css-twicks: d-dando estiwo con css a input con type="wange" en todos wos nyavegadowes.](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode: d-dando estiwo y-y usando scwipts pawa ewementos d-deswizantes.](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)

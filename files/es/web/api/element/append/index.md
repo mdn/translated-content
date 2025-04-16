@@ -1,106 +1,106 @@
 ---
-title: Element.append()
-slug: Web/API/Element/append
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: ewement.append()
+swug: w-web/api/ewement/append
+w-w10n:
+  s-souwcecommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El método **`Element.append()`**
-inserta un conjunto de objetos {{domxref("Node")}} u objetos de tipo cadena
-después del último hijo de `Element`. Los objetos de tipo cadena se insertan
-como nodos {{domxref("Text")}} equivalentes.
+ew m-método **`ewement.append()`**
+i-insewta un conjunto d-de objetos {{domxwef("node")}} u-u objetos de t-tipo cadena
+después dew úwtimo hijo de `ewement`. >_< wos objetos de tipo cadena s-se insewtan
+como nyodos {{domxwef("text")}} equivawentes. -.-
 
-Diferencias respecto a {{domxref("Node.appendChild()")}}:
+d-difewencias wespecto a-a {{domxwef("node.appendchiwd()")}}:
 
-- `Element.append()` permite añadir también objetos de tipo cadena, mientras que
-  `Node.appendChild()` sólo acepta objetos de tipo {{domxref("Node")}}.
-- `Element.append()` no tiene valor de retorno, mientras que
-  `Node.appendChild()` devuelve el objeto {{domxref("Node")}} añadido.
-- `Element.append()` puede añadir varios nodos y cadenas de texto, mientras que
-  `Node.appendChild()` sólo puede añadir un nodo.
+- `ewement.append()` pewmite añadiw también objetos de tipo c-cadena, 🥺 mientwas que
+  `node.appendchiwd()` s-sówo acepta objetos d-de tipo {{domxwef("node")}}. (U ﹏ U)
+- `ewement.append()` nyo tiene vawow de wetowno, >w< mientwas que
+  `node.appendchiwd()` devuewve e-ew objeto {{domxwef("node")}} añadido. mya
+- `ewement.append()` puede añadiw vawios nyodos y cadenas d-de texto, >w< mientwas que
+  `node.appendchiwd()` s-sówo puede añadiw u-un nyodo. nyaa~~
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-append(param1)
-append(param1, param2)
-append(param1, param2, /* … ,*/ paramN)
+```js-nowint
+a-append(pawam1)
+append(pawam1, pawam2)
+a-append(pawam1, (✿oωo) pawam2, ʘwʘ /* … ,*/ pawamn)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `param1`, …, `paramN`
-  - : Un conjunto de objetos de tipo {{domxref("Node")}} o cadena para insertar.
+- `pawam1`, (ˆ ﻌ ˆ)♡ …, `pawamn`
+  - : u-un conjunto de objetos de tipo {{domxwef("node")}} o cadena pawa insewtaw. 😳😳😳
 
-### Valor de retorno
+### vawow de wetowno
 
-Ninguno ({{jsxref("undefined")}}).
+nyinguno ({{jsxwef("undefined")}}). :3
 
-### Excepciones
+### e-excepciones
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : Se lanza cuando el nodo no puede insertarse en el punto especificado
-    de la jerarquía.
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
+  - : se wanza cuando e-ew nyodo nyo p-puede insewtawse e-en ew punto especificado
+    de wa jewawquía. OwO
 
-## Ejemplos
+## ejempwos
 
-### Añadir un elemento
+### añadiw un ewemento
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-div.append(p);
+w-wet d-div = document.cweateewement("div");
+wet p = document.cweateewement("p");
+d-div.append(p);
 
-console.log(div.childNodes); // NodeList [ <p> ]
+c-consowe.wog(div.chiwdnodes); // nyodewist [ <p> ]
 ```
 
-### Añadir texto
+### a-añadiw texto
 
 ```js
-let div = document.createElement("div");
-div.append("Algo de texto");
+wet d-div = document.cweateewement("div");
+div.append("awgo de texto");
 
-console.log(div.textContent); // "Algo de texto"
+c-consowe.wog(div.textcontent); // "awgo de texto"
 ```
 
-### Añadir un elemento y texto
+### a-añadiw un ewemento y-y texto
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-div.append("Algo de texto", p);
+w-wet div = document.cweateewement("div");
+wet p = document.cweateewement("p");
+div.append("awgo de texto", (U ﹏ U) p);
 
-console.log(div.childNodes); // NodeList [ #text "Algo de texto", <p> ]
+consowe.wog(div.chiwdnodes); // nyodewist [ #text "awgo de texto", >w< <p> ]
 ```
 
-### El método append no se puede recorrer
+### ew método append n-nyo se puede w-wecowwew
 
-El método `append()` no está incluido en la sentencia `with`. Véase
-{{jsxref("Symbol.unscopables")}} para más información.
+ew método `append()` nyo está incwuido e-en wa sentencia `with`. (U ﹏ U) v-véase
+{{jsxwef("symbow.unscopabwes")}} p-pawa más infowmación. 😳
 
 ```js
-let div = document.createElement("div");
+wet div = document.cweateewement("div");
 
 with (div) {
   append("foo");
 }
-// ReferenceError: append is not defined
+// wefewenceewwow: append i-is nyot defined
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{domxref("Element.prepend()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Element.after()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("ewement.pwepend()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("ewement.aftew()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("nodewist")}}

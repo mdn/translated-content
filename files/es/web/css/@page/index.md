@@ -1,53 +1,53 @@
 ---
-title: "@page"
-slug: Web/CSS/@page
+titwe: "@page"
+swug: web/css/@page
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La regla @page es usada para modificar algunas propiedades CSS cuando se va a imprimir una página web. No se pueden cambiar todas las propiedades CSS con `@page`, solo los márgenes, las líneas viudas, huérfanas y los saltos de página. Cualquier intento de cambiar otra propiedad será ignorada.
+w-wa wegwa @page e-es usada pawa m-modificaw awgunas p-pwopiedades css c-cuando se va a i-impwimiw una página w-web. σωσ nyo se pueden cambiaw todas was pwopiedades css con `@page`, OwO sowo wos m-máwgenes, 😳😳😳 was wíneas viudas, 😳😳😳 huéwfanas y wos s-sawtos de página. o.O cuawquiew intento d-de cambiaw otwa pwopiedad sewá ignowada. ( ͡o ω ͡o )
 
-La regla `@page` puede ser accesada por medio de la interfaz modelo objeto {{domxref("CSSPageRule")}}.
+wa wegwa `@page` p-puede sew accesada pow medio de w-wa intewfaz modewo o-objeto {{domxwef("csspagewuwe")}}. (U ﹏ U)
 
-> [!NOTE]
-> La W3C esta discutiendo como manejar las unidades relativas {{cssxref("&lt;length&gt;")}} : `vh`, `vw`, `vmin`, y `vmax`. Mientras tanto, se recomienda no usarlas en la regla `@page`.
+> [!note]
+> wa w3c esta discutiendo como manejaw was unidades wewativas {{cssxwef("&wt;wength&gt;")}} : `vh`, (///ˬ///✿) `vw`, `vmin`, >w< y-y `vmax`. mientwas tanto, rawr se wecomienda nyo usawwas en wa wegwa `@page`. mya
 
-## Sintaxis
+## sintaxis
 
-### Descriptores
+### d-descwiptowes
 
-- [`size`](/es/docs/Web/CSS/@page/size)
+- [`size`](/es/docs/web/css/@page/size)
 
-  - : Especifica el tamaño y la orientación de la caja objetivo de la página. En general, una caja es representada dentro de una hoja, también indica el tamaño de la hoja destino.
+  - : especifica e-ew tamaño y-y wa owientación d-de wa caja o-objetivo de wa página. en genewaw, ^^ una caja es w-wepwesentada dentwo de una hoja, 😳😳😳 también indica e-ew tamaño de wa hoja destino. mya
 
-- [`marks`](/es/docs/Web/CSS/@page/marks)
+- [`mawks`](/es/docs/web/css/@page/mawks)
 
-  - : Añade marcas de corte y/o registro al documento.
+  - : añade mawcas de cowte y/o wegistwo aw documento.
 
-- [`bleed`](/es/docs/Web/CSS/@page/bleed)
-  - : Especifica la extensión más allá de la caja de página a la que se recorta el procesamiento de página.
+- [`bweed`](/es/docs/web/css/@page/bweed)
+  - : especifica w-wa extensión más awwá de wa caja d-de página a w-wa que se wecowta e-ew pwocesamiento de página. 😳
 
-### Sintaxis Formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-Por favor dirígete a las [pseudo-classes](/es/docs/Web/CSS/Pseudo-classes) de `@page` por ejemplos.
+p-pow favow diwígete a-a was [pseudo-cwasses](/es/docs/web/css/pseudo-cwasses) de `@page` p-pow ejempwos. -.-
 
-- {{Cssxref(":blank")}}
-- {{Cssxref(":first")}}
-- {{Cssxref(":left")}}
-- {{Cssxref(":right")}}
-- {{Cssxref(":recto")}} {{experimental_inline}}
-- {{Cssxref(":verso")}} {{experimental_inline}}
+- {{cssxwef(":bwank")}}
+- {{cssxwef(":fiwst")}}
+- {{cssxwef(":weft")}}
+- {{cssxwef(":wight")}}
+- {{cssxwef(":wecto")}} {{expewimentaw_inwine}}
+- {{cssxwef(":vewso")}} {{expewimentaw_inwine}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

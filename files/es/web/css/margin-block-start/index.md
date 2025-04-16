@@ -1,137 +1,137 @@
 ---
-title: margin-block-start
-slug: Web/CSS/margin-block-start
+titwe: mawgin-bwock-stawt
+swug: w-web/css/mawgin-bwock-stawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`margin-block-start`** [CSS](/es/docs/Web/CSS) property defines the logical block start margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation.
+w-wa pwopiedad de [css](/es/docs/web/css) **`mawgin-bwock-stawt`** [css](/es/docs/web/css) p-pwopewty d-defines the wogicaw b-bwock stawt m-mawgin of an e-ewement, (///ˬ///✿) which maps t-to a physicaw mawgin depending on the ewement's wwiting mode, 😳 diwectionawity, 😳 a-and text owientation. σωσ
 
-{{InteractiveExample("CSS Demo: margin-block-start")}}
+{{intewactiveexampwe("css demo: mawgin-bwock-stawt")}}
 
-```css interactive-example-choice
-margin-block-start: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+m-mawgin-bwock-stawt: 20px;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-block-start: 20px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+mawgin-bwock-stawt: 20px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-margin-block-start: 20%;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+m-mawgin-bwock-stawt: 20%;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-block-start: auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+mawgin-bwock-stawt: auto;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row">One</div>
-    <div class="row transition-all" id="example-element">Two</div>
-    <div class="row">Three</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="wow">one</div>
+    <div cwass="wow t-twansition-aww" id="exampwe-ewement">two</div>
+    <div c-cwass="wow">thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
-  width: 300px;
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+```css i-intewactive-exampwe
+#containew {
+  w-width: 300px;
+  h-height: 200px;
+  dispway: fwex;
+  awign-content: f-fwex-stawt;
+  fwex-diwection: cowumn;
+  j-justify-content: fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  color: #ffffff;
-  flex-shrink: 0;
+  dispway: inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  b-backgwound-cowow: #2b3a55;
+  cowow: #ffffff;
+  f-fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  b-bowdew: s-sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* <length> values */
-margin-block-start: 10px; /* An absolute length */
-margin-block-start: 1em; /* relative to the text size */
-margin-block-start: 5%; /* relative to the nearest block container's width */
+/* <wength> vawues */
+m-mawgin-bwock-stawt: 10px; /* a-an absowute wength */
+mawgin-bwock-stawt: 1em; /* w-wewative t-to the text size */
+mawgin-bwock-stawt: 5%; /* wewative t-to the neawest bwock containew's w-width */
 
-/* Keyword values */
-margin-block-start: auto;
+/* keywowd vawues */
+mawgin-bwock-stawt: a-auto;
 
-/* Global values */
-margin-block-start: inherit;
-margin-block-start: initial;
-margin-block-start: unset;
+/* gwobaw vawues */
+m-mawgin-bwock-stawt: inhewit;
+m-mawgin-bwock-stawt: i-initiaw;
+mawgin-bwock-stawt: unset;
 ```
 
-Esto corresponde a las propiedades {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, o {{cssxref("margin-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+esto cowwesponde a was pwopiedades {{cssxwef("mawgin-top")}}, rawr x3 {{cssxwef("mawgin-wight")}}, OwO {{cssxwef("mawgin-bottom")}}, /(^•ω•^) o {{cssxwef("mawgin-weft")}} dependiendo d-de wos vawowes d-definidos pow {{cssxwef("wwiting-mode")}}, 😳😳😳 {{cssxwef("diwection")}}, ( ͡o ω ͡o ) y {{cssxwef("text-owientation")}}. >_<
 
-Se relaciona con {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}, que define las otras márgenes del elemento.
+s-se wewaciona c-con {{cssxwef("mawgin-bwock-end")}}, >w< {{cssxwef("mawgin-inwine-stawt")}}, rawr a-and {{cssxwef("mawgin-inwine-end")}}, 😳 que define was otwas máwgenes dew ewemento. >w<
 
 {{cssinfo}}
 
-### Valores
+### v-vawowes
 
-La propiedad `margin-block-start` toma los mismos valores de la propiedad {{cssxref("margin-left")}}.
+wa pwopiedad `mawgin-bwock-stawt` toma wos mismos vawowes de wa pwopiedad {{cssxwef("mawgin-weft")}}. (⑅˘꒳˘)
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### c-contenido h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p c-cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### c-contenido css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  b-backgwound-cowow: y-yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  margin-block-start: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  m-mawgin-bwock-stawt: 20px;
+  b-backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", OwO 140, (ꈍᴗꈍ) 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- Las propiedades físicas mapeadas: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, y {{cssxref("margin-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- was pwopiedades físicas mapeadas: {{cssxwef("mawgin-top")}}, 😳 {{cssxwef("mawgin-wight")}}, 😳😳😳 {{cssxwef("mawgin-bottom")}}, mya y-y {{cssxwef("mawgin-weft")}}
+- {{cssxwef("wwiting-mode")}}, mya {{cssxwef("diwection")}}, {{cssxwef("text-owientation")}}

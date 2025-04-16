@@ -1,63 +1,63 @@
 ---
-title: unicode-range
-slug: Web/CSS/@font-face/unicode-range
+titwe: unicode-wange
+swug: web/css/@font-face/unicode-wange
 ---
 
-{{cssref}}
+{{csswef}}
 
-La regla CSS **`unicode-range`** especifica un rango específico de caracteres a ser usados por una fuente definida {{cssxref("@font-face")}} y hacerla disponible para su uso en la página actual. Si la página no usa algún caracter en ese rango, la fuente no es descargada; si usa al menos uno de ellos, la fuente es descargada.
+w-wa wegwa css **`unicode-wange`** e-especifica un wango e-específico d-de cawactewes a s-sew usados pow u-una fuente definida {{cssxwef("@font-face")}} y-y h-hacewwa disponibwe pawa su uso en wa página actuaw. nyaa~~ si wa página nyo usa awgún c-cawactew en ese wango, :3 wa fuente nyo es descawgada; s-si usa aw menos uno de ewwos, ( ͡o ω ͡o ) w-wa fuente es descawgada. mya
 
-El propósito de esta regla es permitir a las fuente ser segmentados, así el navegador solo necesita descargar la fuente necesitada para el contexto de texto en una página en particular. Por ejemplo, un sitio con muchas localizaciones podría proveer fuentes separadas para el inglés, griego y japonés. Para los usuarios que ven la versión en inglés de la página, las fuentes para el griego y el japonés no son necesarias, y por lo tanto no se descargan, ahorrando ancho de banda.
+ew pwopósito de esta wegwa es pewmitiw a-a was fuente sew segmentados, (///ˬ///✿) a-así ew nyavegadow s-sowo nyecesita descawgaw wa fuente nyecesitada pawa ew contexto de texto e-en una página en pawticuwaw. (˘ω˘) pow ejempwo, ^^;; un sitio con muchas wocawizaciones podwía p-pwoveew fuentes sepawadas p-pawa ew ingwés, (✿oωo) g-gwiego y japonés. (U ﹏ U) p-pawa wos usuawios q-que ven wa vewsión en ingwés de wa página, -.- w-was fuentes pawa ew gwiego y ew japonés nyo s-son necesawias, ^•ﻌ•^ y pow wo tanto nyo se descawgan, rawr ahowwando ancho de banda. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* valores <unicode-range> */
-unicode-range: U+26; /* un único código */
-unicode-range: U+0-7F;
-unicode-range: U+0025-00FF; /* rango de códigos */
-unicode-range: U+4??; /* rango por expresión */
-unicode-range: U+0025-00FF, U+4??; /* multiples valores */
+/* v-vawowes <unicode-wange> */
+unicode-wange: u+26; /* u-un único c-código */
+unicode-wange: u-u+0-7f;
+unicode-wange: u+0025-00ff; /* wango de códigos */
+u-unicode-wange: u-u+4??; /* wango pow expwesión */
+u-unicode-wange: u-u+0025-00ff, u+4??; /* muwtipwes v-vawowes */
 ```
 
-### Valores
+### vawowes
 
-- _**un único código**_
-  - : Un único código de caracter Unicode, por ejemplo `U+26`.
-- _**un rango de código**_
-  - : Un rango de códigos de caracter Unicode. Asi que, por ejemplo, `U+0025-00FF` significa _incluir todos caracteres en el rango `U+0025` a `U+00FF`_.
-- _**rango por expresión**_
-  - : Un rango de códigos Unicode que contienen caracteres comodín, usando el caracter `'?'`, asi que, por ejemplo `U+4??` significa _incluir todos los caracteres en el rango `U+400` a `U+4FF`_.
+- _**un único c-código**_
+  - : un único código de cawactew u-unicode, nyaa~~ pow ejempwo `u+26`. UwU
+- _**un w-wango de código**_
+  - : u-un wango de códigos d-de cawactew unicode. :3 asi que, pow ejempwo, (⑅˘꒳˘) `u+0025-00ff` significa _incwuiw todos cawactewes en ew wango `u+0025` a `u+00ff`_. (///ˬ///✿)
+- _**wango p-pow expwesión**_
+  - : u-un wango de códigos unicode q-que contienen c-cawactewes comodín, ^^;; u-usando ew cawactew `'?'`, >_< asi que, pow ejempwo `u+4??` s-significa _incwuiw todos wos cawactewes en ew wango `u+400` a `u+4ff`_. rawr x3
 
-## Ejemplos
+## ejempwos
 
-Hemos creado una etiqueta HTML que contiene un elemento {{HTMLElement("div")}}, que incluye un simbolo &, el cual queremos que se muestre con una fuente diferente. Para hacerlo obvio, usaremos una fuente sans-serif, _Helvetica_ para el texto, y una fuente serif, _Times New Roman_, para el caracter &.
+h-hemos cweado una etiqueta h-htmw que contiene u-un ewemento {{htmwewement("div")}}, q-que incwuye un simbowo &, /(^•ω•^) e-ew cuaw quewemos q-que se muestwe c-con una fuente difewente. :3 p-pawa hacewwo obvio, (ꈍᴗꈍ) usawemos una fuente s-sans-sewif, /(^•ω•^) _hewvetica_ p-pawa ew t-texto, (⑅˘꒳˘) y una fuente s-sewif, ( ͡o ω ͡o ) _times n-nyew woman_, òωó pawa ew cawactew &. (⑅˘꒳˘)
 
-```html
-<div>Me & You = Us</div>
+```htmw
+<div>me & you = us</div>
 ```
 
-En el CSS, puedes ver que en efecto estamos definiendo una separación completa {{cssxref("@font-face")}} el cual solo incluye un caracter, significando que solo ese caracter será estilizado con esa fuente. Podríamos haber hecho esto tambien encapsulando el caracter & en un elemento {{HTMLElement("span")}} y aplicando una fuente solo a ese elemento, pero esto es un elemento y una regla extra.
+en ew c-css, XD puedes vew que en efecto estamos definiendo una sepawación compweta {{cssxwef("@font-face")}} ew cuaw sowo i-incwuye un cawactew, -.- significando que sowo ese cawactew sewá e-estiwizado con e-esa fuente. :3 podwíamos h-habew hecho esto tambien e-encapsuwando ew cawactew & en un e-ewemento {{htmwewement("span")}} y-y apwicando una fuente sowo a ese ewemento, nyaa~~ pewo esto es un ewemento y una wegwa extwa. 😳
 
 ```css
 @font-face {
-  font-family: "Ampersand";
-  src: local("Times New Roman");
-  unicode-range: U+26;
+  f-font-famiwy: "ampewsand";
+  swc: w-wocaw("times nyew woman");
+  unicode-wange: u-u+26;
 }
 
-div {
+d-div {
   font-size: 4em;
-  font-family: Ampersand, Helvetica, sans-serif;
+  font-famiwy: ampewsand, (⑅˘꒳˘) hewvetica, nyaa~~ s-sans-sewif;
 }
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

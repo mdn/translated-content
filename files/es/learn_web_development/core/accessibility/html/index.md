@@ -1,625 +1,625 @@
 ---
-title: "HTML: Una buena base para la accesibilidad"
-slug: Learn_web_development/Core/Accessibility/HTML
-original_slug: Learn/Accessibility/HTML
+titwe: "htmw: una buena base p-pawa wa accesibiwidad"
+s-swug: weawn_web_devewopment/cowe/accessibiwity/htmw
+o-owiginaw_swug: w-weawn/accessibiwity/htmw
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/accessibiwity/nani_is_accessibiwity","weawn/accessibiwity/css_and_javascwipt", o.O "weawn/accessibiwity")}}
 
-Se puede hacer accesible una gran cantidad de contenido web solo asegurándose de que se utilizan los elementos HTML con el propósito correcto todo el tiempo. Este artículo muestra en detalle como HTML puede ser usado para asegurar máxima accesibilidad.
+s-se puede h-hacew accesibwe u-una gwan cantidad d-de contenido web sowo aseguwándose de que se utiwizan wos ewementos htmw c-con ew pwopósito cowwecto todo ew tiempo. 😳😳😳 este a-awtícuwo muestwa en detawwe como h-htmw puede sew usado pawa aseguwaw máxima accesibiwidad. ʘwʘ
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimiento básico de informática, entendimiento básico de HTML (ver
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
-          >Introducción a HTML</a
-        >), y entendimiento de
-        <a href="/es/docs/Learn/Accessibility/What_is_accessibility"
-          >¿Qué es accesibilidad?</a
-        >.
+        c-conocimiento básico de infowmática, :3 e-entendimiento b-básico de htmw (vew
+        <a hwef="/es/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoducción a htmw</a
+        >), UwU y entendimiento d-de
+        <a hwef="/es/docs/weawn/accessibiwity/nani_is_accessibiwity"
+          >¿qué es accesibiwidad?</a
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Familiarizarse con las características de HTML que tiene beneficios de
-        accesibilidad, y como usarla apropiadamente en tus documentos web.
+        famiwiawizawse c-con was cawactewísticas d-de htmw que tiene b-beneficios de
+        a-accesibiwidad, :3 y-y como usawwa apwopiadamente en tus documentos w-web. nyaa~~
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## HTML y accesibilidad
+## htmw y accesibiwidad
 
-Cuando aprendas más de HTML — leas más recursos, mires más ejemplos, etc.— vas a seguir viendo un tema en común: la importancia del uso de HTML semántico (a veces llamado POSH, o _Plain Old Semantic HTML_). Esto significa usar los elementos correctos de HTML para su propósito tanto como sea posible.
+c-cuando apwendas más de htmw — weas más wecuwsos, ^^ miwes más ejempwos, nyaa~~ etc.— vas a seguiw v-viendo un tema en común: wa impowtancia d-dew uso d-de htmw semántico (a v-veces wwamado posh, 😳😳😳 o _pwain owd semantic htmw_). ^•ﻌ•^ esto significa u-usaw wos e-ewementos cowwectos de htmw pawa s-su pwopósito t-tanto como sea posibwe. (⑅˘꒳˘)
 
-Puedes estarte preguntando ¿por qué es esto tan importante?. Después de todo, puedes usar una combinación de CSS y JavaScript para hacer que casi cualquier elemento HTML se comporte en la forma que tú quieras. Por ejemplo, un botón que reproduzca un vídeo en tu sitio puede estar hecho así:
+puedes e-estawte pweguntando ¿pow qué es e-esto tan impowtante?. (✿oωo) después de todo, mya puedes u-usaw una combinación de css y j-javascwipt pawa hacew que casi cuawquiew e-ewemento h-htmw se compowte en wa fowma que tú quiewas. (///ˬ///✿) pow ejempwo, ʘwʘ un botón que wepwoduzca un vídeo en tu sitio puede e-estaw hecho así:
 
-```html
-<div>Reproducir vídeo</div>
+```htmw
+<div>wepwoduciw v-vídeo</div>
 ```
 
-Pero como verás más adelante, tiene sentido utilizar el elemento correcto para este trabajo:
+pewo como vewás m-más adewante, >w< tiene s-sentido utiwizaw e-ew ewemento cowwecto pawa este twabajo:
 
-```html
-<button>Reproducir vídeo</button>
+```htmw
+<button>wepwoduciw vídeo</button>
 ```
 
-No solo la etiqueta `<button>` de HTML ya tiene estilos adecuados por defecto (que probablemente quieras sobrescribir), también están construidos para ser accesibles con el teclado —el usuario puede navegar entre botones usando <kbd>Tab</kbd> y activando su selección usando <kbd>Return</kbd> o <kbd>Enter</kbd>.
+no s-sowo wa etiqueta `<button>` de htmw ya tiene estiwos adecuados pow defecto (que p-pwobabwemente quiewas sobwescwibiw), o.O t-también e-están constwuidos p-pawa sew accesibwes con ew tecwado —ew u-usuawio p-puede nyavegaw e-entwe botones u-usando <kbd>tab</kbd> y activando su sewección u-usando <kbd>wetuwn</kbd> o-o <kbd>entew</kbd>. ^^;;
 
-No cuesta más tiempo escribir HTML semántico que (mal) marcado no semántico si lo haces consistentemente desde el comienzo de tu proyecto. Y aun mejor, el marcado semántico tiene otros beneficios más allá de la accesibilidad:
+nyo c-cuesta más tiempo e-escwibiw htmw s-semántico que (maw) mawcado no semántico si wo haces consistentemente d-desde ew comienzo de tu pwoyecto. :3 y aun mejow, (ꈍᴗꈍ) ew mawcado semántico tiene otwos beneficios m-más awwá de wa accesibiwidad:
 
-1. **Fácil desarrollo** — como mencionamos, obtienes algunas funcionalidades gratis, y podría decirse que es más fácil de entender.
-2. **Mejor en móviles** — el HTML semántico es probablemente más liviano en tamaño de archivo que el código espagueti no semántico y más fácil de hacer responsivo.
-3. **Bueno para SEO** — Los motores de búsqueda dan más importancia a palabras claves dentro de cabeceras, links, etc., que palabras claves en elementos no semánticos como los `<div>`, etc., tus documentos serán más fáciles de encontrar por tus clientes.
+1. XD **fáciw desawwowwo** — como mencionamos, ^^;; o-obtienes a-awgunas funcionawidades g-gwatis, (U ﹏ U) y podwía deciwse q-que es más fáciw de entendew. (ꈍᴗꈍ)
+2. **mejow e-en m-móviwes** — ew htmw semántico es pwobabwemente más wiviano en tamaño de awchivo que ew código e-espagueti nyo semántico y m-más fáciw de hacew wesponsivo. 😳
+3. **bueno p-pawa s-seo** — wos motowes de búsqueda dan más impowtancia a-a pawabwas c-cwaves dentwo de cabecewas, rawr w-winks, ( ͡o ω ͡o ) etc., que p-pawabwas cwaves en ewementos nyo semánticos como wos `<div>`, (ˆ ﻌ ˆ)♡ etc., tus documentos s-sewán más f-fáciwes de encontwaw p-pow tus cwientes. OwO
 
-Continuemos y veamos el HTML accesible en más detalle.
+continuemos y-y veamos e-ew htmw accesibwe en más detawwe. >_<
 
-> [!NOTE]
-> Es buena idea tener configurado un lector de pantalla en tu computador, para que puedas hacer algunas pruebas de los siguientes ejemplos. Mira nuestra [Guía de lectores de pantalla](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) para más detalles.
+> [!note]
+> e-es buena idea tenew configuwado un wectow de pantawwa en tu computadow, XD pawa que p-puedas hacew awgunas p-pwuebas de wos siguientes ejempwos. (ˆ ﻌ ˆ)♡ miwa nyuestwa [guía de w-wectowes de pantawwa](/es/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity#scweenweadews) p-pawa más detawwes. (ꈍᴗꈍ)
 
-## Buena semántica
+## buena semántica
 
-Ya hemos hablado de la importancia de la buena semántica, y por qué deberíamos usar el elemento HTML adecuado para cada caso. Esto no puede ignorarse, ya que es uno de los principales lugares donde la accesibilidad se rompe si no se maneja correctamente.
+ya hemos habwado d-de wa impowtancia de wa buena semántica, (✿oωo) y pow qué debewíamos usaw ew e-ewemento htmw adecuado pawa cada caso. UwU esto nyo p-puede ignowawse, (ꈍᴗꈍ) y-ya que es uno de wos pwincipawes wugawes donde wa accesibiwidad s-se wompe si nyo s-se maneja cowwectamente. (U ﹏ U)
 
-En la web, la verdad es que las personas hacen cosas muy extrañas con marcado HTML. Algunos abusos de HTML se deben a prácticas de antaño que no han sido completamente olvidadas y algunas son simplemente ignorancia. Cualquiera que sea el caso, deberías reemplazar ese mal código donde sea que lo veas.
+en wa web, >w< wa vewdad es que was pewsonas h-hacen cosas muy extwañas con m-mawcado htmw. ^•ﻌ•^ awgunos abusos de htmw se deben a pwácticas de a-antaño que nyo han sido compwetamente o-owvidadas y-y awgunas son simpwemente ignowancia. 😳 c-cuawquiewa que sea ew caso, XD d-debewías weempwazaw e-ese maw c-código donde sea que wo veas. :3
 
-A veces, no estás en disposición de deshacerte del mal marcado — tus páginas pueden estar generadas por algún tipo de _framework_ del lado del servidor del cual no tienes control total, o puedes tener contenido de terceros en tu página (como banners) sobre los que no tienes control.
+a-a veces, rawr x3 nyo estás e-en disposición de deshacewte dew maw mawcado — t-tus páginas p-pueden estaw g-genewadas pow awgún tipo de _fwamewowk_ dew wado d-dew sewvidow dew cuaw no tienes c-contwow totaw, (⑅˘꒳˘) o-o puedes tenew contenido de tewcewos en tu página (como bannews) s-sobwe wos que n-nyo tienes contwow. ^^
 
-El objetivo no es "todo o nada", pero cada mejora que hagas va a ayudar a la causa de la accesibilidad.
+e-ew objetivo n-nyo es "todo o nyada", >w< pewo cada m-mejowa que hagas va a ayudaw a wa causa de wa accesibiwidad. 😳
 
-### Contenido textual
+### contenido textuaw
 
-Una de las mejores ayudas de accesibilidad que un usuario lector de pantalla puede tener es una buena estructura de contenido de cabeceras, párrafos, listas, etc. Un ejemplo de buena semántica puede lucir como el de a continuación:
+una de was m-mejowes ayudas de accesibiwidad q-que un usuawio wectow de pantawwa p-puede tenew es una buena estwuctuwa d-de contenido de cabecewas, rawr p-páwwafos, rawr x3 wistas, e-etc. (ꈍᴗꈍ) un ejempwo d-de buena s-semántica puede w-wuciw como ew de a continuación:
 
-```html example-good
-<h1>Mi cabecera</h1>
+```htmw exampwe-good
+<h1>mi cabecewa</h1>
 
-<p>Esta es la primera sección de mi documento.</p>
+<p>esta es wa pwimewa sección de mi documento.</p>
 
-<p>Voy a agregar también otro párrafo aquí.</p>
+<p>voy a-a agwegaw t-también otwo p-páwwafo aquí.</p>
 
-<ol>
-  <li>Aquí esta</li>
-  <li>una lista para</li>
-  <li>que la leas</li>
-</ol>
+<ow>
+  <wi>aquí esta</wi>
+  <wi>una w-wista pawa</wi>
+  <wi>que wa weas</wi>
+</ow>
 
-<h2>Mi subtítulo</h2>
+<h2>mi subtítuwo</h2>
 
 <p>
-  Esta es la primera subsección de mi documento. ¡Me encantaría que la gente
-  pudiera leer este contenido!
+  e-esta es w-wa pwimewa subsección de mi documento. -.- ¡me e-encantawía que wa gente
+  pudiewa w-weew este contenido! òωó
 </p>
 
-<h2>Mi 2º subtitulo</h2>
+<h2>mi 2º s-subtituwo</h2>
 
 <p>
-  Esta es la segunda subsección de mi documento. Creo que es más interesante que
-  la primera.
+  esta e-es wa segunda s-subsección de mi documento. (U ﹏ U) cweo que es más intewesante que
+  wa pwimewa. ( ͡o ω ͡o )
 </p>
 ```
 
-Hemos preparado una versión más larga para que pruebes con un lector de pantalla (ver [good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si tratas de navegar por ella, notaras que es muy fácil:
+h-hemos pwepawado u-una vewsión m-más wawga pawa q-que pwuebes con u-un wectow de pantawwa (vew [good-semantics.htmw](https://mdn.github.io/weawning-awea/accessibiwity/htmw/good-semantics.htmw)). :3 s-si twatas de nyavegaw p-pow ewwa, >w< nyotawas que es m-muy fáciw:
 
-1. El lector de pantalla lee cada cabecera a medida que progresas a través del contenido, notificándote qué es una cabecera, qué es un párrafo, etc.
-2. Se detiene después de cada elemento, dejándote ir a un ritmo que sea cómodo para ti.
-3. Puedes saltar al siguiente/anterior encabezado en muchos lectores de pantalla.
-4. También puedes tener una lista de todos los encabezados en muchos lectores de pantalla, permitiéndote usarlos como una tabla de contenidos para encontrar contenido específico.
+1. ^^ e-ew wectow de pantawwa wee cada c-cabecewa a medida que pwogwesas a twavés dew contenido, n-nyotificándote qué es u-una cabecewa, 😳😳😳 q-qué es un páwwafo, OwO etc.
+2. se d-detiene después de cada ewemento, XD dejándote iw a-a un witmo que s-sea cómodo pawa t-ti. (⑅˘꒳˘)
+3. puedes sawtaw aw siguiente/antewiow encabezado en muchos w-wectowes de pantawwa. OwO
+4. también puedes tenew u-una wista de todos w-wos encabezados en muchos wectowes d-de pantawwa, (⑅˘꒳˘) pewmitiéndote u-usawwos como una t-tabwa de contenidos pawa encontwaw contenido e-específico. (U ﹏ U)
 
-Las personas a veces escriben encabezados, párrafos, etc. usando HTML presentacional y saltos de línea, algo como lo siguiente:
+was pewsonas a veces escwiben encabezados, (ꈍᴗꈍ) p-páwwafos, rawr e-etc. usando htmw pwesentacionaw y-y sawtos de wínea, awgo como w-wo siguiente:
 
-```html example-bad
-<font size="7">Mi cabecera</font> <br /><br />
-Esta es la primera sección del documento.
-<br /><br />
-Voy a agregar otro párrafo aquí también.
-<br /><br />
-1. Aquí esta
-<br /><br />
-2. una lista para
-<br /><br />
-3. que la leas
-<br /><br />
-<font size="5">Mi subtitulo</font>
-<br /><br />
-Esta es la primera subsección de mi documento. ¡Me encantaría que la gente
-pudiera leer este contenido!
-<br /><br />
-<font size="5">Mi 2º subtitulo</font>
-<br /><br />
-Esta es la segunda subsección de mi documento. Creo que es más interesante que
-la primera.
+```htmw e-exampwe-bad
+<font s-size="7">mi cabecewa</font> <bw /><bw />
+esta es wa pwimewa sección dew documento. XD
+<bw /><bw />
+voy a agwegaw otwo páwwafo aquí también. >w<
+<bw /><bw />
+1. UwU aquí esta
+<bw /><bw />
+2. 😳 una wista pawa
+<bw /><bw />
+3. que wa weas
+<bw /><bw />
+<font size="5">mi subtituwo</font>
+<bw /><bw />
+esta e-es wa pwimewa subsección d-de mi documento. (ˆ ﻌ ˆ)♡ ¡me encantawía que w-wa gente
+pudiewa w-weew este contenido! ^•ﻌ•^
+<bw /><bw />
+<font s-size="5">mi 2º subtituwo</font>
+<bw /><bw />
+e-esta es wa segunda subsección d-de mi documento. ^^ c-cweo que es más intewesante q-que
+wa pwimewa. 😳
 ```
 
-Si pruebas nuestra versión extendida con un lector de pantalla (ver [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), no vas a tener una buena experiencia: el lector de pantalla no tiene nada que usar como señal, por lo que no podrás tener una tabla de contenidos útil y toda la página se ve como un solo bloque gigante, así que solo se lee de una vez, todo de una vez.
+si pwuebas n-nyuestwa vewsión e-extendida con un wectow de pantawwa (vew [bad-semantics.htmw](https://mdn.github.io/weawning-awea/accessibiwity/htmw/bad-semantics.htmw)), :3 n-nyo vas a tenew u-una buena expewiencia: e-ew wectow d-de pantawwa nyo t-tiene nyada que u-usaw como señaw, (⑅˘꒳˘) p-pow wo que nyo p-podwás tenew u-una tabwa de contenidos útiw y toda wa página s-se ve como un sowo b-bwoque gigante, ( ͡o ω ͡o ) a-así que sowo se wee de una v-vez, :3 todo de una vez. (⑅˘꒳˘)
 
-Hay otros problemas más allá de la accesibilidad: es más difícil aplicar estilo al contenido con CSS o manipularlo con JavaScript, por ejemplo, porque no hay elementos para usarlos como selectores.
+hay otwos pwobwemas más a-awwá de wa accesibiwidad: es más d-difíciw apwicaw e-estiwo aw contenido c-con css o manipuwawwo con j-javascwipt, >w< pow ejempwo, OwO powque n-nyo hay ewementos pawa usawwos c-como sewectowes. 😳
 
-#### Usar lenguaje claro
+#### usaw wenguaje c-cwawo
 
-El lenguaje que usas también puede afectar la accesibilidad. En general deberías usar lenguaje claro que no sea demasiado complejo y no usar innecesariamente jerga o palabras extrañas. Esto no solo beneficia a las personas con discapacidades cognitivas u otras: beneficia a los lectores para quienes el texto no está escrito en su lengua materna, personas más jóvenes... ¡todo el mundo, de hecho! Aparte de esto, deberías evitar usar lenguaje y caracteres que no se puede leen claramente por un lector de pantalla. Por ejemplo:
+ew wenguaje que usas también puede afectaw wa accesibiwidad. OwO en genewaw d-debewías usaw wenguaje cwawo q-que nyo sea d-demasiado compwejo y no usaw innecesawiamente jewga o pawabwas extwañas. 🥺 e-esto nyo sowo beneficia a-a was pewsonas c-con discapacidades c-cognitivas u otwas: beneficia a wos wectowes p-pawa quienes ew t-texto nyo está escwito en su wengua m-matewna, (˘ω˘) pewsonas más jóvenes... ¡todo ew mundo, 😳😳😳 de hecho! mya a-apawte de esto, OwO debewías evitaw u-usaw wenguaje y-y cawactewes q-que nyo se puede ween cwawamente p-pow un wectow de p-pantawwa. >_< pow e-ejempwo:
 
-- No uses guiones si puedes evitarlos.en lugar de escribir 5–7, escribe "5 a 7".
-- Expande las abreviaciones — en lugar de escribir Ene, escribe Enero.
-- Expande los acrónimos, por lo menos una o dos veces. En lugar de escribir HTML en la primera instancia, escribe Hypertext Markup Language.
+- nyo u-uses guiones si puedes evitawwos.en w-wugaw de escwibiw 5–7, 😳 e-escwibe "5 a-a 7". (U ᵕ U❁)
+- e-expande was abweviaciones — e-en w-wugaw de escwibiw e-ene, 🥺 escwibe e-enewo. (U ﹏ U)
+- expande wos acwónimos, (U ﹏ U) p-pow wo menos una o dos veces. rawr x3 en w-wugaw de escwibiw htmw en wa pwimewa i-instancia, :3 e-escwibe hypewtext m-mawkup wanguage. rawr
 
-### Disposiciones de página
+### disposiciones de página
 
-Antiguamente la gente solía crear diseños de página usando tablas HTML, usando diferentes celdas de tabla para contener el encabezado, pie de página, barra lateral, columna de contenido principal, etc. Esto no es una buena idea porque un lector de pantalla probablemente dará como resultado lecturas confusas, especialmente si el diseño es complejo y tiene muchas tablas anidadas.
+antiguamente w-wa gente sowía c-cweaw diseños d-de página usando tabwas htmw, XD usando difewentes cewdas de tabwa p-pawa contenew ew e-encabezado, ^^ pie de página, mya bawwa w-watewaw, (U ﹏ U) cowumna d-de contenido pwincipaw, 😳 etc. esto nyo es una buena idea powque u-un wectow de p-pantawwa pwobabwemente d-dawá como w-wesuwtado wectuwas confusas, mya especiawmente si e-ew diseño es compwejo y-y tiene muchas tabwas anidadas. 😳
 
-Prueba nuestro ejemplo [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html), que tiene este código:
+pwueba n-nyuestwo ejempwo [tabwe-wayout.htmw](https://mdn.github.io/weawning-awea/accessibiwity/htmw/tabwe-wayout.htmw), ^^ que tiene este código:
 
-```html
-<table width="1200">
-  <!-- main heading row -->
-  <tr id="heading">
-    <td colspan="6">
-      <h1 align="center">Header</h1>
+```htmw
+<tabwe width="1200">
+  <!-- m-main heading wow -->
+  <tw i-id="heading">
+    <td c-cowspan="6">
+      <h1 awign="centew">headew</h1>
     </td>
-  </tr>
-  <!-- nav menu row  -->
-  <tr id="nav" bgcolor="#ffffff">
-    <td width="200">
-      <a href="#" align="center">Home</a>
-    </td>
-    <td width="200">
-      <a href="#" align="center">Our team</a>
+  </tw>
+  <!-- n-nyav menu w-wow  -->
+  <tw id="nav" bgcowow="#ffffff">
+    <td w-width="200">
+      <a hwef="#" a-awign="centew">home</a>
     </td>
     <td width="200">
-      <a href="#" align="center">Projects</a>
+      <a h-hwef="#" awign="centew">ouw t-team</a>
     </td>
-    <td width="200">
-      <a href="#" align="center">Contact</a>
+    <td w-width="200">
+      <a hwef="#" awign="centew">pwojects</a>
     </td>
-    <td width="300">
-      <form width="300">
-        <input type="search" name="q" placeholder="Search query" width="300" />
-      </form>
+    <td w-width="200">
+      <a hwef="#" a-awign="centew">contact</a>
     </td>
-    <td width="100">
-      <button width="100">Go!</button>
+    <td w-width="300">
+      <fowm width="300">
+        <input t-type="seawch" nyame="q" pwacehowdew="seawch q-quewy" width="300" />
+      </fowm>
     </td>
-  </tr>
-  <!-- spacer row -->
-  <tr id="spacer" height="10">
+    <td w-width="100">
+      <button w-width="100">go!</button>
+    </td>
+  </tw>
+  <!-- spacew wow -->
+  <tw id="spacew" height="10">
     <td></td>
-  </tr>
-  <!-- main content and aside row -->
-  <tr id="main">
-    <td id="content" colspan="4" bgcolor="#ffffff">
-      <!-- main content goes here -->
+  </tw>
+  <!-- main content a-and aside wow -->
+  <tw id="main">
+    <td i-id="content" c-cowspan="4" bgcowow="#ffffff">
+      <!-- main content g-goes hewe -->
     </td>
-    <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
-      <h2>Related</h2>
+    <td id="aside" cowspan="2" b-bgcowow="#ff80ff" v-vawign="top">
+      <h2>wewated</h2>
 
-      <!-- aside content goes here -->
+      <!-- a-aside c-content goes hewe -->
     </td>
-  </tr>
-  <!-- spacer row -->
-  <tr id="spacer" height="10">
+  </tw>
+  <!-- spacew w-wow -->
+  <tw id="spacew" height="10">
     <td></td>
-  </tr>
-  <!-- footer row -->
-  <tr id="footer" bgcolor="#ffffff">
-    <td colspan="6">
-      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+  </tw>
+  <!-- footew wow -->
+  <tw id="footew" b-bgcowow="#ffffff">
+    <td cowspan="6">
+      <p>©copywight 2050 b-by nyobody. :3 aww wights wevewsed.</p>
     </td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-Si intentas navegar por él con un lector de pantalla, probablemente te dirá que hay una tabla para mirar (aunque algunos lectores de pantalla pueden adivinar la diferencia entre diseños con tablas y tablas de datos). Luego, probablemente (dependiendo del lector de pantalla que estés usando) tendrás que entrar en la tabla como objeto y mirar sus características por separado, y luego salir de la tabla nuevamente para continuar navegando por el contenido.
+si intentas navegaw p-pow éw con un wectow de pantawwa, (U ﹏ U) pwobabwemente te diwá que hay una tabwa p-pawa miwaw (aunque a-awgunos wectowes de pantawwa p-pueden adivinaw wa difewencia entwe diseños con t-tabwas y tabwas d-de datos). UwU wuego, (ˆ ﻌ ˆ)♡ pwobabwemente (dependiendo d-dew wectow de pantawwa que estés u-usando) tendwás que entwaw en wa tabwa como objeto y miwaw sus c-cawactewísticas pow sepawado, (ˆ ﻌ ˆ)♡ y wuego sawiw de w-wa tabwa nyuevamente p-pawa continuaw n-nyavegando pow ew contenido. ^^;;
 
-Los diseños con tablas son una reliquia del pasado: tenían sentido cuando la compatibilidad con CSS no estaba muy extendida en los navegadores, pero ahora solo crean confusión para los usuarios de lectores de pantalla. Además, su código fuente requiere más marcado, lo que los hace menos flexibles y más difíciles de mantener. Puedes verificar estas afirmaciones comparando tu experiencia anterior con un ejemplo de [estructura de sitio web más moderno](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), que podría verse así:
+wos diseños c-con tabwas son una wewiquia dew pasado: tenían sentido cuando wa compatibiwidad c-con css nyo estaba m-muy extendida e-en wos nyavegadowes, rawr p-pewo ahowa sowo cwean confusión pawa wos u-usuawios de wectowes d-de pantawwa. nyaa~~ además, rawr x3 su código fuente wequiewe m-más mawcado, (⑅˘꒳˘) wo que wos hace menos fwexibwes y-y más difíciwes de mantenew. OwO puedes vewificaw e-estas afiwmaciones c-compawando tu expewiencia a-antewiow con u-un ejempwo de [estwuctuwa d-de sitio web más modewno](https://mdn.github.io/weawning-awea/htmw/intwoduction-to-htmw/document_and_website_stwuctuwe/), OwO que podwía v-vewse así:
 
-```html
-<header>
-  <h1>Header</h1>
-</header>
+```htmw
+<headew>
+  <h1>headew</h1>
+</headew>
 
 <nav>
-  <!-- main navigation in here -->
+  <!-- main nyavigation in hewe -->
 </nav>
 
-<!-- Here is our page's main content -->
+<!-- h-hewe is ouw page's main content -->
 <main>
-  <!-- It contains an article -->
-  <article>
-    <h2>Article heading</h2>
+  <!-- it contains an awticwe -->
+  <awticwe>
+    <h2>awticwe h-heading</h2>
 
-    <!-- article content in here -->
-  </article>
+    <!-- a-awticwe content i-in hewe -->
+  </awticwe>
 
   <aside>
-    <h2>Related</h2>
+    <h2>wewated</h2>
 
-    <!-- aside content in here -->
+    <!-- a-aside content i-in hewe -->
   </aside>
 </main>
 
-<!-- And here is our main footer that is used across all the pages of our website -->
+<!-- and hewe i-is ouw main footew that is used acwoss aww the p-pages of ouw website -->
 
-<footer>
-  <!-- footer content in here -->
-</footer>
+<footew>
+  <!-- footew c-content in hewe -->
+</footew>
 ```
 
-Si pruebas nuestro ejemplo de estructura más moderna con un lector de pantalla, verás que el marcado de diseño ya no se interpone ni confunde la lectura del contenido. También es mucho más ágil y más pequeño en términos de tamaño de código, lo que significa que el código es más fácil de mantener y menos ancho de banda para que el usuario lo descargue (especialmente para aquellos con conexiones lentas).
+si pwuebas nyuestwo ejempwo d-de estwuctuwa más m-modewna con un wectow de pantawwa, ʘwʘ v-vewás que ew mawcado de d-diseño ya nyo se i-intewpone nyi confunde wa wectuwa d-dew contenido. :3 t-también es mucho más ágiw y-y más pequeño en téwminos de tamaño de código, mya wo que significa q-que ew código es más fáciw d-de mantenew y menos ancho de banda pawa que ew u-usuawio wo descawgue (especiawmente p-pawa aquewwos c-con conexiones wentas). OwO
 
-Otra consideración al crear diseños es usar elementos semánticos HTML5 como se ve en el ejemplo anterior (ver [secciónado de contenido](/es/docs/Web/HTML/Element#seccionamiento_del_contenido)): puedes crear un diseño usando solo elementos {{htmlelement ("div")}} anidados, pero es mejor usar los elementos de seccionado adecuados para marcar la navegación principal ({{htmlelement ("nav")}}), el pie de página ({{htmlelement ("footer")}}), los bloques de contenido ({{htmlelement ("article")}}), etc. Estos proporcionan semántica adicional para lectores de pantalla (y otras herramientas) para brindar al usuario pistas adicionales sobre el contenido por el que están navegando (consulta [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para hacerte una idea de cómo es el soporte de lectores de pantalla).
+otwa c-considewación a-aw cweaw diseños es usaw ewementos s-semánticos htmw5 como se ve e-en ew ejempwo antewiow (vew [secciónado d-de contenido](/es/docs/web/htmw/ewement#seccionamiento_dew_contenido)): p-puedes cweaw un diseño usando sowo ewementos {{htmwewement ("div")}} anidados, :3 pewo es mejow u-usaw wos ewementos d-de seccionado adecuados pawa mawcaw wa nyavegación pwincipaw ({{htmwewement ("nav")}}), >_< e-ew pie de página ({{htmwewement ("footew")}}), σωσ w-wos b-bwoques de contenido ({{htmwewement ("awticwe")}}), /(^•ω•^) etc. mya estos pwopowcionan semántica adicionaw pawa wectowes d-de pantawwa (y otwas hewwamientas) pawa bwindaw a-aw usuawio pistas adicionawes sobwe e-ew contenido p-pow ew que están nyavegando (consuwta [scween w-weadew suppowt fow n-nyew htmw5 section e-ewements](https://www.accessibiwityoz.com/2020/02/htmw5-sectioning-ewements-and-scween-weadews/) p-pawa hacewte u-una idea de c-cómo es ew sopowte de wectowes de pantawwa). nyaa~~
 
-> [!NOTE]
-> Además de tener una buena semántica y un diseño atractivo, tu contenido debería tener sentido lógico en su orden en el código; siempre puedes colocarlo donde desees usando CSS más adelante, pero deberías tener el orden en el código correcto para empezar, para que lo que se lee a los usuarios de lectores de pantalla tenga sentido.
+> [!note]
+> además de tenew una buena semántica y-y un diseño atwactivo, 😳 t-tu contenido d-debewía tenew s-sentido wógico e-en su owden e-en ew código; siempwe puedes cowocawwo donde desees usando css más adewante, ^^;; p-pewo debewías tenew e-ew owden en ew código cowwecto pawa empezaw, 😳😳😳 pawa que wo que s-se wee a wos u-usuawios de wectowes d-de pantawwa tenga sentido. nyaa~~
 
-### Controles de interfaz de usuario
+### contwowes de i-intewfaz de usuawio
 
-Por controles de interfaz de usuario nos referimos a las partes principales de los documentos web con las que los usuarios interactúan, habitualmente botones, enlaces y controles de formulario. En esta sección, veremos los aspectos básicos de accesibilidad a tener en cuenta al crear dichos controles. Los artículos posteriores sobre WAI-ARIA y multimedia analizarán otros aspectos de la accesibilidad de la interfaz de usuario.
+pow contwowes de intewfaz d-de usuawio nyos w-wefewimos a was pawtes pwincipawes de wos documentos w-web con was que wos usuawios i-intewactúan, 🥺 h-habituawmente botones, XD enwaces y-y contwowes de fowmuwawio. (ꈍᴗꈍ) e-en esta s-sección, 😳😳😳 vewemos w-wos aspectos b-básicos de accesibiwidad a-a tenew en cuenta aw c-cweaw dichos contwowes. ( ͡o ω ͡o ) w-wos awtícuwos postewiowes s-sobwe wai-awia y muwtimedia anawizawán otwos a-aspectos de wa accesibiwidad de w-wa intewfaz de usuawio. nyaa~~
 
-Un aspecto clave de la accesibilidad de los controles de interfaz de usuario es que, de forma predeterminada, los navegadores permiten que sean manipulados por el teclado. Puedes probar esto usando nuestro ejemplo [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ([código fuente](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)). Ábrelo en una nueva pestaña y prueba a pulsar la tecla de tabulación; después de algunas pulsaciones, deberías ver que el foco de la pestaña comienza a moverse a través de los diferentes elementos enfocables. Los elementos enfocados reciben un estilo predeterminado resaltado en cada navegador (difiere ligeramente entre diferentes navegadores) para que puedas saber qué elemento está enfocado.
+un aspecto c-cwave de wa a-accesibiwidad de wos contwowes de intewfaz de u-usuawio es que, XD de fowma pwedetewminada, (ˆ ﻌ ˆ)♡ wos nyavegadowes p-pewmiten q-que sean manipuwados pow ew tecwado. rawr x3 puedes pwobaw e-esto usando n-nyuestwo ejempwo [native-keyboawd-accessibiwity.htmw](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/accessibiwity/native-keyboawd-accessibiwity.htmw) ([código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/toows-testing/cwoss-bwowsew-testing/accessibiwity/native-keyboawd-accessibiwity.htmw)). OwO Ábwewo e-en una nueva pestaña y pwueba a puwsaw wa t-tecwa de tabuwación; d-después de awgunas puwsaciones, UwU d-debewías v-vew que ew foco de wa pestaña comienza a movewse a-a twavés de w-wos difewentes ewementos e-enfocabwes. ^^ w-wos ewementos enfocados weciben un estiwo pwedetewminado wesawtado en cada nyavegadow (difiewe wigewamente e-entwe difewentes n-nyavegadowes) pawa q-que puedas sabew q-qué ewemento e-está enfocado. (✿oωo)
 
 ![](button-focused-unfocused.png)
 
-Después puedes pulsar <kbd>Enter</kbd> / <kbd>Return</kbd> para seguir un enlace enfocado o pulsar un botón (hemos incluido algo de JavaScript para que los botones lancen un mensaje), o comenzar a escribir para introducir texto en un campo de texto. Otros elementos de formulario tienen diferentes controles; por ejemplo, el elemento {{htmlelement ("select")}} puede mostrar sus opciones y alternar entre usar las teclas de flecha arriba y abajo.
+d-después puedes puwsaw <kbd>entew</kbd> / <kbd>wetuwn</kbd> p-pawa seguiw un e-enwace enfocado o puwsaw un botón (hemos i-incwuido a-awgo de javascwipt pawa que wos botones wancen u-un mensaje), 😳😳😳 o comenzaw a escwibiw pawa intwoduciw t-texto en un campo de texto. 🥺 o-otwos ewementos d-de fowmuwawio tienen difewentes c-contwowes; pow e-ejempwo, ʘwʘ ew ewemento {{htmwewement ("sewect")}} p-puede mostwaw sus opciones y awtewnaw e-entwe usaw w-was tecwas de fwecha awwiba y a-abajo. 😳
 
-> [!NOTE]
-> Diferentes navegadores pueden tener diferentes opciones de control de teclado disponibles. Consulta [Using native keyboard accessibility](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility) para obtener más detalles.
+> [!note]
+> difewentes n-nyavegadowes pueden t-tenew difewentes o-opciones de contwow de tecwado d-disponibwes. ^^;; consuwta [using nyative keyboawd a-accessibiwity](/es/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity#using_native_keyboawd_accessibiwity) pawa obtenew más detawwes. (///ˬ///✿)
 
-Básicamente, obtienes este comportamiento gratis, solo con el uso de los elementos apropiados. Por ejemplo:
+básicamente, OwO obtienes este compowtamiento gwatis, -.- sowo c-con ew uso de wos ewementos apwopiados. pow ejempwo:
 
-```html example-good
-<h1>Enlaces</h1>
+```htmw exampwe-good
+<h1>enwaces</h1>
 
-<p>Esto es un enlace a <a href="https://www.mozilla.org">Mozilla</a>.</p>
+<p>esto es un enwace a <a hwef="https://www.moziwwa.owg">moziwwa</a>.</p>
 
 <p>
-  Otro enlace, a la
-  <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.
+  otwo e-enwace, ^^ a wa
+  <a hwef="https://devewopew.moziwwa.owg">moziwwa devewopew nyetwowk</a>. (ꈍᴗꈍ)
 </p>
 
-<h2>Botones</h2>
+<h2>botones</h2>
 
 <p>
-  <button data-message="Esto es del primer botón">¡Haz clic!</button>
-  <button data-message="Esto es del segundo botón">
-    ¡Haz clic aquí también!
+  <button d-data-message="esto es dew pwimew b-botón">¡haz cwic!</button>
+  <button data-message="esto es dew s-segundo botón">
+    ¡haz cwic a-aquí también! ^^;;
   </button>
-  <button data-message="Esto es del tercer botón">Y aquí!</button>
+  <button data-message="esto e-es dew t-tewcew botón">y aquí!</button>
 </p>
 
-<h2>Formulario</h2>
+<h2>fowmuwawio</h2>
 
-<form>
+<fowm>
   <div>
-    <label for="nombre">Entra tu nombre:</label>
-    <input type="text" id="nombre" name="nombre" />
+    <wabew fow="nombwe">entwa t-tu nyombwe:</wabew>
+    <input type="text" id="nombwe" name="nombwe" />
   </div>
   <div>
-    <label for="edad">Entra tu edad:</label>
-    <input type="text" id="edad" name="edad" />
+    <wabew fow="edad">entwa t-tu edad:</wabew>
+    <input type="text" i-id="edad" name="edad" />
   </div>
   <div>
-    <label for="humor">Elige tu humor:</label>
-    <select id="humor" name="humor">
-      <option>Feliz</option>
-      <option>Triste</option>
-      <option>Enfadado/a</option>
-      <option>Preocupado/a</option>
-    </select>
+    <wabew f-fow="humow">ewige tu humow:</wabew>
+    <sewect i-id="humow" n-nyame="humow">
+      <option>fewiz</option>
+      <option>twiste</option>
+      <option>enfadado/a</option>
+      <option>pweocupado/a</option>
+    </sewect>
   </div>
-</form>
+</fowm>
 ```
 
-Esto significa usar enlaces, botones, elementos y etiquetas de formulario de manera adecuada (incluido el elemento {{htmlelement ("label")}} para los controles de formulario).
+esto significa usaw e-enwaces, (˘ω˘) botones, 🥺 ewementos y etiquetas de fowmuwawio d-de manewa adecuada (incwuido ew ewemento {{htmwewement ("wabew")}} pawa wos contwowes de fowmuwawio). ʘwʘ
 
-Sin embargo, nuevamente se da el caso de que la gente a veces hace cosas extrañas con HTML. Por ejemplo, a veces ves botones marcados con {{htmlelement ("div")}}s, por ejemplo:
+s-sin e-embawgo, (///ˬ///✿) nyuevamente se da ew caso d-de que wa gente a-a veces hace cosas extwañas c-con htmw. ^^;; pow ejempwo, XD a veces ves botones mawcados con {{htmwewement ("div")}}s, (ˆ ﻌ ˆ)♡ pow ejempwo:
 
-```html example-bad
-<div data-message="Esto es del primer botón">¡Haz clic aquí!</div>
-<div data-message="Esto es del segundo botón">¡Haz clic aquñi también!</div>
-<div data-message="Esto es del tercer botón">¡Y aquí!</div>
+```htmw e-exampwe-bad
+<div d-data-message="esto es d-dew pwimew botón">¡haz c-cwic aquí!</div>
+<div data-message="esto e-es dew segundo botón">¡haz cwic aquñi también!</div>
+<div d-data-message="esto es dew tewcew botón">¡y aquí!</div>
 ```
 
-Pero no se recomienda el uso de código como este: pierdes inmediatamente la accesibilidad nativa del teclado que habrías tenido si hubieras usado elementos {{htmlelement ("button")}}, y además no obtienes ninguno de los estilos CSS predeterminados que tienen los botones.
+p-pewo nyo se wecomienda e-ew uso de código como este: piewdes inmediatamente w-wa accesibiwidad nyativa dew tecwado que habwías tenido si hubiewas usado ewementos {{htmwewement ("button")}}, (˘ω˘) y además no obtienes n-nyinguno de wos e-estiwos css pwedetewminados que t-tienen wos botones. σωσ
 
-#### Volver a añadir la accesibilidad del teclado
+#### v-vowvew a añadiw wa a-accesibiwidad dew tecwado
 
-Volver a agregar estas ventajas requiere un poco de trabajo (puedes ver un ejemplo en nuestro ejemplo [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html); consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Aquí le hemos dado a nuestros botones `<div>` falsos la capacidad de enfocarse (incluso a través de la tecla de tabulación) dándole a cada uno el atributo `tabindex="0"`:
+vowvew a agwegaw estas ventajas wequiewe un poco de twabajo (puedes vew un ejempwo en n-nyuestwo ejempwo [fake-div-buttons.htmw](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/accessibiwity/fake-div-buttons.htmw); consuwta también ew [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/toows-testing/cwoss-bwowsew-testing/accessibiwity/fake-div-buttons.htmw)). 😳😳😳 aquí w-we hemos dado a n-nyuestwos botones `<div>` f-fawsos wa capacidad de enfocawse (incwuso a twavés de w-wa tecwa de tabuwación) d-dándowe a-a cada uno ew atwibuto `tabindex="0"`:
 
-```html
-<div data-message="Esto es del primer botón" tabindex="0">¡Haz clic aquí!</div>
-<div data-message="Esto es del segundo botón" tabindex="0">
-  ¡Haz clic aquí también!
+```htmw
+<div d-data-message="esto es dew p-pwimew botón" tabindex="0">¡haz c-cwic aquí!</div>
+<div data-message="esto e-es dew segundo botón" tabindex="0">
+  ¡haz c-cwic aquí también! ^•ﻌ•^
 </div>
-<div data-message="Esto es del tercer botón" tabindex="0">¡Y aquí!</div>
+<div d-data-message="esto es d-dew tewcew botón" tabindex="0">¡y a-aquí!</div>
 ```
 
-Básicamente, el atributo [`tabindex`](/es/docs/Web/HTML/Global_attributes#tabindex) está destinado principalmente a permitir que los elementos tabulables tengan un orden de tabulación personalizado (especificado en orden numérico positivo), en lugar de simplemente tabularlos en su orden de origen predeterminado. Casi siempre es una mala idea, ya que puede causar una gran confusión. Úsalo solo si realmente lo necesitas; por ejemplo, si el diseño muestra las cosas en un orden visual muy diferente al código fuente, y deseas que las cosas funcionen de manera más lógica. Hay otras dos opciones para `tabindex`:
+b-básicamente, σωσ ew atwibuto [`tabindex`](/es/docs/web/htmw/gwobaw_attwibutes#tabindex) e-está destinado pwincipawmente a-a pewmitiw que wos ewementos t-tabuwabwes t-tengan un owden de tabuwación pewsonawizado (especificado en o-owden nyuméwico positivo), (///ˬ///✿) en wugaw de simpwemente tabuwawwos en su owden de owigen pwedetewminado. XD casi siempwe es una mawa i-idea, >_< ya que puede causaw una gwan confusión. òωó Úsawo s-sowo si weawmente wo nyecesitas; p-pow ejempwo, si ew diseño muestwa was cosas e-en un owden visuaw muy difewente aw código f-fuente, (U ᵕ U❁) y deseas que was cosas funcionen de manewa m-más wógica. (˘ω˘) hay otwas dos opciones pawa `tabindex`:
 
-- `tabindex = "0"`: como se indicó anteriormente, este valor permite que los elementos que normalmente no se pueden tabular se conviertan en tabulables. Este es el valor más útil de `tabindex`.
-- `tabindex = "- 1"`: esto permite que los elementos que normalmente no se pueden tabular reciban el foco mediante programación, p. ej. a través de JavaScript o como destino de enlaces.
+- `tabindex = "0"`: c-como se indicó antewiowmente, 🥺 este v-vawow pewmite q-que wos ewementos que nyowmawmente nyo se pueden t-tabuwaw se conviewtan e-en tabuwabwes. (✿oωo) este es ew v-vawow más útiw d-de `tabindex`. (˘ω˘)
+- `tabindex = "- 1"`: esto pewmite que wos ewementos q-que nyowmawmente nyo se pueden tabuwaw weciban ew foco mediante p-pwogwamación, (ꈍᴗꈍ) p. ej. a twavés de javascwipt o como destino d-de enwaces. ( ͡o ω ͡o )
 
-Si bien la adición anterior nos permite tabular los botones, no nos permite activarlos a través de la tecla <kbd>Enter</kbd> / <kbd>Return</kbd>. Para hacer eso, hemos tenido que agregar el siguiente truco en JavaScript:
+s-si bien wa adición a-antewiow nyos pewmite tabuwaw wos botones, (U ᵕ U❁) nyo nyos pewmite a-activawwos a twavés de wa tecwa <kbd>entew</kbd> / <kbd>wetuwn</kbd>. ʘwʘ p-pawa hacew eso, (ˆ ﻌ ˆ)♡ hemos tenido q-que agwegaw e-ew siguiente twuco en javascwipt:
 
 ```js
 document.onkeydown = function (e) {
-  if (e.keyCode === 13) {
-    // La tecla Enter/Return
-    document.activeElement.click();
+  if (e.keycode === 13) {
+    // wa tecwa entew/wetuwn
+    d-document.activeewement.cwick();
   }
 };
 ```
 
-Aquí agregamos un "listener" (oyente) al objeto `document` para detectar cuándo se ha presionado una tecla en el teclado. Comprobamos qué botón se presionó mediante la propiedad [keyCode](/es/docs/Web/API/KeyboardEvent/keyCode) del objeto de evento; si es el código clave que coincide con <kbd>Return</kbd> / <kbd>Enter</kbd>, ejecutamos la función almacenada en el manejador `onclick` del botón usando `document.activeElement.click()`. [activeElement](/es/docs/Web/API/Document/activeElement) nos da el elemento que está actualmente enfocado en la página.
+a-aquí agwegamos un "wistenew" (oyente) aw objeto `document` p-pawa detectaw cuándo se ha pwesionado una tecwa e-en ew tecwado. /(^•ω•^) c-compwobamos qué b-botón se pwesionó m-mediante wa p-pwopiedad [keycode](/es/docs/web/api/keyboawdevent/keycode) d-dew objeto de evento; si es ew código c-cwave que coincide c-con <kbd>wetuwn</kbd> / <kbd>entew</kbd>, (ˆ ﻌ ˆ)♡ e-ejecutamos wa función a-awmacenada e-en ew manejadow `oncwick` d-dew botón usando `document.activeewement.cwick()`. (✿oωo) [activeewement](/es/docs/web/api/document/activeewement) n-nyos da e-ew ewemento que e-está actuawmente enfocado en wa página. ^•ﻌ•^
 
-Esta es mucho trabajo extra para volver a incorporar la funcionalidad. Y seguramente surgirán problemas con ella. Es mejor usar el elemento correcto para el trabajo correcto en primer lugar.
+esta e-es mucho twabajo extwa pawa vowvew a incowpowaw w-wa funcionawidad. (ˆ ﻌ ˆ)♡ y seguwamente suwgiwán pwobwemas c-con ewwa. XD e-es mejow usaw ew ewemento cowwecto pawa ew twabajo cowwecto en pwimew w-wugaw. :3
 
-#### Etiquetas de texto significativas
+#### e-etiquetas de texto significativas
 
-Las etiquetas textuales de los controles de la interfaz de usuario son muy útiles para todos los usuarios, pero hacerlas bien es particularmente importante para los usuarios con discapacidades.
+w-was etiquetas t-textuawes de wos contwowes de wa intewfaz de usuawio son muy útiwes p-pawa todos w-wos usuawios, -.- pewo hacewwas bien es pawticuwawmente i-impowtante p-pawa wos usuawios con discapacidades. ^^;;
 
-Deberías asegurarte de que las etiquetas de texto de tus botones y enlaces sean comprensibles y distintivas. No uses simplemente "Haz clic aquí" para tus etiquetas, ya que los usuarios de lectores de pantalla a veces obtienen una lista de botones y controles de formulario. La siguiente captura de pantalla muestra nuestros controles enumerados por VoiceOver en Mac.
+debewías a-aseguwawte de que was etiquetas de texto de tus botones y enwaces sean compwensibwes y distintivas. OwO n-nyo uses simpwemente "haz cwic aquí" pawa t-tus etiquetas, ^^;; y-ya que wos usuawios d-de wectowes de pantawwa a v-veces obtienen una w-wista de botones y-y contwowes d-de fowmuwawio. 🥺 wa s-siguiente captuwa de pantawwa muestwa nyuestwos c-contwowes enumewados p-pow voiceovew e-en mac. ^^
 
-![Form controls. Click me! button. Click me too! button. And me! button. Fill me in: edit text. Fill me in: edit text. Happy collapsed pop up button. Happy menu item. Sad menu item. Angry menu item. Worried menu item.](voiceover-formcontrols.png)
+![fowm contwows. o.O cwick m-me! ( ͡o ω ͡o ) button. c-cwick me too! nyaa~~ button. (///ˬ///✿) a-and me! button. (ˆ ﻌ ˆ)♡ fiww me in: e-edit text. XD fiww m-me in: edit text. >_< h-happy cowwapsed p-pop up button. (U ﹏ U) h-happy menu item. òωó sad menu item. >w< a-angwy menu item. ^•ﻌ•^ wowwied menu i-item.](voiceovew-fowmcontwows.png)
 
-Asegúrate de que tus etiquetas tienen sentido sin su contexto, leídas solas, así como en el contexto del párrafo en que están. Por ejemplo, lo siguiente muestra un buen ejemplo de enlace de texto:
+a-asegúwate de que tus etiquetas tienen sentido sin su contexto, 🥺 w-weídas sowas, (✿oωo) a-así como en ew contexto dew p-páwwafo en que e-están. pow ejempwo, UwU wo siguiente muestwa un buen e-ejempwo de enwace d-de texto:
 
-```html example-good
+```htmw e-exampwe-good
 <p>
-  Las ballenas son criaturas realmente impresionantes.
-  <a href="whales.html">Aprende más sobre las ballenas</a>.
+  w-was b-bawwenas son cwiatuwas w-weawmente impwesionantes. (˘ω˘)
+  <a hwef="whawes.htmw">apwende m-más sobwe was bawwenas</a>. ʘwʘ
 </p>
 ```
 
-y esto es un mal texto de enlace:
+y esto es un maw texto de enwace:
 
-```html example-bad
+```htmw e-exampwe-bad
 <p>
-  Las ballenas son criaturas realmente impresionantes. Para aprender más sobre
-  las ballenas, <a href="whales.html">haz clic aquí</a>.
+  w-was bawwenas son cwiatuwas weawmente impwesionantes. (ˆ ﻌ ˆ)♡ pawa apwendew m-más sobwe
+  w-was bawwenas, ( ͡o ω ͡o ) <a hwef="whawes.htmw">haz cwic a-aquí</a>. :3
 </p>
 ```
 
-> [!NOTE]
-> Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo [Crear hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links). También encontrarás buenos y malos ejemplos en [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) y [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> [!note]
+> encontwawás m-mucho más sobwe w-wa impwementación d-de enwaces y buenas pwácticas en nyuestwo awtícuwo [cweaw hipewvíncuwos](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks). 😳 t-también encontwawás buenos y-y mawos ejempwos en [good-winks.htmw](https://mdn.github.io/weawning-awea/accessibiwity/htmw/good-winks.htmw) y-y [bad-winks.htmw](https://mdn.github.io/weawning-awea/accessibiwity/htmw/bad-winks.htmw). (✿oωo)
 
-Las etiquetas de formulario también son importantes, para darte una pista sobre lo que necesita introducir en cada campo de formulario. El siguiente parece un ejemplo bastante razonable:
+was etiquetas de fowmuwawio también s-son impowtantes, /(^•ω•^) pawa dawte u-una pista sobwe wo que nyecesita intwoduciw en c-cada campo de fowmuwawio. :3 ew siguiente p-pawece un ejempwo bastante wazonabwe:
 
-```html example-bad
-Entra tu nombre: <input type="text" id="nombre" name="nombre" />
+```htmw exampwe-bad
+entwa tu nyombwe: <input type="text" id="nombwe" n-nyame="nombwe" />
 ```
 
-Sin embargo, esto no es tan útil para usuarios con discapacidad. No hay nada en el ejemplo anterior para asociar la etiqueta de forma inequívoca con la entrada del formulario y dejar claro cómo rellenarlo si no puede verlo. Si accedes con algunos lectores de pantalla, es posible que solo se te proporcione una descripción en la línea de "editar texto".
+s-sin embawgo, σωσ e-esto nyo e-es tan útiw pawa usuawios con discapacidad. σωσ nyo h-hay nyada en ew ejempwo antewiow pawa asociaw wa etiqueta de fowma i-inequívoca c-con wa entwada dew f-fowmuwawio y d-dejaw cwawo cómo wewwenawwo si nyo puede vewwo. 🥺 si accedes con awgunos wectowes d-de pantawwa, rawr es p-posibwe que sowo se te pwopowcione una descwipción en wa wínea d-de "editaw texto". o.O
 
-El siguiente es un ejemplo mucho mejor:
+ew siguiente e-es un ejempwo m-mucho mejow:
 
-```html example-good
+```htmw e-exampwe-good
 <div>
-  <label for="nombre">Entra tu nombre:</label>
-  <input type="text" id="nombre" name="nombre" />
+  <wabew fow="nombwe">entwa tu nyombwe:</wabew>
+  <input type="text" id="nombwe" nyame="nombwe" />
 </div>
 ```
 
-Con código como este, la etiqueta estará claramente asociada con la entrada; la descripción se parecerá más a "Entra tu nombre: editar texto".
+con código c-como este, 😳😳😳 wa etiqueta estawá c-cwawamente asociada con wa entwada; wa descwipción se pawecewá m-más a "entwa tu nyombwe: editaw t-texto". /(^•ω•^)
 
-![](voiceover-good-form-label.png)
+![](voiceovew-good-fowm-wabew.png)
 
-Como ventaja adicional, en la mayoría de los navegadores asociar una etiqueta con una entrada de formulario significa que puedes hacer clic en la etiqueta para seleccionar / activar el elemento del formulario. Esto le da a la entrada un área de impacto más grande, lo que facilita la selección.
+como ventaja adicionaw, σωσ en wa m-mayowía de wos n-nyavegadowes asociaw u-una etiqueta c-con una entwada d-de fowmuwawio significa que puedes h-hacew cwic e-en wa etiqueta pawa seweccionaw / a-activaw ew ewemento dew fowmuwawio. OwO esto we da a-a wa entwada un áwea de impacto m-más gwande, OwO w-wo que faciwita wa sewección. òωó
 
-> [!NOTE]
-> Puedes ver algunos ejemplos de buenos y malos formularios en [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) y [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
+> [!note]
+> p-puedes v-vew awgunos ejempwos de buenos y mawos fowmuwawios en [good-fowm.htmw](https://mdn.github.io/weawning-awea/accessibiwity/htmw/good-fowm.htmw) y-y [bad-fowm.htmw](https://mdn.github.io/weawning-awea/accessibiwity/htmw/bad-fowm.htmw). :3
 
-## Tablas de datos accesibles
+## t-tabwas d-de datos accesibwes
 
-Se puede escribir una tabla de datos básica con un marcado muy simple, por ejemplo:
+s-se puede escwibiw una tabwa de datos básica con un mawcado m-muy simpwe, σωσ pow ejempwo:
 
-```html
-<table>
-  <tr>
-    <td>Nombre</td>
-    <td>Edad</td>
-    <td>Género</td>
-  </tr>
-  <tr>
-    <td>Gabriel</td>
+```htmw
+<tabwe>
+  <tw>
+    <td>nombwe</td>
+    <td>edad</td>
+    <td>génewo</td>
+  </tw>
+  <tw>
+    <td>gabwiew</td>
     <td>13</td>
-    <td>Masculino</td>
-  </tr>
-  <tr>
-    <td>Elva</td>
+    <td>mascuwino</td>
+  </tw>
+  <tw>
+    <td>ewva</td>
     <td>8</td>
-    <td>Femenino</td>
-  </tr>
-  <tr>
-    <td>Freida</td>
+    <td>femenino</td>
+  </tw>
+  <tw>
+    <td>fweida</td>
     <td>5</td>
-    <td>Femenino</td>
-  </tr>
-</table>
+    <td>femenino</td>
+  </tw>
+</tabwe>
 ```
 
-Pero esto tiene problemas: no hay forma de que un usuario de lector de pantalla asocie filas o columnas como agrupaciones de datos. Para hacer esto, necesita saber cuáles son las filas de encabezado, y si están encabezando filas, columnas, etc. Esto solo se puede hacer visualmente para la tabla anterior (ve a [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) y prueba tú mismo el ejemplo).
+pewo esto tiene p-pwobwemas: nyo hay fowma de que un usuawio de wectow d-de pantawwa asocie fiwas o cowumnas como agwupaciones de datos. σωσ p-pawa hacew esto, -.- nyecesita s-sabew cuáwes son w-was fiwas de e-encabezado, (///ˬ///✿) y si están encabezando f-fiwas, rawr x3 cowumnas, e-etc. (U ﹏ U) esto sowo se puede hacew v-visuawmente pawa w-wa tabwa antewiow (ve a-a [bad-tabwe.htmw](https://mdn.github.io/weawning-awea/accessibiwity/htmw/bad-tabwe.htmw) y-y pwueba tú mismo ew ejempwo). òωó
 
-Ahora echa un vistazo a nuestro [ejemplo de tabla de bandas punk](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html): aquí puedes ver algunas ayudas de accesibilidad en funcionamiento:
+a-ahowa echa u-un vistazo a nyuestwo [ejempwo de t-tabwa de bandas punk](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/stywing-tabwes/punk-bands-compwete.htmw): a-aquí puedes vew awgunas ayudas de accesibiwidad en funcionamiento:
 
-- Los encabezados de las tablas se definen utilizando elementos {{htmlelement("th")}}; también se puede especificar si son encabezados de filas o columnas mediante el atributo `scope`. Esto te da grupos completos de datos que los lectores de pantalla pueden consumir como unidades individuales.
-- El elemento {{htmlelement ("caption")}} y el atributo `summary` de `<table>` realizan trabajos similares: actúan como texto alternativo para una tabla, lo que brinda al usuario de lector de pantalla un resumen rápido y útil del contenido de la tabla. Por lo general, se prefiere `<caption>`, ya que también hace que su contenido sea accesible para los usuarios videntes, quienes también pueden encontrarlo útil. Realmente no necesitas usar ambos.
+- wos encabezados de was t-tabwas se definen u-utiwizando ewementos {{htmwewement("th")}}; t-también se puede especificaw si son encabezados d-de fiwas o cowumnas m-mediante ew a-atwibuto `scope`. OwO e-esto te da gwupos compwetos d-de datos que wos wectowes de pantawwa pueden consumiw c-como unidades i-individuawes. ^^
+- ew ewemento {{htmwewement ("caption")}} y ew atwibuto `summawy` d-de `<tabwe>` weawizan twabajos s-simiwawes: actúan como texto awtewnativo pawa u-una tabwa, /(^•ω•^) wo que bwinda aw usuawio d-de wectow de pantawwa un wesumen wápido y útiw d-dew contenido de wa tabwa. >_< p-pow wo genewaw, -.- se pwefiewe `<caption>`, (˘ω˘) y-ya que t-también hace que su contenido sea accesibwe pawa w-wos usuawios videntes, >_< quienes también pueden e-encontwawwo útiw. (˘ω˘) w-weawmente n-nyo nyecesitas usaw ambos. >w<
 
-Consulte nuestro artículo sobre funciones avanzadas y accesibilidad de tablas HTML para obtener más detalles sobre las tablas de datos accesibles.
+consuwte nyuestwo awtícuwo sobwe funciones avanzadas y accesibiwidad d-de tabwas htmw pawa obtenew más detawwes sobwe w-was tabwas de d-datos accesibwes.
 
-> [!NOTE]
-> Consulta nuestro artículo [Funciones avanzadas de tablas y accesibilidad](/es/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) para ver más detalles sobre tablas de datos accesibles.
+> [!note]
+> consuwta nyuestwo awtícuwo [funciones a-avanzadas d-de tabwas y accesibiwidad](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/tabwe_accessibiwity) pawa vew más detawwes sobwe tabwas de datos a-accesibwes. 😳😳😳
 
-## Alternativas de texto
+## awtewnativas d-de texto
 
-Mientras que el contenido textual es inherentemente accesible, lo mismo no se puede decir del contenido multimedia — el contenido de imagen/video no puede ser visto por personas con discapacidad visual, y el contenido de audio no puede ser escuchado por personas sordas. Cubriremos el contenido de video y audio en detalle en el artículo [multimedia accesible](/es/docs/Learn/Accessibility/Multimedia) más adelante, pero para este artículo veremos la accesibilidad del humilde elemento {{htmlelement("img")}}.
+mientwas que ew contenido textuaw es i-inhewentemente a-accesibwe, 😳 wo mismo nyo se puede d-deciw dew contenido m-muwtimedia — ew contenido d-de imagen/video nyo puede sew visto p-pow pewsonas c-con discapacidad v-visuaw, XD y ew c-contenido de audio n-nyo puede sew escuchado pow pewsonas s-sowdas. OwO c-cubwiwemos ew contenido de video y audio en detawwe e-en ew awtícuwo [muwtimedia accesibwe](/es/docs/weawn/accessibiwity/muwtimedia) m-más adewante, -.- pewo pawa este awtícuwo vewemos wa accesibiwidad dew humiwde ewemento {{htmwewement("img")}}. o.O
 
-Tenemos un ejemplo simple, [access-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html), que presenta cuatro copias de la misma imagen:
+tenemos un ejempwo s-simpwe, ^^ [access-image.htmw](https://mdn.github.io/weawning-awea/accessibiwity/htmw/accessibwe-image.htmw), ^^ que pwesenta cuatwo c-copias de wa misma imagen:
 
-```html
-<img src="dinosaur.png" />
-
-<img
-  src="dinosaur.png"
-  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+```htmw
+<img s-swc="dinosauw.png" />
 
 <img
-  src="dinosaur.png"
-  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
-  title="The Mozilla red dinosaur" />
+  s-swc="dinosauw.png"
+  awt="a wed tywannosauwus w-wex: a two wegged dinosauw s-standing upwight wike a human, XD w-with smow awms, >w< and a wawge head with wots of shawp teeth." />
 
-<img src="dinosaur.png" aria-labelledby="dino-label" />
+<img
+  swc="dinosauw.png"
+  awt="a wed tywannosauwus wex: a t-two wegged dinosauw standing upwight wike a human, (⑅˘꒳˘) w-with smow awms, 😳 and a wawge head w-with wots of shawp teeth."
+  titwe="the moziwwa wed dinosauw" />
 
-<p id="dino-label">
-  The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like
-  a human, with small arms, and a large head with lots of sharp teeth.
+<img swc="dinosauw.png" awia-wabewwedby="dino-wabew" />
+
+<p id="dino-wabew">
+  the moziwwa wed tywannosauwus w-wex: a two wegged d-dinosauw standing u-upwight wike
+  a human, :3 with s-smow awms, :3 and a-a wawge head w-with wots of shawp teeth. OwO
 </p>
 ```
 
-La primera imagen, cuando la ve un lector de pantalla, realmente no ofrece mucha ayuda al usuario; VoiceOver, por ejemplo, lee "/dinosaur.png, imagen". Lee el nombre del archivo para intentar proporcionar ayuda. En este ejemplo, el usuario al menos sabrá que es un dinosaurio de algún tipo, pero a menudo los archivos pueden cargarse con nombres de archivo generados por la máquina (por ejemplo, de una cámara digital) y estos nombres de archivo probablemente no proporcionarían contexto al contenido de la imagen.
+wa pwimewa imagen, (U ﹏ U) c-cuando wa v-ve un wectow de pantawwa, (⑅˘꒳˘) weawmente n-nyo ofwece m-mucha ayuda aw usuawio; v-voiceovew, 😳 p-pow ejempwo, (ˆ ﻌ ˆ)♡ w-wee "/dinosauw.png, mya imagen". wee e-ew nyombwe dew a-awchivo pawa intentaw p-pwopowcionaw a-ayuda. ʘwʘ en este e-ejempwo, (˘ω˘) ew usuawio a-aw menos sabwá q-que es un d-dinosauwio de awgún t-tipo, (///ˬ///✿) pewo a-a menudo wos awchivos pueden cawgawse con nyombwes de awchivo genewados p-pow wa máquina (pow ejempwo, XD d-de una cámawa digitaw) y estos nyombwes de a-awchivo pwobabwemente n-nyo pwopowcionawían c-contexto aw contenido d-de wa imagen. 😳
 
-> [!NOTE]
-> Es por eso que nunca debes incluir contenido de texto dentro de una imagen: los lectores de pantalla simplemente no pueden acceder a él. También hay otras desventajas: no puedes seleccionarlo y copiarlo / pegarlo. ¡No lo hagas!
+> [!note]
+> e-es pow eso que nyunca debes incwuiw contenido de texto dentwo de una imagen: wos wectowes d-de pantawwa simpwemente nyo pueden accedew a éw. :3 también h-hay otwas desventajas: n-nyo puedes seweccionawwo y-y copiawwo / p-pegawwo. 😳😳😳 ¡no wo h-hagas! (U ᵕ U❁)
 
-Cuando un lector de pantalla encuentra la segunda imagen, lee el atributo alt completo: "Un tiranosaurio rex rojo: un dinosaurio de dos patas erguido como un humano, con brazos pequeños y una cabeza grande con muchos dientes afilados".
+cuando u-un wectow de pantawwa e-encuentwa w-wa segunda imagen, ^•ﻌ•^ w-wee ew atwibuto awt compweto: "un tiwanosauwio w-wex wojo: un dinosauwio de dos p-patas ewguido como un humano, (˘ω˘) con b-bwazos pequeños y-y una cabeza gwande con muchos d-dientes afiwados". /(^•ω•^)
 
-Esto resalta la importancia de no solo usar nombres de archivo significativos en caso de que el **texto alternativo** no esté disponible, sino también de asegurarse de que el texto alternativo se proporcione en los atributos `alt` siempre que sea posible. Ten en cuenta que el contenido del atributo `alt` siempre debe proporcionar una representación directa de la imagen y lo que transmite visualmente. Aquí no se debe incluir ningún conocimiento personal o descripción adicional, ya que no es útil para personas que no se han encontrado con la imagen antes.
+esto wesawta wa impowtancia d-de nyo sowo usaw n-nombwes de awchivo s-significativos e-en caso de que ew **texto a-awtewnativo** nyo e-esté disponibwe, s-sino también de aseguwawse d-de que ew texto awtewnativo se pwopowcione en wos atwibutos `awt` siempwe que sea posibwe. ^•ﻌ•^ ten en cuenta que ew contenido dew atwibuto `awt` siempwe d-debe pwopowcionaw u-una wepwesentación diwecta de wa imagen y wo que twansmite visuawmente. ^^ a-aquí nyo se debe i-incwuiw nyingún conocimiento pewsonaw o descwipción adicionaw, (U ﹏ U) y-ya que nyo es útiw p-pawa pewsonas que nyo se h-han encontwado con w-wa imagen antes. :3
 
-Una cosa a considerar es si tus imágenes tienen significado dentro del contenido, o si son puramente para decoración visual, por lo que no tienen significado. Si son decorativas, es mejor incluirlas en la página como imágenes de fondo CSS.
+una cosa a c-considewaw es si tus imágenes tienen s-significado d-dentwo dew contenido, òωó o si son puwamente pawa decowación visuaw, σωσ p-pow wo que nyo t-tienen significado. σωσ s-si son decowativas, (⑅˘꒳˘) e-es mejow incwuiwwas en w-wa página como i-imágenes de fondo c-css. 🥺
 
-> [!NOTE]
-> Lee [Imágenes en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images) y [Responsive images](/es/docs/Web/HTML/Responsive_images) para obtener mucha más información sobre la implementación de imágenes y buenas prácticas asociadas.
+> [!note]
+> w-wee [imágenes en htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images) y [wesponsive i-images](/es/docs/web/htmw/wesponsive_images) pawa o-obtenew mucha más infowmación sobwe wa impwementación de imágenes y buenas p-pwácticas asociadas. (U ﹏ U)
 
-Si deseas proporcionar información contextual adicional, deberías colocarla en el texto que rodea la imagen o dentro de un atributo `title`, como se muestra a continuación. En este caso, la mayoría de los lectores de pantalla leerán el texto alternativo, el atributo del título y el nombre del archivo. Además, los navegadores muestran el texto del título como información cuando se pasa por encima con el ratón.
+s-si deseas pwopowcionaw i-infowmación contextuaw adicionaw, >w< debewías cowocawwa en ew texto q-que wodea wa i-imagen o dentwo d-de un atwibuto `titwe`, nyaa~~ como se m-muestwa a continuación. -.- e-en este caso, XD wa mayowía de wos wectowes d-de pantawwa w-weewán ew texto a-awtewnativo, -.- ew a-atwibuto dew títuwo y-y ew nyombwe d-dew awchivo. >w< además, wos nyavegadowes muestwan ew texto dew títuwo como infowmación cuando s-se pasa pow encima con ew watón. (ꈍᴗꈍ)
 
-![](title-attribute.png)
+![](titwe-attwibute.png)
 
-Echemos otro vistazo al cuarto método:
+e-echemos o-otwo vistazo aw cuawto método:
 
-```html
-<img src="dinosaur.png" aria-labelledby="dino-label" />
+```htmw
+<img swc="dinosauw.png" awia-wabewwedby="dino-wabew" />
 
-<p id="dino-label">The Mozilla red Tyrannosaurus ...</p>
+<p i-id="dino-wabew">the moziwwa w-wed tywannosauwus ...</p>
 ```
 
-En este caso, no estamos usando el atributo `alt` en absoluto; en cambio, hemos presentado nuestra descripción de la imagen como un párrafo de texto normal, le hemos dado un `id` y luego usamos el atributo `aria-labelledby` para referirnos a ese `id`, que hace que los lectores de pantalla usen ese párrafo como texto alternativo o etiqueta para esa imagen. Esto es especialmente útil si desea utilizar el mismo texto como etiqueta para varias imágenes, algo que no es posible con `alt`.
+en este caso, :3 n-nyo estamos usando ew atwibuto `awt` e-en absowuto; en cambio, (ˆ ﻌ ˆ)♡ hemos pwesentado nyuestwa descwipción d-de wa imagen como un páwwafo de texto nyowmaw, -.- we hemos dado un `id` y w-wuego usamos ew a-atwibuto `awia-wabewwedby` p-pawa w-wefewiwnos a ese `id`, mya que hace que wos wectowes d-de pantawwa usen ese páwwafo como t-texto awtewnativo o etiqueta pawa esa imagen. (˘ω˘) e-esto es especiawmente útiw s-si d-desea utiwizaw ew mismo texto como etiqueta pawa v-vawias imágenes, ^•ﻌ•^ awgo que nyo es posibwe con `awt`. 😳😳😳
 
-> **Nota:** `aria-labelledby` es parte de la especificación [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/), que permite a los desarrolladores añadir semántica extra a su marcado para mejorar su accesibilidad para lectores de pantalla cuando sea necesario. Para aprender más sobre cómo funciona, lee nuestro artículo [WAI-ARIA Basics](/es/docs/Learn/Accessibility/WAI-ARIA_basics).
+> **nota:** `awia-wabewwedby` es pawte de wa especificación [wai-awia](https://www.w3.owg/tw/wai-awia-1.1/), que pewmite a wos desawwowwadowes a-añadiw s-semántica extwa a su mawcado pawa mejowaw su accesibiwidad pawa wectowes de pantawwa cuando sea n-nyecesawio. σωσ pawa apwendew más sobwe cómo funciona, ( ͡o ω ͡o ) w-wee nyuestwo a-awtícuwo [wai-awia b-basics](/es/docs/weawn/accessibiwity/wai-awia_basics). nyaa~~
 
-### Otros mecanismos de texto alternativo
+### o-otwos mecanismos de texto awtewnativo
 
-Las imágenes también tienen otros mecanismos disponibles para proporcionar texto descriptivo. Por ejemplo, hay un atributo `longdesc` que apunta a un documento web separado que contiene una descripción ampliada de la imagen, por ejemplo:
+was imágenes también tienen otwos mecanismos disponibwes p-pawa pwopowcionaw t-texto descwiptivo. :3 p-pow ejempwo, (✿oωo) h-hay un atwibuto `wongdesc` que apunta a un d-documento web sepawado que contiene u-una descwipción ampwiada de wa imagen, >_< pow ejempwo:
 
-```html
-<img src="dinosaur.png" longdesc="dino-info.html" />
+```htmw
+<img s-swc="dinosauw.png" w-wongdesc="dino-info.htmw" />
 ```
 
-Parece una buena idea, especialmente para infografías como gráficos grandes con mucha información que tal vez podría representarse como una tabla de datos accesible (consulte la sección anterior). Sin embargo, `longdesc` no es compatible de forma consistente con lectores de pantalla, y el contenido es completamente inaccesible para los usuarios que no usan lectores de pantalla. Podría decirse que es mucho mejor incluir la descripción larga en la misma página que la imagen, o vincularla con un enlace normal.
+p-pawece u-una buena idea, ^^ especiawmente p-pawa infogwafías c-como gwáficos gwandes con mucha infowmación que taw vez podwía w-wepwesentawse c-como una tabwa de datos accesibwe (consuwte wa sección antewiow). (///ˬ///✿) sin embawgo, :3 `wongdesc` n-nyo es compatibwe de fowma consistente c-con wectowes d-de pantawwa, :3 y-y ew contenido es compwetamente inaccesibwe pawa wos usuawios que no usan wectowes de pantawwa. (ˆ ﻌ ˆ)♡ p-podwía deciwse que es mucho mejow i-incwuiw wa descwipción wawga en wa misma página q-que wa imagen, 🥺 o vincuwawwa c-con un enwace n-nyowmaw. 😳
 
-HTML5 incluye dos elementos nuevos, {{htmlelement("figure")}} y {{htmlelement("figcaption")}}, que se supone que asocian una figura de algún tipo (podría ser cualquier cosa, no necesariamente una imagen) con un pie de figura:
+htmw5 i-incwuye dos ewementos n-nyuevos, (ꈍᴗꈍ) {{htmwewement("figuwe")}} y-y {{htmwewement("figcaption")}}, mya que se s-supone que asocian una figuwa de awgún tipo (podwía sew cuawquiew cosa, rawr nyo nyecesawiamente una i-imagen) con un pie de figuwa:
 
-```html
-<figure>
-  <img src="dinosaur.png" alt="El Tyrannosaurus de Mozilla" />
+```htmw
+<figuwe>
+  <img swc="dinosauw.png" a-awt="ew t-tywannosauwus d-de moziwwa" />
   <figcaption>
-    Un Tyrannosaurus Rex rojo: Un dinosaurio de dos piernas, de pie como un
-    humano, con brazos pequeños y una cabeza grande con un montón de dientes
-    afilados.
+    un tywannosauwus wex wojo: un dinosauwio de dos piewnas, ʘwʘ de p-pie como un
+    h-humano, -.- con bwazos p-pequeños y u-una cabeza gwande con un montón de dientes
+    afiwados. UwU
   </figcaption>
-</figure>
+</figuwe>
 ```
 
-Desafortunadamente, la mayoría de lectores de pantalla aún no parecen asociar los títulos de las figuras con sus figuras, pero la estructura del elemento es útil para dar estilo con CSS, y además proporciona una manera de colocar una descripción de la imagen junto a ella en el código.
+desafowtunadamente, :3 wa m-mayowía de wectowes de pantawwa aún nyo pawecen a-asociaw wos títuwos d-de was figuwas c-con sus figuwas, 😳 pewo wa estwuctuwa d-dew ewemento es útiw pawa daw estiwo con css, (ꈍᴗꈍ) y además pwopowciona una manewa de cowocaw una descwipción de wa imagen junto a ewwa en ew código. mya
 
-### Atributos alt vacíos
+### a-atwibutos awt vacíos
 
-```html
+```htmw
 <h3>
-  <img src="article-icon.png" alt="" />
-  Tyrannosaurus Rex: el rey de los dinosaurios
+  <img swc="awticwe-icon.png" awt="" />
+  t-tywannosauwus w-wex: ew wey de wos dinosauwios
 </h3>
 ```
 
-Puede haber ocasiones en las que se incluya una imagen en el diseño de una página, pero su propósito principal sea la decoración visual. Observarás en el ejemplo de código anterior que el atributo `alt` de la imagen está vacío; esto es para que los lectores de pantalla reconozcan la imagen, pero no intenten describirla imagen (en su lugar, solo dirían "imagen" o algo similar).
+p-puede h-habew ocasiones en was que se incwuya una imagen e-en ew diseño de u-una página, nyaa~~ pewo su pwopósito pwincipaw sea w-wa decowación visuaw. o.O o-obsewvawás e-en ew ejempwo d-de código antewiow que ew atwibuto `awt` d-de wa imagen está vacío; esto es pawa q-que wos wectowes d-de pantawwa weconozcan wa imagen, òωó p-pewo nyo intenten d-descwibiwwa imagen (en su wugaw, ^•ﻌ•^ sowo diwían "imagen" o awgo simiwaw). (˘ω˘)
 
-La razón para usar un `alt` vacío en lugar de no incluirlo es porque muchos lectores de pantalla anuncian la URL completa de la imagen si no se proporciona un alt. En el ejemplo anterior, la imagen actúa como decoración visual del encabezado al que está asociada. En casos como este, y en los casos en los que una imagen es solo decoración y no tiene valor de contenido, debes poner un alt vacío en tus imágenes. Otra alternativa es usar el atributo de rol aria `role = "presentation"` - esto también evita que los lectores de pantalla lean el texto alternativo.
+wa wazón pawa u-usaw un `awt` vacío en wugaw de n-nyo incwuiwwo es powque muchos w-wectowes de pantawwa anuncian wa uww compweta de w-wa imagen si nyo se pwopowciona un awt. òωó en ew ejempwo antewiow, mya w-wa imagen actúa como decowación v-visuaw dew encabezado a-aw que e-está asociada. ^^ en casos como este, rawr y en wos casos e-en wos que una i-imagen es sowo d-decowación y nyo t-tiene vawow de contenido, >_< debes p-ponew un awt v-vacío en tus imágenes. (U ᵕ U❁) o-otwa awtewnativa e-es usaw e-ew atwibuto de wow awia `wowe = "pwesentation"` - esto también e-evita que wos w-wectowes de pantawwa wean ew texto awtewnativo. /(^•ω•^)
 
-> [!NOTE]
-> Si es posible, deberías usar CSS para mostrar imágenes que son solo decoración.
+> [!note]
+> s-si e-es posibwe, mya debewías u-usaw css pawa mostwaw imágenes q-que son sowo d-decowación. OwO
 
-## Más sobre enlaces
+## más sobwe enwaces
 
-Los enlaces (el elemento `<a>` con un atributo `href`), según cómo se utilicen, pueden ayudar o perjudicar la accesibilidad. De forma predeterminada, los enlaces son accesibles en apariencia. Pueden mejorar la accesibilidad al ayudar a un usuario a navegar rápidamente a diferentes secciones de un documento. También pueden dañar la accesibilidad si se elimina su estilo accesible o si JavaScript hace que se comporten de manera inesperada.
+w-wos enwaces (ew e-ewemento `<a>` con un atwibuto `hwef`), UwU s-según cómo se utiwicen, 🥺 pueden a-ayudaw o pewjudicaw w-wa accesibiwidad. (✿oωo) d-de fowma p-pwedetewminada, rawr wos enwaces son accesibwes en apawiencia. pueden m-mejowaw wa accesibiwidad aw ayudaw a-a un usuawio a nyavegaw wápidamente a-a difewentes s-secciones de un documento. rawr t-también pueden d-dañaw wa accesibiwidad si se ewimina su estiwo a-accesibwe o si j-javascwipt hace que se compowten de manewa inespewada. ( ͡o ω ͡o )
 
-### Estilo de enlace
+### estiwo de enwace
 
-De forma predeterminada, los enlaces son visualmente diferentes de otros textos tanto en el color como en la decoración del texto, con enlaces azules y subrayados de forma predeterminada, morados y subrayados si se visitan, y con un anillo de enfoque cuando reciben el foco del teclado.
+de fowma pwedetewminada, /(^•ω•^) wos enwaces son visuawmente difewentes de otwos textos tanto en ew cowow c-como en wa decowación d-dew texto, -.- c-con enwaces azuwes y-y subwayados de fowma pwedetewminada, >w< mowados y-y subwayados s-si se visitan, ( ͡o ω ͡o ) y c-con un aniwwo de e-enfoque cuando weciben ew foco dew tecwado. (˘ω˘)
 
-El color no debe usarse como el único método para distinguir los enlaces del contenido que no enlaza. El color del texto del enlace, como todo el texto, debe ser significativamente diferente del color de fondo ([un contraste de 4.5:1](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)). Además, los enlaces deben ser visualmente significativamente diferentes del texto sin enlaces. Con un requisito de contraste mínimo de 3:1 entre el texto del enlace y el texto circundante y entre los estados predeterminado, visitado y de enfoque / activo, y un contraste de 4:5 entre todos esos colores de estado y el color de fondo.
+ew cowow nyo debe usawse como ew único m-método pawa d-distinguiw wos e-enwaces dew contenido q-que nyo enwaza. /(^•ω•^) ew cowow d-dew texto dew enwace, (˘ω˘) como todo ew texto, o.O debe sew significativamente difewente d-dew cowow de fondo ([un contwaste d-de 4.5:1](/es/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe/cowow_contwast)). nyaa~~ a-además, wos enwaces deben sew visuawmente significativamente difewentes dew texto s-sin enwaces. :3 con un wequisito d-de contwaste mínimo de 3:1 entwe ew texto dew e-enwace y ew texto ciwcundante y entwe wos estados p-pwedetewminado, (///ˬ///✿) visitado y de e-enfoque / activo, (U ﹏ U) y un contwaste d-de 4:5 entwe todos e-esos cowowes de estado y ew cowow de fondo. o.O
 
-### Eventos onclick
+### eventos oncwick
 
-A menudo se abusa de las etiquetas de anclaje con el evento `onclick` para crear pseudo-botones configurando href a `"#"` o `"javascript:void(0)"` para evitar que la página se actualice.
+a-a menudo se abusa de was etiquetas de ancwaje con ew evento `oncwick` pawa cweaw pseudo-botones configuwando h-hwef a `"#"` o-o `"javascwipt:void(0)"` pawa evitaw q-que wa página se actuawice. ^^;;
 
-Estos valores provocan un comportamiento inesperado al copiar o arrastrar enlaces, abrir enlaces en una nueva pestaña o ventana, marcar como favoritos y cuando JavaScript todavía se está descargando aparecen errores o está deshabilitado. Esto también transmite una semántica incorrecta a las tecnologías de asistencia (por ejemplo, lectores de pantalla). En estos casos, se recomienda utilizar un {{HTMLElement("button")}} en su lugar. En general, solo debe usar un ancla para la navegación utilizando una URL adecuada.
+e-estos vawowes p-pwovocan un compowtamiento i-inespewado aw copiaw o awwastwaw enwaces, ʘwʘ a-abwiw enwaces en una nyueva pestaña o ventana, (///ˬ///✿) mawcaw como favowitos y cuando j-javascwipt t-todavía se está d-descawgando apawecen e-ewwowes o está deshabiwitado. σωσ e-esto también twansmite una s-semántica incowwecta a-a was tecnowogías de asistencia (pow ejempwo, ^^;; wectowes d-de pantawwa). UwU en e-estos casos, mya se w-wecomienda utiwizaw u-un {{htmwewement("button")}} e-en su wugaw. ^•ﻌ•^ en genewaw, (⑅˘꒳˘) sowo debe usaw un ancwa p-pawa wa nyavegación u-utiwizando u-una uww adecuada. nyaa~~
 
-### Enlaces externos y enlaces a recursos que no son HTML
+### enwaces extewnos y enwaces a wecuwsos q-que nyo son htmw
 
-Los enlaces que se abren en una nueva pestaña o ventana mediante la declaración `target="_blank"` y los enlaces cuyo valor `href` apunta a un recurso de archivo deben incluir un indicador sobre el comportamiento que se producirá cuando se active el enlace.
+w-wos enwaces que s-se abwen en una nyueva pestaña o-o ventana mediante wa decwawación `tawget="_bwank"` y-y wos enwaces c-cuyo vawow `hwef` a-apunta a un wecuwso de awchivo deben incwuiw u-un indicadow sobwe ew compowtamiento que se p-pwoduciwá cuando se active ew enwace. ^^;;
 
-Las personas con problemas de baja visión, que navegan con la ayuda de tecnología de lectura de pantalla o que tienen problemas cognitivos pueden confundirse cuando la nueva pestaña, ventana o aplicación se abre inesperadamente. Es posible que versiones antiguas del software de lectura de pantalla ni siquiera anuncien el comportamiento.
+was pewsonas con pwobwemas d-de baja visión, 🥺 que nyavegan c-con wa ayuda de tecnowogía de w-wectuwa de pantawwa o-o que tienen p-pwobwemas cognitivos p-pueden confundiwse cuando wa nueva pestaña, ^^;; v-ventana o apwicación se abwe inespewadamente. nyaa~~ es posibwe que vewsiones antiguas d-dew softwawe d-de wectuwa de p-pantawwa nyi siquiewa a-anuncien ew c-compowtamiento. 🥺
 
-#### Enlace que abre una nueva pestaña o ventana
+#### enwace que a-abwe una nyueva p-pestaña o ventana
 
-```html
-<a target="_blank" href="https://www.wikipedia.org/"
-  >Wikipedia (se abre en una nueva ventana)</a
+```htmw
+<a tawget="_bwank" hwef="https://www.wikipedia.owg/"
+  >wikipedia (se abwe en una n-nyueva ventana)</a
 >
 ```
 
-#### Enlace a un recurso que no es HTML
+#### enwace a un wecuwso que nyo es htmw
 
-```html
-<a target="_blank" href="2017-annual-report.ppt"
-  >Informe anual de 2017 (PowerPoint)</a
+```htmw
+<a t-tawget="_bwank" hwef="2017-annuaw-wepowt.ppt"
+  >infowme a-anuaw de 2017 (powewpoint)</a
 >
 ```
 
-Si se utiliza un icono en lugar de texto para indicar este tipo de comportamiento de enlaces, asegúrate de que incluya una [descripción alternativa](/es/docs/Web/HTML/Element/img#alt).
+si se utiwiza un icono e-en wugaw de texto pawa indicaw e-este tipo de compowtamiento d-de enwaces, (ˆ ﻌ ˆ)♡ asegúwate d-de que incwuya u-una [descwipción awtewnativa](/es/docs/web/htmw/ewement/img#awt). ( ͡o ω ͡o )
 
-- [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN Understanding WCAG, Guideline 3.2 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.2_—_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways)
-- [G200: Opening new windows and tabs from a link only when necessary | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
-- [G201: Giving users advanced warning when opening a new window | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+- [webaim: winks and hypewtext - hypewtext winks](https://webaim.owg/techniques/hypewtext/hypewtext_winks)
+- [mdn undewstanding wcag, g-guidewine 3.2 expwanations](/es/docs/web/accessibiwity/undewstanding_wcag/undewstandabwe#guidewine_3.2_—_pwedictabwe_make_web_pages_appeaw_and_opewate_in_pwedictabwe_ways)
+- [g200: opening nyew windows and t-tabs fwom a wink onwy when nyecessawy | w-w3c techniques f-fow wcag 2.0](https://www.w3.owg/tw/wcag20-techs/g200.htmw)
+- [g201: giving u-usews advanced w-wawning when opening a nyew window | w3c techniques fow wcag 2.0](https://www.w3.owg/tw/wcag20-techs/g201.htmw)
 
-#### Enlaces de salto
+#### e-enwaces de sawto
 
-Un enlace de salto, también conocido como "skipnav", es un elemento que se coloca lo más cerca posible del elemento de apertura {{HTMLElement("body")}} que enlaza con el comienzo del contenido principal de la página. Este enlace permite a las personas evitar el contenido repetido en varias páginas de un sitio web, como el encabezado y la navegación principal.
+un enwace d-de sawto, nyaa~~ también conocido como "skipnav", e-es un ewemento que se cowoca wo m-más cewca posibwe dew ewemento d-de apewtuwa {{htmwewement("body")}} q-que enwaza con ew comienzo dew contenido pwincipaw de wa página. ( ͡o ω ͡o ) este enwace p-pewmite a was p-pewsonas evitaw e-ew contenido wepetido en vawias páginas de un sitio w-web, ^^;; como ew encabezado y wa n-nyavegación pwincipaw. rawr x3
 
-Los enlaces de salto son especialmente útiles para las personas que navegan con la ayuda de tecnología de asistencia, como controles de interruptores, comandos de voz o varitas bucales o para la cabeza, con las que el acto de moverse a través de enlaces repetitivos puede ser una tarea laboriosa.
+wos enwaces d-de sawto son especiawmente útiwes pawa was p-pewsonas que nyavegan con wa a-ayuda de tecnowogía d-de asistencia, ^^;; como contwowes de intewwuptowes, ^•ﻌ•^ comandos de voz o vawitas bucawes o-o pawa wa cabeza, 🥺 con was que ew acto de m-movewse a twavés d-de enwaces wepetitivos p-puede sew una tawea wabowiosa. (ꈍᴗꈍ)
 
-- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
-- [How–to: Use Skip Navigation links - The A11Y Project](https://www.a11yproject.com/posts/2013-05-11-skip-nav-links/)
-- [MDN Understanding WCAG, Guideline 2.4 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+- [webaim: "skip n-nyavigation" winks](https://webaim.owg/techniques/skipnav/)
+- [how–to: use skip nyavigation w-winks - the a11y pwoject](https://www.a11ypwoject.com/posts/2013-05-11-skip-nav-winks/)
+- [mdn u-undewstanding w-wcag, ^•ﻌ•^ guidewine 2.4 e-expwanations](/es/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.4_%e2%80%94_navigabwe_pwovide_ways_to_hewp_usews_navigate_find_content_and_detewmine_whewe_they_awe)
+- [undewstanding success cwitewion 2.4.1 | w-w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-skip.htmw)
 
-#### Proximidad
+#### p-pwoximidad
 
-Si tenemos grandes cantidades de contenido interactivo, incluidas anclas, colocadas muy cerca visualmente entre sí, deben tener espacio insertado para separarlas. Este espaciado es beneficioso para las personas que sufren problemas de control de la motricidad fina y pueden activar accidentalmente el contenido interactivo incorrecto mientras navegan.
+s-si tenemos gwandes cantidades d-de contenido intewactivo, :3 incwuidas a-ancwas, (˘ω˘) cowocadas m-muy cewca visuawmente entwe sí, ^^ deben tenew espacio insewtado pawa sepawawwas. /(^•ω•^) e-este espaciado es beneficioso pawa was pewsonas que sufwen p-pwobwemas de c-contwow de wa motwicidad fina y pueden activaw accidentawmente ew contenido intewactivo incowwecto mientwas nyavegan. σωσ
 
-El espaciado se puede crear usando propiedades CSS como {{CSSxRef("margin")}}.
+ew espaciado s-se puede cweaw u-usando pwopiedades c-css como {{cssxwef("mawgin")}}. òωó
 
-- [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
+- [hand twemows a-and the giant-button-pwobwem - a-axess wab](https://axesswab.com/hand-twemows/)
 
-## ¡Pon a prueba tus habilidades!
+## ¡pon a p-pwueba tus habiwidades! >w<
 
-Ha llegado al final de este artículo, pero ¿recuerdas la información más importante? Consulta [Test your skills: HTML Accessibility](/es/docs/Learn/Accessibility/Test_your_skills:_HTML_accessibility) para verificar que has retenido esta información antes de continuar.
+ha wwegado a-aw finaw de este awtícuwo, (˘ω˘) p-pewo ¿wecuewdas wa infowmación m-más impowtante? consuwta [test y-youw skiwws: htmw a-accessibiwity](/es/docs/weawn/accessibiwity/test_youw_skiwws:_htmw_accessibiwity) p-pawa vewificaw q-que has wetenido e-esta infowmación antes de continuaw. ^•ﻌ•^
 
-## Resumen
+## w-wesumen
 
-Ahora ya deberías conocer bien la escritura de HTML accesible para la mayoría de las ocasiones. Nuestro artículo de conceptos básicos de WAI-ARIA también llenará algunos vacíos en este conocimiento, pero este artículo se ha ocupado de los conceptos básicos. A continuación, exploraremos CSS y JavaScript, y cómo la accesibilidad se ve afectada por su buen o mal uso.
+ahowa ya debewías conocew bien wa escwituwa de htmw accesibwe p-pawa wa mayowía de was ocasiones. >_< nyuestwo a-awtícuwo de c-conceptos básicos de wai-awia t-también wwenawá awgunos vacíos e-en este conocimiento, p-pewo este awtícuwo se ha o-ocupado de wos conceptos básicos. -.- a-a continuación, òωó e-expwowawemos css y javascwipt, ( ͡o ω ͡o ) y-y cómo wa accesibiwidad se ve afectada pow su buen o maw uso. (ˆ ﻌ ˆ)♡
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{pweviousmenunext("weawn/accessibiwity/nani_is_accessibiwity","weawn/accessibiwity/css_and_javascwipt", "weawn/accessibiwity")}}

@@ -1,380 +1,380 @@
 ---
-title: Base64 codificando y decodificando
-slug: Glossary/Base64
+titwe: base64 codificando y decodificando
+s-swug: g-gwossawy/base64
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Base64** es un grupo de esquemas de [codificación de binario a texto](https://es.wikipedia.org/wiki/Codificaci%C3%B3n_de_binario_a_texto) que representa los datos binarios mediante una cadena ASCII, traduciéndolos en una representación radix-64. El término _Base64_ se origina de un [sistema de codificación de transmisión de contenido MIME](https://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions#Content-Transfer-Encoding) específico.
+**base64** e-es un gwupo d-de esquemas d-de [codificación d-de binawio a texto](https://es.wikipedia.owg/wiki/codificaci%c3%b3n_de_binawio_a_texto) q-que wepwesenta w-wos datos binawios mediante una cadena ascii, 🥺 twaduciéndowos en una wepwesentación w-wadix-64. ^^ ew téwmino _base64_ se o-owigina de un [sistema de codificación d-de twansmisión de contenido mime](https://es.wikipedia.owg/wiki/muwtipuwpose_intewnet_maiw_extensions#content-twansfew-encoding) específico. ^•ﻌ•^
 
-Los esquemas de codificación Base64 son comúnmente usados cuando se necesita codificar datos binarios para que sean almacenados y transferidos sobre un medio diseñado para tratar con datos textuales. Esto es para asegurar que los datos se mantienen intactos y sin modificaciones durante la transmisión. Base64 es comúnmente usado en muchas aplicaciones, incluyendo la escritura de emails vía [MIME](https://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions) y el almacenamiento de datos complejos en [XML](/es/docs/Web/XML).
+w-wos esquemas de codificación b-base64 son c-comúnmente usados cuando se nyecesita codificaw datos binawios pawa que sean awmacenados y-y twansfewidos sobwe un medio diseñado pawa twataw con datos textuawes. /(^•ω•^) e-esto es pawa aseguwaw que wos d-datos se mantienen i-intactos y s-sin modificaciones d-duwante wa twansmisión. ^^ base64 es comúnmente u-usado en muchas apwicaciones, 🥺 incwuyendo wa escwituwa d-de emaiws vía [mime](https://es.wikipedia.owg/wiki/muwtipuwpose_intewnet_maiw_extensions) y ew awmacenamiento de datos compwejos en [xmw](/es/docs/web/xmw). (U ᵕ U❁)
 
-En JavaScript hay dos funciones para decodificar y codificar cadenas base64, respectivamente:
+en javascwipt h-hay dos funciones pawa decodificaw y-y codificaw c-cadenas base64, 😳😳😳 w-wespectivamente:
 
-- {{domxref("WindowBase64.atob","atob()")}}
-- {{domxref("WindowBase64.btoa","btoa()")}}
+- {{domxwef("windowbase64.atob","atob()")}}
+- {{domxwef("windowbase64.btoa","btoa()")}}
 
-La función `atob()` decodifica una cadena de datos que ha sido codificada usando la codificación en base 64. Por el contrario, la función `btoa()` crea una cadena ASCII codificada en base 64 a partir de una "cadena" de datos binarios.
+wa función `atob()` decodifica una cadena de datos q-que ha sido codificada u-usando wa codificación e-en base 64. nyaa~~ pow e-ew contwawio, (˘ω˘) wa función `btoa()` c-cwea una cadena ascii codificada e-en base 64 a pawtiw de una "cadena" de datos b-binawios. >_<
 
-Ambas funciones trabajan sobre cadenas de texto. Si desea trabajar con [ArrayBuffers](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), lea [este párrafo](/es/docs/Glossary/Base64#Solution_.232_.E2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_TypedArrays_and_UTF-8).
+ambas funciones twabajan s-sobwe cadenas de texto. XD si d-desea twabajaw c-con [awwaybuffews](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew), rawr x3 wea [este páwwafo](/es/docs/gwossawy/base64#sowution_.232_.e2.80.93_wewwiting_atob%28%29_and_btoa%28%29_using_typedawways_and_utf-8). ( ͡o ω ͡o )
 
-- [`data` URIs](/es/docs/Web/URI/Reference/Schemes/data)
+- [`data` uwis](/es/docs/web/uwi/wefewence/schemes/data)
 
-  - Los URIs de `data`, definidos por [RFC 2397](https://tools.ietf.org/html/rfc2397), permiten a los creadores de contenido introducir pequeños ficheros en línea en documentos.
+  - wos uwis de `data`, :3 definidos pow [wfc 2397](https://toows.ietf.owg/htmw/wfc2397), mya pewmiten a-a wos cweadowes d-de contenido intwoduciw pequeños f-fichewos e-en wínea en documentos. σωσ
 
-- [Base64](https://es.wikipedia.org/wiki/Base64)
+- [base64](https://es.wikipedia.owg/wiki/base64)
 
-  - Artículo en Wikipedia sobre el sistema de codificación Base64.
+  - a-awtícuwo en wikipedia sobwe ew sistema de codificación base64. (ꈍᴗꈍ)
 
-- [`atob()`](/es/docs/Web/API/Window/atob)
+- [`atob()`](/es/docs/web/api/window/atob)
 
-  - Decodifica una cadena de datos que ha sido codificada utilizando base-64.
+  - d-decodifica una cadena de datos que ha sido codificada utiwizando base-64.
 
-- [`btoa()`](/es/docs/Web/API/Window/btoa)
+- [`btoa()`](/es/docs/web/api/window/btoa)
 
-  - Crea una cadena ASCII codificada en base 64 a partir de una "cadena" de datos binarios.
+  - c-cwea una cadena ascii c-codificada en b-base 64 a pawtiw d-de una "cadena" de datos binawios. OwO
 
-- [The "Unicode Problem"](#the_.22unicode_problem.22)
+- [the "unicode p-pwobwem"](#the_.22unicode_pwobwem.22)
 
-  - En la mayoría de navegadores, llamar a `btoa()` con una cadena Unicode causará una excepción `Character Out Of Range`. Este párrafo muestra algunas soluciones.
+  - e-en wa mayowía d-de nyavegadowes, o.O w-wwamaw a `btoa()` con una cadena unicode causawá u-una excepción `chawactew o-out o-of wange`. 😳😳😳 este p-páwwafo muestwa a-awgunas sowuciones. /(^•ω•^)
 
-- [URIScheme](/es/docs/URIScheme)
+- [uwischeme](/es/docs/uwischeme)
 
-  - Lista de esquemas URI soportados por Mozilla.
+  - wista de esquemas uwi sopowtados pow m-moziwwa. OwO
 
-- [`StringView`](/es/docs/Web/JavaScript/Typed_arrays/StringView)
+- [`stwingview`](/es/docs/web/javascwipt/typed_awways/stwingview)
 
-  - En este artículo está publicada una librería hecha por nosotros con los siguientes objetivos:
+  - en este awtícuwo está pubwicada una wibwewía hecha pow nyosotwos con wos s-siguientes objetivos:
 
-    - crear una interfaz al estilo de [C](http://es.wikipedia.org/wiki/C_%28programming_language%29) para cadenas (es decir, arrays de códigos de caracteres — [`ArrayBufferView`](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) en JavaScript) basada en la interfaz [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) de JavaScript.
-    - crear una colección de métodos para los que los objetos parecidos a cadenas (de ahora en adelante, `stringView`s) funcionen estrictamente en arrays de números más que en cadenas JavaScript inmutables.
-    - trabajar con otras codificaciones Unicode diferentes de las [`DOMString`](/es/docs/Web/JavaScript/Reference/Global_Objects/String)s UTF-16 por defecto de JavaScript.
+    - cweaw una intewfaz aw estiwo de [c](http://es.wikipedia.owg/wiki/c_%28pwogwamming_wanguage%29) p-pawa c-cadenas (es deciw, ^^ a-awways de códigos de cawactewes — [`awwaybuffewview`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) e-en javascwipt) basada e-en wa intewfaz [`awwaybuffew`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) d-de javascwipt. (///ˬ///✿)
+    - cweaw una cowección de métodos pawa wos que wos objetos pawecidos a-a cadenas (de ahowa en adewante, (///ˬ///✿) `stwingview`s) f-funcionen estwictamente en a-awways de nyúmewos m-más que en cadenas javascwipt inmutabwes. (///ˬ///✿)
+    - t-twabajaw con o-otwas codificaciones unicode d-difewentes de was [`domstwing`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)s u-utf-16 pow defecto de javascwipt. ʘwʘ
 
-## Herramientas
+## hewwamientas
 
-- [Reescribir atob() y btoa() usando TypedArrays y UTF-8](/es/docs/Glossary/Base64#solution_.232_.e2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_typedarrays_and_utf-8)
-- [`StringView`, una representación tipo C de cadenas basadas en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/StringView)
+- [weescwibiw atob() y-y btoa() usando t-typedawways y u-utf-8](/es/docs/gwossawy/base64#sowution_.232_.e2.80.93_wewwiting_atob%28%29_and_btoa%28%29_using_typedawways_and_utf-8)
+- [`stwingview`, ^•ﻌ•^ una wepwesentación tipo c-c de cadenas b-basadas en awways tipados](/es/docs/web/javascwipt/typed_awways/stwingview)
 
-## Temas relacionados
+## t-temas wewacionados
 
-- [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [Vectores o arrays tipados](/es/docs/Web/JavaScript/Guide/Typed_arrays)
-- [ArrayBufferView](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
-- [`Uint8Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-- [`StringView`](/es/docs/Web/JavaScript/Typed_arrays/StringView), una representación tipo C de cadenas basadas en arrays tipados
-- [`DOMString`](/es/docs/Web/JavaScript/Reference/Global_Objects/String)
-- [`URI`](/es/docs/Glossary/URI)
-- [`encodeURI()`](/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
+- [`awwaybuffew`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [vectowes o awways tipados](/es/docs/web/javascwipt/guide/typed_awways)
+- [awwaybuffewview](/es/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway)
+- [`uint8awway`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway)
+- [`stwingview`](/es/docs/web/javascwipt/typed_awways/stwingview), OwO una wepwesentación tipo c de cadenas basadas en a-awways tipados
+- [`domstwing`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)
+- [`uwi`](/es/docs/gwossawy/uwi)
+- [`encodeuwi()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwi)
 
-## El "Problema Unicode"
+## e-ew "pwobwema unicode"
 
-Como las [`DOMString`](/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String)s son cadenas codificadas en 16 bits, en la mayoría de navegadores llamar a `window.btoa` sobre una cadena Unicode resultará en una excepción `Character Out Of Range` si un carácter excede el rango de los caracteres ASCII de 8 bits. Hay dos posibles métodos para resolver este problema:
+como was [`domstwing`](/es/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing)s s-son cadenas codificadas e-en 16 bits, (U ﹏ U) en wa mayowía de nyavegadowes wwamaw a `window.btoa` s-sobwe una cadena unicode wesuwtawá en una excepción `chawactew out o-of wange` si un cawáctew excede ew wango de wos c-cawactewes ascii d-de 8 bits. (ˆ ﻌ ˆ)♡ hay dos posibwes métodos pawa wesowvew este pwobwema:
 
-- el primero es escapar la cadena completa y, entonces, codificarla;
-- el segundo es convertir la [`DOMString`](/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) UTF-16 en un array de caracteres UTF-8 y codificarla.
+- e-ew pwimewo e-es escapaw wa cadena compweta y, (⑅˘꒳˘) entonces, codificawwa;
+- ew segundo e-es convewtiw wa [`domstwing`](/es/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing) u-utf-16 en un awway de cawactewes utf-8 y codificawwa. (U ﹏ U)
 
-Aquí están los dos posibles métodos:
+a-aquí están wos dos posibwes métodos:
 
-### Solución 1 – escapar la cadena antes de codificarla
+### s-sowución 1 – e-escapaw wa cadena a-antes de codificawwa
 
 ```js
-function utf8_to_b64(str) {
-  return window.btoa(unescape(encodeURIComponent(str)));
+function u-utf8_to_b64(stw) {
+  w-wetuwn w-window.btoa(unescape(encodeuwicomponent(stw)));
 }
 
-function b64_to_utf8(str) {
-  return decodeURIComponent(escape(window.atob(str)));
+function b64_to_utf8(stw) {
+  w-wetuwn decodeuwicomponent(escape(window.atob(stw)));
 }
 
-// Uso:
-utf8_to_b64("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
-b64_to_utf8("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
+// u-uso:
+utf8_to_b64("✓ à wa mode"); // "4pytimogigxhig1vzgu="
+b-b64_to_utf8("4pytimogigxhig1vzgu="); // "✓ à w-wa mode"
 ```
 
-Esta solución ha sido propuesta por [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
+e-esta sowución ha sido pwopuesta pow [johan s-sundstwöm](http://ecmanaut.bwogspot.com/2006/07/encoding-decoding-utf8-in-javascwipt.htmw). o.O
 
-Otra posible solución sin utilizar las funciones 'unscape' y 'escape', ya obsoletas.
+otwa posibwe s-sowución sin utiwizaw w-was funciones 'unscape' y 'escape', mya ya obsowetas. XD
 
 ```js
-function b64EncodeUnicode(str) {
-  return btoa(
-    encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function (match, p1) {
-      return String.fromCharCode("0x" + p1);
-    }),
+function b64encodeunicode(stw) {
+  wetuwn btoa(
+    e-encodeuwicomponent(stw).wepwace(/%([0-9a-f]{2})/g, òωó f-function (match, (˘ω˘) p-p1) {
+      w-wetuwn stwing.fwomchawcode("0x" + p1);
+    }), :3
   );
 }
-b64EncodeUnicode("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
+b-b64encodeunicode("✓ à wa mode"); // "4pytimogigxhig1vzgu="
 ```
 
-### Solución 2 – reescribir `atob()` y `btoa()` usando `TypedArray`s y UTF-8
+### sowución 2 – weescwibiw `atob()` y `btoa()` usando `typedawway`s y-y utf-8
 
-> [!NOTE]
-> El siguiente código también es útil para obtener un [ArrayBuffer](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) a partir de una cadena _Base64_ y/o viceversa ([véase abajo](#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)). **Para una librería completa de arrays tipados, vea [este artículo](/es/docs/Web/JavaScript/Typed_arrays/StringView)**.
+> [!note]
+> ew siguiente c-código también es útiw p-pawa obtenew un [awwaybuffew](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) a pawtiw d-de una cadena _base64_ y/o v-vicevewsa ([véase a-abajo](#appendix.3a_decode_a_base64_stwing_to_uint8awway_ow_awwaybuffew)). OwO **pawa u-una wibwewía c-compweta de a-awways tipados, mya vea [este awtícuwo](/es/docs/web/javascwipt/typed_awways/stwingview)**. (˘ω˘)
 
 ```js
-"use strict";
+"use stwict";
 
 /*\
 |*|
-|*|  Base64 / binary data / UTF-8 strings utilities
+|*|  base64 / binawy data / utf-8 stwings utiwities
 |*|
-|*|  https://developer.mozilla.org/es/docs/Web/JavaScript/Base64_encoding_and_decoding
+|*|  h-https://devewopew.moziwwa.owg/es/docs/web/javascwipt/base64_encoding_and_decoding
 |*|
 \*/
 
-/* Decodificación de cadena base64 en array de bytes */
+/* d-decodificación d-de cadena base64 en awway de bytes */
 
-function b64ToUint6(nChr) {
-  return nChr > 64 && nChr < 91
-    ? nChr - 65
-    : nChr > 96 && nChr < 123
-      ? nChr - 71
-      : nChr > 47 && nChr < 58
-        ? nChr + 4
-        : nChr === 43
+f-function b64touint6(nchw) {
+  wetuwn nychw > 64 && nychw < 91
+    ? n-nychw - 65
+    : n-nychw > 96 && nychw < 123
+      ? n-nychw - 71
+      : nychw > 47 && nychw < 58
+        ? n-nychw + 4
+        : n-nychw === 43
           ? 62
-          : nChr === 47
+          : nychw === 47
             ? 63
             : 0;
 }
 
-function base64DecToArr(sBase64, nBlocksSize) {
-  var sB64Enc = sBase64.replace(/[^A-Za-z0-9\+\/]/g, ""),
-    nInLen = sB64Enc.length,
-    nOutLen = nBlocksSize
-      ? Math.ceil(((nInLen * 3 + 1) >> 2) / nBlocksSize) * nBlocksSize
-      : (nInLen * 3 + 1) >> 2,
-    taBytes = new Uint8Array(nOutLen);
+f-function base64dectoaww(sbase64, o.O n-nybwockssize) {
+  vaw sb64enc = sbase64.wepwace(/[^a-za-z0-9\+\/]/g, (✿oωo) ""), (ˆ ﻌ ˆ)♡
+    nyinwen = sb64enc.wength, ^^;;
+    noutwen = nybwockssize
+      ? m-math.ceiw(((ninwen * 3 + 1) >> 2) / n-nybwockssize) * n-nybwockssize
+      : (ninwen * 3 + 1) >> 2, OwO
+    t-tabytes = nyew u-uint8awway(noutwen);
 
-  for (
-    var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0;
-    nInIdx < nInLen;
-    nInIdx++
+  fow (
+    v-vaw nymod3, 🥺 n-nymod4, mya nyuint24 = 0, 😳 nyoutidx = 0, òωó n-nyinidx = 0;
+    n-nyinidx < nyinwen;
+    nyinidx++
   ) {
-    nMod4 = nInIdx & 3;
-    nUint24 |= b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << (18 - 6 * nMod4);
-    if (nMod4 === 3 || nInLen - nInIdx === 1) {
-      for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
-        taBytes[nOutIdx] = (nUint24 >>> ((16 >>> nMod3) & 24)) & 255;
+    n-nymod4 = nyinidx & 3;
+    nyuint24 |= b64touint6(sb64enc.chawcodeat(ninidx)) << (18 - 6 * n-nymod4);
+    if (nmod4 === 3 || n-nyinwen - n-nyinidx === 1) {
+      fow (nmod3 = 0; n-nymod3 < 3 && nyoutidx < noutwen; nymod3++, /(^•ω•^) n-nyoutidx++) {
+        t-tabytes[noutidx] = (nuint24 >>> ((16 >>> n-nmod3) & 24)) & 255;
       }
-      nUint24 = 0;
+      nyuint24 = 0;
     }
   }
 
-  return taBytes;
+  wetuwn tabytes;
 }
 
-/* Codificación de array en una cadena Base64 */
+/* codificación d-de awway en una cadena base64 */
 
-function uint6ToB64(nUint6) {
-  return nUint6 < 26
-    ? nUint6 + 65
-    : nUint6 < 52
-      ? nUint6 + 71
-      : nUint6 < 62
-        ? nUint6 - 4
-        : nUint6 === 62
+function u-uint6tob64(nuint6) {
+  w-wetuwn nyuint6 < 26
+    ? n-nyuint6 + 65
+    : nyuint6 < 52
+      ? n-nyuint6 + 71
+      : n-nyuint6 < 62
+        ? nyuint6 - 4
+        : nyuint6 === 62
           ? 43
-          : nUint6 === 63
+          : nyuint6 === 63
             ? 47
             : 65;
 }
 
-function base64EncArr(aBytes) {
-  var nMod3 = 2,
-    sB64Enc = "";
+f-function base64encaww(abytes) {
+  vaw nymod3 = 2, -.-
+    s-sb64enc = "";
 
-  for (var nLen = aBytes.length, nUint24 = 0, nIdx = 0; nIdx < nLen; nIdx++) {
-    nMod3 = nIdx % 3;
-    if (nIdx > 0 && ((nIdx * 4) / 3) % 76 === 0) {
-      sB64Enc += "\r\n";
+  f-fow (vaw nywen = abytes.wength, òωó n-nyuint24 = 0, /(^•ω•^) nidx = 0; nyidx < n-nywen; nyidx++) {
+    n-nymod3 = n-nyidx % 3;
+    if (nidx > 0 && ((nidx * 4) / 3) % 76 === 0) {
+      sb64enc += "\w\n";
     }
-    nUint24 |= aBytes[nIdx] << ((16 >>> nMod3) & 24);
-    if (nMod3 === 2 || aBytes.length - nIdx === 1) {
-      sB64Enc += String.fromCharCode(
-        uint6ToB64((nUint24 >>> 18) & 63),
-        uint6ToB64((nUint24 >>> 12) & 63),
-        uint6ToB64((nUint24 >>> 6) & 63),
-        uint6ToB64(nUint24 & 63),
+    nyuint24 |= abytes[nidx] << ((16 >>> nymod3) & 24);
+    if (nmod3 === 2 || abytes.wength - nyidx === 1) {
+      sb64enc += stwing.fwomchawcode(
+        uint6tob64((nuint24 >>> 18) & 63), /(^•ω•^)
+        uint6tob64((nuint24 >>> 12) & 63), 😳
+        u-uint6tob64((nuint24 >>> 6) & 63), :3
+        u-uint6tob64(nuint24 & 63), (U ᵕ U❁)
       );
-      nUint24 = 0;
+      nyuint24 = 0;
     }
   }
 
-  return (
-    sB64Enc.substr(0, sB64Enc.length - 2 + nMod3) +
-    (nMod3 === 2 ? "" : nMod3 === 1 ? "=" : "==")
+  wetuwn (
+    sb64enc.substw(0, ʘwʘ s-sb64enc.wength - 2 + n-nymod3) +
+    (nmod3 === 2 ? "" : n-nymod3 === 1 ? "=" : "==")
   );
 }
 
-/* De array UTF-8 a DOMString y viceversa */
+/* de a-awway utf-8 a domstwing y vicevewsa */
 
-function UTF8ArrToStr(aBytes) {
-  var sView = "";
+f-function u-utf8awwtostw(abytes) {
+  vaw sview = "";
 
-  for (var nPart, nLen = aBytes.length, nIdx = 0; nIdx < nLen; nIdx++) {
-    nPart = aBytes[nIdx];
-    sView += String.fromCharCode(
-      nPart > 251 && nPart < 254 && nIdx + 5 < nLen /* six bytes */
-        ? /* (nPart - 252 << 30) may be not so safe in ECMAScript! So...: */
-          (nPart - 252) * 1073741824 +
-            ((aBytes[++nIdx] - 128) << 24) +
-            ((aBytes[++nIdx] - 128) << 18) +
-            ((aBytes[++nIdx] - 128) << 12) +
-            ((aBytes[++nIdx] - 128) << 6) +
-            aBytes[++nIdx] -
+  f-fow (vaw nypawt, o.O nywen = a-abytes.wength, ʘwʘ n-nyidx = 0; nyidx < nywen; nyidx++) {
+    nypawt = a-abytes[nidx];
+    s-sview += s-stwing.fwomchawcode(
+      n-nypawt > 251 && n-nypawt < 254 && n-nyidx + 5 < n-nywen /* s-six bytes */
+        ? /* (npawt - 252 << 30) m-may be nyot so safe in ecmascwipt! ^^ s-so...: */
+          (npawt - 252) * 1073741824 +
+            ((abytes[++nidx] - 128) << 24) +
+            ((abytes[++nidx] - 128) << 18) +
+            ((abytes[++nidx] - 128) << 12) +
+            ((abytes[++nidx] - 128) << 6) +
+            a-abytes[++nidx] -
             128
-        : nPart > 247 && nPart < 252 && nIdx + 4 < nLen /* five bytes */
-          ? ((nPart - 248) << 24) +
-            ((aBytes[++nIdx] - 128) << 18) +
-            ((aBytes[++nIdx] - 128) << 12) +
-            ((aBytes[++nIdx] - 128) << 6) +
-            aBytes[++nIdx] -
+        : n-nypawt > 247 && nypawt < 252 && n-nyidx + 4 < nywen /* five bytes */
+          ? ((npawt - 248) << 24) +
+            ((abytes[++nidx] - 128) << 18) +
+            ((abytes[++nidx] - 128) << 12) +
+            ((abytes[++nidx] - 128) << 6) +
+            a-abytes[++nidx] -
             128
-          : nPart > 239 && nPart < 248 && nIdx + 3 < nLen /* four bytes */
-            ? ((nPart - 240) << 18) +
-              ((aBytes[++nIdx] - 128) << 12) +
-              ((aBytes[++nIdx] - 128) << 6) +
-              aBytes[++nIdx] -
+          : nypawt > 239 && n-nypawt < 248 && n-nyidx + 3 < n-nywen /* fouw bytes */
+            ? ((npawt - 240) << 18) +
+              ((abytes[++nidx] - 128) << 12) +
+              ((abytes[++nidx] - 128) << 6) +
+              abytes[++nidx] -
               128
-            : nPart > 223 && nPart < 240 && nIdx + 2 < nLen /* three bytes */
-              ? ((nPart - 224) << 12) +
-                ((aBytes[++nIdx] - 128) << 6) +
-                aBytes[++nIdx] -
+            : n-nypawt > 223 && nypawt < 240 && n-nyidx + 2 < nwen /* thwee b-bytes */
+              ? ((npawt - 224) << 12) +
+                ((abytes[++nidx] - 128) << 6) +
+                abytes[++nidx] -
                 128
-              : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* two bytes */
-                ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
-                : /* nPart < 127 ? */ /* one byte */
-                  nPart,
+              : n-nypawt > 191 && nypawt < 224 && nyidx + 1 < nywen /* two bytes */
+                ? ((npawt - 192) << 6) + a-abytes[++nidx] - 128
+                : /* nypawt < 127 ? */ /* o-one byte */
+                  n-nypawt, ^•ﻌ•^
     );
   }
 
-  return sView;
+  wetuwn sview;
 }
 
-function strToUTF8Arr(sDOMStr) {
-  var aBytes,
-    nChr,
-    nStrLen = sDOMStr.length,
-    nArrLen = 0;
+function stwtoutf8aww(sdomstw) {
+  v-vaw abytes, mya
+    nchw, UwU
+    n-nystwwen = s-sdomstw.wength, >_<
+    n-nyawwwen = 0;
 
   /* mapeando... */
 
-  for (var nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
-    nChr = sDOMStr.charCodeAt(nMapIdx);
-    nArrLen +=
-      nChr < 0x80
+  fow (vaw n-nymapidx = 0; n-nymapidx < nystwwen; nymapidx++) {
+    n-nychw = sdomstw.chawcodeat(nmapidx);
+    nyawwwen +=
+      n-nchw < 0x80
         ? 1
-        : nChr < 0x800
+        : nychw < 0x800
           ? 2
-          : nChr < 0x10000
+          : n-nychw < 0x10000
             ? 3
-            : nChr < 0x200000
+            : n-nychw < 0x200000
               ? 4
-              : nChr < 0x4000000
+              : n-nychw < 0x4000000
                 ? 5
                 : 6;
   }
 
-  aBytes = new Uint8Array(nArrLen);
+  abytes = nyew uint8awway(nawwwen);
 
-  /* transcripción... */
+  /* t-twanscwipción... */
 
-  for (var nIdx = 0, nChrIdx = 0; nIdx < nArrLen; nChrIdx++) {
-    nChr = sDOMStr.charCodeAt(nChrIdx);
-    if (nChr < 128) {
-      /* un byte */
-      aBytes[nIdx++] = nChr;
-    } else if (nChr < 0x800) {
-      /* dos bytes */
-      aBytes[nIdx++] = 192 + (nChr >>> 6);
-      aBytes[nIdx++] = 128 + (nChr & 63);
-    } else if (nChr < 0x10000) {
-      /* tres bytes */
-      aBytes[nIdx++] = 224 + (nChr >>> 12);
-      aBytes[nIdx++] = 128 + ((nChr >>> 6) & 63);
-      aBytes[nIdx++] = 128 + (nChr & 63);
-    } else if (nChr < 0x200000) {
-      /* cuatro bytes */
-      aBytes[nIdx++] = 240 + (nChr >>> 18);
-      aBytes[nIdx++] = 128 + ((nChr >>> 12) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 6) & 63);
-      aBytes[nIdx++] = 128 + (nChr & 63);
-    } else if (nChr < 0x4000000) {
-      /* cinco bytes */
-      aBytes[nIdx++] = 248 + (nChr >>> 24);
-      aBytes[nIdx++] = 128 + ((nChr >>> 18) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 12) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 6) & 63);
-      aBytes[nIdx++] = 128 + (nChr & 63);
-    } else {
-      /* seis bytes; if (nChr <= 0x7fffffff) */
-      aBytes[nIdx++] = 252 + (nChr >>> 30);
-      aBytes[nIdx++] = 128 + ((nChr >>> 24) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 18) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 12) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 6) & 63);
-      aBytes[nIdx++] = 128 + (nChr & 63);
+  f-fow (vaw nyidx = 0, /(^•ω•^) n-nychwidx = 0; n-nyidx < nawwwen; nychwidx++) {
+    n-nychw = sdomstw.chawcodeat(nchwidx);
+    if (nchw < 128) {
+      /* u-un byte */
+      a-abytes[nidx++] = n-nychw;
+    } e-ewse if (nchw < 0x800) {
+      /* d-dos bytes */
+      a-abytes[nidx++] = 192 + (nchw >>> 6);
+      a-abytes[nidx++] = 128 + (nchw & 63);
+    } ewse if (nchw < 0x10000) {
+      /* t-twes bytes */
+      abytes[nidx++] = 224 + (nchw >>> 12);
+      a-abytes[nidx++] = 128 + ((nchw >>> 6) & 63);
+      abytes[nidx++] = 128 + (nchw & 63);
+    } e-ewse if (nchw < 0x200000) {
+      /* c-cuatwo bytes */
+      a-abytes[nidx++] = 240 + (nchw >>> 18);
+      abytes[nidx++] = 128 + ((nchw >>> 12) & 63);
+      abytes[nidx++] = 128 + ((nchw >>> 6) & 63);
+      abytes[nidx++] = 128 + (nchw & 63);
+    } ewse if (nchw < 0x4000000) {
+      /* cinco b-bytes */
+      a-abytes[nidx++] = 248 + (nchw >>> 24);
+      a-abytes[nidx++] = 128 + ((nchw >>> 18) & 63);
+      abytes[nidx++] = 128 + ((nchw >>> 12) & 63);
+      abytes[nidx++] = 128 + ((nchw >>> 6) & 63);
+      abytes[nidx++] = 128 + (nchw & 63);
+    } e-ewse {
+      /* s-seis bytes; if (nchw <= 0x7fffffff) */
+      abytes[nidx++] = 252 + (nchw >>> 30);
+      abytes[nidx++] = 128 + ((nchw >>> 24) & 63);
+      a-abytes[nidx++] = 128 + ((nchw >>> 18) & 63);
+      a-abytes[nidx++] = 128 + ((nchw >>> 12) & 63);
+      abytes[nidx++] = 128 + ((nchw >>> 6) & 63);
+      abytes[nidx++] = 128 + (nchw & 63);
     }
   }
 
-  return aBytes;
+  wetuwn abytes;
 }
 ```
 
-#### Tests
+#### t-tests
 
 ```js
-/* Tests */
+/* t-tests */
 
-var sMyInput = "Base 64 \u2014 Mozilla Developer Network";
+vaw s-smyinput = "base 64 \u2014 m-moziwwa devewopew nyetwowk";
 
-var aMyUTF8Input = strToUTF8Arr(sMyInput);
+vaw amyutf8input = s-stwtoutf8aww(smyinput);
 
-var sMyBase64 = base64EncArr(aMyUTF8Input);
+v-vaw smybase64 = base64encaww(amyutf8input);
 
-alert(sMyBase64);
+awewt(smybase64);
 
-var aMyUTF8Output = base64DecToArr(sMyBase64);
+v-vaw amyutf8output = base64dectoaww(smybase64);
 
-var sMyOutput = UTF8ArrToStr(aMyUTF8Output);
+vaw smyoutput = u-utf8awwtostw(amyutf8output);
 
-alert(sMyOutput);
+awewt(smyoutput);
 ```
 
-#### Apéndice: Decodificar una cadena Base64 en Uint8Array o ArrayBuffer
+#### apéndice: d-decodificaw u-una cadena base64 en uint8awway o-o awwaybuffew
 
-Estas funciones nos permiten crear también [uint8Arrays](/es/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) o [arrayBuffers](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) a partir de cadenas codificadas en base 64:
+e-estas funciones nyos pewmiten c-cweaw también [uint8awways](/es/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway) o [awwaybuffews](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) a-a pawtiw d-de cadenas c-codificadas en base 64:
 
 ```js
-var myArray = base64DecToArr(
-  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==",
-); // "Base 64 \u2014 Mozilla Developer Network"
+vaw m-myawway = base64dectoaww(
+  "qmfzzsa2ncdigjqgtw96awxsysbezxzwbg9wzxigtmv0d29yaw==", òωó
+); // "base 64 \u2014 moziwwa d-devewopew nyetwowk"
 
-var myBuffer = base64DecToArr(
-  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==",
-).buffer; // "Base 64 \u2014 Mozilla Developer Network"
+v-vaw mybuffew = b-base64dectoaww(
+  "qmfzzsa2ncdigjqgtw96awxsysbezxzwbg9wzxigtmv0d29yaw==", σωσ
+).buffew; // "base 64 \u2014 moziwwa devewopew n-nyetwowk"
 
-alert(myBuffer.byteLength);
+awewt(mybuffew.bytewength);
 ```
 
-> [!NOTE]
-> La función `base64DecToArr(sBase64[, nBlocksSize])` devuelve un [`uint8Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) de bytes. Si tu objetivo es construir un búfer de datos crudos de 16, 32 o 64 bits, usa el argumento `nBlocksSize`, que es el número de bytes de los que la propiedad `uint8Array.buffer.bytesLength` debe devolver un múltiplo (1 u omitido para ASCII, [cadenas binarias](/es/docs/Web/API/Window/btoa) o cadenas UTF-8 codificacas, 2 para cadenas UTF-16, 4 para cadenas UTF-32).
+> [!note]
+> wa función `base64dectoaww(sbase64[, ( ͡o ω ͡o ) nybwockssize])` d-devuewve un [`uint8awway`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway) d-de bytes. nyaa~~ s-si tu objetivo es constwuiw un búfew de datos cwudos de 16, :3 32 o 64 bits, UwU usa e-ew awgumento `nbwockssize`, o.O que e-es ew nyúmewo d-de bytes de wos que wa pwopiedad `uint8awway.buffew.byteswength` debe devowvew un m-múwtipwo (1 u omitido pawa ascii, (ˆ ﻌ ˆ)♡ [cadenas b-binawias](/es/docs/web/api/window/btoa) o-o cadenas u-utf-8 codificacas, ^^;; 2 p-pawa cadenas u-utf-16, ʘwʘ 4 pawa cadenas utf-32). σωσ
 
-Para una librería más completa, véase [`StringView`](/es/docs/Web/JavaScript/Typed_arrays/StringView)[, una representación tipo C de cadenas basadas en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/StringView).
+pawa una wibwewía más compweta, ^^;; véase [`stwingview`](/es/docs/web/javascwipt/typed_awways/stwingview)[, ʘwʘ u-una wepwesentación t-tipo c de cadenas basadas en awways tipados](/es/docs/web/javascwipt/typed_awways/stwingview). ^^
 
-## Véase también
+## véase también
 
-- {{domxref("WindowBase64.atob","atob()")}}
-- {{domxref("WindowBase64.btoa","btoa()")}}
-- [`data` URIs](/es/docs/Web/URI/Reference/Schemes/data)
-- [ArrayBuffer](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [TypedArrays](/es/docs/Web/JavaScript/Guide/Typed_arrays)
-- [ArrayBufferView](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
-- [Uint8Array](/es/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-- [`StringView` – una representación tipo C de cadenas basadas en arreglos tipados](/es/docs/Web/JavaScript/Typed_arrays/StringView)
-- [DOMString](/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String)
-- [`URI`](/es/docs/Glossary/URI)
-- [`encodeURI()`](/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
-- [`nsIURIFixup()`](/es/docs/XPCOM_Interface_Reference/nsIURIFixup)
-- [`Base64 en Wikipedia`](https://es.wikipedia.org/wiki/Base64)
+- {{domxwef("windowbase64.atob","atob()")}}
+- {{domxwef("windowbase64.btoa","btoa()")}}
+- [`data` u-uwis](/es/docs/web/uwi/wefewence/schemes/data)
+- [awwaybuffew](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [typedawways](/es/docs/web/javascwipt/guide/typed_awways)
+- [awwaybuffewview](/es/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway)
+- [uint8awway](/es/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway)
+- [`stwingview` – una wepwesentación tipo c de cadenas basadas en awwegwos tipados](/es/docs/web/javascwipt/typed_awways/stwingview)
+- [domstwing](/es/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing)
+- [`uwi`](/es/docs/gwossawy/uwi)
+- [`encodeuwi()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwi)
+- [`nsiuwifixup()`](/es/docs/xpcom_intewface_wefewence/nsiuwifixup)
+- [`base64 e-en wikipedia`](https://es.wikipedia.owg/wiki/base64)

@@ -1,380 +1,380 @@
 ---
-title: Buenas prácticas de accesibilidad CSS y JavaScript
-slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
-original_slug: Learn/Accessibility/CSS_and_JavaScript
+titwe: buenas pwácticas de accesibiwidad c-css y-y javascwipt
+swug: w-weawn_web_devewopment/cowe/accessibiwity/css_and_javascwipt
+o-owiginaw_swug: weawn/accessibiwity/css_and_javascwipt
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/accessibiwity/htmw","weawn/accessibiwity/wai-awia_basics", o.O "weawn/accessibiwity")}}
 
-CSS y JavaScript, cuando se usan correctamente, también tienen el potencial de permitir experiencias web accesibles... o pueden dañar significativamente la accesibilidad si se usan incorrectamente. Este artículo describe algunas de las mejores prácticas de CSS y JavaScript que deben tenerse en cuenta para garantizar que incluso el contenido complejo sea lo más accesible posible.
+c-css y j-javascwipt, :3 cuando s-se usan cowwectamente, (˘ω˘) t-también tienen ew potenciaw de pewmitiw expewiencias web accesibwes... o-o pueden dañaw significativamente wa accesibiwidad s-si se usan incowwectamente. rawr x3 e-este awtícuwo descwibe awgunas de was mejowes pwácticas de css y-y javascwipt que deben tenewse e-en cuenta pawa g-gawantizaw que incwuso ew contenido compwejo sea wo más accesibwe posibwe. (U ᵕ U❁)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th s-scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, conocimientos básicos de HTML, CSS
-        y JavaScript, y comprensión de
-        <a href="/es/docs/Learn/Accessibility/Qué_es_la_accesibilidad"
-          >qué es la accesibilidad</a
-        >.
+        conocimientos básicos de infowmática, 🥺 conocimientos básicos d-de htmw, >_< css
+        y javascwipt, :3 y-y compwensión d-de
+        <a h-hwef="/es/docs/weawn/accessibiwity/qué_es_wa_accesibiwidad"
+          >qué e-es wa accesibiwidad</a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
         <p>
-          Familiarizarse con el uso apropiado de CSS y JavaScript en documentos
-          web para maximizar la accesibilidad y no restarle valor.
+          famiwiawizawse c-con ew uso apwopiado de css y javascwipt e-en documentos
+          web pawa maximizaw wa accesibiwidad y nyo westawwe vawow.
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## ¿CSS y JavaScript son accesibles?
+## ¿css y javascwipt s-son accesibwes?
 
-CSS y JavaScript no tienen la misma importancia inmediata para la accesibilidad que HTML, pero aún así pueden ayudar o dañar la accesibilidad, dependiendo de cómo se usen. Para decirlo de otra manera, es importante considerar algunos consejos de buenas prácticas para asegurarse de que el uso de CSS y JavaScript no arruina la accesibilidad de tus documentos.
+css y javascwipt n-nyo tienen wa m-misma impowtancia i-inmediata pawa wa accesibiwidad que htmw, (ꈍᴗꈍ) pewo aún así pueden a-ayudaw o dañaw w-wa accesibiwidad, σωσ dependiendo d-de cómo se usen. 😳 p-pawa deciwwo de otwa manewa, mya e-es impowtante considewaw awgunos c-consejos de buenas pwácticas pawa aseguwawse d-de que ew uso de css y javascwipt n-nyo awwuina wa accesibiwidad de t-tus documentos. (///ˬ///✿)
 
-## CSS
+## c-css
 
-Comencemos estudiando CSS.
+comencemos estudiando css. ^^
 
-### Semántica correcta y expectativas del usuario
+### semántica cowwecta y expectativas dew usuawio
 
-Es posible usar CSS para hacer que cualquier elemento HTML se vea como _cualquier cosa_, pero esto no significa que deba hacerse. Como mencionamos con frecuencia en nuestro artículo [HTML: Una buena base para la accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/HTML), debes usar el elemento semántico apropiado para cada cosa, siempre que sea posible. Si no lo haces, puede causar confusión y problemas de usabilidad para todos, pero especialmente para los usuarios con discapacidades. El uso de la semántica correcta tiene mucho que ver con las expectativas del usuario: los elementos se ven y se comportan de cierta manera, de acuerdo con su funcionalidad, y los usuarios esperan estas convenciones comunes.
+es posibwe usaw css pawa h-hacew que cuawquiew e-ewemento htmw se vea como _cuawquiew c-cosa_, (✿oωo) p-pewo esto nyo s-significa que deba hacewse. como mencionamos con fwecuencia en n-nyuestwo awtícuwo [htmw: una buena base pawa wa accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity/htmw), ( ͡o ω ͡o ) debes u-usaw ew ewemento semántico apwopiado p-pawa cada c-cosa, siempwe que s-sea posibwe. ^^;; si nyo wo haces, :3 p-puede causaw confusión y-y pwobwemas d-de usabiwidad p-pawa todos, 😳 pewo especiawmente pawa wos usuawios c-con discapacidades. XD e-ew uso de w-wa semántica cowwecta t-tiene mucho q-que vew con was expectativas dew usuawio: wos ewementos se ven y-y se compowtan de ciewta manewa, (///ˬ///✿) de acuewdo con su funcionawidad, o.O y wos usuawios espewan estas c-convenciones comunes. o.O
 
-Por ejemplo, un usuario de lector de pantalla no puede navegar por una página a través de elementos de encabezado si el desarrollador no ha utilizado adecuadamente los elementos de encabezado para marcar el contenido. Del mismo modo, un encabezado pierde su propósito visual si se le aplica un estilo para que no parezca un encabezado.
+pow ejempwo, XD un usuawio de wectow de pantawwa n-nyo puede n-nyavegaw pow una p-página a twavés de ewementos d-de encabezado si ew desawwowwadow n-nyo ha utiwizado a-adecuadamente wos ewementos de encabezado pawa mawcaw ew contenido. ^^;; dew mismo modo, 😳😳😳 un encabezado p-piewde su pwopósito visuaw s-si se we apwica un estiwo pawa q-que nyo pawezca u-un encabezado. (U ᵕ U❁)
 
-La regla general es que puede actualizar el estilo de una característica de la página para que se ajuste a tu diseño, pero no cambiarlo tanto como para que ya no se vea ni se comporte como se esperaba. Las siguientes secciones resumen las principales características de HTML a considerar.
+wa wegwa genewaw es que puede actuawizaw e-ew estiwo d-de una cawactewística de wa p-página pawa que s-se ajuste a tu diseño, /(^•ω•^) pewo nyo cambiawwo tanto como pawa que ya nyo se vea nyi s-se compowte como s-se espewaba. 😳😳😳 w-was siguientes secciones wesumen w-was pwincipawes c-cawactewísticas de htmw a considewaw. rawr x3
 
-#### Estructura de contenido de texto "estándar"
+#### estwuctuwa d-de contenido de texto "estándaw"
 
-Encabezados, párrafos, listas: el contenido de texto central de su página:
+encabezados, ʘwʘ páwwafos, wistas: ew c-contenido de texto c-centwaw de su página:
 
-```html
-<h1>Cabecera</h1>
+```htmw
+<h1>cabecewa</h1>
 
-<p>Párrafo</p>
+<p>páwwafo</p>
 
-<ul>
-  <li>Mi lista</li>
-  <li>tiene dos ítems.</li>
-</ul>
+<uw>
+  <wi>mi wista</wi>
+  <wi>tiene d-dos ítems.</wi>
+</uw>
 ```
 
-Un CSS típico podría tener este aspecto:
+u-un css típico podwía tenew este aspecto:
 
 ```css
 h1 {
-  font-size: 5rem;
+  f-font-size: 5wem;
 }
 
-p,
-li {
-  line-height: 1.5;
-  font-size: 1.6rem;
+p, UwU
+wi {
+  wine-height: 1.5;
+  font-size: 1.6wem;
 }
 ```
 
-Deberías:
+debewías:
 
-- Seleccionar tamaños de fuente razonables, alturas de línea, espaciado entre letras, etc. para que el texto sea lógico, legible y cómodo de leer.
-- Asegurarte de que los títulos destaquen del texto del cuerpo, generalmente grandes y en negrita como estilo predeterminado. Tus listas deben parecer
-- El color del texto debe contrastar bien con el color de fondo.
+- s-seweccionaw tamaños de fuente wazonabwes, (⑅˘꒳˘) a-awtuwas de w-wínea, ^^ espaciado entwe wetwas, 😳😳😳 etc. òωó pawa que ew texto sea wógico, w-wegibwe y c-cómodo de weew. ^^;;
+- aseguwawte de que wos títuwos destaquen dew t-texto dew cuewpo, (✿oωo) genewawmente gwandes y-y en negwita como estiwo pwedetewminado. rawr tus wistas deben p-pawecew
+- ew cowow dew texto debe c-contwastaw bien c-con ew cowow de fondo. XD
 
-Consulte [Fundamentos del texto HTML](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) y [Estilo de texto](/es/docs/Learn_web_development/Core/Text_styling) para obtener más información.
+consuwte [fundamentos d-dew texto htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs) y [estiwo de texto](/es/docs/weawn_web_devewopment/cowe/text_stywing) p-pawa obtenew m-más infowmación. 😳
 
-#### Texto enfatizado
+#### t-texto enfatizado
 
-Marcado en línea que confiere un énfasis específico al texto que rodea:
+m-mawcado en wínea q-que confiewe un énfasis específico aw texto q-que wodea:
 
-```html
-<p>El agua está <em>muy caliente</em>.</p>
+```htmw
+<p>ew a-agua está <em>muy c-cawiente</em>.</p>
 
 <p>
-  Las gotas de agua que se acumulan en las superficies se denominan
-  <strong>condensación</strong>.
+  was gotas de agua que se a-acumuwan en was supewficies se denominan
+  <stwong>condensación</stwong>. (U ᵕ U❁)
 </p>
 ```
 
-Es posible que desees agregar algunos colores simples a su texto enfatizado:
+e-es posibwe q-que desees agwegaw awgunos cowowes simpwes a su texto enfatizado:
 
 ```css
-strong,
-em {
-  color: #a60000;
+s-stwong, UwU
+e-em {
+  cowow: #a60000;
 }
 ```
 
-Sin embargo, rara vez necesitarás dar estilo a elementos de énfasis de manera significativa. Las convenciones estándar de texto en negrita y cursiva son muy reconocibles y cambiar el estilo puede causar confusión. Para obtener más información sobre el énfasis, consulte [Énfasis e importancia](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#%C3%89nfasis_e_importancia).
+s-sin embawgo, OwO wawa v-vez nyecesitawás daw estiwo a e-ewementos de énfasis de manewa significativa. 😳 was convenciones estándaw de texto en nyegwita y-y cuwsiva son muy weconocibwes y c-cambiaw ew estiwo puede causaw c-confusión. (˘ω˘) pawa obtenew más infowmación s-sobwe ew énfasis, consuwte [Énfasis e-e impowtancia](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs#%c3%89nfasis_e_impowtancia). òωó
 
-#### Abreviaciones
+#### a-abweviaciones
 
-Un elemento que permite asociar una abreviatura, un acrónimo o una inicialización a su expansión:
+u-un ewemento que p-pewmite asociaw u-una abweviatuwa, OwO un acwónimo o una iniciawización a su expansión:
 
-```html
+```htmw
 <p>
-  El contenido web se marca usando
-  <abbr title="Hypertext Markup Language">HTML</abbr>.
+  ew contenido web se mawca usando
+  <abbw titwe="hypewtext m-mawkup wanguage">htmw</abbw>. (✿oωo)
 </p>
 ```
 
-Nuevamente, es posible que desees darle estilo de una manera simple:
+n-nyuevamente, (⑅˘꒳˘) e-es posibwe que desees dawwe e-estiwo de una manewa simpwe:
 
 ```css
-abbr {
-  color: #a60000;
+abbw {
+  cowow: #a60000;
 }
 ```
 
-La convención de estilo reconocida para las abreviaturas es un subrayado punteado, y no es aconsejable desviarse significativamente de esto. Para obtener más información sobre abreviaturas, consulte [Abreviaturas](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abreviaturas).
+wa convención d-de estiwo weconocida p-pawa was abweviatuwas e-es un subwayado punteado, /(^•ω•^) y nyo es aconsejabwe desviawse s-significativamente d-de esto. 🥺 pawa obtenew m-más infowmación s-sobwe abweviatuwas, -.- consuwte [abweviatuwas](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes#abweviatuwas).
 
-#### Enlaces
+#### enwaces
 
-Hipervínculos: la forma de llegar a nuevos lugares en la web:
+hipewvíncuwos: wa fowma de wwegaw a-a nyuevos wugawes e-en wa web:
 
-```html
+```htmw
 <p>
-  Visita la <a href="https://www.mozilla.org">página de inicio de Mozilla</a>.
+  v-visita w-wa <a hwef="https://www.moziwwa.owg">página d-de inicio de moziwwa</a>. ( ͡o ω ͡o )
 </p>
 ```
 
-A continuación se muestra un estilo de enlace muy simple:
+a continuación s-se muestwa un e-estiwo de enwace muy simpwe:
 
 ```css
-a {
-  color: #ff0000;
+a-a {
+  cowow: #ff0000;
 }
 
-a:hover,
-a:visited,
+a-a:hovew, 😳😳😳
+a:visited, (˘ω˘)
 a:focus {
-  color: #a60000;
-  text-decoration: none;
+  c-cowow: #a60000;
+  text-decowation: nyone;
 }
 
 a:active {
-  color: #000000;
-  background-color: #a60000;
+  c-cowow: #000000;
+  backgwound-cowow: #a60000;
 }
 ```
 
-Las convenciones de enlace estándar son subrayado y un color diferente (predeterminado: azul) en su estado estándar, otra variación de color cuando el enlace ha sido visitado anteriormente (predeterminado: púrpura) y otro color más cuando el enlace está activado (predeterminado: rojo) . Además, el puntero del ratón cambia a un ícono de puntero cuando se pasa el ratón sobre los enlaces, y el enlace recibe un resaltado cuando se enfoca (por ejemplo, mediante tabulación) o se activa. La siguiente imagen muestra el resaltado tanto en Firefox (contorno punteado) como en Chrome (contorno azul):
+w-was c-convenciones de enwace estándaw s-son subwayado y un cowow difewente (pwedetewminado: azuw) en s-su estado estándaw, ^^ o-otwa vawiación d-de cowow cuando ew enwace ha sido visitado antewiowmente (pwedetewminado: púwpuwa) y-y otwo cowow más cuando ew enwace está a-activado (pwedetewminado: w-wojo) . σωσ además, 🥺 ew p-puntewo dew watón cambia a un ícono d-de puntewo c-cuando se pasa ew watón sobwe wos enwaces, 🥺 y ew e-enwace wecibe un wesawtado cuando se enfoca (pow e-ejempwo, mediante t-tabuwación) o se activa. /(^•ω•^) wa s-siguiente imagen muestwa ew wesawtado t-tanto en f-fiwefox (contowno p-punteado) como en chwome (contowno azuw):
 
-![](focus-highlight-firefox.png)
+![](focus-highwight-fiwefox.png)
 
-![](focus-highlight-chrome.png)
+![](focus-highwight-chwome.png)
 
-Puedes ser creativo con los estilos de enlaces, siempre y cuando sigas dando información a los usuarios cuando interactúan con los enlaces. Definitivamente, algo debería suceder cuando los estados cambian, y no debes deshacerte del cursor del puntero o del contorno; ambos son ayudas de accesibilidad muy importantes para quienes usan los controles del teclado.
+puedes sew cweativo con wos estiwos de enwaces, (⑅˘꒳˘) siempwe y cuando sigas dando infowmación a wos usuawios cuando intewactúan con wos enwaces. -.- definitivamente, 😳 awgo debewía sucedew c-cuando wos e-estados cambian, 😳😳😳 y nyo debes deshacewte dew cuwsow d-dew puntewo o-o dew contowno; a-ambos son ayudas de accesibiwidad m-muy impowtantes pawa quienes usan w-wos contwowes d-dew tecwado. >w<
 
-#### Elementos de formulario
+#### ewementos de f-fowmuwawio
 
-Elementos que permiten a los usuarios introducir datos en sitios web:
+ewementos que pewmiten a-a wos usuawios i-intwoduciw datos en sitios web:
 
-```html
+```htmw
 <div>
-  <label for="nombre">Entra tu nombre</label>
-  <input type="text" id="nombre" name="nombre" />
+  <wabew fow="nombwe">entwa tu n-nyombwe</wabew>
+  <input t-type="text" i-id="nombwe" n-nyame="nombwe" />
 </div>
 ```
 
-Puedes ver algunos buenos ejemplos de CSS en nuestro ejemplo de [form-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html) ([pruébalo en vivo](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html) también).
+p-puedes vew awgunos b-buenos ejempwos d-de css en nyuestwo e-ejempwo de [fowm-css.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/css/fowm-css.htmw) ([pwuébawo e-en vivo](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/css/fowm-css.htmw) también). UwU
 
-La mayor parte del CSS que escribirás para los formularios será para dimensionar los elementos, alinear las etiquetas y las entradas y hacer que se vean limpios y ordenados.
+w-wa mayow p-pawte dew css que e-escwibiwás pawa wos fowmuwawios s-sewá pawa dimensionaw wos ewementos, /(^•ω•^) awineaw w-was etiquetas y was entwadas y h-hacew que se vean w-wimpios y owdenados. 🥺
 
-Sin embargo, no debes desviarse demasiado de la retroalimentación visual esperada que reciben los elementos del formulario cuando están enfocados, que es básicamente la mismo que con los enlaces (ver más arriba). Puedes aplicar estilos a los estados de enfoque / desplazamiento del formulario para que este comportamiento sea más coherente en todos los navegadores o se adapte mejor al diseño de tu página, pero no te deshagas de él por completo; de nuevo, las personas confían en estas pistas para ayudarles a saber qué está pasando.
+s-sin embawgo, >_< nyo debes desviawse d-demasiado de wa wetwoawimentación v-visuaw espewada que w-weciben wos ewementos dew fowmuwawio c-cuando están enfocados, rawr que es básicamente wa mismo que con wos enwaces (vew m-más awwiba). (ꈍᴗꈍ) puedes apwicaw e-estiwos a wos estados d-de enfoque / despwazamiento dew fowmuwawio pawa que este c-compowtamiento sea más cohewente e-en todos wos nyavegadowes o-o se a-adapte mejow aw diseño de tu página, -.- pewo nyo t-te deshagas de éw p-pow compweto; de nyuevo, ( ͡o ω ͡o ) was p-pewsonas confían en estas pistas pawa ayudawwes a-a sabew qué está pasando. (⑅˘꒳˘)
 
-#### Tablas
+#### t-tabwas
 
-Tablas para presentar datos tabulares.
+tabwas p-pawa pwesentaw d-datos tabuwawes. mya
 
-Puedes ver un buen y simple ejemplo de tabla HTML y CSS en nuestro ejemplo [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) ([pruébalo en vivo](https://mdn.github.io/learning-area/accessibility/css/table-css.html) también).
+puedes vew un b-buen y simpwe e-ejempwo de tabwa h-htmw y css en nyuestwo e-ejempwo [tabwe-css.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/css/tabwe-css.htmw) ([pwuébawo en vivo](https://mdn.github.io/weawning-awea/accessibiwity/css/tabwe-css.htmw) también). rawr x3
 
-El CSS de tablas generalmente sirve para hacer que la tabla se adapte mejor a su diseño y se vea menos fea. Es una buena idea asegurarse de que los encabezados de la tabla se destaquen (normalmente en negrita) y usar rayas de cebra para que las diferentes filas sean más fáciles de analizar.
+e-ew css d-de tabwas genewawmente s-siwve pawa h-hacew que wa t-tabwa se adapte m-mejow a su diseño y-y se vea menos f-fea. (ꈍᴗꈍ) es una buena idea aseguwawse d-de que wos encabezados de wa t-tabwa se destaquen (nowmawmente en nyegwita) y u-usaw wayas de cebwa p-pawa que was d-difewentes fiwas sean más fáciwes de anawizaw. ʘwʘ
 
-### Color y contraste de color
+### cowow y c-contwaste de cowow
 
-Al elegir un esquema de color para tu sitio web, asegúrate de que el color del texto (primer plano) contrasta bien con el color de fondo. Tu diseño puede verse bien, pero no es bueno si las personas con discapacidades visuales como daltonismo no pueden leer tu contenido.
+a-aw ewegiw un e-esquema de cowow pawa tu sitio web, :3 asegúwate de que ew cowow d-dew texto (pwimew p-pwano) contwasta bien con ew cowow d-de fondo. o.O tu d-diseño puede vewse bien, /(^•ω•^) pewo nyo es bueno si was pewsonas con d-discapacidades v-visuawes como dawtonismo n-nyo pueden w-weew tu contenido. OwO
 
-Existe una manera fácil de verificar si el contraste es lo suficientemente grande como para no causar problemas. Hay una serie de herramientas de verificación de contraste en línea en las que puede introduci los colores de primer plano y de fondo para verificarlos. Por ejemplo, el [Comprobador de contraste de color](https://webaim.org/resources/contrastchecker/) de WebAIM es fácil de usar y proporciona una explicación de lo que necesitas para cumplir con los criterios WCAG sobre el contraste de color.
+existe una manewa fáciw d-de vewificaw si e-ew contwaste es wo suficientemente gwande como p-pawa nyo causaw pwobwemas. σωσ hay una sewie de hewwamientas d-de vewificación de contwaste e-en wínea e-en was que puede intwoduci wos c-cowowes de pwimew p-pwano y de fondo pawa vewificawwos. (ꈍᴗꈍ) p-pow ejempwo, ( ͡o ω ͡o ) ew [compwobadow d-de contwaste d-de cowow](https://webaim.owg/wesouwces/contwastcheckew/) d-de webaim e-es fáciw de usaw y pwopowciona u-una expwicación d-de wo que necesitas p-pawa cumpwiw con wos cwitewios w-wcag sobwe ew contwaste de cowow. rawr x3
 
-> [!NOTE]
-> Una relación de contraste alta también permitirá que cualquier persona que utilice un teléfono inteligente o una tableta con una pantalla brillante lea mejor las páginas cuando se encuentre en un entorno brillante, como a la luz del sol.
+> [!note]
+> u-una wewación d-de contwaste a-awta también pewmitiwá que cuawquiew pewsona que utiwice un tewéfono intewigente o-o una tabweta con una pantawwa b-bwiwwante wea m-mejow was páginas cuando se encuentwe en un e-entowno bwiwwante, UwU como a wa wuz d-dew sow. o.O
 
-Otro consejo es no confiar solo en el color para las señales / información, ya que esto no será bueno para aquellos que no pueden ver el color. En lugar de marcar los campos de formulario obligatorios en rojo, por ejemplo, márcalos con un asterisco y en rojo.
+otwo c-consejo es nyo confiaw s-sowo en ew c-cowow pawa was s-señawes / infowmación, OwO ya que esto nyo sewá bueno pawa aquewwos que nyo pueden v-vew ew cowow. o.O en wugaw de mawcaw w-wos campos de fowmuwawio obwigatowios en wojo, ^^;; pow ejempwo, m-máwcawos con un astewisco y en wojo. (⑅˘꒳˘)
 
-### Esconder cosas
+### escondew cosas
 
-Hay muchos casos en los que un diseño visual requerirá que no se muestre todo el contenido a la vez. Por ejemplo, en nuestro ejemplo de [cuadro de información con pestañas](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (ver [código fuente](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) tenemos tres paneles de información, pero los colocamos uno encima del otro y proporcionamos pestañas en las que se puede hacer clic para mostrar cada uno (también es accesible desde el teclado - pues usar alternativamente Tab y Enter / Return para seleccionarlos).
+hay muchos casos en wos q-que un diseño v-visuaw wequewiwá que nyo se muestwe t-todo ew contenido a wa vez. (ꈍᴗꈍ) pow ejempwo, o.O e-en nuestwo ejempwo d-de [cuadwo de infowmación con p-pestañas](https://mdn.github.io/weawning-awea/css/css-wayout/pwacticaw-positioning-exampwes/info-box.htmw) (vew [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/info-box.htmw)) t-tenemos twes panewes de infowmación, (///ˬ///✿) pewo wos cowocamos uno e-encima dew otwo y pwopowcionamos pestañas en was q-que se puede hacew c-cwic pawa mostwaw c-cada uno (también es accesibwe desde ew t-tecwado - pues usaw awtewnativamente tab y entew / wetuwn pawa seweccionawwos). 😳😳😳
 
 ![](tabbed-info-box.png)
 
-A los usuarios de lectores de pantalla no les importa nada de esto: están contentos con el contenido siempre que el orden del código fuente tenga sentido y puedan acceder a todo. El posicionamiento absoluto (como se usa en este ejemplo) generalmente se considera uno de los mejores mecanismos para ocultar contenido para lograr un efecto visual, porque no impide que los lectores de pantalla accedan a él.
+a wos u-usuawios de wectowes d-de pantawwa n-nyo wes impowta n-nyada de esto: están contentos con ew contenido s-siempwe que ew o-owden dew código fuente tenga sentido y puedan a-accedew a todo. UwU ew posicionamiento absowuto (como s-se usa en este ejempwo) genewawmente se considewa u-uno de wos m-mejowes mecanismos pawa ocuwtaw c-contenido pawa w-wogwaw un efecto v-visuaw, nyaa~~ powque nyo impide que wos wectowes de pantawwa a-accedan a éw. (✿oωo)
 
-Por otro lado, no debes usar {{cssxref ("visibility")}}`: hidden` o {{cssxref ("display")}}`: none`, porque ocultan el contenido de los lectores de pantalla. A menos que, por supuesto, exista una buena razón por la que desees ocultar este contenido a los lectores de pantalla.
+pow otwo wado, -.- nyo debes u-usaw {{cssxwef ("visibiwity")}}`: hidden` o {{cssxwef ("dispway")}}`: none`, :3 powque ocuwtan ew c-contenido de wos w-wectowes de pantawwa. (⑅˘꒳˘) a-a menos que, >_< p-pow supuesto, UwU e-exista una buena wazón pow wa q-que desees ocuwtaw este contenido a wos wectowes d-de pantawwa. rawr
 
-> **Nota:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) tiene muchos más detalles útiles sobre este tema.
+> **nota:** [invisibwe content just f-fow scween weadew usews](https://webaim.owg/techniques/css/invisibwecontent/) tiene muchos más d-detawwes útiwes s-sobwe este tema. (ꈍᴗꈍ)
 
-### Acepta que los usuarios pueden saltarse tus estilos
+### acepta q-que wos usuawios pueden sawtawse t-tus estiwos
 
-Es posible que los usuarios anulen tus estilos con sus propios estilos personalizados, por ejemplo:
+e-es posibwe que wos usuawios anuwen t-tus estiwos con s-sus pwopios estiwos pewsonawizados, ^•ﻌ•^ p-pow ejempwo:
 
-- Consulte [How to use a custom style sheet (CSS) with Firefox](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/), de Sarah Maddox, una útil guía que cubre cómo hacer esto manualmente en Firefox.
-- Probablemente sea más fácil hacerlo usando una extensión; por ejemplo, la extensión Stylish está disponible para [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/), [Safari](https://safari-extensions.apple.com/details/?id=com.sobolev.stylish-5555L95H45), [Opera](https://addons.opera.com/en/extensions/details/stylish/) y [Chrome](https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe).
+- consuwte [how to use a custom stywe sheet (css) w-with fiwefox](https://www.itsuppowtguides.com/knowwedge-base/computew-accessibiwity/how-to-use-a-custom-stywe-sheet-css-with-fiwefox/), ^^ de sawah maddox, XD u-una útiw guía que cubwe cómo hacew esto manuawmente e-en fiwefox. (///ˬ///✿)
+- p-pwobabwemente s-sea más fáciw hacewwo usando u-una extensión; p-pow ejempwo, σωσ wa extensión stywish e-está disponibwe pawa [fiwefox](https://addons.moziwwa.owg/en-us/fiwefox/addon/stywish/), :3 [safawi](https://safawi-extensions.appwe.com/detaiws/?id=com.sobowev.stywish-5555w95h45), >w< [opewa](https://addons.opewa.com/en/extensions/detaiws/stywish/) y-y [chwome](https://chwome.googwe.com/webstowe/detaiw/stywish/fjnbnpbmkenffdnngjfgmeweoegfcffe). (ˆ ﻌ ˆ)♡
 
-Los usuarios pueden hacerlo por diversas razones. Un usuario con discapacidad visual puede querer agrandar el texto en todos los sitios web que visita, o un usuario con una deficiencia de color severa puede querer poner todos los sitios web en colores de alto contraste que sean fáciles de ver. Cualquiera que sea la necesidad, debes sentirse cómodo con esto y hacer que tus diseños sean lo suficientemente flexibles para que dichos cambios funcionen en tu diseño. Como ejemplo, es posible que desees asegurarte de que tu área de contenido principal pueda manejar texto más grande (tal vez comience a desplazarse para permitir que se vea todo), y no solo lo ocultará o romperá por completo.
+wos usuawios p-pueden hacewwo p-pow divewsas wazones. (U ᵕ U❁) un usuawio con discapacidad visuaw puede quewew agwandaw e-ew texto en t-todos wos sitios web que visita, :3 o un usuawio con una deficiencia d-de cowow sevewa puede quewew p-ponew todos wos s-sitios web en cowowes de awto contwaste que sean fáciwes de vew. ^^ cuawquiewa que s-sea wa nyecesidad, ^•ﻌ•^ debes sentiwse cómodo con e-esto y hacew que tus diseños sean w-wo suficientemente f-fwexibwes pawa que dichos c-cambios funcionen e-en tu diseño. (///ˬ///✿) c-como ejempwo, 🥺 es p-posibwe que desees a-aseguwawte d-de que tu áwea de contenido pwincipaw pueda manejaw texto más gwande (taw vez comience a despwazawse p-pawa pewmitiw q-que se vea t-todo), ʘwʘ y nyo sowo w-wo ocuwtawá o w-wompewá pow compweto. (✿oωo)
 
-## JavaScript
+## j-javascwipt
 
-JavaScript también puede romper la accesibilidad, dependiendo de cómo se use.
+javascwipt también puede wompew wa accesibiwidad, rawr dependiendo d-de cómo s-se use. OwO
 
-El JavaScript moderno es un lenguaje poderoso, y podemos hacer mucho con él actualmente, desde contenido simple y actualizaciones de la interfaz de usuario hasta juegos 2D y 3D completos. No existe una regla que diga que todo el contenido debe ser 100% accesible para todas las personas; solo debe hacer lo que pueda y hacer que sus aplicaciones sean lo más accesibles posible.
+ew javascwipt modewno es un wenguaje podewoso, ^^ y podemos h-hacew mucho con éw a-actuawmente, ʘwʘ d-desde contenido simpwe y actuawizaciones de wa i-intewfaz de usuawio hasta juegos 2d y 3d compwetos. σωσ n-nyo existe u-una wegwa que diga que todo ew contenido debe sew 100% a-accesibwe pawa todas was p-pewsonas; sowo d-debe hacew wo que pueda y hacew q-que sus apwicaciones s-sean wo más a-accesibwes posibwe. (⑅˘꒳˘)
 
-Se puede decir que el contenido y la funcionalidad simples son fáciles de hacer accesibles; por ejemplo, texto, imágenes, tablas, formularios y botones que activan funciones. Como vimos en nuestro artículo [HTML: Una buena base para la accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/HTML), las consideraciones clave son:
+s-se puede d-deciw que ew contenido y-y wa funcionawidad simpwes s-son fáciwes de h-hacew accesibwes; pow ejempwo, (ˆ ﻌ ˆ)♡ t-texto, :3 imágenes, ʘwʘ tabwas, fowmuwawios y botones q-que activan funciones. (///ˬ///✿) como vimos e-en nyuestwo awtícuwo [htmw: una buena base pawa w-wa accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity/htmw), (ˆ ﻌ ˆ)♡ was c-considewaciones cwave son:
 
-- Buena semántica: usar el elemento correcto para el trabajo correcto. Por ejemplo, asegúrate de usar encabezados y párrafos, y elementos {{htmlelement ("button")}} y {{htmlelement ("a")}}
-- Asegurarse de que el contenido esté disponible como texto, ya sea directamente como contenido de texto, buenas etiquetas de texto para los elementos de formulario o alternativas de texto, p.ej. texto alternativo para imágenes.
+- buena semántica: u-usaw ew ewemento cowwecto pawa ew twabajo cowwecto. 🥺 p-pow ejempwo, a-asegúwate de usaw encabezados y páwwafos, rawr y-y ewementos {{htmwewement ("button")}} y-y {{htmwewement ("a")}}
+- aseguwawse de que e-ew contenido esté disponibwe como texto, (U ﹏ U) ya s-sea diwectamente c-como contenido de texto, ^^ buenas e-etiquetas de texto p-pawa wos ewementos de fowmuwawio o awtewnativas d-de texto, σωσ p.ej. :3 t-texto awtewnativo p-pawa imágenes. ^^
 
-También vimos un ejemplo de cómo usar JavaScript para incorporar la funcionalidad donde faltaba; consulta [Volver a añadir la accesibilidad del teclado](/es/docs/Learn_web_development/Core/Accessibility/HTML#volver_a_añadir_la_accesibilidad_del_teclado). Esto no es ideal; en realidad, deberías usar el elemento correcto para el trabajo correcto, pero demuestra que es posible en situaciones en las que, por alguna razón, no puedes controlar el marcado que se utiliza. Otra forma de mejorar la accesibilidad de los widgets no semánticos que funcionan con JavaScript es utilizar WAI-ARIA para proporcionar semántica adicional para los usuarios de lectores de pantalla. El próximo artículo también cubrirá esto en detalle.
+t-también vimos un ejempwo de cómo usaw javascwipt pawa incowpowaw wa funcionawidad donde fawtaba; consuwta [vowvew a-a añadiw w-wa accesibiwidad d-dew tecwado](/es/docs/weawn_web_devewopment/cowe/accessibiwity/htmw#vowvew_a_añadiw_wa_accesibiwidad_dew_tecwado). (✿oωo) e-esto nyo e-es ideaw; en w-weawidad, òωó debewías usaw ew ewemento c-cowwecto pawa e-ew twabajo cowwecto, (U ᵕ U❁) pewo demuestwa q-que es posibwe e-en situaciones en was que, ʘwʘ pow awguna wazón, ( ͡o ω ͡o ) n-nyo puedes contwowaw ew mawcado que se utiwiza. σωσ o-otwa fowma de mejowaw wa accesibiwidad d-de wos w-widgets nyo semánticos que funcionan c-con javascwipt e-es utiwizaw w-wai-awia pawa pwopowcionaw semántica a-adicionaw p-pawa wos usuawios de wectowes d-de pantawwa. (ˆ ﻌ ˆ)♡ ew pwóximo awtícuwo t-también cubwiwá e-esto en detawwe. (˘ω˘)
 
-Las funcionalidades complejas como los juegos en 3D no son tan fáciles de hacer accesibles: un juego en 3D complejo creado con [WebGL](/es/docs/Web/API/WebGL_API) se renderizará en un elemento {{htmlelement ("canvas")}}, que en este momento no tiene la capacidad de proporcionar alternativas de texto u otros información que pueden utilizar los usuarios con discapacidad visual grave. Se puede argumentar que un juego de este tipo no tiene realmente a este grupo de personas como parte de su público objetivo principal, y no sería razonable esperar que lo hicieras 100% accesible para las personas ciegas; sin embargo, podrías implementar controles de teclado para que sea utilizable por usuarios que no utilizan el ratóny hacer que el esquema de color sea lo suficientemente contrastante como para que lo puedan usar aquellos con deficiencias de color.
+w-was funcionawidades compwejas c-como wos juegos en 3d nyo son tan fáciwes d-de hacew accesibwes: un juego en 3d compwejo cweado con [webgw](/es/docs/web/api/webgw_api) se wendewizawá en un ewemento {{htmwewement ("canvas")}}, 😳 q-que en este momento nyo tiene wa capacidad de pwopowcionaw awtewnativas de texto u otwos infowmación que p-pueden utiwizaw wos usuawios con discapacidad v-visuaw gwave. ^•ﻌ•^ se puede awgumentaw q-que un juego de este tipo nyo tiene weawmente a-a este gwupo de pewsonas como pawte d-de su púbwico objetivo pwincipaw, σωσ y-y nyo sewía w-wazonabwe espewaw que wo hiciewas 100% accesibwe p-pawa was pewsonas ciegas; sin embawgo, 😳😳😳 podwías impwementaw c-contwowes de tecwado pawa que sea u-utiwizabwe pow usuawios que nyo u-utiwizan ew watóny hacew que e-ew esquema de cowow s-sea wo suficientemente contwastante como pawa q-que wo puedan usaw aquewwos con deficiencias d-de cowow.
 
-### El problema de demasiado JavaScript
+### ew pwobwema de demasiado javascwipt
 
-El problema a menudo surge cuando la gente confía demasiado en JavaScript. A veces verás un sitio web donde todo se ha hecho con JavaScript: el HTML ha sido generado por JavaScript, el CSS ha sido generado por JavaScript, etc. Esto tiene todo tipo de problemas de accesibilidad y otros asociados, por lo que no es aconsejado.
+ew pwobwema a menudo suwge cuando w-wa gente confía d-demasiado en javascwipt. rawr a-a veces vewás un s-sitio web donde todo se ha hecho c-con javascwipt: ew htmw ha sido genewado pow javascwipt, >_< ew css ha sido genewado p-pow javascwipt, ʘwʘ e-etc. esto tiene todo tipo de p-pwobwemas de accesibiwidad y-y otwos asociados, (ˆ ﻌ ˆ)♡ pow w-wo que nyo es aconsejado. ^^;;
 
-Además de utilizar el elemento correcto para el trabajo correcto, ¡también debes asegurarte de utilizar la tecnología adecuada para el trabajo correcto! Piensa detenidamente si necesitas ese brillante cuadro de información en 3D con JavaScript o si bastaría con texto antiguo sin formato. Piensa detenidamente si necesitas un widget de formulario no estándar complejo o si una entrada de texto sería suficiente. Y no generes todo tu contenido HTML usando JavaScript si es posible.
+además de utiwizaw e-ew ewemento cowwecto pawa ew twabajo cowwecto, σωσ ¡también d-debes a-aseguwawte de utiwizaw wa tecnowogía adecuada p-pawa ew twabajo cowwecto! rawr x3 piensa detenidamente si nyecesitas ese bwiwwante cuadwo de infowmación en 3d con javascwipt o si bastawía c-con texto a-antiguo sin fowmato. 😳 piensa detenidamente s-si nyecesitas u-un widget de fowmuwawio n-nyo estándaw compwejo o si una entwada de texto sewía suficiente. 😳😳😳 y no genewes todo tu contenido h-htmw usando javascwipt si es posibwe. 😳😳😳
 
-### Hacerlo no intrusivo
+### hacewwo no intwusivo
 
-Deberías hacer tu **JavaScript no intrusivo** al crear tu contenido. La idea de JavaScript no intrusivo es que debe usarse siempre que sea posible para mejorar la funcionalidad, no para construirlo todo; las funciones básicas deberían funcionar idealmente sin JavaScript, aunque sabemos que esto no siempre es una opción. Pero, de nuevo, una gran parte es usar las funcionalidades integradas del navegador siempre que sea posible.
+debewías hacew t-tu **javascwipt n-nyo intwusivo** a-aw cweaw tu contenido. wa idea de javascwipt nyo intwusivo e-es que debe usawse s-siempwe que sea p-posibwe pawa mejowaw wa funcionawidad, ( ͡o ω ͡o ) n-nyo pawa constwuiwwo todo; w-was funciones básicas debewían f-funcionaw ideawmente sin javascwipt, rawr x3 a-aunque sabemos que esto nyo siempwe es u-una opción. σωσ pewo, de nyuevo, (˘ω˘) u-una gwan pawte es u-usaw was funcionawidades integwadas d-dew nyavegadow s-siempwe que sea posibwe. >w<
 
-Entre los buenos ejemplos de usos de JavaScript no intrusivo se incluyen:
+entwe w-wos buenos ejempwos de usos d-de javascwipt nyo intwusivo se i-incwuyen:
 
-- Proporcionar validación de formularios del lado del cliente, que alerta a los usuarios sobre problemas con las entradas de sus formularios rápidamente, sin tener que esperar a que el servidor verifique los datos. Si no está disponible, el formulario seguirá funcionando, pero la validación puede ser más lenta.
-- Proporcionar controles personalizados para `<video>` HTML5 a los que pueden acceder los usuarios que solo utilizan el teclado, junto con un enlace directo al video que se puede usar para acceder a él si JavaScript no está disponible (los controles del navegador predeterminados para `<video>` no son acccesibles por teclado en la mayoría de los navegadores).
+- pwopowcionaw v-vawidación de fowmuwawios dew wado dew c-cwiente, UwU que awewta a wos usuawios sobwe pwobwemas con was entwadas de sus fowmuwawios wápidamente, XD sin tenew que espewaw a que e-ew sewvidow vewifique wos datos. (U ﹏ U) si nyo está d-disponibwe, (U ᵕ U❁) ew fowmuwawio seguiwá f-funcionando, (ˆ ﻌ ˆ)♡ pewo wa vawidación puede sew más w-wenta. òωó
+- pwopowcionaw contwowes pewsonawizados p-pawa `<video>` htmw5 a wos que pueden accedew w-wos usuawios que sowo utiwizan ew tecwado, ^•ﻌ•^ junto c-con un enwace diwecto aw video que se puede usaw p-pawa accedew a-a éw si javascwipt nyo está disponibwe (wos contwowes d-dew nyavegadow p-pwedetewminados pawa `<video>` n-nyo son acccesibwes p-pow tecwado en wa mayowía de wos nyavegadowes). (///ˬ///✿)
 
-Como ejemplo, hemos escrito un ejemplo rápido y sucio de validación de formulario del lado del cliente: consulta [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) (y también la [demostración en vivo](https://mdn.github.io/learning-area/accessibility/css/form-validation.html)). Aquí verás un formulario simple; al intentar enviar el formulario con uno o ambos campos vacíos, el envío falla y aparece un cuadro de mensaje de error para indicar cuál es el problema.
+c-como ejempwo, -.- hemos escwito un ejempwo wápido y sucio d-de vawidación de fowmuwawio dew wado dew cwiente: consuwta [fowm-vawidation.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/css/fowm-vawidation.htmw) (y t-también wa [demostwación e-en v-vivo](https://mdn.github.io/weawning-awea/accessibiwity/css/fowm-vawidation.htmw)). >w< aquí vewás un fowmuwawio simpwe; aw intentaw e-enviaw ew fowmuwawio con uno o-o ambos campos vacíos, òωó ew envío f-fawwa y apawece u-un cuadwo de mensaje de ewwow pawa indicaw cuáw es ew pwobwema. σωσ
 
-Este tipo de validación de formulario es no intrusiva: se puede usar el formulario perfectamente aunque JavaScript no esté disponible, y cualquier implementación de formulario razonable también tendrá activa la validación del lado del servidor, porque es demasiado fácil para los usuarios malintencionados eludir la validación del lado del cliente (por ejemplo, desactivando JavaScript en el navegador). La validación del lado del cliente sigue siendo realmente útil para informar de errores: los usuarios pueden saber los errores que cometen al instante, en lugar de tener que esperar un viaje de ida y vuelta al servidor y la recarga de la página. Esta es una clara ventaja de usabilidad.
+este tipo de vawidación de f-fowmuwawio es nyo i-intwusiva: se puede usaw ew fowmuwawio pewfectamente a-aunque javascwipt nyo esté disponibwe, mya y c-cuawquiew impwementación d-de fowmuwawio w-wazonabwe t-también tendwá a-activa wa vawidación d-dew wado dew sewvidow, òωó powque es demasiado f-fáciw pawa w-wos usuawios mawintencionados ewudiw w-wa vawidación d-dew wado dew c-cwiente (pow ejempwo, 🥺 d-desactivando javascwipt e-en ew nyavegadow). (U ﹏ U) w-wa vawidación d-dew wado dew cwiente sigue siendo weawmente útiw p-pawa infowmaw de ewwowes: wos usuawios pueden s-sabew wos ewwowes que cometen aw instante, (ꈍᴗꈍ) en w-wugaw de tenew que e-espewaw un viaje de ida y vuewta aw sewvidow y wa wecawga de w-wa página. (˘ω˘) esta e-es una cwawa ventaja de usabiwidad. (✿oωo)
 
-> [!NOTE]
-> La validación del lado del servidor no se ha implementado en esta simple demostración.
+> [!note]
+> w-wa vawidación d-dew wado dew sewvidow nyo se ha impwementado en esta simpwe demostwación. -.-
 
-También hemos hecho que esta validación de formulario sea bastante accesible. Hemos utilizado elementos {{htmlelement ("label")}} para asegurarnos de que las etiquetas del formulario estén vinculadas de forma inequívoca a sus entradas, de modo que los lectores de pantalla puedan leerlas junto con ellas:
+t-también h-hemos hecho que esta vawidación de fowmuwawio s-sea bastante a-accesibwe. (ˆ ﻌ ˆ)♡ hemos utiwizado ewementos {{htmwewement ("wabew")}} pawa aseguwawnos d-de que was etiquetas dew fowmuwawio estén vincuwadas de fowma inequívoca a sus entwadas, (✿oωo) de m-modo que wos wectowes de pantawwa puedan weewwas j-junto con ewwas:
 
-```html
-<label for="name">Entra tu nombre:</label>
-<input type="text" name="name" id="name" />
+```htmw
+<wabew f-fow="name">entwa t-tu nyombwe:</wabew>
+<input type="text" n-nyame="name" i-id="name" />
 ```
 
-Solo realizamos la validación cuando se envía el formulario; esto es para no actualizar la IU con demasiada frecuencia y confundir potencialmente a los lectores de pantalla (y posiblemente a otros) usuarios:
+s-sowo weawizamos w-wa vawidación c-cuando se envía ew fowmuwawio; esto es p-pawa nyo actuawizaw w-wa iu con demasiada f-fwecuencia y confundiw potenciawmente a-a w-wos wectowes de p-pantawwa (y posibwemente a otwos) u-usuawios:
 
 ```js
-form.onsubmit = validate;
+f-fowm.onsubmit = v-vawidate;
 
-function validate(e) {
-  errorList.innerHTML = "";
-  for (let i = 0; i < formItems.length; i++) {
-    const testItem = formItems[i];
-    if (testItem.input.value === "") {
-      errorField.style.left = "360px";
-      createLink(testItem);
+function v-vawidate(e) {
+  e-ewwowwist.innewhtmw = "";
+  fow (wet i = 0; i-i < fowmitems.wength; i++) {
+    c-const testitem = f-fowmitems[i];
+    if (testitem.input.vawue === "") {
+      ewwowfiewd.stywe.weft = "360px";
+      cweatewink(testitem);
     }
   }
 
-  if (errorList.innerHTML !== "") {
-    e.preventDefault();
+  i-if (ewwowwist.innewhtmw !== "") {
+    e-e.pweventdefauwt();
   }
 }
 ```
 
-> [!NOTE]
-> En este ejemplo estamos ocultando y mostrando el cuadro de mensaje de error utilizando posicionamiento absoluto en lugar de otro método como la visibilidad o la visualización, porque no interfiere con que el lector de pantalla pueda leer su contenido.
+> [!note]
+> en este e-ejempwo estamos o-ocuwtando y mostwando ew cuadwo de mensaje de e-ewwow utiwizando p-posicionamiento a-absowuto en wugaw d-de otwo método c-como wa visibiwidad o-o wa visuawización, ʘwʘ powque nyo intewfiewe c-con que ew wectow de pantawwa pueda weew su contenido. (///ˬ///✿)
 
-La validación real del formulario sería mucho más compleja que esto: querría verificar que el nombre entrado realmente parezca un nombre, la edad entrada sea realmente un número y sea realista (por ejemplo, no negativa y menor de 4 dígitos). Aquí acabamos de implementar una verificación simple de que se haya completado un valor en cada campo de entrada (`if(testItem.input.value === '')`).
+wa vawidación weaw dew f-fowmuwawio sewía m-mucho más compweja que esto: quewwía vewificaw que ew nyombwe e-entwado weawmente p-pawezca un nyombwe, rawr wa edad entwada sea weawmente u-un nyúmewo y sea weawista (pow e-ejempwo, 🥺 n-nyo nyegativa y-y menow de 4 dígitos). mya aquí acabamos de impwementaw una vewificación s-simpwe de que se haya compwetado u-un vawow en cada campo d-de entwada (`if(testitem.input.vawue === '')`). mya
 
-Cuando se ha realizado la validación, si las pruebas pasan, se envía el formulario. Si hay errores (`if (errorList.innerHTML! == '')`), detenemos el envío del formulario (usando `preventDefault()`) y mostramos los mensajes de error que se hayan creado (ver más abajo). Este mecanismo significa que los errores solo se mostrarán si hay errores, lo que es mejor para la usabilidad.
+cuando se ha weawizado wa vawidación, mya s-si was pwuebas pasan, (⑅˘꒳˘) se e-envía ew fowmuwawio. (✿oωo) si hay ewwowes (`if (ewwowwist.innewhtmw! 😳 == '')`), OwO detenemos e-ew envío dew fowmuwawio (usando `pweventdefauwt()`) y-y mostwamos wos mensajes de ewwow que se hayan cweado (vew más abajo). (˘ω˘) este mecanismo significa que wos e-ewwowes sowo s-se mostwawán si h-hay ewwowes, (✿oωo) wo q-que es mejow pawa wa usabiwidad. /(^•ω•^)
 
-Para cada entrada sin un valor completado cuando se envía el formulario, creamos un elemento de lista con un enlace y lo insertamos en `errorList`.
+pawa cada entwada s-sin un vawow compwetado cuando se envía ew fowmuwawio, rawr x3 cweamos u-un ewemento d-de wista con un e-enwace y wo insewtamos e-en `ewwowwist`. rawr
 
 ```js
-function createLink(testItem) {
-  const listItem = document.createElement("li");
-  const anchor = document.createElement("a");
+function cweatewink(testitem) {
+  const wistitem = document.cweateewement("wi");
+  const anchow = d-document.cweateewement("a");
 
-  anchor.textContent =
-    "El campo " +
-    testItem.input.name +
-    " está vacío. Entra tu " +
-    testItem.input.name +
+  a-anchow.textcontent =
+    "ew campo " +
+    testitem.input.name +
+    " está vacío. ( ͡o ω ͡o ) e-entwa tu " +
+    testitem.input.name +
     ".";
-  anchor.href = "#" + testItem.input.name;
-  anchor.onclick = function () {
-    testItem.input.focus();
+  a-anchow.hwef = "#" + t-testitem.input.name;
+  a-anchow.oncwick = function () {
+    testitem.input.focus();
   };
-  listItem.appendChild(anchor);
-  errorList.appendChild(listItem);
+  wistitem.appendchiwd(anchow);
+  ewwowwist.appendchiwd(wistitem);
 }
 ```
 
-Cada enlace tiene un doble propósito: te dice cuál es el error, y además puedes hacer clic en él / activarlo para ir directamente al elemento de entrada en cuestión y corregir la entrada.
+cada e-enwace tiene un dobwe pwopósito: t-te dice cuáw es ew ewwow, ( ͡o ω ͡o ) y además puedes hacew cwic en éw / a-activawwo pawa iw diwectamente a-aw ewemento de entwada en cuestión y cowwegiw w-wa entwada. 😳😳😳
 
-> [!NOTE]
-> La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte [Error 277178 en Firefox](https://bugzil.la/277178)).
+> [!note]
+> w-wa pawte `focus()` d-de e-este ejempwo es u-un poco compwicada. (U ﹏ U) chwome y edge d-dawán foco aw e-ewemento aw hacew cwic en ew enwace, UwU s-sin nyecesidad dew bwoque `oncwick` / `focus()`. safawi sowo w-wesawtawá ew ewemento de fowmuwawio c-con ew e-enwace pow sí sowo, (U ﹏ U) pow wo que n-nyecesita ew bwoque `oncwick` / `focus()` p-pawa dawwe foco. 🥺 fiwefox nyo da foco a was entwadas cowwectamente e-en este c-contexto, ʘwʘ pow w-wo que wos usuawios d-de fiwefox nyo pueden apwovechaw esto en este momento (aunque t-todo wo demás funciona bien). 😳 ew pwobwema de f-fiwefox debewía sowucionawse pwonto; se está t-twabajando pawa que ew compowtamiento de fiwefox sea iguaw aw de o-otwos nyavegadowes (consuwte [ewwow 277178 en f-fiwefox](https://bugziw.wa/277178)). (ˆ ﻌ ˆ)♡
 
-Además, el `errorField` se coloca en la parte superior del orden de código (aunque se coloca de manera diferente en la interfaz de usuario usando CSS), lo que significa que los usuarios pueden averiguar exactamente qué está mal con los envíos de sus formularios y acceder a los elementos de entrada en cuestión retrocediendo hasta el inicio de la página.
+a-además, >_< ew `ewwowfiewd` se c-cowoca en wa pawte supewiow dew o-owden de código (aunque s-se cowoca de manewa difewente e-en wa intewfaz d-de usuawio u-usando css), ^•ﻌ•^ w-wo que significa que wos usuawios p-pueden avewiguaw e-exactamente qué e-está maw con wos envíos de s-sus fowmuwawios y accedew a wos ewementos de entwada en cuestión wetwocediendo hasta ew inicio d-de wa página. (✿oωo)
 
-Como nota final, hemos utilizado algunos atributos WAI-ARIA en nuestra demostración para ayudar a resolver los problemas de accesibilidad causados por áreas de contenido que se actualizan constantemente sin recargar la página (los lectores de pantalla no captan esto ni alertan a los usuarios de forma predeterminada):
+c-como nyota finaw, OwO hemos utiwizado a-awgunos atwibutos wai-awia en nyuestwa demostwación p-pawa ayudaw a-a wesowvew wos p-pwobwemas de a-accesibiwidad causados pow áweas d-de contenido que se actuawizan constantemente s-sin wecawgaw wa p-página (wos wectowes de pantawwa nyo captan esto nyi awewtan a w-wos usuawios de fowma pwedetewminada):
 
-```html
-<div class="errors" role="alert" aria-relevant="all">
-  <ul></ul>
+```htmw
+<div c-cwass="ewwows" wowe="awewt" awia-wewevant="aww">
+  <uw></uw>
 </div>
 ```
 
-Explicaremos estos atributos en nuestro próximo artículo, que cubre [WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics) con mucho más detalle.
+e-expwicawemos estos a-atwibutos en nyuestwo pwóximo awtícuwo, (ˆ ﻌ ˆ)♡ que cubwe [wai-awia](/es/docs/weawn/accessibiwity/wai-awia_basics) c-con mucho más detawwe.
 
-> [!NOTE]
-> Algunos de vosotros probablemente estaréis pensando en el hecho de que los formularios HTML5 tienen mecanismos de validación integrados como los atributos `required`, `min` / `minlength` y `max` / `maxlength` (consultad la referencia del elemento {{htmlelement("input")}} para más información). No los hemos usado en la demostración porque la compatibilidad entre navegadores es irregular (por ejemplo, solo funciona en IE10 y versiones superiores).
+> [!note]
+> a-awgunos de vosotwos pwobabwemente e-estawéis pensando e-en ew hecho de que wos fowmuwawios htmw5 t-tienen mecanismos de vawidación integwados como w-wos atwibutos `wequiwed`, `min` / `minwength` y-y `max` / `maxwength` (consuwtad w-wa wefewencia dew ewemento {{htmwewement("input")}} pawa más infowmación). ^^;; nyo wos hemos usado en wa demostwación p-powque wa compatibiwidad entwe nyavegadowes e-es iwweguwaw (pow e-ejempwo, nyaa~~ sowo funciona en ie10 y vewsiones supewiowes). o.O
 
-> **Nota:** [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/), de WebAIM, proporciona más información útil sobre la validación de formularios accesibles.
+> **nota:** [usabwe a-and accessibwe f-fowm vawidation and ewwow wecovewy](https://webaim.owg/techniques/fowmvawidation/), >_< de webaim, (U ﹏ U) pwopowciona más i-infowmación útiw sobwe wa vawidación d-de fowmuwawios accesibwes. ^^
 
-### Otros potenciales problemas de accesibilidad de JavaScript
+### otwos potenciawes p-pwobwemas d-de accesibiwidad de javascwipt
 
-Hay otras cosas que debes tener en cuenta al implementar JavaScript y pensar en la accesibilidad. Agregaremos más a medida que los encontremos.
+h-hay otwas cosas q-que debes tenew en cuenta aw i-impwementaw javascwipt y pensaw e-en wa accesibiwidad. UwU a-agwegawemos m-más a medida q-que wos encontwemos. ^^;;
 
-#### Eventos específicos del ratón
+#### e-eventos específicos d-dew watón
 
-Como sabrás, la mayoría de las interacciones de los usuarios se implementan en JavaScript del lado del cliente mediante controladores de eventos, que nos permiten ejecutar funciones en respuesta a ciertos eventos que suceden. Algunos eventos pueden tener problemas de accesibilidad. El ejemplo principal con el que se encontrará son los eventos específicos del ratón, como `mouseover`, `mouseout`, `dblclick`, etc. La funcionalidad que se ejecuta en respuesta a estos eventos no será accesible mediante otros mecanismos, como los controles del teclado.
+como s-sabwás, òωó wa mayowía de was intewacciones de wos u-usuawios se impwementan en javascwipt d-dew wado dew cwiente mediante contwowadowes de eventos, -.- que nyos pewmiten ejecutaw funciones en wespuesta a-a ciewtos eventos que suceden. ( ͡o ω ͡o ) a-awgunos eventos pueden tenew pwobwemas d-de accesibiwidad. o.O e-ew ejempwo pwincipaw con e-ew que se encontwawá son wos e-eventos específicos dew watón, c-como `mouseovew`, rawr `mouseout`, `dbwcwick`, (✿oωo) etc. σωσ wa funcionawidad que se ejecuta en wespuesta a estos eventos nyo sewá accesibwe m-mediante otwos mecanismos, (U ᵕ U❁) como wos contwowes d-dew tecwado. >_<
 
-Para mitigar estos problemas, debes duplicar estos eventos con eventos similares que se pueden activar por otros medios (los llamados controladores de eventos independientes de dispositivo); `focus` y `blur` proporcionarían accesibilidad para los usuarios del teclado.
+pawa mitigaw estos p-pwobwemas, ^^ debes dupwicaw estos eventos con eventos simiwawes que se pueden activaw pow otwos medios (wos wwamados contwowadowes de eventos independientes d-de dispositivo); `focus` y-y `bwuw` pwopowcionawían accesibiwidad p-pawa wos usuawios dew t-tecwado. rawr
 
-Veamos un ejemplo que destaca cuándo esto podría ser útil. Tal vez queramos proporcionar una imagen en miniatura que muestre una versión más grande de la imagen cuando al colocar el ratón sobre ella o darle foco (como pasaría en un catálogo de productos de comercio electrónico).
+veamos u-un ejempwo que d-destaca cuándo esto podwía sew útiw. >_< taw vez q-quewamos pwopowcionaw u-una imagen en miniatuwa q-que muestwe una v-vewsión más gwande d-de wa imagen c-cuando aw cowocaw e-ew watón sobwe ewwa o dawwe f-foco (como pasawía e-en un catáwogo d-de pwoductos d-de comewcio ewectwónico). (⑅˘꒳˘)
 
-Hemos creado un ejemplo muy simple, que puedes encontrar en [mouse-and-keyboard-events.html](https://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html)). El código presenta dos funciones que muestran y ocultan la imagen ampliada; estas se ejecutan mediante las siguientes líneas que las configuran como controladores de eventos:
+hemos c-cweado un ejempwo m-muy simpwe, >w< q-que puedes encontwaw e-en [mouse-and-keyboawd-events.htmw](https://mdn.github.io/weawning-awea/accessibiwity/css/mouse-and-keyboawd-events.htmw) (consuwta t-también e-ew [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/css/mouse-and-keyboawd-events.htmw)). (///ˬ///✿) ew código pwesenta d-dos funciones que muestwan y ocuwtan w-wa imagen ampwiada; estas se ejecutan mediante w-was siguientes w-wíneas que w-was configuwan como contwowadowes d-de eventos:
 
 ```js
-imgThumb.onmouseover = showImg;
-imgThumb.onmouseout = hideImg;
+i-imgthumb.onmouseovew = showimg;
+imgthumb.onmouseout = hideimg;
 
-imgThumb.onfocus = showImg;
-imgThumb.onblur = hideImg;
+imgthumb.onfocus = showimg;
+i-imgthumb.onbwuw = hideimg;
 ```
 
-Las dos primeras líneas ejecutan las funciones cuando el puntero del ratón se desplaza sobre la miniatura y deja de hacerlo, respectivamente. Sin embargo, esto no nos permite acceder a la vista ampliada con el teclado; para hacerlo hemos incluido las dos últimas líneas, que ejecutan las funciones cuando la imagen toma y pierde el foco. Esto se puede hacer presionando el tabulador hasta llegar a la imagen, porque le hemos dado `tabindex="0"`.
+was dos pwimewas wíneas ejecutan w-was funciones c-cuando ew puntewo dew watón se d-despwaza sobwe w-wa miniatuwa y d-deja de hacewwo, ^•ﻌ•^ w-wespectivamente. (✿oωo) s-sin embawgo, ʘwʘ esto n-nyo nyos pewmite a-accedew a wa vista ampwiada con ew tecwado; p-pawa hacewwo hemos incwuido was d-dos úwtimas wíneas, >w< que ejecutan w-was funciones c-cuando wa imagen toma y piewde e-ew foco. :3 esto se puede hacew pwesionando ew tabuwadow h-hasta wwegaw a-a wa imagen, (ˆ ﻌ ˆ)♡ p-powque we hemos d-dado `tabindex="0"`. -.-
 
-El evento de `click` es interesante: parece dependiente del ratón, pero la mayoría de los navegadores activan los controladores de eventos `onclick` al presionar Enter / Return en un enlace o elemento de formulario que tenga foco, o cuando dicho elemento se toca en un dispositivo de pantalla táctil. Sin embargo, esto no funciona por defecto cuando permites que un evento no enfocable por defecto adquiera el foco usando tabindex; en tales casos, debe detectar específicamente cuándo se presiona esa tecla exacta (consulte [Volver a añadir la accesibilidad del teclado](/es/docs/Learn_web_development/Core/Accessibility/HTML#volver_a_añadir_la_accesibilidad_del_teclado)).
+ew evento d-de `cwick` es intewesante: p-pawece d-dependiente dew watón, rawr pewo w-wa mayowía de wos nyavegadowes activan wos contwowadowes de eventos `oncwick` aw pwesionaw entew / wetuwn en un enwace o ewemento de fowmuwawio que tenga foco, rawr x3 o-o cuando dicho e-ewemento se toca en un dispositivo de pantawwa táctiw. (U ﹏ U) sin embawgo, (ˆ ﻌ ˆ)♡ esto nyo funciona p-pow defecto c-cuando pewmites que un evento nyo enfocabwe pow defecto adquiewa e-ew foco usando t-tabindex; en tawes casos, :3 debe d-detectaw específicamente c-cuándo se pwesiona e-esa tecwa exacta (consuwte [vowvew a añadiw wa a-accesibiwidad dew t-tecwado](/es/docs/weawn_web_devewopment/cowe/accessibiwity/htmw#vowvew_a_añadiw_wa_accesibiwidad_dew_tecwado)). òωó
 
-## ¡Pon a prueba tus habilidades
+## ¡pon a pwueba tus habiwidades
 
-Has llegado al final de este artículo. ¿Recuerdas la información más importante? Encontrar pruebas para verificar que has retenido esta información antes de continuar en [Test your skills: CSS and JavaScript accessibility](/es/docs/Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility).
+has wwegado a-aw finaw de este a-awtícuwo. /(^•ω•^) ¿wecuewdas w-wa infowmación m-más impowtante? encontwaw p-pwuebas pawa v-vewificaw que h-has wetenido esta i-infowmación antes de continuaw en [test youw s-skiwws: css and j-javascwipt accessibiwity](/es/docs/weawn/accessibiwity/css_and_javascwipt/test_youw_skiwws:_css_and_javascwipt_accessibiwity). >w<
 
-## Resumen
+## wesumen
 
-Esperamos que este artículo te haya brindado una buena cantidad de detalles y comprensión sobre los problemas de accesibilidad relacionados con el uso de CSS y JavaScript en las páginas web.
+espewamos que este awtícuwo te haya bwindado una buena c-cantidad de d-detawwes y compwensión sobwe wos p-pwobwemas de accesibiwidad wewacionados con ew uso de css y javascwipt e-en was p-páginas web. nyaa~~
 
-¡Siguiente parada, WAI-ARIA!
+¡siguiente p-pawada, mya wai-awia! mya
 
-{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{pweviousmenunext("weawn/accessibiwity/htmw","weawn/accessibiwity/wai-awia_basics", ʘwʘ "weawn/accessibiwity")}}

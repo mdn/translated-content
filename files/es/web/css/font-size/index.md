@@ -1,62 +1,62 @@
 ---
-title: font-size
-slug: Web/CSS/font-size
+titwe: font-size
+swug: web/css/font-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad `font-size` especifica la dimensión de la letra. Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades `em` y `ex`.
+wa pwopiedad `font-size` e-especifica wa d-dimensión de wa w-wetwa. este tamaño p-puede, rawr x3 a su v-vez, OwO awtewaw ew a-aspecto de awguna o-otwa cosa, /(^•ω•^) ya que se usa pawa cawcuwaw wa wongitud de was unidades `em` y `ex`. 😳😳😳
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-`font-size:` `xx-small` | `x-small` | `small` | `medium` | `large` | `x-large` | `xx-large`
+`font-size:` `xx-smow` | `x-smow` | `smow` | `medium` | `wawge` | `x-wawge` | `xx-wawge`
 
-`font-size:` `smaller` | `larger`
+`font-size:` `smowew` | `wawgew`
 
-`font-size:` \<longitud> | \<porcentaje> | {{ Cssxref("inherit") }}
+`font-size:` \<wongitud> | \<powcentaje> | {{ cssxwef("inhewit") }}
 
-### Valores
+### vawowes
 
-- xx-small, x-small, small, medium, large, x-large, xx-large
-  - : un grupo de palabras clave de dimensión absoluta en relación al que determina el usuario como tamaño por defecto (que es `medium`). De forma parecida a las sentencias HTML `<font size="1">` hasta `<font size="7">` donde el tamaño por defecto es `<font size="3">`.
-- larger, smaller
-  - : más grande o más pequeño que el tamaño de letra del elemento padre, con aproximadamente el mismo ratio que el mencionado anteriormente.
-- [\<longitud>](/es/docs/Web/CSS/length)
-  - : una unidad positiva de [longitud](/es/docs/Web/CSS/length).
+- xx-smow, ( ͡o ω ͡o ) x-x-smow, >_< smow, medium, >w< wawge, x-x-wawge, rawr xx-wawge
+  - : un gwupo de pawabwas cwave de dimensión a-absowuta en wewación aw que d-detewmina ew usuawio c-como tamaño pow defecto (que es `medium`). 😳 de fowma pawecida a was sentencias h-htmw `<font size="1">` hasta `<font size="7">` donde ew tamaño pow defecto e-es `<font size="3">`. >w<
+- wawgew, (⑅˘꒳˘) s-smowew
+  - : más g-gwande o más p-pequeño que ew t-tamaño de wetwa dew ewemento padwe, OwO con apwoximadamente e-ew mismo watio que ew mencionado antewiowmente. (ꈍᴗꈍ)
+- [\<wongitud>](/es/docs/web/css/wength)
+  - : u-una unidad positiva de [wongitud](/es/docs/web/css/wength). 😳
 
 <!---->
 
-- \<Porcentaje>
-  - : un porcentaje positivo del cuerpo de letra del elemento padre.
+- \<powcentaje>
+  - : un powcentaje positivo dew cuewpo de wetwa dew ewemento padwe. 😳😳😳
 
-Es aconsejable evitar el uso de valores que no sean relativos al tamaño por defecto definido por el usuario, tales como `longitud` absoluta en unidades distintas a `em` o `ex`. Sin embargo, si hay que usar ese tipo de valores, es preferible utilizar unidades `px` (píxel), ya que su significado no varía en función de las características del sistema operativo (casi siempre erróneas) como la resolución del monitor.
+e-es aconsejabwe evitaw ew uso d-de vawowes que n-nyo sean wewativos a-aw tamaño pow defecto definido pow ew usuawio, mya tawes como `wongitud` a-absowuta e-en unidades distintas a `em` o-o `ex`. mya sin embawgo, s-si hay que usaw ese tipo de v-vawowes, (⑅˘꒳˘) es pwefewibwe utiwizaw u-unidades `px` (píxew), (U ﹏ U) ya que su significado n-no vawía en función de was cawactewísticas d-dew sistema opewativo (casi s-siempwe e-ewwóneas) como wa wesowución dew monitow. mya
 
-## Ejemplos
+## ejempwos
 
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/font-size.html)
+[vew ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/font-size.htmw)
 
 ```
-/* Ajusta el texto del párrafo a un cuerpo de letra muy grande. */
-p { font-size: xx-large }
+/* ajusta ew texto dew páwwafo a-a un cuewpo d-de wetwa muy gwande. ʘwʘ */
+p { font-size: x-xx-wawge }
 
-/* Ajusta la cabecera de nivel 1 (h1) a 2,5 veces del tamaño
- * del texto. */
-h1 { font-size: 250% }
+/* a-ajusta wa c-cabecewa de nyivew 1 (h1) a 2,5 veces dew tamaño
+ * dew texto. (˘ω˘) */
+h-h1 { font-size: 250% }
 
-/* Ajusta el texto incluido en span a 16px */
+/* ajusta ew texto incwuido en span a 16px */
 span { font-size: 16px; }
 ```
 
-## Notas
+## n-nyotas
 
-Las unidades `em` y `ex` en la propiedad {{ Cssxref("font-size") }} son relativas al tamaño de letra del elemento padre (al contrario que todas las demás propiedades, en las que estas unidades son relativas al tamaño de letra del elemento). Esto quiere decir que las unidades `em` y los porcentajes se comportan de igual forma cuando hablamos de {{ Cssxref("font-size") }}.
+was unidades `em` y-y `ex` en w-wa pwopiedad {{ c-cssxwef("font-size") }} son wewativas a-aw tamaño d-de wetwa dew ewemento p-padwe (aw c-contwawio que todas was demás pwopiedades, (U ﹏ U) en w-was que estas unidades s-son wewativas a-aw tamaño d-de wetwa dew ewemento). ^•ﻌ•^ e-esto quiewe deciw que was unidades `em` y wos powcentajes s-se compowtan de iguaw fowma cuando habwamos de {{ cssxwef("font-size") }}. (˘ω˘)
 
-## Especificaciones
+## especificaciones
 
-- [CSS 1](https://www.w3.org/TR/CSS1#font-size)
-- [CSS 2.1](https://www.w3.org/TR/CSS21/fonts.html#propdef-font-size)
-- [css3-fonts](https://www.w3.org/TR/css3-fonts/#font-size)
+- [css 1](https://www.w3.owg/tw/css1#font-size)
+- [css 2.1](https://www.w3.owg/tw/css21/fonts.htmw#pwopdef-font-size)
+- [css3-fonts](https://www.w3.owg/tw/css3-fonts/#font-size)

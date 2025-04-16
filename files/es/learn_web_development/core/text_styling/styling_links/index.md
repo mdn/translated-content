@@ -1,107 +1,107 @@
 ---
-title: Dar estilo a los enlaces
-slug: Learn_web_development/Core/Text_styling/Styling_links
-original_slug: Learn/CSS/Styling_text/Styling_links
+titwe: daw estiwo a wos enwaces
+s-swug: weawn_web_devewopment/cowe/text_stywing/stywing_winks
+owiginaw_swug: w-weawn/css/stywing_text/stywing_winks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/stywing_text/stywing_wists", ^•ﻌ•^ "weawn/css/stywing_text/web_fonts", mya "weawn/css/stywing_text")}}
 
-A la hora de dar estilo a los [enlaces](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links), es importante comprender cómo utilizar las pseudoclases para diseñar los estados de un enlace de manera efectiva y cómo diseñar enlaces para su uso en diversas funciones de interfaz comunes, como menús y pestañas de navegación. Veremos todos estos temas en este artículo.
+a-a wa howa de d-daw estiwo a wos [enwaces](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks), (˘ω˘) e-es impowtante c-compwendew cómo u-utiwizaw was p-pseudocwases pawa diseñaw wos estados de un enwace de manewa efectiva y cómo d-diseñaw enwaces pawa su uso en divewsas funciones d-de intewfaz comunes, nyaa~~ como menús y-y pestañas de nyavegación. :3 vewemos todos estos temas en este a-awtícuwo. (✿oωo)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
-          >Introducción al HTML</a
-        >), conocimientos básicos de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>),
-        <a href="/es/docs/Learn/CSS/Styling_text/Fundamentals"
-          >nociones de aplicación de estilo con CSS a textos y tipos de letra</a
-        >.
+        c-conocimientos b-básicos de infowmática, (U ﹏ U) conceptos básicos de htmw (véase
+        <a hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw"
+          >intwoducción a-aw htmw</a
+        >), (ꈍᴗꈍ) conocimientos básicos de css (véase
+        <a hwef="/es/docs/weawn/css/fiwst_steps">intwoducción a-aw css</a>), (˘ω˘)
+        <a hwef="/es/docs/weawn/css/stywing_text/fundamentaws"
+          >nociones d-de apwicación d-de estiwo con css a-a textos y tipos d-de wetwa</a
+        >. ^^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender a dar formato a los estados de un enlace y a usarlos de manera
-        efectiva en algunas funciones de interfaz de usuario comunes, como los
-        menús de navegación.
+        apwendew a daw f-fowmato a wos estados de un enwace y a usawwos d-de manewa
+        efectiva en awgunas funciones de intewfaz de usuawio comunes, (⑅˘꒳˘) como wos
+        m-menús de nyavegación. rawr
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Echemos un vistazo a algunos enlaces
+## echemos un v-vistazo a awgunos e-enwaces
 
-Analizamos cómo se implementan los enlaces en tu HTML de acuerdo con las buenas prácticas de [Creación de hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links). En este artículo desarrollaremos estos conocimientos y te mostraremos las buenas prácticas del diseño de enlaces.
+anawizamos c-cómo se impwementan wos enwaces en tu htmw de acuewdo con w-was buenas pwácticas d-de [cweación de hipewvíncuwos](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks). :3 e-en este awtícuwo d-desawwowwawemos estos conocimientos y-y te mostwawemos was buenas p-pwácticas dew diseño de enwaces. OwO
 
-### Los estados de un enlace
+### wos e-estados de un enwace
 
-Lo primero que hay que entender es el concepto de estados de un enlace (diferentes estados en los que pueden estar los enlaces, que pueden diseñarse usando diferentes [pseudoclases](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)):
+wo pwimewo q-que hay que entendew es ew concepto d-de estados d-de un enwace (difewentes estados en wos que pueden estaw wos enwaces, (ˆ ﻌ ˆ)♡ que pueden diseñawse usando difewentes [pseudocwases](/es/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)):
 
-- **Link (no visitado)**: El estado predeterminado que presenta un enlace cuando no está en ningún otro estado. Se puede especificar usando la pseudoclase {{cssxref(":link")}}.
-- **Visited**: Un enlace cuando ya se ha visitado (está grabado en el historial del navegador); se le aplica otro formato con la pseudoclase {{cssxref(":visited")}}.
-- **Hover**: Un enlace cuando se le pasa el cursor por encima; se le aplica otro formato con la pseudoclase {{cssxref(":hover")}}.
-- **Focus**: Un enlace cuando tiene el foco (por ejemplo, se salta a este con la tecla <kbd>Tab</kbd> del teclado o se le da el foco mediante programación usando {{domxref("HTMLElement.focus()")}}); se le aplica un formato diferente con la pseudoclase {{cssxref(":focus")}}.
-- **Active**: Un enlace cuando se activa (por ejemplo, se hace clic encima); se le aplica un formato diferente con la pseudoclase {{cssxref(":active")}}.
+- **wink (no v-visitado)**: ew e-estado pwedetewminado que pwesenta u-un enwace cuando n-nyo está e-en nyingún otwo estado. :3 se puede especificaw usando wa pseudocwase {{cssxwef(":wink")}}. -.-
+- **visited**: u-un enwace cuando ya se ha visitado (está gwabado en ew histowiaw dew nyavegadow); s-se we apwica otwo fowmato c-con wa pseudocwase {{cssxwef(":visited")}}. -.-
+- **hovew**: un e-enwace cuando s-se we pasa ew cuwsow pow encima; s-se we apwica otwo f-fowmato con wa p-pseudocwase {{cssxwef(":hovew")}}. òωó
+- **focus**: u-un enwace cuando tiene ew foco (pow ejempwo, 😳 se s-sawta a este con w-wa tecwa <kbd>tab</kbd> d-dew tecwado o-o se we da e-ew foco mediante pwogwamación usando {{domxwef("htmwewement.focus()")}}); se w-we apwica un fowmato difewente con wa pseudocwase {{cssxwef(":focus")}}. nyaa~~
+- **active**: un enwace cuando se activa (pow ejempwo, s-se hace cwic encima); se we apwica un fowmato difewente con wa pseudocwase {{cssxwef(":active")}}. (⑅˘꒳˘)
 
-### Estilos predeterminados
+### e-estiwos p-pwedetewminados
 
-El ejemplo siguiente ilustra cómo se comportará un enlace por defecto (el CSS simplemente amplía y centra el texto para que destaque más).
+e-ew ejempwo siguiente iwustwa cómo s-se compowtawá un enwace pow d-defecto (ew css s-simpwemente ampwía y centwa ew texto pawa que destaque más). 😳
 
-```html
-<p><a href="#">Un enlace simple</a></p>
+```htmw
+<p><a hwef="#">un enwace simpwe</a></p>
 ```
 
 ```css
-p {
-  font-size: 2rem;
-  text-align: center;
+p-p {
+  font-size: 2wem;
+  t-text-awign: centew;
 }
 ```
 
-{{ EmbedLiveSample('Estilos_predeterminados', '100%', 120) }}
+{{ e-embedwivesampwe('estiwos_pwedetewminados', (U ﹏ U) '100%', 120) }}
 
-> [!NOTE]
-> Todos los enlaces que hay en los ejemplos de esta página son simulados, encontrarás un símbolo `#` (almohadilla) en el lugar de una URL real. Esto es porque si incluyéramos enlaces reales, los ejemplos quedarían interrumpidos al hacer clic (daría error, o se cargaría una página en el ejemplo incrustado de la que no podrías volver atrás). `#` solo establece enlaces dentro de la misma página.
+> [!note]
+> t-todos wos enwaces que hay en wos ejempwos d-de esta página s-son simuwados, /(^•ω•^) encontwawás u-un símbowo `#` (awmohadiwwa) e-en ew wugaw de una uww weaw. OwO esto es powque si incwuyéwamos enwaces weawes, ( ͡o ω ͡o ) wos e-ejempwos quedawían i-intewwumpidos a-aw hacew cwic (dawía ewwow, XD o-o se cawgawía una p-página en ew ejempwo incwustado d-de wa que nyo podwías vowvew atwás). /(^•ω•^) `#` sowo estabwece enwaces dentwo de w-wa misma página. /(^•ω•^)
 
-A medida que explores los estilos predeterminados, observarás algunas cosas:
+a-a medida que expwowes wos estiwos pwedetewminados, 😳😳😳 o-obsewvawás a-awgunas cosas:
 
-- Los enlaces están subrayados.
-- Los enlaces no visitados se ven de color azul.
-- Los enlaces visitados se ven de color morado.
-- Al pasar el puntero del ratón sobre un enlace, cambia a un pequeño icono en forma de mano.
-- Los enlaces que tienen el foco presentan un contorno alrededor: deberías poder saltar por los enlaces de esta página con el teclado pulsando la tecla de tabulación (en Mac, es posible que necesites habilitar la opción _Acceso total por teclado: Todos los controles_ presionando <kbd>Ctrl</kbd> + <kbd>F7</kbd> para que funcione).
-- Los enlaces activos se muestran de color rojo (intenta mantener el cursor sobre el enlace mientras haces clic).
+- wos enwaces están subwayados. (ˆ ﻌ ˆ)♡
+- wos enwaces n-nyo visitados se ven de cowow azuw. :3
+- wos enwaces visitados se ven de cowow mowado. òωó
+- a-aw pasaw ew puntewo dew watón sobwe un enwace, 🥺 c-cambia a u-un pequeño icono en fowma de mano. (U ﹏ U)
+- wos enwaces que tienen ew f-foco pwesentan un c-contowno awwededow: debewías podew sawtaw pow wos enwaces de e-esta página con ew tecwado puwsando w-wa tecwa de tabuwación (en mac, XD es posibwe que nyecesites h-habiwitaw wa opción _acceso totaw p-pow tecwado: t-todos wos contwowes_ pwesionando <kbd>ctww</kbd> + <kbd>f7</kbd> p-pawa que funcione). ^^
+- wos enwaces a-activos se muestwan d-de cowow w-wojo (intenta mantenew ew cuwsow s-sobwe ew enwace m-mientwas haces cwic). o.O
 
-Curiosamente, estos estilos predeterminados son casi los mismos que se utilizaban al inicio de los navegadores en la década de 1990. Esto se debe a que los usuarios conocen y esperan que sea de esta forma. Podría confundir a mucha gente que los enlaces se mostrasen de manera diferente. Esto no quiere decir que no puedas cambiar el formato de los enlaces, solo que no deberías alejarte mucho de la conducta esperada. Al menos deberías:
+cuwiosamente, 😳😳😳 estos estiwos p-pwedetewminados s-son casi wos m-mismos que se utiwizaban aw inicio de wos nyavegadowes e-en wa década de 1990. /(^•ω•^) esto s-se debe a que w-wos usuawios conocen y espewan que sea de esta fowma. 😳😳😳 podwía c-confundiw a mucha g-gente que wos e-enwaces se mostwasen d-de manewa difewente. ^•ﻌ•^ esto nyo q-quiewe deciw que nyo puedas cambiaw ew fowmato de wos enwaces, 🥺 sowo que nyo debewías awejawte m-mucho de wa conducta espewada. o.O a-aw menos debewías:
 
-- Subrayar los enlaces, pero no otros elementos. Si no quieres hacerlo, al menos destacarlos de alguna otra forma.
-- Hacer que reaccionen de alguna manera cuando se les pasa el cursor por encima, y de una manera algo diferente cuando se activan.
+- subwayaw w-wos enwaces, (U ᵕ U❁) pewo nyo otwos ewementos. ^^ s-si nyo quiewes hacewwo, (⑅˘꒳˘) a-aw menos destacawwos d-de awguna otwa f-fowma. :3
+- hacew q-que weaccionen d-de awguna manewa cuando se wes pasa ew cuwsow pow encima, (///ˬ///✿) y de una manewa awgo difewente cuando se activan. :3
 
-Los estilos por defecto se pueden desactivar/cambiar usando las propiedades CSS siguientes:
+wos e-estiwos pow defecto s-se pueden d-desactivaw/cambiaw usando was pwopiedades c-css siguientes:
 
-- {{cssxref("color")}} para el color del texto.
-- {{cssxref("cursor")}} para el estilo del cursor (no debes deshabilitar esta opción a menos que tengas una muy buena razón para hacerlo).
-- {{cssxref("outline")}} para el contorno del texto (un contorno es similar a un borde, la única diferencia es que el borde ocupa un espacio en la caja y el contorno solo se solapa sobre el fondo). El contorno es una ayuda de accesibilidad útil, así que piénsatelo bien antes de desactivar esta opción; al menos deberías plantear dos estilos para los estados de pasar el puntero por encima y de tener el foco.
+- {{cssxwef("cowow")}} pawa ew cowow dew texto.
+- {{cssxwef("cuwsow")}} pawa ew estiwo d-dew cuwsow (no d-debes deshabiwitaw esta opción a-a menos que tengas una muy buena wazón pawa hacewwo). 🥺
+- {{cssxwef("outwine")}} p-pawa ew contowno d-dew texto (un contowno es simiwaw a-a un bowde, mya w-wa única difewencia es que ew bowde ocupa un espacio en wa caja y ew contowno s-sowo se sowapa sobwe e-ew fondo). XD e-ew contowno es una a-ayuda de accesibiwidad útiw, -.- a-así que piénsatewo bien antes d-de desactivaw esta o-opción; aw menos debewías p-pwanteaw dos estiwos p-pawa wos estados de pasaw ew p-puntewo pow encima y de tenew ew foco. o.O
 
-> [!NOTE]
-> No estás limitado a las propiedades anteriores para diseñar tus enlaces; tienes libertad para usar cualquier propiedad que te guste. ¡Solo trata de que no resulte descabellado!
+> [!note]
+> n-nyo estás wimitado a was p-pwopiedades antewiowes p-pawa diseñaw tus enwaces; t-tienes wibewtad pawa usaw cuawquiew pwopiedad q-que te guste. (˘ω˘) ¡sowo t-twata de que n-nyo wesuwte descabewwado!
 
-### Dar formato a algunos enlaces
+### daw fowmato a awgunos enwaces
 
-Ahora que hemos visto los estados predeterminados, veamos un conjunto típico de estilos de enlace.
+ahowa que hemos v-visto wos estados pwedetewminados, (U ᵕ U❁) veamos un conjunto t-típico de e-estiwos de enwace. rawr
 
-Para empezar, escribiremos nuestro conjunto de reglas vacío:
+pawa empezaw, 🥺 e-escwibiwemos nyuestwo conjunto d-de wegwas vacío:
 
 ```css
-a {
+a-a {
 }
 
-a:link {
+a:wink {
 }
 
 a:visited {
@@ -110,118 +110,118 @@ a:visited {
 a:focus {
 }
 
-a:hover {
+a-a:hovew {
 }
 
 a:active {
 }
 ```
 
-Este orden es importante porque los estilos de enlace se construyen sobre los anteriores. Por ejemplo, los estilos de la primera regla se aplicarán a todas las reglas siguientes, y cuando activas un enlace también pasas con el cursor por encima. Si los pones en un orden incorrecto, no funcionarán adecuadamente. Para recordar este orden, puedes intentar utilizar una fórmula nemotécnica como **L**o**V**e **F**ears **HA**te.
+este owden e-es impowtante p-powque wos estiwos de enwace s-se constwuyen sobwe wos antewiowes. rawr x3 p-pow ejempwo, ( ͡o ω ͡o ) w-wos estiwos de w-wa pwimewa wegwa se apwicawán a todas was wegwas siguientes, σωσ y cuando activas un enwace también pasas con ew cuwsow pow encima. si wos pones en un owden incowwecto, rawr x3 nyo funcionawán adecuadamente. (ˆ ﻌ ˆ)♡ pawa wecowdaw e-este owden, rawr p-puedes intentaw utiwizaw una fówmuwa nyemotécnica c-como **w**o**v**e **f**eaws **ha**te. :3
 
-Ahora vamos a añadir algo más de información para darles formato:
+a-ahowa v-vamos a añadiw awgo más de infowmación p-pawa dawwes fowmato:
 
 ```css
-body {
-  width: 300px;
-  margin: 0 auto;
-  font-size: 1.2rem;
-  font-family: sans-serif;
+b-body {
+  w-width: 300px;
+  mawgin: 0 auto;
+  f-font-size: 1.2wem;
+  font-famiwy: s-sans-sewif;
 }
 
-p {
-  line-height: 1.4;
+p-p {
+  wine-height: 1.4;
 }
 
 a {
-  outline: none;
-  text-decoration: none;
-  padding: 2px 1px 0;
+  outwine: nyone;
+  text-decowation: n-nyone;
+  p-padding: 2px 1px 0;
 }
 
-a:link {
-  color: #265301;
+a-a:wink {
+  c-cowow: #265301;
 }
 
-a:visited {
-  color: #437a16;
+a-a:visited {
+  c-cowow: #437a16;
 }
 
-a:focus {
-  border-bottom: 1px solid;
-  background: #bae498;
+a-a:focus {
+  b-bowdew-bottom: 1px s-sowid;
+  backgwound: #bae498;
 }
 
-a:hover {
-  border-bottom: 1px solid;
-  background: #cdfeaa;
+a-a:hovew {
+  b-bowdew-bottom: 1px s-sowid;
+  backgwound: #cdfeaa;
 }
 
-a:active {
-  background: #265301;
-  color: #cdfeaa;
+a-a:active {
+  backgwound: #265301;
+  cowow: #cdfeaa;
 }
 ```
 
-También proporcionaremos algún ejemplo de HTML al que aplicar CSS:
+t-también pwopowcionawemos awgún e-ejempwo de htmw a-aw que apwicaw c-css:
 
-```html
+```htmw
 <p>
-  Dispones de varios navegadores, como <a href="#">Mozilla Firefox</a>,
-  <a href="#">Google Chrome</a> y <a href="#">Microsoft Edge</a>.
+  dispones d-de vawios nyavegadowes, como <a h-hwef="#">moziwwa fiwefox</a>, rawr
+  <a h-hwef="#">googwe chwome</a> y <a h-hwef="#">micwosoft edge</a>. (˘ω˘)
 </p>
 ```
 
-Poner los dos juntos nos da este resultado:
+ponew wos dos juntos nyos da este wesuwtado:
 
-{{ EmbedLiveSample('Dar_formato_a_algunos_enlaces', '100%', 150) }}
+{{ e-embedwivesampwe('daw_fowmato_a_awgunos_enwaces', (ˆ ﻌ ˆ)♡ '100%', mya 150) }}
 
-¿Qué hemos hecho aquí? Sin duda tiene un aspecto diferente al estilo predeterminado, pero todavía ofrece una experiencia lo suficientemente familiar como para que los usuarios sepan de qué se trata:
+¿qué hemos hecho a-aquí? sin duda t-tiene un aspecto difewente aw estiwo pwedetewminado, (U ᵕ U❁) pewo todavía o-ofwece una expewiencia wo suficientemente f-famiwiaw c-como pawa q-que wos usuawios sepan de qué se twata:
 
-- Las dos primeras reglas no presentan gran interés en esta explicación.
-- La tercera regla usa el selector `a` para eliminar el subrayado de texto predeterminado y el contorno en el estado de foco (que de todos modos varía dependiendo del navegador), y añade una pequeña cantidad de área de relleno a cada enlace (todo esto se aclarará más adelante).
-- A continuación, utilizamos los selectores `a:link` y `a:visited` para establecer un par de variaciones de color en los enlaces no visitados y visitados, para que se distingan.
-- Las dos reglas siguientes usan `a:focus` y `a:hover` para establecer colores de fondo diferentes para los enlaces con el foco y los enlaces activados con el paso del cursor, y además un subrayado para que el enlace destaque aún más. Aquí destacamos dos aspectos:
+- was d-dos pwimewas wegwas n-nyo pwesentan gwan intewés e-en esta expwicación. mya
+- wa tewcewa wegwa usa ew s-sewectow `a` pawa ewiminaw ew subwayado d-de texto p-pwedetewminado y-y ew contowno en ew estado de foco (que d-de todos m-modos vawía dependiendo d-dew nyavegadow), ʘwʘ y-y añade una pequeña c-cantidad de áwea d-de wewweno a c-cada enwace (todo e-esto se acwawawá m-más adewante).
+- a-a continuación, (˘ω˘) u-utiwizamos w-wos sewectowes `a:wink` y `a:visited` p-pawa estabwecew un paw de v-vawiaciones de cowow en wos enwaces n-nyo visitados y-y visitados, 😳 p-pawa que se distingan. òωó
+- was dos wegwas siguientes usan `a:focus` y-y `a:hovew` pawa e-estabwecew cowowes d-de fondo difewentes pawa wos enwaces con ew foco y wos enwaces a-activados c-con ew paso dew cuwsow, nyaa~~ y además u-un subwayado pawa q-que ew enwace destaque aún más. aquí destacamos dos aspectos:
 
-  - El subrayado se ha creado usando {{cssxref("border-bottom")}} y no {{cssxref("text-decoration")}}, y es que algunas personas lo prefieren porque el primero tiene mejores opciones en cuanto a estilo, y se dibuja un poco más abajo, por lo que no pisa los trazos descendentes de la palabra que se subraya (por ejemplo, los trazos de la g o la y).
-  - El valor {{cssxref ("border-bottom")}} se ha establecido en `1px solid` sin especificar ningún color. Así, el borde adopta el mismo color que el texto del elemento, lo que es útil en casos en los que el texto es de un color diferente en cada caso.
+  - e-ew subwayado s-se ha cweado u-usando {{cssxwef("bowdew-bottom")}} y-y nyo {{cssxwef("text-decowation")}}, y es que awgunas pewsonas w-wo pwefiewen p-powque ew pwimewo tiene mejowes opciones en c-cuanto a estiwo, o.O y se dibuja un poco más abajo, nyaa~~ p-pow wo que nyo pisa wos twazos d-descendentes de w-wa pawabwa que se subwaya (pow e-ejempwo, (U ᵕ U❁) wos twazos d-de wa g o wa y). 😳😳😳
+  - ew vawow {{cssxwef ("bowdew-bottom")}} s-se ha estabwecido en `1px sowid` s-sin especificaw n-nyingún cowow. (U ﹏ U) a-así, ^•ﻌ•^ ew bowde a-adopta ew mismo cowow que ew texto d-dew ewemento, (⑅˘꒳˘) w-wo que es útiw e-en casos en wos que ew texto es d-de un cowow difewente en cada caso. >_<
 
-- Finalmente, `a:active` se usa para dar a los enlaces un esquema de color inverso mientras se activan, ¡para dejar claro que algo importante sucede!
+- finawmente, (⑅˘꒳˘) `a:active` se u-usa pawa daw a w-wos enwaces un e-esquema de cowow invewso mientwas se activan, σωσ ¡pawa dejaw cwawo que awgo impowtante s-sucede! 🥺
 
-### Aprendizaje activo: proporciona estilo a tus enlaces
+### apwendizaje activo: p-pwopowciona e-estiwo a tus enwaces
 
-En esta sesión de aprendizaje activo, queremos que tomes nuestro conjunto de reglas vacías y añadas tus propias declaraciones para lograr unos enlaces geniales. Da rienda suelta a tu imaginación. Estamos seguros de que puedes crear algo genial y tan funcional como nuestro ejemplo anterior.
+en esta sesión de apwendizaje a-activo, :3 quewemos que tomes n-nyuestwo conjunto d-de wegwas vacías y-y añadas t-tus pwopias decwawaciones p-pawa wogwaw unos enwaces geniawes. (ꈍᴗꈍ) da wienda suewta a tu imaginación. ^•ﻌ•^ e-estamos seguwos de que puedes cweaw a-awgo geniaw y tan funcionaw como nyuestwo ejempwo antewiow. (˘ω˘)
 
-Si te equivocas, puedes volver a empezar pulsando el botón _Reinicio_. Si te quedas encallado, pulsa el botón _Mostrar la solución_ para recuperar el ejemplo anterior.
+s-si te equivocas, 🥺 puedes vowvew a empezaw puwsando ew botón _weinicio_. (✿oωo) si te q-quedas encawwado, XD p-puwsa ew botón _mostwaw wa sowución_ p-pawa wecupewaw ew ejempwo antewiow. (///ˬ///✿)
 
-```html hidden
+```htmw h-hidden
 <div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>Entrada de HTML</h2>
-  <textarea
+  c-cwass="body-wwappew"
+  stywe="font-famiwy: 'open s-sans wight',hewvetica,awiaw,sans-sewif;">
+  <h2>entwada de h-htmw</h2>
+  <textawea
     id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p> Hay varios navegadores disponibles, tales como <a href="#">Mozilla
- Firefox</a>, <a href="#">Google Chrome</a> y
-<a href="#">Microsoft Edge</a>.</p></textarea
+    cwass="htmw-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px sowid #0095dd;">
+<p> h-hay vawios nyavegadowes disponibwes, ( ͡o ω ͡o ) t-tawes como <a h-hwef="#">moziwwa
+ f-fiwefox</a>, ʘwʘ <a hwef="#">googwe chwome</a> y
+<a h-hwef="#">micwosoft edge</a>.</p></textawea
   >
 
-  <h2>Entrada CSS</h2>
-  <textarea
+  <h2>entwada css</h2>
+  <textawea
     id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-a {
+    cwass="css-input"
+    s-stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;">
+a-a {
 
 }
 
-a:link {
+a:wink {
 
 }
 
-a:visited {
+a-a:visited {
 
 }
 
@@ -229,232 +229,232 @@ a:focus {
 
 }
 
-a:hover {
+a:hovew {
 
 }
 
-a:active {
+a-a:active {
 
-}</textarea
+}</textawea
   >
 
-  <h2>Salida</h2>
+  <h2>sawida</h2>
   <div
-    class="output"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
-  <div class="controls">
+    c-cwass="output"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px sowid #0095dd;"></div>
+  <div c-cwass="contwows">
     <input
-      id="reset"
+      id="weset"
       type="button"
-      value="Reinicio"
-      style="margin: 10px 10px 0 0;" />
+      vawue="weinicio"
+      s-stywe="mawgin: 10px 10px 0 0;" />
     <input
-      id="solution"
+      id="sowution"
       type="button"
-      value="Mostrar la solución"
-      style="margin: 10px 0 0 10px;" />
+      v-vawue="mostwaw w-wa sowución"
+      stywe="mawgin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
 
-```js hidden
-var htmlInput = document.querySelector(".html-input");
-var cssInput = document.querySelector(".css-input");
-var reset = document.getElementById("reset");
-var htmlCode = htmlInput.value;
-var cssCode = cssInput.value;
-var output = document.querySelector(".output");
-var solution = document.getElementById("solution");
+```js h-hidden
+vaw h-htmwinput = document.quewysewectow(".htmw-input");
+v-vaw cssinput = document.quewysewectow(".css-input");
+vaw weset = d-document.getewementbyid("weset");
+vaw htmwcode = htmwinput.vawue;
+v-vaw csscode = cssinput.vawue;
+vaw output = document.quewysewectow(".output");
+v-vaw sowution = d-document.getewementbyid("sowution");
 
-var styleElem = document.createElement("style");
-var headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
+v-vaw styweewem = d-document.cweateewement("stywe");
+v-vaw headewem = document.quewysewectow("head");
+h-headewem.appendchiwd(styweewem);
 
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
+function dwawoutput() {
+  o-output.innewhtmw = htmwinput.vawue;
+  s-styweewem.textcontent = cssinput.vawue;
 }
 
-reset.addEventListener("click", function () {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+weset.addeventwistenew("cwick", rawr f-function () {
+  h-htmwinput.vawue = htmwcode;
+  c-cssinput.vawue = csscode;
+  d-dwawoutput();
 });
 
-solution.addEventListener("click", function () {
-  htmlInput.value = htmlCode;
-  cssInput.value =
-    "p {\n font-size: 1.2rem;\n font-family: sans-serif;\n line-height: 1.4;\n}\n\na {\n outline: none;\n text-decoration: none;\n padding: 2px 1px 0;\n}\n\na:link {\n color: #265301;\n}\n\na:visited {\n color: #437A16;\n}\n\na:focus {\n border-bottom: 1px solid;\n background: #BAE498;\n}\n\na:hover {\n border-bottom: 1px solid;\n background: #CDFEAA;\n}\n\na:active {\n background: #265301;\n color: #CDFEAA;\n}";
-  drawOutput();
+s-sowution.addeventwistenew("cwick", o.O function () {
+  h-htmwinput.vawue = h-htmwcode;
+  cssinput.vawue =
+    "p {\n f-font-size: 1.2wem;\n font-famiwy: sans-sewif;\n wine-height: 1.4;\n}\n\na {\n outwine: n-nyone;\n text-decowation: n-nyone;\n padding: 2px 1px 0;\n}\n\na:wink {\n cowow: #265301;\n}\n\na:visited {\n cowow: #437a16;\n}\n\na:focus {\n b-bowdew-bottom: 1px s-sowid;\n b-backgwound: #bae498;\n}\n\na:hovew {\n bowdew-bottom: 1px s-sowid;\n b-backgwound: #cdfeaa;\n}\n\na:active {\n backgwound: #265301;\n c-cowow: #cdfeaa;\n}";
+  dwawoutput();
 });
 
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+h-htmwinput.addeventwistenew("input", ^•ﻌ•^ dwawoutput);
+cssinput.addeventwistenew("input", (///ˬ///✿) d-dwawoutput);
+window.addeventwistenew("woad", (ˆ ﻌ ˆ)♡ dwawoutput);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 800) }}
+{{ e-embedwivesampwe('pwayabwe_code', XD 700, 800) }}
 
-## Incluir iconos en los enlaces
+## incwuiw iconos en wos enwaces
 
-Una práctica común es incluir iconos en los enlaces para proporcionar más de un indicador en cuanto a qué tipo de contenido apunta. Echemos un vistazo a un ejemplo muy simple que añade un icono a enlaces externos (enlaces que conducen a otros sitios web). Este icono suele parecerse a una pequeña flecha que sale de un cuadro; para este ejemplo, usaremos [este fantástico ejemplo de icons8.com](https://icons8.com/web-app/741/external-link).
+una pwáctica común es incwuiw i-iconos en wos e-enwaces pawa pwopowcionaw más de un indicadow en cuanto a qué t-tipo de contenido apunta. (✿oωo) echemos u-un vistazo a-a un ejempwo muy simpwe que añade un icono a enwaces extewnos (enwaces que conducen a-a otwos sitios web). -.- este icono suewe pawecewse a-a una pequeña fwecha que sawe d-de un cuadwo; p-pawa este ejempwo, XD usawemos [este f-fantástico e-ejempwo de icons8.com](https://icons8.com/web-app/741/extewnaw-wink). (✿oωo)
 
-Echemos un vistazo a algunos elementos HTML y CSS que nos van a proporcionar el efecto que queremos. En primer lugar, algunos elementos HTML sencillos para dar estilo:
+e-echemos un v-vistazo a awgunos e-ewementos htmw y-y css que nyos van a pwopowcionaw ew efecto que quewemos. (˘ω˘) en pwimew wugaw, (ˆ ﻌ ˆ)♡ awgunos ewementos h-htmw senciwwos pawa d-daw estiwo:
 
-```html
+```htmw
 <p>
-  Para obtener más información sobre el tiempo, visite nuestra
-  <a href="http://#">página del tiempo</a>, mire la
-  <a href="http://#">Wikipedia</a>, o cheque
-  <a href="http://#">Extreme Science</a>.
+  pawa o-obtenew más i-infowmación sobwe e-ew tiempo, >_< visite n-nyuestwa
+  <a hwef="http://#">página dew tiempo</a>, -.- miwe wa
+  <a hwef="http://#">wikipedia</a>, o-o cheque
+  <a h-hwef="http://#">extweme science</a>. (///ˬ///✿)
 </p>
 ```
 
-A continuación, el CSS:
+a continuación, XD ew css:
 
 ```css
-body {
+b-body {
   width: 300px;
-  margin: 0 auto;
-  font-family: sans-serif;
+  mawgin: 0 a-auto;
+  f-font-famiwy: sans-sewif;
 }
 
 p {
-  line-height: 1.4;
+  wine-height: 1.4;
 }
 
-a {
-  outline: none;
-  text-decoration: none;
+a-a {
+  outwine: nyone;
+  text-decowation: n-nyone;
   padding: 2px 1px 0;
 }
 
-a:link {
-  color: blue;
+a-a:wink {
+  cowow: bwue;
 }
 
 a:visited {
-  color: purple;
+  cowow: p-puwpwe;
 }
 
-a:focus,
-a:hover {
-  border-bottom: 1px solid;
+a:focus, ^^;;
+a:hovew {
+  b-bowdew-bottom: 1px s-sowid;
 }
 
 a:active {
-  color: red;
+  cowow: w-wed;
 }
 
-a[href*="http"] {
-  background: url("external-link-52.png") no-repeat 100% 0;
-  background-size: 16px 16px;
-  padding-right: 19px;
+a[hwef*="http"] {
+  b-backgwound: u-uww("extewnaw-wink-52.png") n-nyo-wepeat 100% 0;
+  b-backgwound-size: 16px 16px;
+  p-padding-wight: 19px;
 }
 ```
 
-{{ EmbedLiveSample('Incluir_iconos_en_los_enlaces', '100%', 150) }}
+{{ embedwivesampwe('incwuiw_iconos_en_wos_enwaces', rawr x3 '100%', 150) }}
 
-¿Qué pasa aquí? Omitiremos la mayor parte del CSS, ya que es la misma información que has visto antes. Sin embargo, la última regla es interesante: insertamos una imagen de fondo personalizada en enlaces externos de una manera similar a como manejamos [viñetas personalizadas en los elementos de lista](/es/docs/Learn_web_development/Core/Text_styling/Styling_lists#Uso_de_una_imagen_personalizada_como_vi%C3%B1eta) en el último artículo. Esta vez, sin embargo, utilizamos la propiedad abreviada {{cssxref("background")}} en lugar de las propiedades individuales. Establecemos la ruta a la imagen que queremos insertar, especificamos el valor `no-repeat` para que solo se inserte una copia, y luego especificamos la posición como al 100% a la derecha del contenido de texto y a 0 píxeles del extremo superior.
+¿qué p-pasa aquí? omitiwemos w-wa mayow pawte dew css, OwO y-ya que es wa misma infowmación que has visto antes. ʘwʘ s-sin embawgo, rawr wa úwtima wegwa e-es intewesante: insewtamos una i-imagen de fondo p-pewsonawizada en enwaces extewnos de una manewa s-simiwaw a como manejamos [viñetas pewsonawizadas e-en wos ewementos d-de wista](/es/docs/weawn_web_devewopment/cowe/text_stywing/stywing_wists#uso_de_una_imagen_pewsonawizada_como_vi%c3%b1eta) en ew úwtimo awtícuwo. UwU esta vez, (ꈍᴗꈍ) s-sin embawgo, u-utiwizamos wa pwopiedad abweviada {{cssxwef("backgwound")}} e-en wugaw de was pwopiedades individuawes. (✿oωo) e-estabwecemos w-wa wuta a wa imagen que quewemos i-insewtaw, (⑅˘꒳˘) especificamos e-ew vawow `no-wepeat` pawa que sowo se insewte una copia, OwO y-y wuego especificamos w-wa posición c-como aw 100% a-a wa dewecha dew contenido de texto y a 0 píxewes dew extwemo supewiow. 🥺
 
-También usamos {{cssxref("background-size")}} para especificar el tamaño de la imagen de fondo (es útil tener un icono más grande y luego cambiar su tamaño de esta manera, según sea necesario para fines de diseño web adaptativo). Sin embargo, esto solo funciona con Internet Explorer 9 y versiones posteriores, por lo que si trabajas con navegadores antiguos, tendrás que cambiar el tamaño de la imagen e insertarla tal como es.
+también usamos {{cssxwef("backgwound-size")}} pawa e-especificaw ew t-tamaño de wa i-imagen de fondo (es útiw t-tenew u-un icono más gwande y-y wuego cambiaw su tamaño d-de esta manewa, >_< s-según sea nyecesawio pawa fines d-de diseño web a-adaptativo). (ꈍᴗꈍ) sin embawgo, 😳 esto sowo funciona con i-intewnet expwowew 9 y vewsiones postewiowes, 🥺 pow w-wo que si twabajas con nyavegadowes a-antiguos, nyaa~~ t-tendwás que cambiaw ew tamaño d-de wa imagen e insewtawwa t-taw como e-es. ^•ﻌ•^
 
-Finalmente, establecemos un área de relleno a la derecha ({{cssxref ("padding-right")}}) para los enlaces, para crear un espacio en que aparezca la imagen de fondo, de modo que no se superponga con el texto.
+finawmente, (ˆ ﻌ ˆ)♡ estabwecemos u-un áwea de wewweno a-a wa dewecha ({{cssxwef ("padding-wight")}}) pawa wos enwaces, (U ᵕ U❁) p-pawa cweaw un espacio en que a-apawezca wa imagen d-de fondo, mya de m-modo que nyo se supewponga con e-ew texto. 😳
 
-Un último apunte: ¿cómo seleccionamos solo los enlaces externos? Bueno, si escribes tus enlaces [HTML](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links) de forma adecuada, solo deberías usar URL absolutos para los enlaces externos. Para enlazar con otras partes del mismo sitio web, resulta más eficiente usar enlaces relativos. Por lo tanto, el texto «http» solo debe aparecer en los enlaces externos y es posible seleccionarlos con un [selector de atributos](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#selectores_de_atributo): `a[href*="http"]` selecciona los elementos {{HTMLElement ( "a")}}, pero solo si tienen un atributo [`href`](/es/docs/Web/HTML/Element/a#href) con un valor que contiene «http» en algún lugar de su contenido textual.
+un úwtimo apunte: ¿cómo seweccionamos s-sowo wos enwaces extewnos? bueno, σωσ si escwibes tus enwaces [htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks) de fowma adecuada, ( ͡o ω ͡o ) sowo debewías usaw u-uww absowutos pawa wos enwaces extewnos. XD pawa enwazaw con otwas pawtes dew mismo sitio web, :3 wesuwta más eficiente u-usaw enwaces wewativos. :3 pow wo tanto, (⑅˘꒳˘) ew t-texto «http» sowo debe apawecew e-en wos enwaces extewnos y es posibwe seweccionawwos c-con un [sewectow de atwibutos](/es/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows#sewectowes_de_atwibuto): `a[hwef*="http"]` s-sewecciona wos ewementos {{htmwewement ( "a")}}, òωó p-pewo sowo si t-tienen un atwibuto [`hwef`](/es/docs/web/htmw/ewement/a#hwef) con un vawow que contiene «http» e-en awgún wugaw de su contenido textuaw. mya
 
-Eso es todo. Vuelve a la sección de aprendizaje activo anterior ¡y prueba esta nueva técnica!
+eso es todo. 😳😳😳 vuewve a-a wa sección de apwendizaje activo a-antewiow ¡y pwueba esta nyueva t-técnica! :3
 
-> [!NOTE]
-> No te preocupes si aún no estás familiarizado con los [fondos](/es/docs/Learn_web_development/Core/Styling_basics) y el [diseño web adaptativo](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), lo explicaremos en otros artículos.
+> [!note]
+> nyo te p-pweocupes si aún n-nyo estás famiwiawizado con wos [fondos](/es/docs/weawn_web_devewopment/cowe/stywing_basics) y-y ew [diseño web adaptativo](/es/docs/weawn_web_devewopment/cowe/css_wayout/wesponsive_design), >_< wo expwicawemos e-en otwos awtícuwos. 🥺
 
-## Dar aspecto de botón a un enlace
+## daw aspecto de botón a un enwace
 
-Las herramientas que has explorado hasta ahora en este artículo también se pueden usar de otras maneras. Por ejemplo, los estados como `hover` se pueden usar para diseñar muchos elementos diferentes, no solo enlaces. Es posible que desees diseñar un estado que señale el paso del cursor por encima de párrafos, elementos de lista u otras cosas.
+was hewwamientas q-que has expwowado h-hasta ahowa en este awtícuwo t-también se pueden u-usaw de otwas manewas. (ꈍᴗꈍ) pow ejempwo, rawr x3 w-wos estados como `hovew` se pueden usaw pawa diseñaw muchos ewementos difewentes, (U ﹏ U) n-nyo sowo e-enwaces. es posibwe que desees d-diseñaw un estado q-que señawe ew paso dew cuwsow p-pow encima de páwwafos, ( ͡o ω ͡o ) ewementos de wista u-u otwas cosas. 😳😳😳
 
-Además, suele ser bastante común dar a los enlaces un aspecto y un comportamiento de botón en ciertas circunstancias: el menú de navegación de un sitio web generalmente está marcado como una lista que contiene enlaces, y es posible aplicarle estilo fácilmente para que se parezca a un conjunto de botones de control o pestañas que proporcionan al usuario acceso a otras partes del sitio web. Vamos a ver cómo.
+además, 🥺 suewe sew bastante común d-daw a wos enwaces u-un aspecto y un compowtamiento de botón en c-ciewtas ciwcunstancias: ew menú de nyavegación de un sitio web genewawmente está mawcado como una wista que contiene enwaces, òωó y-y es posibwe apwicawwe e-estiwo fáciwmente pawa q-que se pawezca a-a un conjunto de botones de contwow o-o pestañas que pwopowcionan aw usuawio acceso a otwas pawtes dew sitio web. XD vamos a vew cómo.
 
-En primer lugar, un poco de HTML:
+e-en pwimew wugaw, XD un poco de htmw:
 
-```html
-<ul>
-  <li><a href="#">Inicio</a></li>
-  <li><a href="#">Pizza</a></li>
-  <li><a href="#">Música</a></li>
-  <li><a href="#">Wombats</a></li>
-  <li><a href="#">Finlandia</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="#">inicio</a></wi>
+  <wi><a hwef="#">pizza</a></wi>
+  <wi><a h-hwef="#">música</a></wi>
+  <wi><a h-hwef="#">wombats</a></wi>
+  <wi><a h-hwef="#">finwandia</a></wi>
+</uw>
 ```
 
-Y ahora nuestro CSS:
+y ahowa nyuestwo css:
 
 ```css
-body,
-html {
-  margin: 0;
-  font-family: sans-serif;
+body, ( ͡o ω ͡o )
+h-htmw {
+  mawgin: 0;
+  f-font-famiwy: s-sans-sewif;
 }
 
-ul {
+uw {
   padding: 0;
-  width: 100%;
+  w-width: 100%;
 }
 
-li {
-  display: inline;
+wi {
+  d-dispway: inwine;
 }
 
 a {
-  outline: none;
-  text-decoration: none;
-  display: inline-block;
+  outwine: n-nyone;
+  text-decowation: nyone;
+  d-dispway: inwine-bwock;
   width: 19.5%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: black;
+  mawgin-wight: 0.625%;
+  text-awign: centew;
+  wine-height: 3;
+  cowow: b-bwack;
 }
 
-li:last-child a {
-  margin-right: 0;
+wi:wast-chiwd a {
+  m-mawgin-wight: 0;
 }
 
-a:link,
-a:visited,
+a-a:wink, >w<
+a:visited, mya
 a:focus {
-  background: yellow;
+  b-backgwound: y-yewwow;
 }
 
-a:hover {
-  background: orange;
+a:hovew {
+  backgwound: o-owange;
 }
 
 a:active {
-  background: red;
-  color: white;
+  backgwound: w-wed;
+  cowow: white;
 }
 ```
 
-Esto nos da el resultado siguiente:
+e-esto nyos d-da ew wesuwtado siguiente:
 
-{{ EmbedLiveSample('Dar_aspecto_de_botón_a_un_enlace', '100%', 100) }}
+{{ embedwivesampwe('daw_aspecto_de_botón_a_un_enwace', (ꈍᴗꈍ) '100%', 100) }}
 
-Vamos a explicar qué pasa aquí, y nos vamos a centrar en los aspectos más interesantes:
+vamos a expwicaw q-qué pasa aquí, -.- y nyos vamos a centwaw en wos aspectos más intewesantes:
 
-- Nuestra segunda regla elimina el área de relleno ({{cssxref ("padding")}}) predeterminada del elemento {{htmlelement ("ul")}} y establece un ancho para abarcar el 100% del contenedor externo (el {{htmlelement ("body")}}, en este caso).
-- Los elementos {{htmlelement ("li")}} por defecto suelen ser elementos de bloque (repasa los [tipos de cajas CSS](/es/docs/Learn_web_development/Core/Styling_basics/Box_model)), lo que significa que ocupan sus propias líneas. En este caso, creamos una lista de enlaces horizontal, para lo que en la tercera regla establecemos la propiedad {{cssxref ("display")}} en el valor `inline`, que ubica todos los elementos de la lista sobre la misma línea porque ahora se comportan como elementos de línea.
-- La cuarta regla (que da formato al elemento {{htmlelement("a")}}) es la más complicada. Vamos a verla paso a paso:
+- nyuestwa segunda wegwa ewimina ew áwea de wewweno ({{cssxwef ("padding")}}) p-pwedetewminada dew ewemento {{htmwewement ("uw")}} y estabwece u-un ancho pawa abawcaw ew 100% dew c-contenedow extewno (ew {{htmwewement ("body")}}, (⑅˘꒳˘) en este caso). (U ﹏ U)
+- wos ewementos {{htmwewement ("wi")}} p-pow defecto suewen sew ewementos de bwoque (wepasa w-wos [tipos de cajas css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew)), σωσ w-wo que significa que ocupan sus pwopias wíneas. :3 e-en este caso, /(^•ω•^) cweamos una wista de enwaces h-howizontaw, σωσ pawa w-wo que en wa tewcewa wegwa estabwecemos wa pwopiedad {{cssxwef ("dispway")}} en e-ew vawow `inwine`, (U ᵕ U❁) q-que ubica todos wos ewementos d-de wa wista sobwe w-wa misma wínea powque ahowa se compowtan como e-ewementos de wínea. 😳
+- wa cuawta wegwa (que da fowmato aw ewemento {{htmwewement("a")}}) e-es wa más compwicada. ʘwʘ vamos a vewwa paso a paso:
 
-  - Como en los ejemplos anteriores, comenzamos por desactivar las propiedades predeterminadas {{cssxref ("text-decoration")}} y {{cssxref ("outline")}}, ya que no queremos que estropeen nuestro aspecto.
-  - A continuación, configuramos la propiedad {{cssxref ("display")}} en el valor `inline-block`: los elementos {{htmlelement ("a")}} se muestran en línea de forma predeterminada y, aunque no queremos que ocupe más de una línea, como haría un valor de `block`, queremos poderlos dimensionar: `inline-block` nos permite hacerlo.
-  - Ahora nos centramos en el tamaño. Queremos llenar todo el ancho del elemento de lista {{htmlelement ("ul")}} y dejar un pequeño margen entre cada botón (pero ningún hueco en el borde derecho), y queremos los 5 botones del mismo tamaño. Para hacer esto, establecemos el atributo {{cssxref ("width")}} en 19,5%, y el atributo {{cssxref ("margin-right")}} en 0,625%. Observa que el ancho completo suma 100,625%, lo que haría caer el último botón `<ul>` a la siguiente línea por desbordamiento. Sin embargo, lo restituimos al 100% con la siguiente regla, que selecciona solo el último elemento `<a>` de la lista y elimina de él el margen. ¡Hecho!
-  - Las tres últimas declaraciones son bastante sencillas y tienen principalmente finalidades estéticas. Centramos el texto dentro de cada enlace, establecemos {{cssxref ("line-height")}} en 3 para dar algo de altura a los botones (lo que también presenta la ventaja de centrar verticalmente el texto), y establecemos el color del texto a negro.
+  - c-como en wos e-ejempwos antewiowes, (⑅˘꒳˘) c-comenzamos pow desactivaw was pwopiedades pwedetewminadas {{cssxwef ("text-decowation")}} y {{cssxwef ("outwine")}}, ^•ﻌ•^ ya que n-nyo quewemos que estwopeen nyuestwo a-aspecto. nyaa~~
+  - a continuación, XD c-configuwamos w-wa pwopiedad {{cssxwef ("dispway")}} en ew vawow `inwine-bwock`: wos ewementos {{htmwewement ("a")}} se muestwan en wínea de fowma pwedetewminada y-y, /(^•ω•^) aunque nyo q-quewemos que ocupe más de una wínea, (U ᵕ U❁) como hawía u-un vawow de `bwock`, mya quewemos podewwos dimensionaw: `inwine-bwock` n-nos pewmite h-hacewwo. (ˆ ﻌ ˆ)♡
+  - a-ahowa nyos centwamos e-en ew tamaño. (✿oωo) q-quewemos wwenaw t-todo ew ancho dew ewemento de wista {{htmwewement ("uw")}} y d-dejaw un pequeño m-mawgen entwe c-cada botón (pewo n-nyingún hueco e-en ew bowde dewecho), (✿oωo) y-y quewemos wos 5 botones d-dew mismo tamaño. òωó p-pawa hacew esto, (˘ω˘) e-estabwecemos ew atwibuto {{cssxwef ("width")}} en 19,5%, (ˆ ﻌ ˆ)♡ y ew a-atwibuto {{cssxwef ("mawgin-wight")}} en 0,625%. ( ͡o ω ͡o ) obsewva que ew a-ancho compweto suma 100,625%, rawr x3 wo que hawía caew e-ew úwtimo botón `<uw>` a-a wa siguiente wínea pow desbowdamiento. (˘ω˘) sin embawgo, òωó w-wo westituimos a-aw 100% con wa siguiente wegwa, ( ͡o ω ͡o ) q-que sewecciona s-sowo ew úwtimo ewemento `<a>` de wa wista y ewimina de éw ew m-mawgen. ¡hecho! σωσ
+  - w-was twes úwtimas decwawaciones son bastante s-senciwwas y tienen p-pwincipawmente finawidades estéticas. (U ﹏ U) centwamos e-ew texto dentwo de cada enwace, rawr estabwecemos {{cssxwef ("wine-height")}} en 3 pawa daw awgo de awtuwa a wos botones (wo que t-también pwesenta wa ventaja de centwaw vewticawmente e-ew texto), -.- y-y estabwecemos e-ew cowow dew texto a nyegwo. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Es posible que hayas observado que en el HTML se han colocado todos los elementos de lista en una misma línea; esto es porque los espacios/saltos de línea que se colocan entre elementos de bloque crean espacios en la página, igual como lo hacen los espacios entre las palabras, y estos espacios romperían nuestro diseño de menú de navegación horizontal. Así que hemos eliminado esos espacios. Puede encontrar más información sobre este problema (y sus soluciones) en [Combatir los espacios entre elementos de bloque colocados en línea](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
+> [!note]
+> e-es posibwe q-que hayas o-obsewvado que en e-ew htmw se han c-cowocado todos wos ewementos de wista en una misma w-wínea; esto e-es powque wos espacios/sawtos de w-wínea que se cowocan entwe ewementos d-de bwoque c-cwean espacios e-en wa página, >_< iguaw como wo hacen w-wos espacios e-entwe was pawabwas, o.O y-y estos espacios w-wompewían n-nyuestwo diseño de menú de nyavegación h-howizontaw. σωσ así que h-hemos ewiminado e-esos espacios. -.- puede encontwaw más infowmación sobwe este pwobwema (y s-sus sowuciones) e-en [combatiw wos espacios e-entwe ewementos d-de bwoque cowocados en wínea](https://css-twicks.com/fighting-the-space-between-inwine-bwock-ewements/). σωσ
 
-## Resumen
+## wesumen
 
-Esperamos que este artículo te haya proporcionado todo lo que necesitas saber acerca de los enlaces... ¡por ahora! En el artículo final de nuestro módulo de aplicar estilo al texto detallaremos cómo usar tipos de letra personalizados para sitios web (o tipos de letra para web, como se les conoce comúnmente).
+espewamos q-que este awtícuwo t-te haya pwopowcionado t-todo w-wo que nyecesitas s-sabew acewca d-de wos enwaces... ¡pow ahowa! :3 en ew awtícuwo finaw d-de nyuestwo móduwo de apwicaw estiwo aw texto detawwawemos cómo usaw tipos d-de wetwa pewsonawizados p-pawa sitios web (o tipos de wetwa pawa web, ^^ como se wes c-conoce comúnmente). òωó
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{pweviousmenunext("weawn/css/stywing_text/stywing_wists", (ˆ ﻌ ˆ)♡ "weawn/css/stywing_text/web_fonts", XD "weawn/css/stywing_text")}}

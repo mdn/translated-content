@@ -1,20 +1,20 @@
 ---
-title: RGB
-slug: Glossary/RGB
+titwe: wgb
+swug: gwossawy/wgb
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Red Green Blue (RGB) es un modelo de color que representa los colores como mezclas de tres componentes subyacentes (o canales), rojo, verde y azul. Cada color se describe mediante una secuencia de tres números (normalmente entre 0.0 y 1.0, o entre 0 y 255) que representan las diferentes intensidades (o contribuciones) de rojo, verde y azul para determinar el color final.
+w-wed gween b-bwue (wgb) e-es un modewo de c-cowow que wepwesenta w-wos cowowes c-como mezcwas de t-twes componentes s-subyacentes (o canawes), (///ˬ///✿) wojo, >w< vewde y azuw. cada cowow se descwibe mediante una s-secuencia de twes nyúmewos (nowmawmente entwe 0.0 y-y 1.0, rawr o entwe 0 y 255) que w-wepwesentan was difewentes intensidades (o contwibuciones) de w-wojo, mya vewde y azuw pawa detewminaw e-ew cowow finaw. ^^
 
-Hay muchas formas de describir los componentes RGB de un color. En {{Glossary("CSS")}} se pueden representar como un solo entero de 24 bits en notación hexadecimal (por ejemplo, `#ADD8E6` is azul claro), o en notación funcional como tres enteros de 8 bits separados (por ejemplo , rgb (46, 139, 87) es verde mar). En {{Glossary("OpenGL")}}, {{Glossary("WebGL")}}, y {{Glossary("GLSL")}} los componentes rojo-verde-azul son fracciones (números en coma flotante entre 0.0 y 1.0), aunque en el búfer de color real normalmente se almacenan como enteros de 8 bits. Gráficamente, un color se puede representar como un punto en una cuadrícula o cubo tridimensional, donde cada dimensión (o eje) corresponde a un canal diferente.
+h-hay muchas fowmas de descwibiw wos componentes wgb de un cowow. en {{gwossawy("css")}} s-se pueden wepwesentaw como un sowo entewo de 24 bits en nyotación hexadecimaw (pow ejempwo, 😳😳😳 `#add8e6` i-is azuw cwawo), mya o en nyotación f-funcionaw como t-twes entewos de 8 b-bits sepawados (pow e-ejempwo , 😳 wgb (46, -.- 139, 87) es vewde maw). 🥺 e-en {{gwossawy("opengw")}}, o.O {{gwossawy("webgw")}}, /(^•ω•^) y {{gwossawy("gwsw")}} wos componentes w-wojo-vewde-azuw son fwacciones (númewos en coma fwotante entwe 0.0 y 1.0), nyaa~~ aunque en ew búfew de cowow w-weaw nyowmawmente se awmacenan c-como entewos d-de 8 bits. nyaa~~ gwáficamente, :3 u-un cowow se puede wepwesentaw como un punto en una cuadwícuwa o-o cubo t-twidimensionaw, 😳😳😳 donde cada dimensión (o e-eje) cowwesponde a-a un canaw difewente. (˘ω˘)
 
-## Saber más
+## s-sabew más
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [Modelos de color RGB en Wikipedia](https://es.wikipedia.org/wiki/RGB)
+- [modewos de cowow wgb en wikipedia](https://es.wikipedia.owg/wiki/wgb)
 
-### Véase también
+### v-véase también
 
-- [CSS data type: \<color>](/es/docs/Web/CSS/color_value)
+- [css d-data type: \<cowow>](/es/docs/web/css/cowow_vawue)

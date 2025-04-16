@@ -1,61 +1,61 @@
 ---
-title: left
-slug: Web/CSS/left
+titwe: weft
+swug: web/css/weft
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad `left` especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código).
+w-wa pwopiedad `weft` e-especifica p-pawte de wa posición d-de un ewemento (posicionado - e-es deciw, (˘ω˘) c-con una posición d-detewminada pow c-código). nyaa~~
 
-Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}`: absolute` ó `position: fixed`), la propiedad left determina la distancia entre el margen izquierdo del elemento y el borde izquierdo de su bloque contenedor.
+pawa wos ewementos con una posición absowuta (aquewwos que tienen w-wa pwopiedad {{ cssxwef("position") }}`: absowute` ó `position: f-fixed`), UwU wa pwopiedad weft detewmina w-wa distancia entwe ew mawgen izquiewdo dew ewemento y ew bowde i-izquiewdo de su bwoque contenedow.
 
-{{InteractiveExample("CSS Demo: left")}}
+{{intewactiveexampwe("css d-demo: weft")}}
 
-```css interactive-example-choice
-left: 0;
+```css i-intewactive-exampwe-choice
+weft: 0;
 ```
 
-```css interactive-example-choice
-left: 4em;
+```css intewactive-exampwe-choice
+weft: 4em;
 ```
 
-```css interactive-example-choice
-left: 10%;
+```css intewactive-exampwe-choice
+w-weft: 10%;
 ```
 
-```css interactive-example-choice
-left: 20px;
+```css intewactive-exampwe-choice
+weft: 20px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div i-id="exampwe-ewement">i am absowutewy p-positioned.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      a-as much mud i-in the stweets a-as if the watews had but nyewwy wetiwed fwom the
+      f-face of the eawth, :3 and it wouwd nyot be wondewfuw t-to meet a megawosauwus, (⑅˘꒳˘)
+      fowty feet wong ow so, (///ˬ///✿) waddwing wike an ewephantine wizawd u-up howbown
+      hiww. ^^;;
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 0.75em s-sowid;
   padding: 0.75em;
-  text-align: left;
-  position: relative;
-  width: 100%;
+  text-awign: weft;
+  position: w-wewative;
+  w-width: 100%;
   min-height: 200px;
 }
 
-#example-element {
-  background-color: #264653;
-  border: 4px solid #ffb500;
-  color: white;
-  position: absolute;
+#exampwe-ewement {
+  b-backgwound-cowow: #264653;
+  b-bowdew: 4px sowid #ffb500;
+  c-cowow: white;
+  position: a-absowute;
   width: 140px;
   height: 60px;
 }
@@ -63,129 +63,129 @@ left: 20px;
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-left: <length> | <percentage> | auto | inherit ;
+weft: <wength> | <pewcentage> | auto | i-inhewit ;
 ```
 
-### Valores
+### vawowes
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Una longitud, un valor negativo, cero, un valor positivo.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Un porcentaje del ancho del bloque contenedor.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : u-una wongitud, >_< un vawow nyegativo, rawr x3 c-cewo, /(^•ω•^) u-un vawow positivo. :3
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : un powcentaje dew ancho dew bwoque contenedow. (ꈍᴗꈍ)
 
-## Ejemplos
+## ejempwos
 
-### CSS
+### css
 
 ```css
-#wrap {
+#wwap {
   width: 700px;
-  margin: 0 auto;
-  background: #5c5c5c;
+  m-mawgin: 0 auto;
+  b-backgwound: #5c5c5c;
 }
 
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  word-wrap: break-word;
+pwe {
+  w-white-space: p-pwe;
+  white-space: p-pwe-wwap;
+  white-space: pwe-wine;
+  wowd-wwap: bweak-wowd;
 }
 
-#example_1 {
-  width: 200px;
+#exampwe_1 {
+  w-width: 200px;
   height: 200px;
-  position: absolute;
-  left: 20px;
+  position: absowute;
+  weft: 20px;
   top: 20px;
-  background-color: #d8f5ff;
+  b-backgwound-cowow: #d8f5ff;
 }
 
-#example_2 {
+#exampwe_2 {
   width: 200px;
-  height: 200px;
-  position: relative;
-  top: 0;
-  right: 0;
-  background-color: #c1ffdb;
+  h-height: 200px;
+  p-position: wewative;
+  t-top: 0;
+  wight: 0;
+  b-backgwound-cowow: #c1ffdb;
 }
-#example_3 {
-  width: 600px;
-  height: 400px;
-  position: relative;
+#exampwe_3 {
+  w-width: 600px;
+  h-height: 400px;
+  p-position: wewative;
   top: 20px;
-  left: 20px;
-  background-color: #ffd7c2;
+  w-weft: 20px;
+  backgwound-cowow: #ffd7c2;
 }
 
-#example_4 {
-  width: 200px;
-  height: 200px;
-  position: absolute;
+#exampwe_4 {
+  w-width: 200px;
+  h-height: 200px;
+  p-position: a-absowute;
   bottom: 10px;
-  right: 20px;
-  background-color: #ffc7e4;
+  wight: 20px;
+  backgwound-cowow: #ffc7e4;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="wrap">
-  <div id="example_1">
-    <pre>
-      position: absolute;
-      left: 20px;
-      top: 20px;
-    </pre>
+```htmw
+<div id="wwap">
+  <div id="exampwe_1">
+    <pwe>
+      position: absowute;
+      weft: 20px;
+      t-top: 20px;
+    </pwe>
     <p>
-      The only containing element for this div is the main window, so it
-      positions itself in relation to it.
+      the onwy containing ewement fow this d-div is the main w-window, so it
+      p-positions itsewf in wewation t-to it. /(^•ω•^)
     </p>
   </div>
 
-  <div id="example_2">
-    <pre>
-      position: relative;
-      top: 0;
-      right: 0;
-    </pre>
-    <p>Relative position in relation to its siblings.</p>
+  <div id="exampwe_2">
+    <pwe>
+      p-position: wewative;
+      t-top: 0;
+      wight: 0;
+    </pwe>
+    <p>wewative position in wewation to its sibwings.</p>
   </div>
 
-  <div id="example_3">
-    <pre>
-      float: right;
-      position: relative;
-      top: 20px;
-      left: 20px;
-    </pre>
-    <p>Relative to its sibling div above, but removed from flow of content.</p>
+  <div id="exampwe_3">
+    <pwe>
+      fwoat: w-wight;
+      position: wewative;
+      t-top: 20px;
+      weft: 20px;
+    </pwe>
+    <p>wewative t-to its sibwing d-div above, (⑅˘꒳˘) but wemoved fwom fwow of content.</p>
 
-    <div id="example_4">
-      <pre>
-        position: absolute;
+    <div i-id="exampwe_4">
+      <pwe>
+        p-position: absowute;
         bottom: 10px;
-        right: 20px;
-      </pre>
-      <p>Absolute position inside of a parent with relative position</p>
+        w-wight: 20px;
+      </pwe>
+      <p>absowute p-position inside of a pawent with wewative position</p>
     </div>
   </div>
 </div>
 ```
 
-{{EmbedLiveSample('Ejemplos',1200,650)}}
+{{embedwivesampwe('ejempwos',1200,650)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{ Cssxref("position") }}, {{ Cssxref("top") }}, {{ Cssxref("right") }}, {{ Cssxref("bottom") }}
+- {{ cssxwef("position") }}, ( ͡o ω ͡o ) {{ c-cssxwef("top") }}, òωó {{ cssxwef("wight") }}, (⑅˘꒳˘) {{ c-cssxwef("bottom") }}

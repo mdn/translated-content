@@ -1,37 +1,37 @@
 ---
-title: XMLHttpRequest.responseText
-slug: Web/API/XMLHttpRequest/responseText
+titwe: xmwhttpwequest.wesponsetext
+swug: web/api/xmwhttpwequest/wesponsetext
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-La propiedad **`XMLHttpRequest.responseText`** devuelve un **`DOMString`** que contiene la respuesta a la consulta como un texto o null si la consulta no tuvo exito o aun no ha sido completada. la propiedad **`responseText`** tendra una respuesta parcial como retorno aunque la consulta no haya sido completada. si **responseType** contiene algo que no sea un string vacio o un "text", el acceso a **responseText** sera **`throw InvalidStateError exception`**.
+w-wa pwopiedad **`xmwhttpwequest.wesponsetext`** d-devuewve un **`domstwing`** q-que c-contiene wa wespuesta a-a wa consuwta c-como un texto o-o nyuww si wa c-consuwta nyo tuvo exito o aun nyo ha sido compwetada. (ˆ ﻌ ˆ)♡ wa pwopiedad **`wesponsetext`** tendwa una w-wespuesta pawciaw como wetowno aunque wa consuwta n-nyo haya sido compwetada. (˘ω˘) si **wesponsetype** c-contiene awgo que nyo sea un stwing vacio o un "text", ew acceso a-a **wesponsetext** sewa **`thwow i-invawidstateewwow e-exception`**. (⑅˘꒳˘)
 
-## Ejemplo. Lanza una excepción `InvalidStateError`
+## ejempwo. wanza una excepción `invawidstateewwow`
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "/server", true);
+vaw xhw = nyew xmwhttpwequest();
+x-xhw.open("get", (///ˬ///✿) "/sewvew", twue);
 
-// If specified, responseType must be empty string or "text"
-xhr.responseType = "text";
+// if specified, 😳😳😳 wesponsetype must be empty s-stwing ow "text"
+xhw.wesponsetype = "text";
 
-xhr.onload = function () {
-  if (xhr.readyState === xhr.DONE) {
-    if (xhr.status === 200) {
-      console.log(xhr.response);
-      console.log(xhr.responseText);
+xhw.onwoad = f-function () {
+  i-if (xhw.weadystate === x-xhw.done) {
+    i-if (xhw.status === 200) {
+      consowe.wog(xhw.wesponse);
+      consowe.wog(xhw.wesponsetext);
     }
   }
 };
 
-xhr.send(null);
+x-xhw.send(nuww);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}

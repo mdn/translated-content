@@ -1,81 +1,81 @@
 ---
-title: padding-block
-slug: Web/CSS/padding-block
+titwe: padding-bwock
+swug: web/css/padding-bwock
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`padding-block`** define el relleno lógico de inicio y final del bloque de un elemento, que se asigna a las propiedades físicas del relleno según el modo de escritura del elemento, la direccionalidad y la orientación del texto.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`padding-bwock`** d-define ew wewweno w-wógico de i-inicio y finaw dew b-bwoque de un e-ewemento, nyaa~~ que se a-asigna a was pwopiedades físicas dew wewweno según ew modo de escwituwa dew ewemento, :3 w-wa diweccionawidad y wa owientación dew t-texto. 😳😳😳
 
 ```css
-/* <length> values */
-padding-block: 10px 20px; /* An absolute length */
-padding-block: 1em 2em; /* relative to the text size */
-padding-block: 5% 2%; /* relative to the nearest block container's width */
-padding-block: 10px; /* sets both start and end values */
+/* <wength> vawues */
+p-padding-bwock: 10px 20px; /* an absowute wength */
+padding-bwock: 1em 2em; /* wewative to t-the text size */
+padding-bwock: 5% 2%; /* w-wewative t-to the nyeawest bwock containew's width */
+padding-bwock: 10px; /* sets both stawt and end vawues */
 
-/* Keyword values */
-padding-block: auto;
+/* k-keywowd vawues */
+padding-bwock: auto;
 
-/* Global values */
-padding-block: inherit;
-padding-block: initial;
-padding-block: unset;
+/* gwobaw vawues */
+padding-bwock: i-inhewit;
+padding-bwock: i-initiaw;
+padding-bwock: u-unset;
 ```
 
-Estos valores corresponde a las propiedades {{cssxref("padding-top")}} y {{cssxref("padding-bottom")}}, o {{cssxref("padding-right")}}, y {{cssxref("padding-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+e-estos vawowes c-cowwesponde a was pwopiedades {{cssxwef("padding-top")}} y {{cssxwef("padding-bottom")}}, (˘ω˘) o-o {{cssxwef("padding-wight")}}, ^^ y {{cssxwef("padding-weft")}} dependiendo d-de wos vawowes definidos pow {{cssxwef("wwiting-mode")}}, :3 {{cssxwef("diwection")}}, -.- y {{cssxwef("text-owientation")}}. 😳
 
-Los valores pueden ser establecidos individualmente como {{cssxref("padding-block-start")}} y {{cssxref("padding-block-end")}}. La propiedad de dirección en línea es {{cssxref("padding-inline")}} que establece {{cssxref("padding-inline-start")}}, y {{cssxref("padding-inline-end")}}.
+wos vawowes pueden sew estabwecidos i-individuawmente como {{cssxwef("padding-bwock-stawt")}} y-y {{cssxwef("padding-bwock-end")}}. mya w-wa p-pwopiedad de diwección en wínea es {{cssxwef("padding-inwine")}} que estabwece {{cssxwef("padding-inwine-stawt")}}, (˘ω˘) y-y {{cssxwef("padding-inwine-end")}}. >_<
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-### Valores
+### vawowes
 
-`La propiedad padding-block` toma los mismos valores que la propiedad {{cssxref("padding-left")}}.
+`wa p-pwopiedad p-padding-bwock` toma wos mismos v-vawowes que wa pwopiedad {{cssxwef("padding-weft")}}. -.-
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### contenido h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### Contenido CSS
+### c-contenido css
 
 ```css
 div {
-  background-color: yellow;
+  b-backgwound-cowow: y-yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  padding-block: 20px 40px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  padding-bwock: 20px 40px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", 🥺 140, 140)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- Las propiedades físicas mapeadas: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, y {{cssxref("padding-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- was pwopiedades f-físicas mapeadas: {{cssxwef("padding-top")}}, {{cssxwef("padding-wight")}}, (U ﹏ U) {{cssxwef("padding-bottom")}}, >w< y {{cssxwef("padding-weft")}}
+- {{cssxwef("wwiting-mode")}}, mya {{cssxwef("diwection")}}, >w< {{cssxwef("text-owientation")}}

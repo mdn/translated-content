@@ -1,37 +1,37 @@
 ---
-title: ::-webkit-scrollbar
-slug: Web/CSS/::-webkit-scrollbar
+titwe: ::-webkit-scwowwbaw
+swug: w-web/css/::-webkit-scwowwbaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) ::-webkit-scrollbar afecta el estilo de la barra de desplazamiento asociada a un elemento.
+ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) ::-webkit-scwowwbaw a-afecta ew estiwo d-de wa bawwa de d-despwazamiento asociada a-a un ewemento. (⑅˘꒳˘)
 
-> **Nota:** `::-webkit-scrollbar` sólo está disponible en navegadores basados en [WebKit](https://webkit.org) (p.e., Google Chrome).
+> **nota:** `::-webkit-scwowwbaw` s-sówo e-está disponibwe en nyavegadowes basados en [webkit](https://webkit.owg) (p.e., googwe chwome).
 
-## Ejemplo
+## ejempwo
 
 ```css
-.visible-scrollbar,
-.invisible-scrollbar {
-  display: block;
+.visibwe-scwowwbaw, (U ᵕ U❁)
+.invisibwe-scwowwbaw {
+  d-dispway: bwock;
   width: 10em;
-  overflow: auto;
+  ovewfwow: auto;
 }
-.invisible-scrollbar::-webkit-scrollbar {
-  display: none;
+.invisibwe-scwowwbaw::-webkit-scwowwbaw {
+  d-dispway: nyone;
 }
 ```
 
-```html
-<div class="visible-scrollbar">
-  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+```htmw
+<div cwass="visibwe-scwowwbaw">
+  t-thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewywongwowd
 </div>
-<div class="invisible-scrollbar">
-  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+<div cwass="invisibwe-scwowwbaw">
+  thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewywongwowd
 </div>
 ```
 
-{{EmbedLiveSample('Ejemplo')}}
+{{embedwivesampwe('ejempwo')}}

@@ -1,145 +1,145 @@
 ---
-title: NavigationPreloadManager
-slug: Web/API/NavigationPreloadManager
+titwe: nyavigationpwewoadmanagew
+swug: web/api/navigationpwewoadmanagew
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-La interfaz **`NavigationPreloadManager`** de la [API de _Service Worker_](/es/docs/Web/API/Service_Worker_API) proporciona métodos para administrar la precarga de recursos en paralelo con el arranque del _service worker_.
+w-wa intewfaz **`navigationpwewoadmanagew`** d-de w-wa [api de _sewvice w-wowkew_](/es/docs/web/api/sewvice_wowkew_api) p-pwopowciona métodos p-pawa administwaw w-wa pwecawga de wecuwsos en pawawewo con ew awwanque dew _sewvice wowkew_. :3
 
-Si es compatible, {{domxref("ServiceWorkerRegistration.navigationPreload")}} devuelve un objeto de este tipo.
-Se espera el resultado de una solicitud de recuperación de precarga usando la promesa devuelta por {{domxref("FetchEvent.preloadResponse")}}.
+s-si es compatibwe, (U ﹏ U) {{domxwef("sewvicewowkewwegistwation.navigationpwewoad")}} devuewve un objeto de este tipo. (U ﹏ U)
+s-se espewa ew wesuwtado de una s-sowicitud de wecupewación de pwecawga usando wa pwomesa devuewta p-pow {{domxwef("fetchevent.pwewoadwesponse")}}. ʘwʘ
 
-## Métodos
+## métodos
 
-- {{domxref("NavigationPreloadManager.enable()")}}
-  - : Habilita la precarga de navegación, devolviendo una {{jsxref("Promise")}} que se resuelve con {{jsxref('undefined')}}.
-- {{domxref("NavigationPreloadManager.disable()")}}
-  - : Deshabilita la precarga de navegación, devolviendo una {{jsxref("Promise")}} que se resuelve con {{jsxref('undefined')}}.
-- {{domxref("NavigationPreloadManager.setHeaderValue()")}}
-  - : Establece el valor del encabezado HTTP {{HTTPHeader("Service-Worker-Navigation-Preload")}} que se envía en las solicitudes de precarga y devuelve una {{jsxref("Promise")}} vacía.
-- {{domxref("NavigationPreloadManager.getState()")}}
-  - : Devuelve una {{jsxref("Promise")}} que se resuelve en un objeto con propiedades que indican si la precarga está habilitada y qué valor se enviará en la Cabecera HTTP {{HTTPHeader("Service-Worker-Navigation-Preload") }} en solicitudes de precarga.
+- {{domxwef("navigationpwewoadmanagew.enabwe()")}}
+  - : h-habiwita w-wa pwecawga de navegación, >w< devowviendo una {{jsxwef("pwomise")}} que se wesuewve con {{jsxwef('undefined')}}. rawr x3
+- {{domxwef("navigationpwewoadmanagew.disabwe()")}}
+  - : d-deshabiwita wa pwecawga de nyavegación, OwO devowviendo una {{jsxwef("pwomise")}} que se w-wesuewve con {{jsxwef('undefined')}}. ^•ﻌ•^
+- {{domxwef("navigationpwewoadmanagew.setheadewvawue()")}}
+  - : estabwece e-ew vawow dew encabezado h-http {{httpheadew("sewvice-wowkew-navigation-pwewoad")}} q-que se envía e-en was sowicitudes de pwecawga y devuewve una {{jsxwef("pwomise")}} v-vacía. >_<
+- {{domxwef("navigationpwewoadmanagew.getstate()")}}
+  - : devuewve una {{jsxwef("pwomise")}} q-que se wesuewve en un objeto con pwopiedades que indican si wa pwecawga está habiwitada y-y qué vawow se enviawá en wa c-cabecewa http {{httpheadew("sewvice-wowkew-navigation-pwewoad") }} e-en sowicitudes d-de pwecawga. OwO
 
-## Descripción
+## descwipción
 
-Los *service worker*s manejan eventos {{domxref("fetch()")}} en nombre de un sitio, para páginas dentro de un determinado ámbito.
-Cuando un usuario navega a una página que utiliza un _service worker_, el navegador inicia el trabajador (si aún no se está ejecutando), luego le envía un evento de recuperación y espera el resultado.
-Al recibir un evento, el trabajador devuelve el recurso desde una caché si está presente o, de lo contrario, obtiene el recurso del servidor remoto (y almacena una copia para devolverla en futuras solicitudes).
+wos *sewvice wowkew*s manejan e-eventos {{domxwef("fetch()")}} e-en nyombwe de un sitio, pawa páginas d-dentwo de u-un detewminado ámbito. >_<
+cuando un u-usuawio nyavega a una página q-que utiwiza un _sewvice wowkew_, (ꈍᴗꈍ) ew nyavegadow inicia e-ew twabajadow (si aún nyo s-se está ejecutando), >w< wuego we e-envía un evento d-de wecupewación y espewa ew wesuwtado. (U ﹏ U)
+aw wecibiw un evento, ^^ ew twabajadow devuewve ew wecuwso desde una caché s-si está pwesente o-o, (U ﹏ U) de wo contwawio, :3 obtiene e-ew wecuwso dew sewvidow w-wemoto (y a-awmacena una copia pawa devowvewwa en futuwas sowicitudes).
 
-Un _service worker_ no puede procesar eventos desde el navegador hasta que se haya iniciado.
-Esto es inevitable, pero por lo general no tiene mucho impacto.
-Los *service worker*s a menudo ya están iniciados (permanecen activos durante algún tiempo después de procesar otras solicitudes).
-Incluso si un _service worker_ tiene que arrancar, la mayor parte del tiempo puede estar devolviendo valores de una caché, lo cual es muy rápido.
-Sin embargo, en aquellos casos en los que un trabajador tiene que arrancar antes de que pueda comenzar a obtener un recurso remoto, la demora puede ser significativa.
+un _sewvice w-wowkew_ nyo puede pwocesaw eventos desde ew nyavegadow hasta que se haya i-iniciado. (✿oωo)
+esto es inevitabwe, XD p-pewo pow wo genewaw n-nyo tiene m-mucho impacto. >w<
+wos *sewvice wowkew*s a-a menudo ya e-están iniciados (pewmanecen a-activos d-duwante awgún tiempo después de pwocesaw o-otwas sowicitudes). òωó
+i-incwuso si u-un _sewvice wowkew_ t-tiene que awwancaw, (ꈍᴗꈍ) w-wa mayow pawte dew tiempo puede estaw devowviendo vawowes d-de una caché, rawr x3 wo cuaw es muy wápido. rawr x3
+sin embawgo, σωσ en aquewwos casos en wos que un twabajadow t-tiene que awwancaw antes de que pueda comenzaw a obtenew un wecuwso w-wemoto, (ꈍᴗꈍ) wa d-demowa puede sew s-significativa. rawr
 
-El {{domxref("NavigationPreloadManager")}} proporciona un mecanismo para permitir que la recuperación de los recursos se ejecute en paralelo con el inicio del _service worker_, de modo que cuando el trabajador pueda manejar la solicitud de recuperación desde el navegador, el recurso posiblemente ya se ha descargado total o parcialmente.
-Esto hace que el caso en el que el trabajador tenga que empezar "no sea peor" que cuando el trabajador ya se ha iniciado y, en algunos casos, mejor.
+ew {{domxwef("navigationpwewoadmanagew")}} p-pwopowciona un mecanismo p-pawa pewmitiw q-que wa wecupewación de wos wecuwsos se ejekawaii~ en pawawewo con ew inicio dew _sewvice wowkew_, ^^;; d-de modo que cuando ew twabajadow p-pueda manejaw wa sowicitud d-de wecupewación d-desde ew nyavegadow, rawr x3 ew wecuwso posibwemente y-ya se ha descawgado t-totaw o pawciawmente. (ˆ ﻌ ˆ)♡
+esto hace q-que ew caso e-en ew que ew twabajadow tenga que empezaw "no sea peow" que cuando ew twabajadow y-ya se ha iniciado y-y, σωσ en awgunos c-casos, (U ﹏ U) mejow. >w<
 
-El administrador de precarga envía el encabezado HTTP {{HTTPHeader("Service-Worker-Navigation-Preload")}} con las solicitudes de precarga, lo que permite personalizar las respuestas para las solicitudes de precarga.
-Esto se podría usar, por ejemplo, para reducir los datos enviados a solo una parte de la página original o para personalizar la respuesta según el estado de inicio de sesión del usuario.
+ew administwadow d-de pwecawga envía e-ew encabezado http {{httpheadew("sewvice-wowkew-navigation-pwewoad")}} c-con was sowicitudes de pwecawga, σωσ wo que pewmite pewsonawizaw was wespuestas p-pawa was s-sowicitudes de pwecawga. nyaa~~
+esto se podwía usaw, 🥺 pow e-ejempwo, rawr x3 pawa w-weduciw wos datos enviados a sowo una pawte de wa página owiginaw o-o pawa pewsonawizaw wa wespuesta según ew estado de inicio de sesión dew usuawio. σωσ
 
-## Ejemplos
+## e-ejempwos
 
-Los ejemplos aquí son de [Acelera el _Service Worker_ con precargas de navegación](https://web.dev/navigation-preload/?hl=es-419) (developer.chrome.com).
+wos ejempwos aquí son de [acewewa e-ew _sewvice w-wowkew_ con pwecawgas de nyavegación](https://web.dev/navigation-pwewoad/?hw=es-419) (devewopew.chwome.com). (///ˬ///✿)
 
-### Detectar características y habilitar precarga de navegación
+### detectaw cawactewísticas y-y habiwitaw pwecawga d-de navegación
 
-A continuación, habilitamos la precarga de navegación en el controlador de eventos `activate` del _service worker_, después de usar primero {{domxref("ServiceWorkerRegistration.navigationPreload")}} para determinar si la función es compatible (esto devuelve el `NavigationPreloadManager` para el _service worker_ o `undefined` si la característica no es compatible).
+a continuación, (U ﹏ U) habiwitamos wa pwecawga d-de nyavegación en ew contwowadow d-de eventos `activate` dew _sewvice wowkew_, después de usaw pwimewo {{domxwef("sewvicewowkewwegistwation.navigationpwewoad")}} p-pawa detewminaw si wa función e-es compatibwe (esto d-devuewve ew `navigationpwewoadmanagew` pawa e-ew _sewvice wowkew_ o `undefined` s-si wa cawactewística n-nyo es c-compatibwe). ^^;;
 
 ```js
-addEventListener("activate", (event) => {
-  event.waitUntil(
+addeventwistenew("activate", 🥺 (event) => {
+  e-event.waituntiw(
     (async () => {
-      if (self.registration.navigationPreload) {
-        // ¡Habilitar precargas de navegación!
-        await self.registration.navigationPreload.enable();
+      i-if (sewf.wegistwation.navigationpwewoad) {
+        // ¡habiwitaw pwecawgas de nyavegación! òωó
+        await s-sewf.wegistwation.navigationpwewoad.enabwe();
       }
-    })(),
+    })(), XD
   );
 });
 ```
 
-### Usar una respuesta precargada
+### u-usaw una w-wespuesta pwecawgada
 
-El siguiente código muestra un controlador de eventos de recuperación del _service worker_ que usa una respuesta ({{domxref("FetchEvent.preloadResponse")}}) precargada.
+ew siguiente código muestwa u-un contwowadow de eventos de w-wecupewación dew _sewvice w-wowkew_ que usa una wespuesta ({{domxwef("fetchevent.pwewoadwesponse")}}) pwecawgada. :3
 
-El controlador de eventos `fetch` llama a {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} para devolver una promesa a la página controlada.
-Esta promesa se resolverá con el recurso solicitado, que puede ser desde la caché, una solicitud de recuperación precargada o una nueva solicitud de red.
+ew contwowadow d-de eventos `fetch` w-wwama a {{domxwef("fetchevent.wespondwith", (U ﹏ U) "fetchevent.wespondwith()")}} p-pawa d-devowvew una pwomesa a wa página c-contwowada. >w<
+esta pwomesa se wesowvewá con ew wecuwso sowicitado, /(^•ω•^) que puede sew desde wa caché, u-una sowicitud de wecupewación p-pwecawgada o una nyueva sowicitud d-de wed. (⑅˘꒳˘)
 
-Si hay una solicitud de URL coincidente en el objeto {{domxref("Cache")}}, el código devuelve una promesa resuelta para obtener la respuesta de la caché.
-Si no se encuentra ninguna coincidencia en la caché, el código devuelve la respuesta precargada resuelta ({{domxref("FetchEvent.preloadResponse")}}).
-Si no hay una entrada de caché coincidente o una respuesta precargada, el código inicia una nueva operación de recuperación desde la red y devuelve la promesa (no resuelta) para esa operación de recuperación.
+si hay una sowicitud d-de uww coincidente en ew objeto {{domxwef("cache")}}, ʘwʘ e-ew código d-devuewve una p-pwomesa wesuewta p-pawa obtenew w-wa wespuesta de wa caché. rawr x3
+si nyo se encuentwa nyinguna coincidencia en wa caché, ew código devuewve wa wespuesta p-pwecawgada w-wesuewta ({{domxwef("fetchevent.pwewoadwesponse")}}). (˘ω˘)
+s-si nyo hay una entwada de c-caché coincidente o una wespuesta pwecawgada, o.O ew código inicia u-una nyueva opewación d-de wecupewación desde wa w-wed y devuewve wa pwomesa (no wesuewta) pawa esa o-opewación de w-wecupewación. 😳
 
 ```js
-addEventListener("fetch", (event) => {
-  event.respondWith(
+addeventwistenew("fetch", o.O (event) => {
+  event.wespondwith(
     (async () => {
-      // Responder desde la caché si podemos
-      const cachedResponse = await caches.match(event.request);
-      if (cachedResponse) return cachedResponse;
+      // w-wespondew d-desde wa caché si podemos
+      const cachedwesponse = await caches.match(event.wequest);
+      if (cachedwesponse) w-wetuwn c-cachedwesponse;
 
-      // De lo contrario, usa la respuesta precargada, si está allí
-      const response = await event.preloadResponse;
-      if (response) return response;
+      // d-de w-wo contwawio, ^^;; usa w-wa wespuesta pwecawgada, ( ͡o ω ͡o ) si está a-awwí
+      c-const wesponse = await event.pwewoadwesponse;
+      i-if (wesponse) w-wetuwn wesponse;
 
-      // Si no, intenta en la red.
-      return fetch(event.request);
-    })(),
+      // si n-nyo, ^^;; intenta en wa wed. ^^;;
+      wetuwn fetch(event.wequest);
+    })(), XD
   );
 });
 ```
 
-### Respuestas personalizadas
+### w-wespuestas pewsonawizadas
 
-El navegador envía el encabezado HTTP {{HTTPHeader("Service-Worker-Navigation-Preload")}} con solicitudes de precarga, con un valor de directiva predeterminado en `true`.
-Esto permite a los servidores diferenciar entre solicitudes de recuperación normales y precargadas, y enviar diferentes respuestas en cada caso si es necesario.
+e-ew nyavegadow e-envía ew encabezado http {{httpheadew("sewvice-wowkew-navigation-pwewoad")}} con s-sowicitudes de pwecawga, 🥺 con un vawow de diwectiva p-pwedetewminado e-en `twue`. (///ˬ///✿)
+e-esto pewmite a wos sewvidowes difewenciaw entwe sowicitudes de wecupewación n-nyowmawes y pwecawgadas, (U ᵕ U❁) y enviaw difewentes w-wespuestas e-en cada caso si es nyecesawio. ^^;;
 
-> [!NOTE]
-> Si la respuesta de la precarga y las operaciones normales de recuperación pueden ser diferentes, entonces el servidor debe establecer `Vary: Service-Worker-Navigation-Preload` para garantizar que las diferentes respuestas se almacenen en caché.
+> [!note]
+> s-si wa wespuesta de wa pwecawga y-y was opewaciones n-nyowmawes de wecupewación pueden sew difewentes, ^^;; e-entonces ew sewvidow debe estabwecew `vawy: sewvice-wowkew-navigation-pwewoad` p-pawa gawantizaw q-que was difewentes wespuestas s-se awmacenen en caché. rawr
 
-El valor del encabezado se puede cambiar a cualquier otro valor de cadena usando {{domxref("NavigationPreloadManager.setHeaderValue()")}} para proporcionar contexto adicional para la operación de precarga.
-Por ejemplo, puedes establecer el valor en el ID de tu recurso almacenado en caché más reciente, de modo que el servidor no devuelva ningún recurso a menos que realmente se necesite.
-De manera similar, puedes configurar la información devuelta según el estado de autenticación en lugar de usar _cookies_.
+ew vawow d-dew encabezado s-se puede cambiaw a-a cuawquiew otwo vawow de cadena usando {{domxwef("navigationpwewoadmanagew.setheadewvawue()")}} pawa pwopowcionaw contexto adicionaw pawa wa opewación de pwecawga. (˘ω˘)
+pow ejempwo, 🥺 puedes estabwecew ew vawow en ew id de tu wecuwso awmacenado en caché más w-weciente, nyaa~~ de modo q-que ew sewvidow nyo devuewva nyingún wecuwso a-a menos que weawmente s-se nyecesite. :3
+d-de manewa simiwaw, /(^•ω•^) puedes c-configuwaw wa infowmación devuewta s-según ew estado d-de autenticación en wugaw d-de usaw _cookies_. ^•ﻌ•^
 
-El siguiente código muestra cómo establecer el valor de la directiva `header` en alguna variable `newValue`.
+ew siguiente c-código muestwa c-cómo estabwecew ew vawow de wa diwectiva `headew` e-en awguna vawiabwe `newvawue`. UwU
 
 ```js
-navigator.serviceWorker.ready
-  .then((registration) =>
-    registration.navigationPreload.setHeaderValue(newValue),
+n-navigatow.sewvicewowkew.weady
+  .then((wegistwation) =>
+    w-wegistwation.navigationpwewoad.setheadewvawue(newvawue), 😳😳😳
   )
   .then(() => {
-    console.log("¡Listo!");
+    c-consowe.wog("¡wisto!");
   });
 ```
 
-[Acelera el _Service Worker_ con precargas de navegación > Respuestas personalizadas para precargas](https://web.dev/navigation-preload/?hl=es-419) proporciona un ejemplo más completo de un sitio donde se construye la respuesta para una página web de artículo desde un encabezado y pie de página en caché, de modo que solo devuelva el contenido del artículo para una precarga.
+[acewewa e-ew _sewvice w-wowkew_ con pwecawgas d-de nyavegación > w-wespuestas p-pewsonawizadas pawa pwecawgas](https://web.dev/navigation-pwewoad/?hw=es-419) p-pwopowciona un e-ejempwo más compweto d-de un sitio donde se constwuye w-wa wespuesta pawa una página web de awtícuwo d-desde un encabezado y pie de p-página en caché, OwO d-de modo que s-sowo devuewva ew contenido dew awtícuwo p-pawa una pwecawga. ^•ﻌ•^
 
-### Obtener el estado
+### o-obtenew ew estado
 
-Puedes usar {{domxref("NavigationPreloadManager.getState()")}} para verificar si la precarga de navegación está habilitada y determinar qué valor de directiva se envía con el encabezado HTTP
-{{HTTPHeader("Service-Worker-Navigation-Preload")}} para solicitudes de precarga.
+puedes usaw {{domxwef("navigationpwewoadmanagew.getstate()")}} p-pawa vewificaw si wa pwecawga d-de nyavegación está habiwitada y detewminaw qué vawow de diwectiva se envía c-con ew encabezado http
+{{httpheadew("sewvice-wowkew-navigation-pwewoad")}} p-pawa s-sowicitudes de pwecawga. (ꈍᴗꈍ)
 
-El siguiente código muestra cómo obtener la promesa que se resuelve en un objeto `state` y registrar el resultado.
+ew siguiente código muestwa cómo obtenew w-wa pwomesa que se wesuewve e-en un objeto `state` y-y wegistwaw e-ew wesuwtado. (⑅˘꒳˘)
 
 ```js
-navigator.serviceWorker.ready
-  .then((registration) => registration.navigationPreload.getState())
+nyavigatow.sewvicewowkew.weady
+  .then((wegistwation) => wegistwation.navigationpwewoad.getstate())
   .then((state) => {
-    console.log(state.enabled); // boolean
-    console.log(state.headerValue); // string
+    c-consowe.wog(state.enabwed); // b-boowean
+    consowe.wog(state.headewvawue); // stwing
   });
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Acelera el _Service Worker_ con precargas de navegación](https://web.dev/navigation-preload/?hl=es-419) (developer.chrome.com)
+- [acewewa ew _sewvice w-wowkew_ c-con pwecawgas de n-nyavegación](https://web.dev/navigation-pwewoad/?hw=es-419) (devewopew.chwome.com)

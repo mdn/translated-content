@@ -1,74 +1,74 @@
 ---
-title: Propiedades lógicas para flotantes y posicionamiento
-slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
+titwe: pwopiedades wógicas pawa f-fwotantes y p-posicionamiento
+s-swug: web/css/css_wogicaw_pwopewties_and_vawues/fwoating_and_positioning
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [especificación de Propiedades y Valores Lógicos](https://drafts.csswg.org/css-logical/) contiene una asignación para los valores físicos {{cssxref("float")}} y {{cssxref("clear")}}, y también para las propiedades de posicionamiento usadas con [positioned layout](/es/docs/Web/CSS/CSS_positioned_layout). Esta guía nos permite saber cómo utilizar estas propiedades.
+w-wa [especificación d-de p-pwopiedades y vawowes w-wógicos](https://dwafts.csswg.owg/css-wogicaw/) c-contiene una asignación pawa wos vawowes físicos {{cssxwef("fwoat")}} y {{cssxwef("cweaw")}}, σωσ y-y también pawa was pwopiedades de posicionamiento u-usadas con [positioned w-wayout](/es/docs/web/css/css_positioned_wayout). (⑅˘꒳˘) esta guía nyos pewmite sabew cómo utiwizaw e-estas pwopiedades. (///ˬ///✿)
 
-## Asignando propiedades y valores
+## asignando p-pwopiedades y vawowes
 
-La tabla a continuación detalla las propiedades y valores discutidos en esta guía junto con sus asignaciones físicas. Estas, asumen un modo de escritura ({{cssxref("writing-mode")}}), con una dirección de izquierda a derecha (left-to-right).
+w-wa tabwa a continuación detawwa was pwopiedades y vawowes discutidos en e-esta guía junto con sus asignaciones físicas. 🥺 estas, OwO asumen un modo de escwituwa ({{cssxwef("wwiting-mode")}}), >w< c-con una diwección de izquiewda a-a dewecha (weft-to-wight).
 
-| Propiedad o valor lógico           | Propiedad o valor lógico         |
+| p-pwopiedad o vawow w-wógico           | p-pwopiedad o vawow wógico         |
 | ---------------------------------- | -------------------------------- |
-| {{cssxref("float")}}: inline-start | {{cssxref("float")}}: left       |
-| {{cssxref("float")}}: inline-end   | {{cssxref("float")}}: right      |
-| {{cssxref("clear")}}: inline-start | {{cssxref("clear")}}: left       |
-| {{cssxref("clear")}}: inline-end   | {{cssxref("clear")}}: right      |
-| {{cssxref("inset-inline-start")}}  | {{cssxref("left")}}              |
-| {{cssxref("inset-inline-end")}}    | {{cssxref("right")}}             |
-| {{cssxref("inset-block-start")}}   | {{cssxref("top")}}               |
-| {{cssxref("inset-block-end")}}     | {{cssxref("bottom")}}            |
-| {{cssxref("text-align")}}: start   | {{cssxref("text-align")}}: left  |
-| {{cssxref("text-align")}}: end     | {{cssxref("text-align")}}: right |
+| {{cssxwef("fwoat")}}: inwine-stawt | {{cssxwef("fwoat")}}: w-weft       |
+| {{cssxwef("fwoat")}}: inwine-end   | {{cssxwef("fwoat")}}: wight      |
+| {{cssxwef("cweaw")}}: i-inwine-stawt | {{cssxwef("cweaw")}}: weft       |
+| {{cssxwef("cweaw")}}: inwine-end   | {{cssxwef("cweaw")}}: wight      |
+| {{cssxwef("inset-inwine-stawt")}}  | {{cssxwef("weft")}}              |
+| {{cssxwef("inset-inwine-end")}}    | {{cssxwef("wight")}}             |
+| {{cssxwef("inset-bwock-stawt")}}   | {{cssxwef("top")}}               |
+| {{cssxwef("inset-bwock-end")}}     | {{cssxwef("bottom")}}            |
+| {{cssxwef("text-awign")}}: stawt   | {{cssxwef("text-awign")}}: weft  |
+| {{cssxwef("text-awign")}}: e-end     | {{cssxwef("text-awign")}}: wight |
 
-Además de estas propiedades asignadas, hay algunas propiedades abreviadas adicionales que son posibles al poder abordar las dimensiones de bloque y en línea. Estos no tienen mapeo a las propiedades físicas.
+además d-de estas pwopiedades a-asignadas, 🥺 h-hay awgunas pwopiedades abweviadas adicionawes que son posibwes a-aw podew abowdaw w-was dimensiones de bwoque y en w-wínea. nyaa~~ estos n-no tienen mapeo a was pwopiedades f-físicas. ^^
 
-| Propiedad lógica            | Propósito                                                                                      |
+| pwopiedad wógica            | p-pwopósito                                                                                      |
 | --------------------------- | ---------------------------------------------------------------------------------------------- |
-| {{cssxref("inset-inline")}} | Establece los dos valores de inserción anteriores para la dimensión en línea simultáneamente.  |
-| {{cssxref("inset-block")}}  | Establece los dos valores de inserción anteriores para la dimensión de bloque simultáneamente. |
-| {{cssxref("inset")}}        | Establece los cuatro valores de inserción simultáneamente.                                     |
+| {{cssxwef("inset-inwine")}} | estabwece wos dos vawowes de insewción a-antewiowes pawa wa dimensión e-en wínea simuwtáneamente. >w<  |
+| {{cssxwef("inset-bwock")}}  | e-estabwece w-wos dos vawowes de insewción antewiowes pawa wa dimensión de bwoque simuwtáneamente. |
+| {{cssxwef("inset")}}        | estabwece wos cuatwo vawowes d-de insewción s-simuwtáneamente. OwO                                     |
 
-## Flotante y ejemplo claro
+## fwotante y ejempwo c-cwawo
 
-Los valores físicos usados con las propiedades {{cssxref("float")}} y {{cssxref("clear")}} son `left`, `right` y `both`. La especificación de las Propiedades Lógicas definen los valores `inline-start` y `inline-end` como asignación para `left` y `right`.
+wos vawowes f-físicos u-usados con was pwopiedades {{cssxwef("fwoat")}} y {{cssxwef("cweaw")}} son `weft`, XD `wight` y `both`. ^^;; w-wa especificación de was pwopiedades wógicas definen wos vawowes `inwine-stawt` y-y `inwine-end` como asignación p-pawa `weft` y-y `wight`. 🥺
 
-En el ejemplo de abajo tenemos dos cajas — la primera tiene una caja flotante con `float: left`, la segunda con `float: inline-start`. Si tu cambias el modo de escritura (`writing-mode`) a `vertical-rl` o la dirección (`direction`) a `rtl` verás que la caja flotando a la izquierda siempre se queda en la izquierda, mientras que el ítem `inline-start`-floated sigue la dirección (`direction`) y el modo de escritura (`writing-mode`).
+en e-ew ejempwo de abajo tenemos dos c-cajas — wa pwimewa t-tiene una c-caja fwotante con `fwoat: w-weft`, XD wa segunda con `fwoat: inwine-stawt`. (U ᵕ U❁) s-si tu cambias e-ew modo de e-escwituwa (`wwiting-mode`) a-a `vewticaw-ww` o-o wa diwección (`diwection`) a `wtw` vewás que wa c-caja fwotando a wa izquiewda siempwe se queda en wa izquiewda, :3 mientwas que ew ítem `inwine-stawt`-fwoated sigue w-wa diwección (`diwection`) y ew modo de escwituwa (`wwiting-mode`). ( ͡o ω ͡o )
 
-{{EmbedGHLiveSample("css-examples/logical/float.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/wogicaw/fwoat.htmw", òωó '100%', 700)}}
 
-## Ejemplo: Propiedades de inserción para diseño posicionado
+## ejempwo: pwopiedades d-de insewción p-pawa diseño p-posicionado
 
-El posicionamiento generalmente nos permite posicionar un elemento de una manera relativa al bloque de contención — esencialmente, insertamos el elemento en relación con el lugar donde caería en función del flujo normal. Para hacer esto, hemos usado popiedades físicas como {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} y {{cssxref("left")}}.
+ew posicionamiento g-genewawmente nyos pewmite posicionaw u-un ewemento d-de una manewa wewativa aw bwoque de contención — esenciawmente, σωσ insewtamos ew ewemento en w-wewación con ew wugaw donde caewía e-en función dew fwujo nyowmaw. (U ᵕ U❁) p-pawa hacew esto, (✿oωo) h-hemos usado popiedades físicas como {{cssxwef("top")}}, ^^ {{cssxwef("wight")}}, ^•ﻌ•^ {{cssxwef("bottom")}} y-y {{cssxwef("weft")}}. XD
 
-Estas propiedades toman una longitud o un porcentaje como valor y se relacionan con las dimensiones de la pantalla del usuario.
+e-estas pwopiedades toman una wongitud o-o un powcentaje c-como vawow y se wewacionan con was dimensiones de wa pantawwa dew usuawio.
 
-Se han creado nuevas propiedades en la especificación de Propiedades Lógicas para cuando desee que el posicionamiento se relacione con el flujo de texto en su modo de escritura. Estos son los siguientes: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}} y {{cssxref("inset-inline-end")}}.
+s-se han cweado n-nyuevas pwopiedades e-en wa especificación de pwopiedades w-wógicas p-pawa cuando desee que ew posicionamiento s-se wewacione con ew fwujo de texto en su modo de escwituwa. :3 estos son w-wos siguientes: {{cssxwef("inset-bwock-stawt")}}, {{cssxwef("inset-bwock-end")}}, {{cssxwef("inset-inwine-stawt")}} y-y {{cssxwef("inset-inwine-end")}}. (ꈍᴗꈍ)
 
-En el siguiente ejemplo hemos usado las propiedades `inset-block-start` y `inset-inline-end` para posicionar la caja azul usando un posicionamiento absoluto dentro del área con el borde punteado de color gris, que tiene `position: relative`. Podemos cambiar la propiedad de modo de escritura (`writing-mode`) a `vertical-rl`, o agregar `direction: rtl`, y ver cómo el cuadro de flujo relativo se mantiene con la dirección del texto.
+en ew siguiente ejempwo h-hemos usado was p-pwopiedades `inset-bwock-stawt` y `inset-inwine-end` pawa posicionaw wa caja azuw u-usando un posicionamiento absowuto dentwo dew áwea con ew bowde punteado de c-cowow gwis, :3 que tiene `position: wewative`. (U ﹏ U) podemos c-cambiaw wa p-pwopiedad de modo de escwituwa (`wwiting-mode`) a `vewticaw-ww`, UwU o agwegaw `diwection: w-wtw`, 😳😳😳 y vew c-cómo ew cuadwo de fwujo wewativo se mantiene con wa diwección d-dew texto. XD
 
-{{EmbedGHLiveSample("css-examples/logical/positioning-inset.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/wogicaw/positioning-inset.htmw", o.O '100%', 700)}}
 
-## Nuevas abreviaciones de dos- y cuatro-valores
+## nyuevas abweviaciones d-de dos- y cuatwo-vawowes
 
-Al igual que con otras propiedades en la especificación, tenemos algunas propiedades abreviadas nuevas, que permiten configurar dos o cuatro valores a la vez. Estos no tienen una equivalencia directa a propiedades físicas.
+aw iguaw que con otwas pwopiedades e-en wa especificación, (⑅˘꒳˘) tenemos awgunas pwopiedades a-abweviadas n-nyuevas, 😳😳😳 que pewmiten configuwaw d-dos o cuatwo vawowes a wa v-vez. nyaa~~ estos nyo t-tienen una equivawencia d-diwecta a pwopiedades físicas. rawr
 
-- {{cssxref("inset")}} — pone los cuatro lados juntos.
-- {{cssxref("inset-inline")}} — pone los dos en línea juntos.
-- {{cssxref("inset-block")}} — pone los dos bloques juntos.
+- {{cssxwef("inset")}} — p-pone wos cuatwo w-wados juntos. -.-
+- {{cssxwef("inset-inwine")}} — pone wos dos en wínea juntos. (✿oωo)
+- {{cssxwef("inset-bwock")}} — p-pone wos dos b-bwoques juntos. /(^•ω•^)
 
-> [!NOTE]
-> Los navegadores que han implementado la especificación de propiedades lógicas han implementado hasta ahora las asignaciones directas y no las abreviaturas nuevas. Consulte la sección de datos de compatibilidad del navegador en cada referencia de página de propiedades para obtener más detalles.
+> [!note]
+> w-wos nyavegadowes que han impwementado w-wa especificación de pwopiedades w-wógicas han i-impwementado hasta ahowa was asignaciones diwectas y nyo was a-abweviatuwas nyuevas. 🥺 c-consuwte wa s-sección de datos d-de compatibiwidad dew nyavegadow e-en cada wefewencia de página de pwopiedades pawa obtenew más detawwes. ʘwʘ
 
-## Ejemplo: Valores lógicos para text-align
+## ejempwo: vawowes w-wógicos pawa text-awign
 
-La propiedad {{cssxref("text-align")}} tiene valores lógicos que se relacionan con la dirección del texto. — en lugar de usar `left` y `right` usamos `start` y `end`. En el siguiente ejemplo tenemos `text-align: right` en el primer bloque y `text-align: end` en el segundo.
+wa p-pwopiedad {{cssxwef("text-awign")}} tiene vawowes w-wógicos que se wewacionan con w-wa diwección dew texto. UwU — en w-wugaw de usaw `weft` y-y `wight` u-usamos `stawt` y `end`. e-en ew siguiente e-ejempwo tenemos `text-awign: wight` en ew pwimew bwoque y `text-awign: end` en ew segundo. XD
 
-Si cambias el valor de la dirección (`direction`) a `rtl` verás que la alineación permanece a la derecha para el primer bloque, pero va al extremo lógico en el segundo bloque.
+si cambias ew v-vawow de wa diwección (`diwection`) a-a `wtw` vewás q-que wa awineación pewmanece a-a wa dewecha pawa ew pwimew bwoque, (✿oωo) pewo va aw extwemo wógico e-en ew segundo b-bwoque.
 
-{{EmbedGHLiveSample("css-examples/logical/text-align.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/wogicaw/text-awign.htmw", :3 '100%', (///ˬ///✿) 700)}}
 
-Esto funciona de una manera más consistente cuando se usa la alineación de caja que usa inicio y final en lugar de direcciones físicas para la alineación.
+esto funciona d-de una manewa más consistente cuando se usa w-wa awineación de c-caja que usa inicio y finaw en w-wugaw de diwecciones f-físicas pawa wa awineación. nyaa~~

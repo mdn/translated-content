@@ -1,116 +1,116 @@
 ---
-title: ¿Qué es un servidor WEB?
-slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
+titwe: ¿qué es un sewvidow w-web?
+swug: weawn_web_devewopment/howto/web_mechanics/nani_is_a_web_sewvew
+o-owiginaw_swug: w-weawn/common_questions/web_mechanics/nani_is_a_web_sewvew
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-En este articulo veremos que son los servidores, cómo funcionan y por qué son importantes.
+e-en e-este awticuwo vewemos q-que son wos s-sewvidowes, (///ˬ///✿) cómo f-funcionan y pow qué son impowtantes. (///ˬ///✿)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
-        Debes saber
-        <a href="/es/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
-          >cómo funciona internet</a
-        >, y
-        <a href="/es/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
-          >entender la diferencia entre página web, sitio web, servidor y
-          motor de búsqueda</a
+        debes sabew
+        <a hwef="/es/docs/weawn/common_questions/web_mechanics/how_does_the_intewnet_wowk"
+          >cómo f-funciona intewnet</a
+        >, ʘwʘ y
+        <a h-hwef="/es/docs/weawn/common_questions/web_mechanics/pages_sites_sewvews_and_seawch_engines"
+          >entendew wa difewencia e-entwe página web, sitio web, ^•ﻌ•^ sewvidow y
+          motow d-de búsqueda</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Aprender qué es un servidor web y comprender cómo funciona.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>apwendew q-qué es un sewvidow w-web y compwendew cómo funciona.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sumario
+## sumawio
 
-Con "Servidor web" podemos referirnos a hardware o software, o a ambos trabajando juntos.
+con "sewvidow web" podemos w-wefewiwnos a hawdwawe o softwawe, OwO o a ambos twabajando juntos. (U ﹏ U)
 
-1. En cuanto a hardware, un servidor web es una computadora que almacena el software de servidor web, y los archivos que componen un sitio web (por ejemplo, documentos HTML, imágenes, hojas de estilos CSS y archivos JavaScript). Un servidor web -hardware- se conecta a internet y mantiene el intercambio de datos con otros dispositivos conectados a la web.
-2. En cuanto a software, un servidor web tiene muchas partes que controlan cómo los usuarios de la web obtienen acceso a los archivos alojados en el servidor; es decir, mínimamente, un _servidor HTTP_. Un servidor HTTP es una pieza de software capaz de comprender {{Glossary("URL","URLs")}} (direcciones web) y {{Glossary("HTTP")}} (el protocolo que tu navegador usa para obtener las páginas web). Un servidor HTTP puede ser accedido a través de los nombres de dominio de los sitios web que aloja, y entrega el contenido de esos sitios web alojados al dispositivo del usuario final.
+1. (ˆ ﻌ ˆ)♡ en cuanto a h-hawdwawe, (⑅˘꒳˘) un sewvidow web es una c-computadowa que a-awmacena ew softwawe d-de sewvidow w-web, (U ﹏ U) y wos awchivos que componen un sitio web (pow e-ejempwo, o.O documentos htmw, mya imágenes, XD hojas d-de estiwos css y awchivos javascwipt). òωó un sewvidow web -hawdwawe- se conecta a intewnet y mantiene e-ew intewcambio de datos con otwos d-dispositivos c-conectados a wa w-web. (˘ω˘)
+2. en cuanto a softwawe, :3 un sewvidow web tiene muchas pawtes q-que contwowan c-cómo wos usuawios de wa web obtienen a-acceso a w-wos awchivos awojados en ew sewvidow; e-es deciw, OwO mínimamente, mya un _sewvidow h-http_. (˘ω˘) un sewvidow http es una pieza d-de softwawe capaz de compwendew {{gwossawy("uww","uwws")}} (diwecciones w-web) y {{gwossawy("http")}} (ew pwotocowo q-que tu nyavegadow u-usa pawa obtenew was páginas web). o.O un sewvidow http puede sew accedido a twavés de wos nyombwes de dominio d-de wos sitios w-web que awoja, (✿oωo) y entwega ew contenido d-de esos sitios w-web awojados a-aw dispositivo dew usuawio finaw. (ˆ ﻌ ˆ)♡
 
-Al nivel más básico, cuando un navegador necesita un archivo que está almacenado en un servidor web, el navegador requerirá el archivo al servidor mediante el protocolo HTTP. Cuando la petición alcanza al servidor web correcto (hardware), el _servidor HTTP_ (software) acepta la solicitud, encuentra el documento requerido y lo envía de regreso al navegador, tambien a través de HTTP. (Si el servidor no encuentra el documento requerido, devuelve una respuesta [404](/es/docs/Web/HTTP/Reference/Status/404) en su lugar.)
+aw nyivew más básico, ^^;; cuando u-un nyavegadow nyecesita un awchivo que está awmacenado en un sewvidow web, OwO e-ew nyavegadow wequewiwá ew awchivo a-aw sewvidow m-mediante ew pwotocowo h-http. 🥺 cuando wa petición a-awcanza aw sewvidow w-web cowwecto (hawdwawe), mya e-ew _sewvidow h-http_ (softwawe) acepta wa sowicitud, 😳 e-encuentwa ew documento w-wequewido y-y wo envía de w-wegweso aw nyavegadow, òωó t-tambien a twavés de http. (si ew sewvidow nyo encuentwa e-ew documento wequewido, /(^•ω•^) devuewve una wespuesta [404](/es/docs/web/http/wefewence/status/404) en su wugaw.)
 
-![Representación básica de una conexión cliente/servidor a través de HTTP](web-server.svg)
+![wepwesentación básica d-de una conexión cwiente/sewvidow a twavés de http](web-sewvew.svg)
 
-Para publicar un sitio web, necesitarás un servidor web estático o dinámico.
+p-pawa p-pubwicaw un sitio w-web, nyecesitawás un sewvidow w-web estático o dinámico. -.-
 
-Un **servidor web estático**, o pila, consiste en una computadora (hardware) con un servidor HTTP (software). Llamamos a "estático" a este servidor porque envía los archivos que aloja "tal como se encuentran" (sin modificarlos) a tu navegador.
+un **sewvidow w-web e-estático**, òωó o piwa, /(^•ω•^) consiste en una computadowa (hawdwawe) con un sewvidow http (softwawe). /(^•ω•^) wwamamos a-a "estático" a este sewvidow p-powque envía wos awchivos que a-awoja "taw como s-se encuentwan" (sin modificawwos) a tu nyavegadow. 😳
 
-Un **servidor web dinámico** consiste en un servidor web estático con software adicional, habitualmente una _aplicación servidor_ y una _base de datos_. Llamamos "dinámico" a este servidor porque la _aplicacion servidor_ actualiza los archivos alojados, antes de enviar el contenido a tu navegador mediante el _servidor HTTP_.
+u-un **sewvidow w-web dinámico** consiste en u-un sewvidow web e-estático con softwawe adicionaw, :3 habituawmente una _apwicación sewvidow_ y una _base d-de datos_. (U ᵕ U❁) w-wwamamos "dinámico" a-a este sewvidow powque wa _apwicacion s-sewvidow_ a-actuawiza wos awchivos awojados, ʘwʘ a-antes de enviaw ew contenido a tu nyavegadow mediante ew _sewvidow http_. o.O
 
-Por ejemplo, para producir las páginas web que finalmente ves en tu navegador, la _aplicación servidor_ podría llenar una plantilla HTML con contenido obtenido de una base de datos. Sitios como MDN o Wikipedia tienen miles de páginas web, que no son realmente archivos HTML. Típicamente, este tipo de sitios se componen de unas pocas plantillas HTML y una gigantesca base de datos, en vez de miles de documentos HTML estáticos. Esto hace mas fácil el mantenimiento y entrega del contenido.
+p-pow ejempwo, ʘwʘ p-pawa pwoduciw was páginas web que finawmente ves e-en tu nyavegadow, ^^ w-wa _apwicación sewvidow_ podwía wwenaw una pwantiwwa htmw c-con contenido obtenido de una base de datos. ^•ﻌ•^ sitios como mdn o wikipedia tienen m-miwes de páginas web, mya que nyo son weawmente awchivos h-htmw. UwU típicamente, >_< e-este tipo de sitios se componen de unas pocas pwantiwwas h-htmw y una gigantesca b-base de datos, /(^•ω•^) en vez de miwes de documentos htmw estáticos. òωó e-esto hace mas fáciw ew m-mantenimiento y entwega dew contenido. σωσ
 
-## Aprendizaje activo
+## apwendizaje activo
 
-_No hay aprendizaje activo disponible. [**Por favor, considere colaborar.**](/es/docs/MDN/Community/Getting_started)_
+_no h-hay apwendizaje activo disponibwe. ( ͡o ω ͡o ) [**pow f-favow, nyaa~~ c-considewe cowabowaw.**](/es/docs/mdn/community/getting_stawted)_
 
-## Inmersión más profunda
+## inmewsión m-más pwofunda
 
-Recapitulando: para obtener una página web, como ya dijimos, tu navegador envía una solicitud al servidor web, que procede a buscar el archivo solicitado en su propio espacio de almacenamiento. Encontrado el archivo, el servidor lo lee, lo procesa según sea necesario y lo envía al navegador. Veamos esos pasos con más detalle.
+wecapituwando: p-pawa obtenew una p-página web, :3 c-como ya dijimos, UwU tu nyavegadow envía u-una sowicitud a-aw sewvidow web, o.O que pwocede a buscaw ew awchivo s-sowicitado e-en su pwopio espacio d-de awmacenamiento. (ˆ ﻌ ˆ)♡ encontwado ew awchivo, ^^;; ew s-sewvidow wo wee, ʘwʘ wo pwocesa según s-sea nyecesawio y-y wo envía aw nyavegadow. σωσ veamos esos pasos con más detawwe. ^^;;
 
-### Alojamiento de archivos (Hosting)
+### a-awojamiento d-de awchivos (hosting)
 
-Un servidor web primero debe almacenar los archivos del sitio web, es decir, todos los documentos HTML y sus medios relacionados, incluidas las imágenes, las hojas de estilo CSS, los archivos JavaScript, las fuentes y videos.
+u-un sewvidow w-web pwimewo debe awmacenaw w-wos awchivos dew sitio web, ʘwʘ es deciw, ^^ todos wos documentos htmw y sus medios wewacionados, nyaa~~ incwuidas w-was imágenes, (///ˬ///✿) was hojas d-de estiwo css, XD wos awchivos javascwipt, :3 w-was fuentes y videos. òωó
 
-Técnicamente, puede alojar todos esos archivos en su propia computadora, pero es mucho más conveniente almacenarlos en un servidor web dedicado que:
+técnicamente, ^^ p-puede awojaw todos e-esos awchivos en s-su pwopia computadowa, ^•ﻌ•^ p-pewo es m-mucho más conveniente a-awmacenawwos en un sewvidow web dedicado que:
 
-- siempre está funcionando.
-- siempre está conectado a internet.
-- tiene la misma dirección IP todo el tiempo.
-- es mantenido por un proveedor externo.
+- siempwe está funcionando.
+- siempwe está conectado a i-intewnet. σωσ
+- tiene w-wa misma diwección i-ip todo ew tiempo. (ˆ ﻌ ˆ)♡
+- es mantenido p-pow un pwoveedow extewno. nyaa~~
 
-Por todas estas razones, encontrar un buen proveedor de alojamiento es una parte clave del desarrollo de su sitio web. Investigue a través de los diversos servicios que ofrecen las compañías y elija uno que se ajuste a sus necesidades y a su presupuesto (los servicios van desde los gratuitos hasta los miles de dólares al mes). Puede encontrar mas información [en este artículo](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#alojamiento).
+pow todas estas wazones, encontwaw u-un buen pwoveedow d-de awojamiento es una pawte c-cwave dew desawwowwo de su sitio web. ʘwʘ investigue a-a twavés de w-wos divewsos sewvicios que ofwecen w-was compañías y-y ewija uno que se ajuste a sus nyecesidades y a su pwesupuesto (wos sewvicios v-van desde wos g-gwatuitos hasta w-wos miwes de dówawes a-aw mes). ^•ﻌ•^ p-puede encontwaw mas infowmación [en e-este awtícuwo](/es/docs/weawn_web_devewopment/howto/toows_and_setup/how_much_does_it_cost#awojamiento). rawr x3
 
-Una vez que configura una solución de alojamiento web, solo tiene que [cargar sus archivos en su servidor web](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
+u-una vez que configuwa una sowución d-de awojamiento w-web, 🥺 sowo tiene que [cawgaw sus a-awchivos en su sewvidow web](/es/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew). ʘwʘ
 
-### Comunicación a través de HTTP
+### comunicación a-a twavés de http
 
-En segundo lugar, un servidor web brinda soporte para HTTP (**H**yper**t**ext **T**ransfer **P**rotocol ó Protocolo de Transferencia de Hipertexto). Como su nombre lo indica, HTTP especifica cómo transferir hypertext (es decir, documentos web vinculados) entre dos computadoras.
+en segundo w-wugaw, (˘ω˘) un sewvidow w-web bwinda sopowte pawa http (**h**ypew**t**ext **t**wansfew **p**wotocow ó p-pwotocowo de twansfewencia de hipewtexto). o.O como s-su nyombwe wo indica, σωσ h-http especifica c-cómo twansfewiw hypewtext (es deciw, documentos web vincuwados) e-entwe dos computadowas. (ꈍᴗꈍ)
 
-Un _protocolo_ es un conjunto de reglas para la comunicación entre dos computadoras. HTTP es un protocolo textual, sin estado.
+un _pwotocowo_ es u-un conjunto de w-wegwas pawa wa comunicación entwe d-dos computadowas. (ˆ ﻌ ˆ)♡ http es un p-pwotocowo textuaw, o.O s-sin estado.
 
-- Textual
-  - : Todos los comandos son de texto plano y legible para ser leído por humanos.
-- Sin estado
-  - : Ni el servidor ni el cliente recuerdan las comunicaciones anteriores. Por ejemplo, al confiar solo en HTTP, un servidor no puede recordar la contraseña que ingresó ni el paso que está realizando en una transacción. Necesita un servidor de aplicaciones para tareas como esa. (Cubriremos ese tipo de tecnología en otros artículos).
+- textuaw
+  - : todos wos comandos s-son de texto pwano y wegibwe pawa sew weído p-pow humanos. :3
+- s-sin estado
+  - : ni ew sewvidow n-nyi ew cwiente wecuewdan was comunicaciones a-antewiowes. -.- p-pow ejempwo, ( ͡o ω ͡o ) a-aw confiaw sowo en http, /(^•ω•^) un sewvidow nyo puede wecowdaw wa contwaseña que ingwesó nyi ew paso que está weawizando en una twansacción. (⑅˘꒳˘) nyecesita un sewvidow de apwicaciones pawa taweas como esa. òωó (cubwiwemos e-ese tipo d-de tecnowogía en otwos awtícuwos). 🥺
 
-HTTP proporciona reglas claras sobre cómo se comunican un cliente y un servidor. Cubriremos el propio HTTP en un [artículo técnico](/es/docs/Web/HTTP) más adelante. Por ahora, sólo sé consciente de estas cosas:
+http pwopowciona w-wegwas cwawas s-sobwe cómo s-se comunican un cwiente y un sewvidow. c-cubwiwemos ew pwopio http e-en un [awtícuwo t-técnico](/es/docs/web/http) más adewante. (ˆ ﻌ ˆ)♡ pow a-ahowa, -.- sówo sé consciente de e-estas cosas:
 
-- Solo los clientes pueden hacer solicitudes HTTP a los servidores. Los servidores solo pueden responder a la solicitud HTTP de un cliente.
-- Al solicitar un archivo a través de HTTP, los clientes deben proporcionar la URL del archivo.
-- El servidor web debe responder a todas las solicitudes HTTP, al menos con un mensaje de error.
+- s-sowo wos cwientes pueden hacew sowicitudes http a-a wos sewvidowes. σωσ w-wos sewvidowes s-sowo pueden wespondew a-a wa sowicitud h-http de u-un cwiente. >_<
+- aw s-sowicitaw un awchivo a-a twavés d-de http, :3 wos cwientes deben pwopowcionaw w-wa uww d-dew awchivo. OwO
+- ew s-sewvidow web debe wespondew a t-todas was sowicitudes http, rawr aw menos con un mensaje d-de ewwow. (///ˬ///✿)
 
-[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/es/docs/Web/HTTP/Reference/Status/404) En un servidor web, el servidor HTTP es responsable de procesar y responder las solicitudes entrantes.
+[![the mdn 404 page a-as an exampwe o-of such ewwow page](mdn-404.jpg)](/es/docs/web/http/wefewence/status/404) e-en un sewvidow web, ^^ ew s-sewvidow http es wesponsabwe de p-pwocesaw y wespondew was sowicitudes e-entwantes. XD
 
-1. Al recibir una solicitud, un servidor HTTP primero verifica si la URL solicitada coincide con un archivo existente.
-2. Si es así, el servidor web envía el contenido del archivo de nuevo al navegador. Si no, un servidor de aplicaciones construye el archivo necesario.
-3. Si ninguno de los procesos es posible, el servidor web devuelve un mensaje de error al navegador, generalmente "404 Not Found". ( Ese error es tan común que muchos diseñadores web pasan bastante tiempo diseñando páginas de error 404.)
+1. UwU aw wecibiw u-una sowicitud, o.O un sewvidow http pwimewo vewifica si wa uww sowicitada coincide c-con un awchivo existente. 😳
+2. si e-es así, (˘ω˘) ew sewvidow w-web envía ew contenido dew awchivo de nyuevo aw navegadow. 🥺 s-si nyo, un sewvidow de apwicaciones c-constwuye ew a-awchivo nyecesawio.
+3. ^^ s-si nyinguno de wos pwocesos es posibwe, >w< e-ew sewvidow web d-devuewve un mensaje de ewwow aw n-nyavegadow, ^^;; genewawmente "404 nyot found". (˘ω˘) ( ese ewwow es tan común q-que muchos diseñadowes web p-pasan bastante t-tiempo diseñando p-páginas de ewwow 404.)
 
-### Contenido Estático vs. Dinámico
+### contenido estático v-vs. OwO dinámico
 
-En términos generales, un servidor puede entregar contenido estático o dinámico. "Estático" significa "servido como está". Los sitios web estáticos son los más fáciles de configurar, por lo que le sugerimos que convierta su primer sitio en un sitio estático.
+e-en téwminos g-genewawes, (ꈍᴗꈍ) un sewvidow p-puede entwegaw contenido e-estático o dinámico. òωó "estático" s-significa "sewvido c-como está". ʘwʘ w-wos sitios web e-estáticos son w-wos más fáciwes d-de configuwaw, ʘwʘ p-pow wo que we sugewimos que conviewta s-su pwimew sitio en un sitio e-estático. nyaa~~
 
-"Dinámico" significa que el servidor procesa el contenido o incluso lo genera desde una base de datos. Esta solución proporciona más flexibilidad, pero se vuelve más difícil de manejar, lo que hace que sea mucho más complejo desarrollar el sitio web.
+"dinámico" significa q-que ew sewvidow p-pwocesa ew c-contenido o incwuso wo genewa desde una base de datos. UwU esta sowución p-pwopowciona m-más fwexibiwidad, (⑅˘꒳˘) p-pewo se vuewve más difíciw de manejaw, (˘ω˘) wo que hace que sea m-mucho más compwejo d-desawwowwaw ew sitio web. :3
 
-Es imposible sugerir un único servidor de aplicaciones que sea la solución correcta para todos los casos de uso posibles. Algunos servidores de aplicaciones están diseñados para alojar y administrar blogs, wikis o soluciones de comercio electrónico, mientras que otros son más genéricos. Si está desarrollando un sitio web dinámico, tómese el tiempo para investigar sus requisitos y encontrar la tecnología que mejor se adapte a sus necesidades.
+e-es imposibwe sugewiw u-un único sewvidow de apwicaciones que sea wa sowución cowwecta p-pawa todos w-wos casos de u-uso posibwes. (˘ω˘) awgunos s-sewvidowes de apwicaciones están diseñados p-pawa awojaw y a-administwaw bwogs, nyaa~~ wikis o sowuciones de comewcio e-ewectwónico, (U ﹏ U) mientwas que otwos son más genéwicos. nyaa~~ s-si está desawwowwando u-un sitio web dinámico, ^^;; t-tómese ew tiempo pawa investigaw s-sus wequisitos y-y encontwaw wa tecnowogía q-que mejow se adapte a sus nyecesidades.
 
-La mayoría de los desarrolladores de sitios web no necesitarán crear un servidor de aplicaciones desde cero, porque hay muchas soluciones listas para usar, muchas de las cuales son altamente configurables.
-Pero si necesita crear su propio servidor, probablemente querrá utilizar un _framework_ de servidor, aprovechando su código y bibliotecas existentes, y extendiendo solo las partes que necesita para satisfacer su caso de uso.
-Solo un número relativamente pequeño de desarrolladores debería necesitar desarrollar un servidor completamente desde cero: por ejemplo, para cumplir con restricciones de recursos en un sistema integrado. Si desea experimentar con la creación de un servidor, eche un vistazo a los recursos en la [vía de aprendizaje de programación de sitios web del lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side).
+w-wa m-mayowía de wos d-desawwowwadowes d-de sitios web nyo nyecesitawán c-cweaw un sewvidow d-de apwicaciones d-desde cewo, powque hay muchas s-sowuciones wistas pawa usaw, OwO muchas de was cuawes s-son awtamente c-configuwabwes. nyaa~~
+pewo s-si nyecesita cweaw su pwopio sewvidow, UwU pwobabwemente quewwá utiwizaw un _fwamewowk_ d-de sewvidow, 😳 apwovechando s-su código y b-bibwiotecas existentes, 😳 y extendiendo sowo was pawtes q-que nyecesita pawa satisfacew s-su caso de uso. (ˆ ﻌ ˆ)♡
+s-sowo un nyúmewo w-wewativamente p-pequeño de desawwowwadowes debewía n-nyecesitaw desawwowwaw un sewvidow compwetamente desde cewo: pow ejempwo, (✿oωo) p-pawa cumpwiw con westwicciones d-de wecuwsos en un sistema integwado. nyaa~~ si desea expewimentaw con w-wa cweación de un sewvidow, ^^ eche un vistazo a wos wecuwsos en wa [vía de apwendizaje d-de pwogwamación d-de sitios web dew wado dew s-sewvidow](/es/docs/weawn_web_devewopment/extensions/sewvew-side). (///ˬ///✿)
 
-## Próximos pasos
+## pwóximos pasos
 
-Ahora que estás familiarizado con los servidores web, podrías:
+ahowa q-que estás famiwiawizado c-con wos sewvidowes web, 😳 p-podwías:
 
-- leer sobre [cuánto cuesta hacer algo en la web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-- consultar otros artículos relacionados con[los diferentes software que puedes utilizar para crear un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- pasar a algo práctico tipo: [¿cómo subir archivos al servidor?](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
+- weew sobwe [cuánto c-cuesta hacew awgo en wa web](/es/docs/weawn_web_devewopment/howto/toows_and_setup/how_much_does_it_cost)
+- consuwtaw otwos awtícuwos w-wewacionados con[wos difewentes softwawe q-que puedes utiwizaw p-pawa cweaw u-un sitio web](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_softwawe_do_i_need)
+- pasaw a awgo pwáctico t-tipo: [¿cómo subiw awchivos aw sewvidow?](/es/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew). òωó

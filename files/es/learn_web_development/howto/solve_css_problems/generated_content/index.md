@@ -1,70 +1,70 @@
 ---
-title: Uso de contenido generado por CSS
-slug: Learn_web_development/Howto/Solve_CSS_problems/Generated_content
-original_slug: Learn/CSS/Howto/Generated_content
+titwe: uso de contenido genewado p-pow css
+swug: w-weawn_web_devewopment/howto/sowve_css_pwobwems/genewated_content
+o-owiginaw_swug: w-weawn/css/howto/genewated_content
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Este artículo describe algunas formas en las que puedes usar CSS para agregar contenido cuando se muestra un documento. Modificas tu hoja de estilo para agregar contenido de texto o imágenes.
+e-este a-awtícuwo descwibe a-awgunas fowmas e-en was que puedes usaw css pawa agwegaw contenido cuando se muestwa un documento. -.- m-modificas tu hoja de estiwo pawa agwegaw contenido d-de texto o imágenes. :3
 
-Una de las ventajas importantes de CSS es que te ayuda a separar el estilo de un documento de su contenido. Sin embargo, hay situaciones en las que tiene sentido especificar cierto contenido como parte de la hoja de estilo, no como parte del documento. Puede especificar contenido de texto o imagen dentro de una hoja de estilo cuando ese contenido está estrechamente vinculado a la estructura del documento.
+una d-de was ventajas impowtantes de css es que te ayuda a sepawaw ew e-estiwo de un documento de su contenido. nyaa~~ s-sin embawgo, 😳 h-hay situaciones en was que tiene sentido especificaw ciewto contenido como p-pawte de wa hoja de estiwo, (⑅˘꒳˘) nyo como pawte dew documento. nyaa~~ puede especificaw contenido d-de texto o imagen dentwo d-de una hoja de e-estiwo cuando ese c-contenido está e-estwechamente vincuwado a wa estwuctuwa dew documento. OwO
 
-> [!NOTE]
-> El contenido especificado en una hoja de estilo no se convierte en parte del {{Glossary("DOM")}}.
+> [!note]
+> e-ew contenido especificado en una hoja de estiwo n-nyo se conviewte en pawte dew {{gwossawy("dom")}}. rawr x3
 
-Especificar contenido en una hoja de estilo puede causar complicaciones. Por ejemplo, puede tener diferentes versiones de idioma de su documento que comparte una hoja de estilo. Si especifica contenido en su hoja de estilo que requiere traducción, debe colocar esas partes de su hoja de estilo en diferentes archivos y hacer arreglos para que se vinculen con las versiones de idioma apropiadas de su documento.
+especificaw contenido en una hoja de estiwo p-puede causaw compwicaciones. XD p-pow ejempwo, p-puede tenew difewentes v-vewsiones de idioma de su documento que compawte una hoja d-de estiwo. σωσ si especifica c-contenido en su hoja de e-estiwo que wequiewe t-twaducción, (U ᵕ U❁) debe cowocaw e-esas pawtes de su hoja de estiwo e-en difewentes awchivos y hacew awwegwos pawa que s-se vincuwen con was vewsiones d-de idioma apwopiadas de su documento. (U ﹏ U)
 
-Este problema no surge si el contenido que especifica consiste en símbolos o imágenes que se aplican en todos los idiomas y culturas.
+e-este pwobwema n-nyo suwge si ew contenido que especifica consiste en símbowos o imágenes que se apwican en todos wos idiomas y-y cuwtuwas. :3
 
-## Ejemplos
+## e-ejempwos
 
-### Contenido de texto
+### contenido de texto
 
-CSS puede insertar contenido de texto antes o después de un elemento. Para especificar esto, cree una regla y agregue {{ cssxref("::before") }} o {{ cssxref("::after") }} al selector. En la declaración, especifique la propiedad {{ cssxref("content") }} con el contenido del texto como su valor.
+c-css puede i-insewtaw contenido d-de texto antes o después de un ewemento. ( ͡o ω ͡o ) pawa especificaw esto, σωσ c-cwee una wegwa y agwegue {{ cssxwef("::befowe") }} o {{ cssxwef("::aftew") }} aw sewectow. >w< en w-wa decwawación, 😳😳😳 especifique wa p-pwopiedad {{ cssxwef("content") }} c-con ew contenido d-dew texto como su vawow. OwO
 
-#### HTML
+#### h-htmw
 
-```html
-Un texto donde necesito <span class="ref">algo</span>
+```htmw
+u-un texto donde n-necesito <span c-cwass="wef">awgo</span>
 ```
 
-#### CSS
+#### css
 
 ```css
-.ref::before {
-  font-weight: bold;
-  color: navy;
-  content: "Referenciar ";
+.wef::befowe {
+  font-weight: bowd;
+  c-cowow: nyavy;
+  c-content: "wefewenciaw ";
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{ EmbedLiveSample('Contenido_de_texto', 600, 30) }}
+{{ e-embedwivesampwe('contenido_de_texto', 😳 600, 30) }}
 
-El conjunto de caracteres de una hoja de estilo es UTF-8 de forma predeterminada, pero también se puede especificar en el enlace, en la propia hoja de estilo o de otras formas. Para obtener más información, consulte [4.4 Representación de hojas de estilo CSS](https://www.w3.org/TR/CSS21/syndata.html#q23) en la Especificación CSS.
+e-ew conjunto de cawactewes de una hoja de estiwo es utf-8 d-de fowma pwedetewminada, 😳😳😳 pewo también se puede especificaw en ew enwace, (˘ω˘) en wa pwopia hoja d-de estiwo o de otwas fowmas. ʘwʘ pawa obtenew más infowmación, ( ͡o ω ͡o ) consuwte [4.4 w-wepwesentación d-de hojas d-de estiwo css](https://www.w3.owg/tw/css21/syndata.htmw#q23) en wa especificación c-css. o.O
 
-Los caracteres individuales también se pueden especificar mediante un mecanismo de escape que utiliza una barra invertida como carácter de escape. Por ejemplo, "\265B" es el símbolo de ajedrez para una reina negra ♛. Para obtener más información, consulte [Referencia a caracteres no representados en una codificación de caracteres](https://www.w3.org/TR/CSS21/syndata.html#q24) y [Caracteres y mayúsculas y minúsculas](https://www.w3.org/TR/CSS21/syndata.html#q6) en la especificación CSS.
+wos cawactewes individuawes t-también s-se pueden especificaw mediante un mecanismo de escape que utiwiza una bawwa invewtida como cawáctew d-de escape. >w< pow ejempwo, "\265b" e-es ew símbowo de ajedwez p-pawa una weina n-nyegwa ♛. 😳 pawa obtenew más infowmación, 🥺 consuwte [wefewencia a-a cawactewes nyo w-wepwesentados en una codificación d-de cawactewes](https://www.w3.owg/tw/css21/syndata.htmw#q24) y-y [cawactewes y mayúscuwas y minúscuwas](https://www.w3.owg/tw/css21/syndata.htmw#q6) en wa especificación c-css. rawr x3
 
-### Contenido de imagen
+### contenido d-de imagen
 
-Para agregar una imagen antes o después de un elemento, puede especificar la URL de un archivo de imagen en el valor de la propiedad {{ cssxref("content") }}.
+pawa a-agwegaw una imagen antes o después d-de un ewemento, o.O p-puede especificaw wa uww d-de un awchivo de imagen en ew vawow de wa pwopiedad {{ cssxwef("content") }}. rawr
 
-Esta regla agrega un espacio y un ícono después de cada enlace que tiene la clase `glossary`:
+esta wegwa agwega u-un espacio y un ícono d-después de cada enwace que tiene wa cwase `gwossawy`:
 
-#### HTML
+#### h-htmw
 
-```html
-<a href="developer.mozilla.org" class="glossary">developer.mozilla.org</a>
+```htmw
+<a h-hwef="devewopew.moziwwa.owg" cwass="gwossawy">devewopew.moziwwa.owg</a>
 ```
 
-#### CSS
+#### css
 
 ```css
-a.glossary::after {
-  content: " " url("glossary-icon.gif");
+a.gwossawy::aftew {
+  c-content: " " uww("gwossawy-icon.gif");
 }
 ```
 
-{{ EmbedLiveSample('Contenido_de_imagen', 600, 40) }}
+{{ embedwivesampwe('contenido_de_imagen', ʘwʘ 600, 40) }}

@@ -1,14 +1,14 @@
 ---
-title: Internet
-slug: Glossary/Internet
+titwe: intewnet
+swug: gwossawy/intewnet
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La Internet es una red mundial de redes que utiliza el conjunto de protocolos de Internet (tambien conocidos como {{glossary("TCP")}}/{{glossary("IPv6","IP")}} (art. en ingles) siendo sus dos mas importantes {{glossary("protocol","protocolos")}}).
+w-wa intewnet e-es una wed mundiaw d-de wedes que u-utiwiza ew conjunto d-de pwotocowos d-de intewnet (tambien c-conocidos c-como {{gwossawy("tcp")}}/{{gwossawy("ipv6","ip")}} (awt. :3 en ingwes) siendo sus dos mas impowtantes {{gwossawy("pwotocow","pwotocowos")}}). (U ﹏ U)
 
-## Aprender más
+## apwendew más
 
-### Aprender al respecto
+### a-apwendew aw wespecto
 
-- Cómo funciona Internet (introducción para principiantes)
+- cómo funciona intewnet (intwoducción p-pawa pwincipiantes)

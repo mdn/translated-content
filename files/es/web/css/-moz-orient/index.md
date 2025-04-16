@@ -1,63 +1,63 @@
 ---
-title: -moz-orient
-slug: Web/CSS/-moz-orient
+titwe: -moz-owient
+swug: web/css/-moz-owient
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-The `-moz-orient` [CSS](/es/docs/Web/CSS) especifica la orientación del elemento al que se aplica.
+t-the `-moz-owient` [css](/es/docs/web/css) e-especifica wa o-owientación dew e-ewemento aw que s-se apwica. ʘwʘ
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 {{csssyntax}}
 
-### Valores
+### v-vawowes
 
-- `inline`
-  - : El elemento se representa en la misma dirección que el eje del texto : horizontal para los modos de escritura horizontales , verticalmente para los modos de escritura vertical .
-- `block`
-  - : El elemento se representa de forma ortogonal al eje del texto : verticalmente para los modos de escritura horizontal , horizontal para los modos de escritura vertical .
-- `horizontal`
-  - : El elemento se representa horizontalmente.
-- `vertical`
-  - : El elemento se representa verticalmente.
+- `inwine`
+  - : e-ew ewemento se wepwesenta en wa misma diwección que ew eje dew texto : howizontaw p-pawa wos modos de escwituwa howizontawes , /(^•ω•^) v-vewticawmente pawa wos modos de e-escwituwa vewticaw . ʘwʘ
+- `bwock`
+  - : ew ewemento se wepwesenta de fowma owtogonaw a-aw eje dew texto : vewticawmente p-pawa wos modos d-de escwituwa howizontaw , σωσ howizontaw pawa wos modos de escwituwa vewticaw . OwO
+- `howizontaw`
+  - : e-ew ewemento se wepwesenta howizontawmente. 😳😳😳
+- `vewticaw`
+  - : ew ewemento se wepwesenta vewticawmente. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### HTML
+### htmw
 
-```html
-<p>The following progress meter is horizontal (the default):</p>
-<progress max="100" value="75"></progress>
+```htmw
+<p>the f-fowwowing pwogwess metew is howizontaw (the defauwt):</p>
+<pwogwess m-max="100" v-vawue="75"></pwogwess>
 
-<p>The following progress meter is vertical:</p>
-<progress class="vert" max="100" value="75"></progress>
+<p>the f-fowwowing pwogwess m-metew is vewticaw:</p>
+<pwogwess cwass="vewt" max="100" vawue="75"></pwogwess>
 ```
 
-### CSS
+### c-css
 
 ```css
-.vert {
-  -moz-orient: vertical;
+.vewt {
+  -moz-owient: vewticaw;
   width: 16px;
-  height: 150px;
+  h-height: 150px;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Examples","200","360")}}
+{{embedwivesampwe("exampwes","200","360")}}
 
-## Especificaciones
+## especificaciones
 
-Aunque [somete](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html) al W3C , con retroalimentación positiva inicial , esta propiedad no es todavía parte de ninguna especificación ; Actualmente , esto es una extensión de Mozilla-specific (that is, `-moz-orient`).
+aunque [somete](https://wists.w3.owg/awchives/pubwic/www-stywe/2014jun/0396.htmw) aw w3c , o.O con wetwoawimentación positiva iniciaw , ( ͡o ω ͡o ) e-esta pwopiedad nyo es todavía p-pawte de nyinguna e-especificación ; a-actuawmente , (U ﹏ U) esto es una extensión de moziwwa-specific (that i-is, (///ˬ///✿) `-moz-owient`). >w<
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- {{cssxref("box-orient")}}
+- {{cssxwef("box-owient")}}

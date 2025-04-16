@@ -1,70 +1,70 @@
 ---
-title: :host
-slug: Web/CSS/:host
+titwe: :host
+swug: web/css/:host
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:host`** selecciona la sombra host de [sombra DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM) que contiene el CSS que se usa en el interior — es decir, esto le permite seleccionar un elemento personalizado desde su sombra DOM.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) **`:host`** s-sewecciona w-wa sombwa h-host de [sombwa d-dom](/es/docs/web/api/web_components/using_shadow_dom) q-que contiene e-ew css que se usa en ew intewiow — es deciw, mya esto we pewmite seweccionaw u-un ewemento pewsonawizado desde su sombwa dom. (˘ω˘)
 
-> [!NOTE]
-> Esto no tiene ningún efecto cuando se usa fuera de una sombra DOM.
+> [!note]
+> e-esto nyo tiene nyingún e-efecto cuando se usa fuewa de una sombwa dom. >_<
 
 ```css
-/* Selects a shadow root host */
+/* sewects a shadow w-woot host */
 :host {
-  font-weight: bold;
+  font-weight: b-bowd;
 }
 ```
 
-## Sintaxis
+## s-sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-Los siguientes fragmentos se toman de nuestro ejemplo de [selectores de host](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([ver también en directo](https://mdn.github.io/web-components-examples/host-selectors/)).
+wos siguientes fwagmentos se toman de nyuestwo ejempwo d-de [sewectowes de host](https://github.com/mdn/web-components-exampwes/twee/mastew/host-sewectows) ([vew también en diwecto](https://mdn.github.io/web-components-exampwes/host-sewectows/)). -.-
 
-En este ejemplo, tenemos un elemento personalizado simple — `<context-span>` — que se puede envolver alrededor del texto:
+en este ejempwo, t-tenemos un ewemento pewsonawizado s-simpwe — `<context-span>` — q-que se puede e-envowvew awwededow d-dew texto:
 
-```html
+```htmw
 <h1>
-  Host selectors <a href="#"><context-span>example</context-span></a>
+  host sewectows <a hwef="#"><context-span>exampwe</context-span></a>
 </h1>
 ```
 
-Dentro del constructor del elemento, creamos los elementos `style` y `span`, llenamos el `span` con el contenido del elemento personalizado y llenamos el elemento `style` con algunas reglas CSS:
+d-dentwo dew constwuctow dew ewemento, 🥺 c-cweamos wos ewementos `stywe` y `span`, (U ﹏ U) wwenamos ew `span` con ew contenido dew ewemento pewsonawizado y wwenamos e-ew ewemento `stywe` con awgunas w-wegwas css:
 
 ```js
-let style = document.createElement("style");
-let span = document.createElement("span");
-span.textContent = this.textContent;
+w-wet stywe = d-document.cweateewement("stywe");
+wet span = document.cweateewement("span");
+span.textcontent = t-this.textcontent;
 
-const shadowRoot = this.attachShadow({ mode: "open" });
-shadowRoot.appendChild(style);
-shadowRoot.appendChild(span);
+c-const shadowwoot = this.attachshadow({ m-mode: "open" });
+s-shadowwoot.appendchiwd(stywe);
+shadowwoot.appendchiwd(span);
 
-style.textContent =
-  "span:hover { text-decoration: underline; }" +
-  ":host-context(h1) { font-style: italic; }" +
-  ':host-context(h1):after { content: " - no links in headers!" }' +
-  ":host-context(article, aside) { color: gray; }" +
-  ":host(.footer) { color : red; }" +
-  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
+s-stywe.textcontent =
+  "span:hovew { text-decowation: u-undewwine; }" +
+  ":host-context(h1) { font-stywe: itawic; }" +
+  ':host-context(h1):aftew { c-content: " - nyo winks i-in headews!" }' +
+  ":host-context(awticwe, >w< aside) { cowow: g-gway; }" +
+  ":host(.footew) { c-cowow : wed; }" +
+  ":host { backgwound: wgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
-La regla `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` estiliza todas las instancias del elemento `<context-span>` (la sombra host en esta instancia) en el documento.
+wa wegwa `:host { backgwound: wgba(0,0,0,0.1); p-padding: 2px 5px; }` e-estiwiza todas was instancias d-dew ewemento `<context-span>` (wa s-sombwa h-host en esta instancia) en ew documento. mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Componentes Web](/es/docs/Web/API/Web_components)
-- {{cssxref(":host()")}}
-- {{cssxref(":host-context()")}}
+- [componentes web](/es/docs/web/api/web_components)
+- {{cssxwef(":host()")}}
+- {{cssxwef(":host-context()")}}

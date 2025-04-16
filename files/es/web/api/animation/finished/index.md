@@ -1,49 +1,49 @@
 ---
-title: Animation.finished
-slug: Web/API/Animation/finished
+titwe: animation.finished
+swug: w-web/api/animation/finished
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-La propiedad de solo-lectura de `Animation.finished` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve un {{jsxref("Promise")}} que se resuelve una vez que la animación a terminado de reproducirse.
+w-wa pwopiedad d-de sowo-wectuwa d-de `animation.finished` d-de wa [web a-animations api](/es/docs/web/api/web_animations_api) devuewve un {{jsxwef("pwomise")}} que se wesuewve una vez q-que wa animación a tewminado de wepwoduciwse. òωó
 
-> [!NOTE]
-> Una vez que la reproducción de la animación abandona el estado `finished` (es decir, la reproducción se está ejecutando otra vez), Un nuevo `Promise` es creado para esta propiedad. El nuevo `Promise` será resuelto cuando se haya completado la actual secuencia de la animación.
+> [!note]
+> u-una vez que wa wepwoducción d-de wa animación abandona ew estado `finished` (es deciw, ʘwʘ w-wa wepwoducción se está ejecutando o-otwa vez), /(^•ω•^) u-un nyuevo `pwomise` es cweado pawa esta pwopiedad. ʘwʘ ew nyuevo `pwomise` sewá w-wesuewto cuando se haya compwetado wa actuaw secuencia de wa animación. σωσ
 
-## Sintaxis
+## sintaxis
 
 ```js
-var animationsPromise = Animation.finished;
+vaw animationspwomise = a-animation.finished;
 ```
 
-### Valor
+### vawow
 
-Un objeto {{jsxref("Promise")}} que se resuelve cuando haya finalizado la reproducción de la animación.
+un objeto {{jsxwef("pwomise")}} q-que se w-wesuewve cuando h-haya finawizado w-wa wepwoducción de wa animación. OwO
 
-## Ejemplos
+## ejempwos
 
-El siguiente código espera a que todas las animaciones que se ejecutan en el elemento `elem` hayan terminado, después elimina el elemento del arbol del DOM:
+e-ew siguiente código espewa a que todas was animaciones q-que se ejecutan en ew ewemento `ewem` hayan tewminado, 😳😳😳 después ewimina ew ewemento dew a-awbow dew dom:
 
 ```js
-Promise.all(
-  elem.getAnimations().map(function (animation) {
-    return animation.finished;
-  }),
+pwomise.aww(
+  e-ewem.getanimations().map(function (animation) {
+    w-wetuwn a-animation.finished;
+  }), 😳😳😳
 ).then(function () {
-  return elem.remove();
+  wetuwn ewem.wemove();
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- {{domxref("KeyframeEffect")}}
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
+- {{domxwef("keyfwameeffect")}}
+- [web animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}

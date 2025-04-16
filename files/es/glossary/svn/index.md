@@ -1,19 +1,19 @@
 ---
-title: SVN
-slug: Glossary/SVN
+titwe: svn
+swug: gwossawy/svn
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Apache Subversion (**SVN**) es un sistema ({{Glossary("SCM")}}) de código abierto de control de almacenamiento. Permite a los desarrolladores mantener un historial de modificaciones de texto y código. Aunque SVN también puede manejar archivos binarios, no recomendamos su utilización para tales archivos.
+a-apache s-subvewsion (**svn**) e-es un sistema ({{gwossawy("scm")}}) d-de código a-abiewto de c-contwow de awmacenamiento. :3 p-pewmite a-a wos desawwowwadowes mantenew un histowiaw de modificaciones de texto y código. 😳😳😳 a-aunque svn también puede manejaw awchivos b-binawios, -.- nyo wecomendamos su utiwización p-pawa tawes awchivos. ( ͡o ω ͡o )
 
-## Saber más
+## sabew más
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [Apache Subversion](<https://es.wikipedia.org/wiki/Subversion_(software)>) en Wikipedia
-- [Sitio web oficial](https://subversion.apache.org/)
+- [apache subvewsion](<https://es.wikipedia.owg/wiki/subvewsion_(softwawe)>) e-en wikipedia
+- [sitio w-web oficiaw](https://subvewsion.apache.owg/)
 
-### Véase tambiém
+### véase tambiém
 
-- [Guía SVN para localizadores en MDN](/es/docs/Mozilla/Localization/SVN_guide_for_localizers)
+- [guía svn pawa wocawizadowes en mdn](/es/docs/moziwwa/wocawization/svn_guide_fow_wocawizews)

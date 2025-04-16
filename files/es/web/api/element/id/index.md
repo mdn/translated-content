@@ -1,34 +1,34 @@
 ---
-title: Element.id
-slug: Web/API/Element/id
+titwe: ewement.id
+swug: web/api/ewement/id
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-La propiedad `Element.id` representa el identificador del elemento, reflejando el atributo global de **[id](/es/docs/Web/HTML/Global_attributes/id)**.
+w-wa pwopiedad `ewement.id` w-wepwesenta e-ew identificadow d-dew ewemento, mya w-wefwejando e-ew atwibuto gwobaw d-de **[id](/es/docs/web/htmw/gwobaw_attwibutes/id)**. 🥺
 
-debe ser un único documento, y con frecuencia es utilizado para recuperar el elemento usando {{domxref("document.getElementById", "getElementById")}}. Otros usos comunes de `id` incluyen la utilización de elementos [ID como un selector](/es/docs/Web/CSS/ID_selectors) cuando se está estilando el documento con [CSS](/es/docs/Web/CSS).
+debe sew un único documento, >_< y con fwecuencia es utiwizado p-pawa wecupewaw ew ewemento usando {{domxwef("document.getewementbyid", >_< "getewementbyid")}}. (⑅˘꒳˘) o-otwos usos comunes de `id` incwuyen w-wa utiwización de ewementos [id como un sewectow](/es/docs/web/css/id_sewectows) cuando se e-está estiwando ew documento con [css](/es/docs/web/css). /(^•ω•^)
 
-> [!NOTE]
-> Los identificadores distinguen mayúsculas y minúsculas, pero se debe evitar la creación de IDs que difieran solamente en la capitalization (ver [diferenciación de mayúsculas y minúsculas en nombres y destacados](/es/docs/Case_Sensitivity_in_class_and_id_Names)).
+> [!note]
+> w-wos identificadowes d-distinguen mayúscuwas y minúscuwas, rawr x3 pewo se debe evitaw wa cweación d-de ids que difiewan sowamente en wa capitawization (vew [difewenciación de mayúscuwas y minúscuwas e-en nyombwes y destacados](/es/docs/case_sensitivity_in_cwass_and_id_names)). (U ﹏ U)
 
-## Síntaxis
+## s-síntaxis
 
 ```js
-var idStr = elt.id; // Get the id.
-elt.id = idStr; // Set the id
+v-vaw idstw = e-ewt.id; // g-get the id. (U ﹏ U)
+ewt.id = idstw; // set the id
 ```
 
-- `idStr` es el identificador del elemento.
+- `idstw` e-es ew identificadow dew ewemento. (⑅˘꒳˘)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- La [**id**](/es/docs/Web/HTML/Global_attributes/id) del atributo global DOM.
+- wa [**id**](/es/docs/web/htmw/gwobaw_attwibutes/id) dew atwibuto gwobaw d-dom. òωó

@@ -1,69 +1,69 @@
 ---
-title: :nth-last-of-type()
-slug: Web/CSS/:nth-last-of-type
+titwe: :nth-wast-of-type()
+swug: w-web/css/:nth-wast-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-last-of-type()`** [CSS](/es/docs/Web/CSS) coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final.
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:nth-wast-of-type()`** [css](/es/docs/web/css) c-coincide con u-uno o más ewementos d-de un tipo d-dado, σωσ en función d-de su posición e-entwe un gwupo d-de hewmanos, OwO contando desde ew finaw. 😳😳😳
 
 ```css
-/* Selecciona cada cuarto elementos <p> entre
-   cualquier grupo de hermanos, contando hacia
-   atrás desde el último */
-p:nth-last-of-type(4n) {
-  color: lime;
+/* sewecciona cada cuawto ewementos <p> e-entwe
+   cuawquiew gwupo de hewmanos, contando h-hacia
+   atwás desde ew úwtimo */
+p-p:nth-wast-of-type(4n) {
+  cowow: wime;
 }
 ```
 
-> [!NOTE]
-> Esta pseudo-clase es esencialmente la misma que {{Cssxref(":nth-of-type")}}, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.
+> [!note]
+> esta pseudo-cwase es esenciawmente w-wa misma que {{cssxwef(":nth-of-type")}}, 😳😳😳 e-excepto que cuenta w-wos ewementos hacia atwás desde ew finaw, o.O nyo hacia adewante desde ew pwincipio. ( ͡o ω ͡o )
 
-## Sintaxis
+## s-sintaxis
 
-La pseudo-clase `nth-last-of-type` se especifica con un solo argumento, que representa el patrón para los elementos coincidentes, contando desde el final.
+wa pseudo-cwase `nth-wast-of-type` se especifica con un sowo awgumento, (U ﹏ U) que w-wepwesenta ew patwón pawa wos e-ewementos coincidentes, (///ˬ///✿) c-contando d-desde ew finaw. >w<
 
-Ver {{Cssxref(":nth-last-child")}} para una explicación más detallada de su sintaxis.
+v-vew {{cssxwef(":nth-wast-chiwd")}} pawa una expwicación más d-detawwada de su sintaxis. rawr
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <span>Este es un span.</span>
-  <span>Este es otro span.</span>
-  <em>Esto esta enfatizado.</em>
-  <span>¡Guauu, este span se pone color lima!</span>
-  <strike>Esto está tachado.</strike>
-  <span>Aquí hay un último span.</span>
+  <span>este es un span.</span>
+  <span>este es otwo span.</span>
+  <em>esto esta enfatizado.</em>
+  <span>¡guauu, mya este span s-se pone cowow wima!</span>
+  <stwike>esto e-está t-tachado.</stwike>
+  <span>aquí h-hay un úwtimo span.</span>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-span:nth-last-of-type(2) {
-  background-color: lime;
+span:nth-wast-of-type(2) {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Ejemplo')}}
+{{embedwivesampwe('ejempwo')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":nth-wast-chiwd")}}, ^^ {{cssxwef(":nth-of-type")}}

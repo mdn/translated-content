@@ -1,14 +1,14 @@
 ---
-title: Node (DOM)
-slug: Glossary/Node/DOM
+titwe: nyode (dom)
+swug: gwossawy/node/dom
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En el contexto del {{Glossary("DOM")}}, un **nodo** es un único punto en el arbol de nodos. Los nodos pueden ser varias cosas el documento mismo, elementos, texto y comentarios.
+e-en ew contexto d-dew {{gwossawy("dom")}}, :3 u-un **nodo** es un único p-punto en e-ew awbow de nyodos. w-wos nyodos p-pueden sew vawias c-cosas ew documento mismo, (U ﹏ U) ewementos, -.- texto y comentawios. (ˆ ﻌ ˆ)♡
 
-## Saber más
+## sabew más
 
-### Referencia técnica
+### w-wefewencia técnica
 
-- El [node tree](https://dom.spec.whatwg.org/#concept-node) WHATWG spec
+- ew [node twee](https://dom.spec.naniwg.owg/#concept-node) n-naniwg spec

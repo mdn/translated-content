@@ -1,126 +1,126 @@
 ---
-title: flex
-slug: Web/CSS/flex
+titwe: fwex
+swug: web/css/fwex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS flex es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento.
+wa p-pwopiedad css f-fwex es una pwopiedad w-wesumida que i-indica wa capacidad d-de un ewemento f-fwexibwe pawa a-awtewaw sus dimensiones y wwenaw ew espacio disponibwe. :3 wos ewementos fwexibwes p-pueden sew estiwados pawa utiwizaw ew espacio d-disponibwe pwopowcionaw a su factow d-de cwecimiento fwexibwe o su factow de contwacción fwexibwe p-pawa evitaw desbowdamiento. ^^;;
 
 {{cssinfo}}
 
-Consulte [Cómo usar las cajas flexibles de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS/) para conocer más propiedades e información.
+consuwte [cómo u-usaw w-was cajas fwexibwes de css](/es/docs/web/css/css_fwexibwe_box_wayout/usando_was_cajas_fwexibwes_css/) pawa conocew más pwopiedades e infowmación. 🥺
 
-## Sintaxis
+## s-sintaxis
 
 ```css
 /* 0 0 auto */
-flex: none;
+fwex: nyone;
 
-/* Un valor, número sin unidades: flex-grow */
-flex: 2;
+/* un vawow, (⑅˘꒳˘) nyúmewo sin unidades: fwex-gwow */
+f-fwex: 2;
 
-/* Un valor, width/height: flex-basis */
-flex: 10em;
-flex: 30px;
-flex: auto;
-flex: content;
+/* un vawow, w-width/height: fwex-basis */
+f-fwex: 10em;
+f-fwex: 30px;
+f-fwex: auto;
+fwex: content;
 
-/* Dos valores: flex-grow | flex-basis */
-flex: 1 30px;
+/* dos vawowes: f-fwex-gwow | fwex-basis */
+fwex: 1 30px;
 
-/* Dos valores: flex-grow | flex-shrink */
-flex: 2 2;
+/* dos v-vawowes: fwex-gwow | fwex-shwink */
+fwex: 2 2;
 
-/* Tres valores: flex-grow | flex-shrink | flex-basis */
-flex: 2 2 10%;
+/* twes vawowes: fwex-gwow | fwex-shwink | fwex-basis */
+f-fwex: 2 2 10%;
 
-/* Valores globales */
-flex: inherit;
-flex: initial;
-flex: unset;
+/* vawowes g-gwobawes */
+f-fwex: inhewit;
+fwex: i-initiaw;
+fwex: unset;
 ```
 
-### Valores
+### vawowes
 
-- `<'flex-grow'>`
-  - : Define el [flex-grow](/es/docs/Web/CSS/flex-grow) del elemento flexible. Ver { { Xref_cssnumber ( ) } } para obtener más detalles. Los valores negativos no se consideran válidos. El valor predeterminado es 1 cuando se omite.
-- `<'flex-shrink'>`
-  - : Define el [`flex-shrink`](/es/docs/Web/CSS/flex-shrink) del elemento flexible. Ver { { Xref_cssnumber ( ) } } para obtener más detalles. Los valores negativos no se consideran válidos. El valor predeterminado es 1 cuando se omite.
-- `<'flex-basis'>`
-  - : Define el [`flex-basis`](/es/docs/Web/CSS/flex-basis) del elemento flexible. Se acepta cualquier valor válido para las propiedades `width` y `height`. Un tamaño preferente de 0 debe tener una unidad para evitar ser interpretado como flexible. El valor predeterminado es 0% cuando se omite.
+- `<'fwex-gwow'>`
+  - : define ew [fwex-gwow](/es/docs/web/css/fwex-gwow) d-dew ewemento f-fwexibwe. nyaa~~ vew { { xwef_cssnumbew ( ) } } p-pawa o-obtenew más detawwes. :3 wos vawowes n-nyegativos nyo se considewan v-váwidos. ( ͡o ω ͡o ) ew vawow pwedetewminado es 1 cuando s-se omite. mya
+- `<'fwex-shwink'>`
+  - : define ew [`fwex-shwink`](/es/docs/web/css/fwex-shwink) d-dew ewemento fwexibwe. (///ˬ///✿) v-vew { { xwef_cssnumbew ( ) } } p-pawa obtenew más detawwes. (˘ω˘) wos vawowes nyegativos nyo se considewan váwidos. ^^;; ew vawow pwedetewminado es 1 cuando s-se omite. (✿oωo)
+- `<'fwex-basis'>`
+  - : d-define ew [`fwex-basis`](/es/docs/web/css/fwex-basis) dew e-ewemento fwexibwe. (U ﹏ U) s-se acepta cuawquiew v-vawow váwido pawa was pwopiedades `width` y `height`. -.- u-un tamaño pwefewente de 0 debe tenew una unidad pawa evitaw sew intewpwetado como f-fwexibwe. ^•ﻌ•^ ew vawow pwedetewminado e-es 0% cuando s-se omite. rawr
 - `none`
-  - : Esta palabra clave se computa a `0 0 auto`.
+  - : e-esta pawabwa cwave se c-computa a `0 0 a-auto`. (˘ω˘)
 
-### Sintaxis normal
+### sintaxis n-nowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
 ```css
-#flex-container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
+#fwex-containew {
+  d-dispway: -webkit-fwex;
+  dispway: fwex;
+  -webkit-fwex-diwection: w-wow;
+  fwex-diwection: w-wow;
 }
 
-#flex-container > .flex-item {
-  -webkit-flex: auto;
-  flex: auto;
+#fwex-containew > .fwex-item {
+  -webkit-fwex: a-auto;
+  fwex: a-auto;
 }
 
-#flex-container > .raw-item {
-  width: 5rem;
+#fwex-containew > .waw-item {
+  w-width: 5wem;
 }
 ```
 
-```html
-<div id="flex-container">
-  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
-  <div class="raw-item" id="raw">Raw box</div>
+```htmw
+<div id="fwex-containew">
+  <div cwass="fwex-item" id="fwex">fwex b-box (cwick to toggwe waw box)</div>
+  <div cwass="waw-item" id="waw">waw box</div>
 </div>
 ```
 
-```js hidden
-var flex = document.getElementById("flex");
-var raw = document.getElementById("raw");
-flex.addEventListener("click", function () {
-  raw.style.display = raw.style.display == "none" ? "block" : "none";
+```js h-hidden
+vaw fwex = document.getewementbyid("fwex");
+vaw waw = document.getewementbyid("waw");
+fwex.addeventwistenew("cwick", nyaa~~ f-function () {
+  w-waw.stywe.dispway = w-waw.stywe.dispway == "none" ? "bwock" : "none";
 });
 ```
 
 ```css hidden
-#flex-container {
-  width: 100%;
-  font-family: Consolas, Arial, sans-serif;
+#fwex-containew {
+  w-width: 100%;
+  font-famiwy: c-consowas, UwU awiaw, :3 s-sans-sewif;
 }
 
-#flex-container > div {
-  border: 1px solid #f00;
-  padding: 1rem;
+#fwex-containew > div {
+  bowdew: 1px sowid #f00;
+  padding: 1wem;
 }
 
-#flex-container > .raw-item {
-  border: 1px solid #000;
+#fwex-containew > .waw-item {
+  bowdew: 1px sowid #000;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Example','100%','60')}}
+{{embedwivesampwe('exampwe','100%','60')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Usar las cajas felxibles de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS/)
+- [usaw w-was cajas fewxibwes de css](/es/docs/web/css/css_fwexibwe_box_wayout/usando_was_cajas_fwexibwes_css/)

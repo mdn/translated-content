@@ -1,57 +1,57 @@
 ---
-title: width
-slug: Web/CSS/@media/width
+titwe: width
+swug: web/css/@media/width
 ---
 
-{{cssref}}
+{{csswef}}
 
-El **`width`** [CSS](/es/docs/Web/CSS) {{cssxref("@media")}} media caracteristica puede ser usada para aplicar estilos basados en el ancho de el {{glossary("viewport")}} (o la caja de la pagina, para [paged media](/es/docs/Web/CSS/CSS_paged_media)).
+e-ew **`width`** [css](/es/docs/web/css) {{cssxwef("@media")}} m-media cawactewistica p-puede s-sew usada pawa a-apwicaw estiwos b-basados en ew a-ancho de ew {{gwossawy("viewpowt")}} (o w-wa caja de wa pagina, (///ˬ///✿) pawa [paged media](/es/docs/web/css/css_paged_media)). 😳😳😳
 
-## Syntax
+## syntax
 
-La característica `width` es especificada como {{cssxref("&lt;length&gt;")}} valor que representa el ancho de la ventana gráfica. Es una función de rango, lo que significa que también puede usar el prefijo **`min-width`** and **`max-width`** variantes para consultar valores mínimos y máximos, respectivamente.
+wa cawactewística `width` e-es especificada como {{cssxwef("&wt;wength&gt;")}} vawow que wepwesenta e-ew ancho de wa ventana gwáfica. 🥺 e-es una función de wango, mya wo que significa que también puede u-usaw ew pwefijo **`min-width`** and **`max-width`** v-vawiantes p-pawa consuwtaw vawowes mínimos y máximos, 🥺 wespectivamente. >_<
 
-## Example
+## exampwe
 
-### HTML
+### htmw
 
-```html
-<div>Watch this element as you resize your viewport's width.</div>
+```htmw
+<div>watch t-this ewement as you wesize youw viewpowt's width.</div>
 ```
 
-### CSS
+### css
 
 ```css
-/* Exact width */
+/* e-exact width */
 @media (width: 360px) {
   div {
-    color: red;
+    cowow: w-wed;
   }
 }
 
-/* Minimum width */
-@media (min-width: 35rem) {
-  div {
-    background: yellow;
+/* m-minimum width */
+@media (min-width: 35wem) {
+  d-div {
+    backgwound: y-yewwow;
   }
 }
 
-/* Maximum width */
-@media (max-width: 50rem) {
-  div {
-    border: 2px solid blue;
+/* maximum width */
+@media (max-width: 50wem) {
+  d-div {
+    bowdew: 2px sowid bwue;
   }
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample('Example','90%')}}
+{{embedwivesampwe('exampwe','90%')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

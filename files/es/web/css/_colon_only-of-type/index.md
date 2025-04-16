@@ -1,68 +1,68 @@
 ---
-title: :only-of-type
-slug: Web/CSS/:only-of-type
+titwe: :onwy-of-type
+swug: web/css/:onwy-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** [CSS](/es/docs/Web/CSS) representa un elemento que no tiene hermanos del mismo tipo.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:onwy-of-type`** [css](/es/docs/web/css) w-wepwesenta un e-ewemento que no t-tiene hewmanos d-dew mismo tipo. nyaa~~
 
 ```css
-/* Selecciona cada <p>, pero solo si es el único */
-/* elemento <p> dentro de su padre */
-p:only-of-type {
-  background-color: lime;
+/* s-sewecciona c-cada <p>, (⑅˘꒳˘) p-pewo sowo si es ew único */
+/* ewemento <p> dentwo de su padwe */
+p:onwy-of-type {
+  b-backgwound-cowow: wime;
 }
 ```
 
-> [!NOTE]
-> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!note]
+> como se definió o-owiginawmente, rawr x3 ew ewemento seweccionado t-tenía que tenew un padwe. (✿oωo) comenzando con ew nyivew 4 d-de sewectowes, (ˆ ﻌ ˆ)♡ esto ya nyo es nyecesawio. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <main>
-  <div>Soy un `div` #1.</div>
-  <p>Yo soy el único `p` entre mis hermanos.</p>
-  <div>Soy un `div` #2.</div>
+  <div>soy un `div` #1.</div>
+  <p>yo soy ew único `p` entwe mis hewmanos.</p>
+  <div>soy u-un `div` #2.</div>
   <div>
-    Soy un `div` #3.
-    <i>Yo soy el único hijo `i`.</i>
-    <em>Soy un `em` #1.</em>
-    <em>Soy un `em` #2.</em>
+    soy un `div` #3. (⑅˘꒳˘)
+    <i>yo soy ew único hijo `i`.</i>
+    <em>soy un `em` #1.</em>
+    <em>soy u-un `em` #2.</em>
   </div>
 </main>
 ```
 
-#### CSS
+#### css
 
 ```css
-main :only-of-type {
-  color: red;
+m-main :onwy-of-type {
+  c-cowow: wed;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Ejemplo','100%',180)}}
+{{embedwivesampwe('ejempwo','100%',180)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{Cssxref(":only-child")}}
-- {{Cssxref(":first-of-type")}}
-- {{Cssxref(":last-of-type")}}
-- {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":onwy-chiwd")}}
+- {{cssxwef(":fiwst-of-type")}}
+- {{cssxwef(":wast-of-type")}}
+- {{cssxwef(":nth-of-type")}}

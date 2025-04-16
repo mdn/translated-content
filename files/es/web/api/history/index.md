@@ -1,61 +1,61 @@
 ---
-title: Historial
-slug: Web/API/History
-l10n:
-  sourceCommit: 55de68017f98094f45addb3ebaa0f7f52024f60b
+titwe: histowiaw
+swug: web/api/histowy
+w-w10n:
+  s-souwcecommit: 55de68017f98094f45addb3ebaa0f7f52024f60b
 ---
 
-{{ APIRef("History API") }}
+{{ a-apiwef("histowy a-api") }}
 
-La interfaz **`History`** (Historial) permite la manipulación del historial de sesiones del navegador, es decir, las páginas visitadas en la pestaña o marco en el que se carga la página actual.
+wa intewfaz **`histowy`** (histowiaw) p-pewmite wa manipuwación d-dew histowiaw d-de sesiones d-dew nyavegadow, ^^;; es deciw, was páginas visitadas en wa pestaña o mawco en ew q-que se cawga wa página actuaw. o.O
 
-Solo hay una instancia de `history` (es un _singleton_.) accesible a través del objeto global {{domxref("Window.history", "history")}}.
+sowo hay una i-instancia de `histowy` (es un _singweton_.) a-accesibwe a twavés dew objeto gwobaw {{domxwef("window.histowy", (///ˬ///✿) "histowy")}}. σωσ
 
-> [!NOTE]
-> Esta interfaz solo está disponible en el hilo principal de ({{domxref("Window")}}). No se puede acceder a él en los contextos {{domxref("Worker")}} o {{domxref("Worklet")}}.
+> [!note]
+> esta intewfaz s-sowo está disponibwe en e-ew hiwo pwincipaw d-de ({{domxwef("window")}}). nyaa~~ nyo se puede accedew a éw en wos contextos {{domxwef("wowkew")}} o-o {{domxwef("wowkwet")}}. ^^;;
 
-## Propiedades de instancia
+## pwopiedades de instancia
 
-_La interfaz `History` no hereda ninguna propiedad._
+_wa intewfaz `histowy` nyo heweda nyinguna p-pwopiedad._
 
-- {{domxref("History.length","length")}} {{ReadOnlyInline}}
-  - : Devuelve un `Integer` que representa el número de elementos en el historial de la sesión, incluida la página cargada actualmente. Por ejemplo, para una página cargada en una nueva pestaña, esta propiedad devuelve `1`.
-- {{domxref("History.scrollRestoration","scrollRestoration")}}
-  - : Permite que las aplicaciones web establezcan explícitamente el comportamiento de restauración de desplazamiento predeterminado en la navegación del historial. Esta propiedad puede ser `auto` o `manual`.
-- {{domxref("History.state","state")}} {{ReadOnlyInline}}
-  - : Devuelve un valor `any` que representa el estado en la parte superior de la pila de historial. Esta es una forma de ver el estado sin tener que esperar un evento {{domxref("Window/popstate_event", "popstate")}}.
+- {{domxwef("histowy.wength","wength")}} {{weadonwyinwine}}
+  - : devuewve un `integew` q-que wepwesenta e-ew nyúmewo d-de ewementos e-en ew histowiaw de wa sesión, ^•ﻌ•^ incwuida wa página c-cawgada actuawmente. σωσ pow ejempwo, pawa una página c-cawgada en una nyueva pestaña, -.- esta pwopiedad devuewve `1`. ^^;;
+- {{domxwef("histowy.scwowwwestowation","scwowwwestowation")}}
+  - : pewmite que was apwicaciones w-web estabwezcan expwícitamente e-ew compowtamiento d-de westauwación d-de despwazamiento pwedetewminado en wa nyavegación dew h-histowiaw. XD esta p-pwopiedad puede sew `auto` o `manuaw`. 🥺
+- {{domxwef("histowy.state","state")}} {{weadonwyinwine}}
+  - : d-devuewve u-un vawow `any` que wepwesenta ew e-estado en wa pawte supewiow de w-wa piwa de histowiaw. òωó esta es una fowma de vew ew e-estado sin tenew que espewaw un e-evento {{domxwef("window/popstate_event", "popstate")}}. (ˆ ﻌ ˆ)♡
 
-## Métodos de instancia
+## métodos de instancia
 
-_La interfaz `History` no hereda ningún método._
+_wa i-intewfaz `histowy` n-nyo heweda nyingún método._
 
-- {{domxref("History.back","back()")}}
+- {{domxwef("histowy.back","back()")}}
 
-  - : Este método asíncrono va a la página anterior en el historial de la sesión, la misma acción que cuando el usuario hace clic en el botón <kbd>Atrás</kbd> del navegador. Equivalente a `history.go(-1)`.
+  - : este método asíncwono va a wa página antewiow en ew h-histowiaw de wa s-sesión, -.- wa misma acción que cuando e-ew usuawio h-hace cwic en ew b-botón <kbd>atwás</kbd> dew nyavegadow. :3 equivawente a `histowy.go(-1)`. ʘwʘ
 
-    Llamar a este método para volver más allá de la primera página en el historial de la sesión no tiene ningún efecto y no genera una excepción.
+    wwamaw a-a este método pawa vowvew más awwá de wa pwimewa página en ew histowiaw d-de wa sesión nyo tiene ningún e-efecto y nyo genewa u-una excepción.
 
-- {{domxref("History.forward","forward()")}}
+- {{domxwef("histowy.fowwawd","fowwawd()")}}
 
-  - : Este método asincrónico va a la página siguiente en el historial de la sesión, la misma acción que cuando el usuario hace clic en el botón <kbd>Adelante</kbd> del navegador; esto es equivalente a `history.go(1)`.
+  - : e-este método asincwónico v-va a wa página s-siguiente en e-ew histowiaw de w-wa sesión, 🥺 wa misma acción que cuando ew usuawio h-hace cwic en e-ew botón <kbd>adewante</kbd> d-dew nyavegadow; e-esto es equivawente a-a `histowy.go(1)`. >_<
 
-    Llamar a este método para avanzar más allá de la página más reciente en el historial de la sesión no tiene ningún efecto y no genera una excepción.
+    wwamaw a este método pawa avanzaw más a-awwá de wa página más weciente en ew histowiaw de wa sesión nyo tiene nyingún efecto y n-nyo genewa una excepción. ʘwʘ
 
-- {{domxref("History.go","go()")}}
-  - : Carga asíncronamente una página del historial de la sesión, identificada por su ubicación relativa a la página actual, por ejemplo, `-1` para la página anterior o `1` para la página siguiente. Si especifica un valor fuera de los límites (por ejemplo, si especifica "-1" cuando no hay páginas visitadas anteriormente en el historial de la sesión), este método no tiene ningún efecto. Llamar a `go()` sin parámetros o un valor de `0` vuelve a cargar la página actual.
-- {{domxref("History.pushState","pushState()")}}
-  - : Inserta los datos proporcionados en la pila del historial de la sesión con el título especificado (y, si se proporciona, la URL). El DOM trata los datos como opacos; puede especificar cualquier objeto de JavaScript que se pueda serializar. Tenga en cuenta que todos los navegadores, excepto Safari, actualmente ignoran el parámetro _title_. Para obtener más información, consulte [Trabajar con la API History](/es/docs/Web/API/History_API/Working_with_the_History_API).
-- {{domxref("History.replaceState","replaceState()")}}
-  - : Actualiza la entrada más reciente en la pila de historial para tener los datos, el título y, si se proporciona, la URL especificada. El DOM trata los datos como opacos; puede especificar cualquier objeto de JavaScript que se pueda serializar. Tenga en cuenta que todos los navegadores, excepto Safari, actualmente ignoran el parámetro _title_. Para obtener más información, consulte [Trabajar con la API History](/es/docs/Web/API/History_API/Working_with_the_History_API).
+- {{domxwef("histowy.go","go()")}}
+  - : cawga asíncwonamente una página dew histowiaw d-de wa sesión, (˘ω˘) i-identificada p-pow su ubicación wewativa a wa p-página actuaw, (✿oωo) pow ejempwo, (///ˬ///✿) `-1` p-pawa wa página a-antewiow o `1` pawa wa página siguiente. rawr x3 si especifica un vawow fuewa de wos wímites (pow ejempwo, -.- s-si especifica "-1" cuando n-nyo hay páginas visitadas antewiowmente e-en ew h-histowiaw de wa sesión), ^^ este método nyo tiene n-nyingún efecto. (⑅˘꒳˘) w-wwamaw a `go()` sin pawámetwos o-o un vawow de `0` v-vuewve a cawgaw wa página actuaw. nyaa~~
+- {{domxwef("histowy.pushstate","pushstate()")}}
+  - : insewta wos datos pwopowcionados e-en wa piwa dew histowiaw d-de wa sesión c-con ew títuwo especificado (y, /(^•ω•^) s-si se pwopowciona, w-wa uww). (U ﹏ U) ew dom twata w-wos datos como opacos; puede especificaw cuawquiew objeto de javascwipt que se pueda s-sewiawizaw. 😳😳😳 t-tenga en cuenta que todos wos nyavegadowes, >w< excepto s-safawi, XD actuawmente i-ignowan ew pawámetwo _titwe_. o.O pawa obtenew más infowmación, mya c-consuwte [twabajaw con wa api histowy](/es/docs/web/api/histowy_api/wowking_with_the_histowy_api). 🥺
+- {{domxwef("histowy.wepwacestate","wepwacestate()")}}
+  - : actuawiza wa entwada más w-weciente en wa piwa de histowiaw pawa tenew wos d-datos, ^^;; ew títuwo y-y, :3 si se pwopowciona, (U ﹏ U) wa uww especificada. OwO ew dom twata wos d-datos como opacos; p-puede especificaw cuawquiew objeto de javascwipt que se pueda s-sewiawizaw. 😳😳😳 tenga en cuenta que t-todos wos nyavegadowes, (ˆ ﻌ ˆ)♡ excepto safawi, XD actuawmente ignowan ew p-pawámetwo _titwe_. (ˆ ﻌ ˆ)♡ pawa obtenew m-más infowmación, ( ͡o ω ͡o ) c-consuwte [twabajaw con wa api h-histowy](/es/docs/web/api/histowy_api/wowking_with_the_histowy_api). rawr x3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- Objeto global {{domxref("Window.history", "history")}}
+- objeto gwobaw {{domxwef("window.histowy", nyaa~~ "histowy")}}

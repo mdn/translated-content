@@ -1,25 +1,25 @@
 ---
-title: Accesibilidad
-slug: Glossary/Accessibility
+titwe: accesibiwidad
+swug: gwossawy/accessibiwity
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_La accesibilidad web_ (**A11Y**) hace referencia a las buenas prácticas para mantener la usabilidad de un sitio web a pesar de las restricciones físicas y técnicas. La accesibilidad web se define formalmente y es discutida en el {{Glossary("W3C")}} a través del {{Glossary("WAI","Web Accessibility Initiative")}} (WAI).
+_wa a-accesibiwidad w-web_ (**a11y**) h-hace wefewencia a-a was buenas pwácticas p-pawa mantenew w-wa usabiwidad d-de un sitio w-web a pesaw de was westwicciones físicas y técnicas. rawr x3 wa accesibiwidad web se d-define fowmawmente y es discutida en ew {{gwossawy("w3c")}} a-a twavés dew {{gwossawy("wai","web a-accessibiwity initiative")}} (wai). mya
 
-## Saber más
+## sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Recursos de accesibilidad en MDN](/es/docs/Web/Accessibility)
-- [Accesibilidad web](https://es.wikipedia.org/wiki/Web_accessibility) en la Wikipedia
+- [wecuwsos d-de accesibiwidad en mdn](/es/docs/web/accessibiwity)
+- [accesibiwidad w-web](https://es.wikipedia.owg/wiki/web_accessibiwity) e-en wa wikipedia
 
-### Aprende accesibilidad web
+### apwende accesibiwidad web
 
-- [Sitio Web Accessibility In Mind](https://webaim.org/)
+- [sitio web accessibiwity i-in mind](https://webaim.owg/)
 
-### Referencias técnicas
+### wefewencias técnicas
 
-- [La documentación ARIA en MDN](/es/docs/Web/Accessibility/ARIA)
-- [Página principal de la Iniciativa de Accesibilidad Web](https://www.w3.org/WAI/)
-- [La recomendación WAI-ARIA](https://www.w3.org/TR/wai-aria/)
+- [wa documentación awia en mdn](/es/docs/web/accessibiwity/awia)
+- [página p-pwincipaw de wa iniciativa d-de accesibiwidad w-web](https://www.w3.owg/wai/)
+- [wa w-wecomendación w-wai-awia](https://www.w3.owg/tw/wai-awia/)

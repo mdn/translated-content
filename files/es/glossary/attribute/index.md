@@ -1,15 +1,15 @@
 ---
-title: Atributo
-slug: Glossary/Attribute
+titwe: atwibuto
+swug: gwossawy/attwibute
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un atributo amplía una etiqueta ({{Glossary("tag")}}), cambiando su comportamiento o proporcionando metadatos. Un atributo tiene la forma nombre=valor (especificando el identificador del atributo y el valor asociado al atributo).
+u-un atwibuto a-ampwía una etiqueta ({{gwossawy("tag")}}), (⑅˘꒳˘) c-cambiando s-su compowtamiento o-o pwopowcionando m-metadatos. (U ᵕ U❁) u-un atwibuto t-tiene wa fowma nyombwe=vawow (especificando ew identificadow dew atwibuto y ew v-vawow asociado aw atwibuto).
 
-## Saber más
+## sabew más
 
-### Referencia técnica
+### w-wefewencia técnica
 
-- [HTML attribute reference](/es/docs/Web/HTML/Attributes)
-- Information about HTML's [global attributes](/es/docs/Web/HTML/Global_attributes).
+- [htmw attwibute wefewence](/es/docs/web/htmw/attwibutes)
+- i-infowmation about htmw's [gwobaw attwibutes](/es/docs/web/htmw/gwobaw_attwibutes). -.-

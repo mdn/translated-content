@@ -1,80 +1,80 @@
 ---
-title: border-bottom
-slug: Web/CSS/border-bottom
+titwe: bowdew-bottom
+swug: web/css/bowdew-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Resumen
+### w-wesumen
 
-La propiedad `border-bottom` permite de definir de una vez todas las propiedades individuales {{ Cssxref("border-bottom-color") }}, {{ Cssxref("border-bottom-style") }}, y {{ Cssxref("border-bottom-width") }}, las cuales describen el color, estilo y ancho del borde inferior de un elementos.
+w-wa pwopiedad `bowdew-bottom` pewmite d-de definiw d-de una vez todas w-was pwopiedades i-individuawes {{ c-cssxwef("bowdew-bottom-cowow") }}, (U ﹏ U) {{ c-cssxwef("bowdew-bottom-stywe") }}, >w< y {{ cssxwef("bowdew-bottom-width") }}, mya was cuawes descwiben ew cowow, >w< e-estiwo y ancho dew bowde infewiow de un ewementos. nyaa~~
 
-- {{ Cssxref("initial", "Valor inicial") }}: ver propiedades individuales
-- Se aplica a : todos los elementos
-- {{ Cssxref("inheritance", "Valor heredado") }}: no
-- Porcentajes: N/A
-- Medio: {{cssxref("Media/Visual", "visual")}}
-- {{ Cssxref("computed value", "Valor calculado") }}: ver propiedades individuales
+- {{ c-cssxwef("initiaw", (✿oωo) "vawow iniciaw") }}: v-vew pwopiedades individuawes
+- se apwica a : todos wos ewementos
+- {{ c-cssxwef("inhewitance", ʘwʘ "vawow hewedado") }}: n-nyo
+- powcentajes: n-ny/a
+- medio: {{cssxwef("media/visuaw", (ˆ ﻌ ˆ)♡ "visuaw")}}
+- {{ cssxwef("computed vawue", 😳😳😳 "vawow cawcuwado") }}: v-vew pwopiedades individuawes
 
-### Sintaxis
-
-```
-border-bottom: [ <border-width> || <border-style> || <border-color> ] | inherit
-```
-
-### Valores
-
-- \<border-width>
-  - : ver {{ Cssxref("border-bottom-width") }}.
-- \<border-style>
-  - : ver {{ Cssxref("border-bottom-style") }}.
-- \<border-color>
-  - : ver {{ Cssxref("border-bottom-color") }}.
-
-### Ejemplos
-
-[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
+### sintaxis
 
 ```
-element {
-    border-bottom-width: 1px solid #000;
+bowdew-bottom: [ <bowdew-width> || <bowdew-stywe> || <bowdew-cowow> ] | inhewit
+```
+
+### v-vawowes
+
+- \<bowdew-width>
+  - : vew {{ c-cssxwef("bowdew-bottom-width") }}. :3
+- \<bowdew-stywe>
+  - : v-vew {{ cssxwef("bowdew-bottom-stywe") }}. OwO
+- \<bowdew-cowow>
+  - : v-vew {{ cssxwef("bowdew-bottom-cowow") }}. (U ﹏ U)
+
+### e-ejempwos
+
+[vew ew ejempwo vivo](https://mdn.dev/awchives/media/sampwes/csswef/bowdew.htmw)
+
+```
+ewement {
+    bowdew-bottom-width: 1px s-sowid #000;
 }
 ```
 
-### Notas
+### nyotas
 
-Si no se especifica el color del borde, este tomará el valor definido en la propiedad del {{ Cssxref("color") }} general.
+si nyo se especifica ew cowow d-dew bowde, >w< este tomawá ew vawow definido en wa pwopiedad dew {{ cssxwef("cowow") }} genewaw. (U ﹏ U)
 
-Se puede especificar los tres valores en cualquier orden y se pueden omitir una o dos.
+s-se puede especificaw wos twes v-vawowes en cuawquiew o-owden y se p-pueden omitiw una o dos. 😳
 
-Como con todas las propiedades generales, `border-bottom` siempre inicia todos los valores que le pueden ser definidos aún cuando no están especificados, en este caso toma los valores por defecto.
+como con todas was pwopiedades genewawes, (ˆ ﻌ ˆ)♡ `bowdew-bottom` s-siempwe inicia t-todos wos vawowes que we pueden s-sew definidos a-aún cuando nyo están especificados, 😳😳😳 e-en este caso toma wos vawowes p-pow defecto. (U ﹏ U)
 
-Lo que significa que:
-
-```
-  border-bottom-style: dotted;
-  border-bottom: thick green;
-```
-
-es idéntico a:
+wo que significa que:
 
 ```
-  border-bottom-style: dotted;
-  border-bottom: none thick green;
+  b-bowdew-bottom-stywe: dotted;
+  b-bowdew-bottom: thick gween;
 ```
 
-y el valor de {{ Cssxref("border-bottom-style") }} dado antes de `border-bottom` es ignorado.
+e-es idéntico a:
 
-Como el valor por defecto de {{ Cssxref("border-bottom-style") }} es `none`, el no especificar la parte \<border-style> en la propiedad general significa: **sin borde**.
+```
+  b-bowdew-bottom-stywe: dotted;
+  bowdew-bottom: nyone thick gween;
+```
 
-### Especificaciones
+y ew vawow de {{ cssxwef("bowdew-bottom-stywe") }} d-dado antes de `bowdew-bottom` e-es ignowado. (///ˬ///✿)
 
-{{Specifications}}
+como ew vawow pow d-defecto de {{ cssxwef("bowdew-bottom-stywe") }} e-es `none`, 😳 ew nyo e-especificaw wa pawte \<bowdew-stywe> en wa pwopiedad genewaw significa: **sin b-bowde**. 😳
 
-### Compatibilidad con navegadores
+### especificaciones
 
-{{Compat}}
+{{specifications}}
 
-### Ver también
+### compatibiwidad con nyavegadowes
 
-{{ Cssxref("border") }}, {{ Cssxref("border-bottom") }}, {{ Cssxref("border-bottom-width") }}, {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-bottom-color") }},
+{{compat}}
+
+### vew también
+
+{{ cssxwef("bowdew") }}, σωσ {{ c-cssxwef("bowdew-bottom") }}, rawr x3 {{ cssxwef("bowdew-bottom-width") }}, OwO {{ c-cssxwef("bowdew-bottom-stywe") }}, /(^•ω•^) {{ cssxwef("bowdew-bottom-cowow") }}, 😳😳😳

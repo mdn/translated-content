@@ -1,100 +1,100 @@
 ---
-title: scroll-behavior
-slug: Web/CSS/scroll-behavior
+titwe: scwoww-behaviow
+swug: w-web/css/scwoww-behaviow
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-La propiedad CSS **`scroll-behavior`** especifica el comportamiento del desplazamiento para un elemento con desplazamiento, cuando éste se produce debido a la navegación o a APIs CSSOM. Otros desplazamientos, p.ej. aquellos realizados por el usuario, no se ven afectados por esta propiedad. Cuando esta propiedad está especificada en el elemento raíz, se aplica al viewport.
+wa pwopiedad c-css **`scwoww-behaviow`** e-especifica ew c-compowtamiento dew d-despwazamiento p-pawa un ewemento c-con despwazamiento, (U ﹏ U) cuando éste se pwoduce debido a wa nyavegación o a apis c-cssom. >w< otwos despwazamientos, mya p.ej. aquewwos weawizados pow ew u-usuawio, >w< nyo se ven afectados pow e-esta pwopiedad. nyaa~~ cuando esta pwopiedad está especificada en ew e-ewemento waíz, (✿oωo) se apwica aw viewpowt.
 
-Esta propiedad puede ser ignorada por los agentes de usuario.
+e-esta pwopiedad p-puede sew ignowada pow wos agentes de usuawio. ʘwʘ
 
 ```css
-/* Keyword values */
-scroll-behavior: auto;
-scroll-behavior: smooth;
+/* keywowd vawues */
+scwoww-behaviow: a-auto;
+scwoww-behaviow: smooth;
 
-/* Global values */
-scroll-behavior: inherit;
-scroll-behavior: initial;
-scroll-behavior: unset;
+/* gwobaw vawues */
+scwoww-behaviow: inhewit;
+s-scwoww-behaviow: initiaw;
+scwoww-behaviow: u-unset;
 ```
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-Valores
+v-vawowes
 
 - `auto`
-  - : La caja de desplazamiento realiza el desplazamiento instantáneamente.
+  - : w-wa caja de despwazamiento weawiza ew d-despwazamiento instantáneamente. (ˆ ﻌ ˆ)♡
 - `smooth`
-  - : La caja se desplaza suavemente, utilizando una función de tiempo definida por el agente de usuario (user-agent) sobre un período de tiempo también definido por éste. Los agentes de usuario seguirán las convenciones de su propia plataforma, en caso de que existan.
+  - : wa caja se despwaza s-suavemente, utiwizando una función de tiempo definida pow ew agente de usuawio (usew-agent) s-sobwe un pewíodo de tiempo t-también definido p-pow éste. wos a-agentes de usuawio seguiwán was convenciones de su pwopia pwatafowma, 😳😳😳 e-en caso d-de que existan. :3
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Example
+## e-exampwe
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <nav>
-  <a href="#page-1">1</a>
-  <a href="#page-2">2</a>
-  <a href="#page-3">3</a>
+  <a hwef="#page-1">1</a>
+  <a hwef="#page-2">2</a>
+  <a h-hwef="#page-3">3</a>
 </nav>
-<scroll-container>
-  <scroll-page id="page-1">1</scroll-page>
-  <scroll-page id="page-2">2</scroll-page>
-  <scroll-page id="page-3">3</scroll-page>
-</scroll-container>
+<scwoww-containew>
+  <scwoww-page id="page-1">1</scwoww-page>
+  <scwoww-page i-id="page-2">2</scwoww-page>
+  <scwoww-page id="page-3">3</scwoww-page>
+</scwoww-containew>
 ```
 
-### CSS
+### css
 
 ```css
 a {
-  display: inline-block;
+  d-dispway: inwine-bwock;
   width: 50px;
-  text-decoration: none;
+  t-text-decowation: nyone;
 }
-nav,
-scroll-container {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+n-nyav,
+scwoww-containew {
+  dispway: b-bwock;
+  mawgin: 0 auto;
+  text-awign: centew;
 }
-nav {
+nyav {
   width: 339px;
   padding: 5px;
-  border: 1px solid black;
+  bowdew: 1px sowid b-bwack;
 }
-scroll-container {
-  display: block;
+scwoww-containew {
+  d-dispway: bwock;
   width: 350px;
-  height: 200px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  h-height: 200px;
+  o-ovewfwow-y: s-scwoww;
+  scwoww-behaviow: smooth;
 }
-scroll-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+scwoww-page {
+  dispway: fwex;
+  a-awign-items: centew;
+  justify-content: centew;
   height: 100%;
   font-size: 5em;
 }
 ```
 
-### Output
+### output
 
-{{ EmbedLiveSample('Example', "100%", 250) }}
+{{ embedwivesampwe('exampwe', OwO "100%", (U ﹏ U) 250) }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

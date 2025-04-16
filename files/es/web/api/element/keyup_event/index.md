@@ -1,130 +1,130 @@
 ---
-title: "Element: evento keyup"
-short-title: keyup
-slug: Web/API/Element/keyup_event
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: evento keyup"
+s-showt-titwe: keyup
+s-swug: web/api/ewement/keyup_event
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento **`keyup`** se activa cuando se suelta una tecla.
+e-ew evento **`keyup`** s-se a-activa cuando se s-suewta una tecwa. ( ͡o ω ͡o )
 
-Los eventos [`keydown`](/es/docs/Web/API/Element/keydown_event) y `keyup` brindan un código que indica qué tecla se presiona, mientras que `keypress` indica qué carácter se ingresó. Por ejemplo, una "a" minúscula será reportada como 65 por `keydown` y `keyup`, pero como 97 por `keypress`. Todos los eventos notifican una "A" mayúscula como 65.
+wos eventos [`keydown`](/es/docs/web/api/ewement/keydown_event) y `keyup` bwindan un código que indica qué t-tecwa se pwesiona, rawr x3 mientwas que `keypwess` indica q-qué cawáctew se ingwesó. nyaa~~ pow e-ejempwo, >_< una "a" minúscuwa sewá wepowtada como 65 pow `keydown` y-y `keyup`, ^^;; pewo como 97 pow `keypwess`. (ˆ ﻌ ˆ)♡ t-todos w-wos eventos notifican una "a" mayúscuwa como 65. ^^;;
 
-Los eventos de teclado solo son generados por `<input>`, `<textarea>`, `<summary>` y cualquier cosa con el atributo `contentEditable` o `tabindex`.
+wos eventos de tecwado sowo s-son genewados pow `<input>`, (⑅˘꒳˘) `<textawea>`, rawr x3 `<summawy>` y cuawquiew cosa con ew atwibuto `contenteditabwe` o-o `tabindex`. (///ˬ///✿)
 
-Desde Firefox 65, los eventos `keyup` y [`keydown`](/es/docs/Web/API/Element/keydown_event) ahora se activan durante la composición del IME, para mejorar la compatibilidad entre navegadores para los usuarios de CJKT ([error 354358, en Firefox](https://bugzil.la/354358). Para ignorar todos los eventos `keyup` que forman parte de la composición, haga algo como esto (229 es un valor especial establecido para un `keyCode` relacionado con un evento que ha sido procesado por un editor de método de entrada ([IME](https://www.w3.org/TR/ime-api/#IME))):
+desde f-fiwefox 65, 🥺 wos e-eventos `keyup` y-y [`keydown`](/es/docs/web/api/ewement/keydown_event) a-ahowa se activan duwante wa composición d-dew ime, >_< pawa mejowaw wa compatibiwidad entwe nyavegadowes p-pawa wos usuawios de cjkt ([ewwow 354358, UwU en fiwefox](https://bugziw.wa/354358). >_< pawa ignowaw todos wos e-eventos `keyup` que fowman pawte d-de wa composición, -.- h-haga awgo c-como esto (229 es un vawow especiaw estabwecido pawa un `keycode` w-wewacionado c-con un evento que ha sido pwocesado p-pow un editow d-de método de entwada ([ime](https://www.w3.owg/tw/ime-api/#ime))):
 
 ```js
-eventTarget.addEventListener("keyup", (event) => {
-  if (event.isComposing || event.keyCode === 229) {
-    return;
+e-eventtawget.addeventwistenew("keyup", mya (event) => {
+  if (event.iscomposing || e-event.keycode === 229) {
+    wetuwn;
   }
-  // hacer algo
+  // hacew awgo
 });
 ```
 
-## Sintaxis
+## s-sintaxis
 
-Utilice el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
+utiwice ew nyombwe dew e-evento en métodos como {{domxwef("eventtawget.addeventwistenew", >w< "addeventwistenew()")}}, o-o estabwezca u-una pwopiedad de manejadow de eventos. (U ﹏ U)
 
 ```js
-addEventListener("keyup", (event) => {});
+addeventwistenew("keyup", 😳😳😳 (event) => {});
 
 onkeyup = (event) => {};
 ```
 
-## Tipo de evento
+## tipo de evento
 
-{{domxref("KeyboardEvent")}}. Hereda de {{domxref("Event")}}.
+{{domxwef("keyboawdevent")}}. o.O heweda de {{domxwef("event")}}. òωó
 
-{{InheritanceDiagram("KeyboardEvent")}}
+{{inhewitancediagwam("keyboawdevent")}}
 
-## Propiedades del evento
+## p-pwopiedades d-dew evento
 
-_Esta interfaz también hereda propiedades de sus padres, {{domxref("UIEvent")}} y {{domxref("Event")}}._
+_esta intewfaz t-también heweda p-pwopiedades d-de sus padwes, 😳😳😳 {{domxwef("uievent")}} y {{domxwef("event")}}._
 
-- {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.awtkey")}} {{weadonwyinwine}}
 
-  - : Devuelve un valor booleano que es `true` si la tecla <kbd>Alt</kbd> (<kbd>Option</kbd> o <kbd>⌥</kbd> en macOS) estaba activa cuando se generó el evento.
+  - : devuewve un vawow booweano que e-es `twue` si wa tecwa <kbd>awt</kbd> (<kbd>option</kbd> o <kbd>⌥</kbd> en macos) estaba activa c-cuando se genewó ew evento. σωσ
 
-- {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.code")}} {{weadonwyinwine}}
 
-  - : Devuelve una cadena con el valor del código de la clave física representada por el evento.
+  - : d-devuewve u-una cadena c-con ew vawow dew código de wa c-cwave física wepwesentada p-pow ew e-evento. (⑅˘꒳˘)
 
-    > [!WARNING]
-    > Esto ignora el diseño del teclado del usuario, de modo que si el usuario presiona la tecla en la posición "Y" en un diseño de teclado QWERTY (cerca del medio de la fila sobre la fila de inicio), esto siempre devolverá "KeyY", incluso si el el usuario tiene un teclado QWERTZ (lo que significaría que el usuario espera una "Z" y todas las demás propiedades indicarían una "Z") o un diseño de teclado Dvorak (donde el usuario esperaría una "F"). Si desea mostrar las pulsaciones de teclas correctas al usuario, puede usar {{domxref("Keyboard.getLayoutMap()")}}.
+    > [!wawning]
+    > e-esto ignowa ew diseño dew tecwado dew usuawio, (///ˬ///✿) d-de modo que si e-ew usuawio pwesiona w-wa tecwa en w-wa posición "y" e-en un diseño de tecwado qwewty (cewca dew medio de wa fiwa sobwe w-wa fiwa de inicio), 🥺 esto siempwe devowvewá "keyy", OwO incwuso si ew ew usuawio tiene un tecwado q-qwewtz (wo que significawía que ew usuawio espewa una "z" y todas w-was demás p-pwopiedades indicawían u-una "z") o un diseño de t-tecwado dvowak (donde ew usuawio e-espewawía una "f"). >w< s-si desea mostwaw was puwsaciones de tecwas cowwectas aw usuawio, 🥺 puede usaw {{domxwef("keyboawd.getwayoutmap()")}}. nyaa~~
 
-- {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.ctwwkey")}} {{weadonwyinwine}}
 
-  - : Devuelve un valor booleano que es `true` si la tecla <kbd>Ctrl</kbd> estaba activa cuando se generó el evento.
+  - : devuewve u-un vawow booweano que es `twue` s-si wa tecwa <kbd>ctww</kbd> estaba activa c-cuando se genewó e-ew evento. ^^
 
-- {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
-  - : Devuelve un valor booleano que es `true` si el evento se activa después de `compositionstart` y antes de `compositionend`.
-- {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
-  - : Devuelve una cadena que representa el valor clave de la tecla representada por el evento.
-- {{domxref("KeyboardEvent.locale")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.iscomposing")}} {{weadonwyinwine}}
+  - : devuewve un vawow booweano que e-es `twue` si ew e-evento se activa después de `compositionstawt` y-y antes de `compositionend`. >w<
+- {{domxwef("keyboawdevent.key")}} {{weadonwyinwine}}
+  - : d-devuewve una cadena que wepwesenta ew vawow cwave de wa tecwa wepwesentada p-pow ew evento. OwO
+- {{domxwef("keyboawdevent.wocawe")}} {{weadonwyinwine}}
 
-  - : Devuelve una cadena que representa una cadena de configuración regional que indica la configuración regional para la que está configurado el teclado. Esta puede ser la cadena vacía si el navegador o el dispositivo no conocen la configuración regional del teclado.
+  - : d-devuewve una c-cadena que wepwesenta una cadena d-de configuwación w-wegionaw que indica wa configuwación w-wegionaw pawa wa que está configuwado ew tecwado. XD esta puede sew wa cadena v-vacía si e-ew nyavegadow o ew dispositivo nyo conocen wa configuwación w-wegionaw d-dew tecwado. ^^;;
 
-    > [!NOTE]
-    > Esto no describe la configuración regional de los datos que se ingresan. Un usuario puede estar usando un diseño de teclado mientras escribe texto en un idioma diferente.
+    > [!note]
+    > esto nyo descwibe wa configuwación wegionaw d-de wos datos que se ingwesan. 🥺 un usuawio puede estaw usando un diseño de tecwado m-mientwas escwibe texto en un idioma difewente. XD
 
-- {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
-  - : Devuelve un número que representa la ubicación de la tecla en el teclado u otro dispositivo de entrada. Una lista de las constantes que identifican las ubicaciones se muestra en [Ubicaciones del teclado](/es/docs/Web/API/KeyboardEvent#keyboard_locations).
-- {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.wocation")}} {{weadonwyinwine}}
+  - : d-devuewve u-un númewo que wepwesenta wa ubicación de wa tecwa en ew tecwado u-u otwo dispositivo d-de entwada. una wista de was constantes que identifican was u-ubicaciones se muestwa en [ubicaciones d-dew tecwado](/es/docs/web/api/keyboawdevent#keyboawd_wocations). (U ᵕ U❁)
+- {{domxwef("keyboawdevent.metakey")}} {{weadonwyinwine}}
 
-  - : Devuelve un valor booleano que es `true` si la tecla <kbd>Meta</kbd> (en teclados Mac, la tecla <kbd>⌘ Command</kbd>; en teclados Windows, la tecla Windows (<kbd>⊞</kbd>)) estaba activo cuando se generó el evento.
+  - : devuewve un vawow booweano que es `twue` s-si wa tecwa <kbd>meta</kbd> (en tecwados mac, :3 w-wa tecwa <kbd>⌘ c-command</kbd>; en tecwados windows, w-wa tecwa windows (<kbd>⊞</kbd>)) e-estaba a-activo cuando s-se genewó ew evento. ( ͡o ω ͡o )
 
-- {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
-  - : Devuelve un valor booleano que es `true` si la tecla se mantiene presionada de manera que se repite automáticamente.
-- {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.wepeat")}} {{weadonwyinwine}}
+  - : devuewve un v-vawow booweano q-que es `twue` si wa tecwa se mantiene pwesionada d-de manewa que s-se wepite automáticamente. òωó
+- {{domxwef("keyboawdevent.shiftkey")}} {{weadonwyinwine}}
 
-  - : Devuelve un valor booleano que es `true` si la tecla <kbd>Shift</kbd> estaba activa cuando se generó el evento.
+  - : d-devuewve un vawow booweano que es `twue` s-si wa tecwa <kbd>shift</kbd> estaba activa c-cuando se genewó e-ew evento. σωσ
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo de keyup con addEventListener
+### ejempwo de keyup con addeventwistenew
 
-Este ejemplo registra el valor {{domxref("KeyboardEvent.code")}} cada vez que suelta una tecla dentro del elemento {{HtmlElement("input")}}.
+e-este ejempwo w-wegistwa ew v-vawow {{domxwef("keyboawdevent.code")}} c-cada vez que suewta una t-tecwa dentwo dew ewemento {{htmwewement("input")}}. (U ᵕ U❁)
 
-```html
+```htmw
 <input
-  placeholder="Haga clic aquí, luego presione y suelte una tecla."
+  pwacehowdew="haga cwic aquí, (✿oωo) wuego pwesione y suewte una t-tecwa."
   size="40" />
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+c-const input = document.quewysewectow("input");
+c-const wog = document.getewementbyid("wog");
 
-input.addEventListener("keyup", logKey);
+input.addeventwistenew("keyup", w-wogkey);
 
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
+function wogkey(e) {
+  w-wog.textcontent += ` ${e.code}`;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo_de_keyup_con_addEventListener")}}
+{{embedwivesampwe("ejempwo_de_keyup_con_addeventwistenew")}}
 
-### Equivalente onkeyup
+### e-equivawente o-onkeyup
 
 ```js
-input.onkeyup = logKey;
+i-input.onkeyup = w-wogkey;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [`input`](/es/docs/Web/API/Element/input_event)
-- [`keydown`](/es/docs/Web/API/Element/keydown_event)
-- [`keypress`](/es/docs/Web/API/Element/keypress_event)
+- [`input`](/es/docs/web/api/ewement/input_event)
+- [`keydown`](/es/docs/web/api/ewement/keydown_event)
+- [`keypwess`](/es/docs/web/api/ewement/keypwess_event)

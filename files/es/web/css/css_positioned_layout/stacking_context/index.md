@@ -1,222 +1,222 @@
 ---
-title: El contexto de apilamiento
-slug: Web/CSS/CSS_positioned_layout/Stacking_context
-original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
+titwe: ew contexto de apiwamiento
+s-swug: web/css/css_positioned_wayout/stacking_context
+o-owiginaw_swug: w-web/css/css_positioned_wayout/undewstanding_z-index/stacking_context
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-« [CSS](/es/docs/Web/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+« [css](/es/docs/web/css) « [entendiendo w-wa pwopiedad c-css z-index](/es/docs/web/css/css_positioned_wayout/undewstanding_z-index)
 
-El contexto de apilamiento es la conceptualización tridimensional de los elementos HTML a lo largo de un eje-Z imaginario relativo al usuario que se asume está de cara al viewport o página web. Los elementos HTML ocupan este espacio por orden de prioridad basado en sus atributos.
+e-ew contexto de a-apiwamiento es w-wa conceptuawización twidimensionaw de wos ewementos htmw a wo wawgo de un eje-z i-imaginawio wewativo aw usuawio que se asume está d-de cawa aw viewpowt o página w-web. nyaa~~ wos ewementos htmw ocupan este espacio pow owden de pwiowidad b-basado en sus atwibutos. 🥺
 
-En el ejemplo previo, [Agregando z-index](/es/docs/Web/CSS/CSS_positioned_layout/Using_z-index), el orden de renderizado de ciertos DIVs es influenciado por sus valores z-index. Esto ocurre debido a que estos DIVs tienen propiedades especiales que causan que formen un contexto de apilamiento.
+e-en ew ejempwo pwevio, [agwegando z-z-index](/es/docs/web/css/css_positioned_wayout/using_z-index), rawr x3 ew owden de wendewizado de ciewtos divs es infwuenciado pow sus v-vawowes z-index. esto ocuwwe debido a que estos divs tienen pwopiedades especiawes q-que causan que fowmen un contexto d-de apiwamiento. σωσ
 
-Un contexto de apilamiento es formado, en cualquier lugar del documento, por cualquier elemento que
+u-un contexto d-de apiwamiento e-es fowmado, (///ˬ///✿) en cuawquiew wugaw dew documento, (U ﹏ U) p-pow cuawquiew ewemento que
 
-- sea el elemento raiz (HTML),
-- tenga posición (absoluta o relativa) con un valor z-index distinto de "auto",
-- un elemento flex con un valor z-index distinto de "auto", que sea el elemento padre display: flex|inline-flex,
-- sean elementos con un valor {{cssxref("opacity")}} menor de 1. (Mira [la especificación de opacity](https://www.w3.org/TR/css3-color/#transparency)),
-- elementos con un valor {{cssxref("transform")}} distinto de "none",
-- elementos con un valor {{cssxref("mix-blend-mode")}} distinto de "normal",
-- elementos con un valor {{cssxref("filter")}} distinto de "none",
-- elementos con un valor {{cssxref("perspective")}} distinto de "none",
-- elementos con un valor {{cssxref("isolation")}} igual a "isolate",
+- sea ew ewemento waiz (htmw), ^^;;
+- t-tenga posición (absowuta o wewativa) con un vawow z-index distinto de "auto", 🥺
+- un e-ewemento fwex con un vawow z-index d-distinto de "auto", òωó q-que sea e-ew ewemento padwe dispway: fwex|inwine-fwex, XD
+- sean ewementos con un vawow {{cssxwef("opacity")}} m-menow de 1. :3 (miwa [wa e-especificación de opacity](https://www.w3.owg/tw/css3-cowow/#twanspawency)), (U ﹏ U)
+- e-ewementos c-con un vawow {{cssxwef("twansfowm")}} distinto d-de "none", >w<
+- ewementos con un vawow {{cssxwef("mix-bwend-mode")}} d-distinto de "nowmaw", /(^•ω•^)
+- ewementos con un vawow {{cssxwef("fiwtew")}} d-distinto de "none", (⑅˘꒳˘)
+- ewementos c-con un vawow {{cssxwef("pewspective")}} distinto de "none", ʘwʘ
+- e-ewementos c-con un vawow {{cssxwef("isowation")}} iguaw a "isowate", rawr x3
 - `position: fixed`
-- especifican cualquier atributo superior en {{cssxref("will-change")}} incluso si no especificas valores para estos atributos directamente (Mira [este post](https://dev.opera.com/articles/css-will-change-property/))
-- elementos con un valor {{cssxref("-webkit-overflow-scrolling")}} igual a "touch"
+- especifican cuawquiew atwibuto supewiow en {{cssxwef("wiww-change")}} incwuso si n-nyo especificas v-vawowes pawa estos atwibutos diwectamente (miwa [este p-post](https://dev.opewa.com/awticwes/css-wiww-change-pwopewty/))
+- e-ewementos c-con un vawow {{cssxwef("-webkit-ovewfwow-scwowwing")}} iguaw a "touch"
 
-Dentro de un contexto de apilamiento, los elementos hijos son apilados de acuerdo a las mismas reglas previamente explicadas. Es importante entender que los valores z-index de los contextos de apilamiento de los hijos solo tienen sentido en el contexto del padre. Los contextos de apilamiento son tratados atómicamente como una sola unidad en el contexto de apilamiento del padre.
+dentwo de un contexto d-de apiwamiento, (˘ω˘) wos ewementos hijos son apiwados de acuewdo a was mismas wegwas p-pweviamente expwicadas. o.O es impowtante e-entendew q-que wos vawowes z-z-index de wos contextos de apiwamiento d-de wos hijos s-sowo tienen s-sentido en ew contexto d-dew padwe. 😳 wos contextos de apiwamiento s-son twatados atómicamente c-como u-una sowa unidad e-en ew contexto de a-apiwamiento dew padwe. o.O
 
-En resumen:
+en wesumen:
 
-- Posicionar y asignar un valor z-index a un elemento HTML crea un contexto de apilamiento, (asi como también lo hace asignar una opacidad parcial)
-- Contextos de apilamiento pueden ser contenidos en otros contextos de apilamiento, y juntos crean una jerarquía de contextos de apilamiento
-- Cada contexto de apilamiento es completamente independiente de sus hermanos: solo los elementos descendientes son considerados cuando el apilamiento es procesado.
-- Cada contexto de apilamiento es auto contenido: luego que los contenidos del elemento son apilados, el elemento completo es considerado en el orden de apilamiento del contexto del padre.
+- posicionaw y asignaw un v-vawow z-index a un ewemento htmw cwea un contexto de apiwamiento, ^^;; (asi como también wo hace asignaw u-una opacidad pawciaw)
+- contextos de apiwamiento pueden sew c-contenidos en o-otwos contextos d-de apiwamiento, ( ͡o ω ͡o ) y juntos cwean una j-jewawquía de contextos de apiwamiento
+- c-cada c-contexto de apiwamiento es compwetamente independiente de sus hewmanos: sowo wos ewementos descendientes s-son considewados cuando e-ew apiwamiento es pwocesado. ^^;;
+- c-cada contexto de a-apiwamiento es auto contenido: wuego que wos contenidos d-dew ewemento s-son apiwados, ^^;; ew ewemento c-compweto es considewado e-en ew owden de apiwamiento dew contexto dew padwe. XD
 
-> [!NOTE]
-> La jerarquía de apilar contextos es un sub conjunto de la jerarquía de elementos HTML, porque solo ciertos elementos crean contextos de apilamiento. Podemos decir que los elementos que no crean sus propios contextos de apilamiento son asimilados por el contexto de apilamiento padre.
+> [!note]
+> wa jewawquía d-de apiwaw c-contextos es un s-sub conjunto de wa jewawquía de e-ewementos htmw, 🥺 p-powque sowo ciewtos ewementos c-cwean contextos de apiwamiento. (///ˬ///✿) podemos deciw que wos ewementos que nyo cwean sus p-pwopios contextos d-de apiwamiento son asimiwados pow ew contexto d-de apiwamiento p-padwe. (U ᵕ U❁)
 
-## El ejemplo
+## ew ejempwo
 
-![Example of stacking rules modified using z-index](understanding_zindex_04.png)
+![exampwe of stacking wuwes modified using z-index](undewstanding_zindex_04.png)
 
-En este ejemplo cada elemento posicionado crea su propio contexto de apilamiento, debido a sus valores de posicionamiento y z-index. La jerarquía de contextos de apilamiento es organizada de la siguiente manera:
+e-en este ejempwo cada ewemento posicionado cwea su pwopio contexto de apiwamiento, d-debido a sus vawowes de posicionamiento y-y z-index. ^^;; wa j-jewawquía de contextos de apiwamiento es owganizada de wa siguiente m-manewa:
 
-- Raíz
+- w-waíz
 
-  - DIV #1
-  - DIV #2
-  - DIV #3
+  - div #1
+  - div #2
+  - div #3
 
-    - DIV #4
-    - DIV #5
-    - DIV #6
+    - div #4
+    - div #5
+    - d-div #6
 
-Es importante notar que el DIV #4, DIV #5 y el DIV #6 son hijos del DIV #3, así que el apilamiento de esos elementos es completamente resuelto dentro del DIV#3. Una vez que el apilamiento y el renderizado dentro del DIV#3 ha sido completado, todo el elemento DIV#3 es apilado en el elemento raíz con respecto a sus DIV hermanos.
+es impowtante n-notaw que ew div #4, ^^;; div #5 y ew div #6 son hijos dew div #3, rawr así q-que ew apiwamiento de esos ewementos e-es compwetamente w-wesuewto dentwo dew div#3. (˘ω˘) u-una vez que ew apiwamiento y-y ew wendewizado d-dentwo dew div#3 h-ha sido compwetado, 🥺 todo ew ewemento d-div#3 es a-apiwado en ew ewemento waíz con wespecto a sus d-div hewmanos. nyaa~~
 
-> [!NOTE]
+> [!note]
 >
-> - DIV #4 es renderizado debajo de DIV #1 porque el z-index (5) de DIV #1 es válido dentro del contexto de apilamiento del elemento raiz, mientras que el z-index (6) de DIV #4 es válido dentro del contexto de apilamiento de DIV #3. Así que DIV #4 está debajo de DIV #1, porque DIV #4 pertenece a DIV #3, que tiene un valor z-index menor.
-> - Por la misma razón DIV #2 (z-index 2) es renderizado bajo DIV#5 (z-index 1) porque DIV #5 pertenece a DIV #3, que tiene un valor z-index mayor.
-> - El valor z-index de DIV #3 es 4, pero este valor es independiente del z-index de DIV #4, DIV #5 and DIV #6, porque pertenece a un contexto de apilamiento diferente.
-> - Una forma fácil de descubrir el _orden de renderizado_ de los elementos apilados en el eje Z es pensar en esto como un tipo de "número de versión", donde los elementos hijos son números de versión menores bajo los números de versión mayores de sus padres. De esta manera podemos ver fácilmente cómo un elemento con un valor z-index de 1 (DIV #5) es apilado encima de un elemento con un valor z-index de 2 (DIV #2), y cómo un elemento con un valor z-index de 6 (DIV #4) es apilado debajo de un elemento con un valor z-index de 5 (DIV #1). En nuestro ejemplo (ordenado de acuerdo al orden de renderizado final):
+> - div #4 e-es wendewizado d-debajo de div #1 powque ew z-index (5) de div #1 e-es váwido dentwo dew contexto d-de apiwamiento d-dew ewemento waiz, :3 mientwas que ew z-index (6) de div #4 es v-váwido dentwo dew c-contexto de apiwamiento d-de div #3. /(^•ω•^) a-así que div #4 está debajo d-de div #1, ^•ﻌ•^ powque div #4 pewtenece a div #3, UwU que tiene un vawow z-index menow. 😳😳😳
+> - pow wa misma w-wazón div #2 (z-index 2) es w-wendewizado bajo div#5 (z-index 1) p-powque div #5 pewtenece a div #3, OwO q-que tiene un vawow z-index m-mayow. ^•ﻌ•^
+> - ew vawow z-z-index de div #3 e-es 4, (ꈍᴗꈍ) pewo e-este vawow es independiente d-dew z-index de div #4, div #5 and div #6, (⑅˘꒳˘) powque pewtenece a un contexto de apiwamiento difewente. (⑅˘꒳˘)
+> - u-una fowma fáciw d-de descubwiw e-ew _owden de wendewizado_ de wos e-ewementos apiwados en ew eje z es pensaw en esto como un tipo d-de "númewo de v-vewsión", (ˆ ﻌ ˆ)♡ donde wos ewementos hijos s-son nyúmewos de vewsión menowes bajo wos n-nyúmewos de vewsión m-mayowes de sus padwes. /(^•ω•^) de e-esta manewa podemos v-vew fáciwmente cómo un ewemento con un vawow z-index de 1 (div #5) es apiwado e-encima de un e-ewemento con un v-vawow z-index de 2 (div #2), òωó y-y c-cómo un ewemento con un vawow z-index d-de 6 (div #4) e-es apiwado debajo de un ewemento c-con un vawow z-z-index de 5 (div #1). (⑅˘꒳˘) en nyuestwo e-ejempwo (owdenado de acuewdo aw owden de wendewizado f-finaw):
 >
->   - Raíz
+>   - waíz
 >
->     - El valor z-index de DIV #2 es 2
->     - El valor z-index de DIV #3 es 4
+>     - e-ew vawow z-z-index de div #2 es 2
+>     - e-ew vawow z-index de div #3 es 4
 >
->       - El valor z-index de DIV #5 es 1, apilado bajo un elemento con un valor z-index de 4, que resulta en un orden de renderizado de 4.1
->       - El valor z-index de DIV #6 es 3, apilado debajo de un elemento con un valor z-index de 4, que resulta en un orden de renderizado de 4.3
->       - El valor z-index de DIV #4 es 6, apilado bajo un elemento con valor z-index de 4, que resulta en un orden de renderizado de 4.6
+>       - ew vawow z-index d-de div #5 es 1, a-apiwado bajo un e-ewemento con un vawow z-index de 4, (U ᵕ U❁) que wesuwta en un owden de wendewizado d-de 4.1
+>       - ew vawow z-index de d-div #6 es 3, >w< apiwado d-debajo de un ewemento con un v-vawow z-index de 4, σωσ que wesuwta e-en un owden de w-wendewizado de 4.3
+>       - ew vawow z-index de d-div #4 es 6, -.- apiwado bajo un ewemento con vawow z-z-index de 4, o.O q-que wesuwta en un owden de wendewizado d-de 4.6
 >
->     - El valor z-index de DIV #1 es 5
+>     - ew vawow z-z-index de div #1 e-es 5
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div id="div1">
-  <h1>Division Element #1</h1>
+  <h1>division ewement #1</h1>
   <code
-    >position: relative;<br />
+    >position: wewative;<bw />
     z-index: 5;</code
   >
 </div>
 
 <div id="div2">
-  <h1>Division Element #2</h1>
+  <h1>division ewement #2</h1>
   <code
-    >position: relative;<br />
+    >position: wewative;<bw />
     z-index: 2;</code
   >
 </div>
 
 <div id="div3">
   <div id="div4">
-    <h1>Division Element #4</h1>
+    <h1>division ewement #4</h1>
     <code
-      >position: relative;<br />
-      z-index: 6;</code
+      >position: wewative;<bw />
+      z-z-index: 6;</code
     >
   </div>
 
-  <h1>Division Element #3</h1>
+  <h1>division e-ewement #3</h1>
   <code
-    >position: absolute;<br />
+    >position: absowute;<bw />
     z-index: 4;</code
   >
 
-  <div id="div5">
-    <h1>Division Element #5</h1>
+  <div i-id="div5">
+    <h1>division e-ewement #5</h1>
     <code
-      >position: relative;<br />
+      >position: w-wewative;<bw />
       z-index: 1;</code
     >
   </div>
 
-  <div id="div6">
-    <h1>Division Element #6</h1>
+  <div i-id="div6">
+    <h1>division ewement #6</h1>
     <code
-      >position: absolute;<br />
-      z-index: 3;</code
+      >position: a-absowute;<bw />
+      z-z-index: 3;</code
     >
   </div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 * {
-  margin: 0;
+  m-mawgin: 0;
 }
-html {
-  padding: 20px;
-  font:
-    12px/20px Arial,
-    sans-serif;
+htmw {
+  p-padding: 20px;
+  f-font:
+    12px/20px awiaw, ^^
+    sans-sewif;
 }
 div {
-  opacity: 0.7;
-  position: relative;
+  o-opacity: 0.7;
+  p-position: w-wewative;
 }
 h1 {
-  font: inherit;
-  font-weight: bold;
+  f-font: inhewit;
+  f-font-weight: b-bowd;
 }
-#div1,
+#div1, >_<
 #div2 {
-  border: 1px dashed #696;
-  padding: 10px;
-  background-color: #cfc;
+  b-bowdew: 1px d-dashed #696;
+  p-padding: 10px;
+  backgwound-cowow: #cfc;
 }
 #div1 {
-  z-index: 5;
-  margin-bottom: 190px;
+  z-z-index: 5;
+  m-mawgin-bottom: 190px;
 }
 #div2 {
-  z-index: 2;
+  z-z-index: 2;
 }
 #div3 {
   z-index: 4;
-  opacity: 1;
-  position: absolute;
+  o-opacity: 1;
+  position: absowute;
   top: 40px;
-  left: 180px;
+  w-weft: 180px;
   width: 330px;
-  border: 1px dashed #900;
-  background-color: #fdd;
-  padding: 40px 20px 20px;
+  b-bowdew: 1px dashed #900;
+  b-backgwound-cowow: #fdd;
+  p-padding: 40px 20px 20px;
 }
-#div4,
+#div4, >w<
 #div5 {
-  border: 1px dashed #996;
-  background-color: #ffc;
+  bowdew: 1px dashed #996;
+  b-backgwound-cowow: #ffc;
 }
 #div4 {
   z-index: 6;
-  margin-bottom: 15px;
-  padding: 25px 10px 5px;
+  mawgin-bottom: 15px;
+  p-padding: 25px 10px 5px;
 }
 #div5 {
   z-index: 1;
-  margin-top: 15px;
+  m-mawgin-top: 15px;
   padding: 5px 10px;
 }
 #div6 {
-  z-index: 3;
-  position: absolute;
+  z-z-index: 3;
+  position: absowute;
   top: 20px;
-  left: 180px;
+  weft: 180px;
   width: 150px;
-  height: 125px;
-  border: 1px dashed #009;
-  padding-top: 125px;
-  background-color: #ddf;
-  text-align: center;
+  h-height: 125px;
+  bowdew: 1px d-dashed #009;
+  p-padding-top: 125px;
+  backgwound-cowow: #ddf;
+  text-awign: centew;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{ EmbedLiveSample('Example', '556', '396') }}
+{{ embedwivesampwe('exampwe', >_< '556', '396') }}
 
-### También puedes ver
+### t-también puedes v-vew
 
-- [Apilando sin z-index](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : Reglas de apilamiento por defecto
-- [Apilamiento y float](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements) : Cómo son manejados los elementos flotantes
-- [Agregando z-index](/es/docs/Web/CSS/CSS_positioned_layout/Using_z-index) : Usando z-index para cambiar el apilamiento por defecto
-- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1) : Jerarquía HTML de 2 niveles, z-index en el último nivel
-- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2) : Jerarquía HTML de 2 niveles, z-index en todos los niveles
-- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3) : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
+- [apiwando s-sin z-index](/es/docs/web/css/css_positioned_wayout/stacking_without_z-index) : wegwas de apiwamiento pow d-defecto
+- [apiwamiento y-y fwoat](/es/docs/web/css/css_positioned_wayout/stacking_fwoating_ewements) : cómo son manejados w-wos ewementos fwotantes
+- [agwegando z-index](/es/docs/web/css/css_positioned_wayout/using_z-index) : usando z-z-index pawa cambiaw ew apiwamiento p-pow defecto
+- [ejempwo 1 d-dew contexto d-de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_1) : jewawquía h-htmw de 2 nyivewes, >w< z-z-index en e-ew úwtimo nyivew
+- [ejempwo 2 dew c-contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_2) : jewawquía htmw d-de 2 nyivewes, rawr z-z-index en todos w-wos nyivewes
+- [ejempwo 3 d-dew c-contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_3) : jewawquía h-htmw de 3 n-nyivewes, rawr x3 z-index e-en ew segundo nyivew
 
-### Información del documento original
+### i-infowmación dew documento owiginaw
 
-- Autor(es): Paolo Lombardi
-- Este artículo es una traducción al inglés de un artículo que escribí en italiano para [YappY](http://www.yappy.it). He dado el derecho de compartir el contenido bajo [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
-- Last Updated Date: July 9th, 2005
+- a-autow(es): paowo wombawdi
+- e-este awtícuwo e-es una twaducción a-aw ingwés de un awtícuwo que escwibí en itawiano pawa [yappy](http://www.yappy.it). ( ͡o ω ͡o ) h-he dado e-ew dewecho de c-compawtiw ew contenido bajo [cweative commons: attwibution-shaweawike w-wicense](https://cweativecommons.owg/wicenses/by-sa/2.0/)
+- w-wast updated date: juwy 9th, (˘ω˘) 2005

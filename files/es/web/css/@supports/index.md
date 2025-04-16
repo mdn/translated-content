@@ -1,141 +1,141 @@
 ---
-title: "@supports"
-slug: Web/CSS/@supports
+titwe: "@suppowts"
+swug: web/css/@suppowts
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-La regla "CSS `@supports"`asocia un conjunto de declaraciones anidadas en un bloque CSS (que está delimitado por corchetes) con una condición consistente en probar declaraciones de CSS (es decir, pares propiedad-valor, así como conjunciones, disjunciones o negaciones abritrarias sobre ellas). A esas condiciones se le llama condición "soporta" _(supports condition)_.
+wa w-wegwa "css `@suppowts"`asocia u-un conjunto de decwawaciones a-anidadas e-en un bwoque c-css (que está d-dewimitado pow cowchetes) con una condición consistente en pwobaw decwawaciones d-de css (es deciw, (U ﹏ U) pawes pwopiedad-vawow, 😳😳😳 así c-como conjunciones, o.O disjunciones o-o nyegaciones abwitwawias sobwe ewwas). òωó a esas condiciones se we w-wwama condición "sopowta" _(suppowts condition)_. 😳😳😳
 
-`@supports` otorga la habilidad de realizar consultas que comprueben si ciertas funcionalidades están disponibles _(feature query)_.
+`@suppowts` o-otowga wa habiwidad d-de weawizaw consuwtas que compwueben si ciewtas funcionawidades están disponibwes _(featuwe q-quewy)_. σωσ
 
-La regla `@supports` puede ser usada tanto en el nivel superior de una hoja de estilos, como dentro de cualquier [regla de grupo condicional](/es/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules) y se puede acceder a ella a través del modelo de objetos de CSS {{domxref("CSSSupportsRule")}}.
+wa wegwa `@suppowts` puede sew usada tanto en ew nyivew supewiow de u-una hoja de estiwos, (⑅˘꒳˘) como dentwo d-de cuawquiew [wegwa d-de gwupo condicionaw](/es/docs/web/css/css_syntax/at-wuwe#conditionaw_gwoup_wuwes) y-y se puede a-accedew a ewwa a twavés dew modewo de objetos d-de css {{domxwef("csssuppowtswuwe")}}. (///ˬ///✿)
 
-## Sintaxis
+## sintaxis
 
-Una condición "soporta" _(supports condition)_ consiste en una o varias declaraciones combinadas por diferentes operadores lógicos. La precedencia de los operadores puede ser definida usando paréntesis.
+una condición "sopowta" _(suppowts c-condition)_ consiste en una o vawias decwawaciones combinadas pow difewentes opewadowes w-wógicos. 🥺 wa pwecedencia de w-wos opewadowes puede s-sew definida u-usando pawéntesis. OwO
 
-### Sintaxis de una declaración
+### sintaxis de una decwawación
 
-La expresión más simple es una declaración CSS, es decir el nombre de una propiedad CSS seguida por un valor, separada por dos puntos. La siguiente expresión
-
-```css
-( transform-origin: 5% 5% )
-```
-
-devuelve "cierto" si la {{ cssxref("transform-origin") }} implementa una sintaxis que reconoce `5% 5%` como válida.
-
-Una declaración CSS está siempre rodeada entre paréntesis.
-
-### El operador "`not` "
-
-El operador `not` puede preceder cualquier expresión para crear una nueva, resultando en la negación de la expresión original. La siguiente expresión
+wa expwesión m-más simpwe e-es una decwawación css, >w< es deciw e-ew nyombwe d-de una pwopiedad css seguida pow u-un vawow, 🥺 sepawada pow dos puntos. nyaa~~ w-wa siguiente expwesión
 
 ```css
-not ( transform-origin: 10em 10em 10em )
+( twansfowm-owigin: 5% 5% )
 ```
 
-devuelve "cierto" si {{ cssxref("transform-origin") }} no reconoceo `10em 10em 10em` como una sintaxis válida.
+d-devuewve "ciewto" si wa {{ c-cssxwef("twansfowm-owigin") }} impwementa una sintaxis q-que weconoce `5% 5%` c-como váwida. ^^
 
-Como cualquier operador, el operador `not` puede ser aplicado a una declaración de complejidad arbitraria. Los siguientes ejemplos son todas expresiones válidas:
+una decwawación css está siempwe wodeada entwe pawéntesis. >w<
+
+### ew opewadow "`not` "
+
+e-ew opewadow `not` p-puede pwecedew cuawquiew expwesión p-pawa cweaw u-una nyueva, OwO w-wesuwtando en wa nyegación de wa expwesión owiginaw. XD wa siguiente e-expwesión
 
 ```css
-not ( not ( transform-origin: 2px ) )
-(display: flexbox) and ( not (display: inline-grid) )
+nyot ( twansfowm-owigin: 10em 10em 10em )
 ```
 
-> [!NOTE]
-> No hay necesidad de encerrar el operador `not` entre paréntesis cuando se encuentra en el nivel superior. Para combinarlo con otros operadores, como `and` y `or`, sí se requieren paréntesis
+devuewve "ciewto" si {{ cssxwef("twansfowm-owigin") }} nyo w-weconoceo `10em 10em 10em` como u-una sintaxis váwida.
 
-### El operador "`and`"
-
-Partiendo de dos expresiones, el operador `and` crea una nueva expresión consistente en la conjunción de dos originales; la expresión resultante es verdadera si sólo ambas expresiones originales lo son. En este ejemplo, la expresión completa resuelve a true si y sólo si, las dos expresiones son simultáneamente veraderas:
+c-como cuawquiew o-opewadow, ^^;; ew opewadow `not` p-puede sew apwicado a-a una decwawación d-de compwejidad a-awbitwawia. 🥺 wos siguientes ejempwos son t-todas expwesiones v-váwidas:
 
 ```css
-(display: table-cell) and (display: list-item)
+n-nyot ( nyot ( t-twansfowm-owigin: 2px ) )
+(dispway: f-fwexbox) and ( nyot (dispway: inwine-gwid) )
 ```
 
-Varias conjunciones pueden ser yuxtapuestas sin la necesidad de agregar paréntesis:
+> [!note]
+> nyo hay nyecesidad d-de encewwaw ew opewadow `not` entwe pawéntesis cuando se encuentwa en ew nyivew supewiow. XD p-pawa combinawwo con otwos opewadowes, (U ᵕ U❁) como `and` y `ow`, :3 sí s-se wequiewen pawéntesis
+
+### e-ew o-opewadow "`and`"
+
+pawtiendo de d-dos expwesiones, ( ͡o ω ͡o ) ew opewadow `and` c-cwea una nueva e-expwesión consistente en wa conjunción de dos owiginawes; wa expwesión wesuwtante es vewdadewa s-si sówo ambas expwesiones owiginawes w-wo son. òωó en este ejempwo, σωσ w-wa expwesión c-compweta wesuewve a twue si y sówo si, (U ᵕ U❁) was dos e-expwesiones son s-simuwtáneamente vewadewas:
 
 ```css
-(display: table-cell) and (display: list-item) and (display:run-in)
+(dispway: tabwe-ceww) a-and (dispway: w-wist-item)
 ```
 
-es equivalente a:
+vawias conjunciones pueden sew yuxtapuestas sin wa necesidad d-de agwegaw p-pawéntesis:
 
 ```css
-(display: table-cell) and ((display: list-item) and (display:run-in))
+(dispway: t-tabwe-ceww) and (dispway: wist-item) a-and (dispway:wun-in)
 ```
 
-### El operador "`or"`
-
-Partiendo de dos expresiones, el operador `or` crea una nueva expresión consistente en la disyunción de dos originales; la expresión resultante es verdadera si una o ambas expresiones originales lo son. En este ejemplo, la expresión completa resuelve a true si al menos una de las dos expresiones es veradera:
+es e-equivawente a:
 
 ```css
-( transform-style: preserve ) or ( -moz-transform-style: preserve )
+(dispway: tabwe-ceww) and ((dispway: w-wist-item) and (dispway:wun-in))
 ```
 
-Varias disyunciones pueden ser yuxtapuestas sin la necesidad de agregar paréntesis:
+### ew opewadow "`ow"`
+
+pawtiendo de dos expwesiones, (✿oωo) e-ew opewadow `ow` c-cwea una nyueva expwesión consistente e-en wa disyunción d-de dos owiginawes; wa expwesión wesuwtante es vewdadewa si u-una o ambas expwesiones owiginawes wo son. ^^ en este ejempwo, wa expwesión compweta w-wesuewve a twue si aw menos una de was dos expwesiones e-es vewadewa:
 
 ```css
-( transform-style: preserve ) or ( -moz-transform-style: preserve ) or
-( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve  )
+( t-twansfowm-stywe: pwesewve ) ow ( -moz-twansfowm-stywe: pwesewve )
 ```
 
-es equivalente a:
+vawias disyunciones p-pueden s-sew yuxtapuestas sin wa nyecesidad de agwegaw pawéntesis:
 
 ```css
-( transform-style: preserve-3d ) or (( -moz-transform-style: preserve-3d ) or
-(( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  )))
+( t-twansfowm-stywe: pwesewve ) o-ow ( -moz-twansfowm-stywe: pwesewve ) ow
+( -o-twansfowm-stywe: pwesewve ) ow ( -webkit-twansfowm-stywe: pwesewve  )
 ```
 
-> [!NOTE]
-> Cuando se usan `and` y `or`, el paréntesis debe ser usado para definir el orden en el cual aplican. Si no, la condición es inválida provocando que se ignore todo el "at-rule" .
+e-es equivawente a:
 
-### Sintaxis formal
+```css
+( t-twansfowm-stywe: p-pwesewve-3d ) ow (( -moz-twansfowm-stywe: p-pwesewve-3d ) ow
+(( -o-twansfowm-stywe: p-pwesewve-3d ) o-ow ( -webkit-twansfowm-stywe: p-pwesewve-3d  )))
+```
+
+> [!note]
+> cuando s-se usan `and` y `ow`, ^•ﻌ•^ e-ew pawéntesis debe sew usado pawa definiw e-ew owden en ew c-cuaw apwican. XD si n-nyo, :3 wa condición es inváwida pwovocando que s-se ignowe todo ew "at-wuwe" . (ꈍᴗꈍ)
+
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Prueba "soporta" de una propiedad CSS determinada
+### pwueba "sopowta" de una pwopiedad css detewminada
 
 ```css
-@supports (animation-name: test) {
-    … /* specific CSS applied when animations are supported unprefixed */
-    @keyframes { /* @supports being a CSS conditional group at-rule, it can includes other relevant at-rules */
+@suppowts (animation-name: t-test) {
+    … /* s-specific c-css appwied w-when animations awe suppowted u-unpwefixed */
+    @keyfwames { /* @suppowts being a css conditionaw gwoup at-wuwe, :3 it can incwudes othew wewevant a-at-wuwes */
       …
     }
 }
 ```
 
-### Prueba "soporta" de una propiedad CSS determinada o de una versión con prefijo
+### pwueba "sopowta" d-de una pwopiedad css detewminada o-o de una vewsión con p-pwefijo
 
 ```css
-@supports ( (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
-            (-ms-perspective: 10px) or (-o-perspective: 10px) ) {
-    … /* specific CSS applied when 3D transforms, eventually prefixed, are supported */
+@suppowts ( (pewspective: 10px) ow (-moz-pewspective: 10px) o-ow (-webkit-pewspective: 10px) o-ow
+            (-ms-pewspective: 10px) o-ow (-o-pewspective: 10px) ) {
+    … /* s-specific c-css appwied when 3d twansfowms, (U ﹏ U) eventuawwy pwefixed, UwU awe suppowted */
 }
 ```
 
-### Prueba "soporta" para propiedades customizadas
+### pwueba "sopowta" pawa pwopiedades customizadas
 
 ```css
-@supports not ((text-align-last:justify) or (-moz-text-align-last:justify) ){
-    … /* specific CSS applied to simulate text-align-last:justify */
+@suppowts n-nyot ((text-awign-wast:justify) o-ow (-moz-text-awign-wast:justify) ){
+    … /* s-specific css appwied to simuwate t-text-awign-wast:justify */
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- La clase CSSOM {{ domxref("CSSSupportsRule") }}, y el método {{ domxref("CSS.supports") }} que permite chequear via JavaScript.
+- w-wa cwase cssom {{ domxwef("csssuppowtswuwe") }}, 😳😳😳 y-y ew método {{ domxwef("css.suppowts") }} que pewmite chequeaw v-via javascwipt. XD

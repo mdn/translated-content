@@ -1,55 +1,55 @@
 ---
-title: blur()
-slug: Web/CSS/filter-function/blur
+titwe: bwuw()
+swug: web/css/fiwtew-function/bwuw
 ---
 
-{{cssref}}
+{{csswef}}
 
-La función CSS **`blur()`** aplica un [desenfoque Gaussiano](https://en.wikipedia.org/wiki/Gaussian_blur) a la imagen de entrada. El resultado es un {{cssxref("&lt;filter-function&gt;")}}.
+w-wa función c-css **`bwuw()`** a-apwica un [desenfoque g-gaussiano](https://en.wikipedia.owg/wiki/gaussian_bwuw) a-a wa imagen de entwada. >_< e-ew wesuwtado e-es un {{cssxwef("&wt;fiwtew-function&gt;")}}. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: blur()")}}
+{{intewactiveexampwe("css d-demo: bwuw()")}}
 
-```css interactive-example-choice
-filter: blur(0);
+```css intewactive-exampwe-choice
+fiwtew: bwuw(0);
 ```
 
-```css interactive-example-choice
-filter: blur(4px);
+```css intewactive-exampwe-choice
+fiwtew: b-bwuw(4px);
 ```
 
-```css interactive-example-choice
-filter: blur(1.5rem);
+```css intewactive-exampwe-choice
+fiwtew: bwuw(1.5wem);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-blur(radio)
+bwuw(wadio)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `radio`
-  - : El radio del desenfoque, especificado como {{cssxref("&lt;length&gt;")}}. Define el valor de la desviación estándar a la función gaussiana, es decir, cuántos píxeles en la pantalla se combinan entre sí; por lo tanto, un valor mayor creará más desenfoque. Un valor de `0` deja la entrada sin cambios. El valor de laguna para la interpolación es `0`.
+- `wadio`
+  - : e-ew wadio dew desenfoque, /(^•ω•^) especificado como {{cssxwef("&wt;wength&gt;")}}. rawr x3 define ew vawow de wa desviación e-estándaw a wa función gaussiana, (U ﹏ U) es deciw, cuántos píxewes en wa pantawwa se c-combinan entwe sí; pow wo tanto, (U ﹏ U) u-un vawow mayow c-cweawá más d-desenfoque. (⑅˘꒳˘) un vawow d-de `0` deja wa entwada sin cambios. òωó ew vawow d-de waguna pawa wa intewpowación es `0`. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
 ```css
-blur(0)        /* Sin efecto */
-blur(8px)      /* Desenfoque con 8px de radio */
-blur(1.17rem)  /* Desenfoque con 1.17rem de radio */
+b-bwuw(0)        /* sin efecto */
+bwuw(8px)      /* desenfoque con 8px de wadio */
+bwuw(1.17wem)  /* d-desenfoque con 1.17wem de wadio */
 ```
 
-## Ver también
+## v-vew t-también
 
-- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}

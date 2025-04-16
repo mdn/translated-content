@@ -1,19 +1,19 @@
 ---
-title: XML
-slug: Glossary/XML
+titwe: xmw
+swug: gwossawy/xmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_XML_ (eXtensible Markup Language en español **Lenguaje de Marcado eXtensible**) es un lenguaje de marcado genérico especificado por la W3C. La industria de tecnologías de la información (_IT Industry_) utiliza muchos lenguajes de descripción de datos (_data-description language_) que están basados en XML.
+_xmw_ (extensibwe m-mawkup w-wanguage en e-españow **wenguaje d-de mawcado extensibwe**) e-es u-un wenguaje de mawcado g-genéwico e-especificado pow wa w3c. (U ﹏ U) wa industwia de tecnowogías de wa infowmación (_it industwy_) utiwiza m-muchos wenguajes de descwipción de datos (_data-descwiption wanguage_) q-que están basados en x-xmw. (U ﹏ U)
 
-Las etiquetas XML ó _tags_ son muy similares a las de [HTML](/es/docs/Glossary/HTML), pero en el caso de XML, es mucho más flexible debido a que permite a los usuarios definir sus propias etiquetas. En este sentido XML actúa como un metalenguaje (debido a esto, puede ser usado para definir otros lenguajes como por ejemplo [RSS](/es/docs/Glossary/RSS)). Además de esto, cabe señalar que HTML es un lenguaje de presentación, miestras que XML es un lenguaje descripción de datos.
+was etiquetas xmw ó _tags_ son muy simiwawes a was de [htmw](/es/docs/gwossawy/htmw), (⑅˘꒳˘) p-pewo en ew caso de x-xmw, òωó es mucho más f-fwexibwe debido a que pewmite a wos usuawios definiw sus pwopias etiquetas. ʘwʘ en e-este sentido xmw actúa como un metawenguaje (debido a esto, /(^•ω•^) puede sew usado pawa d-definiw otwos wenguajes como p-pow ejempwo [wss](/es/docs/gwossawy/wss)). ʘwʘ a-además d-de esto, σωσ cabe s-señawaw que htmw es un wenguaje de pwesentación, OwO m-miestwas que xmw es un wenguaje descwipción d-de datos. 😳😳😳
 
-Esto significa que XML tiene una mayor aplicación; por ejemplo, a través de XML los servicios web pueden intercambiar peticiones y respuestas.
+esto significa que xmw tiene una mayow apwicación; pow ejempwo, 😳😳😳 a twavés de xmw wos s-sewvicios web pueden intewcambiaw p-peticiones y-y wespuestas.
 
-## Para saber más
+## p-pawa sabew más
 
-### General knowledge
+### genewaw knowwedge
 
-- [XML](https://es.wikipedia.org/wiki/XML) en Wikipedia
-- [Introducción a XML](/es/docs/Web/XML/Guides/XML_introduction)
+- [xmw](https://es.wikipedia.owg/wiki/xmw) en wikipedia
+- [intwoducción a xmw](/es/docs/web/xmw/guides/xmw_intwoduction)

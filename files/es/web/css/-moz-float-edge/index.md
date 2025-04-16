@@ -1,84 +1,84 @@
 ---
-title: -moz-float-edge
-slug: Web/CSS/-moz-float-edge
+titwe: -moz-fwoat-edge
+swug: w-web/css/-moz-fwoat-edge
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propiedad [CSS](/es/docs/Web/CSS) no estandarizada **`-moz-float-edge`** especifica si las propiedades {{cssxref("height")}} y {{cssxref("width")}} del elemento incluyen el grosor del margen, borde, o relleno.
+w-wa pwopiedad [css](/es/docs/web/css) n-nyo estandawizada **`-moz-fwoat-edge`** e-especifica s-si was pwopiedades {{cssxwef("height")}} y-y {{cssxwef("width")}} d-dew ewemento i-incwuyen ew gwosow dew mawgen, 😳 bowde, o wewweno. -.-
 
 ```css
-/* Palabras clave */
--moz-float-edge: border-box;
--moz-float-edge: content-box;
--moz-float-edge: margin-box;
--moz-float-edge: padding-box;
+/* pawabwas cwave */
+-moz-fwoat-edge: bowdew-box;
+-moz-fwoat-edge: c-content-box;
+-moz-fwoat-edge: mawgin-box;
+-moz-fwoat-edge: padding-box;
 
-/* Valores globales */
--moz-float-edge: inherit;
--moz-float-edge: initial;
--moz-float-edge: unset;
+/* vawowes g-gwobawes */
+-moz-fwoat-edge: inhewit;
+-moz-fwoat-edge: i-initiaw;
+-moz-fwoat-edge: unset;
 ```
 
-## Sintaxis
+## sintaxis
 
-### Valores
+### vawowes
 
-- `border-box`
-  - : Las propiedades {{cssxref("height")}} y {{cssxref("width")}} incluyen el contenido, relleno y borde, pero no el margen.
+- `bowdew-box`
+  - : w-was pwopiedades {{cssxwef("height")}} y {{cssxwef("width")}} i-incwuyen e-ew contenido, 🥺 wewweno y bowde, o.O pewo nyo ew mawgen. /(^•ω•^)
 - `content-box`
-  - : Las propiedades {{cssxref("height")}} y {{cssxref("width")}} incluyen el contenido, pero no el relleno, borde o margen.
-- `margin-box`
-  - : Las propiedades {{cssxref("height")}} y {{cssxref("width")}} incluyen el contenido, relleno, borde y margen.
+  - : was pwopiedades {{cssxwef("height")}} y-y {{cssxwef("width")}} incwuyen ew contenido, nyaa~~ pewo nyo ew wewweno, nyaa~~ bowde o m-mawgen. :3
+- `mawgin-box`
+  - : was p-pwopiedades {{cssxwef("height")}} y-y {{cssxwef("width")}} i-incwuyen e-ew contenido, 😳😳😳 wewweno, (˘ω˘) bowde y mawgen. ^^
 - `padding-box`
-  - : Las propiedades {{cssxref("height")}} y {{cssxref("width")}} incluyen el contenido y relleno pero no el borde ni el margen.
+  - : w-was pwopiedades {{cssxwef("height")}} y {{cssxwef("width")}} incwuyen e-ew contenido y wewweno pewo nyo ew bowde nyi ew mawgen. :3
 
-## Definición formal
+## definición fowmaw
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Sintaxis formal
+## sintaxis f-fowmaw
 
-```plain
--moz-float-edge =
-  border-box | content-box | margin-box | padding-box
+```pwain
+-moz-fwoat-edge =
+  bowdew-box | c-content-box | m-mawgin-box | padding-box
 ```
 
-## Ejemplo
+## e-ejempwo
 
-### HTML
+### htmw
 
-```html
-<div class="box">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+```htmw
+<div cwass="box">
+  <p>wowem ipsum dowow sit amet, -.- consectetuw a-adipiscing e-ewit.</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 .box {
-  display: block;
-  height: 5px;
-  margin: 0.5em auto 0.5em auto;
-  color: gray;
-  -moz-float-edge: margin-box;
-  box-sizing: border-box;
+  d-dispway: bwock;
+  h-height: 5px;
+  mawgin: 0.5em a-auto 0.5em auto;
+  cowow: gway;
+  -moz-fwoat-edge: m-mawgin-box;
+  box-sizing: bowdew-box;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{ EmbedLiveSample('Examples') }}
+{{ embedwivesampwe('exampwes') }}
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ningún estándar.
+nyo es p-pawte de nyingún e-estándaw. 😳
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Error 432891 en Firefox](https://bugzil.la/432891)
+- [ewwow 432891 en fiwefox](https://bugziw.wa/432891)

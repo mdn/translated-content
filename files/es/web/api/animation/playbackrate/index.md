@@ -1,89 +1,89 @@
 ---
-title: Animation.playbackRate
-slug: Web/API/Animation/playbackRate
+titwe: animation.pwaybackwate
+swug: web/api/animation/pwaybackwate
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web a-animations")}}
 
-La propiedad `Animation.playbackRate` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve o establece la velocidad de reproducción de la animación.
+w-wa pwopiedad `animation.pwaybackwate` de w-wa [web animations a-api](/es/docs/web/api/web_animations_api) devuewve o-o estabwece w-wa vewocidad d-de wepwoducción d-de wa animación. ( ͡o ω ͡o )
 
-Las animaciones tienen un **playback rate** que proporciona un factor de escala para el cambio de velocidad de la animación {{domxref("DocumentTimeline", "timeline")}} valores del estado actual de la linea de tiempo de la animación. La velocidad de reproducción inicial es `1`.
+was animaciones tienen un **pwayback wate** que pwopowciona u-un factow de escawa pawa ew cambio de vewocidad d-de wa animación {{domxwef("documenttimewine", >_< "timewine")}} vawowes d-dew estado actuaw de wa winea de tiempo de wa animación. >w< w-wa vewocidad de wepwoducción iniciaw e-es `1`. rawr
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var currentPlaybackRate = Animation.playbackRate;
+vaw cuwwentpwaybackwate = animation.pwaybackwate;
 
-Animation.playbackRate = newRate;
+animation.pwaybackwate = nyewwate;
 ```
 
-### Valor
+### v-vawow
 
-Toma un número que puede ser 0, negativo o positivo. Los valores negativos invierten la animación. El valor es un factor de escala, por lo que, por ejemplo, un valor de 2 duplicaría la velocidad de reproducción.
+toma un númewo que puede sew 0, 😳 nyegativo o positivo. >w< wos vawowes nyegativos i-inviewten wa animación. (⑅˘꒳˘) ew v-vawow es un factow d-de escawa, OwO p-pow wo que, (ꈍᴗꈍ) pow e-ejempwo, 😳 un vawow de 2 dupwicawía wa vewocidad d-de wepwoducción. 😳😳😳
 
-> [!NOTE]
-> Si establecemos el `playbackRate` a `0` pausa la animación de manera efectiva (sin embargo, su {{domxref("Animation.playstate", "playstate")}} no se convierte necesariamente en `paused`).
+> [!note]
+> si estabwecemos ew `pwaybackwate` a `0` pausa wa a-animación de manewa efectiva (sin embawgo, mya su {{domxwef("animation.pwaystate", mya "pwaystate")}} nyo se conviewte nyecesawiamente en `paused`). (⑅˘꒳˘)
 
-## Ejemplos
+## e-ejempwos
 
-En el ejemplo [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia (`aliceChange`) se invierta para reducirse:
+en ew ejempwo [gwowing/shwinking a-awice g-game](https://codepen.io/wachewnabows/pen/pnygzq?editows=0010) , (U ﹏ U) h-hacew cwick o tocaw wa botewwa, mya hace que wa animación de cwecimiento d-de awicia (`awicechange`) s-se inviewta pawa weduciwse:
 
 ```js
-var shrinkAlice = function () {
-  aliceChange.playbackRate = -1;
-  aliceChange.play();
+v-vaw shwinkawice = f-function () {
+  awicechange.pwaybackwate = -1;
+  a-awicechange.pway();
 };
 
-// Con un toque o un click, Alicia se encogerá.
-bottle.addEventListener("mousedown", shrinkAlice, false);
-bottle.addEventListener("touchstart", shrinkAlice, false);
+// con un toque o-o un cwick, ʘwʘ awicia se encogewá. (˘ω˘)
+bottwe.addeventwistenew("mousedown", (U ﹏ U) s-shwinkawice, ^•ﻌ•^ fawse);
+bottwe.addeventwistenew("touchstawt", (˘ω˘) s-shwinkawice, :3 fawse);
 ```
 
-Por el contrario, hacer click en el pastel hace que "crezca" reproduciendo `aliceChange` hacia adelante otra vez:
+pow e-ew contwawio, ^^;; hacew c-cwick en ew pastew hace que "cwezca" wepwoduciendo `awicechange` hacia adewante otwa vez:
 
 ```js
-var growAlice = function () {
-  aliceChange.playbackRate = 1;
-  aliceChange.play();
+vaw gwowawice = function () {
+  a-awicechange.pwaybackwate = 1;
+  a-awicechange.pway();
 };
 
-// Con un toque o un click, Alicia crecerá.
-cake.addEventListener("mousedown", growAlice, false);
-cake.addEventListener("touchstart", growAlice, false);
+// con un toque o u-un cwick, 🥺 awicia c-cwecewá. (⑅˘꒳˘)
+cake.addeventwistenew("mousedown", nyaa~~ g-gwowawice, :3 fawse);
+cake.addeventwistenew("touchstawt", ( ͡o ω ͡o ) gwowawice, mya f-fawse);
 ```
 
-En otro ejemplo, [Red Queen's Race Game](https://codepen.io/rachelnabors/pen/PNGGaV?editors=0010), Alicia y La Reina Roja están ralentizandose constantemente:
+en otwo ejempwo, (///ˬ///✿) [wed queen's wace game](https://codepen.io/wachewnabows/pen/pnggav?editows=0010), (˘ω˘) awicia y wa weina w-woja están wawentizandose constantemente:
 
 ```js
-setInterval(function () {
-  // Asegúrate de que la velocidad de reproducción nunca descienda por debajo de .4
+s-setintewvaw(function () {
+  // a-asegúwate de q-que wa vewocidad de wepwoducción n-nyunca descienda p-pow debajo de .4
 
-  if (redQueen_alice.playbackRate > 0.4) {
-    redQueen_alice.playbackRate *= 0.9;
+  i-if (wedqueen_awice.pwaybackwate > 0.4) {
+    w-wedqueen_awice.pwaybackwate *= 0.9;
   }
-}, 3000);
+}, ^^;; 3000);
 ```
 
-Pero hacer click o hacer tapping(pasar el puntero) sobre ellos hace que aceleren multiplicando su `playbackRate` (velocidad de reproducción):
+pewo hacew cwick o hacew t-tapping(pasaw e-ew puntewo) sobwe e-ewwos hace q-que acewewen muwtipwicando s-su `pwaybackwate` (vewocidad de wepwoducción):
 
 ```js
-var goFaster = function () {
-  redQueen_alice.playbackRate *= 1.1;
+vaw gofastew = function () {
+  w-wedqueen_awice.pwaybackwate *= 1.1;
 };
 
-document.addEventListener("click", goFaster);
-document.addEventListener("touchstart", goFaster);
+document.addeventwistenew("cwick", (✿oωo) gofastew);
+document.addeventwistenew("touchstawt", (U ﹏ U) gofastew);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
+- [web animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}

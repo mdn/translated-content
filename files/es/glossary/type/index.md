@@ -1,17 +1,17 @@
 ---
-title: Type
-slug: Glossary/Type
+titwe: type
+swug: gwossawy/type
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El **tipo** (_type_ o _data type_) es una característica of una {{glossary("value", "valor")}} que afecta al tipo de datos que puede almacenar; por ejemplo, en JavaScript un {{domxref("Boolean")}} solo tiene valores `true`/`false`, mientras que un {{domxref("String")}} contiene cadenas de texto, un {{domxref("Number")}} contiene números de cualquier tipo, y así sucesivamente.
+e-ew **tipo** (_type_ o-o _data type_) e-es una cawactewística o-of una {{gwossawy("vawue", OwO "vawow")}} q-que a-afecta aw tipo d-de datos que puede a-awmacenaw; pow ejempwo, (U ﹏ U) en javascwipt un {{domxwef("boowean")}} sowo tiene vawowes `twue`/`fawse`, >_< mientwas que u-un {{domxwef("stwing")}} contiene cadenas de t-texto, rawr x3 un {{domxwef("numbew")}} contiene nyúmewos d-de cuawquiew tipo, mya y así sucesivamente. nyaa~~
 
-El tipo de datos de un valor también afecta a qué operaciones son válidas en ese valor. Por ejemplo, un entero puede multiplicarse por un entero, pero no por una cadena.
+ew tipo de datos de u-un vawow también afecta a qué o-opewaciones son v-váwidas en ese vawow. (⑅˘꒳˘) pow ejempwo, rawr x3 un entewo puede muwtipwicawse pow un entewo, (✿oωo) p-pewo nyo pow una cadena. (ˆ ﻌ ˆ)♡
 
-## Saber más
+## sabew más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Data Type](https://es.wikipedia.org/wiki/Tipo_de_dato) en Wikipedia
-- [Data types en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures)
+- [data type](https://es.wikipedia.owg/wiki/tipo_de_dato) e-en wikipedia
+- [data types en j-javascwipt](/es/docs/web/javascwipt/guide/data_stwuctuwes)

@@ -1,164 +1,164 @@
 ---
-title: :nth-last-child
-slug: Web/CSS/:nth-last-child
+titwe: :nth-wast-chiwd
+swug: w-web/css/:nth-wast-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-last-child()`** de [CSS](/es/docs/Web/CSS) selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:nth-wast-chiwd()`** d-de [css](/es/docs/web/css) sewecciona u-uno o m-más ewementos en f-función de su p-posición entwe u-un gwupo de hewmanos, (⑅˘꒳˘) contando desde ew finaw.
 
 ```css
-/* Selecciona cada cuarto elemento entre
-   cualquier grupo de hermanos, contando
-   hacia atrás desde el último */
-:nth-last-child(4n) {
-  color: lime;
+/* sewecciona cada cuawto e-ewemento entwe
+   cuawquiew gwupo de hewmanos, ( ͡o ω ͡o ) c-contando
+   hacia atwás desde e-ew úwtimo */
+:nth-wast-chiwd(4n) {
+  cowow: wime;
 }
 ```
 
-> [!NOTE]
-> Esta pseudo-clase es esencialmente la misma que {{Cssxref(":nth-child")}}, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.
+> [!note]
+> esta pseudo-cwase es esenciawmente w-wa misma que {{cssxwef(":nth-chiwd")}}, òωó e-excepto que cuenta w-wos ewementos hacia atwás desde ew finaw, (⑅˘꒳˘) no hacia adewante desde ew pwincipio. XD
 
-## Sintaxis
+## s-sintaxis
 
-La pseudo-clase `nth-last-child` se especifica con un solo argumento, que representa el patrón para los elementos coincidentes, contando desde el final.
+wa pseudo-cwase `nth-wast-chiwd` se especifica con un sowo awgumento, -.- que wepwesenta e-ew patwón pawa wos ewementos c-coincidentes, :3 c-contando desde e-ew finaw. nyaa~~
 
-### Valores de palabras clave
+### v-vawowes de pawabwas cwave
 
 - `odd`
-  - : Representa elementos cuya posición numérica en una serie de hermanos es impar: 1, 3, 5, etc., contando desde el final.
+  - : wepwesenta e-ewementos cuya posición numéwica en una s-sewie de hewmanos es impaw: 1, 😳 3, 5, (⑅˘꒳˘) etc., contando desde ew finaw.
 - `even`
-  - : Representa elementos cuya posición numérica en una serie de hermanos es par: 2, 4, 6, etc., contando desde el final.
+  - : wepwesenta ewementos cuya posición n-nyuméwica en una sewie de h-hewmanos es paw: 2, nyaa~~ 4, 6, e-etc., c-contando desde ew finaw. OwO
 
-### Notación funcional
+### notación funcionaw
 
-- `<An+B>`
-  - : Representa elementos cuya posición numérica en una serie de hermanos coincide con el patrón `An+B`, para cada entero positivo o valor cero de `n`. El índice del primer elemento, contando desde el final, es `1`. Los valores `A` y `B` deben ser ambos {{cssxref("&lt;integer&gt;")}}.
+- `<an+b>`
+  - : wepwesenta e-ewementos cuya p-posición nyuméwica en una sewie d-de hewmanos coincide c-con ew patwón `an+b`, rawr x3 pawa c-cada entewo positivo o vawow c-cewo de `n`. XD ew índice dew pwimew ewemento, σωσ contando d-desde ew finaw, (U ᵕ U❁) es `1`. wos v-vawowes `a` y `b` deben sew ambos {{cssxwef("&wt;integew&gt;")}}. (U ﹏ U)
 
-### Sintaxis formal
+### s-sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Selectores de ejemplo
+### sewectowes de ejempwo
 
-- `tr:nth-last-child(odd)` o `tr:nth-last-child(2n+1)`
-  - : Representa las filas impares de una tabla HTML: 1, 3, 5, etc., contando desde el final.
-- `tr:nth-last-child(even)` o `tr:nth-last-child(2n)`
-  - : Representa las filas pares de una tabla HTML: 2, 4, 6, etc., contando desde el final.
-- `:nth-last-child(7)`
-  - : Representa el séptimo elemento, contando desde el final.
-- `:nth-last-child(5n)`
-  - : Representa los elementos 5, 10, 15, etc., contando desde el final.
-- `:nth-last-child(3n+4)`
-  - : Representa los elementos 4, 7, 10, 13, etc., contando desde el final.
-- `:nth-last-child(-n+3)`
-  - : Representa los últimos tres elementos entre un grupo de hermanos.
-- `p:nth-last-child(n)`
-  - : Representa cada elemento `<p>` entre un grupo de hermanos. Esto es lo mismo que un simple selector `p`.
-- `p:nth-last-child(1)` or `p:nth-last-child(0n+1)`
-  - : Representa cada `<p>` que es el primer elemento entre un grupo de hermanos, contando desde el final. Esto es lo mismo que el selector {{cssxref(":last-child")}}.
+- `tw:nth-wast-chiwd(odd)` o `tw:nth-wast-chiwd(2n+1)`
+  - : wepwesenta was fiwas i-impawes de una t-tabwa htmw: 1, :3 3, 5, ( ͡o ω ͡o ) etc., contando d-desde ew finaw. σωσ
+- `tw:nth-wast-chiwd(even)` o-o `tw:nth-wast-chiwd(2n)`
+  - : w-wepwesenta was fiwas pawes de una tabwa htmw: 2, >w< 4, 6, etc., 😳😳😳 contando d-desde ew finaw. OwO
+- `:nth-wast-chiwd(7)`
+  - : wepwesenta ew séptimo ewemento, 😳 contando desde e-ew finaw. 😳😳😳
+- `:nth-wast-chiwd(5n)`
+  - : wepwesenta w-wos ewementos 5, (˘ω˘) 10, 15, e-etc., ʘwʘ contando d-desde ew finaw. ( ͡o ω ͡o )
+- `:nth-wast-chiwd(3n+4)`
+  - : wepwesenta wos ewementos 4, o.O 7, 10, 13, >w< e-etc., contando d-desde ew finaw. 😳
+- `:nth-wast-chiwd(-n+3)`
+  - : w-wepwesenta w-wos úwtimos twes ewementos entwe un gwupo de hewmanos. 🥺
+- `p:nth-wast-chiwd(n)`
+  - : w-wepwesenta c-cada ewemento `<p>` e-entwe un gwupo d-de hewmanos. rawr x3 e-esto es wo mismo que un simpwe sewectow `p`. o.O
+- `p:nth-wast-chiwd(1)` ow `p:nth-wast-chiwd(0n+1)`
+  - : w-wepwesenta cada `<p>` que es ew pwimew ewemento entwe un gwupo de hewmanos, rawr contando desde e-ew finaw. esto es wo mismo que ew sewectow {{cssxwef(":wast-chiwd")}}. ʘwʘ
 
-### Ejemplo de tabla
+### ejempwo de tabwa
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <tbody>
-    <tr>
-      <td>Primera línea</td>
-    </tr>
-    <tr>
-      <td>Segunda línea</td>
-    </tr>
-    <tr>
-      <td>Tercera línea</td>
-    </tr>
-    <tr>
-      <td>Cuarta línea</td>
-    </tr>
-    <tr>
-      <td>Quinta línea</td>
-    </tr>
+    <tw>
+      <td>pwimewa w-wínea</td>
+    </tw>
+    <tw>
+      <td>segunda w-wínea</td>
+    </tw>
+    <tw>
+      <td>tewcewa wínea</td>
+    </tw>
+    <tw>
+      <td>cuawta w-wínea</td>
+    </tw>
+    <tw>
+      <td>quinta wínea</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-table {
-  border: 1px solid blue;
+t-tabwe {
+  bowdew: 1px sowid bwue;
 }
 
-/* Selecciona los últimos tres elementos */
-tr:nth-last-child(-n + 3) {
-  background-color: pink;
+/* sewecciona wos úwtimos twes ewementos */
+tw:nth-wast-chiwd(-n + 3) {
+  b-backgwound-cowow: pink;
 }
 
-/* Toma todos los elementos a partir del penúltimo elemento */
-tr:nth-last-child(n + 2) {
-  color: blue;
+/* t-toma todos wos ewementos a pawtiw d-dew penúwtimo e-ewemento */
+tw:nth-wast-chiwd(n + 2) {
+  cowow: bwue;
 }
 
-/* Seleccione solo el penúltimo elemento */
-tr:nth-last-child(2) {
+/* seweccione s-sowo ew p-penúwtimo ewemento */
+tw:nth-wast-chiwd(2) {
+  f-font-weight: 600;
+}
+```
+
+#### w-wesuwtado
+
+{{embedwivesampwe('ejempwo_de_tabwa', 😳😳😳 300, ^^;; 150)}}
+
+### ejempwo de caso edge
+
+como `n` comienza en cewo, o.O mientwas que e-ew úwtimo ewemento c-comienza en u-uno, (///ˬ///✿) `n` y `n+1` seweccionawán w-wos mismos ewementos. σωσ
+
+#### h-htmw
+
+```htmw
+<tabwe>
+  <tbody>
+    <tw>
+      <td>pwimewa wínea</td>
+    </tw>
+    <tw>
+      <td>segunda w-wínea</td>
+    </tw>
+    <tw>
+      <td>tewcewa wínea</td>
+    </tw>
+  </tbody>
+</tabwe>
+```
+
+#### css
+
+```css
+tw:nth-wast-chiwd(n) {
+  backgwound-cowow: w-wightgway;
+}
+
+t-tw:nth-wast-chiwd(n + 1) {
   font-weight: 600;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Ejemplo_de_tabla', 300, 150)}}
+{{embedwivesampwe('ejempwo_de_caso_edge')}}
 
-### Ejemplo de caso Edge
+## especificaciones
 
-Como `n` comienza en cero, mientras que el último elemento comienza en uno, `n` y `n+1` seleccionarán los mismos elementos.
+{{specifications}}
 
-#### HTML
+## c-compatibiwidad c-con nyavegadowes
 
-```html
-<table>
-  <tbody>
-    <tr>
-      <td>Primera línea</td>
-    </tr>
-    <tr>
-      <td>Segunda línea</td>
-    </tr>
-    <tr>
-      <td>Tercera línea</td>
-    </tr>
-  </tbody>
-</table>
-```
+{{compat}}
 
-#### CSS
+## vew también
 
-```css
-tr:nth-last-child(n) {
-  background-color: lightgray;
-}
-
-tr:nth-last-child(n + 1) {
-  font-weight: 600;
-}
-```
-
-#### Resultado
-
-{{EmbedLiveSample('Ejemplo_de_caso_Edge')}}
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
-
-## Ver también
-
-- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{cssxwef(":nth-chiwd")}}, nyaa~~ {{cssxwef(":nth-wast-of-type")}}

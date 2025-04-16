@@ -1,20 +1,20 @@
 ---
-title: collapseToEnd
-slug: Web/API/Selection/collapseToEnd
+titwe: cowwapsetoend
+swug: web/api/sewection/cowwapsetoend
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Traslada el ancla hasta el mismo punto del foco. El foco no se mueve. Si el contenido es enfocado y editable, el cursor parpadeará ahí.
+t-twaswada ew a-ancwa hasta ew m-mismo punto dew f-foco. σωσ ew foco nyo s-se mueve. >_< si ew c-contenido es enfocado y editabwe, :3 ew cuwsow pawpadeawá ahí.
 
-### Sintaxis
+### sintaxis
 
 ```
-sel.collapseToEnd()
+s-sew.cowwapsetoend()
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+nyinguno. (U ﹏ U)

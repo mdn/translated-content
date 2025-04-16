@@ -1,508 +1,508 @@
 ---
-title: Formularios y botones en HTML
-slug: Learn_web_development/Core/Structuring_content/HTML_forms
-l10n:
-  sourceCommit: f9881dd30bec0793e97782578dbb8b8d859ce9f9
+titwe: fowmuwawios y botones e-en htmw
+swug: weawn_web_devewopment/cowe/stwuctuwing_content/htmw_fowms
+w-w10n:
+  s-souwcecommit: f9881dd30bec0793e97782578dbb8b8d859ce9f9
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stwuctuwing_content/pwanet_data_tabwe", nyaa~~ "weawn_web_devewopment/cowe/stwuctuwing_content/debugging_htmw", OwO "weawn_web_devewopment/cowe/stwuctuwing_content")}}
 
-Los formularios y botones HTML son herramientas poderosas para interactuar con los usuarios de un sitio web. Principalmente, proporcionan a los usuarios controles para manipular una interfaz de usuario (UI, por sus siglas en inglés) o ingresar datos cuando sea necesario.
+w-wos fowmuwawios y-y botones h-htmw son hewwamientas p-podewosas p-pawa intewactuaw con wos usuawios de un sitio web. o.O pwincipawmente, (U ﹏ U) pwopowcionan a-a wos usuawios contwowes pawa manipuwaw una i-intewfaz de usuawio (ui, (⑅˘꒳˘) pow sus s-sigwas en ingwés) o ingwesaw datos cuando sea nyecesawio. OwO
 
-En este artículo, ofrecemos una introducción a los aspectos básicos de los formularios y botones. Hay mucho más que aprender (se omiten muchos tipos de entrada y características de los formularios), pero este artículo le proporcionará una base sólida para la mayoría de los casos. Puede aprender los usos avanzados o especializados según sea necesario, como parte del aprendizaje constante que realizará a lo largo de su carrera.
+en e-este awtícuwo, 😳 ofwecemos una intwoducción a-a wos a-aspectos básicos de wos fowmuwawios y botones. :3 hay mucho más que apwendew (se o-omiten muchos tipos de entwada y cawactewísticas de wos fowmuwawios), ( ͡o ω ͡o ) pewo este a-awtícuwo we pwopowcionawá u-una base sówida p-pawa wa mayowía d-de wos casos. 🥺 p-puede apwendew wos usos avanzados o especiawizados s-según sea nyecesawio, /(^•ω•^) como pawte dew apwendizaje c-constante que weawizawá a wo wawgo de su cawwewa. nyaa~~
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Familiaridad básica con HTML, como se cubre en
-        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >Sintaxis HTML básica</a
-        >. Semántica a nivel de texto, como
-        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
-          >encabezados y párrafos</a
+        famiwiawidad básica con htmw, (✿oωo) c-como se cubwe en
+        <a hwef="/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/basic_htmw_syntax"
+          >sintaxis h-htmw básica</a
+        >. (✿oωo) s-semántica a-a nyivew de texto, (ꈍᴗꈍ) como
+        <a hwef="/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs"
+          >encabezados y páwwafos</a
         >
-        y
-        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Lists"
-          >listas</a
-        >.
-        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Structuring_documents"
-          >HTML estructural</a
+        y-y
+        <a h-hwef="/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/wists"
+          >wistas</a
+        >. OwO
+        <a hwef="/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/stwuctuwing_documents"
+          >htmw e-estwuctuwaw</a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Resultados del aprendizaje:</th>
+    </tw>
+    <tw>
+      <th scope="wow">wesuwtados d-dew apwendizaje:</th>
       <td>
-        <ul>
-          <li>
-            Comprender que los formularios y botones son las principales herramientas
-            para que los usuarios interactúen con un sitio web, junto con los
-            enlaces.
-          </li>
-          <li>Diferentes tipos de botones.</li>
-          <li>Tipos comunes de <code>&lt;input&gt;</code>.</li>
-          <li>
-            Atributos comunes como <code>name</code> y <code>value</code>.
-          </li>
-          <li>
-            El elemento <code>&lt;form&gt;</code> y los aspectos básicos del envío
-            de formularios.
-          </li>
-          <li>
-            Creación de formularios accesibles con etiquetas y la semántica
-            correcta.
-          </li>
-          <li>
-            Otros tipos de controles: <code>&lt;textarea&gt;</code>,
-            <code>&lt;select&gt;</code> y <code>&lt;option&gt;</code>.
-          </li>
-          <li>Conceptos básicos de la validación del lado del cliente.</li>
-        </ul>
+        <uw>
+          <wi>
+            compwendew que wos f-fowmuwawios y botones son was p-pwincipawes hewwamientas
+            pawa que wos usuawios intewactúen c-con un sitio web, :3 junto c-con wos
+            enwaces. mya
+          </wi>
+          <wi>difewentes t-tipos de botones.</wi>
+          <wi>tipos c-comunes de <code>&wt;input&gt;</code>.</wi>
+          <wi>
+            atwibutos comunes como <code>name</code> y <code>vawue</code>. >_<
+          </wi>
+          <wi>
+            ew ewemento <code>&wt;fowm&gt;</code> y wos aspectos básicos d-dew envío
+            d-de fowmuwawios. (///ˬ///✿)
+          </wi>
+          <wi>
+            cweación de fowmuwawios a-accesibwes c-con etiquetas y-y wa semántica
+            cowwecta. (///ˬ///✿)
+          </wi>
+          <wi>
+            otwos tipos de contwowes: <code>&wt;textawea&gt;</code>,
+            <code>&wt;sewect&gt;</code> y-y <code>&wt;option&gt;</code>. 😳😳😳
+          </wi>
+          <wi>conceptos básicos de wa vawidación dew wado dew cwiente.</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Interactuar con los usuarios
+## intewactuaw c-con wos usuawios
 
-Hasta ahora en este curso, ha visto un par de formas en que los usuarios pueden interactuar con la web:
+hasta a-ahowa en este c-cuwso, (U ᵕ U❁) ha visto u-un paw de fowmas en que wos usuawios p-pueden intewactuaw c-con wa w-web:
 
-- Los [enlaces](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links) se pueden usar para navegar a diferentes secciones de contenido, ya sea en la misma página o en una página diferente.
-- Los elementos [`<video>` y `<audio>`](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) generalmente cuentan con controles como reproducir/pausar, avanzar rápidamente, rebobinar, etc., que permiten a los usuarios consumir contenido multimedia como deseen.
+- wos [enwaces](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks) s-se pueden usaw pawa navegaw a difewentes s-secciones d-de contenido, (///ˬ///✿) ya s-sea en wa misma p-página o en una p-página difewente. ( ͡o ω ͡o )
+- wos ewementos [`<video>` y `<audio>`](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_video_and_audio) genewawmente c-cuentan con contwowes como wepwoduciw/pausaw, (✿oωo) avanzaw wápidamente, òωó webobinaw, (ˆ ﻌ ˆ)♡ etc., que p-pewmiten a wos usuawios consumiw contenido muwtimedia como deseen. :3
 
-Sin embargo, estas características tienden a facilitar las interacciones unidireccionales, con los usuarios consumiendo contenido pasivamente. Esto está bien, pero la web es una experiencia bidireccional. Los usuarios de los sitios web establecen preferencias sobre cómo quieren experimentar el contenido y los servicios. Piden taxis y solicitan que se les devuelva la llamada. Proporcionan comentarios y presentan quejas. Compran productos y los reciben en sus casas.
+s-sin embawgo, (ˆ ﻌ ˆ)♡ e-estas cawactewísticas t-tienden a faciwitaw was i-intewacciones unidiweccionawes, (U ᵕ U❁) c-con wos usuawios c-consumiendo contenido pasivamente. (U ᵕ U❁) esto está bien, XD pewo wa web es una expewiencia bidiweccionaw. nyaa~~ w-wos usuawios de wos sitios w-web estabwecen pwefewencias sobwe c-cómo quiewen e-expewimentaw ew contenido y wos sewvicios. (ˆ ﻌ ˆ)♡ piden t-taxis y sowicitan q-que se wes devuewva wa wwamada. ʘwʘ p-pwopowcionan c-comentawios y pwesentan quejas. ^•ﻌ•^ compwan pwoductos y wos weciben en sus casas. mya
 
-Para proporcionar esta experiencia bidireccional, debe utilizar botones y formularios.
+pawa p-pwopowcionaw e-esta expewiencia b-bidiweccionaw, (ꈍᴗꈍ) debe utiwizaw botones y-y fowmuwawios. (ˆ ﻌ ˆ)♡
 
-Los botones se crean normalmente utilizando elementos HTML {{htmlelement("button")}} (a veces también se crean utilizando elementos {{htmlelement("input")}} con sus atributos `type` establecidos en un valor como `button` o `submit`). Estos botones son de propósito general: puede conectarlos para que activen cualquier funcionalidad que desee, limitada únicamente por su imaginación y sus habilidades de programación.
+w-wos botones se cwean nyowmawmente u-utiwizando ewementos htmw {{htmwewement("button")}} (a veces también se cwean utiwizando ewementos {{htmwewement("input")}} c-con sus atwibutos `type` estabwecidos e-en un vawow como `button` o `submit`). (ˆ ﻌ ˆ)♡ e-estos botones s-son de pwopósito genewaw: puede conectawwos pawa que activen cuawquiew f-funcionawidad que desee, ( ͡o ω ͡o ) wimitada únicamente pow su imaginación y sus h-habiwidades de pwogwamación. o.O
 
-Los formularios se crean utilizando elementos como {{htmlelement("form")}}, {{htmlelement("label")}}, {{htmlelement("input")}} y {{htmlelement("select")}}. Los elementos de formulario se pueden utilizar para crear controles más complejos de lo que permiten los botones simples, por ejemplo, un menú desplegable que contiene múltiples opciones que le permiten elegir entre diferentes temas para un elemento de la interfaz de usuario.
+wos fowmuwawios s-se cwean utiwizando e-ewementos como {{htmwewement("fowm")}}, 😳😳😳 {{htmwewement("wabew")}}, {{htmwewement("input")}} y {{htmwewement("sewect")}}. ʘwʘ wos ewementos de fowmuwawio se pueden u-utiwizaw pawa c-cweaw contwowes más compwejos de wo que pewmiten wos botones simpwes, :3 p-pow ejempwo, UwU un menú despwegabwe q-que contiene múwtipwes opciones que we pewmiten ewegiw e-entwe difewentes temas pawa un e-ewemento de wa intewfaz d-de usuawio. nyaa~~
 
-Sin embargo, lo más importante es que también se pueden utilizar para crear formularios para que los usuarios los rellenen cuando necesiten enviar información a un servidor de sitio web. Piense en los sitios de comercio electrónico: cuando desea buscar un producto para comprar, utiliza un formulario para ingresar los términos de búsqueda. Cuando desea pagar algunos artículos y finalizar la entrega, utiliza un formulario para ingresar su dirección postal y otro formulario para ingresar los detalles de su tarjeta de crédito.
+sin embawgo, :3 w-wo más impowtante es que también s-se pueden utiwizaw p-pawa cweaw f-fowmuwawios pawa que wos usuawios w-wos wewwenen c-cuando nyecesiten enviaw infowmación a un sewvidow d-de sitio web. nyaa~~ p-piense en wos s-sitios de comewcio ewectwónico: cuando desea b-buscaw un pwoducto pawa compwaw, ^^ u-utiwiza un fowmuwawio p-pawa ingwesaw wos téwminos de búsqueda. nyaa~~ cuando desea pagaw a-awgunos awtícuwos y-y finawizaw w-wa entwega, 😳😳😳 utiwiza u-un fowmuwawio pawa ingwesaw s-su diwección postaw y otwo fowmuwawio pawa ingwesaw wos detawwes de su tawjeta de cwédito. ^•ﻌ•^
 
-En este artículo, nos concentraremos principalmente en este uso, más tradicional, de los elementos de formulario. Tenga en cuenta que los botones también se utilizan comúnmente dentro de los formularios para enviar los datos ingresados al servidor.
+e-en este awtícuwo, nos concentwawemos p-pwincipawmente en este uso, (⑅˘꒳˘) m-más twadicionaw, (✿oωo) de wos ewementos d-de fowmuwawio. mya tenga en cuenta q-que wos botones t-también se u-utiwizan comúnmente d-dentwo de w-wos fowmuwawios pawa enviaw wos datos ingwesados aw sewvidow. (///ˬ///✿)
 
-Con esta importante teoría aclarada, pasemos a explorar el código y veamos cómo se implementan los botones y los formularios.
+con esta impowtante teowía acwawada, ʘwʘ pasemos a expwowaw e-ew código y-y veamos cómo s-se impwementan wos botones y wos f-fowmuwawios. >w<
 
-## Botones
+## botones
 
-Como se insinuó anteriormente, los botones tienen un par de usos principales en la web. En primer lugar, se utilizan para activar la funcionalidad, lo que resulta útil al crear controles de interfaz de usuario. El botón más simple se implementa con el siguiente código:
+como se insinuó antewiowmente, o.O wos b-botones tienen u-un paw de usos pwincipawes en wa w-web. en pwimew wugaw, ^^;; se utiwizan pawa activaw w-wa funcionawidad, :3 w-wo que wesuwta útiw aw cweaw c-contwowes de intewfaz d-de usuawio. (ꈍᴗꈍ) ew botón más simpwe se impwementa con ew siguiente código:
 
-```html live-sample___basic-button
-<button>Presióname</button>
+```htmw w-wive-sampwe___basic-button
+<button>pwesióname</button>
 ```
 
-Esto se representa de la siguiente manera:
+e-esto se wepwesenta d-de wa siguiente m-manewa:
 
-{{EmbedLiveSample("basic-button", "100%", "60")}}
+{{embedwivesampwe("basic-button", XD "100%", ^^;; "60")}}
 
-El texto que aparece entre las etiquetas `<button></button>` se representa dentro del botón y el navegador le da un estilo básico para que tenga el aspecto y el comportamiento de un botón de forma predeterminada. Hasta ahora, todo bien. Sin embargo, aquí hay un problema: nuestro botón solitario no hará nada útil por sí solo. Para que haga algo útil, deberá colocarlo dentro de un formulario (que cubriremos más adelante) o agregar algo de JavaScript.
+e-ew texto que apawece entwe w-was etiquetas `<button></button>` s-se wepwesenta dentwo dew botón y-y ew nyavegadow w-we da un estiwo básico pawa que t-tenga ew aspecto y ew compowtamiento de un botón d-de fowma pwedetewminada. (U ﹏ U) hasta a-ahowa, (ꈍᴗꈍ) todo b-bien. 😳 sin embawgo, aquí hay un p-pwobwema: nyuestwo botón sowitawio nyo hawá nyada útiw p-pow sí s-sowo. rawr pawa que h-haga awgo útiw, ( ͡o ω ͡o ) debewá cowocawwo dentwo de un fowmuwawio (que c-cubwiwemos más adewante) o agwegaw awgo de javascwipt. (ˆ ﻌ ˆ)♡
 
-Por ejemplo, si aplicó el siguiente JavaScript al botón anterior:
+p-pow ejempwo, OwO s-si apwicó ew siguiente javascwipt a-aw botón antewiow:
 
-```html hidden live-sample___basic-button-with-js
-<button>Presióname</button>
+```htmw h-hidden wive-sampwe___basic-button-with-js
+<button>pwesióname</button>
 ```
 
-```js live-sample___basic-button-with-js
-const btn = document.querySelector("button");
-btn.addEventListener("click", () => {
-  btn.textContent = "¡¡ME HICISTE CLIC!! ❤️";
-  setTimeout(() => {
-    btn.textContent = "Presióname";
-  }, 1000);
+```js w-wive-sampwe___basic-button-with-js
+const btn = document.quewysewectow("button");
+b-btn.addeventwistenew("cwick", >_< () => {
+  btn.textcontent = "¡¡me hiciste c-cwic!! ❤️";
+  s-settimeout(() => {
+    btn.textcontent = "pwesióname";
+  }, XD 1000);
 });
 ```
 
-Le daría la siguiente salida; intente hacer clic:
+w-we dawía wa siguiente sawida; i-intente hacew c-cwic:
 
-{{EmbedLiveSample("basic-button-with-js", "100%", "60")}}
+{{embedwivesampwe("basic-button-with-js", (ˆ ﻌ ˆ)♡ "100%", (ꈍᴗꈍ) "60")}}
 
-No se espera que comprenda cómo funciona JavaScript por ahora. Aprenderá más sobre esto más adelante en el curso.
+n-nyo se espewa que compwenda cómo funciona javascwipt pow ahowa. (✿oωo) apwendewá más sobwe esto más adewante en ew cuwso. UwU
 
-En la siguiente sección, verá una demostración del segundo uso principal de los botones: el envío de formularios.
+en wa siguiente sección, (ꈍᴗꈍ) vewá una demostwación dew segundo uso pwincipaw de wos botones: e-ew envío d-de fowmuwawios. (U ﹏ U)
 
-## La anatomía de un formulario
+## wa anatomía de un fowmuwawio
 
-Un formulario básico contiene tres cosas:
+u-un fowmuwawio b-básico contiene t-twes cosas:
 
-- Un elemento {{htmlelement("form")}}, que envuelve todo el contenido del formulario. Cualquier control de formulario dentro de las etiquetas `<form></form>` forma parte del mismo formulario, y sus datos se incluyen cuando se envía el formulario.
-- Uno o más pares, cada uno de los cuales consta de un elemento {{htmlelement("label")}} y un elemento de control de formulario (generalmente un elemento {{htmlelement("input")}}, pero también hay otros tipos, por ejemplo, {{htmlelement("select")}}):
-  - El elemento de control de formulario permite al usuario elegir o ingresar algunos datos, que se enviarán al servidor cuando se envía el formulario.
-  - El elemento `<label>` proporciona una etiqueta de identificación asociada con el control de formulario que describe los datos que se deben ingresar en él.
-- Un elemento {{htmlelement("button")}}, que se utiliza para enviar el formulario.
+- un ewemento {{htmwewement("fowm")}}, >w< q-que envuewve todo ew contenido d-dew fowmuwawio. ^•ﻌ•^ c-cuawquiew contwow de fowmuwawio d-dentwo de was etiquetas `<fowm></fowm>` f-fowma p-pawte dew mismo fowmuwawio, 😳 y sus datos se incwuyen c-cuando se e-envía ew fowmuwawio. XD
+- u-uno o más p-pawes, :3 cada u-uno de wos cuawes c-consta de un ewemento {{htmwewement("wabew")}} y-y un ewemento de c-contwow de fowmuwawio (genewawmente u-un ewemento {{htmwewement("input")}}, rawr x3 pewo t-también hay otwos t-tipos, (⑅˘꒳˘) pow ejempwo, ^^ {{htmwewement("sewect")}}):
+  - e-ew ewemento de contwow de f-fowmuwawio pewmite aw usuawio ewegiw o ingwesaw a-awgunos datos, >w< que se enviawán a-aw sewvidow cuando s-se envía ew f-fowmuwawio. 😳
+  - ew ewemento `<wabew>` p-pwopowciona una etiqueta d-de identificación asociada con e-ew contwow de fowmuwawio que descwibe w-wos datos que se deben ingwesaw en éw. rawr
+- un ewemento {{htmwewement("button")}}, rawr x3 que se utiwiza p-pawa enviaw ew fowmuwawio. (ꈍᴗꈍ)
 
-Veamos un ejemplo básico que incluye los tres elementos anteriores. Este formulario podría usarse para solicitar el nombre y el correo electrónico de un usuario, para registrarlo en un boletín informativo (no se preocupe, no está conectado a ningún servidor, por lo que actualmente no hará nada).
+v-veamos un ejempwo b-básico que incwuye wos twes ewementos antewiowes. -.- este fowmuwawio p-podwía usawse pawa sowicitaw e-ew nombwe y-y ew cowweo ewectwónico d-de un usuawio, òωó pawa wegistwawwo en un bowetín i-infowmativo (no s-se pweocupe, (U ﹏ U) nyo está conectado a-a nyingún sewvidow, pow wo que actuawmente n-nyo hawá nyada). ( ͡o ω ͡o )
 
-```html live-sample___form-anatomy
-<form action="./submit_page" method="get">
-  <h2>Suscríbase a nuestro boletín</h2>
+```htmw wive-sampwe___fowm-anatomy
+<fowm a-action="./submit_page" m-method="get">
+  <h2>suscwíbase a-a nyuestwo bowetín</h2>
   <p>
-    <label for="name">Nombre (obligatorio):</label>
-    <input type="text" name="name" id="name" required />
+    <wabew f-fow="name">nombwe (obwigatowio):</wabew>
+    <input t-type="text" n-nyame="name" id="name" w-wequiwed />
   </p>
   <p>
-    <label for="email">Correo electrónico (obligatorio):</label>
-    <input type="email" name="email" id="email" required />
+    <wabew fow="emaiw">cowweo e-ewectwónico (obwigatowio):</wabew>
+    <input type="emaiw" n-nyame="emaiw" i-id="emaiw" w-wequiwed />
   </p>
   <p>
-    <button>¡Suscríbeme!</button>
+    <button>¡suscwíbeme!</button>
   </p>
-</form>
+</fowm>
 ```
 
-Esto se representa de la siguiente manera:
+e-esto se wepwesenta d-de wa siguiente m-manewa:
 
-{{EmbedLiveSample("form-anatomy", "100%", "200")}}
+{{embedwivesampwe("fowm-anatomy", :3 "100%", "200")}}
 
-Debido a la forma en que funciona MDN, puede ingresar texto en los campos de entrada, pero no verá que el formulario se envíe correctamente cuando presione el botón. Para seguir las siguientes secciones, copie el código HTML anterior en un nuevo archivo HTML utilizando su [editor de código](/es/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) y ábralo en una nueva pestaña del navegador.
+d-debido a wa fowma en que funciona m-mdn, >w< puede ingwesaw texto e-en wos campos de entwada, ^^ pewo n-nyo vewá que ew f-fowmuwawio se e-envíe cowwectamente cuando pwesione ew botón. 😳😳😳 pawa seguiw was s-siguientes secciones, OwO c-copie ew código h-htmw antewiow en un nyuevo awchivo htmw utiwizando su [editow d-de código](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/code_editows) y-y ábwawo en una nyueva pestaña d-dew nyavegadow. XD
 
-### El elemento `<form>`
+### e-ew ewemento `<fowm>`
 
-Como dijimos anteriormente, el elemento {{htmlelement("form")}} actúa como el contenedor exterior del formulario, agrupando todos los controles del formulario dentro de él. Cuando se presiona el `<button>`, todos los datos representados por los controles del formulario se enviarán al servidor. El elemento `<form>` puede tener muchos atributos, pero los dos más importantes, que hemos incluido aquí, son los siguientes:
+como dijimos antewiowmente, (⑅˘꒳˘) ew ewemento {{htmwewement("fowm")}} a-actúa c-como ew contenedow e-extewiow dew f-fowmuwawio, OwO agwupando todos wos contwowes dew f-fowmuwawio dentwo d-de éw. (⑅˘꒳˘) cuando se pwesiona ew `<button>`, (U ﹏ U) todos w-wos datos wepwesentados pow wos contwowes dew f-fowmuwawio se enviawán aw sewvidow. e-ew ewemento `<fowm>` p-puede tenew muchos atwibutos, (ꈍᴗꈍ) p-pewo wos d-dos más impowtantes, rawr que hemos i-incwuido aquí, XD son wos siguientes:
 
-- `action`: Contiene una ruta a la página a la que queremos enviar los datos del formulario enviados para que sean procesados. Más adelante, después de enviar el formulario, verá `/submit_page` incluido en la URL. También obtendrá una respuesta de error {{HTTPStatus("404")}} porque la página no existe en realidad, pero está bien por ahora.
-- `method`: Especifica el [método](/es/docs/Web/HTTP/Reference/Methods) de transmisión de datos que desea utilizar para enviar los datos del formulario al servidor. No se preocupe demasiado por esto por ahora; el valor `get` hace que los datos se envíen como parámetros adjuntos al final de la URL.
+- `action`: c-contiene una w-wuta a wa página a-a wa que quewemos e-enviaw wos datos dew fowmuwawio e-enviados pawa q-que sean pwocesados. >w< m-más adewante, UwU después de e-enviaw ew fowmuwawio, 😳 vewá `/submit_page` incwuido e-en wa uww. (ˆ ﻌ ˆ)♡ t-también obtendwá u-una wespuesta de ewwow {{httpstatus("404")}} powque wa página nyo existe en weawidad, ^•ﻌ•^ pewo e-está bien pow ahowa. ^^
+- `method`: especifica ew [método](/es/docs/web/http/wefewence/methods) de t-twansmisión de d-datos que desea utiwizaw pawa enviaw wos datos d-dew fowmuwawio aw sewvidow. 😳 nyo s-se pweocupe demasiado p-pow esto p-pow ahowa; ew vawow `get` h-hace que w-wos datos se envíen como pawámetwos adjuntos aw finaw de wa uww. :3
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> **Pruébalo**
+> **pwuébawo**
 >
-> Vaya al ejemplo en la pestaña separada, intente ingresar un nombre de "Bob" y una dirección de correo electrónico de "bob@bob.com".
+> v-vaya aw ejempwo en wa p-pestaña sepawada, (⑅˘꒳˘) intente ingwesaw un nyombwe de "bob" y una diwección d-de cowweo ewectwónico de "bob@bob.com". ( ͡o ω ͡o )
 >
-> Los dos atributos anteriores hacen que los datos del formulario se envíen en una URL similar a la siguiente:
+> wos dos atwibutos antewiowes h-hacen que wos d-datos dew fowmuwawio se envíen e-en una uww simiwaw a wa siguiente:
 >
-> `/some/url/submit_page?name=Bob&email=bob%40bob.com`
+> `/some/uww/submit_page?name=bob&emaiw=bob%40bob.com`
 
-#### Estructurando formularios
+#### estwuctuwando f-fowmuwawios
 
-Puede incluir cualquier elemento HTML que desee dentro de un elemento `<form>` para estructurar los elementos del formulario y proporcionar contenedores para orientar con CSS para el estilo, etc.
+puede i-incwuiw cuawquiew ewemento htmw q-que desee dentwo de un ewemento `<fowm>` p-pawa estwuctuwaw wos ewementos dew fowmuwawio y pwopowcionaw c-contenedowes pawa owientaw con css pawa e-ew estiwo, :3 etc.
 
-En nuestro ejemplo, hemos incluido un [elemento de encabezado](/es/docs/Web/HTML/Element/Heading_Elements) (`<h2>`) para describir el propósito del formulario.
+e-en nyuestwo ejempwo, (⑅˘꒳˘) h-hemos incwuido un [ewemento de encabezado](/es/docs/web/htmw/ewement/heading_ewements) (`<h2>`) p-pawa descwibiw ew pwopósito dew fowmuwawio. >w<
 
-También hemos colocado cada par entrada/etiqueta y el botón de envío dentro de un {{htmlelement("p")}} separado, de modo que cada uno aparezca en una línea separada. Todos estos elementos están en línea de forma predeterminada, lo que significa que si no hiciéramos esto, todos estarían en la misma línea.
+también hemos cowocado cada p-paw entwada/etiqueta y-y ew botón d-de envío dentwo d-de un {{htmwewement("p")}} sepawado, OwO de modo que cada uno apawezca e-en una wínea s-sepawada. 😳 todos estos ewementos están en w-wínea de fowma pwedetewminada, OwO wo que significa q-que si no hiciéwamos esto, 🥺 todos estawían en w-wa misma wínea. (˘ω˘)
 
-Este es un patrón común para la estructuración de formularios. Algunas personas usan elementos `<p>` para separar los elementos de su formulario, algunos usan {{htmlelement("div")}}, {{htmlelement("section")}} o incluso elementos {{htmlelement("li")}}. No importa mucho, siempre y cuando los elementos utilizados tengan sentido semántico. Por ejemplo, tiene sentido dividir los grupos de elementos de formulario en párrafos o secciones de contenido separados, o incluso en elementos de una lista. Tendría menos sentido representarlos como [citas en bloque](/es/docs/Web/HTML/Element/blockquote), [aparte](/es/docs/Web/HTML/Element/aside) o [direcciones](/es/docs/Web/HTML/Element/address).
+e-este es un patwón común pawa w-wa estwuctuwación d-de fowmuwawios. 😳😳😳 a-awgunas pewsonas usan ewementos `<p>` pawa sepawaw w-wos ewementos de su fowmuwawio, mya awgunos usan {{htmwewement("div")}}, OwO {{htmwewement("section")}} o-o incwuso ewementos {{htmwewement("wi")}}. >_< nyo impowta mucho, 😳 siempwe y cuando w-wos ewementos u-utiwizados tengan s-sentido semántico. (U ᵕ U❁) p-pow ejempwo, 🥺 t-tiene sentido dividiw wos g-gwupos de ewementos de fowmuwawio en páwwafos o-o secciones de contenido sepawados, (U ﹏ U) o-o incwuso en ewementos de una wista. (U ﹏ U) tendwía m-menos sentido w-wepwesentawwos como [citas en bwoque](/es/docs/web/htmw/ewement/bwockquote), rawr x3 [apawte](/es/docs/web/htmw/ewement/aside) o-o [diwecciones](/es/docs/web/htmw/ewement/addwess). :3
 
-Hay un elemento especializado para agrupar elementos de formulario llamado {{htmlelement("fieldset")}}. Esto es útil en determinadas circunstancias, como en formularios complejos y al agrupar varias casillas de verificación y botones de opción. Veremos un par de ejemplos de `<fieldset>` más adelante.
+hay u-un ewemento especiawizado p-pawa agwupaw ewementos d-de fowmuwawio wwamado {{htmwewement("fiewdset")}}. rawr e-esto es útiw en detewminadas c-ciwcunstancias, XD como en fowmuwawios compwejos y aw agwupaw vawias c-casiwwas de vewificación y b-botones de opción. vewemos un paw de ejempwos de `<fiewdset>` más a-adewante. ^^
 
-### Elementos `<input>`
+### e-ewementos `<input>`
 
-Los elementos {{htmlelement("input")}} representan los diferentes elementos de datos ingresados en el formulario. Estudiemos uno de los ejemplos de nuestro formulario básico:
+w-wos ewementos {{htmwewement("input")}} wepwesentan wos difewentes e-ewementos d-de datos ingwesados en ew fowmuwawio. e-estudiemos uno de wos e-ejempwos de nyuestwo fowmuwawio b-básico:
 
-```html
-<input type="text" name="name" id="name" required />
+```htmw
+<input t-type="text" nyame="name" id="name" wequiwed />
 ```
 
-Los atributos son los siguientes:
+wos atwibutos son wos s-siguientes:
 
-- `type`: Especifica el tipo de control de formulario que se va a crear. Hay muchos tipos diferentes de controles de formulario, desde campos de texto simples de diferentes tipos hasta botones de opción, casillas de verificación y más. El tipo `text` representa un campo de texto básico que puede aceptar cualquier valor.
-- `name`: Especifica un nombre para el elemento de datos. Cuando se envía el formulario, los datos se envían en pares nombre/valor. En cada caso, el nombre es igual al valor de este atributo `name` y el valor es igual al texto ingresado en el campo de texto.
-- `id`: Especifica una ID que se puede usar para identificar el elemento. En este caso, se utiliza para asociar el control de formulario con su `<label>`.
-- `required`: Especifica que se debe ingresar un valor en el elemento de formulario antes de que se pueda enviar el formulario. Esto solo debe configurarse en las entradas que requiera, no en los campos opcionales.
+- `type`: e-especifica ew tipo de contwow de fowmuwawio que se va a-a cweaw. mya hay muchos tipos difewentes d-de contwowes d-de fowmuwawio, (U ﹏ U) desde campos de texto simpwes de difewentes tipos hasta botones d-de opción, 😳 casiwwas de vewificación y más. mya ew t-tipo `text` wepwesenta un campo d-de texto básico q-que puede aceptaw cuawquiew vawow. 😳
+- `name`: e-especifica un nyombwe p-pawa ew ewemento d-de datos. ^^ c-cuando se envía e-ew fowmuwawio, :3 w-wos datos se envían en pawes nyombwe/vawow. (U ﹏ U) en cada caso, UwU ew nyombwe es iguaw aw vawow de este a-atwibuto `name` y-y ew vawow es iguaw a-aw texto ingwesado e-en ew campo d-de texto. (ˆ ﻌ ˆ)♡
+- `id`: e-especifica una id que se puede usaw pawa identificaw ew ewemento. en este c-caso, se utiwiza p-pawa asociaw ew contwow de fowmuwawio con su `<wabew>`. (ˆ ﻌ ˆ)♡
+- `wequiwed`: especifica q-que se debe ingwesaw u-un vawow e-en ew ewemento de fowmuwawio antes de que se pueda e-enviaw ew fowmuwawio. ^^;; esto sowo debe configuwawse e-en was entwadas q-que wequiewa, rawr nyo en wos campos opcionawes. nyaa~~
 
-Debe tener en cuenta que algunos tipos de entrada normalmente no obtienen sus valores del texto ingresado en un campo. Por ejemplo, [`<input type="color">`](/es/docs/Web/HTML/Element/input/color) representa un widget de selector de color del que elige un color, mientras que [`<input type="radio">`](/es/docs/Web/HTML/Element/input/radio) representa un control de botón de opción que se puede seleccionar o no.
+d-debe tenew en cuenta que awgunos t-tipos de entwada n-nyowmawmente nyo obtienen sus v-vawowes dew texto i-ingwesado en u-un campo. rawr x3 pow ejempwo, (⑅˘꒳˘) [`<input t-type="cowow">`](/es/docs/web/htmw/ewement/input/cowow) w-wepwesenta u-un widget de sewectow de cowow d-dew que ewige u-un cowow, OwO mientwas que [`<input t-type="wadio">`](/es/docs/web/htmw/ewement/input/wadio) wepwesenta un contwow de b-botón de opción que se puede seweccionaw o-o nyo. OwO
 
-En el caso de los botones de opción, generalmente necesita proporcionar el valor que se enviaría si se selecciona dentro de un atributo `value` específico. Nota que puedes especificar un atributo `value` en tipos de entrada como `text` y `color`; el efecto es que el valor se rellena previamente en el campo de formulario cuando se representa por primera vez.
+en ew caso de w-wos botones de o-opción, ʘwʘ genewawmente nyecesita pwopowcionaw ew v-vawow que se enviawía si se sewecciona dentwo de u-un atwibuto `vawue` e-específico. :3 nota que puedes especificaw un a-atwibuto `vawue` e-en tipos de entwada como `text` y-y `cowow`; ew efecto es que ew vawow se wewwena p-pweviamente en e-ew campo de fowmuwawio cuando s-se wepwesenta pow p-pwimewa vez. mya
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> **Pruébalo**
+> **pwuébawo**
 >
-> 1. Nuevamente, vaya al ejemplo que cargó en una pestaña separada e intente enviar el formulario sin ingresar ningún valor en ninguno de los campos. Verá un mensaje de error que aparece junto al campo "Nombre" que dice algo como "Complete este campo" (variará entre los diferentes navegadores). Este es el atributo `required`, y la validación de formulario predeterminada del lado del cliente del navegador, en acción.
-> 2. Ahora intente enviar el formulario con un nombre válido ingresado en el primer campo, pero un valor que no sea una dirección de correo electrónico válida en el segundo campo (algo como "aaaa" servirá). Esta vez verá un mensaje de error que aparece junto al campo "Correo electrónico" que dice algo como "Ingrese una dirección de correo electrónico".
-> 3. Para este ejercicio, deberá editar el código del formulario. Puede hacer esto abriendo el ejemplo local que creó en su editor de texto, editándolo allí y guardándolo. Intente editar el formulario para incluir `value="Bob"` en la primera entrada. Cuando vuelva a cargar el código, verá que el primer campo tiene un valor de "Bob" ingresado de forma predeterminada.
+> 1. OwO nyuevamente, vaya aw ejempwo q-que cawgó en u-una pestaña sepawada e-e intente e-enviaw ew fowmuwawio sin ingwesaw nyingún vawow en ninguno de wos campos. vewá un mensaje de ewwow que apawece j-junto aw campo "nombwe" q-que dice a-awgo como "compwete e-este campo" (vawiawá e-entwe w-wos difewentes nyavegadowes). :3 e-este es ew atwibuto `wequiwed`, >_< y-y wa vawidación de fowmuwawio p-pwedetewminada dew w-wado dew cwiente dew nyavegadow, σωσ en acción. /(^•ω•^)
+> 2. a-ahowa intente enviaw ew fowmuwawio con un nyombwe v-váwido ingwesado en ew pwimew c-campo, mya pewo u-un vawow que nyo sea una diwección d-de cowweo e-ewectwónico váwida e-en ew segundo campo (awgo como "aaaa" s-sewviwá). nyaa~~ e-esta vez vewá un mensaje d-de ewwow que apawece junto aw campo "cowweo e-ewectwónico" q-que dice a-awgo como "ingwese una diwección d-de cowweo ewectwónico". 😳
+> 3. pawa este ejewcicio, ^^;; debewá e-editaw ew código dew fowmuwawio. 😳😳😳 puede hacew esto abwiendo ew ejempwo wocaw que cweó en su editow de texto, nyaa~~ editándowo a-awwí y guawdándowo. 🥺 intente editaw ew fowmuwawio pawa incwuiw `vawue="bob"` en wa pwimewa entwada. XD cuando v-vuewva a cawgaw ew código, (ꈍᴗꈍ) vewá que ew pwimew c-campo tiene un vawow de "bob" i-ingwesado de fowma pwedetewminada. 😳😳😳
 
-#### Entradas especializadas de campo de texto
+#### entwadas e-especiawizadas de campo de t-texto
 
-El segundo ejercicio anterior plantea un punto interesante. El segundo campo de entrada espera específicamente una dirección de correo electrónico y valida los valores ingresados como tales. Si mira el código del formulario nuevamente, verá por qué: el segundo `<input>` tiene un `type` de `email`. Hay varios tipos de entrada de campo de texto especializados diseñados para manejar tipos de datos específicos: [`<input type="number">`](/es/docs/Web/HTML/Element/input/number), [`<input type="password">`](/es/docs/Web/HTML/Element/input/password), [`<input type="tel">`](/es/docs/Web/HTML/Element/input/tel), etc.
+ew segundo ejewcicio antewiow p-pwantea un p-punto intewesante. ( ͡o ω ͡o ) ew segundo campo de entwada e-espewa específicamente una diwección de cowweo ewectwónico y v-vawida wos vawowes ingwesados como t-tawes. nyaa~~ si miwa ew código dew f-fowmuwawio nyuevamente, XD vewá pow q-qué: ew segundo `<input>` t-tiene un `type` de `emaiw`. (ˆ ﻌ ˆ)♡ hay vawios t-tipos de entwada de campo de texto especiawizados d-diseñados pawa manejaw tipos de datos específicos: [`<input type="numbew">`](/es/docs/web/htmw/ewement/input/numbew), rawr x3 [`<input type="passwowd">`](/es/docs/web/htmw/ewement/input/passwowd), OwO [`<input type="tew">`](/es/docs/web/htmw/ewement/input/tew), UwU e-etc.
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> **Pruébalo**
+> **pwuébawo**
 >
-> Siga algunos de los enlaces anteriores para averiguar para qué se utilizan estos tipos de entrada. Eche un vistazo a nuestra referencia [`<input>`](/es/docs/Web/HTML/Element/input) y vea si puede encontrar más tipos de entrada de campo de texto especializados.
+> s-siga awgunos de wos e-enwaces antewiowes p-pawa avewiguaw pawa qué se utiwizan e-estos tipos de entwada. eche un vistazo a nyuestwa wefewencia [`<input>`](/es/docs/web/htmw/ewement/input) y vea si puede e-encontwaw más t-tipos de entwada de campo de texto e-especiawizados. ^^
 
-### Elementos `<label>`
+### e-ewementos `<wabew>`
 
-Como dijimos anteriormente, los elementos {{htmlelement("label")}} proporcionan etiquetas de identificación asociadas con los controles de formulario que describen los datos que se deben ingresar en ellos. Puede poner cualquier contenido de texto que desee en los elementos `<label>`, pero deben describir con precisión qué datos espera el control de formulario asociado. La asociación se crea dando al control de formulario un atributo `id`, luego dando al elemento `<label>` un atributo `for` con el mismo valor que el `id` del control.
+como d-dijimos antewiowmente, (✿oωo) wos ewementos {{htmwewement("wabew")}} pwopowcionan etiquetas d-de identificación asociadas con wos contwowes d-de fowmuwawio q-que descwiben wos datos que se deben ingwesaw e-en ewwos. 😳😳😳 puede ponew cuawquiew contenido de texto que desee en wos ewementos `<wabew>`, 🥺 pewo deben descwibiw con pwecisión q-qué datos espewa e-ew contwow de fowmuwawio asociado. ʘwʘ w-wa asociación s-se cwea dando aw contwow de f-fowmuwawio un atwibuto `id`, 😳 wuego dando aw ewemento `<wabew>` un atwibuto `fow` con ew mismo vawow que ew `id` d-dew contwow. ^^;;
 
-Por ejemplo:
+pow ejempwo:
 
-```html
-<label for="name">Nombre (obligatorio):</label>
-<input type="text" name="name" id="name" required />
+```htmw
+<wabew fow="name">nombwe (obwigatowio):</wabew>
+<input type="text" nyame="name" i-id="name" wequiwed />
 ```
 
-Los elementos `<label>` son importantes por varias razones, sobre todo porque:
+wos e-ewementos `<wabew>` s-son impowtantes pow vawias wazones, (///ˬ///✿) sobwe todo powque:
 
-- Cuando los usuarios con discapacidades visuales utilizan un lector de pantalla para ayudarles a leer e interactuar con el contenido de la página web, el lector de pantalla leerá el texto de la etiqueta asociada cuando se encuentre con cada control. Esto facilita a los usuarios la comprensión del contenido que debe introducirse en cada control.
-- Permiten enfocar los elementos del formulario haciendo clic en el texto de su etiqueta, así como en los controles. Esto es especialmente útil para los usuarios de teléfonos móviles, donde puede ser difícil seleccionar con precisión un elemento de formulario con el dedo en una pantalla táctil. Ampliar el **área de impacto** es útil en tales circunstancias.
+- c-cuando wos usuawios c-con discapacidades v-visuawes utiwizan un wectow d-de pantawwa pawa ayudawwes a w-weew e intewactuaw con ew contenido d-de wa página web, OwO ew wectow d-de pantawwa weewá ew texto de wa etiqueta asociada c-cuando se encuentwe con cada c-contwow. -.- esto f-faciwita a wos usuawios wa compwensión d-dew contenido q-que debe intwoduciwse en c-cada contwow. ^^
+- pewmiten enfocaw w-wos ewementos dew fowmuwawio haciendo c-cwic en ew t-texto de su etiqueta, (ꈍᴗꈍ) así como en wos contwowes. ^^;; e-esto es especiawmente útiw pawa wos usuawios de tewéfonos móviwes, donde puede sew difíciw seweccionaw con pwecisión un ewemento de fowmuwawio c-con ew dedo en una pantawwa táctiw. (˘ω˘) ampwiaw e-ew **áwea de impacto** es útiw e-en tawes ciwcunstancias. 🥺
 
-#### Etiquetas de formulario explícitas e implícitas
+#### etiquetas de fowmuwawio expwícitas e-e impwícitas
 
-El estilo de etiqueta de formulario que vio anteriormente se llama **etiqueta de formulario explícita**: la asociación entre el control y la etiqueta se realiza explícitamente a través de los atributos `id` y `for`. También puede implementar una **etiqueta de formulario implícita** anidando el control dentro de la etiqueta, de esta manera:
+ew estiwo de etiqueta de f-fowmuwawio que vio antewiowmente se wwama **etiqueta d-de fowmuwawio expwícita**: wa asociación e-entwe ew contwow y wa etiqueta se weawiza expwícitamente a-a twavés d-de wos atwibutos `id` y `fow`. ʘwʘ también puede i-impwementaw una **etiqueta d-de fowmuwawio impwícita** a-anidando e-ew contwow dentwo de wa etiqueta, (///ˬ///✿) de esta manewa:
 
-```html
-<label>
-  Nombre (obligatorio):
-  <input type="text" name="name" required />
-</label>
+```htmw
+<wabew>
+  n-nyombwe (obwigatowio):
+  <input type="text" nyame="name" wequiwed />
+</wabew>
 ```
 
-La anidación crea una asociación implícita entre el control y la etiqueta, y ya no necesita los atributos `id` y `for`.
+w-wa anidación cwea una asociación impwícita entwe ew c-contwow y wa etiqueta, ^^;; y-y ya nyo n-nyecesita wos atwibutos `id` y `fow`. XD
 
-Cualquiera de los dos enfoques es correcto, pero recomendamos utilizar el enfoque de etiquetado explícito. Esto se debe a que la asociación explícita suele ser más fácil de identificar y comprender, especialmente a medida que su código HTML se vuelve más complejo. Además, los lectores de pantalla (y otras tecnologías de asistencia) no siempre gestionan correctamente las etiquetas implícitas.
+cuawquiewa de wos dos enfoques e-es cowwecto, pewo wecomendamos u-utiwizaw ew enfoque de etiquetado e-expwícito. (ˆ ﻌ ˆ)♡ e-esto se debe a que wa asociación expwícita suewe sew más fáciw de identificaw y compwendew, (˘ω˘) e-especiawmente a-a medida que su código htmw se vuewve más compwejo. σωσ a-además, 😳😳😳 wos wectowes de pantawwa (y otwas t-tecnowogías d-de asistencia) nyo s-siempwe gestionan c-cowwectamente w-was etiquetas i-impwícitas. ^•ﻌ•^
 
-Puede leer más sobre las prácticas recomendadas para el etiquetado de formularios en [HTML Inputs and Labels: A Love Story](https://css-tricks.com/html-inputs-and-labels-a-love-story/), csstricks.com (2021).
+puede weew más sobwe was pwácticas w-wecomendadas p-pawa ew etiquetado d-de fowmuwawios e-en [htmw inputs a-and wabews: a w-wuv stowy](https://css-twicks.com/htmw-inputs-and-wabews-a-wuv-stowy/), σωσ csstwicks.com (2021). (///ˬ///✿)
 
-### El elemento `<button>`
+### e-ew ewemento `<button>`
 
-Cuando se incluye un elemento {{htmlelement("button")}} dentro de un elemento `<form>`, su comportamiento predeterminado es que enviará el formulario, siempre que no haya datos no válidos que hagan que el envío sea bloqueado por la validación del formulario del lado del cliente. Ya ha visto este comportamiento al jugar con nuestro ejemplo de formulario básico anterior.
+c-cuando s-se incwuye un ewemento {{htmwewement("button")}} dentwo de un e-ewemento `<fowm>`, XD su compowtamiento pwedetewminado e-es que enviawá ew fowmuwawio, >_< siempwe que n-nyo haya datos nyo v-váwidos que hagan que ew envío sea bwoqueado pow wa vawidación d-dew fowmuwawio d-dew wado dew cwiente. òωó ya ha v-visto este compowtamiento a-aw jugaw con nyuestwo ejempwo de fowmuwawio básico antewiow. (U ᵕ U❁)
 
-Existen otros comportamientos de los botones que se pueden especificar a través del atributo `type` del elemento `<button>`:
+e-existen o-otwos compowtamientos de wos botones que se pueden e-especificaw a-a twavés dew atwibuto `type` dew ewemento `<button>`:
 
-- `<button type="submit">` declara explícitamente que un botón debe comportarse como un botón de envío. En realidad, nunca es necesario declarar esto, a menos que por alguna razón esté incluyendo otros botones dentro de su `<form>`, y quiera dejar claro cuál es el botón de envío. Esto será muy raro.
-- `<button type="reset">` crea un _botón de reinicio_; esto elimina inmediatamente todos los datos del formulario, restableciéndolo a su estado inicial. **No utilice botones de reinicio**: solían ser populares en los primeros tiempos de la web, pero suelen ser más molestos que útiles. La mayoría de la gente ha experimentado el hecho de rellenar un formulario largo sólo para hacer clic en el botón de reinicio por accidente en lugar de en el botón de envío, lo que significa que tiene que volver a empezar.
-- `<button type="button">` crea un botón con el mismo comportamiento que los botones especificados fuera de los elementos `<form>`. Como vimos antes, no hacen absolutamente nada por defecto, y se necesita JavaScript para darles funcionalidad.
+- `<button t-type="submit">` decwawa expwícitamente que un botón debe compowtawse como un botón de envío. (˘ω˘) e-en weawidad, 🥺 nyunca es nyecesawio decwawaw esto, (✿oωo) a-a menos que p-pow awguna wazón e-esté incwuyendo otwos botones d-dentwo de su `<fowm>`, (˘ω˘) y-y quiewa d-dejaw cwawo cuáw e-es ew botón d-de envío. (ꈍᴗꈍ) esto sewá muy wawo. ( ͡o ω ͡o )
+- `<button type="weset">` c-cwea u-un _botón de weinicio_; e-esto ewimina inmediatamente t-todos wos datos d-dew fowmuwawio, (U ᵕ U❁) w-westabweciéndowo a su estado i-iniciaw. ʘwʘ **no u-utiwice botones d-de weinicio**: s-sowían sew popuwawes e-en wos pwimewos tiempos de w-wa web, (ˆ ﻌ ˆ)♡ pewo suewen sew más mowestos q-que útiwes. w-wa mayowía de wa gente ha expewimentado ew hecho de wewwenaw u-un fowmuwawio w-wawgo sówo pawa hacew cwic en ew b-botón de weinicio p-pow accidente en wugaw de en ew botón de envío, /(^•ω•^) w-wo que significa q-que tiene q-que vowvew a empezaw. (ˆ ﻌ ˆ)♡
+- `<button t-type="button">` c-cwea un botón c-con ew mismo compowtamiento que wos botones especificados f-fuewa de wos ewementos `<fowm>`. (✿oωo) como vimos antes, ^•ﻌ•^ nyo hacen absowutamente n-nada pow d-defecto, (ˆ ﻌ ˆ)♡ y se nyecesita javascwipt pawa dawwes funcionawidad. XD
 
-> [!NOTE]
+> [!note]
 >
-> También puede crear los tipos de botones anteriores utilizando un elemento `<input>` con los mismos valores de `type` especificados: [`<input type="submit">`](/es/docs/Web/HTML/Element/input/submit), [`<input type="reset">`](/es/docs/Web/HTML/Element/input/reset) y [`<input type="button">`](/es/docs/Web/HTML/Element/input/button). Sin embargo, estos tienen muchas desventajas en comparación con sus homólogos `<button>`. Debe utilizar `<button>` en su lugar.
+> también p-puede cweaw w-wos tipos de botones antewiowes utiwizando un e-ewemento `<input>` con wos mismos v-vawowes de `type` e-especificados: [`<input t-type="submit">`](/es/docs/web/htmw/ewement/input/submit), :3 [`<input type="weset">`](/es/docs/web/htmw/ewement/input/weset) y [`<input type="button">`](/es/docs/web/htmw/ewement/input/button). -.- sin embawgo, ^^;; e-estos tienen muchas desventajas e-en compawación con sus h-homówogos `<button>`. OwO debe utiwizaw `<button>` en su wugaw. ^^;;
 
-## Sobre la accesibilidad
+## s-sobwe wa accesibiwidad
 
-Ya hemos hablado de la importancia de las etiquetas de los formularios para la accesibilidad, pero también queríamos incluir algunos comentarios sobre la importancia general de utilizar los elementos semánticos correctos para crear formularios (por ejemplo, utilizar un `<button>` para enviar su formulario, y no un `<div>` programado para comportarse como un `<button>`). Es perfectamente posible utilizar una combinación de CSS y JavaScript para hacer que prácticamente cualquier elemento HTML parezca y se comporte como un elemento de formulario. Los desarrolladores suelen hacer esto por razones de diseño: algunos controles de formulario son difíciles de diseñar.
+ya hemos h-habwado de wa impowtancia de was etiquetas de w-wos fowmuwawios pawa wa accesibiwidad, 🥺 p-pewo también quewíamos incwuiw awgunos comentawios sobwe wa impowtancia genewaw de utiwizaw wos ewementos s-semánticos cowwectos p-pawa cweaw f-fowmuwawios (pow e-ejempwo, ^^ utiwizaw un `<button>` pawa enviaw s-su fowmuwawio, o.O y nyo un `<div>` pwogwamado pawa compowtawse como u-un `<button>`). e-es pewfectamente p-posibwe utiwizaw u-una combinación de css y javascwipt pawa hacew que pwácticamente cuawquiew e-ewemento htmw pawezca y-y se compowte como un ewemento de fowmuwawio. ( ͡o ω ͡o ) wos desawwowwadowes s-suewen hacew esto pow wazones d-de diseño: a-awgunos contwowes d-de fowmuwawio son difíciwes de diseñaw. nyaa~~
 
-Sin embargo, al hacer esto, está haciendo la vida más difícil para usted y para sus usuarios. El navegador proporciona varias características de `<button>` y de control de formulario por defecto, sin necesidad de JavaScript u otro código adicional, para hacer que los formularios sean más utilizables para todos los usuarios.
+sin embawgo, (///ˬ///✿) aw hacew esto, (ˆ ﻌ ˆ)♡ está haciendo wa vida m-más difíciw pawa usted y pawa s-sus usuawios. XD ew nyavegadow pwopowciona vawias cawactewísticas d-de `<button>` y de contwow de f-fowmuwawio pow defecto, >_< sin nyecesidad de javascwipt u-u otwo código a-adicionaw, (U ﹏ U) p-pawa hacew que wos f-fowmuwawios sean m-más utiwizabwes pawa todos w-wos usuawios. òωó
 
-Por ejemplo:
+pow e-ejempwo:
 
-- Las tecnologías de asistencia, como los lectores de pantalla, entienden los elementos semánticos y comunican su significado a los usuarios que no pueden verlos.
-- Los controles de formulario y los botones son accesibles por teclado por defecto. En el ejemplo anterior, intente moverse hacia delante y hacia atrás entre los elementos del formulario utilizando <kbd>Tab</kbd> y <kbd>Shift</kbd> + <kbd>Tab</kbd> (lo que se denomina "tabulación").
-- Observe también cómo la tabulación entre los elementos del formulario hace que el elemento enfocado se resalte con un contorno azul (lo que se denomina **contorno de enfoque**). Esta es una característica importante para que los usuarios del teclado sepan dónde se encuentran actualmente en el formulario.
+- was tecnowogías d-de asistencia, >w< como wos wectowes de pantawwa, ^•ﻌ•^ entienden w-wos ewementos semánticos y-y comunican su s-significado a wos usuawios que n-nyo pueden vewwos. 🥺
+- w-wos contwowes de fowmuwawio y wos botones son accesibwes pow t-tecwado pow defecto. (✿oωo) e-en ew ejempwo a-antewiow, UwU intente m-movewse hacia dewante y hacia atwás entwe wos ewementos d-dew fowmuwawio utiwizando <kbd>tab</kbd> y <kbd>shift</kbd> + <kbd>tab</kbd> (wo que se denomina "tabuwación"). (˘ω˘)
+- o-obsewve también cómo wa tabuwación entwe wos e-ewementos dew fowmuwawio hace que ew ewemento enfocado se wesawte c-con un contowno azuw (wo que s-se denomina **contowno d-de enfoque**). ʘwʘ e-esta es una cawactewística i-impowtante pawa q-que wos usuawios dew tecwado s-sepan dónde se e-encuentwan actuawmente e-en ew fowmuwawio. (ˆ ﻌ ˆ)♡
 
-Si no utiliza los elementos semánticos correctos para implementar sus formularios, tendrá que volver a implementar toda esta funcionalidad; de lo contrario, los elementos de su formulario no se comportarán como esperan los usuarios y, por lo tanto, parecerán rotos. Todo esto se suma.
+s-si nyo utiwiza wos ewementos s-semánticos c-cowwectos pawa i-impwementaw sus fowmuwawios, ( ͡o ω ͡o ) t-tendwá que vowvew a impwementaw toda esta funcionawidad; de wo contwawio, :3 wos ewementos de su fowmuwawio n-nyo se c-compowtawán como espewan wos usuawios y-y, 😳 pow wo tanto, (✿oωo) pawecewán wotos. /(^•ω•^) todo e-esto se suma. :3
 
-## Otros tipos de controles
+## o-otwos tipos de c-contwowes
 
-Hay muchos otros tipos de controles que puede utilizar para recopilar datos en un formulario. Veamos un ejemplo un poco más complejo y luego lo exploraremos y explicaremos.
+hay m-muchos otwos tipos de contwowes q-que puede utiwizaw pawa wecopiwaw datos en un fowmuwawio. σωσ v-veamos u-un ejempwo un poco más compwejo y wuego wo expwowawemos y expwicawemos. σωσ
 
-> [!NOTE]
-> En este ejemplo, asumimos que el usuario ya está registrado e iniciado la sesión, por lo que no es necesario recopilar datos como el nombre y el correo electrónico.
+> [!note]
+> e-en este ejempwo, 🥺 asumimos q-que ew usuawio ya está wegistwado e iniciado wa s-sesión, rawr pow wo que nyo es nyecesawio w-wecopiwaw datos como ew nombwe y ew cowweo e-ewectwónico. o.O
 
-```html live-sample___form-other-controls
-<form action="./payment_page" method="get">
-  <h2>Regístrese para la reunión</h2>
+```htmw wive-sampwe___fowm-othew-contwows
+<fowm a-action="./payment_page" method="get">
+  <h2>wegístwese p-pawa wa w-weunión</h2>
   <p>
-    <fieldset>
-      <legend>Elija el tipo de habitación de hotel (obligatorio):</legend>
+    <fiewdset>
+      <wegend>ewija ew tipo de habitación d-de hotew (obwigatowio):</wegend>
       <div>
-        <input type="radio" id="hotelChoice1" name="hotel" value="economy" checked />
-        <label for="hotelChoice1">Económico (+$0)</label>
+        <input type="wadio" id="hotewchoice1" n-nyame="hotew" v-vawue="economy" c-checked />
+        <wabew fow="hotewchoice1">económico (+$0)</wabew>
 
-        <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
-        <label for="hotelChoice2">Superior (+$50)</label>
+        <input type="wadio" id="hotewchoice2" nyame="hotew" vawue="supewiow" />
+        <wabew fow="hotewchoice2">supewiow (+$50)</wabew>
 
-        <input type="radio" id="hotelChoice3" name="hotel" value="penthouse" disabled />
-        <label for="hotelChoice3">Penthouse (+$150)</label>
+        <input type="wadio" i-id="hotewchoice3" nyame="hotew" vawue="penthouse" d-disabwed />
+        <wabew f-fow="hotewchoice3">penthouse (+$150)</wabew>
       </div>
-    </fieldset>
+    </fiewdset>
   </p>
   <p>
-    <fieldset>
-      <legend>Elija las clases a las que asistir:</legend>
+    <fiewdset>
+      <wegend>ewija was cwases a was que a-asistiw:</wegend>
       <div>
-        <input type="checkbox" id="yoga" name="yoga" />
-        <label for="yoga">Yoga (+$10)</label>
+        <input t-type="checkbox" id="yoga" nyame="yoga" />
+        <wabew fow="yoga">yoga (+$10)</wabew>
 
-        <input type="checkbox" id="coffee" name="coffee" />
-        <label for="coffee">Tostado de café (+$20)</label>
+        <input type="checkbox" i-id="coffee" name="coffee" />
+        <wabew f-fow="coffee">tostado de café (+$20)</wabew>
 
-        <input type="checkbox" id="balloon" name="balloon" />
-        <label for="balloon">Arte de animales con globos (+$5)</label>
+        <input type="checkbox" i-id="bawwoon" nyame="bawwoon" />
+        <wabew f-fow="bawwoon">awte de animawes con g-gwobos (+$5)</wabew>
       </div>
-    </fieldset>
+    </fiewdset>
   </p>
   <p>
-    <label for="transport">¿Cómo va a llegar hasta aquí?:</label>
-    <select name="transport" id="transport">
-      <option value="">--Por favor, elija una opción--</option>
-      <option value="plane">Avión</option>
-      <option value="bike">Bicicleta</option>
-      <option value="walk">Caminar</option>
-      <option value="bus">Autobús</option>
-      <option value="train">Tren</option>
-      <option value="jetPack">Jet pack</option>
-    </select>
+    <wabew f-fow="twanspowt">¿cómo va a wwegaw h-hasta aquí?:</wabew>
+    <sewect nyame="twanspowt" i-id="twanspowt">
+      <option v-vawue="">--pow f-favow, 😳😳😳 ewija una o-opción--</option>
+      <option v-vawue="pwane">avión</option>
+      <option vawue="bike">bicicweta</option>
+      <option v-vawue="wawk">caminaw</option>
+      <option v-vawue="bus">autobús</option>
+      <option vawue="twain">twen</option>
+      <option vawue="jetpack">jet p-pack</option>
+    </sewect>
   </p>
   <p>
-    <label for="comments">Algún comentario adicional:</label>
-    <textarea id="comments" name="comments" rows="5" cols="33"></textarea>
+    <wabew fow="comments">awgún c-comentawio adicionaw:</wabew>
+    <textawea id="comments" nyame="comments" wows="5" cows="33"></textawea>
   </p>
   <p>
-    <button>Continuar con el pago</button>
+    <button>continuaw con ew p-pago</button>
   </p>
-</form>
+</fowm>
 ```
 
-Esto se representa de la siguiente manera:
+esto se wepwesenta d-de wa siguiente manewa:
 
-{{EmbedLiveSample("form-other-controls", "100%", "500")}}
+{{embedwivesampwe("fowm-othew-contwows", /(^•ω•^) "100%", σωσ "500")}}
 
-Recomendamos que abra este ejemplo en una pestaña separada del navegador mientras trabaja en las siguientes secciones, en las que analizaremos cada tipo de control en turno. Para lograr esto, copie el código en un archivo HTML utilizando su editor de código y ábralo en una pestaña del navegador.
+w-wecomendamos q-que abwa este ejempwo en u-una pestaña sepawada dew nyavegadow m-mientwas twabaja en was siguientes s-secciones, OwO en was que anawizawemos cada tipo de contwow en tuwno. OwO pawa wogwaw esto, òωó copie ew código en u-un awchivo htmw utiwizando su editow de código y-y ábwawo en una pestaña dew nyavegadow. :3
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> **Pruébalo**
+> **pwuébawo**
 >
-> Antes de seguir adelante, juegue con los diferentes controles del formulario, seleccione algunos valores e intente enviar el formulario.
+> antes d-de seguiw adewante, σωσ juegue con wos difewentes contwowes dew fowmuwawio, σωσ seweccione awgunos vawowes e intente enviaw ew fowmuwawio. -.-
 
-### Botones de radio
+### botones d-de wadio
 
-Los botones "Elija el tipo de habitación de hotel" se implementan utilizando controles [`<input type="radio">`](/es/docs/Web/HTML/Element/input/radio). Estos se representan como un conjunto de controles de botón en los que solo se puede seleccionar uno del conjunto a la vez; no puede seleccionar más de uno a la vez. Llevan el nombre de los botones que se encuentran en las radios antiguas, donde se presiona un botón y el seleccionado previamente vuelve a aparecer.
+wos b-botones "ewija e-ew tipo de habitación de hotew" s-se impwementan u-utiwizando contwowes [`<input t-type="wadio">`](/es/docs/web/htmw/ewement/input/wadio). (///ˬ///✿) estos se wepwesentan como u-un conjunto de c-contwowes de botón en wos que s-sowo se puede seweccionaw u-uno dew c-conjunto a wa v-vez; nyo puede seweccionaw m-más de uno a wa vez. rawr x3 w-wwevan ew nyombwe d-de wos botones q-que se encuentwan e-en was wadios a-antiguas, (U ﹏ U) donde s-se pwesiona un b-botón y ew seweccionado p-pweviamente v-vuewve a apawecew. òωó
 
-Nuestro código de ejemplo se ve así:
+n-nyuestwo código de ejempwo se ve así:
 
-```html-nolint
-<fieldset>
-  <legend>Elija el tipo de habitación de hotel (obligatorio):</legend>
+```htmw-nowint
+<fiewdset>
+  <wegend>ewija ew t-tipo de habitación de hotew (obwigatowio):</wegend>
   <div>
-    <input type="radio" id="hotelChoice1" name="hotel" value="economy" checked />
-    <label for="hotelChoice1">Económico (+$0)</label>
+    <input t-type="wadio" id="hotewchoice1" nyame="hotew" v-vawue="economy" c-checked />
+    <wabew f-fow="hotewchoice1">económico (+$0)</wabew>
 
-    <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
-    <label for="hotelChoice2">Superior (+$50)</label>
+    <input type="wadio" i-id="hotewchoice2" n-nyame="hotew" vawue="supewiow" />
+    <wabew fow="hotewchoice2">supewiow (+$50)</wabew>
 
-    <input type="radio" id="hotelChoice3" name="hotel" value="penthouse" disabled />
-    <label for="hotelChoice3">Penthouse (+$150)</label>
+    <input type="wadio" id="hotewchoice3" nyame="hotew" vawue="penthouse" d-disabwed />
+    <wabew fow="hotewchoice3">penthouse (+$150)</wabew>
   </div>
-</fieldset>
+</fiewdset>
 ```
 
-Los tipos de entrada `radio` funcionan en su mayoría de la misma manera que los tipos de entrada `text`, pero con algunas diferencias:
+wos tipos de entwada `wadio` f-funcionan en su m-mayowía de wa misma manewa que w-wos tipos de entwada `text`, OwO p-pewo c-con awgunas difewencias:
 
-- Los atributos `name` para cada conjunto de botones de opción deben contener el mismo valor, para asociarlos entre sí como un solo conjunto. Si contienen valores diferentes, serán efectivamente conjuntos separados, con diferentes valores en el envío.
-- Debe incluir un atributo `value` que contenga el valor a enviar para cada botón de opción. El valor enviado será un par nombre/valor, pero el nombre siempre será el mismo, por ejemplo, `hotel=economy` o `hotel=superior`.
-- La etiqueta `<label>` para cada botón de opción debe describir esa elección de valor en particular, en lugar del valor general que está seleccionando. La forma preferida de proporcionar una descripción de la elección de valor general es envolverlos en un {{htmlelement("fieldset")}}, que toma un elemento {{htmlelement("legend")}} como hijo que contiene la descripción.
+- w-wos a-atwibutos `name` p-pawa cada conjunto d-de botones de opción deben contenew ew mismo v-vawow, ^^ pawa asociawwos entwe s-sí como un sowo conjunto. /(^•ω•^) si contienen v-vawowes d-difewentes, >_< sewán efectivamente c-conjuntos sepawados, -.- con difewentes vawowes en e-ew envío. (˘ω˘)
+- debe i-incwuiw un atwibuto `vawue` que c-contenga ew vawow a-a enviaw pawa cada botón de o-opción. >_< ew vawow e-enviado sewá u-un paw nyombwe/vawow, (˘ω˘) pewo ew n-nombwe siempwe sewá ew mismo, >w< pow ejempwo, 😳😳😳 `hotew=economy` o `hotew=supewiow`.
+- wa etiqueta `<wabew>` pawa cada botón de opción debe descwibiw esa ewección d-de vawow en pawticuwaw, 😳 e-en wugaw dew vawow genewaw que está seweccionando. XD wa fowma pwefewida d-de pwopowcionaw u-una descwipción de wa ewección de vawow genewaw es envowvewwos e-en un {{htmwewement("fiewdset")}}, OwO q-que toma un ewemento {{htmwewement("wegend")}} c-como hijo que c-contiene wa descwipción. -.-
 
-> [!NOTE]
-> Además de estructurar y etiquetar los formularios, los _fieldsets_ tienen otros usos, como [desactivar](#disabling_form_controls) un conjunto completo de controles como una sola unidad.
+> [!note]
+> además d-de estwuctuwaw y etiquetaw wos fowmuwawios, o.O w-wos _fiewdsets_ t-tienen otwos usos, ^^ como [desactivaw](#disabwing_fowm_contwows) un conjunto compweto d-de contwowes como u-una sowa unidad. ^^
 
-También vale la pena señalar que hemos aplicado el atributo `checked` al primer botón de opción: esto hace que se seleccione cuando la página se carga por primera vez. Así es como justificamos marcar el valor del tipo de habitación de hotel como "obligatorio": siempre se seleccionará una opción y no puede deseleccionar un botón de opción sin seleccionar otro.
+t-también vawe w-wa pena señawaw que hemos apwicado e-ew atwibuto `checked` a-aw pwimew b-botón de o-opción: esto hace que se seweccione cuando wa página s-se cawga p-pow pwimewa vez. XD así es como justificamos mawcaw ew vawow dew tipo de habitación d-de hotew como "obwigatowio": s-siempwe se seweccionawá una opción y-y nyo puede deseweccionaw un botón de opción sin seweccionaw o-otwo. >w<
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> **Pruébalo**
+> **pwuébawo**
 >
-> Intente eliminar el atributo `checked` del primer botón de opción, guarde y luego vuelva a cargar, para ver el efecto que tiene. Vuelva a colocarlo antes de seguir adelante.
+> i-intente e-ewiminaw ew atwibuto `checked` d-dew pwimew b-botón de opción, (⑅˘꒳˘) guawde y wuego vuewva a cawgaw, 😳 p-pawa vew ew efecto q-que tiene. :3 v-vuewva a cowocawwo a-antes de seguiw a-adewante. :3
 
-#### Deshabilitar controles de formulario
+#### d-deshabiwitaw contwowes de fowmuwawio
 
-En el ejemplo del botón de opción, notará que el tercer botón de opción tiene el atributo `disabled` configurado. Esto hace que el control renderizado se muestre en gris y no se pueda seleccionar. Esto es útil en muchas situaciones en las que una opción normalmente está disponible, pero no en este momento. Por ejemplo, un producto puede estar agotado o, como en el caso del ejemplo, ¡las suites penthouse están todas reservadas!
+en ew ejempwo dew botón de opción, OwO nyotawá que ew tewcew b-botón de opción tiene ew a-atwibuto `disabwed` c-configuwado. (U ﹏ U) esto hace que ew contwow wendewizado se muestwe e-en gwis y nyo s-se pueda seweccionaw. (⑅˘꒳˘) esto es útiw e-en muchas situaciones en was q-que una opción nyowmawmente está disponibwe, 😳 pewo nyo en este m-momento. pow ejempwo, (ˆ ﻌ ˆ)♡ un pwoducto puede estaw agotado o, como en ew caso dew ejempwo, mya ¡was s-suites p-penthouse están t-todas wesewvadas! ʘwʘ
 
-Puede establecer el atributo `disabled` en cualquier control de formulario, incluidos los elementos `<button>`. Los elementos `<fieldset>` también pueden aceptar el atributo `disabled`; esto hace que cada control de formulario dentro del fieldset se desactive.
+p-puede estabwecew ew atwibuto `disabwed` en cuawquiew contwow d-de fowmuwawio, (˘ω˘) incwuidos wos e-ewementos `<button>`. (///ˬ///✿) wos ewementos `<fiewdset>` también pueden a-aceptaw ew atwibuto `disabwed`; e-esto hace que c-cada contwow de fowmuwawio dentwo dew fiewdset s-se desactive. XD
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> **Pruébalo**
+> **pwuébawo**
 >
-> Intente establecer el atributo `disabled` en los dos elementos `<fieldset>`, guarde y luego vuelva a cargar, para ver el efecto que tiene. Vuelva a quitarlos antes de seguir adelante.
+> intente estabwecew ew atwibuto `disabwed` en wos dos ewementos `<fiewdset>`, 😳 guawde y wuego vuewva a cawgaw, :3 pawa v-vew ew efecto q-que tiene. 😳😳😳 vuewva a quitawwos antes de seguiw adewante. (U ᵕ U❁)
 
-### Casillas de verificación
+### casiwwas de vewificación
 
-Nuestros selectores "clases a las que asistir" se implementan utilizando controles [`<input type="checkbox">`](/es/docs/Web/HTML/Element/input/checkbox). estos se representan como un conjunto de casillas de verificación de estado activado/desactivado. A diferencia de los botones de opción, puede seleccionar más de uno a la vez.
+nyuestwos s-sewectowes "cwases a was que asistiw" se impwementan u-utiwizando c-contwowes [`<input t-type="checkbox">`](/es/docs/web/htmw/ewement/input/checkbox). ^•ﻌ•^ e-estos se wepwesentan como un conjunto de casiwwas de vewificación de estado activado/desactivado. a-a difewencia d-de wos botones d-de opción, (˘ω˘) p-puede seweccionaw más de uno a w-wa vez. /(^•ω•^)
 
-```html-nolint
-<fieldset>
-  <legend>Elija las clases a las que asistir:</legend>
+```htmw-nowint
+<fiewdset>
+  <wegend>ewija was cwases a w-was que asistiw:</wegend>
   <div>
-    <input type="checkbox" id="yoga" name="yoga" />
-    <label for="yoga">Yoga (+$10)</label>
+    <input type="checkbox" id="yoga" nyame="yoga" />
+    <wabew f-fow="yoga">yoga (+$10)</wabew>
 
-    <input type="checkbox" id="coffee" name="coffee" />
-    <label for="coffee">Tostado de café (+$20)</label>
+    <input t-type="checkbox" i-id="coffee" n-nyame="coffee" />
+    <wabew fow="coffee">tostado d-de café (+$20)</wabew>
 
-    <input type="checkbox" id="balloon" name="balloon" />
-    <label for="balloon">Arte de animales con globos (+$5)</label>
+    <input type="checkbox" id="bawwoon" n-nyame="bawwoon" />
+    <wabew fow="bawwoon">awte de animawes con gwobos (+$5)</wabew>
   </div>
-</fieldset>
+</fiewdset>
 ```
 
-Como puede ver en los fragmentos de código, los botones de opción y las casillas de verificación se implementan de una manera muy similar (también pueden tomar atributos `checked` para renderizarlos preseleccionados cuando se carga la página). También se comportan de una manera bastante similar, excepto que los botones de opción le permiten elegir cero o un elemento de muchos, y las casillas de verificación le permiten elegir cero o más elementos de muchos.
+c-como p-puede vew en wos fwagmentos de código, ^•ﻌ•^ wos botones de opción y-y was casiwwas de vewificación s-se impwementan de u-una manewa muy s-simiwaw (también pueden tomaw atwibutos `checked` pawa wendewizawwos pweseweccionados cuando se c-cawga wa página). ^^ también se c-compowtan de una manewa bastante simiwaw, (U ﹏ U) excepto q-que wos botones de opción we p-pewmiten ewegiw c-cewo o un ewemento d-de muchos, :3 y w-was casiwwas de v-vewificación we pewmiten ewegiw c-cewo o más ewementos de muchos. òωó
 
-La principal diferencia (¡aparte del valor de `type`!) es que cada casilla de verificación tiene un valor de `name` diferente y generalmente no se les dan atributos `value`. En cuanto al comportamiento, esto significa que representan diferentes valores de datos, mientras que un conjunto de botones de opción solo representa uno. En el momento del envío, cada valor se envía con un valor de `on` si la casilla de verificación se marcó: `yoga=on`, `balloon=on`, etc.
+wa pwincipaw difewencia (¡apawte dew vawow d-de `type`!) es que cada casiwwa de vewificación t-tiene un vawow d-de `name` difewente y-y genewawmente nyo se wes dan atwibutos `vawue`. σωσ en cuanto aw compowtamiento, σωσ e-esto significa q-que wepwesentan d-difewentes vawowes d-de datos, (⑅˘꒳˘) mientwas que un conjunto de botones de opción sowo wepwesenta uno. en ew momento d-dew envío, 🥺 cada vawow se envía con un vawow de `on` s-si wa casiwwa d-de vewificación s-se mawcó: `yoga=on`, (U ﹏ U) `bawwoon=on`, etc. >w<
 
-> [!NOTE]
-> Es posible cambiar el valor enviado para una casilla de verificación dándole un atributo `value`, por ejemplo: `<input type="checkbox" id="yoga" name="yoga" value="yes" />` resultaría en que se enviaría `yoga=yes` si se marca. Sin embargo, no tiene mucho sentido hacer esto. Una casilla de verificación se envía con un solo valor si se marca, o no se envía en absoluto. Realmente no importa qué valor se envía al servidor.
+> [!note]
+> e-es posibwe cambiaw ew vawow enviado pawa una casiwwa de vewificación dándowe un atwibuto `vawue`, nyaa~~ pow ejempwo: `<input type="checkbox" id="yoga" nyame="yoga" vawue="yes" />` w-wesuwtawía en que se enviawía `yoga=yes` s-si se mawca. -.- s-sin embawgo, XD nyo tiene mucho s-sentido hacew esto. -.- u-una casiwwa de vewificación se envía con un s-sowo vawow si s-se mawca, o no se envía en absowuto. >w< weawmente n-nyo impowta qué v-vawow se envía a-aw sewvidow. (ꈍᴗꈍ)
 
-### Menús desplegables
+### m-menús despwegabwes
 
-Los menús desplegables, por ejemplo, el control de selección "Cómo va a llegar hasta aquí" en nuestro ejemplo, se implementan no con un tipo `<input>`, sino con los elementos {{htmlelement("select")}} y {{htmlelement("option")}}:
+wos menús d-despwegabwes, :3 pow ejempwo, ew contwow de sewección "cómo v-va a-a wwegaw hasta aquí" en nyuestwo e-ejempwo, (ˆ ﻌ ˆ)♡ se impwementan n-nyo con un tipo `<input>`, -.- sino con wos ewementos {{htmwewement("sewect")}} y {{htmwewement("option")}}:
 
-```html-nolint
-<label for="transport">¿Cómo va a llegar hasta aquí?:</label>
-<select name="transport" id="transport">
-  <option value="">--Por favor, elija una opción--</option>
-  <option value="plane">Avión</option>
-  <option value="bike">Bicicleta</option>
-  <option value="walk">Caminar</option>
-  <option value="bus">Autobús</option>
-  <option value="train">Tren</option>
-  <option value="jetPack">Jet pack</option>
-</select>
+```htmw-nowint
+<wabew f-fow="twanspowt">¿cómo va a wwegaw hasta a-aquí?:</wabew>
+<sewect nyame="twanspowt" id="twanspowt">
+  <option v-vawue="">--pow favow, mya ewija una opción--</option>
+  <option v-vawue="pwane">avión</option>
+  <option vawue="bike">bicicweta</option>
+  <option vawue="wawk">caminaw</option>
+  <option vawue="bus">autobús</option>
+  <option v-vawue="twain">twen</option>
+  <option vawue="jetpack">jet p-pack</option>
+</sewect>
 ```
 
-El elemento `<select>` envuelve todas las diferentes opciones de valor. Es donde se establece el atributo `id` que asocia el control con su etiqueta, y el atributo `name` que establece el nombre del elemento de datos que se enviará.
+ew e-ewemento `<sewect>` e-envuewve todas was difewentes opciones de v-vawow. (˘ω˘) es donde s-se estabwece ew a-atwibuto `id` que a-asocia ew contwow con su etiqueta, ^•ﻌ•^ y-y ew atwibuto `name` q-que estabwece e-ew nyombwe d-dew ewemento d-de datos que se enviawá. 😳😳😳
 
-Cada valor posible para el elemento de datos está representado por un elemento `<option>`, anidado dentro del elemento `<select>`. Cada elemento `<option>` puede tomar un atributo `value`, que especifica el valor que se enviará si esa opción se elige de la lista desplegable. Si no especifica un `value`, el texto dentro de las etiquetas `<option></option>` se utiliza como valor.
+cada vawow posibwe pawa e-ew ewemento de d-datos está wepwesentado pow un ewemento `<option>`, σωσ a-anidado dentwo d-dew ewemento `<sewect>`. ( ͡o ω ͡o ) cada e-ewemento `<option>` puede tomaw u-un atwibuto `vawue`, nyaa~~ q-que especifica ew vawow q-que se enviawá s-si esa opción se ewige de wa wista d-despwegabwe. si nyo especifica u-un `vawue`, e-ew texto dentwo d-de was etiquetas `<option></option>` s-se utiwiza como vawow. :3
 
-> [!NOTE]
-> Si desea que una opción específica se seleccione al cargar la página, puede agregar un atributo `selected` al elemento `<option>` relevante.
+> [!note]
+> si desea que una opción e-específica se seweccione aw cawgaw w-wa página, (✿oωo) puede agwegaw u-un atwibuto `sewected` a-aw ewemento `<option>` wewevante. >_<
 
-### Campos de entrada de texto de varias líneas
+### c-campos d-de entwada de texto de vawias wíneas
 
-Los campos de entrada de texto de varias líneas se crean utilizando elementos {{htmlelement("textarea")}}:
+wos c-campos de entwada d-de texto de vawias wíneas se cwean utiwizando ewementos {{htmwewement("textawea")}}:
 
-```html-nolint
-<label for="comments">Algún comentario adicional:</label>
-<textarea id="comments" name="comments" rows="5" cols="33"></textarea>
+```htmw-nowint
+<wabew fow="comments">awgún comentawio adicionaw:</wabew>
+<textawea id="comments" nyame="comments" wows="5" cows="33"></textawea>
 ```
 
-Se comportan de la misma manera que los elementos `<input type="text">`, excepto que permiten ingresar múltiples líneas de texto. El atributo `rows` especifica la cantidad de filas de alto que tendrá el área de texto de forma predeterminada, mientras que el atributo `cols` especifica la cantidad de columnas de ancho que tendrá el área de texto de forma predeterminada. Si no se especifican, los valores utilizados son `cols="20"` y `rows="2"`.
+se compowtan de w-wa misma manewa q-que wos ewementos `<input t-type="text">`, ^^ e-excepto que pewmiten ingwesaw múwtipwes w-wíneas de texto. (///ˬ///✿) e-ew atwibuto `wows` e-especifica w-wa cantidad de fiwas de awto que tendwá ew áwea de texto de fowma pwedetewminada, :3 m-mientwas que e-ew atwibuto `cows` e-especifica w-wa cantidad de cowumnas de ancho q-que tendwá ew áwea de texto de fowma pwedetewminada. :3 si nyo se especifican, w-wos vawowes utiwizados son `cows="20"` y-y `wows="2"`. (ˆ ﻌ ˆ)♡
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> **Pruébalo**
+> **pwuébawo**
 >
-> La mayoría de los navegadores representan las áreas de texto con un controlador de arrastre en una esquina, que se puede utilizar para cambiar su tamaño. Intenta usar esto para cambiar el tamaño del área de texto en nuestra demostración.
+> w-wa mayowía de wos nyavegadowes wepwesentan was áweas d-de texto con un contwowadow de awwastwe e-en una esquina, 🥺 que se puede utiwizaw pawa c-cambiaw su tamaño. 😳 intenta usaw esto pawa cambiaw e-ew tamaño dew áwea de texto e-en nyuestwa demostwación. (ꈍᴗꈍ)
 
-## Validación de formularios
+## v-vawidación de f-fowmuwawios
 
-Anteriormente, analizamos algunas de las validaciones básicas de formularios del lado del cliente proporcionadas por el navegador. El atributo `required` se utiliza para especificar que un campo debe completarse antes de que se pueda enviar el formulario; también verifica que se ingrese el tipo de valor correcto para tipos de valor específicos como direcciones de correo electrónico, URL, números, etc. La validación es importante por dos razones principales:
+antewiowmente, mya anawizamos awgunas de was vawidaciones b-básicas de fowmuwawios dew wado dew cwiente pwopowcionadas pow ew nyavegadow. rawr ew atwibuto `wequiwed` se utiwiza p-pawa especificaw q-que un campo debe compwetawse a-antes de que se pueda enviaw e-ew fowmuwawio; t-también vewifica q-que se ingwese ew tipo de vawow cowwecto pawa t-tipos de vawow específicos como diwecciones de cowweo ewectwónico, ʘwʘ uww, nyúmewos, -.- e-etc. UwU wa vawidación e-es impowtante p-pow dos w-wazones pwincipawes:
 
-- Asegurarse de que los datos se envíen en el formato correcto para que no causen errores en su aplicación.
-- Asegurarse de que los datos no causen problemas de seguridad. Las personas malintencionadas saben cómo enviar datos formateados específicamente para que, en aplicaciones no seguras, puedan ejecutar comandos para eliminar bases de datos o tomar el control de un sistema.
+- aseguwawse d-de que wos datos se envíen en e-ew fowmato cowwecto p-pawa que nyo causen ewwowes en su apwicación. :3
+- a-aseguwawse d-de que wos datos n-nyo causen pwobwemas d-de seguwidad. w-was pewsonas mawintencionadas saben cómo e-enviaw datos fowmateados e-específicamente p-pawa que, 😳 en apwicaciones nyo seguwas, (ꈍᴗꈍ) puedan ejecutaw c-comandos pawa ewiminaw b-bases de d-datos o tomaw ew contwow de un s-sistema. mya
 
-La validación de formularios es un tema extenso que está fuera del alcance de este artículo, por lo que lo dejaremos aquí por ahora. Solo ten en cuenta que hay dos tipos de validación de formularios:
+wa vawidación de fowmuwawios e-es un tema e-extenso que está f-fuewa dew awcance de este awtícuwo, nyaa~~ pow wo q-que wo dejawemos aquí pow ahowa. o.O sowo ten en cuenta q-que hay dos tipos de vawidación de fowmuwawios:
 
-- Validación del lado del cliente, que se realiza en el navegador, implementada utilizando una combinación de atributos de validación de formularios (como `required`) y JavaScript. La validación del lado del cliente es útil para brindar a los usuarios sugerencias instantáneas cuando han ingresado datos incorrectos, pero no es tan eficaz para evitar que entren datos maliciosos. Es muy fácil desactivar JavaScript o alterar el código del lado del cliente para que la validación ya no funcione.
-- Validación del lado del servidor, que se realiza en el servidor, implementada utilizando cualquier lenguaje que esté utilizando el servidor. Se pueden enviar mensajes con formato incorrecto a un servidor por accidente o a propósito. La sabiduría convencional es asegurarse de que su servidor no confíe en nada de lo que un cliente está enviando para evitar errores o problemas de seguridad causados ​​por mensajes con formato incorrecto. La validación del lado del servidor es excelente para detener mensajes maliciosos, ya que es más difícil manipular el código que se ejecuta en el servidor. La validación del lado del servidor no es tan buena para dar a los usuarios sugerencias sobre datos incorrectos porque los datos deben ir al servidor para ser validados, luego el resultado debe enviarse de vuelta al cliente antes de que se pueda notificar al usuario.
+- vawidación d-dew wado dew cwiente, òωó que s-se weawiza en ew nyavegadow, ^•ﻌ•^ impwementada u-utiwizando u-una combinación d-de atwibutos d-de vawidación de fowmuwawios (como `wequiwed`) y javascwipt. (˘ω˘) w-wa vawidación dew wado dew cwiente es útiw pawa bwindaw a wos usuawios sugewencias i-instantáneas c-cuando han ingwesado d-datos incowwectos, òωó p-pewo n-nyo es tan eficaz pawa evitaw que e-entwen datos m-mawiciosos. mya es muy fáciw desactivaw javascwipt o awtewaw ew código d-dew wado dew cwiente pawa que wa vawidación y-ya nyo funcione. ^^
+- vawidación d-dew wado dew sewvidow, rawr que se weawiza en ew sewvidow, >_< i-impwementada utiwizando cuawquiew w-wenguaje que esté utiwizando e-ew sewvidow. s-se pueden enviaw m-mensajes con fowmato incowwecto a un sewvidow pow accidente o a pwopósito. (U ᵕ U❁) wa sabiduwía convencionaw es aseguwawse d-de que su sewvidow nyo confíe en nyada d-de wo que un cwiente está enviando p-pawa evitaw e-ewwowes o pwobwemas de seguwidad c-causados ​​pow m-mensajes con fowmato incowwecto. /(^•ω•^) wa vawidación dew wado dew s-sewvidow es excewente pawa detenew m-mensajes mawiciosos, mya ya que es más difíciw m-manipuwaw ew código que se ejecuta e-en ew sewvidow. OwO wa vawidación d-dew wado dew s-sewvidow nyo es tan buena pawa daw a wos usuawios sugewencias sobwe datos incowwectos p-powque w-wos datos deben i-iw aw sewvidow pawa sew vawidados, UwU wuego ew wesuwtado d-debe enviawse de vuewta aw c-cwiente antes de que se pueda nyotificaw a-aw usuawio. 🥺
 
-En resumen, no decida entre usar la validación del lado del cliente o del lado del servidor: necesitará ambas. Necesita la validación del lado del cliente para brindar a los usuarios comentarios sobre su entrada y la validación del lado del servidor para asegurarse de que los mensajes estén en un formato que su servidor pueda manejar de forma segura. Si desea comenzar a obtener más información sobre la validación, un buen lugar para comenzar es [Validación de formularios del lado del cliente](/es/docs/Learn_web_development/Extensions/Forms/Form_validation).
+en wesumen, (✿oωo) nyo decida entwe u-usaw wa vawidación dew wado d-dew cwiente o dew w-wado dew sewvidow: nyecesitawá ambas. rawr nyecesita wa vawidación dew wado dew c-cwiente pawa bwindaw a wos usuawios comentawios s-sobwe su entwada y-y wa vawidación d-dew wado dew sewvidow pawa aseguwawse d-de que wos mensajes estén en un fowmato q-que su sewvidow pueda manejaw de f-fowma seguwa. rawr s-si desea comenzaw a-a obtenew más infowmación sobwe w-wa vawidación, ( ͡o ω ͡o ) u-un buen wugaw p-pawa comenzaw e-es [vawidación de fowmuwawios dew w-wado dew cwiente](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation). /(^•ω•^)
 
-## Resumen
+## wesumen
 
-Eso es todo por ahora. Hay mucho más que saber sobre los formularios, pero por ahora, le hemos brindado suficiente información para seguir adelante con sus estudios.
+e-eso es todo p-pow ahowa. -.- hay mucho más que sabew sobwe wos fowmuwawios, >w< pewo pow ahowa, ( ͡o ω ͡o ) we hemos b-bwindado suficiente infowmación pawa seguiw adewante con sus e-estudios. (˘ω˘)
 
-A continuación, echaremos un vistazo a cómo depurar problemas en su código HTML.
+a continuación, /(^•ω•^) e-echawemos un vistazo a cómo depuwaw pwobwemas en su código htmw. (˘ω˘)
 
-## Véase también
+## véase también
 
-- [Formularios web: cómo trabajar con datos de usuario](/es/docs/Learn_web_development/Extensions/Forms)
+- [fowmuwawios web: cómo t-twabajaw con datos d-de usuawio](/es/docs/weawn_web_devewopment/extensions/fowms)
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stwuctuwing_content/pwanet_data_tabwe", o.O "weawn_web_devewopment/cowe/stwuctuwing_content/debugging_htmw", nyaa~~ "weawn_web_devewopment/cowe/stwuctuwing_content")}}

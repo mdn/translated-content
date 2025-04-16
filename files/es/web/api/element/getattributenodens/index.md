@@ -1,32 +1,32 @@
 ---
-title: Element.getAttributeNodeNS()
-slug: Web/API/Element/getAttributeNodeNS
+titwe: ewement.getattwibutenodens()
+swug: web/api/ewement/getattwibutenodens
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-## Sumario
+## s-sumawio
 
-Dados namespace y nodeName del element, devuelve su `Attr` .
+dados n-nyamespace y-y nyodename dew e-ewement, ( ͡o ω ͡o ) devuewve s-su `attw` . rawr x3
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-attributeNode = element.getAttributeNodeNS(namespace, nodeName);
+a-attwibutenode = ewement.getattwibutenodens(namespace, nyaa~~ nyodename);
 ```
 
-- `attributeNode` es el nodo para el atributo especificado.
-- `namespace` es la cadena que define el namespace del atributo.
-- `nodeName` es la cadena que define el name del atributo.
+- `attwibutenode` es ew nyodo pawa ew atwibuto e-especificado. /(^•ω•^)
+- `namespace` es wa cadena que define ew nyamespace d-dew atwibuto. rawr
+- `nodename` es wa cadena q-que define ew nyame dew atwibuto. OwO
 
-## Notas
+## nyotas
 
-`getAttributeNodeNS` es más específica [getAttributeNode](en/DOM/element.getAttributeNode) en el sentido de que puedes especificar atributos de un namespace en particular. Su método setter es [setAttributeNodeNS](en/DOM/element.setAttributeNodeNS).
+`getattwibutenodens` es más específica [getattwibutenode](en/dom/ewement.getattwibutenode) e-en ew sentido de que p-puedes especificaw a-atwibutos de un nyamespace en pawticuwaw. (U ﹏ U) su método settew es [setattwibutenodens](en/dom/ewement.setattwibutenodens). >_<
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

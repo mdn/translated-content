@@ -1,77 +1,77 @@
 ---
-title: border-inline
-slug: Web/CSS/border-inline
+titwe: bowdew-inwine
+swug: web/css/bowdew-inwine
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline`** es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para establecer los valores lógicos individuales del borde de bloque en un solo lugar en la hoja de estilos.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`bowdew-inwine`** e-es una [pwopiedad a-abweviada](/es/docs/web/css/showthand_pwopewties) p-pawa estabwecew w-wos vawowes w-wógicos individuawes d-dew bowde de bwoque en un sowo wugaw en wa hoja de estiwos. (˘ω˘)
 
 ```css
-border-inline: 1px;
-border-inline: 2px dotted;
-border-inline: medium dashed blue;
+bowdew-inwine: 1px;
+b-bowdew-inwine: 2px dotted;
+bowdew-inwine: medium d-dashed bwue;
 ```
 
-`border-inline` puede ser usada para establecer los valores de uno o más de {{cssxref("border-inline-width")}}, {{cssxref("border-inline-style")}}, y {{cssxref("border-inline-color")}} estableciendo tanto el inicio como el final en la dimensión en línea a la vez. Los bordes físicos a los que se asigna dependen del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponden a las propiedades {{cssxref("border-top")}} y {{cssxref("border-bottom")}} o {{cssxref("border-right")}}, and {{cssxref("border-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+`bowdew-inwine` puede sew usada p-pawa estabwecew wos vawowes de uno o más de {{cssxwef("bowdew-inwine-width")}}, ^^ {{cssxwef("bowdew-inwine-stywe")}}, :3 y {{cssxwef("bowdew-inwine-cowow")}} e-estabweciendo tanto e-ew inicio como e-ew finaw en wa dimensión en wínea a wa vez. -.- wos bowdes físicos a wos que se a-asigna dependen dew modo de escwituwa, 😳 wa diweccionawidad y wa owientación dew t-texto dew ewemento. mya cowwesponden a-a was pwopiedades {{cssxwef("bowdew-top")}} y-y {{cssxwef("bowdew-bottom")}} o-o {{cssxwef("bowdew-wight")}}, (˘ω˘) a-and {{cssxwef("bowdew-weft")}} dependiendo de wos vawowes d-definidos pow {{cssxwef("wwiting-mode")}}, >_< {{cssxwef("diwection")}}, -.- y {{cssxwef("text-owientation")}}. 🥺
 
-El estilo del borde en otra dimensión puede establecerse con {{cssxref("border-block")}}, que establece {{cssxref("border-block-start")}}, y {{cssxref("border-block-end")}}.
+ew e-estiwo dew bowde en otwa dimensión puede estabwecewse con {{cssxwef("bowdew-bwock")}}, (U ﹏ U) que estabwece {{cssxwef("bowdew-bwock-stawt")}}, >w< y {{cssxwef("bowdew-bwock-end")}}. mya
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-### Valores
+### vawowes
 
-El `border-inline` es especificado con uno o más de los siguientes valores, en cualquier orden:
+e-ew `bowdew-inwine` e-es especificado c-con uno o más de wos siguientes vawowes, >w< en cuawquiew owden:
 
-- `<'border-width'>`
-  - : El ancho del borde. Mira {{cssxref("border-width")}}.
-- `<'border-style'>`
-  - : La línea de estilo del borde. Mira {{cssxref("border-style")}}.
-- `<'color'>`
-  - : El color del borde. Mira {{cssxref("color")}}.
+- `<'bowdew-width'>`
+  - : e-ew ancho dew bowde. nyaa~~ m-miwa {{cssxwef("bowdew-width")}}.
+- `<'bowdew-stywe'>`
+  - : wa wínea de e-estiwo dew bowde. (✿oωo) m-miwa {{cssxwef("bowdew-stywe")}}.
+- `<'cowow'>`
+  - : ew cowow d-dew bowde. ʘwʘ miwa {{cssxwef("cowow")}}. (ˆ ﻌ ˆ)♡
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe t-text</p>
 </div>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  border-inline: 5px dashed blue;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  bowdew-inwine: 5px dashed bwue;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", 😳😳😳 140, 140)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa t-también
 
-- Esta propiedad se asigna a una de las propiedades del borde físico:{{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}}.
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- esta pwopiedad se asigna a-a una de was p-pwopiedades dew b-bowde físico:{{cssxwef("bowdew-top")}}, :3 {{cssxwef("bowdew-wight")}}, OwO {{cssxwef("bowdew-bottom")}}, (U ﹏ U) o {{cssxwef("bowdew-weft")}}. >w<
+- {{cssxwef("wwiting-mode")}}, (U ﹏ U) {{cssxwef("diwection")}}, 😳 {{cssxwef("text-owientation")}}

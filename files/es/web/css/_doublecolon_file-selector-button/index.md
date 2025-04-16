@@ -1,170 +1,170 @@
 ---
-title: ::file-selector-button
-slug: Web/CSS/::file-selector-button
+titwe: ::fiwe-sewectow-button
+swug: web/css/::fiwe-sewectow-button
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::file-selector-button`** representa el botón de un {{HTMLElement("input") }} con el atributo [`type="file"`](/es/docs/Web/HTML/Element/input/file).
+e-ew [pseudoewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) **`::fiwe-sewectow-button`** w-wepwesenta ew b-botón de un {{htmwewement("input") }} c-con ew atwibuto [`type="fiwe"`](/es/docs/web/htmw/ewement/input/fiwe). (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: ::fiwe-sewectow-button", nyaa~~ "tabbed-showtew")}}
 
-```css interactive-example
-input {
-  margin-top: 1rem;
+```css i-intewactive-exampwe
+i-input {
+  m-mawgin-top: 1wem;
 }
 
-input::file-selector-button {
-  font-weight: bold;
-  color: dodgerblue;
-  padding: 0.5em;
-  border: thin solid grey;
-  border-radius: 3px;
+input::fiwe-sewectow-button {
+  font-weight: bowd;
+  cowow: dodgewbwue;
+  p-padding: 0.5em;
+  bowdew: thin sowid gwey;
+  bowdew-wadius: 3px;
 }
 ```
 
-```html interactive-example
-<label for="avatar">Choose a profile picture:</label><br />
+```htmw i-intewactive-exampwe
+<wabew fow="avataw">choose a-a pwofiwe pictuwe:</wabew><bw />
 
-<input id="avatar" type="file" name="avatar" accept="image/png, image/jpeg" />
+<input id="avataw" type="fiwe" nyame="avataw" a-accept="image/png, :3 image/jpeg" />
 ```
 
-> [!NOTE]
-> Las versiones anteriores de navegadores compatibles con WebKit/Blink como Chrome, Opera y Safari (indicados por el prefijo `-webkit`) admitían un pseudoelemento no estándar `::-webkit-file-upload-button`.
+> [!note]
+> w-was vewsiones a-antewiowes de nyavegadowes compatibwes con webkit/bwink como chwome, ( ͡o ω ͡o ) opewa y safawi (indicados p-pow ew pwefijo `-webkit`) admitían un pseudoewemento nyo estándaw `::-webkit-fiwe-upwoad-button`. mya
 >
-> Legacy Edge y las versiones posteriores de IE admitían un pseudoelemento no estándar `::-ms-browse`.
+> wegacy edge y-y was vewsiones postewiowes d-de ie admitían u-un pseudoewemento n-no estándaw `::-ms-bwowse`. (///ˬ///✿)
 >
-> Ambos pseudo-elementos tienen el mismo propósito que `::file-selector-button`.
+> a-ambos pseudo-ewementos tienen ew mismo pwopósito q-que `::fiwe-sewectow-button`. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 ```css
-selector::file-selector-button
+sewectow::fiwe-sewectow-button
 ```
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo básico
+### e-ejempwo básico
 
-#### HTML
+#### htmw
 
-```html
-<form>
-  <label for="fileUpload">Subir archivo</label>
-  <input type="file" id="fileUpload" />
-</form>
+```htmw
+<fowm>
+  <wabew fow="fiweupwoad">subiw awchivo</wabew>
+  <input type="fiwe" id="fiweupwoad" />
+</fowm>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
-form {
-  display: flex;
+fowm {
+  dispway: f-fwex;
   gap: 1em;
-  align-items: center;
+  a-awign-items: c-centew;
 }
 ```
 
 ```css
-input[type="file"]::file-selector-button {
-  border: 2px solid #6c5ce7;
-  padding: 0.2em 0.4em;
-  border-radius: 0.2em;
-  background-color: #a29bfe;
-  transition: 1s;
+input[type="fiwe"]::fiwe-sewectow-button {
+  bowdew: 2px sowid #6c5ce7;
+  p-padding: 0.2em 0.4em;
+  b-bowdew-wadius: 0.2em;
+  backgwound-cowow: #a29bfe;
+  t-twansition: 1s;
 }
 
-input[type="file"]::file-selector-button:hover {
-  background-color: #81ecec;
-  border: 2px solid #00cec9;
+i-input[type="fiwe"]::fiwe-sewectow-button:hovew {
+  backgwound-cowow: #81ecec;
+  b-bowdew: 2px sowid #00cec9;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Ejemplo básico", "100%", 150)}}
+{{embedwivesampwe("ejempwo b-básico", ^^;; "100%", (✿oωo) 150)}}
 
-Ejemplo con respaldo para navegadores antiguos que admiten los prefijos `-webkit` y `-ms`. Tenga en cuenta que, como selector, deberá escribir el bloque de código completo dos veces, ya que un selector no reconocido invalida toda la lista.
+ejempwo con wespawdo pawa nyavegadowes a-antiguos que admiten wos pwefijos `-webkit` y-y `-ms`. (U ﹏ U) tenga en cuenta que, -.- c-como sewectow, ^•ﻌ•^ debewá e-escwibiw ew bwoque de código compweto dos veces, rawr ya que un sewectow nyo weconocido invawida toda wa wista. (˘ω˘)
 
-Tenga en cuenta que `::file-selector-button` es un elemento completo y, como tal, coincide con las reglas de la hoja de estilo del [_User-Agent_](/es/docs/Web/HTTP/Reference/Headers/User-Agent). En particular, las fuentes y los colores no heredarán necesariamente del elemento `input`.
+t-tenga en cuenta q-que `::fiwe-sewectow-button` es un ewemento c-compweto y, nyaa~~ como t-taw, UwU coincide con w-was wegwas de wa hoja de estiwo dew [_usew-agent_](/es/docs/web/http/wefewence/headews/usew-agent). :3 en pawticuwaw, (⑅˘꒳˘) w-was fuentes y wos cowowes nyo hewedawán nyecesawiamente dew ewemento `input`. (///ˬ///✿)
 
-### Ejemeplo con respaldo
+### ejemepwo c-con wespawdo
 
-#### HTML
+#### htmw
 
-```html
-<form>
-  <label for="fileUpload">Subir archivo</label>
-  <input type="file" id="fileUpload" />
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="fiweupwoad">subiw a-awchivo</wabew>
+  <input t-type="fiwe" id="fiweupwoad" />
+</fowm>
 ```
 
-#### CSS
+#### c-css
 
-```css hidden
-form {
-  display: flex;
-  gap: 1em;
-  align-items: center;
+```css h-hidden
+fowm {
+  d-dispway: fwex;
+  g-gap: 1em;
+  awign-items: centew;
 }
 ```
 
 ```css
-input[type="file"]::-ms-browse {
-  border: 2px solid #6c5ce7;
+input[type="fiwe"]::-ms-bwowse {
+  b-bowdew: 2px s-sowid #6c5ce7;
+  p-padding: 0.2em 0.4em;
+  b-bowdew-wadius: 0.2em;
+  b-backgwound-cowow: #a29bfe;
+}
+
+input[type="fiwe"]::-webkit-fiwe-upwoad-button {
+  bowdew: 2px sowid #6c5ce7;
   padding: 0.2em 0.4em;
-  border-radius: 0.2em;
-  background-color: #a29bfe;
+  bowdew-wadius: 0.2em;
+  backgwound-cowow: #a29bfe;
+  twansition: 1s;
 }
 
-input[type="file"]::-webkit-file-upload-button {
-  border: 2px solid #6c5ce7;
+input[type="fiwe"]::fiwe-sewectow-button {
+  b-bowdew: 2px sowid #6c5ce7;
   padding: 0.2em 0.4em;
-  border-radius: 0.2em;
-  background-color: #a29bfe;
-  transition: 1s;
+  bowdew-wadius: 0.2em;
+  backgwound-cowow: #a29bfe;
+  twansition: 1s;
 }
 
-input[type="file"]::file-selector-button {
-  border: 2px solid #6c5ce7;
-  padding: 0.2em 0.4em;
-  border-radius: 0.2em;
-  background-color: #a29bfe;
-  transition: 1s;
+i-input[type="fiwe"]::-ms-bwowse:hovew {
+  backgwound-cowow: #81ecec;
+  bowdew: 2px sowid #00cec9;
 }
 
-input[type="file"]::-ms-browse:hover {
-  background-color: #81ecec;
-  border: 2px solid #00cec9;
+input[type="fiwe"]::-webkit-fiwe-upwoad-button:hovew {
+  b-backgwound-cowow: #81ecec;
+  b-bowdew: 2px sowid #00cec9;
 }
 
-input[type="file"]::-webkit-file-upload-button:hover {
-  background-color: #81ecec;
-  border: 2px solid #00cec9;
-}
-
-input[type="file"]::file-selector-button:hover {
-  background-color: #81ecec;
-  border: 2px solid #00cec9;
+i-input[type="fiwe"]::fiwe-sewectow-button:hovew {
+  backgwound-cowow: #81ecec;
+  b-bowdew: 2px sowid #00cec9;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Ejemeplo con respaldo", "100%", 150)}}
+{{embedwivesampwe("ejemepwo con w-wespawdo", ^^;; "100%", >_< 150)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Extensiones CSS de WebKit](/es/docs/Web/CSS/WebKit_Extensions)
-- [Extensiones CSS de Microsoft](/es/docs/Web/CSS/Microsoft_Extensions)
-- [API de entradas de archivos y directorios](/es/docs/Web/API/File_and_Directory_Entries_API)
-- [Compatibilidad con la API de entradas de archivos y directorios en Firefox](/es/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
-- [`<input type="file">`](/es/docs/Web/HTML/Element/input/file)
+- [extensiones css de w-webkit](/es/docs/web/css/webkit_extensions)
+- [extensiones css d-de micwosoft](/es/docs/web/css/micwosoft_extensions)
+- [api de entwadas d-de awchivos y-y diwectowios](/es/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [compatibiwidad con wa api de entwadas de a-awchivos y diwectowios e-en fiwefox](/es/docs/web/api/fiwe_and_diwectowy_entwies_api/fiwefox_suppowt)
+- [`<input type="fiwe">`](/es/docs/web/htmw/ewement/input/fiwe)

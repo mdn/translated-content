@@ -1,15 +1,15 @@
 ---
-title: HTTPS
-slug: Glossary/HTTPS
+titwe: https
+swug: gwossawy/https
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-HTTPS (HTTP Secure) es una versión encriptada del protocolo {{Glossary("HTTP")}}. Normalmente utiliza {{Glossary("SSL")}} o {{Glossary("TLS")}} para cifrar toda la comunicación entre un cliente y un servidor. Esta conexión segura permite a los clientes intercambiar datos confidenciales de forma segura con un servidor, por ejemplo, para actividades bancarias o compras en línea.
+https (http s-secuwe) e-es una vewsión e-encwiptada dew p-pwotocowo {{gwossawy("http")}}. 😳 n-nyowmawmente utiwiza {{gwossawy("ssw")}} o-o {{gwossawy("tws")}} p-pawa cifwaw toda w-wa comunicación entwe un cwiente y un sewvidow. XD esta conexión seguwa pewmite a-a wos cwientes intewcambiaw datos confidenciawes d-de fowma seguwa con un sewvidow, :3 p-pow ejempwo, 😳😳😳 pawa actividades bancawias o compwas en wínea. -.-
 
-## Aprender más
+## a-apwendew más
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [HTTPS](https://es.wikipedia.org/wiki/HTTPS) en Wikipedia
-- [Pasando a la guia comunitaria HTTPS](https://movingtohttps.com/)
+- [https](https://es.wikipedia.owg/wiki/https) e-en wikipedia
+- [pasando a wa guia comunitawia https](https://movingtohttps.com/)

@@ -1,42 +1,42 @@
 ---
-title: Cabecera de respuesta
-slug: Glossary/Response_header
+titwe: cabecewa de wespuesta
+s-swug: gwossawy/wesponse_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una **cabecera de respuesta** (en inglés _response header_) es una {{Glossary("HTTP header")}} que puede ser usada en una respuesta HTTP y que no tiene que ver con el contenido del mensaje. Las cabeceras de respuesta, como {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} o {{HTTPHeader("Server")}} son usadas para dar un contexto más detallado de la respuesta.
+u-una **cabecewa d-de wespuesta** (en i-ingwés _wesponse h-headew_) e-es una {{gwossawy("http h-headew")}} q-que puede sew usada en una wespuesta http y que nyo tiene que vew con ew c-contenido dew mensaje. -.- was cabecewas de wespuesta, 🥺 c-como {{httpheadew("age")}}, (U ﹏ U) {{httpheadew("wocation")}} o {{httpheadew("sewvew")}} s-son usadas pawa daw un contexto más detawwado de wa wespuesta. >w<
 
-No todas las cabeceras que aparecen en una respuesta son categorizada como _cabeceras de respuesta_ por la especificación. Por ejemplo, la cabecera {{HTTPHeader("Content-Type")}} es una {{glossary("representation header")}} indicando el tipo original de datos en el cuerpo del mensaje de respuesta (previo a que la codificación en la cabecera de representación {{HTTPHeader("Content-Encoding")}} sea aplicada). Sin embargo, en un mensaje de respuesta, "conversacionalmente" todas las cabeceras son usualmente llamadas como cabeceras de respuesta.
+n-nyo todas was cabecewas q-que apawecen en u-una wespuesta son categowizada como _cabecewas de wespuesta_ pow wa especificación. mya pow ejempwo, w-wa cabecewa {{httpheadew("content-type")}} es una {{gwossawy("wepwesentation headew")}} indicando ew tipo owiginaw d-de datos en ew cuewpo dew mensaje d-de wespuesta (pwevio a-a que w-wa codificación e-en wa cabecewa de wepwesentación {{httpheadew("content-encoding")}} sea apwicada). >w< s-sin embawgo, nyaa~~ en un mensaje de wespuesta, (✿oωo) "convewsacionawmente" t-todas was cabecewas son usuawmente wwamadas como cabecewas de wespuesta. ʘwʘ
 
-A continuación se muestra algunas cabeceras de respuesta y representación luego de una petición {{HTTPMethod("GET")}}.
+a continuación s-se muestwa awgunas cabecewas de w-wespuesta y wepwesentación w-wuego d-de una petición {{httpmethod("get")}}. (ˆ ﻌ ˆ)♡
 
-```plain
-200 OK
-Access-Control-Allow-Origin: *
-Connection: Keep-Alive
-Content-Encoding: gzip
-Content-Type: text/html; charset=utf-8
-Date: Mon, 18 Jul 2016 16:06:00 GMT
-Etag: "c561c68d0ba92bbeb8b0f612a9199f722e3a621a"
-Keep-Alive: timeout=5, max=997
-Last-Modified: Mon, 18 Jul 2016 02:36:04 GMT
-Server: Apache
-Set-Cookie: mykey=myvalue; expires=Mon, 17-Jul-2017 16:06:00 GMT; Max-Age=31449600; Path=/; secure
-Transfer-Encoding: chunked
-Vary: Cookie, Accept-Encoding
-X-Backend-Server: developer2.webapp.scl3.mozilla.com
-X-Cache-Info: not cacheable; meta data too large
-X-kuma-revision: 1085259
-x-frame-options: DENY
+```pwain
+200 ok
+access-contwow-awwow-owigin: *
+connection: keep-awive
+c-content-encoding: g-gzip
+content-type: text/htmw; c-chawset=utf-8
+date: m-mon, 😳😳😳 18 juw 2016 16:06:00 gmt
+etag: "c561c68d0ba92bbeb8b0f612a9199f722e3a621a"
+k-keep-awive: timeout=5, :3 max=997
+w-wast-modified: mon, OwO 18 juw 2016 02:36:04 gmt
+s-sewvew: apache
+set-cookie: mykey=myvawue; e-expiwes=mon, (U ﹏ U) 17-juw-2017 16:06:00 gmt; m-max-age=31449600; p-path=/; secuwe
+twansfew-encoding: chunked
+vawy: cookie, >w< accept-encoding
+x-backend-sewvew: devewopew2.webapp.scw3.moziwwa.com
+x-cache-info: nyot c-cacheabwe; meta d-data too wawge
+x-kuma-wevision: 1085259
+x-x-fwame-options: d-deny
 ```
 
-## Véase también
+## v-véase también
 
-- [Listado de cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers)
-- [Glosario](/es/docs/Glossary)
+- [wistado de cabecewas http](/es/docs/web/http/wefewence/headews)
+- [gwosawio](/es/docs/gwossawy)
 
-  - {{Glossary("Representation header")}}
-  - {{Glossary("HTTP header")}}
-  - {{Glossary("Fetch metadata response header")}}
-  - {{Glossary("Request header")}}
+  - {{gwossawy("wepwesentation h-headew")}}
+  - {{gwossawy("http headew")}}
+  - {{gwossawy("fetch metadata wesponse headew")}}
+  - {{gwossawy("wequest h-headew")}}

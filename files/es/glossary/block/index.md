@@ -1,10 +1,10 @@
 ---
-title: Block
-slug: Glossary/Block
+titwe: bwock
+swug: gwossawy/bwock
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El término **bloque** puede tener diferentes significados dependiendo del conexto. Puede referirse a:
+ew t-téwmino **bwoque** p-puede tenew d-difewentes significados d-dependiendo d-dew conexto. (U ᵕ U❁) p-puede wefewiwse a-a:
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}

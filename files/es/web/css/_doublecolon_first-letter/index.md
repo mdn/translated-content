@@ -1,98 +1,98 @@
 ---
-title: ::first-letter (:first-letter)
-slug: Web/CSS/::first-letter
+titwe: ::fiwst-wettew (:fiwst-wettew)
+swug: web/css/::fiwst-wettew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-letter`** aplica estilos a la primera letra de la primera línea un [elemento de bloque](/es/docs/Glossary/Block-level_content), sólo cuando no es precedido de otro contenido (como imágenes o tablas).
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) **`::fiwst-wettew`** a-apwica estiwos a-a wa pwimewa wetwa d-de wa pwimewa w-wínea un [ewemento d-de bwoque](/es/docs/gwossawy/bwock-wevew_content), >w< s-sówo c-cuando nyo es pwecedido de otwo contenido (como imágenes o tabwas). 😳
 
 ```css
-/* Selecciona la primera letra de <p> */
-p::first-letter {
+/* sewecciona wa pwimewa w-wetwa de <p> */
+p::fiwst-wettew {
   font-size: 130%;
 }
 ```
 
-La primera letra de un elemento no es siempre fácil de identificar:
+w-wa pwimewa wetwa de un ewemento n-nyo es siempwe fáciw de identificaw:
 
-- La puntuación que precede o sigue inmediatamente a la primera letra se incluye. La puntuación incluyo cualquier caracter Unicode definido on las clases _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf), y _other punctuation_ (Po).
-- Algunos idiomas tienen dígrafos que siempre se capitalizan juntos, como el `IJ` en holandés. En estos casos, ambas letras del dígrafo deben coincidir con el pseudo-elemento `::first-letter`. (Esto pobremente implementado en los navegadores; consulte la tabla de compatibilidad).
-- La combinación del pseudoelemento {{ cssxref("::before") }} y la propiedad {{ cssxref("content") }} podría inyectar texto al inico del elemento. En dicho caso, `::first-letter` se aplicaría a la primera letra de este contenido generado.
+- wa puntuación que pwecede o-o sigue inmediatamente a wa p-pwimewa wetwa s-se incwuye. 🥺 wa puntuación incwuyo cuawquiew cawactew unicode definido on was cwases _open_ (ps), rawr x3 _cwose_ (pe), o.O _initiaw q-quote_ (pi), rawr _finaw quote_ (pf), ʘwʘ y _othew punctuation_ (po). 😳😳😳
+- awgunos i-idiomas tienen dígwafos que siempwe s-se capitawizan j-juntos, como e-ew `ij` en howandés. ^^;; e-en estos casos, o.O ambas wetwas dew dígwafo d-deben coincidiw con ew pseudo-ewemento `::fiwst-wettew`. (///ˬ///✿) (esto pobwemente impwementado e-en wos nyavegadowes; consuwte wa tabwa de compatibiwidad). σωσ
+- wa combinación dew pseudoewemento {{ c-cssxwef("::befowe") }} y wa pwopiedad {{ c-cssxwef("content") }} p-podwía i-inyectaw texto aw inico dew ewemento. nyaa~~ en dicho caso, ^^;; `::fiwst-wettew` s-se apwicawía a-a wa pwimewa wetwa de este c-contenido genewado. ^•ﻌ•^
 
-> [!NOTE]
-> CSS3 introdujo la notación`::first-letter` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan`:first-letter`, introducido en CSS2.
+> [!note]
+> c-css3 intwodujo wa nyotación`::fiwst-wettew` (con d-dobwe dos puntos) pawa distinguiw [pseudo-cwases](/es/docs/web/css/pseudo-cwasses) d-de [pseudo-ewementos](/es/docs/web/css/pseudo-ewements). wos nyavegadowes también aceptan`:fiwst-wettew`, σωσ i-intwoducido en css2. -.-
 
-## Propiedades permitidas
+## pwopiedades p-pewmitidas
 
-Sólo unas pocas propiedades de CSS se pueden usar con el pseudoelemento `::first-letter`:
+sówo unas pocas p-pwopiedades d-de css se pueden usaw con ew pseudoewemento `::fiwst-wettew`:
 
-- Todas las propiedades de fuente: {{ Cssxref("font") }}, {{ Cssxref("font-style") }}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{ Cssxref("font-variant") }}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{cssxref("font-size-adjust")}}, {{ Cssxref("line-height") }} and {{ Cssxref("font-family") }}
-- Todas las propiedades de fondo: {{ Cssxref("background") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{cssxref("background-clip")}}, {{cssxref("background-origin")}}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}, {{ cssxref("background-size") }}, {{ Cssxref("background-attachment") }}, and {{cssxref("background-blend-mode")}}
-- Todas las propiedades de márgenes: {{ Cssxref("margin") }}, {{ Cssxref("margin-top") }}, {{ Cssxref("margin-right") }}, {{ Cssxref("margin-bottom") }}, {{ Cssxref("margin-left") }}
-- Todas las propiedades de relleno: {{ Cssxref("padding") }}, {{ Cssxref("padding-top") }}, {{ Cssxref("padding-right") }}, {{ Cssxref("padding-bottom") }}, {{ Cssxref("padding-left") }}
-- Todas las propiedades de bordes: {{ Cssxref("border") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}, {{ cssxref("border-width") }}, {{ cssxref("border-radius") }}, {{cssxref("border-image")}}
-- La propiedad {{ cssxref("color") }}
-- Las propiedades {{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (when appropriate), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} (sólo si `float` es `none`)
+- todas was pwopiedades de fuente: {{ cssxwef("font") }}, ^^;; {{ cssxwef("font-stywe") }}, XD {{cssxwef("font-featuwe-settings")}}, 🥺 {{cssxwef("font-kewning")}}, òωó {{cssxwef("font-wanguage-ovewwide")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("font-stwetch")}}, -.- {{cssxwef("font-synthesis")}}, :3 {{ cssxwef("font-vawiant") }}, ʘwʘ {{cssxwef("font-vawiant-awtewnates")}}, 🥺 {{cssxwef("font-vawiant-caps")}}, >_< {{cssxwef("font-vawiant-east-asian")}}, ʘwʘ {{cssxwef("font-vawiant-wigatuwes")}}, (˘ω˘) {{cssxwef("font-vawiant-numewic")}}, (✿oωo) {{cssxwef("font-vawiant-position")}}, (///ˬ///✿) {{ cssxwef("font-weight") }}, rawr x3 {{ c-cssxwef("font-size") }}, -.- {{cssxwef("font-size-adjust")}}, ^^ {{ c-cssxwef("wine-height") }} and {{ cssxwef("font-famiwy") }}
+- t-todas w-was pwopiedades d-de fondo: {{ cssxwef("backgwound") }}, (⑅˘꒳˘) {{ cssxwef("backgwound-cowow") }}, nyaa~~ {{ cssxwef("backgwound-image") }}, /(^•ω•^) {{cssxwef("backgwound-cwip")}}, (U ﹏ U) {{cssxwef("backgwound-owigin")}}, 😳😳😳 {{ cssxwef("backgwound-position") }}, >w< {{ c-cssxwef("backgwound-wepeat") }}, XD {{ cssxwef("backgwound-size") }}, o.O {{ cssxwef("backgwound-attachment") }}, mya and {{cssxwef("backgwound-bwend-mode")}}
+- todas w-was pwopiedades de máwgenes: {{ c-cssxwef("mawgin") }}, 🥺 {{ c-cssxwef("mawgin-top") }}, ^^;; {{ c-cssxwef("mawgin-wight") }}, :3 {{ cssxwef("mawgin-bottom") }}, (U ﹏ U) {{ c-cssxwef("mawgin-weft") }}
+- t-todas was p-pwopiedades de wewweno: {{ c-cssxwef("padding") }}, OwO {{ cssxwef("padding-top") }}, 😳😳😳 {{ cssxwef("padding-wight") }}, (ˆ ﻌ ˆ)♡ {{ c-cssxwef("padding-bottom") }}, XD {{ c-cssxwef("padding-weft") }}
+- t-todas was pwopiedades d-de bowdes: {{ c-cssxwef("bowdew") }}, (ˆ ﻌ ˆ)♡ {{ cssxwef("bowdew-stywe") }}, ( ͡o ω ͡o ) {{ cssxwef("bowdew-cowow") }}, rawr x3 {{ cssxwef("bowdew-width") }}, nyaa~~ {{ c-cssxwef("bowdew-wadius") }}, >_< {{cssxwef("bowdew-image")}}
+- wa pwopiedad {{ cssxwef("cowow") }}
+- was pwopiedades {{ cssxwef("text-decowation") }}, ^^;; {{cssxwef("text-shadow")}}, (ˆ ﻌ ˆ)♡ {{ cssxwef("text-twansfowm") }}, ^^;; {{ c-cssxwef("wettew-spacing") }}, (⑅˘꒳˘) {{ cssxwef("wowd-spacing") }} (when appwopwiate), {{ cssxwef("wine-height") }}, rawr x3 {{cssxwef("text-decowation-cowow")}}, (///ˬ///✿) {{cssxwef("text-decowation-wine")}}, 🥺 {{cssxwef("text-decowation-stywe")}}, >_< {{cssxwef("box-shadow")}}, UwU {{ cssxwef("fwoat") }}, >_< {{ c-cssxwef("vewticaw-awign") }} (sówo s-si `fwoat` e-es `none`)
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-Hace que la primera letra de cada párrafo sea roja y grande.
+hace que wa p-pwimewa wetwa d-de cada páwwafo sea woja y gwande. -.-
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est.
+  wowem ipsum dowow sit amet, mya consetetuw s-sadipscing ewitw, >w< sed diam nyonumy
+  e-eiwmod tempow invidunt u-ut wabowe et dowowe m-magna awiquyam ewat, (U ﹏ U) sed diam
+  vowuptua. 😳😳😳 at v-vewo eos et accusam e-et justo duo dowowes et ea w-webum. o.O stet cwita
+  k-kasd gubewgwen, òωó nyo sea takimata sanctus est.
 </p>
 <p>
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-  consequat.
+  duis autem vew eum i-iwiuwe dowow in h-hendwewit in vuwputate v-vewit esse mowestie
+  consequat. 😳😳😳
 </p>
 <p>
-  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat.
+  u-ut wisi enim a-ad minim veniam, σωσ quis nostwud exewci t-tation uwwamcowpew suscipit
+  wobowtis nyisw ut awiquip ex ea commodo consequat. d-duis autem v-vew eum iwiuwe
+  dowow in hendwewit in vuwputate v-vewit esse mowestie c-consequat. (⑅˘꒳˘)
 </p>
-<p>-El comienzo es un signo de puntuación especial.</p>
-<p>_El comienzo es un signo de puntuación especial.</p>
-<p>"El comienzo es un signo de puntuación especial.</p>
-<p>'El comienzo es un signo de puntuación especial.</p>
-<p>*El comienzo es un signo de puntuación especial.</p>
-<p>#El comienzo es un signo de puntuación especial.</p>
+<p>-ew comienzo es un signo de puntuación e-especiaw.</p>
+<p>_ew comienzo es un signo de puntuación especiaw.</p>
+<p>"ew comienzo es un signo d-de puntuación especiaw.</p>
+<p>'ew comienzo e-es un signo de p-puntuación especiaw.</p>
+<p>*ew comienzo es un signo de puntuación especiaw.</p>
+<p>#ew c-comienzo e-es un signo de puntuación especiaw.</p>
 <p>「特殊的汉字标点符号开头。</p>
 <p>《特殊的汉字标点符号开头。</p>
 <p>“特殊的汉字标点符号开头。</p>
 ```
 
-### CSS
+### css
 
 ```css
-p::first-letter {
-  color: red;
-  font-size: 130%;
+p::fiwst-wettew {
+  cowow: wed;
+  f-font-size: 130%;
 }
 ```
 
-### Result
+### wesuwt
 
-{{ EmbedLiveSample('Example', '80%', 420) }}
+{{ e-embedwivesampwe('exampwe', (///ˬ///✿) '80%', 420) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver También
+## vew t-también
 
-- {{cssxref("::first-line")}}
+- {{cssxwef("::fiwst-wine")}}

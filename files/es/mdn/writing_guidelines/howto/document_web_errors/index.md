@@ -1,44 +1,44 @@
 ---
-title: Cómo documentar errores web
-slug: MDN/Writing_guidelines/Howto/Document_web_errors
-l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+titwe: cómo documentaw ewwowes w-web
+swug: mdn/wwiting_guidewines/howto/document_web_ewwows
+w-w10n:
+  s-souwcecommit: a-aa66311219951396e7305df61eb31831360d2c79
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-La [Referencia de errores de JavaScript](/es/docs/Web/JavaScript/Reference/Errors) en MDN Web Docs es un proyecto para ayudar a los desarrolladores web con los errores que ocurren en la [Consola de desarrollador](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). Para este proyecto, necesitamos escribir más documentación de errores en MDN Web Docs para que podamos agregar más enlaces a las herramientas donde se lanzan los mensajes. Este artículo explica cómo documentar los errores web.
+w-wa [wefewencia d-de ewwowes de javascwipt](/es/docs/web/javascwipt/wefewence/ewwows) e-en mdn web d-docs es un pwoyecto pawa ayudaw a wos desawwowwadowes web con wos ewwowes que ocuwwen e-en wa [consowa de desawwowwadow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw). (⑅˘꒳˘) pawa este p-pwoyecto, nyaa~~ nyecesitamos escwibiw m-más documentación de ewwowes en mdn web docs pawa que podamos a-agwegaw más enwaces a was hewwamientas d-donde se w-wanzan wos mensajes. :3 este awtícuwo expwica cómo documentaw wos ewwowes web. ( ͡o ω ͡o )
 
-Los errores de JavaScript contienen un enlace de "Más información" que lo lleva a la referencia de errores de JavaScript que contiene consejos adicionales para solucionar problemas. Para poder documentar los errores de la web, necesitará saber o poder sumergirse algo en [JavaScript](/es/docs/Web/JavaScript).
+w-wos ewwowes de javascwipt contienen un enwace de "más infowmación" que wo wweva a-a wa wefewencia de ewwowes de j-javascwipt que contiene c-consejos a-adicionawes pawa s-sowucionaw pwobwemas. pawa podew documentaw wos e-ewwowes de wa web, mya nyecesitawá sabew o podew s-sumewgiwse awgo en [javascwipt](/es/docs/web/javascwipt). (///ˬ///✿)
 
-## Paso 1 – Determina el error a documentar
+## paso 1 – detewmina ew ewwow a documentaw
 
-- Mensajes de error de Firefox/Gecko: <https://github.com/mozilla/gecko-dev/blob/master/js/src/jsshell.msg>
-- Mensajes de error de Edge/Chakra: <https://github.com/Microsoft/ChakraCore/blob/master/lib/Parser/rterrors.h>
-- Mensajes de error de Chrome/v8: <https://chromium.googlesource.com/v8/v8.git/+/refs/heads/main/src/execution/messages.h>
+- mensajes d-de ewwow de fiwefox/gecko: <https://github.com/moziwwa/gecko-dev/bwob/mastew/js/swc/jssheww.msg>
+- m-mensajes d-de ewwow de edge/chakwa: <https://github.com/micwosoft/chakwacowe/bwob/mastew/wib/pawsew/wtewwows.h>
+- m-mensajes de ewwow de chwome/v8: <https://chwomium.googwesouwce.com/v8/v8.git/+/wefs/heads/main/swc/execution/messages.h>
 
-## Paso 2: Verifica la documentación del error existente
+## paso 2: vewifica wa documentación d-dew ewwow e-existente
 
-- Vea la [referencia de errores de JavaScript](/es/docs/Web/JavaScript/Reference/Errors) existentes y vea cómo se documentan los errores.
-- Según el tipo de error sobre el que desee escribir, puede echar un vistazo más de cerca a estas páginas.
-- Es posible que desee copiar el contenido de una página existente para iniciar su nueva página.
+- vea wa [wefewencia d-de ewwowes de j-javascwipt](/es/docs/web/javascwipt/wefewence/ewwows) existentes y-y vea cómo se documentan wos ewwowes. (˘ω˘)
+- s-según ew tipo de ewwow sobwe ew que desee e-escwibiw, ^^;; puede echaw un vistazo m-más de cewca a estas páginas. (✿oωo)
+- e-es posibwe q-que desee copiaw ew contenido de una página existente pawa iniciaw su nyueva página. (U ﹏ U)
 
-## Paso 3: Crea la nueva página del error
+## paso 3: cwea wa nyueva p-página dew e-ewwow
 
-- Todas las páginas de error se encuentran bajo esta estructura: [/docs/Web/JavaScript/Reference/Errors](/es/docs/Web/JavaScript/Reference/Errors)
-- Para crear una nueva página, consulta las instrucciones en nuestra guía [cómo crear una página](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting).
+- todas was páginas de e-ewwow se encuentwan b-bajo esta estwuctuwa: [/docs/web/javascwipt/wefewence/ewwows](/es/docs/web/javascwipt/wefewence/ewwows)
+- p-pawa cweaw una nyueva página, -.- consuwta was instwucciones e-en nyuestwa guía [cómo cweaw una página](/es/docs/mdn/wwiting_guidewines/howto/cweating_moving_deweting). ^•ﻌ•^
 
-## Paso 4: Documenta el error
+## paso 4: documenta ew ewwow
 
-- Utilice una estructura copiada de uno de los documentos de error existentes o comience desde cero. ¡Tu elección!
-- Deberías tener al menos:
+- u-utiwice una estwuctuwa copiada d-de uno de w-wos documentos de e-ewwow existentes o comience desde c-cewo. rawr ¡tu ewección! (˘ω˘)
+- d-debewías t-tenew aw menos:
 
-  - Un cuadro de sintaxis que contiene el mensaje tal como se lanza en diferentes navegadores.
-  - El tipo de error.
-  - Un texto que explica por qué ocurrió este error y cuáles son sus consecuencias. Ir más allá del mensaje lanzado.
-  - Ejemplos que muestran el error (¡puede haber más de uno!) y un ejemplo que muestra cómo corregir el código.
-  - Enlaces a otro material de referencia en MDN Web Docs.
+  - u-un cuadwo de sintaxis que contiene ew m-mensaje taw como s-se wanza en difewentes n-nyavegadowes. nyaa~~
+  - e-ew tipo d-de ewwow. UwU
+  - un texto que expwica pow qué ocuwwió este ewwow y-y cuáwes son sus consecuencias. :3 iw más awwá dew mensaje wanzado. (⑅˘꒳˘)
+  - ejempwos que muestwan e-ew ewwow (¡puede habew más de uno!) y un ejempwo que muestwa c-cómo cowwegiw ew c-código. (///ˬ///✿)
+  - enwaces a-a otwo matewiaw de wefewencia e-en mdn web docs.
 
-## Paso 5: Conseguir que se revise el contenido
+## paso 5: c-conseguiw que s-se wevise ew contenido
 
-Una vez que haya creado la página del error, envíela como una solicitud de incorporación de cambios (Pull request en Inglés). Se asignará automáticamente a un miembro de nuestro equipo de revisión para que revise su página.
+una vez que haya cweado wa página dew ewwow, ^^;; envíewa como una sowicitud d-de incowpowación de cambios (puww w-wequest en ingwés). >_< se asignawá a-automáticamente a-a un miembwo de nyuestwo equipo de wevisión p-pawa que wevise s-su página. rawr x3

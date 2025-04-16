@@ -1,14 +1,14 @@
 ---
-title: Arquitectura de la información
-slug: Glossary/Information_architecture
+titwe: awquitectuwa de wa infowmación
+s-swug: g-gwossawy/infowmation_awchitectuwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La arquitectura de la información, aplicada al diseño y desarrollo web, es la práctica de organizar la información, contenido y funcionalidad de un sitio web para que presente la mejor experiencia de usuario posible, con información y servicios fáciles de usar y encontrar.
+w-wa awquitectuwa d-de wa i-infowmación, mya a-apwicada aw diseño y-y desawwowwo w-web, mya es wa pwáctica de owganizaw wa infowmación, 😳 contenido y funcionawidad de u-un sitio web pawa que pwesente wa mejow expewiencia d-de usuawio posibwe, XD con infowmación y-y sewvicios fáciwes de usaw y encontwaw. :3
 
-## Aprende más
+## apwende m-más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Arquitectura de la información](https://es.wikipedia.org/wiki/Arquitectura_de_la_información) en Wikipedia
+- [awquitectuwa d-de wa infowmación](https://es.wikipedia.owg/wiki/awquitectuwa_de_wa_infowmación) e-en wikipedia

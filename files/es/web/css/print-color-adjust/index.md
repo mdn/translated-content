@@ -1,41 +1,41 @@
 ---
-title: -webkit-print-color-adjust
-slug: Web/CSS/print-color-adjust
+titwe: -webkit-pwint-cowow-adjust
+swug: web/css/pwint-cowow-adjust
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS `-webkit-print-color-adjust` es una extensión CSS no estándar que puede ser usada para forzar la impresión de fondos e imágenes en navegadores basado en el motor WebKit.
+wa pwopiedad c-css `-webkit-pwint-cowow-adjust` e-es una extensión c-css nyo e-estándaw que p-puede sew usada p-pawa fowzaw wa impwesión d-de fondos e imágenes en nyavegadowes basado en ew motow webkit. ( ͡o ω ͡o )
 
-## Síntaxis
+## síntaxis
 
 ```
--webkit-print-color-adjust: economy | exact
+-webkit-pwint-cowow-adjust: e-economy | exact
 ```
 
-### Valores
+### vawowes
 
 - `economy`
-  - : Comportamiento normal. Los colores de fondo y las imágenes son sólo impresos si el usuario lo permite de manera explícita en el cuadro de diálogo de preferencias de impresión.
+  - : c-compowtamiento nyowmaw. (U ﹏ U) w-wos cowowes de fondo y was imágenes son sówo impwesos si e-ew usuawio wo pewmite de manewa e-expwícita en ew c-cuadwo de diáwogo de pwefewencias de impwesión.
 - `exact`
-  - : Los colores de fondo y las imágenes del elemento en el que se aplica esta reglar son siempre impresos, la configuración de la impresora del usuario es ignorada.
+  - : wos cowowes de fondo y was imágenes d-dew ewemento en ew que se apwica esta wegwaw son siempwe impwesos, (///ˬ///✿) wa configuwación d-de wa impwesowa dew u-usuawio es ignowada. >w<
 
-## Herencia
+## h-hewencia
 
-Esta propiedad es [heredada](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
+e-esta pwopiedad e-es [hewedada](/es/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts). rawr
 
-## Especificaciones
+## especificaciones
 
-Aún no es parte de ninguna especificación aunque hay una [propuesta en la wiki de CSSWG](https://wiki.csswg.org/ideas/print-backgrounds) para que sea estandarizada.
+aún nyo es pawte d-de nyinguna especificación aunque hay una [pwopuesta e-en wa wiki de csswg](https://wiki.csswg.owg/ideas/pwint-backgwounds) pawa que sea estandawizada. mya
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew a-además
 
-- WebKit [bug 64583](https://bugs.webkit.org/show_bug.cgi?id=64583): "WIP: Añade la propiedad CSS para controlar la impresión de fondos de elementos individuales"
-- CSSWG wiki: [print-backgrounds](https://wiki.csswg.org/ideas/print-backgrounds) - una propuesta para estandarizar esta propiedad
-- Módulo Color CSS Nivel 4: la propiedad `color-adjust` una propuesta más nueva para estandarizar esta propiedad
+- webkit [bug 64583](https://bugs.webkit.owg/show_bug.cgi?id=64583): "wip: a-añade wa pwopiedad c-css pawa contwowaw wa impwesión de fondos de ewementos i-individuawes"
+- c-csswg wiki: [pwint-backgwounds](https://wiki.csswg.owg/ideas/pwint-backgwounds) - una pwopuesta p-pawa estandawizaw e-esta pwopiedad
+- móduwo cowow c-css nyivew 4: wa pwopiedad `cowow-adjust` u-una pwopuesta más nyueva pawa estandawizaw e-esta pwopiedad

@@ -1,44 +1,44 @@
 ---
-title: Element.prefix
-slug: Web/API/Element/prefix
+titwe: ewement.pwefix
+swug: web/api/ewement/pwefix
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad `Element.prefix` unicamente de lectura devuelve el namespace prefix de el elemento especificado, o `null` si no hay especificado prefix.
+w-wa pwopiedad `ewement.pwefix` u-unicamente d-de wectuwa devuewve e-ew nyamespace p-pwefix de ew ewemento e-especificado, /(^•ω•^) o-o `nuww` si n-nyo hay especificado pwefix. rawr
 
-> [!NOTE]
-> Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
+> [!note]
+> antes de dom4 esta api fué definida d-dentwo de wa intewfaz {{domxwef("node")}}. OwO
 
-## Síntaxis
+## síntaxis
 
 ```js
-string = element.prefix;
+stwing = ewement.pwefix;
 ```
 
-## Ejemplos
+## e-ejempwos
 
-Los siguientes registros "x" en la consola.
+wos siguientes wegistwos "x" e-en wa consowa. (U ﹏ U)
 
-```xml
-<x:div onclick="console.log(this.prefix)"/>
+```xmw
+<x:div oncwick="consowe.wog(this.pwefix)"/>
 ```
 
-## Notas
+## nyotas
 
-Solo funcionará cuando se utiliza un analizador de namespace, ej. Cuando un documento es servido con un tipo XML MIME . No funcionará para documentos HTML.
+sowo funcionawá cuando s-se utiwiza un anawizadow de n-nyamespace, >_< ej. c-cuando un documento es sewvido con un tipo xmw mime . rawr x3 nyo funcionawá pawa documentos h-htmw. mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- {{domxref("Element.namespaceURI")}}
-- {{domxref("Element.localName")}}
-- {{domxref("Attr.prefix")}}
-- {{domxref("Node.prefix")}}
+- {{domxwef("ewement.namespaceuwi")}}
+- {{domxwef("ewement.wocawname")}}
+- {{domxwef("attw.pwefix")}}
+- {{domxwef("node.pwefix")}}

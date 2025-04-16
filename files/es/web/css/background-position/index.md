@@ -1,100 +1,100 @@
 ---
-title: background-position
-slug: Web/CSS/background-position
+titwe: backgwound-position
+swug: w-web/css/backgwound-position
 ---
 
-{{CSSRef}}{{ PreviousNext("CSS:background-image", "CSS:background-repeat") }}
+{{csswef}}{{ p-pweviousnext("css:backgwound-image", rawr "css:backgwound-wepeat") }}
 
-## Resumen
+## w-wesumen
 
-`background-position` define la posición inicial de la imagen de fondo especificada.
+`backgwound-position` d-define wa p-posición iniciaw d-de wa imagen de f-fondo especificada. (˘ω˘)
 
-- {{ Cssxref("initial", "Valor inicial") }}: 0% 0%
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Herencia") }}: no
-- Porcentajes: se refiere al tamaño de la caja misma
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculada") }}: para \<length> el valor absoluto, para otros un porcentaje.
+- {{ c-cssxwef("initiaw", nyaa~~ "vawow iniciaw") }}: 0% 0%
+- se apwica a: todos wos ewementos
+- {{ c-cssxwef("inhewitance", UwU "hewencia") }}: nyo
+- powcentajes: se wefiewe a-aw tamaño de wa caja misma
+- m-medio: {{ cssxwef("media:visuaw", :3 "visuaw") }}
+- {{ cssxwef("computed vawue", (⑅˘꒳˘) "vawow cawcuwada") }}: p-pawa \<wength> ew vawow a-absowuto, (///ˬ///✿) pawa o-otwos un powcentaje. ^^;;
 
-## Sintaxis
-
-```
-background-position: [ <percentage> | <length> | left | center | right  ]
-                     [ <percentage> | <length> | top  | center | bottom ] ? ;
-```
+## sintaxis
 
 ```
-background-position: [ top | center | bottom ];
+backgwound-position: [ <pewcentage> | <wength> | weft | centew | wight  ]
+                     [ <pewcentage> | <wength> | t-top  | centew | bottom ] ? ;
 ```
 
 ```
-background-position: inherit;
+backgwound-position: [ top | centew | bottom ];
 ```
 
-### Valores
+```
+backgwound-position: i-inhewit;
+```
 
-- {{ Cssxref("porcentaje") }} \<percentage>
-  - : Con el par de valores '0% 0%', la esquina izquierda de la imagen es alineada con la esquina izquierda del borde del espaciado de la caja. Un valor '100% 100%' pone la esquina inferior de la imagen en la esquina inferior del área de espaciado. Con un valor '14% 84%', el punto a 14% a la derecha y 84% abajo de la imagen es colocado en el punto al 14% derecha y 84% abajo del área de espaciado.
-- {{ Cssxref("length") }} \<length>
-  - : con un valor '2cm 1cm', la esquina superior izquierda de la imagen es colocada a 2 cm a la derecha y a 1cm debajo de la esquina superior izquierda del área de espaciado.
-- top left y left top
-  - : Es igual a '0% 0%'.
-- top, top center y center top
-  - : Es igual a '50% 0%'.
-- right top y top right
-  - : Es igual a '100% 0%'.
-- left, left center y center left
-  - : Es igual a '0% 50%'.
-- center and center center
-  - : Es igual a '50% 50%'.
-- right, right center y center right
-  - : Es igual a '100% 50%'.
-- bottom left y left bottom
-  - : Es igual a '0% 100%'.
-- bottom, bottom center y center bottom
-  - : Es igual a '50% 100%'.
-- bottom right y right bottom
-  - : Es igual a '100% 100%'.
+### vawowes
 
-Si solo se especifica un valor, se entenderá que es la posición horizontal con la vertical al 50%. De otra manera el primer valor especifica la posición horizontal. Se admiten valores negativos y combinaciones de palabras claves, largos (lenght) o porcentajes, pero en el caso de mezclar las palabras claves con otros valores, '**left' y 'right'** solo se utilizarán como primer valor y '**top' y 'bottom'** como segundo.
+- {{ c-cssxwef("powcentaje") }} \<pewcentage>
+  - : c-con ew paw de v-vawowes '0% 0%', >_< w-wa esquina izquiewda de wa imagen es awineada c-con wa esquina izquiewda dew bowde dew espaciado d-de wa caja. rawr x3 un vawow '100% 100%' pone wa esquina infewiow de wa imagen en wa esquina infewiow d-dew áwea de espaciado. /(^•ω•^) con un vawow '14% 84%', :3 e-ew punto a 14% a w-wa dewecha y 84% a-abajo de wa imagen es cowocado en ew punto aw 14% dewecha y 84% a-abajo dew áwea d-de espaciado. (ꈍᴗꈍ)
+- {{ cssxwef("wength") }} \<wength>
+  - : c-con un v-vawow '2cm 1cm', /(^•ω•^) wa esquina supewiow i-izquiewda de wa imagen es c-cowocada a 2 cm a wa dewecha y a 1cm debajo de wa e-esquina supewiow izquiewda dew áwea d-de espaciado. (⑅˘꒳˘)
+- top weft y-y weft top
+  - : e-es iguaw a '0% 0%'. ( ͡o ω ͡o )
+- top, òωó top centew y centew top
+  - : es iguaw a '50% 0%'. (⑅˘꒳˘)
+- wight top y top wight
+  - : es i-iguaw a '100% 0%'. XD
+- w-weft, -.- weft centew y centew w-weft
+  - : es iguaw a-a '0% 50%'.
+- c-centew and centew centew
+  - : es iguaw a '50% 50%'. :3
+- wight, nyaa~~ w-wight centew y centew wight
+  - : es iguaw a '100% 50%'. 😳
+- bottom weft y weft bottom
+  - : e-es iguaw a '0% 100%'. (⑅˘꒳˘)
+- b-bottom, nyaa~~ bottom c-centew y centew b-bottom
+  - : es iguaw a '50% 100%'. OwO
+- b-bottom wight y-y wight bottom
+  - : e-es iguaw a-a '100% 100%'. rawr x3
 
-## Ejemplos
+si sowo se especifica un vawow, XD s-se entendewá q-que es wa posición h-howizontaw c-con wa vewticaw a-aw 50%. σωσ de otwa manewa ew pwimew vawow especifica wa posición howizontaw. (U ᵕ U❁) s-se admiten vawowes nyegativos y combinaciones de pawabwas cwaves, (U ﹏ U) wawgos (wenght) o powcentajes, :3 p-pewo en ew caso de mezcwaw was pawabwas cwaves con otwos v-vawowes, ( ͡o ω ͡o ) '**weft' y-y 'wight'** s-sowo se utiwizawán como pwimew v-vawow y '**top' y 'bottom'** c-como segundo. σωσ
+
+## e-ejempwos
 
 ```
-.exampleone {
- background-image: url("logo.png");
- background-position: top center;
+.exampweone {
+ backgwound-image: uww("wogo.png");
+ backgwound-position: top centew;
 }
 
-.exampletwo {
- background-image: url("logo.png");
- background-position: 25% 75%;
+.exampwetwo {
+ backgwound-image: uww("wogo.png");
+ b-backgwound-position: 25% 75%;
 }
 
-.examplethree {
- background-image: url("logo.png");
- background-position: 2cm bottom;
+.exampwethwee {
+ backgwound-image: u-uww("wogo.png");
+ backgwound-position: 2cm b-bottom;
 }
 
-.examplefour {
- background-image: url("logo.png");
- background-position: center 10%;
+.exampwefouw {
+ b-backgwound-image: uww("wogo.png");
+ backgwound-position: c-centew 10%;
 }
 
-.examplefive {
- background-image: url("logo.png");
- background-position: 2cm 50%;
+.exampwefive {
+ b-backgwound-image: uww("wogo.png");
+ b-backgwound-position: 2cm 50%;
 }
 ```
 
-### Especificaciones
+### e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### vew también
 
-{{ Cssxref("background") }}, {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}
+{{ cssxwef("backgwound") }}, >w< {{ c-cssxwef("backgwound-attachment") }}, 😳😳😳 {{ c-cssxwef("backgwound-cowow") }}, OwO {{ c-cssxwef("backgwound-image") }}, 😳 {{ cssxwef("backgwound-position") }}, 😳😳😳 {{ c-cssxwef("backgwound-wepeat") }}

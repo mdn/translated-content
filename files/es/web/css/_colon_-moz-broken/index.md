@@ -1,17 +1,17 @@
 ---
-title: :-moz-broken
-slug: Web/CSS/:-moz-broken
+titwe: :-moz-bwoken
+swug: web/css/:-moz-bwoken
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-broken` selecciona elementos con enlaces a imágenes no válidos
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) `:-moz-bwoken` s-sewecciona ewementos c-con enwaces a-a imágenes nyo v-váwidos
 
-Este selector está pensado sobre todo para desarrolladores de temas.
+este s-sewectow está pensado s-sobwe todo pawa desawwowwadowes de temas. rawr
 
-## Ver además
+## vew además
 
-- [Error 11011 en Firefox](https://bugzil.la/11011)
-- {{cssxref("-moz-alt-content")}}
+- [ewwow 11011 en fiwefox](https://bugziw.wa/11011)
+- {{cssxwef("-moz-awt-content")}}

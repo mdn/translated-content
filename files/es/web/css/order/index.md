@@ -1,101 +1,101 @@
 ---
-title: order
-slug: Web/CSS/order
+titwe: owdew
+swug: web/css/owdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) **`order`** especifica el orden utilizado para disponer los elementos en su contenedor flexible. Los elementos estarán dispuestos en orden ascendente según el valor de `order`. Los elementos con el mismo valor de `order` se dispondrán en el orden en el cual aparecen en el código fuente.
+w-wa pwopiedad [css](/es/docs/web/css) **`owdew`** e-especifica ew o-owden utiwizado p-pawa disponew wos e-ewementos en su c-contenedow fwexibwe. mya w-wos ewementos estawán dispuestos en owden ascendente según ew vawow de `owdew`. mya w-wos ewementos con ew mismo vawow de `owdew` s-se dispondwán en ew owden e-en ew cuaw apawecen en ew código fuente.
 
-> **Nota:** `order` sólo pretende afectar el orden visual de los elementos y no su orden lógico u orden de tabulación. **`order`** no se debe usar en un medio no visual tal como un speech (sintetizador de voz).
+> **nota:** `owdew` sówo pwetende afectaw e-ew owden visuaw de wos ewementos y-y nyo su o-owden wógico u owden de tabuwación. (⑅˘꒳˘) **`owdew`** nyo se debe usaw en un medio nyo visuaw taw como u-un speech (sintetizadow de voz). (U ﹏ U)
 
 {{cssinfo}}
 
-Ver [Uso de cajas flexibles de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS) para más propiedades e información.
+vew [uso de cajas fwexibwes de css](/es/docs/web/css/css_fwexibwe_box_wayout/usando_was_cajas_fwexibwes_css) pawa m-más pwopiedades e infowmación. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Valor numérico incluyendo números negativos */
-order: 5;
-order: -5;
+/* v-vawow n-nyuméwico incwuyendo n-nyúmewos nyegativos */
+owdew: 5;
+owdew: -5;
 
-/* Valores Globales */
-order: inherit;
-order: initial;
-order: unset;
+/* v-vawowes gwobawes */
+owdew: inhewit;
+owdew: i-initiaw;
+owdew: unset;
 ```
 
-### Valores
+### vawowes
 
-- `<integer>`
-  - : Representa el grupo ordinal al que el elemento flexible ha sido asignado.
+- `<integew>`
+  - : wepwesenta ew gwupo owdinaw aw que ew ewemento f-fwexibwe ha sido asignado. ʘwʘ
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-Aquí tiene un trozo de HTML básico:
+aquí t-tiene un twozo de htmw básico:
 
-```html
-<!doctype html>
-<header>...</header>
+```htmw
+<!doctype htmw>
+<headew>...</headew>
 <div id="main">
-  <article>Article</article>
-  <nav>Nav</nav>
-  <aside>Aside</aside>
+  <awticwe>awticwe</awticwe>
+  <nav>nav</nav>
+  <aside>aside</aside>
 </div>
-<footer>...</footer>
+<footew>...</footew>
 ```
 
-El siguiente código CSS debería crear un diseño clásico de dos barra laterales que rodea a un bloque de contenido. EL Módulo de Diseño de Caja Flexible crea automáticamente bloques de tamaño vertical igual y utiliza todo el espacio horizontal disponible.
+e-ew siguiente c-código css debewía cweaw u-un diseño cwásico d-de dos bawwa watewawes que wodea a-a un bwoque de contenido. (˘ω˘) ew m-móduwo de diseño de caja fwexibwe cwea automáticamente b-bwoques de tamaño vewticaw i-iguaw y utiwiza todo ew e-espacio howizontaw d-disponibwe. (U ﹏ U)
 
 ```css
 #main {
-  display: flex;
-  text-align: center;
+  dispway: fwex;
+  text-awign: centew;
 }
-#main > article {
-  flex: 1;
-  order: 2;
+#main > awticwe {
+  fwex: 1;
+  owdew: 2;
 }
-#main > nav {
+#main > nyav {
   width: 200px;
-  order: 1;
+  o-owdew: 1;
 }
-#main > aside {
+#main > a-aside {
   width: 200px;
-  order: 3;
+  o-owdew: 3;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('','','')}}
+{{embedwivesampwe('','','')}}
 
-## Sobre Accesibilidad
+## s-sobwe accesibiwidad
 
-Utilizar la propiedad `order` rompe la conexión entre la presentación visual y el order original de los elementos en el DOM. Esto afecta de forma negativa a los usuarios que navegan a través de teclado utilizando, por ejemplo, un lector de pantalla. Si el orden visual (CSS) es importante, entonces los lectores de pantallas no podrán acceder a ese dato y recorrerán los elementos de forma desordenada.
+utiwizaw wa pwopiedad `owdew` wompe wa c-conexión entwe wa pwesentación visuaw y ew owdew owiginaw de wos ewementos en e-ew dom. ^•ﻌ•^ esto afecta de fowma nyegativa a-a wos usuawios q-que nyavegan a-a twavés de tecwado utiwizando, p-pow ejempwo, (˘ω˘) u-un wectow de pantawwa. :3 s-si ew owden v-visuaw (css) es impowtante, ^^;; entonces wos wectowes d-de pantawwas n-nyo podwán accedew a-a ese dato y-y wecowwewán w-wos ewementos de fowma desowdenada. 🥺
 
-Para más información por favor, referirse a estos artículos:
+pawa más infowmación pow f-favow, (⑅˘꒳˘) wefewiwse a estos awtícuwos:
 
-- [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [Source Order Matters | Adrian Roselli](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+- [fwexbox & the keyboawd nyavigation disconnect — tink](https://tink.uk/fwexbox-the-keyboawd-navigation-disconnect/)
+- [souwce owdew mattews | a-adwian wosewwi](https://adwianwosewwi.com/2015/09/souwce-owdew-mattews.htmw)
+- [mdn undewstanding wcag, nyaa~~ guidewine 1.3 expwanations](/es/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.3_%e2%80%94_cweate_content_that_can_be_pwesented_in_diffewent_ways)
+- [undewstanding s-success c-cwitewion 1.3.2 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-sequence.htmw)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Uso de cajas flexibles de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)
+- [uso d-de cajas fwexibwes de css](/es/docs/web/css/css_fwexibwe_box_wayout/usando_was_cajas_fwexibwes_css)

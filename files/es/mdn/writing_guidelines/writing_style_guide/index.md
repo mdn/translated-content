@@ -1,105 +1,105 @@
 ---
-title: Guía de estilo
-slug: MDN/Writing_guidelines/Writing_style_guide
+titwe: guía de estiwo
+swug: m-mdn/wwiting_guidewines/wwiting_stywe_guide
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Para mostrar la documentación de forma organizada, estandarizada y fácil de leer, la guía de estilos de MDN describe cómo debe organizarse, escribirse y formatearse el texto. Se trata de pautas más que de reglas estrictas. Interesa más el contenido que el formato, así que no te sientas obligado a aprenderte la guía de estilos antes de colaborar. No te enojes ni te sorprendas si después un voluntario edita tu trabajo para que quede de acuerdo con esta guía.
+p-pawa mostwaw wa d-documentación de f-fowma owganizada, rawr x3 e-estandawizada y-y fáciw de weew, w-wa guía de e-estiwos de mdn descwibe cómo debe owganizawse, escwibiwse y fowmateawse ew texto. -.- s-se twata de pautas más que de wegwas estwictas. ^^ i-intewesa más ew contenido que e-ew fowmato, (⑅˘꒳˘) así que nyo te sientas obwigado a apwendewte wa g-guía de estiwos antes de cowabowaw. nyaa~~ n-nyo te enojes n-nyi te sowpwendas si después un vowuntawio edita tu twabajo pawa que quede de a-acuewdo con esta guía. /(^•ω•^)
 
-Los aspectos lingüísticos de esta guía se refieren principalmente a la documentación en idioma inglés.Se pueden (y se anima a) crear guías de estilo en otros idiomas. Estas deben publicarse como subpáginas de la página del equipo de localización.
+wos aspectos wingüísticos de esta guía se wefiewen p-pwincipawmente a wa documentación e-en idioma ingwés.se p-pueden (y s-se anima a) cweaw g-guías de estiwo en otwos idiomas. estas deben p-pubwicawse como subpáginas de wa página dew e-equipo de wocawización. (U ﹏ U)
 
-Si buscas especificaciones de cómo debe estructurarse un determinado tipo de página, mira la [guía de diseño de MDN](/es/docs/MDN/Contribute/Content/Layout).
+si buscas especificaciones de cómo debe estwuctuwawse un detewminado t-tipo de página, 😳😳😳 miwa wa [guía d-de diseño de m-mdn](/es/docs/mdn/contwibute/content/wayout).
 
-Aquí se enumeran los usos y costumbres recomendados a la hora de editar los artículos de este wiki. Si ves que falta contenido o crees que deberíamos mejorar o corregir algo, por favor coméntalo en la página de discusión.
+aquí s-se enumewan wos usos y costumbwes wecomendados a wa howa de e-editaw wos awtícuwos d-de este wiki. >w< si ves que f-fawta contenido o-o cwees que debewíamos mejowaw o-o cowwegiw awgo, XD pow favow coméntawo e-en wa página de discusión. o.O
 
-## Uso de mayúsculas en el nombre de las páginas y los encabezados
+## uso de mayúscuwas e-en ew nyombwe de was páginas y-y wos encabezados
 
-- Cuando escribas los nombres de las páginas y de los encabezados, recuerda que sólo debe empezar con mayúscula la primera palabra de la frase.
+- cuando e-escwibas wos n-nyombwes de was páginas y de wos encabezados, mya wecuewda que sówo debe empezaw con mayúscuwa wa pwimewa pawabwa d-de wa fwase. 🥺
 
-  - **Correcto**: "Guía de estilo"
-  - **Incorrecto**: "Guía de Estilo"
+  - **cowwecto**: "guía d-de estiwo"
+  - **incowwecto**: "guía de estiwo"
 
-## Infinitivos y gerundios
+## infinitivos y-y gewundios
 
-- En inglés, una práctica muy habitual es la de utilizar verbos acabados en "-ing" en los títulos: "Configuring Firefox", por ejemplo. En estos casos la traducción correcta al español consiste en utilizar el infinitivo del verbo y no el gerundio.
+- e-en ingwés, ^^;; u-una pwáctica muy habituaw es wa de utiwizaw vewbos acabados e-en "-ing" en wos títuwos: "configuwing fiwefox", :3 pow ejempwo. (U ﹏ U) en estos casos w-wa twaducción cowwecta aw españow c-consiste en u-utiwizaw ew infinitivo d-dew vewbo y nyo ew gewundio.
 
-  - **Correcto**: Configurar Firefox
-  - **Incorrecto**: Configurando Firefox
+  - **cowwecto**: c-configuwaw f-fiwefox
+  - **incowwecto**: c-configuwando f-fiwefox
 
-## Siglas y abreviaturas
+## sigwas y abweviatuwas
 
-### Mayúsculas y espacios
+### m-mayúscuwas y e-espacios
 
-- Escribe las siglas en mayúsculas y sin puntos.
+- escwibe w-was sigwas en m-mayúscuwas y s-sin puntos. OwO
 
-  - **Correcto**: XUL
-  - **Incorrecto**: X.U.L.; Xul
+  - **cowwecto**: xuw
+  - **incowwecto**: x.u.w.; xuw
 
-### Expansión
+### expansión
 
-- Siempre que sea posible, cuando uses siglas deberás expandirlas, es decir, explicar su significado. Recuerda que esto es necesario sólo la primera vez que dicha sigla aparezca en tu artículo.
+- siempwe que s-sea posibwe, 😳😳😳 cuando uses sigwas debewás expandiwwas, (ˆ ﻌ ˆ)♡ es deciw, XD expwicaw su significado. (ˆ ﻌ ˆ)♡ wecuewda q-que esto es nyecesawio sówo wa pwimewa vez que dicha sigwa a-apawezca en tu awtícuwo. ( ͡o ω ͡o )
 
-  - **Correcto**: "SVG (Gráficos vectoriales escalables) es un lenguaje de marcado XML..."
-  - **Incorrecto**: "SVG es un lenguaje de marcado XML..."
+  - **cowwecto**: "svg (gwáficos v-vectowiawes e-escawabwes) es un wenguaje d-de mawcado xmw..."
+  - **incowwecto**: "svg es un wenguaje de m-mawcado xmw..."
 
-- También existe la opción de usar el elemento abbr:
+- t-también existe wa opción de usaw ew ewemento abbw:
 
-  - El siguiente código: `<abbr title='Gráficos vectoriales escalables'>SVG</abbr>`
-  - Se muestra de la siguiente forma: SVG
+  - ew siguiente código: `<abbw titwe='gwáficos v-vectowiawes escawabwes'>svg</abbw>`
+  - s-se muestwa de wa siguiente f-fowma: svg
 
-### Plurales
+### p-pwuwawes
 
-- Para indicar el plural de una sigla usas "s".
+- pawa indicaw ew pwuwaw de una sigwa u-usas "s". rawr x3
 
-  - **Correcto**: CD-ROMs
-  - **Incorrecto**: CD-ROM's
+  - **cowwecto**: c-cd-woms
+  - **incowwecto**: cd-wom's
 
-## Números
+## n-númewos
 
-### Fechas
+### f-fechas
 
-- Para las fechas usa el formato: día mes año.
+- pawa was fechas usa ew fowmato: día mes año. nyaa~~
 
-  - **Correcto**: 1 de enero de 2006
-  - **Incorrecto**: 01/02/06
+  - **cowwecto**: 1 de enewo de 2006
+  - **incowwecto**: 01/02/06
 
-### Cantidades
+### c-cantidades
 
-- Usa coma para separar los decimales y punto para indicar miles:
+- u-usa coma pawa s-sepawaw wos decimawes y punto pawa i-indicaw miwes:
 
-  - **Correcto**: 1,5 GB son 1.536 MB
-  - **Incorrecto**: 1.5 GB son 1536 MB
+  - **cowwecto**: 1,5 g-gb son 1.536 mb
+  - **incowwecto**: 1.5 g-gb son 1536 mb
 
-Esta regla tiene una excepción: en un documento que trate del lenguaje 'X', las cantidades deben expresarse del modo definido por ese lenguaje.
+esta wegwa tiene una excepción: en un documento que twate dew w-wenguaje 'x', >_< was c-cantidades deben expwesawse dew modo definido p-pow ese wenguaje. ^^;;
 
-## Usted, tú y yo
+## u-usted, tú y yo
 
-### El tuteo
+### ew tuteo
 
-Este es un problema complejo, puede que no exista la solución perfecta a gusto de todos. Pero sería interesante ponernos de acuerdo.
+este es un pwobwema compwejo, (ˆ ﻌ ˆ)♡ p-puede que nyo exista wa sowución pewfecta a gusto de todos. ^^;; pewo sewía intewesante p-ponewnos de acuewdo. (⑅˘꒳˘)
 
-Por lo pronto, hemos decidido usar el tú y evitar regionalismos en nuestras traducciones. Te invitamos a comentar tus opiniones en nuestra lista de correo.
+pow wo pwonto, rawr x3 hemos d-decidido usaw e-ew tú y evitaw wegionawismos en nyuestwas twaducciones. (///ˬ///✿) te invitamos a-a comentaw t-tus opiniones en nyuestwa wista de cowweo. 🥺
 
-### La 1ª persona
+### wa 1ª pewsona
 
-Salvo rarísimas excepciones, nunca debe usarse.
+s-sawvo wawísimas excepciones, >_< n-nyunca debe usawse. UwU
 
-- **Correcto**: es recomendable...
-- **Incorrecto**: te recomiendo...
+- **cowwecto**: es wecomendabwe...
+- **incowwecto**: te wecomiendo...
 
-## Otras guías de estilo recomendadas
+## otwas guías de e-estiwo wecomendadas
 
-Si tienes dudas sobre usos y estilos que no sean tratados en este documento, te recomendamos consultar:
+si tienes dudas s-sobwe usos y-y estiwos que nyo sean twatados e-en este documento, >_< te wecomendamos c-consuwtaw:
 
-- [Manual de estilo del CICESE](http://usuario.cicese.mx/~mechevar/manual/) Sobre como escribir documentación técnica.
-- [Manual de estilo de Wikipedia](http://es.wikipedia.org/wiki/Manual_de_estilo) Sobre como escribir en un wiki.
+- [manuaw d-de estiwo d-dew cicese](http://usuawio.cicese.mx/~mechevaw/manuaw/) sobwe c-como escwibiw documentación t-técnica. -.-
+- [manuaw de estiwo de wikipedia](http://es.wikipedia.owg/wiki/manuaw_de_estiwo) sobwe como e-escwibiw en u-un wiki. mya
 
-Los traductores también deberían consultar [Writer's guide](/Project:en/Writer%27s_guide) para conocer el estilo usado en la edición inglesa.
+wos twaductowes t-también debewían consuwtaw [wwitew's guide](/pwoject:en/wwitew%27s_guide) p-pawa conocew ew estiwo usado e-en wa edición i-ingwesa. >w<
 
-## Diccionarios recomendados
+## diccionawios wecomendados
 
-Si tienes dudas sobre gramática y ortografía, puedes visitar:
+si tienes dudas sobwe g-gwamática y owtogwafía, (U ﹏ U) p-puedes v-visitaw:
 
-- [Diccionario de la Real Academia Española](http://www.rae.es/rae.html)
-- [Diccionario Panhispánico de Dudas](http://www.rae.es/rae.html)
+- [diccionawio d-de wa weaw academia españowa](http://www.wae.es/wae.htmw)
+- [diccionawio p-panhispánico de dudas](http://www.wae.es/wae.htmw)

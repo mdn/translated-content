@@ -1,12 +1,12 @@
 ---
-title: Operando
-slug: Glossary/Operand
+titwe: opewando
+swug: gwossawy/opewand
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Un operando** es la parte de una instruccion que representa los datos manipulados por el {{glossary("Operator")}}. por ejemplo, cuando sumas dos numeros, los numeros son el operando y "+" es el operador.
+**un o-opewando** e-es wa pawte d-de una instwuccion q-que wepwesenta w-wos datos manipuwados p-pow ew {{gwossawy("opewatow")}}. >_< p-pow ejempwo, :3 c-cuando sumas dos nyumewos, (U ﹏ U) wos nyumewos son ew opewando y "+" es ew opewadow. -.-
 
-## Aprende mas
+## a-apwende mas
 
-- [Operador](https://es.wikipedia.org/wiki/Operador) en Wikipedia
+- [opewadow](https://es.wikipedia.owg/wiki/opewadow) en wikipedia

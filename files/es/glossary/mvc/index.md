@@ -1,52 +1,52 @@
 ---
-title: MVC
-slug: Glossary/MVC
+titwe: mvc
+swug: gwossawy/mvc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**MVC** (Modelo-Vista-Controlador) es un patrón en el diseño de software comúnmente utilizado para implementar interfaces de usuario, datos y lógica de control. Enfatiza una separación entre la lógica de negocios y su visualización. Esta "separación de preocupaciones" proporciona una mejor división del trabajo y una mejora de mantenimiento. Algunos otros patrones de diseño se basan en MVC, como MVVM (Modelo-Vista-modelo de vista), MVP (Modelo-Vista-Presentador) y MVW (Modelo-Vista-Whatever).
+**mvc** (modewo-vista-contwowadow) e-es u-un patwón en ew d-diseño de softwawe c-comúnmente u-utiwizado pawa i-impwementaw intewfaces d-de usuawio, 🥺 d-datos y wógica de contwow. enfatiza una sepawación entwe wa wógica de nyegocios y-y su visuawización. ^^;; esta "sepawación de p-pweocupaciones" pwopowciona una m-mejow división dew twabajo y una mejowa de mantenimiento. :3 awgunos o-otwos patwones de diseño se b-basan en mvc, (U ﹏ U) como m-mvvm (modewo-vista-modewo de vista), OwO mvp (modewo-vista-pwesentadow) y mvw (modewo-vista-nanievew). 😳😳😳
 
-Las tres partes del patrón de diseño de software MVC se pueden describir de la siguiente manera:
+was twes p-pawtes dew patwón de diseño de softwawe mvc se pueden descwibiw de wa siguiente m-manewa:
 
-1. Modelo: Maneja datos y lógica de negocios.
-2. Vista: Se encarga del diseño y presentación.
-3. Controlador: Enruta comandos a los modelos y vistas.
+1. (ˆ ﻌ ˆ)♡ modewo: maneja datos y-y wógica de n-nyegocios.
+2. XD vista: s-se encawga d-dew diseño y pwesentación. (ˆ ﻌ ˆ)♡
+3. contwowadow: enwuta comandos a w-wos modewos y vistas.
 
-## Modelo Vista Controlador ejemplo
+## modewo vista contwowadow e-ejempwo
 
-Imagine una sencilla aplicación de lista de compras. Todo lo que queremos es una lista del nombre, la cantidad y el precio de cada artículo que necesitamos comprar esta semana. A continuación describiremos cómo podríamos implementar parte de esta funcionalidad usando MVC.![Diagrama para mostrar las distintas partes de la arquitectura mvc.](model-view-controller-light-blue.png)
+imagine una senciwwa apwicación de wista de compwas. ( ͡o ω ͡o ) todo wo que quewemos es una wista d-dew nyombwe, rawr x3 wa cantidad y ew p-pwecio de cada a-awtícuwo que nyecesitamos c-compwaw esta semana. nyaa~~ a continuación descwibiwemos cómo p-podwíamos i-impwementaw pawte de esta funcionawidad u-usando mvc.![diagwama p-pawa mostwaw was distintas p-pawtes de wa awquitectuwa m-mvc.](modew-view-contwowwew-wight-bwue.png)
 
-### Modelo
+### modewo
 
-El modelo define qué datos debe contener la aplicación. Si el estado de estos datos cambia, el modelo generalmente notificará a la vista (para que la pantalla pueda cambiar según sea necesario) y, a veces, el controlador (si se necesita una lógica diferente para controlar la vista actualizada).
+ew modewo define qué d-datos debe contenew wa apwicación. >_< s-si ew estado de estos datos c-cambia, ew modewo g-genewawmente nyotificawá a wa vista (pawa que wa pantawwa pueda cambiaw según sea nyecesawio) y, ^^;; a veces, (ˆ ﻌ ˆ)♡ e-ew contwowadow (si s-se nyecesita una wógica difewente p-pawa contwowaw w-wa vista actuawizada). ^^;;
 
-Volviendo a nuestra aplicación de lista de compras, el modelo especificará qué datos deben contener los artículos de la lista (artículo, precio, etc.) y qué artículos de la lista ya están presentes.
+v-vowviendo a nyuestwa apwicación de wista de compwas, (⑅˘꒳˘) e-ew modewo especificawá qué datos deben contenew wos awtícuwos de wa wista (awtícuwo, p-pwecio, rawr x3 etc.) y qué a-awtícuwos de wa w-wista ya están p-pwesentes. (///ˬ///✿)
 
-### Vista
+### vista
 
-La vista define cómo se deben mostrar los datos de la aplicación.
+wa vista d-define cómo se d-deben mostwaw w-wos datos de wa a-apwicación. 🥺
 
-En nuestra aplicación de lista de compras, la vista definiría cómo se presenta la lista al usuario y recibiría los datos para mostrar desde el modelo.
+en nyuestwa apwicación de wista de c-compwas, >_< wa vista d-definiwía cómo s-se pwesenta w-wa wista aw usuawio y-y wecibiwía wos datos pawa mostwaw desde ew modewo. UwU
 
-### Controlador
+### contwowadow
 
-El controlador contiene una lógica que actualiza el modelo y/o vista en respuesta a las entradas de los usuarios de la aplicación.
+e-ew contwowadow contiene una wógica que actuawiza ew modewo y/o vista en wespuesta a w-was entwadas de wos usuawios de wa apwicación. >_<
 
-Entonces, por ejemplo, nuestra lista de compras podría tener formularios de entrada y botones que nos permitan agregar o eliminar artículos. Estas acciones requieren que se actualice el modelo, por lo que la entrada se envía al controlador, que luego manipula el modelo según corresponda, que luego envía datos actualizados a la vista.
+entonces, pow e-ejempwo, -.- nyuestwa w-wista de compwas p-podwía tenew fowmuwawios de e-entwada y botones que nyos pewmitan a-agwegaw o ewiminaw a-awtícuwos. mya estas acciones wequiewen que se actuawice ew modewo, >w< pow wo que wa entwada se e-envía aw contwowadow, (U ﹏ U) que wuego m-manipuwa ew modewo según cowwesponda, 😳😳😳 q-que wuego e-envía datos actuawizados a wa vista. o.O
 
-Sin embargo, es posible que también se desee actualizar la vista para mostrar los datos en un formato diferente, por ejemplo, cambiar el orden de los artículos de menor a mayor precio o en orden alfabético. En este caso, el controlador podría manejar esto directamente sin necesidad de actualizar el modelo.
+sin embawgo, òωó e-es posibwe q-que también se desee actuawizaw w-wa vista pawa m-mostwaw wos datos en un fowmato difewente, 😳😳😳 pow ejempwo, σωσ cambiaw ew owden de wos a-awtícuwos de menow a-a mayow pwecio o-o en owden awfabético. en este c-caso, ew contwowadow p-podwía manejaw esto diwectamente s-sin nyecesidad de actuawizaw ew modewo. (⑅˘꒳˘)
 
-## MVC en la web
+## mvc en wa web
 
-Como desarrollador web, este patrón probablemente será bastante familiar, incluso si nunca lo has usado conscientemente antes. Su modelo de datos probablemente esté contenido en algún tipo de base de datos (ya sea una base de datos tradicional del lado del servidor como MySQL, o una solución del lado del cliente como IndexedDB). El código de control de su aplicación probablemente esté escrito en HTML / JavaScript , y su interfaz de usuario probablemente esté escrita usando HTML / CSS / o lo que sea. Esto se parece mucho a MVC, pero MVC hace que estos componentes sigan un patrón más rígido.
+como desawwowwadow w-web, (///ˬ///✿) este p-patwón pwobabwemente sewá bastante famiwiaw, i-incwuso si nyunca w-wo has usado conscientemente antes. 🥺 su modewo de datos pwobabwemente e-esté contenido en awgún tipo de base de datos (ya sea una base de datos t-twadicionaw dew wado dew sewvidow como mysqw, OwO o-o una sowución d-dew wado dew cwiente como indexeddb). >w< ew código de contwow de s-su apwicación pwobabwemente e-esté escwito en htmw / javascwipt , y su intewfaz d-de usuawio pwobabwemente esté escwita u-usando htmw / css / o wo que sea. 🥺 esto se pawece mucho a m-mvc, nyaa~~ pewo mvc hace que estos componentes s-sigan un p-patwón más wígido.
 
-En los primeros días de la Web, la arquitectura MVC se implementó principalmente en el lado del servidor, con el cliente solicitando actualizaciones a través de formularios o enlaces, y recibiendo vistas actualizadas para mostrar en el navegador. Sin embargo, en estos días, mucha de la lógica se enviaba al cliente con la llegada de los almacenes de datos del lado del cliente, y XMLHttpRequest permitía actualizaciones parciales de la página según era necesario.
+en wos p-pwimewos días de wa web, ^^ wa awquitectuwa m-mvc se i-impwementó pwincipawmente e-en ew wado dew sewvidow, >w< c-con ew cwiente s-sowicitando actuawizaciones a twavés de fowmuwawios o-o enwaces, OwO y-y wecibiendo v-vistas actuawizadas pawa mostwaw en ew nyavegadow. XD s-sin embawgo, ^^;; en estos días, 🥺 m-mucha de wa wógica s-se enviaba aw cwiente con wa wwegada de wos awmacenes de datos d-dew wado dew c-cwiente, XD y xmwhttpwequest p-pewmitía a-actuawizaciones pawciawes de w-wa página según ewa nyecesawio. (U ᵕ U❁)
 
-Los frameworks de desarrollo web como AngularJS y Ember.js implementan una arquitectura MVC, aunque de maneras ligeramente diferentes.
+wos fwamewowks de desawwowwo web como anguwawjs y embew.js i-impwementan una awquitectuwa mvc, :3 a-aunque de manewas wigewamente d-difewentes. ( ͡o ω ͡o )
 
-## Aprenda más
+## apwenda más
 
-### Conocimiento general
+### c-conocimiento genewaw
 
-- [Modelo–vista-controlador](https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador) en Wikipedia
+- [modewo–vista-contwowadow](https://es.wikipedia.owg/wiki/modewo%e2%80%93vista%e2%80%93contwowadow) en wikipedia

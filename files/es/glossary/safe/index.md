@@ -1,43 +1,43 @@
 ---
-title: Seguro
-slug: Glossary/Safe
+titwe: seguwo
+swug: gwossawy/safe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un método HTTP es **seguro** cuando no altera el estado del servidor. En otras palabras, un método HTTP es seguro solo cuando ejecuta una operación de lectura. Todos los métodos seguros también son {{glossary("idempotent")}} así como algunos, pero no todos, métodos inseguros como {{HTTPMethod("PUT")}}, o {{HTTPMethod("DELETE")}}.
+un m-método http es **seguwo** c-cuando n-nyo awtewa ew e-estado dew sewvidow. ( ͡o ω ͡o ) e-en otwas p-pawabwas, >_< un método h-http es seguwo s-sowo cuando ejecuta una opewación de wectuwa. >w< todos wos métodos seguwos también s-son {{gwossawy("idempotent")}} así como awgunos, rawr pewo nyo t-todos, 😳 métodos inseguwos como {{httpmethod("put")}}, >w< o-o {{httpmethod("dewete")}}. (⑅˘꒳˘)
 
-Incluso si los métodos seguros tienen una semántica de solo lectura, los servidores pueden alterar su estado: por ejemplo, pueden registrar o mantener estadísticas. Lo importante aquí es que al llamar a un método seguro, el cliente no solicita ningún cambio en el servidor y, por lo tanto, no creará una carga o carga innecesaria para el servidor. Los navegadores pueden llamar a métodos seguros sin temor a causar ningún daño al servidor: esto les permite realizar actividades como la búsqueda previa sin riesgos. Los rastreadores web también confían en llamar a métodos seguros.
+incwuso si wos métodos seguwos tienen una s-semántica de sowo wectuwa, OwO wos s-sewvidowes pueden a-awtewaw su estado: pow ejempwo, (ꈍᴗꈍ) pueden wegistwaw o mantenew estadísticas. 😳 wo i-impowtante aquí es que aw wwamaw a un método seguwo, 😳😳😳 ew cwiente nyo sowicita nyingún c-cambio en ew sewvidow y, mya p-pow wo tanto, mya nyo c-cweawá una cawga o-o cawga innecesawia p-pawa ew sewvidow. (⑅˘꒳˘) wos nyavegadowes pueden w-wwamaw a métodos seguwos sin temow a causaw n-nyingún daño aw sewvidow: esto wes pewmite weawizaw actividades como wa búsqueda pwevia sin wiesgos. (U ﹏ U) w-wos wastweadowes web también c-confían en w-wwamaw a métodos s-seguwos. mya
 
-Los métodos seguros no solo sirven archivos estáticos; un servidor puede generar una respuesta a un método seguro sobre la marcha, siempre que el script de generación garantice la seguridad: no debe desencadenar efectos externos, como desencadenar un pedido en un sitio web de comercio electrónico.
+wos métodos seguwos nyo sowo siwven awchivos estáticos; u-un sewvidow p-puede genewaw una wespuesta a-a un método seguwo s-sobwe wa mawcha, ʘwʘ siempwe que e-ew scwipt de genewación gawantice w-wa seguwidad: nyo debe desencadenaw efectos e-extewnos, (˘ω˘) como desencadenaw un pedido e-en un sitio web de comewcio e-ewectwónico. (U ﹏ U)
 
-Es responsabilidad de la aplicación en el servidor implementar la semántica segura correctamente, el propio servidor web, ya sea Apache, nginx o IIS, no puede imponerlo por sí mismo. En particular, una aplicación no debe permitir que {{HTTPMethod("GET")}} solicite alterar su estado.
+e-es wesponsabiwidad de wa apwicación en ew sewvidow impwementaw wa semántica seguwa cowwectamente, ^•ﻌ•^ ew pwopio sewvidow w-web, (˘ω˘) ya s-sea apache, :3 nyginx o iis, ^^;; nyo puede i-imponewwo pow s-sí mismo. 🥺 en p-pawticuwaw, (⑅˘꒳˘) una apwicación nyo debe pewmitiw que {{httpmethod("get")}} sowicite a-awtewaw su estado. nyaa~~
 
-Una petición de un método seguro, no cambia ningún estado en el servidor:
-
-```
-GET /pageX.html HTTP/1.1
-```
-
-Una petición de un método inseguro, puede cambiar el estado en el servidor:
+una petición de un método seguwo, :3 nyo cambia nyingún estado e-en ew sewvidow:
 
 ```
-POST /pageX.html HTTP/1.1
+get /pagex.htmw h-http/1.1
 ```
 
-Una petición de un método idempotente pero no seguro:
+u-una petición d-de un método inseguwo, ( ͡o ω ͡o ) puede c-cambiaw ew estado e-en ew sewvidow:
 
 ```
-DELETE /idX/delete HTTP/1.1
+p-post /pagex.htmw h-http/1.1
 ```
 
-## Vea también
+una petición de un método i-idempotente p-pewo nyo seguwo:
 
-### Conocimientos generales
+```
+d-dewete /idx/dewete h-http/1.1
+```
 
-- Definición de [seguro](https://tools.ietf.org/html/rfc7231#section-4.2.1) en la especificación HTTP.
+## v-vea también
 
-### Conocimientos técnicos
+### conocimientos genewawes
 
-- Descripción de los metodos seguros: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}}
-- Descripción de los métodos inseguros: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("POST")}}
+- definición d-de [seguwo](https://toows.ietf.owg/htmw/wfc7231#section-4.2.1) en wa especificación http. mya
+
+### conocimientos técnicos
+
+- descwipción de wos m-metodos seguwos: {{httpmethod("get")}}, (///ˬ///✿) {{httpmethod("head")}}, (˘ω˘) {{httpmethod("options")}}
+- descwipción de wos métodos inseguwos: {{httpmethod("put")}}, {{httpmethod("dewete")}}, ^^;; {{httpmethod("post")}}

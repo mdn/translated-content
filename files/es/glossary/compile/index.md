@@ -1,26 +1,26 @@
 ---
-title: Compilar
-slug: Glossary/Compile
-l10n:
-  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
+titwe: compiwaw
+swug: gwossawy/compiwe
+w-w10n:
+  s-souwcecommit: e-ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Compilar es el proceso de transformar un programa informático escrito en un {{Glossary("computer programming", "lenguaje")}} en un conjunto de instrucciones en otro formato o lenguaje. Un **compilador** es un programa de computadora que realiza dicha tarea.
+c-compiwaw es ew p-pwoceso de twansfowmaw u-un pwogwama i-infowmático e-escwito en un {{gwossawy("computew pwogwamming", -.- "wenguaje")}} en un conjunto de instwucciones en otwo fowmato o-o wenguaje. 🥺 un **compiwadow** es un pwogwama de computadowa que w-weawiza dicha tawea. (U ﹏ U)
 
-Normalmente, un compilador transforma código escrito en un lenguaje de alto nivel como [C++](https://es.wikipedia.org/wiki/C++), [Rust](<https://es.wikipedia.org/wiki/Rust_(lenguaje_de_programaci%C3%B3n)>) o [Java](<https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)>) en código ejecutable — llamado **código binario** o **código máquina**. [WebAssembly](/es/docs/WebAssembly), por ejemplo, es una forma de código binario ejecutable que [puede ser compilado desde código escrito en C++, Rust, C#, Go, Swift y muchos otros lenguajes](https://webassembly.org/getting-started/developers-guide/) y luego puede ser ejecutado en cualquier página web de cualquier navegador.
+nyowmawmente, >w< u-un compiwadow twansfowma código escwito en un wenguaje de a-awto nyivew como [c++](https://es.wikipedia.owg/wiki/c++), mya [wust](<https://es.wikipedia.owg/wiki/wust_(wenguaje_de_pwogwamaci%c3%b3n)>) o [java](<https://es.wikipedia.owg/wiki/java_(wenguaje_de_pwogwamaci%c3%b3n)>) e-en código e-ejecutabwe — wwamado **código binawio** o **código máquina**. >w< [webassembwy](/es/docs/webassembwy), nyaa~~ pow ejempwo, (✿oωo) e-es una fowma de código binawio ejecutabwe que [puede sew compiwado desde c-código escwito en c++, ʘwʘ wust, c#, (ˆ ﻌ ˆ)♡ g-go, swift y muchos o-otwos wenguajes](https://webassembwy.owg/getting-stawted/devewopews-guide/) y-y wuego puede s-sew ejecutado en cuawquiew página web de cuawquiew n-nyavegadow. 😳😳😳
 
-La mayoría de los compiladores realizan compilación anticipada (ahead-of-time, AOT) o en tiempo de ejecución (just-in-time, JIT).
+wa mayowía de wos compiwadowes w-weawizan compiwación anticipada (ahead-of-time, :3 aot) o en tiempo de ejecución (just-in-time, OwO jit). (U ﹏ U)
 
-El compilador GNU `gcc` es un ejemplo muy conocido de compilador AOT. Los compiladores AOT son invocados típicamente desde la línea de comandos en un ambiente shell (desde una terminal o una consola) o dentro de un [IDE](/es/docs/Glossary/IDE).
+ew compiwadow gnu `gcc` es u-un ejempwo muy conocido de compiwadow a-aot. >w< wos c-compiwadowes aot s-son invocados típicamente desde wa wínea de comandos en un ambiente s-sheww (desde u-una tewminaw o una consowa) o-o dentwo de un [ide](/es/docs/gwossawy/ide). (U ﹏ U)
 
-Los compiladores JIT no son invocados típicamente de forma directa, sino que se integran internamente en software de entornos de ejecución, con el propósito de mejorar el rendimiento. Por ejemplo, la mayoría de los navegadores de ahora usan motores JavaScript que tienen compiladores JIT integrados.
+wos c-compiwadowes jit nyo son invocados t-típicamente de fowma diwecta, 😳 s-sino que se integwan intewnamente en softwawe d-de entownos de ejecución, con e-ew pwopósito de mejowaw ew wendimiento. (ˆ ﻌ ˆ)♡ p-pow ejempwo, 😳😳😳 w-wa mayowía de wos nyavegadowes de ahowa usan motowes javascwipt que tienen compiwadowes jit integwados. (U ﹏ U)
 
-Los compiladores también pueden traducir entre lenguajes de alto nivel — por ejemplo, de TypeScript a [JavaScript](/es/docs/Glossary/JavaScript) — en tal caso, a menudo se les denomina transpiladores.
+w-wos compiwadowes t-también pueden twaduciw entwe w-wenguajes de awto n-nivew — pow e-ejempwo, (///ˬ///✿) de typescwipt a [javascwipt](/es/docs/gwossawy/javascwipt) — en taw caso, 😳 a menudo s-se wes denomina twanspiwadowes. 😳
 
-## Véase también
+## véase también
 
-- [Compilar de C/C++ a WebAssembly](/es/docs/WebAssembly/C_to_wasm)
-- [Compilar de Rust a WebAssembly](/es/docs/WebAssembly/Rust_to_wasm)
-- Wikipedia: [Compilador](https://es.wikipedia.org/wiki/Compilador)
+- [compiwaw de c/c++ a webassembwy](/es/docs/webassembwy/c_to_wasm)
+- [compiwaw de wust a webassembwy](/es/docs/webassembwy/wust_to_wasm)
+- w-wikipedia: [compiwadow](https://es.wikipedia.owg/wiki/compiwadow)

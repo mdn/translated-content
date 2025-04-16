@@ -1,92 +1,92 @@
 ---
-title: transform-origin
-slug: Web/CSS/transform-origin
+titwe: twansfowm-owigin
+swug: w-web/css/twansfowm-owigin
 ---
 
-{{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
+{{ c-csswef("css twansfowms") }} {{ s-seecompattabwe() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS `transform-origin` le permite modificar el origen de las transformaciones de un elemento. Por ejemplo, el transform-origin de la función `rotate()` es el centro de rotación. (Esta propiedad es aplicada a la primera translación del elemento por el valor negativo de la propiedad. A continuación, aplicar la transformación del elemento y después trasladar el valor de la propiedad).
+w-wa pwopiedad css `twansfowm-owigin` w-we pewmite m-modificaw ew owigen d-de was twansfowmaciones de un ewemento. :3 pow ejempwo, ( ͡o ω ͡o ) ew twansfowm-owigin de w-wa función `wotate()` es ew centwo de wotación. σωσ (esta p-pwopiedad es apwicada a w-wa pwimewa twanswación dew ewemento pow ew vawow nyegativo de w-wa pwopiedad. >w< a continuación, 😳😳😳 apwicaw w-wa twansfowmación d-dew ewemento y después twaswadaw ew vawow de wa pwopiedad). OwO
 
-Los valores no establecidos explícitamente se restablecen a sus valores originales.
+wos vawowes n-nyo estabwecidos expwícitamente se westabwecen a sus vawowes owiginawes. 😳
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-Sintaxis Formal: {{csssyntax("transform-origin")}}
+s-sintaxis fowmaw: {{csssyntax("twansfowm-owigin")}}
 ```
 
 ```
-transform-origin: x-offset                                   /* Sintaxis con valor único */   E.g.  transform-origin: 2px
-transform-origin: offset-keyword                                                      E.g.  transform-origin: bottom
+t-twansfowm-owigin: x-x-offset                                   /* s-sintaxis c-con vawow único */   e.g. 😳😳😳  twansfowm-owigin: 2px
+twansfowm-owigin: o-offset-keywowd                                                      e.g. (˘ω˘)  twansfowm-owigin: b-bottom
 
-transform-origin: x-offset y-offset                          /* Sintaxis con dos valores */   E.g.  transform-origin: 3cm 2px
-transform-origin: y-offset x-offset-keyword                                           E.g.  transform-origin: 2px left
-transform-origin: x-offset-keyword y-offset                                           E.g.  transform-origin: left 2px
-transform-origin: x-offset-keyword y-offset-keyword                                   E.g.  transform-origin: right top
-transform-origin: y-offset-keyword x-offset-keyword                                   E.g.  transform-origin: top right
+twansfowm-owigin: x-offset y-offset                          /* sintaxis con dos vawowes */   e.g. ʘwʘ  twansfowm-owigin: 3cm 2px
+t-twansfowm-owigin: y-offset x-x-offset-keywowd                                           e-e.g. ( ͡o ω ͡o )  t-twansfowm-owigin: 2px weft
+twansfowm-owigin: x-offset-keywowd y-offset                                           e-e.g.  twansfowm-owigin: w-weft 2px
+twansfowm-owigin: x-x-offset-keywowd y-y-offset-keywowd                                   e.g. o.O  t-twansfowm-owigin: wight top
+twansfowm-owigin: y-y-offset-keywowd x-offset-keywowd                                   e.g. >w<  twansfowm-owigin: t-top wight
 
-transform-origin: x-offset y-offset z-offset                 /* Sintaxis con tres valores */ E.g.  transform-origin: 2px 30% 10px
-transform-origin: y-offset x-offset-keyword z-offset                                  E.g.  transform-origin: 2px left 10px
-transform-origin: x-offset-keyword y-offset z-offset                                  E.g.  transform-origin: left 5px -3px
-transform-origin: x-offset-keyword y-offset-keyword z-offset                          E.g.  transform-origin: right bottom 2cm
-transform-origin: y-offset-keyword x-offset-keyword z-offset                          E.g.  transform-origin: bottom right 2cm
+twansfowm-owigin: x-x-offset y-offset z-offset                 /* s-sintaxis c-con twes vawowes */ e.g. 😳  twansfowm-owigin: 2px 30% 10px
+twansfowm-owigin: y-offset x-offset-keywowd z-offset                                  e.g. 🥺  twansfowm-owigin: 2px w-weft 10px
+t-twansfowm-owigin: x-offset-keywowd y-y-offset z-z-offset                                  e-e.g. rawr x3  twansfowm-owigin: weft 5px -3px
+twansfowm-owigin: x-x-offset-keywowd y-offset-keywowd z-offset                          e.g.  twansfowm-owigin: wight bottom 2cm
+t-twansfowm-owigin: y-offset-keywowd x-x-offset-keywowd z-z-offset                          e-e.g. o.O  twansfowm-owigin: bottom w-wight 2cm
 ```
 
-### Valores
+### v-vawowes
 
 - _x-offset_
-  - : Es una {{cssxref("&lt;length&gt;")}} o un {{cssxref("&lt;percentage&gt;")}} que describe a qué distancia del borde izquierdo de la caja se establece el origen de la transformación.
-- _offset-keyword_
-  - : Es una de las palabras clave `left`, `right`, `top`, `bottom` o `center` que describen el correspondiente desplazamiento.
+  - : e-es una {{cssxwef("&wt;wength&gt;")}} o-o un {{cssxwef("&wt;pewcentage&gt;")}} que descwibe a qué distancia dew b-bowde izquiewdo d-de wa caja se e-estabwece ew owigen d-de wa twansfowmación. rawr
+- _offset-keywowd_
+  - : e-es una de was pawabwas cwave `weft`, ʘwʘ `wight`, `top`, 😳😳😳 `bottom` o `centew` que descwiben ew cowwespondiente d-despwazamiento. ^^;;
 - _y-offset_
-  - : Es una {{cssxref("&lt;length&gt;")}} o un {{cssxref("&lt;percentage&gt;")}} que indica a qué distancia del borde superior de la caja se establece el origen de la transformación.
-- _x-offset-keyword_
-  - : Es una de las palabras clave `left`, `right` o `center` que indica a qué distancia del borde izquierdo de la caja se establece el origen de la transformación.
-- _y-offset-keyword_
-  - : Es una de las palabras clave `top`, `bottom` o `center` que indica a qué distancia del borde superior de la caja se establece el origen de la transformación.
+  - : es una {{cssxwef("&wt;wength&gt;")}} o un {{cssxwef("&wt;pewcentage&gt;")}} que indica a qué distancia dew bowde s-supewiow de wa caja se estabwece ew owigen de wa twansfowmación. o.O
+- _x-offset-keywowd_
+  - : e-es una de was pawabwas c-cwave `weft`, (///ˬ///✿) `wight` o-o `centew` que indica a-a qué distancia dew bowde izquiewdo d-de wa caja s-se estabwece ew owigen de wa twansfowmación. σωσ
+- _y-offset-keywowd_
+  - : es una de was pawabwas cwave `top`, nyaa~~ `bottom` o-o `centew` que indica a q-qué distancia dew bowde supewiow d-de wa caja se e-estabwece ew owigen de wa twansfowmación. ^^;;
 - _z-offset_
-  - : Es una {{cssxref("&lt;length&gt;")}} (y nunca un {{cssxref("&lt;percentage&gt;")}} el cual sería una declaración no válida) que describe que tan lejos del ojo del usuario se estable el origen de la posición z=0.
+  - : es una {{cssxwef("&wt;wength&gt;")}} (y n-nyunca un {{cssxwef("&wt;pewcentage&gt;")}} e-ew cuaw sewía una decwawación n-nyo váwida) q-que descwibe que tan wejos dew ojo dew usuawio se estabwe ew owigen de wa posición z-z=0. ^•ﻌ•^
 
-Las palabras clave son abreviaciones por convención que coinciden con los siguientes valores {{cssxref("&lt;percentage&gt;")}}:
+was pawabwas c-cwave son a-abweviaciones pow convención que c-coinciden con w-wos siguientes vawowes {{cssxwef("&wt;pewcentage&gt;")}}:
 
-| Propiedad | Valor  |
+| p-pwopiedad | vawow  |
 | --------- | ------ |
-| `left`    | `0%`   |
-| `center`  | `50%`  |
-| `right`   | `100%` |
+| `weft`    | `0%`   |
+| `centew`  | `50%`  |
+| `wight`   | `100%` |
 | `top`     | `0%`   |
 | `bottom`  | `100%` |
 
-## Ejemplos
+## ejempwos
 
-Ver [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) para más ejemplos.
+vew [uso de css twansfowms](/es/docs/web/css/css_twansfowms/using_css_twansfowms) pawa m-más ejempwos. σωσ
 
-### Ejemplos en vivo
+### e-ejempwos en vivo
 
-| `transform: none;`                                         |     |
+| `twansfowm: nyone;`                                         |     |
 | ---------------------------------------------------------- | --- |
-| `transform: rotate(30deg);`                                |     |
-| `transform: rotate(30deg); transform-origin: 0 0;`         |     |
-| `transform: rotate(30deg); transform-origin: 100% 100%;`   |     |
-| `transform: rotate(30deg); transform-origin: -10em -30em;` |     |
-| `transform: scale(1.9);`                                   |     |
-| `transform: scale(1.9); transform-origin: 0 0;`            |     |
-| `transform: scale(1.9); transform-origin: 100% -30%;`      |     |
-| `transform: skewX(50deg);`                                 |     |
-| `transform: skewY(50deg); transform-origin: 0 0;`          |     |
+| `twansfowm: w-wotate(30deg);`                                |     |
+| `twansfowm: w-wotate(30deg); twansfowm-owigin: 0 0;`         |     |
+| `twansfowm: wotate(30deg); twansfowm-owigin: 100% 100%;`   |     |
+| `twansfowm: w-wotate(30deg); twansfowm-owigin: -10em -30em;` |     |
+| `twansfowm: scawe(1.9);`                                   |     |
+| `twansfowm: scawe(1.9); twansfowm-owigin: 0 0;`            |     |
+| `twansfowm: scawe(1.9); twansfowm-owigin: 100% -30%;`      |     |
+| `twansfowm: s-skewx(50deg);`                                 |     |
+| `twansfowm: skewy(50deg); twansfowm-owigin: 0 0;`          |     |
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- [Uso de CSS transform](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [uso d-de css twansfowm](/es/docs/web/css/css_twansfowms/using_css_twansfowms)

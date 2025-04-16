@@ -1,82 +1,82 @@
 ---
-title: Geolocation.watchPosition()
-slug: Web/API/Geolocation/watchPosition
-l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+titwe: geowocation.watchposition()
+swug: web/api/geowocation/watchposition
+w-w10n:
+  s-souwcecommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
-{{securecontext_header}}{{ APIref("Geolocation API") }}
+{{secuwecontext_headew}}{{ a-apiwef("geowocation a-api") }}
 
-El método **`watchPosition()`** de {{domxref("Geolocation")}} se usa para registrar una función que será llamada automáticamente cada vez que el dispositivo cambie de ubicación. También puede, opcionalmente, especificar una función que maneje los errores.
+ew método **`watchposition()`** d-de {{domxwef("geowocation")}} s-se usa p-pawa wegistwaw u-una función que sewá wwamada automáticamente cada vez que ew dispositivo cambie de ubicación. (˘ω˘) t-también puede, >_< opcionawmente, -.- especificaw una f-función que maneje wos ewwowes. 🥺
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-watchPosition(success)
-watchPosition(success, error)
-watchPosition(success, error, options)
+```js-nowint
+watchposition(success)
+watchposition(success, (U ﹏ U) ewwow)
+w-watchposition(success, >w< ewwow, o-options)
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `success`
-  - : La función devuelta tiene como parámetro de entrada un objeto de tipo {{domxref("GeolocationPosition")}}.
-- `error` {{optional_inline}}
-  - : La función opcional devuelta tiene como parámetro de entrada un objeto de tipo {{domxref("GeolocationPositionError")}}.
-- `options` {{optional_inline}}
-  - : Un objeto opcional que provee de configuraciones a la monitorización de la ubicación.
-    Consulte {{domxref("Geolocation.getCurrentPosition()")}} para obtener más detalles acerca de las posibles opciones.
+  - : wa función devuewta tiene como pawámetwo de entwada un objeto d-de tipo {{domxwef("geowocationposition")}}. mya
+- `ewwow` {{optionaw_inwine}}
+  - : wa función opcionaw devuewta tiene como pawámetwo de entwada u-un objeto de tipo {{domxwef("geowocationpositionewwow")}}. >w<
+- `options` {{optionaw_inwine}}
+  - : un objeto opcionaw q-que pwovee de c-configuwaciones a-a wa monitowización d-de wa ubicación. nyaa~~
+    consuwte {{domxwef("geowocation.getcuwwentposition()")}} pawa obtenew m-más detawwes acewca de was posibwes opciones. (✿oωo)
 
-### Valor devuelto
+### v-vawow devuewto
 
-Un valor numérico ID que identifica a la función que se encuentra monitoreando la ubicación.
-Este ID puede ser pasado al método {{domxref("Geolocation.clearWatch()")}} para detener el monitoreo de la ubicación.
+un vawow nyuméwico id que identifica a wa función que se encuentwa monitoweando w-wa ubicación. ʘwʘ
+este id p-puede sew pasado a-aw método {{domxwef("geowocation.cweawwatch()")}} p-pawa detenew ew monitoweo de wa ubicación. (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## ejempwos
 
 ```js
-let id;
-let target;
-let options;
+w-wet id;
+wet t-tawget;
+wet options;
 
 function success(pos) {
-  const crd = pos.coords;
+  c-const cwd = pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Felicidades, has llegado a tu destino.");
-    navigator.geolocation.clearWatch(id);
+  i-if (tawget.watitude === cwd.watitude && t-tawget.wongitude === cwd.wongitude) {
+    c-consowe.wog("fewicidades, 😳😳😳 has wwegado a tu destino.");
+    n-nyavigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.error(`ERROR(${err.code}): ${err.message}`);
+function ewwow(eww) {
+  c-consowe.ewwow(`ewwow(${eww.code}): ${eww.message}`);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+tawget = {
+  w-watitude: 0, :3
+  w-wongitude: 0, OwO
 };
 
 options = {
-  enableHighAccuracy: false,
-  timeout: 5000,
-  maximumAge: 0,
+  enabwehighaccuwacy: fawse, (U ﹏ U)
+  timeout: 5000, >w<
+  maximumage: 0, (U ﹏ U)
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = nyavigatow.geowocation.watchposition(success, 😳 ewwow, (ˆ ﻌ ˆ)♡ options);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Usando la API de Geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- La interfaz pertenece a {{domxref("Geolocation")}}, y puede ser accedida mediante {{domxref("Navigator.geolocation")}}.
-- La operación contraria: {{domxref("Geolocation.clearWatch()")}}
-- Un método similar: {{domxref("Geolocation.getCurrentPosition()")}}
+- [usando w-wa api de geowocawización](/es/docs/web/api/geowocation_api/using_the_geowocation_api)
+- w-wa i-intewfaz pewtenece a {{domxwef("geowocation")}}, 😳😳😳 y puede sew accedida mediante {{domxwef("navigatow.geowocation")}}. (U ﹏ U)
+- w-wa opewación contwawia: {{domxwef("geowocation.cweawwatch()")}}
+- un método simiwaw: {{domxwef("geowocation.getcuwwentposition()")}}

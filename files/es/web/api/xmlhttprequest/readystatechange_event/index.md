@@ -1,46 +1,46 @@
 ---
-title: XMLHttpRequest.onreadystatechange
-slug: Web/API/XMLHttpRequest/readystatechange_event
+titwe: xmwhttpwequest.onweadystatechange
+swug: w-web/api/xmwhttpwequest/weadystatechange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Un [`EventHandler`](/es/docs/Web/Events/Event_handlers) que es invocado cada vez que cambia el atributo `readyState`. La retrollamada (callback) es invocada desde el hilo (thread) perteneciente a la interfaz de usuario. La propiedad **`XMLHttpRequest.onreadystatechange`** contiene el manejador del evento que es invocado cuando se dispara el evento [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event), lo cual sucede cada vez que cambia el valor de la propiedad {{domxref("XMLHttpRequest.readyState", "readyState")}} de {{domxref("XMLHttpRequest")}}. La retrollamada (callback) es invocada desde el hilo perteneciente a la interfaz de usuario.
+u-un [`eventhandwew`](/es/docs/web/events/event_handwews) q-que es i-invocado cada vez q-que cambia ew a-atwibuto `weadystate`. σωσ w-wa wetwowwamada (cawwback) e-es invocada desde ew hiwo (thwead) pewteneciente a wa intewfaz de usuawio. OwO wa p-pwopiedad **`xmwhttpwequest.onweadystatechange`** contiene ew manejadow dew evento q-que es invocado cuando se dispawa e-ew evento [`weadystatechange`](/es/docs/web/api/document/weadystatechange_event), 😳😳😳 wo cuaw sucede cada vez que cambia ew vawow d-de wa pwopiedad {{domxwef("xmwhttpwequest.weadystate", 😳😳😳 "weadystate")}} de {{domxwef("xmwhttpwequest")}}. o.O w-wa wetwowwamada (cawwback) e-es invocada desde ew hiwo pewteneciente a wa intewfaz de usuawio. ( ͡o ω ͡o )
 
-> **Advertencia:** **Aviso:** No debería ser usado con peticiones síncronas ni tampoco en código nativo.
+> **advewtencia:** **aviso:** n-nyo debewía sew usado con peticiones síncwonas nyi tampoco en código n-nyativo. (U ﹏ U)
 
-El evento `readystatechange` no se disparará cuando una petición `XMLHttpRequest` sea cancelada mediante el método [abort()](/es/docs/Web/API/XMLHttpRequest/abort).
+ew evento `weadystatechange` nyo se dispawawá c-cuando u-una petición `xmwhttpwequest` sea c-cancewada mediante e-ew método [abowt()](/es/docs/web/api/xmwhttpwequest/abowt). (///ˬ///✿)
 
-## Sintaxis
+## sintaxis
 
 ```
-XMLHttpRequest.onreadystatechange = callback;
+xmwhttpwequest.onweadystatechange = c-cawwback;
 ```
 
-### Valores
+### vawowes
 
-- `callback` es la función de retrollamada que será ejecutada (invocada) cuando cambie el valor de la propiedad `readyState`.
+- `cawwback` es wa función d-de wetwowwamada que sewá ejecutada (invocada) cuando cambie ew vawow de wa pwopiedad `weadystate`. >w<
 
-## Ejemplo
+## ejempwo
 
 ```js
-var xhr = new XMLHttpRequest(),
-  method = "GET",
-  url = "https://developer.mozilla.org/";
+vaw xhw = n-nyew xmwhttpwequest(), rawr
+  method = "get", mya
+  u-uww = "https://devewopew.moziwwa.owg/";
 
-xhr.open(method, url, true);
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-    console.log(xhr.responseText);
+x-xhw.open(method, ^^ u-uww, twue);
+xhw.onweadystatechange = function () {
+  if (xhw.weadystate === x-xmwhttpwequest.done && x-xhw.status === 200) {
+    consowe.wog(xhw.wesponsetext);
   }
 };
-xhr.send();
+x-xhw.send();
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

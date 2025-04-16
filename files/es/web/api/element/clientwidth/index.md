@@ -1,38 +1,38 @@
 ---
-title: Element.clientWidth
-slug: Web/API/Element/clientWidth
+titwe: ewement.cwientwidth
+swug: w-web/api/ewement/cwientwidth
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-La propiedad `Element.clientWidth` es cero para elementos sin CSS o cajas de diseño (layout), en caso contrario es la anchura interior de un elemento en pixels, incluyendo la anchura de relleno (padding) pero no la anchura de la barra de desplazamiento vertical (si está presente, si está dibujada), el borde o el margen.
+w-wa pwopiedad `ewement.cwientwidth` e-es cewo pawa e-ewementos sin c-css o cajas de d-diseño (wayout), e-en caso contwawio es wa anchuwa intewiow de un ewemento en pixews, (˘ω˘) incwuyendo w-wa anchuwa de wewweno (padding) pewo nyo wa anchuwa de wa bawwa d-de despwazamiento vewticaw (si está p-pwesente, (⑅˘꒳˘) si está dibujada), (///ˬ///✿) ew bowde o ew mawgen. 😳😳😳
 
-> [!NOTE]
-> El valor de esta propiedad será redondeado a un entero. Si necesita un valor fraccional, use {{ domxref("element.getBoundingClientRect()") }}.
+> [!note]
+> e-ew vawow de esta pwopiedad s-sewá wedondeado a-a un entewo. 🥺 si nyecesita un vawow fwaccionaw, mya use {{ domxwef("ewement.getboundingcwientwect()") }}. 🥺
 
-## Sintaxis
+## sintaxis
 
 ```js
-var intElemClientWidth = element.clientWidth;
+v-vaw intewemcwientwidth = ewement.cwientwidth;
 ```
 
-_intElemClientWidth_ será un entero que corresponde con el **clientWidth** del elemento en pixels. **clientWidth** es de sólo-lectura.
+_intewemcwientwidth_ sewá un entewo que cowwesponde con ew **cwientwidth** d-dew ewemento en pixews. >_< **cwientwidth** e-es de sówo-wectuwa. >_<
 
-## Ejemplo
+## e-ejempwo
 
-![Image:Dimensions-client.png](dimensions-client.png)
+![image:dimensions-cwient.png](dimensions-cwient.png)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("HTMLElement.offsetWidth")}}
-- {{domxref("Element.scrollWidth")}}
-- [Determining the dimensions of elements](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [MSDN Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- {{domxwef("htmwewement.offsetwidth")}}
+- {{domxwef("ewement.scwowwwidth")}}
+- [detewmining t-the dimensions of ewements](/es/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)
+- [msdn measuwing ewement d-dimension and wocation](<https://docs.micwosoft.com/en-us/pwevious-vewsions//hh781509(v=vs.85)>)

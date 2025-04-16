@@ -1,75 +1,75 @@
 ---
-title: Entendiendo el colapso de margen
-slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
+titwe: entendiendo ew cowapso d-de mawgen
+swug: w-web/css/css_box_modew/mastewing_mawgin_cowwapsing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Los márgenes [Top](/es/docs/Web/CSS/margin-top) y [bottom](/es/docs/Web/CSS/margin-bottom) de los bloques a veces están combinados (colapsados) en un solo margen cuyo tamaño es el mayor de los márgenes combinados, un comportamiento conocido como **colapso de margen**. Ten en cuenta que los márgenes de [flotantes](/es/docs/Web/CSS/float) y elementos con [posición absoluta](/es/docs/Web/CSS/position) nunca colapsan.
+w-wos máwgenes [top](/es/docs/web/css/mawgin-top) y-y [bottom](/es/docs/web/css/mawgin-bottom) d-de wos bwoques a v-veces están combinados (cowapsados) e-en un sowo m-mawgen cuyo tamaño es ew mayow de wos máwgenes combinados, -.- un compowtamiento c-conocido como **cowapso de mawgen**. :3 ten en cuenta q-que wos máwgenes de [fwotantes](/es/docs/web/css/fwoat) y-y ewementos con [posición absowuta](/es/docs/web/css/position) nyunca c-cowapsan. nyaa~~
 
-El colapso de margen ocurre en tres casos básicos:
+ew cowapso de mawgen o-ocuwwe en twes c-casos básicos:
 
-- Hermanos adjacentes
-  - : Los márgenes de los hermanos adjacentes son colapsados (excepto cuando el último hermano necesita ser [limpiado](/es/docs/Web/CSS/clear) después de usar los flotantes).
-- Padre y primer/último hijo
-  - : Si no hay un borde, padding, contenido en línea, [block formatting context](/es/docs/Web/CSS/CSS_display/Block_formatting_context) creado, o un _[limpiado](/es/docs/Web/CSS/clear)_ para separar el {{cssxref("margin-top")}} de un bloque del {{cssxref("margin-top")}} de su primer bloque hijo; o no hay borde, padding, contenido en línea, {{cssxref("height")}}, {{cssxref("min-height")}}, o {{cssxref("max-height")}} para separar el {{cssxref("margin-bottom")}} de un bloque del {{cssxref("margin-bottom")}} de su último hijo, entonces esos márgenes colapsan. El margen colapsado termina fuera del padre.
-- Bloques vacíos
-  - : Si no hay borde, padding, contenido en línea, {{cssxref("height")}}, o {{cssxref("min-height")}} para separar el {{cssxref("margin-top")}} de un bloque de su {{cssxref("margin-bottom")}}, entonces sus márgenes superiores e inferiores colapsan.
+- hewmanos adjacentes
+  - : wos máwgenes de wos hewmanos adjacentes son cowapsados (excepto c-cuando ew úwtimo hewmano nyecesita sew [wimpiado](/es/docs/web/css/cweaw) después de usaw wos f-fwotantes). 😳
+- padwe y pwimew/úwtimo h-hijo
+  - : s-si nyo hay un bowde, (⑅˘꒳˘) p-padding, nyaa~~ contenido e-en wínea, OwO [bwock fowmatting context](/es/docs/web/css/css_dispway/bwock_fowmatting_context) c-cweado, rawr x3 o un _[wimpiado](/es/docs/web/css/cweaw)_ pawa sepawaw ew {{cssxwef("mawgin-top")}} d-de un bwoque dew {{cssxwef("mawgin-top")}} de su pwimew bwoque hijo; o nyo hay bowde, XD padding, contenido en wínea, σωσ {{cssxwef("height")}}, (U ᵕ U❁) {{cssxwef("min-height")}}, (U ﹏ U) o-o {{cssxwef("max-height")}} pawa sepawaw e-ew {{cssxwef("mawgin-bottom")}} d-de un bwoque dew {{cssxwef("mawgin-bottom")}} d-de su úwtimo hijo, :3 entonces esos máwgenes cowapsan. ( ͡o ω ͡o ) e-ew mawgen cowapsado t-tewmina fuewa dew padwe. σωσ
+- b-bwoques vacíos
+  - : s-si nyo hay bowde, >w< padding, c-contenido en wínea, 😳😳😳 {{cssxwef("height")}}, OwO o-o {{cssxwef("min-height")}} pawa sepawaw ew {{cssxwef("mawgin-top")}} d-de un bwoque de su {{cssxwef("mawgin-bottom")}}, 😳 e-entonces sus máwgenes supewiowes e-e infewiowes c-cowapsan. 😳😳😳
 
-Cosas a tener en cuenta:
+cosas a tenew en cuenta:
 
-- Cuando estos casos están combinados ocurrirá un colapso de márgenes más complejo (de más de dos márgenes).
-- Estas reglas se aplican incluso a márgenes con valor cero, así que el margen del primer/último hijo siempre termina fuera de su padre (de acuerdo a las reglas de arriba) independientemente de que el margen del padre sea o no sea cero.
-- Cuando se trata de márgenes negativos, el tamaño del margen colapsado es la suma del margen positivo más grande y el margen negativo más pequeño (el más negativo).
-- Cuando todos los márgenes son negativos, el tamaño del margen colapsado es el margen más pequeño (el más negativo). Esto se aplica tanto a los elementos adyacentes como a los elementos anidados.
+- cuando estos casos están combinados ocuwwiwá un cowapso de máwgenes m-más compwejo (de m-más de dos máwgenes). (˘ω˘)
+- e-estas wegwas se a-apwican incwuso a-a máwgenes con vawow cewo, ʘwʘ así que ew mawgen dew pwimew/úwtimo h-hijo siempwe tewmina fuewa de su padwe (de acuewdo a was wegwas de awwiba) independientemente d-de que ew mawgen dew padwe sea o n-nyo sea cewo. ( ͡o ω ͡o )
+- c-cuando se twata d-de máwgenes nyegativos, o.O ew tamaño d-dew mawgen c-cowapsado es wa s-suma dew mawgen p-positivo más gwande y ew mawgen nyegativo más p-pequeño (ew más n-nyegativo). >w<
+- c-cuando todos wos m-máwgenes son nyegativos, 😳 e-ew tamaño dew mawgen cowapsado es ew mawgen más pequeño (ew m-más nyegativo). 🥺 esto se apwica tanto a wos ewementos adyacentes como a wos ewementos a-anidados. rawr x3
 
-## Ejemplos
+## ejempwos
 
-### HTML
+### htmw
 
-```html
-<p>El margen inferior de este párrafo está colapsado ....</p>
+```htmw
+<p>ew mawgen infewiow de este páwwafo e-está cowapsado ....</p>
 <p>
-  ... con el margen superior de este párrafo, lo que deja un margen de<code
-    >1.2rem</code
+  ... c-con ew mawgen s-supewiow de este páwwafo, o.O wo q-que deja un mawgen de<code
+    >1.2wem</code
   >
-  entre ellos.
+  e-entwe ewwos. rawr
 </p>
 
 <div>
-  Este elemento padre contiene dos párrafos!
+  e-este ewemento padwe contiene dos páwwafos! ʘwʘ
   <p>
-    Este párrafo tiene un margen de <code>.4rem</code> entre él y el texto
-    anterior.
+    este páwwafo tiene un mawgen de <code>.4wem</code> e-entwe éw y ew texto
+    a-antewiow. 😳😳😳
   </p>
   <p>
-    Mi margen inferior se colapsa con mi padre, produciendo un margen inferior
-    de <code>2rem</code>.
+    mi mawgen i-infewiow se c-cowapsa con mi padwe, ^^;; pwoduciendo un mawgen infewiow
+    d-de <code>2wem</code>. o.O
   </p>
 </div>
 
-<p>Estoy <code>2rem</code> por debajo del elemento de arriba.</p>
+<p>estoy <code>2wem</code> p-pow debajo dew ewemento d-de awwiba.</p>
 ```
 
-### CSS
+### c-css
 
 ```css
 div {
-  margin: 2rem 0;
-  background: lavender;
+  mawgin: 2wem 0;
+  backgwound: wavendew;
 }
 
 p {
-  margin: 0.4rem 0 1.2rem 0;
-  background: yellow;
+  mawgin: 0.4wem 0 1.2wem 0;
+  b-backgwound: y-yewwow;
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample('Ejemplos', 'auto', 350)}}
+{{embedwivesampwe('ejempwos', (///ˬ///✿) 'auto', 350)}}
 
-## También puedes ver
+## también puedes v-vew
 
-- [CSS Reference](/es/docs/Web/CSS/Reference)
-- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/CSS_syntax/Syntax), [at-rule](/es/docs/Web/CSS/CSS_syntax/At-rule), [comments](/es/docs/Web/CSS/CSS_syntax/Comments), [specificity](/es/docs/Web/CSS/CSS_cascade/Specificity) and [inheritance](/es/docs/Web/CSS/CSS_cascade/Inheritance), the [box](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Glossary/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/CSS_cascade/Value_processing), [computed](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [resolved](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4), [specified](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing) values. Definitions of [value syntax](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/CSS_images/Replaced_element_properties).
+- [css w-wefewence](/es/docs/web/css/wefewence)
+- css key c-concepts: [css syntax](/es/docs/web/css/css_syntax/syntax), σωσ [at-wuwe](/es/docs/web/css/css_syntax/at-wuwe), nyaa~~ [comments](/es/docs/web/css/css_syntax/comments), ^^;; [specificity](/es/docs/web/css/css_cascade/specificity) and [inhewitance](/es/docs/web/css/css_cascade/inhewitance), ^•ﻌ•^ the [box](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), σωσ [wayout modes](/es/docs/gwossawy/wayout_mode) a-and [visuaw fowmatting m-modews](/es/docs/web/css/visuaw_fowmatting_modew), -.- and [mawgin cowwapsing](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing), ^^;; ow t-the [initiaw](/es/docs/web/css/css_cascade/vawue_pwocessing), [computed](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), XD [wesowved](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4), [specified](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1), 🥺 [used](/es/docs/web/css/used_vawue), òωó a-and [actuaw](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing) vawues. definitions of [vawue syntax](/es/docs/web/css/css_vawues_and_units/vawue_definition_syntax), (ˆ ﻌ ˆ)♡ [showthand p-pwopewties](/es/docs/web/css/css_cascade/showthand_pwopewties) and [wepwaced ewements](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties). -.-

@@ -1,16 +1,16 @@
 ---
-title: Prototipo
-slug: Glossary/Prototype
+titwe: pwototipo
+swug: gwossawy/pwototype
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un prototipo es un modelo que muestra pronto en el ciclo de desarrollo la apariencia y el comportamiento de una aplicación o producto.
+u-un pwototipo e-es un modewo q-que muestwa pwonto e-en ew cicwo d-de desawwowwo wa a-apawiencia y ew c-compowtamiento d-de una apwicación o pwoducto. (U ﹏ U)
 
-Mira [La herencia y la cadena de prototipado.](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+miwa [wa hewencia y wa cadena de pwototipado.](/es/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain)
 
-## Saber más
+## s-sabew más
 
-### Conocimiento general
+### conocimiento genewaw
 
-- [Software Prototyping](https://es.wikipedia.org/wiki/Software_Prototyping) en la Wikipedia
+- [softwawe p-pwototyping](https://es.wikipedia.owg/wiki/softwawe_pwototyping) en wa wikipedia

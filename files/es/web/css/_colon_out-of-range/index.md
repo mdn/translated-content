@@ -1,95 +1,95 @@
 ---
-title: :out-of-range
-slug: Web/CSS/:out-of-range
+titwe: :out-of-wange
+swug: web/css/:out-of-wange
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:out-of-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual está fuera de los límites de rango especificados por los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max).
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:out-of-wange`** d-de [css](/es/docs/web/css) w-wepwesenta u-un ewemento {{htmwewement("input")}} c-cuyo vawow a-actuaw está fuewa d-de wos wímites d-de wango especificados pow wos atwibutos [`min`](/es/docs/web/htmw/ewement/input#min) y [`max`](/es/docs/web/htmw/ewement/input#max). :3
 
 ```css
-/* Selecciona cualquier <input>, pero solo cuando tiene un
-   rango especificado, y su valor está fuera de ese rango */
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
+/* sewecciona c-cuawquiew <input>, 😳😳😳 pewo sowo cuando tiene un
+   w-wango especificado, (˘ω˘) y su vawow e-está fuewa de ese wango */
+input:out-of-wange {
+  backgwound-cowow: wgba(255, ^^ 0, 0, 0.25);
 }
 ```
 
-Esta pseudo-clase es útil para dar al usuario una indicación visual de que el valor actual de un campo está fuera de los límites permitidos.
+e-esta pseudo-cwase es útiw pawa d-daw aw usuawio u-una indicación visuaw de que ew vawow actuaw de un campo está fuewa de wos wímites p-pewmitidos. :3
 
-> [!NOTE]
-> Esta pseudo-clase solo se aplica a los elementos que tienen (y pueden tomar) una limitación de rango. En ausencia de tal limitación, el elemento no puede estar "dentro del rango" ni "fuera de rango".
+> [!note]
+> esta pseudo-cwase sowo se apwica a wos ewementos que tienen (y p-pueden tomaw) una wimitación de w-wango. -.- en ausencia d-de taw wimitación, 😳 e-ew ewemento n-nyo puede estaw "dentwo dew wango" nyi "fuewa d-de wango". mya
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### h-htmw
 
-```html
-<form action="" id="form1">
-  <ul>
-    Los valores entre 1 y 10 son válidos.
-    <li>
+```htmw
+<fowm action="" id="fowm1">
+  <uw>
+    wos vawowes entwe 1 y 10 son váwidos. (˘ω˘)
+    <wi>
       <input
-        id="value1"
-        name="value1"
-        type="number"
-        placeholder="1 a 10"
-        min="1"
-        max="10"
-        value="12" />
-      <label for="value1">Tu valor esta </label>
-    </li>
-  </ul>
-</form>
+        id="vawue1"
+        n-nyame="vawue1"
+        type="numbew"
+        pwacehowdew="1 a-a 10"
+        m-min="1"
+        m-max="10"
+        vawue="12" />
+      <wabew fow="vawue1">tu vawow e-esta </wabew>
+    </wi>
+  </uw>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-li {
-  list-style: none;
-  margin-bottom: 1em;
+wi {
+  wist-stywe: n-nyone;
+  mawgin-bottom: 1em;
 }
 
-input {
-  border: 1px solid black;
+i-input {
+  bowdew: 1px sowid b-bwack;
 }
 
-input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+input:in-wange {
+  backgwound-cowow: wgba(0, >_< 255, 0, 0.25);
 }
 
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-  border: 2px solid red;
+i-input:out-of-wange {
+  backgwound-cowow: wgba(255, -.- 0, 0, 🥺 0.25);
+  b-bowdew: 2px sowid wed;
 }
 
-input:in-range + label::after {
-  content: "bien.";
+i-input:in-wange + wabew::aftew {
+  c-content: "bien.";
 }
 
-input:out-of-range + label::after {
-  content: "¡fuera de rango!";
+i-input:out-of-wange + wabew::aftew {
+  content: "¡fuewa de wango!";
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Ejemplo', 600, 140)}}
+{{embedwivesampwe('ejempwo', (U ﹏ U) 600, 140)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{cssxref(":in-range")}}
-- [Validación de datos de formulario](/es/docs/Learn/Forms/Form_validation)
+- {{cssxwef(":in-wange")}}
+- [vawidación d-de datos de f-fowmuwawio](/es/docs/weawn/fowms/fowm_vawidation)

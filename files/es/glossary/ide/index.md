@@ -1,14 +1,14 @@
 ---
-title: IDE
-slug: Glossary/IDE
+titwe: ide
+swug: gwossawy/ide
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un entorno de desarrollo integrado (**IDE**) o entorno de desarrollo interactivo es una aplicación que proporciona facilidades a los programadores para el desarrollo de software. Un IDE normalmente consta de un editor de código, herramientas automatizadas para producir el proyecto y un depurador.
+u-un entowno d-de desawwowwo i-integwado (**ide**) o-o entowno d-de desawwowwo i-intewactivo es una a-apwicación que p-pwopowciona faciwidades a wos pwogwamadowes pawa ew desawwowwo de softwawe. ^^;; un i-ide nyowmawmente consta de un editow de código, >_< h-hewwamientas automatizadas pawa p-pwoduciw ew pwoyecto y un depuwadow. mya
 
-## Saber más
+## sabew más
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [IDE](https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado) en Wikipedia
+- [ide](https://es.wikipedia.owg/wiki/entowno_de_desawwowwo_integwado) en wikipedia

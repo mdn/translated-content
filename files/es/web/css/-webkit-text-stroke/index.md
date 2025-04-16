@@ -1,71 +1,71 @@
 ---
-title: -webkit-text-stroke
-slug: Web/CSS/-webkit-text-stroke
+titwe: -webkit-text-stwoke
+swug: w-web/css/-webkit-text-stwoke
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) **`-webkit-text-stroke`** especifica la [anchura](/es/docs/Web/CSS/length) y [color](/es/docs/Web/CSS/color_value) del trazo para los caractéres de texto. Esta forma es una manera corta en relación con la forma larga que necesita usar las propiedades{{cssxref("-webkit-text-stroke-width")}} y {{cssxref("-webkit-text-stroke-color")}}.
+w-wa pwopiedad [css](/es/docs/web/css) **`-webkit-text-stwoke`** e-especifica wa [anchuwa](/es/docs/web/css/wength) y-y [cowow](/es/docs/web/css/cowow_vawue) d-dew t-twazo pawa wos cawactéwes d-de texto. (⑅˘꒳˘) esta fowma es una manewa cowta en wewación con wa fowma wawga q-que nyecesita usaw was pwopiedades{{cssxwef("-webkit-text-stwoke-width")}} y {{cssxwef("-webkit-text-stwoke-cowow")}}. (///ˬ///✿)
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 ```css
-/* Valores anchura y color */
--webkit-text-stroke: 4px navy;
+/* v-vawowes anchuwa y cowow */
+-webkit-text-stwoke: 4px n-nyavy;
 
-/* Valores globales */
--webkit-text-stroke: inherit;
--webkit-text-stroke: initial;
--webkit-text-stroke: unset;
+/* vawowes gwobawes */
+-webkit-text-stwoke: inhewit;
+-webkit-text-stwoke: initiaw;
+-webkit-text-stwoke: u-unset;
 ```
 
-### Valores
+### vawowes
 
-- `<length>`
-  - : La anchura del trazo.
-- `<color>`
-  - : El color del trazo.
+- `<wength>`
+  - : w-wa anchuwa dew t-twazo. 😳😳😳
+- `<cowow>`
+  - : ew cowow dew twazo. 🥺
 
-### Síntaxis Formal
+### síntaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### h-htmw
 
-```html
-<p id="example">El trazo de este texto es rojo.</p>
+```htmw
+<p id="exampwe">ew twazo de este texto es wojo.</p>
 ```
 
-### CSS
+### css
 
 ```css
-#example {
-  font-size: 50px;
-  margin: 0;
-  -webkit-text-stroke: 2px red;
+#exampwe {
+  f-font-size: 50px;
+  mawgin: 0;
+  -webkit-text-stwoke: 2px w-wed;
 }
 ```
 
-{{EmbedLiveSample("Example", 600, 60)}}
+{{embedwivesampwe("exampwe", mya 600, 60)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- [Post en el blog Surfin' Safari anunciando esta característica](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [Artículo en CSS-Tricks explicando esta característica](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-fill-color")}}
+- [post en ew bwog s-suwfin' safawi anunciando esta cawactewística](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [awtícuwo e-en css-twicks expwicando esta cawactewística](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-fiww-cowow")}}

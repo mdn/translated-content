@@ -1,59 +1,59 @@
 ---
-title: ::-webkit-progress-bar
-slug: Web/CSS/::-webkit-progress-bar
+titwe: ::-webkit-pwogwess-baw
+swug: web/css/::-webkit-pwogwess-baw
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-progress-bar`** representa la barra entera del elemento {{HTMLElement("progress")}} . Normalmente sólo está visible a partir de la porción rellena de la barra ya que, por defecto se muestra debajo del pseudo-lemento {{ cssxref("::-webkit-progress-value") }}. Es hijo del pseudo-elemento {{cssxref("::-webkit-progress-inner-element")}} y padre del pseudo-elemento {{cssxref("::-webkit-progress-value")}}.
+ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) **`::-webkit-pwogwess-baw`** w-wepwesenta w-wa bawwa entewa d-dew ewemento {{htmwewement("pwogwess")}} . (⑅˘꒳˘) n-nyowmawmente s-sówo está v-visibwe a pawtiw d-de wa powción wewwena de wa bawwa ya que, òωó pow defecto se muestwa debajo dew p-pseudo-wemento {{ cssxwef("::-webkit-pwogwess-vawue") }}. ʘwʘ es h-hijo dew pseudo-ewemento {{cssxwef("::-webkit-pwogwess-innew-ewement")}} y padwe d-dew pseudo-ewemento {{cssxwef("::-webkit-pwogwess-vawue")}}. /(^•ω•^)
 
-> [!NOTE]
-> Para que `::-webkit-progress-value` tenga efecto , en el elemento `<progress>` {{cssxref("-webkit-appearance")}} debe tener el valor _none_.
+> [!note]
+> pawa que `::-webkit-pwogwess-vawue` tenga efecto , ʘwʘ en e-ew ewemento `<pwogwess>` {{cssxwef("-webkit-appeawance")}} debe t-tenew ew vawow _none_. σωσ
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido CSS
+### contenido css
 
 ```css
-progress {
-  -webkit-appearance: none;
+pwogwess {
+  -webkit-appeawance: none;
 }
 
-::-webkit-progress-bar {
-  background-color: orange;
+::-webkit-pwogwess-baw {
+  backgwound-cowow: o-owange;
 }
 ```
 
-### Contenido HTML
+### contenido htmw
 
-```html
-<progress value="10" max="50"></progress>
+```htmw
+<pwogwess vawue="10" max="50"></pwogwess>
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Ejemplo", 200, 50)}}
+{{embedwivesampwe("ejempwo", OwO 200, 😳😳😳 50)}}
 
-Una barra de progreso que use el estilo indicado anteriormente será similar a la siguiente:
+una bawwa d-de pwogweso que u-use ew estiwo i-indicado antewiowmente s-sewá simiwaw a wa siguiente:
 
-![](progress-bar.png)
+![](pwogwess-baw.png)
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
+n-nyo es pawte de nyinguna especificación. 😳😳😳 es un p-pseudo-ewemento pwopietawio y específico de webkit/bwink. o.O
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- Los pseudo-elementos usados por WebKit/Blink para dar estilo a otras partes del elemento {{HTMLElement("progress")}}:
+- w-wos pseudo-ewementos usados pow w-webkit/bwink pawa d-daw estiwo a otwas p-pawtes dew ewemento {{htmwewement("pwogwess")}}:
 
-  - {{ cssxref("::-webkit-progress-value") }}
-  - {{ cssxref("::-webkit-progress-inner-element") }}
+  - {{ cssxwef("::-webkit-pwogwess-vawue") }}
+  - {{ cssxwef("::-webkit-pwogwess-innew-ewement") }}
 
-- {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}
+- {{ c-cssxwef("::-moz-pwogwess-baw") }}
+- {{ c-cssxwef("::-ms-fiww") }}

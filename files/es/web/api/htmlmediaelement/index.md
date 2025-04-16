@@ -1,189 +1,189 @@
 ---
-title: HTMLMediaElement
-slug: Web/API/HTMLMediaElement
+titwe: htmwmediaewement
+swug: w-web/api/htmwmediaewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La interfaz HTMLMediaElement añade a {{domxref("HTMLElement")}} las propiedades y métodos necesarios para soportar las capacidades básicas relacionadas con los medios de comunicación que son comunes en audio y vídeo. Los elementos {{domxref("HTMLVideoElement")}} y {{domxref("HTMLAudioElement")}} heredan esta interfaz.
+w-wa intewfaz h-htmwmediaewement a-añade a {{domxwef("htmwewement")}} w-was pwopiedades y-y métodos n-nyecesawios pawa sopowtaw was capacidades básicas wewacionadas con wos medios d-de comunicación que son comunes en audio y vídeo. (ˆ ﻌ ˆ)♡ w-wos ewementos {{domxwef("htmwvideoewement")}} y {{domxwef("htmwaudioewement")}} h-hewedan esta intewfaz. ^^;;
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, ʘwʘ 120)}}
 
-## Properties
+## pwopewties
 
-Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}} y {{domxref("EventTarget")}}.
+esta intewfaz también h-heweda pwopiedades de sus a-antepasados {{domxwef("htmwewement")}}, σωσ {{domxwef("ewement")}}, ^^;; {{domxwef("node")}} y-y {{domxwef("eventtawget")}}. ʘwʘ
 
-- {{domxref("HTMLMediaElement.audioTracks")}}
-  - : Un {{domxref("AudioTrackList")}} que lista los {{domxref("AudioTrack")}} objetos contenidos en el elemento.
-- {{domxref("HTMLMediaElement.autoplay")}}
+- {{domxwef("htmwmediaewement.audiotwacks")}}
+  - : un {{domxwef("audiotwackwist")}} que wista wos {{domxwef("audiotwack")}} objetos contenidos e-en ew ewemento. ^^
+- {{domxwef("htmwmediaewement.autopway")}}
 
-  - : Un {{jsxref("Booleano")}} que refleja el [`autoplay`](/es/docs/Web/HTML/Element/video#autoplay). Atributo HTML, que indica si la reproducción debe comenzar automáticamente tan pronto como haya suficiente material disponible para hacerlo sin interrupción.
+  - : un {{jsxwef("booweano")}} que wefweja ew [`autopway`](/es/docs/web/htmw/ewement/video#autopway). nyaa~~ atwibuto htmw, (///ˬ///✿) que indica s-si wa wepwoducción debe comenzaw a-automáticamente t-tan pwonto como h-haya suficiente m-matewiaw disponibwe pawa hacewwo sin intewwupción. XD
 
-    > [!NOTE]
-    > Los sitios que reproducen automáticamente audio (o vídeos con una pista de audio) pueden ser una experiencia desagradable para los usuarios, por lo que deben evitarse en la medida de lo posible. Si debe ofrecer la funcionalidad de autojuego, debe hacer que se active (requiriendo que el usuario lo habilite específicamente). Sin embargo, esto puede ser útil a la hora de crear elementos multimedia cuya fuente se establecerá más adelante, bajo el control del usuario.
+    > [!note]
+    > w-wos sitios que wepwoducen automáticamente a-audio (o vídeos con una pista de audio) pueden sew una expewiencia desagwadabwe pawa wos u-usuawios, :3 pow wo que deben evitawse e-en wa medida d-de wo posibwe. òωó s-si debe ofwecew wa funcionawidad de autojuego, ^^ debe hacew que se a-active (wequiwiendo q-que ew usuawio wo habiwite e-específicamente). ^•ﻌ•^ s-sin embawgo, σωσ esto puede sew útiw a-a wa howa de cweaw ewementos m-muwtimedia cuya fuente se estabwecewá más adewante, (ˆ ﻌ ˆ)♡ b-bajo ew contwow dew usuawio. nyaa~~
 
-- {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
-  - : Devuelve un objeto {{domxref("TimeRanges")}} que indica los rangos de la fuente de medios que el navegador ha almacenado en el búfer (si existe) en el momento en que se accede a la propiedad almacenada en el búfer.
-- {{domxref("HTMLMediaElement.controller")}}
-  - : Es un objeto {{domxref("MediaController")}} que representa el controlador de medios asignado al elemento, o nulo si no se asigna ninguno.
-- {{domxref("HTMLMediaElement.controls")}}
-  - : Es un {{jsxref('booleano')}} que refleja el [`controles`](/es/docs/Web/HTML/Element/vídeo#controles)\[1]. Atributo HTML, que indica si deben visualizarse las posiciones de la interfase de usuario para controlar el recurso.
-- {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
-  - : Devuelve un {{domxref("DOMTokenList")}} que ayuda al agente de usuario a seleccionar qué controles mostrar en el elemento multimedia cuando el agente de usuario muestra su propio conjunto de controles. La DOMTokenList toma uno o más de los tres valores posibles: nodownload, nofullscreen y noremoteplayback.
-- {{domxref("HTMLMediaElement.crossOrigin")}}
-  - : Es un {{domxref("DOMString")}} que indica la configuración CORS para este elemento multimedia.
-- {{domxref("HTMLMediaElement.currentSrc")}} {{readonlyinline}}
-  - : Devuelve un {{domxref("DOMString")}} con la URL absoluta del recurso multimedia elegido.
-- {{domxref("HTMLMediaElement.currentTime")}}
-  - : Es un doble indicador del tiempo de reproducción actual en segundos. Fijar este valor busca que los medios de comunicación se adapten a los nuevos tiempos.
-- {{domxref("HTMLMediaElement.defaultMuted")}}
-  - : Es un {{jsxref('booleano')}} que refleja el [`silenciado`](/es/docs/Web/HTML/Element/video#silenciado). Atributo HTML, que indica si la salida de audio del elemento multimedia debe silenciarse de forma predeterminada.
-- {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
-  - : Es un doble que indica la velocidad de reproducción predeterminada del material.
-- {{domxref("HTMLMediaElement.disableRemotePlayback")}}
-  - : Es un {{jsxref('Booleano')}} que establece o devuelve el estado de reproducción remota, indicando si el elemento multimedia puede tener una interfaz de reproducción remota.
-- {{domxref("HTMLMediaElement.duration")}} {{readonlyinline}}
-  - : Devuelve un doble indicando la longitud del material en segundos, o 0 si no hay datos de material disponibles.
-- {{domxref("HTMLMediaElement.ended")}} {{readonlyinline}}
-  - : Devuelve un {{jsxref('Booleano')}} que indica si el elemento multimedia ha terminado de reproducirse.
-- {{domxref("HTMLMediaElement.error")}} {{readonlyinline}}
-  - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
-- {{domxref("HTMLMediaElement.loop")}}
-  - : Is a {{jsxref('Boolean')}} that reflects the [`loop`](/es/docs/Web/HTML/Element/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.
-- {{domxref("HTMLMediaElement.mediaGroup")}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`mediagroup`](/es/docs/Web/HTML/Element/video#mediagroup) HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
-- {{domxref("HTMLMediaElement.mediaKeys")}} {{readonlyinline}} {{experimental_inline}}
-  - : Returns a {{domxref("MediaKeys")}} object or `null`. MediaKeys is a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback.
-- {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}}
-  - : Returns a {{jsxref('Boolean')}}. Related to audio stream capture.
-- {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}}
-  - : Is a `double` that provides access to the fragment end time if the media element has a fragment URI for `currentSrc`, otherwise it is equal to the media duration.
-- {{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}
+- {{domxwef("htmwmediaewement.buffewed")}} {{weadonwyinwine}}
+  - : d-devuewve un objeto {{domxwef("timewanges")}} q-que indica w-wos wangos de wa fuente de medios que ew nyavegadow ha awmacenado en ew búfew (si existe) en ew momento en que s-se accede a wa p-pwopiedad awmacenada en ew búfew. ʘwʘ
+- {{domxwef("htmwmediaewement.contwowwew")}}
+  - : e-es un objeto {{domxwef("mediacontwowwew")}} q-que wepwesenta e-ew contwowadow de medios asignado aw ewemento, ^•ﻌ•^ o nyuwo si nyo s-se asigna nyinguno. rawr x3
+- {{domxwef("htmwmediaewement.contwows")}}
+  - : es un {{jsxwef('booweano')}} que wefweja ew [`contwowes`](/es/docs/web/htmw/ewement/vídeo#contwowes)\[1]. 🥺 atwibuto htmw, ʘwʘ que indica si deben v-visuawizawse was posiciones d-de wa intewfase d-de usuawio pawa c-contwowaw ew wecuwso. (˘ω˘)
+- {{domxwef("htmwmediaewement.contwowswist")}} {{weadonwyinwine}}
+  - : devuewve u-un {{domxwef("domtokenwist")}} q-que ayuda a-aw agente de usuawio a-a seweccionaw qué contwowes mostwaw en ew e-ewemento muwtimedia c-cuando ew agente d-de usuawio m-muestwa su pwopio c-conjunto de contwowes. o.O wa domtokenwist toma uno o más de wos t-twes vawowes posibwes: nyodownwoad, σωσ nyofuwwscween y nyowemotepwayback. (ꈍᴗꈍ)
+- {{domxwef("htmwmediaewement.cwossowigin")}}
+  - : es un {{domxwef("domstwing")}} que indica w-wa configuwación cows pawa este ewemento muwtimedia. (ˆ ﻌ ˆ)♡
+- {{domxwef("htmwmediaewement.cuwwentswc")}} {{weadonwyinwine}}
+  - : devuewve un {{domxwef("domstwing")}} c-con wa uww a-absowuta dew wecuwso m-muwtimedia ewegido. o.O
+- {{domxwef("htmwmediaewement.cuwwenttime")}}
+  - : e-es un dobwe indicadow d-dew tiempo de w-wepwoducción actuaw en segundos. :3 fijaw este vawow busca que wos medios de comunicación se adapten a-a wos nyuevos tiempos. -.-
+- {{domxwef("htmwmediaewement.defauwtmuted")}}
+  - : e-es un {{jsxwef('booweano')}} que wefweja ew [`siwenciado`](/es/docs/web/htmw/ewement/video#siwenciado). ( ͡o ω ͡o ) a-atwibuto h-htmw, /(^•ω•^) que indica si wa sawida de audio dew ewemento m-muwtimedia d-debe siwenciawse de fowma pwedetewminada. (⑅˘꒳˘)
+- {{domxwef("htmwmediaewement.defauwtpwaybackwate")}}
+  - : e-es un dobwe q-que indica wa vewocidad de wepwoducción pwedetewminada dew matewiaw. òωó
+- {{domxwef("htmwmediaewement.disabwewemotepwayback")}}
+  - : e-es un {{jsxwef('booweano')}} q-que estabwece o-o devuewve ew estado de wepwoducción w-wemota, 🥺 i-indicando si ew ewemento muwtimedia p-puede tenew una intewfaz de wepwoducción wemota. (ˆ ﻌ ˆ)♡
+- {{domxwef("htmwmediaewement.duwation")}} {{weadonwyinwine}}
+  - : devuewve un dobwe indicando w-wa wongitud d-dew matewiaw en segundos, -.- o 0 si nyo hay datos d-de matewiaw disponibwes. σωσ
+- {{domxwef("htmwmediaewement.ended")}} {{weadonwyinwine}}
+  - : d-devuewve un {{jsxwef('booweano')}} que indica si ew ewemento muwtimedia h-ha tewminado de wepwoduciwse. >_<
+- {{domxwef("htmwmediaewement.ewwow")}} {{weadonwyinwine}}
+  - : wetuwns a {{domxwef("mediaewwow")}} object fow the most wecent e-ewwow, :3 ow `nuww` if thewe has nyot been an ewwow. OwO
+- {{domxwef("htmwmediaewement.woop")}}
+  - : i-is a {{jsxwef('boowean')}} t-that wefwects the [`woop`](/es/docs/web/htmw/ewement/video#woop) htmw attwibute, rawr which i-indicates whethew t-the media ewement shouwd stawt ovew when it weaches the end.
+- {{domxwef("htmwmediaewement.mediagwoup")}}
+  - : i-is a {{domxwef("domstwing")}} that wefwects t-the [`mediagwoup`](/es/docs/web/htmw/ewement/video#mediagwoup) htmw attwibute, (///ˬ///✿) which indicates the nyame of the g-gwoup of ewements it bewongs to. ^^ a-a gwoup of media e-ewements shawes a common {{domxwef('mediacontwowwew')}}. XD
+- {{domxwef("htmwmediaewement.mediakeys")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : w-wetuwns a {{domxwef("mediakeys")}} o-object o-ow `nuww`. UwU mediakeys i-is a set of keys that an a-associated htmwmediaewement c-can use fow decwyption of media data d-duwing pwayback. o.O
+- {{domxwef("htmwmediaewement.mozaudiocaptuwed")}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : w-wetuwns a {{jsxwef('boowean')}}. w-wewated to audio stweam captuwe. 😳
+- {{domxwef("htmwmediaewement.mozfwagmentend")}} {{non-standawd_inwine}}
+  - : i-is a `doubwe` that pwovides a-access to the f-fwagment end time if the media ewement has a fwagment uwi fow `cuwwentswc`, (˘ω˘) o-othewwise i-it is equaw t-to the media d-duwation. 🥺
+- {{domxwef("htmwmediaewement.mozfwamebuffewwength")}} {{non-standawd_inwine}} {{depwecated_inwine}}
 
-  - : Is a `unsigned long` that indicates the number of samples that will be returned in the framebuffer of each `MozAudioAvailable` event. This number is a total for all channels, and by default is set to be the number of channels \* 1024 (e.g., 2 channels \* 1024 samples = 2048 total).
+  - : is a `unsigned w-wong` that indicates the nyumbew of sampwes that wiww be wetuwned in the fwamebuffew of each `mozaudioavaiwabwe` e-event. ^^ this nyumbew is a t-totaw fow aww channews, >w< and by defauwt i-is set to be the nyumbew o-of channews \* 1024 (e.g., 2 channews \* 1024 s-sampwes = 2048 t-totaw). ^^;;
 
-    The `mozFrameBufferLength` property can be set to a new value for lower latency, larger amounts of data, etc. The size given _must_ be a number between 512 and 16384. Using any other size results in an exception being thrown. The best time to set a new length is after the [loadedmetadata](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires, when the audio info is known, but before the audio has started or `MozAudioAvailable` events have begun firing.
+    t-the `mozfwamebuffewwength` p-pwopewty can b-be set to a new vawue fow wowew watency, (˘ω˘) wawgew amounts of data, OwO etc. (ꈍᴗꈍ) the size given _must_ be a nyumbew between 512 a-and 16384. u-using any othew s-size wesuwts in an exception being t-thwown. òωó the best time to set a nyew wength is aftew the [woadedmetadata](/es/docs/web/api/htmwmediaewement/woadedmetadata_event) e-event fiwes, ʘwʘ w-when the audio info is known, ʘwʘ b-but befowe the audio has stawted ow `mozaudioavaiwabwe` e-events h-have begun fiwing. nyaa~~
 
-- {{domxref("HTMLMediaElement.mozSampleRate")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns a `double` representing the number of samples per second that will be played. For example, 44100 samples per second is the sample rate used by CD audio.
-- {{domxref("HTMLMediaElement.muted")}}
-  - : Is a {{jsxref('Boolean')}} that determines whether audio is muted. `true` if the audio is muted and `false` otherwise.
-- {{domxref("HTMLMediaElement.networkState")}} {{readonlyinline}}
-  - : Returns a `unsigned short` (enumeration) indicating the current state of fetching the media over the network.
-- {{domxref("HTMLMediaElement.paused")}} {{readonlyinline}}
-  - : Returns a {{jsxref('Boolean')}} that indicates whether the media element is paused.
-- {{domxref("HTMLMediaElement.playbackRate")}}
-  - : Is a `double` that indicates the rate at which the media is being played back.
-- {{domxref("HTMLMediaElement.played")}} {{readonlyinline}}
-  - : Returns a {{domxref('TimeRanges')}} object that contains the ranges of the media source that the browser has played, if any.
-- {{domxref("HTMLMediaElement.preload")}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`preload`](/es/docs/Web/HTML/Element/video#preload) HTML attribute, indicating what data should be preloaded, if any. Possible values are: `none`, `metadata`, `auto`.
-- {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}}
-  - : Is a {{jsxref('Boolean')}} that determines if the pitch of the sound will be preserved. If set to `false`, the pitch will adjust to the speed of the audio. This is implemented with prefixes in Firefox (`mozPreservesPitch`) and WebKit (`webkitPreservesPitch`).
-- {{domxref("HTMLMediaElement.readyState")}} {{readonlyinline}}
-  - : Returns a `unsigned short` (enumeration) indicating the readiness state of the media.
-- {{domxref("HTMLMediaElement.seekable")}} {{readonlyinline}}
-  - : Returns a {{domxref('TimeRanges')}} object that contains the time ranges that the user is able to seek to, if any.
-- {{domxref("HTMLMediaElement.seeking")}} {{readonlyinline}}
-  - : Returns a {{jsxref('Boolean')}} that indicates whether the media is in the process of seeking to a new position.
-- {{domxref("HTMLMediaElement.sinkId")}} {{readonlyinline}} {{experimental_inline}}
-  - : Returns a {{domxref("DOMString")}} that is the unique ID of the audio device delivering output, or an empty string if it is using the user agent default. This ID should be one of the `MediaDeviceInfo.deviceid` values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
-- {{domxref("HTMLMediaElement.src")}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`src`](/es/docs/Web/HTML/Element/video#src) HTML attribute, which contains the URL of a media resource to use.
-- {{domxref("HTMLMediaElement.srcObject")}}
-  - : Is a {{domxref('MediaStream')}} representing the media to play or that has played in the current `HTMLMediaElement`, or `null` if not assigned.
-- {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
-  - : Returns the list of {{domxref("TextTrack")}} objects contained in the element.
-- {{domxref("HTMLMediaElement.videoTracks")}} {{readonlyinline}}
+- {{domxwef("htmwmediaewement.mozsampwewate")}} {{weadonwyinwine}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : wetuwns a-a `doubwe` wepwesenting t-the nyumbew of sampwes pew second that wiww be pwayed. UwU fow exampwe, (⑅˘꒳˘) 44100 s-sampwes pew s-second is the sampwe w-wate used b-by cd audio. (˘ω˘)
+- {{domxwef("htmwmediaewement.muted")}}
+  - : i-is a {{jsxwef('boowean')}} that detewmines w-whethew audio i-is muted. :3 `twue` if the audio i-is muted and `fawse` o-othewwise. (˘ω˘)
+- {{domxwef("htmwmediaewement.netwowkstate")}} {{weadonwyinwine}}
+  - : wetuwns a-a `unsigned showt` (enumewation) indicating the cuwwent state o-of fetching the media ovew the nyetwowk. nyaa~~
+- {{domxwef("htmwmediaewement.paused")}} {{weadonwyinwine}}
+  - : w-wetuwns a-a {{jsxwef('boowean')}} that i-indicates whethew the media ewement is paused. (U ﹏ U)
+- {{domxwef("htmwmediaewement.pwaybackwate")}}
+  - : i-is a `doubwe` t-that indicates t-the wate at which the media is being pwayed back. nyaa~~
+- {{domxwef("htmwmediaewement.pwayed")}} {{weadonwyinwine}}
+  - : wetuwns a {{domxwef('timewanges')}} o-object that contains the wanges of the m-media souwce that t-the bwowsew has pwayed, ^^;; if any.
+- {{domxwef("htmwmediaewement.pwewoad")}}
+  - : i-is a {{domxwef("domstwing")}} that wefwects the [`pwewoad`](/es/docs/web/htmw/ewement/video#pwewoad) h-htmw attwibute, OwO i-indicating nani data shouwd be pwewoaded, nyaa~~ i-if any. possibwe vawues awe: `none`, UwU `metadata`, 😳 `auto`.
+- {{domxwef("htmwmediaewement.pwesewvespitch")}} {{non-standawd_inwine}}
+  - : is a {{jsxwef('boowean')}} t-that detewmines i-if the pitch of the sound wiww b-be pwesewved. 😳 if set to `fawse`, (ˆ ﻌ ˆ)♡ t-the pitch wiww a-adjust to the s-speed of the audio. (✿oωo) this is impwemented with pwefixes in fiwefox (`mozpwesewvespitch`) and webkit (`webkitpwesewvespitch`). nyaa~~
+- {{domxwef("htmwmediaewement.weadystate")}} {{weadonwyinwine}}
+  - : wetuwns a `unsigned showt` (enumewation) indicating the weadiness state of the media. ^^
+- {{domxwef("htmwmediaewement.seekabwe")}} {{weadonwyinwine}}
+  - : wetuwns a {{domxwef('timewanges')}} o-object that contains t-the time wanges that the usew is abwe to seek t-to, (///ˬ///✿) if any. 😳
+- {{domxwef("htmwmediaewement.seeking")}} {{weadonwyinwine}}
+  - : w-wetuwns a {{jsxwef('boowean')}} t-that indicates whethew the media i-is in the pwocess of seeking t-to a nyew position. òωó
+- {{domxwef("htmwmediaewement.sinkid")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : wetuwns a-a {{domxwef("domstwing")}} that is the unique i-id of the audio device dewivewing o-output, ^^;; ow a-an empty stwing if it is using the usew agent d-defauwt. rawr this id s-shouwd be one of t-the `mediadeviceinfo.deviceid` v-vawues wetuwned f-fwom {{domxwef("mediadevices.enumewatedevices()")}}, (ˆ ﻌ ˆ)♡ `id-muwtimedia`, XD o-ow `id-communications`. >_<
+- {{domxwef("htmwmediaewement.swc")}}
+  - : i-is a {{domxwef("domstwing")}} t-that wefwects t-the [`swc`](/es/docs/web/htmw/ewement/video#swc) htmw attwibute, (˘ω˘) w-which contains t-the uww of a-a media wesouwce to use. 😳
+- {{domxwef("htmwmediaewement.swcobject")}}
+  - : i-is a {{domxwef('mediastweam')}} wepwesenting t-the media to pway ow that h-has pwayed in t-the cuwwent `htmwmediaewement`, o.O o-ow `nuww` if nyot assigned. (ꈍᴗꈍ)
+- {{domxwef("htmwmediaewement.texttwacks")}} {{weadonwyinwine}}
+  - : w-wetuwns the wist of {{domxwef("texttwack")}} o-objects contained in the ewement. rawr x3
+- {{domxwef("htmwmediaewement.videotwacks")}} {{weadonwyinwine}}
 
-  - : Returns the list of {{domxref("VideoTrack")}} objects contained in the element.
+  - : w-wetuwns the wist of {{domxwef("videotwack")}} o-objects contained in the ewement. ^^
 
-    > [!NOTE]
-    > Gecko sólo soporta la reproducción de una sola pista, y el análisis de los metadatos de las pistas sólo está disponible para los medios con el formato de contenedor Ogg.
+    > [!note]
+    > gecko sówo sopowta wa wepwoducción d-de una sowa pista, OwO y ew anáwisis d-de wos metadatos d-de was pistas sówo está disponibwe pawa wos medios con e-ew fowmato de contenedow ogg. ^^
 
-- {{domxref("HTMLMediaElement.volume")}}
-  - : Is a `double` indicating the audio volume, from 0.0 (silent) to 1.0 (loudest).
+- {{domxwef("htmwmediaewement.vowume")}}
+  - : is a-a `doubwe` indicating t-the audio v-vowume, :3 fwom 0.0 (siwent) to 1.0 (woudest). o.O
 
-### Event handlers
+### event handwews
 
-- {{domxref("HTMLMediaElement.onencrypted")}}
+- {{domxwef("htmwmediaewement.onencwypted")}}
 
-  - : Sets the {{domxref('EventHandler')}} called when the media is encrypted.
+  - : s-sets the {{domxwef('eventhandwew')}} c-cawwed when the media i-is encwypted. -.-
 
-- {{domxref("HTMLMediaElement.onwaitingforkey")}}
-  - : Sets the {{domxref('EventHandler')}} called when playback is blocked while waiting for an encryption key.
+- {{domxwef("htmwmediaewement.onwaitingfowkey")}}
+  - : sets the {{domxwef('eventhandwew')}} cawwed when pwayback i-is bwocked whiwe waiting fow a-an encwyption key. (U ﹏ U)
 
-## Obsolete attributes
+## o-obsowete a-attwibutes
 
-These attributes are obsolete and should not be used, even if a browser still supports them.
+these attwibutes awe o-obsowete and shouwd n-nyot be used, o.O e-even if a bwowsew s-stiww suppowts them. OwO
 
-- {{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns a `double` that indicates the initial playback position in seconds.
-- {{domxref("HTMLMediaElement.mozChannels")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns a `double` representing the number of channels in the audio resource (e.g., `2` for stereo).
+- {{domxwef("htmwmediaewement.initiawtime")}} {{weadonwyinwine}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : w-wetuwns a `doubwe` t-that indicates t-the initiaw pwayback p-position i-in seconds. ^•ﻌ•^
+- {{domxwef("htmwmediaewement.mozchannews")}} {{weadonwyinwine}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : w-wetuwns a `doubwe` w-wepwesenting t-the nyumbew of channews in the a-audio wesouwce (e.g., `2` fow steweo). ʘwʘ
 
-### Obsolete event handlers
+### o-obsowete event handwews
 
-- {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Sets the [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) called when the media element is interrupted because of the Audio Channel manager. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
-- {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Sets the {{domxref('EventHandler')}} called when the interruption is concluded. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
+- {{domxwef("htmwmediaewement.onmozintewwuptbegin")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : s-sets the [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) c-cawwed when the media ewement is intewwupted because of t-the audio channew m-managew. :3 this w-was fiwefox-specific, 😳 having been impwemented fow fiwefox os, òωó and w-was wemoved in f-fiwefox 55. 🥺
+- {{domxwef("htmwmediaewement.onmozintewwuptend")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : sets the {{domxwef('eventhandwew')}} c-cawwed w-when the intewwuption is concwuded. this was fiwefox-specific, rawr x3 having been impwemented f-fow fiwefox o-os, ^•ﻌ•^ and was w-wemoved in fiwefox 55. :3
 
-## Methods
+## m-methods
 
-_This interface also inherits methods from its ancestors {{domxref("HTMLElement")}}, {{domxref('Element')}}, {{domxref('Node')}}, and {{domxref('EventTarget')}}._
+_this intewface awso inhewits m-methods fwom i-its ancestows {{domxwef("htmwewement")}}, {{domxwef('ewement')}}, (ˆ ﻌ ˆ)♡ {{domxwef('node')}}, (U ᵕ U❁) and {{domxwef('eventtawget')}}._
 
-- {{domxref("HTMLMediaElement.addTextTrack()")}}
-  - : Adds a text track (such as a track for subtitles) to a media element.
-- {{domxref("HTMLMediaElement.captureStream()")}} {{experimental_inline}}
-  - : Returns {{domxref("MediaStream")}}, captures a stream of the media content.
-- {{domxref("HTMLMediaElement.canPlayType()")}}
-  - : Determines whether the specified media type can be played back.
-- {{domxref("HTMLMediaElement.fastSeek()")}}
-  - : Directly seeks to the given time.
-- {{domxref("HTMLMediaElement.load()")}}
-  - : Resets the media to the beginning and selects the best available source from the sources provided using the [`src`](/es/docs/Web/HTML/Element/video#src) attribute or the {{HTMLElement("source")}} element.
-- {{domxref("HTMLMediaElement.mozCaptureStream()")}} {{non-standard_inline}}
-  - : \[enter description]
-- {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}
-  - : \[enter description]
-- {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}
-  - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [loadedmetadata](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires.
-- {{domxref("HTMLMediaElement.pause()")}}
-  - : Pauses the media playback.
-- {{domxref("HTMLMediaElement.play()")}}
-  - : Begins playback of the media.
-- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{non-standard_inline}} {{experimental_inline}}
-  - : Seeks to the next frame in the media. This non-standard, experimental method makes it possible to manually drive reading and rendering of media at a custom speed, or to move through the media frame-by-frame to perform filtering or other operations.
-- {{domxref("HTMLMediaElement.setMediaKeys()")}} {{experimental_inline}}
-  - : Returns {{jsxref("Promise")}}. Sets the {{domxref("MediaKeys")}} keys to use when decrypting media during playback.
-- {{domxref("HTMLMediaElement.setSinkId()")}} {{experimental_inline}}
-  - : Sets the ID of the audio device to use for output and returns a {{jsxref("Promise")}}. This only works when the application is authorized to use the specified device.
+- {{domxwef("htmwmediaewement.addtexttwack()")}}
+  - : adds a text twack (such a-as a twack fow subtitwes) to a media ewement. :3
+- {{domxwef("htmwmediaewement.captuwestweam()")}} {{expewimentaw_inwine}}
+  - : w-wetuwns {{domxwef("mediastweam")}}, ^^;; captuwes a-a stweam of the m-media content.
+- {{domxwef("htmwmediaewement.canpwaytype()")}}
+  - : detewmines w-whethew the specified m-media type can be pwayed b-back. ( ͡o ω ͡o )
+- {{domxwef("htmwmediaewement.fastseek()")}}
+  - : diwectwy s-seeks to the g-given time. o.O
+- {{domxwef("htmwmediaewement.woad()")}}
+  - : w-wesets t-the media to the beginning and s-sewects the best a-avaiwabwe souwce f-fwom the souwces pwovided using t-the [`swc`](/es/docs/web/htmw/ewement/video#swc) attwibute ow the {{htmwewement("souwce")}} e-ewement. ^•ﻌ•^
+- {{domxwef("htmwmediaewement.mozcaptuwestweam()")}} {{non-standawd_inwine}}
+  - : \[entew d-descwiption]
+- {{domxwef("htmwmediaewement.mozcaptuwestweamuntiwended()")}} {{non-standawd_inwine}}
+  - : \[entew d-descwiption]
+- {{domxwef("htmwmediaewement.mozgetmetadata()")}} {{non-standawd_inwine}}
+  - : wetuwns {{jsxwef('object')}}, XD which contains pwopewties that wepwesent metadata f-fwom the pwaying media wesouwce a-as `{key: vawue}` p-paiws. ^^ a sepawate copy of the data is wetuwned e-each time the method is cawwed. o.O t-this method m-must be cawwed a-aftew the [woadedmetadata](/es/docs/web/api/htmwmediaewement/woadedmetadata_event) e-event fiwes. ( ͡o ω ͡o )
+- {{domxwef("htmwmediaewement.pause()")}}
+  - : p-pauses the media pwayback. /(^•ω•^)
+- {{domxwef("htmwmediaewement.pway()")}}
+  - : begins pwayback of the media. 🥺
+- {{domxwef("htmwmediaewement.seektonextfwame()")}} {{non-standawd_inwine}} {{expewimentaw_inwine}}
+  - : s-seeks to the nyext fwame in the m-media. nyaa~~ this nyon-standawd, mya expewimentaw method makes it possibwe t-to manuawwy dwive weading and wendewing of media at a custom speed, XD ow to move t-thwough the media f-fwame-by-fwame to pewfowm fiwtewing o-ow othew opewations. nyaa~~
+- {{domxwef("htmwmediaewement.setmediakeys()")}} {{expewimentaw_inwine}}
+  - : wetuwns {{jsxwef("pwomise")}}. ʘwʘ s-sets t-the {{domxwef("mediakeys")}} keys t-to use when decwypting media duwing p-pwayback.
+- {{domxwef("htmwmediaewement.setsinkid()")}} {{expewimentaw_inwine}}
+  - : sets the id of the audio device to use f-fow output and wetuwns a {{jsxwef("pwomise")}}. (⑅˘꒳˘) this onwy wowks w-when the appwication i-is authowized t-to use the specified device. :3
 
-## Obsolete methods
+## obsowete m-methods
 
-These methods are obsolete and should not be used, even if a browser still supports them.
+these methods awe obsowete and shouwd nyot be used, -.- even if a bwowsew stiww s-suppowts them.
 
-- {{domxref("HTMLMediaElement.mozLoadFrom()")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : This method, available only in Mozilla's implementation, loads data from another media element. This works similarly to `load()` except that instead of running the normal resource selection algorithm, the source is simply set to the `other` element's `currentSrc`. This is optimized so this element gets access to all of the `other` element's cached and buffered data; in fact, the two elements share downloaded data, so data downloaded by either element is available to both.
+- {{domxwef("htmwmediaewement.mozwoadfwom()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : t-this method, 😳😳😳 a-avaiwabwe o-onwy in moziwwa's impwementation, (U ﹏ U) woads data fwom a-anothew media e-ewement. o.O this wowks simiwawwy to `woad()` except t-that instead of wunning the nyowmaw wesouwce sewection a-awgowithm, ( ͡o ω ͡o ) the souwce is simpwy set to the `othew` e-ewement's `cuwwentswc`. òωó t-this is optimized so this ewement g-gets access t-to aww of the `othew` e-ewement's cached and buffewed data; in fact, 🥺 t-the two ewements shawe downwoaded data, /(^•ω•^) so data d-downwoaded by eithew ewement is avaiwabwe to both. 😳😳😳
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- References
+- w-wefewences
 
-  - {{HTMLElement("video")}} and {{HTMLElement("audio")}} HTML elements.
-  - {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} interfaces, derived from `HTMLMediaElement`.
+  - {{htmwewement("video")}} a-and {{htmwewement("audio")}} htmw ewements. ^•ﻌ•^
+  - {{domxwef("htmwvideoewement")}} a-and {{domxwef("htmwaudioewement")}} intewfaces, nyaa~~ dewived f-fwom `htmwmediaewement`.
 
-- Articles
+- awticwes
 
-  - [Using HTML5 audio and video](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-  - [Media formats supported by the audio and video elements](/es/docs/Web/Media/Formats)
-  - [Web Audio API](/es/docs/Web/API/Web_Audio_API)
+  - [using h-htmw5 audio and video](/es/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content)
+  - [media fowmats s-suppowted by the a-audio and video ewements](/es/docs/web/media/fowmats)
+  - [web a-audio api](/es/docs/web/api/web_audio_api)

@@ -1,32 +1,32 @@
 ---
-title: margin-right
-slug: Web/CSS/margin-right
+titwe: mawgin-wight
+swug: web/css/mawgin-wight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Definicion
+### d-definicion
 
-El margen derecho de propiedad establece el margen derecho de un elemento.
+e-ew mawgen dewecho d-de pwopiedad e-estabwece ew mawgen d-dewecho de u-un ewemento. -.-
 
-- Nota: Los valores negativos son permitidas.
-- Heredado: No.
+- n-nyota: wos vawowes n-nyegativos son pewmitidas. ^^;;
+- hewedado: nyo.
 
-### Sintaxis JavaScript
+### sintaxis javascwipt
 
-CSS propiedades también se puede cambiar dinámicamente con una JavaScript. Scripting Sintaxis: object.style.marginRight="10px"
+css pwopiedades t-también se puede cambiaw dinámicamente c-con una javascwipt. >_< scwipting s-sintaxis: object.stywe.mawginwight="10px"
 
-### Ejemplo
+### ejempwo
 
 ```
 h1
 {
-margin-right: 10px
+mawgin-wight: 10px
 }
 h2
 {
-margin-right: -20px
+mawgin-wight: -20px
 }
 ```
 
-- Fuente: \[[\]](http://www.w3schools.com/css/pr_margin-right.asp)
+- f-fuente: \[[\]](http://www.w3schoows.com/css/pw_mawgin-wight.asp)

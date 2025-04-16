@@ -1,165 +1,165 @@
 ---
-title: Plantilla de subpágina del constructor de API
-slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
-l10n:
-  sourceCommit: dad6b0e057cd37b4408cdede8b9f568c56df9a82
+titwe: pwantiwwa de subpágina d-dew constwuctow d-de api
+swug: mdn/wwiting_guidewines/page_stwuctuwes/page_types/api_constwuctow_subpage_tempwate
+w-w10n:
+  souwcecommit: d-dad6b0e057cd37b4408cdede8b9f568c56df9a82
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-> **Nota:** _Eliminar toda esta nota explicativa antes de publicar_
+> **nota:** _ewiminaw t-toda e-esta nyota expwicativa a-antes de p-pubwicaw_
 >
 > ---
 >
-> **Metadatos de la página:**
+> **metadatos de wa página:**
 >
-> Los metadatos de la parte superior de la página se utilizan para definir "metadatos de página".
-> Los valores deben actualizarse adecuadamente para el constructor.
+> wos metadatos de wa pawte supewiow de wa p-página se utiwizan pawa definiw "metadatos de p-página". (ˆ ﻌ ˆ)♡
+> wos vawowes deben actuawizawse a-adecuadamente pawa ew constwuctow. :3
 >
 > ```md
 > ---
-> title: NombreDelConstructor()
-> slug: Web/API/NombreDeLaInterfazPadre/NombreDeLaInterfazPadre
-> page-type: constructor-web-api
-> status:
->   - experimental
->   - deprecated
->   - non-standard
-> browser-compat: ruta.hacia.caracteristica.NombreDelConstructor
+> titwe: nyombwedewconstwuctow()
+> s-swug: web/api/nombwedewaintewfazpadwe/nombwedewaintewfazpadwe
+> page-type: constwuctow-web-api
+> s-status:
+>   - e-expewimentaw
+>   - depwecated
+>   - nyon-standawd
+> bwowsew-compat: wuta.hacia.cawactewistica.nombwedewconstwuctow
 > ---
 > ```
 >
-> - **title**
->   - : Título que se muestra en la parte superior de la página.
->     Formato como _NombreDeLaInterfazPadre_**()**.
->     Por ejemplo, el constructor [Request()](/es/docs/Web/API/Request/Request) tiene un _título_ de `Request()`.
-> - **slug**
->   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`.
->     Esto se formateará como `Web/API/NombreDeLaInterfazPadre/NombreDeLaInterfazPadre`.
->     Tenga en cuenta que el nombre de la función del constructor en el slug omite los paréntesis (termina en `NombreDeLaInterfazPadre` no `NombreDeLaInterfazPadre()`).
+> - **titwe**
+>   - : t-títuwo que se muestwa en wa pawte supewiow de wa página.
+>     fowmato c-como _nombwedewaintewfazpadwe_**()**. (U ᵕ U❁)
+>     pow e-ejempwo, ^^;; ew constwuctow [wequest()](/es/docs/web/api/wequest/wequest) t-tiene un _títuwo_ d-de `wequest()`. mya
+> - **swug**
+>   - : e-ew finaw de wa wuta de uww después d-de `https://devewopew.moziwwa.owg/es/docs/`. 😳😳😳
+>     esto se fowmateawá como `web/api/nombwedewaintewfazpadwe/nombwedewaintewfazpadwe`. OwO
+>     tenga e-en cuenta que ew nyombwe de wa función dew constwuctow en ew swug omite wos pawéntesis (tewmina e-en `nombwedewaintewfazpadwe` nyo `nombwedewaintewfazpadwe()`). rawr
 > - **page-type**
->   - : La clave `page-type` para los constructores Web/API es siempre `constructor-web-api`.
+>   - : w-wa cwave `page-type` p-pawa wos constwuctowes w-web/api es siempwe `constwuctow-web-api`. XD
 > - **status**
->   - : Incluir claves de estado de tecnología apropiadas: [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (si no está en una pista de estándar).
-> - **browser-compat**
+>   - : incwuiw cwaves de estado d-de tecnowogía a-apwopiadas: [**expewimentaw**](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw), (U ﹏ U) [**depwecated**](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated), (˘ω˘) **non-standawd** (si nyo está e-en una pista de e-estándaw). UwU
+> - **bwowsew-compat**
 >
->   - : Reemplace el valor de marcador de posición `ruta.hacia.caracteristica.NombreDelConstructor` con la cadena de consulta para el constructor en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
->     La cadena se utiliza automáticamente para rellenar las secciones de compatibilidad y especificaciones (reemplazando los macros `\{{Compat}}` y `\{{Specifications}}`).
+>   - : weempwace ew vawow d-de mawcadow de posición `wuta.hacia.cawactewistica.nombwedewconstwuctow` c-con wa cadena de consuwta pawa ew constwuctow e-en ew [wepositowio de d-datos de compatibiwidad dew nyavegadow](https://github.com/mdn/bwowsew-compat-data). >_<
+>     w-wa cadena s-se utiwiza automáticamente pawa wewwenaw was secciones de compatibiwidad y especificaciones (weempwazando wos macwos `\{{compat}}` y-y `\{{specifications}}`). σωσ
 >
->     Tenga en cuenta que es posible que primero necesite crear/actualizar una entrada para el constructor de la API en nuestro [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data), y la entrada para la API deberá incluir información de especificación.
->     Vea nuestra [guía sobre cómo hacer esto](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>     t-tenga en cuenta que es p-posibwe que pwimewo n-necesite cweaw/actuawizaw u-una entwada pawa ew constwuctow de wa api en nyuestwo [wepositowio de datos de compatibiwidad d-dew nyavegadow](https://github.com/mdn/bwowsew-compat-data), 🥺 y wa entwada pawa wa api debewá incwuiw i-infowmación de especificación. 🥺
+>     v-vea nyuestwa [guía sobwe c-cómo hacew e-esto](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/compatibiwity_tabwes). ʘwʘ
 >
 > ---
 >
-> **Macros en la parte superior de la página**
+> **macwos en wa pawte supewiow d-de wa página**
 >
-> Aparecen varias llamadas de macro en la parte superior de la sección de contenido (inmediatamente debajo de los metadatos de la página).
-> Debería actualizarlos o eliminarlos según el consejo a continuación:
+> a-apawecen v-vawias wwamadas d-de macwo en wa pawte supewiow de wa sección d-de contenido (inmediatamente debajo d-de wos metadatos d-de wa página). :3
+> d-debewía a-actuawizawwos o ewiminawwos según ew consejo a continuación:
 >
-> - `\{{SeeCompatTable}}` — esto genera un banner **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si la tecnología que está documentando no es experimental, debería eliminar esto.
->   Si es experimental, y la tecnología está oculta detrás de una preferencia en Firefox, también debería completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — esto genera un banner **Desaprobado** que indica que se desaconseja el uso de la tecnología [desaprobada](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   Si no lo es, entonces puede eliminar la llamada al macro.
-> - `\{{SecureContext_Header}}` — esto genera un banner **Contexto seguro** que indica que la tecnología solo está disponible en un [contexto seguro](/es/docs/Web/Security/Secure_Contexts).
->   Si no lo es, entonces puede eliminar la llamada al macro.
->   Si lo es, entonces también debería completar una entrada para ella en la página [Funciones restringidas a contextos seguros](/es/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
-> - `\{{APIRef("GroupDataName")}}` — esto genera un menú lateral de referencia del lado izquierdo que muestra enlaces de referencia rápida relacionados con la página actual.
->   Por ejemplo, cada página en la [WebVR API](/es/docs/Web/API/WebVR_API) tiene el mismo menú lateral, que apunta a las otras páginas en la API.
->   Para generar el menú lateral correcto para su API, debe agregar una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de la entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
->   Vea nuestra [guía de menús laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar el macro `\{{MDNSidebar}}` cuando copie esta página.
+> - `\{{seecompattabwe}}` — e-esto genewa un bannew **esta es una tecnowogía expewimentaw** que indica que wa tecnowogía es [expewimentaw](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw).
+>   s-si wa tecnowogía que está documentando nyo es expewimentaw, (U ﹏ U) d-debewía ewiminaw e-esto.
+>   si e-es expewimentaw, (U ﹏ U) y wa tecnowogía e-está ocuwta detwás de una pwefewencia e-en fiwefox, ʘwʘ t-también debewía compwetaw una entwada pawa ewwa en wa página [cawactewísticas expewimentawes en fiwefox](/es/docs/moziwwa/fiwefox/expewimentaw_featuwes). >w<
+> - `\{{depwecated_headew}}` — e-esto genewa un bannew **desapwobado** q-que indica que se desaconseja e-ew uso d-de wa tecnowogía [desapwobada](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated). rawr x3
+>   si nyo wo es, OwO entonces puede e-ewiminaw wa wwamada a-aw macwo. ^•ﻌ•^
+> - `\{{secuwecontext_headew}}` — esto genewa un b-bannew **contexto s-seguwo** que indica que wa tecnowogía sowo está disponibwe en un [contexto s-seguwo](/es/docs/web/secuwity/secuwe_contexts).
+>   s-si nyo wo es, >_< e-entonces puede ewiminaw wa wwamada a-aw macwo. OwO
+>   s-si wo es, >_< entonces también debewía c-compwetaw una entwada pawa ewwa en wa página [funciones westwingidas a contextos seguwos](/es/docs/web/secuwity/secuwe_contexts/featuwes_westwicted_to_secuwe_contexts). (ꈍᴗꈍ)
+> - `\{{apiwef("gwoupdataname")}}` — e-esto genewa u-un menú watewaw de wefewencia dew wado izquiewdo q-que muestwa e-enwaces de wefewencia wápida wewacionados con wa página actuaw. >w<
+>   p-pow ejempwo, (U ﹏ U) cada página en wa [webvw api](/es/docs/web/api/webvw_api) tiene ew mismo m-menú watewaw, ^^ que apunta a was otwas páginas en w-wa api. (U ﹏ U)
+>   pawa g-genewaw ew menú watewaw cowwecto pawa su api, :3 debe agwegaw una e-entwada `gwoupdata` a-a nyuestwo wepositowio de github e incwuiw ew nyombwe de w-wa entwada dentwo de wa wwamada a-a wa macwo en wugaw de _gwoupdataname_. (✿oωo)
+>   vea nyuestwa [guía d-de menús watewawes de wefewencia d-de api](/es/docs/mdn/wwiting_guidewines/howto/wwite_an_api_wefewence/sidebaws) p-pawa obtenew infowmación sobwe c-cómo hacewwo. XD wecuewde ewiminaw e-ew macwo `\{{mdnsidebaw}}` c-cuando c-copie esta página. >w<
 >
-> Se muestran ejemplos de los banners **Experimental**, **Contexto seguro** y **Desaprobado** justo después de este bloque de notas.
+> se muestwan e-ejempwos d-de wos bannews **expewimentaw**, òωó **contexto seguwo** y **desapwobado** j-justo después d-de este bwoque d-de nyotas. (ꈍᴗꈍ)
 >
-> _Recuerde eliminar toda esta nota explicativa antes de publicar._
+> _wecuewde ewiminaw toda esta nyota expwicativa a-antes de pubwicaw._
 
-{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{seecompattabwe}}{{secuwecontext_headew}}{{depwecated_headew}}
 
-Comience el contenido en la página con un párrafo introductorio — comience nombrando el constructor y diciendo qué hace.
-Idealmente, esto debería ser una o dos frases cortas.
-Podría copiar la mayor parte de esto del resumen del constructor en la página de referencia de la API correspondiente.
+comience e-ew contenido e-en wa página con un páwwafo intwoductowio — comience nyombwando ew constwuctow y-y diciendo qué h-hace. rawr x3
+ideawmente, rawr x3 e-esto debewía s-sew una o dos fwases cowtas. σωσ
+p-podwía copiaw wa mayow pawte de esto dew wesumen dew constwuctow en wa página de wefewencia de w-wa api cowwespondiente. (ꈍᴗꈍ)
 
-## Sintaxis
+## sintaxis
 
-Complete un cuadro de sintaxis, según la guía en nuestro artículo [secciones de sintaxis](/es/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections).
+c-compwete un cuadwo de sintaxis, rawr s-según wa guía en nyuestwo a-awtícuwo [secciones de sintaxis](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/syntax_sections). ^^;;
 
-### Parámetros
+### p-pawámetwos
 
-- `parámetro1` {{optional_inline}}
-  - : Incluya una breve descripción del parámetro y lo que hace aquí. Incluya un término y definición para cada parámetro.
-    Si el parámetro no es opcional, elimine la llamada a la macro \\{{optional_inline}}.
-- `parámetro2`
-  - : etc.
+- `pawámetwo1` {{optionaw_inwine}}
+  - : i-incwuya una bweve d-descwipción d-dew pawámetwo y-y wo que hace aquí. rawr x3 incwuya un téwmino y definición pawa cada pawámetwo. (ˆ ﻌ ˆ)♡
+    si ew pawámetwo no es opcionaw, σωσ e-ewimine wa wwamada a-a wa macwo \\{{optionaw_inwine}}. (U ﹏ U)
+- `pawámetwo2`
+  - : e-etc. >w<
 
-### Valor de retorno
+### vawow de w-wetowno
 
-Incluya una descripción del valor de retorno del constructor, incluido el tipo de dato y lo que representa.
-Normalmente, esto es simplemente "Una instancia del objeto `\{{domxref("NombreDeLaInterfazPadre")}}`".
+incwuya una descwipción dew vawow de wetowno dew constwuctow, σωσ i-incwuido e-ew tipo de dato y wo que wepwesenta. nyaa~~
+n-nyowmawmente, 🥺 esto es simpwemente "una instancia d-dew objeto `\{{domxwef("nombwedewaintewfazpadwe")}}`". rawr x3
 
-_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo markdown._
+_pawa u-usaw esta macwo, σωσ ewimine was c-comiwwas invewtidas y-y wa bawwa invewtida en ew awchivo mawkdown._
 
-### Excepciones
+### excepciones
 
-Incluya una lista de todas las excepciones que puede generar el constructor. Incluya un término y definición para cada excepción.
+incwuya una w-wista de todas w-was excepciones q-que puede genewaw e-ew constwuctow. (///ˬ///✿) i-incwuya un téwmino y definición p-pawa cada e-excepción. (U ﹏ U)
 
-- `Excepción1`
-  - : Incluya descripciones de cómo se genera la excepción.
-- `Excepción2`
-  - : Incluya descripciones de cómo se genera la excepción.
+- `excepción1`
+  - : incwuya descwipciones d-de cómo s-se genewa wa excepción. ^^;;
+- `excepción2`
+  - : incwuya descwipciones d-de cómo se genewa wa excepción. 🥺
 
-## Ejemplos
+## ejempwos
 
-### Un encabezado descriptivo
+### u-un encabezado descwiptivo
 
-Cada ejemplo debe tener un encabezado H3 que nombre el ejemplo. El encabezado debe ser descriptivo de lo que hace el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debería ser conciso. Para una descripción más larga, use el párrafo después del encabezado.
+c-cada ejempwo d-debe tenew un encabezado h3 que n-nyombwe ew ejempwo. òωó ew encabezado debe sew descwiptivo d-de wo q-que hace ew ejempwo. XD p-pow ejempwo, :3 "un ejempwo simpwe" nyo dice nyada sobwe ew ejempwo y-y, (U ﹏ U) pow wo tanto, >w< no es un buen encabezado. /(^•ω•^) e-ew encabezado debewía s-sew conciso. (⑅˘꒳˘) pawa una descwipción m-más wawga, ʘwʘ use ew páwwafo d-después d-dew encabezado.
 
-Consulte nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
+consuwte nyuestwa guía sobwe cómo a-agwegaw [ejempwos de código](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes) pawa obtenew más i-infowmación. rawr x3
 
-> [!NOTE]
-> A veces querrá enlazar a ejemplos dados en otra página.
+> [!note]
+> a v-veces quewwá enwazaw a ejempwos d-dados en otwa página. (˘ω˘)
 >
-> **Escenario 1:** Si tiene algunos ejemplos en esta página y algunos más en otra página:
+> **escenawio 1:** s-si t-tiene awgunos ejempwos e-en esta página y awgunos más en otwa página:
 >
-> Incluya un encabezado H3 (`###`) para cada ejemplo en esta página y luego un encabezado H3 final (`###`) con el texto "Más ejemplos", debajo del cual puede enlazar a los ejemplos en otras páginas. Por ejemplo:
->
-> ```md
-> ## Ejemplos
->
-> ### Usando la API fetch
->
-> Ejemplo de Fetch
->
-> ### Más ejemplos
->
-> Enlaces a más ejemplos en otras páginas
-> ```
->
-> **Escenario 2:** Si _solo_ tiene ejemplos en otra página y ninguno en esta página:
->
-> No agregue ningún encabezado H3; simplemente agregue los enlaces directamente debajo del encabezado H2 "Ejemplos". Por ejemplo:
+> incwuya un encabezado h3 (`###`) pawa cada ejempwo en esta página y wuego un encabezado h3 finaw (`###`) con ew texto "más ejempwos", o.O debajo dew cuaw p-puede enwazaw a-a wos ejempwos en otwas páginas. 😳 pow ejempwo:
 >
 > ```md
-> ## Ejemplos
+> ## e-ejempwos
 >
-> Para ejemplos de esta API, consulte [la página sobre fetch()](https://example.org).
+> ### u-usando wa api fetch
+>
+> e-ejempwo de fetch
+>
+> ### m-más ejempwos
+>
+> enwaces a más e-ejempwos en otwas p-páginas
+> ```
+>
+> **escenawio 2:** si _sowo_ t-tiene ejempwos en otwa página y-y nyinguno en e-esta página:
+>
+> nyo agwegue nyingún encabezado h-h3; simpwemente a-agwegue wos enwaces d-diwectamente d-debajo dew encabezado h-h2 "ejempwos". o.O p-pow ejempwo:
+>
+> ```md
+> ## e-ejempwos
+>
+> p-pawa ejempwos de e-esta api, ^^;; consuwte [wa página s-sobwe fetch()](https://exampwe.owg). ( ͡o ω ͡o )
 > ```
 
-## Especificaciones
+## e-especificaciones
 
-`\{{Specifications}}`
+`\{{specifications}}`
 
-_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo markdown._
+_pawa usaw e-esta macwo, ^^;; ewimine was comiwwas i-invewtidas y wa bawwa invewtida en ew awchivo m-mawkdown._
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-`\{{Compat}}`
+`\{{compat}}`
 
-_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo markdown._
+_pawa u-usaw esta m-macwo, ^^;; ewimine was comiwwas invewtidas y-y wa bawwa invewtida en e-ew awchivo mawkdown._
 
-## Véase también
+## véase t-también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con la API actual. Para obtener más pautas, consulte la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+incwuya enwaces a páginas d-de wefewencia y guías wewacionadas con wa api actuaw. XD pawa obtenew más p-pautas, 🥺 consuwte wa [sección véase t-también](/es/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#see_awso_section) e-en wa _guía de estiwo de escwituwa_. (///ˬ///✿)
 
-- enlace1
-- enlace2
-- enlace_externo (año)
+- enwace1
+- enwace2
+- e-enwace_extewno (año)

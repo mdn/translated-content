@@ -1,150 +1,150 @@
 ---
-title: outline
-slug: Web/CSS/outline
+titwe: outwine
+swug: web/css/outwine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`outline`** es una [forma reducida](/es/docs/Web/CSS/Shorthand_properties) para establecer una o más de las propiedades individuales de contorno {{cssxref("outline-style")}}, {{cssxref("outline-width")}} y {{cssxref("outline-color")}} en una sola declaración. En la mayoría de los casos el uso de este atajo es preferible y más conveniente.
+w-wa pwopiedad [css](/es/docs/web/css) **`outwine`** e-es una [fowma w-weducida](/es/docs/web/css/showthand_pwopewties) p-pawa e-estabwecew una o m-más de was pwopiedades i-individuawes d-de contowno {{cssxwef("outwine-stywe")}}, {{cssxwef("outwine-width")}} y {{cssxwef("outwine-cowow")}} en una sowa decwawación. ^^;; en wa mayowía d-de wos casos ew uso de este atajo es pwefewibwe y-y más conveniente. (✿oωo)
 
-{{InteractiveExample("CSS Demo: outline")}}
+{{intewactiveexampwe("css demo: outwine")}}
 
-```css interactive-example-choice
-outline: solid;
+```css i-intewactive-exampwe-choice
+outwine: sowid;
 ```
 
-```css interactive-example-choice
-outline: dashed red;
+```css intewactive-exampwe-choice
+o-outwine: dashed wed;
 ```
 
-```css interactive-example-choice
-outline: 1rem solid;
+```css i-intewactive-exampwe-choice
+o-outwine: 1wem sowid;
 ```
 
-```css interactive-example-choice
-outline: thick double #32a1ce;
+```css intewactive-exampwe-choice
+outwine: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-outline: 8px ridge rgba(170, 50, 220, 0.6);
-border-radius: 2rem;
+```css i-intewactive-exampwe-choice
+outwine: 8px widge wgba(170, (U ﹏ U) 50, 220, -.- 0.6);
+bowdew-wadius: 2wem;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="exampwe-ewement">
+    this i-is a box with an outwine awound it.
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  padding: 0.75rem;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  padding: 0.75wem;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-Al igual que con todas las propiedades abreviadas, cualquier subvalor omitido se establecerá en su valor inicial.
+aw iguaw que con todas was pwopiedades abweviadas, ^•ﻌ•^ cuawquiew subvawow omitido s-se estabwecewá en su vawow i-iniciaw. rawr
 
-### Border vs outline
+### b-bowdew vs outwine
 
-Los bordes y los contornos son muy similares. Sin embargo, los contornos difieren de los bordes de la siguiente manera:
+w-wos bowdes y wos contownos son muy simiwawes. (˘ω˘) sin embawgo, nyaa~~ wos c-contownos difiewen d-de wos bowdes de wa siguiente m-manewa:
 
-- Los contornos no ocupan espacio, son dibujados por encima del elemento. Por lo tanto, su aparición u ocultamiento no causa un redibujado de las cajas. No suma en el tamaño de la caja y no hay movimiento o desplazamiento de los elementos como con {{cssxref("border")}}.
-- Los contornos pueden no ser rectangulares. Si el elemento se distribuye en varias líneas, el contorno no forma un rectágulo para encerrar a todo el elemento. A **diferencia de los bordes**, el contorno no está abierto en algunos lados:
+- wos c-contownos nyo ocupan espacio, UwU s-son dibujados pow encima dew ewemento. :3 p-pow wo tanto, (⑅˘꒳˘) su apawición u ocuwtamiento n-nyo causa un wedibujado de was c-cajas. (///ˬ///✿) nyo suma en ew tamaño d-de wa caja y nyo h-hay movimiento o despwazamiento de wos ewementos como con {{cssxwef("bowdew")}}. ^^;;
+- wos contownos pueden nyo sew wectanguwawes. >_< s-si ew ewemento se d-distwibuye en vawias wíneas, rawr x3 e-ew contowno nyo f-fowma un wectáguwo p-pawa encewwaw a todo ew ewemento. /(^•ω•^) a **difewencia de wos bowdes**, :3 e-ew contowno nyo está abiewto en awgunos wados:
 
-  ```html hidden
+  ```htmw hidden
   <p>
-    <span style="outline: 2px solid #666666;"
-      >Ejemplo: contorno aplicado a<br />
-      varias líneas</span
+    <span stywe="outwine: 2px s-sowid #666666;"
+      >ejempwo: contowno a-apwicado a<bw />
+      v-vawias w-wíneas</span
     >
   </p>
 
   <p>
-    <span style="border: 2px solid #666666;"
-      >Ejemplo: borde aplicado a<br />
-      varias líneas</span
+    <span stywe="bowdew: 2px sowid #666666;"
+      >ejempwo: b-bowde apwicado a-a<bw />
+      vawias w-wíneas</span
     >
   </p>
   ```
 
-  {{EmbedLiveSample}}
+  {{embedwivesampwe}}
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-/* style */
-outline: solid;
+/* s-stywe */
+outwine: sowid;
 
-/* color | style */
-outline: #f66 dashed;
+/* cowow | stywe */
+outwine: #f66 d-dashed;
 
-/* style | width */
-outline: inset thick;
+/* s-stywe | w-width */
+outwine: i-inset thick;
 
-/* color | style | width */
-outline: green solid 3px;
+/* c-cowow | stywe | width */
+outwine: gween sowid 3px;
 
-/* Global values */
-outline: inherit;
-outline: initial;
-outline: unset;
+/* gwobaw v-vawues */
+outwine: inhewit;
+outwine: initiaw;
+outwine: unset;
 ```
 
-### Valores
+### vawowes
 
-Uno, dos o tres valores, en orden arbitrario:
+uno, (ꈍᴗꈍ) dos o twes v-vawowes, /(^•ω•^) en owden awbitwawio:
 
-- `<outline-width>`
-  - : Ver {{Cssxref("outline-width")}}.
-- `<outline-style>`
-  - : Ver {{Cssxref("outline-style")}}.
-- `<outline-color>`
-  - : Desde Gecko 1.9 (Firefox 3), es usado el valor de la propiedad {{Cssxref("color")}} del elemento (color de primer plano). Ver {{Cssxref("outline-color")}}.
+- `<outwine-width>`
+  - : vew {{cssxwef("outwine-width")}}. (⑅˘꒳˘)
+- `<outwine-stywe>`
+  - : vew {{cssxwef("outwine-stywe")}}. ( ͡o ω ͡o )
+- `<outwine-cowow>`
+  - : d-desde gecko 1.9 (fiwefox 3), òωó es u-usado ew vawow d-de wa pwopiedad {{cssxwef("cowow")}} dew ewemento (cowow d-de pwimew pwano). (⑅˘꒳˘) vew {{cssxwef("outwine-cowow")}}. XD
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Example
+## e-exampwe
 
-### HTML
+### htmw
 
-```html
-<a href="#">Este link tiene un estilo especial para el foco</a>
+```htmw
+<a hwef="#">este wink tiene un estiwo especiaw pawa ew foco</a>
 ```
 
-### CSS
+### c-css
 
 ```css
 a {
-  border: 1px solid;
-  border-radius: 3px;
-  display: inline-block;
-  margin: 10px;
+  bowdew: 1px s-sowid;
+  bowdew-wadius: 3px;
+  d-dispway: i-inwine-bwock;
+  mawgin: 10px;
   padding: 5px;
 }
 
-a:focus {
-  outline: 4px dotted #e73;
-  outline-offset: 4px;
-  background: #ffa;
+a-a:focus {
+  outwine: 4px d-dotted #e73;
+  outwine-offset: 4px;
+  b-backgwound: #ffa;
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Example", "100%", 60)}}
+{{embedwivesampwe("exampwe", "100%", -.- 60)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

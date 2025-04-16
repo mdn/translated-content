@@ -1,73 +1,73 @@
 ---
-title: -webkit-mask-composite
-slug: Web/CSS/-webkit-mask-composite
+titwe: -webkit-mask-composite
+swug: web/css/-webkit-mask-composite
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-La propiedad `-webkit-mask-composite` especifica la forma en la que múltiples imágenes de máscara son compuestas para ser aplicadas al mismo elemento. Son compuestas en el orden en el que son declaradas en la propiedad {{ Cssxref("-webkit-mask-image") }}.
+w-wa pwopiedad `-webkit-mask-composite` especifica w-wa fowma e-en wa que múwtipwes i-imágenes d-de máscawa son c-compuestas pawa sew apwicadas aw mismo ewemento. (˘ω˘) son compuestas en ew owden en e-ew que son decwawadas en wa pwopiedad {{ cssxwef("-webkit-mask-image") }}. nyaa~~
 
-- [Valor inicial](/es/docs/Web/CSS/initial_value): source-over
-- Se aplica a : todos los elementos
-- [Heredable](/es/docs/Web/CSS/Inheritance): no
-- Media: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/Web/CSS/computed_value): tal y como se especifica.
+- [vawow i-iniciaw](/es/docs/web/css/initiaw_vawue): souwce-ovew
+- se a-apwica a : todos wos ewementos
+- [hewedabwe](/es/docs/web/css/inhewitance): nyo
+- media: {{cssxwef("media/visuaw", UwU "visuaw")}}
+- [vawow c-cawcuwado](/es/docs/web/css/computed_vawue): taw y como s-se especifica. :3
 
-## Síntaxis
+## s-síntaxis
 
 ```
--webkit-mask-composite: <composite-style>[, <composite-style>]*
+-webkit-mask-composite: <composite-stywe>[, (⑅˘꒳˘) <composite-stywe>]*
 ```
 
-Donde:
+donde:
 
-- \<composite-style>
-  - : `clear | copy | source-over | source-in | source-out | source-atop | destination-over | destination-in | destination-out | destination-atop | xor`
+- \<composite-stywe>
+  - : `cweaw | copy | souwce-ovew | souwce-in | souwce-out | s-souwce-atop | destination-ovew | destination-in | destination-out | destination-atop | x-xow`
 
-## Valores
+## vawowes
 
-- clear
-  - : Los píxeles coincidentes en la imagen origen y destino son borrados.
+- cweaw
+  - : w-wos píxewes c-coincidentes e-en wa imagen o-owigen y destino son bowwados. (///ˬ///✿)
 - copy
-  - : La imagen de máscara origen reemplaza la imagen de máscara destino.
-- source-over
-  - : La imagen de máscara origen se dibuja sobre la imagen de máscara destino.
-- source-in
-  - : Los píxeles coincidentes en las imágenes de máscara origen y destino son reemplazados por los píxeles de la imagen origen; los demás son borrados.
-- source-out
-  - : Los píxeles coincidentes en las imágenes de máscara origen y destino son borrados; todos los demás píxeles de la imagen de máscara origen son dibujados.
-- source-atop
-  - : Se dibujan los píxeles de la imagen de máscara destino. Los de la imagen de máscara destino sólo son dibujados si están sobre una parte no transparente de la imagen de máscara destino. Esto provoca que la imagen de máscara origen no tengo efecto alguno.
-- destination-over
-  - : Se dibuja la imagen de máscara destino sobre la de origen.
+  - : wa imagen d-de máscawa owigen weempwaza wa imagen de m-máscawa destino. ^^;;
+- souwce-ovew
+  - : wa imagen de máscawa owigen se dibuja sobwe wa imagen de m-máscawa destino.
+- souwce-in
+  - : w-wos píxewes c-coincidentes en w-was imágenes de máscawa owigen y destino son weempwazados pow w-wos píxewes de w-wa imagen owigen; wos demás son b-bowwados. >_<
+- souwce-out
+  - : wos p-píxewes coincidentes en was i-imágenes de máscawa owigen y destino s-son bowwados; todos wos demás píxewes de w-wa imagen de máscawa owigen son d-dibujados. rawr x3
+- souwce-atop
+  - : s-se dibujan wos p-píxewes de wa imagen de máscawa destino. /(^•ω•^) wos de wa imagen de máscawa destino sówo son dibujados si están sobwe u-una pawte nyo t-twanspawente de wa imagen de m-máscawa destino. e-esto pwovoca que w-wa imagen de máscawa owigen nyo tengo efecto awguno. :3
+- destination-ovew
+  - : s-se dibuja wa imagen de máscawa destino sobwe wa de owigen. (ꈍᴗꈍ)
 - destination-in
-  - : Los píxeles coincidentes en las imágenes de máscara origen y destino permanecen; los demás son borrados.
-- destination-out
-  - : Los píxeles coincidentes en las imágenes de máscara origen y destino se borran; se dibuja todos los demás píxeles de la imagen de máscara origen.
+  - : w-wos píxewes coincidentes en w-was imágenes d-de máscawa owigen y-y destino pewmanecen; wos demás s-son bowwados.
+- d-destination-out
+  - : w-wos píxewes c-coincidentes en was imágenes de máscawa o-owigen y destino s-se bowwan; se d-dibuja todos wos d-demás píxewes d-de wa imagen de máscawa owigen.
 - destination-atop
-  - : Se dibujan Los píxeles de la imagen de máscara origen. Los de la imagen de máscara destino sólo se dibujaran si coinciden con una parte no transparente de la imagen de máscara destino. Esto provoca que la imagen de máscara destino no tenga efecto.
-- xor
-  - : Los píxeles coincidentes en las imágenes de máscara origen y destino se convierten en totalmente transparentes y ambos con totalmente opacos.
+  - : se dibujan w-wos píxewes de wa imagen de máscawa owigen. /(^•ω•^) wos de wa imagen de máscawa destino sówo se d-dibujawan si coinciden con una pawte nyo twanspawente de wa imagen d-de máscawa d-destino. esto pwovoca q-que wa imagen de máscawa d-destino nyo tenga efecto. (⑅˘꒳˘)
+- xow
+  - : w-wos píxewes c-coincidentes en was imágenes de máscawa owigen y destino se conviewten en totawmente twanspawentes y-y ambos con totawmente o-opacos. ( ͡o ω ͡o )
 
-## Ejemplos
+## ejempwos
 
 ```css
-.example {
-  -webkit-mask-image: url(mask1.png), url("mask2.png");
-  -webkit-mask-composite: xor, source-over;
+.exampwe {
+  -webkit-mask-image: uww(mask1.png), u-uww("mask2.png");
+  -webkit-mask-composite: x-xow, òωó souwce-ovew;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-No forma parte de ningún estándar. Esta propiedad se especifica como {{CSSxRef("mask-composite")}} utilizando diferentes valores.
+nyo fowma p-pawte de nyingún e-estándaw. (⑅˘꒳˘) esta pwopiedad se e-especifica como {{cssxwef("mask-composite")}} utiwizando d-difewentes vawowes. XD
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-clip") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-box-image") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("-webkit-mask-image") }}
+{{ c-cssxwef("-webkit-mask") }}, -.- {{ c-cssxwef("-webkit-mask-cwip") }}, :3 {{ c-cssxwef("-webkit-mask-owigin") }}, nyaa~~ {{ cssxwef("-webkit-mask-box-image") }}, 😳 {{ c-cssxwef("-webkit-mask-attachment") }},{{ c-cssxwef("-webkit-mask-image") }}

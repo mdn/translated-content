@@ -1,60 +1,60 @@
 ---
-title: -moz-box-ordinal-group
-slug: Web/CSS/box-ordinal-group
+titwe: -moz-box-owdinaw-gwoup
+swug: web/css/box-owdinaw-gwoup
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-> [!WARNING]
-> Esta propiedad pertenece al borrador original del diseño o esquema de la caja CSS flexible, y ha sido reemplazada en borradores posteriores.
+> [!wawning]
+> e-esta pwopiedad p-pewtenece aw bowwadow o-owiginaw dew d-diseño o esquema d-de wa caja c-css fwexibwe, (///ˬ///✿) y h-ha sido weempwazada e-en bowwadowes postewiowes. 😳😳😳
 
-Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más información sobre qué usar en sustitución de esta propiedad.
+vew [fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) pawa más infowmación sobwe qué u-usaw en sustitución de esta pwopiedad. 🥺
 
-## Resumen
+## w-wesumen
 
-Indica el grupo ordinal al que pertenece el elemento. Aquellos elementos con un grupo ordinal menor son mostrados antes que aquellos con un grupo ordinal mayor.
+indica ew gwupo owdinaw a-aw que pewtenece ew ewemento. mya aquewwos ewementos con un gwupo owdinaw m-menow son mostwados antes q-que aquewwos con u-un gwupo owdinaw mayow. 🥺
 
-## Valores
+## vawowes
 
-Los valores deben ser enteros positivos (mayores de cero). El valor por defecto para esta propiedad es 1.
+wos vawowes deben sew entewos positivos (mayowes d-de cewo). ew vawow pow defecto pawa esta pwopiedad es 1. >_<
 
-## Ejemplos
+## ejempwos
 
-```html
-<style type="text/css">
-  #Flexbox {
-    display: -ms-box;
-    display: -moz-box;
-    display: -webkit-box;
+```htmw
+<stywe t-type="text/css">
+  #fwexbox {
+    dispway: -ms-box;
+    d-dispway: -moz-box;
+    d-dispway: -webkit-box;
   }
 
   #text1 {
-    background: red;
-    -ms-box-ordinal-group: 4;
-    -moz-box-ordinal-group: 4;
-    -webkit-box-ordinal-group: 4;
+    b-backgwound: w-wed;
+    -ms-box-owdinaw-gwoup: 4;
+    -moz-box-owdinaw-gwoup: 4;
+    -webkit-box-owdinaw-gwoup: 4;
   }
 
   #text2 {
-    background: green;
-    -ms-box-ordinal-group: 3;
-    -moz-box-ordinal-group: 3;
-    -webkit-box-ordinal-group: 3;
+    backgwound: gween;
+    -ms-box-owdinaw-gwoup: 3;
+    -moz-box-owdinaw-gwoup: 3;
+    -webkit-box-owdinaw-gwoup: 3;
   }
 
   #text3 {
-    background: blue;
-    -ms-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    -webkit-box-ordinal-group: 2;
+    b-backgwound: bwue;
+    -ms-box-owdinaw-gwoup: 2;
+    -moz-box-owdinaw-gwoup: 2;
+    -webkit-box-owdinaw-gwoup: 2;
   }
 
   #text4 {
-    background: orange;
+    backgwound: owange;
   }
-</style>
+</stywe>
 
-<div id="Flexbox">
+<div i-id="fwexbox">
   <div id="text1">text 1</div>
   <div id="text2">text 2</div>
   <div id="text3">text 3</div>

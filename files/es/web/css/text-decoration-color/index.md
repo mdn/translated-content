@@ -1,84 +1,84 @@
 ---
-title: text-decoration-color
-slug: Web/CSS/text-decoration-color
+titwe: text-decowation-cowow
+swug: web/css/text-decowation-cowow
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-## Resumen
+## w-wesumen
 
-La propiedad **`text-decoration-color`** establece el color usado cuando se dibujan subrayados o líneas a través del texto, especificadas por la propiedad {{ cssxref("text-decoration-line") }}. El color especificado será el mismo para los tres tipos de línea.
+w-wa pwopiedad **`text-decowation-cowow`** e-estabwece e-ew cowow usado c-cuando se dibujan s-subwayados o-o wíneas a twavés dew texto, ^^ especificadas pow wa pwopiedad {{ cssxwef("text-decowation-wine") }}. :3 e-ew cowow especificado sewá ew mismo pawa w-wos twes tipos de wínea. -.-
 
-CSS no provee un mecanismo directo para especificar un color único para cada tipo de línea. Sin embargo, se puede obtener un efecto similar anidando elementos HTML, aplicando diferente tipo de línea para cada uno (via la propiedad `text-decoration-line`), y especificando un color de línea (usando `text-decoration-color`) propio para cada elemento.
+css n-nyo pwovee un mecanismo diwecto pawa especificaw un cowow único p-pawa cada tipo de wínea. 😳 sin embawgo, s-se puede o-obtenew un efecto simiwaw anidando ewementos htmw, apwicando difewente tipo de w-wínea pawa cada uno (via wa pwopiedad `text-decowation-wine`), mya y especificando un cowow de wínea (usando `text-decowation-cowow`) pwopio pawa c-cada ewemento. (˘ω˘)
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* valores <color> */
-text-decoration-color: currentColor;
-text-decoration-color: red;
-text-decoration-color: #00ff00;
-text-decoration-color: rgba(255, 128, 128, 0.5);
-text-decoration-color: transparent;
+/* v-vawowes <cowow> */
+t-text-decowation-cowow: c-cuwwentcowow;
+t-text-decowation-cowow: wed;
+text-decowation-cowow: #00ff00;
+text-decowation-cowow: wgba(255, >_< 128, 128, 0.5);
+t-text-decowation-cowow: twanspawent;
 
-/* Valores globales */
-text-decoration-color: inherit;
-text-decoration-color: initial;
-text-decoration-color: unset;
+/* vawowes gwobawes */
+t-text-decowation-cowow: inhewit;
+text-decowation-cowow: initiaw;
+text-decowation-cowow: unset;
 ```
 
-### Valores
+### v-vawowes
 
-- `<color>`
-  - : La propiedad `color` acepta varlos nombres clave y notaciones numéricas. Vea {{cssxref("&lt;color&gt;")}} para más detalles.
+- `<cowow>`
+  - : wa pwopiedad `cowow` a-acepta v-vawwos nyombwes c-cwave y nyotaciones nyuméwicas. -.- vea {{cssxwef("&wt;cowow&gt;")}} pawa más detawwes. 🥺
 
-### Sintaxis formal
+### s-sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
-.example {
-  text-decoration: underline;
-  text-decoration-color: red;
+.exampwe {
+  text-decowation: u-undewwine;
+  text-decowation-cowow: w-wed;
 }
 ```
 
-El ejemplo anterior tiene el mismo efecto que el código siguiente, que además añade un estilo para cuando el elemento tiene el puntero del mouse encima.
+ew ejempwo antewiow t-tiene ew mismo efecto que ew c-código siguiente, (U ﹏ U) que además añade un estiwo p-pawa cuando ew ewemento tiene ew p-puntewo dew mouse encima.
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <style>
-      .example {
-        font-size: 24px;
-        text-decoration: underline;
-        color: red;
+    <stywe>
+      .exampwe {
+        f-font-size: 24px;
+        t-text-decowation: undewwine;
+        cowow: wed;
       }
-      .example:hover {
-        color: blue;
-        text-decoration: line-through;
+      .exampwe:hovew {
+        cowow: bwue;
+        text-decowation: wine-thwough;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <span class="example">
-      <span style="color:black;"
-        >texto negro con subrayado rojo, y azul con el cursor encima</span
+    <span cwass="exampwe">
+      <span s-stywe="cowow:bwack;"
+        >texto n-nyegwo con subwayado wojo, >w< y azuw c-con ew cuwsow e-encima</span
       >
     </span>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

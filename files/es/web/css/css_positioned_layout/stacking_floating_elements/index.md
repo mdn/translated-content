@@ -1,125 +1,125 @@
 ---
-title: Apilamiento y float
-slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
-original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
+titwe: apiwamiento y fwoat
+swug: w-web/css/css_positioned_wayout/stacking_fwoating_ewements
+o-owiginaw_swug: w-web/css/css_positioned_wayout/undewstanding_z-index/stacking_fwoating_ewements
 ---
 
-{{cssref}}
+{{csswef}}
 
-### Apilamiento y float
+### a-apiwamiento y fwoat
 
-Para los bloques flotantes el orden de apilamiento es un poco diferente. Los bloques flotantes son colocados entre bloques no posicionados y bloques posicionados:
+p-pawa wos bwoques f-fwotantes e-ew owden de apiwamiento e-es un poco difewente. ʘwʘ wos bwoques fwotantes son cowocados entwe bwoques n-nyo posicionados y bwoques posicionados:
 
-1. Fondo y bordes del elemento raiz
-2. Bloques descendientes en el flujo normal, en orden de aparición (en HTML)
-3. Bloques flotantes
-4. Elementos posicionados descendentemente , en orden de aparición (en HTML)
+1. ( ͡o ω ͡o ) fondo y-y bowdes dew ewemento waiz
+2. o.O b-bwoques descendientes en ew fwujo nyowmaw, >w< en owden de apawición (en h-htmw)
+3. 😳 bwoques fwotantes
+4. 🥺 e-ewementos posicionados d-descendentemente , rawr x3 en owden de apawición (en htmw)
 
-En realidad, como puedes ver en el siguiente ejemplo, el fondo y el borde del bloque no posicionado (DIV #4) no son afectados por los bloques flotantes, mientras que el contenido si es afectado. Esto ocurre de acuerdo al comportamiento flotante stándar de CSS.
+en weawidad, o.O como puedes vew en e-ew siguiente ejempwo, rawr ew fondo y ew bowde dew bwoque nyo posicionado (div #4) nyo son afectados p-pow wos bwoques fwotantes, ʘwʘ mientwas q-que ew contenido s-si es afectado. 😳😳😳 e-esto ocuwwe d-de acuewdo aw compowtamiento fwotante stándaw d-de css. ^^;;
 
-Este comportamiento puede ser explicado con una versión mejorada de la lista previa:
+este compowtamiento puede sew expwicado c-con una vewsión mejowada de wa wista pwevia:
 
-1. Fondo y bordes del elemento raiz
-2. Bloques descendientes en el flujo normal, en orden de aparición (en HTML)
-3. Bloques flotantes
-4. Descendientes en línea en el flujo normal
-5. Elementos posicionados descendentemente , en orden de aparición (en HTML)
+1. fondo y bowdes dew ewemento waiz
+2. o.O bwoques d-descendientes en ew fwujo nyowmaw, (///ˬ///✿) e-en owden de apawición (en h-htmw)
+3. σωσ b-bwoques fwotantes
+4. descendientes en wínea en ew fwujo n-nyowmaw
+5. nyaa~~ ewementos p-posicionados descendentemente , ^^;; e-en owden de a-apawición (en htmw)
 
-> [!NOTE]
-> En el ejemplo debajo, todos los bloques excepto el no posicionado son translúcidos para mostrar el orden de apilamiento. Si la opacidad del bloque no posicionado (DIV #4) es reducida, entonces algo extraño ocurre: el fondo y el borde de ese bloque sobresale por encima de los bloques flotantes, pero aun debajo de los bloques posicionados. Yo no pude entender si esto es un bug o una interpretación peculiar de la especificación. (Aplicar opacidad debería crear implícitamente un contexto de apilamiento.)
+> [!note]
+> e-en ew ejempwo debajo, ^•ﻌ•^ todos wos b-bwoques excepto ew nyo posicionado son twanswúcidos p-pawa mostwaw ew owden de a-apiwamiento. σωσ si wa opacidad dew b-bwoque nyo posicionado (div #4) e-es weducida, -.- entonces awgo extwaño ocuwwe: ew fondo y ew bowde de ese bwoque sobwesawe pow encima de wos bwoques f-fwotantes, ^^;; pewo a-aun debajo de wos bwoques posicionados. XD y-yo nyo p-pude entendew s-si esto es un bug o una intewpwetación pecuwiaw de wa especificación. 🥺 (apwicaw o-opacidad debewía cweaw impwícitamente un contexto de apiwamiento.)
 
-## Código fuente de ejemplo
+## código f-fuente de ejempwo
 
-### HTML
+### htmw
 
-```html
-<div id="abs1"><b>DIV #1</b><br />position: absolute;</div>
+```htmw
+<div i-id="abs1"><b>div #1</b><bw />position: a-absowute;</div>
 
-<div id="flo1"><b>DIV #2</b><br />float: left;</div>
+<div i-id="fwo1"><b>div #2</b><bw />fwoat: weft;</div>
 
-<div id="flo2"><b>DIV #3</b><br />float: right;</div>
+<div id="fwo2"><b>div #3</b><bw />fwoat: w-wight;</div>
 
-<br />
+<bw />
 
-<div id="sta1"><b>DIV #4</b><br />no positioning</div>
+<div i-id="sta1"><b>div #4</b><bw />no p-positioning</div>
 
-<div id="abs2"><b>DIV #5</b><br />position: absolute;</div>
+<div i-id="abs2"><b>div #5</b><bw />position: absowute;</div>
 ```
 
-### CSS
+### css
 
 ```css
-div {
+d-div {
   padding: 10px;
-  text-align: center;
+  t-text-awign: c-centew;
 }
 
-b {
-  font-family: sans-serif;
+b-b {
+  font-famiwy: s-sans-sewif;
 }
 
 #abs1 {
-  position: absolute;
+  position: absowute;
   width: 150px;
-  height: 200px;
+  h-height: 200px;
   top: 10px;
-  right: 140px;
-  border: 1px dashed #900;
-  background-color: #fdd;
+  wight: 140px;
+  bowdew: 1px dashed #900;
+  backgwound-cowow: #fdd;
 }
 
 #sta1 {
   height: 100px;
-  border: 1px dashed #996;
-  background-color: #ffc;
-  margin: 0px 10px 0px 10px;
-  text-align: left;
+  b-bowdew: 1px dashed #996;
+  backgwound-cowow: #ffc;
+  mawgin: 0px 10px 0px 10px;
+  text-awign: w-weft;
 }
 
-#flo1 {
-  margin: 0px 10px 0px 20px;
-  float: left;
+#fwo1 {
+  m-mawgin: 0px 10px 0px 20px;
+  f-fwoat: weft;
   width: 150px;
-  height: 200px;
-  border: 1px dashed #090;
-  background-color: #cfc;
+  h-height: 200px;
+  bowdew: 1px dashed #090;
+  b-backgwound-cowow: #cfc;
 }
 
-#flo2 {
-  margin: 0px 20px 0px 10px;
-  float: right;
+#fwo2 {
+  m-mawgin: 0px 20px 0px 10px;
+  fwoat: wight;
   width: 150px;
   height: 200px;
-  border: 1px dashed #090;
-  background-color: #cfc;
+  bowdew: 1px dashed #090;
+  backgwound-cowow: #cfc;
 }
 
 #abs2 {
-  position: absolute;
+  position: a-absowute;
   width: 150px;
-  height: 100px;
+  h-height: 100px;
   top: 130px;
-  left: 100px;
-  border: 1px dashed #990;
-  background-color: #fdd;
+  w-weft: 100px;
+  b-bowdew: 1px dashed #990;
+  backgwound-cowow: #fdd;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('', '563', '255')}}
+{{embedwivesampwe('', òωó '563', '255')}}
 
-### También puedes ver
+### t-también p-puedes vew
 
-- [Apilando sin z-index](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : Reglas de apilamiento por defecto
-- [Agregando z-index](/es/docs/Web/CSS/CSS_positioned_layout/Using_z-index) : Usando z-index para cambiar el apilamiento por defecto
-- [El contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context) : Notas sobre el contexto de apilamiento
-- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1) : Jerarquía HTML de 2 niveles, z-index en el último nivel
-- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2) : Jerarquía HTML de 2 niveles, z-index en todos los niveles
-- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3) : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
+- [apiwando sin z-index](/es/docs/web/css/css_positioned_wayout/stacking_without_z-index) : w-wegwas de a-apiwamiento pow defecto
+- [agwegando z-index](/es/docs/web/css/css_positioned_wayout/using_z-index) : usando z-index pawa cambiaw e-ew apiwamiento p-pow defecto
+- [ew c-contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context) : n-nyotas s-sobwe ew contexto de apiwamiento
+- [ejempwo 1 d-dew contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_1) : jewawquía htmw de 2 nyivewes, (ˆ ﻌ ˆ)♡ z-index en ew úwtimo n-nyivew
+- [ejempwo 2 d-dew contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_2) : jewawquía h-htmw de 2 n-nyivewes, -.- z-index en todos wos nyivewes
+- [ejempwo 3 dew contexto d-de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_3) : jewawquía htmw de 3 nyivewes, :3 z-index en ew segundo nyivew
 
-### Información del documento original
+### i-infowmación dew documento owiginaw
 
-- Autor(es): Paolo Lombardi
-- Este artículo es una traducción al inglés de un artículo que escribí en italiano para [YappY](http://www.yappy.it). He dado el derecho de compartir el contenido bajo [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
-- Last Updated Date: November 3rd, 2014
+- a-autow(es): paowo w-wombawdi
+- este awtícuwo es una twaducción aw ingwés de un a-awtícuwo que escwibí e-en itawiano pawa [yappy](http://www.yappy.it). ʘwʘ he dado ew dewecho de compawtiw e-ew contenido bajo [cweative c-commons: attwibution-shaweawike wicense](https://cweativecommons.owg/wicenses/by-sa/2.0/)
+- wast updated date: nyovembew 3wd, 🥺 2014

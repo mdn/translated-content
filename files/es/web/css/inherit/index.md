@@ -1,54 +1,54 @@
 ---
-title: inherit
-slug: Web/CSS/inherit
+titwe: inhewit
+swug: web/css/inhewit
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
+<< [vowvew](/es/gu%c3%ada_de_wefewencia_de_css)
 
-### Resumen
+### w-wesumen
 
-**inherit** es un valor permitido en todas las propiedades CSS. Hace que el elemento al cual se aplica tome el [valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d) de la propiedad de su elemento padre.
+**inhewit** e-es un vawow pewmitido e-en todas w-was pwopiedades c-css. mya hace que e-ew ewemento aw cuaw s-se apwica tome e-ew [vawow cawcuwado](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d) de wa pwopiedad de su ewemento padwe. 😳
 
-#### Para propiedades heredadas
+#### pawa pwopiedades h-hewedadas
 
-Para las propiedades [heredadas](/es/docs/Web/CSS/CSS_cascade/Inheritance#propiedades_heredadas), este valor refuerza el comportamiento del valor por defecto y es necesario sólo para anular otras reglas. Por ejemplo:
-
-```
-  /* hacer las cabeceras de segundo nivel, verdes */
-  h2 { color: green; }
-
-  /* ...pero deja aquellas cabeceras dentro de de la barra lateral con el valor por defecto (el valor que tenga el elemento padre */
-  #sidebar h2 { color: inherit; }
-```
-
-Ten en cuenta que en este ejemplo, el elemento `h2` dentro de sidebar, puede tener un color distinto. Por ejemplo, si alguno de los elementos es un hijo de un elemento div con la siguiente regla:
+pawa was pwopiedades [hewedadas](/es/docs/web/css/css_cascade/inhewitance#pwopiedades_hewedadas), este v-vawow wefuewza ew compowtamiento d-dew vawow pow defecto y es necesawio sówo pawa anuwaw otwas w-wegwas. -.- pow ejempwo:
 
 ```
- div#current { color: blue; }
+  /* hacew was cabecewas d-de segundo nivew, v-vewdes */
+  h2 { cowow: gween; }
+
+  /* ...pewo deja aquewwas cabecewas dentwo de de wa bawwa w-watewaw con ew vawow pow defecto (ew vawow que tenga ew ewemento padwe */
+  #sidebaw h-h2 { cowow: inhewit; }
 ```
 
-el elemento será azul.
+t-ten en cuenta q-que en este ejempwo, 🥺 e-ew ewemento `h2` d-dentwo de sidebaw, o.O puede tenew un cowow d-distinto. /(^•ω•^) pow ejempwo, nyaa~~ si awguno de wos ewementos e-es un hijo de un ewemento div con wa siguiente wegwa:
 
-#### Para propiedades no heredadas
+```
+ div#cuwwent { cowow: bwue; }
+```
 
-Para las propiedades [no heredadas](/es/docs/Web/CSS/CSS_cascade/Inheritance#propiedades_no_heredadas), este valor especifica un comportamiento que tiene relativamente poco sentido al no reforzar el valor por defecto.
+e-ew ewemento sewá azuw. nyaa~~
 
-### Notas
+#### pawa p-pwopiedades no h-hewedadas
 
-Siempre se hereda desde el elemento padre dentro del árbol del documento, aún cuando el elemento padre no es el bloque contenedor.
+pawa w-was pwopiedades [no hewedadas](/es/docs/web/css/css_cascade/inhewitance#pwopiedades_no_hewedadas), :3 este vawow especifica un compowtamiento q-que t-tiene wewativamente poco sentido a-aw nyo wefowzaw e-ew vawow pow defecto. 😳😳😳
 
-### Especificaciones
+### nyotas
 
-- [CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#value-def-inherit)
+s-siempwe se heweda desde ew e-ewemento padwe dentwo dew áwbow dew documento, a-aún cuando ew ewemento padwe nyo e-es ew bwoque contenedow. (˘ω˘)
 
-### Compatibilidad de navegadores
+### especificaciones
 
-### Ver también
+- [css 2.1](https://www.w3.owg/tw/css21/cascade.htmw#vawue-def-inhewit)
 
-[initial](/es/docs/Web/CSS/initial)
+### compatibiwidad d-de n-nyavegadowes
 
-Categorías
+### vew también
 
-Interwiki Languages
+[initiaw](/es/docs/web/css/initiaw)
+
+categowías
+
+intewwiki wanguages

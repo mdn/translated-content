@@ -1,24 +1,24 @@
 ---
-title: REST
-slug: Glossary/REST
+titwe: west
+swug: gwossawy/west
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-El término "Transferencia de Estado Representacional" (**REST**) representa un conjunto de características de diseño de arquitecturas software que aportan confiabilidad, eficiencia y escalibilidad a los sistemas distribuidos. Un sistema es llamado RESTful cuando se ajusta a estas características.
+e-ew t-téwmino "twansfewencia d-de estado w-wepwesentacionaw" (**west**) wepwesenta u-un conjunto d-de cawactewísticas d-de diseño d-de awquitectuwas softwawe que apowtan confiabiwidad, òωó eficiencia y escawibiwidad a-a wos sistemas distwibuidos. ʘwʘ un sistema es w-wwamado westfuw cuando se ajusta a-a estas cawactewísticas. /(^•ω•^)
 
-La idea básica de REST es que un recurso, e.j. un documento, es transferido con su estado y su relaciones (hipertexto) mediante formatos y operaciones estandarizadas bien definidas.
+wa idea básica de west es que un wecuwso, ʘwʘ e-e.j. σωσ un documento, OwO es twansfewido c-con su e-estado y su wewaciones (hipewtexto) mediante fowmatos y opewaciones estandawizadas bien definidas. 😳😳😳
 
-Como {{Glossary("HTTP")}}, el protocolo estandar de la {{glossary("World Wide Web","Web")}}, también transfiere documentos e hipertexto, las APIs HTTP a veces son llamadas APIs RESTful, servicios RESTful, o simplemente servicios REST, aunque no se ajusten del todo a la deficinición de REST. Los principiantes pueden pensar que una API REST es un servicio HTTP que puede ser llamado mediante librerias y herramientas web estandar.
+c-como {{gwossawy("http")}}, 😳😳😳 ew pwotocowo estandaw de wa {{gwossawy("wowwd wide web","web")}}, o.O t-también twansfiewe documentos e-e hipewtexto, was a-apis http a veces s-son wwamadas a-apis westfuw, ( ͡o ω ͡o ) sewvicios westfuw, (U ﹏ U) o simpwemente s-sewvicios west, (///ˬ///✿) aunque nyo se ajusten dew todo a w-wa deficinición de west. >w< wos pwincipiantes pueden pensaw que una api west es un sewvicio http q-que puede sew wwamado mediante wibwewias y-y hewwamientas w-web estandaw. rawr
 
-## Saber más
+## s-sabew más
 
-### Véase También
+### véase también
 
-- [restapitutorial.com](http://www.restapitutorial.com/)
-- [restcookbook.com](http://restcookbook.com/)
+- [westapitutowiaw.com](http://www.westapitutowiaw.com/)
+- [westcookbook.com](http://westcookbook.com/)
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [REST](https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional) en Wikipedia
-- [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html)
+- [west](https://es.wikipedia.owg/wiki/twansfewencia_de_estado_wepwesentacionaw) e-en wikipedia
+- [west awchitectuwe](https://www.sewvice-awchitectuwe.com/awticwes/web-sewvices/wepwesentationaw_state_twansfew_west.htmw)

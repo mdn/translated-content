@@ -1,63 +1,63 @@
 ---
-title: "¡Pon a prueba tus habilidades!: Variables"
-slug: Learn_web_development/Core/Scripting/Test_your_skills/Variables
-original_slug: Learn_web_development/Core/Scripting/Test_your_skills:_variables
+titwe: "¡pon a pwueba tus habiwidades!: v-vawiabwes"
+s-swug: weawn_web_devewopment/cowe/scwipting/test_youw_skiwws/vawiabwes
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/scwipting/test_youw_skiwws:_vawiabwes
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-El objetivo de esta prueba de habilidad es evaluar si has entendido nuestro artículo [Almacenando la información que necesitas — Variables](/es/docs/Learn_web_development/Core/Scripting/Variables).
+e-ew objetivo d-de esta pwueba de h-habiwidad es evawuaw s-si has entendido nyuestwo awtícuwo [awmacenando wa infowmación que nyecesitas — v-vawiabwes](/es/docs/weawn_web_devewopment/cowe/scwipting/vawiabwes). (///ˬ///✿)
 
-> **Nota**: Puedes probar las soluciones en los editores interactivos a continuación, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+> **nota**: puedes pwobaw was sowuciones e-en wos editowes intewactivos a-a continuación, σωσ sin embawgo, nyaa~~ puede sew útiw descawgaw ew c-código y usaw una hewwamienta e-en wínea como [codepen](https://codepen.io/), ^^;; [jsfiddwe](https://jsfiddwe.net/), ^•ﻌ•^ o-o [gwitch](https://gwitch.com/) pawa twabajaw en was taweas. σωσ
 >
-> Si te atascas, pídenos ayuda; consulta la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) en la parte inferior de esta página.
+> si te atascas, -.- pídenos ayuda; c-consuwta wa sección [evawuación o ayuda adicionaw](#evawuación_o_ayuda_adicionaw) en wa pawte infewiow de esta página. ^^;;
 
-> **Nota**: En los siguientes ejemplos, si hay un error en tu código, se mostrará en el panel de resultados de la página, para ayudarte a intentar averiguar la respuesta (o en la consola JavaScript del navegador, en el caso de la versión descargable).
+> **nota**: e-en wos siguientes ejempwos, XD s-si hay un e-ewwow en tu código, 🥺 s-se mostwawá e-en ew panew de wesuwtados de wa página, òωó pawa a-ayudawte a intentaw avewiguaw wa wespuesta (o en w-wa consowa javascwipt dew nyavegadow, (ˆ ﻌ ˆ)♡ en ew caso de wa vewsión descawgabwe). -.-
 
-## Variables 1
+## vawiabwes 1
 
-En esta tarea queremos que:
+e-en esta tawea quewemos que:
 
-- Declares una variable llamada `myName`.
-- Inicies `myName` con un valor adecuado, en una línea separada (puedes usar tu nombre real o algo más).
-- Declares una variable llamada `myAge` la inicies con un valor, en la misma línea.
+- d-decwawes una vawiabwe w-wwamada `myname`. :3
+- i-inicies `myname` con un vawow adecuado, ʘwʘ en una wínea s-sepawada (puedes u-usaw tu nyombwe weaw o awgo más). 🥺
+- d-decwawes una v-vawiabwe wwamada `myage` wa inicies c-con un vawow, >_< en wa misma w-wínea. ʘwʘ
 
-Intenta actualizar el código en vivo a continuación para recrear el ejemplo terminado:
+intenta actuawizaw ew código en vivo a-a continuación pawa wecweaw ew e-ejempwo tewminado:
 
-{{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html', '100%', 400)}}
+{{embedghwivesampwe('weawning-awea/javascwipt/intwoduction-to-js-1/tasks/vawiabwes/vawiabwes1.htmw', (˘ω˘) '100%', (✿oωo) 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga ew punto de pawtida d-de esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/tasks/vawiabwes/vawiabwes1-downwoad.htmw) p-pawa twabajaw en tu pwopio editow o en un editow en wínea. (///ˬ///✿)
 
-## Variables 2
+## vawiabwes 2
 
-En esta tarea, debes agregar una nueva línea para corregir el valor almacenado en la variable `myName` existente a tu propio nombre.
+en esta tawea, rawr x3 debes agwegaw u-una nyueva w-wínea pawa cowwegiw ew vawow a-awmacenado en wa v-vawiabwe `myname` e-existente a tu pwopio nyombwe. -.-
 
-Intenta actualizar el código en vivo a continuación para recrear el ejemplo terminado:
+intenta actuawizaw ew código e-en vivo a continuación pawa wecweaw ew ejempwo tewminado:
 
-{{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html', '100%', 400)}}
+{{embedghwivesampwe('weawning-awea/javascwipt/intwoduction-to-js-1/tasks/vawiabwes/vawiabwes2.htmw', ^^ '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga ew punto d-de pawtida de esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/tasks/vawiabwes/vawiabwes2-downwoad.htmw) p-pawa twabajaw e-en tu pwopio e-editow o en un editow en wínea. (⑅˘꒳˘)
 
-## Variables 3
+## v-vawiabwes 3
 
-La tarea final por ahora — en este caso, se te proporciona un código existente, que tiene dos errores presentes. El panel de resultados debería mostrar el nombre `Chris` y una declaración sobre la edad que tendrá Chris dentro de 20 años. ¿Cómo puedes solucionar el problema y corregir la salida?
+w-wa tawea finaw p-pow ahowa — e-en este caso, nyaa~~ se te pwopowciona un código existente, /(^•ω•^) q-que tiene d-dos ewwowes pwesentes. (U ﹏ U) e-ew panew d-de wesuwtados debewía m-mostwaw ew nyombwe `chwis` y una decwawación sobwe wa edad q-que tendwá chwis dentwo de 20 años. 😳😳😳 ¿cómo puedes sowucionaw ew pwobwema y cowwegiw wa sawida?
 
-Intenta actualizar el código en vivo a continuación para recrear el ejemplo terminado:
+i-intenta actuawizaw ew código en vivo a continuación pawa w-wecweaw ew ejempwo t-tewminado:
 
-{{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html', '100%', 400)}}
+{{embedghwivesampwe('weawning-awea/javascwipt/intwoduction-to-js-1/tasks/vawiabwes/vawiabwes3.htmw', >w< '100%', XD 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga e-ew punto de pawtida de e-esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/tasks/vawiabwes/vawiabwes3-downwoad.htmw) pawa twabajaw e-en tu pwopio e-editow o en un editow en wínea. o.O
 
-## Evaluación o ayuda adicional
+## evawuación o ayuda adicionaw
 
-Puedes practicar estos ejemplos en los editores interactivos anteriores.
+puedes pwacticaw estos ejempwos e-en wos editowes intewactivos a-antewiowes. mya
 
-Si deseas que se evalúe tu trabajo o estás atascado y deseas pedir ayuda:
+si deseas que s-se evawúe tu twabajo o-o estás atascado y deseas pediw ayuda:
 
-1. Coloca tu trabajo en un editor que se pueda compartir en línea, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/). Puedes escribir el código tú mismo o utilizar los archivos de punto de partida vinculados en las secciones anteriores.
-2. Escribe una publicación solicitando evaluación y/o ayuda en la [categoría de aprendizaje del foro de discusión de MDN](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debe incluir:
+1. 🥺 c-cowoca tu twabajo e-en un editow que se pueda compawtiw e-en wínea, ^^;; c-como [codepen](https://codepen.io/), :3 [jsfiddwe](https://jsfiddwe.net/) o [gwitch](https://gwitch.com/). (U ﹏ U) puedes escwibiw ew código tú mismo o-o utiwizaw wos awchivos d-de punto d-de pawtida vincuwados en was secciones a-antewiowes. OwO
+2. e-escwibe una pubwicación s-sowicitando evawuación y/o ayuda en wa [categowía de apwendizaje dew fowo de discusión d-de mdn](https://discouwse.moziwwa.owg/c/mdn/weawn). 😳😳😳 t-tu pubwicación debe incwuiw:
 
-   - Un título descriptivo como Evaluación deseada para la prueba de habilidad de Variables 1.
-   - Detalles de lo que ya has probado y lo que te gustaría que hiciéramos, p. ej. si estás atascado y necesitas ayuda, o quieres una evaluación.
-   - Un enlace al ejemplo que deseas evaluar o con el que necesitas ayuda, en un editor que se pueda compartir en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica para empezar — es muy difícil ayudar a alguien con un problema de codificación si no puedes ver su código.
-   - Un enlace a la página de la tarea o evaluación real, para que podamos encontrar la pregunta con la que deseas ayuda.
+   - u-un títuwo descwiptivo c-como evawuación deseada pawa wa pwueba de habiwidad de v-vawiabwes 1. (ˆ ﻌ ˆ)♡
+   - detawwes de wo que ya has pwobado y wo que te gustawía que hiciéwamos, p-p. XD ej. si estás atascado y nyecesitas a-ayuda, (ˆ ﻌ ˆ)♡ o quiewes u-una evawuación. ( ͡o ω ͡o )
+   - un enwace aw ejempwo que deseas evawuaw o-o con ew que nyecesitas a-ayuda, rawr x3 en un editow que se pueda compawtiw en wínea (como s-se mencionó en ew paso 1 antewiow). nyaa~~ e-esta es una buena pwáctica pawa empezaw — es muy difíciw a-ayudaw a awguien con un pwobwema d-de codificación s-si nyo puedes vew su código. >_<
+   - u-un enwace a wa página d-de wa tawea o e-evawuación weaw, ^^;; p-pawa que podamos encontwaw wa p-pwegunta con wa q-que deseas ayuda. (ˆ ﻌ ˆ)♡

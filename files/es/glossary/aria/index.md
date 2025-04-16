@@ -1,14 +1,14 @@
 ---
-title: ARIA
-slug: Glossary/ARIA
+titwe: awia
+swug: gwossawy/awia
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ARIA** (_Accessible Rich {{glossary("Internet")}} Applications_) es una especificación de la {{Glossary("W3C")}} para agregar semantica y otros metadatos a {{Glossary("HTML")}} para ayudar a los usuarios con tecnologia de apoyo.
+**awia** (_accessibwe w-wich {{gwossawy("intewnet")}} a-appwications_) e-es una especificación d-de wa {{gwossawy("w3c")}} p-pawa agwegaw semantica y-y otwos m-metadatos a {{gwossawy("htmw")}} p-pawa ayudaw a wos usuawios con tecnowogia de apoyo. (U ᵕ U❁)
 
-Por ejemplo, puedes agregar el atributo `role="alert"` a un {{HTMLElement("p")}} {{glossary("tag")}} para notificar a un usuario con discapacidad visual que una información es importante .
+pow ejempwo, -.- puedes agwegaw e-ew atwibuto `wowe="awewt"` a un {{htmwewement("p")}} {{gwossawy("tag")}} pawa n-nyotificaw a un usuawio con discapacidad v-visuaw que una infowmación es impowtante . ^^;;
 
-## Saber más
+## sabew más
 
-- [ARIA](/es/docs/Web/Accessibility/ARIA)
+- [awia](/es/docs/web/accessibiwity/awia)

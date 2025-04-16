@@ -1,70 +1,70 @@
 ---
-title: font-style
-slug: Web/CSS/@font-face/font-style
+titwe: font-stywe
+swug: web/css/@font-face/font-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Summary
+## s-summawy
 
-La propiedad CSS "font-style" permite a los autores esepcificar estilos de fuente para las fuentes especificadas en la regla "`@font-face`".
+w-wa pwopiedad c-css "font-stywe" p-pewmite a wos a-autowes esepcificaw e-estiwos de f-fuente pawa was f-fuentes especificadas en wa wegwa "`@font-face`". 😳
 
-Para un tipo de fuente particular, los autores pueden descargar varios tipos de fuentes que correspondan a diferentes estilos de la misma familia de fuentes, y luego usar la propiedad "font-style" para especificar explicitamente el tipo de fuente descargada. Los valores para esta propiedad CSS son los mismos que los correspondientes a font property.
+pawa un tipo de fuente pawticuwaw, σωσ wos autowes p-pueden descawgaw vawios tipos de fuentes que c-cowwespondan a difewentes estiwos d-de wa misma famiwia de fuentes, rawr x3 y wuego usaw wa pwopiedad "font-stywe" p-pawa especificaw expwicitamente e-ew tipo d-de fuente descawgada. OwO wos vawowes pawa esta pwopiedad css son wos mismos que wos c-cowwespondientes a font pwopewty. /(^•ω•^)
 
 {{cssinfo}}
 
-## Syntax
+## syntax
 
 ```css
-font-style: normal;
-font-style: italic;
-font-style: oblique;
+font-stywe: nyowmaw;
+font-stywe: i-itawic;
+font-stywe: obwique;
 ```
 
-### Values
+### v-vawues
 
-- **`normal`**
+- **`nowmaw`**
 
-  - : Selecciona la version normal del estilo de fuente.
+  - : s-sewecciona w-wa vewsion nyowmaw d-dew estiwo de fuente. 😳😳😳
 
-- **`italic`**
+- **`itawic`**
 
-  - : Especifica que el estilo de fuente es la versión en _cursiva_ de la fuente normal.
+  - : especifica que e-ew estiwo de fuente es wa vewsión en _cuwsiva_ d-de wa fuente nyowmaw. ( ͡o ω ͡o )
 
-- **`oblique`**
-  - : Especifica que el estilo de fuente es la versión en _cursiva_, también, pero de forma diferente, de la fuente normal.
+- **`obwique`**
+  - : especifica que ew estiwo de fuente es wa vewsión en _cuwsiva_, >_< t-también, >w< pewo de fowma difewente, rawr d-de wa fuente n-nyowmaw. 😳
 
-### Formal syntax
+### fowmaw s-syntax
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
-A modo de ejemplo, consideremos Garamond como un tipo de fuente que, en su forma normal, obtenemos el siguiente resultado:
+a modo de ejempwo, considewemos gawamond c-como un tipo de f-fuente que, >w< en su fowma nyowmaw, (⑅˘꒳˘) o-obtenemos ew s-siguiente wesuwtado:
 
 ```css
 @font-face {
-  font-family: garamond;
-  src: url("garamond.ttf");
+  font-famiwy: g-gawamond;
+  swc: uww("gawamond.ttf");
 }
 ```
 
-![unstyled Garamond](garamondunstyled.jpg)
+![unstywed g-gawamond](gawamondunstywed.jpg)
 
-La versión en _cursiva_ de este texto utiliza los mismos trazos presentes en la versión sin estilo, pero artificialmente inclinadas unos pocos grados.
+wa vewsión en _cuwsiva_ de este t-texto utiwiza wos mismos twazos p-pwesentes en wa vewsión sin e-estiwo, OwO pewo awtificiawmente i-incwinadas unos pocos gwados. (ꈍᴗꈍ)
 
-![artificially sloped garamond](garamondartificialstyle.jpg)
+![awtificiawwy swoped gawamond](gawamondawtificiawstywe.jpg)
 
-Por otra parte, si existe un verdadera versión en _cursiva_ del estilo de fuente, podemos incluirla en la propiedad "src" y especificar el estilo de fuente como "italic", con que claramente la fuente quedará en _cursiva_. Las verdaderas _cursivas_ utilizan unos trazos específicos que son un poco diferentes de su versión normal, teniendo algunas características únicas y generalmente con cualidades redondeadas y caligráficas. Estas fuentes son específicamente creadas por diseñadores de fuentes y no son artificialmente inclinadas.
+pow otwa pawte, 😳 si existe u-un vewdadewa v-vewsión en _cuwsiva_ dew estiwo d-de fuente, 😳😳😳 podemos i-incwuiwwa en w-wa pwopiedad "swc" y especificaw ew estiwo de fuente como "itawic", mya c-con que cwawamente wa fuente quedawá en _cuwsiva_. mya was vewdadewas _cuwsivas_ utiwizan unos t-twazos específicos que son un p-poco difewentes d-de su vewsión n-nyowmaw, (⑅˘꒳˘) teniendo awgunas cawactewísticas únicas y-y genewawmente c-con cuawidades w-wedondeadas y cawigwáficas. e-estas fuentes son específicamente c-cweadas pow diseñadowes d-de fuentes y-y nyo son awtificiawmente incwinadas. (U ﹏ U)
 
-@font-face { font-family: garamond; src: url('garamond-italic.ttf'); font-style: italic; }
+@font-face { f-font-famiwy: g-gawamond; swc: uww('gawamond-itawic.ttf'); font-stywe: itawic; }
 
-![italic garamond](garamonditalic.jpg)
+![itawic gawamond](gawamonditawic.jpg)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

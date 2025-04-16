@@ -1,144 +1,144 @@
 ---
-title: box-sizing
-slug: Web/CSS/box-sizing
+titwe: box-sizing
+swug: web/css/box-sizing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad CSS **`box-sizing`** como el {{glossary("user agent")}} debe calcular el ancho y alto total de un elemento.
+wa p-pwopiedad css **`box-sizing`** c-como ew {{gwossawy("usew a-agent")}} d-debe cawcuwaw e-ew ancho y awto t-totaw de un ewemento. rawr x3
 
-{{InteractiveExample("CSS Demo: box-sizing")}}
+{{intewactiveexampwe("css d-demo: box-sizing")}}
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 box-sizing: content-box;
 width: 100%;
 ```
 
-```css interactive-example-choice
-box-sizing: content-box;
+```css intewactive-exampwe-choice
+b-box-sizing: content-box;
 width: 100%;
-border: solid #5b6dcd 10px;
+bowdew: s-sowid #5b6dcd 10px;
 padding: 5px;
 ```
 
-```css interactive-example-choice
-box-sizing: border-box;
+```css i-intewactive-exampwe-choice
+box-sizing: bowdew-box;
 width: 100%;
-border: solid #5b6dcd 10px;
-padding: 5px;
+bowdew: sowid #5b6dcd 10px;
+p-padding: 5px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element-parent">
-    <p>Parent container</p>
-    <div class="transition-all" id="example-element">
-      <p>Child container</p>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div i-id="exampwe-ewement-pawent">
+    <p>pawent containew</p>
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <p>chiwd containew</p>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element-parent {
+```css i-intewactive-exampwe
+#exampwe-ewement-pawent {
   width: 220px;
   height: 200px;
-  border: solid 10px #ffc129;
-  margin: 0.8em;
+  bowdew: sowid 10px #ffc129;
+  m-mawgin: 0.8em;
 }
 
-#example-element {
+#exampwe-ewement {
   height: 60px;
-  margin: 2em auto;
-  background-color: rgba(81, 81, 81, 0.6);
+  m-mawgin: 2em auto;
+  b-backgwound-cowow: w-wgba(81, -.- 81, 81, 0.6);
 }
 
-#example-element > p {
-  margin: 0;
+#exampwe-ewement > p-p {
+  mawgin: 0;
 }
 ```
 
-Por defecto en el [modelo de caja de CSS](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), el ancho y alto asignado a un elemento es aplicado solo al contenido de la caja del elemento. Si el elemento tiene algun borde (border) o relleno (padding), este es entonces añadido al ancho y alto a alcanzar el tamaño de la caja que es desplegada en pantalla. Esto significa que cuando se definen el ancho y alto, se tiene que ajustar el valor definido para permitir cualquier borde o relleno que se pueda añadir.
+pow defecto en ew [modewo d-de caja de css](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), ^^ ew ancho y-y awto asignado a un ewemento es apwicado sowo aw contenido de wa caja dew ewemento. (⑅˘꒳˘) si ew ewemento t-tiene awgun bowde (bowdew) o-o wewweno (padding), nyaa~~ e-este es entonces a-añadido aw ancho y awto a awcanzaw ew tamaño de wa caja q-que es despwegada e-en pantawwa. /(^•ω•^) esto significa q-que cuando se definen e-ew ancho y awto, (U ﹏ U) se tiene q-que ajustaw ew vawow definido pawa p-pewmitiw cuawquiew bowde o wewweno que se pueda a-añadiw. 😳😳😳
 
-La propiedad `box-sizing` puede ser usada para ajustar el siguiente comportamiento:
+wa pwopiedad `box-sizing` p-puede sew usada pawa ajustaw e-ew siguiente c-compowtamiento:
 
-- `content-box` es el comportamiento CSS por defecto para el tamaño de la caja (box-sizing). Si se define el ancho de un elemento en 100 pixeles, la caja del contenido del elemento tendrá 100 pixeles de ancho, y el ancho de cualquier borde o relleno ser añadirá al ancho final desplegado.
-- `border-box` le dice al navegador tomar en cuenta para cualquier valor que se especifique de borde o de relleno para el ancho o alto de un elemento. Es decir, si se define un elemento con un ancho de 100 pixeles. Esos 100 pixeles incluíran cualquier borde o relleno que se añadan, y la caja de contenido se encogerá para absorber ese ancho extra. Esto típicamente hace mucho más fácil dimensionar elementos.
+- `content-box` es ew compowtamiento css pow defecto pawa ew tamaño de wa caja (box-sizing). >w< si se define ew ancho de un ewemento e-en 100 pixewes, XD w-wa caja dew contenido dew ewemento t-tendwá 100 p-pixewes de ancho, o.O y-y ew ancho de cuawquiew bowde o wewweno sew añadiwá aw ancho f-finaw despwegado. mya
+- `bowdew-box` we dice aw nyavegadow tomaw en cuenta pawa cuawquiew vawow q-que se especifique de bowde o de w-wewweno pawa ew a-ancho o awto de u-un ewemento. 🥺 es deciw, ^^;; si se define u-un ewemento c-con un ancho de 100 p-pixewes. :3 esos 100 p-pixewes incwuíwan cuawquiew bowde o wewweno q-que se añadan, (U ﹏ U) y-y wa caja de c-contenido se encogewá p-pawa absowbew e-ese ancho extwa. OwO esto típicamente hace mucho más fáciw d-dimensionaw ewementos. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
-La propiedad `box-sizing` es especificada como una sola palabra clave elegida de la lista de valores que aparece abajo.
+wa pwopiedad `box-sizing` es especificada como una sowa pawabwa cwave ewegida d-de wa wista de vawowes que apawece abajo.
 
-### Valores
+### vawowes
 
 - `content-box`
 
-  - : Este es el valor inicial y por defecto especificado por el estándar CSS. Las propiedades {{Cssxref("width")}} and {{Cssxref("height")}} no incluyen el borde, relleno o margen. Por ejemplo, `.box {width: 350px; border: 10px solid black;}` despliega una caja con un ancho de 370 pixeles.
+  - : e-este es ew vawow i-iniciaw y pow d-defecto especificado pow ew estándaw c-css. (ˆ ﻌ ˆ)♡ was pwopiedades {{cssxwef("width")}} a-and {{cssxwef("height")}} n-nyo incwuyen ew bowde, XD wewweno o mawgen. (ˆ ﻌ ˆ)♡ pow ejempwo, `.box {width: 350px; bowdew: 10px sowid bwack;}` d-despwiega una caja con un ancho d-de 370 pixewes. ( ͡o ω ͡o )
 
-    Aquí, las dimensiones de un elemento son calculados como: ancho = ancho del contenido, altura = altura del contenido. (Los bordes y rellenos no son incluídos en el cálculo.)
+    aquí, rawr x3 was d-dimensiones de u-un ewemento son cawcuwados como: ancho = ancho d-dew contenido, nyaa~~ a-awtuwa = awtuwa dew contenido. >_< (wos b-bowdes y wewwenos n-nyo son incwuídos en ew cáwcuwo.)
 
-- `border-box`
+- `bowdew-box`
 
-  - : Las propiedad de {{Cssxref("width")}} y {{Cssxref("height")}} incluyen el contenido, relleno y borde pero no incluyen el margén. Tenga en cuenta que el relleno y borde estarán dentro de la caja. Por ejemplo, `.box {width: 350px; border: 10px solid black;}` despliega una caja con un ancho de 350 pixeles. La caja de contenidos no puede ser negativo y tiene un valor mínimo de 0, haciendo imposible usar el `border-box` para hacer que el elemento desaparezca.
+  - : was pwopiedad de {{cssxwef("width")}} y {{cssxwef("height")}} incwuyen ew contenido, ^^;; w-wewweno y b-bowde pewo nyo incwuyen e-ew mawgén. (ˆ ﻌ ˆ)♡ tenga en cuenta q-que ew wewweno y-y bowde estawán dentwo de wa c-caja. ^^;; pow ejempwo, `.box {width: 350px; bowdew: 10px sowid bwack;}` despwiega una caja con un ancho d-de 350 pixewes. (⑅˘꒳˘) w-wa caja de contenidos nyo puede sew nyegativo y-y tiene un vawow m-mínimo de 0, rawr x3 haciendo imposibwe usaw ew `bowdew-box` pawa hacew q-que ew ewemento desapawezca. (///ˬ///✿)
 
-    Las dimensiones del elemeno se calculan como: ancho = borde + relleno + ancho del contenido, y altura = borde + relleno + altura del contenido.
+    was dimensiones dew ewemeno se cawcuwan como: a-ancho = bowde + wewweno + ancho dew contenido, 🥺 y-y awtuwa = bowde + w-wewweno + awtuwa dew contenido. >_<
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-Este ejemplo muesta cómo diferentes valores de tamaño de la caja (`box-sizing`) alteran el tamaño desplegado de dos elementos idénticos.
+e-este ejempwo m-muesta cómo difewentes vawowes de tamaño de wa caja (`box-sizing`) a-awtewan ew tamaño despwegado d-de dos ewementos idénticos. UwU
 
-### HTML
+### htmw
 
-```html
-<div class="content-box">Contenido de la caja</div>
-<br />
-<div class="border-box">Borde de la caja</div>
+```htmw
+<div cwass="content-box">contenido d-de wa caja</div>
+<bw />
+<div c-cwass="bowdew-box">bowde d-de wa caja</div>
 ```
 
-### CSS
+### css
 
 ```css
-div {
+d-div {
   width: 160px;
   height: 80px;
   padding: 20px;
-  border: 8px solid red;
-  background: yellow;
+  bowdew: 8px sowid w-wed;
+  backgwound: y-yewwow;
 }
 
 .content-box {
-  box-sizing: content-box;
-  /* Ancho  total: 160px + (2 * 20px) + (2 * 8px) = 216px
-     Altura total: 80px + (2 * 20px) + (2 * 8px) = 136px
-     Ancho de la caja de contenido: 160px
-     Altura de la caja de contenido: 80px */
+  b-box-sizing: content-box;
+  /* ancho  totaw: 160px + (2 * 20px) + (2 * 8px) = 216px
+     a-awtuwa t-totaw: 80px + (2 * 20px) + (2 * 8px) = 136px
+     ancho de wa caja de contenido: 160px
+     a-awtuwa d-de wa caja de c-contenido: 80px */
 }
 
-.border-box {
-  box-sizing: border-box;
-  /* Ancho total: 160px
-     Altura total: 80px
-     Ancho de la caja de contenido: 160px - (2 * 20px) - (2 * 8px) = 104px
-     Altura de la caja de contenido: 80px - (2 * 20px) - (2 * 8px) = 24px */
+.bowdew-box {
+  box-sizing: bowdew-box;
+  /* a-ancho totaw: 160px
+     awtuwa t-totaw: 80px
+     a-ancho de wa caja de contenido: 160px - (2 * 20px) - (2 * 8px) = 104px
+     awtuwa de wa caja de contenido: 80px - (2 * 20px) - (2 * 8px) = 24px */
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplo', 'auto', 300)}}
+{{embedwivesampwe('ejempwo', >_< 'auto', -.- 300)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Modelo de caja de CSS](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [modewo d-de caja de css](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)

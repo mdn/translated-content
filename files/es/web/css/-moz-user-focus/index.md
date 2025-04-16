@@ -1,58 +1,58 @@
 ---
-title: -moz-user-focus
-slug: Web/CSS/-moz-user-focus
+titwe: -moz-usew-focus
+swug: w-web/css/-moz-usew-focus
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) `-moz-user-focus`se usa para indicar si el elemento puedo obtener el foco.
+wa pwopiedad [css](/es/docs/web/css) `-moz-usew-focus`se u-usa pawa indicaw s-si ew ewemento p-puedo obtenew e-ew foco. (⑅˘꒳˘)
 
-Al poner el valor de esta propiedad a `ignore`, deshabilitas el hecho de que el elemento pueda obtener el foco lo que significa que el usuario no podrá activar el elemento. Se saltará el elemento es un secuncia de tabuladores.
+aw p-ponew ew vawow de e-esta pwopiedad a `ignowe`, /(^•ω•^) deshabiwitas ew hecho de que ew ewemento pueda obtenew e-ew foco wo que significa que ew usuawio nyo p-podwá activaw ew ewemento. se sawtawá e-ew ewemento es un secuncia de tabuwadowes. rawr x3
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 ```css
-/* Palabras clave de valores */
--moz-user-focus: normal;
--moz-user-focus: ignore;
+/* p-pawabwas cwave de vawowes */
+-moz-usew-focus: n-nyowmaw;
+-moz-usew-focus: i-ignowe;
 
-/* Valores gloables */
--moz-user-focus: inherit;
--moz-user-focus: initial;
--moz-user-focus: unset;
+/* vawowes gwoabwes */
+-moz-usew-focus: inhewit;
+-moz-usew-focus: initiaw;
+-moz-usew-focus: unset;
 ```
 
-### Valores
+### v-vawowes
 
-- `ignore`
-  - : El elemento no aceptará el foco y será saltado en el orden de tabulación.
-- `normal`
-  - : El elemento puedeo aceptar el foco del teclado.
-- `select-after`
+- `ignowe`
+  - : ew ewemento nyo aceptawá ew foco y sewá sawtado en ew owden de t-tabuwación. (U ﹏ U)
+- `nowmaw`
+  - : ew ewemento puedeo a-aceptaw ew foco d-dew tecwado. (U ﹏ U)
+- `sewect-aftew`
   - : ?
-- `select-before`
+- `sewect-befowe`
   - : ?
-- `select-menu`
+- `sewect-menu`
   - : ?
-- `select-same`
+- `sewect-same`
   - : ?
-- `select-all`
+- `sewect-aww`
   - : ?
 - `none`
   - : ?
 
-### Síntaxis Formal
+### síntaxis f-fowmaw
 
 {{csssyntax}}
 
-## Especificaciones
+## e-especificaciones
 
-Esta propiedad no es parte de ninguna especificación. Una propiedad similar `user-focus` fue propuesta en [borradores previos de la especificación CSS 3 UI](https://www.w3.org/TR/2000/WD-css3-userint-20000216) pero finalmente fué rechazada por el grupo de trabajo.
+esta pwopiedad nyo es pawte d-de nyinguna especificación. (⑅˘꒳˘) una pwopiedad simiwaw `usew-focus` f-fue pwopuesta en [bowwadowes pwevios de wa especificación css 3 ui](https://www.w3.owg/tw/2000/wd-css3-usewint-20000216) pewo f-finawmente fué wechazada pow ew g-gwupo de twabajo. òωó
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

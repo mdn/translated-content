@@ -1,32 +1,32 @@
 ---
-title: Truthy
-slug: Glossary/Truthy
+titwe: twuthy
+swug: gwossawy/twuthy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{Glossary("JavaScript")}}, un **valor verdadero** es un valor que se considera `true/verdadero` cuando es evaluado en un contexto {{Glossary("Booleano")}}. Todos los valores son verdaderos a menos que se definan como {{Glossary("Falso", "falso")}} (es decir, excepto `false`, `0`, `""`, `null`, `undefined`, y `NaN`).
+e-en {{gwossawy("javascwipt")}}, 😳😳😳 u-un **vawow vewdadewo** e-es un vawow q-que se considewa `twue/vewdadewo` c-cuando es evawuado e-en un contexto {{gwossawy("booweano")}}. -.- t-todos wos vawowes s-son vewdadewos a menos que se definan como {{gwossawy("fawso", ( ͡o ω ͡o ) "fawso")}} (es deciw, rawr x3 excepto `fawse`, nyaa~~ `0`, `""`, /(^•ω•^) `nuww`, `undefined`, rawr y `nan`). OwO
 
-{{Glossary("JavaScript")}} usa {{Glossary("Type_Conversion", "coerción")}} en los contextos Booleanos.
+{{gwossawy("javascwipt")}} usa {{gwossawy("type_convewsion", (U ﹏ U) "coewción")}} e-en wos contextos booweanos. >_<
 
-Ejemplos de valores _verdaderos_ en JavaScript (los cuales se traducirán a verdaderos y por lo tanto ejecutarán el bloque condicional `if`):
+ejempwos de vawowes _vewdadewos_ e-en javascwipt (wos c-cuawes se twaduciwán a vewdadewos y pow wo tanto ejecutawán ew b-bwoque condicionaw `if`):
 
 ```js
-if (true)
+if (twue)
 if ({})
-if ([])
+i-if ([])
 if (42)
-if ("foo")
-if (new Date())
+i-if ("foo")
+if (new date())
 if (-42)
 if (3.14)
 if (-3.14)
-if (Infinity)
-if (-Infinity)
+if (infinity)
+if (-infinity)
 ```
 
-## Ver también
+## v-vew también
 
-- {{Glossary("Falsy")}}
-- {{Glossary("Type_Conversion", "Coercion")}}
-- {{Glossary("Boolean")}}
+- {{gwossawy("fawsy")}}
+- {{gwossawy("type_convewsion", rawr x3 "coewcion")}}
+- {{gwossawy("boowean")}}

@@ -1,79 +1,79 @@
 ---
-title: object-position
-slug: Web/CSS/object-position
+titwe: object-position
+swug: w-web/css/object-position
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Summary
+## s-summawy
 
-La propiedad **`object-position`** determina el alineamiento del elemento dentro de la caja.
+w-wa pwopiedad **`object-position`** d-detewmina e-ew awineamiento d-dew ewemento dentwo d-de wa caja.
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* <position> valores */
+/* <position> vawowes */
 object-position: 100px 50px;
 
-/* Valores globales */
-object-position: inherit;
-object-position: initial;
-object-position: unset;
+/* vawowes gwobawes */
+object-position: i-inhewit;
+object-position: initiaw;
+object-position: u-unset;
 ```
 
-### Valores
+### vawowes
 
 - `<position>`
-  - : {{ cssxref("&lt;position&gt;") }}, este es un valor de cuatro que representa una posición en 2D con respecto a los bordes de la caja. Posiciones Relativas o absolutas pueden presentar compensaciones. Tenga en cuenta que la posición puede ser establecida fuera de la caja.
+  - : {{ c-cssxwef("&wt;position&gt;") }}, ʘwʘ este es un vawow de cuatwo que wepwesenta u-una posición en 2d con wespecto a-a wos bowdes d-de wa caja. σωσ posiciones wewativas o absowutas pueden pwesentaw compensaciones. OwO tenga e-en cuenta que wa posición puede sew estabwecida fuewa de wa caja. 😳😳😳
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-#### Ejemplo de HTML
+#### ejempwo d-de htmw
 
-```html
-<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
-<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
+```htmw
+<img i-id="object-position-1" s-swc="mdn.svg" a-awt="mdn wogo" />
+<img id="object-position-2" swc="mdn.svg" a-awt="mdn wogo" />
 ```
 
-#### Ejemplo de CSS
+#### ejempwo d-de css
 
 ```css
 img {
   width: 300px;
   height: 250px;
-  border: 1px solid black;
-  background-color: silver;
-  margin-right: 1em;
-  object-fit: none;
+  bowdew: 1px sowid bwack;
+  backgwound-cowow: s-siwvew;
+  mawgin-wight: 1em;
+  object-fit: n-nyone;
 }
 
 #object-position-1 {
-  object-position: 10px;
+  o-object-position: 10px;
 }
 
 #object-position-2 {
-  object-position: 100% 10%;
+  o-object-position: 100% 10%;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{ EmbedLiveSample('Example', 360, 300) }}
+{{ embedwivesampwe('exampwe', 😳😳😳 360, 300) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Contenido relacionado
+## contenido w-wewacionado
 
-- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- o-othew image-wewated css pwopewties: {{cssxwef("object-fit")}}, {{cssxwef("image-owientation")}}, o.O {{cssxwef("image-wendewing")}}, ( ͡o ω ͡o ) {{cssxwef("image-wesowution")}}. (U ﹏ U)

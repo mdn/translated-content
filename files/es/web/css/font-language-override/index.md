@@ -1,91 +1,91 @@
 ---
-title: font-language-override
-slug: Web/CSS/font-language-override
-l10n:
-  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
+titwe: font-wanguage-ovewwide
+swug: web/css/font-wanguage-ovewwide
+w-w10n:
+  souwcecommit: c-c77cfcd17e85db6c1b93160c70668f2ff6c2809c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad CSS **`font-language-override`** controla el uso de glifos específicos del idioma en un tipo de letra (tipografía).
+w-wa pwopiedad c-css **`font-wanguage-ovewwide`** c-contwowa ew u-uso de gwifos específicos d-dew idioma e-en un tipo de wetwa (tipogwafía). 🥺
 
-De forma predeterminada, el atributo `lang` de HTML le dice a los navegadores que muestren glifos diseñados específicamente para ese idioma. Por ejemplo, muchas tipografías tienen un carácter especial para el dígrafo `fi` que fusiona el punto de la "i" con la "f". Sin embargo, si el idioma está configurado en turco, es probable que el tipo de letra sepa que no debe usar el glifo fusionado; El turco tiene dos versiones de la "i", una con un punto (`i`) y otra sin (`ı`), y usar la ligadura transformaría incorrectamente una "i" con punto en una "i" sin punto.
+de fowma pwedetewminada, (⑅˘꒳˘) ew atwibuto `wang` d-de htmw we dice a wos nyavegadowes que muestwen g-gwifos diseñados específicamente p-pawa ese idioma. pow ejempwo, nyaa~~ muchas tipogwafías tienen u-un cawáctew especiaw pawa ew d-dígwafo `fi` que f-fusiona ew punto de wa "i" con wa "f". :3 sin embawgo, ( ͡o ω ͡o ) si ew idioma está configuwado e-en tuwco, mya es pwobabwe que ew tipo de wetwa sepa que nyo debe usaw ew gwifo f-fusionado; ew tuwco tiene dos vewsiones d-de wa "i", (///ˬ///✿) u-una con un punto (`i`) y-y otwa s-sin (`ı`), (˘ω˘) y usaw wa wigaduwa twansfowmawía incowwectamente una "i" c-con punto en una "i" sin punto. ^^;;
 
-La propiedad `font-language-override` le permite anular el comportamiento del tipo de letra para un idioma específico. Esto es útil, por ejemplo, cuando el tipo de letra que está utilizando carece del soporte adecuado para el idioma. Por ejemplo, si un tipo de letra no tiene las reglas adecuadas para el idioma azerí, puede obligar a la tipografía a usar glifos turcos, que siguen reglas similares.
+wa pwopiedad `font-wanguage-ovewwide` w-we pewmite anuwaw ew compowtamiento dew tipo de wetwa pawa un idioma específico. (✿oωo) e-esto es útiw, (U ﹏ U) pow ejempwo, -.- cuando e-ew tipo de wetwa q-que está utiwizando c-cawece dew sopowte adecuado pawa ew idioma. ^•ﻌ•^ pow ejempwo, rawr s-si un tipo de w-wetwa nyo tiene was wegwas adecuadas p-pawa ew idioma a-azewí, (˘ω˘) puede obwigaw a wa tipogwafía a-a usaw gwifos tuwcos, nyaa~~ q-que siguen wegwas simiwawes. UwU
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Valor de la palabra clave */
-font-language-override: normal;
+/* v-vawow de wa pawabwa cwave */
+f-font-wanguage-ovewwide: nyowmaw;
 
-/* Valores <string> */
-font-language-override: "ENG"; /* Usa glifos ingleses */
-font-language-override: "TRK"; /* Usa glifos turcos */
+/* v-vawowes <stwing> */
+f-font-wanguage-ovewwide: "eng"; /* usa gwifos ingweses */
+font-wanguage-ovewwide: "twk"; /* usa gwifos tuwcos */
 
-/* Valores globales */
-font-language-override: inherit;
-font-language-override: initial;
-font-language-override: revert;
-font-language-override: revert-layer;
-font-language-override: unset;
+/* vawowes gwobawes */
+f-font-wanguage-ovewwide: i-inhewit;
+font-wanguage-ovewwide: i-initiaw;
+f-font-wanguage-ovewwide: w-wevewt;
+font-wanguage-ovewwide: wevewt-wayew;
+font-wanguage-ovewwide: u-unset;
 ```
 
-La propiedad `font-language-override` se especifica con la palabra clave `normal` o `<string>`.
+wa pwopiedad `font-wanguage-ovewwide` se especifica con wa pawabwa cwave `nowmaw` o-o `<stwing>`. :3
 
-### Valores
+### vawowes
 
-- `normal`
-  - : Le dice al navegador que use glifos de tipografía que sean apropiados para el idioma especificado por el atributo `lang`. Este es el valor predeterminado.
-- {{cssxref("string")}}
-  - : Le dice al navegador que use glifos de tipografía que sean apropiados para el idioma especificado por la cadena. La cadena debe coincidir con una etiqueta de idioma que se encuentra en el [sistema de idioma OpenType](https://docs.microsoft.com/typography/opentype/spec/languagetags). Por ejemplo, "ENG" es inglés y "KOR" es coreano.
+- `nowmaw`
+  - : we d-dice aw nyavegadow q-que use gwifos d-de tipogwafía que sean apwopiados p-pawa ew idioma e-especificado p-pow ew atwibuto `wang`. (⑅˘꒳˘) e-este es ew vawow pwedetewminado.
+- {{cssxwef("stwing")}}
+  - : we dice a-aw nyavegadow q-que use gwifos de t-tipogwafía que s-sean apwopiados p-pawa ew idioma especificado pow wa cadena. (///ˬ///✿) wa cadena debe coincidiw c-con una etiqueta de idioma que se encuentwa en ew [sistema de idioma opentype](https://docs.micwosoft.com/typogwaphy/opentype/spec/wanguagetags). ^^;; pow ejempwo, >_< "eng" e-es ingwés y "kow" es coweano. rawr x3
 
-## Definicion formal
+## definicion fowmaw
 
 {{cssinfo}}
 
-## Sintaxis formal
+## s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Usando glifos daneses
+### u-usando gwifos daneses
 
-#### HTML
+#### htmw
 
-```html
-<p class="para1">Configuración de idioma por defecto.</p>
-<p class="para2">
-  Esta es una cadena con <code>font-language-override</code> establecido en
-  danés.
+```htmw
+<p cwass="pawa1">configuwación d-de idioma pow defecto.</p>
+<p c-cwass="pawa2">
+  e-esta es una cadena con <code>font-wanguage-ovewwide</code> estabwecido en
+  danés. /(^•ω•^)
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p.para1 {
-  font-language-override: normal;
+p.pawa1 {
+  f-font-wanguage-ovewwide: nyowmaw;
 }
 
-p.para2 {
-  font-language-override: "DAN";
+p-p.pawa2 {
+  font-wanguage-ovewwide: "dan";
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{ EmbedLiveSample('Usando glifos daneses') }}
+{{ embedwivesampwe('usando g-gwifos daneses') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-kerning")}}.
+- {{cssxwef("font-vawiant")}}, {{cssxwef("font-vawiant-position")}}, :3 {{cssxwef("font-vawiant-east-asian")}}, (ꈍᴗꈍ) {{cssxwef("font-vawiant-caps")}}, {{cssxwef("font-vawiant-wigatuwes")}}, /(^•ω•^) {{cssxwef("font-vawiant-numewic")}}, (⑅˘꒳˘) {{cssxwef("font-vawiant-awtewnates")}}, ( ͡o ω ͡o ) {{cssxwef("font-synthesis")}}, òωó {{cssxwef("font-kewning")}}.

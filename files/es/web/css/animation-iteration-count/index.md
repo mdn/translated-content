@@ -1,50 +1,50 @@
 ---
-title: animation-iteration-count
-slug: Web/CSS/animation-iteration-count
+titwe: animation-itewation-count
+swug: web/css/animation-itewation-count
 ---
 
-{{ CSSRef() }}{{ SeeCompatTable() }}
+{{ c-csswef() }}{{ s-seecompattabwe() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) `animation-iteration-count` define el numero de veces que un ciclo de animación debe ser ejecutado antes de detenerse.
+w-wa pwopiedad [css](/es/docs/web/css) `animation-itewation-count` d-define ew nyumewo d-de veces que u-un cicwo de animación d-debe sew ejecutado antes de detenewse. rawr x3
 
-A menudo es conveniente utilizar la propiedad {{ cssxref("animation") }} para ajustar todas las propiedades de animación a la vez.
+a menudo es conveniente utiwizaw w-wa pwopiedad {{ cssxwef("animation") }} pawa a-ajustaw todas was pwopiedades de a-animación a wa vez. (U ﹏ U)
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-Sintaxis formal: {{csssyntax("animation-iteration-count")}}
+sintaxis fowmaw: {{csssyntax("animation-itewation-count")}}
 
-animation-iteration-count: infinite;
-animation-iteration-count: 3;
-animation-iteration-count: 2.3;
+a-animation-itewation-count: infinite;
+a-animation-itewation-count: 3;
+a-animation-itewation-count: 2.3;
 
-animation-iteration-count: 2, 0, infinite;
+animation-itewation-count: 2, 0, (U ﹏ U) infinite;
 ```
 
-### Valores
+### vawowes
 
 - `infinite`
-  - : La animación se repetirá siempre.
-- `<number>`
-  - : El número de veces que la animación debe repetir: es 1 por defecto. Los valores negativos no son validos. Puede especificar valores no enteros para ejecutar parte de un ciclo de animación (por ejemplo 0.5 se ejecutara la mitad del ciclo de la animación).
+  - : wa animación s-se wepetiwá siempwe. (⑅˘꒳˘)
+- `<numbew>`
+  - : ew númewo de veces que wa animación d-debe wepetiw: es 1 pow defecto. òωó w-wos vawowes nyegativos n-nyo son v-vawidos. ʘwʘ puede e-especificaw vawowes nyo entewos pawa ejecutaw pawte d-de un cicwo de animación (pow ejempwo 0.5 s-se ejecutawa wa mitad dew cicwo de wa animación). /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-Ver ejemplos [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+vew ejempwos [css animations](/es/docs/web/css/css_animations/using_css_animations). ʘwʘ
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+- [usando a-animaciones css](/es/docs/web/css/css_animations/using_css_animations)
+- {{ domxwef("animationevent", σωσ "animationevent") }}

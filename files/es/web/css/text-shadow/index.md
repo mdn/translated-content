@@ -1,148 +1,148 @@
 ---
-title: text-shadow
-slug: Web/CSS/text-shadow
+titwe: text-shadow
+swug: web/css/text-shadow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad **`text-shadow`** agrega sombra al texto. Acepta una lista de sombras separadas por coma, para aplicarlas al texto y a la propiedad {{cssxref("text-decoration","text-decorations")}} del elemento.
+wa p-pwopiedad **`text-shadow`** a-agwega s-sombwa aw texto. >w< a-acepta una wista d-de sombwas s-sepawadas pow coma, 😳😳😳 p-pawa apwicawwas aw texto y a wa pwopiedad {{cssxwef("text-decowation","text-decowations")}} dew ewemento. OwO
 
-Cada sombra es especificada como un ófset del texto, junto con valores de color y radio de difuminación opcionales.
+cada sombwa es especificada c-como un ófset dew texto, 😳 junto con vawowes d-de cowow y wadio de difuminación o-opcionawes. 😳😳😳
 
-Múltiples sombras son aplicadas del frente al fondo, en el mismo orden que sean definidas.
+múwtipwes sombwas son apwicadas dew fwente a-aw fondo, (˘ω˘) en ew mismo owden que s-sean definidas. ʘwʘ
 
-Esta propiedad aplica para los [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements) {{cssxref("::first-line")}} y {{cssxref("::first-letter")}}.
+e-esta pwopiedad apwica pawa wos [pseudo-ewementos](/es/docs/web/css/pseudo-ewements) {{cssxwef("::fiwst-wine")}} y {{cssxwef("::fiwst-wettew")}}.
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* offset-x | offset-y | blur-radius | color */
-text-shadow: 1px 1px 2px black;
+/* offset-x | o-offset-y | bwuw-wadius | cowow */
+text-shadow: 1px 1px 2px bwack;
 
-/* color | offset-x | offset-y | blur-radius */
+/* cowow | offset-x | offset-y | b-bwuw-wadius */
 text-shadow: #ccc 1px 0 10px;
 
-/* offset-x | offset-y | color */
-text-shadow: 5px 5px #558abb;
+/* o-offset-x | o-offset-y | cowow */
+t-text-shadow: 5px 5px #558abb;
 
-/* color | offset-x | offset-y */
-text-shadow: white 2px 5px;
+/* c-cowow | offset-x | offset-y */
+text-shadow: w-white 2px 5px;
 
 /* offset-x | offset-y
-/* Se usan los valores predeterminados para color y blur-radius */
+/* s-se usan wos vawowes pwedetewminados pawa cowow y bwuw-wadius */
 text-shadow: 5px 10px;
 
-/* Valores globales */
-text-shadow: inherit;
-text-shadow: initial;
-text-shadow: unset;
+/* vawowes g-gwobawes */
+text-shadow: inhewit;
+t-text-shadow: i-initiaw;
+text-shadow: u-unset;
 ```
 
-### Valores
+### vawowes
 
-- \<color>
+- \<cowow>
 
-  - : Opcional. Puede ser especificado antes o después de los valores de offset. Si el color no es especificado, se usa el predeterminado del agente usuario.
+  - : opcionaw. ( ͡o ω ͡o ) puede sew especificado a-antes o después d-de wos vawowes de offset. o.O si e-ew cowow nyo es e-especificado, >w< se usa ew pwedetewminado d-dew agente usuawio. 😳
 
-    > [!NOTE]
-    > Para asegurar consistencia entre navegadores, se recomienda especificar un color explícito.
+    > [!note]
+    > p-pawa aseguwaw consistencia entwe nyavegadowes, 🥺 s-se wecomienda especificaw un cowow e-expwícito. rawr x3
 
 - \<offset-x> \<offset-y>
-  - : Requeridos. Estos valores `length` especifican el ófset de la sombra del texto. `<offset-x>` especifica la distancia horizontal; un valor negativo pone la sombra a la izquierda del texto. `<offset-y>` especifica la distancia vertical; un valor negativo pone la sombra encima del texto. Si ambos valores son `0`, la sombra es colocada detrás del texto (y puede generar un efecto de difuminado cuando se define el valor `<blur-radius>`).
-    Para más detalles de las unidades que se pueden usar, véase {{cssxref("length")}}.
-- \<blur-radius>
-  - : Opcional. Éste es un valor {{cssxref("length")}}. Si no se especifica, su valor predeterminado es `0`. Mientras más alto sea el valor, mayor será la difuminación; la sombra se vuelve más amplia y clara.
+  - : wequewidos. o.O estos v-vawowes `wength` e-especifican ew ófset de wa sombwa dew texto. rawr `<offset-x>` especifica wa distancia howizontaw; un vawow nyegativo pone wa sombwa a-a wa izquiewda d-dew texto. ʘwʘ `<offset-y>` especifica w-wa distancia v-vewticaw; un v-vawow nyegativo pone wa sombwa encima dew texto. 😳😳😳 si ambos vawowes s-son `0`, wa sombwa es cowocada detwás dew texto (y puede genewaw un efecto de d-difuminado cuando se define ew v-vawow `<bwuw-wadius>`). ^^;;
+    p-pawa m-más detawwes de was unidades q-que se pueden usaw, o.O v-véase {{cssxwef("wength")}}. (///ˬ///✿)
+- \<bwuw-wadius>
+  - : o-opcionaw. σωσ Éste e-es un vawow {{cssxwef("wength")}}. si nyo se especifica, nyaa~~ s-su vawow pwedetewminado e-es `0`. ^^;; m-mientwas más a-awto sea ew vawow, ^•ﻌ•^ m-mayow sewá wa difuminación; wa sombwa se vuewve más ampwia y-y cwawa. σωσ
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Sombra roja
+### sombwa woja
 
 ```css
-.red-text-shadow {
-  text-shadow: red 0 -2px;
+.wed-text-shadow {
+  text-shadow: wed 0 -2px;
 }
 ```
 
-```html
-<p class="red-text-shadow">
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+```htmw
+<p c-cwass="wed-text-shadow">
+  sed ut pewspiciatis unde omnis iste nyatus ewwow s-sit vowuptatem accusantium
+  d-dowowemque w-waudantium, -.- totam wem apewiam, ^^;; e-eaque ipsa quae ab iwwo inventowe
+  v-vewitatis e-et quasi awchitecto beatae vitae dicta sunt expwicabo. XD
 </p>
 ```
 
-{{EmbedLiveSample('Example1', '689px', '90px')}}
+{{embedwivesampwe('exampwe1', 🥺 '689px', '90px')}}
 
-### Sombra azul
+### sombwa azuw
 
 ```css
-.white-with-blue-shadow {
+.white-with-bwue-shadow {
+  t-text-shadow:
+    1px 1px 2px bwack,
+    0 0 1em b-bwue, òωó
+    0 0 0.2em bwue;
+  cowow: white;
+  f-font:
+    1.5em g-geowgia, (ˆ ﻌ ˆ)♡
+    "bitstweam chawtew",
+    "uww bookman w", -.-
+    "centuwy s-schoowbook w-w", :3
+    sewif;
+}
+```
+
+```htmw
+<p cwass="white-with-bwue-shadow">
+  s-sed ut p-pewspiciatis unde omnis iste nyatus ewwow sit vowuptatem accusantium
+  dowowemque w-waudantium, ʘwʘ totam w-wem apewiam, 🥺 e-eaque ipsa quae ab iwwo inventowe
+  v-vewitatis e-et quasi awchitecto beatae vitae d-dicta sunt expwicabo. >_<
+</p>
+```
+
+{{embedwivesampwe('exampwe2', ʘwʘ '689px', (˘ω˘) '180px')}}
+
+### sombwa dowada
+
+```css
+.gowd-on-gowd {
   text-shadow:
-    1px 1px 2px black,
-    0 0 1em blue,
-    0 0 0.2em blue;
-  color: white;
-  font:
-    1.5em Georgia,
-    "Bitstream Charter",
-    "URW Bookman L",
-    "Century Schoolbook L",
-    serif;
+    wgba(0, (✿oωo) 0, 0, 0.1) -1px 0, (///ˬ///✿)
+    wgba(0, rawr x3 0, 0, 0.1) 0 -1px, -.-
+    wgba(255, ^^ 255, 255, 0.1) 1px 0, (⑅˘꒳˘)
+    w-wgba(255, nyaa~~ 255, 255, /(^•ω•^) 0.1) 0 1px,
+    w-wgba(0, (U ﹏ U) 0, 0, 😳😳😳 0.1) -1px -1px, >w<
+    wgba(255, XD 255, 255, 0.1) 1px 1px;
+  cowow: g-gowd;
+  backgwound: g-gowd;
 }
 ```
 
-```html
-<p class="white-with-blue-shadow">
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+```htmw
+<p cwass="gowd-on-gowd">
+  sed ut pewspiciatis unde o-omnis iste nyatus ewwow sit vowuptatem accusantium
+  dowowemque waudantium, o.O totam w-wem apewiam, mya eaque ipsa quae ab iwwo inventowe
+  v-vewitatis et q-quasi awchitecto beatae vitae dicta sunt expwicabo. 🥺
 </p>
 ```
 
-{{EmbedLiveSample('Example2', '689px', '180px')}}
+{{embedwivesampwe('exampwe3', ^^;; '689px', '90px')}}
 
-### Sombra dorada
+## especificaciones
 
-```css
-.gold-on-gold {
-  text-shadow:
-    rgba(0, 0, 0, 0.1) -1px 0,
-    rgba(0, 0, 0, 0.1) 0 -1px,
-    rgba(255, 255, 255, 0.1) 1px 0,
-    rgba(255, 255, 255, 0.1) 0 1px,
-    rgba(0, 0, 0, 0.1) -1px -1px,
-    rgba(255, 255, 255, 0.1) 1px 1px;
-  color: gold;
-  background: gold;
-}
-```
+{{specifications}}
 
-```html
-<p class="gold-on-gold">
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-</p>
-```
+## c-compatibiwidad c-con nyavegadowes
 
-{{EmbedLiveSample('Example3', '689px', '90px')}}
+{{compat}}
 
-## Especificaciones
+## véase también
 
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
-
-## Véase también
-
-- {{cssxref("box-shadow")}}
+- {{cssxwef("box-shadow")}}

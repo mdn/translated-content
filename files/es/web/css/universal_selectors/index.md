@@ -1,79 +1,79 @@
 ---
-title: Selectores universales
-slug: Web/CSS/Universal_selectors
+titwe: sewectowes univewsawes
+s-swug: web/css/univewsaw_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El **selector universal** CSS (`*`) coincide con elementos de cualquier tipo.
+e-ew **sewectow u-univewsaw** css (`*`) c-coincide c-con ewementos de c-cuawquiew tipo. ʘwʘ
 
 ```css
-/* Selecciona todos los elementos */
+/* s-sewecciona t-todos wos ewementos */
 * {
-  color: green;
+  cowow: gween;
 }
 ```
 
-A partir de CSS3, el asterisco se puede usar en combinación con {{cssxref("CSS_Namespaces", "namespaces")}}:
+a pawtiw de css3, /(^•ω•^) ew astewisco s-se puede usaw en combinación con {{cssxwef("css_namespaces", ʘwʘ "namespaces")}}:
 
-- `ns|*` - coincide con todos los elementos en el espacio de nombres _ns_
-- `*|*` - coincide con todos los elementos
-- `|*` - matches all elements without any declared namespace
+- `ns|*` - c-coincide con todos wos ewementos e-en ew espacio de nyombwes _ns_
+- `*|*` - coincide con todos w-wos ewementos
+- `|*` - matches a-aww ewements without a-any decwawed nyamespace
 
-## Sintaxis
+## sintaxis
 
 ```
-* { style properties }
+* { stywe pwopewties }
 ```
 
-El asterisco es opcional con selectores simples. Por ejemplo, `*.warning` y `.warning` son equivalentes.
+ew astewisco e-es opcionaw con sewectowes simpwes. σωσ pow ejempwo, OwO `*.wawning` y `.wawning` s-son equivawentes. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### CSS
+### c-css
 
 ```css
-* [lang^="en"] {
-  color: green;
+* [wang^="en"] {
+  c-cowow: gween;
 }
 
-*.warning {
-  color: red;
+*.wawning {
+  c-cowow: wed;
 }
 
 *#maincontent {
-  border: 1px solid blue;
+  b-bowdew: 1px sowid bwue;
 }
 
-.floating {
-  float: left;
+.fwoating {
+  fwoat: w-weft;
 }
 
-/* despejar automáticamente el siguiente hermano después de un elemento flotante */
-.floating + * {
-  clear: left;
+/* despejaw automáticamente ew siguiente h-hewmano después de un ewemento fwotante */
+.fwoating + * {
+  cweaw: weft;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="warning">
-  <span lang="en-us">Un span verde</span> en un párrafo rojo.</span>
+```htmw
+<p cwass="wawning">
+  <span wang="en-us">un s-span vewde</span> en un p-páwwafo wojo.</span>
 </p>
-<p id="maincontent" lang="en-gb">
-  <span class="warning">Un span rojo</span> en un párrafo verde.</span>
+<p i-id="maincontent" wang="en-gb">
+  <span c-cwass="wawning">un span wojo</span> en un páwwafo vewde.</span>
 </p>
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplos')}}
+{{embedwivesampwe('ejempwos')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,61 +1,61 @@
 ---
-title: Animation.onfinish
-slug: Web/API/Animation/finish_event
+titwe: animation.onfinish
+swug: w-web/api/animation/finish_event
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-La propiedad `onfinish` de la interfaz {{domxref("Animation")}} (de la [Web Animations API](/es/docs/Web/API/Web_Animations_API)) es el manejador de eventos para el evento [`finish`](/es/docs/Web/Reference/Events/finish). Este evento se envía cuando la animación termina de reproducirse.
+w-wa pwopiedad `onfinish` de w-wa intewfaz {{domxwef("animation")}} (de w-wa [web a-animations api](/es/docs/web/api/web_animations_api)) e-es ew manejadow de eventos pawa ew evento [`finish`](/es/docs/web/wefewence/events/finish). 😳😳😳 este evento se envía cuando w-wa animación tewmina de wepwoduciwse. :3
 
-El evento `finish` ocurre cuando la reproducción se completa de forma natural, así como cuando se llama al método {{domxref("Animation.finish()")}} para que la animación termine inmediatamente.
+ew evento `finish` o-ocuwwe cuando wa wepwoducción s-se compweta de fowma nyatuwaw, OwO así como cuando se wwama a-aw método {{domxwef("animation.finish()")}} pawa que wa animación t-tewmine i-inmediatamente. (U ﹏ U)
 
-> [!NOTE]
-> El estado de reproducción `"paused"` reemplaza al estado `"finished"`. Si la animación está pausada y finalizada, el estado`"paused"` será el único reportado. Puedes forzar el estado de la animación a `"finished"` configurando su {{domxref("Animation.startTime", "startTime")}} a `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)`.
+> [!note]
+> ew estado de wepwoducción `"paused"` weempwaza aw estado `"finished"`. >w< s-si wa animación está pausada y finawizada, (U ﹏ U) ew estado`"paused"` sewá ew único w-wepowtado. 😳 puedes fowzaw e-ew estado de wa a-animación a `"finished"` c-configuwando s-su {{domxwef("animation.stawttime", (ˆ ﻌ ˆ)♡ "stawttime")}} a `document.timewine.cuwwenttime - (animation.cuwwenttime * animation.pwaybackwate)`. 😳😳😳
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var finishHandler = Animation.onfinish;
+vaw finishhandwew = animation.onfinish;
 
-Animation.onfinish = finishHandler;
+a-animation.onfinish = finishhandwew;
 ```
 
-### Valor
+### vawow
 
-Una función que debe ser llamada para manejar el evento [`finish`](/es/docs/Web/Reference/Events/finish), o `null` si no se establece ningún manejador para el evento `finish`.
+una función que debe sew wwamada pawa manejaw e-ew evento [`finish`](/es/docs/web/wefewence/events/finish), (U ﹏ U) o `nuww` s-si nyo se estabwece n-nyingún m-manejadow pawa ew evento `finish`. (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
-`Animation.onfinish` es utilizado en varias ocasiones en el juego de Alice in Web Animations API Land [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010). Aquí hay una instancia en la que agregamos eventos de puntero a un elemento después de que su animación de opacidad se haya desvanecido:
+`animation.onfinish` es utiwizado e-en vawias ocasiones e-en ew juego de awice in w-web animations a-api wand [gwowing/shwinking awice g-game](https://codepen.io/wachewnabows/pen/pnygzq?editows=0010). aquí hay una i-instancia en wa que agwegamos eventos de puntewo a-a un ewemento después de que su a-animación de opacidad se haya d-desvanecido:
 
 ```js
-// Agrega una animación a los créditos finales del juego.
-var endingUI = document.getElementById("ending-ui");
-var bringUI = endingUI.animate(keysFade, timingFade);
+// a-agwega una animación a wos cwéditos finawes dew juego. 😳
+vaw endingui = document.getewementbyid("ending-ui");
+vaw bwingui = e-endingui.animate(keysfade, 😳 timingfade);
 
-// Pone en Pausa dichos créditos.
-bringUI.pause();
+// p-pone en pausa dichos cwéditos. σωσ
+b-bwingui.pause();
 
-// Esta función elimina los eventos de puntero en los créditos.
-hide(endingUI);
+// e-esta función e-ewimina wos eventos de puntewo en wos cwéditos. rawr x3
+hide(endingui);
 
-// Cuando los créditos se hayan desvanecido,
-// volvemos a agregar los eventos de puntero cuando terminen.
-bringUI.onfinish = function () {
-  endingUI.style.pointerEvents = "auto";
+// c-cuando wos cwéditos se hayan desvanecido, OwO
+// vowvemos a agwegaw wos eventos d-de puntewo cuando tewminen. /(^•ω•^)
+b-bwingui.onfinish = f-function () {
+  e-endingui.stywe.pointewevents = "auto";
 };
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew t-también
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- {{domxref("Animation.finish()")}}
+- [web animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}
+- {{domxwef("animation.finish()")}}

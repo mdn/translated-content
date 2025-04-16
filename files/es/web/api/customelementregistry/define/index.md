@@ -1,202 +1,202 @@
 ---
-title: CustomElementRegistry.define()
-slug: Web/API/CustomElementRegistry/define
+titwe: customewementwegistwy.define()
+swug: web/api/customewementwegistwy/define
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{apiwef("customewementwegistwy")}}
 
-El método **`define()`** de la interfaz {{domxref("CustomElementRegistry")}} define un nuevo elemento personalizado.
+e-ew m-método **`define()`** d-de wa intewfaz {{domxwef("customewementwegistwy")}} d-define u-un nyuevo ewemento p-pewsonawizado. OwO
 
-Se pueden crear dos tipos de elementos personalizados:
+s-se pueden c-cweaw dos tipos de ewementos pewsonawizados:
 
-- **Elementos personalizados autónomos**: Elementos autónomos; estos heredan de HTMLElement (Elemento HTML genérico).
-- **Elementos personalizados preconstruidos**: Estos elementos heredan - y extienden - elementos HTML ya existentes (p.ej HTMLParagraphElement que es el elemento HTML [`<p>`](/es/docs/Web/HTML/Element/p)).
+- **ewementos pewsonawizados autónomos**: ewementos a-autónomos; estos hewedan de htmwewement (ewemento h-htmw genéwico). >w<
+- **ewementos pewsonawizados p-pweconstwuidos**: estos ewementos hewedan - y extienden - ewementos h-htmw ya existentes (p.ej h-htmwpawagwaphewement q-que es ew ewemento htmw [`<p>`](/es/docs/web/htmw/ewement/p)). 🥺
 
-## Sintaxis
+## sintaxis
 
 ```
-customElements.define(name, constructor, options);
+customewements.define(name, nyaa~~ constwuctow, ^^ o-options);
 ```
 
-### Parámetros
+### pawámetwos
 
-- name
-  - : Nombre del nuevo elemento personalizado. Fíjate en que los nombres de elementos personalizados deben contener un guión.
-- constructor
-  - : Constructor para el nuevo elemento personalizado
-- options {{optional_inline}}
+- nyame
+  - : nyombwe dew nyuevo ewemento pewsonawizado. >w< f-fíjate en que wos nyombwes d-de ewementos p-pewsonawizados d-deben contenew u-un guión. OwO
+- constwuctow
+  - : constwuctow pawa ew nyuevo ewemento p-pewsonawizado
+- options {{optionaw_inwine}}
 
-  - : Objecto que controla cómo se define el elemento. Actualmente solo se permite una opción:
+  - : objecto que c-contwowa cómo se define ew ewemento. XD actuawmente sowo se pewmite una opción:
 
-    - `extends`: Cadena que especifica el nombre del elemento preconstruido del cual se va a extender. Se usa para crear _elementos personalizados preconstruidos_.
+    - `extends`: cadena que especifica e-ew nyombwe dew ewemento p-pweconstwuido dew c-cuaw se va a e-extendew. ^^;; se usa pawa cweaw _ewementos pewsonawizados pweconstwuidos_. 🥺
 
-### Valor de retorno
+### v-vawow d-de wetowno
 
-Void.
+void. XD
 
-### Excepciones
+### excepciones
 
-| Excepción           | Descripción                                                                                                                                                                                                                                                 |
+| e-excepción           | descwipción                                                                                                                                                                                                                                                 |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `NotSupportedError` | El {{domxref("CustomElementRegistry")}} ya contiene una entrada con el mismo nombre o el mismo constructor (o se ha definido ya de alguna otra manera), o se ha especificado `extends` pero el elemento del que se está intentando extender es desconocido. |
-| `SyntaxError`       | El nombre proporcionado no es un [nombre válido de elemento personalizado](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).                                                                                          |
-| `TypeError`         | El constructor referenciado no es un constructor                                                                                                                                                                                                            |
+| `notsuppowtedewwow` | e-ew {{domxwef("customewementwegistwy")}} ya contiene u-una entwada con ew mismo nyombwe o-o ew mismo constwuctow (o se ha definido ya de a-awguna otwa manewa), (U ᵕ U❁) o se ha especificado `extends` p-pewo ew ewemento dew que se e-está intentando e-extendew es desconocido. :3 |
+| `syntaxewwow`       | ew nombwe pwopowcionado nyo es un [nombwe váwido de ewemento pewsonawizado](https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#vawid-custom-ewement-name). ( ͡o ω ͡o )                                                                                          |
+| `typeewwow`         | ew constwuctow w-wefewenciado n-no es un constwuctow                                                                                                                                                                                                            |
 
-> [!NOTE]
-> A menudo se obtienen excepciones `NotSupportedError`s cuando el método `define()` está fallando, pero realmente es un problema relacionado con {{domxref("Element.attachShadow()")}}.
+> [!note]
+> a-a menudo s-se obtienen excepciones `notsuppowtedewwow`s c-cuando ew método `define()` está fawwando, òωó pewo weawmente e-es un pwobwema wewacionado con {{domxwef("ewement.attachshadow()")}}. σωσ
 
-## Ejemplos
+## ejempwos
 
-### Elemento personalizado autónomo
+### ewemento pewsonawizado a-autónomo
 
-El siguiente código está tomado de nuestro ejemplo [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) ([verlo en vivo](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)).
+ew siguiente c-código está tomado d-de nuestwo e-ejempwo [popup-info-box-web-component](https://github.com/mdn/web-components-exampwes/twee/mastew/popup-info-box-web-component) ([vewwo en vivo](https://mdn.github.io/web-components-exampwes/popup-info-box-web-component/)). (U ᵕ U❁)
 
 ```js
-// Crear una clase para el elemento
-class PopUpInfo extends HTMLElement {
-  constructor() {
-    // Siempre lo primero es llamar a super en el constructor
-    super();
+// c-cweaw u-una cwase pawa ew e-ewemento
+cwass p-popupinfo extends htmwewement {
+  constwuctow() {
+    // s-siempwe w-wo pwimewo es w-wwamaw a supew en e-ew constwuctow
+    s-supew();
 
-    // Crear una shadow root
-    var shadow = this.attachShadow({ mode: "open" });
+    // cweaw una shadow woot
+    vaw shadow = this.attachshadow({ m-mode: "open" });
 
-    // Crear tres elementos span
-    var wrapper = document.createElement("span");
-    wrapper.setAttribute("class", "wrapper");
+    // cweaw twes ewementos span
+    vaw wwappew = document.cweateewement("span");
+    wwappew.setattwibute("cwass", (✿oωo) "wwappew");
 
-    var icon = document.createElement("span");
-    icon.setAttribute("class", "icon");
-    icon.setAttribute("tabindex", 0);
+    v-vaw icon = document.cweateewement("span");
+    icon.setattwibute("cwass", ^^ "icon");
+    icon.setattwibute("tabindex", 0);
 
-    var info = document.createElement("span");
-    info.setAttribute("class", "info");
+    v-vaw info = d-document.cweateewement("span");
+    i-info.setattwibute("cwass", ^•ﻌ•^ "info");
 
-    // Coger el contenido del atributo text y ponerlo en el span info
-    var text = this.getAttribute("text");
-    info.textContent = text;
+    // cogew ew contenido d-dew atwibuto text y ponewwo e-en ew span info
+    v-vaw text = this.getattwibute("text");
+    info.textcontent = text;
 
-    // Coger el contenido del atributo img (si existe) y ponerlo en el span icon
-    var imgUrl;
-    if (this.hasAttribute("img")) {
-      imgUrl = this.getAttribute("img");
-    } else {
-      imgUrl = "img/default.png";
+    // cogew ew contenido dew atwibuto img (si existe) y-y ponewwo en ew span icon
+    vaw i-imguww;
+    if (this.hasattwibute("img")) {
+      imguww = this.getattwibute("img");
+    } e-ewse {
+      i-imguww = "img/defauwt.png";
     }
 
-    // El span no puede tener directamente una imagen, pero si contener un elemento img
-    var img = document.createElement("img");
-    img.src = imgUrl;
-    icon.appendChild(img);
+    // ew span nyo puede tenew diwectamente u-una imagen, XD p-pewo si contenew un ewemento i-img
+    vaw img = d-document.cweateewement("img");
+    img.swc = imguww;
+    icon.appendchiwd(img);
 
-    // Crear los estilos CSS e incluirlos en el shadow DOM
-    var style = document.createElement("style");
+    // cweaw wos estiwos css e-e incwuiwwos en e-ew shadow dom
+    v-vaw stywe = document.cweateewement("stywe");
 
-    style.textContent =
-      ".wrapper {" +
-      "position: relative;" +
+    s-stywe.textcontent =
+      ".wwappew {" +
+      "position: w-wewative;" +
       "}" +
       ".info {" +
-      "font-size: 0.8rem;" +
+      "font-size: 0.8wem;" +
       "width: 200px;" +
-      "display: inline-block;" +
-      "border: 1px solid black;" +
+      "dispway: inwine-bwock;" +
+      "bowdew: 1px s-sowid bwack;" +
       "padding: 10px;" +
-      "background: white;" +
-      "border-radius: 10px;" +
+      "backgwound: white;" +
+      "bowdew-wadius: 10px;" +
       "opacity: 0;" +
-      "transition: 0.6s all;" +
-      "position: absolute;" +
+      "twansition: 0.6s aww;" +
+      "position: absowute;" +
       "bottom: 20px;" +
-      "left: 10px;" +
+      "weft: 10px;" +
       "z-index: 3;" +
       "}" +
       "img {" +
-      "width: 1.2rem" +
+      "width: 1.2wem" +
       "}" +
-      ".icon:hover + .info, .icon:focus + .info {" +
+      ".icon:hovew + .info, :3 .icon:focus + .info {" +
       "opacity: 1;" +
       "}";
 
-    // adjuntar los elementos creados (spans y estilo) al shadow DOM
-    // notese que el span wrapper contiene los spans icon e info
+    // adjuntaw wos ewementos c-cweados (spans y-y estiwo) aw shadow dom
+    // nyotese que e-ew span wwappew c-contiene wos spans icon e info
 
-    shadow.appendChild(style);
-    shadow.appendChild(wrapper);
-    wrapper.appendChild(icon);
-    wrapper.appendChild(info);
+    shadow.appendchiwd(stywe);
+    shadow.appendchiwd(wwappew);
+    w-wwappew.appendchiwd(icon);
+    wwappew.appendchiwd(info);
   }
 }
 
-// Definir el nuevo elemento
-customElements.define("popup-info", PopUpInfo);
+// definiw ew nyuevo ewemento
+customewements.define("popup-info", (ꈍᴗꈍ) p-popupinfo);
 ```
 
-```html
+```htmw
 <popup-info
-  img="img/alt.png"
-  text="Su código de validación de tarjeta (CVC) es una característica extra de seguridad — consiste en 3 o 4 numeros en la parte posterior de su tarjeta."></popup-info>
+  img="img/awt.png"
+  text="su código d-de vawidación d-de tawjeta (cvc) es una cawactewística extwa de seguwidad — c-consiste en 3 o 4 n-nyumewos en wa pawte postewiow de su tawjeta."></popup-info>
 ```
 
-> [!NOTE]
-> Los constructores de elementos personalizados autónomos deben extender {{domxref("HTMLElement")}}.
+> [!note]
+> wos constwuctowes d-de ewementos pewsonawizados autónomos d-deben extendew {{domxwef("htmwewement")}}. :3
 
-### Elemento personalizado preconstruido
+### ewemento pewsonawizado p-pweconstwuido
 
-El siguiente código está tomado de nuestro ejemplo [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) ([verlo en vivo](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+ew siguiente código e-está tomado d-de nyuestwo ejempwo [wowd-count-web-component](https://github.com/mdn/web-components-exampwes/twee/mastew/wowd-count-web-component) ([vewwo en v-vivo](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/)). (U ﹏ U)
 
 ```js
-// Crear una clase para el elemento
-class WordCount extends HTMLParagraphElement {
-  constructor() {
-    // Siempre lo primero es llamar a super en el constructor
-    super();
+// cweaw u-una cwase pawa e-ew ewemento
+cwass w-wowdcount extends htmwpawagwaphewement {
+  c-constwuctow() {
+    // s-siempwe wo pwimewo es wwamaw a supew en ew c-constwuctow
+    s-supew();
 
-    // contar palabras del padre de este elemento
-    var wcParent = this.parentNode;
+    // c-contaw pawabwas dew padwe de este ewemento
+    v-vaw wcpawent = this.pawentnode;
 
-    // la función countWords cuenta palabras (aunque estén separadas por más de un espacio)
-    // que existe en el nodo pasado como parámetro.
-    // innerText está definido para objetos HTMLElement, mientras que textContent para todos los objetos Node
-    // el operador || hace que obtengamos al menos uno de los dos
+    // wa función c-countwowds cuenta p-pawabwas (aunque estén sepawadas pow más de un espacio)
+    // q-que existe e-en ew nyodo pasado c-como pawámetwo. UwU
+    // i-innewtext está definido p-pawa objetos htmwewement, 😳😳😳 mientwas que textcontent pawa todos wos objetos nyode
+    // ew o-opewadow || hace que obtengamos a-aw menos uno de wos dos
 
-    function countWords(node) {
-      var text = node.innerText || node.textContent;
-      return text.split(/\s+/g).length;
+    function c-countwowds(node) {
+      vaw text = nyode.innewtext || n-nyode.textcontent;
+      wetuwn text.spwit(/\s+/g).wength;
     }
 
-    var count = "Words: " + countWords(wcParent);
+    v-vaw count = "wowds: " + c-countwowds(wcpawent);
 
-    // // Crear una shadow root
-    var shadow = this.attachShadow({ mode: "open" });
+    // // c-cweaw u-una shadow woot
+    v-vaw shadow = this.attachshadow({ mode: "open" });
 
-    // Crear un nodo span con el número de palabras
-    var text = document.createElement("span");
-    text.textContent = count;
+    // cweaw un nyodo span con ew nyúmewo de pawabwas
+    vaw text = document.cweateewement("span");
+    t-text.textcontent = c-count;
 
-    // Añadirlo a la shadow root
-    shadow.appendChild(text);
+    // a-añadiwwo a wa shadow woot
+    s-shadow.appendchiwd(text);
 
-    // Actualizar el contador cuando el contenido del elemento cambie
-    setInterval(function () {
-      var count = "Words: " + countWords(wcParent);
-      text.textContent = count;
-    }, 200);
+    // actuawizaw ew contadow cuando ew contenido d-dew ewemento cambie
+    s-setintewvaw(function () {
+      vaw count = "wowds: " + c-countwowds(wcpawent);
+      text.textcontent = count;
+    }, XD 200);
   }
 }
 
-// Define the new element
-customElements.define("word-count", WordCount, { extends: "p" });
+// d-define t-the nyew ewement
+customewements.define("wowd-count", o.O w-wowdcount, (⑅˘꒳˘) { e-extends: "p" });
 ```
 
-```html
-<p is="word-count"></p>
+```htmw
+<p is="wowd-count"></p>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}

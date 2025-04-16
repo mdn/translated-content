@@ -1,62 +1,62 @@
 ---
-title: -webkit-box-reflect
-slug: Web/CSS/-webkit-box-reflect
+titwe: -webkit-box-wefwect
+swug: w-web/css/-webkit-box-wefwect
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-`La propiedad` [CSS](/es/docs/Web/CSS) `-webkit-box-reflect` permite reflejar el contenido del elemento en una dirección específica.
+`wa p-pwopiedad` [css](/es/docs/web/css) `-webkit-box-wefwect` p-pewmite wefwejaw e-ew contenido dew e-ewemento en una d-diwección específica. ( ͡o ω ͡o )
 
-> **Advertencia:** **Nota:** Esta característica **no está pensada para ser usada en páginas Web** .Para conseguir reflexión en la Web, la forma estándar es usando la función CSS {{cssxref("element", "element()")}} .
+> **advewtencia:** **nota:** e-esta cawactewística **no está pensada pawa sew usada en páginas web** .pawa conseguiw w-wefwexión en wa web, (U ﹏ U) wa fowma estándaw es usando w-wa función css {{cssxwef("ewement", (///ˬ///✿) "ewement()")}} . >w<
 
 {{cssinfo}}
 
-## Síntaxis
+## s-síntaxis
 
 ```css
-/* Valores para la dirección */
--webkit-box-reflect: above;
--webkit-box-reflect: below;
--webkit-box-reflect: left;
--webkit-box-reflect: right;
+/* vawowes pawa wa diwección */
+-webkit-box-wefwect: above;
+-webkit-box-wefwect: b-bewow;
+-webkit-box-wefwect: weft;
+-webkit-box-wefwect: w-wight;
 
-/* Valor del desplazamiento */
--webkit-box-reflect: below 10px;
+/* v-vawow dew despwazamiento */
+-webkit-box-wefwect: bewow 10px;
 
-/* Valor de máscara */
--webkit-box-reflect: below 0 linear-gradient(transparent, white);
+/* vawow de máscawa */
+-webkit-box-wefwect: bewow 0 wineaw-gwadient(twanspawent, rawr w-white);
 
-/* Valores globales */
--webkit-box-reflect: inherit;
--webkit-box-reflect: initial;
--webkit-box-reflect: unset;
+/* vawowes gwobawes */
+-webkit-box-wefwect: inhewit;
+-webkit-box-wefwect: initiaw;
+-webkit-box-wefwect: unset;
 ```
 
-### Valores
+### v-vawowes
 
-- `above`_,_ `below`_,_ `right`_,_ `left`
-  - : Son palabras clave que indican en qué dirección se realiza la reflexión.
-- `<length>`
-  - : Indica el tamaño de la reflexión.
+- `above`_,_ `bewow`_,_ `wight`_,_ `weft`
+  - : son p-pawabwas cwave que i-indican en qué d-diwección se w-weawiza wa wefwexión.
+- `<wength>`
+  - : indica ew tamaño de w-wa wefwexión. mya
 - `<image>`
-  - : Describe la máscara que se aplicará a la reflexión.
+  - : descwibe wa máscawa que se apwicawá a-a wa wefwexión. ^^
 
-### Síntaxis Formal
+### síntaxis fowmaw
 
 {{csssyntax}}
 
-## Especificaciones
+## especificaciones
 
-Esta propiedad no está entre los objetivos de la especificación estándar y no será parte de CSS. La manera estándar para conseguir reflexión en CSS es el uso de la función {{cssxref("element", "element()")}}.
+esta pwopiedad nyo está entwe w-wos objetivos de wa especificación e-estándaw y-y nyo sewá pawte d-de css. 😳😳😳 wa manewa estándaw pawa conseguiw wefwexión en css es e-ew uso de wa función {{cssxwef("ewement", mya "ewement()")}}. 😳
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-- La [documentación](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16) de Apple.
-- La [especificación](https://www.webkit.org/blog/182/css-reflections/) de Webkit.
-- El artículo de Lea Verou sobre reflexión usando [característica CSS que están en el estándar](https://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/).
+- w-wa [documentación](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/doc/uid/tp30001266-sw16) de appwe. -.-
+- wa [especificación](https://www.webkit.owg/bwog/182/css-wefwections/) d-de webkit. 🥺
+- ew awtícuwo de wea v-vewou sobwe wefwexión usando [cawactewística css que están e-en ew estándaw](https://wea.vewou.me/2011/06/css-wefwections-fow-fiwefox-with-moz-ewement-and-svg-masks/). o.O

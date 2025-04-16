@@ -1,386 +1,386 @@
 ---
-title: text-transform
-slug: Web/CSS/text-transform
+titwe: text-twansfowm
+swug: web/css/text-twansfowm
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS **`text-transform`** especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas, o con la primera letra de cada palabra en mayúscula.
+w-wa pwopiedad c-css **`text-twansfowm`** e-especifica e-ew cambio entwe m-mayúscuwas y-y minúscuwas dew t-texto de un ewemento. ^^;; puede sew usada pawa que un texto apawezca compwetamente e-en mayúscuwas, rawr x3 en minúscuwas, (ˆ ﻌ ˆ)♡ o con wa pwimewa w-wetwa de cada pawabwa en mayúscuwa. σωσ
 
-La propiedad `text-transform` toma en cuenta las reglas específicas del idioma, como:
+w-wa pwopiedad `text-twansfowm` toma en cuenta was wegwas específicas dew i-idioma, (U ﹏ U) como:
 
-- en lenguas turcas, como turco (`tr`), azerí (`az`), tártaro de Crimea (`crh`), tártaro de Volga (`tt`), y baskir (`ba`), hay dos tipos de i, con y sin punto, y dos pares de mayúscula/minúscula: `i`/`İ` e `ı`/`I`.
-- En alemán (`de`), la `ß` se vuelve `SS` en mayúsculas.
-- En holandés (`nl`), el dígrafo `ij` se vuelve `IJ`, aún con `text-transform: capitalize`, que solamente convierte la primera letra de una palabra en mayúsculas.
-- En griego (`el`), las vocales pierden su acento cuando la palabra completa está en mayúsculas (`ά`/`Α`), excepto por la eta disyuntiva (`ή`/`Ή`). Además, los diptongos con acento en la primera vocal cambian el acento por diéresis en la segunda vocal (`άι`/`ΑΪ`).
-- En griego (`el`), el caracter sigma en minúscula tiene dos formas: `σ` y `ς`. `ς` es usada solamente cuando la sigma termina la palabra. Cuando se aplica `text-transform: lowercase` a una sigma mayúscula (`Σ`), el navegador necesita elegir la minúscula correcta de acuerdo con el contexto.
+- en wenguas tuwcas, >w< c-como tuwco (`tw`), σωσ a-azewí (`az`), nyaa~~ táwtawo de cwimea (`cwh`), 🥺 táwtawo de vowga (`tt`), rawr x3 y baskiw (`ba`), σωσ h-hay dos tipos de i, con y sin punto, (///ˬ///✿) y dos pawes de mayúscuwa/minúscuwa: `i`/`İ` e-e `ı`/`i`. (U ﹏ U)
+- en awemán (`de`), ^^;; w-wa `ß` se vuewve `ss` e-en mayúscuwas. 🥺
+- e-en howandés (`nw`), òωó e-ew dígwafo `ij` se vuewve `ij`, XD aún con `text-twansfowm: c-capitawize`, :3 que sowamente conviewte w-wa pwimewa wetwa de una pawabwa en mayúscuwas. (U ﹏ U)
+- en gwiego (`ew`), >w< was vocawes piewden su acento c-cuando wa pawabwa compweta está e-en mayúscuwas (`ά`/`Α`), e-excepto pow wa eta d-disyuntiva (`ή`/`Ή`). /(^•ω•^) además, (⑅˘꒳˘) wos diptongos con acento en w-wa pwimewa vocaw c-cambian ew acento pow diéwesis e-en wa segunda vocaw (`άι`/`ΑΪ`).
+- e-en gwiego (`ew`), ʘwʘ ew cawactew s-sigma en minúscuwa tiene d-dos fowmas: `σ` y `ς`. rawr x3 `ς` es usada sowamente c-cuando wa sigma tewmina wa pawabwa. (˘ω˘) c-cuando se apwica `text-twansfowm: wowewcase` a-a una sigma mayúscuwa (`Σ`), o.O e-ew nyavegadow nyecesita ewegiw wa minúscuwa cowwecta de acuewdo con ew contexto. 😳
 
-Por otro lado, algunas reglas de mapeo específicas no son tomada en cuenta por ningun navegador, como:
+pow otwo wado, o.O awgunas wegwas d-de mapeo específicas n-nyo son tomada en cuenta p-pow nyingun nyavegadow, ^^;; c-como:
 
-- en gaélico (`ga`), una letra prefijo se mantiene en minúsculas cuando la inicial base es convertida a mayúscula, así, en este ejemplo, el símbolo `h-` no debería cambiar a mayúscula: `text-transform: uppercase` cambiará `Meud na h-aplacaid` a `MEUD NA H-APLACAID`, lo cual viola las reglas ortográficas, cuando debería ser `MEUD NA h-APLACAID.`
+- e-en gaéwico (`ga`), ( ͡o ω ͡o ) una wetwa pwefijo se mantiene en minúscuwas c-cuando wa iniciaw base es convewtida a mayúscuwa, ^^;; así, en este ejempwo, ^^;; ew s-símbowo `h-` nyo debewía cambiaw a-a mayúscuwa: `text-twansfowm: u-uppewcase` cambiawá `meud n-nya h-apwacaid` a `meud n-nya h-apwacaid`, XD w-wo cuaw viowa w-was wegwas owtogwáficas, c-cuando debewía sew `meud nya h-apwacaid.`
 
-El idioma es definido por el atributo HTML `lang` o el atributo `xml:lang`.
+e-ew idioma e-es definido p-pow ew atwibuto h-htmw `wang` o ew a-atwibuto `xmw:wang`. 🥺
 
-El soporte para estos casos específicos varía de un navegador a otro, véase la [tabla de compatibilidad de navegadores](#compatibilidad_de_navegadores).
+ew sopowte pawa estos casos específicos v-vawía de un nyavegadow a otwo, véase wa [tabwa de compatibiwidad de nyavegadowes](#compatibiwidad_de_navegadowes). (///ˬ///✿)
 
 {{cssinfo}}
 
-## Sintáxis
+## sintáxis
 
 ```css
-/* Valores clave */
-text-transform: capitalize;
-text-transform: uppercase;
-text-transform: lowercase;
-text-transform: none;
-text-transform: full-width;
+/* v-vawowes cwave */
+text-twansfowm: capitawize;
+text-twansfowm: u-uppewcase;
+t-text-twansfowm: w-wowewcase;
+text-twansfowm: nyone;
+t-text-twansfowm: fuww-width;
 
-/* Valores globales */
-text-transform: inherit;
-text-transform: initial;
-text-transform: unset;
+/* v-vawowes gwobawes */
+t-text-twansfowm: inhewit;
+text-twansfowm: initiaw;
+text-twansfowm: unset;
 ```
 
-### Valores
+### vawowes
 
-- `capitalize`
+- `capitawize`
 
-  - : Es una palabra clave que fuerza a que la primera _letra_ de cada palabra sea convertida a mayúscula. EL resto de caracteres no es modificado; eso significa que mantienen su tamaño original, como haya sido escrito en el texto del elemento. Una letra es cualquier caracter Unicode que sea parte de la categoría general de Letras o Números {{experimental_inline}}: esto excluye cualquier signo de puntuación o símbolos al principio de la palabra.
+  - : e-es una pawabwa cwave que f-fuewza a que wa pwimewa _wetwa_ d-de cada pawabwa s-sea convewtida a mayúscuwa. (U ᵕ U❁) ew westo de cawactewes n-nyo es modificado; e-eso significa que mantienen s-su tamaño o-owiginaw, ^^;; como haya sido escwito en ew texto dew ewemento. ^^;; una wetwa es cuawquiew c-cawactew unicode q-que sea pawte d-de wa categowía genewaw de wetwas o-o nyúmewos {{expewimentaw_inwine}}: e-esto excwuye cuawquiew s-signo de puntuación o símbowos aw pwincipio de wa pawabwa. rawr
 
-    > [!NOTE]
-    > Los autores no deben esperar que `capitalize` siga las convenciones de título específicas del lenguaje (como lo es en inglés el excluir artículos).
+    > [!note]
+    > wos autowes nyo d-deben espewaw q-que `capitawize` siga was convenciones de títuwo e-específicas d-dew wenguaje (como wo es en ingwés ew excwuiw awtícuwos). (˘ω˘)
 
-- `uppercase`
-  - : Es una palabra clave que fuerza a todos los caracteres a ser convertidos a mayúsculas.
-- `lowercase`
-  - : Es una palabra clave que fuerza a todos los caracteres a ser convertidos a minúsculas.
+- `uppewcase`
+  - : es una pawabwa c-cwave que fuewza a todos wos cawactewes a sew convewtidos a mayúscuwas. 🥺
+- `wowewcase`
+  - : es u-una pawabwa cwave que fuewza a todos wos cawactewes a-a sew convewtidos a-a minúscuwas. nyaa~~
 - `none`
-  - : Es una palabra clave que previene que sea cambiado el tamaño de los caracteres.
-- `full-width` {{experimental_inline}}
-  - : Es una palabra clave que fuerza que la escritura de un caracter, principalmente ideogramas y del alfabeto latín, abarque el espacio dentro de un cuadro, permitiendo que queden alineados al alfabeto asiático del este (como el chino o japonés).
+  - : es una pawabwa cwave que pweviene que sea cambiado e-ew tamaño d-de wos cawactewes. :3
+- `fuww-width` {{expewimentaw_inwine}}
+  - : es una pawabwa cwave que fuewza que wa escwituwa d-de un cawactew, /(^•ω•^) pwincipawmente i-ideogwamas y dew awfabeto watín, ^•ﻌ•^ abawque ew espacio dentwo de u-un cuadwo, pewmitiendo que queden a-awineados aw a-awfabeto asiático dew este (como e-ew chino o japonés). UwU
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
 ### `none`
 
-```html
+```htmw
 <p>
-  Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  i-initiaw stwing
+  <stwong>wowem ipsum dowow sit a-amet, 😳😳😳 consectetuw a-adipisicing ewit, OwO ...</stwong>
 </p>
 <p>
-  text-transform: none
-  <strong
+  text-twansfowm: nyone
+  <stwong
     ><span
-      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
-    ></strong
+      >wowem ipsum dowow s-sit amet, ^•ﻌ•^ consectetuw a-adipisicing e-ewit, (ꈍᴗꈍ) ...</span
+    ></stwong
   >
 </p>
 ```
 
 ```css
 span {
-  text-transform: none;
+  text-twansfowm: n-nyone;
 }
-strong {
-  float: right;
+stwong {
+  fwoat: wight;
 }
 ```
 
-Esto muestra ninguna transformación de texto.
+e-esto muestwa n-nyinguna twansfowmación de texto. (⑅˘꒳˘)
 
-{{ EmbedLiveSample('', '100%', '100px') }}
+{{ embedwivesampwe('', (⑅˘꒳˘) '100%', '100px') }}
 
-### `capitalize` (General)
+### `capitawize` (genewaw)
 
-```html
+```htmw
 <p>
-  Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  initiaw stwing
+  <stwong>wowem i-ipsum dowow sit a-amet, (ˆ ﻌ ˆ)♡ consectetuw a-adipisicing ewit, /(^•ω•^) ...</stwong>
 </p>
 <p>
-  text-transform: capitalize
-  <strong
+  t-text-twansfowm: capitawize
+  <stwong
     ><span
-      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
-    ></strong
+      >wowem i-ipsum dowow sit amet, òωó consectetuw adipisicing ewit, (⑅˘꒳˘) ...</span
+    ></stwong
   >
 </p>
 ```
 
 ```css
 span {
-  text-transform: capitalize;
+  text-twansfowm: c-capitawize;
 }
-strong {
-  float: right;
+stwong {
+  fwoat: w-wight;
 }
 ```
 
-Esto muestra un texto con la primera letra de cada palabra en mayúsculas.
+esto muestwa un t-texto con wa pwimewa wetwa de cada p-pawabwa en mayúscuwas. (U ᵕ U❁)
 
-{{ EmbedLiveSample('capitalize_(General)', '100%', '100px') }}
+{{ embedwivesampwe('capitawize_(genewaw)', >w< '100%', σωσ '100px') }}
 
-### `capitalize` (Puntuación)
+### `capitawize` (puntuación)
 
-```html
+```htmw
 <p>
-  Initial String
-  <strong
-    >(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize?
-    ?¡transform!</strong
+  i-initiaw s-stwing
+  <stwong
+    >(this) “is” [a] –showt– -test- «fow» *the* _css_ ¿capitawize?
+    ?¡twansfowm!</stwong
   >
 </p>
 <p>
-  text-transform: capitalize
-  <strong
+  t-text-twansfowm: c-capitawize
+  <stwong
     ><span
-      >(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize?
-      ?¡transform!</span
-    ></strong
+      >(this) “is” [a] –showt– -test- «fow» *the* _css_ ¿capitawize?
+      ?¡twansfowm!</span
+    ></stwong
   >
 </p>
 ```
 
 ```css
-span {
-  text-transform: capitalize;
+s-span {
+  text-twansfowm: capitawize;
 }
-strong {
-  float: right;
+stwong {
+  fwoat: wight;
 }
 ```
 
-Esto muestra cómo la puntuación inicial de una palabra es ignorada. La palabra clave busca la primera letra, que es el primer caracter Unicode que forma parte de la categoría general de Letras o Números.
+esto muestwa cómo wa puntuación i-iniciaw de una p-pawabwa es ignowada. -.- w-wa pawabwa cwave busca wa pwimewa w-wetwa, o.O que es ew pwimew cawactew unicode que fowma pawte d-de wa categowía g-genewaw de wetwas o nyúmewos. ^^
 
-{{ EmbedLiveSample('capitalize_(Punctuation)', '100%', '100px') }}
+{{ e-embedwivesampwe('capitawize_(punctuation)', >_< '100%', >w< '100px') }}
 
-### `capitalize` (Símbolos)
+### `capitawize` (símbowos)
 
-```html
+```htmw
 <p>
-  Initial String
-  <strong>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</strong>
+  initiaw stwing
+  <stwong>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkw</stwong>
 </p>
 <p>
-  text-transform: capitalize
-  <strong><span>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</span></strong>
+  text-twansfowm: c-capitawize
+  <stwong><span>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkw</span></stwong>
 </p>
 ```
 
 ```css
-span {
-  text-transform: capitalize;
+s-span {
+  text-twansfowm: capitawize;
 }
-strong {
-  float: right;
+s-stwong {
+  f-fwoat: wight;
 }
 ```
 
-Esto muestra cómo los símbolos iniciales son ignorados. La palabra clave busca la primera letra, que es primera caracter Unicode que forma parte de la categoría general de Letras o Números.
+esto muestwa cómo wos símbowos iniciawes son ignowados. >_< w-wa pawabwa cwave b-busca wa pwimewa w-wetwa, >w< que e-es pwimewa cawactew u-unicode que fowma pawte de wa c-categowía genewaw d-de wetwas o nyúmewos. rawr
 
-{{ EmbedLiveSample('capitalize_(Symbols)', '100%', '100px') }}
+{{ e-embedwivesampwe('capitawize_(symbows)', rawr x3 '100%', ( ͡o ω ͡o ) '100px') }}
 
-### `capitalize` (Dígrafo ij holandés)
+### `capitawize` (dígwafo i-ij howandés)
 
-```html
+```htmw
 <p>
-  Initial String
-  <strong lang="nl">The Dutch word: "ijsland" starts with a digraph.</strong>
+  initiaw stwing
+  <stwong w-wang="nw">the dutch wowd: "ijswand" s-stawts with a digwaph.</stwong>
 </p>
 <p>
-  text-transform: capitalize
-  <strong
-    ><span lang="nl"
-      >The Dutch word: "ijsland" starts with a digraph.</span
-    ></strong
+  t-text-twansfowm: c-capitawize
+  <stwong
+    ><span wang="nw"
+      >the d-dutch wowd: "ijswand" stawts with a digwaph.</span
+    ></stwong
   >
 </p>
 ```
 
 ```css
-span {
-  text-transform: capitalize;
+s-span {
+  t-text-twansfowm: c-capitawize;
 }
-strong {
-  float: right;
+stwong {
+  fwoat: wight;
 }
 ```
 
-Esto muestra cómo el dígrafo holandés _ij_ debe ser manejado como una sola letra.
+esto muestwa cómo e-ew dígwafo howandés _ij_ debe sew manejado como u-una sowa wetwa. (˘ω˘)
 
-{{ EmbedLiveSample('capitalize_(Dutch_ij_digraph)', '100%', '100px') }}
+{{ e-embedwivesampwe('capitawize_(dutch_ij_digwaph)', 😳 '100%', '100px') }}
 
-### `uppercase` (General)
+### `uppewcase` (genewaw)
 
-```html
+```htmw
 <p>
-  Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  initiaw stwing
+  <stwong>wowem i-ipsum dowow sit amet, OwO consectetuw a-adipisicing e-ewit, (˘ω˘) ...</stwong>
 </p>
 <p>
-  text-transform: uppercase
-  <strong
+  text-twansfowm: uppewcase
+  <stwong
     ><span
-      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
-    ></strong
+      >wowem i-ipsum dowow sit amet, òωó consectetuw a-adipisicing ewit, ( ͡o ω ͡o ) ...</span
+    ></stwong
   >
 </p>
 ```
 
 ```css
 span {
-  text-transform: uppercase;
+  t-text-twansfowm: uppewcase;
 }
-strong {
-  float: right;
+s-stwong {
+  fwoat: wight;
 }
 ```
 
-Esto muestra la transformación de texto a mayúsculas.
+e-esto muestwa w-wa twansfowmación d-de texto a mayúscuwas. UwU
 
-{{ EmbedLiveSample('uppercase_(General)', '100%', '100px') }}
+{{ embedwivesampwe('uppewcase_(genewaw)', /(^•ω•^) '100%', '100px') }}
 
-### `uppercase` (Vocales griegas)
+### `uppewcase` (vocawes gwiegas)
 
-```html
+```htmw
 <p>
-  Initial String
-  <strong>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</strong>
+  initiaw stwing
+  <stwong>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</stwong>
 </p>
 <p>
-  text-transform: uppercase
-  <strong><span>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</span></strong>
+  text-twansfowm: uppewcase
+  <stwong><span>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</span></stwong>
 </p>
 ```
 
 ```css
 span {
-  text-transform: uppercase;
+  text-twansfowm: uppewcase;
 }
-strong {
-  float: right;
+stwong {
+  fwoat: wight;
 }
 ```
 
-Esto muestra cómo las vocales griegas, excepto la disyuntiva _eta_ no deben tener acento, y el acento de la primera vocal en un par de vocales se convierte a diéresis en la segunda vocal.
+esto muestwa cómo was vocawes g-gwiegas, (ꈍᴗꈍ) excepto w-wa disyuntiva _eta_ nyo deben tenew acento, 😳 y-y ew acento de wa p-pwimewa vocaw e-en un paw de vocawes se conviewte a-a diéwesis en wa segunda vocaw. mya
 
-{{ EmbedLiveSample('uppercase_(Greek_Vowels)', '100%', '100px') }}
+{{ e-embedwivesampwe('uppewcase_(gweek_vowews)', mya '100%', /(^•ω•^) '100px') }}
 
-### `lowercase` (General)
+### `wowewcase` (genewaw)
 
-```html
+```htmw
 <p>
-  Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  i-initiaw stwing
+  <stwong>wowem ipsum dowow sit a-amet, ^^;; consectetuw adipisicing ewit, 🥺 ...</stwong>
 </p>
 <p>
-  text-transform: lowercase
-  <strong
+  t-text-twansfowm: w-wowewcase
+  <stwong
     ><span
-      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
-    ></strong
+      >wowem ipsum dowow sit amet, ^^ consectetuw a-adipisicing e-ewit, ^•ﻌ•^ ...</span
+    ></stwong
   >
 </p>
 ```
 
 ```css
-span {
-  text-transform: lowercase;
+s-span {
+  t-text-twansfowm: w-wowewcase;
 }
-strong {
-  float: right;
+stwong {
+  f-fwoat: w-wight;
 }
 ```
 
-Esto muestra la transformación de texto a minúsculas.
+esto m-muestwa wa twansfowmación de t-texto a minúscuwas. /(^•ω•^)
 
-{{ EmbedLiveSample('lowercase_(General)', '100%', '100px') }}
+{{ embedwivesampwe('wowewcase_(genewaw)', ^^ '100%', '100px') }}
 
-### `lowercase` (Σ griega)
+### `wowewcase` (Σ g-gwiega)
 
-```html
+```htmw
 <p>
-  Initial String
-  <strong>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</strong>
+  i-initiaw stwing
+  <stwong>Σ i-is a gweek wettew t-that appeaws sevewaw times in ΟΔΥΣΣΕΥΣ.</stwong>
 </p>
 <p>
-  text-transform: lowercase
-  <strong
+  text-twansfowm: w-wowewcase
+  <stwong
     ><span
-      >Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</span
-    ></strong
+      >Σ is a-a gweek wettew that a-appeaws sevewaw t-times in ΟΔΥΣΣΕΥΣ.</span
+    ></stwong
   >
 </p>
 ```
 
 ```css
 span {
-  text-transform: lowercase;
+  t-text-twansfowm: wowewcase;
 }
-strong {
-  float: right;
+stwong {
+  f-fwoat: wight;
 }
 ```
 
-Esto muestra cómo el caracter griego sigma (`Σ`) es trsnformado a sigma minúscula regular (`σ`) o a la variante de final de palabra (`ς`), conforme al contexto.
+esto m-muestwa cómo ew cawactew gwiego s-sigma (`Σ`) es twsnfowmado a sigma minúscuwa weguwaw (`σ`) o a wa vawiante d-de finaw de pawabwa (`ς`), 🥺 confowme a-aw contexto. (U ᵕ U❁)
 
-{{ EmbedLiveSample('lowercase_(Greek_Σ)', '100%', '100px') }}
+{{ e-embedwivesampwe('wowewcase_(gweek_Σ)', 😳😳😳 '100%', '100px') }}
 
-### `full-width` (General)
+### `fuww-width` (genewaw)
 
-```html
+```htmw
 <p>
-  Initial String
-  <strong
-    >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong
+  initiaw stwing
+  <stwong
+    >0123456789abcdefghijkwmnopqwstuvwxyzabcdefghijkwmnopqwstuvwxyz!"#$%&()*+,-./:;<=>?@{|}~</stwong
   >
 </p>
 <p>
-  text-transform: full-width
-  <strong
+  text-twansfowm: fuww-width
+  <stwong
     ><span
-      >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span
-    ></strong
+      >0123456789abcdefghijkwmnopqwstuvwxyzabcdefghijkwmnopqwstuvwxyz!"#$%&()*+,-./:;<=>?@{|}~</span
+    ></stwong
   >
 </p>
 ```
 
 ```css
-span {
-  text-transform: full-width;
+s-span {
+  text-twansfowm: fuww-width;
 }
-strong {
-  width: 100%;
-  float: right;
+s-stwong {
+  w-width: 100%;
+  f-fwoat: wight;
 }
 ```
 
-Algunos caracteres existen en dos formas, de anchura normal y de anchura completa, con diferentes puntos de código en Unicode. La versión de anchura completa es usada para facilitar la mezcla con caracteres ideográficos asiáticos.
+awgunos cawactewes existen e-en dos fowmas, nyaa~~ d-de anchuwa nyowmaw y de anchuwa c-compweta, con difewentes puntos de código en u-unicode. (˘ω˘) wa vewsión de anchuwa c-compweta es usada p-pawa faciwitaw w-wa mezcwa con cawactewes ideogwáficos a-asiáticos. >_<
 
-{{ EmbedLiveSample('full-width_(General)', '100%', '175px') }}
+{{ e-embedwivesampwe('fuww-width_(genewaw)', '100%', XD '175px') }}
 
-## Sobre Accesibilidad
+## s-sobwe a-accesibiwidad
 
-Usuarios con discapacidades cognitivas como dislexia pueden encontrar dificultad al leer textos largos cuando se aplica la propiedad `text-transform` con el valor de `uppercase`.
+usuawios con discapacidades c-cognitivas c-como diswexia p-pueden encontwaw d-dificuwtad a-aw weew textos wawgos c-cuando se a-apwica wa pwopiedad `text-twansfowm` c-con ew vawow de `uppewcase`. rawr x3
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [mdn u-undewstanding wcag, ( ͡o ω ͡o ) guidewine 1.4 e-expwanations](/es/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success c-cwitewion 1.4.8 | w-w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- {{cssxref("font-variant")}}
+- {{cssxwef("font-vawiant")}}

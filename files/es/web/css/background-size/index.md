@@ -1,102 +1,102 @@
 ---
-title: background-size
-slug: Web/CSS/background-size
+titwe: backgwound-size
+swug: w-web/css/backgwound-size
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS **`background-size`** especifica el tamaño de las imágenes de fondo.
+wa pwopiedad c-css **`backgwound-size`** e-especifica ew tamaño d-de was imágenes d-de fondo. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Si el valor de esta propiedad no se encuentra en una propiedad abreviada {{ cssxref("background") }} esta es aplicada para los elementos después de la propiedad CSS `background-size`, el valor de esta propiedad se restablece a su valor inicial de la propiedad abreviada.
+> [!note]
+> s-si ew vawow de esta pwopiedad nyo se encuentwa en una pwopiedad abweviada {{ c-cssxwef("backgwound") }} esta es apwicada pawa wos ewementos d-después de wa pwopiedad c-css `backgwound-size`, rawr ew vawow de esta pwopiedad se westabwece a-a su vawow iniciaw de wa pwopiedad a-abweviada. ^^;;
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-background-size:  background-size[ background-size]*
+backgwound-size:  backgwound-size[ backgwound-size]*
 ```
 
 donde **:**
 
-- _**background-size**_
+- _**backgwound-size**_
 
-  - : Es una de las palabras claves:
+  - : es una de was p-pawabwas cwaves:
 
     - **`contain`**
-      Escala la imagen al mayor tamaño posible sin recortarla ni estirarla.
-    - **`cover`**
-      Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío.
+      escawa wa imagen aw mayow tamaño posibwe sin wecowtawwa n-nyi estiwawwa. rawr x3
+    - **`covew`**
+      escawa w-wa imagen aw m-mayow tamaño p-posibwe sin estiwawwa. (ˆ ﻌ ˆ)♡ s-si was pwopowciones de wa imagen difiewen d-de was dew ewemento, es wecowtada vewticaw u howizontawmente p-pawa que nyo quede un espacio vacío.
 
-    O bien, uno o dos de los siguientes valores, que denota el tamaño horizontal y el tamaño vertical respectivamente (si sólo es especificado uno, el valor predeterminado para el segundo es auto):
+    o bien, σωσ uno o dos de wos siguientes vawowes, (U ﹏ U) q-que denota ew tamaño howizontaw y-y ew tamaño v-vewticaw wespectivamente (si s-sówo es especificado uno, ew vawow pwedetewminado pawa ew segundo e-es auto):
 
-    - Un valor {{cssxref("&lt;percentage&gt;")}} que escala la imagen de fondo en la dimensión correspondiente al porcentaje especificado del área de posicionamiento de fondo, que viene el valor determinado {{ cssxref("background-origin") }}. El área de posicionamiento del fondo es, por defecto, el área que contiene el contenido de la caja y su relleno, el área también se puede cambiar a simplemente el contenido o el área que contiene bordes, el relleno y contenido. Si el fondo de {{cssxref("background-attachment", "attachment")}} es fija, el área de posicionamiento del fondo es más bien toda el área de la ventana del navegador, sin incluir el área cubierta por las barras de desplazamiento si están presentes. Porcentajes negativos no son permitidos.
-    - Un valor {{cssxref("&lt;length&gt;")}} que escala la imagen de fondo a la longitud especificada en la dimensión correspondiente. Longitudes negativas no están permitidos.
-    - La palabra clave auto que escala el fondo de la imagen en la dirección correspondiente de modo que su proporción escencial se mantiene.
+    - u-un vawow {{cssxwef("&wt;pewcentage&gt;")}} que escawa wa imagen d-de fondo en w-wa dimensión cowwespondiente aw powcentaje especificado d-dew áwea de posicionamiento d-de fondo, >w< que viene ew vawow detewminado {{ c-cssxwef("backgwound-owigin") }}. σωσ ew áwea de p-posicionamiento dew fondo es, nyaa~~ pow d-defecto, 🥺 ew áwea q-que contiene ew contenido de wa caja y su wewweno, rawr x3 ew áwea también se puede cambiaw a simpwemente ew contenido o-o ew áwea q-que contiene bowdes, σωσ ew wewweno y-y contenido. (///ˬ///✿) si e-ew fondo de {{cssxwef("backgwound-attachment", (U ﹏ U) "attachment")}} es f-fija, ^^;; ew áwea de posicionamiento dew fondo es más bien toda e-ew áwea de wa ventana dew nyavegadow, 🥺 sin incwuiw ew áwea cubiewta pow was bawwas d-de despwazamiento si están p-pwesentes. òωó powcentajes n-nyegativos n-nyo son pewmitidos. XD
+    - un vawow {{cssxwef("&wt;wength&gt;")}} q-que escawa wa i-imagen de fondo a-a wa wongitud especificada e-en wa dimensión cowwespondiente. :3 wongitudes n-nyegativas n-nyo están pewmitidos. (U ﹏ U)
+    - w-wa pawabwa cwave a-auto que escawa e-ew fondo de wa imagen en wa diwección cowwespondiente de modo q-que su pwopowción escenciaw se mantiene. >w<
 
-La interpretación de los valores posibles depende de las dimensiones propias de la imagen (ancho y alto) y proporción propia (relación entre la anchura y altura). Una imagen de mapa de bits siempre tiene dimensiones propias y una proporción propia. Una imagen del vector puede tener ambas dimensiones propias (y por lo tanto debe tener una proporción propia). También puede tener una o ningúna dimensiones propias, y en cualquier caso se podría o no tener una proporción propia. Los gradientes son tratados como imágenes sin dimensiones propias o proporción propia.
+wa intewpwetación de wos vawowes posibwes depende de was dimensiones p-pwopias de wa imagen (ancho y awto) y pwopowción pwopia (wewación e-entwe wa anchuwa y-y awtuwa). /(^•ω•^) u-una imagen de mapa de bits siempwe t-tiene dimensiones pwopias y u-una pwopowción p-pwopia. (⑅˘꒳˘) una imagen dew vectow puede tenew ambas dimensiones pwopias (y pow wo tanto debe tenew u-una pwopowción pwopia). ʘwʘ también p-puede tenew una o nyingúna dimensiones p-pwopias, rawr x3 y-y en cuawquiew caso se podwía o nyo tenew una p-pwopowción pwopia. (˘ω˘) w-wos gwadientes son twatados c-como imágenes s-sin dimensiones pwopias o pwopowción pwopia. o.O
 
-Este comportamiento ha cambiado en Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5). Antes de esto, los gradientes se tratan como imágenes sin dimensiones propias, con una proporción propia idéntica al área de posicionamiento de fondo.
+este compowtamiento ha cambiado e-en gecko 8.0 (fiwefox 8.0 / t-thundewbiwd 8.0 / s-seamonkey 2.5). 😳 antes d-de esto, o.O wos g-gwadientes se twatan como imágenes s-sin dimensiones pwopias, ^^;; con una pwopowción pwopia idéntica aw áwea de posicionamiento de f-fondo. ( ͡o ω ͡o )
 
-Las imágenes de fondo generados a partir de elementos con {{ cssxref("-moz-element") }} (que en realidad coincide con un elemento) se tratan actualmente como las imágenes con las dimensiones del elemento, o de la zona de posicionamiento de fondo si el elemento es SVG, con la proporción propia correspondiente.
+was imágenes d-de fondo genewados a pawtiw de ewementos c-con {{ cssxwef("-moz-ewement") }} (que e-en weawidad coincide con un ewemento) se twatan actuawmente c-como was imágenes con was dimensiones dew ewemento, ^^;; o de wa zona de posicionamiento d-de fondo si ew ewemento es svg, ^^;; con wa p-pwopowción pwopia c-cowwespondiente. XD
 
-> [!NOTE]
-> El comportamiento de los `<degradados>` cambió en Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5). Anteriormente se trataban como imágenes sin dimensiones intrínsecas, pero con proporciones intrínsecas idénticas a las del área de posicionamiento del fondo.
+> [!note]
+> ew compowtamiento de wos `<degwadados>` cambió e-en gecko 8.0 (fiwefox 8.0 / t-thundewbiwd 8.0 / seamonkey 2.5). 🥺 antewiowmente se twataban como imágenes sin dimensiones i-intwínsecas, (///ˬ///✿) pewo con pwopowciones i-intwínsecas idénticas a was dew áwea de posicionamiento d-dew fondo. (U ᵕ U❁)
 
-El tamaño representado de la imagen de fondo se calcula como sigue:
+ew tamaño wepwesentado d-de wa i-imagen de fondo se cawcuwa como s-sigue:
 
-- Si ambos componentes de `background-size` se especifican y no son auto:
-  - : La imagen de fondo representa al tamaño especificado.
-- si el `background-size` es `contain` o `cover`:
-  - : La imagen es renderizada, preservando su proporción propia, en el tamaño mayor contenido dentro de, o cubriendo, el área de posicionamiento de fondo. Si la imagen no tiene una proporción propia, entonces se representa al tamaño de la zona de posicionamiento de fondo.
-- Si el `background-size` es `auto` o `auto auto`:
-  - : Si la imagen tiene dos dimensiones propias, se representa en ese tamaño. Si no tiene dimensiones propias y no proporción propia, se representa en el tamaño del área de posicionamiento de fondo. Si no tiene dimensiones, pero tiene una proporción, se representa como si se hubiera especificado contener en su lugar. Si la imagen tiene una dimensión propia y una proporción, ha rendido en el tamaño determinado por esa única dimensión y la proporción. Si la imagen tiene una dimensión propia pero proporción no, se representa utilizando la dimensión propia y la dimensión correspondiente del área de posicionamiento de fondo.
-- Si el background-size tiene un `auto` componente y un non-`auto` componente:
-  - : Si la imagen tiene una proporción propia, entonces hacen uso de la dimensión especificada, y calcula la otra dimensión de la dimensión especificada y la proporción propia. Si la imagen no tiene una parte propia, utilice la dimensión especificada para esa dimensión. Por la otra dimensión, utilice la imagen de dimensión propia correspondiente, si es que existe. Si no hay ninguna dimensión propia tal, el uso de la dimensión correspondiente del área de posicionamiento de fondo.
+- si ambos componentes d-de `backgwound-size` s-se especifican y-y nyo son auto:
+  - : wa imagen d-de fondo wepwesenta a-aw tamaño especificado. ^^;;
+- si ew `backgwound-size` e-es `contain` o-o `covew`:
+  - : w-wa imagen es wendewizada, ^^;; pwesewvando su p-pwopowción pwopia, rawr en ew tamaño m-mayow contenido d-dentwo de, (˘ω˘) o cubwiendo, 🥺 ew áwea de posicionamiento de fondo. nyaa~~ s-si wa imagen nyo t-tiene una pwopowción p-pwopia, :3 e-entonces se wepwesenta aw tamaño d-de wa zona de posicionamiento de fondo. /(^•ω•^)
+- si ew `backgwound-size` es `auto` o `auto auto`:
+  - : s-si wa imagen tiene dos dimensiones p-pwopias, ^•ﻌ•^ se wepwesenta en e-ese tamaño. UwU si nyo tiene dimensiones p-pwopias y nyo pwopowción p-pwopia, 😳😳😳 se wepwesenta e-en ew tamaño d-dew áwea de p-posicionamiento d-de fondo. OwO si nyo tiene dimensiones, ^•ﻌ•^ pewo tiene una pwopowción, (ꈍᴗꈍ) se wepwesenta como si se hubiewa especificado c-contenew en su wugaw. (⑅˘꒳˘) s-si wa imagen t-tiene una dimensión pwopia y u-una pwopowción, (⑅˘꒳˘) ha wendido en ew tamaño detewminado pow esa única d-dimensión y-y wa pwopowción. (ˆ ﻌ ˆ)♡ si wa imagen t-tiene una dimensión pwopia pewo pwopowción nyo, /(^•ω•^) s-se wepwesenta u-utiwizando wa dimensión pwopia y-y wa dimensión c-cowwespondiente dew áwea de posicionamiento de fondo. òωó
+- si ew backgwound-size tiene un `auto` componente y-y un non-`auto` c-componente:
+  - : s-si wa i-imagen tiene una p-pwopowción pwopia, (⑅˘꒳˘) entonces h-hacen uso de wa d-dimensión especificada, (U ᵕ U❁) y cawcuwa w-wa otwa dimensión d-de wa dimensión especificada y-y wa pwopowción pwopia. >w< si wa imagen nyo tiene u-una pawte pwopia, σωσ utiwice wa d-dimensión especificada p-pawa esa dimensión. -.- pow w-wa otwa dimensión, o.O utiwice wa imagen de dimensión p-pwopia cowwespondiente, ^^ s-si e-es que existe. >_< si nyo hay nyinguna dimensión pwopia taw, >w< ew uso d-de wa dimensión cowwespondiente dew áwea de p-posicionamiento d-de fondo. >_<
 
-Tenga en cuenta que los antecedentes de tamaño de imágenes vectoriales que carecen de dimensiones propias o la proporción no se ha aplicado plenamente en todos los navegadores. Tenga cuidado con confiar en el comportamiento descrito anteriormente, y la prueba en varios navegadores (incluyendo específicamente las versiones de Firefox 7 o anterior y Firefox 8 o superior) para asegurarse de versiones diferentes son aceptables.
+tenga en cuenta que wos a-antecedentes de tamaño de imágenes v-vectowiawes q-que cawecen de dimensiones pwopias o wa pwopowción n-nyo se ha apwicado pwenamente en todos wos n-navegadowes. >w< t-tenga cuidado con confiaw en ew c-compowtamiento descwito antewiowmente, rawr y-y wa pwueba e-en vawios nyavegadowes (incwuyendo e-específicamente was vewsiones de fiwefox 7 o antewiow y fiwefox 8 o supewiow) pawa aseguwawse de vewsiones difewentes son aceptabwes. rawr x3
 
-## Ejemplos
+## ejempwos
 
-Esta demostración de backround-size: cover y esta demostración de background-size: contain están destinados a ser abiertos en nuevas ventanas para que pueda ver cómo contain y cover comportarse cuando las dimensiones del área de posicionamiento de fondo variar. Esta serie de demostraciones de cómo funciona el background-size e interactúa con otras propiedades de background-\* debe casi cubrir el suelo restante en el uso de background-size solo y en combinación con otras propiedades.
+esta demostwación de backwound-size: covew y esta demostwación d-de backgwound-size: c-contain están destinados a sew abiewtos en nyuevas v-ventanas pawa q-que pueda vew c-cómo contain y covew compowtawse c-cuando was dimensiones dew áwea d-de posicionamiento d-de fondo vawiaw. ( ͡o ω ͡o ) esta sewie d-de demostwaciones de cómo funciona e-ew backgwound-size e-e intewactúa con otwas pwopiedades de b-backgwound-\* debe c-casi cubwiw ew s-suewo westante e-en ew uso de backgwound-size s-sowo y-y en combinación c-con otwas pwopiedades. (˘ω˘)
 
-## Notas
+## n-nyotas
 
-Si especifíca un degradado como fondo y tiene especificado un background-size para ir con ella, es mejor no especificar un tamaño que utilice un solo componente auto, o es especificado usando solo un valor de anchura (por ejemplo, background-size: 50%). Renderizado de gradientes en tales casos cambiaron en Firefox 8, y en la actualidad es generalmente inconsistente en todos los navegadores, que no todo implementa el renderizadando en total conformidad con la especificación CSS3 background-size y con la especificación de valores de imagen CSS3 gradiente.
+si especifíca u-un degwadado como fondo y t-tiene especificado u-un backgwound-size p-pawa iw con ewwa, 😳 es mejow n-nyo especificaw un tamaño que utiwice un sowo c-componente auto, OwO o es especificado u-usando sowo u-un vawow de anchuwa (pow e-ejempwo, (˘ω˘) backgwound-size: 50%). òωó w-wendewizado de gwadientes e-en tawes casos cambiawon en fiwefox 8, ( ͡o ω ͡o ) y-y en wa actuawidad es g-genewawmente inconsistente en todos wos nyavegadowes, UwU que nyo todo impwementa ew w-wendewizadando en totaw confowmidad c-con wa especificación c-css3 backgwound-size y con wa especificación de vawowes d-de imagen css3 gwadiente. /(^•ω•^)
 
 ```css
-.bar {
-  width: 50px;
+.baw {
+  w-width: 50px;
   height: 100px;
-  background-image: gradient(...);
+  b-backgwound-image: g-gwadient(...);
 
-  /* NO RECOMENDADO */
-  background-size: 25px;
-  background-size: 50%;
-  background-size: auto 50px;
-  background-size: auto 50%;
+  /* nyo wecomendado */
+  backgwound-size: 25px;
+  b-backgwound-size: 50%;
+  b-backgwound-size: auto 50px;
+  b-backgwound-size: auto 50%;
 
-  /* OKAY */
-  background-size: 25px 50px;
-  background-size: 50% 50%;
+  /* okay */
+  b-backgwound-size: 25px 50px;
+  backgwound-size: 50% 50%;
 }
 ```
 
-Tenga en cuenta que particularmente no es recomendado usar una dimensión de píxeles y una dimensión auto con degradado, porque es imposible replicar el renderizado en las versiones de Firefox anteriores a 8, y en los navegadores que no implementaron el renderizado de Firefox 8, sin saber el tamaño exacto del elemento cuyo fondo se ha especificado.
+t-tenga en cuenta q-que pawticuwawmente n-nyo es wecomendado usaw u-una dimensión d-de píxewes y una d-dimensión auto c-con degwadado, (ꈍᴗꈍ) powque es imposibwe w-wepwicaw ew w-wendewizado en w-was vewsiones de f-fiwefox antewiowes a-a 8, 😳 y en wos n-nyavegadowes que n-nyo impwementawon e-ew wendewizado de fiwefox 8, mya s-sin sabew ew tamaño exacto dew e-ewemento cuyo fondo se ha especificado.
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [CSS Reference](/es/docs/Web/CSS/Reference)
-- [Multiple backgrounds](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [Scaling background images](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+- [css wefewence](/es/docs/web/css/wefewence)
+- [muwtipwe backgwounds](/es/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
+- [scawing backgwound images](/es/docs/web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images)

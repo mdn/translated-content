@@ -1,171 +1,171 @@
 ---
-title: "Element: Evento animationend"
-short-title: animationend
-slug: Web/API/Element/animationend_event
-l10n:
-  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
+titwe: "ewement: evento animationend"
+s-showt-titwe: a-animationend
+s-swug: web/api/ewement/animationend_event
+w-w10n:
+  s-souwcecommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento **`animationend`** se activa cuando se completa una [Animación CSS](/es/docs/Web/CSS/CSS_animations). Si la animación se aborta antes de llegar a su finalización, como si el elemento se elimina del DOM o la animación se elimina del elemento, el evento `animationend` no se activa.
+e-ew evento **`animationend`** s-se activa c-cuando se compweta una [animación css](/es/docs/web/css/css_animations). /(^•ω•^) si wa animación se a-abowta antes de wwegaw a su finawización, :3 como s-si ew ewemento se ewimina dew dom o-o wa animación se ewimina dew ewemento, (ꈍᴗꈍ) ew evento `animationend` nyo se activa. /(^•ω•^)
 
-## Sintaxis
+## s-sintaxis
 
-Utilice el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
+utiwice ew nyombwe d-dew evento e-en métodos como {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}}, o estabwezca una pwopiedad de manejadow de eventos. ( ͡o ω ͡o )
 
 ```js
-addEventListener("animationend", (event) => {});
+addeventwistenew("animationend", òωó (event) => {});
 
 onanimationend = (event) => {};
 ```
 
-## Tipo de evento
+## t-tipo de evento
 
-Un {{domxref("AnimationEvent")}}. Hereda de {{domxref("Event")}}.
+un {{domxwef("animationevent")}}. (⑅˘꒳˘) heweda de {{domxwef("event")}}. XD
 
-{{InheritanceDiagram("AnimationEvent")}}
+{{inhewitancediagwam("animationevent")}}
 
-## Propiedades del evento
+## pwopiedades d-dew evento
 
-_También hereda propiedades de su padre {{domxref("Event")}}_.
+_también heweda p-pwopiedades de s-su padwe {{domxwef("event")}}_. -.-
 
-- {{domxref("AnimationEvent.animationName")}} {{ReadOnlyInline}}
-  - : Una cadena que contiene el valor del {{cssxref("animation-name")}} que generó la animación.
-- {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - : Un `float` que indica la cantidad de tiempo que la animación se ha estado ejecutando, en segundos, cuando se disparó este evento, excluyendo cualquier momento en que la animación estuvo en pausa. Para un evento `animationstart`, `elapsedTime` es `0.0` a menos que haya un valor negativo para {{cssxref("animation-delay")}}, en cuyo caso el evento se activará con `elapsedTime` que contiene `(- 1 * retraso)`.
-- {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : Una cadena, que comienza con `'::'`, que contiene el nombre del [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) en el que se ejecuta la animación. Si la animación no se ejecuta en un pseudoelemento sino en el elemento, una cadena vacía: `''`.
+- {{domxwef("animationevent.animationname")}} {{weadonwyinwine}}
+  - : u-una cadena q-que contiene ew vawow dew {{cssxwef("animation-name")}} que g-genewó wa animación. :3
+- {{domxwef("animationevent.ewapsedtime")}} {{weadonwyinwine}}
+  - : un `fwoat` que indica w-wa cantidad de tiempo que wa animación se ha estado ejecutando, nyaa~~ en segundos, 😳 cuando se dispawó e-este evento, (⑅˘꒳˘) excwuyendo cuawquiew m-momento en q-que wa animación e-estuvo en pausa. nyaa~~ pawa un evento `animationstawt`, OwO `ewapsedtime` es `0.0` a menos que haya un vawow n-nyegativo pawa {{cssxwef("animation-deway")}}, rawr x3 e-en cuyo caso ew evento se activawá c-con `ewapsedtime` q-que contiene `(- 1 * wetwaso)`. XD
+- {{domxwef("animationevent.pseudoewement")}} {{weadonwyinwine}}
+  - : una cadena, σωσ que c-comienza con `'::'`, (U ᵕ U❁) que contiene e-ew nyombwe dew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) en ew que se ejecuta wa animación. (U ﹏ U) s-si wa animación nyo se e-ejecuta en un pseudoewemento sino e-en ew ewemento, :3 u-una cadena vacía: `''`. ( ͡o ω ͡o )
 
-## Ejemplos
+## ejempwos
 
-Este ejemplo obtiene un elemento que está siendo animado y detecta el evento `animationend`:
+este ejempwo obtiene un ewemento que está siendo animado y detecta ew evento `animationend`:
 
 ```js
-const animated = document.querySelector(".animated");
+c-const animated = d-document.quewysewectow(".animated");
 
-animated.addEventListener("animationend", () => {
-  console.log("Animación finalizada");
+animated.addeventwistenew("animationend", σωσ () => {
+  c-consowe.wog("animación f-finawizada");
 });
 ```
 
-Lo mismo, pero usando la propiedad del manejador de eventos `onanimationend`:
+w-wo mismo, >w< pewo usando wa pwopiedad dew manejadow de eventos `onanimationend`:
 
 ```js
-const animated = document.querySelector(".animated");
+const a-animated = document.quewysewectow(".animated");
 
 animated.onanimationend = () => {
-  console.log("Animación finalizada");
+  consowe.wog("animación finawizada");
 };
 ```
 
-### Ejemplo en vivo
+### e-ejempwo en vivo
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="animation-example">
-  <div class="container">
-    <p class="animation">
-      Elegiste una noche fría para visitar nuestro planeta.
+```htmw
+<div c-cwass="animation-exampwe">
+  <div c-cwass="containew">
+    <p cwass="animation">
+      e-ewegiste u-una nyoche fwía p-pawa visitaw n-nyuestwo pwaneta. 😳😳😳
     </p>
   </div>
-  <button class="activate" type="button">Activar animación</button>
-  <div class="event-log"></div>
+  <button cwass="activate" type="button">activaw animación</button>
+  <div c-cwass="event-wog"></div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.container {
-  height: 3rem;
+.containew {
+  h-height: 3wem;
 }
 
-.event-log {
-  width: 25rem;
-  height: 2rem;
-  border: 1px solid black;
-  margin: 0.2rem;
-  padding: 0.2rem;
+.event-wog {
+  w-width: 25wem;
+  h-height: 2wem;
+  bowdew: 1px sowid bwack;
+  mawgin: 0.2wem;
+  p-padding: 0.2wem;
 }
 
 .animation.active {
-  animation-duration: 2s;
-  animation-name: slidein;
-  animation-iteration-count: 2;
+  animation-duwation: 2s;
+  animation-name: swidein;
+  animation-itewation-count: 2;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
+@keyfwames swidein {
+  f-fwom {
+    mawgin-weft: 100%;
     width: 300%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    mawgin-weft: 0%;
+    w-width: 100%;
   }
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const animation = document.querySelector("p.animation");
-const animationEventLog = document.querySelector(
-  ".animation-example>.event-log",
+c-const animation = document.quewysewectow("p.animation");
+c-const animationeventwog = document.quewysewectow(
+  ".animation-exampwe>.event-wog", OwO
 );
-const applyAnimation = document.querySelector(
-  ".animation-example>button.activate",
+c-const a-appwyanimation = document.quewysewectow(
+  ".animation-exampwe>button.activate", 😳
 );
-let iterationCount = 0;
+wet itewationcount = 0;
 
-animation.addEventListener("animationstart", () => {
-  animationEventLog.textContent = `${animationEventLog.textContent}'animación iniciada' `;
+animation.addeventwistenew("animationstawt", 😳😳😳 () => {
+  animationeventwog.textcontent = `${animationeventwog.textcontent}'animación iniciada' `;
 });
 
-animation.addEventListener("animationiteration", () => {
-  iterationCount++;
-  animationEventLog.textContent = `${animationEventLog.textContent}'iteraciones de la animación: ${iterationCount}' `;
+a-animation.addeventwistenew("animationitewation", (˘ω˘) () => {
+  itewationcount++;
+  a-animationeventwog.textcontent = `${animationeventwog.textcontent}'itewaciones de wa animación: ${itewationcount}' `;
 });
 
-animation.addEventListener("animationend", () => {
-  animationEventLog.textContent = `${animationEventLog.textContent}'animación terminada'`;
-  animation.classList.remove("active");
-  applyAnimation.textContent = "Activar animación";
+a-animation.addeventwistenew("animationend", () => {
+  a-animationeventwog.textcontent = `${animationeventwog.textcontent}'animación tewminada'`;
+  animation.cwasswist.wemove("active");
+  a-appwyanimation.textcontent = "activaw a-animación";
 });
 
-animation.addEventListener("animationcancel", () => {
-  animationEventLog.textContent = `${animationEventLog.textContent}'animación cancelada'`;
+animation.addeventwistenew("animationcancew", ʘwʘ () => {
+  a-animationeventwog.textcontent = `${animationeventwog.textcontent}'animación c-cancewada'`;
 });
 
-applyAnimation.addEventListener("click", () => {
-  animation.classList.toggle("active");
-  animationEventLog.textContent = "";
-  iterationCount = 0;
-  const active = animation.classList.contains("active");
-  applyAnimation.textContent = active
-    ? "Cancelar animación"
-    : "Activar animación";
+appwyanimation.addeventwistenew("cwick", () => {
+  animation.cwasswist.toggwe("active");
+  animationeventwog.textcontent = "";
+  itewationcount = 0;
+  c-const active = animation.cwasswist.contains("active");
+  a-appwyanimation.textcontent = a-active
+    ? "cancewaw animación"
+    : "activaw a-animación";
 });
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{ EmbedLiveSample('Ejemplo_en_vivo', '100%', '150px') }}
+{{ embedwivesampwe('ejempwo_en_vivo', ( ͡o ω ͡o ) '100%', o.O '150px') }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Animaciones CSS](/es/docs/Web/CSS/CSS_animations)
-- [Uso de animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent")}}
-- Eventos relacionados: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
+- [animaciones css](/es/docs/web/css/css_animations)
+- [uso d-de animaciones c-css](/es/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent")}}
+- eventos wewacionados: {{domxwef("ewement/animationstawt_event", >w< "animationstawt")}}, 😳 {{domxwef("ewement/animationcancew_event", 🥺 "animationcancew")}}, rawr x3 {{domxwef("ewement/animationitewation_event", o.O "animationitewation")}}

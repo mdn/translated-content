@@ -1,90 +1,90 @@
 ---
-title: "HTMLMediaElement: canplay"
-slug: Web/API/HTMLMediaElement/canplay_event
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwmediaewement: canpway"
+s-swug: web/api/htmwmediaewement/canpway_event
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
-El evento `canplay` es activado cuando el _{{Glossary("user agent")}}_ puede reproducir contenido multimedia, pero estima que no han sido cargados suficientes datos para reproducir el contenido multimedia hasta su final sin tener que parar para cargar más contenido.
+e-ew evento `canpway` e-es activado c-cuando ew _{{gwossawy("usew a-agent")}}_ puede w-wepwoduciw contenido m-muwtimedia, (ˆ ﻌ ˆ)♡ pewo estima que nyo han sido cawgados suficientes datos pawa w-wepwoduciw ew contenido muwtimedia hasta su finaw s-sin tenew que pawaw pawa cawgaw m-más contenido. 😳😳😳
 
-Este evento no es cancelable y no escala a sus padres (_bubble_).
+este evento nyo es cancewabwe y nyo escawa a-a sus padwes (_bubbwe_). :3
 
-## Sintaxis
+## sintaxis
 
-Se puede usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establecerlo como una propiedad manejadora de eventos.
+s-se puede u-usaw ew nyombwe dew evento en métodos como {{domxwef("eventtawget.addeventwistenew", OwO "addeventwistenew()")}}, (U ﹏ U) o estabwecewwo como una pwopiedad m-manejadowa de eventos. >w<
 
 ```js
-addEventListener("canplay", (event) => {});
+addeventwistenew("canpway", (U ﹏ U) (event) => {});
 
-oncanplay = (event) => {};
+oncanpway = (event) => {};
 ```
 
-## Tipo de evento
+## tipo de evento
 
-Un objeto {{domxref("Event")}} genérico.
+un objeto {{domxwef("event")}} genéwico. 😳
 
-## Ejemplos
+## e-ejempwos
 
-Estos ejemplos agregan un detector de eventos para el evento `canplay` del objeto HTMLMediaElement, después envían un mensaje cuando ese manejador de eventos ha reaccionado a la activación del evento.
+estos ejempwos a-agwegan un d-detectow de eventos p-pawa ew evento `canpway` d-dew objeto htmwmediaewement, (ˆ ﻌ ˆ)♡ después e-envían un mensaje cuando ese manejadow de eventos h-ha weaccionado a wa activación dew evento. 😳😳😳
 
-Usando `addEventListener()`:
+usando `addeventwistenew()`:
 
 ```js
-const video = document.querySelector("video");
+const video = document.quewysewectow("video");
 
-video.addEventListener("canplay", (event) => {
-  console.log(
-    "El video puede iniciar, pero sin la seguridad de que pueda ser reproducido.",
+v-video.addeventwistenew("canpway", (U ﹏ U) (event) => {
+  consowe.wog(
+    "ew v-video p-puede iniciaw, (///ˬ///✿) p-pewo sin wa seguwidad de que pueda sew wepwoducido.", 😳
   );
 });
 ```
 
-Usando la propiedad manejadora de eventos `oncanplay`:
+usando wa p-pwopiedad manejadowa d-de eventos `oncanpway`:
 
 ```js
-const video = document.querySelector("video");
+const video = d-document.quewysewectow("video");
 
-video.oncanplay = (event) => {
-  console.log(
-    "El video puede iniciar, pero sin la seguridad de que pueda ser reproducido.",
+v-video.oncanpway = (event) => {
+  consowe.wog(
+    "ew v-video puede iniciaw, 😳 p-pewo sin wa seguwidad de que pueda sew wepwoducido.", σωσ
   );
 };
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Eventos relacionados
+## eventos wewacionados
 
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.playing_event", 'playing')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
-- El evento HTMLMediaElement {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
+- e-ew evento h-htmwmediaewement {{domxwef("htmwmediaewement.pwaying_event", rawr x3 'pwaying')}}
+- ew evento htmwmediaewement {{domxwef("htmwmediaewement.waiting_event", OwO 'waiting')}}
+- ew evento htmwmediaewement {{domxwef("htmwmediaewement.seeking_event", /(^•ω•^) 'seeking')}}
+- ew evento htmwmediaewement {{domxwef("htmwmediaewement.seeked_event", 😳😳😳 'seeked')}}
+- ew e-evento htmwmediaewement {{domxwef("htmwmediaewement.ended_event", ( ͡o ω ͡o ) 'ended')}}
+- ew e-evento htmwmediaewement {{domxwef("htmwmediaewement.woadedmetadata_event", >_< 'woadedmetadata')}}
+- ew evento htmwmediaewement {{domxwef("htmwmediaewement.woadeddata_event", >w< 'woadeddata')}}
+- ew e-evento htmwmediaewement {{domxwef("htmwmediaewement.canpway_event", rawr 'canpway')}}
+- e-ew evento htmwmediaewement {{domxwef("htmwmediaewement.canpwaythwough_event", 😳 'canpwaythwough')}}
+- e-ew evento htmwmediaewement {{domxwef("htmwmediaewement.duwationchange_event", >w< 'duwationchange')}}
+- ew evento htmwmediaewement {{domxwef("htmwmediaewement.timeupdate_event", (⑅˘꒳˘) 'timeupdate')}}
+- e-ew evento htmwmediaewement {{domxwef("htmwmediaewement.pway_event", OwO 'pway')}}
+- ew evento htmwmediaewement {{domxwef("htmwmediaewement.pause_event", (ꈍᴗꈍ) 'pause')}}
+- ew evento h-htmwmediaewement {{domxwef("htmwmediaewement.watechange_event", 😳 'watechange')}}
+- ew evento h-htmwmediaewement {{domxwef("htmwmediaewement.vowumechange_event", 😳😳😳 'vowumechange')}}
+- e-ew evento h-htmwmediaewement {{domxwef("htmwmediaewement.suspend_event", mya 'suspend')}}
+- ew e-evento htmwmediaewement {{domxwef("htmwmediaewement.emptied_event", mya 'emptied')}}
+- e-ew evento htmwmediaewement {{domxwef("htmwmediaewement.stawwed_event", (⑅˘꒳˘) 'stawwed')}}
 
-## Véase también
+## v-véase t-también
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

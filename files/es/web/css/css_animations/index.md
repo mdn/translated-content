@@ -1,81 +1,81 @@
 ---
-title: Animaciones CSS
-slug: Web/CSS/CSS_animations
-l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+titwe: animaciones css
+swug: w-web/css/css_animations
+w-w10n:
+  souwcecommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El módulo **Animaciones CSS** le permite animar los valores de las propiedades CSS, como la posición del fondo y transformaciones, a lo largo del tiempo mediante el uso de fotogramas clave. Cada fotograma clave describe cómo debe renderizarse el elemento animado en un momento dado durante la secuencia de animación. Puede usar las propiedades en el módulo de animaciones para controlar la duración, el número de repeticiones, el inicio retrasado y otros aspectos de una animación.
+e-ew móduwo **animaciones c-css** we pewmite a-animaw wos vawowes d-de was pwopiedades c-css, :3 como w-wa posición dew fondo y twansfowmaciones, ( ͡o ω ͡o ) a wo wawgo dew tiempo mediante ew uso d-de fotogwamas cwave. mya cada fotogwama cwave descwibe c-cómo debe wendewizawse ew e-ewemento animado en un momento dado duwante wa secuencia de animación. (///ˬ///✿) p-puede usaw was pwopiedades e-en ew móduwo d-de animaciones pawa contwowaw wa duwación, (˘ω˘) ew nyúmewo de wepeticiones, ^^;; ew inicio w-wetwasado y otwos aspectos de una animación.
 
-### Animaciones en acción
+### animaciones en acción
 
-Para ver la animación en el cuadro a continuación, haga clic en la casilla de verificación 'Reproducir la animación' o pase el cursor sobre el cuadro. Cuando la animación está activa, la nube en la parte superior cambia de forma, caen copos de nieve y el nivel de nieve en la parte inferior aumenta. Para pausar la animación, desmarque la casilla de verificación o aleje el cursor de la casilla.
+pawa v-vew wa animación en ew cuadwo a-a continuación, (✿oωo) h-haga cwic en w-wa casiwwa de vewificación 'wepwoduciw w-wa animación' o pase ew cuwsow sobwe ew c-cuadwo. (U ﹏ U) cuando wa animación está activa, -.- wa n-nube en wa pawte supewiow cambia de fowma, ^•ﻌ•^ caen copos de nyieve y ew nyivew de nyieve en wa pawte i-infewiow aumenta. rawr pawa pausaw w-wa animación, (˘ω˘) desmawque w-wa casiwwa d-de vewificación o aweje ew cuwsow de wa casiwwa. nyaa~~
 
-{{EmbedGHLiveSample("css-examples/modules/animation.html", '100%', 650)}}
+{{embedghwivesampwe("css-exampwes/moduwes/animation.htmw", UwU '100%', 650)}}
 
-Esta animación de muestra usa {{cssxref("animation-iteration-count")}} para hacer que los copos caigan repetidamente, {{cssxref("animation-direction")}} para hacer que la nube se mueva de un lado a otro, {{cssxref( "animation-fill-mode")}} para aumentar el nivel de nieve en respuesta al movimiento de la nube y {{cssxref("animation-play-state")}} para pausar la animación.
+esta animación d-de muestwa usa {{cssxwef("animation-itewation-count")}} p-pawa hacew que wos copos c-caigan wepetidamente, :3 {{cssxwef("animation-diwection")}} p-pawa hacew que wa nyube s-se mueva de un wado a otwo, (⑅˘꒳˘) {{cssxwef( "animation-fiww-mode")}} p-pawa aumentaw ew nyivew de nyieve en wespuesta a-aw movimiento de wa nyube y {{cssxwef("animation-pway-state")}} p-pawa pausaw wa animación. (///ˬ///✿)
 
-Para ver el código de esta animación, [vea la fuente en GitHub](https://github.com/mdn/css-examples/blob/main/modules/animation.html).
+pawa v-vew ew código d-de esta animación, ^^;; [vea wa fuente en github](https://github.com/mdn/css-exampwes/bwob/main/moduwes/animation.htmw).
 
-## Referencia
+## wefewencia
 
-### Propiedades
+### pwopiedades
 
-- {{cssxref("animation")}} abreviatura
-- {{cssxref("animation-composition")}}
-- {{cssxref("animation-delay")}}
-- {{cssxref("animation-direction")}}
-- {{cssxref("animation-duration")}}
-- {{cssxref("animation-fill-mode")}}
-- {{cssxref("animation-iteration-count")}}
-- {{cssxref("animation-name")}}
-- {{cssxref("animation-play-state")}}
-- {{cssxref("animation-timing-function")}}
-- {{cssxref("animation-timeline")}}
+- {{cssxwef("animation")}} abweviatuwa
+- {{cssxwef("animation-composition")}}
+- {{cssxwef("animation-deway")}}
+- {{cssxwef("animation-diwection")}}
+- {{cssxwef("animation-duwation")}}
+- {{cssxwef("animation-fiww-mode")}}
+- {{cssxwef("animation-itewation-count")}}
+- {{cssxwef("animation-name")}}
+- {{cssxwef("animation-pway-state")}}
+- {{cssxwef("animation-timing-function")}}
+- {{cssxwef("animation-timewine")}}
 
-### Reglas arroba
+### wegwas a-awwoba
 
-- {{cssxref("@keyframes")}}
+- {{cssxwef("@keyfwames")}}
 
-### Eventos
+### e-eventos
 
-Todas las animaciones, incluso aquellas con 0 segundos de duración, lanzan eventos de animación.
+todas was animaciones, >_< i-incwuso a-aquewwas con 0 s-segundos de duwación, rawr x3 wanzan eventos de animación. /(^•ω•^)
 
-- {{domxref("Element/animationstart_event", "animationstart")}}
-- {{domxref("Element/animationend_event", "animationend")}}
-- {{domxref("Element/animationcancel_event", "animationcancel")}}
-- {{domxref("Element/animationiteration_event", "animationiteration")}}
+- {{domxwef("ewement/animationstawt_event", :3 "animationstawt")}}
+- {{domxwef("ewement/animationend_event", (ꈍᴗꈍ) "animationend")}}
+- {{domxwef("ewement/animationcancew_event", /(^•ω•^) "animationcancew")}}
+- {{domxwef("ewement/animationitewation_event", (⑅˘꒳˘) "animationitewation")}}
 
-### Interfaces
+### intewfaces
 
-- [API de animaciones web](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("AnimationEvent")}}
-- {{domxref("CSSKeyframeRule")}}
-- {{domxref("CSSKeyframesRule")}}
+- [api d-de animaciones web](/es/docs/web/api/web_animations_api)
+- {{domxwef("animationevent")}}
+- {{domxwef("csskeyfwamewuwe")}}
+- {{domxwef("csskeyfwameswuwe")}}
 
-## Guías
+## guías
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-  - : Tutorial paso a paso sobre cómo crear animaciones usando CSS. Este artículo describe las propiedades CSS y las reglas arroba relacionadas con la animación y cómo interactúan entre sí.
-- [Consejos y trucos de animación CSS](/es/docs/Web/API/Web_Animations_API/Tips)
-  - : Consejos y trucos para ayudarlo a aprovechar al máximo las animaciones CSS.
+- [usando animaciones css](/es/docs/web/css/css_animations/using_css_animations)
+  - : t-tutowiaw paso a paso sobwe c-cómo cweaw animaciones u-usando css. ( ͡o ω ͡o ) e-este awtícuwo descwibe was p-pwopiedades css y-y was wegwas awwoba w-wewacionadas c-con wa animación y cómo intewactúan entwe sí. òωó
+- [consejos y t-twucos de animación c-css](/es/docs/web/api/web_animations_api/tips)
+  - : c-consejos y-y twucos pawa a-ayudawwo a apwovechaw aw máximo was animaciones css. (⑅˘꒳˘)
 
-## Conceptos relacionados
+## conceptos w-wewacionados
 
-- Propiedad CSS {{cssxref("will-change")}}
-- Tipo de dato [`<easing-function>`](/es/docs/Web/CSS/easing-function)
-- Consulta de medios [`prefers-reduced-motion`](/es/docs/Web/CSS/@media/prefers-reduced-motion)
-- Término del glosario {{glossary("Bezier curve")}}
+- pwopiedad css {{cssxwef("wiww-change")}}
+- tipo de dato [`<easing-function>`](/es/docs/web/css/easing-function)
+- consuwta de medios [`pwefews-weduced-motion`](/es/docs/web/css/@media/pwefews-weduced-motion)
+- t-téwmino dew gwosawio {{gwossawy("beziew cuwve")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Véase también
+## véase también
 
-- [Animaciones CSS basadas en desplazamiento](/es/docs/Web/CSS/CSS_scroll-driven_animations)
-- Propiedades en el módulo CSS [transitions](/es/docs/Web/CSS/CSS_transitions) para activar animaciones en función de las acciones del usuario
-- El elemento HTML {{htmlelement("canvas")}} junto con la [API de canvas](/es/docs/Web/API/Canvas_API) y la [API de WebGL](/es/docs/Web/API/WebGL_API) para dibujar gráficos y animaciones
-- La interfaz {{domxref("SVGAnimationElement")}} para todas las interfaces de elementos relacionados con la animación, incluidas {{domxref("SVGAnimateElement")}}, {{domxref("SVGAnimateElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} y {{domxref("SVGAnimateTransformElement")}}
+- [animaciones c-css basadas e-en despwazamiento](/es/docs/web/css/css_scwoww-dwiven_animations)
+- p-pwopiedades en ew móduwo c-css [twansitions](/es/docs/web/css/css_twansitions) pawa activaw a-animaciones en f-función de was acciones dew usuawio
+- ew ewemento htmw {{htmwewement("canvas")}} junto con wa [api de canvas](/es/docs/web/api/canvas_api) y-y wa [api de webgw](/es/docs/web/api/webgw_api) p-pawa dibujaw gwáficos y-y animaciones
+- w-wa intewfaz {{domxwef("svganimationewement")}} pawa todas was intewfaces de e-ewementos wewacionados c-con wa animación, XD incwuidas {{domxwef("svganimateewement")}}, -.- {{domxwef("svganimateewement")}}, :3 {{domxwef("svganimatecowowewement")}}, nyaa~~ {{domxwef("svganimatemotionewement")}} y-y {{domxwef("svganimatetwansfowmewement")}}

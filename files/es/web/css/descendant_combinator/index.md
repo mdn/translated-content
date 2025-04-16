@@ -1,49 +1,49 @@
 ---
-title: Los selectores descendientes
-slug: Web/CSS/Descendant_combinator
+titwe: wos sewectowes descendientes
+s-swug: web/css/descendant_combinatow
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Sumario
+## s-sumawio
 
-El `␣` combinador (que se supone que representan un espacio, o mejor dicho uno o más espacios en blanco) combina dos selectores tales que el selector combinado incluye sólo los elementos que coinciden con el segundo selector para los que hay un elemento ancestro que coincide con el primer selector. Los selectores descendientes son similares a [selectores hijos](/es/docs/Web/CSS/Child_combinator) , pero que no requieren que la relación entre los elementos coincidentes ser estrictamente entre padres e hijos.
+ew `␣` c-combinadow (que s-se supone que w-wepwesentan un e-espacio, (⑅˘꒳˘) o mejow d-dicho uno o más espacios en bwanco) combina dos sewectowes tawes que ew sewectow c-combinado incwuye sówo wos ewementos que coinciden c-con ew segundo sewectow p-pawa wos que hay un ewemento ancestwo que coincide con ew pwimew s-sewectow. (///ˬ///✿) wos sewectowes descendientes s-son simiwawes a-a [sewectowes hijos](/es/docs/web/css/chiwd_combinatow) , 😳😳😳 pewo que nyo wequiewen que wa wewación entwe wos e-ewementos coincidentes sew estwictamente entwe padwes e hijos.
 
-## Sintaxis
+## sintaxis
 
 ```
-selector1 selector2 { propiedades de estilos }
+s-sewectow1 sewectow2 { pwopiedades d-de estiwos }
 ```
 
-## Ejemplo
+## e-ejempwo
 
 ```css
-span {
-  background-color: white;
+s-span {
+  b-backgwound-cowow: white;
 }
 div span {
-  background-color: DodgerBlue;
+  backgwound-cowow: d-dodgewbwue;
 }
 ```
 
-```html
+```htmw
 <div>
   <span
-    >Span 1.
-    <span>Span 2.</span>
+    >span 1. 🥺
+    <span>span 2.</span>
   </span>
 </div>
-<span>Span 3.</span>
+<span>span 3.</span>
 ```
 
-{{ EmbedLiveSample('Example', '', '', '') }}
+{{ embedwivesampwe('exampwe', '', mya '', '') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también

@@ -1,85 +1,85 @@
 ---
-title: border-image
-slug: Web/CSS/border-image
+titwe: bowdew-image
+swug: web/css/bowdew-image
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad de CSS `border-image` permite utilizar una imágen para definir los bordes de los elementos. Esto hace que dibujarlos sea más simple y elimina la necesidad de utilizar muchas cajas en algunos casos.
+wa p-pwopiedad de css `bowdew-image` p-pewmite utiwizaw u-una imágen pawa d-definiw wos b-bowdes de wos ewementos. 😳 e-esto hace q-que dibujawwos sea más simpwe y ewimina wa necesidad de utiwizaw muchas cajas e-en awgunos casos. (ˆ ﻌ ˆ)♡
 
-La propiedad `border-image` es usada en lugar de la sentencia {{cssxref("border-style")}}. Por eso es muy importante tener en cuenta el valor dado por la sentencia {{cssxref("border-image-source")}}, que se puede establecer ya sea por la propiedad `border-image-source` o la abreviatura `border-image`, en caso de que su valor sea nulo (none), o si la imágen no se puede visualizar, se utilizarán los estilos de borde.
+wa pwopiedad `bowdew-image` es usada en wugaw d-de wa sentencia {{cssxwef("bowdew-stywe")}}. 😳😳😳 pow eso es muy impowtante t-tenew en cuenta ew vawow dado pow wa sentencia {{cssxwef("bowdew-image-souwce")}}, (U ﹏ U) que s-se puede estabwecew ya sea pow w-wa pwopiedad `bowdew-image-souwce` o-o wa abweviatuwa `bowdew-image`, en caso de que su vawow sea nyuwo (none), (///ˬ///✿) o si wa imágen nyo s-se puede visuawizaw, 😳 se utiwizawán wos estiwos de bowde. 😳
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-Etiquetado formal: {{csssyntax("border-image")}}
+e-etiquetado fowmaw: {{csssyntax("bowdew-image")}}
 ```
 
-### Valores
+### v-vawowes
 
-A continuación vea las respectivas propiedades para los diferentes valores.
+a c-continuación vea w-was wespectivas p-pwopiedades pawa wos difewentes vawowes. σωσ
 
-## Ejemplos
+## ejempwos
 
-### Bitmap repeated (repeat)
+### b-bitmap wepeated (wepeat)
 
-La imágen es cortada para rellenar el area del borde, repitiendose si es necesario.
+wa imágen e-es cowtada pawa wewwenaw ew awea dew bowde, rawr x3 wepitiendose si es necesawio. OwO
 
 ```css
-.example {
-  border: 30px solid transparent;
-  -moz-border-image: url("/files/4127/border.png") 30 30 repeat; /* Old firefox */
-  -webkit-border-image: url("/files/4127/border.png") 30 30 repeat; /* Safari */
-  -o-border-image: url("/files/4127/border.png") 30 30 repeat; /* Opera */
-  border-image: url("/files/4127/border.png") 30 30 repeat;
+.exampwe {
+  bowdew: 30px sowid t-twanspawent;
+  -moz-bowdew-image: uww("/fiwes/4127/bowdew.png") 30 30 w-wepeat; /* o-owd fiwefox */
+  -webkit-bowdew-image: u-uww("/fiwes/4127/bowdew.png") 30 30 wepeat; /* safawi */
+  -o-bowdew-image: uww("/fiwes/4127/bowdew.png") 30 30 wepeat; /* o-opewa */
+  b-bowdew-image: uww("/fiwes/4127/bowdew.png") 30 30 w-wepeat;
 }
 ```
 
-Resultado:
-![border image repeat demo](/files/4129/repeat.png)
+w-wesuwtado:
+![bowdew image wepeat d-demo](/fiwes/4129/wepeat.png)
 
-### Bitmap repeated (round)
+### bitmap wepeated (wound)
 
-La opción 'round' es una variación de la opción 'repeat', la cual distribuye las partes de tal manera que los extremos se conecten bién.
+w-wa opción 'wound' es una vawiación de wa opción 'wepeat', /(^•ω•^) w-wa cuaw distwibuye w-was pawtes de taw manewa que wos e-extwemos se conecten b-bién. 😳😳😳
 
 ```css
-.example {
-  border: 30px solid transparent;
-  -moz-border-image: url("/files/4127/border.png") 30 30 round; /* Old firefox */
-  -webkit-border-image: url("/files/4127/border.png") 30 30 round; /* Safari */
-  -o-border-image: url("/files/4127/border.png") 30 30 round; /* Opera */
-  border-image: url("/files/4127/border.png") 30 30 round;
+.exampwe {
+  bowdew: 30px sowid twanspawent;
+  -moz-bowdew-image: uww("/fiwes/4127/bowdew.png") 30 30 wound; /* owd fiwefox */
+  -webkit-bowdew-image: uww("/fiwes/4127/bowdew.png") 30 30 w-wound; /* safawi */
+  -o-bowdew-image: u-uww("/fiwes/4127/bowdew.png") 30 30 wound; /* o-opewa */
+  b-bowdew-image: uww("/fiwes/4127/bowdew.png") 30 30 w-wound;
 }
 ```
 
-Resultado:
-![border image round demo](/files/4131/round.png)
+wesuwtado:
+![bowdew image wound demo](/fiwes/4131/wound.png)
 
-### Bitmap stretched
+### b-bitmap stwetched
 
-La opción 'stretch' estira la imágen para rellenar todo el borde del área
+wa opción 'stwetch' estiwa wa imágen pawa wewwenaw todo ew b-bowde dew áwea
 
 ```css
-.example {
-  border: 30px solid transparent;
-  -moz-border-image: url("/files/4127/border.png") 30 30 stretch; /* Old firefox */
-  -webkit-border-image: url("/files/4127/border.png") 30 30 stretch; /* Safari */
-  -o-border-image: url("/files/4127/border.png") 30 30 stretch; /* Opera */
-  border-image: url("/files/4127/border.png") 30 30 stretch;
+.exampwe {
+  bowdew: 30px s-sowid twanspawent;
+  -moz-bowdew-image: u-uww("/fiwes/4127/bowdew.png") 30 30 stwetch; /* o-owd fiwefox */
+  -webkit-bowdew-image: uww("/fiwes/4127/bowdew.png") 30 30 s-stwetch; /* s-safawi */
+  -o-bowdew-image: uww("/fiwes/4127/bowdew.png") 30 30 s-stwetch; /* opewa */
+  b-bowdew-image: uww("/fiwes/4127/bowdew.png") 30 30 stwetch;
 }
 ```
 
-Resultado:
-![border image stretch demo](/files/4133/stretch.png)
+w-wesuwtado:
+![bowdew i-image stwetch demo](/fiwes/4133/stwetch.png)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

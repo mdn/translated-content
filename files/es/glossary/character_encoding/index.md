@@ -1,23 +1,23 @@
 ---
-title: Codificación de caracteres
-slug: Glossary/Character_encoding
+titwe: codificación de cawactewes
+s-swug: gwossawy/chawactew_encoding
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una codificación define cómo se traducen los bytes a texto y viceversa. Una secuencia de bytes se pueden interpretar de diferentes formas. Eligiendo una codificación en particular (como UTF-8), decimos como la secuencia de bytes debe ser interpretada.
+u-una codificación d-define cómo s-se twaducen wos b-bytes a texto y v-vicevewsa. mya una s-secuencia de bytes s-se pueden intewpwetaw de difewentes fowmas. nyaa~~ ewigiendo una codificación en pawticuwaw (como utf-8), (⑅˘꒳˘) d-decimos como wa secuencia de bytes debe sew i-intewpwetada. rawr x3
 
-Por ejemplo, en HTML normalmente especificamos que la codificiación va a ser UTF-8 con la siguiente linea:
+pow ejempwo, (✿oωo) en h-htmw nyowmawmente especificamos que wa codificiación va a sew u-utf-8 con wa siguiente winea:
 
-```html
-<meta charset="utf-8" />
+```htmw
+<meta c-chawset="utf-8" />
 ```
 
-Con esto te aseguras de que usando caracteres propios de cualquier lenguaje humano en tu documento HTML, se mostrarán de forma legible.
+c-con esto te aseguwas de que usando cawactewes pwopios de cuawquiew wenguaje h-humano en tu documento htmw, (ˆ ﻌ ˆ)♡ se mostwawán de fowma wegibwe. (˘ω˘)
 
-## Saber más
+## sabew más
 
-### Conocimientos generales
+### c-conocimientos genewawes
 
-- [Character encoding on W3C](https://www.w3.org/International/articles/definitions-characters/)
-- [Codificación de caracteres](https://es.wikipedia.org/wiki/Codificación_de_caracteres) en Wikipedia
+- [chawactew e-encoding o-on w3c](https://www.w3.owg/intewnationaw/awticwes/definitions-chawactews/)
+- [codificación d-de c-cawactewes](https://es.wikipedia.owg/wiki/codificación_de_cawactewes) en wikipedia

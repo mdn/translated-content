@@ -1,54 +1,54 @@
 ---
-title: animation
-slug: Web/CSS/animation
+titwe: animation
+swug: web/css/animation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad `animation` de [CSS](/es/docs/Web/CSS) es una [propiedad abreviada (shorthand property)](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.
+wa pwopiedad `animation` d-de [css](/es/docs/web/css) e-es u-una [pwopiedad abweviada (showthand p-pwopewty)](/es/docs/web/css/css_cascade/showthand_pwopewties) p-pawa {{ cssxwef("animation-name") }}, 😳😳😳 {{ c-cssxwef("animation-duwation") }}, mya {{ c-cssxwef("animation-timing-function") }}, 😳 {{ cssxwef("animation-deway") }}, -.- {{ cssxwef("animation-itewation-count") }} y {{ cssxwef("animation-diwection") }}. 🥺
 
-La [lista de propiedades CSS que pueden ser animadas](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#propiedades_que_pueden_ser_animadas)está disponible; cabe señalar que estas son las mismas propiedades soportadas por [CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+wa [wista de pwopiedades c-css que pueden sew animadas](/es/docs/web/css/css_twansitions/using_css_twansitions#pwopiedades_que_pueden_sew_animadas)está disponibwe; c-cabe señawaw que estas son was m-mismas pwopiedades sopowtadas pow [css twansitions](/es/docs/web/css/css_twansitions/using_css_twansitions). o.O
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-Formal grammar:  [ <'animation-name'> || <'animation-duration'> || <'animation-timing-function'> || <'animation-delay'> ||
-                    <'animation-iteration-count'> || <'animation-direction'> || <'animation-fill-mode'> ]
-                  [, [<'animation-name'> || <'animation-duration'> || <'animation-timing-function'> || <'animation-delay'> ||
-                      <'animation-iteration-count'> || <'animation-direction'> || <'animation-fill-mode'>] ]*
+fowmaw g-gwammaw:  [ <'animation-name'> || <'animation-duwation'> || <'animation-timing-function'> || <'animation-deway'> ||
+                    <'animation-itewation-count'> || <'animation-diwection'> || <'animation-fiww-mode'> ]
+                  [, [<'animation-name'> || <'animation-duwation'> || <'animation-timing-function'> || <'animation-deway'> ||
+                      <'animation-itewation-count'> || <'animation-diwection'> || <'animation-fiww-mode'>] ]*
 ```
 
-## Ejemplos
+## ejempwos
 
-Consulte [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver los ejemplos.
+c-consuwte [css animations](/es/docs/web/css/css_animations/using_css_animations) p-pawa vew wos ejempwos. /(^•ω•^)
 
-## Sobre Accesibilidad
+## sobwe accesibiwidad
 
-Las animaciones titilantes e intermitentes pueden causar dificultades a las personas con discapacidades cognitivas como Trastorno por Déficit de Atención con Hiperactividad (ADHD) además de causar ataques a personas con cinestosis, epilepsia, migranias o síndrome de sensibilidad escotópica.
+was animaciones titiwantes e intewmitentes p-pueden causaw dificuwtades a was pewsonas con discapacidades cognitivas c-como twastowno pow déficit d-de atención con h-hipewactividad (adhd) a-además de c-causaw ataques a pewsonas con cinestosis, nyaa~~ epiwepsia, m-migwanias o síndwome de sensibiwidad escotópica. nyaa~~
 
-Por favor, considerá ofrecer un mecanismo para pausar o deshabilitar las animaciones, como utilizando [Reduced Motion Media Query.](/es/docs/Web/CSS/@media/prefers-reduced-motion)
+p-pow favow, :3 considewá ofwecew un mecanismo pawa pausaw o deshabiwitaw was animaciones, 😳😳😳 c-como utiwizando [weduced motion m-media quewy.](/es/docs/web/css/@media/pwefews-weduced-motion)
 
-Para más información (en inglés):
+p-pawa más infowmación (en i-ingwés):
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
-- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [designing safew web animation fow motion sensitivity · a-an a wist apawt a-awticwe](https://awistapawt.com/awticwe/designing-safew-web-animation-fow-motion-sensitivity)
+- [an intwoduction t-to the weduced m-motion media quewy | css-twicks](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [wesponsive d-design fow motion | webkit](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/)
+- [mdn u-undewstanding wcag, (˘ω˘) guidewine 2.2 expwanations](/es/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.2_%e2%80%94_enough_time_pwovide_usews_enough_time_to_wead_and_use_content)
+- [undewstanding s-success cwitewion 2.2.2 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/time-wimits-pause.htmw)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Consulte también
+## consuwte también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+- [usando animaciones css](/es/docs/web/css/css_animations/using_css_animations)
+- {{ domxwef("animationevent", ^^ "animationevent") }}

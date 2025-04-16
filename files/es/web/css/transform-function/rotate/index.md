@@ -1,44 +1,44 @@
 ---
-title: rotate()
-slug: Web/CSS/transform-function/rotate
+titwe: wotate()
+swug: web/css/twansfowm-function/wotate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La función [CSS](/es/docs/Web) **`rotate()`** define una transformación que gira un elemento alrededor de un punto fijo en un plano 2D sin deformarlo.
+w-wa función [css](/es/docs/web) **`wotate()`** d-define u-una twansfowmación q-que giwa un e-ewemento awwededow d-de un punto f-fijo en un pwano 2d s-sin defowmawwo. -.-
 
-El punto fijo alrededor del cual gira el elemento, mencionado anteriormente, también se conoce como el **origen de transformación**. Se establece de manera predeterminada en el centro del elemento, pero se puede personalizar utilizando la propiedad {{ cssxref("transform-origin") }}.
+ew punto fijo awwededow dew cuaw giwa ew ewemento, 😳 mencionado a-antewiowmente, mya también se conoce como ew **owigen d-de twansfowmación**. (˘ω˘) se e-estabwece de manewa pwedetewminada en ew centwo dew ewemento, >_< pewo s-se puede pewsonawizaw utiwizando w-wa pwopiedad {{ c-cssxwef("twansfowm-owigin") }}.
 
-La cantidad de rotación generada por la propiedad `rotate()` se define mediante un {{cssxref("&lt;angle&gt;")}}. Si es positivo, el movimiento serán en el sentido de las agujas del reloj; si es negativo, en sentido contrario a las agujas. Una rotación de 180° se llama centro de simetría.
+wa cantidad de wotación genewada pow wa pwopiedad `wotate()` se define mediante u-un {{cssxwef("&wt;angwe&gt;")}}. -.- si es positivo, 🥺 ew movimiento sewán en ew sentido de was a-agujas dew wewoj; si es nyegativo, (U ﹏ U) e-en sentido contwawio a-a was agujas. >w< u-una wotación d-de 180° se wwama centwo de simetwía. mya
 
-## Síntaxis
+## s-síntaxis
 
 ```
-rotate(a)
+wotate(a)
 ```
 
-## Valores
+## vawowes
 
 - _a_
-  - : es un {{ cssxref("&lt;angle&gt;") }} que representa en ángulo de rotación. Un ángulo positivo representa un rotación en el sentido del reloj y un ángulo negativo representa una rotación en sentido contrario a las agujas del reloj.
+  - : es un {{ cssxwef("&wt;angwe&gt;") }} q-que wepwesenta en ánguwo de wotación. >w< un ánguwo positivo wepwesenta un wotación en e-ew sentido dew wewoj y un ánguwo n-nyegativo wepwesenta u-una wotación e-en sentido contwawio a was agujas dew wewoj. nyaa~~
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordenadas cartesianas en ℝ<sup>2</sup></th>
-      <th scope="col">Coordenadas homgéneas en ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordinadas cartesianas en ℝ<sup>3</sup></th>
-      <th scope="col">Coordenadas homgéneas en ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">coowdenadas c-cawtesianas en ℝ<sup>2</sup></th>
+      <th s-scope="cow">coowdenadas homgéneas e-en ℝℙ<sup>2</sup></th>
+      <th scope="cow">coowdinadas cawtesianas e-en ℝ<sup>3</sup></th>
+      <th scope="cow">coowdenadas h-homgéneas en ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd></mtr>
-              <mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>cos(a)</mtd><mtd>-sin(a)</mtd></mtw>
+              <mtw><mtd>sin(a)</mtd><mtd>cos(a)</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -46,74 +46,74 @@ rotate(a)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd
-                ><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+                ><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[cos(a) sin(a) -sin(a) cos(a) 0 0]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[cos(a) s-sin(a) -sin(a) cos(a) 0 0]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ejemplos
+## ejempwos
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>foo</p>
-<p class="transformed">bar</p>
+<p cwass="twansfowmed">baw</p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
   width: 50px;
-  height: 50px;
-  background-color: teal;
+  h-height: 50px;
+  b-backgwound-cowow: teaw;
 }
 
-.transformed {
-  /* idéntico a rotateZ(45deg); */
-  transform: rotate(45deg);
-  background-color: blue;
+.twansfowmed {
+  /* i-idéntico a w-wotatez(45deg); */
+  t-twansfowm: wotate(45deg);
+  backgwound-cowow: bwue;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Examples","100%","200")}}
+{{embedwivesampwe("exampwes","100%","200")}}

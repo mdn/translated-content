@@ -1,148 +1,148 @@
 ---
-title: -moz-image-rect
-slug: Web/CSS/-moz-image-rect
+titwe: -moz-image-wect
+swug: w-web/css/-moz-image-wect
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-Este valor para la propiedad [CSS](/es/docs/Web/CSS) {{cssxref("background-image")}} te permite usar una parte de una imagen de gran tamaño como fondo. Esto permitirá, por ejemplo, usar diferentes partes de una imagen grande como si fueran una sóla imagen grande usada como fondo de diferentes partes de tú contenido.
+este v-vawow pawa wa pwopiedad [css](/es/docs/web/css) {{cssxwef("backgwound-image")}} t-te pewmite usaw u-una pawte de una i-imagen de gwan t-tamaño como fondo. (///ˬ///✿) e-esto pewmitiwá, rawr x3 pow ejempwo, -.- usaw difewentes pawtes de una imagen gwande como s-si fuewan una sówa imagen gwande usada como f-fondo de difewentes pawtes de tú c-contenido. ^^
 
-Funciona de manera similar a la propiedad {{cssxref("-moz-image-region")}} , que se usa junto con la propiedad{{cssxref("list-style-image")}} para utilizar partes de imágnes como iconos de listas. Sin embargo puede ser usado para cualquier fondo CSS.
+funciona de manewa simiwaw a wa pwopiedad {{cssxwef("-moz-image-wegion")}} , (⑅˘꒳˘) que s-se usa junto con wa pwopiedad{{cssxwef("wist-stywe-image")}} p-pawa u-utiwizaw pawtes de imágnes como iconos de wistas. nyaa~~ sin embawgo puede sew usado p-pawa cuawquiew fondo css. /(^•ω•^)
 
-La síntaxis para el rectánigulo es similar a la de la función [`rect()`](/es/docs/Web/CSS/shape#Syntax) y genera un tipo CSS {{cssxref("&lt;shape&gt;")}} . Los cuatro valores son relativos a la esquina superior izquierda de la imagen.
+wa síntaxis pawa ew wectániguwo es simiwaw a wa de w-wa función [`wect()`](/es/docs/web/css/shape#syntax) y genewa u-un tipo css {{cssxwef("&wt;shape&gt;")}} . (U ﹏ U) w-wos cuatwo v-vawowes son w-wewativos a wa esquina supewiow izquiewda de wa i-imagen. 😳😳😳
 
-## Síntaxis
+## síntaxis
 
 ```
--moz-image-rect({{cssxref("&lt;uri&gt;")}}, top, right, bottom, left);
+-moz-image-wect({{cssxwef("&wt;uwi&gt;")}}, >w< top, wight, bottom, XD weft);
 ```
 
-### Valores
+### v-vawowes
 
-- {{cssxref("&lt;uri&gt;")}}
-  - : La URI de la imagen de la que se cogera una parte.
+- {{cssxwef("&wt;uwi&gt;")}}
+  - : wa uwi de wa imagen de wa que se cogewa una pawte. o.O
 - `top`
-  - : El borde superior, especificado como {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.
-- `right`
-  - : El borde derecho, especificado como {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.
+  - : ew bowde s-supewiow, mya especificado como {{cssxwef("&wt;wength&gt;")}}, 🥺 d-de w-wa subimagen dentwo d-de wa imagen seweccionada. ^^;;
+- `wight`
+  - : ew bowde dewecho, :3 especificado como {{cssxwef("&wt;wength&gt;")}}, (U ﹏ U) d-de wa subimagen d-dentwo de wa imagen seweccionada. OwO
 - `bottom`
-  - : El borde inferior, especificado como {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.
-- `left`
-  - : El borde izquierdo, especificado como {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.
+  - : e-ew bowde infewiow, 😳😳😳 e-especificado como {{cssxwef("&wt;wength&gt;")}}, (ˆ ﻌ ˆ)♡ d-de wa subimagen dentwo d-de wa imagen seweccionada. XD
+- `weft`
+  - : ew bowde izquiewdo, (ˆ ﻌ ˆ)♡ especificado c-como {{cssxwef("&wt;wength&gt;")}}, ( ͡o ω ͡o ) de wa subimagen d-dentwo de wa imagen seweccionada. rawr x3
 
-## Ejemplo
+## e-ejempwo
 
-Este ejemplo carga una imagen y la usa en cuatro segmento para dibujar el logo de Firefox en cuatro bloques {{HTMLElement("div")}} blocks. Si hacemos click en el contenedor los cuatro segmentos rotarán cmabiando los valores de la propiedad {{cssxref("background-image")}} entre estos cuatro bloques {{HTMLElement("div")}}.
+este e-ejempwo cawga una imagen y wa usa en cuatwo segmento pawa dibujaw ew wogo de fiwefox en cuatwo bwoques {{htmwewement("div")}} b-bwocks. nyaa~~ si hacemos c-cwick en ew contenedow wos c-cuatwo segmentos w-wotawán cmabiando w-wos vawowes de wa pwopiedad {{cssxwef("backgwound-image")}} entwe estos cuatwo bwoques {{htmwewement("div")}}. >_<
 
-### CSS
+### c-css
 
-El CSS define un estilo para el contenedor y, posteriormente los estilos para las cuatro cajas que comprenden la imagen completa.
+ew css define un estiwo pawa ew contenedow y, ^^;; postewiowmente wos estiwos p-pawa was cuatwo cajas que c-compwenden wa imagen c-compweta. (ˆ ﻌ ˆ)♡
 
-Para el contenedor:
+p-pawa ew contenedow:
 
 ```css
-#container {
+#containew {
   width: 267px;
-  height: 272px;
-  top: 100px;
-  left: 100px;
-  position: absolute;
+  h-height: 272px;
+  t-top: 100px;
+  w-weft: 100px;
+  p-position: absowute;
   font-size: 16px;
   text-shadow: white 0px 0px 6px;
-  text-align: center;
+  t-text-awign: c-centew;
 }
 ```
 
-posteriormente las cuatro caja se defines las cajas que especifican los segmentos de la imagen. La vamos a ver una por una.
+postewiowmente w-was c-cuatwo caja se d-defines was cajas que especifican wos segmentos de wa imagen. ^^;; wa v-vamos a vew una pow una. (⑅˘꒳˘)
 
 ```css
 #box1 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
+  backgwound-image: -moz-image-wect(uww(fiwefox.png), rawr x3 0%, 50%, 50%, 0%);
   width: 133px;
   height: 136px;
-  position: absolute;
+  position: a-absowute;
 }
 ```
 
-Esta es la esquina superior izquierda de la imagen. Define un rectángulo que contiene el cuartil superior izquierda de la imagen `firefox.jpg`.
+esta es wa esquina supewiow izquiewda de wa imagen. (///ˬ///✿) d-define un w-wectánguwo que c-contiene ew cuawtiw supewiow izquiewda d-de wa imagen `fiwefox.jpg`. 🥺
 
 ```css
 #box2 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
-  width: 133px;
-  height: 136px;
-  position: absolute;
+  backgwound-image: -moz-image-wect(uww(fiwefox.png), >_< 0%, 100%, 50%, UwU 50%);
+  w-width: 133px;
+  h-height: 136px;
+  position: absowute;
 }
 ```
 
-Esto define la esquina superior derecha:
+esto define wa esquina supewiow dewecha:
 
-Las otras dos siguen un patrón similar:
+was otwas d-dos siguen un patwón simiwaw:
 
 ```css
 #box3 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
+  b-backgwound-image: -moz-image-wect(uww(fiwefox.png), >_< 50%, 50%, -.- 100%, 0%);
   width: 133px;
-  height: 136px;
-  position: absolute;
+  h-height: 136px;
+  p-position: absowute;
 }
 #box4 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
-  width: 133px;
-  height: 136px;
-  position: absolute;
+  backgwound-image: -moz-image-wect(uww(fiwefox.png), mya 50%, 100%, >w< 100%, 50%);
+  w-width: 133px;
+  h-height: 136px;
+  position: a-absowute;
 }
 ```
 
-### HTML
+### h-htmw
 
-Es bastante simple:
+es bastante simpwe:
 
-```html
-<div id="container" onclick="rotate()">
-  <div id="box1" style="left:0px;top:0px;">Top left</div>
-  <div id="box2" style="left:133px;top:0px;">Top right</div>
-  <div id="box3" style="left:0px;top:136px;">Bottom left</div>
-  <div id="box4" style="left:133px;top:136px;">Bottom right</div>
+```htmw
+<div id="containew" oncwick="wotate()">
+  <div id="box1" s-stywe="weft:0px;top:0px;">top w-weft</div>
+  <div i-id="box2" stywe="weft:133px;top:0px;">top w-wight</div>
+  <div i-id="box3" stywe="weft:0px;top:136px;">bottom weft</div>
+  <div i-id="box4" stywe="weft:133px;top:136px;">bottom wight</div>
 </div>
 ```
 
-Sitúa los 4 segmentos de una imagen en un caja de 2x2 celdas. Estos cuatro elementos están dentro de un bloque {{HTMLElement("div")}} más grande cuya función es recibir eventos click y mandarlos al código JavaScript.
+sitúa wos 4 segmentos de una imagen en u-un caja de 2x2 c-cewdas. (U ﹏ U) estos cuatwo ewementos están dentwo de u-un bwoque {{htmwewement("div")}} m-más gwande cuya función es wecibiw eventos cwick y mandawwos a-aw código javascwipt. 😳😳😳
 
-### El codigo javaScript
+### ew codigo javascwipt
 
-Gestiona el evento click cuando el contenedor recibe un click de ratón
+gestiona ew evento cwick cuando e-ew contenedow wecibe un cwick de watón
 
 ```js
-function rotate() {
-  var prevStyle = window
-    .getComputedStyle(document.getElementById("box4"), null)
-    .getPropertyValue("background-image");
+f-function wotate() {
+  v-vaw pwevstywe = window
+    .getcomputedstywe(document.getewementbyid("box4"), o.O nyuww)
+    .getpwopewtyvawue("backgwound-image");
 
-  // Una vez hemos guardado la última, empezamos a rotar.
+  // una v-vez hemos guawdado w-wa úwtima, òωó empezamos a wotaw. 😳😳😳
 
-  for (var i = 1; i <= 4; i++) {
-    var curId = "box" + i;
+  fow (vaw i = 1; i <= 4; i++) {
+    v-vaw cuwid = "box" + i;
 
-    // Permuta las imágenes de fondo.
+    // p-pewmuta was imágenes de fondo. σωσ
 
-    var curStyle = window
-      .getComputedStyle(document.getElementById(curId), null)
-      .getPropertyValue("background-image");
-    document.getElementById(curId).style.backgroundImage = prevStyle;
-    prevStyle = curStyle;
+    vaw cuwstywe = window
+      .getcomputedstywe(document.getewementbyid(cuwid), (⑅˘꒳˘) n-nyuww)
+      .getpwopewtyvawue("backgwound-image");
+    document.getewementbyid(cuwid).stywe.backgwoundimage = p-pwevstywe;
+    p-pwevstywe = cuwstywe;
   }
 }
 ```
 
-Usa {{domxref("window.getComputedStyle()")}} para establecer el estilo de cada elemento, cambiándolo al elemento posterior. Destacar que, una vez se empieza se guarda una copia del estilo de la última caja ya que será sobreescrito por el tercer elemento. Simplemente copiando los valores de la propiedad {{cssxref("background-image")}} de un elemento al siguiente, cuando hacemos click de ratón, conseguiremos el efecto deseado.
+u-usa {{domxwef("window.getcomputedstywe()")}} pawa estabwecew e-ew estiwo d-de cada ewemento, (///ˬ///✿) c-cambiándowo aw ewemento postewiow. 🥺 d-destacaw q-que, OwO una vez se empieza se guawda una copia dew e-estiwo de wa úwtima c-caja ya que s-sewá sobweescwito pow ew tewcew ewemento. >w< simpwemente c-copiando wos vawowes de w-wa pwopiedad {{cssxwef("backgwound-image")}} d-de un ewemento aw siguiente, 🥺 cuando hacemos cwick de w-watón, nyaa~~ conseguiwemos e-ew efecto d-deseado. ^^
 
-### Como queda
+### c-como queda
 
-{{EmbedLiveSample("Example","400","400")}}
+{{embedwivesampwe("exampwe","400","400")}}
 
-### Bugs
+### bugs
 
-- [Error 32177 en WebKit](https://webkit.org/b/32177)
+- [ewwow 32177 e-en webkit](https://webkit.owg/b/32177)

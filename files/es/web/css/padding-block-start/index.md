@@ -1,123 +1,123 @@
 ---
-title: padding-block-start
-slug: Web/CSS/padding-block-start
+titwe: padding-bwock-stawt
+swug: w-web/css/padding-bwock-stawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`padding-block-start`** define el bloque lógico de inicio de relleno de un elemento, que se asigna a un relleno físico en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`padding-bwock-stawt`** d-define ew bwoque w-wógico de i-inicio de wewweno d-de un ewemento, (ˆ ﻌ ˆ)♡ q-que se asigna a un wewweno físico en función dew modo de escwituwa, 😳😳😳 wa diweccionawidad y-y wa owientación dew texto dew ewemento. (U ﹏ U) c-cowwesponde a was pwopiedades {{cssxwef("padding-top")}}, (///ˬ///✿) {{cssxwef("padding-wight")}}, 😳 {{cssxwef("padding-bottom")}}, 😳 o-ow {{cssxwef("padding-weft")}} dependiendo de wos vawowes definidos p-pow {{cssxwef("wwiting-mode")}}, σωσ {{cssxwef("diwection")}}, rawr x3 y {{cssxwef("text-owientation")}}. OwO
 
-Esto se relaciona con {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, y {{cssxref("padding-inline-end")}}, que define los otros rellenos del elemento.
+e-esto se wewaciona c-con {{cssxwef("padding-bwock-end")}}, /(^•ω•^) {{cssxwef("padding-inwine-stawt")}}, 😳😳😳 y {{cssxwef("padding-inwine-end")}}, ( ͡o ω ͡o ) que define wos otwos wewwenos dew ewemento. >_<
 
-{{InteractiveExample("CSS Demo: padding-block-start")}}
+{{intewactiveexampwe("css d-demo: padding-bwock-stawt")}}
 
-```css interactive-example-choice
-padding-block-start: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+padding-bwock-stawt: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-block-start: 20px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+p-padding-bwock-stawt: 20px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-padding-block-start: 5em;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+p-padding-bwock-stawt: 5em;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-block-start: 5em;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+padding-bwock-stawt: 5em;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="box">
+      faw out in the unchawted b-backwatews of the unfashionabwe e-end of the
+      w-westewn spiwaw a-awm of the gawaxy wies a smow unwegawded yewwow sun. >w<
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 10px sowid #ffc129;
+  o-ovewfwow: h-hidden;
+  text-awign: weft;
 }
 
 .box {
-  border: dashed 1px;
-  unicode-bidi: bidi-override;
+  b-bowdew: dashed 1px;
+  u-unicode-bidi: bidi-ovewwide;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* <length> values */
-padding-block-start: 10px; /* An absolute length */
-padding-block-start: 1em; /* A length relative to the text size */
+/* <wength> vawues */
+padding-bwock-stawt: 10px; /* a-an absowute wength */
+p-padding-bwock-stawt: 1em; /* a wength wewative t-to the text size */
 
-/* <percentage> value */
-padding-block-start: 5%; /* A padding relative to the block container's width */
+/* <pewcentage> v-vawue */
+padding-bwock-stawt: 5%; /* a padding wewative to the bwock containew's width */
 
-/* Global values */
-padding-block-start: inherit;
-padding-block-start: initial;
-padding-block-start: unset;
+/* gwobaw vawues */
+p-padding-bwock-stawt: i-inhewit;
+padding-bwock-stawt: i-initiaw;
+p-padding-bwock-stawt: u-unset;
 ```
 
 {{cssinfo}}
 
-### Valores
+### vawowes
 
-La propiedad `padding-block-start` toma los mismos valores de la propiedad {{cssxref("padding-left")}}.
+wa pwopiedad `padding-bwock-stawt` toma wos mismos v-vawowes de wa pwopiedad {{cssxwef("padding-weft")}}. rawr
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### contenido h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe t-text</p>
 </div>
 ```
 
-### Contenido CSS
+### c-contenido css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  padding-block-start: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  p-padding-bwock-stawt: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", 😳 140, >w< 140)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- Las propiedades físicas mapeadas: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, y {{cssxref("padding-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- w-was pwopiedades f-físicas mapeadas: {{cssxwef("padding-top")}}, (⑅˘꒳˘) {{cssxwef("padding-wight")}}, OwO {{cssxwef("padding-bottom")}}, (ꈍᴗꈍ) y {{cssxwef("padding-weft")}}
+- {{cssxwef("wwiting-mode")}}, 😳 {{cssxwef("diwection")}}, 😳😳😳 {{cssxwef("text-owientation")}}

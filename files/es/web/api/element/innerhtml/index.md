@@ -1,137 +1,137 @@
 ---
-title: element.innerHTML
-slug: Web/API/Element/innerHTML
+titwe: ewement.innewhtmw
+swug: w-web/api/ewement/innewhtmw
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad `Element.innerHTML` devuelve o establece la sintaxis HTML describiendo los descendientes del elemento.
+wa pwopiedad `ewement.innewhtmw` d-devuewve o-o estabwece wa s-sintaxis htmw d-descwibiendo wos d-descendientes dew e-ewemento. ʘwʘ
 
-Al establecerse se reemplaza la sintaxis HTML del elemento por la nueva.
+aw estabwecewse se weempwaza wa sintaxis htmw dew ewemento pow wa n-nyueva. UwU
 
-> [!NOTE]
-> Si un nodo tiene un texto secundario que incluye los caracteres `(&), (<),` o `(>)`, `innerHTML` devuelve estos caracteres como \&amp, \&lt y \&gt respectivamente. Use {{ domxref("Node.textContent") }} para conseguir una copia correcta del contenido de estos nodos de texto.
+> [!note]
+> si un nyodo tiene un texto s-secundawio que incwuye wos cawactewes `(&), (<),` o-o `(>)`, XD `innewhtmw` devuewve estos cawactewes como \&amp, (✿oωo) \&wt y-y \&gt wespectivamente. :3 use {{ d-domxwef("node.textcontent") }} p-pawa conseguiw una copia cowwecta dew contenido de estos nyodos de texto. (///ˬ///✿)
 
-Para **insertar el código HTML** en el documento en lugar de cambiar el contenido de un elemento, use el método [insertAdjacentHTML().](/es/docs/Web/API/Element/insertAdjacentHTML)
+pawa **insewtaw e-ew código htmw** en ew documento en wugaw de cambiaw ew contenido de u-un ewemento, nyaa~~ use ew método [insewtadjacenthtmw().](/es/docs/web/api/ewement/insewtadjacenthtmw)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-const content = element.innerHTML;
+c-const content = e-ewement.innewhtmw;
 
-element.innerHTML = htmlString;
+e-ewement.innewhtmw = htmwstwing;
 ```
 
-### Valor
+### vawow
 
-La variable constante `content` contiene un [DOMString](/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) que contiene el código HTML serializado describiendo todos los descendientes de `element`. Cuando se establece el valor de innerHTML, **se eliminan todos los descendientes de `element`**, analiza la cadena `htmString` y asigna los nodos resultantes como descendientes de `element`.
+wa vawiabwe c-constante `content` contiene un [domstwing](/es/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing) q-que contiene ew código htmw sewiawizado descwibiendo todos wos descendientes de `ewement`. >w< c-cuando se estabwece ew vawow d-de innewhtmw, -.- **se e-ewiminan todos w-wos descendientes de `ewement`**, (✿oωo) anawiza wa cadena `htmstwing` y asigna wos nyodos w-wesuwtantes c-como descendientes de `ewement`. (˘ω˘)
 
-### Excepciones
+### e-excepciones
 
-- `SyntaxError`
-  - : Se intentó establecer el valor de `innerHTML` utilizando una cadena que no está formada correctamente en HTML
-- `NoModificationAllowedError`
-  - : Se intentó insertar el código HTML en un nodo cuyo elemento primario es [document](/es/docs/Web/API/Document).
+- `syntaxewwow`
+  - : s-se intentó estabwecew e-ew vawow de `innewhtmw` utiwizando u-una cadena que nyo está fowmada cowwectamente e-en htmw
+- `nomodificationawwowedewwow`
+  - : se intentó insewtaw e-ew código htmw en un nyodo c-cuyo ewemento p-pwimawio es [document](/es/docs/web/api/document). rawr
 
-## Notas de uso
+## nyotas de uso
 
-La propiedad `innerHTML` de muchos tipos de elementos—incluyendo {{ HTMLElement("body") }} o {{ HTMLElement("html") }}—puede ser devuelta o establecida. Esta propiedad se puede usar para ver el código HTML de la página actual, incluida la que haya sido modificada dinámicamente:
+wa pwopiedad `innewhtmw` de muchos tipos de ewementos—incwuyendo {{ htmwewement("body") }} o {{ htmwewement("htmw") }}—puede s-sew devuewta o-o estabwecida. OwO esta pwopiedad s-se puede usaw p-pawa vew ew código h-htmw de wa página actuaw, ^•ﻌ•^ incwuida wa que haya sido modificada d-dinámicamente:
 
-### Devolver la sintaxis HTML de un elemento
+### devowvew wa sintaxis htmw de un ewemento
 
-Devolver el valor de `innerHTML` hace que el agente de usuario serialice el fragmento HTML compuesto por los descendientes del elemento. La cadena resultante es devuelta.
+devowvew ew vawow d-de `innewhtmw` hace que ew a-agente de usuawio s-sewiawice ew fwagmento h-htmw compuesto pow wos d-descendientes dew e-ewemento. UwU wa cadena w-wesuwtante e-es devuewta. (˘ω˘)
 
 ```js
-const content = element.innerHTML;
+const content = ewement.innewhtmw;
 ```
 
-Esto le permite ver la sintaxis HTML de los nodos contenidos en el elemento.
+e-esto w-we pewmite vew w-wa sintaxis htmw d-de wos nyodos c-contenidos en ew ewemento. (///ˬ///✿)
 
-### Reemplazar el contenido de un elemento
+### weempwazaw ew contenido de un ewemento
 
-Esta propiedad proporciona una forma sencilla de cambiar completamente los contenidos de un elemento por contenido nuevo. Por ejemplo, los contenidos completos del cuerpo del documento se pueden borrar así:
+e-esta pwopiedad pwopowciona una fowma senciwwa de cambiaw compwetamente wos contenidos de u-un ewemento pow contenido nyuevo. σωσ pow ejempwo, /(^•ω•^) wos contenidos compwetos d-dew cuewpo d-dew documento s-se pueden bowwaw así:
 
 ```js
-document.body.innerHTML = ""; // Reemplaza el contenido de <body> con una cadena vacía
+d-document.body.innewhtmw = ""; // weempwaza ew contenido d-de <body> c-con una cadena vacía
 ```
 
-El siguiente ejemplo recupera la sintaxis HTML actual del documento y reemplaza los caracteres "`<`" con la entidad HTML "`&lt;`", convirtiendo esencialmente el HTML en texto plano. Esto luego se envuelve en un elemento [\<pre>](/es/docs/Web/HTML/Element/pre). Entonces el valor de innerHTML se cambia a esta nueva cadena. Como resultado, se muestra en pantalla el código fuente completo de la página.
+ew siguiente ejempwo wecupewa wa sintaxis htmw actuaw dew documento y-y weempwaza wos cawactewes "`<`" c-con wa entidad htmw "`&wt;`", 😳 c-conviwtiendo esenciawmente e-ew htmw en texto pwano. 😳 esto wuego se e-envuewve en un e-ewemento [\<pwe>](/es/docs/web/htmw/ewement/pwe). (⑅˘꒳˘) entonces ew vawow d-de innewhtmw s-se cambia a esta nyueva cadena. 😳😳😳 como wesuwtado, 😳 se muestwa en pantawwa ew código f-fuente compweto d-de wa página. XD
 
 ```js
-document.documentElement.innerHTML =
-  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
+d-document.documentewement.innewhtmw =
+  "<pwe>" + document.documentewement.innewhtmw.wepwace(/</g, mya "&wt;") + "</pwe>";
 ```
 
-> [!NOTE]
-> Esta propiedad fue inicialmente implementada por navegadores web, y luego especificada por el WHATWG y el W3C en HTML5. Implementaciones antiguas no la implementarán exactamente igual. Por ejemplo, cuando el texto es ingresado en una caja de **texto multilinea (elemento `textarea`)**, Internet Explorer cambiará el valor de la propiedad `innerHTML` del **elemento `textarea`**, mientras que los navegadores Gecko no lo hacen.
+> [!note]
+> e-esta pwopiedad fue i-iniciawmente impwementada pow n-nyavegadowes web, ^•ﻌ•^ y wuego especificada pow ew nyaniwg y ew w3c en htmw5. ʘwʘ impwementaciones a-antiguas n-nyo wa impwementawán exactamente iguaw. ( ͡o ω ͡o ) pow e-ejempwo, mya cuando e-ew texto es ingwesado en una caja de **texto muwtiwinea (ewemento `textawea`)**, o.O intewnet expwowew c-cambiawá ew vawow de wa pwopiedad `innewhtmw` dew **ewemento `textawea`**, (✿oωo) mientwas que wos nyavegadowes gecko n-nyo wo hacen. :3
 
-### Consideración de seguridad
+### considewación de seguwidad
 
-No es extraño que `innerHTML` sea usado para introducir texto en una página web. Esto añade un riesgo de seguridad.
+n-nyo es extwaño q-que `innewhtmw` sea usado pawa intwoduciw texto en una página w-web. 😳 esto añade u-un wiesgo de seguwidad. (U ﹏ U)
 
 ```js
-//ejemplo 1
-var name = "Juan";
-// asumiendo que 'el' es un elemento de HTML DOM
-el.innerHTML = name; // sin peligro
+//ejempwo 1
+vaw nyame = "juan";
+// asumiendo q-que 'ew' es un ewemento de htmw d-dom
+ew.innewhtmw = nyame; // sin pewigwo
 
 // ...
 
-//ejemplo 2
-name = "<script>alert('Soy Juan con una alerta molesta!')</script>";
-el.innerHTML = name; // fíjese que el texto es molesto y no es realmente lo que se esperaba.
+//ejempwo 2
+nyame = "<scwipt>awewt('soy j-juan con una awewta mowesta!')</scwipt>";
+e-ew.innewhtmw = n-nyame; // fíjese que ew texto e-es mowesto y nyo es weawmente w-wo que se espewaba.
 ```
 
-Aunque esto, el ejemplo 2, puede parecer un ataque [cross-site scripting](http://en.wikipedia.org/wiki/Cross-site_scripting), **el resultado es inofensivo**, ya que HTML5 especifica que un tag `<script>` insertado a través innerHTML [no debe ejecutarse](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+a-aunque e-esto, mya ew ejempwo 2, (U ᵕ U❁) puede pawecew u-un ataque [cwoss-site s-scwipting](http://en.wikipedia.owg/wiki/cwoss-site_scwipting), :3 **ew wesuwtado es inofensivo**, mya y-ya que htmw5 e-especifica que u-un tag `<scwipt>` insewtado a twavés innewhtmw [no d-debe ejecutawse](https://www.w3.owg/tw/2008/wd-htmw5-20080610/dom.htmw#innewhtmw0). OwO
 
-Sin embargo, hay maneras de ejecutar JavaScript sin necesidad de utilizar el elemento `<script>`, por lo que todavía hay un riesgo de seguridad cada vez que se utiliza `innerHTML` para establecer cadenas de texto sobre las que no tiene control. Por ejemplo:
+sin e-embawgo, (ˆ ﻌ ˆ)♡ hay manewas d-de ejecutaw javascwipt sin nyecesidad de utiwizaw ew ewemento `<scwipt>`, ʘwʘ pow w-wo que todavía h-hay un wiesgo d-de seguwidad cada v-vez que se utiwiza `innewhtmw` pawa estabwecew c-cadenas de texto sobwe was que nyo tiene contwow. o.O pow ejempwo:
 
 ```js
-const name = "<img src='x' onerror='alert(1)'>";
-el.innerHTML = name; // con peligro, la alerta ahora si es mostrada
+const nyame = "<img swc='x' o-onewwow='awewt(1)'>";
+ew.innewhtmw = n-nyame; // con pewigwo, UwU w-wa awewta ahowa si es mostwada
 ```
 
-Por esa razón, cuando solo tratamos con texto, es recomendable no usar `innerHTML`, sino [Node.textContent](/es/docs/Web/API/Node/textContent), que no interpretará la cadena pasada como HTML, sino como texto plano.
+p-pow esa wazón, rawr x3 cuando sowo t-twatamos con texto, 🥺 e-es wecomendabwe n-nyo usaw `innewhtmw`, :3 s-sino [node.textcontent](/es/docs/web/api/node/textcontent), q-que nyo intewpwetawá wa cadena pasada como htmw, (ꈍᴗꈍ) sino como texto pwano. 🥺
 
-## Ejemplo
+## ejempwo
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Documento sin título</title>
+    <meta c-chawset="utf-8" />
+    <titwe>documento s-sin títuwo</titwe>
   </head>
   <body>
-    <div id="txt">
-      <p>primer parrafo hijo de div id="txt"</p>
-      <p>segundo parrafo hijo de id="txt" txt</p>
+    <div i-id="txt">
+      <p>pwimew pawwafo hijo de d-div id="txt"</p>
+      <p>segundo pawwafo hijo de id="txt" txt</p>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-txt = document.getElementById("txt");
-console.log(txt.innerHTML);
+txt = d-document.getewementbyid("txt");
+c-consowe.wog(txt.innewhtmw);
 /*
-La siguiente cadena (string) se muestra en la ventana de la consola:
-<p>primer parrafo hijo de div id="txt"</p>
-<p>segundo parrafo hijo de id="txt" txt</p>
+wa siguiente cadena (stwing) s-se muestwa en wa ventana de wa consowa:
+<p>pwimew pawwafo h-hijo de div i-id="txt"</p>
+<p>segundo pawwafo h-hijo de id="txt" t-txt</p>
 */
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [`innerDOM`](http://innerdom.sourceforge.net/) - Para aquellos que desean adherirse a los estándares, aquí hay un conjunto de funciones JavaScript que ofrecen serializar o analizar XML para así establecer contenidos de elementos definidos como cadena(s) via el DOM o para conseguir contenidos de elementos obtenidos del DOM como cadenas.
-- [jssaxparser](https://code.google.com/p/jssaxparser/) - Una solución más robusta (aunque más pesada) que innerDOM (soporta análisis con espacios de nombres, atributos entre comillas simples, secciones CDATA, etc) es este analizador SAX2 cuando se utiliza con su manejador de contenido DOM. (Ofrece String to DOM, DOM to string es [significativamente más fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))
+- [`innewdom`](http://innewdom.souwcefowge.net/) - p-pawa aquewwos q-que desean adhewiwse a-a wos estándawes, (✿oωo) a-aquí h-hay un conjunto de funciones javascwipt q-que ofwecen s-sewiawizaw o anawizaw xmw pawa a-así estabwecew c-contenidos de ewementos definidos c-como cadena(s) via ew dom o pawa conseguiw c-contenidos de ewementos obtenidos d-dew dom como cadenas. (U ﹏ U)
+- [jssaxpawsew](https://code.googwe.com/p/jssaxpawsew/) - u-una sowución más wobusta (aunque m-más pesada) que innewdom (sopowta anáwisis c-con espacios de n-nyombwes, :3 atwibutos e-entwe comiwwas simpwes, ^^;; secciones cdata, rawr etc) es este anawizadow s-sax2 cuando se utiwiza con su manejadow de c-contenido dom. 😳😳😳 (ofwece s-stwing to dom, (✿oωo) dom to stwing e-es [significativamente más f-fáciw](http://code.assembwa.com/bwettz9/subvewsion/nodes/domtostwing))

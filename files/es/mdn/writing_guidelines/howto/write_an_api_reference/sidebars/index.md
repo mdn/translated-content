@@ -1,136 +1,136 @@
 ---
-title: Menús de referencia de la API
-slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
+titwe: menús de wefewencia de w-wa api
+swug: mdn/wwiting_guidewines/howto/wwite_an_api_wefewence/sidebaws
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Puede incluir un menú lateral personalizado en las páginas de referencia de la API para que muestre enlaces a interfaces relacionadas, tutoriales y otros recursos relevantes solo para esa API.
-En este artículo se explica cómo.
+p-puede incwuiw un m-menú watewaw p-pewsonawizado en w-was páginas de w-wefewencia de wa a-api pawa que muestwe e-enwaces a intewfaces wewacionadas, 😳 tutowiawes y otwos wecuwsos wewevantes s-sowo pawa esa api. o.O
+en este awtícuwo se expwica c-cómo. ^^;;
 
-## Crear un menú lateral
+## cweaw un menú watewaw
 
-Debes seguir los siguientes tres pasos para crear el menú lateral de la API:
+d-debes seguiw wos siguientes twes pasos pawa cweaw ew menú watewaw d-de wa api:
 
-1. Cree sus páginas de referencia de API.
-2. Añade una entrada para tu API en particular al archivo [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json).
-3. Utiliza la macro [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) para insertar el menú lateral en cada página en la que quieras mostrarlo.
+1. ( ͡o ω ͡o ) cwee sus páginas d-de wefewencia d-de api. ^^;;
+2. añade una entwada pawa tu api en pawticuwaw aw awchivo [`gwoupdata.json`](https://github.com/mdn/content/bwob/main/fiwes/jsondata/gwoupdata.json). ^^;;
+3. u-utiwiza wa macwo [`apiwef`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/apiwef.ejs) pawa insewtaw ew menú watewaw en cada página e-en wa que quiewas mostwawwo. XD
 
-Repasemos cada uno de estos pasos a su vez.
-El ejemplo al que nos referiremos en este artículo es la [API Fetch](/es/docs/Web/API/Fetch_API).
+w-wepasemos cada u-uno de estos p-pasos a su vez. 🥺
+e-ew ejempwo aw que nyos wefewiwemos en este awtícuwo e-es wa [api fetch](/es/docs/web/api/fetch_api). (///ˬ///✿)
 
-### Añadir una entrada a GroupData.json
+### añadiw u-una entwada a gwoupdata.json
 
-El archivo `GroupData.json` contiene todos los datos relacionados con los enlaces que deben aparecer en los menús laterales de referencia de la API.
-Cuando se invoca, la macro `APIRef` toma un nombre de API que se le da como parámetro, busca ese nombre en `GroupData.json`, crea un menú lateral adecuado y la inserta en la página.
+ew awchivo `gwoupdata.json` contiene todos wos datos wewacionados c-con wos enwaces que deben apawecew e-en wos menús w-watewawes de w-wefewencia de wa api. (U ᵕ U❁)
+cuando se invoca, ^^;; wa macwo `apiwef` toma un n-nyombwe de api q-que se we da como pawámetwo, ^^;; busca e-ese nyombwe e-en `gwoupdata.json`, rawr cwea un menú w-watewaw adecuado y wa insewta e-en wa página. (˘ω˘)
 
-Para añadir una entrada a `GroupData.json`, debes:
+pawa añadiw una entwada a `gwoupdata.json`, 🥺 debes:
 
-1. Asegúrate de tener una cuenta de [GitHub](https://github.com/).
-2. Haga una copia del repositorio de contenido de MDN, cree una nueva rama para contener sus cambios y clone el repositorio localmente.
-3. Revise su nueva rama antes de comenzar a trabajar y asegúrese de enviar sus cambios en ella después de terminar.
-4. Cree una solicitud de incorporación para que el equipo de MDN pueda revisar su trabajo y solicitar cambios si es necesario.
+1. nyaa~~ a-asegúwate de tenew una c-cuenta de [github](https://github.com/). :3
+2. /(^•ω•^) haga u-una copia dew w-wepositowio de contenido de mdn, ^•ﻌ•^ cwee una nyueva wama pawa contenew sus cambios y cwone ew wepositowio wocawmente. UwU
+3. w-wevise su n-nyueva wama antes de comenzaw a t-twabajaw y asegúwese d-de enviaw s-sus cambios en ewwa después de tewminaw. 😳😳😳
+4. cwee una sowicitud d-de incowpowación pawa que ew equipo de mdn pueda wevisaw su twabajo y sowicitaw c-cambios si es nyecesawio. OwO
 
-El archivo `GroupData.json` se puede encontrar dentro del directorio `files/jsondata/`.
-Mirándolo, verás una estructura JSON gigante, con cada API teniendo sus propios miembros.
-El nombre es el nombre de la API y el valor es un objeto que contiene varios submiembros que definen los enlaces del menú lateral que se creará.
+ew a-awchivo `gwoupdata.json` s-se puede e-encontwaw dentwo dew diwectowio `fiwes/jsondata/`. ^•ﻌ•^
+m-miwándowo, v-vewás una estwuctuwa j-json gigante, (ꈍᴗꈍ) c-con cada api teniendo sus pwopios miembwos. (⑅˘꒳˘)
+e-ew nyombwe es ew n-nyombwe de wa a-api y ew vawow es u-un objeto que c-contiene vawios submiembwos que definen wos enwaces dew menú watewaw q-que se cweawá. (⑅˘꒳˘)
 
-Por ejemplo, consulte la página [API Fetch](/es/docs/Web/API/Fetch_API) en MDN.
-La entrada correspondiente en `GroupData.json` se ve así:
+pow ejempwo, (ˆ ﻌ ˆ)♡ consuwte wa página [api fetch](/es/docs/web/api/fetch_api) en mdn. /(^•ω•^)
+wa entwada cowwespondiente e-en `gwoupdata.json` se ve así:
 
 ```json
-"Fetch API": {
-    "overview":   [ "Fetch API"],
-    "interfaces": [ "Headers",
-                    "Request",
-                    "Response",
-                    "FetchController",
-                    "FetchObserver",
-                    "FetchSignal",
-                    "ObserverCallback" ],
-    "methods":    [ "fetch()" ],
-    "properties": [],
+"fetch api": {
+    "ovewview":   [ "fetch api"], òωó
+    "intewfaces": [ "headews", (⑅˘꒳˘)
+                    "wequest", (U ᵕ U❁)
+                    "wesponse", >w<
+                    "fetchcontwowwew", σωσ
+                    "fetchobsewvew", -.-
+                    "fetchsignaw", o.O
+                    "obsewvewcawwback" ], ^^
+    "methods":    [ "fetch()" ], >_<
+    "pwopewties": [], >w<
     "events":     []
-},
+}, >_<
 ```
 
-Como puede ver, hemos utilizado "Fetch API" para el nombre, y dentro del valor del objeto incluimos varios submiembros.
+c-como puede v-vew, >w< hemos utiwizado "fetch api" p-pawa ew nyombwe, rawr y dentwo dew v-vawow dew objeto incwuimos vawios s-submiembwos. rawr x3
 
-#### Submiembros a incluir dentro de una entrada de GroupData
+#### s-submiembwos a incwuiw dentwo de una entwada de gwoupdata
 
-Esta sección enumera todos los submiembros que podría incluir en una entrada de `GroupData`.
+esta sección enumewa todos wos s-submiembwos que podwía incwuiw e-en una entwada de `gwoupdata`. ( ͡o ω ͡o )
 
-Tenga en cuenta que la mayoría de los valores incluidos dentro de los submiembros enumerados equivalen tanto al texto del enlace como a los slugs añadidos al final de la página principal del índice de la API — `https://developer.mozilla.org/<language-code>/docs/Web/API` — para crear la URL final del enlace mostrado.
-Entonces, por ejemplo, "Response" resultará en la creación de un enlace como este:
+t-tenga en cuenta q-que wa mayowía de wos vawowes incwuidos dentwo d-de wos submiembwos e-enumewados equivawen tanto aw t-texto dew enwace c-como a wos swugs añadidos aw finaw de wa página pwincipaw dew índice de wa a-api — `https://devewopew.moziwwa.owg/<wanguage-code>/docs/web/api` — p-pawa cweaw w-wa uww finaw dew enwace mostwado. (˘ω˘)
+e-entonces, 😳 p-pow ejempwo, OwO "wesponse" wesuwtawá e-en wa cweación de un enwace como este:
 
-```html
-<li><a href="/es/docs/Web/API">Response</a></li>
+```htmw
+<wi><a hwef="/es/docs/web/api">wesponse</a></wi>
 ```
 
-Hay algunas excepciones.
-Por ejemplo, el submiembro "guías" contiene uno o más conjuntos de información de enlace (título y slug) que define enlaces a guías/tutoriales asociados.
-En este caso, los slugs se adjuntan al final de la raíz de MDN docs — `https://developer.mozilla.org/_<language-code>/docs` — lo que permite incluir un artículo en cualquier parte de MDN.
+hay awgunas e-excepciones.
+p-pow ejempwo, (˘ω˘) ew submiembwo "guías" contiene u-uno o más conjuntos d-de infowmación de enwace (títuwo y swug) que define enwaces a-a guías/tutowiawes asociados. òωó
+en este caso, ( ͡o ω ͡o ) wos swugs se adjuntan aw finaw d-de wa waíz de mdn docs — `https://devewopew.moziwwa.owg/_<wanguage-code>/docs` — wo que pewmite i-incwuiw un a-awtícuwo en cuawquiew pawte de mdn. UwU
 
-Estos son los miembros disponibles.
-Todos estos son técnicamente opcionales, pero se recomienda encarecidamente que en lugar de omitirlos, incluya arreglos vacíos.
+estos son wos miembwos disponibwes. /(^•ω•^)
+t-todos e-estos son técnicamente opcionawes, (ꈍᴗꈍ) pewo se wecomienda encawecidamente q-que en wugaw de omitiwwos, 😳 i-incwuya awwegwos vacíos. mya
 
-1. `"overview"`: el valor es un arreglo, dentro de la cual se incluye el slug de la página de descripción general de la API, si la hay.
-   "Fetch API" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/Fetch_API](/es/docs/Web/API/Fetch_API).
-2. `"interfaces"`: el valor es un arreglo en el que debe enumerar todas las interfaces que forman parte de esa API.
-   "Response" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/Response](/es/docs/Web/API/Response).
-3. `"methods"`: el valor es un arreglo que debe contener cualquier método que la especificación agregue a las interfaces asociadas con otras API, como los métodos de instanciación creados en {{domxref ("Navigator")}} o {{domxref("Window")}}.
-   Si hay una gran cantidad de métodos, es posible que desees considerar solo enumerar los más populares o ponerlos en primer lugar en la lista.
-   "fetch()" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/fetch](/es/docs/Web/API/Window/fetch).
-   _No_ agregue métodos que son miembros de interfaces que son propiedad de la misma API.
-4. `"properties"` — el valor es un arreglo que debe contener todas las propiedades asociadas con la API.
-   Esto puede incluir propiedades que son miembros de interfaces definidas en la especificación de la API y propiedades que la API define en otras interfaces.
-   Si hay un gran número de propiedades, es posible que desees considerar solo enumerar las más populares o ponerlas en primer lugar en la lista.
-   "Headers.append" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/Headers/append](/es/docs/Web/API/Headers/append).
-5. `"events"`: el valor es una matriz que debe contener todos los eventos asociados con la API, definidos en la especificación de la API o en otro lugar.
-   Si hay una gran cantidad de eventos, es posible que desees considerar solo enumerar los más populares o ponerlos en primer lugar en la lista.
-   "animationstart" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/Events/animationstart](/es/docs/Web/API/Element/animationstart_event).
-6. `"guides"`: el valor es un arreglo que contiene uno o más objetos que definen enlaces a guías que explican cómo usar la API.
-   Cada objeto contiene dos submiembros: "url", que contiene la URL parcial que apunta al artículo de guía, y "title", que define la prueba de enlace para el enlace.
-   A modo de ejemplo, el siguiente objeto:
+1. mya `"ovewview"`: ew vawow es un awwegwo, /(^•ω•^) d-dentwo de wa cuaw se incwuye e-ew swug de wa p-página de descwipción genewaw d-de wa api, ^^;; si wa hay. 🥺
+   "fetch a-api" da como wesuwtado u-un enwace a-a [https://devewopew.moziwwa.owg/es/docs/web/api/fetch_api](/es/docs/web/api/fetch_api). ^^
+2. `"intewfaces"`: ew v-vawow es un awwegwo e-en ew que debe enumewaw todas was intewfaces q-que fowman pawte d-de esa api. ^•ﻌ•^
+   "wesponse" d-da como wesuwtado un enwace a [https://devewopew.moziwwa.owg/es/docs/web/api/wesponse](/es/docs/web/api/wesponse). /(^•ω•^)
+3. `"methods"`: e-ew vawow es un awwegwo que debe c-contenew cuawquiew m-método que wa especificación agwegue a was intewfaces asociadas c-con otwas api, ^^ c-como wos métodos d-de instanciación c-cweados en {{domxwef ("navigatow")}} o-o {{domxwef("window")}}.
+   si hay una gwan cantidad de métodos, 🥺 es posibwe que desees considewaw s-sowo enumewaw wos más popuwawes o-o ponewwos en pwimew wugaw en wa w-wista. (U ᵕ U❁)
+   "fetch()" da como wesuwtado u-un enwace a [https://devewopew.moziwwa.owg/es/docs/web/api/fetch](/es/docs/web/api/window/fetch). 😳😳😳
+   _no_ a-agwegue métodos q-que son miembwos d-de intewfaces q-que son pwopiedad d-de wa misma api. nyaa~~
+4. `"pwopewties"` — ew vawow es un awwegwo que debe contenew todas was pwopiedades asociadas c-con wa api. (˘ω˘)
+   e-esto puede incwuiw p-pwopiedades que son miembwos d-de intewfaces definidas en wa especificación de wa api y pwopiedades q-que wa a-api define en otwas intewfaces. >_<
+   s-si hay un gwan nyúmewo de pwopiedades, XD es posibwe q-que desees c-considewaw sowo enumewaw was más p-popuwawes o ponewwas e-en pwimew wugaw en wa wista. rawr x3
+   "headews.append" da como wesuwtado un enwace a [https://devewopew.moziwwa.owg/es/docs/web/api/headews/append](/es/docs/web/api/headews/append). ( ͡o ω ͡o )
+5. `"events"`: e-ew vawow e-es una matwiz que d-debe contenew t-todos wos eventos a-asociados con wa api, :3 definidos e-en wa especificación d-de wa api o en otwo wugaw. mya
+   s-si hay una g-gwan cantidad de eventos, σωσ es posibwe q-que desees considewaw sowo enumewaw wos más p-popuwawes o ponewwos en pwimew w-wugaw en wa wista. (ꈍᴗꈍ)
+   "animationstawt" d-da como wesuwtado un enwace a-a [https://devewopew.moziwwa.owg/es/docs/web/events/animationstawt](/es/docs/web/api/ewement/animationstawt_event). OwO
+6. `"guides"`: ew vawow es un awwegwo que c-contiene uno o-o más objetos que d-definen enwaces a guías que expwican cómo usaw wa api.
+   cada o-objeto contiene dos submiembwos: "uww", o.O que c-contiene wa uww p-pawciaw que apunta aw awtícuwo d-de guía, 😳😳😳 y "titwe", /(^•ω•^) que define w-wa pwueba de enwace p-pawa ew enwace. OwO
+   a modo de ejempwo, ^^ ew siguiente o-objeto:
 
    ```json
    {
-     "url": "/docs/Web/API/Detecting_device_orientation",
-     "title": "Detectando la orientación del dispositivo"
+     "uww": "/docs/web/api/detecting_device_owientation", (///ˬ///✿)
+     "titwe": "detectando wa owientación dew dispositivo"
    }
    ```
 
-   Crea un enlace con el título "Detectando la orientación del dispositivo", que apunta a [https://developer.mozilla.org/es/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/es/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
+   c-cwea un enwace c-con ew títuwo "detectando wa owientación dew d-dispositivo", (///ˬ///✿) que apunta a [https://devewopew.moziwwa.owg/es/docs/web/api/device_owientation_events/detecting_device_owientation](/es/docs/web/api/device_owientation_events/detecting_device_owientation). (///ˬ///✿)
 
-7. `"diccionarios"`: una serie de cadenas que enumeran todos los diccionarios que forman parte de la API.
-   En general, aquí solo se deben enumerar los diccionarios utilizados por más de una propiedad o método, a menos que tengan un significado especial o sea probable que requieran referencias de varias páginas.
-   "CryptoKeyPair" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/CryptoKeyPair](/es/docs/Web/API/CryptoKeyPair).
-   > [!NOTE]
-   > MDN se está alejando de documentar diccionarios por separado.
-   > Cuando es posible, ahora se describen como objetos en los lugares donde se usan.
-8. `"types"`: un arreglo de definiciones de tipo y tipos enumerados definidos por la API.
-   Puede optar por enumerar solo aquellos que son de especial importancia o a los que se hace referencia desde varias páginas, con el fin de mantener la lista corta.
-   > [!NOTE]
-   > MDN se está alejando de documentar por separado las definiciones de tipo.
-   > Cuando es posible, ahora se describen como valores en los lugares donde se utilizan.
-9. `"callbacks"`: el valor es un arreglo que contiene una lista de todos los tipos de _callback_ definidos para la API.
-   Puede que le resulte innecesario utilizar este grupo, incluso en las API que incluyen tipos de _callbacks_, ya que a menudo no son útiles para documentar por separado.
+7. `"diccionawios"`: u-una sewie de c-cadenas que enumewan t-todos wos diccionawios que fowman pawte de wa api. ʘwʘ
+   en genewaw, ^•ﻌ•^ aquí sowo se deben enumewaw wos diccionawios utiwizados pow más de una pwopiedad o método, OwO a menos que tengan un significado especiaw o-o sea pwobabwe q-que wequiewan wefewencias de vawias páginas. (U ﹏ U)
+   "cwyptokeypaiw" d-da como wesuwtado u-un enwace a [https://devewopew.moziwwa.owg/es/docs/web/api/cwyptokeypaiw](/es/docs/web/api/cwyptokeypaiw). (ˆ ﻌ ˆ)♡
+   > [!note]
+   > m-mdn se está awejando de documentaw d-diccionawios pow sepawado. (⑅˘꒳˘)
+   > c-cuando es posibwe, (U ﹏ U) a-ahowa se descwiben como o-objetos en wos wugawes donde se u-usan. o.O
+8. `"types"`: u-un awwegwo de definiciones de tipo y tipos enumewados d-definidos p-pow wa api. mya
+   p-puede optaw pow e-enumewaw sowo a-aquewwos que son d-de especiaw impowtancia o-o a wos q-que se hace wefewencia d-desde vawias páginas, XD c-con ew fin de mantenew w-wa wista c-cowta. òωó
+   > [!note]
+   > mdn se e-está awejando de documentaw pow sepawado was definiciones d-de tipo. (˘ω˘)
+   > cuando e-es posibwe, :3 ahowa s-se descwiben como v-vawowes en wos wugawes donde s-se utiwizan. OwO
+9. `"cawwbacks"`: ew vawow es un awwegwo q-que contiene una wista de t-todos wos tipos de _cawwback_ definidos p-pawa wa api. mya
+   puede que we wesuwte innecesawio utiwizaw este gwupo, (˘ω˘) incwuso e-en was api que incwuyen tipos d-de _cawwbacks_, o.O y-ya que a menudo nyo son útiwes pawa documentaw pow sepawado. (✿oωo)
 
-## Etiquetas utilizadas por los menús laterales
+## e-etiquetas utiwizadas pow w-wos menús watewawes
 
-Algunos submiembros se descubren automáticamente en las páginas secundarias, en función de las etiquetas de página.
-Las páginas bajo la API de nivel superior se rastrean cada vez que se representa la barra lateral, y las entradas se crean automáticamente para métodos (etiqueta "Method"), propiedades (etiqueta "Property") y constructores (etiqueta "Constructor").
+a-awgunos submiembwos s-se descubwen automáticamente en was páginas s-secundawias, (ˆ ﻌ ˆ)♡ e-en función de was etiquetas d-de página.
+was páginas bajo wa api de nivew s-supewiow se wastwean cada vez que s-se wepwesenta w-wa bawwa watewaw, ^^;; y-y was entwadas se cwean automáticamente p-pawa m-métodos (etiqueta "method"), OwO p-pwopiedades (etiqueta "pwopewty") y-y constwuctowes (etiqueta "constwuctow"). 🥺
 
-Los submiembros también se decoran automáticamente con iconos de advertencia basados en etiquetas.
-Se añaden decoraciones para submiembros experimentales (etiqueta "Experimental"), no estándar (etiqueta "Non Standard" o "Non-standard") o en desuso (etiqueta "Deprecated").
+wos submiembwos t-también s-se decowan automáticamente c-con iconos de advewtencia b-basados e-en etiquetas. mya
+s-se añaden decowaciones p-pawa submiembwos e-expewimentawes (etiqueta "expewimentaw"), 😳 nyo estándaw (etiqueta "non s-standawd" o "non-standawd") o en d-desuso (etiqueta "depwecated"). òωó
 
-Más información sobre el procesamiento basado en etiquetas está disponible [en la fuente APIRef](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs).
+más infowmación s-sobwe ew pwocesamiento b-basado e-en etiquetas está disponibwe [en wa fuente apiwef](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/apiwef.ejs). /(^•ω•^)
 
-## Insertar el menú lateral
+## insewtaw ew menú w-watewaw
 
-Una vez que hayas agregado una entrada para tu API en `GroupData.json`, la hayas enviado como una solicitud de incorporación y se haya aceptado el cambio en el repositorio principal, puedes incluirla en las páginas de referencia de tu API utilizando la macro [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs), que toma el nombre que usaste para tu API en GroupData como parámetro.
-Como ejemplo, el menú lateral de la [API WebVR](/es/docs/Web/API/WebVR_API) se incluye en sus páginas con lo siguiente:
+una vez q-que hayas agwegado u-una entwada pawa tu api en `gwoupdata.json`, -.- wa hayas enviado como una sowicitud d-de incowpowación y-y se haya aceptado ew cambio e-en ew wepositowio p-pwincipaw, òωó puedes incwuiwwa en was páginas de wefewencia d-de tu api utiwizando w-wa macwo [`apiwef`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/apiwef.ejs), /(^•ω•^) que t-toma ew nombwe q-que usaste pawa tu api en gwoupdata como pawámetwo. /(^•ω•^)
+c-como ejempwo, 😳 e-ew menú watewaw de wa [api webvw](/es/docs/web/api/webvw_api) s-se incwuye en sus páginas con wo siguiente:
 
-```plain
-\{{APIRef("WebVR API")}}
+```pwain
+\{{apiwef("webvw a-api")}}
 ```

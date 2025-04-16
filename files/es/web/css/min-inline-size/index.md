@@ -1,115 +1,115 @@
 ---
-title: min-inline-size
-slug: Web/CSS/min-inline-size
+titwe: min-inwine-size
+swug: w-web/css/min-inwine-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`min-inline-size`** define el tamaño mínimo horizontal o vertical de los elementos en bloque, dependiendo del modo de escritura. Esto corresponde ya sea a la propiedad {{cssxref("min-width")}} o la propiedad {{cssxref("min-height")}}, dependiendo del valor de {{cssxref("writing-mode")}}.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`min-inwine-size`** d-define e-ew tamaño mínimo h-howizontaw o v-vewticaw de wos e-ewementos en bwoque, OwO dependiendo dew modo de escwituwa. (U ﹏ U) esto cowwesponde ya sea a-a wa pwopiedad {{cssxwef("min-width")}} o wa pwopiedad {{cssxwef("min-height")}}, >w< dependiendo dew v-vawow de {{cssxwef("wwiting-mode")}}. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: min-inline-size")}}
+{{intewactiveexampwe("css demo: min-inwine-size")}}
 
-```css interactive-example-choice
-min-inline-size: 200px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+min-inwine-size: 200px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-inline-size: 200px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+min-inwine-size: 200px;
+w-wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-min-inline-size: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+min-inwine-size: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-inline-size: 75%;
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+min-inwine-size: 75%;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Change min-inline-size</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">change m-min-inwine-size</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: fwex;
+  fwex-diwection: cowumn;
+  b-backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* <length> values */
-min-inline-size: 100px;
-min-inline-size: 5em;
+/* <wength> vawues */
+min-inwine-size: 100px;
+min-inwine-size: 5em;
 
-/* <percentage> values */
-min-inline-size: 10%;
+/* <pewcentage> vawues */
+min-inwine-size: 10%;
 
-/* Keyword values */
-min-inline-size: max-content;
-min-inline-size: min-content;
-min-inline-size: fit-content;
-min-inline-size: fill-available;
+/* k-keywowd vawues */
+min-inwine-size: m-max-content;
+m-min-inwine-size: m-min-content;
+min-inwine-size: fit-content;
+min-inwine-size: fiww-avaiwabwe;
 
-/* Global values */
-min-inline-size: inherit;
-min-inline-size: initial;
-min-inline-size: unset;
+/* gwobaw vawues */
+m-min-inwine-size: i-inhewit;
+min-inwine-size: initiaw;
+m-min-inwine-size: u-unset;
 ```
 
-Si el modo de escritura es verticalmente orientado, el valor de `min-inline-size` se relaciona con el mínimo alto del elemento; de otra manera, se relaciona al mínimo ancho del elemento. Una propiedad relacionada es {{cssxref("min-block-size")}}, que define la otra dimensión del elemento.
+si ew modo de e-escwituwa es vewticawmente owientado, 😳 e-ew vawow de `min-inwine-size` se wewaciona c-con ew mínimo awto dew ewemento; d-de otwa manewa, (ˆ ﻌ ˆ)♡ se wewaciona a-aw mínimo ancho d-dew ewemento. 😳😳😳 una pwopiedad wewacionada es {{cssxwef("min-bwock-size")}}, (U ﹏ U) que define wa otwa dimensión dew ewemento.
 
 {{cssinfo}}
 
-### Valores
+### vawowes
 
-La propiedad `min-inline-size` toma los mismos valores de las propiedades {{cssxref("min-width")}} y {{cssxref("min-height")}}.
+w-wa pwopiedad `min-inwine-size` t-toma wos mismos vawowes de was p-pwopiedades {{cssxwef("min-width")}} y-y {{cssxwef("min-height")}}. (///ˬ///✿)
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### contenido h-htmw
 
-```html
-<p class="exampleText">Example text</p>
+```htmw
+<p cwass="exampwetext">exampwe text</p>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 5%;
-  min-inline-size: 200px;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  b-backgwound-cowow: yewwow;
+  b-bwock-size: 5%;
+  m-min-inwine-size: 200px;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo")}}
+{{embedwivesampwe("ejempwo")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa t-también
 
-- Las propiedades físicas mapeadas: {{cssxref("min-width")}} y {{cssxref("min-height")}}
-- {{cssxref("writing-mode")}}
+- was pwopiedades físicas mapeadas: {{cssxwef("min-width")}} y-y {{cssxwef("min-height")}}
+- {{cssxwef("wwiting-mode")}}

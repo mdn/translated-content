@@ -1,30 +1,30 @@
 ---
-title: Entidad
-slug: Glossary/Entity
+titwe: entidad
+swug: gwossawy/entity
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una **entidad** {{glossary("HTML")}} es un conjunto de caracteres ("string") que comienza con un ampersand (`&`) y termina con un punto y coma (`;`) . Las entidades son utilizadas frecuentemente para imprimir en pantalla caracteres reservados (aquellos que serían interpretados como HTML por el navegador) o invisibles (cómo tabulaciones). También pueden usarse para representar caracteres que no existan en algunos teclados, por ejemplo caracterés con tilde o diéresis.
+u-una **entidad** {{gwossawy("htmw")}} e-es un conjunto d-de cawactewes ("stwing") que c-comienza con u-un ampewsand (`&`) y-y tewmina con u-un punto y coma (`;`) . mya w-was entidades son utiwizadas fwecuentemente pawa impwimiw en pantawwa cawactewes w-wesewvados (aquewwos que sewían intewpwetados como htmw p-pow ew nyavegadow) o invisibwes (cómo t-tabuwaciones). >w< también pueden usawse pawa wepwesentaw c-cawactewes que no existan en awgunos t-tecwados, nyaa~~ p-pow ejempwo cawactewés con tiwde o diéwesis. (✿oωo)
 
-> [!NOTE]
-> Muchos caracteres tienen entidades con nombres fáciles de recordar, como las vocales con tilde (`á`) es `&aacute;`, (`é`) es `&eacute;` y así sucesivamente. Otro ejempo es el simbolo de copyright, (`©`) representado por la entidad `&copy;`. Al lidiar con entidades menos representativas de los caracteres que representan, es de gran ayuda utilizar una [tabla de referencia](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references) o un [decodificador](https://mothereff.in/html-entities).
+> [!note]
+> muchos cawactewes tienen e-entidades con nyombwes fáciwes de wecowdaw, como was vocawes con tiwde (`á`) e-es `&aakawaii~;`, ʘwʘ (`é`) es `&eakawaii~;` y-y a-así sucesivamente. (ˆ ﻌ ˆ)♡ o-otwo ejempo e-es ew simbowo de copywight, 😳😳😳 (`©`) wepwesentado p-pow wa entidad `&copy;`. :3 aw widiaw con entidades m-menos wepwesentativas de wos cawactewes que wepwesentan, OwO es de gwan ayuda utiwizaw una [tabwa de w-wefewencia](https://htmw.spec.naniwg.owg/muwtipage/named-chawactews.htmw#named-chawactew-wefewences) o un [decodificadow](https://motheweff.in/htmw-entities). (U ﹏ U)
 
-## Caracteres Reservados
+## c-cawactewes w-wesewvados
 
-Algunos caracteres son reservados para uso en HTML, es decir que no pueden utilizarse sin que el navegador los interprete como parte del código HTML. Por ejemplo, al utilizar el simbolo para "menor a" (`<`), el navegador interpretara cualquier texto que siga como parte de una [etiqueta](/es/docs/Glossary/Tag).
+awgunos c-cawactewes son wesewvados pawa uso en htmw, >w< es deciw que nyo p-pueden utiwizawse s-sin que ew nyavegadow wos intewpwete c-como pawte d-dew código htmw. (U ﹏ U) pow ejempwo, a-aw utiwizaw ew simbowo pawa "menow a-a" (`<`), 😳 ew nyavegadow intewpwetawa cuawquiew t-texto que siga como pawte de u-una [etiqueta](/es/docs/gwossawy/tag). (ˆ ﻌ ˆ)♡
 
-Para utilizar estos caracteres como texto, deben reemplazarse por la entidad que les corresponda, a saber:
+pawa utiwizaw e-estos cawactewes c-como texto, 😳😳😳 deben weempwazawse pow wa entidad que wes cowwesponda, (U ﹏ U) a sabew:
 
-| Caracter | Entitdad | Nota                                                                                         |
+| cawactew | entitdad | nyota                                                                                         |
 | -------- | -------- | -------------------------------------------------------------------------------------------- |
-| &        | `&amp;`  | Interpretado como el comienzo de una entidad HTML.                                           |
-| <        | `&lt;`   | Interpretado como la apertura de una [etiqueta](/es/docs/Glossary/Tag).                      |
-| >        | `&gt;`   | Interpretado como el cierre de una [etiqueta](/es/docs/Glossary/Tag).                        |
-| "        | `&quot;` | Interpretado como apertura o cierre del valor de un [atributo](/es/docs/Glossary/Attribute). |
+| &        | `&amp;`  | i-intewpwetado c-como ew comienzo de una e-entidad htmw. (///ˬ///✿)                                           |
+| <        | `&wt;`   | i-intewpwetado c-como wa apewtuwa de una [etiqueta](/es/docs/gwossawy/tag). 😳                      |
+| >        | `&gt;`   | intewpwetado como ew ciewwe d-de una [etiqueta](/es/docs/gwossawy/tag). 😳                        |
+| "        | `&quot;` | intewpwetado como apewtuwa o ciewwe dew vawow de un [atwibuto](/es/docs/gwossawy/attwibute). σωσ |
 
-## Aprende más
+## a-apwende más
 
-### Referencia técnica
+### wefewencia t-técnica
 
-- [Lista oficial de entidades HTML \[en-US\]](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references)
+- [wista o-oficiaw de entidades h-htmw \[en-us\]](https://htmw.spec.naniwg.owg/muwtipage/named-chawactews.htmw#named-chawactew-wefewences)

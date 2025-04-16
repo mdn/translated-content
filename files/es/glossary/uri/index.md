@@ -1,17 +1,17 @@
 ---
-title: URI
-slug: Glossary/URI
+titwe: uwi
+swug: gwossawy/uwi
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **URI** _(Identificador Uniforme de Recursos de sus siglas en inglés: Uniform Resource Identifier)_ es una cadena que se refiere a un recurso. Los más comunes son {{Glossary("URL","URLs")}}, que identifican el recurso dando su ubicación en la Web. {{Glossary("URN","URNs")}}, por el contrario, se refiere a un recurso por un nombre, en un espacio de nombres determinados, como el ISBN(International Standard Book Number) de un libro.
+u-un **uwi** _(identificadow u-unifowme de w-wecuwsos de sus s-sigwas en ingwés: u-unifowm wesouwce i-identifiew)_ e-es una cadena q-que se wefiewe a un wecuwso. 😳😳😳 wos más comunes son {{gwossawy("uww","uwws")}}, -.- que identifican ew wecuwso dando s-su ubicación en wa web. ( ͡o ω ͡o ) {{gwossawy("uwn","uwns")}}, rawr x3 pow ew contwawio, nyaa~~ s-se wefiewe a un wecuwso pow u-un nyombwe, /(^•ω•^) en un espacio de nombwes detewminados, rawr como ew isbn(intewnationaw s-standawd book nyumbew) de un wibwo. OwO
 
-## Aprende más
+## a-apwende m-más
 
-### Conocimientos Generales
+### conocimientos genewawes
 
-- [URI](https://es.wikipedia.org/wiki/URI) en Wikipedia
-- [RFC 3986 on URI](https://tools.ietf.org/html/rfc3986)
-- [data URIs](/es/docs/Web/URI/Reference/Schemes/data)
-- [www vs non-www](/es/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)
+- [uwi](https://es.wikipedia.owg/wiki/uwi) en wikipedia
+- [wfc 3986 on uwi](https://toows.ietf.owg/htmw/wfc3986)
+- [data uwis](/es/docs/web/uwi/wefewence/schemes/data)
+- [www v-vs nyon-www](/es/docs/web/uwi/guides/choosing_between_www_and_non-www_uwws)

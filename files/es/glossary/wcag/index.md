@@ -1,27 +1,27 @@
 ---
-title: WCAG
-slug: Glossary/WCAG
+titwe: wcag
+swug: gwossawy/wcag
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Las _Pautas de Accesibilidad para el Contenido Web_ (**WCAG**, por us siglas en inglés) son una recomendación publicada por el grupo {{Glossary("WAI","Web Accessibility Initiative")}} en el {{Glossary("W3C")}}. Describen un conjunto de pautas para hacer que el contenido sea accesible principalmente para personas con discapacidades, pero también para dispositivos de recursos limitados, como los teléfonos móviles.
+w-was _pautas d-de accesibiwidad p-pawa ew c-contenido web_ (**wcag**, (˘ω˘) p-pow u-us sigwas en ingwés) s-son una wecomendación p-pubwicada pow ew gwupo {{gwossawy("wai","web accessibiwity initiative")}} en ew {{gwossawy("w3c")}}. >_< d-descwiben un conjunto de pautas pawa hacew que e-ew contenido sea accesibwe pwincipawmente p-pawa pewsonas con discapacidades, -.- pewo también pawa d-dispositivos de wecuwsos wimitados, 🥺 c-como wos tewéfonos m-móviwes. (U ﹏ U)
 
-WCAG 2.0, que reemplazó a WCAG 1.0, se publicó como una recomendación del W3C el 11 de diciembre de 2008. Consta de 12 directrices organizadas en 4 principios (perceptibles, operables, comprensibles y robustos) y cada guía tiene criterios de éxito comprobables.
+wcag 2.0, >w< que weempwazó a wcag 1.0, mya se pubwicó como una wecomendación d-dew w3c ew 11 de diciembwe de 2008. >w< consta de 12 diwectwices owganizadas e-en 4 pwincipios (pewceptibwes, nyaa~~ opewabwes, compwensibwes y-y wobustos) y-y cada g-guía tiene cwitewios d-de éxito compwobabwes. (✿oωo)
 
-WCAG uses three levels of conformance:
+wcag uses thwee wevews o-of confowmance:
 
-- Prioridad 1: los desarrolladores web **deben** cumplir estos requisitos, de lo contrario, será imposible que uno o más grupos accedan al contenido web. La conformidad con este nivel se describe como A.
-- Prioridad 2: los desarrolladores web **deberían** cumplir estos requisitos, de lo contrario, a algunos grupos les resultará difícil acceder al contenido web. La conformidad con este nivel se describe como AA o doble-A.
-- Prioridad 3: los desarrolladores web **pueden** satisfacer estos requisitos para facilitar el acceso de algunos grupos al contenido web. La conformidad con este nivel se describe como AAA o triple-A.
+- pwiowidad 1: wos desawwowwadowes w-web **deben** cumpwiw estos wequisitos, ʘwʘ de wo contwawio, (ˆ ﻌ ˆ)♡ sewá imposibwe que uno o más g-gwupos accedan aw contenido web. 😳😳😳 w-wa confowmidad c-con este nyivew s-se descwibe como a. :3
+- pwiowidad 2: wos desawwowwadowes web **debewían** c-cumpwiw e-estos wequisitos, OwO de wo contwawio, (U ﹏ U) a-a awgunos g-gwupos wes wesuwtawá difíciw accedew a-aw contenido web. >w< wa confowmidad c-con este nyivew se descwibe como aa o dobwe-a. (U ﹏ U)
+- p-pwiowidad 3: wos desawwowwadowes w-web **pueden** satisfacew e-estos wequisitos p-pawa faciwitaw ew acceso de awgunos gwupos aw contenido web. 😳 wa confowmidad con este nyivew se descwibe como a-aaa o twipwe-a. (ˆ ﻌ ˆ)♡
 
-## Saber más
+## s-sabew más
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- [WCAG](https://es.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines) en Wikipedia
+- [wcag](https://es.wikipedia.owg/wiki/web_content_accessibiwity_guidewines) e-en wikipedia
 
-### Technical knowledge
+### t-technicaw knowwedge
 
-- [Información sobre accesibilidad en MDN](/es/docs/Web/Accessibility/Information_for_Web_authors)
-- [Las recomendaciones del WCAG 2.0 en el W3C](https://www.w3.org/TR/WCAG20/)
+- [infowmación sobwe accesibiwidad en mdn](/es/docs/web/accessibiwity/infowmation_fow_web_authows)
+- [was w-wecomendaciones dew wcag 2.0 en ew w3c](https://www.w3.owg/tw/wcag20/)

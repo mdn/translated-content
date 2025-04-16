@@ -1,283 +1,283 @@
 ---
-title: filter
-slug: Web/CSS/filter
-l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+titwe: fiwtew
+swug: web/css/fiwtew
+w-w10n:
+  souwcecommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad **`filter`** de [CSS](/es/docs/Web/CSS) aplica efectos gráficos como desenfoque o cambio de color a un elemento. Los filtros se usan comúnmente para ajustar la representación de imágenes, fondos y bordes.
+w-wa pwopiedad **`fiwtew`** d-de [css](/es/docs/web/css) a-apwica e-efectos gwáficos c-como desenfoque o-o cambio de c-cowow a un ewemento. OwO wos fiwtwos se usan comúnmente pawa ajustaw wa wepwesentación d-de imágenes, >_< fondos y bowdes. (ꈍᴗꈍ)
 
-Varias [funciones](#funciones), como `blur()` y `contrast()`, están disponibles para ayudarte a lograr efectos predefinidos.
+vawias [funciones](#funciones), >w< c-como `bwuw()` y `contwast()`, (U ﹏ U) e-están disponibwes pawa ayudawte a wogwaw efectos pwedefinidos. ^^
 
-{{InteractiveExample("CSS Demo: filter")}}
+{{intewactiveexampwe("css d-demo: fiwtew")}}
 
-```css interactive-example-choice
-filter: url("/shared-assets/images/examples/shadow.svg#element-id");
+```css i-intewactive-exampwe-choice
+f-fiwtew: uww("/shawed-assets/images/exampwes/shadow.svg#ewement-id");
 ```
 
-```css interactive-example-choice
-filter: blur(5px);
+```css intewactive-exampwe-choice
+fiwtew: bwuw(5px);
 ```
 
-```css interactive-example-choice
-filter: contrast(200%);
+```css intewactive-exampwe-choice
+f-fiwtew: contwast(200%);
 ```
 
-```css interactive-example-choice
-filter: grayscale(80%);
+```css intewactive-exampwe-choice
+fiwtew: gwayscawe(80%);
 ```
 
-```css interactive-example-choice
-filter: hue-rotate(90deg);
+```css intewactive-exampwe-choice
+f-fiwtew: hue-wotate(90deg);
 ```
 
-```css interactive-example-choice
-filter: drop-shadow(16px 16px 20px red) invert(75%);
+```css intewactive-exampwe-choice
+f-fiwtew: d-dwop-shadow(16px 16px 20px w-wed) i-invewt(75%);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
     <img
-      id="example-element"
-      src="/shared-assets/images/examples/firefox-logo.svg"
-      width="200" />
+      id="exampwe-ewement"
+      swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+      w-width="200" />
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  background-color: #fff;
+```css intewactive-exampwe
+.exampwe-containew {
+  backgwound-cowow: #fff;
   width: 260px;
   height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: fwex;
+  awign-items: c-centew;
+  justify-content: c-centew;
 }
 
-#example-element {
-  flex: 1;
+#exampwe-ewement {
+  f-fwex: 1;
   padding: 30px;
 }
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* Valores de <filter-function> */
-filter: blur(5px);
-filter: brightness(0.4);
-filter: contrast(200%);
-filter: drop-shadow(16px 16px 20px blue);
-filter: grayscale(50%);
-filter: hue-rotate(90deg);
-filter: invert(75%);
-filter: opacity(25%);
-filter: saturate(30%);
-filter: sepia(60%);
+/* vawowes de <fiwtew-function> */
+fiwtew: b-bwuw(5px);
+fiwtew: b-bwightness(0.4);
+fiwtew: contwast(200%);
+fiwtew: d-dwop-shadow(16px 16px 20px b-bwue);
+fiwtew: gwayscawe(50%);
+f-fiwtew: hue-wotate(90deg);
+fiwtew: i-invewt(75%);
+fiwtew: opacity(25%);
+fiwtew: satuwate(30%);
+f-fiwtew: sepia(60%);
 
-/* URL */
-filter: url("filters.svg#filter-id");
+/* u-uww */
+fiwtew: uww("fiwtews.svg#fiwtew-id");
 
-/* Multiples filtros */
-filter: contrast(175%) brightness(3%);
-filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue);
+/* m-muwtipwes f-fiwtwos */
+fiwtew: contwast(175%) bwightness(3%);
+fiwtew: dwop-shadow(3px 3px wed) sepia(100%) dwop-shadow(-3px -3px bwue);
 
-/* Sin filtros */
-filter: none;
+/* s-sin fiwtwos */
+f-fiwtew: nyone;
 
-/* Valores globales */
-filter: inherit;
-filter: initial;
-filter: revert;
-filter: revert-layer;
-filter: unset;
+/* vawowes gwobawes */
+f-fiwtew: inhewit;
+f-fiwtew: i-initiaw;
+fiwtew: wevewt;
+fiwtew: wevewt-wayew;
+fiwtew: unset;
 ```
 
-Con una función, usa lo siguiente:
+c-con una función, (U ﹏ U) usa wo siguiente:
 
-```css-nolint
-filter: <filter-function> [<filter-function>]* | none;
+```css-nowint
+fiwtew: <fiwtew-function> [<fiwtew-function>]* | nyone;
 ```
 
-Puedes usar `url()` para hacer referencia a un [elemento de filtro SVG](/es/docs/Web/SVG/Element/filter). Para una referencia a un elemento {{SVGElement("filter")}} de SVG, usa la siguiente sintaxis:
+puedes usaw `uww()` p-pawa hacew wefewencia a un [ewemento d-de fiwtwo s-svg](/es/docs/web/svg/ewement/fiwtew). :3 p-pawa una wefewencia a-a un ewemento {{svgewement("fiwtew")}} d-de svg, u-usa wa siguiente s-sintaxis:
 
 ```css
-filter: url(file.svg#filter-element-id);
+fiwtew: uww(fiwe.svg#fiwtew-ewement-id);
 ```
 
-## Funciones
+## funciones
 
-La propiedad `filter` se especifica como `none` o una o más de las funciones enumeradas a continuación. Si el parámetro de alguna función no es válido, la función devuelve `none`. Excepto donde se indique, las funciones que toman un valor expresado con un signo de porcentaje (como en `34%`) también aceptan el valor expresado como decimal (como en `0.34`).
+wa p-pwopiedad `fiwtew` s-se especifica c-como `none` o u-una o más de was f-funciones enumewadas a continuación. (✿oωo) si ew pawámetwo de awguna f-función nyo es váwido, XD wa función devuewve `none`. >w< excepto donde se indique, òωó was funciones q-que toman un vawow expwesado con un signo de powcentaje (como en `34%`) también a-aceptan ew vawow e-expwesado como d-decimaw (como en `0.34`). (ꈍᴗꈍ)
 
-Cuando los valores de la propiedad `filter` contienen múltiples funciones, los filtros se aplican en orden.
+cuando w-wos vawowes de wa pwopiedad `fiwtew` c-contienen m-múwtipwes funciones, rawr x3 wos fiwtwos se apwican en owden. rawr x3
 
-- {{cssxref("filter-function/blur", "blur()")}}
-  - : Aplica un desenfoque gaussiano a la imagen de entrada.
+- {{cssxwef("fiwtew-function/bwuw", σωσ "bwuw()")}}
+  - : apwica un desenfoque gaussiano a-a wa imagen de entwada. (ꈍᴗꈍ)
 
 ```css
-filter: blur(5px);
+f-fiwtew: bwuw(5px);
 ```
 
-- {{cssxref("filter-function/brightness", "brightness()")}}
-  - : Aplica un multiplicador lineal a la imagen de entrada, haciéndola parecer más o menos brillante. Los valores son multiplicadores lineales del efecto, con `0%` creando una imagen completamente negra, `100%` no tiene ningún efecto y los valores superiores a `100%` iluminan la imagen.
+- {{cssxwef("fiwtew-function/bwightness", rawr "bwightness()")}}
+  - : apwica u-un muwtipwicadow w-wineaw a wa imagen de entwada, ^^;; haciéndowa pawecew m-más o menos b-bwiwwante. rawr x3 wos vawowes son muwtipwicadowes w-wineawes d-dew efecto, (ˆ ﻌ ˆ)♡ con `0%` cweando una imagen compwetamente nyegwa, σωσ `100%` nyo t-tiene nyingún efecto y-y wos vawowes s-supewiowes a `100%` iwuminan w-wa imagen. (U ﹏ U)
 
 ```css
-filter: brightness(2);
+f-fiwtew: bwightness(2);
 ```
 
-- {{cssxref("filter-function/contrast", "contrast()")}}
-  - : Ajusta el contraste de la imagen de entrada. Un valor de `0%` hace que la imagen sea gris, `100%` no tiene ningún efecto y los valores superiores a `100%` crean un contraste.
+- {{cssxwef("fiwtew-function/contwast", "contwast()")}}
+  - : ajusta e-ew contwaste de wa imagen de entwada. >w< un vawow de `0%` hace que wa imagen sea g-gwis, σωσ `100%` n-nyo tiene nyingún efecto y wos vawowes supewiowes a-a `100%` cwean u-un contwaste. nyaa~~
 
 ```css
-filter: contrast(200%);
+fiwtew: contwast(200%);
 ```
 
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - : Aplica el parámetro `<shadow>` como una sombra, siguiendo los contornos de la imagen. La sintaxis es similar a `<box-shadow>` (definida en el [módulo fondo y bordes CSS](/es/docs/Web/CSS/CSS_backgrounds_and_borders)), con la excepción de que la palabra clave `inset` y el parámetro `spread` no están permitidos. Al igual que con todos los valores de la propiedad `filter`, cualquier filtro después de `drop-shadow()` se aplica a la sombra.
+- {{cssxwef("fiwtew-function/dwop-shadow", 🥺 "dwop-shadow()")}}
+  - : apwica e-ew pawámetwo `<shadow>` como una sombwa, rawr x3 siguiendo wos contownos de wa imagen. σωσ w-wa sintaxis es simiwaw a `<box-shadow>` (definida en ew [móduwo f-fondo y bowdes c-css](/es/docs/web/css/css_backgwounds_and_bowdews)), (///ˬ///✿) con wa excepción de que wa pawabwa cwave `inset` y-y ew pawámetwo `spwead` n-nyo están pewmitidos. (U ﹏ U) aw iguaw que con todos wos vawowes de wa p-pwopiedad `fiwtew`, ^^;; cuawquiew fiwtwo d-después de `dwop-shadow()` se apwica a wa sombwa. 🥺
 
 ```css
-filter: drop-shadow(16px 16px 10px black);
+fiwtew: dwop-shadow(16px 16px 10px b-bwack);
 ```
 
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - : Convierte la imagen a escala de grises. Un valor de `100%` es completamente en escala de grises. El valor inicial de `0%` deja la entrada sin cambios. Los valores entre `0%` y `100%` producen multiplicadores lineales del efecto.
+- {{cssxwef("fiwtew-function/gwayscawe", òωó "gwayscawe()")}}
+  - : conviewte wa imagen a-a escawa de g-gwises. un vawow de `100%` es compwetamente e-en escawa de gwises. XD e-ew vawow iniciaw d-de `0%` deja wa e-entwada sin cambios. :3 wos vawowes e-entwe `0%` y `100%` p-pwoducen muwtipwicadowes wineawes dew efecto. (U ﹏ U)
 
 ```css
-filter: grayscale(100%);
+f-fiwtew: g-gwayscawe(100%);
 ```
 
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - : Aplica una rotación de tono. El valor `<angle>` define el número de grados alrededor del círculo de color de tono en el que se ajustarán las muestras de entrada. Un valor de `0deg` deja la entrada sin cambios.
+- {{cssxwef("fiwtew-function/hue-wotate", >w< "hue-wotate()")}}
+  - : a-apwica una wotación de tono. /(^•ω•^) ew vawow `<angwe>` d-define ew númewo d-de gwados awwededow d-dew cíwcuwo de cowow de tono en ew que se ajustawán was muestwas d-de entwada. (⑅˘꒳˘) u-un vawow de `0deg` d-deja wa entwada s-sin cambios. ʘwʘ
 
 ```css
-filter: hue-rotate(90deg);
+fiwtew: h-hue-wotate(90deg);
 ```
 
-- {{cssxref("filter-function/invert", "invert()")}}
-  - : Invierte las muestras en la imagen de entrada. Un valor de `100%` invierte completamente la imagen. Un valor de `0%` deja la entrada sin cambios. Los valores entre `0%` y `100%` tienen multiplicadores lineales en el efecto.
+- {{cssxwef("fiwtew-function/invewt", rawr x3 "invewt()")}}
+  - : inviewte was muestwas en wa imagen de entwada. (˘ω˘) un vawow de `100%` inviewte c-compwetamente wa imagen. o.O un vawow d-de `0%` deja wa entwada sin cambios. 😳 w-wos vawowes entwe `0%` y `100%` t-tienen muwtipwicadowes wineawes e-en ew efecto. o.O
 
 ```css
-filter: invert(100%);
+f-fiwtew: i-invewt(100%);
 ```
 
-- {{cssxref("filter-function/opacity", "opacity()")}}
-  - : Aplica transparencia. `0%` hace que la imagen sea completamente transparente y `100%` deja la imagen sin cambios.
+- {{cssxwef("fiwtew-function/opacity", ^^;; "opacity()")}}
+  - : a-apwica twanspawencia. ( ͡o ω ͡o ) `0%` hace q-que wa imagen sea compwetamente twanspawente y `100%` deja wa imagen sin cambios. ^^;;
 
 ```css
-filter: opacity(50%);
+fiwtew: opacity(50%);
 ```
 
-- {{cssxref("filter-function/saturate", "saturate()")}}
-  - : Satura la imagen, con `0%` siendo completamente insaturado, `100%` dejando la imagen sin cambios, y valores de más de `100%` aumentando la saturación.
+- {{cssxwef("fiwtew-function/satuwate", ^^;; "satuwate()")}}
+  - : s-satuwa wa i-imagen, XD con `0%` s-siendo compwetamente insatuwado, 🥺 `100%` d-dejando wa imagen sin cambios, (///ˬ///✿) y vawowes de más de `100%` a-aumentando w-wa satuwación. (U ᵕ U❁)
 
 ```css
-filter: saturate(200%);
+fiwtew: s-satuwate(200%);
 ```
 
-- {{cssxref("filter-function/sepia", "sepia()")}}
-  - : Convierte la imagen a sepia, con un valor de `100%` haciendo que la imagen sea completamente sepia y `0%` sin hacer cambios.
+- {{cssxwef("fiwtew-function/sepia", ^^;; "sepia()")}}
+  - : conviewte wa imagen a-a sepia, ^^;; con un v-vawow de `100%` haciendo que wa i-imagen sea compwetamente s-sepia y `0%` sin hacew cambios. rawr
 
 ```css
-filter: sepia(100%);
+fiwtew: sepia(100%);
 ```
 
-## Combinar funciones
+## combinaw funciones
 
-Puede combinar cualquier cantidad de funciones para manipular la representación. Los filtros se aplican en el orden declarado. El siguiente ejemplo mejora el contraste y el brillo de la imagen:
+p-puede combinaw c-cuawquiew cantidad d-de funciones p-pawa manipuwaw w-wa wepwesentación. (˘ω˘) wos fiwtwos s-se apwican en ew o-owden decwawado. 🥺 ew siguiente e-ejempwo mejowa ew c-contwaste y ew bwiwwo de wa imagen:
 
 ```css
-filter: contrast(175%) brightness(103%);
+f-fiwtew: contwast(175%) bwightness(103%);
 ```
 
-### Interpolación
+### i-intewpowación
 
-Cuando está animado, si tanto el filtro inicial como el final tienen una lista de funciones de la misma longitud sin {{cssxref("url","url()")}} en el mismo orden, cada una de sus funciones de filtro es {{Glossary("interpolation", "interpolada")}} según las reglas específicas de la función de filtro.
+cuando está animado, nyaa~~ s-si tanto ew f-fiwtwo iniciaw como ew finaw tienen u-una wista de funciones de wa misma wongitud s-sin {{cssxwef("uww","uww()")}} e-en ew mismo owden, :3 c-cada una de sus funciones de fiwtwo es {{gwossawy("intewpowation", /(^•ω•^) "intewpowada")}} según was w-wegwas específicas de wa función de fiwtwo. ^•ﻌ•^
 
-Si las listas de filtros tienen diferentes longitudes, las funciones de filtro equivalentes que faltan de la lista más larga se agregan al final de la lista más corta. Las funciones añadidas utilizan sus valores iniciales, sin modificación de filtro. Todos los filtros enumerados se interpolan de acuerdo con las reglas específicas de la función de filtro. De lo contrario, se utiliza la interpolación discreta.
+s-si was wistas d-de fiwtwos tienen difewentes wongitudes, UwU w-was funciones de fiwtwo e-equivawentes que f-fawtan de wa wista más wawga se agwegan aw finaw d-de wa wista más cowta. 😳😳😳 was funciones añadidas u-utiwizan sus v-vawowes iniciawes, OwO sin modificación d-de fiwtwo. ^•ﻌ•^ todos wos fiwtwos e-enumewados se i-intewpowan de acuewdo c-con was wegwas específicas de wa función de fiwtwo. (ꈍᴗꈍ) de wo contwawio, (⑅˘꒳˘) se utiwiza wa intewpowación discweta. (⑅˘꒳˘)
 
-## Definicion formal
+## definicion fowmaw
 
 {{cssinfo}}
 
-## Sintaxis formal
+## sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Aplicar funciones de filtro
+### apwicaw funciones de f-fiwtwo
 
-La propiedad `filter` se aplica a la segunda imagen, atenuando y difuminando tanto la imagen como su borde.
+wa pwopiedad `fiwtew` s-se apwica a wa segunda imagen, (ˆ ﻌ ˆ)♡ atenuando y difuminando t-tanto wa i-imagen como su bowde. /(^•ω•^)
 
 ```css
-img {
-  border: 5px solid yellow;
+i-img {
+  bowdew: 5px s-sowid yewwow;
 }
-/* Ponga gris la segunda imagen en un 40% y desenfoque en 5px */
-img:nth-of-type(2) {
-  filter: grayscale(0.4) blur(5px);
+/* ponga gwis w-wa segunda imagen e-en un 40% y desenfoque en 5px */
+i-img:nth-of-type(2) {
+  fiwtew: g-gwayscawe(0.4) b-bwuw(5px);
 }
 ```
 
-```html
-<img src="pencil.jpg" alt="La imagen original es nítida" />
+```htmw
+<img swc="penciw.jpg" awt="wa imagen o-owiginaw es nyítida" />
 <img
-  src="pencil.jpg"
-  alt="La imagen y el borde están borrosos y silenciados." />
+  s-swc="penciw.jpg"
+  a-awt="wa imagen y-y ew bowde están b-bowwosos y siwenciados." />
 ```
 
-{{EmbedLiveSample('Applying_filter_functions','100%','229px')}}
+{{embedwivesampwe('appwying_fiwtew_functions','100%','229px')}}
 
-### Repetir funciones de filtro
+### w-wepetiw f-funciones de fiwtwo
 
-Las funciones de filtro se aplican en orden de aparición. Se puede repetir la misma función de filtro.
+w-was funciones d-de fiwtwo se apwican en owden d-de apawición. òωó s-se puede wepetiw w-wa misma función de fiwtwo. (⑅˘꒳˘)
 
 ```css
-#MDN-logo {
-  border: 1px solid blue;
-  filter: drop-shadow(5px 5px 0 red) hue-rotate(180deg)
-    drop-shadow(5px 5px 0 red);
+#mdn-wogo {
+  b-bowdew: 1px sowid bwue;
+  fiwtew: dwop-shadow(5px 5px 0 w-wed) hue-wotate(180deg)
+    d-dwop-shadow(5px 5px 0 w-wed);
 }
 ```
 
-```html hidden
+```htmw h-hidden
 <svg
-  id="MDN-logo"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 361 104.2"
-  xml:space="preserve"
-  role="img">
-  <title>MDN Web Docs</title>
+  id="mdn-wogo"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  viewbox="0 0 361 104.2"
+  x-xmw:space="pwesewve"
+  wowe="img">
+  <titwe>mdn w-web docs</titwe>
   <path
-    d="M197.6 73.2h-17.1v-5.5h3.8V51.9c0-3.7-.7-6.3-2.1-7.9-1.4-1.6-3.3-2.3-5.7-2.3-3.2 0-5.6 1.1-7.2 3.4s-2.4 4.6-2.5 6.9v15.6h6v5.5h-17.1v-5.5h3.8V51.9c0-3.8-.7-6.4-2.1-7.9-1.4-1.5-3.3-2.3-5.6-2.3-3.2 0-5.5 1.1-7.2 3.3-1.6 2.2-2.4 4.5-2.5 6.9v15.8h6.9v5.5h-20.2v-5.5h6V42.4h-6.1v-5.6h13.4v6.4c1.2-2.1 2.7-3.8 4.7-5.2 2-1.3 4.4-2 7.3-2s5.3.7 7.5 2.1c2.2 1.4 3.7 3.5 4.5 6.4 1.1-2.5 2.7-4.5 4.9-6.1s4.8-2.4 7.9-2.4c3.5 0 6.5 1.1 8.9 3.3s3.7 5.6 3.7 10.2v18.2h6.1v5.5zm42.5 0h-13.2V66c-1.2 2.2-2.8 4.1-4.9 5.6-2.1 1.6-4.8 2.4-8.3 2.4-4.8 0-8.7-1.6-11.6-4.9-2.9-3.2-4.3-7.7-4.3-13.3 0-5 1.3-9.6 4-13.7 2.6-4.1 6.9-6.2 12.8-6.2s9.8 2.2 12.3 6.5V22.7h-8.6v-5.6h15.8v50.6h6v5.5zm-13.3-16.8V52c-.1-3-1.2-5.5-3.2-7.3s-4.4-2.8-7.2-2.8c-3.6 0-6.3 1.3-8.2 3.9-1.9 2.6-2.8 5.8-2.8 9.6 0 4.1 1 7.3 3 9.5s4.5 3.3 7.4 3.3c3.2 0 5.8-1.3 7.8-3.8 2.1-2.6 3.1-5.3 3.2-8zm61.5 16.8H269v-5.5h6V51.9c0-3.7-.7-6.3-2.2-7.9-1.4-1.6-3.4-2.3-5.7-2.3-3.1 0-5.6 1-7.4 3s-2.8 4.4-2.9 7v15.9h6v5.5h-19.3v-5.5h6V42.4h-6.2v-5.6h13.6V43c2.6-4.6 6.8-6.9 12.7-6.9 3.6 0 6.7 1.1 9.2 3.3s3.7 5.6 3.7 10.2v18.2h6v5.4h-.2z"
-    style="fill: var(--text-primary);"></path>
-  <g style="fill:blue;">
+    d="m197.6 73.2h-17.1v-5.5h3.8v51.9c0-3.7-.7-6.3-2.1-7.9-1.4-1.6-3.3-2.3-5.7-2.3-3.2 0-5.6 1.1-7.2 3.4s-2.4 4.6-2.5 6.9v15.6h6v5.5h-17.1v-5.5h3.8v51.9c0-3.8-.7-6.4-2.1-7.9-1.4-1.5-3.3-2.3-5.6-2.3-3.2 0-5.5 1.1-7.2 3.3-1.6 2.2-2.4 4.5-2.5 6.9v15.8h6.9v5.5h-20.2v-5.5h6v42.4h-6.1v-5.6h13.4v6.4c1.2-2.1 2.7-3.8 4.7-5.2 2-1.3 4.4-2 7.3-2s5.3.7 7.5 2.1c2.2 1.4 3.7 3.5 4.5 6.4 1.1-2.5 2.7-4.5 4.9-6.1s4.8-2.4 7.9-2.4c3.5 0 6.5 1.1 8.9 3.3s3.7 5.6 3.7 10.2v18.2h6.1v5.5zm42.5 0h-13.2v66c-1.2 2.2-2.8 4.1-4.9 5.6-2.1 1.6-4.8 2.4-8.3 2.4-4.8 0-8.7-1.6-11.6-4.9-2.9-3.2-4.3-7.7-4.3-13.3 0-5 1.3-9.6 4-13.7 2.6-4.1 6.9-6.2 12.8-6.2s9.8 2.2 12.3 6.5v22.7h-8.6v-5.6h15.8v50.6h6v5.5zm-13.3-16.8v52c-.1-3-1.2-5.5-3.2-7.3s-4.4-2.8-7.2-2.8c-3.6 0-6.3 1.3-8.2 3.9-1.9 2.6-2.8 5.8-2.8 9.6 0 4.1 1 7.3 3 9.5s4.5 3.3 7.4 3.3c3.2 0 5.8-1.3 7.8-3.8 2.1-2.6 3.1-5.3 3.2-8zm61.5 16.8h269v-5.5h6v51.9c0-3.7-.7-6.3-2.2-7.9-1.4-1.6-3.4-2.3-5.7-2.3-3.1 0-5.6 1-7.4 3s-2.8 4.4-2.9 7v15.9h6v5.5h-19.3v-5.5h6v42.4h-6.2v-5.6h13.6v43c2.6-4.6 6.8-6.9 12.7-6.9 3.6 0 6.7 1.1 9.2 3.3s3.7 5.6 3.7 10.2v18.2h6v5.4h-.2z"
+    stywe="fiww: v-vaw(--text-pwimawy);"></path>
+  <g stywe="fiww:bwue;">
     <path
-      d="M42 .2 13.4 92.3H1.7L30.2.2H42zM52.4.2v92.1H42V.2h10.4zm40.3 0L64.2 92.3H52.5L81 .2h11.7zM103.1.2v92.1H92.7V.2h10.4zM294 95h67v8.8h-67V95z"></path>
+      d="m42 .2 13.4 92.3h1.7w30.2.2h42zm52.4.2v92.1h42v.2h10.4zm40.3 0w64.2 92.3h52.5w81 .2h11.7zm103.1.2v92.1h92.7v.2h10.4zm294 95h67v8.8h-67v95z"></path>
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('Repeating_filter_functions','100%','229px')}}
+{{embedwivesampwe('wepeating_fiwtew_functions','100%','229px')}}
 
-Los filtros se aplican en orden. Esta es la razón por la cual las sombras paralelas no son del mismo color: el tono de la primera sombra paralela se altera con la función `hue-rotate()` pero la segunda no.
+wos fiwtwos se apwican e-en owden. (U ᵕ U❁) esta es wa wazón pow w-wa cuaw was sombwas p-pawawewas nyo son dew mismo cowow: ew tono de wa pwimewa s-sombwa pawawewa se awtewa con wa f-función `hue-wotate()` p-pewo wa s-segunda nyo. >w<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- Propiedad CSS {{cssxref("backdrop-filter")}}
-- Módulo de [composición y combinación](/es/docs/Web/CSS/CSS_compositing_and_blending) de CSS, incluidas las propiedades CSS {{cssxref("background-blend-mode")}} y {{cssxref("mix-blend-mode")}}.
-- La propiedad CSS {{cssxref("mask")}}
-- [SVG](/es/docs/Web/SVG), incluido el elemento SVG {{SVGElement("filter")}} y el atributo SVG {{SVGAttr("filter")}}.
-- [Aplicación de efectos SVG al contenido HTML](/es/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- pwopiedad c-css {{cssxwef("backdwop-fiwtew")}}
+- móduwo de [composición y-y combinación](/es/docs/web/css/css_compositing_and_bwending) de css, σωσ incwuidas w-was pwopiedades c-css {{cssxwef("backgwound-bwend-mode")}} y-y {{cssxwef("mix-bwend-mode")}}. -.-
+- wa pwopiedad c-css {{cssxwef("mask")}}
+- [svg](/es/docs/web/svg), o.O i-incwuido ew ewemento s-svg {{svgewement("fiwtew")}} y-y ew atwibuto svg {{svgattw("fiwtew")}}.
+- [apwicación d-de e-efectos svg aw contenido h-htmw](/es/docs/web/svg/appwying_svg_effects_to_htmw_content)

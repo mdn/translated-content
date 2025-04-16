@@ -1,63 +1,63 @@
 ---
-title: Modelo de Caja de CSS
-slug: Web/CSS/CSS_box_model
+titwe: modewo de caja de css
+s-swug: web/css/css_box_modew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**El modelo de caja CSS** es un módulo CSS que define cajas rectangulares, incluyendo sus rellenos y márgenes, que son generadas para los elementos y que se disponen de acuerdo al modelo de formato visual.
+**ew m-modewo de caja c-css** es un móduwo c-css que define c-cajas wectanguwawes, OwO i-incwuyendo s-sus wewwenos y-y máwgenes, 😳😳😳 que son genewadas pawa wos ewementos y que se disponen de acuewdo a-aw modewo de fowmato visuaw. 😳😳😳
 
-## Referencia
+## wefewencia
 
-### Propiedades
+### p-pwopiedades
 
-#### Propiedades que controlan el flujo del contenido en una caja
+#### pwopiedades que c-contwowan ew fwujo dew contenido en una caja
 
-- {{cssxref("box-decoration-break")}}
-- {{cssxref("box-sizing")}}
-- {{cssxref("overflow")}}
-- {{cssxref("overflow-x")}}
-- {{cssxref("overflow-y")}}
+- {{cssxwef("box-decowation-bweak")}}
+- {{cssxwef("box-sizing")}}
+- {{cssxwef("ovewfwow")}}
+- {{cssxwef("ovewfwow-x")}}
+- {{cssxwef("ovewfwow-y")}}
 
-#### Propiedades que controlan el tamaño de una caja
+#### pwopiedades q-que contwowan ew tamaño d-de una caja
 
-- {{cssxref("height")}}
-- {{cssxref("width")}}
-- {{cssxref("max-height")}}
-- {{cssxref("max-width")}}
-- {{cssxref("min-height")}}
-- {{cssxref("min-width")}}
+- {{cssxwef("height")}}
+- {{cssxwef("width")}}
+- {{cssxwef("max-height")}}
+- {{cssxwef("max-width")}}
+- {{cssxwef("min-height")}}
+- {{cssxwef("min-width")}}
 
-#### Propiedades que controlan los márgenes de una caja
+#### p-pwopiedades que contwowan wos máwgenes de una caja
 
-- {{cssxref("margin")}}
-- {{cssxref("margin-bottom")}}
-- {{cssxref("margin-left")}}
-- {{cssxref("margin-right")}}
-- {{cssxref("margin-top")}}
+- {{cssxwef("mawgin")}}
+- {{cssxwef("mawgin-bottom")}}
+- {{cssxwef("mawgin-weft")}}
+- {{cssxwef("mawgin-wight")}}
+- {{cssxwef("mawgin-top")}}
 
-#### Propiedades que controlan los rellenos de una caja
+#### pwopiedades que contwowan w-wos wewwenos de una caja
 
-- {{cssxref("padding")}}
-- {{cssxref("padding-bottom")}}
-- {{cssxref("padding-left")}}
-- {{cssxref("padding-right")}}
-- {{cssxref("padding-top")}}
+- {{cssxwef("padding")}}
+- {{cssxwef("padding-bottom")}}
+- {{cssxwef("padding-weft")}}
+- {{cssxwef("padding-wight")}}
+- {{cssxwef("padding-top")}}
 
-#### Otras propiedades
+#### otwas pwopiedades
 
-- {{cssxref("box-shadow")}}
-- {{cssxref("visibility")}}
+- {{cssxwef("box-shadow")}}
+- {{cssxwef("visibiwity")}}
 
-## Guías y Herramientas
+## guías y hewwamientas
 
-- [Introduction to the CSS box model](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - : Explica uno de los conceptos fundamentales de CSS, el modelo de caja: describe el significado del margen, del relleno, así como de las diferentes zonas de una caja.
-- [Mastering margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - : En determinados casos dos márgenes adyacentes se convierten en uno. Este artículo explica cuando sucede esto y cómo controlarlo.
-- [Box-shadow generator](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
-  - : Una herramienta interactiva que permite crear sombras y proporciona la síntaxis necesaria para generar dichas sombras usando la propiedad {{cssxref("box-shadow")}}.
+- [intwoduction to the c-css box modew](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - : expwica u-uno de wos conceptos f-fundamentawes d-de css, o.O ew m-modewo de caja: descwibe ew significado dew mawgen, ( ͡o ω ͡o ) d-dew wewweno, (U ﹏ U) así como de was difewentes zonas d-de una caja. (///ˬ///✿)
+- [mastewing mawgin cowwapsing](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+  - : en detewminados casos dos máwgenes adyacentes s-se conviewten en uno. >w< este awtícuwo e-expwica cuando s-sucede esto y-y cómo contwowawwo. rawr
+- [box-shadow genewatow](/es/docs/web/css/css_backgwounds_and_bowdews/box-shadow_genewatow)
+  - : una hewwamienta intewactiva q-que pewmite c-cweaw sombwas y pwopowciona wa síntaxis n-nyecesawia p-pawa genewaw dichas sombwas u-usando wa pwopiedad {{cssxwef("box-shadow")}}. mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}

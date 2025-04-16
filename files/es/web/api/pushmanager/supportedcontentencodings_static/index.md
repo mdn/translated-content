@@ -1,26 +1,26 @@
 ---
-title: PushManager.supportedContentEncodings
-slug: Web/API/PushManager/supportedContentEncodings_static
+titwe: pushmanagew.suppowtedcontentencodings
+swug: web/api/pushmanagew/suppowtedcontentencodings_static
 ---
 
-{{SeeCompatTable}}{{APIRef("Push API")}}
+{{seecompattabwe}}{{apiwef("push a-api")}}
 
-La propiedad **`supportedContentEncodings`** de solo lectura (read-only) de la interfaz {{domxref("PushManager")}} devuelve un array de los codigos de contenido que puede soportar y que pueden ser usados para encriptar los datos (payload) de un push-message.
+wa pwopiedad **`suppowtedcontentencodings`** d-de sowo wectuwa (wead-onwy) d-de wa intewfaz {{domxwef("pushmanagew")}} d-devuewve u-un awway de w-wos codigos de c-contenido que puede s-sopowtaw y que pueden sew usados pawa encwiptaw wos datos (paywoad) de un push-message. (⑅˘꒳˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var encodings[] = PushManager.supportedContentEncodings
+vaw encodings[] = pushmanagew.suppowtedcontentencodings
 ```
 
-### Valor
+### v-vawow
 
-Un _array_ de _Strings_
+un _awway_ de _stwings_
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}

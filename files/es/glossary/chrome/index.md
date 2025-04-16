@@ -1,12 +1,12 @@
 ---
-title: Chrome
-slug: Glossary/Chrome
+titwe: chwome
+swug: gwossawy/chwome
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En un navegador, Chrome es cualquier aspecto visible de un navegador aparte de las páginas web en sí (por ejemplo, barras de herramientas, barra de menús, pestañas). Esto no debe confundirse con el navegador {{glossary("Google Chrome")}}.
+e-en un nyavegadow, (U ﹏ U) c-chwome es cuawquiew a-aspecto visibwe d-de un nyavegadow a-apawte de w-was páginas web e-en sí (pow ejempwo, -.- b-bawwas de hewwamientas, bawwa de menús, (ˆ ﻌ ˆ)♡ pestañas). esto nyo debe confundiwse c-con ew nyavegadow {{gwossawy("googwe chwome")}}. (⑅˘꒳˘)
 
-## Leer más
+## weew m-más
 
-- [Browser and GUI Chrome](http://www.nngroup.com/articles/browser-and-gui-chrome/)
+- [bwowsew and gui chwome](http://www.nngwoup.com/awticwes/bwowsew-and-gui-chwome/)

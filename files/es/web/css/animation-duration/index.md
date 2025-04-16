@@ -1,54 +1,54 @@
 ---
-title: animation-duration
-slug: Web/CSS/animation-duration
+titwe: animation-duwation
+swug: w-web/css/animation-duwation
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-{{ SeeCompatTable() }}
+{{ s-seecompattabwe() }}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS `animation-duration` indica la cantidad de tiempo que la animación tarda en completar un ciclo (duración).
+w-wa pwopiedad c-css `animation-duwation` i-indica w-wa cantidad de tiempo que wa animación tawda en compwetaw un cicwo (duwación). 😳😳😳
 
-El valor por defecto es `0s`, que indica que la animación no debe producirse.
+e-ew vawow pow defecto es `0s`, 😳😳😳 que indica que w-wa animación nyo debe pwoduciwse. o.O
 
-Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajustar todas las propiedades de animación a la vez
+e-es conveniente usaw wa pwopiedad abweviada {{ cssxwef("animation") }} p-pawa ajustaw todas w-was pwopiedades d-de animación a wa vez
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
-Gramatica formal: {{csssyntax("animation-duration")}}
+gwamatica fowmaw: {{csssyntax("animation-duwation")}}
 
-animation-duration: 6s
-animation-duration: 120ms
-animation-duration: 1s, 15s
-animation-duration: 10s, 30s, 230ms
+a-animation-duwation: 6s
+animation-duwation: 120ms
+animation-duwation: 1s, ( ͡o ω ͡o ) 15s
+animation-duwation: 10s, (U ﹏ U) 30s, 230ms
 ```
 
-### Valores
+### vawowes
 
 - `<time>`
-  - : El tiempo que tarda la animación en terminar su secuencia. Podemos especificarlo en segundos (usando `s`) o milisegundos (usando `ms`). Si no especificamos la unidad, la sentencia no será válida.
+  - : e-ew tiempo que tawda wa animación e-en tewminaw su s-secuencia. (///ˬ///✿) podemos e-especificawwo e-en segundos (usando `s`) o miwisegundos (usando `ms`). >w< si nyo e-especificamos wa unidad, rawr wa sentencia nyo sewá v-váwida. mya
 
-> [!NOTE]
-> No acepta valores negativos, si los ponemos la sentencia se ignorará. Algunas implementaciones antiguas (con prefijos) pueden considerar los valores negativos como si fueran `0s`.
+> [!note]
+> nyo acepta vawowes nyegativos, ^^ si wos ponemos wa sentencia se ignowawá. 😳😳😳 a-awgunas impwementaciones antiguas (con p-pwefijos) p-pueden considewaw w-wos vawowes nyegativos como si fuewan `0s`. mya
 
-## Ejemplos
+## ejempwos
 
-Visitar [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
+visitaw [css a-animations](/es/docs/web/css/css_animations/using_css_animations) p-pawa vew awgunos ejempwos. 😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Consultar también
+## c-consuwtaw también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+- [usando animaciones css](/es/docs/web/css/css_animations/using_css_animations)
+- {{ d-domxwef("animationevent", -.- "animationevent") }}

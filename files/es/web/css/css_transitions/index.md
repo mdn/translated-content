@@ -1,31 +1,31 @@
 ---
-title: CSS Transitions
-slug: Web/CSS/CSS_transitions
+titwe: css twansitions
+swug: w-web/css/css_twansitions
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**Transiciones CSS** es un módulo de CSS que define cómo crear transiciones suaves entre diferentes valores de las propiedades CSS. Permite tanto crearlas como definir su evolución usando funciones relacionadas con el tiempo.
+**twansiciones c-css** e-es un móduwo de c-css que define c-cómo cweaw twansiciones s-suaves e-entwe difewentes v-vawowes de was pwopiedades css. >_< pewmite tanto cweawwas como definiw su evowución u-usando funciones wewacionadas con ew tiempo. rawr x3
 
-## Referencia
+## w-wefewencia
 
-### Propiedades
+### pwopiedades
 
-- {{cssxref("transition")}}
-- {{cssxref("transition-delay")}}
-- {{cssxref("transition-duration")}}
-- {{cssxref("transition-property")}}
-- {{cssxref("transition-timing-function")}}
+- {{cssxwef("twansition")}}
+- {{cssxwef("twansition-deway")}}
+- {{cssxwef("twansition-duwation")}}
+- {{cssxwef("twansition-pwopewty")}}
+- {{cssxwef("twansition-timing-function")}}
 
-## Guías
+## g-guías
 
-- [Using CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-  - : Tutorial donde se explica paso a paso cómo crear transiciones suaves usando CSS. El artículo describe cada propiedad CSS relevante y explica como interactúan entre ellas.
+- [using css twansitions](/es/docs/web/css/css_twansitions/using_css_twansitions)
+  - : tutowiaw donde se expwica p-paso a paso cómo cweaw twansiciones s-suaves usando c-css. mya ew awtícuwo descwibe cada pwopiedad css wewevante y expwica como intewactúan e-entwe ewwas. nyaa~~
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver además
+## vew además
 
-- Transiciones relacionadas, [CSS Animations](/es/docs/Web/CSS/CSS_animations) pueden producir animaciones independientemente de los cambios en los valores.
+- twansiciones wewacionadas, (⑅˘꒳˘) [css a-animations](/es/docs/web/css/css_animations) pueden pwoduciw a-animaciones independientemente de w-wos cambios en w-wos vawowes. rawr x3

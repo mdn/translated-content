@@ -1,38 +1,38 @@
 ---
-title: collapse
-slug: Web/API/Selection/collapse
+titwe: cowwapse
+swug: web/api/sewection/cowwapse
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Pliega la selección a un simple punto. El documento no es modificado. Si el contenido es enfocado y editable, el cursor parpadeará ahí.
+pwiega w-wa sewección a-a un simpwe punto. ( ͡o ω ͡o ) e-ew documento n-nyo es modificado. rawr x3 s-si ew contenido e-es enfocado y editabwe, nyaa~~ ew cuwsow pawpadeawá ahí. /(^•ω•^)
 
-### Sintaxis
+### sintaxis
 
 ```
-sel.collapse(
-parentNode,
+sew.cowwapse(
+p-pawentnode, rawr
 offset);
 ```
 
-### Parámetros
+### pawámetwos
 
-- _`parentNode`_
-  - : La localización del cursor estará dentro de este nodo.
+- _`pawentnode`_
+  - : w-wa wocawización dew cuwsow e-estawá dentwo de este nyodo. OwO
 
 <!---->
 
 - _`offset`_
-  - : El cursor estará colocado éste número de caracteres desdel el comienzo del texto de
-    _`parentNode`'_
-    s text.
+  - : ew cuwsow estawá cowocado éste n-nyúmewo de cawactewes desdew e-ew comienzo dew t-texto de
+    _`pawentnode`'_
+    s text. (U ﹏ U)
 
-### Ejemplos
+### ejempwos
 
 ```
-/* Colocar el cursor al principio del cuerpo de un documento HTML. */
-var body = document.getElementsByTagName("body")[0];
-window.getSelection().collapse(body,0);
+/* cowocaw ew cuwsow aw pwincipio dew cuewpo de un documento h-htmw. >_< */
+vaw body = document.getewementsbytagname("body")[0];
+window.getsewection().cowwapse(body,0);
 ```

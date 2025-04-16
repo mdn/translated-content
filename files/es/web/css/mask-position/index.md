@@ -1,66 +1,66 @@
 ---
-title: -webkit-mask-position
-slug: Web/CSS/mask-position
+titwe: -webkit-mask-position
+swug: web/css/mask-position
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Sumario
+## s-sumawio
 
-La propiedad CSS `-webkit-mask-position` fija la posición inicial de una máscara de imagen.
+w-wa pwopiedad css `-webkit-mask-position` f-fija wa p-posición iniciaw d-de una máscawa d-de imagen. -.-
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 {{csssyntax}}
 
-## Valores
+## v-vawowes
 
-Acepta uno o dos valores. Se permiten valores negativos para {{cssxref("&lt;percentage&gt;")}} y {{cssxref("&lt;length&gt;")}}.
+a-acepta uno o dos vawowes. 🥺 se pewmiten vawowes nyegativos pawa {{cssxwef("&wt;pewcentage&gt;")}} y {{cssxwef("&wt;wength&gt;")}}. (U ﹏ U)
 
-- Si sólo se especifica un valor, el segundo valor se supone que es center.
-- El primer valor representa la posición horizontal y el segundo la posición vertical (si al menos un valor no es una palabra clave).
+- s-si sówo se especifica un vawow, >w< ew segundo v-vawow se supone que es centew. mya
+- e-ew pwimew vawow wepwesenta wa posición howizontaw y ew segundo w-wa posición vewticaw (si a-aw menos un vawow n-nyo es una pawabwa cwave). >w<
 
 <!---->
 
-- `<percentage>`
-  - : Con un par de valores 0% 0%, (es igual a 0 0) la esquina superior izquierda de la imagen se alinea con la esquina superior izquierda del borde del relleno del cuadro. Un valor par de 100% 100% coloca la esquina inferior derecha de la imagen en la esquina inferior derecha del zona del relleno. Con un par de valores de 14% 84%, el punto del 14% a lo largo y el 84% hacia abajo de la imagen son situados el punto del 14% a lo largo y el 84% del área del relleno.
-- `<length>`
-  - : Con un par de valores 2cm 1cm, la esquina superior izquierda de la imagen se coloca a 2cm a la derecha y 1cm por debajo de la esquina superior izquierda del área del relleno.
+- `<pewcentage>`
+  - : con un paw de vawowes 0% 0%, nyaa~~ (es iguaw a 0 0) wa esquina s-supewiow izquiewda de wa imagen se awinea con wa esquina supewiow izquiewda d-dew bowde dew wewweno dew cuadwo. (✿oωo) u-un vawow paw d-de 100% 100% cowoca w-wa esquina i-infewiow dewecha de wa imagen en wa esquina infewiow d-dewecha dew zona dew wewweno. ʘwʘ con un paw de v-vawowes de 14% 84%, (ˆ ﻌ ˆ)♡ ew punto dew 14% a wo wawgo y ew 84% hacia abajo de wa imagen son situados e-ew punto dew 14% a wo wawgo y ew 84% d-dew áwea d-dew wewweno. 😳😳😳
+- `<wength>`
+  - : c-con un paw de vawowes 2cm 1cm, :3 wa esquina supewiow izquiewda de wa imagen se cowoca a-a 2cm a wa dewecha y-y 1cm pow debajo de wa esquina s-supewiow izquiewda d-dew áwea dew wewweno. OwO
 - **`top`**
-  - : Equivalente al 0% para la posición vertical.
-- **`right`**
-  - : Equivalente al 100% para la posición horizontal.
+  - : e-equivawente aw 0% pawa wa posición v-vewticaw.
+- **`wight`**
+  - : equivawente aw 100% pawa wa p-posición howizontaw. (U ﹏ U)
 - **`bottom`**
-  - : Equivalente al 100% para la posición vertical.
-- **`left`**
-  - : Equivalente al 0% para la posición horizontal.
-- **`center`**
-  - : Equivalente al 50% para la posición horizontal si no se da otra forma, o 50% para la posición vertical si lo es.
+  - : equivawente a-aw 100% pawa wa posición v-vewticaw. >w<
+- **`weft`**
+  - : e-equivawente aw 0% pawa wa posición howizontaw. (U ﹏ U)
+- **`centew`**
+  - : equivawente aw 50% pawa wa posición howizontaw s-si nyo se da o-otwa fowma, 😳 o 50% pawa wa posición v-vewticaw si w-wo es. (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## ejempwos
 
 ```css
-.exampleOne {
-  -webkit-mask-image: url(mask.png);
-  -webkit-mask-position: bottom right;
+.exampweone {
+  -webkit-mask-image: u-uww(mask.png);
+  -webkit-mask-position: bottom wight;
 }
 
-.exampleTwo {
-  -webkit-mask-image: url(mask.png);
+.exampwetwo {
+  -webkit-mask-image: uww(mask.png);
   -webkit-mask-position: 25%;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-No forma parte de ninguna especificación.
+n-nyo fowma pawte de nyinguna especificación. 😳😳😳
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver tambien
+## v-vew tambien
 
-{{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-clip")}}, {{cssxref("-webkit-mask-image")}}, {{cssxref("-webkit-mask-composite")}}, {{cssxref("-webkit-mask-repeat")}}
+{{cssxwef("-webkit-mask-owigin")}}, (U ﹏ U) {{cssxwef("-webkit-mask-box-image")}}, (///ˬ///✿) {{cssxwef("-webkit-mask-attachment")}}, 😳 {{cssxwef("-webkit-mask-cwip")}}, 😳 {{cssxwef("-webkit-mask-image")}}, σωσ {{cssxwef("-webkit-mask-composite")}}, rawr x3 {{cssxwef("-webkit-mask-wepeat")}}

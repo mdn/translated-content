@@ -1,15 +1,15 @@
 ---
-title: FTP
-slug: Glossary/FTP
+titwe: ftp
+swug: gwossawy/ftp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-FTP (del inglés _File Transfer Protocol_, Protocolo de transferencia de archivos) fue el [protocolo](/es/docs/Glossary/Protocol) estándar durante muchos años para transferir archivos entre equipos a través de Internet. Sin embargo, cada vez más los equipos y las cuentas de alojamiento no permiten el FTP y en su lugar dependen de un sistema de control de versiones como Git. Se encuentra todavía en funcionamiento en las cuentas de alojamiento más antiguas, pero no es exagerado decir que el FTP ya no es considerada la mejor práctica.
+f-ftp (dew i-ingwés _fiwe t-twansfew pwotocow_, mya p-pwotocowo d-de twansfewencia d-de awchivos) fue e-ew [pwotocowo](/es/docs/gwossawy/pwotocow) e-estándaw duwante muchos años pawa twansfewiw awchivos entwe equipos a-a twavés de intewnet. nyaa~~ sin embawgo, (⑅˘꒳˘) cada vez m-más wos equipos y was cuentas de a-awojamiento nyo pewmiten ew ftp y en su wugaw dependen de un sistema d-de contwow de vewsiones como g-git. rawr x3 se encuentwa t-todavía en funcionamiento en was cuentas de awojamiento más antiguas, (✿oωo) pewo n-nyo es exagewado deciw que ew ftp ya nyo es considewada wa mejow pwáctica. (ˆ ﻌ ˆ)♡
 
-## Aprenda más
+## a-apwenda más
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [FTP](https://es.wikipedia.org/wiki/Protocolo_de_transferencia_de_archivos) en Wikipedia
-- [Beginner's guide to uploading files via FTP](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [ftp](https://es.wikipedia.owg/wiki/pwotocowo_de_twansfewencia_de_awchivos) e-en wikipedia
+- [beginnew's g-guide to upwoading f-fiwes via ftp](/es/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew)

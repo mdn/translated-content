@@ -1,14 +1,14 @@
 ---
-title: <integer>
-slug: Web/CSS/integer
+titwe: <integew>
+swug: web/css/integew
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Sumario
+## s-sumawio
 
-Un valor entero usado para algunas propiedades CSS que no tiene unidades.
+un vawow e-entewo usado p-pawa awgunas pwopiedades c-css que n-nyo tiene unidades. (⑅˘꒳˘)
 
-### Usado en
+### u-usado e-en
 
-- {{ Cssxref("-moz-column-count") }}
+- {{ cssxwef("-moz-cowumn-count") }}

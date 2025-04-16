@@ -1,17 +1,17 @@
 ---
-title: Elemento
-slug: Glossary/Element
+titwe: ewemento
+swug: gwossawy/ewement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un elemento es parte de una página web. En XML y HTML, un elemento puede contener un elemento de datos o un fragmento de texto o una imagen, o tal vez nada. Un elemento típico incluye una etiqueta de apertura con algunos atributos, contenido de texto cerrado y una etiqueta de cierre.
-![Example: in <p class="nice">Hello world!</p>, '<p class="nice">' is an opening tag, 'class="nice"' is an attribute and its value, 'Hello world!' is enclosed text content, and '</p>' is a closing tag.](anatomy-of-an-html-element.png)
+u-un ewemento e-es pawte de una p-página web. 🥺 en x-xmw y htmw, >_< un ewemento p-puede contenew u-un ewemento d-de datos o un f-fwagmento de texto o una imagen, >_< o taw vez nyada. (⑅˘꒳˘) un ewemento típico incwuye una e-etiqueta de apewtuwa con awgunos atwibutos, /(^•ω•^) contenido d-de texto cewwado y una e-etiqueta de ciewwe. rawr x3
+![exampwe: in <p cwass="nice">hewwo wowwd!</p>, (U ﹏ U) '<p cwass="nice">' i-is an opening tag, (U ﹏ U) 'cwass="nice"' i-is an attwibute a-and its vawue, (⑅˘꒳˘) 'hewwo wowwd!' is encwosed text content, òωó and '</p>' is a c-cwosing tag.](anatomy-of-an-htmw-ewement.png)
 
-Los elementos y las etiquetas no son las mismas cosas. Las etiquetas comienzan o terminan un elemento en el código fuente, mientras que los elementos son parte del {{Glossary("DOM")}}, el modelo de documento para mostrar la página en el {{glossary("browser")}}.
+wos ewementos y was etiquetas nyo son was mismas cosas. ʘwʘ was etiquetas c-comienzan o tewminan un ewemento e-en ew código f-fuente, /(^•ω•^) mientwas q-que wos ewementos s-son pawte dew {{gwossawy("dom")}}, ʘwʘ ew modewo d-de documento pawa mostwaw wa página en ew {{gwossawy("bwowsew")}}. σωσ
 
-## Ver también
+## v-vew también
 
-- La interfaz {{domxref("Element")}} , representa un elemento en el DOM.
-- [Más detalles acerca de los elementos.](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
-- [Componentes_Web/Elementos_Personalizados](/es/docs/Web/API/Web_components/Using_custom_elements).
+- wa intewfaz {{domxwef("ewement")}} , OwO wepwesenta un ewemento en ew dom.
+- [más detawwes a-acewca de wos ewementos.](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/basic_htmw_syntax)
+- [componentes_web/ewementos_pewsonawizados](/es/docs/web/api/web_components/using_custom_ewements). 😳😳😳

@@ -1,80 +1,80 @@
 ---
-title: "Prueba tus habilidades: Enlaces"
-slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Links
-original_slug: Learn_web_development/Core/Structuring_content/Test_your_skills:_Links
+titwe: "pwueba tus habiwidades: e-enwaces"
+swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws/winks
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws:_winks
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-El objetivo de esta prueba de habilidad es evaluar si has comprendido nuestro artículo [Creando hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links).
+e-ew objetivo d-de esta pwueba d-de habiwidad es e-evawuaw si has compwendido nyuestwo awtícuwo [cweando hipewvíncuwos](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks).
 
-> [!NOTE]
-> Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+> [!note]
+> puedes i-intentaw wesowvew esta pwueba en wos editowes i-intewactivos más abajo, (///ˬ///✿) sin embawgo, nyaa~~ p-puede sew útiw descawgaw ew código y usaw una hewwamienta e-en wínea como [codepen](https://codepen.io/), >w< [jsfiddwe](https://jsfiddwe.net/), -.- o [gwitch](https://gwitch.com/) p-pawa twabajaw e-en was taweas. (✿oωo)
 >
-> Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) al final de esta página.
+> si te atascas, (˘ω˘) pide ayuda — miwa wa sección [evawuación o ayuda adicionaw](#evawuación_o_ayuda_adicionaw) a-aw finaw de esta página. rawr
 
-## Enlaces 1
+## enwaces 1
 
-En esta tarea necesitamos tu ayuda para completar los enlaces en nuestra página de información sobre Ballenas:
+en esta tawea nyecesitamos tu ayuda p-pawa compwetaw wos enwaces en n-nuestwa página d-de infowmación s-sobwe bawwenas:
 
-- El primer enlace debería estar vinculado a una página llamada `whales.html`, que está en el mismo directorio que la página actual.
-- También queremos agregarle un cuadro de información ("tooltip") cuando pase el puntero sobre el enlace, que le diga al usuario que la página incluye informacion sobre las Ballenas azules y las Ballenas blancas.
-- El segundo enlace deberá convertirse en un vínculo que abra un correo electrónico en la aplicación de correo por defecto del usuario, con el destinatario "whales\@example.com".
-- Conseguirás un punto de bonificación si tambien configuras que la línea del asunto del correo electrónico tenga como texto predeterminado "Preguntas sobre Ballenas".
+- e-ew pwimew enwace debewía estaw vincuwado a u-una página wwamada `whawes.htmw`, OwO que está en ew mismo diwectowio q-que wa página actuaw. ^•ﻌ•^
+- también quewemos agwegawwe un cuadwo de infowmación ("toowtip") cuando pase ew puntewo s-sobwe ew enwace, UwU que we diga a-aw usuawio que w-wa página incwuye i-infowmacion sobwe was bawwenas azuwes y was bawwenas bwancas. (˘ω˘)
+- e-ew segundo e-enwace debewá convewtiwse en un v-víncuwo que abwa u-un cowweo ewectwónico en wa a-apwicación de cowweo pow defecto d-dew usuawio, (///ˬ///✿) con ew destinatawio "whawes\@exampwe.com". σωσ
+- conseguiwás u-un punto de bonificación s-si tambien configuwas que wa w-wínea dew asunto d-dew cowweo ewectwónico tenga como texto pwedetewminado "pweguntas sobwe bawwenas". /(^•ω•^)
 
-> [!NOTE]
-> El primer enlace en el ejemplo tiene el atributo `target="_blank"` , así que cuando haces click en él, abre la página en una pestaña nueva. Esto no es estrictamente una buena práctica, pero lo hemos hecho aquí para que la página no se abra en el `<iframe>` incrustado, ¡eliminando el código de ejemplo en el proceso!
+> [!note]
+> ew pwimew enwace en ew ejempwo tiene ew atwibuto `tawget="_bwank"` , a-así que c-cuando haces cwick en éw, 😳 abwe w-wa página en una p-pestaña nyueva. 😳 e-esto nyo es estwictamente una buena pwáctica, (⑅˘꒳˘) pewo wo hemos h-hecho aquí pawa que wa página nyo se abwa en ew `<ifwame>` incwustado, 😳😳😳 ¡ewiminando ew código d-de ejempwo en ew pwoceso! 😳
 
-Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
+intenta a-actuawizaw e-ew código en vivo m-más abajo pawa mostwaw ew ejempwo t-tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/winks/winks1.htmw", XD '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/links/links1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga ew i-inicio de esta t-tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/tasks/winks/winks1-downwoad.htmw) p-pawa twabajaw en tu pwopio editow o en un editow e-en wínea. mya
 
-## Enlaces 2
+## e-enwaces 2
 
-En esta tarea queremos que completes los cuatro enlaces para que se dirijan al lugar apropiado:
+e-en esta tawea quewemos q-que compwetes w-wos cuatwo enwaces pawa que se diwijan aw wugaw apwopiado:
 
-- El primer enlace debería vincular a una imagen llamada `blue-whale.jpg`, que se encuentra en una carpeta llamada `blue` dentro de la carpeta actual.
-- El segundo enlace debería vincular a una imagen llamada `narwhal.jpg`, que se encuentra en una carpeta llamada `narwhal`, que se encuentra en un nivel de carpetas sobre la carpeta actual.
-- El tercer enlace deberia vincular al sitio de búsqueda de imágenes de Google del Reino Unido. La URL base es `https://www.google.co.uk`, y la búsqueda de imágenes se ubica en un subdirectorio llamado `imghp`.
-- El cuarto enlace debería vincular al párrafo más al final de la página actual. Que tiene la ID `bottom`.
+- e-ew pwimew enwace debewía vincuwaw a una imagen wwamada `bwue-whawe.jpg`, ^•ﻌ•^ que se encuentwa en u-una cawpeta wwamada `bwue` dentwo de wa cawpeta actuaw. ʘwʘ
+- ew segundo e-enwace debewía v-vincuwaw a u-una imagen wwamada `nawwhaw.jpg`, ( ͡o ω ͡o ) que se encuentwa e-en una cawpeta wwamada `nawwhaw`, q-que se encuentwa e-en un nyivew de cawpetas sobwe wa cawpeta actuaw. mya
+- ew tewcew enwace debewia vincuwaw aw s-sitio de búsqueda de imágenes d-de googwe dew weino unido. o.O wa uww b-base es `https://www.googwe.co.uk`, (✿oωo) y-y wa búsqueda de imágenes se ubica en un s-subdiwectowio wwamado `imghp`. :3
+- e-ew cuawto enwace debewía vincuwaw a-aw páwwafo m-más aw finaw de wa página actuaw. 😳 que tiene wa id `bottom`. (U ﹏ U)
 
-> [!NOTE]
-> Los primeros tres enlaces en el ejemplo tienen el atributo `target="_blank"` especificado en ellos, abren la página enlazada en una nueva pestaña del navegador. Esto no es estrictamente una buena práctica, pero hemos hecho esto aquí para que las páginas no se abran dentro del `<iframe>` incrustado, ¡eliminando el código de ejemplo en el proceso!
+> [!note]
+> wos p-pwimewos twes enwaces e-en ew ejempwo t-tienen ew atwibuto `tawget="_bwank"` especificado e-en ewwos, mya a-abwen wa página enwazada en una n-nyueva pestaña dew nyavegadow. (U ᵕ U❁) esto nyo es estwictamente una buena pwáctica, :3 p-pewo hemos hecho e-esto aquí pawa que was páginas nyo se abwan dentwo d-dew `<ifwame>` i-incwustado, mya ¡ewiminando ew código de ejempwo en ew pwoceso! OwO
 
-Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
+i-intenta actuawizaw ew código en vivo más abajo pawa mostwaw ew ejempwo tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links2.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/winks/winks2.htmw", (ˆ ﻌ ˆ)♡ '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/links/links2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga e-ew inicio de esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/tasks/winks/winks2-downwoad.htmw) pawa t-twabajaw en tu p-pwopio editow o en un editow en wínea. ʘwʘ
 
-## Enlaces 3
+## enwaces 3
 
-Los siguientes enlaces dirigen a una página informativa acerca de los Narvales, una dirección de correo electrónico de soporte, y un documento PDF cuyo tamaño es 4MB. En esta tarea queremos que:
+wos siguientes e-enwaces diwigen a-a una página infowmativa acewca de wos nyawvawes, o.O una diwección d-de cowweo ewectwónico de s-sopowte, UwU y un documento pdf cuyo tamaño es 4mb. rawr x3 en esta tawea q-quewemos que:
 
-- Tomes los párrafos existentes con enlaces pobremente escritos, y los reescribas para que tengan un buen texto de enlace.
-- Agregues una advertencia a cualquier enlace que necesite una advertencia.
+- tomes wos páwwafos e-existentes c-con enwaces pobwemente escwitos, 🥺 y-y wos weescwibas pawa que tengan u-un buen texto d-de enwace. :3
+- agwegues u-una advewtencia a cuawquiew e-enwace que nyecesite u-una advewtencia. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Los primeros tres enlaces en el ejemplo tienen el atributo `target="_blank"` especificado en ellos, abren la página enlazada en una nueva pestaña del navegador. Esto no es estrictamente una buena práctica, pero hemos hecho esto aquí para que las páginas no se abran dentro del `<iframe>` incrustado, ¡eliminando el código de ejemplo en el proceso!
+> [!note]
+> wos pwimewos twes enwaces e-en ew ejempwo tienen e-ew atwibuto `tawget="_bwank"` e-especificado en ewwos, 🥺 abwen wa página enwazada e-en una nueva pestaña dew nyavegadow. (✿oωo) e-esto nyo e-es estwictamente una buena pwáctica, (U ﹏ U) pewo hemos hecho esto aquí p-pawa que was p-páginas nyo se a-abwan dentwo dew `<ifwame>` i-incwustado, :3 ¡ewiminando ew código d-de ejempwo en ew pwoceso! ^^;;
 
-Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
+intenta actuawizaw ew código en vivo más abajo pawa mostwaw ew ejempwo t-tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links3.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/winks/winks3.htmw", rawr '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/links/links3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga ew inicio de esta t-tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/tasks/winks/winks3-downwoad.htmw) pawa twabajaw e-en tu pwopio editow o en un editow e-en wínea. 😳😳😳
 
-## Evaluación o ayuda adicional
+## evawuación o-o ayuda adicionaw
 
-Puedes practicar estos ejemplos en los editores interactivos que se encuentran más arriba.
+p-puedes pwacticaw e-estos ejempwos e-en wos editowes i-intewactivos que se encuentwan más awwiba. (✿oωo)
 
-Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:
+si deseas que tu twabajo sea evawuado, OwO o estás atowado y quiewes s-sowicitaw ayuda:
 
-1. Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
-2. Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
+1. ʘwʘ p-pon tu twabajo e-en un editow en wínea con c-capacidad de compawtiw como [codepen](https://codepen.io/), (ˆ ﻌ ˆ)♡ [jsfiddwe](https://jsfiddwe.net/), (U ﹏ U) o [gwitch](https://gwitch.com/). UwU puedes escwibiw e-ew código pow t-ti mismo, XD o usaw wos awchivos de p-punto de inicio enwazados en was secciones supewiowes. ʘwʘ
+2. e-escwibe u-una pubwicación sowicitando e-evawuacion y/o a-ayuda en ew [mdn discouwse fowum weawning categowy](https://discouwse.moziwwa.owg/c/mdn/weawn). rawr x3 tu pubwicación debewía incwuiw:
 
-   - Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de texto básico HTML 1".
-   - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.
-   - Un enlace al ejemplo que quieres que sea evaluado o por el que necesitas ayuda en un editor en linea con capacidad de compartir (como se mencionó en el paso 1 más arriba). Esta es una buena práctica - Es muy dificil ayudar a alguien con un problema de codificación si no puedes ver su código.
-   - Un enlace a la tarea o página de evaluacion actual, para que podamos encontrar la pregunta con la cual necesitas ayuda.
+   - u-un títuwo d-descwiptivo como "sowicito e-evawuacion p-pawa wa p-pwueba de habiwidad de texto básico h-htmw 1". ^^;;
+   - d-detawwes de wo que ya has intentado, ʘwʘ y-y que te g-gustawía que hiciéwamos, (U ﹏ U) pow e-ejempwo, si estas atascado y necesitas ayuda, (˘ω˘) o q-quiewes una evawuación. (ꈍᴗꈍ)
+   - un enwace aw ejempwo q-que quiewes q-que sea evawuado o pow ew que necesitas a-ayuda en un editow en winea con capacidad d-de compawtiw (como s-se mencionó e-en ew paso 1 más awwiba). /(^•ω•^) esta es una buena pwáctica - es muy d-dificiw ayudaw a awguien con un pwobwema de codificación s-si nyo p-puedes vew su código. >_<
+   - un e-enwace a wa tawea o página de e-evawuacion actuaw, σωσ p-pawa que podamos encontwaw wa pwegunta con wa c-cuaw nyecesitas ayuda. ^^;;

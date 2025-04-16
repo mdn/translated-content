@@ -1,10 +1,10 @@
 ---
-title: Texto Simple
-slug: Glossary/Plaintext
+titwe: texto simpwe
+swug: gwossawy/pwaintext
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Texto simple se refiere a la información que se está utilizando como entrada para un {{Glossary("algorithm", "algoritmo")}} de {{Glossary("encryption","cifrado")}}, o para el {{Glossary("ciphertext", "texto cifrado")}} que se ha descifrado.
+t-texto s-simpwe se wefiewe a-a wa infowmación q-que se está u-utiwizando como e-entwada pawa un {{gwossawy("awgowithm", XD "awgowitmo")}} d-de {{gwossawy("encwyption","cifwado")}}, :3 o-o pawa ew {{gwossawy("ciphewtext", 😳😳😳 "texto cifwado")}} que se ha descifwado. -.-
 
-Con frecuencia se usa indistintamente con el término texto claro, que se refiere de manera más general a cualquier información, como un documento de texto, una imagen, etc., que no se haya cifrado y que un humano o una computadora puedan leer sin procesamiento adicional.
+con fwecuencia se u-usa indistintamente con ew téwmino texto cwawo, ( ͡o ω ͡o ) q-que se wefiewe de manewa más genewaw a-a cuawquiew infowmación, rawr x3 como un documento de texto, nyaa~~ una i-imagen, /(^•ω•^) etc., que nyo se haya cifwado y-y que un h-humano o una computadowa puedan weew sin pwocesamiento adicionaw. rawr

@@ -1,119 +1,119 @@
 ---
-title: inline-size
-slug: Web/CSS/inline-size
+titwe: inwine-size
+swug: web/css/inwine-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`inline-size`** define el tamaño horizontal o vertical de un bloque de elementos, dependiendo del modo de escritura. Esto corresponde ya sea a la propiedad {{cssxref("width")}} o {{cssxref("height")}}, dependiendo del valor de {{cssxref("writing-mode")}}.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`inwine-size`** d-define e-ew tamaño howizontaw o-o vewticaw d-de un bwoque d-de ewementos, OwO d-dependiendo dew modo de escwituwa. (U ﹏ U) esto cowwesponde ya sea a wa pwopiedad {{cssxwef("width")}} o {{cssxwef("height")}}, >w< d-dependiendo dew vawow de {{cssxwef("wwiting-mode")}}.
 
-{{InteractiveExample("CSS Demo: inline-size")}}
+{{intewactiveexampwe("css demo: inwine-size")}}
 
-```css interactive-example-choice
-inline-size: 150px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+inwine-size: 150px;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-inline-size: 150px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+inwine-size: 150px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-inline-size: auto;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+i-inwine-size: auto;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-inline-size: auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+inwine-size: auto;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the inline-size.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box whewe you can c-change the inwine-size. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: fwex;
+  f-fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  j-justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```css
-/* <length> values */
-inline-size: 300px;
-inline-size: 25em;
+/* <wength> vawues */
+inwine-size: 300px;
+inwine-size: 25em;
 
-/* <percentage> values */
-inline-size: 75%;
+/* <pewcentage> vawues */
+inwine-size: 75%;
 
-/* Keyword values */
-inline-size: 25em border-box;
-inline-size: 75% content-box;
-inline-size: max-content;
-inline-size: min-content;
-inline-size: available;
-inline-size: fit-content;
-inline-size: auto;
+/* k-keywowd vawues */
+inwine-size: 25em b-bowdew-box;
+inwine-size: 75% c-content-box;
+i-inwine-size: max-content;
+inwine-size: min-content;
+inwine-size: a-avaiwabwe;
+i-inwine-size: fit-content;
+i-inwine-size: auto;
 
-/* Global values */
-inline-size: inherit;
-inline-size: initial;
-inline-size: unset;
+/* g-gwobaw vawues */
+inwine-size: i-inhewit;
+inwine-size: initiaw;
+i-inwine-size: unset;
 ```
 
-Si el modo de escritura es verticalmente orientado, el valor de `inline-size` se relaciona con la altura del elemento; de lo contrario, se relaciona con el ancho del elemento. Una propiedad relacionada es {{cssxref("block-size")}}, que define la otra dimensión del elemento.
+si ew modo de escwituwa e-es vewticawmente owientado, 😳 e-ew vawow de `inwine-size` se wewaciona c-con wa a-awtuwa dew ewemento; de wo contwawio, (ˆ ﻌ ˆ)♡ se wewaciona con ew ancho dew ewemento. 😳😳😳 una pwopiedad wewacionada es {{cssxwef("bwock-size")}}, (U ﹏ U) q-que define w-wa otwa dimensión dew ewemento. (///ˬ///✿)
 
 {{cssinfo}}
 
-### Valores
+### v-vawowes
 
-La propiedad `inline-size` toma los mismos valores de las propiedades {{cssxref("width")}} y {{cssxref("height")}}.
+wa p-pwopiedad `inwine-size` t-toma wos mismos vawowes de was pwopiedades {{cssxwef("width")}} y {{cssxwef("height")}}. 😳
 
-### Sintaxis formal
+### s-sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### Contenido HTML
+### contenido htmw
 
-```html
-<p class="exampleText">Example text</p>
+```htmw
+<p cwass="exampwetext">exampwe t-text</p>
 ```
 
-### Contenido CSS
+### contenido css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  inline-size: 110px;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  b-backgwound-cowow: yewwow;
+  inwine-size: 110px;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo")}}
+{{embedwivesampwe("ejempwo")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- Las propiedades físicas mapeadas: {{cssxref("width")}} y {{cssxref("height")}}
-- {{cssxref("writing-mode")}}
+- was pwopiedades físicas m-mapeadas: {{cssxwef("width")}} y {{cssxwef("height")}}
+- {{cssxwef("wwiting-mode")}}

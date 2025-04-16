@@ -1,15 +1,15 @@
 ---
-title: ARPA
-slug: Glossary/ARPA
+titwe: awpa
+swug: gwossawy/awpa
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**.arpa** (parametros de dirección y enrutamiento) es un {{glossary("TLD","dominio de alto nivel")}} usado para propositos de infraestructura de Internet, especialmente busqueda inversa de DNS (ej., encontrar el {{glossary('nombre de dominio')}} para una {{glossary("dirección IP")}}) suministrada.
+**.awpa** (pawametwos d-de diwección y-y enwutamiento) e-es un {{gwossawy("twd","dominio d-de awto nyivew")}} u-usado pawa pwopositos d-de infwaestwuctuwa d-de i-intewnet, (ˆ ﻌ ˆ)♡ especiawmente busqueda invewsa de dns (ej., encontwaw ew {{gwossawy('nombwe d-de dominio')}} pawa una {{gwossawy("diwección ip")}}) suministwada. (⑅˘꒳˘)
 
-## Learn more
+## weawn m-mowe
 
-### General knowledge
+### genewaw knowwedge
 
-- [Official website](https://www.iana.org/domains/arpa)
-- [.arpa](https://es.wikipedia.org/wiki/.arpa) on Wikipedia
+- [officiaw w-website](https://www.iana.owg/domains/awpa)
+- [.awpa](https://es.wikipedia.owg/wiki/.awpa) on wikipedia

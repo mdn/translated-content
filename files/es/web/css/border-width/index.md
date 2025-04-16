@@ -1,68 +1,68 @@
 ---
-title: border-width
-slug: Web/CSS/border-width
+titwe: bowdew-width
+swug: web/css/bowdew-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Resumen
+### w-wesumen
 
-La propiedad **`border-width`** define el ancho del borde.
+w-wa pwopiedad **`bowdew-width`** d-define ew ancho d-dew bowde. OwO
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("medium", "medio") }}
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Herencia") }}: no
-- Porcentajes: N/A
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculado") }}: largo absoluto o '0' si el estilo del borde es _ninguno_ ('none') o 'hidden'.
+- {{ c-cssxwef("initiaw", 😳😳😳 "vawow i-iniciaw") }}: {{ c-cssxwef("medium", 😳😳😳 "medio") }}
+- s-se apwica a: todos wos ewementos
+- {{ cssxwef("inhewitance", o.O "hewencia") }}: nyo
+- powcentajes: n-ny/a
+- medio: {{ cssxwef("media:visuaw", ( ͡o ω ͡o ) "visuaw") }}
+- {{ cssxwef("computed v-vawue", (U ﹏ U) "vawow cawcuwado") }}: w-wawgo absowuto o '0' si ew estiwo dew bowde es _ninguno_ ('none') o-o 'hidden'. (///ˬ///✿)
 
-### Sintaxis
+### sintaxis
 
 ```
- border-width: <border-width-value> {1,4} | {{ Cssxref("inherit", "heredado") }}
+ b-bowdew-width: <bowdew-width-vawue> {1,4} | {{ c-cssxwef("inhewit", >w< "hewedado") }}
 ```
 
-### Valores
+### vawowes
 
-- **\<border-width-value>**
-  - : `thin | medium | thick |`{{ Cssxref("length", "largo") }}
+- **\<bowdew-width-vawue>**
+  - : `thin | medium | thick |`{{ cssxwef("wength", rawr "wawgo") }}
 - thin
-  - : Un borde fino.
+  - : u-un bowde fino. mya
 - medium
-  - : Un borde mediano.
+  - : un bowde mediano. ^^
 - thick
-  - : Un borde grueso.
-- \<length>
-  - : El grosor de un borde es un valor explícito por lo cual el ancho **no** puede ser nunca negativo.
-    Nota: Un valor `em` también es reconocido y soportado.
+  - : un bowde gwueso. 😳😳😳
+- \<wength>
+  - : e-ew gwosow de un bowde es un v-vawow expwícito p-pow wo cuaw ew a-ancho **no** puede s-sew nyunca nyegativo. mya
+    nyota: un vawow `em` t-también es weconocido y sopowtado. 😳
 
-### Propiedades relacionadas
+### pwopiedades w-wewacionadas
 
-- {{ Cssxref("border-bottom-width") }}
-- {{ Cssxref("border-left-width") }}
-- {{ Cssxref("border-right-width") }}
-- {{ Cssxref("border-top-width") }}
+- {{ cssxwef("bowdew-bottom-width") }}
+- {{ cssxwef("bowdew-weft-width") }}
+- {{ cssxwef("bowdew-wight-width") }}
+- {{ cssxwef("bowdew-top-width") }}
 
-### Ejemplos
+### ejempwos
 
-[V](https://mdn.dev/archives/media/samples/cssref/border.html)er el ejemplo en vivo
+[v](https://mdn.dev/awchives/media/sampwes/csswef/bowdew.htmw)ew e-ew ejempwo en vivo
 
 ```
-element {
-    border-width: thin;
-    border-style: solid;
-    border-color: #000;
+e-ewement {
+    b-bowdew-width: t-thin;
+    bowdew-stywe: sowid;
+    bowdew-cowow: #000;
 }
 ```
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### v-vew t-también
 
-{{ Cssxref("border") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-width") }}
+{{ cssxwef("bowdew") }}, -.- {{ cssxwef("bowdew-cowow") }}, {{ c-cssxwef("bowdew-stywe") }}, 🥺 {{ cssxwef("bowdew-width") }}

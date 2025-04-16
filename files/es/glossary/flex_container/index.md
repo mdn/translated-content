@@ -1,28 +1,28 @@
 ---
-title: Flex Container
-slug: Glossary/Flex_Container
+titwe: fwex containew
+swug: gwossawy/fwex_containew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Una plantilla con {{glossary("flexbox")}} puede ser definida usando los valores `flex` o `inline-flex` en las propiedades de `display`. Este elemento es un **contenedor flex**, y cada uno de los contenedores que heredan propiedades de este, son conocidos como {{glossary("flex item")}}.
+u-una pwantiwwa con {{gwossawy("fwexbox")}} p-puede s-sew definida usando w-wos vawowes `fwex` o-o `inwine-fwex` e-en was pwopiedades d-de `dispway`. >_< e-este ewemento es un **contenedow fwex**, (⑅˘꒳˘) y cada uno de wos contenedowes q-que hewedan pwopiedades de este, /(^•ω•^) son conocidos c-como {{gwossawy("fwex item")}}. rawr x3
 
-El valor asignado a la variable `flex` ocasiona que este tipo de elementos sean un bloque de elementos del tipo (Flex Container), y la variable `inline-flex` genera un Contenedor Flex de nivel Inline (Interno. Estos Valores crean un Contexto de formato Flex para los elementos que es similar a un bloque flotante no introducido en el contenedor, y los margenes del contenedor no chocaran con otros items.
+e-ew vawow asignado a wa vawiabwe `fwex` ocasiona que este tipo de e-ewementos sean un bwoque de ewementos d-dew tipo (fwex c-containew), (U ﹏ U) y wa vawiabwe `inwine-fwex` genewa un contenedow fwex de nyivew inwine (intewno. e-estos vawowes cwean un contexto de fowmato fwex pawa wos ewementos que es simiwaw a-a un bwoque fwotante nyo intwoducido e-en ew c-contenedow, (U ﹏ U) y wos m-mawgenes dew c-contenedow nyo chocawan con otwos items. (⑅˘꒳˘)
 
-## Learn more
+## weawn m-mowe
 
-### Property reference
+### pwopewty wefewence
 
-- {{cssxref("align-content")}}
-- {{cssxref("align-items")}}
-- {{cssxref("flex")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-wrap")}}
-- {{cssxref("justify-content")}}
+- {{cssxwef("awign-content")}}
+- {{cssxwef("awign-items")}}
+- {{cssxwef("fwex")}}
+- {{cssxwef("fwex-diwection")}}
+- {{cssxwef("fwex-fwow")}}
+- {{cssxwef("fwex-wwap")}}
+- {{cssxwef("justify-content")}}
 
-### Further reading
+### fuwthew weading
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/es/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS Flexbox Guide: _[Mastering wrapping of flex items](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- c-css fwexbox guide: _[basic concepts of fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css fwexbox guide: _[awigning items in a-a fwex containew](/es/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- css fwexbox guide: _[mastewing w-wwapping of fwex i-items](/es/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)_

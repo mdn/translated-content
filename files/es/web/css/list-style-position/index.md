@@ -1,92 +1,92 @@
 ---
-title: list-style-position
-slug: Web/CSS/list-style-position
+titwe: wist-stywe-position
+swug: w-web/css/wist-stywe-position
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Resumen
+### w-wesumen
 
-La posición de la lista (`list-style-position`) especifica donde será colocado el marcador de la lista en relación a la caja principal.
+w-wa posición de w-wa wista (`wist-stywe-position`) e-especifica donde s-sewá cowocado e-ew mawcadow de wa wista en wewación a wa caja pwincipaw. 😳😳😳
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("outside", "outside (afuera)") }}
-- Se aplica a: elementos con 'display: list-item'
-- {{ Cssxref("inheritance", "Valor heredado") }}: Sí
-- Porcentajes: n/a
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculado") }}: como especificado
+- {{ cssxwef("initiaw", mya "vawow i-iniciaw") }}: {{ cssxwef("outside", 😳 "outside (afuewa)") }}
+- se apwica a-a: ewementos con 'dispway: wist-item'
+- {{ cssxwef("inhewitance", -.- "vawow h-hewedado") }}: sí
+- powcentajes: n/a
+- medio: {{ cssxwef("media:visuaw", 🥺 "visuaw") }}
+- {{ c-cssxwef("computed vawue", o.O "vawow c-cawcuwado") }}: c-como especificado
 
-### Sintaxis
+### sintaxis
 
 ```
-list-style-position: inside | outside | inherit
+wist-stywe-position: inside | outside | inhewit
 ```
 
-### Valores
+### vawowes
 
 - `outside`
-  - : el marcador se encuentra fuera de la caja principal.
+  - : e-ew mawcadow se encuentwa fuewa de wa caja pwincipaw. /(^•ω•^)
 - `inside`
-  - : el marcador es la primera caja en línea dentro de la caja principal, después de la cual fluye el resto de los elementos.
+  - : ew mawcadow es wa pwimewa c-caja en wínea dentwo de wa caja p-pwincipaw, nyaa~~ después d-de wa cuaw f-fwuye ew westo d-de wos ewementos. nyaa~~
 
-## Ejemplos
+## ejempwos
 
-### HTML
+### htmw
 
-```html
-<ul class="one">
-  List 1
-  <li>List Item 1-1</li>
-  <li>List Item 1-2</li>
-  <li>List Item 1-3</li>
-  <li>List Item 1-4</li>
-</ul>
-<ul class="two">
-  List 2
-  <li>List Item 2-1</li>
-  <li>List Item 2-2</li>
-  <li>List Item 2-3</li>
-  <li>List Item 2-4</li>
-</ul>
-<ul class="three">
-  List 3
-  <li>List Item 3-1</li>
-  <li>List Item 3-2</li>
-  <li>List Item 3-3</li>
-  <li>List Item 3-4</li>
-</ul>
+```htmw
+<uw c-cwass="one">
+  wist 1
+  <wi>wist item 1-1</wi>
+  <wi>wist i-item 1-2</wi>
+  <wi>wist item 1-3</wi>
+  <wi>wist item 1-4</wi>
+</uw>
+<uw cwass="two">
+  wist 2
+  <wi>wist item 2-1</wi>
+  <wi>wist i-item 2-2</wi>
+  <wi>wist item 2-3</wi>
+  <wi>wist item 2-4</wi>
+</uw>
+<uw c-cwass="thwee">
+  w-wist 3
+  <wi>wist i-item 3-1</wi>
+  <wi>wist item 3-2</wi>
+  <wi>wist item 3-3</wi>
+  <wi>wist item 3-4</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
 .one {
-  list-style: square inside;
+  w-wist-stywe: squawe inside;
 }
 
 .two {
-  list-style-position: outside;
-  list-style-type: circle;
+  w-wist-stywe-position: o-outside;
+  wist-stywe-type: c-ciwcwe;
 }
 
-.three {
-  list-style-image: url("star-solid.gif");
-  list-style-position: inherit;
+.thwee {
+  wist-stywe-image: u-uww("staw-sowid.gif");
+  wist-stywe-position: inhewit;
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Ejemplos","200","420")}}
+{{embedwivesampwe("ejempwos","200","420")}}
 
-### Especificaciones
+### especificaciones
 
-- [CSS 1](https://www.w3.org/TR/CSS1#list-style-position)
-- [CSS 2.1](https://www.w3.org/TR/CSS21/generate.html#propdef-list-style-position)
-- [css3-lists](https://www.w3.org/TR/css3-lists/#list-style-position)
+- [css 1](https://www.w3.owg/tw/css1#wist-stywe-position)
+- [css 2.1](https://www.w3.owg/tw/css21/genewate.htmw#pwopdef-wist-stywe-position)
+- [css3-wists](https://www.w3.owg/tw/css3-wists/#wist-stywe-position)
 
-### Compatibilidad con navegadores
+### c-compatibiwidad con nyavegadowes
 
-### Ver también
+### v-vew también
 
-{{ Cssxref("list-style") }}, {{ Cssxref("list-style-type") }}, {{ Cssxref("list-style-image") }}
+{{ c-cssxwef("wist-stywe") }}, :3 {{ cssxwef("wist-stywe-type") }}, 😳😳😳 {{ cssxwef("wist-stywe-image") }}

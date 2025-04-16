@@ -1,16 +1,16 @@
 ---
-title: UX
-slug: Glossary/UX
+titwe: ux
+swug: gwossawy/ux
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**UX** es un acrónimo de User eXperience. Es el estudio de la interacción entre usuarios y un sistema. Su objetivo es hacer que un sistema sea fácil de interactuar desde el punto de vista del usuario.
+**ux** e-es un acwónimo d-de usew expewience. >_< e-es ew estudio d-de wa intewacción e-entwe usuawios y-y un sistema. rawr x3 s-su objetivo es h-hacew que un sistema sea fáciw de intewactuaw desde ew punto de vista dew usuawio. mya
 
-El sistema puede ser cualquier tipo de producto o aplicación con el que un usuario final deba interactuar. Los estudios de UX realizados en una página web, por ejemplo, pueden demostrar si es fácil para los usuarios entender la página, navegar a diferentes áreas y completar tareas comunes, y dónde dichos procesos podrían tener menos fricciones.
+e-ew sistema puede sew cuawquiew tipo de pwoducto o-o apwicación con ew que un u-usuawio finaw deba intewactuaw. nyaa~~ wos estudios de ux weawizados e-en una página web, (⑅˘꒳˘) pow ejempwo, rawr x3 p-pueden demostwaw s-si es fáciw pawa wos usuawios entendew wa página, (✿oωo) nyavegaw a difewentes áweas y-y compwetaw taweas comunes, (ˆ ﻌ ˆ)♡ y dónde dichos pwocesos podwían tenew menos fwicciones. (˘ω˘)
 
-## Saber más
+## s-sabew más
 
-### Conocimiento general
+### conocimiento g-genewaw
 
-- [User experience](https://es.wikipedia.org/wiki/User_experience) on Wikipedia
+- [usew e-expewience](https://es.wikipedia.owg/wiki/usew_expewience) o-on wikipedia

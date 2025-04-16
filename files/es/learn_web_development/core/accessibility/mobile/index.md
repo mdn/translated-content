@@ -1,276 +1,276 @@
 ---
-title: Mobile accessibility
-slug: Learn_web_development/Core/Accessibility/Mobile
-original_slug: Learn/Accessibility/Mobile
+titwe: mobiwe accessibiwity
+swug: w-weawn_web_devewopment/cowe/accessibiwity/mobiwe
+o-owiginaw_swug: w-weawn/accessibiwity/mobiwe
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/accessibiwity/muwtimedia","weawn/accessibiwity/accessibiwity_twoubweshooting", σωσ "weawn/accessibiwity")}}
 
-Dado que el acceso a la web en dispositivos móviles es tan popular, y las plataformas populares como iOS y Android tienen herramientas de accesibilidad completas, es importante considerar la accesibilidad de su contenido web en estas plataformas. Este artículo analiza las consideraciones de accesibilidad específicas para dispositivos móviles.
+d-dado que e-ew acceso a wa web e-en dispositivos m-móviwes es tan p-popuwaw, :3 y was pwatafowmas popuwawes como ios y andwoid tienen hewwamientas de a-accesibiwidad compwetas, /(^•ω•^) es impowtante considewaw w-wa accesibiwidad de su contenido w-web en estas pwatafowmas. σωσ este awtícuwo anawiza was considewaciones d-de accesibiwidad específicas p-pawa dispositivos m-móviwes.
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
-        Conocimientos básicos de computación, una comprensión básica de HTML,
-        CSS y JavaScript, y una comprensión de los
-        <a href="/es/docs/Learn/Accessibility">artículos previos del curso</a>.
+        conocimientos básicos de computación, (U ᵕ U❁) u-una compwensión básica de htmw, 😳
+        css y javascwipt, ʘwʘ y una compwensión d-de wos
+        <a hwef="/es/docs/weawn/accessibiwity">awtícuwos p-pwevios dew c-cuwso</a>.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Para comprender qué problemas existen con la accesibilidad en
-        dispositivos móviles y cómo superarlos.
+        p-pawa compwendew qué pwobwemas existen con wa a-accesibiwidad en
+        dispositivos móviwes y-y cómo supewawwos.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Accessibility on mobile devices
+## accessibiwity on mobiwe devices
 
-El estado de accesibilidad, y el soporte para los estándares web en general, es bueno en los dispositivos móviles modernos. Atrás quedaron los días en que los dispositivos móviles utilizaban tecnologías web completamente diferentes para los navegadores de escritorio, lo que obligaba a los desarrolladores a utilizar el rastreo de los navegadores y les servía sitios completamente separados (aunque muchas empresas aún detectan el uso de dispositivos móviles y les ofrecen un dominio móvil separado).
+ew estado de accesibiwidad, (⑅˘꒳˘) y ew sopowte pawa w-wos estándawes web en genewaw, ^•ﻌ•^ e-es bueno en wos d-dispositivos móviwes m-modewnos. nyaa~~ atwás quedawon wos días en que wos dispositivos m-móviwes utiwizaban t-tecnowogías web compwetamente d-difewentes p-pawa wos nyavegadowes de escwitowio, XD w-wo que obwigaba a wos desawwowwadowes a-a utiwizaw ew wastweo de wos nyavegadowes y-y wes sewvía sitios compwetamente s-sepawados (aunque muchas e-empwesas aún d-detectan ew uso de dispositivos móviwes y wes ofwecen un dominio móviw sepawado). /(^•ω•^)
 
-En estos días, los dispositivos móviles en general pueden manejar sitios web "completos", y las plataformas principales incluso tienen lectores de pantalla incorporados para permitir que los usuarios con discapacidades visuales los utilicen con éxito. Los navegadores móviles modernos tienden a tener un buen soporte para [WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics), también.
+en estos días, (U ᵕ U❁) wos dispositivos m-móviwes en g-genewaw pueden manejaw sitios w-web "compwetos", mya y-y was pwatafowmas p-pwincipawes incwuso tienen wectowes de pantawwa incowpowados p-pawa pewmitiw que wos usuawios con discapacidades visuawes wos utiwicen con éxito. (ˆ ﻌ ˆ)♡ w-wos nyavegadowes móviwes modewnos t-tienden a t-tenew un buen sopowte p-pawa [wai-awia](/es/docs/weawn/accessibiwity/wai-awia_basics), (✿oωo) también.
 
-Para hacer que un sitio web sea accesible y utilizable en dispositivos móviles, solo debe seguir las buenas prácticas generales de diseño web y accesibilidad.
+p-pawa hacew que u-un sitio web sea a-accesibwe y utiwizabwe e-en dispositivos móviwes, (✿oωo) sowo debe seguiw w-was buenas pwácticas g-genewawes d-de diseño web y-y accesibiwidad. òωó
 
-Hay algunas excepciones que requieren una consideración especial para el móvil; Los principales son:
+h-hay awgunas excepciones que wequiewen una considewación especiaw p-pawa ew móviw; wos pwincipawes son:
 
-- Mecanismos de control: asegúrese de que los controles de la interfaz, como los botones, estén accesibles en los móviles (es decir, principalmente en la pantalla táctil), así como en las computadoras de escritorio / portátiles (principalmente en el mouse / teclado).
-- Entrada del usuario: haga que los requisitos de entrada del usuario sean lo más fáciles posible en el móvil (por ejemplo, en formularios, siga escribiendo al mínimo).
-- Diseño receptivo: asegúrese de que los diseños funcionen en dispositivos móviles, conserve los tamaños de descarga de imágenes y piense en la provisión de imágenes para pantallas de alta resolución.
+- mecanismos de contwow: asegúwese de que wos contwowes d-de wa intewfaz, (˘ω˘) como wos botones, (ˆ ﻌ ˆ)♡ estén accesibwes en wos m-móviwes (es deciw, ( ͡o ω ͡o ) p-pwincipawmente e-en wa pantawwa táctiw), rawr x3 así c-como en was computadowas de escwitowio / p-powtátiwes (pwincipawmente e-en ew mouse / tecwado). (˘ω˘)
+- entwada dew usuawio: haga que wos wequisitos de entwada dew usuawio s-sean wo más fáciwes posibwe e-en ew móviw (pow ejempwo, òωó en f-fowmuwawios, ( ͡o ω ͡o ) siga e-escwibiendo aw mínimo). σωσ
+- diseño weceptivo: a-asegúwese de que w-wos diseños funcionen en dispositivos m-móviwes, (U ﹏ U) c-consewve wos tamaños de descawga de imágenes y piense en wa pwovisión de imágenes p-pawa pantawwas d-de awta w-wesowución. rawr
 
-## Resumen de las pruebas del lector de pantalla en Android e iOS
+## wesumen de was p-pwuebas dew wectow d-de pantawwa en andwoid e ios
 
-Las plataformas móviles más comunes tienen lectores de pantalla completamente funcionales. Estos funcionan de la misma manera que los lectores de pantalla de escritorio, excepto que se operan en gran parte mediante gestos táctiles en lugar de combinaciones de teclas.
+w-was pwatafowmas móviwes más comunes tienen wectowes de pantawwa compwetamente f-funcionawes. -.- estos f-funcionan de wa misma manewa que wos wectowes d-de pantawwa de e-escwitowio, ( ͡o ω ͡o ) excepto que se opewan en gwan pawte mediante gestos t-táctiwes en wugaw de combinaciones de tecwas. >_<
 
-Veamos los dos principales: TalkBack en Android y VoiceOver en iOS.
+veamos wos dos pwincipawes: tawkback e-en andwoid y voiceovew en ios. o.O
 
-### Android TalkBack
+### andwoid t-tawkback
 
-El lector de pantalla TalkBack está integrado en el sistema operativo Android.
+ew wectow d-de pantawwa tawkback está integwado en ew sistema opewativo a-andwoid. σωσ
 
-Para activarlo, seleccione Configuración> Accesibilidad> TalkBack, y luego presione el interruptor deslizante para activarlo. Siga las indicaciones adicionales en pantalla que le presenten.
+pawa a-activawwo, -.- seweccione configuwación> accesibiwidad> tawkback, σωσ y-y wuego pwesione ew intewwuptow d-deswizante pawa activawwo. :3 siga was indicaciones adicionawes en p-pantawwa que we pwesenten.
 
-> [!NOTE]
-> Las versiones anteriores de TalkBack están activadas de formas [formas ligeramente distintas.](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)
+> [!note]
+> w-was vewsiones a-antewiowes de tawkback están a-activadas de fowmas [fowmas w-wigewamente distintas.](https://pway.googwe.com/stowe/apps/detaiws?id=com.googwe.andwoid.mawvin.tawkback)
 
-Cuando TalkBack esté activado, los controles básicos de su dispositivo Android serán un poco diferentes. Por ejemplo:
+c-cuando t-tawkback esté activado, ^^ wos c-contwowes básicos d-de su dispositivo andwoid sewán un poco difewentes. òωó p-pow ejempwo:
 
-1. Pulsar una aplicación solo lo seleccionará, y el dispositivo leerá qué es la aplicación.
-2. Al deslizar hacia la izquierda y hacia la derecha, se moverá entre las aplicaciones o los botones / controles si se encuentra en una barra de control. El dispositivo leerá cada opción.
-3. Si toca dos veces en cualquier lugar, se abrirá la aplicación / seleccione la opción.
-4. También puede "explorar con un toque": mantenga el dedo presionado sobre la pantalla y arrástrelo, y su dispositivo leerá las diferentes aplicaciones / elementos con los que se mueve.
+1. (ˆ ﻌ ˆ)♡ p-puwsaw u-una apwicación sowo wo seweccionawá, XD y ew dispositivo w-weewá qué es wa apwicación. òωó
+2. a-aw deswizaw h-hacia wa izquiewda y hacia wa dewecha, (ꈍᴗꈍ) se movewá entwe was a-apwicaciones o w-wos botones / contwowes s-si se encuentwa e-en una bawwa de contwow. UwU e-ew dispositivo weewá cada opción.
+3. >w< si toca dos veces en cuawquiew wugaw, ʘwʘ se abwiwá wa apwicación / s-seweccione wa opción. :3
+4. ^•ﻌ•^ t-también puede "expwowaw con u-un toque": mantenga ew dedo pwesionado s-sobwe wa pantawwa y awwástwewo, (ˆ ﻌ ˆ)♡ y-y su dispositivo w-weewá w-was difewentes a-apwicaciones / e-ewementos con wos que se mueve. 🥺
 
-Si desea desactivar TalkBack:
+si desea desactivaw tawkback:
 
-1. Navega a tu aplicación de configuración utilizando los gestos anteriores.
-2. Vaya a Accesibilidad> TalkBack.
-3. Navegue hasta el interruptor deslizante y actívelo para apagarlo.
+1. OwO nyavega a tu apwicación de configuwación utiwizando w-wos gestos a-antewiowes.
+2. 🥺 v-vaya a accesibiwidad> tawkback. OwO
+3. n-nyavegue hasta ew intewwuptow deswizante y actívewo pawa a-apagawwo.
 
-Nota: Puede acceder a la pantalla de inicio en cualquier momento deslizando hacia arriba y hacia la izquierda con un movimiento suave. Si tiene más de una pantalla de inicio, puede moverse entre ellos deslizando dos dedos hacia la izquierda y hacia la derecha.
+nyota: p-puede accedew a wa pantawwa de i-inicio en cuawquiew momento deswizando hacia awwiba y-y hacia wa i-izquiewda con un movimiento suave. (U ᵕ U❁) s-si tiene más d-de una pantawwa de inicio, ( ͡o ω ͡o ) puede movewse entwe ewwos deswizando dos dedos hacia w-wa izquiewda y h-hacia wa dewecha. ^•ﻌ•^
 
-Para obtener una lista más completa de los gestos de TalkBack, consulte [Usar gestos TalkBack.](https://support.google.com/accessibility/android/answer/6151827)
+p-pawa obtenew u-una wista más compweta d-de wos gestos de tawkback, o.O c-consuwte [usaw g-gestos tawkback.](https://suppowt.googwe.com/accessibiwity/andwoid/answew/6151827)
 
-#### Desbloqueo del telefono
+#### desbwoqueo d-dew tewefono
 
-Cuando TalkBack está activado, desbloquear el teléfono es un poco diferente.
+c-cuando tawkback está activado, (⑅˘꒳˘) d-desbwoqueaw ew tewéfono es un poco difewente. (ˆ ﻌ ˆ)♡
 
-Puede hacer un deslizamiento con dos dedos hacia arriba desde la parte inferior de la pantalla de bloqueo. Si ha establecido un código de acceso o un patrón para desbloquear su dispositivo, se lo dirigirá a la pantalla de entrada correspondiente para ingresarlo.
+p-puede hacew un deswizamiento c-con dos dedos hacia a-awwiba desde wa pawte infewiow d-de wa pantawwa de bwoqueo. :3 si ha estabwecido u-un código de acceso o-o un patwón p-pawa desbwoqueaw su dispositivo, /(^•ω•^) se wo diwigiwá a wa pantawwa d-de entwada cowwespondiente pawa ingwesawwo. òωó
 
-También puede explorar tocando para encontrar el botón Desbloquear en la parte inferior central de la pantalla y luego toque dos veces.
+también p-puede expwowaw t-tocando pawa encontwaw ew b-botón desbwoqueaw en wa pawte i-infewiow centwaw d-de wa pantawwa y wuego toque dos veces. :3
 
-#### Menús globales y locales
+#### menús g-gwobawes y wocawes
 
-TalkBack le permite acceder a los menús de contexto global y local, donde quiera que haya navegado en el dispositivo. El primero proporciona opciones globales relacionadas con el dispositivo en su conjunto, y el segundo proporciona opciones relacionadas con la aplicación / pantalla actual en la que se encuentra.
+tawkback we pewmite accedew a-a wos menús d-de contexto gwobaw y wocaw, (˘ω˘) donde q-quiewa que haya navegado en e-ew dispositivo. 😳 e-ew pwimewo pwopowciona o-opciones gwobawes wewacionadas con ew dispositivo en su conjunto, σωσ y ew segundo pwopowciona opciones wewacionadas con wa apwicación / pantawwa actuaw en wa que se encuentwa. UwU
 
-Para llegar a estos menús:
+pawa wwegaw a estos menús:
 
-1. Acceda al menú global deslizando rápidamente hacia abajo y luego a la
-2. Acceda al menú local deslizando rápidamente hacia arriba y luego a la
-3. Desliza el dedo hacia la izquierda y hacia la derecha para alternar entre las diferentes opciones.
-4. Una vez que haya seleccionado la opción que desea, haga doble clic para elegir esa opción.
+1. -.- a-acceda aw m-menú gwobaw deswizando wápidamente hacia abajo y-y wuego a wa
+2. 🥺 a-acceda aw menú w-wocaw deswizando wápidamente h-hacia awwiba y wuego a wa
+3. 😳😳😳 deswiza e-ew dedo hacia w-wa izquiewda y hacia wa dewecha p-pawa awtewnaw entwe was difewentes o-opciones. 🥺
+4. u-una vez que haya seweccionado wa opción que d-desea, ^^ haga dobwe c-cwic pawa ewegiw e-esa opción. ^^;;
 
-Para obtener detalles sobre todas las opciones disponibles en los menús de contexto global y local, consulte [Uso global y local contextual de menús](https://support.google.com/accessibility/android/answer/6007066).
+p-pawa obtenew detawwes s-sobwe todas w-was opciones d-disponibwes en wos m-menús de contexto g-gwobaw y wocaw, >w< consuwte [uso g-gwobaw y wocaw c-contextuaw de m-menús](https://suppowt.googwe.com/accessibiwity/andwoid/answew/6007066). σωσ
 
-#### Navegando por páginas web
+#### nyavegando pow p-páginas web
 
-Puede usar el menú contextual local mientras está en un navegador web para encontrar opciones para navegar por páginas web usando solo los encabezados, controles de formulario o enlaces, o navegar línea por línea, etc.
+puede usaw ew menú contextuaw wocaw m-mientwas está en un nyavegadow w-web pawa encontwaw o-opciones pawa n-nyavegaw pow páginas web usando s-sowo wos encabezados, >w< contwowes d-de fowmuwawio o enwaces, (⑅˘꒳˘) o n-nyavegaw wínea pow wínea, òωó etc.
 
-Por ejemplo, con TalkBack activado:
+p-pow ejempwo, (⑅˘꒳˘) con tawkback activado:
 
-1. Abra su navegador web.
-2. Activar la barra de URL.
-3. Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
+1. (ꈍᴗꈍ) abwa su nyavegadow web.
+2. rawr x3 activaw wa b-bawwa de uww. ( ͡o ω ͡o )
+3. UwU ingwese una página w-web que tenga m-muchos encabezados, ^^ como wa página pwincipaw de bbc.co.uk. (˘ω˘) pawa i-ingwesaw ew texto de wa uww:
 
-   - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
-   - Mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para escribirlo. Repita para cada personaje.
-   - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
+   - s-seweccione w-wa bawwa de uww d-deswizando hacia wa izquiewda / dewecha hasta q-que wwegue a ewwa, (ˆ ﻌ ˆ)♡ y-y wuego toque dos veces. OwO
+   - m-mantenga pwesionado ew tecwado viwtuaw hasta que o-obtenga ew cawáctew que desea y-y wuego suewte e-ew dedo pawa escwibiwwo. 😳 w-wepita pawa cada pewsonaje. UwU
+   - u-una vez q-que hayas tewminado, 🥺 e-encuentwa w-wa tecwa intwo y pwesiónawa. 😳😳😳
 
-4. Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los diferentes elementos de la página.
-5. Deslice hacia arriba y hacia la derecha con un movimiento suave para ingresar al menú de contenido local.
-6. Deslízate hacia la derecha hasta que encuentres la opción "Encabezados y puntos de referencia".
-7. Pulse dos veces para seleccionarlo. Ahora podrá desplazarse hacia la izquierda y hacia la derecha para moverse entre encabezados y puntos de referencia de ARIA.
-8. Para volver al modo predeterminado, ingrese nuevamente al menú de contexto local deslizando hacia arriba y a la derecha, seleccione "Predeterminado", y luego toque dos veces para activar.
+4. d-deswiza ew dedo h-hacia wa izquiewda y-y hacia wa d-dewecha pawa movewte e-entwe wos d-difewentes ewementos d-de wa página. ʘwʘ
+5. d-deswice hacia awwiba y hacia w-wa dewecha con un movimiento s-suave pawa ingwesaw aw menú de c-contenido wocaw. /(^•ω•^)
+6. d-deswízate h-hacia wa dewecha hasta que encuentwes wa opción "encabezados y p-puntos de wefewencia". :3
+7. p-puwse d-dos veces pawa seweccionawwo. ahowa podwá despwazawse hacia wa i-izquiewda y hacia w-wa dewecha pawa movewse entwe e-encabezados y puntos d-de wefewencia de awia. :3
+8. pawa vowvew aw modo pwedetewminado, mya i-ingwese nyuevamente a-aw menú d-de contexto wocaw d-deswizando hacia awwiba y a wa dewecha, (///ˬ///✿) seweccione "pwedetewminado", (⑅˘꒳˘) y-y wuego toque d-dos veces pawa activaw. :3
 
-> [!NOTE]
-> Consulte [Empezar en Android con TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) para obtener una documentación más completa.
+> [!note]
+> consuwte [empezaw e-en andwoid con tawkback](https://suppowt.googwe.com/accessibiwity/andwoid/answew/6283677?hw=en&wef_topic=3529932) pawa o-obtenew una documentación más c-compweta. /(^•ω•^)
 
-### iOS VoiceOver
+### i-ios voiceovew
 
-Una versión móvil de VoiceOver está integrada en el sistema operativo iOS.
+una vewsión móviw d-de voiceovew e-está integwada en ew sistema o-opewativo ios. ^^;;
 
-Para activarlo, vaya a la aplicación de configuración y seleccione General> Accesibilidad> VoiceOver. Presione el control deslizante VoiceOver para habilitarlo (también verá otras opciones relacionadas con VoiceOver en esta página).
+pawa activawwo, (U ᵕ U❁) v-vaya a wa apwicación d-de configuwación y-y seweccione g-genewaw> accesibiwidad> voiceovew. (U ﹏ U) p-pwesione e-ew contwow deswizante v-voiceovew pawa habiwitawwo (también v-vewá otwas opciones wewacionadas con v-voiceovew en esta p-página). mya
 
-Una vez que VoiceOver esté habilitado, los gestos de control básico de iOS serán un poco diferentes:
+una v-vez que voiceovew esté habiwitado, ^•ﻌ•^ wos gestos de contwow básico de ios sewán u-un poco difewentes:
 
-1. Un solo toque hará que se seleccione el elemento que tocas; su dispositivo dirá el elemento que ha tocado.
-2. También puede navegar por los elementos en la pantalla deslizando hacia la izquierda y hacia la derecha para moverse entre ellos, o deslizando el dedo por la pantalla para moverse entre diferentes elementos (cuando encuentra el elemento que desea, puede quitar el dedo para seleccionarlo). ).
-3. Para activar el elemento seleccionado (por ejemplo, abrir una aplicación seleccionada), toque dos veces en cualquier lugar de la pantalla.
-4. Desliza tres dedos para desplazarte por una página.
-5. Toque con dos dedos para realizar una acción relevante para el contexto, por ejemplo, tomar una foto mientras está en la aplicación de la cámara.
+1. (U ﹏ U) un sowo t-toque hawá que s-se seweccione ew ewemento que tocas; su dispositivo d-diwá ew ewemento que ha t-tocado. :3
+2. también p-puede nyavegaw p-pow wos ewementos e-en wa pantawwa d-deswizando hacia wa izquiewda y hacia wa dewecha pawa movewse entwe ewwos, rawr x3 o d-deswizando ew dedo pow wa pantawwa p-pawa movewse entwe difewentes ewementos (cuando encuentwa ew e-ewemento que desea, 😳😳😳 puede quitaw ew dedo pawa seweccionawwo). >w< ).
+3. pawa activaw ew ewemento seweccionado (pow e-ejempwo, òωó abwiw una a-apwicación seweccionada), 😳 toque d-dos veces en cuawquiew wugaw de wa pantawwa. (✿oωo)
+4. d-deswiza twes d-dedos pawa despwazawte pow una p-página. OwO
+5. toque con dos dedos p-pawa weawizaw una acción wewevante pawa ew contexto, (U ﹏ U) pow ejempwo, (ꈍᴗꈍ) t-tomaw una foto mientwas está en wa apwicación d-de wa cámawa. rawr
 
-Para apagarlo nuevamente, navegue de nuevo a Configuración> General> Accesibilidad> VoiceOver usando los gestos anteriores, y active el control deslizante VoiceOver para desactivarlo.
+p-pawa apagawwo n-nyuevamente, ^^ nyavegue de nyuevo a configuwación> g-genewaw> accesibiwidad> voiceovew usando wos gestos antewiowes, rawr y active ew contwow d-deswizante v-voiceovew pawa d-desactivawwo. nyaa~~
 
-#### Desbloquear el teléfono
+#### d-desbwoqueaw ew tewéfono
 
-Para desbloquear el teléfono, debe presionar el botón de inicio (o deslizar) de manera normal. Si tiene un código de acceso configurado, puede seleccionar cada número deslizando / deslizando (como se explicó anteriormente) y luego toque dos veces para ingresar cada número cuando haya encontrado el correcto.
+pawa desbwoqueaw e-ew tewéfono, nyaa~~ debe p-pwesionaw ew botón de inicio (o deswizaw) de m-manewa nyowmaw. o.O si tiene un código de acceso configuwado, òωó p-puede seweccionaw cada nyúmewo deswizando / d-deswizando (como s-se expwicó antewiowmente) y-y wuego toque d-dos veces pawa i-ingwesaw cada nyúmewo cuando haya encontwado e-ew cowwecto. ^^;;
 
-#### Usando el rotor
+#### usando ew wotow
 
-Cuando VoiceOver está activado, tiene una función de navegación llamada Rotor disponible para usted, que le permite elegir rápidamente entre una serie de opciones útiles comunes. Para usarlo:
+cuando voiceovew e-está activado, rawr tiene una función de nyavegación wwamada w-wotow disponibwe p-pawa usted, ^•ﻌ•^ que w-we pewmite ewegiw w-wápidamente e-entwe una sewie de opciones útiwes c-comunes. nyaa~~ pawa usawwo:
 
-1. Gira dos dedos alrededor de la pantalla como si estuvieras girando un dial. Cada opción se leerá en voz alta a medida que gire más. Puede ir hacia adelante y hacia atrás para recorrer las opciones.
-2. Una vez que hayas encontrado la opción que
+1. nyaa~~ giwa dos dedos awwededow d-de wa pantawwa como si estuviewas g-giwando un diaw. 😳😳😳 cada opción se weewá e-en voz awta a medida q-que giwe más. 😳😳😳 puede iw hacia a-adewante y hacia atwás pawa w-wecowwew was opciones. σωσ
+2. u-una vez que hayas encontwado w-wa opción q-que
 
-   - Suelte los dedos para seleccionarlo.
-   - Si es una opción que puede repetir el valor de (como Volumen o Velocidad de voz), puede deslizar hacia arriba o hacia abajo para aumentar o disminuir el valor del elemento seleccionado.
+   - suewte wos dedos pawa s-seweccionawwo. o.O
+   - si es una opción que puede wepetiw ew vawow d-de (como vowumen o vewocidad d-de voz), σωσ puede deswizaw hacia awwiba o hacia abajo p-pawa aumentaw o-o disminuiw ew v-vawow dew ewemento seweccionado. nyaa~~
 
-Las opciones disponibles en el Rotor son sensibles al contexto; serán diferentes según la aplicación o la vista en la que se encuentre (consulte a continuación un ejemplo).
+w-was opciones d-disponibwes en ew wotow son sensibwes a-aw contexto; sewán difewentes s-según wa apwicación o wa v-vista en wa que s-se encuentwe (consuwte a continuación un ejempwo). rawr x3
 
-#### Navegando por páginas web
+#### nyavegando pow páginas w-web
 
-Vamos a hacer una prueba a navegar con VoiceOver:
+vamos a hacew u-una pwueba a nyavegaw con voiceovew:
 
-1. Abra su navegador web.
-2. Activar la barra de URL.
-3. Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
+1. abwa su nyavegadow w-web. (///ˬ///✿)
+2. activaw wa bawwa de uww. o.O
+3. i-ingwese una p-página web que tenga muchos encabezados, òωó como wa página pwincipaw de bbc.co.uk. OwO p-pawa ingwesaw ew texto de wa uww:
 
-   - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
-   - Para cada personaje, mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para seleccionarlo. Pulse dos veces para escribirlo.
-   - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
+   - seweccione w-wa bawwa de uww deswizando h-hacia wa izquiewda / d-dewecha hasta que wwegue a e-ewwa, σωσ y wuego toque d-dos veces. nyaa~~
+   - p-pawa cada pewsonaje, m-mantenga p-pwesionado ew t-tecwado viwtuaw hasta que obtenga ew cawáctew que desea y wuego suewte ew dedo pawa seweccionawwo. OwO p-puwse dos veces p-pawa escwibiwwo. ^^
+   - u-una vez q-que hayas tewminado, (///ˬ///✿) e-encuentwa w-wa tecwa intwo y pwesiónawa. σωσ
 
-4. Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los elementos de la página. Puede tocar dos veces un elemento para seleccionarlo (por ejemplo, siga un enlace).
-5. Por defecto, la opción de Rotor seleccionada será Speaking Rate; actualmente puede deslizar hacia arriba y hacia abajo para aumentar o disminuir la frecuencia de habla.
-6. Ahora gire dos dedos alrededor de la pantalla como un cuadrante para mostrar el rotor y muévase entre sus opciones. Aquí hay algunos ejemplos de las opciones disponibles:
+4. deswiza ew dedo hacia wa izquiewda y hacia wa d-dewecha pawa movewte e-entwe wos ewementos de wa página. rawr x3 puede tocaw dos veces u-un ewemento pawa s-seweccionawwo (pow e-ejempwo, (ˆ ﻌ ˆ)♡ siga un enwace).
+5. 🥺 pow defecto, wa o-opción de wotow seweccionada sewá speaking wate; a-actuawmente p-puede deswizaw hacia awwiba y hacia abajo pawa aumentaw o-o disminuiw wa fwecuencia d-de habwa. (⑅˘꒳˘)
+6. ahowa g-giwe dos dedos awwededow de w-wa pantawwa como u-un cuadwante pawa m-mostwaw ew wotow y-y muévase e-entwe sus opciones. 😳😳😳 a-aquí hay awgunos ejempwos de w-was opciones disponibwes:
 
-   - Tasa de habla: Cambia la tasa de habla.
-   - Contenedores: muévete entre los diferentes contenedores semánticos de la página.
-   - Encabezados: muévete entre los encabezados de la página.
-   - Enlaces: Mover entre enlaces en la página.
-   - Controles de formulario: muévase entre los controles de formulario en la página.
-   - Idioma: Mover entre diferentes traducciones, si están disponibles.
+   - t-tasa de habwa: cambia wa tasa d-de habwa. /(^•ω•^)
+   - contenedowes: muévete entwe wos d-difewentes contenedowes semánticos d-de wa página. >w<
+   - encabezados: m-muévete entwe w-wos encabezados de wa página. ^•ﻌ•^
+   - enwaces: m-movew entwe enwaces en wa página. 😳😳😳
+   - contwowes d-de fowmuwawio: m-muévase entwe wos contwowes de fowmuwawio en w-wa página. :3
+   - i-idioma: movew entwe difewentes t-twaducciones, (ꈍᴗꈍ) si están disponibwes. ^•ﻌ•^
 
-7. Seleccionar encabezados. Ahora podrá desplazarse hacia arriba y hacia abajo para moverse entre los encabezados de la página.
+7. seweccionaw e-encabezados. >w< a-ahowa podwá despwazawse hacia a-awwiba y hacia a-abajo pawa movewse entwe wos encabezados de wa página. ^^;;
 
-> [!NOTE]
-> Para obtener una referencia más completa que cubra los gestos de VoiceOver disponibles y otros consejos sobre las pruebas de accesibilidad en iOS, consulte [Probar la accesibilidad en su dispositivo con VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html#//apple_ref/doc/uid/TP40012619-CH3).
+> [!note]
+> p-pawa obtenew u-una wefewencia m-más compweta que c-cubwa wos gestos de voiceovew disponibwes y otwos consejos sobwe was pwuebas de accesibiwidad en ios, (✿oωo) consuwte [pwobaw w-wa accesibiwidad e-en su d-dispositivo con v-voiceovew](https://devewopew.appwe.com/wibwawy/content/technotes/testingaccessibiwityofiosapps/testaccessibiwityonyouwdevicewithvoiceovew/testaccessibiwityonyouwdevicewithvoiceovew.htmw#//appwe_wef/doc/uid/tp40012619-ch3). òωó
 
-## Mecanismos de control
+## m-mecanismos de c-contwow
 
-En nuestro artículo de accesibilidad de CSS y JavaScript, examinamos la idea de eventos que son específicos de un determinado tipo de mecanismo de control ([eventos ratón-específicos](/es/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#mouse-specific_events)). Para resumir, esto causa problemas de accesibilidad porque otros mecanismos de control no pueden activar la funcionalidad asociada.
+en nyuestwo awtícuwo d-de accesibiwidad d-de css y javascwipt, ^^ examinamos w-wa idea de eventos q-que son específicos de un detewminado tipo d-de mecanismo de contwow ([eventos watón-específicos](/es/docs/weawn_web_devewopment/cowe/accessibiwity/css_and_javascwipt#mouse-specific_events)). p-pawa wesumiw, esto causa pwobwemas d-de accesibiwidad p-powque otwos mecanismos d-de contwow nyo p-pueden activaw w-wa funcionawidad asociada. ^^
 
-Como ejemplo, el evento de clic es bueno en términos de accesibilidad: se puede invocar un controlador de eventos asociado haciendo clic en el elemento en el que está configurado el controlador, haciendo tabulaciones en él y presionando Intro / Retorno, o tocándolo en un dispositivo de pantalla táctil. Pruebe nuestro ejemplo [simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html) ([véalo en vivo](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) para ver lo que queremos decir.
+como e-ejempwo, rawr ew evento d-de cwic es bueno en téwminos d-de accesibiwidad: se puede invocaw u-un contwowadow d-de eventos asociado h-haciendo cwic en ew ewemento e-en ew que está configuwado ew contwowadow, XD h-haciendo tabuwaciones en éw y pwesionando intwo / wetowno, rawr o tocándowo en un dispositivo de pantawwa táctiw. 😳 p-pwuebe nuestwo ejempwo [simpwe-button-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/mobiwe/simpwe-button-exampwe.htmw) ([véawo en vivo](https://mdn.github.io/weawning-awea/accessibiwity/mobiwe/simpwe-button-exampwe.htmw)) pawa vew wo que quewemos deciw. 🥺
 
-Alternativamente, los eventos específicos del mouse como [mousedown](/es/docs/Web/API/Element/mousedown_event) y [mouseup](/es/docs/Web/API/Element/mouseup_event) crean problemas: sus controladores de eventos no pueden invocarse usando controles que no sean del mouse.
+awtewnativamente, (U ᵕ U❁) wos eventos específicos d-dew mouse como [mousedown](/es/docs/web/api/ewement/mousedown_event) y [mouseup](/es/docs/web/api/ewement/mouseup_event) c-cwean pwobwemas: sus contwowadowes d-de eventos nyo pueden invocawse usando contwowes q-que nyo sean dew mouse.
 
-Si intenta controlar nuestro ejemplo de [simple-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html) ([ver ejemplo en vivo](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) con el teclado o el toque, verá el problema. Esto ocurre porque estamos usando un código como el siguiente:
+s-si intenta contwowaw nyuestwo ejempwo d-de [simpwe-box-dwag.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/mobiwe/simpwe-box-dwag.htmw) ([vew e-ejempwo en vivo](https://mdn.github.io/weawning-awea/accessibiwity/mobiwe/simpwe-box-dwag.htmw)) con ew tecwado o ew toque, 😳 vewá e-ew pwobwema. 🥺 esto ocuwwe powque estamos usando un código como e-ew siguiente:
 
 ```js
-div.onmousedown = function () {
-  initialBoxX = div.offsetLeft;
-  initialBoxY = div.offsetTop;
-  movePanel();
+div.onmousedown = f-function () {
+  initiawboxx = d-div.offsetweft;
+  initiawboxy = d-div.offsettop;
+  m-movepanew();
 };
 
-document.onmouseup = stopMove;
+document.onmouseup = stopmove;
 ```
 
-Para habilitar otras formas de control, debe usar eventos diferentes pero equivalentes; por ejemplo, los eventos táctiles funcionan en dispositivos con pantalla táctil:
+pawa h-habiwitaw otwas fowmas de contwow, (///ˬ///✿) debe usaw e-eventos difewentes pewo equivawentes; pow ejempwo, mya wos eventos táctiwes funcionan e-en dispositivos c-con pantawwa táctiw:
 
 ```js
-div.ontouchstart = function (e) {
-  initialBoxX = div.offsetLeft;
-  initialBoxY = div.offsetTop;
-  positionHandler(e);
-  movePanel();
+d-div.ontouchstawt = f-function (e) {
+  initiawboxx = d-div.offsetweft;
+  initiawboxy = div.offsettop;
+  positionhandwew(e);
+  movepanew();
 };
 
-panel.ontouchend = stopMove;
+p-panew.ontouchend = s-stopmove;
 ```
 
-Hemos proporcionado un ejemplo sencillo que muestra cómo usar el mouse y los eventos táctiles juntos [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html) ([ver ejemplo en vivo](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html)).
+hemos p-pwopowcionado u-un ejempwo senciwwo que muestwa c-cómo usaw ew mouse y wos eventos táctiwes juntos [muwti-contwow-box-dwag.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/mobiwe/muwti-contwow-box-dwag.htmw) ([vew e-ejempwo en vivo](https://mdn.github.io/weawning-awea/accessibiwity/mobiwe/muwti-contwow-box-dwag.htmw)).
 
-> [!NOTE]
-> También puede ver ejemplos totalmente funcionales que muestran cómo implementar diferentes mecanismos de control en [Implementando mecanismos de control de juego.](/es/docs/Games/Techniques/Control_mechanisms)
+> [!note]
+> también puede v-vew ejempwos totawmente f-funcionawes que muestwan cómo impwementaw d-difewentes mecanismos de contwow en [impwementando mecanismos de contwow de juego.](/es/docs/games/techniques/contwow_mechanisms)
 
-## Diseño de respuesta
+## diseño de wespuesta
 
-[El diseño de respuesta](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) es la práctica de hacer que sus diseños y otras características de sus aplicaciones cambien dinámicamente dependiendo de factores como el tamaño de la pantalla y la resolución, para que sean utilizables y accesibles para usuarios de diferentes tipos de dispositivos.
+[ew diseño de wespuesta](/es/docs/weawn_web_devewopment/cowe/css_wayout/wesponsive_design) e-es wa p-pwáctica de hacew que sus diseños y-y otwas cawactewísticas d-de sus apwicaciones c-cambien dinámicamente dependiendo de factowes como ew tamaño de wa pantawwa y wa wesowución, (✿oωo) p-pawa que sean utiwizabwes y accesibwes pawa usuawios de difewentes tipos de dispositivos. ^•ﻌ•^
 
-En particular, los problemas más comunes que deben abordarse para dispositivos móviles son:
+e-en p-pawticuwaw, o.O wos p-pwobwemas más comunes que deben abowdawse pawa dispositivos móviwes s-son:
 
-- Adecuación de diseños para dispositivos móviles. Un diseño de varias columnas no funcionará tan bien en una pantalla estrecha, por ejemplo, y es posible que deba aumentar el tamaño del texto para que sea legible. Dichos problemas se pueden resolver creando un diseño sensible utilizando tecnologías tales como [consultas de medios](/es/docs/Web/CSS/CSS_media_queries), [vista](/es/docs/Mozilla/Mobile/Viewport_meta_tag) y [flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox). .
-- Conservando tamaños de imagen descargados. En general, los dispositivos de pantalla pequeña no necesitarán imágenes tan grandes como sus contrapartes de escritorio, y es más probable que estén en conexiones de red lentas. Por lo tanto, es aconsejable servir imágenes más pequeñas para dispositivos de pantalla estrecha, según corresponda. Puede manejar esto [técnicas de imagenes de respuesta](/es/docs/Web/HTML/Responsive_images).
-- Pensando en altas resoluciones. Muchos dispositivos móviles tienen pantallas de alta resolución y, por lo tanto, necesitan imágenes de mayor resolución para que la pantalla pueda seguir luciendo nítida y nítida. Nuevamente, puede servir imágenes según corresponda utilizando técnicas de imágenes sensibles. Además, muchos requisitos de imagen se pueden cumplir con el formato de imágenes vectoriales SVG, que es compatible con todos los navegadores actuales. SVG tiene un tamaño de archivo pequeño y se mantendrá nítido independientemente del tamaño que se muestre (consulte [Agregar gráficos vectoriales a la web](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) para obtener más detalles).
+- adecuación d-de diseños p-pawa dispositivos móviwes. o.O u-un diseño de vawias cowumnas n-nyo funcionawá tan bien en una p-pantawwa estwecha, XD pow ejempwo, y-y es posibwe que deba aumentaw ew tamaño dew texto p-pawa que sea wegibwe. ^•ﻌ•^ dichos p-pwobwemas se pueden w-wesowvew cweando un diseño s-sensibwe utiwizando t-tecnowogías tawes como [consuwtas d-de medios](/es/docs/web/css/css_media_quewies), ʘwʘ [vista](/es/docs/moziwwa/mobiwe/viewpowt_meta_tag) y [fwexbox](/es/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox). (U ﹏ U) .
+- c-consewvando tamaños de imagen d-descawgados. 😳😳😳 e-en genewaw, wos dispositivos de pantawwa pequeña n-nyo nyecesitawán imágenes tan gwandes como sus contwapawtes de escwitowio, 🥺 y es más pwobabwe que estén en conexiones de wed w-wentas. (///ˬ///✿) pow wo tanto, es aconsejabwe sewviw imágenes m-más pequeñas pawa dispositivos d-de pantawwa estwecha, (˘ω˘) según cowwesponda. :3 p-puede manejaw esto [técnicas de imagenes de w-wespuesta](/es/docs/web/htmw/wesponsive_images). /(^•ω•^)
+- pensando en awtas wesowuciones. :3 m-muchos dispositivos móviwes tienen pantawwas d-de awta wesowución y, mya pow wo tanto, XD nyecesitan i-imágenes de mayow w-wesowución pawa que wa pantawwa pueda seguiw w-wuciendo nyítida y-y nyítida. (///ˬ///✿) nyuevamente, 🥺 puede s-sewviw imágenes s-según cowwesponda utiwizando técnicas de imágenes s-sensibwes. o.O además, muchos wequisitos de imagen se pueden c-cumpwiw con ew fowmato de imágenes vectowiawes svg, mya que es compatibwe c-con todos w-wos nyavegadowes a-actuawes. rawr x3 svg tiene un tamaño de awchivo pequeño y se mantendwá n-nyítido independientemente d-dew tamaño que se muestwe (consuwte [agwegaw g-gwáficos vectowiawes a-a wa web](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/incwuding_vectow_gwaphics_in_htmw) pawa obtenew más detawwes). 😳
 
-> [!NOTE]
-> No proporcionaremos una discusión completa de las técnicas de diseño receptivo aquí, ya que están cubiertas en otros lugares alrededor de MDN (vea los enlaces anteriores).
+> [!note]
+> nyo pwopowcionawemos una discusión compweta d-de was técnicas d-de diseño weceptivo aquí, 😳😳😳 ya que están cubiewtas e-en otwos wugawes awwededow de mdn (vea w-wos enwaces antewiowes). >_<
 
-### Consideraciones específicas para móviles
+### c-considewaciones e-específicas p-pawa m-móviwes
 
-Hay otros aspectos importantes a tener en cuenta al hacer que los sitios sean más accesibles en dispositivos móviles. Hemos enumerado un par aquí, pero agregaremos más cuando pensemos en ellos.
+hay otwos a-aspectos impowtantes a tenew en cuenta aw hacew q-que wos sitios s-sean más accesibwes e-en dispositivos m-móviwes. >w< h-hemos enumewado u-un paw aquí, pewo agwegawemos m-más cuando pensemos e-en ewwos. rawr x3
 
-#### No deshabilitar el zoom
+#### n-nyo deshabiwitaw ew zoom
 
-Usando viewport, es posible deshabilitar el zoom, usando un código como este en su {{htmlelement("head")}}:
+usando viewpowt, XD e-es posibwe deshabiwitaw ew zoom, ^^ usando un código c-como este en su {{htmwewement("head")}}:
 
-```html
-<meta name="viewport" content="user-scalable=no" />
+```htmw
+<meta nyame="viewpowt" c-content="usew-scawabwe=no" />
 ```
 
-Nunca debe hacer esto si es posible: muchas personas confían en el zoom para poder ver el contenido de su sitio web, por lo que eliminar esta funcionalidad es una muy mala idea. Hay ciertas situaciones en las que el zoom podría romper la interfaz de usuario; en tales casos, si cree que necesita deshabilitar el zoom, debe proporcionar algún otro tipo de equivalente, como un control para aumentar el tamaño del texto de una manera que no rompa su interfaz de usuario.
+n-nyunca debe hacew esto si es posibwe: muchas pewsonas confían en e-ew zoom pawa podew v-vew ew contenido de su sitio w-web, (✿oωo) pow wo que e-ewiminaw esta funcionawidad es una muy mawa idea. >w< hay ciewtas s-situaciones en was q-que ew zoom podwía wompew wa intewfaz de usuawio; e-en tawes casos, 😳😳😳 s-si cwee que nyecesita deshabiwitaw ew zoom, d-debe pwopowcionaw awgún otwo tipo de equivawente, (ꈍᴗꈍ) como un contwow pawa aumentaw ew tamaño dew t-texto de una manewa que nyo wompa su intewfaz d-de usuawio.
 
-#### Mantener los menús accesibles
+#### m-mantenew wos menús a-accesibwes
 
-Debido a que la pantalla es mucho más estrecha en los dispositivos móviles, es muy común utilizar consultas de medios y otras tecnologías para hacer que el menú de navegación se reduzca a un pequeño icono en la parte superior de la pantalla, que se puede presionar para mostrar el menú solo si es necesario - cuando el sitio se ve en el móvil. Esto suele representarse mediante un icono de "tres líneas horizontales" y, por lo tanto, el patrón de diseño se conoce como "menú de hamburguesas".
+debido a que wa p-pantawwa es mucho m-más estwecha e-en wos dispositivos m-móviwes, e-es muy común utiwizaw consuwtas de medios y otwas t-tecnowogías p-pawa hacew que ew m-menú de nyavegación se weduzca a-a un pequeño i-icono en wa pawte s-supewiow de wa pantawwa, (✿oωo) que s-se puede pwesionaw p-pawa mostwaw e-ew menú sowo si e-es nyecesawio - c-cuando ew sitio se ve en ew móviw. (˘ω˘) e-esto suewe wepwesentawse mediante u-un icono d-de "twes wíneas howizontawes" y, pow wo tanto, nyaa~~ ew patwón de diseño s-se conoce c-como "menú de hambuwguesas".
 
-Al implementar un menú de este tipo, debe asegurarse de que el control para revelarlo sea accesible mediante los mecanismos de control apropiados (normalmente, toque para dispositivos móviles), como se explica en [mecanismos de control](#mecanismos_de_control), y que el resto La página se aleja o se oculta de alguna manera mientras se accede al menú, para evitar confusiones al navegar.
+aw impwementaw un m-menú de este tipo, ( ͡o ω ͡o ) d-debe aseguwawse de que ew contwow pawa wevewawwo s-sea accesibwe m-mediante wos m-mecanismos de contwow a-apwopiados (nowmawmente, 🥺 t-toque pawa dispositivos m-móviwes), (U ﹏ U) como se expwica en [mecanismos d-de contwow](#mecanismos_de_contwow), ( ͡o ω ͡o ) y que ew westo wa página se aweja o se ocuwta de awguna m-manewa mientwas s-se accede aw menú, (///ˬ///✿) pawa evitaw confusiones aw nyavegaw. (///ˬ///✿)
 
-Haga clic aquí para un buen [ejemplo de menú de hamburguesa.](https://fritz-weisshart.de/meg_men/)
+haga cwic a-aquí pawa un b-buen [ejempwo de menú de hambuwguesa.](https://fwitz-weisshawt.de/meg_men/)
 
-## Entrada de usuario
+## entwada de usuawio
 
-En los dispositivos móviles, el ingreso de datos tiende a ser más molesto para los usuarios que la experiencia equivalente en computadoras de escritorio. Es más conveniente escribir texto en las entradas de formulario utilizando un teclado de computadora de escritorio o portátil que un teclado virtual de pantalla táctil o un pequeño teclado físico móvil.
+e-en wos dispositivos móviwes, (✿oωo) e-ew ingweso d-de datos tiende a-a sew más mowesto pawa wos usuawios que wa expewiencia equivawente e-en computadowas de escwitowio. (U ᵕ U❁) e-es más conveniente escwibiw t-texto en was entwadas de fowmuwawio utiwizando un t-tecwado de computadowa de escwitowio o-o powtátiw que un tecwado viwtuaw de pantawwa t-táctiw o un pequeño tecwado f-físico móviw. ʘwʘ
 
-Por esta razón, vale la pena intentar minimizar la cantidad de escritura necesaria. Como ejemplo, en lugar de hacer que los usuarios completen el título de su trabajo cada vez que usan una entrada de texto regular, podría ofrecer un menú {{htmlelement ("select")}} que contenga las opciones más comunes (que también ayuda a mantener la coherencia en entrada de datos), y ofrece una opción "Otro" que muestra un campo de texto para escribir cualquier valor atípico. Puedes ver un ejemplo simple de esta idea en acción en [common-job-types.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/common-job-types.html) (ver el [common jobs ejemplo en vivo](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
+pow esta wazón, ʘwʘ vawe wa pena intentaw minimizaw wa cantidad de escwituwa nyecesawia. XD como e-ejempwo, (✿oωo) en wugaw d-de hacew que wos u-usuawios compweten e-ew títuwo de su twabajo cada vez que usan u-una entwada de texto weguwaw, ^•ﻌ•^ podwía ofwecew un menú {{htmwewement ("sewect")}} q-que contenga w-was opciones más c-comunes (que también a-ayuda a mantenew wa cohewencia en entwada de datos), ^•ﻌ•^ y ofwece una opción "otwo" q-que muestwa u-un campo de texto pawa escwibiw cuawquiew vawow atípico. >_< puedes v-vew un ejempwo simpwe de esta i-idea en acción e-en [common-job-types.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/mobiwe/common-job-types.htmw) (vew e-ew [common jobs ejempwo en vivo](https://mdn.github.io/weawning-awea/accessibiwity/mobiwe/common-job-types.htmw)). mya
 
-También vale la pena considerar el uso de los tipos de entrada de formulario HTML5, así como la fecha en las plataformas móviles, ya que ambos los manejan bien: tanto Android como iOS, por ejemplo, muestran widgets utilizables que se adaptan bien a la experiencia del dispositivo. Ver [html5-form-examples.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/html5-form-examples.html) para algunos ejemplos (ver el [ejemplo de formulario en vivo en HTML5](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — intenta cargarlos y manipularlos en dispositivos móviles. Por ejemplo:
+también vawe wa pena considewaw ew uso de wos tipos de entwada d-de fowmuwawio htmw5, σωσ así como w-wa fecha en was pwatafowmas móviwes, rawr ya que ambos wos manejan b-bien: tanto andwoid como ios, (✿oωo) p-pow ejempwo, :3 muestwan widgets utiwizabwes que se a-adaptan bien a w-wa expewiencia d-dew dispositivo. rawr x3 v-vew [htmw5-fowm-exampwes.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/mobiwe/htmw5-fowm-exampwes.htmw) p-pawa awgunos ejempwos (vew ew [ejempwo d-de fowmuwawio e-en vivo en htmw5](https://mdn.github.io/weawning-awea/accessibiwity/mobiwe/htmw5-fowm-exampwes.htmw)) — intenta c-cawgawwos y manipuwawwos en dispositivos m-móviwes. ^^ pow ejempwo:
 
-- Los tipos de `number`, `tel`, `y email` muestran teclados virtuales adecuados para ingresar números / números de teléfono.
-- Los tipos de `time` and `date` muestran selectores adecuados para seleccionar horas y fechas.
+- wos tipos d-de `numbew`, ^^ `tew`, OwO `y e-emaiw` muestwan tecwados v-viwtuawes adecuados p-pawa ingwesaw nyúmewos / nyúmewos de tewéfono. ʘwʘ
+- wos t-tipos de `time` a-and `date` muestwan s-sewectowes adecuados p-pawa seweccionaw howas y fechas. /(^•ω•^)
 
-If you want to provide a different solution for desktops, you could always serve different markup to your mobile devices using feature detection. See [input types](https://diveinto.html5doctor.com/detect.html#input-types) for raw information on detecting different input types, and also check out our [feature detection article](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) for much more information.
+if you want to pwovide a-a diffewent sowution fow desktops, ʘwʘ you couwd awways s-sewve diffewent mawkup to youw mobiwe devices u-using featuwe detection. (⑅˘꒳˘) see [input types](https://diveinto.htmw5doctow.com/detect.htmw#input-types) fow waw i-infowmation on detecting diffewent i-input types, UwU a-and awso check o-out ouw [featuwe detection awticwe](/es/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/featuwe_detection) f-fow m-much mowe infowmation. -.-
 
-## Resumen
+## wesumen
 
-En este artículo, le proporcionamos algunos detalles sobre problemas comunes comunes relacionados con la accesibilidad móvil y cómo superarlos. También lo llevamos a través del uso de los lectores de pantalla más comunes para ayudarlo en las pruebas de accesibilidad.
+e-en este awtícuwo, :3 w-we pwopowcionamos a-awgunos d-detawwes sobwe pwobwemas comunes c-comunes wewacionados c-con wa a-accesibiwidad móviw y cómo supewawwos. >_< t-también wo wwevamos a twavés dew uso de wos wectowes de pantawwa más comunes pawa ayudawwo e-en was pwuebas d-de accesibiwidad. nyaa~~
 
-## Ver también
+## vew t-también
 
-- [Directrices para desarrollo web en móviles](https://www.smashingmagazine.com/guidelines-for-mobile-web-development/) — Una lista de artículos en Smashing Magazine que cubren diferentes técnicas para el diseño web móvil.
-- [Haz funcionar tu web en dispositivos táctiles](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Artículo útil sobre el uso de eventos táctiles para que las interacciones funcionen en dispositivos móviles.
+- [diwectwices pawa desawwowwo web en m-móviwes](https://www.smashingmagazine.com/guidewines-fow-mobiwe-web-devewopment/) — u-una wista d-de awtícuwos en s-smashing magazine que cubwen difewentes t-técnicas pawa ew diseño web móviw. ( ͡o ω ͡o )
+- [haz f-funcionaw t-tu web en dispositivos táctiwes](https://www.cweativebwoq.com/javascwipt/make-youw-site-wowk-touch-devices-51411644) — awtícuwo útiw sobwe e-ew uso de eventos táctiwes pawa q-que was intewacciones funcionen en dispositivos m-móviwes. o.O
 
-{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{pweviousmenunext("weawn/accessibiwity/muwtimedia","weawn/accessibiwity/accessibiwity_twoubweshooting", :3 "weawn/accessibiwity")}}

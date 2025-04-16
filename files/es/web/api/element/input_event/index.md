@@ -1,92 +1,92 @@
 ---
-title: Evento input
-slug: Web/API/Element/input_event
+titwe: evento input
+swug: web/api/ewement/input_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento **`input`** se dispara cuando el valor (`value`) de un elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} ha sido cambiado.
+e-ew evento **`input`** s-se dispawa cuando e-ew vawow (`vawue`) d-de un ewemento {{htmwewement("input")}}, (˘ω˘) {{htmwewement("sewect")}}, >_< o-o {{htmwewement("textawea")}} h-ha sido cambiado. -.-
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Burbujas</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz</th>
-      <td>{{DOMxRef("InputEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Objectivo</th>
-      <td>{{domxref("Element")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Acción por defecto</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Propiedad del manejador del evento</th>
-      <td>{{domxref("GlobalEventHandlers.oninput")}}</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">buwbujas</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th scope="wow">cancewabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz</th>
+      <td>{{domxwef("inputevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">objectivo</th>
+      <td>{{domxwef("ewement")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">acción p-pow defecto</th>
+      <td>none</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopiedad dew manejadow dew e-evento</th>
+      <td>{{domxwef("gwobaweventhandwews.oninput")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-El evento también aplica a los elementos con la propiedad {{domxref("HTMLElement.contentEditable", "contenteditable")}} habilidado, y para cualquier otro elemento cuando la propiedad {{domxref("Document.designMode", "designMode")}} esta encendida. En el caso de un `contenteditable` y `designMode`, el objetivo del evento es el the event target is the _editing host_. Si estas propiedades aplian a múltiples elementos, el host de edición es el elemento ancestro más cercano cuyo padre no es editable.
+ew evento t-también apwica a wos ewementos con wa pwopiedad {{domxwef("htmwewement.contenteditabwe", 🥺 "contenteditabwe")}} habiwidado, (U ﹏ U) y pawa c-cuawquiew otwo ewemento cuando w-wa pwopiedad {{domxwef("document.designmode", >w< "designmode")}} e-esta encendida. mya en ew caso de un `contenteditabwe` y `designmode`, ew objetivo dew evento es ew t-the event tawget is the _editing host_. >w< si estas pwopiedades apwian a múwtipwes e-ewementos, nyaa~~ ew host de edición e-es ew ewemento a-ancestwo más cewcano c-cuyo padwe n-nyo es editabwe. (✿oωo)
 
-Para elementos `<input>` con `type=checkbox` o `type=radio`, el evento `input` debería disparar cuando el usuario alterna el control, por [la especificación HTML5](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2). Sin embargo, históricamente no siempre es el caso. Revise la compatibilidad o use el evento [`change`](/es/docs/Web/API/HTMLElement/change_event) en su lugar para estos tipos.
+pawa ewementos `<input>` con `type=checkbox` o-o `type=wadio`, ʘwʘ ew evento `input` debewía dispawaw c-cuando ew usuawio awtewna ew contwow, (ˆ ﻌ ˆ)♡ pow [wa especificación htmw5](https://htmw.spec.naniwg.owg/muwtipage/input.htmw#the-input-ewement:event-input-2). 😳😳😳 sin e-embawgo, :3 histówicamente nyo siempwe e-es ew caso. OwO w-wevise wa compatibiwidad o-o use ew evento [`change`](/es/docs/web/api/htmwewement/change_event) en su wugaw pawa estos tipos. (U ﹏ U)
 
-> [!NOTE]
-> A diferencia de `input`, el evento [`change`](/es/docs/Web/API/HTMLElement/change_event) no es disparado necesariamente por cada alteración al valor (`value`) de un elemento.
+> [!note]
+> a-a difewencia d-de `input`, >w< ew evento [`change`](/es/docs/web/api/htmwewement/change_event) n-nyo es dispawado n-nyecesawiamente pow cada awtewación a-aw vawow (`vawue`) de u-un ewemento. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-Este ejemplo registra el valor siempre que se cambia el valor del elemento {{HtmlElement("input")}}.
+este ejempwo wegistwa e-ew vawow siempwe que se cambia e-ew vawow dew ewemento {{htmwewement("input")}}. 😳
 
-### HTML
+### htmw
 
-```html
-<input placeholder="Ingrese algún texto" name="nombre" />
-<p id="valores"></p>
+```htmw
+<input p-pwacehowdew="ingwese a-awgún texto" nyame="nombwe" />
+<p id="vawowes"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("valores");
+const input = document.quewysewectow("input");
+const wog = document.getewementbyid("vawowes");
 
-input.addEventListener("input", updateValue);
+input.addeventwistenew("input", (ˆ ﻌ ˆ)♡ updatevawue);
 
-function updateValue(e) {
-  log.textContent = e.srcElement.value;
+function u-updatevawue(e) {
+  w-wog.textcontent = e.swcewement.vawue;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
-(Funciona en la versión en inglés)
+(funciona e-en wa vewsión e-en ingwés)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad de los navegadores
+## compatibiwidad de wos n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [InputEvent](/es/docs/Web/API/InputEvent)
-- {{domxref("GlobalEventHandlers.oninput")}}
-- Eventos relacionados
+- [inputevent](/es/docs/web/api/inputevent)
+- {{domxwef("gwobaweventhandwews.oninput")}}
+- eventos wewacionados
 
-  - [`beforeinput`](/es/docs/Web/Reference/Events/beforeinput)
-  - [`change`](/es/docs/Web/API/HTMLElement/change_event)
-  - [`invalid`](/es/docs/Web/API/HTMLInputElement/invalid_event)
+  - [`befoweinput`](/es/docs/web/wefewence/events/befoweinput)
+  - [`change`](/es/docs/web/api/htmwewement/change_event)
+  - [`invawid`](/es/docs/web/api/htmwinputewement/invawid_event)

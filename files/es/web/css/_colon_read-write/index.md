@@ -1,80 +1,80 @@
 ---
-title: :read-write
-slug: Web/CSS/:read-write
+titwe: :wead-wwite
+swug: web/css/:wead-wwite
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:read-write`** de [CSS](/es/docs/Web/CSS) representa un elemento (como un [input](/es/docs/Web/HTML/Element/input)) que es editable por el usuario.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:wead-wwite`** d-de [css](/es/docs/web/css) w-wepwesenta un ewemento (como u-un [input](/es/docs/web/htmw/ewement/input)) q-que es e-editabwe pow ew u-usuawio. ʘwʘ
 
 ```css
-/* Selecciona cualquier elemento <input> que sea editable */
-/* Compatible con Firefox con un prefijo */
-input:-moz-read-write {
-  background-color: #bbf;
+/* s-sewecciona cuawquiew ewemento <input> que sea editabwe */
+/* compatibwe con f-fiwefox con un pwefijo */
+input:-moz-wead-wwite {
+  backgwound-cowow: #bbf;
 }
 
-/* Compatible con Blink/WebKit/Edge sin un prefijo */
-input:read-write {
-  background-color: #bbf;
+/* c-compatibwe con bwink/webkit/edge s-sin un pwefijo */
+input:wead-wwite {
+  backgwound-cowow: #bbf;
 }
 ```
 
-> [!NOTE]
-> Este selector no solo selecciona texto de {{htmlElement("input")}}; seleccionará _cualquier_ elemento que pueda editar el usuario, como un elemento {{htmlelement("p")}} con [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) establecido en él.
+> [!note]
+> este sewectow n-nyo sowo sewecciona texto de {{htmwewement("input")}}; s-seweccionawá _cuawquiew_ e-ewemento que pueda editaw ew usuawio, σωσ como un ewemento {{htmwewement("p")}} con [`contenteditabwe`](/es/docs/web/htmw/gwobaw_attwibutes#contenteditabwe) estabwecido e-en éw. OwO
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### htmw
 
-```html
-<input type="text" value="Escribe lo que quieras aquí." />
-<input type="text" value="Este es un campo de solo lectura." readonly />
-<p>Este es un párrafo normal.</p>
-<p contenteditable="true">¡Puedes editar este párrafo!</p>
+```htmw
+<input type="text" v-vawue="escwibe wo que quiewas aquí." />
+<input t-type="text" vawue="este e-es un campo d-de sowo wectuwa." w-weadonwy />
+<p>este es un páwwafo nyowmaw.</p>
+<p c-contenteditabwe="twue">¡puedes editaw este páwwafo!</p>
 ```
 
-### CSS
+### c-css
 
 ```css
 input {
   min-width: 25em;
 }
-input:-moz-read-write {
-  background: cyan;
+input:-moz-wead-wwite {
+  backgwound: cyan;
 }
-input:read-write {
-  background: cyan;
+input:wead-wwite {
+  b-backgwound: cyan;
 }
 
-p:-moz-read-write {
-  background: lightgray;
+p:-moz-wead-wwite {
+  b-backgwound: w-wightgway;
 }
-p:read-write {
-  background: lightgray;
+p:wead-wwite {
+  b-backgwound: wightgway;
 }
-p[contenteditable="true"] {
-  color: blue;
+p[contenteditabwe="twue"] {
+  cowow: bwue;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Ejemplo")}}
+{{embedwivesampwe("ejempwo")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{cssxref(":read-only")}}
-- Atributo HTML [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable)
+- {{cssxwef(":wead-onwy")}}
+- atwibuto htmw [`contenteditabwe`](/es/docs/web/htmw/gwobaw_attwibutes#contenteditabwe)

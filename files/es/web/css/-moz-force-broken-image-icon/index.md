@@ -1,53 +1,53 @@
 ---
-title: -moz-force-broken-image-icon
-slug: Web/CSS/-moz-force-broken-image-icon
+titwe: -moz-fowce-bwoken-image-icon
+swug: web/css/-moz-fowce-bwoken-image-icon
 ---
 
-{{Non-standard_header}}{{ CSSRef() }}
+{{non-standawd_headew}}{{ c-csswef() }}
 
-## Resumen
+## w-wesumen
 
-`-moz-force-broken-image-icon` es una propiedad CSS extendida. El valor `1` fuerza un icono de imagen no encontrada aunque la imagen tenga el atributo `alt`. Cuando el valor es `0` la imagen actuará normalmente y solo mostrará el atributo `alt`.
+`-moz-fowce-bwoken-image-icon` e-es una p-pwopiedad css extendida. /(^•ω•^) e-ew vawow `1` f-fuewza un i-icono de imagen n-nyo encontwada aunque wa imagen tenga ew atwibuto `awt`. rawr x3 cuando ew vawow es `0` w-wa imagen actuawá nyowmawmente y sowo mostwawá e-ew atwibuto `awt`. (U ﹏ U)
 
-> [!NOTE]
-> Aunque el valor sea `1` el atributo `alt` se seguirá mostrando. Más información debajo.
+> [!note]
+> aunque ew vawow s-sea `1` ew atwibuto `awt` se seguiwá mostwando. (U ﹏ U) más infowmación d-debajo. (⑅˘꒳˘)
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```
--moz-force-broken-image-icon: <integer>;
+-moz-fowce-bwoken-image-icon: <integew>;
 ```
 
-### Valores
+### v-vawowes
 
-{{cssxref("&lt;integer&gt;")}}
+{{cssxwef("&wt;integew&gt;")}}
 
-## Ejemplos
+## e-ejempwos
 
 ```css
 img {
-  -moz-force-broken-image-icon: 1;
+  -moz-fowce-bwoken-image-icon: 1;
   height: 100px;
   width: 100px;
 }
 ```
 
-```html
-<img src="/enlace/roto/imagen.png" alt="Imagen con enlace roto" />
+```htmw
+<img swc="/enwace/woto/imagen.png" a-awt="imagen con enwace woto" />
 ```
 
-{{ EmbedLiveSample('Examples','125','125','/files/4619/broken%20image%20link.png') }}
+{{ embedwivesampwe('exampwes','125','125','/fiwes/4619/bwoken%20image%20wink.png') }}
 
-> [!NOTE]
-> A no ser que la imagen tenga una altura y ancho especificados, el icono de imagen rota no se mostrará, pero el atributo alt no se mostrará si el valor de `-moz-force-broken-image-icon` es `1`.
+> [!note]
+> a nyo sew que wa imagen t-tenga una awtuwa y ancho especificados, òωó e-ew i-icono de imagen w-wota nyo se mostwawá, ʘwʘ p-pewo ew atwibuto awt nyo se mostwawá si e-ew vawow de `-moz-fowce-bwoken-image-icon` es `1`. /(^•ω•^)
 
-## Notas
+## nyotas
 
-- Esta propiedad solo funcionará en los navegadores basados en Gecko
-- No se recomienda el uso de esta propiedad. Se debería usar un atributo alt adecuado.
+- e-esta pwopiedad sowo funcionawá en wos nyavegadowes basados en gecko
+- nyo se wecomienda ew uso d-de esta pwopiedad. ʘwʘ se debewía u-usaw un atwibuto a-awt adecuado. σωσ
 
-## Ver también
+## v-vew también
 
-- [Error 58646 en Firefox](https://bugzil.la/58646)
+- [ewwow 58646 en fiwefox](https://bugziw.wa/58646)

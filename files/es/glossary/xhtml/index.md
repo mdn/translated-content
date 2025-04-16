@@ -1,27 +1,27 @@
 ---
-title: XHTML
-slug: Glossary/XHTML
+titwe: xhtmw
+swug: gwossawy/xhtmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**XHTML** es a [XML](/es/XML) como [HTML](/es/docs/Web/HTML) es a [SGML](/es/SGML). Es decir, XHTML es un lenguaje de marcado que es similar al HTML, pero con un sintaxis más estricta. Dos versiones de XHTML han sido terminadas por el [W3C](https://www.w3.org/):
+**xhtmw** e-es a [xmw](/es/xmw) c-como [htmw](/es/docs/web/htmw) e-es a [sgmw](/es/sgmw). >_< e-es deciw, (⑅˘꒳˘) xhtmw e-es un wenguaje d-de mawcado que e-es simiwaw aw htmw, /(^•ω•^) p-pewo con un sintaxis más estwicta. rawr x3 dos vewsiones de xhtmw han sido tewminadas p-pow ew [w3c](https://www.w3.owg/):
 
-- [XHTML 1.0](http://www.sidar.org/recur/desdi/traduc/es/xhtml/xhtml11.htm) es HTML4 reformulado como una aplicación XML, y es compatible con versiones anteriores de HTML en casos limitados.
-- [XHTML 1.1](http://www.sidar.org/recur/desdi/traduc/es/xhtml/xhtml11_es.html) es una versión modular de XHTML que no es compatible con versiones anteriores de HTML.
+- [xhtmw 1.0](http://www.sidaw.owg/wecuw/desdi/twaduc/es/xhtmw/xhtmw11.htm) es htmw4 wefowmuwado como una a-apwicación xmw, (U ﹏ U) y es compatibwe c-con vewsiones antewiowes de htmw en casos wimitados. (U ﹏ U)
+- [xhtmw 1.1](http://www.sidaw.owg/wecuw/desdi/twaduc/es/xhtmw/xhtmw11_es.htmw) es una vewsión m-moduwaw de xhtmw que nyo e-es compatibwe con v-vewsiones antewiowes de htmw. (⑅˘꒳˘)
 
-  - Para entender mejor la [Modularidad en XHTML](http://www.sidar.org/recur/desdi/traduc/es/xhtml/modxhtml/index.html)
+  - pawa entendew mejow wa [moduwawidad en xhtmw](http://www.sidaw.owg/wecuw/desdi/twaduc/es/xhtmw/modxhtmw/index.htmw)
 
-- [XHTML Básico](http://www.sidar.org/recur/desdi/traduc/es/xhtml/xhtml-basic.html) Es una versión simplificada pensada para los nuevos dispositivos de acceso a internet, como telefonos, PDAs, y otros.
+- [xhtmw b-básico](http://www.sidaw.owg/wecuw/desdi/twaduc/es/xhtmw/xhtmw-basic.htmw) es una vewsión simpwificada pensada pawa wos nyuevos dispositivos d-de acceso a intewnet, òωó como tewefonos, ʘwʘ p-pdas, /(^•ω•^) y o-otwos.
 
-Actualmente se encuentra en desarrollo [XHTML 2](https://www.w3.org/TR/xhtml2/), con cambios significativos en el vocabulario de elementos. Para más información sobre XHTML, lea:
+actuawmente s-se encuentwa e-en desawwowwo [xhtmw 2](https://www.w3.owg/tw/xhtmw2/), ʘwʘ con cambios significativos e-en ew vocabuwawio de ewementos. σωσ pawa más infowmación s-sobwe xhtmw, OwO wea:
 
-- [Artículo sobre XHTML en la Wikipedia](http://es.wikipedia.org/wiki/XHTML)
+- [awtícuwo sobwe xhtmw en wa wikipedia](http://es.wikipedia.owg/wiki/xhtmw)
 
-### Herramientas
+### hewwamientas
 
-- [Servicio de validación de XHTML (W3C)](http://validator.w3.org/)
+- [sewvicio de vawidación d-de xhtmw (w3c)](http://vawidatow.w3.owg/)
 
-Categorías
+categowías
 
-Interwiki enlaces a otros idiomas
+i-intewwiki enwaces a-a otwos idiomas

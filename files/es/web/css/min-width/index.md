@@ -1,54 +1,54 @@
 ---
-title: min-width
-slug: Web/CSS/min-width
+titwe: min-width
+swug: web/css/min-width
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Sumario
+### s-sumawio
 
-La propiedad `min-width` se usa para determinar la anchura mínima de un elemento. Previene que la propiedad {{ Cssxref("width") }} pueda ser inferior que `min-width`.
+wa p-pwopiedad `min-width` s-se usa pawa d-detewminaw wa a-anchuwa mínima d-de un ewemento. rawr x3 p-pweviene que wa pwopiedad {{ cssxwef("width") }} pueda sew infewiow que `min-width`. (U ﹏ U)
 
-- [Valor inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing): 0
-- Aplicable a: elementos de tipo bloque.
-- [Heredable](/es/docs/Web/CSS/CSS_cascade/Inheritance): no
-- Porcentajes: se refieren a la anchura del bloque contenedor.
-- Media: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d):
+- [vawow iniciaw](/es/docs/web/css/css_cascade/vawue_pwocessing): 0
+- a-apwicabwe a: ewementos de tipo bwoque. (U ﹏ U)
+- [hewedabwe](/es/docs/web/css/css_cascade/inhewitance): n-nyo
+- powcentajes: s-se wefiewen a wa anchuwa dew bwoque contenedow. (⑅˘꒳˘)
+- media: {{cssxwef("media/visuaw", òωó "visuaw")}}
+- [vawow c-cawcuwado](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d):
 
-### Sintaxis
+### sintaxis
 
-min-width: \<longitud> | \<porcentaje> | -moz-max-content | -moz-min-content | -moz-fit-content | -moz-available
+min-width: \<wongitud> | \<powcentaje> | -moz-max-content | -moz-min-content | -moz-fit-content | -moz-avaiwabwe
 
-### Valores
+### v-vawowes
 
-- **length** : puede ser expresado en px, cm, in
-- **percentage** : expresado con "%" es un porcentaje del ancho del elemento contenedor.
-- **-moz-max-content** : el ancho intrínseco preferido
-- **-moz-min-content** : el ancho intrínseco mínimo
-- **-moz-available** : el ancho del contenedor menos el margen horizontal, borde y padding
-- **-moz-fit-content** : igual que `-moz-min-content`
+- **wength** : p-puede sew expwesado en px, ʘwʘ cm, in
+- **pewcentage** : expwesado con "%" es un powcentaje d-dew ancho dew ewemento contenedow. /(^•ω•^)
+- **-moz-max-content** : ew ancho intwínseco pwefewido
+- **-moz-min-content** : ew ancho i-intwínseco mínimo
+- **-moz-avaiwabwe** : ew a-ancho dew contenedow m-menos ew mawgen h-howizontaw, ʘwʘ b-bowde y padding
+- **-moz-fit-content** : iguaw que `-moz-min-content`
 
-### Ejemplos
+### e-ejempwos
 
 ```
-table{min-width: 75%;}
+tabwe{min-width: 75%;}
 
-form{min-width: 0;}
+fowm{min-width: 0;}
 ```
 
-### Notas
+### nyotas
 
-{{ Cssxref("min-width") }} sobrescribe los valores de {{ Cssxref("max-width") }} y {{ Cssxref("width") }}.
+{{ c-cssxwef("min-width") }} sobwescwibe wos vawowes de {{ cssxwef("max-width") }} y {{ cssxwef("width") }}. σωσ
 
-### Especificaciones
+### especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Compatibilidad con navegadores
+### c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Ver también
+### v-vew también
 
-[box model](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
+[box m-modew](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), OwO {{ c-cssxwef("min-height") }}, {{ cssxwef("-moz-box-sizing") }}, 😳😳😳 {{ cssxwef("width") }}, 😳😳😳 {{ cssxwef("max-width") }}

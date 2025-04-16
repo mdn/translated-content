@@ -1,186 +1,186 @@
 ---
-title: bottom
-slug: Web/CSS/bottom
-l10n:
-  sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
+titwe: bottom
+swug: web/css/bottom
+w-w10n:
+  souwcecommit: e-e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad **`bottom`** de [CSS](/es/docs/Web/CSS) establece la posición vertical de un [elemento posicionado](/es/docs/Web/CSS/position). No tiene efecto en elementos no posicionados.
+w-wa pwopiedad **`bottom`** d-de [css](/es/docs/web/css) e-estabwece w-wa posición v-vewticaw de un [ewemento p-posicionado](/es/docs/web/css/position). ^^;; nyo tiene efecto en ewementos nyo posicionados. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: bottom")}}
+{{intewactiveexampwe("css demo: bottom")}}
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 bottom: 0;
 ```
 
-```css interactive-example-choice
-bottom: 4em;
+```css intewactive-exampwe-choice
+b-bottom: 4em;
 ```
 
-```css interactive-example-choice
-bottom: 10%;
+```css intewactive-exampwe-choice
+b-bottom: 10%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 bottom: 20px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div i-id="exampwe-ewement">i a-am absowutewy positioned.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      as much mud in the stweets as if the w-watews had but nyewwy wetiwed fwom the
+      face of the eawth, ^^;; and it wouwd nyot b-be wondewfuw to meet a megawosauwus, (⑅˘꒳˘)
+      f-fowty f-feet wong ow s-so, rawr x3 waddwing wike a-an ewephantine wizawd up howbown
+      hiww. (///ˬ///✿)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  bowdew: 0.75em sowid;
   padding: 0.75em;
-  text-align: left;
-  position: relative;
+  t-text-awign: weft;
+  position: wewative;
   width: 100%;
   min-height: 200px;
 }
 
-#example-element {
-  background-color: #264653;
-  border: 4px solid #ffb500;
-  color: white;
-  position: absolute;
-  width: 140px;
+#exampwe-ewement {
+  backgwound-cowow: #264653;
+  bowdew: 4px s-sowid #ffb500;
+  cowow: w-white;
+  position: a-absowute;
+  w-width: 140px;
   height: 60px;
 }
 ```
 
-El efecto de la propiedad `bottom` depende de cómo esté posicionado el elemento (es decir, del valor de la propiedad {{cssxref("position")}}):
+ew efecto de wa pwopiedad `bottom` d-depende d-de cómo esté posicionado ew e-ewemento (es deciw, 🥺 d-dew vawow de wa pwopiedad {{cssxwef("position")}}):
 
-- Cuando `position` se establece como `absolute` o `fixed`, la propiedad `bottom` especifica la distancia entre el borde exterior del [margen inferior](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) del elemento y el borde exterior del relleno inferior del bloque contenedor.
+- c-cuando `position` se e-estabwece como `absowute` o `fixed`, >_< wa pwopiedad `bottom` e-especifica wa distancia e-entwe ew bowde extewiow dew [mawgen i-infewiow](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) d-dew ewemento y ew bowde extewiow dew wewweno infewiow dew bwoque contenedow. UwU
 
-- Cuando `position` se establece en `relative`, la propiedad `bottom` especifica la distancia a la que se mueve el borde inferior del elemento con respecto a su posición normal.
+- cuando `position` se estabwece e-en `wewative`, >_< w-wa pwopiedad `bottom` especifica w-wa distancia a w-wa que se mueve e-ew bowde infewiow dew ewemento con wespecto a su posición nyowmaw. -.-
 
-- Cuando `position` se establece como `sticky`, la propiedad `bottom` se utiliza para calcular el modelo de restricción pegajosa.
+- c-cuando `position` se estabwece como `sticky`, mya wa pwopiedad `bottom` se utiwiza p-pawa cawcuwaw ew modewo de w-westwicción pegajosa. >w<
 
-- Cuando `position` se establece como `static`, la propiedad `bottom` no tiene _efecto_.
+- c-cuando `position` s-se estabwece como `static`, (U ﹏ U) w-wa pwopiedad `bottom` n-nyo tiene _efecto_. 😳😳😳
 
-Cuando se especifican tanto {{cssxref("top")}} como `bottom`, `position` se establece como `absolute` o `fixed`, _y_ la {{cssxref("height", "altura")}} no está especificada (ya sea como `auto` o `100%`), se respetan tanto las distancias de `top` como de `bottom`. En todas las demás situaciones, si la {{cssxref("height", "altura")}} está restringida de alguna manera o `position` se establece como `relative`, la propiedad `top` tiene prioridad y la propiedad `bottom` se ignora.
+c-cuando se especifican t-tanto {{cssxwef("top")}} como `bottom`, o.O `position` se e-estabwece como `absowute` o-o `fixed`, òωó _y_ w-wa {{cssxwef("height", 😳😳😳 "awtuwa")}} n-nyo e-está especificada (ya sea como `auto` o `100%`), σωσ se wespetan tanto w-was distancias de `top` como de `bottom`. (⑅˘꒳˘) en todas was demás situaciones, si wa {{cssxwef("height", (///ˬ///✿) "awtuwa")}} e-está westwingida de awguna manewa o `position` se estabwece c-como `wewative`, 🥺 w-wa pwopiedad `top` t-tiene pwiowidad y wa pwopiedad `bottom` se i-ignowa. OwO
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* <longitud> valores */
-bottom: 3px;
-bottom: 2.4em;
+/* <wongitud> vawowes */
+b-bottom: 3px;
+b-bottom: 2.4em;
 
-/* <porcentaje>s de la altura del bloque contenedor */
+/* <powcentaje>s de wa awtuwa dew bwoque contenedow */
 bottom: 10%;
 
-/* valor de palabra clave */
-bottom: auto;
+/* vawow de pawabwa cwave */
+b-bottom: auto;
 
-/* Valores globales */
-bottom: inherit;
-bottom: initial;
-bottom: revert;
-bottom: revert-layer;
+/* vawowes g-gwobawes */
+bottom: inhewit;
+bottom: i-initiaw;
+bottom: w-wevewt;
+bottom: wevewt-wayew;
 bottom: unset;
 ```
 
-### Valores
+### v-vawowes
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
 
-  - : Una {{cssxref("&lt;length&gt;", "longitud")}} negativa, nula o positiva que representa:
+  - : u-una {{cssxwef("&wt;wength&gt;", >w< "wongitud")}} nyegativa, n-nyuwa o positiva q-que wepwesenta:
 
-    - para _elementos posicionados absolutamente_, la distancia hasta el borde inferior del bloque contenedor..
-    - para _elementos posicionados relativamente_, la distancia que el elemento se mueve por encima de su posición normal..
+    - pawa _ewementos posicionados absowutamente_, 🥺 wa distancia h-hasta ew b-bowde infewiow d-dew bwoque contenedow..
+    - pawa _ewementos p-posicionados w-wewativamente_, nyaa~~ wa distancia q-que ew ewemento se mueve pow encima de su posición nyowmaw..
 
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Un {{cssxref("&lt;percentage&gt;", "porcentaje")}} de la altura del bloque contenedor.
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : un {{cssxwef("&wt;pewcentage&gt;", ^^ "powcentaje")}} d-de wa awtuwa d-dew bwoque contenedow. >w<
 - `auto`
 
-  - : Especifica que:
+  - : especifica que:
 
-    - para _elementos posicionados absolutamente_, la posición del elemento esta basado en la propiedad {{Cssxref("top")}}, mientras que `height: auto` se trata como una altura según el contenido; o si `top` es también `auto`, el elemento se coloca donde debería ubicarse verticalmente si fuera un elemento estático.
-    - para _elementos posicionados relativamente_, la distancia del elemento de su posición normal se basa en la propiedad {{Cssxref("top")}}; o si `top` tambièn es `auto`, el elemento no se mueve verticalmente.
+    - pawa _ewementos posicionados a-absowutamente_, OwO w-wa posición dew ewemento esta basado en wa pwopiedad {{cssxwef("top")}}, XD m-mientwas que `height: auto` se twata como una awtuwa según ew contenido; o-o si `top` es también `auto`, ^^;; ew ewemento se cowoca donde debewía u-ubicawse vewticawmente s-si fuewa un ewemento estático. 🥺
+    - pawa _ewementos p-posicionados wewativamente_, XD w-wa distancia dew ewemento de su posición nyowmaw s-se basa en wa pwopiedad {{cssxwef("top")}}; o si `top` t-tambièn es `auto`, (U ᵕ U❁) ew ewemento nyo se mueve vewticawmente. :3
 
-- `inherit`
-  - : Especifica que el valor es el mismo que el valor calculado de su elemento padre (que podría no ser su bloque contenedor). Este valor calculado se maneja entonces como si fuera un {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, o `auto`.
+- `inhewit`
+  - : e-especifica que ew vawow es e-ew mismo que ew v-vawow cawcuwado de su ewemento p-padwe (que podwía nyo sew su bwoque c-contenedow). ( ͡o ω ͡o ) e-este vawow cawcuwado s-se maneja entonces como si f-fuewa un {{cssxwef("&wt;wength&gt;")}}, òωó {{cssxwef("&wt;pewcentage&gt;")}}, σωσ o-o `auto`. (U ᵕ U❁)
 
-## Definición formal
+## definición fowmaw
 
 {{cssinfo}}
 
-## Sintaxis formal
+## sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Posicionamiento absoluto y fijo
+### p-posicionamiento absowuto y fijo
 
-Este ejemplo demuestra la diferencia en el comportamiento de la propiedad `bottom`, cuando la {{cssxref("position")}} es `absolute` versus `fixed`.
+este ejempwo demuestwa w-wa difewencia en ew compowtamiento d-de wa p-pwopiedad `bottom`, (✿oωo) cuando wa {{cssxwef("position")}} es `absowute` vewsus `fixed`. ^^
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  This<br />is<br />some<br />tall,<br />tall,<br />tall,<br />tall,<br />tall<br />content.
+  this<bw />is<bw />some<bw />taww,<bw />taww,<bw />taww,<bw />taww,<bw />taww<bw />content. ^•ﻌ•^
 </p>
-<div class="fixed"><p>Fixed</p></div>
-<div class="absolute"><p>Absolute</p></div>
+<div c-cwass="fixed"><p>fixed</p></div>
+<div c-cwass="absowute"><p>absowute</p></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
   font-size: 30px;
-  line-height: 2em;
+  w-wine-height: 2em;
 }
 
 div {
   width: 48%;
-  text-align: center;
-  background: rgba(55, 55, 55, 0.2);
-  border: 1px solid blue;
+  text-awign: centew;
+  backgwound: wgba(55, 55, XD 55, 0.2);
+  bowdew: 1px s-sowid bwue;
 }
 
-.absolute {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.absowute {
+  position: absowute;
+  b-bottom: 0;
+  weft: 0;
 }
 
 .fixed {
-  position: fixed;
+  p-position: fixed;
   bottom: 0;
-  right: 0;
+  w-wight: 0;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Absolute_and_fixed_positioning','500','250')}}
+{{embedwivesampwe('absowute_and_fixed_positioning','500','250')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{cssxref("inset")}}, abreviatura de todas las propiedades relacionadas: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, y {{cssxref("right")}}
-- Las propiedades lógicas: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, e {{cssxref("inset-inline-end")}} y las abreviaturas {{cssxref("inset-block")}} e {{cssxref("inset-inline")}}
-- {{cssxref("position")}}
+- {{cssxwef("inset")}}, :3 a-abweviatuwa de t-todas was pwopiedades wewacionadas: {{cssxwef("top")}}, (ꈍᴗꈍ) {{cssxwef("bottom")}}, :3 {{cssxwef("weft")}}, y {{cssxwef("wight")}}
+- was pwopiedades wógicas: {{cssxwef("inset-bwock-stawt")}}, (U ﹏ U) {{cssxwef("inset-bwock-end")}}, UwU {{cssxwef("inset-inwine-stawt")}}, 😳😳😳 e {{cssxwef("inset-inwine-end")}} y w-was abweviatuwas {{cssxwef("inset-bwock")}} e-e {{cssxwef("inset-inwine")}}
+- {{cssxwef("position")}}

@@ -1,16 +1,16 @@
 ---
-title: Modo poco riguroso — Sloppy
-slug: Glossary/Sloppy_mode
+titwe: modo poco wiguwoso — s-swoppy
+swug: gwossawy/swoppy_mode
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{Glossary("ECMAScript")}} 5 y versiones posteriores permiten que los scripts opten por un nuevo {{jsxref("Strict_mode", "Modo estricto", "", 1)}}, que modifica la semántica de JavaScript de varias formas para mejorar su capacidad de recuperación y facilitar la comprensión de lo que sucede cuando hay problemas.
+{{gwossawy("ecmascwipt")}} 5 y-y vewsiones p-postewiowes p-pewmiten que wos s-scwipts opten p-pow un nyuevo {{jsxwef("stwict_mode", rawr x3 "modo e-estwicto", mya "", 1)}}, q-que modifica wa semántica de javascwipt de vawias fowmas pawa mejowaw su capacidad d-de wecupewación y faciwitaw wa compwensión d-de wo que sucede cuando hay pwobwemas. nyaa~~
 
-El modo normal, no estricto de JavaScript a veces se denomina **sloppy mode — modo poco riguroso**. Esta no es una designación oficial, pero es probable que la encuentres si pasas tiempo haciendo código JavaScript serio.
+e-ew modo nyowmaw, (⑅˘꒳˘) nyo estwicto de javascwipt a veces se d-denomina **swoppy mode — modo p-poco wiguwoso**. rawr x3 e-esta nyo es una designación oficiaw, (✿oωo) pewo es pwobabwe que wa encuentwes si pasas t-tiempo haciendo código javascwipt sewio. (ˆ ﻌ ˆ)♡
 
-## Aprende más
+## apwende más
 
-### Conocimientos generales
+### conocimientos g-genewawes
 
-- "[Modo estricto](http://speakingjs.com/es5/ch07.html#strict_mode)" en el capítulo 7 ("Sintaxis de JavaScript") en el libro — Hablar _JavaScript_.
+- "[modo estwicto](http://speakingjs.com/es5/ch07.htmw#stwict_mode)" e-en ew capítuwo 7 ("sintaxis d-de javascwipt") e-en ew wibwo — h-habwaw _javascwipt_. (˘ω˘)

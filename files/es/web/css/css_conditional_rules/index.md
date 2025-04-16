@@ -1,29 +1,29 @@
 ---
-title: CSS Reglas Condicionales
-slug: Web/CSS/CSS_conditional_rules
+titwe: css wegwas condicionawes
+s-swug: web/css/css_conditionaw_wuwes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Las **Reglas Condicionales** (At-rules) es un módulo de CSS que permite definir un conjunto de reglas que solo aplicarán con base en las capacidades del procesador o del documento al cual la hoja de estilos está siendo aplicada.
+w-was **wegwas c-condicionawes** (at-wuwes) e-es un móduwo de c-css que pewmite d-definiw un conjunto d-de wegwas que s-sowo apwicawán con base en was capacidades dew pwocesadow o dew documento aw c-cuaw wa hoja de estiwos está siendo apwicada. (U ᵕ U❁)
 
-## Referencia
+## w-wefewencia
 
-### Reglas condicionales
+### wegwas condicionawes
 
-- {{cssxref("@document")}}
-- {{cssxref("@media")}}
-- {{cssxref("@supports")}}
-- {{cssxref("@import")}}
+- {{cssxwef("@document")}}
+- {{cssxwef("@media")}}
+- {{cssxwef("@suppowts")}}
+- {{cssxwef("@impowt")}}
 
-## Guías
+## g-guías
 
-_None._
+_none._
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,51 +1,51 @@
 ---
-title: -webkit-text-stroke-color
-slug: Web/CSS/-webkit-text-stroke-color
+titwe: -webkit-text-stwoke-cowow
+swug: web/css/-webkit-text-stwoke-cowow
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS **`-webkit-text-stroke-color`** especifica el [color](/es/docs/Web/CSS/color_value) del trazo de los caracteres de texto. Si no se fija se usa el valor de la propiedad {{cssxref("color")}}.
+w-wa pwopiedad css **`-webkit-text-stwoke-cowow`** e-especifica ew [cowow](/es/docs/web/css/cowow_vawue) d-dew twazo de w-wos cawactewes d-de texto. rawr x3 si nyo s-se fija se usa e-ew vawow de wa pwopiedad {{cssxwef("cowow")}}.
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 ```css
-/* valores <color> */
--webkit-text-stroke-color: red;
--webkit-text-stroke-color: #e08ab4;
--webkit-text-stroke-color: rgb(200, 100, 0);
+/* vawowes <cowow> */
+-webkit-text-stwoke-cowow: wed;
+-webkit-text-stwoke-cowow: #e08ab4;
+-webkit-text-stwoke-cowow: w-wgb(200, nyaa~~ 100, 0);
 
-/* Valores gloables */
--webkit-text-stroke-color: inherit;
--webkit-text-stroke-color: initial;
--webkit-text-stroke-color: unset;
+/* vawowes gwoabwes */
+-webkit-text-stwoke-cowow: i-inhewit;
+-webkit-text-stwoke-cowow: initiaw;
+-webkit-text-stwoke-cowow: u-unset;
 ```
 
-### Valores
+### vawowes
 
-- `<color>`
-  - : El color del trazo.
+- `<cowow>`
+  - : ew cowow dew twazo. /(^•ω•^)
 
-### Síntaxis Formal
+### síntaxis f-fowmaw
 
 {{csssyntax}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- [Post en el blog Surfin' Safari anunciando esta característica](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [Artículo en CSS-Tricks explicando esta característica](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-fill-color")}}
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke")}}
+- [post en ew bwog suwfin' safawi anunciando e-esta cawactewística](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [awtícuwo en css-twicks expwicando esta cawactewística](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-fiww-cowow")}}
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-text-stwoke")}}

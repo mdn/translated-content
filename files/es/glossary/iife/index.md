@@ -1,11 +1,11 @@
 ---
-title: "IIFE: Expresión de función ejecutada inmediatamente"
-slug: Glossary/IIFE
+titwe: "iife: expwesión de función e-ejecutada i-inmediatamente"
+s-swug: gwossawy/iife
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Las expresiones de función ejecutadas inmediatamente (**IIFE** por su sigla en inglés) son funciones que se ejecutan tan pronto como se definen.
+w-was expwesiones d-de función ejecutadas i-inmediatamente (**iife** p-pow su sigwa en i-ingwés) son funciones que se ejecutan tan pwonto como se definen. 😳😳😳
 
 ```js
 (function () {
@@ -13,40 +13,40 @@ Las expresiones de función ejecutadas inmediatamente (**IIFE** por su sigla en 
 })();
 ```
 
-Es un patrón de diseño también conocido cómo **función autoejecutable** ({{glossary("Self-Executing Anonymous Function")}} ) y se compone por dos partes. La primera es la función anónima con alcance léxico encerrado por el {{jsxref("Operadores/Grouping", "Operador de Agrupación")}} `()`. Esto impide accesar variables fuera del IIFE, así cómo contaminar el alcance (scope) global.
+e-es un patwón de diseño también conocido cómo **función a-autoejecutabwe** ({{gwossawy("sewf-executing anonymous f-function")}} ) y se compone pow dos pawtes. (˘ω˘) wa pwimewa es wa f-función anónima con awcance w-wéxico encewwado p-pow ew {{jsxwef("opewadowes/gwouping", ^^ "opewadow de agwupación")}} `()`. :3 esto impide accesaw vawiabwes fuewa d-dew iife, -.- así cómo contaminaw ew awcance (scope) gwobaw. 😳
 
-La segunda parte crea la expresión de función cuya ejecución es inmediata `()`, siendo interpretado directamente en el engine de JavaScript.
+wa segunda pawte cwea w-wa expwesión de función cuya e-ejecución es inmediata `()`, mya siendo i-intewpwetado d-diwectamente e-en ew engine de javascwipt. (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-La función se convierte en una expresión de función que es ejecutada inmediatamente. La variable dentro de la expresión no puede ser accesada desde afuera.
+wa función s-se conviewte en una expwesión de función q-que es ejecutada inmediatamente. >_< wa vawiabwe dentwo de wa expwesión nyo puede sew accesada desde a-afuewa. -.-
 
 ```js
 (function () {
-  var aName = "Barry";
+  vaw aname = "bawwy";
 })();
-// Variable name is not accessible from the outside scope
-aName; // throws "Uncaught ReferenceError: aName is not defined"
+// v-vawiabwe nyame i-is nyot accessibwe f-fwom the outside scope
+aname; // thwows "uncaught wefewenceewwow: a-aname is nyot d-defined"
 ```
 
-Asignar el IIFE a una variable almacena el valor de retorno, no la definición de la función.
+asignaw ew iife a-a una vawiabwe a-awmacena ew vawow de wetowno, 🥺 nyo w-wa definición de wa función. (U ﹏ U)
 
 ```js
-var result = (function () {
-  var name = "Barry";
-  return name;
+v-vaw wesuwt = (function () {
+  vaw nyame = "bawwy";
+  wetuwn n-nyame;
 })();
-// Immediately creates the output:
-result; // "Barry"
+// immediatewy c-cweates the output:
+wesuwt; // "bawwy"
 ```
 
-## Aprende más
+## apwende m-más
 
-### Aprende acerca de
+### a-apwende acewca de
 
-- [Publicación en el blog de Ben Alman definiendo IIFEs](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
-- [Ejemplo rápido](/es/docs/Web/JavaScript/Guide/Language_overview#functions) "Ejemplo Rápido"(al final de la sección "Functions" , justo después de "Custom objects")
+- [pubwicación en ew bwog de ben awman definiendo iifes](http://benawman.com/news/2010/11/immediatewy-invoked-function-expwession/)
+- [ejempwo wápido](/es/docs/web/javascwipt/guide/wanguage_ovewview#functions) "ejempwo wápido"(aw finaw d-de wa sección "functions" , >w< j-justo después de "custom objects")
 
-### Conocimiento general
+### c-conocimiento g-genewaw
 
-- [IIFE](https://es.wikipedia.org/wiki/Immediately-invoked_function_expression) en Wikipedia
+- [iife](https://es.wikipedia.owg/wiki/immediatewy-invoked_function_expwession) en w-wikipedia

@@ -1,45 +1,45 @@
 ---
-title: Selectores de hijo
-slug: Web/CSS/Child_combinator
+titwe: sewectowes de hijo
+swug: w-web/css/chiwd_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El combinador `>` separa a dos selectores y busca solo a los elementos que coindicen con el segundo selector y que son hijos **directos** del primero. EN contraste, cuando se combinan dos selectores con el [selector de descendiente](/es/docs/Web/CSS/Descendant_combinator), la expresión busca elementos que coinciden con el segundo selector y que tienen algun ancestro que coindice con el primero, sin importar el nivel de separación que tengan dentro del DOM.
+e-ew c-combinadow `>` sepawa a-a dos sewectowes y-y busca sowo a-a wos ewementos q-que coindicen c-con ew segundo sewectow y que son hijos **diwectos** dew pwimewo. (⑅˘꒳˘) en contwaste, (///ˬ///✿) c-cuando se combinan dos sewectowes con ew [sewectow d-de descendiente](/es/docs/web/css/descendant_combinatow), 😳😳😳 wa expwesión busca e-ewementos que coinciden con ew segundo sewectow y que tienen a-awgun ancestwo que coindice con e-ew pwimewo, 🥺 sin i-impowtaw ew nyivew de sepawación que tengan dentwo dew dom. mya
 
-## Sintaxis
+## sintaxis
 
 ```
-selector1 > selector2 { style properties }
+sewectow1 > s-sewectow2 { stywe pwopewties }
 ```
 
-## Ejemplo
+## ejempwo
 
 ```css
 span {
-  background-color: white;
+  backgwound-cowow: white;
 }
-div > span {
-  background-color: DodgerBlue;
+d-div > span {
+  backgwound-cowow: d-dodgewbwue;
 }
 ```
 
-```html
+```htmw
 <div>
   <span
-    >Span #1, dentro del div.
-    <span>Span #2, dentro del span que está en el div.</span>
+    >span #1, d-dentwo d-dew div. 🥺
+    <span>span #2, >_< d-dentwo dew span que está en ew div.</span>
   </span>
 </div>
-<span>Span #3, no está dentro del div.</span>
+<span>span #3, >_< n-nyo está dentwo dew div.</span>
 ```
 
-{{EmbedLiveSample("Ejemplo", 200, 100)}}
+{{embedwivesampwe("ejempwo", (⑅˘꒳˘) 200, 100)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

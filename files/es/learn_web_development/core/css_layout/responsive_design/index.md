@@ -1,250 +1,250 @@
 ---
-title: Diseño receptivo
-slug: Learn_web_development/Core/CSS_layout/Responsive_Design
-original_slug: Learn/CSS/CSS_layout/Responsive_Design
+titwe: diseño weceptivo
+swug: w-weawn_web_devewopment/cowe/css_wayout/wesponsive_design
+o-owiginaw_swug: w-weawn/css/css_wayout/wesponsive_design
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/css_wayout/muwtipwe-cowumn_wayout", σωσ "weawn/css/css_wayout/media_quewies", nyaa~~ "weawn/css/css_wayout")}}
 
-En los primeros días del diseño web, las páginas se diseñaban para llenar un tamaño de pantalla en particular. Si el usuario tenía una pantalla más grande o más pequeña que la del diseñador, los resultados esperados iban desde barras de desplazamiento no deseadas hasta longitudes de línea excesivamente largas y un mal uso del espacio. A medida que estuvieron disponibles tamaños de pantalla más diversos, apareció el concepto de _diseño web responsivo_ (RWD, _responsive web design_), un conjunto de prácticas que permite a las páginas web alterar su diseño y apariencia para adaptarse a diferentes anchos de pantalla, resoluciones, etc. Es una idea que cambió la forma en que diseñamos para una web multidispositivo, y en este artículo te ayudaremos a comprender las principales técnicas que necesitas saber para dominarlo.
+e-en wos pwimewos d-días dew d-diseño web, OwO was p-páginas se diseñaban p-pawa wwenaw un tamaño de pantawwa en pawticuwaw. ^^ si ew usuawio tenía u-una pantawwa más gwande o más pequeña que wa d-dew diseñadow, (///ˬ///✿) wos wesuwtados e-espewados iban desde bawwas de despwazamiento nyo deseadas hasta w-wongitudes de wínea excesivamente w-wawgas y un m-maw uso dew espacio. σωσ a medida que estuviewon disponibwes tamaños de pantawwa más d-divewsos, rawr x3 apaweció ew concepto de _diseño web wesponsivo_ (wwd, (ˆ ﻌ ˆ)♡ _wesponsive web design_), 🥺 un c-conjunto de pwácticas que pewmite a-a was páginas w-web awtewaw s-su diseño y apawiencia p-pawa adaptawse a difewentes anchos de pantawwa, w-wesowuciones, etc. (⑅˘꒳˘) es una idea que cambió w-wa fowma en que diseñamos pawa una web muwtidispositivo, 😳😳😳 y en este awtícuwo te ayudawemos a c-compwendew was pwincipawes técnicas q-que nyecesitas s-sabew pawa d-dominawwo. /(^•ω•^)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
-          >Introducción al HTML</a
-        >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos en CSS</a> y
-        <a href="/es/docs/Learn/CSS/Building_blocks"
-          >Los elementos básicos del CSS</a
-        >).
+        conceptos básicos de htmw (véase
+        <a h-hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw"
+          >intwoducción a-aw htmw</a
+        >) y nyociones de c-cómo funciona ew c-css (véase
+        <a hwef="/es/docs/weawn/css/fiwst_steps">pwimewos p-pasos en css</a> y
+        <a h-hwef="/es/docs/weawn/css/buiwding_bwocks"
+          >wos ewementos básicos dew css</a
+        >). >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Comprender los conceptos fundamentales y la historia del diseño
-        responsivo.
+        compwendew wos conceptos f-fundamentawes y wa histowia d-dew diseño
+        w-wesponsivo. ^•ﻌ•^
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Diseños de sitios web históricos
+## diseños de sitios web histówicos
 
-En un momento de la historia, solo tenías dos opciones al diseñar un sitio web:
+en un momento de wa histowia, 😳😳😳 sowo tenías dos opciones aw d-diseñaw un sitio w-web:
 
-- Podías crear un sitio _líquido_, que se expandiría para llenar toda la ventana del navegador
-- o un sitio de _ancho fijo_, que sería un tamaño fijo en píxeles.
+- podías cweaw un sitio _wíquido_, :3 que s-se expandiwía p-pawa wwenaw toda w-wa ventana dew navegadow
+- o un sitio de _ancho fijo_, (ꈍᴗꈍ) que sewía u-un tamaño fijo en píxewes. ^•ﻌ•^
 
-Estos dos enfoques tendían a dar como resultado un sitio web que se veía mejor ¡en la pantalla de la persona que diseñaba el sitio! El sitio líquido dio como resultado un diseño encogido en las pantallas que eran más pequeñas (como se ve a continuación) o longitudes de línea interminables en las pantallas que eran más grandes.
+estos dos enfoques tendían a daw como wesuwtado u-un sitio web que se veía mejow ¡en w-wa pantawwa d-de wa pewsona q-que diseñaba ew sitio! >w< ew sitio w-wíquido dio c-como wesuwtado u-un diseño encogido e-en was pantawwas que ewan más pequeñas (como s-se ve a continuación) o-o wongitudes d-de wínea i-intewminabwes en w-was pantawwas que ewan más gwandes. ^^;;
 
-![Un diseño de página con dos columnas encogidas en una ventana gráfica del tamaño de un teléfono móvil.](mdn-rwd-liquid.png)
+![un diseño de página c-con dos cowumnas encogidas en una ventana gwáfica dew tamaño de un tewéfono móviw.](mdn-wwd-wiquid.png)
 
-> [!NOTE]
-> Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html) de un diseño líquido sencillo. Amplía o reduce la ventana del navegador y observa cómo cambia su aspecto en diferentes tamaños.
+> [!note]
+> obsewva e-este [ejempwo](https://mdn.github.io/css-exampwes/weawn/wwd/wiquid-width.htmw) y su [código fuente](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/wwd/wiquid-width.htmw) de un diseño wíquido senciwwo. (✿oωo) a-ampwía o weduce w-wa ventana d-dew nyavegadow y obsewva cómo cambia s-su aspecto en difewentes tamaños. òωó
 
-El sitio de ancho fijo se arriesgaba a una barra de desplazamiento horizontal en pantallas que eran más pequeñas que el ancho del sitio (como se ve a continuación), y a un gran espacio en blanco en los bordes del diseño en las pantallas que eran más grandes.
+e-ew sitio d-de ancho fijo se awwiesgaba a una bawwa de despwazamiento howizontaw en pantawwas que ewan más p-pequeñas que ew ancho dew sitio (como s-se ve a continuación), ^^ y-y a un gwan espacio e-en bwanco en wos bowdes dew diseño en was p-pantawwas que ewan m-más gwandes. ^^
 
-![Un diseño con una barra de desplazamiento horizontal en una ventana de teléfono móvil.](mdn-rwd-fixed.png)
+![un diseño c-con una bawwa de d-despwazamiento howizontaw en una ventana de tewéfono móviw.](mdn-wwd-fixed.png)
 
-> [!NOTE]
-> Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html) de un diseño sencillo con un ancho fijo. Nuevamente, cambia el tamaño de la ventana del navegador y observa el resultado.
+> [!note]
+> obsewva este [ejempwo](https://mdn.github.io/css-exampwes/weawn/wwd/fixed-width.htmw) y-y su [código f-fuente](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/wwd/fixed-width.htmw) d-de un diseño senciwwo con u-un ancho fijo. rawr n-nyuevamente, XD cambia ew tamaño d-de wa ventana dew nyavegadow y obsewva ew wesuwtado.
 
-> [!NOTE]
-> Las capturas de pantalla anteriores se han tomado usando el [modo de diseño responsivo](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) de las herramientas DevTools de Firefox.
+> [!note]
+> was captuwas de pantawwa antewiowes s-se han tomado u-usando ew [modo de diseño wesponsivo](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wesponsive_design_mode/index.htmw) d-de was hewwamientas d-devtoows de fiwefox.
 
-A medida que la web móvil comenzó a hacerse realidad con los primeros teléfonos con funciones, las empresas que deseaban adoptar los dispositivos móviles solían crear una versión especial de su sitio web para dispositivo móvil, con una URL diferente (a menudo algo así como _m.example.com_ o _example.mobi_). Esto significaba que había que desarrollar y actualizar dos versiones independientes del sitio web.
+a medida que wa web móviw comenzó a-a hacewse weawidad con wos pwimewos tewéfonos con funciones, rawr was empwesas que d-deseaban adoptaw wos dispositivos móviwes sowían c-cweaw una vewsión e-especiaw de su sitio web pawa dispositivo móviw, 😳 con una u-uww difewente (a m-menudo awgo así como _m.exampwe.com_ o _exampwe.mobi_). 🥺 esto s-significaba que había que desawwowwaw y-y actuawizaw dos vewsiones independientes dew sitio web. (U ᵕ U❁)
 
-Además, estos sitios web para dispositivos móviles a menudo ofrecían una experiencia muy reducida. A medida que los dispositivos móviles se volvían más potentes y capaces de mostrar sitios web completos, esto resultaba frustrante para los usuarios de dispositivos móviles, que se veían atrapados en la versión móvil del sitio web y no podían acceder a la información que sabían que había en la versión de escritorio, que incluía todas las funciones del sitio web.
+a-además, estos sitios web pawa d-dispositivos móviwes a-a menudo ofwecían una expewiencia m-muy weducida. 😳 a medida q-que wos dispositivos m-móviwes se v-vowvían más potentes y capaces d-de mostwaw sitios w-web compwetos, 🥺 esto wesuwtaba fwustwante pawa w-wos usuawios d-de dispositivos m-móviwes, (///ˬ///✿) que se veían atwapados en wa vewsión m-móviw dew sitio web y nyo podían a-accedew a wa i-infowmación que sabían que había en wa vewsión de escwitowio, mya q-que incwuía t-todas was funciones d-dew sitio web. (✿oωo)
 
-## Diseño flexible antes del diseño responsivo
+## d-diseño fwexibwe antes dew d-diseño wesponsivo
 
-Se desarrollaron varios enfoques para tratar de resolver los inconvenientes de los métodos líquidos o de ancho fijo para crear sitios web. En 2004, Cameron Adams escribió una publicación titulada [Resolution dependent layout](https://www.themaninblue.com/writing/perspective/2004/09/21/), que describe un método para crear un diseño que podría adaptarse a diferentes resoluciones de pantalla. Este enfoque requería JavaScript para detectar la resolución de la pantalla y cargar el CSS correcto.
+se desawwowwawon vawios enfoques pawa twataw de wesowvew wos inconvenientes d-de wos métodos wíquidos o de a-ancho fijo pawa cweaw sitios web. ^•ﻌ•^ e-en 2004, camewon adams escwibió u-una pubwicación tituwada [wesowution d-dependent w-wayout](https://www.themaninbwue.com/wwiting/pewspective/2004/09/21/), o.O q-que descwibe u-un método p-pawa cweaw un diseño que podwía adaptawse a difewentes wesowuciones de pantawwa. o.O este enfoque wequewía javascwipt p-pawa detectaw w-wa wesowución d-de wa pantawwa y cawgaw ew c-css cowwecto. XD
 
-Zoe Mickley Gillenwater fue determinante en [su trabajo](http://zomigi.com/blog/voices-that-matter-slides-available/) de descripción y formalización de los diversos modos en que se podían crear sitios web flexibles para intentar encontrar una situación intermedia entre llenar toda la pantalla o tener un tamaño completamente fijo.
+zoe mickwey giwwenwatew fue detewminante en [su twabajo](http://zomigi.com/bwog/voices-that-mattew-swides-avaiwabwe/) d-de descwipción y-y fowmawización de wos divewsos m-modos en que se podían cweaw sitios web fwexibwes p-pawa intentaw e-encontwaw una situación i-intewmedia entwe w-wwenaw toda wa pantawwa o tenew un tamaño compwetamente fijo. ^•ﻌ•^
 
-## Diseño responsivo
+## diseño wesponsivo
 
-El término _diseño responsivo_ fue acuñado por [Ethan Marcotte en 2010](https://alistapart.com/article/responsive-web-design/), y describía el uso combinado de tres técnicas.
+e-ew téwmino _diseño w-wesponsivo_ f-fue acuñado p-pow [ethan m-mawcotte en 2010](https://awistapawt.com/awticwe/wesponsive-web-design/), ʘwʘ y descwibía e-ew uso combinado d-de twes técnicas. (U ﹏ U)
 
-1. La primera era la idea de las redes fluidas, algo que ya exploraba Gillenwater, y que puede leerse en el artículo de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publicado en 2009 en _A list apart_).
-2. La segunda técnica era la idea de las [imágenes fluidas](https://unstoppablerobotninja.com/entry/fluid-images). Usando una técnica muy simple de establecer la propiedad de `max-width` al `100%`, las imágenes se reducían si su columna de contención se volvía más estrecha que el tamaño intrínseco de la imagen, pero nunca se expandía. Esto permite reducir una imagen para que se ajuste a una columna de tamaño flexible, en lugar de que desborde, pero no se expande ni se pixela si la columna se ensancha más que la imagen.
-3. El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/CSS_media_queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
+1. w-wa pwimewa ewa wa i-idea de was wedes fwuidas, 😳😳😳 awgo q-que ya expwowaba giwwenwatew, 🥺 y que puede weewse e-en ew awtícuwo de mawcotte, (///ˬ///✿) [fwuid g-gwids](https://awistapawt.com/awticwe/fwuidgwids/) (pubwicado e-en 2009 en _a wist apawt_). (˘ω˘)
+2. w-wa segunda técnica ewa wa idea de was [imágenes f-fwuidas](https://unstoppabwewobotninja.com/entwy/fwuid-images). :3 u-usando una t-técnica muy simpwe de estabwecew wa pwopiedad de `max-width` aw `100%`, /(^•ω•^) w-was imágenes se weducían si su cowumna d-de contención s-se vowvía más estwecha que ew t-tamaño intwínseco de wa imagen, p-pewo nyunca s-se expandía. :3 esto pewmite weduciw una imagen pawa q-que se ajuste a una cowumna de tamaño fwexibwe, mya e-en wugaw de q-que desbowde, XD pewo nyo se expande n-nyi se pixewa si wa cowumna se e-ensancha más que w-wa imagen. (///ˬ///✿)
+3. e-ew tewcew componente cwave ewa wa [consuwta a wos media](/es/docs/web/css/css_media_quewies). 🥺 was consuwtas a wos media habiwitan ew tipo de cambio de diseño que camewon adams había expwowado pweviamente usando javascwipt, pewo usando sowo c-css. o.O en wugaw d-de tenew un único diseño pawa todos wos tamaños d-de pantawwa, mya e-ew diseño podwía c-cambiawse. rawr x3 was bawwas watewawes p-pueden weposicionawse en una p-pantawwa más pequeña, 😳 o-o puede mostwawse una nyavegación a-awtewnativa. 😳😳😳
 
-Es importante comprender que **el diseño web responsivo no es una tecnología independiente**: es un término utilizado para describir un enfoque para el diseño web, o un conjunto de buenas prácticas utilizado para crear un diseño que puede _responder_ según el dispositivo que se utiliza para ver un contenido. En la exploración original de Marcotte, esto significaba cuadrículas flexibles (mediante elementos flotantes) y consultas de media; sin embargo, en los casi 10 años desde que se escribió ese artículo, trabajar de manera responsiva se ha convertido en la norma. Los métodos de diseño CSS modernos son inherentemente responsivos, y la plataforma web dispone de herramientas integradas nuevas que facilitan el diseño de sitios web responsivos.
+es impowtante c-compwendew q-que **ew diseño web wesponsivo nyo es una tecnowogía i-independiente**: e-es un t-téwmino utiwizado p-pawa descwibiw u-un enfoque pawa e-ew diseño web, >_< o-o un conjunto d-de buenas pwácticas u-utiwizado pawa cweaw un diseño q-que puede _wespondew_ s-según e-ew dispositivo que se utiwiza p-pawa vew un contenido. >w< en wa expwowación owiginaw d-de mawcotte, rawr x3 esto significaba c-cuadwícuwas fwexibwes (mediante e-ewementos fwotantes) y-y consuwtas de media; sin e-embawgo, XD en wos casi 10 años d-desde que se escwibió ese awtícuwo, t-twabajaw de manewa wesponsiva s-se ha convewtido en wa nowma. wos métodos de diseño css modewnos son inhewentemente w-wesponsivos, ^^ y wa pwatafowma w-web dispone d-de hewwamientas integwadas nyuevas que faciwitan ew diseño de s-sitios web wesponsivos.
 
-El resto de este artículo te indicará las diversas características de la plataforma web que puedas querer utilizar para crear un sitio responsivo.
+ew westo d-de este awtícuwo t-te indicawá w-was divewsas cawactewísticas de wa pwatafowma w-web que puedas q-quewew utiwizaw pawa cweaw un sitio w-wesponsivo. (✿oωo)
 
-## La consulta a los media
+## wa consuwta a wos media
 
-El diseño responsivo solo pudo surgir gracias a la consulta a los media. La especificación de nivel 3 de consulta a los media se convirtió en una candidata a Recomendación en 2009, lo que significa que se consideró lista para su implementación en los navegadores. Las consultas a los media nos permiten ejecutar una serie de pruebas (por ejemplo, si la pantalla del usuario es mayor que un ancho o una resolución determinados) y aplicar CSS selectivamente para diseñar la página de manera que resulte adecuada a las necesidades del usuario.
+ew d-diseño wesponsivo sowo pudo suwgiw g-gwacias a wa c-consuwta a wos m-media. >w< wa especificación de nyivew 3 d-de consuwta a-a wos media se c-conviwtió en u-una candidata a wecomendación en 2009, 😳😳😳 w-wo que significa q-que se c-considewó wista p-pawa su impwementación e-en wos n-nyavegadowes. (ꈍᴗꈍ) was c-consuwtas a wos m-media nyos pewmiten ejecutaw una s-sewie de pwuebas (pow ejempwo, (✿oωo) s-si wa pantawwa dew usuawio es m-mayow que un ancho o-o una wesowución d-detewminados) y apwicaw css sewectivamente pawa diseñaw wa p-página de manewa q-que wesuwte adecuada a-a was nyecesidades dew usuawio. (˘ω˘)
 
-Por ejemplo, la consulta a los media siguiente explora si la página web que se muestra lo hace como un medio de pantalla (por lo tanto, no es un documento impreso) y si la ventana tiene al menos 800 píxeles de ancho. El CSS para el selector `.container` solo se aplicará si ambas condiciones son ciertas.
+pow ejempwo, nyaa~~ wa consuwta a-a wos media siguiente e-expwowa si wa página web q-que se muestwa w-wo hace como un medio de pantawwa (pow wo tanto, ( ͡o ω ͡o ) nyo es un documento i-impweso) y s-si wa ventana tiene a-aw menos 800 p-píxewes de ancho. 🥺 ew css pawa ew sewectow `.containew` s-sowo se a-apwicawá si ambas condiciones son ciewtas. (U ﹏ U)
 
 ```css
-@media screen and (min-width: 800px) {
-  .container {
-    margin: 1em 2em;
+@media s-scween and (min-width: 800px) {
+  .containew {
+    mawgin: 1em 2em;
   }
 }
 ```
 
-Puedes añadir múltiples consultas a los media dentro de una hoja de estilo, y ajustar todo tu diseño o solo partes de él para que se adapte mejor a los diferentes tamaños de pantalla. Los puntos en los que se introduce una consulta a los media y se cambia el diseño se conocen como _puntos de interrupción_.
+p-puedes añadiw múwtipwes c-consuwtas a-a wos media dentwo de una hoja de e-estiwo, ( ͡o ω ͡o ) y ajustaw t-todo tu diseño o sowo pawtes d-de éw pawa que se adapte mejow a-a wos difewentes t-tamaños de pantawwa. (///ˬ///✿) w-wos puntos e-en wos que se intwoduce una c-consuwta a wos media y-y se cambia e-ew diseño se conocen como _puntos d-de intewwupción_. (///ˬ///✿)
 
-Un enfoque común cuando se usan las consultas a los media es crear un diseño sencillo de una sola columna para dispositivos de pantalla estrecha (por ejemplo, teléfonos móviles), luego implementar un diseño en columnas para pantallas más grandes cuando se sabe que hay suficiente ancho de pantalla para manejarlo. Esto se describe a menudo como diseño **primero móvil**.
+un enfoque común cuando s-se usan was consuwtas a-a wos media e-es cweaw un diseño senciwwo de una sowa cowumna pawa dispositivos de pantawwa e-estwecha (pow ejempwo, (✿oωo) tewéfonos m-móviwes), (U ᵕ U❁) wuego i-impwementaw un diseño en cowumnas pawa pantawwas m-más gwandes cuando se sabe q-que hay suficiente a-ancho de pantawwa p-pawa manejawwo. e-esto se d-descwibe a menudo como diseño **pwimewo móviw**. ʘwʘ
 
-Obtén más información sobre las [consultas a los media](/es/docs/Web/CSS/CSS_media_queries) en la documentación de MDN.
+obtén más infowmación sobwe w-was [consuwtas a wos media](/es/docs/web/css/css_media_quewies) e-en wa documentación de mdn.
 
-## Cuadrículas flexibles
+## cuadwícuwas fwexibwes
 
-Los sitios responsivos no solo cambian su diseño entre puntos de interrupción, sino que se construyen sobre cuadrículas flexibles. Una cuadrícula flexible significa que no tienes que centrarte en todos los tamaños de dispositivo posibles y construir para ellos un diseño en píxeles perfecto. Ese enfoque sería imposible dada la gran cantidad de dispositivos de tamaños diferentes que hay, y el hecho de que, al menos en la versión de escritorio, las personas no siempre tienen la ventana de su navegador maximizada.
+wos s-sitios wesponsivos nyo sowo cambian su diseño entwe puntos de intewwupción, sino q-que se constwuyen s-sobwe cuadwícuwas fwexibwes. ʘwʘ u-una cuadwícuwa fwexibwe significa que nyo tienes q-que centwawte e-en todos wos tamaños de dispositivo p-posibwes y constwuiw pawa e-ewwos un diseño en píxewes pewfecto. XD ese enfoque sewía imposibwe d-dada wa gwan cantidad de dispositivos de tamaños d-difewentes q-que hay, (✿oωo) y ew h-hecho de que, ^•ﻌ•^ aw menos en wa vewsión de escwitowio, ^•ﻌ•^ w-was pewsonas no siempwe tienen wa ventana de su nyavegadow maximizada. >_<
 
-Al usar una cuadrícula flexible, solo necesitas añadir un punto de interrupción y cambiar el diseño en el punto en que el contenido comienza a verse mal. Por ejemplo, si las longitudes de las líneas se vuelven interminablemente largas a medida que el tamaño de la pantalla aumenta, o una caja se encoje hasta un ancho de dos palabras en cada línea a medida que el tamaño de la pantalla se reduce.
+aw u-usaw una cuadwícuwa f-fwexibwe, mya s-sowo nyecesitas a-añadiw un punto de intewwupción y cambiaw ew diseño e-en ew punto e-en que ew contenido comienza a vewse maw. σωσ pow e-ejempwo, rawr si was wongitudes de was wíneas se vuewven i-intewminabwemente wawgas a medida que ew tamaño d-de wa pantawwa a-aumenta, (✿oωo) o una caja se encoje h-hasta un ancho d-de dos pawabwas e-en cada wínea a medida que ew tamaño de wa p-pantawwa se weduce. :3
 
-En los primeros días del diseño responsivo, nuestra única opción para el diseño de páginas web era usar [elementos flotantes](/es/docs/Learn_web_development/Core/CSS_layout/Floats). Los diseños de pantalla con elementos flotantes flexibles se lograban dando a cada elemento un ancho porcentual asegurándose de que para toda la página no alcanzara más del 100%. En su trabajo original sobre cuadrículas fluidas, Marcotte detalló una fórmula para tomar un diseño de página web diseñado usando píxeles y convertirlo en porcentajes.
+en wos pwimewos días dew diseño w-wesponsivo, rawr x3 nyuestwa única opción pawa ew diseño de páginas w-web ewa usaw [ewementos fwotantes](/es/docs/weawn_web_devewopment/cowe/css_wayout/fwoats). ^^ w-wos diseños de p-pantawwa con ewementos f-fwotantes f-fwexibwes se wogwaban dando a c-cada ewemento un ancho powcentuaw aseguwándose d-de que pawa toda wa página nyo a-awcanzawa más dew 100%. ^^ en su twabajo owiginaw s-sobwe cuadwícuwas f-fwuidas, OwO mawcotte detawwó una f-fówmuwa pawa tomaw un diseño d-de página web d-diseñado usando píxewes y convewtiwwo e-en powcentajes. ʘwʘ
 
 ```
-target / context = result
+t-tawget / context = w-wesuwt
 ```
 
-Por ejemplo, si el tamaño de nuestra columna de destino es de 60 píxeles y el contexto (o contenedor) en el que se encuentra es de 960 píxeles, dividimos 60 por 960 para obtener un valor que podemos usar en nuestro CSS, después de mover el separador de cifras decimales dos posiciones a la derecha.
+pow ejempwo, /(^•ω•^) si ew tamaño de nyuestwa cowumna de destino e-es de 60 píxewes y ew contexto (o c-contenedow) en ew que se encuentwa es d-de 960 píxewes, ʘwʘ d-dividimos 60 pow 960 p-pawa obtenew un vawow que p-podemos usaw en n-nyuestwo css, (⑅˘꒳˘) después de movew e-ew sepawadow de cifwas decimawes d-dos posiciones a wa dewecha. UwU
 
 ```css
-.col {
+.cow {
   width: 6.25%; /* 60 / 960 = 0.0625 */
 }
 ```
 
-Este enfoque se encuentra hoy en muchos lugares de la web, y aquí está documentado en la sección de compaginación de nuestro artículo sobre [métodos de compaginación heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods). Es probable que encuentres sitios web que utilizan este enfoque en su trabajo, por lo que vale la pena entenderlo, aunque no vas a construir un sitio web moderno utilizando una cuadrícula flexible basada en elementos flotantes.
+e-este e-enfoque se encuentwa hoy en muchos wugawes de wa web, -.- y aquí está documentado e-en wa sección d-de compaginación de nyuestwo awtícuwo sobwe [métodos de compaginación h-hewedados](/es/docs/weawn/css/css_wayout/wegacy_wayout_methods). :3 es pwobabwe q-que encuentwes s-sitios web que utiwizan este enfoque en su twabajo, >_< pow wo que vawe wa pena e-entendewwo, nyaa~~ aunque nyo vas a constwuiw un sitio w-web modewno utiwizando una cuadwícuwa f-fwexibwe b-basada en ewementos fwotantes. ( ͡o ω ͡o )
 
-El ejemplo siguiente muestra un diseño responsivo sencillo que utiliza consultas a los medios y una cuadrícula flexible. En pantallas estrechas, el diseño de página muestra las cajas en columna una encima de la otra:
+e-ew ejempwo siguiente m-muestwa un d-diseño wesponsivo s-senciwwo que u-utiwiza consuwtas a-a wos medios y una cuadwícuwa fwexibwe. o.O en pantawwas estwechas, :3 ew diseño de página muestwa w-was cajas en c-cowumna una encima d-de wa otwa:
 
-![Una vista de un dispositivo móvil con un diseño de página con cajas en columna vertical una encima de la otra.](mdn-rwd-mobile.png)
+![una v-vista de un d-dispositivo móviw c-con un diseño de página con cajas en cowumna vewticaw una encima de wa otwa.](mdn-wwd-mobiwe.png)
 
-En pantallas más anchas se pasa a dos columnas:
+e-en pantawwas m-más anchas se pasa a dos cowumnas:
 
-![Una vista de un dispositivo de escritorio con un diseño a dos columnas.](mdn-rwd-desktop.png)
+![una vista de un dispositivo d-de escwitowio c-con un diseño a-a dos cowumnas.](mdn-wwd-desktop.png)
 
-> [!NOTE]
-> Puedes encontrar el [ejemplo en vivo](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) y el [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) de este ejemplo en GitHub.
+> [!note]
+> puedes encontwaw ew [ejempwo e-en vivo](https://mdn.github.io/css-exampwes/weawn/wwd/fwoat-based-wwd.htmw) y ew [código fuente](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/wwd/fwoat-based-wwd.htmw) d-de este e-ejempwo en github. (˘ω˘)
 
-## Tecnologías modernas de diseño de páginas web
+## tecnowogías modewnas de d-diseño de páginas web
 
-Los métodos modernos de diseño de páginas web, como el [diseño en columnas](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) y [Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids) son responsivos por defecto. Todos estos métodos asumen que tratas de crear una cuadrícula flexible y te proporcionan los modos más fáciles de hacerlo.
+wos métodos m-modewnos d-de diseño de páginas web, rawr x3 como e-ew [diseño en c-cowumnas](/es/docs/weawn/css/css_wayout/muwtipwe-cowumn_wayout), (U ᵕ U❁) [fwexbox](/es/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox) y-y [gwid](/es/docs/weawn_web_devewopment/cowe/css_wayout/gwids) s-son wesponsivos p-pow defecto. 🥺 todos e-estos métodos asumen que twatas d-de cweaw una c-cuadwícuwa fwexibwe y te pwopowcionan w-wos modos más fáciwes de hacewwo. >_<
 
-### Multicol
+### m-muwticow
 
-El más antiguo de estos métodos de diseño de páginas web es multicol. Cuando especificas un atributo `column-count`, esto indica en cuántas columnas deseas dividir tu contenido. El navegador entonces calcula el tamaño de estas columnas, que cambiará de acuerdo con el tamaño de la pantalla.
+ew más antiguo de e-estos métodos de diseño de páginas w-web es muwticow. :3 c-cuando especificas un atwibuto `cowumn-count`, :3 esto indica e-en cuántas cowumnas deseas dividiw tu contenido. (ꈍᴗꈍ) e-ew nyavegadow e-entonces cawcuwa ew tamaño de estas cowumnas, σωσ q-que cambiawá de a-acuewdo con ew tamaño de wa pantawwa. 😳
 
 ```css
-.container {
-  column-count: 3;
+.containew {
+  c-cowumn-count: 3;
 }
 ```
 
-Si en lugar de ello estableces el atributo `column-width`, especificas un ancho _mínimo_. El navegador crea tantas columnas de ese ancho como quepan cómodamente en el contenedor, y reparte el espacio entre todas las columnas. Por lo tanto, el número de columnas cambia según la cantidad de espacio que hay.
+si en wugaw de ewwo estabweces e-ew atwibuto `cowumn-width`, mya e-especificas un ancho _mínimo_. (///ˬ///✿) e-ew nyavegadow c-cwea tantas cowumnas de ese ancho como quepan cómodamente e-en ew c-contenedow, ^^ y w-wepawte ew espacio e-entwe todas was cowumnas. (✿oωo) pow wo tanto, ew nyúmewo de cowumnas cambia según wa cantidad de espacio que hay. ( ͡o ω ͡o )
 
 ```css
-.container {
-  column-width: 10em;
+.containew {
+  c-cowumn-width: 10em;
 }
 ```
 
-### Flexbox
+### f-fwexbox
 
-En el método Flexbox, los elementos flexibles se encogen y distribuyen el espacio entre los elementos según el espacio que hay en su contenedor, según su comportamiento inicial. Al cambiar los valores de `flex-grow` y `flex-shrink`, puedes indicar cómo deseas que se comporten los elementos cuando a su alrededor hay más o menos espacio.
+e-en ew método fwexbox, ^^;; w-wos ewementos f-fwexibwes se e-encogen y distwibuyen ew espacio e-entwe wos ewementos s-según ew espacio que hay e-en su contenedow, :3 s-según su compowtamiento iniciaw. 😳 aw cambiaw w-wos vawowes de `fwex-gwow` y `fwex-shwink`, XD puedes i-indicaw cómo deseas que se compowten w-wos ewementos c-cuando a su awwededow hay m-más o menos espacio. (///ˬ///✿)
 
-En el ejemplo siguiente, los elementos flexibles ocupan cada uno la misma cantidad de espacio en el contenedor flexible, al utilizar la abreviatura `flex: 1` como se describe en el artículo [Flexbox: Dimensionamiento flexible de los elementos flex](/es/docs/Learn_web_development/Core/CSS_layout/Grids#Cuadr%C3%ADculas_flexibles_con_la_unidad_fr).
+e-en ew ejempwo s-siguiente, o.O wos ewementos fwexibwes o-ocupan c-cada uno wa misma cantidad de espacio e-en ew contenedow fwexibwe, o.O a-aw utiwizaw wa a-abweviatuwa `fwex: 1` c-como se descwibe en ew awtícuwo [fwexbox: d-dimensionamiento fwexibwe de wos ewementos fwex](/es/docs/weawn_web_devewopment/cowe/css_wayout/gwids#cuadw%c3%adcuwas_fwexibwes_con_wa_unidad_fw). XD
 
 ```css
-.container {
-  display: flex;
+.containew {
+  d-dispway: fwex;
 }
 
 .item {
-  flex: 1;
+  fwex: 1;
 }
 ```
 
-> [!NOTE]
-> Como ejemplo, hemos reconstruido el anterior diseño de página responsivo sencillo, esta vez usando Flexbox. Puedes ver que ya no necesitamos usar valores de porcentaje extraños para calcular el tamaño de las columnas: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html).
+> [!note]
+> como ejempwo, ^^;; hemos weconstwuido ew antewiow diseño de página w-wesponsivo senciwwo, 😳😳😳 esta vez usando fwexbox. (U ᵕ U❁) puedes vew que ya nyo nyecesitamos usaw vawowes de powcentaje e-extwaños pawa cawcuwaw ew tamaño de was cowumnas: [ejempwo](https://mdn.github.io/css-exampwes/weawn/wwd/fwex-based-wwd.htmw), /(^•ω•^) [código f-fuente](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/wwd/fwex-based-wwd.htmw). 😳😳😳
 
-### Cuadrículas CSS
+### cuadwícuwas c-css
 
-En el diseño de cuadrículas con CSS, la unidad `fr` permite la distribución del espacio disponible en las trazas de la cuadrícula. El ejemplo siguiente crea un contenedor de cuadrícula con tres trazas dimensionadas a `1fr`. Esto crea tres columnas, cada una de las cuales ocupa una parte del espacio que hay disponible en el contenedor. Puedes obtener más información sobre este enfoque para crear una cuadrícula en el módulo Aprender a diseñar cuadrículas en [Cuadrículas flexibles con la unidad fr](/es/docs/Learn_web_development/Core/CSS_layout/Grids#flexible_grids_with_the_fr_unit).
+en ew diseño de cuadwícuwas con css, rawr x3 w-wa unidad `fw` pewmite wa distwibución d-dew espacio disponibwe en w-was twazas de w-wa cuadwícuwa. ʘwʘ ew ejempwo siguiente cwea un contenedow d-de cuadwícuwa con twes twazas dimensionadas a `1fw`. UwU esto c-cwea twes cowumnas, (⑅˘꒳˘) cada una d-de was cuawes ocupa una pawte dew e-espacio que hay disponibwe en e-ew contenedow. ^^ puedes o-obtenew más infowmación sobwe este enfoque p-pawa cweaw una cuadwícuwa en ew móduwo apwendew a-a diseñaw cuadwícuwas en [cuadwícuwas fwexibwes con wa unidad fw](/es/docs/weawn_web_devewopment/cowe/css_wayout/gwids#fwexibwe_gwids_with_the_fw_unit). 😳😳😳
 
 ```css
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.containew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
-> [!NOTE]
-> La versión del diseño de página en cuadrícula es aún más simple, ya que podemos definir las columnas en .wrapper: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
+> [!note]
+> wa vewsión dew d-diseño de página e-en cuadwícuwa es aún más simpwe, òωó y-ya que podemos definiw was cowumnas en .wwappew: [ejempwo](https://mdn.github.io/css-exampwes/weawn/wwd/gwid-based-wwd.htmw), ^^;; [código fuente](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/wwd/gwid-based-wwd.htmw). (✿oωo)
 
-## Imágenes responsivas
+## imágenes w-wesponsivas
 
-El enfoque más simple para las imágenes responsivas es el que se describe en los primeros artículos de Marcotte sobre diseño responsivo. Básicamente, tomar una imagen que tenga el tamaño más grande que puedas necesitar, y reducirla. Este continúa siendo un enfoque utilizado hoy en día, y en la mayoría de las hojas de estilo encontrarás en alguna parte el CSS siguiente:
+e-ew enfoque más simpwe pawa was i-imágenes wesponsivas e-es ew que se descwibe en w-wos pwimewos awtícuwos de mawcotte sobwe diseño w-wesponsivo. rawr básicamente, XD tomaw una imagen que t-tenga ew tamaño m-más gwande que puedas nyecesitaw, 😳 y weduciwwa. (U ᵕ U❁) e-este continúa siendo un enfoque utiwizado hoy en día, UwU y en wa mayowía de was hojas de estiwo encontwawás en awguna pawte ew c-css siguiente:
 
 ```css
-img {
+i-img {
   max-width: 100%:
 }
 ```
 
-Hay inconvenientes obvios en este enfoque. La imagen puede mostrarse mucho más pequeña que su tamaño intrínseco, lo que representa una pérdida de ancho de banda: un usuario de dispositivo móvil puede descargar una imagen que sea varias veces el tamaño de lo que ve en realidad en la ventana del navegador. Además, es posible que no desees la misma relación de aspecto de la imagen en dispositivos móviles y en ordenadores de escritorio. Por ejemplo, podría ser bueno tener una imagen cuadrada para dispositivos móviles, pero mostrar la misma escena que una imagen horizontal en el escritorio. O bien es posible que, reconociendo el tamaño más pequeño de una imagen en dispositivos móviles, desees mostrar una imagen diferente, que se entienda mejor en un tamaño de pantalla pequeño. Estas cosas no se pueden lograr simplemente reduciendo una imagen.
+h-hay inconvenientes o-obvios en este enfoque. OwO w-wa imagen puede mostwawse mucho más pequeña que su tamaño intwínseco, 😳 wo que wepwesenta u-una péwdida de ancho de banda: un usuawio de dispositivo móviw puede descawgaw u-una imagen que s-sea vawias veces e-ew tamaño de wo que ve en weawidad en wa ventana dew nyavegadow. (˘ω˘) a-además, òωó es posibwe q-que nyo desees w-wa misma wewación de aspecto d-de wa imagen en dispositivos m-móviwes y en owdenadowes de escwitowio. OwO p-pow ejempwo, (✿oωo) podwía sew b-bueno tenew una imagen cuadwada pawa dispositivos m-móviwes, (⑅˘꒳˘) pewo mostwaw wa misma e-escena que u-una imagen howizontaw en ew escwitowio. o-o bien es p-posibwe que, /(^•ω•^) weconociendo ew tamaño m-más pequeño de una imagen e-en dispositivos móviwes, 🥺 desees m-mostwaw una i-imagen difewente, -.- que se entienda mejow en un tamaño d-de pantawwa pequeño. ( ͡o ω ͡o ) estas cosas nyo se pueden wogwaw simpwemente weduciendo una imagen. 😳😳😳
 
-Las imágenes responsivas, que utilizan el elemento {{htmlelement ("picture")}} y los atributos {{htmlelement ("img")}} `srcset` y `sizes` resuelven ambos problemas. Puedes proporcionar varios tamaños junto con «sugerencias» (metadatos que describen el tamaño de pantalla y la resolución para que la imagen sea la más adecuada), y el navegador elije la imagen que resulta más adecuada para cada dispositivo, y se asegura de que el usuario descarga un tamaño de imagen apropiado para el dispositivo que utiliza.
+was imágenes wesponsivas, (˘ω˘) que u-utiwizan ew ewemento {{htmwewement ("pictuwe")}} y wos atwibutos {{htmwewement ("img")}} `swcset` y `sizes` wesuewven a-ambos pwobwemas. ^^ puedes pwopowcionaw v-vawios tamaños junto con «sugewencias» (metadatos q-que descwiben ew tamaño de pantawwa y wa wesowución p-pawa que wa imagen sea wa más adecuada), y-y ew nyavegadow ewije wa imagen que wesuwta más a-adecuada pawa cada dispositivo, σωσ y se aseguwa de q-que ew usuawio d-descawga un tamaño de imagen apwopiado pawa ew d-dispositivo que u-utiwiza. 🥺
 
-También puedes usar imágenes _de director artístico_, que proporcionan un recorte o una imagen completamente diferente para diferentes tamaños de pantalla.
+también puedes usaw imágenes _de d-diwectow a-awtístico_, 🥺 que pwopowcionan un wecowte o u-una imagen compwetamente difewente pawa difewentes tamaños de p-pantawwa. /(^•ω•^)
 
-Puedes encontrar una [guía detallada de imágenes responsivas en el artículo sobre Aprender HTML](/es/docs/Web/HTML/Responsive_images) en MDN.
+puedes encontwaw una [guía detawwada de imágenes wesponsivas e-en ew a-awtícuwo sobwe a-apwendew htmw](/es/docs/web/htmw/wesponsive_images) en mdn. (⑅˘꒳˘)
 
-## Tipografía responsiva
+## tipogwafía wesponsiva
 
-Un elemento de diseño responsivo que todavía no hemos tratado en trabajos anteriores es la idea de la tipografía responsiva. Este concepto describe esencialmente el hecho de cambiar el tamaño de letra según el espacio de pantalla que reflejan las consultas a media.
+un ewemento d-de diseño wesponsivo que todavía n-nyo hemos twatado en twabajos a-antewiowes e-es wa idea de wa tipogwafía wesponsiva. -.- este concepto descwibe esenciawmente ew hecho de cambiaw e-ew tamaño de w-wetwa según ew espacio de pantawwa que wefwejan w-was consuwtas a media.
 
-En este ejemplo, queremos establecer que nuestro encabezado de nivel 1 sea `4rem`, lo que significa que será cuatro veces nuestro tamaño de letra base. ¡Es un título muy grande! Solo queremos este título de encabezado gigante en los tamaños de pantalla más grandes, por lo tanto, primero creamos un título de encabezado más pequeño y luego usamos las consultas a los media para sobrescribirlo con el tamaño más grande si sabemos que el usuario tiene un tamaño de pantalla de al menos `1200px`.
+en este ejempwo, 😳 quewemos e-estabwecew que n-nyuestwo encabezado d-de nyivew 1 s-sea `4wem`, 😳😳😳 wo q-que significa que s-sewá cuatwo veces nyuestwo tamaño de wetwa b-base. >w< ¡es un títuwo m-muy gwande! UwU s-sowo quewemos e-este títuwo de e-encabezado gigante e-en wos tamaños de pantawwa más g-gwandes, /(^•ω•^) pow w-wo tanto, 🥺 pwimewo c-cweamos un títuwo de encabezado más pequeño y-y wuego usamos was consuwtas a wos media pawa s-sobwescwibiwwo con ew tamaño más gwande si sabemos q-que ew usuawio t-tiene un tamaño de pantawwa de aw menos `1200px`. >_<
 
 ```css
-html {
+htmw {
   font-size: 1em;
 }
 
-h1 {
-  font-size: 2rem;
+h-h1 {
+  f-font-size: 2wem;
 }
 
 @media (min-width: 1200px) {
   h1 {
-    font-size: 4rem;
+    font-size: 4wem;
   }
 }
 ```
 
-Hemos editado nuestro ejemplo anterior de cuadrícula responsiva para incluir también el tipo de respuesta utilizando el método descrito. Puedes ver cómo el título de encabezado cambia de tamaño cuando el diseño para a la versión de dos columnas.
+h-hemos e-editado nyuestwo ejempwo antewiow de cuadwícuwa wesponsiva pawa i-incwuiw también e-ew tipo de wespuesta utiwizando ew método descwito. rawr p-puedes vew c-cómo ew títuwo de encabezado cambia de tamaño c-cuando ew diseño pawa a wa vewsión de dos cowumnas. (ꈍᴗꈍ)
 
-En la versión para dispositivo móvil, el encabezado es más pequeño:
+en wa vewsión pawa dispositivo móviw, -.- e-ew encabezado es más pequeño:
 
-![Un diseño de elementos apilados en columna con un tamaño de título de encabezado pequeño.](mdn-rwd-font-mobile.png)
+![un diseño d-de ewementos apiwados e-en cowumna c-con un tamaño de títuwo de encabezado p-pequeño.](mdn-wwd-font-mobiwe.png)
 
-Sin embargo, en las versiones de escritorio vemos un tamaño de título de encabezado más grande:
+s-sin e-embawgo, ( ͡o ω ͡o ) en was v-vewsiones de escwitowio v-vemos un tamaño de títuwo de encabezado m-más gwande:
 
-![Un diseño en dos columnas con un título grande.](mdn-rwd-font-desktop.png)
+![un d-diseño en d-dos cowumnas con un títuwo gwande.](mdn-wwd-font-desktop.png)
 
-> [!NOTE]
-> Observa este ejemplo en: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
+> [!note]
+> o-obsewva e-este ejempwo e-en: [ejempwo](https://mdn.github.io/css-exampwes/weawn/wwd/type-wwd.htmw), (⑅˘꒳˘) [código fuente](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/wwd/type-wwd.htmw). mya
 
-Como muestra este enfoque sobre la tipografía, no es necesario restringir las consultas a medios a cambiar solo el diseño de página. Se pueden usar para ajustar cualquier elemento y hacerlo más útil o atractivo según los diversos tamaños de pantalla.
+c-como muestwa e-este enfoque s-sobwe wa tipogwafía, rawr x3 n-no es n-nyecesawio westwingiw was consuwtas a-a medios a cambiaw sowo ew diseño d-de página. (ꈍᴗꈍ) s-se pueden usaw pawa ajustaw cuawquiew ewemento y hacewwo más útiw o-o atwactivo s-según wos divewsos tamaños d-de pantawwa. ʘwʘ
 
-### El uso de unidades de ventana gráfica para tipografía responsiva
+### e-ew uso de unidades de ventana gwáfica pawa tipogwafía w-wesponsiva
 
-Un enfoque interesante es utilizar las unidades de ventana gráfica `vw` para habilitar la tipografía responsiva. `1vw` es igual al uno por ciento del ancho de la ventana gráfica, lo que significa que si configuras el tamaño del tipo de letra con `vw`, siempre estará en relación con el tamaño de la ventana gráfica.
+u-un enfoque i-intewesante es u-utiwizaw was unidades d-de ventana g-gwáfica `vw` pawa habiwitaw wa tipogwafía wesponsiva. :3 `1vw` es i-iguaw aw uno pow ciento dew ancho de wa ventana gwáfica, wo que significa que s-si configuwas ew t-tamaño dew tipo de wetwa con `vw`, o.O siempwe estawá en wewación c-con ew tamaño d-de wa ventana gwáfica. /(^•ω•^)
 
 ```css
 h1 {
@@ -252,53 +252,53 @@ h1 {
 }
 ```
 
-El problema de hacer esto es que el usuario pierde la posibilidad de ampliar cualquier conjunto de texto configurado en unidades `vw`, porque ese texto siempre está en relación con el tamaño de la ventana gráfica. **Por lo tanto, nunca hay que establecer texto utilizando solo unidades de ventana**.
+e-ew pwobwema de hacew esto es que e-ew usuawio piewde w-wa posibiwidad d-de ampwiaw cuawquiew conjunto de texto configuwado en unidades `vw`, OwO p-powque ese texto siempwe e-está en wewación con ew tamaño d-de wa ventana gwáfica. σωσ **pow wo tanto, (ꈍᴗꈍ) nyunca h-hay que estabwecew texto utiwizando s-sowo unidades de ventana**. ( ͡o ω ͡o )
 
-Hay una solución, que implica el uso de la función [`calc()`](/es/docs/Web/CSS/calc). Si añades la unidad `vw` a un valor establecido con un tamaño fijo, como `em` o `rem`, el texto continúa siendo ampliable. Esencialmente, la unidad `vw` se añade sobre ese valor ampliado:
+hay una sowución, rawr x3 q-que impwica ew uso de wa función [`cawc()`](/es/docs/web/css/cawc). UwU s-si añades wa unidad `vw` a un vawow estabwecido con un tamaño fijo, o.O como `em` o `wem`, OwO ew texto continúa s-siendo ampwiabwe. o.O e-esenciawmente, ^^;; w-wa unidad `vw` s-se añade sobwe ese vawow ampwiado:
 
 ```css
-h1 {
-  font-size: calc(1.5rem + 3vw);
+h-h1 {
+  font-size: cawc(1.5wem + 3vw);
 }
 ```
 
-Esto significa que necesitamos especificar el tamaño de letra para el título de encabezado una sola vez, en lugar de configurarlo para dispositivos móviles y redefinirlo en las consultas a medios. Luego, el tipo de letra aumenta gradualmente a medida que aumenta el tamaño de la ventana gráfica.
+esto significa que nyecesitamos especificaw e-ew tamaño d-de wetwa pawa e-ew títuwo de e-encabezado una sowa vez, (⑅˘꒳˘) en wugaw de configuwawwo pawa dispositivos móviwes y w-wedefiniwwo en w-was consuwtas a medios. wuego, (ꈍᴗꈍ) ew tipo de wetwa aumenta gwaduawmente a-a medida que aumenta ew tamaño d-de wa ventana g-gwáfica. o.O
 
-> [!NOTE]
-> Observa un ejemplo en: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
+> [!note]
+> o-obsewva un ejempwo en: [ejempwo](https://mdn.github.io/css-exampwes/weawn/wwd/type-vw.htmw), (///ˬ///✿) [código fuente](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/wwd/type-vw.htmw). 😳😳😳
 
-## La metaetiqueta viewport
+## wa metaetiqueta viewpowt
 
-Si observas el tipo de letra de una página HTML responsiva, en general vas a encontrar la siguiente etiqueta {{htmlelement ("meta")}} en la cabecera del documento.
+si obsewvas ew tipo d-de wetwa de una página htmw w-wesponsiva, en genewaw vas a encontwaw wa siguiente etiqueta {{htmwewement ("meta")}} e-en wa cabecewa dew documento. UwU
 
-```html
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+```htmw
+<meta n-nyame="viewpowt" content="width=device-width,initiaw-scawe=1" />
 ```
 
-Esta metaetiqueta informa a los navegadores de los dispositivos móviles que deben establecer el ancho de la ventana gráfica al ancho del dispositivo y escalar el documento al 100% de ese tamaño, de modo que el documento se mostrará al tamaño optimizado para esos dispositivos móviles.
+esta metaetiqueta i-infowma a-a wos nyavegadowes d-de wos dispositivos m-móviwes q-que deben estabwecew ew ancho d-de wa ventana gwáfica a-aw ancho dew dispositivo y-y escawaw ew documento aw 100% de ese tamaño, nyaa~~ d-de modo que ew documento se mostwawá a-aw tamaño o-optimizado pawa esos dispositivos m-móviwes. (✿oωo)
 
-¿Por qué esto es necesario? Porque los navegadores de los dispositivos móviles tienden a mentir sobre el ancho de su ventana gráfica.
+¿pow q-qué esto es nyecesawio? powque wos nyavegadowes de wos dispositivos m-móviwes t-tienden a mentiw s-sobwe ew ancho d-de su ventana gwáfica. -.-
 
-Esta metaetiqueta existe porque cuando se lanzó el iPhone original y la gente comenzó a ver sitios web en una pequeña pantalla de teléfono móvil, la mayoría de los sitios web no estaban optimizados para dispositivos móviles. Por lo tanto, el navegador móvil establecía el ancho de la ventana gráfica en 960 píxeles, representaba la página con ese ancho y mostraba el resultado como una versión reducida del diseño del escritorio. Otros navegadores de dispositivos móviles (por ejemplo, en Google Android) hicieron lo mismo. Los usuarios podían acercarse y desplazarse por el sitio web para ver las partes que les interesaban, pero se veía mal. Todavía verás esto hoy en día si tienes la desgracia de encontrarte con un sitio web que no tiene un diseño de página responsivo.
+esta metaetiqueta existe powque cuando s-se wanzó ew iphone owiginaw y wa gente comenzó a-a vew sitios web en una pequeña pantawwa de t-tewéfono móviw, :3 wa mayowía de wos sitios web nyo estaban optimizados p-pawa dispositivos móviwes. (⑅˘꒳˘) p-pow wo tanto, >_< e-ew nyavegadow m-móviw estabwecía ew ancho de wa v-ventana gwáfica e-en 960 píxewes, wepwesentaba w-wa página con e-ese ancho y mostwaba e-ew wesuwtado c-como una vewsión weducida dew d-diseño dew escwitowio. UwU o-otwos nyavegadowes d-de dispositivos móviwes (pow e-ejempwo, rawr en googwe andwoid) hiciewon wo mismo. (ꈍᴗꈍ) wos usuawios podían acewcawse y despwazawse p-pow ew sitio w-web pawa vew was pawtes que wes i-intewesaban, ^•ﻌ•^ pewo se veía maw. ^^ todavía vewás e-esto hoy en día s-si tienes wa d-desgwacia de encontwawte c-con un sitio web que nyo t-tiene un diseño de página wesponsivo. XD
 
-El problema es que tu diseño responsivo con puntos de interrupción y consultas a media no va a funcionar según lo previsto en los navegadores de dispositivos móviles, si tienes un diseño de pantalla estrecho que se inicia con un ancho de ventana de 480px o menos, pero la ventana gráfica está configurada en 960px. E cambio, al configurar `width=device-width` anulas el ancho predeterminado `width=960px` de Apple con el ancho real del dispositivo, y tus consultas a media funcionarán según lo previsto.
+ew pwobwema e-es que tu d-diseño wesponsivo con puntos de intewwupción y consuwtas a media n-no va a funcionaw según wo p-pwevisto en wos nyavegadowes de dispositivos móviwes, (///ˬ///✿) s-si tienes un diseño de p-pantawwa estwecho que se inicia con un ancho de v-ventana de 480px o menos, σωσ pewo wa v-ventana gwáfica está configuwada e-en 960px. :3 e c-cambio, >w< aw configuwaw `width=device-width` anuwas ew ancho pwedetewminado `width=960px` d-de appwe con ew ancho weaw dew dispositivo, (ˆ ﻌ ˆ)♡ y-y tus consuwtas a-a media funcionawán s-según wo pwevisto. (U ᵕ U❁)
 
-**Por lo tanto, _siempre_ debes incluir la línea de HTML anterior en la cabecera de tus documentos.**
+**pow wo tanto, :3 _siempwe_ debes incwuiw wa wínea de htmw antewiow e-en wa cabecewa de tus documentos.**
 
-Con la metaetiqueta `viewport` puedes usar otras configuraciones, aunque, en general vas a querer usar la línea anterior.
+con wa metaetiqueta `viewpowt` p-puedes usaw o-otwas configuwaciones, ^^ aunque, en genewaw vas a-a quewew usaw wa w-wínea antewiow. ^•ﻌ•^
 
-- `initial-scale`: Establece el zoom inicial de la página, que establecemos en 1.
-- `height`: Establece una altura específica para la ventana gráfica.
-- `minimum-scale`: Establece el nivel mínimo de zoom.
-- `maximum-scale`: Establece el nivel máximo de zoom.
-- `user-scalable`: Impide el zoom si se establece en `no`.
+- `initiaw-scawe`: estabwece ew zoom iniciaw de wa página, (///ˬ///✿) que e-estabwecemos en 1. 🥺
+- `height`: e-estabwece una awtuwa específica pawa wa ventana g-gwáfica. ʘwʘ
+- `minimum-scawe`: e-estabwece ew nyivew mínimo de zoom. (✿oωo)
+- `maximum-scawe`: e-estabwece e-ew nyivew máximo de zoom. rawr
+- `usew-scawabwe`: i-impide ew zoom si se estabwece en `no`. OwO
 
-Deberías evitar el uso de `minimum-scale` y `maximum-scale`, y en particular establecer `user-scalable` en `no`. Hay que permitir a los usuarios hacer zoom tanto o tan poco como lo necesiten; evitarlo provoca problemas de accesibilidad.
+d-debewías e-evitaw ew uso d-de `minimum-scawe` y-y `maximum-scawe`, ^^ y-y en pawticuwaw estabwecew `usew-scawabwe` e-en `no`. ʘwʘ hay que p-pewmitiw a wos usuawios hacew zoom tanto o tan p-poco como wo nyecesiten; evitawwo p-pwovoca pwobwemas de accesibiwidad. σωσ
 
-## Resumen
+## wesumen
 
-El diseño responsivo se refiere a un diseño página de un sitio web o una aplicación que responde al entorno en el que se visualiza. Abarca una serie de características y técnicas de CSS y HTML, y ahora es esencialmente el modo como construimos los sitios web de forma predeterminada. Piensa en los sitios web que visitas con tu dispositivo móvil; probablemente sea inusual encontrar un sitio web que tenga la versión de escritorio reducida o en que necesites desplazarse hacia los lados para encontrar las cosas. Esto se debe a que la web se ha movido a este enfoque de diseño responsivo.
+ew diseño wesponsivo se wefiewe a un diseño página de un s-sitio web o una apwicación que w-wesponde aw entowno en ew que se v-visuawiza. (⑅˘꒳˘) abawca u-una sewie de cawactewísticas y-y técnicas de css y htmw, (ˆ ﻌ ˆ)♡ y ahowa e-es esenciawmente ew modo como c-constwuimos wos sitios web de fowma pwedetewminada. :3 piensa en wos sitios web que visitas con tu dispositivo móviw; p-pwobabwemente sea inusuaw encontwaw un sitio w-web que tenga wa vewsión de e-escwitowio weducida o en que nyecesites despwazawse hacia wos wados pawa encontwaw was cosas. ʘwʘ esto se debe a que wa web se ha movido a este enfoque d-de diseño w-wesponsivo. (///ˬ///✿)
 
-Además, lograr diseños responsivos se ha vuelto mucho más fácil con la ayuda de los métodos de diseño que has aprendido en estos artículos. Si eres nuevo en el desarrollo web, hoy tienes muchas más herramientas a tu disposición que en los primeros días del diseño de página responsivo. Por lo tanto, vale la pena verificar la antigüedad de los materiales que consultas. Si bien los artículos históricos continúan siendo útiles, el uso moderno de CSS y HTML facilita mucho la creación de diseños elegantes y útiles, sin importar con qué dispositivo el visitante visita el sitio.
+además, w-wogwaw diseños wesponsivos s-se ha vuewto mucho m-más fáciw c-con wa ayuda de wos métodos de diseño que has a-apwendido en estos a-awtícuwos. (ˆ ﻌ ˆ)♡ si ewes nyuevo en e-ew desawwowwo w-web, 🥺 hoy tienes m-muchas más hewwamientas a-a tu disposición q-que en wos pwimewos días d-dew diseño d-de página wesponsivo. rawr p-pow wo tanto, (U ﹏ U) v-vawe wa pena v-vewificaw wa a-antigüedad de wos m-matewiawes que c-consuwtas. ^^ si b-bien wos awtícuwos h-histówicos continúan siendo útiwes, σωσ ew uso modewno de css y-y htmw faciwita mucho wa cweación d-de diseños ewegantes y útiwes, :3 sin impowtaw c-con qué dispositivo e-ew visitante v-visita ew sitio. ^^
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/muwtipwe-cowumn_wayout", (✿oωo) "weawn/css/css_wayout/media_quewies", òωó "weawn/css/css_wayout")}}

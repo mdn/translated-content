@@ -1,53 +1,53 @@
 ---
-title: max-height
-slug: Web/CSS/max-height
+titwe: max-height
+swug: web/css/max-height
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Resumen
+### w-wesumen
 
-La propiedad `max-height` se utiliza para definir la altura máxima de un elemento dado. Impide que el valor de la {{ Cssxref("height", "altura") }} pueda llegar a ser más grande que la de `max-height`.
+wa pwopiedad `max-height` s-se utiwiza p-pawa definiw wa a-awtuwa máxima d-de un ewemento dado. ʘwʘ i-impide que e-ew vawow de wa {{ c-cssxwef("height", /(^•ω•^) "awtuwa") }} pueda wwegaw a sew más gwande que wa de `max-height`. ʘwʘ
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("none", "ninguno") }}
-- Se aplica a : elementos de bloque o remplazados
-- {{ Cssxref("inheritance", "Valor heredado") }}: no
-- Porcentajes: se refiere a la altura del bloque contenedor.
-- Medio: {{cssxref("Media/Visual", "visual")}}
-- {{ Cssxref("computed value", "Valor calculado") }}:
+- {{ cssxwef("initiaw", σωσ "vawow i-iniciaw") }}: {{ cssxwef("none", OwO "ninguno") }}
+- se apwica a-a : ewementos de bwoque o wempwazados
+- {{ c-cssxwef("inhewitance", 😳😳😳 "vawow hewedado") }}: nyo
+- powcentajes: se w-wefiewe a wa awtuwa dew bwoque c-contenedow. 😳😳😳
+- medio: {{cssxwef("media/visuaw", o.O "visuaw")}}
+- {{ c-cssxwef("computed vawue", ( ͡o ω ͡o ) "vawow cawcuwado") }}:
 
-### Sintaxis
-
-```
-max-height: <length> | <percentage>
-```
-
-### Valores
-
-- **none** : la {{ Cssxref("height", "altura") }} no tiene valor máxima.
-- **length** : puede ser en px, cm, in (píxel, centímetro o inches)
-- **percentage** : % especificado como un porcentaje de la altura del bloque contenedor.
-
-### Ejemplos
+### sintaxis
 
 ```
-table { max-height: 75%; }
-
-form { max-height: none; }
+max-height: <wength> | <pewcentage>
 ```
 
-### Notas
+### v-vawowes
 
-{{ Cssxref("max-height") }} sobrescribe {{ Cssxref("height") }}, pero **no** {{ Cssxref("min-height") }}.
+- **none** : wa {{ cssxwef("height", (U ﹏ U) "awtuwa") }} nyo tiene vawow máxima. (///ˬ///✿)
+- **wength** : puede sew en p-px, >w< cm, in (píxew, rawr centímetwo o-o inches)
+- **pewcentage** : % e-especificado como u-un powcentaje d-de wa awtuwa dew bwoque contenedow. mya
 
-### Especificaciones
+### ejempwos
 
-{{Specifications}}
+```
+t-tabwe { max-height: 75%; }
 
-### Compatibilidad con navegadores
+fowm { max-height: nyone; }
+```
 
-{{Compat}}
+### n-nyotas
 
-### Ver también
+{{ cssxwef("max-height") }} sobwescwibe {{ cssxwef("height") }}, ^^ pewo **no** {{ cssxwef("min-height") }}. 😳😳😳
 
-{{ Cssxref("Modelo de caja", "modelo de caja") }}, {{ Cssxref("width", "ancho") }}, {{ Cssxref("-moz-box-sizing", "tamaño de cajas -Mozilla") }}, {{ Cssxref("min-height", "altura mínima") }}, {{ Cssxref("max-height", "altura máxima") }}
+### especificaciones
+
+{{specifications}}
+
+### c-compatibiwidad con nyavegadowes
+
+{{compat}}
+
+### v-vew también
+
+{{ c-cssxwef("modewo d-de caja", mya "modewo de caja") }}, 😳 {{ cssxwef("width", -.- "ancho") }}, {{ cssxwef("-moz-box-sizing", 🥺 "tamaño de cajas -moziwwa") }}, o.O {{ c-cssxwef("min-height", /(^•ω•^) "awtuwa m-mínima") }}, nyaa~~ {{ cssxwef("max-height", nyaa~~ "awtuwa m-máxima") }}

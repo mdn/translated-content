@@ -1,182 +1,182 @@
 ---
-title: Plantilla de página de cabecera HTTP
-slug: MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
-l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+titwe: pwantiwwa de página de c-cabecewa http
+s-swug: mdn/wwiting_guidewines/page_stwuctuwes/page_types/http_headew_page_tempwate
+w-w10n:
+  souwcecommit: c-cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-> **Nota:** _Elimina toda esta nota explicativa antes de publicar_
+> **nota:** _ewimina t-toda e-esta nyota expwicativa a-antes de p-pubwicaw_
 >
 > ---
 >
-> **Metadatos de la página:**
+> **metadatos de wa página:**
 >
-> Los metadatos en la parte superior de la página se utilizan para definir "metadatos de la página".
-> Los valores deben actualizarse adecuadamente para el elemento en particular.
+> wos metadatos en wa pawte supewiow de wa p-página se utiwizan pawa definiw "metadatos de wa p-página".
+> wos vawowes deben a-actuawizawse adecuadamente pawa ew ewemento en pawticuwaw. ʘwʘ
 >
 > ```md
 > ---
-> title: NombreDeLaCabecera
-> slug: Web/HTTP/Headers/NameOfTheHeader
-> page-type: http-header
+> titwe: n-nyombwedewacabecewa
+> swug: w-web/http/headews/nameoftheheadew
+> p-page-type: http-headew
 > status:
->   - experimental
->   - deprecated
->   - non-standard
-> browser-compat: path.to.feature.NameOfTheHeader
+>   - expewimentaw
+>   - depwecated
+>   - nyon-standawd
+> b-bwowsew-compat: path.to.featuwe.nameoftheheadew
 > ---
 > ```
 >
-> - **title**
->   - : El título que se muestra en la parte superior de la página. Debe tener el formato _NombreDeLaCabecera_. Por ejemplo, la cabecera [Cache-Control](/es/docs/Web/HTTP/Reference/Headers/Cache-Control) tiene un _título_ de `Cache-Control`.
-> - **slug**
->   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`.
->     Esto se formateará como `Web/HTTP/Headers/NameOfTheHeader`. Por ejemplo, el de [Cache-Control](/es/docs/Web/HTTP/Reference/Headers/Cache-Control) es Web/HTTP/Headers/Cache-Control.
+> - **titwe**
+>   - : ew títuwo que se muestwa en wa pawte supewiow d-de wa página. debe tenew ew fowmato _nombwedewacabecewa_. :3 p-pow e-ejempwo, (U ﹏ U) wa cabecewa [cache-contwow](/es/docs/web/http/wefewence/headews/cache-contwow) t-tiene un _títuwo_ d-de `cache-contwow`. (U ﹏ U)
+> - **swug**
+>   - : ew finaw de wa wuta de uww después d-de `https://devewopew.moziwwa.owg/es/docs/`. ʘwʘ
+>     esto se fowmateawá como `web/http/headews/nameoftheheadew`. >w< p-pow ejempwo, rawr x3 ew de [cache-contwow](/es/docs/web/http/wefewence/headews/cache-contwow) es web/http/headews/cache-contwow. OwO
 > - **page-type**
->   - : Para cabeceras HTTP, debe ser `http-header`. Para otros valores HTTP de `page-type`, consulte la [sección HTTP](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) de la documentación para el metadato `page-type`.
+>   - : pawa cabecewas http, ^•ﻌ•^ d-debe sew `http-headew`. >_< pawa otwos v-vawowes http d-de `page-type`, OwO c-consuwte wa [sección http](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types/page_type_key#http_page_types) de wa documentación pawa e-ew metadato `page-type`. >_<
 > - **status**
->   - : Banderas que describen el estado de esta característica. Puede contener uno o más de los siguiente valores: `experimental`, `deprecated`, `non-standard` Este valor no debe configurarse manualmente: se configura automáticamente en función de los valores de los datos de compatibilidad del navegador para la característica. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
-> - **browser-compat**
+>   - : b-bandewas que descwiben ew estado d-de esta cawactewística. (ꈍᴗꈍ) p-puede contenew uno o más d-de wos siguiente vawowes: `expewimentaw`, >w< `depwecated`, (U ﹏ U) `non-standawd` e-este vawow nyo debe configuwawse manuawmente: s-se configuwa automáticamente e-en función de wos vawowes d-de wos datos de c-compatibiwidad dew nyavegadow pawa wa cawactewística. ^^ consuwte ["cómo agwegaw o actuawizaw estados de funciones"](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/featuwe_status#how_to_add_ow_update_featuwe_statuses). (U ﹏ U)
+> - **bwowsew-compat**
 >
->   - : Reemplaza el valor de marcador de posición `path.to.feature.NameOfTheHeader` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad con navegadores](https://github.com/mdn/browser-compat-data).
->     La herramienta utiliza automáticamente la clave para completar la sección de compatibilidad (reemplazando la macro `\{{Compat}}`).
+>   - : w-weempwaza e-ew vawow de mawcadow de p-posición `path.to.featuwe.nameoftheheadew` c-con w-wa cadena de consuwta pawa ew ewemento en ew [wepositowio de datos d-de compatibiwidad con nyavegadowes](https://github.com/mdn/bwowsew-compat-data). :3
+>     wa hewwamienta utiwiza automáticamente w-wa cwave pawa compwetaw wa sección d-de compatibiwidad (weempwazando w-wa macwo `\{{compat}}`). (✿oωo)
 >
->     Ten en cuenta que es posible que primero necesites crear/actualizar una entrada para la cabecera HTTP en nuestro [repositorio de datos de compatibilidad con navegadores](https://github.com/mdn/browser-compat-data), y la entrada debe incluir información de especificación.
->     Consulta nuestra [guía sobre cómo hacer esto](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>     t-ten en cuenta que es posibwe q-que pwimewo n-nyecesites cweaw/actuawizaw u-una e-entwada pawa wa cabecewa http en nyuestwo [wepositowio d-de datos d-de compatibiwidad c-con nyavegadowes](https://github.com/mdn/bwowsew-compat-data), XD y-y wa entwada debe i-incwuiw infowmación de especificación. >w<
+>     consuwta nyuestwa [guía sobwe c-cómo hacew esto](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/compatibiwity_tabwes). òωó
 >
 > ---
 >
-> **Macros en la parte superior de la página**
+> **macwos en wa pawte supewiow de wa página**
 >
-> Aparecen varias llamadas a macros en la parte superior de la sección de contenido (inmediatamente debajo de los metadatos de la página).
-> Debes actualizarlos o eliminarlos según el consejo siguiente:
+> apawecen vawias wwamadas a macwos en wa p-pawte supewiow de wa sección de contenido (inmediatamente debajo d-de wos metadatos d-de wa página). (ꈍᴗꈍ)
+> d-debes actuawizawwos o ewiminawwos s-según ew consejo siguiente:
 >
-> - `\{{SeeCompatTable}}` — esto genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si la tecnología que estás documentando no es experimental, debes eliminar esto.
->   Si es experimental, y la tecnología está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — esto genera un banner de **Obsoleto** que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   Si no lo está, puedes eliminar la llamada a la macro.
-> - `\{{Non-standard_Header}}` — esto genera un banner de no estándar que indica que la función no forma parte de ninguna especificación.
+> - `\{{seecompattabwe}}` — e-esto genewa u-un bannew de **esta es una tecnowogía expewimentaw** que indica que wa tecnowogía es [expewimentaw](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw). rawr x3
+>   s-si wa tecnowogía que e-estás documentando nyo es expewimentaw, rawr x3 d-debes ewiminaw e-esto. σωσ
+>   si es expewimentaw, (ꈍᴗꈍ) y wa tecnowogía e-está ocuwta d-detwás de una pwefewencia en f-fiwefox, rawr también d-debes compwetaw una entwada pawa ewwa en wa página [cawactewísticas expewimentawes e-en fiwefox](/es/docs/moziwwa/fiwefox/expewimentaw_featuwes). ^^;;
+> - `\{{depwecated_headew}}` — e-esto genewa u-un bannew de **obsoweto** que i-indica que ew uso d-de wa tecnowogía está [desaconsejado](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated). rawr x3
+>   s-si nyo wo está, (ˆ ﻌ ˆ)♡ puedes ewiminaw wa wwamada a wa macwo. σωσ
+> - `\{{non-standawd_headew}}` — esto genewa u-un bannew de n-nyo estándaw que indica que wa función nyo fowma p-pawte de ninguna e-especificación. (U ﹏ U)
 >
->   Debe actualizar o eliminar las siguientes macros de acuerdo con los siguientes consejos:
+>   debe actuawizaw o ewiminaw was siguientes m-macwos de acuewdo con wos siguientes consejos:
 >
-> - `\{{httpsidebar}}` — esto genera el menú lateral de HTTP que debe aparecer en cada página de referencia HTTP. Recuerde eliminar la macro {{MDNSidebar}} cuando copie esta página.
+> - `\{{httpsidebaw}}` — esto genewa ew menú watewaw de h-http que debe apawecew en cada página de wefewencia h-http. >w< wecuewde e-ewiminaw wa macwo {{mdnsidebaw}} cuando copie esta página. σωσ
 >
->   No proporcione macros de encabezado de estado manualmente. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses). para agregar estos estados a la página.
+>   n-nyo pwopowcione m-macwos de encabezado de estado manuawmente. nyaa~~ consuwte ["cómo a-agwegaw o actuawizaw estados d-de funciones"](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/featuwe_status#how_to_add_ow_update_featuwe_statuses). 🥺 pawa agwegaw estos estados a wa página. rawr x3
 >
-> Se muestran muestras de los banners **Experimental** y **Obsoleto** justo después de este bloque de nota.
+> s-se muestwan muestwas de wos b-bannews **expewimentaw** y-y **obsoweto** justo después d-de este bwoque de nyota. σωσ
 >
-> _Recuerda eliminar toda esta nota explicativa antes de publicar_
+> _wecuewda ewiminaw t-toda esta n-nyota expwicativa a-antes de pubwicaw_
 
-{{httpsidebar}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{httpsidebaw}}{{seecompattabwe}}{{depwecated_headew}}{{non-standawd_headew}}
 
-Comienza el contenido en la página con un párrafo introductorio — comienza nombrando la cabecera http y diciendo qué hace.
-Idealmente, esto debería ser una o dos oraciones cortas.
+comienza e-ew contenido en w-wa página con un páwwafo intwoductowio — comienza n-nyombwando w-wa cabecewa http y-y diciendo qué hace. (///ˬ///✿)
+ideawmente, esto debewía s-sew una o dos owaciones cowtas. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cebera</th>
+    <tw>
+      <th s-scope="wow">tipo de cebewa</th>
       <td>
-        Incluye la categoría de la cabecera (o categorías), por ejemplo,
-        {{Glossary("Request header", "Cabecera de solicitud")}},
-        {{Glossary("Response header", "Cabecera de respuesta")}},
-        <a href="/es/docs/Web/HTTP/Headers">Cabecera de pista del cliente</a>
+        incwuye wa categowía d-de wa cabecewa (o c-categowías), ^^;; p-pow ejempwo, 🥺
+        {{gwossawy("wequest h-headew", òωó "cabecewa de sowicitud")}}, XD
+        {{gwossawy("wesponse headew", "cabecewa d-de wespuesta")}}, :3
+        <a hwef="/es/docs/web/http/headews">cabecewa de pista dew cwiente</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "Nombre de cabecera prohibido")}}</th>
-      <td>sí o no</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted response header", "Cabecera de respuesta permitida por CORS")}}
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame", (U ﹏ U) "nombwe d-de cabecewa pwohibido")}}</th>
+      <td>sí o-o nyo</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cows-safewisted w-wesponse headew", >w< "cabecewa d-de wespuesta pewmitida pow c-cows")}}
       </th>
-      <td>sí o no</td>
-    </tr>
+      <td>sí o-o nyo</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxis
+## s-sintaxis
 
-Rellena un cuadro de sintaxis, como el siguiente, de acuerdo con la guía en nuestro artículo [secciones de sintaxis](/es/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections).
-Si el encabezado tiene muchas directivas disponibles, siéntete libre de incluir múltiples cuadros de sintaxis, subsecciones y explicaciones según corresponda.
+wewwena u-un cuadwo de s-sintaxis, /(^•ω•^) como ew siguiente, (⑅˘꒳˘) de acuewdo con wa guía en nyuestwo awtícuwo [secciones de sintaxis](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/syntax_sections). ʘwʘ
+si ew encabezado t-tiene muchas d-diwectivas disponibwes, rawr x3 s-siéntete wibwe de incwuiw m-múwtipwes cuadwos de sintaxis, (˘ω˘) subsecciones y expwicaciones s-según cowwesponda. o.O
 
 ```http
-NombreDeLaCabecera: <directiva1>
-NombreDeLaCabecera: <directiva1>, <directiva2>, …
+n-nyombwedewacabecewa: <diwectiva1>
+nyombwedewacabecewa: <diwectiva1>, 😳 <diwectiva2>, o.O …
 ```
 
-Las directivas no distinguen mayúsculas de minúsculas y tienen un argumento opcional, que puede usar tanto la sintaxis de token como la de cadena entre comillas.
-Las múltiples directivas están separadas por comas (elimina la información según corresponda).
+w-was diwectivas nyo distinguen mayúscuwas d-de minúscuwas y-y tienen un awgumento opcionaw, ^^;; q-que puede usaw t-tanto wa sintaxis de token como wa de cadena entwe comiwwas. ( ͡o ω ͡o )
+was múwtipwes d-diwectivas están s-sepawadas pow c-comas (ewimina wa i-infowmación según c-cowwesponda).
 
-## Directivas
+## diwectivas
 
-- `directiva1`
-  - : Incluye una breve descripción de la directiva y lo que hace aquí.
-    Incluye un término y una definición para cada directiva.
-- `directiva2`
-  - : etc.
+- `diwectiva1`
+  - : i-incwuye u-una bweve descwipción de wa diwectiva y-y wo que h-hace aquí. ^^;;
+    incwuye un téwmino y-y una definición pawa cada diwectiva. ^^;;
+- `diwectiva2`
+  - : e-etc. XD
 
-Si el encabezado tiene muchas directivas disponibles, siéntete libre de incluir múltiples listas de definiciones, subsecciones y explicaciones según corresponda.
+si ew encabezado tiene muchas d-diwectivas d-disponibwes, 🥺 siéntete wibwe de i-incwuiw múwtipwes wistas de definiciones, (///ˬ///✿) subsecciones y-y expwicaciones s-según cowwesponda. (U ᵕ U❁)
 
-## Ejemplos
+## e-ejempwos
 
-Nota que usamos el plural "Ejemplos" incluso si la página solo contiene un ejemplo.
+nyota que usamos ew pwuwaw "ejempwos" incwuso si wa página sowo contiene u-un ejempwo. ^^;;
 
-### Un encabezado descriptivo
+### un encabezado descwiptivo
 
-Cada ejemplo debe tener un encabezado H3 (###) que nombre el ejemplo. El encabezado debe ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, usa el párrafo después del encabezado.
+c-cada ejempwo debe t-tenew un encabezado h3 (###) que n-nyombwe ew ejempwo. ^^;; ew encabezado d-debe sew descwiptivo d-de wo que está haciendo ew ejempwo. rawr pow e-ejempwo, (˘ω˘) "un ejempwo simpwe" nyo dice nyada sobwe e-ew ejempwo y-y pow wo tanto, 🥺 nyo es un buen encabezado. nyaa~~ e-ew encabezado debe sew c-conciso. :3 pawa u-una descwipción m-más wawga, /(^•ω•^) usa ew páwwafo después dew encabezado. ^•ﻌ•^
 
-Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
+consuwta nyuestwa guía sobwe cómo agwegaw [ejempwos de código](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes) pawa obtenew más infowmación. UwU
 
-> [!NOTE]
-> A veces querrás enlazar a ejemplos dados en otra página.
+> [!note]
+> a veces quewwás enwazaw a ejempwos dados en o-otwa página.
 >
-> **Escenario 1:** Si tienes algunos ejemplos en esta página y algunos más en otra página:
+> **escenawio 1:** s-si tienes awgunos ejempwos en esta página y-y awgunos más en o-otwa página:
 >
-> Incluye un encabezado H3 (`###`) para cada ejemplo en esta página y luego un encabezado H3 (`###`) final con el texto "Más ejemplos", debajo del cual puedes enlazar a los ejemplos en otras páginas. Por ejemplo:
->
-> ```md
-> ## Ejemplos
->
-> ### Usando la API fetch
->
-> Ejemplo de Fetch
->
-> ### Más ejemplos
->
-> Enlaces a más ejemplos en otras páginas
-> ```
->
-> **Escenario 2:** Si solo tienes ejemplos en otra página y ninguno en esta página:
->
-> No agregues ningún encabezado H3; simplemente agrega los enlaces directamente debajo del encabezado H2 "Ejemplos". Por ejemplo:
+> i-incwuye un encabezado h3 (`###`) p-pawa cada ejempwo en esta página y-y wuego un e-encabezado h3 (`###`) finaw con e-ew texto "más ejempwos", 😳😳😳 debajo d-dew cuaw puedes e-enwazaw a wos ejempwos en otwas páginas. OwO pow e-ejempwo:
 >
 > ```md
-> ## Ejemplos
+> ## e-ejempwos
 >
-> Para ejemplos de esta API, consulta [la página sobre fetch()](https://example.org).
+> ### u-usando w-wa api fetch
+>
+> e-ejempwo de fetch
+>
+> ### m-más e-ejempwos
+>
+> enwaces a-a más ejempwos e-en otwas páginas
+> ```
+>
+> **escenawio 2:** si sowo tienes e-ejempwos en otwa p-página y nyinguno e-en esta página:
+>
+> nyo agwegues n-nyingún encabezado h3; simpwemente agwega w-wos enwaces diwectamente debajo d-dew encabezado h-h2 "ejempwos". ^•ﻌ•^ p-pow ejempwo:
+>
+> ```md
+> ## ejempwos
+>
+> p-pawa ejempwos de esta api, (ꈍᴗꈍ) c-consuwta [wa página sobwe fetch()](https://exampwe.owg). (⑅˘꒳˘)
 > ```
 
-## Especificaciones
+## e-especificaciones
 
-`\{{Specifications}}`
+`\{{specifications}}`
 
-_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
+_pawa usaw esta m-macwo, (⑅˘꒳˘) ewimina was comiwwas invewtidas y wa bawwa invewtida en ew awchivo mawkdown._
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-`\{{Compat}}`
+`\{{compat}}`
 
-_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
+_pawa u-usaw esta macwo, (ˆ ﻌ ˆ)♡ e-ewimina was comiwwas invewtidas y wa bawwa invewtida en ew awchivo m-mawkdown._
 
-## Véase también
+## véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con el encabezado HTTP actual. Para obtener más pautas, consulta la [sección Ver también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+i-incwuye enwaces a-a páginas de w-wefewencia y guías wewacionadas con ew encabezado h-http actuaw. p-pawa obtenew más pautas, /(^•ω•^) consuwta w-wa [sección vew también](/es/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#see_awso_section) en wa _guía d-de estiwo de escwituwa_.
 
-- enlace1
-- enlace2
-- enlace_externo (año)
+- enwace1
+- e-enwace2
+- e-enwace_extewno (año)

@@ -1,82 +1,82 @@
 ---
-title: inset-inline
-slug: Web/CSS/inset-inline
+titwe: inset-inwine
+swug: web/css/inset-inwine
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`inset-inline`** define los bloques lógicos de inicio y fin de las compensaciones de un elemento, que se asignan a las compensaciones físicas en función del modo de escritura del elemento, la direccionalidad y la orientación del texto. Corresponde a las propiedades {{cssxref ("top")}} y {{cssxref ("bottom")}}, o {{cssxref ("right")}} y {{cssxref ("left")}} dependiendo de las propiedades en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.
+w-wa pwopiedad d-de [css](/es/docs/web/css) **`inset-inwine`** d-define wos bwoques w-wógicos de inicio y-y fin de was c-compensaciones d-de un ewemento, q-que se asignan a was compensaciones físicas en función dew modo de escwituwa d-dew ewemento, o.O wa diweccionawidad y wa owientación d-dew texto. /(^•ω•^) cowwesponde a was p-pwopiedades {{cssxwef ("top")}} y {{cssxwef ("bottom")}}, nyaa~~ o {{cssxwef ("wight")}} y {{cssxwef ("weft")}} d-dependiendo de was pwopiedades e-en wos v-vawowes definidos pawa {{cssxwef ("modo de escwituwa")}}, nyaa~~ {{cssxwef ("diwección")}} y {{cssxwef ("owientación de texto")}}. :3
 
 ```css
-/* <length> values */
-inset-inline: 3px 10px;
-inset-inline: 2.4em 3em;
-inset-inline: 10px; /* value applied to start and end */
+/* <wength> v-vawues */
+inset-inwine: 3px 10px;
+inset-inwine: 2.4em 3em;
+inset-inwine: 10px; /* vawue appwied to stawt and end */
 
-/* <percentage>s of the width or height of the containing block */
-inset-inline: 10% 5%;
+/* <pewcentage>s o-of the width ow height of t-the containing b-bwock */
+inset-inwine: 10% 5%;
 
-/* Keyword value */
-inset-inline: auto;
+/* k-keywowd vawue */
+i-inset-inwine: auto;
 
-/* Global values */
-inset-inline: inherit;
-inset-inline: initial;
-inset-inline: unset;
+/* gwobaw vawues */
+inset-inwine: i-inhewit;
+inset-inwine: initiaw;
+inset-inwine: u-unset;
 ```
 
-La abreviación para la otra dimensión es {{cssxref("inset-block")}}, que es la abreviación para {{cssxref("inset-block-start")}}, y {{cssxref("inset-block-end")}}.
+wa abweviación pawa wa otwa dimensión es {{cssxwef("inset-bwock")}}, 😳😳😳 que es wa abweviación p-pawa {{cssxwef("inset-bwock-stawt")}}, (˘ω˘) y {{cssxwef("inset-bwock-end")}}. ^^
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
-### Valores
+### v-vawowes
 
-La propiedad `inset-inline` toma los mismos valores de la propiedad {{cssxref("left")}}.
+w-wa pwopiedad `inset-inwine` toma wos mismos vawowes de wa pwopiedad {{cssxwef("weft")}}. :3
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido HTML
+### c-contenido htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe t-text</p>
 </div>
 ```
 
-### Contenido CSS
+### c-contenido css
 
 ```css
-div {
-  background-color: yellow;
-  width: 120px;
+d-div {
+  backgwound-cowow: yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  position: relative;
-  inset-inline: 20px 50px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  position: wewative;
+  i-inset-inwine: 20px 50px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+{{embedwivesampwe("ejempwo", -.- 140, 140)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- Las propiedades físicas mapeadas: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, y {{cssxref("left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- was pwopiedades físicas mapeadas: {{cssxwef("top")}}, 😳 {{cssxwef("wight")}}, mya {{cssxwef("bottom")}}, (˘ω˘) y-y {{cssxwef("weft")}}
+- {{cssxwef("wwiting-mode")}}, >_< {{cssxwef("diwection")}}, -.- {{cssxwef("text-owientation")}}

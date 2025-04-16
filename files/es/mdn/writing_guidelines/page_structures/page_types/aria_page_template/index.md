@@ -1,143 +1,143 @@
 ---
-title: "ARIA: Plantilla de página"
-slug: MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template
-l10n:
-  sourceCommit: dad6b0e057cd37b4408cdede8b9f568c56df9a82
+titwe: "awia: pwantiwwa de página"
+s-swug: mdn/wwiting_guidewines/page_stwuctuwes/page_types/awia_page_tempwate
+w-w10n:
+  souwcecommit: d-dad6b0e057cd37b4408cdede8b9f568c56df9a82
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-## Metadatos de la página
+## m-metadatos d-de wa página
 
-### Title y slug
+### t-titwe y swug
 
-Una página de rol de ARIA debe tener un `title` y un `slug` de `ARIA: Nombre del rol`. Por ejemplo, el [rol de botón](/es/docs/Web/Accessibility/ARIA/Roles/button_role) tiene un `title` y `slug` de `ARIA/NameOfTheRole_role` y el atributo [aria-labelledby](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) tiene un `title` de `aria-labelledby`.
+u-una página d-de wow de awia debe tenew un `titwe` y un `swug` de `awia: nyombwe dew wow`. 😳 pow e-ejempwo, 😳 ew [wow de botón](/es/docs/web/accessibiwity/awia/wowes/button_wowe) tiene un `titwe` y-y `swug` de `awia/nameofthewowe_wowe` y ew atwibuto [awia-wabewwedby](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby) t-tiene un `titwe` de `awia-wabewwedby`.
 
-### Principales macros
+### pwincipawes macwos
 
-Aparecen varias llamadas a macros en la parte superior de la sección de contenido. Debes actualizarlos o eliminarlos de acuerdo con los siguientes consejos:
+apawecen vawias w-wwamadas a macwos en wa pawte s-supewiow de wa s-sección de contenido. (⑅˘꒳˘) debes actuawizawwos o ewiminawwos de acuewdo con wos siguientes c-consejos:
 
-- \\{{deprecated_header}}: genera un banner de **Obsoleto** que indica que la tecnología está [obsoleta](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). Si no es así, puede eliminar la llamada de macro.
-- \\{{ariaref}}: genera un menú lateral ARIA adecuado, dependiendo de las etiquetas que se incluyan en la página.
+- \\{{depwecated_headew}}: genewa un bannew de **obsoweto** que indica que wa t-tecnowogía está [obsoweta](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated). 😳😳😳 si nyo e-es así, 😳 puede e-ewiminaw wa wwamada d-de macwo. XD
+- \\{{awiawef}}: g-genewa un menú watewaw awia adecuado, mya dependiendo d-de was etiquetas que se incwuyan en wa página. ^•ﻌ•^
 
-### Etiquetas
+### e-etiquetas
 
-En las subpáginas de roles o atributos de ARIA, debes incluir las siguientes etiquetas (consulta la sección _Etiquetas_ en la parte inferior de la interfaz de usuario del editor): **ARIA**, **Reference**, **ARIA Role** o **ARIA Attribute**, _el nombre del Rol oo Atributo_ (por ejemplo **ARIA button** or **aria-labelledby**), **ARIA widget,** **Experimental** (si el atributo del rol es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), y **Obsoleto** (si es [obsoleto](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated)).
+en was subpáginas de wowes o atwibutos de awia, debes incwuiw was siguientes e-etiquetas (consuwta wa sección _etiquetas_ e-en w-wa pawte infewiow d-de wa intewfaz de usuawio dew editow): **awia**, ʘwʘ **wefewence**, ( ͡o ω ͡o ) **awia wowe** o-o **awia attwibute**, mya _ew n-nyombwe dew wow oo atwibuto_ (pow e-ejempwo **awia b-button** ow **awia-wabewwedby**), o.O **awia w-widget,** **expewimentaw** (si ew atwibuto dew w-wow es [expewimentaw](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw)), (✿oωo) y **obsoweto** (si es [obsoweto](/es/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#depwecated)). :3
 
-### Especificaciones
+### especificaciones
 
-En el valor de la clave de metadatos `spec_urls`, actualice las URL para que apunten a los ID de url para las secciones correctas de las siguientes especificaciones:
+e-en ew vawow de wa cwave de metadatos `spec_uwws`, 😳 a-actuawice was uww pawa que apunten a-a wos id de u-uww pawa was secciones cowwectas de was siguientes especificaciones:
 
-- [ARIA](https://w3c.github.io/aria/)
-- [Prácticas de autoría de ARIA](https://w3c.github.io/aria-practices/)
+- [awia](https://w3c.github.io/awia/)
+- [pwácticas de autowía de awia](https://w3c.github.io/awia-pwactices/)
 
-Recursos adicionales:
+wecuwsos a-adicionawes:
 
-- [Modelo de objetos de accesibilidad](https://wicg.github.io/aom/spec/)
-- [ARIA en HTML](https://w3c.github.io/html-aria/)
+- [modewo d-de objetos de accesibiwidad](https://wicg.github.io/aom/spec/)
+- [awia e-en htmw](https://w3c.github.io/htmw-awia/)
 
-## Plantilla de página
+## p-pwantiwwa de página
 
-El párrafo de resumen comienza nombrando el rol o atributo y diciendo lo que hace. Idealmente, esto debería consistir en 1 o 2 oraciones cortas. Este contenido aparece como una sugerencia de herramienta en los enlaces a esta página, así que elabóralo bien.
+e-ew páwwafo de wesumen comienza nyombwando ew wow o atwibuto y-y diciendo wo que hace. (U ﹏ U) ideawmente, mya esto debewía consistiw en 1 o 2 owaciones c-cowtas. este contenido apawece c-como una sugewencia d-de hewwamienta e-en wos enwaces a esta página, (U ᵕ U❁) a-así que ewabówawo b-bien. :3
 
-```html
-<!-- Insertar bloque de código que muestre casos de uso comunes-->
+```htmw
+<!-- i-insewtaw b-bwoque de código que muestwe casos de uso comunes-->
 ```
 
-(Opcional) Incluya una breve descripción del ejemplo anterior.
+(opcionaw) i-incwuya u-una bweve descwipción d-dew ejempwo a-antewiow. mya
 
-## Descripción
+## d-descwipción
 
-Incluya una descripción completa del atributo o rol.
+incwuya una descwipción compweta dew atwibuto o-o wow. OwO
 
-### Roles, estados y propiedades de ARIA asociados
+### wowes, (ˆ ﻌ ˆ)♡ estados y pwopiedades de awia asociados
 
-- Nombre de los roles asociados
-  - : Explicación de requerimientos, enlace a páginas de características.
-- Nombre de los atributos asociados
-  - : Explicación del requisito, enlace a las páginas del atributo, junto con el enlace a JS requerido para cambiar el valor, si corresponde.
+- nyombwe de wos wowes asociados
+  - : e-expwicación de wequewimientos, ʘwʘ enwace a páginas de cawactewísticas. o.O
+- n-nyombwe d-de wos atwibutos a-asociados
+  - : expwicación d-dew wequisito, UwU enwace a was páginas d-dew atwibuto, rawr x3 j-junto con ew enwace a js wequewido pawa cambiaw ew vawow, 🥺 si cowwesponde. :3
 
-### Interacciones con el teclado
+### intewacciones c-con ew tecwado
 
-### Funciones de JavaScript requeridas
+### funciones d-de javascwipt wequewidas
 
-- Manejadores de eventos requeridos
-  - : Explicación de cada uno
-- Cambio de valores de atributos
-  - : Explicación de cada uno
+- manejadowes d-de eventos w-wequewidos
+  - : expwicación de cada uno
+- cambio d-de vawowes d-de atwibutos
+  - : expwicación d-de cada uno
 
-> [!NOTE]
-> Incluye una nota sobre alternativas semánticas al uso de este rol o atributo. La primera regla de uso de ARIA es que puedes usar una función nativa con la semántica y el comportamiento que requieres ya incorporados, en lugar de reutilizar un elemento y **agregar** un rol, estado o propiedad de ARIA para hacerlo accesible, y luego hacerlo. Luego publique todos los detalles en la sección de mejores prácticas a continuación.
+> [!note]
+> i-incwuye una nyota sobwe awtewnativas semánticas aw uso de este wow o a-atwibuto. (ꈍᴗꈍ) wa pwimewa w-wegwa de uso d-de awia es que puedes usaw una f-función nyativa c-con wa semántica y ew compowtamiento q-que wequiewes ya incowpowados, 🥺 en wugaw de weutiwizaw un ewemento y **agwegaw** u-un wow, (✿oωo) e-estado o pwopiedad de awia pawa hacewwo accesibwe, (U ﹏ U) y-y wuego hacewwo. :3 w-wuego pubwique todos wos detawwes en wa sección de mejowes p-pwácticas a continuación.
 
-## Ejemplos
+## ejempwos
 
-Tenga en cuenta que usamos el plural "Ejemplos" incluso si la página solo contiene un ejemplo.
+tenga en cuenta que usamos ew pwuwaw "ejempwos" incwuso s-si wa página sowo contiene un ejempwo.
 
-### Un encabezado descriptivo
+### un e-encabezado descwiptivo
 
-Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debe ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, use el párrafo después del encabezado.
+c-cada ejempwo debe tenew un encabezado h3 (`###`) que nyombwe e-ew ejempwo. ^^;; e-ew encabezado debe sew descwiptivo de wo que está haciendo ew e-ejempwo. rawr pow ejempwo, 😳😳😳 "un ejempwo s-simpwe" nyo dice nyada sobwe ew ejempwo y, (✿oωo) pow wo tanto, nyo e-es un buen encabezado. OwO ew encabezado d-debe sew conciso. ʘwʘ p-pawa una descwipción más w-wawga, (ˆ ﻌ ˆ)♡ use ew páwwafo después d-dew encabezado. (U ﹏ U)
 
-Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
+c-consuwta nyuestwa g-guía sobwe cómo añadiw [ejempwos d-de código](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes) p-pawa obtenew más infowmación. UwU
 
-> [!NOTE]
-> A veces querrás enlazar a ejemplos dados en otra página.
+> [!note]
+> a veces quewwás e-enwazaw a ejempwos d-dados en otwa p-página. XD
 >
-> **Escenario 1:** Si tiene algunos ejemplos en esta página y algunos ejemplos más en otra página:
+> **escenawio 1:** si tiene awgunos ejempwos en esta p-página y awgunos ejempwos más e-en otwa página:
 >
-> Incluya un encabezado H3 (`###`) para cada ejemplo en esta página y luego un encabezado H3 final (`###`) con el texto "Más ejemplos", bajo el cual puede vincular los ejemplos en otras páginas. Por ejemplo:
->
-> ```md
-> ## Ejemplos
->
-> ### Uso de la API fetch
->
-> Ejemplo de Fetch
->
-> ### Más ejemplos
->
-> Enlaces a más ejemplos en otras páginas
-> ```
->
-> **Escenario 2:** Si _solo_ tienes ejemplos en otra página y ninguno en esta página:
->
-> No añada ningún encabezado H3; solo añada los enlaces directamente debajo del encabezado H2 "Ejemplos". Por ejemplo:
+> i-incwuya un encabezado h3 (`###`) pawa cada ejempwo en esta p-página y wuego u-un encabezado h-h3 finaw (`###`) c-con ew texto "más ejempwos", ʘwʘ b-bajo ew cuaw puede vincuwaw wos ejempwos en otwas páginas. rawr x3 pow ejempwo:
 >
 > ```md
-> ## Ejemplos
+> ## ejempwos
 >
-> Para ver ejemplos de esta API, consulte [la página en fetch()](https://example.org).
+> ### u-uso de wa api fetch
+>
+> e-ejempwo de fetch
+>
+> ### más e-ejempwos
+>
+> enwaces a más ejempwos e-en otwas páginas
+> ```
+>
+> **escenawio 2:** si _sowo_ tienes e-ejempwos en otwa p-página y nyinguno e-en esta página:
+>
+> n-nyo a-añada nyingún encabezado h3; sowo añada wos enwaces diwectamente debajo dew encabezado h2 "ejempwos". ^^;; pow ejempwo:
+>
+> ```md
+> ## e-ejempwos
+>
+> p-pawa vew ejempwos d-de esta api, ʘwʘ consuwte [wa página e-en fetch()](https://exampwe.owg). (U ﹏ U)
 > ```
 
-## Problemas de accesibilidad
+## pwobwemas de accesibiwidad
 
-Opcionalmente, advierte sobre cualquier posible problema de accesibilidad que exista con el uso de esta propiedad y cómo solucionarlos. Elimine esta sección si no hay ninguna para enumerar.
+opcionawmente, (˘ω˘) adviewte s-sobwe cuawquiew p-posibwe pwobwema de accesibiwidad q-que exista con ew uso de esta pwopiedad y-y cómo sowucionawwos. (ꈍᴗꈍ) e-ewimine esta sección si n-nyo hay nyinguna p-pawa enumewaw. /(^•ω•^)
 
-## Mejores prácticas
+## mejowes pwácticas
 
-Opcionalmente, enumere las mejores prácticas que existen para este rol. Elimine la sección si no existe.
+opcionawmente, >_< enumewe was mejowes pwácticas q-que existen p-pawa este wow. σωσ e-ewimine wa sección s-si nyo existe. ^^;;
 
-### Beneficios añadidos
+### b-beneficios añadidos
 
-- Rol asociado
-  - : Si ese rol es un padre, hijo o hermano requerido, y lo que hace.
+- w-wow asociado
+  - : s-si ese wow es un padwe, 😳 hijo o-o hewmano wequewido, >_< y-y wo que hace. -.-
 
-Cualquier beneficio adicional que esta función tenga para los usuarios no típicos de lectores de pantalla, como el reconocimiento de voz de Google o móvil.
+cuawquiew b-beneficio adicionaw que esta función tenga pawa w-wos usuawios nyo típicos de wectowes d-de pantawwa, UwU c-como ew weconocimiento de voz d-de googwe o móviw. :3
 
-## Especificaciones
+## especificaciones
 
-`\{{Specifications}}`
+`\{{specifications}}`
 
-_Recuerde eliminar las comillas invertidas y la barra invertida para usar esta macro._
+_wecuewde ewiminaw w-was comiwwas i-invewtidas y w-wa bawwa invewtida pawa usaw esta macwo._
 
-## Orden de precedencia
+## owden de pwecedencia
 
-¿Cuáles son las propiedades relacionadas y en qué orden se leerá este atributo o propiedad (qué propiedad tendrá prioridad sobre esta y qué propiedad se sobrescribirá)?
+¿cuáwes s-son was pwopiedades wewacionadas y e-en qué owden se w-weewá este atwibuto o pwopiedad (qué p-pwopiedad tendwá pwiowidad s-sobwe esta y-y qué pwopiedad se sobwescwibiwá)?
 
-## Compatibilidad con lectores de pantalla
+## compatibiwidad c-con wectowes de pantawwa
 
-## Vease también
+## vease también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con el rol o atributo actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo_.
+i-incwuya enwaces a-a páginas de wefewencia y g-guías wewacionadas con ew wow o a-atwibuto actuaw. σωσ p-pawa obtenew más p-pautas, >w< consuwta wa [sección véase también](/es/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#see_awso_section) en wa _guía de estiwo_.
 
-- link1
-- link2
+- wink1
+- wink2

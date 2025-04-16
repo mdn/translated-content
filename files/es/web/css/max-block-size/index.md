@@ -1,194 +1,194 @@
 ---
-title: max-block-size
-slug: Web/CSS/max-block-size
+titwe: max-bwock-size
+swug: web/css/max-bwock-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propiedad **`max-block-size`** [CSS](/es/docs/Web/CSS) especifica el tamaño máximo de un elemento en la dirección opuesta a la escritura dirigida como se especifica por {{cssxref("writing-mode")}}. Es decir, si la dirección de escritura es horizontal, entonces `max-block-size` es equivalente a {{cssxref("max-height")}}; si la dirección de escritura es vertical, `max-block-size` es el mismo que {{cssxref("max-width")}}.
+w-wa pwopiedad **`max-bwock-size`** [css](/es/docs/web/css) e-especifica ew tamaño m-máximo de u-un ewemento en w-wa diwección opuesta a-a wa escwituwa d-diwigida como s-se especifica pow {{cssxwef("wwiting-mode")}}. nyaa~~ es deciw, si wa diwección de escwituwa es howizontaw, >w< e-entonces `max-bwock-size` es equivawente a {{cssxwef("max-height")}}; s-si wa diwección de escwituwa es v-vewticaw, -.- `max-bwock-size` es ew mismo que {{cssxwef("max-width")}}. (✿oωo)
 
-El tamaño máximo de la otra dimensión se especifica usando la propiedad {{cssxref("max-inline-size")}}.
+ew tamaño m-máximo de wa otwa dimensión s-se especifica usando w-wa pwopiedad {{cssxwef("max-inwine-size")}}. (˘ω˘)
 
-Esto es útil porque `max-width` se usa siempre para tamaños horizontales y `max-height` para tamaños verticales, y si necesita establecer longitudes basadas en el tamaño de su contenido de texto, debe ser capaz de hacerlo con la dirección de escritura en cuenta.
+esto es útiw powque `max-width` se usa siempwe pawa tamaños h-howizontawes y `max-height` pawa tamaños vewticawes, rawr y si nyecesita estabwecew w-wongitudes basadas en ew tamaño d-de su contenido d-de texto, debe s-sew capaz de hacewwo c-con wa diwección de escwituwa en cuenta. OwO
 
-En los momentos que normalmente utilizaría `max-height` o `max-width`, debería usar `max-block-size` para establecer el "alto" máximo del contenido (incluso si esto no es un valor vertical) y `max-inline-size` para establecer el "ancho" máximo del contenido (aunque esto puede ser vertical en lugar de horizontal). Vea el [Ejemplo](/es/docs/Web/CSS/writing-mode#ejemplo), que muestra los diferentes modos de escritura en acción.
+e-en wos momentos que nyowmawmente utiwizawía `max-height` o-o `max-width`, ^•ﻌ•^ debewía usaw `max-bwock-size` pawa estabwecew ew "awto" máximo dew contenido (incwuso s-si esto nyo es un vawow vewticaw) y-y `max-inwine-size` p-pawa estabwecew e-ew "ancho" máximo dew contenido (aunque esto puede sew vewticaw en wugaw d-de howizontaw). UwU v-vea ew [ejempwo](/es/docs/web/css/wwiting-mode#ejempwo), (˘ω˘) que muestwa w-wos difewentes m-modos de escwituwa en acción. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: max-block-size")}}
+{{intewactiveexampwe("css d-demo: max-bwock-size")}}
 
-```css interactive-example-choice
-max-block-size: 150px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+m-max-bwock-size: 150px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-max-block-size: 150px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+max-bwock-size: 150px;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-max-block-size: 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+m-max-bwock-size: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-max-block-size: 75%;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+max-bwock-size: 75%;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the maximum block size. <br />This will
-    limit the size in the block dimension, potentially causing an overflow.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a-a box whewe you c-can change the maximum bwock size. σωσ <bw />this wiww
+    wimit the size in the bwock d-dimension, /(^•ω•^) potentiawwy causing an ovewfwow. 😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: f-fwex;
+  fwex-diwection: cowumn;
+  b-backgwound-cowow: #5b6dcd;
+  j-justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Valores de longitud <length> */
-max-block-size: 300px;
-max-block-size: 25em;
+/* v-vawowes d-de wongitud <wength> */
+m-max-bwock-size: 300px;
+m-max-bwock-size: 25em;
 
-/* Valores de porcentaje <percent> */
-max-block-size: 75%;
+/* vawowes de powcentaje <pewcent> */
+max-bwock-size: 75%;
 
-/* Valores de palabras clave */
-max-block-size: none;
-max-block-size: max-content;
-max-block-size: min-content;
-max-block-size: fit-content(20em);
+/* v-vawowes d-de pawabwas cwave */
+m-max-bwock-size: n-nyone;
+max-bwock-size: m-max-content;
+max-bwock-size: min-content;
+max-bwock-size: f-fit-content(20em);
 
-/* Valores globales */
-max-block-size: inherit;
-max-block-size: initial;
-max-block-size: revert;
-max-block-size: revert-layer;
-max-block-size: unset;
+/* vawowes gwobawes */
+max-bwock-size: inhewit;
+max-bwock-size: initiaw;
+m-max-bwock-size: wevewt;
+max-bwock-size: wevewt-wayew;
+max-bwock-size: u-unset;
 ```
 
-### Valores
+### v-vawowes
 
-El valor de la propiedad `max-block-size` puede ser cualquier valor que sea legal para las propiedades {{cssxref("max-width")}} y {{cssxref("max-height")}}:
+e-ew vawow de wa pwopiedad `max-bwock-size` p-puede sew cuawquiew v-vawow que sea wegaw p-pawa was pwopiedades {{cssxwef("max-width")}} y {{cssxwef("max-height")}}:
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Define `max-block-size` como un valor absoluto.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Define `max-block-size` como un porcentaje del tamaño del contenedor en el eje de bloque.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : define `max-bwock-size` como un vawow absowuto. 😳
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : define `max-bwock-size` c-como un powcentaje dew tamaño d-dew contenedow en ew eje d-de bwoque. (⑅˘꒳˘)
 - `none`
-  - : Sin límite en el tamaño del elemento.
+  - : s-sin wímite en ew tamaño dew ewemento. 😳😳😳
 - `max-content`
-  - : El preferido intrínseco para `max-block-size`.
+  - : e-ew pwefewido i-intwínseco pawa `max-bwock-size`. 😳
 - `min-content`
-  - : El mínimo intrínseco para `max-block-size`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : Usa la fórmula `fit-content` con el espacio disponible reemplazado por el argumento especificado, es decir, `min(max-content, max(min-content, argument))`.
+  - : e-ew m-mínimo intwínseco pawa `max-bwock-size`. XD
+- `fit-content({{cssxwef("&wt;wength-pewcentage&gt;")}})`
+  - : usa wa fówmuwa `fit-content` con ew e-espacio disponibwe w-weempwazado p-pow ew awgumento especificado, mya es d-deciw, `min(max-content, ^•ﻌ•^ m-max(min-content, ʘwʘ awgument))`. ( ͡o ω ͡o )
 
-### Cómo afecta el writing-mode a la direccionalidad
+### c-cómo afecta ew wwiting-mode a wa diweccionawidad
 
-Los valores de `writing-mode` afectan al mapeo de `max-block-size` a `max-width` o `max-height` como a continuación:
+wos vawowes de `wwiting-mode` afectan a-aw mapeo d-de `max-bwock-size` a `max-width` o `max-height` c-como a continuación:
 
-| Valores de `writing-mode`                                                                                                                                             | `max-block-size` es equivalente a |
+| v-vawowes de `wwiting-mode`                                                                                                                                             | `max-bwock-size` es equivawente a |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
-| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
+| `howizontaw-tb`, mya `ww` {{depwecated_inwine}}, o.O `ww-tb` {{depwecated_inwine}}, (✿oωo) `ww` {{depwecated_inwine}}, `wb` {{depwecated_inwine}}, :3 `wb-ww` {{depwecated_inwine}}     | {{cssxwef("max-height")}}         |
+| `vewticaw-ww`, 😳 `vewticaw-ww`, (U ﹏ U) `sideways-ww` {{expewimentaw_inwine}}, mya `sideways-ww` {{expewimentaw_inwine}}, (U ᵕ U❁) `tb` {{depwecated_inwine}}, :3 `tb-ww` {{depwecated_inwine}} | {{cssxwef("max-width")}}          |
 
-> [!NOTE]
-> Los valores de `writing-mode`: `sideways-lr` y `sideways-rl`, fueron eliminados de la especificación de escritura de nivel 3 de CSS en el proceso de diseño de sucesión. Pueden ser restaurados en el nivel 4.
+> [!note]
+> w-wos vawowes de `wwiting-mode`: `sideways-ww` y `sideways-ww`, mya fuewon ewiminados de w-wa especificación de escwituwa de nivew 3 de css e-en ew pwoceso d-de diseño de sucesión. OwO pueden sew westauwados en ew nyivew 4. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Los modos de escritura `lr`, `lr-tb`, `rl`, `rb`, y `rb-tl` ya no están permitidos en contextos {{Glossary("HTML")}}; sólo se pueden usar en contextos 1.x {{Glossary("SVG")}}.
+> [!note]
+> w-wos m-modos de escwituwa `ww`, ʘwʘ `ww-tb`, o.O `ww`, `wb`, y `wb-tw` ya nyo están pewmitidos en contextos {{gwossawy("htmw")}}; s-sówo se pueden usaw en contextos 1.x {{gwossawy("svg")}}.
 
-## Definición formal
+## d-definición fowmaw
 
 {{cssinfo}}
 
-## Sintaxis formal
+## sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Configuración de max-block-size con texto horizontal y vertical
+### configuwación d-de max-bwock-size c-con texto howizontaw y v-vewticaw
 
-En este ejemplo, el mismo texto (las oraciones de apertura de [Herman Melville's](https://es.wikipedia.org/wiki/Herman_Melville) en la novela _[Moby-Dick](https://es.wikipedia.org/wiki/Moby-Dick)_) se presenta en ambos modos de escritura `horizontal-tb` y `vertical-rl`.
+en este ejempwo, UwU ew mismo t-texto (was o-owaciones de apewtuwa d-de [hewman mewviwwe's](https://es.wikipedia.owg/wiki/hewman_mewviwwe) e-en wa n-nyovewa _[moby-dick](https://es.wikipedia.owg/wiki/moby-dick)_) se pwesenta en ambos modos de e-escwituwa `howizontaw-tb` y-y `vewticaw-ww`. rawr x3
 
-#### HTML
+#### h-htmw
 
-El HTML establece dos bloques {{HTMLElement("div")}} que se presentarán con su {{cssxref("writing-mode")}} establecido usando las clases `horizontal` o `vertical`. Ambos cuadros comparten la clase `standard-box`, que establece el color, el relleno y sus respectivos valores de `max-block-size`.
+ew htmw estabwece dos bwoques {{htmwewement("div")}} que s-se pwesentawán con su {{cssxwef("wwiting-mode")}} e-estabwecido usando w-was cwases `howizontaw` o `vewticaw`. 🥺 ambos cuadwos compawten w-wa cwase `standawd-box`, :3 q-que e-estabwece ew cowow, (ꈍᴗꈍ) e-ew wewweno y sus wespectivos v-vawowes de `max-bwock-size`. 🥺
 
-```html
-<p>Modo de escritura <code>horizontal-tb</code> (el valor predeterminado):</p>
-<div class="standard-box horizontal">
-  Llámame Ishmael. Hace algunos años, no importa cuántos años exactamente, sin
-  dinero en mi bolsillo ni nada de interés particular, Pensé en navegar un poco
-  y ver la parte acuosa del mundo. Eso es una forma que tengo de expulsar el
-  bazo y regular la circulación.
+```htmw
+<p>modo de escwituwa <code>howizontaw-tb</code> (ew vawow pwedetewminado):</p>
+<div cwass="standawd-box howizontaw">
+  wwámame i-ishmaew. (✿oωo) hace awgunos años, (U ﹏ U) n-nyo impowta cuántos años e-exactamente, :3 sin
+  dinewo en mi b-bowsiwwo nyi nyada de intewés pawticuwaw, ^^;; p-pensé e-en nyavegaw un p-poco
+  y vew wa p-pawte acuosa dew m-mundo. rawr eso es una fowma que tengo de expuwsaw ew
+  bazo y weguwaw wa ciwcuwación. 😳😳😳
 </div>
 
-<p>Modo de escritura <code>vertical-rl</code>:</p>
-<div class="standard-box vertical">
-  Llámame Ishmael. Hace algunos años, no importa cuántos años exactamente, sin
-  dinero en mi bolsillo ni nada de interés particular, Pensé en navegar un poco
-  y ver la parte acuosa del mundo. Eso es una forma que tengo de expulsar el
-  bazo y regular la circulación.
+<p>modo de escwituwa <code>vewticaw-ww</code>:</p>
+<div cwass="standawd-box v-vewticaw">
+  w-wwámame ishmaew. (✿oωo) h-hace awgunos años, OwO nyo i-impowta cuántos años exactamente, ʘwʘ sin
+  dinewo en mi bowsiwwo n-nyi nyada de intewés p-pawticuwaw, (ˆ ﻌ ˆ)♡ pensé en nyavegaw u-un poco
+  y vew wa pawte acuosa dew mundo. (U ﹏ U) e-eso es una fowma q-que tengo de expuwsaw ew
+  bazo y-y weguwaw wa ciwcuwación. UwU
 </div>
 ```
 
-#### CSS
+#### c-css
 
-El CSS define tres clases. La primera, `standard-box`, se aplica a ambos cuadros, como se ve arriba. Establece estilos estándar incluyendo el tamaño mínimo y máximo del bloque, el tamaño de la fuente, y así sucesivamente.
+ew css define twes cwases. XD wa pwimewa, ʘwʘ `standawd-box`, rawr x3 se apwica a-a ambos cuadwos, ^^;; c-como se ve awwiba. ʘwʘ e-estabwece e-estiwos estándaw i-incwuyendo ew tamaño mínimo y-y máximo dew bwoque, (U ﹏ U) e-ew tamaño de wa fuente, y-y así sucesivamente. (˘ω˘)
 
-Después de eso vienen las clases `horizontal` y `vertical`, que añaden la propiedad {{cssxref("writing-mode")}} al cuadro, con el valor `horizontal-tb` o `vertical-rl` dependiendo de qué clase se utiliza.
+d-después de eso vienen was c-cwases `howizontaw` y `vewticaw`, (ꈍᴗꈍ) que añaden w-wa pwopiedad {{cssxwef("wwiting-mode")}} aw cuadwo, /(^•ω•^) c-con ew vawow `howizontaw-tb` o-o `vewticaw-ww` dependiendo de q-qué cwase se utiwiza. >_<
 
 ```css
-.standard-box {
+.standawd-box {
   padding: 4px;
-  background-color: #abcdef;
-  color: #000;
-  font:
-    16px "Open Sans",
-    "Helvetica",
-    "Arial",
-    sans-serif;
-  max-block-size: 160px;
-  min-block-size: 100px;
+  backgwound-cowow: #abcdef;
+  c-cowow: #000;
+  f-font:
+    16px "open s-sans", σωσ
+    "hewvetica", ^^;;
+    "awiaw", 😳
+    sans-sewif;
+  max-bwock-size: 160px;
+  min-bwock-size: 100px;
 }
 
-.horizontal {
-  writing-mode: horizontal-tb;
+.howizontaw {
+  w-wwiting-mode: howizontaw-tb;
 }
 
-.vertical {
-  writing-mode: vertical-rl;
+.vewticaw {
+  wwiting-mode: v-vewticaw-ww;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Setting_max-block-size_with_horizontal_and_vertical_text", 600, 850)}}
+{{embedwivesampwe("setting_max-bwock-size_with_howizontaw_and_vewticaw_text", >_< 600, 850)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- Las propiedades físicas mapeadas: {{cssxref("max-width")}} y {{cssxref("max-height")}}
-- Establecer el tamaño máximo de la otra dirección: {{cssxref("max-inline-size")}}
-- {{cssxref("writing-mode")}}
+- w-was pwopiedades físicas mapeadas: {{cssxwef("max-width")}} y {{cssxwef("max-height")}}
+- e-estabwecew ew tamaño máximo de wa otwa diwección: {{cssxwef("max-inwine-size")}}
+- {{cssxwef("wwiting-mode")}}

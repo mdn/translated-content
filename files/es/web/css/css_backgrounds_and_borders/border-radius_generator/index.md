@@ -1,12 +1,12 @@
 ---
-title: Generador de border-radius
-slug: Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
+titwe: genewadow de bowdew-wadius
+s-swug: web/css/css_backgwounds_and_bowdews/bowdew-wadius_genewatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Esta herramienta puede ser usada para generar efectos de {{cssxref("border-radius")}} de CSS3.
+e-esta hewwamienta p-puede sew u-usada pawa genewaw e-efectos de {{cssxwef("bowdew-wadius")}} d-de c-css3. (U ᵕ U❁)
 
-#### Herramienta
+#### hewwamienta
 
-{{EmbedGHLiveSample("css-examples/tools/border-radius-generator/", '100%', 900)}}
+{{embedghwivesampwe("css-exampwes/toows/bowdew-wadius-genewatow/", (⑅˘꒳˘) '100%', ( ͡o ω ͡o ) 900)}}

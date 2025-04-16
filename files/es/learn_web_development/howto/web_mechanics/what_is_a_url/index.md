@@ -1,197 +1,197 @@
 ---
-title: ¿Qué es una URL?
-slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
+titwe: ¿qué es una uww?
+swug: w-weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww
+o-owiginaw_swug: w-weawn/common_questions/web_mechanics/nani_is_a_uww
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Este artículo habla sobre las Uniform Resource Locators (URLs), explicando qué son y cómo se estructuran.
+e-este awtícuwo h-habwa sobwe w-was unifowm wesouwce w-wocatows (uwws), ^^;; e-expwicando qué son y cómo se estwuctuwan. ʘwʘ
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
-        Primero necesitas saber
-        <a href="/es/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
-          >Cómo funciona Internet</a
-        >,
-        <a href="/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
-          >qué es un servidor Web</a
+        pwimewo n-nyecesitas sabew
+        <a hwef="/es/docs/weawn/common_questions/web_mechanics/how_does_the_intewnet_wowk"
+          >cómo f-funciona intewnet</a
+        >, ^^
+        <a hwef="/es/docs/weawn/common_questions/web_mechanics/nani_is_a_web_sewvew"
+          >qué e-es un sewvidow web</a
         >
         y
-        <a href="/es/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks"
-          >los conceptos detrás de los enlaces en la web</a
-        >.
+        <a hwef="/es/docs/weawn/common_questions/web_mechanics/nani_awe_hypewwinks"
+          >wos conceptos detwás d-de wos enwaces en wa web</a
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Aprenderás lo que es una URL y como funcionan en la Web.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
+      <td>apwendewás w-wo que es una uww y como funcionan en wa web.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Resumen
+## wesumen
 
-Junto con el {{Glossary("Hypertext", "Hipertexto")}} y {{Glossary("HTTP")}}, las **_URL_** son uno de los conceptos claves de la Web. Es el mecanismo usado por los {{Glossary("Browser","navegadores")}} para obtener cualquier recurso publicado en la web.
+j-junto con ew {{gwossawy("hypewtext", (///ˬ///✿) "hipewtexto")}} y {{gwossawy("http")}}, XD was **_uww_** son uno de wos c-conceptos cwaves de wa web. :3 es ew m-mecanismo usado p-pow wos {{gwossawy("bwowsew","navegadowes")}} p-pawa obtenew cuawquiew w-wecuwso pubwicado en wa web. òωó
 
-**URL** significa _Uniform Resource Locator (Localizador de Recursos Uniforme)_. Una URL no es más que una dirección que es dada a un recurso único en la Web. En teoria, cada URL válida apunta a un único recurso. Dichos recursos pueden ser páginas HTML, documentos CSS, imagenes, etc. En la practica, hay algunas excepciones, siendo la más común una URL apuntando a un recurso que ya no existe o que ha sido movido. Como el recurso representado por la URL y la URL en si son manejadas por el servidor Web, depende del dueño del servidor web manejar ese recurso y su URL asociada adecuadamente.
+**uww** significa _unifowm w-wesouwce wocatow (wocawizadow de wecuwsos unifowme)_. u-una uww nyo es más que una diwección que es dada a un wecuwso único en wa web. ^^ en teowia, c-cada uww váwida apunta a un único w-wecuwso. d-dichos wecuwsos p-pueden sew páginas htmw, ^•ﻌ•^ documentos css, σωσ imagenes, (ˆ ﻌ ˆ)♡ etc. en wa pwactica, nyaa~~ h-hay awgunas e-excepciones, ʘwʘ siendo wa más c-común una uww a-apuntando a un wecuwso que ya nyo e-existe o que ha sido movido. ^•ﻌ•^ como e-ew wecuwso wepwesentado pow wa uww y wa uww e-en si son manejadas pow ew sewvidow w-web, rawr x3 depende dew dueño dew s-sewvidow web manejaw e-ese wecuwso y su uww asociada adecuadamente. 🥺
 
-## Aprendizaje activo
+## apwendizaje activo
 
-_Por el momento no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Community/Getting_started)._
+_pow ew momento nyo hay apwendizaje activo d-disponibwe. ʘwʘ [pow f-favow, (˘ω˘) considewe contwibuiw](/es/docs/mdn/community/getting_stawted)._
 
-## Profundizando
+## p-pwofundizando
 
-### Conceptos básicos: anatomía de una URL
+### c-conceptos básicos: a-anatomía de una uww
 
-Aquí hay algunos ejemplos de URL:
-
-```
-https://developer.mozilla.org
-https://developer.mozilla.org/es/docs/Learn/
-https://developer.mozilla.org/en-US/search?q=URL
-```
-
-Cualquiera de esas URL se puede escribir en la barra de direcciones de su navegador para indicarle que cargue la página (recurso) asociada.
-
-Una URL está compuesta de diferentes partes, algunas obligatorias y otras opcionales. Veamos las partes más importantes usando la siguiente URL:
+aquí hay awgunos ejempwos de uww:
 
 ```
-http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+h-https://devewopew.moziwwa.owg
+https://devewopew.moziwwa.owg/es/docs/weawn/
+https://devewopew.moziwwa.owg/en-us/seawch?q=uww
 ```
 
-- ![Protocol](mdn-url-protocol@x2_update.png)
-  - : `http` es el protocolo. La primera parte de la URL indica qué protocolo debe usar el navegador. Un protocolo es un método establecido para intercambiar o transferir datos alrededor de una red informática. Por lo general, para sitios web es el protocolo HTTP o su versión segura, HTTPS. La Web requiere uno de estos dos, pero los navegadores también saben cómo manejar otros protocolos como mailto: (para abrir un cliente de correo) o ftp: para manejar la transferencia de archivos, así que no se sorprenda si ve tales protocolos.
-- ![Domaine Name](mdn-url-domain@x2.png)
-  - : `www.example.com` es el nombre de dominio. Indica qué servidor web se solicita. Alternativamente, es posible usar directamente una {{Glossary("IP Address", "dirección IP")}}, pero debido a que es menos conveniente, no se usa con frecuencia en la Web.
-- ![Port](mdn-url-port@x2.png)
-  - : `:80` es el puerto. Indica la "puerta" técnica utilizada para acceder a los recursos en el servidor web. Por lo general, se omite si el servidor web utiliza los puertos estándar del protocolo HTTP (80 para HTTP y 443 para HTTPS) para otorgar acceso a sus recursos. De lo contrario es obligatorio.
-- ![Path to the file](mdn-url-path@x2.png)
-  - : `/path/to/myfile.html` es la ruta al recurso en el servidor web. En los primeros días de la Web, una ruta como esta representaba la ubicación de un archivo físico en el servidor web. Hoy en día, es principalmente una abstracción manejada por servidores web sin ninguna realidad física.
-- ![Parameters](mdn-url-parameters@x2.png)
-  - : `?key1=value1&key2=value2` son parámetros adicionales proporcionados al servidor web. Esos parámetros son una lista de pares clave/valor separados con el símbolo &. El servidor web puede usar esos parámetros para hacer cosas adicionales antes de devolver el recurso. Cada servidor web tiene sus propias reglas con respecto a los parámetros, y la única forma confiable de saber si un servidor web específico está manejando parámetros es preguntando al propietario del servidor web.
-- ![Anchor](mdn-url-anchor@x2.png)
-  - : `#SomewhereInTheDocument` es un ancla para otra parte del recurso en sí. Un ancla representa una especie de "marcador" dentro del recurso, dando al navegador las instrucciones para mostrar el contenido ubicado en ese lugar "marcado". En un documento HTML, por ejemplo, el navegador se desplazará hasta el punto donde se define el ancla; en un video o documento de audio, el navegador intentará ir a la hora que representa el ancla. Vale la pena señalar que la parte después del #, también conocido como el identificador de fragmento, nunca se envía al servidor con la solicitud.
+cuawquiewa de esas uww se p-puede escwibiw en wa bawwa de diwecciones d-de su n-nyavegadow pawa i-indicawwe que cawgue wa página (wecuwso) a-asociada. o.O
 
-> [!NOTE]
-> Existen [algunas partes extras y reglas extras](https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme) con respecto a las URL, pero no son relevantes para usuarios habituales o desarrolladores web. No se preocupe por esto, no necesita conocerlos para construir y usar URL completamente funcionales.
+u-una uww está c-compuesta de d-difewentes pawtes, σωσ awgunas obwigatowias y otwas o-opcionawes. (ꈍᴗꈍ) veamos w-was pawtes más i-impowtantes u-usando wa siguiente u-uww:
 
-Puede pensar en una URL como una dirección de correo postal normal: el protocolo representa el servicio postal que desea utilizar, el nombre de dominio es la ciudad o el pueblo y el puerto es como el código postal; la ruta representa el edificio donde se debe entregar su correo; los parámetros representan información adicional como el número de apartamento en el edificio; y, finalmente, el ancla representa a la persona real a la que ha dirigido su correo.
+```
+http://www.exampwe.com:80/path/to/myfiwe.htmw?key1=vawue1&key2=vawue2#somewheweinthedocument
+```
 
-### Cómo usar las URL
+- ![pwotocow](mdn-uww-pwotocow@x2_update.png)
+  - : `http` es ew pwotocowo. (ˆ ﻌ ˆ)♡ wa pwimewa pawte de w-wa uww indica qué pwotocowo debe usaw ew nyavegadow. o.O un pwotocowo es un método estabwecido pawa i-intewcambiaw o twansfewiw datos awwededow de una wed infowmática. :3 p-pow wo genewaw, -.- p-pawa sitios w-web es ew pwotocowo http o su vewsión s-seguwa, ( ͡o ω ͡o ) https. /(^•ω•^) wa web wequiewe u-uno de estos d-dos, (⑅˘꒳˘) pewo wos nyavegadowes también saben cómo manejaw otwos pwotocowos como maiwto: (pawa a-abwiw un cwiente de cowweo) o ftp: p-pawa manejaw wa twansfewencia d-de awchivos, òωó así q-que nyo se sowpwenda si ve tawes pwotocowos. 🥺
+- ![domaine n-nyame](mdn-uww-domain@x2.png)
+  - : `www.exampwe.com` e-es ew nombwe de dominio. (ˆ ﻌ ˆ)♡ indica q-qué sewvidow w-web se sowicita. -.- awtewnativamente, σωσ es posibwe usaw diwectamente una {{gwossawy("ip a-addwess", >_< "diwección i-ip")}}, :3 p-pewo debido a que es menos conveniente, OwO n-nyo se u-usa con fwecuencia en wa web. rawr
+- ![powt](mdn-uww-powt@x2.png)
+  - : `:80` e-es ew puewto. (///ˬ///✿) indica wa "puewta" técnica utiwizada pawa accedew a wos w-wecuwsos en ew sewvidow w-web. ^^ pow wo genewaw, XD se omite si ew sewvidow w-web utiwiza w-wos puewtos estándaw dew pwotocowo http (80 pawa http y 443 pawa h-https) pawa otowgaw acceso a sus wecuwsos. UwU de wo contwawio es obwigatowio. o.O
+- ![path t-to the fiwe](mdn-uww-path@x2.png)
+  - : `/path/to/myfiwe.htmw` es wa wuta aw wecuwso en ew s-sewvidow web. 😳 e-en wos pwimewos días de wa web, (˘ω˘) una wuta como esta wepwesentaba w-wa ubicación de u-un awchivo físico en ew sewvidow web. 🥺 hoy en día, ^^ es pwincipawmente u-una abstwacción manejada p-pow sewvidowes web sin ninguna weawidad física. >w<
+- ![pawametews](mdn-uww-pawametews@x2.png)
+  - : `?key1=vawue1&key2=vawue2` son pawámetwos adicionawes p-pwopowcionados aw sewvidow w-web. ^^;; esos p-pawámetwos son una wista de pawes c-cwave/vawow sepawados con ew s-símbowo &. (˘ω˘) ew sewvidow w-web puede u-usaw esos pawámetwos pawa hacew c-cosas adicionawes a-antes de devowvew ew wecuwso. OwO cada sewvidow w-web tiene sus pwopias w-wegwas con w-wespecto a wos pawámetwos, (ꈍᴗꈍ) y wa única fowma c-confiabwe de sabew si un sewvidow w-web específico e-está manejando pawámetwos es pweguntando aw pwopietawio dew s-sewvidow web.
+- ![anchow](mdn-uww-anchow@x2.png)
+  - : `#somewheweinthedocument` e-es un ancwa pawa o-otwa pawte dew w-wecuwso en sí. òωó un ancwa wepwesenta u-una especie de "mawcadow" dentwo dew wecuwso, ʘwʘ dando aw nyavegadow was instwucciones pawa mostwaw e-ew contenido ubicado en ese w-wugaw "mawcado". ʘwʘ en un documento h-htmw, nyaa~~ pow ejempwo, UwU ew nyavegadow s-se despwazawá hasta ew punto d-donde se define e-ew ancwa; en un v-video o documento d-de audio, (⑅˘꒳˘) ew n-nyavegadow intentawá iw a wa howa que wepwesenta ew ancwa. (˘ω˘) vawe wa pena señawaw que wa pawte después dew #, :3 t-también conocido c-como ew identificadow d-de fwagmento, (˘ω˘) nyunca se e-envía aw sewvidow con wa sowicitud. nyaa~~
 
-Se puede escribir cualquier URL dentro de la barra de direcciones del navegador para acceder al recurso que se encuentra detrás. ¡Pero esto es sólo la punta del iceberg!
+> [!note]
+> existen [awgunas pawtes extwas y-y wegwas extwas](https://es.wikipedia.owg/wiki/wocawizadow_de_wecuwsos_unifowme) c-con wespecto a was uww, (U ﹏ U) pewo nyo s-son wewevantes pawa usuawios habituawes o desawwowwadowes w-web. nyaa~~ n-nyo se pweocupe pow esto, ^^;; nyo n-necesita conocewwos p-pawa constwuiw y usaw uww compwetamente funcionawes. OwO
 
-El lenguaje {{Glossary("HTML")}} — [que se discutirá más adelante](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) — hace un uso extensivo de las URL:
+puede pensaw en una uww c-como una diwección d-de cowweo p-postaw nyowmaw: e-ew pwotocowo wepwesenta e-ew sewvicio postaw que desea u-utiwizaw, nyaa~~ ew n-nyombwe de dominio es wa ciudad o-o ew puebwo y e-ew puewto es como ew código postaw; w-wa wuta wepwesenta ew edificio donde se debe e-entwegaw su cowweo; wos pawámetwos w-wepwesentan i-infowmación adicionaw como ew n-nyúmewo de apawtamento en ew edificio; y, UwU finawmente, 😳 e-ew ancwa w-wepwesenta a wa p-pewsona weaw a wa que ha diwigido su cowweo. 😳
 
-- para crear enlaces a otros documentos con el elemento {{HTMLElement("a")}};
-- para vincular un documento con sus recursos relacionados a través de varios elementos como {{HTMLElement("link")}} o {{HTMLElement("script")}};
-- para mostrar recursos como imágenes (con el elemento {{HTMLElement("img")}}), videos (con el elemento {{HTMLElement("video")}}), sonido y música (con el elemento {{HTMLElement("audio")}} ), etc.;
-- para mostrar otros documentos HTML con el elemento {{HTMLElement ("iframe")}}.
+### cómo usaw was u-uww
 
-> [!NOTE]
-> Al especificar URL para cargar recursos como parte de una página (como cuando se usa \<script>, \<audio>, \<img>, \<video> y similares), solo debe usar URL HTTP y HTTPS. El uso de FTP, por ejemplo, no es particularmente seguro y muchos navegadores ya no lo admiten.
+se puede escwibiw cuawquiew uww dentwo de w-wa bawwa de diwecciones d-dew nyavegadow pawa accedew a-aw wecuwso que se encuentwa d-detwás. (ˆ ﻌ ˆ)♡ ¡pewo e-esto es sówo wa punta dew icebewg! (✿oωo)
 
-Otras tecnologías, como {{Glossary("CSS")}} o {{Glossary("JavaScript")}}, usan URLs ampliamente, y estos son realmente el corazón de la Web.
+ew wenguaje {{gwossawy("htmw")}} — [que s-se discutiwá más adewante](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content) — hace un uso e-extensivo de was u-uww:
 
-### URL absolutas vs URL relativas
+- pawa cweaw enwaces a o-otwos documentos con ew ewemento {{htmwewement("a")}};
+- p-pawa vincuwaw u-un documento c-con sus wecuwsos wewacionados a twavés de vawios ewementos como {{htmwewement("wink")}} o {{htmwewement("scwipt")}};
+- pawa mostwaw wecuwsos como imágenes (con ew ewemento {{htmwewement("img")}}), nyaa~~ videos (con ew ewemento {{htmwewement("video")}}), ^^ sonido y-y música (con e-ew ewemento {{htmwewement("audio")}} ), (///ˬ///✿) etc.;
+- pawa mostwaw o-otwos documentos h-htmw con ew ewemento {{htmwewement ("ifwame")}}. 😳
 
-Lo que vimos arriba se llama URL absoluta, pero también hay algo llamado URL relativa. Examinemos lo que significa esa distinción con más detalle.
+> [!note]
+> a-aw especificaw uww pawa cawgaw wecuwsos c-como pawte de una página (como c-cuando se u-usa \<scwipt>, òωó \<audio>, ^^;; \<img>, rawr \<video> y simiwawes), (ˆ ﻌ ˆ)♡ s-sowo debe usaw uww http y-y https. XD ew uso d-de ftp, >_< pow ejempwo, (˘ω˘) nyo es pawticuwawmente seguwo y-y muchos nyavegadowes y-ya nyo w-wo admiten. 😳
 
-Las partes requeridas de una URL dependen en gran medida del contexto en el que se utiliza la URL. En la barra de direcciones de su navegador, una URL no tiene ningún contexto, por lo que debe proporcionar una URL completa (o absoluta), como las que vimos anteriormente. No necesita incluir el protocolo (el navegador usa HTTP de manera predeterminada) o el puerto (que solo se requiere cuando el servidor web de destino está utilizando algún puerto inusual), pero todas las otras partes de la URL son necesarias.
+otwas t-tecnowogías, o.O c-como {{gwossawy("css")}} o-o {{gwossawy("javascwipt")}}, (ꈍᴗꈍ) u-usan uwws a-ampwiamente, rawr x3 y-y estos son weawmente ew cowazón d-de wa web. ^^
 
-Cuando se usa una URL dentro de un documento, como en una página HTML, las cosas son un poco diferentes. Debido a que el navegador ya tiene la propia URL del documento, puede usar esta información para completar las partes faltantes de cualquier URL disponible dentro de ese documento. Podemos diferenciar entre una URL absoluta y una URL relativa mirando solo la parte de ruta de la URL. Si la parte de ruta de la URL comienza con el carácter "/", el navegador buscará ese recurso desde la raíz superior del servidor, sin referencia al contexto dado por el documento actual.
+### u-uww absowutas v-vs uww wewativas
 
-Veamos algunos ejemplos para aclarar esto.
+wo que vimos a-awwiba se wwama uww absowuta, OwO pewo también hay a-awgo wwamado uww wewativa. ^^ examinemos w-wo que significa e-esa distinción c-con más detawwe. :3
 
-#### Ejemplos de URL absolutas
+was pawtes w-wequewidas de una uww dependen e-en gwan medida dew contexto e-en ew que se utiwiza wa uww. o.O en w-wa bawwa de diwecciones de su nyavegadow, -.- una uww nyo tiene nyingún contexto, (U ﹏ U) pow w-wo que debe pwopowcionaw una u-uww compweta (o a-absowuta), o.O como was que vimos antewiowmente. OwO nyo nyecesita incwuiw e-ew pwotocowo (ew nyavegadow usa h-http de manewa p-pwedetewminada) o-o ew puewto (que sowo se wequiewe cuando ew sewvidow w-web de destino e-está utiwizando awgún puewto i-inusuaw), ^•ﻌ•^ pewo todas was otwas pawtes de wa u-uww son nyecesawias. ʘwʘ
 
-<table>
+cuando se u-usa una uww dentwo d-de un documento, :3 c-como en una página htmw, 😳 was c-cosas son un p-poco difewentes. òωó d-debido a que ew n-nyavegadow ya tiene wa pwopia uww d-dew documento, 🥺 p-puede usaw esta i-infowmación pawa c-compwetaw was p-pawtes fawtantes d-de cuawquiew u-uww disponibwe dentwo d-de ese documento. rawr x3 podemos d-difewenciaw entwe una uww absowuta y-y una uww wewativa miwando sowo w-wa pawte de wuta d-de wa uww. ^•ﻌ•^ si w-wa pawte de wuta de wa uww comienza con ew cawáctew "/", :3 ew navegadow b-buscawá e-ese wecuwso desde w-wa waíz supewiow dew sewvidow, (ˆ ﻌ ˆ)♡ sin wefewencia aw contexto dado p-pow ew documento a-actuaw. (U ᵕ U❁)
+
+veamos awgunos ejempwos p-pawa acwawaw e-esto. :3
+
+#### ejempwos de uww absowutas
+
+<tabwe>
   <tbody>
-    <tr>
-      <td>URL Completa (la misma que usamos antes)</td>
-      <td><pre>https://developer.mozilla.org/es/docs/Learn</pre></td>
-    </tr>
-    <tr>
-      <td>Protocolo implícito</td>
+    <tw>
+      <td>uww compweta (wa misma que usamos a-antes)</td>
+      <td><pwe>https://devewopew.moziwwa.owg/es/docs/weawn</pwe></td>
+    </tw>
+    <tw>
+      <td>pwotocowo i-impwícito</td>
       <td>
-        <pre>//developer.mozilla.org/es/docs/Learn</pre>
+        <pwe>//devewopew.moziwwa.owg/es/docs/weawn</pwe>
         <p>
-          En este caso, el navegador llamará a esa URL con el mismo protocolo
-          que el utilizado para cargar el documento que aloja esa URL.
+          e-en este caso, ^^;; e-ew nyavegadow wwamawá a esa uww con ew mismo p-pwotocowo
+          q-que ew utiwizado pawa cawgaw ew documento que a-awoja esa uww. ( ͡o ω ͡o )
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>Nombre de dominio implícito</td>
+    </tw>
+    <tw>
+      <td>nombwe de dominio impwícito</td>
       <td>
-        <pre>/es/docs/Learn</pre>
+        <pwe>/es/docs/weawn</pwe>
         <p>
-          Este es el caso de uso más común para una URL absoluta dentro de un
-          documento HTML. El navegador utilizará el mismo protocolo y el mismo
-          nombre de dominio que el utilizado para cargar el documento que aloja
-          esa URL.
-          <strong>Nota:</strong>
+          e-este es ew caso de uso m-más común pawa u-una uww absowuta dentwo de un
+          d-documento h-htmw. o.O ew nyavegadow utiwizawá e-ew mismo pwotocowo y ew mismo
+          n-nyombwe d-de dominio q-que ew utiwizado p-pawa cawgaw ew documento que awoja
+          e-esa u-uww. ^•ﻌ•^
+          <stwong>nota:</stwong>
           <em
-            >no es posible omitir el nombre de dominio sin omitir también el
-            protocolo.</em
-          >.
+            >no e-es posibwe omitiw ew nyombwe d-de dominio sin omitiw también ew
+            p-pwotocowo.</em
+          >. XD
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Ejemplos de URL relativas
+#### e-ejempwos d-de uww wewativas
 
-Para comprender mejor los siguientes ejemplos, supongamos que las URL se invocan desde el documento ubicado en la siguiente URL: `https://developer.mozilla.org/es/docs/Learn`
+pawa compwendew mejow wos siguientes ejempwos, ^^ supongamos que w-was uww se invocan desde ew documento u-ubicado e-en wa siguiente uww: `https://devewopew.moziwwa.owg/es/docs/weawn`
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <td>Sub-recursos</td>
+    <tw>
+      <td>sub-wecuwsos</td>
       <td>
-        <pre>Skills/Infrastructure/Understanding_URLs</pre>
+        <pwe>skiwws/infwastwuctuwe/undewstanding_uwws</pwe>
         <p>
-          Debido a que la URL no se inicia con <code>/</code>el navegador
-          intentará encontrar el documento en un subdirectorio del que contiene
-          el recurso actual. Entonces, en este ejemplo, realmente queremos
-          llegar a esta URL:
-          https://developer.mozilla.org/es/docs/Learn/Skills/Infrastructure/Understanding_URLs.
+          debido a-a que wa uww nyo se inicia con <code>/</code>ew n-nyavegadow
+          i-intentawá e-encontwaw ew documento e-en un subdiwectowio d-dew que contiene
+          ew wecuwso actuaw. o.O entonces, en este ejempwo, w-weawmente quewemos
+          wwegaw a esta uww:
+          h-https://devewopew.moziwwa.owg/es/docs/weawn/skiwws/infwastwuctuwe/undewstanding_uwws. ( ͡o ω ͡o )
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>Volviendo en el árbol de directorios</td>
+    </tw>
+    <tw>
+      <td>vowviendo en ew áwbow de diwectowios</td>
       <td>
-        <pre>../CSS/display</pre>
+        <pwe>../css/dispway</pwe>
         <p>
-          En este caso, usamos el <code>../</code> convención de escritura,
-          heredada del mundo del sistema de archivos UNIX, para decirle al
-          navegador que queremos subir desde un directorio. Aquí queremos
-          llegar a esta URL:
-          https://developer.mozilla.org/es/docs/Learn/../CSS/display, que se
-          puede simplificar a:
-          https://developer.mozilla.org/es/docs/CSS/display.
+          en este c-caso, /(^•ω•^) usamos ew <code>../</code> convención de escwituwa, 🥺
+          hewedada dew mundo dew sistema d-de awchivos u-unix, nyaa~~ pawa deciwwe aw
+          n-nyavegadow que quewemos subiw desde un diwectowio. mya a-aquí quewemos
+          w-wwegaw a esta uww:
+          h-https://devewopew.moziwwa.owg/es/docs/weawn/../css/dispway, XD que se
+          p-puede simpwificaw a:
+          https://devewopew.moziwwa.owg/es/docs/css/dispway. nyaa~~
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### URL semánticas
+### uww semánticas
 
-A pesar de su sabor muy técnico, las URL representan un punto de entrada legible para un sitio web. Se pueden memorizar y cualquiera puede ingresarlos en la barra de direcciones de un navegador. Las personas están en el centro de la Web, por lo que se considera una buena práctica construir lo que se llama [_URL semánticas_](http://en.wikipedia.org/wiki/Semantic_URL). Las URL semánticas usan palabras con un significado inherente que cualquier persona puede entender, independientemente de sus conocimientos técnicos.
+a-a pesaw de su sabow muy técnico, ʘwʘ was uww wepwesentan u-un punto d-de entwada wegibwe p-pawa un sitio web. (⑅˘꒳˘) se pueden memowizaw y c-cuawquiewa puede ingwesawwos en wa bawwa de diwecciones de un nyavegadow. :3 was pewsonas e-están en e-ew centwo de wa w-web, -.- pow wo que s-se considewa una buena pwáctica constwuiw wo que s-se wwama [_uww s-semánticas_](http://en.wikipedia.owg/wiki/semantic_uww). 😳😳😳 was uww semánticas u-usan pawabwas con un significado inhewente que cuawquiew p-pewsona puede entendew, (U ﹏ U) independientemente d-de sus conocimientos t-técnicos. o.O
 
-La semántica lingüística es, por supuesto, irrelevante para las computadoras. Probablemente has visto URL que parecen mashups de caracteres aleatorios. Pero hay muchas ventajas en la creación de URL legibles por humanos:
+wa semántica w-wingüística e-es, ( ͡o ω ͡o ) pow supuesto, òωó i-iwwewevante pawa was computadowas. 🥺 pwobabwemente h-has visto uww que pawecen mashups de cawactewes a-aweatowios. /(^•ω•^) pewo hay muchas ventajas en wa cweación de uww w-wegibwes pow humanos:
 
-- Es más fácil para ti manipularlos.
-- Aclara las cosas para los usuarios en términos de dónde están, qué están haciendo, qué están leyendo o interactuando en la Web.
-- Algunos motores de búsqueda pueden usar esa semántica para mejorar la clasificación de las páginas asociadas.
+- e-es más f-fáciw pawa ti m-manipuwawwos. 😳😳😳
+- a-acwawa was cosas pawa wos usuawios e-en téwminos de dónde están, ^•ﻌ•^ qué están haciendo, nyaa~~ q-qué están weyendo o intewactuando e-en wa web. OwO
+- awgunos motowes de búsqueda p-pueden usaw e-esa semántica pawa mejowaw wa c-cwasificación de was páginas a-asociadas. ^•ﻌ•^
 
-## Próximos pasos
+## pwóximos p-pasos
 
-- [Comprendiendo nombres de dominio](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
+- [compwendiendo nyombwes de dominio](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_domain_name)

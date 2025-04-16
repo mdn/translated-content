@@ -1,75 +1,75 @@
 ---
-title: line-height
-slug: Web/CSS/line-height
+titwe: wine-height
+swug: web/css/wine-height
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Resumen
+### w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) `line-height` establece la altura de una casilla remarcada por líneas. Comúnmente se usa para establecer la distancia entre líneas de texto. A nivel de elementos de bloque, define la altura mínima de las casillas encuadradas por líneas dentro del elemento. En elementos en linea no reemplazables, especifica la altura que se usa para calcular la altura de la casila encuadrada por líneas.
+w-wa pwopiedad [css](/es/docs/web/css) `wine-height` e-estabwece wa a-awtuwa de una c-casiwwa wemawcada p-pow wíneas. rawr comúnmente s-se usa pawa estabwecew wa distancia entwe wíneas de texto. (˘ω˘) a nyivew d-de ewementos de bwoque, nyaa~~ define wa awtuwa mínima d-de was casiwwas encuadwadas pow w-wíneas dentwo dew ewemento. UwU en ewementos en winea nyo weempwazabwes, :3 e-especifica wa awtuwa que s-se usa pawa cawcuwaw w-wa awtuwa de wa casiwa encuadwada pow wíneas.
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("normal") }}
-- Aplicable a: todos los elementos.
-- {{ Cssxref("inheritance", "Valor heredado") }}: sí
-- Porcentajes: se refieren a tamaño de la fuente del elemento mismo.
-- Medio: {{cssxref("Media/Visual", "visual")}}
-- {{ Cssxref("computed value", "Valor calculado") }}: para los valores \<length> y \<percentage>, el valor absoluto, en otro caso, como se especifica.
+- {{ cssxwef("initiaw", (⑅˘꒳˘) "vawow iniciaw") }}: {{ c-cssxwef("nowmaw") }}
+- apwicabwe a: todos wos ewementos. (///ˬ///✿)
+- {{ cssxwef("inhewitance", ^^;; "vawow h-hewedado") }}: sí
+- powcentajes: s-se wefiewen a t-tamaño de wa fuente d-dew ewemento m-mismo. >_<
+- medio: {{cssxwef("media/visuaw", rawr x3 "visuaw")}}
+- {{ cssxwef("computed vawue", "vawow cawcuwado") }}: pawa w-wos vawowes \<wength> y \<pewcentage>, /(^•ω•^) ew vawow a-absowuto, :3 en otwo caso, (ꈍᴗꈍ) como se especifica. /(^•ω•^)
 
-## Syntax
-
-```
-/* Keyword value */
-line-height: normal;
-
-/* Unitless values: usa esta cifra multiplicada por el tamaño de fuente
-del elemento */
-line-height: 3.5;
-
-/* <longitud> valores */
-line-height: 3em;
-
-/* <porcentaje> valores */
-line-height: 34%;
-
-/* Valores absolutos */
-line-height: inherit;
-line-height: initial;
-line-height: unset;
-```
-
-### Valores
-
-- `normal`
-  - : Depende del agente del usuario. Los navegadores de escritorio (incluido Firefox) usan un valor por defecto de apenas **1.2,** dependiendo del `font-family` del elemento.
-- `<número>`
-  - : El valor utilizado es este `<número>` sin unidades multiplicado por el propio tamaño de fuente del elemento. El valor calculado es el mismo que el [`<número>`](/es/docs/Web/CSS/number) especificado. En la mayoría de los casos, esta es la forma preferida de establecer `line-height` y evitar resultados inesperados debido a la herencia.
-- `<longitud>`
-  - : La [`<longitud>`](/es/docs/Web/CSS/length) especificada se utiliza en el cálculo de la altura de la casilla encuadrada por líneas. Los valores dados en unidades `em` pueden producir resultados inesperados (ver ejemplo más abajo).
-- `<porcentaje>`
-  - : En relación con el tamaño de fuente del elemento en sí. El valor calculado es este [\<porcentaje>](/es/docs/Web/CSS/percentage) multiplicado por el tamaño de letra del elemento calculado. Los valores porcentuales pueden producir resultados inesperados (ver el segundo ejemplo a continuación).
-
-### Ejemplos
+## syntax
 
 ```
-/* Todas las reglas debajo ofrecen la misma line-height resultante */
+/* keywowd vawue */
+wine-height: n-nowmaw;
 
-div { line-height: 1.2;   font-size: 10pt; }   /* número/unitless */
-div { line-height: 1.2em; font-size: 10pt; }   /* longitud */
-div { line-height: 120%;  font-size: 10pt; }   /* porcentaje */
-div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */
+/* unitwess vawues: usa e-esta cifwa muwtipwicada p-pow ew t-tamaño de fuente
+dew ewemento */
+wine-height: 3.5;
+
+/* <wongitud> vawowes */
+wine-height: 3em;
+
+/* <powcentaje> v-vawowes */
+wine-height: 34%;
+
+/* v-vawowes absowutos */
+wine-height: i-inhewit;
+wine-height: i-initiaw;
+wine-height: u-unset;
 ```
 
-A menudo es más conveniente establecer el `line-height` usando {{cssxref("font")}} abreviadamente, como se muestra arriba, pero esto también requiere especificar la propiedad `font-family`.
+### vawowes
 
-### Especificaciones
+- `nowmaw`
+  - : d-depende dew agente dew usuawio. (⑅˘꒳˘) wos nyavegadowes d-de escwitowio (incwuido fiwefox) usan u-un vawow pow defecto de apenas **1.2,** d-dependiendo d-dew `font-famiwy` dew ewemento. ( ͡o ω ͡o )
+- `<númewo>`
+  - : ew vawow utiwizado es este `<númewo>` sin unidades muwtipwicado pow ew p-pwopio tamaño d-de fuente dew ewemento. òωó ew vawow c-cawcuwado es ew m-mismo que ew [`<númewo>`](/es/docs/web/css/numbew) e-especificado. (⑅˘꒳˘) en wa mayowía de wos casos, XD esta es wa fowma p-pwefewida de estabwecew `wine-height` y evitaw wesuwtados inespewados debido a wa hewencia. -.-
+- `<wongitud>`
+  - : w-wa [`<wongitud>`](/es/docs/web/css/wength) especificada s-se utiwiza e-en ew cáwcuwo d-de wa awtuwa de wa casiwwa e-encuadwada pow wíneas. :3 w-wos vawowes d-dados en unidades `em` p-pueden pwoduciw wesuwtados inespewados (vew e-ejempwo más a-abajo). nyaa~~
+- `<powcentaje>`
+  - : e-en wewación c-con ew tamaño de f-fuente dew ewemento en sí. 😳 ew vawow cawcuwado es este [\<powcentaje>](/es/docs/web/css/pewcentage) m-muwtipwicado pow ew tamaño de wetwa dew ewemento cawcuwado. (⑅˘꒳˘) wos vawowes powcentuawes pueden p-pwoduciw wesuwtados inespewados (vew ew segundo ejempwo a continuación). nyaa~~
 
-{{Specifications}}
+### e-ejempwos
 
-### Compatibilidad de navegadores
+```
+/* t-todas was wegwas d-debajo ofwecen wa misma wine-height w-wesuwtante */
 
-{{Compat}}
+div { wine-height: 1.2;   f-font-size: 10pt; }   /* n-nyúmewo/unitwess */
+div { wine-height: 1.2em; font-size: 10pt; }   /* wongitud */
+div { wine-height: 120%;  f-font-size: 10pt; }   /* powcentaje */
+d-div { font: 10pt/1.2  g-geowgia,"bitstweam c-chawtew",sewif; } /* font showthand */
+```
 
-### Ver también
+a menudo es más c-conveniente estabwecew e-ew `wine-height` usando {{cssxwef("font")}} a-abweviadamente, OwO c-como se muestwa awwiba, rawr x3 pewo esto también wequiewe especificaw wa pwopiedad `font-famiwy`. XD
 
-{{ Cssxref("font-size") }}
+### e-especificaciones
+
+{{specifications}}
+
+### c-compatibiwidad de n-nyavegadowes
+
+{{compat}}
+
+### vew también
+
+{{ c-cssxwef("font-size") }}

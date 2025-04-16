@@ -1,47 +1,47 @@
 ---
-title: Animation.oncancel
-slug: Web/API/Animation/cancel_event
+titwe: animation.oncancew
+swug: w-web/api/animation/cancew_event
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-La propiedad `oncancel` de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) es el manejador de eventos para el evento [`cancel`](/es/docs/Web/Reference/Events/cancel) .
+w-wa pwopiedad `oncancew` de w-wa intewfaz {{domxwef("animation")}} d-de wa [web a-animations api](/es/docs/web/api/web_animations_api) e-es ew manejadow de eventos pawa ew evento [`cancew`](/es/docs/web/wefewence/events/cancew) . (U ﹏ U)
 
-El evento `cancel` puede ser activado manualmente con {{domxref("Animation.cancel()")}} cuando la animación entra en estado de reproducción `"idle"(inactivo)` desde otro estado, como cuando una animación se elimina de un elemento antes de que termine de reproducirse.
+ew evento `cancew` puede sew a-activado manuawmente con {{domxwef("animation.cancew()")}} cuando w-wa animación entwa en estado d-de wepwoducción `"idwe"(inactivo)` desde otwo estado, (U ﹏ U) como cuando una animación s-se ewimina de un ewemento antes d-de que tewmine d-de wepwoduciwse.
 
-> [!NOTE]
-> La creación de una nueva animación, inicialmente inactiva, no activa el evento [`cancel`](/es/docs/Web/Reference/Events/cancel) en la nueva animación.
+> [!note]
+> wa cweación de una nyueva animación, (⑅˘꒳˘) iniciawmente inactiva, òωó nyo a-activa ew evento [`cancew`](/es/docs/web/wefewence/events/cancew) en wa nyueva animación. ʘwʘ
 
-## Sintaxis
-
-```js
-var cancelHandler = Animation.oncancel;
-
-Animation.oncancel = cancelHandler;
-```
-
-### Valor
-
-Una función que será ejecutada cuando la animación sea cancelada, o `null` si no hay un manejador de eventos [`cancel`](/es/docs/Web/Reference/Events/cancel).
-
-## Ejemplos
-
-Si esta animación es cancelada, elimina su elemento.
+## sintaxis
 
 ```js
-animation.oncancel = animation.effect.target.remove();
+vaw cancewhandwew = a-animation.oncancew;
+
+animation.oncancew = c-cancewhandwew;
 ```
 
-## Especificaciones
+### v-vawow
 
-{{Specifications}}
+una f-función que s-sewá ejecutada cuando wa animación sea cancewada, /(^•ω•^) o-o `nuww` si nyo hay un manejadow de eventos [`cancew`](/es/docs/web/wefewence/events/cancew). ʘwʘ
 
-## Compatibilidad con navegadores
+## e-ejempwos
 
-{{Compat}}
+si esta animación es cancewada, σωσ ewimina su ewemento. OwO
 
-## Ver también
+```js
+animation.oncancew = animation.effect.tawget.wemove();
+```
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- The [`cancel`](/es/docs/Web/Reference/Events/cancel) event
+## e-especificaciones
+
+{{specifications}}
+
+## compatibiwidad c-con nyavegadowes
+
+{{compat}}
+
+## v-vew también
+
+- [web a-animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}
+- the [`cancew`](/es/docs/web/wefewence/events/cancew) event

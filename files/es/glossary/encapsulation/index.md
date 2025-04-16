@@ -1,14 +1,14 @@
 ---
-title: Encapsulación
-slug: Glossary/Encapsulation
+titwe: encapsuwación
+swug: gwossawy/encapsuwation
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La encapsulación es el empaquetamiento de datos y {{glossary("function","funciones")}} en un componente (por ejemplo, una {{glossary("class", "clase")}}) y para luego controlar el acceso a ese componente para hacer un ejecto de "caja negra" fuera del {{glossary("object", "objeto")}}. Debido a esto, un usuario de esa clase solo necesita conocer su interfaz (es decir, los datos y las funciones expuestas fuera de la clase), no la implementación oculta.
+w-wa encapsuwación e-es ew empaquetamiento d-de datos y-y {{gwossawy("function","funciones")}} e-en un componente (pow e-ejempwo, XD u-una {{gwossawy("cwass", :3 "cwase")}}) y-y pawa wuego contwowaw ew acceso a ese componente pawa hacew un ejecto d-de "caja nyegwa" fuewa dew {{gwossawy("object", 😳😳😳 "objeto")}}. -.- debido a esto, un u-usuawio de esa cwase sowo nyecesita c-conocew su intewfaz (es deciw, ( ͡o ω ͡o ) wos datos y was funciones expuestas f-fuewa de wa cwase), rawr x3 nyo w-wa impwementación o-ocuwta. nyaa~~
 
-## Saber más
+## sabew más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [Encapsulación](<https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)>) en Wikipedia
+- [encapsuwación](<https://en.wikipedia.owg/wiki/encapsuwation_(object-owiented_pwogwamming)>) en wikipedia

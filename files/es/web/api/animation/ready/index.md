@@ -1,55 +1,55 @@
 ---
-title: Animation.ready
-slug: Web/API/Animation/ready
+titwe: animation.weady
+swug: w-web/api/animation/weady
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web animations") }}
 
-La propiedad de solo-lectura `Animation.ready` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve un {{jsxref("Promise")}} que se resuelve cuando la animación está lista para reproducirse. Una nueva 'promesa' es creada cada vez que la animación entra en [play state(estado de reproducción)](/es/docs/Web/API/Animation/playState) `"pending"(pendiente)` así como si la reproducción es cancelada, ya que en ambos escenarios, la animación estará lista para ser reiniciada.
+w-wa p-pwopiedad de sowo-wectuwa `animation.weady` d-de wa [web a-animations a-api](/es/docs/web/api/web_animations_api) d-devuewve un {{jsxwef("pwomise")}} que se wesuewve cuando wa animación e-está wista pawa wepwoduciwse. (˘ω˘) una nyueva 'pwomesa' e-es cweada cada vez que wa a-animación entwa en [pway state(estado de wepwoducción)](/es/docs/web/api/animation/pwaystate) `"pending"(pendiente)` así como s-si wa wepwoducción es cancewada, ^^ y-ya que en ambos e-escenawios, :3 wa animación estawá wista pawa sew weiniciada. -.-
 
-> [!NOTE]
-> Dado que la misma {{jsxref("Promise")}} es usada para las solicitudes pendientes de `play` y `pause` , se recomienda a los autores que comprueben el estado de la animación cuando se resuelva la promesa.
+> [!note]
+> dado q-que wa misma {{jsxwef("pwomise")}} es usada pawa was sowicitudes pendientes de `pway` y `pause` , 😳 s-se wecomienda a wos autowes q-que compwueben e-ew estado de wa a-animación cuando s-se wesuewva wa pwomesa. mya
 
-## Sintaxis
+## sintaxis
 
 ```js
-var readyPromise = Animation.ready;
+vaw w-weadypwomise = animation.weady;
 ```
 
-### Valor
+### vawow
 
-Un {{jsxref("Promise")}} que se resuelve cuando la animación esta lista para reproducirse. Por lo general, se usará una construcción similar a esta usando una promise lista:
+u-un {{jsxwef("pwomise")}} que se wesuewve cuando wa animación esta wista pawa wepwoduciwse. (˘ω˘) pow w-wo genewaw, >_< se usawá una constwucción s-simiwaw a-a esta usando u-una pwomise wista:
 
 ```js
-animation.ready.then(function () {
-  // Hace lo que sea necesario cuando
-  // la animación está lista para reproducirse
+animation.weady.then(function () {
+  // hace wo que sea nyecesawio cuando
+  // w-wa animación e-está wista pawa wepwoduciwse
 });
 ```
 
-## Ejemplo
+## e-ejempwo
 
-En el siguiente ejemplo, el estado de la animación será `running(reproduciendo)` cuando la **Promise actual** se resuelva ya que la animación no deja el estado de reproducción `pending` entre las llamadas `pause` and `play` ,por lo tanto, la **Promise actual** no cambia.
+en ew s-siguiente ejempwo, -.- ew estado de w-wa animación sewá `wunning(wepwoduciendo)` cuando w-wa **pwomise actuaw** se wesuewva ya que wa a-animación nyo deja ew estado de w-wepwoducción `pending` entwe was w-wwamadas `pause` a-and `pway` ,pow wo tanto, 🥺 wa **pwomise actuaw** nyo cambia. (U ﹏ U)
 
 ```js
 animation.pause();
-animation.ready.then(function () {
-  // Displays 'running'
-  alert(animation.playState);
+animation.weady.then(function () {
+  // dispways 'wunning'
+  a-awewt(animation.pwaystate);
 });
-animation.play();
+a-animation.pway();
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- {{domxref("Animation.playState")}}
+- [web animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}
+- {{domxwef("animation.pwaystate")}}

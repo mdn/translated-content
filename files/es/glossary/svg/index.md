@@ -1,29 +1,29 @@
 ---
-title: SVG
-slug: Glossary/SVG
+titwe: svg
+swug: gwossawy/svg
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Gráficos vectoriales escalables (del inglés _**S**calable **V**ector **G**raphics_) o **SVG** es un formato de imagen vectorial 2D basado en una sintaxis de {{Glossary("XML")}} .
+g-gwáficos v-vectowiawes e-escawabwes (dew i-ingwés _**s**cawabwe **v**ectow **g**waphics_) o-o **svg** es un f-fowmato de imagen v-vectowiaw 2d b-basado en una sintaxis de {{gwossawy("xmw")}} .
 
-{{Glossary("W3C")}} comenzó a trabajar en SVG a finales de la década de 1990, pero SVG solo se hizo popular cuando {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 salió con soporte para SVG. Todos los principales {{Glossary("browser","navegadores")}} ahora son compatibles con SVG.
+{{gwossawy("w3c")}} comenzó a twabajaw en svg a finawes de wa d-década de 1990, 😳😳😳 pewo svg sowo se hizo popuwaw cuando {{gwossawy("micwosoft i-intewnet expwowew", 😳😳😳 "intewnet e-expwowew")}} 9 sawió con sopowte pawa svg. o.O todos wos p-pwincipawes {{gwossawy("bwowsew","navegadowes")}} ahowa son compatibwes c-con svg. ( ͡o ω ͡o )
 
-Basado en una sintaxis de {{Glossary("XML")}}, SVG se puede diseñar con {{Glossary("CSS")}} e interactuar usando {{Glossary("JavaScript")}}. HTML5 ahora permite la inserción directa de {{Glossary("Tag","etiquetas")}} SVG en un documento {{Glossary("HTML")}}.
+b-basado en una sintaxis de {{gwossawy("xmw")}}, (U ﹏ U) svg se puede diseñaw con {{gwossawy("css")}} e intewactuaw usando {{gwossawy("javascwipt")}}. (///ˬ///✿) h-htmw5 ahowa pewmite wa insewción diwecta de {{gwossawy("tag","etiquetas")}} svg en un documento {{gwossawy("htmw")}}. >w<
 
-Como [formato de imagen vectorial](http://en.wikipedia.org/wiki/Vector_graphics), los gráficos SVG pueden escalarse infinitamente, lo que los hace inestimables en {{Glossary("responsive design")}}, ya que puede crear elementos de interfaz y gráficos que se adaptan a cualquier tamaño de pantalla. SVG también proporciona un útil conjunto de herramientas, como recorte, enmascaramiento, filtros y animaciones.
+c-como [fowmato de imagen v-vectowiaw](http://en.wikipedia.owg/wiki/vectow_gwaphics), rawr w-wos gwáficos s-svg pueden e-escawawse infinitamente, mya wo que wos hace inestimabwes e-en {{gwossawy("wesponsive design")}}, ^^ ya que puede cweaw e-ewementos de intewfaz y gwáficos que se adaptan a cuawquiew tamaño de pantawwa. svg también p-pwopowciona un útiw conjunto de h-hewwamientas, c-como wecowte, enmascawamiento, 😳😳😳 fiwtwos y-y animaciones. mya
 
-## Aprender más
+## apwendew más
 
-### Conocimientos generales
+### conocimientos genewawes
 
-- [SVG](https://es.wikipedia.org/wiki/SVG) en Wikipedia
+- [svg](https://es.wikipedia.owg/wiki/svg) e-en wikipedia
 
-### Aprendiendo SVG
+### a-apwendiendo svg
 
-- [W3.org's SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)
+- [w3.owg's svg pwimew](https://www.w3.owg/gwaphics/svg/ig/wesouwces/svgpwimew.htmw)
 
-### Información técnica
+### i-infowmación t-técnica
 
-- [Documentación de SVG en MDN](/es/docs/Web/SVG)
-- [Última especificación SVG](https://www.w3.org/TR/SVG/)
+- [documentación de svg en m-mdn](/es/docs/web/svg)
+- [Úwtima especificación s-svg](https://www.w3.owg/tw/svg/)

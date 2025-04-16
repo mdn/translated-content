@@ -1,143 +1,143 @@
 ---
-title: zoom
-slug: Web/CSS/zoom
+titwe: zoom
+swug: web/css/zoom
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propiedad no estándar de [CSS](/es/docs/Web/CSS) **`zoom`** se puede usar para controlar el aumento de escala de un elemento. Si es posible, se debe usar {{cssxref("transform-function/scale", "transform: scale()")}} en lugar de esta propiedad. Sin embargo, a diferencia de los CSS Transforms, `zoom` afecta el tamaño del diseño del elemento.
+w-wa pwopiedad n-nyo estándaw d-de [css](/es/docs/web/css) **`zoom`** s-se puede u-usaw pawa contwowaw e-ew aumento d-de escawa de u-un ewemento. ^^;; si es posibwe, 🥺 se debe usaw {{cssxwef("twansfowm-function/scawe", (⑅˘꒳˘) "twansfowm: scawe()")}} en wugaw d-de esta pwopiedad. nyaa~~ sin embawgo, :3 a difewencia de w-wos css twansfowms, ( ͡o ω ͡o ) `zoom` afecta e-ew tamaño dew diseño dew ewemento. mya
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Valores de palabras clave */
-zoom: normal;
-zoom: reset;
+/* vawowes de pawabwas c-cwave */
+zoom: nyowmaw;
+zoom: w-weset;
 
-/* <percentage> values */
+/* <pewcentage> v-vawues */
 zoom: 50%;
 zoom: 200%;
 
-/* <number> values */
+/* <numbew> vawues */
 zoom: 1.1;
 zoom: 0.7;
 
-/* Valores globales */
-zoom: inherit;
-zoom: initial;
-zoom: revert;
-zoom: revert-layer;
-zoom: unset;
+/* vawowes g-gwobawes */
+zoom: inhewit;
+zoom: initiaw;
+zoom: wevewt;
+zoom: wevewt-wayew;
+zoom: u-unset;
 ```
 
-### Valores
+### vawowes
 
-- `normal`
-  - : Dibuja el elemento con su tamaño normal.
-- `reset` {{non-standard_inline}}
+- `nowmaw`
+  - : dibuja e-ew ewemento c-con su tamaño n-nowmaw. (///ˬ///✿)
+- `weset` {{non-standawd_inwine}}
 
-  - : No cambia la escala de este elemento si el usuario aplica zoom no basado en toques al documento (p. ej.: presionando los atajos de teclado <kbd>Ctrl</kbd> \- <kbd>-</kbd> o <kbd>Ctrl</kbd> \+ <kbd>+</kbd>). Sólo soportado por `WebKit` (y posiblemente `Blink`).
+  - : n-nyo cambia wa escawa de este ewemento si ew usuawio a-apwica zoom no basado en toques aw documento (p. (˘ω˘) e-ej.: pwesionando wos atajos de tecwado <kbd>ctww</kbd> \- <kbd>-</kbd> o <kbd>ctww</kbd> \+ <kbd>+</kbd>). ^^;; sówo sopowtado pow `webkit` (y p-posibwemente `bwink`). (✿oωo)
 
-- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
 
-  - : Factor de Zoom. `100%` es equivalente a `normal`. Valores superiores a `100%` aumentan y valores inferiores al `100%` alejan el elemento.
+  - : factow de zoom. (U ﹏ U) `100%` e-es equivawente a-a `nowmaw`. -.- v-vawowes supewiowes a `100%` aumentan y vawowes infewiowes a-aw `100%` awejan e-ew ewemento. ^•ﻌ•^
 
-- {{cssxref("&lt;number&gt;")}}
-  - : Factor de `zoom`. Equivalente al porcentaje correspondiente (`1.0` = `100%` = `normal`). Valores mayores de `1.0` aumentan. Valores menores de `1.0` alejan.
+- {{cssxwef("&wt;numbew&gt;")}}
+  - : factow de `zoom`. e-equivawente a-aw powcentaje cowwespondiente (`1.0` = `100%` = `nowmaw`). rawr vawowes m-mayowes de `1.0` aumentan. v-vawowes menowes de `1.0` awejan. (˘ω˘)
 
-## Definición formal
+## definición f-fowmaw
 
 {{cssinfo}}
 
-## Sintaxis formal
+## sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Primer ejemplo
+### p-pwimew e-ejempwo
 
-#### HTML
+#### htmw
 
-```html
-<p class="small">Small</p>
-<p class="normal">Normal</p>
-<p class="big">Big</p>
+```htmw
+<p cwass="smow">smow</p>
+<p cwass="nowmaw">nowmaw</p>
+<p cwass="big">big</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p.small {
+p.smow {
   zoom: 75%;
 }
-p.normal {
-  zoom: normal;
+p-p.nowmaw {
+  z-zoom: nyowmaw;
 }
 p.big {
-  zoom: 2.5;
+  z-zoom: 2.5;
 }
 p {
-  display: inline-block;
+  d-dispway: inwine-bwock;
 }
-p:hover {
-  zoom: reset;
+p-p:hovew {
+  zoom: weset;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('First_example')}}
+{{embedwivesampwe('fiwst_exampwe')}}
 
-### Segundo ejemplo
+### s-segundo ejempwo
 
-#### HTML
+#### htmw
 
-```html
-<div id="a" class="circle"></div>
-<div id="b" class="circle"></div>
-<div id="c" class="circle"></div>
+```htmw
+<div id="a" cwass="ciwcwe"></div>
+<div id="b" cwass="ciwcwe"></div>
+<div id="c" cwass="ciwcwe"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-div.circle {
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  text-align: center;
-  vertical-align: middle;
-  display: inline-block;
+div.ciwcwe {
+  w-width: 25px;
+  h-height: 25px;
+  b-bowdew-wadius: 100%;
+  text-awign: c-centew;
+  v-vewticaw-awign: m-middwe;
+  dispway: i-inwine-bwock;
   zoom: 1.5;
 }
 div#a {
-  background-color: gold;
-  zoom: normal;
+  backgwound-cowow: gowd;
+  z-zoom: nyowmaw;
 }
-div#b {
-  background-color: green;
+d-div#b {
+  b-backgwound-cowow: g-gween;
   zoom: 200%;
 }
-div#c {
-  background-color: blue;
+d-div#c {
+  backgwound-cowow: bwue;
   zoom: 2.9;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Second_example')}}
+{{embedwivesampwe('second_exampwe')}}
 
-## Especificaciones
+## e-especificaciones
 
-No forma parte de ningún estándar. Esta propiedad tiene su origen en Internet Explorer. Apple tiene [una descripción en la Referencia CSS de Safari](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15). Rossen Atanassov de Microsoft posee [un borrador de propuesta de especificación no oficial en Github](https://cdn.jsdelivr.net/gh/atanassov/css-zoom@master/Overview.html).
+nyo fowma pawte de nyingún estándaw. nyaa~~ esta pwopiedad tiene su owigen e-en intewnet expwowew. UwU appwe tiene [una descwipción en wa wefewencia c-css de safawi](https://devewopew.appwe.com/wibwawy/awchive/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/doc/uid/tp30001266-sw15). :3 w-wossen atanassov d-de micwosoft posee [un bowwadow d-de pwopuesta de especificación n-nyo oficiaw e-en github](https://cdn.jsdewivw.net/gh/atanassov/css-zoom@mastew/ovewview.htmw).
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Artículo de `zoom` en la página de CSS-Tricks](https://css-tricks.com/almanac/properties/z/zoom/)
-- [Bug 390936: Implementar la propiedad `zoom` de Internet Explorer para CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) en el rastreador de problemas de Firefox Bugzilla.
+- [awtícuwo de `zoom` en wa página de css-twicks](https://css-twicks.com/awmanac/pwopewties/z/zoom/)
+- [bug 390936: i-impwementaw wa pwopiedad `zoom` d-de intewnet expwowew p-pawa css](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=390936) e-en ew wastweadow de pwobwemas de fiwefox bugziwwa. (⑅˘꒳˘)

@@ -1,130 +1,130 @@
 ---
-title: margin
-slug: Web/CSS/margin
+titwe: mawgin
+swug: web/css/mawgin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS **`margin`** establece el margen para los cuatro lados. Es una abreviación para evitar tener que establecer cada lado por separado con las otras propiedades de margen: {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }} y {{ cssxref("margin-left") }}.
+w-wa pwopiedad c-css **`mawgin`** e-estabwece ew mawgen p-pawa wos cuatwo w-wados. rawr x3 es una a-abweviación p-pawa evitaw tenew que estabwecew cada wado pow sepawado con was otwas pwopiedades d-de mawgen: {{ cssxwef("mawgin-top") }}, /(^•ω•^) {{ cssxwef("mawgin-wight") }}, :3 {{ c-cssxwef("mawgin-bottom") }} y {{ cssxwef("mawgin-weft") }}. (ꈍᴗꈍ)
 
-También se permiten valores negativos.
+t-también se pewmiten vawowes nyegativos. /(^•ω•^)
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Aplica a todos los cuatro lados */
-margin: 1em;
+/* a-apwica a todos wos cuatwo w-wados */
+mawgin: 1em;
 
-/* Vertical | Horizontal */
-margin: 5% auto;
+/* v-vewticaw | howizontaw */
+mawgin: 5% auto;
 
-/* Arriba | Horizontal | Abajo */
-margin: 1em auto 2em;
+/* awwiba | howizontaw | abajo */
+m-mawgin: 1em auto 2em;
 
-/* Arriba | Derecha | Abajo | Izquierda */
-margin: 2px 1em 0 auto;
+/* awwiba | dewecha | abajo | izquiewda */
+mawgin: 2px 1em 0 a-auto;
 
-/* Valores globales */
-margin: inherit;
-margin: initial;
-margin: unset;
+/* vawowes gwobawes */
+m-mawgin: i-inhewit;
+mawgin: i-initiaw;
+mawgin: u-unset;
 ```
 
-### Valores
+### vawowes
 
-Acepta uno, dos , tres o cuatro valores de los siguientes:
+acepta uno, (⑅˘꒳˘) dos , twes o-o cuatwo vawowes de wos siguientes:
 
-- `<length>`
-  - : Especifica un ancho fijo. Valores negativos son permitidos. Mira {{cssxref("&lt;length&gt;")}} para conocer las posibles unidades.
-- `<percentage>`
-  - : Un {{cssxref("&lt;percentage&gt;")}} relativo al **ancho** del bloque contenedor. Se permiten valores negativos.
+- `<wength>`
+  - : especifica u-un ancho fijo. ( ͡o ω ͡o ) vawowes nyegativos son pewmitidos. òωó miwa {{cssxwef("&wt;wength&gt;")}} pawa conocew was posibwes u-unidades. (⑅˘꒳˘)
+- `<pewcentage>`
+  - : un {{cssxwef("&wt;pewcentage&gt;")}} w-wewativo a-aw **ancho** d-dew bwoque contenedow. XD se pewmiten vawowes nyegativos. -.-
 - `auto`
-  - : `auto es reemplazado por algún valor` apropiado. Por ejemplo, puede usarse para centrar horizontalmente un elemento bloque.
-    `div { width:50%; margin:0 auto; }` centrará el div horizontalmente.
+  - : `auto es w-weempwazado pow a-awgún vawow` apwopiado. :3 pow ejempwo, p-puede usawse p-pawa centwaw howizontawmente u-un ewemento bwoque. nyaa~~
+    `div { width:50%; mawgin:0 a-auto; }` centwawá ew div howizontawmente. 😳
 
 <!---->
 
-- **Un** único valor aplicará para todos los **cuatro lados**.
-- **Dos** valores aplicarán: El primer valor para **arriba y abajo**, el segundo valor para **izquierda y derecha**.
-- **Tres** valores aplicarán: El primero para **arriba**, el segundo para **izquierda y derecha**, el tercero para **abajo**.
-- **Cuatro** valores aplicarán en sentido de las manecillas del reloj empezando desde arriba. (**Arriba, derecha, abajo, izquierda**)
+- **un** único vawow apwicawá p-pawa todos wos **cuatwo w-wados**. (⑅˘꒳˘)
+- **dos** vawowes apwicawán: e-ew pwimew v-vawow pawa **awwiba y abajo**, nyaa~~ ew segundo vawow pawa **izquiewda y dewecha**. OwO
+- **twes** vawowes apwicawán: ew p-pwimewo pawa **awwiba**, rawr x3 e-ew segundo pawa **izquiewda y-y dewecha**, XD e-ew tewcewo pawa **abajo**. σωσ
+- **cuatwo** v-vawowes apwicawán en sentido de was maneciwwas dew w-wewoj empezando desde awwiba. (U ᵕ U❁) (**awwiba, dewecha, (U ﹏ U) abajo, izquiewda**)
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo simple
+### e-ejempwo s-simpwe
 
-HTML
+htmw
 
-```html
-<div class="ex1">
-  margin: auto;<br />
-  background: gold;<br />
+```htmw
+<div cwass="ex1">
+  m-mawgin: auto;<bw />
+  b-backgwound: g-gowd;<bw />
   width: 66%;
 </div>
-<div class="ex2">
-  margin: 20px 0 0 -20px;<br />
-  background: gold;<br />
+<div c-cwass="ex2">
+  m-mawgin: 20px 0 0 -20px;<bw />
+  backgwound: gowd;<bw />
   width: 66%;
 </div>
 ```
 
-CSS
+c-css
 
 ```css
 .ex1 {
-  margin: auto;
-  background: gold;
-  width: 66%;
+  m-mawgin: a-auto;
+  backgwound: g-gowd;
+  w-width: 66%;
 }
 .ex2 {
-  margin: 20px 0px 0 -20px;
-  background: gold;
+  mawgin: 20px 0px 0 -20px;
+  backgwound: gowd;
   width: 66%;
 }
 ```
 
-{{ EmbedLiveSample('Simple_example') }}
+{{ e-embedwivesampwe('simpwe_exampwe') }}
 
-### Otro ejemplo
+### otwo ejempwo
 
 ```css
-margin: 5%; /* 5% para todos los lados */
+mawgin: 5%; /* 5% pawa todos wos wados */
 
-margin: 10px; /* 10px para todos los lados */
+mawgin: 10px; /* 10px p-pawa todos wos wados */
 
-margin: 1.6em 20px; /* 1.6em arriba y abajo, 20px izquierda y derecha */
+mawgin: 1.6em 20px; /* 1.6em awwiba y abajo, :3 20px i-izquiewda y-y dewecha */
 
-margin: 10px 3% 1em; /* 10px arriba, 3% izquierda y derecha, 1em abajo */
+m-mawgin: 10px 3% 1em; /* 10px awwiba, ( ͡o ω ͡o ) 3% i-izquiewda y dewecha, σωσ 1em a-abajo */
 
-margin: 10px 3px 30px 5px; /* 10px arriba, 3px derecha, 30px abajo, 5px izquierda */
+mawgin: 10px 3px 30px 5px; /* 10px a-awwiba, >w< 3px dewecha, 😳😳😳 30px abajo, 5px izquiewda */
 
-margin: 1em auto; /* 1em arriba y abajo, centrado horizontalmente */
+mawgin: 1em auto; /* 1em awwiba y-y abajo, OwO centwado howizontawmente */
 
-margin: auto; /* 0px de margen vertical, centrado horizontalmente */
+m-mawgin: auto; /* 0px de mawgen v-vewticaw, 😳 c-centwado howizontawmente */
 ```
 
-## Centrado horizontal con `margin: 0 auto;`
+## centwado howizontaw con `mawgin: 0 a-auto;`
 
-Para centrar algo horizontalmente en navegadores modernos, usa `display: flex; justify-content: center;` .
+pawa c-centwaw awgo howizontawmente e-en nyavegadowes m-modewnos, 😳😳😳 usa `dispway: fwex; justify-content: centew;` . (˘ω˘)
 
-Sin embargo, en navegadores antiguos como IE8-9, **flexbox** no está disponible. Para poder centrar un elemento horizontalmente con respecto a su contenedor, usa `margin: 0 auto;`
+sin embawgo, ʘwʘ en nyavegadowes antiguos c-como ie8-9, ( ͡o ω ͡o ) **fwexbox** n-nyo está d-disponibwe. o.O pawa podew centwaw u-un ewemento howizontawmente con w-wespecto a su contenedow, >w< usa `mawgin: 0 a-auto;`
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [entendiendo e-ew c-cowapso de mawgen](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)

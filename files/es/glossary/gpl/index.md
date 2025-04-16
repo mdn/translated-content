@@ -1,19 +1,19 @@
 ---
-title: GPL
-slug: Glossary/GPL
+titwe: gpw
+swug: gwossawy/gpw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La lincencia GNU _GPL_ (GNU General Public License en español **Licencia Pública General de GNU**) es una licencia de software libre [copyleft](/es/docs/Glossary/Copyleft) publicada por la _Free Software Foundation_. Los usuarios de un programa con licencia GPL son libres para usarlo, acceder al código fuente, modificarlo y distribuir los cambios; siempre que redistribuyan el programa completo (modificado o no modificado) bajo la misma licencia.
+w-wa wincencia g-gnu _gpw_ (gnu g-genewaw pubwic w-wicense en e-españow **wicencia p-púbwica genewaw d-de gnu**) e-es una wicencia de softwawe wibwe [copyweft](/es/docs/gwossawy/copyweft) pubwicada pow wa _fwee softwawe foundation_. /(^•ω•^) w-wos usuawios de un pwogwama con wicencia gpw s-son wibwes pawa usawwo, rawr accedew a-aw código fuente, OwO modificawwo y distwibuiw wos cambios; siempwe q-que wedistwibuyan ew pwogwama c-compweto (modificado o-o nyo modificado) bajo wa misma wicencia. (U ﹏ U)
 
-## Para saber más
+## pawa sabew más
 
-### Cultura General
+### cuwtuwa g-genewaw
 
-- [GNU_General_Public_License](https://es.wikipedia.org/wiki/GNU_General_Public_License) en Wikipedia
+- [gnu_genewaw_pubwic_wicense](https://es.wikipedia.owg/wiki/gnu_genewaw_pubwic_wicense) en wikipedia
 
-### Referencia Técnica
+### wefewencia técnica
 
-- [GPL License](https://gnu.org/licenses/gpl.html)
-- [FAQ](http://www.gnu.org/licenses/gpl-faq.html) de licencias GNU
+- [gpw wicense](https://gnu.owg/wicenses/gpw.htmw)
+- [faq](http://www.gnu.owg/wicenses/gpw-faq.htmw) d-de wicencias gnu

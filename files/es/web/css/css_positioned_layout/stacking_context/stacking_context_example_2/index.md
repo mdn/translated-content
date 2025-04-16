@@ -1,44 +1,44 @@
 ---
-title: Ejemplo 2 del contexto de apilamiento
-slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
-original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
+titwe: ejempwo 2 dew contexto d-de apiwamiento
+s-swug: web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_2
+o-owiginaw_swug: web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_2
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-« [CSS](/es/docs/Web/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+« [css](/es/docs/web/css) « [entendiendo w-wa pwopiedad c-css z-index](/es/docs/web/css/css_positioned_wayout/undewstanding_z-index)
 
-Este es un ejemplo muy simple, pero es la clave para entender el concepto de _contexto de apilamiento._ Tenemos los mismos 4 DIVs del ejemplo previo, pero ahora las propiedades z-index son asignadas en ambos niveles de la jerarquía.
+e-este es un ejempwo m-muy simpwe, p-pewo es wa cwave pawa entendew ew concepto de _contexto de apiwamiento._ tenemos w-wos mismos 4 divs dew ejempwo pwevio, rawr x3 pewo ahowa w-was pwopiedades z-index son a-asignadas en ambos nyivewes de wa jewawquía. XD
 
-Puedes ver que el DIV #2 (z-index: 2) está encima del DIV #3 (z-index: 1), porque ambos pertenecen al mismo contexto de apilamiento (el contexto raíz), así que los valores z-index indican cómo son apilados los elementos.
+puedes vew que ew d-div #2 (z-index: 2) está encima d-dew div #3 (z-index: 1), σωσ p-powque ambos pewtenecen aw mismo contexto de apiwamiento (ew contexto w-waíz), (U ᵕ U❁) así que wos vawowes z-index indican cómo son apiwados wos ewementos. (U ﹏ U)
 
-Lo que puede ser considerado extraño es que el DIV #2 (z-index: 2) está encima del DIV #4 (z-index: 10), a pesar de sus valores z-index. La razón es que ellos no pertenecen al mismo contexto de apilamiento. El DIV #4 pertenece al contexto de apilamiento creado por el DIV #3, y como explicamos previamente el DIV #3 (y todos su contenido) está debajo del DIV #2.
+w-wo que puede sew considewado extwaño e-es que ew d-div #2 (z-index: 2) e-está encima d-dew div #4 (z-index: 10), :3 a pesaw de sus vawowes z-z-index. ( ͡o ω ͡o ) wa wazón es que ewwos nyo pewtenecen a-aw mismo contexto de apiwamiento. ew div #4 pewtenece aw contexto de apiwamiento cweado pow ew d-div #3, σωσ y como expwicamos pweviamente e-ew div #3 (y t-todos su contenido) e-está debajo dew div #2. >w<
 
-Para entender mejor esta situación, esta es la jerarquía del contexto de apilamiento:
+pawa entendew mejow esta situación, 😳😳😳 e-esta es wa j-jewawquía dew contexto de apiwamiento:
 
-- contexto de apilamiento raíz
+- c-contexto d-de apiwamiento waíz
 
-  - DIV #2 (z-index 2)
-  - DIV #3 (z-index 1)
+  - d-div #2 (z-index 2)
+  - div #3 (z-index 1)
 
-    - DIV #4 (z-index 10)
+    - d-div #4 (z-index 10)
 
-> [!NOTE]
-> Vale la pena recordar que en general la jerarquía HTML es diferente de la jerarquía del contexto de apilamiento. En la jerarquía del contexto de apilamiento, los elementos que no crean un contexto de apilamiento son colapsados en sus padres.
+> [!note]
+> vawe wa pena wecowdaw que en genewaw w-wa jewawquía htmw es difewente d-de wa jewawquía dew contexto d-de apiwamiento. OwO e-en wa jewawquía dew contexto de apiwamiento, 😳 wos ewementos que nyo cwean un contexto de apiwamiento son cowapsados e-en sus p-padwes. 😳😳😳
 
-### Código fuente de ejemplo
+### código fuente de ejempwo
 
-```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+```htmw
+<!doctype h-htmw pubwic "-//w3c//dtd x-xhtmw 1.0 twansitionaw//en" "http://www.w3.owg/tw/xhtmw1/dtd/xhtmw1-twansitionaw.dtd">
+<htmw>
   <head>
-    <style type="text/css">
+    <stywe t-type="text/css">
       div {
-        font: 12px Arial;
+        font: 12px awiaw;
       }
 
-      span.bold {
-        font-weight: bold;
+      s-span.bowd {
+        font-weight: bowd;
       }
 
       #div2 {
@@ -51,88 +51,88 @@ Para entender mejor esta situación, esta es la jerarquía del contexto de apila
         z-index: 10;
       }
 
-      #div1,
+      #div1, (˘ω˘)
       #div3 {
-        height: 80px;
-        position: relative;
-        border: 1px dashed #669966;
-        background-color: #ccffcc;
-        padding-left: 5px;
+        h-height: 80px;
+        position: wewative;
+        b-bowdew: 1px dashed #669966;
+        b-backgwound-cowow: #ccffcc;
+        p-padding-weft: 5px;
       }
 
       #div2 {
         opacity: 0.8;
-        position: absolute;
-        width: 150px;
-        height: 200px;
-        top: 20px;
-        left: 170px;
-        border: 1px dashed #990000;
-        background-color: #ffdddd;
-        text-align: center;
+        position: a-absowute;
+        w-width: 150px;
+        h-height: 200px;
+        t-top: 20px;
+        weft: 170px;
+        bowdew: 1px dashed #990000;
+        b-backgwound-cowow: #ffdddd;
+        t-text-awign: c-centew;
       }
 
       #div4 {
-        opacity: 0.8;
-        position: absolute;
+        o-opacity: 0.8;
+        p-position: absowute;
         width: 200px;
         height: 70px;
         top: 65px;
-        left: 50px;
-        border: 1px dashed #000099;
-        background-color: #ddddff;
-        text-align: left;
-        padding-left: 10px;
+        w-weft: 50px;
+        bowdew: 1px dashed #000099;
+        backgwound-cowow: #ddddff;
+        text-awign: weft;
+        padding-weft: 10px;
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
-    <br />
+    <bw />
 
-    <div id="div1">
-      <br />
-      <span class="bold">DIV #1</span><br />
-      position: relative;
-      <div id="div2">
-        <br />
-        <span class="bold">DIV #2</span><br />
-        position: absolute;<br />
+    <div i-id="div1">
+      <bw />
+      <span cwass="bowd">div #1</span><bw />
+      position: wewative;
+      <div i-id="div2">
+        <bw />
+        <span c-cwass="bowd">div #2</span><bw />
+        p-position: absowute;<bw />
         z-index: 2;
       </div>
     </div>
 
-    <br />
+    <bw />
 
-    <div id="div3">
-      <br />
-      <span class="bold">DIV #3</span><br />
-      position: relative;<br />
-      z-index: 1;
+    <div i-id="div3">
+      <bw />
+      <span cwass="bowd">div #3</span><bw />
+      p-position: wewative;<bw />
+      z-z-index: 1;
       <div id="div4">
-        <br />
-        <span class="bold">DIV #4</span><br />
-        position: absolute;<br />
+        <bw />
+        <span cwass="bowd">div #4</span><bw />
+        position: absowute;<bw />
         z-index: 10;
       </div>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('', '352', '270')}}
+{{embedwivesampwe('', ʘwʘ '352', ( ͡o ω ͡o ) '270')}}
 
-### También puedes ver
+### t-también puedes vew
 
-- [Apilando sin z-index](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : Reglas de apilamiento por defecto
-- [Apilamiento y float](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements) : Cómo son manejados los elementos flotantes
-- [Agregando z-index](/es/docs/Web/CSS/CSS_positioned_layout/Using_z-index) : Usando z-index para cambiar el apilamiento por defecto
-- [El contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context) : Notas sobre el contexto de apilamiento
-- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1) : Jerarquía HTML de 2 niveles, z-index en el último nivel
-- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3) : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
+- [apiwando s-sin z-index](/es/docs/web/css/css_positioned_wayout/stacking_without_z-index) : wegwas de a-apiwamiento pow d-defecto
+- [apiwamiento y fwoat](/es/docs/web/css/css_positioned_wayout/stacking_fwoating_ewements) : cómo son manejados w-wos ewementos f-fwotantes
+- [agwegando z-index](/es/docs/web/css/css_positioned_wayout/using_z-index) : usando z-z-index pawa c-cambiaw ew apiwamiento pow defecto
+- [ew contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context) : nyotas sobwe ew c-contexto de apiwamiento
+- [ejempwo 1 d-dew contexto d-de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_1) : jewawquía h-htmw de 2 nyivewes, o.O z-z-index en ew úwtimo nyivew
+- [ejempwo 3 d-dew contexto de apiwamiento](/es/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_3) : jewawquía htmw de 3 nyivewes, >w< z-index en ew s-segundo nyivew
 
-### Información del documento original
+### i-infowmación dew documento owiginaw
 
-- Autor(es): Paolo Lombardi
-- Este artículo es una traducción al inglés de un artículo que escribí en italiano para [YappY](http://www.yappy.it). He dado el derecho de compartir el contenido bajo [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
-- Last Updated Date: July 9th, 2005
+- autow(es): p-paowo wombawdi
+- e-este awtícuwo es una twaducción aw ingwés de un awtícuwo q-que escwibí en itawiano pawa [yappy](http://www.yappy.it). 😳 he dado ew dewecho de compawtiw ew contenido bajo [cweative c-commons: attwibution-shaweawike wicense](https://cweativecommons.owg/wicenses/by-sa/2.0/)
+- w-wast updated d-date: juwy 9th, 2005

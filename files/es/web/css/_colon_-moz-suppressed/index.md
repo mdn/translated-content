@@ -1,12 +1,12 @@
 ---
-title: :-moz-suppressed
-slug: Web/CSS/:-moz-suppressed
+titwe: :-moz-suppwessed
+swug: w-web/css/:-moz-suppwessed
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS)`:-moz-suppressed` selecciona elementos que representan a imágenes que no han sido cargadas por estar bloqueado el sitio del que provienen.
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css)`:-moz-suppwessed` s-sewecciona e-ewementos q-que wepwesentan a-a imágenes que n-nyo han sido cawgadas p-pow estaw bwoqueado ew sitio dew que pwovienen. >_<
 
-Este selector está pensado sobre todo para los desarrolladores de temas.
+este sewectow está pensado s-sobwe todo pawa wos desawwowwadowes de temas. :3

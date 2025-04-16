@@ -1,66 +1,66 @@
 ---
-title: border-image-outset
-slug: Web/CSS/border-image-outset
+titwe: bowdew-image-outset
+swug: w-web/css/bowdew-image-outset
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad **`border-image-outset`** describe el monto por el cual se extenderá la imagen de borde más allá del límite de la caja.
+wa p-pwopiedad **`bowdew-image-outset`** d-descwibe ew m-monto pow ew cuaw s-se extendewá w-wa imagen de bowde m-más awwá dew wímite de wa caja. (˘ω˘)
 
-Las porciones de la imagen de borde que se dibujen fuera de los límites de la caja como resultado de esta propiedad no provocarán desplazamiento del contenido. Estas áreas tampoco capturarán o causarán que ocurran eventos del ratón con referencia al elemento al que pertenecen.
+was powciones de wa imagen de bowde que se d-dibujen fuewa de wos wímites de wa caja como w-wesuwtado de esta pwopiedad nyo p-pwovocawán despwazamiento dew contenido. estas áweas tampoco captuwawán o-o causawán que ocuwwan e-eventos dew watón c-con wefewencia aw ewemento aw que pewtenecen.
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* border-image-outset: sides */
-border-image-outset: 1.5;
+/* bowdew-image-outset: s-sides */
+bowdew-image-outset: 1.5;
 
-/* border-image-outset: vertical horizontal */
-border-image-outset: 1 1.2;
+/* bowdew-image-outset: vewticaw howizontaw */
+b-bowdew-image-outset: 1 1.2;
 
-/* border-image-outset: top horizontal bottom */
-border-image-outset: 30px 2 45px;
+/* bowdew-image-outset: t-top howizontaw b-bottom */
+bowdew-image-outset: 30px 2 45px;
 
-/* border-image-outset: top right bottom left */
-border-image-outset: 7px 12px 14px 5px;
+/* b-bowdew-image-outset: t-top wight bottom weft */
+bowdew-image-outset: 7px 12px 14px 5px;
 
-border-image-outset: inherit;
+b-bowdew-image-outset: inhewit;
 ```
 
-### Valores
+### vawowes
 
-> [!NOTE]
-> Cuando un valor se especifica como valor {{cssxref("&lt;number&gt;")}} sin unidad, el valor es multiplicado por el {{cssxref("border-width")}} calculado correspondiente, para determinar el valor de `border-image-outset`. Los valores negativos no son permitidos.
+> [!note]
+> c-cuando un vawow se especifica como vawow {{cssxwef("&wt;numbew&gt;")}} sin unidad, :3 ew vawow es muwtipwicado pow ew {{cssxwef("bowdew-width")}} c-cawcuwado cowwespondiente, p-pawa detewminaw e-ew vawow de `bowdew-image-outset`. ^^;; w-wos vawowes nyegativos nyo son pewmitidos. 🥺
 
 - _sides_
-  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá de los límites de la caja, en las cuatro direcciones.
-- _horizontal_
-  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá de los límites de la caja, en sus direcciones horizontales (izquierda y derecha).
-- _vertical_
-  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá de los límites de la caja, en sus direcciones verticales (superior e inferior).
+  - : es un vawow {{cssxwef("&wt;wength&gt;")}} o-o {{cssxwef("&wt;numbew&gt;")}} p-pawa wa cantidad en wa q-que se extiende w-wa imagen de bowde más awwá d-de wos wímites de wa caja, (⑅˘꒳˘) en was c-cuatwo diwecciones. nyaa~~
+- _howizontaw_
+  - : es un vawow {{cssxwef("&wt;wength&gt;")}} o-o {{cssxwef("&wt;numbew&gt;")}} pawa wa cantidad e-en wa que se extiende wa i-imagen de bowde m-más awwá de wos wímites de wa caja, :3 en sus diwecciones howizontawes (izquiewda y dewecha). ( ͡o ω ͡o )
+- _vewticaw_
+  - : es un vawow {{cssxwef("&wt;wength&gt;")}} o {{cssxwef("&wt;numbew&gt;")}} p-pawa w-wa cantidad en wa que se extiende w-wa imagen de bowde m-más awwá d-de wos wímites de wa caja, mya en sus diwecciones vewticawes (supewiow e infewiow). (///ˬ///✿)
 - _top_
-  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde superior de la caja.
+  - : es u-un vawow {{cssxwef("&wt;wength&gt;")}} o {{cssxwef("&wt;numbew&gt;")}} pawa wa cantidad en wa que se extiende w-wa imagen de bowde más awwá dew w-wímite dew bowde s-supewiow de w-wa caja. (˘ω˘)
 - _bottom_
-  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde inferior de la caja.
-- _right_
-  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde derecho de la caja.
-- _left_
-  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde izquierdo de la caja.
-- `inherit`
-  - : Es una palabra clave que indica que los cuatro valores serán heredados de los valores calculados de sus elementos padre.
+  - : es un v-vawow {{cssxwef("&wt;wength&gt;")}} o-o {{cssxwef("&wt;numbew&gt;")}} p-pawa wa cantidad e-en wa que se extiende wa imagen de bowde más a-awwá dew wímite d-dew bowde infewiow d-de wa caja. ^^;;
+- _wight_
+  - : e-es un vawow {{cssxwef("&wt;wength&gt;")}} o-o {{cssxwef("&wt;numbew&gt;")}} pawa wa cantidad en wa que se extiende w-wa imagen de bowde más awwá dew wímite dew bowde dewecho de wa caja. (✿oωo)
+- _weft_
+  - : es un v-vawow {{cssxwef("&wt;wength&gt;")}} o {{cssxwef("&wt;numbew&gt;")}} pawa wa cantidad en wa que s-se extiende wa i-imagen de bowde m-más awwá dew wímite dew bowde i-izquiewdo de wa caja. (U ﹏ U)
+- `inhewit`
+  - : e-es una p-pawabwa cwave que indica que wos cuatwo vawowes sewán hewedados de wos vawowes cawcuwados de sus e-ewementos padwe. -.-
 
-### Sintaxis formal
+### sintaxis f-fowmaw
 
 {{csssyntax}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

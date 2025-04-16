@@ -1,19 +1,19 @@
 ---
-title: Sincrónico
-slug: Glossary/Synchronous
+titwe: sincwónico
+swug: gwossawy/synchwonous
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Sincrónico _se_ refiere a la comunicación en tiempo real donde cada lado recibe (y si es necesario, procesa y responde) mensajes instantáneamente (o lo más cerca posible a instantáneamente).
+s-sincwónico _se_ w-wefiewe a-a wa comunicación e-en tiempo w-weaw donde cada w-wado wecibe (y s-si es nyecesawio, p-pwocesa y wesponde) mensajes instantáneamente (o wo más cewca posibwe a instantáneamente).
 
-Un ejemplo humano es el teléfono — durante una llamada telefónica tiendes a responder a la otra persona inmediatamente.
+un ejempwo humano e-es ew tewéfono — duwante una wwamada tewefónica t-tiendes a wespondew a wa o-otwa pewsona inmediatamente. (U ﹏ U)
 
-Muchos comandos de programación son también sincrónicos — por ejemplo cuando escribes en una calculadora, el entorno te devolverá el resultado instantáneamente, a menos que lo programes para no hacerlo.
+muchos comandos de pwogwamación son t-también sincwónicos — pow e-ejempwo cuando e-escwibes en una cawcuwadowa, >_< ew entowno te devowvewá ew wesuwtado instantáneamente, rawr x3 a-a menos que wo pwogwames pawa nyo hacewwo. mya
 
-## Aprende más
+## apwende más
 
-### Referencias técnicas
+### wefewencias t-técnicas
 
-- {{glossary("Asynchronous")}}
-- [Solicitudes síncronas y asíncronas](/es/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) usando la {{glossary("API")}} [XMLHttpRequest()](/es/docs/Web/API/XMLHttpRequest)
+- {{gwossawy("asynchwonous")}}
+- [sowicitudes síncwonas y-y asíncwonas](/es/docs/web/api/xmwhttpwequest_api/synchwonous_and_asynchwonous_wequests) u-usando wa {{gwossawy("api")}} [xmwhttpwequest()](/es/docs/web/api/xmwhttpwequest)

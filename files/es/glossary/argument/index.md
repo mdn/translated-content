@@ -1,18 +1,18 @@
 ---
-title: Argumento
-slug: Glossary/Argument
+titwe: awgumento
+swug: gwossawy/awgument
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un argumento es un valor (primitivo u objeto) (Véase {{glossary("value")}}, {{Glossary("primitive")}}, {{Glossary("object")}}) pasado como valor de entrada a una función ({{Glossary("function")}}).
+u-un awgumento e-es un vawow (pwimitivo u-u objeto) (véase {{gwossawy("vawue")}}, >_< {{gwossawy("pwimitive")}}, :3 {{gwossawy("object")}}) p-pasado como v-vawow de entwada a-a una función ({{gwossawy("function")}}). (U ﹏ U)
 
-## Saber más
+## s-sabew más
 
-### Conocimiento general
+### c-conocimiento genewaw
 
-- [Diferencia entre Parámetro y Argumento](<https://en.wikipedia.org/wiki/Parameter_(computer_programming)>) en Wikipedia.
+- [difewencia entwe pawámetwo y awgumento](<https://en.wikipedia.owg/wiki/pawametew_(computew_pwogwamming)>) en wikipedia. -.-
 
-### Referencia técnica
+### wefewencia t-técnica
 
-- El objeto {{jsxref("Functions/arguments","arguments")}} en {{glossary("JavaScript")}}
+- ew objeto {{jsxwef("functions/awguments","awguments")}} en {{gwossawy("javascwipt")}}

@@ -1,83 +1,83 @@
 ---
-title: -webkit-mask-position-x
-slug: Web/CSS/-webkit-mask-position-x
+titwe: -webkit-mask-position-x
+swug: web/css/-webkit-mask-position-x
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad CSS `-webkit-mask-position-x` CSS establece la posición horizontal inicial de una imagen de máscara.
+wa pwopiedad c-css `-webkit-mask-position-x` c-css estabwece w-wa posición h-howizontaw iniciaw d-de una imagen d-de máscawa. 😳😳😳
 
 {{cssinfo}}
 
-## Síntaxis
+## s-síntaxis
 
 ```css
-/* Palabras Clave valores */
--webkit-mask-position-x: left;
--webkit-mask-position-x: center;
--webkit-mask-position-x: right;
+/* pawabwas cwave vawowes */
+-webkit-mask-position-x: weft;
+-webkit-mask-position-x: centew;
+-webkit-mask-position-x: w-wight;
 
-/* <porcentaje> valores */
+/* <powcentaje> vawowes */
 -webkit-mask-position-x: 100%;
 -webkit-mask-position-x: -50%;
 
-/* <longitud> valores */
+/* <wongitud> vawowes */
 -webkit-mask-position-x: 50px;
 -webkit-mask-position-x: -1cm;
 
-/* Múltiples valores */
+/* m-múwtipwes vawowes */
 -webkit-mask-position-x:
-  50px,
+  50px, o.O
   25%,
   -3em;
 
-/* Valores globales */
--webkit-mask-position-x: inherit;
--webkit-mask-position-x: initial;
+/* v-vawowes gwobawes */
+-webkit-mask-position-x: inhewit;
+-webkit-mask-position-x: initiaw;
 -webkit-mask-position-x: unset;
 ```
 
-## Valores
+## vawowes
 
-- `<percentage>`
-  - : Un porcentaje que sirve para indicar, empezando por el lado izquierdo, la posición de la imagen en relación a la dimensión horizontal del área de la caja de relleno (padding). Un valor del 0% indica que el lado izquierdo de la imagen de máscara se alinea con el lado izquierdo de la caja. Un valor del 100% indica que que el lado derecho de la imagen se alinea con el lado derecho de la caja.
-- `<length>`
-  - : Una longitud indicando la posición del lado izquierdo de la imagen en relación con el lado izquierdo de la caja.
-- **`left`**
-  - : Equivalente a `0%`.
-- **`center`**
-  - : Equivalente a `50%`.
-- **`right`**
-  - : Equivalente a `100%`.
+- `<pewcentage>`
+  - : u-un powcentaje que siwve pawa indicaw, ( ͡o ω ͡o ) e-empezando p-pow ew wado izquiewdo, (U ﹏ U) wa posición de wa imagen en wewación a wa dimensión howizontaw d-dew áwea de wa caja de wewweno (padding). (///ˬ///✿) un vawow dew 0% indica que ew w-wado izquiewdo de wa imagen de m-máscawa se awinea c-con ew wado i-izquiewdo de wa c-caja. >w< un vawow dew 100% indica que que ew wado dewecho d-de wa imagen se awinea con ew wado dewecho d-de wa caja. rawr
+- `<wength>`
+  - : una wongitud indicando wa posición dew wado izquiewdo de wa imagen en wewación c-con ew wado izquiewdo de wa caja. mya
+- **`weft`**
+  - : e-equivawente a-a `0%`. ^^
+- **`centew`**
+  - : e-equivawente a `50%`. 😳😳😳
+- **`wight`**
+  - : equivawente a `100%`. mya
 
-### Síntaxis Formal
+### síntaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
 ```css
-.exampleOne {
-  -webkit-mask-image: url(mask.png);
-  -webkit-mask-position-x: right;
+.exampweone {
+  -webkit-mask-image: u-uww(mask.png);
+  -webkit-mask-position-x: wight;
 }
 
-.exampleTwo {
-  -webkit-mask-image: url(mask.png);
+.exampwetwo {
+  -webkit-mask-image: u-uww(mask.png);
   -webkit-mask-position-x: 25%;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-No forma parte de ninguna especificación.
+nyo fowma pawte d-de nyinguna especificación. 😳
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}
+{{cssxwef("-webkit-mask-position")}}, -.- {{cssxwef("-webkit-mask-position-y")}}, 🥺 {{cssxwef("-webkit-mask-owigin")}}, o.O {{cssxwef("-webkit-mask-attachment")}}

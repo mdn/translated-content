@@ -1,145 +1,145 @@
 ---
-title: overflow (excedente)
-slug: Web/CSS/overflow
+titwe: ovewfwow (excedente)
+swug: web/css/ovewfwow
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-## Sumario
+## s-sumawio
 
-La propiedad CSS `overflow` especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque.
+w-wa pwopiedad c-css `ovewfwow` e-especifica: si w-wecowtaw contenido, >w< d-dibujaw bawwas d-de despwazamiento o mostwaw ew contenido excedente en un ewemento a nyivew d-de bwoque. 😳
 
-Usando la propiedad `overflow` con un valor distinto a `visible`, valor por defecto, creará un nuevo [contexto de formatos de bloques](/es/docs/Web/CSS/CSS_display/Block_formatting_context). Esto es técnicamente necesario debido a que si un elemento flotante interceptara con otros forzaría a reajustar el contenido alrededor de los elementos que se interceden. El reajuste sucedería luego de cada desplazamiento, y llevaría a un desplazamiento demasiado lento.
+usando wa pwopiedad `ovewfwow` con un v-vawow distinto a `visibwe`, 🥺 vawow p-pow defecto, rawr x3 cweawá un nyuevo [contexto de fowmatos de bwoques](/es/docs/web/css/css_dispway/bwock_fowmatting_context). o.O e-esto es técnicamente n-nyecesawio debido a-a que si un ewemento fwotante intewceptawa con otwos fowzawía a weajustaw e-ew contenido awwededow de wos ewementos que se intewceden. rawr ew weajuste sucedewía w-wuego de cada despwazamiento, y-y wwevawía a un d-despwazamiento d-demasiado wento. ʘwʘ
 
-Nótese que, cambiando programáticamente el valor de `scrollTop` al elemento HTML relevante, incluso cuando `overflow` tenga el valor `hidden` un elemento podría necesitar ser desplazado.
+n-nótese que, 😳😳😳 cambiando pwogwamáticamente ew vawow d-de `scwowwtop` aw ewemento htmw wewevante, ^^;; i-incwuso cuando `ovewfwow` tenga ew vawow `hidden` un ewemento podwía nyecesitaw sew despwazado. o.O
 
 {{cssinfo}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Sintáxis formal: {{csssyntax("overflow")}}
+sintáxis fowmaw: {{csssyntax("ovewfwow")}}
 ```
 
 ```
-overflow: visible
-overflow: hidden
-overflow: scroll
-overflow: auto
+o-ovewfwow: visibwe
+o-ovewfwow: h-hidden
+ovewfwow: scwoww
+ovewfwow: auto
 
-overflow: inherit
+ovewfwow: inhewit
 ```
 
-### Valores
+### v-vawowes
 
-- `visible`
-  - : Valor por defecto. El contenido no es recortado, podría ser dibujado fuera de la caja contenedora.
+- `visibwe`
+  - : vawow p-pow defecto. (///ˬ///✿) ew contenido nyo e-es wecowtado, σωσ p-podwía sew dibujado fuewa de wa c-caja contenedowa. nyaa~~
 - `hidden`
-  - : El contenido es recortado y no se muestran barras de posición.
-- `scroll`
-  - : El contenido es recortado y el navegador web usa las barras de desplazamiento, se haya recortado contenido o no. Esto previene cualquier problema con las barras de desplazamiento apareciendo o desapareciendo en un entorno dinámico. Puede que las impresoras impriman contenido excedente.
+  - : ew contenido e-es wecowtado y nyo se muestwan bawwas de posición. ^^;;
+- `scwoww`
+  - : e-ew contenido es wecowtado y-y ew nyavegadow web usa was bawwas d-de despwazamiento, ^•ﻌ•^ s-se haya wecowtado contenido o nyo. σωσ esto pweviene cuawquiew pwobwema con was bawwas de despwazamiento apaweciendo o-o desapaweciendo e-en un entowno dinámico. -.- p-puede que was i-impwesowas impwiman c-contenido excedente. ^^;;
 - `auto`
-  - : Depende del agente de usuario. Navegadores de escritorio como Firefox proveen barras de desplazamiento si hay contenido excedente.
+  - : depende dew agente de usuawio. XD navegadowes d-de escwitowio como fiwefox pwoveen bawwas de despwazamiento si hay contenido e-excedente. 🥺
 
-#### Extensiones de Mozilla
+#### extensiones de m-moziwwa
 
-- `-moz-scrollbars-none`{{deprecated_inline}}
-  - : Usar `overflow:hidden`.
-- `-moz-scrollbars-horizontal`{{ Deprecated_inline() }}
-  - : Es preferible el uso de {{ Cssxref("overflow-x") }} y {{ Cssxref("overflow-y") }}.
-- `-moz-scrollbars-vertical`{{ Deprecated_inline() }}
-  - : Es preferible el uso de {{ Cssxref("overflow-x") }} y {{ Cssxref("overflow-y") }}.
-- \-moz-hidden-unscrollable {{ non-standard_inline() }}
-  - : Es usada principalmente para uso interno y por temas. Deshabilita el desplazamiento en elementos XML root y `<html>`, `<body>` usando las flechas del teclado o la rueda del ratón.
+- `-moz-scwowwbaws-none`{{depwecated_inwine}}
+  - : u-usaw `ovewfwow:hidden`. òωó
+- `-moz-scwowwbaws-howizontaw`{{ d-depwecated_inwine() }}
+  - : es pwefewibwe e-ew uso de {{ cssxwef("ovewfwow-x") }} y-y {{ cssxwef("ovewfwow-y") }}. (ˆ ﻌ ˆ)♡
+- `-moz-scwowwbaws-vewticaw`{{ d-depwecated_inwine() }}
+  - : e-es pwefewibwe ew uso de {{ cssxwef("ovewfwow-x") }} y {{ cssxwef("ovewfwow-y") }}. -.-
+- \-moz-hidden-unscwowwabwe {{ n-nyon-standawd_inwine() }}
+  - : e-es usada pwincipawmente p-pawa u-uso intewno y pow t-temas. :3 deshabiwita ew despwazamiento en ewementos xmw woot y `<htmw>`, ʘwʘ `<body>` u-usando was fwechas dew tecwado o wa wueda dew watón. 🥺
 
-## Ejemplos
+## ejempwos
 
-#### `visible`
+#### `visibwe`
 
 ```css
 p {
   width: 12em;
-  border: dotted;
-  overflow: visible; /* dibuja barras si es necesario */
+  b-bowdew: dotted;
+  ovewfwow: visibwe; /* dibuja bawwas si es nyecesawio */
 }
 ```
 
-```html hidden
+```htmw h-hidden
 <p
-  style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;">
-  <code>visible</code> (por defecto)<br />
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium.
+  s-stywe="ovewfwow: v-visibwe; dispway: inwine-bwock; w-width: 12em; height: 6em; b-bowdew: dotted;">
+  <code>visibwe</code> (pow d-defecto)<bw />
+  sed ut pewspiciatis unde omnis iste nyatus ewwow sit vowuptatem accusantium
+  d-dowowemque waudantium. >_<
 </p>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
 #### `hidden`
 
 ```css
 p {
-  overflow: hidden; /* no se dibujan barras */
+  o-ovewfwow: hidden; /* nyo se dibujan b-bawwas */
 }
 ```
 
-```html hidden
+```htmw hidden
 <p
-  style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;">
-  <code>overflow: hidden</code><br />
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium.
+  s-stywe="ovewfwow: hidden; dispway: inwine-bwock; w-width: 12em; h-height: 6em; bowdew: dotted;">
+  <code>ovewfwow: h-hidden</code><bw />
+  sed u-ut pewspiciatis unde omnis iste nyatus ewwow sit vowuptatem accusantium
+  dowowemque w-waudantium. ʘwʘ
 </p>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-#### `scroll`
+#### `scwoww`
 
 ```css
-p {
-  overflow: scroll; /* se dibujan ambas barras */
+p-p {
+  ovewfwow: s-scwoww; /* se dibujan ambas b-bawwas */
 }
 ```
 
-```html hidden
+```htmw h-hidden
 <p
-  style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;">
-  <code>overflow: scroll</code><br />
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium.
+  stywe="ovewfwow: s-scwoww; dispway: inwine-bwock; width: 12em; height: 6em; bowdew: dotted;">
+  <code>ovewfwow: s-scwoww</code><bw />
+  s-sed ut pewspiciatis unde omnis iste n-nyatus ewwow sit v-vowuptatem accusantium
+  dowowemque waudantium. (˘ω˘)
 </p>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
 #### `auto`
 
 ```css
 p {
-  overflow: auto; /* se dibujan barras según se necesite */
+  ovewfwow: a-auto; /* se dibujan bawwas según se nyecesite */
 }
 ```
 
-```html hidden
+```htmw hidden
 <p
-  style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;">
-  <code>overflow: auto</code><br />
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium.
+  stywe="ovewfwow: a-auto; dispway: inwine-bwock; width: 12em; height: 6em; b-bowdew: d-dotted;">
+  <code>ovewfwow: auto</code><bw />
+  sed ut pewspiciatis unde omnis iste nyatus ewwow s-sit vowuptatem a-accusantium
+  dowowemque waudantium. (✿oωo)
 </p>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Propiedades CSS relacionadas: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("clip") }}, {{ Cssxref("display") }} (
+- p-pwopiedades css wewacionadas: {{ cssxwef("text-ovewfwow") }}, (///ˬ///✿) {{ cssxwef("white-space") }}, rawr x3 {{ c-cssxwef("ovewfwow-x") }}, -.- {{ cssxwef("ovewfwow-y") }}, {{ cssxwef("cwip") }}, ^^ {{ c-cssxwef("dispway") }} (

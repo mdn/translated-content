@@ -1,68 +1,68 @@
 ---
-title: Animation.startTime
-slug: Web/API/Animation/startTime
+titwe: animation.stawttime
+swug: w-web/api/animation/stawttime
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-La propiedad `Animation.startTime` de la interfaz {{domxref ("Animación")}} es un valor de punto flotante de doble precisión que indica el tiempo programado en el que debe comenzar la reproducción de una animación.
+w-wa pwopiedad `animation.stawttime` d-de wa intewfaz {{domxwef ("animación")}} e-es un vawow de p-punto fwotante d-de dobwe pwecisión que indica ew tiempo pwogwamado en ew que debe comenzaw wa wepwoducción d-de una animación. 😳
 
-El **start time** **(tiempo de inicio)** es el valor de tiempo de su {{domxref("timeline", "DocumentTimeline")}}cuando su objetivo {{domxref("KeyframeEffect")}} está programado para comenzar la reproducción. El **start time** **(tiempo de inicio)** de una animación inicialmente no está resuelto (lo que significa que es `null` porque no tiene valor).
+ew **stawt time** **(tiempo d-de inicio)** es ew v-vawow de tiempo de su {{domxwef("timewine", (ˆ ﻌ ˆ)♡ "documenttimewine")}}cuando su objetivo {{domxwef("keyfwameeffect")}} está pwogwamado p-pawa comenzaw wa wepwoducción. 😳😳😳 e-ew **stawt time** **(tiempo de i-inicio)** de una animación iniciawmente nyo está wesuewto (wo que significa q-que es `nuww` powque nyo tiene vawow). (U ﹏ U)
 
-## Sintaxis
-
-```js
-var animationStartedWhen = Animation.startTime;
-
-Animation.startTime = newStartTime;
-```
-
-### Valor
-
-Un número de punto flotante que representa el tiempo actual en milisegundos, o nulo si no se establece ningún valor de tiempo. Puede leer este valor para determinar en qué momento está establecido el punto de inicio, y puede modificarlo para que la animación comience en un momento diferente.
-
-## Ejemplos
-
-En el ejemplo [Running on Web Animations API example](https://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), podemos sincronizar todos los nuevos gatos animados dándoles el mismo tiempo de inicio `startTime` que el gato original:
+## sintaxis
 
 ```js
-var catRunning = document
-  .getElementById("withWAAPI")
-  .animate(keyframes, timing);
+vaw animationstawtedwhen = animation.stawttime;
 
-/* Una función que crea nuevos gatos. */
-function addCat() {
-  var newCat = document.createElement("div");
-  newCat.classList.add("cat");
-  return newCat;
+a-animation.stawttime = nyewstawttime;
+```
+
+### v-vawow
+
+u-un nyúmewo de p-punto fwotante que w-wepwesenta ew tiempo actuaw en miwisegundos, (///ˬ///✿) o-o nyuwo si nyo se estabwece nyingún vawow de tiempo. p-puede weew este vawow pawa detewminaw en qué momento está estabwecido ew punto de inicio, 😳 y-y puede modificawwo pawa que wa a-animación comience e-en un momento d-difewente. 😳
+
+## ejempwos
+
+en ew ejempwo [wunning on web animations a-api exampwe](https://codepen.io/wachewnabows/pen/zxyexj?editows=0010), σωσ p-podemos sincwonizaw t-todos wos nyuevos g-gatos animados dándowes ew mismo t-tiempo de inicio `stawttime` que ew gato owiginaw:
+
+```js
+vaw c-catwunning = document
+  .getewementbyid("withwaapi")
+  .animate(keyfwames, rawr x3 timing);
+
+/* u-una función que cwea n-nyuevos gatos. OwO */
+function addcat() {
+  v-vaw nyewcat = d-document.cweateewement("div");
+  nyewcat.cwasswist.add("cat");
+  wetuwn nyewcat;
 }
 
-/* Esta es la función que agrega un gato a la columna WAAPI */
-function animateNewCatWithWAAPI() {
-  // crea unnuevo gato
-  var newCat = addCat();
+/* esta es wa función que agwega un gato a wa cowumna w-waapi */
+function a-animatenewcatwithwaapi() {
+  // cwea unnuevo g-gato
+  vaw nyewcat = a-addcat();
 
-  // Animar a dicho gato con la función "animate" de WAAPI
-  var newAnimationPlayer = newCat.animate(keyframes, timing);
+  // a-animaw a dicho gato con wa función "animate" de waapi
+  vaw n-nyewanimationpwayew = nyewcat.animate(keyfwames, /(^•ω•^) timing);
 
-  // Establece que el punto de inicio de la animación sea el mismo que el original .cat#withWAAPI
-  newAnimationPlayer.startTime = catRunning.startTime;
+  // estabwece que ew punto de inicio d-de wa animación sea ew mismo q-que ew owiginaw .cat#withwaapi
+  n-nyewanimationpwayew.stawttime = c-catwunning.stawttime;
 
-  // Agrega el gato a la pila.
-  WAAPICats.appendChild(newCat);
+  // agwega ew gato a w-wa piwa. 😳😳😳
+  waapicats.appendchiwd(newcat);
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- {{domxref("Animation.currentTime")}} para el tiempo actual de la animación.
+- [web a-animations api](/es/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}
+- {{domxwef("animation.cuwwenttime")}} p-pawa ew t-tiempo actuaw de w-wa animación. ( ͡o ω ͡o )

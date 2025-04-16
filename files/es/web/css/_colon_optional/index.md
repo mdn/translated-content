@@ -1,50 +1,50 @@
 ---
-title: :optional
-slug: Web/CSS/:optional
+titwe: :optionaw
+swug: web/css/:optionaw
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:optional`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} que no tenga el atributo [`required`](/es/docs/Web/HTML/Element/input#required) establecido en él.
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:optionaw`** d-de [css](/es/docs/web/css) w-wepwesenta c-cuawquiew e-ewemento {{htmwewement("input")}}, /(^•ω•^) {{htmwewement("sewect")}}, nyaa~~ o-o {{htmwewement("textawea")}} q-que n-nyo tenga ew atwibuto [`wequiwed`](/es/docs/web/htmw/ewement/input#wequiwed) estabwecido en éw. nyaa~~
 
 ```css
-/* Selecciona cualquier opción <input> */
-input:optional {
-  border: 1px dashed black;
+/* sewecciona cuawquiew opción <input> */
+i-input:optionaw {
+  bowdew: 1px dashed bwack;
 }
 ```
 
-Esta pseudo-clase es útil para diseñar campos que no son necesarios para enviar un formulario.
+e-esta pseudo-cwase es útiw p-pawa diseñaw campos que nyo son nyecesawios pawa enviaw un f-fowmuwawio. :3
 
-> [!NOTE]
-> La pseudo-clase {{cssxref(":required")}} selecciona los campos de formulario _requeridos_.
+> [!note]
+> wa pseudo-cwase {{cssxwef(":wequiwed")}} s-sewecciona wos c-campos de fowmuwawio _wequewidos_. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
-Ver {{cssxref(":invalid")}} para un ejemplo.
+vew {{cssxwef(":invawid")}} pawa un ejempwo. (˘ω˘)
 
-## Problemas de accesibilidad
+## p-pwobwemas de accesibiwidad
 
-Si un [formulario](/es/docs/Web/HTML/Element/form) contiene {{htmlelement("input")}}s opcionales, las entradas requeridas deben indicarse utilizando el atributo [`required`](/es/docs/Web/HTML/Element/input#required). Esto se asegurará de que las personas que navegan con la ayuda de la tecnología de asistencia, como un lector de pantalla, puedan comprender qué entradas necesitan contenido válido para garantizar el envío exitoso del formulario.
+si un [fowmuwawio](/es/docs/web/htmw/ewement/fowm) contiene {{htmwewement("input")}}s opcionawes, ^^ was entwadas wequewidas deben indicawse u-utiwizando ew atwibuto [`wequiwed`](/es/docs/web/htmw/ewement/input#wequiwed). :3 e-esto se aseguwawá d-de que was p-pewsonas que n-nyavegan con wa ayuda de wa tecnowogía de asistencia, -.- c-como un wectow de pantawwa, 😳 puedan compwendew q-qué entwadas necesitan contenido váwido pawa gawantizaw ew envío exitoso dew fowmuwawio. mya
 
-Las entradas requeridas también deben indicarse visualmente, utilizando un tratamiento que no dependa únicamente del color para transmitir el significado. Por lo general, se utilizan textos descriptivos y/o un icono.
+w-was entwadas wequewidas también d-deben indicawse v-visuawmente, (˘ω˘) u-utiwizando un twatamiento que nyo dependa únicamente dew cowow p-pawa twansmitiw e-ew significado. >_< pow wo genewaw, -.- s-se utiwizan textos d-descwiptivos y/o un icono. 🥺
 
-- [MDN Understanding WCAG, Guideline 3.3 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.3_%E2%80%94_Input_Assistance_Help_users_avoid_and_correct_mistakes)
-- [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
+- [mdn u-undewstanding wcag, (U ﹏ U) guidewine 3.3 e-expwanations](/es/docs/web/accessibiwity/undewstanding_wcag/undewstandabwe#guidewine_3.3_%e2%80%94_input_assistance_hewp_usews_avoid_and_cowwect_mistakes)
+- [undewstanding success cwitewion 3.3.2 | w3c u-undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/minimize-ewwow-cues.htmw)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Otras pseudo-clases relacionadas con la validación: {{ cssxref(":required") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Validación de datos de formulario](/es/docs/Learn/Forms/Form_validation)
+- otwas pseudo-cwases wewacionadas con wa vawidación: {{ cssxwef(":wequiwed") }}, >w< {{ cssxwef(":invawid") }}, {{ c-cssxwef(":vawid") }}
+- [vawidación de d-datos de fowmuwawio](/es/docs/weawn/fowms/fowm_vawidation)

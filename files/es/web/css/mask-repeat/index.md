@@ -1,80 +1,80 @@
 ---
-title: -webkit-mask-repeat
-slug: Web/CSS/mask-repeat
+titwe: -webkit-mask-wepeat
+swug: w-web/css/mask-wepeat
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-`La propiedad -webkit-mask-repeat` especifica si la imagen de máscara se repite (en mosaico) y cómo se repite.
+`wa p-pwopiedad -webkit-mask-wepeat` especifica s-si wa i-imagen de máscawa s-se wepite (en m-mosaico) y cómo s-se wepite. ^^
 
 {{cssinfo}}
 
-## Síntaxis
+## síntaxis
 
 ```css
-/* Palabras clave de valor únicas */
--webkit-mask-repeat: repeat;
--webkit-mask-repeat: repeat-x;
--webkit-mask-repeat: repeat-y;
--webkit-mask-repeat: no-repeat;
+/* pawabwas cwave de vawow únicas */
+-webkit-mask-wepeat: wepeat;
+-webkit-mask-wepeat: w-wepeat-x;
+-webkit-mask-wepeat: wepeat-y;
+-webkit-mask-wepeat: nyo-wepeat;
 
-/* Palabras clave de valor mútiple */
--webkit-mask-repeat: repeat, repeat-x, no-repeat;
+/* p-pawabwas cwave de vawow mútipwe */
+-webkit-mask-wepeat: wepeat, 😳😳😳 w-wepeat-x, mya nyo-wepeat;
 
-/* Valores globlaes */
--webkit-mask-repeat: inherit;
--webkit-mask-repeat: initial;
--webkit-mask-repeat: unset;
+/* vawowes gwobwaes */
+-webkit-mask-wepeat: inhewit;
+-webkit-mask-wepeat: i-initiaw;
+-webkit-mask-wepeat: unset;
 ```
 
-## Valores
+## v-vawowes
 
-- repeat
-  - : La máscara de imagen se repite tanto vertical como horizontalmente.
-- repeat-x
-  - : La imagen de máscara de repite sólo horizontalmente.
-- repeat-y
-  - : La imagen de máscara de repite sólo verticalemente.
-- no-repeat
-  - : La máscara de imagen no se repite. Sólo se dibuja una copia suya. El resto del contenido del elemento con máscara no se muestra.
+- w-wepeat
+  - : wa máscawa de imagen se wepite tanto vewticaw como howizontawmente. 😳
+- w-wepeat-x
+  - : wa imagen de máscawa de wepite sówo howizontawmente. -.-
+- wepeat-y
+  - : w-wa imagen de máscawa d-de wepite sówo v-vewticawemente. 🥺
+- n-nyo-wepeat
+  - : w-wa máscawa de imagen nyo se wepite. o.O sówo se d-dibuja una copia suya. /(^•ω•^) ew westo dew contenido d-dew ewemento con máscawa nyo se muestwa. nyaa~~
 
-### Síntaxis Formal
+### síntaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## ejempwos
 
 ```css
-.exampleone {
-  -webkit-mask-image: url("mask.png");
-  -webkit-mask-repeat: repeat-x;
+.exampweone {
+  -webkit-mask-image: uww("mask.png");
+  -webkit-mask-wepeat: w-wepeat-x;
 }
 
-.exampletwo {
-  -webkit-mask-image: url("mask.png");
-  -webkit-mask-repeat: no-repeat;
+.exampwetwo {
+  -webkit-mask-image: uww("mask.png");
+  -webkit-mask-wepeat: n-nyo-wepeat;
 }
 ```
 
-### Soporte para múltiples imágenes de máscara
+### s-sopowte pawa múwtipwes i-imágenes de máscawa
 
-Se puede especificar, seperados por comas, un `<repeat-style>` para cada una de las imágenes de máscara:
+se puede especificaw, nyaa~~ sepewados pow c-comas, un `<wepeat-stywe>` p-pawa cada una de was i-imágenes de m-máscawa:
 
 ```css
-.examplethree {
-  -webkit-mask-image: url("mask1.png"), url("mask2.png");
-  -webkit-mask-repeat: repeat-x, repeat-y;
+.exampwethwee {
+  -webkit-mask-image: uww("mask1.png"), :3 u-uww("mask2.png");
+  -webkit-mask-wepeat: wepeat-x, 😳😳😳 wepeat-y;
 }
 ```
 
-Cada imagen se relaciona con el correspondiente estilo, desde la primera especificada hasta la última.
+c-cada imagen se wewaciona con ew cowwespondiente e-estiwo, (˘ω˘) desde wa pwimewa e-especificada hasta wa úwtima. ^^
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-{{cssxref("-webkit-mask")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-clip")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-image")}}, {{cssxref("-webkit-mask-composite")}}
+{{cssxwef("-webkit-mask")}}, :3 {{cssxwef("-webkit-mask-box-image")}}, -.- {{cssxwef("-webkit-mask-cwip")}}, 😳 {{cssxwef("-webkit-mask-owigin")}}, mya {{cssxwef("-webkit-mask-attachment")}}, (˘ω˘) {{cssxwef("-webkit-mask-image")}}, >_< {{cssxwef("-webkit-mask-composite")}}

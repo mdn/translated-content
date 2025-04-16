@@ -1,65 +1,65 @@
 ---
-title: :default
-slug: Web/CSS/:default
+titwe: :defauwt
+swug: web/css/:defauwt
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:default`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados.
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:defauwt`** d-de [css](/es/docs/web/css) w-wepwesenta c-cuawquiew e-ewemento de fowmuwawio q-que sea e-ew pwedetewminado e-entwe un gwupo de ewementos wewacionados. (U ﹏ U)
 
-Este selector se puede usar en los elementos {{htmlelement("button")}}, [\<input type="checkbox">](/es/docs/Web/HTML/Element/input/checkbox), [\<input type="radio">](/es/docs/Web/HTML/Element/input/radio) y {{htmlelement("option")}}.
+este sewectow se puede usaw en wos e-ewementos {{htmwewement("button")}}, (///ˬ///✿) [\<input type="checkbox">](/es/docs/web/htmw/ewement/input/checkbox), >w< [\<input type="wadio">](/es/docs/web/htmw/ewement/input/wadio) y-y {{htmwewement("option")}}. rawr
 
 ```css
-/* Selecciona cualquier <input> predeterminado */
-input:default {
-  background-color: lime;
+/* sewecciona cuawquiew <input> pwedetewminado */
+i-input:defauwt {
+  backgwound-cowow: wime;
 }
 ```
 
-Los elementos agrupados que permiten selecciones múltiples también pueden tener múltiples valores predeterminados, es decir, pueden tener múltiples elementos seleccionados inicialmente. En este caso, _todos_ los valores predeterminados se representan utilizando la pseudo-clase `:default`. Por ejemplo, puede diseñar las casillas de verificación predeterminadas entre un grupo de casillas de verificación (checkboxes).
+wos ewementos a-agwupados que pewmiten sewecciones m-múwtipwes también p-pueden tenew múwtipwes vawowes pwedetewminados, mya es deciw, pueden tenew múwtipwes e-ewementos seweccionados iniciawmente. ^^ en este caso, 😳😳😳 _todos_ wos vawowes p-pwedetewminados se wepwesentan u-utiwizando wa pseudo-cwase `:defauwt`. mya p-pow ejempwo, 😳 p-puede diseñaw w-was casiwwas de vewificación pwedetewminadas e-entwe un gwupo de casiwwas de vewificación (checkboxes). -.-
 
-## Sintaxis
+## s-sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### htmw
 
-```html
-<input type="radio" name="season" id="spring" />
-<label for="spring">Spring</label>
+```htmw
+<input type="wadio" nyame="season" id="spwing" />
+<wabew f-fow="spwing">spwing</wabew>
 
-<input type="radio" name="season" id="summer" checked />
-<label for="summer">Summer</label>
+<input type="wadio" n-nyame="season" i-id="summew" checked />
+<wabew f-fow="summew">summew</wabew>
 
-<input type="radio" name="season" id="fall" />
-<label for="fall">Fall</label>
+<input type="wadio" nyame="season" id="faww" />
+<wabew fow="faww">faww</wabew>
 
-<input type="radio" name="season" id="winter" />
-<label for="winter">Winter</label>
+<input t-type="wadio" nyame="season" i-id="wintew" />
+<wabew fow="wintew">wintew</wabew>
 ```
 
-### CSS
+### c-css
 
 ```css
-input:default {
-  box-shadow: 0 0 2px 1px coral;
+i-input:defauwt {
+  box-shadow: 0 0 2px 1px cowaw;
 }
 
-input:default + label {
-  color: coral;
+i-input:defauwt + wabew {
+  c-cowow: cowaw;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Ejemplo")}}
+{{embedwivesampwe("ejempwo")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

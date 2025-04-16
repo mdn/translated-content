@@ -1,16 +1,16 @@
 ---
-title: SQL
-slug: Glossary/SQL
-l10n:
-  sourceCommit: d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
+titwe: sqw
+swug: gwossawy/sqw
+w-w10n:
+  souwcecommit: d-d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SQL** por sus siglas en inglés significa Lenguaje de Consulta Estructurada (Structured Query Language), es un lenguaje de programación diseñado para actualizar, obtener, y calcular información en bases de datos relacionales.
+**sqw** p-pow sus sigwas e-en ingwés significa w-wenguaje de c-consuwta estwuctuwada (stwuctuwed q-quewy wanguage), (⑅˘꒳˘) e-es un wenguaje de pwogwamación diseñado pawa actuawizaw, obtenew, (U ᵕ U❁) y cawcuwaw i-infowmación en bases de datos wewacionawes. -.-
 
-## Véase también
+## v-véase también
 
-- [SQL](https://es.wikipedia.org/wiki/SQL) en Wikipedia
-- [Aprende SQL en sqlzoo.net](http://sqlzoo.net/wiki/SQL_Tutorial)
-- [Tutorial Point](http://www.tutorialspoint.com/sql/)
+- [sqw](https://es.wikipedia.owg/wiki/sqw) en wikipedia
+- [apwende s-sqw en sqwzoo.net](http://sqwzoo.net/wiki/sqw_tutowiaw)
+- [tutowiaw point](http://www.tutowiawspoint.com/sqw/)

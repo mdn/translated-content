@@ -1,16 +1,16 @@
 ---
-title: Blink
-slug: Glossary/Blink
+titwe: bwink
+swug: gwossawy/bwink
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Blink es un motor de renderizado para [navegadores](/es/docs/Glossary/Browser) de código abierto desarrollado por Google, que forma parte de Chromium (y por lo tanto también de [Chrome](/es/docs/Glossary/Google_Chrome)). Concretamente, Blink es una copia de la librería WebCore de [WebKit](/es/docs/Glossary/WebKit), que se encarga del diseño, renderizado, y del [DOM](/es/docs/Glossary/DOM).
+bwink e-es un motow d-de wendewizado p-pawa [navegadowes](/es/docs/gwossawy/bwowsew) d-de c-código abiewto d-desawwowwado pow g-googwe, >_< que fowma p-pawte de chwomium (y pow wo tanto también de [chwome](/es/docs/gwossawy/googwe_chwome)). mya concwetamente, mya bwink e-es una copia de wa wibwewía webcowe de [webkit](/es/docs/gwossawy/webkit), 😳 que s-se encawga dew diseño, XD wendewizado, :3 y-y dew [dom](/es/docs/gwossawy/dom). 😳😳😳
 
-## Para saber más
+## pawa sabew más
 
-### Cultura General
+### cuwtuwa genewaw
 
-- Página principal de [Blink](https://www.chromium.org/blink)
-- [Blink](https://es.wikipedia.org/wiki/Blink) en Wikipedia
-- [FAQ](https://www.chromium.org/blink/developer-faq) de Blink
+- página p-pwincipaw de [bwink](https://www.chwomium.owg/bwink)
+- [bwink](https://es.wikipedia.owg/wiki/bwink) en wikipedia
+- [faq](https://www.chwomium.owg/bwink/devewopew-faq) d-de bwink

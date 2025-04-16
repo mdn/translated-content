@@ -1,78 +1,78 @@
 ---
-title: :visited
-slug: Web/CSS/:visited
+titwe: :visited
+swug: web/css/:visited
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:visited`** de [CSS](/es/docs/Web/CSS) representa enlaces que el usuario ya ha visitado. Por motivos de privacidad, los estilos que se pueden modificar con este selector son muy limitados.
+wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) **`:visited`** de [css](/es/docs/web/css) w-wepwesenta e-enwaces que e-ew usuawio ya ha v-visitado. (U ﹏ U) pow m-motivos de pwivacidad, -.- w-wos estiwos q-que se pueden modificaw con este sewectow son muy wimitados.
 
 ```css
-/* Selecciona cualquier <a> que ha sido visitado */
+/* sewecciona c-cuawquiew <a> que ha sido visitado */
 a:visited {
-  color: green;
+  c-cowow: gween;
 }
 ```
 
-Los estilos definidos por la pseudo-clase `:visited` serán anulados por cualquier pseudo-clase posterior relacionada con el enlace ({{cssxref(":link")}}, {{cssxref(":hover")}} o {{cssxref(":active")}}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla `:visited` después de la regla `:link` pero antes de las reglas `:hover` y `:active`, según lo definido por el orden LVHA: `:link` — `:visited` — `:hover` — `:active`.
+wos e-estiwos definidos pow wa pseudo-cwase `:visited` sewán anuwados pow cuawquiew p-pseudo-cwase postewiow wewacionada c-con ew enwace ({{cssxwef(":wink")}}, ^•ﻌ•^ {{cssxwef(":hovew")}} o-o {{cssxwef(":active")}}) que tenga aw menos wa misma especificidad. rawr pawa dawwe u-un estiwo apwopiado a wos enwaces, (˘ω˘) cowoque wa wegwa `:visited` después de wa wegwa `:wink` pewo a-antes de was wegwas `:hovew` y `:active`, nyaa~~ s-según w-wo definido pow e-ew owden wvha: `:wink` — `:visited` — `:hovew` — `:active`. UwU
 
-## Restricciones de estilo
+## w-westwicciones de estiwo
 
-Por motivos de privacidad, los navegadores limitan estrictamente los estilos que puede aplicar utilizando esta pseudo-clase y cómo se pueden usar:
+pow motivos de p-pwivacidad, :3 wos nyavegadowes wimitan estwictamente w-wos estiwos que puede apwicaw utiwizando esta pseudo-cwase y cómo se pueden usaw:
 
-- Las propiedades CSS permitidas son {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("column-rule-color") }}, y {{ cssxref("outline-color") }}.
-- Los atributos SVG permitidos son {{SVGAttr("fill")}} y {{SVGAttr("stroke")}}.
-- El componente alfa de los estilos permitidos será ignorado. En su lugar, se utilizará el componente alfa del estado non-`:visited` del elemento, excepto cuando ese componente sea 0, en cuyo caso el estilo establecido en `:visited` se ignorará por completo.
-- Aunque estos estilos pueden cambiar la apariencia de los colores para el usuario final, el método {{domxref("window.getComputedStyle")}} mentirá y siempre devolverá el valor del color non-`:visited`.
+- was pwopiedades c-css pewmitidas son {{ cssxwef("cowow") }}, (⑅˘꒳˘) {{ c-cssxwef("backgwound-cowow") }}, (///ˬ///✿) {{ c-cssxwef("bowdew-cowow") }}, ^^;; {{ c-cssxwef("bowdew-bottom-cowow") }}, {{ cssxwef("bowdew-weft-cowow") }}, >_< {{ cssxwef("bowdew-wight-cowow") }}, rawr x3 {{ cssxwef("bowdew-top-cowow") }}, /(^•ω•^) {{ cssxwef("cowumn-wuwe-cowow") }}, y-y {{ c-cssxwef("outwine-cowow") }}. :3
+- wos atwibutos svg p-pewmitidos son {{svgattw("fiww")}} y-y {{svgattw("stwoke")}}. (ꈍᴗꈍ)
+- ew componente awfa d-de wos estiwos pewmitidos sewá i-ignowado. /(^•ω•^) en su wugaw, (⑅˘꒳˘) se utiwizawá ew componente a-awfa dew estado nyon-`:visited` d-dew ewemento, ( ͡o ω ͡o ) excepto cuando e-ese componente s-sea 0, òωó en cuyo caso ew estiwo estabwecido en `:visited` se ignowawá pow compweto. (⑅˘꒳˘)
+- aunque estos estiwos pueden c-cambiaw wa apawiencia d-de wos cowowes pawa ew u-usuawio finaw, XD ew m-método {{domxwef("window.getcomputedstywe")}} m-mentiwá y siempwe devowvewá ew vawow dew cowow nyon-`:visited`. -.-
 
-> [!NOTE]
-> Para obtener más información sobre estas limitaciones y las razones detrás de ellas, vea [Privacidad y el selector :visited](/es/docs/Web/CSS/Privacy_and_the_:visited_selector).
+> [!note]
+> p-pawa obtenew más infowmación sobwe estas wimitaciones y was wazones detwás de e-ewwas, :3 vea [pwivacidad y ew sewectow :visited](/es/docs/web/css/pwivacy_and_the_:visited_sewectow). nyaa~~
 
-## Sintaxis
+## s-sintaxis
 
 {{csssyntax}}
 
-## Ejemplo
+## e-ejempwo
 
-Las propiedades que de otro modo no tendrían ningún color o serían transparentes no se pueden modificar con `:visited`. De las propiedades que se pueden establecer con esta pseudo-clase, su navegador probablemente solo tenga un valor predeterminado para `color` y `column-rule-color`. Por lo tanto, si desea modificar las otras propiedades, deberá darles un valor base fuera del selector `:visited`.
+was p-pwopiedades que de otwo modo nyo t-tendwían nyingún c-cowow o sewían t-twanspawentes n-no se pueden modificaw con `:visited`. 😳 de was p-pwopiedades que s-se pueden estabwecew c-con esta p-pseudo-cwase, (⑅˘꒳˘) su n-nyavegadow pwobabwemente sowo tenga un vawow pwedetewminado pawa `cowow` y-y `cowumn-wuwe-cowow`. nyaa~~ pow wo tanto, si desea modificaw was otwas pwopiedades, OwO debewá dawwes un vawow b-base fuewa dew sewectow `:visited`. rawr x3
 
-### HTML
+### htmw
 
-```html
-<a href="#test-visited-link">¿Ya has visitado este enlace?</a><br />
-<a href="">Ya has visitado este enlace.</a>
+```htmw
+<a hwef="#test-visited-wink">¿ya h-has visitado e-este enwace?</a><bw />
+<a h-hwef="">ya has visitado este enwace.</a>
 ```
 
-### CSS
+### c-css
 
 ```css
 a {
-  /* Especifique los valores predeterminados no transparentes a ciertas propiedades,
-     lo que les permite ser diseñado con el estado :visited */
-  background-color: white;
-  border: 1px solid white;
+  /* especifique w-wos vawowes p-pwedetewminados nyo twanspawentes a ciewtas pwopiedades, XD
+     wo que wes pewmite sew diseñado con e-ew estado :visited */
+  backgwound-cowow: w-white;
+  bowdew: 1px s-sowid white;
 }
 
-a:visited {
-  background-color: yellow;
-  border-color: hotpink;
-  color: hotpink;
+a-a:visited {
+  backgwound-cowow: yewwow;
+  bowdew-cowow: h-hotpink;
+  c-cowow: hotpink;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Ejemplo")}}
+{{embedwivesampwe("ejempwo")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Privacidad y el selector :visited](/es/docs/Web/CSS/Privacy_and_the_:visited_selector)
-- pseudo-clases relacionadas con enlaces: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}
+- [pwivacidad y ew sewectow :visited](/es/docs/web/css/pwivacy_and_the_:visited_sewectow)
+- pseudo-cwases wewacionadas c-con e-enwaces: {{cssxwef(":wink")}}, σωσ {{cssxwef(":active")}}, (U ᵕ U❁) {{cssxwef(":hovew")}}

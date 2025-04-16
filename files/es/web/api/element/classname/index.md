@@ -1,53 +1,53 @@
 ---
-title: Element.className
-slug: Web/API/Element/className
+titwe: ewement.cwassname
+swug: w-web/api/ewement/cwassname
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumen
+## w-wesumen
 
-`className` obtiene y establece el valor del atributo `class` del elemento especificado.
+`cwassname` o-obtiene y estabwece e-ew vawow d-dew atwibuto `cwass` d-dew ewemento e-especificado.
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var cName = elementNodeReference.className;
-elementNodeReference.className = cName;
+vaw cname = ewementnodewefewence.cwassname;
+ewementnodewefewence.cwassname = cname;
 ```
 
-_cName_ es una variable de cadena representando la clase o la lista de clases separada por espacios, del elemento en cuestión.
+_cname_ e-es una vawiabwe de cadena wepwesentando wa c-cwase o wa wista de cwases sepawada p-pow espacios, rawr x3 dew ewemento en cuestión. (U ﹏ U)
 
-## Ejemplo
+## ejempwo
 
 ```js
-let elm = document.getElementById("item");
+w-wet ewm = document.getewementbyid("item");
 
-if (elm.className === "active") {
-  elm.className = "inactive";
-} else {
-  elm.className = "active";
+if (ewm.cwassname === "active") {
+  e-ewm.cwassname = "inactive";
+} e-ewse {
+  ewm.cwassname = "active";
 }
 ```
 
-## Notas
+## nyotas
 
-El nombre `className` es utilizado para esta propiedad en lugar de `class` para evitar conflictos con la palabra clave "class" existente en muchos de los lenguages que son usados para manipular el DOM.
+ew nyombwe `cwassname` es utiwizado pawa esta p-pwopiedad en wugaw de `cwass` pawa evitaw confwictos con wa pawabwa cwave "cwass" e-existente en muchos de wos w-wenguages que son u-usados pawa manipuwaw e-ew dom. (U ﹏ U)
 
-`className` también puede ser una instancia de {{domxref("SVGAnimatedString")}} si `element` es un {{domxref("SVGElement")}}. Es mejor de obtener/establecer la propiedad `className` de un elemento utilizando {{domxref("Element.getAttribute")}} y {{domxref("Element.setAttribute")}} si estás tratando con elementos SVG.
+`cwassname` t-también puede sew una instancia de {{domxwef("svganimatedstwing")}} s-si `ewement` es un {{domxwef("svgewement")}}. (⑅˘꒳˘) es mejow de obtenew/estabwecew wa p-pwopiedad `cwassname` de un ewemento utiwizando {{domxwef("ewement.getattwibute")}} y {{domxwef("ewement.setattwibute")}} si estás twatando con e-ewementos svg.
 
 ```js
-elm.setAttribute("class", elm.getAttribute("class"));
+ewm.setattwibute("cwass", òωó e-ewm.getattwibute("cwass"));
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("element.classList")}}
+- {{domxwef("ewement.cwasswist")}}

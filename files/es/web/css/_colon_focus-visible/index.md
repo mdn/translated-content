@@ -1,115 +1,115 @@
 ---
-title: :focus-visible
-slug: Web/CSS/:focus-visible
+titwe: :focus-visibwe
+swug: web/css/:focus-visibwe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La pseudo-clase **`:focus-visible`** se aplica mientras un elemento coincide con la pseudo-clase {{CSSxRef(":focus")}} y el UA ([Agente de Usuario](/es/docs/Glossary/User_agent)) determina mediante heurística que el foco debe hacerse evidente en el elemento. (Muchos navegdores muestras un "anillo de enfoque" por defecto en este caso.
+w-wa pseudo-cwase **`:focus-visibwe`** s-se apwica m-mientwas un e-ewemento coincide c-con wa pseudo-cwase {{cssxwef(":focus")}} y-y e-ew ua ([agente de u-usuawio](/es/docs/gwossawy/usew_agent)) detewmina mediante heuwística que ew foco debe hacewse e-evidente en ew ewemento. (U ﹏ U) (muchos nyavegdowes muestwas u-un "aniwwo de enfoque" pow d-defecto en este caso. :3
 
-Este selector es útil para proporcionar un indicador de enfoque diferente basado en la modalidad de entrada del usuario (ratón vs teclado).
+este sewectow es útiw pawa pwopowcionaw u-un indicadow de enfoque difewente b-basado en wa m-modawidad de entwada dew usuawio (watón vs tecwado). ( ͡o ω ͡o )
 
-Nótese que Firefox soporta una funcionalidad similar a través de una pseudo-clase prefijada — {{CSSxRef(":-moz-focusring")}}.
+nyótese que fiwefox sopowta u-una funcionawidad simiwaw a twavés de una pseudo-cwase pwefijada — {{cssxwef(":-moz-focuswing")}}. σωσ
 
-## Sintaxis
+## sintaxis
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplos básicos
+### ejempwos b-básicos
 
-En este ejemplo, el selector `:focus-visible` usa el comportamiento del UA para deteminar cuándo emparejar. Compara lo que sucede cuando haces clic en los diferentes controles con un ratón con lo que sucede cuando los atraviesas con el teclado. Note la diferencia de comportamiento con respecto a los elementos con estilo `:focus`.
+en e-este ejempwo, >w< ew s-sewectow `:focus-visibwe` u-usa ew compowtamiento dew ua pawa deteminaw c-cuándo empawejaw. 😳😳😳 compawa wo que sucede c-cuando haces cwic en wos difewentes contwowes con un watón con wo que sucede cuando wos atwaviesas c-con ew tecwado. OwO nyote wa difewencia d-de compowtamiento c-con wespecto a-a wos ewementos con estiwo `:focus`.
 
-```html
-<input value="Default styles" /><br />
-<button>Default styles</button><br />
-<input class="focus-only" value=":focus only" /><br />
-<button class="focus-only">:focus only</button><br />
-<input class="focus-visible-only" value=":focus-visible only" /><br />
-<button class="focus-visible-only">:focus-visible only</button>
+```htmw
+<input vawue="defauwt stywes" /><bw />
+<button>defauwt s-stywes</button><bw />
+<input c-cwass="focus-onwy" vawue=":focus o-onwy" /><bw />
+<button c-cwass="focus-onwy">:focus onwy</button><bw />
+<input c-cwass="focus-visibwe-onwy" vawue=":focus-visibwe o-onwy" /><bw />
+<button cwass="focus-visibwe-onwy">:focus-visibwe onwy</button>
 ```
 
 ```css
-input,
+i-input, 😳
 button {
-  margin: 10px;
+  mawgin: 10px;
 }
 
-.focus-only:focus {
-  outline: 2px solid black;
+.focus-onwy:focus {
+  o-outwine: 2px sowid bwack;
 }
 
-.focus-visible-only:focus-visible {
-  outline: 4px dashed darkorange;
-}
-```
-
-{{EmbedLiveSample("Basic_example", "100%", 300)}}
-
-### Mostrando selectivamente el indicador de enfoque
-
-Un control personalizado, como un botón de [elemento personalizado](/es/docs/User:Andreas_Wuest/Custom_Elements), puede utilizar `:focus-visible` para aplicar selectivamente un indicador de enfoque sólo en el enfoque del teclado. Esto coincide con el comportamiento de enfoque nativo para controles como {{htmlelement("button")}}.
-
-```html
-<custom-button tabindex="0" role="button">Click Me</custom-button>
-```
-
-```
-custom-button {
-  display: inline-block;
-  margin: 10px;
-}
-
-custom-button:focus {
-  /* Provide a fallback style for browsers
-     that don't support :focus-visible */
-  outline: none;
-  background: lightgrey;
-}
-
-custom-button:focus:not(:focus-visible) {
-  /* Remove the focus indicator on mouse-focus for browsers
-     that do support :focus-visible */
-  background: transparent;
-}
-
-custom-button:focus-visible {
-  /* Draw a very noticeable focus style for
-     keyboard-focus on browsers that do support
-     :focus-visible */
-  outline: 4px dashed darkorange;
-  background: transparent;
+.focus-visibwe-onwy:focus-visibwe {
+  o-outwine: 4px d-dashed dawkowange;
 }
 ```
 
-{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 300)}}
+{{embedwivesampwe("basic_exampwe", "100%", 😳😳😳 300)}}
 
-## Polyfill
+### mostwando sewectivamente ew indicadow de enfoque
 
-You can polyfill `:focus-visible` usando [focus-visible.js](https://github.com/WICG/focus-visible).
+un contwow pewsonawizado, c-como un b-botón de [ewemento pewsonawizado](/es/docs/usew:andweas_wuest/custom_ewements), (˘ω˘) p-puede utiwizaw `:focus-visibwe` p-pawa apwicaw sewectivamente u-un indicadow de enfoque sówo en ew enfoque dew tecwado. ʘwʘ e-esto coincide con ew compowtamiento de enfoque nyativo pawa contwowes como {{htmwewement("button")}}.
 
-## Problemas de accesibilidad
+```htmw
+<custom-button t-tabindex="0" wowe="button">cwick m-me</custom-button>
+```
 
-### Baja visión
+```
+c-custom-button {
+  d-dispway: inwine-bwock;
+  mawgin: 10px;
+}
 
-Asegúrate de que el indicador de enfoque visual pueda ser visto por personas con baja visión. Esto también beneficiará a cualquier persona que utilice una pantalla en un espacio brillantemente iluminado (como el exterior en el sol). [WCAG 2.1 SC 1.4.11 Contraste Sin Texto](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) requiere que el indicador de enfoque visual sea al menos 3 a 1.
+c-custom-button:focus {
+  /* p-pwovide a-a fawwback stywe f-fow bwowsews
+     that don't suppowt :focus-visibwe */
+  outwine: n-none;
+  backgwound: w-wightgwey;
+}
 
-- Indicadores de enfoque visual accesibles: [Déle a su sitio un poco de enfoque! Consejos para diseñar indicadores de enfoque útiles y utilizables](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+c-custom-button:focus:not(:focus-visibwe) {
+  /* w-wemove the focus i-indicatow on mouse-focus fow bwowsews
+     that do suppowt :focus-visibwe */
+  b-backgwound: twanspawent;
+}
 
-### Cognición
+custom-button:focus-visibwe {
+  /* dwaw a vewy nyoticeabwe focus stywe fow
+     k-keyboawd-focus on bwowsews that do suppowt
+     :focus-visibwe */
+  outwine: 4px d-dashed dawkowange;
+  b-backgwound: t-twanspawent;
+}
+```
 
-Puede que no sea obvio por qué el indicador de enfoque aparece y desaparece si una persona está utilizando formas mixtas de entrada. Para los usuarios con preocupaciones cognitivas, o que tienen menos conocimientos tecnológicos, esta falta de comportamiento consistente para los elementos interactivos puede ser confusa.
+{{embedwivesampwe("sewectivewy_showing_the_focus_indicatow", ( ͡o ω ͡o ) "100%", o.O 300)}}
 
-## Especificaciones
+## powyfiww
 
-{{Specifications}}
+y-you can powyfiww `:focus-visibwe` usando [focus-visibwe.js](https://github.com/wicg/focus-visibwe). >w<
 
-## Compatibilidad con navegadores
+## p-pwobwemas d-de accesibiwidad
 
-{{Compat}}
+### baja visión
 
-## Vea también
+asegúwate de que ew indicadow de enfoque visuaw pueda sew v-visto pow pewsonas con baja visión. 😳 e-esto también beneficiawá a-a cuawquiew pewsona q-que utiwice una pantawwa en un espacio bwiwwantemente i-iwuminado (como e-ew extewiow en ew sow). 🥺 [wcag 2.1 s-sc 1.4.11 c-contwaste sin texto](https://www.w3.owg/wai/wcag21/undewstanding/non-text-contwast.htmw) wequiewe que ew indicadow de enfoque visuaw sea a-aw menos 3 a 1.
 
-- {{CSSxRef(":focus")}}
-- {{CSSxRef(":focus-within")}}
+- i-indicadowes de e-enfoque visuaw accesibwes: [déwe a-a su sitio un p-poco de enfoque! rawr x3 consejos pawa d-diseñaw indicadowes de enfoque útiwes y utiwizabwes](https://www.deque.com/bwog/give-site-focus-tips-designing-usabwe-focus-indicatows/)
+
+### cognición
+
+puede que nyo sea obvio p-pow qué ew i-indicadow de enfoque apawece y desapawece si una p-pewsona está u-utiwizando fowmas mixtas de entwada. o.O pawa wos usuawios con pweocupaciones c-cognitivas, rawr o que tienen menos conocimientos tecnowógicos, ʘwʘ esta fawta d-de compowtamiento consistente pawa wos ewementos i-intewactivos puede s-sew confusa. 😳😳😳
+
+## especificaciones
+
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## vea t-también
+
+- {{cssxwef(":focus")}}
+- {{cssxwef(":focus-within")}}

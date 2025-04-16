@@ -1,190 +1,190 @@
 ---
-title: Fuentes web
-slug: Learn_web_development/Core/Text_styling/Web_fonts
-original_slug: Learn/CSS/Styling_text/Web_fonts
+titwe: fuentes web
+swug: weawn_web_devewopment/cowe/text_stywing/web_fonts
+o-owiginaw_swug: w-weawn/css/stywing_text/web_fonts
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/stywing_text/stywing_winks", /(^•ω•^) "weawn/css/stywing_text/typesetting_a_homepage", ^^;; "weawn/css/stywing_text")}}
 
-En el primer artículo del módulo, exploramos las características básicas del CSS disponibles para aplicar estilos a tipos de letra y al texto. En este artículo vamos a ir más lejos: exploraremos en detalle las tipografías web, que permiten que te descargues tipos de letra personalizados junto con tu página web para lograr un estilo de texto más variado y personalizado.
+e-en ew p-pwimew awtícuwo d-dew móduwo, o.O e-expwowamos was cawactewísticas b-básicas dew css d-disponibwes pawa apwicaw estiwos a tipos de wetwa y aw texto. 😳 en este awtícuwo v-vamos a iw más wejos: expwowawemos en detawwe w-was tipogwafías web, UwU que pewmiten q-que te descawgues tipos de wetwa pewsonawizados junto con tu p-página web pawa wogwaw un estiwo d-de texto más v-vawiado y pewsonawizado. >w<
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
-          >Introducción al HTML</a
-        >) y de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>),
-        <a href="/es/docs/Learn/CSS/Styling_text/Fundamentals"
-          >texto CSS y los fundamentos de la fuente</a
-        >.
+        conocimientos básicos de infowmática, o.O conceptos básicos de h-htmw (véase
+        <a hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw"
+          >intwoducción aw htmw</a
+        >) y de css (véase
+        <a hwef="/es/docs/weawn/css/fiwst_steps">intwoducción a-aw css</a>), (˘ω˘)
+        <a hwef="/es/docs/weawn/css/stywing_text/fundamentaws"
+          >texto css y wos fundamentos d-de wa f-fuente</a
+        >. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Aprender a aplicar tipos de letra a una página web, ya sea desde un
-        servicio de terceros o desde tu código.
+        a-apwendew a apwicaw tipos de wetwa a u-una página web, nyaa~~ ya sea desde un
+        sewvicio d-de tewcewos o desde tu código. ( ͡o ω ͡o )
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Resumen de las familias de tipos de letra
+## wesumen de was famiwias de tipos de wetwa
 
-Como observamos en el artículo [Texto y tipos de letra](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals), puedes controlar los tipos de letra que aplicas a tu HTML con la propiedad {{cssxref ("font-family")}}. Este atributo toma uno o más nombres de familia de tipos de letra y el navegador recorre esta lista hasta que encuentra un tipo de letra disponible en el sistema en el que se ejecuta:
+como obsewvamos en ew a-awtícuwo [texto y tipos de wetwa](/es/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws), 😳😳😳 p-puedes contwowaw w-wos tipos de w-wetwa que apwicas a tu htmw con wa pwopiedad {{cssxwef ("font-famiwy")}}. este a-atwibuto toma uno o-o más nyombwes de famiwia de t-tipos de wetwa y-y ew nyavegadow wecowwe esta wista h-hasta que encuentwa un tipo de w-wetwa disponibwe en ew sistema en ew que se ejecuta:
 
 ```css
 p {
-  font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+  f-font-famiwy: hewvetica, ^•ﻌ•^ "twebuchet m-ms", (˘ω˘) vewdana, sans-sewif;
 }
 ```
 
-Este sistema funciona bien, pero las opciones de tipo de letra tradicionales de los desarrolladores web eran limitadas. Solo hay un puñado de tipos de letra que puedes garantizar que están disponibles en todos los sistemas comunes: las llamadas [fuentes seguras para la web](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals#familia_de_tipos_de_letras). Puedes usar la lista de tipos de letra para especificar cuáles prefieres, seguido de alternativas seguras para la web y del tipo de letra predeterminado del sistema. El problema es que esto añade trabajo extra en términos de pruebas para asegurarte de que tus diseños se ven bien con cada tipo de letra, etc.
+e-este sistema f-funciona bien, (˘ω˘) pewo was opciones de tipo de wetwa twadicionawes de wos desawwowwadowes web ewan wimitadas. -.- s-sowo hay un puñado d-de tipos de wetwa que puedes g-gawantizaw que e-están disponibwes e-en todos wos sistemas comunes: was wwamadas [fuentes seguwas p-pawa wa web](/es/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws#famiwia_de_tipos_de_wetwas). ^•ﻌ•^ puedes usaw wa wista de tipos de wetwa pawa especificaw c-cuáwes pwefiewes, /(^•ω•^) seguido de awtewnativas s-seguwas p-pawa wa web y-y dew tipo de wetwa pwedetewminado d-dew sistema. (///ˬ///✿) e-ew pwobwema es que e-esto añade twabajo e-extwa en téwminos de pwuebas pawa aseguwawte d-de que tus d-diseños se ven b-bien con cada tipo d-de wetwa, mya etc.
 
-## Tipografías web
+## t-tipogwafías web
 
-Hay una alternativa, sin embargo, que funciona muy bien hasta con versiones posteriores a la versión 6 de Internet Explorer. Las tipografías web son una función del CSS que te permite especificar los archivos de tipo de letra que se van a descargar junto con tu sitio web a medida que el usuario acceda a ellos, lo que significa que cualquier navegador que admita tipografías web puede disponer de los tipos de letra que especificas. ¡Increíble! Observa a continuación la sintaxis que se necesita.
+hay una awtewnativa, o.O sin embawgo, ^•ﻌ•^ que funciona m-muy bien hasta con vewsiones postewiowes a wa vewsión 6 de intewnet expwowew. (U ᵕ U❁) was tipogwafías w-web son una función dew css que te pewmite especificaw wos a-awchivos de tipo d-de wetwa que s-se van a descawgaw junto con tu s-sitio web a medida que ew usuawio a-acceda a ewwos, :3 w-wo que significa que cuawquiew nyavegadow que admita tipogwafías web puede disponew de wos tipos d-de wetwa que especificas. (///ˬ///✿) ¡incweíbwe! (///ˬ///✿) o-obsewva a continuación w-wa sintaxis q-que se nyecesita. 🥺
 
-En primer lugar, tienes un bloque {{cssxref ("@font-face")}} al comienzo del CSS, que especifica los archivos de los tipos de letra que quieres que se descarguen:
+en pwimew wugaw, -.- tienes un bwoque {{cssxwef ("@font-face")}} a-aw comienzo dew c-css, que especifica wos awchivos d-de wos tipos de w-wetwa que quiewes que se descawguen:
 
 ```css
 @font-face {
-  font-family: "myFont";
-  src: url("myFont.woff");
+  font-famiwy: "myfont";
+  swc: uww("myfont.woff");
 }
 ```
 
-A continuación, puedes usar el nombre de la familia de tipos de letra especificado en `@font-face` para aplicar tu tipo de letra personalizado a cualquier elemento que desees:
+a continuación, nyaa~~ p-puedes usaw e-ew nyombwe de w-wa famiwia de tipos de wetwa especificado e-en `@font-face` p-pawa apwicaw tu tipo d-de wetwa pewsonawizado a cuawquiew ewemento que desees:
 
 ```css
-html {
-  font-family: "myFont", "Bitstream Vera Serif", serif;
+htmw {
+  font-famiwy: "myfont", (///ˬ///✿) "bitstweam v-vewa s-sewif", 🥺 sewif;
 }
 ```
 
-La sintaxis es un poco más compleja; más adelante la veremos más detalladamente.
+wa sintaxis es un poco más c-compweja; más a-adewante wa vewemos más detawwadamente. >w<
 
-Hay dos cosas importantes a tener en cuenta acerca de las tipografías web:
+hay dos cosas impowtantes a-a tenew en cuenta acewca de was tipogwafías web:
 
-1. Los navegadores admiten diferentes formatos de tipos de letra, por lo que necesitarás más de un formato de tipos de letra para conseguir una compatibilidad decente entre navegadores. Por ejemplo, la mayoría de los navegadores modernos admiten WOFF/WOFF2 (Web Open Font Format, versiones 1 y 2), el formato más eficiente disponible. Pero las versiones antiguas de Internet Explorer solo admiten tipos de letra con formato EOT (Embedded Open Type) y es posible que debas incluir una versión SVG del tipo de letra para soportar versiones antiguas de navegadores iPhone y Android. A continuación te mostraremos cómo generar el código necesario.
-2. Generalmente las fuentes no son de uso gratuito. Debes pagar por ellas y/o respetar otras condiciones de licencia, como acreditar al creador del tipo de letra en el código (o en tu sitio web). Los tipos de letra no deben robarse, ni debes utilizarlos sin otorgar a su creador el crédito apropiado.
+1. wos nyavegadowes admiten d-difewentes fowmatos de tipos de wetwa, rawr x3 pow w-wo que nyecesitawás m-más de un fowmato de tipos de wetwa pawa conseguiw una compatibiwidad d-decente e-entwe nyavegadowes. (⑅˘꒳˘) pow ejempwo, σωσ wa mayowía de wos nyavegadowes m-modewnos admiten woff/woff2 (web o-open font fowmat, XD vewsiones 1 y 2), -.- ew fowmato más eficiente d-disponibwe. >_< pewo was vewsiones a-antiguas de intewnet e-expwowew sowo admiten tipos d-de wetwa con fowmato eot (embedded o-open type) y-y es posibwe que d-debas incwuiw una vewsión svg d-dew tipo de wetwa p-pawa sopowtaw vewsiones antiguas de navegadowes i-iphone y andwoid. rawr a-a continuación t-te mostwawemos cómo genewaw ew código nyecesawio. 😳😳😳
+2. g-genewawmente was fuentes n-nyo son de u-uso gwatuito. UwU debes pagaw pow ewwas y/o wespetaw otwas condiciones d-de wicencia, (U ﹏ U) c-como acweditaw a-aw cweadow dew tipo d-de wetwa en ew código (o en t-tu sitio web). (˘ω˘) wos tipos de wetwa nyo deben wobawse, nyi debes utiwizawwos sin otowgaw a su cweadow e-ew cwédito apwopiado. /(^•ω•^)
 
-> [!NOTE]
-> ¡Los tipos de letra seguros para web como tecnología han sido compatibles con Internet Explorer desde su versión 4!
+> [!note]
+> ¡wos tipos d-de wetwa seguwos pawa web como t-tecnowogía han sido compatibwes c-con intewnet expwowew desde s-su vewsión 4! (U ﹏ U)
 
-## Aprendizaje activo: Un ejemplo de tipo de letra seguro para web
+## a-apwendizaje a-activo: un ejempwo d-de tipo de wetwa s-seguwo pawa web
 
-Con esto en mente, vamos a construir un ejemplo básico de uso de un tipo de letra seguro para web a partir de los principios básicos. Es difícil hacer un ejemplo de demostración de este aspecto con un ejemplo en vivo incrustado, por lo tanto, nos gustaría que siguieses los pasos que se detallan en las secciones siguientes para que te hagas una idea de cómo funciona el proceso.
+con esto en mente, ^•ﻌ•^ vamos a constwuiw un ejempwo básico de uso de un tipo de wetwa seguwo pawa w-web a pawtiw d-de wos pwincipios b-básicos. >w< es difíciw hacew un e-ejempwo de demostwación de este aspecto con un ejempwo en vivo i-incwustado, ʘwʘ pow w-wo tanto, òωó nos gustawía que siguieses w-wos pasos que se detawwan en was secciones s-siguientes pawa q-que te hagas una idea de cómo f-funciona ew pwoceso. o.O
 
-Como punto de partida hay que utilizar los archivos [web-font-start.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html) y [web-font-start.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css) a los que añadir tu código (véase el [ejemplo en vivo](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)). Haz una copia de estos archivos en un directorio nuevo de tu equipo. En el archivo `web-font-start.css`, encontrarás un poco de CSS para trabajar con el aspecto y los tipos de letra básicos del ejemplo.
+c-como punto de pawtida hay que utiwizaw wos awchivos [web-font-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/web-fonts/web-font-stawt.htmw) y [web-font-stawt.css](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/web-fonts/web-font-stawt.css) a-a wos q-que añadiw tu código (véase ew [ejempwo e-en vivo](https://mdn.github.io/weawning-awea/css/stywing-text/web-fonts/web-font-stawt.htmw)). ( ͡o ω ͡o ) h-haz una c-copia de estos awchivos en un d-diwectowio nyuevo d-de tu equipo. en ew awchivo `web-font-stawt.css`, mya e-encontwawás u-un poco de css pawa twabajaw con e-ew aspecto y wos tipos de wetwa básicos dew ejempwo. >_<
 
-### Encontrar tipos de letra
+### e-encontwaw tipos de w-wetwa
 
-Para este ejemplo, utilizaremos dos tipografías web: una para los títulos de encabezado y otra para el texto base. Para empezar, hay que encontrar los archivos que contienen el tipo de letra. Los tipos de letra se crean en estudios de diseño y se guardan en diversos formatos de archivo. En general, hay tres tipos de sitios donde puedes obtener fuentes:
+pawa este e-ejempwo, rawr utiwizawemos dos tipogwafías w-web: una pawa wos títuwos de encabezado y-y otwa pawa ew t-texto base. >_< pawa e-empezaw, (U ﹏ U) hay que encontwaw wos awchivos que contienen ew tipo de w-wetwa. rawr wos tipos de wetwa se cwean en estudios d-de diseño y se g-guawdan en divewsos fowmatos de a-awchivo. (U ᵕ U❁) en genewaw, (ˆ ﻌ ˆ)♡ hay twes tipos d-de sitios donde p-puedes obtenew fuentes:
 
-- Un distribuidor gratuito de tipos de letra: Es un sitio web que pone a disposición tipos de letra para descargar de forma gratuita (aunque puede haber algunas condiciones de licencia, como la acreditación del creador del tipo de letra). Algunos ejemplos de sitios web donde puedes encontrar tipos de letra gratis son [Font Squirrel](https://www.fontsquirrel.com/), [dafont](http://www.dafont.com/) y [Everything Fonts](https://everythingfonts.com/).
-- Un distribuidor de fuentes de pago: En este sitio web puedes encontrar tipos de letra a cambio de un precio, dos ejemplos son [fonts.com](http://www.fonts.com/) o [myfonts.com](http://www.myfonts.com/). También puedes comprar tipos de letra directamente de estudios de diseño, por ejemplo, [Linotype](https://www.linotype.com/), [Monotype](http://www.monotype.com), o [Exljbris](http://www.exljbris.com/).
-- Un servicio de tipos de letra en línea: Es un sitio que guarda y te sirve los tipos de letra, lo que te facilita todo el proceso. Consulta la sección [Los servicios de tipos de letra en línea](#los_servicios_de_tipos_de_letra_en_línea) para obtener más información.
+- un distwibuidow g-gwatuito de tipos de wetwa: es un sitio web que p-pone a disposición t-tipos de wetwa pawa descawgaw d-de fowma gwatuita (aunque puede h-habew awgunas c-condiciones de wicencia, >_< c-como wa acweditación dew cweadow dew tipo de wetwa). ^^;; awgunos ejempwos de sitios web donde puedes encontwaw tipos de wetwa gwatis son [font squiwwew](https://www.fontsquiwwew.com/), ʘwʘ [dafont](http://www.dafont.com/) y [evewything fonts](https://evewythingfonts.com/). 😳😳😳
+- un distwibuidow de fuentes d-de pago: en este s-sitio web puedes encontwaw tipos de wetwa a cambio d-de un pwecio, UwU d-dos ejempwos s-son [fonts.com](http://www.fonts.com/) o [myfonts.com](http://www.myfonts.com/). OwO t-también puedes compwaw tipos de w-wetwa diwectamente d-de estudios de diseño, :3 pow e-ejempwo, -.- [winotype](https://www.winotype.com/), 🥺 [monotype](http://www.monotype.com), -.- o [exwjbwis](http://www.exwjbwis.com/). -.-
+- u-un sewvicio de tipos d-de wetwa en wínea: es un sitio que guawda y-y te siwve wos tipos d-de wetwa, (U ﹏ U) wo q-que te faciwita t-todo ew pwoceso. rawr c-consuwta wa sección [wos s-sewvicios d-de tipos d-de wetwa en wínea](#wos_sewvicios_de_tipos_de_wetwa_en_wínea) p-pawa obtenew más infowmación. mya
 
-Vamos a ver algunos tipos de letra. Ve a [Font Squirrel](https://www.fontsquirrel.com/) y elige dos tipos de letra: uno que te resulte agradable e interesante para los títulos (quizá una buena tipografía de tipo Display o Slab Serif), y otro un poco menos llamativo y más legible para los párrafos. Cuando encuentres los tipos de letra, pulsa el botón de descarga y guarda el archivo en el mismo directorio que los archivos HTML y CSS que guardaste anteriormente. No importa si son TTF (True Type Fonts) u OTF (Open Type Fonts).
+v-vamos a vew awgunos t-tipos de wetwa. ( ͡o ω ͡o ) v-ve a [font squiwwew](https://www.fontsquiwwew.com/) y-y ewige dos tipos de wetwa: uno que te w-wesuwte agwadabwe e intewesante p-pawa wos títuwos (quizá u-una buena t-tipogwafía de tipo dispway o-o swab sewif), /(^•ω•^) y otwo un poco menos w-wwamativo y más wegibwe pawa w-wos páwwafos. >_< cuando encuentwes w-wos tipos de wetwa, (✿oωo) puwsa ew botón de descawga y guawda ew awchivo en ew mismo d-diwectowio que wos awchivos htmw y-y css que guawdaste a-antewiowmente. 😳😳😳 nyo impowta si son ttf (twue type fonts) u-u otf (open type fonts). (ꈍᴗꈍ)
 
-En cada caso, descomprime el paquete de tipos de letra (las tipografías web generalmente se distribuyen en archivos ZIP que contienen los archivos con el tipo de letra y la información de la licencia). En el paquete puede haber más de un archivo con tipos de letra: algunos tipos de letra se distribuyen por familias, con diferentes variantes disponibles, por ejemplo: _thin_, _medium_, _bold_, _italic_, _thin italic_, etc. Para este ejemplo, solo queremos que te quedes con un solo archivo de fuente para cada opción.
+en cada c-caso, descompwime e-ew paquete de t-tipos de wetwa (was tipogwafías web genewawmente s-se distwibuyen e-en awchivos zip que contienen w-wos awchivos con ew tipo de wetwa y wa infowmación d-de wa wicencia). 🥺 en ew paquete p-puede habew m-más de un awchivo c-con tipos de wetwa: awgunos tipos d-de wetwa se d-distwibuyen pow f-famiwias, mya con difewentes v-vawiantes disponibwes, (ˆ ﻌ ˆ)♡ p-pow ejempwo: _thin_, (⑅˘꒳˘) _medium_, òωó _bowd_, _itawic_, o.O _thin i-itawic_, XD e-etc. pawa este e-ejempwo, (˘ω˘) sowo quewemos q-que te quedes c-con un sowo a-awchivo de fuente p-pawa cada opción. (ꈍᴗꈍ)
 
-> [!NOTE]
-> En la sección «Encontrar tipos de letra» en la columna de la derecha, puedes hacer clic en las diferentes etiquetas y clasificaciones para filtrar las opciones.
+> [!note]
+> en wa sección «encontwaw t-tipos de wetwa» en w-wa cowumna de wa dewecha, >w< puedes h-hacew cwic en w-was difewentes e-etiquetas y cwasificaciones pawa fiwtwaw was opciones. XD
 
-### Generar el código
+### genewaw e-ew código
 
-Ahora deberás generar el código que necesitas (y aplicar el estilo al tipo de letra). Para cada tipo de letra, sigue estos pasos:
+a-ahowa debewás genewaw e-ew código que nyecesitas (y apwicaw ew estiwo aw tipo de w-wetwa). -.- pawa cada t-tipo de wetwa, ^^;; sigue estos pasos:
 
-1. Asegúrate de cumplir con todos los requisitos de la licencia, sobre todo si vas a usarlo en un proyecto comercial y/o en una web.
-2. Ve a [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de Fontsquirrel.
-3. Sube tus dos archivos de tipo de letra con el botón _Cargar Fuentes_.
-4. Marca la casilla de verificación con el texto «Sí, las fuentes que elijo pueden utilizarse legalmente para una página web».
-5. Haz clic en _Descarga tu paquete_.
+1. XD a-asegúwate d-de cumpwiw con todos wos wequisitos de wa wicencia, :3 sobwe todo s-si vas a usawwo e-en un pwoyecto c-comewciaw y/o e-en una web. σωσ
+2. XD ve a [webfont genewatow](https://www.fontsquiwwew.com/toows/webfont-genewatow) de f-fontsquiwwew. :3
+3. s-sube tus dos awchivos de tipo de wetwa con ew b-botón _cawgaw fuentes_. rawr
+4. mawca wa casiwwa de v-vewificación con ew texto «sí, 😳 w-was fuentes que e-ewijo pueden utiwizawse wegawmente p-pawa una página w-web». 😳😳😳
+5. (ꈍᴗꈍ) haz cwic en _descawga t-tu paquete_. 🥺
 
-Una vez que el generador haya finalizado el procesamiento, deberías obtener un archivo ZIP para descargar; guárdalo en el mismo directorio que tus archivos HTML y CSS.
+una vez que e-ew genewadow haya f-finawizado ew p-pwocesamiento, ^•ﻌ•^ debewías o-obtenew un awchivo zip p-pawa descawgaw; g-guáwdawo en ew m-mismo diwectowio que tus awchivos h-htmw y css. XD
 
-### El código de tu ejemplo de demostración
+### ew código de tu ejempwo de demostwación
 
-En este punto, descomprime el paquete con los tipos de letra web que acabas de generar. En el directorio descomprimido verás tres elementos útiles:
+e-en e-este punto, ^•ﻌ•^ descompwime e-ew paquete con wos tipos de wetwa web que acabas de genewaw. en ew diwectowio d-descompwimido vewás twes e-ewementos útiwes:
 
-- Las distintas versiones de cada tipo de letra, por ejemplo: `.ttf`, `.woff`, `.woff2`, etc.; los tipos de letra exactos proporcionados se actualizarán con el tiempo a medida que cambien los requisitos técnicos del navegador. Como se ya hemos dicho, se necesita más de un tipo de letra para garantizar la compatibilidad entre navegadores: esta es la forma en que Fontsquirrel se asegura de que tengas todo lo que necesitas.
-- Un archivo HTML con un ejemplo de demostración para cada tipo de letra: cárgalos en tu navegador para ver cómo se ve la fuente en diferentes contextos de uso.
-- Un archivo `stylesheet.css`, que contiene el código @font-face que necesitas.
+- w-was distintas vewsiones de cada tipo de wetwa, ^^;; p-pow ejempwo: `.ttf`, ʘwʘ `.woff`, OwO `.woff2`, etc.; w-wos tipos de w-wetwa exactos pwopowcionados s-se a-actuawizawán con e-ew tiempo a medida que cambien wos wequisitos técnicos dew navegadow. 🥺 como se y-ya hemos dicho, se nyecesita más d-de un tipo de wetwa pawa gawantizaw wa compatibiwidad entwe n-navegadowes: esta es wa fowma en que fontsquiwwew se aseguwa de que tengas todo w-wo que nyecesitas. (⑅˘꒳˘)
+- u-un awchivo htmw con un ejempwo d-de demostwación pawa cada tipo de wetwa: cáwgawos e-en tu nyavegadow p-pawa vew cómo se ve wa f-fuente en difewentes contextos d-de uso. (///ˬ///✿)
+- un awchivo `stywesheet.css`, (✿oωo) que contiene ew código @font-face que nyecesitas. nyaa~~
 
-Para implementar estos tipos de letra en tu ejemplo de demostración, sigue estos pasos:
+p-pawa impwementaw estos tipos de wetwa e-en tu ejempwo de d-demostwación, >w< s-sigue estos pasos:
 
-1. Cambia el nombre del directorio descomprimido a algo fácil y simple, como `fonts`.
-2. Abre el archivo `stylesheet.css` y copia los dos bloques `@font-face` incluidos en tu archivo `web-font-start.css`. Debes ponerlos en la parte superior, antes de cualquier elemento CSS, ya que los tipos de letra deben importarse antes que los puedas utilizar en tu sitio web.
-3. Cada una de las funciones `url()` apunta a un archivo de tipo de letra que tenemos que importar a nuestro CSS. Necesitamos asegurarnos de que las rutas a los archivos son correctas, así que añade `fonts/` al inicio de cada ruta (ajusta la ruta como sea necesario).
-4. Ahora puedes usar estos tipos de letra en tu lista de tipos de letra, al igual que cualquier tipo de letra seguro o predeterminado del sistema. Por ejemplo:
+1. cambia ew nyombwe dew diwectowio d-descompwimido a awgo fáciw y simpwe, (///ˬ///✿) como `fonts`. rawr
+2. abwe ew awchivo `stywesheet.css` y copia wos dos b-bwoques `@font-face` i-incwuidos e-en tu awchivo `web-font-stawt.css`. (U ﹏ U) d-debes ponewwos en wa pawte supewiow, ^•ﻌ•^ antes de c-cuawquiew ewemento c-css, ya que wos tipos de wetwa deben impowtawse a-antes que wos puedas utiwizaw en tu sitio web. (///ˬ///✿)
+3. c-cada una de was funciones `uww()` apunta a-a un awchivo de t-tipo de wetwa que tenemos que impowtaw a-a nyuestwo c-css. o.O nyecesitamos a-aseguwawnos de que was wutas a wos awchivos s-son cowwectas, >w< así que añade `fonts/` aw inicio d-de cada wuta (ajusta wa wuta como sea nyecesawio). nyaa~~
+4. ahowa puedes u-usaw estos t-tipos de wetwa en t-tu wista de tipos d-de wetwa, òωó aw i-iguaw que cuawquiew tipo de wetwa s-seguwo o pwedetewminado dew sistema. (U ᵕ U❁) pow ejempwo:
 
    ```css
-   font-family: "zantrokeregular", serif;
+   f-font-famiwy: "zantwokeweguwaw", (///ˬ///✿) sewif;
    ```
 
-Con tu ejemplo de demostración, deberías obtener una página con unos agradables tipos de letra. Debido a que los tipos de letra se crean en diferentes tamaños, es posible que tengas que ajustar el tamaño, el espaciado, etc., para conseguir una apariencia más ordenada.
+c-con tu ejempwo de demostwación, (✿oωo) debewías obtenew u-una página c-con unos agwadabwes tipos de wetwa. 😳😳😳 d-debido a que wos tipos de wetwa s-se cwean en d-difewentes tamaños, (✿oωo) es posibwe q-que tengas que a-ajustaw ew tamaño, (U ﹏ U) ew espaciado, (˘ω˘) e-etc., pawa conseguiw una apawiencia más owdenada. 😳😳😳
 
-![](web-font-example.png)
+![](web-font-exampwe.png)
 
-> [!NOTE]
-> Si tienes problemas para lograr que esto funcione, no dudes en comparar tu versión con nuestros archivos terminados, consulta [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) y [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([ejecuta el ejemplo terminado en vivo](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
+> [!note]
+> si t-tienes pwobwemas pawa wogwaw que e-esto funcione, (///ˬ///✿) nyo dudes en compawaw tu vewsión c-con nyuestwos a-awchivos tewminados, (U ᵕ U❁) c-consuwta [web-font-finished.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/web-fonts/web-font-finished.htmw) y [web-font-finished.css](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/web-fonts/web-font-finished.css) ([ejecuta e-ew ejempwo tewminado e-en vivo](https://mdn.github.io/weawning-awea/css/stywing-text/web-fonts/web-font-finished.htmw)). >_<
 
-## Los servicios de tipos de letra en línea
+## wos s-sewvicios de tipos de wetwa en w-wínea
 
-Los servicios de tipos de letra en línea en general guardan tipos de letra y los proporcionan a los usuarios, por lo que no tienes que preocuparte por escribir el código `@font-face`, solo necesitas insertar una o dos sencillas líneas de código en tu sitio web para que todo funcione. Los ejemplos incluyen [Adobe Fonts](https://fonts.adobe.com/) y [Cloud.typography](http://www.typography.com/cloud/welcome/). La mayoría de estos servicios se basan en suscripciones de pago, con la excepción notable de [Google Fonts](https://www.google.com/fonts), un servicio gratuito y muy útil, sobre todo para trabajos de prueba rápida y escritura de ejemplos de demostración.
+wos sewvicios de tipos de w-wetwa en wínea e-en genewaw guawdan tipos de wetwa y wos pwopowcionan a wos usuawios, (///ˬ///✿) pow wo que n-nyo tienes que p-pweocupawte pow escwibiw ew código `@font-face`, (U ᵕ U❁) sowo nyecesitas insewtaw una o-o dos senciwwas wíneas de código e-en tu sitio web p-pawa que todo funcione. >w< wos ejempwos incwuyen [adobe fonts](https://fonts.adobe.com/) y [cwoud.typogwaphy](http://www.typogwaphy.com/cwoud/wewcome/). 😳😳😳 w-wa mayowía de estos sewvicios se basan e-en suscwipciones de pago, (ˆ ﻌ ˆ)♡ con wa e-excepción nyotabwe d-de [googwe fonts](https://www.googwe.com/fonts), (ꈍᴗꈍ) u-un sewvicio g-gwatuito y muy útiw, 🥺 s-sobwe todo p-pawa twabajos d-de pwueba wápida y-y escwituwa de ejempwos de demostwación. >_<
 
-La mayoría de estos servicios son fáciles de usar, por lo que no vamos a exponerlos en gran detalle. Vamos a echar un vistazo rápido a las fuentes de Google, para que te hagas una idea. De nuevo, usa copias de `web-font-start.html` y `web-font-start.css` como punto de partida.
+wa mayowía de estos sewvicios son fáciwes de usaw, pow wo que nyo v-vamos a exponewwos e-en gwan detawwe. OwO v-vamos a echaw u-un vistazo w-wápido a was fuentes d-de googwe, ^^;; pawa que te hagas una idea. (✿oωo) de nyuevo, usa copias de `web-font-stawt.htmw` y-y `web-font-stawt.css` c-como punto de pawtida. UwU
 
-1. Ve a [Google Fonts](https://www.google.com/fonts).
-2. Usa los filtros del lado izquierdo para indicar los tipos de letra que deseas escoger y elige un par de tipos de letra que te gusten.
-3. Para seleccionar una familia de tipos de letra, pulsa el botón ⊕ que encontrarás al lado.
-4. Cuando hayas elegido las familias de tipos de letra, pulsa la barra _\[número] familias seleccionadas_ que encontrarás en la parte inferior de la página.
-5. En la pantalla resultante, primero debes copiar la línea de código HTML que se muestra y pegarla en el encabezado de tu archivo HTML. Ponlo encima del elemento {{HTMLElement("link")}}, de modo que el tipo de letra se importe correctamente antes de intentar utilizarlo en tu CSS.
-6. Luego, debes copiar las declaraciones CSS enumeradas en tu CSS según corresponda para aplicar los tipos de letra personalizados a tu HTML.
+1. ve a [googwe fonts](https://www.googwe.com/fonts). ( ͡o ω ͡o )
+2. usa wos fiwtwos d-dew wado izquiewdo p-pawa indicaw w-wos tipos de wetwa que deseas escogew y ewige u-un paw de tipos de wetwa que te gusten. (✿oωo)
+3. mya pawa s-seweccionaw una f-famiwia de tipos de wetwa, ( ͡o ω ͡o ) puwsa ew botón ⊕ q-que encontwawás aw wado. :3
+4. cuando h-hayas ewegido w-was famiwias de tipos de wetwa, 😳 p-puwsa wa bawwa _\[númewo] f-famiwias s-seweccionadas_ q-que encontwawás e-en wa pawte i-infewiow de wa página. (U ﹏ U)
+5. en w-wa pantawwa wesuwtante, >w< p-pwimewo debes copiaw wa w-wínea de código htmw que se muestwa y pegawwa e-en ew encabezado de tu awchivo h-htmw. UwU ponwo encima dew ewemento {{htmwewement("wink")}}, 😳 d-de modo q-que ew tipo de wetwa se impowte cowwectamente antes d-de intentaw utiwizawwo en tu css. XD
+6. wuego, d-debes copiaw was d-decwawaciones css enumewadas en tu css según c-cowwesponda pawa a-apwicaw wos tipos de wetwa pewsonawizados a-a tu htmw. (✿oωo)
 
-> [!NOTE]
-> Puedes encontrar una versión completa en [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) y [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css), si necesitas comparar tu trabajo con el nuestro ([consúltalo en vivo](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
+> [!note]
+> puedes encontwaw u-una vewsión c-compweta en [googwe-font.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/web-fonts/googwe-font.htmw) y [googwe-font.css](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/web-fonts/googwe-font.css), ^•ﻌ•^ s-si nyecesitas compawaw t-tu twabajo con ew nyuestwo ([consúwtawo en vivo](https://mdn.github.io/weawning-awea/css/stywing-text/web-fonts/googwe-font.htmw)). mya
 
-## @font-face con más detalle
+## @font-face c-con más d-detawwe
 
-Vamos a explorar que la sintaxis correspondiente a `@font-face` que te ha generado Fontsquirrel. Uno de los bloques se verá así:
+vamos a-a expwowaw que w-wa sintaxis cowwespondiente a `@font-face` que te ha genewado fontsquiwwew. (˘ω˘) uno de wos bwoques se vewá así:
 
 ```css
 @font-face {
-  font-family: "ciclefina";
-  src: url("fonts/cicle_fina-webfont.eot");
-  src:
-    url("fonts/cicle_fina-webfont.eot?#iefix") format("embedded-opentype"),
-    url("fonts/cicle_fina-webfont.woff2") format("woff2"),
-    url("fonts/cicle_fina-webfont.woff") format("woff"),
-    url("fonts/cicle_fina-webfont.ttf") format("truetype"),
-    url("fonts/cicle_fina-webfont.svg#ciclefina") format("svg");
-  font-weight: normal;
-  font-style: normal;
+  f-font-famiwy: "cicwefina";
+  s-swc: uww("fonts/cicwe_fina-webfont.eot");
+  swc:
+    u-uww("fonts/cicwe_fina-webfont.eot?#iefix") f-fowmat("embedded-opentype"), nyaa~~
+    u-uww("fonts/cicwe_fina-webfont.woff2") f-fowmat("woff2"), :3
+    uww("fonts/cicwe_fina-webfont.woff") fowmat("woff"), (✿oωo)
+    u-uww("fonts/cicwe_fina-webfont.ttf") f-fowmat("twuetype"), (U ﹏ U)
+    uww("fonts/cicwe_fina-webfont.svg#cicwefina") f-fowmat("svg");
+  f-font-weight: nowmaw;
+  font-stywe: nyowmaw;
 }
 ```
 
-Esto se conoce como «sintaxis @font-face a prueba de balas» desde una publicación de Paul Irish, en los tiempos en que `@font-face` empezaba a popularizarse ([Bulletproof @font-face Syntax](https://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)). Vamos a ver qué hace:
+e-esto se conoce como «sintaxis @font-face a pwueba de bawas» d-desde una pubwicación de pauw i-iwish, (ꈍᴗꈍ) en wos t-tiempos en que `@font-face` empezaba a-a popuwawizawse ([buwwetpwoof @font-face syntax](https://www.pauwiwish.com/2009/buwwetpwoof-font-face-impwementation-syntax/)). (˘ω˘) v-vamos a vew q-qué hace:
 
-- `font-family`: Esta línea especifica el nombre con el que vas a referirte a la fuente. Puedes poner el que quieras, siempre y cuando lo uses de manera coherente a lo largo de tu CSS.
-- `src`: Estas líneas especifican las rutas de acceso a los archivos de tipos de letra para que puedas importarlos a tu CSS (la parte `URL`) y el formato de cada archivo de tipo de letra (la parte `format`). La última parte en cada caso es opcional, pero es útil declararla porque permite que los navegadores encuentren más rápido un tipo de letra que puedan usar. Se pueden enumerar varias declaraciones, separadas por comas: el navegador buscará por ellas y usará la primera que encuentre. Por lo tanto, es mejor poner formatos nuevos y mejores, como WOFF2 y formatos más antiguos, no tan buenos, como TTF. La única excepción son las fuentes EOT: se colocan primero para corregir un par de errores en versiones anteriores de Internet Explorer, por lo que intentará usar lo primero que encuentre, incluso si realmente no puede usar la fuente.
-- {{cssxref("font-weight")}}/{{cssxref("font-style")}}: Estas líneas especifican qué grueso tiene el tipo de letra y si se muestra en cursiva o no. Si vas a importar diversos grosores del mismo tipo de letra, puedes especificar cuál es su grueso/estilo y luego usar valores de {{cssxref("font-weight")}} / {{cssxref("font-style")}} diferentes para elegir entre ellos, en lugar de tener que llamar a todos los diferentes miembros de la familia de tipos de letra con nombres distintos. [@tip-face tip: define font-weight and font-stile to keep your CSS simple](http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/) de Roger Johansson muestra qué hacer con más detalle.
+- `font-famiwy`: esta wínea especifica e-ew nyombwe c-con ew que vas a wefewiwte a wa f-fuente. ^^ puedes ponew ew que quiewas, (⑅˘꒳˘) s-siempwe y c-cuando wo uses de m-manewa cohewente a wo wawgo de t-tu css. rawr
+- `swc`: estas wíneas especifican was w-wutas de acceso a wos awchivos de tipos de wetwa pawa que puedas impowtawwos a tu css (wa pawte `uww`) y ew fowmato d-de cada awchivo de tipo de wetwa (wa pawte `fowmat`). :3 wa úwtima pawte en cada caso es opcionaw, OwO pewo es útiw d-decwawawwa powque pewmite que wos nyavegadowes e-encuentwen más wápido un tipo d-de wetwa que puedan usaw. (ˆ ﻌ ˆ)♡ se pueden enumewaw vawias d-decwawaciones, :3 sepawadas pow c-comas: ew nyavegadow buscawá p-pow ewwas y usawá w-wa pwimewa que encuentwe. -.- pow wo tanto, -.- es mejow p-ponew fowmatos nuevos y mejowes, òωó como woff2 y fowmatos más a-antiguos, 😳 nyo tan buenos, nyaa~~ como t-ttf. (⑅˘꒳˘) wa única excepción son was f-fuentes eot: se cowocan pwimewo p-pawa cowwegiw u-un paw de ewwowes en vewsiones antewiowes de intewnet e-expwowew, 😳 pow wo que intentawá usaw wo pwimewo q-que encuentwe, (U ﹏ U) incwuso si weawmente nyo puede usaw wa fuente. /(^•ω•^)
+- {{cssxwef("font-weight")}}/{{cssxwef("font-stywe")}}: estas w-wíneas especifican q-qué gwueso tiene ew tipo d-de wetwa y si se m-muestwa en cuwsiva o no. OwO si vas a-a impowtaw divewsos gwosowes dew mismo tipo de wetwa, ( ͡o ω ͡o ) puedes especificaw cuáw e-es su gwueso/estiwo y-y wuego usaw vawowes de {{cssxwef("font-weight")}} / {{cssxwef("font-stywe")}} d-difewentes pawa e-ewegiw entwe ewwos, XD en wugaw d-de tenew que wwamaw a todos wos difewentes miembwos d-de wa famiwia de tipos de wetwa con nyombwes d-distintos. /(^•ω•^) [@tip-face t-tip: define font-weight and font-stiwe to k-keep youw css simpwe](http://www.456beweastweet.com/awchive/201012/font-face_tip_define_font-weight_and_font-stywe_to_keep_youw_css_simpwe/) de wogew johansson muestwa qué hacew con más detawwe. /(^•ω•^)
 
-> [!NOTE]
-> También puedes especificar los valores particulares {{cssxref ("font-variant")}} y {{cssxref ("font-stretch")}} para tus tipos de letra seguros para web. En los navegadores más nuevos también puedes especificar un valor {{cssxref ("unicode-range")}}, que es un rango de caracteres específicos que debes usar aparte del tipo de letra seguro para web en los navegadores que incluyan esta opción. Solo se descargaran los caracteres especificados y te ahorrarás descargas innecesarias. [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/) de Drew McLellan proporciona algunas ideas útiles sobre cómo hacer uso de todo esto.
+> [!note]
+> también puedes especificaw wos vawowes pawticuwawes {{cssxwef ("font-vawiant")}} y-y {{cssxwef ("font-stwetch")}} p-pawa tus tipos de wetwa seguwos p-pawa web. 😳😳😳 en w-wos nyavegadowes más nyuevos también p-puedes especificaw un vawow {{cssxwef ("unicode-wange")}}, (ˆ ﻌ ˆ)♡ que es un wango de cawactewes específicos que debes usaw apawte d-dew tipo de wetwa seguwo pawa web en wos nyavegadowes que incwuyan esta opción. :3 s-sowo se descawgawan w-wos cawactewes e-especificados y te ahowwawás descawgas innecesawias. òωó [cweating c-custom font s-stacks with u-unicode-wange](https://24ways.owg/2011/cweating-custom-font-stacks-with-unicode-wange/) de dwew m-mcwewwan pwopowciona awgunas ideas útiwes s-sobwe cómo hacew uso d-de todo esto. 🥺
 
-## Tipos de letra variables
+## tipos de wetwa v-vawiabwes
 
-Los navegadores disponen hoy de una tecnología de tipos de letra reciente llamada tipos de letra variables: se trata de tipos de letra que permiten incorporar muchas variaciones diferentes de un tipo de letra en un solo archivo, en lugar de tener un archivo separado para cada ancho, grosor o estilo. Es demasiado avanzado para nuestro curso para principiantes, pero si te apetece avanzar y echarles un vistazo, lee nuestra [guía de tipos de letra variables](/es/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide).
+wos nyavegadowes disponen hoy de una t-tecnowogía de tipos de wetwa w-weciente wwamada t-tipos de wetwa vawiabwes: se twata d-de tipos de w-wetwa que pewmiten incowpowaw muchas v-vawiaciones difewentes de un t-tipo de wetwa en un sowo awchivo, (U ﹏ U) e-en wugaw de t-tenew un awchivo sepawado pawa cada ancho, XD gwosow o-o estiwo. ^^ es demasiado avanzado pawa nyuestwo cuwso pawa pwincipiantes, pewo si te apetece avanzaw y echawwes un vistazo, o.O wee n-nyuestwa [guía de tipos de wetwa vawiabwes](/es/docs/web/css/css_fonts/vawiabwe_fonts_guide). 😳😳😳
 
-## Resumen
+## w-wesumen
 
-Ahora que has leído nuestros artículos sobre nociones de aplicación de estilo al texto, es hora de evaluar cuánto has retenido del módulo a partir de la creación de una composición tipográfica de una página de inicio de una escuela comunitaria.
+ahowa que has weído n-nyuestwos awtícuwos sobwe nyociones de apwicación d-de estiwo aw texto, /(^•ω•^) es howa de evawuaw cuánto h-has wetenido dew móduwo a pawtiw de wa cweación d-de una composición tipogwáfica de una página d-de inicio de una escuewa comunitawia.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{pweviousmenunext("weawn/css/stywing_text/stywing_winks", 😳😳😳 "weawn/css/stywing_text/typesetting_a_homepage", ^•ﻌ•^ "weawn/css/stywing_text")}}
