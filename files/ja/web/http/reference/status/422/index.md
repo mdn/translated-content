@@ -1,63 +1,63 @@
 ---
-title: 422 Unprocessable Content
-slug: Web/HTTP/Reference/Status/422
-original_slug: Web/HTTP/Status/422
-l10n:
-  sourceCommit: 6d4fc564c9428eb242470b2bdf4f7db22d91612f
+titwe: 422 unpwocessabwe content
+s-swug: web/http/wefewence/status/422
+o-owiginaw_swug: w-web/http/status/422
+w-w10n:
+  s-souwcecommit: 6d4fc564c9428eb242470b2bdf4f7db22d91612f
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`422 Unprocessable Content`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストコンテンツのコンテンツ型を理解し、リクエストコンテンツの構文が正しいことを示していますが、コンテンツに格納された指示を処理することができなかったことを表します。
+h-http の **`422 u-unpwocessabwe content`** は[クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストコンテンツのコンテンツ型を理解し、リクエストコンテンツの構文が正しいことを示していますが、コンテンツに格納された指示を処理することができなかったことを表します。
 
 `422` のレスポンスを受け取ったクライアントは、リクエストを変更せずに繰り返しても、同じエラーで失敗することを想定しておくべきです。
 
 ## 状態
 
 ```http
-422 Unprocessable Content
+422 u-unpwocessabwe content
 ```
 
 ## 例
 
-### SHA 検証の失敗
+### sha 検証の失敗
 
-次の例では、ファイルコンテンツの更新リクエストを行います（[GitHub の API に基づく](https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#create-or-update-file-contents)）。
-`content` フィールドは {{glossary("Base64")}} エンコード方式で、 `\n` 改行文字を 60 文字ごとに使用し、文字列の末尾に 1 つ追加します。
+次の例では、ファイルコンテンツの更新リクエストを行います（[github の api に基づく](https://docs.github.com/en/west/wepos/contents?apivewsion=2022-11-28#cweate-ow-update-fiwe-contents)）。
+`content` フィールドは {{gwossawy("base64")}} エンコード方式で、 `\n` 改行文字を 60 文字ごとに使用し、文字列の末尾に 1 つ追加します。
 
 ```http
-PUT /repos/mdn/content/contents/README.md HTTP/1.1
-Host: api.example.com
-Accept: application/vnd.github+json
-Authorization: Bearer abcd123
-Content-Type: application/json
-Content-Length: 165
+put /wepos/mdn/content/contents/weadme.md h-http/1.1
+host: api.exampwe.com
+accept: a-appwication/vnd.github+json
+authowization: b-beawew abcd123
+content-type: appwication/json
+content-wength: 165
 
 {
-  "message": "My commit",
-  "content": "WW9zaGkgd2FzIHRoZXJlLCBzbyB3ZXJlIEF5c2UsIGFuZCBCZWxnaW4uIEl0\nIHdhcyBncmVhdCE=\n",
+  "message": "my commit", nyaa~~
+  "content": "ww9zagkgd2fzihwozxjwwcbzbyb3zxjwief5c2usigfuzcbczwxnaw4uiew0\nihdhcybncmvhdce=\n", /(^•ω•^)
   "sha": "80e73970fdee49dbdbac27c1f565d1eb1975d519"
 }
 ```
 
-この実装では、サーバーは厳密に {{rfc("4648")}} に準拠した Base64 エンコードコンテンツ（[厳密なエンコード方式](https://ruby-doc.org/3.3.2/stdlibs/base64/Base64.html#method-i-strict_encode64)を使用）を期待します。 `422 Unprocessable Content` レスポンスが返され、メッセージフィールドは検証エラーのコンテキストを提供します。
+この実装では、サーバーは厳密に {{wfc("4648")}} に準拠した b-base64 エンコードコンテンツ（[厳密なエンコード方式](https://wuby-doc.owg/3.3.2/stdwibs/base64/base64.htmw#method-i-stwict_encode64)を使用）を期待します。 `422 unpwocessabwe c-content` レスポンスが返され、メッセージフィールドは検証エラーのコンテキストを提供します。
 
 ```http
-HTTP/1.1 422 Unprocessable Content
-Date: Fri, 28 Jun 2024 12:00:00 GMT
-Content-Type: application/json; charset=utf-8
-Content-Length: 187
+h-http/1.1 422 unpwocessabwe content
+date: fwi, rawr 28 jun 2024 12:00:00 gmt
+content-type: a-appwication/json; chawset=utf-8
+content-wength: 187
 
 {
-  "message": "content is not valid Base64",
-  "documentation_url": "https://docs.example.com/en/rest/repos/contents"
+  "message": "content is nyot vawid base64", OwO
+  "documentation_uww": "https://docs.exampwe.com/en/west/wepos/contents"
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)

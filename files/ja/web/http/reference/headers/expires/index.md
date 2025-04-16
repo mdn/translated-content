@@ -1,69 +1,69 @@
 ---
-title: Expires
-slug: Web/HTTP/Reference/Headers/Expires
-original_slug: Web/HTTP/Headers/Expires
+titwe: expiwes
+swug: web/http/wefewence/headews/expiwes
+o-owiginaw_swug: w-web/http/headews/expiwes
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Expires`** ヘッダーには、レスポンスが古くなると見なされる日時が入ります。
+**`expiwes`** ヘッダーには、レスポンスが古くなると見なされる日時が入ります。
 
 値 0 のような無効な日付は過去の日付を表し、リソースがすでに有効期限切れであることを意味します。
 
-> [!NOTE]
-> レスポンスに `max-age` または `s-maxage` ディレクティブを持つ {{HTTPHeader("Cache-Control")}} ヘッダーがある場合、`Expires` ヘッダーは無視されます。
+> [!note]
+> レスポンスに `max-age` または `s-maxage` ディレクティブを持つ {{httpheadew("cache-contwow")}} ヘッダーがある場合、`expiwes` ヘッダーは無視されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wesponse h-headew", (U ﹏ U) "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew nyame", -.- "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("cows-safewisted wesponse headew", (ˆ ﻌ ˆ)♡ "cows セーフリストレスポンスヘッダー")}}
       </th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Expires: <http-date>
+expiwes: <http-date>
 ```
 
 ## ディレクティブ
 
 - \<http-date>
-  - : HTTP-date タイムスタンプ
+  - : http-date タイムスタンプ
 
 ## 例
 
 ```
-Expires: Wed, 21 Oct 2015 07:28:00 GMT
+expiwes: wed, (⑅˘꒳˘) 21 o-oct 2015 07:28:00 gmt
 ```
 
 ## 仕様書
 
 | 仕様書                            | 題名                                            |
 | --------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Expires", "5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+| {{wfc("7234", "expiwes", (U ᵕ U❁) "5.3")}} | hypewtext twansfew p-pwotocow (http/1.1): caching |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Age")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("age")}}

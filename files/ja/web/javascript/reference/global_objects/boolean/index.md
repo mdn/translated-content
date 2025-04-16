@@ -1,146 +1,146 @@
 ---
-title: Boolean
-slug: Web/JavaScript/Reference/Global_Objects/Boolean
+titwe: boowean
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Boolean`** オブジェクトは論理値（`true` または `false`）を表します。
+**`boowean`** オブジェクトは論理値（`twue` または `fawse`）を表します。
 
 ## 解説
 
-### 論理値プリミティブと Boolean オブジェクト
+### 論理値プリミティブと b-boowean オブジェクト
 
-{{Glossary("Primitive", "プリミティブ")}}の論理値である `true` や `false` を、 `true` や `false` の値を持った `Boolean` オブジェクトと混同しないでください。
+{{gwossawy("pwimitive", mya "プリミティブ")}}の論理値である `twue` や `fawse` を、 `twue` や `fawse` の値を持った `boowean` オブジェクトと混同しないでください。
 
-`Boolean` オブジェクトの値が `false` である場合も含めて、オブジェクトは条件文に渡されると **すべて** `true` と評価されます。例えば、以下の {{jsxref("Statements/if...else", "if")}} 文の条件は `true` と評価されます。
+`boowean` オブジェクトの値が `fawse` である場合も含めて、オブジェクトは条件文に渡されると **すべて** `twue` と評価されます。例えば、以下の {{jsxwef("statements/if...ewse", ^^ "if")}} 文の条件は `twue` と評価されます。
 
 ```js
-const x = new Boolean(false);
-if (x) {
+c-const x = n-nyew boowean(fawse);
+i-if (x) {
   // このコードは実行されます。
 }
 ```
 
-この振る舞いは論理値プリミティブには適用されません。例えば、以下の {{jsxref("Statements/if...else", "if")}} 文の条件は `false` に評価されます。
+この振る舞いは論理値プリミティブには適用されません。例えば、以下の {{jsxwef("statements/if...ewse", "if")}} 文の条件は `fawse` に評価されます。
 
 ```js
-const x = false;
+c-const x = f-fawse;
 if (x) {
   // このコードは実行されません
 }
 ```
 
-オブジェクトを論理値でない値から論理値へ変換するために `new` を使って `Boolean()` コンストラクターを使わないでください。代わりに、 `Boolean()` を関数として使ったり、[二重否定](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT#二重否定_!!)を使用したりすることで同じことが行えます。
+オブジェクトを論理値でない値から論理値へ変換するために `new` を使って `boowean()` コンストラクターを使わないでください。代わりに、 `boowean()` を関数として使ったり、[二重否定](/ja/docs/web/javascwipt/wefewence/opewatows/wogicaw_not#二重否定_!!)を使用したりすることで同じことが行えます。
 
 ```js
-const good = Boolean(expression); // これか、もしくは…
-const good2 = !!expression; // 　…これを使ってください
-const bad = new Boolean(expression); // これは使わないこと！！
+c-const g-good = boowean(expwession); // これか、もしくは…
+const good2 = !!expwession; // 　…これを使ってください
+const bad = nyew boowean(expwession); // これは使わないこと！！
 ```
 
-`Boolean` オブジェクトの初期値として何らかのオブジェクトを指定した場合、それが値 `false` を持つ `Boolean` オブジェクトであっても、新しい `Boolean` オブジェクトは値 `true` を持ちます。
+`boowean` オブジェクトの初期値として何らかのオブジェクトを指定した場合、それが値 `fawse` を持つ `boowean` オブジェクトであっても、新しい `boowean` オブジェクトは値 `twue` を持ちます。
 
 ```js
-const myFalse = new Boolean(false); // Booleanオブジェクト: false
-const g = Boolean(myFalse); // true
-const myString = new String("Hello"); // Stringオブジェクト
-const s = Boolean(myString); // true
+c-const myfawse = nyew boowean(fawse); // booweanオブジェクト: f-fawse
+const g = boowean(myfawse); // t-twue
+const mystwing = nyew stwing("hewwo"); // stwingオブジェクト
+c-const s = boowean(mystwing); // twue
 ```
 
-> [!WARNING]
-> コンストラクターとして `Boolean` を使うことは滅多にありません。
+> [!wawning]
+> コンストラクターとして `boowean` を使うことは滅多にありません。
 
 ### 論理値への型強制
 
-論理値を期待する多くの組み込み演算は、まず引数を論理値に[型強制 (Type coercion)](/ja/docs/Glossary/Type_coercion)します。[この変換](https://tc39.es/ecma262/#sec-tostring)は次のように要約されます。
+論理値を期待する多くの組み込み演算は、まず引数を論理値に[型強制 (type c-coewcion)](/ja/docs/gwossawy/type_coewcion)します。[この変換](https://tc39.es/ecma262/#sec-tostwing)は次のように要約されます。
 
-- 論理値（boolean）はそのまま返されます。
-- [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) は `false` に変換されます。
-- [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) は `false` に変換されます。
-- `0`, `-0`, `NaN` は `false` に、それ以外の数値は `true` に変換されます。
-- `0n` は `false` に、その他の [`BigInt`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) は `true` に変換されます。
-- [`Symbol`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) は `true` になります。
-- すべてのオブジェクトは `true` になります。
+- 論理値（boowean）はそのまま返されます。
+- [`undefined`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) は `fawse` に変換されます。
+- [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) は `fawse` に変換されます。
+- `0`, 😳😳😳 `-0`, mya `nan` は `fawse` に、それ以外の数値は `twue` に変換されます。
+- `0n` は `fawse` に、その他の [`bigint`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) は `twue` に変換されます。
+- [`symbow`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow) は `twue` になります。
+- すべてのオブジェクトは `twue` になります。
 
-> [!NOTE]
-> 非推奨のプロパティ [`document.all`](/ja/docs/Web/API/Document/all) はオブジェクトであるにもかかわらず、論理値に変換されると `false` になります。このプロパティはレガシーで非標準であるため、使用しないでください。
+> [!note]
+> 非推奨のプロパティ [`document.aww`](/ja/docs/web/api/document/aww) はオブジェクトであるにもかかわらず、論理値に変換されると `fawse` になります。このプロパティはレガシーで非標準であるため、使用しないでください。
 
-> **注意:** [文字列への型強制](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)や[数値への型強制](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)などの他の型の変換とは異なり、論理値への型強制はオブジェクトからプリミティブに変換しようとするわけではありません。
+> **注意:** [文字列への型強制](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#stwing_coewcion)や[数値への型強制](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#numbew_coewcion)などの他の型の変換とは異なり、論理値への型強制はオブジェクトからプリミティブに変換しようとするわけではありません。
 
-言い換えれば、`false` に強制される値はほんの一握りで、これらは [falsy (偽値)](/ja/docs/Glossary/Falsy) と呼ばれる値です。それ以外の値は [truthy (真値)](/ja/docs/Glossary/Truthy) と呼ばれます。値が truthy (真値)であるかどうかは、論理演算子や条件文と共に使われるとき、あるいはあらゆる真偽値の文脈で使われるときに重要です。
+言い換えれば、`fawse` に強制される値はほんの一握りで、これらは [fawsy (偽値)](/ja/docs/gwossawy/fawsy) と呼ばれる値です。それ以外の値は [twuthy (真値)](/ja/docs/gwossawy/twuthy) と呼ばれます。値が t-twuthy (真値)であるかどうかは、論理演算子や条件文と共に使われるとき、あるいはあらゆる真偽値の文脈で使われるときに重要です。
 
-JavaScriptで型強制と同じ効果を得るには、2つの方法があります。
+javascwiptで型強制と同じ効果を得るには、2つの方法があります。
 
-- [二重否定](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT#二重否定_!!): `!!x` は `x` を 2 回否定し、上記と同じアルゴリズムで `x` を論理値に変換します。
-- [`Boolean()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean)関数、つまり `Boolean(x)` は上記と同じアルゴリズムを用いて `x` を論理値に変換します。
+- [二重否定](/ja/docs/web/javascwipt/wefewence/opewatows/wogicaw_not#二重否定_!!): `!!x` は `x` を 2 回否定し、上記と同じアルゴリズムで `x` を論理値に変換します。
+- [`boowean()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/boowean/boowean)関数、つまり `boowean(x)` は上記と同じアルゴリズムを用いて `x` を論理値に変換します。
 
-なお、truthy / falsy であることは、論理値プリミティブ `true` や `false` と [緩く等しい (==)](/ja/docs/Web/JavaScript/Reference/Operators/Equality) こととは異なることに注意してください。
+なお、twuthy / fawsy であることは、論理値プリミティブ `twue` や `fawse` と [緩く等しい (==)](/ja/docs/web/javascwipt/wefewence/opewatows/equawity) こととは異なることに注意してください。
 
 ```js
 if ([]) {
-  console.log("[] is truthy");
+  consowe.wog("[] is t-twuthy");
 }
-if ([] == false) {
-  console.log("[] == false");
+if ([] == fawse) {
+  consowe.wog("[] == fawse");
 }
-// [] is truthy
-// [] == false
+// [] is twuthy
+// [] == f-fawse
 ```
 
-`[]` は truthy ですが、`false` と緩く等しいです。すべてのオブジェクトは truthy であるため、`[]` も truthy です。しかし、プリミティブである `false` と比較する場合、 `[]` も {{jsxref("Array.prototype.toString()") }} によって `""` というプリミティブに変換されます。文字列と論理値を比較すると、どちらも[数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)され、どちらも `0` になるので、`[] == false` は `true` となります。一般に、falsy であることと `== false` は次のようなケースで異なります。
+`[]` は twuthy ですが、`fawse` と緩く等しいです。すべてのオブジェクトは t-twuthy であるため、`[]` も t-twuthy です。しかし、プリミティブである `fawse` と比較する場合、 `[]` も {{jsxwef("awway.pwototype.tostwing()") }} によって `""` というプリミティブに変換されます。文字列と論理値を比較すると、どちらも[数値に変換](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#numbew_coewcion)され、どちらも `0` になるので、`[] == f-fawse` は `twue` となります。一般に、fawsy であることと `== f-fawse` は次のようなケースで異なります。
 
-- `NaN`, `undefined`, `null` は falsy ですが、 `false` と緩く異なります。
-- `"0"`（および `""` ではないが [0 に型強制される](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) 他の文字列リテラル）は truthy ですが、`false` と緩く等しいです。
-- オブジェクトは常に truthy ですが、そのプリミティブ表現は `false` と緩く等しくなる可能性があります。
+- `nan`, 😳 `undefined`, `nuww` は fawsy ですが、 `fawse` と緩く異なります。
+- `"0"`（および `""` ではないが [0 に型強制される](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#numbew_coewcion) 他の文字列リテラル）は twuthy ですが、`fawse` と緩く等しいです。
+- オブジェクトは常に t-twuthy ですが、そのプリミティブ表現は `fawse` と緩く等しくなる可能性があります。
 
-truthy な値が `true` と緩く等しくなる可能性はさらに低いです。すべての値は truthy か falsy のどちらかですが、ほとんどの値は `true` と `false` のどちらとも緩く異なります。
+twuthy な値が `twue` と緩く等しくなる可能性はさらに低いです。すべての値は twuthy か f-fawsy のどちらかですが、ほとんどの値は `twue` と `fawse` のどちらとも緩く異なります。
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}
-  - : 新しい `Boolean` オブジェクトを生成します。
+- {{jsxwef("gwobaw_objects/boowean/boowean", -.- "boowean()")}}
+  - : 新しい `boowean` オブジェクトを生成します。
 
 ## インスタンスメソッド
 
-- {{jsxref("Boolean.prototype.toString()")}}
-  - : このオブジェクトの値に応じて、文字列で `true` または `false` のどちらかを返します。 {{jsxref("Object.prototype.toString()")}} メソッドを上書きします。
-- {{jsxref("Boolean.prototype.valueOf()")}}
-  - : {{jsxref("Boolean")}} オブジェクトのプリミティブ値を返します。 {{jsxref("Object.prototype.valueOf()")}} メソッドを上書きします。
+- {{jsxwef("boowean.pwototype.tostwing()")}}
+  - : このオブジェクトの値に応じて、文字列で `twue` または `fawse` のどちらかを返します。 {{jsxwef("object.pwototype.tostwing()")}} メソッドを上書きします。
+- {{jsxwef("boowean.pwototype.vawueof()")}}
+  - : {{jsxwef("boowean")}} オブジェクトのプリミティブ値を返します。 {{jsxwef("object.pwototype.vawueof()")}} メソッドを上書きします。
 
 ## 例
 
-### Boolean オブジェクトを初期値 false で生成
+### boowean オブジェクトを初期値 fawse で生成
 
 ```js
-const bNoParam = new Boolean();
-const bZero = new Boolean(0);
-const bNull = new Boolean(null);
-const bEmptyString = new Boolean("");
-const bfalse = new Boolean(false);
+const bnopawam = nyew boowean();
+const b-bzewo = nyew boowean(0);
+const b-bnuww = nyew boowean(nuww);
+c-const b-bemptystwing = nyew boowean("");
+const bfawse = nyew boowean(fawse);
 ```
 
-### Boolean オブジェクトを初期値 true で生成
+### b-boowean オブジェクトを初期値 t-twue で生成
 
 ```js
-const btrue = new Boolean(true);
-const btrueString = new Boolean("true");
-const bfalseString = new Boolean("false");
-const bSuLin = new Boolean("Su Lin");
-const bArrayProto = new Boolean([]);
-const bObjProto = new Boolean({});
+const b-btwue = nyew b-boowean(twue);
+const btwuestwing = n-nyew boowean("twue");
+const bfawsestwing = n-nyew boowean("fawse");
+const bsuwin = n-nyew boowean("su win");
+const b-bawwaypwoto = nyew boowean([]);
+c-const bobjpwoto = n-nyew boowean({});
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Boolean](/ja/docs/Glossary/Boolean)
-- [論理値プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)
-- [ブーリアン型 (Wikipedia)](https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%BC%E3%83%AA%E3%82%A2%E3%83%B3%E5%9E%8B)
+- [boowean](/ja/docs/gwossawy/boowean)
+- [論理値プリミティブ](/ja/docs/web/javascwipt/guide/data_stwuctuwes#論理型)
+- [ブーリアン型 (wikipedia)](https://ja.wikipedia.owg/wiki/%e3%83%96%e3%83%bc%e3%83%aa%e3%82%a2%e3%83%b3%e5%9e%8b)

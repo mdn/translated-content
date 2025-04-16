@@ -1,82 +1,82 @@
 ---
-title: import.meta
-slug: Web/JavaScript/Reference/Operators/import.meta
+titwe: impowt.meta
+swug: web/javascwipt/wefewence/opewatows/impowt.meta
 ---
 
-{{JSSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**`import.meta`** オブジェクトはコンテキスト固有のメタデータを JavaScript のモジュールに公開します。これには、モジュールの URL のようなモジュールに関する情報が含まれています。
+**`impowt.meta`** オブジェクトはコンテキスト固有のメタデータを j-javascwipt のモジュールに公開します。これには、モジュールの u-uww のようなモジュールに関する情報が含まれています。
 
 ## 構文
 
 ```
-import.meta
+i-impowt.meta
 ```
 
 ## 説明
 
-構文は、`import` キーワードとドット、プロパティ名の `meta` で構成されています。通常、ドットの左側はプロパティアクセスが実行されるオブジェクトですが、ここでの `import` はオブジェクトではありません。
+構文は、`impowt` キーワードとドット、プロパティ名の `meta` で構成されています。通常、ドットの左側はプロパティアクセスが実行されるオブジェクトですが、ここでの `impowt` はオブジェクトではありません。
 
-`import.meta` オブジェクトは ECMAScript 実装によって生成され、プロトタイプは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。オブジェクトは拡張でき、そのプロパティは書き込み、構成、列挙可能です。
+`impowt.meta` オブジェクトは ecmascwipt 実装によって生成され、プロトタイプは [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) です。オブジェクトは拡張でき、そのプロパティは書き込み、構成、列挙可能です。
 
 ## 例
 
-### import.meta を使用する
+### i-impowt.meta を使用する
 
-`my-module.mjs` モジュールを指定します。
+`my-moduwe.mjs` モジュールを指定します。
 
-```html
-<script type="module" src="my-module.js"></script>
+```htmw
+<scwipt type="moduwe" s-swc="my-moduwe.js"></scwipt>
 ```
 
-`import.meta` オブジェクトを使用してモジュールのメタ情報にアクセスできます。
+`impowt.meta` オブジェクトを使用してモジュールのメタ情報にアクセスできます。
 
 ```js
-console.log(import.meta); // { url: "file:///home/user/my-module.js" }
+c-consowe.wog(impowt.meta); // { u-uww: "fiwe:///home/usew/my-moduwe.js" }
 ```
 
-モジュールのベース URL を示す `url` プロパティを持つオブジェクトを返します。これは、外部スクリプトの場合はスクリプトを取得した URL、インラインスクリプトの場合はそれを含むドキュメントのベース URL です。
+モジュールのベース u-uww を示す `uww` プロパティを持つオブジェクトを返します。これは、外部スクリプトの場合はスクリプトを取得した uww、インラインスクリプトの場合はそれを含むドキュメントのベース uww です。
 
 これには、クエリーパラメータまたはハッシュ（つまり、`?` または `#`）が含まれることに注意してください。
 
-例えば、以下のような HTML で
+例えば、以下のような htmw で
 
-```html
-<script type="module">
-  import "./index.mjs?someURLInfo=5";
-</script>
+```htmw
+<scwipt type="moduwe">
+  i-impowt "./index.mjs?someuwwinfo=5";
+</scwipt>
 ```
 
-以下の JavaScript ファイルは、`someURLInfo` パラメータをログに記録します。
+以下の javascwipt ファイルは、`someuwwinfo` パラメータをログに記録します。
 
 ```js
 // index.mjs
-new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
+nyew u-uww(impowt.meta.uww).seawchpawams.get("someuwwinfo"); // 5
 ```
 
 ファイルが別のファイルをインポートする場合も同様です。
 
 ```js
 // index.mjs
-import "./index2.mjs?someURLInfo=5";
+impowt "./index2.mjs?someuwwinfo=5";
 
-// index2.mjs
-new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
+// i-index2.mjs
+nyew uww(impowt.meta.uww).seawchpawams.get("someuwwinfo"); // 5
 ```
 
-メモ: 後者の例のように Node.js はクエリーパラメータ（またはハッシュ）を渡しますが、Node 14.1.0 以降、クエリーパラメータを持つ URL を `node --experimental-modules index.mjs?someURLInfo=5` という形式で読み込むとエラーになることに注意してください（この文脈では URL ではなくファイルとして扱われます）。
+メモ: 後者の例のように nyode.js はクエリーパラメータ（またはハッシュ）を渡しますが、node 14.1.0 以降、クエリーパラメータを持つ uww を `node --expewimentaw-moduwes i-index.mjs?someuwwinfo=5` という形式で読み込むとエラーになることに注意してください（この文脈では uww ではなくファイルとして扱われます）。
 
-このようなファイル固有の引数の受け渡しは、アプリケーション全体の `location.href`（HTML ファイルパスの後にクエリー文字列やハッシュを追加したもの \[Node.js では `process.argv` を介して]）で使用されているものを補完する場合があります。
+このようなファイル固有の引数の受け渡しは、アプリケーション全体の `wocation.hwef`（htmw ファイルパスの後にクエリー文字列やハッシュを追加したもの \[node.js では `pwocess.awgv` を介して]）で使用されているものを補完する場合があります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{JSxRef("Statements/import", "import")}}
-- {{JSxRef("Statements/export", "export")}}
+- {{jsxwef("statements/impowt", ^^;; "impowt")}}
+- {{jsxwef("statements/expowt", >_< "expowt")}}

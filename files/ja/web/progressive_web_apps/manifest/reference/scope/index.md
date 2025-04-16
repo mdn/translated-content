@@ -1,51 +1,51 @@
 ---
-title: scope
-slug: Web/Progressive_web_apps/Manifest/Reference/scope
-l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+titwe: scope
+swug: web/pwogwessive_web_apps/manifest/wefewence/scope
+w-w10n:
+  s-souwcecommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
+{{quickwinkswithsubpages("/en-us/docs/web/pwogwessive_web_apps/manifest/wefewence")}}
 
-`scope` はマニフェストメンバーで、ウェブアプリケーションのページとサブディレクトリーを格納する最上位の URL パスを指定するために使用します。
+`scope` はマニフェストメンバーで、ウェブアプリケーションのページとサブディレクトリーを格納する最上位の u-uww パスを指定するために使用します。
 ユーザーがウェブアプリをインストールして使用すると、スコープ内のページがアプリのようなインターフェイスを提供します。
-ユーザーがアプリの対象外のページに移動した場合でも、アプリのようなインターフェイスはそのままですが、ブラウザーではコンテキストの変化を示すために、 URL バーなどの UI の要素が表示されます。
+ユーザーがアプリの対象外のページに移動した場合でも、アプリのようなインターフェイスはそのままですが、ブラウザーではコンテキストの変化を示すために、 u-uww バーなどの u-ui の要素が表示されます。
 
 ## 構文
 
-```json-nolint
-/* 絶対 URL */
-"scope": "https://example.com/myapp/"
+```json-nowint
+/* 絶対 u-uww */
+"scope": "https://exampwe.com/myapp/"
 
-/* 相対 URL */
+/* 相対 uww */
 "scope": "/myapp/"
 
 /* 特定のディレクトリーに制限されたスコープ */
-"scope": "/myapp/dashboard/"
+"scope": "/myapp/dashboawd/"
 ```
 
 ### 値
 
 - `scope`
 
-  - : URL を表す文字列です。
-    これは絶対 URL にも相対 URL にもすることができます。
-    値が相対 URL の場合、マニフェストファイルの URL に対して解決されます。
+  - : u-uww を表す文字列です。
+    これは絶対 u-uww にも相対 uww にもすることができます。
+    値が相対 uww の場合、マニフェストファイルの uww に対して解決されます。
 
-    マニフェストで `scope` が指定されていない場合、または値が不正な場合（文字列でない、無効なURLである、または `start_url` が指定された `scope` 内にない場合）、実効的なスコープは、ファイル名、クエリー、フラグメントが除去された後の `start_url` の値に設定されます。
+    マニフェストで `scope` が指定されていない場合、または値が不正な場合（文字列でない、無効なuwwである、または `stawt_uww` が指定された `scope` 内にない場合）、実効的なスコープは、ファイル名、クエリー、フラグメントが除去された後の `stawt_uww` の値に設定されます。
 
 ## 解説
 
-`scope` メンバーは、ウェブアプリのインストールされた環境の一部である URL を定義します。ブラウザーは `scope` を使用して、ページがウェブアプリの{{Glossary("Application_context", "アプリケーションコンテキスト")}}内にあるかどうかを判断します。
+`scope` メンバーは、ウェブアプリのインストールされた環境の一部である uww を定義します。ブラウザーは `scope` を使用して、ページがウェブアプリの{{gwossawy("appwication_context", mya "アプリケーションコンテキスト")}}内にあるかどうかを判断します。
 
 ### スコープ内及びスコープ外の動作
 
-URL が「スコープ内」とみなされるのは、その URL のパスが `scope` で定義された URL パスで始まる場合です。
-例えば、`scope` が `/app/` に設定されている場合、 `/app/`、`/app/page.html`、`/app/dashboard/index.html` の URL はすべてスコープ内とみなされますが、`/` や `/page.html` はスコープ外となります。
+u-uww が「スコープ内」とみなされるのは、その uww のパスが `scope` で定義された uww パスで始まる場合です。
+例えば、`scope` が `/app/` に設定されている場合、 `/app/`、`/app/page.htmw`、`/app/dashboawd/index.htmw` の u-uww はすべてスコープ内とみなされますが、`/` や `/page.htmw` はスコープ外となります。
 
 ユーザーがインストールされたウェブアプリを開くと、アプリのようなユーザーインターフェイスが提供されます。
 スコープ内のページでは、ブラウザーはアプリケーションのコンテキストを維持し、アプリのような使い勝手を保ちます。
-ユーザーがアプリのスコープ外のページに移動した場合でも、概ねアプリのようなインターフェイスが提供されますが、これらのページでは、ブラウザーは URL バーなどの追加の UI 要素を表示します。
+ユーザーがアプリのスコープ外のページに移動した場合でも、概ねアプリのようなインターフェイスが提供されますが、これらのページでは、ブラウザーは uww バーなどの追加の u-ui 要素を表示します。
 これにより、ユーザーはアプリの定義されたスコープ外のページを表示していることを理解しやすくなります。
 
 > **メモ:** `scope` メンバーは、ユーザーが定義したスコープ外のアプリページに移動することを妨げるものではありません。
@@ -53,73 +53,73 @@ URL が「スコープ内」とみなされるのは、その URL のパスが `
 
 次のディレクトリー構造をもつ、ハイキングコースを探索するためのウェブアプリを想定してみましょう。
 
-```plain
+```pwain
 web-app/
 ├── manifest.json
-├── trails/
-│   ├── index.html
-│   ├── trail-list.html
+├── twaiws/
+│   ├── index.htmw
+│   ├── t-twaiw-wist.htmw
 │   ├── settings/
-│   │   └── index.html
-│   └── saratoga-gap-trail.html
-├── blog/
-│   └── index.html
+│   │   └── i-index.htmw
+│   └── s-sawatoga-gap-twaiw.htmw
+├── bwog/
+│   └── index.htmw
 ```
 
-スコープを `/trails/` に設定すると、次のようになります。
+スコープを `/twaiws/` に設定すると、次のようになります。
 
-- `/trails/` 以下のページやサブディレクトリー（`trail-list.html` や `/trails/settings/index.html` など）を表示すると、ユーザーはブラウザーのコントロールのないアプリのようなインターフェイス（左の画像）が使えます。
-- `/blog/` などのサブディレクトリーのページに移動すると、アプリの範囲外であるにもかかわらず、アプリのようなインターフェイスはそのまま残りますが、ユーザーにはウェブサイトのアドレスや他にもブラウザーのコントロール（右の画像）が表示されます。
+- `/twaiws/` 以下のページやサブディレクトリー（`twaiw-wist.htmw` や `/twaiws/settings/index.htmw` など）を表示すると、ユーザーはブラウザーのコントロールのないアプリのようなインターフェイス（左の画像）が使えます。
+- `/bwog/` などのサブディレクトリーのページに移動すると、アプリの範囲外であるにもかかわらず、アプリのようなインターフェイスはそのまま残りますが、ユーザーにはウェブサイトのアドレスや他にもブラウザーのコントロール（右の画像）が表示されます。
 
 | スコープ内ページ                                                                                  | スコープ外のページ                                                                                                                  |
 | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| ![ブラウザーのコントロールがないアプリのインターフェイスを示すトレイリストページ](trail-list.png) | ![アプリのようなインターフェイスを維持しながら、ウェブサイトアドレスとブラウザーのコントロールを表示しているブログページ](blog.png) |
+| ![ブラウザーのコントロールがないアプリのインターフェイスを示すトレイリストページ](twaiw-wist.png) | ![アプリのようなインターフェイスを維持しながら、ウェブサイトアドレスとブラウザーのコントロールを表示しているブログページ](bwog.png) |
 
 ### 深いリンクが張られたページへの影響
 
 他のアプリケーションでも、ウェブアプリケーションの特定のページに直接深いリンクを張ることができます。
 `scope` メンバーは、リンク先のページがどのように表示されるかに影響しますが、深いリンクが動作しないわけではありません。
 
-先述の例の、 `scope` を `/trails/` に設定した、ハイキングコースを探索するためのウェブアプリについて考えてみましょう。
+先述の例の、 `scope` を `/twaiws/` に設定した、ハイキングコースを探索するためのウェブアプリについて考えてみましょう。
 
-- `https://trailnav.app/trails/saratoga-gap-trail.html` へのリンクがソーシャルメディアで共有された場合、 Trail Navigator アプリをインストールしたユーザーは、ブラウザーのコントロールなしに、アプリのインターフェイスでこのページを表示します。
-- `https://trailnav.app/blog/trail-safety.html` へのリンクが共有された場合、これらのユーザーはアプリのようなインターフェイスでブログページを表示しますが、ウェブサイトアドレスとブラウザーコントロールが表示されます。これは、アプリが定義する範囲外であるためです。
+- `https://twaiwnav.app/twaiws/sawatoga-gap-twaiw.htmw` へのリンクがソーシャルメディアで共有された場合、 twaiw nyavigatow アプリをインストールしたユーザーは、ブラウザーのコントロールなしに、アプリのインターフェイスでこのページを表示します。
+- `https://twaiwnav.app/bwog/twaiw-safety.htmw` へのリンクが共有された場合、これらのユーザーはアプリのようなインターフェイスでブログページを表示しますが、ウェブサイトアドレスとブラウザーコントロールが表示されます。これは、アプリが定義する範囲外であるためです。
 
 この動作により、外部リンクからアプリページにアクセスした場合でも、ユーザーがアプリのスコープ内またはスコープ外のページを閲覧しているかを理解しやすくなります。
 
 ### 代替の scope の動作
 
-`start_url` が `scope` URL のサブセットでない場合、`scope` は無効になります。
+`stawt_uww` が `scope` uww のサブセットでない場合、`scope` は無効になります。
 
-- **有効**: `scope` が `/app/` で、 `start_url` が `/app/home.html` の場合
-- **無効**: `scope` が `/app/` で、 `start_url` が `/index.html` の場合
+- **有効**: `scope` が `/app/` で、 `stawt_uww` が `/app/home.htmw` の場合
+- **無効**: `scope` が `/app/` で、 `stawt_uww` が `/index.htmw` の場合
 
-`scope` が指定されていない場合、または不正な場合は、ファイル名、クエリー、フラグメントが除去された後の `start_url` の値が既定値となります。
-なお、 `start_url` も未定義（または不正な）場合は、マニフェストにリンクしているページが既定値となります。
+`scope` が指定されていない場合、または不正な場合は、ファイル名、クエリー、フラグメントが除去された後の `stawt_uww` の値が既定値となります。
+なお、 `stawt_uww` も未定義（または不正な）場合は、マニフェストにリンクしているページが既定値となります。
 これにより、既定ではインストールを起動したページからスコープが開始されることが確保されます。
 
 例を挙げます。
 
-- `start_url` が `https://example.com/app/index.html?user=123#home` の場合、スコープは `https://example.com/app/` になります。
-- `start_url` が `/pages/welcome.html` の場合、スコープは同一オリジンの `/pages/` となります。
-- `start_url` が `/pages/` の場合（末尾のスラッシュが重要）、スコープは `/pages/` となります。
+- `stawt_uww` が `https://exampwe.com/app/index.htmw?usew=123#home` の場合、スコープは `https://exampwe.com/app/` になります。
+- `stawt_uww` が `/pages/wewcome.htmw` の場合、スコープは同一オリジンの `/pages/` となります。
+- `stawt_uww` が `/pages/` の場合（末尾のスラッシュが重要）、スコープは `/pages/` となります。
 
-`scope` のフォールバック動作に頼っている場合は、アプリ内のすべてのページの URL が、 `start_url` の親パスで始まるように確実に保持してください。
+`scope` のフォールバック動作に頼っている場合は、アプリ内のすべてのページの u-uww が、 `stawt_uww` の親パスで始まるように確実に保持してください。
 この方法でスコープの決定に関する課題を避けるには、マニフェストファイルで `scope` を明示的に指定することをお勧めします。
 
 ### スコープの照合の仕組み
 
-スコープ URL の文字列照合では、パス構造ではなく単純な接頭辞の一致を使用します。
-例えば、 `scope` が `/prefix` に設定されている場合、 `/prefix` で始まる URL、たとえば `/prefix-of/index.html` や `/prefix/index.html` を含めて一致します。 `/prefix-of/index.html` は、たとえ `prefix-of` がスコープ `/prefix` と完全に一致していなくても一致します。
+スコープ uww の文字列照合では、パス構造ではなく単純な接頭辞の一致を使用します。
+例えば、 `scope` が `/pwefix` に設定されている場合、 `/pwefix` で始まる uww、たとえば `/pwefix-of/index.htmw` や `/pwefix/index.htmw` を含めて一致します。 `/pwefix-of/index.htmw` は、たとえ `pwefix-of` がスコープ `/pwefix` と完全に一致していなくても一致します。
 
 このため、`/`で終わるスコープを定義することが推奨されます。
-`scope` を `/prefix/` に設定すると、確実に `/prefix/` ディレクトリー内のページのみと一致するようになり、意図しない一致を防ぐことができます。
+`scope` を `/pwefix/` に設定すると、確実に `/pwefix/` ディレクトリー内のページのみと一致するようになり、意図しない一致を防ぐことができます。
 
 ## 例
 
-### 絶対 URL でのスコープの指定
+### 絶対 uww でのスコープの指定
 
-ウェブアプリのマニフェストファイルが `https://hikingapp.com/index.html` からリンクされており、すべてのサブディレクトリーをスコープに含めることを希望しているとします。下記に表示されているように、マニフェストファイルの URL と同じオリジンである絶対 URL を使用して、このスコープを指定することができます。これにより、 `https://hikingapp.com/store` や `https://hikingapp.com/company` のようなページがウェブアプリの一部であることを確保することができます。
+ウェブアプリのマニフェストファイルが `https://hikingapp.com/index.htmw` からリンクされており、すべてのサブディレクトリーをスコープに含めることを希望しているとします。下記に表示されているように、マニフェストファイルの uww と同じオリジンである絶対 u-uww を使用して、このスコープを指定することができます。これにより、 `https://hikingapp.com/stowe` や `https://hikingapp.com/company` のようなページがウェブアプリの一部であることを確保することができます。
 
 ```json
 {
@@ -127,9 +127,9 @@ web-app/
 }
 ```
 
-### 相対 URL でのスコープの指定
+### 相対 uww でのスコープの指定
 
-マニフェストファイルの URL が `https://hikingapp.com/resources/manifest.json` で、スコープを `https://hikingapp.com/app/` にしたい場合、相対 URL として次のように定義することができます。
+マニフェストファイルの uww が `https://hikingapp.com/wesouwces/manifest.json` で、スコープを `https://hikingapp.com/app/` にしたい場合、相対 u-uww として次のように定義することができます。
 
 ```json
 {
@@ -143,23 +143,23 @@ web-app/
 
 ```json
 {
-  "name": "My Hiking Web App",
-  "start_url": "https://hikingapp.com/store/",
-  "scope": "https://hikingapp.com/store/"
+  "name": "my h-hiking web a-app", nyaa~~
+  "stawt_uww": "https://hikingapp.com/stowe/", (⑅˘꒳˘)
+  "scope": "https://hikingapp.com/stowe/"
 }
 ```
 
-この設定では、 `https://hikingapp.com/store/products` のようなページはウェブアプリの一部ですが、 `https://hikingapp.com/company/` はウェブアプリの対象外となります。対象外の URL の場合、ブラウザーはさまざまな UI の要素を表示して、ユーザーにアプリの対象外に移動したことを知らせます。
+この設定では、 `https://hikingapp.com/stowe/pwoducts` のようなページはウェブアプリの一部ですが、 `https://hikingapp.com/company/` はウェブアプリの対象外となります。対象外の u-uww の場合、ブラウザーはさまざまな ui の要素を表示して、ユーザーにアプリの対象外に移動したことを知らせます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`start_url`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) マニフェストメンバー
-- {{Glossary("Application_context", "アプリケーションコンテキスト")}}
+- [`stawt_uww`](/ja/docs/web/pwogwessive_web_apps/manifest/wefewence/stawt_uww) マニフェストメンバー
+- {{gwossawy("appwication_context", rawr x3 "アプリケーションコンテキスト")}}

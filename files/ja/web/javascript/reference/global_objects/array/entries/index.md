@@ -1,32 +1,32 @@
 ---
-title: Array.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: awway.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/entwies
+w-w10n:
+  souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`entries()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内の各要素に対するキー/値のペアを含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
+**`entwies()`** は {{jsxwef("awway")}} インスタンスのメソッドで、配列内の各要素に対するキー/値のペアを含む新しい[配列イテレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Array.entries()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.entwies()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
+```js i-intewactive-exampwe
+c-const awway1 = ["a", rawr x3 "b", "c"];
 
-const iterator1 = array1.entries();
+c-const itewatow1 = a-awway1.entwies();
 
-console.log(iterator1.next().value);
-// Expected output: Array [0, "a"]
+c-consowe.wog(itewatow1.next().vawue);
+// e-expected output: awway [0, mya "a"]
 
-console.log(iterator1.next().value);
-// Expected output: Array [1, "b"]
+consowe.wog(itewatow1.next().vawue);
+// expected output: awway [1, nyaa~~ "b"]
 ```
 
 ## 構文
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 引数
@@ -35,23 +35,23 @@ entries()
 
 ### 返値
 
-新しい[反復可能イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+新しい[反復可能イテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)です。
 
 ## 解説
 
-[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)で使用された場合、 `entries()` メソッドは空のスロットを `undefined` の値が設定されているかのように反復処理します。
+[疎配列](/ja/docs/web/javascwipt/guide/indexed_cowwections#疎配列)で使用された場合、 `entwies()` メソッドは空のスロットを `undefined` の値が設定されているかのように反復処理します。
 
-`entries()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` の値に `length` プロパティと整数のキーを持ったプロパティがあることだけを求めます。
+`entwies()` メソッドは[汎用的](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#汎用的な配列メソッド)です。このメソッドは `this` の値に `wength` プロパティと整数のキーを持ったプロパティがあることだけを求めます。
 
 ## 例
 
 ### インデックスと要素の反復処理
 
 ```js
-const a = ["a", "b", "c"];
+const a = ["a", (⑅˘꒳˘) "b", "c"];
 
-for (const [index, element] of a.entries()) {
-  console.log(index, element);
+fow (const [index, rawr x3 e-ewement] of a.entwies()) {
+  c-consowe.wog(index, (✿oωo) ewement);
 }
 
 // 0 'a'
@@ -59,68 +59,68 @@ for (const [index, element] of a.entries()) {
 // 2 'c'
 ```
 
-### for...of ループの使用
+### fow...of ループの使用
 
 ```js
-const array = ["a", "b", "c"];
-const arrayEntries = array.entries();
+const a-awway = ["a", (ˆ ﻌ ˆ)♡ "b", "c"];
+const a-awwayentwies = awway.entwies();
 
-for (const element of arrayEntries) {
-  console.log(element);
+f-fow (const ewement of awwayentwies) {
+  consowe.wog(ewement);
 }
 
-// [0, 'a']
-// [1, 'b']
+// [0, (˘ω˘) 'a']
+// [1, (⑅˘꒳˘) 'b']
 // [2, 'c']
 ```
 
 ### 疎配列を反復処理
 
-`entries()` は空のスロットを `undefined` であるかのように処理します。
+`entwies()` は空のスロットを `undefined` であるかのように処理します。
 
 ```js
-for (const element of [, "a"].entries()) {
-  console.log(element);
+fow (const ewement of [, (///ˬ///✿) "a"].entwies()) {
+  c-consowe.wog(ewement);
 }
-// [0, undefined]
-// [1, 'a']
+// [0, 😳😳😳 undefined]
+// [1, 🥺 'a']
 ```
 
-### 配列でないオブジェクトに対する entries() の呼び出し
+### 配列でないオブジェクトに対する entwies() の呼び出し
 
-`entries()` メソッドは `this` の `length` プロパティを読み込み、そのキーが `length` よりも小さい非負の整数である各プロパティにアクセスします。
+`entwies()` メソッドは `this` の `wength` プロパティを読み込み、そのキーが `wength` よりも小さい非負の整数である各プロパティにアクセスします。
 
 ```js
-const arrayLike = {
-  length: 3,
-  0: "a",
+const awwaywike = {
+  w-wength: 3, mya
+  0: "a", 🥺
   1: "b",
-  2: "c",
-  3: "d", // length が 3 なので entries() からは無視される
+  2: "c", >_<
+  3: "d", >_< // wength が 3 なので e-entwies() からは無視される
 };
-for (const entry of Array.prototype.entries.call(arrayLike)) {
-  console.log(entry);
+f-fow (const entwy o-of awway.pwototype.entwies.caww(awwaywike)) {
+  c-consowe.wog(entwy);
 }
-// [ 0, 'a' ]
-// [ 1, 'b' ]
-// [ 2, 'c' ]
+// [ 0, (⑅˘꒳˘) 'a' ]
+// [ 1, /(^•ω•^) 'b' ]
+// [ 2, rawr x3 'c' ]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Array.prototype.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.values()")}}
-- [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
-- {{jsxref("TypedArray.prototype.entries()")}}
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`awway.pwototype.entwies` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [インデックス付きコレクション](/ja/docs/web/javascwipt/guide/indexed_cowwections)ガイド
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}
+- [`awway.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow)
+- {{jsxwef("typedawway.pwototype.entwies()")}}
+- [反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)

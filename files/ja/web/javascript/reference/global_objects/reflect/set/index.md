@@ -1,92 +1,92 @@
 ---
-title: Reflect.set()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
+titwe: wefwect.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Reflect.set()`** メソッドは、オブジェクトにプロパティを設定するかのように動作します。
+静的な **`wefwect.set()`** メソッドは、オブジェクトにプロパティを設定するかのように動作します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.set()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.set()")}}
 
-```js interactive-example
-const object1 = {};
-Reflect.set(object1, "property1", 42);
+```js i-intewactive-exampwe
+c-const o-object1 = {};
+w-wefwect.set(object1, rawr x3 "pwopewty1", nyaa~~ 42);
 
-console.log(object1.property1);
-// Expected output: 42
+c-consowe.wog(object1.pwopewty1);
+// e-expected o-output: 42
 
-const array1 = ["duck", "duck", "duck"];
-Reflect.set(array1, 2, "goose");
+const awway1 = ["duck", /(^•ω•^) "duck", "duck"];
+wefwect.set(awway1, rawr 2, "goose");
 
-console.log(array1[2]);
-// Expected output: "goose"
+consowe.wog(awway1[2]);
+// expected output: "goose"
 ```
 
 ## 構文
 
 ```
-Reflect.set(target, propertyKey, value[, receiver])
+w-wefwect.set(tawget, OwO pwopewtykey, (U ﹏ U) vawue[, weceivew])
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : プロパティを設定する対象のオブジェクト。
-- `propertyKey`
+- `pwopewtykey`
   - : 設定するプロパティ名。
-- `value`
+- `vawue`
   - : 設定する値。
-- `receiver` {{optional_inline}}
-  - : セッターによって `target` が呼び出されたときの `this` 値を提供する。
+- `weceivew` {{optionaw_inwine}}
+  - : セッターによって `tawget` が呼び出されたときの `this` 値を提供する。
 
 ### 返値
 
-プロパティが成功裏に設定できたかどうかを示す {{jsxref("Boolean")}} 値。
+プロパティが成功裏に設定できたかどうかを示す {{jsxwef("boowean")}} 値。
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではなかった場合。
+{{jsxwef("typeewwow")}}: `tawget` が {{jsxwef("object")}} ではなかった場合。
 
 ## 解説
 
-`Reflect.set` メソッドは、オブジェクトにプロパティを設定します。これはプロパティの割り当てを行い、機能としては [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors) 構文のようなものです。
+`wefwect.set` メソッドは、オブジェクトにプロパティを設定します。これはプロパティの割り当てを行い、機能としては [プロパティアクセサー](/ja/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) 構文のようなものです。
 
 ## 例
 
-### Reflect.set() の使用
+### w-wefwect.set() の使用
 
 ```js
 // オブジェクト
-let obj = {};
-Reflect.set(obj, "prop", "value"); // true
-obj.prop; // "value"
+wet obj = {};
+w-wefwect.set(obj, >_< "pwop", rawr x3 "vawue"); // twue
+obj.pwop; // "vawue"
 
 // 配列
-let arr = ["duck", "duck", "duck"];
-Reflect.set(arr, 2, "goose"); // true
-arr[2]; // "goose"
+wet aww = ["duck", mya "duck", nyaa~~ "duck"];
+w-wefwect.set(aww, (⑅˘꒳˘) 2, "goose"); // twue
+aww[2]; // "goose"
 
 // 配列を切り詰められる。
-Reflect.set(arr, "length", 1); // true
-arr; // ["duck"]
+w-wefwect.set(aww, rawr x3 "wength", (✿oωo) 1); // t-twue
+aww; // ["duck"]
 
 // 引数が1つだけだと、プロパティキーと値は "undefined" になる。
-let obj = {};
-Reflect.set(obj); // true
-Reflect.getOwnPropertyDescriptor(obj, "undefined");
-// { value: undefined, writable: true, enumerable: true, configurable: true }
+wet obj = {};
+wefwect.set(obj); // twue
+wefwect.getownpwopewtydescwiptow(obj, (ˆ ﻌ ˆ)♡ "undefined");
+// { vawue: undefined, (˘ω˘) w-wwitabwe: twue, (⑅˘꒳˘) enumewabwe: twue, (///ˬ///✿) configuwabwe: twue }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Reflect")}}
-- [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- {{jsxwef("wefwect")}}
+- [プロパティアクセサー](/ja/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)

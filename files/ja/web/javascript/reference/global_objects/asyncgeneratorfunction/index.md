@@ -1,81 +1,81 @@
 ---
-title: AsyncGeneratorFunction
-slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction
-l10n:
-  sourceCommit: d19dc31570f62196a5837be38bd0b11c45e67b05
+titwe: asyncgenewatowfunction
+swug: web/javascwipt/wefewence/gwobaw_objects/asyncgenewatowfunction
+w-w10n:
+  souwcecommit: d-d19dc31570f62196a5837be38bd0b11c45e67b05
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`AsyncGeneratorFunction`** オブジェクトは、[非同期ジェネレータ関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function*) のメソッドを提供します。 JavaScript で、すべての非同期ジェネレータ関数は実際には `AsyncGeneratorFunction` オブジェクトです。
+**`asyncgenewatowfunction`** オブジェクトは、[非同期ジェネレータ関数](/ja/docs/web/javascwipt/wefewence/statements/async_function*) のメソッドを提供します。 j-javascwipt で、すべての非同期ジェネレータ関数は実際には `asyncgenewatowfunction` オブジェクトです。
 
-なお、`AsyncGeneratorFunction` はグローバルオブジェクトではありません。以下のコードで取得できます。
+なお、`asyncgenewatowfunction` はグローバルオブジェクトではありません。以下のコードで取得できます。
 
 ```js
-const AsyncGeneratorFunction = async function* () {}.constructor;
+c-const asyncgenewatowfunction = a-async function* () {}.constwuctow;
 ```
 
-`AsyncGeneratorFunction` は {{jsxref("Function")}} のサブクラスです。
+`asyncgenewatowfunction` は {{jsxwef("function")}} のサブクラスです。
 
-{{InteractiveExample("JavaScript Demo: AsyncGeneratorFunction()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: a-asyncgenewatowfunction()", :3 "tawwew")}}
 
-```js interactive-example
-const AsyncGeneratorFunction = async function* () {}.constructor;
+```js i-intewactive-exampwe
+const asyncgenewatowfunction = async function* () {}.constwuctow;
 
-const foo = new AsyncGeneratorFunction(`
-  yield await Promise.resolve('a');
-  yield await Promise.resolve('b');
-  yield await Promise.resolve('c');
+const foo = nyew asyncgenewatowfunction(`
+  y-yiewd await pwomise.wesowve('a');
+  yiewd await p-pwomise.wesowve('b');
+  yiewd a-await pwomise.wesowve('c');
 `);
 
-let str = "";
+wet stw = "";
 
-async function generate() {
-  for await (const val of foo()) {
-    str = str + val;
+async function genewate() {
+  f-fow await (const vaw of foo()) {
+    s-stw = stw + v-vaw;
   }
-  console.log(str);
+  consowe.wog(stw);
 }
 
-generate();
-// Expected output: "abc"
+genewate();
+// expected output: "abc"
 ```
 
 ## コンストラクター
 
-- {{jsxref("AsyncGeneratorFunction/AsyncGeneratorFunction", "AsyncGeneratorFunction()")}}
-  - : 新しい `AsyncGeneratorFunction` オブジェクトを生成します。
+- {{jsxwef("asyncgenewatowfunction/asyncgenewatowfunction", 😳😳😳 "asyncgenewatowfunction()")}}
+  - : 新しい `asyncgenewatowfunction` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-_親である {{jsxref("Function")}} から継承したインスタンスプロパティもあります_。
+_親である {{jsxwef("function")}} から継承したインスタンスプロパティもあります_。
 
-これらのプロパティは `AsyncGeneratorFunction.prototype` で定義されており、すべての `AsyncGeneratorFunction` インスタンスで共有されます。
+これらのプロパティは `asyncgenewatowfunction.pwototype` で定義されており、すべての `asyncgenewatowfunction` インスタンスで共有されます。
 
-- {{jsxref("Object/constructor", "AsyncGeneratorFunction.prototype.constructor")}}
-  - : このインスタンスオブジェクトを生成したコンストラクター関数です。 `AsyncGeneratorFunction` インスタンスにおいては、初期値は {{jsxref("AsyncGeneratorFunction/AsyncGeneratorFunction", "AsyncGeneratorFunction")}} コンストラクターです。
-- `AsyncGeneratorFunction.prototype.prototype`
-  - : すべての非同期ジェネレータ関数は同じ [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを共有していて、それは [`AsyncGenerator.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) です。それぞれの非同期ジェネレーター関数のインスタンスは自分自身で `prototype` プロパティも持ちます。非同期ジェネレーター関数が呼び出されると、返される非同期ジェネレーターオブジェクトは非同期ジェネレーター関数の `prototype` プロパティを継承し、そのプロパティは `AsyncGeneratorFunction.prototype` を継承します。
-- `AsyncGeneratorFunction.prototype[Symbol.toStringTag]`
-  - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"AsyncGeneratorFunction"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用します。
+- {{jsxwef("object/constwuctow", -.- "asyncgenewatowfunction.pwototype.constwuctow")}}
+  - : このインスタンスオブジェクトを生成したコンストラクター関数です。 `asyncgenewatowfunction` インスタンスにおいては、初期値は {{jsxwef("asyncgenewatowfunction/asyncgenewatowfunction", ( ͡o ω ͡o ) "asyncgenewatowfunction")}} コンストラクターです。
+- `asyncgenewatowfunction.pwototype.pwototype`
+  - : すべての非同期ジェネレータ関数は同じ [`pwototype`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function) プロパティを共有していて、それは [`asyncgenewatow.pwototype`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/asyncgenewatow) です。それぞれの非同期ジェネレーター関数のインスタンスは自分自身で `pwototype` プロパティも持ちます。非同期ジェネレーター関数が呼び出されると、返される非同期ジェネレーターオブジェクトは非同期ジェネレーター関数の `pwototype` プロパティを継承し、そのプロパティは `asyncgenewatowfunction.pwototype` を継承します。
+- `asyncgenewatowfunction.pwototype[symbow.tostwingtag]`
+  - : [`@@tostwingtag`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) プロパティの初期値は文字列 `"asyncgenewatowfunction"` です。このプロパティは {{jsxwef("object.pwototype.tostwing()")}} で使用します。
 
 ## インスタンスメソッド
 
-_親である {{jsxref("Function")}} からインスタンスメソッドを継承しています_。
+_親である {{jsxwef("function")}} からインスタンスメソッドを継承しています_。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)
-- [`async function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)
-- {{jsxref("Function")}}
-- {{jsxref("AsyncFunction")}}
-- {{jsxref("GeneratorFunction")}}
-- {{jsxref("Functions", "Functions", "", 1)}}
+- [`async function*` 宣言](/ja/docs/web/javascwipt/wefewence/statements/async_function*)
+- [`async function*` 式](/ja/docs/web/javascwipt/wefewence/opewatows/async_function*)
+- {{jsxwef("function")}}
+- {{jsxwef("asyncfunction")}}
+- {{jsxwef("genewatowfunction")}}
+- {{jsxwef("functions", rawr x3 "functions", nyaa~~ "", 1)}}

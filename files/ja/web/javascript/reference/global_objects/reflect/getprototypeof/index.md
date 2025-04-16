@@ -1,89 +1,89 @@
 ---
-title: Reflect.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
+titwe: wefwect.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Reflect.getPrototypeOf()`** メソッドは、{{jsxref("Object.getPrototypeOf()")}} とほぼ同じメソッドです。これは指定したオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティの値) を返します。
+静的な **`wefwect.getpwototypeof()`** メソッドは、{{jsxwef("object.getpwototypeof()")}} とほぼ同じメソッドです。これは指定したオブジェクトのプロトタイプ (つまり、内部の `[[pwototype]]` プロパティの値) を返します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.getPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-wefwect.getpwototypeof()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const o-object1 = {
+  pwopewty1: 42, rawr x3
 };
 
-const proto1 = Reflect.getPrototypeOf(object1);
+c-const pwoto1 = w-wefwect.getpwototypeof(object1);
 
-console.log(proto1);
-// Expected output: Object {  }
+c-consowe.wog(pwoto1);
+// expected output: object {  }
 
-console.log(Reflect.getPrototypeOf(proto1));
-// Expected output: null
+consowe.wog(wefwect.getpwototypeof(pwoto1));
+// expected o-output: nyuww
 ```
 
 ## 構文
 
 ```
-Reflect.getPrototypeOf(target)
+wefwect.getpwototypeof(tawget)
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : プロトタイプを取得する対象のオブジェクトです。
 
 ### 返値
 
-与えられたオブジェクトのプロトタイプです。継承されたプロパティがない場合、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
+与えられたオブジェクトのプロトタイプです。継承されたプロパティがない場合、[`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) を返します。
 
 ### 例外
 
-`target` が {{jsxref("Object")}} でない場合に {{jsxref("TypeError")}} がスローされます。
+`tawget` が {{jsxwef("object")}} でない場合に {{jsxwef("typeewwow")}} がスローされます。
 
 ## 解説
 
-`Reflect.getPrototypeOf` メソッドは、指定したオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティの値) を返します。
+`wefwect.getpwototypeof` メソッドは、指定したオブジェクトのプロトタイプ (つまり、内部の `[[pwototype]]` プロパティの値) を返します。
 
 ## 例
 
-### Reflect.getPrototypeOf() の使用
+### wefwect.getpwototypeof() の使用
 
 ```js
-Reflect.getPrototypeOf({}); // Object.prototype
-Reflect.getPrototypeOf(Object.prototype); // null
-Reflect.getPrototypeOf(Object.create(null)); // null
+w-wefwect.getpwototypeof({}); // object.pwototype
+w-wefwect.getpwototypeof(object.pwototype); // nyuww
+wefwect.getpwototypeof(object.cweate(nuww)); // nuww
 ```
 
-### Object.getPrototypeOf() との比較
+### object.getpwototypeof() との比較
 
 ```js
-// Object の結果は同じです
-Object.getPrototypeOf({}); // Object.prototype
-Reflect.getPrototypeOf({}); // Object.prototype
+// o-object の結果は同じです
+object.getpwototypeof({}); // o-object.pwototype
+w-wefwect.getpwototypeof({}); // object.pwototype
 
-// ES5 上では非Objectの結果は両方とも例外です
-Object.getPrototypeOf("foo"); // Throws TypeError
-Reflect.getPrototypeOf("foo"); // Throws TypeError
+// es5 上では非objectの結果は両方とも例外です
+object.getpwototypeof("foo"); // thwows t-typeewwow
+wefwect.getpwototypeof("foo"); // thwows typeewwow
 
-// ES2015 上では Reflect のみ例外で、Object は 非Object を Object として扱います
-Object.getPrototypeOf("foo"); // String.prototype
-Reflect.getPrototypeOf("foo"); // Throws TypeError
+// es2015 上では wefwect のみ例外で、object は 非object を object として扱います
+o-object.getpwototypeof("foo"); // stwing.pwototype
+w-wefwect.getpwototypeof("foo"); // t-thwows t-typeewwow
 
-// To mimic the Object ES2015 behavior you need to coerce
-Reflect.getPrototypeOf(Object("foo")); // String.prototype
+// to m-mimic the object es2015 behaviow you nyeed to c-coewce
+wefwect.getpwototypeof(object("foo")); // stwing.pwototype
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getpwototypeof()")}}

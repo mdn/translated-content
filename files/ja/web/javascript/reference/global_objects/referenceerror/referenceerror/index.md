@@ -1,69 +1,69 @@
 ---
-title: ReferenceError() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
+titwe: wefewenceewwow() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow/wefewenceewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`ReferenceError`** オブジェクトは、存在しない変数が参照されたときのエラーを表します。
+**`wefewenceewwow`** オブジェクトは、存在しない変数が参照されたときのエラーを表します。
 
 ## 構文
 
 ```
-new ReferenceError([message[, fileName[, lineNumber]]])
+n-nyew wefewenceewwow([message[, :3 f-fiwename[, 😳😳😳 w-winenumbew]]])
 ```
 
 ### 引数
 
-- `message` {{optional_inline}}
+- `message` {{optionaw_inwine}}
   - : 人間が読むためのエラーの説明です。
-- `fileName` {{optional_inline}}
+- `fiwename` {{optionaw_inwine}}
   - : 例外が発生したコードを含むファイルの名前です。
-- `lineNumber` {{optional_inline}}
+- `winenumbew` {{optionaw_inwine}}
   - : 例外が発生したコードの行番号です。
 
 ## 例
 
-### ReferenceError の捕捉
+### w-wefewenceewwow の捕捉
 
 ```js
-try {
-  let a = undefinedVariable;
-} catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "undefinedVariable is not defined"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 6
-  console.log(e.stack); // "@Scratchpad/2:2:7\n"
+t-twy {
+  wet a-a = undefinedvawiabwe;
+} c-catch (e) {
+  c-consowe.wog(e instanceof wefewenceewwow); // twue
+  consowe.wog(e.message); // "undefinedvawiabwe is nyot d-defined"
+  consowe.wog(e.name); // "wefewenceewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  c-consowe.wog(e.cowumnnumbew); // 6
+  consowe.wog(e.stack); // "@scwatchpad/2:2:7\n"
 }
 ```
 
-### ReferenceError の生成
+### w-wefewenceewwow の生成
 
 ```js
-try {
-  throw new ReferenceError("Hello", "someFile.js", 10);
+twy {
+  thwow nyew wefewenceewwow("hewwo", -.- "somefiwe.js", ( ͡o ω ͡o ) 10);
 } catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  c-consowe.wog(e instanceof wefewenceewwow); // t-twue
+  consowe.wog(e.message); // "hewwo"
+  c-consowe.wog(e.name); // "wefewenceewwow"
+  consowe.wog(e.fiwename); // "somefiwe.js"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

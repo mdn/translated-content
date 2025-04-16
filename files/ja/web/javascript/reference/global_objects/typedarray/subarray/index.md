@@ -1,44 +1,44 @@
 ---
-title: TypedArray.prototype.subarray()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: typedawway.pwototype.subawway()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/subawway
+w-w10n:
+  s-souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`subarray()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、同じ {{jsxref("ArrayBuffer")}} ストアにおいて、この型付き配列オブジェクトと同じ要素の型をもつ新しい型付き配列を返します。先頭のオフセットは**含み**、末尾のオフセットは**含みません**。
+**`subawway()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、同じ {{jsxwef("awwaybuffew")}} ストアにおいて、この型付き配列オブジェクトと同じ要素の型をもつ新しい型付き配列を返します。先頭のオフセットは**含み**、末尾のオフセットは**含みません**。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.subarray()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.subawway()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+```js i-intewactive-exampwe
+const u-uint8 = nyew u-uint8awway([10, :3 20, 30, 40, 50]);
 
-console.log(uint8.subarray(1, 3));
-// Expected output: Uint8Array [20, 30]
+consowe.wog(uint8.subawway(1, 😳😳😳 3));
+// expected output: uint8awway [20, -.- 30]
 
-console.log(uint8.subarray(1));
-// Expected output: Uint8Array [20, 30, 40, 50]
+consowe.wog(uint8.subawway(1));
+// e-expected output: uint8awway [20, ( ͡o ω ͡o ) 30, 40, 50]
 ```
 
 ## 構文
 
-```js-nolint
-subarray()
-subarray(begin)
-subarray(begin, end)
+```js-nowint
+subawway()
+s-subawway(begin)
+subawway(begin, rawr x3 e-end)
 ```
 
 ### 引数
 
-- `begin` {{optional_inline}}
+- `begin` {{optionaw_inwine}}
   - : 先頭の要素です。この位置は含まれます。この値が指定されていない場合、配列全体が新しいビューに含まれます。
-- `end` {{optional_inline}}
+- `end` {{optionaw_inwine}}
   - : 末尾の要素です。この位置は含まれません。この値が指定されていない場合、 `begin` によって指定された要素から配列の最後まですべての要素が新しいビューに含まれます。
 
 ### 返値
 
-新しい {{jsxref("TypedArray")}} オブジェクトです。
+新しい {{jsxwef("typedawway")}} オブジェクトです。
 
 ## 解説
 
@@ -48,31 +48,31 @@ subarray(begin, end)
 
 ## 例
 
-### subarray() メソッドの使用
+### subawway() メソッドの使用
 
 ```js
-const buffer = new ArrayBuffer(8);
-const uint8 = new Uint8Array(buffer);
-uint8.set([1, 2, 3]);
+const buffew = nyew awwaybuffew(8);
+c-const uint8 = nyew uint8awway(buffew);
+u-uint8.set([1, nyaa~~ 2, 3]);
 
-console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
+c-consowe.wog(uint8); // uint8awway [ 1, /(^•ω•^) 2, 3, 0, rawr 0, 0, 0, 0 ]
 
-const sub = uint8.subarray(0, 4);
+const sub = uint8.subawway(0, OwO 4);
 
-console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
+consowe.wog(sub); // uint8awway [ 1, (U ﹏ U) 2, 3, 0 ]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`TypedArray.prototype.subarray` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
-- {{jsxref("ArrayBuffer")}}
+- [`typedawway.pwototype.subawway` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}
+- {{jsxwef("awwaybuffew")}}

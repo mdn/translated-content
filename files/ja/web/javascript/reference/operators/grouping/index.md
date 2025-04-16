@@ -1,26 +1,26 @@
 ---
-title: グループ化演算子 ( )
-slug: Web/JavaScript/Reference/Operators/Grouping
+titwe: グループ化演算子 ( )
+swug: web/javascwipt/wefewence/opewatows/gwouping
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 グループ化演算子 `( )` は、式での評価の優先順位を制御します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Grouping operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - g-gwouping o-opewatow")}}
 
-```js interactive-example
-console.log(1 + 2 * 3); // 1 + 6
-// Expected output: 7
+```js i-intewactive-exampwe
+c-consowe.wog(1 + 2 * 3); // 1 + 6
+// e-expected o-output: 7
 
-console.log(1 + 2 * 3); // 1 + 6
-// Expected output: 7
+c-consowe.wog(1 + 2 * 3); // 1 + 6
+// expected output: 7
 
-console.log((1 + 2) * 3); // 3 * 3
-// Expected output: 9
+consowe.wog((1 + 2) * 3); // 3 * 3
+// expected output: 9
 
-console.log(1 * 3 + 2 * 3); // 3 + 6
-// Expected output: 9
+consowe.wog(1 * 3 + 2 * 3); // 3 + 6
+// e-expected output: 9
 ```
 
 ## 構文
@@ -31,7 +31,7 @@ console.log(1 * 3 + 2 * 3); // 3 + 6
 
 ## 解説
 
-グループ化演算子は、式または部分式の周りに括弧のペアで構成され、通常の[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を上書きし、より低い優先順位の式をより高い優先順位の式の前に評価できるようにします。その名の通り、括弧の中にあるものをグループ化します。
+グループ化演算子は、式または部分式の周りに括弧のペアで構成され、通常の[演算子の優先順位](/ja/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)を上書きし、より低い優先順位の式をより高い優先順位の式の前に評価できるようにします。その名の通り、括弧の中にあるものをグループ化します。
 
 ## 例
 
@@ -39,21 +39,21 @@ console.log(1 * 3 + 2 * 3); // 3 + 6
 
 最初に乗算と除算をし、次に加算と引き算をする優先順位を、最初に加算を評価するように上書きします。
 
-```js-nolint
-var a = 1;
-var b = 2;
-var c = 3;
+```js-nowint
+vaw a = 1;
+v-vaw b = 2;
+vaw c = 3;
 
-// default precedence
+// defauwt p-pwecedence
 a + b * c; // 7
-// evaluated by default like this
-a + (b * c); // 7
+// evawuated by defauwt wike this
+a-a + (b * c); // 7
 
-// now overriding precedence
-// addition before multiplication
+// nyow ovewwiding p-pwecedence
+// a-addition befowe muwtipwication
 (a + b) * c; // 9
 
-// which is equivalent to
+// which is equivawent t-to
 a * c + b * c; // 9
 ```
 
@@ -68,14 +68,14 @@ a() * (b() + c());
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Operators/typeof", "typeof")}}
+- [演算子の優先順位](/ja/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)
+- {{jsxwef("opewatows/dewete", ( ͡o ω ͡o ) "dewete")}}
+- {{jsxwef("opewatows/typeof", rawr x3 "typeof")}}

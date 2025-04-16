@@ -1,67 +1,67 @@
 ---
-title: Retry-After
-slug: Web/HTTP/Reference/Headers/Retry-After
-original_slug: Web/HTTP/Headers/Retry-After
+titwe: wetwy-aftew
+swug: web/http/wefewence/headews/wetwy-aftew
+o-owiginaw_swug: w-web/http/headews/wetwy-aftew
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Retry-After`** レスポンス HTTP ヘッダーは、ユーザーエージェントがフォローアップリクエストを行う前にどれくらい待つべきかを示します。このヘッダーが使用される主なケースは 3 つあります。
+**`wetwy-aftew`** レスポンス h-http ヘッダーは、ユーザーエージェントがフォローアップリクエストを行う前にどれくらい待つべきかを示します。このヘッダーが使用される主なケースは 3 つあります。
 
-- {{HTTPStatus(503)}} (Service Unavailable) レスポンスで送信された場合、これはサービスが利用できないと予想される期間を示します。
-- {{HTTPStatus(429)}} (Too Many Requests) レスポンスとともに送信された場合、これは新しいリクエストを行うまでどれくらい待つかを示します。
-- {{HTTPStatus(301)}} (Moved Permanently) のようなリダイレクトレスポンスとともに送信された場合、リダイレクトされたリクエストを発行する前にユーザエージェントが待機するように要求される最小時間を示します。
+- {{httpstatus(503)}} (sewvice u-unavaiwabwe) レスポンスで送信された場合、これはサービスが利用できないと予想される期間を示します。
+- {{httpstatus(429)}} (too m-many wequests) レスポンスとともに送信された場合、これは新しいリクエストを行うまでどれくらい待つかを示します。
+- {{httpstatus(301)}} (moved pewmanentwy) のようなリダイレクトレスポンスとともに送信された場合、リダイレクトされたリクエストを発行する前にユーザエージェントが待機するように要求される最小時間を示します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダータイプ</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">ヘッダータイプ</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Retry-After: <http-date>
-Retry-After: <delay-seconds>
+wetwy-aftew: <http-date>
+w-wetwy-aftew: <deway-seconds>
 ```
 
 ## ディレクティブ
 
 - \<http-date>
-  - : 再試行する日付。HTTP の日付形式の詳細については {{HTTPHeader("Date")}} ヘッダーを参照してください。
-- \<delay-seconds>
+  - : 再試行する日付。http の日付形式の詳細については {{httpheadew("date")}} ヘッダーを参照してください。
+- \<deway-seconds>
   - : レスポンスを受信してから遅延する秒数を示す負でない 10 進数の整数。
 
 ## 例
 
 ### スケジュールされたダウンタイムの処理
 
-クライアントとサーバーの両方で `Retry-After` ヘッダーがサポートされているのは、依然として矛盾しています。ただし、Googlebot のような一部のクローラとスパイダーは `Retry-After` ヘッダーを尊重します。{{HTTPStatus(503)}} (Service Unavailable) レスポンスと共に送信すると便利です。これにより、ダウンタイムが終了したときに検索エンジンがサイトのインデックスを作成し続けるようになります。
+クライアントとサーバーの両方で `wetwy-aftew` ヘッダーがサポートされているのは、依然として矛盾しています。ただし、googwebot のような一部のクローラとスパイダーは `wetwy-aftew` ヘッダーを尊重します。{{httpstatus(503)}} (sewvice unavaiwabwe) レスポンスと共に送信すると便利です。これにより、ダウンタイムが終了したときに検索エンジンがサイトのインデックスを作成し続けるようになります。
 
 ```
-Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
-Retry-After: 120
+wetwy-aftew: w-wed, mya 21 oct 2015 07:28:00 g-gmt
+wetwy-aftew: 120
 ```
 
 ## 仕様書
 
 | 仕様書                                  | タイトル                                                      |
 | --------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Retry-After", "7.1.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 😳 "wetwy-aftew", "7.1.3")}} | hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Google Webmaster blog: How to deal with planned site downtime](https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html)
-- {{HTTPStatus(503)}} (Service Unavailable)
-- {{HTTPStatus(301)}} (Moved Permanently)
+- [googwe webmastew b-bwog: how to deaw with p-pwanned site downtime](https://webmastews.googwebwog.com/2011/01/how-to-deaw-with-pwanned-site-downtime.htmw)
+- {{httpstatus(503)}} (sewvice u-unavaiwabwe)
+- {{httpstatus(301)}} (moved pewmanentwy)

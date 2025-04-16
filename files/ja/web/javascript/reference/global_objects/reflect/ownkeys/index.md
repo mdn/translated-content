@@ -1,74 +1,74 @@
 ---
-title: Reflect.ownKeys()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
+titwe: wefwect.ownkeys()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/ownkeys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Reflect.ownKeys()`** メソッドは、 `target` オブジェクトが持つプロパティキーの配列を返します。
+静的な **`wefwect.ownkeys()`** メソッドは、 `tawget` オブジェクトが持つプロパティキーの配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.ownkeys()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
-  property2: 13,
+```js i-intewactive-exampwe
+c-const o-object1 = {
+  p-pwopewty1: 42, XD
+  p-pwopewty2: 13, :3
 };
 
-const array1 = [];
+c-const awway1 = [];
 
-console.log(Reflect.ownKeys(object1));
-// Expected output: Array ["property1", "property2"]
+consowe.wog(wefwect.ownkeys(object1));
+// expected output: awway ["pwopewty1", 😳😳😳 "pwopewty2"]
 
-console.log(Reflect.ownKeys(array1));
-// Expected output: Array ["length"]
+consowe.wog(wefwect.ownkeys(awway1));
+// expected o-output: awway ["wength"]
 ```
 
 ## 構文
 
 ```
-Reflect.ownKeys(target)
+wefwect.ownkeys(tawget)
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : キーを取得する対象のオブジェクト
 
 ### 返値
 
-`target` オブジェクトが持つプロパティキーの {{jsxref("Array")}} 。
+`tawget` オブジェクトが持つプロパティキーの {{jsxwef("awway")}} 。
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではない場合
+{{jsxwef("typeewwow")}}: `tawget` が {{jsxwef("object")}} ではない場合
 
 ## 解説
 
-`Reflect.ownKeys` メソッドは、対象のオブジェクトが持つプロパティキーの配列を返します。この返値は、`{{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(target)", "", 1)}}.concat({{jsxref("Object.getOwnPropertySymbols", "Object.getOwnPropertySymbols(target)", "", 1)}})` と同じです。
+`wefwect.ownkeys` メソッドは、対象のオブジェクトが持つプロパティキーの配列を返します。この返値は、`{{jsxwef("object.getownpwopewtynames", -.- "object.getownpwopewtynames(tawget)", ( ͡o ω ͡o ) "", 1)}}.concat({{jsxwef("object.getownpwopewtysymbows", rawr x3 "object.getownpwopewtysymbows(tawget)", nyaa~~ "", 1)}})` と同じです。
 
 ## 例
 
-### Reflect.ownKeys() の使用
+### w-wefwect.ownkeys() の使用
 
 ```js
-Reflect.ownKeys({ z: 3, y: 2, x: 1 }); // [ "z", "y", "x" ]
-Reflect.ownKeys([]); // ["length"]
+wefwect.ownkeys({ z-z: 3, /(^•ω•^) y: 2, rawr x: 1 }); // [ "z", OwO "y", "x" ]
+wefwect.ownkeys([]); // ["wength"]
 
-let sym = Symbol.for("comet");
-let sym2 = Symbol.for("meteor");
-let obj = {
+wet sym = symbow.fow("comet");
+wet sym2 = symbow.fow("meteow");
+w-wet obj = {
   [sym]: 0,
-  str: 0,
-  773: 0,
+  stw: 0, (U ﹏ U)
+  773: 0, >_<
   0: 0,
-  [sym2]: 0,
-  "-1": 0,
+  [sym2]: 0, rawr x3
+  "-1": 0, mya
   8: 0,
-  "second str": 0,
+  "second s-stw": 0, nyaa~~
 };
-Reflect.ownKeys(obj);
-// [ "0", "8", "773", "str", "-1", "second str", Symbol(comet), Symbol(meteor) ]
+w-wefwect.ownkeys(obj);
+// [ "0", (⑅˘꒳˘) "8", "773", rawr x3 "stw", "-1", "second stw", (✿oωo) symbow(comet), (ˆ ﻌ ˆ)♡ symbow(meteow) ]
 // 数字順のインデックス、
 // 挿入順の文字列、
 // 挿入順のシンボル
@@ -76,13 +76,13 @@ Reflect.ownKeys(obj);
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

@@ -1,67 +1,67 @@
 ---
-title: Pragma
-slug: Web/HTTP/Reference/Headers/Pragma
-original_slug: Web/HTTP/Headers/Pragma
+titwe: pwagma
+swug: web/http/wefewence/headews/pwagma
+o-owiginaw_swug: w-web/http/headews/pwagma
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Pragma`** は HTTP/1.0 の一般ヘッダーで、実装固有のヘッダーであり、リクエスト - レスポンスチェーンに沿ってさまざまな影響を与えます。 `Cache-Control` HTTP/1.1 ヘッダーがまだ存在しない HTTP/1.0 キャッシュとの下位互換性のために使用されます。
+**`pwagma`** は h-http/1.0 の一般ヘッダーで、実装固有のヘッダーであり、リクエスト - レスポンスチェーンに沿ってさまざまな影響を与えます。 `cache-contwow` h-http/1.1 ヘッダーがまだ存在しない h-http/1.0 キャッシュとの下位互換性のために使用されます。
 
-> **メモ:** `Pragma` は HTTP レスポンスには指定されていないため、リクエストの `Cache-Control` ヘッダーフィールドが省略されている場合は `Cache-Control: no-cache` と同じように動作しますが、一般的な HTTP/1.1 `Cache-Control` ヘッダーの代わりに信頼できるものではありません。`Pragma` は HTTP/1.0 クライアントとの下位互換性のためにのみ使用してください。
+> **メモ:** `pwagma` は h-http レスポンスには指定されていないため、リクエストの `cache-contwow` ヘッダーフィールドが省略されている場合は `cache-contwow: n-nyo-cache` と同じように動作しますが、一般的な h-http/1.1 `cache-contwow` ヘッダーの代わりに信頼できるものではありません。`pwagma` は http/1.0 クライアントとの下位互換性のためにのみ使用してください。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("General header", "一般ヘッダー")}},
+        {{gwossawy("genewaw headew", -.- "一般ヘッダー")}}, ^^;;
         ただしレスポンスの振る舞いは指定されていないため、実装固有です。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden headew nyame", >_< "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cows-safewisted w-wesponse headew", mya "cows セーフリストレスポンスヘッダー")}}
       </th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Pragma: no-cache
+pwagma: n-nyo-cache
 ```
 
 ## ディレクティブ
 
-- no-cache
-  - : `Cache-Control: no-cache` と同じです。キャッシュされたコピーを解放する前に、キャッシュが検証のためにオリジンサーバーにリクエストを送信するようにします。
+- nyo-cache
+  - : `cache-contwow: nyo-cache` と同じです。キャッシュされたコピーを解放する前に、キャッシュが検証のためにオリジンサーバーにリクエストを送信するようにします。
 
 ## 例
 
 ```
-Pragma: no-cache
+pwagma: nyo-cache
 ```
 
 ## 仕様書
 
 | 仕様書                           | 題名                                            |
 | -------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Pragma", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+| {{wfc("7234", mya "pwagma", "5.4")}} | hypewtext twansfew pwotocow (http/1.1): c-caching |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Expires")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("expiwes")}}

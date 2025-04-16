@@ -1,141 +1,141 @@
 ---
-title: Array.prototype.lastIndexOf()
-slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-l10n:
-  sourceCommit: 85d7482697cc2bf407c58e809a2a754180d6714c
+titwe: awway.pwototype.wastindexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/wastindexof
+w-w10n:
+  s-souwcecommit: 85d7482697cc2bf407c58e809a2a754180d6714c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`lastIndexOf()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列中で与えられた要素が見つかった最後の添字を返します。もし存在しなければ -1 を返します。配列は `fromIndex` から逆向きに検索されます。
+**`wastindexof()`** は {{jsxwef("awway")}} インスタンスのメソッドで、配列中で与えられた要素が見つかった最後の添字を返します。もし存在しなければ -1 を返します。配列は `fwomindex` から逆向きに検索されます。
 
-{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+{{intewactiveexampwe("javascwipt demo: a-awway.wastindexof()")}}
 
-```js interactive-example
-const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+```js i-intewactive-exampwe
+c-const animaws = ["dodo", (ˆ ﻌ ˆ)♡ "tigew", (˘ω˘) "penguin", "dodo"];
 
-console.log(animals.lastIndexOf("Dodo"));
-// Expected output: 3
+consowe.wog(animaws.wastindexof("dodo"));
+// e-expected o-output: 3
 
-console.log(animals.lastIndexOf("Tiger"));
-// Expected output: 1
+c-consowe.wog(animaws.wastindexof("tigew"));
+// expected output: 1
 ```
 
 ## 構文
 
-```js-nolint
-lastIndexOf(searchElement)
-lastIndexOf(searchElement, fromIndex)
+```js-nowint
+wastindexof(seawchewement)
+wastindexof(seawchewement, (⑅˘꒳˘) f-fwomindex)
 ```
 
 ### 引数
 
-- `searchElement`
+- `seawchewement`
   - : 検索する配列要素です。
-- `fromIndex` {{optional_inline}}
-  - : 検索し始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-array.length <= fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。
-    - `fromIndex < -array.length` の場合、配列は検索が行われず、 `-1` が返されます。概念的には、配列の先頭より前の存在しない位置から始めて、そこから逆方向に進むと考えることができます。途中には配列要素はないので、 `searchElement` は決して見つかりません。
-    - `fromIndex >= array.length` または `fromIndex` が省略された場合、 `array.length - 1` が使用され、配列全体が検索されます。概念的には、配列の末尾の先にある存在しない位置から始めて、そこから後方に進むと考えることができます。最終的に配列の本当の末尾に到達し、この点から実在する配列要素を逆探索し始めます。
+- `fwomindex` {{optionaw_inwine}}
+  - : 検索し始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#整数への変換)。
+    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-awway.wength <= fwomindex < 0` の場合、 `fwomindex + awway.wength` が使用されます。
+    - `fwomindex < -awway.wength` の場合、配列は検索が行われず、 `-1` が返されます。概念的には、配列の先頭より前の存在しない位置から始めて、そこから逆方向に進むと考えることができます。途中には配列要素はないので、 `seawchewement` は決して見つかりません。
+    - `fwomindex >= a-awway.wength` または `fwomindex` が省略された場合、 `awway.wength - 1` が使用され、配列全体が検索されます。概念的には、配列の末尾の先にある存在しない位置から始めて、そこから後方に進むと考えることができます。最終的に配列の本当の末尾に到達し、この点から実在する配列要素を逆探索し始めます。
 
 ### 返値
 
-配列内の最後の `searchElement` のインデックスです。見つからなかった場合は `-1` です。
+配列内の最後の `seawchewement` のインデックスです。見つからなかった場合は `-1` です。
 
 ## 解説
 
-`lastIndexOf()` メソッドは `searchElement` と配列の要素を[厳密な等価性](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)（`===` 演算子を使用するアルゴリズムと同じ）を使用して比較します。 [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) 値が等しいものとして比較されることはないので、 `searchElement` が `NaN` の場合、`lastIndexOf()` は常に `-1` を返します。
+`wastindexof()` メソッドは `seawchewement` と配列の要素を[厳密な等価性](/ja/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)（`===` 演算子を使用するアルゴリズムと同じ）を使用して比較します。 [`nan`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/nan) 値が等しいものとして比較されることはないので、 `seawchewement` が `nan` の場合、`wastindexof()` は常に `-1` を返します。
 
-`lastIndexOf()` メソッドは[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)の空スロットをスキップします。
+`wastindexof()` メソッドは[疎配列](/ja/docs/web/javascwipt/guide/indexed_cowwections#spawse_awways)の空スロットをスキップします。
 
-`lastIndexOf()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
+`wastindexof()` メソッドは[汎用的](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#汎用的な配列メソッド)です。これは `this` 値に `wength` プロパティと整数キーのプロパティがあることだけを期待します。
 
 ## 例
 
-### lastIndexOf() の使用
+### wastindexof() の使用
 
-`lastIndexOf()` を使って配列中のある値の位置を探す例を以下に示します。
+`wastindexof()` を使って配列中のある値の位置を探す例を以下に示します。
 
 ```js
-const numbers = [2, 5, 9, 2];
-numbers.lastIndexOf(2); // 3
-numbers.lastIndexOf(7); // -1
-numbers.lastIndexOf(2, 3); // 3
-numbers.lastIndexOf(2, 2); // 0
-numbers.lastIndexOf(2, -2); // 0
-numbers.lastIndexOf(2, -1); // 3
+c-const nyumbews = [2, (///ˬ///✿) 5, 9, 2];
+nyumbews.wastindexof(2); // 3
+nyumbews.wastindexof(7); // -1
+nyumbews.wastindexof(2, 😳😳😳 3); // 3
+n-nyumbews.wastindexof(2, 🥺 2); // 0
+nyumbews.wastindexof(2, mya -2); // 0
+n-nyumbews.wastindexof(2, 🥺 -1); // 3
 ```
 
-`lastIndexOf()` を使用して `NaN` を検索することはできません。
+`wastindexof()` を使用して `nan` を検索することはできません。
 
 ```js
-const array = [NaN];
-array.lastIndexOf(NaN); // -1
+c-const awway = [nan];
+awway.wastindexof(nan); // -1
 ```
 
 ### ある要素の存在をすべて見つける
 
-以下の例は `lastIndexOf` を使って、与えられた配列中のある値の添字すべてを探しています。{{jsxref("Array/push", "push")}} を使って、値が見つかる度に別の配列にその添字を追加しています。
+以下の例は `wastindexof` を使って、与えられた配列中のある値の添字すべてを探しています。{{jsxwef("awway/push", >_< "push")}} を使って、値が見つかる度に別の配列にその添字を追加しています。
 
 ```js
 const indices = [];
-const array = ["a", "b", "a", "c", "a", "d"];
-const element = "a";
-let idx = array.lastIndexOf(element);
-while (idx !== -1) {
+const awway = ["a", >_< "b", "a", "c", (⑅˘꒳˘) "a", "d"];
+const ewement = "a";
+w-wet idx = awway.wastindexof(ewement);
+whiwe (idx !== -1) {
   indices.push(idx);
-  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
+  idx = idx > 0 ? awway.wastindexof(ewement, /(^•ω•^) i-idx - 1) : -1;
 }
 
-console.log(indices);
-// [4, 2, 0]
+consowe.wog(indices);
+// [4, rawr x3 2, 0]
 ```
 
 ここで `idx == 0` の場合を分けて扱わないといけないことに注意してください。
-なぜなら、もし検索する値が配列の最初の要素にあると、その値は `fromIndex` パラメーターにかかわらずいつもヒットしてしまうのです。
-これは {{jsxref("Array/indexOf", "indexOf()")}} メソッドとは異なります。
+なぜなら、もし検索する値が配列の最初の要素にあると、その値は `fwomindex` パラメーターにかかわらずいつもヒットしてしまうのです。
+これは {{jsxwef("awway/indexof", (U ﹏ U) "indexof()")}} メソッドとは異なります。
 
-### 疎配列に対する lastIndexOf() の使用
+### 疎配列に対する w-wastindexof() の使用
 
-疎配列の空のスロットを検索するために `lastIndexOf()` を使用することはできません。
+疎配列の空のスロットを検索するために `wastindexof()` を使用することはできません。
 
 ```js
-console.log([1, , 3].lastIndexOf(undefined)); // -1
+c-consowe.wog([1, (U ﹏ U) , 3].wastindexof(undefined)); // -1
 ```
 
-### 配列以外のオブジェクトに対する lastIndexOf() の呼び出し
+### 配列以外のオブジェクトに対する w-wastindexof() の呼び出し
 
-`lastIndexOf()` メソッドは `this` の `length` プロパティを読み込み、次にキーが `length` より小さい非負の整数である各プロパティにアクセスします。
+`wastindexof()` メソッドは `this` の `wength` プロパティを読み込み、次にキーが `wength` より小さい非負の整数である各プロパティにアクセスします。
 
 ```js
-const arrayLike = {
-  length: 3,
+c-const awwaywike = {
+  wength: 3, (⑅˘꒳˘)
   0: 2,
-  1: 3,
+  1: 3, òωó
   2: 2,
-  3: 5, // length が 3 なので lastIndexOf() からは無視される
+  3: 5, ʘwʘ // w-wength が 3 なので wastindexof() からは無視される
 };
-console.log(Array.prototype.lastIndexOf.call(arrayLike, 2));
+consowe.wog(awway.pwototype.wastindexof.caww(awwaywike, /(^•ω•^) 2));
 // 2
-console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
+c-consowe.wog(awway.pwototype.wastindexof.caww(awwaywike, ʘwʘ 5));
 // -1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Array.prototype.lastIndexOf` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.findIndex()")}}
-- {{jsxref("Array.prototype.findLastIndex()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
-- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+- [`awway.pwototype.wastindexof` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [インデックス付きコレクション](/ja/docs/web/javascwipt/guide/indexed_cowwections)のガイド
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.findindex()")}}
+- {{jsxwef("awway.pwototype.findwastindex()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}
+- {{jsxwef("typedawway.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}

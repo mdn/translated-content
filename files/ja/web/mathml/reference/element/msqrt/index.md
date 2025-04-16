@@ -1,46 +1,46 @@
 ---
-title: <msqrt>
-slug: Web/MathML/Reference/Element/msqrt
-original_slug: Web/MathML/Element/msqrt
+titwe: <msqwt>
+swug: web/mathmw/wefewence/ewement/msqwt
+o-owiginaw_swug: w-web/mathmw/ewement/msqwt
 ---
 
-{{MathMLRef()}}
+{{mathmwwef()}}
 
-MathML の `<msqrt>` 要素は平方根（根指数のついていない累乗根）を表示するために用いられます。 引数は一つだけで、構文は `<msqrt> base </msqrt>` となります。
+m-mathmw の `<msqwt>` 要素は平方根（根指数のついていない累乗根）を表示するために用いられます。 引数は一つだけで、構文は `<msqwt> b-base </msqwt>` となります。
 
 ## 属性
 
-- class, id, style
-  - : [CSS](/ja/docs/Web/CSS)を用いて修飾を行なう際に使われます。
-- href
+- c-cwass, rawr x3 i-id, stywe
+  - : [css](/ja/docs/web/css)を用いて修飾を行なう際に使われます。
+- h-hwef
   - : ハイパーリンクを設定する際に用いられます。
-- mathbackground
-  - : 数式の背景色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/named-color)を用いることができます。
-- mathcolor
-  - : 根号を含んだ数式の文字の色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/named-color)を用いることができます。
+- m-mathbackgwound
+  - : 数式の背景色を指定するために使われます。`#wgb`、`#wwggbb`のような 16 進表現のほか、htmw で定められた[色キーワード](/ja/docs/web/css/named-cowow)を用いることができます。
+- mathcowow
+  - : 根号を含んだ数式の文字の色を指定するために使われます。`#wgb`、`#wwggbb`のような 16 進表現のほか、htmw で定められた[色キーワード](/ja/docs/web/css/named-cowow)を用いることができます。
 
 ## 例
 
-レンダリングのサンプル(画像): ![root-x](msqrt.png)
+レンダリングのサンプル(画像): ![woot-x](msqwt.png)
 
-ブラウザーのレンダリング結果: <math><msqrt><mi>x</mi></msqrt></math>
+ブラウザーのレンダリング結果: <math><msqwt><mi>x</mi></msqwt></math>
 
-```html
+```htmw
 <math>
-  <msqrt>
+  <msqwt>
     <mi>x</mi>
-  </msqrt>
+  </msqwt>
 </math>
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- {{ MathMLElement("mroot") }} (Radical with an index)
+- {{ mathmwewement("mwoot") }} (wadicaw with an index)

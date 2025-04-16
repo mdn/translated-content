@@ -1,34 +1,34 @@
 ---
-title: Math.sign()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: math.sign()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sign
+w-w10n:
+  s-souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.sign()`** 静的メソッドは 1 または -1 を返し、引数として渡された値の符号を表します。入力値が 0 または -0 ならば、そのまま返します。
+**`math.sign()`** 静的メソッドは 1 または -1 を返し、引数として渡された値の符号を表します。入力値が 0 または -0 ならば、そのまま返します。
 
-{{InteractiveExample("JavaScript Demo: Math.sign()")}}
+{{intewactiveexampwe("javascwipt demo: m-math.sign()")}}
 
-```js interactive-example
-console.log(Math.sign(3));
-// Expected output: 1
+```js i-intewactive-exampwe
+c-consowe.wog(math.sign(3));
+// e-expected o-output: 1
 
-console.log(Math.sign(-3));
-// Expected output: -1
+consowe.wog(math.sign(-3));
+// expected output: -1
 
-console.log(Math.sign(0));
-// Expected output: 0
+consowe.wog(math.sign(0));
+// expected output: 0
 
-console.log(Math.sign("-3"));
-// Expected output: -1
+c-consowe.wog(math.sign("-3"));
+// expected output: -1
 ```
 
 ## 構文
 
-```js-nolint
-Math.sign(x)
+```js-nowint
+m-math.sign(x)
 ```
 
 ### 引数
@@ -44,40 +44,40 @@ Math.sign(x)
 - 引数が負の値の場合は、 `-1` を返します。
 - 引数が正のゼロの場合は、 `0` を返します。
 - 引数が負のゼロの場合は、 `-0` を返します。
-- それ以外は {{jsxref("NaN")}} を返します。
+- それ以外は {{jsxwef("nan")}} を返します。
 
 ## 解説
 
-`sign()` は `Math` の静的メソッドなので、常に `Math.sign()` として使用し、自分で `Math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`Math` にはコンストラクターがありません)。
+`sign()` は `math` の静的メソッドなので、常に `math.sign()` として使用し、自分で `math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`math` にはコンストラクターがありません)。
 
 ## 例
 
-### Math.sign() の使用
+### math.sign() の使用
 
 ```js
-Math.sign(3); // 1
-Math.sign(-3); // -1
-Math.sign("-3"); // -1
-Math.sign(0); // 0
-Math.sign(-0); // -0
-Math.sign(NaN); // NaN
-Math.sign("foo"); // NaN
-Math.sign(); // NaN
+m-math.sign(3); // 1
+math.sign(-3); // -1
+math.sign("-3"); // -1
+math.sign(0); // 0
+m-math.sign(-0); // -0
+math.sign(nan); // nan
+m-math.sign("foo"); // n-nyan
+math.sign(); // nyan
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Math.sign` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.trunc()")}}
+- [`math.sign` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.twunc()")}}

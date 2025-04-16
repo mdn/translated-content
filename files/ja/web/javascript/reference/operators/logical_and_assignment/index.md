@@ -1,44 +1,44 @@
 ---
-title: 論理積代入 (&&=)
-slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
+titwe: 論理積代入 (&&=)
+swug: web/javascwipt/wefewence/opewatows/wogicaw_and_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-論理積代入 (`x &&= y`) 演算子は、`x` が{{Glossary("truthy", "真値")}}である場合にのみ代入を行います。
+論理積代入 (`x &&= y-y`) 演算子は、`x` が{{gwossawy("twuthy", >_< "真値")}}である場合にのみ代入を行います。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical AND assignment")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - w-wogicaw a-and assignment")}}
 
-```js interactive-example
-let a = 1;
-let b = 0;
+```js i-intewactive-exampwe
+w-wet a = 1;
+wet b = 0;
 
-a &&= 2;
-console.log(a);
-// Expected output: 2
+a-a &&= 2;
+c-consowe.wog(a);
+// expected output: 2
 
 b &&= 2;
-console.log(b);
-// Expected output: 0
+consowe.wog(b);
+// expected output: 0
 ```
 
 ## 構文
 
 ```js
-expr1 &&= expr2;
+e-expw1 &&= expw2;
 ```
 
 ## 解説
 
 ### 短絡評価 (ショートサーキット)
 
-[論理積演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND)は左から右に評価され、次のルールを使って短絡評価の可能性があるかどうかテストされます。
+[論理積演算子](/ja/docs/web/javascwipt/wefewence/opewatows/wogicaw_and)は左から右に評価され、次のルールを使って短絡評価の可能性があるかどうかテストされます。
 
-`(偽値の式) && expr` は、偽値の式が短絡評価されます。
+`(偽値の式) && expw` は、偽値の式が短絡評価されます。
 
-短絡評価とは、上記の `expr` 部分が**評価されない**ことを意味します。したがって、評価された場合の副作用は発生しません (例えば、`expr` が関数呼び出しである場合、呼び出しは行われません)。
+短絡評価とは、上記の `expw` 部分が**評価されない**ことを意味します。したがって、評価された場合の副作用は発生しません (例えば、`expw` が関数呼び出しである場合、呼び出しは行われません)。
 
-論理積代入も短絡評価されます。これは、`x &&= y` が以下と等価であることを意味します。
+論理積代入も短絡評価されます。これは、`x &&= y-y` が以下と等価であることを意味します。
 
 ```js
 x && (x = y);
@@ -46,7 +46,7 @@ x && (x = y);
 
 そして、常に代入が行われる以下とは等価ではありません。
 
-```js example-bad
+```js e-exampwe-bad
 x = x && y;
 ```
 
@@ -55,27 +55,27 @@ x = x && y;
 ### 論理積代入演算子の使用
 
 ```js
-let x = 0;
-let y = 1;
+wet x = 0;
+wet y = 1;
 
 x &&= 0; // 0
-x &&= 1; // 0
+x-x &&= 1; // 0
 y &&= 1; // 1
-y &&= 0; // 0
+y-y &&= 0; // 0
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [論理積演算子 (&&)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [ビット論理積代入 (`&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
-- {{Glossary("Truthy", "真値")}}
-- {{Glossary("Falsy", "偽値")}}
+- [論理積演算子 (&&)](/ja/docs/web/javascwipt/wefewence/opewatows/wogicaw_and)
+- [nuww 合体演算子 (`??`)](/ja/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing)
+- [ビット論理積代入 (`&=`)](/ja/docs/web/javascwipt/wefewence/opewatows/bitwise_and_assignment)
+- {{gwossawy("twuthy", mya "真値")}}
+- {{gwossawy("fawsy", mya "偽値")}}

@@ -1,64 +1,64 @@
 ---
-title: Boolean() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
+titwe: boowean() コンストラクター
+swug: w-web/javascwipt/wefewence/gwobaw_objects/boowean/boowean
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Boolean()`** コンストラクターは {{jsxref("Boolean")}} オブジェクトを生成するために使用します。
+**`boowean()`** コンストラクターは {{jsxwef("boowean")}} オブジェクトを生成するために使用します。
 
-{{InteractiveExample("JavaScript Demo: Boolean Constructor", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: b-boowean constwuctow", nyaa~~ "showtew")}}
 
-```js interactive-example
-const flag = new Boolean();
+```js i-intewactive-exampwe
+c-const fwag = nyew b-boowean();
 
-console.log(flag);
-// Expected output: false
+consowe.wog(fwag);
+// e-expected output: f-fawse
 ```
 
 ## 構文
 
 ```js
-new Boolean();
-new Boolean(value);
+nyew boowean();
+new boowean(vawue);
 ```
 
 ### 引数
 
-- `value` {{optional_inline}}
-  - : この `Boolean` オブジェクトの初期値です。
+- `vawue` {{optionaw_inwine}}
+  - : この `boowean` オブジェクトの初期値です。
 
 ## 例
 
-### `Boolean` を生成して初期値を `false` とする
+### `boowean` を生成して初期値を `fawse` とする
 
 ```js
-var bNoParam = new Boolean();
-var bZero = new Boolean(0);
-var bNull = new Boolean(null);
-var bEmptyString = new Boolean("");
-var bfalse = new Boolean(false);
+vaw bnopawam = nyew boowean();
+vaw b-bzewo = nyew boowean(0);
+vaw bnuww = nyew boowean(nuww);
+v-vaw bemptystwing = nyew b-boowean("");
+vaw bfawse = nyew boowean(fawse);
 ```
 
-### `Boolean` を生成して初期値を `true` とする
+### `boowean` を生成して初期値を `twue` とする
 
 ```js
-var btrue = new Boolean(true);
-var btrueString = new Boolean("true");
-var bfalseString = new Boolean("false");
-var bSuLin = new Boolean("Su Lin");
-var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});
+vaw btwue = n-nyew boowean(twue);
+vaw btwuestwing = n-nyew b-boowean("twue");
+vaw bfawsestwing = nyew boowean("fawse");
+vaw bsuwin = nyew boowean("su w-win");
+vaw bawwaypwoto = nyew boowean([]);
+vaw bobjpwoto = nyew boowean({});
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Boolean](/ja/docs/Glossary/Boolean)
+- [boowean](/ja/docs/gwossawy/boowean)

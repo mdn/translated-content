@@ -1,69 +1,69 @@
 ---
-title: DataView.prototype.setUint32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
+titwe: dataview.pwototype.setuint32()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/setuint32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setUint32()`** メソッドは、符号なし 32 ビット整数 (unsigned long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
+**`setuint32()`** メソッドは、符号なし 32 ビット整数 (unsigned w-wong) 値を {{jsxwef("dataview")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setUint32()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.setuint32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size in b-bytes
+const buffew = n-nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setUint32(1, 4294967295); // Max unsigned 32-bit integer
+const view = nyew dataview(buffew);
+view.setuint32(1, >_< 4294967295); // m-max unsigned 32-bit integew
 
-console.log(view.getUint32(1));
-// Expected output: 4294967295
+consowe.wog(view.getuint32(1));
+// e-expected output: 4294967295
 ```
 
 ## 構文
 
 ```
-dataview.setUint32(byteOffset, value [, littleEndian])
+dataview.setuint32(byteoffset, mya v-vawue [, mya wittweendian])
 ```
 
 ### 引数
 
-- `byteOffset`
+- `byteoffset`
   - : ビューの先頭からのバイト単位のオフセットで、データを格納する位置です。
-- `value`
+- `vawue`
   - : 設定する値です。
-- `littleEndian`
-  - : {{optional_inline}} 32 ビット整数を{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納するかを表します。 `false` または `undefined` の場合、ビッグエンディアン値が書き込まれます。
+- `wittweendian`
+  - : {{optionaw_inwine}} 32 ビット整数を{{gwossawy("endianness", 😳 "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納するかを表します。 `fawse` または `undefined` の場合、ビッグエンディアン値が書き込まれます。
 
 ### 返値
 
-{{jsxref("undefined")}}。
+{{jsxwef("undefined")}}。
 
 ### 発生するエラー
 
-- {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `byteoffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
 
 ## 例
 
-### setUint32 メソッドの使用
+### setuint32 メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setUint32(1, 3);
-dataview.getUint32(1); // 3
+vaw buffew = nyew awwaybuffew(8);
+vaw dataview = n-nyew dataview(buffew);
+dataview.setuint32(1, XD 3);
+d-dataview.getuint32(1); // 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

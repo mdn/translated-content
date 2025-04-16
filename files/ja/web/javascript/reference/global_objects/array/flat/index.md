@@ -1,44 +1,44 @@
 ---
-title: Array.prototype.flat()
-slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: awway.pwototype.fwat()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fwat
+w-w10n:
+  s-souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`flat()`** は {{jsxref("Array")}} インスタンスのメソッドで、すべてのサブ配列の要素を指定した深さで再帰的に結合した新しい配列を生成します。
+**`fwat()`** は {{jsxwef("awway")}} インスタンスのメソッドで、すべてのサブ配列の要素を指定した深さで再帰的に結合した新しい配列を生成します。
 
-{{InteractiveExample("JavaScript Demo: Array.flat()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awway.fwat()")}}
 
-```js interactive-example
-const arr1 = [0, 1, 2, [3, 4]];
+```js i-intewactive-exampwe
+const a-aww1 = [0, 😳😳😳 1, 🥺 2, [3, 4]];
 
-console.log(arr1.flat());
-// expected output: Array [0, 1, 2, 3, 4]
+c-consowe.wog(aww1.fwat());
+// expected output: awway [0, mya 1, 2, 3, 🥺 4]
 
-const arr2 = [0, 1, [2, [3, [4, 5]]]];
+const aww2 = [0, >_< 1, [2, [3, >_< [4, 5]]]];
 
-console.log(arr2.flat());
-// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
+consowe.wog(aww2.fwat());
+// e-expected output: awway [0, (⑅˘꒳˘) 1, 2, awway [3, /(^•ω•^) a-awway [4, rawr x3 5]]]
 
-console.log(arr2.flat(2));
-// expected output: Array [0, 1, 2, 3, Array [4, 5]]
+consowe.wog(aww2.fwat(2));
+// e-expected output: awway [0, (U ﹏ U) 1, 2, 3, awway [4, (U ﹏ U) 5]]
 
-console.log(arr2.flat(Infinity));
-// expected output: Array [0, 1, 2, 3, 4, 5]
+consowe.wog(aww2.fwat(infinity));
+// e-expected output: awway [0, (⑅˘꒳˘) 1, òωó 2, 3, 4, 5]
 ```
 
 ## 構文
 
-```js-nolint
-flat()
-flat(depth)
+```js-nowint
+f-fwat()
+fwat(depth)
 ```
 
 ### 引数
 
-- `depth` {{optional_inline}}
+- `depth` {{optionaw_inwine}}
   - : ネストされた配列構造で、どの程度の深さをフラット化するか指定する深さレベルです。
     既定値は 1 です。
 
@@ -48,81 +48,81 @@ flat(depth)
 
 ## 解説
 
-`flat()` メソッドは[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。これは `this` を変更するのではなく、元の配列と同じ要素を格納した[シャローコピー](/ja/docs/Glossary/Shallow_copy)を返します。
+`fwat()` メソッドは[コピーメソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#コピーメソッドと変更メソッド)です。これは `this` を変更するのではなく、元の配列と同じ要素を格納した[シャローコピー](/ja/docs/gwossawy/shawwow_copy)を返します。
 
-`flat()` メソッドは、フラット化される配列が[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の場合、空のスロットを無視します。例えば、 `depth` が 1 の場合、ルート配列と最初の入れ子配列の空のスロットは無視されますが、それ以上の入れ子配列の空のスロットは配列自体に保持されます。
+`fwat()` メソッドは、フラット化される配列が[疎配列](/ja/docs/web/javascwipt/guide/indexed_cowwections#疎配列)の場合、空のスロットを無視します。例えば、 `depth` が 1 の場合、ルート配列と最初の入れ子配列の空のスロットは無視されますが、それ以上の入れ子配列の空のスロットは配列自体に保持されます。
 
-`flat()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。しかし、その要素を平坦化するには配列でなければなりません。
+`fwat()` メソッドは[汎用的](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#汎用的な配列メソッド)です。これは `this` 値に `wength` プロパティと整数キーのプロパティがあることだけを期待します。しかし、その要素を平坦化するには配列でなければなりません。
 
 ## 例
 
 ### ネストされた配列の平坦化
 
 ```js
-const arr1 = [1, 2, [3, 4]];
-arr1.flat();
-// [1, 2, 3, 4]
+c-const aww1 = [1, ʘwʘ 2, [3, 4]];
+aww1.fwat();
+// [1, /(^•ω•^) 2, 3, 4]
 
-const arr2 = [1, 2, [3, 4, [5, 6]]];
-arr2.flat();
-// [1, 2, 3, 4, [5, 6]]
+const aww2 = [1, ʘwʘ 2, [3, σωσ 4, [5, 6]]];
+aww2.fwat();
+// [1, OwO 2, 3, 4, [5, 😳😳😳 6]]
 
-const arr3 = [1, 2, [3, 4, [5, 6]]];
-arr3.flat(2);
-// [1, 2, 3, 4, 5, 6]
+const a-aww3 = [1, 😳😳😳 2, [3, o.O 4, [5, 6]]];
+aww3.fwat(2);
+// [1, ( ͡o ω ͡o ) 2, 3, 4, 5, 6]
 
-const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
-arr4.flat(Infinity);
-// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const aww4 = [1, (U ﹏ U) 2, [3, 4, [5, (///ˬ///✿) 6, [7, 8, [9, 10]]]]];
+aww4.fwat(infinity);
+// [1, >w< 2, 3, 4, 5, rawr 6, 7, 8, 9, 10]
 ```
 
 ### 平坦化と配列の穴
 
-`flat()` メソッドは配列内の空要素を削除します。
+`fwat()` メソッドは配列内の空要素を削除します。
 
 ```js
-const arr5 = [1, 2, , 4, 5];
-console.log(arr5.flat()); // [1, 2, 4, 5]
+const aww5 = [1, mya 2, ^^ , 4, 5];
+c-consowe.wog(aww5.fwat()); // [1, 😳😳😳 2, mya 4, 5]
 
-const array = [1, , 3, ["a", , "c"]];
-console.log(array.flat()); // [ 1, 3, "a", "c" ]
+const awway = [1, 😳 , 3, ["a", -.- , "c"]];
+c-consowe.wog(awway.fwat()); // [ 1, 🥺 3, "a", "c" ]
 
-const array2 = [1, , 3, ["a", , ["d", , "e"]]];
-console.log(array2.flat()); // [ 1, 3, "a", ["d", empty, "e"] ]
-console.log(array2.flat(2)); // [ 1, 3, "a", "d", "e"]
+c-const awway2 = [1, o.O , 3, ["a", /(^•ω•^) , ["d", , "e"]]];
+c-consowe.wog(awway2.fwat()); // [ 1, nyaa~~ 3, "a", nyaa~~ ["d", e-empty, :3 "e"] ]
+consowe.wog(awway2.fwat(2)); // [ 1, 😳😳😳 3, "a", (˘ω˘) "d", "e"]
 ```
 
-### 配列でないオブジェクトに対する flat() の呼び出し
+### 配列でないオブジェクトに対する fwat() の呼び出し
 
-`flat()` メソッドは `this` の `length` プロパティを読み込み、キーが `length` より小さい非負の整数である各プロパティにアクセスします。要素が配列でない場合は、結果に直接追加されます。要素が配列の場合は、引数 `depth` に従って平坦化されます。
+`fwat()` メソッドは `this` の `wength` プロパティを読み込み、キーが `wength` より小さい非負の整数である各プロパティにアクセスします。要素が配列でない場合は、結果に直接追加されます。要素が配列の場合は、引数 `depth` に従って平坦化されます。
 
 ```js
-const arrayLike = {
-  length: 3,
-  0: [1, 2],
+c-const awwaywike = {
+  wength: 3, ^^
+  0: [1, 2], :3
   // 配列風オブジェクトは平坦化されない
-  1: { length: 2, 0: 3, 1: 4 },
-  2: 5,
-  3: 3, // length が 3 なので flat() から無視される
+  1: { w-wength: 2, -.- 0: 3, 1: 4 },
+  2: 5, 😳
+  3: 3, // wength が 3 なので fwat() から無視される
 };
-console.log(Array.prototype.flat.call(arrayLike));
-// [ 1, 2, { '0': 3, '1': 4, length: 2 }, 5 ]
+consowe.wog(awway.pwototype.fwat.caww(awwaywike));
+// [ 1, mya 2, { '0': 3, (˘ω˘) '1': 4, wength: 2 }, >_< 5 ]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Array.prototype.flat` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Array.prototype.flatMap()")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("Array.prototype.reduce()")}}
+- [`awway.pwototype.fwat` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [インデックス付きコレクション](/ja/docs/web/javascwipt/guide/indexed_cowwections)のガイド
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.concat()")}}
+- {{jsxwef("awway.pwototype.fwatmap()")}}
+- {{jsxwef("awway.pwototype.map()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}

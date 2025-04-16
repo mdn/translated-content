@@ -1,74 +1,74 @@
 ---
-title: "CSP: img-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/img-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/img-src
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: img-swc"
+swug: web/http/wefewence/headews/content-secuwity-powicy/img-swc
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/img-swc
+w-w10n:
+  s-souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} における **`img-src`** ディレクティブは、画像やファビコンの有効なソースを指定します。
+http の {{httpheadew("content-secuwity-powicy")}} における **`img-swc`** ディレクティブは、画像やファビコンの有効なソースを指定します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th s-scope="wow">csp バージョン</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} による代替</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch d-diwective", (ˆ ﻌ ˆ)♡ "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{csp("defauwt-swc")}} による代替</th>
       <td>
-        あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。
+        あり。このディレクティブがない場合、ユーザーエージェントは <code>defauwt-swc</code> ディレクティブを探します。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`img-src` ポリシーには、 1 つ以上のソースが許可されています。
+`img-swc` ポリシーには、 1 つ以上のソースが許可されています。
 
 ```http
-Content-Security-Policy: img-src <source>;
-Content-Security-Policy: img-src <source> <source>;
+content-secuwity-powicy: img-swc <souwce>;
+content-secuwity-powicy: i-img-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch diwective", (⑅˘꒳˘) "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ### 違反する場合
 
-この CSP ヘッダーがある場合、
+この csp ヘッダーがある場合、
 
 ```http
-Content-Security-Policy: img-src https://example.com/
+content-secuwity-powicy: i-img-swc https://exampwe.com/
 ```
 
-以下の {{HTMLElement("img")}} の各要素はブロックされ、読み込まれません。
+以下の {{htmwewement("img")}} の各要素はブロックされ、読み込まれません。
 
-```html
-<img src="https://not-example.com/foo.jpg" alt="example picture" />
+```htmw
+<img swc="https://not-exampwe.com/foo.jpg" a-awt="exampwe pictuwe" />
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("img")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{htmwewement("img")}}

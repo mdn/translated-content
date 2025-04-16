@@ -1,81 +1,81 @@
 ---
-title: Error.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Error/toString
+titwe: ewwow.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toString()`** メソッドは、指定した {{jsxref("Error")}} オブジェクトを表す文字列を返します。
+**`tostwing()`** メソッドは、指定した {{jsxwef("ewwow")}} オブジェクトを表す文字列を返します。
 
 ## 構文
 
 ```
-e.toString()
+e-e.tostwing()
 ```
 
 ### 返値
 
-指定した {{jsxref("Error")}} オブジェクトを表す文字列です。
+指定した {{jsxwef("ewwow")}} オブジェクトを表す文字列です。
 
 ## 解説
 
-{{jsxref("Error")}} オブジェクトは、すべてのオブジェクトに継承される {{jsxref("Object.prototype.toString()")}} メソッドを上書きします。その意味は、次のようなものです ({{jsxref("Object")}} と {{jsxref("String")}} は元の値を持つと仮定します)。
+{{jsxwef("ewwow")}} オブジェクトは、すべてのオブジェクトに継承される {{jsxwef("object.pwototype.tostwing()")}} メソッドを上書きします。その意味は、次のようなものです ({{jsxwef("object")}} と {{jsxwef("stwing")}} は元の値を持つと仮定します)。
 
 ```js
-Error.prototype.toString = function () {
-  "use strict";
+e-ewwow.pwototype.tostwing = f-function () {
+  "use s-stwict";
 
-  var obj = Object(this);
-  if (obj !== this) {
-    throw new TypeError();
+  vaw o-obj = object(this);
+  i-if (obj !== t-this) {
+    thwow n-nyew typeewwow();
   }
 
-  var name = this.name;
-  name = name === undefined ? "Error" : String(name);
+  vaw nyame = this.name;
+  nyame = nyame === undefined ? "ewwow" : stwing(name);
 
-  var msg = this.message;
-  msg = msg === undefined ? "" : String(msg);
+  v-vaw msg = this.message;
+  msg = msg === undefined ? "" : s-stwing(msg);
 
   if (name === "") {
-    return msg;
+    w-wetuwn msg;
   }
   if (msg === "") {
-    return name;
+    wetuwn nyame;
   }
 
-  return name + ": " + msg;
+  wetuwn n-name + ": " + msg;
 };
 ```
 
 ## 例
 
-### toString() の使用
+### t-tostwing() の使用
 
 ```js
-var e = new Error("fatal error");
-console.log(e.toString()); // 'Error: fatal error'
+v-vaw e = nyew ewwow("fataw ewwow");
+consowe.wog(e.tostwing()); // 'ewwow: fataw ewwow'
 
 e.name = undefined;
-console.log(e.toString()); // 'Error: fatal error'
+c-consowe.wog(e.tostwing()); // 'ewwow: fataw ewwow'
 
 e.name = "";
-console.log(e.toString()); // 'fatal error'
+consowe.wog(e.tostwing()); // 'fataw ewwow'
 
-e.message = undefined;
-console.log(e.toString()); // ''
+e-e.message = undefined;
+consowe.wog(e.tostwing()); // ''
 
-e.name = "hello";
-console.log(e.toString()); // 'hello'
+e-e.name = "hewwo";
+c-consowe.wog(e.tostwing()); // 'hewwo'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error.prototype.toSource()")}}
+- {{jsxwef("ewwow.pwototype.tosouwce()")}}

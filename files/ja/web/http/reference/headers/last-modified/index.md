@@ -1,79 +1,79 @@
 ---
-title: Last-Modified
-slug: Web/HTTP/Reference/Headers/Last-Modified
-original_slug: Web/HTTP/Headers/Last-Modified
+titwe: wast-modified
+swug: web/http/wefewence/headews/wast-modified
+o-owiginaw_swug: w-web/http/headews/wast-modified
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`Last-Modified`** レスポンスヘッダーは、リソースが最後に変更されたとオリジンのサーバーが判断している日時を含みます。これは受信または保存されたリソースが、同じものであるかを判断する検証材料として使用されます。 {{HTTPHeader("ETag")}} ヘッダーよりも精度は低く、その代替手段になります。 {{HTTPHeader("If-Modified-Since")}} や {{HTTPHeader("If-Unmodified-Since")}} ヘッダーを含む条件付きリクエストはこのフィールドを使用します。
+h-http の **`wast-modified`** レスポンスヘッダーは、リソースが最後に変更されたとオリジンのサーバーが判断している日時を含みます。これは受信または保存されたリソースが、同じものであるかを判断する検証材料として使用されます。 {{httpheadew("etag")}} ヘッダーよりも精度は低く、その代替手段になります。 {{httpheadew("if-modified-since")}} や {{httpheadew("if-unmodified-since")}} ヘッダーを含む条件付きリクエストはこのフィールドを使用します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wesponse h-headew", (U ᵕ U❁) "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew name", -.- "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cows-safewisted wesponse headew", ^^;; "cows セーフリストレスポンスヘッダー")}}
       </th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+wast-modified: <day-name>, >_< <day> <month> <yeaw> <houw>:<minute>:<second> gmt
 ```
 
 ## ディレクティブ
 
 - \<day-name>
-  - : "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" の中から一つ (大文字・小文字の区別あり)
+  - : "mon", mya "tue", "wed", mya "thu", "fwi", 😳 "sat", "sun" の中から一つ (大文字・小文字の区別あり)
 - \<day>
-  - : 2 桁の日付を表す数字, 例 "04" や "23".
+  - : 2 桁の日付を表す数字, XD 例 "04" や "23". :3
 - \<month>
-  - : "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" の中から一つ (大文字・小文字の区別あり)
-- \<year>
-  - : 4 桁の年を表す数字, 例 "1990" や "2016"
-- \<hour>
-  - : 2 桁の時を表す数字, 例 "09" や "23"
+  - : "jan", 😳😳😳 "feb", "maw", "apw", -.- "may", "jun", ( ͡o ω ͡o ) "juw", "aug", rawr x3 "sep", "oct", "nov", nyaa~~ "dec" の中から一つ (大文字・小文字の区別あり)
+- \<yeaw>
+  - : 4 桁の年を表す数字, /(^•ω•^) 例 "1990" や "2016"
+- \<houw>
+  - : 2 桁の時を表す数字, rawr 例 "09" や "23"
 - \<minute>
-  - : 2 桁の分を表す数字, 例 "04" や "59"
+  - : 2 桁の分を表す数字, OwO 例 "04" や "59"
 - \<second>
-  - : 2 桁の秒を表す数字, 例 "04" や "59"
-- `GMT`
-  - : グリニッジ標準時。 HTTP における時刻は常にグリニッジ標準時で表され、ローカル時刻になることはありません。
+  - : 2 桁の秒を表す数字, (U ﹏ U) 例 "04" や "59"
+- `gmt`
+  - : グリニッジ標準時。 h-http における時刻は常にグリニッジ標準時で表され、ローカル時刻になることはありません。
 
 ## 例
 
 ```
-Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+wast-modified: wed, >_< 21 o-oct 2015 07:28:00 gmt
 ```
 
 ## 仕様書
 
 | 仕様書                                  | 題名                                                         |
 | --------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "Last-Modified", "2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+| {{wfc("7232", rawr x3 "wast-modified", mya "2.2")}} | h-hypewtext twansfew pwotocow (http/1.1): conditionaw wequests |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("If-Modified-Since")}}
-- {{HTTPHeader("If-Unmodified-Since")}}
-- {{HTTPHeader("Etag")}}
+- {{httpheadew("if-modified-since")}}
+- {{httpheadew("if-unmodified-since")}}
+- {{httpheadew("etag")}}

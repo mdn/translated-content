@@ -1,33 +1,33 @@
 ---
-title: BigInt.asUintN()
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
+titwe: bigint.asuintn()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/bigint/asuintn
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`BigInt.asUintN`** 静的メソッドは、 BigInt 値を符号なし整数に丸め、その値を返します。
+**`bigint.asuintn`** 静的メソッドは、 b-bigint 値を符号なし整数に丸め、その値を返します。
 
-{{InteractiveExample("JavaScript Demo: BigInt.asUintN()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: b-bigint.asuintn()", 😳 "tawwew")}}
 
-```js interactive-example
-const U64_CEIL = 2n ** 64n;
+```js i-intewactive-exampwe
+const u-u64_ceiw = 2n ** 64n;
 
-console.log(BigInt.asUintN(64, U64_CEIL - 1n));
-// 18446744073709551615n (2n ** 64n - 1n, the maximum non-wrapping value)
-console.log(BigInt.asUintN(64, U64_CEIL));
-// 0n (wraps to zero)
-console.log(BigInt.asUintN(64, U64_CEIL + 1n));
+c-consowe.wog(bigint.asuintn(64, XD u-u64_ceiw - 1n));
+// 18446744073709551615n (2n ** 64n - 1n, :3 t-the maximum nyon-wwapping vawue)
+consowe.wog(bigint.asuintn(64, 😳😳😳 u64_ceiw));
+// 0n (wwaps to zewo)
+consowe.wog(bigint.asuintn(64, -.- u-u64_ceiw + 1n));
 // 1n
-console.log(BigInt.asUintN(64, U64_CEIL * 2n));
-// 0n (wraps on multiples)
-console.log(BigInt.asUintN(64, U64_CEIL * -42n));
-// 0n (also wraps on negative multiples)
+consowe.wog(bigint.asuintn(64, ( ͡o ω ͡o ) u64_ceiw * 2n));
+// 0n (wwaps o-on muwtipwes)
+consowe.wog(bigint.asuintn(64, rawr x3 u-u64_ceiw * -42n));
+// 0n (awso wwaps on negative muwtipwes)
 ```
 
 ## 構文
 
 ```js
-BigInt.asUintN(bits, bigint);
+bigint.asuintn(bits, nyaa~~ bigint);
 ```
 
 ### 引数
@@ -45,28 +45,28 @@ BigInt.asUintN(bits, bigint);
 
 ### 64ビットの範囲に収める
 
-`BigInt.asUintN()` メソッドは、64ビットの数値の範囲に収めるのに便利です。
+`bigint.asuintn()` メソッドは、64ビットの数値の範囲に収めるのに便利です。
 
 ```js
-const max = 2n ** 64n - 1n;
+c-const max = 2n ** 64n - 1n;
 
-BigInt.asUintN(64, max);
+b-bigint.asuintn(64, /(^•ω•^) m-max);
 // ↪ 18446744073709551615n
 
-BigInt.asUintN(64, max + 1n);
+bigint.asuintn(64, rawr max + 1n);
 // ↪ 0n
 // オーバーフローするのでゼロになる
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{JSxRef("BigInt")}}
-- {{JSxRef("BigInt.asIntN()")}}
+- {{jsxwef("bigint")}}
+- {{jsxwef("bigint.asintn()")}}

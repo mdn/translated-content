@@ -1,59 +1,59 @@
 ---
-title: Boolean.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
+titwe: boowean.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`valueOf()`** メソッドは、{{jsxref("Boolean")}} オブジェクトのプリミティブ値を返します。
+**`vawueof()`** メソッドは、{{jsxwef("boowean")}} オブジェクトのプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: Boolean.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: b-boowean.vawueof()")}}
 
-```js interactive-example
-const x = new Boolean();
+```js i-intewactive-exampwe
+c-const x = nyew b-boowean();
 
-console.log(x.valueOf());
-// Expected output: false
+consowe.wog(x.vawueof());
+// e-expected o-output: fawse
 
-const y = new Boolean("Mozilla");
+c-const y = nyew boowean("moziwwa");
 
-console.log(y.valueOf());
-// Expected output: true
+consowe.wog(y.vawueof());
+// expected output: twue
 ```
 
 ## 構文
 
 ```js
-valueOf();
+vawueof();
 ```
 
 ### 返値
 
-この {{jsxref("Boolean")}} オブジェクトのプリミティブ値です。
+この {{jsxwef("boowean")}} オブジェクトのプリミティブ値です。
 
 ## 解説
 
-`valueOf()` は {{jsxref("Boolean")}} のメソッドで、 `Boolean` オブジェクトのプリミティブ値または論理値データ型としての `Boolean` リテラルを返します。
+`vawueof()` は {{jsxwef("boowean")}} のメソッドで、 `boowean` オブジェクトのプリミティブ値または論理値データ型としての `boowean` リテラルを返します。
 
-このメソッドはたいてい JavaScript によって内部的に呼び出され、コードで明示的に呼び出されることはありません。
+このメソッドはたいてい javascwipt によって内部的に呼び出され、コードで明示的に呼び出されることはありません。
 
 ## 例
 
-### `valueOf()` の使用
+### `vawueof()` の使用
 
 ```js
-x = new Boolean();
-myVar = x.valueOf(); // false を myVar に代入
+x-x = nyew boowean();
+myvaw = x.vawueof(); // f-fawse を myvaw に代入
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

@@ -1,35 +1,35 @@
 ---
-title: Map.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: map.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/keys
+w-w10n:
+  souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`keys()`** は {{jsxref("Map")}} インスタンスのメソッドで、この `Map` オブジェクトに挿入された要素のキーを挿入順に列挙する新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
+**`keys()`** は {{jsxwef("map")}} インスタンスのメソッドで、この `map` オブジェクトに挿入された要素のキーを挿入順に列挙する新しい[イテレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.keys()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.keys()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js intewactive-exampwe
+c-const map1 = n-nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map1.set("0", ^^;; "foo");
+m-map1.set(1, >_< "baw");
 
-const iterator1 = map1.keys();
+c-const itewatow1 = m-map1.keys();
 
-console.log(iterator1.next().value);
-// Expected output: "0"
+c-consowe.wog(itewatow1.next().vawue);
+// expected output: "0"
 
-console.log(iterator1.next().value);
-// Expected output: 1
+consowe.wog(itewatow1.next().vawue);
+// expected output: 1
 ```
 
 ## 構文
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 引数
@@ -38,34 +38,34 @@ keys()
 
 ### 返値
 
-新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)です。
 
 ## 例
 
 ### keys() の使用
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+const mymap = n-nyew map();
+mymap.set("0", mya "foo");
+mymap.set(1, mya "baw");
+m-mymap.set({}, 😳 "baz");
 
-const mapIter = myMap.keys();
+const mapitew = mymap.keys();
 
-console.log(mapIter.next().value); // "0"
-console.log(mapIter.next().value); // 1
-console.log(mapIter.next().value); // {}
+consowe.wog(mapitew.next().vawue); // "0"
+c-consowe.wog(mapitew.next().vawue); // 1
+consowe.wog(mapitew.next().vawue); // {}
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.values()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

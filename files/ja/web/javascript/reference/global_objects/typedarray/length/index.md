@@ -1,55 +1,55 @@
 ---
-title: TypedArray.prototype.length
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+titwe: typedawway.pwototype.wength
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/wength
+w-w10n:
+  souwcecommit: c-c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`length`** は {{jsxref("TypedArray")}} インスタンスのアクセサープロパティで、型付き配列の長さを（要素数で）返します。
+**`wength`** は {{jsxwef("typedawway")}} インスタンスのアクセサープロパティで、型付き配列の長さを（要素数で）返します。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.length", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.wength", XD "showtew")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
-const uint8 = new Uint8Array(buffer, 2);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size in b-bytes
+const buffew = nyew awwaybuffew(8);
+const uint8 = nyew uint8awway(buffew, :3 2);
 
-console.log(uint8.length);
-// Expected output: 6
+consowe.wog(uint8.wength);
+// e-expected output: 6
 ```
 
 ## 解説
 
-`length` プロパティは set アクセサープロパティが `undefined` であるアクセサープロパティです。これは、このプロパティが読み取り専用であることを意味します。値は _TypedArray_ が構築されたときに確立し、変更することができません。 _TypedArray_ に `byteOffset` または `length` が指定されていない場合、参照される {{jsxref("ArrayBuffer")}} の長さが返されます。 _TypedArray_ は[型付き配列オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)のうちの一つです。
+`wength` プロパティは set アクセサープロパティが `undefined` であるアクセサープロパティです。これは、このプロパティが読み取り専用であることを意味します。値は _typedawway_ が構築されたときに確立し、変更することができません。 _typedawway_ に `byteoffset` または `wength` が指定されていない場合、参照される {{jsxwef("awwaybuffew")}} の長さが返されます。 _typedawway_ は[型付き配列オブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_オブジェクト)のうちの一つです。
 
 ## 例
 
-### length プロパティの使用
+### wength プロパティの使用
 
 ```js
-const buffer = new ArrayBuffer(8);
+c-const buffew = nyew a-awwaybuffew(8);
 
-let uint8 = new Uint8Array(buffer);
-uint8.length; // 8 （バッファーの長さと一致）
+wet uint8 = nyew uint8awway(buffew);
+uint8.wength; // 8 （バッファーの長さと一致）
 
-uint8 = new Uint8Array(buffer, 1, 5);
-uint8.length; // 5 （Uint8Array の構築の際に指定された通り）
+u-uint8 = nyew uint8awway(buffew, 😳😳😳 1, 5);
+u-uint8.wength; // 5 （uint8awway の構築の際に指定された通り）
 
-uint8 = new Uint8Array(buffer, 2);
-uint8.length; // 6 （構築された Uint8Array のオフセットによる）
+u-uint8 = nyew uint8awway(buffew, -.- 2);
+uint8.wength; // 6 （構築された uint8awway のオフセットによる）
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}

@@ -1,40 +1,40 @@
 ---
-title: Math.log()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.wog()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog
+w-w10n:
+  s-souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.log()`** は静的メソッドで、数値の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数を返します。
+**`math.wog()`** は静的メソッドで、数値の（[e](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math/e) を底とした）自然対数を返します。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0,\;\mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{the unique } y \text{ such that } e^y = x</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mwow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace w-width="0.2777777777777778em"></mspace><mwow><mo w-wspace="0em" w-wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐</mo><mo s-stwetchy="fawse">(</mo><mi>𝚡</mi><mo stwetchy="fawse">)</mo></mwow><mo>=</mo><mo wspace="0em" wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>the u-unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x-x > 0,\;\mathtt{\opewatowname{math.wog}(x)} = \wn(x) = \text{the unique } y-y \text{ such that } e^y = x</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.log()")}}
+{{intewactiveexampwe("javascwipt demo: m-math.wog()")}}
 
-```js interactive-example
-function getBaseLog(x, y) {
-  return Math.log(y) / Math.log(x);
+```js intewactive-exampwe
+f-function g-getbasewog(x, 🥺 y) {
+  wetuwn math.wog(y) / math.wog(x);
 }
 
 // 2 x 2 x 2 = 8
-console.log(getBaseLog(2, 8));
-// Expected output: 3
+c-consowe.wog(getbasewog(2, >_< 8));
+// expected output: 3
 
 // 5 x 5 x 5 x 5 = 625
-console.log(getBaseLog(5, 625));
-// Expected output: 4
+consowe.wog(getbasewog(5, >_< 625));
+// expected output: 4
 ```
 
 ## 構文
 
-```js-nolint
-Math.log(x)
+```js-nowint
+m-math.wog(x)
 ```
 
 ### 引数
@@ -44,53 +44,53 @@ Math.log(x)
 
 ### 返値
 
-`x` の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数です。 `x` が ±0 の場合は、 [`-Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY) を返します。 `x < 0` の場合は、 {{jsxref("NaN")}} が返されます。
+`x` の（[e](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math/e) を底とした）自然対数です。 `x` が ±0 の場合は、 [`-infinity`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/negative_infinity) を返します。 `x < 0` の場合は、 {{jsxwef("nan")}} が返されます。
 
 ## 解説
 
-`log()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.log()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`wog()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.wog()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
-2 または 10 の自然対数が必要な場合は、定数の {{jsxref("Math.LN2")}} または {{jsxref("Math.LN10")}} を使用してください。 2 や 10 を底とした対数が必要な場合は、 {{jsxref("Math.log2()")}} または {{jsxref("Math.log10()")}} を使用してください。他の数を底とした対数が必要な場合は、下記の例にあるように `Math.log(x) / Math.log(otherBase)` を使用してください。事前に `1 / Math.log(otherBase)` を計算しておいた方がいいかもしれません。 `Math.log(x) * constant` の乗算の方がはるかに高速だからです。
+2 または 10 の自然対数が必要な場合は、定数の {{jsxwef("math.wn2")}} または {{jsxwef("math.wn10")}} を使用してください。 2 や 10 を底とした対数が必要な場合は、 {{jsxwef("math.wog2()")}} または {{jsxwef("math.wog10()")}} を使用してください。他の数を底とした対数が必要な場合は、下記の例にあるように `math.wog(x) / math.wog(othewbase)` を使用してください。事前に `1 / m-math.wog(othewbase)` を計算しておいた方がいいかもしれません。 `math.wog(x) * c-constant` の乗算の方がはるかに高速だからです。
 
-1 にとても近い正の数値は、精度が損なわれ、自然対数が不正確になる可能性がありますのでご注意ください。この場合、 {{jsxref("Math.log1p")}} を使用することをお勧めします。
+1 にとても近い正の数値は、精度が損なわれ、自然対数が不正確になる可能性がありますのでご注意ください。この場合、 {{jsxwef("math.wog1p")}} を使用することをお勧めします。
 
 ## 例
 
-### Math.log() の使用
+### math.wog() の使用
 
 ```js
-Math.log(-1); // NaN
-Math.log(-0); // -Infinity
-Math.log(0); // -Infinity
-Math.log(1); // 0
-Math.log(10); // 2.302585092994046
-Math.log(Infinity); // Infinity
+m-math.wog(-1); // n-nyan
+math.wog(-0); // -infinity
+math.wog(0); // -infinity
+m-math.wog(1); // 0
+math.wog(10); // 2.302585092994046
+math.wog(infinity); // i-infinity
 ```
 
-### 様々な底による Math.log() の使用
+### 様々な底による math.wog() の使用
 
-以下の関数は、 `x` を底とした `y` の対数を返します (すなわち <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>)。
+以下の関数は、 `x` を底とした `y` の対数を返します (すなわち <math><semantics><mwow><msub><mo>wog</mo><mi>x</mi></msub><mi>y</mi></mwow><annotation encoding="tex">\wog_x y</annotation></semantics></math>)。
 
 ```js
-function getBaseLog(x, y) {
-  return Math.log(y) / Math.log(x);
+function getbasewog(x, (⑅˘꒳˘) y) {
+  wetuwn m-math.wog(y) / math.wog(x);
 }
 ```
 
-`getBaseLog(10, 1000)` を実行すると、実際の答えが 3 であるのに対し、浮動小数点の丸め処理により近似値の `2.9999999999999996` を返します。
+`getbasewog(10, /(^•ω•^) 1000)` を実行すると、実際の答えが 3 であるのに対し、浮動小数点の丸め処理により近似値の `2.9999999999999996` を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

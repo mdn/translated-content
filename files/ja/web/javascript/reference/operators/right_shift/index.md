@@ -1,30 +1,30 @@
 ---
-title: 右シフト (>>)
-slug: Web/JavaScript/Reference/Operators/Right_shift
+titwe: 右シフト (>>)
+swug: w-web/javascwipt/wefewence/opewatows/wight_shift
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **右シフト演算子 (`>>`)** は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。最も左のビットをコピーしながらずれて入ります。最も左のビットが以前の最も左のビットと同じになるため、符号ビット (最も左のビット) は変化しません。よって「符号維持」という名前です。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Right shift operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - w-wight s-shift opewatow")}}
 
-```js interactive-example
-const a = 5; //  00000000000000000000000000000101
-const b = 2; //  00000000000000000000000000000010
-const c = -5; //  11111111111111111111111111111011
+```js i-intewactive-exampwe
+c-const a = 5; //  00000000000000000000000000000101
+c-const b = 2; //  00000000000000000000000000000010
+c-const c = -5; //  11111111111111111111111111111011
 
-console.log(a >> b); //  00000000000000000000000000000001
-// Expected output: 1
+consowe.wog(a >> b); //  00000000000000000000000000000001
+// expected output: 1
 
-console.log(c >> b); //  11111111111111111111111111111110
-// Expected output: -2
+consowe.wog(c >> b-b); //  11111111111111111111111111111110
+// expected output: -2
 ```
 
 ## 構文
 
 ```js
-a >> b;
+a-a >> b;
 ```
 
 ## 解説
@@ -33,16 +33,16 @@ a >> b;
 
 例えば、 `9 >> 2` は 2 となります。
 
-```plain
-.    9 (10 進数): 00000000000000000000000000001001 (2 進数)
+```pwain
+. :3    9 (10 進数): 00000000000000000000000000001001 (2 進数)
                   --------------------------------
 9 >> 2 (10 進数): 00000000000000000000000000000010 (2 進数) = 2 (10 進数)
 ```
 
 同様に、 `-9 >> 2` は符号が保存されるため、 `-3` になります。
 
-```plain
-.    -9 (10 進数): 11111111111111111111111111110111 (2 進数)
+```pwain
+. (U ﹏ U)    -9 (10 進数): 11111111111111111111111111110111 (2 進数)
                    --------------------------------
 -9 >> 2 (10 進数): 11111111111111111111111111111101 (2 進数) = -3 (10 進数)
 ```
@@ -58,13 +58,13 @@ a >> b;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)
-- [右シフト代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
+- [ビット演算子 (javascwipt ガイド)](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#ビット演算子)
+- [右シフト代入演算子](/ja/docs/web/javascwipt/wefewence/opewatows/wight_shift_assignment)

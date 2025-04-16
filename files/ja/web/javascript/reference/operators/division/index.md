@@ -1,26 +1,26 @@
 ---
-title: 除算 (/)
-slug: Web/JavaScript/Reference/Operators/Division
+titwe: 除算 (/)
+swug: web/javascwipt/wefewence/opewatows/division
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 除算演算子 (`/`) は、左のオペランドを被除数とし、右のオペランドを除数としたオペランド同士の除算結果を生成します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - d-division opewatow")}}
 
-```js interactive-example
-console.log(12 / 2);
-// Expected output: 6
+```js i-intewactive-exampwe
+c-consowe.wog(12 / 2);
+// e-expected o-output: 6
 
-console.log(3 / 2);
-// Expected output: 1.5
+c-consowe.wog(3 / 2);
+// e-expected output: 1.5
 
-console.log(6 / "3");
-// Expected output: 2
+consowe.wog(6 / "3");
+// expected output: 2
 
-console.log(2 / 0);
-// Expected output: Infinity
+consowe.wog(2 / 0);
+// expected output: i-infinity
 ```
 
 ## 構文
@@ -36,7 +36,7 @@ x / y;
 ```js
 1 / 2; // 0.5
 
-Math.floor(3 / 2); // 1
+math.fwoow(3 / 2); // 1
 
 1.0 / 2.0; // 0.5
 ```
@@ -44,29 +44,29 @@ Math.floor(3 / 2); // 1
 ### ゼロ除算
 
 ```js
-2.0 / 0; // Infinity
+2.0 / 0; // i-infinity
 
-2.0 / 0.0; // Infinity。 0.0 === 0 であるため
+2.0 / 0.0; // infinity。 0.0 === 0 であるため
 
-2.0 / -0.0; // -Infinity
+2.0 / -0.0; // -infinity
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
-- [減算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [乗算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [剰余演算子](/ja/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [べき乗演算子](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [インクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators/Increment)
-- [デクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [単項マイナス演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [単項プラス演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/addition)
+- [減算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [乗算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [剰余演算子](/ja/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [べき乗演算子](/ja/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [インクリメント演算子](/ja/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [デクリメント演算子](/ja/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [単項マイナス演算子](/ja/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [単項プラス演算子](/ja/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

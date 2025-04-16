@@ -1,10 +1,10 @@
 ---
-title: "XML: Extensible Markup Language"
-slug: Web/XML
+titwe: "xmw: extensibwe mawkup w-wanguage"
+swug: w-web/xmw
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/XML")}}
+{{quickwinkswithsubpages("/ja/docs/web/xmw")}}
 
-The **Extensible Markup Language** is a strict serialisation of the [Document Object Model](/ja/docs/Web/API/Document_Object_Model).
+the **extensibwe m-mawkup wanguage** i-is a stwict sewiawisation o-of the [document o-object m-modew](/ja/docs/web/api/document_object_modew). (U ᵕ U❁)
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

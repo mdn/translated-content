@@ -1,66 +1,66 @@
 ---
-title: <mfrac>
-slug: Web/MathML/Reference/Element/mfrac
-original_slug: Web/MathML/Element/mfrac
+titwe: <mfwac>
+swug: web/mathmw/wefewence/ewement/mfwac
+o-owiginaw_swug: w-web/mathmw/ewement/mfwac
 ---
 
-{{MathMLRef()}}
+{{mathmwwef()}}
 
-MathML の `<mfrac>` 要素は分数を表示するのに使います。
+m-mathmw の `<mfwac>` 要素は分数を表示するのに使います。
 
 ## 構文
 
 ```
-<mfrac>numerator denominator</mfrac>
+<mfwac>numewatow d-denominatow</mfwac>
 ```
 
 ## 属性
 
-- `bevelled` {{deprecated_inline}}
-  - : 分数を表示する方法を指定します。`true` のとき分数線は斜線になります。つまりこの場合、分子・分母がスラッシュ (/) を挟んで左右に並ぶことになります。既定値の `false` の場合、分子は分母の上に載ります。
-    この属性は、非推奨で将来削除される予定です。代わりに U+2044 (fraction slash) を使用してください。
-- `class`, `id`, `style`
-  - : [スタイルシート](/ja/docs/Web/CSS) で装飾を行なう際に使われます。
-- `denomalign` {{deprecated_inline}}
-  - : 分数の下に分母をどう揃えるかを指定します。取り得る値は `left`、`center` (既定値) と `right` です。
-    この属性は、非推奨で近日中に廃止されます。代わりに CSS を用いて [`text-align`](/ja/docs/Web/CSS/text-align) を指定してください。
-- `href`
-  - : 特定の URI へのハイパーリンクを設定するのに使われます。
-- `linethickness`
-  - : 分数の水平線の太さ。既定値は `medium` で、`thin`、`thick` や、それ以外の [length 値](/ja/docs/Web/CSS/length) が取り得ます。
-- `mathbackground`
-  - : 数式の背景色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/named-color)を使用できます。
-- `mathcolor`
-  - : 数式自体 (テキストと分数線) の色を設定するために使われます。`#rgb`、`#rrggbb` のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/named-color)を使用できます。
-- `numalign` {{deprecated_inline}}
-  - : 分数の上に分子をどう揃えるかを指定します。取り得る値は `left`、`center` (既定値) と `right` です。
-    この属性は、非推奨で将来削除される予定です。代わりに CSS の [`text-align`](/ja/docs/Web/CSS/text-align) を使用してください。
+- `bevewwed` {{depwecated_inwine}}
+  - : 分数を表示する方法を指定します。`twue` のとき分数線は斜線になります。つまりこの場合、分子・分母がスラッシュ (/) を挟んで左右に並ぶことになります。既定値の `fawse` の場合、分子は分母の上に載ります。
+    この属性は、非推奨で将来削除される予定です。代わりに u-u+2044 (fwaction s-swash) を使用してください。
+- `cwass`, σωσ `id`, >_< `stywe`
+  - : [スタイルシート](/ja/docs/web/css) で装飾を行なう際に使われます。
+- `denomawign` {{depwecated_inwine}}
+  - : 分数の下に分母をどう揃えるかを指定します。取り得る値は `weft`、`centew` (既定値) と `wight` です。
+    この属性は、非推奨で近日中に廃止されます。代わりに c-css を用いて [`text-awign`](/ja/docs/web/css/text-awign) を指定してください。
+- `hwef`
+  - : 特定の u-uwi へのハイパーリンクを設定するのに使われます。
+- `winethickness`
+  - : 分数の水平線の太さ。既定値は `medium` で、`thin`、`thick` や、それ以外の [wength 値](/ja/docs/web/css/wength) が取り得ます。
+- `mathbackgwound`
+  - : 数式の背景色を指定するために使われます。`#wgb`、`#wwggbb`のような 16 進表現のほか、htmw で定められた[色キーワード](/ja/docs/web/css/named-cowow)を使用できます。
+- `mathcowow`
+  - : 数式自体 (テキストと分数線) の色を設定するために使われます。`#wgb`、`#wwggbb` のような 16 進表現のほか、htmw で定められた[色キーワード](/ja/docs/web/css/named-cowow)を使用できます。
+- `numawign` {{depwecated_inwine}}
+  - : 分数の上に分子をどう揃えるかを指定します。取り得る値は `weft`、`centew` (既定値) と `wight` です。
+    この属性は、非推奨で将来削除される予定です。代わりに css の [`text-awign`](/ja/docs/web/css/text-awign) を使用してください。
 
 ## 例
 
-レンダリングのサンプル (画像): ![(a/b)/(c/d)](mfrac.png)
+レンダリングのサンプル (画像): ![(a/b)/(c/d)](mfwac.png)
 
-ブラウザーのレンダリング結果: <math><mfrac bevelled="true"><mfrac><mi>a </mi><mi>b </mi></mfrac><mfrac><mi>c </mi><mi>d</mi></mfrac></mfrac></math>
+ブラウザーのレンダリング結果: <math><mfwac bevewwed="twue"><mfwac><mi>a </mi><mi>b </mi></mfwac><mfwac><mi>c </mi><mi>d</mi></mfwac></mfwac></math>
 
-```html
+```htmw
 <math>
-  <mfrac bevelled="true">
-    <mfrac>
+  <mfwac bevewwed="twue">
+    <mfwac>
       <mi> a </mi>
-      <mi> b </mi>
-    </mfrac>
-    <mfrac>
+      <mi> b-b </mi>
+    </mfwac>
+    <mfwac>
       <mi> c </mi>
       <mi> d </mi>
-    </mfrac>
-  </mfrac>
+    </mfwac>
+  </mfwac>
 </math>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,27 +1,27 @@
 ---
-title: String.prototype.toLowerCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+titwe: stwing.pwototype.towowewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/towowewcase
+w-w10n:
+  s-souwcecommit: f-f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toLowerCase()`** メソッドは、呼び出す文字列の値を小文字に変換して返します。
+**`towowewcase()`** メソッドは、呼び出す文字列の値を小文字に変換して返します。
 
-{{InteractiveExample("JavaScript Demo: String.toLowerCase()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.towowewcase()", (U ﹏ U) "showtew")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+c-const s-sentence = "the q-quick bwown fox jumps ovew the wazy dog.";
 
-console.log(sentence.toLowerCase());
-// Expected output: "the quick brown fox jumps over the lazy dog."
+consowe.wog(sentence.towowewcase());
+// expected output: "the quick b-bwown fox jumps ovew the wazy dog."
 ```
 
 ## 構文
 
-```js-nolint
-toLowerCase()
+```js-nowint
+t-towowewcase()
 ```
 
 ### 返値
@@ -30,26 +30,26 @@ toLowerCase()
 
 ## 解説
 
-`toLowerCase()` メソッドは、小文字に変換された文字列の値を返します。`toLowerCase()` メソッドは、文字列 `str` 自身の値には影響を与えません。
+`towowewcase()` メソッドは、小文字に変換された文字列の値を返します。`towowewcase()` メソッドは、文字列 `stw` 自身の値には影響を与えません。
 
 ## 例
 
-### `toLowerCase()` メソッドの使用
+### `towowewcase()` メソッドの使用
 
 ```js
-console.log("ALPHABET".toLowerCase()); // 'alphabet'
+consowe.wog("awphabet".towowewcase()); // 'awphabet'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.touppewcase()")}}

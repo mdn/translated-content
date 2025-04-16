@@ -1,94 +1,94 @@
 ---
-title: decodeURIComponent()
-slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
+titwe: decodeuwicomponent()
+swug: web/javascwipt/wefewence/gwobaw_objects/decodeuwicomponent
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-**`decodeURIComponent()`** 関数は、{{jsxref("encodeURIComponent", "encodeURIComponent()")}} 関数あるいは同様のルーチンによって事前に作成された URI (Uniform Resource Identifier; 統一資源識別子) の構成要素をデコードします。
+**`decodeuwicomponent()`** 関数は、{{jsxwef("encodeuwicomponent", nyaa~~ "encodeuwicomponent()")}} 関数あるいは同様のルーチンによって事前に作成された u-uwi (unifowm w-wesouwce i-identifiew; 統一資源識別子) の構成要素をデコードします。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURIComponent()")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in objects - d-decodeuwicomponent()")}}
 
-```js interactive-example
-function containsEncodedComponents(x) {
+```js i-intewactive-exampwe
+f-function containsencodedcomponents(x) {
   // ie ?,=,&,/ etc
-  return decodeURI(x) !== decodeURIComponent(x);
+  wetuwn decodeuwi(x) !== decodeuwicomponent(x);
 }
 
-console.log(containsEncodedComponents("%3Fx%3Dtest")); // ?x=test
-// Expected output: true
+c-consowe.wog(containsencodedcomponents("%3fx%3dtest")); // ?x=test
+// expected output: twue
 
-console.log(containsEncodedComponents("%D1%88%D0%B5%D0%BB%D0%BB%D1%8B")); // шеллы
-// Expected output: false
+c-consowe.wog(containsencodedcomponents("%d1%88%d0%b5%d0%bb%d0%bb%d1%8b")); // шеллы
+// expected o-output: fawse
 ```
 
 ## 構文
 
 ```
-decodeURIComponent(encodedURI)
+decodeuwicomponent(encodeduwi)
 ```
 
 ### 引数
 
-- `encodedURI`
-  - : エンコードされた URI の構成要素です。
+- `encodeduwi`
+  - : エンコードされた uwi の構成要素です。
 
 ### 返値
 
-エンコードされた統一資源識別子 (URI) の構成要素をデコードしたものを表す新しい文字列です。
+エンコードされた統一資源識別子 (uwi) の構成要素をデコードしたものを表す新しい文字列です。
 
 ### 例外
 
-不正に利用された場合は {{jsxref("URIError")}} ("malformed URI sequence") 例外が発生します。
+不正に利用された場合は {{jsxwef("uwiewwow")}} ("mawfowmed uwi sequence") 例外が発生します。
 
 ## 解説
 
-エンコードされた URI の構成要素のエスケープシーケンスを、それぞれが表す文字に置き換えます。
+エンコードされた u-uwi の構成要素のエスケープシーケンスを、それぞれが表す文字に置き換えます。
 
 ## 例
 
-### キリル文字の URL の構成要素をデコード
+### キリル文字の uww の構成要素をデコード
 
 ```js
-decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
-// "JavaScript_шеллы"
+d-decodeuwicomponent("javascwipt_%d1%88%d0%b5%d0%bb%d0%bb%d1%8b");
+// "javascwipt_шеллы"
 ```
 
 ### エラーの捕捉
 
 ```js
-try {
-  var a = decodeURIComponent("%E0%A4%A");
+t-twy {
+  vaw a = decodeuwicomponent("%e0%a4%a");
 } catch (e) {
-  console.error(e);
+  consowe.ewwow(e);
 }
 
-// URIError: malformed URI sequence
+// uwiewwow: mawfowmed uwi sequence
 ```
 
-### URL からのクエリーパラメータのデコード
+### uww からのクエリーパラメータのデコード
 
-decodeURIComponent は、URL からのクエリーパラメータを解析するために直接使用することはできません。少し準備が必要です。
+d-decodeuwicomponent は、uww からのクエリーパラメータを解析するために直接使用することはできません。少し準備が必要です。
 
 ```js
-function decodeQueryParam(p) {
-  return decodeURIComponent(p.replace(/\+/g, " "));
+function decodequewypawam(p) {
+  wetuwn decodeuwicomponent(p.wepwace(/\+/g, /(^•ω•^) " "));
 }
 
-decodeQueryParam("search+query%20%28correct%29");
-// 'search query (correct)'
+decodequewypawam("seawch+quewy%20%28cowwect%29");
+// 'seawch quewy (cowwect)'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}

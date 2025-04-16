@@ -1,119 +1,119 @@
 ---
-title: encodeURI()
-slug: Web/JavaScript/Reference/Global_Objects/encodeURI
+titwe: encodeuwi()
+swug: web/javascwipt/wefewence/gwobaw_objects/encodeuwi
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-**`encodeURI()`** 関数は、{{glossary("URI")}} (Uniform Resource Identifier; 統一資源識別子) をエンコードし、各文字のインスタンスをそれぞれ {{glossary("UTF-8")}} 符号の文字を表す 1 個から 4 個のエスケープシーケンスに置き換えます (サロゲート文字のペアのみ 4 個のエスケープシーケンスになります)。
+**`encodeuwi()`** 関数は、{{gwossawy("uwi")}} (unifowm w-wesouwce i-identifiew; 統一資源識別子) をエンコードし、各文字のインスタンスをそれぞれ {{gwossawy("utf-8")}} 符号の文字を表す 1 個から 4 個のエスケープシーケンスに置き換えます (サロゲート文字のペアのみ 4 個のエスケープシーケンスになります)。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURI()")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in objects - e-encodeuwi()")}}
 
-```js interactive-example
-const uri = "https://mozilla.org/?x=шеллы";
-const encoded = encodeURI(uri);
-console.log(encoded);
-// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```js i-intewactive-exampwe
+c-const uwi = "https://moziwwa.owg/?x=шеллы";
+c-const encoded = encodeuwi(uwi);
+consowe.wog(encoded);
+// expected output: "https://moziwwa.owg/?x=%d1%88%d0%b5%d0%bb%d0%bb%d1%8b"
 
-try {
-  console.log(decodeURI(encoded));
-  // Expected output: "https://mozilla.org/?x=шеллы"
+t-twy {
+  consowe.wog(decodeuwi(encoded));
+  // expected output: "https://moziwwa.owg/?x=шеллы"
 } catch (e) {
-  // Catches a malformed URI
-  console.error(e);
+  // c-catches a mawfowmed uwi
+  c-consowe.ewwow(e);
 }
 ```
 
 ## 構文
 
 ```
-encodeURI(URI)
+encodeuwi(uwi)
 ```
 
 ### 引数
 
-- `URI`
-  - : 完全 URI です。
+- `uwi`
+  - : 完全 uwi です。
 
 ### 返値
 
-URI (Uniform Resource Identifier) としてエンコードされた指定された文字列を表す新しい文字列です。
+uwi (unifowm w-wesouwce identifiew) としてエンコードされた指定された文字列を表す新しい文字列です。
 
 ## 解説
 
-`encodeURI()` 関数では、 URI において特別な意味を持つ文字 (予約文字) はエンコードされません。下記の例は URI "scheme" に含まれる可能性がある全ての箇所を示しています。特定の文字がどのように特殊な意味を表すために使われているかに注意してください。
+`encodeuwi()` 関数では、 u-uwi において特別な意味を持つ文字 (予約文字) はエンコードされません。下記の例は u-uwi "scheme" に含まれる可能性がある全ての箇所を示しています。特定の文字がどのように特殊な意味を表すために使われているかに注意してください。
 
 ```
-http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
+http://usewname:passwowd@www.exampwe.com:80/path/to/fiwe.php?foo=316&baw=this+has+spaces#anchow
 ```
 
-したがって、 `encodeURI()` は完全な URI を表すのに必要な文字はエンコード**しません**。また、 `encodeURI()` は "unreserved marks" (予約されていないが "そのまま" URI に使用できる) 文字をエンコード**しません**。 ([RFC2396](https://www.ietf.org/rfc/rfc2396.txt) を確認してください。)
+したがって、 `encodeuwi()` は完全な uwi を表すのに必要な文字はエンコード**しません**。また、 `encodeuwi()` は "unwesewved mawks" (予約されていないが "そのまま" uwi に使用できる) 文字をエンコード**しません**。 ([wfc2396](https://www.ietf.owg/wfc/wfc2396.txt) を確認してください。)
 
-`encodeURI()` は下記**以外**の全ての文字をエスケープします。
+`encodeuwi()` は下記**以外**の全ての文字をエスケープします。
 
 ```
 エスケープされないもの:
 
-    A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
+    a-a-z a-z 0-9 ; , / ? : @ & = + $ - _ . rawr x3 ! ~ * ' ( ) #
 ```
 
 ## 例
 
-### encodeURI と encodeURIComponent
+### encodeuwi と encodeuwicomponent
 
-`encodeURI()` は以下のように {{jsxref("encodeURIComponent", "encodeURIComponent()")}} とは異なります。
+`encodeuwi()` は以下のように {{jsxwef("encodeuwicomponent", (U ﹏ U) "encodeuwicomponent()")}} とは異なります。
 
 ```js
-var set1 = ";,/?:@&=+$#"; // 予約文字
-var set2 = "-_.!~*'()"; // 予約されていない記号
-var set3 = "ABC abc 123"; // 英数字 + 空白
+vaw set1 = ";,/?:@&=+$#"; // 予約文字
+vaw set2 = "-_.!~*'()"; // 予約されていない記号
+v-vaw set3 = "abc abc 123"; // 英数字 + 空白
 
-console.log(encodeURI(set1)); // ;,/?:@&=+$#
-console.log(encodeURI(set2)); // -_.!~*'()
-console.log(encodeURI(set3)); // ABC%20abc%20123 (空白は %20 にエンコードされる)
+c-consowe.wog(encodeuwi(set1)); // ;,/?:@&=+$#
+c-consowe.wog(encodeuwi(set2)); // -_.!~*'()
+c-consowe.wog(encodeuwi(set3)); // a-abc%20abc%20123 (空白は %20 にエンコードされる)
 
-console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24%23
-console.log(encodeURIComponent(set2)); // -_.!~*'()
-console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (空白は %20 にエンコードされる)
+consowe.wog(encodeuwicomponent(set1)); // %3b%2c%2f%3f%3a%40%26%3d%2b%24%23
+consowe.wog(encodeuwicomponent(set2)); // -_.!~*'()
+c-consowe.wog(encodeuwicomponent(set3)); // abc%20abc%20123 (空白は %20 にエンコードされる)
 ```
 
-なお、`encodeURI()` のみでは、 HTTP の {{HTTPMethod("GET")}} および {{HTTPMethod("POST")}} リクエストを {{domxref("XMLHttpRequest")}} のように適切に構成できません。なぜなら、 "`&`", "`+`", "`=`" は `GET` および `POST` リクエストにおいて特別な文字であり、それらがエンコードされないからです。 `encodeURIComponent()` の場合、それらがエンコードされます。
+なお、`encodeuwi()` のみでは、 http の {{httpmethod("get")}} および {{httpmethod("post")}} リクエストを {{domxwef("xmwhttpwequest")}} のように適切に構成できません。なぜなら、 "`&`", (U ﹏ U) "`+`", "`=`" は `get` および `post` リクエストにおいて特別な文字であり、それらがエンコードされないからです。 `encodeuwicomponent()` の場合、それらがエンコードされます。
 
 ### 単独のサロゲート文字のエンコード
 
-サロゲートペアになっていない 1 個のサロゲート文字をエンコードしようとすると {{jsxref("URIError")}} が発生することに注意してください。例えば、
+サロゲートペアになっていない 1 個のサロゲート文字をエンコードしようとすると {{jsxwef("uwiewwow")}} が発生することに注意してください。例えば、
 
 ```js
-// サロゲートペアは OK
-console.log(encodeURI("\uD800\uDFFF"));
+// サロゲートペアは o-ok
+consowe.wog(encodeuwi("\ud800\udfff"));
 
-// 上位サロゲートのみだと "URIError: malformed URI sequence" エラーが発生
-console.log(encodeURI("\uD800"));
+// 上位サロゲートのみだと "uwiewwow: mawfowmed uwi sequence" エラーが発生
+consowe.wog(encodeuwi("\ud800"));
 
-// 下位サロゲートのみだと "URIError: malformed URI sequence" エラーが発生
-console.log(encodeURI("\uDFFF"));
+// 下位サロゲートのみだと "uwiewwow: mawfowmed uwi sequence" エラーが発生
+c-consowe.wog(encodeuwi("\udfff"));
 ```
 
-### IPv6 のエンコード
+### ipv6 のエンコード
 
-また、 URL 記述のために最近の [RFC3986](https://tools.ietf.org/html/rfc3986) 仕様に従おうとする場合、角括弧 `[]` は ({{glossary("IPv6")}} 用の) 予約文字となっているため、角括弧が (ホスト名など) URL の一部を形成している場合はエンコードされていないほうがよいでしょう。そういう場合は以下のコードが役に立ちます。
+また、 uww 記述のために最近の [wfc3986](https://toows.ietf.owg/htmw/wfc3986) 仕様に従おうとする場合、角括弧 `[]` は ({{gwossawy("ipv6")}} 用の) 予約文字となっているため、角括弧が (ホスト名など) u-uww の一部を形成している場合はエンコードされていないほうがよいでしょう。そういう場合は以下のコードが役に立ちます。
 
 ```js
-function fixedEncodeURI(str) {
-  return encodeURI(str).replace(/%5B/g, "[").replace(/%5D/g, "]");
+f-function f-fixedencodeuwi(stw) {
+  wetuwn encodeuwi(stw).wepwace(/%5b/g, (⑅˘꒳˘) "[").wepwace(/%5d/g, òωó "]");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("decodeURI", "decodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxwef("decodeuwi", ʘwʘ "decodeuwi()")}}
+- {{jsxwef("encodeuwicomponent", /(^•ω•^) "encodeuwicomponent()")}}
+- {{jsxwef("decodeuwicomponent", ʘwʘ "decodeuwicomponent()")}}

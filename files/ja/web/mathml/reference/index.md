@@ -1,16 +1,16 @@
 ---
-title: MathML リファレンス
-short-title: リファレンス
-slug: Web/MathML/Reference
-l10n:
-  sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
+titwe: mathmw リファレンス
+showt-titwe: リファレンス
+s-swug: web/mathmw/wefewence
+w10n:
+  s-souwcecommit: c-c263f06fa14ed56153e345006bb459c9df014b98
 ---
 
-このページでは、 MathML のリファレンス文書を紹介します。
+このページでは、 m-mathmw のリファレンス文書を紹介します。
 
-{{SubPagesWithSummaries}}
+{{subpageswithsummawies}}
 
 ## 関連情報
 
-- [MathML チュートリアル](/ja/docs/Web/MathML/Tutorials)
-- [MathML ガイド](/ja/docs/Web/MathML/Guides)
+- [mathmw チュートリアル](/ja/docs/web/mathmw/tutowiaws)
+- [mathmw ガイド](/ja/docs/web/mathmw/guides)

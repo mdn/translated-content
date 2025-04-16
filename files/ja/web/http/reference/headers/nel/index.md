@@ -1,42 +1,42 @@
 ---
-title: NEL
-slug: Web/HTTP/Reference/Headers/NEL
-original_slug: Web/HTTP/Headers/NEL
+titwe: nyew
+swug: web/http/wefewence/headews/new
+o-owiginaw_swug: w-web/http/headews/new
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`NEL`** レスポンスヘッダーは、ネットワークリクエストログ記録を構成するために使用されます。
+h-http の **`new`** レスポンスヘッダーは、ネットワークリクエストログ記録を構成するために使用されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wesponse h-headew", σωσ "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew nyame", >_< "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdomains": false, "success_fraction": 0.0, "failure_fraction": 1.0 }
+nyew: { "wepowt_to": "name_of_wepowting_gwoup", :3 "max_age": 12345, (U ﹏ U) "incwude_subdomains": fawse, -.- "success_fwaction": 0.0, (ˆ ﻌ ˆ)♡ "faiwuwe_fwaction": 1.0 }
 ```
 
 ## 仕様書
 
 | 仕様書                                                                                    |
 | ----------------------------------------------------------------------------------------- |
-| [Network Error Logging](https://w3c.github.io/network-error-logging/#nel-response-header) |
+| [netwowk ewwow wogging](https://w3c.github.io/netwowk-ewwow-wogging/#new-wesponse-headew) |
 
 ## 関連情報
 
-- [Network Error Logging (NEL) の説明](/ja/docs/Web/HTTP/Guides/Network_Error_Logging)
+- [netwowk e-ewwow wogging (new) の説明](/ja/docs/web/http/guides/netwowk_ewwow_wogging)

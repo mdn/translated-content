@@ -1,33 +1,33 @@
 ---
-title: Array.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: awway.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/keys
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`keys()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内の各インデックスのキーを含む、新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
+**`keys()`** は {{jsxwef("awway")}} インスタンスのメソッドで、配列内の各インデックスのキーを含む、新しい[配列イテレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.keys()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.keys();
+```js i-intewactive-exampwe
+c-const awway1 = ["a", -.- "b", "c"];
+c-const itewatow = a-awway1.keys();
 
-for (const key of iterator) {
-  console.log(key);
+f-fow (const key of itewatow) {
+  consowe.wog(key);
 }
 
-// Expected output: 0
-// Expected output: 1
-// Expected output: 2
+// expected output: 0
+// e-expected output: 1
+// expected output: 2
 ```
 
 ## 構文
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 引数
@@ -36,38 +36,38 @@ keys()
 
 ### 返値
 
-新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)です。
 
 ## 解説
 
-[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)で使用した場合、 `keys()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
+[疎配列](/ja/docs/web/javascwipt/guide/indexed_cowwections#spawse_awways)で使用した場合、 `keys()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
 
-`keys()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
+`keys()` メソッドは[汎用的](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#汎用的な配列メソッド)です。これは `this` 値に `wength` プロパティと整数キーのプロパティがあることだけを期待します。
 
 ## 例
 
 ### 疎配列に対する keys() の呼び出し
 
-配列に実際に存在するキーだけを処理する {{jsxref("Object.keys()")}} とは異なり、 `keys()` イテレーターは見つからないプロパティを表す穴を無視しません。
+配列に実際に存在するキーだけを処理する {{jsxwef("object.keys()")}} とは異なり、 `keys()` イテレーターは見つからないプロパティを表す穴を無視しません。
 
 ```js
-const arr = ["a", , "c"];
-const sparseKeys = Object.keys(arr);
-const denseKeys = [...arr.keys()];
-console.log(sparseKeys); // ['0', '2']
-console.log(denseKeys); // [0, 1, 2]
+c-const aww = ["a", ( ͡o ω ͡o ) , "c"];
+const spawsekeys = object.keys(aww);
+const densekeys = [...aww.keys()];
+c-consowe.wog(spawsekeys); // ['0', rawr x3 '2']
+consowe.wog(densekeys); // [0, 1, nyaa~~ 2]
 ```
 
-### 配列以外のオブジェクトに対する keys() の呼び出し
+### 配列以外のオブジェクトに対する k-keys() の呼び出し
 
-`keys()`メソッドは `this` の `length` プロパティを読み込み、 0 から `length - 1` までのすべての整数インデックスを返します。実際にはインデックスアクセスは行われません。
+`keys()`メソッドは `this` の `wength` プロパティを読み込み、 0 から `wength - 1` までのすべての整数インデックスを返します。実際にはインデックスアクセスは行われません。
 
 ```js
-const arrayLike = {
-  length: 3,
+c-const awwaywike = {
+  wength: 3, /(^•ω•^)
 };
-for (const entry of Array.prototype.keys.call(arrayLike)) {
-  console.log(entry);
+fow (const entwy of awway.pwototype.keys.caww(awwaywike)) {
+  c-consowe.wog(entwy);
 }
 // 0
 // 1
@@ -76,19 +76,19 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Array.prototype.keys` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.values()")}}
-- [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
-- {{jsxref("TypedArray.prototype.keys()")}}
-- [Iteration protocols](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`awway.pwototype.keys` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [インデックス付きコレクション](/ja/docs/web/javascwipt/guide/indexed_cowwections)のガイド
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}
+- [`awway.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow)
+- {{jsxwef("typedawway.pwototype.keys()")}}
+- [itewation pwotocows](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)

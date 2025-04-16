@@ -1,26 +1,26 @@
 ---
-title: 代入 (=)
-slug: Web/JavaScript/Reference/Operators/Assignment
+titwe: 代入 (=)
+swug: web/javascwipt/wefewence/opewatows/assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 単純代入演算子 (`=`) は、変数に値を代入するために使用されます。割り当て操作は、割り当てられた値として評価されます。代入演算子を使用して、単一の値を複数の変数に割り当てることができます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Assignment")}}
+{{intewactiveexampwe("javascwipt demo: e-expwessions - a-assignment")}}
 
-```js interactive-example
-let x = 2;
+```js i-intewactive-exampwe
+w-wet x-x = 2;
 const y = 3;
 
-console.log(x);
-// Expected output: 2
+c-consowe.wog(x);
+// e-expected o-output: 2
 
-console.log((x = y + 1)); // 3 + 1
-// Expected output: 4
+consowe.wog((x = y + 1)); // 3 + 1
+// expected output: 4
 
-console.log((x = x * y)); // 4 * 3
-// Expected output: 12
+consowe.wog((x = x * y)); // 4 * 3
+// e-expected output: 12
 ```
 
 ## 構文
@@ -35,22 +35,22 @@ x = y;
 
 ```js
 // 以下の変数を想定
-//  x = 5
+//  x-x = 5
 //  y = 10
 //  z = 25
 
-x = y; // x は 10
-x = y = z; // x, y そして z はすべて 25
+x-x = y; // x は 10
+x = y = z; // x, (U ᵕ U❁) y そして z はすべて 25
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
+- [javascwipt ガイドの代入演算子](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#代入演算子)

@@ -1,62 +1,62 @@
 ---
-title: HEAD
-slug: Web/HTTP/Reference/Methods/HEAD
-original_slug: Web/HTTP/Methods/HEAD
+titwe: head
+swug: web/http/wefewence/methods/head
+o-owiginaw_swug: w-web/http/methods/head
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP の `HEAD` メソッド**は、この `HEAD` リクエストが HTTP {{HTTPMethod("GET")}} メソッドでリクエストされた場合に返される[ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)をリクエストします。例えば、ある URL が大きなファイルをダウンロードする可能性がある場合、 `HEAD` リクエストは {{HTTPHeader("Content-Length")}} ヘッダーを読み込んで、実際にファイルをダウンロードすることなくファイルサイズを確認することができます。
+**http の `head` メソッド**は、この `head` リクエストが h-http {{httpmethod("get")}} メソッドでリクエストされた場合に返される[ヘッダー](/ja/docs/web/http/wefewence/headews)をリクエストします。例えば、ある u-uww が大きなファイルをダウンロードする可能性がある場合、 `head` リクエストは {{httpheadew("content-wength")}} ヘッダーを読み込んで、実際にファイルをダウンロードすることなくファイルサイズを確認することができます。
 
-> **警告:** `HEAD` メソッドへのレスポンスには本文が含まれては*いけません*。あった場合は無視**しなければなりません**。誤った本文を記述する可能性がある{{glossary("Representation header", "表現ヘッダー")}}は、同様の `GET` リクエストで受け取るであろうレスポンスを記述していると仮定します。
+> **警告:** `head` メソッドへのレスポンスには本文が含まれては*いけません*。あった場合は無視**しなければなりません**。誤った本文を記述する可能性がある{{gwossawy("wepwesentation h-headew", rawr "表現ヘッダー")}}は、同様の `get` リクエストで受け取るであろうレスポンスを記述していると仮定します。
 
-`HEAD` リクエストの結果が、 {{HTTPMethod("GET")}} リクエストの後でキャッシュされたリソースが古くなっていることを示している場合、 `GET` リクエストが行われなくてもキャッシュが無効化されます。
+`head` リクエストの結果が、 {{httpmethod("get")}} リクエストの後でキャッシュされたリソースが古くなっていることを示している場合、 `get` リクエストが行われなくてもキャッシュが無効化されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">リクエストの本文</th>
+    <tw>
+      <th s-scope="wow">リクエストの本文</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">成功時のレスポンスの本文</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">成功時のレスポンスの本文</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "安全性")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("safe/http", σωσ "安全性")}}</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent", "べき等性")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotent", σωσ "べき等性")}}</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable", "キャッシュ")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("cacheabwe", >_< "キャッシュ")}}</th>
       <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Learn/Forms">HTML フォーム</a>での使用
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/weawn/fowms">htmw フォーム</a>での使用
       </th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-HEAD /index.html
+head /index.htmw
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPMethod("GET")}}
+- {{httpmethod("get")}}

@@ -1,40 +1,40 @@
 ---
-title: Math.sinh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.sinh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sinh
+w-w10n:
+  s-souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.sinh()`** 静的メソッドは、数値の双曲線正弦 (ハイパーボリックサイン) を返します。
+**`math.sinh()`** 静的メソッドは、数値の双曲線正弦 (ハイパーボリックサイン) を返します。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚜𝚒𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>−</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh}(x)} = \sinh(x) = \frac{\mathrm{e}^x - \mathrm{e}^{-x}}{2}</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mwow><mwow><mo w-wspace="0em" w-wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚜𝚒𝚗𝚑</mo><mo s-stwetchy="fawse">(</mo><mi>𝚡</mi><mo s-stwetchy="fawse">)</mo></mwow><mo>=</mo><mo wspace="0em" wspace="0em">sinh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mfwac><mwow><msup><mi m-mathvawiant="nowmaw">e</mi><mi>x</mi></msup><mo>−</mo><msup><mi mathvawiant="nowmaw">e</mi><mwow><mo>−</mo><mi>x</mi></mwow></msup></mwow><mn>2</mn></mfwac></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.sinh}(x)} = \sinh(x) = \fwac{\mathwm{e}^x - \mathwm{e}^{-x}}{2}</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- p-pwettiew-ignowe-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.sinh()")}}
+{{intewactiveexampwe("javascwipt demo: math.sinh()")}}
 
-```js interactive-example
-console.log(Math.sinh(0));
-// Expected output: 0
+```js i-intewactive-exampwe
+consowe.wog(math.sinh(0));
+// expected output: 0
 
-console.log(Math.sinh(1));
-// Expected output: 1.1752011936438014
+consowe.wog(math.sinh(1));
+// e-expected output: 1.1752011936438014
 
-console.log(Math.sinh(-1));
-// Expected output: -1.1752011936438014
+c-consowe.wog(math.sinh(-1));
+// e-expected output: -1.1752011936438014
 
-console.log(Math.sinh(2));
-// Expected output: 3.626860407847019
+consowe.wog(math.sinh(2));
+// expected output: 3.626860407847019
 ```
 
 ## 構文
 
-```js-nolint
-Math.sinh(x)
+```js-nowint
+math.sinh(x)
 ```
 
 ### 引数
@@ -48,33 +48,33 @@ Math.sinh(x)
 
 ## 解説
 
-`sinh()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.sinh()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`sinh()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.sinh()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Using Math.sinh() の使用
+### using math.sinh() の使用
 
 ```js
-Math.sinh(-Infinity); // -Infinity
-Math.sinh(-0); // -0
-Math.sinh(0); // 0
-Math.sinh(1); // 1.1752011936438014
-Math.sinh(Infinity); // Infinity
+m-math.sinh(-infinity); // -infinity
+math.sinh(-0); // -0
+math.sinh(0); // 0
+math.sinh(1); // 1.1752011936438014
+math.sinh(infinity); // i-infinity
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Math.sinh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.tanh()")}}
+- [`math.sinh` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.tanh()")}}

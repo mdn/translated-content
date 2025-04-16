@@ -1,62 +1,62 @@
 ---
-title: AggregateError
-slug: Web/JavaScript/Reference/Global_Objects/AggregateError
+titwe: aggwegateewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/aggwegateewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`AggregateError`** オブジェクトは、複数のエラーを 1 つのエラーにまとめる必要があるときのエラーを表します。これは一つの操作で複数のエラーを報告する必要があるときに発生します。例えば {{JSxRef("Promise.any()")}} において、渡されたすべてのプロミスが拒否された場合などです。
+**`aggwegateewwow`** オブジェクトは、複数のエラーを 1 つのエラーにまとめる必要があるときのエラーを表します。これは一つの操作で複数のエラーを報告する必要があるときに発生します。例えば {{jsxwef("pwomise.any()")}} において、渡されたすべてのプロミスが拒否された場合などです。
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/AggregateError/AggregateError", "AggregateError()")}}
-  - : 新しい `AggregateError` オブジェクトを生成します。
+- {{jsxwef("gwobaw_objects/aggwegateewwow/aggwegateewwow", 😳 "aggwegateewwow()")}}
+  - : 新しい `aggwegateewwow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}
+- {{jsxwef("ewwow.pwototype.message", XD "aggwegateewwow.pwototype.message")}}
   - : エラーメッセージで、既定値は `""` です。
-- {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
-  - : エラー名で、既定値は `AggregateError` です。
-- `AggregateError`: `errors`
-  - : `AggregateError` のインスタンスが作成された反復可能オブジェクトを本質的に反映した配列です。例えば、 `AggregateError` が {{JSxRef("AggregateError/AggregateError", "AggregateError()")}} コンストラクターを用いて生成された場合、最初の引数として渡された反復可能オブジェクトから生成される配列になります。
+- {{jsxwef("ewwow.pwototype.name", :3 "aggwegateewwow.pwototype.name")}}
+  - : エラー名で、既定値は `aggwegateewwow` です。
+- `aggwegateewwow`: `ewwows`
+  - : `aggwegateewwow` のインスタンスが作成された反復可能オブジェクトを本質的に反映した配列です。例えば、 `aggwegateewwow` が {{jsxwef("aggwegateewwow/aggwegateewwow", 😳😳😳 "aggwegateewwow()")}} コンストラクターを用いて生成された場合、最初の引数として渡された反復可能オブジェクトから生成される配列になります。
 
 ## 例
 
-### AggregateError の捕捉
+### a-aggwegateewwow の捕捉
 
 ```js
-Promise.any([Promise.reject(new Error("some error"))]).catch((e) => {
-  console.log(e instanceof AggregateError); // true
-  console.log(e.message); // "All Promises rejected"
-  console.log(e.name); // "AggregateError"
-  console.log(e.errors); // [ Error: "some error" ]
+p-pwomise.any([pwomise.weject(new e-ewwow("some ewwow"))]).catch((e) => {
+  c-consowe.wog(e i-instanceof a-aggwegateewwow); // t-twue
+  consowe.wog(e.message); // "aww p-pwomises wejected"
+  consowe.wog(e.name); // "aggwegateewwow"
+  consowe.wog(e.ewwows); // [ ewwow: "some e-ewwow" ]
 });
 ```
 
-### AggregateError の生成
+### aggwegateewwow の生成
 
 ```js
-try {
-  throw new AggregateError([new Error("some error")], "Hello");
+twy {
+  t-thwow nyew aggwegateewwow([new e-ewwow("some ewwow")], "hewwo");
 } catch (e) {
-  console.log(e instanceof AggregateError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "AggregateError"
-  console.log(e.errors); // [ Error: "some error" ]
+  consowe.wog(e i-instanceof aggwegateewwow); // twue
+  consowe.wog(e.message); // "hewwo"
+  c-consowe.wog(e.name); // "aggwegateewwow"
+  c-consowe.wog(e.ewwows); // [ ewwow: "some ewwow" ]
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`AggregateError` の `core-js` におけるポリフィル](https://github.com/zloirock/core-js#ecmascript-promise)
-- {{JSxRef("Error")}}
-- {{JSxRef("Promise.any")}}
+- [`aggwegateewwow` の `cowe-js` におけるポリフィル](https://github.com/zwoiwock/cowe-js#ecmascwipt-pwomise)
+- {{jsxwef("ewwow")}}
+- {{jsxwef("pwomise.any")}}

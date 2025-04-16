@@ -1,61 +1,61 @@
 ---
-title: handler.apply()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: handwew.appwy()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/appwy
+w-w10n:
+  s-souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.apply()`** メソッドは、オブジェクトの `[[Call]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。関数呼び出しなどの操作で使用されます。
+**`handwew.appwy()`** メソッドは、オブジェクトの `[[caww]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)に対するトラップです。関数呼び出しなどの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.appwy()", rawr x3 "tawwew")}}
 
-```js interactive-example
-function sum(a, b) {
-  return a + b;
+```js i-intewactive-exampwe
+function s-sum(a, mya b) {
+  w-wetuwn a + b;
 }
 
-const handler = {
-  apply: function (target, thisArg, argumentsList) {
-    console.log(`Calculate sum: ${argumentsList}`);
-    // Expected output: "Calculate sum: 1,2"
+const handwew = {
+  appwy: function (tawget, nyaa~~ thisawg, awgumentswist) {
+    c-consowe.wog(`cawcuwate sum: ${awgumentswist}`);
+    // expected o-output: "cawcuwate sum: 1,2"
 
-    return target(argumentsList[0], argumentsList[1]) * 10;
-  },
+    w-wetuwn tawget(awgumentswist[0], (⑅˘꒳˘) awgumentswist[1]) * 10;
+  }, rawr x3
 };
 
-const proxy1 = new Proxy(sum, handler);
+const pwoxy1 = nyew pwoxy(sum, (✿oωo) h-handwew);
 
-console.log(sum(1, 2));
-// Expected output: 3
-console.log(proxy1(1, 2));
-// Expected output: 30
+consowe.wog(sum(1, (ˆ ﻌ ˆ)♡ 2));
+// expected o-output: 3
+consowe.wog(pwoxy1(1, (˘ω˘) 2));
+// e-expected output: 30
 ```
 
 ## 構文
 
-```js-nolint
-new Proxy(target, {
-  apply(target, thisArg, argumentsList) {
+```js-nowint
+nyew pwoxy(tawget, (⑅˘꒳˘) {
+  appwy(tawget, (///ˬ///✿) t-thisawg, 😳😳😳 awgumentswist) {
   }
 });
 ```
 
 ### 引数
 
-次の引数が `apply()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
+次の引数が `appwy()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-- `target`
+- `tawget`
   - : ターゲットオブジェクト
-- `thisArg`
+- `thisawg`
   - : この呼び出しに対する `this` 引数
-- `argumentsList`
+- `awgumentswist`
   - : この呼び出しに対する引数リスト
 
 ### 返値
 
-`apply()` メソッドはどんな値でも返すことができます。
+`appwy()` メソッドはどんな値でも返すことができます。
 
 ## 解説
 
@@ -63,17 +63,17 @@ new Proxy(target, {
 
 このトラップは下記の操作に介入できます。
 
-- 関数呼び出し: `proxy(...args)`
-- {{jsxref("Function.prototype.apply()")}} and {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Reflect.apply()")}}
+- 関数呼び出し: `pwoxy(...awgs)`
+- {{jsxwef("function.pwototype.appwy()")}} and {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("wefwect.appwy()")}}
 
-他にも、`[[Call]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
+他にも、`[[caww]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
 
 ### 不変条件
 
-以下の不変条件に違反している場合、トラップが呼び出されると {{jsxref("TypeError")}} が発生します。
+以下の不変条件に違反している場合、トラップが呼び出されると {{jsxwef("typeewwow")}} が発生します。
 
-- `target` は呼び出し可能である必要があります。つまり関数オブジェクトでなければなりません。
+- `tawget` は呼び出し可能である必要があります。つまり関数オブジェクトでなければなりません。
 
 ## 例
 
@@ -82,29 +82,29 @@ new Proxy(target, {
 次のコードでは、関数呼び出しをトラップします。
 
 ```js
-const p = new Proxy(function () {}, {
-  apply(target, thisArg, argumentsList) {
-    console.log(`called: ${argumentsList}`);
-    return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  },
+const p = nyew pwoxy(function () {}, 🥺 {
+  appwy(tawget, mya t-thisawg, 🥺 awgumentswist) {
+    consowe.wog(`cawwed: ${awgumentswist}`);
+    wetuwn a-awgumentswist[0] + a-awgumentswist[1] + a-awgumentswist[2];
+  }, >_<
 });
 
-console.log(p(1, 2, 3)); // "called: 1,2,3"
+c-consowe.wog(p(1, >_< 2, (⑅˘꒳˘) 3)); // "cawwed: 1,2,3"
 // 6
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Function.prototype.apply()")}}
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Reflect.apply()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("function.pwototype.appwy()")}}
+- {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("wefwect.appwy()")}}

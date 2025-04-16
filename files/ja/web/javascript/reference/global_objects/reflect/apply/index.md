@@ -1,92 +1,92 @@
 ---
-title: Reflect.apply()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
+titwe: wefwect.appwy()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/appwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Reflect.apply()`** メソッドは、指定された引数とともに対象となる関数を呼び出します。
+静的な **`wefwect.appwy()`** メソッドは、指定された引数とともに対象となる関数を呼び出します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.apply()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.appwy()")}}
 
-```js interactive-example
-console.log(Reflect.apply(Math.floor, undefined, [1.75]));
-// Expected output: 1
+```js i-intewactive-exampwe
+c-consowe.wog(wefwect.appwy(math.fwoow, mya u-undefined, mya [1.75]));
+// e-expected o-output: 1
 
-console.log(
-  Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]),
+c-consowe.wog(
+  wefwect.appwy(stwing.fwomchawcode, 😳 undefined, [104, XD 101, 108, 108, :3 111]),
 );
-// Expected output: "hello"
+// expected output: "hewwo"
 
-console.log(
-  Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index,
+consowe.wog(
+  wefwect.appwy(wegexp.pwototype.exec, 😳😳😳 /ab/, -.- ["confabuwation"]).index, ( ͡o ω ͡o )
 );
-// Expected output: 4
+// e-expected output: 4
 
-console.log(Reflect.apply("".charAt, "ponies", [3]));
-// Expected output: "i"
+consowe.wog(wefwect.appwy("".chawat, rawr x3 "ponies", nyaa~~ [3]));
+// expected output: "i"
 ```
 
 ## 構文
 
 ```
-Reflect.apply(target, thisArgument, argumentsList)
+w-wefwect.appwy(tawget, /(^•ω•^) thisawgument, rawr awgumentswist)
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : 呼び出し対象の関数。
-- `thisArgument`
-  - : `target` の呼び出す際の `this` 値を提供する。
-- `argumentsList`
-  - : `target` と一緒に呼び出す引数を指定する配列風オブジェクト。
+- `thisawgument`
+  - : `tawget` の呼び出す際の `this` 値を提供する。
+- `awgumentswist`
+  - : `tawget` と一緒に呼び出す引数を指定する配列風オブジェクト。
 
 ### 返値
 
-指定された `target` 値と引数の条件で対象の関数を呼び出したときの結果です。
+指定された `tawget` 値と引数の条件で対象の関数を呼び出したときの結果です。
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` が呼び出せない場合。
+{{jsxwef("typeewwow")}}: `tawget` が呼び出せない場合。
 
 ## 解説
 
-ES5 では、ふつう {{jsxref("Function.prototype.apply()")}} メソッドを使用することで、指定された `this` の値と `arguments` で配列 (または [配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)) により引数を指定することで、関数を呼び出すことができます。
+es5 では、ふつう {{jsxwef("function.pwototype.appwy()")}} メソッドを使用することで、指定された `this` の値と `awguments` で配列 (または [配列風オブジェクト](/ja/docs/web/javascwipt/guide/indexed_cowwections#配列風オブジェクトの扱い)) により引数を指定することで、関数を呼び出すことができます。
 
 ```js
-Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+f-function.pwototype.appwy.caww(math.fwoow, OwO undefined, (U ﹏ U) [1.75]);
 ```
 
-`Reflect.apply()` を使うと、それほど冗長ではなく理解しやすくなります。
+`wefwect.appwy()` を使うと、それほど冗長ではなく理解しやすくなります。
 
 ## 例
 
-### Reflect.apply() の使用
+### wefwect.appwy() の使用
 
 ```js
-Reflect.apply(Math.floor, undefined, [1.75]);
+wefwect.appwy(math.fwoow, undefined, >_< [1.75]);
 // 1;
 
-Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
-// "hello"
+w-wefwect.appwy(stwing.fwomchawcode, undefined, rawr x3 [104, mya 101, 108, 108, 111]);
+// "hewwo"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
+w-wefwect.appwy(wegexp.pwototype.exec, nyaa~~ /ab/, ["confabuwation"]).index;
 // 4
 
-Reflect.apply("".charAt, "ponies", [3]);
+w-wefwect.appwy("".chawat, (⑅˘꒳˘) "ponies", rawr x3 [3]);
 // "i"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Function.prototype.apply()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("function.pwototype.appwy()")}}

@@ -1,20 +1,20 @@
 ---
-title: CSS セレクターと XPath の比較
-slug: Web/XML/XPath/Guides/Comparison_with_CSS_selectors
-original_slug: Web/XPath/Guides/Comparison_with_CSS_selectors
-l10n:
-  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
+titwe: css セレクターと xpath の比較
+s-swug: web/xmw/xpath/guides/compawison_with_css_sewectows
+o-owiginaw_swug: w-web/xpath/guides/compawison_with_css_sewectows
+w-w10n:
+  s-souwcecommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-この記事では、ウェブ開発者が適材適所のツールを選択できるように、CSSセレクターとXPathの違いを説明することを目的としています。
+この記事では、ウェブ開発者が適材適所のツールを選択できるように、cssセレクターとxpathの違いを説明することを目的としています。
 
-| [XPath 機能](/ja/docs/Web/XML/XPath)                                                                                                                                                                        | [相当する CSS](/ja/docs/Web/CSS/CSS_selectors)                                                                                 |
+| [xpath 機能](/ja/docs/web/xmw/xpath)                                                                                                                                                                        | [相当する c-css](/ja/docs/web/css/css_sewectows)                                                                                 |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| [`ancestor`](/ja/docs/Web/XML/XPath/Reference/Axes#ancestor), [`parent`](/ja/docs/Web/XML/XPath/Reference/Axes#parent) or [`preceding-sibling`](/ja/docs/Web/XML/XPath/Reference/Axes#preceding-sibling) 軸 | {{CSSxRef(":has",":has()")}} セレクター {{experimental_inline}}                                                                |
-| [`attribute`](/ja/docs/Web/XML/XPath/Reference/Axes#attribute) 軸                                                                                                                                           | [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)                                                                         |
-| [`child`](/ja/docs/Web/XML/XPath/Reference/Axes#child) 軸                                                                                                                                                   | [子結合子](/ja/docs/Web/CSS/Child_combinator)                                                                                  |
-| [`descendant`](/ja/docs/Web/XML/XPath/Reference/Axes#descendant) 軸                                                                                                                                         | [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)                                                                           |
-| [`following-sibling`](/ja/docs/Web/XML/XPath/Reference/Axes#following-sibling) 軸                                                                                                                           | [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)または[次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator) |
-| [`self`](/ja/docs/Web/XML/XPath/Reference/Axes#self) 軸                                                                                                                                                     | {{CSSxRef(":scope")}} または {{CSSxRef(":host")}} セレクター＾                                                                 |
+| [`ancestow`](/ja/docs/web/xmw/xpath/wefewence/axes#ancestow), (U ᵕ U❁) [`pawent`](/ja/docs/web/xmw/xpath/wefewence/axes#pawent) o-ow [`pweceding-sibwing`](/ja/docs/web/xmw/xpath/wefewence/axes#pweceding-sibwing) 軸 | {{cssxwef(":has",":has()")}} セレクター {{expewimentaw_inwine}}                                                                |
+| [`attwibute`](/ja/docs/web/xmw/xpath/wefewence/axes#attwibute) 軸                                                                                                                                           | [属性セレクター](/ja/docs/web/css/attwibute_sewectows)                                                                         |
+| [`chiwd`](/ja/docs/web/xmw/xpath/wefewence/axes#chiwd) 軸                                                                                                                                                   | [子結合子](/ja/docs/web/css/chiwd_combinatow)                                                                                  |
+| [`descendant`](/ja/docs/web/xmw/xpath/wefewence/axes#descendant) 軸                                                                                                                                         | [子孫結合子](/ja/docs/web/css/descendant_combinatow)                                                                           |
+| [`fowwowing-sibwing`](/ja/docs/web/xmw/xpath/wefewence/axes#fowwowing-sibwing) 軸                                                                                                                           | [後続兄弟結合子](/ja/docs/web/css/subsequent-sibwing_combinatow)または[次兄弟結合子](/ja/docs/web/css/next-sibwing_combinatow) |
+| [`sewf`](/ja/docs/web/xmw/xpath/wefewence/axes#sewf) 軸                                                                                                                                                     | {{cssxwef(":scope")}} または {{cssxwef(":host")}} セレクター＾                                                                 |

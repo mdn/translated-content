@@ -1,41 +1,41 @@
 ---
-title: Math.sqrt()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.sqwt()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt
+w-w10n:
+  s-souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.sqrt()`** 静的メソッドは、ある数の平方根を返します。
+**`math.sqwt()`** 静的メソッドは、ある数の平方根を返します。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚜𝚚𝚛𝚝</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>≥</mo><mn>0</mn><mtext>&nbsp;such that&nbsp;</mtext><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 0,\;\mathtt{\operatorname{Math.sqrt}(x)} = \sqrt{x} = \text{the unique } y \geq 0 \text{ such that } y^2 = x</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mwow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mspace w-width="0.2777777777777778em"></mspace><mwow><mo w-wspace="0em" w-wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚜𝚚𝚛𝚝</mo><mo s-stwetchy="fawse">(</mo><mi>𝚡</mi><mo stwetchy="fawse">)</mo></mwow><mo>=</mo><msqwt><mi>x</mi></msqwt><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>≥</mo><mn>0</mn><mtext>&nbsp;such that&nbsp;</mtext><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x-x \geq 0,\;\mathtt{\opewatowname{math.sqwt}(x)} = \sqwt{x} = \text{the unique } y \geq 0 \text{ s-such that } y^2 = x</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- p-pwettiew-ignowe-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.sqrt()")}}
+{{intewactiveexampwe("javascwipt demo: math.sqwt()")}}
 
-```js interactive-example
-function calcHypotenuse(a, b) {
-  return Math.sqrt(a * a + b * b);
+```js intewactive-exampwe
+function c-cawchypotenuse(a, mya b) {
+  wetuwn m-math.sqwt(a * a + b-b * b);
 }
 
-console.log(calcHypotenuse(3, 4));
-// Expected output: 5
+consowe.wog(cawchypotenuse(3, nyaa~~ 4));
+// expected output: 5
 
-console.log(calcHypotenuse(5, 12));
-// Expected output: 13
+consowe.wog(cawchypotenuse(5, (⑅˘꒳˘) 12));
+// expected output: 13
 
-console.log(calcHypotenuse(0, 0));
-// Expected output: 0
+c-consowe.wog(cawchypotenuse(0, rawr x3 0));
+// expected output: 0
 ```
 
 ## 構文
 
-```js-nolint
-Math.sqrt(x)
+```js-nowint
+math.sqwt(x)
 ```
 
 ### 引数
@@ -45,37 +45,37 @@ Math.sqrt(x)
 
 ### 返値
 
-`x` の平方根です。 `x < 0` の場合、 {{jsxref("NaN")}} を返します。
+`x` の平方根です。 `x < 0` の場合、 {{jsxwef("nan")}} を返します。
 
 ## 解説
 
-`sqrt()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.sqrt()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`sqwt()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.sqwt()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.sqrt() の使用
+### math.sqwt() の使用
 
 ```js
-Math.sqrt(-1); // NaN
-Math.sqrt(-0); // -0
-Math.sqrt(0); // 0
-Math.sqrt(1); // 1
-Math.sqrt(2); // 1.414213562373095
-Math.sqrt(9); // 3
-Math.sqrt(Infinity); // Infinity
+m-math.sqwt(-1); // nyan
+math.sqwt(-0); // -0
+m-math.sqwt(0); // 0
+math.sqwt(1); // 1
+m-math.sqwt(2); // 1.414213562373095
+m-math.sqwt(9); // 3
+m-math.sqwt(infinity); // infinity
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.cbrt()")}}
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.cbwt()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.pow()")}}

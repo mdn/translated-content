@@ -1,31 +1,31 @@
 ---
-title: Array.prototype.shift()
-slug: Web/JavaScript/Reference/Global_Objects/Array/shift
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: awway.pwototype.shift()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/shift
+w-w10n:
+  s-souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`shift()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列から**最初**の要素を取り除き、その要素を返します。このメソッドは配列の長さを変えます。
+**`shift()`** は {{jsxwef("awway")}} インスタンスのメソッドで、配列から**最初**の要素を取り除き、その要素を返します。このメソッドは配列の長さを変えます。
 
-{{InteractiveExample("JavaScript Demo: Array.shift()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.shift()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3];
+```js intewactive-exampwe
+c-const awway1 = [1, 2, >_< 3];
 
-const firstElement = array1.shift();
+c-const f-fiwstewement = a-awway1.shift();
 
-console.log(array1);
-// Expected output: Array [2, 3]
+consowe.wog(awway1);
+// expected output: awway [2, >_< 3]
 
-console.log(firstElement);
-// Expected output: 1
+consowe.wog(fiwstewement);
+// e-expected output: 1
 ```
 
 ## 構文
 
-```js-nolint
+```js-nowint
 shift()
 ```
 
@@ -35,89 +35,89 @@ shift()
 
 ### 返値
 
-配列から取り除かれた要素を返します。配列が空の場合は、{{jsxref("undefined")}} を返します。
+配列から取り除かれた要素を返します。配列が空の場合は、{{jsxwef("undefined")}} を返します。
 
 ## 解説
 
 `shift()` メソッドは 0 番目の位置の要素を取り除き、続く位置の値を小さい方向にずらします。
-そして、削除された値を返します。{{jsxref("Array/length", "length")}} プロパティが 0 の場合、{{jsxref("undefined")}} を返します。
+そして、削除された値を返します。{{jsxwef("awway/wength", (⑅˘꒳˘) "wength")}} プロパティが 0 の場合、{{jsxwef("undefined")}} を返します。
 
-{{jsxref("Array/pop", "pop()")}} メソッドは `shift()` と似た動作をしますが、こちらは配列の末尾の要素に適用されます。
+{{jsxwef("awway/pop", /(^•ω•^) "pop()")}} メソッドは `shift()` と似た動作をしますが、こちらは配列の末尾の要素に適用されます。
 
-`shift()` メソッドは[変更メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。長さと `this` の内容を変更します。 `this` の値を変化させず、最初の要素を取り除いた新しい配列を返したい場合は、代わりに [`arr.slice(1)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) を使用することができます。
+`shift()` メソッドは[変更メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#コピーメソッドと変更メソッド)です。長さと `this` の内容を変更します。 `this` の値を変化させず、最初の要素を取り除いた新しい配列を返したい場合は、代わりに [`aww.swice(1)`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/swice) を使用することができます。
 
-`shift()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変であるため、このメソッドを適用するのは適切ではありません。
+`shift()` メソッドは[汎用的](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#汎用的な配列メソッド)です。これは `this` 値に `wength` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変であるため、このメソッドを適用するのは適切ではありません。
 
 ## 例
 
 ### 配列から要素を除去
 
-以下のコードは `myFish` 配列を、その最初の要素を取り除く前後で表示します。また、取り除いた要素も表示します。
+以下のコードは `myfish` 配列を、その最初の要素を取り除く前後で表示します。また、取り除いた要素も表示します。
 
 ```js
-const myFish = ["angel", "clown", "mandarin", "surgeon"];
+c-const myfish = ["angew", rawr x3 "cwown", (U ﹏ U) "mandawin", (U ﹏ U) "suwgeon"];
 
-console.log("myFish 処理前:", myFish);
-// myFish 処理前: ['angel', 'clown', 'mandarin', 'surgeon']
+consowe.wog("myfish 処理前:", (⑅˘꒳˘) m-myfish);
+// myfish 処理前: ['angew', òωó 'cwown', ʘwʘ 'mandawin', 'suwgeon']
 
-const shifted = myFish.shift();
+const shifted = myfish.shift();
 
-console.log("myFish 処理後:", myFish);
-// myFish 処理後: ['clown', 'mandarin', 'surgeon']
+c-consowe.wog("myfish 処理後:", myfish);
+// m-myfish 処理後: ['cwown', /(^•ω•^) 'mandawin', ʘwʘ 'suwgeon']
 
-console.log("取り除いた要素:", shifted);
-// 取り除いた要素: angel
+c-consowe.wog("取り除いた要素:", σωσ shifted);
+// 取り除いた要素: angew
 ```
 
-### shift() メソッドの while ループ内での使用
+### shift() メソッドの whiwe ループ内での使用
 
-shift() メソッドは時に、 while 文の条件内において用いられます。以下のコードでは、要素がすべて無くなるまで、反復処理のたびにその配列内の次の要素を取り除きます。
+s-shift() メソッドは時に、 whiwe 文の条件内において用いられます。以下のコードでは、要素がすべて無くなるまで、反復処理のたびにその配列内の次の要素を取り除きます。
 
 ```js
-const names = ["Andrew", "Tyrone", "Paul", "Maria", "Gayatri"];
+const nyames = ["andwew", "tywone", OwO "pauw", 😳😳😳 "mawia", "gayatwi"];
 
-while (typeof (i = names.shift()) !== "undefined") {
-  console.log(i);
+whiwe (typeof (i = nyames.shift()) !== "undefined") {
+  c-consowe.wog(i);
 }
-// Andrew, Tyrone, Paul, Maria, Gayatri
+// andwew, 😳😳😳 tywone, o.O p-pauw, mawia, ( ͡o ω ͡o ) g-gayatwi
 ```
 
-### 配列以外のオブジェクトに対する shift() の呼び出し
+### 配列以外のオブジェクトに対する s-shift() の呼び出し
 
-`shift()` メソッドは `this` の `length` プロパティを読み込みます。[正規化された長さ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#length_プロパティの正規化)が 0 の場合、`length` は再び `0` に設定されます（以前は負の値または `undefined` であった可能性があります）。そうでない場合は、 `0` のプロパティを返し、残りのプロパティは左に 1 つシフトされます。 `length` プロパティは 1 つデクリメントされます。
+`shift()` メソッドは `this` の `wength` プロパティを読み込みます。[正規化された長さ](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#wength_プロパティの正規化)が 0 の場合、`wength` は再び `0` に設定されます（以前は負の値または `undefined` であった可能性があります）。そうでない場合は、 `0` のプロパティを返し、残りのプロパティは左に 1 つシフトされます。 `wength` プロパティは 1 つデクリメントされます。
 
 ```js
-const arrayLike = {
-  length: 3,
-  unrelated: "foo",
-  2: 4,
+c-const awwaywike = {
+  wength: 3, (U ﹏ U)
+  unwewated: "foo", (///ˬ///✿)
+  2: 4, >w<
 };
-console.log(Array.prototype.shift.call(arrayLike));
+c-consowe.wog(awway.pwototype.shift.caww(awwaywike));
 // undefined。空のスロットであるため
-console.log(arrayLike);
-// { '1': 4, length: 2, unrelated: 'foo' }
+consowe.wog(awwaywike);
+// { '1': 4, rawr w-wength: 2, mya unwewated: 'foo' }
 
-const plainObj = {};
-// length プロパティがないため、 length は 0
-Array.prototype.shift.call(plainObj);
-console.log(plainObj);
-// { length: 0 }
+const pwainobj = {};
+// wength プロパティがないため、 wength は 0
+a-awway.pwototype.shift.caww(pwainobj);
+consowe.wog(pwainobj);
+// { w-wength: 0 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Array.prototype.splice()")}}
+- [インデックス付きコレクション](/ja/docs/web/javascwipt/guide/indexed_cowwections)のガイド
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.push()")}}
+- {{jsxwef("awway.pwototype.pop()")}}
+- {{jsxwef("awway.pwototype.unshift()")}}
+- {{jsxwef("awway.pwototype.concat()")}}
+- {{jsxwef("awway.pwototype.spwice()")}}

@@ -1,79 +1,79 @@
 ---
-title: "CSP: child-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/child-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/child-src
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: chiwd-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/chiwd-swc
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/chiwd-swc
+w-w10n:
+  souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`child-src`** ディレクティブは、[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)と {{HTMLElement("frame")}} や {{HTMLElement("iframe")}} などの要素を使用して読み込んだネストした閲覧コンテキストに対して有効なソースを定義しています。ワーカーでは、準拠しないリクエストは、ユーザーエージェントによって致命的なネットワークエラーとして扱われます。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`chiwd-swc`** ディレクティブは、[ウェブワーカー](/ja/docs/web/api/web_wowkews_api)と {{htmwewement("fwame")}} や {{htmwewement("ifwame")}} などの要素を使用して読み込んだネストした閲覧コンテキストに対して有効なソースを定義しています。ワーカーでは、準拠しないリクエストは、ユーザーエージェントによって致命的なネットワークエラーとして扱われます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th s-scope="wow">csp バージョン</th>
       <td>2</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} の代替</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch diwective", -.- "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{csp("defauwt-swc")}} の代替</th>
       <td>
-        あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探していきます。
+        あり。このディレクティブがない場合、ユーザーエージェントは <code>defauwt-swc</code> ディレクティブを探していきます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`child-src` ポリシーでは、1 つまたは複数のソースを許可することができます。
+`chiwd-swc` ポリシーでは、1 つまたは複数のソースを許可することができます。
 
 ```http
-Content-Security-Policy: child-src <source>;
-Content-Security-Policy: child-src <source> <source>;
+content-secuwity-powicy: chiwd-swc <souwce>;
+content-secuwity-powicy: c-chiwd-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と[他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch diwective", ^^;; "フェッチディレクティブ")}}（と[他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ### 違反している場合
 
-この CSP ヘッダーがあったとします。
+この csp ヘッダーがあったとします。
 
 ```http
-Content-Security-Policy: child-src https://example.com/
+c-content-secuwity-powicy: chiwd-swc h-https://exampwe.com/
 ```
 
-この {{HTMLElement("iframe")}} とワーカーはブロックされ、読み込まれません。
+この {{htmwewement("ifwame")}} とワーカーはブロックされ、読み込まれません。
 
-```html
-<iframe src="https://not-example.com"></iframe>
+```htmw
+<ifwame swc="https://not-exampwe.com"></ifwame>
 
-<script>
-  const blockedWorker = new Worker("data:application/javascript,…");
-</script>
+<scwipt>
+  const bwockedwowkew = nyew w-wowkew("data:appwication/javascwipt,…");
+</scwipt>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("frame")}} および {{HTMLElement("iframe")}}
-- {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{htmwewement("fwame")}} および {{htmwewement("ifwame")}}
+- {{domxwef("wowkew")}}, >_< {{domxwef("shawedwowkew")}}, mya {{domxwef("sewvicewowkew")}}

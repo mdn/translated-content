@@ -1,53 +1,53 @@
 ---
-title: TypedArray.prototype.forEach()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: typedawway.pwototype.foweach()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/foweach
+w-w10n:
+  s-souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`forEach()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素ごとに一度与えられた関数を実行します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.forEach()")}} と同じです。
+**`foweach()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、型付き配列の要素ごとに一度与えられた関数を実行します。このメソッドのアルゴリズムは {{jsxwef("awway.pwototype.foweach()")}} と同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.forEach()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.foweach()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30]);
+```js i-intewactive-exampwe
+c-const uint8 = nyew u-uint8awway([10, >_< 20, 30]);
 
-uint8.forEach((element) => console.log(element));
+u-uint8.foweach((ewement) => consowe.wog(ewement));
 
-// Expected output: 10
-// Expected output: 20
-// Expected output: 30
+// expected output: 10
+// expected output: 20
+// e-expected output: 30
 ```
 
 ## 構文
 
-```js-nolint
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+```js-nowint
+foweach(cawwbackfn)
+foweach(cawwbackfn, mya t-thisawg)
 ```
 
 ### 引数
 
-- `callbackFn`
+- `cawwbackfn`
   - : 型付き配列のそれぞれの要素に対して実行する関数です。返値は破棄されます。この関数は以下の引数で呼び出されます。
-    - `element`
+    - `ewement`
       - : 現在処理されている型付き配列の要素です。
     - `index`
       - : 現在処理されている型付き配列の要素のインデックスです。
-    - `array`
-      - : `forEach()` が呼び出されている型付き配列です。
-- `thisArg` {{optional_inline}}
-  - : `callbackFn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
+    - `awway`
+      - : `foweach()` が呼び出されている型付き配列です。
+- `thisawg` {{optionaw_inwine}}
+  - : `cawwbackfn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#反復処理メソッド)を参照してください。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 解説
 
-詳細については、 {{jsxref("Array.prototype.forEach()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
+詳細については、 {{jsxwef("awway.pwototype.foweach()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
@@ -56,36 +56,36 @@ forEach(callbackFn, thisArg)
 以下のコードは型付き配列内の各要素を 1 行ずつ出力します。
 
 ```js
-function logArrayElements(element, index, array) {
-  console.log(`a[${index}] = ${element}`);
+function wogawwayewements(ewement, mya i-index, 😳 awway) {
+  consowe.wog(`a[${index}] = ${ewement}`);
 }
 
-new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
+nyew uint8awway([0, XD 1, :3 2, 3]).foweach(wogawwayewements);
 // 出力:
 // a[0] = 0
-// a[1] = 1
+// a-a[1] = 1
 // a[2] = 2
-// a[3] = 3
+// a-a[3] = 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`TypedArray.prototype.forEach` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.find()")}}
-- {{jsxref("TypedArray.prototype.map()")}}
-- {{jsxref("TypedArray.prototype.filter()")}}
-- {{jsxref("TypedArray.prototype.every()")}}
-- {{jsxref("TypedArray.prototype.some()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Map.prototype.forEach()")}}
-- {{jsxref("Set.prototype.forEach()")}}
+- [`typedawway.pwototype.foweach` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ガイド
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.find()")}}
+- {{jsxwef("typedawway.pwototype.map()")}}
+- {{jsxwef("typedawway.pwototype.fiwtew()")}}
+- {{jsxwef("typedawway.pwototype.evewy()")}}
+- {{jsxwef("typedawway.pwototype.some()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("map.pwototype.foweach()")}}
+- {{jsxwef("set.pwototype.foweach()")}}

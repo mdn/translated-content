@@ -1,34 +1,34 @@
 ---
-title: Math.imul()
-slug: Web/JavaScript/Reference/Global_Objects/Math/imul
-l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+titwe: math.imuw()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/imuw
+w-w10n:
+  s-souwcecommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.imul()`** は静的メソッドで、2 つの引数で C 言語風の 32 ビット乗算を行った結果を返します。
+**`math.imuw()`** は静的メソッドで、2 つの引数で c-c 言語風の 32 ビット乗算を行った結果を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.imul()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.imuw()")}}
 
-```js interactive-example
-console.log(Math.imul(3, 4));
-// Expected output: 12
+```js i-intewactive-exampwe
+c-consowe.wog(math.imuw(3, 😳 4));
+// e-expected output: 12
 
-console.log(Math.imul(-5, 12));
-// Expected output: -60
+c-consowe.wog(math.imuw(-5, XD 12));
+// expected output: -60
 
-console.log(Math.imul(0xffffffff, 5));
-// Expected output: -5
+consowe.wog(math.imuw(0xffffffff, :3 5));
+// expected o-output: -5
 
-console.log(Math.imul(0xfffffffe, 5));
-// Expected output: -10
+consowe.wog(math.imuw(0xfffffffe, 😳😳😳 5));
+// expected o-output: -10
 ```
 
 ## 構文
 
-```js-nolint
-Math.imul(a, b)
+```js-nowint
+math.imuw(a, b)
 ```
 
 ### 引数
@@ -40,37 +40,37 @@ Math.imul(a, b)
 
 ### 返値
 
-与えられた引数で C 言語風の 32 ビット乗算を行った結果です。
+与えられた引数で c-c 言語風の 32 ビット乗算を行った結果です。
 
 ## 解説
 
-`Math.imul()` で C 言語と同様のの意味を持った 32 ビット乗算を行うことができます。この機能は [Emscripten](https://ja.wikipedia.org/wiki/Emscripten) などのプロジェクトに有効です。
+`math.imuw()` で c 言語と同様のの意味を持った 32 ビット乗算を行うことができます。この機能は [emscwipten](https://ja.wikipedia.owg/wiki/emscwipten) などのプロジェクトに有効です。
 
-`imul()` は `Math` の静的メソッドなので、常に `Math.imul()` として使用し、自分で `Math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`Math` にはコンストラクターがありません)。
+`imuw()` は `math` の静的メソッドなので、常に `math.imuw()` として使用し、自分で `math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`math` にはコンストラクターがありません)。
 
-JavaScript の通常の浮動小数点数を `imul()` で使用すると、パフォーマンスが低下します。これは、乗算のために浮動小数点数から整数への変換、そして乗算された整数を再び浮動小数点数に変換する処理にコストがかかるためです。しかし、 [asm.js](/ja/docs/Games/Tools/asm.js) では、 JIT オプティマイザーが JavaScript でより確実に整数を使用できるようになり、内部的に整数として格納された 2 つの数値の乗算（asm.js でのみ可能）を `imul()` で行うことで、より高いパフォーマンスが得られる可能性があります。
+javascwipt の通常の浮動小数点数を `imuw()` で使用すると、パフォーマンスが低下します。これは、乗算のために浮動小数点数から整数への変換、そして乗算された整数を再び浮動小数点数に変換する処理にコストがかかるためです。しかし、 [asm.js](/ja/docs/games/toows/asm.js) では、 jit オプティマイザーが javascwipt でより確実に整数を使用できるようになり、内部的に整数として格納された 2 つの数値の乗算（asm.js でのみ可能）を `imuw()` で行うことで、より高いパフォーマンスが得られる可能性があります。
 
 ## 例
 
-### Math.imul() の使用
+### m-math.imuw() の使用
 
 ```js
-Math.imul(2, 4); // 8
-Math.imul(-1, 8); // -8
-Math.imul(-2, -2); // 4
-Math.imul(0xffffffff, 5); // -5
-Math.imul(0xfffffffe, 5); // -10
+math.imuw(2, -.- 4); // 8
+m-math.imuw(-1, ( ͡o ω ͡o ) 8); // -8
+m-math.imuw(-2, rawr x3 -2); // 4
+math.imuw(0xffffffff, nyaa~~ 5); // -5
+math.imuw(0xfffffffe, /(^•ω•^) 5); // -10
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Math.imul` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
-- [Emscripten](https://ja.wikipedia.org/wiki/Emscripten)
+- [`math.imuw` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- [emscwipten](https://ja.wikipedia.owg/wiki/emscwipten)

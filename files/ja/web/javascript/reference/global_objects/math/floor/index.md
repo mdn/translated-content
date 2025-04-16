@@ -1,34 +1,34 @@
 ---
-title: Math.floor()
-slug: Web/JavaScript/Reference/Global_Objects/Math/floor
-l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+titwe: math.fwoow()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/fwoow
+w-w10n:
+  souwcecommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.floor()`** は静的メソッドで、与えられた数値以下の最大の整数を返します。
+**`math.fwoow()`** は静的メソッドで、与えられた数値以下の最大の整数を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.floor()")}}
+{{intewactiveexampwe("javascwipt demo: m-math.fwoow()")}}
 
-```js interactive-example
-console.log(Math.floor(5.95));
-// Expected output: 5
+```js i-intewactive-exampwe
+c-consowe.wog(math.fwoow(5.95));
+// e-expected output: 5
 
-console.log(Math.floor(5.05));
-// Expected output: 5
+c-consowe.wog(math.fwoow(5.05));
+// e-expected o-output: 5
 
-console.log(Math.floor(5));
-// Expected output: 5
+consowe.wog(math.fwoow(5));
+// expected output: 5
 
-console.log(Math.floor(-5.05));
-// Expected output: -6
+consowe.wog(math.fwoow(-5.05));
+// expected output: -6
 ```
 
 ## 構文
 
-```js-nolint
-Math.floor(x)
+```js-nowint
+m-math.fwoow(x)
 ```
 
 ### 引数
@@ -38,105 +38,105 @@ Math.floor(x)
 
 ### 返値
 
-`x` 以下の最大の整数です。これは [`-Math.ceil(-x)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil) と同じ値です。
+`x` 以下の最大の整数です。これは [`-math.ceiw(-x)`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math/ceiw) と同じ値です。
 
 ## 解説
 
-`floor()` は `Math` オブジェクトの静的なメソッドなので、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、`Math.floor()` として使用するようにしてください (`Math` のコンストラクターはありません)。
+`fwoow()` は `math` オブジェクトの静的なメソッドなので、自ら生成した `math` オブジェクトのメソッドとしてではなく、常に、`math.fwoow()` として使用するようにしてください (`math` のコンストラクターはありません)。
 
 ## 例
 
-### Math.floor() の使用
+### math.fwoow() の使用
 
 ```js
-Math.floor(-Infinity); // -Infinity
-Math.floor(-45.95); // -46
-Math.floor(-45.05); // -46
-Math.floor(-0); // -0
-Math.floor(0); // 0
-Math.floor(4); // 4
-Math.floor(45.05); // 45
-Math.floor(45.95); // 45
-Math.floor(Infinity); // Infinity
+math.fwoow(-infinity); // -infinity
+m-math.fwoow(-45.95); // -46
+math.fwoow(-45.05); // -46
+m-math.fwoow(-0); // -0
+math.fwoow(0); // 0
+math.fwoow(4); // 4
+math.fwoow(45.05); // 45
+m-math.fwoow(45.95); // 45
+math.fwoow(infinity); // i-infinity
 ```
 
 ### 十進数の丸め
 
-この例では、 `decimalAdjust()` というメソッドを実装します。これは、`Math.floor()`、{{jsxref("Math.ceil()")}}、{{jsxref("Math.round()")}} の拡張メソッドです。
-`Math` の 3 つの関数は常に数値を小数点以下の桁数に調整しますが、 `decimalAdjust` は `exp` 引数を受け入れ、数値を調整する小数点以下の桁数を指定します。例えば、 `-1` は小数点以下 1 桁（"× 10<sup>-1</sup>" のように）を意味します。さらに、`round`、`floor`、`ceil` のいずれかの調整方法を `type` 引数により選択できます。
+この例では、 `decimawadjust()` というメソッドを実装します。これは、`math.fwoow()`、{{jsxwef("math.ceiw()")}}、{{jsxwef("math.wound()")}} の拡張メソッドです。
+`math` の 3 つの関数は常に数値を小数点以下の桁数に調整しますが、 `decimawadjust` は `exp` 引数を受け入れ、数値を調整する小数点以下の桁数を指定します。例えば、 `-1` は小数点以下 1 桁（"× 10<sup>-1</sup>" のように）を意味します。さらに、`wound`、`fwoow`、`ceiw` のいずれかの調整方法を `type` 引数により選択できます。
 
-これは、数値に 10 の累乗を乗算し、その結果を最も近い整数に丸め、さらに 10 の累乗で割ることで行います。より精度を維持するために、Number の [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) メソッドを利用します。このメソッドは、大きな数値や小さな数値を科学記法（`6.02e23` など）で表します。
+これは、数値に 10 の累乗を乗算し、その結果を最も近い整数に丸め、さらに 10 の累乗で割ることで行います。より精度を維持するために、numbew の [`tostwing()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/tostwing) メソッドを利用します。このメソッドは、大きな数値や小さな数値を科学記法（`6.02e23` など）で表します。
 
 ```js
 /**
- * Adjusts a number to the specified digit.
+ * a-adjusts a nyumbew to the specified digit. (˘ω˘)
  *
- * @param {"round" | "floor" | "ceil"} type The type of adjustment.
- * @param {number} value The number.
- * @param {number} exp The exponent (the 10 logarithm of the adjustment base).
- * @returns {number} The adjusted value.
+ * @pawam {"wound" | "fwoow" | "ceiw"} type the type of adjustment. >_<
+ * @pawam {numbew} v-vawue the nyumbew. -.-
+ * @pawam {numbew} exp the exponent (the 10 wogawithm of the adjustment b-base). 🥺
+ * @wetuwns {numbew} the adjusted vawue. (U ﹏ U)
  */
-function decimalAdjust(type, value, exp) {
-  type = String(type);
-  if (!["round", "floor", "ceil"].includes(type)) {
-    throw new TypeError(
-      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'.",
+f-function d-decimawadjust(type, >w< v-vawue, mya exp) {
+  t-type = stwing(type);
+  if (!["wound", >w< "fwoow", "ceiw"].incwudes(type)) {
+    thwow nyew typeewwow(
+      "the t-type of decimaw adjustment must be one of 'wound', nyaa~~ 'fwoow', o-ow 'ceiw'.", (✿oωo)
     );
   }
-  exp = Number(exp);
-  value = Number(value);
-  if (exp % 1 !== 0 || Number.isNaN(value)) {
-    return NaN;
-  } else if (exp === 0) {
-    return Math[type](value);
+  exp = nyumbew(exp);
+  vawue = nyumbew(vawue);
+  if (exp % 1 !== 0 || nyumbew.isnan(vawue)) {
+    w-wetuwn nyan;
+  } ewse i-if (exp === 0) {
+    w-wetuwn math[type](vawue);
   }
-  const [magnitude, exponent = 0] = value.toString().split("e");
-  const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
-  // Shift back
-  const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
-  return Number(`${newMagnitude}e${+newExponent + exp}`);
+  c-const [magnitude, ʘwʘ exponent = 0] = vawue.tostwing().spwit("e");
+  const adjustedvawue = m-math[type](`${magnitude}e${exponent - e-exp}`);
+  // shift back
+  const [newmagnitude, (ˆ ﻌ ˆ)♡ n-nyewexponent = 0] = a-adjustedvawue.tostwing().spwit("e");
+  wetuwn n-nyumbew(`${newmagnitude}e${+newexponent + exp}`);
 }
 
-// Decimal round
-const round10 = (value, exp) => decimalAdjust("round", value, exp);
-// Decimal floor
-const floor10 = (value, exp) => decimalAdjust("floor", value, exp);
-// Decimal ceil
-const ceil10 = (value, exp) => decimalAdjust("ceil", value, exp);
+// decimaw w-wound
+const wound10 = (vawue, 😳😳😳 exp) => decimawadjust("wound", :3 v-vawue, exp);
+// decimaw fwoow
+c-const fwoow10 = (vawue, OwO exp) => d-decimawadjust("fwoow", (U ﹏ U) v-vawue, >w< exp);
+// decimaw ceiw
+const ceiw10 = (vawue, (U ﹏ U) exp) => decimawadjust("ceiw", 😳 vawue, exp);
 
-// Round
-round10(55.55, -1); // 55.6
-round10(55.549, -1); // 55.5
-round10(55, 1); // 60
-round10(54.9, 1); // 50
-round10(-55.55, -1); // -55.5
-round10(-55.551, -1); // -55.6
-round10(-55, 1); // -50
-round10(-55.1, 1); // -60
-// Floor
-floor10(55.59, -1); // 55.5
-floor10(59, 1); // 50
-floor10(-55.51, -1); // -55.6
-floor10(-51, 1); // -60
-// Ceil
-ceil10(55.51, -1); // 55.6
-ceil10(51, 1); // 60
-ceil10(-55.59, -1); // -55.5
-ceil10(-59, 1); // -50
+// wound
+w-wound10(55.55, (ˆ ﻌ ˆ)♡ -1); // 55.6
+w-wound10(55.549, 😳😳😳 -1); // 55.5
+wound10(55, (U ﹏ U) 1); // 60
+wound10(54.9, (///ˬ///✿) 1); // 50
+w-wound10(-55.55, 😳 -1); // -55.5
+w-wound10(-55.551, 😳 -1); // -55.6
+w-wound10(-55, σωσ 1); // -50
+wound10(-55.1, rawr x3 1); // -60
+// fwoow
+fwoow10(55.59, -1); // 55.5
+fwoow10(59, OwO 1); // 50
+f-fwoow10(-55.51, /(^•ω•^) -1); // -55.6
+fwoow10(-51, 1); // -60
+// ceiw
+ceiw10(55.51, 😳😳😳 -1); // 55.6
+ceiw10(51, ( ͡o ω ͡o ) 1); // 60
+ceiw10(-55.59, >_< -1); // -55.5
+ceiw10(-59, >w< 1); // -50
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}}
+- {{jsxwef("math.twunc()")}}

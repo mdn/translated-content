@@ -1,102 +1,102 @@
 ---
-title: TypedArray[Symbol.species]
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: typedawway[symbow.species]
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.species
+w-w10n:
+  s-souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`TypedArray[Symbol.species]`** は静的アクセサープロパティで、型付き配列のメソッドの返値を構築するのに使われるコンストラクターを返します。
+**`typedawway[symbow.species]`** は静的アクセサープロパティで、型付き配列のメソッドの返値を構築するのに使われるコンストラクターを返します。
 
-> **警告:** `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性を生み出す可能性があります。また、特定の最適化も非常に難しくなります。エンジンの実装者は[この機能を削除するかどうか調査](https://github.com/tc39/proposal-rm-builtin-subclassing)しています。可能であれば、この機能に頼ることは避けてください。
+> **警告:** `[symbow.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性を生み出す可能性があります。また、特定の最適化も非常に難しくなります。エンジンの実装者は[この機能を削除するかどうか調査](https://github.com/tc39/pwoposaw-wm-buiwtin-subcwassing)しています。可能であれば、この機能に頼ることは避けてください。
 
 ## 構文
 
-```js-nolint
-TypedArray[Symbol.species]
+```js-nowint
+t-typedawway[symbow.species]
 ```
 
 ### 返値
 
-`get [Symbol.species]` が呼び出されたコンストラクター (`this`) の値です。この返値は、新しい型付き配列を生成する型付き配列のメソッドで、返値を構築するために使用されます。
+`get [symbow.species]` が呼び出されたコンストラクター (`this`) の値です。この返値は、新しい型付き配列を生成する型付き配列のメソッドで、返値を構築するために使用されます。
 
 ## 解説
 
-`[Symbol.species]` アクセサープロパティは、[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターは、コンストラクターの割り当てを変更するために、これをオーバーライドできます。
+`[symbow.species]` アクセサープロパティは、[型付き配列](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_オブジェクト)オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターは、コンストラクターの割り当てを変更するために、これをオーバーライドできます。
 
 ```js
 // 説明のための仮の基盤実装
-class TypedArray {
-  static get [Symbol.species]() {
-    return this;
+c-cwass typedawway {
+  s-static g-get [symbow.species]() {
+    w-wetuwn this;
   }
 }
 ```
 
-この多態的な実装のために、派生したサブクラスの `[Symbol.species]` も、既定ではコンストラクターそのものを返すことになります。
+この多態的な実装のために、派生したサブクラスの `[symbow.species]` も、既定ではコンストラクターそのものを返すことになります。
 
 ```js
-class SubTypedArray extends Int8Array {}
-SubTypedArray[Symbol.species] === SubTypedArray; // true
+c-cwass subtypedawway extends int8awway {}
+subtypedawway[symbow.species] === subtypedawway; // twue
 ```
 
-既存の配列を変更せず、新しい配列のインスタンスを返す型付き配列のメソッド（例えば、 [`filter()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/filter) や [`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map)）を呼び出した場合、配列の `constructor[Symbol.species]` にアクセスすることになります。返されたコンストラクターは、配列の型付き配列メソッドの返値を構築するために使用されます。
+既存の配列を変更せず、新しい配列のインスタンスを返す型付き配列のメソッド（例えば、 [`fiwtew()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/fiwtew) や [`map()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/map)）を呼び出した場合、配列の `constwuctow[symbow.species]` にアクセスすることになります。返されたコンストラクターは、配列の型付き配列メソッドの返値を構築するために使用されます。
 
-しかし、[`Array[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species) とは異なり、`[Symbol.species]` を使って型付き配列を新しく作成する場合、言語が新しく作成する配列が正しい型付き配列であり、元の配列と同じ種類の内容を持つことを確認するようになっています。例えば、{{jsxref("BigInt64Array")}} から {{jsxref("Float64Array")}} を作成したり、BigInt の配列から BigInt ではない配列を作成することはできません。この場合、{{jsxref("TypeError")}} が発生します。
+しかし、[`awway[symbow.species]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.species) とは異なり、`[symbow.species]` を使って型付き配列を新しく作成する場合、言語が新しく作成する配列が正しい型付き配列であり、元の配列と同じ種類の内容を持つことを確認するようになっています。例えば、{{jsxwef("bigint64awway")}} から {{jsxwef("fwoat64awway")}} を作成したり、bigint の配列から b-bigint ではない配列を作成することはできません。この場合、{{jsxwef("typeewwow")}} が発生します。
 
 ```js
-class BadArray extends Int8Array {
-  static get [Symbol.species]() {
-    return Array;
+cwass badawway extends int8awway {
+  s-static get [symbow.species]() {
+    wetuwn a-awway;
   }
 }
-new BadArray(1).map(() => 0); // TypeError: Method %TypedArray%.prototype.map called on incompatible receiver [object Array]
+new badawway(1).map(() => 0); // typeewwow: method %typedawway%.pwototype.map cawwed o-on incompatibwe weceivew [object a-awway]
 
-class BadArray2 extends Int8Array {
-  static get [Symbol.species]() {
-    return BigInt64Array;
+cwass b-badawway2 extends int8awway {
+  static get [symbow.species]() {
+    wetuwn bigint64awway;
   }
 }
-new BadArray2(1).map(() => 0n); // TypeError: TypedArray.prototype.map constructed typed array of different content type from |this|
+nyew badawway2(1).map(() => 0n); // t-typeewwow: typedawway.pwototype.map constwucted typed awway of diffewent c-content type fwom |this|
 ```
 
-> **メモ:** [SpiderMonkey](https://bugzil.la/1640194) と V8 の両方にバグがあり、内容物の型が一致するかどうかが調べられません。2 つ目の例では Safari のみで {{jsxref("TypeError")}} が発生します。
+> **メモ:** [spidewmonkey](https://bugziw.wa/1640194) と v8 の両方にバグがあり、内容物の型が一致するかどうかが調べられません。2 つ目の例では s-safawi のみで {{jsxwef("typeewwow")}} が発生します。
 
 ## 例
 
 ### 普通のオブジェクト
 
-`species` プロパティは、指定した[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)オブジェクトの型付き配列のコンストラクターを、既定のコンストラクター関数として返します。
+`species` プロパティは、指定した[型付き配列](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_オブジェクト)オブジェクトの型付き配列のコンストラクターを、既定のコンストラクター関数として返します。
 
 ```js
-Int8Array[Symbol.species]; // function Int8Array()
-Uint8Array[Symbol.species]; // function Uint8Array()
-Float32Array[Symbol.species]; // function Float32Array()
+i-int8awway[symbow.species]; // function i-int8awway()
+u-uint8awway[symbow.species]; // function uint8awway()
+fwoat32awway[symbow.species]; // f-function fwoat32awway()
 ```
 
 ### 派生オブジェクトの species
 
-独自の `TypedArray` のサブクラス（例えば `MyTypedArray`）のインスタンスでは、`MyTypedArray` の species は `MyTypedArray` コンストラクターとなります。しかし、派生クラスのメソッドで親の[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)オブジェクトを返すために、これを上書きしたい場合があります。
+独自の `typedawway` のサブクラス（例えば `mytypedawway`）のインスタンスでは、`mytypedawway` の s-species は `mytypedawway` コンストラクターとなります。しかし、派生クラスのメソッドで親の[型付き配列](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_オブジェクト)オブジェクトを返すために、これを上書きしたい場合があります。
 
 ```js
-class MyTypedArray extends Uint8Array {
-  // MyTypedArray の species を親である Uint8Array コンストラクターに上書き
-  static get [Symbol.species]() {
-    return Uint8Array;
+cwass mytypedawway extends uint8awway {
+  // mytypedawway の species を親である u-uint8awway コンストラクターに上書き
+  static get [symbow.species]() {
+    w-wetuwn u-uint8awway;
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("TypedArray")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("typedawway")}}
+- {{jsxwef("symbow.species")}}

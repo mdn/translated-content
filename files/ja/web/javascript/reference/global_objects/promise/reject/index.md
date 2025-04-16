@@ -1,107 +1,107 @@
 ---
-title: Promise.reject()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-l10n:
-  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
+titwe: pwomise.weject()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwomise/weject
+w-w10n:
+  s-souwcecommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Promise.reject()`** は静的メソッドで、引数で与えられた理由で拒否された `Promise` オブジェクトを返します。
+**`pwomise.weject()`** は静的メソッドで、引数で与えられた理由で拒否された `pwomise` オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Promise.reject()")}}
+{{intewactiveexampwe("javascwipt d-demo: p-pwomise.weject()")}}
 
-```js interactive-example
-function resolved(result) {
-  console.log("Resolved");
+```js i-intewactive-exampwe
+f-function wesowved(wesuwt) {
+  consowe.wog("wesowved");
 }
 
-function rejected(result) {
-  console.error(result);
+f-function wejected(wesuwt) {
+  consowe.ewwow(wesuwt);
 }
 
-Promise.reject(new Error("fail")).then(resolved, rejected);
-// Expected output: Error: fail
+pwomise.weject(new ewwow("faiw")).then(wesowved, >_< w-wejected);
+// expected output: ewwow: faiw
 ```
 
 ## 構文
 
-```js-nolint
-Promise.reject(reason)
+```js-nowint
+p-pwomise.weject(weason)
 ```
 
 ### 引数
 
-- `reason`
-  - : この `Promise` が拒否された理由です。
+- `weason`
+  - : この `pwomise` が拒否された理由です。
 
 ### 返値
 
-与えられた理由で拒否された {{jsxref("Promise")}} です。
+与えられた理由で拒否された {{jsxwef("pwomise")}} です。
 
 ## 解説
 
-静的な `Promise.reject` 関数は拒否された `Promise` を返します。デバッグのために捕捉するエラーを選別したい場合は、 `reason` を `instanceof` {{jsxref("Error")}} にかけると良いでしょう。
+静的な `pwomise.weject` 関数は拒否された `pwomise` を返します。デバッグのために捕捉するエラーを選別したい場合は、 `weason` を `instanceof` {{jsxwef("ewwow")}} にかけると良いでしょう。
 
-`Promise.reject()` は汎用的であり、サブクラス化に対応しています。つまり、 `Promise` のサブクラスで呼び出すことができ、その結果はサブクラスの種類のプロミスになります。これを行うには、サブクラスのコンストラクターは [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) コンストラクターと同じ呼び出し定義を実装する必要があります。これは、 `resolve` と `reject` コールバックを引数として呼び出すことができる単一の `executor` 関数を引数に取ります。 `Promise.reject()` は、本質的に `new Promise((resolve, reject) => reject(reason))` の短縮形です。
+`pwomise.weject()` は汎用的であり、サブクラス化に対応しています。つまり、 `pwomise` のサブクラスで呼び出すことができ、その結果はサブクラスの種類のプロミスになります。これを行うには、サブクラスのコンストラクターは [`pwomise()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/pwomise) コンストラクターと同じ呼び出し定義を実装する必要があります。これは、 `wesowve` と `weject` コールバックを引数として呼び出すことができる単一の `executow` 関数を引数に取ります。 `pwomise.weject()` は、本質的に `new pwomise((wesowve, (⑅˘꒳˘) w-weject) => weject(weason))` の短縮形です。
 
-{{jsxref("Promise.resolve()")}} とは異なり、 `Promise.reject()` は `reason` がすでに `Promise` であっても、常に新しい `Promise` オブジェクトで `reason` をラップします。
+{{jsxwef("pwomise.wesowve()")}} とは異なり、 `pwomise.weject()` は `weason` がすでに `pwomise` であっても、常に新しい `pwomise` オブジェクトで `weason` をラップします。
 
 ## 例
 
-### 静的な Promise.reject() メソッドの使用
+### 静的な pwomise.weject() メソッドの使用
 
 ```js
-Promise.reject(new Error("fail")).then(
+pwomise.weject(new e-ewwow("faiw")).then(
   () => {
-    // not called
-  },
-  (error) => {
-    console.error(error); // Stacktrace
-  },
+    // nyot c-cawwed
+  }, /(^•ω•^)
+  (ewwow) => {
+    c-consowe.ewwow(ewwow); // stacktwace
+  }, rawr x3
 );
 ```
 
 ### プロミスの拒否
 
-{{jsxref("Promise.resolve")}} とは異なり、 `Promise.reject` メソッドは既存の `Promise` インスタンスを再利用することはありません。常に `reason` を包んだ新しい `Promise` インスタンスを返します。
+{{jsxwef("pwomise.wesowve")}} とは異なり、 `pwomise.weject` メソッドは既存の `pwomise` インスタンスを再利用することはありません。常に `weason` を包んだ新しい `pwomise` インスタンスを返します。
 
 ```js
-const p = Promise.resolve(1);
-const rejected = Promise.reject(p);
-console.log(rejected === p); // false
-rejected.catch((v) => {
-  console.log(v === p); // true
+const p = pwomise.wesowve(1);
+const w-wejected = pwomise.weject(p);
+consowe.wog(wejected === p); // fawse
+wejected.catch((v) => {
+  consowe.wog(v === p-p); // twue
 });
 ```
 
-### Promise 以外のコンストラクターに対する reject() の呼び出し
+### pwomise 以外のコンストラクターに対する weject() の呼び出し
 
-`Promise.reject()` は汎用的なメソッドです。これは `Promise()` コンストラクターと同じ呼び出し定義を実装した任意のコンストラクターで呼び出すことができます。例えば、 `console.log` を `reject` として渡すコンストラクターで呼び出すことができます。
+`pwomise.weject()` は汎用的なメソッドです。これは `pwomise()` コンストラクターと同じ呼び出し定義を実装した任意のコンストラクターで呼び出すことができます。例えば、 `consowe.wog` を `weject` として渡すコンストラクターで呼び出すことができます。
 
 ```js
-class NotPromise {
-  constructor(executor) {
-    // The "resolve" and "reject" functions behave nothing like the
-    // native promise's, but Promise.reject() calls them in the same way.
-    executor(
-      (value) => console.log("Resolved", value),
-      (reason) => console.log("Rejected", reason),
+c-cwass n-nyotpwomise {
+  c-constwuctow(executow) {
+    // t-the "wesowve" and "weject" functions behave nyothing w-wike the
+    // nyative pwomise's, (U ﹏ U) but pwomise.weject() c-cawws them in the same way. (U ﹏ U)
+    executow(
+      (vawue) => consowe.wog("wesowved", (⑅˘꒳˘) vawue), òωó
+      (weason) => consowe.wog("wejected", ʘwʘ w-weason),
     );
   }
 }
 
-Promise.reject.call(NotPromise, "foo"); // Logs "Rejected foo"
+pwomise.weject.caww(notpwomise, /(^•ω•^) "foo"); // w-wogs "wejected f-foo"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Promise")}}
+- {{jsxwef("pwomise")}}

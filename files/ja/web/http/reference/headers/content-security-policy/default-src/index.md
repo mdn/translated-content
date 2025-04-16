@@ -1,101 +1,101 @@
 ---
-title: "CSP: default-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/default-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/default-src
-l10n:
-  sourceCommit: de2a90fe1c1cd578faaee3c7e2ff7c96bae9a545
+titwe: "csp: defauwt-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/defauwt-swc
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/defauwt-swc
+w-w10n:
+  souwcecommit: d-de2a90fe1c1cd578faaee3c7e2ff7c96bae9a545
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`default-src`** ディレクティブは、他の CSP の{{Glossary("fetch directive", "フェッチディレクティブ")}}の代替として提供します。以下のディレクティブがいずれかが存在しないと、ユーザーエージェントは `default-src` ディレクティブを探して、この値を使用します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`defauwt-swc`** ディレクティブは、他の c-csp の{{gwossawy("fetch d-diwective", OwO "フェッチディレクティブ")}}の代替として提供します。以下のディレクティブがいずれかが存在しないと、ユーザーエージェントは `defauwt-swc` ディレクティブを探して、この値を使用します。
 
-- {{CSP("child-src")}}
-- {{CSP("connect-src")}}
-- {{CSP("font-src")}}
-- {{CSP("frame-src")}}
-- {{CSP("img-src")}}
-- {{CSP("manifest-src")}}
-- {{CSP("media-src")}}
-- {{CSP("object-src")}}
-- {{CSP("prefetch-src")}}
-- {{CSP("script-src")}}
-- {{CSP("script-src-elem")}}
-- {{CSP("script-src-attr")}}
-- {{CSP("style-src")}}
-- {{CSP("style-src-elem")}}
-- {{CSP("style-src-attr")}}
-- {{CSP("worker-src")}}
+- {{csp("chiwd-swc")}}
+- {{csp("connect-swc")}}
+- {{csp("font-swc")}}
+- {{csp("fwame-swc")}}
+- {{csp("img-swc")}}
+- {{csp("manifest-swc")}}
+- {{csp("media-swc")}}
+- {{csp("object-swc")}}
+- {{csp("pwefetch-swc")}}
+- {{csp("scwipt-swc")}}
+- {{csp("scwipt-swc-ewem")}}
+- {{csp("scwipt-swc-attw")}}
+- {{csp("stywe-swc")}}
+- {{csp("stywe-swc-ewem")}}
+- {{csp("stywe-swc-attw")}}
+- {{csp("wowkew-swc")}}
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th scope="wow">csp バージョン</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch diwective", (U ﹏ U) "フェッチディレクティブ")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`default-src` ポリシーには、１つまたは複数のソースが許可されています。
+`defauwt-swc` ポリシーには、１つまたは複数のソースが許可されています。
 
 ```http
-Content-Security-Policy: default-src <source>;
-Content-Security-Policy: default-src <source> <source>;
+c-content-secuwity-powicy: defauwt-swc <souwce>;
+content-secuwity-powicy: d-defauwt-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch diwective", >_< "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
-### default-src で継承されない場合
+### d-defauwt-swc で継承されない場合
 
-他のディレクティブが指定されている場合、`default-src` は影響しません。以下のヘッダー、
+他のディレクティブが指定されている場合、`defauwt-swc` は影響しません。以下のヘッダー、
 
 ```http
-Content-Security-Policy: default-src 'self'; script-src https://example.com
+content-secuwity-powicy: defauwt-swc 'sewf'; scwipt-swc https://exampwe.com
 ```
 
 は、下記のものと同じです。
 
 ```http
-Content-Security-Policy: connect-src 'self';
-                         font-src 'self';
-                         frame-src 'self';
-                         img-src 'self';
-                         manifest-src 'self';
-                         media-src 'self';
-                         object-src 'self';
-                         script-src https://example.com;
-                         style-src 'self';
-                         worker-src 'self'
+c-content-secuwity-powicy: connect-swc 'sewf';
+                         f-font-swc 'sewf';
+                         f-fwame-swc 'sewf';
+                         img-swc 'sewf';
+                         manifest-swc 'sewf';
+                         media-swc 'sewf';
+                         object-swc 'sewf';
+                         s-scwipt-swc https://exampwe.com;
+                         stywe-swc 'sewf';
+                         wowkew-swc 'sewf'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- CSP ディレクティブ (<https://www.w3.org/TR/CSP/#csp-directives>):
+- {{httpheadew("content-secuwity-powicy")}}
+- csp ディレクティブ (<https://www.w3.owg/tw/csp/#csp-diwectives>):
 
-  - {{Glossary("Fetch directive", "フェッチディレクティブ")}}
-  - {{Glossary("Document directive", "文書ディレクティブ")}}
-  - {{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}
-  - {{Glossary("Reporting directive", "報告ディレクティブ")}}
-  - [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - [`block-all-mixed-content`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content)
+  - {{gwossawy("fetch diwective", rawr x3 "フェッチディレクティブ")}}
+  - {{gwossawy("document d-diwective", "文書ディレクティブ")}}
+  - {{gwossawy("navigation diwective", mya "ナビゲーションディレクティブ")}}
+  - {{gwossawy("wepowting d-diwective", "報告ディレクティブ")}}
+  - [`upgwade-insecuwe-wequests`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy/upgwade-insecuwe-wequests)
+  - [`bwock-aww-mixed-content`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy/bwock-aww-mixed-content)

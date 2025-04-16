@@ -1,34 +1,34 @@
 ---
-title: Math.ceil()
-slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
-l10n:
-  sourceCommit: 910a6fedb299488ba7e94b884da7bcd71e79ec1a
+titwe: math.ceiw()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/ceiw
+w-w10n:
+  s-souwcecommit: 910a6fedb299488ba7e94b884da7bcd71e79ec1a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.ceil()`** は静的メソッドで、常に切り上げを行い、与えられた数以上の最小の整数を返します。
+**`math.ceiw()`** は静的メソッドで、常に切り上げを行い、与えられた数以上の最小の整数を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.ceil()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.ceiw()")}}
 
-```js interactive-example
-console.log(Math.ceil(0.95));
-// Expected output: 1
+```js i-intewactive-exampwe
+c-consowe.wog(math.ceiw(0.95));
+// e-expected o-output: 1
 
-console.log(Math.ceil(4));
-// Expected output: 4
+consowe.wog(math.ceiw(4));
+// e-expected output: 4
 
-console.log(Math.ceil(7.004));
-// Expected output: 8
+consowe.wog(math.ceiw(7.004));
+// expected output: 8
 
-console.log(Math.ceil(-7.004));
-// Expected output: -7
+consowe.wog(math.ceiw(-7.004));
+// expected o-output: -7
 ```
 
 ## 構文
 
-```js-nolint
-Math.ceil(x)
+```js-nowint
+math.ceiw(x)
 ```
 
 ### 引数
@@ -38,41 +38,41 @@ Math.ceil(x)
 
 ### 返値
 
-`x` 以上の最小の整数です。これは [`-Math.floor(-x)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) と同じ値です。
+`x` 以上の最小の整数です。これは [`-math.fwoow(-x)`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math/fwoow) と同じ値です。
 
 ## 解説
 
-`ceil()` は `Math` オブジェクトの静的メソッドなので、 `Math` オブジェクトを生成してメソッドとして使用するのではなく、常に `Math.ceil()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`ceiw()` は `math` オブジェクトの静的メソッドなので、 `math` オブジェクトを生成してメソッドとして使用するのではなく、常に `math.ceiw()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.ceil() の使用
+### math.ceiw() の使用
 
 ```js
-Math.ceil(-Infinity); // -無限大
-Math.ceil(-7.004); // -7
-Math.ceil(-4); // -4
-Math.ceil(-0.95); // -0
-Math.ceil(-0); // -0
-Math.ceil(0); // 0
-Math.ceil(0.95); // 1
-Math.ceil(4); // 4
-Math.ceil(7.004); // 8
-Math.ceil(Infinity); // 無限大
+m-math.ceiw(-infinity); // -無限大
+math.ceiw(-7.004); // -7
+math.ceiw(-4); // -4
+m-math.ceiw(-0.95); // -0
+math.ceiw(-0); // -0
+math.ceiw(0); // 0
+math.ceiw(0.95); // 1
+m-math.ceiw(4); // 4
+math.ceiw(7.004); // 8
+m-math.ceiw(infinity); // 無限大
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}}
+- {{jsxwef("math.twunc()")}}

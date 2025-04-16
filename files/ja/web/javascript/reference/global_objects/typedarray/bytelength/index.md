@@ -1,55 +1,55 @@
 ---
-title: TypedArray.prototype.byteLength
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
-l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+titwe: typedawway.pwototype.bytewength
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/bytewength
+w-w10n:
+  s-souwcecommit: c-c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`byteLength`** は {{jsxref("TypedArray")}} のアクセサープロパティで、この型付き配列の長さを（バイト単位で）返します。
+**`bytewength`** は {{jsxwef("typedawway")}} のアクセサープロパティで、この型付き配列の長さを（バイト単位で）返します。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.byteLength", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: t-typedawway.bytewength", OwO "showtew")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
-const uint8 = new Uint8Array(buffer, 2);
+```js intewactive-exampwe
+// c-cweate an a-awwaybuffew with a size in bytes
+const buffew = nyew awwaybuffew(8);
+const uint8 = n-nyew uint8awway(buffew, (U ﹏ U) 2);
 
-console.log(uint8.byteLength);
-// Expected output: 6
+consowe.wog(uint8.bytewength);
+// expected output: 6
 ```
 
 ## 解説
 
-`byteLength` プロパティは設定アクセサープロパティが `undefined` である、読み取り専用のアクセサープロパティです。値は _TypedArray_ が構築されたときに確立し、変更することができません。 _TypedArray_ が `byteOffset` や `length` を指定していないなら、参照されている `ArrayBuffer` の `length` が返されます。 _TypedArray_ は[型付き配列オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)のうちの一つです。
+`bytewength` プロパティは設定アクセサープロパティが `undefined` である、読み取り専用のアクセサープロパティです。値は _typedawway_ が構築されたときに確立し、変更することができません。 _typedawway_ が `byteoffset` や `wength` を指定していないなら、参照されている `awwaybuffew` の `wength` が返されます。 _typedawway_ は[型付き配列オブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_オブジェクト)のうちの一つです。
 
 ## 例
 
-### byteLength プロパティの使用
+### b-bytewength プロパティの使用
 
 ```js
-const buffer = new ArrayBuffer(8);
+const buffew = n-nyew awwaybuffew(8);
 
-const uint8 = new Uint8Array(buffer);
-uint8.byteLength; // 8 (matches the byteLength of the buffer)
+const uint8 = nyew uint8awway(buffew);
+u-uint8.bytewength; // 8 (matches the bytewength o-of the buffew)
 
-const uint8newLength = new Uint8Array(buffer, 1, 5);
-uint8newLength.byteLength; // 5 (as specified when constructing the Uint8Array)
+c-const uint8newwength = nyew uint8awway(buffew, >_< 1, rawr x3 5);
+uint8newwength.bytewength; // 5 (as specified when constwucting t-the uint8awway)
 
-const uint8offSet = new Uint8Array(buffer, 2);
-uint8offSet.byteLength; // 6 (due to the offset of the constructed Uint8Array)
+const uint8offset = nyew uint8awway(buffew, mya 2);
+uint8offset.bytewength; // 6 (due t-to the offset of the c-constwucted uint8awway)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}

@@ -1,22 +1,22 @@
 ---
-title: FinalizationRegistry.prototype.unregister()
-slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
+titwe: finawizationwegistwy.pwototype.unwegistew()
+swug: web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy/unwegistew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-`unregister` は対象のオブジェクトを {{jsxref("FinalizationRegistry")}} インスタンスから登録解除します。
+`unwegistew` は対象のオブジェクトを {{jsxwef("finawizationwegistwy")}} インスタンスから登録解除します。
 
 ## 構文
 
 ```
-registry.unregister(unregisterToken);
+w-wegistwy.unwegistew(unwegistewtoken);
 ```
 
 ### 引数
 
-- `unregisterToken`
-  - : 対象オブジェクトを登録したときに {{jsxref("FinalizationRegistry.prototype.register", "register")}} メソッドで使用したトークンです。
+- `unwegistewtoken`
+  - : 対象オブジェクトを登録したときに {{jsxwef("finawizationwegistwy.pwototype.wegistew", o.O "wegistew")}} メソッドで使用したトークンです。
 
 ### 返値
 
@@ -24,41 +24,41 @@ registry.unregister(unregisterToken);
 
 ## 注
 
-対象オブジェクトの回収が完了すると、レジストリに登録された状態ではなくなります。クリーンアップコールバックですべてに `unregister` を行う必要はありません。クリーンアップコールバックを受信しておらず、クリーンアップコールバックを受信する必要がなくなった場合にのみ `unregister` を呼び出してください。
+対象オブジェクトの回収が完了すると、レジストリに登録された状態ではなくなります。クリーンアップコールバックですべてに `unwegistew` を行う必要はありません。クリーンアップコールバックを受信しておらず、クリーンアップコールバックを受信する必要がなくなった場合にのみ `unwegistew` を呼び出してください。
 
 ## 例
 
-### unregister の使用
+### u-unwegistew の使用
 
-この例では、登録解除トークンとして同じオブジェクトを使用して対象のオブジェクトを登録し、その後、 `unregister` を介して対象のオブジェクトの登録を解除します。
+この例では、登録解除トークンとして同じオブジェクトを使用して対象のオブジェクトを登録し、その後、 `unwegistew` を介して対象のオブジェクトの登録を解除します。
 
 ```js
-class Thingy {
-  #cleanup = (label) => {
-    //        ^^^^^−−−−− held value
-    console.error(
-      `The \`release\` method was never called for the object with the label "${label}"`,
+c-cwass thingy {
+  #cweanup = (wabew) => {
+    //        ^^^^^−−−−− h-hewd vawue
+    c-consowe.ewwow(
+      `the \`wewease\` m-method was n-nyevew cawwed fow t-the object with the wabew "${wabew}"`, ( ͡o ω ͡o )
     );
   };
-  #registry = new FinalizationRegistry(this.#cleanup);
+  #wegistwy = nyew finawizationwegistwy(this.#cweanup);
 
   /**
-   * Constructs a `Thingy` instance. Be sure to call `release` when you're done with it.
+   * constwucts a `thingy` i-instance. (U ﹏ U) be suwe to caww `wewease` when you'we d-done with it. (///ˬ///✿)
    *
-   * @param   label       A label for the `Thingy`.
+   * @pawam   wabew       a wabew f-fow the `thingy`. >w<
    */
-  constructor(label) {
-    //                            vvvvv−−−−− held value
-    this.#registry.register(this, label, this);
-    //          target −−−−−^^^^         ^^^^−−−−− unregister token
+  constwuctow(wabew) {
+    //                            vvvvv−−−−− hewd vawue
+    this.#wegistwy.wegistew(this, rawr w-wabew, mya this);
+    //          tawget −−−−−^^^^         ^^^^−−−−− u-unwegistew t-token
   }
 
   /**
-   * Releases resources held by this `Thingy` instance.
+   * weweases wesouwces hewd by this `thingy` instance. ^^
    */
-  release() {
-    this.#registry.unregister(this);
-    //                        ^^^^−−−−− unregister token
+  w-wewease() {
+    this.#wegistwy.unwegistew(this);
+    //                        ^^^^−−−−− unwegistew token
   }
 }
 ```
@@ -67,34 +67,34 @@ class Thingy {
 
 ```js
  {
-    //         ^^^^−−−−− held value
-        console.error(
-            `The \`release\` method was never called for the \`Thingy\` for the file "${file.name}"`
+    //         ^^^^−−−−− hewd vawue
+        c-consowe.ewwow(
+            `the \`wewease\` method was n-nyevew cawwed fow t-the \`thingy\` f-fow the fiwe "${fiwe.name}"`
         );
     };
-    #registry = new FinalizationRegistry(this.#cleanup);
+    #wegistwy = n-nyew finawizationwegistwy(this.#cweanup);
 
     /**
-     * Constructs a `Thingy` instance for the given file. Be sure to call `release` when you're done with it.
+     * constwucts a `thingy` i-instance fow the given fiwe. 😳😳😳 be suwe to caww `wewease` w-when you'we done with it. mya
      *
-     * @param   filename    The name of the file.
+     * @pawam   fiwename    the nyame of the fiwe. 😳
      */
-    constructor(filename) {
-        this.#file = File.open(filename);
-        //                            vvvvv−−−−− held value
-        this.#registry.register(this, label, this.#file);
-        //          target −−−−−^^^^         ^^^^^^^^^^−−−−− unregister token
+    constwuctow(fiwename) {
+        t-this.#fiwe = fiwe.open(fiwename);
+        //                            vvvvv−−−−− h-hewd vawue
+        t-this.#wegistwy.wegistew(this, -.- w-wabew, this.#fiwe);
+        //          tawget −−−−−^^^^         ^^^^^^^^^^−−−−− unwegistew token
     }
 
     /**
-     * Releases resources held by this `Thingy` instance.
+     * w-weweases wesouwces h-hewd by this `thingy` instance. 🥺
      */
-    release() {
-        if (this.#file) {
-            this.#registry.unregister(this.#file);
-            //                        ^^^^^^^^^^−−−−− unregister token
-            File.close(this.#file);
-            this.#file = null;
+    w-wewease() {
+        i-if (this.#fiwe) {
+            this.#wegistwy.unwegistew(this.#fiwe);
+            //                        ^^^^^^^^^^−−−−− u-unwegistew token
+            f-fiwe.cwose(this.#fiwe);
+            this.#fiwe = nyuww;
         }
     }
 }
@@ -102,12 +102,12 @@ class Thingy {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("FinalizationRegistry")}}
+- {{jsxwef("finawizationwegistwy")}}

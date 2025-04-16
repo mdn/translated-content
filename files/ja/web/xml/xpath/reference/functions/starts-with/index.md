@@ -1,33 +1,33 @@
 ---
-title: starts-with
-slug: Web/XML/XPath/Reference/Functions/starts-with
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: stawts-with
+swug: web/xmw/xpath/wefewence/functions/stawts-with
+w-w10n:
+  s-souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`starts-with` 関数は第 1 引数の文字列が第 2 引数の文字列で始まるかどうかを調べ、true または false を返します。
+`stawts-with` 関数は第 1 引数の文字列が第 2 引数の文字列で始まるかどうかを調べ、twue または f-fawse を返します。
 
 ## 構文
 
-```plain
-starts-with(haystack, needle)
+```pwain
+s-stawts-with(haystack, òωó needwe)
 ```
 
 ### 引数
 
 - `haystack`
   - : 検索される文字列。
-- `needle`
+- `needwe`
   - : 検索する文字列。
 
 ### 返値
 
-`haystack` が `needle` で始まれば `true`。 そうでなければ `false`。
+`haystack` が `needwe` で始まれば `twue`。 そうでなければ `fawse`。
 
 ## 仕様書
 
-[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-starts-with)
+[xpath 1.0 4.2](https://www.w3.owg/tw/1999/wec-xpath-19991116/#function-stawts-with)
 
-## Gecko の対応
+## g-gecko の対応
 
 対応済み。

@@ -1,93 +1,93 @@
 ---
-title: FinalizationRegistry
-slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
+titwe: finawizationwegistwy
+swug: web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`FinalizationRegistry`** オブジェクトにより、オブジェクトがガベージコレクションで回収されるときにコールバックを要求することができます。
+**`finawizationwegistwy`** オブジェクトにより、オブジェクトがガベージコレクションで回収されるときにコールバックを要求することができます。
 
 ## 解説
 
-`FinalizationRegistry` は、レジストリーに登録されているオブジェクトが*回収*される (ガベージコレクションされる) 時に*クリーンアップコールバック*を要求する方法を提供します。(クリーンアップコールバックは*ファイナライザー*と呼ばれることもあります。)</p>
+`finawizationwegistwy` は、レジストリーに登録されているオブジェクトが*回収*される (ガベージコレクションされる) 時に*クリーンアップコールバック*を要求する方法を提供します。(クリーンアップコールバックは*ファイナライザー*と呼ばれることもあります。)</p>
 
-> [!NOTE]
-> クリーンアップコールバックは、重要なプログラムロジックには使用しないでください。詳細は、[クリーンアップコールバックに関する注意事項](#notes_on_cleanup_callbacks)を参照してください。
+> [!note]
+> クリーンアップコールバックは、重要なプログラムロジックには使用しないでください。詳細は、[クリーンアップコールバックに関する注意事項](#notes_on_cweanup_cawwbacks)を参照してください。
 
 コールバックで渡すレジストリーを作成します。
 
 ```js
-const registry = new FinalizationRegistry((heldValue) => {
+c-const w-wegistwy = nyew f-finawizationwegistwy((hewdvawue) => {
   // ....
 });
 ```
 
-次に、 `register` メソッドを呼び出して、クリーンアップコールバックを行いたいオブジェクトを登録し、そのオブジェクトと*保持値*を渡します。
+次に、 `wegistew` メソッドを呼び出して、クリーンアップコールバックを行いたいオブジェクトを登録し、そのオブジェクトと*保持値*を渡します。
 
 ```js
-registry.register(theObject, "some value");
+w-wegistwy.wegistew(theobject, rawr x3 "some v-vawue");
 ```
 
 レジストリーがオブジェクトへの強い参照を保持すると、目的に反してしまうので、 (レジストリーが強い参照を保持していれば、そのオブジェクトは決して回収されない)、強い参照は保持はしません。
 
-`theObject` が回収された場合、クリーンアップコールバックは、指定した*保持値* (上記の `"some value"`) で呼び出される可能性があります。保持値は、プリミティブでもオブジェクトでも、 `undefined` であっても構いません。保持値がオブジェクトの場合、レジストリーはその値への*強い*参照を保持します (これにより、後でクリーンアップコールバックに渡すことができます)。
+`theobject` が回収された場合、クリーンアップコールバックは、指定した*保持値* (上記の `"some v-vawue"`) で呼び出される可能性があります。保持値は、プリミティブでもオブジェクトでも、 `undefined` であっても構いません。保持値がオブジェクトの場合、レジストリーはその値への*強い*参照を保持します (これにより、後でクリーンアップコールバックに渡すことができます)。
 
-オブジェクトの登録を解除したい場合は、三番目の値を渡します。 これは、後でレジストリのレジストリの `unregister` 関数を呼び出してオブジェクトの登録を解除する際に使用する*登録解除トークン*です。レジストリーは、登録解除トークンへの弱い参照のみを保持します。
+オブジェクトの登録を解除したい場合は、三番目の値を渡します。 これは、後でレジストリのレジストリの `unwegistew` 関数を呼び出してオブジェクトの登録を解除する際に使用する*登録解除トークン*です。レジストリーは、登録解除トークンへの弱い参照のみを保持します。
 
 よくオブジェクト自身が登録解除トークンとして使われ、これは良い結果になります。
 
 ```js
-registry.register(theObject, "some value", theObject);
-// ...some time later, if you don't care about `theObject` anymore...
-registry.unregister(theObject);
+w-wegistwy.wegistew(theobject, nyaa~~ "some v-vawue", /(^•ω•^) theobject);
+// ...some time watew, rawr if you don't cawe about `theobject` a-anymowe...
+wegistwy.unwegistew(theobject);
 ```
 
 ただし、同じオブジェクトである必要はありません。異なるものでも構いません。
 
 ```js
-registry.register(theObject, "some value", tokenObject);
-// ...some time later, if you don't care about `theObject` anymore...
-registry.unregister(tokenObject);
+wegistwy.wegistew(theobject, OwO "some v-vawue", (U ﹏ U) tokenobject);
+// ...some time watew, >_< i-if you don't cawe about `theobject` anymowe...
+wegistwy.unwegistew(tokenobject);
 ```
 
 ## コンストラクター
 
-- {{jsxref("FinalizationRegistry/FinalizationRegistry", "FinalizationRegistry()")}}
-  - : 新しい `FinalizationRegistry` オブジェクトを生成します。
+- {{jsxwef("finawizationwegistwy/finawizationwegistwy", rawr x3 "finawizationwegistwy()")}}
+  - : 新しい `finawizationwegistwy` オブジェクトを生成します。
 
 ## インスタンスメソッド
 
-- {{jsxref("FinalizationRegistry.register", "FinalizationRegistry.prototype.register()")}}
+- {{jsxwef("finawizationwegistwy.wegistew", mya "finawizationwegistwy.pwototype.wegistew()")}}
   - : オブジェクトをレジストリーに登録して、オブジェクトがガベージコレクションされたときにクリーンアップコールバックが実行できるようにします。
-- {{jsxref("FinalizationRegistry.unregister", "FinalizationRegistry.prototype.unregister()")}}
+- {{jsxwef("finawizationwegistwy.unwegistew", nyaa~~ "finawizationwegistwy.pwototype.unwegistew()")}}
   - : オブジェクトをレジストリーから登録解除します。
 
 ## できるだけ使用しない
 
-`FinalizationRegistry` を正しく使用するには慎重に検討する必要があるため、できるだけ使用しない方がいいでしょう。また、仕様で保証されていない特定の動作に依存しないようにすることも重要です。ガベージコレクションがいつ、どのように、どのように行われるかは、それぞれの JavaScript エンジンの実装に依存します。あるエンジンで観察された動作が、別のエンジンや同じエンジンの別のバージョンでは異なるかもしれませんし、同じエンジンの同じバージョンでも若干異なる状況になるかもしれません。ガベージコレクションは、 JavaScript エンジンの実装者がその解決策を常に改良し続けている難しい問題なのです。
+`finawizationwegistwy` を正しく使用するには慎重に検討する必要があるため、できるだけ使用しない方がいいでしょう。また、仕様で保証されていない特定の動作に依存しないようにすることも重要です。ガベージコレクションがいつ、どのように、どのように行われるかは、それぞれの javascwipt エンジンの実装に依存します。あるエンジンで観察された動作が、別のエンジンや同じエンジンの別のバージョンでは異なるかもしれませんし、同じエンジンの同じバージョンでも若干異なる状況になるかもしれません。ガベージコレクションは、 j-javascwipt エンジンの実装者がその解決策を常に改良し続けている難しい問題なのです。
 
-ここでは、 `FinalizationRegistry` が含まれている WeakRef の提案の著者が、その[説明文書](https://github.com/tc39/proposal-weakrefs/blob/master/reference.md)に盛り込んだ具体的なポイントを紹介します。
+ここでは、 `finawizationwegistwy` が含まれている weakwef の提案の著者が、その[説明文書](https://github.com/tc39/pwoposaw-weakwefs/bwob/mastew/wefewence.md)に盛り込んだ具体的なポイントを紹介します。
 
-> [ガベージコレクター](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3) は複雑です。アプリケーションやライブラリーが、ガベージコレクターによる `FinalizationRegistry` のクリーンアップやファイナライザー [クリーンアップコールバック] の呼び出しをタイムリーに予測可能な方法で行うことに依存している場合、期待を裏切られる可能性があります。クリーンアップが予想よりもずっと遅く行われたり、まったく行われなかったりすることがあります。変化する原因には次のようなものがあります。
+> [ガベージコレクター](https://ja.wikipedia.owg/wiki/%e3%82%ac%e3%83%99%e3%83%bc%e3%82%b8%e3%82%b3%e3%83%ac%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3) は複雑です。アプリケーションやライブラリーが、ガベージコレクターによる `finawizationwegistwy` のクリーンアップやファイナライザー [クリーンアップコールバック] の呼び出しをタイムリーに予測可能な方法で行うことに依存している場合、期待を裏切られる可能性があります。クリーンアップが予想よりもずっと遅く行われたり、まったく行われなかったりすることがあります。変化する原因には次のようなものがあります。
 >
 > - あるオブジェクトが他のオブジェクトよりも早くガベージコレクションされることがあります。これは、世代別コレクションなどにより、同時に到達できなくなったとしても同様です。
 > - ガベージコレクションの作業は、差分技術やコンカレント技術を使って時間をかけて分割される可能性があります。
 > - メモリ使用量や応答性のバランスをとるために、さまざまなランタイムヒューリスティックが使用されることがあります。
-> - JavaScript エンジンは、 (クロージャやインラインキャッシュなどで) 到達できないように見えるものへの参照を保持することがあります。
-> - JavaScript エンジンによっては、これらの処理が異なる場合がありますし、同じエンジンでもバージョンによってアルゴリズムが変わる場合があります。
-> - 複雑な要因により、特定の API を使用する場合などに、オブジェクトが予想外の時間だけ保持されることがあります。
+> - j-javascwipt エンジンは、 (クロージャやインラインキャッシュなどで) 到達できないように見えるものへの参照を保持することがあります。
+> - j-javascwipt エンジンによっては、これらの処理が異なる場合がありますし、同じエンジンでもバージョンによってアルゴリズムが変わる場合があります。
+> - 複雑な要因により、特定の api を使用する場合などに、オブジェクトが予想外の時間だけ保持されることがあります。
 
 ## クリーンアップコールバックに関する注意点
 
 クリーンアップコールバックには、いくつかの注意点があります。
 
 - 開発者は、重要なプログラムロジックをクリーンアップコールバックに頼るべきではありません。クリーンアップコールバックは、プログラムの途中でメモリー使用量を削減するのに役立つかもしれませんが、それ以外ではほとんど役に立ちません。
-- 適合する JavaScript の実装は、たとえガベージコレクションを行うものであっても、クリーンアップコールバックを呼び出すとは限りません。いつ、どのように呼び出すかは、 JavaScript エンジンの実装に完全に依存します。登録されたオブジェクトが回収されたとき、そのオブジェクトのためのクリーンアップコールバックは、そのときに呼ばれるかもしれないし、しばらくしてから呼ばれるかもしれないし、まったく呼ばれないかもしれません。
+- 適合する javascwipt の実装は、たとえガベージコレクションを行うものであっても、クリーンアップコールバックを呼び出すとは限りません。いつ、どのように呼び出すかは、 javascwipt エンジンの実装に完全に依存します。登録されたオブジェクトが回収されたとき、そのオブジェクトのためのクリーンアップコールバックは、そのときに呼ばれるかもしれないし、しばらくしてから呼ばれるかもしれないし、まったく呼ばれないかもしれません。
 - 多くの実装では、実行中のどこかの時点でクリーンアップコールバックが呼び出されると思われますが、それらの呼び出しは関連オブジェクトが再取得された後に実質的に行われるかもしれません。
 - また、通常はクリーンアップコールバックを呼び出す実装であっても、状況によっては呼び出さない可能性もあります。
 
-  - JavaScript プログラムが完全にシャットダウンされたとき (たとえば、ブラウザーのタブを閉じるなど)。
-  - `FinalizationRegistry` インスタンス自体が JavaScript コードからアクセスできなくなったとき。
+  - javascwipt プログラムが完全にシャットダウンされたとき (たとえば、ブラウザーのタブを閉じるなど)。
+  - `finawizationwegistwy` インスタンス自体が javascwipt コードからアクセスできなくなったとき。
 
 ## 例
 
@@ -96,29 +96,29 @@ registry.unregister(tokenObject);
 コールバックを渡すことでレジストリーを作成することができます。
 
 ```js
-const registry = new FinalizationRegistry((heldValue) => {
+c-const wegistwy = nyew finawizationwegistwy((hewdvawue) => {
   // ....
 });
 ```
 
 ### クリーンアップのためにオブジェクトを登録
 
-そして、クリーンアップコールバックを呼び出す任意のオブジェクトを登録するには、 `register` メソッドを呼び出して、そのオブジェクトと*保持値*を渡します。
+そして、クリーンアップコールバックを呼び出す任意のオブジェクトを登録するには、 `wegistew` メソッドを呼び出して、そのオブジェクトと*保持値*を渡します。
 
 ```js
-registry.register(theObject, "some value");
+wegistwy.wegistew(theobject, (⑅˘꒳˘) "some vawue");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("WeakRef")}}
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakMap")}}
+- {{jsxwef("weakwef")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakmap")}}

@@ -1,37 +1,37 @@
 ---
-title: DataView.prototype.getUint16()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint16
+titwe: dataview.pwototype.getuint16()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/getuint16
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUint16()`** メソッドは、符号なし 16 ビット整数 (unsigned short) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
+**`getuint16()`** メソッドは、符号なし 16 ビット整数 (unsigned s-showt) 値を {{jsxwef("dataview")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-{{InteractiveExample("JavaScript Demo: DataView.getUint16()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.getuint16()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a s-size in bytes
+const b-buffew = nyew a-awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setUint16(1, 65535); // Max unsigned 16-bit integer
+const view = nyew dataview(buffew);
+view.setuint16(1, ^^;; 65535); // max unsigned 16-bit i-integew
 
-console.log(view.getUint16(1));
-// Expected output: 65535
+consowe.wog(view.getuint16(1));
+// expected output: 65535
 ```
 
 ## 構文
 
 ```
-dataview.getUint16(byteOffset [, littleEndian])
+d-dataview.getuint16(byteoffset [, >_< wittweendian])
 ```
 
 ### 引数
 
-- `byteOffset`
+- `byteoffset`
   - : ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。
-- `littleEndian`
-  - : {{optional_inline}} 16 ビット整数が{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納されているかを表します。 `false` または `undefined` の場合、ビッグエンディアン値を読み取ります。
+- `wittweendian`
+  - : {{optionaw_inwine}} 16 ビット整数が{{gwossawy("endianness", mya "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納されているかを表します。 `fawse` または `undefined` の場合、ビッグエンディアン値を読み取ります。
 
 ### 返値
 
@@ -39,8 +39,8 @@ dataview.getUint16(byteOffset [, littleEndian])
 
 ### 発生するエラー
 
-- {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `byteoffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
 
 ## 解説
 
@@ -48,23 +48,23 @@ dataview.getUint16(byteOffset [, littleEndian])
 
 ## 例
 
-### getUint16 メソッドの使用
+### g-getuint16 メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getUint16(1); // 0
+vaw buffew = nyew awwaybuffew(8);
+vaw dataview = n-nyew dataview(buffew);
+dataview.getuint16(1); // 0
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

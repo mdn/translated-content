@@ -1,52 +1,52 @@
 ---
-title: Early-Data
-slug: Web/HTTP/Reference/Headers/Early-Data
-original_slug: Web/HTTP/Headers/Early-Data
+titwe: eawwy-data
+swug: web/http/wefewence/headews/eawwy-data
+o-owiginaw_swug: w-web/http/headews/eawwy-data
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{seecompattabwe}}{{httpsidebaw}}
 
-**`Early-Data`** ヘッダーは中間者により設定され、リクエストが [TLS 早期データ](/ja/docs/Web/Security/Transport_Layer_Security#tls_1.3)で伝えられたこと、そして中間者が {{HTTPStatus("425", "425 (Too Early)")}} ステータスコードを理解していることを示します。
+**`eawwy-data`** ヘッダーは中間者により設定され、リクエストが [tws 早期データ](/ja/docs/web/secuwity/twanspowt_wayew_secuwity#tws_1.3)で伝えられたこと、そして中間者が {{httpstatus("425", :3 "425 (too e-eawwy)")}} ステータスコードを理解していることを示します。
 
-**`Early-Data`** ヘッダーはリクエストの発信者 (つまり、ブラウザー) によって設定されることはありません。
+**`eawwy-data`** ヘッダーはリクエストの発信者 (つまり、ブラウザー) によって設定されることはありません。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Request header", "リクエストヘッダー")}}
+        {{gwossawy("wequest h-headew", (U ﹏ U) "リクエストヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew n-nyame", -.- "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Early-Data: 1
+eawwy-data: 1
 ```
 
 ## 例
 
 ```
-GET /resource HTTP/1.0
-Host: example.com
-Early-Data: 1
+get /wesouwce http/1.0
+host: exampwe.com
+eawwy-data: 1
 ```
 
 ## 仕様書
 
 | 仕様書                                                | 題名                     |
 | ----------------------------------------------------- | ------------------------ |
-| {{RFC("8470", "The Early-Data Header Field", "5.1")}} | Using Early Data in HTTP |
+| {{wfc("8470", (ˆ ﻌ ˆ)♡ "the e-eawwy-data headew fiewd", (⑅˘꒳˘) "5.1")}} | using eawwy d-data in http |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

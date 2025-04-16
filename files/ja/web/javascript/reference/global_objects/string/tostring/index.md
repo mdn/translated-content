@@ -1,30 +1,30 @@
 ---
-title: String.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/String/toString
-l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+titwe: stwing.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/tostwing
+w-w10n:
+  souwcecommit: f-f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toString()`** メソッドは指定されたオブジェクトを表す文字列を返します。
+**`tostwing()`** メソッドは指定されたオブジェクトを表す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: String.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-stwing.tostwing()")}}
 
-```js interactive-example
-const stringObj = new String("foo");
+```js i-intewactive-exampwe
+c-const stwingobj = n-nyew stwing("foo");
 
-console.log(stringObj);
-// Expected output: String { "foo" }
+c-consowe.wog(stwingobj);
+// expected output: stwing { "foo" }
 
-console.log(stringObj.toString());
-// Expected output: "foo"
+consowe.wog(stwingobj.tostwing());
+// expected o-output: "foo"
 ```
 
 ## 構文
 
-```js-nolint
-toString()
+```js-nowint
+tostwing()
 ```
 
 ### 返値
@@ -33,38 +33,38 @@ toString()
 
 ## 詳細
 
-その {{jsxref("String")}} オブジェクトは、{{jsxref("Object")}} の `toString` メソッドを上書きします。つまり、{{jsxref("Object.prototype.toString()")}} を継承しません。`String` オブジェクトの `toString` メソッドは、そのオブジェクトを表す文字列を返します（{{jsxref("String.prototype.valueOf()")}} と同等です）。
+その {{jsxwef("stwing")}} オブジェクトは、{{jsxwef("object")}} の `tostwing` メソッドを上書きします。つまり、{{jsxwef("object.pwototype.tostwing()")}} を継承しません。`stwing` オブジェクトの `tostwing` メソッドは、そのオブジェクトを表す文字列を返します（{{jsxwef("stwing.pwototype.vawueof()")}} と同等です）。
 
-`toString()` メソッドは `this` 値が `String` プリミティブまたはラッパーオブジェクトであることを要求します。他の `this` の値に対しては、文字列値に変換しようとせずに {{jsxref("TypeError")}} を発生します。
+`tostwing()` メソッドは `this` 値が `stwing` プリミティブまたはラッパーオブジェクトであることを要求します。他の `this` の値に対しては、文字列値に変換しようとせずに {{jsxwef("typeewwow")}} を発生します。
 
-`String` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドがないため、JavaScript は `toString()` メソッドを、文字列が求められるコンテキスト、例えば[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)で `String` オブジェクトが使用されると、自動的に呼び出します。しかし、文字列プリミティブ値は[文字列に変換する](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)ために `toString()` を呼び出しません。既に文字列なので、変換が実施されないからです。
+`stwing` には [`[symbow.topwimitive]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive) メソッドがないため、javascwipt は `tostwing()` メソッドを、文字列が求められるコンテキスト、例えば[テンプレートリテラル](/ja/docs/web/javascwipt/wefewence/tempwate_witewaws)で `stwing` オブジェクトが使用されると、自動的に呼び出します。しかし、文字列プリミティブ値は[文字列に変換する](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#stwing_coewcion)ために `tostwing()` を呼び出しません。既に文字列なので、変換が実施されないからです。
 
 ```js
-String.prototype.toString = () => "Overridden";
-console.log(`${"foo"}`); // "foo"
-console.log(`${new String("foo")}`); // "Overridden"
+stwing.pwototype.tostwing = () => "ovewwidden";
+c-consowe.wog(`${"foo"}`); // "foo"
+consowe.wog(`${new stwing("foo")}`); // "ovewwidden"
 ```
 
 ## 例
 
-### toString() メソッドを使う
+### t-tostwing() メソッドを使う
 
-以下の例は、{{jsxref("String")}} オブジェクトを表す文字列の値を表示します。
+以下の例は、{{jsxwef("stwing")}} オブジェクトを表す文字列の値を表示します。
 
 ```js
-const x = new String("Hello world");
+const x = nyew stwing("hewwo wowwd");
 
-console.log(x.toString()); // "Hello world"
+consowe.wog(x.tostwing()); // "hewwo w-wowwd"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("String.prototype.valueOf()")}}
+- {{jsxwef("stwing.pwototype.vawueof()")}}

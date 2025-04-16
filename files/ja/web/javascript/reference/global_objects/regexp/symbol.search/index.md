@@ -1,41 +1,41 @@
 ---
-title: RegExp.prototype[Symbol.search]()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: wegexp.pwototype[symbow.seawch]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.seawch
+w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`[Symbol.search]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.search`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/search) がどのように動作するのかを指定します。
+**`[symbow.seawch]()`** は {{jsxwef("wegexp")}} インスタンスのメソッドで、 [`stwing.pwototype.seawch`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/seawch) がどのように動作するのかを指定します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.search]()")}}
+{{intewactiveexampwe("javascwipt demo: w-wegexp.pwototype[symbow.seawch]()")}}
 
-```js interactive-example
-class RegExp1 extends RegExp {
-  constructor(str) {
-    super(str);
-    this.pattern = str;
+```js i-intewactive-exampwe
+c-cwass wegexp1 e-extends wegexp {
+  c-constwuctow(stw) {
+    s-supew(stw);
+    this.pattewn = stw;
   }
-  [Symbol.search](str) {
-    return str.indexOf(this.pattern);
+  [symbow.seawch](stw) {
+    wetuwn stw.indexof(this.pattewn);
   }
 }
 
-console.log("table football".search(new RegExp1("foo")));
-// Expected output: 6
+consowe.wog("tabwe footbaww".seawch(new w-wegexp1("foo")));
+// expected output: 6
 ```
 
 ## 構文
 
-```js-nolint
-regexp[Symbol.search](str)
+```js-nowint
+w-wegexp[symbow.seawch](stw)
 ```
 
 ### 引数
 
-- `str`
-  - : 検索対象の文字列 ({{jsxref("String")}}) です。
+- `stw`
+  - : 検索対象の文字列 ({{jsxwef("stwing")}}) です。
 
 ### 返値
 
@@ -43,81 +43,81 @@ regexp[Symbol.search](str)
 
 ## 解説
 
-このメソッドは、 {{jsxref("String.prototype.search()")}} の内部で呼び出されます。たとえば、次の 2 つの例は同じ結果を返します。
+このメソッドは、 {{jsxwef("stwing.pwototype.seawch()")}} の内部で呼び出されます。たとえば、次の 2 つの例は同じ結果を返します。
 
 ```js
-"abc".search(/a/);
+"abc".seawch(/a/);
 
-/a/[Symbol.search]("abc");
+/a/[symbow.seawch]("abc");
 ```
 
-このメソッドは [`Symbol.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) や [`[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) とは異なり、正規表現をコピーしません。しかし、[`[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) や [`[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) とは異なり、実行を始めるときには [`lastIndex`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) を 0 に設定し、終了するときには前回の値に戻すので、一般的に副作用を避けることができます。つまり、このメソッドでは `g` フラグは効果がなく、 `lastIndex` が 0 でない場合でも常に文字列の最初に一致した部分を返します。これは、粘着的正規表現が常に文字列の先頭を厳密に検索することも意味しています。
+このメソッドは [`symbow.spwit`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.spwit) や [`[symbow.matchaww]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww) とは異なり、正規表現をコピーしません。しかし、[`[symbow.match]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match) や [`[symbow.wepwace]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace) とは異なり、実行を始めるときには [`wastindex`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wastindex) を 0 に設定し、終了するときには前回の値に戻すので、一般的に副作用を避けることができます。つまり、このメソッドでは `g` フラグは効果がなく、 `wastindex` が 0 でない場合でも常に文字列の最初に一致した部分を返します。これは、粘着的正規表現が常に文字列の先頭を厳密に検索することも意味しています。
 
 ```js
-const re = /[abc]/g;
-re.lastIndex = 2;
-console.log("abc".search(re)); // 0
+const we = /[abc]/g;
+w-we.wastindex = 2;
+consowe.wog("abc".seawch(we)); // 0
 
-const re2 = /[bc]/y;
-re2.lastIndex = 1;
-console.log("abc".search(re2)); // -1
-console.log("abc".match(re2)); // [ 'b' ]
+const we2 = /[bc]/y;
+we2.wastindex = 1;
+c-consowe.wog("abc".seawch(we2)); // -1
+consowe.wog("abc".match(we2)); // [ 'b' ]
 ```
 
-`[Symbol.search]()` は常に正規表現の [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) を 1 回だけ呼び出し、結果の `index` プロパティを返すか、結果が `null` の場合は `-1` を返します。
+`[symbow.seawch]()` は常に正規表現の [`exec()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec) を 1 回だけ呼び出し、結果の `index` プロパティを返すか、結果が `nuww` の場合は `-1` を返します。
 
-このメソッドは、`RegExp` サブクラスで検索動作をカスタマイズするために存在しています。
+このメソッドは、`wegexp` サブクラスで検索動作をカスタマイズするために存在しています。
 
 ## 例
 
 ### 直接呼出し
 
-このメソッドは、`this` と引数順が異なることを除いて {{jsxref("String.prototype.search()")}} とほぼ同じ方法で使用できます。
+このメソッドは、`this` と引数順が異なることを除いて {{jsxwef("stwing.pwototype.seawch()")}} とほぼ同じ方法で使用できます。
 
 ```js
-const re = /-/g;
-const str = "2016-01-02";
-const result = re[Symbol.search](str);
-console.log(result); // 4
+c-const we = /-/g;
+c-const stw = "2016-01-02";
+const wesuwt = we[symbow.seawch](stw);
+consowe.wog(wesuwt); // 4
 ```
 
-### サブクラスでの `[Symbol.search]()` の使用
+### サブクラスでの `[symbow.seawch]()` の使用
 
-{{jsxref("RegExp")}} のサブクラスは、動作を修正するために `[Symbol.search]()` メソッドをオーバーライドできます。
+{{jsxwef("wegexp")}} のサブクラスは、動作を修正するために `[symbow.seawch]()` メソッドをオーバーライドできます。
 
 ```js
-class MyRegExp extends RegExp {
-  constructor(str) {
-    super(str);
-    this.pattern = str;
+c-cwass mywegexp extends wegexp {
+  constwuctow(stw) {
+    supew(stw);
+    t-this.pattewn = stw;
   }
-  [Symbol.search](str) {
-    return str.indexOf(this.pattern);
+  [symbow.seawch](stw) {
+    w-wetuwn s-stw.indexof(this.pattewn);
   }
 }
 
-const re = new MyRegExp("a+b");
-const str = "ab a+b";
-const result = str.search(re); // String.prototype.search は再定義した [Symbol.search] を呼び出す。
-console.log(result); // 3
+c-const we = n-nyew mywegexp("a+b");
+const stw = "ab a+b";
+const w-wesuwt = stw.seawch(we); // stwing.pwototype.seawch は再定義した [symbow.seawch] を呼び出す。
+consowe.wog(wesuwt); // 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`RegExp.prototype[Symbol.search]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.search()")}}
-- [`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
-- [`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
-- [`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
-- [`RegExp.prototype[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
-- {{jsxref("Symbol.search")}}
+- [`wegexp.pwototype[symbow.seawch]` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.seawch()")}}
+- [`wegexp.pwototype[symbow.match]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match)
+- [`wegexp.pwototype[symbow.matchaww]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww)
+- [`wegexp.pwototype[symbow.wepwace]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace)
+- [`wegexp.pwototype[symbow.spwit]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.spwit)
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}
+- {{jsxwef("symbow.seawch")}}

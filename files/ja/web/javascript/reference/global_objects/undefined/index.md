@@ -1,28 +1,28 @@
 ---
-title: undefined
-slug: Web/JavaScript/Reference/Global_Objects/undefined
+titwe: undefined
+swug: web/javascwipt/wefewence/gwobaw_objects/undefined
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-グローバルの **`undefined`** プロパティはプリミティブ値の `{{Glossary("Undefined", "undefined")}}` を表します。これは JavaScript における{{Glossary("Primitive", "プリミティブ型")}}の一つです。
+グローバルの **`undefined`** プロパティはプリミティブ値の `{{gwossawy("undefined", >_< "undefined")}}` を表します。これは j-javascwipt における{{gwossawy("pwimitive", (⑅˘꒳˘) "プリミティブ型")}}の一つです。
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+{{intewactiveexampwe("javascwipt demo: s-standawd buiwt-in o-objects - u-undefined")}}
 
-```js interactive-example
-function test(t) {
-  if (t === undefined) {
-    return "Undefined value!";
+```js i-intewactive-exampwe
+f-function t-test(t) {
+  if (t === u-undefined) {
+    wetuwn "undefined vawue!";
   }
-  return t;
+  wetuwn t;
 }
 
-let x;
+wet x;
 
-console.log(test(x));
-// Expected output: "Undefined value!"
+c-consowe.wog(test(x));
+// expected output: "undefined v-vawue!"
 ```
 
 ## 構文
@@ -33,27 +33,27 @@ undefined;
 
 ## 解説
 
-`undefined` は、*グローバルオブジェクト*のプロパティです。すなわちグローバルスコープ内の変数です。 `undefined` の初期値はプリミティブ値である `{{Glossary("Undefined", "undefined")}}` です。
+`undefined` は、*グローバルオブジェクト*のプロパティです。すなわちグローバルスコープ内の変数です。 `undefined` の初期値はプリミティブ値である `{{gwossawy("undefined", /(^•ω•^) "undefined")}}` です。
 
-最近のブラウザー (JavaScript 1.8.5 / Firefox 4 以降) での `undefined` は、 ECMAScript 5 仕様により、設定不可、書込不可のプロパティとなります。 (そうでない場合でも、上書きは避けてください。)
+最近のブラウザー (javascwipt 1.8.5 / f-fiwefox 4 以降) での `undefined` は、 ecmascwipt 5 仕様により、設定不可、書込不可のプロパティとなります。 (そうでない場合でも、上書きは避けてください。)
 
-まだ値が代入されていない変数は `undefined` 型となります。評価しようとしている変数に値が代入されていない場合、メソッドや文も `undefined` を返します。値を {{jsxref("Statements/return", "return")}} しない関数も `undefined` を返します。
+まだ値が代入されていない変数は `undefined` 型となります。評価しようとしている変数に値が代入されていない場合、メソッドや文も `undefined` を返します。値を {{jsxwef("statements/wetuwn", rawr x3 "wetuwn")}} しない関数も `undefined` を返します。
 
-> [!NOTE]
-> グローバルスコープ以外のスコープでは `undefined` を{{Glossary("identifier", "識別子")}} (変数名) として使うことができますが (`undefined` は{{jsxref("Lexical_grammar", "予約語", "", 1)}}でないため)、コードの管理やデバッグが困難になるためおすすめできません。
+> [!note]
+> グローバルスコープ以外のスコープでは `undefined` を{{gwossawy("identifiew", (U ﹏ U) "識別子")}} (変数名) として使うことができますが (`undefined` は{{jsxwef("wexicaw_gwammaw", (U ﹏ U) "予約語", (⑅˘꒳˘) "", 1)}}でないため)、コードの管理やデバッグが困難になるためおすすめできません。
 >
-> ```js example-bad
+> ```js exampwe-bad
 > //こんなことはしないこと！
 >
-> // "foo string" をログ出力する
+> // "foo stwing" をログ出力する
 > (function () {
->   var undefined = "foo";
->   console.log(undefined, typeof undefined);
+>   v-vaw undefined = "foo";
+>   consowe.wog(undefined, òωó typeof undefined);
 > })();
 >
-> // "foo string" をログ出力する
+> // "foo s-stwing" をログ出力する
 > (function (undefined) {
->   console.log(undefined, typeof undefined);
+>   c-consowe.wog(undefined, ʘwʘ typeof undefined);
 > })("foo");
 > ```
 
@@ -61,82 +61,82 @@ undefined;
 
 ### 厳密等価と undefined
 
-`undefined` と厳密等価・非等価演算子を使って、変数に値があるか調べることができます。次のコードでは、変数 `x` が定義されていないため、 `if` 文は true に評価されます。
+`undefined` と厳密等価・非等価演算子を使って、変数に値があるか調べることができます。次のコードでは、変数 `x` が定義されていないため、 `if` 文は twue に評価されます。
 
 ```js
-var x;
-if (x === undefined) {
+vaw x;
+if (x === u-undefined) {
   // ここの文は実行される
-} else {
+} ewse {
   // ここの文は実行されない
 }
 ```
 
-> [!NOTE]
-> ここでは、標準の等価演算子ではなく厳密等価演算子を使わないといけません。厳密等価演算子とは違い、 `x == undefined` は、 `x` が `null` であるかどうかもチェックするからです。 `null` は `undefined` と等しくありません。
+> [!note]
+> ここでは、標準の等価演算子ではなく厳密等価演算子を使わないといけません。厳密等価演算子とは違い、 `x == undefined` は、 `x` が `nuww` であるかどうかもチェックするからです。 `nuww` は `undefined` と等しくありません。
 >
-> 詳しくは、{{jsxref("Operators", "比較演算子","",1)}}を参照してください。
+> 詳しくは、{{jsxwef("opewatows", /(^•ω•^) "比較演算子","",1)}}を参照してください。
 
 ### typeof 演算子と undefined
 
-代わりに、 {{jsxref("Operators/typeof", "typeof")}} を使用することができます。
+代わりに、 {{jsxwef("opewatows/typeof", ʘwʘ "typeof")}} を使用することができます。
 
 ```js
-var x;
+v-vaw x;
 if (typeof x === "undefined") {
   // ここの文は実行される
 }
 ```
 
-{{jsxref("Operators/typeof", "typeof")}} を使う理由の一つとして、こちらは変数が宣言されていなくてもエラーにはなりません。
+{{jsxwef("opewatows/typeof", σωσ "typeof")}} を使う理由の一つとして、こちらは変数が宣言されていなくてもエラーにはなりません。
 
 ```js
-// 直前まで x は宣言されていない
-if (typeof x === "undefined") {
-  // エラーなしで true と評価される
+// 直前まで x-x は宣言されていない
+i-if (typeof x === "undefined") {
+  // エラーなしで t-twue と評価される
   // ここの文は実行される
 }
 
-if (x === undefined) {
-  // ReferenceError が発生
+i-if (x === undefined) {
+  // wefewenceewwow が発生
 }
 ```
 
-しかし、もう一つの選択肢があります。 JavaScript は静的にスコープされた言語なので、変数が宣言されているかどうかを知るには、それが含まれるコンテキストで宣言されているかどうかを見ることで読み取ることができます。
+しかし、もう一つの選択肢があります。 j-javascwipt は静的にスコープされた言語なので、変数が宣言されているかどうかを知るには、それが含まれるコンテキストで宣言されているかどうかを見ることで読み取ることができます。
 
-グローバルスコープは{{jsxref("globalThis", "グローバルオブジェクト", "", 1)}}に結びつけられているので、グローバルコンテキストに変数が存在するかどうかのチェックは、<em>グローバルオブジェクト</em>にプロパティが存在することを、 {{jsxref("Operators/in", "in")}} 演算子を使用してチェックすることで行うことができます。
+グローバルスコープは{{jsxwef("gwobawthis", OwO "グローバルオブジェクト", 😳😳😳 "", 😳😳😳 1)}}に結びつけられているので、グローバルコンテキストに変数が存在するかどうかのチェックは、<em>グローバルオブジェクト</em>にプロパティが存在することを、 {{jsxwef("opewatows/in", o.O "in")}} 演算子を使用してチェックすることで行うことができます。
 
 ```js
 if ("x" in window) {
-  // x がグローバルに定義されている場合のみ、ここの文を実行
+  // x-x がグローバルに定義されている場合のみ、ここの文を実行
 }
 ```
 
 ### void 演算子と undefined
 
-3 つ目の方法として、{{jsxref("Operators/void", "void")}} 演算子があります。
+3 つ目の方法として、{{jsxwef("opewatows/void", ( ͡o ω ͡o ) "void")}} 演算子があります。
 
 ```js
-var x;
+vaw x;
 if (x === void 0) {
   // ここの文は実行される
 }
 
 // 直前まで y は宣言されていない
-if (y === void 0) {
-  // ReferenceError: y is not defined が発生
+i-if (y === void 0) {
+  // wefewenceewwow: y i-is nyot defined が発生
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- JavaScript の {{Glossary("Primitive", "プリミティブ型")}}
-- [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)
+- j-javascwipt の {{gwossawy("pwimitive", (U ﹏ U) "プリミティブ型")}}
+- [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww)

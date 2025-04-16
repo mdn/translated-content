@@ -1,97 +1,97 @@
 ---
-title: Reflect.has()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
+titwe: wefwect.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Reflect.has()`** メソッドは、機能としては [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)のように動作します。
+静的な **`wefwect.has()`** メソッドは、機能としては [`in` 演算子](/ja/docs/web/javascwipt/wefewence/opewatows/in)のように動作します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.has()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const object1 = {
+  p-pwopewty1: 42, mya
 };
 
-console.log(Reflect.has(object1, "property1"));
-// Expected output: true
+c-consowe.wog(wefwect.has(object1, nyaa~~ "pwopewty1"));
+// e-expected output: t-twue
 
-console.log(Reflect.has(object1, "property2"));
-// Expected output: false
+consowe.wog(wefwect.has(object1, (⑅˘꒳˘) "pwopewty2"));
+// e-expected output: fawse
 
-console.log(Reflect.has(object1, "toString"));
-// Expected output: true
+consowe.wog(wefwect.has(object1, rawr x3 "tostwing"));
+// expected output: twue
 ```
 
 ## 構文
 
 ```
-Reflect.has(target, propertyKey)
+w-wefwect.has(tawget, (✿oωo) pwopewtykey)
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : プロパティを探す対象のオブジェクト。
-- `propertyKey`
+- `pwopewtykey`
   - : チェックするプロパティ名。
 
 ### 返値
 
-対象がプロパティを持つかどうかを示す {{jsxref("Boolean")}} 値。
+対象がプロパティを持つかどうかを示す {{jsxwef("boowean")}} 値。
 
 ### 例外
 
-`target` が {{jsxref("Object")}} でなかった場合、 {{jsxref("TypeError")}} が発生します。
+`tawget` が {{jsxwef("object")}} でなかった場合、 {{jsxwef("typeewwow")}} が発生します。
 
 ## 解説
 
-`Reflect.has` メソッドは、オブジェクトプロパティがあるかをチェックします。機能としては [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)のように動作します。
+`wefwect.has` メソッドは、オブジェクトプロパティがあるかをチェックします。機能としては [`in` 演算子](/ja/docs/web/javascwipt/wefewence/opewatows/in)のように動作します。
 
 ## 例
 
-### Reflect.has() の使用
+### wefwect.has() の使用
 
 ```js
-Reflect.has({ x: 0 }, "x"); // true
-Reflect.has({ x: 0 }, "y"); // false
+w-wefwect.has({ x: 0 }, (ˆ ﻌ ˆ)♡ "x"); // t-twue
+wefwect.has({ x: 0 }, (˘ω˘) "y"); // fawse
 
-// プロトタイプチェーンのプロパティがあるため、true が返る
-Reflect.has({ x: 0 }, "toString");
+// プロトタイプチェーンのプロパティがあるため、twue が返る
+wefwect.has({ x: 0 }, (⑅˘꒳˘) "tostwing");
 
-// Proxy with .has() handler method
-obj = new Proxy(
-  {},
+// p-pwoxy with .has() handwew m-method
+obj = nyew p-pwoxy(
+  {}, (///ˬ///✿)
   {
-    has(t, k) {
-      return k.startsWith("door");
-    },
+    has(t, 😳😳😳 k) {
+      wetuwn k.stawtswith("doow");
+    }, 🥺
   },
 );
-Reflect.has(obj, "doorbell"); // true
-Reflect.has(obj, "dormitory"); // false
+wefwect.has(obj, mya "doowbeww"); // t-twue
+wefwect.has(obj, 🥺 "dowmitowy"); // fawse
 ```
 
-`Reflect.has` は継承されたプロパティについて `true` を返し、これは [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)と同様です。
+`wefwect.has` は継承されたプロパティについて `twue` を返し、これは [`in` 演算子](/ja/docs/web/javascwipt/wefewence/opewatows/in)と同様です。
 
 ```js
 const a = { foo: 123 };
-const b = { __proto__: a };
-const c = { __proto__: b };
-// The prototype chain is: c -> b -> a
-Reflect.has(c, "foo"); // true
+const b = { __pwoto__: a-a };
+const c = { __pwoto__: b-b };
+// the p-pwototype chain i-is: c -> b -> a-a
+wefwect.has(c, >_< "foo"); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Reflect")}}
-- [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)
+- {{jsxwef("wefwect")}}
+- [`in` 演算子](/ja/docs/web/javascwipt/wefewence/opewatows/in)

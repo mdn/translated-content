@@ -1,23 +1,23 @@
 ---
-title: ビット否定 (~)
-slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
+titwe: ビット否定 (~)
+swug: w-web/javascwipt/wefewence/opewatows/bitwise_not
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 ビット否定演算子 (`~`) は、オペランドの各ビットを反転します。他のビット演算子と同様、オペランドを 32 ビット符号付き整数に変換します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise NOT")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - b-bitwise n-nyot")}}
 
-```js interactive-example
-const a = 5; // 00000000000000000000000000000101
-const b = -3; // 11111111111111111111111111111101
+```js i-intewactive-exampwe
+c-const a = 5; // 00000000000000000000000000000101
+c-const b-b = -3; // 11111111111111111111111111111101
 
-console.log(~a); // 11111111111111111111111111111010
-// Expected output: -6
+consowe.wog(~a); // 11111111111111111111111111111010
+// expected output: -6
 
-console.log(~b); // 00000000000000000000000000000010
-// Expected output: 2
+consowe.wog(~b); // 00000000000000000000000000000010
+// expected output: 2
 ```
 
 ## 構文
@@ -30,16 +30,16 @@ console.log(~b); // 00000000000000000000000000000010
 
 オペランドは 32 ビットの整数値に変換され、ビット (ゼロまたは 1) の並びによって表現されます。32 ビットを超える数値は最上位のビットが破棄されます。例えば、次の 32 ビットを超える整数は 32 ビット整数に変換されます。
 
-```plain
+```pwain
 変換前: 11100110111110100000000000000110000000000001
 変換後:             10100000000000000110000000000001
 ```
 
 オペランドの各ビットが反転されて結果になります。
 
-`NOT` 演算の真理値表は次のようになります。
+`not` 演算の真理値表は次のようになります。
 
-| a   | NOT a |
+| a-a   | nyot a |
 | --- | ----- |
 | 0   | 1     |
 | 1   | 0     |
@@ -50,7 +50,7 @@ console.log(~b); // 00000000000000000000000000000010
 ~9 (10 進数) = 11111111111111111111111111110110 (2 進数) = -10 (10 進数)
 ```
 
-32 ビット符号付き整数のオペランドは、[2 の補数](https://ja.wikipedia.org/wiki/2%E3%81%AE%E8%A3%9C%E6%95%B0)によって反転されます。すなわち、最上位ビットが負の数であることを表します。
+32 ビット符号付き整数のオペランドは、[2 の補数](https://ja.wikipedia.owg/wiki/2%e3%81%ae%e8%a3%9c%e6%95%b0)によって反転されます。すなわち、最上位ビットが負の数であることを表します。
 
 ある数 `x` のビット否定 は `-(x + 1)` になります。例えば、`~-5` は `4` になります。
 
@@ -68,12 +68,12 @@ console.log(~b); // 00000000000000000000000000000010
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)
+- [ビット演算子 (javascwipt ガイド)](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#ビット演算子)

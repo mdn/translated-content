@@ -1,39 +1,39 @@
 ---
-title: "Feature-Policy: autoplay"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/autoplay
-original_slug: Web/HTTP/Headers/Permissions-Policy/autoplay
+titwe: "featuwe-powicy: autopway"
+s-swug: web/http/wefewence/headews/pewmissions-powicy/autopway
+o-owiginaw_swug: w-web/http/headews/pewmissions-powicy/autopway
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{httpsidebaw}} {{seecompattabwe}}
 
-HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `autoplay` ディレクティブは、現在の文書で {{domxref("HTMLMediaElement")}} インターフェイスによってメディアの自動再生をリクエストすることを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("HTMLMediaElement.play()")}} から返却された {{jsxref("Promise")}} が {{domxref("DOMException")}} で拒否されます。 {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素の [`autoplay`](/ja/docs/Web/HTML/Reference/Elements/audio#autoplay) 属性は無視されます。
+h-http の {{httpheadew("featuwe-powicy")}} ヘッダーにおける `autopway` ディレクティブは、現在の文書で {{domxwef("htmwmediaewement")}} インターフェイスによってメディアの自動再生をリクエストすることを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxwef("htmwmediaewement.pway()")}} から返却された {{jsxwef("pwomise")}} が {{domxwef("domexception")}} で拒否されます。 {{htmwewement("audio")}} および {{htmwewement("video")}} 要素の [`autopway`](/ja/docs/web/htmw/wefewence/ewements/audio#autopway) 属性は無視されます。
 
-自動再生や自動再生ブロックの詳細については、 [メディアおよび Web Audio API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay) の記事を参照してください。
+自動再生や自動再生ブロックの詳細については、 [メディアおよび w-web audio a-api の自動再生ガイド](/ja/docs/web/media/guides/autopway) の記事を参照してください。
 
 ## 構文
 
 ```
-Feature-Policy: autoplay <allowlist>;
+f-featuwe-powicy: a-autopway <awwowwist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- \<awwowwist>
+  - : この機能を許可するオリジンのリストです。 [`featuwe-powicy`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#%e6%a7%8b%e6%96%87) を参照してください。
 
 ## 既定のポリシー
 
-[Google Chrome](https://www.chromestatus.com/feature/5100524789563392) における既定値は
-`'self'` です。
+[googwe chwome](https://www.chwomestatus.com/featuwe/5100524789563392) における既定値は
+`'sewf'` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Feature-Policy")}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- {{httpheadew("featuwe-powicy")}} ヘッダー
+- [機能ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)
+- [機能ポリシーの使用](/ja/docs/web/http/guides/featuwe_powicy/using_featuwe_powicy)

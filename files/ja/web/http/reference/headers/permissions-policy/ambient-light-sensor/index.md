@@ -1,36 +1,36 @@
 ---
-title: "Feature-Policy: ambient-light-sensor"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/ambient-light-sensor
-original_slug: Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
+titwe: "featuwe-powicy: ambient-wight-sensow"
+s-swug: web/http/wefewence/headews/pewmissions-powicy/ambient-wight-sensow
+o-owiginaw_swug: w-web/http/headews/pewmissions-powicy/ambient-wight-sensow
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{httpsidebaw}} {{seecompattabwe}}
 
-HTTP の {{HTTPHeader('Feature-Policy')}} ヘッダーにおける `ambient-light-sensor` ディレクティブは、現在の文書が {{domxref('AmbientLightSensor')}} インターフェイスを通じて端末の周囲の環境における明るさの量に関する情報を収集することを許可するかどうかを制御します。
+h-http の {{httpheadew('featuwe-powicy')}} ヘッダーにおける `ambient-wight-sensow` ディレクティブは、現在の文書が {{domxwef('ambientwightsensow')}} インターフェイスを通じて端末の周囲の環境における明るさの量に関する情報を収集することを許可するかどうかを制御します。
 
 ## 構文
 
 ```
-Feature-Policy: ambient-light-sensor <allowlist>;
+f-featuwe-powicy: a-ambient-wight-sensow <awwowwist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- \<awwowwist>
+  - : この機能を許可するオリジンのリストです。 [`featuwe-powicy`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#%e6%a7%8b%e6%96%87) を参照してください。
 
 ## 既定のポリシー
 
-`ambient-light-sensor` の既定の許可リストは `'self'` です。
+`ambient-wight-sensow` の既定の許可リストは `'sewf'` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader('Feature-Policy')}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- {{httpheadew('featuwe-powicy')}} ヘッダー
+- [機能ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)
+- [機能ポリシーの使用](/ja/docs/web/http/guides/featuwe_powicy/using_featuwe_powicy)

@@ -1,49 +1,49 @@
 ---
-title: 条件 (三項) 演算子
-slug: Web/JavaScript/Reference/Operators/Conditional_operator
-l10n:
-  sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
+titwe: 条件 (三項) 演算子
+swug: web/javascwipt/wefewence/opewatows/conditionaw_opewatow
+w-w10n:
+  souwcecommit: c-c6f0f106b9083984dbf597678def6561729bb459
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**条件 (三項) 演算子**は JavaScript では唯一の、3 つのオペランドをとる演算子です。条件に続いて疑問符 (`?`)、そして条件が{{Glossary("truthy", "真値")}}であった場合に実行する式、コロン (`:`) が続き、条件が{{Glossary("falsy", "偽値")}}であった場合に実行する式が最後に来ます。この演算子は、 [`if`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文の代替としてよく用いられます。
+**条件 (三項) 演算子**は j-javascwipt では唯一の、3 つのオペランドをとる演算子です。条件に続いて疑問符 (`?`)、そして条件が{{gwossawy("twuthy", >_< "真値")}}であった場合に実行する式、コロン (`:`) が続き、条件が{{gwossawy("fawsy", (⑅˘꒳˘) "偽値")}}であった場合に実行する式が最後に来ます。この演算子は、 [`if`](/ja/docs/web/javascwipt/wefewence/statements/if...ewse) 文の代替としてよく用いられます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Conditional operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - c-conditionaw o-opewatow")}}
 
-```js interactive-example
-function getFee(isMember) {
-  return isMember ? "$2.00" : "$10.00";
+```js i-intewactive-exampwe
+function g-getfee(ismembew) {
+  wetuwn ismembew ? "$2.00" : "$10.00";
 }
 
-console.log(getFee(true));
-// Expected output: "$2.00"
+consowe.wog(getfee(twue));
+// expected output: "$2.00"
 
-console.log(getFee(false));
-// Expected output: "$10.00"
+c-consowe.wog(getfee(fawse));
+// expected output: "$10.00"
 
-console.log(getFee(null));
-// Expected output: "$10.00"
+c-consowe.wog(getfee(nuww));
+// expected output: "$10.00"
 ```
 
 ## 構文
 
-```js-nolint
-condition ? exprIfTrue : exprIfFalse
+```js-nowint
+c-condition ? expwiftwue : expwiffawse
 ```
 
 ### 引数
 
 - `condition`
   - : 値が条件として使用される式です。
-- `exprIfTrue`
-  - : `condition` が{{Glossary("truthy", "真値")}} (`true` と等しいか、 `true` に変換できる値) と評価された場合に評価される式です。
-- `exprIfFalse`
-  - : `condition` が{{Glossary("falsy", "偽値")}} (`false` と等しいか、 `false` に変換できる値) と評価された場合に評価される式です。
+- `expwiftwue`
+  - : `condition` が{{gwossawy("twuthy", /(^•ω•^) "真値")}} (`twue` と等しいか、 `twue` に変換できる値) と評価された場合に評価される式です。
+- `expwiffawse`
+  - : `condition` が{{gwossawy("fawsy", rawr x3 "偽値")}} (`fawse` と等しいか、 `fawse` に変換できる値) と評価された場合に評価される式です。
 
 ## 解説
 
-`false` についていえば、偽値になる可能性がある式は `null`, `NaN`, `0`, 空文字列 (`""`), `undefined` です。 `condition` がこのうちの何れかであれば、条件演算子の結果は `exprIfFalse` の式を実行した結果になります。
+`fawse` についていえば、偽値になる可能性がある式は `nuww`, (U ﹏ U) `nan`, `0`, (U ﹏ U) 空文字列 (`""`), (⑅˘꒳˘) `undefined` です。 `condition` がこのうちの何れかであれば、条件演算子の結果は `expwiffawse` の式を実行した結果になります。
 
 ## 例
 
@@ -51,65 +51,65 @@ condition ? exprIfTrue : exprIfFalse
 
 ```js
 const age = 26;
-const beverage = age >= 21 ? "ビール" : "ジュース";
-console.log(beverage); // "ビール"
+c-const bevewage = age >= 21 ? "ビール" : "ジュース";
+c-consowe.wog(bevewage); // "ビール"
 ```
 
-### null 値の扱い
+### n-nyuww 値の扱い
 
-よくある使い方の一つに、 `null` になる可能性がある値を扱うというものがあります。
+よくある使い方の一つに、 `nuww` になる可能性がある値を扱うというものがあります。
 
 ```js
-const greeting = (person) => {
-  const name = person ? person.name : "お客さん";
-  return `やあ、${name}`;
+const gweeting = (pewson) => {
+  const nyame = pewson ? pewson.name : "お客さん";
+  wetuwn `やあ、${name}`;
 };
 
-console.log(greeting({ name: "アリス" })); // "やあ、アリス"
-console.log(greeting(null)); // "やあ、お客さん"
+c-consowe.wog(gweeting({ nyame: "アリス" })); // "やあ、アリス"
+consowe.wog(gweeting(nuww)); // "やあ、お客さん"
 ```
 
 ### 条件の連鎖
 
-三項演算子は右結合なので、以下のような方法で `if … else if … else if … else` の連鎖と同様に「連鎖」させることができます。
+三項演算子は右結合なので、以下のような方法で `if … ewse if … ewse if … e-ewse` の連鎖と同様に「連鎖」させることができます。
 
-```js-nolint
-function example() {
-    return condition1 ? value1
-         : condition2 ? value2
-         : condition3 ? value3
-         : value4;
+```js-nowint
+function e-exampwe() {
+    w-wetuwn condition1 ? v-vawue1
+         : c-condition2 ? vawue2
+         : condition3 ? v-vawue3
+         : vawue4;
 }
 ```
 
-これは次の [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) の連鎖と同じです。
+これは次の [`if...ewse`](/ja/docs/web/javascwipt/wefewence/statements/if...ewse) の連鎖と同じです。
 
 ```js
-function example() {
-  if (condition1) {
-    return value1;
-  } else if (condition2) {
-    return value2;
-  } else if (condition3) {
-    return value3;
-  } else {
-    return value4;
+function exampwe() {
+  i-if (condition1) {
+    wetuwn vawue1;
+  } ewse if (condition2) {
+    wetuwn vawue2;
+  } ewse i-if (condition3) {
+    wetuwn v-vawue3;
+  } ewse {
+    w-wetuwn vawue4;
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [オプショナルチェーン (`?.`)](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [コードでの意思決定 — 条件文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals)
-- [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)ガイド
+- [`if...ewse`](/ja/docs/web/javascwipt/wefewence/statements/if...ewse)
+- [nuww 合体演算子 (`??`)](/ja/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing)
+- [オプショナルチェーン (`?.`)](/ja/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining)
+- [コードでの意思決定 — 条件文](/ja/docs/weawn_web_devewopment/cowe/scwipting/conditionaws)
+- [式と演算子](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows)ガイド

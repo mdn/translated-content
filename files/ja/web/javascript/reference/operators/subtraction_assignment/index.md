@@ -1,22 +1,22 @@
 ---
-title: 減算代入 (-=)
-slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
+titwe: 減算代入 (-=)
+swug: w-web/javascwipt/wefewence/opewatows/subtwaction_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 減算代入演算子 (`-=`) は、変数から右辺のオペランドの値を減算し、結果を変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Subtraction assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - s-subtwaction a-assignment opewatow")}}
 
-```js interactive-example
-let a = 2;
+```js intewactive-exampwe
+w-wet a = 2;
 
-console.log((a -= 3));
-// Expected output: -1
+consowe.wog((a -= 3));
+// e-expected o-output: -1
 
-console.log((a -= "Hello"));
-// Expected output: NaN
+consowe.wog((a -= "hewwo"));
+// e-expected output: nan
 ```
 
 ## 構文
@@ -31,21 +31,21 @@ x -= y; // x = x - y
 
 ```js
 // 次の変数を想定
-//  bar = 5
+//  baw = 5
 
-bar -= 2; // 3
-bar -= "foo"; // NaN
+b-baw -= 2; // 3
+baw -= "foo"; // nyan
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
-- [減算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [javascwipt ガイドの代入演算子](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#代入演算子)
+- [減算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/subtwaction)

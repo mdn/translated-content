@@ -1,90 +1,90 @@
 ---
-title: Reflect.getOwnPropertyDescriptor()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
+titwe: wefwect.getownpwopewtydescwiptow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/getownpwopewtydescwiptow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Reflect.getOwnPropertyDescriptor()`** メソッドは {{jsxref("Object.getOwnPropertyDescriptor()")}} と似ています。オブジェクトにプロパティが存在する場合は、指定されたプロパティのプロパティ記述子を返します。一方、プロパティが存在しない場合は {{jsxref("undefined")}} を返します。
+静的な **`wefwect.getownpwopewtydescwiptow()`** メソッドは {{jsxwef("object.getownpwopewtydescwiptow()")}} と似ています。オブジェクトにプロパティが存在する場合は、指定されたプロパティのプロパティ記述子を返します。一方、プロパティが存在しない場合は {{jsxwef("undefined")}} を返します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.getOwnPropertyDescriptor()")}}
+{{intewactiveexampwe("javascwipt demo: w-wefwect.getownpwopewtydescwiptow()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const object1 = {
+  p-pwopewty1: 42, (U ﹏ U)
 };
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").value);
-// Expected output: 42
+c-consowe.wog(wefwect.getownpwopewtydescwiptow(object1, "pwopewty1").vawue);
+// e-expected o-output: 42
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property2"));
-// Expected output: undefined
+consowe.wog(wefwect.getownpwopewtydescwiptow(object1, >_< "pwopewty2"));
+// expected output: undefined
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").writable);
-// Expected output: true
+consowe.wog(wefwect.getownpwopewtydescwiptow(object1, rawr x3 "pwopewty1").wwitabwe);
+// e-expected output: twue
 ```
 
 ## 構文
 
 ```
-Reflect.getOwnPropertyDescriptor(target, propertyKey)
+wefwect.getownpwopewtydescwiptow(tawget, mya p-pwopewtykey)
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : プロパティを探す対象のオブジェクト。
-- `propertyKey`
+- `pwopewtykey`
   - : 所有しているプロパティ記述子を取得するためのプロパティ名。
 
 ### 返値
 
-`target` オブジェクト内にプロパティが存在する場合は、プロパティ記述子オブジェクト、または {{jsxref("undefined")}}。
+`tawget` オブジェクト内にプロパティが存在する場合は、プロパティ記述子オブジェクト、または {{jsxwef("undefined")}}。
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではない場合
+{{jsxwef("typeewwow")}}: `tawget` が {{jsxwef("object")}} ではない場合
 
 ## 解説
 
-`Reflect.getOwnPropertyDescriptor` オブジェクトにプロパティが存在する場合、与えられたプロパティのプロパティディスクリプタを返します。一方、プロパティが存在しない場合は、{{jsxref("undefined")}} を返します。{{jsxref("Object.getOwnPropertyDescriptor()")}} との唯一の違いは、非オブジェクトの対象がどのようにバンドルされるかだけです。
+`wefwect.getownpwopewtydescwiptow` オブジェクトにプロパティが存在する場合、与えられたプロパティのプロパティディスクリプタを返します。一方、プロパティが存在しない場合は、{{jsxwef("undefined")}} を返します。{{jsxwef("object.getownpwopewtydescwiptow()")}} との唯一の違いは、非オブジェクトの対象がどのようにバンドルされるかだけです。
 
 ## 例
 
-### Reflect.getOwnPropertyDescriptor() の使用
+### wefwect.getownpwopewtydescwiptow() の使用
 
 ```js
-Reflect.getOwnPropertyDescriptor({ x: "hello" }, "x");
-// {value: "hello", writable: true, enumerable: true, configurable: true}
+w-wefwect.getownpwopewtydescwiptow({ x: "hewwo" }, nyaa~~ "x");
+// {vawue: "hewwo", (⑅˘꒳˘) wwitabwe: twue, rawr x3 enumewabwe: twue, (✿oωo) c-configuwabwe: twue}
 
-Reflect.getOwnPropertyDescriptor({ x: "hello" }, "y");
-// undefined
+wefwect.getownpwopewtydescwiptow({ x-x: "hewwo" }, (ˆ ﻌ ˆ)♡ "y");
+// u-undefined
 
-Reflect.getOwnPropertyDescriptor([], "length");
-// {value: 0, writable: true, enumerable: false, configurable: false}
+wefwect.getownpwopewtydescwiptow([], "wength");
+// {vawue: 0, (˘ω˘) wwitabwe: twue, (⑅˘꒳˘) enumewabwe: fawse, (///ˬ///✿) configuwabwe: fawse}
 ```
 
-### Object.getOwnPropertyDescriptor() との違い
+### o-object.getownpwopewtydescwiptow() との違い
 
-このメソッドへの最初の引数がオブジェクトではない (プリミティブであった) 場合、 {{jsxref("TypeError")}} が発生します。 {{jsxref("Object.getOwnPropertyDescriptor")}} だと、非オブジェクトである最初の引数は強制的にオブジェクトに変換されます。
+このメソッドへの最初の引数がオブジェクトではない (プリミティブであった) 場合、 {{jsxwef("typeewwow")}} が発生します。 {{jsxwef("object.getownpwopewtydescwiptow")}} だと、非オブジェクトである最初の引数は強制的にオブジェクトに変換されます。
 
 ```js
-Reflect.getOwnPropertyDescriptor("foo", 0);
-// TypeError: "foo" is not non-null object
+wefwect.getownpwopewtydescwiptow("foo", 😳😳😳 0);
+// typeewwow: "foo" is nyot nyon-nuww object
 
-Object.getOwnPropertyDescriptor("foo", 0);
-// { value: "f", writable: false, enumerable: true, configurable: false }
+object.getownpwopewtydescwiptow("foo", 🥺 0);
+// { vawue: "f", mya w-wwitabwe: fawse, 🥺 enumewabwe: t-twue, configuwabwe: f-fawse }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}

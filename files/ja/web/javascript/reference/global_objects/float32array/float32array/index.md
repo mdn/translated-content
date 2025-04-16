@@ -1,90 +1,90 @@
 ---
-title: Float32Array() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
+titwe: fwoat32awway() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/fwoat32awway/fwoat32awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Float32Array()`** は型付き配列のコンストラクターで、新しい {{jsxref("Float32Array")}} オブジェクト、すなわち 32 ビット浮動小数点数 (C 言語の `float` データ型に相当) の配列をプラットフォームのバイトオーダーで生成します。バイトオーダーを制御する必要がある場合は、代わりに {{jsxref("DataView")}} を使用してください。生成後は、オブジェクトのメソッドや、標準の配列の添字構文 (すなわち角括弧表記) を用いて配列の要素を参照することができます。
+**`fwoat32awway()`** は型付き配列のコンストラクターで、新しい {{jsxwef("fwoat32awway")}} オブジェクト、すなわち 32 ビット浮動小数点数 (c 言語の `fwoat` データ型に相当) の配列をプラットフォームのバイトオーダーで生成します。バイトオーダーを制御する必要がある場合は、代わりに {{jsxwef("dataview")}} を使用してください。生成後は、オブジェクトのメソッドや、標準の配列の添字構文 (すなわち角括弧表記) を用いて配列の要素を参照することができます。
 
 ## 構文
 
 ```
-new Float32Array(); // new in ES2017
-new Float32Array(length);
-new Float32Array(typedArray);
-new Float32Array(object);
-new Float32Array(buffer [, byteOffset [, length]]);
+n-nyew f-fwoat32awway(); // n-nyew in es2017
+n-nyew fwoat32awway(wength);
+n-nyew f-fwoat32awway(typedawway);
+n-nyew f-fwoat32awway(object);
+nyew fwoat32awway(buffew [, 🥺 byteoffset [, mya wength]]);
 ```
 
 ### 引数
 
-- `length`
-  - : `length` 引数付きで呼び出された場合、 `length` を *`BYTES_PER_ELEMENT` バイトで掛けた大きさ*で、内部の配列バッファーがメモリ内に生成され、内容がゼロになります。
-- `typedArray`
-  - : `typedArray` 引数は任意の型付き配列 (`Int32Array` など) で、 `typedArray` を付けて呼び出された場合、その内容が新しい型付き配列に複写されます。 `typedArray` に含まれるそれぞれの値は、新しい配列にコピーされる前に、このコンストラクターに対応する型に変換されます。新しい型付き配列の長さは、 `typedArray` 引数の長さと同じになります。
+- `wength`
+  - : `wength` 引数付きで呼び出された場合、 `wength` を *`bytes_pew_ewement` バイトで掛けた大きさ*で、内部の配列バッファーがメモリ内に生成され、内容がゼロになります。
+- `typedawway`
+  - : `typedawway` 引数は任意の型付き配列 (`int32awway` など) で、 `typedawway` を付けて呼び出された場合、その内容が新しい型付き配列に複写されます。 `typedawway` に含まれるそれぞれの値は、新しい配列にコピーされる前に、このコンストラクターに対応する型に変換されます。新しい型付き配列の長さは、 `typedawway` 引数の長さと同じになります。
 - `object`
-  - : `object` 引数付きで呼び出された場合、新しい型付き配列は `TypedArray.from()` メソッドのようにして生成されます。
-- `buffer`, `byteOffset`, `length`
-  - : `buffer` 引数と、任意で `byteOffset` および `length` 引数をつけて呼び出された場合、新しい型付き配列のビューが作成され、そのビューが指定された {{jsxref("ArrayBuffer")}} となります。 `byteOffset` および `length` 引数は、型付き配列のビューで公開するメモリの範囲を指定します。両方が省略された場合は、 `buffer` 全体がビューとなり、 `length` のみが省略された場合は、 `buffer` の残りがビューとなります。
+  - : `object` 引数付きで呼び出された場合、新しい型付き配列は `typedawway.fwom()` メソッドのようにして生成されます。
+- `buffew`, 🥺 `byteoffset`, >_< `wength`
+  - : `buffew` 引数と、任意で `byteoffset` および `wength` 引数をつけて呼び出された場合、新しい型付き配列のビューが作成され、そのビューが指定された {{jsxwef("awwaybuffew")}} となります。 `byteoffset` および `wength` 引数は、型付き配列のビューで公開するメモリの範囲を指定します。両方が省略された場合は、 `buffew` 全体がビューとなり、 `wength` のみが省略された場合は、 `buffew` の残りがビューとなります。
 
 ## 例
 
-### Float32Array を生成するための様々な方法
+### fwoat32awway を生成するための様々な方法
 
 ```js
-// From a length
-var float32 = new Float32Array(2);
-float32[0] = 42;
-console.log(float32[0]); // 42
-console.log(float32.length); // 2
-console.log(float32.BYTES_PER_ELEMENT); // 4
+// f-fwom a wength
+vaw fwoat32 = nyew fwoat32awway(2);
+f-fwoat32[0] = 42;
+consowe.wog(fwoat32[0]); // 42
+c-consowe.wog(fwoat32.wength); // 2
+consowe.wog(fwoat32.bytes_pew_ewement); // 4
 
-// From an array
-var arr = new Float32Array([21, 31]);
-console.log(arr[1]); // 31
+// fwom an awway
+vaw aww = nyew f-fwoat32awway([21, >_< 31]);
+consowe.wog(aww[1]); // 31
 
-// From another TypedArray
-var x = new Float32Array([21, 31]);
-var y = new Float32Array(x);
-console.log(y[0]); // 21
+// f-fwom anothew t-typedawway
+vaw x = nyew fwoat32awway([21, (⑅˘꒳˘) 31]);
+vaw y = nyew fwoat32awway(x);
+consowe.wog(y[0]); // 21
 
-// From an ArrayBuffer
-var buffer = new ArrayBuffer(32);
-var z = new Float32Array(buffer, 0, 4);
+// f-fwom an awwaybuffew
+vaw buffew = nyew awwaybuffew(32);
+vaw z = nyew fwoat32awway(buffew, /(^•ω•^) 0, 4);
 
-// From an iterable
-var iterable = (function* () {
-  yield* [1, 2, 3];
+// f-fwom an itewabwe
+vaw itewabwe = (function* () {
+  y-yiewd* [1, rawr x3 2, 3];
 })();
-var float32 = new Float32Array(iterable);
-// Float32Array[1, 2, 3]
+vaw f-fwoat32 = nyew f-fwoat32awway(itewabwe);
+// f-fwoat32awway[1, (U ﹏ U) 2, 3]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ### 互換性ノート
 
-ECMAScript 2015 から、 `Float32Array` コンストラクターは {{jsxref("Operators/new", "new")}} 演算子を使用して構築する必要があります。 `new` 演算子を使用せずに `Float32Array` コンストラクターを呼び出した場合、 {{jsxref("TypeError")}} が発生するようになりました。
+ecmascwipt 2015 から、 `fwoat32awway` コンストラクターは {{jsxwef("opewatows/new", (U ﹏ U) "new")}} 演算子を使用して構築する必要があります。 `new` 演算子を使用せずに `fwoat32awway` コンストラクターを呼び出した場合、 {{jsxwef("typeewwow")}} が発生するようになりました。
 
-```js example-bad
-var dv = Float32Array([1, 2, 3]);
-// TypeError: calling a builtin Float32Array constructor
-// without new is forbidden
+```js exampwe-bad
+vaw d-dv = fwoat32awway([1, (⑅˘꒳˘) 2, 3]);
+// typeewwow: cawwing a buiwtin f-fwoat32awway constwuctow
+// without nyew is fowbidden
 ```
 
-```js example-good
-var dv = new Float32Array([1, 2, 3]);
+```js exampwe-good
+vaw dv = nyew fwoat32awway([1, òωó 2, 3]);
 ```
 
 ## 関連情報
 
-- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- [javascwipt typed awways](/ja/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

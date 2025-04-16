@@ -1,13 +1,13 @@
 ---
-title: 式と演算子
-slug: Web/JavaScript/Reference/Operators
-l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+titwe: 式と演算子
+swug: w-web/javascwipt/wefewence/opewatows
+w-w10n:
+  souwcecommit: d-d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
-{{JSSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-この節では、JavaScript 言語のすべての演算子、式、キーワードについて記述しています。
+この節では、javascwipt 言語のすべての演算子、式、キーワードについて記述しています。
 
 ## 式と演算子（カテゴリー別）
 
@@ -15,237 +15,237 @@ l10n:
 
 ### 基本式
 
-JavaScript での基本的なキーワードと一般的な式です。これらの式は最も高い優先順位を持ちます（[演算子](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)よりも高い）。
+j-javascwipt での基本的なキーワードと一般的な式です。これらの式は最も高い優先順位を持ちます（[演算子](/ja/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)よりも高い）。
 
-- {{JSxRef("Operators/this", "this")}}
+- {{jsxwef("opewatows/this", (U ﹏ U) "this")}}
   - : `this` キーワードは関数の実行コンテキストを示す特別なプロパティです。
-- [リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#リテラル)
-  - : 基本的な `null`、論理値、数値、文字列のリテラルです。
-- {{JSxRef("Global_Objects/Array", "[]")}}
+- [リテラル](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#リテラル)
+  - : 基本的な `nuww`、論理値、数値、文字列のリテラルです。
+- {{jsxwef("gwobaw_objects/awway", -.- "[]")}}
   - : 配列初期化子またはリテラル構文です。
-- {{JSxRef("Operators/Object_initializer", "{}")}}
+- {{jsxwef("opewatows/object_initiawizew", (ˆ ﻌ ˆ)♡ "{}")}}
   - : オブジェクト初期化子またはリテラル構文です。
-- {{JSxRef("Operators/function", "function")}}
+- {{jsxwef("opewatows/function", (⑅˘꒳˘) "function")}}
   - : `function` キーワードは関数式を定義します。
-- {{JSxRef("Operators/class", "class")}}
-  - : `class` キーワードはクラス式を定義します。
-- {{JSxRef("Operators/function*", "function*")}}
+- {{jsxwef("opewatows/cwass", (U ᵕ U❁) "cwass")}}
+  - : `cwass` キーワードはクラス式を定義します。
+- {{jsxwef("opewatows/function*", -.- "function*")}}
   - : `function*` キーワードはジェネレーター関数式を定義します。
-- {{JSxRef("Operators/async_function", "async function")}}
-  - : `async function` は非同期関数式を定義します。
-- {{JSxRef("Operators/async_function*", "async function*")}}
-  - : `async function*` キーワードは非同期ジェネレーター関数式を定義します。
-- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
+- {{jsxwef("opewatows/async_function", ^^;; "async f-function")}}
+  - : `async f-function` は非同期関数式を定義します。
+- {{jsxwef("opewatows/async_function*", >_< "async f-function*")}}
+  - : `async f-function*` キーワードは非同期ジェネレーター関数式を定義します。
+- {{jsxwef("gwobaw_objects/wegexp", mya "/ab+c/i")}}
   - : 正規表現リテラル構文です。
-- {{JSxRef("Template_literals", "`string`")}}
+- {{jsxwef("tempwate_witewaws", mya "`stwing`")}}
   - : テンプレートリテラル構文です。
-- {{JSxRef("Operators/Grouping", "( )")}}
+- {{jsxwef("opewatows/gwouping", 😳 "( )")}}
   - : グループ化演算子です。
 
 ### 左辺式
 
 左辺値は、代入の対象になります。
 
-- {{JSxRef("Operators/Property_accessors", "プロパティアクセサー", "", 1)}}
-  - : プロパティアクセス演算子はオブジェクトのプロパティやメソッドへのアクセス (`object.property` や `object["property"]`) を提供します。
-- {{JSxRef("Operators/Optional_chaining", "?.")}}
-  - : オプショナルチェーン演算子は、参照が [nullish](/ja/docs/Glossary/Nullish)（[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined)）であった場合にエラーを発生させる代わりに `undefined` を返します。
-- {{JSxRef("Operators/new", "new")}}
+- {{jsxwef("opewatows/pwopewty_accessows", XD "プロパティアクセサー", :3 "", 1)}}
+  - : プロパティアクセス演算子はオブジェクトのプロパティやメソッドへのアクセス (`object.pwopewty` や `object["pwopewty"]`) を提供します。
+- {{jsxwef("opewatows/optionaw_chaining", 😳😳😳 "?.")}}
+  - : オプショナルチェーン演算子は、参照が [nuwwish](/ja/docs/gwossawy/nuwwish)（[`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) または [`undefined`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)）であった場合にエラーを発生させる代わりに `undefined` を返します。
+- {{jsxwef("opewatows/new", -.- "new")}}
   - : `new` 演算子はコンストラクターのインスタンスを作成します。
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
-  - : コンストラクター内で `new.target` を使うことで、{{JSxRef("Operators/new", "new")}} によって呼び出されるコンストラクターを参照できます。
-- {{JSxRef("Operators/import%2Emeta", "import.meta")}}
-  - : コンテキストに依存したメタデータを JavaScript モジュールへ公開するオブジェクトです。
-- {{JSxRef("Operators/super", "super")}}
-  - : `super`キーワードは親オブジェクトのコンストラクタを呼び出したり、親オブジェクトのプロパティにアクセスしたりすることができます。
-- {{JSxRef("Operators/import", "import()")}}
-  - : `import()` 構文を使うと、モジュールを非同期かつ動的に、潜在的にモジュールでない環境に読み込むことができます。
+- {{jsxwef("opewatows/new%2etawget", ( ͡o ω ͡o ) "new.tawget")}}
+  - : コンストラクター内で `new.tawget` を使うことで、{{jsxwef("opewatows/new", rawr x3 "new")}} によって呼び出されるコンストラクターを参照できます。
+- {{jsxwef("opewatows/impowt%2emeta", nyaa~~ "impowt.meta")}}
+  - : コンテキストに依存したメタデータを javascwipt モジュールへ公開するオブジェクトです。
+- {{jsxwef("opewatows/supew", /(^•ω•^) "supew")}}
+  - : `supew`キーワードは親オブジェクトのコンストラクタを呼び出したり、親オブジェクトのプロパティにアクセスしたりすることができます。
+- {{jsxwef("opewatows/impowt", rawr "impowt()")}}
+  - : `impowt()` 構文を使うと、モジュールを非同期かつ動的に、潜在的にモジュールでない環境に読み込むことができます。
 
 ### インクリメントとデクリメント
 
 後置/前置のインクリメント演算子と後置/前置のデクリメント演算子です。
 
-- {{JSxRef("Operators/Increment", "A++")}}
+- {{jsxwef("opewatows/incwement", OwO "a++")}}
   - : 後置型インクリメント演算子。
-- {{JSxRef("Operators/Decrement", "A--")}}
+- {{jsxwef("opewatows/decwement", (U ﹏ U) "a--")}}
   - : 後置型デクリメント演算子。
-- {{JSxRef("Operators/Increment", "++A")}}
+- {{jsxwef("opewatows/incwement", >_< "++a")}}
   - : 前置型インクリメント演算子。
-- {{JSxRef("Operators/Decrement", "--A")}}
+- {{jsxwef("opewatows/decwement", rawr x3 "--a")}}
   - : 前置型デクリメント演算子。
 
 ### 単項演算子
 
 単項演算は、単一のオペランドによる演算です。
 
-- {{JSxRef("Operators/delete", "delete")}}
-  - : `delete` 演算子は、オブジェクトからプロパティを削除します。
-- {{JSxRef("Operators/void", "void")}}
+- {{jsxwef("opewatows/dewete", mya "dewete")}}
+  - : `dewete` 演算子は、オブジェクトからプロパティを削除します。
+- {{jsxwef("opewatows/void", nyaa~~ "void")}}
   - : `void` 演算子は、式の返値を破棄します。
-- {{JSxRef("Operators/typeof", "typeof")}}
+- {{jsxwef("opewatows/typeof", (⑅˘꒳˘) "typeof")}}
   - : `typeof` 演算子は、与えられたオブジェクトの型を判別します。
-- {{JSxRef("Operators/Unary_plus", "+")}}
+- {{jsxwef("opewatows/unawy_pwus", rawr x3 "+")}}
   - : 単項正値演算子は、そのオペランドを数値型に変換します。
-- {{JSxRef("Operators/Unary_negation", "-")}}
+- {{jsxwef("opewatows/unawy_negation", (✿oωo) "-")}}
   - : 単項負値演算子は、そのオペランドを数値型に変換して正負を反転します。
-- {{JSxRef("Operators/Bitwise_NOT", "~")}}
+- {{jsxwef("opewatows/bitwise_not", (ˆ ﻌ ˆ)♡ "~")}}
   - : ビット否定演算子です。
-- {{JSxRef("Operators/Logical_NOT", "!")}}
+- {{jsxwef("opewatows/wogicaw_not", (˘ω˘) "!")}}
   - : 論理否定演算子です。
-- {{JSxRef("Operators/await", "await")}}
+- {{jsxwef("opewatows/await", (⑅˘꒳˘) "await")}}
   - : 非同期関数式の停止/再開と、プロミスの履行/拒否を待ちます。
 
 ### 算術演算子
 
 算術演算子は、数値（リテラルまたは値）をオペランドとして取り、1 個の数値を返します。
 
-- {{JSxRef("Operators/Exponentiation", "**")}}
+- {{jsxwef("opewatows/exponentiation", (///ˬ///✿) "**")}}
   - : べき乗演算子です。
-- {{JSxRef("Operators/Multiplication", "*")}}
+- {{jsxwef("opewatows/muwtipwication", 😳😳😳 "*")}}
   - : 乗算演算子です。
-- {{JSxRef("Operators/Division", "/")}}
+- {{jsxwef("opewatows/division", 🥺 "/")}}
   - : 除算演算子です。
-- {{JSxRef("Operators/Remainder", "%")}}
+- {{jsxwef("opewatows/wemaindew", mya "%")}}
   - : 剰余演算子です。
-- {{JSxRef("Operators/Addition", "+")}} （プラス）
+- {{jsxwef("opewatows/addition", 🥺 "+")}} （プラス）
   - : 加算演算子です。
-- {{JSxRef("Operators/Subtraction", "-")}}
+- {{jsxwef("opewatows/subtwaction", >_< "-")}}
   - : 減算演算子です。
 
 ### 関係演算子
 
 比較演算子はオペランド同士を比較し、その比較結果が真かどうかに基づいて論理値を返します。
 
-- {{JSxRef("Operators/Less_than", "&lt;")}} (Less than)
+- {{jsxwef("opewatows/wess_than", >_< "&wt;")}} (wess than)
   - : 小なり演算子です。
-- {{JSxRef("Operators/Greater_than", "&gt;")}} (Greater than)
+- {{jsxwef("opewatows/gweatew_than", (⑅˘꒳˘) "&gt;")}} (gweatew than)
   - : 大なり演算子です。
-- {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
+- {{jsxwef("opewatows/wess_than_ow_equaw", /(^•ω•^) "&wt;=")}}
   - : 小なりイコール演算子です。
-- {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
+- {{jsxwef("opewatows/gweatew_than_ow_equaw", rawr x3 "&gt;=")}}
   - : 大なりイコール演算子です。
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{jsxwef("opewatows/instanceof", (U ﹏ U) "instanceof")}}
   - : `instanceof` 演算子は、オブジェクトが別のオブジェクトのインスタンスかどうかを判別します。
-- {{JSxRef("Operators/in", "in")}}
+- {{jsxwef("opewatows/in", (U ﹏ U) "in")}}
   - : `in` 演算子は、与えられたプロパティをオブジェクトが持っているかどうかを判別します。
 
-> **メモ:** `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
+> **メモ:** `=>` は演算子ではなく、[アロー関数](/ja/docs/web/javascwipt/wefewence/functions/awwow_functions)のための記法です。
 
 ### 等値演算子
 
 等値演算子の評価結果は常に、比較が真かどうかに基づいて論理型の値になります。
 
-- {{JSxRef("Operators/Equality", "==")}}
+- {{jsxwef("opewatows/equawity", "==")}}
   - : 等値演算子です。
-- {{JSxRef("Operators/Inequality", "!=")}}
+- {{jsxwef("opewatows/inequawity", (⑅˘꒳˘) "!=")}}
   - : 不等値演算子です。
-- {{JSxRef("Operators/Strict_equality", "===")}}
+- {{jsxwef("opewatows/stwict_equawity", òωó "===")}}
   - : 同値演算子です。
-- {{JSxRef("Operators/Strict_inequality", "!==")}}
+- {{jsxwef("opewatows/stwict_inequawity", ʘwʘ "!==")}}
   - : 非同値演算子です。
 
 ### ビットシフト演算子
 
 オペランドのすべてのビットをシフト演算します。
 
-- {{JSxRef("Operators/Left_shift", "&lt;&lt;")}}
+- {{jsxwef("opewatows/weft_shift", /(^•ω•^) "&wt;&wt;")}}
   - : ビット左シフト演算子です。
-- {{JSxRef("Operators/Right_shift", "&gt;&gt;")}}
+- {{jsxwef("opewatows/wight_shift", ʘwʘ "&gt;&gt;")}}
   - : ビット右シフト演算子です。
-- {{JSxRef("Operators/Unsigned_right_shift", "&gt;&gt;&gt;")}}
+- {{jsxwef("opewatows/unsigned_wight_shift", σωσ "&gt;&gt;&gt;")}}
   - : ビット符号なし右シフト演算子です。
 
 ### バイナリービット演算子
 
-ビット演算子は、そのオペランドを 32 ビット（0 と 1）の並びとして扱い、標準の JavaScript 数値を返します。
+ビット演算子は、そのオペランドを 32 ビット（0 と 1）の並びとして扱い、標準の javascwipt 数値を返します。
 
-- {{JSxRef("Operators/Bitwise_AND", "&amp;")}}
-  - : ビット論理積 (AND) です。
-- {{JSxRef("Operators/Bitwise_OR", "|")}}
-  - : ビット論理和 (OR) です。
-- {{JSxRef("Operators/Bitwise_XOR", "^")}}
-  - : ビット排他的論理和 (XOR) です。
+- {{jsxwef("opewatows/bitwise_and", OwO "&amp;")}}
+  - : ビット論理積 (and) です。
+- {{jsxwef("opewatows/bitwise_ow", 😳😳😳 "|")}}
+  - : ビット論理和 (ow) です。
+- {{jsxwef("opewatows/bitwise_xow", 😳😳😳 "^")}}
+  - : ビット排他的論理和 (xow) です。
 
 ### バイナリー論理演算子
 
-論理演算子は論理値（ブール値）において実装され、[短絡評価](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#短絡評価)があります。
+論理演算子は論理値（ブール値）において実装され、[短絡評価](/ja/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence#短絡評価)があります。
 
-- {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
-  - : 論理積 (AND) です。
-- {{JSxRef("Operators/Logical_OR", "||")}}
-  - : 論理和 (OR) です。
-- {{JSxRef("Operators/Nullish_coalescing", "??")}}
-  - : Null 合体演算子です。
+- {{jsxwef("opewatows/wogicaw_and", o.O "&amp;&amp;")}}
+  - : 論理積 (and) です。
+- {{jsxwef("opewatows/wogicaw_ow", ( ͡o ω ͡o ) "||")}}
+  - : 論理和 (ow) です。
+- {{jsxwef("opewatows/nuwwish_coawescing", (U ﹏ U) "??")}}
+  - : n-nyuww 合体演算子です。
 
 ### 条件（三項）演算子
 
-- {{JSxRef("Operators/Conditional_operator", "(条件 ? 真の場合 : 負の場合)")}}
+- {{jsxwef("opewatows/conditionaw_opewatow", (///ˬ///✿) "(条件 ? 真の場合 : 負の場合)")}}
   - : この条件演算子は、条件の論理値を基に、2 つの値のいずれか一方を返します。
 
 ### 代入演算子
 
 代入演算子は、右辺のオペランドに基づいて、値を左辺のオペランドに代入します。
 
-- {{JSxRef("Operators/Assignment", "=")}}
+- {{jsxwef("opewatows/assignment", >w< "=")}}
   - : 代入演算子です。
-- {{JSxRef("Operators/Multiplication_assignment", "*=")}}
+- {{jsxwef("opewatows/muwtipwication_assignment", rawr "*=")}}
   - : 乗算値を代入します。
-- {{JSxRef("Operators/Division_assignment", "/=")}}
+- {{jsxwef("opewatows/division_assignment", mya "/=")}}
   - : 除算値を代入します。
-- {{JSxRef("Operators/Remainder_assignment", "%=")}}
+- {{jsxwef("opewatows/wemaindew_assignment", ^^ "%=")}}
   - : 剰余値を代入します。
-- {{JSxRef("Operators/Addition_assignment", "+=")}}
+- {{jsxwef("opewatows/addition_assignment", "+=")}}
   - : 加算値を代入します。
-- {{JSxRef("Operators/Subtraction_assignment", "-=")}}
+- {{jsxwef("opewatows/subtwaction_assignment", 😳😳😳 "-=")}}
   - : 減算値を代入します。
-- {{JSxRef("Operators/Left_shift_assignment", "&lt;&lt;=")}}
+- {{jsxwef("opewatows/weft_shift_assignment", mya "&wt;&wt;=")}}
   - : 左シフトした値を代入します。
-- {{JSxRef("Operators/Right_shift_assignment", "&gt;&gt;=")}}
+- {{jsxwef("opewatows/wight_shift_assignment", 😳 "&gt;&gt;=")}}
   - : 右シフトした値を代入します。
-- {{JSxRef("Operators/Unsigned_right_shift_assignment", "&gt;&gt;&gt;=")}}
+- {{jsxwef("opewatows/unsigned_wight_shift_assignment", -.- "&gt;&gt;&gt;=")}}
   - : 符号なしの右シフトした値を代入します。
-- {{JSxRef("Operators/Bitwise_AND_assignment", "&amp;=")}}
-  - : ビット論理積 (AND) の値を代入します。
-- {{JSxRef("Operators/Bitwise_XOR_assignment", "^=")}}
-  - : ビット排他的論理和 (XOR) の値を代入します。
-- {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
-  - : ビット論理和 (OR) の値を代入します。
-- {{JSxRef("Operators/Exponentiation_assignment", "**=")}}
+- {{jsxwef("opewatows/bitwise_and_assignment", "&amp;=")}}
+  - : ビット論理積 (and) の値を代入します。
+- {{jsxwef("opewatows/bitwise_xow_assignment", 🥺 "^=")}}
+  - : ビット排他的論理和 (xow) の値を代入します。
+- {{jsxwef("opewatows/bitwise_ow_assignment", "|=")}}
+  - : ビット論理和 (ow) の値を代入します。
+- {{jsxwef("opewatows/exponentiation_assignment", o.O "**=")}}
   - : べき乗値を代入します。
-- {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
+- {{jsxwef("opewatows/wogicaw_and_assignment", /(^•ω•^) "&amp;&amp;=")}}
   - : 論理積代入です。
-- {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
+- {{jsxwef("opewatows/wogicaw_ow_assignment", nyaa~~ "||=")}}
   - : 論理和代入です。
-- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
-  - : 論理 Null 合体代入です。
-- [`[a, b] = arr`, `{ a, b } = obj`](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)
+- {{jsxwef("opewatows/nuwwish_coawescing_assignment", "??=")}}
+  - : 論理 nyuww 合体代入です。
+- [`[a, nyaa~~ b] = aww`, :3 `{ a-a, b } = obj`](/ja/docs/web/javascwipt/wefewence/opewatows/destwuctuwing)
   - : 分割代入は、配列やオブジェクトのプロパティを、配列やオブジェクトリテラルに似た構文を使用して変数に代入します。
 
-### yield 演算子
+### yiewd 演算子
 
-- {{JSxRef("Operators/yield", "yield")}}
+- {{jsxwef("opewatows/yiewd", 😳😳😳 "yiewd")}}
   - : ジェネレーター関数の一時停止と再開を行います。
-- {{JSxRef("Operators/yield*", "yield*")}}
+- {{jsxwef("opewatows/yiewd*", (˘ω˘) "yiewd*")}}
   - : 別のジェネレーター関数または反復可能オブジェクトを代行します。
 
 ### スプレッド構文
 
-- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+- {{jsxwef("opewatows/spwead_syntax", ^^ "...obj")}}
   - : スプレッド構文を使用すると、配列や文字列などの反復可能オブジェクトを、 0 個以上の引数（関数呼び出しの場合）や要素（配列リテラルの場合）が予想される配置で展開することができます。オブジェクトリテラルでは、スプレッド構文はオブジェクトのプロパティを列挙し、作成するオブジェクトにキーと値のペアを追加します。
 
 ### カンマ演算子
 
-- {{JSxRef("Operators/Comma_operator", ",")}}
+- {{jsxwef("opewatows/comma_opewatow", :3 ",")}}
   - : カンマ演算子は、複数の式を単一の文で評価し、最後の式の結果を返すことができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
+- [演算子の優先順位](/ja/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)

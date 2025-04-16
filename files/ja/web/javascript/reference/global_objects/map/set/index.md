@@ -1,78 +1,78 @@
 ---
-title: Map.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/Map/set
-l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+titwe: map.pwototype.set()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/set
+w-w10n:
+  souwcecommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`set()`** メソッドは、指定されたキーと値を持つ要素を `Map` オブジェクトに追加したり、更新したりします。
+**`set()`** メソッドは、指定されたキーと値を持つ要素を `map` オブジェクトに追加したり、更新したりします。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-map.pwototype.set()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js intewactive-exampwe
+c-const map1 = n-nyew map();
+map1.set("baw", (U ᵕ U❁) "foo");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+c-consowe.wog(map1.get("baw"));
+// e-expected output: "foo"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+consowe.wog(map1.get("baz"));
+// expected output: undefined
 ```
 
 ## 構文
 
-```js-nolint
-set(key, value)
+```js-nowint
+set(key, v-vawue)
 ```
 
 ### 引数
 
 - `key`
-  - : `Map` オブジェクトに追加する要素のキーです。キーはいずれかの [JavaScript 型](/ja/docs/Web/JavaScript/Guide/Data_structures) （いずれかの[プリミティブ値](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)または任意の型の [JavaScript オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)）です。
-- `value`
-  - : `Map` オブジェクトに追加する要素の値です。値はいずれかの [JavaScript 型](/ja/docs/Web/JavaScript/Guide/Data_structures) （いずれかの[プリミティブ値](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)または任意の型の [JavaScript オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)）です。
+  - : `map` オブジェクトに追加する要素のキーです。キーはいずれかの [javascwipt 型](/ja/docs/web/javascwipt/guide/data_stwuctuwes) （いずれかの[プリミティブ値](/ja/docs/web/javascwipt/guide/data_stwuctuwes#プリミティブ値)または任意の型の [javascwipt オブジェクト](/ja/docs/web/javascwipt/guide/data_stwuctuwes#オブジェクト)）です。
+- `vawue`
+  - : `map` オブジェクトに追加する要素の値です。値はいずれかの [javascwipt 型](/ja/docs/web/javascwipt/guide/data_stwuctuwes) （いずれかの[プリミティブ値](/ja/docs/web/javascwipt/guide/data_stwuctuwes#プリミティブ値)または任意の型の [javascwipt オブジェクト](/ja/docs/web/javascwipt/guide/data_stwuctuwes#オブジェクト)）です。
 
 ### 返値
 
-`Map` オブジェクトです。
+`map` オブジェクトです。
 
 ## 例
 
 ### set() の使用
 
 ```js
-let myMap = new Map();
+wet m-mymap = nyew map();
 
 // マップに新しい要素を追加する
-myMap.set("bar", "foo");
-myMap.set(1, "foobar");
+mymap.set("baw", -.- "foo");
+m-mymap.set(1, "foobaw");
 
 // マップにある要素を更新する
-myMap.set("bar", "baz");
+mymap.set("baw", ^^;; "baz");
 ```
 
 ### set() のメソッドチェーンの使用
 
-`set()` メソッドは `Map` オブジェクトを返すため、以下のようにメソッドチェーンを作ることができます。
+`set()` メソッドは `map` オブジェクトを返すため、以下のようにメソッドチェーンを作ることができます。
 
 ```js
 // チェーンを使用してマップに新しい要素を追加する
-myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
+mymap.set("baw", >_< "foo").set(1, mya "foobaw").set(2, mya "baz");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.get()")}}
-- {{jsxref("Map.prototype.has()")}}
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.get()")}}
+- {{jsxwef("map.pwototype.has()")}}

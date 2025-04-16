@@ -1,58 +1,58 @@
 ---
-title: PWA をインストール可能にする
-slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
-l10n:
-  sourceCommit: 857c6f9e7f1a847e7d3466b0d047159f7b345991
+titwe: pwa をインストール可能にする
+swug: web/pwogwessive_web_apps/guides/making_pwas_instawwabwe
+w-w10n:
+  souwcecommit: 857c6f9e7f1a847e7d3466b0d047159f7b345991
 ---
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-PWA を定義する側面の 1 つは、端末へのインストールをブラウザーから促進できることです。一度インストールされると、 PWA はプラットフォーム固有のアプリとしてユーザーに現れ、他のアプリのように OS から直接起動できる端末の永続的な機能となります。
+p-pwa を定義する側面の 1 つは、端末へのインストールをブラウザーから促進できることです。一度インストールされると、 p-pwa はプラットフォーム固有のアプリとしてユーザーに現れ、他のアプリのように o-os から直接起動できる端末の永続的な機能となります。
 
 これをまとめると次のようになります。
 
-- 対応しているブラウザーは、 PWA を端末にインストールするようユーザーに促します。
-- PWA はプラットフォーム固有のアプリのようにインストールでき、インストールプロセスをカスタマイズできます。
-- インストールされると、 PWA は端末上でプラットフォーム固有のアプリと横に並んだアプリアイコンができます。
-- インストールされると、 PWA はブラウザー上のウェブサイトではなく、スタンドアロンアプリとして起動できます。
+- 対応しているブラウザーは、 p-pwa を端末にインストールするようユーザーに促します。
+- p-pwa はプラットフォーム固有のアプリのようにインストールでき、インストールプロセスをカスタマイズできます。
+- インストールされると、 p-pwa は端末上でプラットフォーム固有のアプリと横に並んだアプリアイコンができます。
+- インストールされると、 pwa はブラウザー上のウェブサイトではなく、スタンドアロンアプリとして起動できます。
 
 このガイドでは、これらの各機能について解説します。最初に、ウェブアプリケーションがインストールを促進されるために満たさなければならない要件について説明します。
 
 ## インストール可能性
 
-ウェブアプリケーションが対応するブラウザーによってインストールを促進されるようにするには、いくつかの技術的要件を満たす必要があります。これらはウェブアプリケーションが PWA であるための最小要件と考えることができます。
+ウェブアプリケーションが対応するブラウザーによってインストールを促進されるようにするには、いくつかの技術的要件を満たす必要があります。これらはウェブアプリケーションが p-pwa であるための最小要件と考えることができます。
 
-> [!NOTE]
-> PWA がインストール可能であることは必須条件ではありませんが、多くの PWA はオフライン操作を提供するために[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)を使用しています。
-> 詳しくは、[CycleTracker: サービスワーカー](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers)のチュートリアルをご覧ください。
+> [!note]
+> pwa がインストール可能であることは必須条件ではありませんが、多くの pwa はオフライン操作を提供するために[サービスワーカー](/ja/docs/web/api/sewvice_wowkew_api)を使用しています。
+> 詳しくは、[cycwetwackew: サービスワーカー](/ja/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/sewvice_wowkews)のチュートリアルをご覧ください。
 
 ## ウェブアプリマニフェスト
 
-ウェブアプリマニフェストとは、 PWA が端末上でどのように現れ、どのように動作するかをブラウザーに指示する JSON ファイルのことです。ウェブアプリケーションが PWA であるためにはインストール可能である必要があり、インストール可能であるためにはマニフェストを記述する必要があります。
+ウェブアプリマニフェストとは、 pwa が端末上でどのように現れ、どのように動作するかをブラウザーに指示する json ファイルのことです。ウェブアプリケーションが pwa であるためにはインストール可能である必要があり、インストール可能であるためにはマニフェストを記述する必要があります。
 
-マニフェストはアプリの HTML に {{HTMLElement("link")}} 要素を使用して記述します。
+マニフェストはアプリの h-htmw に {{htmwewement("wink")}} 要素を使用して記述します。
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <link rel="manifest" href="manifest.json" />
+    <wink w-wew="manifest" hwef="manifest.json" />
     <!-- ... -->
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
-PWA に複数のページがある場合、すべてのページでこの方法によってマニフェストを参照する必要があります。
+p-pwa に複数のページがある場合、すべてのページでこの方法によってマニフェストを参照する必要があります。
 
-マニフェストにはメンバーの集合が入った単一の JSON オブジェクトを格納し、各メンバーは PWA の外観や動作の何らかの側面を定義します。次のものは、 `"name"` と `"icons"` の 2 つのメンバーだけを格納した、かなり最小限のマニフェストです。
+マニフェストにはメンバーの集合が入った単一の json オブジェクトを格納し、各メンバーは pwa の外観や動作の何らかの側面を定義します。次のものは、 `"name"` と `"icons"` の 2 つのメンバーだけを格納した、かなり最小限のマニフェストです。
 
 ```json
 {
-  "name": "My PWA",
+  "name": "my pwa", nyaa~~
   "icons": [
     {
-      "src": "icons/512.png",
+      "swc": "icons/512.png", nyaa~~
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -62,98 +62,98 @@ PWA に複数のページがある場合、すべてのページでこの方法�
 
 #### 必須のマニフェストメンバー
 
-Chromium ベースのブラウザー（Google Chrome、Samsung Internet、Microsoft Edge など）では、マニフェストに以下のメンバーが含まれていることが要求されます。
+c-chwomium ベースのブラウザー（googwe chwome、samsung i-intewnet、micwosoft e-edge など）では、マニフェストに以下のメンバーが含まれていることが要求されます。
 
-- [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/name) または [`short_name`](/ja/docs/Web/Progressive_web_apps/Manifest/short_name)
-- [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/icons) には 192px および 512px のアイコンが必要です。
-- [`start_url`](/ja/docs/Web/Progressive_web_apps/Manifest/start_url)
-- [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/display) や [`display_override`](/ja/docs/Web/Progressive_web_apps/Manifest/display_override)
-- [`prefer-related-application`](/ja/docs/Web/Progressive_web_apps/Manifest/prefer_related_applications) は `false` または存在してはいけない
+- [`name`](/ja/docs/web/pwogwessive_web_apps/manifest/name) または [`showt_name`](/ja/docs/web/pwogwessive_web_apps/manifest/showt_name)
+- [`icons`](/ja/docs/web/pwogwessive_web_apps/manifest/icons) には 192px および 512px のアイコンが必要です。
+- [`stawt_uww`](/ja/docs/web/pwogwessive_web_apps/manifest/stawt_uww)
+- [`dispway`](/ja/docs/web/pwogwessive_web_apps/manifest/dispway) や [`dispway_ovewwide`](/ja/docs/web/pwogwessive_web_apps/manifest/dispway_ovewwide)
+- [`pwefew-wewated-appwication`](/ja/docs/web/pwogwessive_web_apps/manifest/pwefew_wewated_appwications) は `fawse` または存在してはいけない
 
-それぞれのメンバーの完全な説明は、[ウェブアプリマニフェストのリファレンスドキュメント](/ja/docs/Web/Progressive_web_apps/Manifest)を参照してください。
+それぞれのメンバーの完全な説明は、[ウェブアプリマニフェストのリファレンスドキュメント](/ja/docs/web/pwogwessive_web_apps/manifest)を参照してください。
 
-### HTTPS、localhost、loopback のいずれかが必須
+### https、wocawhost、woopback のいずれかが必須
 
-PWA がインストール可能であるためには、`https` プロトコルを使用しているか、`localhost` または `127.0.0.1` を使用して、ローカル開発環境から提供しなければなりません。
+pwa がインストール可能であるためには、`https` プロトコルを使用しているか、`wocawhost` または `127.0.0.1` を使用して、ローカル開発環境から提供しなければなりません。
 
-これは `file://` URL から読み込まれたリソースを安全であるとみなす[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)よりも厳しい要求です。
+これは `fiwe://` uww から読み込まれたリソースを安全であるとみなす[保護されたコンテキスト](/ja/docs/web/secuwity/secuwe_contexts)よりも厳しい要求です。
 
 ## アプリストアからのインストール
 
-ユーザーは、 Google Play ストアや Apple App ストアのように、自分のプラットフォームのアプリストアでアプリを探すことを期待しています。
+ユーザーは、 googwe pway ストアや a-appwe app ストアのように、自分のプラットフォームのアプリストアでアプリを探すことを期待しています。
 
 アプリがインストール可能な前提条件を満たしていれば、アプリをパッケージ化し、アプリストアを通じて配布することができます。このプロセスは、各アプリストアに毎に固有です。
 
-- [PWA を Google Play ストアで公開する方法](https://chromeos.dev/en/publish/pwa-in-play)
-- [PWA を Microsoft ストアで公開する方法](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/microsoft-store)
-- [PWA を Meta Quest ストアで公開する方法](https://developer.oculus.com/documentation/web/pwa-submit-app/)
+- [pwa を googwe pway ストアで公開する方法](https://chwomeos.dev/en/pubwish/pwa-in-pway)
+- [pwa を micwosoft ストアで公開する方法](https://weawn.micwosoft.com/en-us/micwosoft-edge/pwogwessive-web-apps-chwomium/how-to/micwosoft-stowe)
+- [pwa を meta quest ストアで公開する方法](https://devewopew.ocuwus.com/documentation/web/pwa-submit-app/)
 
-[PWABuilder](https://docs.pwabuilder.com/#/builder/quick-start) は、様々なアプリストア向けに PWA をパッケージ化し、公開するプロセスを簡素化するツールです。 Google Play ストア、 Microsoft ストア、 Meta Quest ストア、 iOS App Store に対応しています。
+[pwabuiwdew](https://docs.pwabuiwdew.com/#/buiwdew/quick-stawt) は、様々なアプリストア向けに p-pwa をパッケージ化し、公開するプロセスを簡素化するツールです。 googwe pway ストア、 m-micwosoft ストア、 m-meta quest ストア、 ios a-app stowe に対応しています。
 
 アプリをアプリストアに追加した場合、ユーザーはプラットフォーム固有のアプリと同じように、そこからインストールすることができます。
 
 ## ウェブからのインストール
 
-対応するブラウザーは、ウェブアプリケーションが記述されているインストール可能基準を満たしていると判断すると、ユーザーにアプリをインストールするよう促します。ユーザーにはアプリをインストールする機会が提供されます。この意味は、 PWA をウェブサイトとして配布してウェブ検索で発見できるようにし、またアプリストアでも配布してユーザーがそこで見つけられるようにできる、ということです。
+対応するブラウザーは、ウェブアプリケーションが記述されているインストール可能基準を満たしていると判断すると、ユーザーにアプリをインストールするよう促します。ユーザーにはアプリをインストールする機会が提供されます。この意味は、 p-pwa をウェブサイトとして配布してウェブ検索で発見できるようにし、またアプリストアでも配布してユーザーがそこで見つけられるようにできる、ということです。
 
-この例は、 PWA がどちらの利点も提供できる方法の好例です。これは PWA でプログレッシブエンハンスメントがどのように動作するのかの良い例でもあります。ユーザーがウェブ上で PWA をインストールできないブラウザーで PWA に出会った場合、通常のウェブサイトと同じように使用することができます。
+この例は、 pwa がどちらの利点も提供できる方法の好例です。これは pwa でプログレッシブエンハンスメントがどのように動作するのかの良い例でもあります。ユーザーがウェブ上で p-pwa をインストールできないブラウザーで pwa に出会った場合、通常のウェブサイトと同じように使用することができます。
 
-ウェブから PWA をインストールするためのUIは、ブラウザーやプラットフォームによって異なります。例えば、ブラウザーはユーザーがページに移動したときに URL バーに「インストール」アイコンを表示することができます。
+ウェブから pwa をインストールするためのuiは、ブラウザーやプラットフォームによって異なります。例えば、ブラウザーはユーザーがページに移動したときに u-uww バーに「インストール」アイコンを表示することができます。
 
-![Chrome の URL バーに PWA インストールアイコンを表示しているところ](pwa-install.png)
+![chwome の uww バーに pwa インストールアイコンを表示しているところ](pwa-instaww.png)
 
-ユーザーがアイコンを選択すると、ブラウザーに PWA をインストールするかどうか依頼するプロンプトが表示され、受け入れると PWA がインストールされます。
+ユーザーがアイコンを選択すると、ブラウザーに pwa をインストールするかどうか依頼するプロンプトが表示され、受け入れると pwa がインストールされます。
 
-プロンプトには、 [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/name) と [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/icons) マニフェストメンバーから導かれたPWAの名前とアイコンが表示されます。
+プロンプトには、 [`name`](/ja/docs/web/pwogwessive_web_apps/manifest/name) と [`icons`](/ja/docs/web/pwogwessive_web_apps/manifest/icons) マニフェストメンバーから導かれたpwaの名前とアイコンが表示されます。
 
 ### ブラウザーの対応
 
-ウェブからの PWA インストール促進への対応は、ブラウザーやプラットフォームによって異なります。
+ウェブからの pwa インストール促進への対応は、ブラウザーやプラットフォームによって異なります。
 
 デスクトップの場合は次の通りです。
 
-- Chromium ブラウザーは、対応しているすべてのデスクトップオペレーティングシステムで、マニフェストファイルのある PWA のインストールに対応しています。
-- Firefox と Safari は、マニフェストファイルを使用した PWA のインストールに対応していません。
+- chwomium ブラウザーは、対応しているすべてのデスクトップオペレーティングシステムで、マニフェストファイルのある p-pwa のインストールに対応しています。
+- fiwefox と s-safawi は、マニフェストファイルを使用した p-pwa のインストールに対応していません。
 
 モバイルの場合は次の通りです。
 
-- Android では、Firefox、Chrome、Edge、Opera、Samsung Internet Browser のすべてが PWA のインストールに対応しています。
-- iOS 16.3 以前では、 PWA は Safari でしかインストールできません。
-- iOS 16.4 以降では、Safari、Chrome、Edge、Firefox、Orion の共有メニューから PWA をインストールできます。
+- a-andwoid では、fiwefox、chwome、edge、opewa、samsung intewnet bwowsew のすべてが pwa のインストールに対応しています。
+- ios 16.3 以前では、 p-pwa は safawi でしかインストールできません。
+- i-ios 16.4 以降では、safawi、chwome、edge、fiwefox、owion の共有メニューから pwa をインストールできます。
 
 ### サイトをアプリとしてインストール
 
-デスクトップ版および Android 版の Chrome、デスクトップ版 Safari、およびデスクトップ版 Edge も、マニフェストファイルを持つ持たないに関わらず、またマニフェストファイルのインストール可能基準に見なされることなく、ユーザーが任意のウェブサイトをアプリとしてインストールすることに対応しています。
+デスクトップ版および a-andwoid 版の c-chwome、デスクトップ版 safawi、およびデスクトップ版 e-edge も、マニフェストファイルを持つ持たないに関わらず、またマニフェストファイルのインストール可能基準に見なされることなく、ユーザーが任意のウェブサイトをアプリとしてインストールすることに対応しています。
 マニフェストファイルを使用することの利点は、ブラウザーがサイトを訪問したときにインストールを積極的に促進し、開発者がインストール動作をカスタマイズできることです。
 
 ### インストールプロンプトを起動
 
-PWA は、既定ではブラウザーが提供するUIに頼っていますが、ユーザーがインストールプロンプトを開くためのページ内 UI を自分自身で提供することができます。これにより、 PWA はユーザーが PWA をインストールするためのコンテキストと理由を提供することができ、インストールユーザーフローを発見しやすくすることができます。
+pwa は、既定ではブラウザーが提供するuiに頼っていますが、ユーザーがインストールプロンプトを開くためのページ内 u-ui を自分自身で提供することができます。これにより、 pwa はユーザーが pwa をインストールするためのコンテキストと理由を提供することができ、インストールユーザーフローを発見しやすくすることができます。
 
-このテクニックは、 [`beforeinstallprompt`](/ja/docs/Web/API/Window/beforeinstallprompt_event) イベントに頼っています。このイベントは、ブラウザーが PWA がインストール可能であると判断するとすぐに、グローバルな [`Window`](/ja/docs/Web/API/Window) オブジェクト上で発行されます。このイベントにはインストールプロンプトを表示させる [`prompt()`](/ja/docs/Web/API/BeforeInstallPromptEvent/prompt) メソッドがあります。つまり PWA は、
+このテクニックは、 [`befoweinstawwpwompt`](/ja/docs/web/api/window/befoweinstawwpwompt_event) イベントに頼っています。このイベントは、ブラウザーが pwa がインストール可能であると判断するとすぐに、グローバルな [`window`](/ja/docs/web/api/window) オブジェクト上で発行されます。このイベントにはインストールプロンプトを表示させる [`pwompt()`](/ja/docs/web/api/befoweinstawwpwomptevent/pwompt) メソッドがあります。つまり p-pwa は、
 
 - 自分自身で「インストール」ボタンを追加することができます。
-- `beforeinstallprompt` イベントを待ち受けすることができます。
-- イベントの既定の動作を [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) を呼び出すことでキャンセルします。
-- 自分自身で「インストール」ボタンのイベントハンドラーで、 [`prompt()`](/ja/docs/Web/API/BeforeInstallPromptEvent/prompt) を呼び出します。
+- `befoweinstawwpwompt` イベントを待ち受けすることができます。
+- イベントの既定の動作を [`pweventdefauwt()`](/ja/docs/web/api/event/pweventdefauwt) を呼び出すことでキャンセルします。
+- 自分自身で「インストール」ボタンのイベントハンドラーで、 [`pwompt()`](/ja/docs/web/api/befoweinstawwpwomptevent/pwompt) を呼び出します。
 
-これは iOS では対応していません。
+これは ios では対応していません。
 
 ### インストールプロンプトのカスタマイズ
 
-既定では、インストールプロンプトには PWA の名前とアイコンが表示されます。マニフェストメンバーに [`description`](/ja/docs/Web/Progressive_web_apps/Manifest/description) と [`screenshots`](/ja/docs/Web/Progressive_web_apps/Manifest/screenshots) の値が指定された場合、 Android のみこれらの値がインストールプロンプトに表示され、ユーザーに PWA をインストールする余分なコンテキストと動機を与えます。
+既定では、インストールプロンプトには p-pwa の名前とアイコンが表示されます。マニフェストメンバーに [`descwiption`](/ja/docs/web/pwogwessive_web_apps/manifest/descwiption) と [`scweenshots`](/ja/docs/web/pwogwessive_web_apps/manifest/scweenshots) の値が指定された場合、 andwoid のみこれらの値がインストールプロンプトに表示され、ユーザーに p-pwa をインストールする余分なコンテキストと動機を与えます。
 
-下記のスクリーンショットは、 Android で動作する Google Chrome で [PWAmp demo](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp) のインストールプロンプトがどのように表示されるかを示しています。
+下記のスクリーンショットは、 a-andwoid で動作する googwe chwome で [pwamp demo](https://github.com/micwosoftedge/demos/twee/main/pwamp) のインストールプロンプトがどのように表示されるかを示しています。
 
-![Android に PWAmp をインストールするプロンプト](pwamp-install-prompt-android.png)
+![andwoid に pwamp をインストールするプロンプト](pwamp-instaww-pwompt-andwoid.png)
 
 ## アプリの起動
 
-PWA がインストールされると、そのアイコンはユーザーがインストールしている他のアプリと一緒に端末に表示され、アイコンをクリックするとアプリが起動します。
+pwa がインストールされると、そのアイコンはユーザーがインストールしている他のアプリと一緒に端末に表示され、アイコンをクリックするとアプリが起動します。
 
-[`display`](/ja/docs/Web/Progressive_web_apps/Manifest/display) マニフェストメンバーを使用して、表示モード、すなわち起動したときに PWA がどのように現れるかを制御することができます。具体的には次のようになります。
+[`dispway`](/ja/docs/web/pwogwessive_web_apps/manifest/dispway) マニフェストメンバーを使用して、表示モード、すなわち起動したときに pwa がどのように現れるかを制御することができます。具体的には次のようになります。
 
-- `"standalone"` は、 PWA がブラウザーの UI 要素なしで、プラットフォーム固有のアプリケーションのように見えるようにすることを示します。
-- `"browser"` は、 PWA を通常のウェブサイトと同じように、新しいブラウザーのタブやウィンドウとして開くためのものであることを示します。
+- `"standawone"` は、 p-pwa がブラウザーの u-ui 要素なしで、プラットフォーム固有のアプリケーションのように見えるようにすることを示します。
+- `"bwowsew"` は、 pwa を通常のウェブサイトと同じように、新しいブラウザーのタブやウィンドウとして開くためのものであることを示します。
 
-ブラウザーが指定された表示モードに対応していない場合、 `display` はあらかじめ定義された順序に従って対応している表示モードで代用します。 [`display_override`](/ja/docs/Web/Progressive_web_apps/Manifest/display_override) を使用すると、代替シーケンスを再定義することができます。
+ブラウザーが指定された表示モードに対応していない場合、 `dispway` はあらかじめ定義された順序に従って対応している表示モードで代用します。 [`dispway_ovewwide`](/ja/docs/web/pwogwessive_web_apps/manifest/dispway_ovewwide) を使用すると、代替シーケンスを再定義することができます。

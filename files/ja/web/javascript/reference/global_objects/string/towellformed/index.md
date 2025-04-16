@@ -1,18 +1,18 @@
 ---
-title: String.prototype.toWellFormed()
-slug: Web/JavaScript/Reference/Global_Objects/String/toWellFormed
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: stwing.pwototype.towewwfowmed()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/stwing/towewwfowmed
+w-w10n:
+  s-souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toWellFormed()`** は {{jsxref("String")}} 値のメソッドで、この文字列のすべての[孤立サロゲート](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)を Unicode 置換文字 U+FFFD に置き換えた文字列を返します。
+**`towewwfowmed()`** は {{jsxwef("stwing")}} 値のメソッドで、この文字列のすべての[孤立サロゲート](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_文字、unicode_コードポイント、書記素クラスター)を u-unicode 置換文字 u-u+fffd に置き換えた文字列を返します。
 
 ## 構文
 
-```js-nolint
-toWellFormed()
+```js-nowint
+towewwfowmed()
 ```
 
 ### 引数
@@ -21,37 +21,37 @@ toWellFormed()
 
 ### 返値
 
-この文字列のコピーで、孤立サロゲートをすべて Unicode 置換文字 U+FFFD に置き換えた新しい文字列です。 もし `str` が[整形式](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/isWellFormed) であれば、やはり新しい文字列が返されます（基本的には `str` のコピーです）。
+この文字列のコピーで、孤立サロゲートをすべて u-unicode 置換文字 u-u+fffd に置き換えた新しい文字列です。 もし `stw` が[整形式](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/iswewwfowmed) であれば、やはり新しい文字列が返されます（基本的には `stw` のコピーです）。
 
 ## 解説
 
-JavaScript の文字列は UTF-16 でエンコードされています。UTF-16 エンコーディングにはサロゲートペアという概念があり、これは [UTF-16 文字、Unicode コードポイント、書記素クラスター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)で詳しく紹介されています。
+javascwipt の文字列は u-utf-16 でエンコードされています。utf-16 エンコーディングにはサロゲートペアという概念があり、これは [utf-16 文字、unicode コードポイント、書記素クラスター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_文字、unicode_コードポイント、書記素クラスター)で詳しく紹介されています。
 
-`toWellFormed()` はこの文字列のコード単位を走査し、すべての孤立サロゲートを[Unicode 置換文字](<https://ja.wikipedia.org/wiki/特殊用途文字_(Unicodeのブロック)>) U+FFFD <code>&#fffd;</code> に置き換えます。これは、返す文字列が整形式であることを保証し、{{jsxref("encodeURI")}} のような整形式文字列を期待する関数で使用することができます。カスタム実装と比較して、`toWellFormed()` は、エンジンが文字列の内部表現に直接アクセスすることができるので、より効率的です。
+`towewwfowmed()` はこの文字列のコード単位を走査し、すべての孤立サロゲートを[unicode 置換文字](<https://ja.wikipedia.owg/wiki/特殊用途文字_(unicodeのブロック)>) u+fffd <code>&#fffd;</code> に置き換えます。これは、返す文字列が整形式であることを保証し、{{jsxwef("encodeuwi")}} のような整形式文字列を期待する関数で使用することができます。カスタム実装と比較して、`towewwfowmed()` は、エンジンが文字列の内部表現に直接アクセスすることができるので、より効率的です。
 
-整形式ではない文字列が {{domxref("TextEncoder")}} のような特定の文脈で使用された場合、自動的に同じ置換文字を使って整形された文字列に変換されます。孤立サロゲートがレンダリングされるとき、それらは置換文字（疑問符が内側にある菱形）としてもレンダリングされます。
+整形式ではない文字列が {{domxwef("textencodew")}} のような特定の文脈で使用された場合、自動的に同じ置換文字を使って整形された文字列に変換されます。孤立サロゲートがレンダリングされるとき、それらは置換文字（疑問符が内側にある菱形）としてもレンダリングされます。
 
 ## 例
 
-### toWellFormed() の使用
+### towewwfowmed() の使用
 
 ```js
-const strings = [
+const stwings = [
   // 孤立上位サロゲート
-  "ab\uD800",
-  "ab\uD800c",
+  "ab\ud800", ^^;;
+  "ab\ud800c", >_<
   // 孤立下位サロゲート
-  "\uDFFFab",
-  "c\uDFFFab",
+  "\udfffab", mya
+  "c\udfffab", mya
   // 整形式
-  "abc",
-  "ab\uD83D\uDE04c",
+  "abc", 😳
+  "ab\ud83d\ude04c", XD
 ];
 
-for (const str of strings) {
-  console.log(str.toWellFormed());
+fow (const s-stw of stwings) {
+  consowe.wog(stw.towewwfowmed());
 }
-// Logs:
+// wogs:
 // "ab�"
 // "ab�c"
 // "�ab"
@@ -60,32 +60,32 @@ for (const str of strings) {
 // "ab😄c"
 ```
 
-### encodeURI() のエラーを防止
+### encodeuwi() のエラーを防止
 
-{{jsxref("encodeURI")}} は渡された文字列が整形式でない場合、エラーを発生させます。これは `toWellFormed()` によって文字列を最初に整形式文字列に変換しておくことで防ぐことができます。
+{{jsxwef("encodeuwi")}} は渡された文字列が整形式でない場合、エラーを発生させます。これは `towewwfowmed()` によって文字列を最初に整形式文字列に変換しておくことで防ぐことができます。
 
 ```js
-const illFormed = "https://example.com/search?q=\uD800";
+c-const iwwfowmed = "https://exampwe.com/seawch?q=\ud800";
 
-try {
-  encodeURI(illFormed);
+twy {
+  e-encodeuwi(iwwfowmed);
 } catch (e) {
-  console.log(e); // URIError: URI malformed
+  consowe.wog(e); // uwiewwow: u-uwi mawfowmed
 }
 
-console.log(encodeURI(illFormed.toWellFormed())); // "https://example.com/search?q=%EF%BF%BD"
+consowe.wog(encodeuwi(iwwfowmed.towewwfowmed())); // "https://exampwe.com/seawch?q=%ef%bf%bd"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.prototype.toWellFormed` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#well-formed-unicode-strings)
-- {{jsxref("String.prototype.isWellFormed()")}}
-- {{jsxref("String.prototype.normalize()")}}
+- [`stwing.pwototype.towewwfowmed` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#weww-fowmed-unicode-stwings)
+- {{jsxwef("stwing.pwototype.iswewwfowmed()")}}
+- {{jsxwef("stwing.pwototype.nowmawize()")}}

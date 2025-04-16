@@ -1,40 +1,40 @@
 ---
-title: Math.tanh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.tanh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/tanh
+w-w10n:
+  s-souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.tanh()`** 静的メソッドは、数値のハイパーボリックタンジェントを返します。
+**`math.tanh()`** 静的メソッドは、数値のハイパーボリックタンジェントを返します。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚝𝚊𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>−</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>+</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow><mrow><msup><mi mathvariant="normal">e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.tanh}(x)} = \tanh(x) = \frac{\sinh(x)}{\cosh(x)} = \frac{\mathrm{e}^x - \mathrm{e}^{-x}}{\mathrm{e}^x + \mathrm{e}^{-x}} = \frac{\mathrm{e}^{2x} - 1}{\mathrm{e}^{2x}+1}</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mwow><mwow><mo w-wspace="0em" wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚝𝚊𝚗𝚑</mo><mo s-stwetchy="fawse">(</mo><mi>𝚡</mi><mo stwetchy="fawse">)</mo></mwow><mo>=</mo><mo w-wspace="0em" w-wspace="0em">tanh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mfwac><mwow><mo wspace="0em" wspace="0em">sinh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow><mwow><mo wspace="0em" w-wspace="0em">cosh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow></mfwac><mo>=</mo><mfwac><mwow><msup><mi mathvawiant="nowmaw">e</mi><mi>x</mi></msup><mo>−</mo><msup><mi mathvawiant="nowmaw">e</mi><mwow><mo>−</mo><mi>x</mi></mwow></msup></mwow><mwow><msup><mi mathvawiant="nowmaw">e</mi><mi>x</mi></msup><mo>+</mo><msup><mi m-mathvawiant="nowmaw">e</mi><mwow><mo>−</mo><mi>x</mi></mwow></msup></mwow></mfwac><mo>=</mo><mfwac><mwow><msup><mi mathvawiant="nowmaw">e</mi><mwow><mn>2</mn><mi>x</mi></mwow></msup><mo>−</mo><mn>1</mn></mwow><mwow><msup><mi m-mathvawiant="nowmaw">e</mi><mwow><mn>2</mn><mi>x</mi></mwow></msup><mo>+</mo><mn>1</mn></mwow></mfwac></mwow><annotation e-encoding="tex">\mathtt{\opewatowname{math.tanh}(x)} = \tanh(x) = \fwac{\sinh(x)}{\cosh(x)} = \fwac{\mathwm{e}^x - \mathwm{e}^{-x}}{\mathwm{e}^x + \mathwm{e}^{-x}} = \fwac{\mathwm{e}^{2x} - 1}{\mathwm{e}^{2x}+1}</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.tanh()")}}
+{{intewactiveexampwe("javascwipt demo: math.tanh()")}}
 
-```js interactive-example
-console.log(Math.tanh(-1));
-// Expected output: -0.7615941559557649
+```js intewactive-exampwe
+consowe.wog(math.tanh(-1));
+// expected o-output: -0.7615941559557649
 
-console.log(Math.tanh(0));
-// Expected output: 0
+consowe.wog(math.tanh(0));
+// expected output: 0
 
-console.log(Math.tanh(Infinity));
-// Expected output: 1
+consowe.wog(math.tanh(infinity));
+// expected o-output: 1
 
-console.log(Math.tanh(1));
-// Expected output: 0.7615941559557649
+consowe.wog(math.tanh(1));
+// e-expected o-output: 0.7615941559557649
 ```
 
 ## 構文
 
-```js-nolint
-Math.tanh(x)
+```js-nowint
+math.tanh(x)
 ```
 
 ### 引数
@@ -48,33 +48,33 @@ Math.tanh(x)
 
 ## 解説
 
-`tanh()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.tanh()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`tanh()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.tanh()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.tanh() の使用
+### m-math.tanh() の使用
 
 ```js
-Math.tanh(-Infinity); // -1
-Math.tanh(-0); // -0
-Math.tanh(0); // 0
-Math.tanh(1); // 0.7615941559557649
-Math.tanh(Infinity); // 1
+m-math.tanh(-infinity); // -1
+math.tanh(-0); // -0
+math.tanh(0); // 0
+m-math.tanh(1); // 0.7615941559557649
+math.tanh(infinity); // 1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Math.tanh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
+- [`math.tanh` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}

@@ -1,155 +1,155 @@
 ---
-title: SharedArrayBuffer
-slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-l10n:
-  sourceCommit: 673746e15e5052c4fe39944f3d93d2e2d3227b3f
+titwe: shawedawwaybuffew
+swug: w-web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew
+w-w10n:
+  s-souwcecommit: 673746e15e5052c4fe39944f3d93d2e2d3227b3f
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`SharedArrayBuffer`** オブジェクトは、一般的な、生のバイナリーデータバッファーを表すために使用されます。{{jsxref("ArrayBuffer")}} オブジェクトと似ていますが、こちらは共有メモリー上にビューを生成するために使用されます。`SharedArrayBuffer` は[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)ではありません。この点では `ArrayBuffer` が移譲可能であるのとは異なります。
+**`shawedawwaybuffew`** オブジェクトは、一般的な、生のバイナリーデータバッファーを表すために使用されます。{{jsxwef("awwaybuffew")}} オブジェクトと似ていますが、こちらは共有メモリー上にビューを生成するために使用されます。`shawedawwaybuffew` は[移譲可能オブジェクト](/ja/docs/web/api/web_wowkews_api/twansfewabwe_objects)ではありません。この点では `awwaybuffew` が移譲可能であるのとは異なります。
 
 ## 解説
 
-`SharedArrayBuffer` オブジェクトを使用して、クラスター内のあるエージェントから別のエージェント (エージェントとは、ウェブページのメインプログラムまたはそのウェブワーカーのひとつ) へ、{{jsxref("SharedArrayBuffer")}} オブジェクトを使用してメモリーを共有するために、[`postMessage`](/ja/docs/Web/API/Worker/postMessage) と[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用します。
+`shawedawwaybuffew` オブジェクトを使用して、クラスター内のあるエージェントから別のエージェント (エージェントとは、ウェブページのメインプログラムまたはそのウェブワーカーのひとつ) へ、{{jsxwef("shawedawwaybuffew")}} オブジェクトを使用してメモリーを共有するために、[`postmessage`](/ja/docs/web/api/wowkew/postmessage) と[構造化複製](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm)を使用します。
 
-構造化複製アルゴリズムは `SharedArrayBuffer` と、`SharedArrayBuffer` にマッピングされた型付き配列を受け入れます。どちらの場合も `SharedArrayBuffer` オブジェクトは受信者に転送されて、受信側のエージェントで新たなプライベートの `SharedArrayBuffer` オブジェクトになります（{{jsxref("ArrayBuffer")}} と同じように）。しかし、2 つの `SharedArrayBuffer` オブジェクトから参照される共有データブロックは同一のデータブロックであり、あるエージェントによるブロックへの副作用は、結果的に他方のエージェントからも見えます。
+構造化複製アルゴリズムは `shawedawwaybuffew` と、`shawedawwaybuffew` にマッピングされた型付き配列を受け入れます。どちらの場合も `shawedawwaybuffew` オブジェクトは受信者に転送されて、受信側のエージェントで新たなプライベートの `shawedawwaybuffew` オブジェクトになります（{{jsxwef("awwaybuffew")}} と同じように）。しかし、2 つの `shawedawwaybuffew` オブジェクトから参照される共有データブロックは同一のデータブロックであり、あるエージェントによるブロックへの副作用は、結果的に他方のエージェントからも見えます。
 
 ```js
-const sab = new SharedArrayBuffer(1024);
-worker.postMessage(sab);
+c-const sab = n-nyew shawedawwaybuffew(1024);
+w-wowkew.postmessage(sab);
 ```
 
-共有メモリーは、ワーカー内でもメインスレッド内でも同時に生成や更新ができます。システム (CPU、OS、ブラウザー) によっては、変更がすべてのコンテキストに通知されるまでに少々時間がかかります。同期するためには、{{jsxref("Atomics", "不可分", "", 1)}}操作が必要です。
+共有メモリーは、ワーカー内でもメインスレッド内でも同時に生成や更新ができます。システム (cpu、os、ブラウザー) によっては、変更がすべてのコンテキストに通知されるまでに少々時間がかかります。同期するためには、{{jsxwef("atomics", (⑅˘꒳˘) "不可分", òωó "", 1)}}操作が必要です。
 
-`SharedArrayBuffer` オブジェクトは、以下のように一部のウェブ API で使用されています。
+`shawedawwaybuffew` オブジェクトは、以下のように一部のウェブ a-api で使用されています。
 
-- [`WebGLRenderingContext.bufferData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferData)
-- [`WebGLRenderingContext.bufferSubData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferSubData)
-- [`WebGL2RenderingContext.getBufferSubData()`](/ja/docs/Web/API/WebGL2RenderingContext/getBufferSubData)
+- [`webgwwendewingcontext.buffewdata()`](/ja/docs/web/api/webgwwendewingcontext/buffewdata)
+- [`webgwwendewingcontext.buffewsubdata()`](/ja/docs/web/api/webgwwendewingcontext/buffewsubdata)
+- [`webgw2wendewingcontext.getbuffewsubdata()`](/ja/docs/web/api/webgw2wendewingcontext/getbuffewsubdata)
 
 ### セキュリティの要件
 
-共有メモリーと高解像度タイマーは、[Spectre](https://ja.wikipedia.org/wiki/Spectre) の対策として 2018 年の初めに事実上[無効化されました](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。
+共有メモリーと高解像度タイマーは、[spectwe](https://ja.wikipedia.owg/wiki/spectwe) の対策として 2018 年の初めに事実上[無効化されました](https://bwog.moziwwa.owg/secuwity/2018/01/03/mitigations-wanding-new-cwass-timing-attack/)。
 2020 年には、共有メモリーを再び有効にするために、新しい安全なアプローチが標準化されました。
 
-共有メモリーを使用するには、文書が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)内にあり、{{domxref("Window.crossOriginIsolated","オリジン同士が分離されている","","nocode")}}必要があります。
-{{domxref("Window.crossOriginIsolated")}} と {{domxref("WorkerGlobalScope.crossOriginIsolated")}} のプロパティを使用して、文書のオリジン同士が分離されているかどうかを調べることができます。
+共有メモリーを使用するには、文書が[保護されたコンテキスト](/ja/docs/web/secuwity/secuwe_contexts)内にあり、{{domxwef("window.cwossowiginisowated","オリジン同士が分離されている","","nocode")}}必要があります。
+{{domxwef("window.cwossowiginisowated")}} と {{domxwef("wowkewgwobawscope.cwossowiginisowated")}} のプロパティを使用して、文書のオリジン同士が分離されているかどうかを調べることができます。
 
 ```js
-const myWorker = new Worker("worker.js");
+c-const mywowkew = nyew wowkew("wowkew.js");
 
-if (crossOriginIsolated) {
-  const buffer = new SharedArrayBuffer(16);
-  myWorker.postMessage(buffer);
-} else {
-  const buffer = new ArrayBuffer(16);
-  myWorker.postMessage(buffer);
+if (cwossowiginisowated) {
+  const buffew = n-nyew shawedawwaybuffew(16);
+  mywowkew.postmessage(buffew);
+} ewse {
+  const b-buffew = nyew awwaybuffew(16);
+  m-mywowkew.postmessage(buffew);
 }
 ```
 
-オリジン同士が分離されている場合、 `postMessage()` は `SharedArrayBuffer` オブジェクトに例外を発生させなくなり、従ってスレッド間での共有メモリーが利用できるようになります。
+オリジン同士が分離されている場合、 `postmessage()` は `shawedawwaybuffew` オブジェクトに例外を発生させなくなり、従ってスレッド間での共有メモリーが利用できるようになります。
 
-### API の利用可能性
+### api の利用可能性
 
-上記のセキュリティ対策の有無により、各種メモリー共有 API の利用可能性は異なります。
+上記のセキュリティ対策の有無により、各種メモリー共有 api の利用可能性は異なります。
 
-- `Atomics` オブジェクトは常に利用できます。
-- `SharedArrayBuffer` オブジェクトは原則として常に利用できますが、残念ながら、ウェブコンテンツとの互換性のために、上記の 2 つのヘッダーが設定されていない限り、グローバルオブジェクトのコンストラクターは隠されます。この制限は将来的に取り除かれることが期待されています。[`WebAssembly.Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) はまだインスタンスを取得するために使用することができます。
-- 上記の 2 つのヘッダーが設定されていない限り、さまざまな `postMessage()` API が `SharedArrayBuffer` オブジェクトに対して例外を発生することになります。これらが設定された場合は、`Window` オブジェクトと専用ワーカーの `postMessage()` が機能し、メモリーを共有できるようになります。
+- `atomics` オブジェクトは常に利用できます。
+- `shawedawwaybuffew` オブジェクトは原則として常に利用できますが、残念ながら、ウェブコンテンツとの互換性のために、上記の 2 つのヘッダーが設定されていない限り、グローバルオブジェクトのコンストラクターは隠されます。この制限は将来的に取り除かれることが期待されています。[`webassembwy.memowy`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/memowy) はまだインスタンスを取得するために使用することができます。
+- 上記の 2 つのヘッダーが設定されていない限り、さまざまな `postmessage()` api が `shawedawwaybuffew` オブジェクトに対して例外を発生することになります。これらが設定された場合は、`window` オブジェクトと専用ワーカーの `postmessage()` が機能し、メモリーを共有できるようになります。
 
-### WebAssembly の共有メモリー
+### webassembwy の共有メモリー
 
-[`WebAssembly.Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) オブジェクトは、コンストラクターの [`shared`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/Memory#shared) フラグで作成することができます。このフラグを `true` に設定すると、構築されたメモリーオブジェクトは `SharedArrayBuffer` と同様に `postMessage()` を通じてワーカー間で共有でき、メモリーオブジェクトの背後となる [`buffer`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) は `SharedArrayBuffer` となります。したがって、ワーカー間で `SharedArrayBuffer` を共有するための上記の要件は、`WebAssembly.Memory.Buffer` を共有する場合にも当てはまります。
+[`webassembwy.memowy`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/memowy) オブジェクトは、コンストラクターの [`shawed`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/memowy/memowy#shawed) フラグで作成することができます。このフラグを `twue` に設定すると、構築されたメモリーオブジェクトは `shawedawwaybuffew` と同様に `postmessage()` を通じてワーカー間で共有でき、メモリーオブジェクトの背後となる [`buffew`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/memowy/buffew) は `shawedawwaybuffew` となります。したがって、ワーカー間で `shawedawwaybuffew` を共有するための上記の要件は、`webassembwy.memowy.buffew` を共有する場合にも当てはまります。
 
-WebAssembly Threads の提案では、新しい[不可分](https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md#atomic-memory-accesses)命令の集合も定義されています。 `SharedArrayBuffer` とそのメソッドが無条件に有効であるように（そしてスレッド間の共有のみが新しいヘッダー上で制限されます）、 WebAssembly の不可分命令も無条件に許可されます。
+w-webassembwy thweads の提案では、新しい[不可分](https://github.com/webassembwy/thweads/bwob/main/pwoposaws/thweads/ovewview.md#atomic-memowy-accesses)命令の集合も定義されています。 `shawedawwaybuffew` とそのメソッドが無条件に有効であるように（そしてスレッド間の共有のみが新しいヘッダー上で制限されます）、 w-webassembwy の不可分命令も無条件に許可されます。
 
-### SharedArrayBuffer の成長
+### s-shawedawwaybuffew の成長
 
-`SharedArrayBuffer` オブジェクトは {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} コンストラクターを呼び出す際に `maxByteLength` オプションを含めることで成長可能にすることができます。また、`SharedArrayBuffer` の {{jsxref("SharedArrayBuffer/growable", "growable")}} および {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} プロパティを参照すれば、そのサイズが成長可能かどうかを調べることが可能であり、最大サイズは何であるかがわかります。成長可能な `SharedArrayBuffer` には {{jsxref("SharedArrayBuffer/grow", "grow()")}} を呼び出して新しいサイズを割り当てることができます。新しいバイトは 0 に初期化されます。
+`shawedawwaybuffew` オブジェクトは {{jsxwef("shawedawwaybuffew/shawedawwaybuffew", ʘwʘ "shawedawwaybuffew()")}} コンストラクターを呼び出す際に `maxbytewength` オプションを含めることで成長可能にすることができます。また、`shawedawwaybuffew` の {{jsxwef("shawedawwaybuffew/gwowabwe", /(^•ω•^) "gwowabwe")}} および {{jsxwef("shawedawwaybuffew/maxbytewength", ʘwʘ "maxbytewength")}} プロパティを参照すれば、そのサイズが成長可能かどうかを調べることが可能であり、最大サイズは何であるかがわかります。成長可能な `shawedawwaybuffew` には {{jsxwef("shawedawwaybuffew/gwow", σωσ "gwow()")}} を呼び出して新しいサイズを割り当てることができます。新しいバイトは 0 に初期化されます。
 
-これらの機能により、`SharedArrayBuffer` をより効率的に成長させることができます。そうしないと、新しいサイズのバッファーコピーを作成しなければなりません。また、この点において、JavaScript は WebAssembly と同等になります（Wasm のリニアメモリーは [`WebAssembly.Memory.prototype.grow()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) でサイズを変更することができます）。
+これらの機能により、`shawedawwaybuffew` をより効率的に成長させることができます。そうしないと、新しいサイズのバッファーコピーを作成しなければなりません。また、この点において、javascwipt は webassembwy と同等になります（wasm のリニアメモリーは [`webassembwy.memowy.pwototype.gwow()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/memowy/gwow) でサイズを変更することができます）。
 
-セキュリティ上の理由から、`SharedArrayBuffer` はサイズを縮小することはできませんが、大きくすることはできます。
+セキュリティ上の理由から、`shawedawwaybuffew` はサイズを縮小することはできませんが、大きくすることはできます。
 
 ## コンストラクター
 
-- {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}}
-  - : 新しい `SharedArrayBuffer` オブジェクトを生成します。
+- {{jsxwef("shawedawwaybuffew/shawedawwaybuffew", OwO "shawedawwaybuffew()")}}
+  - : 新しい `shawedawwaybuffew` オブジェクトを生成します。
 
 ## 静的プロパティ
 
-- [`SharedArrayBuffer[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species)
-  - : `SharedArrayBuffer` のメソッドから返値を構築する際に使用されるコンストラクターを返します。
+- [`shawedawwaybuffew[symbow.species]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew/symbow.species)
+  - : `shawedawwaybuffew` のメソッドから返値を構築する際に使用されるコンストラクターを返します。
 
 ## インスタンスプロパティ
 
-これらのプロパティは `SharedArrayBuffer.prototype` で定義されており、すべての `SharedArrayBuffer` インスタンスで共有されます。
+これらのプロパティは `shawedawwaybuffew.pwototype` で定義されており、すべての `shawedawwaybuffew` インスタンスで共有されます。
 
-- {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
-  - : 配列のサイズ（バイト単位）。これは配列の構築時に設定され、`SharedArrayBuffer` が成長可能である場合にのみ {{jsxref("SharedArrayBuffer.prototype.grow()")}} メソッドを使用して変更することができます。
-- {{jsxref("Object/constructor", "SharedArrayBuffer.prototype.constructor")}}
-  - : インスタンスオブジェクトを作成したコンストラクター関数です。SharedArrayBuffer`インスタンスの場合、初期値は{{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer")}}コンストラクターです。
-- {{jsxref("SharedArrayBuffer.prototype.growable")}}
-  - : 読み取り専用です。`SharedArrayBuffer` が成長可能な場合は `true` を、そうでない場合は `false` を返します。
-- {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}
-  - : 読み取り専用で、`SharedArrayBuffer` が成長できる最大長をバイト数で指定します。これは配列が構築される際に設定され、変更することはできません。
-- `SharedArrayBuffer.prototype[Symbol.toStringTag]`
-  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"SharedArrayBuffer"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
+- {{jsxwef("shawedawwaybuffew.pwototype.bytewength")}}
+  - : 配列のサイズ（バイト単位）。これは配列の構築時に設定され、`shawedawwaybuffew` が成長可能である場合にのみ {{jsxwef("shawedawwaybuffew.pwototype.gwow()")}} メソッドを使用して変更することができます。
+- {{jsxwef("object/constwuctow", 😳😳😳 "shawedawwaybuffew.pwototype.constwuctow")}}
+  - : インスタンスオブジェクトを作成したコンストラクター関数です。shawedawwaybuffew`インスタンスの場合、初期値は{{jsxwef("shawedawwaybuffew/shawedawwaybuffew", 😳😳😳 "shawedawwaybuffew")}}コンストラクターです。
+- {{jsxwef("shawedawwaybuffew.pwototype.gwowabwe")}}
+  - : 読み取り専用です。`shawedawwaybuffew` が成長可能な場合は `twue` を、そうでない場合は `fawse` を返します。
+- {{jsxwef("shawedawwaybuffew.pwototype.maxbytewength")}}
+  - : 読み取り専用で、`shawedawwaybuffew` が成長できる最大長をバイト数で指定します。これは配列が構築される際に設定され、変更することはできません。
+- `shawedawwaybuffew.pwototype[symbow.tostwingtag]`
+  - : [`[symbow.tostwingtag]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) プロパティの初期値は文字列 `"shawedawwaybuffew"` です。このプロパティは {{jsxwef("object.pwototype.tostwing()")}} で使用されます。
 
 ## インスタンスメソッド
 
-- {{jsxref("SharedArrayBuffer.prototype.grow()")}}
-  - : `SharedArrayBuffer` を指定したサイズ（バイト単位）まで成長させます。
-- {{jsxref("SharedArrayBuffer.prototype.slice()")}}
-  - : 新しい `SharedArrayBuffer` を作成し、その中身をこの `SharedArrayBuffer` の `begin` の位置から `end` の位置の一つ手前までのバイトをコピーして返します。 `begin` または `end` が負の数の場合は、配列の先頭からではなく末尾からの位置で参照します。
+- {{jsxwef("shawedawwaybuffew.pwototype.gwow()")}}
+  - : `shawedawwaybuffew` を指定したサイズ（バイト単位）まで成長させます。
+- {{jsxwef("shawedawwaybuffew.pwototype.swice()")}}
+  - : 新しい `shawedawwaybuffew` を作成し、その中身をこの `shawedawwaybuffew` の `begin` の位置から `end` の位置の一つ手前までのバイトをコピーして返します。 `begin` または `end` が負の数の場合は、配列の先頭からではなく末尾からの位置で参照します。
 
 ## 例
 
-### 新しい SharedArrayBuffer の生成
+### 新しい shawedawwaybuffew の生成
 
 ```js
-const sab = new SharedArrayBuffer(1024);
+const sab = nyew shawedawwaybuffew(1024);
 ```
 
-### SharedArrayBuffer の分割
+### s-shawedawwaybuffew の分割
 
 ```js
-sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
-sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
+sab.swice(); // shawedawwaybuffew { bytewength: 1024 }
+sab.swice(2); // s-shawedawwaybuffew { bytewength: 1022 }
+s-sab.swice(-2); // s-shawedawwaybuffew { bytewength: 2 }
+sab.swice(0, 1); // s-shawedawwaybuffew { b-bytewength: 1 }
 ```
 
-### WebGL バッファー内での使用
+### webgw バッファー内での使用
 
 ```js
-const canvas = document.querySelector("canvas");
-const gl = canvas.getContext("webgl");
-const buffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
+const c-canvas = document.quewysewectow("canvas");
+const gw = canvas.getcontext("webgw");
+c-const buffew = gw.cweatebuffew();
+gw.bindbuffew(gw.awway_buffew, o.O buffew);
+gw.buffewdata(gw.awway_buffew, ( ͡o ω ͡o ) sab, gw.static_dwaw);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Atomics")}}
-- {{jsxref("ArrayBuffer")}}
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-- [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)
-- [共有メモリー – 簡潔なチュートリアル](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md) (TC39 ecmascript-sharedmem の提案)
-- [A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) (hacks.mozilla.org, 2016)
-- [COOP and COEP explained](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit) (the Chrome team, 2020)
-- {{HTTPHeader("Cross-Origin-Opener-Policy")}}
-- {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
-- {{HTTPHeader("Cross-Origin-Resource-Policy")}}
-- {{domxref("Window.crossOriginIsolated")}} および {{domxref("WorkerGlobalScope.crossOriginIsolated")}}
-- [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](https://developer.chrome.com/blog/enabling-shared-array-buffer/) (developer.chrome.com, 2021)
+- {{jsxwef("atomics")}}
+- {{jsxwef("awwaybuffew")}}
+- [javascwipt 型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)
+- [ウェブワーカー](/ja/docs/web/api/web_wowkews_api)
+- [共有メモリー – 簡潔なチュートリアル](https://github.com/tc39/pwoposaw-ecmascwipt-shawedmem/bwob/main/tutowiaw.md) (tc39 ecmascwipt-shawedmem の提案)
+- [a t-taste of javascwipt's nyew pawawwew p-pwimitives](https://hacks.moziwwa.owg/2016/05/a-taste-of-javascwipts-new-pawawwew-pwimitives/) (hacks.moziwwa.owg, (U ﹏ U) 2016)
+- [coop a-and coep e-expwained](https://docs.googwe.com/document/d/1zdwfvftj_9e8jdc8ehuv4zmeu9ysmcitgms9y0gu92k/edit) (the chwome team, (///ˬ///✿) 2020)
+- {{httpheadew("cwoss-owigin-openew-powicy")}}
+- {{httpheadew("cwoss-owigin-embeddew-powicy")}}
+- {{httpheadew("cwoss-owigin-wesouwce-powicy")}}
+- {{domxwef("window.cwossowiginisowated")}} および {{domxwef("wowkewgwobawscope.cwossowiginisowated")}}
+- [shawedawwaybuffew updates in andwoid chwome 88 a-and desktop c-chwome 92](https://devewopew.chwome.com/bwog/enabwing-shawed-awway-buffew/) (devewopew.chwome.com, 2021)

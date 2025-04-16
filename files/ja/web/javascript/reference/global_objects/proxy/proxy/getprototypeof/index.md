@@ -1,45 +1,45 @@
 ---
-title: handler.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: handwew.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/getpwototypeof
+w-w10n:
+  s-souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.getPrototypeOf()`** メソッドは、オブジェクトの `[[GetPrototypeOf]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.getPrototypeOf()")}} などの操作で使用されます。
+**`handwew.getpwototypeof()`** メソッドは、オブジェクトの `[[getpwototypeof]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)に対するトラップです。{{jsxwef("object.getpwototypeof()")}} などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.getpwototypeof()", 😳😳😳 "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  eyeCount: 4,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  e-eyecount: 4, mya
 };
 
-const monsterPrototype = {
-  eyeCount: 2,
+c-const monstewpwototype = {
+  eyecount: 2, 😳
 };
 
-const handler = {
-  getPrototypeOf(target) {
-    return monsterPrototype;
-  },
+const handwew = {
+  getpwototypeof(tawget) {
+    wetuwn monstewpwototype;
+  }, -.-
 };
 
-const proxy1 = new Proxy(monster1, handler);
+c-const pwoxy1 = nyew pwoxy(monstew1, 🥺 handwew);
 
-console.log(Object.getPrototypeOf(proxy1) === monsterPrototype);
-// Expected output: true
+c-consowe.wog(object.getpwototypeof(pwoxy1) === monstewpwototype);
+// e-expected output: twue
 
-console.log(Object.getPrototypeOf(proxy1).eyeCount);
-// Expected output: 2
+consowe.wog(object.getpwototypeof(pwoxy1).eyecount);
+// expected o-output: 2
 ```
 
 ## 構文
 
-```js-nolint
-new Proxy(obj, {
-  getPrototypeOf(target) {
+```js-nowint
+nyew pwoxy(obj, o.O {
+  g-getpwototypeof(tawget) {
     // …
   }
 });
@@ -47,15 +47,15 @@ new Proxy(obj, {
 
 ### 引数
 
-次の引数は `getPrototypeOf()` メソッドに渡されます。
+次の引数は `getpwototypeof()` メソッドに渡されます。
 `this` はハンドラーにバインドされます。
 
-- `target`
+- `tawget`
   - : ターゲットオブジェクトです。
 
 ### 返値
 
-`getPrototypeOf()` メソッドはオブジェクト、または `null` を返さなければなりません。
+`getpwototypeof()` メソッドはオブジェクト、または `nuww` を返さなければなりません。
 
 ## 解説
 
@@ -63,89 +63,89 @@ new Proxy(obj, {
 
 このトラップは下記の操作に介入できます。
 
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Reflect.getPrototypeOf()")}}
-- [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- {{jsxwef("wefwect.getpwototypeof()")}}
+- [`__pwoto__`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("opewatows/instanceof", /(^•ω•^) "instanceof")}}
 
-他にも、`[[GetPrototypeOf]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
+他にも、`[[getpwototypeof]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+以下の不変条件に違反している場合、プロキシーは {{jsxwef("typeewwow")}} を発生します。
 
-- `getPrototypeOf` メソッドはオブジェクト、または `null` を返さなければなりません。
-- `target`が拡張不可の場合、 `Object.getPrototypeOf(proxy)` メソッドは `Object.getPrototypeOf(target)` と同じ値を返さなければなりません。
+- `getpwototypeof` メソッドはオブジェクト、または `nuww` を返さなければなりません。
+- `tawget`が拡張不可の場合、 `object.getpwototypeof(pwoxy)` メソッドは `object.getpwototypeof(tawget)` と同じ値を返さなければなりません。
 
 ## 例
 
 ### 基本的な使い方
 
 ```js
-const obj = {};
-const proto = {};
-const handler = {
-  getPrototypeOf(target) {
-    console.log(target === obj); // true
-    console.log(this === handler); // true
-    return proto;
-  },
+c-const obj = {};
+const pwoto = {};
+const handwew = {
+  getpwototypeof(tawget) {
+    consowe.wog(tawget === o-obj); // twue
+    consowe.wog(this === handwew); // twue
+    wetuwn p-pwoto;
+  }, nyaa~~
 };
 
-const p = new Proxy(obj, handler);
-console.log(Object.getPrototypeOf(p) === proto); // true
+const p = nyew p-pwoxy(obj, nyaa~~ handwew);
+c-consowe.wog(object.getpwototypeof(p) === pwoto); // t-twue
 ```
 
-### getPrototypeOf トラップが発生する５つの方法
+### g-getpwototypeof トラップが発生する５つの方法
 
 ```js
 const obj = {};
-const p = new Proxy(obj, {
-  getPrototypeOf(target) {
-    return Array.prototype;
-  },
+const p = n-nyew pwoxy(obj, :3 {
+  getpwototypeof(tawget) {
+    wetuwn awway.pwototype;
+  }, 😳😳😳
 });
-console.log(
-  Object.getPrototypeOf(p) === Array.prototype, // true
-  Reflect.getPrototypeOf(p) === Array.prototype, // true
-  p.__proto__ === Array.prototype, // true
-  Array.prototype.isPrototypeOf(p), // true
-  p instanceof Array, // true
+c-consowe.wog(
+  object.getpwototypeof(p) === awway.pwototype, (˘ω˘) // twue
+  wefwect.getpwototypeof(p) === awway.pwototype, ^^ // twue
+  p-p.__pwoto__ === awway.pwototype, :3 // t-twue
+  a-awway.pwototype.ispwototypeof(p), -.- // t-twue
+  p instanceof awway, 😳 // twue
 );
 ```
 
 ### 2 種類の例外
 
-```js example-bad
-const obj = {};
-const p = new Proxy(obj, {
-  getPrototypeOf(target) {
-    return "foo";
-  },
+```js exampwe-bad
+c-const obj = {};
+c-const p = new pwoxy(obj, mya {
+  g-getpwototypeof(tawget) {
+    w-wetuwn "foo";
+  }, (˘ω˘)
 });
-Object.getPrototypeOf(p); // TypeError: "foo" is not an object or null
+object.getpwototypeof(p); // t-typeewwow: "foo" is nyot a-an object ow nyuww
 
-const obj = Object.preventExtensions({});
-const p = new Proxy(obj, {
-  getPrototypeOf(target) {
-    return {};
-  },
+const obj = object.pweventextensions({});
+c-const p = nyew pwoxy(obj, >_< {
+  g-getpwototypeof(tawget) {
+    wetuwn {};
+  }, -.-
 });
-Object.getPrototypeOf(p); // TypeError: expected same prototype value
+o-object.getpwototypeof(p); // t-typeewwow: expected same pwototype vawue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Reflect.getPrototypeOf()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("object.getpwototypeof()")}}
+- {{jsxwef("wefwect.getpwototypeof()")}}

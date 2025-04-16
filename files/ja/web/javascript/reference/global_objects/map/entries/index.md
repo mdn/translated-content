@@ -1,35 +1,35 @@
 ---
-title: Map.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Map/entries
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: map.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/entwies
+w-w10n:
+  s-souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`entries()`** は {{jsxref("Map")}} インスタンスのメソッドで、挿入順でこの `Map` オブジェクトのそれぞれの要素に対する `[key, value]` のペアを含む新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
+**`entwies()`** は {{jsxwef("map")}} インスタンスのメソッドで、挿入順でこの `map` オブジェクトのそれぞれの要素に対する `[key, mya vawue]` のペアを含む新しい[イテレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.entries()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.entwies()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const map1 = n-nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map1.set("0", 😳 "foo");
+m-map1.set(1, XD "baw");
 
-const iterator1 = map1.entries();
+c-const itewatow1 = map1.entwies();
 
-console.log(iterator1.next().value);
-// Expected output: Array ["0", "foo"]
+consowe.wog(itewatow1.next().vawue);
+// expected output: awway ["0", :3 "foo"]
 
-console.log(iterator1.next().value);
-// Expected output: Array [1, "bar"]
+c-consowe.wog(itewatow1.next().vawue);
+// expected output: awway [1, 😳😳😳 "baw"]
 ```
 
 ## 構文
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 引数
@@ -38,34 +38,34 @@ entries()
 
 ### 返値
 
-新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)です。
 
 ## 例
 
-### entries() の使用
+### entwies() の使用
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+c-const mymap = nyew map();
+mymap.set("0", -.- "foo");
+mymap.set(1, ( ͡o ω ͡o ) "baw");
+mymap.set({}, rawr x3 "baz");
 
-const mapIter = myMap.entries();
+c-const mapitew = mymap.entwies();
 
-console.log(mapIter.next().value); // ["0", "foo"]
-console.log(mapIter.next().value); // [1, "bar"]
-console.log(mapIter.next().value); // [Object, "baz"]
+c-consowe.wog(mapitew.next().vawue); // ["0", nyaa~~ "foo"]
+c-consowe.wog(mapitew.next().vawue); // [1, /(^•ω•^) "baw"]
+consowe.wog(mapitew.next().vawue); // [object, rawr "baz"]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
+- {{jsxwef("map.pwototype.keys()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

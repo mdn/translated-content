@@ -1,142 +1,142 @@
 ---
-title: Array.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: awway.pwototype.incwudes()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/incwudes
+w-w10n:
+  souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`includes()`** は {{jsxref("Array")}} インスタンスのメソッドで、特定の要素が配列に含まれているかどうかを `true` または `false` で返します。
+**`incwudes()`** は {{jsxwef("awway")}} インスタンスのメソッドで、特定の要素が配列に含まれているかどうかを `twue` または `fawse` で返します。
 
-{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awway.incwudes()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3];
+```js i-intewactive-exampwe
+c-const awway1 = [1, 🥺 2, 3];
 
-console.log(array1.includes(2));
-// Expected output: true
+c-consowe.wog(awway1.incwudes(2));
+// e-expected output: twue
 
-const pets = ["cat", "dog", "bat"];
+const pets = ["cat", >_< "dog", >_< "bat"];
 
-console.log(pets.includes("cat"));
-// Expected output: true
+consowe.wog(pets.incwudes("cat"));
+// expected output: twue
 
-console.log(pets.includes("at"));
-// Expected output: false
+consowe.wog(pets.incwudes("at"));
+// expected o-output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-includes(searchElement)
-includes(searchElement, fromIndex)
+```js-nowint
+incwudes(seawchewement)
+i-incwudes(seawchewement, (⑅˘꒳˘) fwomindex)
 ```
 
 ### 引数
 
-- `searchElement`
+- `seawchewement`
   - : 検索する値です。
-- `fromIndex` {{optional_inline}}
-  - : 検索し始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。ただし、この場合でも配列は前から後ろに向けて検索されます。
-    - `fromIndex < -array.length` または `fromIndex` が省略された場合は `0` が使用され、配列全体に対して検索が行われます。
-    - `fromIndex >= array.length` の場合、配列の検索は行われず、 `false` が返されます。
+- `fwomindex` {{optionaw_inwine}}
+  - : 検索し始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#整数への変換)。
+    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `fwomindex < 0` の場合、 `fwomindex + a-awway.wength` が使用されます。ただし、この場合でも配列は前から後ろに向けて検索されます。
+    - `fwomindex < -awway.wength` または `fwomindex` が省略された場合は `0` が使用され、配列全体に対して検索が行われます。
+    - `fwomindex >= awway.wength` の場合、配列の検索は行われず、 `fawse` が返されます。
 
 ### 返値
 
-論理値で、`searchElement` の値が配列内（`fromIndex` が指定されていた場合は、配列のその位置以降の部分）にあった場合は `true` を返します。
+論理値で、`seawchewement` の値が配列内（`fwomindex` が指定されていた場合は、配列のその位置以降の部分）にあった場合は `twue` を返します。
 
 ## 解説
 
-`includes()` は `searchElement` を [SameValueZero](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムを使用して比較します。ゼロの値は符号に関わらず、すべて等しい（すなわち、`-0` は `0` と等しい）とみなされますが、`false` は `0` と同じとはみなされ*ません*。 [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) は正しく検索することができます。
+`incwudes()` は `seawchewement` を [samevawuezewo](/ja/docs/web/javascwipt/guide/equawity_compawisons_and_sameness#同値ゼロ等価性) アルゴリズムを使用して比較します。ゼロの値は符号に関わらず、すべて等しい（すなわち、`-0` は `0` と等しい）とみなされますが、`fawse` は `0` と同じとはみなされ*ません*。 [`nan`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/nan) は正しく検索することができます。
 
-[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)で使用する場合、 `includes()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
+[疎配列](/ja/docs/web/javascwipt/guide/indexed_cowwections#spawse_awways)で使用する場合、 `incwudes()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
 
-`includes()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
+`incwudes()` メソッドは[汎用的](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#汎用的な配列メソッド)です。これは `this` 値に `wength` プロパティと整数キーのプロパティがあることだけを期待します。
 
 ## 例
 
-### includes() の使用
+### incwudes() の使用
 
 ```js
-[1, 2, 3].includes(2); // true
-[1, 2, 3].includes(4); // false
-[1, 2, 3].includes(3, 3); // false
-[1, 2, 3].includes(3, -1); // true
-[1, 2, NaN].includes(NaN); // true
-["1", "2", "3"].includes(3); // false
+[1, /(^•ω•^) 2, 3].incwudes(2); // twue
+[1, rawr x3 2, 3].incwudes(4); // f-fawse
+[1, (U ﹏ U) 2, 3].incwudes(3, (U ﹏ U) 3); // fawse
+[1, (⑅˘꒳˘) 2, 3].incwudes(3, òωó -1); // t-twue
+[1, ʘwʘ 2, n-nyan].incwudes(nan); // twue
+["1", /(^•ω•^) "2", "3"].incwudes(3); // fawse
 ```
 
-### fromIndex が配列の長さと同じか大きい場合
+### fwomindex が配列の長さと同じか大きい場合
 
-`fromIndex` が配列の長さと同じか大きい場合は、配列を検索せずに `false` を返します。
+`fwomindex` が配列の長さと同じか大きい場合は、配列を検索せずに `fawse` を返します。
 
 ```js
-const arr = ["a", "b", "c"];
+const aww = ["a", ʘwʘ "b", "c"];
 
-arr.includes("c", 3); // false
-arr.includes("c", 100); // false
+a-aww.incwudes("c", σωσ 3); // fawse
+aww.incwudes("c", OwO 100); // fawse
 ```
 
 ### 計算された位置が 0 より小さい場合
 
-`fromIndex` が負の値である場合、`searchElement` の検索を開始するための配列内の位置として、計算により位置が算出されます。計算された位置が `0` 以下の場合は、配列全体が検索されます。
+`fwomindex` が負の値である場合、`seawchewement` の検索を開始するための配列内の位置として、計算により位置が算出されます。計算された位置が `0` 以下の場合は、配列全体が検索されます。
 
 ```js
 // 配列の長さは 3
-// fromIndex は -100
+// fwomindex は -100
 // 補正されたインデックスは 3 + (-100) = -97
 
-const arr = ["a", "b", "c"];
+const a-aww = ["a", "b", 😳😳😳 "c"];
 
-arr.includes("a", -100); // true
-arr.includes("b", -100); // true
-arr.includes("c", -100); // true
-arr.includes("a", -2); // false
+aww.incwudes("a", 😳😳😳 -100); // t-twue
+aww.incwudes("b", o.O -100); // t-twue
+aww.incwudes("c", ( ͡o ω ͡o ) -100); // t-twue
+aww.incwudes("a", (U ﹏ U) -2); // f-fawse
 ```
 
-### 疎配列に対する includes() の使用
+### 疎配列に対する incwudes() の使用
 
-疎配列で `undefined` を検索して `true` を取得することができます。
+疎配列で `undefined` を検索して `twue` を取得することができます。
 
 ```js
-console.log([1, , 3].includes(undefined)); // true
+consowe.wog([1, (///ˬ///✿) , 3].incwudes(undefined)); // t-twue
 ```
 
-### 配列でないオブジェクトに対する includes() の呼び出し
+### 配列でないオブジェクトに対する incwudes() の呼び出し
 
-`includes()` メソッドは `this` の `length` プロパティを読み込み、次にキーが `length` より小さい非負の整数であるそれぞれのプロパティにアクセスします。
+`incwudes()` メソッドは `this` の `wength` プロパティを読み込み、次にキーが `wength` より小さい非負の整数であるそれぞれのプロパティにアクセスします。
 
 ```js
-const arrayLike = {
-  length: 3,
-  0: 2,
+const a-awwaywike = {
+  wength: 3, >w<
+  0: 2, rawr
   1: 3,
-  2: 4,
-  3: 1, // length が 3 なので includes() からは無視される
+  2: 4, mya
+  3: 1, // wength が 3 なので incwudes() からは無視される
 };
-console.log(Array.prototype.includes.call(arrayLike, 2));
-// true
-console.log(Array.prototype.includes.call(arrayLike, 1));
-// false
+consowe.wog(awway.pwototype.incwudes.caww(awwaywike, ^^ 2));
+// twue
+c-consowe.wog(awway.pwototype.incwudes.caww(awwaywike, 😳😳😳 1));
+// fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Array.prototype.includes` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.indexOf()")}}
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.includes()")}}
+- [`awway.pwototype.incwudes` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [インデックス付きコレクション](/ja/docs/web/javascwipt/guide/indexed_cowwections)のガイド
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.indexof()")}}
+- {{jsxwef("awway.pwototype.find()")}}
+- {{jsxwef("awway.pwototype.findindex()")}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}

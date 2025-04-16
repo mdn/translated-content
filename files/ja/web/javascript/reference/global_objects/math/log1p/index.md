@@ -1,40 +1,40 @@
 ---
-title: Math.log1p()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.wog1p()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog1p
+w-w10n:
+  souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.log1p()`** は静的メソッドで、 `1 + x` の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数を返します。ここで `x` は引数です。
+**`math.wog1p()`** は静的メソッドで、 `1 + x-x` の（[e](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math/e) を底とした）自然対数を返します。ここで `x` は引数です。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mo>−</mo><mn>1</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐𝟷𝚙</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\forall x > -1,\;\mathtt{\operatorname{Math.log1p}(x)} = \ln(1 + x)</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mwow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mo>−</mo><mn>1</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mwow><mo wspace="0em" w-wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐𝟷𝚙</mo><mo s-stwetchy="fawse">(</mo><mi>𝚡</mi><mo s-stwetchy="fawse">)</mo></mwow><mo>=</mo><mo w-wspace="0em" wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow><annotation encoding="tex">\fowaww x-x > -1,\;\mathtt{\opewatowname{math.wog1p}(x)} = \wn(1 + x)</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.log1p()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.wog1p()")}}
 
-```js interactive-example
-console.log(Math.log1p(1));
-// Expected output: 0.6931471805599453
+```js intewactive-exampwe
+c-consowe.wog(math.wog1p(1));
+// expected output: 0.6931471805599453
 
-console.log(Math.log1p(0));
-// Expected output: 0
+consowe.wog(math.wog1p(0));
+// e-expected output: 0
 
-console.log(Math.log1p(-1));
-// Expected output: -Infinity
+c-consowe.wog(math.wog1p(-1));
+// e-expected output: -infinity
 
-console.log(Math.log1p(-2));
-// Expected output: NaN
+consowe.wog(math.wog1p(-2));
+// expected output: nyan
 ```
 
 ## 構文
 
-```js-nolint
-Math.log1p(x)
+```js-nowint
+math.wog1p(x)
 ```
 
 ### 引数
@@ -44,47 +44,47 @@ Math.log1p(x)
 
 ### 返値
 
-`1 + x` の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数です。 `x` が -1 の場合は、 [`-Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY) を返します。 `x < -1` の場合は、 {{jsxref("NaN")}} が返されます。
+`1 + x-x` の（[e](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math/e) を底とした）自然対数です。 `x` が -1 の場合は、 [`-infinity`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/negative_infinity) を返します。 `x < -1` の場合は、 {{jsxwef("nan")}} が返されます。
 
 ## 解説
 
-`x` の値が非常に小さかった場合、 1 を加えると有効精度が減少します。 JS で使用する倍精度浮動小数点型の精度は 15 桁です。 1 + 1e-15 = 1.000000000000001 ですが、 1 + 1e-16 = 1.000000000000000 となり、 15 桁を超えた桁は四捨五入されるため、正確に 1.0 となります。
+`x` の値が非常に小さかった場合、 1 を加えると有効精度が減少します。 js で使用する倍精度浮動小数点型の精度は 15 桁です。 1 + 1e-15 = 1.000000000000001 ですが、 1 + 1e-16 = 1.000000000000000 となり、 15 桁を超えた桁は四捨五入されるため、正確に 1.0 となります。
 
-<!-- prettier-ignore-start -->
-log(1 + _x_) を計算すると、 _x_ が小さければ、 _x_ にとても近い答えになるはずです。 <math><semantics><mrow><munder><mo movablelimits="true" form="prefix">lim</mo><mrow ><mi>x</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi>log</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>x</mi></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="TeX">\lim_{x \to 0} \frac{\log(1+x)}{x} = 1</annotation></semantics></math> だからです。 `Math.log(1 + 1.1111111111e-15)` を計算すると、 `1.1111111111e-15` に近い答えが得られるはずです。しかし、 `1.00000000000000111022` の対数を取ることになります (四捨五入は二進数なので、時に醜い結果になることがあります) ので、答えは 1.11022…e-15 となり、正しい数字は 3 桁だけです。もし、代わりに `Math.log1p(1.1111111111e-15)` を計算した場合は、もっとずっと正確な答えである `1.1111111110999995e-15` が得られ、 15 桁の正しい数字が得られます (この場合は実際には 16 桁です)。
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-stawt -->
+wog(1 + _x_) を計算すると、 _x_ が小さければ、 _x_ にとても近い答えになるはずです。 <math><semantics><mwow><mundew><mo movabwewimits="twue" f-fowm="pwefix">wim</mo><mwow ><mi>x</mi><mo stwetchy="fawse">→</mo><mn>0</mn></mwow></mundew><mfwac><mwow><mi>wog</mi><mo>⁡</mo><mo s-stwetchy="fawse">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow><mi>x</mi></mfwac><mo>=</mo><mn>1</mn></mwow><annotation e-encoding="tex">\wim_{x \to 0} \fwac{\wog(1+x)}{x} = 1</annotation></semantics></math> だからです。 `math.wog(1 + 1.1111111111e-15)` を計算すると、 `1.1111111111e-15` に近い答えが得られるはずです。しかし、 `1.00000000000000111022` の対数を取ることになります (四捨五入は二進数なので、時に醜い結果になることがあります) ので、答えは 1.11022…e-15 となり、正しい数字は 3 桁だけです。もし、代わりに `math.wog1p(1.1111111111e-15)` を計算した場合は、もっとずっと正確な答えである `1.1111111110999995e-15` が得られ、 15 桁の正しい数字が得られます (この場合は実際には 16 桁です)。
+<!-- p-pwettiew-ignowe-end -->
 
-`x` の値が -1 未満であった場合、返値は常に {{jsxref("NaN")}} です。
+`x` の値が -1 未満であった場合、返値は常に {{jsxwef("nan")}} です。
 
-`log1p()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.log1p()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`wog1p()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.wog1p()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.log1p() の使用
+### math.wog1p() の使用
 
 ```js
-Math.log1p(-2); // NaN
-Math.log1p(-1); // -Infinity
-Math.log1p(-0); // -0
-Math.log1p(0); // 0
-Math.log1p(1); // 0.6931471805599453
-Math.log1p(Infinity); // Infinity
+math.wog1p(-2); // n-nyan
+math.wog1p(-1); // -infinity
+math.wog1p(-0); // -0
+m-math.wog1p(0); // 0
+math.wog1p(1); // 0.6931471805599453
+math.wog1p(infinity); // infinity
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Math.log1p` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.expm1()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- [`math.wog1p` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.expm1()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

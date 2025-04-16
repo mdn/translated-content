@@ -1,36 +1,36 @@
 ---
-title: "Feature-Policy: accelerometer"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/accelerometer
-original_slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
+titwe: "featuwe-powicy: accewewometew"
+s-swug: w-web/http/wefewence/headews/pewmissions-powicy/accewewometew
+o-owiginaw_swug: w-web/http/headews/pewmissions-powicy/accewewometew
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{httpsidebaw}} {{seecompattabwe}}
 
-HTTP の {{HTTPHeader('Feature-Policy')}} ヘッダーにおける `accelerometer` ディレクティブは、現在の文書が {{domxref('Accelerometer')}} インターフェイスを通じて端末の加速度に関する情報を収集することを許可するかどうかを制御します。
+h-http の {{httpheadew('featuwe-powicy')}} ヘッダーにおける `accewewometew` ディレクティブは、現在の文書が {{domxwef('accewewometew')}} インターフェイスを通じて端末の加速度に関する情報を収集することを許可するかどうかを制御します。
 
 ## 構文
 
 ```
-Feature-Policy: accelerometer <allowlist>;
+f-featuwe-powicy: a-accewewometew <awwowwist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- \<awwowwist>
+  - : この機能を許可するオリジンのリストです。 [`featuwe-powicy`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#%e6%a7%8b%e6%96%87) を参照してください。
 
 ## 既定のポリシー
 
-この機能の `allowlist` 値の既定値は `'self'` です。
+この機能の `awwowwist` 値の既定値は `'sewf'` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader('Feature-Policy')}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- {{httpheadew('featuwe-powicy')}} ヘッダー
+- [機能ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)
+- [機能ポリシーの使用](/ja/docs/web/http/guides/featuwe_powicy/using_featuwe_powicy)

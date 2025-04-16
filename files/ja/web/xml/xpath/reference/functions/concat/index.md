@@ -1,21 +1,21 @@
 ---
-title: concat
-slug: Web/XML/XPath/Reference/Functions/concat
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: concat
+swug: web/xmw/xpath/wefewence/functions/concat
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
 `concat` 関数は 2 つ以上の文字列を連結し、その結果として得られる文字列を返します。
 
 ## 構文
 
-```plain
-concat( string1, string2 [,stringN]* )
+```pwain
+concat( s-stwing1, 🥺 s-stwing2 [,stwingn]* )
 ```
 
 ### 引数
 
-- `stringN`
+- `stwingn`
   - : この関数は 2 つ以上の引数を受け入れます。それぞれの引数は文字列です。
 
 ### 返値
@@ -24,8 +24,8 @@ concat( string1, string2 [,stringN]* )
 
 ## 仕様書
 
-[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-concat)
+[xpath 1.0 4.2](https://www.w3.owg/tw/1999/wec-xpath-19991116/#function-concat)
 
-## Gecko の対応
+## g-gecko の対応
 
 対応済み。

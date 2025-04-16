@@ -1,55 +1,55 @@
 ---
-title: Access-Control-Request-Headers
-slug: Web/HTTP/Reference/Headers/Access-Control-Request-Headers
-original_slug: Web/HTTP/Headers/Access-Control-Request-Headers
+titwe: access-contwow-wequest-headews
+swug: web/http/wefewence/headews/access-contwow-wequest-headews
+o-owiginaw_swug: w-web/http/headews/access-contwow-wequest-headews
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Access-Control-Request-Headers`** リクエストヘッダーは{{glossary("preflight request", "プリフライトリクエスト")}}を発行する際にブラウザーが使用し、実際のリクエストが行う際にどの [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)を使用するかをサーバーに知らせます。
+**`access-contwow-wequest-headews`** リクエストヘッダーは{{gwossawy("pwefwight w-wequest", rawr "プリフライトリクエスト")}}を発行する際にブラウザーが使用し、実際のリクエストが行う際にどの [http ヘッダー](/ja/docs/web/http/wefewence/headews)を使用するかをサーバーに知らせます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Request header", "リクエストヘッダー")}}
+        {{gwossawy("wequest h-headew", σωσ "リクエストヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew n-nyame", σωσ "禁止ヘッダー名")}}
       </th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Access-Control-Request-Headers: <header-name>, <header-name>, ...
+access-contwow-wequest-headews: <headew-name>, >_< <headew-name>, :3 ...
 ```
 
 ## ディレクティブ
 
-- \<header-name>
-  - : リクエストに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)のカンマ区切りのリスト。
+- \<headew-name>
+  - : リクエストに含まれる [http ヘッダー](/ja/docs/web/http/wefewence/headews)のカンマ区切りのリスト。
 
 ## 例
 
 ```
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+access-contwow-wequest-headews: x-pingothew, (U ﹏ U) content-type
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Access-Control-Request-Method")}}
+- {{httpheadew("access-contwow-wequest-method")}}

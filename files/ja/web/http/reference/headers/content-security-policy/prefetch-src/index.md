@@ -1,48 +1,48 @@
 ---
-title: "CSP: prefetch-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/prefetch-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: pwefetch-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/pwefetch-swc
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/pwefetch-swc
+w-w10n:
+  s-souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{httpsidebaw}}{{seecompattabwe}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`prefetch-src`** ディレクティブは、事前読み込みまたは事前描画することができる有効なリソースを指定します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`pwefetch-swc`** ディレクティブは、事前読み込みまたは事前描画することができる有効なリソースを指定します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th s-scope="wow">csp バージョン</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} による代替</th>
+    </tw>
+    <tw>
+      <th scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch diwective", -.- "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{csp("defauwt-swc")}} による代替</th>
       <td>
-        あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。
+        あり。このディレクティブがない場合、ユーザーエージェントは <code>defauwt-swc</code> ディレクティブを探します。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`prefetch-src` ポリシーには、 1 つ以上のソースが許可されています。
+`pwefetch-swc` ポリシーには、 1 つ以上のソースが許可されています。
 
 ```http
-Content-Security-Policy: prefetch-src <source>;
-Content-Security-Policy: prefetch-src <source> <source>;
+content-secuwity-powicy: pwefetch-swc <souwce>;
+c-content-secuwity-powicy: pwefetch-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch diwective", ^^;; "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
@@ -51,24 +51,24 @@ Content-Security-Policy: prefetch-src <source> <source>;
 次のコンテンツセキュリティポリシーを持つページがあったとします。
 
 ```http
-Content-Security-Policy: prefetch-src https://example.com/
+content-secuwity-powicy: p-pwefetch-swc https://exampwe.com/
 ```
 
-次のコードで読み込もうとすると、指定された URL が `prefetch-src` のソース一覧にないので、ネットワークエラーになります。
+次のコードで読み込もうとすると、指定された u-uww が `pwefetch-swc` のソース一覧にないので、ネットワークエラーになります。
 
-```html
-<link rel="prefetch" href="https://example.org/" />
-<link rel="prerender" href="https://example.org/" />
+```htmw
+<wink wew="pwefetch" hwef="https://exampwe.owg/" />
+<wink wew="pwewendew" h-hwef="https://exampwe.owg/" />
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
+- {{httpheadew("content-secuwity-powicy")}}

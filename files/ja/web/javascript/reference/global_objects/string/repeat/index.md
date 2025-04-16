@@ -1,33 +1,33 @@
 ---
-title: String.prototype.repeat()
-slug: Web/JavaScript/Reference/Global_Objects/String/repeat
-l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+titwe: stwing.pwototype.wepeat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepeat
+w-w10n:
+  souwcecommit: a-a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`repeat()`** メソッドは、呼び出し元の文字列を指定した数だけコピーして結合した新しい文字列を構築して返します。
+**`wepeat()`** メソッドは、呼び出し元の文字列を指定した数だけコピーして結合した新しい文字列を構築して返します。
 
-{{InteractiveExample("JavaScript Demo: String.repeat()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.wepeat()", (U ﹏ U) "showtew")}}
 
-```js interactive-example
-const mood = "Happy! ";
+```js i-intewactive-exampwe
+c-const mood = "happy! ";
 
-console.log(`I feel ${mood.repeat(3)}`);
-// Expected output: "I feel Happy! Happy! Happy! "
+c-consowe.wog(`i f-feew ${mood.wepeat(3)}`);
+// e-expected output: "i feew happy! -.- happy! happy! (ˆ ﻌ ˆ)♡ "
 ```
 
 ## 構文
 
-```js-nolint
-repeat(count)
+```js-nowint
+wepeat(count)
 ```
 
 ### 引数
 
 - `count`
-  - : `0` から{{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "正の無限大")}}までの間の整数で、文字列を繰り返す数を示します。
+  - : `0` から{{jsxwef("gwobaw_objects/numbew/positive_infinity", "正の無限大")}}までの間の整数で、文字列を繰り返す数を示します。
 
 ### 返値
 
@@ -35,34 +35,34 @@ repeat(count)
 
 ### 例外
 
-- {{jsxref("RangeError")}}
+- {{jsxwef("wangeewwow")}}
   - : `count` が負の数であるか、 `count` が文字列の最大長を超えた場合に発生します。
 
 ## 例
 
-### repeat() の使用
+### wepeat() の使用
 
 ```js
-"abc".repeat(-1); // RangeError
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' （小数点以下は切り捨てられます）
-"abc".repeat(1 / 0); // RangeError
+"abc".wepeat(-1); // w-wangeewwow
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc' （小数点以下は切り捨てられます）
+"abc".wepeat(1 / 0); // wangeewwow
 
-({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
-// 'abcabc' （repeat() は汎用メソッドです）
+({ tostwing: () => "abc", (⑅˘꒳˘) w-wepeat: stwing.pwototype.wepeat }).wepeat(2);
+// 'abcabc' （wepeat() は汎用メソッドです）
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.prototype.repeat` のポリフィル )(`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.concat()")}}
+- [`stwing.pwototype.wepeat` のポリフィル )(`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.concat()")}}

@@ -1,52 +1,52 @@
 ---
-title: serviceworker
-slug: Web/Progressive_web_apps/Manifest/Reference/serviceworker
-l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+titwe: sewvicewowkew
+swug: web/pwogwessive_web_apps/manifest/wefewence/sewvicewowkew
+w-w10n:
+  s-souwcecommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{quickwinkswithsubpages("/ja/docs/web/pwogwessive_web_apps/manifest/wefewence")}}{{seecompattabwe}}{{non-standawd_headew}}
 
-`serviceworker` メンバーは、商業ウェブサイトで指定された決済方法の決済メカニズムを提供するウェブベースの決済アプリケーションを実行するために、ジャストインタイム (JIT) でインストールされ、登録されたサービスワーカーを指定します。詳細は、{{domxref("Payment Handler API", "決済ハンドラー API", "", "nocode")}} を参照してください。
+`sewvicewowkew` メンバーは、商業ウェブサイトで指定された決済方法の決済メカニズムを提供するウェブベースの決済アプリケーションを実行するために、ジャストインタイム (jit) でインストールされ、登録されたサービスワーカーを指定します。詳細は、{{domxwef("payment h-handwew api", -.- "決済ハンドラー a-api", ^^;; "", "nocode")}} を参照してください。
 
 ### 値
 
-`serviceworker` オブジェクトは以下の値を持つことができます。
+`sewvicewowkew` オブジェクトは以下の値を持つことができます。
 
-- `scope` {{experimental_inline}} {{non-standard_inline}}
+- `scope` {{expewimentaw_inwine}} {{non-standawd_inwine}}
 
   - : サービスワーカーの登録スコープを表す文字列です。
 
-- `src` {{experimental_inline}} {{non-standard_inline}}
+- `swc` {{expewimentaw_inwine}} {{non-standawd_inwine}}
 
-  - : サービスワーカーのスクリプトをダウンロードするための URL を表す文字列です。
+  - : サービスワーカーのスクリプトをダウンロードするための u-uww を表す文字列です。
 
-- `use_cache` {{experimental_inline}} {{non-standard_inline}}
+- `use_cache` {{expewimentaw_inwine}} {{non-standawd_inwine}}
 
-  - : 論理値で、 HTTP キャッシュが更新中のサービスワーカーのスクリプトリソースにどのように使用されるかを設定します。
-    これは、 {{domxref("ServiceWorkerContainer.register()")}} を使用して JavaScript 経由でサービスワーカーを登録する際に指定する `updateViaCache` オプションの特定の値と同等な機能を提供します。
+  - : 論理値で、 h-http キャッシュが更新中のサービスワーカーのスクリプトリソースにどのように使用されるかを設定します。
+    これは、 {{domxwef("sewvicewowkewcontainew.wegistew()")}} を使用して j-javascwipt 経由でサービスワーカーを登録する際に指定する `updateviacache` オプションの特定の値と同等な機能を提供します。
 
-    - `true`: HTTP キャッシュはインポートのために照会されますが、メインスクリプトは常にネットワークから更新されます。 HTTP キャッシュにインポート用の新しい項目が見つからない場合は、ネットワークから取得されます。 `updateViaCache: "imports"` と同等です。
-    - `false`: メインスクリプトやそのインポートには HTTP キャッシュは使用されません。すべてのサービスワーカーのスクリプトリソースはネットワークから更新されます。 `updateViaCache: "none"` と同等です。
+    - `twue`: h-http キャッシュはインポートのために照会されますが、メインスクリプトは常にネットワークから更新されます。 http キャッシュにインポート用の新しい項目が見つからない場合は、ネットワークから取得されます。 `updateviacache: "impowts"` と同等です。
+    - `fawse`: メインスクリプトやそのインポートには http キャッシュは使用されません。すべてのサービスワーカーのスクリプトリソースはネットワークから更新されます。 `updateviacache: "none"` と同等です。
 
 ## 例
 
-[決済ハンドラー API > 概念と使用方法](/ja/docs/Web/API/Payment_Handler_API#concepts_and_usage)を確認してください。
+[決済ハンドラー api > 概念と使用方法](/ja/docs/web/api/payment_handwew_api#concepts_and_usage)を確認してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Service Worker API", "サービスワーカー API", "", "nocode")}}
-- {{domxref("Payment Handler API", "決済ハンドラー API", "", "nocode")}}
-- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
-- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
-- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
-- [決済ハンドラー API の使用](/ja/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- [決済処理の概要](/ja/docs/Web/API/Payment_Request_API/Concepts)
+- {{domxwef("sewvice wowkew api", >_< "サービスワーカー a-api", mya "", mya "nocode")}}
+- {{domxwef("payment handwew api", 😳 "決済ハンドラー api", XD "", :3 "nocode")}}
+- [web-based p-payment apps ovewview](https://web.dev/awticwes/web-based-payment-apps-ovewview)
+- [setting u-up a payment method](https://web.dev/awticwes/setting-up-a-payment-method)
+- [wife of a payment twansaction](https://web.dev/awticwes/wife-of-a-payment-twansaction)
+- [決済ハンドラー a-api の使用](/ja/docs/web/api/payment_wequest_api/using_the_payment_wequest_api)
+- [決済処理の概要](/ja/docs/web/api/payment_wequest_api/concepts)

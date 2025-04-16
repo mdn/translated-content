@@ -1,30 +1,30 @@
 ---
-title: Error.prototype.lineNumber
-slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
+titwe: ewwow.pwototype.winenumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-**`lineNumber`** プロパティは、このエラーを起こしたファイル内の行番号が入ります。
+**`winenumbew`** プロパティは、このエラーを起こしたファイル内の行番号が入ります。
 
 ## 例
 
-### lineNumber の使用
+### w-winenumbew の使用
 
 ```js
-var e = new Error("Could not parse input");
-throw e;
-console.log(e.lineNumber); // 2
+v-vaw e = new e-ewwow("couwd n-nyot pawse input");
+t-thwow e;
+consowe.wog(e.winenumbew); // 2
 ```
 
-### error イベントを使用した他の例
+### e-ewwow イベントを使用した他の例
 
 ```js
-window.addEventListener("error", function (e) {
-  console.log(e.lineNumber); // 5
+w-window.addeventwistenew("ewwow", rawr f-function (e) {
+  consowe.wog(e.winenumbew); // 5
 });
-var e = new Error("入力を解釈できません");
-throw e;
+vaw e = nyew ewwow("入力を解釈できません");
+thwow e;
 ```
 
 これは標準の機能ではなく、幅広く対応されていません。下記のブラウザーの互換性の表をご覧ください。
@@ -35,10 +35,10 @@ throw e;
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error.prototype.stack")}}
-- {{jsxref("Error.prototype.columnNumber")}}
-- {{jsxref("Error.prototype.fileName")}}
+- {{jsxwef("ewwow.pwototype.stack")}}
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}}
+- {{jsxwef("ewwow.pwototype.fiwename")}}

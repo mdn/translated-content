@@ -1,28 +1,28 @@
 ---
-title: 226 IM Used
-slug: Web/HTTP/Reference/Status/226
-original_slug: Web/HTTP/Status/226
-l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+titwe: 226 im used
+swug: web/http/wefewence/status/226
+o-owiginaw_swug: w-web/http/status/226
+w-w10n:
+  s-souwcecommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-> [!NOTE]
-> ブラウザーは HTTP で _デルタエンコーディング_ に対応していません。このステータスコードは特定のクライアントで用いられるカスタムされたサーバーから送り返されます。
+> [!note]
+> ブラウザーは h-http で _デルタエンコーディング_ に対応していません。このステータスコードは特定のクライアントで用いられるカスタムされたサーバーから送り返されます。
 
-デルタエンコーディングの文脈において、HTTP **`226 IM Used`** ステータスコードは受信した {{HTTPMethod("GET")}} リクエストに対する _デルタ_ を返していることを示すためにサーバーによって設定されます。
+デルタエンコーディングの文脈において、http **`226 i-im used`** ステータスコードは受信した {{httpmethod("get")}} リクエストに対する _デルタ_ を返していることを示すためにサーバーによって設定されます。
 
-デルタエンコーディングでは、サーバーは {{HTTPMethod("GET")}} リクエストに対して (現在のドキュメントではなく) 指定のベースドキュメントからの (_デルタ_ と呼ばれる) 違いで応答します。クライアントは `A-IM:` HTTP ヘッダーにより使用する差分アルゴリズムを示し、`If-None-Match:` ヘッダーで取得した最新バージョンに関するヒントをサーバーに与えます。サーバーはデルタを生成し、ステータスコードが `226` で、(使用したアルゴリズムの名前を伴う) `IM:` HTTP ヘッダーおよび (デルタに紐づくベースドキュメントに対応する {{HTTPHeader("ETag")}} を伴う) `Delta-Base:` HTTP ヘッダーが含まれる HTTP レスポンスで返します。
+デルタエンコーディングでは、サーバーは {{httpmethod("get")}} リクエストに対して (現在のドキュメントではなく) 指定のベースドキュメントからの (_デルタ_ と呼ばれる) 違いで応答します。クライアントは `a-im:` h-http ヘッダーにより使用する差分アルゴリズムを示し、`if-none-match:` ヘッダーで取得した最新バージョンに関するヒントをサーバーに与えます。サーバーはデルタを生成し、ステータスコードが `226` で、(使用したアルゴリズムの名前を伴う) `im:` h-http ヘッダーおよび (デルタに紐づくベースドキュメントに対応する {{httpheadew("etag")}} を伴う) `dewta-base:` http ヘッダーが含まれる http レスポンスで返します。
 
-IM は _instance manipulations_ を表します。これは _デルタ_ の生成アルゴリズムを記述する際に用いられる用語です。
+im は _instance manipuwations_ を表します。これは _デルタ_ の生成アルゴリズムを記述する際に用いられる用語です。
 
 ## ステータス
 
-```plain
-226 IM Used
+```pwain
+226 i-im used
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

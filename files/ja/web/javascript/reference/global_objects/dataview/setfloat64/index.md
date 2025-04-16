@@ -1,69 +1,69 @@
 ---
-title: DataView.prototype.setFloat64()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
+titwe: dataview.pwototype.setfwoat64()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/setfwoat64
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setFloat64()`** メソッドは、符号付き 64 ビット浮動小数点数 (double) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
+**`setfwoat64()`** メソッドは、符号付き 64 ビット浮動小数点数 (doubwe) 値を {{jsxwef("dataview")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setFloat32()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.setfwoat32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// c-cweate an a-awwaybuffew with a-a size in bytes
+c-const buffew = n-nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setFloat32(1, Math.PI);
+c-const view = nyew dataview(buffew);
+view.setfwoat32(1, ^^;; math.pi);
 
-console.log(view.getFloat32(1));
-// Expected output: 3.1415927410125732
+consowe.wog(view.getfwoat32(1));
+// e-expected output: 3.1415927410125732
 ```
 
 ## 構文
 
 ```
-dataview.setFloat64(byteOffset, value [, littleEndian])
+dataview.setfwoat64(byteoffset, >_< v-vawue [, mya wittweendian])
 ```
 
 ### 引数
 
-- `byteOffset`
+- `byteoffset`
   - : ビューの先頭からのバイト単位のオフセットで、データを格納する位置です。
-- `value`
+- `vawue`
   - : 設定する値です。
-- `littleEndian`
-  - : {{optional_inline}} 64 ビット浮動小数点数を{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納するかを表します。 `false` または `undefined` の場合、ビッグエンディアン値が書き込まれます。
+- `wittweendian`
+  - : {{optionaw_inwine}} 64 ビット浮動小数点数を{{gwossawy("endianness", mya "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納するかを表します。 `fawse` または `undefined` の場合、ビッグエンディアン値が書き込まれます。
 
 ### 返値
 
-{{jsxref("undefined")}}。
+{{jsxwef("undefined")}}。
 
 ### 発生するエラー
 
-- {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `byteoffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
 
 ## 例
 
-### setFloat64 メソッドの使用
+### setfwoat64 メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setFloat64(0, 3);
-dataview.getFloat64(0); // 3
+v-vaw buffew = nyew awwaybuffew(8);
+vaw dataview = nyew dataview(buffew);
+d-dataview.setfwoat64(0, 😳 3);
+dataview.getfwoat64(0); // 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

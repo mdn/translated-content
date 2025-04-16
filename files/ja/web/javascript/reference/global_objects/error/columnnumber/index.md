@@ -1,20 +1,20 @@
 ---
-title: Error.prototype.columnNumber
-slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
+titwe: ewwow.pwototype.cowumnnumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-**`columnNumber`** プロパティは、このエラーを起こしたファイルの行内の列番号が入ります。
+**`cowumnnumbew`** プロパティは、このエラーを起こしたファイルの行内の列番号が入ります。
 
 ## 例
 
-### columnNumber の使用
+### c-cowumnnumbew の使用
 
 ```js
-var e = new Error("Could not parse input");
-throw e;
-console.log(e.columnNumber); // 0
+v-vaw e = nyew e-ewwow("couwd nyot p-pawse input");
+t-thwow e;
+consowe.wog(e.cowumnnumbew); // 0
 ```
 
 ## 仕様書
@@ -23,10 +23,10 @@ console.log(e.columnNumber); // 0
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error.prototype.stack")}}
-- {{jsxref("Error.prototype.lineNumber")}}
-- {{jsxref("Error.prototype.fileName")}}
+- {{jsxwef("ewwow.pwototype.stack")}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}}
+- {{jsxwef("ewwow.pwototype.fiwename")}}

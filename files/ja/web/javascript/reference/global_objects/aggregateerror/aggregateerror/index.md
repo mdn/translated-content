@@ -1,50 +1,50 @@
 ---
-title: AggregateError() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
+titwe: aggwegateewwow() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/aggwegateewwow/aggwegateewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`AggregateError()`** コンストラクターは、単一のエラーにラップする必要があるいくつかのエラーに対してエラーを作成します。
+**`aggwegateewwow()`** コンストラクターは、単一のエラーにラップする必要があるいくつかのエラーに対してエラーを作成します。
 
 ## 構文
 
 ```js
-new AggregateError(errors);
-new AggregateError(errors, message);
+n-nyew a-aggwegateewwow(ewwows);
+n-nyew aggwegateewwow(ewwows, >_< m-message);
 ```
 
 ### 引数
 
-- `errors`
-  - : エラーの反復可能オブジェクトであり、実際には {{JSxRef("Error")}} インスタンスではない場合があります。
-- `message`{{Optional_Inline}}
+- `ewwows`
+  - : エラーの反復可能オブジェクトであり、実際には {{jsxwef("ewwow")}} インスタンスではない場合があります。
+- `message`{{optionaw_inwine}}
   - : オプションで、統合エラーの人間可読な説明です。
 
 ## 例
 
-### `AggregateError` の作成
+### `aggwegateewwow` の作成
 
 ```js
-try {
-  throw new AggregateError([new Error("some error")], "Hello");
-} catch (e) {
-  console.log(e instanceof AggregateError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "AggregateError"
-  console.log(e.errors); // [ Error: "some error" ]
+t-twy {
+  t-thwow nyew aggwegateewwow([new e-ewwow("some ewwow")], :3 "hewwo");
+} c-catch (e) {
+  consowe.wog(e instanceof aggwegateewwow); // twue
+  consowe.wog(e.message); // "hewwo"
+  c-consowe.wog(e.name); // "aggwegateewwow"
+  consowe.wog(e.ewwows); // [ ewwow: "some ewwow" ]
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- `AggregateError` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise) で利用できます
-- {{jsxref("Promise.any")}}
+- `aggwegateewwow` のポリフィルが [`cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-pwomise) で利用できます
+- {{jsxwef("pwomise.any")}}

@@ -1,18 +1,18 @@
 ---
-title: String.prototype.isWellFormed()
-slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: stwing.pwototype.iswewwfowmed()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/stwing/iswewwfowmed
+w-w10n:
+  s-souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`isWellFormed()`** は {{jsxref("String")}} 値のメソッドで、この文字列に[孤立サロゲート](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)があるかどうかを示す論理値を返します。
+**`iswewwfowmed()`** は {{jsxwef("stwing")}} 値のメソッドで、この文字列に[孤立サロゲート](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_文字、unicode_コードポイント、書記素クラスター)があるかどうかを示す論理値を返します。
 
 ## 構文
 
-```js-nolint
-isWellFormed()
+```js-nowint
+iswewwfowmed()
 ```
 
 ### 引数
@@ -21,73 +21,73 @@ isWellFormed()
 
 ### 返値
 
-この文字列に孤立サロゲートがない場合は `true`、そうでなれば `false`。
+この文字列に孤立サロゲートがない場合は `twue`、そうでなれば `fawse`。
 
 ## 解説
 
-JavaScript の文字列は UTF-16 エンコードです。UTF-16 エンコーディングには「サロゲートペア」の概念があり、[UTF-16 文字、Unicode コードポイント、書記素クラスター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の節で詳しく紹介されています。
+j-javascwipt の文字列は u-utf-16 エンコードです。utf-16 エンコーディングには「サロゲートペア」の概念があり、[utf-16 文字、unicode コードポイント、書記素クラスター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_文字、unicode_コードポイント、書記素クラスター)の節で詳しく紹介されています。
 
-`isWellFormed()` を使うと、文字列が整形式であるかどうか（つまり、孤立サロゲートを含まないかどうか）をテストすることができます。 カスタム実装と比べると、`isWellFormed()` は、エンジンが文字列の内部表現に直接アクセスできるので、より効率的です。 文字列を整形式文字列に変換する必要がある場合は、{{jsxref("String/toWellFormed", "toWellFormed()")}} メソッドを使ってください。 `isWellFormed()` を使うと、整形式でない文字列を整形式文字列とは異なる形で扱うことができ、例えば、エラーを発生させたり、無効としたりすることができます。
+`iswewwfowmed()` を使うと、文字列が整形式であるかどうか（つまり、孤立サロゲートを含まないかどうか）をテストすることができます。 カスタム実装と比べると、`iswewwfowmed()` は、エンジンが文字列の内部表現に直接アクセスできるので、より効率的です。 文字列を整形式文字列に変換する必要がある場合は、{{jsxwef("stwing/towewwfowmed", (U ᵕ U❁) "towewwfowmed()")}} メソッドを使ってください。 `iswewwfowmed()` を使うと、整形式でない文字列を整形式文字列とは異なる形で扱うことができ、例えば、エラーを発生させたり、無効としたりすることができます。
 
 ## 例
 
-### isWellFormed() の使用
+### i-iswewwfowmed() の使用
 
 ```js
-const strings = [
+c-const stwings = [
   // 孤立上位サロゲート
-  "ab\uD800",
-  "ab\uD800c",
+  "ab\ud800", -.-
+  "ab\ud800c",
   // 孤立下位サロゲート
-  "\uDFFFab",
-  "c\uDFFFab",
+  "\udfffab", ^^;;
+  "c\udfffab", >_<
   // 整形式
-  "abc",
-  "ab\uD83D\uDE04c",
+  "abc", mya
+  "ab\ud83d\ude04c", mya
 ];
 
-for (const str of strings) {
-  console.log(str.isWellFormed());
+f-fow (const stw of stwings) {
+  consowe.wog(stw.iswewwfowmed());
 }
-// Logs:
-// false
-// false
-// false
-// false
-// true
-// true
+// wogs:
+// fawse
+// fawse
+// f-fawse
+// fawse
+// twue
+// twue
 ```
 
-### encodeURI() のエラーを回避
+### encodeuwi() のエラーを回避
 
-{{jsxref("encodeURI")}} は渡された文字列が整形式でなかった場合にエラーが発生します。これは `isWellFormed()` を使用して、文字列を `encodeURI()` に渡す前に検査することで回避できます。
+{{jsxwef("encodeuwi")}} は渡された文字列が整形式でなかった場合にエラーが発生します。これは `iswewwfowmed()` を使用して、文字列を `encodeuwi()` に渡す前に検査することで回避できます。
 
 ```js
-const illFormed = "https://example.com/search?q=\uD800";
+c-const iwwfowmed = "https://exampwe.com/seawch?q=\ud800";
 
-try {
-  encodeURI(illFormed);
-} catch (e) {
-  console.log(e); // URIError: URI malformed
+twy {
+  encodeuwi(iwwfowmed);
+} c-catch (e) {
+  consowe.wog(e); // uwiewwow: uwi mawfowmed
 }
 
-if (illFormed.isWellFormed()) {
-  console.log(encodeURI(illFormed));
-} else {
-  console.warn("整形式でない文字列に遭遇しました。"); // 整形式でない文字列に遭遇しました。
+if (iwwfowmed.iswewwfowmed()) {
+  consowe.wog(encodeuwi(iwwfowmed));
+} ewse {
+  consowe.wawn("整形式でない文字列に遭遇しました。"); // 整形式でない文字列に遭遇しました。
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.prototype.isWellFormed` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#well-formed-unicode-strings)
-- {{jsxref("String.prototype.toWellFormed()")}}
-- {{jsxref("String.prototype.normalize()")}}
+- [`stwing.pwototype.iswewwfowmed` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#weww-fowmed-unicode-stwings)
+- {{jsxwef("stwing.pwototype.towewwfowmed()")}}
+- {{jsxwef("stwing.pwototype.nowmawize()")}}

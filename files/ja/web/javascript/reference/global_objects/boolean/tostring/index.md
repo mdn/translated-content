@@ -1,63 +1,63 @@
 ---
-title: Boolean.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
+titwe: boowean.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toString()`** メソッドは、指定された Boolean オブジェクトを表す文字列を返します。
+**`tostwing()`** メソッドは、指定された b-boowean オブジェクトを表す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Boolean.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: b-boowean.tostwing()")}}
 
-```js interactive-example
-const flag1 = new Boolean(true);
+```js i-intewactive-exampwe
+c-const fwag1 = n-nyew boowean(twue);
 
-console.log(flag1.toString());
-// Expected output: "true"
+c-consowe.wog(fwag1.tostwing());
+// e-expected output: "twue"
 
-const flag2 = new Boolean(1);
+const fwag2 = nyew boowean(1);
 
-console.log(flag2.toString());
-// Expected output: "true"
+consowe.wog(fwag2.tostwing());
+// e-expected output: "twue"
 ```
 
 ## 構文
 
 ```js
-toString();
+tostwing();
 ```
 
 ### 返値
 
-指定された {{jsxref("Boolean")}} オブジェクトを表す文字列です。
+指定された {{jsxwef("boowean")}} オブジェクトを表す文字列です。
 
 ## 解説
 
-{{jsxref("Boolean")}} オブジェクトは {{jsxref("Object")}} オブジェクトの `toString` メソッドを上書きしており、 {{jsxref("Object.prototype.toString()")}} を継承していません。 `Boolean` オブジェクトでは、 `toString` メソッドはオブジェクトを文字列で表したものを返します。
+{{jsxwef("boowean")}} オブジェクトは {{jsxwef("object")}} オブジェクトの `tostwing` メソッドを上書きしており、 {{jsxwef("object.pwototype.tostwing()")}} を継承していません。 `boowean` オブジェクトでは、 `tostwing` メソッドはオブジェクトを文字列で表したものを返します。
 
-JavaScript は `toString()` メソッドを、 {{jsxref("Boolean")}} が文字列値として表現されるべき場合や、 {{jsxref("Boolean")}} が文字列の結合で参照されたときに自動的に呼び出します。
+javascwipt は `tostwing()` メソッドを、 {{jsxwef("boowean")}} が文字列値として表現されるべき場合や、 {{jsxwef("boowean")}} が文字列の結合で参照されたときに自動的に呼び出します。
 
-{{jsxref("Boolean")}} オブジェクトと論理値では、組み込みの `toString` メソッドはその {{jsxref("Boolean")}} オブジェクトの値によって "`true`" か "`false`" の文字列を返します。
+{{jsxwef("boowean")}} オブジェクトと論理値では、組み込みの `tostwing` メソッドはその {{jsxwef("boowean")}} オブジェクトの値によって "`twue`" か "`fawse`" の文字列を返します。
 
 ## 例
 
-### `toString` の使用
+### `tostwing` の使用
 
-以下のコードでは、`flag.toString()` は "`true`" を返します。
+以下のコードでは、`fwag.tostwing()` は "`twue`" を返します。
 
 ```js
-var flag = new Boolean(true);
-var myVar = flag.toString();
+v-vaw fwag = nyew boowean(twue);
+v-vaw myvaw = fwag.tostwing();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

@@ -1,69 +1,69 @@
 ---
-title: SyntaxError() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
+titwe: syntaxewwow() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/syntaxewwow/syntaxewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`SyntaxError`** オブジェクトは、文法的に無効なコードを解釈しようとしたときのエラーを表します。
+**`syntaxewwow`** オブジェクトは、文法的に無効なコードを解釈しようとしたときのエラーを表します。
 
 ## 構文
 
 ```
-new SyntaxError([message[, fileName[, lineNumber]]])
+new s-syntaxewwow([message[, -.- f-fiwename[, ( ͡o ω ͡o ) w-winenumbew]]])
 ```
 
 ### 引数
 
-- `message` {{optional_inline}}
+- `message` {{optionaw_inwine}}
   - : 人間が読むためのエラーの説明です。
-- `fileName` {{optional_inline}}
+- `fiwename` {{optionaw_inwine}}
   - : 例外が発生したコードを含むファイルの名前です。
-- `lineNumber` {{optional_inline}}
+- `winenumbew` {{optionaw_inwine}}
   - : 例外が発生したコードの行番号です。
 
 ## 例
 
-### SyntaxError の捕捉
+### s-syntaxewwow の捕捉
 
 ```js
-try {
-  eval("hoo bar");
+t-twy {
+  evaw("hoo b-baw");
 } catch (e) {
-  console.error(e instanceof SyntaxError);
-  console.error(e.message);
-  console.error(e.name);
-  console.error(e.fileName);
-  console.error(e.lineNumber);
-  console.error(e.columnNumber);
-  console.error(e.stack);
+  c-consowe.ewwow(e i-instanceof syntaxewwow);
+  consowe.ewwow(e.message);
+  consowe.ewwow(e.name);
+  consowe.ewwow(e.fiwename);
+  c-consowe.ewwow(e.winenumbew);
+  consowe.ewwow(e.cowumnnumbew);
+  consowe.ewwow(e.stack);
 }
 ```
 
-### SyntaxError の生成
+### s-syntaxewwow の生成
 
 ```js
-try {
-  throw new SyntaxError("Hello", "someFile.js", 10);
+twy {
+  t-thwow nyew syntaxewwow("hewwo", rawr x3 "somefiwe.js", nyaa~~ 10);
 } catch (e) {
-  console.error(e instanceof SyntaxError); // true
-  console.error(e.message); // Hello
-  console.error(e.name); // SyntaxError
-  console.error(e.fileName); // someFile.js
-  console.error(e.lineNumber); // 10
-  console.error(e.columnNumber); // 0
-  console.error(e.stack); // @debugger eval code:3:9
+  consowe.ewwow(e instanceof s-syntaxewwow); // twue
+  consowe.ewwow(e.message); // h-hewwo
+  consowe.ewwow(e.name); // s-syntaxewwow
+  consowe.ewwow(e.fiwename); // somefiwe.js
+  consowe.ewwow(e.winenumbew); // 10
+  consowe.ewwow(e.cowumnnumbew); // 0
+  c-consowe.ewwow(e.stack); // @debuggew evaw code:3:9
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

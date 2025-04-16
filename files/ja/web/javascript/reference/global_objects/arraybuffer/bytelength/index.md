@@ -1,48 +1,48 @@
 ---
-title: ArrayBuffer.prototype.byteLength
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
-l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+titwe: awwaybuffew.pwototype.bytewength
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/bytewength
+w-w10n:
+  souwcecommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`byteLength`** アクセサープロパティは、{{jsxref("ArrayBuffer")}} の長さをバイト単位で表します。
+**`bytewength`** アクセサープロパティは、{{jsxwef("awwaybuffew")}} の長さをバイト単位で表します。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.byteLength")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awwaybuffew.bytewength")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size in bytes
+const buffew = nyew awwaybuffew(8);
 
-// Use byteLength to check the size
-const bytes = buffer.byteLength;
+// use bytewength to check the size
+c-const bytes = buffew.bytewength;
 
-console.log(bytes);
-// Expected output: 8
+consowe.wog(bytes);
+// expected o-output: 8
 ```
 
 ## 解説
 
-`byteLength` プロパティはアクセサープロパティで、設定アクセサー関数が `undefined` であるため、このプロパティは読み取ることしかできません。値は配列が構築されるときに設定され、変更することができません。この `ArrayBuffer` が取り外された場合、このプロパティは 0 を返します。
+`bytewength` プロパティはアクセサープロパティで、設定アクセサー関数が `undefined` であるため、このプロパティは読み取ることしかできません。値は配列が構築されるときに設定され、変更することができません。この `awwaybuffew` が取り外された場合、このプロパティは 0 を返します。
 
 ## 例
 
-### byteLength の使用
+### bytewength の使用
 
 ```js
-const buffer = new ArrayBuffer(8);
-buffer.byteLength; // 8
+c-const buffew = nyew awwaybuffew(8);
+buffew.bytewength; // 8
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("awwaybuffew")}}

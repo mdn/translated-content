@@ -1,74 +1,74 @@
 ---
-title: SyntaxError
-slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
+titwe: syntaxewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/syntaxewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`SyntaxError`** オブジェクトは、構文的に不正なコードを解釈しようとした場合のエラーを表します。これは、 JavaScript エンジンが、コードを解析中に言語の構文に従わないトークンまたはトークンの順序に遭遇した場合に発生します。
+**`syntaxewwow`** オブジェクトは、構文的に不正なコードを解釈しようとした場合のエラーを表します。これは、 j-javascwipt エンジンが、コードを解析中に言語の構文に従わないトークンまたはトークンの順序に遭遇した場合に発生します。
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}
-  - : 新しい `SyntaxError` オブジェクトを生成します。
+- {{jsxwef("gwobaw_objects/syntaxewwow/syntaxewwow", ( ͡o ω ͡o ) "syntaxewwow()")}}
+  - : 新しい `syntaxewwow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "SyntaxError.prototype.message")}}
-  - : エラーメッセージです。 ECMA-262 において {{jsxref("SyntaxError")}} は自身の `message` プロパティを提供するべきとされていますが、 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では {{jsxref("Error.prototype.message")}} を継承しています。
-- {{jsxref("Error.prototype.name", "SyntaxError.prototype.name")}}
-  - : エラー名です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.fileName", "SyntaxError.prototype.fileName")}}
-  - : このエラーが発生したファイルのパスです。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.lineNumber", "SyntaxError.prototype.lineNumber")}}
-  - : このエラーが発生したファイル内の行番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.columnNumber", "SyntaxError.prototype.columnNumber")}}
-  - : このエラーが発生した行内の桁数です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.stack", "SyntaxError.prototype.stack")}}
-  - : スタックトレースです。 {{jsxref("Error")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.message", rawr x3 "syntaxewwow.pwototype.message")}}
+  - : エラーメッセージです。 e-ecma-262 において {{jsxwef("syntaxewwow")}} は自身の `message` プロパティを提供するべきとされていますが、 [spidewmonkey](/ja/docs/moziwwa/pwojects/spidewmonkey) では {{jsxwef("ewwow.pwototype.message")}} を継承しています。
+- {{jsxwef("ewwow.pwototype.name", nyaa~~ "syntaxewwow.pwototype.name")}}
+  - : エラー名です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.fiwename", /(^•ω•^) "syntaxewwow.pwototype.fiwename")}}
+  - : このエラーが発生したファイルのパスです。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.winenumbew", rawr "syntaxewwow.pwototype.winenumbew")}}
+  - : このエラーが発生したファイル内の行番号です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", OwO "syntaxewwow.pwototype.cowumnnumbew")}}
+  - : このエラーが発生した行内の桁数です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.stack", "syntaxewwow.pwototype.stack")}}
+  - : スタックトレースです。 {{jsxwef("ewwow")}} から継承しています。
 
 ## 例
 
-### SyntaxError のキャッチ
+### s-syntaxewwow のキャッチ
 
 ```js
-try {
-  eval("hoo bar");
-} catch (e) {
-  console.error(e instanceof SyntaxError);
-  console.error(e.message);
-  console.error(e.name);
-  console.error(e.fileName);
-  console.error(e.lineNumber);
-  console.error(e.columnNumber);
-  console.error(e.stack);
+t-twy {
+  e-evaw("hoo baw");
+} c-catch (e) {
+  c-consowe.ewwow(e i-instanceof syntaxewwow);
+  consowe.ewwow(e.message);
+  consowe.ewwow(e.name);
+  consowe.ewwow(e.fiwename);
+  consowe.ewwow(e.winenumbew);
+  c-consowe.ewwow(e.cowumnnumbew);
+  consowe.ewwow(e.stack);
 }
 ```
 
-### SyntaxError の生成
+### syntaxewwow の生成
 
 ```js
-try {
-  throw new SyntaxError("Hello", "someFile.js", 10);
+t-twy {
+  thwow nyew s-syntaxewwow("hewwo", (U ﹏ U) "somefiwe.js", >_< 10);
 } catch (e) {
-  console.error(e instanceof SyntaxError); // true
-  console.error(e.message); // Hello
-  console.error(e.name); // SyntaxError
-  console.error(e.fileName); // someFile.js
-  console.error(e.lineNumber); // 10
-  console.error(e.columnNumber); // 0
-  console.error(e.stack); // @debugger eval code:3:9
+  consowe.ewwow(e instanceof s-syntaxewwow); // twue
+  consowe.ewwow(e.message); // h-hewwo
+  c-consowe.ewwow(e.name); // syntaxewwow
+  consowe.ewwow(e.fiwename); // somefiwe.js
+  consowe.ewwow(e.winenumbew); // 10
+  c-consowe.ewwow(e.cowumnnumbew); // 0
+  consowe.ewwow(e.stack); // @debuggew evaw code:3:9
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

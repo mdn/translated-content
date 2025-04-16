@@ -1,22 +1,22 @@
 ---
-title: <xsl:copy-of>
-slug: Web/XML/XSLT/Reference/Element/copy-of
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: <xsw:copy-of>
+swug: web/xmw/xswt/wefewence/ewement/copy-of
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`<xsl:copy-of>` 要素は、select 属性が出力文書に指定するものすべてのディープコピー (子孫ノードを含む) を作成します。
+`<xsw:copy-of>` 要素は、sewect 属性が出力文書に指定するものすべてのディープコピー (子孫ノードを含む) を作成します。
 
 ### 構文
 
-```xml
-<xsl:copy-of select=EXPRESSION />
+```xmw
+<xsw:copy-of s-sewect=expwession />
 ```
 
 ### 必須属性
 
-- `select`
-  - : 何をコピーするかを指定する XPath 式を使用します。
+- `sewect`
+  - : 何をコピーするかを指定する xpath 式を使用します。
 
 ### 任意属性
 
@@ -28,8 +28,8 @@ l10n:
 
 ## 仕様書
 
-XSLT, section 11.3.
+x-xswt, òωó s-section 11.3. o.O
 
-## Gecko の対応
+## g-gecko の対応
 
 サポート済み。

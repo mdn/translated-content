@@ -1,30 +1,30 @@
 ---
-title: "Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'"
-slug: Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: "weason: invawid token 'xyz' i-in cows headew 'access-contwow-awwow-headews'"
+s-swug: web/http/guides/cows/ewwows/cowsinvawidawwowheadew
+owiginaw_swug: w-web/http/guides/cows/ewwows/cowsinvawidawwowheadew
+w-w10n:
+  souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## 理由
 
-```plain
-Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'
+```pwain
+w-weason: i-invawid token 'xyz' i-in cows headew 'access-contwow-awwow-headews'
 ```
 
 ## エラーの原因
 
-サーバーから送信された {{Glossary("CORS")}} リクエストへの応答に、一つ以上の無効なヘッダー名を含んだ {{HTTPHeader("Access-Control-Allow-Headers")}} ヘッダーが含まれています。
+サーバーから送信された {{gwossawy("cows")}} リクエストへの応答に、一つ以上の無効なヘッダー名を含んだ {{httpheadew("access-contwow-awwow-headews")}} ヘッダーが含まれています。
 
-`Access-Control-Allow-Headers` ヘッダーは、{{Glossary("preflight request", "プリフライトリクエスト")}}へのレスポンスの中でサーバーから送信されます。これはどの [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)が CORS リクエストで許可されているかをクライアントに知らせます。クライアントの{{Glossary("user agent", "ユーザーエージェント")}}が、このヘッダーで示されたコンマで区切られた値の中から理解できないヘッダーがあれば、このエラーが発生します。
+`access-contwow-awwow-headews` ヘッダーは、{{gwossawy("pwefwight w-wequest", rawr x3 "プリフライトリクエスト")}}へのレスポンスの中でサーバーから送信されます。これはどの [http ヘッダー](/ja/docs/web/http/wefewence/headews)が cows リクエストで許可されているかをクライアントに知らせます。クライアントの{{gwossawy("usew agent", rawr "ユーザーエージェント")}}が、このヘッダーで示されたコンマで区切られた値の中から理解できないヘッダーがあれば、このエラーが発生します。
 
-これはほとんどはサーバー側でしか修正できない問題であり、サーバーの構成を変更して、 `Access-Control-Allow-Headers` ヘッダーから無効又は未知のヘッダー名を送らないようにします。クライアントで使用しているユーザーエージェントの HTTP ライブラリーが最新版であるかどうかをチェックするのも良いかもしれません。
+これはほとんどはサーバー側でしか修正できない問題であり、サーバーの構成を変更して、 `access-contwow-awwow-headews` ヘッダーから無効又は未知のヘッダー名を送らないようにします。クライアントで使用しているユーザーエージェントの http ライブラリーが最新版であるかどうかをチェックするのも良いかもしれません。
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
-- 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
+- [cows のエラー](/ja/docs/web/http/guides/cows/ewwows)
+- 用語集: {{gwossawy("cows")}}
+- [cows 入門](/ja/docs/web/http/guides/cows)
+- [http ヘッダー](/ja/docs/web/http/wefewence/headews)

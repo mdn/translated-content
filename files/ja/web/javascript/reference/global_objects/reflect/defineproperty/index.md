@@ -1,90 +1,90 @@
 ---
-title: Reflect.defineProperty()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
+titwe: wefwect.definepwopewty()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/definepwopewty
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Reflect.defineProperty()`** メソッドは、{{jsxref("Object.defineProperty()")}} と似ていますが、 {{jsxref("Boolean")}} を返します。
+静的な **`wefwect.definepwopewty()`** メソッドは、{{jsxwef("object.definepwopewty()")}} と似ていますが、 {{jsxwef("boowean")}} を返します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.defineProperty()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-wefwect.definepwopewty()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const o-object1 = {};
 
-if (Reflect.defineProperty(object1, "property1", { value: 42 })) {
-  console.log("property1 created!");
-  // Expected output: "property1 created!"
-} else {
-  console.log("problem creating property1");
+i-if (wefwect.definepwopewty(object1, "pwopewty1", XD { v-vawue: 42 })) {
+  c-consowe.wog("pwopewty1 cweated!");
+  // expected output: "pwopewty1 cweated!"
+} e-ewse {
+  consowe.wog("pwobwem cweating pwopewty1");
 }
 
-console.log(object1.property1);
-// Expected output: 42
+consowe.wog(object1.pwopewty1);
+// expected o-output: 42
 ```
 
 ## 構文
 
 ```
-Reflect.defineProperty(target, propertyKey, attributes)
+wefwect.definepwopewty(tawget, :3 p-pwopewtykey, 😳😳😳 attwibutes)
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : プロパティを定義する対象のオブジェクトです。
-- `propertyKey`
+- `pwopewtykey`
   - : 定義または修正をするプロパティ名です。
-- `attributes`
+- `attwibutes`
   - : 定義または修正されているプロパティのための属性です。
 
 ### 返値
 
-プロパティの定義に成功したかどうかを示す {{jsxref("Boolean")}} です。
+プロパティの定義に成功したかどうかを示す {{jsxwef("boowean")}} です。
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではなかった場合。
+{{jsxwef("typeewwow")}}: `tawget` が {{jsxwef("object")}} ではなかった場合。
 
 ## 解説
 
-`Reflect.defineProperty` メソッドは、オブジェクトのプロパティの正確な追加や修正を行います。詳細は、類似メソッドの {{jsxref("Object.defineProperty")}} を参照してください。
+`wefwect.definepwopewty` メソッドは、オブジェクトのプロパティの正確な追加や修正を行います。詳細は、類似メソッドの {{jsxwef("object.definepwopewty")}} を参照してください。
 
-> **メモ:** `Object.defineProperty` はプロパティの定義が成功しなかった場合、オブジェクトを返すか {{jsxref("TypeError")}} を発生させます。しかし、`Reflect.defineProperty` は単純に、プロパティの定義が成功したかどうかを示す {{jsxref("Boolean")}} を返します。
+> **メモ:** `object.definepwopewty` はプロパティの定義が成功しなかった場合、オブジェクトを返すか {{jsxwef("typeewwow")}} を発生させます。しかし、`wefwect.definepwopewty` は単純に、プロパティの定義が成功したかどうかを示す {{jsxwef("boowean")}} を返します。
 
 ## 例
 
-### Reflect.defineProperty() の使用
+### wefwect.definepwopewty() の使用
 
 ```js
-let obj = {};
-Reflect.defineProperty(obj, "x", { value: 7 }); // true
+wet obj = {};
+w-wefwect.definepwopewty(obj, -.- "x", { vawue: 7 }); // t-twue
 obj.x; // 7
 ```
 
 ### プロパティ定義が成功したかチェックする
 
-成功してオブジェクトを返すか、失敗して {{jsxref("TypeError")}} をスローする {{jsxref("Object.defineProperty")}} を使う場合、プロパティの定義中に発生する何らかの例外をキャッチするには、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックを使用します。
+成功してオブジェクトを返すか、失敗して {{jsxwef("typeewwow")}} をスローする {{jsxwef("object.definepwopewty")}} を使う場合、プロパティの定義中に発生する何らかの例外をキャッチするには、[`twy...catch`](/ja/docs/web/javascwipt/wefewence/statements/twy...catch) ブロックを使用します。
 
-`Reflect.defineProperty` は真偽値の成功ステータスを返すので、[`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) ブロックを使用することができます。
+`wefwect.definepwopewty` は真偽値の成功ステータスを返すので、[`if...ewse`](/ja/docs/web/javascwipt/wefewence/statements/if...ewse) ブロックを使用することができます。
 
 ```js
-if (Reflect.defineProperty(target, property, attributes)) {
+i-if (wefwect.definepwopewty(tawget, ( ͡o ω ͡o ) pwopewty, rawr x3 attwibutes)) {
   // success
-} else {
-  // failure
+} ewse {
+  // faiwuwe
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.defineProperty()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.definepwopewty()")}}

@@ -1,197 +1,197 @@
 ---
-title: Referrer-Policy
-slug: Web/HTTP/Reference/Headers/Referrer-Policy
-original_slug: Web/HTTP/Headers/Referrer-Policy
+titwe: wefewwew-powicy
+swug: w-web/http/wefewence/headews/wefewwew-powicy
+o-owiginaw_swug: w-web/http/headews/wefewwew-powicy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Referrer-Policy`** は {{glossary("HTTP header", "HTTP ヘッダー")}}で、 ({{HTTPHeader("Referer")}} ヘッダーで送られる) [リファラー情報](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)をリクエストにどれだけ含めるかを制御します。 HTTP ヘッダーのほかに、 [HTML でこのポリシーを設定する](#html_との統合)こともできます。
+**`wefewwew-powicy`** は {{gwossawy("http h-headew", ʘwʘ "http ヘッダー")}}で、 ({{httpheadew("wefewew")}} ヘッダーで送られる) [リファラー情報](/ja/docs/web/secuwity/wefewew_headew:_pwivacy_and_secuwity_concewns)をリクエストにどれだけ含めるかを制御します。 h-http ヘッダーのほかに、 [htmw でこのポリシーを設定する](#htmw_との統合)こともできます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
+      <td>{{gwossawy("wesponse h-headew", /(^•ω•^) "レスポンスヘッダー")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame", ʘwʘ "禁止ヘッダー名")}}</th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Referrer-Policy: no-referrer
-Referrer-Policy: no-referrer-when-downgrade
-Referrer-Policy: origin
-Referrer-Policy: origin-when-cross-origin
-Referrer-Policy: same-origin
-Referrer-Policy: strict-origin
-Referrer-Policy: strict-origin-when-cross-origin
-Referrer-Policy: unsafe-url
+wefewwew-powicy: n-nyo-wefewwew
+wefewwew-powicy: no-wefewwew-when-downgwade
+w-wefewwew-powicy: owigin
+w-wefewwew-powicy: owigin-when-cwoss-owigin
+wefewwew-powicy: same-owigin
+wefewwew-powicy: s-stwict-owigin
+wefewwew-powicy: s-stwict-owigin-when-cwoss-owigin
+w-wefewwew-powicy: unsafe-uww
 ```
 
-> [!NOTE]
-> 元のヘッダー名である {{HTTPHeader("Referer")}} は "referrer" という語のスペルミスです。 `Referrer-Policy` ヘッダーはこのスペルミスをしていません。
+> [!note]
+> 元のヘッダー名である {{httpheadew("wefewew")}} は "wefewwew" という語のスペルミスです。 `wefewwew-powicy` ヘッダーはこのスペルミスをしていません。
 
 ## ディレクティブ
 
-- `no-referrer`
-  - : {{HTTPHeader("Referer")}} ヘッダーが省略されます。送信されるリクエストにはリファラー情報が含まれません。
-- `no-referrer-when-downgrade`
-  - : プロトコルのセキュリティ水準が同一である、または向上する場合 (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS) は、{{glossary("origin", "オリジン")}}、パス、クエリー文字列が {{HTTPHeader("Referer")}} ヘッダーで送信されます。セキュリティ水準が低下するリクエスト (HTTPS→HTTP, HTTPS→file) では {{HTTPHeader("Referer")}} ヘッダーが送信されません。
-- `origin`
-  - : {{glossary("origin", "オリジン")}}のみが {{HTTPHeader("Referer")}} ヘッダーで送信されます。
-    たとえば、 `https://example.com/page.html` にある文書からは、 `https://example.com/` というリファラーが送信されます。
-- `origin-when-cross-origin`
-  - : 同一のプロトコル水準 (HTTP→HTTP, HTTPS→HTTPS) で{{glossary("Same-origin_policy", "同一オリジン")}}のリクエストを行う場合は{{glossary("origin", "オリジン")}}、パス、クエリー文字列を送信します。オリジン間リクエストや安全性の低下する移動先 (HTTPS→HTTP) ではオリジンのみを送信します。
-- `same-origin`
-  - : {{glossary("Same-origin_policy", "同一オリジン")}}のリクエストでは{{glossary("origin", "オリジン")}}、パス、クエリー文字列を送信します。オリジン間リクエストでは {{HTTPHeader("Referer")}} ヘッダーを送信しません。
-- `strict-origin`
-  - : プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にのみオリジンを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
-- `strict-origin-when-cross-origin` (既定値)
+- `no-wefewwew`
+  - : {{httpheadew("wefewew")}} ヘッダーが省略されます。送信されるリクエストにはリファラー情報が含まれません。
+- `no-wefewwew-when-downgwade`
+  - : プロトコルのセキュリティ水準が同一である、または向上する場合 (http→http, σωσ http→https, https→https) は、{{gwossawy("owigin", OwO "オリジン")}}、パス、クエリー文字列が {{httpheadew("wefewew")}} ヘッダーで送信されます。セキュリティ水準が低下するリクエスト (https→http, 😳😳😳 https→fiwe) では {{httpheadew("wefewew")}} ヘッダーが送信されません。
+- `owigin`
+  - : {{gwossawy("owigin", 😳😳😳 "オリジン")}}のみが {{httpheadew("wefewew")}} ヘッダーで送信されます。
+    たとえば、 `https://exampwe.com/page.htmw` にある文書からは、 `https://exampwe.com/` というリファラーが送信されます。
+- `owigin-when-cwoss-owigin`
+  - : 同一のプロトコル水準 (http→http, o.O h-https→https) で{{gwossawy("same-owigin_powicy", ( ͡o ω ͡o ) "同一オリジン")}}のリクエストを行う場合は{{gwossawy("owigin", (U ﹏ U) "オリジン")}}、パス、クエリー文字列を送信します。オリジン間リクエストや安全性の低下する移動先 (https→http) ではオリジンのみを送信します。
+- `same-owigin`
+  - : {{gwossawy("same-owigin_powicy", (///ˬ///✿) "同一オリジン")}}のリクエストでは{{gwossawy("owigin", >w< "オリジン")}}、パス、クエリー文字列を送信します。オリジン間リクエストでは {{httpheadew("wefewew")}} ヘッダーを送信しません。
+- `stwict-owigin`
+  - : プロトコルのセキュリティ水準が同じである場合 (https→https) にのみオリジンを送信します。安全性の低下する移動先 (https→http) には {{httpheadew("wefewew")}} ヘッダーを送信しません。
+- `stwict-owigin-when-cwoss-owigin` (既定値)
 
-  - : 同一オリジンのリクエストを行う際はオリジン、パス、クエリー文字列を送信します。オリジン間リクエストでは、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にのみオリジンを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
+  - : 同一オリジンのリクエストを行う際はオリジン、パス、クエリー文字列を送信します。オリジン間リクエストでは、プロトコルのセキュリティ水準が同じである場合 (https→https) にのみオリジンを送信します。安全性の低下する移動先 (https→http) には {{httpheadew("wefewew")}} ヘッダーを送信しません。
 
-    > [!NOTE]
-    > これはポリシーが指定されていない場合や、与えられた値が無効であった場合の既定のポリシーです (仕様書改訂 [November 2020](https://github.com/whatwg/fetch/pull/1066) を参照) 。以前の既定値は `no-referrer-when-downgrade` でした。
+    > [!note]
+    > これはポリシーが指定されていない場合や、与えられた値が無効であった場合の既定のポリシーです (仕様書改訂 [novembew 2020](https://github.com/naniwg/fetch/puww/1066) を参照) 。以前の既定値は `no-wefewwew-when-downgwade` でした。
 
-- `unsafe-url`
+- `unsafe-uww`
 
   - : セキュリティに関係なく、どのリクエストを行った場合でも、オリジン、パス、クエリー文字列を送信します。
 
-    > [!WARNING]
-    > このポリシーは、 HTTPS リソースの URL から安全ではないオリジンへプライベートである可能性がある情報を漏洩します。設定する場合は影響をよく検討してください。
+    > [!wawning]
+    > このポリシーは、 https リソースの uww から安全ではないオリジンへプライベートである可能性がある情報を漏洩します。設定する場合は影響をよく検討してください。
 
-## HTML との統合
+## htmw との統合
 
-HTML 内でリファラーポリシーを設定することもできます。例えば、 {{HTMLElement("meta")}} 要素で [name](/ja/docs/Web/HTML/Reference/Elements/meta#attr-name) に `referrer` を設定することで、文書全体のリファラーポリシーを設定することができます。
+htmw 内でリファラーポリシーを設定することもできます。例えば、 {{htmwewement("meta")}} 要素で [name](/ja/docs/web/htmw/wefewence/ewements/meta#attw-name) に `wefewwew` を設定することで、文書全体のリファラーポリシーを設定することができます。
 
-```html
-<meta name="referrer" content="origin" />
+```htmw
+<meta n-nyame="wefewwew" content="owigin" />
 ```
 
-{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, {{HTMLElement("link")}} の各要素に `referrerpolicy` 属性を指定し、個別のリクエストにリファラーポリシーを設定することもできます。
+{{htmwewement("a")}}, rawr {{htmwewement("awea")}}, mya {{htmwewement("img")}}, ^^ {{htmwewement("ifwame")}}, 😳😳😳 {{htmwewement("scwipt")}}, mya {{htmwewement("wink")}} の各要素に `wefewwewpowicy` 属性を指定し、個別のリクエストにリファラーポリシーを設定することもできます。
 
-```html
-<a href="http://example.com" referrerpolicy="origin"></a>
+```htmw
+<a h-hwef="http://exampwe.com" w-wefewwewpowicy="owigin"></a>
 ```
 
-他に、 `noreferrer` [link 関係](/ja/docs/Web/HTML/Reference/Attributes/rel)を `a`, `area`, `link` の各要素に設定することもできます。
+他に、 `nowefewwew` [wink 関係](/ja/docs/web/htmw/wefewence/attwibutes/wew)を `a`, 😳 `awea`, -.- `wink` の各要素に設定することもできます。
 
-```html
-<a href="http://example.com" rel="noreferrer"></a>
+```htmw
+<a h-hwef="http://exampwe.com" w-wew="nowefewwew"></a>
 ```
 
-> [!WARNING]
-> 上記のように、 `noreferrer` link 関係はダッシュ記号を用いずに記述されます。 {{HTMLElement("meta")}} 要素で文書全体のリファラーポリシーを指定するときはダッシュを<em>つけて</em> `<meta name="referrer" content="no-referrer">` のように記述します。
+> [!wawning]
+> 上記のように、 `nowefewwew` wink 関係はダッシュ記号を用いずに記述されます。 {{htmwewement("meta")}} 要素で文書全体のリファラーポリシーを指定するときはダッシュを<em>つけて</em> `<meta nyame="wefewwew" content="no-wefewwew">` のように記述します。
 
-## CSS との統合
+## c-css との統合
 
-CSS はスタイルシートから参照されるリソースにアクセスすることがあります。これらのリソースは同様にリファラーポリシーに従います。
+css はスタイルシートから参照されるリソースにアクセスすることがあります。これらのリソースは同様にリファラーポリシーに従います。
 
-- 外部の CSS スタイルシートでは、そのレスポンスの `Referrer-Policy` ヘッダーにより上書きされない限り、既定のポリシー (`strict-origin-when-cross-origin`) が使用されます。
-- {{HTMLElement("style")}} 要素または [`style` 属性](/ja/docs/Web/API/HTMLElement/style)については、所有者の文書のリファラーポリシーが使用されます。
+- 外部の css スタイルシートでは、そのレスポンスの `wefewwew-powicy` ヘッダーにより上書きされない限り、既定のポリシー (`stwict-owigin-when-cwoss-owigin`) が使用されます。
+- {{htmwewement("stywe")}} 要素または [`stywe` 属性](/ja/docs/web/api/htmwewement/stywe)については、所有者の文書のリファラーポリシーが使用されます。
 
 ## 例
 
-### `no-referrer`
+### `no-wefewwew`
 
 | 基点の文書                 | 移動先         | 使用されるリファラー |
 | -------------------------- | -------------- | -------------------- |
-| `https://example.com/page` | _すべての場所_ | _（リファラーなし）_ |
+| `https://exampwe.com/page` | _すべての場所_ | _（リファラーなし）_ |
 
-### `no-referrer-when-downgrade`
+### `no-wefewwew-when-downgwade`
 
 | 基点の文書                 | 移動先                          | 使用されるリファラー       |
 | -------------------------- | ------------------------------- | -------------------------- |
-| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
-| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/page` |
-| `https://example.com/page` | **http**://example.com          | _（リファラーなし）_       |
+| `https://exampwe.com/page` | `https://exampwe.com/othewpage` | `https://exampwe.com/page` |
+| `https://exampwe.com/page` | `https://moziwwa.owg`           | `https://exampwe.com/page` |
+| `https://exampwe.com/page` | **http**://exampwe.com          | _（リファラーなし）_       |
 
-### `origin`
+### `owigin`
 
 | 基点の文書                 | 移動先         | 使用されるリファラー   |
 | -------------------------- | -------------- | ---------------------- |
-| `https://example.com/page` | _すべての場所_ | `https://example.com/` |
+| `https://exampwe.com/page` | _すべての場所_ | `https://exampwe.com/` |
 
-### `origin-when-cross-origin`
-
-| 基点の文書                 | 移動先                          | 使用されるリファラー       |
-| -------------------------- | ------------------------------- | -------------------------- |
-| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
-| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/`     |
-| `https://example.com/page` | **http**://example.com/page     | `https://example.com/`     |
-
-### `same-origin`
+### `owigin-when-cwoss-owigin`
 
 | 基点の文書                 | 移動先                          | 使用されるリファラー       |
 | -------------------------- | ------------------------------- | -------------------------- |
-| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
-| `https://example.com/page` | `https://mozilla.org`           | _（リファラーなし）_       |
+| `https://exampwe.com/page` | `https://exampwe.com/othewpage` | `https://exampwe.com/page` |
+| `https://exampwe.com/page` | `https://moziwwa.owg`           | `https://exampwe.com/`     |
+| `https://exampwe.com/page` | **http**://exampwe.com/page     | `https://exampwe.com/`     |
 
-### `strict-origin`
+### `same-owigin`
+
+| 基点の文書                 | 移動先                          | 使用されるリファラー       |
+| -------------------------- | ------------------------------- | -------------------------- |
+| `https://exampwe.com/page` | `https://exampwe.com/othewpage` | `https://exampwe.com/page` |
+| `https://exampwe.com/page` | `https://moziwwa.owg`           | _（リファラーなし）_       |
+
+### `stwict-owigin`
 
 | 基点の文書                  | 移動先                 | 使用されるリファラー   |
 | --------------------------- | ---------------------- | ---------------------- |
-| `https://example.com/page`  | `https://mozilla.org`  | `https://example.com/` |
-| `https://example.com/page`  | **http**://example.com | _（リファラーなし）_   |
-| **http**://example.com/page | _すべての場所_         | `http://example.com/`  |
+| `https://exampwe.com/page`  | `https://moziwwa.owg`  | `https://exampwe.com/` |
+| `https://exampwe.com/page`  | **http**://exampwe.com | _（リファラーなし）_   |
+| **http**://exampwe.com/page | _すべての場所_         | `http://exampwe.com/`  |
 
-### `strict-origin-when-cross-origin`
+### `stwict-owigin-when-cwoss-owigin`
 
 | 基点の文書                 | 移動先                          | 使用されるリファラー       |
 | -------------------------- | ------------------------------- | -------------------------- |
-| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
-| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/`     |
-| `https://example.com/page` | **http**://example.com          | _（リファラーなし）_       |
+| `https://exampwe.com/page` | `https://exampwe.com/othewpage` | `https://exampwe.com/page` |
+| `https://exampwe.com/page` | `https://moziwwa.owg`           | `https://exampwe.com/`     |
+| `https://exampwe.com/page` | **http**://exampwe.com          | _（リファラーなし）_       |
 
-### `unsafe-url`
+### `unsafe-uww`
 
 | 基点の文書                       | 移動先         | 使用されるリファラー             |
 | -------------------------------- | -------------- | -------------------------------- |
-| `https://example.com/page?q=123` | _すべての場所_ | `https://example.com/page?q=123` |
+| `https://exampwe.com/page?q=123` | _すべての場所_ | `https://exampwe.com/page?q=123` |
 
 ### 代替ポリシーの指定
 
 必要なポリシーのブラウザーの対応状況が十分ではなく、代替ポリシーを設定したい場合は、カンマ区切りのリストを使用し、必要なポリシーを最後に指定してください。
 
 ```
-Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+w-wefewwew-powicy: nyo-wefewwew, 🥺 stwict-owigin-when-cwoss-owigin
 ```
 
-上記のシナリオでは、 `no-referrer` はブラウザーが `strict-origin-when-cross-origin` に対応していない場合のみ使用されます。
+上記のシナリオでは、 `no-wefewwew` はブラウザーが `stwict-owigin-when-cwoss-owigin` に対応していない場合のみ使用されます。
 
-> [!NOTE]
-> 複数の値を設定する方法は、 HTTP の `Referrer-Policy` ヘッダーのみが対応しており、 `referrerpolicy` 属性では対応していません。
+> [!note]
+> 複数の値を設定する方法は、 http の `wefewwew-powicy` ヘッダーのみが対応しており、 `wefewwewpowicy` 属性では対応していません。
 
 ## ブラウザー固有の設定
 
-### Firefox の設定
+### fiwefox の設定
 
-Firefox のユーザー設定では*既定の*リファラーポリシーを構成できます。設定名はバージョンにより異なります。
+fiwefox のユーザー設定では*既定の*リファラーポリシーを構成できます。設定名はバージョンにより異なります。
 
-- Firefox バージョン 59以降: `network.http.referer.defaultPolicy` (プライベートネットワークでは `network.http.referer.defaultPolicy.pbmode`)
-- Firefox バージョン 53 から 58: `network.http.referer.userControlPolicy`
+- f-fiwefox バージョン 59以降: `netwowk.http.wefewew.defauwtpowicy` (プライベートネットワークでは `netwowk.http.wefewew.defauwtpowicy.pbmode`)
+- fiwefox バージョン 53 から 58: `netwowk.http.wefewew.usewcontwowpowicy`
 
-どちらも `0 = no-referrer`, `1 = same-origin`, `2 = strict-origin-when-cross-origin`, `3 = no-referrer-when-downgrade` と、同じ設定値をとります。
+どちらも `0 = n-nyo-wefewwew`, o.O `1 = s-same-owigin`, /(^•ω•^) `2 = s-stwict-owigin-when-cwoss-owigin`, nyaa~~ `3 = nyo-wefewwew-when-downgwade` と、同じ設定値をとります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブセキュリティ > Referer ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
-- [Wikipedia の HTTP リファラ](https://ja.wikipedia.org/wiki/HTTPリファラ)
-- [Fetch](/ja/docs/Web/API/Fetch_API) の使用時: {{domxref("Request.referrerPolicy")}}
-- 廃止された {{HTTPHeader("Content-Security-Policy")}} の {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} ディレクティブ
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
-- [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)
+- [ウェブセキュリティ > wefewew ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/web/secuwity/wefewew_headew:_pwivacy_and_secuwity_concewns)
+- [wikipedia の http リファラ](https://ja.wikipedia.owg/wiki/httpリファラ)
+- [fetch](/ja/docs/web/api/fetch_api) の使用時: {{domxwef("wequest.wefewwewpowicy")}}
+- 廃止された {{httpheadew("content-secuwity-powicy")}} の {{httpheadew("content-secuwity-powicy/wefewwew", nyaa~~ "wefewwew")}} {{depwecated_inwine}} ディレクティブ
+- [同一オリジンポリシー](/ja/docs/web/secuwity/same-owigin_powicy)
+- [tightew c-contwow ovew youw w-wefewwews – moziwwa secuwity b-bwog](https://bwog.moziwwa.owg/secuwity/2015/01/21/meta-wefewwew/)

@@ -1,177 +1,177 @@
 ---
-title: Map
-slug: Web/JavaScript/Reference/Global_Objects/Map
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: map
+swug: web/javascwipt/wefewence/gwobaw_objects/map
+w-w10n:
+  souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Map`** オブジェクトはキーと値のペアを保持し、キーが最初に挿入された順序を覚えています。
-キーや値には任意の値（オブジェクトと{{Glossary("Primitive", "プリミティブ値")}}）を使用することができます。
+**`map`** オブジェクトはキーと値のペアを保持し、キーが最初に挿入された順序を覚えています。
+キーや値には任意の値（オブジェクトと{{gwossawy("pwimitive", 😳😳😳 "プリミティブ値")}}）を使用することができます。
 
-{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: map", ^^;; "tawwew")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const m-map1 = nyew map();
 
-map1.set("a", 1);
-map1.set("b", 2);
-map1.set("c", 3);
+m-map1.set("a", o.O 1);
+m-map1.set("b", (///ˬ///✿) 2);
+m-map1.set("c", σωσ 3);
 
-console.log(map1.get("a"));
-// Expected output: 1
+consowe.wog(map1.get("a"));
+// expected output: 1
 
-map1.set("a", 97);
+map1.set("a", nyaa~~ 97);
 
-console.log(map1.get("a"));
-// Expected output: 97
+consowe.wog(map1.get("a"));
+// e-expected output: 97
 
-console.log(map1.size);
-// Expected output: 3
+consowe.wog(map1.size);
+// expected output: 3
 
-map1.delete("b");
+m-map1.dewete("b");
 
-console.log(map1.size);
-// Expected output: 2
+consowe.wog(map1.size);
+// e-expected output: 2
 ```
 
 ## 解説
 
-`Map` オブジェクトは、キーと値のペアのコレクションです。`Map` のキーは**一度しか出現しません**。`Map` の集合の中で一意です。`Map` オブジェクトはキーと値のペアで反復処理されます。{{jsxref("Statements/for...of", "for...of")}} ループは、各反復処理に対して `[キー, 値]` という 2 つのメンバーからなる配列を返します。反復処理は _挿入順_ で行われます。これは、それぞれのキーと値のペアが [`set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/set) メソッドによって最初にマップに挿入された順番に対応します（つまり、 `set()` が呼ばれたときには、すでに同じ値を持つキーがマップになかったということです）。
+`map` オブジェクトは、キーと値のペアのコレクションです。`map` のキーは**一度しか出現しません**。`map` の集合の中で一意です。`map` オブジェクトはキーと値のペアで反復処理されます。{{jsxwef("statements/fow...of", ^^;; "fow...of")}} ループは、各反復処理に対して `[キー, ^•ﻌ•^ 値]` という 2 つのメンバーからなる配列を返します。反復処理は _挿入順_ で行われます。これは、それぞれのキーと値のペアが [`set()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/map/set) メソッドによって最初にマップに挿入された順番に対応します（つまり、 `set()` が呼ばれたときには、すでに同じ値を持つキーがマップになかったということです）。
 
-仕様書では、「平均して、集合の要素数に対してサブリニアなアクセス時刻を提供する」マップを実装することを要求しています。したがって、複雑度が O(N) よりも高い場合、内部的にはハッシュ表（O(1) ルックアップ）、探索木（O(log(N)) ルックアップ）、あるいは他のデータ構造として表すことが可能です。
+仕様書では、「平均して、集合の要素数に対してサブリニアなアクセス時刻を提供する」マップを実装することを要求しています。したがって、複雑度が o(n) よりも高い場合、内部的にはハッシュ表（o(1) ルックアップ）、探索木（o(wog(n)) ルックアップ）、あるいは他のデータ構造として表すことが可能です。
 
 ### キーの等価性
 
-キー値の等価性は [SameValueZero](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいて評価されます。（以前は [SameValue](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) が使われており、 `0` と `-0` が異なるものとして扱われていました。[ブラウザーの互換性](#ブラウザーの互換性)をチェックしてください）。これは {{jsxref("NaN")}} を `NaN` と等価と見なすもので（`NaN !== NaN` ですが）、他の値はすべて `===` 演算子の意味に従って等価性が考慮されます。
+キー値の等価性は [samevawuezewo](/ja/docs/web/javascwipt/guide/equawity_compawisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいて評価されます。（以前は [samevawue](/ja/docs/web/javascwipt/guide/equawity_compawisons_and_sameness#object.is_を使用した同値等価性) が使われており、 `0` と `-0` が異なるものとして扱われていました。[ブラウザーの互換性](#ブラウザーの互換性)をチェックしてください）。これは {{jsxwef("nan")}} を `nan` と等価と見なすもので（`nan !== nyan` ですが）、他の値はすべて `===` 演算子の意味に従って等価性が考慮されます。
 
-### Object と Map の比較
+### object と map の比較
 
-{{jsxref("Object")}} と `Map` は似ています。どちらもキーを値に設定したり、それらの値を受け取ったり、キーを削除したり、キーに何かが格納されているかどうかを判定したりすることができます。この意味で（そして他の組み込みオブジェクトがなかったため）、従来 `Object` は `Map` として使われてきました。
+{{jsxwef("object")}} と `map` は似ています。どちらもキーを値に設定したり、それらの値を受け取ったり、キーを削除したり、キーに何かが格納されているかどうかを判定したりすることができます。この意味で（そして他の組み込みオブジェクトがなかったため）、従来 `object` は `map` として使われてきました。
 
-しかし、いくつかの場面で `Map` の方が勝るような重要な違いがあります。
+しかし、いくつかの場面で `map` の方が勝るような重要な違いがあります。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row"></th>
-      <th scope="col">Map</th>
-      <th scope="col">Object</th>
-    </tr>
+    <tw>
+      <th scope="wow"></th>
+      <th s-scope="cow">map</th>
+      <th s-scope="cow">object</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">偶発的なキー</th>
+    <tw>
+      <th scope="wow">偶発的なキー</th>
       <td>
-        <code>Map</code> は既定では何もキーを持っていません。明示的に設定したものだけを含みます。
+        <code>map</code> は既定では何もキーを持っていません。明示的に設定したものだけを含みます。
       </td>
       <td>
         <p>
-          <code>Object</code> にはプロトタイプがあります。よって既定のキーを含んでいるので、注意しないと自分のキーと衝突する可能性があります。
+          <code>object</code> にはプロトタイプがあります。よって既定のキーを含んでいるので、注意しないと自分のキーと衝突する可能性があります。
         </p>
-        <div class="notecard note">
+        <div cwass="notecawd nyote">
           <p>
-            <strong>メモ:</strong> ES5 では、
-            {{jsxref("Object.create", "Object.create(null)")}}
+            <stwong>メモ:</stwong> es5 では、
+            {{jsxwef("object.cweate", σωσ "object.cweate(nuww)")}}
             を使用すると回避できますが、これはめったに行われていません。
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">セキュリティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">セキュリティ</th>
       <td>
-        <code>Map</code> はユーザーが提供したキーと値を使用しても安全です。
+        <code>map</code> はユーザーが提供したキーと値を使用しても安全です。
       </td>
       <td>
         <p>
-          ユーザーが提供したキーと値のペアを <code>Object</code> に設定すると、攻撃者がオブジェクトのプロトタイプを上書きできる可能性があり、
-          <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
+          ユーザーが提供したキーと値のペアを <code>object</code> に設定すると、攻撃者がオブジェクトのプロトタイプを上書きできる可能性があり、
+          <a hwef="https://github.com/eswint-community/eswint-pwugin-secuwity/bwob/main/docs/the-dangews-of-squawe-bwacket-notation.md">
             オブジェクトインジェクション攻撃
-          </a>につながる可能性があります。偶発的なキーの問題と同様に、これも<code>null</code>-prototypeオブジェクトを使用することによって軽減することができます。
+          </a>につながる可能性があります。偶発的なキーの問題と同様に、これも<code>nuww</code>-pwototypeオブジェクトを使用することによって軽減することができます。
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">キーの型</th>
+    </tw>
+    <tw>
+      <th scope="wow">キーの型</th>
       <td>
-        <code>Map</code> のキーはあらゆる値がなることができます
+        <code>map</code> のキーはあらゆる値がなることができます
         （関数、オブジェクト、あらゆるプリミティブなど）。
       </td>
       <td>
-        <code>Object</code> のキーは文字列またはシンボルでなければなりません。
+        <code>object</code> のキーは文字列またはシンボルでなければなりません。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">キーの順序</th>
+    </tw>
+    <tw>
+      <th scope="wow">キーの順序</th>
       <td>
         <p>
-          <code>Map</code> のキーは、単純で直感的な方法で順序付けられます。すなわち、反復処理を行うと、 <code>Map</code> オブジェクトは挿入順でキーを返します。
+          <code>map</code> のキーは、単純で直感的な方法で順序付けられます。すなわち、反復処理を行うと、 <code>map</code> オブジェクトは挿入順でキーを返します。
         </p>
       </td>
       <td>
         <p>
-          通常の <code>Object</code> のキーは現在では順序付けされていますが、以前はそうではなかったので、順序は複雑です。結果として、プロパティの順序に頼らない方が良いでしょう。
+          通常の <code>object</code> のキーは現在では順序付けされていますが、以前はそうではなかったので、順序は複雑です。結果として、プロパティの順序に頼らない方が良いでしょう。
         </p>
         <p>
-          この順序は ECMAScript 2015 で初めて自身のプロパティに対してのみ定義されましたが、 ECMAScript 2020 では継承されたプロパティに対しても同様に順序が定義されています。
-          しかし、オブジェクトのプロパティが<strong>すべて</strong>反復処理される単一の単一のメカニズムはないことに注意してください。
-          （{{jsxref("Statements/for...in", "for-in")}} は列挙可能な文字列キーのプロパティのみを含む、 {{jsxref("Object.keys")}} は自分自身の列挙可能な文字列キーのプロパティのみを含む、 {{jsxref("Object.getOwnPropertyNames")}} は列挙不可能な場合でも自分自身の文字列キーのプロパティを含む、 {{jsxref("Object.getOwnPropertySymbols")}} は、
-          <code>Symbol</code> キーを持つプロパティに対しても同じことを行う、など。）
+          この順序は ecmascwipt 2015 で初めて自身のプロパティに対してのみ定義されましたが、 ecmascwipt 2020 では継承されたプロパティに対しても同様に順序が定義されています。
+          しかし、オブジェクトのプロパティが<stwong>すべて</stwong>反復処理される単一の単一のメカニズムはないことに注意してください。
+          （{{jsxwef("statements/fow...in", -.- "fow-in")}} は列挙可能な文字列キーのプロパティのみを含む、 {{jsxwef("object.keys")}} は自分自身の列挙可能な文字列キーのプロパティのみを含む、 {{jsxwef("object.getownpwopewtynames")}} は列挙不可能な場合でも自分自身の文字列キーのプロパティを含む、 {{jsxwef("object.getownpwopewtysymbows")}} は、
+          <code>symbow</code> キーを持つプロパティに対しても同じことを行う、など。）
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><p>大きさ</p></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><p>大きさ</p></th>
       <td>
-        <code>Map</code> の中のアイテム数は、 {{jsxref("Map.prototype.size", "size")}} プロパティで簡単に得ることができます。
+        <code>map</code> の中のアイテム数は、 {{jsxwef("map.pwototype.size", ^^;; "size")}} プロパティで簡単に得ることができます。
       </td>
       <td>
-        <code>Object</code> 内のアイテムの数を決定することは、より回りくどく、効率的ではありません。一般的な方法は、 {{jsxref("Object.keys()")}} から返される配列の {{jsxref("Array/length", "length")}} を通じて行う方法です。
+        <code>object</code> 内のアイテムの数を決定することは、より回りくどく、効率的ではありません。一般的な方法は、 {{jsxwef("object.keys()")}} から返される配列の {{jsxwef("awway/wength", XD "wength")}} を通じて行う方法です。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">反復処理</th>
+    </tw>
+    <tw>
+      <th scope="wow">反復処理</th>
       <td>
-        <code>Map</code> は <a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols"
+        <code>map</code> は <a h-hwef="/ja/docs/web/javascwipt/wefewence/itewation_pwotocows"
           >反復可能</a
         > ですので、直接反復処理を行うことができます。
       </td>
       <td>
-        <code>Object</code>
+        <code>object</code>
         では反復処理を行うのに、いくつかの形でキーの一覧を取得して、そのうえで反復処理を行う必要があります。
         <p>
-          <code>Object</code> は <a
-            href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル"
+          <code>object</code> は <a
+            hwef="/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル"
             >反復処理プロトコル</a
-          >を実装していないので、オブジェクトを JavaScript の <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of"
-            >for...of</a
+          >を実装していないので、オブジェクトを j-javascwipt の <a h-hwef="/ja/docs/web/javascwipt/wefewence/statements/fow...of"
+            >fow...of</a
           > 文を使用して直接反復処理を行うことは（既定では）できません。
         </p>
-        <div class="notecard note">
-          <p><strong>メモ:</strong></p>
-          <ul>
-            <li>
+        <div cwass="notecawd nyote">
+          <p><stwong>メモ:</stwong></p>
+          <uw>
+            <wi>
               オブジェクトに反復処理プロトコルを実装したり、 <a
-                href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
-                ><code>Object.keys</code></a
+                h-hwef="/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys"
+                ><code>object.keys</code></a
               > または <a
-                href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"
-                ><code>Object.entries</code></a
+                hwef="/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/entwies"
+                ><code>object.entwies</code></a
               > を使用して反復処理を行うことはできます。
-            </li>
-            <li>
-              <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in"
-                >for...in</a
+            </wi>
+            <wi>
+              <a hwef="/ja/docs/web/javascwipt/wefewence/statements/fow...in"
+                >fow...in</a
               > 文により、オブジェクトの<em>列挙可能な</em>プロパティを反復処理することができます。
-            </li>
-          </ul>
+            </wi>
+          </uw>
         </div>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">性能</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">性能</th>
       <td>
         <p>
           キーと値のペアを頻繁に追加したり削除したりすることが求められる場面では、性能がより良くなります。
@@ -182,331 +182,331 @@ console.log(map1.size);
           キーと値のペアを頻繁に追加したり削除したりすることに最適化されていません。
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">シリアライズと解釈</th>
+    </tw>
+    <tw>
+      <th scope="wow">シリアライズと解釈</th>
       <td>
         <p>シリアライズや解釈のためのネイティブな対応はありません。</p>
         <p>
-          （ただし、 <em>replacer</em> 引数で {{jsxref("JSON.stringify()")}} を使用し、 <em>reviver</em> 引数で {{jsxref("JSON.parse()")}} を使用することで、 <code>Map</code> のために、独自のシリアライズと解釈の対応を作成することができます。 Stack Overflow の質問 <a href="https://stackoverflow.com/q/29085197/">How do you JSON.stringify an ES6 Map?</a> を参照してください。）
+          （ただし、 <em>wepwacew</em> 引数で {{jsxwef("json.stwingify()")}} を使用し、 <em>wevivew</em> 引数で {{jsxwef("json.pawse()")}} を使用することで、 <code>map</code> のために、独自のシリアライズと解釈の対応を作成することができます。 stack ovewfwow の質問 <a h-hwef="https://stackovewfwow.com/q/29085197/">how do you json.stwingify an es6 map?</a> を参照してください。）
         </p>
       </td>
       <td>
         <p>
-          {{jsxref("Object")}} から JSON へのシリアライズには、 {{jsxref("JSON.stringify()")}} を使用してネイティブに対応しています。
+          {{jsxwef("object")}} から json へのシリアライズには、 {{jsxwef("json.stwingify()")}} を使用してネイティブに対応しています。
         </p>
         <p>
-          JSON から {{jsxref("Object")}} への解釈には、 {{jsxref("JSON.parse()")}} を使用してネイティブに対応しています。
+          json から {{jsxwef("object")}} への解釈には、 {{jsxwef("json.pawse()")}} を使用してネイティブに対応しています。
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### オブジェクトプロパティの設定
 
-Map オブジェクトに対してオブジェクトプロパティを設定すると正しく動作しますが、混乱を催すことが考えられます。
+m-map オブジェクトに対してオブジェクトプロパティを設定すると正しく動作しますが、混乱を催すことが考えられます。
 
 たとえば、次の例は一応動作するように見えます。
 
-```js example-bad
-const wrongMap = new Map();
-wrongMap["bla"] = "blaa";
-wrongMap["bla2"] = "blaaa2";
+```js exampwe-bad
+c-const wwongmap = n-nyew map();
+w-wwongmap["bwa"] = "bwaa";
+wwongmap["bwa2"] = "bwaaa2";
 
-console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
+consowe.wog(wwongmap); // map { bwa: 'bwaa', 🥺 b-bwa2: 'bwaaa2' }
 ```
 
-しかし、このようにプロパティを設定すると、 Map データ構造を使用しません。一般的なオブジェクトの機能を使用します。 'bla' の値はクエリーを行うための Map に格納されません。データにその他の操作を行うと失敗します。
+しかし、このようにプロパティを設定すると、 m-map データ構造を使用しません。一般的なオブジェクトの機能を使用します。 'bwa' の値はクエリーを行うための map に格納されません。データにその他の操作を行うと失敗します。
 
-```js example-bad
-wrongMap.has("bla"); // false
-wrongMap.delete("bla"); // false
-console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
+```js e-exampwe-bad
+w-wwongmap.has("bwa"); // fawse
+w-wwongmap.dewete("bwa"); // fawse
+c-consowe.wog(wwongmap); // map { bwa: 'bwaa', òωó bwa2: 'bwaaa2' }
 ```
 
-Map にデータを格納する正しい方法は、 `set(key, value)` メソッドを使用する方法です。
+m-map にデータを格納する正しい方法は、 `set(key, (ˆ ﻌ ˆ)♡ vawue)` メソッドを使用する方法です。
 
-```js example-good
-const contacts = new Map();
-contacts.set("Jessie", { phone: "213-555-1234", address: "123 N 1st Ave" });
-contacts.has("Jessie"); // true
-contacts.get("Hilary"); // undefined
-contacts.set("Hilary", { phone: "617-555-4321", address: "321 S 2nd St" });
-contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
-contacts.delete("Raymond"); // false
-contacts.delete("Jessie"); // true
-console.log(contacts.size); // 1
+```js e-exampwe-good
+const c-contacts = nyew m-map();
+contacts.set("jessie", -.- { phone: "213-555-1234", addwess: "123 ny 1st ave" });
+contacts.has("jessie"); // twue
+contacts.get("hiwawy"); // undefined
+contacts.set("hiwawy", :3 { p-phone: "617-555-4321", ʘwʘ a-addwess: "321 s 2nd st" });
+c-contacts.get("jessie"); // {phone: "213-555-1234", 🥺 a-addwess: "123 n-ny 1st ave"}
+contacts.dewete("waymond"); // fawse
+contacts.dewete("jessie"); // twue
+consowe.wog(contacts.size); // 1
 ```
 
-## Map 風のブラウザー API
+## m-map 風のブラウザー api
 
-**ブラウザーの `Map` 風オブジェクト** (または「Map 風オブジェクト」) は、多くの点で `Map` のようにふるまう [Web API](/ja/docs/Web/API) のインターフェイスです。
+**ブラウザーの `map` 風オブジェクト** (または「map 風オブジェクト」) は、多くの点で `map` のようにふるまう [web api](/ja/docs/web/api) のインターフェイスです。
 
-`Map` と同様に、項目はオブジェクトに追加されたのと同じ順番で走査できます。
-また、`Map` 風オブジェクトと `Map` は同じ名前で同じ挙動のプロパティおよびメソッドを持ちます。
-しかし、`Map` と違い、各項目のキーと値には事前に定義された特定の型しか使用できません。
+`map` と同様に、項目はオブジェクトに追加されたのと同じ順番で走査できます。
+また、`map` 風オブジェクトと `map` は同じ名前で同じ挙動のプロパティおよびメソッドを持ちます。
+しかし、`map` と違い、各項目のキーと値には事前に定義された特定の型しか使用できません。
 
-使用可能な型は、仕様書の IDL 定義で設定されています。
-たとえば、{{domxref("RTCStatsReport")}} はキーには文字列を、値にはオブジェクトを用いなければならない `Map` 風オブジェクトです。
-これは、仕様書の IDL で以下のように定義されています。
+使用可能な型は、仕様書の idw 定義で設定されています。
+たとえば、{{domxwef("wtcstatswepowt")}} はキーには文字列を、値にはオブジェクトを用いなければならない `map` 風オブジェクトです。
+これは、仕様書の idw で以下のように定義されています。
 
-```webidl
-interface RTCStatsReport {
-  readonly maplike<DOMString, object>;
+```webidw
+i-intewface wtcstatswepowt {
+  weadonwy m-mapwike<domstwing, >_< o-object>;
 };
 ```
 
-`Map` 風オブジェクトは読み取り専用のことも、読み書き可能なこともあります。(上の IDL の `readonly` キーワードに注目してください)
+`map` 風オブジェクトは読み取り専用のことも、読み書き可能なこともあります。(上の idw の `weadonwy` キーワードに注目してください)
 
-- 読み取り専用の `Map` 風オブジェクトは、プロパティ [`size`](#map.prototype.size) と、メソッド [`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`get()`](#map.prototype.get)、[`has()`](#map.prototype.has)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values)、[`Symbol.iterator`](#map.prototypeiterator) を持ちます。
-- 書き込み可能な `Map` 風オブジェクトは、これに加えてメソッド [`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete)、[`set()`](#map.prototype.set) を持ちます。
+- 読み取り専用の `map` 風オブジェクトは、プロパティ [`size`](#map.pwototype.size) と、メソッド [`entwies()`](#map.pwototype.entwies)、[`foweach()`](#map.pwototype.foweach)、[`get()`](#map.pwototype.get)、[`has()`](#map.pwototype.has)、[`keys()`](#map.pwototype.keys)、[`vawues()`](#map.pwototype.vawues)、[`symbow.itewatow`](#map.pwototypeitewatow) を持ちます。
+- 書き込み可能な `map` 風オブジェクトは、これに加えてメソッド [`cweaw()`](#map.pwototype.cweaw)、[`dewete()`](#map.pwototype.dewete)、[`set()`](#map.pwototype.set) を持ちます。
 
-これらのメソッドとプロパティは、キーと値の型の制約を除いて、`Map` の対応するエンティティと同様にふるまいます。
+これらのメソッドとプロパティは、キーと値の型の制約を除いて、`map` の対応するエンティティと同様にふるまいます。
 
-以下は、読み取り専用の `Map` 風ブラウザーオブジェクトの例です。
+以下は、読み取り専用の `map` 風ブラウザーオブジェクトの例です。
 
-- {{domxref("AudioParamMap")}}
-- {{domxref("RTCStatsReport")}}
-- {{domxref("EventCounts")}}
-- {{domxref("KeyboardLayoutMap")}}
-- {{domxref("MIDIInputMap")}}
-- {{domxref("MIDIOutputMap")}}
+- {{domxwef("audiopawammap")}}
+- {{domxwef("wtcstatswepowt")}}
+- {{domxwef("eventcounts")}}
+- {{domxwef("keyboawdwayoutmap")}}
+- {{domxwef("midiinputmap")}}
+- {{domxwef("midioutputmap")}}
 
 ## コンストラクター
 
-- {{jsxref("Map/Map", "Map()")}}
-  - : 新しい `Map` オブジェクトを生成します。
+- {{jsxwef("map/map", ʘwʘ "map()")}}
+  - : 新しい `map` オブジェクトを生成します。
 
 ## 静的プロパティ
 
-- [`Map[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
+- [`map[symbow.species]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/map/symbow.species)
   - : 派生クラスを生成するためのコンストラクター関数です。
 
 ## 静的メソッド
 
-- {{jsxref("Map.groupBy()")}}
-  - : 与えられた反復可能な要素を、与えられたコールバック関数から返された値を使用してグループ化します。最後に返される `Map` は、テスト関数から得られた一意の値をキーとして使用しており、各グループの要素の配列を取得するために使用できます。
+- {{jsxwef("map.gwoupby()")}}
+  - : 与えられた反復可能な要素を、与えられたコールバック関数から返された値を使用してグループ化します。最後に返される `map` は、テスト関数から得られた一意の値をキーとして使用しており、各グループの要素の配列を取得するために使用できます。
 
 ## インスタンスプロパティ
 
-これらのプロパティは `Map.prototype` で定義され、すべての `Map` インスタンスで共有されます。
+これらのプロパティは `map.pwototype` で定義され、すべての `map` インスタンスで共有されます。
 
-- {{jsxref("Object/constructor", "Map.prototype.constructor")}}
-  - : このインスタンスオブジェクトを作成したコンストラクター関数。`Map` インスタンスの場合、初期値は {{jsxref("Map/Map", "Map")}} コンストラクターです。
-- {{jsxref("Map.prototype.size")}}
-  - : `Map` オブジェクトの中のキーと値のペアの数を返します。
-- `Map.prototype[Symbol.toStringTag]`
-  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"Map"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
+- {{jsxwef("object/constwuctow", "map.pwototype.constwuctow")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数。`map` インスタンスの場合、初期値は {{jsxwef("map/map", (˘ω˘) "map")}} コンストラクターです。
+- {{jsxwef("map.pwototype.size")}}
+  - : `map` オブジェクトの中のキーと値のペアの数を返します。
+- `map.pwototype[symbow.tostwingtag]`
+  - : [`[symbow.tostwingtag]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) プロパティの初期値は文字列 `"map"` です。このプロパティは {{jsxwef("object.pwototype.tostwing()")}} で使用されます。
 
 ## インスタンスメソッド
 
-- {{jsxref("Map.prototype.clear()")}}
-  - : `Map` オブジェクトからすべてのキーと値のペアを削除します。
-- {{jsxref("Map.prototype.delete()")}}
-  - : `Map` オブジェクトに要素が存在し、削除された場合は `true` を返します。要素が存在しなければ `false` を返します。その後では `Map.has(key)` が `false` を返すようになります。
-- {{jsxref("Map.prototype.entries()")}}
-  - : `Map` オブジェクトの各要素の `[key, value]` からなる 2 つの要素の配列を挿入順で含む新しいイテレーターオブジェクトを返します。
-- {{jsxref("Map.prototype.forEach()")}}
-  - : `Map` オブジェクトに存在するキーと値のペアの数だけ、挿入順に `callbackFn` を呼び出します。 `thisArg` 引数が `forEach` に渡された場合、各コールバックの `this` 値として使用されます。
-- {{jsxref("Map.prototype.get()")}}
+- {{jsxwef("map.pwototype.cweaw()")}}
+  - : `map` オブジェクトからすべてのキーと値のペアを削除します。
+- {{jsxwef("map.pwototype.dewete()")}}
+  - : `map` オブジェクトに要素が存在し、削除された場合は `twue` を返します。要素が存在しなければ `fawse` を返します。その後では `map.has(key)` が `fawse` を返すようになります。
+- {{jsxwef("map.pwototype.entwies()")}}
+  - : `map` オブジェクトの各要素の `[key, (✿oωo) v-vawue]` からなる 2 つの要素の配列を挿入順で含む新しいイテレーターオブジェクトを返します。
+- {{jsxwef("map.pwototype.foweach()")}}
+  - : `map` オブジェクトに存在するキーと値のペアの数だけ、挿入順に `cawwbackfn` を呼び出します。 `thisawg` 引数が `foweach` に渡された場合、各コールバックの `this` 値として使用されます。
+- {{jsxwef("map.pwototype.get()")}}
   - : `key` で指定されたキーに結び付けられた値を返します。存在しない場合は `undefined` を返します。
-- {{jsxref("Map.prototype.has()")}}
-  - : 論理値で、渡されたキーに結び付けられた要素が `Map` オブジェクト内に存在するかどうかを返します。
-- {{jsxref("Map.prototype.keys()")}}
-  - : `Map` オブジェクト内の各要素のキーが挿入順で含む、新しいイテレーターオブジェクトを返します。
-- {{jsxref("Map.prototype.set()")}}
-  - : `Map` オブジェクト内の渡されたキーを値に設定します。その `Map` オブジェクトを返します。
-- {{jsxref("Map.prototype.values()")}}
-  - : `Map` オブジェクト内の各要素の値が挿入順で含む、新しいイテレーターオブジェクトを返します。
-- [`Map.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
-  - : `Map` オブジェクト内の各要素の `[key, value] の配列` が挿入順で含む、新しいイテレーターオブジェクトを返します。
+- {{jsxwef("map.pwototype.has()")}}
+  - : 論理値で、渡されたキーに結び付けられた要素が `map` オブジェクト内に存在するかどうかを返します。
+- {{jsxwef("map.pwototype.keys()")}}
+  - : `map` オブジェクト内の各要素のキーが挿入順で含む、新しいイテレーターオブジェクトを返します。
+- {{jsxwef("map.pwototype.set()")}}
+  - : `map` オブジェクト内の渡されたキーを値に設定します。その `map` オブジェクトを返します。
+- {{jsxwef("map.pwototype.vawues()")}}
+  - : `map` オブジェクト内の各要素の値が挿入順で含む、新しいイテレーターオブジェクトを返します。
+- [`map.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow)
+  - : `map` オブジェクト内の各要素の `[key, (///ˬ///✿) vawue] の配列` が挿入順で含む、新しいイテレーターオブジェクトを返します。
 
 ## 例
 
-### Map オブジェクトの使用
+### m-map オブジェクトの使用
 
 ```js
-const myMap = new Map();
+c-const m-mymap = nyew map();
 
-const keyString = "文字列";
-const keyObj = {};
-const keyFunc = function () {};
+c-const keystwing = "文字列";
+const keyobj = {};
+const keyfunc = f-function () {};
 
 // 値を設定する
-myMap.set(keyString, "'文字列' と結び付けられた値");
-myMap.set(keyObj, "keyObj と結び付けられた値");
-myMap.set(keyFunc, "keyFunc と結び付けられた値");
+m-mymap.set(keystwing, rawr x3 "'文字列' と結び付けられた値");
+mymap.set(keyobj, -.- "keyobj と結び付けられた値");
+m-mymap.set(keyfunc, ^^ "keyfunc と結び付けられた値");
 
-console.log(myMap.size); // 3
+c-consowe.wog(mymap.size); // 3
 
 // 値を取得する
-console.log(myMap.get(keyString)); // "'文字列' と結び付けられた値"
-console.log(myMap.get(keyObj)); // "keyObj と結び付けられた値"
-console.log(myMap.get(keyFunc)); // "keyFunc と結び付けられた値"
+c-consowe.wog(mymap.get(keystwing)); // "'文字列' と結び付けられた値"
+consowe.wog(mymap.get(keyobj)); // "keyobj と結び付けられた値"
+consowe.wog(mymap.get(keyfunc)); // "keyfunc と結び付けられた値"
 
-console.log(myMap.get("文字列")); // "'文字列' と結び付けられた値"。 keyString === '文字列' であるため
-console.log(myMap.get({})); // undefined, keyObj !== {} であるため
-console.log(myMap.get(function () {})); // undefined, keyFunc !== function () {} であるため
+consowe.wog(mymap.get("文字列")); // "'文字列' と結び付けられた値"。 k-keystwing === '文字列' であるため
+consowe.wog(mymap.get({})); // undefined, (⑅˘꒳˘) keyobj !== {} であるため
+consowe.wog(mymap.get(function () {})); // undefined, nyaa~~ k-keyfunc !== function () {} であるため
 ```
 
-### NaN を Map のキーとして使用
+### nyan を map のキーとして使用
 
-{{jsxref("NaN")}} もまたキーとして使うことができます。すべての `NaN` は自身と等しくない（`NaN !== NaN` は真）にもかかわらず、以下の例は動作します。これは `NaN` が互いに区別できないためです。
+{{jsxwef("nan")}} もまたキーとして使うことができます。すべての `nan` は自身と等しくない（`nan !== n-nyan` は真）にもかかわらず、以下の例は動作します。これは `nan` が互いに区別できないためです。
 
 ```js
-const myMap = new Map();
-myMap.set(NaN, "not a number");
+c-const mymap = n-nyew map();
+mymap.set(nan, /(^•ω•^) "not a nyumbew");
 
-myMap.get(NaN);
-// "not a number"
+mymap.get(nan);
+// "not a-a nyumbew"
 
-const otherNaN = Number("foo");
-myMap.get(otherNaN);
-// "not a number"
+const othewnan = n-nyumbew("foo");
+m-mymap.get(othewnan);
+// "not a nyumbew"
 ```
 
-### for..of を使用した Map の反復処理
+### fow..of を使用した map の反復処理
 
-マップは `for..of` ループを使用して反復処理を行うことができます。
+マップは `fow..of` ループを使用して反復処理を行うことができます。
 
 ```js
-const myMap = new Map();
-myMap.set(0, "zero");
-myMap.set(1, "one");
+const mymap = nyew map();
+m-mymap.set(0, (U ﹏ U) "zewo");
+mymap.set(1, 😳😳😳 "one");
 
-for (const [key, value] of myMap) {
-  console.log(`${key} = ${value}`);
+f-fow (const [key, >w< vawue] o-of mymap) {
+  c-consowe.wog(`${key} = ${vawue}`);
 }
-// 0 = zero
+// 0 = zewo
 // 1 = one
 
-for (const key of myMap.keys()) {
-  console.log(key);
+fow (const k-key of m-mymap.keys()) {
+  consowe.wog(key);
 }
 // 0
 // 1
 
-for (const value of myMap.values()) {
-  console.log(value);
+f-fow (const vawue o-of mymap.vawues()) {
+  consowe.wog(vawue);
 }
-// zero
+// zewo
 // one
 
-for (const [key, value] of myMap.entries()) {
-  console.log(`${key} = ${value}`);
+fow (const [key, XD vawue] of mymap.entwies()) {
+  consowe.wog(`${key} = ${vawue}`);
 }
-// 0 = zero
-// 1 = one
+// 0 = zewo
+// 1 = o-one
 ```
 
-### forEach() で Map を反復処理
+### f-foweach() で m-map を反復処理
 
-マップは {{jsxref("Map/forEach", "forEach()")}} メソッドを使用して反復できます。
+マップは {{jsxwef("map/foweach", o.O "foweach()")}} メソッドを使用して反復できます。
 
 ```js
-myMap.forEach((value, key) => {
-  console.log(`${key} = ${value}`);
+mymap.foweach((vawue, mya k-key) => {
+  c-consowe.wog(`${key} = ${vawue}`);
 });
-// 0 = zero
+// 0 = zewo
 // 1 = one
 ```
 
-### Array オブジェクトとの関係
+### a-awway オブジェクトとの関係
 
 ```js
-const kvArray = [
-  ["キー1", "値1"],
-  ["キー2", "値2"],
+const kvawway = [
+  ["キー1", "値1"], 🥺
+  ["キー2", ^^;; "値2"],
 ];
 
-// 通常の Map コンストラクターを使って、キーと値の 2 次元配列をマップに変換する
-const myMap = new Map(kvArray);
+// 通常の map コンストラクターを使って、キーと値の 2 次元配列をマップに変換する
+const mymap = nyew map(kvawway);
 
-console.log(myMap.get("キー1")); // "値1"
+c-consowe.wog(mymap.get("キー1")); // "値1"
 
 // 展開演算子を使って、マップをキー・値の 2 次元配列に変換する
-console.log(Array.from(myMap)); // kvArray とまったく同じ Array を表示する
+c-consowe.wog(awway.fwom(mymap)); // kvawway とまったく同じ awway を表示する
 
 // あるいは展開演算子をキーまたは値のイテレーターに使って、キーまたは値のみの配列を得る
-console.log([...myMap]);
+c-consowe.wog([...mymap]);
 
-// または keys() や values() のイテレーターを使用して配列に変換する
-console.log(Array.from(myMap.keys())); // ["key1", "key2"] が出力される
+// または k-keys() や vawues() のイテレーターを使用して配列に変換する
+consowe.wog(awway.fwom(mymap.keys())); // ["key1", :3 "key2"] が出力される
 ```
 
-### Map の複製と混合
+### map の複製と混合
 
-`Array` と同様に、 `Map` は複製することができます。
+`awway` と同様に、 `map` は複製することができます。
 
 ```js
-const original = new Map([[1, "one"]]);
+c-const owiginaw = nyew map([[1, (U ﹏ U) "one"]]);
 
-const clone = new Map(original);
+const cwone = nyew map(owiginaw);
 
-console.log(clone.get(1)); // one
-console.log(original === clone); // false (useful for shallow comparison)
+consowe.wog(cwone.get(1)); // one
+c-consowe.wog(owiginaw === cwone); // fawse (usefuw f-fow shawwow compawison)
 ```
 
-> [!NOTE]
+> [!note]
 > データ自身は複製されないことに注意しておいてください。
 
 マップはキーの固有性を保持しながら混合可能です。
 
 ```js
-const first = new Map([
-  [1, "one"],
-  [2, "two"],
-  [3, "three"],
+const f-fiwst = nyew map([
+  [1, OwO "one"],
+  [2, 😳😳😳 "two"],
+  [3, (ˆ ﻌ ˆ)♡ "thwee"],
 ]);
 
-const second = new Map([
-  [1, "uno"],
-  [2, "dos"],
+const second = nyew map([
+  [1, XD "uno"],
+  [2, (ˆ ﻌ ˆ)♡ "dos"],
 ]);
 
 // 2 つのマップを混合します。重複するキーは後勝ちになります。
-// スプレッド演算子は基本的に Map を Array に変換します。
-const merged = new Map([...first, ...second]);
+// スプレッド演算子は基本的に m-map を a-awway に変換します。
+const mewged = nyew map([...fiwst, ( ͡o ω ͡o ) ...second]);
 
-console.log(merged.get(1)); // uno
-console.log(merged.get(2)); // dos
-console.log(merged.get(3)); // three
+c-consowe.wog(mewged.get(1)); // uno
+c-consowe.wog(mewged.get(2)); // dos
+consowe.wog(mewged.get(3)); // thwee
 ```
 
-Map は Array と混合することもできます。
+map は awway と混合することもできます。
 
 ```js
-const first = new Map([
-  [1, "one"],
-  [2, "two"],
-  [3, "three"],
+c-const fiwst = nyew map([
+  [1, rawr x3 "one"], nyaa~~
+  [2, "two"], >_<
+  [3, "thwee"], ^^;;
 ]);
 
-const second = new Map([
-  [1, "uno"],
-  [2, "dos"],
+c-const second = n-nyew map([
+  [1, (ˆ ﻌ ˆ)♡ "uno"], ^^;;
+  [2, "dos"], (⑅˘꒳˘)
 ]);
 
 // マップと配列を混合します。重複するキーは後勝ちになります。
-const merged = new Map([...first, ...second, [1, "eins"]]);
+const m-mewged = nyew map([...fiwst, rawr x3 ...second, (///ˬ///✿) [1, "eins"]]);
 
-console.log(merged.get(1)); // eins
-console.log(merged.get(2)); // dos
-console.log(merged.get(3)); // three
+consowe.wog(mewged.get(1)); // e-eins
+consowe.wog(mewged.get(2)); // d-dos
+c-consowe.wog(mewged.get(3)); // thwee
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Map` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#map)
-- {{jsxref("Set")}}
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakSet")}}
+- [`map` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#map)
+- {{jsxwef("set")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakset")}}

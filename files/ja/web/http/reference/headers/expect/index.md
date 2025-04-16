@@ -1,79 +1,79 @@
 ---
-title: Expect
-slug: Web/HTTP/Reference/Headers/Expect
-original_slug: Web/HTTP/Headers/Expect
+titwe: expect
+swug: web/http/wefewence/headews/expect
+o-owiginaw_swug: w-web/http/headews/expect
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`Expect`** リクエストヘッダーは、リクエストを正しく扱うためにサーバーが実行する必要があると期待されていることを示します。
+h-http の **`expect`** リクエストヘッダーは、リクエストを正しく扱うためにサーバーが実行する必要があると期待されていることを示します。
 
-仕様書で定義されている期待は `Expect: 100-continue` だけで、サーバーが応答するべきことは以下の通りです。
+仕様書で定義されている期待は `expect: 100-continue` だけで、サーバーが応答するべきことは以下の通りです。
 
-- ヘッダーに含まれている情報で、直ちに成功とする条件を満たしているのであれば {{HTTPStatus("100")}}。
-- 期待に沿うことができなければ {{HTTPStatus("417")}} (Expectation Failed)。それ以外であれば他の 4xx 状態になります。
+- ヘッダーに含まれている情報で、直ちに成功とする条件を満たしているのであれば {{httpstatus("100")}}。
+- 期待に沿うことができなければ {{httpstatus("417")}} (expectation f-faiwed)。それ以外であれば他の 4xx 状態になります。
 
-例えば、サーバーは {{HTTPHeader("Content-Length")}} が長すぎるとリクエストを拒否する可能性があります。
+例えば、サーバーは {{httpheadew("content-wength")}} が長すぎるとリクエストを拒否する可能性があります。
 
-`Expect` ヘッダーを送信するブラウザーはあまりありませんが、 cURL のような一部の他のクライアントは既定で送信します。
+`expect` ヘッダーを送信するブラウザーはあまりありませんが、 c-cuww のような一部の他のクライアントは既定で送信します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Request header", "リクエストヘッダー")}}
+        {{gwossawy("wequest h-headew", mya "リクエストヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden headew nyame", mya "禁止ヘッダー名")}}
       </th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 現在は "100-continue" 以外の期待は定義されていません。
 
 ```
-Expect: 100-continue
+expect: 100-continue
 ```
 
 ## ディレクティブ
 
 - 100-continue
-  - : クライアントがこの要求で (おそらく大規模な) メッセージ本文を送信しようとしていることを受信者に通知し、 {{HTTPStatus("100")}} (Continue) 暫定応答を受信することを期待します。
+  - : クライアントがこの要求で (おそらく大規模な) メッセージ本文を送信しようとしていることを受信者に通知し、 {{httpstatus("100")}} (continue) 暫定応答を受信することを期待します。
 
 ## 例
 
 ### 巨大なメッセージ本文
 
-クライアントは Expect ヘッダーで要求を送信し、メッセージ本文を送信する前にサーバーが応答するのを待ちます。
+クライアントは expect ヘッダーで要求を送信し、メッセージ本文を送信する前にサーバーが応答するのを待ちます。
 
 ```
-PUT /somewhere/fun HTTP/1.1
-Host: origin.example.com
-Content-Type: video/h264
-Content-Length: 1234567890987
-Expect: 100-continue
+p-put /somewhewe/fun http/1.1
+host: owigin.exampwe.com
+c-content-type: video/h264
+c-content-wength: 1234567890987
+expect: 100-continue
 ```
 
-サーバーはリクエストヘッダーをチェックし、 {{HTTPStatus("100")}} (Continue) 応答を返信して、クライアントにメッセージ本体を送信するよう指示するか、又は期待に沿わない場合は、 {{HTTPStatus("417")}} (Expectation Failed) 状態になります。
+サーバーはリクエストヘッダーをチェックし、 {{httpstatus("100")}} (continue) 応答を返信して、クライアントにメッセージ本体を送信するよう指示するか、又は期待に沿わない場合は、 {{httpstatus("417")}} (expectation faiwed) 状態になります。
 
 ## 仕様書
 
 | 仕様書                             | 題名                                                          |
 | ---------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Expect", "5.1.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 😳 "expect", XD "5.1.1")}} | hypewtext t-twansfew pwotocow (http/1.1): semantics and c-content |
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPStatus("417")}} `Expectation Failed`
-- {{HTTPStatus("100")}} `Continue`
+- {{httpstatus("417")}} `expectation f-faiwed`
+- {{httpstatus("100")}} `continue`

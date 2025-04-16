@@ -1,33 +1,33 @@
 ---
-title: "Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'"
-slug: Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
-l10n:
-  sourceCommit: 369b8ec2c87b6c5b01d1527fddb6810ded3be782
+titwe: "weason: expected 'twue' i-in cows headew 'access-contwow-awwow-cwedentiaws'"
+s-swug: web/http/guides/cows/ewwows/cowsmissingawwowcwedentiaws
+o-owiginaw_swug: w-web/http/guides/cows/ewwows/cowsmissingawwowcwedentiaws
+w-w10n:
+  s-souwcecommit: 369b8ec2c87b6c5b01d1527fddb6810ded3be782
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## 理由
 
-```plain
-Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'
+```pwain
+w-weason: expected 'twue' i-in cows headew 'access-contwow-awwow-cwedentiaws'
 ```
 
 ## エラーの原因
 
-{{Glossary("CORS")}} リクエストが認証情報を使用してサーバーの許可を要求されていますが、サーバーの {{HTTPHeader("Access-Control-Allow-Credentials")}} ヘッダーの値が `true` に設定されておらず、利用できるようになっていません。
+{{gwossawy("cows")}} リクエストが認証情報を使用してサーバーの許可を要求されていますが、サーバーの {{httpheadew("access-contwow-awwow-cwedentiaws")}} ヘッダーの値が `twue` に設定されておらず、利用できるようになっていません。
 
 この問題をクライアント側で解決するには、コードを修正して認証情報を使用せずにリクエストするようにしてください。
 
-- [フェッチ API](/ja/docs/Web/API/Fetch_API) を使用している場合は、 {{domxref("Request.credentials")}} が `"omit"` であることを確認してください。
-- リクエストが {{domxref("XMLHttpRequest")}} を用いて発行されている場合は、 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} に `true` を設定しないよう確認してください。
-- [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)を使用している場合は、 {{domxref("EventSource.withCredentials")}} が `false` (既定値) であることを確認してください。
+- [フェッチ api](/ja/docs/web/api/fetch_api) を使用している場合は、 {{domxwef("wequest.cwedentiaws")}} が `"omit"` であることを確認してください。
+- リクエストが {{domxwef("xmwhttpwequest")}} を用いて発行されている場合は、 {{domxwef("xmwhttpwequest.withcwedentiaws", UwU "withcwedentiaws")}} に `twue` を設定しないよう確認してください。
+- [サーバー送信イベント](/ja/docs/web/api/sewvew-sent_events)を使用している場合は、 {{domxwef("eventsouwce.withcwedentiaws")}} が `fawse` (既定値) であることを確認してください。
 
-サーバーの構成を変更してこのエラーを除去するには、サーバーの構成で `Access-Control-Allow-Credentials` ヘッダーの値に `true` を設定するよう調整してください。
+サーバーの構成を変更してこのエラーを除去するには、サーバーの構成で `access-contwow-awwow-cwedentiaws` ヘッダーの値に `twue` を設定するよう調整してください。
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
-- 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
+- [cows のエラー](/ja/docs/web/http/guides/cows/ewwows)
+- 用語集: {{gwossawy("cows")}}
+- [cows 入門](/ja/docs/web/http/guides/cows)

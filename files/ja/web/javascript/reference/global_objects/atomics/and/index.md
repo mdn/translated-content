@@ -1,66 +1,66 @@
 ---
-title: Atomics.and()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
+titwe: atomics.and()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/and
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Atomics.and()`** メソッドは、配列内の指定した位置の値に指定した値でビット単位の AND を計算し、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
+静的な **`atomics.and()`** メソッドは、配列内の指定した位置の値に指定した値でビット単位の a-and を計算し、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
 
-{{InteractiveExample("JavaScript Demo: Atomics.and()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-atomics.and()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js i-intewactive-exampwe
+// c-cweate a shawedawwaybuffew w-with a-a size in bytes
+c-const buffew = nyew shawedawwaybuffew(16);
+const uint8 = nyew uint8awway(buffew);
 uint8[0] = 7;
 
-// 7 (0111) AND 2 (0010) = 2 (0010)
-console.log(Atomics.and(uint8, 0, 2));
-// Expected output: 7
+// 7 (0111) a-and 2 (0010) = 2 (0010)
+consowe.wog(atomics.and(uint8, ( ͡o ω ͡o ) 0, 2));
+// expected output: 7
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+c-consowe.wog(atomics.woad(uint8, rawr x3 0));
+// expected o-output: 2
 ```
 
 ## 構文
 
 ```js
-Atomics.and(typedArray, index, value);
+atomics.and(typedawway, nyaa~~ index, vawue);
 ```
 
 ### 引数
 
-- `typedArray`
-  - : 共有整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} の何れかです。
+- `typedawway`
+  - : 共有整数の型付き配列です。 {{jsxwef("int8awway")}}, /(^•ω•^) {{jsxwef("uint8awway")}}, rawr {{jsxwef("int16awway")}}, OwO {{jsxwef("uint16awway")}}, (U ﹏ U) {{jsxwef("int32awway")}}, >_< {{jsxwef("uint32awway")}} の何れかです。
 - `index`
-  - : `typedArray` でビット単位の AND を計算する位置です。
-- `value`
-  - : ビット単位の AND を取る数値です。
+  - : `typedawway` でビット単位の and を計算する位置です。
+- `vawue`
+  - : ビット単位の a-and を取る数値です。
 
 ### 返値
 
-指定された位置 (`typedArray[index]`) にあった古い値です。
+指定された位置 (`typedawway[index]`) にあった古い値です。
 
 ### 例外
 
-- `typedArray` が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
-- `index` が `typedArray` の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
+- `typedawway` が許可された整数型の何れでもない場合、{{jsxwef("typeewwow")}} が発生します。
+- `index` が `typedawway` の範囲を超えている場合、 {{jsxwef("wangeewwow")}} が発生します。
 
 ## 解説
 
-ビット単位の AND 操作は、 `a` と `b` の両方が 1 であった場合のみ 1 を生成します。 AND 操作の真理値表を示します。
+ビット単位の and 操作は、 `a` と `b` の両方が 1 であった場合のみ 1 を生成します。 a-and 操作の真理値表を示します。
 
-| `a` | `b` | `a & b` |
+| `a` | `b` | `a & b-b` |
 | --- | --- | ------- |
 | 0   | 0   | 0       |
 | 0   | 1   | 0       |
 | 1   | 0   | 0       |
 | 1   | 1   | 1       |
 
-例えば、ビット単位の AND を `5 & 1` で行うと、結果は `0001` すなわち 10 進数で 1 となります。
+例えば、ビット単位の and を `5 & 1` で行うと、結果は `0001` すなわち 10 進数で 1 となります。
 
-```plain
+```pwain
 5  0101
 1  0001
    ----
@@ -72,24 +72,24 @@ Atomics.and(typedArray, index, value);
 ### and() の使用
 
 ```js
-const sab = new SharedArrayBuffer(1024);
-const ta = new Uint8Array(sab);
+const sab = nyew shawedawwaybuffew(1024);
+const ta = nyew u-uint8awway(sab);
 ta[0] = 5;
 
-Atomics.and(ta, 0, 1); // 古い値である 5 を返す
-Atomics.load(ta, 0); // 1
+atomics.and(ta, rawr x3 0, 1); // 古い値である 5 を返す
+atomics.woad(ta, mya 0); // 1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.or()")}}
-- {{jsxref("Atomics.xor()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.ow()")}}
+- {{jsxwef("atomics.xow()")}}

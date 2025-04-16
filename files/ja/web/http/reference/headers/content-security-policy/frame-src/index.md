@@ -1,78 +1,78 @@
 ---
-title: "CSP: frame-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
-l10n:
-  sourceCommit: 52a9f4580b8ce4eabaed20dd9a4677fc556e1d44
+titwe: "csp: fwame-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/fwame-swc
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/fwame-swc
+w-w10n:
+  souwcecommit: 52a9f4580b8ce4eabaed20dd9a4677fc556e1d44
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`frame-src`** ディレクティブは、 {{HTMLElement("frame")}} や {{HTMLElement("iframe")}} のような要素を使用した内部の閲覧コンテキストの読み込みに有効なソースを指定します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`fwame-swc`** ディレクティブは、 {{htmwewement("fwame")}} や {{htmwewement("ifwame")}} のような要素を使用した内部の閲覧コンテキストの読み込みに有効なソースを指定します。
 
-> **メモ:** **`frame-src`** は、ページ内の iframe がどこから読み込まれるかを指定することができます。
-> これは、ページを埋め込むことができる親ソースを指定することができる **`frame-ancestors`** とは異なります。
+> **メモ:** **`fwame-swc`** は、ページ内の ifwame がどこから読み込まれるかを指定することができます。
+> これは、ページを埋め込むことができる親ソースを指定することができる **`fwame-ancestows`** とは異なります。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th s-scope="wow">csp バージョン</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">代替</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch d-diwective", (U ﹏ U) "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">代替</th>
       <td>
-        このディレクティブがない場合、ユーザーエージェントは {{CSP("child-src")}} ディレクティブを探す (さらにこの代替は {{CSP("default-src")}} ディレクティブである)。
+        このディレクティブがない場合、ユーザーエージェントは {{csp("chiwd-swc")}} ディレクティブを探す (さらにこの代替は {{csp("defauwt-swc")}} ディレクティブである)。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`frame-src` ポリシーには、 1 つ以上のソースが許可されています。
+`fwame-swc` ポリシーには、 1 つ以上のソースが許可されています。
 
 ```http
-Content-Security-Policy: frame-src <source>;
-Content-Security-Policy: frame-src <source> <source>;
+content-secuwity-powicy: fwame-swc <souwce>;
+content-secuwity-powicy: f-fwame-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch diwective", -.- "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ### 違反する場合
 
-この CSP ヘッダーがある場合、
+この csp ヘッダーがある場合、
 
 ```http
-Content-Security-Policy: frame-src https://example.com/
+content-secuwity-powicy: f-fwame-swc https://exampwe.com/
 ```
 
-以下の {{HTMLElement("iframe")}} はブロックされ、読み込まれません。
+以下の {{htmwewement("ifwame")}} はブロックされ、読み込まれません。
 
-```html
-<iframe src="https://not-example.com/"></iframe>
+```htmw
+<ifwame swc="https://not-exampwe.com/"></ifwame>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("frame")}} および {{HTMLElement("iframe")}}
-- {{CSP("frame-ancestors")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{htmwewement("fwame")}} および {{htmwewement("ifwame")}}
+- {{csp("fwame-ancestows")}}

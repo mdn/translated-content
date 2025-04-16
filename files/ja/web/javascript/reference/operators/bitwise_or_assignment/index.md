@@ -1,20 +1,20 @@
 ---
-title: ビット論理和代入 (|=)
-slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
+titwe: ビット論理和代入 (|=)
+swug: web/javascwipt/wefewence/opewatows/bitwise_ow_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-ビット論理和代入演算子 (`|=`) は、両方のオペランドの二進表現を使用し、それらに対してビット単位の OR 演算を実行して、結果を変数に代入します。
+ビット論理和代入演算子 (`|=`) は、両方のオペランドの二進表現を使用し、それらに対してビット単位の o-ow 演算を実行して、結果を変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR assignment")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - b-bitwise o-ow assignment")}}
 
-```js interactive-example
-let a = 5; // 00000000000000000000000000000101
+```js i-intewactive-exampwe
+w-wet a = 5; // 00000000000000000000000000000101
 a |= 3; // 00000000000000000000000000000011
 
-console.log(a); // 00000000000000000000000000000111
-// Expected output: 7
+c-consowe.wog(a); // 00000000000000000000000000000111
+// e-expected output: 7
 ```
 
 ## 構文
@@ -28,7 +28,7 @@ x |= y; // x = x | y
 ### ビット論理和代入の使用
 
 ```js
-let a = 5;
+wet a = 5;
 a |= 2; // 7
 // 5: 00000000000000000000000000000101
 // 2: 00000000000000000000000000000010
@@ -38,14 +38,14 @@ a |= 2; // 7
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
-- [ビット論理和演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
-- [論理 OR 代入 (`||=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+- [javascwipt ガイドの代入演算子](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#代入演算子)
+- [ビット論理和演算子](/ja/docs/web/javascwipt/wefewence/opewatows/bitwise_ow)
+- [論理 o-ow 代入 (`||=`)](/ja/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow_assignment)

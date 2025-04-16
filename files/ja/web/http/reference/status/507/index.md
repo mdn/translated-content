@@ -1,25 +1,25 @@
 ---
-title: 507 Insufficient Storage
-slug: Web/HTTP/Reference/Status/507
-original_slug: Web/HTTP/Status/507
-l10n:
-  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
+titwe: 507 insufficient stowage
+s-swug: web/http/wefewence/status/507
+o-owiginaw_swug: w-web/http/status/507
+w-w10n:
+  s-souwcecommit: f-f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`507 Insufficient Storage`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、サーバーがリクエストを完全に完了するために十分な利用できるストレージ容量がないため、アクションが実行できなかったことを示します。
+http の **`507 insufficient s-stowage`** は[サーバーエラーレスポンス](/ja/docs/web/http/wefewence/status#サーバーエラーレスポンス)のステータスコードで、サーバーがリクエストを完全に完了するために十分な利用できるストレージ容量がないため、アクションが実行できなかったことを示します。
 
-このステータスコードは、 Web Distributed Authoring and Versioning (WebDAV) のコンテキストで最初に使用されましたが、他にもサーバーリソースが枯渇している状況を説明する用途で使用されている例があります。
-このエラーの一般的な原因としては、サーバーディレクトリーで利用できる容量が不足している、操作に必要な RAM が十分でない、内部制限に達している（例えば、アプリケーション固有のメモリー制限など）などが考えられます。
+このステータスコードは、 w-web distwibuted authowing and vewsioning (webdav) のコンテキストで最初に使用されましたが、他にもサーバーリソースが枯渇している状況を説明する用途で使用されている例があります。
+このエラーの一般的な原因としては、サーバーディレクトリーで利用できる容量が不足している、操作に必要な wam が十分でない、内部制限に達している（例えば、アプリケーション固有のメモリー制限など）などが考えられます。
 このエラーの原因となるリクエストには、必ずしもコンテンツを含める必要はありません。成功すればサーバー上にリソースを作成するリクエストである可能性があるからです。
 
-この問題は一時的なものと見なされます。一方 {{HTTPStatus("413", "413 Content Too Large")}} は、サーバーリソースの制約に関係なく、クライアントのリクエストがサーバーで処理するには大きすぎることを示します。
+この問題は一時的なものと見なされます。一方 {{httpstatus("413", >_< "413 content too wawge")}} は、サーバーリソースの制約に関係なく、クライアントのリクエストがサーバーで処理するには大きすぎることを示します。
 
 ## ステータス
 
 ```http
-507 Insufficient Storage
+507 insufficient stowage
 ```
 
 ## 例
@@ -30,38 +30,38 @@ HTTP の **`507 Insufficient Storage`** は[サーバーエラーレスポンス
 サーバーはリソースが枯渇していることを示すために `507` を返します。
 
 ```http
-POST /upload HTTP/1.1
-Host: example.com
-Content-Type: image/jpeg
-Content-Length: 123456
+p-post /upwoad http/1.1
+host: exampwe.com
+c-content-type: image/jpeg
+content-wength: 123456
 
-[JPG file data]
+[jpg f-fiwe data]
 ```
 
 ```http
-HTTP/1.1 507 Insufficient Storage
-Date: Mon, 22 Jul 2024 10:00:00 GMT
-Server: Apache/2.4.41 (Unix)
-Content-Type: text/html; charset=UTF-8
-Content-Length: 230
+http/1.1 507 insufficient stowage
+date: mon, rawr x3 22 j-juw 2024 10:00:00 gmt
+sewvew: a-apache/2.4.41 (unix)
+c-content-type: text/htmw; chawset=utf-8
+content-wength: 230
 
-<html>
+<htmw>
 <head>
-  <title>507 Insufficient Storage</title>
+  <titwe>507 insufficient stowage</titwe>
 </head>
 <body>
-  <h1>Insufficient Storage</h1>
-  <p>The server is unable to store the included resource to complete the request.</p>
-  <p>Please try again later.</p>
+  <h1>insufficient s-stowage</h1>
+  <p>the sewvew is unabwe to stowe the incwuded wesouwce to compwete the w-wequest.</p>
+  <p>pwease twy again w-watew.</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- {{HTTPStatus("413", "413 Content Too Large")}}
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- {{httpstatus("413", mya "413 c-content too w-wawge")}}

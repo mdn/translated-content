@@ -1,48 +1,48 @@
 ---
-title: RegExp.prototype.compile()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-l10n:
-  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
+titwe: wegexp.pwototype.compiwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/compiwe
+w-w10n:
+  souwcecommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-> **メモ:** `compile()` メソッドは互換性のためにのみ定義されています。`compile()` を使用すると、それまで不変であった正規表現のソースとフラグが変更可能なものとなり、ユーザーの期待を裏切る可能性があります。代わりに [`RegExp()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) コンストラクターを使用して新しい正規表現オブジェクトを構築してください。
+> **メモ:** `compiwe()` メソッドは互換性のためにのみ定義されています。`compiwe()` を使用すると、それまで不変であった正規表現のソースとフラグが変更可能なものとなり、ユーザーの期待を裏切る可能性があります。代わりに [`wegexp()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wegexp) コンストラクターを使用して新しい正規表現オブジェクトを構築してください。
 
-**`compile()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 `RegExp` オブジェクトが既に作成された後、新しいソースとフラグで正規表現を再コンパイルするために使用します。
+**`compiwe()`** は {{jsxwef("wegexp")}} インスタンスのメソッドで、 `wegexp` オブジェクトが既に作成された後、新しいソースとフラグで正規表現を再コンパイルするために使用します。
 
 ## 構文
 
-```js-nolint
-compile(pattern, flags)
+```js-nowint
+c-compiwe(pattewn, ( ͡o ω ͡o ) f-fwags)
 ```
 
 ### 引数
 
-- `pattern`
+- `pattewn`
   - : 正規表現のテキスト
-- `flags`
-  - : [フラグ値](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp#flags)の組み合わせです。
+- `fwags`
+  - : [フラグ値](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wegexp#fwags)の組み合わせです。
 
 ## 例
 
-### compile() の使用
+### c-compiwe() の使用
 
 次の例では、新しいパターンとフラグで正規表現を再コンパイルする方法を示します。
 
 ```js
-const regexObj = new RegExp("foo", "gi");
-regexObj.compile("new foo", "g");
+c-const w-wegexobj = new w-wegexp("foo", UwU "gi");
+w-wegexobj.compiwe("new foo", rawr x3 "g");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("RegExp")}}
+- {{jsxwef("wegexp")}}

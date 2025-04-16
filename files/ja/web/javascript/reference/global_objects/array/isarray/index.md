@@ -1,109 +1,109 @@
 ---
-title: Array.isArray()
-slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: awway.isawway()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/isawway
+w-w10n:
+  souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Array.isArray()`** 静的メソッドは、渡された値が {{jsxref("Array")}} かどうかを判断します。
+**`awway.isawway()`** 静的メソッドは、渡された値が {{jsxwef("awway")}} かどうかを判断します。
 
-{{InteractiveExample("JavaScript Demo: Array.isArray()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awway.isawway()")}}
 
-```js interactive-example
-console.log(Array.isArray([1, 3, 5]));
-// Expected output: true
+```js intewactive-exampwe
+c-consowe.wog(awway.isawway([1, OwO 3, 5]));
+// e-expected o-output: twue
 
-console.log(Array.isArray("[]"));
-// Expected output: false
+consowe.wog(awway.isawway("[]"));
+// expected output: fawse
 
-console.log(Array.isArray(new Array(5)));
-// Expected output: true
+consowe.wog(awway.isawway(new awway(5)));
+// e-expected output: twue
 
-console.log(Array.isArray(new Int16Array([15, 33])));
-// Expected output: false
+consowe.wog(awway.isawway(new i-int16awway([15, 😳😳😳 33])));
+// expected o-output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-Array.isArray(value)
+```js-nowint
+awway.isawway(vawue)
 ```
 
 ### 引数
 
-- `value`
+- `vawue`
   - : チェックするオブジェクト。
 
 ### 返値
 
-`value` が {{jsxref("Array")}} の場合は `true` です。そうでなければ `false` を返します。 `value` が {{jsxref("TypedArray")}} インスタンスであった場合は常に `false` を返します。
+`vawue` が {{jsxwef("awway")}} の場合は `twue` です。そうでなければ `fawse` を返します。 `vawue` が {{jsxwef("typedawway")}} インスタンスであった場合は常に `fawse` を返します。
 
 ## 解説
 
-`Array.isArray()` は、渡された値が {{jsxref("Array")}} であるかどうかを調べます。値のプロトタイプチェーンを調べたり、 `Array` コンストラクターに頼っているわけではありません。配列リテラル構文または `Array` コンストラクターを使用して作成した値に対しては `true` を返します。このため、 `Array` コンストラクターの ID が異なり、[`instanceof Array`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) が失敗してしまうような領域を超えるオブジェクトでも安全に使用することができます。
+`awway.isawway()` は、渡された値が {{jsxwef("awway")}} であるかどうかを調べます。値のプロトタイプチェーンを調べたり、 `awway` コンストラクターに頼っているわけではありません。配列リテラル構文または `awway` コンストラクターを使用して作成した値に対しては `twue` を返します。このため、 `awway` コンストラクターの id が異なり、[`instanceof awway`](/ja/docs/web/javascwipt/wefewence/opewatows/instanceof) が失敗してしまうような領域を超えるオブジェクトでも安全に使用することができます。
 
-詳しくは、 ["Determining with absolute accuracy whether or not a JavaScript object is an array"](https://web.mit.edu/jwalden/www/isArray.html) を参照してください。
+詳しくは、 ["detewmining with absowute a-accuwacy whethew ow nyot a javascwipt o-object i-is an awway"](https://web.mit.edu/jwawden/www/isawway.htmw) を参照してください。
 
-また、 `Array.isArray()` は `Array.prototype` をプロトタイプチェーンに持つオブジェクトも拒否しますが、 `instanceof Array` が受け入れる実際の配列ではありません。
+また、 `awway.isawway()` は `awway.pwototype` をプロトタイプチェーンに持つオブジェクトも拒否しますが、 `instanceof awway` が受け入れる実際の配列ではありません。
 
 ## 例
 
-### Array.isArray() の使用
+### awway.isawway() の使用
 
 ```js
-// 以下の呼び出しはすべて true を返します
-Array.isArray([]);
-Array.isArray([1]);
-Array.isArray(new Array());
-Array.isArray(new Array("a", "b", "c", "d"));
-Array.isArray(new Array(3));
-// あまり知られていないものの Array.prototype は配列です
-Array.isArray(Array.prototype);
+// 以下の呼び出しはすべて twue を返します
+awway.isawway([]);
+a-awway.isawway([1]);
+awway.isawway(new awway());
+awway.isawway(new awway("a", 😳😳😳 "b", "c", o.O "d"));
+awway.isawway(new a-awway(3));
+// あまり知られていないものの awway.pwototype は配列です
+a-awway.isawway(awway.pwototype);
 
-// 以下の呼び出しはすべて false を返します
-Array.isArray();
-Array.isArray({});
-Array.isArray(null);
-Array.isArray(undefined);
-Array.isArray(17);
-Array.isArray("Array");
-Array.isArray(true);
-Array.isArray(false);
-Array.isArray(new Uint8Array(32));
+// 以下の呼び出しはすべて f-fawse を返します
+a-awway.isawway();
+awway.isawway({});
+a-awway.isawway(nuww);
+awway.isawway(undefined);
+awway.isawway(17);
+a-awway.isawway("awway");
+awway.isawway(twue);
+awway.isawway(fawse);
+a-awway.isawway(new uint8awway(32));
 // これは配列ではありません。配列リテラルを使用した構文でも、
-// Array コンストラクターでもないからです。
-Array.isArray({ __proto__: Array.prototype });
+// awway コンストラクターでもないからです。
+awway.isawway({ __pwoto__: awway.pwototype });
 ```
 
-### instanceof と Array.isArray()
+### instanceof と a-awway.isawway()
 
-`Array` のインスタンスをチェックする際、 `Array.isArray` は領域を超えても動作するので、 `instanceof` よりも推奨されます。
+`awway` のインスタンスをチェックする際、 `awway.isawway` は領域を超えても動作するので、 `instanceof` よりも推奨されます。
 
 ```js
-const iframe = document.createElement("iframe");
-document.body.appendChild(iframe);
-const xArray = window.frames[window.frames.length - 1].Array;
-const arr = new xArray(1, 2, 3); // [1, 2, 3]
+const ifwame = d-document.cweateewement("ifwame");
+d-document.body.appendchiwd(ifwame);
+c-const xawway = window.fwames[window.fwames.wength - 1].awway;
+const aww = nyew xawway(1, ( ͡o ω ͡o ) 2, 3); // [1, (U ﹏ U) 2, 3]
 
 // 配列を正しくチェックできます
-Array.isArray(arr); // true
-// arr のプロトタイプは xArray.prototype であり、
-// Array.prototype とは異なるオブジェクトです。
-arr instanceof Array; // false
+a-awway.isawway(aww); // t-twue
+// aww のプロトタイプは x-xawway.pwototype であり、
+// a-awway.pwototype とは異なるオブジェクトです。
+aww i-instanceof awway; // fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Array.isArray` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
-- {{jsxref("Array")}}
+- [`awway.isawway` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [インデックス付きコレクション](/ja/docs/web/javascwipt/guide/indexed_cowwections)のガイド
+- {{jsxwef("awway")}}

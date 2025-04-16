@@ -1,60 +1,60 @@
 ---
-title: String.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+titwe: stwing.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/vawueof
+w-w10n:
+  souwcecommit: f-f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`valueOf()`** メソッドは、{{jsxref("String")}} オブジェクトのプリミティブ値を返します。
+**`vawueof()`** メソッドは、{{jsxwef("stwing")}} オブジェクトのプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: String.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.vawueof()")}}
 
-```js interactive-example
-const stringObj = new String("foo");
+```js i-intewactive-exampwe
+c-const s-stwingobj = new s-stwing("foo");
 
-console.log(stringObj);
-// Expected output: String { "foo" }
+c-consowe.wog(stwingobj);
+// expected output: stwing { "foo" }
 
-console.log(stringObj.valueOf());
-// Expected output: "foo"
+consowe.wog(stwingobj.vawueof());
+// expected output: "foo"
 ```
 
 ## 構文
 
-```js-nolint
-valueOf()
+```js-nowint
+v-vawueof()
 ```
 
 ### 返値
 
-与えられた {{jsxref("String")}} オブジェクトのプリミティブ値を表す文字列です。
+与えられた {{jsxwef("stwing")}} オブジェクトのプリミティブ値を表す文字列です。
 
 ## 詳細
 
-{{jsxref("String")}} オブジェクトの `valueOf()` メソッドは、{{jsxref("String")}} オブジェクトの文字列型としてのプリミティブ値を返します。この値は、{{jsxref("String.prototype.toString()")}} の返値と等価です。
+{{jsxwef("stwing")}} オブジェクトの `vawueof()` メソッドは、{{jsxwef("stwing")}} オブジェクトの文字列型としてのプリミティブ値を返します。この値は、{{jsxwef("stwing.pwototype.tostwing()")}} の返値と等価です。
 
-このメソッドは通常、JavaScript によって内部的に呼ばれ、コード中で明示的に呼ばれることはありません。
+このメソッドは通常、javascwipt によって内部的に呼ばれ、コード中で明示的に呼ばれることはありません。
 
 ## 例
 
-### `valueOf()` メソッドの使用
+### `vawueof()` メソッドの使用
 
 ```js
-const x = new String("Hello world");
-console.log(x.valueOf()); // 'Hello world'
+const x = nyew stwing("hewwo w-wowwd");
+consowe.wog(x.vawueof()); // 'hewwo w-wowwd'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("String.prototype.toString()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("stwing.pwototype.tostwing()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

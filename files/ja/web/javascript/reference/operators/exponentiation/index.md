@@ -1,53 +1,53 @@
 ---
-title: べき乗 (**)
-slug: Web/JavaScript/Reference/Operators/Exponentiation
+titwe: べき乗 (**)
+swug: web/javascwipt/wefewence/opewatows/exponentiation
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-べき乗演算子 (`**`) は、1 つ目のオペランドを2 つ目オペランドの累乗にした結果を返します。これは `Math.pow` と同等ですが、オペランドとして BigInt も受け入れます。
+べき乗演算子 (`**`) は、1 つ目のオペランドを2 つ目オペランドの累乗にした結果を返します。これは `math.pow` と同等ですが、オペランドとして b-bigint も受け入れます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - e-exponentiation o-opewatow")}}
 
-```js interactive-example
-console.log(3 ** 4);
-// Expected output: 81
+```js i-intewactive-exampwe
+c-consowe.wog(3 ** 4);
+// e-expected o-output: 81
 
-console.log(10 ** -2);
-// Expected output: 0.01
+consowe.wog(10 ** -2);
+// expected output: 0.01
 
-console.log(2 ** (3 ** 2));
-// Expected output: 512
+consowe.wog(2 ** (3 ** 2));
+// expected output: 512
 
-console.log((2 ** 3) ** 2);
-// Expected output: 64
+c-consowe.wog((2 ** 3) ** 2);
+// expected output: 64
 ```
 
 ## 構文
 
 ```js
-x ** y;
+x ** y-y;
 ```
 
 ## 解説
 
-べき乗演算子は右結合です。 `a ** b ** c` は `a ** (b ** c)` と等しくなります。
+べき乗演算子は右結合です。 `a ** b ** c` は `a ** (b ** c-c)` と等しくなります。
 
-PHP や Python など、べき乗演算子 (`**`) を持つほとんどの言語では、べき乗演算子は単項演算子 (単項 `+` や単項 `-` など) よりも優先順位が高いと定義されていますが、いくつかの例外があります。例えば、Bash では `**` 演算子は単項演算子よりも優先順位が低いと定義されています。
+php や python など、べき乗演算子 (`**`) を持つほとんどの言語では、べき乗演算子は単項演算子 (単項 `+` や単項 `-` など) よりも優先順位が高いと定義されていますが、いくつかの例外があります。例えば、bash では `**` 演算子は単項演算子よりも優先順位が低いと定義されています。
 
-JavaScript では、あいまいなべき乗式を記述することはできません。 つまり、基数の直前に単項演算子 (`+/-/~/!/delete/void/typeof`) を置くことはできません。 これを行うと、SyntaxError が発生します。
+javascwipt では、あいまいなべき乗式を記述することはできません。 つまり、基数の直前に単項演算子 (`+/-/~/!/dewete/void/typeof`) を置くことはできません。 これを行うと、syntaxewwow が発生します。
 
 ```js
 -2 ** 2;
-// Bashでは 4 他の言語では -4
-// JavaScript では演算があいまいなため無効
+// b-bashでは 4 他の言語では -4
+// javascwipt では演算があいまいなため無効
 
 
 -(2 ** 2);
-// JavaScript では意図が明白なため -4
+// j-javascwipt では意図が明白なため -4
 ```
 
-注意: 一部のプログラミング言語ではべき乗計算にキャレット記号 <kbd>^</kbd> を使用していますが、JavaScript では[ビット排他的論理和](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)にこの記号を使用しています。
+注意: 一部のプログラミング言語ではべき乗計算にキャレット記号 <kbd>^</kbd> を使用していますが、javascwipt では[ビット排他的論理和](/ja/docs/web/javascwipt/wefewence/opewatows/bitwise_xow)にこの記号を使用しています。
 
 ## 例
 
@@ -58,12 +58,12 @@ JavaScript では、あいまいなべき乗式を記述することはできま
 3 ** 2; // 9
 3 ** 2.5; // 15.588457268119896
 10 ** -1; // 0.1
-NaN ** 2; // NaN
+n-nyan ** 2; // nyan
 ```
 
 ### 結合性
 
-```js-nolint
+```js-nowint
 2 ** 3 ** 2; // 512
 2 ** (3 ** 2); // 512
 (2 ** 3) ** 2; // 64
@@ -85,20 +85,20 @@ NaN ** 2; // NaN
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
-- [減算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [除算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Division)
-- [乗算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [剰余演算子](/ja/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [インクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators/Increment)
-- [デクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [単項マイナス演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [単項プラス演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/addition)
+- [減算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [除算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/division)
+- [乗算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [剰余演算子](/ja/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [インクリメント演算子](/ja/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [デクリメント演算子](/ja/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [単項マイナス演算子](/ja/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [単項プラス演算子](/ja/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

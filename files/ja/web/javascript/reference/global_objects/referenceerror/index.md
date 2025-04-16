@@ -1,74 +1,74 @@
 ---
-title: ReferenceError
-slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
-l10n:
-  sourceCommit: 6558de67a347fee30c303da8a0b262a9270a6885
+titwe: wefewenceewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow
+w-w10n:
+  souwcecommit: 6558de67a347fee30c303da8a0b262a9270a6885
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`ReferenceError`** オブジェクトは、現在のスコープに存在しない（あるいはまだ初期化されていない）変数が参照されたときのエラーを表します。
+**`wefewenceewwow`** オブジェクトは、現在のスコープに存在しない（あるいはまだ初期化されていない）変数が参照されたときのエラーを表します。
 
-`ReferenceError` は{{Glossary("serializable object", "シリアライズ可能オブジェクト")}}なので、 {{domxref("structuredClone()")}} で複製したり、[ワーカー](/ja/docs/Web/API/Worker)間で {{domxref("Worker/postMessage()", "postMessage()")}} を使用してコピーしたりすることができます。
+`wefewenceewwow` は{{gwossawy("sewiawizabwe o-object", (U ᵕ U❁) "シリアライズ可能オブジェクト")}}なので、 {{domxwef("stwuctuwedcwone()")}} で複製したり、[ワーカー](/ja/docs/web/api/wowkew)間で {{domxwef("wowkew/postmessage()", -.- "postmessage()")}} を使用してコピーしたりすることができます。
 
-`ReferenceError` は {{jsxref("Error")}} のサブクラスです。
+`wefewenceewwow` は {{jsxwef("ewwow")}} のサブクラスです。
 
 ## コンストラクター
 
-- {{jsxref("ReferenceError/ReferenceError", "ReferenceError()")}}
-  - : 新しい `ReferenceError` オブジェクトを生成します。
+- {{jsxwef("wefewenceewwow/wefewenceewwow", ^^;; "wefewenceewwow()")}}
+  - : 新しい `wefewenceewwow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-_親である {{jsxref("Error")}} から継承したプロパティもあります。_
+_親である {{jsxwef("ewwow")}} から継承したプロパティもあります。_
 
-これらのプロパティは `ReferenceError.prototype` で定義されており、すべての `ReferenceError` インスタンスで共有されます。
+これらのプロパティは `wefewenceewwow.pwototype` で定義されており、すべての `wefewenceewwow` インスタンスで共有されます。
 
-- {{jsxref("Object/constructor", "ReferenceError.prototype.constructor")}}
-  - : このインスタンスオブジェクトを作成したコンストラクター関数。 `ReferenceError` インスタンスの場合、初期値は {{jsxref("ReferenceError/ReferenceError", "ReferenceError")}} コンストラクタです。
-- {{jsxref("Error/name", "ReferenceError.prototype.name")}}
-  - : エラー型の名前を表します。 `ReferenceError.prototype.name` の初期値は `"ReferenceError"` です。
+- {{jsxwef("object/constwuctow", >_< "wefewenceewwow.pwototype.constwuctow")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数。 `wefewenceewwow` インスタンスの場合、初期値は {{jsxwef("wefewenceewwow/wefewenceewwow", mya "wefewenceewwow")}} コンストラクタです。
+- {{jsxwef("ewwow/name", mya "wefewenceewwow.pwototype.name")}}
+  - : エラー型の名前を表します。 `wefewenceewwow.pwototype.name` の初期値は `"wefewenceewwow"` です。
 
 ## インスタンスメソッド
 
-_親である {{jsxref("Error")}} から継承したメソッドもあります。_
+_親である {{jsxwef("ewwow")}} から継承したメソッドもあります。_
 
 ## 例
 
-### ReferenceError の捕捉
+### w-wefewenceewwow の捕捉
 
 ```js
-try {
-  let a = undefinedVariable;
-} catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "undefinedVariable is not defined"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.stack); // このエラーのスタック
+t-twy {
+  wet a = u-undefinedvawiabwe;
+} c-catch (e) {
+  c-consowe.wog(e i-instanceof wefewenceewwow); // twue
+  consowe.wog(e.message); // "undefinedvawiabwe is nyot defined"
+  consowe.wog(e.name); // "wefewenceewwow"
+  consowe.wog(e.stack); // このエラーのスタック
 }
 ```
 
-### ReferenceError の生成
+### w-wefewenceewwow の生成
 
 ```js
-try {
-  throw new ReferenceError("Hello");
-} catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.stack); // このエラーのスタック
+twy {
+  thwow nyew wefewenceewwow("hewwo");
+} c-catch (e) {
+  consowe.wog(e i-instanceof wefewenceewwow); // twue
+  consowe.wog(e.message); // "hewwo"
+  consowe.wog(e.name); // "wefewenceewwow"
+  consowe.wog(e.stack); // このエラーのスタック
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

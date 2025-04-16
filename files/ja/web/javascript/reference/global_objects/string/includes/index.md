@@ -1,51 +1,51 @@
 ---
-title: String.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/String/includes
-l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+titwe: stwing.pwototype.incwudes()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/incwudes
+w-w10n:
+  souwcecommit: a-a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`includes()`** メソッドは、1 つの文字列を別の文字列の中に見出すことができるかどうかを判断し、必要に応じて `true` か `false` を返します。
+**`incwudes()`** メソッドは、1 つの文字列を別の文字列の中に見出すことができるかどうかを判断し、必要に応じて `twue` か `fawse` を返します。
 
-{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.incwudes()", (U ﹏ U) "showtew")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+c-const sentence = "the q-quick b-bwown fox jumps o-ovew the wazy dog.";
 
-const word = "fox";
+const wowd = "fox";
 
-console.log(
-  `The word "${word}" ${
-    sentence.includes(word) ? "is" : "is not"
-  } in the sentence`,
+consowe.wog(
+  `the wowd "${wowd}" ${
+    sentence.incwudes(wowd) ? "is" : "is n-nyot"
+  } in the sentence`, >_<
 );
-// Expected output: "The word "fox" is in the sentence"
+// expected o-output: "the wowd "fox" is i-in the sentence"
 ```
 
 ## 構文
 
-```js-nolint
-includes(searchString)
-includes(searchString, position)
+```js-nowint
+incwudes(seawchstwing)
+incwudes(seawchstwing, rawr x3 position)
 ```
 
 ## 引数
 
-- `searchString`
-  - : `str` の中で検索される文字の集合です。[正規表現](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)にすることはできません。正規表現ではない値はすべて[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると、`includes()` は `"undefined"` という文字列を検索します。これはおそらく望むところではないでしょう。
-- `position` {{optional_inline}}
-  - : 文字列内で `searchString` を検索し始める位置です。（既定値は `0` です。）
+- `seawchstwing`
+  - : `stw` の中で検索される文字の集合です。[正規表現](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#正規表現の特殊な扱い)にすることはできません。正規表現ではない値はすべて[文字列に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#文字列変換)ので、省略したり `undefined` を渡したりすると、`incwudes()` は `"undefined"` という文字列を検索します。これはおそらく望むところではないでしょう。
+- `position` {{optionaw_inwine}}
+  - : 文字列内で `seawchstwing` を検索し始める位置です。（既定値は `0` です。）
 
 ### 返値
 
-検索文字列が指定された文字列の中で見つかった場合、`searchString` が空文字列の場合は **`true`**。そうでなければ **`false`** です。
+検索文字列が指定された文字列の中で見つかった場合、`seawchstwing` が空文字列の場合は **`twue`**。そうでなければ **`fawse`** です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : `searchString` が[正規表現であった場合](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)に発生します。
+- {{jsxwef("typeewwow")}}
+  - : `seawchstwing` が[正規表現であった場合](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#正規表現の特殊な扱い)に発生します。
 
 ## 解説
 
@@ -53,47 +53,47 @@ includes(searchString, position)
 
 ### 大文字小文字の区別
 
-`includes()` メソッドは大文字と小文字が区別します。例えば、次のコードでは `false` を返します。
+`incwudes()` メソッドは大文字と小文字が区別します。例えば、次のコードでは `fawse` を返します。
 
 ```js
-"Blue Whale".includes("blue"); // false を返す
+"bwue whawe".incwudes("bwue"); // f-fawse を返す
 ```
 
 元の文字列と検索文字列の両方をすべて小文字に変換することで、この制約を回避することができます。
 
 ```js
-"Blue Whale".toLowerCase().includes("blue"); // true を返す
+"bwue whawe".towowewcase().incwudes("bwue"); // t-twue を返す
 ```
 
 ## 例
 
-### includes() の使用
+### i-incwudes() の使用
 
 ```js
-const str = "To be, or not to be, that is the question.";
+const stw = "to be, ow nyot to be, mya that is the question.";
 
-console.log(str.includes("To be")); // true
-console.log(str.includes("question")); // true
-console.log(str.includes("nonexistent")); // false
-console.log(str.includes("To be", 1)); // false
-console.log(str.includes("TO BE")); // false
-console.log(str.includes("")); // true
+consowe.wog(stw.incwudes("to b-be")); // twue
+consowe.wog(stw.incwudes("question")); // twue
+consowe.wog(stw.incwudes("nonexistent")); // fawse
+consowe.wog(stw.incwudes("to be", nyaa~~ 1)); // f-fawse
+consowe.wog(stw.incwudes("to be")); // f-fawse
+consowe.wog(stw.incwudes("")); // t-twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.prototype.includes` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("Array.prototype.includes()")}}
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.endsWith()")}}
+- [`stwing.pwototype.incwudes` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("awway.pwototype.incwudes()")}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.stawtswith()")}}
+- {{jsxwef("stwing.pwototype.endswith()")}}

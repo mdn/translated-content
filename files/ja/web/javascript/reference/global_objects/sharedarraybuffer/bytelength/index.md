@@ -1,45 +1,45 @@
 ---
-title: SharedArrayBuffer.prototype.byteLength
-slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
-l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+titwe: shawedawwaybuffew.pwototype.bytewength
+swug: web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew/bytewength
+w-w10n:
+  s-souwcecommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`byteLength`** アクセサープロパティは、{{jsxref("SharedArrayBuffer")}} の長さをバイト単位で表します。
+**`bytewength`** アクセサープロパティは、{{jsxwef("shawedawwaybuffew")}} の長さをバイト単位で表します。
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.prototype.byteLength", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: shawedawwaybuffew.pwototype.bytewength", σωσ "showtew")}}
 
-```js interactive-example
-// バイト単位でサイズを指定して SharedArrayBuffer を作成
-const buffer = new SharedArrayBuffer(8);
+```js i-intewactive-exampwe
+// バイト単位でサイズを指定して s-shawedawwaybuffew を作成
+c-const buffew = n-nyew shawedawwaybuffew(8);
 
-console.log(buffer.byteLength);
+c-consowe.wog(buffew.bytewength);
 // 期待される出力: 8
 ```
 
 ## 解説
 
-`byteLength` プロパティは、 set アクセサー関数が `undefined` であるアクセサープロパティです。つまり、このプロパティは読み取り専用です。値は共有配列が生成されたときに決定され、変更できません。
+`bytewength` プロパティは、 set アクセサー関数が `undefined` であるアクセサープロパティです。つまり、このプロパティは読み取り専用です。値は共有配列が生成されたときに決定され、変更できません。
 
 ## 例
 
-### byteLength の使用
+### bytewength の使用
 
 ```js
-const sab = new SharedArrayBuffer(1024);
-sab.byteLength; // 1024
+const sab = nyew shawedawwaybuffew(1024);
+s-sab.bytewength; // 1024
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("SharedArrayBuffer")}}
+- {{jsxwef("shawedawwaybuffew")}}

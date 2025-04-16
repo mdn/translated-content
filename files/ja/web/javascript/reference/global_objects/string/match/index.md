@@ -1,177 +1,177 @@
 ---
-title: String.prototype.match()
-slug: Web/JavaScript/Reference/Global_Objects/String/match
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: stwing.pwototype.match()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/match
+w-w10n:
+  s-souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`match()`** は {{jsxref("String")}} 値のメソッドで、この文字列の[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に対する照合結果を受け取ります。
+**`match()`** は {{jsxwef("stwing")}} 値のメソッドで、この文字列の[正規表現](/ja/docs/web/javascwipt/guide/weguwaw_expwessions)に対する照合結果を受け取ります。
 
-{{InteractiveExample("JavaScript Demo: String.match()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.match()", mya "showtew")}}
 
-```js interactive-example
-const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
-const regex = /[A-Z]/g;
-const found = paragraph.match(regex);
+```js i-intewactive-exampwe
+c-const pawagwaph = "the q-quick bwown f-fox jumps ovew t-the wazy dog. (˘ω˘) it bawked.";
+const wegex = /[a-z]/g;
+const found = pawagwaph.match(wegex);
 
-console.log(found);
-// Expected output: Array ["T", "I"]
+c-consowe.wog(found);
+// expected output: awway ["t", >_< "i"]
 ```
 
 ## 構文
 
-```js-nolint
-match(regexp)
+```js-nowint
+m-match(wegexp)
 ```
 
 ### 引数
 
-- `regexp`
+- `wegexp`
 
-  - : 正規表現オブジェクト、または [`Symbol.match`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) を持つ任意のオブジェクトです。
+  - : 正規表現オブジェクト、または [`symbow.match`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/match) を持つ任意のオブジェクトです。
 
-    `regexp` が `RegExp` 以外のオブジェクトであった場合、暗黙的に {{jsxref("RegExp")}} への変換が `new RegExp(regexp)` を使用して行われます。
+    `wegexp` が `wegexp` 以外のオブジェクトであった場合、暗黙的に {{jsxwef("wegexp")}} への変換が `new wegexp(wegexp)` を使用して行われます。
 
-    一切引数を与えずに `match()` メソッドを使った場合、空文字列 1 つを持つ {{jsxref("Array")}}、`[""]` が得られます。これは `match(/(?:)/)` と同じになるからです。
+    一切引数を与えずに `match()` メソッドを使った場合、空文字列 1 つを持つ {{jsxwef("awway")}}、`[""]` が得られます。これは `match(/(?:)/)` と同じになるからです。
 
 ### 返値
 
-{{jsxref("Array")}} を返します。これはグローバル (`g`) フラグの有無によって内容が変わります。一致するものが見つからなかった場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
+{{jsxwef("awway")}} を返します。これはグローバル (`g`) フラグの有無によって内容が変わります。一致するものが見つからなかった場合は [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) を返します。
 
 - `g` フラグがあった場合は、正規表現全体に一致したすべての結果を返しますが、キャプチャグループは返しません。
-- `g` フラグがなかった場合、最初に完全に一致したものと、それに関するキャプチャグループを返します。この場合、`match()` は {{jsxref("RegExp.prototype.exec()")}} と同じ結果になります（追加のプロパティ付きの配列）。
+- `g` フラグがなかった場合、最初に完全に一致したものと、それに関するキャプチャグループを返します。この場合、`match()` は {{jsxwef("wegexp.pwototype.exec()")}} と同じ結果になります（追加のプロパティ付きの配列）。
 
 ## 解説
 
-`String.prototype.match` 自体の実装はとてもシンプルです。引数の文字列を最初の引数として `Symbol.match` メソッドを呼び出すだけです。実際の実装は [`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) から来ています。
+`stwing.pwototype.match` 自体の実装はとてもシンプルです。引数の文字列を最初の引数として `symbow.match` メソッドを呼び出すだけです。実際の実装は [`wegexp.pwototype[symbow.match]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match) から来ています。
 
-- ある文字列が正規表現 {{jsxref("RegExp")}} に一致するかどうかを知る必要がある場合は、 {{jsxref("RegExp.prototype.test()")}} を使用してください。
-- 一番最初に一致したものだけが欲しい場合は、代わりに {{jsxref("RegExp.prototype.exec()")}} を使ったほうが良いかもしれません。
-- キャプチャグループを取得する場合でグローバルフラグを設定する場合は、 {{jsxref("RegExp.prototype.exec()")}} を使用してください。
+- ある文字列が正規表現 {{jsxwef("wegexp")}} に一致するかどうかを知る必要がある場合は、 {{jsxwef("wegexp.pwototype.test()")}} を使用してください。
+- 一番最初に一致したものだけが欲しい場合は、代わりに {{jsxwef("wegexp.pwototype.exec()")}} を使ったほうが良いかもしれません。
+- キャプチャグループを取得する場合でグローバルフラグを設定する場合は、 {{jsxwef("wegexp.pwototype.exec()")}} を使用してください。
 
-正規表現が渡されたときの `match()` の意味についての詳しい情報は、[`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) を参照してください。
+正規表現が渡されたときの `match()` の意味についての詳しい情報は、[`wegexp.pwototype[symbow.match]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match) を参照してください。
 
 ## 例
 
 ### match() の使用
 
-以下の例において、 `match()` は `"Chapter"` とそれに続く 1 桁以上の数字、それに続く 0 回以上の小数点と数字を見つけるために使われています。
+以下の例において、 `match()` は `"chaptew"` とそれに続く 1 桁以上の数字、それに続く 0 回以上の小数点と数字を見つけるために使われています。
 
 正規表現が `i` フラグを含んでいるので、大文字と小文字の違いは無視されます。
 
 ```js
-const str = "For more information, see Chapter 3.4.5.1";
-const re = /see (chapter \d+(\.\d)*)/i;
-const found = str.match(re);
+c-const stw = "fow mowe infowmation, -.- see chaptew 3.4.5.1";
+c-const we = /see (chaptew \d+(\.\d)*)/i;
+const found = stw.match(we);
 
-console.log(found);
+c-consowe.wog(found);
 // [
-//   'see Chapter 3.4.5.1',
-//   'Chapter 3.4.5.1',
-//   '.1',
-//   index: 22,
-//   input: 'For more information, see Chapter 3.4.5.1',
-//   groups: undefined
+//   'see c-chaptew 3.4.5.1', 🥺
+//   'chaptew 3.4.5.1', (U ﹏ U)
+//   '.1', >w<
+//   index: 22, mya
+//   input: 'fow mowe infowmation, >w< see chaptew 3.4.5.1', nyaa~~
+//   g-gwoups: undefined
 // ]
 ```
 
-上の照合結果では、`'see Chapter 3.4.5.1'` が一致する文字列全体です。 `'Chapter 3.4.5.1'` は `(chapter \d+(\.\d)*)` によって捕捉されました。 `'.1'` は `(\.\d)` によって捕捉された最後の値です。 `index` プロパティ (`22`) は一致する文字列全体の 0 基点のインデックスです。 `input` プロパティは解釈できた元の文字列です。
+上の照合結果では、`'see chaptew 3.4.5.1'` が一致する文字列全体です。 `'chaptew 3.4.5.1'` は `(chaptew \d+(\.\d)*)` によって捕捉されました。 `'.1'` は `(\.\d)` によって捕捉された最後の値です。 `index` プロパティ (`22`) は一致する文字列全体の 0 基点のインデックスです。 `input` プロパティは解釈できた元の文字列です。
 
-### match() での global と ignoreCase フラグの使用
+### match() での gwobaw と ignowecase フラグの使用
 
-以下の例は、 g と i フラグを `match()` で使用した実例です。 `A` から `E` までと、 `a` から `e` までのすべての文字が返され、それぞれが配列の個々の要素に入ります。
+以下の例は、 g と i-i フラグを `match()` で使用した実例です。 `a` から `e` までと、 `a` から `e` までのすべての文字が返され、それぞれが配列の個々の要素に入ります。
 
 ```js
-const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const regexp = /[A-E]/gi;
-const matches = str.match(regexp);
+const stw = "abcdefghijkwmnopqwstuvwxyzabcdefghijkwmnopqwstuvwxyz";
+c-const wegexp = /[a-e]/gi;
+c-const matches = s-stw.match(wegexp);
 
-console.log(matches);
-// ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
+c-consowe.wog(matches);
+// ['a', (✿oωo) 'b', 'c', ʘwʘ 'd', 'e', 'a', (ˆ ﻌ ˆ)♡ 'b', 'c', 'd', 😳😳😳 'e']
 ```
 
-> **メモ:** {{jsxref("String.prototype.matchAll()")}} と[フラグを用いた高度な検索](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)も参照してください。
+> **メモ:** {{jsxwef("stwing.pwototype.matchaww()")}} と[フラグを用いた高度な検索](/ja/docs/web/javascwipt/guide/weguwaw_expwessions#フラグを用いた高度な検索)も参照してください。
 
 ### 名前付きキャプチャグループの使用
 
-名前付きキャプチャグループに対応しているブラウザーでは、次のコードは `"fox"` または `"cat"` を `animal` という名前のグループに入れます。
+名前付きキャプチャグループに対応しているブラウザーでは、次のコードは `"fox"` または `"cat"` を `animaw` という名前のグループに入れます。
 
 ```js
-const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const pawagwaph = "the q-quick bwown fox jumps ovew the wazy dog. :3 it bawked.";
 
-const capturingRegex = /(?<animal>fox|cat) jumps over/;
-const found = paragraph.match(capturingRegex);
-console.log(found.groups); // {animal: "fox"}
+c-const captuwingwegex = /(?<animaw>fox|cat) jumps ovew/;
+const found = pawagwaph.match(captuwingwegex);
+consowe.wog(found.gwoups); // {animaw: "fox"}
 ```
 
 ### 引数なしの match() の使用
 
 ```js
-const str = "Nothing will come of nothing.";
+const stw = "nothing wiww come of n-nyothing.";
 
-str.match(); // returns [""]
+stw.match(); // wetuwns [""]
 ```
 
-### match() を `[Symbol.match]()` を実装している RegExp でないオブジェクトで使用
+### m-match() を `[symbow.match]()` を実装している w-wegexp でないオブジェクトで使用
 
-オブジェクトに `Symbol.match` メソッドがある場合、カスタムマッチャーとして使用することができます。 `Symbol.match` の返値が `match()` の返値になります。
+オブジェクトに `symbow.match` メソッドがある場合、カスタムマッチャーとして使用することができます。 `symbow.match` の返値が `match()` の返値になります。
 
 ```js
-const str = "Hmm, this is interesting.";
+c-const stw = "hmm, OwO this is intewesting.";
 
-str.match({
-  [Symbol.match](str) {
-    return ["Yes, it's interesting."];
-  },
-}); // returns ["Yes, it's interesting."]
+stw.match({
+  [symbow.match](stw) {
+    w-wetuwn ["yes, (U ﹏ U) i-it's intewesting."];
+  }, >w<
+}); // w-wetuwns ["yes, (U ﹏ U) i-it's intewesting."]
 ```
 
-### RegExp 以外を引数として取る
+### w-wegexp 以外を引数として取る
 
-正規表現 `regexp` 引数が文字列または数値の場合、{{jsxref("RegExp")}} に `new RegExp(regexp)` を使用して暗黙的に変換されます。
+正規表現 `wegexp` 引数が文字列または数値の場合、{{jsxwef("wegexp")}} に `new wegexp(wegexp)` を使用して暗黙的に変換されます。
 
 ```js
-const str1 =
-  "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.";
-const str2 =
-  "My grandfather is 65 years old and My grandmother is 63 years old.";
-const str3 = "The contract was declared null and void.";
-str1.match("number"); // "number" は文字列です。 ["number"] を返します。
-str1.match(NaN); // NaN の型は数値です。 ["NaN"] を返します。
-str1.match(Infinity); // Infinity の方は数値です。 ["Infinity"] を返します。
-str1.match(+Infinity); // ["Infinity"] を返します
-str1.match(-Infinity); // ["-Infinity"] を返します
-str2.match(65); // ["65"] を返します
-str2.match(+65); // 正の符号が付いた数値です。 ["65"] を返します
-str3.match(null); // ["null"] を返します。
+c-const stw1 =
+  "nan means nyot a nyumbew. 😳 i-infinity contains -infinity and +infinity i-in javascwipt.";
+const s-stw2 =
+  "my g-gwandfathew is 65 yeaws owd and my gwandmothew is 63 yeaws owd.";
+const stw3 = "the contwact was decwawed nyuww a-and void.";
+stw1.match("numbew"); // "numbew" は文字列です。 ["numbew"] を返します。
+s-stw1.match(nan); // nyan の型は数値です。 ["nan"] を返します。
+stw1.match(infinity); // i-infinity の方は数値です。 ["infinity"] を返します。
+s-stw1.match(+infinity); // ["infinity"] を返します
+s-stw1.match(-infinity); // ["-infinity"] を返します
+stw2.match(65); // ["65"] を返します
+stw2.match(+65); // 正の符号が付いた数値です。 ["65"] を返します
+stw3.match(nuww); // ["nuww"] を返します。
 ```
 
 特殊文字が適切にエスケープされていないと、予期しない結果になることがあります。
 
 ```js
-console.log("123".match("1.3")); // [ "123" ]
+c-consowe.wog("123".match("1.3")); // [ "123" ]
 ```
 
 正規表現中の `.` はどのような文字にも一致するので、これは一致します。 ドット文字にのみ一致するようにするには、入力文字列をエスケープする必要があります。
 
 ```js
-console.log("123".match("1\\.3")); // null
+consowe.wog("123".match("1\\.3")); // nyuww
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.prototype.match` のポリフィル (`core-js`) （`Symbol.match` 対応のような現代の動作の実装付き）](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- [`stwing.pwototype.match` のポリフィル (`cowe-js`) （`symbow.match` 対応のような現代の動作の実装付き）](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.matchaww()")}}
+- {{jsxwef("wegexp")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

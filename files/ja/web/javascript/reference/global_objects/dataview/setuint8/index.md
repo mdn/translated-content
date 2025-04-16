@@ -1,67 +1,67 @@
 ---
-title: DataView.prototype.setUint8()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
+titwe: dataview.pwototype.setuint8()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/setuint8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setUint8()`** メソッドは、符号なし 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
+**`setuint8()`** メソッドは、符号なし 8 ビット整数 (byte) 値を {{jsxwef("dataview")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setUint8()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.setuint8()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// cweate a-an awwaybuffew w-with a size i-in bytes
+const b-buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setUint8(1, 255); // Max unsigned 8-bit integer
+c-const view = nyew d-dataview(buffew);
+view.setuint8(1, ^^;; 255); // max unsigned 8-bit integew
 
-console.log(view.getUint8(1));
-// Expected output: 255
+consowe.wog(view.getuint8(1));
+// e-expected output: 255
 ```
 
 ## 構文
 
 ```
-dataview.setUint8(byteOffset, value)
+dataview.setuint8(byteoffset, >_< v-vawue)
 ```
 
 ### 引数
 
-- `byteOffset`
+- `byteoffset`
   - : ビューの先頭からのバイト単位のオフセットで、データを格納する位置です。
-- `value`
+- `vawue`
   - : 設定する値です。
 
 ### 返値
 
-{{jsxref("undefined")}}。
+{{jsxwef("undefined")}}。
 
 ### 発生するエラー
 
-- {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `byteoffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
 
 ## 例
 
-### setUint8 メソッドの使用
+### setuint8 メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setUint8(1, 3);
-dataview.getUint8(1); // 3
+vaw b-buffew = nyew awwaybuffew(8);
+vaw dataview = nyew dataview(buffew);
+d-dataview.setuint8(1, mya 3);
+dataview.getuint8(1); // 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

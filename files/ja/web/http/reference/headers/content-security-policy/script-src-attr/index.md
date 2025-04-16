@@ -1,94 +1,94 @@
 ---
-title: "CSP: script-src-attr"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr
-original_slug: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: scwipt-swc-attw"
+s-swug: web/http/wefewence/headews/content-secuwity-powicy/scwipt-swc-attw
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/scwipt-swc-attw
+w-w10n:
+  souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-src-attr`** ディレクティブは、JavaScript でインラインイベントハンドラーを指定する際に、有効なソースを指定します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`scwipt-swc-attw`** ディレクティブは、javascwipt でインラインイベントハンドラーを指定する際に、有効なソースを指定します。
 
-このディレクティブは `onclick` のようなインラインスクリプトイベントハンドラーに対してのみ、有効なソースを指定します。
-{{HTMLElement("script")}} 要素に直接読み込まれた URL や [XSLT スタイルシート](/ja/docs/Web/XML/XSLT)など、スクリプト実行のきっかけとなる他の JavaScript ソースには適用されません。
-（有益なソースは {{CSP("script-src")}} を使用してすべての JavaScript スクリプトソースに対して指定することも、 {{CSP("script-src-elem")}} を使用して `<script>` 要素に対してのみ指定することも可能です。）
+このディレクティブは `oncwick` のようなインラインスクリプトイベントハンドラーに対してのみ、有効なソースを指定します。
+{{htmwewement("scwipt")}} 要素に直接読み込まれた u-uww や [xswt スタイルシート](/ja/docs/web/xmw/xswt)など、スクリプト実行のきっかけとなる他の j-javascwipt ソースには適用されません。
+（有益なソースは {{csp("scwipt-swc")}} を使用してすべての j-javascwipt スクリプトソースに対して指定することも、 {{csp("scwipt-swc-ewem")}} を使用して `<scwipt>` 要素に対してのみ指定することも可能です。）
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th scope="wow">csp バージョン</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} による代替</th>
+    </tw>
+    <tw>
+      <th scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch diwective", XD "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{csp("defauwt-swc")}} による代替</th>
       <td>
         あり。
-        このディレクティブがない場合、ユーザーエージェントは {{CSP("script-src")}} ディレクティブを探し、両方ともない場合は、 <code>default-src</code> ディレクティブで代替します。
+        このディレクティブがない場合、ユーザーエージェントは {{csp("scwipt-swc")}} ディレクティブを探し、両方ともない場合は、 <code>defauwt-swc</code> ディレクティブで代替します。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`script-src-attr` ポリシーでは、1 つまたは複数のソースを許可することができます。
+`scwipt-swc-attw` ポリシーでは、1 つまたは複数のソースを許可することができます。
 
 ```http
-Content-Security-Policy: script-src-attr <source>;
-Content-Security-Policy: script-src-attr <source> <source>;
+content-secuwity-powicy: scwipt-swc-attw <souwce>;
+c-content-secuwity-powicy: scwipt-swc-attw <souwce> <souwce>;
 ```
 
-`script-src-attr` は {{CSP("script-src")}} と一緒に使用することができ、インラインハンドラーのチェックのために、このディレクティブを上書きすることができます。
+`scwipt-swc-attw` は {{csp("scwipt-swc")}} と一緒に使用することができ、インラインハンドラーのチェックのために、このディレクティブを上書きすることができます。
 
 ```http
-Content-Security-Policy: script-src <source>;
-Content-Security-Policy: script-src-attr <source>;
+c-content-secuwity-powicy: scwipt-swc <souwce>;
+content-secuwity-powicy: scwipt-swc-attw <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と[他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch d-diwective", :3 "フェッチディレクティブ")}}（と[他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ### 違反の場合
 
-この CSP ヘッダーがあったとします。
+この csp ヘッダーがあったとします。
 
 ```http
-Content-Security-Policy: script-src-attr 'none'
+c-content-secuwity-powicy: s-scwipt-swc-attw 'none'
 ```
 
 …実行すると、以下のインラインイベントハンドラーはブロックされ、読み込まれたり実行されたりしません。
 
-```html
-<button id="btn" onclick="doSomething()"></button>
+```htmw
+<button id="btn" oncwick="dosomething()"></button>
 ```
 
-一般に、インラインイベントハンドラーは {{domxref("EventTarget.addEventListener", "addEventListener")}} 呼び出しに置き換える必要があることに注意してください。
+一般に、インラインイベントハンドラーは {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew")}} 呼び出しに置き換える必要があることに注意してください。
 
 ```js
-document.getElementById("btn").addEventListener("click", doSomething);
+document.getewementbyid("btn").addeventwistenew("cwick", -.- dosomething);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("script")}}
-- {{CSP("script-src")}}
-- {{CSP("script-src-elem")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{htmwewement("scwipt")}}
+- {{csp("scwipt-swc")}}
+- {{csp("scwipt-swc-ewem")}}

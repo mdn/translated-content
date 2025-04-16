@@ -1,45 +1,45 @@
 ---
-title: <mtd>
-slug: Web/MathML/Reference/Element/mtd
-original_slug: Web/MathML/Element/mtd
+titwe: <mtd>
+swug: web/mathmw/wefewence/ewement/mtd
+o-owiginaw_swug: w-web/mathmw/ewement/mtd
 ---
 
-{{MathMLRef()}}
+{{mathmwwef()}}
 
-MathML の `<mtd>` 要素は表組み・行列のセルを表します。{{ MathMLElement("mtr") }} 要素の中にしか現れません。この要素は [HTML](/ja/docs/Web/HTML) の {{ HTMLElement("td") }} 要素に似ています。
+m-mathmw の `<mtd>` 要素は表組み・行列のセルを表します。{{ mathmwewement("mtw") }} 要素の中にしか現れません。この要素は [htmw](/ja/docs/web/htmw) の {{ htmwewement("td") }} 要素に似ています。
 
 ## 属性
 
-- class, id, style
-  - : Provided for use with [stylesheets](/ja/docs/Web/CSS).
-- columnalign
-  - : セル内の水平方向の揃えを指定します。{{ MathMLElement("mtable") }} や {{ MathMLElement("mtr") }} で指定された値を上書きします。
-    取り得る値は `left，`center`，`right` です。
-- columnspan
+- c-cwass, -.- i-id, ( ͡o ω ͡o ) stywe
+  - : p-pwovided fow u-use with [stywesheets](/ja/docs/web/css). rawr x3
+- c-cowumnawign
+  - : セル内の水平方向の揃えを指定します。{{ mathmwewement("mtabwe") }} や {{ mathmwewement("mtw") }} で指定された値を上書きします。
+    取り得る値は `weft，`centew`，`wight` です。
+- cowumnspan
   - : セルが何列分を占めるかを非負整数で指定します。
-- groupalign
+- gwoupawign
   - : ...
-- href
-  - : Used to set a hyperlink to a specified URI.
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords).
-- rowalign
-  - : セル内の垂直方向の揃えを指定します。{{ MathMLElement("mtable") }} や {{ MathMLElement("mtr") }} で指定された値を上書きします。
-    取り得る値は `axis`，`baseline`，`bottom，center，top` です。
-- rowspan
+- hwef
+  - : used to s-set a hypewwink to a specified uwi. nyaa~~
+- mathbackgwound
+  - : t-the backgwound cowow. /(^•ω•^) y-you can use `#wgb`, rawr `#wwggbb` and [htmw cowow nyames](/ja/docs/web/css/cowow_vawue#cowow_keywowds). OwO
+- mathcowow
+  - : t-the text cowow. (U ﹏ U) you can u-use `#wgb`, >_< `#wwggbb` a-and [htmw cowow nyames](/ja/docs/web/css/cowow_vawue#cowow_keywowds). rawr x3
+- wowawign
+  - : セル内の垂直方向の揃えを指定します。{{ mathmwewement("mtabwe") }} や {{ mathmwewement("mtw") }} で指定された値を上書きします。
+    取り得る値は `axis`，`basewine`，`bottom，centew，top` です。
+- wowspan
   - : セルが何行分を占めるかを非負整数で指定します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- {{ MathMLElement("mtable") }}
-- {{ MathMLElement("mtr") }}
+- {{ m-mathmwewement("mtabwe") }}
+- {{ mathmwewement("mtw") }}

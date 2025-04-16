@@ -1,80 +1,80 @@
 ---
-title: RangeError() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
+titwe: wangeewwow() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/wangeewwow/wangeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`RangeError()`** コンストラクターは、値が存在しないか許可された値の範囲にない場合のエラーを生成します。
+**`wangeewwow()`** コンストラクターは、値が存在しないか許可された値の範囲にない場合のエラーを生成します。
 
 ## 構文
 
 ```
-new RangeError([message[, fileName[, lineNumber]]])
+n-nyew wangeewwow([message[, rawr x3 f-fiwename[, nyaa~~ winenumbew]]])
 ```
 
 ### 引数
 
-- `message` {{optional_inline}}
+- `message` {{optionaw_inwine}}
   - : 人間が読むためのエラーの説明です。
-- `fileName` {{optional_inline}}
+- `fiwename` {{optionaw_inwine}}
   - : 例外が発生したコードを含むファイルの名前です。
-- `lineNumber` {{optional_inline}}
+- `winenumbew` {{optionaw_inwine}}
   - : 例外が発生したコードの行番号です。
 
 ## 例
 
-### RangeError の使用 (数値)
+### w-wangeewwow の使用 (数値)
 
 ```js
-function check(n) {
-  if (!(n >= -500 && n <= 500)) {
-    throw new RangeError("The argument must be between -500 and 500.");
+f-function check(n) {
+  i-if (!(n >= -500 && n-ny <= 500)) {
+    t-thwow nyew wangeewwow("the a-awgument must be between -500 and 500.");
   }
 }
 
-try {
+twy {
   check(2000);
-} catch (error) {
-  if (error instanceof RangeError) {
-    // Handle the error
+} c-catch (ewwow) {
+  if (ewwow instanceof wangeewwow) {
+    // handwe t-the ewwow
   }
 }
 ```
 
-### RangeError の使用 (数値以外)
+### wangeewwow の使用 (数値以外)
 
 ```js
-function check(value) {
-  if (["apple", "banana", "carrot"].includes(value) === false) {
-    throw new RangeError(
-      'The argument must be an "apple", "banana", or "carrot".',
+function c-check(vawue) {
+  if (["appwe", /(^•ω•^) "banana", rawr "cawwot"].incwudes(vawue) === fawse) {
+    thwow nyew w-wangeewwow(
+      'the awgument m-must be an "appwe", "banana", OwO o-ow "cawwot".', (U ﹏ U)
     );
   }
 }
 
-try {
+twy {
   check("cabbage");
-} catch (error) {
-  if (error instanceof RangeError) {
-    // Handle the error
+} catch (ewwow) {
+  if (ewwow i-instanceof wangeewwow) {
+    // handwe the ewwow
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
-- {{jsxref("Array")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
-- {{jsxref("String.prototype.normalize()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("numbew.toexponentiaw()")}}
+- {{jsxwef("numbew.tofixed()")}}
+- {{jsxwef("numbew.topwecision()")}}
+- {{jsxwef("stwing.pwototype.nowmawize()")}}

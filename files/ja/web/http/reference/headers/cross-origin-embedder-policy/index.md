@@ -1,79 +1,79 @@
 ---
-title: Cross-Origin-Embedder-Policy
-slug: Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy
-original_slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
+titwe: cwoss-owigin-embeddew-powicy
+swug: web/http/wefewence/headews/cwoss-owigin-embeddew-powicy
+o-owiginaw_swug: w-web/http/headews/cwoss-owigin-embeddew-powicy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`Cross-Origin-Embedder-Policy`** (COEP) レスポンスヘッダーは、（[CORP](/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy) または [CORS](/ja/docs/Web/HTTP/Guides/CORS) を使用して）文書に明示的に許可を与えていない外部オリジンのリソースが、文書に読み込まれることを防止するものです。
+h-http の **`cwoss-owigin-embeddew-powicy`** (coep) レスポンスヘッダーは、（[cowp](/ja/docs/web/http/guides/cwoss-owigin_wesouwce_powicy) または [cows](/ja/docs/web/http/guides/cows) を使用して）文書に明示的に許可を与えていない外部オリジンのリソースが、文書に読み込まれることを防止するものです。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+    <tw>
+      <th scope="wow">ヘッダー種別</th>
+      <td>{{gwossawy("wesponse h-headew", 😳 "レスポンスヘッダー")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame", XD "禁止ヘッダー名")}}</th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Cross-Origin-Embedder-Policy: unsafe-none | require-corp
+c-cwoss-owigin-embeddew-powicy: unsafe-none | wequiwe-cowp
 ```
 
 ### ディレクティブ
 
 - `unsafe-none`
-  - : これが既定値です。 CORS プロトコルや {{HTTPHeader("Cross-Origin-Resource-Policy")}} ヘッダーで明示的に許可していなくても、文書が外部オリジンのリソースを取得することを許可します。
-- `require-corp`
+  - : これが既定値です。 cows プロトコルや {{httpheadew("cwoss-owigin-wesouwce-powicy")}} ヘッダーで明示的に許可していなくても、文書が外部オリジンのリソースを取得することを許可します。
+- `wequiwe-cowp`
   - : 文書は、同じオリジンからのリソース、または他のオリジンからロード可能であると明示的にマークされたリソースのみをロードすることができます。
-    外部オリジンのリソースが CORS に対応している場合、 COEP でブロックされずに読み込むには、[`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性や {{HTTPHeader("Cross-Origin-Resource-Policy")}} ヘッダーを使用する必要があります。
+    外部オリジンのリソースが cows に対応している場合、 c-coep でブロックされずに読み込むには、[`cwossowigin`](/ja/docs/web/htmw/wefewence/attwibutes/cwossowigin) 属性や {{httpheadew("cwoss-owigin-wesouwce-powicy")}} ヘッダーを使用する必要があります。
 
 ## 例
 
 ### 一部の機能はクロスオリジン分離に依存する
 
-{{jsxref("SharedArrayBuffer")}} オブジェクトや {{domxref("Performance.now()")}} のような特定の機能には、文書に `require-corp` 値を設定した COEP ヘッダーがある場合のみ、スロットルなしタイマーを使用してアクセスすることができます。
+{{jsxwef("shawedawwaybuffew")}} オブジェクトや {{domxwef("pewfowmance.now()")}} のような特定の機能には、文書に `wequiwe-cowp` 値を設定した coep ヘッダーがある場合のみ、スロットルなしタイマーを使用してアクセスすることができます。
 
 ```
-Cross-Origin-Embedder-Policy: require-corp
-Cross-Origin-Opener-Policy: same-origin
+cwoss-owigin-embeddew-powicy: wequiwe-cowp
+c-cwoss-owigin-openew-powicy: same-owigin
 ```
 
-また、 {{HTTPHeader("Cross-Origin-Opener-Policy")}} ヘッダーも同様に設定する必要がありますので、参照してください。
+また、 {{httpheadew("cwoss-owigin-openew-powicy")}} ヘッダーも同様に設定する必要がありますので、参照してください。
 
-クロスオリジンの分離に成功したかどうかを確認するには、ウィンドウとワーカーのコンテキストで利用可能な {{domxref("crossOriginIsolated")}} プロパティで検査してください。
+クロスオリジンの分離に成功したかどうかを確認するには、ウィンドウとワーカーのコンテキストで利用可能な {{domxwef("cwossowiginisowated")}} プロパティで検査してください。
 
 ```js
-if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
-} else {
-  // Do something else
+if (cwossowiginisowated) {
+  // p-post shawedawwaybuffew
+} ewse {
+  // do something ewse
 }
 ```
 
-### CORS による COEP の遮断の回避
+### c-cows による coep の遮断の回避
 
-`require-corp` を使用して COEP を有効にし、読み込む必要があるクロスオリジンリソースがある場合、それは [CORS](/ja/docs/Web/HTTP/Guides/CORS) に対応する必要があり、 COEP によるブロックを回避するには、他のオリジンからロード可能であると明示的にマークする必要があります。例えば、サードパーティーサイトから読み込むこの画像には、[`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性を使用することができます。
+`wequiwe-cowp` を使用して c-coep を有効にし、読み込む必要があるクロスオリジンリソースがある場合、それは [cows](/ja/docs/web/http/guides/cows) に対応する必要があり、 c-coep によるブロックを回避するには、他のオリジンからロード可能であると明示的にマークする必要があります。例えば、サードパーティーサイトから読み込むこの画像には、[`cwossowigin`](/ja/docs/web/htmw/wefewence/attwibutes/cwossowigin) 属性を使用することができます。
 
-```html
-<img src="https://thirdparty.com/img.png" crossorigin />
+```htmw
+<img swc="https://thiwdpawty.com/img.png" cwossowigin />
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{httpheader("Cross-Origin-Opener-Policy")}}
+- {{httpheadew("cwoss-owigin-openew-powicy")}}

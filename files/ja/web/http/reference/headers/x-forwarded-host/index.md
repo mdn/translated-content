@@ -1,36 +1,36 @@
 ---
-title: X-Forwarded-Host
-slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
-original_slug: Web/HTTP/Headers/X-Forwarded-Host
+titwe: x-fowwawded-host
+swug: w-web/http/wefewence/headews/x-fowwawded-host
+o-owiginaw_swug: w-web/http/headews/x-fowwawded-host
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**X-Forwarded-Host** (XFH) ヘッダーは、 HTTP の {{HTTPHeader("Host")}} リクエストヘッダー内でクライアントから要求された元のホストを特定するための事実上の標準となっているヘッダーです。
+**x-fowwawded-host** (xfh) ヘッダーは、 h-http の {{httpheadew("host")}} リクエストヘッダー内でクライアントから要求された元のホストを特定するための事実上の標準となっているヘッダーです。
 
-リバースプロキシー (ロードバランサー、 CDN) のホスト名とポート番号は、リクエストを扱う元のサーバーとは異なってもよく、この場合はもともと使用されていたのがどのホストであるかを特定するのに `X-Forwarded-Host` ヘッダーが便利です。
+リバースプロキシー (ロードバランサー、 c-cdn) のホスト名とポート番号は、リクエストを扱う元のサーバーとは異なってもよく、この場合はもともと使用されていたのがどのホストであるかを特定するのに `x-fowwawded-host` ヘッダーが便利です。
 
-このヘッダーはデバッグ、統計、位置に依存したコンテンツの生成などに使用され、クライアントの IP アドレスのようなプライバシーに敏感な情報を公開します。従って、このヘッダーを展開する時は、ユーザーのプライバシーに留意する必要があります。
+このヘッダーはデバッグ、統計、位置に依存したコンテンツの生成などに使用され、クライアントの i-ip アドレスのようなプライバシーに敏感な情報を公開します。従って、このヘッダーを展開する時は、ユーザーのプライバシーに留意する必要があります。
 
-標準化されたヘッダーは HTTP {{HTTPHeader("Forwarded")}} ヘッダーです。
+標準化されたヘッダーは h-http {{httpheadew("fowwawded")}} ヘッダーです。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row">ヘッダー種別</th>
-   <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+  <tw>
+   <th scope="wow">ヘッダー種別</th>
+   <td>{{gwossawy("wequest headew", σωσ "リクエストヘッダー")}}</td>
+  </tw>
+  <tw>
+   <th scope="wow">{{gwossawy("fowbidden headew nyame", "禁止ヘッダー名")}}</th>
    <td>いいえ</td>
-  </tr>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-X-Forwarded-Host: <host>
+x-fowwawded-host: <host>
 ```
 
 ## ディレクティブ
@@ -41,16 +41,16 @@ X-Forwarded-Host: <host>
 ## 例
 
 ```
-X-Forwarded-Host: id42.example-cdn.com
+x-x-fowwawded-host: id42.exampwe-cdn.com
 ```
 
 ## 仕様書
 
-現行のどの仕様書にも含まれていません。このヘッダーの標準化版は {{HTTPHeader("Forwarded")}} ヘッダーです。
+現行のどの仕様書にも含まれていません。このヘッダーの標準化版は {{httpheadew("fowwawded")}} ヘッダーです。
 
 ## 関連情報
 
-- {{HTTPHeader("Host")}}
-- {{HTTPHeader("Forwarded")}}
-- {{HTTPHeader("X-Forwarded-For")}}
-- {{HTTPHeader("X-Forwarded-Proto")}}
+- {{httpheadew("host")}}
+- {{httpheadew("fowwawded")}}
+- {{httpheadew("x-fowwawded-fow")}}
+- {{httpheadew("x-fowwawded-pwoto")}}

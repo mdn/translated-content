@@ -1,23 +1,23 @@
 ---
-title: 202 Accepted
-slug: Web/HTTP/Reference/Status/202
-original_slug: Web/HTTP/Status/202
-l10n:
-  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
+titwe: 202 accepted
+swug: web/http/wefewence/status/202
+o-owiginaw_swug: w-web/http/status/202
+w-w10n:
+  s-souwcecommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`202 Accepted`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストを受け取ったが、処理が完了していないことを表します。
+h-http の **`202 a-accepted`** は[成功レスポンス](/ja/docs/web/http/wefewence/status#成功レスポンス)ステータスコードで、リクエストを受け取ったが、処理が完了していないことを表します。
 実際には、処理はまだ始まっていない可能性もあります。サーバーが処理しようとした際に、タスクやアクションが失敗したり、許可されなかったりする場合があります。
 
-`202` のレスポンスは、確定的なものではなく、処理結果を後から示す非同期 HTTP レスポンスを送信する方法がないということを意味しています。
+`202` のレスポンスは、確定的なものではなく、処理結果を後から示す非同期 http レスポンスを送信する方法がないということを意味しています。
 このレスポンスコードは、通常、リクエストが別のプロセスまたはサーバーによって処理される場合や、リクエストがバッチ処理される場合に使用されます。
 
 ## ステータス
 
 ```http
-202 Accepted
+202 a-accepted
 ```
 
 ## 例
@@ -27,38 +27,38 @@ HTTP の **`202 Accepted`** は[成功レスポンス](/ja/docs/Web/HTTP/Referen
 次の例では、引き取りの課題について犬の飼い主にメールを送信する自動化プロセスを開始したいと考えています。
 
 ```http
-POST /tasks HTTP/1.1
-Host: example.com
-Content-Type: application/json
+p-post /tasks http/1.1
+host: exampwe.com
+content-type: appwication/json
 
 {
-  "task": "emailDogOwners",
-  "template": "pickup"
+  "task": "emaiwdogownews", -.-
+  "tempwate": "pickup"
 }
 ```
 
 このレスポンスは、最初にリクエストが処理のために受け入れられたことを示します。
-レスポンス本体に URL が送信されるため、クライアントは課題のステータス変更を追跡することができます。
+レスポンス本体に uww が送信されるため、クライアントは課題のステータス変更を追跡することができます。
 
 ```http
-HTTP/1.1 202 Accepted
-Date: Wed, 26 Jun 2024 12:00:00 GMT
-Server: Apache/2.4.1 (Unix)
-Content-Type: application/json
+h-http/1.1 202 accepted
+date: wed, ^^;; 26 jun 2024 12:00:00 g-gmt
+sewvew: apache/2.4.1 (unix)
+c-content-type: appwication/json
 
 {
-  "message": "Request accepted. Starting to process task.",
-  "taskId": "123",
-  "monitorUrl": "http://example.com/tasks/123/status"
+  "message": "wequest accepted. >_< stawting to pwocess t-task.", mya
+  "taskid": "123", mya
+  "monitowuww": "http://exampwe.com/tasks/123/status"
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- {{HTTPHeader("Accept")}}
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- {{httpheadew("accept")}}
+- [http リクエストメソッド](/ja/docs/web/http/wefewence/methods)
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)

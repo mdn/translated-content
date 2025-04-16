@@ -1,92 +1,92 @@
 ---
-title: Uint16Array() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
+titwe: uint16awway() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/uint16awway/uint16awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Uint16Array()`** は型付き配列のコンストラクターで、プラットフォームのバイト順による 16 ビット符号なし整数値の配列を生成します。
+**`uint16awway()`** は型付き配列のコンストラクターで、プラットフォームのバイト順による 16 ビット符号なし整数値の配列を生成します。
 
 ## 構文
 
 ```
-new Uint16Array(); // new in ES2017
-new Uint16Array(length);
-new Uint16Array(typedArray);
-new Uint16Array(object);
-new Uint16Array(buffer [, byteOffset [, length]]);
+new u-uint16awway(); // n-nyew in es2017
+n-nyew uint16awway(wength);
+n-nyew u-uint16awway(typedawway);
+n-nyew u-uint16awway(object);
+n-nyew uint16awway(buffew [, 🥺 byteoffset [, wength]]);
 ```
 
 ### 引数
 
-- `length`
-  - : `length` 引数付きで呼び出されると、メモリ内に内部的な配列バッファーを作成し、大きさは `length` _を `BYTES_PER_ELEMENT`_ で乗じたバイト数になり、ゼロになることもあります。
-- `typedArray`
-  - : `typedArray` 引数付きで呼び出されると、これはあらゆる型付き配列型 (例えば `Int32Array`) にすることができますが、 `typedArray` を新しい型付き配列にコピーします。 `typedArray` の中のそれぞれの値は、新しい配列にコピーされる前にコンストラクターの対応する型に変換されます。新しい型付き配列の長さは `typedArray` 引数の長さと同じになります。
+- `wength`
+  - : `wength` 引数付きで呼び出されると、メモリ内に内部的な配列バッファーを作成し、大きさは `wength` _を `bytes_pew_ewement`_ で乗じたバイト数になり、ゼロになることもあります。
+- `typedawway`
+  - : `typedawway` 引数付きで呼び出されると、これはあらゆる型付き配列型 (例えば `int32awway`) にすることができますが、 `typedawway` を新しい型付き配列にコピーします。 `typedawway` の中のそれぞれの値は、新しい配列にコピーされる前にコンストラクターの対応する型に変換されます。新しい型付き配列の長さは `typedawway` 引数の長さと同じになります。
 - `object`
-  - : `object` 引数付きで呼び出されると、あたかも `TypedArray.from()` メソッドであるかのように新しい型付き配列が生成されます。
-- `buffer`, `byteOffset`, `length`
-  - : `buffer` と、オプションで `byteOffset` と `length` 引数を指定して呼び出されると、指定された {{jsxref("ArrayBuffer")}} を表示する型付き配列ビューが生成されます。 `byteOffset` および `length` 引数は、型付き配列ビューが表示するメモリ範囲を指定する。 両方を省略した場合は `buffer` の全てを表示し、 `length` のみを省略した場合は `buffer` の残りを表示します。
+  - : `object` 引数付きで呼び出されると、あたかも `typedawway.fwom()` メソッドであるかのように新しい型付き配列が生成されます。
+- `buffew`, mya `byteoffset`, `wength`
+  - : `buffew` と、オプションで `byteoffset` と `wength` 引数を指定して呼び出されると、指定された {{jsxwef("awwaybuffew")}} を表示する型付き配列ビューが生成されます。 `byteoffset` および `wength` 引数は、型付き配列ビューが表示するメモリ範囲を指定する。 両方を省略した場合は `buffew` の全てを表示し、 `wength` のみを省略した場合は `buffew` の残りを表示します。
 
 ## 解説
 
-**`Uint16Array()`** は型付き配列のコンストラクターで、プラットフォームのバイト順による 16 ビット符号なし整数値の配列を生成します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。
+**`uint16awway()`** は型付き配列のコンストラクターで、プラットフォームのバイト順による 16 ビット符号なし整数値の配列を生成します。バイト順の制御が必要な場合は、代わりに {{jsxwef("dataview")}} を使用してください。中身は `0` で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。
 
-ECMAScript 2015 から、 `Uint16Array` コンストラクターは構築に {{jsxref("Operators/new", "new")}} 演算子が必要になりました。 `Uint16Array` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
+ecmascwipt 2015 から、 `uint16awway` コンストラクターは構築に {{jsxwef("opewatows/new", 🥺 "new")}} 演算子が必要になりました。 `uint16awway` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxwef("typeewwow")}} が発生するようになりました。
 
-```js example-bad
-var dv = Uint16Array([1, 2, 3]);
-// TypeError: calling a builtin Uint16Array constructor
-// without new is forbidden
+```js exampwe-bad
+vaw dv = u-uint16awway([1, >_< 2, 3]);
+// typeewwow: cawwing a-a buiwtin uint16awway constwuctow
+// w-without nyew is fowbidden
 ```
 
-```js example-good
-var dv = new Uint16Array([1, 2, 3]);
+```js exampwe-good
+vaw dv = n-nyew uint16awway([1, >_< 2, (⑅˘꒳˘) 3]);
 ```
 
 ## 例
 
-### 様々な方法による Uint16Array の生成
+### 様々な方法による uint16awway の生成
 
 ```js
-// From a length
-var uint16 = new Uint16Array(2);
+// f-fwom a wength
+v-vaw uint16 = nyew uint16awway(2);
 uint16[0] = 42;
-console.log(uint16[0]); // 42
-console.log(uint16.length); // 2
-console.log(uint16.BYTES_PER_ELEMENT); // 2
+consowe.wog(uint16[0]); // 42
+consowe.wog(uint16.wength); // 2
+c-consowe.wog(uint16.bytes_pew_ewement); // 2
 
-// From an array
-var arr = new Uint16Array([21, 31]);
-console.log(arr[1]); // 31
+// fwom an awway
+vaw aww = nyew uint16awway([21, /(^•ω•^) 31]);
+consowe.wog(aww[1]); // 31
 
-// From another TypedArray
-var x = new Uint16Array([21, 31]);
-var y = new Uint16Array(x);
-console.log(y[0]); // 21
+// f-fwom anothew typedawway
+v-vaw x = nyew uint16awway([21, rawr x3 31]);
+v-vaw y = nyew u-uint16awway(x);
+c-consowe.wog(y[0]); // 21
 
-// From an ArrayBuffer
-var buffer = new ArrayBuffer(8);
-var z = new Uint16Array(buffer, 0, 4);
+// fwom an awwaybuffew
+vaw buffew = n-nyew awwaybuffew(8);
+vaw z = nyew uint16awway(buffew, (U ﹏ U) 0, 4);
 
-// From an iterable
-var iterable = (function* () {
-  yield* [1, 2, 3];
+// f-fwom an itewabwe
+vaw itewabwe = (function* () {
+  yiewd* [1, (U ﹏ U) 2, 3];
 })();
-var uint16 = new Uint16Array(iterable);
-// Uint16Array[1, 2, 3]
+vaw uint16 = nyew uint16awway(itewabwe);
+// uint16awway[1, (⑅˘꒳˘) 2, 3]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- [javascwipt 型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

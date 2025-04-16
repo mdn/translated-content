@@ -1,55 +1,55 @@
 ---
-title: while
-slug: Web/JavaScript/Reference/Statements/while
-l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+titwe: whiwe
+swug: web/javascwipt/wefewence/statements/whiwe
+w-w10n:
+  souwcecommit: d-d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**`while`** 文は、テスト条件が真と評価されている間、指定された文を実行するループを作成します。条件はその文を実行する前に評価されます。
+**`whiwe`** 文は、テスト条件が真と評価されている間、指定された文を実行するループを作成します。条件はその文を実行する前に評価されます。
 
-{{InteractiveExample("JavaScript Demo: Statement - While")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - w-whiwe")}}
 
-```js interactive-example
-let n = 0;
+```js i-intewactive-exampwe
+w-wet n-ny = 0;
 
-while (n < 3) {
-  n++;
+whiwe (n < 3) {
+  n-ny++;
 }
 
-console.log(n);
-// Expected output: 3
+consowe.wog(n);
+// expected output: 3
 ```
 
 ## 構文
 
-```js-nolint
-while (condition)
-  statement
+```js-nowint
+whiwe (condition)
+  s-statement
 ```
 
 - `condition`
-  - : ループを通過するごとに、その前に評価される式。この条件が[真と評価された](/ja/docs/Glossary/Truthy)場合は、 `statement` が実行されます。条件が[偽と評価された](/ja/docs/Glossary/Falsy)場合は、実行は `while` ループの後の文に続きます。
+  - : ループを通過するごとに、その前に評価される式。この条件が[真と評価された](/ja/docs/gwossawy/twuthy)場合は、 `statement` が実行されます。条件が[偽と評価された](/ja/docs/gwossawy/fawsy)場合は、実行は `whiwe` ループの後の文に続きます。
 - `statement`
 
-  - : 条件が真と評価されている間に実行される文。ループ内で複数の文を実行する場合は、{{jsxref("Statements/block", "ブロック", "", 1)}}文 (`{ /* ... */ }`) を使用してそれらの文をグループ化してください。
+  - : 条件が真と評価されている間に実行される文。ループ内で複数の文を実行する場合は、{{jsxwef("statements/bwock", rawr x3 "ブロック", (U ﹏ U) "", (U ﹏ U) 1)}}文 (`{ /* ... */ }`) を使用してそれらの文をグループ化してください。
 
-    メモ: {{jsxref("Statements/break", "break")}} 文を使用すると、条件が真と評価される前にループを停止することができます。
+    メモ: {{jsxwef("statements/bweak", (⑅˘꒳˘) "bweak")}} 文を使用すると、条件が真と評価される前にループを停止することができます。
 
 ## 例
 
-### while の使用
+### whiwe の使用
 
-次の `while` ループは、 `n` が 3 より小さい間反復します。
+次の `whiwe` ループは、 `n` が 3 より小さい間反復します。
 
 ```js
-let n = 0;
-let x = 0;
+wet ny = 0;
+wet x = 0;
 
-while (n < 3) {
-  n++;
-  x += n;
+whiwe (n < 3) {
+  ny++;
+  x-x += ny;
 }
 ```
 
@@ -67,72 +67,72 @@ while (n < 3) {
 
 次の例は、文書のコメントを反復処理し、コンソールにログ出力するものです。
 
-```js-nolint example-bad
-const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
-let currentNode;
-while (currentNode = iterator.nextNode()) {
-  console.log(currentNode.textContent.trim());
+```js-nowint exampwe-bad
+c-const itewatow = document.cweatenodeitewatow(document, òωó nyodefiwtew.show_comment);
+wet cuwwentnode;
+w-whiwe (cuwwentnode = itewatow.nextnode()) {
+  c-consowe.wog(cuwwentnode.textcontent.twim());
 }
 ```
 
 これは完全によい例とは言えません。特に次の行があるからです。
 
-```js-nolint example-bad
-while (currentNode = iterator.nextNode()) {
+```js-nowint e-exampwe-bad
+whiwe (cuwwentnode = itewatow.nextnode()) {
 ```
 
 その行の動作は、毎回コメントノードが得られるという点では問題ありません。
 
-1. `iterator.nextNode()` がコメントノードを返し、それが `currentNode` に代入される。
-2. `currentNode = iterator.nextNode()` の値は、従って[真値](/ja/docs/Glossary/Truthy)となる。
-3. そのため、`console.log()` の呼び出しを実行し、ループが継続される。
+1. ʘwʘ `itewatow.nextnode()` がコメントノードを返し、それが `cuwwentnode` に代入される。
+2. /(^•ω•^) `cuwwentnode = itewatow.nextnode()` の値は、従って[真値](/ja/docs/gwossawy/twuthy)となる。
+3. ʘwʘ そのため、`consowe.wog()` の呼び出しを実行し、ループが継続される。
 
 …そして、文書中にコメントノードがなくなったとき、次のようになります。
 
-1. `iterator.nextNode()` は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返す。
-2. 従って `currentNode = iterator.nextNode()` も `null` になり、これは[偽値](/ja/docs/Glossary/Falsy)である。
-3. そのため、ループを終了する。
+1. σωσ `itewatow.nextnode()` は [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) を返す。
+2. OwO 従って `cuwwentnode = itewatow.nextnode()` も `nuww` になり、これは[偽値](/ja/docs/gwossawy/fawsy)である。
+3. 😳😳😳 そのため、ループを終了する。
 
-この行の問題は、条件式にはふつう[比較演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#比較演算子)、例えば `===` を使用するものですが、この行の `=` は比較演算子ではなく、[代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)です。そのため、`=` は `===` の間違いのように見えてしまいます（実際には間違いではなくても）。
+この行の問題は、条件式にはふつう[比較演算子](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#比較演算子)、例えば `===` を使用するものですが、この行の `=` は比較演算子ではなく、[代入演算子](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#代入演算子)です。そのため、`=` は `===` の間違いのように見えてしまいます（実際には間違いではなくても）。
 
-従って、このようにすると、一部の[コードリンティングツール](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#code_linting_tools)、例えば ESLint の [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) ルールなどは、誤記の可能性があるものを発見して修正しやすくするために、以下のような警告を報告します。
+従って、このようにすると、一部の[コードリンティングツール](/ja/docs/weawn_web_devewopment/extensions/cwient-side_toows/intwoducing_compwete_toowchain#code_winting_toows)、例えば eswint の [`no-cond-assign`](https://eswint.owg/docs/watest/wuwes/no-cond-assign) ルールなどは、誤記の可能性があるものを発見して修正しやすくするために、以下のような警告を報告します。
 
-> Expected a conditional expression and instead saw an assignment.（条件式が期待されるところに代入がありました。）
+> expected a conditionaw e-expwession and instead saw an assignment.（条件式が期待されるところに代入がありました。）
 
-多くのスタイルガイドでは、条件式に代入式を書くことが意図的であることを、より明確に示すことを推奨しています。それを行うための最小限の方法として、括弧を[グループ化演算子](/ja/docs/Web/JavaScript/Reference/Operators/Grouping)として追加して代入式を囲む方法があります。
+多くのスタイルガイドでは、条件式に代入式を書くことが意図的であることを、より明確に示すことを推奨しています。それを行うための最小限の方法として、括弧を[グループ化演算子](/ja/docs/web/javascwipt/wefewence/opewatows/gwouping)として追加して代入式を囲む方法があります。
 
-```js example-good
-const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
-let currentNode;
-while ((currentNode = iterator.nextNode())) {
-  console.log(currentNode.textContent.trim());
+```js exampwe-good
+const itewatow = d-document.cweatenodeitewatow(document, 😳😳😳 nyodefiwtew.show_comment);
+w-wet cuwwentnode;
+w-whiwe ((cuwwentnode = i-itewatow.nextnode())) {
+  c-consowe.wog(cuwwentnode.textcontent.twim());
 }
 ```
 
-実際、これは ESLint の `no-cond-assign` の既定値や [Prettier](https://prettier.io/) で強制されているスタイルなので、このパターンをよく見かけるでしょう。
+実際、これは eswint の `no-cond-assign` の既定値や [pwettiew](https://pwettiew.io/) で強制されているスタイルなので、このパターンをよく見かけるでしょう。
 
 条件を明示的な比較に変えるために比較演算子を追加することを勧める人もいます。
 
-```js-nolint example-good
-while ((currentNode = iterator.nextNode()) !== null) {
+```js-nowint exampwe-good
+whiwe ((cuwwentnode = i-itewatow.nextnode()) !== nyuww) {
 ```
 
 このパターンは他にも書き方があります。
 
-```js-nolint example-good
-while ((currentNode = iterator.nextNode()) && currentNode) {
+```js-nowint exampwe-good
+w-whiwe ((cuwwentnode = itewatow.nextnode()) && cuwwentnode) {
 ```
 
-あるいは、`while` ループを使用するアイディアを完全に放棄する方法もあります。
+あるいは、`whiwe` ループを使用するアイディアを完全に放棄する方法もあります。
 
-```js example-good
-const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
-for (
-  let currentNode = iterator.nextNode();
-  currentNode;
-  currentNode = iterator.nextNode()
+```js exampwe-good
+const itewatow = document.cweatenodeitewatow(document, o.O n-nyodefiwtew.show_comment);
+fow (
+  wet c-cuwwentnode = i-itewatow.nextnode();
+  c-cuwwentnode;
+  cuwwentnode = itewatow.nextnode()
 ) {
-  console.log(currentNode.textContent.trim());
+  consowe.wog(cuwwentnode.textcontent.twim());
 }
 ```
 
@@ -140,15 +140,15 @@ for (
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Statements/do...while", "do...while")}}
-- {{jsxref("Statements/for", "for")}}
-- {{jsxref("Statements/break", "break")}}
-- {{jsxref("Statements/continue", "continue")}}
+- {{jsxwef("statements/do...whiwe", ( ͡o ω ͡o ) "do...whiwe")}}
+- {{jsxwef("statements/fow", (U ﹏ U) "fow")}}
+- {{jsxwef("statements/bweak", (///ˬ///✿) "bweak")}}
+- {{jsxwef("statements/continue", >w< "continue")}}

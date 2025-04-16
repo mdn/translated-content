@@ -1,69 +1,69 @@
 ---
-title: DataView.prototype.setInt16()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt16
+titwe: dataview.pwototype.setint16()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/setint16
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setUint16()`** メソッドは、符号付き 16 ビット整数 (short) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
+**`setuint16()`** メソッドは、符号付き 16 ビット整数 (showt) 値を {{jsxwef("dataview")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setInt16()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.setint16()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a size i-in bytes
+const b-buffew = nyew a-awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt16(1, 32767); // Max signed 16-bit integer
+c-const view = new dataview(buffew);
+view.setint16(1, >_< 32767); // max signed 16-bit integew
 
-console.log(view.getInt16(1));
-// Expected output: 32767
+consowe.wog(view.getint16(1));
+// expected o-output: 32767
 ```
 
 ## 構文
 
 ```
-dataview.setInt16(byteOffset, value [, littleEndian])
+dataview.setint16(byteoffset, mya vawue [, mya w-wittweendian])
 ```
 
 ### 引数
 
-- `byteOffset`
+- `byteoffset`
   - : ビューの先頭からのバイト単位のオフセットで、データを格納する位置です。
-- `value`
+- `vawue`
   - : 設定する値です。
-- `littleEndian`
-  - : {{optional_inline}} 16 ビット整数を{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納するかを表します。 `false` または `undefined` の場合、ビッグエンディアン値が書き込まれます。
+- `wittweendian`
+  - : {{optionaw_inwine}} 16 ビット整数を{{gwossawy("endianness", 😳 "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納するかを表します。 `fawse` または `undefined` の場合、ビッグエンディアン値が書き込まれます。
 
 ### 返値
 
-{{jsxref("undefined")}}。
+{{jsxwef("undefined")}}。
 
 ### 発生するエラー
 
-- {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `byteoffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
 
 ## 例
 
-### setInt16 メソッドの使用
+### setint16 メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setInt16(1, 3);
-dataview.getInt16(1); // 3
+v-vaw buffew = nyew awwaybuffew(8);
+vaw dataview = nyew d-dataview(buffew);
+dataview.setint16(1, XD 3);
+d-dataview.getint16(1); // 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

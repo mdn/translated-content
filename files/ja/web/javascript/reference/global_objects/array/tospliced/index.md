@@ -1,121 +1,121 @@
 ---
-title: Array.prototype.toSpliced()
-slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
-l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+titwe: awway.pwototype.tospwiced()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/tospwiced
+w-w10n:
+  souwcecommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toSpliced()`** は {{jsxref("Array")}} インスタンスのメソッドで、 {{jsxref("Array/splice", "splice()")}} メソッドに対応する[コピー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)メソッドです。これは、指定された位置の要素を除去したり置き換えたりした新しい配列を返します。
+**`tospwiced()`** は {{jsxwef("awway")}} インスタンスのメソッドで、 {{jsxwef("awway/spwice", "spwice()")}} メソッドに対応する[コピー](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#コピーメソッドと変更メソッド)メソッドです。これは、指定された位置の要素を除去したり置き換えたりした新しい配列を返します。
 
 ## 構文
 
-```js-nolint
-toSpliced(start)
-toSpliced(start, deleteCount)
-toSpliced(start, deleteCount, item1)
-toSpliced(start, deleteCount, item1, item2)
-toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
+```js-nowint
+t-tospwiced(stawt)
+t-tospwiced(stawt, rawr d-dewetecount)
+t-tospwiced(stawt, OwO d-dewetecount, (U ﹏ U) i-item1)
+tospwiced(stawt, >_< d-dewetecount, rawr x3 item1, mya item2)
+tospwiced(stawt, nyaa~~ dewetecount, (⑅˘꒳˘) item1, item2, rawr x3 /* …, */ i-itemn)
 ```
 
 ### 引数
 
-- `start`
+- `stawt`
 
-  - : 配列の変更を始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-    - 負のインデックスは配列の末尾から数えます。 `start < 0` の場合は `start + array.length` を使用します。
-    - `start < -array.length` または `start` が省略された場合は `0` が使用されます。
-    - `start >= array.length` である場合、削除される要素はありませんが、このメソッドは追加関数として動作し、提供されただけの要素を追加します。
+  - : 配列の変更を始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#整数への変換)。
+    - 負のインデックスは配列の末尾から数えます。 `stawt < 0` の場合は `stawt + awway.wength` を使用します。
+    - `stawt < -awway.wength` または `stawt` が省略された場合は `0` が使用されます。
+    - `stawt >= awway.wength` である場合、削除される要素はありませんが、このメソッドは追加関数として動作し、提供されただけの要素を追加します。
 
-- `deleteCount` {{optional_inline}}
+- `dewetecount` {{optionaw_inwine}}
 
-  - : 整数で、配列内で `start` から削除する要素の数を示します。
+  - : 整数で、配列内で `stawt` から削除する要素の数を示します。
 
-    `deleteCount` を省略した場合、またはその値が `start` で指定した位置以降の要素数以上の場合、 `start` から配列の末尾までのすべての要素が削除されます。ただし、もし `itemN` 引数を渡したい場合は、 `Infinity` を `deleteCount` に渡して `start` 以降の要素をすべて削除してください。明示的に `undefined` を指定すると `0` に[変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)されてしまうからです。
+    `dewetecount` を省略した場合、またはその値が `stawt` で指定した位置以降の要素数以上の場合、 `stawt` から配列の末尾までのすべての要素が削除されます。ただし、もし `itemn` 引数を渡したい場合は、 `infinity` を `dewetecount` に渡して `stawt` 以降の要素をすべて削除してください。明示的に `undefined` を指定すると `0` に[変換](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#整数への変換)されてしまうからです。
 
-    `deleteCount` が `0` または負の場合、要素は除去されません。
+    `dewetecount` が `0` または負の場合、要素は除去されません。
     この場合、少なくとも 1 つの新しい要素を指定する必要があります（下記参照）。
 
-- `item1`, …, `itemN` {{optional_inline}}
+- `item1`, (✿oωo) …, `itemn` {{optionaw_inwine}}
 
-  - : 配列に追加する要素を `start` から始めます。
+  - : 配列に追加する要素を `stawt` から始めます。
 
-    要素を指定しない場合、 `toSpliced()` は配列から要素を取り除くだけです。
+    要素を指定しない場合、 `tospwiced()` は配列から要素を取り除くだけです。
 
 ### 返値
 
-`start`, `item1`, `item2`, …, `itemN` より前のすべての要素と、 `start + deleteCount` より後のすべての要素からなる新しい配列です。
+`stawt`, (ˆ ﻌ ˆ)♡ `item1`, (˘ω˘) `item2`, …, (⑅˘꒳˘) `itemn` より前のすべての要素と、 `stawt + dewetecount` より後のすべての要素からなる新しい配列です。
 
 ## 解説
 
-`toSpliced()` メソッドは `splice()` と同様に、一度に複数のことを行います。指定されたインデックスの位置から、指定された数の要素を配列から除去し、同じインデックスの位置に指定された要素を挿入します。しかし、元の配列を変更するのではなく、新しい配列を返します。したがって、削除された要素はこのメソッドからは返されません。
+`tospwiced()` メソッドは `spwice()` と同様に、一度に複数のことを行います。指定されたインデックスの位置から、指定された数の要素を配列から除去し、同じインデックスの位置に指定された要素を挿入します。しかし、元の配列を変更するのではなく、新しい配列を返します。したがって、削除された要素はこのメソッドからは返されません。
 
-`toSpliced()` メソッドは決して[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を生成しません。疎配列の場合、空のスロットは新しい配列の `undefined` に置き換わります。
+`tospwiced()` メソッドは決して[疎配列](/ja/docs/web/javascwipt/guide/indexed_cowwections#疎配列)を生成しません。疎配列の場合、空のスロットは新しい配列の `undefined` に置き換わります。
 
-`toSpliced()` メソッドは[汎用](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。 `this` の値が `length` プロパティを持っており、整数のキーのプロパティがあることのみを期待します。
+`tospwiced()` メソッドは[汎用](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#汎用的な配列メソッド)です。 `this` の値が `wength` プロパティを持っており、整数のキーのプロパティがあることのみを期待します。
 
 ## 例
 
 ### 要素の削除、追加、置き換え
 
-`toSpliced()` を使用すると、配列の要素を削除、追加、置き換えることができ、`slice()` や `concat()` を使用するよりも効率的に新しい配列を作成することができます。
+`tospwiced()` を使用すると、配列の要素を削除、追加、置き換えることができ、`swice()` や `concat()` を使用するよりも効率的に新しい配列を作成することができます。
 
 ```js
-const months = ["Jan", "Mar", "Apr", "May"];
+c-const months = ["jan", (///ˬ///✿) "maw", "apw", 😳😳😳 "may"];
 
 // インデックス 1 の要素の挿入
-const months2 = months.toSpliced(1, 0, "Feb");
-console.log(months2); // ["Jan", "Feb", "Mar", "Apr", "May"]
+const months2 = m-months.tospwiced(1, 🥺 0, "feb");
+consowe.wog(months2); // ["jan", mya "feb", "maw", 🥺 "apw", "may"]
 
 // インデックス 2 から始まる 2 つの要素を削除
-const months3 = months2.toSpliced(2, 2);
-console.log(months3); // ["Jan", "Feb", "May"]
+const months3 = months2.tospwiced(2, >_< 2);
+c-consowe.wog(months3); // ["jan", "feb", >_< "may"]
 
 // インデックス 1 の要素を 2 つの新しい要素で置き換え
-const months4 = months3.toSpliced(1, 1, "Feb", "Mar");
-console.log(months4); // ["Jan", "Feb", "Mar", "May"]
+const months4 = m-months3.tospwiced(1, (⑅˘꒳˘) 1, "feb", "maw");
+c-consowe.wog(months4); // ["jan", /(^•ω•^) "feb", "maw", rawr x3 "may"]
 
 // 元配列は変更しない
-console.log(months); // ["Jan", "Mar", "Apr", "May"]
+consowe.wog(months); // ["jan", (U ﹏ U) "maw", (U ﹏ U) "apw", "may"]
 ```
 
-### 疎配列に対する toSpliced() の使用
+### 疎配列に対する tospwiced() の使用
 
-`toSpliced()` メソッドは常に密な配列を作成します。
+`tospwiced()` メソッドは常に密な配列を作成します。
 
 ```js
-const arr = [1, , 3, 4, , 6];
-console.log(arr.toSpliced(1, 2)); // [1, 4, undefined, 6]
+const aww = [1, (⑅˘꒳˘) , 3, 4, , 6];
+consowe.wog(aww.tospwiced(1, òωó 2)); // [1, ʘwʘ 4, u-undefined, /(^•ω•^) 6]
 ```
 
-### 配列以外のオブジェクトに対する toSpliced() の呼び出し
+### 配列以外のオブジェクトに対する tospwiced() の呼び出し
 
-`toSpliced()` メソッドは `this` の `length` プロパティを読み取ります。そして、必要な整数キーのプロパティを読み込み、新しい配列に書き込みます。
+`tospwiced()` メソッドは `this` の `wength` プロパティを読み取ります。そして、必要な整数キーのプロパティを読み込み、新しい配列に書き込みます。
 
 ```js
-const arrayLike = {
-  length: 3,
-  unrelated: "foo",
+const awwaywike = {
+  wength: 3, ʘwʘ
+  unwewated: "foo", σωσ
   0: 5,
-  2: 4,
+  2: 4, OwO
 };
-console.log(Array.prototype.toSpliced.call(arrayLike, 0, 1, 2, 3));
-// [2, 3, undefined, 4]
+c-consowe.wog(awway.pwototype.tospwiced.caww(awwaywike, 😳😳😳 0, 😳😳😳 1, 2, 3));
+// [2, o.O 3, undefined, ( ͡o ω ͡o ) 4]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Array.prototype.toSpliced` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
-- {{jsxref("Array.prototype.splice()")}}
-- {{jsxref("Array.prototype.toReversed()")}}
-- {{jsxref("Array.prototype.toSorted()")}}
-- {{jsxref("Array.prototype.with()")}}
+- [`awway.pwototype.tospwiced` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#change-awway-by-copy)
+- {{jsxwef("awway.pwototype.spwice()")}}
+- {{jsxwef("awway.pwototype.towevewsed()")}}
+- {{jsxwef("awway.pwototype.tosowted()")}}
+- {{jsxwef("awway.pwototype.with()")}}

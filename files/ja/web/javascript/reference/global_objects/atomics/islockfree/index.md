@@ -1,30 +1,30 @@
 ---
-title: Atomics.isLockFree()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
+titwe: atomics.iswockfwee()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/iswockfwee
 ---
 
-{{JSRef}}
+{{jswef}}
 
 静的な
-**`Atomics.isLockFree()`**
-メソッドは、 `Atomics` のメソッドが、要素のバイト数が指定された大きさである型付き配列に適用された場合、ロックまたは不可分のハードウェア操作を使用するかどうかを見極めるために使用されます。指定された大きさが整数型の TypedArray 型の [BYTES_PER_ELEMENT](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) プロパティのいずれでもない場合は、 `false` を返します。
+**`atomics.iswockfwee()`**
+メソッドは、 `atomics` のメソッドが、要素のバイト数が指定された大きさである型付き配列に適用された場合、ロックまたは不可分のハードウェア操作を使用するかどうかを見極めるために使用されます。指定された大きさが整数型の t-typedawway 型の [bytes_pew_ewement](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/bytes_pew_ewement) プロパティのいずれでもない場合は、 `fawse` を返します。
 
-{{InteractiveExample("JavaScript Demo: Atomics.isLockFree()")}}
+{{intewactiveexampwe("javascwipt d-demo: atomics.iswockfwee()")}}
 
-```js interactive-example
-console.log(Atomics.isLockFree(3));
-// 3 is not one of the BYTES_PER_ELEMENT values
-// Expected output: false
+```js i-intewactive-exampwe
+c-consowe.wog(atomics.iswockfwee(3));
+// 3 i-is nyot o-one of the bytes_pew_ewement v-vawues
+// e-expected output: fawse
 
-console.log(Atomics.isLockFree(4));
-// 4 is one of the BYTES_PER_ELEMENT values
-// Expected output: true
+consowe.wog(atomics.iswockfwee(4));
+// 4 is one of the bytes_pew_ewement v-vawues
+// expected output: twue
 ```
 
 ## 構文
 
 ```js
-Atomics.isLockFree(size);
+atomics.iswockfwee(size);
 ```
 
 ### 引数
@@ -34,31 +34,31 @@ Atomics.isLockFree(size);
 
 ### 返値
 
-`true` または `false` で、操作がロック不要であるかどうかを示します。
+`twue` または `fawse` で、操作がロック不要であるかどうかを示します。
 
 ## 例
 
-### isLockFree の使用
+### i-iswockfwee の使用
 
 ```js
-Atomics.isLockFree(1); // true
-Atomics.isLockFree(2); // true
-Atomics.isLockFree(3); // false
-Atomics.isLockFree(4); // true
-Atomics.isLockFree(5); // false
-Atomics.isLockFree(6); // false
-Atomics.isLockFree(7); // false
-Atomics.isLockFree(8); // true
+atomics.iswockfwee(1); // twue
+a-atomics.iswockfwee(2); // twue
+atomics.iswockfwee(3); // fawse
+a-atomics.iswockfwee(4); // twue
+a-atomics.iswockfwee(5); // f-fawse
+atomics.iswockfwee(6); // fawse
+atomics.iswockfwee(7); // fawse
+a-atomics.iswockfwee(8); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Atomics")}}
+- {{jsxwef("atomics")}}

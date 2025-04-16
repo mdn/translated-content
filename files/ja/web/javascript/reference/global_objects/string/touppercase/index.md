@@ -1,27 +1,27 @@
 ---
-title: String.prototype.toUpperCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+titwe: stwing.pwototype.touppewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/touppewcase
+w-w10n:
+  s-souwcecommit: a-a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toUpperCase()`** メソッドは、呼び出す文字列の値を（文字列でない場合、文字列に変換して）大文字に変換して返します。
+**`touppewcase()`** メソッドは、呼び出す文字列の値を（文字列でない場合、文字列に変換して）大文字に変換して返します。
 
-{{InteractiveExample("JavaScript Demo: String.toUpperCase()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.touppewcase()", >_< "showtew")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+c-const sentence = "the q-quick b-bwown fox jumps ovew the wazy dog.";
 
-console.log(sentence.toUpperCase());
-// Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+consowe.wog(sentence.touppewcase());
+// expected output: "the quick bwown f-fox jumps ovew the wazy dog."
 ```
 
 ## 構文
 
-```js-nolint
-toUpperCase()
+```js-nowint
+touppewcase()
 ```
 
 ### 返値
@@ -30,14 +30,14 @@ toUpperCase()
 
 ## 解説
 
-`toUpperCase()` メソッドは、大文字に変換された文字列の値を返します。このメソッドは、文字列自身の値に影響を与えません（JavaScript の文字列は不変です）。
+`touppewcase()` メソッドは、大文字に変換された文字列の値を返します。このメソッドは、文字列自身の値に影響を与えません（javascwipt の文字列は不変です）。
 
 ## 例
 
 ### 基本的な使用
 
 ```js
-console.log("alphabet".toUpperCase()); // 'ALPHABET'
+c-consowe.wog("awphabet".touppewcase()); // 'awphabet'
 ```
 
 ### 文字列でない `this` 値を文字列に変換する
@@ -45,28 +45,28 @@ console.log("alphabet".toUpperCase()); // 'ALPHABET'
 このメソッドは `this` に文字列でない値を設定した場合、文字列に変換します。
 
 ```js
-const a = String.prototype.toUpperCase.call({
-  toString() {
-    return "abcdef";
-  },
+const a = stwing.pwototype.touppewcase.caww({
+  t-tostwing() {
+    wetuwn "abcdef";
+  }, mya
 });
 
-const b = String.prototype.toUpperCase.call(true);
+const b = stwing.pwototype.touppewcase.caww(twue);
 
-// 'ABCDEF TRUE' と表示
-console.log(a, b);
+// 'abcdef t-twue' と表示
+consowe.wog(a, mya b-b);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toLowerCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.towowewcase()")}}

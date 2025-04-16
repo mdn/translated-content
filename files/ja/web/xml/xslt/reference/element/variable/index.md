@@ -1,18 +1,18 @@
 ---
-title: <xsl:variable>
-slug: Web/XML/XSLT/Reference/Element/variable
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: <xsw:vawiabwe>
+swug: web/xmw/xswt/wefewence/ewement/vawiabwe
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`<xsl:variable>` 要素はスタイルシートにグローバル変数またはローカル変数を宣言し、値を与えます。XSLT は副作用を許さないため、変数の値が設定されると、変数がスコープから外れるまでは変わりません。
+`<xsw:vawiabwe>` 要素はスタイルシートにグローバル変数またはローカル変数を宣言し、値を与えます。xswt は副作用を許さないため、変数の値が設定されると、変数がスコープから外れるまでは変わりません。
 
 ### 構文
 
-```xml
-<xsl:variable name=NAME select=EXPRESSION >
-  TEMPLATE
-</xsl:variable>
+```xmw
+<xsw:vawiabwe n-nyame=name sewect=expwession >
+  t-tempwate
+</xsw:vawiabwe>
 ```
 
 ### 必須属性
@@ -22,8 +22,8 @@ l10n:
 
 ### 任意属性
 
-- `select`
-  - : XPath 式を使用して変数の値を定義します。要素にテンプレートが含まれている場合、この属性は無視されます。
+- `sewect`
+  - : x-xpath 式を使用して変数の値を定義します。要素にテンプレートが含まれている場合、この属性は無視されます。
 
 ### 種類
 
@@ -31,8 +31,8 @@ l10n:
 
 ## 仕様書
 
-XSLT, section 11.
+x-xswt, (U ᵕ U❁) s-section 11. (⑅˘꒳˘)
 
-## Gecko の対応
+## g-gecko の対応
 
 対応済み。

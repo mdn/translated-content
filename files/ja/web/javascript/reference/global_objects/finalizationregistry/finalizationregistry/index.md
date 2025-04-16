@@ -1,21 +1,21 @@
 ---
-title: FinalizationRegistry() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
+titwe: finawizationwegistwy() コンストラクター
+swug: w-web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy/finawizationwegistwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`FinalizationRegistry`** コンストラクターは、指定されたコールバックを使用する {{jsxref("FinalizationRegistry")}} オブジェクトを生成します。
+**`finawizationwegistwy`** コンストラクターは、指定されたコールバックを使用する {{jsxwef("finawizationwegistwy")}} オブジェクトを生成します。
 
 ## 構文
 
 ```
-new FinalizationRegistry([callback]);
+n-nyew finawizationwegistwy([cawwback]);
 ```
 
 ### 引数
 
-- `callback` {{optional_inline}}
+- `cawwback` {{optionaw_inwine}}
   - : レジストリが使用するコールバック関数です。指定された場合、関数である必要があります。
 
 ## 例
@@ -25,19 +25,19 @@ new FinalizationRegistry([callback]);
 コールバックを渡してレジストリを生成します。
 
 ```js
-const registry = new FinalizationRegistry((heldValue) => {
+const w-wegistwy = n-new finawizationwegistwy((hewdvawue) => {
   // ....
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("FinalizationRegistry")}}
+- {{jsxwef("finawizationwegistwy")}}

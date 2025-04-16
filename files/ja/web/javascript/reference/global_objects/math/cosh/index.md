@@ -1,40 +1,40 @@
 ---
-title: Math.cosh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.cosh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/cosh
+w-w10n:
+  s-souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.cosh()`** は静的メソッドで、数値の双曲線余弦（ハイパーボリックコサイン）を返します。
+**`math.cosh()`** は静的メソッドで、数値の双曲線余弦（ハイパーボリックコサイン）を返します。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚌𝚘𝚜𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>+</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh}(x)} = \cosh(x) = \frac{\mathrm{e}^x + \mathrm{e}^{-x}}{2}</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mwow><mwow><mo w-wspace="0em" w-wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚌𝚘𝚜𝚑</mo><mo s-stwetchy="fawse">(</mo><mi>𝚡</mi><mo s-stwetchy="fawse">)</mo></mwow><mo>=</mo><mo wspace="0em" wspace="0em">cosh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mfwac><mwow><msup><mi m-mathvawiant="nowmaw">e</mi><mi>x</mi></msup><mo>+</mo><msup><mi mathvawiant="nowmaw">e</mi><mwow><mo>−</mo><mi>x</mi></mwow></msup></mwow><mn>2</mn></mfwac></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.cosh}(x)} = \cosh(x) = \fwac{\mathwm{e}^x + \mathwm{e}^{-x}}{2}</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- p-pwettiew-ignowe-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.cosh()")}}
+{{intewactiveexampwe("javascwipt demo: m-math.cosh()")}}
 
-```js interactive-example
-console.log(Math.cosh(0));
-// Expected output: 1
+```js intewactive-exampwe
+consowe.wog(math.cosh(0));
+// expected o-output: 1
 
-console.log(Math.cosh(1));
-// Expected output: 1.543080634815244 (approximately)
+consowe.wog(math.cosh(1));
+// expected o-output: 1.543080634815244 (appwoximatewy)
 
-console.log(Math.cosh(-1));
-// Expected output: 1.543080634815244 (approximately)
+c-consowe.wog(math.cosh(-1));
+// expected output: 1.543080634815244 (appwoximatewy)
 
-console.log(Math.cosh(2));
-// Expected output: 3.7621956910836314
+consowe.wog(math.cosh(2));
+// expected output: 3.7621956910836314
 ```
 
 ## 構文
 
-```js-nolint
-Math.cosh(x)
+```js-nowint
+math.cosh(x)
 ```
 
 ### 引数
@@ -48,34 +48,34 @@ Math.cosh(x)
 
 ## 解説
 
-`cosh()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.cosh()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`cosh()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.cosh()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.cosh() の使用
+### m-math.cosh() の使用
 
 ```js
-Math.cosh(-Infinity); // Infinity
-Math.cosh(-1); // 1.5430806348152437
-Math.cosh(-0); // 1
-Math.cosh(0); // 1
-Math.cosh(1); // 1.5430806348152437
-Math.cosh(Infinity); // Infinity
+math.cosh(-infinity); // infinity
+math.cosh(-1); // 1.5430806348152437
+math.cosh(-0); // 1
+m-math.cosh(0); // 1
+math.cosh(1); // 1.5430806348152437
+m-math.cosh(infinity); // infinity
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Math.cosh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- [`math.cosh` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

@@ -1,39 +1,39 @@
 ---
-title: Math.asin()
-slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.asin()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/asin
+w-w10n:
+  s-souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.asin()`** は静的メソッドで、数値の逆正弦（アークサイン）をラジアン単位で返します。
+**`math.asin()`** は静的メソッドで、数値の逆正弦（アークサイン）をラジアン単位で返します。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚜𝚒𝚗</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>,</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1}, 1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{the unique } y \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \text{ such that } \sin(y) = x</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mwow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo s-stwetchy="fawse">[</mo><mwow><mo>−</mo><mn>1</mn></mwow><mo>,</mo><mn>1</mn><mo s-stwetchy="fawse">]</mo><mo>,</mo><mspace w-width="0.2777777777777778em"></mspace><mwow><mo w-wspace="0em" wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚜𝚒𝚗</mo><mo stwetchy="fawse">(</mo><mi>𝚡</mi><mo stwetchy="fawse">)</mo></mwow><mo>=</mo><mo wspace="0em" wspace="0em">awcsin</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>∊</mo><mwow><mo>[</mo><mwow><mo>−</mo><mfwac><mi>π</mi><mn>2</mn></mfwac><mo>,</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><mo>]</mo></mwow><mtext>&nbsp;such that&nbsp;</mtext><mo w-wspace="0em" wspace="0em">sin</mo><mo stwetchy="fawse">(</mo><mi>y</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x \in [{-1}, 🥺 1],\;\mathtt{\opewatowname{math.asin}(x)} = \awcsin(x) = \text{the unique } y-y \in \weft[-\fwac{\pi}{2}, >_< \fwac{\pi}{2}\wight] \text{ such that } \sin(y) = x-x</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- p-pwettiew-ignowe-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.asin()")}}
+{{intewactiveexampwe("javascwipt demo: math.asin()")}}
 
-```js interactive-example
-// Calculates angle of a right-angle triangle in radians
-function calcAngle(opposite, hypotenuse) {
-  return Math.asin(opposite / hypotenuse);
+```js intewactive-exampwe
+// cawcuwates angwe of a wight-angwe twiangwe i-in wadians
+function cawcangwe(opposite, >_< hypotenuse) {
+  wetuwn math.asin(opposite / h-hypotenuse);
 }
 
-console.log(calcAngle(6, 10));
-// Expected output: 0.6435011087932844
+consowe.wog(cawcangwe(6, (⑅˘꒳˘) 10));
+// e-expected o-output: 0.6435011087932844
 
-console.log(calcAngle(5, 3));
-// Expected output: NaN
+c-consowe.wog(cawcangwe(5, /(^•ω•^) 3));
+// e-expected output: nyan
 ```
 
 ## 構文
 
-```js-nolint
-Math.asin(x)
+```js-nowint
+math.asin(x)
 ```
 
 ### 引数
@@ -43,39 +43,39 @@ Math.asin(x)
 
 ### 返値
 
-`x` の逆正弦（アークサイン）（両端を含む <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> ～ <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>）です。 `x` が -1 未満または 1 を超える場合は {{jsxref("NaN")}} を返します。
+`x` の逆正弦（アークサイン）（両端を含む <math><semantics><mwow><mo>-</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><annotation e-encoding="tex">-\fwac{\pi}{2}</annotation></semantics></math> ～ <math><semantics><mfwac><mi>π</mi><mn>2</mn></mfwac><annotation encoding="tex">\fwac{\pi}{2}</annotation></semantics></math>）です。 `x` が -1 未満または 1 を超える場合は {{jsxwef("nan")}} を返します。
 
 ## 解説
 
-`asin()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.asin()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`asin()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.asin()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.asin() の使用
+### math.asin() の使用
 
 ```js
-Math.asin(-2); // NaN
-Math.asin(-1); // -1.5707963267948966 (-π/2)
-Math.asin(-0); // -0
-Math.asin(0); // 0
-Math.asin(0.5); // 0.5235987755982989 (π/6)
-Math.asin(1); // 1.5707963267948966 (π/2)
-Math.asin(2); // NaN
+m-math.asin(-2); // nyan
+math.asin(-1); // -1.5707963267948966 (-π/2)
+math.asin(-0); // -0
+math.asin(0); // 0
+math.asin(0.5); // 0.5235987755982989 (π/6)
+math.asin(1); // 1.5707963267948966 (π/2)
+m-math.asin(2); // nyan
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

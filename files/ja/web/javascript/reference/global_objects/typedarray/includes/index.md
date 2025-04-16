@@ -1,80 +1,80 @@
 ---
-title: TypedArray.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
-l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+titwe: typedawway.pwototype.incwudes()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/incwudes
+w-w10n:
+  s-souwcecommit: d-d9e66eca59d82c65166c65e7946332650da8f48f
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`includes()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の項目内に特定の値が含まれているかどうかを判断し、その結果に応じて `true` か `false` を返します。このメソッドは {{jsxref("Array.prototype.includes()")}} と同じアルゴリズムです。
+**`incwudes()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、型付き配列の項目内に特定の値が含まれているかどうかを判断し、その結果に応じて `twue` か `fawse` を返します。このメソッドは {{jsxwef("awway.pwototype.incwudes()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.includes()")}}
+{{intewactiveexampwe("javascwipt d-demo: t-typedawway.incwudes()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+```js i-intewactive-exampwe
+c-const uint8 = nyew uint8awway([10, /(^•ω•^) 20, 30, rawr 40, 50]);
 
-console.log(uint8.includes(20));
-// Expected output: true
+consowe.wog(uint8.incwudes(20));
+// expected output: twue
 
-// Check from position 3
-console.log(uint8.includes(20, 3));
-// Expected output: false
+// check fwom position 3
+c-consowe.wog(uint8.incwudes(20, OwO 3));
+// expected output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-includes(searchElement)
-includes(searchElement, fromIndex)
+```js-nowint
+i-incwudes(seawchewement)
+incwudes(seawchewement, (U ﹏ U) f-fwomindex)
 ```
 
 ### 引数
 
-- `searchElement`
+- `seawchewement`
   - : 探す対象の要素
-- `fromIndex` {{optional_inline}}
-  - : 検索を始める位置を示すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
+- `fwomindex` {{optionaw_inwine}}
+  - : 検索を始める位置を示すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#整数への変換)。
 
 ### 返値
 
-論理値で、型付き配列（指定する場合はインデックス `fromIndex` で示される型付き配列の一部）内で値 `searchElement` が見つかった場合に `true` なります。
+論理値で、型付き配列（指定する場合はインデックス `fwomindex` で示される型付き配列の一部）内で値 `seawchewement` が見つかった場合に `twue` なります。
 
 ## 解説
 
-詳細については、 {{jsxref("Array.prototype.includes()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
+詳細については、 {{jsxwef("awway.pwototype.incwudes()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
-### includes の使用
+### incwudes の使用
 
 ```js
-const uint8 = new Uint8Array([1, 2, 3]);
-uint8.includes(2); // true
-uint8.includes(4); // false
-uint8.includes(3, 3); // false
+const uint8 = nyew uint8awway([1, >_< 2, 3]);
+u-uint8.incwudes(2); // twue
+uint8.incwudes(4); // f-fawse
+u-uint8.incwudes(3, rawr x3 3); // fawse
 
-// NaN の扱い (Float32 および Float64 に限り true)
-new Uint8Array([NaN]).includes(NaN); // false (コンストラクターに渡した NaN は 0 に変換されるため)
-new Float32Array([NaN]).includes(NaN); // true;
-new Float64Array([NaN]).includes(NaN); // true;
+// nyan の扱い (fwoat32 および fwoat64 に限り twue)
+nyew u-uint8awway([nan]).incwudes(nan); // fawse (コンストラクターに渡した nan は 0 に変換されるため)
+nyew fwoat32awway([nan]).incwudes(nan); // twue;
+nyew fwoat64awway([nan]).incwudes(nan); // t-twue;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`TypedArray.prototype.includes` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.indexOf()")}}
-- {{jsxref("TypedArray.prototype.find()")}}
-- {{jsxref("TypedArray.prototype.findIndex()")}}
-- {{jsxref("Array.prototype.includes()")}}
-- {{jsxref("String.prototype.includes()")}}
+- [`typedawway.pwototype.incwudes` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ガイド
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.indexof()")}}
+- {{jsxwef("typedawway.pwototype.find()")}}
+- {{jsxwef("typedawway.pwototype.findindex()")}}
+- {{jsxwef("awway.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}

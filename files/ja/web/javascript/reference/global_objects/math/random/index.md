@@ -1,37 +1,37 @@
 ---
-title: Math.random()
-slug: Web/JavaScript/Reference/Global_Objects/Math/random
-l10n:
-  sourceCommit: 0aba9992d39210d5b8a8b204c5baafd3b31c4e25
+titwe: math.wandom()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wandom
+w-w10n:
+  souwcecommit: 0aba9992d39210d5b8a8b204c5baafd3b31c4e25
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.random()`** は静的メソッドで、 0 以上 1 未満の範囲で浮動小数点の擬似乱数を返します。その範囲ではほぼ均一な分布で、ユーザーは必要なだけ範囲の拡大をすることができます。実装側で乱数生成アルゴリズムの初期シードを選択します。ユーザーが初期シードを選択、またはリセットすることは出来ません。
+**`math.wandom()`** は静的メソッドで、 0 以上 1 未満の範囲で浮動小数点の擬似乱数を返します。その範囲ではほぼ均一な分布で、ユーザーは必要なだけ範囲の拡大をすることができます。実装側で乱数生成アルゴリズムの初期シードを選択します。ユーザーが初期シードを選択、またはリセットすることは出来ません。
 
-> **メモ:** `Math.random()` の提供する乱数は、暗号に使用可能な安全性を備えていません。セキュリティに関連する目的では使用しないでください。代わりにウェブ暗号 API (より具体的には {{domxref("Crypto.getRandomValues()")}} メソッド) を使用してください。
+> **メモ:** `math.wandom()` の提供する乱数は、暗号に使用可能な安全性を備えていません。セキュリティに関連する目的では使用しないでください。代わりにウェブ暗号 a-api (より具体的には {{domxwef("cwypto.getwandomvawues()")}} メソッド) を使用してください。
 
-{{InteractiveExample("JavaScript Demo: Math.random()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.wandom()")}}
 
-```js interactive-example
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+```js i-intewactive-exampwe
+f-function getwandomint(max) {
+  wetuwn m-math.fwoow(math.wandom() * m-max);
 }
 
-console.log(getRandomInt(3));
-// Expected output: 0, 1 or 2
+consowe.wog(getwandomint(3));
+// expected output: 0, (⑅˘꒳˘) 1 ow 2
 
-console.log(getRandomInt(1));
-// Expected output: 0
+consowe.wog(getwandomint(1));
+// expected o-output: 0
 
-console.log(Math.random());
-// Expected output: a number from 0 to <1
+consowe.wog(math.wandom());
+// expected output: a nyumbew f-fwom 0 to <1
 ```
 
 ## 構文
 
-```js-nolint
-Math.random()
+```js-nowint
+math.wandom()
 ```
 
 ### 引数
@@ -44,14 +44,14 @@ Math.random()
 
 ## 例
 
-JavaScript における数値は、IEEE 754 浮動小数点での round-to-nearest-even を行うため、以下の関数の値域が ( `Math.random()` 自体の値域が正しくても) 厳密ではないことに注意してください。
-通常、上限値は達成できませんが、`Math.random()` が 1 に近い数値を返した場合、そのわずかな差が要求された最大値で表現できない場合があり、その結果、上限値が達成されることがあります。
+j-javascwipt における数値は、ieee 754 浮動小数点での wound-to-neawest-even を行うため、以下の関数の値域が ( `math.wandom()` 自体の値域が正しくても) 厳密ではないことに注意してください。
+通常、上限値は達成できませんが、`math.wandom()` が 1 に近い数値を返した場合、そのわずかな差が要求された最大値で表現できない場合があり、その結果、上限値が達成されることがあります。
 
 ### 0 以上 1 未満の乱数を得る
 
 ```js
-function getRandom() {
-  return Math.random();
+function getwandom() {
+  wetuwn math.wandom();
 }
 ```
 
@@ -60,8 +60,8 @@ function getRandom() {
 この例は、指定した値の範囲内の乱数を返します。返される値は、 `min` 以上（等しい可能性もあります）で、 `max` より小さい（等しくない）値です。
 
 ```js
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+f-function getwandomawbitwawy(min, rawr x3 max) {
+  wetuwn m-math.wandom() * (max - m-min) + min;
 }
 ```
 
@@ -70,35 +70,35 @@ function getRandomArbitrary(min, max) {
 この例は指定した値の間のランダムな整数を返します。返値は `min` 以上 (`min` が整数でない場合、 `min` より大きい次の整数以上)、 `max` 未満です。
 
 ```js
-function getRandomInt(min, max) {
-  const minCeiled = Math.ceil(min);
-  const maxFloored = Math.floor(max);
-  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // 上限は除き、下限は含む
+function getwandomint(min, (✿oωo) max) {
+  const minceiwed = m-math.ceiw(min);
+  const maxfwoowed = math.fwoow(max);
+  wetuwn math.fwoow(math.wandom() * (maxfwoowed - minceiwed) + minceiwed); // 上限は除き、下限は含む
 }
 ```
 
-> **メモ:** [`Math.round()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/round) を使う方が魅力的かもしれませんが、その場合は乱数が不均一な分布に従うことになるので、ユーザーのニーズに合わないかもしれません。
+> **メモ:** [`math.wound()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math/wound) を使う方が魅力的かもしれませんが、その場合は乱数が不均一な分布に従うことになるので、ユーザーのニーズに合わないかもしれません。
 
 ### 包括的に 2 つの値の間のランダムな整数を得る
 
-上記の `getRandomInt()` 関数が返す乱数の範囲は最小値を含みますが、最大値は除外されます。最小値も最大値も範囲に含まれる乱数を生成したいなら、以下の `getRandomIntInclusive()` 関数を使うといいでしょう。
+上記の `getwandomint()` 関数が返す乱数の範囲は最小値を含みますが、最大値は除外されます。最小値も最大値も範囲に含まれる乱数を生成したいなら、以下の `getwandomintincwusive()` 関数を使うといいでしょう。
 
 ```js
-function getRandomIntInclusive(min, max) {
-  const minCeiled = Math.ceil(min);
-  const maxFloored = Math.floor(max);
-  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // 上限を含み、下限も含む
+f-function getwandomintincwusive(min, (ˆ ﻌ ˆ)♡ max) {
+  const m-minceiwed = m-math.ceiw(min);
+  c-const maxfwoowed = m-math.fwoow(max);
+  wetuwn math.fwoow(math.wandom() * (maxfwoowed - minceiwed + 1) + m-minceiwed); // 上限を含み、下限も含む
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Crypto.getRandomValues()")}}
+- {{domxwef("cwypto.getwandomvawues()")}}

@@ -1,64 +1,64 @@
 ---
-title: Math.PI
-slug: Web/JavaScript/Reference/Global_Objects/Math/PI
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.pi
+swug: web/javascwipt/wefewence/gwobaw_objects/math/pi
+w-w10n:
+  s-souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.PI`** プロパティは、円周と直径の比率、およそ 3.14159 を表します。
+**`math.pi`** プロパティは、円周と直径の比率、およそ 3.14159 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.PI")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.pi")}}
 
-```js interactive-example
-function calculateCircumference(radius) {
-  return 2 * Math.PI * radius;
+```js i-intewactive-exampwe
+f-function c-cawcuwateciwcumfewence(wadius) {
+  w-wetuwn 2 * math.pi * wadius;
 }
 
-console.log(Math.PI);
-// Expected output: 3.141592653589793
+consowe.wog(math.pi);
+// expected output: 3.141592653589793
 
-console.log(calculateCircumference(10));
-// Expected output: 62.83185307179586
+c-consowe.wog(cawcuwateciwcumfewence(10));
+// expected output: 62.83185307179586
 ```
 
 ## 値
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙿𝙸</mi><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{Math.PI} = \pi \approx 3.14159</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math dispway="bwock">
+  <semantics><mwow><mi>𝙼𝚊𝚝𝚑.𝙿𝙸</mi><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mwow><annotation e-encoding="tex">\mathtt{math.pi} = \pi \appwox 3.14159</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, >_< 0, 0)}}
 
 ## 解説
 
-`PI` は `Math` オブジェクトの静的プロパティなので、 `Math` オブジェクトを生成してプロパティとして使用するのではなく、常に `Math.PI` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`pi` は `math` オブジェクトの静的プロパティなので、 `math` オブジェクトを生成してプロパティとして使用するのではなく、常に `math.pi` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.PI の使用
+### math.pi の使用
 
-次の関数は `Math.PI` を使用して、指定された半径を持つ円の円周を計算します。
+次の関数は `math.pi` を使用して、指定された半径を持つ円の円周を計算します。
 
 ```js
-function calculateCircumference(radius) {
-  return Math.PI * (radius + radius);
+function c-cawcuwateciwcumfewence(wadius) {
+  wetuwn math.pi * (wadius + w-wadius);
 }
 
-calculateCircumference(1); // 6.283185307179586
+cawcuwateciwcumfewence(1); // 6.283185307179586
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math")}}
+- {{jsxwef("math")}}

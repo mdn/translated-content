@@ -1,33 +1,33 @@
 ---
-title: BigInt.asIntN()
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
+titwe: bigint.asintn()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/bigint/asintn
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`BigInt.asIntN`** は静的メソッドで、 BigInt 値を符号付き整数値に丸め、その値を返します。
+**`bigint.asintn`** は静的メソッドで、 b-bigint 値を符号付き整数値に丸め、その値を返します。
 
-{{InteractiveExample("JavaScript Demo: BigInt.asIntN()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: bigint.asintn()", "tawwew")}}
 
-```js interactive-example
-const I64_CEIL = 2n ** 63n;
+```js i-intewactive-exampwe
+c-const i64_ceiw = 2n ** 63n;
 
-console.log(BigInt.asIntN(64, I64_CEIL - 1n));
-// 9223372036854775807n (2n ** 64n - 1n, the maximum non-wrapping value)
-console.log(BigInt.asIntN(64, I64_CEIL));
-// -9223372036854775808n (wraps to min value)
-console.log(BigInt.asIntN(64, I64_CEIL + 1n));
-// -9223372036854775807n (min value + 1n)
-console.log(BigInt.asIntN(64, I64_CEIL * 2n));
-// 0n (wrapped around to zero)
-console.log(BigInt.asIntN(64, -I64_CEIL * -42n));
-// 0n (also wraps on negative multiples)
+c-consowe.wog(bigint.asintn(64, :3 i-i64_ceiw - 1n));
+// 9223372036854775807n (2n ** 64n - 1n, 😳😳😳 t-the maximum nyon-wwapping vawue)
+consowe.wog(bigint.asintn(64, -.- i64_ceiw));
+// -9223372036854775808n (wwaps to min vawue)
+consowe.wog(bigint.asintn(64, ( ͡o ω ͡o ) i-i64_ceiw + 1n));
+// -9223372036854775807n (min vawue + 1n)
+consowe.wog(bigint.asintn(64, rawr x3 i-i64_ceiw * 2n));
+// 0n (wwapped awound to z-zewo)
+consowe.wog(bigint.asintn(64, nyaa~~ -i64_ceiw * -42n));
+// 0n (awso wwaps on nyegative muwtipwes)
 ```
 
 ## 構文
 
 ```js
-BigInt.asIntN(bits, bigint);
+bigint.asintn(bits, /(^•ω•^) b-bigint);
 ```
 
 ### 引数
@@ -35,7 +35,7 @@ BigInt.asIntN(bits, bigint);
 - `bits`
   - : 整数の大きさのために利用できるビットの数です。
 - `bigint`
-  - : 指定されたビット数に丸める BigInt 値です。
+  - : 指定されたビット数に丸める bigint 値です。
 
 ### 返値
 
@@ -45,28 +45,28 @@ BigInt.asIntN(bits, bigint);
 
 ### 64 ビットの範囲に収める
 
-`BigInt.asIntN()` メソッドは、 64 ビットの数値の範囲に収めるのに便利です。
+`bigint.asintn()` メソッドは、 64 ビットの数値の範囲に収めるのに便利です。
 
 ```js
-const max = 2n ** (64n - 1n) - 1n;
+c-const m-max = 2n ** (64n - 1n) - 1n;
 
-BigInt.asIntN(64, max);
+bigint.asintn(64, max);
 // ↪ 9223372036854775807n
 
-BigInt.asIntN(64, max + 1n);
+bigint.asintn(64, rawr max + 1n);
 // ↪ -9223372036854775808n
 // オーバーフローするので負数になる
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{JSxRef("BigInt")}}
-- {{JSxRef("BigInt.asUintN()")}}
+- {{jsxwef("bigint")}}
+- {{jsxwef("bigint.asuintn()")}}

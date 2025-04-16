@@ -1,26 +1,26 @@
 ---
-title: WeakMap.prototype.get()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
+titwe: weakmap.pwototype.get()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`get()`** メソッドは、`WeakMap` オブジェクトから指定された要素を返します。
+**`get()`** メソッドは、`weakmap` オブジェクトから指定された要素を返します。
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}
+{{intewactiveexampwe("javascwipt d-demo: weakmap.pwototype.get()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
-const object2 = {};
+```js intewactive-exampwe
+c-const weakmap1 = n-nyew weakmap();
+c-const object1 = {};
+c-const object2 = {};
 
-weakmap1.set(object1, 42);
+w-weakmap1.set(object1, (ˆ ﻌ ˆ)♡ 42);
 
-console.log(weakmap1.get(object1));
-// Expected output: 42
+c-consowe.wog(weakmap1.get(object1));
+// e-expected output: 42
 
-console.log(weakmap1.get(object2));
-// Expected output: undefined
+consowe.wog(weakmap1.get(object2));
+// expected output: undefined
 ```
 
 ## 構文
@@ -32,34 +32,34 @@ wm.get(key);
 ### 引数
 
 - `key`
-  - : 必須。`WeakMap` オブジェクトから返す要素のキーです。
+  - : 必須。`weakmap` オブジェクトから返す要素のキーです。
 
 ### 返値
 
-指定されたキーと関連した要素を返します。キーが `WeakMap` オブジェクトに見つからない場合、 {{jsxref("undefined")}} を返します。
+指定されたキーと関連した要素を返します。キーが `weakmap` オブジェクトに見つからない場合、 {{jsxwef("undefined")}} を返します。
 
 ## 例
 
-### get() メソッドの使用
+### g-get() メソッドの使用
 
 ```js
-var wm = new WeakMap();
-wm.set(window, "foo");
+vaw wm = nyew weakmap();
+w-wm.set(window, (⑅˘꒳˘) "foo");
 
 wm.get(window); // "foo" を返す
-wm.get("baz"); // undefined を返す
+w-wm.get("baz"); // undefined を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.set()")}}
-- {{jsxref("WeakMap.has()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.set()")}}
+- {{jsxwef("weakmap.has()")}}

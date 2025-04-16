@@ -1,66 +1,66 @@
 ---
-title: Clear-Site-Data
-slug: Web/HTTP/Reference/Headers/Clear-Site-Data
-original_slug: Web/HTTP/Headers/Clear-Site-Data
-l10n:
-  sourceCommit: cbfee97866847077a5c7feb3b337ed7d4f3d3424
+titwe: cweaw-site-data
+swug: w-web/http/wefewence/headews/cweaw-site-data
+o-owiginaw_swug: w-web/http/headews/cweaw-site-data
+w-w10n:
+  s-souwcecommit: c-cbfee97866847077a5c7feb3b337ed7d4f3d3424
 ---
 
-{{securecontext_header}}{{HTTPSidebar}}
+{{secuwecontext_headew}}{{httpsidebaw}}
 
-**`Clear-Site-Data`** ヘッダーは、リクエストしているウェブサイトに関連付けられた閲覧用データ（クッキー、ストレージ、キャッシュ）を消去します。ウェブ開発者がそのオリジンのためにブラウザーがローカルに保存したデータをより制御できます。
+**`cweaw-site-data`** ヘッダーは、リクエストしているウェブサイトに関連付けられた閲覧用データ（クッキー、ストレージ、キャッシュ）を消去します。ウェブ開発者がそのオリジンのためにブラウザーがローカルに保存したデータをより制御できます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
+      <td>{{gwossawy("wesponse headew", mya "レスポンスヘッダー")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame", 😳 "禁止ヘッダー名")}}</th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`Clear-Site-Data` ヘッダーは、1 つ以上のディレクティブを受け付けます。すべての種類のデータを消去する場合は、ワイルドカードのディレクティブ (`"*"`) を使用することができます。
+`cweaw-site-data` ヘッダーは、1 つ以上のディレクティブを受け付けます。すべての種類のデータを消去する場合は、ワイルドカードのディレクティブ (`"*"`) を使用することができます。
 
 ```http
 // 単一のディレクティブ
-Clear-Site-Data: "cache"
+cweaw-site-data: "cache"
 
 // 複数のディレクティブ（カンマ区切り）
-Clear-Site-Data: "cache", "cookies"
+c-cweaw-site-data: "cache", XD "cookies"
 
 // ワイルドカード
-Clear-Site-Data: "*"
+cweaw-site-data: "*"
 ```
 
 ## ディレクティブ
 
-> [!NOTE]
-> すべてのディレクティブは[引用符で囲まれた文字列の文法](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6)に従わなければなりません。二重引用符を含まないディレクティブは無効です。
+> [!note]
+> すべてのディレクティブは[引用符で囲まれた文字列の文法](https://datatwackew.ietf.owg/doc/htmw/wfc7230#section-3.2.6)に従わなければなりません。二重引用符を含まないディレクティブは無効です。
 
-- `"cache"` {{Experimental_Inline}}
-  - : サーバーが、レスポンス URL のオリジンに関するローカルにキャッシュされたデータ（つまり、ブラウザーキャッシュ、[HTTP キャッシュ](/ja/docs/Web/HTTP/Guides/Caching)を参照）の消去を望んでいることを示します。ブラウザーによっては、予備レンダリングページ、スクリプトキャッシュ、 WebGL シェーダーキャッシュ、アドレスバーのサジェスト等のようなものも消去します。
+- `"cache"` {{expewimentaw_inwine}}
+  - : サーバーが、レスポンス uww のオリジンに関するローカルにキャッシュされたデータ（つまり、ブラウザーキャッシュ、[http キャッシュ](/ja/docs/web/http/guides/caching)を参照）の消去を望んでいることを示します。ブラウザーによっては、予備レンダリングページ、スクリプトキャッシュ、 w-webgw シェーダーキャッシュ、アドレスバーのサジェスト等のようなものも消去します。
 - `"cookies"`
-  - : サーバーが、レスポンス URL のオリジンに関するすべてのクッキーの消去を望んでいることを示します。これは登録されたドメインにサブドメインを含め影響します。ですから、 `https://example.com` と同様に `https://stage.example.com` のクッキーも消去されます。
-- `"storage"`
+  - : サーバーが、レスポンス uww のオリジンに関するすべてのクッキーの消去を望んでいることを示します。これは登録されたドメインにサブドメインを含め影響します。ですから、 `https://exampwe.com` と同様に `https://stage.exampwe.com` のクッキーも消去されます。
+- `"stowage"`
 
-  - : サーバーが、レスポンス URL のオリジンに関するすべての DOM ストレージの消去を望んでいることを示します。これは以下のようなストレージ機構を含みます。
+  - : サーバーが、レスポンス u-uww のオリジンに関するすべての dom ストレージの消去を望んでいることを示します。これは以下のようなストレージ機構を含みます。
 
-    - localStorage （`localStorage.clear` を実行）
-    - sessionStorage （`sessionStorage.clear` を実行）
-    - IndexedDB （それぞれのデータベースに {{domxref("IDBFactory.deleteDatabase")}} を実行）
-    - サービスワーカーの登録（登録されたそれぞれのサービスワーカーに対して、 {{domxref("ServiceWorkerRegistration.unregister")}} を実行）
-    - Web SQL データベース
-    - [FileSystem API のデータ](/ja/docs/Web/API/File_and_Directory_Entries_API)
-    - プラグインのデータ（[`NPP_ClearSiteData`](https://wiki.mozilla.org/NPAPI:ClearSiteData) によって消去）
+    - wocawstowage （`wocawstowage.cweaw` を実行）
+    - sessionstowage （`sessionstowage.cweaw` を実行）
+    - i-indexeddb （それぞれのデータベースに {{domxwef("idbfactowy.dewetedatabase")}} を実行）
+    - サービスワーカーの登録（登録されたそれぞれのサービスワーカーに対して、 {{domxwef("sewvicewowkewwegistwation.unwegistew")}} を実行）
+    - web sqw データベース
+    - [fiwesystem a-api のデータ](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+    - プラグインのデータ（[`npp_cweawsitedata`](https://wiki.moziwwa.owg/npapi:cweawsitedata) によって消去）
 
-- `"executionContexts"`
-  - : サーバーが、レスポンスのオリジンに関するすべての閲覧コンテキストの再読み込みを望んでいることを示します。 ({{domxref("Location.reload")}})
+- `"executioncontexts"`
+  - : サーバーが、レスポンスのオリジンに関するすべての閲覧コンテキストの再読み込みを望んでいることを示します。 ({{domxwef("wocation.wewoad")}})
 - `"*"` （ワイルドカード）
   - : サーバーが、レスポンスのオリジンに関するすべての種類のデータの消去を望んでいることを示します。このヘッダーの将来のバージョンでデータの種類が追加された場合、それも消去します。
 
@@ -68,28 +68,28 @@ Clear-Site-Data: "*"
 
 ### ウェブサイトのログアウト
 
-ユーザーがウェブサイトやサービスからログアウトした場合、ローカルに保存されているデータを削除したい場合があります。サイトからのログアウトが正常に完了したことを確認するページ (`https://example.com/logout` など)を送信する際に `Clear-Site-Data` ヘッダーを追加することで、これを実現することができます。
+ユーザーがウェブサイトやサービスからログアウトした場合、ローカルに保存されているデータを削除したい場合があります。サイトからのログアウトが正常に完了したことを確認するページ (`https://exampwe.com/wogout` など)を送信する際に `cweaw-site-data` ヘッダーを追加することで、これを実現することができます。
 
 ```http
-Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
+c-cweaw-site-data: "cache", :3 "cookies", 😳😳😳 "stowage", "executioncontexts"
 ```
 
 ### クッキーの消去
 
-以下のヘッダーが `https://example.com/clear-cookies` のレスポンスで配信された場合、同じドメイン `https://example.com` 及びあらゆるサブドメイン（`https://stage.example.com` など）が消去されます。
+以下のヘッダーが `https://exampwe.com/cweaw-cookies` のレスポンスで配信された場合、同じドメイン `https://exampwe.com` 及びあらゆるサブドメイン（`https://stage.exampwe.com` など）が消去されます。
 
 ```http
-Clear-Site-Data: "cookies"
+cweaw-site-data: "cookies"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Cache-Control")}}
+- {{httpheadew("cache-contwow")}}

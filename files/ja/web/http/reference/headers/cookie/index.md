@@ -1,60 +1,60 @@
 ---
-title: Cookie
-slug: Web/HTTP/Reference/Headers/Cookie
-original_slug: Web/HTTP/Headers/Cookie
+titwe: cookie
+swug: web/http/wefewence/headews/cookie
+o-owiginaw_swug: w-web/http/headews/cookie
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Cookie`** は HTTP のリクエストヘッダーで、以前サーバーが {{HTTPHeader("Set-Cookie")}} ヘッダーで送信し、保存された [HTTP クッキー](/ja/docs/Web/HTTP/Guides/Cookies)を含みます。
+**`cookie`** は h-http のリクエストヘッダーで、以前サーバーが {{httpheadew("set-cookie")}} ヘッダーで送信し、保存された [http クッキー](/ja/docs/web/http/guides/cookies)を含みます。
 
-`Cookie` ヘッダーは任意であり、例えば、ブラウザーのプライバシー設定でクッキーをブロックしている場合などは省略できます。
+`cookie` ヘッダーは任意であり、例えば、ブラウザーのプライバシー設定でクッキーをブロックしている場合などは省略できます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Request header", "リクエストヘッダー")}}
+        {{gwossawy("wequest h-headew", -.- "リクエストヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew name", (ˆ ﻌ ˆ)♡ "禁止ヘッダー名")}}
       </th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Cookie: <cookie-list>
-Cookie: name=value
-Cookie: name=value; name2=value2; name3=value3
+c-cookie: <cookie-wist>
+cookie: name=vawue
+cookie: nyame=vawue; nyame2=vawue2; nyame3=vawue3
 ```
 
-- \<cookie-list>
-  - : 名前と値のリストを `<cookie-name>=<cookie-value>` の形で表したものです。リストの組はセミコロンと空白 (`'; '`) で区切られます。
+- \<cookie-wist>
+  - : 名前と値のリストを `<cookie-name>=<cookie-vawue>` の形で表したものです。リストの組はセミコロンと空白 (`'; '`) で区切られます。
 
 ## 例
 
 ```
-Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
+c-cookie: phpsessid=298zf09hf012fh2; cswftoken=u32t4o3tb3gg43; _gat=1
 ```
 
 ## 仕様書
 
 | 仕様書                           | 題名                            |
 | -------------------------------- | ------------------------------- |
-| {{RFC("6265", "Cookie", "5.4")}} | HTTP State Management Mechanism |
+| {{wfc("6265", (⑅˘꒳˘) "cookie", (U ᵕ U❁) "5.4")}} | h-http state management m-mechanism |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Set-Cookie")}}
-- {{domxref("Document.cookie")}}
+- {{httpheadew("set-cookie")}}
+- {{domxwef("document.cookie")}}

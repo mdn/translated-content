@@ -1,49 +1,49 @@
 ---
-title: <mphantom>
-slug: Web/MathML/Reference/Element/mphantom
-original_slug: Web/MathML/Element/mphantom
+titwe: <mphantom>
+swug: web/mathmw/wefewence/ewement/mphantom
+o-owiginaw_swug: w-web/mathmw/ewement/mphantom
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-MathML の `<mphantom>` 要素は、表示上は不可視だが一定の広がり（高さ、幅、ベースライン位置）を維持した要素です。
+m-mathmw の `<mphantom>` 要素は、表示上は不可視だが一定の広がり（高さ、幅、ベースライン位置）を維持した要素です。
 
 ## 属性
 
-- class, id, style
-  - : Provided for use with [stylesheets](/ja/docs/Web/CSS).
-- mathbackground
-  - : 背景色。`#rgb`, `#rrggbb` および [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords) を用いることができる。
+- c-cwass, (ˆ ﻌ ˆ)♡ i-id, stywe
+  - : p-pwovided fow use w-with [stywesheets](/ja/docs/web/css). (⑅˘꒳˘)
+- m-mathbackgwound
+  - : 背景色。`#wgb`, (U ᵕ U❁) `#wwggbb` および [htmw cowow nyames](/ja/docs/web/css/cowow_vawue#cowow_keywowds) を用いることができる。
 
 ## 例
 
-Sample rendering: ![x+ z](mphantom.png)
+sampwe wendewing: ![x+ z](mphantom.png)
 
-Rendering in your browser: <math><mrow><mi>x </mi><mo>+ </mo><mphantom><mi>y </mi><mo>+ </mo></mphantom><mi>z</mi></mrow></math>
+w-wendewing in youw bwowsew: <math><mwow><mi>x </mi><mo>+ </mo><mphantom><mi>y </mi><mo>+ </mo></mphantom><mi>z</mi></mwow></math>
 
-```html
+```htmw
 <math>
-  <mrow>
+  <mwow>
     <mi> x </mi>
     <mo> + </mo>
     <mphantom>
-      <mi> y </mi>
+      <mi> y-y </mi>
       <mo> + </mo>
     </mphantom>
     <mi> z </mi>
-  </mrow>
+  </mwow>
 </math>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーごとの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ MathMLElement("mspace") }}
-- {{ MathMLElement("mpadded") }}
+- {{ m-mathmwewement("mspace") }}
+- {{ mathmwewement("mpadded") }}

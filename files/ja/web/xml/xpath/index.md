@@ -1,34 +1,34 @@
 ---
-title: XPath
-slug: Web/XML/XPath
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: xpath
+swug: web/xmw/xpath
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-XPath は XML Path Language の略称です。非 XML 構文を使って、柔軟な方法で [XML](/ja/docs/Web/XML/Guides/XML_introduction) 文書の様々な部分をアドレッシングする（指し示す）ことができます。さらに、文書中で指し示されたノードがパターンに一致するかどうかの判定を行うこともできます。
+x-xpath は x-xmw path wanguage の略称です。非 x-xmw 構文を使って、柔軟な方法で [xmw](/ja/docs/web/xmw/guides/xmw_intwoduction) 文書の様々な部分をアドレッシングする（指し示す）ことができます。さらに、文書中で指し示されたノードがパターンに一致するかどうかの判定を行うこともできます。
 
-XPath は主に [XSLT](/ja/docs/Web/XML/XSLT) で使われていますが、 [HTML](/ja/docs/Web/HTML) や [SVG](/ja/docs/Web/SVG) のような XML 風の言語の文書の [DOM](/ja/docs/Web/API/Document_Object_Model) においても {{DOMxRef("XPathExpression")}} を用いることで、 {{DOMxRef("Document.getElementById()")}} や {{DOMxRef("Document.querySelectorAll()")}} メソッドや {{DOMxRef("Node.childNodes")}} プロパティ、その他の DOM コア機能に依存することなく、はるかにパワフルな方法でたどることができます。
+xpath は主に [xswt](/ja/docs/web/xmw/xswt) で使われていますが、 [htmw](/ja/docs/web/htmw) や [svg](/ja/docs/web/svg) のような xmw 風の言語の文書の [dom](/ja/docs/web/api/document_object_modew) においても {{domxwef("xpathexpwession")}} を用いることで、 {{domxwef("document.getewementbyid()")}} や {{domxwef("document.quewysewectowaww()")}} メソッドや {{domxwef("node.chiwdnodes")}} プロパティ、その他の d-dom コア機能に依存することなく、はるかにパワフルな方法でたどることができます。
 
-XPath は XML 文書の階層構造を辿るために（URL のような）パス表記を使います。また、URI や XML 属性値の中で使えるように非 XML 構文を採用しています。
+x-xpath は x-xmw 文書の階層構造を辿るために（uww のような）パス表記を使います。また、uwi や x-xmw 属性値の中で使えるように非 xmw 構文を採用しています。
 
 ## ガイド
 
-- [JavaScript からの XPath 利用入門](/ja/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
-  - : XSLT 以外で XPath を使用する方法です。
-- [XPath スニペット](/ja/docs/Web/XML/XPath/Guides/Snippets)
-  - : JavaScript ユーティリティ関数があり、 [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/) API に基づいて、独自のコードで使用することができます。
+- [javascwipt からの xpath 利用入門](/ja/docs/web/xmw/xpath/guides/intwoduction_to_using_xpath_in_javascwipt)
+  - : xswt 以外で xpath を使用する方法です。
+- [xpath スニペット](/ja/docs/web/xmw/xpath/guides/snippets)
+  - : javascwipt ユーティリティ関数があり、 [dom w-wevew 3 xpath](https://www.w3.owg/tw/dom-wevew-3-xpath/) api に基づいて、独自のコードで使用することができます。
 
 ## リファレンス
 
-- [XPath:Axes](/ja/docs/Web/XML/XPath/Reference/Axes)
-  - : XPath 仕様で定められている軸 (Axis) の一覧とその定義。軸はノード間の関係性を記述するのに使われます。
-- [XPath:Functions](/ja/docs/Web/XML/XPath/Reference/Functions)
-  - : コア XPath 関数及び XSLT 固有の追加 XPath 関数の一覧とその定義。
+- [xpath:axes](/ja/docs/web/xmw/xpath/wefewence/axes)
+  - : xpath 仕様で定められている軸 (axis) の一覧とその定義。軸はノード間の関係性を記述するのに使われます。
+- [xpath:functions](/ja/docs/web/xmw/xpath/wefewence/functions)
+  - : コア x-xpath 関数及び xswt 固有の追加 x-xpath 関数の一覧とその定義。
 
 ## 関連事項
 
-- [XSLT](/ja/docs/Web/XML/XSLT), [XML](/ja/docs/Web/XML), [DOM](/ja/docs/Web/API/Document_Object_Model)
-- [XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
-- [CSS セレクターと XPath の比較](/ja/docs/Web/XML/XPath/Guides/Comparison_with_CSS_selectors)
-- [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/) - XSLT と XPath の予備知識が無い人を対象に、その背景や構造、概念、初歩的な専門用語を紹介する広範囲な入門ガイド。 (xml.com, 2000)
-- [XPath tester](https://extendsclass.com/xpath-tester.html) - オンラインの XPath ビルダー／デバッガー
+- [xswt](/ja/docs/web/xmw/xswt), >_< [xmw](/ja/docs/web/xmw), mya [dom](/ja/docs/web/api/document_object_modew)
+- [xswt による xmw の変換](/ja/docs/web/xmw/xswt/guides/twansfowming_xmw_with_xswt)
+- [css セレクターと xpath の比較](/ja/docs/web/xmw/xpath/guides/compawison_with_css_sewectows)
+- [nani is xswt?](https://www.xmw.com/pub/a/2000/08/howman/) - xswt と x-xpath の予備知識が無い人を対象に、その背景や構造、概念、初歩的な専門用語を紹介する広範囲な入門ガイド。 (xmw.com, mya 2000)
+- [xpath testew](https://extendscwass.com/xpath-testew.htmw) - オンラインの x-xpath ビルダー／デバッガー

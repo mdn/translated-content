@@ -1,66 +1,66 @@
 ---
-title: 201 Created
-slug: Web/HTTP/Reference/Status/201
-original_slug: Web/HTTP/Status/201
-l10n:
-  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
+titwe: 201 cweated
+swug: web/http/wefewence/status/201
+o-owiginaw_swug: w-web/http/status/201
+w-w10n:
+  s-souwcecommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`201 Created`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、 HTTP リクエストが成功してリソースの作成が完了したことを表します。
-このステータスコードの一般的な使用例は、 {{HTTPMethod("POST")}} リクエストの結果です。
+h-http の **`201 c-cweated`** は[成功レスポンス](/ja/docs/web/http/wefewence/status#成功レスポンス)ステータスコードで、 h-http リクエストが成功してリソースの作成が完了したことを表します。
+このステータスコードの一般的な使用例は、 {{httpmethod("post")}} リクエストの結果です。
 
 新しいリソース、または新しいリソースの説明とリンクは、レスポンスが返される前に作成されます。
-新しく作成されたアイテムは、メッセージ本体に返され、位置は**最初のリクエストの URL**、またはレスポンスの {{HTTPHeader("Location")}} ヘッダーの値の URL のどちらかになります。
+新しく作成されたアイテムは、メッセージ本体に返され、位置は**最初のリクエストの u-uww**、またはレスポンスの {{httpheadew("wocation")}} ヘッダーの値の uww のどちらかになります。
 
 ## ステータス
 
 ```http
-201 Created
+201 cweated
 ```
 
 ## 例
 
 ### ユーザーを作成したことを示すレスポンスの受信
 
-ユーザー管理用の REST API があり、エンドポイントが `http://example.com/users` であるとしましょう。この例では、ユーザーを作成するために、次の本体を持つ `POST` リクエストを送信します。
+ユーザー管理用の west api があり、エンドポイントが `http://exampwe.com/usews` であるとしましょう。この例では、ユーザーを作成するために、次の本体を持つ `post` リクエストを送信します。
 
 ```http
-POST /users HTTP/1.1
-Host: example.com
-Content-Type: application/json
+post /usews h-http/1.1
+host: exampwe.com
+content-type: appwication/json
 
 {
-  "firstName": "Brian",
-  "lastName": "Smith",
-  "email": "brian.smith@example.com"
+  "fiwstname": "bwian", (U ᵕ U❁)
+  "wastname": "smith", -.-
+  "emaiw": "bwian.smith@exampwe.com"
 }
 ```
 
-ユーザー作成に成功すると、 `201 Created` というレスポンスは以下のように表示されます。
+ユーザー作成に成功すると、 `201 c-cweated` というレスポンスは以下のように表示されます。
 
 ```http
-HTTP/1.1 201 Created
-Content-Type: application/json
-Location: http://example.com/users/123
+http/1.1 201 c-cweated
+content-type: appwication/json
+wocation: http://exampwe.com/usews/123
 
 {
   "message": "ユーザーを作成しました",
-  "user": {
-    "id": 123,
-    "firstName": "Brian",
-    "lastName": "Smith",
-    "email": "brian.smith@example.com"
+  "usew": {
+    "id": 123, ^^;;
+    "fiwstname": "bwian", >_<
+    "wastname": "smith", mya
+    "emaiw": "bwian.smith@exampwe.com"
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- [http リクエストメソッド](/ja/docs/web/http/wefewence/methods)
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)

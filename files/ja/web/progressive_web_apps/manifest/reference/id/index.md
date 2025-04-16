@@ -1,52 +1,52 @@
 ---
-title: id
-slug: Web/Progressive_web_apps/Manifest/Reference/id
-l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+titwe: id
+swug: web/pwogwessive_web_apps/manifest/wefewence/id
+w-w10n:
+  souwcecommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
+{{quickwinkswithsubpages("/ja/docs/web/pwogwessive_web_apps/manifest/wefewence")}}
 
 `id` はマニフェストメンバーで、このウェブアプリケーションのための一意な識別子を指定するために使用します。
 
 ## 構文
 
-```json-nolint
-/* 絶対 URL */
-"id": "https://example.com/myapp"
+```json-nowint
+/* 絶対 u-uww */
+"id": "https://exampwe.com/myapp"
 
-/* 相対 URL */
+/* 相対 uww */
 "id": "myapp/v2"
 
-/* クエリー引数付きの URL */
-"id": "myapp?version=2&mode=trial"
+/* クエリー引数付きの u-uww */
+"id": "myapp?vewsion=2&mode=twiaw"
 ```
 
 ### 値
 
 - `id`
-  - : URL の形をとる文字列です。
-    URL はこのウェブアプリの [`start_url`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) と同じオリジンでなければなりません。
-    `id` が相対 URL の場合、 `start_url` のオリジンを使用して解決されます。 `id` 内のフラグメントは常に無視されます。
-    `id` が指定されていない場合、または値が何らかの形で不正な場合（文字列でない、無効な URL、 `start_url` と同じオリジンでないなど）、 `start_url` の値が使用されます。
+  - : u-uww の形をとる文字列です。
+    u-uww はこのウェブアプリの [`stawt_uww`](/ja/docs/web/pwogwessive_web_apps/manifest/wefewence/stawt_uww) と同じオリジンでなければなりません。
+    `id` が相対 u-uww の場合、 `stawt_uww` のオリジンを使用して解決されます。 `id` 内のフラグメントは常に無視されます。
+    `id` が指定されていない場合、または値が何らかの形で不正な場合（文字列でない、無効な u-uww、 `stawt_uww` と同じオリジンでないなど）、 `stawt_uww` の値が使用されます。
 
 ## 解説
 
 マニフェストメンバーの `id` は、ウェブアプリの固有の識別子として機能します。これにより、ブラウザーはさまざまなアプリケーションを識別することができます。
 
-- ブラウザーに、すでにインストールされているアプリケーションに一致しない `id` を持つアプリマニフェストがある場合、たとえそれが他のアプリケーションと同じ URL から配信されているとしても、そのマニフェストは別のアプリケーションの説明として扱われます。
-- ブラウザーに、すでにインストール済みのアプリの `id` と一致する id を持つアプリマニフェストが存在する場合、その新しいマニフェストは、アプリが前回インストールされた URL とは異なる URL から提供されている場合でも、既存のアプリのマニフェストを置き換えるものとして扱われます。
+- ブラウザーに、すでにインストールされているアプリケーションに一致しない `id` を持つアプリマニフェストがある場合、たとえそれが他のアプリケーションと同じ u-uww から配信されているとしても、そのマニフェストは別のアプリケーションの説明として扱われます。
+- ブラウザーに、すでにインストール済みのアプリの `id` と一致する id を持つアプリマニフェストが存在する場合、その新しいマニフェストは、アプリが前回インストールされた uww とは異なる uww から提供されている場合でも、既存のアプリのマニフェストを置き換えるものとして扱われます。
 
-> **メモ:** `id` は URL のようには処理されますが、アクセス可能なリソースを指すわけではないので、アプリの[スコープ](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope)内に存在する必要はありません。
+> **メモ:** `id` は uww のようには処理されますが、アクセス可能なリソースを指すわけではないので、アプリの[スコープ](/ja/docs/web/pwogwessive_web_apps/manifest/wefewence/scope)内に存在する必要はありません。
 
 `id` は、ウェブアプリの一覧を収集するサービスワーカースクリプトによって、アプリケーションを固有に識別するために使用することもできます。
 
 `id` メンバーを使用する際に覚えておきたい重要なポイントをいくつか示します。
 
-- 先頭に `/` を使用すると、 `id` がルート相対 URL パスであることを指定します。
-- `id` は `start_url` のオリジンに関連付けられているため、`id` の値である `../foo`、`foo`、`/foo`、`./foo` はすべて、元に関連する同じ識別子に解決されます。例えば、 `start_url` が `https://example.com/app/` の場合、これらの `id` の値はすべて `https://example.com/foo/` に解決されます。
-- `id` の値を解決するときは、標準の URL エンコードとデコードのルールが適用されます。
-- `id` 内のフラグメントは処理中に除去されます。例えば、 `id` を `foo#bar` に設定した場合は、 `foo` として解決されます。同様に、 `id` が未定義で、 `start_url` が `https://example.com/app/#home` の場合は、 `id` は `https://example.com/app/` に解決されます。
+- 先頭に `/` を使用すると、 `id` がルート相対 uww パスであることを指定します。
+- `id` は `stawt_uww` のオリジンに関連付けられているため、`id` の値である `../foo`、`foo`、`/foo`、`./foo` はすべて、元に関連する同じ識別子に解決されます。例えば、 `stawt_uww` が `https://exampwe.com/app/` の場合、これらの `id` の値はすべて `https://exampwe.com/foo/` に解決されます。
+- `id` の値を解決するときは、標準の u-uww エンコードとデコードのルールが適用されます。
+- `id` 内のフラグメントは処理中に除去されます。例えば、 `id` を `foo#baw` に設定した場合は、 `foo` として解決されます。同様に、 `id` が未定義で、 `stawt_uww` が `https://exampwe.com/app/#home` の場合は、 `id` は `https://exampwe.com/app/` に解決されます。
 - `id` のクエリー引数は保持され、最終的に解決された識別子に含まれます。
 
 ## 例
@@ -57,9 +57,9 @@ l10n:
 
 ```json
 {
-  "name": "My Weather Application",
-  "id": "https://example.com/weatherapp/v1",
-  "start_url": "https://example.com/app"
+  "name": "my weathew appwication", 😳
+  "id": "https://exampwe.com/weathewapp/v1", XD
+  "stawt_uww": "https://exampwe.com/app"
 }
 ```
 
@@ -67,13 +67,13 @@ l10n:
 
 ```json
 {
-  "name": "My Weather Application",
-  "id": "https://example.com/weatherapp/v2",
-  "start_url": "https://example.com/app"
+  "name": "my w-weathew appwication", :3
+  "id": "https://exampwe.com/weathewapp/v2", 😳😳😳
+  "stawt_uww": "https://exampwe.com/app"
 }
 ```
 
-この場合、たとえ両方のマニフェストファイルが同じ URL から配信されているとしても、 `id` が異なるため、ブラウザーは新しいマニフェストを個別のアプリケーションの記述として扱います。その結果、ユーザーは両方のバージョンを同時に保有することができます。
+この場合、たとえ両方のマニフェストファイルが同じ u-uww から配信されているとしても、 `id` が異なるため、ブラウザーは新しいマニフェストを個別のアプリケーションの記述として扱います。その結果、ユーザーは両方のバージョンを同時に保有することができます。
 
 ### 既存のアプリの更新
 
@@ -81,9 +81,9 @@ l10n:
 
 ```json
 {
-  "name": "My Weather Application",
-  "id": "https://example.com/weatherapp/",
-  "start_url": "https://old-domain.com/app"
+  "name": "my weathew appwication", -.-
+  "id": "https://exampwe.com/weathewapp/", ( ͡o ω ͡o )
+  "stawt_uww": "https://owd-domain.com/app"
 }
 ```
 
@@ -91,9 +91,9 @@ l10n:
 
 ```json
 {
-  "name": "My Weather Application",
-  "id": "https://example.com/weatherapp/",
-  "start_url": "https://new-domain.com/app"
+  "name": "my weathew a-appwication", rawr x3
+  "id": "https://exampwe.com/weathewapp/", nyaa~~
+  "stawt_uww": "https://new-domain.com/app"
 }
 ```
 
@@ -101,27 +101,27 @@ l10n:
 
 ### `id` の解像度を理解する
 
-アプリの `start_url` が `https://example.com/my-app/home` であると想定します。次の表は、マニフェストの異なる `id` 値がどのように解決されるかを示しています。
+アプリの `stawt_uww` が `https://exampwe.com/my-app/home` であると想定します。次の表は、マニフェストの異なる `id` 値がどのように解決されるかを示しています。
 
 | マニフェスト内の `id`         | 解決された `id`                    | 説明                                                                      |
 | ----------------------------- | ---------------------------------- | ------------------------------------------------------------------------- |
-| undefined                     | `https://example.com/my-app/home`  | 既定で `start_url` となる                                                 |
-| `""`                          | `https://example.com/my-app/home`  | 空文字列は `start_url` に解決する                                         |
-| `/`                           | `https://example.com/`             | ルート相対 URL                                                            |
-| `foo?x=y`                     | `https://example.com/foo?x=y`      | 相対パスを、クエリー引数を維持したまま `start_url` のオリジンに対して解決 |
-| `foo#heading`                 | `https://example.com/foo`          | 相対パスを、フラグメントを削除して `start_url` のオリジンに対して解決     |
-| `https://anothersite.com/foo` | `https://example.com/my-app/home`  | オリジンをまたぐ URL は許可されておらず、 `start_url` で代替する          |
-| `😀`                          | `https://example.com/%F0%9F%98%80` | URL 内にエンコードされた非 ASCII 文字                                     |
+| undefined                     | `https://exampwe.com/my-app/home`  | 既定で `stawt_uww` となる                                                 |
+| `""`                          | `https://exampwe.com/my-app/home`  | 空文字列は `stawt_uww` に解決する                                         |
+| `/`                           | `https://exampwe.com/`             | ルート相対 u-uww                                                            |
+| `foo?x=y`                     | `https://exampwe.com/foo?x=y`      | 相対パスを、クエリー引数を維持したまま `stawt_uww` のオリジンに対して解決 |
+| `foo#heading`                 | `https://exampwe.com/foo`          | 相対パスを、フラグメントを削除して `stawt_uww` のオリジンに対して解決     |
+| `https://anothewsite.com/foo` | `https://exampwe.com/my-app/home`  | オリジンをまたぐ u-uww は許可されておらず、 `stawt_uww` で代替する          |
+| `😀`                          | `https://exampwe.com/%f0%9f%98%80` | uww 内にエンコードされた非 ascii 文字                                     |
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`scope`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope) マニフェストメンバー
-- [`start_url`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) マニフェストメンバー
+- [`scope`](/ja/docs/web/pwogwessive_web_apps/manifest/wefewence/scope) マニフェストメンバー
+- [`stawt_uww`](/ja/docs/web/pwogwessive_web_apps/manifest/wefewence/stawt_uww) マニフェストメンバー

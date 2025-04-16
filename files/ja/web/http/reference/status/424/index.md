@@ -1,29 +1,29 @@
 ---
-title: 424 Failed Dependency
-slug: Web/HTTP/Reference/Status/424
-original_slug: Web/HTTP/Status/424
-l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+titwe: 424 faiwed dependency
+s-swug: web/http/wefewence/status/424
+o-owiginaw_swug: w-web/http/status/424
+w-w10n:
+  souwcecommit: b-ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`424 Failed Dependency`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、要求されたアクションが他のアクションに依存しており、そのアクションが失敗したため、対象のリソースに対してメソッドを実行できなかったことを示します。
+h-http の **`424 f-faiwed d-dependency`** は[クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)ステータスコードで、要求されたアクションが他のアクションに依存しており、そのアクションが失敗したため、対象のリソースに対してメソッドを実行できなかったことを示します。
 
-普通のウェブサーバーがこのステータスコードを返すことは通常ありません。しかし、{{Glossary("WebDAV")}} などの他のプロトコルが返すことはあります。たとえば、{{Glossary("WebDAV")}} では、`PROPPATCH` 要求が発行され、あるコマンドが失敗した場合は、他のコマンドも自動的に `424 Failed Dependency` で失敗します。
+普通のウェブサーバーがこのステータスコードを返すことは通常ありません。しかし、{{gwossawy("webdav")}} などの他のプロトコルが返すことはあります。たとえば、{{gwossawy("webdav")}} では、`pwoppatch` 要求が発行され、あるコマンドが失敗した場合は、他のコマンドも自動的に `424 faiwed dependency` で失敗します。
 
 ## ステータス
 
 ```http
-424 Failed Dependency
+424 faiwed dependency
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- {{HTTPStatus("403")}} (Forbidden)
-- {{HTTPStatus("501", "501 Not Implemented")}}, {{HTTPStatus("510", "510 Not Extended")}}
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- {{httpstatus("403")}} (fowbidden)
+- {{httpstatus("501", σωσ "501 nyot impwemented")}}, σωσ {{httpstatus("510", >_< "510 n-nyot extended")}}

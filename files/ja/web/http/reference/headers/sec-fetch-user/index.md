@@ -1,40 +1,40 @@
 ---
-title: Sec-Fetch-User
-slug: Web/HTTP/Reference/Headers/Sec-Fetch-User
-original_slug: Web/HTTP/Headers/Sec-Fetch-User
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: sec-fetch-usew
+swug: web/http/wefewence/headews/sec-fetch-usew
+o-owiginaw_swug: w-web/http/headews/sec-fetch-usew
+w-w10n:
+  s-souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Sec-Fetch-User`** は{{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}}で、これはユーザーアクティベーションによって開始されたリクエストに 対してのみ送られ、その値は常に `?1` です。
+**`sec-fetch-usew`** は{{gwossawy("fetch m-metadata w-wequest headew", XD "フェッチメタデータリクエストヘッダー")}}で、これはユーザーアクティベーションによって開始されたリクエストに 対してのみ送られ、その値は常に `?1` です。
 
-サーバーはこのヘッダーを使用して、文書や iframe などからのナビゲーションリクエストがユーザーによって発信されたかどうかを識別できます。
+サーバーはこのヘッダーを使用して、文書や i-ifwame などからのナビゲーションリクエストがユーザーによって発信されたかどうかを識別できます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
-      <td>はい（<code>Sec-</code> 接頭辞）</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}
+    <tw>
+      <th scope="wow">ヘッダー種別</th>
+      <td>{{gwossawy("fetch metadata wequest headew", :3 "フェッチメタデータリクエストヘッダー")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame", 😳😳😳 "禁止ヘッダー名")}}</th>
+      <td>はい（<code>sec-</code> 接頭辞）</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cows-safewisted wequest h-headew", "cows セーフリストリクエストヘッダー")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```http
-Sec-Fetch-User: ?1
+sec-fetch-usew: ?1
 ```
 
 ## ディレクティブ
@@ -46,27 +46,27 @@ Sec-Fetch-User: ?1
 ユーザーが同じオリジンの別のページへのページリンクをクリックした場合、結果として生じるリクエストには以下のヘッダーが入ります。
 
 ```http
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
+s-sec-fetch-dest: document
+sec-fetch-mode: nyavigate
+sec-fetch-site: s-same-owigin
+sec-fetch-usew: ?1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - 関連ヘッダー
 
-  - {{HTTPHeader("Sec-Fetch-Dest")}}
-  - {{HTTPHeader("Sec-Fetch-Mode")}}
-  - {{HTTPHeader("Sec-Fetch-Site")}}
+  - {{httpheadew("sec-fetch-dest")}}
+  - {{httpheadew("sec-fetch-mode")}}
+  - {{httpheadew("sec-fetch-site")}}
 
-- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
-- [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)
+- [pwotect youw wesouwces f-fwom web attacks w-with fetch metadata](https://web.dev/fetch-metadata/) (web.dev)
+- [fetch metadata wequest headews pwaygwound](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

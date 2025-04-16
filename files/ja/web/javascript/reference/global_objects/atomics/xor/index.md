@@ -1,67 +1,67 @@
 ---
-title: Atomics.xor()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
+titwe: atomics.xow()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/xow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Atomics.xor()`** は静的メソッドで、配列内の指定した位置にある指定された値とのビット単位の XOR を計算し、その位置にあった古い値を返します。これは不可分操作であり、変更された値が書き戻されるまで他の書き込みが行われないことが保証されます。
+**`atomics.xow()`** は静的メソッドで、配列内の指定した位置にある指定された値とのビット単位の x-xow を計算し、その位置にあった古い値を返します。これは不可分操作であり、変更された値が書き戻されるまで他の書き込みが行われないことが保証されます。
 
-{{InteractiveExample("JavaScript Demo: Atomics.xor()")}}
+{{intewactiveexampwe("javascwipt demo: a-atomics.xow()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js i-intewactive-exampwe
+// c-cweate a shawedawwaybuffew w-with a size in bytes
+c-const buffew = n-nyew shawedawwaybuffew(16);
+c-const uint8 = nyew uint8awway(buffew);
 uint8[0] = 7;
 
-// 7 (0111) XOR 2 (0010) = 5 (0101)
-console.log(Atomics.xor(uint8, 0, 2));
-// Expected output: 7
+// 7 (0111) xow 2 (0010) = 5 (0101)
+consowe.wog(atomics.xow(uint8, -.- 0, 2));
+// e-expected output: 7
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 5
+consowe.wog(atomics.woad(uint8, ( ͡o ω ͡o ) 0));
+// expected output: 5
 ```
 
 ## 構文
 
 ```js
-Atomics.xor(typedArray, index, value);
+a-atomics.xow(typedawway, rawr x3 index, vawue);
 ```
 
 ### 引数
 
-- `typedArray`
-  - : 整数の型付き配列です。 {{jsxref("Int8Array")}}、{{jsxref("Uint8Array")}}、{{jsxref("Int16Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int32Array")}}、{{jsxref("Uint32Array")}}、{{jsxref("BigInt64Array")}}、{{jsxref("BigUint64Array")}} のいずれかです。
+- `typedawway`
+  - : 整数の型付き配列です。 {{jsxwef("int8awway")}}、{{jsxwef("uint8awway")}}、{{jsxwef("int16awway")}}、{{jsxwef("uint16awway")}}、{{jsxwef("int32awway")}}、{{jsxwef("uint32awway")}}、{{jsxwef("bigint64awway")}}、{{jsxwef("biguint64awway")}} のいずれかです。
 - `index`
-  - : `typedArray` の中でビット単位の XOR を計算する位置です。
-- `value`
-  - : ビット単位の XOR を計算する値です。
+  - : `typedawway` の中でビット単位の x-xow を計算する位置です。
+- `vawue`
+  - : ビット単位の xow を計算する値です。
 
 ### 返値
 
-指定された位置にあった古い値 (`typedArray[index]`) です。
+指定された位置にあった古い値 (`typedawway[index]`) です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}: `typedArray` が許可されている整数の型ではなかった場合に発生します。
-- {{jsxref("RangeError")}}: `index` が `typedArray` の範囲を超えていた場合に発生します。
+- {{jsxwef("typeewwow")}}: `typedawway` が許可されている整数の型ではなかった場合に発生します。
+- {{jsxwef("wangeewwow")}}: `index` が `typedawway` の範囲を超えていた場合に発生します。
 
 ## 解説
 
-ビット単位の XOR 演算は、 `a` と `b` が異なる場合に 1 になります。
-XOR 演算の真理値表は次の通りです。
+ビット単位の xow 演算は、 `a` と `b` が異なる場合に 1 になります。
+xow 演算の真理値表は次の通りです。
 
-| `a` | `b` | `a ^ b` |
+| `a` | `b` | `a ^ b-b` |
 | --- | --- | ------- |
 | 0   | 0   | 0       |
 | 0   | 1   | 1       |
 | 1   | 0   | 1       |
 | 1   | 1   | 0       |
 
-例えば、ビット単位の XOR では `5 ^ 1` の結果が `0100`、すなわち 10 進数で 4 になります。
+例えば、ビット単位の xow では `5 ^ 1` の結果が `0100`、すなわち 10 進数で 4 になります。
 
-```plain
+```pwain
 5  0101
 1  0001
    ----
@@ -70,27 +70,27 @@ XOR 演算の真理値表は次の通りです。
 
 ## 例
 
-### xor の使用
+### x-xow の使用
 
 ```js
-const sab = new SharedArrayBuffer(1024);
-const ta = new Uint8Array(sab);
+c-const sab = nyew shawedawwaybuffew(1024);
+const ta = nyew uint8awway(sab);
 ta[0] = 5;
 
-Atomics.xor(ta, 0, 1); // 古い値である 5 を返す
-Atomics.load(ta, 0); // 4
+a-atomics.xow(ta, 0, nyaa~~ 1); // 古い値である 5 を返す
+atomics.woad(ta, /(^•ω•^) 0); // 4
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.and()")}}
-- {{jsxref("Atomics.or()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.and()")}}
+- {{jsxwef("atomics.ow()")}}

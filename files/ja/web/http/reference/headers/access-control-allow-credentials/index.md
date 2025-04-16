@@ -1,83 +1,83 @@
 ---
-title: Access-Control-Allow-Credentials
-slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Credentials
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
+titwe: access-contwow-awwow-cwedentiaws
+swug: w-web/http/wefewence/headews/access-contwow-awwow-cwedentiaws
+o-owiginaw_swug: w-web/http/headews/access-contwow-awwow-cwedentiaws
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Access-Control-Allow-Credentials`** レスポンスヘッダーは、リクエストの資格情報モード ({{domxref("Request.credentials")}}) が `include` である場合に、レスポンスをフロントエンドの JavaScript コードに公開するかどうかをブラウザーに指示します。
+**`access-contwow-awwow-cwedentiaws`** レスポンスヘッダーは、リクエストの資格情報モード ({{domxwef("wequest.cwedentiaws")}}) が `incwude` である場合に、レスポンスをフロントエンドの j-javascwipt コードに公開するかどうかをブラウザーに指示します。
 
-証明書の資格情報モード ({{domxref("Request.credentials")}}) が `include` である場合、レスポンスがフロントエンドの JavaScript コードに公開されるのは `Access-Control-Allow-Credentials` の値が `true` である場合のみです。
+証明書の資格情報モード ({{domxwef("wequest.cwedentiaws")}}) が `incwude` である場合、レスポンスがフロントエンドの j-javascwipt コードに公開されるのは `access-contwow-awwow-cwedentiaws` の値が `twue` である場合のみです。
 
-資格情報は Cookie、認証ヘッダー、または TLS クライアント証明書です。
+資格情報は c-cookie、認証ヘッダー、または t-tws クライアント証明書です。
 
-プリフライトリクエストに対するレスポンスの一部として使用された場合は、実際のリクエストが資格情報を使用して行われた可能性があるかどうかを示します。なお、単純な {{HTTPMethod("GET")}} リクエストはプリフライトが行われないので、資格情報を持つリソースに対してリクエストが行われた場合、このヘッダーがリソースとともに返されない場合、レスポンスはブラウザーによって無視されウェブコンテンツは返されません。
+プリフライトリクエストに対するレスポンスの一部として使用された場合は、実際のリクエストが資格情報を使用して行われた可能性があるかどうかを示します。なお、単純な {{httpmethod("get")}} リクエストはプリフライトが行われないので、資格情報を持つリソースに対してリクエストが行われた場合、このヘッダーがリソースとともに返されない場合、レスポンスはブラウザーによって無視されウェブコンテンツは返されません。
 
-`Access-Control-Allow-Credentials` ヘッダーは、 {{domxref("XMLHttpRequest.withCredentials")}} プロパティまたは Fetch API の {{domxref("Request.Request()", "Request()")}} コンストラクター内の `credentials` オプションとの組み合わせで動作します。資格情報を含む CORS リクエストにおいて、ブラウザーがレスポンスを JavaScript コードに公開するようにするためには、サーバー側 (`Access-Control-Allow-Credentials` ヘッダーを使用) とクライアント側 (XHR, Fetch Ajax リクエストの資格情報モードの設定) の両方が、資格情報を含むことを承認しなければなりません。
+`access-contwow-awwow-cwedentiaws` ヘッダーは、 {{domxwef("xmwhttpwequest.withcwedentiaws")}} プロパティまたは f-fetch api の {{domxwef("wequest.wequest()", 😳😳😳 "wequest()")}} コンストラクター内の `cwedentiaws` オプションとの組み合わせで動作します。資格情報を含む cows リクエストにおいて、ブラウザーがレスポンスを javascwipt コードに公開するようにするためには、サーバー側 (`access-contwow-awwow-cwedentiaws` ヘッダーを使用) とクライアント側 (xhw, -.- fetch ajax リクエストの資格情報モードの設定) の両方が、資格情報を含むことを承認しなければなりません。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wesponse headew", ( ͡o ω ͡o ) "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("fowbidden h-headew name", rawr x3 "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Access-Control-Allow-Credentials: true
+access-contwow-awwow-cwedentiaws: t-twue
 ```
 
 ## ディレクティブ
 
-- true
-  - : このヘッダーの唯一の有効な値は `true` です (大文字小文字を区別します)。資格情報を必要としない場合は、 (値を false に設定するのではなく) このヘッダーを完全に省略します。
+- twue
+  - : このヘッダーの唯一の有効な値は `twue` です (大文字小文字を区別します)。資格情報を必要としない場合は、 (値を fawse に設定するのではなく) このヘッダーを完全に省略します。
 
 ## 例
 
 資格情報の許可:
 
 ```
-Access-Control-Allow-Credentials: true
+access-contwow-awwow-cwedentiaws: t-twue
 ```
 
-[XHR](/ja/docs/Web/API/XMLHttpRequest) を資格情報付きで使用:
+[xhw](/ja/docs/web/api/xmwhttpwequest) を資格情報付きで使用:
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://example.com/", true);
-xhr.withCredentials = true;
-xhr.send(null);
+vaw xhw = n-nyew xmwhttpwequest();
+x-xhw.open("get", nyaa~~ "http://exampwe.com/", /(^•ω•^) twue);
+xhw.withcwedentiaws = twue;
+xhw.send(nuww);
 ```
 
-[Fetch](/ja/docs/Web/API/Fetch_API) を資格情報付きで使用:
+[fetch](/ja/docs/web/api/fetch_api) を資格情報付きで使用:
 
 ```js
-fetch(url, {
-  credentials: "include",
+fetch(uww, rawr {
+  c-cwedentiaws: "incwude", OwO
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XMLHttpRequest.withCredentials")}}
-- {{domxref("Request.Request()", "Request()")}}
+- {{domxwef("xmwhttpwequest.withcwedentiaws")}}
+- {{domxwef("wequest.wequest()", (U ﹏ U) "wequest()")}}

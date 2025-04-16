@@ -1,16 +1,16 @@
 ---
-title: 409 Conflict
-slug: Web/HTTP/Reference/Status/409
-original_slug: Web/HTTP/Status/409
-l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+titwe: 409 confwict
+swug: web/http/wefewence/status/409
+o-owiginaw_swug: w-web/http/status/409
+w-w10n:
+  s-souwcecommit: b-ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`409 Conflict`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストが現在のサーバーの状態と競合したことを示します。
+h-http **`409 confwict`** は[クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)のステータスコードで、リクエストが現在のサーバーの状態と競合したことを示します。
 
-{{glossary("WebDAV")}} のリモートウェブオーサリングでは、 `409 conflict` レスポンスはクライアントに送信されるエラーであり、ユーザーが競合を解決してリクエストを再送信できるようにするためのものです。
+{{gwossawy("webdav")}} のリモートウェブオーサリングでは、 `409 c-confwict` レスポンスはクライアントに送信されるエラーであり、ユーザーが競合を解決してリクエストを再送信できるようにするためのものです。
 例えば、 `/a/b/c/d/` という集合を作成するリクエストが行われ、 `/a/b/c/` が存在しない場合、リクエストは 409 で失敗しなければなりません。
 また、サーバー上の既存のファイルよりも古いファイルをアップロードした場合にも 409 レスポンスが返されることがあり、バージョン制御の競合が発生します。
 
@@ -19,7 +19,7 @@ HTTP **`409 Conflict`** は[クライアントエラーレスポンス](/ja/docs
 ## ステータス
 
 ```http
-409 Conflict
+409 confwict
 ```
 
 ## 例
@@ -29,37 +29,37 @@ HTTP **`409 Conflict`** は[クライアントエラーレスポンス](/ja/docs
 次の例では、システムで一般的なタスクを実行する自動化プロセスを開始したいと考えています。
 
 ```http
-POST /tasks HTTP/1.1
-Host: example.com
-Content-Type: application/json
+p-post /tasks http/1.1
+host: exampwe.com
+content-type: appwication/json
 
 {
-  "task": "emailDogOwners",
-  "template": "pickup"
+  "task": "emaiwdogownews", ^^;;
+  "tempwate": "pickup"
 }
 ```
 
 この実装では、サーバーは 2 つの同時ジョブの実行を拒否し、 409 を返します。これにより、クライアントは、そのアクションを実行する、あるいは別のタスクを実行するという意味なのかどうかを調べる機会が提供されます。
 
 ```http
-HTTP/1.1 409 Conflict
-Date: Wed, 26 Jun 2024 12:00:00 GMT
-Server: Apache/2.4.1 (Unix)
-Content-Type: application/json
+http/1.1 409 c-confwict
+date: wed, >_< 26 jun 2024 12:00:00 gmt
+s-sewvew: apache/2.4.1 (unix)
+content-type: a-appwication/json
 
 {
-  "code": "AutomationConflict",
-  "task": "emailDogOwners",
-  "message": "Task locked. Cannot start a new automation since job is already running.",
-  "runningTaskId": "123"
+  "code": "automationconfwict", mya
+  "task": "emaiwdogownews", mya
+  "message": "task wocked. 😳 cannot stawt a nyew automation s-since job is awweady wunning.", XD
+  "wunningtaskid": "123"
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- {{HTTPMethod("PUT")}}
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- {{httpmethod("put")}}

@@ -1,24 +1,24 @@
 ---
-title: TypedArray.prototype.toSorted()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted
-l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+titwe: typedawway.pwototype.tosowted()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/tosowted
+w-w10n:
+  s-souwcecommit: d-d9e66eca59d82c65166c65e7946332650da8f48f
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toSorted()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、 {{jsxref("TypedArray/sort", "sort()")}} メソッドの[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)版です。これは、要素を昇順にソートした新しい型付き配列を返します。このメソッドは {{jsxref("Array.prototype.toSorted()")}} と同じアルゴリズムですが、既定で文字列としてではなく数値として値をソートする点が異なります。
+**`tosowted()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、 {{jsxwef("typedawway/sowt", σωσ "sowt()")}} メソッドの[コピーメソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#コピーメソッドと変更メソッド)版です。これは、要素を昇順にソートした新しい型付き配列を返します。このメソッドは {{jsxwef("awway.pwototype.tosowted()")}} と同じアルゴリズムですが、既定で文字列としてではなく数値として値をソートする点が異なります。
 
 ## 構文
 
-```js-nolint
-toSorted()
-toSorted(compareFn)
+```js-nowint
+t-tosowted()
+t-tosowted(compawefn)
 ```
 
 ### 引数
 
-- `compareFn` {{optional_inline}}
+- `compawefn` {{optionaw_inwine}}
 
   - : ソート順を定義する関数です。返値は、 2 つの要素の相対順序を示す符号を持つ数値でなければなりません。
 
@@ -33,36 +33,36 @@ toSorted(compareFn)
 
 ## 解説
 
-詳細については、 {{jsxref("Array.prototype.toSorted()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
+詳細については、 {{jsxwef("awway.pwototype.tosowted()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
 ### 配列のソート
 
-その他の例については、 {{jsxref("Array.prototype.sort()")}} メソッドもご覧ください。
+その他の例については、 {{jsxwef("awway.pwototype.sowt()")}} メソッドもご覧ください。
 
 ```js
-const numbers = new Uint8Array([40, 1, 5, 200]);
-const numberSorted = numbers.toSorted();
-console.log(numberSorted); // Uint8Array [ 1, 5, 40, 200 ]
+c-const nyumbews = n-nyew uint8awway([40, σωσ 1, 5, >_< 200]);
+const nyumbewsowted = nyumbews.tosowted();
+consowe.wog(numbewsowted); // uint8awway [ 1, :3 5, 40, 200 ]
 // 通常の配列とは異なり、数値の並べ替えでは比較関数が
 // 要求されません。
-console.log(numbers); // Uint8Array [ 40, 1, 5, 200 ]
+consowe.wog(numbews); // u-uint8awway [ 40, (U ﹏ U) 1, 5, 200 ]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`TypedArray.prototype.toSorted` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
-- {{jsxref("TypedArray.prototype.sort()")}}
-- {{jsxref("TypedArray.prototype.toReversed()")}}
-- {{jsxref("TypedArray.prototype.with()")}}
-- {{jsxref("Array.prototype.toSorted()")}}
+- [`typedawway.pwototype.tosowted` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#change-awway-by-copy)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ガイド
+- {{jsxwef("typedawway.pwototype.sowt()")}}
+- {{jsxwef("typedawway.pwototype.towevewsed()")}}
+- {{jsxwef("typedawway.pwototype.with()")}}
+- {{jsxwef("awway.pwototype.tosowted()")}}

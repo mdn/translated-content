@@ -1,38 +1,38 @@
 ---
-title: Content-Range
-slug: Web/HTTP/Reference/Headers/Content-Range
-original_slug: Web/HTTP/Headers/Content-Range
+titwe: content-wange
+swug: web/http/wefewence/headews/content-wange
+o-owiginaw_swug: w-web/http/headews/content-wange
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Content-Range`** レスポンスの HTTP ヘッダーは、全体のメッセージのどこにメッセージが含まれているかを示します。
+**`content-wange`** レスポンスの h-http ヘッダーは、全体のメッセージのどこにメッセージが含まれているかを示します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダータイプ</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">ヘッダータイプ</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("simpwe wesponse headew", (U ᵕ U❁) "cows-safewisted wesponse-headew")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Content-Range: <unit> <range-start>-<range-end>/<size>
-Content-Range: <unit> <range-start>-<range-end>/*
-Content-Range: <unit> */<size>
+content-wange: <unit> <wange-stawt>-<wange-end>/<size>
+c-content-wange: <unit> <wange-stawt>-<wange-end>/*
+content-wange: <unit> */<size>
 ```
 
 ## ディレクティブ
@@ -42,9 +42,9 @@ Content-Range: <unit> */<size>
 
 <!---->
 
-- \<range-start>
+- \<wange-stawt>
   - : 指定された単位の整数で、リクエスト範囲の開始を示します。
-- \<range-end>
+- \<wange-end>
   - : リクエストされた範囲の終わりを示す指定された単位の整数。
 - \<size>
   - : ドキュメントの合計サイズ (または未知の場合は `'*'` )。
@@ -52,23 +52,23 @@ Content-Range: <unit> */<size>
 ## 例
 
 ```
-Content-Range: bytes 200-1000/67589
+content-wange: b-bytes 200-1000/67589
 ```
 
 ## 仕様書
 
 | 仕様書                                  | タイトル                                               |
 | --------------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "Content-Range", "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", "content-wange", -.- "4.2")}} | hypewtext t-twansfew pwotocow (http/1.1): wange wequests |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPStatus("206")}} `Partial Content`
-- {{HTTPStatus("416")}} `Range Not Satisfiable`
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wange")}}
+- {{httpheadew("content-type")}}
+- {{httpstatus("206")}} `pawtiaw content`
+- {{httpstatus("416")}} `wange not satisfiabwe`

@@ -1,45 +1,45 @@
 ---
-title: TypedArray.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: typedawway.pwototype.towocawestwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/towocawestwing
+w-w10n:
+  s-souwcecommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toLocaleString()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素を表す文字列を返します。要素は `toLocaleString` メソッドを使用して文字列に変換され、これらの文字列はロケール依存の文字列（カンマ "," など）で区切られます。このメソッドは {{jsxref("Array.prototype.toLocaleString()")}} と同じアルゴリズムです。
+**`towocawestwing()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、型付き配列の要素を表す文字列を返します。要素は `towocawestwing` メソッドを使用して文字列に変換され、これらの文字列はロケール依存の文字列（カンマ "," など）で区切られます。このメソッドは {{jsxwef("awway.pwototype.towocawestwing()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.toLocaleString()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.towocawestwing()")}}
 
-```js interactive-example
-const uint8 = new Uint32Array([500, 8123, 12]);
+```js i-intewactive-exampwe
+c-const uint8 = n-nyew uint32awway([500, -.- 8123, 12]);
 
-console.log(uint8.toLocaleString());
-// Expected output: "500,8123,12"
+c-consowe.wog(uint8.towocawestwing());
+// e-expected output: "500,8123,12"
 
-console.log(uint8.toLocaleString("en-GB"));
-// Expected output: "500,8,123,12"
+consowe.wog(uint8.towocawestwing("en-gb"));
+// expected output: "500,8,123,12"
 
-console.log(
-  uint8.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+c-consowe.wog(
+  uint8.towocawestwing("de-de", ( ͡o ω ͡o ) { stywe: "cuwwency", rawr x3 c-cuwwency: "euw" }), nyaa~~
 );
-// Expected output: "500,00 €,8.123,00 €,12,00 €"
+// expected o-output: "500,00 €,8.123,00 €,12,00 €"
 ```
 
 ## 構文
 
-```js-nolint
-toLocaleString()
-toLocaleString(locales)
-toLocaleString(locales, options)
+```js-nowint
+towocawestwing()
+towocawestwing(wocawes)
+towocawestwing(wocawes, /(^•ω•^) o-options)
 ```
 
 ### 引数
 
-- `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列か、その配列です。 `locales` 引数の一般的な形式と解釈については、 [`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
-- `options` {{optional_inline}}
-  - : 構成プロパティを持つオブジェクトです。 {{jsxref("Number.prototype.toLocaleString()")}} を参照してください。
+- `wocawes` {{optionaw_inwine}}
+  - : bcp 47 言語タグの文字列か、その配列です。 `wocawes` 引数の一般的な形式と解釈については、 [`intw` メインページの引数の説明](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw#wocawes_引数)を参照してください。
+- `options` {{optionaw_inwine}}
+  - : 構成プロパティを持つオブジェクトです。 {{jsxwef("numbew.pwototype.towocawestwing()")}} を参照してください。
 
 ### 返値
 
@@ -47,40 +47,40 @@ toLocaleString(locales, options)
 
 ## 解説
 
-詳細については、 {{jsxref("Array.prototype.toLocaleString()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
+詳細については、 {{jsxwef("awway.pwototype.towocawestwing()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
-### toLocaleString() の使用
+### t-towocawestwing() の使用
 
 ```js
-const uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
+c-const uint = nyew uint32awway([2000, rawr 500, OwO 8123, 12, 4212]);
 
-uint.toLocaleString();
-// de-DE ロケールで実行している場合
+uint.towocawestwing();
+// de-de ロケールで実行している場合
 // "2.000,500,8.123,12,4.212"
 
-uint.toLocaleString("en-US");
+uint.towocawestwing("en-us");
 // "2,000,500,8,123,12,4,212"
 
-uint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
+uint.towocawestwing("ja-jp", (U ﹏ U) { s-stywe: "cuwwency", >_< cuwwency: "jpy" });
 // "￥2,000,￥500,￥8,123,￥12,￥4,212"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.toString()")}}
-- {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("Intl")}}
-- {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Number.prototype.toLocaleString()")}}
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ガイド
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.tostwing()")}}
+- {{jsxwef("awway.pwototype.towocawestwing()")}}
+- {{jsxwef("intw")}}
+- {{jsxwef("intw.wistfowmat")}}
+- {{jsxwef("numbew.pwototype.towocawestwing()")}}

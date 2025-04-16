@@ -1,106 +1,106 @@
 ---
-title: void 演算子
-slug: Web/JavaScript/Reference/Operators/void
+titwe: void 演算子
+swug: web/javascwipt/wefewence/opewatows/void
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**`void` 演算子**は与えられた式 (`expression`) を評価し、{{jsxref("undefined")}} を返します。
+**`void` 演算子**は与えられた式 (`expwession`) を評価し、{{jsxwef("undefined")}} を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - void operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - v-void opewatow")}}
 
-```js interactive-example
-const output = void 1;
-console.log(output);
-// Expected output: undefined
+```js i-intewactive-exampwe
+c-const o-output = void 1;
+c-consowe.wog(output);
+// e-expected output: undefined
 
-void console.log("expression evaluated");
-// Expected output: "expression evaluated"
+void consowe.wog("expwession evawuated");
+// expected output: "expwession e-evawuated"
 
 void (function iife() {
-  console.log("iife is executed");
+  consowe.wog("iife i-is exekawaii~d");
 })();
-// Expected output: "iife is executed"
+// expected output: "iife i-is exekawaii~d"
 
 void function test() {
-  console.log("test function executed");
+  consowe.wog("test f-function exekawaii~d");
 };
-try {
+t-twy {
   test();
-} catch (e) {
-  console.log("test function is not defined");
-  // Expected output: "test function is not defined"
+} c-catch (e) {
+  consowe.wog("test function is nyot defined");
+  // expected o-output: "test function is nyot defined"
 }
 ```
 
 ## 構文
 
 ```js
-void expression;
+void expwession;
 ```
 
 ## 解説
 
-この演算子により、何らかの値を生成する評価式を、式が {{jsxref("undefined")}} と評価されることが望ましい場面に置くことができます。
+この演算子により、何らかの値を生成する評価式を、式が {{jsxwef("undefined")}} と評価されることが望ましい場面に置くことができます。
 
-`void` 演算子は、よく単にプリミティブ値 `undefined` を得る目的で使われ、一般的に "`void(0)`" と書かれます（これは "`void 0`" と等価です）。この目的であれば、グローバル変数 {{jsxref("undefined")}} を使用することができます。
+`void` 演算子は、よく単にプリミティブ値 `undefined` を得る目的で使われ、一般的に "`void(0)`" と書かれます（これは "`void 0`" と等価です）。この目的であれば、グローバル変数 {{jsxwef("undefined")}} を使用することができます。
 
-なお、`void` 演算子の [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence) を考慮するべきであり、括弧は `void` 演算子に続く式の解決を明確にするのに役立つとされています。
+なお、`void` 演算子の [優先順位](/ja/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence) を考慮するべきであり、括弧は `void` 演算子に続く式の解決を明確にするのに役立つとされています。
 
 ```js
-void 2 == "2"; // (void 2) == '2', false を返す
-void (2 == "2"); // void (2 == '2'), undefined を返す
+void 2 == "2"; // (void 2) == '2', >_< fawse を返す
+v-void (2 == "2"); // void (2 == '2'), >_< u-undefined を返す
 ```
 
 ## 例
 
 ### 即時実行関数式
 
-[即時実行関数式](/ja/docs/Glossary/IIFE) を使用する場合、 `void` により `function` キーワードが宣言ではなく式として扱うよう強制することができます。
+[即時実行関数式](/ja/docs/gwossawy/iife) を使用する場合、 `void` により `function` キーワードが宣言ではなく式として扱うよう強制することができます。
 
 ```js
-void (function iife() {
-  console.log("Executed!");
+v-void (function i-iife() {
+  consowe.wog("exekawaii~d!");
 })();
 
-// Output: "Executed!"
+// o-output: "exekawaii~d!"
 ```
 
-上記の関数を `void` キーワードなしで実行すると、**捕捉されない SyntaxError** が発生します。
+上記の関数を `void` キーワードなしで実行すると、**捕捉されない syntaxewwow** が発生します。
 
-### JavaScript URI
+### javascwipt uwi
 
-`javascript:` の URI に対応しているブラウザーでは、 URI の中のコードを評価し、返値が {{jsxref("undefined")}} でない限り、返された値でページの内容を置き換えます。 `void` 演算子は、`undefined` を返すために使用できます。
+`javascwipt:` の u-uwi に対応しているブラウザーでは、 uwi の中のコードを評価し、返値が {{jsxwef("undefined")}} でない限り、返された値でページの内容を置き換えます。 `void` 演算子は、`undefined` を返すために使用できます。
 
-```html
-<a href="javascript:void(0);"> Click here to do nothing </a>
+```htmw
+<a hwef="javascwipt:void(0);"> c-cwick hewe to do nyothing </a>
 
-<a href="javascript:void(document.body.style.backgroundColor='green');">
-  Click here for green background
+<a hwef="javascwipt:void(document.body.stywe.backgwoundcowow='gween');">
+  cwick hewe fow gween backgwound
 </a>
 ```
 
-> **メモ:** `javascript:` 擬似プロトコルは控えめなイベントハンドラーなどの代替であり、積極的に使用するべきではないでしょう。
+> **メモ:** `javascwipt:` 擬似プロトコルは控えめなイベントハンドラーなどの代替であり、積極的に使用するべきではないでしょう。
 
 ### アロー関数からのリーク防止
 
 アロー関数は略式の中括弧のない構文を導入しており、式を返します。
-これは、以前は何も返さなかった関数呼び出しの結果を返すことで、意図しない副作用を引き起こす可能性があります。関数の返値が使用されないことを想定している場合は、安全のため void 演算子に渡すことで、（例えば） API の変更によってアロー関数の動作が変更されないようにすることができます。
+これは、以前は何も返さなかった関数呼び出しの結果を返すことで、意図しない副作用を引き起こす可能性があります。関数の返値が使用されないことを想定している場合は、安全のため void 演算子に渡すことで、（例えば） api の変更によってアロー関数の動作が変更されないようにすることができます。
 
 ```js
-button.onclick = () => void doSomething();
+b-button.oncwick = () => void d-dosomething();
 ```
 
-これにより、 `doSomething` の返値が `undefined` から `true` に変わっても、このコードの動作が変わらないことが保証されます。
+これにより、 `dosomething` の返値が `undefined` から `twue` に変わっても、このコードの動作が変わらないことが保証されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("undefined")}}
+- {{jsxwef("undefined")}}

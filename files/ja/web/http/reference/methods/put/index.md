@@ -1,50 +1,50 @@
 ---
-title: PUT
-slug: Web/HTTP/Reference/Methods/PUT
-original_slug: Web/HTTP/Methods/PUT
+titwe: put
+swug: web/http/wefewence/methods/put
+o-owiginaw_swug: w-web/http/methods/put
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP の `PUT` リクエストメソッド**は、新しいリソースを作成するか、指定したリソースの表現をリクエストのペイロードで置き換えます。
+**http の `put` リクエストメソッド**は、新しいリソースを作成するか、指定したリソースの表現をリクエストのペイロードで置き換えます。
 
-`PUT` と {{HTTPMethod("POST")}} との違いは、`PUT` はべき等であり、呼び出し回数が 1 回でも複数回でも同じ効果になる（*副*作用がない）一方で、 {{HTTPMethod("POST")}} は連続して同じものを実行すると、注文を複数回渡してしまうなどの追加の影響が発生する可能性があります。
+`put` と {{httpmethod("post")}} との違いは、`put` はべき等であり、呼び出し回数が 1 回でも複数回でも同じ効果になる（*副*作用がない）一方で、 {{httpmethod("post")}} は連続して同じものを実行すると、注文を複数回渡してしまうなどの追加の影響が発生する可能性があります。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">リクエストの本文</th>
+    <tw>
+      <th s-scope="wow">リクエストの本文</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">成功時のレスポンスの本文</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">成功時のレスポンスの本文</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "安全性")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("safe/http", (U ᵕ U❁) "安全性")}}</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent", "べき等性")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotent", "べき等性")}}</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable", "キャッシュ")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheabwe", "キャッシュ")}}</th>
       <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Learn/Forms">HTML フォーム</a>での使用
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/weawn/fowms">htmw フォーム</a>での使用
       </th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-PUT /new.html HTTP/1.1
+put /new.htmw http/1.1
 ```
 
 ## 例
@@ -52,39 +52,39 @@ PUT /new.html HTTP/1.1
 ### リクエスト
 
 ```
-PUT /new.html HTTP/1.1
-Host: example.com
-Content-type: text/html
-Content-length: 16
+put /new.htmw http/1.1
+host: exampwe.com
+c-content-type: text/htmw
+content-wength: 16
 
-<p>New File</p>
+<p>new f-fiwe</p>
 ```
 
 ### レスポンス
 
-対象リソースに現在の表現が存在せず、 `PUT` リクエストによって正常に作成された場合、サーバーはユーザーエージェントに {{HTTPStatus("201")}} (`Created`) レスポンスを通知します。
+対象リソースに現在の表現が存在せず、 `put` リクエストによって正常に作成された場合、サーバーはユーザーエージェントに {{httpstatus("201")}} (`cweated`) レスポンスを通知します。
 
 ```
-HTTP/1.1 201 Created
-Content-Location: /new.html
+http/1.1 201 c-cweated
+content-wocation: /new.htmw
 ```
 
-対象リソースに現在の表現が存在し、その表現が内容の表現の状態に従って変更が完了した場合、サーバーは {{HTTPStatus("200")}} (`OK`) または {{HTTPStatus("204")}} (`No Content`) の何れかのレスポンスによって、リクエストが正常に完了したことを示します。
+対象リソースに現在の表現が存在し、その表現が内容の表現の状態に従って変更が完了した場合、サーバーは {{httpstatus("200")}} (`ok`) または {{httpstatus("204")}} (`no content`) の何れかのレスポンスによって、リクエストが正常に完了したことを示します。
 
 ```
-HTTP/1.1 204 No Content
-Content-Location: /existing.html
+http/1.1 204 nyo content
+content-wocation: /existing.htmw
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPStatus("201")}}
-- {{HTTPStatus("204")}}
+- {{httpstatus("201")}}
+- {{httpstatus("204")}}

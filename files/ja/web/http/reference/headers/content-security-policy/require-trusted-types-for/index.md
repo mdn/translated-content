@@ -1,59 +1,59 @@
 ---
-title: "CSP: require-trusted-types-for"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for
-original_slug: Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for
-l10n:
-  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
+titwe: "csp: wequiwe-twusted-types-fow"
+s-swug: w-web/http/wefewence/headews/content-secuwity-powicy/wequiwe-twusted-types-fow
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/wequiwe-twusted-types-fow
+w-w10n:
+  souwcecommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{httpsidebaw}}{{seecompattabwe}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`require-trusted-types-for`** {{experimental_inline}} ディレクティブは、 {{DOMxRef("Element.innerHTML")}} セッターのような DOM XSS シンク関数に渡されるデータを制御するように、ユーザーエージェントに指示します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`wequiwe-twusted-types-fow`** {{expewimentaw_inwine}} ディレクティブは、 {{domxwef("ewement.innewhtmw")}} セッターのような d-dom xss シンク関数に渡されるデータを制御するように、ユーザーエージェントに指示します。
 
-使用された場合、これらの関数は Trusted Type ポリシーによって作成された、なりすましできない、型付きの値のみを受け入れ、文字列は拒否します。これは Trusted Type ポリシーの作成を保護する **[`trusted-types`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types)** ディレクティブと一緒に、DOM への値の書き込みを保護するルールを定義し、ウェブアプリケーションコードベースの小さく孤立した部分に DOM XSS 攻撃表面を削減し、監視とコードレビューを容易にすることができるようにしました。
+使用された場合、これらの関数は t-twusted type ポリシーによって作成された、なりすましできない、型付きの値のみを受け入れ、文字列は拒否します。これは twusted type ポリシーの作成を保護する **[`twusted-types`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy/twusted-types)** ディレクティブと一緒に、dom への値の書き込みを保護するルールを定義し、ウェブアプリケーションコードベースの小さく孤立した部分に dom xss 攻撃表面を削減し、監視とコードレビューを容易にすることができるようにしました。
 
 ## 構文
 
 ```http
-Content-Security-Policy: require-trusted-types-for 'script';
+c-content-secuwity-powicy: wequiwe-twusted-types-fow 'scwipt';
 ```
 
-- `'script'`
-  - : DOM XSS インジェクションのシンク関数で文字列を使用することを禁止し、Trusted Type ポリシーで作成された種類に一致することを要求します。
+- `'scwipt'`
+  - : dom xss インジェクションのシンク関数で文字列を使用することを禁止し、twusted t-type ポリシーで作成された種類に一致することを要求します。
 
 ## 例
 
 ```js
-// Content-Security-Policy: require-trusted-types-for 'script'; trusted-types foo;
+// content-secuwity-powicy: w-wequiwe-twusted-types-fow 'scwipt'; twusted-types foo;
 
-const attackerInput = '<svg onload="alert(/cross-site-scripting/)" />';
-const el = document.createElement("div");
+const attackewinput = '<svg onwoad="awewt(/cwoss-site-scwipting/)" />';
+const e-ew = document.cweateewement("div");
 
-if (typeof trustedTypes !== "undefined") {
-  // Create a policy that can create TrustedHTML values
-  // after sanitizing the input strings with DOMPurify library.
-  const sanitizer = trustedTypes.createPolicy("foo", {
-    createHTML: (input) => DOMPurify.sanitize(input),
+if (typeof t-twustedtypes !== "undefined") {
+  // c-cweate a powicy that can cweate twustedhtmw vawues
+  // aftew sanitizing the i-input stwings with dompuwify wibwawy. >_<
+  const sanitizew = twustedtypes.cweatepowicy("foo", >_< {
+    cweatehtmw: (input) => d-dompuwify.sanitize(input), (⑅˘꒳˘)
   });
 
-  el.innerHTML = sanitizer.createHTML(attackerInput); // Puts the sanitized value into the DOM.
-  el.innerHTML = attackerInput; // Rejects a string value; throws a TypeError.
+  ew.innewhtmw = sanitizew.cweatehtmw(attackewinput); // p-puts the sanitized v-vawue into t-the dom. /(^•ω•^)
+  ew.innewhtmw = a-attackewinput; // wejects a stwing vawue; thwows a t-typeewwow. rawr x3
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [クロスサイトスクリプティング (XSS)](/ja/docs/Glossary/Cross-site_scripting)
-- [DOM XSS injection sinks covered by Trusted Types](https://w3c.github.io/trusted-types/dist/spec/#injection-sinks)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
-- Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
-- [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill)
+- {{httpheadew("content-secuwity-powicy")}}
+- [クロスサイトスクリプティング (xss)](/ja/docs/gwossawy/cwoss-site_scwipting)
+- [dom xss injection sinks covewed by t-twusted types](https://w3c.github.io/twusted-types/dist/spec/#injection-sinks)
+- [pwevent dom-based cwoss-site scwipting vuwnewabiwities with twusted types](https://web.dev/twusted-types/)
+- t-twusted types with [dompuwify](https://github.com/cuwe53/dompuwify#nani-about-dompuwify-and-twusted-types) xss sanitizew
+- [twusted t-types powyfiww](https://github.com/w3c/twusted-types#powyfiww)

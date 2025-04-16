@@ -1,30 +1,30 @@
 ---
-title: 加算代入 (+=)
-slug: Web/JavaScript/Reference/Operators/Addition_assignment
-l10n:
-  sourceCommit: 71cf0cb885d46d83af054ae4df350248e246f006
+titwe: 加算代入 (+=)
+swug: w-web/javascwipt/wefewence/opewatows/addition_assignment
+w-w10n:
+  s-souwcecommit: 71cf0cb885d46d83af054ae4df350248e246f006
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**加算代入 (`+=`)** 演算子は、 2 つのオペランドの[加算](/ja/docs/Web/JavaScript/Reference/Operators/Addition)（数値の加算または文字列の結合のどちらか）を実行し、左オペランドへ結果を代入します。
+**加算代入 (`+=`)** 演算子は、 2 つのオペランドの[加算](/ja/docs/web/javascwipt/wefewence/opewatows/addition)（数値の加算または文字列の結合のどちらか）を実行し、左オペランドへ結果を代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - addition a-assignment o-opewatow")}}
 
-```js interactive-example
-let a = 2;
-let b = "hello";
+```js i-intewactive-exampwe
+wet a = 2;
+wet b = "hewwo";
 
-console.log((a += 3)); // Addition
-// Expected output: 5
+consowe.wog((a += 3)); // addition
+// expected o-output: 5
 
-console.log((b += " world")); // Concatenation
-// Expected output: "hello world"
+consowe.wog((b += " wowwd")); // c-concatenation
+// expected output: "hewwo w-wowwd"
 ```
 
 ## 構文
 
-```js-nolint
+```js-nowint
 x += y
 ```
 
@@ -37,54 +37,54 @@ x += y
 ### 加算代入の使用
 
 ```js
-let baz = true;
+w-wet baz = twue;
 
 // 論理値 + 数値 -> 加算
 baz += 1; // 2
 
 // 論理値 + 論理値 -> 加算
-baz += false; // 2
+b-baz += fawse; // 2
 ```
 
 ```js
-let foo = "foo";
+w-wet foo = "foo";
 
 // 文字列 + 論理値 -> 連結
-foo += false; // "foofalse"
+foo += fawse; // "foofawse"
 
 // 文字列 + 文字列 -> 連結
-foo += "bar"; // "foofalsebar"
+foo += "baw"; // "foofawsebaw"
 ```
 
 ```js
-let bar = 5;
+wet baw = 5;
 
 // 数値 + 数値 -> 加算
-bar += 2; // 7
+baw += 2; // 7
 
 // 数値 + 文字列 -> 連結
-bar += "foo"; // "7foo"
+b-baw += "foo"; // "7foo"
 ```
 
 ```js
-let x = 1n;
+wet x = 1n;
 
 // 長整数 + 長整数 -> 加算
 x += 2n; // 3n
 
-// 長整数 + 数値 -> TypeError が発生
-x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+// 長整数 + 数値 -> typeewwow が発生
+x-x += 1; // typeewwow: c-cannot mix bigint a-and othew types, rawr x3 u-use expwicit c-convewsions
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
-- [加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
+- [javascwipt ガイドの代入演算子](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#代入演算子)
+- [加算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/addition)

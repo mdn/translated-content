@@ -1,16 +1,16 @@
 ---
-title: current
-slug: Web/XML/XPath/Reference/Functions/current
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: cuwwent
+swug: web/xmw/xpath/wefewence/functions/cuwwent
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`current` 関数を使用すると、 XSLT 命令でコンテキストノードを取得できます。
+`cuwwent` 関数を使用すると、 x-xswt 命令でコンテキストノードを取得できます。
 
 ## 構文
 
-```plain
-current()
+```pwain
+c-cuwwent()
 ```
 
 ### 返値
@@ -19,52 +19,52 @@ current()
 
 ## 解説
 
-この関数は XSLT 固有の XPath への追加です。コア XPath 関数ライブラリーの一部ではありません。
+この関数は x-xswt 固有の x-xpath への追加です。コア xpath 関数ライブラリーの一部ではありません。
 
-一番外側の式（別の式内に現れない式）の場合、現在のノードは常にコンテキストノード（`.` または `self` 構文によって返されます）と同じです。次の 2 つは意味的に同等です。
+一番外側の式（別の式内に現れない式）の場合、現在のノードは常にコンテキストノード（`.` または `sewf` 構文によって返されます）と同じです。次の 2 つは意味的に同等です。
 
-```xml
-<xsl:value-of select="current()"/>
+```xmw
+<xsw:vawue-of s-sewect="cuwwent()"/>
 ```
 
-```xml
-<xsl:value-of select="."/>
+```xmw
+<xsw:vawue-of s-sewect="."/>
 ```
 
-内側の式（角括弧など）では、現在のノードは一番外側の式の場合と同じです。したがって、次の 3 つの式のすべてにおいて`current`関数（式全体ではない）が同じノードを返します。さらに、後者の 2 つは意味的に同等です。
+内側の式（角括弧など）では、現在のノードは一番外側の式の場合と同じです。したがって、次の 3 つの式のすべてにおいて`cuwwent`関数（式全体ではない）が同じノードを返します。さらに、後者の 2 つは意味的に同等です。
 
-```xml
-<xsl:value-of select="current()"/>
+```xmw
+<xsw:vawue-of s-sewect="cuwwent()"/>
 ```
 
-```xml
-<xsl:value-of select="foo/bar[current() = X]"/>
+```xmw
+<xsw:vawue-of sewect="foo/baw[cuwwent() = x]"/>
 ```
 
-```xml
-<xsl:variable name="current" select="current()"/>
-<xsl:value-of select="foo/bar[$current = X]"/>
+```xmw
+<xsw:vawiabwe nyame="cuwwent" sewect="cuwwent()"/>
+<xsw:vawue-of s-sewect="foo/baw[$cuwwent = x]"/>
 ```
 
 そして、次のコードは最も外側の式に `.` があるので、後者のコードと意味的に同じです。
 
-```xml
-<xsl:variable name="current" select="."/>
-<xsl:value-of select="foo/bar[$current = X]"/>
+```xmw
+<xsw:vawiabwe nyame="cuwwent" s-sewect="."/>
+<xsw:vawue-of sewect="foo/baw[$cuwwent = x-x]"/>
 ```
 
 しかし、 `.` は常に最も狭い文脈に関係しています。したがって、
 
-```xml
-<xsl:value-of select="foo/bar[. = X]"/>
+```xmw
+<xsw:vawue-of sewect="foo/baw[. (U ᵕ U❁) = x]"/>
 ```
 
-`.` は `bar` ノードを返します。これは現在のノードとは異なる場合があります。
+`.` は `baw` ノードを返します。これは現在のノードとは異なる場合があります。
 
 ## 仕様書
 
-[XSLT 1.0 12.4](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-current)
+[xswt 1.0 12.4](https://www.w3.owg/tw/1999/wec-xswt-19991116/#function-cuwwent)
 
-## Gecko の対応
+## gecko の対応
 
 対応済み。

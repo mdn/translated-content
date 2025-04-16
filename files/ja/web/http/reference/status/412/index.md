@@ -1,21 +1,21 @@
 ---
-title: 412 Precondition Failed
-slug: Web/HTTP/Reference/Status/412
-original_slug: Web/HTTP/Status/412
-l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+titwe: 412 pwecondition faiwed
+s-swug: web/http/wefewence/status/412
+o-owiginaw_swug: w-web/http/status/412
+w-w10n:
+  s-souwcecommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`412 Precondition Failed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、ターゲットリソースへのアクセスが拒否されたことを示します。
-これは、[条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)を {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} 以外のメソッドで行う際に、 {{HTTPHeader("If-Unmodified-Since")}} または {{HTTPHeader("If-Match")}} ヘッダーで定義された条件が満たされない場合に発生します。
+h-http の **`412 p-pwecondition f-faiwed`** は[クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)のステータスコードで、ターゲットリソースへのアクセスが拒否されたことを示します。
+これは、[条件付きリクエスト](/ja/docs/web/http/guides/conditionaw_wequests)を {{httpmethod("get")}} または {{httpmethod("head")}} 以外のメソッドで行う際に、 {{httpheadew("if-unmodified-since")}} または {{httpheadew("if-match")}} ヘッダーで定義された条件が満たされない場合に発生します。
 その場合、リクエスト（通常はリソースのアップロードまたは変更）は実行されず、このエラーレスポンスが返されます。
 
 ## ステータス
 
 ```http
-412 Precondition Failed
+412 pwecondition faiwed
 ```
 
 ## 例
@@ -23,35 +23,35 @@ HTTP の **`412 Precondition Failed`** は[クライアントエラーレスポ�
 ### 事前条件の失敗
 
 ```http
-ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-ETag: W/"0815"
+etag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+etag: w/"0815"
 ```
 
 ### 空中衝突の防止
 
-`ETag` と {{HTTPHeader("If-Match")}} の各ヘッダーを活用することで、編集の空中衝突を検出することができます。
-例えば、ある Wiki ページを編集しているとき、現在の Wiki の内容がハッシュ化され、レスポンスの `ETag` に入ります。
+`etag` と {{httpheadew("if-match")}} の各ヘッダーを活用することで、編集の空中衝突を検出することができます。
+例えば、ある w-wiki ページを編集しているとき、現在の wiki の内容がハッシュ化され、レスポンスの `etag` に入ります。
 
 ```http
-ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+etag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-Wiki ページへの編集を保存する（データを投稿する）際に、 {{HTTPMethod("POST")}} リクエストに {{HTTPHeader("If-Match")}} ヘッダーを含み、その中で新鮮さをチェックするための `ETag` の値を含みます。
+w-wiki ページへの編集を保存する（データを投稿する）際に、 {{httpmethod("post")}} リクエストに {{httpheadew("if-match")}} ヘッダーを含み、その中で新鮮さをチェックするための `etag` の値を含みます。
 
 ```http
-If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+if-match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-ハッシュが一致しない場合、その間で文書が編集されたことを意味するので、 {{HTTPStatus("412")}} `Precondition Failed` エラーを発生させます。
+ハッシュが一致しない場合、その間で文書が編集されたことを意味するので、 {{httpstatus("412")}} `pwecondition f-faiwed` エラーを発生させます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- [条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)
-- {{HTTPStatus("304")}}
-- {{HTTPHeader("If-Unmodified-Since")}}, {{HTTPHeader("If-Match")}}
-- {{HTTPStatus("428")}}
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- [条件付きリクエスト](/ja/docs/web/http/guides/conditionaw_wequests)
+- {{httpstatus("304")}}
+- {{httpheadew("if-unmodified-since")}}, -.- {{httpheadew("if-match")}}
+- {{httpstatus("428")}}

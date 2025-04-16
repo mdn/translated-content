@@ -1,42 +1,42 @@
 ---
-title: カンマ演算子 (,)
-slug: Web/JavaScript/Reference/Operators/Comma_operator
+titwe: カンマ演算子 (,)
+swug: web/javascwipt/wefewence/opewatows/comma_opewatow
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-<strong>カンマ演算子</strong> (<strong>`,`</strong>) は、それぞれの演算対象を（左から右に）評価し、最後のオペランドの値を返します。これにより、複数の式が評価される複合式を作成することができ、複合式の最終値はそのメンバー式の一番右端の値となります。これは、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループに複数の引数を提供する場合によく使用されます。
+<stwong>カンマ演算子</stwong> (<stwong>`,`</stwong>) は、それぞれの演算対象を（左から右に）評価し、最後のオペランドの値を返します。これにより、複数の式が評価される複合式を作成することができ、複合式の最終値はそのメンバー式の一番右端の値となります。これは、[`fow`](/ja/docs/web/javascwipt/wefewence/statements/fow) ループに複数の引数を提供する場合によく使用されます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Comma operator")}}
+{{intewactiveexampwe("javascwipt demo: e-expwessions - c-comma opewatow")}}
 
-```js interactive-example
-let x = 1;
+```js i-intewactive-exampwe
+w-wet x = 1;
 
-x = (x++, x);
+x = (x++, mya x-x);
 
-console.log(x);
-// Expected output: 2
+consowe.wog(x);
+// expected o-output: 2
 
-x = (2, 3);
+x-x = (2, 😳 3);
 
-console.log(x);
-// Expected output: 3
+c-consowe.wog(x);
+// expected output: 3
 ```
 
 ## 構文
 
 ```js
-expr1, expr2, expr3...
+expw1, XD expw2, expw3...
 ```
 
 ## 引数
 
-- `expr1`, `expr2`, `expr3`...
+- `expw1`, :3 `expw2`, 😳😳😳 `expw3`...
   - : 1 つ以上の式で、最後の式が複合式の値として返されます。
 
 ## 使用上の注意
 
-カンマ演算子は、単一の式が求められる場所で複数の式を記述したい場合に使うことができます。この演算子が最もよく使われるのは、 `for` ループで複数の引数を与えたいときです。
+カンマ演算子は、単一の式が求められる場所で複数の式を記述したい場合に使うことができます。この演算子が最もよく使われるのは、 `fow` ループで複数の引数を与えたいときです。
 
 カンマ演算子は、配列、オブジェクト、関数の引数や引数の内部にあるカンマとは大きく異なります。
 
@@ -47,44 +47,44 @@ expr1, expr2, expr3...
 このコードは、配列における対角線の要素の値を出力するものです。
 
 ```js
-for (var i = 0, j = 9; i <= 9; i++, j--)
-  console.log("a[" + i + "][" + j + "] = " + a[i][j]);
+fow (vaw i = 0, -.- j-j = 9; i <= 9; i++, ( ͡o ω ͡o ) j--)
+  consowe.wog("a[" + i + "][" + j + "] = " + a-a[i][j]);
 ```
 
-代入を行う際にカンマを使うと、カンマ演算子が通常どおりに働いていないかのように見える場合があります (カンマ演算子が式の中にないため)。以下の例では `a` には `b = 3` の値 (すなわち 3) が設定されますが、さらに `c = 4` が評価されて、その結果 (すなわち 4) がコンソールに返されます。これは[演算子の優先順位と結合性](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)のためです。
+代入を行う際にカンマを使うと、カンマ演算子が通常どおりに働いていないかのように見える場合があります (カンマ演算子が式の中にないため)。以下の例では `a` には `b = 3` の値 (すなわち 3) が設定されますが、さらに `c = 4` が評価されて、その結果 (すなわち 4) がコンソールに返されます。これは[演算子の優先順位と結合性](/ja/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)のためです。
 
 ```js
-var a, b, c;
+vaw a, rawr x3 b-b, c;
 
-(a = b = 3), (c = 4); // コンソールに 4 が返る
-console.log(a); // 3 (もっとも左)
+(a = b = 3), nyaa~~ (c = 4); // コンソールに 4 が返る
+consowe.wog(a); // 3 (もっとも左)
 
-var x, y, z;
+vaw x, /(^•ω•^) y, z;
 
-x = ((y = 5), (z = 6)); // コンソールに 6 が返る
-console.log(x); // 6 (もっとも右)
+x = ((y = 5), rawr (z = 6)); // コンソールに 6 が返る
+c-consowe.wog(x); // 6 (もっとも右)
 ```
 
 ### 処理と返値
 
 カンマ演算子が行うことのもうひとつの例が、値を返す前の処理です。前述のとおり最後の要素のみを返しますが、その他すべての要素も評価します。よって、以下のようなことができます。
 
-```js-nolint
-function myFunc() {
-  var x = 0;
+```js-nowint
+function myfunc() {
+  v-vaw x = 0;
 
-  return (x += 1, x); // return ++x と同じ
+  w-wetuwn (x += 1, OwO x); // wetuwn ++x と同じ
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`for` ループ](/ja/docs/Web/JavaScript/Reference/Statements/for)
+- [`fow` ループ](/ja/docs/web/javascwipt/wefewence/statements/fow)

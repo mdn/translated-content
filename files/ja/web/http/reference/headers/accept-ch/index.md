@@ -1,56 +1,56 @@
 ---
-title: Accept-CH
-slug: Web/HTTP/Reference/Headers/Accept-CH
-original_slug: Web/HTTP/Headers/Accept-CH
+titwe: accept-ch
+swug: web/http/wefewence/headews/accept-ch
+owiginaw_swug: w-web/http/headews/accept-ch
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{httpsidebaw}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-**`Accept-CH`** ヘッダーはサーバーによって設定され、クライアントが後続のリクエストに含める{{glossary("Client Hints", "クライアントヒント")}}ヘッダーを指定します。
+**`accept-ch`** ヘッダーはサーバーによって設定され、クライアントが後続のリクエストに含める{{gwossawy("cwient h-hints", (ˆ ﻌ ˆ)♡ "クライアントヒント")}}ヘッダーを指定します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header","レスポンスヘッダー")}}
+        {{gwossawy("wesponse h-headew","レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name","禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew nyame","禁止ヘッダー名")}}
       </th>
       <td>?</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> クライアントヒントには、安全なオリジン (TLS 経由) でのみアクセスできます。 Accept-CH ヘッダーと Accept-CH-Lifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して保持する必要があります。
+> [!note]
+> クライアントヒントには、安全なオリジン (tws 経由) でのみアクセスできます。 a-accept-ch ヘッダーと accept-ch-wifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して保持する必要があります。
 
 ## 構文
 
 ```
-Accept-CH: <list of client hints>
+accept-ch: <wist of cwient hints>
 ```
 
 ## 例
 
 ```
-Accept-CH: DPR, Viewport-Width
-Accept-CH: Width
-Accept-CH-Lifetime: 86400
-Vary: DPR, Viewport-Width, Width
+a-accept-ch: dpw, (⑅˘꒳˘) viewpowt-width
+accept-ch: w-width
+accept-ch-wifetime: 86400
+vawy: dpw, (U ᵕ U❁) v-viewpowt-width, -.- width
 ```
 
-> [!NOTE]
-> 受け入れられたクライアントのヒントに基づいて、[レスポンスを変更](/ja/docs/Web/HTTP/Guides/Client_hints#varying_client_hints)することを忘れないでください。
+> [!note]
+> 受け入れられたクライアントのヒントに基づいて、[レスポンスを変更](/ja/docs/web/http/guides/cwient_hints#vawying_cwient_hints)することを忘れないでください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Accept-CH-Lifetime")}}
-- {{HTTPHeader("Vary")}}
+- {{httpheadew("accept-ch-wifetime")}}
+- {{httpheadew("vawy")}}

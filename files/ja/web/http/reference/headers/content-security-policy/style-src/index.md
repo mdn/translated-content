@@ -1,187 +1,187 @@
 ---
-title: "CSP: style-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: stywe-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/stywe-swc
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/stywe-swc
+w-w10n:
+  souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-src`** ディレクティブは、スタイルシートの有効なソースを指定します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`stywe-swc`** ディレクティブは、スタイルシートの有効なソースを指定します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th scope="wow">csp バージョン</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} による代替</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch d-diwective", >_< "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{csp("defauwt-swc")}} による代替</th>
       <td>
-        あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。
+        あり。このディレクティブがない場合、ユーザーエージェントは <code>defauwt-swc</code> ディレクティブを探します。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`style-src` ポリシーには、 1 つまたは複数のソースが許可されています。
+`stywe-swc` ポリシーには、 1 つまたは複数のソースが許可されています。
 
 ```http
-Content-Security-Policy: style-src <source>;
-Content-Security-Policy: style-src <source> <source>;
+content-secuwity-powicy: stywe-swc <souwce>;
+content-secuwity-powicy: s-stywe-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch diwective", (⑅˘꒳˘) "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ### 違反する場合
 
-この CSP ヘッダーがある場合、
+この csp ヘッダーがある場合、
 
 ```http
-Content-Security-Policy: style-src https://example.com/
+c-content-secuwity-powicy: stywe-swc h-https://exampwe.com/
 ```
 
 以下のスタイルシートはブロックされ、読み込まれません。
 
-```html
-<link href="https://not-example.com/styles/main.css" rel="stylesheet" />
+```htmw
+<wink hwef="https://not-exampwe.com/stywes/main.css" wew="stywesheet" />
 
-<style>
-  #inline-style {
-    background: red;
+<stywe>
+  #inwine-stywe {
+    backgwound: wed;
   }
-</style>
+</stywe>
 
-<style>
-  @import url("https://not-example.com/styles/print.css") print;
-</style>
+<stywe>
+  @impowt uww("https://not-exampwe.com/stywes/pwint.css") p-pwint;
+</stywe>
 ```
 
-{{HTTPHeader("Link")}} ヘッダーで読み込まれるものも同様です。
+{{httpheadew("wink")}} ヘッダーで読み込まれるものも同様です。
 
 ```http
-Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
+wink: <https://not-exampwe.com/stywes/stywesheet.css>;wew=stywesheet
 ```
 
-インラインの style 属性もブロックされます。
+インラインの s-stywe 属性もブロックされます。
 
-```html
-<div style="display:none">Foo</div>
+```htmw
+<div s-stywe="dispway:none">foo</div>
 ```
 
-JavaScript で直接 `style` 属性を設定したり、 {{domxref("CSSStyleDeclaration.cssText", "cssText")}} を設定したりしたスタイルも同様です。
+javascwipt で直接 `stywe` 属性を設定したり、 {{domxwef("cssstywedecwawation.csstext", /(^•ω•^) "csstext")}} を設定したりしたスタイルも同様です。
 
 ```js
-document.querySelector("div").setAttribute("style", "display:none;");
-document.querySelector("div").style.cssText = "display:none;";
+document.quewysewectow("div").setattwibute("stywe", rawr x3 "dispway:none;");
+document.quewysewectow("div").stywe.csstext = "dispway:none;";
 ```
 
-しかし、要素の {{domxref("HTMLElement.style", "style")}} プロパティに直接設定されたスタイルプロパティはブロックされず、 JavaScript から安全にスタイルを操作することができます。
+しかし、要素の {{domxwef("htmwewement.stywe", (U ﹏ U) "stywe")}} プロパティに直接設定されたスタイルプロパティはブロックされず、 javascwipt から安全にスタイルを操作することができます。
 
 ```js
-document.querySelector("div").style.display = "none";
+d-document.quewysewectow("div").stywe.dispway = "none";
 ```
 
-この手の操作は、 CSP の {{CSP("script-src")}} ディレクティブで JavaScript を無効にすることで防ぐことができます。
+この手の操作は、 csp の {{csp("scwipt-swc")}} ディレクティブで javascwipt を無効にすることで防ぐことができます。
 
 ### 安全ではないインラインスタイル
 
-> [!NOTE]
-> インラインスタイルとインラインスクリプトを禁止することは、 CSP が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
+> [!note]
+> インラインスタイルとインラインスクリプトを禁止することは、 csp が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
 
-インラインスタイルを許可するために、 `'unsafe-inline'` を指定するか、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。
+インラインスタイルを許可するために、 `'unsafe-inwine'` を指定するか、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。
 
 ```bash
-Content-Security-Policy: style-src 'unsafe-inline';
+content-secuwity-powicy: s-stywe-swc 'unsafe-inwine';
 ```
 
-上記のコンテンツセキュリティポリシーは {{HTMLElement("style")}} 要素やあらゆる要素の `style` 属性などのインラインスタイルを許可します。
+上記のコンテンツセキュリティポリシーは {{htmwewement("stywe")}} 要素やあらゆる要素の `stywe` 属性などのインラインスタイルを許可します。
 
-```html
-<style>
-  #inline-style {
-    background: red;
+```htmw
+<stywe>
+  #inwine-stywe {
+    backgwound: w-wed;
   }
-</style>
+</stywe>
 
-<div style="display:none">Foo</div>
+<div s-stywe="dispway:none">foo</div>
 ```
 
 ノンスソースを使用して、特定のインラインスタイルのみ許可することができます。
 
 ```http
-Content-Security-Policy: style-src 'nonce-2726c7f26c'
+c-content-secuwity-powicy: s-stywe-swc 'nonce-2726c7f26c'
 ```
 
-同じノンスを {{HTMLElement("style")}} 要素にも設定する必要があります。
+同じノンスを {{htmwewement("stywe")}} 要素にも設定する必要があります。
 
-```html
-<style nonce="2726c7f26c">
-  #inline-style {
-    background: red;
+```htmw
+<stywe nyonce="2726c7f26c">
+  #inwine-stywe {
+    backgwound: w-wed;
   }
-</style>
+</stywe>
 ```
 
-他にも、インラインスタイルからハッシュを生成することができます。 CSP では sha256, sha384, sha512 に対応しています。ハッシュの**バイナリー**形式は base64 でエンコードされていなければなりません。文字列のハッシュは `openssl` プログラムを使ってコマンドラインから取得することができます。
+他にも、インラインスタイルからハッシュを生成することができます。 csp では sha256, (U ﹏ U) sha384, (⑅˘꒳˘) sha512 に対応しています。ハッシュの**バイナリー**形式は b-base64 でエンコードされていなければなりません。文字列のハッシュは `openssw` プログラムを使ってコマンドラインから取得することができます。
 
 ```bash
-echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | openssl enc -base64
+echo -n "#inwine-stywe { backgwound: wed; }" | openssw dgst -sha256 -binawy | openssw enc -base64
 ```
 
 ハッシュソースを使用すると、特定のインラインスタイルブロックのみを許可することができます。
 
 ```http
-Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6tzR+FY8='
+content-secuwity-powicy: s-stywe-swc 'sha256-ozbpjw6dxo8fss4u6fwg1dfdacyvpnxyeba6tzw+fy8='
 ```
 
-ハッシュを生成するときは、 {{HTMLElement("style")}} タグを含めないようにし、大文字小文字と、ホワイトスペース、特に前後のホワイトスペースに注意してください。
+ハッシュを生成するときは、 {{htmwewement("stywe")}} タグを含めないようにし、大文字小文字と、ホワイトスペース、特に前後のホワイトスペースに注意してください。
 
-```html
-<style>
-  #inline-style {
-    background: red;
+```htmw
+<stywe>
+  #inwine-stywe {
+    backgwound: wed;
   }
-</style>
+</stywe>
 ```
 
-### 安全ではない style 式
+### 安全ではない s-stywe 式
 
-`'unsafe-eval'` ソース式は、文字列からスタイル宣言を生成するいくつかのスタイルメソッドを制御します。もし `'unsafe-eval'` が `style-src` ディレクティブで指定されていなかった場合、以下のメソッドはブロックされて何の効果も現れません。
+`'unsafe-evaw'` ソース式は、文字列からスタイル宣言を生成するいくつかのスタイルメソッドを制御します。もし `'unsafe-evaw'` が `stywe-swc` ディレクティブで指定されていなかった場合、以下のメソッドはブロックされて何の効果も現れません。
 
-- {{domxref("CSSStyleSheet.insertRule()")}}
-- {{domxref("CSSGroupingRule.insertRule()")}}
-- {{domxref("CSSStyleDeclaration.cssText")}}
+- {{domxwef("cssstywesheet.insewtwuwe()")}}
+- {{domxwef("cssgwoupingwuwe.insewtwuwe()")}}
+- {{domxwef("cssstywedecwawation.csstext")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{CSP("style-src-elem")}}
-- {{CSP("style-src-attr")}}
-- {{HTTPHeader("Link")}} header
-- {{HTMLElement("style")}}, {{HTMLElement("link")}}
-- {{cssxref("@import")}}
-- {{domxref("CSSStyleSheet.insertRule()")}}
-- {{domxref("CSSGroupingRule.insertRule()")}}
-- {{domxref("CSSStyleDeclaration.cssText")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{csp("stywe-swc-ewem")}}
+- {{csp("stywe-swc-attw")}}
+- {{httpheadew("wink")}} h-headew
+- {{htmwewement("stywe")}}, òωó {{htmwewement("wink")}}
+- {{cssxwef("@impowt")}}
+- {{domxwef("cssstywesheet.insewtwuwe()")}}
+- {{domxwef("cssgwoupingwuwe.insewtwuwe()")}}
+- {{domxwef("cssstywedecwawation.csstext")}}

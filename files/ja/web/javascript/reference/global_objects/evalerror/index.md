@@ -1,62 +1,62 @@
 ---
-title: EvalError
-slug: Web/JavaScript/Reference/Global_Objects/EvalError
-l10n:
-  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
+titwe: evawewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/evawewwow
+w-w10n:
+  s-souwcecommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`EvalError`** オブジェクトは、グローバルの {{jsxref("Global_Objects/eval", "eval()")}} 関数に関するエラーを示します。この例外はもう JavaScript からは発生しなくなっていますが、互換性のために `EvalError` オブジェクトが残っています。
+**`evawewwow`** オブジェクトは、グローバルの {{jsxwef("gwobaw_objects/evaw", σωσ "evaw()")}} 関数に関するエラーを示します。この例外はもう j-javascwipt からは発生しなくなっていますが、互換性のために `evawewwow` オブジェクトが残っています。
 
-`EvalError` は {{Glossary("serializable object","シリアライズ可能オブジェクト")}} ですので、{{DOMxRef("Window.structuredClone", "structuredClone()")}} でクローンされるか、{{domxref("Worker/postMessage()", "postMessage()")}} を使い [ワーカー](/ja/docs/Web/API/Worker) の間でコピーされます。
+`evawewwow` は {{gwossawy("sewiawizabwe o-object","シリアライズ可能オブジェクト")}} ですので、{{domxwef("window.stwuctuwedcwone", >_< "stwuctuwedcwone()")}} でクローンされるか、{{domxwef("wowkew/postmessage()", :3 "postmessage()")}} を使い [ワーカー](/ja/docs/web/api/wowkew) の間でコピーされます。
 
-`EvalError` は {{jsxref("Error")}} のサブクラスです。
+`evawewwow` は {{jsxwef("ewwow")}} のサブクラスです。
 
 ## コンストラクター
 
-- {{jsxref("EvalError/EvalError", "EvalError()")}}
-  - : 新しい `EvalError` オブジェクトを生成します。
+- {{jsxwef("evawewwow/evawewwow", (U ﹏ U) "evawewwow()")}}
+  - : 新しい `evawewwow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-_親である {{jsxref("Error")} から継承したプロパティがあります_。
+_親である {{jsxwef("ewwow")} から継承したプロパティがあります_。
 
-これらのプロパティは `EvalError.prototype` に定義されており、すべての `EvalError` インスタンスで共有されます。
+これらのプロパティは `evawewwow.pwototype` に定義されており、すべての `evawewwow` インスタンスで共有されます。
 
-- {{jsxref("Object/constructor", "EvalError.prototype.constructor")}}
-  - : インスタンスオブジェクトを作成したコンストラクター関数。`EvalError` インスタンスの場合、初期値は {{jsxref("EvalError/EvalError", "EvalError")}} コンストラクターです。
-- {{jsxref("Error/name", "EvalError.prototype.name")}}
-  - : エラー名です。`EvalError.prototype.name` の場合、初期値は `"EvalError"` です。
+- {{jsxwef("object/constwuctow", -.- "evawewwow.pwototype.constwuctow")}}
+  - : インスタンスオブジェクトを作成したコンストラクター関数。`evawewwow` インスタンスの場合、初期値は {{jsxwef("evawewwow/evawewwow", (ˆ ﻌ ˆ)♡ "evawewwow")}} コンストラクターです。
+- {{jsxwef("ewwow/name", (⑅˘꒳˘) "evawewwow.pwototype.name")}}
+  - : エラー名です。`evawewwow.pwototype.name` の場合、初期値は `"evawewwow"` です。
 
 ## インスタンスメソッド
 
-_親である {{jsxref("Error")} から継承したプロパティがあります_。
+_親である {{jsxwef("ewwow")} から継承したプロパティがあります_。
 
 ## 例
 
-### EvalError の生成
+### e-evawewwow の生成
 
 ```js
-try {
-  throw new EvalError("Hello");
-} catch (e) {
-  console.log(e instanceof EvalError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "EvalError"
-  console.log(e.stack); // エラースタック
+t-twy {
+  thwow new e-evawewwow("hewwo");
+} c-catch (e) {
+  consowe.wog(e instanceof evawewwow); // twue
+  consowe.wog(e.message); // "hewwo"
+  c-consowe.wog(e.name); // "evawewwow"
+  consowe.wog(e.stack); // エラースタック
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
-- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("gwobaw_objects/evaw", "evaw()")}}

@@ -1,34 +1,34 @@
 ---
-title: DataView.prototype.getInt8()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
+titwe: dataview.pwototype.getint8()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/getint8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getInt8()`** メソッドは、符号付き 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
+**`getint8()`** メソッドは、符号付き 8 ビット整数 (byte) 値を {{jsxwef("dataview")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt8()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.getint8()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a size i-in bytes
+const b-buffew = nyew a-awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt8(1, 127); // Max signed 8-bit integer
+c-const view = nyew dataview(buffew);
+view.setint8(1, (U ᵕ U❁) 127); // max signed 8-bit integew
 
-console.log(view.getInt8(1));
-// Expected output: 127
+consowe.wog(view.getint8(1));
+// e-expected output: 127
 ```
 
 ## 構文
 
 ```
-dataview.getInt8(byteOffset)
+dataview.getint8(byteoffset)
 ```
 
 ### 引数
 
-- `byteOffset`
+- `byteoffset`
   - : ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。
 
 ### 返値
@@ -37,8 +37,8 @@ dataview.getInt8(byteOffset)
 
 ### 発生するエラー
 
-- {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `byteoffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
 
 ## 解説
 
@@ -46,23 +46,23 @@ dataview.getInt8(byteOffset)
 
 ## 例
 
-### getInt8 メソッドの使用
+### g-getint8 メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getInt8(1); // 0
+vaw buffew = n-nyew awwaybuffew(8);
+vaw dataview = nyew dataview(buffew);
+dataview.getint8(1); // 0
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

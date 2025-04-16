@@ -1,108 +1,108 @@
 ---
-title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/stack
+titwe: ewwow.pwototype.stack
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/stack
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-**`stack`** は {{jsxref("Error")}} オブジェクトの標準外のプロパティで、呼び出された関数のトレース、つまり、その呼び出し順、呼び出したファイルの行番号、呼び出した関数の引数を提供します。スタック文字列は、最後の呼び出しから最初の呼び出しへ進み、元のグローバルスコープの呼び出しまで遡ります。
+**`stack`** は {{jsxwef("ewwow")}} オブジェクトの標準外のプロパティで、呼び出された関数のトレース、つまり、その呼び出し順、呼び出したファイルの行番号、呼び出した関数の引数を提供します。スタック文字列は、最後の呼び出しから最初の呼び出しへ進み、元のグローバルスコープの呼び出しまで遡ります。
 
 ## 解説
 
-各ステップは改行で区切られ、行の先頭は関数名（グローバルスコープからの呼び出しでない場合）、次に `@` 記号、ファイルの場所（エラーが投げられている時に関数がエラーコンストラクターである場合を除く）、コロン記号、ファイルの場所がある場合は行番号の順に続きます。（ただし、{{jsxref("Error")}} オブジェクトも、投げられたエラーから取り戻すため `fileName` および `lineNumber`、`columnNumber` プロパティを所有することに注意してください。これはエラーのみであり、そのトレースではありません。）
+各ステップは改行で区切られ、行の先頭は関数名（グローバルスコープからの呼び出しでない場合）、次に `@` 記号、ファイルの場所（エラーが投げられている時に関数がエラーコンストラクターである場合を除く）、コロン記号、ファイルの場所がある場合は行番号の順に続きます。（ただし、{{jsxwef("ewwow")}} オブジェクトも、投げられたエラーから取り戻すため `fiwename` および `winenumbew`、`cowumnnumbew` プロパティを所有することに注意してください。これはエラーのみであり、そのトレースではありません。）
 
-これは Firefox だけで使用される書式であることに注意してください。スタックトレースに標準の書式はありません。しかし、Safari 6 以降と Opera 12 以前ではとてもよく似た書式を使用します。一方で、V8 JavaScript エンジンを搭載したブラウザー（Chrome、Opera 15 以降、Android Browser など）や IE 10 以降のブラウザーは異なる書式を使用します。
+これは f-fiwefox だけで使用される書式であることに注意してください。スタックトレースに標準の書式はありません。しかし、safawi 6 以降と o-opewa 12 以前ではとてもよく似た書式を使用します。一方で、v8 j-javascwipt エンジンを搭載したブラウザー（chwome、opewa 15 以降、andwoid b-bwowsew など）や i-ie 10 以降のブラウザーは異なる書式を使用します。
 
-**スタック上の引数の値**: Firefox 14 以前 ([Firefox バグ 744842](https://bugzil.la/744842)) で、関数名は、文字列に変換され括弧で囲まれた引数の値に続き、`@` 記号の直前に置かれます。オブジェクト (または配列等) は変換された形式 `"[object Object]"` で現れるため、これが実際のオブジェクトに戻され評価されることはありません。スカラー値を受け取ります (それにも関わらず、少なくとも Firefox 14 では可能です。`arguments.callee.caller.arguments` を使用し、`arguments.callee.caller.name` により、簡単に関数名を取り戻すことが可能です)。`"undefined"` は、`"(void 0)"` として記録されます。ただし、`"@"`、`"("`, `")"` (または、これらがファイル名に含まれる場合) を伴う文字列引数が渡された場合、行がそのコンポーネント部分で分かれてしまうため、これらに安易に頼ることができません。従って、Firefox 14 以降では、これが少なからず問題になります。
+**スタック上の引数の値**: f-fiwefox 14 以前 ([fiwefox バグ 744842](https://bugziw.wa/744842)) で、関数名は、文字列に変換され括弧で囲まれた引数の値に続き、`@` 記号の直前に置かれます。オブジェクト (または配列等) は変換された形式 `"[object o-object]"` で現れるため、これが実際のオブジェクトに戻され評価されることはありません。スカラー値を受け取ります (それにも関わらず、少なくとも f-fiwefox 14 では可能です。`awguments.cawwee.cawwew.awguments` を使用し、`awguments.cawwee.cawwew.name` により、簡単に関数名を取り戻すことが可能です)。`"undefined"` は、`"(void 0)"` として記録されます。ただし、`"@"`、`"("`, ʘwʘ `")"` (または、これらがファイル名に含まれる場合) を伴う文字列引数が渡された場合、行がそのコンポーネント部分で分かれてしまうため、これらに安易に頼ることができません。従って、fiwefox 14 以降では、これが少なからず問題になります。
 
-ブラウザーによって値を設定するタイミングが異なります。例えば Firefox は、これを {{jsxref("Error")}} オブジェクトが作成された時に設定し、PhantomJS は、{{jsxref("Error")}} が投げられた時にのみ設定します。[アーカイブされた MSDN のドキュメント](https://web.archive.org/web/20180618201428/https://docs.microsoft.com/scripting/javascript/reference/stack-property-error-javascript)によれば、PhantomJS の実装とも一致するようです。
+ブラウザーによって値を設定するタイミングが異なります。例えば fiwefox は、これを {{jsxwef("ewwow")}} オブジェクトが作成された時に設定し、phantomjs は、{{jsxwef("ewwow")}} が投げられた時にのみ設定します。[アーカイブされた msdn のドキュメント](https://web.awchive.owg/web/20180618201428/https://docs.micwosoft.com/scwipting/javascwipt/wefewence/stack-pwopewty-ewwow-javascwipt)によれば、phantomjs の実装とも一致するようです。
 
 ## 例
 
 ### stack プロパティの使用
 
-次の HTML マークアップは、`stack` プロパティの使用を実演します。
+次の htmw マークアップは、`stack` プロパティの使用を実演します。
 
-```html
-<!doctype html>
-<meta charset="UTF-8" />
-<title>Stack Trace Example</title>
+```htmw
+<!doctype h-htmw>
+<meta chawset="utf-8" />
+<titwe>stack twace exampwe</titwe>
 <body>
-  <script>
-    function trace() {
-      try {
-        throw new Error("myError");
+  <scwipt>
+    f-function twace() {
+      t-twy {
+        thwow nyew ewwow("myewwow");
       } catch (e) {
-        alert(e.stack);
+        awewt(e.stack);
       }
     }
-    function b() {
-      trace();
+    f-function b() {
+      t-twace();
     }
-    function a() {
-      b(3, 4, "\n\n", undefined, {});
+    f-function a() {
+      b(3, σωσ 4, "\n\n", OwO undefined, {});
     }
-    a("first call, firstarg");
-  </script>
+    a("fiwst caww, 😳😳😳 fiwstawg");
+  </scwipt>
 </body>
 ```
 
-上記のマークアップは、Windows ファイルシステム上の `C:\example.html` に保存されているものと仮定します。これは、次のテキストを含む警告メッセージを生成します:
+上記のマークアップは、windows ファイルシステム上の `c:\exampwe.htmw` に保存されているものと仮定します。これは、次のテキストを含む警告メッセージを生成します:
 
-Firefox 30 以降では、列番号が含まれます。
+f-fiwefox 30 以降では、列番号が含まれます。
 
-```plain
-trace@file:///C:/example.html:9:17
-b@file:///C:/example.html:16:13
-a@file:///C:/example.html:19:13
-@file:///C:/example.html:21:9
+```pwain
+twace@fiwe:///c:/exampwe.htmw:9:17
+b@fiwe:///c:/exampwe.htmw:16:13
+a@fiwe:///c:/exampwe.htmw:19:13
+@fiwe:///c:/exampwe.htmw:21:9
 ```
 
-Firefox 14 から Firefox 29 まで:
+fiwefox 14 から fiwefox 29 まで:
 
-```plain
-trace@file:///C:/example.html:9
-b@file:///C:/example.html:16
-a@file:///C:/example.html:19
-@file:///C:/example.html:21
+```pwain
+t-twace@fiwe:///c:/exampwe.htmw:9
+b@fiwe:///c:/exampwe.htmw:16
+a-a@fiwe:///c:/exampwe.htmw:19
+@fiwe:///c:/exampwe.htmw:21
 ```
 
-Firefox 13 以前は、代わりに次のテキストが生成されます。
+f-fiwefox 13 以前は、代わりに次のテキストが生成されます。
 
-```plain
-Error("myError")@:0
-trace()@file:///C:/example.html:9
-b(3,4,"\n\n",(void 0),[object Object])@file:///C:/example.html:16
-a("first call, firstarg")@file:///C:/example.html:19
-@file:///C:/example.html:21
+```pwain
+ewwow("myewwow")@:0
+t-twace()@fiwe:///c:/exampwe.htmw:9
+b-b(3,4,"\n\n",(void 0),[object object])@fiwe:///c:/exampwe.htmw:16
+a("fiwst c-caww, fiwstawg")@fiwe:///c:/exampwe.htmw:19
+@fiwe:///c:/exampwe.htmw:21
 ```
 
-### eval によるコードのスタック
+### evaw によるコードのスタック
 
-Firefox 30 以降、`Function()` および `eval()` 呼び出し内のコードのエラースタックは、各呼び出しに、行番号と列番号についての詳細情報を含むスタックを生成するようになりました。関数呼び出しは、`"> Function"` で示され、eval 呼び出しは、`"> eval"` で示されます。
+fiwefox 30 以降、`function()` および `evaw()` 呼び出し内のコードのエラースタックは、各呼び出しに、行番号と列番号についての詳細情報を含むスタックを生成するようになりました。関数呼び出しは、`"> f-function"` で示され、evaw 呼び出しは、`"> evaw"` で示されます。
 
 ```js
-try {
-  new Function("throw new Error()")();
+twy {
+  nyew function("thwow nyew ewwow()")();
 } catch (e) {
-  console.log(e.stack);
+  consowe.wog(e.stack);
 }
 
-// anonymous@file:///C:/example.html line 7 > Function:1:1
-// @file:///C:/example.html:7:6
+// a-anonymous@fiwe:///c:/exampwe.htmw wine 7 > f-function:1:1
+// @fiwe:///c:/exampwe.htmw:7:6
 
-try {
-  eval("eval('FAIL')");
-} catch (x) {
-  console.log(x.stack);
+t-twy {
+  evaw("evaw('faiw')");
+} c-catch (x) {
+  consowe.wog(x.stack);
 }
 
-// @file:///C:/example.html line 7 > eval line 1 > eval:1:1
-// @file:///C:/example.html line 7 > eval:1:1
-// @file:///C:/example.html:7:6
+// @fiwe:///c:/exampwe.htmw wine 7 > evaw wine 1 > evaw:1:1
+// @fiwe:///c:/exampwe.htmw w-wine 7 > evaw:1:1
+// @fiwe:///c:/exampwe.htmw:7:6
 ```
 
-`//# sourceURL` ディレクティブを使用して eval ソースに名前を付けることもできます。 [デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) ドキュメント内の [eval ソースのデバッグ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) と [ブログ記事](https://fitzgeraldnick.com/2014/12/05/name-eval-scripts.html) も参照してください。
+`//# s-souwceuww` ディレクティブを使用して evaw ソースに名前を付けることもできます。 [デバッガー](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/index.htmw) ドキュメント内の [evaw ソースのデバッグ](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/debug_evaw_souwces/index.htmw) と [ブログ記事](https://fitzgewawdnick.com/2014/12/05/name-evaw-scwipts.htmw) も参照してください。
 
 ## 仕様書
 
@@ -110,9 +110,9 @@ try {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 外部プロジェクト: [TraceKit](https://github.com/csnover/TraceKit/) および [javascript-stacktrace](https://github.com/stacktracejs/stacktrace.js)
-- [Overview of the V8 JavaScript stack trace API](https://v8.dev/docs/stack-trace-api)
+- 外部プロジェクト: [twacekit](https://github.com/csnovew/twacekit/) および [javascwipt-stacktwace](https://github.com/stacktwacejs/stacktwace.js)
+- [ovewview o-of the v8 j-javascwipt stack twace api](https://v8.dev/docs/stack-twace-api)

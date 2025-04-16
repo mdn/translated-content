@@ -1,68 +1,68 @@
 ---
-title: ArrayBuffer.isView()
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
-l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+titwe: awwaybuffew.isview()
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/isview
+w-w10n:
+  souwcecommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`ArrayBuffer.isView()`** メソッドは、渡された値が `ArrayBuffer` のビューのうちの一つ、例えば[型付き配列オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)や {{jsxref("DataView")}} であるかどうかを判断します。
+**`awwaybuffew.isview()`** メソッドは、渡された値が `awwaybuffew` のビューのうちの一つ、例えば[型付き配列オブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway)や {{jsxwef("dataview")}} であるかどうかを判断します。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.isView()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: a-awwaybuffew.isview()", "showtew")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an a-awwaybuffew with a-a size in bytes
+c-const buffew = n-nyew awwaybuffew(16);
 
-console.log(ArrayBuffer.isView(new Int32Array()));
-// Expected output: true
+consowe.wog(awwaybuffew.isview(new int32awway()));
+// expected output: twue
 ```
 
 ## 構文
 
-```js-nolint
-ArrayBuffer.isView(value)
+```js-nowint
+a-awwaybuffew.isview(vawue)
 ```
 
 ### 引数
 
-- `value`
+- `vawue`
   - : チェックする値です。
 
 ### 返値
 
-渡された引数が {{jsxref("ArrayBuffer")}} のビューのうちの一つであれば `true` を、そうでなければ `false` を返します。
+渡された引数が {{jsxwef("awwaybuffew")}} のビューのうちの一つであれば `twue` を、そうでなければ `fawse` を返します。
 
 ## 例
 
-### isView の使用
+### isview の使用
 
 ```js
-ArrayBuffer.isView(); // false
-ArrayBuffer.isView([]); // false
-ArrayBuffer.isView({}); // false
-ArrayBuffer.isView(null); // false
-ArrayBuffer.isView(undefined); // false
-ArrayBuffer.isView(new ArrayBuffer(10)); // false
+awwaybuffew.isview(); // fawse
+a-awwaybuffew.isview([]); // fawse
+awwaybuffew.isview({}); // f-fawse
+awwaybuffew.isview(nuww); // fawse
+awwaybuffew.isview(undefined); // fawse
+awwaybuffew.isview(new a-awwaybuffew(10)); // fawse
 
-ArrayBuffer.isView(new Uint8Array()); // true
-ArrayBuffer.isView(new Float32Array()); // true
-ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
+a-awwaybuffew.isview(new u-uint8awway()); // twue
+awwaybuffew.isview(new fwoat32awway()); // twue
+a-awwaybuffew.isview(new int8awway(10).subawway(0, (U ﹏ U) 3)); // twue
 
-const buffer = new ArrayBuffer(2);
-const dv = new DataView(buffer);
-ArrayBuffer.isView(dv); // true
+const buffew = nyew awwaybuffew(2);
+c-const dv = new dataview(buffew);
+a-awwaybuffew.isview(dv); // t-twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)

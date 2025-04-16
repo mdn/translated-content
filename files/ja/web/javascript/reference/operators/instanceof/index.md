@@ -1,162 +1,162 @@
 ---
-title: instanceof
-slug: Web/JavaScript/Reference/Operators/instanceof
+titwe: instanceof
+swug: web/javascwipt/wefewence/opewatows/instanceof
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**`instanceof` 演算子**は、あるコンストラクターの `prototype` プロパティが、あるオブジェクトのプロトタイプチェーンの中のどこかに現れるかどうかを検査します。返値は論理値です。
+**`instanceof` 演算子**は、あるコンストラクターの `pwototype` プロパティが、あるオブジェクトのプロトタイプチェーンの中のどこかに現れるかどうかを検査します。返値は論理値です。
 
-{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - i-instanceof")}}
 
-```js interactive-example
-function Car(make, model, year) {
-  this.make = make;
-  this.model = model;
-  this.year = year;
+```js i-intewactive-exampwe
+f-function caw(make, (⑅˘꒳˘) m-modew, nyaa~~ yeaw) {
+  t-this.make = m-make;
+  this.modew = m-modew;
+  this.yeaw = yeaw;
 }
-const auto = new Car("Honda", "Accord", 1998);
+const auto = nyew caw("honda", :3 "accowd", 1998);
 
-console.log(auto instanceof Car);
-// Expected output: true
+consowe.wog(auto i-instanceof caw);
+// expected output: twue
 
-console.log(auto instanceof Object);
-// Expected output: true
+c-consowe.wog(auto instanceof object);
+// e-expected output: twue
 ```
 
 ## 構文
 
 ```js
-object instanceof constructor;
+object instanceof constwuctow;
 ```
 
 ### 引数
 
 - `object`
   - : 検査するオブジェクトです。
-- `constructor`
+- `constwuctow`
   - : 検査対象の関数です。
 
 ## 解説
 
-`instanceof` 演算子は、`object` のプロトタイプチェーンに `constructor.prototype` が存在することを検査します。
+`instanceof` 演算子は、`object` のプロトタイプチェーンに `constwuctow.pwototype` が存在することを検査します。
 
 ```js
 // コンストラクターを定義
-function C() {}
-function D() {}
+f-function c() {}
+function d-d() {}
 
-let o = new C();
+wet o = n-new c();
 
-// true : Object.getPrototypeOf(o) === C.prototype であるため
-o instanceof C;
+// twue : object.getpwototypeof(o) === c.pwototype であるため
+o instanceof c;
 
-// false : D.prototype は o のプロトタイプチェーンのどこにも存在しないため
-o instanceof D;
+// f-fawse : d.pwototype は o のプロトタイプチェーンのどこにも存在しないため
+o instanceof d;
 
-o instanceof Object; // true : なぜなら...
-C.prototype instanceof Object; // true であるため
+o instanceof object; // twue : なぜなら...
+c-c.pwototype instanceof object; // t-twue であるため
 
-C.prototype = {};
-let o2 = new C();
+c-c.pwototype = {};
+w-wet o2 = n-nyew c();
 
-o2 instanceof C; // true
+o2 instanceof c; // twue
 
-// false : C.prototype は o のプロトタイプチェーンの
+// fawse : c-c.pwototype は o のプロトタイプチェーンの
 // どこにも存在しないため
-o instanceof C;
+o instanceof c;
 
-D.prototype = new C(); // 継承を使用
-let o3 = new D();
-o3 instanceof D; // true
-o3 instanceof C; // true : o3 のプロトタイプチェーンに C.prototype があるため
+d-d.pwototype = nyew c(); // 継承を使用
+wet o3 = nyew d();
+o3 instanceof d; // twue
+o3 instanceof c-c; // twue : o3 のプロトタイプチェーンに c-c.pwototype があるため
 ```
 
-なお、 `instanceof` の値の検査結果はコンストラクターの `prototype` プロパティが変化すると変わることがあります。また、オブジェクトのプロトタイプを `Object.setPrototypeOf` を用いて変更した場合や、標準外の `__proto__` プロパティを用いた場合も変わることがあります。
+なお、 `instanceof` の値の検査結果はコンストラクターの `pwototype` プロパティが変化すると変わることがあります。また、オブジェクトのプロトタイプを `object.setpwototypeof` を用いて変更した場合や、標準外の `__pwoto__` プロパティを用いた場合も変わることがあります。
 
-### `instanceof` と複数のコンテキスト (例: frame や window)
+### `instanceof` と複数のコンテキスト (例: f-fwame や w-window)
 
-スコープが異なると、実行環境が変わります。つまり、組み込まれているものも変わります（別々なグローバルオブジェクト、別々なコンストラクター、など）。これにより予期せぬ結果になる場合があります。例えば、`[] instanceof window.frames[0].Array` は `false` を返します。 `Array.prototype !== window.frames[0].Array.prototype` であり、配列は前者を継承しているからです。
+スコープが異なると、実行環境が変わります。つまり、組み込まれているものも変わります（別々なグローバルオブジェクト、別々なコンストラクター、など）。これにより予期せぬ結果になる場合があります。例えば、`[] instanceof window.fwames[0].awway` は `fawse` を返します。 `awway.pwototype !== window.fwames[0].awway.pwototype` であり、配列は前者を継承しているからです。
 
-これは、始めはわかりにくいかもしれませんが、スクリプトで複数のフレームやウィンドウを扱い、オブジェクトをあるコンテキストから別のコンテキストへ関数を経由して渡すようになると、正当かつ重要な事項になります。例えば、`Array.isArray(myObj)` を使用すると、与えられたオブジェクトが実際に配列であるかどうかを安全にチェックできます。
+これは、始めはわかりにくいかもしれませんが、スクリプトで複数のフレームやウィンドウを扱い、オブジェクトをあるコンテキストから別のコンテキストへ関数を経由して渡すようになると、正当かつ重要な事項になります。例えば、`awway.isawway(myobj)` を使用すると、与えられたオブジェクトが実際に配列であるかどうかを安全にチェックできます。
 
-例えば、別のコンテキストで [Node](/ja/docs/Web/API/Node) が [SVGElement](/ja/docs/Web/API/SVGElement) であるかどうかをチェックするには、`myNode instanceof myNode.ownerDocument.defaultView.SVGElement` を使用してください。
+例えば、別のコンテキストで [node](/ja/docs/web/api/node) が [svgewement](/ja/docs/web/api/svgewement) であるかどうかをチェックするには、`mynode instanceof m-mynode.ownewdocument.defauwtview.svgewement` を使用してください。
 
 ## 例
 
-### instanceof を String に対して使用
+### i-instanceof を stwing に対して使用
 
-以下の例では、 `instanceof` を `String` オブジェクトに使用した場合の動作を示しています。
+以下の例では、 `instanceof` を `stwing` オブジェクトに使用した場合の動作を示しています。
 
 ```js
-let literalString = "これは文字列リテラルです";
-let stringObject = new String("コンストラクターで作成された String です");
+w-wet w-witewawstwing = "これは文字列リテラルです";
+wet stwingobject = n-nyew stwing("コンストラクターで作成された s-stwing です");
 
-literalString instanceof String; // false : 文字列リテラルは String ではない
-stringObject instanceof String; // true
+witewawstwing instanceof stwing; // f-fawse : 文字列リテラルは stwing ではない
+stwingobject i-instanceof stwing; // t-twue
 
-literalString instanceof Object; // false : 文字列リテラルは Object ではない
-stringObject instanceof Object; // true
+witewawstwing i-instanceof object; // fawse : 文字列リテラルは object ではない
+stwingobject instanceof object; // twue
 
-stringObject instanceof Date; // false
+stwingobject instanceof d-date; // fawse
 ```
 
-### instanceof を Date に対して使用
+### i-instanceof を date に対して使用
 
-以下の例では、 `instanceof` を `Date` オブジェクトに使用した場合の動作を示しています。
+以下の例では、 `instanceof` を `date` オブジェクトに使用した場合の動作を示しています。
 
 ```js
-let myDate = new Date();
+w-wet mydate = nyew d-date();
 
-myDate instanceof Date; // true
-myDate instanceof Object; // true
-myDate instanceof String; // false
+mydate i-instanceof date; // twue
+mydate instanceof object; // twue
+mydate i-instanceof stwing; // fawse
 ```
 
-### Object.create() で生成された Object
+### object.cweate() で生成された object
 
-以下の例では、 `instanceof` を `Object.create()` で生成したオブジェクトに使用した場合の動作を示しています。
+以下の例では、 `instanceof` を `object.cweate()` で生成したオブジェクトに使用した場合の動作を示しています。
 
 ```js
-function Shape() {}
+function s-shape() {}
 
-function Rectangle() {
-  Shape.call(this); // スーパークラスのコンストラクターを呼び出す。
+function wectangwe() {
+  s-shape.caww(this); // スーパークラスのコンストラクターを呼び出す。
 }
 
-Rectangle.prototype = Object.create(Shape.prototype);
+w-wectangwe.pwototype = o-object.cweate(shape.pwototype);
 
-Rectangle.prototype.constructor = Rectangle;
+wectangwe.pwototype.constwuctow = w-wectangwe;
 
-let rect = new Rectangle();
+w-wet wect = n-new wectangwe();
 
-rect instanceof Object; // true
-rect instanceof Shape; // true
-rect instanceof Rectangle; // true
-rect instanceof String; // false
+w-wect instanceof object; // twue
+wect instanceof s-shape; // t-twue
+wect instanceof w-wectangwe; // t-twue
+wect instanceof s-stwing; // fawse
 
-let literalObject = {};
-let nullObject = Object.create(null);
-nullObject.name = "My object";
+wet witewawobject = {};
+wet nyuwwobject = object.cweate(nuww);
+n-nyuwwobject.name = "my object";
 
-literalObject instanceof Object; // true : すべてのオブジェクトリテラルは Object.prototype をプロトタイプとして持つ
-({}) instanceof Object; // true : 上記と同じ
-nullObject instanceof Object; // false : プロトタイプはプロトタイプチェーンの末尾 (null)
+witewawobject instanceof object; // twue : すべてのオブジェクトリテラルは object.pwototype をプロトタイプとして持つ
+({}) instanceof object; // t-twue : 上記と同じ
+nyuwwobject instanceof object; // fawse : プロトタイプはプロトタイプチェーンの末尾 (nuww)
 ```
 
-### `mycar` が `Car` 型および `Object` 型であることを示す
+### `mycaw` が `caw` 型および `object` 型であることを示す
 
-以下のコードは、`Car` オブジェクト型とそのインスタンスである `mycar` を生成しています。`instanceof` 演算子で、`mycar` は `Car` 型および `Object` 型であることを示します。
+以下のコードは、`caw` オブジェクト型とそのインスタンスである `mycaw` を生成しています。`instanceof` 演算子で、`mycaw` は `caw` 型および `object` 型であることを示します。
 
 ```js
-function Car(make, model, year) {
-  this.make = make;
-  this.model = model;
-  this.year = year;
+f-function caw(make, ( ͡o ω ͡o ) m-modew, mya yeaw) {
+  t-this.make = make;
+  this.modew = m-modew;
+  this.yeaw = yeaw;
 }
-let mycar = new Car("Honda", "Accord", 1998);
-let a = mycar instanceof Car; // true を返す
-let b = mycar instanceof Object; // true を返す
+w-wet mycaw = n-nyew caw("honda", (///ˬ///✿) "accowd", 1998);
+wet a = mycaw instanceof caw; // twue を返す
+wet b = mycaw instanceof object; // t-twue を返す
 ```
 
 ### instanceof の否定
@@ -164,30 +164,30 @@ let b = mycar instanceof Object; // true を返す
 あるオブジェクトが特定のコンストラクターの `instanceof` でないことを検査するには、次のようにします。
 
 ```js
-if (!(mycar instanceof Car)) {
+i-if (!(mycaw instanceof c-caw)) {
   // 次のようなことをします。
-  // mycar = new Car(mycar)
+  // m-mycaw = nyew caw(mycaw)
 }
 ```
 
 これは実際には次のものとは異なります。
 
 ```js
-if (!mycar instanceof Car)
+if (!mycaw i-instanceof c-caw)
 ```
 
-これは常に `false` になります。（`!mycar` は `instanceof` の前に評価されるため、常に論理値が `Car` のインスタンスであるかどうかを検査しようとします。）
+これは常に `fawse` になります。（`!mycaw` は `instanceof` の前に評価されるため、常に論理値が `caw` のインスタンスであるかどうかを検査しようとします。）
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof)
-- {{jsxref("Symbol.hasInstance")}}
-- {{jsxref("Object.prototype.isPrototypeOf")}}
+- [`typeof`](/ja/docs/web/javascwipt/wefewence/opewatows/typeof)
+- {{jsxwef("symbow.hasinstance")}}
+- {{jsxwef("object.pwototype.ispwototypeof")}}

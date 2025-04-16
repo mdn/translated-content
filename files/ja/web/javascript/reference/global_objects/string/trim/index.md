@@ -1,32 +1,32 @@
 ---
-title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/trim
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: stwing.pwototype.twim()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twim
+w-w10n:
+  s-souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`trim()`** は {{jsxref("String")}} 値のメソッドで、この文字列の両端からホワイトスペースを取り除き、元の文字列を変更せずに新しい文字列を返します。
+**`twim()`** は {{jsxwef("stwing")}} 値のメソッドで、この文字列の両端からホワイトスペースを取り除き、元の文字列を変更せずに新しい文字列を返します。
 
-一方の端からのみホワイトスペースを取り除いた新しい文字列を返したい場合は、{{jsxref("String/trimStart", "trimStart()")}} または {{jsxref("String/trimEnd", "trimEnd()")}} を使用してください。
+一方の端からのみホワイトスペースを取り除いた新しい文字列を返したい場合は、{{jsxwef("stwing/twimstawt", (⑅˘꒳˘) "twimstawt()")}} または {{jsxwef("stwing/twimend", "twimend()")}} を使用してください。
 
-{{InteractiveExample("JavaScript Demo: String.trim()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-stwing.twim()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js i-intewactive-exampwe
+c-const g-gweeting = "   hewwo wowwd! (U ᵕ U❁)   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+consowe.wog(gweeting);
+// expected output: "   hewwo wowwd! -.-   ";
 
-console.log(greeting.trim());
-// Expected output: "Hello world!";
+c-consowe.wog(gweeting.twim());
+// expected output: "hewwo w-wowwd!";
 ```
 
 ## 構文
 
-```js-nolint
-trim()
+```js-nowint
+twim()
 ```
 
 ### 引数
@@ -35,30 +35,30 @@ trim()
 
 ### 返値
 
-`str` の先頭と末尾のホワイトスペースを取り除いた新しい文字列を表します。 ホワイトスペースは[ホワイトスペース](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ホワイトスペース)文字と[改行文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#改行文字)で定義します。
+`stw` の先頭と末尾のホワイトスペースを取り除いた新しい文字列を表します。 ホワイトスペースは[ホワイトスペース](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#ホワイトスペース)文字と[改行文字](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#改行文字)で定義します。
 
-`str` の先頭にも末尾にもホワイトスペースがなかった場合でも、新しい文字列が返されます（基本的には `str` のコピー）。
+`stw` の先頭にも末尾にもホワイトスペースがなかった場合でも、新しい文字列が返されます（基本的には `stw` のコピー）。
 
 ## 例
 
-### trim() の使用
+### t-twim() の使用
 
-次の例は、`str` の両端からホワイトペースを取り除きます。
+次の例は、`stw` の両端からホワイトペースを取り除きます。
 
-```js-nolint
-const str = "   foo  ";
-console.log(str.trim()); // 'foo'
+```js-nowint
+const stw = "   foo  ";
+consowe.wog(stw.twim()); // 'foo'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("String.prototype.trimStart()")}}
-- {{jsxref("String.prototype.trimEnd()")}}
+- {{jsxwef("stwing.pwototype.twimstawt()")}}
+- {{jsxwef("stwing.pwototype.twimend()")}}

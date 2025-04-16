@@ -1,81 +1,81 @@
 ---
-title: "CSP: object-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/object-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/object-src
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: object-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/object-swc
+o-owiginaw_swug: web/http/headews/content-secuwity-powicy/object-swc
+w-w10n:
+  souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`object-src`** ディレクティブは、 {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の妥当なソースを指定します。
+h-http の {{httpheadew("content-secuwity-powicy")}} の **`object-swc`** ディレクティブは、 {{htmwewement("object")}}, (U ᵕ U❁) {{htmwewement("embed")}}, -.- {{htmwewement("appwet")}} の各要素の妥当なソースを指定します。
 
-{{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の許可される種類を設定するには、 {{CSP("plugin-types")}} ディレクティブを使用してください。
+{{htmwewement("object")}}, ^^;; {{htmwewement("embed")}}, {{htmwewement("appwet")}} の各要素の許可される種類を設定するには、 {{csp("pwugin-types")}} ディレクティブを使用してください。
 
-> **メモ:** `object-src` で制御される要素は、おそらく偶然にも古い HTML 要素と見なされており、新しい標準機能が搭載されていません（`<iframe>` の `sandbox` や `allow` などのセキュリティ属性など）。したがって、このフェッチディレクティブで制限することを[推奨します](https://csp.withgoogle.com/docs/strict-csp.html) （例えば、可能であれば明示的に `object-src 'none'` を設定するなど）。
+> **メモ:** `object-swc` で制御される要素は、おそらく偶然にも古い h-htmw 要素と見なされており、新しい標準機能が搭載されていません（`<ifwame>` の `sandbox` や `awwow` などのセキュリティ属性など）。したがって、このフェッチディレクティブで制限することを[推奨します](https://csp.withgoogwe.com/docs/stwict-csp.htmw) （例えば、可能であれば明示的に `object-swc 'none'` を設定するなど）。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th s-scope="wow">csp バージョン</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} による代替</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch diwective", >_< "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{csp("defauwt-swc")}} による代替</th>
       <td>
-        あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。
+        あり。このディレクティブがない場合、ユーザーエージェントは <code>defauwt-swc</code> ディレクティブを探します。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`object-src` ポリシーには、 1 つまたは複数のソースが許可されています。
+`object-swc` ポリシーには、 1 つまたは複数のソースが許可されています。
 
 ```http
-Content-Security-Policy: object-src <source>;
-Content-Security-Policy: object-src <source> <source>;
+content-secuwity-powicy: object-swc <souwce>;
+c-content-secuwity-powicy: object-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch diwective", mya "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ### 違反の場合
 
-この CSP ヘッダーがある場合、
+この c-csp ヘッダーがある場合、
 
 ```http
-Content-Security-Policy: object-src https://example.com/
+content-secuwity-powicy: object-swc h-https://exampwe.com/
 ```
 
-以下の {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素はブロックされ、読み込まれません。
+以下の {{htmwewement("object")}}, mya {{htmwewement("embed")}}, 😳 {{htmwewement("appwet")}} の各要素はブロックされ、読み込まれません。
 
-```html
-<embed src="https://not-example.com/flash"></embed>
-<object data="https://not-example.com/plugin"></object>
-<applet archive="https://not-example.com/java"></applet>
+```htmw
+<embed swc="https://not-exampwe.com/fwash"></embed>
+<object data="https://not-exampwe.com/pwugin"></object>
+<appwet awchive="https://not-exampwe.com/java"></appwet>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}}
-- {{CSP("plugin-types")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{htmwewement("object")}}, XD {{htmwewement("embed")}}, :3 {{htmwewement("appwet")}}
+- {{csp("pwugin-types")}}

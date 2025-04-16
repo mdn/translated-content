@@ -1,51 +1,51 @@
 ---
-title: Content-Length
-slug: Web/HTTP/Reference/Headers/Content-Length
-original_slug: Web/HTTP/Headers/Content-Length
+titwe: content-wength
+swug: web/http/wefewence/headews/content-wength
+o-owiginaw_swug: w-web/http/headews/content-wength
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Content-Length`** エンティティヘッダーは、受信者に送信されるエンティティ本文の長さをバイト単位で示します。
+**`content-wength`** エンティティヘッダーは、受信者に送信されるエンティティ本文の長さをバイト単位で示します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Entity header", "エンティティヘッダー")}}
+        {{gwossawy("entity h-headew", σωσ "エンティティヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew n-nyame", >_< "禁止ヘッダー名")}}
       </th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Content-Length: <length>
+content-wength: <wength>
 ```
 
 ## ディレクティブ
 
-- \<length>
+- \<wength>
   - : オクテット列の長さの 10 進数表記。
 
 ## 仕様書
 
 | 仕様書                                     | 題名                                                               |
 | ------------------------------------------ | ------------------------------------------------------------------ |
-| {{RFC("7230", "Content-Length", "3.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+| {{wfc("7230", :3 "content-wength", "3.3.2")}} | hypewtext twansfew pwotocow (http/1.1): m-message syntax and wouting |
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Transfer-Encoding")}}
+- {{httpheadew("twansfew-encoding")}}

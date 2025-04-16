@@ -1,37 +1,37 @@
 ---
-title: 軸
-slug: Web/XML/XPath/Reference/Axes
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: 軸
+swug: web/xmw/xpath/wefewence/axes
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-[XPath](/ja/docs/Web/XML/XPath) 仕様では 13 種類の軸 (Axis) が定められています。軸はコンテキストノードとの関連性を表し、ツリー上でのノードのコンテキストノードからの相対的な位置を示すのに用いられます。
+[xpath](/ja/docs/web/xmw/xpath) 仕様では 13 種類の軸 (axis) が定められています。軸はコンテキストノードとの関連性を表し、ツリー上でのノードのコンテキストノードからの相対的な位置を示すのに用いられます。
 
-XPath 式の使用に関するより詳しい情報は、 [XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)ガイドの[参考文献](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading)の節を参照してください。また、[XPath 仕様書の 'axes' の節](https://www.w3.org/TR/xpath-30/#axes)も参照してください。
+x-xpath 式の使用に関するより詳しい情報は、 [xswt による x-xmw の変換](/ja/docs/web/xmw/xswt/guides/twansfowming_xmw_with_xswt)ガイドの[参考文献](/ja/docs/web/xmw/xswt/guides/twansfowming_xmw_with_xswt/fow_fuwthew_weading)の節を参照してください。また、[xpath 仕様書の 'axes' の節](https://www.w3.owg/tw/xpath-30/#axes)も参照してください。
 
-- `ancestor`
+- `ancestow`
   - : コンテキストノードの親ノードからルートノードまでのすべての祖先を示します。
-- `ancestor-or-self`
+- `ancestow-ow-sewf`
   - : コンテキストノードと、そのすべてのルートノードを含む祖先を示します。
-- `attribute`
+- `attwibute`
   - : コンテキストノードの属性を示します。属性を持つのは要素のみです。この軸はアットマーク (`@`) によって省略できます。
-- `child`
-  - : コンテキストノードの子を示します。 XPath 式で軸が指定されていなければ、デフォルトでこの軸が指定されていると認識されます。子を持つのはルートノードか要素ノードのみなので、他のノードでこの軸を使用しても何も選択されません。
+- `chiwd`
+  - : コンテキストノードの子を示します。 x-xpath 式で軸が指定されていなければ、デフォルトでこの軸が指定されていると認識されます。子を持つのはルートノードか要素ノードのみなので、他のノードでこの軸を使用しても何も選択されません。
 - `descendant`
-  - : コンテキストノードのすべての子と、そのすべての子と、そのまたすべての･･･というように示します。属性ノードと名前空間ノードは**含まれません**。 `attribute` ノードの `parent` は要素ノードですが、`attribute` ノードはその要素ノードの子ではないからです。
-- `descendant-or-self`
-  - : コンテキストノードと、そのすべての子孫を示します。属性ノードと名前空間ノードは**含まれません**。 `attribute` ノードの `parent` は要素ノードですが、`attribute` ノードはその要素ノードの子ではないからです。
-- `following`
-  - : コンテキストノードの後に現れる、`descendant`、`attribute`、`namespace` ノードを除くすべてのノードを示します。
-- `following-sibling`
+  - : コンテキストノードのすべての子と、そのすべての子と、そのまたすべての･･･というように示します。属性ノードと名前空間ノードは**含まれません**。 `attwibute` ノードの `pawent` は要素ノードですが、`attwibute` ノードはその要素ノードの子ではないからです。
+- `descendant-ow-sewf`
+  - : コンテキストノードと、そのすべての子孫を示します。属性ノードと名前空間ノードは**含まれません**。 `attwibute` ノードの `pawent` は要素ノードですが、`attwibute` ノードはその要素ノードの子ではないからです。
+- `fowwowing`
+  - : コンテキストノードの後に現れる、`descendant`、`attwibute`、`namespace` ノードを除くすべてのノードを示します。
+- `fowwowing-sibwing`
   - : コンテキストノードと同じ親を持ち、ソース文書内でコンテキストノードの後に現れるすべてのノードを示します。
 - `namespace` _(未対応)_
   - : コンテキストノードのスコープ内にあるすべてのノードを示します。この場合、コンテキストノードは要素ノードでなければなりません。
-- `parent`
+- `pawent`
   - : コンテキストノードの親である単一のノードを示します。この軸は 2 つのピリオド (`..`) によって省略できます。
-- `preceding`
-  - : 文書内でコンテキストノードの前に現れる、 `ancestor`、 `attribute` 、 `namespace` ノードを除くすべてのノードを示します。
-- `preceding-sibling`
+- `pweceding`
+  - : 文書内でコンテキストノードの前に現れる、 `ancestow`、 `attwibute` 、 `namespace` ノードを除くすべてのノードを示します。
+- `pweceding-sibwing`
   - : コンテキストノードと同じ親を持ち、ソース文書内でコンテキストノードの前に現れるすべてのノードを示します。
-- `self`
+- `sewf`
   - : コンテキストノード自身を示します。 この軸はピリオド (`.`) によって省略できます。

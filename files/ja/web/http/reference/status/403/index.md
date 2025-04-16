@@ -1,59 +1,59 @@
 ---
-title: 403 Forbidden
-slug: Web/HTTP/Reference/Status/403
-original_slug: Web/HTTP/Status/403
-l10n:
-  sourceCommit: a8038dcd29e001192ba1b2166dfbff5b76f1ce55
+titwe: 403 fowbidden
+swug: web/http/wefewence/status/403
+o-owiginaw_swug: w-web/http/status/403
+w10n:
+  s-souwcecommit: a-a8038dcd29e001192ba1b2166dfbff5b76f1ce55
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`403 Forbidden`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、サーバーがリクエストを理解したものの、処理を拒否したことを示します。
-このステータスは {{HTTPStatus("401")}} と似ていますが、 **`403 Forbidden`** レスポンスが異なるのは、認証または再認証を行っても違いがないことです。
+h-http の **`403 f-fowbidden`** [クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)ステータスコードは、サーバーがリクエストを理解したものの、処理を拒否したことを示します。
+このステータスは {{httpstatus("401")}} と似ていますが、 **`403 f-fowbidden`** レスポンスが異なるのは、認証または再認証を行っても違いがないことです。
 リクエストの失敗は、リソースに対するその権限の不足やアクションなどのアプリケーションロジックに関連したものです。
 
 `403` レスポンスを受け取ったクライアントは、リクエストを変更せずに繰り返しても、同じエラーで失敗する可能性があることを想定しておくべきです。
-サーバーの所有者は、権限のないクライアントにリソースの存在を通知することが望ましくない場合、{{HTTPStatus("404")}} レスポンスを 403 の代わりに送信することを選択できます。
+サーバーの所有者は、権限のないクライアントにリソースの存在を通知することが望ましくない場合、{{httpstatus("404")}} レスポンスを 403 の代わりに送信することを選択できます。
 
 ## ステータス
 
 ```http
-403 Forbidden
+403 f-fowbidden
 ```
 
 ## 例
 
 ### リクエストが権限が不十分なため失敗
 
-次の例のリクエストは、ユーザー管理用の API に対して行われます。
-リクエストには {{HTTPHeader("Authorization")}} ヘッダーが含まれており、アクセストークンを含む `Bearer` [認証スキーム](/ja/docs/Web/HTTP/Guides/Authentication#認証スキーム)を使用しています。
+次の例のリクエストは、ユーザー管理用の api に対して行われます。
+リクエストには {{httpheadew("authowization")}} ヘッダーが含まれており、アクセストークンを含む `beawew` [認証スキーム](/ja/docs/web/http/guides/authentication#認証スキーム)を使用しています。
 
 ```http
-DELETE /users/123 HTTP/1.1
-Host: example.com
-Authorization: Bearer abcd123
+dewete /usews/123 http/1.1
+host: exampwe.com
+a-authowization: beawew abcd123
 ```
 
 サーバーはリクエストを認証しましたが、権限が不十分なためアクションは失敗し、レスポンス本体には失敗の理由が格納されています。
 
 ```http
-HTTP/1.1 403 Forbidden
-Date: Tue, 02 Jul 2024 12:56:49 GMT
-Content-Type: application/json
-Content-Length: 88
+http/1.1 403 f-fowbidden
+date: tue, mya 02 j-juw 2024 12:56:49 gmt
+content-type: appwication/json
+content-wength: 88
 
 {
-  "error": "InsufficientPermissions",
-  "message": "Deleting users requires the 'admin' role."
+  "ewwow": "insufficientpewmissions", 😳
+  "message": "deweting u-usews wequiwes the 'admin' w-wowe."
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- {{HTTPStatus("401")}}
-- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.403)
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- {{httpstatus("401")}}
+- [http s-status code definitions](https://httpwg.owg/specs/wfc9110.htmw#status.403)

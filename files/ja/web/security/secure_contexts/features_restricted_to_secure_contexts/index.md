@@ -1,76 +1,76 @@
 ---
-title: 保護されたコンテキストに制限されている機能
-slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
-l10n:
-  sourceCommit: dea173f1ffb3e6bef851f2e328cf7562f1ef78ce
+titwe: 保護されたコンテキストに制限されている機能
+swug: w-web/secuwity/secuwe_contexts/featuwes_westwicted_to_secuwe_contexts
+w-w10n:
+  souwcecommit: d-dea173f1ffb3e6bef851f2e328cf7562f1ef78ce
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
+{{quickwinkswithsubpages("/ja/docs/web/secuwity")}}
 
-このリファレンスは、保護されたコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です — 定義や詳細については、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を参照してください。
+このリファレンスは、保護されたコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です — 定義や詳細については、[保護されたコンテキスト](/ja/docs/web/secuwity/secuwe_contexts)を参照してください。
 
 ## 保護されたコンテキストでのみ使用できる現在の機能
 
-この節では、保護されたコンテキストでのみ利用できる API の一覧示します。
+この節では、保護されたコンテキストでのみ利用できる a-api の一覧示します。
 
-- [非同期クリップボード API](/ja/docs/Web/API/Clipboard)
-- {{domxref("Audio Output Devices API", "オーディオ出力機器 API", "", "nocode")}}
-- {{domxref("Background Fetch API", "バックグラウンドフェッチ API", "", "nocode")}}
-- {{domxref("Background Synchronization API", "バックグラウンド同期 API", "", "nocode")}}
-- {{domxref("Badging API", "バッジ API", "", "nocode")}}
-- {{domxref("Barcode Detection API", "バーコード検出 API", "", "nocode")}}
-- {{domxref("Battery Status API", "バッテリー状態 API", "", "nocode")}}
-- [`Cache-Control: immutable`](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control)
-- {{domxref("Contact Picker API", "連絡先ピッカー API", "", "nocode")}}
-- {{domxref("Content Index API", "コンテンツインデックス API", "", "nocode")}}
-- {{domxref("Cookie Store API", "クッキーストア API", "", "nocode")}}
-- [資格情報管理 API](/ja/docs/Web/API/Credential_Management_API)
-- {{domxref("Device Memory API", "端末メモリー API", "", "nocode")}}
-- [Device Orientation / Device Motion](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- {{domxref("Document Picture-in-Picture API", "文書ピクチャインピクチャ API", "", "nocode")}}
-- [EyeDropper API](/ja/docs/Web/API/EyeDropper)
-- [Encrypted Media Extensions](/ja/docs/Web/API/Encrypted_Media_Extensions_API)
-- {{domxref("File System API", "ファイルシステム API", "", "nocode")}}
-- [Generic Sensor API](https://w3c.github.io/sensors/)
-- {{domxref("Gamepad API", "ゲームパッド API", "", "nocode")}}
-- {{domxref("Geolocation API", "位置情報 API", "", "nocode")}}
-- {{domxref("Idle Detection API", "アイドル検出 API", "", "nocode")}}
-- {{domxref("Keyboard API", "キーボード API", "", "nocode")}}
-- {{domxref("Local Font Access API", "ローカルファイルアクセス API", "", "nocode")}}
-- [通知 API](/ja/docs/Web/API/Notifications_API)
-- {{domxref("Payment Handler API", "決済ハンドラー API", "", "nocode")}}
-- [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API)
-- [プレゼンテーション API](/ja/docs/Web/API/Presentation_API)
-- [プッシュ API](/ja/docs/Web/API/Push_API)
-- [報告 API](/ja/docs/Web/API/Reporting_API)
-- {{domxref("Screen Capture API", "画面キャプチャ API", "", "nocode")}}
-- {{domxref("Screen Wake Lock API", "", "", "nocode")}}
-- [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)
-- {{domxref("Shared Storage API", "共有ストレージ API", "", "nocode")}}
-- [ストレージ API](/ja/docs/Web/API/Storage_API)
-- {{domxref("VirtualKeyboard API", "仮想キーボード API", "", "nocode")}}
-- [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API)
-- [ウェブブルートゥース](/ja/docs/Web/API/Web_Bluetooth_API)
-- {{domxref("Web Locks API", "ウェブロック API", "", "nocode")}}
-- [ウェブ MIDI](/ja/docs/Web/API/Web_MIDI_API)
-- {{domxref("Web NFC API", "ウェブ NFC API", "", "nocode")}}
-- [Web Crypto API](/ja/docs/Web/API/Web_Crypto_API)
-- {{domxref("WebCodecs API", "", "", "nocode")}}
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
-- {{domxref("WebHID API", "", "", "nocode")}}
-- {{domxref("WebOTP API", "", "", "nocode")}}
-- {{domxref("WebTransport API", "", "", "nocode")}}
-- {{domxref("WebUSB API", "", "", "nocode")}}
-- {{domxref("WebXR Device API", "", "", "nocode")}}
-- [ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)
-- {{domxref("Window Management API", "ウィンドウ管理", "", "nocode")}}
+- [非同期クリップボード a-api](/ja/docs/web/api/cwipboawd)
+- {{domxwef("audio o-output devices a-api", nyaa~~ "オーディオ出力機器 a-api", nyaa~~ "", :3 "nocode")}}
+- {{domxwef("backgwound fetch api", 😳😳😳 "バックグラウンドフェッチ api", (˘ω˘) "", ^^ "nocode")}}
+- {{domxwef("backgwound synchwonization api", :3 "バックグラウンド同期 a-api", -.- "", "nocode")}}
+- {{domxwef("badging api", "バッジ api", 😳 "", "nocode")}}
+- {{domxwef("bawcode d-detection api", mya "バーコード検出 api", (˘ω˘) "", "nocode")}}
+- {{domxwef("battewy s-status api", >_< "バッテリー状態 api", -.- "", "nocode")}}
+- [`cache-contwow: immutabwe`](/ja/docs/web/http/wefewence/headews/cache-contwow)
+- {{domxwef("contact pickew api", 🥺 "連絡先ピッカー a-api", (U ﹏ U) "", "nocode")}}
+- {{domxwef("content index api", >w< "コンテンツインデックス a-api", mya "", "nocode")}}
+- {{domxwef("cookie stowe a-api", >w< "クッキーストア api", nyaa~~ "", "nocode")}}
+- [資格情報管理 api](/ja/docs/web/api/cwedentiaw_management_api)
+- {{domxwef("device memowy api", (✿oωo) "端末メモリー api", ʘwʘ "", "nocode")}}
+- [device o-owientation / device motion](/ja/docs/web/api/device_owientation_events/detecting_device_owientation)
+- {{domxwef("document pictuwe-in-pictuwe api", (ˆ ﻌ ˆ)♡ "文書ピクチャインピクチャ api", 😳😳😳 "", "nocode")}}
+- [eyedwoppew api](/ja/docs/web/api/eyedwoppew)
+- [encwypted m-media extensions](/ja/docs/web/api/encwypted_media_extensions_api)
+- {{domxwef("fiwe system api", :3 "ファイルシステム a-api", OwO "", "nocode")}}
+- [genewic sensow a-api](https://w3c.github.io/sensows/)
+- {{domxwef("gamepad a-api", (U ﹏ U) "ゲームパッド a-api", >w< "", "nocode")}}
+- {{domxwef("geowocation api", (U ﹏ U) "位置情報 api", 😳 "", "nocode")}}
+- {{domxwef("idwe d-detection api", (ˆ ﻌ ˆ)♡ "アイドル検出 api", 😳😳😳 "", "nocode")}}
+- {{domxwef("keyboawd api", (U ﹏ U) "キーボード a-api", (///ˬ///✿) "", 😳 "nocode")}}
+- {{domxwef("wocaw font access api", 😳 "ローカルファイルアクセス api", σωσ "", rawr x3 "nocode")}}
+- [通知 api](/ja/docs/web/api/notifications_api)
+- {{domxwef("payment handwew a-api", OwO "決済ハンドラー api", /(^•ω•^) "", "nocode")}}
+- [決済リクエスト api](/ja/docs/web/api/payment_wequest_api)
+- [プレゼンテーション a-api](/ja/docs/web/api/pwesentation_api)
+- [プッシュ a-api](/ja/docs/web/api/push_api)
+- [報告 a-api](/ja/docs/web/api/wepowting_api)
+- {{domxwef("scween captuwe api", 😳😳😳 "画面キャプチャ api", ( ͡o ω ͡o ) "", "nocode")}}
+- {{domxwef("scween wake wock api", >_< "", "", "nocode")}}
+- [サービスワーカー](/ja/docs/web/api/sewvice_wowkew_api)
+- {{domxwef("shawed s-stowage a-api", >w< "共有ストレージ api", "", rawr "nocode")}}
+- [ストレージ a-api](/ja/docs/web/api/stowage_api)
+- {{domxwef("viwtuawkeyboawd a-api", 😳 "仮想キーボード api", >w< "", "nocode")}}
+- [ウェブ認証 a-api](/ja/docs/web/api/web_authentication_api)
+- [ウェブブルートゥース](/ja/docs/web/api/web_bwuetooth_api)
+- {{domxwef("web wocks api", (⑅˘꒳˘) "ウェブロック a-api", OwO "", (ꈍᴗꈍ) "nocode")}}
+- [ウェブ midi](/ja/docs/web/api/web_midi_api)
+- {{domxwef("web nyfc api", 😳 "ウェブ n-nyfc api", 😳😳😳 "", "nocode")}}
+- [web cwypto api](/ja/docs/web/api/web_cwypto_api)
+- {{domxwef("webcodecs a-api", mya "", "", "nocode")}}
+- [webgpu api](/ja/docs/web/api/webgpu_api)
+- {{domxwef("webhid a-api", mya "", "", "nocode")}}
+- {{domxwef("webotp a-api", (⑅˘꒳˘) "", "", "nocode")}}
+- {{domxwef("webtwanspowt api", (U ﹏ U) "", "", "nocode")}}
+- {{domxwef("webusb api", mya "", "", "nocode")}}
+- {{domxwef("webxw device api", ʘwʘ "", "", "nocode")}}
+- [ウェブ共有 api](/ja/docs/web/api/web_shawe_api)
+- {{domxwef("window management api", (˘ω˘) "ウィンドウ管理", (U ﹏ U) "", "nocode")}}
 
-さらに、次のメソッドは、(関連付けられた API がそうでない場合でも) 保護されたコンテキストが要求されます。
+さらに、次のメソッドは、(関連付けられた api がそうでない場合でも) 保護されたコンテキストが要求されます。
 
-- [`MediaDevices.getUserMedia()`](/ja/docs/Web/API/MediaDevices/getUserMedia)
-- [`Navigator.registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler)
+- [`mediadevices.getusewmedia()`](/ja/docs/web/api/mediadevices/getusewmedia)
+- [`navigatow.wegistewpwotocowhandwew()`](/ja/docs/web/api/navigatow/wegistewpwotocowhandwew)
 
 ## 関連情報
 
-- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
-- ["secure context" query on Chrome Platform Status](https://www.chromestatus.com/features#secure%20context)
+- [保護されたコンテキスト](/ja/docs/web/secuwity/secuwe_contexts)
+- ["secuwe c-context" q-quewy on chwome pwatfowm status](https://www.chwomestatus.com/featuwes#secuwe%20context)

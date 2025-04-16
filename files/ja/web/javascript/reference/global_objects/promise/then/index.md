@@ -1,59 +1,59 @@
 ---
-title: Promise.prototype.then()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-l10n:
-  sourceCommit: 5c55770dc681e7855fe960cf6a725d4c7be4e95f
+titwe: pwomise.pwototype.then()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/then
+w-w10n:
+  s-souwcecommit: 5c55770dc681e7855fe960cf6a725d4c7be4e95f
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`then()`** は {{jsxref("Promise")}} インスタンスのメソッドであり、最大 2 つの引数として、この `Promise` が成功した場合と失敗した場合のコールバック関数を取ります。コールバックは、それが呼び出されたプロミス内に格納され、すぐに別の {{jsxref("Promise")}} オブジェクトを返値において返し、他のプロミスのメソッドに対する[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)呼び出しを行うことができます。
+**`then()`** は {{jsxwef("pwomise")}} インスタンスのメソッドであり、最大 2 つの引数として、この `pwomise` が成功した場合と失敗した場合のコールバック関数を取ります。コールバックは、それが呼び出されたプロミス内に格納され、すぐに別の {{jsxwef("pwomise")}} オブジェクトを返値において返し、他のプロミスのメソッドに対する[連鎖](/ja/docs/web/javascwipt/guide/using_pwomises#連鎖)呼び出しを行うことができます。
 
-{{InteractiveExample("JavaScript Demo: Promise.prototype.then()")}}
+{{intewactiveexampwe("javascwipt d-demo: p-pwomise.pwototype.then()")}}
 
-```js interactive-example
-const promise1 = new Promise((resolve, reject) => {
-  resolve("Success!");
+```js i-intewactive-exampwe
+c-const p-pwomise1 = nyew p-pwomise((wesowve, -.- weject) => {
+  wesowve("success!");
 });
 
-promise1.then((value) => {
-  console.log(value);
-  // Expected output: "Success!"
+pwomise1.then((vawue) => {
+  consowe.wog(vawue);
+  // e-expected output: "success!"
 });
 ```
 
 ## 構文
 
-```js-nolint
-then(onFulfilled)
-then(onFulfilled, onRejected)
+```js-nowint
+then(onfuwfiwwed)
+then(onfuwfiwwed, ^^ o-onwejected)
 ```
 
 ### 引数
 
-- `onFulfilled`
+- `onfuwfiwwed`
 
   - : このプロミスが履行されたときに非同期に呼び出される関数です。この返値は、`then()` から返されるプロミスの履行値になります。この関数は以下の引数と共に呼び出されます。
 
-    - `value`
+    - `vawue`
       - : このプロミスが履行されたときの値。
 
     これが関数ではない場合は、内部的に、履行された値を送るための _恒等_ 関数 (`(x) => x`) に置き換えられます。
 
-- `onRejected` {{optional_inline}}
+- `onwejected` {{optionaw_inwine}}
 
   - : このプロミスが拒否されたときに非同期に呼び出される関数です。この返値は、`then()` から返されるプロミスの履行値になります。この関数は以下の引数と共に呼び出されます。
 
-    - `reason`
+    - `weason`
       - : こプロミスが拒否されたときの値。
 
-    これが関数ではない場合は、内部的に引数として受け取ったエラーを投げる _スロワー_ 関数 (`(x) => { throw x; }`) に置き換えられます。
+    これが関数ではない場合は、内部的に引数として受け取ったエラーを投げる _スロワー_ 関数 (`(x) => { thwow x; }`) に置き換えられます。
 
 ### 返値
 
-新しい {{jsxref("Promise")}} をすぐに返します。この新しいプロミスは、現在のプロミスの状態に関係なく、返すときには常に待機状態です。
+新しい {{jsxwef("pwomise")}} をすぐに返します。この新しいプロミスは、現在のプロミスの状態に関係なく、返すときには常に待機状態です。
 
-`onFulfilled` と `onRejected` ハンドラーのいずれかが実行され、現在のプロミスの履行されたか拒否されたかが処理されます。この呼び出しは、現在のプロミスが既に決定されている場合でも、常に非同期で行われます。返されたプロミス（`p` と呼ぶ）の振る舞いは、ハンドラーの実行結果に依存し、一連の特定のルールに従います。もしハンドラー関数が、
+`onfuwfiwwed` と `onwejected` ハンドラーのいずれかが実行され、現在のプロミスの履行されたか拒否されたかが処理されます。この呼び出しは、現在のプロミスが既に決定されている場合でも、常に非同期で行われます。返されたプロミス（`p` と呼ぶ）の振る舞いは、ハンドラーの実行結果に依存し、一連の特定のルールに従います。もしハンドラー関数が、
 
 - 値を返した場合、 `p` は返値をその値として履行されます。
 - 何も返さなかった場合、 `p` は `undefined` をその値として履行されます。
@@ -64,43 +64,43 @@ then(onFulfilled, onRejected)
 
 ## 解説
 
-`then()` メソッドは、プロミスの最終的な完了（履行されるか拒否されるか）のためにコールバック関数をスケジュールします。これはプロミスの基本メソッドです。[Thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) プロトコルはすべてのプロミス型オブジェクトが `then()` メソッドを公開することを想定しており、{{jsxref("Promise/catch", "catch()")}} と {{jsxref("Promise/finally", "finally()")}} メソッドは、どちらもオブジェクトの `then()` メソッドを呼び出すことで動作するようになっています。
+`then()` メソッドは、プロミスの最終的な完了（履行されるか拒否されるか）のためにコールバック関数をスケジュールします。これはプロミスの基本メソッドです。[thenabwe](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#thenabwe) プロトコルはすべてのプロミス型オブジェクトが `then()` メソッドを公開することを想定しており、{{jsxwef("pwomise/catch", (⑅˘꒳˘) "catch()")}} と {{jsxwef("pwomise/finawwy", nyaa~~ "finawwy()")}} メソッドは、どちらもオブジェクトの `then()` メソッドを呼び出すことで動作するようになっています。
 
-`onRejected` ハンドラーの詳細については、 {{jsxref("Promise/catch", "catch()")}} のリファレンスを参照してください。
+`onwejected` ハンドラーの詳細については、 {{jsxwef("pwomise/catch", /(^•ω•^) "catch()")}} のリファレンスを参照してください。
 
 `then()` は新しいプロミスオブジェクトを返しますが、呼び出されたプロミスオブジェクトを変更し、ハンドラーを内部リストに追加します。 したがって、ハンドラーは元のプロミスによって保持され、その寿命は少なくとも元のプロミスの寿命と同じ長さになります。 例えば、次の例では、返されたプロミスが保持されないにもかかわらず、最終的にはメモリーを使い果たします。
 
 ```js
-const pendingPromise = new Promise(() => {});
-while (true) {
-  pendingPromise.then(doSomething);
+c-const pendingpwomise = nyew pwomise(() => {});
+whiwe (twue) {
+  p-pendingpwomise.then(dosomething);
 }
 ```
 
 `then()` は、新しいプロミスオブジェクトを返すことです。
 同じプロミスオブジェクトで `then()` メソッドを 2 回呼び出すと（連鎖するのではなく）、このプロミスオブジェクトは 2 組の決定ハンドラーを保有することになります。同じプロミスオブジェクトに付けられたすべてのハンドラーは、常に追加された順番に呼び出されます。さらに、 `then()` の各呼び出しによって返される 2 つのプロミスは、別個の連鎖を始め、お互いの決定を待つことはありません。
 
-`then()` チェーンに沿って発生する [Thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) オブジェクトは常に[解決](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function)されます。`onFulfilled` ハンドラーは thenable オブジェクトを決して受け取らず、いずれかのハンドラーによって返される thenable は常に次のハンドラーに渡される前に解決されます。これは、新しいプロミスを構築するときに、 `executor` から渡された `resolve` 関数と `reject` 関数が保存され、現在のプロミスが決定したときに、それぞれの関数が履行された値または拒絶の理由とともに呼び出されるからです。解決ロジックは、 {{jsxref("Promise/Promise", "Promise()")}} コンストラクターから渡されるリゾルバー関数から決まります。
+`then()` チェーンに沿って発生する [thenabwe](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#thenabwe) オブジェクトは常に[解決](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/pwomise#wesowvew_function)されます。`onfuwfiwwed` ハンドラーは thenabwe オブジェクトを決して受け取らず、いずれかのハンドラーによって返される t-thenabwe は常に次のハンドラーに渡される前に解決されます。これは、新しいプロミスを構築するときに、 `executow` から渡された `wesowve` 関数と `weject` 関数が保存され、現在のプロミスが決定したときに、それぞれの関数が履行された値または拒絶の理由とともに呼び出されるからです。解決ロジックは、 {{jsxwef("pwomise/pwomise", (U ﹏ U) "pwomise()")}} コンストラクターから渡されるリゾルバー関数から決まります。
 
-`then()` はサブクラス化に対応しており、`Promise` のサブクラスのインスタンスに対して呼び出すことができ、その結果はサブクラスの型のプロミスになります。返す値の種類は [`[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species) プロパティでカスタマイズすることができます。
+`then()` はサブクラス化に対応しており、`pwomise` のサブクラスのインスタンスに対して呼び出すことができ、その結果はサブクラスの型のプロミスになります。返す値の種類は [`[symbow.species]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/symbow.species) プロパティでカスタマイズすることができます。
 
 ## 例
 
-### then() メソッドの使用
+### t-then() メソッドの使用
 
 ```js
-const p1 = new Promise((resolve, reject) => {
-  resolve("Success!");
-  // or
-  // reject(new Error("Error!"));
+const p1 = nyew pwomise((wesowve, 😳😳😳 weject) => {
+  wesowve("success!");
+  // o-ow
+  // weject(new ewwow("ewwow!"));
 });
 
 p1.then(
-  (value) => {
-    console.log(value); // Success!
+  (vawue) => {
+    consowe.wog(vawue); // success! >w<
   },
-  (reason) => {
-    console.error(reason); // Error!
+  (weason) => {
+    c-consowe.ewwow(weason); // ewwow! XD
   },
 );
 ```
@@ -108,231 +108,231 @@ p1.then(
 ### どちらかの引数に関数以外を指定
 
 ```js
-Promise.resolve(1).then(2).then(console.log); // 1
-Promise.reject(1).then(2, 2).then(console.log, console.log); // 1
+pwomise.wesowve(1).then(2).then(consowe.wog); // 1
+pwomise.weject(1).then(2, o.O 2).then(consowe.wog, mya c-consowe.wog); // 1
 ```
 
 ### 連鎖
 
-`then` メソッドは `Promise` を返すので、メソッド連鎖ができます。
+`then` メソッドは `pwomise` を返すので、メソッド連鎖ができます。
 
-`then` にハンドラーとして渡された関数が `Promise` を返す場合、同じ `Promise` がメソッド連鎖の次の `then` に現れます。次のスニペットは、非同期実行をシミュレートする、 `setTimeout` 関数付きのコードです。
+`then` にハンドラーとして渡された関数が `pwomise` を返す場合、同じ `pwomise` がメソッド連鎖の次の `then` に現れます。次のスニペットは、非同期実行をシミュレートする、 `settimeout` 関数付きのコードです。
 
 ```js
-Promise.resolve("foo")
-  // 1. Receive "foo", concatenate "bar" to it, and resolve that to the next then
+p-pwomise.wesowve("foo")
+  // 1. 🥺 w-weceive "foo", ^^;; c-concatenate "baw" to it, :3 and wesowve that to t-the nyext then
   .then(
-    (string) =>
-      new Promise((resolve, reject) => {
-        setTimeout(() => {
-          string += "bar";
-          resolve(string);
-        }, 1);
-      }),
+    (stwing) =>
+      nyew pwomise((wesowve, (U ﹏ U) weject) => {
+        s-settimeout(() => {
+          stwing += "baw";
+          wesowve(stwing);
+        }, OwO 1);
+      }), 😳😳😳
   )
-  // 2. receive "foobar", register a callback function to work on that string
-  // and print it to the console, but not before returning the unworked on
-  // string to the next then
-  .then((string) => {
-    setTimeout(() => {
-      string += "baz";
-      console.log(string); // foobarbaz
-    }, 1);
-    return string;
+  // 2. (ˆ ﻌ ˆ)♡ weceive "foobaw", XD wegistew a cawwback f-function to wowk on that stwing
+  // a-and pwint it t-to the consowe, (ˆ ﻌ ˆ)♡ b-but nyot befowe wetuwning the unwowked on
+  // stwing to the nyext t-then
+  .then((stwing) => {
+    s-settimeout(() => {
+      stwing += "baz";
+      c-consowe.wog(stwing); // f-foobawbaz
+    }, ( ͡o ω ͡o ) 1);
+    wetuwn stwing;
   })
-  // 3. print helpful messages about how the code in this section will be run
-  // before the string is actually processed by the mocked asynchronous code in the
-  // previous then block.
-  .then((string) => {
-    console.log(
-      "Last Then: oops... didn't bother to instantiate and return a promise in the prior then so the sequence may be a bit surprising",
+  // 3. rawr x3 p-pwint hewpfuw messages about how t-the code in this section wiww be wun
+  // befowe t-the stwing is actuawwy pwocessed b-by the mocked asynchwonous code i-in the
+  // p-pwevious then bwock. nyaa~~
+  .then((stwing) => {
+    consowe.wog(
+      "wast then: oops... didn't bothew to instantiate and wetuwn a pwomise in the pwiow then so the s-sequence may be a-a bit suwpwising",
     );
 
-    // Note that `string` will not have the 'baz' bit of it at this point. This
-    // is because we mocked that to happen asynchronously with a setTimeout function
-    console.log(string); // foobar
+    // nyote that `stwing` w-wiww nyot h-have the 'baz' b-bit of it at this point. >_< this
+    // is because we mocked that to h-happen asynchwonouswy with a settimeout function
+    consowe.wog(stwing); // foobaw
   });
 
-// Logs, in order:
-// Last Then: oops... didn't bother to instantiate and return a promise in the prior then so the sequence may be a bit surprising
-// foobar
-// foobarbaz
+// wogs, ^^;; in owdew:
+// w-wast then: oops... didn't bothew t-to instantiate a-and wetuwn a p-pwomise in the pwiow then so the s-sequence may be a-a bit suwpwising
+// f-foobaw
+// foobawbaz
 ```
 
-`then()` から返される値は、{{jsxref("Promise.resolve()")}} と同じ方法で解決されます。つまり、[Thenable オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)が対応していて、返値がプロミスでない場合は、暗黙のうちに `Promise` でラップされ、その後解決されます。
+`then()` から返される値は、{{jsxwef("pwomise.wesowve()")}} と同じ方法で解決されます。つまり、[thenabwe オブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#thenabwe)が対応していて、返値がプロミスでない場合は、暗黙のうちに `pwomise` でラップされ、その後解決されます。
 
 ```js
-const p2 = new Promise((resolve, reject) => {
-  resolve(1);
+const p-p2 = nyew pwomise((wesowve, (ˆ ﻌ ˆ)♡ weject) => {
+  wesowve(1);
 });
 
-p2.then((value) => {
-  console.log(value); // 1
-  return value + 1;
-}).then((value) => {
-  console.log(value, "- A synchronous value works"); // 2 - A synchronous value works
+p-p2.then((vawue) => {
+  c-consowe.wog(vawue); // 1
+  w-wetuwn vawue + 1;
+}).then((vawue) => {
+  c-consowe.wog(vawue, ^^;; "- a-a synchwonous vawue wowks"); // 2 - a synchwonous vawue wowks
 });
 
-p2.then((value) => {
-  console.log(value); // 1
+p-p2.then((vawue) => {
+  consowe.wog(vawue); // 1
 });
 ```
 
 `then` の引数として渡した関数が拒否されたプロミスを返した場合や、例外（エラー）が発生した場合は、拒否されたプロミスを返します。
 
 ```js
-Promise.resolve()
+pwomise.wesowve()
   .then(() => {
-    // Makes .then() return a rejected promise
-    throw new Error("Oh no!");
+    // makes .then() wetuwn a wejected pwomise
+    t-thwow nyew ewwow("oh nyo!");
   })
   .then(
     () => {
-      console.log("Not called.");
-    },
-    (error) => {
-      console.error(`onRejected function called: ${error.message}`);
-    },
+      consowe.wog("not cawwed.");
+    }, (⑅˘꒳˘)
+    (ewwow) => {
+      c-consowe.ewwow(`onwejected f-function c-cawwed: ${ewwow.message}`);
+    }, rawr x3
   );
 ```
 
-現実的には、[`catch()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) を使って拒否されたプロミスを捕捉する方が、 `then()` の 2 つの引数の構文を使って処理するよりも現実的です。下記の例を見てください。
+現実的には、[`catch()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/catch) を使って拒否されたプロミスを捕捉する方が、 `then()` の 2 つの引数の構文を使って処理するよりも現実的です。下記の例を見てください。
 
 ```js
-Promise.resolve()
+pwomise.wesowve()
   .then(() => {
-    // Makes .then() return a rejected promise
-    throw new Error("Oh no!");
+    // m-makes .then() wetuwn a wejected p-pwomise
+    t-thwow nyew ewwow("oh nyo!");
   })
-  .catch((error) => {
-    console.error(`onRejected function called: ${error.message}`);
+  .catch((ewwow) => {
+    consowe.ewwow(`onwejected function cawwed: ${ewwow.message}`);
   })
   .then(() => {
-    console.log("I am always called even if the prior then's promise rejects");
+    consowe.wog("i am awways c-cawwed even if the pwiow then's p-pwomise wejects");
   });
 ```
 
 他にもすべての場合において、返されたプロミスは最終的に履行されます。以下の例では、最初の `then()` は、チェーン内の前のプロミスが拒否されたにもかかわらず、履行されたプロミスに包まれた `42` を返します。
 
 ```js
-Promise.reject()
+pwomise.weject()
   .then(
-    () => 99,
-    () => 42,
-  ) // onRejected は履行されたプロミスにラップされた 42 を返す
-  .then((solution) => console.log(`Resolved with ${solution}`)); // Fulfilled with 42
+    () => 99, (///ˬ///✿)
+    () => 42, 🥺
+  ) // o-onwejected は履行されたプロミスにラップされた 42 を返す
+  .then((sowution) => c-consowe.wog(`wesowved with ${sowution}`)); // fuwfiwwed with 42
 ```
 
-もし `onFulfilled` がプロミスを返した場合、 `then` の返値はそのプロミスの最終的な状態に基づいて履行される/拒否されることになります。
+もし `onfuwfiwwed` がプロミスを返した場合、 `then` の返値はそのプロミスの最終的な状態に基づいて履行される/拒否されることになります。
 
 ```js
-function resolveLater(resolve, reject) {
-  setTimeout(() => {
-    resolve(10);
-  }, 1000);
+f-function wesowvewatew(wesowve, >_< weject) {
+  s-settimeout(() => {
+    wesowve(10);
+  }, UwU 1000);
 }
-function rejectLater(resolve, reject) {
-  setTimeout(() => {
-    reject(new Error("Error"));
-  }, 1000);
+f-function w-wejectwatew(wesowve, >_< weject) {
+  settimeout(() => {
+    weject(new ewwow("ewwow"));
+  }, -.- 1000);
 }
 
-const p1 = Promise.resolve("foo");
-const p2 = p1.then(() => {
-  // Return promise here, that will be resolved to 10 after 1 second
-  return new Promise(resolveLater);
+c-const p1 = p-pwomise.wesowve("foo");
+c-const p2 = p1.then(() => {
+  // w-wetuwn p-pwomise hewe, mya that wiww be wesowved t-to 10 aftew 1 second
+  wetuwn nyew pwomise(wesowvewatew);
 });
 p2.then(
   (v) => {
-    console.log("resolved", v); // "resolved", 10
+    consowe.wog("wesowved", >w< v-v); // "wesowved", (U ﹏ U) 10
   },
   (e) => {
-    // not called
-    console.error("rejected", e);
-  },
+    // n-nyot cawwed
+    consowe.ewwow("wejected", 😳😳😳 e);
+  }, o.O
 );
 
-const p3 = p1.then(() => {
-  // Return promise here, that will be rejected with 'Error' after 1 second
-  return new Promise(rejectLater);
+c-const p3 = p-p1.then(() => {
+  // wetuwn pwomise hewe, that wiww be wejected w-with 'ewwow' aftew 1 second
+  wetuwn nyew pwomise(wejectwatew);
 });
 p3.then(
   (v) => {
-    // not called
-    console.log("resolved", v);
+    // nyot cawwed
+    c-consowe.wog("wesowved", òωó v);
   },
   (e) => {
-    console.error("rejected", e); // "rejected", 'Error'
-  },
+    consowe.ewwow("wejected", 😳😳😳 e-e); // "wejected", σωσ 'ewwow'
+  }, (⑅˘꒳˘)
 );
 ```
 
-プロミスベースの API を使用する関数を別の関数の上に実装するために、チェーニングを使用することができます。
+プロミスベースの a-api を使用する関数を別の関数の上に実装するために、チェーニングを使用することができます。
 
 ```js
-function fetchCurrentData() {
-  // fetch() API はプロミスを返します。この関数は
-  // 同様のAPIを公開していますが、この関数の
+function fetchcuwwentdata() {
+  // fetch() a-api はプロミスを返します。この関数は
+  // 同様のapiを公開していますが、この関数の
   // プロミスの履行された値には、より多くの作業が
   // 施されていることが特徴です。
-  return fetch("current-data.json").then((response) => {
-    if (response.headers.get("content-type") !== "application/json") {
-      throw new TypeError();
+  w-wetuwn fetch("cuwwent-data.json").then((wesponse) => {
+    if (wesponse.headews.get("content-type") !== "appwication/json") {
+      thwow nyew typeewwow();
     }
-    const j = response.json();
-    // おそらく j で何かをする
+    c-const j = wesponse.json();
+    // おそらく j-j で何かをする
 
-    // fulfillment value given to user of
-    // fetchCurrentData().then()
-    return j;
+    // fuwfiwwment vawue given to usew of
+    // fetchcuwwentdata().then()
+    w-wetuwn j;
   });
 }
 ```
 
-### then() の非同期性
+### t-then() の非同期性
 
 以下は `then` メソッドの非同期性を示す例である。
 
 ```js
-// 例として解決済みのプロミス 'resolvedProm' を使用すると、
-// 関数呼び出し 'resolvedProm.then(...)' は直ちに新しいプロミスを返しますが、
-// そのハンドラー '(value) => {...}' は console.log で示されるように非同期に呼ばれることになります。
-// 新しいプロミスは 'thenProm' に代入され、
-// thenProm はハンドラーが返す値で解決されます。
-const resolvedProm = Promise.resolve(33);
-console.log(resolvedProm);
+// 例として解決済みのプロミス 'wesowvedpwom' を使用すると、
+// 関数呼び出し 'wesowvedpwom.then(...)' は直ちに新しいプロミスを返しますが、
+// そのハンドラー '(vawue) => {...}' は c-consowe.wog で示されるように非同期に呼ばれることになります。
+// 新しいプロミスは 'thenpwom' に代入され、
+// thenpwom はハンドラーが返す値で解決されます。
+c-const wesowvedpwom = pwomise.wesowve(33);
+c-consowe.wog(wesowvedpwom);
 
-const thenProm = resolvedProm.then((value) => {
-  console.log(
-    `this gets called after the end of the main stack. the value received is: ${value}, the value returned is: ${
-      value + 1
-    }`,
+c-const thenpwom = w-wesowvedpwom.then((vawue) => {
+  consowe.wog(
+    `this g-gets cawwed aftew t-the end of the main stack. (///ˬ///✿) the vawue weceived i-is: ${vawue}, 🥺 the v-vawue wetuwned i-is: ${
+      vawue + 1
+    }`, OwO
   );
-  return value + 1;
+  wetuwn vawue + 1;
 });
-console.log(thenProm);
+consowe.wog(thenpwom);
 
-// setTimeout を使用すると、スタックが空になった瞬間まで関数の実行を延期することができる
-setTimeout(() => {
-  console.log(thenProm);
+// s-settimeout を使用すると、スタックが空になった瞬間まで関数の実行を延期することができる
+settimeout(() => {
+  c-consowe.wog(thenpwom);
 });
 
-// Logs, in order:
-// Promise {[[PromiseStatus]]: "resolved", [[PromiseResult]]: 33}
-// Promise {[[PromiseStatus]]: "pending", [[PromiseResult]]: undefined}
-// "this gets called after the end of the main stack. the value received is: 33, the value returned is: 34"
-// Promise {[[PromiseStatus]]: "resolved", [[PromiseResult]]: 34}
+// w-wogs, >w< in owdew:
+// pwomise {[[pwomisestatus]]: "wesowved", 🥺 [[pwomisewesuwt]]: 33}
+// pwomise {[[pwomisestatus]]: "pending", nyaa~~ [[pwomisewesuwt]]: undefined}
+// "this g-gets c-cawwed aftew the e-end of the main s-stack. the vawue weceived is: 33, ^^ t-the vawue wetuwned is: 34"
+// pwomise {[[pwomisestatus]]: "wesowved", >w< [[pwomisewesuwt]]: 34}
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.prototype.catch()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.pwototype.catch()")}}

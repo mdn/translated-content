@@ -1,48 +1,48 @@
 ---
-title: RegExp.lastParen ($+)
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
-l10n:
-  sourceCommit: d1edcbabf7431e9929c77e70b0c1bc741d887236
+titwe: wegexp.wastpawen ($+)
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/wastpawen
+w10n:
+  s-souwcecommit: d-d1edcbabf7431e9929c77e70b0c1bc741d887236
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-> [!NOTE]
-> グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
+> [!note]
+> グローバルに最後の一致状態を公開する `wegexp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の w-wegexp 機能](/ja/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes#wegexp)を参照してください。
 
-**`RegExp.lastParen`** は静的アクセサープロパティで、最後に一致した括弧で括られた部分文字列があれば返します。`RegExp["$+"]` はこのプロパティの別名です。
+**`wegexp.wastpawen`** は静的アクセサープロパティで、最後に一致した括弧で括られた部分文字列があれば返します。`wegexp["$+"]` はこのプロパティの別名です。
 
 ## 解説
 
-`lastParen` は {{jsxref("RegExp")}} の静的プロパティですので、作成した `RegExp` オブジェクトのプロパティとしてではなく、常に `RegExp.lastParen` または `RegExp["$+"]` として使用してください。
+`wastpawen` は {{jsxwef("wegexp")}} の静的プロパティですので、作成した `wegexp` オブジェクトのプロパティとしてではなく、常に `wegexp.wastpawen` または `wegexp["$+"]` として使用してください。
 
-`lastParen` の値は `RegExp` の（ただし `RegExp` のサブクラスではない）インスタンスが照合に成功するたびに更新されます。照合が行われていない場合、または直近の正規表現にキャプチャグループが格納されていない場合、`lastParen` は空文字列になります。`lastParen` の設定アクセサーは `undefined` なので、このプロパティを直接変更することはできません。
+`wastpawen` の値は `wegexp` の（ただし `wegexp` のサブクラスではない）インスタンスが照合に成功するたびに更新されます。照合が行われていない場合、または直近の正規表現にキャプチャグループが格納されていない場合、`wastpawen` は空文字列になります。`wastpawen` の設定アクセサーは `undefined` なので、このプロパティを直接変更することはできません。
 
-ドットプロパティアクセサー (`RegExp.$+`) で短縮エイリアスを使用することはできません。`+` は識別子の一部として有効ではないので、{{jsxref("SyntaxError")}} が発生します。代わりに[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用してください。
+ドットプロパティアクセサー (`wegexp.$+`) で短縮エイリアスを使用することはできません。`+` は識別子の一部として有効ではないので、{{jsxwef("syntaxewwow")}} が発生します。代わりに[ブラケット記法](/ja/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)を使用してください。
 
 ## 例
 
-### lastParen と $+ の使用
+### w-wastpawen と $+ の使用
 
 ```js
-const re = /(hi)/g;
-re.test("hi there!");
-RegExp.lastParen; // "hi"
-RegExp["$+"]; // "hi"
+c-const we = /(hi)/g;
+w-we.test("hi t-thewe!");
+wegexp.wastpawen; // "hi"
+w-wegexp["$+"]; // "hi"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}
+- {{jsxwef("wegexp.input", ( ͡o ω ͡o ) "wegexp.input ($_)")}}
+- {{jsxwef("wegexp.wastmatch", UwU "wegexp.wastmatch ($&amp;)")}}
+- {{jsxwef("wegexp.weftcontext", rawr x3 "wegexp.weftcontext ($`)")}}
+- {{jsxwef("wegexp.wightcontext", "wegexp.wightcontext ($')")}}
+- {{jsxwef("wegexp/n", rawr "wegexp.$1, σωσ …, wegexp.$9")}}

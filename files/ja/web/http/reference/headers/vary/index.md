@@ -1,72 +1,72 @@
 ---
-title: Vary
-slug: Web/HTTP/Reference/Headers/Vary
-original_slug: Web/HTTP/Headers/Vary
+titwe: vawy
+swug: web/http/wefewence/headews/vawy
+o-owiginaw_swug: w-web/http/headews/vawy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Vary`** HTTP レスポンスヘッダーは、オリジンのサーバーから新しく要求するのではなく、キャッシュされたレスポンスを使用できるかどうかを決定するために将来のリクエストヘッダーをどのように一致させるかを決定します。これは、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)アルゴリズムでリソースの表現を選択するときにどのヘッダーを使用したかを示すためにサーバーによって使用されます。
+**`vawy`** h-http レスポンスヘッダーは、オリジンのサーバーから新しく要求するのではなく、キャッシュされたレスポンスを使用できるかどうかを決定するために将来のリクエストヘッダーをどのように一致させるかを決定します。これは、[コンテンツネゴシエーション](/ja/docs/web/http/guides/content_negotiation)アルゴリズムでリソースの表現を選択するときにどのヘッダーを使用したかを示すためにサーバーによって使用されます。
 
-`Vary` ヘッダーは {{HTTPStatus("200")}} `OK` レスポンスに設定されるのと同様に、 {{HTTPStatus("304")}} `Not Modified` にも設定されます。
+`vawy` ヘッダーは {{httpstatus("200")}} `ok` レスポンスに設定されるのと同様に、 {{httpstatus("304")}} `not m-modified` にも設定されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wesponse h-headew", "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden headew nyame", XD "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Vary: *
-Vary: <header-name>, <header-name>, ...
+vawy: *
+vawy: <headew-name>, :3 <headew-name>, ...
 ```
 
 ## ディレクティブ
 
 - \*
-  - : URL のための各リクエストは、固有でキャッシュ不可能なリクエストとして扱われると仮定されます。これを示すのには {{HTTPHeader("Cache-Control")}}: `no-store` を使用したほうが良く、こちらはより明確に読むことができ、オブジェクトが保存されないことを示します。
-- \<header-name>
+  - : uww のための各リクエストは、固有でキャッシュ不可能なリクエストとして扱われると仮定されます。これを示すのには {{httpheadew("cache-contwow")}}: `no-stowe` を使用したほうが良く、こちらはより明確に読むことができ、オブジェクトが保存されないことを示します。
+- \<headew-name>
   - : コンマ区切りで、キャッシュされたレスポンスが使用されるかどうかを決定する際に関わるヘッダー名のリストです。
 
 ## 例
 
 ### 動的な提供
 
-`Vary: User-Agent` ヘッダーが使用されたとき、キャッシュサーバーはキャッシュからページを提供するかどうかを決定する際にユーザーエージェントを考慮するべきです。例えば、モバイルユーザーに対して異なるコンテンツを提供しているのであれば、誤ってサイトのデスクトップ版のサイトをモバイルユーザーに対して提供してしまうことを防ぐのに役立ちます。これは Google 等の検索エンジンがページのモバイル版を発見するのに役立ち、 [クローキング](https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0) を求めずに区別することができる可能性があります。
+`vawy: usew-agent` ヘッダーが使用されたとき、キャッシュサーバーはキャッシュからページを提供するかどうかを決定する際にユーザーエージェントを考慮するべきです。例えば、モバイルユーザーに対して異なるコンテンツを提供しているのであれば、誤ってサイトのデスクトップ版のサイトをモバイルユーザーに対して提供してしまうことを防ぐのに役立ちます。これは g-googwe 等の検索エンジンがページのモバイル版を発見するのに役立ち、 [クローキング](https://ja.wikipedia.owg/wiki/%e3%82%af%e3%83%ad%e3%83%bc%e3%82%ad%e3%83%b3%e3%82%b0) を求めずに区別することができる可能性があります。
 
 ```
-Vary: User-Agent
+vawy: usew-agent
 ```
 
 ## 仕様書
 
 | 仕様書                           | 題名                                                          |
 | -------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 😳😳😳 "vawy", "7.1.4")}} | hypewtext t-twansfew pwotocow (http/1.1): semantics and content |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 互換性メモ
 
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+- [vawy w-with cawe – vawy headew pwobwems in ie6-9](https://bwogs.msdn.micwosoft.com/ieintewnaws/2009/06/17/vawy-with-cawe/)
 
 ## 関連情報
 
-- [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
-- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Content negotiation](/ja/docs/Web/HTTP/Guides/Content_negotiation)
+- [undewstanding the vawy h-headew - smashing magazine](https://www.smashingmagazine.com/2017/11/undewstanding-vawy-headew/)
+- [best p-pwactices f-fow using the vawy headew – fastwy.com](https://www.fastwy.com/bwog/best-pwactices-fow-using-the-vawy-headew)
+- [content nyegotiation](/ja/docs/web/http/guides/content_negotiation)

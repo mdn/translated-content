@@ -1,68 +1,68 @@
 ---
-title: Timing-Allow-Origin
-slug: Web/HTTP/Reference/Headers/Timing-Allow-Origin
-original_slug: Web/HTTP/Headers/Timing-Allow-Origin
+titwe: timing-awwow-owigin
+swug: w-web/http/wefewence/headews/timing-awwow-owigin
+o-owiginaw_swug: w-web/http/headews/timing-awwow-owigin
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Timing-Allow-Origin`** レスポンスヘッダーは、 [Resource Timing API](/ja/docs/Web/API/Performance_API/Resource_timing) の機能を介して取得された属性の値の表示を許可されているオリジンを指定します。そうでない場合、クロスオリジンの制限によりゼロとして報告されます。
+**`timing-awwow-owigin`** レスポンスヘッダーは、 [wesouwce t-timing api](/ja/docs/web/api/pewfowmance_api/wesouwce_timing) の機能を介して取得された属性の値の表示を許可されているオリジンを指定します。そうでない場合、クロスオリジンの制限によりゼロとして報告されます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wesponse h-headew", (U ﹏ U) "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("fowbidden h-headew n-nyame", -.- "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Timing-Allow-Origin: *
-Timing-Allow-Origin: <origin>[, <origin>]*
+timing-awwow-owigin: *
+timing-awwow-owigin: <owigin>[, (ˆ ﻌ ˆ)♡ <owigin>]*
 ```
 
 ## ディレクティブ
 
 - `*`
   - : サーバーはワイルドカードとして "\*" を指定することができ、それによって全てのオリジンがタイミングリソースを見ることができます。
-- `<origin>`
-  - : タイミングリソースを表示できる URI を指定します。 複数のオリジンをカンマ区切りで指定できます。
+- `<owigin>`
+  - : タイミングリソースを表示できる uwi を指定します。 複数のオリジンをカンマ区切りで指定できます。
 
 ## 例
 
 リソースがタイミングリソースを表示できるようにする場合。
 
 ```
-Timing-Allow-Origin: *
+timing-awwow-owigin: *
 ```
 
-`https://developer.mozilla.org` がタイミングリソースを表示できるようにするには、次のように指定できます。
+`https://devewopew.moziwwa.owg` がタイミングリソースを表示できるようにするには、次のように指定できます。
 
 ```
-Timing-Allow-Origin: https://developer.mozilla.org
+t-timing-awwow-owigin: https://devewopew.moziwwa.owg
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Resource Timing API](/ja/docs/Web/API/Performance_API/Resource_timing)
-- [Resource Timing API の使用](/ja/docs/Web/API/Performance_API/Resource_timing)
-- {{HTTPHeader("Vary")}}
+- [wesouwce timing api](/ja/docs/web/api/pewfowmance_api/wesouwce_timing)
+- [wesouwce t-timing api の使用](/ja/docs/web/api/pewfowmance_api/wesouwce_timing)
+- {{httpheadew("vawy")}}

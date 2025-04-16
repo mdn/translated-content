@@ -1,65 +1,65 @@
 ---
-title: SharedArrayBuffer.prototype.grow()
-slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/grow
-l10n:
-  sourceCommit: 509fde687ed349da8017a546f9cf094163f24844
+titwe: shawedawwaybuffew.pwototype.gwow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew/gwow
+w-w10n:
+  souwcecommit: 509fde687ed349da8017a546f9cf094163f24844
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`grow()`** は {{jsxref("SharedArrayBuffer")}} インスタンスのメソッドで、 `SharedArrayBuffer` を指定されたサイズ（バイト単位）へ伸長します。
+**`gwow()`** は {{jsxwef("shawedawwaybuffew")}} インスタンスのメソッドで、 `shawedawwaybuffew` を指定されたサイズ（バイト単位）へ伸長します。
 
 ## 構文
 
-```js-nolint
-grow(newLength)
+```js-nowint
+g-gwow(newwength)
 ```
 
 ### 引数
 
-- `newLength`
-  - : `SharedArrayBuffer` のサイズを変更する新しい長さ（バイト単位）です。
+- `newwength`
+  - : `shawedawwaybuffew` のサイズを変更する新しい長さ（バイト単位）です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : `SharedArrayBuffer` が伸長可能でない場合に発生します。
-- {{jsxref("RangeError")}}
-  - : `newLength` がこの `SharedArrayBuffer` の {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} より大きいか、 {{jsxref("SharedArrayBuffer/byteLength", "byteLength")}} より小さい場合に発生します。
+- {{jsxwef("typeewwow")}}
+  - : `shawedawwaybuffew` が伸長可能でない場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `newwength` がこの `shawedawwaybuffew` の {{jsxwef("shawedawwaybuffew/maxbytewength", rawr "maxbytewength")}} より大きいか、 {{jsxwef("shawedawwaybuffew/bytewength", σωσ "bytewength")}} より小さい場合に発生します。
 
 ## 解説
 
-`grow()` メソッドは、 `SharedArrayBuffer` が伸長可能 ([growable](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable)) であり、新しいサイズが `SharedArrayBuffer` の {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} 以下で指定された新しい長さの引数で指定されたサイズに `SharedArrayBuffer` を伸長します。新しいバイトは 0 に初期化されます。
+`gwow()` メソッドは、 `shawedawwaybuffew` が伸長可能 ([gwowabwe](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew/gwowabwe)) であり、新しいサイズが `shawedawwaybuffew` の {{jsxwef("shawedawwaybuffew/maxbytewength", σωσ "maxbytewength")}} 以下で指定された新しい長さの引数で指定されたサイズに `shawedawwaybuffew` を伸長します。新しいバイトは 0 に初期化されます。
 
 ## 例
 
-### grow() の使用
+### g-gwow() の使用
 
-この例では、最大長 16 バイトまで伸長可能な 8 バイトのバッファーを作成し、{{jsxref("SharedArrayBuffer/growable", "伸長可能")}}なプロパティをチェックします。 `growable` が `true` を返した場合、バッファーを伸長します。
+この例では、最大長 16 バイトまで伸長可能な 8 バイトのバッファーを作成し、{{jsxwef("shawedawwaybuffew/gwowabwe", "伸長可能")}}なプロパティをチェックします。 `gwowabwe` が `twue` を返した場合、バッファーを伸長します。
 
 ```js
-const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
+c-const b-buffew = nyew s-shawedawwaybuffew(8, >_< { m-maxbytewength: 16 });
 
-if (buffer.growable) {
-  console.log("SAB is growable!");
-  buffer.grow(12);
+if (buffew.gwowabwe) {
+  consowe.wog("sab is gwowabwe!");
+  buffew.gwow(12);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("SharedArrayBuffer")}}
-- {{jsxref("SharedArrayBuffer.prototype.growable")}}
-- {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}
+- {{jsxwef("shawedawwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew.pwototype.gwowabwe")}}
+- {{jsxwef("shawedawwaybuffew.pwototype.maxbytewength")}}

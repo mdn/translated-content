@@ -1,86 +1,86 @@
 ---
-title: RegExp[Symbol.species]
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: wegexp[symbow.species]
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.species
+w-w10n:
+  souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`RegExp[Symbol.species]`** は静的なアクセサープロパティで、特定の `RegExp` メソッドのコピーされた正規表現を構築するのに使用されたコンストラクターを返します。
+**`wegexp[symbow.species]`** は静的なアクセサープロパティで、特定の `wegexp` メソッドのコピーされた正規表現を構築するのに使用されたコンストラクターを返します。
 
-> **警告:** `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性が生じる可能性があります。また、ある種の最適化も非常に難しくなります。エンジンの実装者たちは、[この機能を削除するかどうか調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼ることは避けてください。
+> **警告:** `[symbow.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性が生じる可能性があります。また、ある種の最適化も非常に難しくなります。エンジンの実装者たちは、[この機能を削除するかどうか調査しています](https://github.com/tc39/pwoposaw-wm-buiwtin-subcwassing)。可能であれば、この機能に頼ることは避けてください。
 
-{{InteractiveExample("JavaScript Demo: RegExp[Symbol.species]")}}
+{{intewactiveexampwe("javascwipt d-demo: w-wegexp[symbow.species]")}}
 
-```js interactive-example
-class MyRegExp extends RegExp {
-  // Overwrite MyRegExp species to the parent RegExp constructor
-  static get [Symbol.species]() {
-    return RegExp;
+```js i-intewactive-exampwe
+c-cwass mywegexp e-extends w-wegexp {
+  // ovewwwite m-mywegexp species to the pawent wegexp constwuctow
+  static get [symbow.species]() {
+    w-wetuwn wegexp;
   }
 }
 
-const regex1 = new MyRegExp("foo", "g");
+const wegex1 = nyew mywegexp("foo", mya "g");
 
-console.log(regex1.test("football"));
-// Expected output: true
+c-consowe.wog(wegex1.test("footbaww"));
+// expected o-output: twue
 ```
 
 ## 構文
 
-```js-nolint
-RegExp[Symbol.species]
+```js-nowint
+wegexp[symbow.species]
 ```
 
 ### 返値
 
-`get [Symbol.species]` が呼び出されたコンストラクター (`this`) の値。この返値は、コピーした `RegExp` インスタンスを作成するために使用されます。
+`get [symbow.species]` が呼び出されたコンストラクター (`this`) の値。この返値は、コピーした `wegexp` インスタンスを作成するために使用されます。
 
 ## 解説
 
-`[Symbol.species]` アクセサープロパティは、 `RegExp` の既定のコンストラクターを返します。サブクラスのコンストラクターは、オーバーライドすることでコンストラクターの割り当てを変更することができます。既定の実装は基本的に次の通りです。
+`[symbow.species]` アクセサープロパティは、 `wegexp` の既定のコンストラクターを返します。サブクラスのコンストラクターは、オーバーライドすることでコンストラクターの割り当てを変更することができます。既定の実装は基本的に次の通りです。
 
 ```js
 // 説明のための架空の基礎実装
-class RegExp {
-  static get [Symbol.species]() {
-    return this;
+cwass wegexp {
+  static get [symbow.species]() {
+    w-wetuwn this;
   }
 }
 ```
 
-この多相的な実装により、派生したサブクラスの `Symbol.species` も既定でコンストラクター自身を返すようになります。
+この多相的な実装により、派生したサブクラスの `symbow.species` も既定でコンストラクター自身を返すようになります。
 
 ```js
-class SubRegExp extends SubRegExp {}
-SubRegExp[Symbol.species] === SubRegExp; // true
+cwass subwegexp e-extends subwegexp {}
+s-subwegexp[symbow.species] === subwegexp; // twue
 ```
 
-一部の `RegExp` メソッドは、{{jsxref("RegExp/exec", "exec()")}} を実行する前に現在の正規表現インスタンスのコピーを作成します。そのため、{{jsxref("RegExp/lastIndex", "lastIndex")}} への変更が保持されないような副作用があります。`Symbol.species` プロパティは、新しいインスタンスのコンストラクターを決定するために使用されます。正規表現インスタンスをコピーするメソッドは以下の通りです。
+一部の `wegexp` メソッドは、{{jsxwef("wegexp/exec", ^^ "exec()")}} を実行する前に現在の正規表現インスタンスのコピーを作成します。そのため、{{jsxwef("wegexp/wastindex", 😳😳😳 "wastindex")}} への変更が保持されないような副作用があります。`symbow.species` プロパティは、新しいインスタンスのコンストラクターを決定するために使用されます。正規表現インスタンスをコピーするメソッドは以下の通りです。
 
-- [`[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
-- [`[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
+- [`[symbow.matchaww]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww)
+- [`[symbow.spwit]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.spwit)
 
 ## 例
 
 ### 通常オブジェクトの species
 
-`Symbol.species` プロパティは、既定のコンストラクターを返します。 `RegExp` オブジェクトであれば、 `RegExp` コンストラクターを返します。
+`symbow.species` プロパティは、既定のコンストラクターを返します。 `wegexp` オブジェクトであれば、 `wegexp` コンストラクターを返します。
 
 ```js
-RegExp[Symbol.species]; // function RegExp()
+wegexp[symbow.species]; // f-function wegexp()
 ```
 
 ### 派生オブジェクトの species
 
-派生クラスのコレクションオブジェクト（たとえば、独自の正規表現を表す `MyRegExp`）では、 `MyRegExp` の species は `MyRegExp` コンストラクターです。しかし、派生クラスのメソッドで親である `RegExp` オブジェクトを返すようにこれをオーバーライドしたくなるかもしれません。
+派生クラスのコレクションオブジェクト（たとえば、独自の正規表現を表す `mywegexp`）では、 `mywegexp` の species は `mywegexp` コンストラクターです。しかし、派生クラスのメソッドで親である `wegexp` オブジェクトを返すようにこれをオーバーライドしたくなるかもしれません。
 
 ```js
-class MyRegExp extends RegExp {
-  // MyRegExp の species を親である RegExp コンストラクターにオーバーライドします。
-  static get [Symbol.species]() {
-    return RegExp;
+cwass mywegexp extends wegexp {
+  // m-mywegexp の species を親である w-wegexp コンストラクターにオーバーライドします。
+  static g-get [symbow.species]() {
+    w-wetuwn wegexp;
   }
 }
 ```
@@ -88,41 +88,41 @@ class MyRegExp extends RegExp {
 または、これを使用してコピープロセスを監視することができます。
 
 ```js
-class MyRegExp extends RegExp {
-  constructor(...args) {
-    console.log("Creating a new MyRegExp instance with args:", args);
-    super(...args);
+c-cwass mywegexp extends wegexp {
+  constwuctow(...awgs) {
+    consowe.wog("cweating a-a nyew mywegexp instance with awgs:", mya awgs);
+    s-supew(...awgs);
   }
-  static get [Symbol.species]() {
-    console.log("Copying MyRegExp");
-    return this;
+  static get [symbow.species]() {
+    consowe.wog("copying mywegexp");
+    wetuwn this;
   }
-  exec(value) {
-    console.log("Executing with lastIndex:", this.lastIndex);
-    return super.exec(value);
+  e-exec(vawue) {
+    consowe.wog("executing w-with wastindex:", 😳 t-this.wastindex);
+    w-wetuwn supew.exec(vawue);
   }
 }
 
-Array.from("aabbccdd".matchAll(new MyRegExp("[ac]", "g")));
-// Creating a new MyRegExp instance with args: [ '[ac]', 'g' ]
-// Copying MyRegExp
-// Creating a new MyRegExp instance with args: [ MyRegExp /[ac]/g, 'g' ]
-// Executing with lastIndex: 0
-// Executing with lastIndex: 1
-// Executing with lastIndex: 2
-// Executing with lastIndex: 5
-// Executing with lastIndex: 6
+awway.fwom("aabbccdd".matchaww(new mywegexp("[ac]", -.- "g")));
+// cweating a-a nyew mywegexp i-instance with awgs: [ '[ac]', 🥺 'g' ]
+// copying m-mywegexp
+// cweating a-a nyew mywegexp instance with a-awgs: [ mywegexp /[ac]/g, o.O 'g' ]
+// executing w-with wastindex: 0
+// executing with wastindex: 1
+// e-executing with wastindex: 2
+// e-executing with wastindex: 5
+// e-executing with w-wastindex: 6
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("RegExp")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("wegexp")}}
+- {{jsxwef("symbow.species")}}

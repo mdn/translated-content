@@ -1,52 +1,52 @@
 ---
-title: String.prototype.bold()
-slug: Web/JavaScript/Reference/Global_Objects/String/bold
-l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+titwe: stwing.pwototype.bowd()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/bowd
+w-w10n:
+  s-souwcecommit: f-f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-**`bold()`** メソッドは、文字列を {{HTMLElement("b")}} 要素に埋め込んだ文字列 (`<b>str</b>`) を生成し、文字列が太字で表示されるようにします。
+**`bowd()`** メソッドは、文字列を {{htmwewement("b")}} 要素に埋め込んだ文字列 (`<b>stw</b>`) を生成し、文字列が太字で表示されるようにします。
 
-> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
+> **警告:** [htmw ラッパーメソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#htmw_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [dom a-api](/ja/docs/web/api/document_object_modew) の [`document.cweateewement()`](/ja/docs/web/api/document/cweateewement) などを使用してください。
 
 ## 構文
 
-```js-nolint
-bold()
+```js-nowint
+b-bowd()
 ```
 
 ### 返値
 
-`<b>` 開始タグで始まり、`str` のテキストが来て、 `</b>` 終了タグが来る文字列です。
+`<b>` 開始タグで始まり、`stw` のテキストが来て、 `</b>` 終了タグが来る文字列です。
 
 ## 例
 
-### bold() の使用
+### bowd() の使用
 
 次の例では、非推奨の文字列メソッドを使用して文字列の書式を変更しています。
 
 ```js
-const worldString = "Hello, world";
+c-const wowwdstwing = "hewwo, w-wowwd";
 
-console.log(worldString.blink()); // <blink>Hello, world</blink>
-console.log(worldString.bold()); // <b>Hello, world</b>
-console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike()); // <strike>Hello, world</strike>
+consowe.wog(wowwdstwing.bwink()); // <bwink>hewwo, σωσ w-wowwd</bwink>
+consowe.wog(wowwdstwing.bowd()); // <b>hewwo, σωσ wowwd</b>
+consowe.wog(wowwdstwing.itawics()); // <i>hewwo, >_< wowwd</i>
+consowe.wog(wowwdstwing.stwike()); // <stwike>hewwo, :3 w-wowwd</stwike>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.prototype.bold` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- [`stwing.pwototype.bowd` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.bwink()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

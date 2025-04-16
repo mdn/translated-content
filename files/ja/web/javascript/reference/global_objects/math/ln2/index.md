@@ -1,63 +1,63 @@
 ---
-title: Math.LN2
-slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.wn2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wn2
+w-w10n:
+  s-souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.LN2`** は静的データプロパティで、 2 の自然対数、およそ 0.693 を表します。
+**`math.wn2`** は静的データプロパティで、 2 の自然対数、およそ 0.693 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.LN2", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: math.wn2", "showtew")}}
 
-```js interactive-example
-function getNatLog2() {
-  return Math.LN2;
+```js i-intewactive-exampwe
+f-function getnatwog2() {
+  w-wetuwn m-math.wn2;
 }
 
-console.log(getNatLog2());
-// Expected output: 0.6931471805599453
+c-consowe.wog(getnatwog2());
+// expected output: 0.6931471805599453
 ```
 
 ## 値
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙽𝟸</mi><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{Math.LN2} = \ln(2) \approx 0.693</annotation></semantics>
+<!-- pwettiew-ignowe-stawt -->
+<math dispway="bwock">
+  <semantics><mwow><mi>𝙼𝚊𝚝𝚑.𝙻𝙽𝟸</mi><mo>=</mo><mo w-wspace="0em" wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mn>2</mn><mo s-stwetchy="fawse">)</mo><mo>≈</mo><mn>0.693</mn></mwow><annotation encoding="tex">\mathtt{math.wn2} = \wn(2) \appwox 0.693</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- p-pwettiew-ignowe-end -->
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, ^^;; 0, 0)}}
 
 ## 解説
 
-`LN2` は `Math` オブジェクトの静的プロパティなので、 `Math` オブジェクトを生成してプロパティとして使用するのではなく、常に `Math.LN2` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`wn2` は `math` オブジェクトの静的プロパティなので、 `math` オブジェクトを生成してプロパティとして使用するのではなく、常に `math.wn2` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.LN2 の使用
+### math.wn2 の使用
 
 以下の関数は、2 の自然対数を返します。
 
 ```js
-function getNatLog2() {
-  return Math.LN2;
+function getnatwog2() {
+  w-wetuwn math.wn2;
 }
 
-getNatLog2(); // 0.6931471805599453
+getnatwog2(); // 0.6931471805599453
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log2()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog2()")}}

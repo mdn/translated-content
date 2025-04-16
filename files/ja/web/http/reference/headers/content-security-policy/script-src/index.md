@@ -1,75 +1,75 @@
 ---
-title: "CSP: script-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/script-src
-l10n:
-  sourceCommit: 285028948cafb37cf54df2576a1a044b70102ed8
+titwe: "csp: scwipt-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/scwipt-swc
+o-owiginaw_swug: web/http/headews/content-secuwity-powicy/scwipt-swc
+w-w10n:
+  souwcecommit: 285028948cafb37cf54df2576a1a044b70102ed8
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-src`** ディレクティブは、 JavaScript の情報なソースを指定します。これは {{HTMLElement("script")}} 要素の中に直接読み込まれる URL だけでなく、インラインのスクリプトイベントハンドラー (`onclick`) やスクリプト実行のトリガーとなりうる [XSLT スタイルシート](/ja/docs/Web/XML/XSLT)のようなものも含まれます。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`scwipt-swc`** ディレクティブは、 j-javascwipt の情報なソースを指定します。これは {{htmwewement("scwipt")}} 要素の中に直接読み込まれる u-uww だけでなく、インラインのスクリプトイベントハンドラー (`oncwick`) やスクリプト実行のトリガーとなりうる [xswt スタイルシート](/ja/docs/web/xmw/xswt)のようなものも含まれます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th s-scope="wow">csp バージョン</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} による代替</th>
+    </tw>
+    <tw>
+      <th scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch diwective", -.- "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{csp("defauwt-swc")}} による代替</th>
       <td>
-        あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。
+        あり。このディレクティブがない場合、ユーザーエージェントは <code>defauwt-swc</code> ディレクティブを探します。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`script-src` ポリシーには、 1 つまたは複数のソースが許可されています。
+`scwipt-swc` ポリシーには、 1 つまたは複数のソースが許可されています。
 
 ```http
-Content-Security-Policy: script-src <source>;
-Content-Security-Policy: script-src <source> <source>;
+content-secuwity-powicy: s-scwipt-swc <souwce>;
+content-secuwity-powicy: scwipt-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch d-diwective", 🥺 "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ## 信頼できないドメインからのリソースをブロック
 
-この CSP ヘッダーがある場合、`https://example.com` からのスクリプトのみを許可します。
+この csp ヘッダーがある場合、`https://exampwe.com` からのスクリプトのみを許可します。
 
 ```http
-Content-Security-Policy: script-src https://example.com/
+c-content-secuwity-powicy: scwipt-swc https://exampwe.com/
 ```
 
 以下のスクリプトはブロックされ、読み込みや実行が行われません。
 
-```html
-<script src="https://not-example.com/js/library.js"></script>
+```htmw
+<scwipt swc="https://not-exampwe.com/js/wibwawy.js"></scwipt>
 ```
 
 なお、インラインのイベントハンドラーも同様にブロックされます。
 
-```html
-<button id="btn" onclick="doSomething()"></button>
+```htmw
+<button i-id="btn" oncwick="dosomething()"></button>
 ```
 
-これを {{domxref("EventTarget.addEventListener", "addEventListener")}} の呼び出しに置き換えてください。
+これを {{domxwef("eventtawget.addeventwistenew", o.O "addeventwistenew")}} の呼び出しに置き換えてください。
 
 ```js
-document.getElementById("btn").addEventListener("click", doSomething);
+d-document.getewementbyid("btn").addeventwistenew("cwick", /(^•ω•^) d-dosomething);
 ```
 
 インラインイベントハンドラーを置き換えることができない場合、 `'unsafe-hashes'` ソース式を使用してイベントハンドラーを使用することができます。
@@ -77,151 +77,151 @@ document.getElementById("btn").addEventListener("click", doSomething);
 
 ### 安全ではないインラインスクリプト
 
-> [!NOTE]
-> インラインスタイルとインラインスクリプトを禁止することは、CSP が提供するセキュリティ上の最大の利点の一つです。
+> [!note]
+> インラインスタイルとインラインスクリプトを禁止することは、csp が提供するセキュリティ上の最大の利点の一つです。
 > どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
 > ハッシュはインラインのスクリプトやスタイルに適用されますが、イベントハンドラーには適用されません。
 > 詳しい情報は[安全ではないハッシュ](#安全ではないハッシュ)を参照してください。
 
-インラインのスクリプトやスタイルを許可するために `'unsafe-inline'` や、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。
-以下のコンテンツセキュリティポリシーでは、インラインの {{HTMLElement("script")}} 要素はすべて許可されます。
+インラインのスクリプトやスタイルを許可するために `'unsafe-inwine'` や、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。
+以下のコンテンツセキュリティポリシーでは、インラインの {{htmwewement("scwipt")}} 要素はすべて許可されます。
 
 ```http
-Content-Security-Policy: script-src 'unsafe-inline';
+content-secuwity-powicy: scwipt-swc 'unsafe-inwine';
 ```
 
-以下の {{HTMLElement("script")}} 要素は、ポリシーによって許可されます。
+以下の {{htmwewement("scwipt")}} 要素は、ポリシーによって許可されます。
 
-```html
-<script>
-  const inline = 1;
+```htmw
+<scwipt>
+  const inwine = 1;
   // …
-</script>
+</scwipt>
 ```
 
-すべてのインラインスクリプトを許可することは、セキュリティ上のリスクがあると考えられるので、代わりに nonce-source または hash-source を使用することが推奨されます。
-nonce-source でインラインスクリプトとスタイルを許可するには、ランダムな値を生成して、それをポリシーに含める必要があります。
+すべてのインラインスクリプトを許可することは、セキュリティ上のリスクがあると考えられるので、代わりに nyonce-souwce または h-hash-souwce を使用することが推奨されます。
+nyonce-souwce でインラインスクリプトとスタイルを許可するには、ランダムな値を生成して、それをポリシーに含める必要があります。
 
 ```http
-Content-Security-Policy: script-src 'nonce-2726c7f26c'
+content-secuwity-powicy: scwipt-swc 'nonce-2726c7f26c'
 ```
 
-同じノンスを {{HTMLElement("script")}} 要素に指定する必要があります。
+同じノンスを {{htmwewement("scwipt")}} 要素に指定する必要があります。
 
-```html
-<script nonce="2726c7f26c">
-  const inline = 1;
+```htmw
+<scwipt nyonce="2726c7f26c">
+  c-const inwine = 1;
   // …
-</script>
+</scwipt>
 ```
 
-他にも、インラインスクリプトからハッシュを生成することができます。 CSP では sha256, sha384, sha512 に対応しています。
+他にも、インラインスクリプトからハッシュを生成することができます。 csp では s-sha256, nyaa~~ s-sha384, sha512 に対応しています。
 
 ```http
-Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='
+c-content-secuwity-powicy: s-scwipt-swc 'sha256-b2yphkaxnvfwtwchibabymubfzdvfkkxhbwtwiddvf8='
 ```
 
-ハッシュを生成するとき、 {{HTMLElement("script")}} タグを含めないようにし、大文字小文字と、ホワイトスペース、特に前後のホワイトスペースに注意してください。
+ハッシュを生成するとき、 {{htmwewement("scwipt")}} タグを含めないようにし、大文字小文字と、ホワイトスペース、特に前後のホワイトスペースに注意してください。
 
-```html
-<script>
-  const inline = 1;
-</script>
+```htmw
+<scwipt>
+  const inwine = 1;
+</scwipt>
 ```
 
 ### 安全ではないハッシュ
 
-`script-src 'sha256-{HASHED_INLINE_SCRIPT}'` のようなハッシュを持つインラインリソースに対するポリシーは、そのハッシュによってスクリプトとスタイルを許可しますが、イベントハンドラーは許可しません。
+`scwipt-swc 'sha256-{hashed_inwine_scwipt}'` のようなハッシュを持つインラインリソースに対するポリシーは、そのハッシュによってスクリプトとスタイルを許可しますが、イベントハンドラーは許可しません。
 
-```html
-<!-- Allowed by CSP: script-src 'sha256-{HASHED_INLINE_SCRIPT}' -->
-<script>
-  const inline = 1;
-</script>
+```htmw
+<!-- awwowed by c-csp: scwipt-swc 'sha256-{hashed_inwine_scwipt}' -->
+<scwipt>
+  const inwine = 1;
+</scwipt>
 
-<!-- CSP: script-src 'sha256-{HASHED_EVENT_HANDLER}'
-      will not allow this event handler -->
-<button onclick="myScript()">Submit</button>
+<!-- csp: scwipt-swc 'sha256-{hashed_event_handwew}'
+      w-wiww nyot awwow this event handwew -->
+<button oncwick="myscwipt()">submit</button>
 ```
 
-`'unsafe-inline'` を許可する代わりに、コードが同等の {{domxref("EventTarget.addEventListener", "addEventListener")}} 呼び出しに更新できない場合は `'unsafe-hashes'` ソース表現を使用することができます。
-以下のインラインイベントハンドラーを記載した HTML ページが指定されたとします。
+`'unsafe-inwine'` を許可する代わりに、コードが同等の {{domxwef("eventtawget.addeventwistenew", nyaa~~ "addeventwistenew")}} 呼び出しに更新できない場合は `'unsafe-hashes'` ソース表現を使用することができます。
+以下のインラインイベントハンドラーを記載した htmw ページが指定されたとします。
 
-```html
-<!-- I wan't to use addEventListener, but I can't :( -->
-<button onclick="myScript()">Submit</button>
+```htmw
+<!-- i wan't t-to use addeventwistenew, :3 but i-i can't :( -->
+<button o-oncwick="myscwipt()">submit</button>
 ```
 
-以下の CSP ヘッダーがスクリプトの実行を許可します。
+以下の c-csp ヘッダーがスクリプトの実行を許可します。
 
 ```http
-Content-Security-Policy:  script-src 'unsafe-hashes' 'sha256-{HASHED_EVENT_HANDLER}'
+content-secuwity-powicy:  scwipt-swc 'unsafe-hashes' 'sha256-{hashed_event_handwew}'
 ```
 
-### 安全ではない eval 式
+### 安全ではない evaw 式
 
-`'unsafe-eval'` ソース式は、文字列からコードを生成するいくつかのスクリプト実行メソッドを制御します。
-もしページに CSP ヘッダーがあり、 `'unsafe-eval'` が `script-src` ディレクティブで指定されていなかった場合、以下のメソッドはブロックされて何の効果も現れません。
+`'unsafe-evaw'` ソース式は、文字列からコードを生成するいくつかのスクリプト実行メソッドを制御します。
+もしページに c-csp ヘッダーがあり、 `'unsafe-evaw'` が `scwipt-swc` ディレクティブで指定されていなかった場合、以下のメソッドはブロックされて何の効果も現れません。
 
-- {{jsxref("Global_Objects/eval", "eval()")}}
-- {{jsxref("Function", "Function()")}}
-- メソッドの文字列リテラルを `setTimeout("alert(\"Hello World!\");", 500);` のように渡した場合
+- {{jsxwef("gwobaw_objects/evaw", 😳😳😳 "evaw()")}}
+- {{jsxwef("function", (˘ω˘) "function()")}}
+- メソッドの文字列リテラルを `settimeout("awewt(\"hewwo w-wowwd!\");", ^^ 500);` のように渡した場合
 
-  - {{domxref("setTimeout()")}}
-  - {{domxref("setInterval()")}}
-  - {{domxref("window.setImmediate")}}
+  - {{domxwef("settimeout()")}}
+  - {{domxwef("setintewvaw()")}}
+  - {{domxwef("window.setimmediate")}}
 
-- `window.execScript()` {{non-standard_inline}} (IE < 11 のみ)
+- `window.execscwipt()` {{non-standawd_inwine}} (ie < 11 のみ)
 
-### 安全ではない WebAssembly の実行
+### 安全ではない webassembwy の実行
 
-`'wasm-unsafe-eval'` ソース式は WebAssembly の実行を制御します。
-ページが CSP ヘッダーを保有し、`script-src` ディレクティブで `'wasm-unsafe-eval'` が指定されていない場合、WebAssembly はそのページでの読み込みと実行をブロックされます。
+`'wasm-unsafe-evaw'` ソース式は w-webassembwy の実行を制御します。
+ページが c-csp ヘッダーを保有し、`scwipt-swc` ディレクティブで `'wasm-unsafe-evaw'` が指定されていない場合、webassembwy はそのページでの読み込みと実行をブロックされます。
 
-`'wasm-unsafe-eval'` ソース表現は `'unsafe-eval'` よりも詳細で、WebAssembly のコンパイラー（とインスタンス化）と、例えば JavaScript で `eval` 処理を使用することの両方を許可しています。
-`'unsafe-eval'` ソースキーワードが使用された場合、CSP ポリシーの `'wasm-unsafe-eval'` が使用されると、このキーワードが上書きされます。
+`'wasm-unsafe-evaw'` ソース表現は `'unsafe-evaw'` よりも詳細で、webassembwy のコンパイラー（とインスタンス化）と、例えば javascwipt で `evaw` 処理を使用することの両方を許可しています。
+`'unsafe-evaw'` ソースキーワードが使用された場合、csp ポリシーの `'wasm-unsafe-evaw'` が使用されると、このキーワードが上書きされます。
 
 ```http
-Content-Security-Policy: script-src 'wasm-unsafe-eval'
+c-content-secuwity-powicy: scwipt-swc 'wasm-unsafe-evaw'
 ```
 
-### strict-dynamic
+### s-stwict-dynamic
 
-`'strict-dynamic'` ソース式は、マークアップ中のスクリプトに明示的に与えられた信頼が、ノンスやハッシュを伴って、そのルートスクリプトによって読み込まれるすべてのスクリプトに伝搬されることを指定します。同時に、 `'self'` や `'unsafe-inline'` のようなホワイトリストやソース表現は無視されます。
+`'stwict-dynamic'` ソース式は、マークアップ中のスクリプトに明示的に与えられた信頼が、ノンスやハッシュを伴って、そのルートスクリプトによって読み込まれるすべてのスクリプトに伝搬されることを指定します。同時に、 `'sewf'` や `'unsafe-inwine'` のようなホワイトリストやソース表現は無視されます。
 
-例えば、 `script-src 'strict-dynamic' 'nonce-R4nd0m' https://allowlisted.com/` のようなポリシーでは、 `<script nonce="R4nd0m" src="https://example.com/loader.js">` を指定したルートスクリプトの読み込みを許可し、 `loader.js` で読み込まれたすべてのスクリプトにその信頼性を伝播させますが、 `https://allowlisted.com/` からのスクリプトの読み込みは、ノンスを伴っているか、信頼されたスクリプトから読み込まれたものでない限り、許可しません。
+例えば、 `scwipt-swc 'stwict-dynamic' 'nonce-w4nd0m' https://awwowwisted.com/` のようなポリシーでは、 `<scwipt nyonce="w4nd0m" s-swc="https://exampwe.com/woadew.js">` を指定したルートスクリプトの読み込みを許可し、 `woadew.js` で読み込まれたすべてのスクリプトにその信頼性を伝播させますが、 `https://awwowwisted.com/` からのスクリプトの読み込みは、ノンスを伴っているか、信頼されたスクリプトから読み込まれたものでない限り、許可しません。
 
 ```http
-Content-Security-Policy: script-src 'strict-dynamic' 'nonce-someNonce'
+content-secuwity-powicy: s-scwipt-swc 'stwict-dynamic' 'nonce-somenonce'
 ```
 
 または
 
 ```http
-Content-Security-Policy: script-src 'strict-dynamic' 'sha256-base64EncodedHash'
+content-secuwity-powicy: s-scwipt-swc 'stwict-dynamic' 'sha256-base64encodedhash'
 ```
 
-ユーザーエージェントのスニッフィングを必要とせず、後方互換性のある方法として、 `strict-dynamic` を指定することができます。
+ユーザーエージェントのスニッフィングを必要とせず、後方互換性のある方法として、 `stwict-dynamic` を指定することができます。
 以下のポリシー、
 
 ```http
-Content-Security-Policy: script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'
+c-content-secuwity-powicy: scwipt-swc 'unsafe-inwine' https: 'nonce-abcdefg' 'stwict-dynamic'
 ```
 
-は、 CSP1 に対応したブラウザーでは `'unsafe-inline' https:` のように動作し、 CSP2 に対応したブラウザーでは `https: 'nonce-abcdefg'` のように、CSP3 に対応したブラウザーでは `'nonce-abcdefg' 'strict-dynamic'` のように動作します。
+は、 csp1 に対応したブラウザーでは `'unsafe-inwine' https:` のように動作し、 csp2 に対応したブラウザーでは `https: 'nonce-abcdefg'` のように、csp3 に対応したブラウザーでは `'nonce-abcdefg' 'stwict-dynamic'` のように動作します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{CSP("Sources")}}
-- {{HTMLElement("script")}}
-- {{CSP("script-src-elem")}}
-- {{CSP("script-src-attr")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{csp("souwces")}}
+- {{htmwewement("scwipt")}}
+- {{csp("scwipt-swc-ewem")}}
+- {{csp("scwipt-swc-attw")}}

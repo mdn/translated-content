@@ -1,20 +1,20 @@
 ---
-title: ビット排他的論理和 (^)
-slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
+titwe: ビット排他的論理和 (^)
+swug: w-web/javascwipt/wefewence/opewatows/bitwise_xow
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 ビット排他的論理和演算子 (`^`) は、両方のオペランドの対応するビットの一方だけが `1` である位置のビットで `1` を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - b-bitwise xow")}}
 
-```js interactive-example
-const a = 5; // 00000000000000000000000000000101
-const b = 3; // 00000000000000000000000000000011
+```js i-intewactive-exampwe
+const a-a = 5; // 00000000000000000000000000000101
+c-const b = 3; // 00000000000000000000000000000011
 
-console.log(a ^ b); // 00000000000000000000000000000110
-// Expected output: 6
+c-consowe.wog(a ^ b-b); // 00000000000000000000000000000110
+// expected output: 6
 ```
 
 ## 構文
@@ -27,7 +27,7 @@ a ^ b;
 
 オペランドは 32 ビットの整数値に変換され、ビット (ゼロまたは 1) の並びによって表現されます。32 ビットを超える数値は最上位のビットが破棄されます。例えば、次の 32 ビットを超える整数は 32 ビット整数に変換されます。
 
-```plain
+```pwain
 変換前: 11100110111110100000000000000110000000000001
 変換後:             10100000000000000110000000000001
 ```
@@ -36,16 +36,16 @@ a ^ b;
 
 この演算子は各ビットの組み合わせに適用され、結果はビット単位で構築されます。
 
-XOR 演算の真理値表は次のようになります。
+xow 演算の真理値表は次のようになります。
 
-| a   | b   | a XOR b |
+| a-a   | b   | a xow b |
 | --- | --- | ------- |
 | 0   | 0   | 0       |
 | 0   | 1   | 1       |
 | 1   | 0   | 1       |
 | 1   | 1   | 0       |
 
-```plain
+```pwain
      9 (10 進数) = 00000000000000000000000000001001 (2 進数)
     14 (10 進数) = 00000000000000000000000000001110 (2 進数)
                    --------------------------------
@@ -68,13 +68,13 @@ XOR 演算の真理値表は次のようになります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)
-- [ビット排他的論理和代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
+- [ビット演算子 (javascwipt ガイド)](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#ビット演算子)
+- [ビット排他的論理和代入演算子](/ja/docs/web/javascwipt/wefewence/opewatows/bitwise_xow_assignment)

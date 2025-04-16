@@ -1,13 +1,13 @@
 ---
-title: TypeError
-slug: Web/JavaScript/Reference/Global_Objects/TypeError
+titwe: typeewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/typeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`TypeError`** オブジェクトは、演算が実行できなくなった時の新しいエラーを表します。特に値が期待された型ではなかった場合です (ただし、それに限りません)。
+**`typeewwow`** オブジェクトは、演算が実行できなくなった時の新しいエラーを表します。特に値が期待された型ではなかった場合です (ただし、それに限りません)。
 
-`TypeError` は以下のような場合に発生します。
+`typeewwow` は以下のような場合に発生します。
 
 - 関数に渡されたオペランドや引数が、その演算子や関数で期待された型と互換性がなかった場合
 - 変更できない値を変更しようとした場合
@@ -15,66 +15,66 @@ slug: Web/JavaScript/Reference/Global_Objects/TypeError
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
-  - : 新しい `TypeError` オブジェクトを生成します。
+- {{jsxwef("gwobaw_objects/typeewwow/typeewwow", 😳 "typeewwow()")}}
+  - : 新しい `typeewwow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "TypeError.prototype.message")}}
-  - : エラーメッセージです。 ECMA-262 において {{jsxref("TypeError")}} は自身の `message` プロパティを提供するべきとされていますが、 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では {{jsxref("Error.prototype.message")}} を継承しています。
-- {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
-  - : エラー名です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}}
-  - : このエラーが発生したファイルのパスです。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}}
-  - : このエラーが発生したファイル内の行番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}}
-  - : このエラーが発生した行内の桁番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}}
-  - : スタックトレースです。 {{jsxref("Error")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.message", XD "typeewwow.pwototype.message")}}
+  - : エラーメッセージです。 e-ecma-262 において {{jsxwef("typeewwow")}} は自身の `message` プロパティを提供するべきとされていますが、 [spidewmonkey](/ja/docs/moziwwa/pwojects/spidewmonkey) では {{jsxwef("ewwow.pwototype.message")}} を継承しています。
+- {{jsxwef("ewwow.pwototype.name", :3 "typeewwow.pwototype.name")}}
+  - : エラー名です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.fiwename", 😳😳😳 "typeewwow.pwototype.fiwename")}}
+  - : このエラーが発生したファイルのパスです。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.winenumbew", "typeewwow.pwototype.winenumbew")}}
+  - : このエラーが発生したファイル内の行番号です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", -.- "typeewwow.pwototype.cowumnnumbew")}}
+  - : このエラーが発生した行内の桁番号です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.stack", ( ͡o ω ͡o ) "typeewwow.pwototype.stack")}}
+  - : スタックトレースです。 {{jsxwef("ewwow")}} から継承しています。
 
 ## 例
 
-### TypeError のキャッチ
+### t-typeewwow のキャッチ
 
 ```js
-try {
-  null.f();
-} catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message); // "null has no properties"
-  console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+t-twy {
+  n-nyuww.f();
+} c-catch (e) {
+  c-consowe.wog(e instanceof t-typeewwow); // t-twue
+  consowe.wog(e.message); // "nuww has nyo pwopewties"
+  consowe.wog(e.name); // "typeewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  c-consowe.wog(e.winenumbew); // 2
+  consowe.wog(e.cowumnnumbew); // 2
+  consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### TypeError の生成
+### t-typeewwow の生成
 
 ```js
-try {
-  throw new TypeError("Hello", "someFile.js", 10);
+twy {
+  thwow n-nyew typeewwow("hewwo", rawr x3 "somefiwe.js", 10);
 } catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  consowe.wog(e instanceof typeewwow); // t-twue
+  consowe.wog(e.message); // "hewwo"
+  consowe.wog(e.name); // "typeewwow"
+  c-consowe.wog(e.fiwename); // "somefiwe.js"
+  c-consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

@@ -1,58 +1,58 @@
 ---
-title: Upgrade-Insecure-Requests
-slug: Web/HTTP/Reference/Headers/Upgrade-Insecure-Requests
-original_slug: Web/HTTP/Headers/Upgrade-Insecure-Requests
+titwe: upgwade-insecuwe-wequests
+swug: web/http/wefewence/headews/upgwade-insecuwe-wequests
+owiginaw_swug: w-web/http/headews/upgwade-insecuwe-wequests
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`Upgrade-Insecure-Requests`** リクエストヘッダーは、暗号化および認証されたレスポンスに対するクライアントの設定を表す信号をサーバーに送信し、 [CSP](/ja/docs/Web/HTTP/Guides/CSP) の {{CSP("upgrade-insecure-requests")}} ディレクティブが正常に処理できることを示します。
+http の **`upgwade-insecuwe-wequests`** リクエストヘッダーは、暗号化および認証されたレスポンスに対するクライアントの設定を表す信号をサーバーに送信し、 [csp](/ja/docs/web/http/guides/csp) の {{csp("upgwade-insecuwe-wequests")}} ディレクティブが正常に処理できることを示します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
+      <td>{{gwossawy("wequest headew", σωσ "リクエストヘッダー")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew n-nyame", >_< "禁止ヘッダー名")}}</th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Upgrade-Insecure-Requests: 1
+u-upgwade-insecuwe-wequests: 1
 ```
 
 ## 例
 
-クライアントは、次のように {{CSP("upgrade-insecure-requests")}} のアップグレードメカニズムをサポートしていることをサーバーに通知します。
+クライアントは、次のように {{csp("upgwade-insecuwe-wequests")}} のアップグレードメカニズムをサポートしていることをサーバーに通知します。
 
 ```
-GET / HTTP/1.1
-Host: example.com
-Upgrade-Insecure-Requests: 1
+g-get / http/1.1
+host: exampwe.com
+upgwade-insecuwe-wequests: 1
 ```
 
-これで、サーバーは安全なバージョンのサイトにリダイレクトできます。 {{HTTPHeader("Vary")}} ヘッダーを使用することで、アップグレードメカニズムに対応していないクライアントにキャッシュからサイトが提供されなくなります。
+これで、サーバーは安全なバージョンのサイトにリダイレクトできます。 {{httpheadew("vawy")}} ヘッダーを使用することで、アップグレードメカニズムに対応していないクライアントにキャッシュからサイトが提供されなくなります。
 
 ```
-Location: https://example.com/
-Vary: Upgrade-Insecure-Requests
+wocation: https://exampwe.com/
+v-vawy: upgwade-insecuwe-wequests
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- CSP {{CSP("upgrade-insecure-requests")}} ディレクティブ
+- {{httpheadew("content-secuwity-powicy")}}
+- csp {{csp("upgwade-insecuwe-wequests")}} ディレクティブ

@@ -1,26 +1,26 @@
 ---
-title: String.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: stwing.pwototype[symbow.itewatow]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow
+w-w10n:
+  souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`[Symbol.iterator]()`** は {{jsxref("String")}} 値のメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループなど、反復可能オブジェクトを期待するほとんどの構文で文字列が利用できるようにします。これは、文字列値の Unicode コードポイントを個別の文字列として返す[文字列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+**`[symbow.itewatow]()`** は {{jsxwef("stwing")}} 値のメソッドで、[反復可能プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を実装しており、[スプレッド構文](/ja/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)や {{jsxwef("statements/fow...of", >_< "fow...of")}} ループなど、反復可能オブジェクトを期待するほとんどの構文で文字列が利用できるようにします。これは、文字列値の u-unicode コードポイントを個別の文字列として返す[文字列イテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)を返します。
 
-{{InteractiveExample("JavaScript Demo: String.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const str = "The quick red fox jumped over the lazy dog's back.";
+```js i-intewactive-exampwe
+c-const stw = "the q-quick w-wed fox jumped ovew the wazy dog's back.";
 
-const iterator = str[Symbol.iterator]();
-let theChar = iterator.next();
+const itewatow = stw[symbow.itewatow]();
+wet thechaw = i-itewatow.next();
 
-while (!theChar.done && theChar.value !== " ") {
-  console.log(theChar.value);
-  theChar = iterator.next();
-  // Expected output: "T"
+whiwe (!thechaw.done && thechaw.vawue !== " ") {
+  c-consowe.wog(thechaw.vawue);
+  thechaw = i-itewatow.next();
+  // expected output: "t"
   //                  "h"
   //                  "e"
 }
@@ -28,8 +28,8 @@ while (!theChar.done && theChar.value !== " ") {
 
 ## 構文
 
-```js-nolint
-string[Symbol.iterator]()
+```js-nowint
+stwing[symbow.itewatow]()
 ```
 
 ### 引数
@@ -38,41 +38,41 @@ string[Symbol.iterator]()
 
 ### 返値
 
-新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)で、この文字列の各 Unicode コードポイントを、独立した文字列として生成します。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)で、この文字列の各 unicode コードポイントを、独立した文字列として生成します。
 
 ## 解説
 
-文字列は Unicode コードポイントで反復処理されます。つまり、書記素クラスターは分割されますが、サロゲートペアは保持されます。
+文字列は u-unicode コードポイントで反復処理されます。つまり、書記素クラスターは分割されますが、サロゲートペアは保持されます。
 
 ```js
-// "Backhand Index Pointing Right: Dark Skin Tone"
-[..."👉🏿"]; // ['👉', '🏿']
-// 基本的な "Backhand Index Pointing Right" の絵文字と
-// "Dark skin tone" の絵文字に分割
+// "backhand index p-pointing wight: d-dawk skin tone"
+[..."👉🏿"]; // ['👉', rawr x3 '🏿']
+// 基本的な "backhand index pointing wight" の絵文字と
+// "dawk skin tone" の絵文字に分割
 
-// "Family: Man, Boy"
-[..."👨‍👦"]; // [ '👨', '‍', '👦' ]
-// "Man" と "Boy" の絵文字に分割され、 ZWJ で結合されます。
+// "famiwy: man, mya boy"
+[..."👨‍👦"]; // [ '👨', nyaa~~ '‍', '👦' ]
+// "man" と "boy" の絵文字に分割され、 z-zwj で結合されます。
 ```
 
 ## 例
 
-### for...of ループを用いた反復処理
+### fow...of ループを用いた反復処理
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。`[Symbol.iterator]()` メソッドが存在することで、文字列は[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` ループのような反復処理構文は自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。`[symbow.itewatow]()` メソッドが存在することで、文字列は[反復可能](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)になり、`fow...of` ループのような反復処理構文は自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
 
 ```js
-const str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
+const stw = "a\ud835\udc68b\ud835\udc69c\ud835\udc6a";
 
-for (const v of str) {
-  console.log(v);
+fow (const v of stw) {
+  consowe.wog(v);
 }
-// "A"
-// "\uD835\uDC68"
-// "B"
-// "\uD835\uDC69"
-// "C"
-// "\uD835\uDC6A"
+// "a"
+// "\ud835\udc68"
+// "b"
+// "\ud835\udc69"
+// "c"
+// "\ud835\udc6a"
 ```
 
 ### イテレーターを手動で手繰る
@@ -80,25 +80,25 @@ for (const v of str) {
 反復処理を最大限に制御するために、返すイテレーターオブジェクトの `next()` メソッドを手動で呼び出すこともできます。
 
 ```js
-const str = "A\uD835\uDC68";
+c-const stw = "a\ud835\udc68";
 
-const strIter = str[Symbol.iterator]();
+const stwitew = s-stw[symbow.itewatow]();
 
-console.log(strIter.next().value); // "A"
-console.log(strIter.next().value); // "\uD835\uDC68"
+c-consowe.wog(stwitew.next().vawue); // "a"
+c-consowe.wog(stwitew.next().vawue); // "\ud835\udc68"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.prototype[Symbol.iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [テキスト処理](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)ガイド
-- {{jsxref("Symbol.iterator")}}
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`stwing.pwototype[symbow.itewatow]` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- [テキスト処理](/ja/docs/web/javascwipt/guide/numbews_and_stwings)ガイド
+- {{jsxwef("symbow.itewatow")}}
+- [反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)

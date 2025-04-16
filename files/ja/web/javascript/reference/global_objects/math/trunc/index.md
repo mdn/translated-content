@@ -1,34 +1,34 @@
 ---
-title: Math.trunc()
-slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: math.twunc()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/twunc
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.trunc()`** 関数は、引数として与えた数の小数部の桁を取り除くことによって整数部を返します。
+**`math.twunc()`** 関数は、引数として与えた数の小数部の桁を取り除くことによって整数部を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.trunc()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.twunc()")}}
 
-```js interactive-example
-console.log(Math.trunc(13.37));
-// Expected output: 13
+```js i-intewactive-exampwe
+c-consowe.wog(math.twunc(13.37));
+// expected o-output: 13
 
-console.log(Math.trunc(42.84));
-// Expected output: 42
+c-consowe.wog(math.twunc(42.84));
+// expected output: 42
 
-console.log(Math.trunc(0.123));
-// Expected output: 0
+consowe.wog(math.twunc(0.123));
+// expected output: 0
 
-console.log(Math.trunc(-0.123));
-// Expected output: -0
+consowe.wog(math.twunc(-0.123));
+// e-expected output: -0
 ```
 
 ## 構文
 
-```js-nolint
-Math.trunc(x)
+```js-nowint
+math.twunc(x)
 ```
 
 ### 引数
@@ -42,65 +42,65 @@ Math.trunc(x)
 
 ## 解説
 
-他の 3 つの `Math` メソッド、{{jsxref("Math.floor()")}}、{{jsxref("Math.ceil()")}}、{{jsxref("Math.round()")}} とは異なり、 `Math.trunc()` の動作は非常にシンプルで分かりやすいです。引数が正の数または負の数であるかに関わらず、ただ小数点とそれ以降にある数字を*切り捨て*ます。
+他の 3 つの `math` メソッド、{{jsxwef("math.fwoow()")}}、{{jsxwef("math.ceiw()")}}、{{jsxwef("math.wound()")}} とは異なり、 `math.twunc()` の動作は非常にシンプルで分かりやすいです。引数が正の数または負の数であるかに関わらず、ただ小数点とそれ以降にある数字を*切り捨て*ます。
 
-`trunc()` は `Math` オブジェクトの静的なメソッドなので、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、`Math.trunc()` として使用してください (`Math` オブジェクトにはコンストラクタがありません)。
+`twunc()` は `math` オブジェクトの静的なメソッドなので、自ら生成した `math` オブジェクトのメソッドとしてではなく、常に、`math.twunc()` として使用してください (`math` オブジェクトにはコンストラクタがありません)。
 
 ## 例
 
-### Math.trunc() の使用
+### m-math.twunc() の使用
 
 ```js
-Math.trunc(-Infinity); // -Infinity
-Math.trunc("-1.123"); // -1
-Math.trunc(-0.123); // -0
-Math.trunc(-0); // -0
-Math.trunc(0); // 0
-Math.trunc(0.123); // 0
-Math.trunc(13.37); // 13
-Math.trunc(42.84); // 42
-Math.trunc(Infinity); // Infinity
+math.twunc(-infinity); // -infinity
+m-math.twunc("-1.123"); // -1
+math.twunc(-0.123); // -0
+math.twunc(-0); // -0
+math.twunc(0); // 0
+math.twunc(0.123); // 0
+m-math.twunc(13.37); // 13
+math.twunc(42.84); // 42
+m-math.twunc(infinity); // i-infinity
 ```
 
-### ビット単位の no-op を使った数値の切り捨て
+### ビット単位の nyo-op を使った数値の切り捨て
 
-> [!WARNING]
-> 無視できないエッジケースがあるため、これは `Math.trunc()` のポリフィルにはなりません。
+> [!wawning]
+> 無視できないエッジケースがあるため、これは `math.twunc()` のポリフィルにはなりません。
 
 ビット演算はオペランドを 32 ビット整数に変換します。一般的なテクニックは以下の通りです。
 
 ```js
-const original = 3.14;
-const truncated1 = ~~original; // 二重否定
-const truncated2 = original & -1; // Bitwise AND with -1
-const truncated3 = original | 0; // Bitwise OR with 0
-const truncated4 = original ^ 0; // Bitwise XOR with 0
-const truncated5 = original >> 0; // Bitwise shifting by 0
+const owiginaw = 3.14;
+const twuncated1 = ~~owiginaw; // 二重否定
+const twuncated2 = o-owiginaw & -1; // bitwise and with -1
+const twuncated3 = owiginaw | 0; // b-bitwise ow with 0
+const twuncated4 = o-owiginaw ^ 0; // b-bitwise x-xow with 0
+const t-twuncated5 = owiginaw >> 0; // bitwise shifting by 0
 ```
 
-これは本質的に `toInt32` であり、 `Math.trunc` とは異なることに注意してください。値が -2<sup>31</sup> - 1 < `value` < 2<sup>31</sup> (-2147483649 < `value` < 2147483648) を満たさない場合、変換がオーバーフローしてしまいます。
+これは本質的に `toint32` であり、 `math.twunc` とは異なることに注意してください。値が -2<sup>31</sup> - 1 < `vawue` < 2<sup>31</sup> (-2147483649 < `vawue` < 2147483648) を満たさない場合、変換がオーバーフローしてしまいます。
 
 ```js
-const a = ~~2147483648; // -2147483648
+c-const a = ~~2147483648; // -2147483648
 const b = ~~-2147483649; // 2147483647
-const c = ~~4294967296; // 0
+c-const c = ~~4294967296; // 0
 ```
 
-`Math.trunc()` の代用として `~~` を使うのは、入力の範囲が 32 ビット整数の範囲に収まっていると確信できる場合だけにしてください。
+`math.twunc()` の代用として `~~` を使うのは、入力の範囲が 32 ビット整数の範囲に収まっていると確信できる場合だけにしてください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Math.trunc` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}}
+- [`math.twunc` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}}

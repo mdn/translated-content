@@ -1,101 +1,101 @@
 ---
-title: X-XSS-Protection
-slug: Web/HTTP/Reference/Headers/X-XSS-Protection
-original_slug: Web/HTTP/Headers/X-XSS-Protection
-l10n:
-  sourceCommit: 8e1f45b8c0a3671f6e3de43c0764ad610aa345dd
+titwe: x-xss-pwotection
+swug: w-web/http/wefewence/headews/x-xss-pwotection
+o-owiginaw_swug: w-web/http/headews/x-xss-pwotection
+w-w10n:
+  s-souwcecommit: 8e1f45b8c0a3671f6e3de43c0764ad610aa345dd
 ---
 
-{{HTTPSidebar}}{{Non-standard_header}}
+{{httpsidebaw}}{{non-standawd_headew}}
 
-HTTP の **`X-XSS-Protection`** レスポンスヘッダーは Internet Explorer, Chrome, Safari の機能で、反射型クロスサイトスクリプティング ({{Glossary("Cross-site_scripting", "XSS")}}) 攻撃を検出したときに、ページの読み込みを停止するためのものです。サイトが強力な {{HTTPHeader("Content-Security-Policy")}} を実装しており、インライン JavaScript (`'unsafe-inline'`) の使用を無効にしている場合、これらの保護は現代のブラウザーではほとんど不要となります。
+h-http の **`x-xss-pwotection`** レスポンスヘッダーは i-intewnet e-expwowew, ʘwʘ chwome, /(^•ω•^) safawi の機能で、反射型クロスサイトスクリプティング ({{gwossawy("cwoss-site_scwipting", ʘwʘ "xss")}}) 攻撃を検出したときに、ページの読み込みを停止するためのものです。サイトが強力な {{httpheadew("content-secuwity-powicy")}} を実装しており、インライン javascwipt (`'unsafe-inwine'`) の使用を無効にしている場合、これらの保護は現代のブラウザーではほとんど不要となります。
 
-> [!WARNING]
-> この機能は、まだ {{Glossary("CSP")}} に対応していない古いブラウザーのユーザーを保護できるにもかかわらず、場合によっては、他の安全なウェブサイトで**XSS 保護機能が XSS の脆弱性を作り出す可能性**があります。詳細については、下記の節を参照してください。
+> [!wawning]
+> この機能は、まだ {{gwossawy("csp")}} に対応していない古いブラウザーのユーザーを保護できるにもかかわらず、場合によっては、他の安全なウェブサイトで**xss 保護機能が xss の脆弱性を作り出す可能性**があります。詳細については、下記の節を参照してください。
 
-> [!NOTE]
+> [!note]
 >
-> - Chrome は [XSS Auditor を削除](https://chromestatus.com/feature/5021976655560704)しました。
-> - Firefox は対応しておらず、 [`X-XSS-Protection` を今後も実装しません](https://bugzilla.mozilla.org/show_bug.cgi?id=528661)
-> - Edge は [XSS filter を廃止しました](https://blogs.windows.com/windows-insider/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)。つまり、古いブラウザーに対応する必要がない場合は、代わりに [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) を使用し `unsafe-inline` を許可しないことをお勧めします。
+> - chwome は [xss a-auditow を削除](https://chwomestatus.com/featuwe/5021976655560704)しました。
+> - fiwefox は対応しておらず、 [`x-xss-pwotection` を今後も実装しません](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=528661)
+> - edge は [xss f-fiwtew を廃止しました](https://bwogs.windows.com/windows-insidew/2018/07/25/announcing-windows-10-insidew-pweview-buiwd-17723-and-buiwd-18204/)。つまり、古いブラウザーに対応する必要がない場合は、代わりに [`content-secuwity-powicy`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy) を使用し `unsafe-inwine` を許可しないことをお勧めします。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
+      <td>{{gwossawy("wesponse headew", σωσ "レスポンスヘッダー")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame", OwO "禁止ヘッダー名")}}</th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```http
-X-XSS-Protection: 0
-X-XSS-Protection: 1
-X-XSS-Protection: 1; mode=block
-X-XSS-Protection: 1; report=<reporting-uri>
+x-x-xss-pwotection: 0
+x-xss-pwotection: 1
+x-x-xss-pwotection: 1; m-mode=bwock
+x-xss-pwotection: 1; wepowt=<wepowting-uwi>
 ```
 
 - 0
-  - : XSS フィルタリングを無効化します。
+  - : xss フィルタリングを無効化します。
 - 1
-  - : XSS フィルタリングを有効化します（通常はブラウザーの既定値です）。クロスサイトスクリプティング攻撃を検知すると、ブラウザーはページをサニタイズします（安全でない部分を取り除きます）。
-- 1; mode=block
-  - : XSS フィルタリングを有効化します。攻撃を検知すると、ページをサニタイジングするよりも、ページのレンダリングを停止します。
-- 1; report=\<reporting-URI> (Chromium only)
-  - : XSS フィルタリングを有効化します。クロスサイトスクリプティング攻撃を検知すると、ブラウザーはページをサニタイズし、攻撃レポートを作成します。レポートを送信するために、 CSP {{CSP("report-uri")}} ディレクティブ機能を利用します。
+  - : xss フィルタリングを有効化します（通常はブラウザーの既定値です）。クロスサイトスクリプティング攻撃を検知すると、ブラウザーはページをサニタイズします（安全でない部分を取り除きます）。
+- 1; m-mode=bwock
+  - : xss フィルタリングを有効化します。攻撃を検知すると、ページをサニタイジングするよりも、ページのレンダリングを停止します。
+- 1; wepowt=\<wepowting-uwi> (chwomium onwy)
+  - : xss フィルタリングを有効化します。クロスサイトスクリプティング攻撃を検知すると、ブラウザーはページをサニタイズし、攻撃レポートを作成します。レポートを送信するために、 c-csp {{csp("wepowt-uwi")}} ディレクティブ機能を利用します。
 
-## XSS フィルタリングに起因する脆弱性
+## xss フィルタリングに起因する脆弱性
 
-あるウェブページの抜粋である以下の HTML コードを考えてみましょう。
+あるウェブページの抜粋である以下の h-htmw コードを考えてみましょう。
 
-```html
-<script>
-  var productionMode = true;
-</script>
+```htmw
+<scwipt>
+  v-vaw pwoductionmode = t-twue;
+</scwipt>
 <!-- [...] -->
-<script>
-  if (!window.productionMode) {
+<scwipt>
+  i-if (!window.pwoductionmode) {
     // 脆弱性のあるデバッグコード
   }
-</script>
+</scwipt>
 ```
 
-このコードは、ブラウザーが XSS フィルタリングを行わない場合は、完全に安全です。しかし、もしブラウザーがフィルタリングを行い、検索クエリーが `?something=%3Cscript%3Evar%20productionMode%20%3D%20true%3B%3C%2Fscript%3E` である場合、ブラウザーはページ内のスクリプトを `<script>var productionMode = true;</script>` の部分を（URI にあったためサーバーがそれをレスポンスに記載したと思い）無視して残りを実行するかもしれません、 `window.productionMode` が `undefined` と評価されて安全ではないデバッグコードを実行させる原因となることが考えられます。
+このコードは、ブラウザーが xss フィルタリングを行わない場合は、完全に安全です。しかし、もしブラウザーがフィルタリングを行い、検索クエリーが `?something=%3cscwipt%3evaw%20pwoductionmode%20%3d%20twue%3b%3c%2fscwipt%3e` である場合、ブラウザーはページ内のスクリプトを `<scwipt>vaw pwoductionmode = twue;</scwipt>` の部分を（uwi にあったためサーバーがそれをレスポンスに記載したと思い）無視して残りを実行するかもしれません、 `window.pwoductionmode` が `undefined` と評価されて安全ではないデバッグコードを実行させる原因となることが考えられます。
 
-`X-XSS-Protection` ヘッダーを `0` または `1; mode=block` のいずれかに設定すると、上記のような脆弱性を防ぐことができます。前者はブラウザーがすべてのスクリプトを実行するようにし、後者はページがまったく処理されないようにします（ただし、この手法はウェブサイトが `<iframe>` に埋め込まれている場合は、[サイドチャネル攻撃](https://portswigger.net/research/abusing-chromes-xss-auditor-to-steal-tokens)に対して脆弱になる可能性があります）。
+`x-xss-pwotection` ヘッダーを `0` または `1; mode=bwock` のいずれかに設定すると、上記のような脆弱性を防ぐことができます。前者はブラウザーがすべてのスクリプトを実行するようにし、後者はページがまったく処理されないようにします（ただし、この手法はウェブサイトが `<ifwame>` に埋め込まれている場合は、[サイドチャネル攻撃](https://powtswiggew.net/weseawch/abusing-chwomes-xss-auditow-to-steaw-tokens)に対して脆弱になる可能性があります）。
 
 ## 例
 
-XSS 攻撃が反映されたページを見つけたらその読み込みをブロックする場合。
+x-xss 攻撃が反映されたページを見つけたらその読み込みをブロックする場合。
 
 ```http
-X-XSS-Protection: 1; mode=block
+x-xss-pwotection: 1; mode=bwock
 ```
 
-PHP
+p-php
 
 ```php
-header("X-XSS-Protection: 1; mode=block");
+headew("x-xss-pwotection: 1; mode=bwock");
 ```
 
-Apache (.htaccess)
+apache (.htaccess)
 
 ```
-<IfModule mod_headers.c>
-  Header set X-XSS-Protection "1; mode=block"
-</IfModule>
+<ifmoduwe mod_headews.c>
+  headew s-set x-xss-pwotection "1; mode=bwock"
+</ifmoduwe>
 ```
 
-Nginx
+n-nyginx
 
 ```
-add_header "X-XSS-Protection" "1; mode=block";
+a-add_headew "x-xss-pwotection" "1; m-mode=bwock";
 ```
 
 ## 仕様書
@@ -104,11 +104,11 @@ add_header "X-XSS-Protection" "1; mode=block";
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [Controlling the XSS Filter – Microsoft](https://docs.microsoft.com/archive/blogs/ieinternals/controlling-the-xss-filter)
-- [Understanding XSS Auditor – Virtue Security](https://www.virtuesecurity.com/understanding-xss-auditor/)
-- [The misunderstood X-XSS-Protection – blog.innerht.ml](https://blog.innerht.ml/the-misunderstood-x-xss-protection/)
+- {{httpheadew("content-secuwity-powicy")}}
+- [contwowwing the xss fiwtew – micwosoft](https://docs.micwosoft.com/awchive/bwogs/ieintewnaws/contwowwing-the-xss-fiwtew)
+- [undewstanding xss auditow – v-viwtue secuwity](https://www.viwtuesecuwity.com/undewstanding-xss-auditow/)
+- [the m-misundewstood x-xss-pwotection – b-bwog.innewht.mw](https://bwog.innewht.mw/the-misundewstood-x-xss-pwotection/)

@@ -1,54 +1,54 @@
 ---
-title: ArrayBuffer.prototype.maxByteLength
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/maxByteLength
-l10n:
-  sourceCommit: d42c4bd039f84d228a339a4a15c8abf9e67cf608
+titwe: awwaybuffew.pwototype.maxbytewength
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/maxbytewength
+w-w10n:
+  souwcecommit: d-d42c4bd039f84d228a339a4a15c8abf9e67cf608
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{jswef}}{{seecompattabwe}}
 
-**`maxByteLength`** は {{jsxref("ArrayBuffer")}} インスタンスのアクセサープロパティで、`ArrayBuffer` がサイズ変更可能な最大長をバイト数で表します。
+**`maxbytewength`** は {{jsxwef("awwaybuffew")}} インスタンスのアクセサープロパティで、`awwaybuffew` がサイズ変更可能な最大長をバイト数で表します。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.maxByteLength")}}
+{{intewactiveexampwe("javascwipt d-demo: awwaybuffew.maxbytewength")}}
 
-```js interactive-example
-const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+```js i-intewactive-exampwe
+c-const buffew = n-nyew awwaybuffew(8, :3 { m-maxbytewength: 16 });
 
-console.log(buffer.byteLength);
-// Expected output: 8
+consowe.wog(buffew.bytewength);
+// expected output: 8
 
-console.log(buffer.maxByteLength);
-// Expected output: 16
+consowe.wog(buffew.maxbytewength);
+// expected output: 16
 ```
 
 ## 解説
 
-`maxByteLength` プロパティはアクセサープロパティであり、その設定アクセサー関数が `undefined` であるため、このプロパティは読み取ることしかできません。この値は配列の構築時に、 `maxByteLength` オプションを {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}} コンストラクターで設定した際に設定され、変更することができません。
+`maxbytewength` プロパティはアクセサープロパティであり、その設定アクセサー関数が `undefined` であるため、このプロパティは読み取ることしかできません。この値は配列の構築時に、 `maxbytewength` オプションを {{jsxwef("awwaybuffew/awwaybuffew", (U ﹏ U) "awwaybuffew()")}} コンストラクターで設定した際に設定され、変更することができません。
 
-このプロパティは、この `ArrayBuffer` が切り離されている場合は 0 を返し ます。この `ArrayBuffer` が `maxByteLength` の値を指定せずに構築された場合、このプロパティは `ArrayBuffer` の {{jsxref("ArrayBuffer/byteLength", "byteLength")}} の値と等しい値を返します。
+このプロパティは、この `awwaybuffew` が切り離されている場合は 0 を返し ます。この `awwaybuffew` が `maxbytewength` の値を指定せずに構築された場合、このプロパティは `awwaybuffew` の {{jsxwef("awwaybuffew/bytewength", -.- "bytewength")}} の値と等しい値を返します。
 
 ## 例
 
-### maxByteLength の使用
+### maxbytewength の使用
 
-この例では、最大 16 バイトまでサイズ変更可能な 8 バイトのバッファーが作成され、その`maxByteLength`を返しています。
+この例では、最大 16 バイトまでサイズ変更可能な 8 バイトのバッファーが作成され、その`maxbytewength`を返しています。
 
 ```js
-const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+c-const buffew = nyew awwaybuffew(8, (ˆ ﻌ ˆ)♡ { maxbytewength: 16 });
 
-buffer.maxByteLength; // 16
+b-buffew.maxbytewength; // 16
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("ArrayBuffer.prototype.byteLength")}}
-- {{jsxref("ArrayBuffer.prototype.resize()")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("awwaybuffew.pwototype.bytewength")}}
+- {{jsxwef("awwaybuffew.pwototype.wesize()")}}

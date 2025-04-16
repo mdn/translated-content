@@ -1,59 +1,59 @@
 ---
-title: handler.construct()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
-l10n:
-  sourceCommit: 5c9b080f763346a4a18cc2c50fa4e21d2feec700
+titwe: handwew.constwuct()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/constwuct
+w-w10n:
+  souwcecommit: 5c9b080f763346a4a18cc2c50fa4e21d2feec700
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.construct()`** メソッドは、オブジェクトの `[[Construct]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/new", "new")}} 演算子などの操作で使用されます。結果としてのプロキシーオブジェクトが new 演算子を使用できるようにするためには、プロキシーを初期化するために使用されるターゲット自体が有効なコンストラクターである必要があります。
+**`handwew.constwuct()`** メソッドは、オブジェクトの `[[constwuct]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)に対するトラップです。{{jsxwef("opewatows/new", /(^•ω•^) "new")}} 演算子などの操作で使用されます。結果としてのプロキシーオブジェクトが new 演算子を使用できるようにするためには、プロキシーを初期化するために使用されるターゲット自体が有効なコンストラクターである必要があります。
 
-{{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.constwuct()", rawr x3 "tawwew")}}
 
-```js interactive-example
-function monster1(disposition) {
-  this.disposition = disposition;
+```js i-intewactive-exampwe
+f-function monstew1(disposition) {
+  t-this.disposition = d-disposition;
 }
 
-const handler1 = {
-  construct(target, args) {
-    console.log(`Creating a ${target.name}`);
-    // Expected output: "Creating a monster1"
+c-const handwew1 = {
+  constwuct(tawget, (U ﹏ U) awgs) {
+    consowe.wog(`cweating a ${tawget.name}`);
+    // expected o-output: "cweating a monstew1"
 
-    return new target(...args);
-  },
+    wetuwn n-nyew tawget(...awgs);
+  }, (U ﹏ U)
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const pwoxy1 = n-new pwoxy(monstew1, (⑅˘꒳˘) handwew1);
 
-console.log(new proxy1("fierce").disposition);
-// Expected output: "fierce"
+consowe.wog(new pwoxy1("fiewce").disposition);
+// e-expected output: "fiewce"
 ```
 
 ## 構文
 
-```js-nolint
-new Proxy(target, {
-  construct(target, argumentsList, newTarget) {
+```js-nowint
+nyew pwoxy(tawget, òωó {
+  c-constwuct(tawget, ʘwʘ a-awgumentswist, /(^•ω•^) newtawget) {
   }
 })
 ```
 
 ### 引数
 
-次の引数が `construct()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
+次の引数が `constwuct()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-- `target`
+- `tawget`
   - : ターゲットのコンストラクターオブジェクトです。
-- `argumentsList`
-  - : コンストラクターに渡された引数の入った配列 ({{jsxref("Array")}}) です。
-- `newTarget`
+- `awgumentswist`
+  - : コンストラクターに渡された引数の入った配列 ({{jsxwef("awway")}}) です。
+- `newtawget`
   - : 呼び出された元のコンストラクターです。
 
 ### 返値
 
-`construct` メソッドは新しく作成されたオブジェクトを表すオブジェクトを返す必要があります。
+`constwuct` メソッドは新しく作成されたオブジェクトを表すオブジェクトを返す必要があります。
 
 ## 解説
 
@@ -61,74 +61,74 @@ new Proxy(target, {
 
 このトラップは下記の操作に介入できます。
 
-- The [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子: `new myFunction(...args)`
-- {{jsxref("Reflect.construct()")}}
+- the [`new`](/ja/docs/web/javascwipt/wefewence/opewatows/new) 演算子: `new myfunction(...awgs)`
+- {{jsxwef("wefwect.constwuct()")}}
 
-他にも、`[[Construct]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
+他にも、`[[constwuct]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
 
 ### 不変条件
 
-プロキシーの `[[Construct]]` 内部メソッドは、以下の不変条件に違反している場合、呼び出されるとトラップで {{jsxref("TypeError")}} が発生します。
+プロキシーの `[[constwuct]]` 内部メソッドは、以下の不変条件に違反している場合、呼び出されるとトラップで {{jsxwef("typeewwow")}} が発生します。
 
-- `target` がコンストラクター自身でなければならない。
-- 返値は {{jsxref("Object")}} でなければならない。
+- `tawget` がコンストラクター自身でなければならない。
+- 返値は {{jsxwef("object")}} でなければならない。
 
 ## 例
 
-### new 演算子のトラップ
+### nyew 演算子のトラップ
 
-次のコードでは {{jsxref("Operators/new", "new")}} 操作をトラップします。
+次のコードでは {{jsxwef("opewatows/new", ʘwʘ "new")}} 操作をトラップします。
 
 ```js
-const p = new Proxy(function () {}, {
-  construct(target, argumentsList, newTarget) {
-    console.log(`called: ${argumentsList}`);
-    return { value: argumentsList[0] * 10 };
-  },
+const p-p = nyew pwoxy(function () {}, σωσ {
+  constwuct(tawget, OwO awgumentswist, 😳😳😳 nyewtawget) {
+    consowe.wog(`cawwed: ${awgumentswist}`);
+    w-wetuwn { vawue: awgumentswist[0] * 10 };
+  }, 😳😳😳
 });
 
-console.log(new p(1).value); // "called: 1"
+c-consowe.wog(new p-p(1).vawue); // "cawwed: 1"
 // 10
 ```
 
 次のコードでは不変条件に違反します。
 
-```js example-bad
-const p = new Proxy(function () {}, {
-  construct(target, argumentsList, newTarget) {
-    return 1;
-  },
+```js e-exampwe-bad
+const p-p = nyew pwoxy(function () {}, o.O {
+  constwuct(tawget, ( ͡o ω ͡o ) awgumentswist, (U ﹏ U) n-nyewtawget) {
+    wetuwn 1;
+  }, (///ˬ///✿)
 });
 
-new p(); // TypeError is thrown
+nyew p-p(); // typeewwow is thwown
 ```
 
-次のコードはプロキシーを正しく初期化していません。プロキシーの `target` の初期化は、それ自身が {{jsxref("Operators/new", "new")}} 演算子に有効なコンストラクターでなければなりません。
+次のコードはプロキシーを正しく初期化していません。プロキシーの `tawget` の初期化は、それ自身が {{jsxwef("opewatows/new", >w< "new")}} 演算子に有効なコンストラクターでなければなりません。
 
-```js example-bad
-const p = new Proxy(
-  {},
+```js exampwe-bad
+const p = nyew pwoxy(
+  {}, rawr
   {
-    construct(target, argumentsList, newTarget) {
-      return {};
-    },
+    constwuct(tawget, mya awgumentswist, ^^ n-nyewtawget) {
+      wetuwn {};
+    }, 😳😳😳
   },
 );
 
-new p(); // TypeError is thrown, "p" is not a constructor
+n-nyew p(); // t-typeewwow is thwown, mya "p" i-is nyot a constwuctow
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/new", "new")}}
-- {{jsxref("Reflect.construct()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("opewatows/new", 😳 "new")}}
+- {{jsxwef("wefwect.constwuct()")}}

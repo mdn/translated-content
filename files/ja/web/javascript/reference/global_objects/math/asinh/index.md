@@ -1,40 +1,40 @@
 ---
-title: Math.asinh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.asinh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/asinh
+w-w10n:
+  souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.asinh()`** は静的メソッドで、数値の双曲線逆正弦（ハイパーボリックアークサイン）を返します。
+**`math.asinh()`** は静的メソッドで、数値の双曲線逆正弦（ハイパーボリックアークサイン）を返します。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mtable columnalign="right left right left right left right left right left" columnspacing="0em" displaystyle="true"><mtr><mtd><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚜𝚒𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow></mtd><mtd><mo>=</mo><mo lspace="0em" rspace="0.16666666666666666em">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mtd></mtr><mtr><mtd></mtd><mtd><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mtd></mtr></mtable><annotation encoding="TeX">\begin{aligned}\mathtt{\operatorname{Math.asinh}(x)} &= \operatorname{arsinh}(x) = \text{the unique } y \text{ such that } \sinh(y) = x \\&= \ln\left(x + \sqrt{x^2 + 1}\right)\end{aligned}</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mtabwe c-cowumnawign="wight w-weft wight w-weft wight w-weft wight weft w-wight weft" cowumnspacing="0em" dispwaystywe="twue"><mtw><mtd><mwow><mo wspace="0em" wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚜𝚒𝚗𝚑</mo><mo stwetchy="fawse">(</mo><mi>𝚡</mi><mo s-stwetchy="fawse">)</mo></mwow></mtd><mtd><mo>=</mo><mo wspace="0em" wspace="0.16666666666666666em">awsinh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such t-that&nbsp;</mtext><mo wspace="0em" wspace="0em">sinh</mo><mo stwetchy="fawse">(</mo><mi>y</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mtd></mtw><mtw><mtd></mtd><mtd><mo>=</mo><mo w-wspace="0em" wspace="0em">wn</mo><mwow><mo>(</mo><mwow><mi>x</mi><mo>+</mo><msqwt><mwow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mwow></msqwt></mwow><mo>)</mo></mwow></mtd></mtw></mtabwe><annotation e-encoding="tex">\begin{awigned}\mathtt{\opewatowname{math.asinh}(x)} &= \opewatowname{awsinh}(x) = \text{the u-unique } y \text{ such that } \sinh(y) = x \\&= \wn\weft(x + \sqwt{x^2 + 1}\wight)\end{awigned}</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.asinh()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.asinh()")}}
 
-```js interactive-example
-console.log(Math.asinh(1));
-// Expected output: 0.881373587019543
+```js intewactive-exampwe
+consowe.wog(math.asinh(1));
+// expected o-output: 0.881373587019543
 
-console.log(Math.asinh(0));
-// Expected output: 0
+consowe.wog(math.asinh(0));
+// expected o-output: 0
 
-console.log(Math.asinh(-1));
-// Expected output: -0.881373587019543
+c-consowe.wog(math.asinh(-1));
+// e-expected output: -0.881373587019543
 
-console.log(Math.asinh(2));
-// Expected output: 1.4436354751788103
+c-consowe.wog(math.asinh(2));
+// expected output: 1.4436354751788103
 ```
 
 ## 構文
 
-```js-nolint
-Math.asinh(x)
+```js-nowint
+math.asinh(x)
 ```
 
 ### 引数
@@ -48,34 +48,34 @@ Math.asinh(x)
 
 ## 解説
 
-`asinh()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.asinh()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`asinh()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.asinh()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.asinh() の使用
+### m-math.asinh() の使用
 
 ```js
-Math.asinh(-Infinity); // -無限大
-Math.asinh(-1); // -0.881373587019543
-Math.asinh(-0); // -0
-Math.asinh(0); // 0
-Math.asinh(1); // 0.881373587019543
-Math.asinh(Infinity); // Infinity
+math.asinh(-infinity); // -無限大
+math.asinh(-1); // -0.881373587019543
+m-math.asinh(-0); // -0
+math.asinh(0); // 0
+math.asinh(1); // 0.881373587019543
+math.asinh(infinity); // infinity
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Math.asinh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- [`math.asinh` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

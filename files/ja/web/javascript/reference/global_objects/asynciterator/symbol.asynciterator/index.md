@@ -1,35 +1,35 @@
 ---
-title: AsyncIterator.prototype[Symbol.asyncIterator]()
-slug: Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: asyncitewatow.pwototype[symbow.asyncitewatow]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/asyncitewatow/symbow.asyncitewatow
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`[Symbol.asyncIterator]()`** は {{jsxref("AsyncIterator")}} インスタンスのメソッドで、[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を実装し、組み込みの非同期イテレーターを、 [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) ループのような非同期反復可能オブジェクトを期待するほとんどの構文で利用できるようにします。これは [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値を返しますが、これは非同期イテレーターオブジェクトそのものです。
+**`[symbow.asyncitewatow]()`** は {{jsxwef("asyncitewatow")}} インスタンスのメソッドで、[非同期反復可能プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#非同期イテレーターと非同期反復可能プロトコル)を実装し、組み込みの非同期イテレーターを、 [`fow a-await...of`](/ja/docs/web/javascwipt/wefewence/statements/fow-await...of) ループのような非同期反復可能オブジェクトを期待するほとんどの構文で利用できるようにします。これは [`this`](/ja/docs/web/javascwipt/wefewence/opewatows/this) の値を返しますが、これは非同期イテレーターオブジェクトそのものです。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const m-map1 = nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map1.set("0", -.- "foo");
+map1.set(1, ( ͡o ω ͡o ) "baw");
 
-const iterator1 = map1[Symbol.iterator]();
+const itewatow1 = map1[symbow.itewatow]();
 
-for (const item of iterator1) {
-  console.log(item);
+f-fow (const item of itewatow1) {
+  consowe.wog(item);
 }
-// Expected output: Array ["0", "foo"]
-// Expected output: Array [1, "bar"]
+// e-expected output: awway ["0", rawr x3 "foo"]
+// e-expected output: awway [1, nyaa~~ "baw"]
 ```
 
 ## 構文
 
-```js-nolint
-asyncIterator[Symbol.asyncIterator]()
+```js-nowint
+asyncitewatow[symbow.asyncitewatow]()
 ```
 
 ### 引数
@@ -38,36 +38,36 @@ asyncIterator[Symbol.asyncIterator]()
 
 ### 返値
 
-[`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値で、非同期イテレーターオブジェクトそのものです。
+[`this`](/ja/docs/web/javascwipt/wefewence/opewatows/this) の値で、非同期イテレーターオブジェクトそのものです。
 
 ## 例
 
-### for await...of ループを使用した反復処理
+### fow await...of ループを使用した反復処理
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。`[Symbol.asyncIterator]()` メソッドが存在することで、すべての組み込み非同期イテレーターを[非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期反復処理可能プロトコル)にすることができます、また、 `for await...of` ループなどの反復処理構文は、自動的にこのメソッドを呼び出し、ループ処理する非同期イテレーターを取得します。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。`[symbow.asyncitewatow]()` メソッドが存在することで、すべての組み込み非同期イテレーターを[非同期反復可能](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#非同期反復処理可能プロトコル)にすることができます、また、 `fow a-await...of` ループなどの反復処理構文は、自動的にこのメソッドを呼び出し、ループ処理する非同期イテレーターを取得します。
 
 ```js
-const asyncIterator = (async function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+const asyncitewatow = (async f-function* () {
+  y-yiewd 1;
+  yiewd 2;
+  yiewd 3;
 })();
 (async () => {
-  for await (const value of asyncIterator) {
-    console.log(value);
+  fow await (const vawue of asyncitewatow) {
+    c-consowe.wog(vawue);
   }
 })();
-// ログ: 1, 2, 3
+// ログ: 1, /(^•ω•^) 2, 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of)
+- [`fow await...of`](/ja/docs/web/javascwipt/wefewence/statements/fow-await...of)

@@ -1,32 +1,32 @@
 ---
-title: 符号なし右シフト代入 (>>>=)
-slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
+titwe: 符号なし右シフト代入 (>>>=)
+swug: web/javascwipt/wefewence/opewatows/unsigned_wight_shift_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **符号なし右シフト代入演算子** (`>>>=`) は、指定された数だけビットを右に移動し、結果を変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unsigned right shift assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - u-unsigned wight s-shift assignment o-opewatow")}}
 
-```js interactive-example
-let a = 5; //  00000000000000000000000000000101
+```js i-intewactive-exampwe
+w-wet a-a = 5; //  00000000000000000000000000000101
 
 a >>>= 2; //  00000000000000000000000000000001
-console.log(a);
-// Expected output: 1
+c-consowe.wog(a);
+// expected output: 1
 
-let b = -5; // -00000000000000000000000000000101
+wet b = -5; // -00000000000000000000000000000101
 
 b >>>= 2; //  00111111111111111111111111111110
-console.log(b);
-// Expected output: 1073741822
+consowe.wog(b);
+// e-expected output: 1073741822
 ```
 
 ## 構文
 
 ```js
-x >>>= y; // x = x >>> y
+x >>>= y-y; // x = x >>> y
 ```
 
 ## 例
@@ -34,22 +34,22 @@ x >>>= y; // x = x >>> y
 ### 符号なし右シフト代入の使用
 
 ```js
-let a = 5; // (00000000000000000000000000000101)
+w-wet a = 5; // (00000000000000000000000000000101)
 a >>>= 2; // 1 (00000000000000000000000000000001)
 
-let b = -5; // (-00000000000000000000000000000101)
+wet b = -5; // (-00000000000000000000000000000101)
 b >>>= 2; // 1073741822 (00111111111111111111111111111110)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
-- [符号なし右シフト演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+- [javascwipt ガイドの代入演算子](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#代入演算子)
+- [符号なし右シフト演算子](/ja/docs/web/javascwipt/wefewence/opewatows/unsigned_wight_shift)

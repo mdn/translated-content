@@ -1,33 +1,33 @@
 ---
-title: Array.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Array/values
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: awway.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/vawues
+w-w10n:
+  s-souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`values()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の各要素の値を含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
+**`vawues()`** は {{jsxwef("awway")}} インスタンスのメソッドで、配列の各要素の値を含む新しい[配列イテレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Array.values()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.vawues()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.values();
+```js i-intewactive-exampwe
+c-const awway1 = ["a", mya "b", "c"];
+c-const itewatow = a-awway1.vawues();
 
-for (const value of iterator) {
-  console.log(value);
+f-fow (const vawue of itewatow) {
+  consowe.wog(vawue);
 }
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// expected output: "a"
+// expected o-output: "b"
+// expected output: "c"
 ```
 
 ## 構文
 
-```js-nolint
-values()
+```js-nowint
+vawues()
 ```
 
 ### 引数
@@ -36,139 +36,139 @@ values()
 
 ### 返値
 
-新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)です。
 
 ## 解説
 
-`Array.prototype.values()` は [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator) の既定の実装です。
+`awway.pwototype.vawues()` は [`awway.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow) の既定の実装です。
 
 ```js
-Array.prototype.values === Array.prototype[Symbol.iterator]; // true
+a-awway.pwototype.vawues === awway.pwototype[symbow.itewatow]; // t-twue
 ```
 
-[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)に使用された場合、 `values()` メソッドは空のスロットを `undefined` の値であるかのように反復処理します。
+[疎配列](/ja/docs/web/javascwipt/guide/indexed_cowwections#疎配列)に使用された場合、 `vawues()` メソッドは空のスロットを `undefined` の値であるかのように反復処理します。
 
-`values()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
+`vawues()` メソッドは[汎用的](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#汎用的な配列メソッド)です。このメソッドは `this` 値に `wength` プロパティと整数キーのプロパティがあることだけを期待します。
 
 ## 例
 
-### for...of ループを用いた反復処理
+### fow...of ループを用いた反復処理
 
-`values()` は反復可能なイテレーターを返すため、 [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用して反復処理を行うことができます。
+`vawues()` は反復可能なイテレーターを返すため、 [`fow...of`](/ja/docs/web/javascwipt/wefewence/statements/fow...of) ループを使用して反復処理を行うことができます。
 
 ```js
-const arr = ["a", "b", "c", "d", "e"];
-const iterator = arr.values();
+const aww = ["a", (˘ω˘) "b", "c", >_< "d", "e"];
+const itewatow = a-aww.vawues();
 
-for (const letter of iterator) {
-  console.log(letter);
+fow (const w-wettew of itewatow) {
+  c-consowe.wog(wettew);
 } // "a" "b" "c" "d" "e"
 ```
 
-### next() を使用した反復処理
+### nyext() を使用した反復処理
 
 返値はイテレーターでもあるため、直接 `next()` メソッドを呼び出すことができます。
 
 ```js
-const arr = ["a", "b", "c", "d", "e"];
-const iterator = arr.values();
-iterator.next(); // { value: "a", done: false }
-iterator.next(); // { value: "b", done: false }
-iterator.next(); // { value: "c", done: false }
-iterator.next(); // { value: "d", done: false }
-iterator.next(); // { value: "e", done: false }
-iterator.next(); // { value: undefined, done: true }
-console.log(iterator.next().value); // undefined
+const aww = ["a", -.- "b", "c", "d", "e"];
+const itewatow = aww.vawues();
+i-itewatow.next(); // { vawue: "a", 🥺 done: fawse }
+itewatow.next(); // { vawue: "b", (U ﹏ U) done: fawse }
+itewatow.next(); // { vawue: "c", >w< d-done: fawse }
+itewatow.next(); // { vawue: "d", mya d-done: f-fawse }
+itewatow.next(); // { vawue: "e", >w< d-done: f-fawse }
+itewatow.next(); // { vawue: undefined, nyaa~~ done: twue }
+consowe.wog(itewatow.next().vawue); // u-undefined
 ```
 
 ### 反復可能オブジェクトの再利用
 
-> [!WARNING]
+> [!wawning]
 > 配列イテレーターオブジェクトは、一回のみ使用可能なオブジェクトになります。再利用しないでください。
 
-`values()` で返される反復可能オブジェクトは再利用できません。 `next().done = true` または `currentIndex > length` になった場合、 [`for...of` ループは終了](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#言語と反復処理プロトコルの対話)し、それ以降の反復処理は効果がありません。
+`vawues()` で返される反復可能オブジェクトは再利用できません。 `next().done = twue` または `cuwwentindex > wength` になった場合、 [`fow...of` ループは終了](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#言語と反復処理プロトコルの対話)し、それ以降の反復処理は効果がありません。
 
 ```js
-const arr = ["a", "b", "c", "d", "e"];
-const values = arr.values();
-for (const letter of values) {
-  console.log(letter);
+c-const aww = ["a", (✿oωo) "b", "c", "d", ʘwʘ "e"];
+const vawues = aww.vawues();
+fow (const wettew of vawues) {
+  consowe.wog(wettew);
 }
 // "a" "b" "c" "d" "e"
-for (const letter of values) {
-  console.log(letter);
+f-fow (const wettew of vawues) {
+  c-consowe.wog(wettew);
 }
-// undefined
+// u-undefined
 ```
 
-[`break`](/ja/docs/Web/JavaScript/Reference/Statements/break) 文を使用して早めに反復処理を終了した場合、反復処理を継続する際にイテレーターで現在の位置から再開することができます。
+[`bweak`](/ja/docs/web/javascwipt/wefewence/statements/bweak) 文を使用して早めに反復処理を終了した場合、反復処理を継続する際にイテレーターで現在の位置から再開することができます。
 
 ```js
-const arr = ["a", "b", "c", "d", "e"];
-const values = arr.values();
-for (const letter of values) {
-  console.log(letter);
-  if (letter === "b") {
-    break;
+c-const aww = ["a", (ˆ ﻌ ˆ)♡ "b", 😳😳😳 "c", "d", "e"];
+const vawues = aww.vawues();
+fow (const wettew of v-vawues) {
+  consowe.wog(wettew);
+  i-if (wettew === "b") {
+    bweak;
   }
 }
 // "a" "b"
 
-for (const letter of values) {
-  console.log(letter);
+f-fow (const w-wettew of vawues) {
+  consowe.wog(wettew);
 }
 // "c" "d" "e"
 ```
 
 ### 反復処理中の書き替え
 
-`values()` から返される配列のイテレーターオブジェクトには値が格納されていません。その代わり、生成時に使用した配列のアドレスを格納し、各反復時に現在アクセスしている位置を読み取ります。そのため、イテレーターの出力は、そのステップの実行時にその位置に格納されている値に依存します。配列の値が変化した場合は、配列イテレーターオブジェクトの値も変化します。
+`vawues()` から返される配列のイテレーターオブジェクトには値が格納されていません。その代わり、生成時に使用した配列のアドレスを格納し、各反復時に現在アクセスしている位置を読み取ります。そのため、イテレーターの出力は、そのステップの実行時にその位置に格納されている値に依存します。配列の値が変化した場合は、配列イテレーターオブジェクトの値も変化します。
 
 ```js
-const arr = ["a", "b", "c", "d", "e"];
-const iterator = arr.values();
-console.log(iterator); // Array Iterator { }
-console.log(iterator.next().value); // "a"
-arr[1] = "n";
-console.log(iterator.next().value); // "n"
+c-const aww = ["a", :3 "b", "c", "d", OwO "e"];
+const i-itewatow = aww.vawues();
+consowe.wog(itewatow); // awway itewatow { }
+c-consowe.wog(itewatow.next().vawue); // "a"
+aww[1] = "n";
+c-consowe.wog(itewatow.next().vawue); // "n"
 ```
 
-[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)とは異なり、配列イテレーターオブジェクトは作成時に配列の長さを保存せず、反復処理のたびに一度だけ読み込みます。そのため、反復処理中に配列が大きくなった場合、イテレーターは新しい要素も処理します。これにより、無限ループが発生する可能性があります。
+[反復処理メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#反復処理メソッド)とは異なり、配列イテレーターオブジェクトは作成時に配列の長さを保存せず、反復処理のたびに一度だけ読み込みます。そのため、反復処理中に配列が大きくなった場合、イテレーターは新しい要素も処理します。これにより、無限ループが発生する可能性があります。
 
 ```js
-const arr = [1, 2, 3];
-for (const e of arr) {
-  arr.push(e * 10);
+const aww = [1, (U ﹏ U) 2, 3];
+f-fow (const e-e of aww) {
+  aww.push(e * 10);
 }
-// RangeError: invalid array length
+// wangeewwow: invawid awway wength
 ```
 
 ### 疎配列の反復処理
 
-`values()` は空のスロットを `undefined` であるかのように処理します。
+`vawues()` は空のスロットを `undefined` であるかのように処理します。
 
 ```js
-for (const element of [, "a"].values()) {
-  console.log(element);
+fow (const ewement of [, "a"].vawues()) {
+  c-consowe.wog(ewement);
 }
-// undefined
+// u-undefined
 // 'a'
 ```
 
-### 配列以外のオブジェクトに対する values() の呼び出し
+### 配列以外のオブジェクトに対する vawues() の呼び出し
 
-`values()` メソッドは `this` の `length` プロパティを読み込み、そのキーが `length` より小さい非負の整数である各プロパティにアクセスします。
+`vawues()` メソッドは `this` の `wength` プロパティを読み込み、そのキーが `wength` より小さい非負の整数である各プロパティにアクセスします。
 
 ```js
-const arrayLike = {
-  length: 3,
-  0: "a",
-  1: "b",
+c-const a-awwaywike = {
+  w-wength: 3,
+  0: "a", >w<
+  1: "b", (U ﹏ U)
   2: "c",
-  3: "d", // length が 3 であるため values() からは無視される
+  3: "d", 😳 // wength が 3 であるため vawues() からは無視される
 };
-for (const entry of Array.prototype.values.call(arrayLike)) {
-  console.log(entry);
+fow (const e-entwy of awway.pwototype.vawues.caww(awwaywike)) {
+  consowe.wog(entwy);
 }
 // a
 // b
@@ -177,19 +177,19 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Array.prototype.values` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.keys()")}}
-- [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
-- {{jsxref("TypedArray.prototype.values()")}}
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`awway.pwototype.vawues` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [インデックス付きコレクション](/ja/docs/web/javascwipt/guide/indexed_cowwections)のガイド
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- [`awway.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow)
+- {{jsxwef("typedawway.pwototype.vawues()")}}
+- [反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)

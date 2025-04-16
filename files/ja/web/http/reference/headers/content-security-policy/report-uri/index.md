@@ -1,112 +1,112 @@
 ---
-title: "CSP: report-uri"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri
-original_slug: Web/HTTP/Headers/Content-Security-Policy/report-uri
-l10n:
-  sourceCommit: 6398e955ff59a75fcea7ebfc38a5472c0628b9b0
+titwe: "csp: wepowt-uwi"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/wepowt-uwi
+o-owiginaw_swug: web/http/headews/content-secuwity-powicy/wepowt-uwi
+w-w10n:
+  souwcecommit: 6398e955ff59a75fcea7ebfc38a5472c0628b9b0
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{httpsidebaw}}{{depwecated_headew}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`report-uri`** ディレクティブは非推奨で、ディレクティブは、コンテンツセキュリティポリシーに違反する試みを報告するよう、 ユーザーエージェントに指示します。これらの違反報告は、指定された URI への HTTP POST リクエストで送られる JSON 文書で構成されます。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`wepowt-uwi`** ディレクティブは非推奨で、ディレクティブは、コンテンツセキュリティポリシーに違反する試みを報告するよう、 ユーザーエージェントに指示します。これらの違反報告は、指定された u-uwi への http p-post リクエストで送られる j-json 文書で構成されます。
 
-> **警告:** {{CSP("report-to")}} ディレクティブは、非推奨の **`report-uri`** ディレクティブを置き換えるためのものですが、{{CSP("report-to")}} は、まだほとんどのブラウザーで対応されていません。
-> そのため、現在のブラウザーとの互換性を保ちつつ、ブラウザーが {{CSP("report-to")}} に対応したときに前方互換性を持たせられるよう、 **`report-uri`** と {{CSP("report-to")}} の両方を指定することができるようになっています。
+> **警告:** {{csp("wepowt-to")}} ディレクティブは、非推奨の **`wepowt-uwi`** ディレクティブを置き換えるためのものですが、{{csp("wepowt-to")}} は、まだほとんどのブラウザーで対応されていません。
+> そのため、現在のブラウザーとの互換性を保ちつつ、ブラウザーが {{csp("wepowt-to")}} に対応したときに前方互換性を持たせられるよう、 **`wepowt-uwi`** と {{csp("wepowt-to")}} の両方を指定することができるようになっています。
 >
 > ```http
-> Content-Security-Policy: …; report-uri https://endpoint.com; report-to groupname
+> c-content-secuwity-powicy: …; wepowt-uwi https://endpoint.com; wepowt-to gwoupname
 > ```
 >
-> {{CSP("report-to")}} に対応しているブラウザーでは、**`report-uri`** ディレクティブは無視されます。
+> {{csp("wepowt-to")}} に対応しているブラウザーでは、**`wepowt-uwi`** ディレクティブは無視されます。
 
 このディレクティブは、それ自体には何の効果もなく、他のディレクティブと組み合わせて初めて意味を持つものです。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th scope="wow">csp バージョン</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Reporting directive", "報告ディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th colspan="2" scope="row">
-        このディレクティブは {{HTMLElement("meta")}} 要素には対応していません。
+    </tw>
+    <tw>
+      <th s-scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("wepowting diwective", o.O "報告ディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th cowspan="2" s-scope="wow">
+        このディレクティブは {{htmwewement("meta")}} 要素には対応していません。
       </th>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```http
-Content-Security-Policy: report-uri <uri>;
-Content-Security-Policy: report-uri <uri> <uri>;
+content-secuwity-powicy: w-wepowt-uwi <uwi>;
+content-secuwity-powicy: wepowt-uwi <uwi> <uwi>;
 ```
 
-- \<uri>
-  - : 報告の POST 先となるURI。
+- \<uwi>
+  - : 報告の post 先となるuwi。
 
 ## 例
 
-詳細な情報と例は　{{HTTPHeader("Content-Security-Policy-Report-Only")}}　を参照してください。
+詳細な情報と例は　{{httpheadew("content-secuwity-powicy-wepowt-onwy")}}　を参照してください。
 
 ```http
-Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
+content-secuwity-powicy: d-defauwt-swc https:; wepowt-uwi /csp-viowation-wepowt-endpoint/
 ```
 
-`/csp-violation-report-endpoint/` は、例えば以下のような PHP を実行し、違反の詳細を JSON でログ出力し、違反がログファイルに追加された最初のものであれば、管理者にメールを送信することが可能です。
+`/csp-viowation-wepowt-endpoint/` は、例えば以下のような p-php を実行し、違反の詳細を j-json でログ出力し、違反がログファイルに追加された最初のものであれば、管理者にメールを送信することが可能です。
 
 ```php
     <?php
 
-    // Start configure
-    $log_file = dirname(__FILE__) . '/csp-violations.log';
-    $log_file_size_limit = 1000000; // bytes - once exceeded no further entries are added
-    $email_address = 'admin@example.com';
-    $email_subject = 'Content-Security-Policy violation';
-    // End configuration
+    // stawt configuwe
+    $wog_fiwe = diwname(__fiwe__) . ( ͡o ω ͡o ) '/csp-viowations.wog';
+    $wog_fiwe_size_wimit = 1000000; // bytes - once exceeded nyo f-fuwthew entwies awe added
+    $emaiw_addwess = 'admin@exampwe.com';
+    $emaiw_subject = 'content-secuwity-powicy viowation';
+    // end configuwation
 
-    $current_domain = preg_replace('/www\./i', '', $_SERVER['SERVER_NAME']);
-    $email_subject = $email_subject . ' on ' . $current_domain;
+    $cuwwent_domain = pweg_wepwace('/www\./i', (U ﹏ U) '', $_sewvew['sewvew_name']);
+    $emaiw_subject = $emaiw_subject . (///ˬ///✿) ' o-on ' . >w< $cuwwent_domain;
 
-    http_response_code(204); // HTTP 204 No Content
+    http_wesponse_code(204); // h-http 204 nyo c-content
 
-    $json_data = file_get_contents('php://input');
+    $json_data = f-fiwe_get_contents('php://input');
 
-    // We pretty print the JSON before adding it to the log file
+    // w-we pwetty pwint the json befowe adding it t-to the wog fiwe
     if ($json_data = json_decode($json_data)) {
-      $json_data = json_encode($json_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+      $json_data = j-json_encode($json_data, rawr json_pwetty_pwint | json_unescaped_swashes);
 
-      if (!file_exists($log_file)) {
-        // Send an email
-        $message = "The following Content-Security-Policy violation occurred on " .
-          $current_domain . ":\n\n" .
-          $json_data .
-          "\n\nFurther CPS violations will be logged to the following log file, but no further email notifications will be sent until this log file is deleted:\n\n" .
-          $log_file;
-        mail($email_address, $email_subject, $message,
-             'Content-Type: text/plain;charset=utf-8');
-      } else if (filesize($log_file) > $log_file_size_limit) {
+      if (!fiwe_exists($wog_fiwe)) {
+        // send an emaiw
+        $message = "the f-fowwowing content-secuwity-powicy viowation occuwwed o-on " . mya
+          $cuwwent_domain . ^^ ":\n\n" . 😳😳😳
+          $json_data . mya
+          "\n\nfuwthew c-cps viowations wiww b-be wogged to the fowwowing wog fiwe, 😳 but nyo fuwthew emaiw nyotifications w-wiww b-be sent untiw this wog fiwe is d-deweted:\n\n" . -.-
+          $wog_fiwe;
+        maiw($emaiw_addwess, 🥺 $emaiw_subject, o.O $message, /(^•ω•^)
+             'content-type: t-text/pwain;chawset=utf-8');
+      } ewse i-if (fiwesize($wog_fiwe) > $wog_fiwe_size_wimit) {
         exit(0);
       }
 
-      file_put_contents($log_file, $json_data, FILE_APPEND | LOCK_EX);
+      f-fiwe_put_contents($wog_fiwe, nyaa~~ $json_data, fiwe_append | wock_ex);
     }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- {{CSP("report-to")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{httpheadew("content-secuwity-powicy-wepowt-onwy")}}
+- {{csp("wepowt-to")}}

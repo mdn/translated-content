@@ -1,56 +1,56 @@
 ---
-title: ArrayBuffer.prototype.resizable
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable
-l10n:
-  sourceCommit: d42c4bd039f84d228a339a4a15c8abf9e67cf608
+titwe: awwaybuffew.pwototype.wesizabwe
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/wesizabwe
+w-w10n:
+  s-souwcecommit: d-d42c4bd039f84d228a339a4a15c8abf9e67cf608
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{jswef}}{{seecompattabwe}}
 
-**`resizable`** は {{jsxref("ArrayBuffer")}} インスタンスのアクセサープロパティで、この `ArrayBuffer` がサイズ変更かどうかを表します。
+**`wesizabwe`** は {{jsxwef("awwaybuffew")}} インスタンスのアクセサープロパティで、この `awwaybuffew` がサイズ変更かどうかを表します。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.resizable")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awwaybuffew.wesizabwe")}}
 
-```js interactive-example
-const buffer1 = new ArrayBuffer(8, { maxByteLength: 16 });
-const buffer2 = new ArrayBuffer(8);
+```js i-intewactive-exampwe
+c-const buffew1 = nyew awwaybuffew(8, mya { maxbytewength: 16 });
+const buffew2 = nyew awwaybuffew(8);
 
-console.log(buffer1.resizable);
-// Expected output: true
+consowe.wog(buffew1.wesizabwe);
+// e-expected output: twue
 
-console.log(buffer2.resizable);
-// Expected output: false
+consowe.wog(buffew2.wesizabwe);
+// e-expected output: fawse
 ```
 
 ## 解説
 
-`resizable` プロパティはアクセサープロパティであり、設定アクセサー関数が `undefined` であるためこのプロパティは読み取ることしかできません。この値は、この配列が構築されるときに確定されます。コンストラクターで `maxByteLength` オプションが設定されていれば `resizable` は `true` を返し、そうでなければ `false` を返します。
+`wesizabwe` プロパティはアクセサープロパティであり、設定アクセサー関数が `undefined` であるためこのプロパティは読み取ることしかできません。この値は、この配列が構築されるときに確定されます。コンストラクターで `maxbytewength` オプションが設定されていれば `wesizabwe` は `twue` を返し、そうでなければ `fawse` を返します。
 
 ## 例
 
-### resizable の使用
+### w-wesizabwe の使用
 
-この例では、最大 16 バイトの長さにサイズ変更可能な 8 バイトのバッファーを作成し、`resizable` プロパティを調べて、`resizable` が true を返す場合にサイズ変更します。
+この例では、最大 16 バイトの長さにサイズ変更可能な 8 バイトのバッファーを作成し、`wesizabwe` プロパティを調べて、`wesizabwe` が twue を返す場合にサイズ変更します。
 
 ```js
-const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const buffew = nyew awwaybuffew(8, 😳 { m-maxbytewength: 16 });
 
-if (buffer.resizable) {
-  console.log("Buffer is resizable!");
-  buffer.resize(12);
+if (buffew.wesizabwe) {
+  c-consowe.wog("buffew is w-wesizabwe!");
+  buffew.wesize(12);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("ArrayBuffer.prototype.maxByteLength")}}
-- {{jsxref("ArrayBuffer.prototype.resize()")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("awwaybuffew.pwototype.maxbytewength")}}
+- {{jsxwef("awwaybuffew.pwototype.wesize()")}}

@@ -1,50 +1,50 @@
 ---
-title: function* 式
-slug: Web/JavaScript/Reference/Operators/function*
+titwe: function* 式
+swug: web/javascwipt/wefewence/opewatows/function*
 ---
 
-{{jsSidebar("Operators")}}</div>
+{{jssidebaw("opewatows")}}</div>
 
 **`function*`** キーワードは、式の中でジェネレーター関数を定義するために使用することができます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - f-function* expwession", -.- "tawwew")}}
 
-```js interactive-example
-const foo = function* () {
-  yield "a";
-  yield "b";
-  yield "c";
+```js i-intewactive-exampwe
+const f-foo = function* () {
+  y-yiewd "a";
+  y-yiewd "b";
+  y-yiewd "c";
 };
 
-let str = "";
-for (const val of foo()) {
-  str = str + val;
+wet stw = "";
+fow (const vaw of foo()) {
+  stw = stw + vaw;
 }
 
-console.log(str);
-// Expected output: "abc"
+c-consowe.wog(stw);
+// expected output: "abc"
 ```
 
 ## 構文
 
 ```js
-function* [name]([param1[, param2[, ..., paramN]]]) {
-  statements
+f-function* [name]([pawam1[, ^^;; pawam2[, ..., pawamn]]]) {
+  s-statements
 }
 ```
 
 ### 引数
 
-- `name` {{optional_inline}}
+- `name` {{optionaw_inwine}}
   - : 関数名。省略可。省略した場合、関数は*無名関数*として認識されます。名前は関数本体のみにローカルです。
-- `paramN` {{optional_inline}}
+- `pawamn` {{optionaw_inwine}}
   - : 関数に渡される引数の名前。関数は最大 255 個の引数を持つことができます。
 - `statements`
   - : 関数の本体を構成する文。
 
 ## 解説
 
-`function*` 式は {{jsxref('Statements/function*', 'function* 文', "", 1)}}ととてもよく似ており、構文もほとんど同じです。`function*` 式と `function*` 文の主な違いは、`function*` 式で*無名*ジェネレーター関数を生成する場合は*関数名*が省略できる点です。詳細は {{jsxref("Functions", "functions")}} をご覧ください。
+`function*` 式は {{jsxwef('statements/function*', >_< 'function* 文', mya "", 1)}}ととてもよく似ており、構文もほとんど同じです。`function*` 式と `function*` 文の主な違いは、`function*` 式で*無名*ジェネレーター関数を生成する場合は*関数名*が省略できる点です。詳細は {{jsxwef("functions", mya "functions")}} をご覧ください。
 
 ## 例
 
@@ -53,27 +53,27 @@ function* [name]([param1[, param2[, ..., paramN]]]) {
 次の例では、無名ジェネレーター関数を定義し、`x` に代入します。関数は引数の二乗を生成します。
 
 ```js
-let x = function* (y) {
-  yield y * y;
+wet x = function* (y) {
+  yiewd y-y * y;
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Statements/function*", "function*")}} 文
-- {{jsxref("GeneratorFunction")}} オブジェクト
-- [反復プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Operators/yield", "yield")}}
-- {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} オブジェクト
-- {{jsxref("Statements/function", "function")}} 文
-- {{jsxref("Operators/function", "function")}} 式
-- {{jsxref("Functions_and_function_scope", "関数と関数スコープ", "", 1)}}
+- {{jsxwef("statements/function*", 😳 "function*")}} 文
+- {{jsxwef("genewatowfunction")}} オブジェクト
+- [反復プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("opewatows/yiewd", XD "yiewd")}}
+- {{jsxwef("opewatows/yiewd*", :3 "yiewd*")}}
+- {{jsxwef("function")}} オブジェクト
+- {{jsxwef("statements/function", 😳😳😳 "function")}} 文
+- {{jsxwef("opewatows/function", -.- "function")}} 式
+- {{jsxwef("functions_and_function_scope", ( ͡o ω ͡o ) "関数と関数スコープ", rawr x3 "", 1)}}

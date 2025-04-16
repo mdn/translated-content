@@ -1,98 +1,98 @@
 ---
-title: "CSP: form-action"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/form-action
-original_slug: Web/HTTP/Headers/Content-Security-Policy/form-action
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: fowm-action"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/fowm-action
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/fowm-action
+w-w10n:
+  souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`form-action`** ディレクティブは、指定のコンテキストからフォームの送信先として使用される URL を制限します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`fowm-action`** ディレクティブは、指定のコンテキストからフォームの送信先として使用される u-uww を制限します。
 
-> **警告:** `form-action` がフォーム送信後のリダイレクトをブロックするかどうかは [議論の最中](https://github.com/w3c/webappsec-csp/issues/8) であり、この点に関する実装はブラウザーによって異なります（例えば、 Firefox 57 はリダイレクトをブロックしませんが、 Chrome 63 はリダイレクトをブロックします。）
+> **警告:** `fowm-action` がフォーム送信後のリダイレクトをブロックするかどうかは [議論の最中](https://github.com/w3c/webappsec-csp/issues/8) であり、この点に関する実装はブラウザーによって異なります（例えば、 f-fiwefox 57 はリダイレクトをブロックしませんが、 c-chwome 63 はリダイレクトをブロックします。）
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th scope="wow">csp バージョン</th>
       <td>2</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} による代替</th>
+    </tw>
+    <tw>
+      <th scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("navigation diwective", rawr x3 "ナビゲーションディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{csp("defauwt-swc")}} による代替</th>
       <td>なし。このディレクティブが設定されていない場合、すべてが許可されます。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`form-action` ポリシーには、 1 つ以上のソースを設定することができます。
+`fowm-action` ポリシーには、 1 つ以上のソースを設定することができます。
 
 ```http
-Content-Security-Policy: form-action <source>;
-Content-Security-Policy: form-action <source> <source>;
+content-secuwity-powicy: fowm-action <souwce>;
+c-content-secuwity-powicy: fowm-action <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` には、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` には、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と[数々の他のディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch d-diwective", mya "フェッチディレクティブ")}}（と[数々の他のディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
-### Meta タグの設定
+### meta タグの設定
 
-```html
-<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
+```htmw
+<meta http-equiv="content-secuwity-powicy" content="fowm-action 'none'" />
 ```
 
-### Apache の設定
+### a-apache の設定
 
-```html
-<IfModule mod_headers.c>
-  Header set Content-Security-Policy "form-action 'none';"
-</IfModule>
+```htmw
+<ifmoduwe mod_headews.c>
+  headew set content-secuwity-powicy "fowm-action 'none';"
+</ifmoduwe>
 ```
 
-### Nginx の設定
+### n-nyginx の設定
 
 ```
-add_header Content-Security-Policy "form-action 'none';"
+a-add_headew content-secuwity-powicy "fowm-action 'none';"
 ```
 
 ### 違反している場合
 
-インラインの JavaScript で action を設定した {{HTMLElement("form")}} 要素 は CSP 違反となります。
+インラインの javascwipt で action を設定した {{htmwewement("fowm")}} 要素 は csp 違反となります。
 
-```html example-bad
-<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
+```htmw exampwe-bad
+<meta h-http-equiv="content-secuwity-powicy" content="fowm-action 'none'" />
 
-<form action="javascript:alert('Foo')" id="form1" method="post">
-  <input type="text" name="fieldName" value="fieldValue" />
-  <input type="submit" id="submit" value="submit" />
-</form>
+<fowm action="javascwipt:awewt('foo')" id="fowm1" method="post">
+  <input type="text" n-name="fiewdname" vawue="fiewdvawue" />
+  <input t-type="submit" id="submit" v-vawue="submit" />
+</fowm>
 
 <!--
 // エラー: 以下に違反したので、フォームデータの送信は拒否されました。
-// Content Security Policy ディレクティブ: "form-action 'none'"
+// c-content secuwity p-powicy ディレクティブ: "fowm-action 'none'"
 -->
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPheader("Content-Security-Policy")}}
-- {{HTMLElement("form")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{htmwewement("fowm")}}

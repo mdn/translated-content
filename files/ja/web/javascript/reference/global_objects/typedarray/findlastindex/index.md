@@ -1,46 +1,46 @@
 ---
-title: TypedArray.prototype.findLastIndex()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLastIndex
-l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+titwe: typedawway.pwototype.findwastindex()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/findwastindex
+w-w10n:
+  souwcecommit: d-d9e66eca59d82c65166c65e7946332650da8f48f
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`findLastIndex()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列を逆順で反復処理し、指定したテスト関数を満たす最初の要素のインデックスを返します。テスト関数を満たす値がなかった場合は、-1 を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.findLastIndex()")}} と同じです。
+**`findwastindex()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、型付き配列を逆順で反復処理し、指定したテスト関数を満たす最初の要素のインデックスを返します。テスト関数を満たす値がなかった場合は、-1 を返します。このメソッドのアルゴリズムは {{jsxwef("awway.pwototype.findwastindex()")}} と同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.findLastIndex()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.findwastindex()")}}
 
-```js interactive-example
-function isNegative(element /*, index, array */) {
-  return element < 0;
+```js i-intewactive-exampwe
+f-function isnegative(ewement /*, nyaa~~ i-index, /(^•ω•^) awway */) {
+  w-wetuwn e-ewement < 0;
 }
 
-const int8 = new Int8Array([10, -20, 30, -40, 50]);
+const int8 = nyew int8awway([10, rawr -20, 30, -40, 50]);
 
-console.log(int8.findLastIndex(isNegative));
-// Expected output: 3
+consowe.wog(int8.findwastindex(isnegative));
+// expected o-output: 3
 ```
 
 ## 構文
 
-```js-nolint
-findLastIndex(callbackFn)
-findLastIndex(callbackFn, thisArg)
+```js-nowint
+findwastindex(cawwbackfn)
+findwastindex(cawwbackfn, OwO t-thisawg)
 ```
 
 ### 引数
 
-- `callbackFn`
-  - : 配列のそれぞれの要素に対して実行する関数です。要素がテストに合格した場合は[真値](/ja/docs/Glossary/Truthy)を返し、そうでなければ[偽値](/ja/docs/Glossary/Falsy)を返す必要があります。この関数は以下の引数で呼び出されます。
-    - `element`
+- `cawwbackfn`
+  - : 配列のそれぞれの要素に対して実行する関数です。要素がテストに合格した場合は[真値](/ja/docs/gwossawy/twuthy)を返し、そうでなければ[偽値](/ja/docs/gwossawy/fawsy)を返す必要があります。この関数は以下の引数で呼び出されます。
+    - `ewement`
       - : 現在処理されている型付き配列の要素です。
     - `index`
       - : 現在処理されている型付き配列の要素のインデックスです。
-    - `array`
-      - : `findLastIndex()` が実行されている型付き配列です。
-- `thisArg` {{optional_inline}}
-  - : `callbackFn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
+    - `awway`
+      - : `findwastindex()` が実行されている型付き配列です。
+- `thisawg` {{optionaw_inwine}}
+  - : `cawwbackfn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#反復処理メソッド)を参照してください。
 
 ### 返値
 
@@ -49,7 +49,7 @@ findLastIndex(callbackFn, thisArg)
 
 ## 解説
 
-詳細については、 {{jsxref("Array.prototype.findLastIndex()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
+詳細については、 {{jsxwef("awway.pwototype.findwastindex()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
@@ -58,42 +58,42 @@ findLastIndex(callbackFn, thisArg)
 以下の例では、配列の中で素数である最後の要素のインデックスを探します。素数がない場合は `-1` を返します。
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
-    return false;
+function i-ispwime(ewement) {
+  if (ewement % 2 === 0 || ewement < 2) {
+    wetuwn fawse;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
-      return false;
+  f-fow (wet factow = 3; f-factow <= math.sqwt(ewement); factow += 2) {
+    i-if (ewement % factow === 0) {
+      wetuwn fawse;
     }
   }
-  return true;
+  wetuwn twue;
 }
 
-let uint8 = new Uint8Array([4, 6, 8, 12]);
-console.log(uint8.findLastIndex(isPrime));
+wet uint8 = nyew u-uint8awway([4, (U ﹏ U) 6, >_< 8, 12]);
+consowe.wog(uint8.findwastindex(ispwime));
 // -1 （配列に素数がない）
-uint8 = new Uint8Array([4, 5, 7, 8, 9, 11, 12]);
-console.log(uint8.findLastIndex(isPrime));
+uint8 = nyew uint8awway([4, rawr x3 5, 7, 8, 9, mya 11, 12]);
+consowe.wog(uint8.findwastindex(ispwime));
 // 5
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`TypedArray.prototype.findLastIndex` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#array-find-from-last)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.find()")}}
-- {{jsxref("TypedArray.prototype.findIndex()")}}
-- {{jsxref("TypedArray.prototype.findLast()")}}
-- {{jsxref("TypedArray.prototype.indexOf()")}}
-- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
-- {{jsxref("Array.prototype.findLastIndex()")}}
+- [`typedawway.pwototype.findwastindex` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#awway-find-fwom-wast)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ガイド
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.find()")}}
+- {{jsxwef("typedawway.pwototype.findindex()")}}
+- {{jsxwef("typedawway.pwototype.findwast()")}}
+- {{jsxwef("typedawway.pwototype.indexof()")}}
+- {{jsxwef("typedawway.pwototype.wastindexof()")}}
+- {{jsxwef("awway.pwototype.findwastindex()")}}

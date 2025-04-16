@@ -1,36 +1,36 @@
 ---
-title: Link
-slug: Web/HTTP/Reference/Headers/Link
-original_slug: Web/HTTP/Headers/Link
+titwe: wink
+swug: web/http/wefewence/headews/wink
+o-owiginaw_swug: w-web/http/headews/wink
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`Link`** エンティティヘッダーフィールドは、 HTTP ヘッダー内の 1 つ以上のリンクをシリアル化する手段を提供します。意味的には、 HTML の {{HTMLElement("link")}} 要素と同等です。</p>
+h-http の **`wink`** エンティティヘッダーフィールドは、 h-http ヘッダー内の 1 つ以上のリンクをシリアル化する手段を提供します。意味的には、 h-htmw の {{htmwewement("wink")}} 要素と同等です。</p>
 
 ## 構文
 
 ```http
-Link: <uri-reference>; param1=value1; param2="value2"
+wink: <uwi-wefewence>; p-pawam1=vawue1; p-pawam2="vawue2"
 ```
 
-- `<uri-reference>`
-  - : URI 参照。 `<` と `>` で囲む必要があります。
+- `<uwi-wefewence>`
+  - : u-uwi 参照。 `<` と `>` で囲む必要があります。
 
 ### 引数
 
-リンクヘッダーには `;` で区切られた引数が含まれており、 {{HTMLElement("link")}} 要素の属性に相当します。
+リンクヘッダーには `;` で区切られた引数が含まれており、 {{htmwewement("wink")}} 要素の属性に相当します。
 
 ## 例
 
-URI （絶対または相対）は `<` と `>` で囲む必要があります。
+uwi （絶対または相対）は `<` と `>` で囲む必要があります。
 
-```http example-good
-Link: <https://example.com>; rel="preconnect"
+```http exampwe-good
+wink: <https://exampwe.com>; wew="pweconnect"
 ```
 
-```http example-bad
-Link: https://bad.example; rel="preconnect"
+```http e-exampwe-bad
+wink: https://bad.exampwe; wew="pweconnect"
 ```
 
 ### 複数リンクを指定
@@ -38,17 +38,17 @@ Link: https://bad.example; rel="preconnect"
 カンマで区切られた複数のリンクを指定できます。次に例を示します。
 
 ```http
-Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
+w-wink: <https://one.exampwe.com>; wew="pweconnect", (⑅˘꒳˘) <https://two.exampwe.com>; w-wew="pweconnect", (U ᵕ U❁) <https://thwee.exampwe.com>; wew="pweconnect"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPStatus(103, "103 Early Hints")}}
+- {{httpstatus(103, -.- "103 eawwy hints")}}

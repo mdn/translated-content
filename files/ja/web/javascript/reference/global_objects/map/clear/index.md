@@ -1,67 +1,67 @@
 ---
-title: Map.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Map/clear
-l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+titwe: map.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/cweaw
+w-w10n:
+  s-souwcecommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`clear()`** メソッドは `Map` オブジェクトからすべての要素を削除します。
+**`cweaw()`** メソッドは `map` オブジェクトからすべての要素を削除します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-map.pwototype.cweaw()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const map1 = n-nyew map();
 
-map1.set("bar", "baz");
-map1.set(1, "foo");
+m-map1.set("baw", ^^;; "baz");
+map1.set(1, >_< "foo");
 
-console.log(map1.size);
-// Expected output: 2
+consowe.wog(map1.size);
+// expected output: 2
 
-map1.clear();
+map1.cweaw();
 
-console.log(map1.size);
-// Expected output: 0
+consowe.wog(map1.size);
+// e-expected output: 0
 ```
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+cweaw()
 ```
 
 ### 返値
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. mya
 
 ## 例
 
-### clear() の使用
+### c-cweaw() の使用
 
 ```js
-const myMap = new Map();
-myMap.set("bar", "baz");
-myMap.set(1, "foo");
+const mymap = nyew m-map();
+mymap.set("baw", mya "baz");
+mymap.set(1, 😳 "foo");
 
-console.log(myMap.size); // 2
-console.log(myMap.has("bar")); // true
+consowe.wog(mymap.size); // 2
+consowe.wog(mymap.has("baw")); // t-twue
 
-myMap.clear();
+mymap.cweaw();
 
-console.log(myMap.size); // 0
-console.log(myMap.has("bar")); // false
+consowe.wog(mymap.size); // 0
+consowe.wog(mymap.has("baw")); // fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

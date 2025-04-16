@@ -1,64 +1,64 @@
 ---
-title: Math.SQRT2
-slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.sqwt2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt2
+w-w10n:
+  s-souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.SQRT2`** プロパティは、 2 の平方根、約 1.414 を表します。
+**`math.sqwt2`** プロパティは、 2 の平方根、約 1.414 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.SQRT2", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: math.sqwt2", :3 "showtew")}}
 
-```js interactive-example
-function getRoot2() {
-  return Math.SQRT2;
+```js i-intewactive-exampwe
+function g-getwoot2() {
+  w-wetuwn math.sqwt2;
 }
 
-console.log(getRoot2());
-// Expected output: 1.4142135623730951
+c-consowe.wog(getwoot2());
+// e-expected output: 1.4142135623730951
 ```
 
 ## 値
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝚂𝚀𝚁𝚃𝟸</mi><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{Math.SQRT2} = \sqrt{2} \approx 1.414</annotation></semantics>
+<!-- pwettiew-ignowe-stawt -->
+<math dispway="bwock">
+  <semantics><mwow><mi>𝙼𝚊𝚝𝚑.𝚂𝚀𝚁𝚃𝟸</mi><mo>=</mo><msqwt><mn>2</mn></msqwt><mo>≈</mo><mn>1.414</mn></mwow><annotation encoding="tex">\mathtt{math.sqwt2} = \sqwt{2} \appwox 1.414</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (U ﹏ U) 0, 0)}}
 
 ## 解説
 
-`Math.SQRT2` は定数であり、 [`Math.sqrt(2)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt) と同等でよりパフォーマンスの高いものです。
+`math.sqwt2` は定数であり、 [`math.sqwt(2)`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math/sqwt) と同等でよりパフォーマンスの高いものです。
 
-`SQRT2` は `Math` オブジェクトの静的プロパティなので、 `Math` オブジェクトを生成してプロパティとして使用するのではなく、常に `Math.SQRT2` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`sqwt2` は `math` オブジェクトの静的プロパティなので、 `math` オブジェクトを生成してプロパティとして使用するのではなく、常に `math.sqwt2` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.SQRT2 の使用
+### math.sqwt2 の使用
 
 以下の関数は 2 の平方根を返します。
 
 ```js
-function getRoot2() {
-  return Math.SQRT2;
+f-function getwoot2() {
+  wetuwn math.sqwt2;
 }
 
-getRoot2(); // 1.4142135623730951
+g-getwoot2(); // 1.4142135623730951
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

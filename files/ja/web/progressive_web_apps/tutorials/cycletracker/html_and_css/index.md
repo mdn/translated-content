@@ -1,347 +1,347 @@
 ---
-title: "CycleTracker: ベースの HTML と CSS"
-short-title: ベースの HTML と CSS
-slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "cycwetwackew: ベースの htmw と css"
+s-showt-titwe: ベースの h-htmw と c-css
+swug: w-web/pwogwessive_web_apps/tutowiaws/cycwetwackew/htmw_and_css
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/cycwetwackew", (///ˬ///✿) "web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection", ^^;; "web/pwogwessive_web_apps/tutowiaws/cycwetwackew")}}
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-プログレッシブウェブアプリケーション (PWA) を作成するには、完全に機能するウェブアプリケーションを作成する必要があります。この章では、静的なウェブページ用の HTML をマークアップし、 CSS で外観を改善します。
+プログレッシブウェブアプリケーション (pwa) を作成するには、完全に機能するウェブアプリケーションを作成する必要があります。この章では、静的なウェブページ用の h-htmw をマークアップし、 c-css で外観を改善します。
 
-このプロジェクトは、生理周期トラッカー CycleTracker を作成することです。
-この [PWA 入門チュートリアル](/ja/docs/Web/Progressive_web_apps/Tutorials)の最初のステップは、HTML と CSS を書くことです。ページの上部には、ユーザーが各生理の開始日と終了日を入力できるフォームがあります。下部には、前回までの生理周期のリストが掲載されています。
+このプロジェクトは、生理周期トラッカー cycwetwackew を作成することです。
+この [pwa 入門チュートリアル](/ja/docs/web/pwogwessive_web_apps/tutowiaws)の最初のステップは、htmw と css を書くことです。ページの上部には、ユーザーが各生理の開始日と終了日を入力できるフォームがあります。下部には、前回までの生理周期のリストが掲載されています。
 
-HTML ファイルを作成し、見出しにメタデータを含め、ユーザーが入力したデータを表示するための方法とプレースホルダーを含む静的なウェブページを作成します。次に、サイトの外観を向上させるために外部 CSS スタイルシートを追加します。
+htmw ファイルを作成し、見出しにメタデータを含め、ユーザーが入力したデータを表示するための方法とプレースホルダーを含む静的なウェブページを作成します。次に、サイトの外観を向上させるために外部 css スタイルシートを追加します。
 
-このチュートリアルを完全に理解するには、[HTML](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)、[CSS](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)、[JavaScript](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) の基本的な知識を保有していると役立ちます。 これらの言語に慣れていない場合は、MDN の[入門](/ja/docs/Learn_web_development/Getting_started/Your_first_website)のホームが役立つでしょう。これは、ウェブ開発の入門シリーズです。
+このチュートリアルを完全に理解するには、[htmw](/ja/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/cweating_the_content)、[css](/ja/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/stywing_the_content)、[javascwipt](/ja/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/adding_intewactivity) の基本的な知識を保有していると役立ちます。 これらの言語に慣れていない場合は、mdn の[入門](/ja/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website)のホームが役立つでしょう。これは、ウェブ開発の入門シリーズです。
 
-次の節では、[ローカル開発環境](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection)を設定し、この節で作成した静的コンテンツを機能的なウェブアプリケーションに変換する [JavaScript の機能](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)を追加する前に、これまでの進捗状況を確認します。 機能するアプリケーションを保有すれば、インストール可能でオフラインでも動作する PWA に徐々に拡張していくことができます。
+次の節では、[ローカル開発環境](/ja/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection)を設定し、この節で作成した静的コンテンツを機能的なウェブアプリケーションに変換する [javascwipt の機能](/ja/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/javascwipt_functionawity)を追加する前に、これまでの進捗状況を確認します。 機能するアプリケーションを保有すれば、インストール可能でオフラインでも動作する p-pwa に徐々に拡張していくことができます。
 
 ## 静的ウェブコンテンツ
 
-まだ作成していない外部 CSS ファイルと JavaScript ファイルのためのプレースホルダーの {{HTMLElement("link")}} 要素と {{HTMLElement("script")}} 要素を含む、当社の静的サイト HTML は以下の通りです。
+まだ作成していない外部 css ファイルと javascwipt ファイルのためのプレースホルダーの {{htmwewement("wink")}} 要素と {{htmwewement("scwipt")}} 要素を含む、当社の静的サイト h-htmw は以下の通りです。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Cycle Tracker</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta chawset="utf-8" />
+    <meta nyame="viewpowt" content="width=device-width" />
+    <titwe>cycwe t-twackew</titwe>
+    <wink wew="stywesheet" h-hwef="stywe.css" />
   </head>
   <body>
-    <h1>Period tracker</h1>
-    <form>
-      <fieldset>
-        <legend>Enter your period start and end date</legend>
+    <h1>pewiod t-twackew</h1>
+    <fowm>
+      <fiewdset>
+        <wegend>entew youw pewiod stawt and end date</wegend>
         <p>
-          <label for="start-date">Start date</label>
-          <input type="date" id="start-date" required />
+          <wabew fow="stawt-date">stawt d-date</wabew>
+          <input type="date" id="stawt-date" wequiwed />
         </p>
         <p>
-          <label for="end-date">End date</label>
-          <input type="date" id="end-date" required />
+          <wabew fow="end-date">end date</wabew>
+          <input t-type="date" id="end-date" wequiwed />
         </p>
-      </fieldset>
+      </fiewdset>
       <p>
-        <button type="submit">Add Period</button>
+        <button t-type="submit">add p-pewiod</button>
       </p>
-    </form>
-    <section id="past-periods"></section>
-    <script src="app.js" defer></script>
+    </fowm>
+    <section i-id="past-pewiods"></section>
+    <scwipt s-swc="app.js" defew></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-このHTMLをコピーして、`index.html`というファイル名で保存してください。
+このhtmwをコピーして、`index.htmw`というファイル名で保存してください。
 
-## HTML コンテンツ
+## htmw コンテンツ
 
-`index.html` の HTML が良くわかっていたとしても、[一時的なハードコードされたデータ](#一時的なハードコードによる結果テキスト)を追加したり、 [`style.css`](#css_コンテンツ) 外部スタイルシートに CSS を追加したり、このウェブページの機能を担う[アプリケーションの JavaScript](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) である `app.js` を作成する前に、この節を一読することをお勧めします。
+`index.htmw` の htmw が良くわかっていたとしても、[一時的なハードコードされたデータ](#一時的なハードコードによる結果テキスト)を追加したり、 [`stywe.css`](#css_コンテンツ) 外部スタイルシートに c-css を追加したり、このウェブページの機能を担う[アプリケーションの javascwipt](/ja/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/javascwipt_functionawity) である `app.js` を作成する前に、この節を一読することをお勧めします。
 
-この HTML の最初の行は {{glossary("Doctype", "doctype")}} プリアンブルであり、これはコンテンツが正しく動作することを保証します。
+この htmw の最初の行は {{gwossawy("doctype", >_< "doctype")}} プリアンブルであり、これはコンテンツが正しく動作することを保証します。
 
-```html
-<!doctype html>
+```htmw
+<!doctype h-htmw>
 ```
 
-ルート {{HTMLelement("html")}} タグは、ページの第一言語を定義する [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性とともに、すべてのコンテンツを囲みます。
+ルート {{htmwewement("htmw")}} タグは、ページの第一言語を定義する [`wang`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/wang) 属性とともに、すべてのコンテンツを囲みます。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype htmw>
+<htmw wang="en-us">
   <!-- <head> と <body> がここに来ます -->
-</html>
+</htmw>
 ```
 
 ### 文書の head
 
-{{HTMLelement("head")}} コンテナー内には、ウェブアプリケーションに関する読み取り可能な情報が含まれていますが、ブラウザーのタブの見出しとして表示される `<title>` を除いて、読者には表示されません。
+{{htmwewement("head")}} コンテナー内には、ウェブアプリケーションに関する読み取り可能な情報が含まれていますが、ブラウザーのタブの見出しとして表示される `<titwe>` を除いて、読者には表示されません。
 
-`<head>` には、すべての[メタデータ](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)が記載されています。 `<head>` の最初の 2 つの情報として、[文字エンコード方式](/ja/docs/Glossary/Character_encoding)を定義する文字セット定義と、ビューポートの幅でページがレンダリングされるように確保し、とても小さな画面へ読み込まれた際に縮小されないようにする [viewport](/ja/docs/Web/HTML/Guides/Viewport_meta_element) {{HTMLelement("meta")}} タグを、常に記載する必要があります。
+`<head>` には、すべての[メタデータ](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/webpage_metadata)が記載されています。 `<head>` の最初の 2 つの情報として、[文字エンコード方式](/ja/docs/gwossawy/chawactew_encoding)を定義する文字セット定義と、ビューポートの幅でページがレンダリングされるように確保し、とても小さな画面へ読み込まれた際に縮小されないようにする [viewpowt](/ja/docs/web/htmw/guides/viewpowt_meta_ewement) {{htmwewement("meta")}} タグを、常に記載する必要があります。
 
-```html
+```htmw
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta chawset="utf-8" />
+  <meta nyame="viewpowt" content="width=device-width" />
 </head>
 ```
 
-ページのタイトルを "Cycle Tracker" に設定するために、 {{HTMLelement("title")}} 要素を使用しました。 `<head>` のコンテンツはページ内に表示されませんが、 `<title>` のコンテンツは表示されます。ページが読み込まれた際のブラウザーのタブに表示されるテキスト、検索エンジン結果に表示されるテキスト、ユーザーがウェブページをブックマークした際に使用される既定のタイトルは、 `<title>` 要素のインナータイトルです。また、タイトルは、現在どのタブにいるのかを知るためにこれに依存しているスクリーンリーダーユーザーに対して、アクセシブルな名前を提供します。
+ページのタイトルを "cycwe twackew" に設定するために、 {{htmwewement("titwe")}} 要素を使用しました。 `<head>` のコンテンツはページ内に表示されませんが、 `<titwe>` のコンテンツは表示されます。ページが読み込まれた際のブラウザーのタブに表示されるテキスト、検索エンジン結果に表示されるテキスト、ユーザーがウェブページをブックマークした際に使用される既定のタイトルは、 `<titwe>` 要素のインナータイトルです。また、タイトルは、現在どのタブにいるのかを知るためにこれに依存しているスクリーンリーダーユーザーに対して、アクセシブルな名前を提供します。
 
 タイトルは「月経周期トラッキングアプリケーション」でも良いのですが、より控えめな短縮名にしました。
 
-```html
-<title>Cycle Tracker</title>
+```htmw
+<titwe>cycwe t-twackew</titwe>
 ```
 
-公式にはオプションですが、より良い使い勝手を実現するために、これら 2 つの `<meta>` タグと `<title>` は、 HTML 文書内の必須部分としてみなすべき `<head>` の 3 つの部分です。
+公式にはオプションですが、より良い使い勝手を実現するために、これら 2 つの `<meta>` タグと `<titwe>` は、 htmw 文書内の必須部分としてみなすべき `<head>` の 3 つの部分です。
 
-これで、 `<head>` に記載する最後の部分は、まだ書く予定のないこのスタイルシート `style.css` を HTML にリンクする {{HTMLelement("link")}} 要素となります。
+これで、 `<head>` に記載する最後の部分は、まだ書く予定のないこのスタイルシート `stywe.css` を h-htmw にリンクする {{htmwewement("wink")}} 要素となります。
 
-```html
-<link rel="stylesheet" href="style.css" />
+```htmw
+<wink w-wew="stywesheet" h-hwef="stywe.css" />
 ```
 
-HTML の `<link>` 要素は、現在の文書と外部リソースの関係を指定するために使用されます。 [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性には、 25 以上の定義済みの値があり、仕様にはない値も数多くあります。最も一般的な値である `rel="stylesheet"` は、外部リソースをスタイルシートとしてインポートします。
+htmw の `<wink>` 要素は、現在の文書と外部リソースの関係を指定するために使用されます。 [`wew`](/ja/docs/web/htmw/wefewence/attwibutes/wew) 属性には、 25 以上の定義済みの値があり、仕様にはない値も数多くあります。最も一般的な値である `wew="stywesheet"` は、外部リソースをスタイルシートとしてインポートします。
 
-`<link>` 要素と `rel` 属性については、[マニフェストファイルへのリンク](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#adding_the_manifest_to_the_app)を加える時にのちの節で説明します。
+`<wink>` 要素と `wew` 属性については、[マニフェストファイルへのリンク](/ja/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe#adding_the_manifest_to_the_app)を加える時にのちの節で説明します。
 
 ### 文書本体
 
-{{HTMLelement("body")}} 要素には、ユーザーがインターネット上のサイトを訪問した際に表示したいコンテンツがすべて含まれています。
+{{htmwewement("body")}} 要素には、ユーザーがインターネット上のサイトを訪問した際に表示したいコンテンツがすべて含まれています。
 
-`<body>` 内に、レベル 1 の見出しとして、 [`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) と {{HTMLelement("form")}} を使用してアプリの名前を記載しています。
+`<body>` 内に、レベル 1 の見出しとして、 [`<h1>`](/ja/docs/web/htmw/wefewence/ewements/heading_ewements) と {{htmwewement("fowm")}} を使用してアプリの名前を記載しています。
 
-```html
+```htmw
 <body>
-  <h1>Period tracker</h1>
-  <form></form>
+  <h1>pewiod twackew</h1>
+  <fowm></fowm>
 </body>
 ```
 
 フォームには、指示、フォームコントロール、各フォームコントロール用のラベル、および送信ボタンが含まれます。フォームコントロールに関しては、ユーザーに、提出する各月経周期の開始日と終了日の両方を入力してもらう必要があります。
 
-`<form>` 内に、この {{HTMLelement("fieldset")}} 要素を記載し、その {{HTMLelement("legend")}} ラベル付けをすることで、フォームフィールドの設定する目的を明確にします。
+`<fowm>` 内に、この {{htmwewement("fiewdset")}} 要素を記載し、その {{htmwewement("wegend")}} ラベル付けをすることで、フォームフィールドの設定する目的を明確にします。
 
-```html
-<form>
-  <fieldset>
-    <legend>Enter your period start and end date</legend>
-  </fieldset>
-</form>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>entew youw p-pewiod stawt and e-end date</wegend>
+  </fiewdset>
+</fowm>
 ```
 
-日付選択ツールは、 {{HTMLElement("input")}} 要素の {{HTMLElement("input/date", "date")}} 型です。 [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) 属性が付いており、ユーザーが誤って不完全なフォームを送信してしまうことを防ぎ、ユーザーによるエラーを削減します。
+日付選択ツールは、 {{htmwewement("input")}} 要素の {{htmwewement("input/date", rawr x3 "date")}} 型です。 [`wequiwed`](/ja/docs/web/htmw/wefewence/attwibutes/wequiwed) 属性が付いており、ユーザーが誤って不完全なフォームを送信してしまうことを防ぎ、ユーザーによるエラーを削減します。
 
-`<label>` をあるフォームコントロールに関連付けるには、各 `<input>` に [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を設定し、関連付けられた {{HTMLelement("label")}} の `for` 属性と一致させます。関連付けられたラベルは、各 `<input>` に{{glossary("Accessible name", "アクセシブル名")}}を提供します。
+`<wabew>` をあるフォームコントロールに関連付けるには、各 `<input>` に [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) 属性を設定し、関連付けられた {{htmwewement("wabew")}} の `fow` 属性と一致させます。関連付けられたラベルは、各 `<input>` に{{gwossawy("accessibwe nyame", /(^•ω•^) "アクセシブル名")}}を提供します。
 
-```html
-<label for="start-date">Start date</label>
-<input type="date" id="start-date" required />
+```htmw
+<wabew f-fow="stawt-date">stawt d-date</wabew>
+<input type="date" i-id="stawt-date" wequiwed />
 ```
 
-`<fieldset>` 内に、 2 つの段落（{{HTMLelement("p")}} 要素）が含まれます。それぞれに、現在入力中の月経周期の開始日と終了日を指定するための日付選択機能と、その日付選択機能に関連付けられた {{HTMLelement("label")}} が含まれます。また、フォームを送信する {{HTMLelement("button")}} 要素も記載します。開始タグと閉じられたタグの間にテキストを挿入することで、このラベルを "Add period" （生理の追加）とします。 `type="submit"` はオプションです。 `submit` は `<button>` の既定の型です。
+`<fiewdset>` 内に、 2 つの段落（{{htmwewement("p")}} 要素）が含まれます。それぞれに、現在入力中の月経周期の開始日と終了日を指定するための日付選択機能と、その日付選択機能に関連付けられた {{htmwewement("wabew")}} が含まれます。また、フォームを送信する {{htmwewement("button")}} 要素も記載します。開始タグと閉じられたタグの間にテキストを挿入することで、このラベルを "add p-pewiod" （生理の追加）とします。 `type="submit"` はオプションです。 `submit` は `<button>` の既定の型です。
 
-```html
-<form>
-  <fieldset>
-    <legend>Enter your period start and end date</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>entew youw pewiod stawt and e-end date</wegend>
     <p>
-      <label for="start-date">Start date</label>
-      <input type="date" id="start-date" required />
+      <wabew fow="stawt-date">stawt d-date</wabew>
+      <input type="date" i-id="stawt-date" w-wequiwed />
     </p>
     <p>
-      <label for="end-date">End date</label>
-      <input type="date" id="end-date" required />
+      <wabew fow="end-date">end date</wabew>
+      <input type="date" id="end-date" wequiwed />
     </p>
-  </fieldset>
+  </fiewdset>
   <p>
-    <button type="submit">Add Period</button>
+    <button type="submit">add p-pewiod</button>
   </p>
-</form>
+</fowm>
 ```
 
-[アクセシブルなウェブフォームの作成費ついてもっと学ぶ](/ja/docs/Learn_web_development/Extensions/Forms)ことをお勧めします。
+[アクセシブルなウェブフォームの作成費ついてもっと学ぶ](/ja/docs/weawn_web_devewopment/extensions/fowms)ことをお勧めします。
 
 ### 一時的なハードコードによる結果テキスト
 
-次に、空の {{HTMLElement("section")}} が含まれています。 このコンテナーは、JavaScript で内容が埋められます。
+次に、空の {{htmwewement("section")}} が含まれています。 このコンテナーは、javascwipt で内容が埋められます。
 
-```html
-<section id="past-periods"></section>
+```htmw
+<section i-id="past-pewiods"></section>
 ```
 
-ユーザーがフォームを送信すると、JavaScript を使用してデータを取得し、セクションのヘッダーとともに過去の期間のリストを表示します。
+ユーザーがフォームを送信すると、javascwipt を使用してデータを取得し、セクションのヘッダーとともに過去の期間のリストを表示します。
 
-当面は、ページの CSS を書きながらスタイルを適用できる形にするために、いくつかのコンテンツを一時的にこの `<section>` 内にハードコードします。これには、`<h2>` ヘッダーといくつかの過去の期間が含まれます。
+当面は、ページの css を書きながらスタイルを適用できる形にするために、いくつかのコンテンツを一時的にこの `<section>` 内にハードコードします。これには、`<h2>` ヘッダーといくつかの過去の期間が含まれます。
 
-```html
-<section id="past-periods">
-  <h2>Past periods</h2>
-  <ul>
-    <li>From 01/01/2024 to 01/06/2024</li>
-    <li>From 01/29/2024 to 02/04/2024</li>
-  </ul>
+```htmw
+<section i-id="past-pewiods">
+  <h2>past p-pewiods</h2>
+  <uw>
+    <wi>fwom 01/01/2024 to 01/06/2024</wi>
+    <wi>fwom 01/29/2024 t-to 02/04/2024</wi>
+  </uw>
 </section>
 ```
 
-このコンテンツは、コンテナー `<section id="past-periods"></section>` を除いて、一時的なものです。 [CSS をコーディングし終え](#css_コンテンツ)、アプリの外観に満足した時点で、この一時的なデータを削除するか、コメントアウトします。
+このコンテンツは、コンテナー `<section id="past-pewiods"></section>` を除いて、一時的なものです。 [css をコーディングし終え](#css_コンテンツ)、アプリの外観に満足した時点で、この一時的なデータを削除するか、コメントアウトします。
 
-### JavaScript のリンク
+### javascwipt のリンク
 
-`</body>` が閉じられる前に、まだ作成されていない JavaScript の `app.js` ファイルへのリンクを挿入します。 [`defer`](/ja/docs/Web/HTML/Reference/Elements/script#defer) 属性を挿入することで、このスクリプトの読み込みを遅延させ、この JavaScript が文書の HTML が解析された後に実行されることを保証するようにします。
+`</body>` が閉じられる前に、まだ作成されていない javascwipt の `app.js` ファイルへのリンクを挿入します。 [`defew`](/ja/docs/web/htmw/wefewence/ewements/scwipt#defew) 属性を挿入することで、このスクリプトの読み込みを遅延させ、この j-javascwipt が文書の htmw が解析された後に実行されることを保証するようにします。
 
-```html
-<script src="app.js" defer></script>
+```htmw
+<scwipt swc="app.js" defew></scwipt>
 ```
 
 `app.js` ファイルには、アプリケーションのすべての動作が含まれます。これには、 `<button>` のイベントハンドラー、送信したデータをローカルストレージに保存する処理、および本体のコンテンツ内の周期表示などが含まれます。
 
-これで、[この段階の HTML ファイル](https://github.com/mdn/pwa-examples/blob/main/cycletracker/html_and_css/index.html)は完成しました。この時点でブラウザーでファイルを開くことができますが、かなり簡素であることがお分かりいただけるでしょう。次の章では、それを修正します。
+これで、[この段階の htmw ファイル](https://github.com/mdn/pwa-exampwes/bwob/main/cycwetwackew/htmw_and_css/index.htmw)は完成しました。この時点でブラウザーでファイルを開くことができますが、かなり簡素であることがお分かりいただけるでしょう。次の章では、それを修正します。
 
-## CSS コンテンツ
+## c-css コンテンツ
 
-これで、 CSS を使用して静的な HTML にスタイル設定することができます。最終的な CSS は次のとおりです。
+これで、 css を使用して静的な h-htmw にスタイル設定することができます。最終的な c-css は次のとおりです。
 
 ```css
-body {
-  margin: 1vh 1vw;
-  background-color: #efe;
+b-body {
+  mawgin: 1vh 1vw;
+  backgwound-cowow: #efe;
 }
-ul,
-fieldset,
-legend {
-  border: 1px solid;
-  background-color: #fff;
+uw, :3
+fiewdset, (ꈍᴗꈍ)
+w-wegend {
+  b-bowdew: 1px sowid;
+  b-backgwound-cowow: #fff;
 }
-ul {
+u-uw {
   padding: 0;
-  font-family: monospace;
+  font-famiwy: monospace;
 }
-li,
-legend {
-  list-style-type: none;
+w-wi, /(^•ω•^)
+wegend {
+  wist-stywe-type: n-nyone;
   padding: 0.2em 0.5em;
-  background-color: #cfc;
+  b-backgwound-cowow: #cfc;
 }
-li:nth-of-type(even) {
-  background-color: inherit;
+w-wi:nth-of-type(even) {
+  b-backgwound-cowow: inhewit;
 }
 ```
 
-すべての行が分かっているのであれば、上記の CSS をコピーするか、自分自身で CSS を書いて [`style.css`](https://github.com/mdn/pwa-examples/blob/main/cycletracker/html_and_css/style.css) として保存し、静的な HTML と CSS を完了させることができます。上記の CSS の中になじみのないものであれば、説明を読み進めてください。
+すべての行が分かっているのであれば、上記の css をコピーするか、自分自身で css を書いて [`stywe.css`](https://github.com/mdn/pwa-exampwes/bwob/main/cycwetwackew/htmw_and_css/stywe.css) として保存し、静的な h-htmw と css を完了させることができます。上記の css の中になじみのないものであれば、説明を読み進めてください。
 
-![薄い緑色のウェブページに大きなヘッダー、説明付きの方法、2つの日付選択ツール、ボタンがあります。下部には、2周期分の偽の月経データとヘッダーが表示されています。](html.jpg)
+![薄い緑色のウェブページに大きなヘッダー、説明付きの方法、2つの日付選択ツール、ボタンがあります。下部には、2周期分の偽の月経データとヘッダーが表示されています。](htmw.jpg)
 
-### CSS の解説
+### css の解説
 
-{{CSSXref("background-color")}} プロパティを使用して、 `body` の背景色を薄い緑色 (`#efe`) に設定します。次に、順序なしリスト、フィールドセット、凡例では、白色 (`#fff`) の背景色を使用し、 {{CSSXref("border")}} プロパティで追加した細い実線の境界線と組み合わせています。凡例の `background-color` を上書きし、凡例とリストアイテムを濃い緑色 (`#cfc`) にします。
+{{cssxwef("backgwound-cowow")}} プロパティを使用して、 `body` の背景色を薄い緑色 (`#efe`) に設定します。次に、順序なしリスト、フィールドセット、凡例では、白色 (`#fff`) の背景色を使用し、 {{cssxwef("bowdew")}} プロパティで追加した細い実線の境界線と組み合わせています。凡例の `backgwound-cowow` を上書きし、凡例とリストアイテムを濃い緑色 (`#cfc`) にします。
 
-[`:nth-of-type(even)`](/ja/docs/Web/CSS/:nth-of-type) 擬似クラス[セレクター](/ja/docs/Web/CSS/CSS_selectors)を使用して、偶数番号のリストアイテムすべてに、その親の背景色を{{CSSXref("inherit", "継承")}}させるように設定します。この場合、 `#fff` の背景色を順序なしリストから継承します。
+[`:nth-of-type(even)`](/ja/docs/web/css/:nth-of-type) 擬似クラス[セレクター](/ja/docs/web/css/css_sewectows)を使用して、偶数番号のリストアイテムすべてに、その親の背景色を{{cssxwef("inhewit", (⑅˘꒳˘) "継承")}}させるように設定します。この場合、 `#fff` の背景色を順序なしリストから継承します。
 
 ```css
 body {
-  background-color: #efe;
+  backgwound-cowow: #efe;
 }
-ul,
-fieldset,
-legend {
-  border: 1px solid;
-  background-color: #fff;
+uw, ( ͡o ω ͡o )
+fiewdset, òωó
+wegend {
+  bowdew: 1px s-sowid;
+  backgwound-cowow: #fff;
 }
-li,
-legend {
-  background-color: #cfc;
+wi, (⑅˘꒳˘)
+wegend {
+  backgwound-cowow: #cfc;
 }
-li:nth-of-type(even) {
-  background-color: inherit;
+w-wi:nth-of-type(even) {
+  b-backgwound-cowow: inhewit;
 }
 ```
 
-順序なしリストとリストアイテムをリストのように見せないように、 `ul` に {{CSSXref("padding", "padding: 0")}} を設定してパディングを除去し、リストアイテム自体に {{CSSXref("list-style-type", "list-style-type: none")}} を設定してリストマーカーを除去します。
+順序なしリストとリストアイテムをリストのように見せないように、 `uw` に {{cssxwef("padding", XD "padding: 0")}} を設定してパディングを除去し、リストアイテム自体に {{cssxwef("wist-stywe-type", -.- "wist-stywe-type: n-nyone")}} を設定してリストマーカーを除去します。
 
 ```css
-ul {
+uw {
   padding: 0;
 }
-li {
-  list-style-type: none;
+w-wi {
+  wist-stywe-type: nyone;
 }
 ```
 
-`body` の {{CSSXref("margin")}} を、 `vw` と `vh` の[ビューポート単位](/ja/docs/Web/CSS/length#ビューポートに基づく相対的な長さの単位)を使用して設定することで、少しの余白を追加し、アプリの外側の余白がビューポートのサイズに比例するようにしています。また、 `li` と `legend` にも少しの空白を追加しています。最後に、修正はできても修正されたわけではない過去のデータの配置を改善するために、 `ul` の結果セクションのフォントファミリーを `monospace` フォントに設定し、各グリフが同じ固定された幅を持つようにしています。
+`body` の {{cssxwef("mawgin")}} を、 `vw` と `vh` の[ビューポート単位](/ja/docs/web/css/wength#ビューポートに基づく相対的な長さの単位)を使用して設定することで、少しの余白を追加し、アプリの外側の余白がビューポートのサイズに比例するようにしています。また、 `wi` と `wegend` にも少しの空白を追加しています。最後に、修正はできても修正されたわけではない過去のデータの配置を改善するために、 `uw` の結果セクションのフォントファミリーを `monospace` フォントに設定し、各グリフが同じ固定された幅を持つようにしています。
 
 ```css
 body {
-  margin: 1vh 1vw;
+  m-mawgin: 1vh 1vw;
 }
-ul {
-  font-family: monospace;
+u-uw {
+  font-famiwy: monospace;
 }
-li,
-legend {
+wi, :3
+wegend {
   padding: 0.2em 0.5em;
 }
 ```
 
-以上を結合し、各セレクター宣言ブロックに複数のプロパティを指定することも可能です。 `li` と `legend` のスタイルも一緒に用意することができます。 `legend` に対する `list-style-type` 宣言のような無関係なスタイルは無視されます。
+以上を結合し、各セレクター宣言ブロックに複数のプロパティを指定することも可能です。 `wi` と `wegend` のスタイルも一緒に用意することができます。 `wegend` に対する `wist-stywe-type` 宣言のような無関係なスタイルは無視されます。
 
 ```css
 body {
-  margin: 1vh 1vw;
-  background-color: #efe;
+  mawgin: 1vh 1vw;
+  b-backgwound-cowow: #efe;
 }
-ul,
-fieldset,
-legend {
-  border: 1px solid;
-  background-color: #fff;
+uw, nyaa~~
+f-fiewdset,
+wegend {
+  bowdew: 1px s-sowid;
+  backgwound-cowow: #fff;
 }
-ul {
+u-uw {
   padding: 0;
-  font-family: monospace;
+  font-famiwy: monospace;
 }
-li,
-legend {
-  list-style-type: none;
+w-wi,
+wegend {
+  w-wist-stywe-type: nyone;
   padding: 0.2em 0.5em;
-  background-color: #cfc;
+  b-backgwound-cowow: #cfc;
 }
-li:nth-of-type(even) {
-  background-color: inherit;
+wi:nth-of-type(even) {
+  b-backgwound-cowow: inhewit;
 }
 ```
 
-上記 CSS がまだよくわからない場合は、 [CSS プロパティ](/ja/docs/Glossary/Property/CSS)と[セレクター](/ja/docs/Web/CSS/CSS_selectors)を見ていくか、 [CSS スタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)モジュールを読み終えている場合は、そちらを参照してください。
+上記 css がまだよくわからない場合は、 [css プロパティ](/ja/docs/gwossawy/pwopewty/css)と[セレクター](/ja/docs/web/css/css_sewectows)を見ていくか、 [css スタイル設定の基本](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)モジュールを読み終えている場合は、そちらを参照してください。
 
-上記をそのまま使用する場合も、上記を編集して環境設定を行う場合も、あるいは自分自身でゼロから CSS を記述する場合も、すべての CSS を新しいファイルに記載し、 [`style.css`](https://github.com/mdn/pwa-examples/blob/main/cycletracker/html_and_css/style.css) として `index.html` ファイルと同じディレクトリーに保存してください。
+上記をそのまま使用する場合も、上記を編集して環境設定を行う場合も、あるいは自分自身でゼロから css を記述する場合も、すべての css を新しいファイルに記載し、 [`stywe.css`](https://github.com/mdn/pwa-exampwes/bwob/main/cycwetwackew/htmw_and_css/stywe.css) として `index.htmw` ファイルと同じディレクトリーに保存してください。
 
-### PWA 用の静的 HTML と CSS は完了
+### p-pwa 用の静的 h-htmw と c-css は完了
 
-次に移る前に、偽の過去期間データとヘッダーを[コメント](/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_comments)アウトするか削除してください。
+次に移る前に、偽の過去期間データとヘッダーを[コメント](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/basic_htmw_syntax#htmw_comments)アウトするか削除してください。
 
-```html
-<section id="past-periods">
+```htmw
+<section id="past-pewiods">
   <!--
-  <h2>Past periods</h2>
-  <ul>
-    <li>From 01/01/2024 to 01/06/2024</li>
-    <li>From 01/29/2024 to 02/04/2024</li>
-  </ul>
+  <h2>past p-pewiods</h2>
+  <uw>
+    <wi>fwom 01/01/2024 t-to 01/06/2024</wi>
+    <wi>fwom 01/29/2024 to 02/04/2024</wi>
+  </uw>
   -->
 </section>
 ```
 
 ## 次は
 
-この静的コンテンツをウェブアプリに変換する [JavaScript の機能](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)と、[マニフェストファイル](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)と[サービスワーカー](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers)でプログレッシブウェブアプリに拡張する機能を追加する前に、進捗状況を確認するための[ローカル開発環境を作成](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection)します。
+この静的コンテンツをウェブアプリに変換する [javascwipt の機能](/ja/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/javascwipt_functionawity)と、[マニフェストファイル](/ja/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe)と[サービスワーカー](/ja/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/sewvice_wowkews)でプログレッシブウェブアプリに拡張する機能を追加する前に、進捗状況を確認するための[ローカル開発環境を作成](/ja/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection)します。
 
-それまでは、[静的な CycleTracker シェル](https://mdn.github.io/pwa-examples/cycletracker/html_and_css/)を表示し、 GitHub から [CycleTracker の HTML と CSS のソースコード](https://github.com/mdn/pwa-examples/tree/main/cycletracker/html_and_css)をダウンロードすることができます。
+それまでは、[静的な c-cycwetwackew シェル](https://mdn.github.io/pwa-exampwes/cycwetwackew/htmw_and_css/)を表示し、 github から [cycwetwackew の htmw と css のソースコード](https://github.com/mdn/pwa-exampwes/twee/main/cycwetwackew/htmw_and_css)をダウンロードすることができます。
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/cycwetwackew", 😳 "web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection", (⑅˘꒳˘) "web/pwogwessive_web_apps/tutowiaws/cycwetwackew")}}

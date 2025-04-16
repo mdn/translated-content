@@ -1,69 +1,69 @@
 ---
-title: DataView.prototype.setInt32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
+titwe: dataview.pwototype.setint32()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/setint32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setInt32()`** メソッドは、符号付き 32 ビット整数 (long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
+**`setint32()`** メソッドは、符号付き 32 ビット整数 (wong) 値を {{jsxwef("dataview")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setInt32()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.setint32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a size i-in bytes
+const b-buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt32(1, 2147483647); // Max signed 32-bit integer
+c-const view = nyew d-dataview(buffew);
+view.setint32(1, -.- 2147483647); // max signed 32-bit integew
 
-console.log(view.getInt32(1));
-// Expected output: 2147483647
+consowe.wog(view.getint32(1));
+// e-expected output: 2147483647
 ```
 
 ## 構文
 
 ```
-dataview.setInt32(byteOffset, value [, littleEndian])
+dataview.setint32(byteoffset, ^^;; vawue [, wittweendian])
 ```
 
 ### 引数
 
-- `byteOffset`
+- `byteoffset`
   - : ビューの先頭からのバイト単位のオフセットで、データを格納する位置です。
-- `value`
+- `vawue`
   - : 設定する値です。
-- `littleEndian`
-  - : {{optional_inline}} 32 ビット整数を{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納するかを表します。 `false` または `undefined` の場合、ビッグエンディアン値が書き込まれます。
+- `wittweendian`
+  - : {{optionaw_inwine}} 32 ビット整数を{{gwossawy("endianness", >_< "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納するかを表します。 `fawse` または `undefined` の場合、ビッグエンディアン値が書き込まれます。
 
 ### 返値
 
-{{jsxref("undefined")}}。
+{{jsxwef("undefined")}}。
 
 ### 発生するエラー
 
-- {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `byteoffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
 
 ## 例
 
-### setInt32 メソッドの使用
+### s-setint32 メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setInt32(1, 3);
-dataview.getInt32(1); // 3
+vaw buffew = n-nyew awwaybuffew(8);
+vaw dataview = nyew dataview(buffew);
+dataview.setint32(1, mya 3);
+d-dataview.getint32(1); // 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

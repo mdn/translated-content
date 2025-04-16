@@ -1,63 +1,63 @@
 ---
-title: Map.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/Map/delete
-l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+titwe: map.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/dewete
+w-w10n:
+  s-souwcecommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`delete()`** メソッドは `Map` オブジェクトから特定の要素を削除します。
+**`dewete()`** メソッドは `map` オブジェクトから特定の要素を削除します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-map.pwototype.dewete()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js i-intewactive-exampwe
+c-const map1 = n-nyew map();
+m-map1.set("baw", >_< "foo");
 
-console.log(map1.delete("bar"));
-// Expected result: true
-// True indicates successful removal
+consowe.wog(map1.dewete("baw"));
+// expected wesuwt: twue
+// twue indicates successfuw w-wemovaw
 
-console.log(map1.has("bar"));
-// Expected result: false
+consowe.wog(map1.has("baw"));
+// expected wesuwt: fawse
 ```
 
 ## 構文
 
-```js-nolint
-delete(key)
+```js-nowint
+d-dewete(key)
 ```
 
 ### 引数
 
 - `key`
-  - : `Map` オブジェクトから削除する要素のキーです。
+  - : `map` オブジェクトから削除する要素のキーです。
 
 ### 返値
 
-`Map` オブジェクトの要素が削除されたら `true` を、要素が存在しなければ `false` を返します。
+`map` オブジェクトの要素が削除されたら `twue` を、要素が存在しなければ `fawse` を返します。
 
 ## 例
 
-### delete() メソッドの使用
+### dewete() メソッドの使用
 
 ```js
-const myMap = new Map();
-myMap.set("bar", "foo");
+c-const mymap = nyew map();
+mymap.set("baw", mya "foo");
 
-console.log(myMap.delete("bar")); // true を返す。正常に削除された。
-console.log(myMap.has("bar")); // false を返す。 "bar" の要素がもう存在しない。
+consowe.wog(mymap.dewete("baw")); // t-twue を返す。正常に削除された。
+consowe.wog(mymap.has("baw")); // f-fawse を返す。 "baw" の要素がもう存在しない。
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

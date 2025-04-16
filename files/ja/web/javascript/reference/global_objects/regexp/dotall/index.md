@@ -1,81 +1,81 @@
 ---
-title: RegExp.prototype.dotAll
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
-l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+titwe: wegexp.pwototype.dotaww
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/dotaww
+w-w10n:
+  s-souwcecommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`dotAll`** は {{jsxref("RegExp")}} インスタンスのアクセサープロパティで、正規表現で `s` フラグが使用されているかどうかを示します。
+**`dotaww`** は {{jsxwef("wegexp")}} インスタンスのアクセサープロパティで、正規表現で `s` フラグが使用されているかどうかを示します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.dotAll")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype.dotaww")}}
 
-```js interactive-example
-const regex1 = new RegExp("foo", "s");
+```js i-intewactive-exampwe
+const w-wegex1 = nyew w-wegexp("foo", rawr "s");
 
-console.log(regex1.dotAll);
-// Expected output: true
+c-consowe.wog(wegex1.dotaww);
+// e-expected output: twue
 
-const regex2 = new RegExp("bar");
+const wegex2 = nyew wegexp("baw");
 
-console.log(regex2.dotAll);
-// Expected output: false
+consowe.wog(wegex2.dotaww);
+// e-expected output: fawse
 ```
 
 ## 解説
 
-`RegExp.prototype.dotAll` の値は `s` フラグが使用されている場合は `true`、それ以外の場合は `false` です。`s` フラグは、ドット特殊文字 (`.`) が追加で行末記号 ("newline") 文字と一致することを示します。これ以外の場合は一致しません。
+`wegexp.pwototype.dotaww` の値は `s` フラグが使用されている場合は `twue`、それ以外の場合は `fawse` です。`s` フラグは、ドット特殊文字 (`.`) が追加で行末記号 ("newwine") 文字と一致することを示します。これ以外の場合は一致しません。
 
-- U+000A LINE FEED (LF) (`\n`)
-- U+000D CARRIAGE RETURN (CR) (`\r`)
-- U+2028 LINE SEPARATOR
-- U+2029 PARAGRAPH SEPARATOR
+- u+000a wine feed (wf) (`\n`)
+- u+000d c-cawwiage wetuwn (cw) (`\w`)
+- u+2028 wine s-sepawatow
+- u+2029 pawagwaph sepawatow
 
-これは事実上、ドットが基本多言語面 (BMP) のすべての文字と一致することを意味します。アストラル文字と一致させるには、`u` (Unicode) フラグを使用する必要があります。両方のフラグを組み合わせて使用すると、ドットは例外なく任意の Unicode 文字に一致します。
+これは事実上、ドットが基本多言語面 (bmp) のすべての文字と一致することを意味します。アストラル文字と一致させるには、`u` (unicode) フラグを使用する必要があります。両方のフラグを組み合わせて使用すると、ドットは例外なく任意の unicode 文字に一致します。
 
-`dotAll` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
+`dotaww` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
 
 ## 例
 
-### dotAll の使用
+### dotaww の使用
 
 ```js
-const str1 = "bar\nexample foo example";
+c-const stw1 = "baw\nexampwe foo exampwe";
 
-const regex1 = /bar.example/s;
+const w-wegex1 = /baw.exampwe/s;
 
-console.log(regex1.dotAll); // true
+c-consowe.wog(wegex1.dotaww); // twue
 
-console.log(str1.replace(regex1, "")); // foo example
+consowe.wog(stw1.wepwace(wegex1, "")); // foo exampwe
 
-const str2 = "bar\nexample foo example";
+const s-stw2 = "baw\nexampwe foo exampwe";
 
-const regex2 = /bar.example/;
+const wegex2 = /baw.exampwe/;
 
-console.log(regex2.dotAll); // false
+consowe.wog(wegex2.dotaww); // fawse
 
-console.log(str2.replace(regex2, ""));
-// bar
-// example foo example
+consowe.wog(stw2.wepwace(wegex2, OwO ""));
+// b-baw
+// exampwe foo exampwe
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`dotAll` フラグのポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{JSxRef("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- [`dotaww` フラグのポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("wegexp.pwototype.wastindex")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.hasindices")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}
+- {{jsxwef("wegexp.pwototype.unicode")}}

@@ -1,54 +1,54 @@
 ---
-title: SourceMap
-slug: Web/HTTP/Reference/Headers/SourceMap
-original_slug: Web/HTTP/Headers/SourceMap
+titwe: souwcemap
+swug: web/http/wefewence/headews/souwcemap
+owiginaw_swug: w-web/http/headews/souwcemap
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`SourceMap`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーは、生成されたコードを[ソースマップ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)にリンクし、ブラウザーが元のソースを再構成し、再構成されたオリジナルをデバッガに提示できるようにします。
+**`souwcemap`** [http](/ja/docs/web/http) レスポンスヘッダーは、生成されたコードを[ソースマップ](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)にリンクし、ブラウザーが元のソースを再構成し、再構成されたオリジナルをデバッガに提示できるようにします。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダータイプ</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">ヘッダータイプ</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-SourceMap: <url>
-X-SourceMap: <url> (deprecated)
+s-souwcemap: <uww>
+x-x-souwcemap: <uww> (depwecated)
 ```
 
 ### ディレクティブ
 
-- `<url>`
-  - : (リクエスト URL に対する) 相対パスまたはソースマップファイルを指す絶対 URL
+- `<uww>`
+  - : (リクエスト uww に対する) 相対パスまたはソースマップファイルを指す絶対 uww
 
 ## 例
 
 ```
-SourceMap: /path/to/file.js.map
+souwcemap: /path/to/fiwe.js.map
 ```
 
 ## 仕様書
 
 | 仕様書                                                                                            | タイトル                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------ |
-| [Draft document](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k) | Source Map Revision 3 Proposal |
+| [dwaft document](https://docs.googwe.com/document/d/1u1wgaehqwwyputovf1kwwpiofze0b-_2gc6fah0ky0k) | s-souwce map wevision 3 pwoposaw |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Firefox Developer Tools: using a source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
+- [fiwefox d-devewopew toows: using a souwce m-map](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)

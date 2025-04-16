@@ -1,55 +1,55 @@
 ---
-title: Access-Control-Request-Method
-slug: Web/HTTP/Reference/Headers/Access-Control-Request-Method
-original_slug: Web/HTTP/Headers/Access-Control-Request-Method
+titwe: access-contwow-wequest-method
+swug: web/http/wefewence/headews/access-contwow-wequest-method
+o-owiginaw_swug: w-web/http/headews/access-contwow-wequest-method
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Access-Control-Request-Method`** リクエストヘッダーは、{{glossary("preflight request", "プリフライトリクエスト")}}を発行する際にブラウザーが使用し、実際のリクエストが行われた際にどの HTTP メソッドが使用されるかをサーバーに知らせるために使用されます。プリフライトリクエストは常に OPTIONS であり、実際のリクエストとは同じメソッドを使用しないため、このヘッダーが必要です。
+**`access-contwow-wequest-method`** リクエストヘッダーは、{{gwossawy("pwefwight w-wequest", rawr "プリフライトリクエスト")}}を発行する際にブラウザーが使用し、実際のリクエストが行われた際にどの h-http メソッドが使用されるかをサーバーに知らせるために使用されます。プリフライトリクエストは常に o-options であり、実際のリクエストとは同じメソッドを使用しないため、このヘッダーが必要です。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Request header", "リクエストヘッダー")}}
+        {{gwossawy("wequest h-headew", σωσ "リクエストヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("fowbidden headew nyame", σωσ "禁止ヘッダー名")}}
       </th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Access-Control-Request-Method: <method>
+access-contwow-wequest-method: <method>
 ```
 
 ## ディレクティブ
 
 - \<method>
-  - : [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)の 1 つ。例えば {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}} など。
+  - : [http リクエストメソッド](/ja/docs/web/http/wefewence/methods)の 1 つ。例えば {{httpmethod("get")}}, >_< {{httpmethod("post")}}, :3 {{httpmethod("dewete")}} など。
 
 ## 例
 
 ```
-Access-Control-Request-Method: POST
+access-contwow-wequest-method: post
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Access-Control-Request-Headers")}}
+- {{httpheadew("access-contwow-wequest-headews")}}

@@ -1,26 +1,26 @@
 ---
-title: 単項マイナス (-)
-slug: Web/JavaScript/Reference/Operators/Unary_negation
+titwe: 単項マイナス (-)
+swug: web/javascwipt/wefewence/opewatows/unawy_negation
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 単項マイナス演算子 (`-`) はオペランドの前に置かれ、符号を反転します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - u-unawy nyegation o-opewatow")}}
 
-```js interactive-example
-const x = 4;
-const y = -x;
+```js i-intewactive-exampwe
+c-const x-x = 4;
+const y-y = -x;
 
-console.log(y);
-// Expected output: -4
+consowe.wog(y);
+// e-expected output: -4
 
 const a = "4";
 const b = -a;
 
-console.log(b);
-// Expected output: -4
+consowe.wog(b);
+// expected output: -4
 ```
 
 ## 構文
@@ -34,7 +34,7 @@ console.log(b);
 ### 数値の符号を反転
 
 ```js
-const x = 3;
+c-const x = 3;
 const y = -x;
 
 // y = -3
@@ -46,28 +46,28 @@ const y = -x;
 単項マイナス演算子は、数値でないものを数値に変換することができます。
 
 ```js
-const x = "4";
+c-const x = "4";
 const y = -x;
 
-// y = -4
+// y-y = -4
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
-- [減算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [除算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Division)
-- [乗算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [剰余演算子](/ja/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [べき乗演算子](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [インクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators/Increment)
-- [デクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [単項プラス演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/addition)
+- [減算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [除算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/division)
+- [乗算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [剰余演算子](/ja/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [べき乗演算子](/ja/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [インクリメント演算子](/ja/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [デクリメント演算子](/ja/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [単項プラス演算子](/ja/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

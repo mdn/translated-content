@@ -1,73 +1,73 @@
 ---
-title: 408 Request Timeout
-slug: Web/HTTP/Reference/Status/408
-original_slug: Web/HTTP/Status/408
-l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+titwe: 408 wequest timeout
+swug: w-web/http/wefewence/status/408
+o-owiginaw_swug: w-web/http/status/408
+w-w10n:
+  souwcecommit: b-ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`408 Request Timeout`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがこの未使用のコネクションをシャットダウン使用としていることを示します。
+h-http の **`408 w-wequest t-timeout`** は[クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)ステータスコードで、サーバーがこの未使用のコネクションをシャットダウン使用としていることを示します。
 サーバーによっては、クライアントから前回のリクエストがなくても、アイドル接続時に `408` が送信されます。
 
-`408` はサーバーがコネクションを待機し続けるのではなく、閉じることを決定することを意味しているため、サーバーはレスポンスで {{HTTPHeader("Connection", "Connection: close")}} ヘッダーフィールドを送信する必要があります。
+`408` はサーバーがコネクションを待機し続けるのではなく、閉じることを決定することを意味しているため、サーバーはレスポンスで {{httpheadew("connection", ( ͡o ω ͡o ) "connection: cwose")}} ヘッダーフィールドを送信する必要があります。
 
-このレスポンスは、 Chrome や Firefox などのいくつかのブラウザーで、 HTTP 事前接続メカニズム使用してサーフィンを高速化するために使用されます。
+このレスポンスは、 chwome や fiwefox などのいくつかのブラウザーで、 http 事前接続メカニズム使用してサーフィンを高速化するために使用されます。
 
-> [!NOTE]
+> [!note]
 > このメッセージを送信せずに接続をシャットダウンするサーバーもあります。
 
 ## ステータス
 
 ```http
-408 Request Timeout
+408 wequest timeout
 ```
 
 ## 例
 
 ### フォーム送信でのタイムアウト
 
-次の例は、クライアントが [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file) 要素で画像を使用して、 `method="post"` でフォームを送信する可能性があることを示しています。
+次の例は、クライアントが [`<input t-type="fiwe">`](/ja/docs/web/htmw/wefewence/ewements/input/fiwe) 要素で画像を使用して、 `method="post"` でフォームを送信する可能性があることを示しています。
 
 ```http
-POST /upload HTTP/1.1
-Host: example.com
-Content-Type: multipart/form-data; boundary=----Boundary1234
-Content-Length: 4012345
+post /upwoad http/1.1
+h-host: exampwe.com
+content-type: m-muwtipawt/fowm-data; boundawy=----boundawy1234
+content-wength: 4012345
 
-------Boundary1234
-Content-Disposition: form-data; name="file"; filename="myImage.jpg"
-Content-Type: image/jpeg
+------boundawy1234
+content-disposition: f-fowm-data; nyame="fiwe"; fiwename="myimage.jpg"
+c-content-type: i-image/jpeg
 
-\xFF\xD8\xFF\xE0\x00...(binary data)
-------Boundary1234--
+\xff\xd8\xff\xe0\x00...(binawy data)
+------boundawy1234--
 ```
 
 ネットワーク上の課題や遅延によりデータが完全に受信されない場合、サーバーは接続をタイムアウトさせることがあります。
 クライアントはリクエストを再度繰り返し、新しい接続が使用されます。
 
 ```http
-HTTP/1.1 408 Request Timeout
-Content-Type: text/html
+http/1.1 408 wequest timeout
+content-type: text/htmw
 
-<html>
+<htmw>
 <head>
-    <title>408 Request Timeout</title>
+    <titwe>408 w-wequest timeout</titwe>
 </head>
 <body>
-    <h1>408 Request Timeout</h1>
+    <h1>408 wequest timeout</h1>
     <p>時間内にリクエストが処理できませんでした。もう一度お試しください。</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- {{HTTPHeader("Connection")}}
-- {{HTTPHeader("X-DNS-Prefetch-Control")}}
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- {{httpheadew("connection")}}
+- {{httpheadew("x-dns-pwefetch-contwow")}}

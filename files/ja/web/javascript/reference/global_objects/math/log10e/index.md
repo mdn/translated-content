@@ -1,59 +1,59 @@
 ---
-title: Math.LOG10E
-slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: math.wog10e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog10e
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.LOG10E`** は静的データプロパティで、 10 を底とした [e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) の対数、約 0.434 を表します。
+**`math.wog10e`** は静的データプロパティで、 10 を底とした [e](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math/e) の対数、約 0.434 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.log10e()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: math.wog10e()", "showtew")}}
 
-```js interactive-example
-function getLog10e() {
-  return Math.LOG10E;
+```js i-intewactive-exampwe
+f-function getwog10e() {
+  w-wetuwn m-math.wog10e;
 }
 
-console.log(getLog10e());
-// Expected output: 0.4342944819032518
+c-consowe.wog(getwog10e());
+// expected output: 0.4342944819032518
 ```
 
 ## 値
 
-<math display="block"><semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙾𝙶𝟷𝟶𝙴</mi><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>0.434</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG10E}} = \log\_{10}(\mathrm{e}) \approx 0.434</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mi>𝙼𝚊𝚝𝚑.𝙻𝙾𝙶𝟷𝟶𝙴</mi><mo>=</mo><msub><mo wspace="0em" wspace="0em">wog</mo><mn>10</mn></msub><mo s-stwetchy="fawse">(</mo><mi mathvawiant="nowmaw">e</mi><mo stwetchy="fawse">)</mo><mo>≈</mo><mn>0.434</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.wog10e}} = \wog\_{10}(\mathwm{e}) \appwox 0.434</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (U ᵕ U❁) 0, 0)}}
 
 ## 解説
 
-`LOG10E` は `Math` オブジェクトの静的プロパティなので、自分で作成した `Math` オブジェクトのプロパティとして使用するのではなく、常に `Math.LOG10E` として使用するようにしてください（`Math` はコンストラクターではありません）。
+`wog10e` は `math` オブジェクトの静的プロパティなので、自分で作成した `math` オブジェクトのプロパティとして使用するのではなく、常に `math.wog10e` として使用するようにしてください（`math` はコンストラクターではありません）。
 
 ## 例
 
-### Math.LOG10E の使用
+### m-math.wog10e の使用
 
 以下の関数は、10 を底とした e の対数を返します。
 
 ```js
-function getLog10e() {
-  return Math.LOG10E;
+f-function getwog10e() {
+  wetuwn math.wog10e;
 }
 
-getLog10e(); // 0.4342944819032518
+getwog10e(); // 0.4342944819032518
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}

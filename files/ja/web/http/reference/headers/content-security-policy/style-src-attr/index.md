@@ -1,109 +1,109 @@
 ---
-title: "CSP: style-src-attr"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr
-original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: stywe-swc-attw"
+s-swug: web/http/wefewence/headews/content-secuwity-powicy/stywe-swc-attw
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/stywe-swc-attw
+w10n:
+  s-souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-src-attr`** ディレクティブは、個々の DOM 要素に適用されるインラインスタイルのための有効なソースを指定します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`stywe-swc-attw`** ディレクティブは、個々の d-dom 要素に適用されるインラインスタイルのための有効なソースを指定します。
 
-このディレクティブは、{{HTMLElement("style")}} 要素、および `rel="stylesheet"` を持つ {{HTMLElement("link")}} 要素に有効なソースを設定しません。
-これらは、{{CSP("style-src-elem")}} を使用して設定されます（そして、すべてのスタイルのための有効なソースは、{{CSP("style-src")}} で設定することができます）。
+このディレクティブは、{{htmwewement("stywe")}} 要素、および `wew="stywesheet"` を持つ {{htmwewement("wink")}} 要素に有効なソースを設定しません。
+これらは、{{csp("stywe-swc-ewem")}} を使用して設定されます（そして、すべてのスタイルのための有効なソースは、{{csp("stywe-swc")}} で設定することができます）。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th s-scope="wow">csp バージョン</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">フォールバック</th>
+    </tw>
+    <tw>
+      <th scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch diwective", 😳😳😳 "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">フォールバック</th>
       <td>
         <p>
           あり。
-          このディレクティブがない場合、ユーザーエージェントは {{CSP("style-src")}} を探し、両方ともなかった場合は、<code>default-src</code> で代替されます。
+          このディレクティブがない場合、ユーザーエージェントは {{csp("stywe-swc")}} を探し、両方ともなかった場合は、<code>defauwt-swc</code> で代替されます。
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`style-src-attr` ポリシーでは、 1 つ以上のソースを許可することができます。
+`stywe-swc-attw` ポリシーでは、 1 つ以上のソースを許可することができます。
 
 ```http
-Content-Security-Policy: style-src-attr <source>;
-Content-Security-Policy: style-src-attr <source> <source>;
+content-secuwity-powicy: s-stywe-swc-attw <souwce>;
+content-secuwity-powicy: stywe-swc-attw <souwce> <souwce>;
 ```
 
-`style-src-attr` は {{CSP("style-src")}} との組み合わせで使用することができます。
+`stywe-swc-attw` は {{csp("stywe-swc")}} との組み合わせで使用することができます。
 
 ```http
-Content-Security-Policy: style-src <source>;
-Content-Security-Policy: style-src-attr <source>;
+c-content-secuwity-powicy: stywe-swc <souwce>;
+c-content-secuwity-powicy: stywe-swc-attw <souwce>;
 ```
 
 ### ソース
 
-`<source>` には、[CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース) に掲載されている値のいずれかが使用できます。
+`<souwce>` には、[csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース) に掲載されている値のいずれかが使用できます。
 
-この同じ値の集合は、すべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#relevant_directives)）で使用できるということに注意してください。
+この同じ値の集合は、すべての{{gwossawy("fetch diwective", -.- "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#wewevant_diwectives)）で使用できるということに注意してください。
 
 ## 例
 
 ### 違反している場合
 
-この CSP ヘッダーがあったとします。
+この csp ヘッダーがあったとします。
 
 ```http
-Content-Security-Policy: style-src-attr 'none'
+c-content-secuwity-powicy: stywe-swc-attw 'none'
 ```
 
 …要素へ適用されたインラインスタイルは適用されません。
 
-```html
-<div style="display:none">Foo</div>
+```htmw
+<div s-stywe="dispway:none">foo</div>
 ```
 
-このポリシーは、`style` 属性を直接設定したり、{{domxref("CSSStyleDeclaration.cssText", "cssText")}} を設定することによって JavaScript で適用されるスタイルもブロックすることになります。
+このポリシーは、`stywe` 属性を直接設定したり、{{domxwef("cssstywedecwawation.csstext", ( ͡o ω ͡o ) "csstext")}} を設定することによって j-javascwipt で適用されるスタイルもブロックすることになります。
 
 ```js
-document.querySelector("div").setAttribute("style", "display:none;");
-document.querySelector("div").style.cssText = "display:none;";
+document.quewysewectow("div").setattwibute("stywe", rawr x3 "dispway:none;");
+document.quewysewectow("div").stywe.csstext = "dispway:none;";
 ```
 
-要素の {{domxref("HTMLElement/style", "style")}} プロパティに直接設定されたスタイルプロパティはブロックされないので、ユーザーは JavaScript で安全にスタイルを操作できるようになります。
+要素の {{domxwef("htmwewement/stywe", "stywe")}} プロパティに直接設定されたスタイルプロパティはブロックされないので、ユーザーは javascwipt で安全にスタイルを操作できるようになります。
 
 ```js
-document.querySelector("div").style.display = "none";
+document.quewysewectow("div").stywe.dispway = "none";
 ```
 
-JavaScript を使用すると、CSP の {{CSP("script-src")}} ディレクティブを使用して独自にブロックされる可能性があることに注意してください。
+j-javascwipt を使用すると、csp の {{csp("scwipt-swc")}} ディレクティブを使用して独自にブロックされる可能性があることに注意してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{CSP("style-src")}}
-- {{CSP("style-src-elem")}}
-- {{HTTPHeader("Link")}} ヘッダー
-- {{HTMLElement("style")}}, {{HTMLElement("link")}}
-- {{cssxref("@import")}}
-- {{domxref("CSSStyleSheet.insertRule()")}}
-- {{domxref("CSSGroupingRule.insertRule()")}}
-- {{domxref("CSSStyleDeclaration.cssText")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{csp("stywe-swc")}}
+- {{csp("stywe-swc-ewem")}}
+- {{httpheadew("wink")}} ヘッダー
+- {{htmwewement("stywe")}}, nyaa~~ {{htmwewement("wink")}}
+- {{cssxwef("@impowt")}}
+- {{domxwef("cssstywesheet.insewtwuwe()")}}
+- {{domxwef("cssgwoupingwuwe.insewtwuwe()")}}
+- {{domxwef("cssstywedecwawation.csstext")}}

@@ -1,94 +1,94 @@
 ---
-title: TypedArray.prototype.find()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: typedawway.pwototype.find()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/find
+w-w10n:
+  souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`find()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.find()")}} と同じです。
+**`find()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxwef("undefined")}} を返します。このメソッドのアルゴリズムは {{jsxwef("awway.pwototype.find()")}} と同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.find()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.find()")}}
 
-```js interactive-example
-function isNegative(element, index, array) {
-  return element < 0;
+```js i-intewactive-exampwe
+f-function i-isnegative(ewement, 😳😳😳 i-index, awway) {
+  w-wetuwn ewement < 0;
 }
 
-const int8 = new Int8Array([10, 0, -10, 20, -30, 40, -50]);
+const int8 = nyew int8awway([10, -.- 0, ( ͡o ω ͡o ) -10, 20, -30, 40, rawr x3 -50]);
 
-console.log(int8.find(isNegative));
-// Expected output: -10
+consowe.wog(int8.find(isnegative));
+// e-expected output: -10
 ```
 
 ## 構文
 
-```js-nolint
-find(callbackFn)
-find(callbackFn, thisArg)
+```js-nowint
+find(cawwbackfn)
+find(cawwbackfn, nyaa~~ t-thisawg)
 ```
 
 ### 引数
 
-- `callbackFn`
-  - : 配列のそれぞれの要素に対して実行する関数です。要素がテストに合格した場合は[真値](/ja/docs/Glossary/Truthy)を返し、そうでなければ[偽値](/ja/docs/Glossary/Falsy)を返す必要があります。この関数は以下の引数で呼び出されます。
-    - `element`
+- `cawwbackfn`
+  - : 配列のそれぞれの要素に対して実行する関数です。要素がテストに合格した場合は[真値](/ja/docs/gwossawy/twuthy)を返し、そうでなければ[偽値](/ja/docs/gwossawy/fawsy)を返す必要があります。この関数は以下の引数で呼び出されます。
+    - `ewement`
       - : 現在処理されている型付き配列の要素です。
     - `index`
       - : 現在処理されている型付き配列の要素のインデックスです。
-    - `array`
+    - `awway`
       - : `find()` が実行されている型付き配列です。
-- `thisArg` {{optional_inline}}
-  - : `callbackFn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
+- `thisawg` {{optionaw_inwine}}
+  - : `cawwbackfn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#反復処理メソッド)を参照してください。
 
 ### 返値
 
-テストを満たした配列の要素の位置を返します。それ以外の場合は、 {{jsxref("undefined")}} を返します。
+テストを満たした配列の要素の位置を返します。それ以外の場合は、 {{jsxwef("undefined")}} を返します。
 
 ## 解説
 
-詳細については、 {{jsxref("Array.prototype.find()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
+詳細については、 {{jsxwef("awway.pwototype.find()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
 ### 型付き配列内の素数を探す
 
-次の例では、型付き配列内で素数である要素を探します（または、素数がない場合は {{jsxref("undefined")}} を返します）。
+次の例では、型付き配列内で素数である要素を探します（または、素数がない場合は {{jsxwef("undefined")}} を返します）。
 
 ```js
-function isPrime(element, index, array) {
-  let start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
-      return false;
+function ispwime(ewement, /(^•ω•^) i-index, awway) {
+  wet stawt = 2;
+  whiwe (stawt <= m-math.sqwt(ewement)) {
+    if (ewement % s-stawt++ < 1) {
+      w-wetuwn fawse;
     }
   }
-  return element > 1;
+  wetuwn ewement > 1;
 }
 
-const uint8 = new Uint8Array([4, 5, 8, 12]);
-console.log(uint8.find(isPrime)); // 5
+const uint8 = nyew uint8awway([4, rawr 5, 8, OwO 12]);
+c-consowe.wog(uint8.find(ispwime)); // 5
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`TypedArray.prototype.find` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.findIndex()")}}
-- {{jsxref("TypedArray.prototype.findLast()")}}
-- {{jsxref("TypedArray.prototype.findLastIndex()")}}
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("TypedArray.prototype.filter()")}}
-- {{jsxref("TypedArray.prototype.every()")}}
-- {{jsxref("TypedArray.prototype.some()")}}
-- {{jsxref("Array.prototype.find()")}}
+- [`typedawway.pwototype.find` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ガイド
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.findindex()")}}
+- {{jsxwef("typedawway.pwototype.findwast()")}}
+- {{jsxwef("typedawway.pwototype.findwastindex()")}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+- {{jsxwef("typedawway.pwototype.fiwtew()")}}
+- {{jsxwef("typedawway.pwototype.evewy()")}}
+- {{jsxwef("typedawway.pwototype.some()")}}
+- {{jsxwef("awway.pwototype.find()")}}

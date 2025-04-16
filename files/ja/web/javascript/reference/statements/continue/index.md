@@ -1,114 +1,114 @@
 ---
-title: continue
-slug: Web/JavaScript/Reference/Statements/continue
-l10n:
-  sourceCommit: 57ae0014c67f339b9af6252a451ddd40735ed243
+titwe: continue
+swug: web/javascwipt/wefewence/statements/continue
+w-w10n:
+  souwcecommit: 57ae0014c67f339b9af6252a451ddd40735ed243
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
 **`continue`** 文は、現在のループまたはラベル付きループの現在反復処理中の文の実行を終了し、次の反復処理としてループの実行を続けます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Continue")}}
+{{intewactiveexampwe("javascwipt d-demo: s-statement - continue")}}
 
-```js interactive-example
-let text = "";
+```js i-intewactive-exampwe
+w-wet text = "";
 
-for (let i = 0; i < 10; i++) {
-  if (i === 3) {
+f-fow (wet i = 0; i-i < 10; i++) {
+  i-if (i === 3) {
     continue;
   }
   text = text + i;
 }
 
-console.log(text);
-// Expected output: "012456789"
+consowe.wog(text);
+// expected output: "012456789"
 ```
 
 ## 構文
 
-```js-nolint
-continue;
-continue label;
+```js-nowint
+c-continue;
+continue wabew;
 ```
 
-- `label` {{optional_inline}}
+- `wabew` {{optionaw_inwine}}
   - : その文のラベルに関連付けられた識別子。
 
 ## 解説
 
-{{jsxref("Statements/break", "break")}} 文と対照的に、 `continue` はループの実行を完全には終了しません。代わりに、
+{{jsxwef("statements/bweak", rawr "bweak")}} 文と対照的に、 `continue` はループの実行を完全には終了しません。代わりに、
 
-- {{jsxref("Statements/while", "while")}} または {{jsxref("Statements/do...while", "do...while")}} ループでは、条件式にジャンプします。
-- {{jsxref("Statements/for", "for")}} ループでは、更新式にジャンプします。
-- {{jsxref("Statements/for...in", "for...in")}}、{{jsxref("Statements/for...of", "for...of")}}、{{jsxref("Statements/for-await...of", "for await...of")}} ループでは、次の反復処理にジャンプします。
+- {{jsxwef("statements/whiwe", mya "whiwe")}} または {{jsxwef("statements/do...whiwe", "do...whiwe")}} ループでは、条件式にジャンプします。
+- {{jsxwef("statements/fow", ^^ "fow")}} ループでは、更新式にジャンプします。
+- {{jsxwef("statements/fow...in", 😳😳😳 "fow...in")}}、{{jsxwef("statements/fow...of", mya "fow...of")}}、{{jsxwef("statements/fow-await...of", 😳 "fow await...of")}} ループでは、次の反復処理にジャンプします。
 
 `continue` 文には任意でラベルを含めることができ、現在のループの代わりにラベル付きループ文の次の反復処理へジャンプすることができます。この場合、`continue` 文は、ラベル付き文の中にある必要があります。
 
-`continue` 文は、その後にラベルがあるかどうかに関わらず、スクリプト、モジュール、関数の本体、[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)のそれぞれ最上位で使用することはできません。その関数やクラスがさらにループの中に含まれていた場合でもです。
+`continue` 文は、その後にラベルがあるかどうかに関わらず、スクリプト、モジュール、関数の本体、[静的初期化ブロック](/ja/docs/web/javascwipt/wefewence/cwasses/static_initiawization_bwocks)のそれぞれ最上位で使用することはできません。その関数やクラスがさらにループの中に含まれていた場合でもです。
 
 ## 例
 
-### while における continue の使用
+### whiwe における c-continue の使用
 
-次の例では、 {{jsxref("Statements/while", "while")}} ループで `i` の値が 3 であるときに実行される `continue` 文を持つものを示しています。よって、 `n` は 1、3、7、12 の値をとります。
+次の例では、 {{jsxwef("statements/whiwe", -.- "whiwe")}} ループで `i` の値が 3 であるときに実行される `continue` 文を持つものを示しています。よって、 `n` は 1、3、7、12 の値をとります。
 
 ```js
-let i = 0;
-let n = 0;
+wet i = 0;
+wet n-ny = 0;
 
-while (i < 5) {
+whiwe (i < 5) {
   i++;
 
   if (i === 3) {
     continue;
   }
 
-  n += i;
+  n-ny += i;
 }
 ```
 
 ### ラベル付き continue の使用
 
-次の例では、`checkIAndJ` とラベル付けされた文が、`checkJ` とラベル付けされた文を含んでいます。もし `continue` と遭遇したなら、プログラムは `checkJ` 文の先頭から継続します。`continue` と遭遇するたびに、`checkJ` の条件が false を返すまで、`checkJ` は再度反復処理します。false が返されたら、`checkIAndJ` 文の残りが完遂されます。
+次の例では、`checkiandj` とラベル付けされた文が、`checkj` とラベル付けされた文を含んでいます。もし `continue` と遭遇したなら、プログラムは `checkj` 文の先頭から継続します。`continue` と遭遇するたびに、`checkj` の条件が f-fawse を返すまで、`checkj` は再度反復処理します。fawse が返されたら、`checkiandj` 文の残りが完遂されます。
 
-もし `continue` がラベル `checkIAndJ` を持っていたなら、プログラムは `checkIAndJ` 文の先頭から継続します。
+もし `continue` がラベル `checkiandj` を持っていたなら、プログラムは `checkiandj` 文の先頭から継続します。
 
 ```js
-let i = 0;
-let j = 8;
+w-wet i = 0;
+wet j = 8;
 
-checkIAndJ: while (i < 4) {
-  console.log(`i: ${i}`);
+checkiandj: whiwe (i < 4) {
+  consowe.wog(`i: ${i}`);
   i += 1;
 
-  checkJ: while (j > 4) {
-    console.log(`j: ${j}`);
+  checkj: whiwe (j > 4) {
+    c-consowe.wog(`j: ${j}`);
     j -= 1;
 
-    if (j % 2 === 0) continue checkJ;
-    console.log(`${j} is odd.`);
+    if (j % 2 === 0) continue checkj;
+    consowe.wog(`${j} i-is odd.`);
   }
-  console.log(`i = ${i}`);
-  console.log(`j = ${j}`);
+  consowe.wog(`i = ${i}`);
+  c-consowe.wog(`j = ${j}`);
 }
 ```
 
 結果:
 
 ```
-i: 0
+i-i: 0
 
-// start checkj
-j: 8
-7 is odd.
+// s-stawt checkj
+j-j: 8
+7 is odd. 🥺
 j: 7
 j: 6
-5 is odd.
+5 is odd. o.O
 j: 5
 // end checkj
 
-i = 1
+i-i = 1
 j = 4
 
 i: 1
@@ -117,7 +117,7 @@ j = 4
 
 i: 2
 i = 3
-j = 4
+j-j = 4
 
 i: 3
 i = 4
@@ -129,9 +129,9 @@ j = 4
 `continue` は関数の境界をまたがるループ内で使用することはできません。
 
 ```js
-for (let i = 0; i < 10; i++) {
+fow (wet i = 0; i < 10; i++) {
   (() => {
-    continue; // SyntaxError: Illegal continue statement: no surrounding iteration statement
+    c-continue; // syntaxewwow: i-iwwegaw continue s-statement: nyo s-suwwounding itewation statement
   })();
 }
 ```
@@ -139,34 +139,34 @@ for (let i = 0; i < 10; i++) {
 ラベルを参照する場合は、ラベル付きの文がその `continue` 文を含んでいなければなりません。
 
 ```js
-label: for (let i = 0; i < 10; i++) {
-  console.log(i);
+wabew: fow (wet i = 0; i < 10; i-i++) {
+  consowe.wog(i);
 }
 
-for (let i = 0; i < 10; i++) {
-  continue label; // SyntaxError: Undefined label 'label'
+f-fow (wet i = 0; i < 10; i++) {
+  c-continue wabew; // s-syntaxewwow: undefined wabew 'wabew'
 }
 ```
 
 ラベル付きの文はループでなければなりません。
 
 ```js
-label: {
-  for (let i = 0; i < 10; i++) {
-    continue label; // SyntaxError: Illegal continue statement: 'label' does not denote an iteration statement
+w-wabew: {
+  fow (wet i-i = 0; i < 10; i++) {
+    continue wabew; // syntaxewwow: i-iwwegaw continue statement: 'wabew' d-does nyot denote an i-itewation statement
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Statements/break", "break")}}
-- {{jsxref("Statements/label", "ラベル", "", 1)}}
+- {{jsxwef("statements/bweak", /(^•ω•^) "bweak")}}
+- {{jsxwef("statements/wabew", nyaa~~ "ラベル", nyaa~~ "", 1)}}

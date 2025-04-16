@@ -1,68 +1,68 @@
 ---
-title: Proxy-Authenticate
-slug: Web/HTTP/Reference/Headers/Proxy-Authenticate
-original_slug: Web/HTTP/Headers/Proxy-Authenticate
+titwe: pwoxy-authenticate
+swug: w-web/http/wefewence/headews/pwoxy-authenticate
+o-owiginaw_swug: w-web/http/headews/pwoxy-authenticate
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`Proxy-Authenticate`** レスポンスヘッダーは、{{Glossary("proxy server", "プロキシーサーバー")}}の背後にあるリソースへのアクセスに使用される認証メソッドを定義します。プロキシーサーバーへのリクエストを認証し、プロキシーサーバーがリクエストをさらに送信できるようにします。
+h-http **`pwoxy-authenticate`** レスポンスヘッダーは、{{gwossawy("pwoxy s-sewvew", XD "プロキシーサーバー")}}の背後にあるリソースへのアクセスに使用される認証メソッドを定義します。プロキシーサーバーへのリクエストを認証し、プロキシーサーバーがリクエストをさらに送信できるようにします。
 
-`Proxy-Authenticate` ヘッダーは、 {{HTTPStatus("407")}} `Proxy Authentication Required` とともに送信されます。
+`pwoxy-authenticate` ヘッダーは、 {{httpstatus("407")}} `pwoxy a-authentication wequiwed` とともに送信されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wesponse headew", :3 "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("fowbidden headew nyame", 😳😳😳 "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Proxy-Authenticate: <type> realm=<realm>
+p-pwoxy-authenticate: <type> weawm=<weawm>
 ```
 
 ## ディレクティブ
 
 - \<type>
-  - : [認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)。 一般的なタイプは ["Basic"](/ja/docs/Web/HTTP/Guides/Authentication#basic_認証方式) です。 IANA は[認証方式のリスト](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)を管理しています。
-- realm=\<realm>
-  - : 保護された領域、つまり realm の詳細。 realm が指定されていない場合、クライアントはふつう代わりに整形されたホスト名を表示します。
+  - : [認証方式](/ja/docs/web/http/guides/authentication#認証方式)。 一般的なタイプは ["basic"](/ja/docs/web/http/guides/authentication#basic_認証方式) です。 iana は[認証方式のリスト](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw)を管理しています。
+- w-weawm=\<weawm>
+  - : 保護された領域、つまり weawm の詳細。 w-weawm が指定されていない場合、クライアントはふつう代わりに整形されたホスト名を表示します。
 
 ## 例
 
 ```
-Proxy-Authenticate: Basic
+pwoxy-authenticate: basic
 
-Proxy-Authenticate: Basic realm="Access to the internal site"
+pwoxy-authenticate: b-basic weawm="access to t-the intewnaw site"
 ```
 
 ## 仕様書
 
 | 仕様書                                       | 題名                                   |
 | -------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "Proxy-Authenticate", "4.3")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                              | The 'Basic' HTTP Authentication Scheme |
+| {{wfc("7235", -.- "pwoxy-authenticate", ( ͡o ω ͡o ) "4.3")}} | h-http/1.1: authentication               |
+| {{wfc("7617")}}                              | the 'basic' http authentication scheme |
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [http 認証](/ja/docs/web/http/guides/authentication)
+- {{httpheadew("authowization")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("www-authenticate")}}
+- {{httpstatus("401")}}, rawr x3 {{httpstatus("403")}}, nyaa~~ {{httpstatus("407")}}

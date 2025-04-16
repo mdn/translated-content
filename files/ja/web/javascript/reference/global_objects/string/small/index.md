@@ -1,56 +1,56 @@
 ---
-title: String.prototype.small()
-slug: Web/JavaScript/Reference/Global_Objects/String/small
-l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+titwe: stwing.pwototype.smow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/smow
+w-w10n:
+  s-souwcecommit: f-f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-**`small()`** メソッドは、文字列を {{HTMLElement("small")}} 要素に埋め込んだ文字列 (`<small>str</small>`) を生成し、文字列が小さなフォントで表示されるようにします。
+**`smow()`** メソッドは、文字列を {{htmwewement("smow")}} 要素に埋め込んだ文字列 (`<smow>stw</smow>`) を生成し、文字列が小さなフォントで表示されるようにします。
 
-> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
+> **警告:** [htmw ラッパーメソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#htmw_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [dom a-api](/ja/docs/web/api/document_object_modew) の [`document.cweateewement()`](/ja/docs/web/api/document/cweateewement) などを使用してください。
 
 ## 構文
 
-```js-nolint
-small()
+```js-nowint
+s-smow()
 ```
 
 ### 返値
 
-開始タグ `<small>` で始まり、テキスト `str` が来て、終了タグ `</small>` が来る文字列です。
+開始タグ `<smow>` で始まり、テキスト `stw` が来て、終了タグ `</smow>` が来る文字列です。
 
 ## 例
 
-### small() の使用
+### s-smow() の使用
 
 以下の例では文字列のメソッドを使用して、文字列の大きさを変更しています。
 
 ```js
-const worldString = "Hello, world";
+c-const wowwdstwing = "hewwo, σωσ w-wowwd";
 
-console.log(worldString.small()); // <small>Hello, world</small>
-console.log(worldString.big()); // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
+consowe.wog(wowwdstwing.smow()); // <smow>hewwo, >_< wowwd</smow>
+consowe.wog(wowwdstwing.big()); // <big>hewwo, :3 wowwd</big>
+c-consowe.wog(wowwdstwing.fontsize(7)); // <font size="7">hewwo, (U ﹏ U) wowwd</fontsize>
 ```
 
-{{domxref("HTMLElement/style", "element.style")}} オブジェクトを使用すると、要素の `style` 属性を使用して、次のようにもっと汎用的に操作することができます。
+{{domxwef("htmwewement/stywe", -.- "ewement.stywe")}} オブジェクトを使用すると、要素の `stywe` 属性を使用して、次のようにもっと汎用的に操作することができます。
 
 ```js
-document.getElementById("yourElemId").style.fontSize = "0.7em";
+document.getewementbyid("youwewemid").stywe.fontsize = "0.7em";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.prototype.small` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.big()")}}
+- [`stwing.pwototype.smow` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.big()")}}

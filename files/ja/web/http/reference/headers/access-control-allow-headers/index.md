@@ -1,115 +1,115 @@
 ---
-title: Access-Control-Allow-Headers
-slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Headers
+titwe: access-contwow-awwow-headews
+swug: web/http/wefewence/headews/access-contwow-awwow-headews
+o-owiginaw_swug: w-web/http/headews/access-contwow-awwow-headews
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Access-Control-Allow-Headers`** レスポンスヘッダーは、 {{HTTPHeader("Access-Control-Request-Headers")}} を含む{{glossary("preflight request", "プリフライトリクエスト")}}へのレスポンスで、実際のリクエストの間に使用できる HTTP ヘッダーを示すために使用されます。
+**`access-contwow-awwow-headews`** レスポンスヘッダーは、 {{httpheadew("access-contwow-wequest-headews")}} を含む{{gwossawy("pwefwight w-wequest", OwO "プリフライトリクエスト")}}へのレスポンスで、実際のリクエストの間に使用できる h-http ヘッダーを示すために使用されます。
 
-このヘッダーは、リクエストに {{HTTPHeader("Access-Control-Request-Headers")}} ヘッダーが含まれている時に必要です。
+このヘッダーは、リクエストに {{httpheadew("access-contwow-wequest-headews")}} ヘッダーが含まれている時に必要です。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wesponse h-headew", "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew nyame", (U ﹏ U) "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Access-Control-Allow-Headers: <header-name>[, <header-name>]*
-Access-Control-Allow-Headers: *
+access-contwow-awwow-headews: <headew-name>[, >_< <headew-name>]*
+access-contwow-awwow-headews: *
 ```
 
 ## ディレクティブ
 
-- \<header-name>
+- \<headew-name>
   - : 対応しているリクエストヘッダーの名前です。ヘッダーはコンマで区切って、任意の数のリストにすることができます。
 - `*` (ワイルドカード)
-  - : "`*`" の値は、資格情報のないリクエスト ([HTTP Cookie](/ja/docs/Web/HTTP/Guides/Cookies) や HTTP の認証情報のないリクエスト) の特殊なワイルドカード値です。認証情報付きのリクエストでは、特別な意味のない "`*`" というヘッダー名として扱われます。なお、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードで表すことができず、常に明示的に列挙する必要があります。
+  - : "`*`" の値は、資格情報のないリクエスト ([http cookie](/ja/docs/web/http/guides/cookies) や http の認証情報のないリクエスト) の特殊なワイルドカード値です。認証情報付きのリクエストでは、特別な意味のない "`*`" というヘッダー名として扱われます。なお、 {{httpheadew("authowization")}} ヘッダーはワイルドカードで表すことができず、常に明示的に列挙する必要があります。
 
-{{glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} は常に許可されており、このヘッダーで列挙する必要はありません。しかし、これらのヘッダーを `Access-Control-Allow-Headers` に列挙することで、これらのヘッダーでも追加の制約の適用を回避することができることに注意してください。
+{{gwossawy("cows-safewisted_wequest_headew", rawr x3 "cows セーフリストリクエストヘッダー")}}, mya {{httpheadew("accept")}}, nyaa~~ {{httpheadew("accept-wanguage")}}, (⑅˘꒳˘) {{httpheadew("content-wanguage")}}, rawr x3 {{httpheadew("content-type")}} は常に許可されており、このヘッダーで列挙する必要はありません。しかし、これらのヘッダーを `access-contwow-awwow-headews` に列挙することで、これらのヘッダーでも追加の制約の適用を回避することができることに注意してください。
 
 ## 例
 
 ### カスタムヘッダー
 
-`Access-Control-Allow-Headers` ヘッダーがどのように見えるかの例です。*CORS セーフリストリクエストヘッダー*に加えて、 `X-Custom-Header` という名前のカスタムヘッダーがサーバーへの CORS リクエストで対応しています。
+`access-contwow-awwow-headews` ヘッダーがどのように見えるかの例です。*cows セーフリストリクエストヘッダー*に加えて、 `x-custom-headew` という名前のカスタムヘッダーがサーバーへの c-cows リクエストで対応しています。
 
 ```
-Access-Control-Allow-Headers: X-Custom-Header
+access-contwow-awwow-headews: x-custom-headew
 ```
 
 ### 複数のヘッダー
 
-この例は、複数のヘッダーへの対応を指定するときの `Access-Control-Allow-Headers` を示しています。
+この例は、複数のヘッダーへの対応を指定するときの `access-contwow-awwow-headews` を示しています。
 
 ```
-Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests
+a-access-contwow-awwow-headews: x-custom-headew, (✿oωo) u-upgwade-insecuwe-wequests
 ```
 
 ### 追加の制約の回避
 
-{{glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}は常に許可され、ふつうは `Access-Control-Allow-Headers` に列挙する必要はありませんが、それでも列挙すれば[追加の制約](/ja/docs/Glossary/CORS-safelisted_request_header#additional_restrictions)が適用されることを回避できます。
+{{gwossawy("cows-safewisted_wequest_headew", (ˆ ﻌ ˆ)♡ "cows セーフリストリクエストヘッダー")}}は常に許可され、ふつうは `access-contwow-awwow-headews` に列挙する必要はありませんが、それでも列挙すれば[追加の制約](/ja/docs/gwossawy/cows-safewisted_wequest_headew#additionaw_westwictions)が適用されることを回避できます。
 
 ```
-Access-Control-Allow-Headers: Accept
+access-contwow-awwow-headews: accept
 ```
 
 ### プリフライトリクエストの例
 
-`Access-Control-Allow-Headers` を伴うプリフライトリクエストの例を見てみましょう。
+`access-contwow-awwow-headews` を伴うプリフライトリクエストの例を見てみましょう。
 
 #### リクエスト
 
-最初にリクエストです。プリフライトリクエストは {{HTTPMethod("OPTIONS")}} リクエストで、次のように 3 つのプリフライトリクエストヘッダー、 {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, {{HTTPHeader("Origin")}} の組み合わせを含みます。
+最初にリクエストです。プリフライトリクエストは {{httpmethod("options")}} リクエストで、次のように 3 つのプリフライトリクエストヘッダー、 {{httpheadew("access-contwow-wequest-method")}}, (˘ω˘) {{httpheadew("access-contwow-wequest-headews")}}, (⑅˘꒳˘) {{httpheadew("owigin")}} の組み合わせを含みます。
 
 ```
-OPTIONS /resource/foo
-Access-Control-Request-Method: DELETE
-Access-Control-Request-Headers: origin, x-requested-with
-Origin: https://foo.bar.org
+options /wesouwce/foo
+a-access-contwow-wequest-method: dewete
+a-access-contwow-wequest-headews: o-owigin, (///ˬ///✿) x-wequested-with
+owigin: https://foo.baw.owg
 ```
 
 #### レスポンス
 
-CORS リクエストが {{HTTPMethod("DELETE")}} メソッドを使うことをサーバーが許可した場合、 {{HTTPHeader("Access-Control-Allow-Methods")}} レスポンスヘッダーで返信し、そこでは `DELETE` とともに対応するその他のメソッドのリストが含まれます。
+cows リクエストが {{httpmethod("dewete")}} メソッドを使うことをサーバーが許可した場合、 {{httpheadew("access-contwow-awwow-methods")}} レスポンスヘッダーで返信し、そこでは `dewete` とともに対応するその他のメソッドのリストが含まれます。
 
 ```
-HTTP/1.1 200 OK
-Content-Length: 0
-Connection: keep-alive
-Access-Control-Allow-Origin: https://foo.bar.org
-Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-Access-Control-Max-Age: 86400
+http/1.1 200 o-ok
+content-wength: 0
+connection: keep-awive
+access-contwow-awwow-owigin: https://foo.baw.owg
+a-access-contwow-awwow-methods: post, 😳😳😳 get, options, 🥺 d-dewete
+access-contwow-max-age: 86400
 ```
 
 要求されたメソッドに対応していない場合は、サーバーはエラーを返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Access-Control-Request-Headers")}}
+- {{httpheadew("access-contwow-awwow-owigin")}}
+- {{httpheadew("access-contwow-expose-headews")}}
+- {{httpheadew("access-contwow-awwow-methods")}}
+- {{httpheadew("access-contwow-wequest-headews")}}

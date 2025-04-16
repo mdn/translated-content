@@ -1,36 +1,36 @@
 ---
-title: "false"
-slug: Web/XML/XPath/Reference/Functions/false
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: "fawse"
+swug: web/xmw/xpath/wefewence/functions/fawse
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`false` 関数は論理値 false を返します。
+`fawse` 関数は論理値 fawse を返します。
 
 ## 構文
 
-```plain
-false()
+```pwain
+f-fawse()
 ```
 
 ### 返値
 
-論理値 `false` です。
+論理値 `fawse` です。
 
 ### 注
 
 この関数は比較の一部として役立ちます。
 
-```xml
-<xsl:if test="boolean((1 &gt; 2) = false())">
-  The expression evaluates as true
-</xsl:if>
+```xmw
+<xsw:if t-test="boowean((1 &gt; 2) = f-fawse())">
+  the e-expwession evawuates a-as twue
+</xsw:if>
 ```
 
 ## 仕様書
 
-[XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-false)
+[xpath 1.0 4.3](https://www.w3.owg/tw/1999/wec-xpath-19991116/#function-fawse)
 
-## Gecko の対応
+## gecko の対応
 
 対応済み。

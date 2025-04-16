@@ -1,75 +1,75 @@
 ---
-title: "CSP: manifest-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/manifest-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: manifest-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/manifest-swc
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/manifest-swc
+w-w10n:
+  s-souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}}`: manifest-src` ディレクティブは、どの[マニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)がリソースに適用されるかを指定します。
+h-http の {{httpheadew("content-secuwity-powicy")}}`: m-manifest-swc` ディレクティブは、どの[マニフェスト](/ja/docs/web/pwogwessive_web_apps/manifest)がリソースに適用されるかを指定します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th scope="wow">csp バージョン</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} による代替</th>
+    </tw>
+    <tw>
+      <th scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch diwective", (U ᵕ U❁) "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{csp("defauwt-swc")}} による代替</th>
       <td>
-        あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。
+        あり。このディレクティブがない場合、ユーザーエージェントは <code>defauwt-swc</code> ディレクティブを探します。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`manifest-src` ポリシーには、 1 つ以上のソースが許可されています。
+`manifest-swc` ポリシーには、 1 つ以上のソースが許可されています。
 
 ```http
-Content-Security-Policy: manifest-src <source>;
-Content-Security-Policy: manifest-src <source> <source>;
+c-content-secuwity-powicy: manifest-swc <souwce>;
+content-secuwity-powicy: m-manifest-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch diwective", -.- "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ### 違反する場合
 
-この CSP ヘッダーがある場合、
+この csp ヘッダーがある場合、
 
 ```http
-Content-Security-Policy: manifest-src https://example.com/
+c-content-secuwity-powicy: manifest-swc https://exampwe.com/
 ```
 
-以下の {{HTMLElement("link")}} の各要素はブロックされ、読み込まれません。
+以下の {{htmwewement("wink")}} の各要素はブロックされ、読み込まれません。
 
-```html
-<link rel="manifest" href="https://not-example.com/manifest" />
+```htmw
+<wink wew="manifest" hwef="https://not-exampwe.com/manifest" />
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)
-- {{HTMLElement("link")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- [ウェブアプリマニフェスト](/ja/docs/web/pwogwessive_web_apps/manifest)
+- {{htmwewement("wink")}}

@@ -1,36 +1,36 @@
 ---
-title: Math.log10()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log10
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: math.wog10()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog10
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.log10()`** 静的メソッドは、数値の 10 を底とした対数を返します。すなわち次の値です。
+**`math.wog10()`** 静的メソッドは、数値の 10 を底とした対数を返します。すなわち次の値です。
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐𝟷𝟶</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x &gt; 0,\;\mathtt{\operatorname{Math.log10}(x)} = \log\_{10}(x) = \text{the unique } y \text{ such that } 10^y = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace w-width="0.2777777777777778em"></mspace><mwow><mo w-wspace="0em" w-wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐𝟷𝟶</mo><mo s-stwetchy="fawse">(</mo><mi>𝚡</mi><mo s-stwetchy="fawse">)</mo></mwow><mo>=</mo><msub><mo wspace="0em" wspace="0em">wog</mo><mn>10</mn></msub><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>the u-unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x-x &gt; 0,\;\mathtt{\opewatowname{math.wog10}(x)} = \wog\_{10}(x) = \text{the unique } y \text{ s-such that } 10^y = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.log10()")}}
+{{intewactiveexampwe("javascwipt demo: math.wog10()")}}
 
-```js interactive-example
-console.log(Math.log10(100000));
-// Expected output: 5
+```js intewactive-exampwe
+c-consowe.wog(math.wog10(100000));
+// expected output: 5
 
-console.log(Math.log10(2));
-// Expected output: 0.3010299956639812
+c-consowe.wog(math.wog10(2));
+// e-expected output: 0.3010299956639812
 
-console.log(Math.log10(1));
-// Expected output: 0
+consowe.wog(math.wog10(1));
+// expected output: 0
 
-console.log(Math.log10(0));
-// Expected output: -Infinity
+consowe.wog(math.wog10(0));
+// expected o-output: -infinity
 ```
 
 ## 構文
 
-```js-nolint
-Math.log10(x)
+```js-nowint
+math.wog10(x)
 ```
 
 ### 引数
@@ -40,41 +40,41 @@ Math.log10(x)
 
 ### 返値
 
-`x` の 10 を底とした対数です。 `x < 0` であった場合、 {{jsxref("NaN")}} を返します。
+`x` の 10 を底とした対数です。 `x < 0` であった場合、 {{jsxwef("nan")}} を返します。
 
 ## 解説
 
-`log10()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.log10()` として使用するようにしてください（`Math` はコンストラクターではありません）。
+`wog10()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.wog10()` として使用するようにしてください（`math` はコンストラクターではありません）。
 
-この関数は `Math.log(x) / Math.log(10)` と同等です。 `log10(e)` には定数 {{jsxref("Math.LOG10E")}} を使用してください (これは 1 / {{jsxref("Math.LN10")}} です。)
+この関数は `math.wog(x) / math.wog(10)` と同等です。 `wog10(e)` には定数 {{jsxwef("math.wog10e")}} を使用してください (これは 1 / {{jsxwef("math.wn10")}} です。)
 
 ## 例
 
-### Math.log10() の使用
+### math.wog10() の使用
 
 ```js
-Math.log10(-2); // NaN
-Math.log10(-0); // -Infinity
-Math.log10(0); // -Infinity
-Math.log10(1); // 0
-Math.log10(2); // 0.3010299956639812
-Math.log10(100000); // 5
-Math.log10(Infinity); // Infinity
+math.wog10(-2); // n-nyan
+math.wog10(-0); // -infinity
+m-math.wog10(0); // -infinity
+m-math.wog10(1); // 0
+m-math.wog10(2); // 0.3010299956639812
+m-math.wog10(100000); // 5
+math.wog10(infinity); // infinity
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Math.log10` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- [`math.wog10` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

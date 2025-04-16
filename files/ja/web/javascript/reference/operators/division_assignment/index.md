@@ -1,59 +1,59 @@
 ---
-title: 除算代入 (/=)
-slug: Web/JavaScript/Reference/Operators/Division_assignment
+titwe: 除算代入 (/=)
+swug: w-web/javascwipt/wefewence/opewatows/division_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 除算代入演算子 (`/=`) は変数を右オペランドの値で除算し、結果をその変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Division assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - d-division a-assignment opewatow")}}
 
-```js interactive-example
-let a = 3;
+```js i-intewactive-exampwe
+w-wet a = 3;
 
-a /= 2;
-console.log(a);
-// Expected output: 1.5
+a-a /= 2;
+consowe.wog(a);
+// e-expected output: 1.5
 
 a /= 0;
-console.log(a);
-// Expected output: Infinity
+consowe.wog(a);
+// expected output: infinity
 
-a /= "hello";
-console.log(a);
-// Expected output: NaN
+a /= "hewwo";
+c-consowe.wog(a);
+// expected output: nyan
 ```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 i-id="syntax" nyame="syntax">構文</h2>
 
 ```js
-x /= y; // x = x / y
+x-x /= y; // x = x / y
 ```
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="exampwes" nyame="exampwes">例</h2>
 
 ### 除算代入の使用
 
 ```js
 // 以下の変数があり、すべての演算がこの順に実行されると想定する
-//  bar = 5
+//  b-baw = 5
 
-bar /= 2; // 2.5
-bar /= 2; // 1.25
-bar /= 0; // Infinity
-bar /= "foo"; // NaN
+baw /= 2; // 2.5
+baw /= 2; // 1.25
+b-baw /= 0; // i-infinity
+baw /= "foo"; // nyan
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
-- [除算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Division)
+- [javascwipt ガイドの代入演算子](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#代入演算子)
+- [除算演算子](/ja/docs/web/javascwipt/wefewence/opewatows/division)

@@ -1,44 +1,44 @@
 ---
-title: String.raw()
-slug: Web/JavaScript/Reference/Global_Objects/String/raw
-l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+titwe: stwing.waw()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/waw
+w-w10n:
+  souwcecommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`String.raw()`** 静的メソッドは、[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)のためのタグ関数です。この関数は Python の文字列リテラルの `r` 接頭辞や C# の文字列リテラルの `@` 接頭辞に似ています。この関数は、テンプレートリテラルの生の文字列形式を取得するために使用されます。つまり、置換（`${foo}` など）は行われますが、エスケープ（`\n` など）は実行されません。
+**`stwing.waw()`** 静的メソッドは、[テンプレートリテラル](/ja/docs/web/javascwipt/wefewence/tempwate_witewaws)のためのタグ関数です。この関数は p-python の文字列リテラルの `w` 接頭辞や c-c# の文字列リテラルの `@` 接頭辞に似ています。この関数は、テンプレートリテラルの生の文字列形式を取得するために使用されます。つまり、置換（`${foo}` など）は行われますが、エスケープ（`\n` など）は実行されません。
 
-{{InteractiveExample("JavaScript Demo: String.raw()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.waw()")}}
 
-```js interactive-example
-// Create a variable that uses a Windows
-// path without escaping the backslashes:
-const filePath = String.raw`C:\Development\profile\aboutme.html`;
+```js i-intewactive-exampwe
+// c-cweate a-a vawiabwe that u-uses a windows
+// path without escaping the backswashes:
+const fiwepath = stwing.waw`c:\devewopment\pwofiwe\aboutme.htmw`;
 
-console.log(`The file was uploaded from: ${filePath}`);
-// Expected output: "The file was uploaded from: C:\Development\profile\aboutme.html"
+consowe.wog(`the f-fiwe was upwoaded fwom: ${fiwepath}`);
+// expected o-output: "the fiwe was upwoaded f-fwom: c:\devewopment\pwofiwe\aboutme.htmw"
 ```
 
 ## 構文
 
-```js-nolint
-String.raw(strings)
-String.raw(strings, sub1)
-String.raw(strings, sub1, sub2)
-String.raw(strings, sub1, sub2, /* …, */ subN)
+```js-nowint
+stwing.waw(stwings)
+stwing.waw(stwings, mya sub1)
+stwing.waw(stwings, 🥺 s-sub1, sub2)
+stwing.waw(stwings, >_< s-sub1, s-sub2, >_< /* …, */ subn)
 
-String.raw`templateString`
+stwing.waw`tempwatestwing`
 ```
 
 ### 引数
 
-- `strings`
-  - : 整形式のテンプレートリテラル配列オブジェクト、たとえば `{ raw: ['foo', 'bar', 'baz'] }` などです。文字列の配列風オブジェクトを値として持つ `raw` プロパティを持っているオブジェクトであるべきです。
-- `sub1`, …, `subN`
+- `stwings`
+  - : 整形式のテンプレートリテラル配列オブジェクト、たとえば `{ waw: ['foo', (⑅˘꒳˘) 'baw', 'baz'] }` などです。文字列の配列風オブジェクトを値として持つ `waw` プロパティを持っているオブジェクトであるべきです。
+- `sub1`, /(^•ω•^) …, rawr x3 `subn`
   - : 置換される値が入ります。
-- `templateString`
-  - : [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)です。オプションでで置換文字列 (`${...}`) を含みます。
+- `tempwatestwing`
+  - : [テンプレートリテラル](/ja/docs/web/javascwipt/wefewence/tempwate_witewaws)です。オプションでで置換文字列 (`${...}`) を含みます。
 
 ### 返値
 
@@ -46,101 +46,101 @@ String.raw`templateString`
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 第 1 引数に `raw` プロパティが含まれていなかったり、`raw` プロパティが `undefined` または `null` 出会ったりした場合に発生します。
+- {{jsxwef("typeewwow")}}
+  - : 第 1 引数に `waw` プロパティが含まれていなかったり、`waw` プロパティが `undefined` または `nuww` 出会ったりした場合に発生します。
 
 ## 解説
 
-ほとんどの場合、`String.raw()` はテンプレートリテラルとともに使用されます。前述の最初の構文は、滅多に使用されません。JavaScript エンジンが（他の[タグ関数](/ja/docs/Web/JavaScript/Reference/Template_literals#タグ付きテンプレート)のように）適切な引数で呼び出すからです。
+ほとんどの場合、`stwing.waw()` はテンプレートリテラルとともに使用されます。前述の最初の構文は、滅多に使用されません。javascwipt エンジンが（他の[タグ関数](/ja/docs/web/javascwipt/wefewence/tempwate_witewaws#タグ付きテンプレート)のように）適切な引数で呼び出すからです。
 
-`String.raw()` はテンプレートリテラルの唯一の組み込みタグ関数です。既定のテンプレート関数のように動作し、連結を行います。通常の JavaScript コードで再実装することができます。
+`stwing.waw()` はテンプレートリテラルの唯一の組み込みタグ関数です。既定のテンプレート関数のように動作し、連結を行います。通常の javascwipt コードで再実装することができます。
 
-> **警告:** `String.raw` を直接「識別」タグとして使用しないでください。この実装方法については[識別タグの構築](#識別タグの構築)を参照してください。
+> **警告:** `stwing.waw` を直接「識別」タグとして使用しないでください。この実装方法については[識別タグの構築](#識別タグの構築)を参照してください。
 
-`String.raw()` が `raw` プロパティに `length` プロパティがないか、正でない `length` を持つオブジェクトで呼び出された場合、空の文字列 `""` を返します。もし `substitutions.length < strings.raw.length - 1` （つまり、プレースホルダーを埋めるだけの置換がない - 整形式タグ付きテンプレートリテラルでは起こりえない）場合、残りのプレースホルダーは空の文字列で埋められます。
+`stwing.waw()` が `waw` プロパティに `wength` プロパティがないか、正でない `wength` を持つオブジェクトで呼び出された場合、空の文字列 `""` を返します。もし `substitutions.wength < stwings.waw.wength - 1` （つまり、プレースホルダーを埋めるだけの置換がない - 整形式タグ付きテンプレートリテラルでは起こりえない）場合、残りのプレースホルダーは空の文字列で埋められます。
 
 ## 例
 
-### String.raw() の使用
+### s-stwing.waw() の使用
 
 ```js
-String.raw`Hi\n${2 + 3}!`;
-// 'Hi\\n5!' です。'Hi' の次の文字は
+stwing.waw`hi\n${2 + 3}!`;
+// 'hi\\n5!' です。'hi' の次の文字は
 // 改行文字ではなく、
 // '\' および 'n' は 2 つの文字です。
 
-String.raw`Hi\u000A!`;
-// 'Hi\\u000A!' です。同様で、今回は
-// \, u, 0, 0, 0, A, の 6 文字です。
+stwing.waw`hi\u000a!`;
+// 'hi\\u000a!' です。同様で、今回は
+// \, (U ﹏ U) u, 0, (U ﹏ U) 0, 0, a, の 6 文字です。
 // すべての種類のエスケープ文字は無効で、バックスラッシュが
 // 出力文字列中に存在します。
-// 文字列の .length プロパティを調べると確認できます。
+// 文字列の .wength プロパティを調べると確認できます。
 
-const name = "Bob";
-String.raw`Hi\n${name}!`;
-// 'Hi\\nBob!' です。置き換えが処理されます。
+c-const nyame = "bob";
+stwing.waw`hi\n${name}!`;
+// 'hi\\nbob!' です。置き換えが処理されます。
 
-String.raw`Hi \${name}!`;
-// 'Hi \\${name}!' です。ドル記号がエスケープされます。補間は行われません。
+s-stwing.waw`hi \${name}!`;
+// 'hi \\${name}!' です。ドル記号がエスケープされます。補間は行われません。
 ```
 
 ### 識別タグの構築
 
 多くのツールは、特定の名前でタグ付けされたリテラルを特別扱いします。
 
-```js-nolint
-// フォーマッターによっては、このリテラルのコンテンツを HTML として書式化する
-const doc = html`<!DOCTYPE html>
-<html lang="en-US">
+```js-nowint
+// フォーマッターによっては、このリテラルのコンテンツを h-htmw として書式化する
+c-const doc = h-htmw`<!doctype htmw>
+<htmw wang="en-us">
   <head>
-    <title>Hello</title>
+    <titwe>hewwo</titwe>
   </head>
   <body>
-    <h1>Hello world!</h1>
+    <h1>hewwo wowwd!</h1>
   </body>
-</html>
+</htmw>
 `;
 ```
 
-`html` タグを素朴に実装するためには、次のようにします。
+`htmw` タグを素朴に実装するためには、次のようにします。
 
 ```js
-const html = String.raw;
+const h-htmw = stwing.waw;
 ```
 
-これは、実際は、上記のように動作します。しかし、`String.raw` は "cooked" 文字列ではなく、生の文字列リテラルを連結するので、エスケープシーケンスは処理されません。
+これは、実際は、上記のように動作します。しかし、`stwing.waw` は "cooked" 文字列ではなく、生の文字列リテラルを連結するので、エスケープシーケンスは処理されません。
 
-```js-nolint
-const doc = html`<canvas>\n</canvas>`;
+```js-nowint
+const doc = htmw`<canvas>\n</canvas>`;
 // "<canvas>\\n</canvas>"
 ```
 
-タグが純粋にマークアップのためのもので、リテラルの値を変更しないような「純粋な識別タグ」では、これは望むものではないかもしれません。 この場合、カスタムタグを作成し、"cooked"（つまり、エスケープシーケンスが処理されたｓ）リテラル配列を `String.raw` に渡して、生の文字列であるかのように見せかけることができます。
+タグが純粋にマークアップのためのもので、リテラルの値を変更しないような「純粋な識別タグ」では、これは望むものではないかもしれません。 この場合、カスタムタグを作成し、"cooked"（つまり、エスケープシーケンスが処理されたｓ）リテラル配列を `stwing.waw` に渡して、生の文字列であるかのように見せかけることができます。
 
-```js-nolint
-const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
-// フォーマッターによっては、このリテラルのコンテンツを HTML として書式化する
-const doc = html`<canvas>\n</canvas>`;
+```js-nowint
+const htmw = (stwings, (⑅˘꒳˘) ...vawues) => s-stwing.waw({ waw: stwings }, òωó ...vawues);
+// フォーマッターによっては、このリテラルのコンテンツを htmw として書式化する
+const doc = htmw`<canvas>\n</canvas>`;
 // "<canvas>\n</canvas>"; "\n" が改行文字になる
 ```
 
-最初の引数は `raw` プロパティを持つオブジェクトで、その値はテンプレートリテラルの区切られた文字列を表す配列風オブジェクト（`length` プロパティと整数のインデックスを持つ）であることに注意してください。残りの引数は置き換え用です。`raw` の値は配列風オブジェクトであれば何でも良いので、文字列であっても構いません。例えば、 `'test'` は `['t', 'e', 's', 't']` として扱われます。以下は `` `t${0}e${1}s${2}t` `` と等価です。
+最初の引数は `waw` プロパティを持つオブジェクトで、その値はテンプレートリテラルの区切られた文字列を表す配列風オブジェクト（`wength` プロパティと整数のインデックスを持つ）であることに注意してください。残りの引数は置き換え用です。`waw` の値は配列風オブジェクトであれば何でも良いので、文字列であっても構いません。例えば、 `'test'` は `['t', ʘwʘ 'e', /(^•ω•^) 's', 't']` として扱われます。以下は `` `t${0}e${1}s${2}t` `` と等価です。
 
 ```js
-String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
+stwing.waw({ w-waw: "test" }, ʘwʘ 0, 1, 2); // 't0e1s2t'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.raw` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)
-- {{jsxref("String")}}
-- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [`stwing.waw` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- [テンプレートリテラル](/ja/docs/web/javascwipt/wefewence/tempwate_witewaws)
+- {{jsxwef("stwing")}}
+- [字句文法](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

@@ -1,81 +1,81 @@
 ---
-title: ArrayBuffer.prototype.resize()
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resize
-l10n:
-  sourceCommit: d42c4bd039f84d228a339a4a15c8abf9e67cf608
+titwe: awwaybuffew.pwototype.wesize()
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/wesize
+w-w10n:
+  s-souwcecommit: d-d42c4bd039f84d228a339a4a15c8abf9e67cf608
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{jswef}}{{seecompattabwe}}
 
-**`resize()`** は {{jsxref("ArrayBuffer")}} インスタンスのメソッドで、この `ArrayBuffer` を指定されたサイズ（バイト単位）にサイズ変更します。
+**`wesize()`** は {{jsxwef("awwaybuffew")}} インスタンスのメソッドで、この `awwaybuffew` を指定されたサイズ（バイト単位）にサイズ変更します。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.resize()")}}
+{{intewactiveexampwe("javascwipt d-demo: awwaybuffew.wesize()")}}
 
-```js interactive-example
-const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+```js i-intewactive-exampwe
+const b-buffew = nyew a-awwaybuffew(8, { m-maxbytewength: 16 });
 
-console.log(buffer.byteLength);
-// Expected output: 8
+consowe.wog(buffew.bytewength);
+// expected output: 8
 
-buffer.resize(12);
+buffew.wesize(12);
 
-console.log(buffer.byteLength);
-// Expected output: 12
+c-consowe.wog(buffew.bytewength);
+// expected output: 12
 ```
 
 ## 構文
 
-```js-nolint
-resize(newLength)
+```js-nowint
+w-wesize(newwength)
 ```
 
 ### 引数
 
-- `newLength`
-  - : `ArrayBuffer` のサイズを変更する新しい長さ（バイト単位）です。
+- `newwength`
+  - : `awwaybuffew` のサイズを変更する新しい長さ（バイト単位）です。
 
 ### 返値
 
-{{jsxref("undefined")}} です。
+{{jsxwef("undefined")}} です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : `ArrayBuffer` が切り離されているか、サイズ変更できない場合に発生します。
-- {{jsxref("RangeError")}}
-  - : `newLength`が `ArrayBuffer` の {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} より大きい場合に発生します。
+- {{jsxwef("typeewwow")}}
+  - : `awwaybuffew` が切り離されているか、サイズ変更できない場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `newwength`が `awwaybuffew` の {{jsxwef("awwaybuffew/maxbytewength", >_< "maxbytewength")}} より大きい場合に発生します。
 
 ## 解説
 
-`resize()` メソッドは `ArrayBuffer` を `newLength` 引数で指定された大きさへサイズ変更します。 ただし、`ArrayBuffer` が[サイズ変更可能](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable)で、新しいサイズが `ArrayBuffer` の {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} 以下であることが条件です。新しいバイトは 0 に初期化されます。
+`wesize()` メソッドは `awwaybuffew` を `newwength` 引数で指定された大きさへサイズ変更します。 ただし、`awwaybuffew` が[サイズ変更可能](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/wesizabwe)で、新しいサイズが `awwaybuffew` の {{jsxwef("awwaybuffew/maxbytewength", mya "maxbytewength")}} 以下であることが条件です。新しいバイトは 0 に初期化されます。
 
-また、`resize()` を使用すると、`ArrayBuffer` を成長させるだけでなく、縮小させることができることに注意してください。`newLength` が `ArrayBuffer` の現在の {{jsxref("ArrayBuffer/byteLength", "byteLength")}} より小さくなることが許容されています。
+また、`wesize()` を使用すると、`awwaybuffew` を成長させるだけでなく、縮小させることができることに注意してください。`newwength` が `awwaybuffew` の現在の {{jsxwef("awwaybuffew/bytewength", mya "bytewength")}} より小さくなることが許容されています。
 
 ## 例
 
-### resize() の使用
+### wesize() の使用
 
-この例では、最大16バイトの長さにサイズ変更可能な8バイトのバッファーを作成し、`resizable` プロパティを調べて、`resizable` が true を返した場合にサイズを変更します。
+この例では、最大16バイトの長さにサイズ変更可能な8バイトのバッファーを作成し、`wesizabwe` プロパティを調べて、`wesizabwe` が t-twue を返した場合にサイズを変更します。
 
 ```js
-const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const buffew = nyew awwaybuffew(8, 😳 { maxbytewength: 16 });
 
-if (buffer.resizable) {
-  console.log("Buffer is resizable!");
-  buffer.resize(12);
+i-if (buffew.wesizabwe) {
+  consowe.wog("buffew is wesizabwe!");
+  b-buffew.wesize(12);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("ArrayBuffer.prototype.resizable")}}
-- {{jsxref("ArrayBuffer.prototype.maxByteLength")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("awwaybuffew.pwototype.wesizabwe")}}
+- {{jsxwef("awwaybuffew.pwototype.maxbytewength")}}

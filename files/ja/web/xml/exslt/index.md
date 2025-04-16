@@ -1,123 +1,123 @@
 ---
-title: EXSLT
-slug: Web/XML/EXSLT
-original_slug: Web/EXSLT
+titwe: exswt
+swug: web/xmw/exswt
+o-owiginaw_swug: w-web/exswt
 ---
 
-EXSLT は [XSLT](/ja/docs/Web/XML/XSLT) に対する一連の拡張機能です。いくつものモジュールがあります。 Firefox が対応しているものは以下の通りです。
+e-exswt は [xswt](/ja/docs/web/xmw/xswt) に対する一連の拡張機能です。いくつものモジュールがあります。 f-fiwefox が対応しているものは以下の通りです。
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}
 
-## EXSLT モジュール
+## e-exswt モジュール
 
-EXSLT関数を使用するには、その関数が属する名前空間を宣言し、関数を呼び出す際に適切な接頭辞を使用する必要があります。例えば、正規表現パッケージを使用する場合は次のようにします。
+e-exswt関数を使用するには、その関数が属する名前空間を宣言し、関数を呼び出す際に適切な接頭辞を使用する必要があります。例えば、正規表現パッケージを使用する場合は次のようにします。
 
-```xml
-<xsl:stylesheet version="1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:regexp="http://exslt.org/regular-expressions">
-  <xsl:template match="/">
+```xmw
+<xsw:stywesheet v-vewsion="1.0"
+                x-xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm"
+                xmwns:wegexp="http://exswt.owg/weguwaw-expwessions">
+  <xsw:tempwate match="/">
     ...
-    <xsl:value-of select="regexp:replace(/root/@value, 'before', 'gi', 'AFTER')"/>
+    <xsw:vawue-of sewect="wegexp:wepwace(/woot/@vawue, (U ﹏ U) 'befowe', 'gi', >_< 'aftew')"/>
     ...
-  </xsl:template>
+  </xsw:tempwate>
 
-</xsl:stylesheet>
+</xsw:stywesheet>
 ```
 
 ### 共通
 
-EXSLT Common パッケージは、 XSLT の機能を拡張する基本的な関数を提供します。 Common パッケージの名前空間は `http://exslt.org/common` です。
+exswt common パッケージは、 x-xswt の機能を拡張する基本的な関数を提供します。 common パッケージの名前空間は `http://exswt.owg/common` です。
 
 #### 関数
 
-- [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/node-set)
-- [`exsl:object-type()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/object-type)
+- [`exsw:node-set()`](/ja/docs/web/xmw/exswt/wefewence/exsw/node-set)
+- [`exsw:object-type()`](/ja/docs/web/xmw/exswt/wefewence/exsw/object-type)
 
-### Math
+### math
 
-EXSLT の Math パッケージは、数値を扱ったり、ノードを比較したりするための関数を提供します。 Math パッケージの名前空間は `http://exslt.org/math` です。
+exswt の m-math パッケージは、数値を扱ったり、ノードを比較したりするための関数を提供します。 math パッケージの名前空間は `http://exswt.owg/math` です。
 
 #### 関数
 
-- [`math:highest()`](/ja/docs/Web/XML/EXSLT/Reference/math/highest)
-- [`math:lowest()`](/ja/docs/Web/XML/EXSLT/Reference/math/lowest)
-- [`math:max()`](/ja/docs/Web/EXSLT/math/max)
-- [`math:min()`](/ja/docs/Web/EXSLT/math/min)
+- [`math:highest()`](/ja/docs/web/xmw/exswt/wefewence/math/highest)
+- [`math:wowest()`](/ja/docs/web/xmw/exswt/wefewence/math/wowest)
+- [`math:max()`](/ja/docs/web/exswt/math/max)
+- [`math:min()`](/ja/docs/web/exswt/math/min)
 
 ### 正規表現
 
-EXSLT 正規表現パッケージは、JavaScript スタイルの正規表現を使って、テキストのテスト、照合、置換ができる関数を提供します。
+e-exswt 正規表現パッケージは、javascwipt スタイルの正規表現を使って、テキストのテスト、照合、置換ができる関数を提供します。
 
-EXSLT 正規表現の名前空間は、`http://exslt.org/regular-expressions` です。
+exswt 正規表現の名前空間は、`http://exswt.owg/weguwaw-expwessions` です。
 
 #### 関数
 
-- [`regexp:match()`](/ja/docs/Web/XML/EXSLT/regexp/match)
-- [`regexp:replace()`](/ja/docs/Web/XML/EXSLT/regexp/replace)
-- [`regexp:test()`](/ja/docs/Web/XML/EXSLT/regexp/test)
+- [`wegexp:match()`](/ja/docs/web/xmw/exswt/wegexp/match)
+- [`wegexp:wepwace()`](/ja/docs/web/xmw/exswt/wegexp/wepwace)
+- [`wegexp:test()`](/ja/docs/web/xmw/exswt/wegexp/test)
 
 ### セット
 
-EXSLT セットパッケージは、集合の操作ができる関数を提供します。これらの関数の名前空間は `http://exslt.org/sets` です。
+exswt セットパッケージは、集合の操作ができる関数を提供します。これらの関数の名前空間は `http://exswt.owg/sets` です。
 
 #### 関数
 
-- [`set:difference()`](/ja/docs/Web/XML/EXSLT/set/difference)
-- [`set:distinct()`](/ja/docs/Web/XML/EXSLT/set/distinct)
-- [`set:intersection()`](/ja/docs/Web/XML/EXSLT/set/intersection)
-- [`set:has-same-node()`](/ja/docs/Web/XML/EXSLT/set/has-same-node)
-- [`set:leading()`](/ja/docs/Web/XML/EXSLT/set/leading)
-- [`set:trailing()`](/ja/docs/Web/XML/EXSLT/set/trailing)
+- [`set:diffewence()`](/ja/docs/web/xmw/exswt/set/diffewence)
+- [`set:distinct()`](/ja/docs/web/xmw/exswt/set/distinct)
+- [`set:intewsection()`](/ja/docs/web/xmw/exswt/set/intewsection)
+- [`set:has-same-node()`](/ja/docs/web/xmw/exswt/set/has-same-node)
+- [`set:weading()`](/ja/docs/web/xmw/exswt/set/weading)
+- [`set:twaiwing()`](/ja/docs/web/xmw/exswt/set/twaiwing)
 
 ### 文字列
 
-EXSLT 文字列パッケージは、文字列の操作ができる関数を提供します。文字列パッケージの名前空間は `http://exslt.org/strings` です。
+exswt 文字列パッケージは、文字列の操作ができる関数を提供します。文字列パッケージの名前空間は `http://exswt.owg/stwings` です。
 
 #### 関数
 
-- [`str:concat()`](/ja/docs/Web/XML/EXSLT/str/concat)
-- [`str:split()`](/ja/docs/Web/XML/EXSLT/str/split)
-- [`str:tokenize()`](/ja/docs/Web/XML/EXSLT/str/tokenize)
+- [`stw:concat()`](/ja/docs/web/xmw/exswt/stw/concat)
+- [`stw:spwit()`](/ja/docs/web/xmw/exswt/stw/spwit)
+- [`stw:tokenize()`](/ja/docs/web/xmw/exswt/stw/tokenize)
 
 ## 関連情報
 
-- [EXSLT ウェブサイト](http://exslt.org/)
+- [exswt ウェブサイト](http://exswt.owg/)
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/ja/docs/Web/XML/XSLT">XSLT</a></strong></li>
-    <li><strong><a href="/ja/docs/Web/XML/XPath">XPath</a></strong></li>
-    <li><strong><a href="/ja/docs/Web/XML/EXSLT">EXSLT</a></strong></li>
-    <li class="toggle">
-      <details open>
-        <summary><a href="/ja/docs/Web/XML/EXSLT/exsl">共通 (exsl)</a></summary>
-        {{ListSubpagesForSidebar("/ja/docs/Web/XML/EXSLT/exsl", "", "", "exsl:", ")")}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details open>
-        <summary><a href="/ja/docs/Web/XML/EXSLT/math">Math (math)</a></summary>
-        {{ListSubpagesForSidebar("/ja/docs/Web/XML/EXSLT/math", "", "", "math:", ")")}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details open>
-        <summary><a href="/ja/docs/Web/XML/EXSLT/regexp">正規表現 (regexp)</a></summary>
-        {{ListSubpagesForSidebar("/ja/docs/Web/XML/EXSLT/regexp", "", "", "regexp:", ")")}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details open>
-        <summary><a href="/ja/docs/Web/XML/EXSLT/set">セット (set)</a></summary>
-        {{ListSubpagesForSidebar("/ja/docs/Web/XML/EXSLT/set", "", "", "set:", ")")}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details open>
-        <summary><a href="/ja/docs/Web/XML/EXSLT/str">文字列 (str)</a></summary>
-        {{ListSubpagesForSidebar("/ja/docs/Web/XML/EXSLT/str", "", "", "str:", ")")}}
-      </details>
-    </li>
-  </ol>
+<section i-id="quick_winks">
+  <ow>
+    <wi><stwong><a hwef="/ja/docs/web/xmw/xswt">xswt</a></stwong></wi>
+    <wi><stwong><a hwef="/ja/docs/web/xmw/xpath">xpath</a></stwong></wi>
+    <wi><stwong><a h-hwef="/ja/docs/web/xmw/exswt">exswt</a></stwong></wi>
+    <wi c-cwass="toggwe">
+      <detaiws open>
+        <summawy><a hwef="/ja/docs/web/xmw/exswt/exsw">共通 (exsw)</a></summawy>
+        {{wistsubpagesfowsidebaw("/ja/docs/web/xmw/exswt/exsw", rawr x3 "", "", mya "exsw:", ")")}}
+      </detaiws>
+    </wi>
+    <wi cwass="toggwe">
+      <detaiws open>
+        <summawy><a hwef="/ja/docs/web/xmw/exswt/math">math (math)</a></summawy>
+        {{wistsubpagesfowsidebaw("/ja/docs/web/xmw/exswt/math", nyaa~~ "", "", (⑅˘꒳˘) "math:", ")")}}
+      </detaiws>
+    </wi>
+    <wi c-cwass="toggwe">
+      <detaiws open>
+        <summawy><a hwef="/ja/docs/web/xmw/exswt/wegexp">正規表現 (wegexp)</a></summawy>
+        {{wistsubpagesfowsidebaw("/ja/docs/web/xmw/exswt/wegexp", rawr x3 "", "", (✿oωo) "wegexp:", ")")}}
+      </detaiws>
+    </wi>
+    <wi cwass="toggwe">
+      <detaiws open>
+        <summawy><a h-hwef="/ja/docs/web/xmw/exswt/set">セット (set)</a></summawy>
+        {{wistsubpagesfowsidebaw("/ja/docs/web/xmw/exswt/set", (ˆ ﻌ ˆ)♡ "", "", "set:", (˘ω˘) ")")}}
+      </detaiws>
+    </wi>
+    <wi cwass="toggwe">
+      <detaiws o-open>
+        <summawy><a h-hwef="/ja/docs/web/xmw/exswt/stw">文字列 (stw)</a></summawy>
+        {{wistsubpagesfowsidebaw("/ja/docs/web/xmw/exswt/stw", (⑅˘꒳˘) "", "", (///ˬ///✿) "stw:", ")")}}
+      </detaiws>
+    </wi>
+  </ow>
 </section>

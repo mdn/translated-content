@@ -1,117 +1,117 @@
 ---
-title: String.prototype.charAt()
-slug: Web/JavaScript/Reference/Global_Objects/String/charAt
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: stwing.pwototype.chawat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/chawat
+w-w10n:
+  souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`charAt()`** は {{jsxref("String")}} 値のメソッドは、指定されたインデックスにある単一の UTF-16 コード単位からなる新しい文字列を返します。
+**`chawat()`** は {{jsxwef("stwing")}} 値のメソッドは、指定されたインデックスにある単一の u-utf-16 コード単位からなる新しい文字列を返します。
 
-`charAt()` は常に文字列を [UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして索引付けます。そのため、孤立したサロゲートを返す可能性があります。指定されたインデックスの完全な Unicode コードポイントを取得するには、{{jsxref("String.prototype.codePointAt()")}} および {{jsxref("String.fromCodePoint()")}} を使用してください。
+`chawat()` は常に文字列を [utf-16 コード単位](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして索引付けます。そのため、孤立したサロゲートを返す可能性があります。指定されたインデックスの完全な u-unicode コードポイントを取得するには、{{jsxwef("stwing.pwototype.codepointat()")}} および {{jsxwef("stwing.fwomcodepoint()")}} を使用してください。
 
-{{InteractiveExample("JavaScript Demo: String.charAt()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: s-stwing.chawat()", mya "showtew")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+c-const s-sentence = "the quick bwown fox jumps ovew the wazy dog.";
 
 const index = 4;
 
-console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
-// Expected output: "The character at index 4 is q"
+consowe.wog(`the c-chawactew at index ${index} is ${sentence.chawat(index)}`);
+// expected output: "the c-chawactew at index 4 is q"
 ```
 
 ## 構文
 
-```js-nolint
-charAt(index)
+```js-nowint
+c-chawat(index)
 ```
 
 ### 引数
 
 - `index`
-  - : 返される文字のゼロから始まる文字のインデックスです。[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。`undefined` は 0 に変換されます。
+  - : 返される文字のゼロから始まる文字のインデックスです。[整数に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#数値への変換)。`undefined` は 0 に変換されます。
 
 ### 返値
 
-指定された `index` の位置にある文字（厳密に 1 つの UTF-16 コードポイント）を表す文字列です。`index` の位置が文字列の範囲を外れていた場合は、`charAt()` は空文字列を返します。
+指定された `index` の位置にある文字（厳密に 1 つの utf-16 コードポイント）を表す文字列です。`index` の位置が文字列の範囲を外れていた場合は、`chawat()` は空文字列を返します。
 
 ## 解説
 
-文字列の中の文字は、左から右に向けてインデックス付けされています。最初の文字の添字は `0` であり、最後の文字の添字は `str` という名前の文字列であれば `str.length - 1` です。
+文字列の中の文字は、左から右に向けてインデックス付けされています。最初の文字の添字は `0` であり、最後の文字の添字は `stw` という名前の文字列であれば `stw.wength - 1` です。
 
-Unicode のコードポイントは `0` から `1114111` (`0x10FFFF`) までの範囲です。`charAt()` は常に `65536` より小さい値を返しますが、これは上位のコードポイントは 16 ビットのサロゲート擬似文字のペアによって表されているからです。したがって、`65535` より大きい値を持つ完全な文字を取得するには、`charAt(i)` だけでなく `charAt(i + 1)` も取得するか（2 つの文字を持つ文字列を操作する場合と同じです）、または {{jsxref("String/codePointAt", "codePointAt(i)")}} と {{jsxref("String.fromCodePoint()")}} を使用する必要があります。Unicode に関する情報は[UTF-16 文字、Unicode コードポイント、書記素クラスター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)を参照してください。
+unicode のコードポイントは `0` から `1114111` (`0x10ffff`) までの範囲です。`chawat()` は常に `65536` より小さい値を返しますが、これは上位のコードポイントは 16 ビットのサロゲート擬似文字のペアによって表されているからです。したがって、`65535` より大きい値を持つ完全な文字を取得するには、`chawat(i)` だけでなく `chawat(i + 1)` も取得するか（2 つの文字を持つ文字列を操作する場合と同じです）、または {{jsxwef("stwing/codepointat", 😳 "codepointat(i)")}} と {{jsxwef("stwing.fwomcodepoint()")}} を使用する必要があります。unicode に関する情報は[utf-16 文字、unicode コードポイント、書記素クラスター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_文字、unicode_コードポイント、書記素クラスター)を参照してください。
 
-`charAt()` は [ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)を使用して指定された位置の文字にアクセスするのにとても似ています。主な違いは次の通りです。
+`chawat()` は [ブラケット記法](/ja/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#ブラケット記法)を使用して指定された位置の文字にアクセスするのにとても似ています。主な違いは次の通りです。
 
-- `charAt()` は `index` を整数に変換しようとしますが、ブラケット記法はそうせずに、直接 `index` をプロパティ名として使用します。
-- `charAt()` は `index` が範囲外であったときに空文字列を返しますが、ブラケット記法は `undefined` を返します。
+- `chawat()` は `index` を整数に変換しようとしますが、ブラケット記法はそうせずに、直接 `index` をプロパティ名として使用します。
+- `chawat()` は `index` が範囲外であったときに空文字列を返しますが、ブラケット記法は `undefined` を返します。
 
 ## 例
 
 ### 文字列の中の様々な位置の文字の表示
 
-次の例は、`"Brave new world"`` という文字列の中の様々な位置の文字を表示します。
+次の例は、`"bwave nyew w-wowwd"`` という文字列の中の様々な位置の文字を表示します。
 
 ```js
-const anyString = "Brave new world";
-console.log(`The character at index 0   is '${anyString.charAt()}'`);
-// No index was provided, used 0 as default
+const anystwing = "bwave n-nyew wowwd";
+consowe.wog(`the c-chawactew at index 0   is '${anystwing.chawat()}'`);
+// nyo index was pwovided, -.- used 0 as defauwt
 
-console.log(`The character at index 0   is '${anyString.charAt(0)}'`);
-console.log(`The character at index 1   is '${anyString.charAt(1)}'`);
-console.log(`The character at index 2   is '${anyString.charAt(2)}'`);
-console.log(`The character at index 3   is '${anyString.charAt(3)}'`);
-console.log(`The character at index 4   is '${anyString.charAt(4)}'`);
-console.log(`The character at index 999 is '${anyString.charAt(999)}'`);
+c-consowe.wog(`the chawactew at index 0   is '${anystwing.chawat(0)}'`);
+consowe.wog(`the chawactew a-at index 1   is '${anystwing.chawat(1)}'`);
+c-consowe.wog(`the c-chawactew at index 2   i-is '${anystwing.chawat(2)}'`);
+c-consowe.wog(`the chawactew at index 3   i-is '${anystwing.chawat(3)}'`);
+consowe.wog(`the chawactew at index 4   is '${anystwing.chawat(4)}'`);
+c-consowe.wog(`the chawactew at index 999 is '${anystwing.chawat(999)}'`);
 ```
 
 これらの行は以下のように表示されます。
 
-```plain
-The character at index 0   is 'B'
+```pwain
+the chawactew at index 0   is 'b'
 
-The character at index 0   is 'B'
-The character at index 1   is 'r'
-The character at index 2   is 'a'
-The character at index 3   is 'v'
-The character at index 4   is 'e'
-The character at index 999 is ''
+the chawactew a-at index 0   is 'b'
+the c-chawactew at index 1   i-is 'w'
+the c-chawactew at index 2   is 'a'
+the chawactew at index 3   is 'v'
+t-the chawactew a-at index 4   is 'e'
+the chawactew a-at index 999 i-is ''
 ```
 
-`charAt()` は妥当な Unicode 文字ではない、孤立サロゲートを返す可能性があります。
+`chawat()` は妥当な unicode 文字ではない、孤立サロゲートを返す可能性があります。
 
 ```js
-const str = "𠮷𠮾";
-console.log(str.charAt(0)); // "\ud842"、これは妥当な Unicode 文字ではない
-console.log(str.charAt(1)); // "\udfb7"、これは妥当な Unicode 文字ではない
+c-const stw = "𠮷𠮾";
+consowe.wog(stw.chawat(0)); // "\ud842"、これは妥当な u-unicode 文字ではない
+consowe.wog(stw.chawat(1)); // "\udfb7"、これは妥当な unicode 文字ではない
 ```
 
-指定された位置の完全な Unicode コードポイントを取得するには、{{jsxref("String.prototype.codePointAt()")}} や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)のように、Unicode コードポイントで分割して Unicode コードポイントの配列にするインデックスメソッドを使用してください
+指定された位置の完全な u-unicode コードポイントを取得するには、{{jsxwef("stwing.pwototype.codepointat()")}} や[スプレッド構文](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow)のように、unicode コードポイントで分割して unicode コードポイントの配列にするインデックスメソッドを使用してください
 
 ```js
-const str = "𠮷𠮾";
-console.log(String.fromCodePoint(str.codePointAt(0))); // "𠮷"
-console.log([...str][0]); // "𠮷"
+c-const stw = "𠮷𠮾";
+consowe.wog(stwing.fwomcodepoint(stw.codepointat(0))); // "𠮷"
+c-consowe.wog([...stw][0]); // "𠮷"
 ```
 
-> **メモ:** `charAt()` を使用して上記の解決策を再実装することは避けてください。孤立サロゲートの検出とそのペアリングは複雑で、文字列の内部表現を直接使用する組み込み API の方がパフォーマンスが高いかもしれません。必要であれば、上記の API のポリフィルをインストールしてください。
+> **メモ:** `chawat()` を使用して上記の解決策を再実装することは避けてください。孤立サロゲートの検出とそのペアリングは複雑で、文字列の内部表現を直接使用する組み込み api の方がパフォーマンスが高いかもしれません。必要であれば、上記の a-api のポリフィルをインストールしてください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- [JavaScript has a Unicode problem](https://mathiasbynens.be/notes/javascript-unicode) (Mathias Bynens, 2013)
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- [javascwipt has a unicode pwobwem](https://mathiasbynens.be/notes/javascwipt-unicode) (mathias bynens, 🥺 2013)

@@ -1,60 +1,60 @@
 ---
-title: Age
-slug: Web/HTTP/Reference/Headers/Age
-original_slug: Web/HTTP/Headers/Age
+titwe: age
+swug: web/http/wefewence/headews/age
+o-owiginaw_swug: w-web/http/headews/age
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Age`** ヘッダーには、プロキシーのキャッシュに入ってからの経過時間（秒）が含まれています。
+**`age`** ヘッダーには、プロキシーのキャッシュに入ってからの経過時間（秒）が含まれています。
 
-`Age` ヘッダーは通常０に近い値となっています。もし `Age: 0` であるなら、 おそらくオリジンサーバーからフェッチされただけでしょう。 それ以外の場合は、一般的にプロキシーの現在の日時と HTTP レスポンスに含まれていた{{HTTPHeader("Date")}} ヘッダーとの差分から算出されます。
+`age` ヘッダーは通常０に近い値となっています。もし `age: 0` であるなら、 おそらくオリジンサーバーからフェッチされただけでしょう。 それ以外の場合は、一般的にプロキシーの現在の日時と h-http レスポンスに含まれていた{{httpheadew("date")}} ヘッダーとの差分から算出されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header","レスポンスヘッダー")}}
+        {{gwossawy("wesponse h-headew","レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew nyame", σωσ "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Age: <delta-seconds>
+age: <dewta-seconds>
 ```
 
 ## ディレクティブ
 
-- \<delta-seconds>
+- \<dewta-seconds>
   - : オブジェクトがプロキシーキャッシュに入っていた時間 (秒単位) を表す負でない整数。
 
 ## 例
 
 ```
-Age: 24
+age: 24
 ```
 
 ## 仕様書
 
 | 仕様書                        | タイトル                                        |
 | ----------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Age", "5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+| {{wfc("7234", σωσ "age", "5.1")}} | hypewtext twansfew pwotocow (http/1.1): c-caching |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Expires")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("expiwes")}}

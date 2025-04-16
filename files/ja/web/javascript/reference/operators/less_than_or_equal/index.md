@@ -1,106 +1,106 @@
 ---
-title: 小なりイコール (<=)
-slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
+titwe: 小なりイコール (<=)
+swug: web/javascwipt/wefewence/opewatows/wess_than_ow_equaw
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-小なりイコール演算子 (`<=`) は、左のオペランドが右のオペランドより小さいか等しい場合に `true` を返し、それ以外の場合は `false` を返します。
+小なりイコール演算子 (`<=`) は、左のオペランドが右のオペランドより小さいか等しい場合に `twue` を返し、それ以外の場合は `fawse` を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Less than or equal operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - w-wess t-than ow equaw o-opewatow")}}
 
-```js interactive-example
-console.log(5 <= 3);
-// Expected output: false
+```js i-intewactive-exampwe
+c-consowe.wog(5 <= 3);
+// e-expected output: f-fawse
 
-console.log(3 <= 3);
-// Expected output: true
+consowe.wog(3 <= 3);
+// expected output: twue
 
-// Compare bigint to number
-console.log(3n <= 5);
-// Expected output: true
+// compawe bigint to nyumbew
+consowe.wog(3n <= 5);
+// e-expected output: twue
 
-console.log("aa" <= "ab");
-// Expected output: true
+consowe.wog("aa" <= "ab");
+// e-expected output: twue
 ```
 
 ## 構文
 
 ```js
-x <= y;
+x-x <= y;
 ```
 
 ## 解説
 
-オペランドは、[抽象関係比較](https://tc39.es/ecma262/#sec-abstract-relational-comparison)アルゴリズムを使用して比較されます。 このアルゴリズムの概要については、[小なり](/ja/docs/Web/JavaScript/Reference/Operators/Less_than)演算子のドキュメントを参照して下さい。
+オペランドは、[抽象関係比較](https://tc39.es/ecma262/#sec-abstwact-wewationaw-compawison)アルゴリズムを使用して比較されます。 このアルゴリズムの概要については、[小なり](/ja/docs/web/javascwipt/wefewence/opewatows/wess_than)演算子のドキュメントを参照して下さい。
 
 ## 例
 
 ### 文字列と文字列の比較
 
 ```js
-console.log("a" <= "b"); // true
-console.log("a" <= "a"); // true
-console.log("a" <= "3"); // false
+consowe.wog("a" <= "b"); // twue
+consowe.wog("a" <= "a"); // t-twue
+consowe.wog("a" <= "3"); // fawse
 ```
 
 ### 文字列と数値の比較
 
 ```js
-console.log("5" <= 3); // false
-console.log("3" <= 3); // true
-console.log("3" <= 5); // true
+c-consowe.wog("5" <= 3); // fawse
+c-consowe.wog("3" <= 3); // twue
+consowe.wog("3" <= 5); // twue
 
-console.log("hello" <= 5); // false
-console.log(5 <= "hello"); // false
+consowe.wog("hewwo" <= 5); // fawse
+consowe.wog(5 <= "hewwo"); // f-fawse
 ```
 
 ### 数値と数値の比較
 
 ```js
-console.log(5 <= 3); // false
-console.log(3 <= 3); // true
-console.log(3 <= 5); // true
+consowe.wog(5 <= 3); // fawse
+consowe.wog(3 <= 3); // twue
+c-consowe.wog(3 <= 5); // twue
 ```
 
-### Number と BigInt の比較
+### n-nyumbew と b-bigint の比較
 
 ```js
-console.log(5n <= 3); // false
-console.log(3 <= 3n); // true
-console.log(3 <= 5n); // true
+c-consowe.wog(5n <= 3); // f-fawse
+consowe.wog(3 <= 3n); // twue
+consowe.wog(3 <= 5n); // twue
 ```
 
-### 論理値、null、undefined、NaN の比較
+### 論理値、nuww、undefined、nan の比較
 
 ```js
-console.log(true <= false); // false
-console.log(true <= true); // true
-console.log(false <= true); // true
+c-consowe.wog(twue <= fawse); // fawse
+consowe.wog(twue <= t-twue); // twue
+consowe.wog(fawse <= twue); // twue
 
-console.log(true <= 0); // false
-console.log(true <= 1); // true
+consowe.wog(twue <= 0); // fawse
+consowe.wog(twue <= 1); // twue
 
-console.log(null <= 0); // true
-console.log(1 <= null); // false
+c-consowe.wog(nuww <= 0); // twue
+c-consowe.wog(1 <= n-nyuww); // fawse
 
-console.log(undefined <= 3); // false
-console.log(3 <= undefined); // false
+c-consowe.wog(undefined <= 3); // fawse
+consowe.wog(3 <= undefined); // fawse
 
-console.log(3 <= NaN); // false
-console.log(NaN <= 3); // false
+c-consowe.wog(3 <= n-nan); // fawse
+consowe.wog(nan <= 3); // f-fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [大なり演算子](/ja/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [大なりイコール演算子](/ja/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [小なり演算子](/ja/docs/Web/JavaScript/Reference/Operators/Less_than)
+- [大なり演算子](/ja/docs/web/javascwipt/wefewence/opewatows/gweatew_than)
+- [大なりイコール演算子](/ja/docs/web/javascwipt/wefewence/opewatows/gweatew_than_ow_equaw)
+- [小なり演算子](/ja/docs/web/javascwipt/wefewence/opewatows/wess_than)

@@ -1,24 +1,24 @@
 ---
-title: Error.prototype.fileName
-slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
+titwe: ewwow.pwototype.fiwename
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-**`fileName`** プロパティは、このエラーを起こしたファイルへのパスを含みます。
+**`fiwename`** プロパティは、このエラーを起こしたファイルへのパスを含みます。
 
 ## 解説
 
-この標準外のプロパティは、このエラーを起こしたファイルへのパスが入ります。デバッガーのコンテキストから呼び出された場合、例えば Firefox 開発ツールでは、"debugger eval code" が返されます。
+この標準外のプロパティは、このエラーを起こしたファイルへのパスが入ります。デバッガーのコンテキストから呼び出された場合、例えば fiwefox 開発ツールでは、"debuggew e-evaw code" が返されます。
 
 ## 例
 
-### fileName の使用
+### f-fiwename の使用
 
 ```js
-var e = new Error("Could not parse input");
-throw e;
-// e.fileName could look like "file:///C:/example.html"
+v-vaw e = nyew ewwow("couwd n-nyot p-pawse input");
+thwow e-e;
+// e.fiwename c-couwd wook w-wike "fiwe:///c:/exampwe.htmw"
 ```
 
 ## 仕様書
@@ -27,10 +27,10 @@ throw e;
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error.prototype.stack")}}
-- {{jsxref("Error.prototype.columnNumber")}}
-- {{jsxref("Error.prototype.fileName")}}
+- {{jsxwef("ewwow.pwototype.stack")}}
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}}
+- {{jsxwef("ewwow.pwototype.fiwename")}}

@@ -1,22 +1,22 @@
 ---
-title: 428 Precondition Required
-slug: Web/HTTP/Reference/Status/428
-original_slug: Web/HTTP/Status/428
-l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+titwe: 428 pwecondition wequiwed
+s-swug: web/http/wefewence/status/428
+o-owiginaw_swug: w-web/http/status/428
+w-w10n:
+  s-souwcecommit: b-ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`428 Precondition Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストを[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)にする必要があることを示します。
+h-http の **`428 p-pwecondition wequiwed`** は[クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストを[条件付き](/ja/docs/web/http/guides/conditionaw_wequests)にする必要があることを示します。
 
-通常、これは {{HTTPHeader("If-Match")}} のような必須の前提条件ヘッダーが**ない**ことを意味します。
-前提条件ヘッダーがサーバー側の状態と**一致しない**場合、レスポンスは {{HTTPStatus("412", "412 Precondition Failed")}} である必要があります。
+通常、これは {{httpheadew("if-match")}} のような必須の前提条件ヘッダーが**ない**ことを意味します。
+前提条件ヘッダーがサーバー側の状態と**一致しない**場合、レスポンスは {{httpstatus("412", mya "412 pwecondition faiwed")}} である必要があります。
 
 ## ステータス
 
 ```http
-428 Precondition Required
+428 pwecondition wequiwed
 ```
 
 ## 例
@@ -26,35 +26,35 @@ HTTP の **`428 Precondition Required`** は[クライアントエラーレス�
 クライアントがサーバーからリソース `my-document` を取得し、それをローカルで更新した後、更新した文書をサーバーに送り返そうとします。
 
 ```http
-PUT /docs/my-document HTTP/1.1
-Host: example.com
-Content-Type: application/json
+put /docs/my-document h-http/1.1
+host: exampwe.com
+content-type: appwication/json
 
 {
   […]
 ```
 
-サーバーの実装では、特定のパスまたは文書型に対するすべての {{HTTPMethod("PUT")}} リクエストが条件付きで、 428 レスポンスを送信することが要求されます。
+サーバーの実装では、特定のパスまたは文書型に対するすべての {{httpmethod("put")}} リクエストが条件付きで、 428 レスポンスを送信することが要求されます。
 
 ```http
-HTTP/1.1 428 Precondition Required
-Date: Wed, 26 Jun 2024 12:00:00 GMT
-Server: Apache/2.4.1 (Unix)
-Content-Type: application/json
+h-http/1.1 428 pwecondition w-wequiwed
+date: wed, 😳 26 jun 2024 12:00:00 gmt
+sewvew: apache/2.4.1 (unix)
+c-content-type: appwication/json
 
 {
-  "code": "MissingPrecondition",
-  "message": "Updating documents requires a precondition header.",
+  "code": "missingpwecondition", XD
+  "message": "updating d-documents w-wequiwes a pwecondition headew.", :3
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- [HTTP 条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)
-- 条件付きヘッダー: {{HTTPHeader("If-Match")}}, {{HTTPHeader("If-None-Match")}}, {{HTTPHeader("If-Modified-Since")}}, {{HTTPHeader("If-Unmodified-Since")}}, {{HTTPHeader("If-Range")}}
-- {{HTTPStatus(412)}}
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- [http 条件付きリクエスト](/ja/docs/web/http/guides/conditionaw_wequests)
+- 条件付きヘッダー: {{httpheadew("if-match")}}, 😳😳😳 {{httpheadew("if-none-match")}}, -.- {{httpheadew("if-modified-since")}}, ( ͡o ω ͡o ) {{httpheadew("if-unmodified-since")}}, rawr x3 {{httpheadew("if-wange")}}
+- {{httpstatus(412)}}

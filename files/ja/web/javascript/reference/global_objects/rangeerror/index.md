@@ -1,95 +1,95 @@
 ---
-title: RangeError
-slug: Web/JavaScript/Reference/Global_Objects/RangeError
+titwe: wangeewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/wangeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`RangeError`** オブジェクトは、値が配列内に存在しない、または値が許容範囲にない場合のエラーを表します。
+**`wangeewwow`** オブジェクトは、値が配列内に存在しない、または値が許容範囲にない場合のエラーを表します。
 
 ## 解説
 
-`RangeError`は、関数に対して引数として許容されない範囲の数値を渡そうとした場合に発生します。
+`wangeewwow`は、関数に対して引数として許容されない範囲の数値を渡そうとした場合に発生します。
 
 これは次のような場合に発生します。
 
-- 許容されない文字を含む文字列を {{jsxref("String.prototype.normalize()")}} に渡した場合
-- {{jsxref("Array")}} コンストラクターで不正な長さの配列を作ろうとした場合
-- 数値に関するメソッド {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}}, {{jsxref("Number.prototype.toPrecision()")}} に不適切な値を渡した場合
+- 許容されない文字を含む文字列を {{jsxwef("stwing.pwototype.nowmawize()")}} に渡した場合
+- {{jsxwef("awway")}} コンストラクターで不正な長さの配列を作ろうとした場合
+- 数値に関するメソッド {{jsxwef("numbew.pwototype.toexponentiaw()")}}, :3 {{jsxwef("numbew.pwototype.tofixed()")}}, 😳😳😳 {{jsxwef("numbew.pwototype.topwecision()")}} に不適切な値を渡した場合
 
 ## コンストラクター
 
-- {{jsxref("RangeError/RangeError", "RangeError()")}}
-  - : 新しい `RangeError` オブジェクトを生成します。
+- {{jsxwef("wangeewwow/wangeewwow", -.- "wangeewwow()")}}
+  - : 新しい `wangeewwow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
-  - : エラーメッセージ。 ECMA-262 は {{jsxref("RangeError")}} 自身が `message` プロパティを提供するべきであると規定しているにもかかわらず、 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では {{jsxref("Error.prototype.message")}} が継承される。
-- {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
-  - : エラー名。 {{jsxref("Error")}} から継承。
-- {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}
-  - : エラーが発生したファイルへのパス。 {{jsxref("Error")}} から継承。
-- {{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}
-  - : エラーが発生したファイルの行番号。 {{jsxref("Error")}} から継承。
-- {{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}}
-  - : エラーが発生したファイルの列番号。 {{jsxref("Error")}} から継承。
-- {{jsxref("Error.prototype.stack", "RangeError.prototype.stack")}}
-  - : スタックトレース。{{jsxref("Error")}}から継承。
+- {{jsxwef("ewwow.pwototype.message", ( ͡o ω ͡o ) "wangeewwow.pwototype.message")}}
+  - : エラーメッセージ。 e-ecma-262 は {{jsxwef("wangeewwow")}} 自身が `message` プロパティを提供するべきであると規定しているにもかかわらず、 [spidewmonkey](/ja/docs/moziwwa/pwojects/spidewmonkey) では {{jsxwef("ewwow.pwototype.message")}} が継承される。
+- {{jsxwef("ewwow.pwototype.name", rawr x3 "wangeewwow.pwototype.name")}}
+  - : エラー名。 {{jsxwef("ewwow")}} から継承。
+- {{jsxwef("ewwow.pwototype.fiwename", nyaa~~ "wangeewwow.pwototype.fiwename")}}
+  - : エラーが発生したファイルへのパス。 {{jsxwef("ewwow")}} から継承。
+- {{jsxwef("ewwow.pwototype.winenumbew", /(^•ω•^) "wangeewwow.pwototype.winenumbew")}}
+  - : エラーが発生したファイルの行番号。 {{jsxwef("ewwow")}} から継承。
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", rawr "wangeewwow.pwototype.cowumnnumbew")}}
+  - : エラーが発生したファイルの列番号。 {{jsxwef("ewwow")}} から継承。
+- {{jsxwef("ewwow.pwototype.stack", OwO "wangeewwow.pwototype.stack")}}
+  - : スタックトレース。{{jsxwef("ewwow")}}から継承。
 
 ## 例
 
-### 数値に対する RangeError の使用
+### 数値に対する w-wangeewwow の使用
 
 ```js
-function check(n) {
-  if (!(n >= -500 && n <= 500)) {
-    throw new RangeError("The argument must be between -500 and 500.");
+f-function c-check(n) {
+  if (!(n >= -500 && n-ny <= 500)) {
+    t-thwow nyew wangeewwow("the a-awgument m-must be between -500 and 500.");
   }
 }
 
-try {
+twy {
   check(2000);
-} catch (error) {
-  if (error instanceof RangeError) {
-    // Handle the error
+} catch (ewwow) {
+  if (ewwow i-instanceof wangeewwow) {
+    // handwe the ewwow
   }
 }
 ```
 
-### RangeError の使用 (数値以外に対して)
+### wangeewwow の使用 (数値以外に対して)
 
 ```js
-function check(value) {
-  if (["apple", "banana", "carrot"].includes(value) === false) {
-    throw new RangeError(
-      'The argument must be an "apple", "banana", or "carrot".',
+f-function check(vawue) {
+  i-if (["appwe", (U ﹏ U) "banana", >_< "cawwot"].incwudes(vawue) === fawse) {
+    thwow nyew wangeewwow(
+      'the a-awgument must be an "appwe", rawr x3 "banana", mya ow "cawwot".', nyaa~~
     );
   }
 }
 
-try {
-  check("cabbage");
-} catch (error) {
-  if (error instanceof RangeError) {
-    // Handle the error
+t-twy {
+  c-check("cabbage");
+} catch (ewwow) {
+  if (ewwow instanceof wangeewwow) {
+    // handwe the ewwow
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
-- {{jsxref("Array")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
-- {{jsxref("String.prototype.normalize()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("numbew.toexponentiaw()")}}
+- {{jsxwef("numbew.tofixed()")}}
+- {{jsxwef("numbew.topwecision()")}}
+- {{jsxwef("stwing.pwototype.nowmawize()")}}

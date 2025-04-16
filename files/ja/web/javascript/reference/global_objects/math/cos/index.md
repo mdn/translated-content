@@ -1,35 +1,35 @@
 ---
-title: Math.cos()
-slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: math.cos()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/cos
+w-w10n:
+  s-souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.cos()`** は静的メソッドで、ラジアンの数値の余弦（コサイン）を返します。
+**`math.cos()`** は静的メソッドで、ラジアンの数値の余弦（コサイン）を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.cos()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.cos()")}}
 
-```js interactive-example
-function getCircleX(radians, radius) {
-  return Math.cos(radians) * radius;
+```js i-intewactive-exampwe
+f-function g-getciwcwex(wadians, 😳 wadius) {
+  wetuwn math.cos(wadians) * wadius;
 }
 
-console.log(getCircleX(1, 10));
-// Expected output: 5.403023058681398
+consowe.wog(getciwcwex(1, XD 10));
+// expected o-output: 5.403023058681398
 
-console.log(getCircleX(2, 10));
-// Expected output: -4.161468365471424
+consowe.wog(getciwcwex(2, :3 10));
+// expected output: -4.161468365471424
 
-console.log(getCircleX(Math.PI, 10));
-// Expected output: -10
+c-consowe.wog(getciwcwex(math.pi, 😳😳😳 10));
+// expected output: -10
 ```
 
 ## 構文
 
-```js-nolint
-Math.cos(x)
+```js-nowint
+m-math.cos(x)
 ```
 
 ### 引数
@@ -39,39 +39,39 @@ Math.cos(x)
 
 ### 返値
 
-`x` の余弦で、-1 から 1 まで（両端を含む）です。 `x` が{{jsxref("Infinity")}}、`-Infinity`、または {{jsxref("NaN")}} の場合、 {{jsxref("NaN")}} を返します。
+`x` の余弦で、-1 から 1 まで（両端を含む）です。 `x` が{{jsxwef("infinity")}}、`-infinity`、または {{jsxwef("nan")}} の場合、 {{jsxwef("nan")}} を返します。
 
 ## 解説
 
-`cos()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.cos()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`cos()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.cos()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.cos() の使用
+### math.cos() の使用
 
 ```js
-Math.cos(-Infinity); // NaN
-Math.cos(-0); // 1
-Math.cos(0); // 1
-Math.cos(1); // 0.5403023058681398
-Math.cos(Math.PI); // -1
-Math.cos(2 * Math.PI); // 1
-Math.cos(Infinity); // NaN
+math.cos(-infinity); // nyan
+math.cos(-0); // 1
+m-math.cos(0); // 1
+math.cos(1); // 0.5403023058681398
+m-math.cos(math.pi); // -1
+math.cos(2 * m-math.pi); // 1
+math.cos(infinity); // nyan
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

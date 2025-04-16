@@ -1,36 +1,36 @@
 ---
-title: "Feature-Policy: encrypted-media"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media
-original_slug: Web/HTTP/Headers/Permissions-Policy/encrypted-media
+titwe: "featuwe-powicy: encwypted-media"
+s-swug: w-web/http/wefewence/headews/pewmissions-powicy/encwypted-media
+o-owiginaw_swug: web/http/headews/pewmissions-powicy/encwypted-media
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{httpsidebaw}}{{seecompattabwe}}
 
-HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `encrypted-media` ディレクティブは、現在の文書が [Encrypted Media Extensions](/ja/docs/Web/API/Encrypted_Media_Extensions_API) API (EME) を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("Navigator.requestMediaKeySystemAccess","Navigator.requestMediaKeySystemAccess()")}} から返却された {{jsxref("Promise")}} が {{domxref("DOMException")}} で拒否されます。
+h-http の {{httpheadew("featuwe-powicy")}} ヘッダーにおける `encwypted-media` ディレクティブは、現在の文書が [encwypted m-media extensions](/ja/docs/web/api/encwypted_media_extensions_api) a-api (eme) を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxwef("navigatow.wequestmediakeysystemaccess","navigatow.wequestmediakeysystemaccess()")}} から返却された {{jsxwef("pwomise")}} が {{domxwef("domexception")}} で拒否されます。
 
 ## 構文
 
 ```
-Feature-Policy: encrypted-media <allowlist>;
+f-featuwe-powicy: e-encwypted-media <awwowwist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- \<awwowwist>
+  - : この機能を許可するオリジンのリストです。 [`featuwe-powicy`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#%e6%a7%8b%e6%96%87) を参照してください。
 
 ## 既定のポリシー
 
-`encrypted-media` の既定の許可リストは `'self'` です。
+`encwypted-media` の既定の許可リストは `'sewf'` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Feature-Policy")}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- {{httpheadew("featuwe-powicy")}} ヘッダー
+- [機能ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)
+- [機能ポリシーの使用](/ja/docs/web/http/guides/featuwe_powicy/using_featuwe_powicy)

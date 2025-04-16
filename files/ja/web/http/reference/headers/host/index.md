@@ -1,64 +1,64 @@
 ---
-title: Host
-slug: Web/HTTP/Reference/Headers/Host
-original_slug: Web/HTTP/Headers/Host
+titwe: host
+swug: web/http/wefewence/headews/host
+o-owiginaw_swug: w-web/http/headews/host
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Host`** リクエストヘッダーは、リクエストが送信される先のサーバーのホスト名とポート番号を指定します。
+**`host`** リクエストヘッダーは、リクエストが送信される先のサーバーのホスト名とポート番号を指定します。
 
-ポート番号が指定されなかった場合は、要求されたサービスの既定のポート（例えば HTTPS の URL であれば`443`、 HTTP の URL であれば `80`）とみなされます。
+ポート番号が指定されなかった場合は、要求されたサービスの既定のポート（例えば h-https の u-uww であれば`443`、 h-http の u-uww であれば `80`）とみなされます。
 
-`Host` ヘッダー項目はすべての HTTP/1.1 リクエストメッセージで送信する必要があります。 HTTP/1.1 リクエストメッセージに `Host` ヘッダー項目がなかったり、二つ以上あったりした場合は {{HTTPStatus("400")}} (Bad Request) ステータスコードが返されることがあります。
+`host` ヘッダー項目はすべての h-http/1.1 リクエストメッセージで送信する必要があります。 h-http/1.1 リクエストメッセージに `host` ヘッダー項目がなかったり、二つ以上あったりした場合は {{httpstatus("400")}} (bad wequest) ステータスコードが返されることがあります。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Request header", "リクエストヘッダー")}}
+        {{gwossawy("wequest headew", ^^;; "リクエストヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden headew nyame", >_< "禁止ヘッダー名")}}
       </th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Host: <host>:<port>
+host: <host>:<powt>
 ```
 
 ## ディレクティブ
 
 - \<host>
   - : （仮想ホストの）サーバーのドメイン名。
-- \<port> {{optional_inline}}
-  - : サーバーが待受けしている TCP のポート番号。
+- \<powt> {{optionaw_inwine}}
+  - : サーバーが待受けしている t-tcp のポート番号。
 
 ## 例
 
 ```
-Host: developer.mozilla.org
+host: d-devewopew.moziwwa.owg
 ```
 
 ## 仕様書
 
 | 仕様書                         | 題名                                                               |
 | ------------------------------ | ------------------------------------------------------------------ |
-| {{RFC("7230", "Host", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+| {{wfc("7230", mya "host", "5.4")}} | hypewtext twansfew pwotocow (http/1.1): message s-syntax and wouting |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPStatus("400")}}
-- {{HTMLElement("base")}}
+- {{httpstatus("400")}}
+- {{htmwewement("base")}}

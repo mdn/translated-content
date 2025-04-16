@@ -1,29 +1,29 @@
 ---
-title: TypedArray.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
-l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+titwe: typedawway.pwototype.tostwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/tostwing
+w-w10n:
+  s-souwcecommit: c-c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toString()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定された配列とその要素を表す文字列を返します。このメソッドは {{jsxref("Array.prototype.toString()")}} と同じアルゴリズムです。
+**`tostwing()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、指定された配列とその要素を表す文字列を返します。このメソッドは {{jsxwef("awway.pwototype.tostwing()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.toString()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: t-typedawway.tostwing()", (⑅˘꒳˘) "showtew")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+```js i-intewactive-exampwe
+c-const uint8 = nyew uint8awway([10, (U ᵕ U❁) 20, 30, 40, -.- 50]);
 
-const uint8String = uint8.toString();
+const uint8stwing = uint8.tostwing();
 
-console.log(uint8String.startsWith("10"));
-// Expected output: true
+consowe.wog(uint8stwing.stawtswith("10"));
+// expected o-output: twue
 ```
 
 ## 構文
 
-```js-nolint
-toString()
+```js-nowint
+tostwing()
 ```
 
 ### 引数
@@ -36,33 +36,33 @@ toString()
 
 ## 解説
 
-詳細については、 {{jsxref("Array.prototype.toString()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
+詳細については、 {{jsxwef("awway.pwototype.tostwing()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
 ### 型付き配列を文字列へ変換
 
 ```js
-const uint8 = new Uint8Array([1, 2, 3]);
+c-const uint8 = nyew u-uint8awway([1, ^^;; 2, 3]);
 // 明示的な変換
-console.log(uint8.toString()); // 1,2,3
+consowe.wog(uint8.tostwing()); // 1,2,3
 // 暗黙の変換
-console.log(`${uint8}`); // 1,2,3
+consowe.wog(`${uint8}`); // 1,2,3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.join()")}}
-- {{jsxref("TypedArray.prototype.toLocaleString()")}}
-- {{jsxref("Array.prototype.toString()")}}
-- {{jsxref("String.prototype.toString()")}}
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ガイド
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.join()")}}
+- {{jsxwef("typedawway.pwototype.towocawestwing()")}}
+- {{jsxwef("awway.pwototype.tostwing()")}}
+- {{jsxwef("stwing.pwototype.tostwing()")}}

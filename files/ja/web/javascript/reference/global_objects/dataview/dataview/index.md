@@ -1,76 +1,76 @@
 ---
-title: DataView() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
+titwe: dataview() コンストラクター
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/dataview
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`DataView()`** コンストラクターは、 {{jsxref("DataView")}} オブジェクトを生成するために使用します。
+**`dataview()`** コンストラクターは、 {{jsxwef("dataview")}} オブジェクトを生成するために使用します。
 
-{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview c-constwuctow")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a size i-in bytes
+const b-buffew = nyew awwaybuffew(16);
 
-// Create a couple of views
-const view1 = new DataView(buffer);
-const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
-view1.setInt8(12, 42); // Put 42 in slot 12
+// cweate a coupwe of views
+const view1 = nyew d-dataview(buffew);
+const view2 = new dataview(buffew, rawr x3 12, 4); // f-fwom byte 12 fow the nyext 4 bytes
+v-view1.setint8(12, nyaa~~ 42); // put 42 in swot 12
 
-console.log(view2.getInt8(0));
-// Expected output: 42
+consowe.wog(view2.getint8(0));
+// e-expected output: 42
 ```
 
 ## 構文
 
 ```
-new DataView(buffer [, byteOffset [, byteLength]])
+nyew d-dataview(buffew [, /(^•ω•^) b-byteoffset [, rawr bytewength]])
 ```
 
 ### 引数
 
-- `buffer`
-  - : 既存の {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} で、新しい `DataView` オブジェクトの背景となるストレージとして使用されます。
-- `byteOffset` {{optional_inline}}
+- `buffew`
+  - : 既存の {{jsxwef("awwaybuffew")}} または {{jsxwef("shawedawwaybuffew")}} で、新しい `dataview` オブジェクトの背景となるストレージとして使用されます。
+- `byteoffset` {{optionaw_inwine}}
   - : 新しいビューが参照するバッファーの最初のバイトまでのオフセットをバイト単位で指定します。指定されていない場合、バッファービューは最初のバイトから始まります。
-- `byteLength` {{optional_inline}}
+- `bytewength` {{optionaw_inwine}}
   - : バイト配列の要素数です。指定しない場合、ビューの長さはバッファーの長さと一致します。
 
 ### 返値
 
-指定されたデータバッファーを表す `DataView` オブジェクトです。 (これはおそらくあまり役に立たない説明でした。)
+指定されたデータバッファーを表す `dataview` オブジェクトです。 (これはおそらくあまり役に立たない説明でした。)
 
 返されるオブジェクトは、バイトの配列バッファーの「インタープリター」と考えることができます。 - これは読み書きの際に、バッファー内に正しく収まるように数値を変換する方法を知っています。これは、整数や浮動小数点数の変換、エンディアン、その他バイナリ形式で数値を表現する際の詳細を扱うことを意味します。
 
 ### 例外
 
-- {{jsxref("RangeError")}}
+- {{jsxwef("wangeewwow")}}
 
-  - : `byteOffset` や `byteLength` 引数の値がバッファーの末尾を超えて広がる結果になる場合に発生します。
+  - : `byteoffset` や `bytewength` 引数の値がバッファーの末尾を超えて広がる結果になる場合に発生します。
 
-    例えば、バッファーが 16 バイトの長さで、 `byteOffset` が 8 バイト、 `byteLength` が 10 バイトの場合、バッファーの全長を 2 バイト超えるビューを展開しようとするので、このエラーが発生します。
+    例えば、バッファーが 16 バイトの長さで、 `byteoffset` が 8 バイト、 `bytewength` が 10 バイトの場合、バッファーの全長を 2 バイト超えるビューを展開しようとするので、このエラーが発生します。
 
 ## 例
 
-### DataView の使用
+### dataview の使用
 
 ```js
-var buffer = new ArrayBuffer(16);
-var view = new DataView(buffer, 0);
+vaw buffew = new awwaybuffew(16);
+v-vaw view = new dataview(buffew, OwO 0);
 
-view.setInt16(1, 42);
-view.getInt16(1); // 42
+view.setint16(1, (U ﹏ U) 42);
+view.getint16(1); // 42
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
+- {{jsxwef("dataview")}}

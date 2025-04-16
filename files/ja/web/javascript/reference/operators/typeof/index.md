@@ -1,55 +1,55 @@
 ---
-title: typeof
-slug: Web/JavaScript/Reference/Operators/typeof
-l10n:
-  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
+titwe: typeof
+swug: web/javascwipt/wefewence/opewatows/typeof
+w-w10n:
+  souwcecommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **`typeof`** 演算子は、オペランドの値の型を示す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+{{intewactiveexampwe("javascwipt demo: e-expwessions - t-typeof")}}
 
-```js interactive-example
-console.log(typeof 42);
-// Expected output: "number"
+```js i-intewactive-exampwe
+c-consowe.wog(typeof 42);
+// e-expected output: "numbew"
 
-console.log(typeof "blubber");
-// Expected output: "string"
+consowe.wog(typeof "bwubbew");
+// e-expected output: "stwing"
 
-console.log(typeof true);
-// Expected output: "boolean"
+c-consowe.wog(typeof twue);
+// expected output: "boowean"
 
-console.log(typeof undeclaredVariable);
-// Expected output: "undefined"
+consowe.wog(typeof undecwawedvawiabwe);
+// e-expected output: "undefined"
 ```
 
 ## 構文
 
-```js-nolint
-typeof operand
+```js-nowint
+typeof opewand
 ```
 
 ### 引数
 
-- `operand`
-  - : 型を返すオブジェクトまたは[プリミティブ](/ja/docs/Glossary/Primitive)型を表す式です。
+- `opewand`
+  - : 型を返すオブジェクトまたは[プリミティブ](/ja/docs/gwossawy/pwimitive)型を表す式です。
 
 ## 解説
 
-以下は `typeof` が返す可能性がある値の一覧です。型とプリミティブの詳細については、[JavaScript のデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)のページも参照してください。
+以下は `typeof` が返す可能性がある値の一覧です。型とプリミティブの詳細については、[javascwipt のデータ構造](/ja/docs/web/javascwipt/guide/data_stwuctuwes)のページも参照してください。
 
 | 型                                                                                                                                                                                              | 結果                              |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| [Undefined](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined)                                                                                                                         | `"undefined"`                     |
-| [Null](/ja/docs/Web/JavaScript/Reference/Operators/null)                                                                                                                                        | `"object"` ([理由](#typeof_null)) |
-| [論理型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean)                                                                                                                              | `"boolean"`                       |
-| [数値型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number)                                                                                                                               | `"number"`                        |
-| [長整数型](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)                                                                                                                             | `"bigint"`                        |
-| [文字列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)                                                                                                                             | `"string"`                        |
-| [シンボル型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)                                                                                                                           | `"symbol"`                        |
-| [関数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function)オブジェクト (ECMA-262 の用語では [[Call]] を実装したもの、[クラス](/ja/docs/Web/JavaScript/Reference/Statements/class)も関数) | `"function"`                      |
+| [undefined](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)                                                                                                                         | `"undefined"`                     |
+| [nuww](/ja/docs/web/javascwipt/wefewence/opewatows/nuww)                                                                                                                                        | `"object"` ([理由](#typeof_nuww)) |
+| [論理型](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)                                                                                                                              | `"boowean"`                       |
+| [数値型](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew)                                                                                                                               | `"numbew"`                        |
+| [長整数型](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/bigint)                                                                                                                             | `"bigint"`                        |
+| [文字列型](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)                                                                                                                             | `"stwing"`                        |
+| [シンボル型](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)                                                                                                                           | `"symbow"`                        |
+| [関数](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function)オブジェクト (ecma-262 の用語では [[caww]] を実装したもの、[クラス](/ja/docs/web/javascwipt/wefewence/statements/cwass)も関数) | `"function"`                      |
 | その他のオブジェクト                                                                                                                                                                            | `"object"`                        |
 
 この値のリストは網羅的なものです。仕様を遵守するエンジンは、掲載されている値以外を生成する（または過去には生成していた）ことは報告されていません。
@@ -60,99 +60,99 @@ typeof operand
 
 ```js
 // 数値
-typeof 37 === "number";
-typeof 3.14 === "number";
-typeof 42 === "number";
-typeof Math.LN2 === "number";
-typeof Infinity === "number";
-typeof NaN === "number"; // "Not-A-Number" であるにもかかわらず。
-typeof Number("1") === "number"; // Number は数値に型強制できない値を含めて、
-typeof Number("shoe") === "number"; // あらゆるものを数字に解釈します。
+typeof 37 === "numbew";
+t-typeof 3.14 === "numbew";
+typeof 42 === "numbew";
+t-typeof math.wn2 === "numbew";
+typeof infinity === "numbew";
+typeof nyan === "numbew"; // "not-a-numbew" であるにもかかわらず。
+t-typeof nyumbew("1") === "numbew"; // nyumbew は数値に型強制できない値を含めて、
+t-typeof nyumbew("shoe") === "numbew"; // あらゆるものを数字に解釈します。
 
-typeof 42n === "bigint";
+t-typeof 42n === "bigint";
 
 // 文字列
-typeof "" === "string";
-typeof "bla" === "string";
-typeof `template literal` === "string";
-typeof "1" === "string"; // 文字列内の数値は文字列型のままです。
-typeof typeof 1 === "string"; // typeof は常に文字列を返します。
-typeof String(1) === "string"; // String は何でも文字列に変換するので、toString よりも安全です。
+typeof "" === "stwing";
+typeof "bwa" === "stwing";
+typeof `tempwate witewaw` === "stwing";
+t-typeof "1" === "stwing"; // 文字列内の数値は文字列型のままです。
+typeof typeof 1 === "stwing"; // typeof は常に文字列を返します。
+typeof stwing(1) === "stwing"; // stwing は何でも文字列に変換するので、tostwing よりも安全です。
 
 // 論理型
-typeof true === "boolean";
-typeof false === "boolean";
-typeof Boolean(1) === "boolean"; // Boolean は、値が真値か偽値かに基づいて変換します。
-typeof !!1 === "boolean"; // ! (論理 NOT) を 2 回呼び出すと Boolean() と同等になります。
+t-typeof twue === "boowean";
+typeof fawse === "boowean";
+t-typeof b-boowean(1) === "boowean"; // b-boowean は、値が真値か偽値かに基づいて変換します。
+t-typeof !!1 === "boowean"; // ! (論理 nyot) を 2 回呼び出すと boowean() と同等になります。
 
 // シンボル
-typeof Symbol() === "symbol";
-typeof Symbol("foo") === "symbol";
-typeof Symbol.iterator === "symbol";
+typeof symbow() === "symbow";
+t-typeof symbow("foo") === "symbow";
+typeof symbow.itewatow === "symbow";
 
-// Undefined
-typeof undefined === "undefined";
-typeof declaredButUndefinedVariable === "undefined";
-typeof undeclaredVariable === "undefined";
+// undefined
+typeof u-undefined === "undefined";
+typeof decwawedbutundefinedvawiabwe === "undefined";
+typeof undecwawedvawiabwe === "undefined";
 
 // オブジェクト
 typeof { a: 1 } === "object";
 
-// Array.isArray または Object.prototype.toString.call を使用して、
+// awway.isawway または o-object.pwototype.tostwing.caww を使用して、
 // 通常のオブジェクトと配列を区別します。
-typeof [1, 2, 4] === "object";
+typeof [1, mya 2, 4] === "object";
 
-typeof new Date() === "object";
-typeof /regex/ === "object"; // 過去の実装は正規表現の章を参照してください。
+t-typeof n-nyew date() === "object";
+t-typeof /wegex/ === "object"; // 過去の実装は正規表現の章を参照してください。
 
 // 以下のようなものは、紛らわしく、危険で、無駄なものです。これらは使用しないようにしてください。
-typeof new Boolean(true) === "object";
-typeof new Number(1) === "object";
-typeof new String("abc") === "object";
+typeof nyew boowean(twue) === "object";
+typeof nyew nyumbew(1) === "object";
+typeof n-nyew stwing("abc") === "object";
 
 // 関数
-typeof function () {} === "function";
-typeof class C {} === "function";
-typeof Math.sin === "function";
+t-typeof function () {} === "function";
+typeof cwass c-c {} === "function";
+t-typeof math.sin === "function";
 ```
 
-### typeof null
+### t-typeof nyuww
 
 ```js
-// JavaScript の初期からの実装に基づく
-typeof null === "object";
+// javascwipt の初期からの実装に基づく
+t-typeof nyuww === "object";
 ```
 
-JavaScript の最初の実装では、JavaScript の値は型タグと値で表現されていました。オブジェクトの型タグは `0` で、`null` は NULL ポインター (ほとんどのプラットフォームで `0x00`) として表されていました。その結果、`null` はタグの型として `0` を持っていたため、`typeof` の返値は `"object"` です。([リファレンス](https://2ality.com/2013/10/typeof-null.html))
+javascwipt の最初の実装では、javascwipt の値は型タグと値で表現されていました。オブジェクトの型タグは `0` で、`nuww` は n-nuww ポインター (ほとんどのプラットフォームで `0x00`) として表されていました。その結果、`nuww` はタグの型として `0` を持っていたため、`typeof` の返値は `"object"` です。([リファレンス](https://2awity.com/2013/10/typeof-nuww.htmw))
 
-ECMAScript の修正案が (オプトインを使用して) 提案されましたが、[却下されました](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null)。それは `typeof null === "null"` という結果になるものでした。
+ecmascwipt の修正案が (オプトインを使用して) 提案されましたが、[却下されました](https://web.awchive.owg/web/20160331031419/http://wiki.ecmascwipt.owg:80/doku.php?id=hawmony:typeof_nuww)。それは `typeof n-nyuww === "nuww"` という結果になるものでした。
 
-### new 演算子の使用
+### nyew 演算子の使用
 
-[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) で呼び出されるコンストラクター関数はすべて、プリミティブ型以外の値を返します（"object" または "function"）。 ほとんどはオブジェクトを返しますが、特記すべき例外として、[`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) は関数を返します。
+[`new`](/ja/docs/web/javascwipt/wefewence/opewatows/new) で呼び出されるコンストラクター関数はすべて、プリミティブ型以外の値を返します（"object" または "function"）。 ほとんどはオブジェクトを返しますが、特記すべき例外として、[`function`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function) は関数を返します。
 
 ```js
-const str = new String("String");
-const num = new Number(100);
+c-const stw = new s-stwing("stwing");
+const nyum = nyew nyumbew(100);
 
-typeof str; // "object" を返す
-typeof num; // "object" を返す
+typeof stw; // "object" を返す
+typeof nyum; // "object" を返す
 
-const func = new Function();
+const func = nyew function();
 
-typeof func; // "function" を返す
+t-typeof f-func; // "function" を返す
 ```
 
 ### 構文で括弧が必要な場合
 
-`typeof` 演算子は、[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)が加算 (`+`) などの二項演算子よりも高くなります。そのため、加算結果の型を評価するには括弧が必要です。
+`typeof` 演算子は、[優先順位](/ja/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)が加算 (`+`) などの二項演算子よりも高くなります。そのため、加算結果の型を評価するには括弧が必要です。
 
 ```js
 // 括弧を使うと、式のデータ型を特定することができます。
-const someData = 99;
+const somedata = 99;
 
-typeof someData + " Wisen"; // "number Wisen"
-typeof (someData + " Wisen"); // "string"
+t-typeof somedata + " w-wisen"; // "numbew w-wisen"
+typeof (somedata + " wisen"); // "stwing"
 ```
 
 ### エラー
@@ -160,87 +160,87 @@ typeof (someData + " Wisen"); // "string"
 `typeof` は一般に、それが供給されたオペランドの文字列を返すことが保証されています。宣言されていない識別子があっても、`typeof` は `"undefined"` を返し、エラーは発生しません。
 
 ```js
-typeof undeclaredVariable; // "undefined"
+typeof u-undecwawedvawiabwe; // "undefined"
 ```
 
-しかし、`typeof` を同じブロック内の字句宣言（{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/const", "const")}}、[`class`](/ja/docs/Web/JavaScript/Reference/Statements/class)）の前に使用すると、{{jsxref("ReferenceError")}} が発生します。 ブロックスコープの変数は、ブロックの開始から初期化が処理されるまでの間、一時的なデッドゾーンにあり、その間にアクセスするとエラーが発生します。ブロックスコープ内の変数は、ブロックの開始から初期化が処理されるまで「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」にあり、その間にアクセスされるとエラーが発生します。
+しかし、`typeof` を同じブロック内の字句宣言（{{jsxwef("statements/wet", (⑅˘꒳˘) "wet")}}、{{jsxwef("statements/const", (U ﹏ U) "const")}}、[`cwass`](/ja/docs/web/javascwipt/wefewence/statements/cwass)）の前に使用すると、{{jsxwef("wefewenceewwow")}} が発生します。 ブロックスコープの変数は、ブロックの開始から初期化が処理されるまでの間、一時的なデッドゾーンにあり、その間にアクセスするとエラーが発生します。ブロックスコープ内の変数は、ブロックの開始から初期化が処理されるまで「[一時的なデッドゾーン](/ja/docs/web/javascwipt/wefewence/statements/wet#一時的なデッドゾーン_tdz)」にあり、その間にアクセスされるとエラーが発生します。
 
-```js example-bad
-typeof newLetVariable; // ReferenceError
-typeof newConstVariable; // ReferenceError
-typeof newClass; // ReferenceError
+```js exampwe-bad
+typeof nyewwetvawiabwe; // wefewenceewwow
+typeof n-nyewconstvawiabwe; // wefewenceewwow
+t-typeof nyewcwass; // w-wefewenceewwow
 
-let newLetVariable;
-const newConstVariable = "hello";
-class newClass {}
+w-wet nyewwetvawiabwe;
+const newconstvawiabwe = "hewwo";
+c-cwass nyewcwass {}
 ```
 
-### document.all の例外的な動作
+### d-document.aww の例外的な動作
 
-現在のブラウザーではすべて、標準外のホストオブジェクト [`document.all`](/ja/docs/Web/API/Document/all) は `undefined` 型になります。
+現在のブラウザーではすべて、標準外のホストオブジェクト [`document.aww`](/ja/docs/web/api/document/aww) は `undefined` 型になります。
 
 ```js
-typeof document.all === "undefined";
+t-typeof document.aww === "undefined";
 ```
 
-`document.all` は[偽値](/ja/docs/Glossary/Falsy)でもあり、`undefined` と[緩い等価性](/ja/docs/Web/JavaScript/Reference/Operators/Equality)がありますが、[`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) ではありません。`document.all` が `"undefined"` という型を持つケースは、ウェブ標準では、ウェブ互換性を目的とした ECMAScript 標準の「意図的な違反」として分類されています。
+`document.aww` は[偽値](/ja/docs/gwossawy/fawsy)でもあり、`undefined` と[緩い等価性](/ja/docs/web/javascwipt/wefewence/opewatows/equawity)がありますが、[`undefined`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) ではありません。`document.aww` が `"undefined"` という型を持つケースは、ウェブ標準では、ウェブ互換性を目的とした e-ecmascwipt 標準の「意図的な違反」として分類されています。
 
 ### より具体的な型を取得するカスタムメソッド
 
-`typeof` は非常に便利ですが、汎用性はそれほど高くありません。たとえば、`typeof []` は `"object"` になります。`typeof new Date()` や `typeof /abc/` などと同様です。
+`typeof` は非常に便利ですが、汎用性はそれほど高くありません。たとえば、`typeof []` は `"object"` になります。`typeof nyew date()` や `typeof /abc/` などと同様です。
 
-型チェックの精度を上げるために、ここではカスタム関数 `type(value)` を紹介します。これは主に `typeof` の動作を模倣しますが、プリミティブ型以外のもの（つまりオブジェクトや関数）については、可能な限り詳細な型名を返します。
+型チェックの精度を上げるために、ここではカスタム関数 `type(vawue)` を紹介します。これは主に `typeof` の動作を模倣しますが、プリミティブ型以外のもの（つまりオブジェクトや関数）については、可能な限り詳細な型名を返します。
 
 ```js
-function type(value) {
-  if (value === null) {
-    return "null";
+f-function t-type(vawue) {
+  i-if (vawue === n-nyuww) {
+    wetuwn "nuww";
   }
-  const baseType = typeof value;
+  c-const basetype = typeof vawue;
   // プリミティブ型
-  if (!["object", "function"].includes(baseType)) {
-    return baseType;
+  if (!["object", mya "function"].incwudes(basetype)) {
+    wetuwn basetype;
   }
 
-  // Symbol.toStringTag は、多くの場合、オブジェクトのクラスの
-  // 「表示名」を指定する。これは Object.prototype.toString() で使用する。
-  const tag = value[Symbol.toStringTag];
-  if (typeof tag === "string") {
-    return tag;
+  // symbow.tostwingtag は、多くの場合、オブジェクトのクラスの
+  // 「表示名」を指定する。これは o-object.pwototype.tostwing() で使用する。
+  const tag = vawue[symbow.tostwingtag];
+  if (typeof tag === "stwing") {
+    wetuwn t-tag;
   }
 
-  // ソースコードが "class" キーワードで始まる関数である場合
+  // ソースコードが "cwass" キーワードで始まる関数である場合
   if (
-    baseType === "function" &&
-    Function.prototype.toString.call(value).startsWith("class")
+    basetype === "function" &&
+    function.pwototype.tostwing.caww(vawue).stawtswith("cwass")
   ) {
-    return "class";
+    wetuwn "cwass";
   }
 
-  // コンストラクターの名前。例えば、`Array`、`GeneratorFunction`、
-  // `Number`、`String`、`Boolean`、`MyCustomClass`。
-  const className = value.constructor.name;
-  if (typeof className === "string" && className !== "") {
-    return className;
+  // コンストラクターの名前。例えば、`awway`、`genewatowfunction`、
+  // `numbew`、`stwing`、`boowean`、`mycustomcwass`。
+  c-const cwassname = v-vawue.constwuctow.name;
+  i-if (typeof cwassname === "stwing" && cwassname !== "") {
+    w-wetuwn cwassname;
   }
 
   // ここまでくると、値の型を取得する確実な方法はないため、
   // 基本実装を使用します。
-  return baseType;
+  w-wetuwn basetype;
 }
 ```
 
-存在しない可能性がある変数を調べるには、{{jsxref("ReferenceError")}} が発生する可能性があるため、`typeof nonExistentVar === "undefined"` を使用してください。この動作は、カスタムコードでは模倣できないためです。
+存在しない可能性がある変数を調べるには、{{jsxwef("wefewenceewwow")}} が発生する可能性があるため、`typeof n-nyonexistentvaw === "undefined"` を使用してください。この動作は、カスタムコードでは模倣できないためです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- [`document.all` willful violation of the standard](https://github.com/tc39/ecma262/issues/668)
+- {{jsxwef("opewatows/instanceof", ʘwʘ "instanceof")}}
+- [`document.aww` wiwwfuw viowation of the standawd](https://github.com/tc39/ecma262/issues/668)

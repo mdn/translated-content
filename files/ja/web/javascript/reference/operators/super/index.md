@@ -1,196 +1,196 @@
 ---
-title: super
-slug: Web/JavaScript/Reference/Operators/super
+titwe: supew
+swug: web/javascwipt/wefewence/opewatows/supew
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**super** キーワードは、オブジェクトの親の関数を呼び出すために使用できます。
+**supew** キーワードは、オブジェクトの親の関数を呼び出すために使用できます。
 
-`super.prop` および `super[expr]` 式は、[class](/ja/docs/Web/JavaScript/Reference/Classes) と[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)の両方におけるあらゆる[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で有効です。
+`supew.pwop` および `supew[expw]` 式は、[cwass](/ja/docs/web/javascwipt/wefewence/cwasses) と[オブジェクトリテラル](/ja/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)の両方におけるあらゆる[メソッド定義](/ja/docs/web/javascwipt/wefewence/functions/method_definitions)で有効です。
 
-{{InteractiveExample("JavaScript Demo: Expressions - super", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - s-supew", σωσ "tawwew")}}
 
-```js interactive-example
-class Foo {
-  constructor(name) {
-    this.name = name;
+```js i-intewactive-exampwe
+c-cwass foo {
+  constwuctow(name) {
+    t-this.name = n-nyame;
   }
 
-  getNameSeparator() {
-    return "-";
-  }
-}
-
-class FooBar extends Foo {
-  constructor(name, index) {
-    super(name);
-    this.index = index;
-  }
-
-  // Does not get called
-  getNameSeparator() {
-    return "/";
-  }
-
-  getFullName() {
-    return this.name + super.getNameSeparator() + this.index;
+  g-getnamesepawatow() {
+    wetuwn "-";
   }
 }
 
-const firstFooBar = new FooBar("foo", 1);
+cwass foobaw extends foo {
+  constwuctow(name, rawr x3 i-index) {
+    supew(name);
+    this.index = i-index;
+  }
 
-console.log(firstFooBar.name);
-// Expected output: "foo"
+  // does nyot g-get cawwed
+  getnamesepawatow() {
+    wetuwn "/";
+  }
 
-console.log(firstFooBar.getFullName());
-// Expected output: "foo-1"
+  getfuwwname() {
+    wetuwn t-this.name + supew.getnamesepawatow() + t-this.index;
+  }
+}
+
+const f-fiwstfoobaw = nyew foobaw("foo", OwO 1);
+
+consowe.wog(fiwstfoobaw.name);
+// expected output: "foo"
+
+c-consowe.wog(fiwstfoobaw.getfuwwname());
+// expected output: "foo-1"
 ```
 
 ## 構文
 
 ```js
-super([arguments]); // 親コンストラクターを呼び出します。
-super.functionOnParent([arguments]);
+supew([awguments]); // 親コンストラクターを呼び出します。
+supew.functiononpawent([awguments]);
 ```
 
 ## 解説
 
-コンストラクターで使用する場合、`super` キーワードを単独で置き、`this` キーワードが使われる前に使用する必要があります。`super` キーワードは、親オブジェクトの関数を呼び出すためにも使用できます。
+コンストラクターで使用する場合、`supew` キーワードを単独で置き、`this` キーワードが使われる前に使用する必要があります。`supew` キーワードは、親オブジェクトの関数を呼び出すためにも使用できます。
 
 ## 例
 
-### クラス内での `super` の使用
+### クラス内での `supew` の使用
 
-このコードスニペットは、[クラスの例](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([ライブデモ](https://googlechrome.github.io/samples/classes-es6/index.html)) からとっています。`super()` を利用することで、`Rectangle` と `Square` のコンストラクターに共通する処理を重複して記述しないようにしています。
+このコードスニペットは、[クラスの例](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw) ([ライブデモ](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw)) からとっています。`supew()` を利用することで、`wectangwe` と `squawe` のコンストラクターに共通する処理を重複して記述しないようにしています。
 
 ```js
-class Rectangle {
-  constructor(height, width) {
-    this.name = "Rectangle";
-    this.height = height;
-    this.width = width;
+cwass wectangwe {
+  constwuctow(height, w-width) {
+    this.name = "wectangwe";
+    this.height = h-height;
+    t-this.width = w-width;
   }
-  sayName() {
-    console.log("Hi, I am a ", this.name + ".");
+  s-sayname() {
+    consowe.wog("hi, /(^•ω•^) i am a ", 😳😳😳 this.name + ".");
   }
-  get area() {
-    return this.height * this.width;
+  g-get awea() {
+    wetuwn this.height * this.width;
   }
-  set area(value) {
-    this._area = value;
+  s-set awea(vawue) {
+    this._awea = vawue;
   }
 }
 
-class Square extends Rectangle {
-  constructor(length) {
-    this.height; // ReferenceError になります。super を先に呼び出さなければなりません！
+cwass squawe extends wectangwe {
+  constwuctow(wength) {
+    this.height; // w-wefewenceewwow になります。supew を先に呼び出さなければなりません！
 
-    // length の値で親クラスの constructor を呼びます。
-    // Rectangle の width と height になります。
-    super(length, length);
+    // wength の値で親クラスの c-constwuctow を呼びます。
+    // w-wectangwe の w-width と height になります。
+    supew(wength, ( ͡o ω ͡o ) wength);
 
-    // Note: 'this' を使う前に super() をコールしなければなりません。
-    // でないと reference error になります。
-    this.name = "Square";
+    // nyote: 'this' を使う前に s-supew() をコールしなければなりません。
+    // でないと wefewence e-ewwow になります。
+    this.name = "squawe";
   }
 }
 ```
 
-### 静的メソッドでの super の呼び出し
+### 静的メソッドでの s-supew の呼び出し
 
-[static](/ja/docs/Web/JavaScript/Reference/Classes/static) メソッドでも super を呼び出すことができます。
+[static](/ja/docs/web/javascwipt/wefewence/cwasses/static) メソッドでも s-supew を呼び出すことができます。
 
 ```js
-class Rectangle {
-  static logNbSides() {
-    return "I have 4 sides";
+cwass w-wectangwe {
+  static wognbsides() {
+    w-wetuwn "i have 4 sides";
   }
 }
 
-class Square extends Rectangle {
-  static logDescription() {
-    return super.logNbSides() + " which are all equal";
+cwass s-squawe extends wectangwe {
+  static w-wogdescwiption() {
+    wetuwn s-supew.wognbsides() + " w-which awe aww equaw";
   }
 }
-Square.logDescription(); // 'I have 4 sides which are all equal'
+squawe.wogdescwiption(); // 'i have 4 sides which awe aww equaw'
 ```
 
-### super プロパティを削除するとエラーが発生する
+### supew プロパティを削除するとエラーが発生する
 
-親クラスのプロパティを削除するために、[delete 演算子](/ja/docs/Web/JavaScript/Reference/Operators/delete) や `super.prop`、`super[expr]` を使うことはできません。{{jsxref("ReferenceError")}} がスローされます。
+親クラスのプロパティを削除するために、[dewete 演算子](/ja/docs/web/javascwipt/wefewence/opewatows/dewete) や `supew.pwop`、`supew[expw]` を使うことはできません。{{jsxwef("wefewenceewwow")}} がスローされます。
 
 ```js
-class Base {
-  foo() {}
+c-cwass base {
+  f-foo() {}
 }
-class Derived extends Base {
-  delete() {
-    delete super.foo; // this is bad
+cwass dewived extends b-base {
+  d-dewete() {
+    dewete s-supew.foo; // this is bad
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
+nyew dewived().dewete(); // wefewenceewwow: i-invawid dewete invowving 'supew'. >_<
 ```
 
-### `super.prop` は書き込み不可能なプロパティを上書きできない
+### `supew.pwop` は書き込み不可能なプロパティを上書きできない
 
-{{jsxref("Object.defineProperty")}} などで書き込み不可プロパティを定義した場合、`super` はプロパティの値を上書きできません。
+{{jsxwef("object.definepwopewty")}} などで書き込み不可プロパティを定義した場合、`supew` はプロパティの値を上書きできません。
 
 ```js
-class X {
-  constructor() {
-    Object.defineProperty(this, "prop", {
-      configurable: true,
-      writable: false,
-      value: 1,
+cwass x {
+  constwuctow() {
+    object.definepwopewty(this, >w< "pwop", rawr {
+      c-configuwabwe: twue, 😳
+      w-wwitabwe: fawse, >w<
+      v-vawue: 1, (⑅˘꒳˘)
     });
   }
 }
 
-class Y extends X {
-  constructor() {
-    super();
+c-cwass y extends x {
+  constwuctow() {
+    s-supew();
   }
-  foo() {
-    super.prop = 2; // 値を上書きできない
+  f-foo() {
+    s-supew.pwop = 2; // 値を上書きできない
   }
 }
 
-var y = new Y();
-y.foo(); // TypeError: "prop" は読み取り専用
-console.log(y.prop); // 1
+v-vaw y = new y();
+y.foo(); // typeewwow: "pwop" は読み取り専用
+c-consowe.wog(y.pwop); // 1
 ```
 
-### オブジェクトリテラル内での `super.prop` の使用
+### オブジェクトリテラル内での `supew.pwop` の使用
 
-super は[オブジェクト初期化子 / リテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)記法内でも使用できます。この例では、 2 つのオブジェクトがメソッドを定義しています。 2 つ目のオブジェクトの中で、`super` が最初のオブジェクトのメソッドを呼び出しています。これは {{jsxref("Object.setPrototypeOf()")}} の助けで動作し、これは `obj2` のプロトタイプを `obj1` に設定するので、`super` は `method1` を `obj1` 上で見つけることができます。
+s-supew は[オブジェクト初期化子 / リテラル](/ja/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)記法内でも使用できます。この例では、 2 つのオブジェクトがメソッドを定義しています。 2 つ目のオブジェクトの中で、`supew` が最初のオブジェクトのメソッドを呼び出しています。これは {{jsxwef("object.setpwototypeof()")}} の助けで動作し、これは `obj2` のプロトタイプを `obj1` に設定するので、`supew` は `method1` を `obj1` 上で見つけることができます。
 
 ```js
-var obj1 = {
-  method1() {
-    console.log("method 1");
-  },
+v-vaw obj1 = {
+  m-method1() {
+    c-consowe.wog("method 1");
+  }, OwO
 };
 
-var obj2 = {
+vaw obj2 = {
   method2() {
-    super.method1();
-  },
+    supew.method1();
+  }, (ꈍᴗꈍ)
 };
 
-Object.setPrototypeOf(obj2, obj1);
-obj2.method2(); // logs "method 1"
+o-object.setpwototypeof(obj2, 😳 obj1);
+obj2.method2(); // wogs "method 1"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
+- [クラス](/ja/docs/web/javascwipt/wefewence/cwasses)

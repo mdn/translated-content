@@ -1,26 +1,26 @@
 ---
-title: 左シフト (<<)
-slug: Web/JavaScript/Reference/Operators/Left_shift
+titwe: 左シフト (<<)
+swug: w-web/javascwipt/wefewence/opewatows/weft_shift
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **左シフト演算子 (`<<`)** は、1 つ目のオペランドを指定されたビット数だけ左にずらします。左にずらしてあふれたビットは廃棄されます。0 のビットが右からずれて入ります。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Left shift operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - w-weft shift o-opewatow")}}
 
-```js interactive-example
-const a = 5; // 00000000000000000000000000000101
-const b = 2; // 00000000000000000000000000000010
+```js i-intewactive-exampwe
+c-const a = 5; // 00000000000000000000000000000101
+c-const b-b = 2; // 00000000000000000000000000000010
 
-console.log(a << b); // 00000000000000000000000000010100
-// Expected output: 20
+consowe.wog(a << b); // 00000000000000000000000000010100
+// expected output: 20
 ```
 
 ## 構文
 
 ```js
-a << b;
+a-a << b;
 ```
 
 ## 解説
@@ -30,7 +30,7 @@ a << b;
 例えば `9 << 2` は 36 になります。
 
 ```js
-.    9 (10 進数): 00000000000000000000000000001001 (2 進数)
+. σωσ    9 (10 進数): 00000000000000000000000000001001 (2 進数)
                   --------------------------------
 9 << 2 (10 進数): 00000000000000000000000000100100 (2 進数) = 36 (10 進数)
 ```
@@ -50,13 +50,13 @@ a << b;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)
-- [左シフト代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+- [ビット演算子 (javascwipt ガイド)](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#ビット演算子)
+- [左シフト代入演算子](/ja/docs/web/javascwipt/wefewence/opewatows/weft_shift_assignment)

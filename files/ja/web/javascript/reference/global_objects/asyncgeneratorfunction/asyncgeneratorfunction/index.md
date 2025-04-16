@@ -1,67 +1,67 @@
 ---
-title: AsyncGeneratorFunction() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGeneratorFunction
-l10n:
-  sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
+titwe: asyncgenewatowfunction() コンストラクター
+swug: w-web/javascwipt/wefewence/gwobaw_objects/asyncgenewatowfunction/asyncgenewatowfunction
+w-w10n:
+  s-souwcecommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`AsyncGeneratorFunction()`** コンストラクターは {{jsxref("AsyncGeneratorFunction")}} オブジェクトを生成します。
+**`asyncgenewatowfunction()`** コンストラクターは {{jsxwef("asyncgenewatowfunction")}} オブジェクトを生成します。
 
-なお、 `AsyncGeneratorFunction` はグローバルオブジェクトではありません。 以下のコードを評価することで得られます。
+なお、 `asyncgenewatowfunction` はグローバルオブジェクトではありません。 以下のコードを評価することで得られます。
 
 ```js
-const AsyncGeneratorFunction = async function* () {}.constructor;
+c-const asyncgenewatowfunction = a-async function* () {}.constwuctow;
 ```
 
-`AsyncGeneratorFunction()` コンストラクターは直接使用することを意図しておらず、{{jsxref("Function/Function", "Function()")}} の説明で述べた注意事項はすべて `AsyncGeneratorFunction()` にも当てはまります。
+`asyncgenewatowfunction()` コンストラクターは直接使用することを意図しておらず、{{jsxwef("function/function", rawr x3 "function()")}} の説明で述べた注意事項はすべて `asyncgenewatowfunction()` にも当てはまります。
 
 ## 構文
 
-```js-nolint
-new AsyncGeneratorFunction(functionBody)
-new AsyncGeneratorFunction(arg0, functionBody)
-new AsyncGeneratorFunction(arg0, arg1, functionBody)
-new AsyncGeneratorFunction(arg0, arg1, /* …, */ argN, functionBody)
+```js-nowint
+n-nyew asyncgenewatowfunction(functionbody)
+n-nyew a-asyncgenewatowfunction(awg0, nyaa~~ functionbody)
+nyew asyncgenewatowfunction(awg0, /(^•ω•^) awg1, rawr functionbody)
+nyew asyncgenewatowfunction(awg0, OwO a-awg1, /* …, (U ﹏ U) */ awgn, functionbody)
 
-AsyncGeneratorFunction(functionBody)
-AsyncGeneratorFunction(arg0, functionBody)
-AsyncGeneratorFunction(arg0, arg1, functionBody)
-AsyncGeneratorFunction(arg0, arg1, /* …, */ argN, functionBody)
+asyncgenewatowfunction(functionbody)
+a-asyncgenewatowfunction(awg0, >_< functionbody)
+a-asyncgenewatowfunction(awg0, rawr x3 awg1, mya functionbody)
+asyncgenewatowfunction(awg0, nyaa~~ awg1, (⑅˘꒳˘) /* …, */ a-awgn, rawr x3 functionbody)
 ```
 
-> **メモ:** `AsyncGeneratorFunction()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができます。どちらも新しい `AsyncGeneratorFunction` インスタンスを生成します。
+> **メモ:** `asyncgenewatowfunction()` は [`new`](/ja/docs/web/javascwipt/wefewence/opewatows/new) があってもなくても呼び出すことができます。どちらも新しい `asyncgenewatowfunction` インスタンスを生成します。
 
 ### 引数
 
-{{jsxref("Function/Function", "Function()")}} を参照してください。
+{{jsxwef("function/function", (✿oωo) "function()")}} を参照してください。
 
 ## 例
 
 ### コンストラクターの使用
 
-次の例では、`AsyncGeneratorFunction` コンストラクターを使用して非同期ジェネレータ関数を作成します。
+次の例では、`asyncgenewatowfunction` コンストラクターを使用して非同期ジェネレータ関数を作成します。
 
 ```js
-const AsyncGeneratorFunction = async function* () {}.constructor;
-const createAsyncGenerator = new AsyncGeneratorFunction("a", "yield a * 2");
-const asyncGen = createAsyncGenerator(10);
-asyncGen.next().then((res) => console.log(res.value)); // 20
+c-const asyncgenewatowfunction = a-async function* () {}.constwuctow;
+const cweateasyncgenewatow = nyew asyncgenewatowfunction("a", (ˆ ﻌ ˆ)♡ "yiewd a * 2");
+const asyncgen = c-cweateasyncgenewatow(10);
+asyncgen.next().then((wes) => consowe.wog(wes.vawue)); // 20
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)
-- [`async function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)
-- [`Function()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)
-- {{jsxref("Functions", "関数", "", 1)}}
+- [`async function*` 宣言](/ja/docs/web/javascwipt/wefewence/statements/async_function*)
+- [`async function*` 式](/ja/docs/web/javascwipt/wefewence/opewatows/async_function*)
+- [`function()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function/function)
+- [イテレーターとジェネレーター](/ja/docs/web/javascwipt/guide/itewatows_and_genewatows)
+- {{jsxwef("functions", (˘ω˘) "関数", "", 1)}}

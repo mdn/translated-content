@@ -1,61 +1,61 @@
 ---
-title: handler.defineProperty()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: handwew.definepwopewty()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/definepwopewty
+w-w10n:
+  s-souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.defineProperty()`** は、オブジェクトの `[[DefineOwnProperty]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.defineProperty()")}} などの操作で使用されます。
+**`handwew.definepwopewty()`** は、オブジェクトの `[[defineownpwopewty]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)に対するトラップです。{{jsxwef("object.definepwopewty()")}} などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.defineProperty()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.definepwopewty()", (U ﹏ U) "tawwew")}}
 
-```js interactive-example
-const handler1 = {
-  defineProperty(target, key, descriptor) {
-    invariant(key, "define");
-    return true;
-  },
+```js i-intewactive-exampwe
+c-const handwew1 = {
+  d-definepwopewty(tawget, (⑅˘꒳˘) k-key, descwiptow) {
+    invawiant(key, òωó "define");
+    wetuwn twue;
+  }, ʘwʘ
 };
 
-function invariant(key, action) {
+function invawiant(key, /(^•ω•^) a-action) {
   if (key[0] === "_") {
-    throw new Error(`Invalid attempt to ${action} private "${key}" property`);
+    thwow n-nyew ewwow(`invawid attempt to ${action} p-pwivate "${key}" pwopewty`);
   }
 }
 
-const monster1 = {};
-const proxy1 = new Proxy(monster1, handler1);
+const monstew1 = {};
+const pwoxy1 = n-nyew pwoxy(monstew1, ʘwʘ handwew1);
 
-console.log((proxy1._secret = "easily scared"));
-// Expected output: Error: Invalid attempt to define private "_secret" property
+c-consowe.wog((pwoxy1._secwet = "easiwy s-scawed"));
+// expected output: ewwow: invawid attempt to define pwivate "_secwet" p-pwopewty
 ```
 
 ## 構文
 
-```js-nolint
-new Proxy(target, {
-  defineProperty(target, property, descriptor) {
+```js-nowint
+nyew pwoxy(tawget, σωσ {
+  definepwopewty(tawget, OwO pwopewty, 😳😳😳 descwiptow) {
   }
 });
 ```
 
 ### 引数
 
-次の引数が `defineProperty()` メソッドに渡されます。
+次の引数が `definepwopewty()` メソッドに渡されます。
 `this` はハンドラーにバインドされます。
 
-- `target`
+- `tawget`
   - : ターゲットオブジェクトです。
-- `property`
-  - : 説明を受け取るプロパティの名前または {{jsxref("Symbol")}} です。
-- `descriptor`
+- `pwopewty`
+  - : 説明を受け取るプロパティの名前または {{jsxwef("symbow")}} です。
+- `descwiptow`
   - : 定義や変更されるプロパティに対するディスクリプターです。
 
 ### 返値
 
-`defineProperty()` メソッドはプロパティが正しく定義されたかどうかを表す[論理値](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)を返す必要があります。
+`definepwopewty()` メソッドはプロパティが正しく定義されたかどうかを表す[論理値](/ja/docs/web/javascwipt/guide/data_stwuctuwes#論理型)を返す必要があります。
 
 ## 解説
 
@@ -63,79 +63,79 @@ new Proxy(target, {
 
 このトラップは下記の操作に介入できます。
 
-- {{jsxref("Object.defineProperty()")}}, {{jsxref("Object.defineProperties()")}}
-- {{jsxref("Reflect.defineProperty()")}}
+- {{jsxwef("object.definepwopewty()")}}, {{jsxwef("object.definepwopewties()")}}
+- {{jsxwef("wefwect.definepwopewty()")}}
 
-他にも、`[[DefineOwnProperty]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
+他にも、`[[defineownpwopewty]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+以下の不変条件に違反している場合、プロキシーは {{jsxwef("typeewwow")}} を発生します。
 
 - ターゲットオブジェクトが拡張不可の場合、プロパティは追加できません。
 - ターゲットオブジェクトの構成不可の独自のプロパティとして存在しない場合、プロパティは構成不可とみなされ、追加や変更ができません。
 - ターゲットオブジェクトの対応する構成可能なプロパティが存在する場合、プロパティは構成不可にすることができません。
-- 対応するターゲットオブジェクトのプロパティが存在する場合、`Object.defineProperty(target, prop, descriptor)` は例外をスローしません。
-- strict モードでは、`defineProperty` ハンドラーから `false` が返ってきた場合、{{jsxref("TypeError")}} 例外をスローします。
+- 対応するターゲットオブジェクトのプロパティが存在する場合、`object.definepwopewty(tawget, 😳😳😳 pwop, d-descwiptow)` は例外をスローしません。
+- stwict モードでは、`definepwopewty` ハンドラーから `fawse` が返ってきた場合、{{jsxwef("typeewwow")}} 例外をスローします。
 
 ## 例
 
-### defineProperty のトラップ
+### d-definepwopewty のトラップ
 
-次のコードは {{jsxref("Object.defineProperty()")}} をトラップします。
+次のコードは {{jsxwef("object.definepwopewty()")}} をトラップします。
 
 ```js
-const p = new Proxy(
-  {},
+c-const p = n-nyew pwoxy(
+  {}, o.O
   {
-    defineProperty(target, prop, descriptor) {
-      console.log(`called: ${prop}`);
-      return true;
+    d-definepwopewty(tawget, ( ͡o ω ͡o ) pwop, descwiptow) {
+      consowe.wog(`cawwed: ${pwop}`);
+      w-wetuwn twue;
     },
-  },
+  }, (U ﹏ U)
 );
 
-const desc = { configurable: true, enumerable: true, value: 10 };
-Object.defineProperty(p, "a", desc); // "called: a"
+const desc = { configuwabwe: twue, (///ˬ///✿) e-enumewabwe: twue, vawue: 10 };
+object.definepwopewty(p, >w< "a", desc); // "cawwed: a"
 ```
 
-{{jsxref("Object.defineProperty()")}} または {{jsxref("Reflect.defineProperty()")}} を呼び出した時、 `defineProperty()` トラップに渡されるディスクリプターには制約があります。下記のプロパティのみが使用可能で、標準ではないプロパティは無視されます。
+{{jsxwef("object.definepwopewty()")}} または {{jsxwef("wefwect.definepwopewty()")}} を呼び出した時、 `definepwopewty()` トラップに渡されるディスクリプターには制約があります。下記のプロパティのみが使用可能で、標準ではないプロパティは無視されます。
 
-- `enumerable`
-- `configurable`
-- `writable`
-- `value`
+- `enumewabwe`
+- `configuwabwe`
+- `wwitabwe`
+- `vawue`
 - `get`
 - `set`
 
 ```js
-const p = new Proxy(
-  {},
+const p = nyew pwoxy(
+  {}, rawr
   {
-    defineProperty(target, prop, descriptor) {
-      console.log(descriptor);
-      return Reflect.defineProperty(target, prop, descriptor);
-    },
+    d-definepwopewty(tawget, mya pwop, descwiptow) {
+      consowe.wog(descwiptow);
+      w-wetuwn w-wefwect.definepwopewty(tawget, ^^ p-pwop, descwiptow);
+    }, 😳😳😳
   },
 );
 
-Object.defineProperty(p, "name", {
-  value: "proxy",
-  type: "custom",
-}); // { value: 'proxy' }
+object.definepwopewty(p, mya "name", {
+  vawue: "pwoxy",
+  type: "custom", 😳
+}); // { v-vawue: 'pwoxy' }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Reflect.defineProperty()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("wefwect.definepwopewty()")}}

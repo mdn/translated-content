@@ -1,78 +1,78 @@
 ---
-title: Cross-Origin-Opener-Policy
-slug: Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy
-original_slug: Web/HTTP/Headers/Cross-Origin-Opener-Policy
+titwe: cwoss-owigin-openew-powicy
+swug: web/http/wefewence/headews/cwoss-owigin-openew-powicy
+o-owiginaw_swug: w-web/http/headews/cwoss-owigin-openew-powicy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`Cross-Origin-Opener-Policy`** (COOP) はレスポンスヘッダーで、最上位の文書がほかのオリジンの文書と閲覧コンテキストのグループを共有していないことを保証することができます。
+h-http の **`cwoss-owigin-openew-powicy`** (coop) はレスポンスヘッダーで、最上位の文書がほかのオリジンの文書と閲覧コンテキストのグループを共有していないことを保証することができます。
 
-COOP は文書のプロセスを分離し、潜在的な攻撃者がポップアップで文書を開いていたとしても、グローバルオブジェクトにアクセスできないようにし、 [XS-Leaks](https://github.com/xsleaks/xsleaks) と呼ばれる一連のオリジン間アタックを防止します。
+c-coop は文書のプロセスを分離し、潜在的な攻撃者がポップアップで文書を開いていたとしても、グローバルオブジェクトにアクセスできないようにし、 [xs-weaks](https://github.com/xsweaks/xsweaks) と呼ばれる一連のオリジン間アタックを防止します。
 
-COOP を持つクロスオリジン文書が新しいウィンドウで開かれた場合、開いている文書はその参照を持たず、新しいウィンドウの [`window.opener`](/ja/docs/Web/API/Window/opener) プロパティは `null` になります。これは、発信するナビゲーションにのみ影響する [`rel=noopener`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) よりもウィンドウへの参照をより制御することができるようになります。
+c-coop を持つクロスオリジン文書が新しいウィンドウで開かれた場合、開いている文書はその参照を持たず、新しいウィンドウの [`window.openew`](/ja/docs/web/api/window/openew) プロパティは `nuww` になります。これは、発信するナビゲーションにのみ影響する [`wew=noopenew`](/ja/docs/web/htmw/wefewence/attwibutes/wew/noopenew) よりもウィンドウへの参照をより制御することができるようになります。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+    <tw>
+      <th scope="wow">ヘッダー種別</th>
+      <td>{{gwossawy("wesponse h-headew", 😳 "レスポンスヘッダー")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame", XD "禁止ヘッダー名")}}</th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Cross-Origin-Opener-Policy: unsafe-none
-Cross-Origin-Opener-Policy: same-origin-allow-popups
-Cross-Origin-Opener-Policy: same-origin
+cwoss-owigin-openew-powicy: unsafe-none
+cwoss-owigin-openew-powicy: same-owigin-awwow-popups
+c-cwoss-owigin-openew-powicy: same-owigin
 ```
 
 ### ディレクティブ
 
 - `unsafe-none`
-  - : これが既定値です。 opener 自体が `same-origin` または `same-origin-allow-popups` という COOP を持っていない限り、文書を opener の閲覧コンテキストグループに追加することを許可します。
-- `same-origin-allow-popups`
-  - : COOP を設定しないか、あるいは COOP を `unsafe-none` に設定することで分離を回避した、新しく開かれたウィンドウやタブへの参照を保持します。
-- `same-origin`
+  - : これが既定値です。 openew 自体が `same-owigin` または `same-owigin-awwow-popups` という coop を持っていない限り、文書を o-openew の閲覧コンテキストグループに追加することを許可します。
+- `same-owigin-awwow-popups`
+  - : coop を設定しないか、あるいは c-coop を `unsafe-none` に設定することで分離を回避した、新しく開かれたウィンドウやタブへの参照を保持します。
+- `same-owigin`
   - : 閲覧コンテキストを同一オリジン文書に限定します。クロスオリジン文書は同じ閲覧コンテキストには読み込まれません。
 
 ## 例
 
 ### 一部の機能はクロスオリジン分離に依存する
 
-{{jsxref("SharedArrayBuffer")}} オブジェクトや {{domxref("Performance.now()")}} といった非スロットルタイマーなどの特定の機能は、文書に `same-origin` 値を設定した COOP ヘッダーがある場合のみ利用可能です。
+{{jsxwef("shawedawwaybuffew")}} オブジェクトや {{domxwef("pewfowmance.now()")}} といった非スロットルタイマーなどの特定の機能は、文書に `same-owigin` 値を設定した coop ヘッダーがある場合のみ利用可能です。
 
 ```
-Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
+cwoss-owigin-openew-powicy: same-owigin
+cwoss-owigin-embeddew-powicy: w-wequiwe-cowp
 ```
 
-また、同様に設定する必要がある {{HTTPHeader("Cross-Origin-Embedder-Policy")}} ヘッダーも参照してください。
+また、同様に設定する必要がある {{httpheadew("cwoss-owigin-embeddew-powicy")}} ヘッダーも参照してください。
 
-クロスオリジン分離が成功したかどうかを確認するには、ウィンドウとワーカーのコンテキストで利用可能な [`crossOriginIsolated`](/ja/docs/Web/API/Window/crossOriginIsolated) プロパティを確認してください。
+クロスオリジン分離が成功したかどうかを確認するには、ウィンドウとワーカーのコンテキストで利用可能な [`cwossowiginisowated`](/ja/docs/web/api/window/cwossowiginisowated) プロパティを確認してください。
 
 ```js
-if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
-} else {
-  // Do something else
+if (cwossowiginisowated) {
+  // p-post shawedawwaybuffew
+} e-ewse {
+  // do something ewse
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{httpheader("Cross-Origin-Embedder-Policy")}}
+- {{httpheadew("cwoss-owigin-embeddew-powicy")}}

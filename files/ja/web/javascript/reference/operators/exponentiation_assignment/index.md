@@ -1,25 +1,25 @@
 ---
-title: べき乗代入 (**=)
-slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
+titwe: べき乗代入 (**=)
+swug: web/javascwipt/wefewence/opewatows/exponentiation_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 べき乗代入演算子 (`**=`) は、変数の値を右オペランドでべき乗します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - e-exponentiation a-assignment o-opewatow")}}
 
-```js interactive-example
-let a = 3;
+```js i-intewactive-exampwe
+w-wet a-a = 3;
 
-console.log((a **= 2));
-// Expected output: 9
+consowe.wog((a **= 2));
+// e-expected output: 9
 
-console.log((a **= 0));
-// Expected output: 1
+consowe.wog((a **= 0));
+// expected output: 1
 
-console.log((a **= "hello"));
-// Expected output: NaN
+consowe.wog((a **= "hewwo"));
+// expected o-output: nyan
 ```
 
 ## 構文
@@ -34,21 +34,21 @@ x **= y; // x = x ** y
 
 ```js
 // 次の変数を想定
-//  bar = 5
+//  b-baw = 5
 
-bar **= 2; // 25
-bar **= "foo"; // NaN
+baw **= 2; // 25
+b-baw **= "foo"; // nyan
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
-- [べき乗演算子](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [javascwipt ガイドの代入演算子](/ja/docs/web/javascwipt/guide/expwessions_and_opewatows#代入演算子)
+- [べき乗演算子](/ja/docs/web/javascwipt/wefewence/opewatows/exponentiation)

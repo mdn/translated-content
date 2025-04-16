@@ -1,60 +1,60 @@
 ---
-title: DPR
-slug: Web/HTTP/Reference/Headers/DPR
-original_slug: Web/HTTP/Headers/DPR
+titwe: dpw
+swug: web/http/wefewence/headews/dpw
+o-owiginaw_swug: w-web/http/headews/dpw
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{httpsidebaw}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-**`DPR`** ヘッダーは、CSS ピクセル毎に対応する物理デバイスピクセルの数であるクライアントのデバイスピクセル比 (device pixel ratio、{{Glossary("DPR")}})) を表す[クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)のヘッダーです。
+**`dpw`** ヘッダーは、css ピクセル毎に対応する物理デバイスピクセルの数であるクライアントのデバイスピクセル比 (device p-pixew w-watio、{{gwossawy("dpw")}})) を表す[クライアントヒント](/ja/docs/web/http/guides/cwient_hints)のヘッダーです。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Request header","リクエストヘッダー")}}
+        {{gwossawy("wequest h-headew","リクエストヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name","禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden headew nyame","禁止ヘッダー名")}}
       </th>
       <td>?</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `DPR` ヘッダーを受信することを選択する必要があります。
+> [!note]
+> クライアントヒントには、安全なオリジン（tws 経由）でのみアクセスできます。 サーバーは、{{httpheadew("accept-ch")}} および {{httpheadew("accept-ch-wifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `dpw` ヘッダーを受信することを選択する必要があります。
 
 ## 構文
 
 ```
-DPR: <number>
+dpw: <numbew>
 ```
 
 ## 例
 
-サーバーはまず、レスポンスヘッダーとして `DPR` を含む {{HTTPHeader("Accept-CH")}} と {{HTTPHeader("Accept-CH-Lifetime")}} を送信することによって、`DPR` ヘッダーを受信するように選択する必要があります。
+サーバーはまず、レスポンスヘッダーとして `dpw` を含む {{httpheadew("accept-ch")}} と {{httpheadew("accept-ch-wifetime")}} を送信することによって、`dpw` ヘッダーを受信するように選択する必要があります。
 
 ```
-Accept-CH: DPR
-Accept-CH-Lifetime: 86400
+accept-ch: dpw
+accept-ch-wifetime: 86400
 ```
 
-次に、後続のリクエストでクライアントは、次のように `DPR` ヘッダーを送り返す場合があります。
+次に、後続のリクエストでクライアントは、次のように `dpw` ヘッダーを送り返す場合があります。
 
 ```
-DPR: 1.0
+d-dpw: 1.0
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Accept-CH")}}
-- {{HTTPHeader("Accept-CH-Lifetime")}}
-- {{HTTPHeader("Vary")}}
+- {{httpheadew("accept-ch")}}
+- {{httpheadew("accept-ch-wifetime")}}
+- {{httpheadew("vawy")}}

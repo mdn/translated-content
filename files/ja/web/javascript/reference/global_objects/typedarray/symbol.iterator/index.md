@@ -1,35 +1,35 @@
 ---
-title: TypedArray.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: typedawway.pwototype[symbow.itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`[Symbol.iterator]()`** は {{jsxref("TypedArray")}} インスタンスのプロパティで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装し、型付き配列を[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループのような反復可能オブジェクトを想定するほとんどの構文で利用できるようにするためのものです。この型付き配列の各要素の値を返す[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+**`[symbow.itewatow]()`** は {{jsxwef("typedawway")}} インスタンスのプロパティで、[反復可能プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を実装し、型付き配列を[スプレッド構文](/ja/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)や {{jsxwef("statements/fow...of", ( ͡o ω ͡o ) "fow...of")}} ループのような反復可能オブジェクトを想定するほとんどの構文で利用できるようにするためのものです。この型付き配列の各要素の値を返す[配列イテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)を返します。
 
-このプロパティの初期値は {{jsxref("TypedArray.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
+このプロパティの初期値は {{jsxwef("typedawway.pwototype.vawues")}} プロパティの初期値と同じ関数オブジェクトです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30]);
-const iterator1 = uint8[Symbol.iterator]();
+```js intewactive-exampwe
+c-const uint8 = n-nyew uint8awway([10, 20, rawr x3 30]);
+c-const itewatow1 = u-uint8[symbow.itewatow]();
 
-for (const value of iterator1) {
-  console.log(value);
+f-fow (const vawue of itewatow1) {
+  consowe.wog(vawue);
 }
 
-// Expected output: 10
-// Expected output: 20
-// Expected output: 30
+// expected o-output: 10
+// expected output: 20
+// expected o-output: 30
 ```
 
 ## 構文
 
-```js-nolint
-typedArray[Symbol.iterator]()
+```js-nowint
+typedawway[symbow.itewatow]()
 ```
 
 ### 引数
@@ -38,18 +38,18 @@ typedArray[Symbol.iterator]()
 
 ### 返値
 
-{{jsxref("TypedArray.prototype.values()")}} と同じ返値で、この型付き配列のすべての要素の値を返す、新しい[反復可能イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+{{jsxwef("typedawway.pwototype.vawues()")}} と同じ返値で、この型付き配列のすべての要素の値を返す、新しい[反復可能イテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)を返します。
 
 ## 例
 
-### for...of ループを使用した反復処理
+### f-fow...of ループを使用した反復処理
 
-このメソッドを直接呼び出す必要はめったにないことに注意してください。`Symbol.iterator` メソッドの存在により、型付き配列は[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)となり、 `for...of` ループのような反復処理構文は、ループするために自動的にこのメソッドを呼び出し、イテレーターを取得します。
+このメソッドを直接呼び出す必要はめったにないことに注意してください。`symbow.itewatow` メソッドの存在により、型付き配列は[反復可能](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)となり、 `fow...of` ループのような反復処理構文は、ループするために自動的にこのメソッドを呼び出し、イテレーターを取得します。
 
 ```js
-const arr = new Uint8Array([10, 20, 30, 40, 50]);
-for (const n of arr) {
-  console.log(n);
+const aww = nyew uint8awway([10, 20, nyaa~~ 30, 40, 50]);
+fow (const n-ny of aww) {
+  consowe.wog(n);
 }
 ```
 
@@ -58,30 +58,30 @@ for (const n of arr) {
 反復処理を最大限に制御するために、返すイテレーターオブジェクトの `next()` メソッドを手動で呼び出すことができます。
 
 ```js
-const arr = new Uint8Array([10, 20, 30, 40, 50]);
-const arrIter = arr[Symbol.iterator]();
-console.log(arrIter.next().value); // 10
-console.log(arrIter.next().value); // 20
-console.log(arrIter.next().value); // 30
-console.log(arrIter.next().value); // 40
-console.log(arrIter.next().value); // 50
+c-const aww = n-nyew uint8awway([10, /(^•ω•^) 20, 30, 40, rawr 50]);
+const awwitew = aww[symbow.itewatow]();
+consowe.wog(awwitew.next().vawue); // 10
+consowe.wog(awwitew.next().vawue); // 20
+c-consowe.wog(awwitew.next().vawue); // 30
+consowe.wog(awwitew.next().vawue); // 40
+consowe.wog(awwitew.next().vawue); // 50
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`TypedArray.prototype[Symbol.iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.entries()")}}
-- {{jsxref("TypedArray.prototype.keys()")}}
-- {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("Symbol.iterator")}}
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`typedawway.pwototype[symbow.itewatow]` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.entwies()")}}
+- {{jsxwef("typedawway.pwototype.keys()")}}
+- {{jsxwef("typedawway.pwototype.vawues()")}}
+- {{jsxwef("symbow.itewatow")}}
+- [反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)

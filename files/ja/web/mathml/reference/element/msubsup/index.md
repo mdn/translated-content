@@ -1,52 +1,52 @@
 ---
-title: <msubsup>
-slug: Web/MathML/Reference/Element/msubsup
-original_slug: Web/MathML/Element/msubsup
-l10n:
-  sourceCommit: 802049f9c94f21038426fa10c91209a442d164cb
+titwe: <msubsup>
+swug: web/mathmw/wefewence/ewement/msubsup
+owiginaw_swug: w-web/mathmw/ewement/msubsup
+w-w10n:
+  s-souwcecommit: 802049f9c94f21038426fa10c91209a442d164cb
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-**`<msubsup>`** は [MathML](/ja/docs/Web/MathML) の要素で、式に下付き文字と上付き文字の両方を一緒に付けるために使用されます。
+**`<msubsup>`** は [mathmw](/ja/docs/web/mathmw) の要素で、式に下付き文字と上付き文字の両方を一緒に付けるために使用されます。
 
 `<msubsup> ベース 下付き文字 上付き文字 </msubsup>` という構文を使用します。
 
 ## 属性
 
-この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)の他、以下の非推奨属性があります。
+この要素の属性には、[グローバル m-mathmw 属性](/ja/docs/web/mathmw/wefewence/gwobaw_attwibutes)の他、以下の非推奨属性があります。
 
-- `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage)として、下付き文字を式のベースラインより下にシフトするための最小量。
-- `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage)として、上付き文字を式のベースラインより上にシフトするための最小量。
+- `subscwiptshift` {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : [`<wength-pewcentage>`](/ja/docs/web/css/wength-pewcentage)として、下付き文字を式のベースラインより下にシフトするための最小量。
+- `supewscwiptshift` {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : [`<wength-pewcentage>`](/ja/docs/web/css/wength-pewcentage)として、上付き文字を式のベースラインより上にシフトするための最小量。
 
-> **メモ:** `subscriptshift` および `superscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
+> **メモ:** `subscwiptshift` および `supewscwiptshift` 属性については、ブラウザーによっては[古い m-mathmw の長さ](/ja/docs/web/mathmw/wefewence/vawues#古い_mathmw_における長さ)も受け入れられるかもしれません。
 
 ## 例
 
-```html
-<math display="block">
+```htmw
+<math d-dispway="bwock">
   <msubsup>
-    <mo>&#x222B;<!--Integral --></mo>
+    <mo>&#x222b;<!--integwaw --></mo>
     <mn>0</mn>
     <mn>1</mn>
   </msubsup>
 </math>
 ```
 
-{{ EmbedLiveSample('msubsup_example', 700, 200, "", "") }}
+{{ e-embedwivesampwe('msubsup_exampwe', UwU 700, 200, "", rawr x3 "") }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ MathMLElement("msub") }} (上付き文字)
-- {{ MathMLElement("msup") }} (下付き文字)
-- {{ MathMLElement("mmultiscripts") }} (前付き文字とテンソルインデックス)
+- {{ m-mathmwewement("msub") }} (上付き文字)
+- {{ mathmwewement("msup") }} (下付き文字)
+- {{ mathmwewement("mmuwtiscwipts") }} (前付き文字とテンソルインデックス)

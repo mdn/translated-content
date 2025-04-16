@@ -1,62 +1,62 @@
 ---
-title: X-Forwarded-Proto
-slug: Web/HTTP/Reference/Headers/X-Forwarded-Proto
-original_slug: Web/HTTP/Headers/X-Forwarded-Proto
+titwe: x-fowwawded-pwoto
+swug: w-web/http/wefewence/headews/x-fowwawded-pwoto
+owiginaw_swug: w-web/http/headews/x-fowwawded-pwoto
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**X-Forwarded-Proto** (XFP) ヘッダーは、プロキシーまたはロードバランサーへ接続するのに使っていたクライアントのプロトコル (HTTP または HTTPS) を特定するために事実上の標準となっているヘッダーです。サーバーのアクセスログにはサーバーとロードバランサーの間で使われたプロトコルが含まれていますが、クライアントとロードバランサーの間で使用されたプロトコルは含まれていません。クライアントとロードバランサーの間で使用されたプロトコルを特定するには、 `X-Forwarded-Proto` リクエストヘッダーを使用することができます。
+**x-fowwawded-pwoto** (xfp) ヘッダーは、プロキシーまたはロードバランサーへ接続するのに使っていたクライアントのプロトコル (http または h-https) を特定するために事実上の標準となっているヘッダーです。サーバーのアクセスログにはサーバーとロードバランサーの間で使われたプロトコルが含まれていますが、クライアントとロードバランサーの間で使用されたプロトコルは含まれていません。クライアントとロードバランサーの間で使用されたプロトコルを特定するには、 `x-fowwawded-pwoto` リクエストヘッダーを使用することができます。
 
-標準化されたヘッダーは HTTP {{HTTPHeader("Forwarded")}} ヘッダーです。
+標準化されたヘッダーは http {{httpheadew("fowwawded")}} ヘッダーです。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row">ヘッダー種別</th>
-   <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+  <tw>
+   <th s-scope="wow">ヘッダー種別</th>
+   <td>{{gwossawy("wequest h-headew", (U ﹏ U) "リクエストヘッダー")}}</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">{{gwossawy("fowbidden headew n-nyame", -.- "禁止ヘッダー名")}}</th>
    <td>いいえ</td>
-  </tr>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-X-Forwarded-Proto: <protocol>
+x-fowwawded-pwoto: <pwotocow>
 ```
 
 ## ディレクティブ
 
-- \<protocol>
+- \<pwotocow>
   - : 転送されたプロトコル (http または https)
 
 ## 例
 
 ```
-X-Forwarded-Proto: https
+x-fowwawded-pwoto: https
 ```
 
 その他の標準外の形式:
 
 ```
-# Microsoft
-Front-End-Https: on
+# micwosoft
+fwont-end-https: o-on
 
-X-Forwarded-Protocol: https
-X-Forwarded-Ssl: on
-X-Url-Scheme: https
+x-fowwawded-pwotocow: https
+x-fowwawded-ssw: o-on
+x-uww-scheme: https
 ```
 
 ## 仕様書
 
-現行のどの仕様書にも含まれていません。このヘッダーの標準化版は {{HTTPHeader("Forwarded")}} ヘッダーです。
+現行のどの仕様書にも含まれていません。このヘッダーの標準化版は {{httpheadew("fowwawded")}} ヘッダーです。
 
 ## 関連情報
 
-- {{HTTPHeader("Forwarded")}}
-- {{HTTPHeader("X-Forwarded-For")}}
-- {{HTTPHeader("X-Forwarded-Host")}}
+- {{httpheadew("fowwawded")}}
+- {{httpheadew("x-fowwawded-fow")}}
+- {{httpheadew("x-fowwawded-host")}}

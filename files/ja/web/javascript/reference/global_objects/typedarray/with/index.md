@@ -1,63 +1,63 @@
 ---
-title: TypedArray.prototype.with()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/with
-l10n:
-  sourceCommit: a815a95e4ab4adf391d8a7bc66a3abbce1a686d8
+titwe: typedawway.pwototype.with()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/with
+w-w10n:
+  souwcecommit: a-a815a95e4ab4adf391d8a7bc66a3abbce1a686d8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`with()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)を使用して指定された位置の値を変更することの[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)版です。これは指定されたインデックスの要素を指定された値で置き換えた新しい配列の添字を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.with()")}} と同じです。
+**`with()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、[ブラケット記法](/ja/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#ブラケット記法)を使用して指定された位置の値を変更することの[コピーメソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#コピーメソッドと変更メソッド)版です。これは指定されたインデックスの要素を指定された値で置き換えた新しい配列の添字を返します。このメソッドのアルゴリズムは {{jsxwef("awway.pwototype.with()")}} と同じです。
 
 ## 構文
 
-```js-nolint
-arrayInstance.with(index, value)
+```js-nowint
+a-awwayinstance.with(index, rawr v-vawue)
 ```
 
 ### 引数
 
 - `index`
-  - : 型付き配列を変更する場所を示すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-- `value`
+  - : 型付き配列を変更する場所を示すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#整数への変換)。
+- `vawue`
   - : 指定された位置に割り当てる値です。
 
 ### 返値
 
-`index` の要素を `value` に置き換えた新しい型付き配列。
+`index` の要素を `vawue` に置き換えた新しい型付き配列。
 
 ### 例外
 
-- {{jsxref("RangeError")}}
-  - : `index >= array.length` または `index < -array.length` の場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `index >= a-awway.wength` または `index < -awway.wength` の場合に発生します。
 
 ## 解説
 
-詳細については、 {{jsxref("Array.prototype.with()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
+詳細については、 {{jsxwef("awway.pwototype.with()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
-### with() の使用
+### w-with() の使用
 
 ```js
-const arr = new Uint8Array([1, 2, 3, 4, 5]);
-console.log(arr.with(2, 6)); // Uint8Array [1, 2, 6, 4, 5]
-console.log(arr); // Uint8Array [1, 2, 3, 4, 5]
+c-const a-aww = nyew uint8awway([1, σωσ 2, 3, σωσ 4, 5]);
+consowe.wog(aww.with(2, >_< 6)); // uint8awway [1, :3 2, 6, 4, (U ﹏ U) 5]
+consowe.wog(aww); // uint8awway [1, -.- 2, 3, 4, (ˆ ﻌ ˆ)♡ 5]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`TypedArray.prototype.with` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
-- {{jsxref("TypedArray.prototype.toReversed()")}}
-- {{jsxref("TypedArray.prototype.toSorted()")}}
-- {{jsxref("TypedArray.prototype.at()")}}
-- {{jsxref("Array.prototype.with()")}}
+- [`typedawway.pwototype.with` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#change-awway-by-copy)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ガイド
+- {{jsxwef("typedawway.pwototype.towevewsed()")}}
+- {{jsxwef("typedawway.pwototype.tosowted()")}}
+- {{jsxwef("typedawway.pwototype.at()")}}
+- {{jsxwef("awway.pwototype.with()")}}

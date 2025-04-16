@@ -1,40 +1,40 @@
 ---
-title: Atomics.store()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
+titwe: atomics.stowe()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/atomics/stowe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Atomics.store()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。
+静的な **`atomics.stowe()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。
 
-{{InteractiveExample("JavaScript Demo: Atomics.store()")}}
+{{intewactiveexampwe("javascwipt d-demo: atomics.stowe()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js i-intewactive-exampwe
+// c-cweate a shawedawwaybuffew w-with a-a size in bytes
+c-const buffew = new s-shawedawwaybuffew(16);
+const uint8 = nyew uint8awway(buffew);
 uint8[0] = 5;
 
-console.log(Atomics.store(uint8, 0, 2));
-// Expected output: 2
+consowe.wog(atomics.stowe(uint8, mya 0, 2));
+// e-expected output: 2
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+consowe.wog(atomics.woad(uint8, 😳 0));
+// e-expected output: 2
 ```
 
 ## 構文
 
 ```js
-Atomics.store(typedArray, index, value);
+a-atomics.stowe(typedawway, XD index, vawue);
 ```
 
 ### 引数
 
-- `typedArray`
-  - : 整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} の何れかです。
+- `typedawway`
+  - : 整数の型付き配列です。 {{jsxwef("int8awway")}}, :3 {{jsxwef("uint8awway")}}, 😳😳😳 {{jsxwef("int16awway")}}, -.- {{jsxwef("uint16awway")}}, {{jsxwef("int32awway")}}, ( ͡o ω ͡o ) {{jsxwef("uint32awway")}} の何れかです。
 - `index`
-  - : `typedArray` で `value` を格納する位置です。
-- `value`
+  - : `typedawway` で `vawue` を格納する位置です。
+- `vawue`
   - : 格納する値です。
 
 ### 返値
@@ -43,29 +43,29 @@ Atomics.store(typedArray, index, value);
 
 ### 例外
 
-- `typedArray` が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
-- `index` が `typedArray` の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
+- `typedawway` が許可された整数型の何れでもない場合、{{jsxwef("typeewwow")}} が発生します。
+- `index` が `typedawway` の範囲を超えている場合、 {{jsxwef("wangeewwow")}} が発生します。
 
 ## 例
 
-### store() の使用
+### stowe() の使用
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+v-vaw sab = new shawedawwaybuffew(1024);
+v-vaw t-ta = nyew uint8awway(sab);
 
-Atomics.store(ta, 0, 12); // 12
+atomics.stowe(ta, rawr x3 0, 12); // 12
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.load()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.woad()")}}

@@ -1,24 +1,24 @@
 ---
-title: 504 Gateway Timeout
-slug: Web/HTTP/Reference/Status/504
-original_slug: Web/HTTP/Status/504
-l10n:
-  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
+titwe: 504 gateway timeout
+swug: w-web/http/wefewence/status/504
+o-owiginaw_swug: w-web/http/status/504
+w-w10n:
+  souwcecommit: f-f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`504 Gateway Timeout`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、 コードは、サーバーがゲートウェイまたは{{Glossary("Proxy_server", "プロキシー")}}として動作している際に、リクエストを完了するために上流のサーバーからタイムリーにレスポンスを受け取れなかったことを示します。
-これは {{HTTPStatus("502", "502 Bad Gateway")}} と似ていますが、`504` ステータスの場合、プロキシーまたはゲートウェイが一定時間内に元のサーバーから HTTP レスポンスを受け取れなかったという点が異なります。
+h-http の **`504 g-gateway t-timeout`** は[サーバーエラーレスポンス](/ja/docs/web/http/wefewence/status#サーバーエラーレスポンス)ステータスコードで、 コードは、サーバーがゲートウェイまたは{{gwossawy("pwoxy_sewvew", nyaa~~ "プロキシー")}}として動作している際に、リクエストを完了するために上流のサーバーからタイムリーにレスポンスを受け取れなかったことを示します。
+これは {{httpstatus("502", /(^•ω•^) "502 bad gateway")}} と似ていますが、`504` ステータスの場合、プロキシーまたはゲートウェイが一定時間内に元のサーバーから http レスポンスを受け取れなかったという点が異なります。
 
 504 エラーの原因は数多くあり、このような問題を修正するには、サーバー管理者の調査と修正が要求される可能性が高いです。または、サイトが後日再び機能するようになるかもしれません。
-例外は、クライアントのネットワークエラーです。特に、サービスが他の来訪者に対してはうまく動作しており、クライアントが VPN やその他の独自のネットワーク設定を使用している場合です。
-このような場合、クライアントはネットワーク設定、ファイアウォール設定、プロキシー設定、DNS 構成などを確認する必要があります。
+例外は、クライアントのネットワークエラーです。特に、サービスが他の来訪者に対してはうまく動作しており、クライアントが vpn やその他の独自のネットワーク設定を使用している場合です。
+このような場合、クライアントはネットワーク設定、ファイアウォール設定、プロキシー設定、dns 構成などを確認する必要があります。
 
 ## ステータス
 
 ```http
-504 Gateway Timeout
+504 gateway t-timeout
 ```
 
 ## 例
@@ -29,35 +29,35 @@ HTTP の **`504 Gateway Timeout`** は[サーバーエラーレスポンス](/ja
 レスポンス本体には、サーバーの状態が記述されたページと来訪者向けのサポートページへのリンクが含まれています。
 
 ```http
-GET /highlights HTTP/1.1
-Host: example.com
-User-Agent: curl/8.6.0
-Accept: */*
+get /highwights http/1.1
+host: exampwe.com
+usew-agent: c-cuww/8.6.0
+accept: */*
 ```
 
 ```http
-HTTP/1.1 504 Gateway Timeout
-Content-Type: text/html;
-Content-Length: 123
+h-http/1.1 504 gateway timeout
+content-type: text/htmw;
+c-content-wength: 123
 
-<!doctype html>
-<html lang="en">
+<!doctype htmw>
+<htmw wang="en">
 <head>
-  <title>504 Gateway Timeout</title>
+  <titwe>504 g-gateway t-timeout</titwe>
 </head>
 <body>
-  <h1>Gateway timeout</h1>
-  <p>The server did not respond in time. Please try again later.</p>
-  <p>If this problem persists, please <a href="https://example.com/support">contact support</a>.</p>
+  <h1>gateway timeout</h1>
+  <p>the sewvew did nyot wespond in time. rawr pwease twy again watew.</p>
+  <p>if t-this pwobwem pewsists, OwO pwease <a hwef="https://exampwe.com/suppowt">contact suppowt</a>.</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- {{HTTPStatus("502", "502 Bad Gateway")}}
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- {{httpstatus("502", (U ﹏ U) "502 bad gateway")}}

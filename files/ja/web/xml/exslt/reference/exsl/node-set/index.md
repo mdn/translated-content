@@ -1,19 +1,19 @@
 ---
-title: exsl:node-set()
-slug: Web/XML/EXSLT/Reference/exsl/node-set
-original_slug: Web/EXSLT/exsl/node-set
+titwe: exsw:node-set()
+swug: w-web/xmw/exswt/wefewence/exsw/node-set
+o-owiginaw_swug: w-web/exswt/exsw/node-set
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/ja/docs/web/xmw/exswt")}}
 
-`exsl:node-set()` は結果木の断片からノードセットを返します。これは、変数の値を取得するために select 属性ではなく `xsl:variable` を見たときに得られるものです。これにより、変数内に作成された XML を複数のステップで処理することができます。
+`exsw:node-set()` は結果木の断片からノードセットを返します。これは、変数の値を取得するために s-sewect 属性ではなく `xsw:vawiabwe` を見たときに得られるものです。これにより、変数内に作成された x-xmw を複数のステップで処理することができます。
 
-また、`exsl:node-set()` を使って、文字列をテキストノードにすることができます。
+また、`exsw:node-set()` を使って、文字列をテキストノードにすることができます。
 
 ## 構文
 
 ```
-exsl:node-set(object)
+e-exsw:node-set(object)
 ```
 
 ### 引数
@@ -27,4 +27,4 @@ exsl:node-set(object)
 
 ## 仕様書
 
-[EXSLT - EXSL:NODE-SET](http://exslt.org/exsl/functions/node-set/index.html)
+[exswt - e-exsw:node-set](http://exswt.owg/exsw/functions/node-set/index.htmw)

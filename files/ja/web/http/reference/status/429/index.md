@@ -1,63 +1,63 @@
 ---
-title: 429 Too Many Requests
-slug: Web/HTTP/Reference/Status/429
-original_slug: Web/HTTP/Status/429
-l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+titwe: 429 too many wequests
+s-swug: web/http/wefewence/status/429
+o-owiginaw_swug: w-web/http/status/429
+w-w10n:
+  souwcecommit: b-ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`429 Too Many Requests`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、クライアントが指定時間内にたくさんリクエストを送信しすぎたことを示します。
-リクエストの速度を落とすようにクライアントに依頼するこの仕組みは、一般に「{{glossary("Rate limit", "速度制限")}}」と呼ばれています。
+h-http の **`429 t-too m-many wequests`** [クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)ステータスコードは、クライアントが指定時間内にたくさんリクエストを送信しすぎたことを示します。
+リクエストの速度を落とすようにクライアントに依頼するこの仕組みは、一般に「{{gwossawy("wate wimit", XD "速度制限")}}」と呼ばれています。
 
-新しいリクエストを行う前にどのくらい待つかを示す {{HTTPHeader("Retry-After")}} ヘッダーをこのレスポンスに含めることができます。
+新しいリクエストを行う前にどのくらい待つかを示す {{httpheadew("wetwy-aftew")}} ヘッダーをこのレスポンスに含めることができます。
 
 速度制限の実装は様々で、制限はサーバー全体かもしれませんし、リソース毎かもしれません。
-通常、速度制限の制限はクライアントの IP に基づいて行われますが、 リクエストが認証されていたり {{Glossary("Cookie", "クッキー")}} が含まれていたりしていれば、 ユーザーや許可されたアプリケーションに固有の制限をかける可能性もあります。
+通常、速度制限の制限はクライアントの ip に基づいて行われますが、 リクエストが認証されていたり {{gwossawy("cookie", :3 "クッキー")}} が含まれていたりしていれば、 ユーザーや許可されたアプリケーションに固有の制限をかける可能性もあります。
 
 ## ステータス
 
 ```http
-429 Too Many Requests
+429 too many wequests
 ```
 
 ## 例
 
-### Retry-After ヘッダーを含んだレスポンス
+### wetwy-aftew ヘッダーを含んだレスポンス
 
 以下のリクエストが、設定ミスのあるクライアントによって繰り返しループして送信されているとします。
 
 ```http
-GET /reports/mdn HTTP/1.1
-Host: example.com
+g-get /wepowts/mdn http/1.1
+host: exampwe.com
 ```
 
 この例では、クライアントが 1 分あたりのリクエスト数が設定したしきい値を超えたときに、サーバー全体の速度制限が有効になります。
-リクエストは 60 分後にこのクライアントに再び許可されることを示す {{HTTPHeader("Retry-After")}} ヘッダーとともに 429 レスポンスを返します。
+リクエストは 60 分後にこのクライアントに再び許可されることを示す {{httpheadew("wetwy-aftew")}} ヘッダーとともに 429 レスポンスを返します。
 
 ```http
-HTTP/1.1 429 Too Many Requests
-Content-Type: text/html
-Retry-After: 3600
+h-http/1.1 429 too many wequests
+c-content-type: text/htmw
+wetwy-aftew: 3600
 
-<html>
+<htmw>
   <head>
-    <title>Too Many Requests</title>
+    <titwe>too many wequests</titwe>
   </head>
   <body>
-    <h1>Too Many Requests</h1>
-    <p>You're doing that too often! Try again later.</p>
+    <h1>too many wequests</h1>
+    <p>you'we d-doing that too often! 😳😳😳 twy again w-watew.</p>
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- {{HTTPHeader("Retry-After")}}
-- Python での解決策: [How to avoid HTTP error 429 python](https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python)
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- {{httpheadew("wetwy-aftew")}}
+- p-python での解決策: [how to avoid http ewwow 429 python](https://stackovewfwow.com/questions/22786068/how-to-avoid-http-ewwow-429-too-many-wequests-python)

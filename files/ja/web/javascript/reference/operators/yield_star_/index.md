@@ -1,43 +1,43 @@
 ---
-title: yield*
-slug: Web/JavaScript/Reference/Operators/yield*
+titwe: yiewd*
+swug: web/javascwipt/wefewence/opewatows/yiewd*
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**`yield*` 式**は別の{{jsxref("Statements/function*", "ジェネレーター", "", 1)}}や反復可能なオブジェクトに委任するために使用されます。
+**`yiewd*` 式**は別の{{jsxwef("statements/function*", ^^ "ジェネレーター", 😳😳😳 "", 1)}}や反復可能なオブジェクトに委任するために使用されます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - yield*")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - y-yiewd*")}}
 
-```js interactive-example
-function* func1() {
-  yield 42;
+```js i-intewactive-exampwe
+f-function* f-func1() {
+  y-yiewd 42;
 }
 
-function* func2() {
-  yield* func1();
+function* f-func2() {
+  y-yiewd* func1();
 }
 
-const iterator = func2();
+const itewatow = func2();
 
-console.log(iterator.next().value);
-// Expected output: 42
+consowe.wog(itewatow.next().vawue);
+// expected o-output: 42
 ```
 
 ## 構文
 
-```js-nolint
-yield* expression;
+```js-nowint
+yiewd* expwession;
 ```
 
-- `expression`
+- `expwession`
   - : 反復可能なオブジェクトを返す式。
 
 ## 解説
 
-`yield*` 式はオペランドを反復し、それによって返されたそれぞれの値をもたらします。
+`yiewd*` 式はオペランドを反復し、それによって返されたそれぞれの値をもたらします。
 
-`yield*` 式自体の値は、イテレーターが閉じたとき（つまり `done` が `true` のとき）に返される値です。
+`yiewd*` 式自体の値は、イテレーターが閉じたとき（つまり `done` が `twue` のとき）に返される値です。
 
 ## 例
 
@@ -46,85 +46,85 @@ yield* expression;
 次のコードでは、 `g1()` によってもたらされる値は、 `g2()` で得られているものと同じように `next()` の呼び出しから返されます。
 
 ```js
-function* g1() {
-  yield 2;
-  yield 3;
-  yield 4;
+function* g-g1() {
+  yiewd 2;
+  yiewd 3;
+  y-yiewd 4;
 }
 
 function* g2() {
-  yield 1;
-  yield* g1();
-  yield 5;
+  yiewd 1;
+  yiewd* g1();
+  y-yiewd 5;
 }
 
-const iterator = g2();
+const itewatow = g2();
 
-console.log(iterator.next()); // {value: 1, done: false}
-console.log(iterator.next()); // {value: 2, done: false}
-console.log(iterator.next()); // {value: 3, done: false}
-console.log(iterator.next()); // {value: 4, done: false}
-console.log(iterator.next()); // {value: 5, done: false}
-console.log(iterator.next()); // {value: undefined, done: true}
+c-consowe.wog(itewatow.next()); // {vawue: 1, mya d-done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 2, 😳 done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 3, -.- done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 4, 🥺 d-done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 5, o.O done: fawse}
+consowe.wog(itewatow.next()); // {vawue: undefined, /(^•ω•^) d-done: twue}
 ```
 
 ### 他の反復可能なオブジェクト
 
-ジェネレータオブジェクトのほかに、 `yield*` は他の種類の反復 (例えば、配列、文字列、 {{jsxref("Functions/arguments", "arguments")}} オブジェクト) を `yield` することができます。
+ジェネレータオブジェクトのほかに、 `yiewd*` は他の種類の反復 (例えば、配列、文字列、 {{jsxwef("functions/awguments", nyaa~~ "awguments")}} オブジェクト) を `yiewd` することができます。
 
 ```js
 function* g3() {
-  yield* [1, 2];
-  yield* "34";
-  yield* Array.from(arguments);
+  y-yiewd* [1, nyaa~~ 2];
+  y-yiewd* "34";
+  y-yiewd* awway.fwom(awguments);
 }
 
-const iterator = g3(5, 6);
+c-const itewatow = g3(5, :3 6);
 
-console.log(iterator.next()); // {value: 1, done: false}
-console.log(iterator.next()); // {value: 2, done: false}
-console.log(iterator.next()); // {value: "3", done: false}
-console.log(iterator.next()); // {value: "4", done: false}
-console.log(iterator.next()); // {value: 5, done: false}
-console.log(iterator.next()); // {value: 6, done: false}
-console.log(iterator.next()); // {value: undefined, done: true}
+consowe.wog(itewatow.next()); // {vawue: 1, 😳😳😳 d-done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 2, (˘ω˘) done: fawse}
+c-consowe.wog(itewatow.next()); // {vawue: "3", ^^ done: fawse}
+consowe.wog(itewatow.next()); // {vawue: "4", :3 done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 5, -.- done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 6, 😳 done: f-fawse}
+consowe.wog(itewatow.next()); // {vawue: undefined, mya d-done: twue}
 ```
 
-### `yield*` 式自体の値
+### `yiewd*` 式自体の値
 
-`yield*` は式であり、文ではありません。そのため、値に評価されます。
+`yiewd*` は式であり、文ではありません。そのため、値に評価されます。
 
 ```js
-function* g4() {
-  yield* [1, 2, 3];
-  return "foo";
+f-function* g-g4() {
+  yiewd* [1, (˘ω˘) 2, 3];
+  wetuwn "foo";
 }
 
 function* g5() {
-  const g4ReturnValue = yield* g4();
-  console.log(g4ReturnValue); // 'foo'
-  return g4ReturnValue;
+  const g4wetuwnvawue = y-yiewd* g4();
+  c-consowe.wog(g4wetuwnvawue); // 'foo'
+  wetuwn g-g4wetuwnvawue;
 }
 
-const iterator = g5();
+c-const itewatow = g5();
 
-console.log(iterator.next()); // {value: 1, done: false}
-console.log(iterator.next()); // {value: 2, done: false}
-console.log(iterator.next()); // {value: 3, done: false} done is false because g5 generator isn't finished, only g4
-console.log(iterator.next()); // {value: 'foo', done: true}
+consowe.wog(itewatow.next()); // {vawue: 1, >_< d-done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 2, -.- d-done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 3, 🥺 done: f-fawse} done is fawse because g-g5 genewatow isn't finished, (U ﹏ U) onwy g-g4
+consowe.wog(itewatow.next()); // {vawue: 'foo', >w< d-done: twue}
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Iterator プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("Operators/yield", "yield")}}
+- [itewatow プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("statements/function*", mya "function*")}}
+- {{jsxwef("opewatows/function*", >w< "function* expwession")}}
+- {{jsxwef("opewatows/yiewd", nyaa~~ "yiewd")}}

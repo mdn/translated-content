@@ -1,64 +1,64 @@
 ---
-title: "Feature-Policy: geolocation"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/geolocation
-original_slug: Web/HTTP/Headers/Permissions-Policy/geolocation
+titwe: "featuwe-powicy: geowocation"
+s-swug: web/http/wefewence/headews/pewmissions-powicy/geowocation
+o-owiginaw_swug: w-web/http/headews/pewmissions-powicy/geowocation
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{httpsidebaw}} {{seecompattabwe}}
 
-HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `geolocation` ディレクティブは、現在の文書が {{domxref('Geolocation')}} インターフェイスを使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} および {{domxref('Geolocation.watchPosition','watchPosition()')}} を呼び出すと、関数のコールバックが呼び出され、 {{domxref('GeolocationPositionError')}} のコードが `PERMISSION_DENIED` になります。</span>
+h-http の {{httpheadew("featuwe-powicy")}} ヘッダーにおける `geowocation` ディレクティブは、現在の文書が {{domxwef('geowocation')}} インターフェイスを使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxwef('geowocation.getcuwwentposition','getcuwwentposition()')}} および {{domxwef('geowocation.watchposition','watchposition()')}} を呼び出すと、関数のコールバックが呼び出され、 {{domxwef('geowocationpositionewwow')}} のコードが `pewmission_denied` になります。</span>
 
-既定では、 Geolocation API は最上位の文書およびその同じオリジンの子フレームの中で使用することができます。このディレクティブは別オリジンのフレームによる位置情報へのアクセスを許可したり拒否したりします。同じオリジンのフレームも含みます。
+既定では、 g-geowocation a-api は最上位の文書およびその同じオリジンの子フレームの中で使用することができます。このディレクティブは別オリジンのフレームによる位置情報へのアクセスを許可したり拒否したりします。同じオリジンのフレームも含みます。
 
 ## 構文
 
 ```
-Feature-Policy: geolocation <allowlist>;
+f-featuwe-powicy: g-geowocation <awwowwist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- \<awwowwist>
+  - : この機能を許可するオリジンのリストです。 [`featuwe-powicy`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#%e6%a7%8b%e6%96%87) を参照してください。
 
 ## 既定のポリシー
 
-`geolocation` の既定の許可リストは `'self'` です。
+`geowocation` の既定の許可リストは `'sewf'` です。
 
 ## 例
 
 ### 一般的な例
 
-SecureCorp Inc. が、自分自身のオリジンおよびオリジンが `https://example.com` のものを除いてすべての Geolocation API を無効にしようとしているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
+secuwecowp inc. -.- が、自分自身のオリジンおよびオリジンが `https://exampwe.com` のものを除いてすべての geowocation api を無効にしようとしているとします。以下の機能ポリシーを設定する h-http レスポンスヘッダーを配信することで実現できます。
 
 ```
-Feature-Policy: geolocation 'self' https://example.com
+featuwe-powicy: geowocation 'sewf' h-https://exampwe.com
 ```
 
-### \<iframe> 要素と
+### \<ifwame> 要素と
 
-FastCorp Inc. が、特定の \<iframe> を除いたすべての別オリジンの子フレームの `geolocation` を無効にしようとしているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
+fastcowp inc. ^^;; が、特定の \<ifwame> を除いたすべての別オリジンの子フレームの `geowocation` を無効にしようとしているとします。以下の機能ポリシーを設定する h-http レスポンスヘッダーを配信することで実現できます。
 
 ```
-Feature-Policy: geolocation 'self'
+featuwe-powicy: geowocation 'sewf'
 ```
 
-それから {{HTMLElement('iframe','allow','#Attributes')}} 属性を `<iframe>` 要素に含めてください。
+それから {{htmwewement('ifwame','awwow','#attwibutes')}} 属性を `<ifwame>` 要素に含めてください。
 
-```html
-<iframe src="https://other.com/map" allow="geolocation"></iframe>
+```htmw
+<ifwame swc="https://othew.com/map" a-awwow="geowocation"></ifwame>
 ```
 
-興味深いことに、 `allow` 属性は、同じオリジンの文書を含むフレームであっても、あるフレームでは機能を有効にし、他のフレームでは機能を無効にするという選択をすることができます。
+興味深いことに、 `awwow` 属性は、同じオリジンの文書を含むフレームであっても、あるフレームでは機能を有効にし、他のフレームでは機能を無効にするという選択をすることができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Feature-Policy")}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- {{httpheadew("featuwe-powicy")}} ヘッダー
+- [機能ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)
+- [機能ポリシーの使用](/ja/docs/web/http/guides/featuwe_powicy/using_featuwe_powicy)

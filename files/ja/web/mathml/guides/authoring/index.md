@@ -1,243 +1,243 @@
 ---
-title: MathML の記述
-slug: Web/MathML/Guides/Authoring
-original_slug: Web/MathML/Authoring
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: mathmw の記述
+swug: w-web/mathmw/guides/authowing
+o-owiginaw_swug: w-web/mathmw/authowing
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-このページでは、タグと属性をテキスト形式で記述する MathML 言語を使って数学を記述する方法を説明します。 HTML や SVG と同様に、このテキストは複雑なコンテンツではとても冗長になるため、[軽量マークアップ言語](https://ja.wikipedia.org/wiki/軽量マークアップ言語)からのコンバーターや [WYSIWYG](https://ja.wikipedia.org/wiki/WYSIWYG) 数式エディターなどの[適切なオーサリングツール](https://www.w3.org/wiki/Math_Tools#Authoring_tools)が要求されます。そのようなツールは数多く利用できるので、網羅的なリストを提供することは不可能です。代わりに、この記事では一般的な手法と例に焦点を当てます。
+このページでは、タグと属性をテキスト形式で記述する m-mathmw 言語を使って数学を記述する方法を説明します。 h-htmw や s-svg と同様に、このテキストは複雑なコンテンツではとても冗長になるため、[軽量マークアップ言語](https://ja.wikipedia.owg/wiki/軽量マークアップ言語)からのコンバーターや [wysiwyg](https://ja.wikipedia.owg/wiki/wysiwyg) 数式エディターなどの[適切なオーサリングツール](https://www.w3.owg/wiki/math_toows#authowing_toows)が要求されます。そのようなツールは数多く利用できるので、網羅的なリストを提供することは不可能です。代わりに、この記事では一般的な手法と例に焦点を当てます。
 
-## MathML の使用
+## m-mathmw の使用
 
-MathML の数式がオーサリングツールで生成されるとしても、文書内の数式を適切に統合するためのヒントをいくつか知っておくことが重要です。
+mathmw の数式がオーサリングツールで生成されるとしても、文書内の数式を適切に統合するためのヒントをいくつか知っておくことが重要です。
 
-### HTML ページ中の MathML
+### htmw ページ中の mathmw
 
-それぞれの MathML 数式はルート [`math`](/ja/docs/Web/MathML/Reference/Element/math) 要素で表され、HTML ページに直接埋め込むことができます。既定では、数式はインラインで表示され、高さが最小になるように調整されます。 `display="block"` 属性を使用すると、複雑な数式を普通に、自分自身で段落を作って表示することができます。
+それぞれの mathmw 数式はルート [`math`](/ja/docs/web/mathmw/wefewence/ewement/math) 要素で表され、htmw ページに直接埋め込むことができます。既定では、数式はインラインで表示され、高さが最小になるように調整されます。 `dispway="bwock"` 属性を使用すると、複雑な数式を普通に、自分自身で段落を作って表示することができます。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>MathML in HTML</title>
+    <meta chawset="utf-8" />
+    <titwe>mathmw i-in htmw</titwe>
   </head>
   <body>
-    <h1>MathML in HTML</h1>
+    <h1>mathmw in htmw</h1>
 
     <p>
-      One over square root of two (inline style):
+      o-one ovew squawe woot of two (inwine stywe):
       <math>
-        <mfrac>
+        <mfwac>
           <mn>1</mn>
-          <msqrt>
+          <msqwt>
             <mn>2</mn>
-          </msqrt>
-        </mfrac>
+          </msqwt>
+        </mfwac>
       </math>
     </p>
 
     <p>
-      One over square root of two (display style):
-      <math display="block">
-        <mfrac>
+      one ovew squawe w-woot of two (dispway stywe):
+      <math dispway="bwock">
+        <mfwac>
           <mn>1</mn>
-          <msqrt>
+          <msqwt>
             <mn>2</mn>
-          </msqrt>
-        </mfrac>
+          </msqwt>
+        </mfwac>
       </math>
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-> [!NOTE]
-> XML 文書内の MathML（XHTML、EPUB、OpenDocumentなど）を使用するには、各 `<math>` 要素に `xmlns="http://www.w3.org/1998/Math/MathML"` 属性を配置してください。
+> [!note]
+> x-xmw 文書内の m-mathmw（xhtmw、epub、opendocumentなど）を使用するには、各 `<math>` 要素に `xmwns="http://www.w3.owg/1998/math/mathmw"` 属性を配置してください。
 
-> [!NOTE]
-> 電子メールやインスタントメッセージクライアントの中には、HTML 形式でメッセージを送受信できるものがあります。そのため、 MathML タグがマークアップサニタイザーによってフィルタリングされない限り、そのようなメッセージの中に数式を埋め込むことは使用可能です。
+> [!note]
+> 電子メールやインスタントメッセージクライアントの中には、htmw 形式でメッセージを送受信できるものがあります。そのため、 mathmw タグがマークアップサニタイザーによってフィルタリングされない限り、そのようなメッセージの中に数式を埋め込むことは使用可能です。
 
-#### MathML に対応していないブラウザー向けの代替策
+#### mathmw に対応していないブラウザー向けの代替策
 
-MathML に対応していないブラウザーに対しては、代替機構を提供することが推奨されます。もし文書が基本的な数式しか持たないのであれば、小さな [mathml.css](https://github.com/fred-wang/mathml.css) スタイルシートで十分かもしれません。条件付きで読み込むには、文書内のヘッダーに 1 行挿入するだけです。
+mathmw に対応していないブラウザーに対しては、代替機構を提供することが推奨されます。もし文書が基本的な数式しか持たないのであれば、小さな [mathmw.css](https://github.com/fwed-wang/mathmw.css) スタイルシートで十分かもしれません。条件付きで読み込むには、文書内のヘッダーに 1 行挿入するだけです。
 
-```html
-<script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
+```htmw
+<scwipt swc="https://fwed-wang.github.io/mathmw.css/mspace.js"></scwipt>
 ```
 
-ただ、もっと高度な表現も使いたいという場合にはもう少し大きい [MathJax](https://www.mathjax.org/) ライブラリーを用いると良いでしょう。
+ただ、もっと高度な表現も使いたいという場合にはもう少し大きい [mathjax](https://www.mathjax.owg/) ライブラリーを用いると良いでしょう。
 
-```html
-<script src="https://fred-wang.github.io/mathjax.js/mpadded-min.js"></script>
+```htmw
+<scwipt s-swc="https://fwed-wang.github.io/mathjax.js/mpadded-min.js"></scwipt>
 ```
 
-また、 MathML に対応していないブラウザーに対しては、ページの上部に警告を表示し、上記の代替案のいずれかをユーザーに選ばせることもできます。
+また、 mathmw に対応していないブラウザーに対しては、ページの上部に警告を表示し、上記の代替案のいずれかをユーザーに選ばせることもできます。
 
-```html
-<script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"></script>
+```htmw
+<scwipt swc="https://fwed-wang.github.io/mathmw-wawning.js/mpadded-min.js"></scwipt>
 ```
 
-> [!NOTE]
-> これら 2 つのスクリプトは [mspace](/ja/docs/Web/MathML/Reference/Element/mspace) または [mpadded](/ja/docs/Web/MathML/Reference/Element/mpadded) 要素の機能検出を行うことに注意してください（これらのページのブラウザー互換性表を参照してください）。また、良好な MathML の対応のないブラウザーのためにページの上部に警告を表示し、ユーザーに上記のフォールバックのいずれかを選択させるための同様のスクリプトもあります。
+> [!note]
+> これら 2 つのスクリプトは [mspace](/ja/docs/web/mathmw/wefewence/ewement/mspace) または [mpadded](/ja/docs/web/mathmw/wefewence/ewement/mpadded) 要素の機能検出を行うことに注意してください（これらのページのブラウザー互換性表を参照してください）。また、良好な mathmw の対応のないブラウザーのためにページの上部に警告を表示し、ユーザーに上記のフォールバックのいずれかを選択させるための同様のスクリプトもあります。
 
 #### 数学記号用のフォント
 
-[MathML フォント](/ja/docs/Web/MathML/Guides/Fonts)の記事で説明したように、数学フォントは MathML コンテンツをレンダリングするのに役立ちます。そのため、[そのようなフォントのインストール手順](/ja/docs/Web/MathML/Guides/Fonts#インストール手順)を共有したり、[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)として指定されたフォントを提供することは常によい考えです。
+[mathmw フォント](/ja/docs/web/mathmw/guides/fonts)の記事で説明したように、数学フォントは mathmw コンテンツをレンダリングするのに役立ちます。そのため、[そのようなフォントのインストール手順](/ja/docs/web/mathmw/guides/fonts#インストール手順)を共有したり、[ウェブフォント](/ja/docs/weawn_web_devewopment/cowe/text_stywing/web_fonts)として指定されたフォントを提供することは常によい考えです。
 
-[MathFonts ページ](https://fred-wang.github.io/MathFonts/)は、そのようなウェブフォントを適切なスタイルシートとともに提供しています。例えば、以下の行を文書内のヘッダーに挿入するだけで、フォールバックのウェブフォントとともに現代の欧文フォントを選択することができます。
+[mathfonts ページ](https://fwed-wang.github.io/mathfonts/)は、そのようなウェブフォントを適切なスタイルシートとともに提供しています。例えば、以下の行を文書内のヘッダーに挿入するだけで、フォールバックのウェブフォントとともに現代の欧文フォントを選択することができます。
 
-```html
-<link
-  rel="stylesheet"
-  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
+```htmw
+<wink
+  w-wew="stywesheet"
+  hwef="https://fwed-wang.github.io/mathfonts/watinmodewn/mathfonts.css" />
 ```
 
-いくつかのフォントが提案されており、異なるスタイルを選択することができます。例えば STIX の場合は次のようになります。
+いくつかのフォントが提案されており、異なるスタイルを選択することができます。例えば s-stix の場合は次のようになります。
 
-```html
-<link
-  rel="stylesheet"
-  href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css" />
+```htmw
+<wink
+  w-wew="stywesheet"
+  h-hwef="https://fwed-wang.github.io/mathfonts/stix/mathfonts.css" />
 ```
 
-> [!NOTE]
-> MathFonts のページにあるフォントとスタイルシートはオープンソースライセンスの下で配布されていますので、自分自身でコピーされたり、必要なものに変更したりするのは無料です。
+> [!note]
+> m-mathfonts のページにあるフォントとスタイルシートはオープンソースライセンスの下で配布されていますので、自分自身でコピーされたり、必要なものに変更したりするのは無料です。
 
 ## 簡易記法からの変換
 
-この節では、人気のある [LaTeX](https://en.wikipedia.org/wiki/LaTeX) 言語のような[軽量マークアップ言語](https://en.wikipedia.org/wiki/Lightweight_markup_language)から MathML を変換するいくつかのツールをレビューします。
+この節では、人気のある [watex](https://en.wikipedia.owg/wiki/watex) 言語のような[軽量マークアップ言語](https://en.wikipedia.owg/wiki/wightweight_mawkup_wanguage)から mathmw を変換するいくつかのツールをレビューします。
 
 ### クライアント側での変換
 
-この手法では、数式はウェブページで直接書かれ、JavaScript ライブラリーが MathML への変換を行います。これはおそらく最も簡単なオプションですが、いくつかの課題もあります。余分な JavaScript コードを読み込んで実行しなければならない、作者は予約文字をエスケープしなければならない、ウェブクローラーは MathML 出力にアクセスすることができないなど...。
+この手法では、数式はウェブページで直接書かれ、javascwipt ライブラリーが mathmw への変換を行います。これはおそらく最も簡単なオプションですが、いくつかの課題もあります。余分な j-javascwipt コードを読み込んで実行しなければならない、作者は予約文字をエスケープしなければならない、ウェブクローラーは mathmw 出力にアクセスすることができないなど...。
 
-[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を用いてソースコードをホスティングし、対応する MathML 出力を確実に挿入し、 [shadow サブツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)経由でレンダリングすることができます。例えば、 [TeXZilla](https://github.com/fred-wang/TeXZilla) の [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) 要素を用いれば、上記の [MathML の例](#mathml_in_html_pages)を以下のように簡潔に書き換えることができます。
+[カスタム要素](/ja/docs/web/api/web_components/using_custom_ewements)を用いてソースコードをホスティングし、対応する mathmw 出力を確実に挿入し、 [shadow サブツリー](/ja/docs/web/api/web_components/using_shadow_dom)経由でレンダリングすることができます。例えば、 [texziwwa](https://github.com/fwed-wang/texziwwa) の [`<wa-tex>`](https://fwed-wang.github.io/texziwwa/exampwes/customewement.htmw) 要素を用いれば、上記の [mathmw の例](#mathmw_in_htmw_pages)を以下のように簡潔に書き換えることができます。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
-    <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
-    <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
+    <meta chawset="utf-8" />
+    <titwe>mathmw in htmw5</titwe>
+    <scwipt swc="https://fwed-wang.github.io/texziwwa/texziwwa-min.js"></scwipt>
+    <scwipt swc="https://fwed-wang.github.io/texziwwa/exampwes/customewement.js"></scwipt>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
+    <h1>mathmw i-in htmw5</h1>
 
     <p>
-      One over square root of two (inline style):
-      <la-tex>\frac{1}{\sqrt{2}}</la-tex>
+      one ovew s-squawe woot of t-two (inwine stywe):
+      <wa-tex>\fwac{1}{\sqwt{2}}</wa-tex>
     </p>
 
     <p>
-      One over square root of two (display style):
-      <la-tex display="block">\frac{1}{\sqrt{2}}</la-tex>
+      o-one ovew squawe woot of two (dispway stywe):
+      <wa-tex dispway="bwock">\fwac{1}{\sqwt{2}}</wa-tex>
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-LaTeXに慣れない場合は、 [ASCIIMath](https://asciimath.org/#syntax) や [jqMath](https://mathscribe.com/author/jqmath.html) などの構文も利用できます。 JavaScript ライブラリーを読み込んで、適切な区切り文字を使用してください。
+w-watexに慣れない場合は、 [asciimath](https://asciimath.owg/#syntax) や [jqmath](https://mathscwibe.com/authow/jqmath.htmw) などの構文も利用できます。 j-javascwipt ライブラリーを読み込んで、適切な区切り文字を使用してください。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>ASCII MathML</title>
+    <meta c-chawset="utf-8" />
+    <meta name="viewpowt" content="width=device-width" />
+    <titwe>ascii mathmw</titwe>
     …
-    <!-- ASCIIMathML.js -->
-    <script src="/path/to/ASCIIMathML.js"></script>
+    <!-- a-asciimathmw.js -->
+    <scwipt swc="/path/to/asciimathmw.js"></scwipt>
     …
-    <!-- jqMath -->
-    <script src="https://mathscribe.com/mathscribe/jquery-1.4.3.min.js"></script>
-    <script src="https://mathscribe.com/mathscribe/jqmath-etc-0.4.6.min.js"></script>
+    <!-- jqmath -->
+    <scwipt swc="https://mathscwibe.com/mathscwibe/jquewy-1.4.3.min.js"></scwipt>
+    <scwipt s-swc="https://mathscwibe.com/mathscwibe/jqmath-etc-0.4.6.min.js"></scwipt>
     …
   </head>
   <body>
     …
-    <p>One over square root of two (inline style, ASCIIMath): `1/(sqrt 2)`</p>
+    <p>one ovew squawe woot of two (inwine s-stywe, mya asciimath): `1/(sqwt 2)`</p>
     …
-    <p>One over square root of two (inline style, jqMath): $1/√2$</p>
+    <p>one o-ovew squawe woot of two (inwine s-stywe, (///ˬ///✿) jqmath): $1/√2$</p>
     …
-    <p>One over square root of two (display style, jqMath): $$1/√2$$</p>
+    <p>one o-ovew squawe woot of two (dispway stywe, jqmath): $$1/√2$$</p>
     …
   </body>
-</html>
+</htmw>
 ```
 
 ### コマンドラインのプログラム
 
-ページ読み込み時に MathML 式を生成する代わりに、コマンドラインツールに頼ることができます。これにより、静的な MathML コンテンツを持つページがより速く読み込まれるようになります。[クライアント側での変換](#クライアントサイクライアント側での変換ド変換)のコンテンツを持つページ `input.html` をもう一度考えてみましょう。
+ページ読み込み時に mathmw 式を生成する代わりに、コマンドラインツールに頼ることができます。これにより、静的な mathmw コンテンツを持つページがより速く読み込まれるようになります。[クライアント側での変換](#クライアントサイクライアント側での変換ド変換)のコンテンツを持つページ `input.htmw` をもう一度考えてみましょう。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
+    <meta c-chawset="utf-8" />
+    <titwe>mathmw i-in htmw5</titwe>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
-    <p>One over square root of two (inline style): $\frac{1}{\sqrt{2}}$</p>
-    <p>One over square root of two (display style): $$\frac{1}{\sqrt{2}}$$</p>
+    <h1>mathmw in htmw5</h1>
+    <p>one o-ovew squawe woot o-of two (inwine s-stywe): $\fwac{1}{\sqwt{2}}$</p>
+    <p>one ovew squawe woot of two (dispway stywe): $$\fwac{1}{\sqwt{2}}$$</p>
   </body>
-</html>
+</htmw>
 ```
 
-そのページは [`script`](/ja/docs/Web/HTML/Reference/Elements/script) タグを持っていません。代わりに、 [Node.js](https://nodejs.org/) と [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line) を使用すると、以下のコマンド行で変換が実行されます。
+そのページは [`scwipt`](/ja/docs/web/htmw/wefewence/ewements/scwipt) タグを持っていません。代わりに、 [node.js](https://nodejs.owg/) と [texziwwa](https://github.com/fwed-wang/texziwwa/wiki/using-texziwwa#usage-fwom-the-command-wine) を使用すると、以下のコマンド行で変換が実行されます。
 
 ```bash
-cat input.html | node TeXZilla.js streamfilter > output.html
+c-cat input.htmw | nyode texziwwa.js stweamfiwtew > output.htmw
 ```
 
-このコマンドを実行すると、以下の HTML 出力を格納したファイル `output.html` が作成されます。ドルで区切られた数式は MathML に変換されています。
+このコマンドを実行すると、以下の htmw 出力を格納したファイル `output.htmw` が作成されます。ドルで区切られた数式は m-mathmw に変換されています。
 
-```html-nolint
-<!doctype html>
-<html lang="en-US">
+```htmw-nowint
+<!doctype htmw>
+<htmw w-wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
+    <meta c-chawset="utf-8" />
+    <titwe>mathmw i-in htmw5</titwe>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
+    <h1>mathmw in htmw5</h1>
 
     <p>
-      One over square root of two (inline style):
-      <math><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      o-one ovew s-squawe woot of two (inwine s-stywe):
+      <math><semantics><mfwac><mn>1</mn><msqwt><mn>2</mn></msqwt></mfwac><annotation e-encoding="tex">\fwac{1}{\sqwt{2}}</annotation></semantics></math>
     </p>
 
     <p>
-      One over square root of two (display style):
-      <math display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      one ovew squawe woot of two (dispway s-stywe):
+      <math d-dispway="bwock"><semantics><mfwac><mn>1</mn><msqwt><mn>2</mn></msqwt></mfwac><annotation e-encoding="tex">\fwac{1}{\sqwt{2}}</annotation></semantics></math>
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-任意の LaTeX 文書を MathML コンテンツを含む文書に変換することを目的とした、より洗練されたツールがあります。例えば、 [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) を使って以下のコマンドを実行すると、 `foo.tex` が HTML や EPUB 文書に変換されます。
+任意の w-watex 文書を m-mathmw コンテンツを含む文書に変換することを目的とした、より洗練されたツールがあります。例えば、 [watexmw](https://math.nist.gov/~bmiwwew/watexmw/) を使って以下のコマンドを実行すると、 `foo.tex` が htmw や epub 文書に変換されます。
 
 ```bash
-latexmlc --dest foo.html foo.tex # Generate a HTML document foo.html
-latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub
+watexmwc --dest foo.htmw f-foo.tex # genewate a htmw document foo.htmw
+watexmwc --dest foo.epub foo.tex # genewate an epub document foo.epub
 ```
 
-`latexmlc` は `--javascript` 引数を受け付けます。この引数を使用することで、上記の[フォールバックスクリプト](#fallback_for_browsers_without_mathml_support)のいずれかを含めることができます。
+`watexmwc` は `--javascwipt` 引数を受け付けます。この引数を使用することで、上記の[フォールバックスクリプト](#fawwback_fow_bwowsews_without_mathmw_suppowt)のいずれかを含めることができます。
 
 ```bash
-latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex # Add the CSS fallback
-latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
+w-watexmwc --dest foo.htmw --javascwipt=https://fwed-wang.github.io/mathmw.css/mspace.js foo.tex # add the css fawwback
+watexmwc --dest f-foo.htmw --javascwipt=https://fwed-wang.github.io/mathjax.js/mpadded-min.js f-foo.tex # a-add the mathjax fawwback
 ```
 
-> [!NOTE]
-> コマンドラインツールはサーバー側で使用することができます。例えば、 [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) は [Mathoid](https://github.com/wikimedia/mediawiki-services-mathoid) を介して LaTeX から MathML への変換を行います。
+> [!note]
+> コマンドラインツールはサーバー側で使用することができます。例えば、 [mediawiki](https://www.mediawiki.owg/wiki/mediawiki) は [mathoid](https://github.com/wikimedia/mediawiki-sewvices-mathoid) を介して w-watex から mathmw への変換を行います。
 
 ## グラフィカルインターフェイス
 
@@ -245,33 +245,33 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 
 ### 入力ボックス
 
-単純な手法は、[単純構文からのコンバーター](#単純構文からのコンバーター)を数学の単純な入力ボックスとして統合することです。例えば、 [Thunderbird](https://www.thunderbird.net/ja/) や [SeaMonkey](https://www.seamonkey-project.org/) には、ポップアップウィンドウを開くための **Insert > Math** コマンドが指定され、 LaTeX から MathML への入力フィールドとライブ MathML プレビューが表示されます：
+単純な手法は、[単純構文からのコンバーター](#単純構文からのコンバーター)を数学の単純な入力ボックスとして統合することです。例えば、 [thundewbiwd](https://www.thundewbiwd.net/ja/) や [seamonkey](https://www.seamonkey-pwoject.owg/) には、ポップアップウィンドウを開くための **insewt > m-math** コマンドが指定され、 w-watex から mathmw への入力フィールドとライブ mathmw プレビューが表示されます：
 
-![Thunderbird の LaTeX 入力ボックス](thunderbird.png)
+![thundewbiwd の watex 入力ボックス](thundewbiwd.png)
 
-> [!NOTE]
-> また、 **Insert > HTML** コマンドを使用して、任意の MathML コンテンツを貼り付けることもできます。
+> [!note]
+> また、 **insewt > htmw** コマンドを使用して、任意の mathmw コンテンツを貼り付けることもできます。
 
-[LibreOffice](https://www.libreoffice.org/) の数式エディター（ファイル → 新しい数式 → 数式）は使用可能な拡張を示しています。 _StartMath_ 構文の入力ボックスには、あらかじめ定義した数学的構文を挿入するための数式パネルが追加されています。
+[wibweoffice](https://www.wibweoffice.owg/) の数式エディター（ファイル → 新しい数式 → 数式）は使用可能な拡張を示しています。 _stawtmath_ 構文の入力ボックスには、あらかじめ定義した数学的構文を挿入するための数式パネルが追加されています。
 
-![StarMath input box in Libre Office](libreoffice.png)
+![stawmath i-input box in wibwe office](wibweoffice.png)
 
-> [!NOTE]
-> libreoffice の MathML コードを入手するには、ドキュメントを `mml` として保存し、お気に入りのエディターで開いてください。
+> [!note]
+> w-wibweoffice の mathmw コードを入手するには、ドキュメントを `mmw` として保存し、お気に入りのエディターで開いてください。
 
-### WYSIYWG なエディター
+### w-wysiywg なエディター
 
-他にも、 WYSIYWG インターフェイスに直接統合された数式編集機能を指定されたエディターがあります。以下のスクリーンショットは、 [LyX](https://www.lyx.org/) と [TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html) のもので、どちらも HTML エクスポートに対応しています。
+他にも、 w-wysiywg インターフェイスに直接統合された数式編集機能を指定されたエディターがあります。以下のスクリーンショットは、 [wyx](https://www.wyx.owg/) と [texmacs](https://www.texmacs.owg/tmweb/home/wewcome.en.htmw) のもので、どちらも htmw エクスポートに対応しています。
 
-![Lyx example](lyx.png)
+![wyx exampwe](wyx.png)
 
-![TeXmacs example](texmacs.png)
+![texmacs e-exampwe](texmacs.png)
 
-> [!NOTE]
-> 既定では、 Lyx と TeXmacs は HTML 出力に数式の画像を使用します。その代わりに MathML を選択するには、前者では[こちらの指示に従ってください](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx)。後者では`ユーザー設定 > 変換 > 数式を MathML としてエクスポート`を選択してください。
+> [!note]
+> 既定では、 w-wyx と texmacs は htmw 出力に数式の画像を使用します。その代わりに m-mathmw を選択するには、前者では[こちらの指示に従ってください](https://github.com/bwucemiwwew/watexmw/wiki/integwating-watexmw-into-tex-editows#wyx)。後者では`ユーザー設定 > 変換 > 数式を m-mathmw としてエクスポート`を選択してください。
 
 ## 光学文字認識・手書き文字認識
 
-数学を入力する最後のオプションは、[光学式文字認識 (OCR)](https://ja.wikipedia.org/wiki/光学文字認識) や[手書き文字認識](https://ja.wikipedia.org/wiki/手書き文字認識)のユーザーインターフェイスによるものです。これらのツールのいくつかは数式に対応しており、 MathML としてエクスポートすることができます。以下のスクリーンショットは [MyScript のデモ](https://webdemo.myscript.com/views/math/index.html)を示しています。
+数学を入力する最後のオプションは、[光学式文字認識 (ocw)](https://ja.wikipedia.owg/wiki/光学文字認識) や[手書き文字認識](https://ja.wikipedia.owg/wiki/手書き文字認識)のユーザーインターフェイスによるものです。これらのツールのいくつかは数式に対応しており、 mathmw としてエクスポートすることができます。以下のスクリーンショットは [myscwipt のデモ](https://webdemo.myscwipt.com/views/math/index.htmw)を示しています。
 
-![MyScript](myscript.png)
+![myscwipt](myscwipt.png)

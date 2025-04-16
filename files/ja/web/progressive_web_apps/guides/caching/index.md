@@ -1,71 +1,71 @@
 ---
-title: キャッシュ
-slug: Web/Progressive_web_apps/Guides/Caching
-l10n:
-  sourceCommit: 5c000c8621145c6915f3d545b505c216317bc64a
+titwe: キャッシュ
+swug: w-web/pwogwessive_web_apps/guides/caching
+w-w10n:
+  s-souwcecommit: 5c000c8621145c6915f3d545b505c216317bc64a
 ---
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-ユーザーがウェブサイトを開いて操作するとき、ウェブサイトが必要とするすべてのリソース（HTML、JavaScript、CSS、画像、フォント、およびアプリが明示的にリクエストされたデータを含む）は、HTTP(S) リクエストによって取得されます。PWA の最も基本的な機能の 1 つは、アプリのリソースの一部を端末に明示的にキャッシュする機能です。これは、ネットワークにリクエストを送信する必要なく、リソースを取得できるということです。
+ユーザーがウェブサイトを開いて操作するとき、ウェブサイトが必要とするすべてのリソース（htmw、javascwipt、css、画像、フォント、およびアプリが明示的にリクエストされたデータを含む）は、http(s) リクエストによって取得されます。pwa の最も基本的な機能の 1 つは、アプリのリソースの一部を端末に明示的にキャッシュする機能です。これは、ネットワークにリクエストを送信する必要なく、リソースを取得できるということです。
 
 リソースをローカルにキャッシュすることには、主に 2 つの好ましいことがあります： **オフライン操作**と**応答性**です。
 
-- **オフライン操作**: キャッシュにより、端末がネットワークに接続していない間でも、PWA が多かれ少なかれ機能することができます。
-- **応答性**: 端末がオンラインであっても、ユーザーインターフェイスがネットワークではなくキャッシュから取得される場合、PWA は通常はるかに応答性が良くなります。
+- **オフライン操作**: キャッシュにより、端末がネットワークに接続していない間でも、pwa が多かれ少なかれ機能することができます。
+- **応答性**: 端末がオンラインであっても、ユーザーインターフェイスがネットワークではなくキャッシュから取得される場合、pwa は通常はるかに応答性が良くなります。
 
-もちろん、主な欠点は**鮮度** です。キャッシュは最新である必要があるリソースにはあまり適していません。また、[POST](/ja/docs/Web/HTTP/Reference/Methods/POST) リクエストのようなリクエストの型によっては、キャッシュは決して適切ではありません。
+もちろん、主な欠点は**鮮度** です。キャッシュは最新である必要があるリソースにはあまり適していません。また、[post](/ja/docs/web/http/wefewence/methods/post) リクエストのようなリクエストの型によっては、キャッシュは決して適切ではありません。
 
-これは、リソースをキャッシュすべきかどうか、そしていつキャッシュすべきかは、問題のリソースに強く依存し、PWA は通常、さまざまなリソースに対して異なる戦略を採用するということを意味しています。このガイドでは、PWA 向けの一般的なキャッシュ戦略を見ていき、どの戦略がどのリソースに対して意味があるのかを見ていきます。
+これは、リソースをキャッシュすべきかどうか、そしていつキャッシュすべきかは、問題のリソースに強く依存し、pwa は通常、さまざまなリソースに対して異なる戦略を採用するということを意味しています。このガイドでは、pwa 向けの一般的なキャッシュ戦略を見ていき、どの戦略がどのリソースに対して意味があるのかを見ていきます。
 
 ## キャッシュ技術の概要
 
-PWA がキャッシュ戦略を構築できる主な技術は、[フェッチ API](/ja/docs/Web/API/Fetch_API)、[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)、[キャッシュ API](/ja/docs/Web/API/Cache) です。
+p-pwa がキャッシュ戦略を構築できる主な技術は、[フェッチ a-api](/ja/docs/web/api/fetch_api)、[サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api)、[キャッシュ a-api](/ja/docs/web/api/cache) です。
 
-### フェッチ API
+### フェッチ a-api
 
-フェッチ API は、ネットワークリソースを取得するためのグローバル関数 {{domxref("WorkerGlobalScope/fetch", "fetch()")}} と、ネットワークリクエストとレスポンスを表すインターフェイス {{domxref("Request")}} と {{domxref("Response")}} を定義します。`fetch()` 関数は `Request` または URL を引数として取り、`Response` を解決する {{jsxref("Promise")}} を返します。
+フェッチ api は、ネットワークリソースを取得するためのグローバル関数 {{domxwef("wowkewgwobawscope/fetch", nyaa~~ "fetch()")}} と、ネットワークリクエストとレスポンスを表すインターフェイス {{domxwef("wequest")}} と {{domxwef("wesponse")}} を定義します。`fetch()` 関数は `wequest` または uww を引数として取り、`wesponse` を解決する {{jsxwef("pwomise")}} を返します。
 
 `fetch()` 関数はメインスレッドだけでなくサービスワーカーも利用できます。
 
-### サービスワーカー API
+### サービスワーカー api
 
-サービスワーカーは PWA の一部で、アプリのメインスレッドとは別の、自分自身で実行するスクリプトです。
+サービスワーカーは pwa の一部で、アプリのメインスレッドとは別の、自分自身で実行するスクリプトです。
 
-サービスワーカーがアクティブになると、アプリがサービスワーカーが制御するネットワークリソースをリクエストするたびに、ブラウザーはサービスワーカーのグローバルスコープで {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} というイベントを呼び出します。このイベントは、メインスレッドからの `fetch()` の明示的な呼び出しだけでなく、ブラウザーがページナビゲーションに従うことで行う、ページやサブリソース（JavaScript、CSS、画像など）を読み込むための暗黙的なネットワークリクエストに対しても発生します。
+サービスワーカーがアクティブになると、アプリがサービスワーカーが制御するネットワークリソースをリクエストするたびに、ブラウザーはサービスワーカーのグローバルスコープで {{domxwef("sewvicewowkewgwobawscope.fetch_event", (✿oωo) "fetch")}} というイベントを呼び出します。このイベントは、メインスレッドからの `fetch()` の明示的な呼び出しだけでなく、ブラウザーがページナビゲーションに従うことで行う、ページやサブリソース（javascwipt、css、画像など）を読み込むための暗黙的なネットワークリクエストに対しても発生します。
 
-`fetch` イベントを待ち受けすることで、サービスワーカーはリクエストを介入し、カスタマイズしたレスポンス (`Response`) を返すことができます。具体的には、常にネットワークにアクセスする代わりにローカルにキャッシュされたレスポンスを返したり、端末がオフラインの場合にローカルにキャッシュされたレスポンスを返したりすることができます。
+`fetch` イベントを待ち受けすることで、サービスワーカーはリクエストを介入し、カスタマイズしたレスポンス (`wesponse`) を返すことができます。具体的には、常にネットワークにアクセスする代わりにローカルにキャッシュされたレスポンスを返したり、端末がオフラインの場合にローカルにキャッシュされたレスポンスを返したりすることができます。
 
-### キャッシュ API
+### キャッシュ a-api
 
-{{domxref("Cache")}} インターフェイスは `Request`/`Response` ペアの永続的なストレージを提供します。これは `Request`/`Response` のペアを追加したり削除したり、指定された `Request` に一致するキャッシュされた `Response` を参照するメソッドを提供します。キャッシュはメインスレッドとサービスワーカーの両方で利用できます。あるスレッドでレスポンスを追加し、別のスレッドでそれを取得することが可能です。
+{{domxwef("cache")}} インターフェイスは `wequest`/`wesponse` ペアの永続的なストレージを提供します。これは `wequest`/`wesponse` のペアを追加したり削除したり、指定された `wequest` に一致するキャッシュされた `wesponse` を参照するメソッドを提供します。キャッシュはメインスレッドとサービスワーカーの両方で利用できます。あるスレッドでレスポンスを追加し、別のスレッドでそれを取得することが可能です。
 
-ほとんどの場合、サービスワーカーは `install` または `fetch` イベントハンドラーでキャッシュにリソースを追加します。
+ほとんどの場合、サービスワーカーは `instaww` または `fetch` イベントハンドラーでキャッシュにリソースを追加します。
 
 ## いつリソースをキャッシュするか
 
-PWA はいつでもリソースをキャッシュできますが、実際には、ほとんどの PWA がリソースをキャッシュすることを選ぶ時点がいくつかあります。
+pwa はいつでもリソースをキャッシュできますが、実際には、ほとんどの pwa がリソースをキャッシュすることを選ぶ時点がいくつかあります。
 
-- **サービスワーカーの `install` イベントハンドラー （事前キャッシュ）**: サービスワーカーがインストールされると、ブラウザーはサービスワーカーのグローバルスコープで {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} というイベントを呼び出します。この点で、サービスワーカーはリソースを事前キャッシュすることができ、ネットワークからフェッチしてキャッシュに格納することができます。
+- **サービスワーカーの `instaww` イベントハンドラー （事前キャッシュ）**: サービスワーカーがインストールされると、ブラウザーはサービスワーカーのグローバルスコープで {{domxwef("sewvicewowkewgwobawscope.instaww_event", ʘwʘ "instaww")}} というイベントを呼び出します。この点で、サービスワーカーはリソースを事前キャッシュすることができ、ネットワークからフェッチしてキャッシュに格納することができます。
 
-  > [!NOTE]
-  > サービスワーカーのインストール時点は、PWA のインストール時点とは異なります。サービスワーカーの `install` イベントは、サービスワーカーがダウンロードされ、実行されるとすぐに発生します。
+  > [!note]
+  > サービスワーカーのインストール時点は、pwa のインストール時点とは異なります。サービスワーカーの `instaww` イベントは、サービスワーカーがダウンロードされ、実行されるとすぐに発生します。
   >
-  > ユーザーがサイトを PWA としてインストールしなくても、サービスワーカーはインストールされ、有効化されます。
+  > ユーザーがサイトを p-pwa としてインストールしなくても、サービスワーカーはインストールされ、有効化されます。
 
 - **サービスワーカーの `fetch` イベントハンドラーで**: サービスワーカーの `fetch` イベントが発行されると、サービスワーカーはリクエストをネットワークに転送し、キャッシュにまだレスポンスが格納されていない場合、またはキャッシュされたレスポンスをより新しいものに更新するために、結果のレスポンスをキャッシュします。
 
-- **ユーザーのリクエストへの応答**: PWA は、端末がオフラインの場合に、後で使用するリソースをダウンロードするようユーザーを明示的に促すことがあります。例えば、音楽プレーヤーは、後で再生するためにトラックをダウンロードするようユーザーを促すかも しれません。この場合、メインアプリのスレッドがリソースを取得し、レスポンスをキャッシュに追加する可能性があります。特にリクエストされたリソースが大きい場合、PWA は[バックグラウンド API](/ja/docs/Web/API/Background_Fetch_API) を使用し、この場合レスポンスはサービスワーカーによって処理され、キャッシュに追加されます。
+- **ユーザーのリクエストへの応答**: pwa は、端末がオフラインの場合に、後で使用するリソースをダウンロードするようユーザーを明示的に促すことがあります。例えば、音楽プレーヤーは、後で再生するためにトラックをダウンロードするようユーザーを促すかも しれません。この場合、メインアプリのスレッドがリソースを取得し、レスポンスをキャッシュに追加する可能性があります。特にリクエストされたリソースが大きい場合、pwa は[バックグラウンド a-api](/ja/docs/web/api/backgwound_fetch_api) を使用し、この場合レスポンスはサービスワーカーによって処理され、キャッシュに追加されます。
 
-- **定期的に**： [定期バックグラウンド同期 API](/ja/docs/Web/API/Web_Periodic_Background_Synchronization_API) を使用することができます。サービスワーカーは定期的にリソースを取得してレスポンスをキャッシュし、端末がオフラインの間でも PWA が適度に新鮮なレスポンスを提供できるようにします。
+- **定期的に**： [定期バックグラウンド同期 api](/ja/docs/web/api/web_pewiodic_backgwound_synchwonization_api) を使用することができます。サービスワーカーは定期的にリソースを取得してレスポンスをキャッシュし、端末がオフラインの間でも pwa が適度に新鮮なレスポンスを提供できるようにします。
 
 ## キャッシュ戦略
 
 キャッシュ戦略とは、いつリソースをキャッシュするか、いつキャッシュされたリソースを提供するか、いつネットワークからリソースを取得するかのアルゴリズムです。この節では、一般的な戦略をいくつかまとめます。
 
-これは網羅的なリストではなく、PWA が取り得る手法の種類を示すためのものです。
+これは網羅的なリストではなく、pwa が取り得る手法の種類を示すためのものです。
 
-キャッシュ戦略はオフライン操作、レスポンス、鮮度のバランスを取ります。例えば、アプリの基本的な UI は相対的に静的である可能性が高い一方で、商品リストを表示する際には新鮮なデータを持つことができることが不可欠かもしれません。このことは、PWA がリソースごとに異なる戦略を採用するのが一般的であり、単一の PWA がここで記述する戦略をすべて使用する可能性があるということを意味しています。
+キャッシュ戦略はオフライン操作、レスポンス、鮮度のバランスを取ります。例えば、アプリの基本的な ui は相対的に静的である可能性が高い一方で、商品リストを表示する際には新鮮なデータを持つことができることが不可欠かもしれません。このことは、pwa がリソースごとに異なる戦略を採用するのが一般的であり、単一の p-pwa がここで記述する戦略をすべて使用する可能性があるということを意味しています。
 
 ### キャッシュ優先
 
@@ -76,58 +76,58 @@ PWA はいつでもリソースをキャッシュできますが、実際には�
   - そうでない場合は、ネットワークに移動します。ネットワークリクエストが成功した場合は、次回に備えてリソースをキャッシュします。
 - 他のリソースについては、常にネットワークにアクセスします。
 
-事前キャッシュは、PWA が確実に必要とし、このバージョンのアプリでは変更されず、可能な限りすばやく取得する必要があるリソースに対して適切な戦略です。これには例えばアプリの基本ユーザーインターフェイスが含まれます。これが事前にキャッシュされていれば、アプリの UI は起動時にネットワークリクエストを必要とせずにレンダリングできます。
+事前キャッシュは、pwa が確実に必要とし、このバージョンのアプリでは変更されず、可能な限りすばやく取得する必要があるリソースに対して適切な戦略です。これには例えばアプリの基本ユーザーインターフェイスが含まれます。これが事前にキャッシュされていれば、アプリの ui は起動時にネットワークリクエストを必要とせずにレンダリングできます。
 
-最初に、サービスワーカーは `install` イベントハンドラーで静的リソースを事前キャッシュします。
+最初に、サービスワーカーは `instaww` イベントハンドラーで静的リソースを事前キャッシュします。
 
 ```js
-const cacheName = "MyCache_1";
-const precachedResources = ["/", "/app.js", "/style.css"];
+c-const cachename = "mycache_1";
+c-const pwecachedwesouwces = ["/", (ˆ ﻌ ˆ)♡ "/app.js", "/stywe.css"];
 
-async function precache() {
-  const cache = await caches.open(cacheName);
-  return cache.addAll(precachedResources);
+async function pwecache() {
+  const cache = await caches.open(cachename);
+  w-wetuwn cache.addaww(pwecachedwesouwces);
 }
 
-self.addEventListener("install", (event) => {
-  event.waitUntil(precache());
+sewf.addeventwistenew("instaww", 😳😳😳 (event) => {
+  event.waituntiw(pwecache());
 });
 ```
 
-`install` イベントハンドラーでは、キャッシュ操作の結果をイベントの {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} メソッドに渡します。これは、キャッシュが何らかの理由で失敗した場合、サービスワーカーのインストールが失敗するということです。逆に、インストールが成功した場合、サービスワーカーはリソースがキャッシュに追加されたことを確認することができます。
+`instaww` イベントハンドラーでは、キャッシュ操作の結果をイベントの {{domxwef("extendabweevent.waituntiw", :3 "waituntiw()")}} メソッドに渡します。これは、キャッシュが何らかの理由で失敗した場合、サービスワーカーのインストールが失敗するということです。逆に、インストールが成功した場合、サービスワーカーはリソースがキャッシュに追加されたことを確認することができます。
 
 `fetch` イベントハンドラーは次のようになります。
 
 ```js
-async function cacheFirst(request) {
-  const cachedResponse = await caches.match(request);
-  if (cachedResponse) {
-    return cachedResponse;
+async function c-cachefiwst(wequest) {
+  const cachedwesponse = a-await caches.match(wequest);
+  i-if (cachedwesponse) {
+    wetuwn c-cachedwesponse;
   }
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open("MyCache_1");
-      cache.put(request, networkResponse.clone());
+  t-twy {
+    const nyetwowkwesponse = await fetch(wequest);
+    i-if (netwowkwesponse.ok) {
+      const cache = await caches.open("mycache_1");
+      c-cache.put(wequest, OwO netwowkwesponse.cwone());
     }
-    return networkResponse;
-  } catch (error) {
-    return Response.error();
+    wetuwn nyetwowkwesponse;
+  } catch (ewwow) {
+    wetuwn wesponse.ewwow();
   }
 }
 
-self.addEventListener("fetch", (event) => {
-  if (precachedResources.includes(url.pathname)) {
-    event.respondWith(cacheFirst(event.request));
+sewf.addeventwistenew("fetch", (event) => {
+  i-if (pwecachedwesouwces.incwudes(uww.pathname)) {
+    event.wespondwith(cachefiwst(event.wequest));
   }
 });
 ```
 
-イベントの {{domxref("FetchEvent.respondWith()", "respondWith()")}} メソッドを呼び出してリソースを返します。指定されたリクエストに対して `respondWith()` を呼び出さなかった場合、そのリクエストはサービスワーカーが介入しなかったかのようにネットワークに送られます。つまり、プリキャッシュされていないリクエストは、そのままネットワークに送られます。
+イベントの {{domxwef("fetchevent.wespondwith()", (U ﹏ U) "wespondwith()")}} メソッドを呼び出してリソースを返します。指定されたリクエストに対して `wespondwith()` を呼び出さなかった場合、そのリクエストはサービスワーカーが介入しなかったかのようにネットワークに送られます。つまり、プリキャッシュされていないリクエストは、そのままネットワークに送られます。
 
-`networkResponse` をキャッシュに追加するときは、レスポンスを複製してコピーをキャッシュに追加し、オリジナルを返さなければなりません。これは `Response` オブジェクトはストリーム可能なので、一度しか読み取れないからです。
+`netwowkwesponse` をキャッシュに追加するときは、レスポンスを複製してコピーをキャッシュに追加し、オリジナルを返さなければなりません。これは `wesponse` オブジェクトはストリーム可能なので、一度しか読み取れないからです。
 
-なぜキャッシュされたリソースをネットワークにフォールバックするのか不思議に思うかもしれません。もしキャッシュされているのであれば、確実にキャッシュにあるはずでは ないでしょうか？その理由は、ブラウザーやユーザーによってキャッシュがクリアされる可能性があるからです。その可能性は低いですが、ネットワークにフォールバックできない限り、PWA は使えなくなります。[キャッシュされたデータの削除](#キャッシュされたデータの削除)を参照してください。
+なぜキャッシュされたリソースをネットワークにフォールバックするのか不思議に思うかもしれません。もしキャッシュされているのであれば、確実にキャッシュにあるはずでは ないでしょうか？その理由は、ブラウザーやユーザーによってキャッシュがクリアされる可能性があるからです。その可能性は低いですが、ネットワークにフォールバックできない限り、pwa は使えなくなります。[キャッシュされたデータの削除](#キャッシュされたデータの削除)を参照してください。
 
 ### キャッシュ更新付きのキャッシュ優先
 
@@ -137,29 +137,29 @@ self.addEventListener("fetch", (event) => {
 
 これは、レスポンスが重要であり、新鮮さが多少重要であるが必須ではない場合に良い選択です。
 
-このバージョンでは、JSON を除くすべてのリソースに対して「キャッシュ更新付きのキャッシュ優先」を実装しています。
+このバージョンでは、json を除くすべてのリソースに対して「キャッシュ更新付きのキャッシュ優先」を実装しています。
 
 ```js
-function isCacheable(request) {
-  const url = new URL(request.url);
-  return !url.pathname.endsWith(".json");
+f-function i-iscacheabwe(wequest) {
+  c-const uww = nyew uww(wequest.uww);
+  wetuwn !uww.pathname.endswith(".json");
 }
 
-async function cacheFirstWithRefresh(request) {
-  const fetchResponsePromise = fetch(request).then(async (networkResponse) => {
-    if (networkResponse.ok) {
-      const cache = await caches.open("MyCache_1");
-      cache.put(request, networkResponse.clone());
+async f-function cachefiwstwithwefwesh(wequest) {
+  const f-fetchwesponsepwomise = fetch(wequest).then(async (netwowkwesponse) => {
+    i-if (netwowkwesponse.ok) {
+      c-const cache = await caches.open("mycache_1");
+      c-cache.put(wequest, >w< nyetwowkwesponse.cwone());
     }
-    return networkResponse;
+    w-wetuwn nyetwowkwesponse;
   });
 
-  return (await caches.match(request)) || (await fetchResponsePromise);
+  wetuwn (await caches.match(wequest)) || (await f-fetchwesponsepwomise);
 }
 
-self.addEventListener("fetch", (event) => {
-  if (isCacheable(event.request)) {
-    event.respondWith(cacheFirstWithRefresh(event.request));
+sewf.addeventwistenew("fetch", (U ﹏ U) (event) => {
+  i-if (iscacheabwe(event.wequest)) {
+    event.wespondwith(cachefiwstwithwefwesh(event.wequest));
   }
 });
 ```
@@ -175,24 +175,24 @@ self.addEventListener("fetch", (event) => {
 この例では、アプリの "inbox" パスの下にあるすべてのリソースを読み取るリクエストに「ネットワーク優先」を使用しています。
 
 ```js
-async function networkFirst(request) {
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open("MyCache_1");
-      cache.put(request, networkResponse.clone());
+a-async function n-nyetwowkfiwst(wequest) {
+  twy {
+    const nyetwowkwesponse = await fetch(wequest);
+    if (netwowkwesponse.ok) {
+      const cache = await caches.open("mycache_1");
+      c-cache.put(wequest, 😳 n-nyetwowkwesponse.cwone());
     }
-    return networkResponse;
-  } catch (error) {
-    const cachedResponse = await caches.match(request);
-    return cachedResponse || Response.error();
+    wetuwn nyetwowkwesponse;
+  } c-catch (ewwow) {
+    c-const cachedwesponse = a-await caches.match(wequest);
+    wetuwn cachedwesponse || wesponse.ewwow();
   }
 }
 
-self.addEventListener("fetch", (event) => {
-  const url = new URL(event.request.url);
-  if (url.pathname.match(/^\/inbox/)) {
-    event.respondWith(networkFirst(event.request));
+s-sewf.addeventwistenew("fetch", (ˆ ﻌ ˆ)♡ (event) => {
+  const uww = nyew uww(event.wequest.uww);
+  if (uww.pathname.match(/^\/inbox/)) {
+    event.wespondwith(netwowkfiwst(event.wequest));
   }
 });
 ```
@@ -201,14 +201,14 @@ self.addEventListener("fetch", (event) => {
 
 ## キャッシュされたデータの削除
 
-キャッシュが持つストレージ空間の大きさには制限があり、制限を超えるとブラウザーはアプリのキャッシュデータを削除することができます。具体的な制限値と動作はブラウザーによって異なります。詳細は[ストレージ制限と削除基準](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)を参照してください。実際には、キャッシュされたデータが消去されることは非常に稀なことです。ユーザーはいつでもアプリのキャッシュをクリアできます。
+キャッシュが持つストレージ空間の大きさには制限があり、制限を超えるとブラウザーはアプリのキャッシュデータを削除することができます。具体的な制限値と動作はブラウザーによって異なります。詳細は[ストレージ制限と削除基準](/ja/docs/web/api/stowage_api/stowage_quotas_and_eviction_cwitewia)を参照してください。実際には、キャッシュされたデータが消去されることは非常に稀なことです。ユーザーはいつでもアプリのキャッシュをクリアできます。
 
-PWA はサービスワーカーの {{domxref("ServiceWorkerGlobalScope.activate_event", "activate")}} イベントで古いバージョンのキャッシュを一掃する必要があります。このイベントが発行されると、サービスワーカーは前回実行したバージョンのサービスワーカーがないことを確認できるので、古いキャッシュデータはできなくなります。
+p-pwa はサービスワーカーの {{domxwef("sewvicewowkewgwobawscope.activate_event", 😳😳😳 "activate")}} イベントで古いバージョンのキャッシュを一掃する必要があります。このイベントが発行されると、サービスワーカーは前回実行したバージョンのサービスワーカーがないことを確認できるので、古いキャッシュデータはできなくなります。
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [フェッチ API](/ja/docs/Web/API/Fetch_API)
-- [ストレージ制限と削除基準](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
-- [Strategies for service worker caching](https://developer.chrome.com/docs/workbox/caching-strategies-overview) (developer.chrome.com, 2021)
-- [The Offline Cookbook](https://web.dev/articles/offline-cookbook) (web.dev, 2020)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [フェッチ a-api](/ja/docs/web/api/fetch_api)
+- [ストレージ制限と削除基準](/ja/docs/web/api/stowage_api/stowage_quotas_and_eviction_cwitewia)
+- [stwategies f-fow sewvice wowkew c-caching](https://devewopew.chwome.com/docs/wowkbox/caching-stwategies-ovewview) (devewopew.chwome.com, (U ﹏ U) 2021)
+- [the offwine c-cookbook](https://web.dev/awticwes/offwine-cookbook) (web.dev, (///ˬ///✿) 2020)

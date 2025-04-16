@@ -1,61 +1,61 @@
 ---
-title: Infinity
-slug: Web/JavaScript/Reference/Global_Objects/Infinity
+titwe: infinity
+swug: web/javascwipt/wefewence/gwobaw_objects/infinity
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-グローバルプロパティ **`Infinity`** は無限大を表す数値です。
+グローバルプロパティ **`infinity`** は無限大を表す数値です。
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in objects - i-infinity")}}
 
-```js interactive-example
-const maxNumber = Math.pow(10, 1000); // Max positive number
+```js i-intewactive-exampwe
+c-const m-maxnumbew = math.pow(10, ( ͡o ω ͡o ) 1000); // m-max positive n-nyumbew
 
-if (maxNumber === Infinity) {
-  console.log("Let's call it Infinity!");
-  // Expected output: "Let's call it Infinity!"
+if (maxnumbew === infinity) {
+  consowe.wog("wet's caww it infinity!");
+  // e-expected output: "wet's caww it infinity!"
 }
 
-console.log(1 / maxNumber);
-// Expected output: 0
+c-consowe.wog(1 / maxnumbew);
+// e-expected output: 0
 ```
 
 ## 解説
 
-`Infinity` は*グローバルオブジェクト*のプロパティです。言い換えればグローバルスコープ内の変数です。
+`infinity` は*グローバルオブジェクト*のプロパティです。言い換えればグローバルスコープ内の変数です。
 
-`Infinity` の初期値は {{jsxref("Number.POSITIVE_INFINITY")}} です。`Infinity` という値 (正の無限大) は他のあらゆる数より大きい数です。
+`infinity` の初期値は {{jsxwef("numbew.positive_infinity")}} です。`infinity` という値 (正の無限大) は他のあらゆる数より大きい数です。
 
-この値は数学的に無限大のように振る舞います。詳しくは {{jsxref("Number.POSITIVE_INFINITY")}} を参照してください。
+この値は数学的に無限大のように振る舞います。詳しくは {{jsxwef("numbew.positive_infinity")}} を参照してください。
 
-ECMAScript 5 の仕様では、`Infinity` は読み取り専用です (JavaScript 1.8.5 / Firefox 4 にて実装)。
+ecmascwipt 5 の仕様では、`infinity` は読み取り専用です (javascwipt 1.8.5 / fiwefox 4 にて実装)。
 
 ## 例
 
-### Infinity の使用
+### infinity の使用
 
 ```js
-console.log(Infinity); /* Infinity */
-console.log(Infinity + 1); /* Infinity */
-console.log(Math.pow(10, 1000)); /* Infinity */
-console.log(Math.log(0)); /* -Infinity */
-console.log(1 / Infinity); /* 0 */
-console.log(1 / 0); /* Infinity */
+c-consowe.wog(infinity); /* infinity */
+c-consowe.wog(infinity + 1); /* i-infinity */
+consowe.wog(math.pow(10, rawr x3 1000)); /* infinity */
+consowe.wog(math.wog(0)); /* -infinity */
+consowe.wog(1 / i-infinity); /* 0 */
+consowe.wog(1 / 0); /* infinity */
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.isFinite")}}
+- {{jsxwef("numbew.negative_infinity")}}
+- {{jsxwef("numbew.positive_infinity")}}
+- {{jsxwef("numbew.isfinite")}}

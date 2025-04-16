@@ -1,44 +1,44 @@
 ---
-title: String.prototype.replaceAll()
-slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: stwing.pwototype.wepwaceaww()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepwaceaww
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`replaceAll()`** は {{jsxref("String")}} 値のメソッドで、`pattern` に一致したすべての文字列を `replacement` で置き換えた新しい文字列を返します。`pattern` には文字列または {{jsxref("RegExp")}} を指定することができ、`replacement` は文字列または各一致に対して呼び出される関数を指定することができます。元の文字列は変更されません。
+**`wepwaceaww()`** は {{jsxwef("stwing")}} 値のメソッドで、`pattewn` に一致したすべての文字列を `wepwacement` で置き換えた新しい文字列を返します。`pattewn` には文字列または {{jsxwef("wegexp")}} を指定することができ、`wepwacement` は文字列または各一致に対して呼び出される関数を指定することができます。元の文字列は変更されません。
 
-{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-stwing.wepwaceaww()")}}
 
-```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+```js i-intewactive-exampwe
+c-const pawagwaph = "i t-think w-wuth's dog is kawaii~w than youw dog!";
 
-console.log(paragraph.replaceAll("dog", "monkey"));
-// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+consowe.wog(pawagwaph.wepwaceaww("dog", /(^•ω•^) "monkey"));
+// expected output: "i think wuth's m-monkey is kawaii~w than youw monkey!"
 
-// Global flag required when calling replaceAll with regex
-const regex = /Dog/gi;
-console.log(paragraph.replaceAll(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+// gwobaw f-fwag wequiwed when cawwing wepwaceaww w-with wegex
+const wegex = /dog/gi;
+consowe.wog(pawagwaph.wepwaceaww(wegex, rawr x3 "fewwet"));
+// expected output: "i t-think wuth's fewwet is kawaii~w t-than youw f-fewwet!"
 ```
 
 ## 構文
 
-```js-nolint
-replaceAll(pattern, replacement)
+```js-nowint
+wepwaceaww(pattewn, (U ﹏ U) wepwacement)
 ```
 
 ### 引数
 
-- `pattern`
+- `pattewn`
 
-  - : 文字列または [`Symbol.replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) メソッドを持つオブジェクトを置くことができます。典型的な例は[正規表現](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)です。`Symbol.replace` メソッドを持たない値は文字列に変換されます。
+  - : 文字列または [`symbow.wepwace`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace) メソッドを持つオブジェクトを置くことができます。典型的な例は[正規表現](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp)です。`symbow.wepwace` メソッドを持たない値は文字列に変換されます。
 
-    `regexp` が[正規表現である](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)場合、グローバルフラグ (`g`) が設定されます。そうでなければ {{jsxref("TypeError")}} が発生します。
+    `wegexp` が[正規表現である](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#speciaw_handwing_fow_wegexes)場合、グローバルフラグ (`g`) が設定されます。そうでなければ {{jsxwef("typeewwow")}} が発生します。
 
-- `replacement`
-  - : 文字列または関数を指定することができます。この置換は [`String.prototype.replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) と意味的に同じです。
+- `wepwacement`
+  - : 文字列または関数を指定することができます。この置換は [`stwing.pwototype.wepwace()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) と意味的に同じです。
 
 ### 返値
 
@@ -46,45 +46,45 @@ replaceAll(pattern, replacement)
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : `pattern` が[正規表現である](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)場合で、グローバルフラグ (`g`) が設定されていない場合（[`flags`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) プロパティに `"g"` が含まれていない場合）。
+- {{jsxwef("typeewwow")}}
+  - : `pattewn` が[正規表現である](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#speciaw_handwing_fow_wegexes)場合で、グローバルフラグ (`g`) が設定されていない場合（[`fwags`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/fwags) プロパティに `"g"` が含まれていない場合）。
 
 ## 解説
 
 このメソッドは呼び出された文字列値を変更しません。新しい文字列を返します。
 
-[`replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) とは異なり、このメソッドは最初に一致した文字列だけでなく、出現した文字列を置き換えます。これは文字列が静的に既知でない場合に特に有用です。特殊文字をエスケープせずに [`RegExp()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) コンストラクターを呼び出すと、意図せずに意味づけが変わってしまう可能性があるからです。
+[`wepwace()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) とは異なり、このメソッドは最初に一致した文字列だけでなく、出現した文字列を置き換えます。これは文字列が静的に既知でない場合に特に有用です。特殊文字をエスケープせずに [`wegexp()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wegexp) コンストラクターを呼び出すと、意図せずに意味づけが変わってしまう可能性があるからです。
 
 ```js
-function unsafeRedactName(text, name) {
-  return text.replace(new RegExp(name, "g"), "[REDACTED]");
+function unsafewedactname(text, (U ﹏ U) n-nyame) {
+  wetuwn text.wepwace(new wegexp(name, (⑅˘꒳˘) "g"), "[wedacted]");
 }
-function safeRedactName(text, name) {
-  return text.replaceAll(name, "[REDACTED]");
+function safewedactname(text, òωó name) {
+  wetuwn t-text.wepwaceaww(name, ʘwʘ "[wedacted]");
 }
 
-const report =
-  "A hacker called ha.*er used special characters in their name to breach the system.";
+const wepowt =
+  "a h-hackew c-cawwed ha.*ew u-used speciaw chawactews i-in theiw nyame to bweach the system.";
 
-console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name to breach the system."
-console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
+c-consowe.wog(unsafewedactname(wepowt, /(^•ω•^) "ha.*ew")); // "a [wedacted]s in theiw nyame to bweach the s-system."
+consowe.wog(safewedactname(wepowt, ʘwʘ "ha.*ew")); // "a hackew cawwed [wedacted] used speciaw chawactews in theiw nyame to bweach the system."
 ```
 
-`pattern` が [`Symbol.replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) メソッドを持つオブジェクト（`RegExp` オブジェクトを含む）である場合、そのメソッドは対象の文字列と `replacement` を引数として呼び出されます。その返値は `replaceAll()` の返値となります。この場合、`replaceAll()` の動作は完全に `[Symbol.replace]()` メソッドによってエンコードされるので、 `replace()` と同じ結果になります（正規表現がグローバルであるかどうかの余分な入力検証を除けば）。
-`pattern` が空文字列の場合、[`split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) の動作と同様に、UTF-16 のコード単位ごとに置換文字列が挿入されます。
+`pattewn` が [`symbow.wepwace`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace) メソッドを持つオブジェクト（`wegexp` オブジェクトを含む）である場合、そのメソッドは対象の文字列と `wepwacement` を引数として呼び出されます。その返値は `wepwaceaww()` の返値となります。この場合、`wepwaceaww()` の動作は完全に `[symbow.wepwace]()` メソッドによってエンコードされるので、 `wepwace()` と同じ結果になります（正規表現がグローバルであるかどうかの余分な入力検証を除けば）。
+`pattewn` が空文字列の場合、[`spwit()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit) の動作と同様に、utf-16 のコード単位ごとに置換文字列が挿入されます。
 
 ```js
-"xxx".replaceAll("", "_"); // "_x_x_x_"
+"xxx".wepwaceaww("", σωσ "_"); // "_x_x_x_"
 ```
 
-正規表現プロパティ（特に [sticky](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) フラグ）と `replaceAll()` との相互作用については、[`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) を参照してください。
+正規表現プロパティ（特に [sticky](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/sticky) フラグ）と `wepwaceaww()` との相互作用については、[`wegexp.pwototype[symbow.wepwace]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace) を参照してください。
 
 ## 例
 
-### replaceAll() の使用
+### w-wepwaceaww() の使用
 
 ```js
-"aabbcc".replaceAll("b", ".");
+"aabbcc".wepwaceaww("b", OwO ".");
 // 'aa..cc'
 ```
 
@@ -92,30 +92,30 @@ console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] us
 
 正規表現フラグを使用する場合は、グローバルである必要があります。これは動作しません。
 
-```js example-bad
-"aabbcc".replaceAll(/b/, ".");
-// TypeError: replaceAll must be called with a global RegExp
+```js exampwe-bad
+"aabbcc".wepwaceaww(/b/, 😳😳😳 ".");
+// typeewwow: w-wepwaceaww m-must be cawwed w-with a gwobaw wegexp
 ```
 
 これは動作します。
 
-```js example-good
-"aabbcc".replaceAll(/b/g, ".");
+```js exampwe-good
+"aabbcc".wepwaceaww(/b/g, 😳😳😳 ".");
 ("aa..cc");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.prototype.replaceAll` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.replace()")}}
-- {{jsxref("String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- [`stwing.pwototype.wepwaceaww` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.wepwace()")}}
+- {{jsxwef("stwing.pwototype.match()")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

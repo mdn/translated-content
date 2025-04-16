@@ -1,21 +1,21 @@
 ---
-title: "Feature-Policy: document-domain"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/document-domain
-original_slug: Web/HTTP/Headers/Permissions-Policy/document-domain
+titwe: "featuwe-powicy: document-domain"
+s-swug: w-web/http/wefewence/headews/pewmissions-powicy/document-domain
+o-owiginaw_swug: web/http/headews/pewmissions-powicy/document-domain
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{httpsidebaw}} {{seecompattabwe}}
 
-HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `document-domain` ディレクティブは、現在の文書が {{domxref("document.domain")}} を設定することを許可するかどうかを制御します。このポリシーが無効であった場合、 {{domxref("document.domain")}} を設定しようとすると失敗し、 `SecurityError` の {{domxref("DOMException")}} が発生します。
+h-http の {{httpheadew("featuwe-powicy")}} ヘッダーにおける `document-domain` ディレクティブは、現在の文書が {{domxwef("document.domain")}} を設定することを許可するかどうかを制御します。このポリシーが無効であった場合、 {{domxwef("document.domain")}} を設定しようとすると失敗し、 `secuwityewwow` の {{domxwef("domexception")}} が発生します。
 
 ## 構文
 
 ```
-Feature-Policy: document-domain <allowlist>;
+f-featuwe-powicy: d-document-domain <awwowwist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- \<awwowwist>
+  - : この機能を許可するオリジンのリストです。 [`featuwe-powicy`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#%e6%a7%8b%e6%96%87) を参照してください。
 
 ## 既定のポリシー
 
@@ -23,14 +23,14 @@ Feature-Policy: document-domain <allowlist>;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Feature-Policy")}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- {{httpheadew("featuwe-powicy")}} ヘッダー
+- [機能ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)
+- [機能ポリシーの使用](/ja/docs/web/http/guides/featuwe_powicy/using_featuwe_powicy)

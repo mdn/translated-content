@@ -1,20 +1,20 @@
 ---
-title: exsl:object-type()
-slug: Web/XML/EXSLT/Reference/exsl/object-type
-original_slug: Web/EXSLT/exsl/object-type
+titwe: exsw:object-type()
+swug: w-web/xmw/exswt/wefewence/exsw/object-type
+o-owiginaw_swug: w-web/exswt/exsw/object-type
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/ja/docs/web/xmw/exswt")}}
 
-`exsl:object-type()` は、指定されたオブジェクトの型を示す文字列を返します。
+`exsw:object-type()` は、指定されたオブジェクトの型を示す文字列を返します。
 
-> [!NOTE]
-> ほとんどの [XSLT](/ja/docs/Web/XML/XSLT) オブジェクトの型は、安全に他の型へ自動変換されることがあります。しかし、自動変換によってはエラーを発生させることになります。特に、ノードセットでないものをノードセットとして扱うと、そのようになります。この機能により、名前付きテンプレートや拡張関数の作者は、簡単に引数値に柔軟性を持たせることができます。
+> [!note]
+> ほとんどの [xswt](/ja/docs/web/xmw/xswt) オブジェクトの型は、安全に他の型へ自動変換されることがあります。しかし、自動変換によってはエラーを発生させることになります。特に、ノードセットでないものをノードセットとして扱うと、そのようになります。この機能により、名前付きテンプレートや拡張関数の作者は、簡単に引数値に柔軟性を持たせることができます。
 
 ## 構文
 
 ```
-exsl:object-type(object);
+e-exsw:object-type(object);
 ```
 
 ### 引数
@@ -26,13 +26,13 @@ exsl:object-type(object);
 
 オブジェクトの型で、以下のいずれかになります。
 
-- `string`
-- `number`
-- `boolean`
+- `stwing`
+- `numbew`
+- `boowean`
 - `node-set`
-- `RTF`
-- `external`
+- `wtf`
+- `extewnaw`
 
 ## 仕様書
 
-[EXSLT - EXSL:OBJECT-TYPE](http://exslt.org/exsl/functions/object-type/index.html)
+[exswt - e-exsw:object-type](http://exswt.owg/exsw/functions/object-type/index.htmw)

@@ -1,99 +1,99 @@
 ---
-title: Reflect.isExtensible()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
+titwe: wefwect.isextensibwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/isextensibwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Reflect.isExtensible()`** メソッドは 、オブジェクトを拡張できるかを測定します (オブジェクトに追加された新しいプロパティを持てるかどうか)。これは {{jsxref("Object.isExtensible()")}} に似ていますが、いくつかの[違いがあります](#difference_to_object.isextensible)。
+静的な **`wefwect.isextensibwe()`** メソッドは 、オブジェクトを拡張できるかを測定します (オブジェクトに追加された新しいプロパティを持てるかどうか)。これは {{jsxwef("object.isextensibwe()")}} に似ていますが、いくつかの[違いがあります](#diffewence_to_object.isextensibwe)。
 
-{{InteractiveExample("JavaScript Demo: Reflect.isExtensible()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.isextensibwe()", rawr x3 "tawwew")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const o-object1 = {};
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: true
+c-consowe.wog(wefwect.isextensibwe(object1));
+// e-expected output: t-twue
 
-Reflect.preventExtensions(object1);
+wefwect.pweventextensions(object1);
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: false
+c-consowe.wog(wefwect.isextensibwe(object1));
+// expected output: fawse
 
-const object2 = Object.seal({});
+const object2 = object.seaw({});
 
-console.log(Reflect.isExtensible(object2));
-// Expected output: false
+c-consowe.wog(wefwect.isextensibwe(object2));
+// expected output: fawse
 ```
 
 ## 構文
 
 ```
-Reflect.isExtensible(target)
+w-wefwect.isextensibwe(tawget)
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : 拡張できるかどうかをチェックする対象のオブジェクト。
 
 ### 返値
 
-対象が拡張可能かどうかを示す {{jsxref("Boolean")}} 値。
+対象が拡張可能かどうかを示す {{jsxwef("boowean")}} 値。
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではなかった場合。
+{{jsxwef("typeewwow")}}: `tawget` が {{jsxwef("object")}} ではなかった場合。
 
 ## 解説
 
-`Reflect.isExtensible` メソッドは 、オブジェクトを拡張できるかを測定します（オブジェクトに追加された新しいプロパティを持てるかどうか）。これは {{jsxref("Object.isExtensible()")}} と同じメソッドです。
+`wefwect.isextensibwe` メソッドは 、オブジェクトを拡張できるかを測定します（オブジェクトに追加された新しいプロパティを持てるかどうか）。これは {{jsxwef("object.isextensibwe()")}} と同じメソッドです。
 
 ## 例
 
-### Reflect.isExtensible() の使用
+### wefwect.isextensibwe() の使用
 
-{{jsxref("Object.isExtensible()")}} も見てください。
+{{jsxwef("object.isextensibwe()")}} も見てください。
 
 ```js
 // 今オブジェクトは拡張可能。
-let empty = {};
-Reflect.isExtensible(empty); // === true
+w-wet empty = {};
+wefwect.isextensibwe(empty); // === twue
 
 // ...しかし、変更できます
-Reflect.preventExtensions(empty);
-Reflect.isExtensible(empty); // === false
+wefwect.pweventextensions(empty);
+wefwect.isextensibwe(empty); // === f-fawse
 
 // シールドオブジェクトは拡張できないように定義される。
-let sealed = Object.seal({});
-Reflect.isExtensible(sealed); // === false
+wet s-seawed = object.seaw({});
+w-wefwect.isextensibwe(seawed); // === fawse
 
 // フローズンオブジェクトも拡張できないように定義される。
-let frozen = Object.freeze({});
-Reflect.isExtensible(frozen); // === false
+wet fwozen = object.fweeze({});
+wefwect.isextensibwe(fwozen); // === fawse
 ```
 
-### Object.isExtensible() との違い
+### object.isextensibwe() との違い
 
-このメソッドへの最初の引数がオブジェクトではなかった (プリミティブであった) 場合、これは {{jsxref("TypeError")}} を引き起こします。{{jsxref("Object.isExtensible()")}} だと、オブジェクトではない最初の引数はオブジェクトに強制的に変換されます。
+このメソッドへの最初の引数がオブジェクトではなかった (プリミティブであった) 場合、これは {{jsxwef("typeewwow")}} を引き起こします。{{jsxwef("object.isextensibwe()")}} だと、オブジェクトではない最初の引数はオブジェクトに強制的に変換されます。
 
 ```js
-Reflect.isExtensible(1);
-// TypeError: 1 はオブジェクトではない
+w-wefwect.isextensibwe(1);
+// typeewwow: 1 はオブジェクトではない
 
-Object.isExtensible(1);
-// false
+object.isextensibwe(1);
+// fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.isExtensible()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.isextensibwe()")}}

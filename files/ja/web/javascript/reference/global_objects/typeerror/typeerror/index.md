@@ -1,69 +1,69 @@
 ---
-title: TypeError() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
+titwe: typeewwow() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/typeewwow/typeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`TypeError()`** コンストラクターは、演算が実行できなくなった時の新しいエラーを生成します。特に値が期待された型ではなかった場合です (ただし、それに限りません)。
+**`typeewwow()`** コンストラクターは、演算が実行できなくなった時の新しいエラーを生成します。特に値が期待された型ではなかった場合です (ただし、それに限りません)。
 
 ## 構文
 
 ```
-new TypeError([message[, fileName[, lineNumber]]])
+n-nyew typeewwow([message[, XD f-fiwename[, :3 winenumbew]]])
 ```
 
 ### 引数
 
-- `message` {{optional_inline}}
+- `message` {{optionaw_inwine}}
   - : 人間が読むためのエラーの説明です。
-- `fileName` {{optional_inline}}
+- `fiwename` {{optionaw_inwine}}
   - : 例外が発生したコードを含むファイルの名前です。
-- `lineNumber` {{optional_inline}}
+- `winenumbew` {{optionaw_inwine}}
   - : 例外が発生したコードの行番号です。
 
 ## 例
 
-### TypeError の捕捉
+### typeewwow の捕捉
 
 ```js
-try {
-  null.f();
+t-twy {
+  n-nyuww.f();
 } catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message); // "null has no properties"
-  console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  c-consowe.wog(e i-instanceof t-typeewwow); // t-twue
+  consowe.wog(e.message); // "nuww has no pwopewties"
+  consowe.wog(e.name); // "typeewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  c-consowe.wog(e.winenumbew); // 2
+  consowe.wog(e.cowumnnumbew); // 2
+  consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### TypeError の生成
+### t-typeewwow の生成
 
 ```js
-try {
-  throw new TypeError("Hello", "someFile.js", 10);
+twy {
+  thwow nyew t-typeewwow("hewwo", 😳😳😳 "somefiwe.js", -.- 10);
 } catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  consowe.wog(e instanceof t-typeewwow); // twue
+  consowe.wog(e.message); // "hewwo"
+  c-consowe.wog(e.name); // "typeewwow"
+  c-consowe.wog(e.fiwename); // "somefiwe.js"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

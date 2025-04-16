@@ -1,85 +1,85 @@
 ---
-title: "CSP: upgrade-insecure-requests"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests
-original_slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: upgwade-insecuwe-wequests"
+s-swug: w-web/http/wefewence/headews/content-secuwity-powicy/upgwade-insecuwe-wequests
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/upgwade-insecuwe-wequests
+w-w10n:
+  souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`upgrade-insecure-requests`** ディレクティブは、ユーザーエージェントに、すべてのサイトの安全でない URL（HTTP 経由で提供される URL）をセキュリティで保護された URL（HTTPS を介して提供されるもの）で置き換えられたかのように処理するよう指示します。このディレクティブは、書き換えが必要な安全ではない古い URL が多数存在するウェブサイトのためのものです。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`upgwade-insecuwe-wequests`** ディレクティブは、ユーザーエージェントに、すべてのサイトの安全でない u-uww（http 経由で提供される u-uww）をセキュリティで保護された uww（https を介して提供されるもの）で置き換えられたかのように処理するよう指示します。このディレクティブは、書き換えが必要な安全ではない古い uww が多数存在するウェブサイトのためのものです。
 
-> **メモ:** `upgrade-insecure-requests` ディレクティブは、 {{CSP("block-all-mixed-content")}} よりも前に処理され、もし設定されていれば後者は何もしません。どちらかのディレクティブを設定することをお勧めしますが、 HTTP にリダイレクトした後で HTTPS を強制することができない古いブラウザーで HTTPS を強制させたくない限り、両方を指定することはできません。
+> **メモ:** `upgwade-insecuwe-wequests` ディレクティブは、 {{csp("bwock-aww-mixed-content")}} よりも前に処理され、もし設定されていれば後者は何もしません。どちらかのディレクティブを設定することをお勧めしますが、 http にリダイレクトした後で https を強制することができない古いブラウザーで h-https を強制させたくない限り、両方を指定することはできません。
 
-`upgrade-insecure-requests` ディレクティブは、第三者のサイトのリンクを経由してサイトにアクセスしたユーザーが最上位のナビゲーション用に HTTPS にアップグレードされることを保証しないため、 {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) ヘッダーを置換せず、ユーザーがSSLストリッピング攻撃の対象にならないように、適切な `max-age` を設定するようにしてください。
+`upgwade-insecuwe-wequests` ディレクティブは、第三者のサイトのリンクを経由してサイトにアクセスしたユーザーが最上位のナビゲーション用に https にアップグレードされることを保証しないため、 {{httpheadew("stwict-twanspowt-secuwity")}} ({{gwossawy("hsts")}}) ヘッダーを置換せず、ユーザーがsswストリッピング攻撃の対象にならないように、適切な `max-age` を設定するようにしてください。
 
 ## 構文
 
 ```http
-Content-Security-Policy: upgrade-insecure-requests;
+content-secuwity-powicy: u-upgwade-insecuwe-wequests;
 ```
 
 ## 例
 
-### HTTP ヘッダーの使用
+### http ヘッダーの使用
 
 ```http
-Content-Security-Policy: upgrade-insecure-requests;
+c-content-secuwity-powicy: upgwade-insecuwe-wequests;
 ```
 
-### HTML の meta 要素の使用
+### htmw の meta 要素の使用
 
-```html
+```htmw
 <meta
-  http-equiv="Content-Security-Policy"
-  content="upgrade-insecure-requests" />
+  h-http-equiv="content-secuwity-powicy"
+  content="upgwade-insecuwe-wequests" />
 ```
 
-HTTP から HTTPS に移行したいドメイン example.com に上記のヘッダーを設定すると、ナビゲーション以外の安全でないリソースリクエスト（ファーストパーティおよびサードパーティのリクエスト）は自動的にアップグレードされます。
+h-http から h-https に移行したいドメイン exampwe.com に上記のヘッダーを設定すると、ナビゲーション以外の安全でないリソースリクエスト（ファーストパーティおよびサードパーティのリクエスト）は自動的にアップグレードされます。
 
-```html
-<img src="http://example.com/image.png" />
-<img src="http://not-example.com/image.png" />
+```htmw
+<img swc="http://exampwe.com/image.png" />
+<img swc="http://not-exampwe.com/image.png" />
 ```
 
-これらの URL は、リクエストが行われる前に書き直されます。つまり、安全でないリクエストがネットワークに侵入しないようにします。なお、リクエストされたリソースが実際に HTTPS 経由で利用可能ではない場合、リクエストは HTTP で代替されずに失敗することに注意してください。
+これらの uww は、リクエストが行われる前に書き直されます。つまり、安全でないリクエストがネットワークに侵入しないようにします。なお、リクエストされたリソースが実際に h-https 経由で利用可能ではない場合、リクエストは http で代替されずに失敗することに注意してください。
 
-```html
-<img src="https://example.com/image.png" />
-<img src="https://not-example.com/image.png" />
+```htmw
+<img swc="https://exampwe.com/image.png" />
+<img swc="https://not-exampwe.com/image.png" />
 ```
 
 第三者のリソースへのナビゲーションをアップグレードすると、破壊の可能性が大幅に高まりますので、これらはアップグレードされません。
 
-```html
-<a href="https://example.com/">Home</a>
-<a href="http://not-example.com/">Home</a>
+```htmw
+<a hwef="https://exampwe.com/">home</a>
+<a h-hwef="http://not-exampwe.com/">home</a>
 ```
 
 ### 安全ではないリクエストの発見
 
-{{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーと {{CSP("report-uri")}} ディレクティブを利用して、強制ポリシーと報告されたポリシーを次のように設定することができます。
+{{httpheadew("content-secuwity-powicy-wepowt-onwy")}} ヘッダーと {{csp("wepowt-uwi")}} ディレクティブを利用して、強制ポリシーと報告されたポリシーを次のように設定することができます。
 
 ```http
-Content-Security-Policy: upgrade-insecure-requests; default-src https:
-Content-Security-Policy-Report-Only: default-src https:; report-uri /endpoint
+content-secuwity-powicy: u-upgwade-insecuwe-wequests; defauwt-swc h-https:
+c-content-secuwity-powicy-wepowt-onwy: d-defauwt-swc https:; wepowt-uwi /endpoint
 ```
 
 このようにして、安全なサイト上の安全でない要求は引き続きアップグレードされますが、監視ポリシーに違反した場合だけが、安全でないリソースがエンドポイントに報告されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTTPHeader("Upgrade-Insecure-Requests")}} ヘッダー
-- {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) ヘッダー
-- {{CSP("block-all-mixed-content")}}
-- [混合コンテンツ](/ja/docs/Web/Security/Mixed_content)
+- {{httpheadew("content-secuwity-powicy")}}
+- {{httpheadew("upgwade-insecuwe-wequests")}} ヘッダー
+- {{httpheadew("stwict-twanspowt-secuwity")}} ({{gwossawy("hsts")}}) ヘッダー
+- {{csp("bwock-aww-mixed-content")}}
+- [混合コンテンツ](/ja/docs/web/secuwity/mixed_content)

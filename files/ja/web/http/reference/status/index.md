@@ -1,210 +1,210 @@
 ---
-title: HTTP レスポンスステータスコード
-slug: Web/HTTP/Reference/Status
-original_slug: Web/HTTP/Status
-l10n:
-  sourceCommit: e39a9f516b1a994590c9bdf622b60244739060ad
+titwe: http レスポンスステータスコード
+swug: web/http/wefewence/status
+o-owiginaw_swug: w-web/http/status
+w-w10n:
+  souwcecommit: e-e39a9f516b1a994590c9bdf622b60244739060ad
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/Web/HTTP) リクエストが正常に完了したどうかを示します。
+h-http のレスポンスステータスコードは、特定の [http](/ja/docs/web/http) リクエストが正常に完了したどうかを示します。
 レスポンスは 5 つのクラスに分類されています。
 
-1. [情報レスポンス](#情報レスポンス) (`100` – `199`)
-2. [成功レスポンス](#成功レスポンス) (`200` – `299`)
-3. [リダイレクトメッセージ](#リダイレクトメッセージ) (`300` – `399`)
-4. [クライアントエラーレスポンス](#クライアントエラーレスポンス) (`400` – `499`)
-5. [サーバーエラーレスポンス](#サーバーエラーレスポンス) (`500` – `599`)
+1. mya [情報レスポンス](#情報レスポンス) (`100` – `199`)
+2. (⑅˘꒳˘) [成功レスポンス](#成功レスポンス) (`200` – `299`)
+3. (U ﹏ U) [リダイレクトメッセージ](#リダイレクトメッセージ) (`300` – `399`)
+4. mya [クライアントエラーレスポンス](#クライアントエラーレスポンス) (`400` – `499`)
+5. ʘwʘ [サーバーエラーレスポンス](#サーバーエラーレスポンス) (`500` – `599`)
 
-下記の一覧は [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes) で定義されているステータスコードです。
+下記の一覧は [wfc 9110](https://httpwg.owg/specs/wfc9110.htmw#ovewview.of.status.codes) で定義されているステータスコードです。
 
 > **メモ:** [この一覧](#情報レスポンス)にないレスポンスを受け取った場合、それは標準外のレスポンスであり、おそらくそのサーバーソフトウェアに固有のものです。
 
 ## 情報レスポンス
 
-- {{HTTPStatus(100, "100 Continue")}}
+- {{httpstatus(100, (˘ω˘) "100 c-continue")}}
   - : これは暫定レスポンスで、その時点までのすべてに問題がなく、クライアントはリクエストを継続してよい、またもしリクエストが完了している場合はレスポンスを無視してよいことを示します。
-- {{HTTPStatus(101, "101 Switching Protocols")}}
-  - : このコードはクライアントからの {{HTTPHeader("Upgrade")}} リクエストヘッダーのレスポンスとして送信され、サーバーはプロトコルを切り替えていることを示します。
-- {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
+- {{httpstatus(101, (U ﹏ U) "101 s-switching p-pwotocows")}}
+  - : このコードはクライアントからの {{httpheadew("upgwade")}} リクエストヘッダーのレスポンスとして送信され、サーバーはプロトコルを切り替えていることを示します。
+- {{httpstatus(102, ^•ﻌ•^ "102 pwocessing")}} ({{gwossawy("webdav")}})
   - : このコードは、サーバーはリクエストを受け取って処理しているが、まだレスポンスを提供できないことを示します。
-- {{HTTPStatus(103, "103 Early Hints")}}
-  - : このステータスコードは、主に {{HTTPHeader("Link")}} ヘッダーと共に使用することを意図しており、サーバーがレスポンスを準備している間、ユーザーエージェントにリソースの[事前読み込み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)を開始させたり、ページがリソースを必要とする元のサーバーに[事前接続](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)させたりします。
+- {{httpstatus(103, (˘ω˘) "103 eawwy hints")}}
+  - : このステータスコードは、主に {{httpheadew("wink")}} ヘッダーと共に使用することを意図しており、サーバーがレスポンスを準備している間、ユーザーエージェントにリソースの[事前読み込み](/ja/docs/web/htmw/wefewence/attwibutes/wew/pwewoad)を開始させたり、ページがリソースを必要とする元のサーバーに[事前接続](/ja/docs/web/htmw/wefewence/attwibutes/wew/pweconnect)させたりします。
 
 ## 成功レスポンス
 
-- {{HTTPStatus(200, "200 OK")}}
+- {{httpstatus(200, "200 ok")}}
 
-  - : リクエストが成功したことを示します。成功が意味することは、 HTTP メソッドにより異なります。
+  - : リクエストが成功したことを示します。成功が意味することは、 http メソッドにより異なります。
 
-    - `GET`: リソースが読み込まれ、メッセージ本文で転送された。
-    - `HEAD`: メッセージ本文がなく、表現ヘッダーがレスポンスに含まれている。
-    - `PUT` または `POST`: 操作の結果を表すリソースがメッセージ本文で送信される。
-    - `TRACE`: メッセージ本文に、サーバーが受け取ったリクエストメッセージが含まれている。
+    - `get`: リソースが読み込まれ、メッセージ本文で転送された。
+    - `head`: メッセージ本文がなく、表現ヘッダーがレスポンスに含まれている。
+    - `put` または `post`: 操作の結果を表すリソースがメッセージ本文で送信される。
+    - `twace`: メッセージ本文に、サーバーが受け取ったリクエストメッセージが含まれている。
 
-- {{HTTPStatus(201, "201 Created")}}
-  - : リクエストは成功し、その結果新たなリソースが作成されたことを示します。これは一般的に、 `POST` リクエストや、一部の `PUT` リクエストを送信した後のレスポンスになります。
-- {{HTTPStatus(202, "202 Accepted")}}
+- {{httpstatus(201, :3 "201 c-cweated")}}
+  - : リクエストは成功し、その結果新たなリソースが作成されたことを示します。これは一般的に、 `post` リクエストや、一部の `put` リクエストを送信した後のレスポンスになります。
+- {{httpstatus(202, ^^;; "202 accepted")}}
   - : リクエストは受理されたが、まだ実行されていないことを示します。
-    これはあいまいです。 HTTP ではリクエストを処理した結果を示す非同期なレスポンスを後から送信する方法がないためです。
+    これはあいまいです。 http ではリクエストを処理した結果を示す非同期なレスポンスを後から送信する方法がないためです。
     リクエストは別のプロセスかサーバーが処理する、またはバッチ処理する予定です。
-- {{HTTPStatus(203, "203 Non-Authoritative Information")}}
+- {{httpstatus(203, 🥺 "203 n-nyon-authowitative infowmation")}}
   - : このレスポンスコードは、返されるメタ情報のセットが生成元のサーバーから得られるセットと同一ではなく、ローカルまたは第三者の持つ複製から収集したことを表します。
     これは主に、他のリソースのミラーやバックアップを使用したときに使用されます。
-    このような場合以外は、このステータスより `200 OK` のほうが好ましいレスポンスです。
-- {{HTTPStatus(204, "204 No Content")}}
+    このような場合以外は、このステータスより `200 o-ok` のほうが好ましいレスポンスです。
+- {{httpstatus(204, (⑅˘꒳˘) "204 nyo content")}}
   - : リクエストに対して送信するコンテンツはありませんが、ヘッダーは有用であることを示します。ユーザーエージェントはこのリソースに関するキャッシュ済みのヘッダーを、新たな内容に更新します。
-- {{HTTPStatus(205, "205 Reset Content")}}
+- {{httpstatus(205, nyaa~~ "205 weset content")}}
   - : ユーザーエージェントに対し、リクエストを送信した文書をリセットするよう伝達します。
-- {{HTTPStatus(206, "206 Partial Content")}}
-  - : このレスポンスコードは、クライアントが {{HTTPHeader("Range")}} ヘッダーを送信し、リソースの一部だけをリクエストした時に使用されます。
-- {{HTTPStatus(207, "207 Multi-Status")}} ({{Glossary("WebDAV")}})
+- {{httpstatus(206, :3 "206 pawtiaw content")}}
+  - : このレスポンスコードは、クライアントが {{httpheadew("wange")}} ヘッダーを送信し、リソースの一部だけをリクエストした時に使用されます。
+- {{httpstatus(207, ( ͡o ω ͡o ) "207 m-muwti-status")}} ({{gwossawy("webdav")}})
   - : 複数のステータスコードがあてはまる状況で、複数のリソースに関する情報を伝えます。
-- {{HTTPStatus(208, "208 Already Reported")}} ({{Glossary("WebDAV")}})
-  - : 同じコレクションに繰り返し複数のバインディングする内部メンバーを列挙することを避けるため、 `<dav:propstat>` レスポンス要素の内部で使用します。
-- {{HTTPStatus(226, "226 IM Used")}} ([HTTP Delta encoding](https://datatracker.ietf.org/doc/html/rfc3229))
-  - : サーバーはリソースへの `GET` リクエストの処理を完了しており、レスポンスは現在のインスタンスに適用された 1 つ以上の instance manipulation の結果を表します。
+- {{httpstatus(208, mya "208 awweady wepowted")}} ({{gwossawy("webdav")}})
+  - : 同じコレクションに繰り返し複数のバインディングする内部メンバーを列挙することを避けるため、 `<dav:pwopstat>` レスポンス要素の内部で使用します。
+- {{httpstatus(226, (///ˬ///✿) "226 im u-used")}} ([http d-dewta encoding](https://datatwackew.ietf.owg/doc/htmw/wfc3229))
+  - : サーバーはリソースへの `get` リクエストの処理を完了しており、レスポンスは現在のインスタンスに適用された 1 つ以上の instance manipuwation の結果を表します。
 
 ## リダイレクトメッセージ
 
-- {{HTTPStatus(300, "300 Multiple Choices")}}
-  - : リクエストに対して複数のレスポンスがあることを示します。ユーザーエージェントやユーザーは、それらからひとつを選択します。 (複数のレスポンスからひとつを選ぶ方法は標準化されていませんが、選択肢へリンクする HTML が推奨されており、それによってユーザーが選択することができます。)
-- {{HTTPStatus(301, "301 Moved Permanently")}}
-  - : リクエストされたリソースの URL が永遠に変更されたことを示します。レスポンスで新しい URL が与えられます。
-- {{HTTPStatus(302, "302 Found")}}
-  - : このレスポンスコードは、リクエストされたリソースの URI が _一時的に_ 変更されたことを示します。
-    URI は将来、さらに変更される可能性があります。従って、クライアントは将来のリクエストでも同じ URI を使用するべきです。
-- {{HTTPStatus(303, "303 See Other")}}
-  - : サーバーはこのレスポンスを、リクエストされたリソースを別の URI で GET リクエストを使用して取得するようクライアントを誘導するために送信します。
-- {{HTTPStatus(304, "304 Not Modified")}}
+- {{httpstatus(300, (˘ω˘) "300 muwtipwe choices")}}
+  - : リクエストに対して複数のレスポンスがあることを示します。ユーザーエージェントやユーザーは、それらからひとつを選択します。 (複数のレスポンスからひとつを選ぶ方法は標準化されていませんが、選択肢へリンクする htmw が推奨されており、それによってユーザーが選択することができます。)
+- {{httpstatus(301, ^^;; "301 moved p-pewmanentwy")}}
+  - : リクエストされたリソースの uww が永遠に変更されたことを示します。レスポンスで新しい uww が与えられます。
+- {{httpstatus(302, (✿oωo) "302 found")}}
+  - : このレスポンスコードは、リクエストされたリソースの uwi が _一時的に_ 変更されたことを示します。
+    uwi は将来、さらに変更される可能性があります。従って、クライアントは将来のリクエストでも同じ u-uwi を使用するべきです。
+- {{httpstatus(303, (U ﹏ U) "303 see o-othew")}}
+  - : サーバーはこのレスポンスを、リクエストされたリソースを別の u-uwi で g-get リクエストを使用して取得するようクライアントを誘導するために送信します。
+- {{httpstatus(304, -.- "304 n-nyot modified")}}
   - : これはキャッシュ用に使用します。
     このレスポンスコードはクライアントに対して、レスポンスは変更されていないことを示します。よって、クライアントはキャッシュ済みのレスポンスを使い続けます。
-- `305 Use Proxy` {{deprecated_inline}}
-  - : これは旧バージョンの HTTP 仕様書で、リクエストされたレスポンスはプロキシーからアクセスしなければならないことを示していました。
+- `305 use pwoxy` {{depwecated_inwine}}
+  - : これは旧バージョンの http 仕様書で、リクエストされたレスポンスはプロキシーからアクセスしなければならないことを示していました。
     プロキシーのインバンド設定に関するセキュリティの懸念により、このレスポンスコードは非推奨になりました。
-- `306 unused`
-  - : このレスポンスコードはもう使用されず、予約済みです。 HTTP/1.1 仕様書の旧バージョンでは使用されていました。
-- {{HTTPStatus(307, "307 Temporary Redirect")}}
-  - : サーバーはこのレスポンスを、リクエストされたリソースを別の URI で、元のリクエストと同じメソッドを使用して取得するようクライアントを誘導するために送信します。
-    これは `302 Found` HTTP レスポンスコードと同じ意味を持ちますが、ユーザーエージェントは使用する HTTP メソッドを*変更してはならない*点が異なります。始めのリクエストで `POST` を用いた場合は、次のリクエストでも `POST` を使用しなければなりません。
-- {{HTTPStatus(308, "308 Permanent Redirect")}}
-  - : これは、リソースが HTTP の `Location:` レスポンスヘッダーで指定した別の URI へ永続的に置かれていることを示します。
-    これは `301 Moved Permanently` HTTP レスポンスコードと同じ意味を持ちますが、ユーザーエージェントは使用する HTTP メソッドを*変更してはならない*点が異なります。始めのリクエストで `POST` を用いた場合は、次のリクエストでも `POST` を使用しなければなりません。
+- `306 u-unused`
+  - : このレスポンスコードはもう使用されず、予約済みです。 http/1.1 仕様書の旧バージョンでは使用されていました。
+- {{httpstatus(307, ^•ﻌ•^ "307 tempowawy w-wediwect")}}
+  - : サーバーはこのレスポンスを、リクエストされたリソースを別の uwi で、元のリクエストと同じメソッドを使用して取得するようクライアントを誘導するために送信します。
+    これは `302 found` http レスポンスコードと同じ意味を持ちますが、ユーザーエージェントは使用する http メソッドを*変更してはならない*点が異なります。始めのリクエストで `post` を用いた場合は、次のリクエストでも `post` を使用しなければなりません。
+- {{httpstatus(308, rawr "308 pewmanent wediwect")}}
+  - : これは、リソースが h-http の `wocation:` レスポンスヘッダーで指定した別の uwi へ永続的に置かれていることを示します。
+    これは `301 m-moved pewmanentwy` h-http レスポンスコードと同じ意味を持ちますが、ユーザーエージェントは使用する h-http メソッドを*変更してはならない*点が異なります。始めのリクエストで `post` を用いた場合は、次のリクエストでも `post` を使用しなければなりません。
 
 ## クライアントエラーレスポンス
 
-- {{HTTPStatus(400, "400 Bad Request")}}
+- {{httpstatus(400, (˘ω˘) "400 bad wequest")}}
   - : クライアントのエラーとみなされるもの（例えば、不正なリクエスト構文、不正なリクエストメッセージフレーム、不正なリクエストルーティング）のために、 サーバーがリクエストを処理できない、あるいは処理しようとしない場合を示します。
-- {{HTTPStatus(401, "401 Unauthorized")}}
-  - : HTTP 標準では "unauthorized" (不許可) と定義されていますが、意味的にはこのレスポンスは "unauthenticated" (未認証) です。
+- {{httpstatus(401, nyaa~~ "401 unauthowized")}}
+  - : http 標準では "unauthowized" (不許可) と定義されていますが、意味的にはこのレスポンスは "unauthenticated" (未認証) です。
     つまり、クライアントはリクエストされたレスポンスを得るためには認証を受けなければなりません。
-- {{HTTPStatus(402, "402 Payment Required")}} {{experimental_inline}}
+- {{httpstatus(402, UwU "402 payment w-wequiwed")}} {{expewimentaw_inwine}}
   - : このレスポンスコードは、将来のために予約されています。このコードは当初、デジタル決済システムで使用するために作成されましたが、ごく稀にしか使用されておらず、標準的な慣例はありません。
-- {{HTTPStatus(403, "403 Forbidden")}}
+- {{httpstatus(403, :3 "403 f-fowbidden")}}
   - : 認証されていないなどの理由でクライアントにコンテンツのアクセス権がなく、サーバーが適切なレスポンスの返信を拒否していることを示します。
-    `401 Unauthorized` とは異なり、クライアントの ID がサーバーに知られています。
-- {{HTTPStatus(404, "404 Not Found")}}
+    `401 unauthowized` とは異なり、クライアントの i-id がサーバーに知られています。
+- {{httpstatus(404, (⑅˘꒳˘) "404 n-nyot found")}}
   - : サーバーがリクエストされたリソースを発見できないことを示します。
-    ブラウザーでは、これは URL が解釈できなかったことを意味します。
-    API では、これは通信先が有効であるものの、リソース自体が存在しないことを意味することがあります。
+    ブラウザーでは、これは uww が解釈できなかったことを意味します。
+    a-api では、これは通信先が有効であるものの、リソース自体が存在しないことを意味することがあります。
     サーバーは認証されていないクライアントからリソースの存在を隠すために、 403 の代わりにこのレスポンスを返すことがあります。
     このレスポンスコードはウェブで頻繁に見られるため、おそらくもっとも有名なコードでしょう。
-- {{HTTPStatus(405, "405 Method Not Allowed")}}
-  - : サーバーがリクエストメソッドを理解しているものの、無効にされており使用することができません。例えば、 API がリソースを DELETE することを禁止できます。 `GET` および `HEAD` の 2 つは必須で、無効にすることができず、このエラーコードを返してはいけません。
-- {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : このレスポンスは、ウェブサーバーが [サーバー駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#server-driven_negotiation) を行った結果、ユーザーエージェントから与えられた条件に合うコンテンツが見つからない場合に送信されます。
-- {{HTTPStatus(407, "407 Proxy Authentication Required")}}
-  - : これは `401 Unauthorized` と似ていますが、プロキシーサーバーが認証を要求している点が異なります。
-- {{HTTPStatus(408, "408 Request Timeout")}}
+- {{httpstatus(405, (///ˬ///✿) "405 method nyot a-awwowed")}}
+  - : サーバーがリクエストメソッドを理解しているものの、無効にされており使用することができません。例えば、 api がリソースを dewete することを禁止できます。 `get` および `head` の 2 つは必須で、無効にすることができず、このエラーコードを返してはいけません。
+- {{httpstatus(406, ^^;; "406 n-nyot acceptabwe")}}
+  - : このレスポンスは、ウェブサーバーが [サーバー駆動型コンテンツネゴシエーション](/ja/docs/web/http/guides/content_negotiation#sewvew-dwiven_negotiation) を行った結果、ユーザーエージェントから与えられた条件に合うコンテンツが見つからない場合に送信されます。
+- {{httpstatus(407, >_< "407 pwoxy a-authentication wequiwed")}}
+  - : これは `401 u-unauthowized` と似ていますが、プロキシーサーバーが認証を要求している点が異なります。
+- {{httpstatus(408, rawr x3 "408 w-wequest timeout")}}
   - : このレスポンスはクライアントが以前にリクエストを行っていない、アイドル状態の接続において一部のサーバーが送信します。
     サーバーが使用していない接続の終了を望んでいることを示します。
-    このレスポンスは Chrome、 Firefox 27 以降、IE9 など、閲覧を高速化するための HTTP 事前接続機能を使用する一部のブラウザーでよく使用します。
+    このレスポンスは chwome、 fiwefox 27 以降、ie9 など、閲覧を高速化するための http 事前接続機能を使用する一部のブラウザーでよく使用します。
     また、一部のサーバーはこのメッセージを送らずに接続を閉じることに注意してください。
-- {{HTTPStatus(409, "409 Conflict")}}
+- {{httpstatus(409, /(^•ω•^) "409 confwict")}}
   - : このレスポンスは、リクエストがサーバーの現在の状態と矛盾する場合に送られるでしょう。
-- {{HTTPStatus(410, "410 Gone")}}
+- {{httpstatus(410, :3 "410 gone")}}
   - : このレスポンスは、リクエストされたコンテンツがサーバーから永久に削除され、転送先アドレスがない場合に送られます。
     クライアントはこのリソースへのキャッシュやリンクを削除することが期待されます。
-    HTTP 仕様書ではこのコードを「期間限定のプロモーションサービス」に使用することを意図しています。
-    API はこのステータスコードの場合、削除されたリソースを無理に示そうとするべきではありません。
-- {{HTTPStatus(411, "411 Length Required")}}
-  - : サーバーが `Content-Length` ヘッダーフィールドを要求しているが、リクエストで定義されていないために、サーバーがリクエストを拒否したことを示します。
-- {{HTTPStatus(412, "412 Precondition Failed")}}
+    http 仕様書ではこのコードを「期間限定のプロモーションサービス」に使用することを意図しています。
+    a-api はこのステータスコードの場合、削除されたリソースを無理に示そうとするべきではありません。
+- {{httpstatus(411, (ꈍᴗꈍ) "411 wength w-wequiwed")}}
+  - : サーバーが `content-wength` ヘッダーフィールドを要求しているが、リクエストで定義されていないために、サーバーがリクエストを拒否したことを示します。
+- {{httpstatus(412, /(^•ω•^) "412 pwecondition f-faiwed")}}
   - : サーバー側で適合しない前提条件が、クライアント側のヘッダーに含まれていることを示します。
-- {{HTTPStatus(413, "413 Payload Too Large")}}
+- {{httpstatus(413, (⑅˘꒳˘) "413 p-paywoad too wawge")}}
   - : リクエストの本体がサーバーで定めている上限を超えていることを示します。
-    サーバーは接続を閉じるか、`Retry-After` ヘッダーフィールドを返します。
-- {{HTTPStatus(414, "414 URI Too Long")}}
-  - : クライアントがリクエストした URI が、サーバーで扱える長さを超えていることを示します。
-- {{HTTPStatus(415, "415 Unsupported Media Type")}}
+    サーバーは接続を閉じるか、`wetwy-aftew` ヘッダーフィールドを返します。
+- {{httpstatus(414, ( ͡o ω ͡o ) "414 u-uwi too wong")}}
+  - : クライアントがリクエストした uwi が、サーバーで扱える長さを超えていることを示します。
+- {{httpstatus(415, òωó "415 unsuppowted media type")}}
   - : リクエストされたデータのメディア形式をサーバーが対応しておらず、サーバーはリクエストを拒否したことを示します。
-- {{HTTPStatus(416, "416 Range Not Satisfiable")}}
-  - : リクエスト内の `Range` ヘッダーフィールドで指定された範囲を満たすことができないことを示します。
-    指定した範囲が、目的の URI のデータサイズを超えている可能性があります。
-- {{HTTPStatus(417, "417 Expectation Failed")}}
-  - : このレスポンスコードは、`Expect` リクエストヘッダーで指定された内容がサーバー側と適合しないことを示します。
-- {{HTTPStatus(418, "418 I'm a teapot")}}
+- {{httpstatus(416, (⑅˘꒳˘) "416 w-wange nyot satisfiabwe")}}
+  - : リクエスト内の `wange` ヘッダーフィールドで指定された範囲を満たすことができないことを示します。
+    指定した範囲が、目的の uwi のデータサイズを超えている可能性があります。
+- {{httpstatus(417, XD "417 expectation faiwed")}}
+  - : このレスポンスコードは、`expect` リクエストヘッダーで指定された内容がサーバー側と適合しないことを示します。
+- {{httpstatus(418, -.- "418 i-i'm a teapot")}}
   - : サーバーは、ティーポットでコーヒーを淹れようとする試みを拒否します。
-- {{HTTPStatus(421, "421 Misdirected Request")}}
+- {{httpstatus(421, :3 "421 m-misdiwected wequest")}}
   - : リクエストは、レスポンスを生成できないサーバーに送られました。
-    リクエストの URI に含まれているスキームや権限の組み合わせに対してレスポンスを生成するよう設定されていないサーバーが、このコードを送ることがあります。
-- {{HTTPStatus(422, "422 Unprocessable Content")}} ({{Glossary("WebDAV")}})
+    リクエストの u-uwi に含まれているスキームや権限の組み合わせに対してレスポンスを生成するよう設定されていないサーバーが、このコードを送ることがあります。
+- {{httpstatus(422, nyaa~~ "422 u-unpwocessabwe content")}} ({{gwossawy("webdav")}})
   - : リクエストは適正ですが、意味が誤っているために従うことができません。
-- {{HTTPStatus(423, "423 Locked")}} ({{Glossary("WebDAV")}})
+- {{httpstatus(423, 😳 "423 w-wocked")}} ({{gwossawy("webdav")}})
   - : アクセス中のリソースはロックされています。
-- {{HTTPStatus(424, "424 Failed Dependency")}} ({{Glossary("WebDAV")}})
+- {{httpstatus(424, (⑅˘꒳˘) "424 f-faiwed dependency")}} ({{gwossawy("webdav")}})
   - : 前のリクエストが失敗したため、このリクエストも失敗しました。
-- {{HTTPStatus(425, "425 Too Early")}} {{experimental_inline}}
+- {{httpstatus(425, nyaa~~ "425 t-too e-eawwy")}} {{expewimentaw_inwine}}
   - : サーバーが、繰り返される可能性のあるリクエストを処理するリスクを望まないことを示します。
-- {{HTTPStatus(426, "426 Upgrade Required")}}
+- {{httpstatus(426, OwO "426 upgwade wequiwed")}}
   - : サーバーは現在のプロトコルを使用したリクエストの実行を拒否しましたが、クライアントが別のプロトコルにアップグレードした後は受け入れることができます。
-    サーバーは必要なプロトコルを示すために、426 のレスポンスで {{HTTPHeader("Upgrade")}} ヘッダーフィールドを送信しなければなりません。
-- {{HTTPStatus(428, "428 Precondition Required")}}
+    サーバーは必要なプロトコルを示すために、426 のレスポンスで {{httpheadew("upgwade")}} ヘッダーフィールドを送信しなければなりません。
+- {{httpstatus(428, rawr x3 "428 pwecondition w-wequiwed")}}
   - : オリジンサーバーはリクエストが条件付きになることを必要としています。
     このレスポンスは「ロストアップデート問題」 (クライアントがリソースの状態を取得して変更およびサーバーに送信している間に、第三者がサーバーの状態を変更して競合が発生すること) を防ごうとするものです。
-- {{HTTPStatus(429, "429 Too Many Requests")}}
+- {{httpstatus(429, XD "429 t-too m-many wequests")}}
   - : ユーザーは一定の時間内に大量のリクエストを送信しました ("レート制限")。
-- {{HTTPStatus(431, "431 Request Header Fields Too Large")}}
+- {{httpstatus(431, "431 w-wequest h-headew fiewds too wawge")}}
   - : ヘッダーフィールドが大きすぎるため、サーバーはリクエストの処理を望みません。
     ヘッダーフィールドのサイズを削減した後に、リクエストを再送信できます。
-- {{HTTPStatus(451, "451 Unavailable For Legal Reasons")}}
+- {{httpstatus(451, σωσ "451 unavaiwabwe fow wegaw weasons")}}
   - : ユーザーエージェントが政府によって検閲されたウェブページなど、違法なリソースをリクエストしています。
 
 ## サーバーエラーレスポンス
 
-- {{HTTPStatus(500, "500 Internal Server Error")}}
+- {{httpstatus(500, (U ᵕ U❁) "500 i-intewnaw sewvew ewwow")}}
   - : サーバー側で処理方法がわからない事態が発生したことを示します。
-- {{HTTPStatus(501, "501 Not Implemented")}}
-  - : リクエストメソッドをサーバーが対応しておらず、扱えないことを示します。サーバーが対応しなければならない (従って、このコードを返してはならない) メソッドは `GET` と `HEAD` だけです。
-- {{HTTPStatus(502, "502 Bad Gateway")}}
+- {{httpstatus(501, (U ﹏ U) "501 nyot impwemented")}}
+  - : リクエストメソッドをサーバーが対応しておらず、扱えないことを示します。サーバーが対応しなければならない (従って、このコードを返してはならない) メソッドは `get` と `head` だけです。
+- {{httpstatus(502, :3 "502 bad gateway")}}
   - : このエラーレスポンスは、リクエストの処理に必要なレスポンスを受け取るゲートウェイとして動作するサーバーが無効なレスポンスを受け取ったことを示します。
-- {{HTTPStatus(503, "503 Service Unavailable")}}
+- {{httpstatus(503, ( ͡o ω ͡o ) "503 sewvice unavaiwabwe")}}
   - : サーバーはリクエストを処理する準備ができていないことを示します。
     一般的な原因は、サーバーがメンテナンスや過負荷でダウンしていることです。
     このレスポンスとともに問題について説明する、ユーザーにわかりやすいページを送信するべきであることに注意してください。
-    このレスポンスは一時的な状況について使用するものであり、また可能であれば、サービスが復旧する前に HTTP の `Retry-After` ヘッダーに予定時刻を含めてください。
+    このレスポンスは一時的な状況について使用するものであり、また可能であれば、サービスが復旧する前に h-http の `wetwy-aftew` ヘッダーに予定時刻を含めてください。
     また、これら一時的な状況のレスポンスは通常キャッシュされるべきではないことから、ウェブ管理者はこのレスポンスとともに送られるキャッシュ関連のヘッダーに注意しなければなりません。
-- {{HTTPStatus(504, "504 Gateway Timeout")}}
+- {{httpstatus(504, σωσ "504 gateway timeout")}}
   - : このエラーレスポンスは、ゲートウェイとして動作するサーバーが時間内にレスポンスを得られない場合に送られます。
-- {{HTTPStatus(505, "505 HTTP Version Not Supported")}}
-  - : リクエストで使用した HTTP のバージョンにサーバーが対応していないことを示します。
-- {{HTTPStatus(506, "506 Variant Also Negotiates")}}
+- {{httpstatus(505, >w< "505 http vewsion nyot s-suppowted")}}
+  - : リクエストで使用した h-http のバージョンにサーバーが対応していないことを示します。
+- {{httpstatus(506, 😳😳😳 "506 v-vawiant awso nyegotiates")}}
   - : サーバーに内部構成エラーがあることを示します。選択したバリアントリソースが透過的コンテンツネゴシエーション自体に携わるよう設定されており、ネゴシエーションプロセスが正しく終了しなかったことを示します。
-- {{HTTPStatus(507, "507 Insufficient Storage")}} ({{Glossary("WebDAV")}})
+- {{httpstatus(507, OwO "507 i-insufficient stowage")}} ({{gwossawy("webdav")}})
   - : サーバーがリクエストを完了させるのに必要な表現を保存することができなかったため、メソッドがリソースに対して実行できなかったことを示します。
-- {{HTTPStatus(508, "508 Loop Detected")}} ({{Glossary("WebDAV")}})
+- {{httpstatus(508, 😳 "508 woop d-detected")}} ({{gwossawy("webdav")}})
   - : サーバーは、リクエストの処理中に無限ループを検出しました。
-- {{HTTPStatus(510, "510 Not Extended")}}
+- {{httpstatus(510, 😳😳😳 "510 n-nyot extended")}}
   - : サーバーがリクエストを処理するために、リクエストをさらに拡張することが必要です。
-- {{HTTPStatus(511, "511 Network Authentication Required")}}
+- {{httpstatus(511, (˘ω˘) "511 nyetwowk authentication wequiwed")}}
   - : クライアントがネットワークでアクセスするために認証が必要であることを示します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HTTP ステータスコードの一覧 (Wikipedia)](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-- [HTTP ステータスコードの、IANA 公式レジストリー](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [http ステータスコードの一覧 (wikipedia)](https://en.wikipedia.owg/wiki/wist_of_http_status_codes)
+- [http ステータスコードの、iana 公式レジストリー](https://www.iana.owg/assignments/http-status-codes/http-status-codes.xhtmw)

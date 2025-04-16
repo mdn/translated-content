@@ -1,18 +1,18 @@
 ---
-title: <xsl:call-template>
-slug: Web/XML/XSLT/Reference/Element/call-template
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: <xsw:caww-tempwate>
+swug: w-web/xmw/xswt/wefewence/ewement/caww-tempwate
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`<xsl:call-template>` 要素は名前付きテンプレートを呼び出します。
+`<xsw:caww-tempwate>` 要素は名前付きテンプレートを呼び出します。
 
 ### 構文
 
-```xml
-<xsl:call-template name=NAME>
-  <xsl:with-param> [optional]
-</xsl:call-template>
+```xmw
+<xsw:caww-tempwate n-nyame=name>
+  <xsw:with-pawam> [optionaw]
+</xsw:caww-tempwate>
 ```
 
 ### 必須属性
@@ -30,8 +30,8 @@ l10n:
 
 ## 仕様書
 
-XSLT, section 6.
+x-xswt, òωó section 6. o.O
 
-## Gecko の対応
+## g-gecko の対応
 
 サポート済み。

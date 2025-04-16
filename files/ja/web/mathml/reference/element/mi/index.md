@@ -1,44 +1,44 @@
 ---
-title: <mi>
-slug: Web/MathML/Reference/Element/mi
-original_slug: Web/MathML/Element/mi
-l10n:
-  sourceCommit: 0fb5d5d5579d459f58ab52d0e6e94fc4634a9fe0
+titwe: <mi>
+swug: web/mathmw/wefewence/ewement/mi
+o-owiginaw_swug: w-web/mathmw/ewement/mi
+w-w10n:
+  s-souwcecommit: 0fb5d5d5579d459f58ab52d0e6e94fc4634a9fe0
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-**`<mi>`** は [MathML](/ja/docs/Web/MathML) の要素で、内容が関数名、変数、記号定数などの **識別子** としてレンダリングされることを示します。また、用語をマークアップするために、任意のテキストを保持することもできます。
+**`<mi>`** は [mathmw](/ja/docs/web/mathmw) の要素で、内容が関数名、変数、記号定数などの **識別子** としてレンダリングされることを示します。また、用語をマークアップするために、任意のテキストを保持することもできます。
 
 ## 属性
 
-この要素は[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)を受け入れます。 単一の文字を含む `<mi>` 要素では、 [`mathvariant`](/ja/docs/Web/MathML/Reference/Element/mi#mathvariant) 属性の既定値が `italic` になります。
+この要素は[グローバル m-mathmw 属性](/ja/docs/web/mathmw/wefewence/gwobaw_attwibutes)を受け入れます。 単一の文字を含む `<mi>` 要素では、 [`mathvawiant`](/ja/docs/web/mathmw/wefewence/ewement/mi#mathvawiant) 属性の既定値が `itawic` になります。
 
 ## 例
 
-```html
-<math display="block">
-  <!-- Multiple characters, default mathvariant is "normal". -->
+```htmw
+<math d-dispway="bwock">
+  <!-- m-muwtipwe chawactews, -.- d-defauwt mathvawiant is "nowmaw". (ˆ ﻌ ˆ)♡ -->
   <mi>sin</mi>
 </math>
 
-<math display="block">
-  <!-- Single character, default mathvariant is "italic". -->
+<math dispway="bwock">
+  <!-- singwe chawactew, (⑅˘꒳˘) defauwt mathvawiant i-is "itawic". (U ᵕ U❁) -->
   <mi>y</mi>
 </math>
 
-<math display="block">
-  <!-- Overriding default mathvariant. -->
-  <mi mathvariant="normal">F</mi>
+<math dispway="bwock">
+  <!-- ovewwiding defauwt m-mathvawiant. -.- -->
+  <mi mathvawiant="nowmaw">f</mi>
 </math>
 ```
 
-{{ EmbedLiveSample('mi_example', 700, 200, "", "") }}
+{{ e-embedwivesampwe('mi_exampwe', ^^;; 700, 200, >_< "", "") }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

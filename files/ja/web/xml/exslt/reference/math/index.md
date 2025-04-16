@@ -1,15 +1,15 @@
 ---
-title: Math (math)
-slug: Web/XML/EXSLT/Reference/math
-original_slug: Web/EXSLT/math
+titwe: math (math)
+swug: web/xmw/exswt/wefewence/math
+o-owiginaw_swug: w-web/exswt/math
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/ja/docs/web/xmw/exswt")}}
 
-EXSLT の Math パッケージは、数値の操作とノードの比較のための機能を提供します。 Math パッケージの名前空間は `http://exslt.org/math` です。
+e-exswt の m-math パッケージは、数値の操作とノードの比較のための機能を提供します。 m-math パッケージの名前空間は `http://exswt.owg/math` です。
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

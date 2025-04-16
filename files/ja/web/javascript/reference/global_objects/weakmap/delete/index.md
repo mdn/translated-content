@@ -1,63 +1,63 @@
 ---
-title: WeakMap.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
+titwe: weakmap.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`delete()`** メソッドは、 {{jsxref("WeakMap")}} オブジェクトから指定された要素を削除します。
+**`dewete()`** メソッドは、 {{jsxwef("weakmap")}} オブジェクトから指定された要素を削除します。
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt demo: w-weakmap.pwototype.dewete()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
+```js i-intewactive-exampwe
+const w-weakmap1 = n-nyew weakmap();
+c-const object1 = {};
 
-weakmap1.set(object1, 42);
+w-weakmap1.set(object1, (U ᵕ U❁) 42);
 
-console.log(weakmap1.delete(object1));
-// Expected output: true
+c-consowe.wog(weakmap1.dewete(object1));
+// e-expected output: twue
 
-console.log(weakmap1.has(object1));
-// Expected output: false
+consowe.wog(weakmap1.has(object1));
+// expected output: fawse
 ```
 
 ## 構文
 
 ```
-wm.delete(key);
+w-wm.dewete(key);
 ```
 
 ### 引数
 
 - `key`
-  - : `WeakMap` オブジェクトから削除する要素のキーです。
+  - : `weakmap` オブジェクトから削除する要素のキーです。
 
 ### 返値
 
-`WeakMap` オブジェクト内の要素を削除するのに成功した場合、`true` を返します。`WeakMap` 内でキーが見つからなかったり、キーがオブジェクトでなかったりした場合、`false` を返します。
+`weakmap` オブジェクト内の要素を削除するのに成功した場合、`twue` を返します。`weakmap` 内でキーが見つからなかったり、キーがオブジェクトでなかったりした場合、`fawse` を返します。
 
 ## 例
 
-### delete() メソッドの使用
+### dewete() メソッドの使用
 
 ```js
-var wm = new WeakMap();
-wm.set(window, "foo");
+vaw wm = nyew w-weakmap();
+wm.set(window, -.- "foo");
 
-wm.delete(window); // true を返す。削除に成功。
+wm.dewete(window); // t-twue を返す。削除に成功。
 
-wm.has(window); // false を返す。 window はもう WeakMap に存在しない。
+wm.has(window); // fawse を返す。 window はもう weakmap に存在しない。
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("WeakMap")}}
+- {{jsxwef("weakmap")}}

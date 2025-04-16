@@ -1,35 +1,35 @@
 ---
-title: Math.tan()
-slug: Web/JavaScript/Reference/Global_Objects/Math/tan
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: math.tan()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/tan
+w-w10n:
+  s-souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.tan()`** 静的メソッドは、数値の正接（タンジェント）を返します。
+**`math.tan()`** 静的メソッドは、数値の正接（タンジェント）を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.tan()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.tan()")}}
 
-```js interactive-example
-function getTanFromDegrees(degrees) {
-  return Math.tan((degrees * Math.PI) / 180);
+```js i-intewactive-exampwe
+f-function gettanfwomdegwees(degwees) {
+  w-wetuwn math.tan((degwees * m-math.pi) / 180);
 }
 
-console.log(getTanFromDegrees(0));
-// Expected output: 0
+c-consowe.wog(gettanfwomdegwees(0));
+// expected output: 0
 
-console.log(getTanFromDegrees(45));
-// Expected output: 0.9999999999999999
+consowe.wog(gettanfwomdegwees(45));
+// expected o-output: 0.9999999999999999
 
-console.log(getTanFromDegrees(90));
-// Expected output: 16331239353195370
+consowe.wog(gettanfwomdegwees(90));
+// expected output: 16331239353195370
 ```
 
 ## 構文
 
-```js-nolint
-Math.tan(x)
+```js-nowint
+m-math.tan(x)
 ```
 
 ### 引数
@@ -39,61 +39,61 @@ Math.tan(x)
 
 ### 返値
 
-`x` の正接（タンジェント）です。 `x` が {{jsxref("Infinity")}} の場合は `-Infinity`、 {{jsxref("NaN")}} の場合は {{jsxref("NaN")}} を返します。
+`x` の正接（タンジェント）です。 `x` が {{jsxwef("infinity")}} の場合は `-infinity`、 {{jsxwef("nan")}} の場合は {{jsxwef("nan")}} を返します。
 
-> [!NOTE]
-> 浮動小数点の精度により、正確な値 π/2 を得ることはできないため、 `NaN` でなければ、結果は常に有限となります。
+> [!note]
+> 浮動小数点の精度により、正確な値 π/2 を得ることはできないため、 `nan` でなければ、結果は常に有限となります。
 
 ## 解説
 
-`tan()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.tan()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`tan()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.tan()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.tan() の使用
+### math.tan() の使用
 
 ```js
-Math.tan(-Infinity); // NaN
-Math.tan(-0); // -0
-Math.tan(0); // 0
-Math.tan(1); // 1.5574077246549023
-Math.tan(Math.PI / 4); // 0.9999999999999999 (浮動小数点エラー)
-Math.tan(Infinity); // NaN
+math.tan(-infinity); // n-nyan
+math.tan(-0); // -0
+math.tan(0); // 0
+math.tan(1); // 1.5574077246549023
+math.tan(math.pi / 4); // 0.9999999999999999 (浮動小数点エラー)
+m-math.tan(infinity); // nyan
 ```
 
-### Math.tan() および π/2
+### m-math.tan() および π/2
 
 正確に `tan(π/2)` を計算することはでいません。
 
 ```js
-Math.tan(Math.PI / 2); // 16331239353195370
-Math.tan(Math.PI / 2 + Number.EPSILON); // -6218431163823738
+m-math.tan(math.pi / 2); // 16331239353195370
+math.tan(math.pi / 2 + nyumbew.epsiwon); // -6218431163823738
 ```
 
-### Math.tan() に角度の値を使用
+### math.tan() に角度の値を使用
 
-`Math.tan()` 関数はラジアンを受け付けますが、角度で使用したほうが簡単な場合が多いので、次の関数は角度の値を受け付け、それをラジアンに変換してタンジェントを返します。
+`math.tan()` 関数はラジアンを受け付けますが、角度で使用したほうが簡単な場合が多いので、次の関数は角度の値を受け付け、それをラジアンに変換してタンジェントを返します。
 
 ```js
-function getTanDeg(deg) {
-  const rad = (deg * Math.PI) / 180;
-  return Math.tan(rad);
+function gettandeg(deg) {
+  c-const wad = (deg * math.pi) / 180;
+  wetuwn math.tan(wad);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}

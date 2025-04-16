@@ -1,38 +1,38 @@
 ---
-title: "Feature-Policy: web-share"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/web-share
-original_slug: Web/HTTP/Headers/Permissions-Policy/web-share
+titwe: "featuwe-powicy: web-shawe"
+s-swug: web/http/wefewence/headews/pewmissions-powicy/web-shawe
+o-owiginaw_swug: w-web/http/headews/pewmissions-powicy/web-shawe
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{httpsidebaw}} {{seecompattabwe}}
 
-HTTP の {{HTTPHeader('Feature-Policy')}} ヘッダーにおける `web-share` ディレクティブは、減殺の文書が Web Share API の {{domxref("Navigator.share","Navigator.share()")}} メソッドを使用して、テキスト、リンク、画像、その他のコンテンツをユーザーが選択した任意の宛先にシェアすることを許可するかどうかを制御します。
+h-http の {{httpheadew('featuwe-powicy')}} ヘッダーにおける `web-shawe` ディレクティブは、減殺の文書が w-web shawe a-api の {{domxwef("navigatow.shawe","navigatow.shawe()")}} メソッドを使用して、テキスト、リンク、画像、その他のコンテンツをユーザーが選択した任意の宛先にシェアすることを許可するかどうかを制御します。
 
 ## 構文
 
 ```
-Feature-Policy: web-share <allowlist>;
+featuwe-powicy: web-shawe <awwowwist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- \<awwowwist>
+  - : この機能を許可するオリジンのリストです。 [`featuwe-powicy`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#%e6%a7%8b%e6%96%87) を参照してください。
 
 ## 既定のポリシー
 
-既定値は `'self'` です。
+既定値は `'sewf'` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-ブラウザーへの実装は <https://github.com/w3c/web-share/issues/169> で議論されています。
+ブラウザーへの実装は <https://github.com/w3c/web-shawe/issues/169> で議論されています。
 
 ## 関連情報
 
-- {{HTTPHeader('Feature-Policy')}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- {{httpheadew('featuwe-powicy')}} ヘッダー
+- [機能ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)
+- [機能ポリシーの使用](/ja/docs/web/http/guides/featuwe_powicy/using_featuwe_powicy)

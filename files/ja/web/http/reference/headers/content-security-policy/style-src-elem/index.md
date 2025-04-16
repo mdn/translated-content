@@ -1,108 +1,108 @@
 ---
-title: "CSP: style-src-elem"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem
-original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src-elem
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: stywe-swc-ewem"
+s-swug: web/http/wefewence/headews/content-secuwity-powicy/stywe-swc-ewem
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/stywe-swc-ewem
+w10n:
+  s-souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-src-elem`** ディレクティブは、スタイルシート {{HTMLElement("style")}} 要素と `rel="stylesheet"` を持つ {{HTMLElement("link")}} 要素の有効なソースを指定します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`stywe-swc-ewem`** ディレクティブは、スタイルシート {{htmwewement("stywe")}} 要素と `wew="stywesheet"` を持つ {{htmwewement("wink")}} 要素の有効なソースを指定します。
 
-これらは {{CSP("style-src-attr")}} を使用して設定されます（また、すべてのスタイルの有効なソースは {{CSP("style-src")}} で設定することができます）。
+これらは {{csp("stywe-swc-attw")}} を使用して設定されます（また、すべてのスタイルの有効なソースは {{csp("stywe-swc")}} で設定することができます）。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th s-scope="wow">csp バージョン</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">フォールバック</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch diwective", "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">フォールバック</th>
       <td>
         <p>
-          このディレクティブがない場合、ユーザーエージェントは {{CSP("style-src")}} を探し、両方ともなかった場合は、<code>default-src</code> で代替されます。
+          このディレクティブがない場合、ユーザーエージェントは {{csp("stywe-swc")}} を探し、両方ともなかった場合は、<code>defauwt-swc</code> で代替されます。
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-1 つ以上のソースが `style-src-elem` ポリシーで指定できます。
+1 つ以上のソースが `stywe-swc-ewem` ポリシーで指定できます。
 
 ```http
-Content-Security-Policy: style-src-elem <source>;
-Content-Security-Policy: style-src-elem <source> <source>;
+content-secuwity-powicy: stywe-swc-ewem <souwce>;
+c-content-secuwity-powicy: stywe-swc-ewem <souwce> <souwce>;
 ```
 
-`style-src-elem` は {{CSP("style-src")}} との組み合わせで使用されます。
+`stywe-swc-ewem` は {{csp("stywe-swc")}} との組み合わせで使用されます。
 
 ```http
-Content-Security-Policy: style-src <source>;
-Content-Security-Policy: style-src-elem <source>;
+content-secuwity-powicy: stywe-swc <souwce>;
+c-content-secuwity-powicy: stywe-swc-ewem <souwce>;
 ```
 
 ### ソース
 
-`<source>` には、[CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース) に掲載されている値のいずれかが使用できます。
+`<souwce>` には、[csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース) に掲載されている値のいずれかが使用できます。
 
-この同じ値の集合は、すべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#relevant_directives)）で使用できるということに注意してください。
+この同じ値の集合は、すべての{{gwossawy("fetch d-diwective", XD "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#wewevant_diwectives)）で使用できるということに注意してください。
 
 ## 例
 
 ### 違反している場合
 
-この CSP ヘッダーがあったとします。
+この csp ヘッダーがあったとします。
 
 ```http
-Content-Security-Policy: style-src-elem https://example.com/
+content-secuwity-powicy: stywe-swc-ewem h-https://exampwe.com/
 ```
 
 …このスタイルシートはブロックされ、読み込まれません。
 
-```html
-<link href="https://not-example.com/styles/main.css" rel="stylesheet" />
+```htmw
+<wink hwef="https://not-exampwe.com/stywes/main.css" w-wew="stywesheet" />
 
-<style>
-  #inline-style {
-    background: red;
+<stywe>
+  #inwine-stywe {
+    b-backgwound: wed;
   }
-</style>
+</stywe>
 
-<style>
-  @import url("https://not-example.com/styles/print.css") print;
-</style>
+<stywe>
+  @impowt uww("https://not-exampwe.com/stywes/pwint.css") pwint;
+</stywe>
 ```
 
-…同様に、{{HTTPHeader("Link")}} ヘッダーを使用して読み込まれたスタイル設定です。
+…同様に、{{httpheadew("wink")}} ヘッダーを使用して読み込まれたスタイル設定です。
 
 ```http
-Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
+wink: <https://not-exampwe.com/stywes/stywesheet.css>;wew=stywesheet
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{CSP("style-src")}}
-- {{CSP("style-src-attr")}}
-- {{HTTPHeader("Link")}} ヘッダー
-- {{HTMLElement("style")}}, {{HTMLElement("link")}}
-- {{cssxref("@import")}}
-- {{domxref("CSSStyleSheet.insertRule()")}}
-- {{domxref("CSSGroupingRule.insertRule()")}}
-- {{domxref("CSSStyleDeclaration.cssText")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{csp("stywe-swc")}}
+- {{csp("stywe-swc-attw")}}
+- {{httpheadew("wink")}} ヘッダー
+- {{htmwewement("stywe")}}, :3 {{htmwewement("wink")}}
+- {{cssxwef("@impowt")}}
+- {{domxwef("cssstywesheet.insewtwuwe()")}}
+- {{domxwef("cssgwoupingwuwe.insewtwuwe()")}}
+- {{domxwef("cssstywedecwawation.csstext")}}

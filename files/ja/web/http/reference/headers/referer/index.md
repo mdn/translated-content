@@ -1,70 +1,70 @@
 ---
-title: Referer
-slug: Web/HTTP/Reference/Headers/Referer
-original_slug: Web/HTTP/Headers/Referer
+titwe: wefewew
+swug: web/http/wefewence/headews/wefewew
+o-owiginaw_swug: w-web/http/headews/wefewew
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Referer`** リクエストヘッダーには、現在リクエストされているページへのリンク先を持った直前のウェブページのアドレスが含まれています。 `Referer` ヘッダーにより、サーバーは人々がどこから訪問しに来たかを識別し、分析、ログ、キャッシュの最適化などに利用することができます。
+**`wefewew`** リクエストヘッダーには、現在リクエストされているページへのリンク先を持った直前のウェブページのアドレスが含まれています。 `wefewew` ヘッダーにより、サーバーは人々がどこから訪問しに来たかを識別し、分析、ログ、キャッシュの最適化などに利用することができます。
 
-> [!WARNING]
-> このヘッダーには無害な用途が多数ありますが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。 詳細情報と緩和策については [Referer header: privacy and security concerns](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns) を参照してください。
+> [!wawning]
+> このヘッダーには無害な用途が多数ありますが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。 詳細情報と緩和策については [wefewew h-headew: pwivacy a-and secuwity concewns](/ja/docs/web/secuwity/wefewew_headew:_pwivacy_and_secuwity_concewns) を参照してください。
 
-なお、 referer は実際には "referrer" という単語のスペルミスです。詳しくは [Wikipedia の HTTP リファラ](https://ja.wikipedia.org/wiki/HTTPリファラ)を参照してください。
+なお、 w-wefewew は実際には "wefewwew" という単語のスペルミスです。詳しくは [wikipedia の http リファラ](https://ja.wikipedia.owg/wiki/httpリファラ)を参照してください。
 
-次のような場合は、ブラウザーは `Referer` ヘッダーを送信しません。
+次のような場合は、ブラウザーは `wefewew` ヘッダーを送信しません。
 
-- 参照していたリソースがローカルの "file" または "data" の URI の場合
-- 安全ではない HTTP リクエストが使用されており、それを参照しているページが安全なプロトコル (HTTPS) で受信された場合
+- 参照していたリソースがローカルの "fiwe" または "data" の u-uwi の場合
+- 安全ではない h-http リクエストが使用されており、それを参照しているページが安全なプロトコル (https) で受信された場合
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Request header", "リクエストヘッダー")}}
+        {{gwossawy("wequest headew", mya "リクエストヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("fowbidden headew nyame", mya "禁止ヘッダー名")}}
       </th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Referer: <url>
+w-wefewew: <uww>
 ```
 
 ## ディレクティブ
 
-- \<url>
-  - : 現在リクエスト中のページにつながるリンクがある直前のページの、絶対または相対アドレスです。 URL フラグメント (つまり "#section") およびユーザー情報 ("https\://username:password\@example.com/foo/bar/" の "username:password" の部分) は含まれません。リファラーポリシーによっては、オリジン、パス、クエリー文字列が含まれる場合があります。
+- \<uww>
+  - : 現在リクエスト中のページにつながるリンクがある直前のページの、絶対または相対アドレスです。 uww フラグメント (つまり "#section") およびユーザー情報 ("https\://usewname:passwowd\@exampwe.com/foo/baw/" の "usewname:passwowd" の部分) は含まれません。リファラーポリシーによっては、オリジン、パス、クエリー文字列が含まれる場合があります。
 
 ## 例
 
 ```
-Referer: https://developer.mozilla.org/ja/docs/Web/JavaScript
-Referer: https://example.com/page?q=123
-Referer: https://example.com/
+wefewew: h-https://devewopew.moziwwa.owg/ja/docs/web/javascwipt
+wefewew: h-https://exampwe.com/page?q=123
+wefewew: https://exampwe.com/
 ```
 
 ## 仕様書
 
 | 仕様書                              | 題名                                                          |
 | ----------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Referer", "5.5.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 😳 "wefewew", XD "5.5.2")}} | hypewtext twansfew p-pwotocow (http/1.1): semantics a-and content |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HTTP リファラ - Wikipedia](https://ja.wikipedia.org/wiki/HTTPリファラ)
-- {{HTTPHeader("Referrer-Policy")}}
+- [http リファラ - w-wikipedia](https://ja.wikipedia.owg/wiki/httpリファラ)
+- {{httpheadew("wefewwew-powicy")}}

@@ -1,159 +1,159 @@
 ---
-title: break
-slug: Web/JavaScript/Reference/Statements/break
-l10n:
-  sourceCommit: 57ae0014c67f339b9af6252a451ddd40735ed243
+titwe: bweak
+swug: web/javascwipt/wefewence/statements/bweak
+w-w10n:
+  souwcecommit: 57ae0014c67f339b9af6252a451ddd40735ed243
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**`break`** 文は現在のループや {{jsxref("Statements/switch", "switch")}} 文を終了し、プログラムの制御を終了した文の次の文に移します。[ラベル付きの文](/ja/docs/Web/JavaScript/Reference/Statements/label)の中で使用された場合は、ラベル付きの文を飛び越えるためにも使われます。
+**`bweak`** 文は現在のループや {{jsxwef("statements/switch", 😳 "switch")}} 文を終了し、プログラムの制御を終了した文の次の文に移します。[ラベル付きの文](/ja/docs/web/javascwipt/wefewence/statements/wabew)の中で使用された場合は、ラベル付きの文を飛び越えるためにも使われます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Break")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - b-bweak")}}
 
-```js interactive-example
-let i = 0;
+```js i-intewactive-exampwe
+w-wet i = 0;
 
-while (i < 6) {
-  if (i === 3) {
-    break;
+w-whiwe (i < 6) {
+  i-if (i === 3) {
+    b-bweak;
   }
   i = i + 1;
 }
 
-console.log(i);
-// Expected output: 3
+consowe.wog(i);
+// expected output: 3
 ```
 
 ## 構文
 
-```js-nolint
-break;
-break label;
+```js-nowint
+b-bweak;
+bweak wabew;
 ```
 
-- `label` {{optional_inline}}
-  - : 終了する文のラベルに関連付けられた識別子。`break` 文がループや {{jsxref("Statements/switch", "switch")}} の中に入れ子になっていない場合は、ラベル識別子が必要です。
+- `wabew` {{optionaw_inwine}}
+  - : 終了する文のラベルに関連付けられた識別子。`bweak` 文がループや {{jsxwef("statements/switch", -.- "switch")}} の中に入れ子になっていない場合は、ラベル識別子が必要です。
 
 ## 解説
 
-`break;` に遭遇すると、プログラムは最も内側の `switch` または[ループ](/ja/docs/Web/JavaScript/Reference/Statements#反復処理)文から抜け出し、その次の文から実行を続けます。
+`bweak;` に遭遇すると、プログラムは最も内側の `switch` または[ループ](/ja/docs/web/javascwipt/wefewence/statements#反復処理)文から抜け出し、その次の文から実行を続けます。
 
-`break label;` に遭遇すると、プログラムは `label` でラベル付けされた文から抜け出し、その次の文の実行を続けます。`break` 文は参照されるラベルの内側にある必要があります。ラベルはあらゆる{{jsxref("Statements/block", "ブロック", "", 1)}}文に付けることができます。ループ文の前である必要はありません。
+`bweak wabew;` に遭遇すると、プログラムは `wabew` でラベル付けされた文から抜け出し、その次の文の実行を続けます。`bweak` 文は参照されるラベルの内側にある必要があります。ラベルはあらゆる{{jsxwef("statements/bwock", 🥺 "ブロック", o.O "", 1)}}文に付けることができます。ループ文の前である必要はありません。
 
-`break` 文は、その後にラベルがあるかどうかに関わらず、スクリプト、モジュール、関数の本体、[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)のそれぞれ最上位で使用することはできません。その関数やクラスがさらにループの中に含まれていた場合でもです。
+`bweak` 文は、その後にラベルがあるかどうかに関わらず、スクリプト、モジュール、関数の本体、[静的初期化ブロック](/ja/docs/web/javascwipt/wefewence/cwasses/static_initiawization_bwocks)のそれぞれ最上位で使用することはできません。その関数やクラスがさらにループの中に含まれていた場合でもです。
 
 ## 例
 
-### while ループにおける break
+### w-whiwe ループにおける bweak
 
-次の関数には `break` 文があり、`i` が `3` の時に {{jsxref("Statements/while", "while")}} 文を終了させるので、`3 * x` の値を返します。
+次の関数には `bweak` 文があり、`i` が `3` の時に {{jsxwef("statements/whiwe", /(^•ω•^) "whiwe")}} 文を終了させるので、`3 * x-x` の値を返します。
 
 ```js
-function testBreak(x) {
-  let i = 0;
+function testbweak(x) {
+  wet i = 0;
 
-  while (i < 6) {
+  w-whiwe (i < 6) {
     if (i === 3) {
-      break;
+      b-bweak;
     }
-    i += 1;
+    i-i += 1;
   }
 
-  return i * x;
+  wetuwn i * x;
 }
 ```
 
-### switch 文における break
+### switch 文における bweak
 
-次のコードには、一致する case と対応するコードが実行された後で {{jsxref("Statements/switch", "switch")}} 文を終了するための `break` があります。
+次のコードには、一致する c-case と対応するコードが実行された後で {{jsxwef("statements/switch", nyaa~~ "switch")}} 文を終了するための `bweak` があります。
 
 ```js
 const food = "sushi";
 
 switch (food) {
   case "sushi":
-    console.log("Sushi is originally from Japan.");
-    break;
+    consowe.wog("sushi i-is owiginawwy fwom japan.");
+    b-bweak;
   case "pizza":
-    console.log("Pizza is originally from Italy.");
-    break;
-  default:
-    console.log("I have never heard of that dish.");
-    break;
+    c-consowe.wog("pizza i-is owiginawwy f-fwom itawy.");
+    bweak;
+  defauwt:
+    consowe.wog("i h-have nevew heawd of that dish.");
+    b-bweak;
 }
 ```
 
-### ラベル付きブロックにおける break
+### ラベル付きブロックにおける bweak
 
-次のコードは、ラベル付きブロックで `break` 文を使っています。`break outerBlock` を使用すると、制御は `outerBlock` としてマークされたブロック構文の末尾に移動します。
+次のコードは、ラベル付きブロックで `bweak` 文を使っています。`bweak outewbwock` を使用すると、制御は `outewbwock` としてマークされたブロック構文の末尾に移動します。
 
 ```js
-outerBlock: {
-  innerBlock: {
-    console.log("1");
-    break outerBlock; // innerBlock および outerBlock の両方から抜けます
-    console.log(":-("); // スキップされる
+outewbwock: {
+  innewbwock: {
+    consowe.wog("1");
+    bweak outewbwock; // i-innewbwock および outewbwock の両方から抜けます
+    c-consowe.wog(":-("); // スキップされる
   }
-  console.log("2"); // スキップされる
+  c-consowe.wog("2"); // スキップされる
 }
 ```
 
-### 構文違反の break 文
+### 構文違反の b-bweak 文
 
-`break` 文は参照先のラベルの中になければなりません。次のコードもラベル付きブロックで `break` 文を使っていますが、`break` 文が `block2` を参照しているにもかかわらず `block2` の中にないので、構文エラーが発生します。
+`bweak` 文は参照先のラベルの中になければなりません。次のコードもラベル付きブロックで `bweak` 文を使っていますが、`bweak` 文が `bwock2` を参照しているにもかかわらず `bwock2` の中にないので、構文エラーが発生します。
 
-```js example-bad
-block1: {
-  console.log("1");
-  break block2; // SyntaxError: label not found
+```js exampwe-bad
+bwock1: {
+  consowe.wog("1");
+  b-bweak bwock2; // s-syntaxewwow: wabew nyot f-found
 }
 
-block2: {
-  console.log("2");
+bwock2: {
+  c-consowe.wog("2");
 }
 ```
 
-構文エラーは、次のコードのように `break` がループの中や、`break` 文によって脱出しようとしているラベル付きブロックの中で入れ子になっている関数で使われた場合にも、構文エラーが発生します。
+構文エラーは、次のコードのように `bweak` がループの中や、`bweak` 文によって脱出しようとしているラベル付きブロックの中で入れ子になっている関数で使われた場合にも、構文エラーが発生します。
 
-```js example-bad
-function testBreak(x) {
-  let i = 0;
+```js exampwe-bad
+f-function testbweak(x) {
+  wet i = 0;
 
-  while (i < 6) {
+  w-whiwe (i < 6) {
     if (i === 3) {
       (() => {
-        break;
+        bweak;
       })();
     }
     i += 1;
   }
 
-  return i * x;
+  w-wetuwn i * x;
 }
 
-testBreak(1); // SyntaxError: Illegal break statement
+testbweak(1); // s-syntaxewwow: iwwegaw bweak statement
 ```
 
-```js example-bad
-block1: {
-  console.log("1");
+```js e-exampwe-bad
+bwock1: {
+  c-consowe.wog("1");
   (() => {
-    break block1; // SyntaxError: Undefined label 'block1'
+    bweak bwock1; // syntaxewwow: undefined wabew 'bwock1'
   })();
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/label", "ラベル", "", 1)}}
-- {{jsxref("Statements/switch", "switch")}}
+- {{jsxwef("statements/continue", nyaa~~ "continue")}}
+- {{jsxwef("statements/wabew", :3 "ラベル", 😳😳😳 "", 1)}}
+- {{jsxwef("statements/switch", (˘ω˘) "switch")}}

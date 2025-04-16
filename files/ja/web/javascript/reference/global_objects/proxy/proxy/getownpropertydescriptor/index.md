@@ -1,57 +1,57 @@
 ---
-title: handler.getOwnPropertyDescriptor()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: handwew.getownpwopewtydescwiptow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/getownpwopewtydescwiptow
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.getOwnPropertyDescriptor()`** は、オブジェクトの `[[GetOwnProperty]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.getOwnPropertyDescriptor()")}} などの操作で使用されます。
+**`handwew.getownpwopewtydescwiptow()`** は、オブジェクトの `[[getownpwopewty]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)に対するトラップです。{{jsxwef("object.getownpwopewtydescwiptow()")}} などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.getOwnPropertyDescriptor()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.getownpwopewtydescwiptow()", (///ˬ///✿) "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  eyeCount: 4,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  e-eyecount: 4, 😳😳😳
 };
 
-const handler1 = {
-  getOwnPropertyDescriptor(target, prop) {
-    console.log(`called: ${prop}`);
-    // Expected output: "called: eyeCount"
+c-const handwew1 = {
+  getownpwopewtydescwiptow(tawget, 🥺 pwop) {
+    consowe.wog(`cawwed: ${pwop}`);
+    // expected output: "cawwed: e-eyecount"
 
-    return { configurable: true, enumerable: true, value: 5 };
-  },
+    wetuwn { configuwabwe: twue, mya enumewabwe: t-twue, 🥺 vawue: 5 };
+  }, >_<
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const pwoxy1 = n-nyew pwoxy(monstew1, >_< handwew1);
 
-console.log(Object.getOwnPropertyDescriptor(proxy1, "eyeCount").value);
-// Expected output: 5
+consowe.wog(object.getownpwopewtydescwiptow(pwoxy1, (⑅˘꒳˘) "eyecount").vawue);
+// expected o-output: 5
 ```
 
 ## 構文
 
-```js-nolint
-new Proxy(target, {
-  getOwnPropertyDescriptor(target, prop) {
+```js-nowint
+nyew p-pwoxy(tawget, /(^•ω•^) {
+  g-getownpwopewtydescwiptow(tawget, rawr x3 pwop) {
   }
 });
 ```
 
 ### 引数
 
-次の引数は `getOwnPropertyDescriptor()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
+次の引数は `getownpwopewtydescwiptow()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-- `target`
+- `tawget`
   - : ターゲットオブジェクトです。
-- `prop`
+- `pwop`
   - : ディスクリプタを取得されるプロパティ名です。
 
 ### 返値
 
-`getOwnPropertyDescriptor` メソッドはオブジェクト、または `undefined` を返さなければなりません。
+`getownpwopewtydescwiptow` メソッドはオブジェクト、または `undefined` を返さなければなりません。
 
 ## 解説
 
@@ -59,69 +59,69 @@ new Proxy(target, {
 
 このトラップは下記の操作に介入できます。
 
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()")}}
 
-他にも、`[[GetOwnProperty]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
+他にも、`[[getownpwopewty]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+以下の不変条件に違反している場合、プロキシーは {{jsxwef("typeewwow")}} を発生します。
 
-- `getOwnPropertyDescriptor()` はオブジェクトか、または `undefined` を返さなければなりません。
+- `getownpwopewtydescwiptow()` はオブジェクトか、または `undefined` を返さなければなりません。
 - プロパティがターゲットオブジェクトの設定不可な独自のプロパティとして存在する場合、存在しないとして報告されてはいけません。
 - プロパティがターゲットオブジェクトの独自のプロパティとして存在し、そのターゲットオブジェクトが拡張不可の場合、存在しないとして報告されてはいけません。
 - プロパティがターゲットオブジェクトの独自のプロパティとして存在せず、そのターゲットオブジェクトが拡張不可の場合、存在するとして報告されてはいけません。
 - プロパティがターゲットオブジェクトの独自のプロパティとして存在しないか、ターゲットオブジェクトの設定可能な独自のプロパティとして存在している場合、設定不可であるとして報告されてはいけません。
-- `Object.getOwnPropertyDescriptor(target)` の結果を `Object.defineProperty()` に使用した時に、ターゲットオブジェクトに適用でき、例外を発生させません。
+- `object.getownpwopewtydescwiptow(tawget)` の結果を `object.definepwopewty()` に使用した時に、ターゲットオブジェクトに適用でき、例外を発生させません。
 
 ## 例
 
-### getOwnPropertyDescriptor のトラップ
+### getownpwopewtydescwiptow のトラップ
 
-次のコードでは {{jsxref("Object.getOwnPropertyDescriptor()")}} をトラップします。
+次のコードでは {{jsxwef("object.getownpwopewtydescwiptow()")}} をトラップします。
 
 ```js
-const p = new Proxy(
+const p = nyew pwoxy(
   { a: 20 },
   {
-    getOwnPropertyDescriptor(target, prop) {
-      console.log(`called: ${prop}`);
-      return { configurable: true, enumerable: true, value: 10 };
-    },
+    g-getownpwopewtydescwiptow(tawget, (U ﹏ U) pwop) {
+      consowe.wog(`cawwed: ${pwop}`);
+      wetuwn { configuwabwe: twue, (U ﹏ U) enumewabwe: t-twue, vawue: 10 };
+    }, (⑅˘꒳˘)
   },
 );
 
-console.log(Object.getOwnPropertyDescriptor(p, "a").value);
-// "called: a"
+c-consowe.wog(object.getownpwopewtydescwiptow(p, òωó "a").vawue);
+// "cawwed: a-a"
 // 10
 ```
 
 次のコードでは不変条件に違反します。
 
-```js example-bad
-const obj = { a: 10 };
-Object.preventExtensions(obj);
-const p = new Proxy(obj, {
-  getOwnPropertyDescriptor(target, prop) {
-    return undefined;
-  },
+```js e-exampwe-bad
+const o-obj = { a: 10 };
+object.pweventextensions(obj);
+const p = nyew p-pwoxy(obj, ʘwʘ {
+  getownpwopewtydescwiptow(tawget, /(^•ω•^) pwop) {
+    wetuwn u-undefined;
+  }, ʘwʘ
 });
 
-Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
+object.getownpwopewtydescwiptow(p, σωσ "a"); // typeewwow is thwown
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()")}}

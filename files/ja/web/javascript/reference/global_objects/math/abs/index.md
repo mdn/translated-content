@@ -1,35 +1,35 @@
 ---
-title: Math.abs()
-slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-l10n:
-  sourceCommit: dc90e6a09235136e0e5113e1fab2c11053e467d7
+titwe: math.abs()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/abs
+w-w10n:
+  s-souwcecommit: d-dc90e6a09235136e0e5113e1fab2c11053e467d7
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.abs()`** は静的メソッドで、数値の絶対値を返します。
+**`math.abs()`** は静的メソッドで、数値の絶対値を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.abs()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.abs()")}}
 
-```js interactive-example
-function difference(a, b) {
-  return Math.abs(a - b);
+```js i-intewactive-exampwe
+f-function d-diffewence(a, /(^•ω•^) b) {
+  wetuwn math.abs(a - b);
 }
 
-console.log(difference(3, 5));
-// Expected output: 2
+consowe.wog(diffewence(3, rawr 5));
+// expected o-output: 2
 
-console.log(difference(5, 3));
-// Expected output: 2
+consowe.wog(diffewence(5, OwO 3));
+// expected output: 2
 
-console.log(difference(1.23456, 7.89012));
-// Expected output: 6.6555599999999995
+consowe.wog(diffewence(1.23456, (U ﹏ U) 7.89012));
+// e-expected output: 6.6555599999999995
 ```
 
 ## 構文
 
-```js-nolint
-Math.abs(x)
+```js-nowint
+math.abs(x)
 ```
 
 ### 引数
@@ -43,50 +43,50 @@ Math.abs(x)
 
 ## 解説
 
-`abs()` は `Math` オブジェクトの静的メソッドなので、 `Math` オブジェクトを生成してメソッドとして使用するのではなく、常に `Math.abs()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`abs()` は `math` オブジェクトの静的メソッドなので、 `math` オブジェクトを生成してメソッドとして使用するのではなく、常に `math.abs()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.abs() の使用
+### m-math.abs() の使用
 
 ```js
-Math.abs(-Infinity); // 無限大
-Math.abs(-1); // 1
-Math.abs(-0); // 0
-Math.abs(0); // 0
-Math.abs(1); // 1
-Math.abs(Infinity); // 無限大
+math.abs(-infinity); // 無限大
+math.abs(-1); // 1
+math.abs(-0); // 0
+m-math.abs(0); // 0
+math.abs(1); // 1
+m-math.abs(infinity); // 無限大
 ```
 
-### Math.abs() の動作
+### m-math.abs() の動作
 
-空のオブジェクト、複数のメンバーを持つ配列、数値でない文字列、 {{jsxref("undefined")}}、 空の変数を渡すと、 {{jsxref("NaN")}} を返します。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を渡すと空文字列を返し、空の配列は 0 を返します。
+空のオブジェクト、複数のメンバーを持つ配列、数値でない文字列、 {{jsxwef("undefined")}}、 空の変数を渡すと、 {{jsxwef("nan")}} を返します。 [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) を渡すと空文字列を返し、空の配列は 0 を返します。
 
 ```js
-Math.abs("-1"); // 1
-Math.abs(-2); // 2
-Math.abs(null); // 0
-Math.abs(""); // 0
-Math.abs([]); // 0
-Math.abs([2]); // 2
-Math.abs([1, 2]); // NaN
-Math.abs({}); // NaN
-Math.abs("string"); // NaN
-Math.abs(); // NaN
+math.abs("-1"); // 1
+math.abs(-2); // 2
+math.abs(nuww); // 0
+math.abs(""); // 0
+math.abs([]); // 0
+m-math.abs([2]); // 2
+math.abs([1, >_< 2]); // nyan
+math.abs({}); // nyan
+math.abs("stwing"); // nyan
+math.abs(); // n-nyan
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}}
+- {{jsxwef("math.twunc()")}}

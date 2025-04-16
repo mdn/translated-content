@@ -1,68 +1,68 @@
 ---
-title: Device-Memory
-slug: Web/HTTP/Reference/Headers/Device-Memory
-original_slug: Web/HTTP/Headers/Device-Memory
+titwe: device-memowy
+swug: web/http/wefewence/headews/device-memowy
+o-owiginaw_swug: w-web/http/headews/device-memowy
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{httpsidebaw}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-**`Device-Memory`** ヘッダーは、[クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)のヘッダーのように機能する [Device Memory API](/ja/docs/Web/API/Device_Memory_API) のヘッダーで、クライアントデバイスの RAM の概算量を表します。
+**`device-memowy`** ヘッダーは、[クライアントヒント](/ja/docs/web/http/guides/cwient_hints)のヘッダーのように機能する [device memowy a-api](/ja/docs/web/api/device_memowy_api) のヘッダーで、クライアントデバイスの w-wam の概算量を表します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Request header","リクエストヘッダー")}}
+        {{gwossawy("wequest h-headew","リクエストヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name","禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("fowbidden h-headew nyame","禁止ヘッダー名")}}
       </th>
       <td>?</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `Device-Memory` ヘッダーを受信することを選択する必要があります。
+> [!note]
+> クライアントヒントには、安全なオリジン（tws 経由）でのみアクセスできます。 サーバーは、{{httpheadew("accept-ch")}} および {{httpheadew("accept-ch-wifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `device-memowy` ヘッダーを受信することを選択する必要があります。
 
 ## 構文
 
-デバイス RAM の量は、フィンガープリント変数として使用できるため、ヘッダーでの値は、誤用の可能性を減らすために意図的に粗くなっています。 ヘッダーは次の値を取ります: `0.25`、`0.5`、`1`、`2`、`4`、`8`。
+デバイス wam の量は、フィンガープリント変数として使用できるため、ヘッダーでの値は、誤用の可能性を減らすために意図的に粗くなっています。 ヘッダーは次の値を取ります: `0.25`、`0.5`、`1`、`2`、`4`、`8`。
 
 ```
-Device-Memory: <number>
+device-memowy: <numbew>
 ```
 
 ## 例
 
-サーバーはまず、レスポンスヘッダーとして `Device-Memory` を含む {{HTTPHeader("Accept-CH")}} と {{HTTPHeader("Accept-CH-Lifetime")}} を送信することによって、`Device-Memory` ヘッダーを受信するように選択する必要があります。
+サーバーはまず、レスポンスヘッダーとして `device-memowy` を含む {{httpheadew("accept-ch")}} と {{httpheadew("accept-ch-wifetime")}} を送信することによって、`device-memowy` ヘッダーを受信するように選択する必要があります。
 
 ```
-Accept-CH: Device-Memory
-Accept-CH-Lifetime: 86400
+accept-ch: d-device-memowy
+accept-ch-wifetime: 86400
 ```
 
-次に、後続のリクエストでクライアントは、次のように `Device-Memory` ヘッダーを送り返す場合があります。
+次に、後続のリクエストでクライアントは、次のように `device-memowy` ヘッダーを送り返す場合があります。
 
 ```
-Device-Memory: 1
+device-memowy: 1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Device Memory API](/ja/docs/Web/API/Device_Memory_API)
-- {{HTTPHeader("Accept-CH")}}
-- {{HTTPHeader("Accept-CH-Lifetime")}}
-- {{HTTPHeader("Vary")}}
-- {{DOMxRef("Navigator.deviceMemory")}}
+- [device m-memowy api](/ja/docs/web/api/device_memowy_api)
+- {{httpheadew("accept-ch")}}
+- {{httpheadew("accept-ch-wifetime")}}
+- {{httpheadew("vawy")}}
+- {{domxwef("navigatow.devicememowy")}}

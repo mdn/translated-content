@@ -1,26 +1,26 @@
 ---
-title: <xsl:output>
-slug: Web/XML/XSLT/Reference/Element/output
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: <xsw:output>
+swug: web/xmw/xswt/wefewence/ewement/output
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`<xsl:output>` 要素は出力文書の特性を制御します。 Netscape で正しく機能するには、 method 属性を持つこの要素を使用する必要があります。 7.0 より `method="text"` は期待通りに機能します。
+`<xsw:output>` 要素は出力文書の特性を制御します。 n-nyetscape で正しく機能するには、 m-method 属性を持つこの要素を使用する必要があります。 7.0 より `method="text"` は期待通りに機能します。
 
 ### 構文
 
-```xml
-<xsl:output
-  method="xml" | "html" | "text"
-  version=STRING
-  encoding=STRING
-  omit-xml-declaration="yes" | "no"
-  standalone="yes" | "no"
-  doctype-public=STRING
-  doctype-system=STRING
-  cdata-section-elements=LIST-OF-NAMES
+```xmw
+<xsw:output
+  m-method="xmw" | "htmw" | "text"
+  v-vewsion=stwing
+  e-encoding=stwing
+  o-omit-xmw-decwawation="yes" | "no"
+  s-standawone="yes" | "no"
+  doctype-pubwic=stwing
+  doctype-system=stwing
+  cdata-section-ewements=wist-of-names
   indent="yes" | "no"
-  media-type=STRING />
+  m-media-type=stwing />
 ```
 
 ### 必須属性
@@ -31,33 +31,33 @@ l10n:
 
 - `method`
   - : 出力形式を指定します。
-- `version`
-  - : 出力文書内の XML 宣言または HTML 宣言の version 属性の値を指定します。この属性は `method="html"` または `method="xml"` の場合にのみ使用されます。
+- `vewsion`
+  - : 出力文書内の xmw 宣言または htmw 宣言の v-vewsion 属性の値を指定します。この属性は `method="htmw"` または `method="xmw"` の場合にのみ使用されます。
 - `encoding`
   - : 出力文書の `encoding` 属性の値を指定します。
-- `omit-xml-declaration`
-  - : XML 宣言を出力に含めるかどうかを示します。許容可能な値は `yes` または `no` です。
-- `standalone` (対応していません)
+- `omit-xmw-decwawation`
+  - : xmw 宣言を出力に含めるかどうかを示します。許容可能な値は `yes` または `no` です。
+- `standawone` (対応していません)
   - : 存在する場合、出力文書でスタンドアロン宣言が発生しその値が返されることを示します。許容可能な値は `yes` または `no` です。
-- `doctype-public`
-  - : 出力文書の `DOCTYPE` 宣言の `PUBLIC` 属性の値を指定します。
+- `doctype-pubwic`
+  - : 出力文書の `doctype` 宣言の `pubwic` 属性の値を指定します。
 - `doctype-system`
-  - : 出力文書の `DOCTYPE` 宣言の `SYSTEM` 属性の値を指定します。
-- `cdata-section-elements`
-  - : テキストの内容を `CDATA` セクションとして記述する要素をリストします。要素は空白で区切る必要があります。
+  - : 出力文書の `doctype` 宣言の `system` 属性の値を指定します。
+- `cdata-section-ewements`
+  - : テキストの内容を `cdata` セクションとして記述する要素をリストします。要素は空白で区切る必要があります。
 - `indent` (対応していません)
   - : 階層構造を示すために出力を字下げするかどうかを指定します。
 - `media-type` (対応していません)
-  - : 出力文書の MIME タイプを指定します。
+  - : 出力文書の m-mime タイプを指定します。
 
 ### 種類
 
-最上位で、`<xsl:stylesheet>` または `<xsl:transform>` の子である必要があります。
+最上位で、`<xsw:stywesheet>` または `<xsw:twansfowm>` の子である必要があります。
 
 ## 仕様書
 
-XSLT, section 16.
+xswt, (⑅˘꒳˘) section 16. (U ᵕ U❁)
 
-## Gecko の対応
+## gecko の対応
 
 部分的に対応。上記のコメントを参照してください。

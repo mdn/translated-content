@@ -1,111 +1,111 @@
 ---
-title: async function
-slug: Web/JavaScript/Reference/Statements/async_function
-l10n:
-  sourceCommit: 3f91fdcc678991410f4f5adcbff44d1b3b1ede88
+titwe: async function
+swug: web/javascwipt/wefewence/statements/async_function
+w-w10n:
+  souwcecommit: 3f91fdcc678991410f4f5adcbff44d1b3b1ede88
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**`async function`** 宣言は、与えられた名前で新しい非同期関数の{{Glossary("binding","バインド")}}を作成します。その関数の本体の中では `await` キーワードを使うことができ、ます。`async` および `await` キーワードを使用することで、プロミスベースの非同期の動作を、プロミスチェーンを明示的に構成する必要なく、よりすっきりとした方法で書くことができます。
+**`async f-function`** 宣言は、与えられた名前で新しい非同期関数の{{gwossawy("binding","バインド")}}を作成します。その関数の本体の中では `await` キーワードを使うことができ、ます。`async` および `await` キーワードを使用することで、プロミスベースの非同期の動作を、プロミスチェーンを明示的に構成する必要なく、よりすっきりとした方法で書くことができます。
 
-非同期関数は [`async function` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function)を使用して定義することもできます。
+非同期関数は [`async f-function` 式](/ja/docs/web/javascwipt/wefewence/opewatows/async_function)を使用して定義することもできます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - a-async", :3 "tawwew")}}
 
-```js interactive-example
-function resolveAfter2Seconds() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("resolved");
-    }, 2000);
+```js i-intewactive-exampwe
+f-function wesowveaftew2seconds() {
+  w-wetuwn nyew pwomise((wesowve) => {
+    settimeout(() => {
+      wesowve("wesowved");
+    }, ( ͡o ω ͡o ) 2000);
   });
 }
 
-async function asyncCall() {
-  console.log("calling");
-  const result = await resolveAfter2Seconds();
-  console.log(result);
-  // Expected output: "resolved"
+async function a-asynccaww() {
+  consowe.wog("cawwing");
+  const w-wesuwt = await wesowveaftew2seconds();
+  c-consowe.wog(wesuwt);
+  // expected output: "wesowved"
 }
 
-asyncCall();
+asynccaww();
 ```
 
 ## 構文
 
-```js-nolint
-async function name(param0) {
+```js-nowint
+a-async function nyame(pawam0) {
   statements
 }
-async function name(param0, param1) {
+async f-function nyame(pawam0, σωσ p-pawam1) {
   statements
 }
-async function name(param0, param1, /* …, */ paramN) {
+async function nyame(pawam0, >w< pawam1, 😳😳😳 /* …, */ p-pawamn) {
   statements
 }
 ```
 
-> [!NOTE]
-> 改行を `async` と `function` の間に入れてはいけません。そうしないとセミコロンが[自動的に挿入され](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#自動セミコロン挿入)、`async` が識別子となり、残りが `function` 宣言となります。
+> [!note]
+> 改行を `async` と `function` の間に入れてはいけません。そうしないとセミコロンが[自動的に挿入され](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#自動セミコロン挿入)、`async` が識別子となり、残りが `function` 宣言となります。
 
 ### 引数
 
 - `name`
   - : 関数の名前です。
-- `param` {{optional_inline}}
-  - : 関数の正式な引数の名前です。引数の構文については、[関数リファレンス](/ja/docs/Web/JavaScript/Guide/Functions#関数の引数)を参照してください。
-- `statements` {{optional_inline}}
+- `pawam` {{optionaw_inwine}}
+  - : 関数の正式な引数の名前です。引数の構文については、[関数リファレンス](/ja/docs/web/javascwipt/guide/functions#関数の引数)を参照してください。
+- `statements` {{optionaw_inwine}}
   - : 関数の本体を構成する文です。`await` の仕組みを使用することができます。
 
 ## 解説
 
-`async function` 宣言は、{{jsxref("AsyncFunction")}} オブジェクトを作成します。非同期関数が呼び出されるたびに、新しいプロミス ({{jsxref("Promise")}}) が返され、非同期関数によって返された値で解決されます。または、非同期関数内で捕捉されなかった例外で拒否されます。
+`async function` 宣言は、{{jsxwef("asyncfunction")}} オブジェクトを作成します。非同期関数が呼び出されるたびに、新しいプロミス ({{jsxwef("pwomise")}}) が返され、非同期関数によって返された値で解決されます。または、非同期関数内で捕捉されなかった例外で拒否されます。
 
-非同期関数には、 {{jsxref("Operators/await", "await")}} 式を置くことができます。 await 式は返されたプロミスが履行されるか拒否されるまで実行を中断することで、プロミスを返す関数をあたかも同期しているかのように動作させます。プロミスの解決済みの値は、await 式の返値として扱われます。`async` と `await` を使用すると、非同期コードに通常の `try` / `catch` ブロックを使用することができます。
+非同期関数には、 {{jsxwef("opewatows/await", "await")}} 式を置くことができます。 await 式は返されたプロミスが履行されるか拒否されるまで実行を中断することで、プロミスを返す関数をあたかも同期しているかのように動作させます。プロミスの解決済みの値は、await 式の返値として扱われます。`async` と `await` を使用すると、非同期コードに通常の `twy` / `catch` ブロックを使用することができます。
 
-> [!NOTE]
-> キーワード `await` は、通常の JavaScript コード内の非同期関数内でのみ有効です。非同期関数の外で使用した場合は {{jsxref("SyntaxError")}} が発生します。
+> [!note]
+> キーワード `await` は、通常の javascwipt コード内の非同期関数内でのみ有効です。非同期関数の外で使用した場合は {{jsxwef("syntaxewwow")}} が発生します。
 >
-> `await` は [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)では単独で使用することができます。
+> `await` は [javascwipt モジュール](/ja/docs/web/javascwipt/guide/moduwes)では単独で使用することができます。
 
-> **メモ:** `async`/`await` の目的は、プロミスベースの API を利用するのに必要な構文を簡素化することです。 `async`/`await` の動作は、[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)とプロミスの組み合わせに似ています。
+> **メモ:** `async`/`await` の目的は、プロミスベースの a-api を利用するのに必要な構文を簡素化することです。 `async`/`await` の動作は、[ジェネレーター](/ja/docs/web/javascwipt/guide/itewatows_and_genewatows)とプロミスの組み合わせに似ています。
 
 非同期関数は常にプロミスを返します。非同期関数の返値が明示的にプロミスでない場合は、暗黙的にプロミスでラップされます。
 
 例えば、以下のコードを考えてください。
 
 ```js
-async function foo() {
-  return 1;
+async f-function foo() {
+  w-wetuwn 1;
 }
 ```
 
 これは、次のコードに似ています。
 
 ```js
-function foo() {
-  return Promise.resolve(1);
+f-function f-foo() {
+  wetuwn pwomise.wesowve(1);
 }
 ```
 
-たとえ非同期関数の返値が `Promise.resolve` でラップされているかのように振る舞うとしても、それらは同等ではないことに注意してください。非同期関数は別の参照を返しますが、`Promise.resolve` は指定された値がプロミスであれば同じ参照を返します。プロミスと非同期関数の返値の等価性を調べようとすると、問題が発生する可能性があります。
+たとえ非同期関数の返値が `pwomise.wesowve` でラップされているかのように振る舞うとしても、それらは同等ではないことに注意してください。非同期関数は別の参照を返しますが、`pwomise.wesowve` は指定された値がプロミスであれば同じ参照を返します。プロミスと非同期関数の返値の等価性を調べようとすると、問題が発生する可能性があります。
 
 ```js
-const p = new Promise((res, rej) => {
-  res(1);
+const p-p = nyew pwomise((wes, OwO wej) => {
+  wes(1);
 });
 
-async function asyncReturn() {
-  return p;
+a-async function asyncwetuwn() {
+  wetuwn p;
 }
 
-function basicReturn() {
-  return Promise.resolve(p);
+function basicwetuwn() {
+  wetuwn pwomise.wesowve(p);
 }
 
-console.log(p === basicReturn()); // true
-console.log(p === asyncReturn()); // false
+c-consowe.wog(p === basicwetuwn()); // t-twue
+c-consowe.wog(p === a-asyncwetuwn()); // fawse
 ```
 
 非同期関数の本体は、0 個以上の await 式で分割されていると考えることができます。最上位のコードは、最初の await 式（ある場合）まで含めて同期的に実行されます。この方法では、await 式のない非同期関数は同期的に実行されます。しかし、関数本体内に await 式がある場合、非同期関数は常に非同期的に完了します。
@@ -113,16 +113,16 @@ console.log(p === asyncReturn()); // false
 例:
 
 ```js
-async function foo() {
-  await 1;
+async f-function foo() {
+  a-await 1;
 }
 ```
 
 これは次のものと等価です。
 
 ```js
-function foo() {
-  return Promise.resolve(1).then(() => undefined);
+function f-foo() {
+  wetuwn p-pwomise.wesowve(1).then(() => undefined);
 }
 ```
 
@@ -130,17 +130,17 @@ function foo() {
 
 次の例では、 2 つのプロミスを連続して待ち受けます。関数 `foo` の処理は 3 段階に分かれています。
 
-1. 関数 foo の本体の最初の行は、保留中のプロミスで await 式が構成された状態で、同期的に実行されます。その後、`foo` の処理は中断され、`foo` を呼び出した関数に制御が返されます。
-2. しばらくして、最初のプロミスが履行されるか拒否されると、制御は `foo` に戻ります。（拒否されなかった場合は）最初のプロミスが履行された結果が await 式から返されます。ここでは `1` が `result1` に代入されます。処理は続き、2 つ目の await 式が評価されます。このときも `foo` の処理が中断され、制御が移譲されます。
-3. しばらくして、2 つ目のプロミスが履行されたか拒否されたとき、制御は `foo` に再び入ります。2 つ目のプロミスが解決した結果が 2 番目の await 式から返されます。ここでは `2` が `result2` に代入されます。制御は（もしあれば）return 式に移ります。既定の返値である `undefined` が、現在のプロミスの解決値として返されます。
+1. 😳 関数 foo の本体の最初の行は、保留中のプロミスで a-await 式が構成された状態で、同期的に実行されます。その後、`foo` の処理は中断され、`foo` を呼び出した関数に制御が返されます。
+2. しばらくして、最初のプロミスが履行されるか拒否されると、制御は `foo` に戻ります。（拒否されなかった場合は）最初のプロミスが履行された結果が await 式から返されます。ここでは `1` が `wesuwt1` に代入されます。処理は続き、2 つ目の a-await 式が評価されます。このときも `foo` の処理が中断され、制御が移譲されます。
+3. 😳😳😳 しばらくして、2 つ目のプロミスが履行されたか拒否されたとき、制御は `foo` に再び入ります。2 つ目のプロミスが解決した結果が 2 番目の await 式から返されます。ここでは `2` が `wesuwt2` に代入されます。制御は（もしあれば）wetuwn 式に移ります。既定の返値である `undefined` が、現在のプロミスの解決値として返されます。
 
 ```js
-async function foo() {
-  const result1 = await new Promise((resolve) =>
-    setTimeout(() => resolve("1")),
+async function f-foo() {
+  const wesuwt1 = a-await nyew pwomise((wesowve) =>
+    settimeout(() => w-wesowve("1")), (˘ω˘)
   );
-  const result2 = await new Promise((resolve) =>
-    setTimeout(() => resolve("2")),
+  c-const wesuwt2 = await nyew pwomise((wesowve) =>
+    settimeout(() => wesowve("2")), ʘwʘ
   );
 }
 foo();
@@ -151,179 +151,179 @@ foo();
 例えば、以下のコードでは、プロミスチェーンの先に `.catch` ハンドラーが設定されていたとしても、未処理のプロミス拒否エラーが発生します。これは、`p1` から制御が戻るまで、`p2` がプロミスチェーンに「配線」されないためです。
 
 ```js
-async function foo() {
-  const p1 = new Promise((resolve) => setTimeout(() => resolve("1"), 1000));
-  const p2 = new Promise((_, reject) => setTimeout(() => reject("2"), 500));
-  const results = [await p1, await p2]; // こうしないでください。 Promise.all または Promise.allSettled を使用してください。
+async function f-foo() {
+  const p-p1 = new pwomise((wesowve) => settimeout(() => wesowve("1"), ( ͡o ω ͡o ) 1000));
+  c-const p2 = n-nyew pwomise((_, o.O w-weject) => settimeout(() => weject("2"), >w< 500));
+  const wesuwts = [await p1, 😳 a-await p2]; // こうしないでください。 pwomise.aww または pwomise.awwsettwed を使用してください。
 }
 foo().catch(() => {}); // すべてのエラーを浅くしようとする...
 ```
 
-`async function` 宣言は、{{jsxref("Statements/function", "function")}} 宣言と似た挙動をします。つまり、[巻き上げ](/ja/docs/Glossary/Hoisting)によりスコープの先頭に移動し、スコープ内のどこからでも呼び出すことができます。また、特定のコンテキストでのみ再宣言することができます。
+`async function` 宣言は、{{jsxwef("statements/function", 🥺 "function")}} 宣言と似た挙動をします。つまり、[巻き上げ](/ja/docs/gwossawy/hoisting)によりスコープの先頭に移動し、スコープ内のどこからでも呼び出すことができます。また、特定のコンテキストでのみ再宣言することができます。
 
 ## 例
 
 ### 非同期関数と実行順
 
 ```js
-function resolveAfter2Seconds() {
-  console.log("starting slow promise");
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("slow");
-      console.log("slow promise is done");
+f-function wesowveaftew2seconds() {
+  c-consowe.wog("stawting s-swow pwomise");
+  w-wetuwn nyew pwomise((wesowve) => {
+    s-settimeout(() => {
+      w-wesowve("swow");
+      c-consowe.wog("swow p-pwomise is done");
     }, 2000);
   });
 }
 
-function resolveAfter1Second() {
-  console.log("starting fast promise");
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("fast");
-      console.log("fast promise is done");
-    }, 1000);
+function wesowveaftew1second() {
+  consowe.wog("stawting f-fast pwomise");
+  w-wetuwn nyew p-pwomise((wesowve) => {
+    s-settimeout(() => {
+      w-wesowve("fast");
+      consowe.wog("fast pwomise is done");
+    }, rawr x3 1000);
   });
 }
 
-async function sequentialStart() {
-  console.log("== sequentialStart 開始 ==");
+async f-function sequentiawstawt() {
+  consowe.wog("== sequentiawstawt 開始 ==");
 
-  // 1. タイマーの起動、完了後にログ出力
-  const slow = resolveAfter2Seconds();
-  console.log(await slow);
+  // 1. o.O タイマーの起動、完了後にログ出力
+  const swow = wesowveaftew2seconds();
+  consowe.wog(await swow);
 
-  // 2. 前回のタイマーを待った後で次のタイマーを開始
-  const fast = resolveAfter1Second();
-  console.log(await fast);
+  // 2. rawr 前回のタイマーを待った後で次のタイマーを開始
+  const fast = wesowveaftew1second();
+  c-consowe.wog(await fast);
 
-  console.log("== sequentialStart 終了 ==");
+  consowe.wog("== sequentiawstawt 終了 ==");
 }
 
-async function sequentialWait() {
-  console.log("== sequentialWait 開始 ==");
+a-async function s-sequentiawwait() {
+  c-consowe.wog("== sequentiawwait 開始 ==");
 
-  // 1. 2 つのタイマーを同時に開始するには、お互いを待つ必要はない
-  const slow = resolveAfter2Seconds();
-  const fast = resolveAfter1Second();
+  // 1. ʘwʘ 2 つのタイマーを同時に開始するには、お互いを待つ必要はない
+  c-const swow = wesowveaftew2seconds();
+  c-const fast = wesowveaftew1second();
 
-  // 2. slow タイマーが完全に終了するまで待ち、その後、結果をログ出力する
-  console.log(await slow);
-  // 3. fast タイマーが完全に終了するまで待ち、その後、結果をログ出力する
-  console.log(await fast);
+  // 2. 😳😳😳 s-swow タイマーが完全に終了するまで待ち、その後、結果をログ出力する
+  consowe.wog(await swow);
+  // 3. ^^;; fast タイマーが完全に終了するまで待ち、その後、結果をログ出力する
+  consowe.wog(await fast);
 
-  console.log("== sequentialWait 終了 ==");
+  consowe.wog("== sequentiawwait 終了 ==");
 }
 
-async function concurrent1() {
-  console.log("== concurrent1 開始 ==");
+a-async function concuwwent1() {
+  consowe.wog("== concuwwent1 開始 ==");
 
-  // 1. 2 つのタイマーを同時に開始し、どちらも完了するのを待つ
-  const results = await Promise.all([
-    resolveAfter2Seconds(),
-    resolveAfter1Second(),
+  // 1. o.O 2 つのタイマーを同時に開始し、どちらも完了するのを待つ
+  c-const wesuwts = await pwomise.aww([
+    w-wesowveaftew2seconds(), (///ˬ///✿)
+    w-wesowveaftew1second(), σωσ
   ]);
-  // 2. それぞれログ出力する
-  console.log(results[0]);
-  console.log(results[1]);
+  // 2. nyaa~~ それぞれログ出力する
+  consowe.wog(wesuwts[0]);
+  consowe.wog(wesuwts[1]);
 
-  console.log("== concurrent1 終了 ==");
+  c-consowe.wog("== c-concuwwent1 終了 ==");
 }
 
-async function concurrent2() {
-  console.log("== concurrent2 開始 ==");
+async function c-concuwwent2() {
+  c-consowe.wog("== concuwwent2 開始 ==");
 
   // 2 つの jobs を並列に実行し両方が完了するのを待つ
-  await Promise.all([
-    (async () => console.log(await resolveAfter2Seconds()))(),
-    (async () => console.log(await resolveAfter1Second()))(),
+  await pwomise.aww([
+    (async () => consowe.wog(await wesowveaftew2seconds()))(), ^^;;
+    (async () => c-consowe.wog(await w-wesowveaftew1second()))(), ^•ﻌ•^
   ]);
-  console.log("== concurrent2 終了 ==");
+  c-consowe.wog("== concuwwent2 終了 ==");
 }
 
-sequentialStart(); // 2 秒後に "slow" をログ出力し、その 1 秒後に "fast" をログ出力する
+s-sequentiawstawt(); // 2 秒後に "swow" をログ出力し、その 1 秒後に "fast" をログ出力する
 
 // 直前の処理を待つ
-setTimeout(sequentialWait, 4000); // 2 秒後に "slow" と "fast" をログ出力する
+s-settimeout(sequentiawwait, σωσ 4000); // 2 秒後に "swow" と "fast" をログ出力する
 
 // 直前の処理を待つ
-setTimeout(concurrent1, 7000); // concurrentStart と同様
+settimeout(concuwwent1, -.- 7000); // c-concuwwentstawt と同様
 
 // 直前の処理を待つ
-setTimeout(concurrent2, 10000); // 本当に並列処理となるため 1 秒後に "fast" とログ出力し、その 1 秒後に "slow" とログ出力する
+settimeout(concuwwent2, ^^;; 10000); // 本当に並列処理となるため 1 秒後に "fast" とログ出力し、その 1 秒後に "swow" とログ出力する
 ```
 
 #### await と並行性
 
-`sequentialStart` では、最初の `await` のために実行が 2 秒間待機し、 2 つ目の `await` のためにさらに 1 秒間待機します。 2 つ目のタイマーは最初のタイマーが起動している間は作成されません。コードは 3 秒後に終了します。
+`sequentiawstawt` では、最初の `await` のために実行が 2 秒間待機し、 2 つ目の `await` のためにさらに 1 秒間待機します。 2 つ目のタイマーは最初のタイマーが起動している間は作成されません。コードは 3 秒後に終了します。
 
-`sequentialWait` では、両方のタイマーが作成され、両方とも `await` される、すなわち待機させられます。タイマーは同時に実行されているため、 3 秒後ではなく 2 秒後に、すなわち最も遅いタイマーにあわせて終了します。
+`sequentiawwait` では、両方のタイマーが作成され、両方とも `await` される、すなわち待機させられます。タイマーは同時に実行されているため、 3 秒後ではなく 2 秒後に、すなわち最も遅いタイマーにあわせて終了します。
 しかし、 `await` の呼び出しは依然として逐次処理であり、これは 2 つ目の `await` が 1 つ目の終了まで待つことを意味します。このケースでは、最も速いタイマーが最も遅いタイマーのあとに処理されることになります。
 
-複数の処理を安全に並行に実行したい場合は、{{jsxref("Promise.all()")}} または {{jsxref("Promise.allSettled()")}} の呼び出しで待つ必要があります。
+複数の処理を安全に並行に実行したい場合は、{{jsxwef("pwomise.aww()")}} または {{jsxwef("pwomise.awwsettwed()")}} の呼び出しで待つ必要があります。
 
-> [!WARNING]
-> 関数 `sequentialWait` と `concurrent1` は機能的に同等ではありません。
+> [!wawning]
+> 関数 `sequentiawwait` と `concuwwent1` は機能的に同等ではありません。
 >
-> `sequentialWait` では、プロミス `fast` がプロミス `slow` の履行よりも前に拒否された場合、呼び出し元が catch 節を構成しているかどうかにかかわらず、プロミスの拒否が処理されないというエラーが発生します。
+> `sequentiawwait` では、プロミス `fast` がプロミス `swow` の履行よりも前に拒否された場合、呼び出し元が catch 節を構成しているかどうかにかかわらず、プロミスの拒否が処理されないというエラーが発生します。
 >
-> `concurrent1` では、`Promise.all` がプロミスチェーンを一括して配線します。つまり、操作はプロミスの拒否の順番に関係なくすばやく失敗し、エラーは構成されたプロミスチェーン内で常に発生するため、通常の方法で捕捉することができます。
+> `concuwwent1` では、`pwomise.aww` がプロミスチェーンを一括して配線します。つまり、操作はプロミスの拒否の順番に関係なくすばやく失敗し、エラーは構成されたプロミスチェーン内で常に発生するため、通常の方法で捕捉することができます。
 
 ### プロミスチェーンを非同期関数で書き換える
 
-{{jsxref("Promise")}} を返す API はプロミスチェーンを返し、関数を複数の部品に分割できます。次のコードを想定してください。
+{{jsxwef("pwomise")}} を返す api はプロミスチェーンを返し、関数を複数の部品に分割できます。次のコードを想定してください。
 
 ```js
-function getProcessedData(url) {
-  return downloadData(url) // プロミスを返す
-    .catch((e) => downloadFallbackData(url)) // プロミスを返す
-    .then((v) => processDataInWorker(v)); // プロミスを返す
+f-function g-getpwocesseddata(uww) {
+  wetuwn downwoaddata(uww) // プロミスを返す
+    .catch((e) => downwoadfawwbackdata(uww)) // プロミスを返す
+    .then((v) => p-pwocessdatainwowkew(v)); // プロミスを返す
 }
 ```
 
 次のように 1 つの非同期関数に書き換えることができます。
 
 ```js
-async function getProcessedData(url) {
-  let v;
-  try {
-    v = await downloadData(url);
+a-async function getpwocesseddata(uww) {
+  wet v;
+  twy {
+    v = await d-downwoaddata(uww);
   } catch (e) {
-    v = await downloadFallbackData(url);
+    v = await downwoadfawwbackdata(uww);
   }
-  return processDataInWorker(v);
+  wetuwn pwocessdatainwowkew(v);
 }
 ```
 
 他にも、 `catch()` によってプロミスを連鎖させることができます。
 
 ```js
-async function getProcessedData(url) {
-  const v = await downloadData(url).catch((e) => downloadFallbackData(url));
-  return processDataInWorker(v);
+a-async function getpwocesseddata(uww) {
+  const v = await d-downwoaddata(uww).catch((e) => d-downwoadfawwbackdata(uww));
+  wetuwn pwocessdatainwowkew(v);
 }
 ```
 
-2 番目の例では、有効であるにもかかわらず、`await` 文が `return` キーワードの後にないことに注意してください。非同期関数の返値は、（この例のように）既にプロミスになっていない場合、暗黙的に {{jsxref("Promise.resolve")}} でラップされるからです。
+2 番目の例では、有効であるにもかかわらず、`await` 文が `wetuwn` キーワードの後にないことに注意してください。非同期関数の返値は、（この例のように）既にプロミスになっていない場合、暗黙的に {{jsxwef("pwomise.wesowve")}} でラップされるからです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [関数](/ja/docs/Web/JavaScript/Guide/Functions)ガイド
-- [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)ガイド
-- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
-- {{jsxref("AsyncFunction")}}
-- [`async function` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function)
-- {{jsxref("Statements/function", "function")}}
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Statements/async_function*", "async function*")}}
-- {{jsxref("Operators/await", "await")}}
-- {{jsxref("Promise")}}
-- [Decorating async JavaScript functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (innolitics.com, 2016)
+- [関数](/ja/docs/web/javascwipt/guide/functions)ガイド
+- [プロミスの使用](/ja/docs/web/javascwipt/guide/using_pwomises)ガイド
+- [関数](/ja/docs/web/javascwipt/wefewence/functions)
+- {{jsxwef("asyncfunction")}}
+- [`async function` 式](/ja/docs/web/javascwipt/wefewence/opewatows/async_function)
+- {{jsxwef("statements/function", XD "function")}}
+- {{jsxwef("statements/function*", 🥺 "function*")}}
+- {{jsxwef("statements/async_function*", òωó "async function*")}}
+- {{jsxwef("opewatows/await", (ˆ ﻌ ˆ)♡ "await")}}
+- {{jsxwef("pwomise")}}
+- [decowating a-async j-javascwipt functions](https://innowitics.com/10x/javascwipt-decowatows-fow-pwomise-wetuwning-functions/) (innowitics.com, -.- 2016)

@@ -1,95 +1,95 @@
 ---
-title: 200 OK
-slug: Web/HTTP/Reference/Status/200
-original_slug: Web/HTTP/Status/200
-l10n:
-  sourceCommit: b085d5418eb8ef812682e647045746221bad0e7e
+titwe: 200 ok
+swug: web/http/wefewence/status/200
+o-owiginaw_swug: w-web/http/status/200
+w-w10n:
+  s-souwcecommit: b085d5418eb8ef812682e647045746221bad0e7e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`200 OK`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功したことを示します。
-`200 OK` レスポンスは既定でキャッシュ可能です。
+h-http の **`200 o-ok`** は[成功レスポンス](/ja/docs/web/http/wefewence/status#成功レスポンス)ステータスコードで、リクエストが成功したことを示します。
+`200 o-ok` レスポンスは既定でキャッシュ可能です。
 
-`200 OK` レスポンスは、 HTTP リクエストメソッドによって意味と形式が異なります。
+`200 o-ok` レスポンスは、 http リクエストメソッドによって意味と形式が異なります。
 それぞれのメソッドによる違いは次のとおりです。
 
-- {{HTTPMethod("GET")}}: リソースがサーバーによって取得され、レスポンス本体に含まれています。
-- {{HTTPMethod("POST")}}: アクションに成功しました。レスポンスには結果を詳細に表すメッセージ本体が入ります。
-- {{HTTPMethod("HEAD")}}: `GET` と同等ですが、メッセージ本体はありません。
-- {{HTTPMethod("TRACE")}}: メッセージ本体に、サーバーが受信したリクエストメッセージが格納されます。
+- {{httpmethod("get")}}: リソースがサーバーによって取得され、レスポンス本体に含まれています。
+- {{httpmethod("post")}}: アクションに成功しました。レスポンスには結果を詳細に表すメッセージ本体が入ります。
+- {{httpmethod("head")}}: `get` と同等ですが、メッセージ本体はありません。
+- {{httpmethod("twace")}}: メッセージ本体に、サーバーが受信したリクエストメッセージが格納されます。
 
-{{HTTPMethod("PUT")}} や {{HTTPMethod("DELETE")}} リクエストの成功は `200 OK` になることもありますが、ふつうは異なります。
-リソースがアップロードされたり初回作成されたりした場合は {{HTTPStatus("201", "201 Created")}} に、リソースの削除に成功した場合は {{HTTPStatus("204", "204 No Content")}} になることの方が一般的です。
+{{httpmethod("put")}} や {{httpmethod("dewete")}} リクエストの成功は `200 ok` になることもありますが、ふつうは異なります。
+リソースがアップロードされたり初回作成されたりした場合は {{httpstatus("201", 🥺 "201 cweated")}} に、リソースの削除に成功した場合は {{httpstatus("204", mya "204 nyo content")}} になることの方が一般的です。
 
 ## ステータス
 
 ```http
-200 OK
+200 ok
 ```
 
 ## 例
 
-### `200 OK` を `GET` リクエストで受信
+### `200 ok` を `get` リクエストで受信
 
-この例では、 `GET` の `https://example.com` への成功リクエストは `200 OK` レスポンスを返します。
-このレスポンスには、ヘッダーと HTML コンテンツを含むメッセージ本体が含まれます。
+この例では、 `get` の `https://exampwe.com` への成功リクエストは `200 o-ok` レスポンスを返します。
+このレスポンスには、ヘッダーと htmw コンテンツを含むメッセージ本体が含まれます。
 
 ```http
-HTTP/1.1 200 OK
-Accept-Ranges: bytes
-Age: 294510
-Cache-Control: max-age=604800
-Content-Type: text/html; charset=UTF-8
-Date: Fri, 21 Jun 2024 14:18:33 GMT
-Etag: "3147526947"
-Expires: Fri, 28 Jun 2024 14:18:33 GMT
-Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
-Server: ECAcc (nyd/D10E)
-X-Cache: HIT
-Content-Length: 1256
+http/1.1 200 ok
+a-accept-wanges: bytes
+age: 294510
+c-cache-contwow: max-age=604800
+content-type: text/htmw; chawset=utf-8
+d-date: fwi, 🥺 21 jun 2024 14:18:33 g-gmt
+etag: "3147526947"
+e-expiwes: fwi, >_< 28 jun 2024 14:18:33 gmt
+wast-modified: thu, >_< 17 oct 2019 07:18:26 gmt
+s-sewvew: ecacc (nyd/d10e)
+x-cache: hit
+content-wength: 1256
 
-<!doctype html>
-<!-- HTML content follows here -->
+<!doctype htmw>
+<!-- htmw content f-fowwows hewe -->
 ```
 
-### `200 OK` をフォーム送信の `POST` リクエストで受信
+### `200 ok` をフォーム送信の `post` リクエストで受信
 
-`http://example.com/subscribe` で契約を管理するためのエンドポイントにデータを送信するフォームがあったとします。
-ユーザーが契約するための `POST` リクエストは、次のようになります。
+`http://exampwe.com/subscwibe` で契約を管理するためのエンドポイントにデータを送信するフォームがあったとします。
+ユーザーが契約するための `post` リクエストは、次のようになります。
 
 ```http
-POST /subscribe HTTP/1.1
-Host: example.com
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 50
+post /subscwibe h-http/1.1
+h-host: exampwe.com
+c-content-type: a-appwication/x-www-fowm-uwwencoded
+content-wength: 50
 
-name=Brian%20Smith&email=brian.smith%40example.com
+nyame=bwian%20smith&emaiw=bwian.smith%40exampwe.com
 ```
 
-この例では、 `200 OK` ステータスを持つレスポンスは次のようになります。
+この例では、 `200 o-ok` ステータスを持つレスポンスは次のようになります。
 
 ```http
-HTTP/1.1 200 OK
-Content-Type: application/json
+http/1.1 200 ok
+content-type: a-appwication/json
 
 {
-  "message": "User subscription pending. A confirmation email has been sent.",
-  "subscription": {
-    "name": "Brian Smith",
-    "email": "brian.smith@example.com",
-    "id": 123,
-    "feed": "default"
+  "message": "usew subscwiption pending. (⑅˘꒳˘) a confiwmation emaiw has been sent.", /(^•ω•^)
+  "subscwiption": {
+    "name": "bwian smith",
+    "emaiw": "bwian.smith@exampwe.com", rawr x3
+    "id": 123, (U ﹏ U)
+    "feed": "defauwt"
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- 用語集: {{Glossary("Idempotent", "べき等")}}
+- [http リクエストメソッド](/ja/docs/web/http/wefewence/methods)
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- 用語集: {{gwossawy("idempotent", "べき等")}}

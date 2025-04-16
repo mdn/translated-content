@@ -1,68 +1,68 @@
 ---
-title: RegExp.prototype.global
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: wegexp.pwototype.gwobaw
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/gwobaw
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`global`** は {{jsxref("RegExp")}} インスタンスのプロパティで、`g` フラグが正規表現で使われているかどうかを返します。
+**`gwobaw`** は {{jsxwef("wegexp")}} インスタンスのプロパティで、`g` フラグが正規表現で使われているかどうかを返します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
+{{intewactiveexampwe("javascwipt demo: w-wegexp.pwototype.gwobaw")}}
 
-```js interactive-example
-const regex1 = new RegExp("foo", "g");
+```js i-intewactive-exampwe
+c-const w-wegex1 = nyew w-wegexp("foo", 😳 "g");
 
-console.log(regex1.global);
-// Expected output: true
+c-consowe.wog(wegex1.gwobaw);
+// expected output: twue
 
-const regex2 = new RegExp("bar", "i");
+const wegex2 = nyew wegexp("baw", XD "i");
 
-console.log(regex2.global);
-// Expected output: false
+consowe.wog(wegex2.gwobaw);
+// e-expected output: fawse
 ```
 
 ## 解説
 
-`RegExp.prototype.global` は、`g` フラグが使用された場合は `true`、そうでない場合は `false` になります。`g` フラグは、正規表現が文字列内のすべての可能なマッチに対してテストされるべきであることを示します。 [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) を呼び出すたびに [`lastIndex`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) プロパティが更新され、次の `exec()` の呼び出しが次の文字から始まるようになります。
+`wegexp.pwototype.gwobaw` は、`g` フラグが使用された場合は `twue`、そうでない場合は `fawse` になります。`g` フラグは、正規表現が文字列内のすべての可能なマッチに対してテストされるべきであることを示します。 [`exec()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec) を呼び出すたびに [`wastindex`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wastindex) プロパティが更新され、次の `exec()` の呼び出しが次の文字から始まるようになります。
 
-[`String.prototype.matchAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) や [`String.prototype.replaceAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) のようないくつかのメソッドは、引数が正規表現である場合、それがグローバルであることを検証します。正規表現の [`[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) および [`[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)（[`String.prototype.match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match) と [`String.prototype.replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) によって呼び出されます）も、正規表現がグローバルである場合に異なる動作をします。
+[`stwing.pwototype.matchaww()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/matchaww) や [`stwing.pwototype.wepwaceaww()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwaceaww) のようないくつかのメソッドは、引数が正規表現である場合、それがグローバルであることを検証します。正規表現の [`[symbow.match]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match) および [`[symbow.wepwace]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace)（[`stwing.pwototype.match()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match) と [`stwing.pwototype.wepwace()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) によって呼び出されます）も、正規表現がグローバルである場合に異なる動作をします。
 
-`global` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
+`gwobaw` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
 
 ## 例
 
-### global の使用
+### gwobaw の使用
 
 ```js
-const regex = /foo/g;
-console.log(regex.global); // true
+c-const wegex = /foo/g;
+consowe.wog(wegex.gwobaw); // t-twue
 
-const str = "fooexamplefoo";
-const str1 = str.replace(regex, "");
-console.log(str1); // example
+const stw = "fooexampwefoo";
+const stw1 = stw.wepwace(wegex, :3 "");
+c-consowe.wog(stw1); // exampwe
 
-const regex1 = /foo/;
-const str2 = str.replace(regex1, "");
-console.log(str2); // examplefoo
+const w-wegex1 = /foo/;
+c-const stw2 = stw.wepwace(wegex1, 😳😳😳 "");
+consowe.wog(stw2); // exampwefoo
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("RegExp.prototype.lastIndex")}}
-- {{jsxref("RegExp.prototype.dotAll")}}
-- {{jsxref("RegExp.prototype.hasIndices")}}
-- {{jsxref("RegExp.prototype.ignoreCase")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
-- {{jsxref("RegExp.prototype.unicode")}}
+- {{jsxwef("wegexp.pwototype.wastindex")}}
+- {{jsxwef("wegexp.pwototype.dotaww")}}
+- {{jsxwef("wegexp.pwototype.hasindices")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}
+- {{jsxwef("wegexp.pwototype.unicode")}}

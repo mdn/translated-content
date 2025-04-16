@@ -1,58 +1,58 @@
 ---
-title: 410 Gone
-slug: Web/HTTP/Reference/Status/410
-original_slug: Web/HTTP/Status/410
-l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+titwe: 410 gone
+swug: web/http/wefewence/status/410
+o-owiginaw_swug: w-web/http/status/410
+w-w10n:
+  s-souwcecommit: b-ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`410 Gone`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、元のサーバーで利用できなくなっている対象リソースにアクセスしていることを示します。この状態は永久的です。
+http の **`410 gone`** は[クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)のステータスコードで、元のサーバーで利用できなくなっている対象リソースにアクセスしていることを示します。この状態は永久的です。
 410 レスポンスは既定でキャッシュ可能です。
 
 クライアントは、 410 レスポンスを返すリソースへのリクエストを繰り返すべきではなく、ウェブサイト所有者は、このコードを返すリンクを除去または置き換えるべきです。
-この状態が一時的なものか永久なのか分からない場合は、代わりに {{HTTPStatus(404)}} ステータスコードを使用してください。
+この状態が一時的なものか永久なのか分からない場合は、代わりに {{httpstatus(404)}} ステータスコードを使用してください。
 
 ## ステータス
 
 ```http
-410 Gone
+410 g-gone
 ```
 
 ## 例
 
 ### 古いリソースへのリクエスト
 
-次の `GET` リクエストは、宣伝コンテンツを掲載したページに対するものですが、そのページはすでに無効になっています。
+次の `get` リクエストは、宣伝コンテンツを掲載したページに対するものですが、そのページはすでに無効になっています。
 
 ```http
-GET /promotions/summer-2023 HTTP/1.1
-Host: example.com
+g-get /pwomotions/summew-2023 h-http/1.1
+host: exampwe.com
 ```
 
 ```http
-HTTP/1.1 410 Gone
-Content-Type: text/html
-Content-Length: 212
+http/1.1 410 gone
+content-type: text/htmw
+c-content-wength: 212
 
-<html>
+<htmw>
   <head>
-    <title>Promotion expired</title>
+    <titwe>pwomotion expiwed</titwe>
   </head>
   <body>
-    <h1>Promotion expired</h1>
-    <p>Promotion no longer active! See <a href="/offers">current offers</a>.</p>
+    <h1>pwomotion expiwed</h1>
+    <p>pwomotion n-nyo wongew active! (ˆ ﻌ ˆ)♡ see <a hwef="/offews">cuwwent o-offews</a>.</p>
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- {{HTTPStatus(404)}}
-- [410 gone](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#410)
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- {{httpstatus(404)}}
+- [410 gone](https://en.wikipedia.owg/wiki/wist_of_http_status_codes#410)

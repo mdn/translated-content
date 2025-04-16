@@ -1,35 +1,35 @@
 ---
-title: DNT
-slug: Web/HTTP/Reference/Headers/DNT
-original_slug: Web/HTTP/Headers/DNT
-l10n:
-  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
+titwe: dnt
+swug: web/http/wefewence/headews/dnt
+o-owiginaw_swug: w-web/http/headews/dnt
+w-w10n:
+  souwcecommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}{{Deprecated_header}}
+{{httpsidebaw}}{{depwecated_headew}}
 
-**`DNT`** (**D**o **N**ot
-**T**rack) リクエストヘッダーは、ユーザーのトラッキングの設定を示します。これにより、ユーザーはパーソナライズされたコンテンツではなく、プライバシーを優先するかどうかを指定できます。
+**`dnt`** (**d**o **n**ot
+**t**wack) リクエストヘッダーは、ユーザーのトラッキングの設定を示します。これにより、ユーザーはパーソナライズされたコンテンツではなく、プライバシーを優先するかどうかを指定できます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+    <tw>
+      <th scope="wow">ヘッダー種別</th>
+      <td>{{gwossawy("wequest h-headew", mya "リクエストヘッダー")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew n-nyame", mya "禁止ヘッダー名")}}</th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```http
-DNT: 0
-DNT: 1
-DNT: null
+d-dnt: 0
+dnt: 1
+dnt: nyuww
 ```
 
 ## ディレクティブ
@@ -38,34 +38,34 @@ DNT: null
   - : ユーザーは対象のサイトでトラッキングを許可している。
 - 1
   - : ユーザーは対象のサイトでトラッキングを拒否している。
-- null
+- nyuww
   - : ユーザーはトラッキングに関する設定を指定していない。
 
 ## 例
 
-### JavaScript から Do Not Track の状態を読み取る
+### javascwipt から do nyot t-twack の状態を読み取る
 
-ユーザーの DNT 設定は {{domxref("Navigator.doNotTrack")}} プロパティを使用して JavaScript から読み取ることもできます。
+ユーザーの dnt 設定は {{domxwef("navigatow.donottwack")}} プロパティを使用して javascwipt から読み取ることもできます。
 
 ```js
-navigator.doNotTrack; // "0" or "1"
+n-nyavigatow.donottwack; // "0" ow "1"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Navigator.doNotTrack")}}
-- {{HTTPHeader("Tk")}} ヘッダー
-- [Do Not Track (Wikipedia)](https://en.wikipedia.org/wiki/Do_Not_Track)
-- [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
-- [DNT (Electronic Frontier Foundation)](https://www.eff.org/issues/do-not-track)
-- DNT ブラウザー設定のヘルプ:
-  - [Firefox](https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature)
-  - [Chrome](https://support.google.com/chrome/answer/2790761)
+- {{domxwef("navigatow.donottwack")}}
+- {{httpheadew("tk")}} ヘッダー
+- [do n-nyot twack (wikipedia)](https://en.wikipedia.owg/wiki/do_not_twack)
+- [nani does the "twack" in "do nyot t-twack" mean? – eff](https://www.eff.owg/deepwinks/2011/02/nani-does-twack-do-not-twack-mean)
+- [dnt (ewectwonic f-fwontiew foundation)](https://www.eff.owg/issues/do-not-twack)
+- d-dnt ブラウザー設定のヘルプ:
+  - [fiwefox](https://suppowt.moziwwa.owg/en-us/kb/how-do-i-tuwn-do-not-twack-featuwe)
+  - [chwome](https://suppowt.googwe.com/chwome/answew/2790761)

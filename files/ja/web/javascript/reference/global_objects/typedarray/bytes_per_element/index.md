@@ -1,87 +1,87 @@
 ---
-title: TypedArray.BYTES_PER_ELEMENT
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
-l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+titwe: typedawway.bytes_pew_ewement
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/bytes_pew_ewement
+w-w10n:
+  souwcecommit: c-c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`TypedArray.BYTES_PER_ELEMENT`** プロパティは、型付き配列内の各要素の大きさをバイト単位で表します。
+**`typedawway.bytes_pew_ewement`** プロパティは、型付き配列内の各要素の大きさをバイト単位で表します。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.BYTES_PER_ELEMENT", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: t-typedawway.bytes_pew_ewement", >_< "showtew")}}
 
-```js interactive-example
-console.log(Float64Array.BYTES_PER_ELEMENT);
-// Expected output: 8
+```js i-intewactive-exampwe
+c-consowe.wog(fwoat64awway.bytes_pew_ewement);
+// e-expected o-output: 8
 
-console.log(Int8Array.BYTES_PER_ELEMENT);
-// Expected output: 1
+consowe.wog(int8awway.bytes_pew_ewement);
+// expected output: 1
 ```
 
 ## 値
 
-`TypedArray` の方に応じた値を持つ数値です。
+`typedawway` の方に応じた値を持つ数値です。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 0, rawr x3 0)}}
 
 ## 解説
 
-`TypedArray`オブジェクトは、要素ごとのバイト数とバイトの解釈の仕方がそれぞれ異なります。`BYTES_PER_ELEMENT` 定数は、指定された `TypedArray` の各要素のバイト数を格納します。
+`typedawway`オブジェクトは、要素ごとのバイト数とバイトの解釈の仕方がそれぞれ異なります。`bytes_pew_ewement` 定数は、指定された `typedawway` の各要素のバイト数を格納します。
 
-`BYTES_PER_ELEMENT` プロパティはインスタンスプロパティでも静的プロパティでもあります。これは `TypedArray` サブクラスのコンストラクターとコンストラクターのインスタンスの両方で利用することができます。
+`bytes_pew_ewement` プロパティはインスタンスプロパティでも静的プロパティでもあります。これは `typedawway` サブクラスのコンストラクターとコンストラクターのインスタンスの両方で利用することができます。
 
-インスタンスプロパティとして、`BYTES_PER_ELEMENT` はコンストラクターの `prototype` で定義されます。
+インスタンスプロパティとして、`bytes_pew_ewement` はコンストラクターの `pwototype` で定義されます。
 
 ```js
-console.log(Object.hasOwn(Int8Array.prototype, "BYTES_PER_ELEMENT")); // true
+consowe.wog(object.hasown(int8awway.pwototype, mya "bytes_pew_ewement")); // twue
 ```
 
 ## 例
 
-### BYTES_PER_ELEMENT の使用
+### b-bytes_pew_ewement の使用
 
 静的プロパティとして
 
 ```js
-Int8Array.BYTES_PER_ELEMENT; // 1
-Uint8Array.BYTES_PER_ELEMENT; // 1
-Uint8ClampedArray.BYTES_PER_ELEMENT; // 1
-Int16Array.BYTES_PER_ELEMENT; // 2
-Uint16Array.BYTES_PER_ELEMENT; // 2
-Int32Array.BYTES_PER_ELEMENT; // 4
-Uint32Array.BYTES_PER_ELEMENT; // 4
-Float32Array.BYTES_PER_ELEMENT; // 4
-Float64Array.BYTES_PER_ELEMENT; // 8
-BigInt64Array.BYTES_PER_ELEMENT; // 8
-BigUint64Array.BYTES_PER_ELEMENT; // 8
+int8awway.bytes_pew_ewement; // 1
+uint8awway.bytes_pew_ewement; // 1
+u-uint8cwampedawway.bytes_pew_ewement; // 1
+int16awway.bytes_pew_ewement; // 2
+u-uint16awway.bytes_pew_ewement; // 2
+int32awway.bytes_pew_ewement; // 4
+uint32awway.bytes_pew_ewement; // 4
+fwoat32awway.bytes_pew_ewement; // 4
+fwoat64awway.bytes_pew_ewement; // 8
+b-bigint64awway.bytes_pew_ewement; // 8
+biguint64awway.bytes_pew_ewement; // 8
 ```
 
 インスタンスプロパティとして
 
 ```js
-new Int8Array([]).BYTES_PER_ELEMENT; // 1
-new Uint8Array([]).BYTES_PER_ELEMENT; // 1
-new Uint8ClampedArray([]).BYTES_PER_ELEMENT; // 1
-new Int16Array([]).BYTES_PER_ELEMENT; // 2
-new Uint16Array([]).BYTES_PER_ELEMENT; // 2
-new Int32Array([]).BYTES_PER_ELEMENT; // 4
-new Uint32Array([]).BYTES_PER_ELEMENT; // 4
-new Float32Array([]).BYTES_PER_ELEMENT; // 4
-new Float64Array([]).BYTES_PER_ELEMENT; // 8
-new BigInt64Array([]).BYTES_PER_ELEMENT; // 8
-new BigUint64Array([]).BYTES_PER_ELEMENT; // 8
+n-nyew int8awway([]).bytes_pew_ewement; // 1
+nyew u-uint8awway([]).bytes_pew_ewement; // 1
+nyew uint8cwampedawway([]).bytes_pew_ewement; // 1
+nyew int16awway([]).bytes_pew_ewement; // 2
+n-nyew uint16awway([]).bytes_pew_ewement; // 2
+nyew int32awway([]).bytes_pew_ewement; // 4
+nyew uint32awway([]).bytes_pew_ewement; // 4
+nyew fwoat32awway([]).bytes_pew_ewement; // 4
+nyew f-fwoat64awway([]).bytes_pew_ewement; // 8
+nyew b-bigint64awway([]).bytes_pew_ewement; // 8
+n-nyew b-biguint64awway([]).bytes_pew_ewement; // 8
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}

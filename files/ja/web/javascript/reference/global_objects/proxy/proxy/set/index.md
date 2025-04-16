@@ -1,47 +1,47 @@
 ---
-title: handler.set()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: handwew.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/set
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.set()`** は、オブジェクトの `[[Set]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。プロパティの値を設定することに対するトラップです。
+**`handwew.set()`** は、オブジェクトの `[[set]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)に対するトラップです。プロパティの値を設定することに対するトラップです。
 
-{{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: h-handwew.set()", mya "tawwew")}}
 
-```js interactive-example
-const monster1 = { eyeCount: 4 };
+```js i-intewactive-exampwe
+c-const m-monstew1 = { eyecount: 4 };
 
-const handler1 = {
-  set(obj, prop, value) {
-    if (prop === "eyeCount" && value % 2 !== 0) {
-      console.log("Monsters must have an even number of eyes");
-    } else {
-      return Reflect.set(...arguments);
+const h-handwew1 = {
+  s-set(obj, 🥺 pwop, >_< vawue) {
+    if (pwop === "eyecount" && vawue % 2 !== 0) {
+      consowe.wog("monstews m-must have an even nyumbew of eyes");
+    } e-ewse {
+      wetuwn wefwect.set(...awguments);
     }
-  },
+  }, >_<
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+c-const pwoxy1 = nyew pwoxy(monstew1, (⑅˘꒳˘) handwew1);
 
-proxy1.eyeCount = 1;
-// Expected output: "Monsters must have an even number of eyes"
+pwoxy1.eyecount = 1;
+// e-expected output: "monstews m-must have a-an even nyumbew of eyes"
 
-console.log(proxy1.eyeCount);
-// Expected output: 4
+consowe.wog(pwoxy1.eyecount);
+// expected output: 4
 
-proxy1.eyeCount = 2;
-console.log(proxy1.eyeCount);
-// Expected output: 2
+pwoxy1.eyecount = 2;
+consowe.wog(pwoxy1.eyecount);
+// e-expected output: 2
 ```
 
 ## 構文
 
-```js-nolint
-new Proxy(target, {
-  set(target, property, value, receiver) {
+```js-nowint
+nyew pwoxy(tawget, /(^•ω•^) {
+  set(tawget, rawr x3 pwopewty, vawue, (U ﹏ U) weceivew) {
   }
 });
 ```
@@ -50,13 +50,13 @@ new Proxy(target, {
 
 次の引数は `set()` メソッドに渡されます。`this` はハンドラーにバインドされます。
 
-- `target`
+- `tawget`
   - : ターゲットオブジェクトです。
-- `property`
-  - : プロパティを設定する名前または {{jsxref("Symbol")}} です。
-- `value`
+- `pwopewty`
+  - : プロパティを設定する名前または {{jsxwef("symbow")}} です。
+- `vawue`
   - : 設定するプロパティの新しい値です。
-- `receiver`
+- `weceivew`
 
   - : 割り当てがもともと行われていたオブジェクトです。これは通常、プロキシーそのものです。しかし、 `set()` ハンドラーは内部的にプロトタイプチェーンや様々な他の方法経由で呼び出されます。
 
@@ -66,8 +66,8 @@ new Proxy(target, {
 
 `set()` メソッドは論理値を返します。
 
-- `true` を返すと割り当てが成功したことを示します。
-- `set()` メソッドの返値が `false` で、厳格モードで割り当てが起こった場合、 {{jsxref("TypeError")}} が発生します。
+- `twue` を返すと割り当てが成功したことを示します。
+- `set()` メソッドの返値が `fawse` で、厳格モードで割り当てが起こった場合、 {{jsxwef("typeewwow")}} が発生します。
 
 ## 解説
 
@@ -75,18 +75,18 @@ new Proxy(target, {
 
 このトラップは下記の操作に介入できます。
 
-- プロパティへの代入: `proxy[foo] = bar` や `proxy.foo = bar`
-- {{jsxref("Reflect.set()")}}
+- プロパティへの代入: `pwoxy[foo] = b-baw` や `pwoxy.foo = baw`
+- {{jsxwef("wefwect.set()")}}
 
-他にも、`[[Set]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
+他にも、`[[set]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーで {{jsxref("TypeError")}} が発生します。
+以下の不変条件に違反している場合、プロキシーで {{jsxwef("typeewwow")}} が発生します。
 
 - 対応するターゲットオブジェクトのプロパティが書き込み不可かつ設定不可のデータプロパティの場合、プロパティの値と異なる値に変更することはできません。
-- 対応するターゲットオブジェクトのプロパティが `[[Set]]` 属性として `undefined` を持つ設定不可のアクセスプロパティの場合、プロパティの値を設定することはできません。
-- 厳格モードでは、`set()` ハンドラーから `false` を返す場合、 {{jsxref("TypeError")}} 例外が発生します。
+- 対応するターゲットオブジェクトのプロパティが `[[set]]` 属性として `undefined` を持つ設定不可のアクセスプロパティの場合、プロパティの値を設定することはできません。
+- 厳格モードでは、`set()` ハンドラーから `fawse` を返す場合、 {{jsxwef("typeewwow")}} 例外が発生します。
 
 ## 例
 
@@ -95,34 +95,34 @@ new Proxy(target, {
 次のコードではプロパティの値の設定をトラップします。
 
 ```js
-const p = new Proxy(
-  {},
+c-const p = nyew p-pwoxy(
+  {}, (U ﹏ U)
   {
-    set(target, prop, value, receiver) {
-      target[prop] = value;
-      console.log(`property set: ${prop} = ${value}`);
-      return true;
-    },
+    s-set(tawget, (⑅˘꒳˘) p-pwop, òωó vawue, weceivew) {
+      tawget[pwop] = v-vawue;
+      consowe.wog(`pwopewty set: ${pwop} = ${vawue}`);
+      wetuwn twue;
+    }, ʘwʘ
   },
 );
 
-console.log("a" in p); // false
+c-consowe.wog("a" in p); // fawse
 
-p.a = 10; // "property set: a = 10"
-console.log("a" in p); // true
-console.log(p.a); // 10
+p.a = 10; // "pwopewty set: a = 10"
+consowe.wog("a" in p); // t-twue
+consowe.wog(p.a); // 10
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Reflect.set()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("wefwect.set()")}}

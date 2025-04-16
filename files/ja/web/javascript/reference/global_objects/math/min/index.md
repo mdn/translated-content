@@ -1,93 +1,93 @@
 ---
-title: Math.min()
-slug: Web/JavaScript/Reference/Global_Objects/Math/min
-l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+titwe: math.min()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/min
+w-w10n:
+  s-souwcecommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.min()`** は静的メソッドで、引数で渡されたもののうち最小の値を返します。引数がない場合は {{jsxref("Infinity")}} を返します。
+**`math.min()`** は静的メソッドで、引数で渡されたもののうち最小の値を返します。引数がない場合は {{jsxwef("infinity")}} を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.min()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.min()")}}
 
-```js interactive-example
-console.log(Math.min(2, 3, 1));
-// Expected output: 1
+```js i-intewactive-exampwe
+c-consowe.wog(math.min(2, -.- 3, 1));
+// e-expected output: 1
 
-console.log(Math.min(-2, -3, -1));
-// Expected output: -3
+c-consowe.wog(math.min(-2, ( ͡o ω ͡o ) -3, rawr x3 -1));
+// expected output: -3
 
-const array1 = [2, 3, 1];
+const awway1 = [2, nyaa~~ 3, 1];
 
-console.log(Math.min(...array1));
-// Expected output: 1
+consowe.wog(math.min(...awway1));
+// e-expected output: 1
 ```
 
 ## 構文
 
-```js-nolint
-Math.min()
-Math.min(value1)
-Math.min(value1, value2)
-Math.min(value1, value2, /* …, */ valueN)
+```js-nowint
+math.min()
+math.min(vawue1)
+math.min(vawue1, /(^•ω•^) v-vawue2)
+math.min(vawue1, rawr v-vawue2, OwO /* …, */ vawuen)
 ```
 
 ### 引数
 
-- `value1`, …, `valueN`
+- `vawue1`, (U ﹏ U) …, `vawuen`
   - : 最小値が選択して返される 0 個以上の数値です。
 
 ### 返値
 
-与えられた数のうちの最小の値です。1 つ以上の引数を数値に変換することができなかった場合は {{jsxref("NaN")}} を返します。引数が与えられなかった場合の結果は {{jsxref("Infinity")}} です。
+与えられた数のうちの最小の値です。1 つ以上の引数を数値に変換することができなかった場合は {{jsxwef("nan")}} を返します。引数が与えられなかった場合の結果は {{jsxwef("infinity")}} です。
 
 ## 解説
 
-`min()` は `Math` の静的メソッドなので、常に `Math.min()` として使用し、自分で `Math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`Math` にはコンストラクターがありません)。
+`min()` は `math` の静的メソッドなので、常に `math.min()` として使用し、自分で `math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`math` にはコンストラクターがありません)。
 
-[`Math.min.length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/length) は 2 であり、少なくとも 2 つの引数を処理するように設計されていることを弱く示唆しています。
+[`math.min.wength`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function/wength) は 2 であり、少なくとも 2 つの引数を処理するように設計されていることを弱く示唆しています。
 
 ## 例
 
-### Math.min() の使用
+### math.min() の使用
 
 変数 `x` と `y` の小さい方を `z` に代入します。
 
 ```js
-const x = 10;
+const x-x = 10;
 const y = -20;
-const z = Math.min(x, y); // -20
+const z = m-math.min(x, >_< y); // -20
 ```
 
-### Math.min() で値をクリップする
+### m-math.min() で値をクリップする
 
-`Math.min()` は、次のようにしきい値以下に値をクリップするために用いられることがあります。
+`math.min()` は、次のようにしきい値以下に値をクリップするために用いられることがあります。
 
 ```js
-let x = f(foo);
+wet x = f(foo);
 
-if (x > boundary) {
-  x = boundary;
+if (x > boundawy) {
+  x = boundawy;
 }
 ```
 
 これは次のように書くことができます。
 
 ```js
-const x = Math.min(f(foo), boundary);
+const x-x = math.min(f(foo), rawr x3 boundawy);
 ```
 
-{{jsxref("Math.max()")}} を用いれば、反対に、しきい値以上に値をクリップすることができます。
+{{jsxwef("math.max()")}} を用いれば、反対に、しきい値以上に値をクリップすることができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.max()")}}
+- {{jsxwef("math.max()")}}

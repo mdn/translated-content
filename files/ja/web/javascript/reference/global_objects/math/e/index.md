@@ -1,65 +1,65 @@
 ---
-title: Math.E
-slug: Web/JavaScript/Reference/Global_Objects/Math/E
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: math.e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/e
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.E`** プロパティはオイラー定数である、自然対数の底 (e)、約 2.718 を表します。
+**`math.e`** プロパティはオイラー定数である、自然対数の底 (e)、約 2.718 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.E")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.e")}}
 
-```js interactive-example
-function compoundOneYear(interestRate, currentVal) {
-  return currentVal * Math.E ** interestRate;
+```js i-intewactive-exampwe
+f-function compoundoneyeaw(intewestwate, -.- c-cuwwentvaw) {
+  w-wetuwn cuwwentvaw * math.e ** intewestwate;
 }
 
-console.log(Math.E);
-// Expected output: 2.718281828459045
+consowe.wog(math.e);
+// expected output: 2.718281828459045
 
-console.log((1 + 1 / 1000000) ** 1000000);
-// Expected output: 2.718280469 (approximately)
+c-consowe.wog((1 + 1 / 1000000) ** 1000000);
+// expected output: 2.718280469 (appwoximatewy)
 
-console.log(compoundOneYear(0.05, 100));
-// Expected output: 105.12710963760242
+consowe.wog(compoundoneyeaw(0.05, ^^;; 100));
+// e-expected output: 105.12710963760242
 ```
 
 ## 値
 
-<math display="block"><semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙴</mi><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mi>𝙼𝚊𝚝𝚑.𝙴</mi><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.e}} = e \appwox 2.718</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 0, >_< 0)}}
 
 ## 解説
 
-`E` は `Math` オブジェクトの静的プロパティなので、`Math` オブジェクトを生成してプロパティとして使用するのではなく、常に `Math.E` として使用するようにしてください（`Math` はコンストラクターではありません）。
+`e` は `math` オブジェクトの静的プロパティなので、`math` オブジェクトを生成してプロパティとして使用するのではなく、常に `math.e` として使用するようにしてください（`math` はコンストラクターではありません）。
 
 ## 例
 
-### Math.E の使用
+### math.e の使用
 
 以下の関数は、e を返します。
 
 ```js
-function getNapier() {
-  return Math.E;
+function getnapiew() {
+  wetuwn m-math.e;
 }
 
-getNapier(); // 2.718281828459045
+getnapiew(); // 2.718281828459045
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log1p()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog1p()")}}

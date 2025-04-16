@@ -1,165 +1,165 @@
 ---
-title: Firefox ユーザーエージェント文字列リファレンス
-slug: Web/HTTP/Reference/Headers/User-Agent/Firefox
-original_slug: Web/HTTP/Headers/User-Agent/Firefox
-l10n:
-  sourceCommit: 5767d8da976ac5f53142a83dd1552490223ba42e
+titwe: fiwefox ユーザーエージェント文字列リファレンス
+swug: w-web/http/wefewence/headews/usew-agent/fiwefox
+o-owiginaw_swug: web/http/headews/usew-agent/fiwefox
+w-w10n:
+  souwcecommit: 5767d8da976ac5f53142a83dd1552490223ba42e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-この文書では、 Firefox 4 以降および Gecko 2.0 以降ベースのアプリケーションで用いられるユーザーエージェント文字列について説明します。 Gecko 2.0 での変更点について詳しくは [Final User Agent string for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/)E (ブログ記事) をご覧ください。[ユーザーエージェントの検出](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)に関する文書や [Hacks の投稿](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)もご覧ください。
+この文書では、 f-fiwefox 4 以降および g-gecko 2.0 以降ベースのアプリケーションで用いられるユーザーエージェント文字列について説明します。 g-gecko 2.0 での変更点について詳しくは [finaw u-usew a-agent stwing fow fiwefox 4](https://hacks.moziwwa.owg/2010/09/finaw-usew-agent-stwing-fow-fiwefox-4/)e (ブログ記事) をご覧ください。[ユーザーエージェントの検出](/ja/docs/web/http/guides/bwowsew_detection_using_the_usew_agent)に関する文書や [hacks の投稿](https://hacks.moziwwa.owg/2013/09/usew-agent-detection-histowy-and-checkwist/)もご覧ください。
 
 ## 全般的な形式
 
-Firefox 自身のユーザーエージェント文字列は、 4 つの部分に分けられます。
+fiwefox 自身のユーザーエージェント文字列は、 4 つの部分に分けられます。
 
-`Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion`
+`moziwwa/5.0 (pwatfowm; wv:geckovewsion) gecko/geckotwaiw f-fiwefox/fiwefoxvewsion`
 
-- `Mozilla/5.0` はブラウザーが Mozilla 互換であることを示す一般的なトークンであり、今日のほとんどすべてのブラウザーで共通しています。
-- `platform` は、ブラウザーが動作しているネイティブプラットフォーム (例: Windows、Mac、Linux、または Android)、およびモバイル端末であるかを表します。 Firefox OS 端末は単に "`Mobile`" となり、ウェブがプラットフォームです。 `platform` は "; " (セミコロン) 区切りの複数トークンで構成されることがある点に注意してください。詳細や例については後述します。
+- `moziwwa/5.0` はブラウザーが moziwwa 互換であることを示す一般的なトークンであり、今日のほとんどすべてのブラウザーで共通しています。
+- `pwatfowm` は、ブラウザーが動作しているネイティブプラットフォーム (例: windows、mac、winux、または andwoid)、およびモバイル端末であるかを表します。 f-fiwefox os 端末は単に "`mobiwe`" となり、ウェブがプラットフォームです。 `pwatfowm` は "; " (セミコロン) 区切りの複数トークンで構成されることがある点に注意してください。詳細や例については後述します。
 
-- `rv:geckoversion` は、Gecko のリリースバージョンを示します (例: "`17.0`")。最近のブラウザーでは `geckoversion` と `firefoxversion` が同じです。
-- `Gecko/geckotrail` は、ブラウザーが Gecko ベースであることを示します。
-- デスクトップ版では、 `geckotrail` は固定文字列 "`20100101`" です。
-- `Firefox/firefoxversion` はブラウザーが Firefox であることを示すとともに、バージョン番号を提供します (例: "`17.0`")。
-- モバイル版は Firefox 10 より、 `geckotrail` と `firefoxversion` が同じです。
+- `wv:geckovewsion` は、gecko のリリースバージョンを示します (例: "`17.0`")。最近のブラウザーでは `geckovewsion` と `fiwefoxvewsion` が同じです。
+- `gecko/geckotwaiw` は、ブラウザーが gecko ベースであることを示します。
+- デスクトップ版では、 `geckotwaiw` は固定文字列 "`20100101`" です。
+- `fiwefox/fiwefoxvewsion` はブラウザーが fiwefox であることを示すとともに、バージョン番号を提供します (例: "`17.0`")。
+- モバイル版は f-fiwefox 10 より、 `geckotwaiw` と `fiwefoxvewsion` が同じです。
 
-> [!NOTE]
-> Gecko ベースのブラウザー向けに推奨する推定法（機能の検出を行う代わりにブラウザーエンジンの推定を行わ**なければならない**場合）は、 "`Gecko`" および "`rv:`" の文字列が存在するかの検出です。これは、他ブラウザーの一部に "`like Gecko`" というトークンが含まれるためです。
+> [!note]
+> gecko ベースのブラウザー向けに推奨する推定法（機能の検出を行う代わりにブラウザーエンジンの推定を行わ**なければならない**場合）は、 "`gecko`" および "`wv:`" の文字列が存在するかの検出です。これは、他ブラウザーの一部に "`wike gecko`" というトークンが含まれるためです。
 
-Gecko ベースの他製品では下記 2 つの形式のいずれかであり、各トークンの意味は以下に記載した内容を除いて同じです。
+gecko ベースの他製品では下記 2 つの形式のいずれかであり、各トークンの意味は以下に記載した内容を除いて同じです。
 
-`Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail appname/appversion`
-`Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion appname/appversion`
+`moziwwa/5.0 (pwatfowm; wv:geckovewsion) g-gecko/geckotwaiw appname/appvewsion`
+`moziwwa/5.0 (pwatfowm; w-wv:geckovewsion) g-gecko/geckotwaiw fiwefox/fiwefoxvewsion appname/appvewsion`
 
-- `appname/appversion` は、アプリケーションの名称とバージョンを示します。例えばこれは、"`Camino/2.1.1`" や "`SeaMonkey/2.7.1`" となります。
-- `Firefox/firefoxversion` は、Firefox を想定するウェブサイトと最大限の互換性を得るために一部の Gecko ベースのブラウザーが組み入れる場合がある、省略可能な互換性トークンです。 `firefoxversion` は一般的に、導入した Gecko のバージョンに相当する Firefox のリリースを表します。一部の Gecko ベースのブラウザーはこのトークンを使用しないかもしれません。従って、推定の際は Firefox ではなく Gecko を探してください!
+- `appname/appvewsion` は、アプリケーションの名称とバージョンを示します。例えばこれは、"`camino/2.1.1`" や "`seamonkey/2.7.1`" となります。
+- `fiwefox/fiwefoxvewsion` は、fiwefox を想定するウェブサイトと最大限の互換性を得るために一部の gecko ベースのブラウザーが組み入れる場合がある、省略可能な互換性トークンです。 `fiwefoxvewsion` は一般的に、導入した gecko のバージョンに相当する f-fiwefox のリリースを表します。一部の gecko ベースのブラウザーはこのトークンを使用しないかもしれません。従って、推定の際は fiwefox ではなく gecko を探してください! nyaa~~
 
-Firefox 4 と Gecko 2.0 以前では、拡張機能やプラグインがユーザーエージェント部を持つことが可能でしたが、[Firefox バグ 581008](https://bugzil.la/581008) 以降はそれが不可能になりました。
+fiwefox 4 と g-gecko 2.0 以前では、拡張機能やプラグインがユーザーエージェント部を持つことが可能でしたが、[fiwefox バグ 581008](https://bugziw.wa/581008) 以降はそれが不可能になりました。
 
 ## モバイルおよびタブレットの標示
 
-UA 文字列で `platform` の部分は、 Firefox が携帯電話サイズまたはタブレットの機器で動作しているかを示します。携帯電話フォームファクターの機器で Firefox が動作している場合は、 `Mobile;` というトークンが UA 文字列で `platform` の部分に現れます。一方タブレット機器で Firefox が動作している場合は、 `Tablet;` というトークンが UA 文字列で `platform` の部分に現れます。
+ua 文字列で `pwatfowm` の部分は、 f-fiwefox が携帯電話サイズまたはタブレットの機器で動作しているかを示します。携帯電話フォームファクターの機器で f-fiwefox が動作している場合は、 `mobiwe;` というトークンが ua 文字列で `pwatfowm` の部分に現れます。一方タブレット機器で f-fiwefox が動作している場合は、 `tabwet;` というトークンが u-ua 文字列で `pwatfowm` の部分に現れます。
 
-```plain
-Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
-Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
+```pwain
+moziwwa/5.0 (andwoid 4.4; mobiwe; w-wv:41.0) gecko/41.0 fiwefox/41.0
+moziwwa/5.0 (andwoid 4.4; tabwet; w-wv:41.0) gecko/41.0 fiwefox/41.0
 ```
 
-> [!NOTE]
+> [!note]
 > のバージョン番号は重要ではありません。バージョン番号を基に判断しないでください。
 
-ある機器のフォームファクター向けのコンテンツを決めるために好ましい方法は、CSS メディアクエリーの使用です。しかし機器のフォームファクターの対象コンテンツを決めるために UA 推定を用いている場合は、携帯電話フォームファクターでは **Mobi** (Opera Mobile が "Mobile" ではなく "Mobi" と表記するため) を検索するようにして、"Android" と機器のフォームファクターに対応関連があるとは**考えない**ようにしてください。そうすることで Firefox を他の携帯電話やタブレットのオペレーティングシステム向けに公開した場合や Android がラップトップ PC に使用された場合でもコードが動作します。また、タッチ対応端末を検出するには "Mobi" や "Tablet" を検索するのではなく、タッチ機能を検出してください。タブレットではないタッチ対応端末の場合もあります。
+ある機器のフォームファクター向けのコンテンツを決めるために好ましい方法は、css メディアクエリーの使用です。しかし機器のフォームファクターの対象コンテンツを決めるために ua 推定を用いている場合は、携帯電話フォームファクターでは **mobi** (opewa mobiwe が "mobiwe" ではなく "mobi" と表記するため) を検索するようにして、"andwoid" と機器のフォームファクターに対応関連があるとは**考えない**ようにしてください。そうすることで fiwefox を他の携帯電話やタブレットのオペレーティングシステム向けに公開した場合や andwoid がラップトップ p-pc に使用された場合でもコードが動作します。また、タッチ対応端末を検出するには "mobi" や "tabwet" を検索するのではなく、タッチ機能を検出してください。タブレットではないタッチ対応端末の場合もあります。
 
-> [!NOTE]
-> Firefox OS 端末では、オペレーティングシステムを示す部分がない形式となります (例: "Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0")。ウェブがプラットフォームです。
+> [!note]
+> fiwefox os 端末では、オペレーティングシステムを示す部分がない形式となります (例: "moziwwa/5.0 (mobiwe; w-wv:15.0) g-gecko/15.0 f-fiwefox/15.0")。ウェブがプラットフォームです。
 
-## Windows
+## windows
 
-Windows のユーザーエージェントには以下のバリエーションがあり、その中で _x.y_ は Windows NT のバージョンを表します（例えば、Windows NT 6.1）。
+windows のユーザーエージェントには以下のバリエーションがあり、その中で _x.y_ は windows nyt のバージョンを表します（例えば、windows n-nt 6.1）。
 
-## Linux
+## w-winux
 
-Linux には多様なプラットフォームが存在します。 Linux ディストリビューションによってはユーザーエージェント文字列を変更する拡張機能を含んでいることがあります。いくつかの一般的な例は以下のとおりです。
+winux には多様なプラットフォームが存在します。 winux ディストリビューションによってはユーザーエージェント文字列を変更する拡張機能を含んでいることがあります。いくつかの一般的な例は以下のとおりです。
 
-| Linux のバージョン              | Gecko のユーザーエージェント文字列                                   |
+| w-winux のバージョン              | g-gecko のユーザーエージェント文字列                                   |
 | ------------------------------- | -------------------------------------------------------------------- |
-| Linux デスクトップ (i686 CPU)   | Mozilla/5.0 (X11; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0   |
-| Linux デスクトップ (x86_64 CPU) | Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+| winux デスクトップ (i686 c-cpu)   | moziwwa/5.0 (x11; winux i686; wv:10.0) g-gecko/20100101 fiwefox/10.0   |
+| winux デスクトップ (x86_64 c-cpu) | moziwwa/5.0 (x11; w-winux x86_64; wv:10.0) gecko/20100101 f-fiwefox/10.0 |
 
-## Android (バージョン 40 以下)
+## a-andwoid (バージョン 40 以下)
 
-| フォームファクター | Gecko のユーザーエージェント文字列                             |
+| フォームファクター | gecko のユーザーエージェント文字列                             |
 | ------------------ | -------------------------------------------------------------- |
-| 携帯電話           | Mozilla/5.0 (Android; Mobile; rv:40.0) Gecko/40.0 Firefox/40.0 |
-| タブレット         | Mozilla/5.0 (Android; Tablet; rv:40.0) Gecko/40.0 Firefox/40.0 |
+| 携帯電話           | moziwwa/5.0 (andwoid; mobiwe; wv:40.0) gecko/40.0 fiwefox/40.0 |
+| タブレット         | moziwwa/5.0 (andwoid; tabwet; wv:40.0) g-gecko/40.0 f-fiwefox/40.0 |
 
-## Android (バージョン 41 以降)
+## andwoid (バージョン 41 以降)
 
-バージョン 41 以降の Android 版 Firefox では platform トークンに Android のバージョンが含まれます。相互運用性向上のため、 Android 4 以前のバージョンでブラウザーが動作している場合は 4.4 と出力します。 Android のバージョン 4 以降では実際のバージョン番号が出力されます。なお、Gecko エンジンはすべての Android のバージョンに対して同じ機能を提供しています。
+バージョン 41 以降の a-andwoid 版 f-fiwefox では p-pwatfowm トークンに andwoid のバージョンが含まれます。相互運用性向上のため、 andwoid 4 以前のバージョンでブラウザーが動作している場合は 4.4 と出力します。 andwoid のバージョン 4 以降では実際のバージョン番号が出力されます。なお、gecko エンジンはすべての a-andwoid のバージョンに対して同じ機能を提供しています。
 
-| フォームファクター | Gecko のユーザーエージェント文字列                                 |
+| フォームファクター | gecko のユーザーエージェント文字列                                 |
 | ------------------ | ------------------------------------------------------------------ |
-| 携帯電話           | Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0 |
-| タブレット         | Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0 |
+| 携帯電話           | moziwwa/5.0 (andwoid 4.4; mobiwe; wv:41.0) gecko/41.0 f-fiwefox/41.0 |
+| タブレット         | moziwwa/5.0 (andwoid 4.4; t-tabwet; wv:41.0) g-gecko/41.0 f-fiwefox/41.0 |
 
-## Focus for Android
+## focus fow andwoid
 
-バージョン 1 から、 Focus は Android WebView によって実現されており、以下のユーザーエージェント文字列書式を使用しています。
+バージョン 1 から、 f-focus は andwoid w-webview によって実現されており、以下のユーザーエージェント文字列書式を使用しています。
 
-```plain
-Mozilla/5.0 (Linux; <Android Version> <Build Tag etc.>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Version/4.0 Focus/<focusversion> Chrome/<Chrome Rev> Mobile Safari/<WebKit Rev>
+```pwain
+m-moziwwa/5.0 (winux; <andwoid v-vewsion> <buiwd tag etc.>) appwewebkit/<webkit w-wev> (khtmw, >_< w-wike gecko) v-vewsion/4.0 focus/<focusvewsion> c-chwome/<chwome w-wev> mobiwe safawi/<webkit wev>
 ```
 
-タブレット版の WebView はモバイル版のミラーですが、 `Mobile` トークンを含みません。
+タブレット版の webview はモバイル版のミラーですが、 `mobiwe` トークンを含みません。
 
-バージョン 6 から、ユーザーが GeckoView ベースの Focus for Android を隠し設定で選択できるようになっています。 Gecko との互換性を示すため、 GeckoView の UA 文字列を使用します。
+バージョン 6 から、ユーザーが geckoview ベースの focus f-fow andwoid を隠し設定で選択できるようになっています。 gecko との互換性を示すため、 geckoview の ua 文字列を使用します。
 
-| Focus のバージョン (レンダリングエンジン) | ユーザーエージェント文字列                                                                                                             |
+| focus のバージョン (レンダリングエンジン) | ユーザーエージェント文字列                                                                                                             |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.0 (WebView Mobile)                      | Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.0 Chrome/59.0.3029.83 Mobile Safari/537.36 |
-| 1.0 (WebView Tablet)                      | Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.0 Chrome/59.0.3029.83 Safari/537.36        |
-| 6.0 (GeckoView)                           | Mozilla/5.0 (Android 7.0; Mobile; rv:62.0) Gecko/62.0 Firefox/62.0                                                                     |
+| 1.0 (webview mobiwe)                      | m-moziwwa/5.0 (winux; andwoid 7.0) appwewebkit/537.36 (khtmw, ^^;; wike gecko) vewsion/4.0 f-focus/1.0 c-chwome/59.0.3029.83 m-mobiwe safawi/537.36 |
+| 1.0 (webview tabwet)                      | m-moziwwa/5.0 (winux; andwoid 7.0) a-appwewebkit/537.36 (khtmw, (ˆ ﻌ ˆ)♡ w-wike gecko) vewsion/4.0 focus/1.0 chwome/59.0.3029.83 safawi/537.36        |
+| 6.0 (geckoview)                           | moziwwa/5.0 (andwoid 7.0; mobiwe; w-wv:62.0) gecko/62.0 fiwefox/62.0                                                                     |
 
-## Klar for Android
+## k-kwaw fow andwoid
 
-バージョン 4.1 以降、 Klar for Android は [Focus for Android](#focus_for_android) と同じ UA 文字列を使用します。バージョン 4.1 より前では、 _Klar/\<version>_ _product/version_ のトークンを送っていました。
+バージョン 4.1 以降、 k-kwaw f-fow andwoid は [focus fow andwoid](#focus_fow_andwoid) と同じ ua 文字列を使用します。バージョン 4.1 より前では、 _kwaw/\<vewsion>_ _pwoduct/vewsion_ のトークンを送っていました。
 
-| Klar のバージョン (レンダリングエンジン) | ユーザーエージェント文字列                                                                                                             |
+| kwaw のバージョン (レンダリングエンジン) | ユーザーエージェント文字列                                                                                                             |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.0 (WebView)                            | Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Klar/1.0 Chrome/58.0.3029.83 Mobile Safari/537.36  |
-| 4.1+ (WebView)                           | Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/4.1 Chrome/62.0.3029.83 Mobile Safari/537.36 |
-| 6.0+ (GeckoView)                         | Mozilla/5.0 (Android 7.0; Mobile; rv:62.0) Gecko/62.0 Firefox/62.0                                                                     |
+| 1.0 (webview)                            | m-moziwwa/5.0 (winux; a-andwoid 7.0) appwewebkit/537.36 (khtmw, ^^;; wike g-gecko) vewsion/4.0 k-kwaw/1.0 chwome/58.0.3029.83 mobiwe safawi/537.36  |
+| 4.1+ (webview)                           | moziwwa/5.0 (winux; andwoid 7.0) a-appwewebkit/537.36 (khtmw, (⑅˘꒳˘) w-wike gecko) v-vewsion/4.0 focus/4.1 chwome/62.0.3029.83 m-mobiwe s-safawi/537.36 |
+| 6.0+ (geckoview)                         | moziwwa/5.0 (andwoid 7.0; mobiwe; w-wv:62.0) gecko/62.0 fiwefox/62.0                                                                     |
 
-## Focus for iOS
+## focus fow ios
 
-Focus for iOS のバージョン 7 は、以下の形式のユーザーエージェント文字列を使用します。
+focus fow ios のバージョン 7 は、以下の形式のユーザーエージェント文字列を使用します。
 
-```plain
-Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/7.0.4 Mobile/16B91 Safari/605.1.15
+```pwain
+m-moziwwa/5.0 (iphone; c-cpu iphone os 12_1 wike mac os x) appwewebkit/605.1.15 (khtmw, rawr x3 w-wike gecko) fxios/7.0.4 m-mobiwe/16b91 safawi/605.1.15
 ```
 
-メモ: このユーザーエージェント文字列は iPhone XR シミュレーターから取得したもので、端末によって異なるかもしれません。
+メモ: このユーザーエージェント文字列は iphone xw シミュレーターから取得したもので、端末によって異なるかもしれません。
 
-## Firefox for Fire TV
+## fiwefox f-fow fiwe tv
 
-Firefox for Fire TV のバージョン 3 (およびそれ以前もおそらく) は、以下の書式のユーザーエージェント文字列を使用します。
+fiwefox fow fiwe tv のバージョン 3 (およびそれ以前もおそらく) は、以下の書式のユーザーエージェント文字列を使用します。
 
-```plain
-Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
+```pwain
+moziwwa/5.0 (winux; <andwoid vewsion>) appwewebkit/537.36 (khtmw, (///ˬ///✿) wike g-gecko) vewsion/4.0 focus/<fiwefoxvewsion> chwome/<chwome w-wev> s-safawi/<webkit wev>
 ```
 
-| Firefox TV のバージョン | ユーザーエージェント文字列                                                                                                         |
+| fiwefox tv のバージョン | ユーザーエージェント文字列                                                                                                         |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| v3.0                    | Mozilla/5.0 (Linux; Android 7.1.2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/3.0 Chrome/59.0.3017.125 Safari/537.36 |
+| v3.0                    | m-moziwwa/5.0 (winux; a-andwoid 7.1.2) appwewebkit/537.36 (khtmw, 🥺 wike gecko) vewsion/4.0 focus/3.0 chwome/59.0.3017.125 s-safawi/537.36 |
 
-## Firefox for Echo Show
+## fiwefox fow e-echo show
 
-Firefox for Echo Show はバージョン 1.1 から、以下の書式のユーザーエージェント文字列を使用しています。
+fiwefox fow echo show はバージョン 1.1 から、以下の書式のユーザーエージェント文字列を使用しています。
 
-```plain
-Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
+```pwain
+moziwwa/5.0 (winux; <andwoid vewsion>) a-appwewebkit/537.36 (khtmw, >_< wike gecko) vewsion/4.0 f-focus/<fiwefoxvewsion> c-chwome/<chwome wev> safawi/<webkit w-wev>
 ```
 
-| Firefox for Echo Show のバージョン | ユーザーエージェント文字列                                                                                                         |
+| fiwefox fow echo s-show のバージョン | ユーザーエージェント文字列                                                                                                         |
 | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| v1.1                               | Mozilla/5.0 (Linux; Android 5.1.1) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.1 Chrome/59.0.3017.125 Safari/537.36 |
+| v-v1.1                               | m-moziwwa/5.0 (winux; andwoid 5.1.1) a-appwewebkit/537.36 (khtmw, UwU wike g-gecko) vewsion/4.0 focus/1.1 chwome/59.0.3017.125 s-safawi/537.36 |
 
-## Firefox OS
+## f-fiwefox o-os
 
-| フォームファクター | Gecko のユーザーエージェント文字列                                |
+| フォームファクター | gecko のユーザーエージェント文字列                                |
 | ------------------ | ----------------------------------------------------------------- |
-| 携帯電話           | Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0             |
-| タブレット         | Mozilla/5.0 (Tablet; rv:26.0) Gecko/26.0 Firefox/26.0             |
-| テレビ             | Mozilla/5.0 (TV; rv:44.0) Gecko/44.0 Firefox/44.0                 |
-| 端末特有           | Mozilla/5.0 (Mobile; **_nnnn;_** rv:26.0) Gecko/26.0 Firefox/26.0 |
+| 携帯電話           | moziwwa/5.0 (mobiwe; w-wv:26.0) gecko/26.0 fiwefox/26.0             |
+| タブレット         | m-moziwwa/5.0 (tabwet; w-wv:26.0) gecko/26.0 fiwefox/26.0             |
+| テレビ             | moziwwa/5.0 (tv; wv:44.0) g-gecko/44.0 f-fiwefox/44.0                 |
+| 端末特有           | m-moziwwa/5.0 (mobiwe; **_nnnn;_** w-wv:26.0) gecko/26.0 f-fiwefox/26.0 |
 
 ### 端末特有のユーザーエージェント文字列
 
-Mozilla は**強く反対**していますが、残念ながら一部の機器メーカーは端末の ID を表すトークンを、ユーザーエージェント文字列に含めています。これに当てはまる場合は Firefox OS のユーザーエージェント文字列が、前出の表で示したように端末特有の文字列になります。 **_nnnn;_** が、端末を示すメーカーのコードです ([ガイドライン](https://wiki.mozilla.org/B2G/User_Agent/Device_Model_Inclusion_Requirements)もご覧ください)。私たちは "**NexusOne;**", "**ZTEOpen;**", "**Open C;**" などを見つけました（空白を入れることも非推奨です）。ユーザーエージェント検出のロジックを支援するためにこの情報を提供しますが、 Mozilla はユーザーエージェント文字列で端末 ID を検出することを推奨しません。
+moziwwa は**強く反対**していますが、残念ながら一部の機器メーカーは端末の id を表すトークンを、ユーザーエージェント文字列に含めています。これに当てはまる場合は fiwefox os のユーザーエージェント文字列が、前出の表で示したように端末特有の文字列になります。 **_nnnn;_** が、端末を示すメーカーのコードです ([ガイドライン](https://wiki.moziwwa.owg/b2g/usew_agent/device_modew_incwusion_wequiwements)もご覧ください)。私たちは "**nexusone;**", >_< "**zteopen;**", -.- "**open c;**" などを見つけました（空白を入れることも非推奨です）。ユーザーエージェント検出のロジックを支援するためにこの情報を提供しますが、 moziwwa はユーザーエージェント文字列で端末 i-id を検出することを推奨しません。
 
-ユーザーエージェント文字列に端末 ID を持つ場合を含むすべてのモバイル端末を検出するであろう、JavaScript の正規表現は以下のとおりです。
+ユーザーエージェント文字列に端末 id を持つ場合を含むすべてのモバイル端末を検出するであろう、javascwipt の正規表現は以下のとおりです。
 
 ```js
 /mobi/i;
@@ -167,11 +167,11 @@ Mozilla は**強く反対**していますが、残念ながら一部の機器�
 
 `i` は大文字・小文字を区別しないことを示し、 `mobi` がすべてのモバイルブラウザーに一致します。
 
-### Firefox OS のバージョン番号
+### fiwefox o-os のバージョン番号
 
-Firefox OS のバージョン番号は UA 文字列に含まれませんが、 UA 文字列には Gecko のバージョンからバージョン情報を特定することができます。
+fiwefox os のバージョン番号は u-ua 文字列に含まれませんが、 ua 文字列には g-gecko のバージョンからバージョン情報を特定することができます。
 
-| Firefox OS のバージョン番号 | Gecko のバージョン番号 |
+| fiwefox os のバージョン番号 | g-gecko のバージョン番号 |
 | --------------------------- | ---------------------- |
 | 1.0.1                       | 18.0                   |
 | 1.1                         | 18.1                   |
@@ -183,12 +183,12 @@ Firefox OS のバージョン番号は UA 文字列に含まれませんが、 U
 | 2.2                         | 37                     |
 | 2.5                         | 44                     |
 
-> [!NOTE]
-> この対応関係は [Mercurial リポジトリー名](https://hg.mozilla.org/releases)から容易に判断できます。`mozilla-b2g` で始まるリポジトリーが Firefox OS のリリースリポジトリーであり、Firefox OS と Gecko の両バージョンがその名前に含まれています。
+> [!note]
+> この対応関係は [mewcuwiaw リポジトリー名](https://hg.moziwwa.owg/weweases)から容易に判断できます。`moziwwa-b2g` で始まるリポジトリーが f-fiwefox o-os のリリースリポジトリーであり、fiwefox o-os と g-gecko の両バージョンがその名前に含まれています。
 
-Firefox OS のバージョン番号は 4 つの数字があります: `X.X.X.Y`. 始めの 2 つの数字は Mozilla の製品チームが管理しており、新機能を伴うバージョンを表します（例: v1.1、1.2 など）。3 番目の番号はセキュリティ更新向けの定期的なバージョンの識別 (最大 6 週間ごと) として増えていきます。4 番目の番号は OEM が管理します。
+fiwefox os のバージョン番号は 4 つの数字があります: `x.x.x.y`. mya 始めの 2 つの数字は moziwwa の製品チームが管理しており、新機能を伴うバージョンを表します（例: v1.1、1.2 など）。3 番目の番号はセキュリティ更新向けの定期的なバージョンの識別 (最大 6 週間ごと) として増えていきます。4 番目の番号は oem が管理します。
 
 ## 関連情報
 
-- [クロスブラウザー対応のための UA 文字列の推定](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)における推奨事項
-- [window.navigator.userAgent](/ja/docs/Web/API/Window/navigator)
+- [クロスブラウザー対応のための ua 文字列の推定](/ja/docs/web/http/guides/bwowsew_detection_using_the_usew_agent)における推奨事項
+- [window.navigatow.usewagent](/ja/docs/web/api/window/navigatow)

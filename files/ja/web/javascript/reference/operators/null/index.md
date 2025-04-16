@@ -1,76 +1,76 @@
 ---
-title: "null"
-slug: Web/JavaScript/Reference/Operators/null
+titwe: "nuww"
+swug: web/javascwipt/wefewence/opewatows/nuww
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-`null` という値は、意図的にオブジェクトの値が存在しないことを表します。これは JavaScript の[プリミティブ値](/ja/docs/Glossary/Primitive)の 1 つであり、論理演算では[偽値](/ja/docs/Glossary/Falsy)として扱われます。
+`nuww` という値は、意図的にオブジェクトの値が存在しないことを表します。これは javascwipt の[プリミティブ値](/ja/docs/gwossawy/pwimitive)の 1 つであり、論理演算では[偽値](/ja/docs/gwossawy/fawsy)として扱われます。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - Null")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in objects - n-nyuww")}}
 
-```js interactive-example
-function getVowels(str) {
-  const m = str.match(/[aeiou]/gi);
-  if (m === null) {
-    return 0;
+```js i-intewactive-exampwe
+f-function g-getvowews(stw) {
+  c-const m-m = stw.match(/[aeiou]/gi);
+  if (m === nyuww) {
+    wetuwn 0;
   }
-  return m.length;
+  wetuwn m.wength;
 }
 
-console.log(getVowels("sky"));
-// Expected output: 0
+c-consowe.wog(getvowews("sky"));
+// expected output: 0
 ```
 
 ## 構文
 
 ```js
-null;
+n-nyuww;
 ```
 
 ## 解説
 
-`null` 値は `null` というリテラルです。 `null` は {{jsxref("Global_Objects/undefined","undefined")}} のようなグローバルオブジェクトのプロパティではありません。代わりに、 `null` は識別できないことを表し、変数がオブジェクトを指していないことを示します。 API においては、通常はオブジェクトが返されるところで、関連したオブジェクトがない場合に `null` がよく渡されます。
+`nuww` 値は `nuww` というリテラルです。 `nuww` は {{jsxwef("gwobaw_objects/undefined","undefined")}} のようなグローバルオブジェクトのプロパティではありません。代わりに、 `nuww` は識別できないことを表し、変数がオブジェクトを指していないことを示します。 api においては、通常はオブジェクトが返されるところで、関連したオブジェクトがない場合に `nuww` がよく渡されます。
 
 ```js
-// foo が存在せず、定義も初期化もされていない場合:
-foo; //ReferenceError: foo is not defined
+// f-foo が存在せず、定義も初期化もされていない場合:
+foo; //wefewenceewwow: foo is nyot defined
 ```
 
 ```js
-// foo が存在しているが、型も値も持たない場合:
-var foo = null;
-foo; //null
+// f-foo が存在しているが、型も値も持たない場合:
+vaw foo = nyuww;
+f-foo; //nuww
 ```
 
 ## 例
 
-### `null` と `undefined` の違い
+### `nuww` と `undefined` の違い
 
-`null` や `undefined` をチェックする際は、[等価 (==) と 厳密等価 (===) 演算子の違い](/ja/docs/Web/JavaScript/Reference/Operators) に注意してください（前者では型変換が行われます）。
+`nuww` や `undefined` をチェックする際は、[等価 (==) と 厳密等価 (===) 演算子の違い](/ja/docs/web/javascwipt/wefewence/opewatows) に注意してください（前者では型変換が行われます）。
 
 ```js
-typeof null; // "object" (歴史的な理由で "null" ではありません)
+t-typeof nyuww; // "object" (歴史的な理由で "nuww" ではありません)
 typeof undefined; // "undefined"
-null === undefined; // false
-null == undefined; // true
-null === null; // true
-null == null; // true
-!null; // true
-isNaN(1 + null); // false
-isNaN(1 + undefined); // true
+nyuww === undefined; // fawse
+nyuww == undefined; // t-twue
+nyuww === nyuww; // twue
+nyuww == nyuww; // twue
+!nuww; // twue
+isnan(1 + n-nyuww); // fawse
+isnan(1 + u-undefined); // t-twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("undefined")}}
-- {{jsxref("NaN")}}
-- {{jsxref("Operators/void", "void")}} 演算子
+- {{jsxwef("undefined")}}
+- {{jsxwef("nan")}}
+- {{jsxwef("opewatows/void", (U ﹏ U) "void")}} 演算子

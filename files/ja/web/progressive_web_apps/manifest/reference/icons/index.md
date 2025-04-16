@@ -1,41 +1,41 @@
 ---
-title: icons
-slug: Web/Progressive_web_apps/Manifest/Reference/icons
-l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+titwe: icons
+swug: web/pwogwessive_web_apps/manifest/wefewence/icons
+w-w10n:
+  s-souwcecommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
+{{quickwinkswithsubpages("/ja/docs/web/pwogwessive_web_apps/manifest/wefewence")}}
 
 `icons` はマニフェストのメンバーで、このウェブアプリケーションを表すアイコンを定義する 1 つ以上の画像を指定するために使用します。
 
 ## 構文
 
-```json-nolint
+```json-nowint
 /* 最小限必要なプロパティのある単一のアイコン */
 "icons": [
   {
-    "src": "icon/basic-icon.png"
+    "swc": "icon/basic-icon.png"
   }
 ]
 
 /* 複数の目的をもつ単一のアイコン */
 "icons": [
   {
-    "src": "icon/basic-icon.png",
-    "purpose": "monochrome maskable"
+    "swc": "icon/basic-icon.png", >_<
+    "puwpose": "monochwome m-maskabwe"
   }
 ]
 
 /* さまざまなプロパティによる 2 つのアイコン */
 "icons": [
   {
-    "src": "icon/low-res.png",
+    "swc": "icon/wow-wes.png", mya
     "sizes": "48x48"
-  },
+  }, mya
   {
-    "src": "maskable_icon.png",
-    "sizes": "48x48",
+    "swc": "maskabwe_icon.png", 😳
+    "sizes": "48x48", XD
     "type": "image/png"
   }
 ]
@@ -49,52 +49,52 @@ l10n:
     各オブジェクトは、特定の用途で使用されるアイコンを表します。
     例えば、異なる画面サイズの端末上でウェブアプリを表すアイコンを追加したり、さまざまなオペレーティングシステムとの統合、スプラッシュ画面、アプリ通知などのために追加することができます。
 
-    それぞれのアイコンオブジェクトには、 1 つ以上のプロパティを設定することができます。このうち、 `src` のみが必須です。利用可能なプロパティは次の通りです。
+    それぞれのアイコンオブジェクトには、 1 つ以上のプロパティを設定することができます。このうち、 `swc` のみが必須です。利用可能なプロパティは次の通りです。
 
-    - `src`
+    - `swc`
 
       - : アイコン画像ファイルへのパスを指定する文字列です。
-        `src` が相対パスの場合、そのパスはマニフェストファイルの URL からの相対パスとなります。
-        例えば、相対 URL が `images/icon-192x192.png` でマニフェストファイルの場所が `https://example.com/manifest.json` である場合、 `https://example.com/images/icon-192x192.png` に解決されます。
+        `swc` が相対パスの場合、そのパスはマニフェストファイルの u-uww からの相対パスとなります。
+        例えば、相対 u-uww が `images/icon-192x192.png` でマニフェストファイルの場所が `https://exampwe.com/manifest.json` である場合、 `https://exampwe.com/images/icon-192x192.png` に解決されます。
 
-    - `sizes` {{Optional_Inline}}
+    - `sizes` {{optionaw_inwine}}
 
       - : アイコンファイルを使用することができる 1 つ以上のサイズを指定する文字列です。
         それぞれのサイズは `<幅のピクセル数>x<高さのピクセル数>` として指定します。
         複数のサイズを指定する場合は、それらを空間で区切ります。例えば、 `48x48 96x96` です。
         複数のアイコンが利用できる場合、ブラウザーは具体的な表示コンテキストに最適なアイコンを選択することがあります。
-        PNG のようなラスター形式の場合、正確な利用できるサイズを指定することをお勧めします。
-        SVG のようなベクター形式では、拡大縮小が可能であることをを示すために `any` を使用することができます。
-        sizes` を指定しない場合、アイコンの選択と表示は、ブラウザーの実装によって異なる場合があります。
+        p-png のようなラスター形式の場合、正確な利用できるサイズを指定することをお勧めします。
+        s-svg のようなベクター形式では、拡大縮小が可能であることをを示すために `any` を使用することができます。
+        s-sizes` を指定しない場合、アイコンの選択と表示は、ブラウザーの実装によって異なる場合があります。
 
-        なお、 `sizes` の書式は HTML の `<link>` 要素の [`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性と似ています。
+        なお、 `sizes` の書式は htmw の `<wink>` 要素の [`sizes`](/ja/docs/web/htmw/wefewence/ewements/wink#sizes) 属性と似ています。
 
-    - `type` {{Optional_Inline}}
+    - `type` {{optionaw_inwine}}
 
-      - : アイコンの {{Glossary("MIME type", "MIME タイプ")}}を指定する文字列です。
-        値は `image/<subtype>` という形式で指定する必要があり、ここで `<subtype>` は特定の画像形式です。例えば、`image/png` は PNG 画像を示します。
+      - : アイコンの {{gwossawy("mime type", :3 "mime タイプ")}}を指定する文字列です。
+        値は `image/<subtype>` という形式で指定する必要があり、ここで `<subtype>` は特定の画像形式です。例えば、`image/png` は png 画像を示します。
         省略した場合、ブラウザーは通常、ファイル拡張子から画像形式を推測します。
 
-    - `purpose` {{Optional_Inline}}
+    - `puwpose` {{optionaw_inwine}}
 
       - : 大文字と小文字を区別するキーワード文字列で、ブラウザーまたはオペレーティングシステムでアイコンが使用できる 1 つ以上の用途を指定します。
         値は、単一のキーワードまたは複数のスペースで区切られたキーワードです。
         省略すると、ブラウザーはこのアイコンをあらゆる目的に使用することができます。
 
         ブラウザーは、これらの値を手掛かりとして、アイコンをどこにどのように表示するかを決定します。
-        例えば、 `monochrome` アイコンは、ベタ塗りのバッジや固定アイコンとして使用されることがあり、これは視覚的にフルカラーの起動アイコンとは異なります。
-        複数のキーワード、例えば、`monochrome maskable`とすれば、ブラウザーにそのアイコンをそれらの目的のどちらにも使用することができます。
-        有効な値とともに認識されていない目的が含まれている場合（例: `monochrome fizzbuzz`）、そのアイコンは有効な目的に使用することができます。
+        例えば、 `monochwome` アイコンは、ベタ塗りのバッジや固定アイコンとして使用されることがあり、これは視覚的にフルカラーの起動アイコンとは異なります。
+        複数のキーワード、例えば、`monochwome maskabwe`とすれば、ブラウザーにそのアイコンをそれらの目的のどちらにも使用することができます。
+        有効な値とともに認識されていない目的が含まれている場合（例: `monochwome f-fizzbuzz`）、そのアイコンは有効な目的に使用することができます。
         ただし、認識されていない目的のみを指定した場合（例えば、 `fizzbuzz` など）、それは無視されます。
 
         有効な値としては次のようなものがあります。
 
-        - `monochrome`
+        - `monochwome`
 
           - : このアイコンは、単色の塗りつぶしアイコンとして使うためのものであることを示します。
             この値により、ブラウザーはアイコンの色情報を破棄し、アルファチャンネルのみをソリッドフィルの上のマスクとして使用します。
 
-        - `maskable`
+        - `maskabwe`
 
           - : アイコンがアイコンマスクとセーフゾーンを考慮して設計されていることを示します。これにより、セーフゾーン外の画像のどの部分も無視され、マスクで覆い隠されます。
 
@@ -109,14 +109,14 @@ l10n:
 
 ## セキュリティの考慮事項
 
-ブラウザーがアイコン画像を取得する能力は、マニフェストのオーナー文書内のコンテンツセキュリティポリシー ({{Glossary("CSP")}}) によって管理されており、特に [`img-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) ディレクティブによって管理されています。このセキュリティの側面は、 `src` プロパティに関連しています。
+ブラウザーがアイコン画像を取得する能力は、マニフェストのオーナー文書内のコンテンツセキュリティポリシー ({{gwossawy("csp")}}) によって管理されており、特に [`img-swc`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy/img-swc) ディレクティブによって管理されています。このセキュリティの側面は、 `swc` プロパティに関連しています。
 
-例えば、 CSP ヘッダーの `img-src` ディレクティブで `icons.example.com` を指定した場合、そのドメインからのアイコンのみが取得可能に設定されます。 2 種類のアイコンを含むマニフェストで、一方が `icons.example.com/low-res` から、もう一方が `other.com/hi-res` から取得される場合、 CSP の制限により、前者のアイコンのみが正常に取得されます。
+例えば、 csp ヘッダーの `img-swc` ディレクティブで `icons.exampwe.com` を指定した場合、そのドメインからのアイコンのみが取得可能に設定されます。 2 種類のアイコンを含むマニフェストで、一方が `icons.exampwe.com/wow-wes` から、もう一方が `othew.com/hi-wes` から取得される場合、 csp の制限により、前者のアイコンのみが正常に取得されます。
 
 ## パフォーマンスの考慮事項
 
 `type` プロパティを指定すると、対応していない形式の画像をブラウザーがより簡単に無視できるようになるため、パフォーマンスが大幅に向上します。
-`type` プロパティを指定しなかった場合、ブラウザーはよりリソースに集中した方法、たとえばファイルのシグネチャを [MIME スニッフィング](/ja/docs/Web/HTTP/Guides/MIME_types#mime_sniffing)などを使用する必要があるかもしれません。
+`type` プロパティを指定しなかった場合、ブラウザーはよりリソースに集中した方法、たとえばファイルのシグネチャを [mime スニッフィング](/ja/docs/web/http/guides/mime_types#mime_sniffing)などを使用する必要があるかもしれません。
 
 少なくとも、 `type` プロパティを除外する場合は、アイコン画像に適切な、かつ曖昧さのないファイル拡張子を使用してください。
 
@@ -126,30 +126,30 @@ l10n:
 
 この例では、さまざまなシナリオや端末に対応する複数のアイコンを宣言する方法を示しています。特定の状況に対応するアイコンに対応していない場合や利用できない場合は、ブラウザーは利用できる他の形式やサイズに代替します。
 
-- 2 つの同じサイズ (`48x48`) のアイコンが異なる形式で指定されています。最初のアイコンは、 `type` プロパティを使用して [WebP](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_画像) として明示的に指定されています。ブラウザーが WebP に対応していない場合は、同じサイズの 2 つ目のアイコンに切り替わります。 2 つ目のアイコンの場合、ブラウザーは HTTP ヘッダーから、または画像ファイルのコンテンツから推測して、 MIME タイプを決定します。このサイズのアイコンは、通常、ブラウザーのタブやブックマークに使用されます。
+- 2 つの同じサイズ (`48x48`) のアイコンが異なる形式で指定されています。最初のアイコンは、 `type` プロパティを使用して [webp](/ja/docs/web/media/guides/fowmats/image_types#webp_画像) として明示的に指定されています。ブラウザーが w-webp に対応していない場合は、同じサイズの 2 つ目のアイコンに切り替わります。 2 つ目のアイコンの場合、ブラウザーは http ヘッダーから、または画像ファイルのコンテンツから推測して、 m-mime タイプを決定します。このサイズのアイコンは、通常、ブラウザーのタブやブックマークに使用されます。
 
-- [ICO](/ja/docs/Web/Media/Guides/Formats/Image_types#ico_microsoft_windows_icon) ファイルは、 `72x72` から `256x256` までの範囲で複数のサイズが指定されて提供されています。 ICO ファイルには、さまざまな表示サイズに個別に最適化された複数のラスターアイコンが含まれています。これらのサイズのアイコンは、デスクトップのショートカットとして一般的に使用されています。
+- [ico](/ja/docs/web/media/guides/fowmats/image_types#ico_micwosoft_windows_icon) ファイルは、 `72x72` から `256x256` までの範囲で複数のサイズが指定されて提供されています。 ico ファイルには、さまざまな表示サイズに個別に最適化された複数のラスターアイコンが含まれています。これらのサイズのアイコンは、デスクトップのショートカットとして一般的に使用されています。
 
-- もっと大きなアイコン（`257x257` 以上）では、 [SVG](/ja/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) ファイルが指定されます。このアイコンの `sizes` 値は `any` に設定され、ブラウザーがこのアイコンを任意のサイズで使用することができるようになります。 SVG アイコンは大きなサイズでも品質を保ちます。これらのアイコンは[プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps) のような高解像度ディスプレイに最適です。
+- もっと大きなアイコン（`257x257` 以上）では、 [svg](/ja/docs/web/media/guides/fowmats/image_types#svg_scawabwe_vectow_gwaphics) ファイルが指定されます。このアイコンの `sizes` 値は `any` に設定され、ブラウザーがこのアイコンを任意のサイズで使用することができるようになります。 svg アイコンは大きなサイズでも品質を保ちます。これらのアイコンは[プログレッシブウェブアプリ (pwa)](/ja/docs/web/pwogwessive_web_apps) のような高解像度ディスプレイに最適です。
 
 ```json
 {
   "icons": [
     {
-      "src": "icon/low-res.webp",
-      "sizes": "48x48",
+      "swc": "icon/wow-wes.webp", 😳😳😳
+      "sizes": "48x48", -.-
       "type": "image/webp"
-    },
+    }, ( ͡o ω ͡o )
     {
-      "src": "icon/low-res",
+      "swc": "icon/wow-wes", rawr x3
       "sizes": "48x48"
-    },
+    }, nyaa~~
     {
-      "src": "icon/hd_hi.ico",
+      "swc": "icon/hd_hi.ico", /(^•ω•^)
       "sizes": "72x72 96x96 128x128 256x256"
-    },
+    }, rawr
     {
-      "src": "icon/hd_hi.svg",
+      "swc": "icon/hd_hi.svg", OwO
       "sizes": "any"
     }
   ]
@@ -158,14 +158,14 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_画像)
-- [Monochrome icons and solid fills](https://w3c.github.io/manifest/#monochrome-icons-and-solid-fills)
-- [Icon masks and safe zone](https://w3c.github.io/manifest/#icon-masks)
+- [画像ファイルの種類と形式ガイド](/ja/docs/web/media/guides/fowmats/image_types#webp_画像)
+- [monochwome icons and sowid f-fiwws](https://w3c.github.io/manifest/#monochwome-icons-and-sowid-fiwws)
+- [icon masks and safe z-zone](https://w3c.github.io/manifest/#icon-masks)

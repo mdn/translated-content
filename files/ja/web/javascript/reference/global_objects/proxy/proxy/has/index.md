@@ -1,47 +1,47 @@
 ---
-title: handler.has()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: handwew.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/has
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.has()`** は、オブジェクトの `[[HasProperty]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/in", "in")}} 演算子などの操作で使用されます。
+**`handwew.has()`** は、オブジェクトの `[[haspwopewty]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)に対するトラップです。{{jsxwef("opewatows/in", >_< "in")}} 演算子などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: h-handwew.has()", (⑅˘꒳˘) "tawwew")}}
 
-```js interactive-example
-const handler1 = {
-  has(target, key) {
+```js i-intewactive-exampwe
+c-const h-handwew1 = {
+  has(tawget, /(^•ω•^) k-key) {
     if (key[0] === "_") {
-      return false;
+      wetuwn fawse;
     }
-    return key in target;
-  },
+    wetuwn key in tawget;
+  }, rawr x3
 };
 
-const monster1 = {
-  _secret: "easily scared",
-  eyeCount: 4,
+c-const monstew1 = {
+  _secwet: "easiwy scawed", (U ﹏ U)
+  eyecount: 4, (U ﹏ U)
 };
 
-const proxy1 = new Proxy(monster1, handler1);
-console.log("eyeCount" in proxy1);
-// Expected output: true
+const p-pwoxy1 = nyew pwoxy(monstew1, (⑅˘꒳˘) handwew1);
+consowe.wog("eyecount" i-in pwoxy1);
+// expected output: twue
 
-console.log("_secret" in proxy1);
-// Expected output: false
+consowe.wog("_secwet" in p-pwoxy1);
+// expected output: fawse
 
-console.log("_secret" in monster1);
-// Expected output: true
+c-consowe.wog("_secwet" i-in monstew1);
+// expected output: twue
 ```
 
 ## 構文
 
-```js-nolint
-new Proxy(target, {
-  has(target, prop) {
+```js-nowint
+nyew pwoxy(tawget, òωó {
+  h-has(tawget, ʘwʘ pwop) {
   }
 });
 ```
@@ -50,9 +50,9 @@ new Proxy(target, {
 
 次の引数は `has()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-- `target`
+- `tawget`
   - : ターゲットオブジェクトです。
-- `prop`
+- `pwop`
   - : 存在を確認するプロパティ名です。
 
 ### 返値
@@ -65,15 +65,15 @@ new Proxy(target, {
 
 このトラップは下記の操作に介入できます。
 
-- [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子: `foo in proxy`
-- [`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) チェック: `with(proxy) { (foo); }`
-- {{jsxref("Reflect.has()")}}
+- [`in`](/ja/docs/web/javascwipt/wefewence/opewatows/in) 演算子: `foo in pwoxy`
+- [`with`](/ja/docs/web/javascwipt/wefewence/statements/with) チェック: `with(pwoxy) { (foo); }`
+- {{jsxwef("wefwect.has()")}}
 
-他にも、`[[HasProperty]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
+他にも、`[[haspwopewty]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+以下の不変条件に違反している場合、プロキシーは {{jsxwef("typeewwow")}} を発生します。
 
 - プロパティがターゲットオブジェクトの設定不可の独自プロパティとして存在する場合、存在しないとして報告されてはいけません。
 - プロパティがターゲットオブジェクトの独自プロパティとして存在し、そのターゲットオブジェクトが拡張不可の場合、存在しないとして報告されてはいけません。
@@ -82,50 +82,50 @@ new Proxy(target, {
 
 ### in 演算子のトラップ
 
-次のコードでは {{jsxref("Operators/in", "in")}} 演算子をトラップします。
+次のコードでは {{jsxwef("opewatows/in", /(^•ω•^) "in")}} 演算子をトラップします。
 
 ```js
-const p = new Proxy(
-  {},
+const p = n-new pwoxy(
+  {}, ʘwʘ
   {
-    has(target, prop) {
-      console.log(`called: ${prop}`);
-      return true;
-    },
+    has(tawget, σωσ p-pwop) {
+      c-consowe.wog(`cawwed: ${pwop}`);
+      w-wetuwn t-twue;
+    }, OwO
   },
 );
 
-console.log("a" in p);
-// "called: a"
-// true
+consowe.wog("a" in p);
+// "cawwed: a-a"
+// twue
 ```
 
 次のコードでは不変条件に違反します。
 
-```js example-bad
-const obj = { a: 10 };
-Object.preventExtensions(obj);
+```js exampwe-bad
+c-const obj = { a: 10 };
+object.pweventextensions(obj);
 
-const p = new Proxy(obj, {
-  has(target, prop) {
-    return false;
-  },
+const p = nyew pwoxy(obj, 😳😳😳 {
+  has(tawget, 😳😳😳 pwop) {
+    w-wetuwn fawse;
+  }, o.O
 });
 
-"a" in p; // TypeError is thrown
+"a" in p-p; // typeewwow i-is thwown
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/in", "in")}} 演算子
-- {{jsxref("Reflect.has()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("opewatows/in", ( ͡o ω ͡o ) "in")}} 演算子
+- {{jsxwef("wefwect.has()")}}

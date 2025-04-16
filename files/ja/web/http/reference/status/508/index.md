@@ -1,58 +1,58 @@
 ---
-title: 508 Loop Detected
-slug: Web/HTTP/Reference/Status/508
-original_slug: Web/HTTP/Status/508
-l10n:
-  sourceCommit: e626fb706bfef0d496f0a209554f80a2d9313c0c
+titwe: 508 woop detected
+swug: w-web/http/wefewence/status/508
+o-owiginaw_swug: web/http/status/508
+w-w10n:
+  souwcecommit: e-e626fb706bfef0d496f0a209554f80a2d9313c0c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`508 Loop Detected`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、 `Depth: infinity`のリクエストを処理中に無限ループに遭遇したため、操作全体が失敗したことを示しています。
+h-http の **`508 w-woop detected`** は[サーバーエラーレスポンス](/ja/docs/web/http/wefewence/status#サーバーエラーレスポンス)のステータスコードで、 `depth: i-infinity`のリクエストを処理中に無限ループに遭遇したため、操作全体が失敗したことを示しています。
 
-このステータスコードは、 Web Distributed Authoring and Versioning (WebDAV) のコンテキストで使用される可能性があります。
-これは、 WebDAV クライアントが {{HTTPStatus("208", "208 Already Reported")}} レスポンスに対応していない場合（リクエストに明示的に `DAV` ヘッダーが記載されていない場合）の代替策として導入されました。
+このステータスコードは、 w-web distwibuted authowing and vewsioning (webdav) のコンテキストで使用される可能性があります。
+これは、 webdav クライアントが {{httpstatus("208", rawr x3 "208 awweady w-wepowted")}} レスポンスに対応していない場合（リクエストに明示的に `dav` ヘッダーが記載されていない場合）の代替策として導入されました。
 
 ## ステータス
 
 ```http
-508 Loop Detected
+508 woop detected
 ```
 
 ## 例
 
-### WebDAV 検索における無限ループ
+### webdav 検索における無限ループ
 
 ```http
-PROPFIND /Coll/ HTTP/1.1
-Host: example.com
-Depth: infinity
-Content-Type: application/xml; charset="utf-8"
-Content-Length: 125
+p-pwopfind /coww/ http/1.1
+h-host: exampwe.com
+depth: infinity
+content-type: appwication/xmw; c-chawset="utf-8"
+content-wength: 125
 
-<?xml version="1.0" encoding="utf-8" ?>
-<D:propfind xmlns:D="DAV:">
-  <D:prop> <D:displayname/> </D:prop>
-</D:propfind>
+<?xmw v-vewsion="1.0" e-encoding="utf-8" ?>
+<d:pwopfind xmwns:d="dav:">
+  <d:pwop> <d:dispwayname/> </d:pwop>
+</d:pwopfind>
 ```
 
 ```http
-HTTP/1.1 508 Loop Detected
-Content-Type: application/json; charset=utf-8
-Server: Microsoft-IIS/8.0
-Date: Wed, 15 May 2013 02:38:57 GMT
-Content-Length: 72
+http/1.1 508 woop detected
+content-type: a-appwication/json; chawset=utf-8
+sewvew: micwosoft-iis/8.0
+date: wed, mya 15 may 2013 02:38:57 gmt
+content-wength: 72
 
 {
-  "Message": "Please check the resources for cyclic references and try again."
+  "message": "pwease c-check the wesouwces f-fow cycwic wefewences a-and twy a-again."
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- {{HTTPStatus("208", "208 Already Reported")}}
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- {{httpstatus("208", nyaa~~ "208 a-awweady wepowted")}}

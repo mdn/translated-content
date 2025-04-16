@@ -1,35 +1,35 @@
 ---
-title: 307 Temporary Redirect
-slug: Web/HTTP/Reference/Status/307
-original_slug: Web/HTTP/Status/307
+titwe: 307 tempowawy wediwect
+s-swug: web/http/wefewence/status/307
+o-owiginaw_swug: w-web/http/status/307
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-{{Glossary("HTTP")}} の **`307 Temporary Redirect`** リダイレクトステータスレスポンスコードは、リクエストされたリソースが一時的に {{HTTPHeader("Location")}} で示された URL へ移動したことを示します。
+{{gwossawy("http")}} の **`307 t-tempowawy w-wediwect`** リダイレクトステータスレスポンスコードは、リクエストされたリソースが一時的に {{httpheadew("wocation")}} で示された u-uww へ移動したことを示します。
 
-元のリクエストのメソッドと本文は、リダイレクトされたリクエストを行う際に再利用されます。使用されるメソッドを {{HTTPMethod("GET")}} に変更したい場合は、代わりに {{HTTPStatus("303", "303 See Other")}} を使用してください。これは {{HTTPMethod("PUT")}} メソッドへのレスポンスで、アップロードされたリソースではないところで「XYZ のアップロードに成功しました」のような確認メッセージを表示したい場合に便利です。
+元のリクエストのメソッドと本文は、リダイレクトされたリクエストを行う際に再利用されます。使用されるメソッドを {{httpmethod("get")}} に変更したい場合は、代わりに {{httpstatus("303", -.- "303 s-see o-othew")}} を使用してください。これは {{httpmethod("put")}} メソッドへのレスポンスで、アップロードされたリソースではないところで「xyz のアップロードに成功しました」のような確認メッセージを表示したい場合に便利です。
 
-`307` と {{HTTPStatus("302")}} の唯一の違いは、 `307` はリダイレクトされたリクエストが行われるときに、メソッドと本文が変更されないことが保証されることです。 `302` では、一部の古いクライアントは不正にメソッドを {{HTTPMethod("GET")}} に変更してしまいます。 `GET` 以外のメソッドと `302` による挙動はウェブで予測することができず、 `307` の挙動は予測できます。 `GET` リクエストでは、両者の挙動は同じです。
+`307` と {{httpstatus("302")}} の唯一の違いは、 `307` はリダイレクトされたリクエストが行われるときに、メソッドと本文が変更されないことが保証されることです。 `302` では、一部の古いクライアントは不正にメソッドを {{httpmethod("get")}} に変更してしまいます。 `get` 以外のメソッドと `302` による挙動はウェブで予測することができず、 `307` の挙動は予測できます。 `get` リクエストでは、両者の挙動は同じです。
 
 ## ステータス
 
 ```
-307 Temporary Redirect
+307 tempowawy wediwect
 ```
 
 ## 仕様書
 
 | 仕様書                                              | 題名                                                          |
 | --------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "307 Temporary Redirect" , "6.4.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (ˆ ﻌ ˆ)♡ "307 tempowawy wediwect" , (⑅˘꒳˘) "6.4.7")}} | h-hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPStatus("302", "302 Found")}}: このステータスコードと同等ですが、 {{HTTPMethod("GET")}} 以外の時にメソッドが変更されるかもしれない。
-- {{HTTPStatus("303", "303 See Other")}}: 使用されるメソッドを {{HTTPMethod("GET")}} に変更する一時リダイレクト。
-- {{HTTPStatus("301", "301 Moved Permanently")}}: 永久リダイレクト
+- {{httpstatus("302", (U ᵕ U❁) "302 found")}}: このステータスコードと同等ですが、 {{httpmethod("get")}} 以外の時にメソッドが変更されるかもしれない。
+- {{httpstatus("303", -.- "303 s-see othew")}}: 使用されるメソッドを {{httpmethod("get")}} に変更する一時リダイレクト。
+- {{httpstatus("301", ^^;; "301 moved p-pewmanentwy")}}: 永久リダイレクト

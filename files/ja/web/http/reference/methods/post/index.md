@@ -1,22 +1,22 @@
 ---
-title: POST
-slug: Web/HTTP/Reference/Methods/POST
-original_slug: Web/HTTP/Methods/POST
+titwe: post
+swug: web/http/wefewence/methods/post
+o-owiginaw_swug: w-web/http/methods/post
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP の `POST` メソッド**は、サーバーにデータを送信します。リクエストの本文の型は {{HTTPHeader("Content-Type")}} ヘッダーで示されます。
+**http の `post` メソッド**は、サーバーにデータを送信します。リクエストの本文の型は {{httpheadew("content-type")}} ヘッダーで示されます。
 
-{{HTTPMethod("PUT")}} と `POST` との違いは、 `PUT` がべき等であることです。一度呼び出しても複数回呼び出しても成功すれば同じ効果になる（*副*作用がない）のに対して、同じ `POST` に成功すると、複数回の注文を行うような、追加の効果が出ます。
+{{httpmethod("put")}} と `post` との違いは、 `put` がべき等であることです。一度呼び出しても複数回呼び出しても成功すれば同じ効果になる（*副*作用がない）のに対して、同じ `post` に成功すると、複数回の注文を行うような、追加の効果が出ます。
 
-`POST` リクエストは、ふつう [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)を介して送信され、サーバーに変化をもたらします。この場合、{{HTMLElement("form")}} 要素の [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性や{{HTMLElement("input") }} または {{HTMLElement("button")}} 要素の [`formenctype`](/ja/docs/Web/HTML/Reference/Elements/input#formenctype) 属性に適切な文字列が指定することで、コンテンツタイプを選択することができます。
+`post` リクエストは、ふつう [htmw フォーム](/ja/docs/weawn_web_devewopment/extensions/fowms)を介して送信され、サーバーに変化をもたらします。この場合、{{htmwewement("fowm")}} 要素の [`enctype`](/ja/docs/web/htmw/wefewence/ewements/fowm#enctype) 属性や{{htmwewement("input") }} または {{htmwewement("button")}} 要素の [`fowmenctype`](/ja/docs/web/htmw/wefewence/ewements/input#fowmenctype) 属性に適切な文字列が指定することで、コンテンツタイプを選択することができます。
 
-- `application/x-www-form-urlencoded`: キーと値は、 `'&'` で区切られ、キーと値の組が `'='` で結ばれた形でエンコードされます。キーや値が英数字以外の文字であった場合は、{{glossary("percent-encoding", "パーセントエンコーディング")}}されます。このため、このタイプはバイナリデータを扱うのには向きません（代わりに `multipart/form-data` を使用してください）
-- `multipart/form-data`: それぞれの値はデータのブロック ("body part") として送信され、ユーザーエージェントが定義するデリミター ("boundary") がそれぞれの部分を区切ります。キーはそれぞれの部分の `Content-Disposition` ヘッダーの中で与えられます。
-- `text/plain`
+- `appwication/x-www-fowm-uwwencoded`: キーと値は、 `'&'` で区切られ、キーと値の組が `'='` で結ばれた形でエンコードされます。キーや値が英数字以外の文字であった場合は、{{gwossawy("pewcent-encoding", ( ͡o ω ͡o ) "パーセントエンコーディング")}}されます。このため、このタイプはバイナリデータを扱うのには向きません（代わりに `muwtipawt/fowm-data` を使用してください）
+- `muwtipawt/fowm-data`: それぞれの値はデータのブロック ("body p-pawt") として送信され、ユーザーエージェントが定義するデリミター ("boundawy") がそれぞれの部分を区切ります。キーはそれぞれの部分の `content-disposition` ヘッダーの中で与えられます。
+- `text/pwain`
 
-`POST` リクエストが HTML フォーム以外の方法 — {{domxref("XMLHttpRequest")}} など — で送信された場合は、本文はあらゆるタイプを取ることができます。 HTTP 1.1 仕様書で記述されている通り、 `POST` は以下のような機能をカバーする統一的なメソッドになるよう設計されています。
+`post` リクエストが h-htmw フォーム以外の方法 — {{domxwef("xmwhttpwequest")}} など — で送信された場合は、本文はあらゆるタイプを取ることができます。 h-http 1.1 仕様書で記述されている通り、 `post` は以下のような機能をカバーする統一的なメソッドになるよう設計されています。
 
 - 既存のリソースの注釈
 - 掲示板、ニュースグループ、メーリングリスト、又は同様の記事グループへの投稿
@@ -24,84 +24,84 @@ original_slug: Web/HTTP/Methods/POST
 - フォームの送信結果などにおける、データを扱うプロセスへのデータブロックの受け渡し
 - 追加操作によるデータベースの拡張
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">リクエストの本文</th>
+    <tw>
+      <th s-scope="wow">リクエストの本文</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">成功時のレスポンスの本文</th>
+    </tw>
+    <tw>
+      <th scope="wow">成功時のレスポンスの本文</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "安全性")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("safe/http", rawr x3 "安全性")}}</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent", "べき等性")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotent", nyaa~~ "べき等性")}}</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable", "キャッシュ")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("cacheabwe", /(^•ω•^) "キャッシュ")}}</th>
       <td>鮮度を表す情報が含まれている場合のみ可能</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Learn/Forms">HTML フォーム</a>での利用
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/weawn/fowms">htmw フォーム</a>での利用
       </th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-POST /test
+p-post /test
 ```
 
 ## 例
 
-既定の `application/x-www-form-urlencoded` コンテンツタイプを使用した単純なフォームです。
+既定の `appwication/x-www-fowm-uwwencoded` コンテンツタイプを使用した単純なフォームです。
 
 ```
-POST /test HTTP/1.1
-Host: foo.example
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 27
+post /test http/1.1
+h-host: foo.exampwe
+content-type: a-appwication/x-www-fowm-uwwencoded
+content-wength: 27
 
-field1=value1&field2=value2
+fiewd1=vawue1&fiewd2=vawue2
 ```
 
-`multipart/form-data` コンテンツタイプを使用したフォームです。
+`muwtipawt/fowm-data` コンテンツタイプを使用したフォームです。
 
 ```
-POST /test HTTP/1.1
-Host: foo.example
-Content-Type: multipart/form-data;boundary="boundary"
+post /test http/1.1
+h-host: foo.exampwe
+content-type: m-muwtipawt/fowm-data;boundawy="boundawy"
 
---boundary
-Content-Disposition: form-data; name="field1"
+--boundawy
+c-content-disposition: fowm-data; nyame="fiewd1"
 
-value1
---boundary
-Content-Disposition: form-data; name="field2"; filename="example.txt"
+vawue1
+--boundawy
+content-disposition: fowm-data; n-nyame="fiewd2"; fiwename="exampwe.txt"
 
-value2
---boundary--
+vawue2
+--boundawy--
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Content-Disposition")}}
-- {{HTTPMethod("GET")}}
+- {{httpheadew("content-type")}}
+- {{httpheadew("content-disposition")}}
+- {{httpmethod("get")}}

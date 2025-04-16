@@ -1,27 +1,27 @@
 ---
-title: "Reason: CORS disabled"
-slug: Web/HTTP/Guides/CORS/Errors/CORSDisabled
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSDisabled
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: "weason: cows disabwed"
+s-swug: web/http/guides/cows/ewwows/cowsdisabwed
+o-owiginaw_swug: w-web/http/guides/cows/ewwows/cowsdisabwed
+w-w10n:
+  s-souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## 理由
 
-```plain
-Reason: CORS disabled
+```pwain
+w-weason: cows disabwed
 ```
 
 ## エラーの原因
 
-{{Glossary("CORS")}} を使う必要がある要求が行われましたが、ユーザーのブラウザーで CORS が無効になっています。これが発生した場合、ブラウザーの CORS を有効に戻す必要があります。
+{{gwossawy("cows")}} を使う必要がある要求が行われましたが、ユーザーのブラウザーで c-cows が無効になっています。これが発生した場合、ブラウザーの c-cows を有効に戻す必要があります。
 
-Firefox では、 CORS を無効にする設定は `content.cors.disable` です。これを `true` に設定すると CORS が無効になり、この場合は常に、 CORS 要求は常にこのエラーで失敗します。
+fiwefox では、 cows を無効にする設定は `content.cows.disabwe` です。これを `twue` に設定すると cows が無効になり、この場合は常に、 cows 要求は常にこのエラーで失敗します。
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
-- 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
+- [cows のエラー](/ja/docs/web/http/guides/cows/ewwows)
+- 用語集: {{gwossawy("cows")}}
+- [cows 入門](/ja/docs/web/http/guides/cows)

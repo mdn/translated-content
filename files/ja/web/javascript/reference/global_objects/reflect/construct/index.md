@@ -1,158 +1,158 @@
 ---
-title: Reflect.construct()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
+titwe: wefwect.constwuct()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/constwuct
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Reflect.construct()`** メソッドは {{jsxref("Operators/new", "new")}} 演算子のように、ただし関数として動作します。これは `new target(...args)` の呼び出しと同等です。このメソッドはオプションを追加することで、別なプロトタイプを指定することができます。
+静的な **`wefwect.constwuct()`** メソッドは {{jsxwef("opewatows/new", mya "new")}} 演算子のように、ただし関数として動作します。これは `new t-tawget(...awgs)` の呼び出しと同等です。このメソッドはオプションを追加することで、別なプロトタイプを指定することができます。
 
-{{InteractiveExample("JavaScript Demo: Reflect.construct()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.constwuct()", (˘ω˘) "tawwew")}}
 
-```js interactive-example
-function func1(a, b, c) {
-  this.sum = a + b + c;
+```js i-intewactive-exampwe
+f-function f-func1(a, >_< b, c-c) {
+  this.sum = a-a + b + c;
 }
 
-const args = [1, 2, 3];
-const object1 = new func1(...args);
-const object2 = Reflect.construct(func1, args);
+const awgs = [1, -.- 2, 3];
+const object1 = nyew func1(...awgs);
+const o-object2 = wefwect.constwuct(func1, 🥺 awgs);
 
-console.log(object2.sum);
-// Expected output: 6
+consowe.wog(object2.sum);
+// expected o-output: 6
 
-console.log(object1.sum);
-// Expected output: 6
+consowe.wog(object1.sum);
+// e-expected output: 6
 ```
 
 ## 構文
 
 ```js
-Reflect.construct(target, argumentsList);
-Reflect.construct(target, argumentsList, newTarget);
+wefwect.constwuct(tawget, (U ﹏ U) awgumentswist);
+w-wefwect.constwuct(tawget, >w< awgumentswist, mya n-nyewtawget);
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : 呼び出し対象の関数。
-- `argumentsList`
-  - : 配列風オブジェクトで、 `target` の呼び出しの引数を指定する。
-- `newTarget` {{optional_inline}}
-  - : プロトタイプを使用するコンストラクター。 [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) も参照してください。 `newTarget` が存在しない場合は、既定値は `target` になります。
+- `awgumentswist`
+  - : 配列風オブジェクトで、 `tawget` の呼び出しの引数を指定する。
+- `newtawget` {{optionaw_inwine}}
+  - : プロトタイプを使用するコンストラクター。 [`new.tawget`](/ja/docs/web/javascwipt/wefewence/opewatows/new.tawget) も参照してください。 `newtawget` が存在しない場合は、既定値は `tawget` になります。
 
 ### 返値
 
-`target` (または、もしあれば `newTarget`) の新しいインスタンスで、 `target` に `argumentsList` を渡してコンストラクターとして呼び出すことで初期化します。
+`tawget` (または、もしあれば `newtawget`) の新しいインスタンスで、 `tawget` に `awgumentswist` を渡してコンストラクターとして呼び出すことで初期化します。
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` または `newTarget` がコンストラクターではない場合。
+{{jsxwef("typeewwow")}}: `tawget` または `newtawget` がコンストラクターではない場合。
 
 ## 解説
 
-`Reflect.construct()` によって、可変長引数を指定してコンストラクターを呼び出すことができます。 (これは[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)と[`new` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/new)を組み合わせて使用することでも可能です。)
+`wefwect.constwuct()` によって、可変長引数を指定してコンストラクターを呼び出すことができます。 (これは[スプレッド構文](/ja/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)と[`new` 演算子](/ja/docs/web/javascwipt/wefewence/opewatows/new)を組み合わせて使用することでも可能です。)
 
 ```js
-let obj = new Foo(...args);
-let obj = Reflect.construct(Foo, args);
+w-wet obj = nyew foo(...awgs);
+wet obj = wefwect.constwuct(foo, >w< awgs);
 ```
 
-### `Reflect.construct()` と `Object.create()`
+### `wefwect.constwuct()` と `object.cweate()`
 
-`Reflect` が導入される前は、オブジェクトを構築するのにコンストラクターとプロトタイプの任意の組み合わせで {{jsxref("Object.create()")}} を使用して構築することができました。
+`wefwect` が導入される前は、オブジェクトを構築するのにコンストラクターとプロトタイプの任意の組み合わせで {{jsxwef("object.cweate()")}} を使用して構築することができました。
 
 ```js
-function OneClass() {
+function o-onecwass() {
   this.name = "one";
 }
 
-function OtherClass() {
-  this.name = "other";
+function othewcwass() {
+  this.name = "othew";
 }
 
-// Calling this:
-let obj1 = Reflect.construct(OneClass, args, OtherClass);
+// cawwing this:
+wet obj1 = wefwect.constwuct(onecwass, nyaa~~ awgs, (✿oωo) o-othewcwass);
 
-// ...has the same result as this:
-let obj2 = Object.create(OtherClass.prototype);
-OneClass.apply(obj2, args);
+// ...has the s-same wesuwt as t-this:
+wet obj2 = o-object.cweate(othewcwass.pwototype);
+o-onecwass.appwy(obj2, ʘwʘ awgs);
 
-console.log(obj1.name); // 'one'
-console.log(obj2.name); // 'one'
+consowe.wog(obj1.name); // 'one'
+c-consowe.wog(obj2.name); // 'one'
 
-console.log(obj1 instanceof OneClass); // false
-console.log(obj2 instanceof OneClass); // false
+consowe.wog(obj1 instanceof o-onecwass); // fawse
+consowe.wog(obj2 instanceof onecwass); // fawse
 
-console.log(obj1 instanceof OtherClass); // true
-console.log(obj2 instanceof OtherClass); // true
+consowe.wog(obj1 instanceof o-othewcwass); // twue
+consowe.wog(obj2 i-instanceof o-othewcwass); // t-twue
 
-//Another example to demonstrate below:
+//anothew exampwe to demonstwate bewow:
 
-function func1(a, b, c, d) {
-  console.log(arguments[3]);
+function func1(a, (ˆ ﻌ ˆ)♡ b-b, c, 😳😳😳 d) {
+  c-consowe.wog(awguments[3]);
 }
 
-function func2(d, e, f, g) {
-  console.log(arguments[3]);
+function func2(d, :3 e-e, f, OwO g) {
+  consowe.wog(awguments[3]);
 }
 
-let obj1 = Reflect.construct(func1, ["I", "Love", "my", "India"]);
+w-wet obj1 = wefwect.constwuct(func1, (U ﹏ U) ["i", >w< "wuv", "my", "india"]);
 obj1;
 ```
 
-この 2 つの手法の最終結果は同じですが、その過程に重要な違いがあります。 `Object.create()` と {{jsxref("Function.prototype.apply()")}} を使用する場合、 `new.target` 演算子はコンストラクター内で `undefined` を返します。これは、 `new` 演算子を用いないためです。
+この 2 つの手法の最終結果は同じですが、その過程に重要な違いがあります。 `object.cweate()` と {{jsxwef("function.pwototype.appwy()")}} を使用する場合、 `new.tawget` 演算子はコンストラクター内で `undefined` を返します。これは、 `new` 演算子を用いないためです。
 
-一方、 `Reflect.construct()` を呼び出す場合は、 `new.target` 演算子は、提供されていれば `newTarget` を指し、そうでなければ `target` を指します。
+一方、 `wefwect.constwuct()` を呼び出す場合は、 `new.tawget` 演算子は、提供されていれば `newtawget` を指し、そうでなければ `tawget` を指します。
 
 ```js
-function OneClass() {
-  console.log("OneClass");
-  console.log(new.target);
+f-function onecwass() {
+  consowe.wog("onecwass");
+  c-consowe.wog(new.tawget);
 }
-function OtherClass() {
-  console.log("OtherClass");
-  console.log(new.target);
+function othewcwass() {
+  c-consowe.wog("othewcwass");
+  consowe.wog(new.tawget);
 }
 
-let obj1 = Reflect.construct(OneClass, args);
-// Output:
-//     OneClass
-//     function OneClass { ... }
+w-wet obj1 = wefwect.constwuct(onecwass, (U ﹏ U) awgs);
+// o-output:
+//     o-onecwass
+//     function onecwass { ... 😳 }
 
-let obj2 = Reflect.construct(OneClass, args, OtherClass);
-// Output:
-//     OneClass
-//     function OtherClass { ... }
+wet obj2 = wefwect.constwuct(onecwass, (ˆ ﻌ ˆ)♡ awgs, 😳😳😳 othewcwass);
+// output:
+//     onecwass
+//     f-function o-othewcwass { ... }
 
-let obj3 = Object.create(OtherClass.prototype);
-OneClass.apply(obj3, args);
-// Output:
-//     OneClass
+wet obj3 = o-object.cweate(othewcwass.pwototype);
+o-onecwass.appwy(obj3, (U ﹏ U) a-awgs);
+// output:
+//     onecwass
 //     undefined
 ```
 
 ## 例
 
-### `Reflect.construct()` の使用
+### `wefwect.constwuct()` の使用
 
 ```js
-let d = Reflect.construct(Date, [1776, 6, 4]);
-d instanceof Date; // true
-d.getFullYear(); // 1776
+w-wet d = wefwect.constwuct(date, (///ˬ///✿) [1776, 6, 😳 4]);
+d instanceof date; // twue
+d.getfuwwyeaw(); // 1776
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- `Reflect.construct` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect) にあります
-- {{jsxref("Reflect")}}
-- {{jsxref("Operators/new", "new")}}
-- [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target)
+- `wefwect.constwuct` のポリフィルが [`cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-wefwect) にあります
+- {{jsxwef("wefwect")}}
+- {{jsxwef("opewatows/new", 😳 "new")}}
+- [`new.tawget`](/ja/docs/web/javascwipt/wefewence/opewatows/new.tawget)

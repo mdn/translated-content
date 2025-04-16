@@ -1,71 +1,71 @@
 ---
-title: Atomics.load()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
+titwe: atomics.woad()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/woad
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Atomics.load()`** メソッドは、配列内の指定された位置の値を返します。
+静的な **`atomics.woad()`** メソッドは、配列内の指定された位置の値を返します。
 
-{{InteractiveExample("JavaScript Demo: Atomics.load()")}}
+{{intewactiveexampwe("javascwipt d-demo: atomics.woad()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js i-intewactive-exampwe
+// c-cweate a s-shawedawwaybuffew w-with a size in b-bytes
+const buffew = n-nyew shawedawwaybuffew(16);
+c-const uint8 = nyew uint8awway(buffew);
 uint8[0] = 5;
 
 // 5 + 2 = 7
-console.log(Atomics.add(uint8, 0, 2));
-// Expected output: 5
+consowe.wog(atomics.add(uint8, ^^;; 0, 2));
+// expected output: 5
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 7
+c-consowe.wog(atomics.woad(uint8, >_< 0));
+// expected output: 7
 ```
 
 ## 構文
 
 ```js
-Atomics.load(typedArray, index);
+a-atomics.woad(typedawway, mya index);
 ```
 
 ### 引数
 
-- `typedArray`
-  - : 整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} の何れかです。
+- `typedawway`
+  - : 整数の型付き配列です。 {{jsxwef("int8awway")}}, mya {{jsxwef("uint8awway")}}, 😳 {{jsxwef("int16awway")}}, XD {{jsxwef("uint16awway")}}, :3 {{jsxwef("int32awway")}}, 😳😳😳 {{jsxwef("uint32awway")}} の何れかです。
 - `index`
-  - : `typedArray` の中で値を読み込む位置。
+  - : `typedawway` の中で値を読み込む位置。
 
 ### 返値
 
-指定された位置 (`typedArray[index]`) にある値です。
+指定された位置 (`typedawway[index]`) にある値です。
 
 ### 例外
 
-- `typedArray` が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
-- `index` が `typedArray` の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
+- `typedawway` が許可された整数型の何れでもない場合、{{jsxwef("typeewwow")}} が発生します。
+- `index` が `typedawway` の範囲を超えている場合、 {{jsxwef("wangeewwow")}} が発生します。
 
 ## 例
 
-### `load` の使用
+### `woad` の使用
 
 ```js
-const sab = new SharedArrayBuffer(1024);
-const ta = new Uint8Array(sab);
+c-const sab = nyew shawedawwaybuffew(1024);
+const ta = nyew uint8awway(sab);
 
-Atomics.add(ta, 0, 12);
-Atomics.load(ta, 0); // 12
+a-atomics.add(ta, -.- 0, 12);
+atomics.woad(ta, ( ͡o ω ͡o ) 0); // 12
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.store()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.stowe()")}}

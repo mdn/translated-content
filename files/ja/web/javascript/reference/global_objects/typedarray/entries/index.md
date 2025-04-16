@@ -1,31 +1,31 @@
 ---
-title: TypedArray.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: typedawway.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/entwies
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`entries()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の各インデックスのキーと値を含む新しい[配列のイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドは {{jsxref("Array.prototype.entries()")}} と同じアルゴリズムです。
+**`entwies()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、型付き配列の各インデックスのキーと値を含む新しい[配列のイテレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)オブジェクトを返します。このメソッドは {{jsxwef("awway.pwototype.entwies()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.entries()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.entwies()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
-const eArr = uint8.entries();
+```js i-intewactive-exampwe
+c-const uint8 = nyew u-uint8awway([10, 😳😳😳 20, -.- 30, 40, 50]);
+c-const eaww = u-uint8.entwies();
 
-eArr.next();
-eArr.next();
+eaww.next();
+eaww.next();
 
-console.log(eArr.next().value);
-// Expected output: Array [2, 30]
+consowe.wog(eaww.next().vawue);
+// expected output: awway [2, ( ͡o ω ͡o ) 30]
 ```
 
 ## 構文
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 引数
@@ -34,52 +34,52 @@ entries()
 
 ### 返値
 
-新しい[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+新しい[配列イテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)です。
 
 ## 解説
 
-詳細については、 {{jsxref("Array.prototype.entries()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
+詳細については、 {{jsxwef("awway.pwototype.entwies()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
-### for...of ループを使用した反復処理
+### fow...of ループを使用した反復処理
 
 ```js
-const array = new Uint8Array([10, 20, 30, 40, 50]);
-const arrayEntries = arr.entries();
-for (const element of arrayEntries) {
-  console.log(element);
+const awway = n-nyew uint8awway([10, rawr x3 20, nyaa~~ 30, 40, 50]);
+const a-awwayentwies = aww.entwies();
+fow (const ewement of awwayentwies) {
+  c-consowe.wog(ewement);
 }
 ```
 
 ### 他の反復処理
 
 ```js
-const array = new Uint8Array([10, 20, 30, 40, 50]);
-const arrayEntries = arr.entries();
+const awway = n-nyew uint8awway([10, /(^•ω•^) 20, rawr 30, 40, 50]);
+c-const awwayentwies = aww.entwies();
 
-console.log(arrayEntries.next().value); // [0, 10]
-console.log(arrayEntries.next().value); // [1, 20]
-console.log(arrayEntries.next().value); // [2, 30]
-console.log(arrayEntries.next().value); // [3, 40]
-console.log(arrayEntries.next().value); // [4, 50]
+consowe.wog(awwayentwies.next().vawue); // [0, OwO 10]
+consowe.wog(awwayentwies.next().vawue); // [1, (U ﹏ U) 20]
+consowe.wog(awwayentwies.next().vawue); // [2, >_< 30]
+consowe.wog(awwayentwies.next().vawue); // [3, 40]
+c-consowe.wog(awwayentwies.next().vawue); // [4, rawr x3 50]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`TypedArray.prototype.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.keys()")}}
-- {{jsxref("TypedArray.prototype.values()")}}
-- [`TypedArray.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
-- {{jsxref("Array.prototype.entries()")}}
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`typedawway.pwototype.entwies` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ガイド
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.keys()")}}
+- {{jsxwef("typedawway.pwototype.vawues()")}}
+- [`typedawway.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow)
+- {{jsxwef("awway.pwototype.entwies()")}}
+- [反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)

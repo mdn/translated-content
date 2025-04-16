@@ -1,57 +1,57 @@
 ---
-title: handler.ownKeys()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: handwew.ownkeys()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/ownkeys
+w-w10n:
+  s-souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.ownKeys()`** メソッドは、オブジェクトの `[[OwnPropertyKeys]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("Object.keys()")}}, {{jsxref("Reflect.ownKeys()")}} などの操作で使用されます。
+**`handwew.ownkeys()`** メソッドは、オブジェクトの `[[ownpwopewtykeys]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxwef("object.keys()")}}, 🥺 {{jsxwef("wefwect.ownkeys()")}} などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.ownKeys()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: h-handwew.ownkeys()", mya "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  _age: 111,
-  [Symbol("secret")]: "I am scared!",
-  eyeCount: 4,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  _age: 111, 🥺
+  [symbow("secwet")]: "i am scawed!", >_<
+  eyecount: 4, >_<
 };
 
-const handler1 = {
-  ownKeys(target) {
-    return Reflect.ownKeys(target);
-  },
+const handwew1 = {
+  o-ownkeys(tawget) {
+    wetuwn wefwect.ownkeys(tawget);
+  }, (⑅˘꒳˘)
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const p-pwoxy1 = nyew pwoxy(monstew1, /(^•ω•^) handwew1);
 
-for (const key of Object.keys(proxy1)) {
-  console.log(key);
-  // Expected output: "_age"
-  // Expected output: "eyeCount"
+fow (const k-key of object.keys(pwoxy1)) {
+  consowe.wog(key);
+  // expected output: "_age"
+  // e-expected output: "eyecount"
 }
 ```
 
 ## 構文
 
-```js-nolint
-new Proxy(target, {
-  ownKeys(target) {
+```js-nowint
+n-nyew pwoxy(tawget, rawr x3 {
+  o-ownkeys(tawget) {
   }
 });
 ```
 
 ### 引数
 
-次の引数は `ownKeys()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
+次の引数は `ownkeys()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-- `target`
+- `tawget`
   - : ターゲットオブジェクトです。
 
 ### 返値
 
-`ownKeys()` メソッドは列挙可能オブジェクトを返さなければなりません。
+`ownkeys()` メソッドは列挙可能オブジェクトを返さなければなりません。
 
 ## 解説
 
@@ -59,77 +59,77 @@ new Proxy(target, {
 
 このトラップは下記の操作に介入できます。
 
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.getOwnPropertySymbols()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Reflect.ownKeys()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("object.getownpwopewtysymbows()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("wefwect.ownkeys()")}}
 
-他にも、`[[OwnPropertyKeys]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
+他にも、`[[ownpwopewtykeys]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+以下の不変条件に違反している場合、プロキシーは {{jsxwef("typeewwow")}} を発生します。
 
-- `ownKeys()` の結果は配列である必要があります。
-- 配列のそれぞれの要素の型は、{{jsxref("String")}} または {{jsxref("Symbol")}} のどちらかです。
+- `ownkeys()` の結果は配列である必要があります。
+- 配列のそれぞれの要素の型は、{{jsxwef("stwing")}} または {{jsxwef("symbow")}} のどちらかです。
 - 結果のリストはターゲットオブジェクトのすべての非設定の独自プロパティのキーを含みます。
 - ターゲットオブジェクトが拡張可能でないなら、結果リストはターゲットオブジェクトのすべての独自プロパティのキーを含まなければなりません。そして、他の値を含みません。
 
 ## 例
 
-### getOwnPropertyNames のトラップ
+### getownpwopewtynames のトラップ
 
-次のコードでは {{jsxref("Object.getOwnPropertyNames()")}} をトラップします。
+次のコードでは {{jsxwef("object.getownpwopewtynames()")}} をトラップします。
 
 ```js
-const p = new Proxy(
-  {},
+const p = nyew pwoxy(
+  {}, (U ﹏ U)
   {
-    ownKeys(target) {
-      console.log("called");
-      return ["a", "b", "c"];
-    },
+    ownkeys(tawget) {
+      consowe.wog("cawwed");
+      w-wetuwn ["a", (U ﹏ U) "b", (⑅˘꒳˘) "c"];
+    }, òωó
   },
 );
 
-console.log(Object.getOwnPropertyNames(p));
-// "called"
-// [ 'a', 'b', 'c' ]
+consowe.wog(object.getownpwopewtynames(p));
+// "cawwed"
+// [ 'a', ʘwʘ 'b', /(^•ω•^) 'c' ]
 ```
 
 次のコードでは不変条件に違反します。
 
-```js example-bad
+```js exampwe-bad
 const obj = {};
-Object.defineProperty(obj, "a", {
-  configurable: false,
-  enumerable: true,
-  value: 10,
+object.definepwopewty(obj, ʘwʘ "a", {
+  c-configuwabwe: fawse, σωσ
+  e-enumewabwe: twue, OwO
+  v-vawue: 10, 😳😳😳
 });
 
-const p = new Proxy(obj, {
-  ownKeys(target) {
-    return [123, 12.5, true, false, undefined, null, {}, []];
-  },
+c-const p = n-nyew pwoxy(obj, 😳😳😳 {
+  ownkeys(tawget) {
+    wetuwn [123, 12.5, o.O t-twue, fawse, ( ͡o ω ͡o ) undefined, nyuww, (U ﹏ U) {}, []];
+  }, (///ˬ///✿)
 });
 
-console.log(Object.getOwnPropertyNames(p));
+c-consowe.wog(object.getownpwopewtynames(p));
 
-// TypeError: proxy [[OwnPropertyKeys]] must return an array
-// with only string and symbol elements
+// typeewwow: pwoxy [[ownpwopewtykeys]] must wetuwn an awway
+// with onwy stwing and symbow ewements
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Reflect.ownKeys()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("wefwect.ownkeys()")}}

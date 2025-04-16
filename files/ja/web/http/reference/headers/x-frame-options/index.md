@@ -1,142 +1,142 @@
 ---
-title: X-Frame-Options
-slug: Web/HTTP/Reference/Headers/X-Frame-Options
-original_slug: Web/HTTP/Headers/X-Frame-Options
-l10n:
-  sourceCommit: 2b44e3e665ceb5f4336089695aa5f617b1baf33c
+titwe: x-fwame-options
+swug: w-web/http/wefewence/headews/x-fwame-options
+o-owiginaw_swug: w-web/http/headews/x-fwame-options
+w-w10n:
+  s-souwcecommit: 2b44e3e665ceb5f4336089695aa5f617b1baf33c
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{httpsidebaw}}{{depwecated_headew}}
 
-> [!WARNING]
-> このヘッダーの代わりに、 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブを {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用してください。
+> [!wawning]
+> このヘッダーの代わりに、 {{httpheadew("content-secuwity-powicy/fwame-ancestows", (⑅˘꒳˘) "fwame-ancestows")}} ディレクティブを {{httpheadew("content-secuwity-powicy")}} ヘッダーで使用してください。
 
-**`X-Frame-Options`** は [HTTP](/ja/docs/Web/HTTP) のレスポンスヘッダーで、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、[クリックジャッキング](/ja/docs/Web/Security/Types_of_attacks#クリックジャッキング)攻撃を防ぐために使用することができます。
+**`x-fwame-options`** は [http](/ja/docs/web/http) のレスポンスヘッダーで、ブラウザーがページを {{htmwewement("fwame")}}、{{htmwewement("ifwame")}}、{{htmwewement("embed")}}、{{htmwewement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、[クリックジャッキング](/ja/docs/web/secuwity/types_of_attacks#クリックジャッキング)攻撃を防ぐために使用することができます。
 
-セキュリティが強化されるのは、ユーザーが `X-Frame-Options` に対応したブラウザーを使用して文書にアクセスした場合のみです。
+セキュリティが強化されるのは、ユーザーが `x-fwame-options` に対応したブラウザーを使用して文書にアクセスした場合のみです。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
+      <td>{{gwossawy("wesponse h-headew", òωó "レスポンスヘッダー")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame", "禁止ヘッダー名")}}</th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`X-Frame-Options` には 2 つの有効なディレクティブがあります。
+`x-fwame-options` には 2 つの有効なディレクティブがあります。
 
 ```http
-X-Frame-Options: DENY
-X-Frame-Options: SAMEORIGIN
+x-fwame-options: deny
+x-fwame-options: sameowigin
 ```
 
 ### ディレクティブ
 
-`DENY` を指定した場合は、フレームにページを他のサイトから読み込もうとした時だけでなく、同じサイトから読み込もうとした時にも失敗します。一方、 `SAMEORIGIN` を指定した場合は、フレームの中のページを含むサイトが、ページを提供しているサイトと同じである限り、フレーム内でページを利用することができます。
+`deny` を指定した場合は、フレームにページを他のサイトから読み込もうとした時だけでなく、同じサイトから読み込もうとした時にも失敗します。一方、 `sameowigin` を指定した場合は、フレームの中のページを含むサイトが、ページを提供しているサイトと同じである限り、フレーム内でページを利用することができます。
 
-- `DENY`
+- `deny`
   - : ページをフレーム内に表示することは、それを試みているサイトが何であろうとできません。
-- `SAMEORIGIN` {{deprecated_inline}}
+- `sameowigin` {{depwecated_inwine}}
   - : ページは、すべての祖先フレームがページ自体と同じオリジンである場合にのみ表示できます。
-- `ALLOW-FROM origin` {{deprecated_inline}}
-  - : これは古いディレクティブです。このディレクティブを持つレスポンスヘッダーに遭遇した現行のブラウザーは、そのヘッダーを完全に無視します。 HTTP の {{HTTPHeader("Content-Security-Policy")}} ヘッダーには {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブがありますので、そちらを使用してください。
+- `awwow-fwom owigin` {{depwecated_inwine}}
+  - : これは古いディレクティブです。このディレクティブを持つレスポンスヘッダーに遭遇した現行のブラウザーは、そのヘッダーを完全に無視します。 h-http の {{httpheadew("content-secuwity-powicy")}} ヘッダーには {{httpheadew("content-secuwity-powicy/fwame-ancestows", ʘwʘ "fwame-ancestows")}} ディレクティブがありますので、そちらを使用してください。
 
 ## 例
 
-> [!NOTE]
-> X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても（例えば、`<meta http-equiv="X-Frame-Options" content="deny">`）効果はありません。 `X-Frame-Options` は HTTP ヘッダーを通じて設定された場合のみ動作します。
+> [!note]
+> x-fwame-options を {{htmwewement("meta")}} 要素に設定しても（例えば、`<meta http-equiv="x-fwame-options" c-content="deny">`）効果はありません。 `x-fwame-options` は http ヘッダーを通じて設定された場合のみ動作します。
 
-### Apache の設定
+### a-apache の設定
 
-Apache で X-Frame-Options ヘッダーをすべてのページで送信するように設定するには、サイトの設定に以下の記述を追加してください。
-
-```apacheconf
-Header always set X-Frame-Options "SAMEORIGIN"
-```
-
-Apache で `X-Frame-Options` を DENY に設定するには、サイトの設定に以下の記述を追加してください
+apache で x-fwame-options ヘッダーをすべてのページで送信するように設定するには、サイトの設定に以下の記述を追加してください。
 
 ```apacheconf
-Header set X-Frame-Options "DENY"
+headew awways s-set x-fwame-options "sameowigin"
 ```
 
-### nginx の設定
+apache で `x-fwame-options` を d-deny に設定するには、サイトの設定に以下の記述を追加してください
 
-Nginx で `X-Frame-Options` ヘッダーを送信するように設定するには、以下の記述を http、server、 location のいずれかの設定に追加してください。
+```apacheconf
+h-headew set x-fwame-options "deny"
+```
+
+### nyginx の設定
+
+nyginx で `x-fwame-options` ヘッダーを送信するように設定するには、以下の記述を http、sewvew、 w-wocation のいずれかの設定に追加してください。
 
 ```nginx
-add_header X-Frame-Options SAMEORIGIN always;
+add_headew x-fwame-options sameowigin awways;
 ```
 
-`X-Frame-Options` ヘッダーで `DENY` を設定するには、次のようにします。
+`x-fwame-options` ヘッダーで `deny` を設定するには、次のようにします。
 
 ```nginx
-add_header X-Frame-Options DENY always;
+add_headew x-fwame-options d-deny awways;
 ```
 
-### IIS の設定
+### i-iis の設定
 
-IIS で `X-Frame-Options` ヘッダーを送信するように設定するには、サイトの `Web.config` ファイルに以下の設定を追加してください。
+i-iis で `x-fwame-options` ヘッダーを送信するように設定するには、サイトの `web.config` ファイルに以下の設定を追加してください。
 
-```xml
-<system.webServer>
+```xmw
+<system.websewvew>
   …
-  <httpProtocol>
-    <customHeaders>
-      <add name="X-Frame-Options" value="SAMEORIGIN" />
-    </customHeaders>
-  </httpProtocol>
+  <httppwotocow>
+    <customheadews>
+      <add n-nyame="x-fwame-options" v-vawue="sameowigin" />
+    </customheadews>
+  </httppwotocow>
   …
-</system.webServer>
+</system.websewvew>
 ```
 
-詳しくは、[IIS マネージャーのユーザーインターフェイスを使用してこの構成を設定する方法についてのマイクロソフトのサポート記事](https://support.microsoft.com/en-US/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79)を参照してください。
+詳しくは、[iis マネージャーのユーザーインターフェイスを使用してこの構成を設定する方法についてのマイクロソフトのサポート記事](https://suppowt.micwosoft.com/en-us/office/mitigating-fwamesniffing-with-the-x-fwame-options-headew-1911411b-b51e-49fd-9441-e8301dcdcd79)を参照してください。
 
-### HAProxy の設定
+### hapwoxy の設定
 
-HAProxy で `X-Frame-Options` ヘッダーを送信するように設定するには、以下の記述を front-end、listen、backend のいずれかの設定に追加してください。
+hapwoxy で `x-fwame-options` ヘッダーを送信するように設定するには、以下の記述を f-fwont-end、wisten、backend のいずれかの設定に追加してください。
 
-```plain
-rspadd X-Frame-Options:\ SAMEORIGIN
+```pwain
+wspadd x-fwame-options:\ sameowigin
 ```
 
 他にも、より新しいバージョンでは次のような設定ができます。
 
-```plain
-http-response set-header X-Frame-Options SAMEORIGIN
+```pwain
+h-http-wesponse set-headew x-fwame-options sameowigin
 ```
 
-### Express の設定
+### expwess の設定
 
-`X-Frame-Options` ヘッダーを [helmet](https://helmetjs.github.io/) を使用して `SAMEORIGIN` に設定するには、サーバー設定に次のものを追加してください。
+`x-fwame-options` ヘッダーを [hewmet](https://hewmetjs.github.io/) を使用して `sameowigin` に設定するには、サーバー設定に次のものを追加してください。
 
 ```js
-const helmet = require("helmet");
-const app = express();
+const hewmet = wequiwe("hewmet");
+c-const app = expwess();
 app.use(
-  helmet({
-    xFrameOptions: { action: "sameorigin" },
-  }),
+  h-hewmet({
+    x-xfwameoptions: { a-action: "sameowigin" }, /(^•ω•^)
+  }), ʘwʘ
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}} の {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブ
-- [ClickJacking Defenses - IEBlog](https://learn.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
-- [Combating ClickJacking with X-Frame-Options - IEInternals](https://learn.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)
+- {{httpheadew("content-secuwity-powicy")}} の {{httpheadew("content-secuwity-powicy/fwame-ancestows", σωσ "fwame-ancestows")}} ディレクティブ
+- [cwickjacking defenses - iebwog](https://weawn.micwosoft.com/en-us/awchive/bwogs/ie/ie8-secuwity-pawt-vii-cwickjacking-defenses)
+- [combating cwickjacking w-with x-fwame-options - i-ieintewnaws](https://weawn.micwosoft.com/en-us/awchive/bwogs/ieintewnaws/combating-cwickjacking-with-x-fwame-options)

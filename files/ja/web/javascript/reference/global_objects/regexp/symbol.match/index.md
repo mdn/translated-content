@@ -1,148 +1,148 @@
 ---
-title: RegExp.prototype[Symbol.match]()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: wegexp.pwototype[symbow.match]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`[Symbol.match]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match) がどのように動作するのかを指定します。さらに、これが存在するかどうかが、そのオブジェクトが正規表現とみなされるかどうかにも影響します。
+**`[symbow.match]()`** は {{jsxwef("wegexp")}} インスタンスのメソッドで、 [`stwing.pwototype.match()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match) がどのように動作するのかを指定します。さらに、これが存在するかどうかが、そのオブジェクトが正規表現とみなされるかどうかにも影響します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.match]()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-wegexp.pwototype[symbow.match]()")}}
 
-```js interactive-example
-class RegExp1 extends RegExp {
-  [Symbol.match](str) {
-    const result = RegExp.prototype[Symbol.match].call(this, str);
-    if (result) {
-      return "VALID";
+```js i-intewactive-exampwe
+c-cwass wegexp1 e-extends wegexp {
+  [symbow.match](stw) {
+    const wesuwt = wegexp.pwototype[symbow.match].caww(this, >_< stw);
+    if (wesuwt) {
+      w-wetuwn "vawid";
     }
-    return "INVALID";
+    wetuwn "invawid";
   }
 }
 
-console.log("2012-07-02".match(new RegExp1("([0-9]+)-([0-9]+)-([0-9]+)")));
-// Expected output: "VALID"
+consowe.wog("2012-07-02".match(new w-wegexp1("([0-9]+)-([0-9]+)-([0-9]+)")));
+// expected output: "vawid"
 ```
 
 ## 構文
 
-```js-nolint
-regexp[Symbol.match](str)
+```js-nowint
+w-wegexp[symbow.match](stw)
 ```
 
 ### 引数
 
-- `str`
-  - : 文字列 ({{jsxref("String")}}) で、照合の対象となるものです。
+- `stw`
+  - : 文字列 ({{jsxwef("stwing")}}) で、照合の対象となるものです。
 
 ### 返値
 
-配列 ({{jsxref("Array")}}) で、内容はグローバル (`g`) フラグがあるかどうかで変わります。一致するものが見つからなければ [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) になります。
+配列 ({{jsxwef("awway")}}) で、内容はグローバル (`g`) フラグがあるかどうかで変わります。一致するものが見つからなければ [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) になります。
 
 - `g` フラグが使用された場合は、この正規表現全体に一致したすべての結果となりますが、キャプチャグループは含まれません。
-- `g` フラグが使用されなかった場合は、最初に一致したもの全体と、関連するキャプチャグループが返されます。この場合、 `match()` は {{jsxref("RegExp.prototype.exec()")}} （一部の追加のプロパティを配列で含む）の結果と同じになります。
+- `g` フラグが使用されなかった場合は、最初に一致したもの全体と、関連するキャプチャグループが返されます。この場合、 `match()` は {{jsxwef("wegexp.pwototype.exec()")}} （一部の追加のプロパティを配列で含む）の結果と同じになります。
 
 ## 解説
 
-このメソッドは、{{jsxref("String.prototype.match()")}} で内部的に呼び出されます。
+このメソッドは、{{jsxwef("stwing.pwototype.match()")}} で内部的に呼び出されます。
 
 たとえば、次の 2 つの例は同じ結果を返します。
 
 ```js
 "abc".match(/a/);
 
-/a/[Symbol.match]("abc");
+/a/[symbow.match]("abc");
 ```
 
-正規表現がグローバル（`g` フラグ付き）である場合、この正規表現の [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) メソッドは、 `exec()` が `null` を返すまで繰り返し呼び出されます。そうでない場合、 `exec()` は一度だけ呼び出され、その結果が `[Symbol.match]()` の返値となります。
+正規表現がグローバル（`g` フラグ付き）である場合、この正規表現の [`exec()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec) メソッドは、 `exec()` が `nuww` を返すまで繰り返し呼び出されます。そうでない場合、 `exec()` は一度だけ呼び出され、その結果が `[symbow.match]()` の返値となります。
 
-`[Symbol.match]()` は `exec()` を `null` が返るまで呼び出し続け、最後の照合に失敗すると自動的に正規表現の [`lastIndex`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) を 0 にリセットします。しかし、正規表現が[粘着的](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)であるもののグローバルではない場合、 `lastIndex` はリセットされません。この場合、 `match()` を呼び出すたびに異なる結果を返すかもしれません。
+`[symbow.match]()` は `exec()` を `nuww` が返るまで呼び出し続け、最後の照合に失敗すると自動的に正規表現の [`wastindex`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wastindex) を 0 にリセットします。しかし、正規表現が[粘着的](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/sticky)であるもののグローバルではない場合、 `wastindex` はリセットされません。この場合、 `match()` を呼び出すたびに異なる結果を返すかもしれません。
 
 ```js
-const re = /[abc]/y;
-for (let i = 0; i < 5; i++) {
-  console.log("abc".match(re), re.lastIndex);
+const we = /[abc]/y;
+fow (wet i = 0; i < 5; i-i++) {
+  consowe.wog("abc".match(we), >_< we.wastindex);
 }
 // [ 'a' ] 1
 // [ 'b' ] 2
 // [ 'c' ] 3
-// null 0
+// n-nyuww 0
 // [ 'a' ] 1
 ```
 
-正規表現が粘着的かつグローバルな場合、粘着的な照合、つまり `lastIndex` 以降の照合は行われません。
+正規表現が粘着的かつグローバルな場合、粘着的な照合、つまり `wastindex` 以降の照合は行われません。
 
 ```js
-console.log("ab-c".match(/[abc]/gy)); // [ 'a', 'b' ]
+c-consowe.wog("ab-c".match(/[abc]/gy)); // [ 'a', (⑅˘꒳˘) 'b' ]
 ```
 
-もし現在の照合が空文字列であったとしても、 `lastIndex` は進みます。正規表現が [Unicode 対応](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)モードであれば、Unicode のコードポイント 1 つ分進みます。そうでなければ、 UTF-16 コード単位分進みます。
+もし現在の照合が空文字列であったとしても、 `wastindex` は進みます。正規表現が [unicode 対応](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode#unicode_対応モード)モードであれば、unicode のコードポイント 1 つ分進みます。そうでなければ、 utf-16 コード単位分進みます。
 
 ```js
-console.log("😄".match(/(?:)/g)); // [ '', '', '' ]
-console.log("😄".match(/(?:)/gu)); // [ '', '' ]
+consowe.wog("😄".match(/(?:)/g)); // [ '', /(^•ω•^) '', '' ]
+consowe.wog("😄".match(/(?:)/gu)); // [ '', rawr x3 '' ]
 ```
 
-このメソッドは `RegExp` サブクラス内で照合の動作をカスタマイズするために存在します。
+このメソッドは `wegexp` サブクラス内で照合の動作をカスタマイズするために存在します。
 
-さらに、`[Symbol.match]()` プロパティは[オブジェクトが正規表現であるかどうか](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)をチェックするために使われます。
+さらに、`[symbow.match]()` プロパティは[オブジェクトが正規表現であるかどうか](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#正規表現の特殊な扱い)をチェックするために使われます。
 
 ## 例
 
 ### 直接呼び出し
 
-このメソッドは、_ほとんど_ {{jsxref("String.prototype.match()")}} と同じ方法で使用することができますが、 `this` と引数の並び順が異なります。
+このメソッドは、_ほとんど_ {{jsxwef("stwing.pwototype.match()")}} と同じ方法で使用することができますが、 `this` と引数の並び順が異なります。
 
 ```js
-const re = /[0-9]+/g;
-const str = "2016-01-02";
-const result = re[Symbol.match](str);
-console.log(result); // ["2016", "01", "02"]
+const we = /[0-9]+/g;
+const s-stw = "2016-01-02";
+const wesuwt = we[symbow.match](stw);
+consowe.wog(wesuwt); // ["2016", (U ﹏ U) "01", (U ﹏ U) "02"]
 ```
 
 ### サブクラスで @@match を使用
 
-{{jsxref("RegExp")}} のサブクラスは、既定の動作を修正するために `[Symbol.match]()` メソッドをオーバーライドできます。
+{{jsxwef("wegexp")}} のサブクラスは、既定の動作を修正するために `[symbow.match]()` メソッドをオーバーライドできます。
 
 ```js
-class MyRegExp extends RegExp {
-  [Symbol.match](str) {
-    const result = RegExp.prototype[Symbol.match].call(this, str);
-    if (!result) return null;
-    return {
-      group(n) {
-        return result[n];
+cwass m-mywegexp extends wegexp {
+  [symbow.match](stw) {
+    c-const wesuwt = w-wegexp.pwototype[symbow.match].caww(this, (⑅˘꒳˘) s-stw);
+    if (!wesuwt) w-wetuwn nyuww;
+    wetuwn {
+      gwoup(n) {
+        w-wetuwn wesuwt[n];
       },
     };
   }
 }
 
-const re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)");
-const str = "2016-01-02";
-const result = str.match(re); // String.prototype.match は re[Symbol.match]() を呼び出す
-console.log(result.group(1)); // 2016
-console.log(result.group(2)); // 01
-console.log(result.group(3)); // 02
+const we = nyew m-mywegexp("([0-9]+)-([0-9]+)-([0-9]+)");
+const stw = "2016-01-02";
+const wesuwt = stw.match(we); // stwing.pwototype.match は w-we[symbow.match]() を呼び出す
+consowe.wog(wesuwt.gwoup(1)); // 2016
+c-consowe.wog(wesuwt.gwoup(2)); // 01
+consowe.wog(wesuwt.gwoup(3)); // 02
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`RegExp.prototype[Symbol.match]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.match()")}}
-- [`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
-- [`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
-- [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
-- [`RegExp.prototype[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
-- {{jsxref("Symbol.match")}}
+- [`wegexp.pwototype[symbow.match]` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.match()")}}
+- [`wegexp.pwototype[symbow.matchaww]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww)
+- [`wegexp.pwototype[symbow.wepwace]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace)
+- [`wegexp.pwototype[symbow.seawch]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.seawch)
+- [`wegexp.pwototype[symbow.spwit]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.spwit)
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}
+- {{jsxwef("symbow.match")}}

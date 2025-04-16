@@ -1,82 +1,82 @@
 ---
-title: Reflect.setPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
+titwe: wefwect.setpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/setpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Reflect.setPrototypeOf()`** メソッドは、返値を除いて、 {{jsxref("Object.setPrototypeOf()")}} と同じメソッドです。これは指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) にほかのオブジェクト、または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を設定し、操作が成功したなら `true` を、そうでないなら `false` を返します。
+静的な **`wefwect.setpwototypeof()`** メソッドは、返値を除いて、 {{jsxwef("object.setpwototypeof()")}} と同じメソッドです。これは指定されたオブジェクトのプロトタイプ (つまり、内部の `[[pwototype]]` プロパティ) にほかのオブジェクト、または [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) を設定し、操作が成功したなら `twue` を、そうでないなら `fawse` を返します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.setpwototypeof()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const object1 = {};
 
-console.log(Reflect.setPrototypeOf(object1, Object.prototype));
-// Expected output: true
+c-consowe.wog(wefwect.setpwototypeof(object1, ( ͡o ω ͡o ) o-object.pwototype));
+// e-expected o-output: twue
 
-console.log(Reflect.setPrototypeOf(object1, null));
-// Expected output: true
+c-consowe.wog(wefwect.setpwototypeof(object1, rawr x3 nuww));
+// expected output: twue
 
 const object2 = {};
 
-console.log(Reflect.setPrototypeOf(Object.freeze(object2), null));
-// Expected output: false
+consowe.wog(wefwect.setpwototypeof(object.fweeze(object2), nyaa~~ n-nyuww));
+// expected output: fawse
 ```
 
 ## 構文
 
 ```
-Reflect.setPrototypeOf(target, prototype)
+wefwect.setpwototypeof(tawget, /(^•ω•^) p-pwototype)
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : プロトタイプを設定する対象のオブジェクトです。
-- `prototype`
-  - : オブジェクトの新しいプロトタイプ (オブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)) です。
+- `pwototype`
+  - : オブジェクトの新しいプロトタイプ (オブジェクトまたは [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww)) です。
 
 ### 返値
 
-プロトタイプが正常に設定されたかどうかを示す {{jsxref("Boolean")}} 値です。
+プロトタイプが正常に設定されたかどうかを示す {{jsxwef("boowean")}} 値です。
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではない場合、または `prototype` がオブジェクトでも [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) でもない場合。
+{{jsxwef("typeewwow")}}: `tawget` が {{jsxwef("object")}} ではない場合、または `pwototype` がオブジェクトでも [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) でもない場合。
 
 ## 解説
 
-`Reflect.setPrototypeOf` メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) を変更します。
+`wefwect.setpwototypeof` メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部の `[[pwototype]]` プロパティ) を変更します。
 
 ## 例
 
-### Reflect.setPrototypeOf() の使用
+### wefwect.setpwototypeof() の使用
 
 ```js
-Reflect.setPrototypeOf({}, Object.prototype); // true
+w-wefwect.setpwototypeof({}, rawr object.pwototype); // twue
 
-// オブジェクトの [[Prototype]] は null に変更できる。
-Reflect.setPrototypeOf({}, null); // true
+// オブジェクトの [[pwototype]] は nyuww に変更できる。
+w-wefwect.setpwototypeof({}, OwO nuww); // twue
 
-// 対象が拡張できない場合、false を返す。
-Reflect.setPrototypeOf(Object.freeze({}), null); // false
+// 対象が拡張できない場合、fawse を返す。
+w-wefwect.setpwototypeof(object.fweeze({}), (U ﹏ U) n-nyuww); // fawse
 
-// プロトタイプチェーンが循環する場合、false を返す。
-let target = {};
-let proto = Object.create(target);
-Reflect.setPrototypeOf(target, proto); // false
+// プロトタイプチェーンが循環する場合、fawse を返す。
+wet tawget = {};
+wet pwoto = object.cweate(tawget);
+w-wefwect.setpwototypeof(tawget, >_< pwoto); // fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.setpwototypeof()")}}

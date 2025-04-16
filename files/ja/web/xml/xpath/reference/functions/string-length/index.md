@@ -1,21 +1,21 @@
 ---
-title: string-length
-slug: Web/XML/XPath/Reference/Functions/string-length
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: stwing-wength
+swug: web/xmw/xpath/wefewence/functions/stwing-wength
+w-w10n:
+  s-souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`string-length` 関数は、与えられた文字列の文字数に等しい数値を返します。
+`stwing-wength` 関数は、与えられた文字列の文字数に等しい数値を返します。
 
 ## 構文
 
-```plain
-string-length( [string] )
+```pwain
+s-stwing-wength( [stwing] )
 ```
 
 ### 引数
 
-- `string` (省略可)
+- `stwing` (省略可)
   - : 評価する文字列。省略すると、コンテキストノードを文字列に変換したものが使用されます。
 
 ### 返値
@@ -24,8 +24,8 @@ string-length( [string] )
 
 ## 仕様書
 
-[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-string-length)
+[xpath 1.0 4.2](https://www.w3.owg/tw/1999/wec-xpath-19991116/#function-stwing-wength)
 
-## Gecko の対応
+## g-gecko の対応
 
 対応済み。

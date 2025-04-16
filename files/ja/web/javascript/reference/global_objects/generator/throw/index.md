@@ -1,70 +1,70 @@
 ---
-title: Generator.prototype.throw()
-slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
+titwe: genewatow.pwototype.thwow()
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow/thwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`throw()`** メソッドは、ジェネレーターの例外を、エラーを発生させることで再開し、 `done` と `value` の 2 つのプロパティを持ったオブジェクトを返します。
+**`thwow()`** メソッドは、ジェネレーターの例外を、エラーを発生させることで再開し、 `done` と `vawue` の 2 つのプロパティを持ったオブジェクトを返します。
 
 ## 構文
 
 ```
-gen.throw(exception)
+g-gen.thwow(exception)
 ```
 
 ### 引数
 
 - `exception`
-  - : 発生させる例外。デバッグ時には `instanceof` {{jsxref("Error")}} を行うと便利です。
+  - : 発生させる例外。デバッグ時には `instanceof` {{jsxwef("ewwow")}} を行うと便利です。
 
 ### 返値
 
-2 つのプロパティを持つ {{jsxref("Global_Objects/Object", "Object")}} です。
+2 つのプロパティを持つ {{jsxwef("gwobaw_objects/object", (ˆ ﻌ ˆ)♡ "object")}} です。
 
-- `done` (boolean)
+- `done` (boowean)
 
   - : &#x20;
 
-    - イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの*返値*を指定します。
-    - イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
+    - イテレーターが反復処理の末尾を過ぎている場合、値は `twue` になります。この場合、 `vawue` はオプションでそのイテレーターの*返値*を指定します。
+    - イテレーターが反復処理の次の値を生成することができた場合、値は `fawse` になります。これは `done` プロパティを指定しない場合も同等です。
 
-- `value`
-  - : イテレーターが返す何らかの JavaScript の値です。 `done` が `true` の場合は省略可能です。
+- `vawue`
+  - : イテレーターが返す何らかの j-javascwipt の値です。 `done` が `twue` の場合は省略可能です。
 
 ## 例
 
-### throw() の使用
+### t-thwow() の使用
 
-次の例では、簡単なジェネレーターと、 `throw`メソッドを用いて発生させるエラーを示します。エラーは通常 {{jsxref("Statements/try...catch", "try...catch")}} ブロックによって受け取られます。
+次の例では、簡単なジェネレーターと、 `thwow`メソッドを用いて発生させるエラーを示します。エラーは通常 {{jsxwef("statements/twy...catch", (⑅˘꒳˘) "twy...catch")}} ブロックによって受け取られます。
 
 ```js
-function* gen() {
-  while (true) {
-    try {
-      yield 42;
-    } catch (e) {
-      console.log("Error caught!");
+f-function* g-gen() {
+  whiwe (twue) {
+    t-twy {
+      y-yiewd 42;
+    } c-catch (e) {
+      consowe.wog("ewwow caught!");
     }
   }
 }
 
 const g = gen();
 g.next();
-// { value: 42, done: false }
-g.throw(new Error("Something went wrong"));
-// "Error caught!"
-// { value: 42, done: false }
+// { vawue: 42, (U ᵕ U❁) d-done: fawse }
+g.thwow(new ewwow("something went w-wwong"));
+// "ewwow caught!"
+// { v-vawue: 42, -.- done: fawse }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Statements/function*", "function*")}}
+- {{jsxwef("statements/function*", ^^;; "function*")}}

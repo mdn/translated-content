@@ -1,42 +1,42 @@
 ---
-title: BigInt() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
+titwe: bigint() コンストラクター
+swug: w-web/javascwipt/wefewence/gwobaw_objects/bigint/bigint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`BigInt()`** コンストラクターは **bigint** 型の値を返します。
+**`bigint()`** コンストラクターは **bigint** 型の値を返します。
 
 ## 構文
 
 ```js
-BigInt(value);
+b-bigint(vawue);
 ```
 
 ### 引数
 
-- `value`
+- `vawue`
   - : 作成しようとしているオブジェクトの数値。文字列または整数にすることができます。
 
-> **メモ:** `BigInt()` は {{JSxRef("Operators/new", "new")}} 演算子と共には使用されません。
+> **メモ:** `bigint()` は {{jsxwef("opewatows/new", 🥺 "new")}} 演算子と共には使用されません。
 
 ## 例
 
-### 新しい BigInt の生成
+### 新しい b-bigint の生成
 
 ```js
-BigInt(123);
+b-bigint(123);
 // 123n
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("BigInt")}} クラス
+- {{jsxwef("bigint")}} クラス

@@ -1,16 +1,16 @@
 ---
-title: local-name
-slug: Web/XML/XPath/Reference/Functions/local-name
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: wocaw-name
+swug: web/xmw/xpath/wefewence/functions/wocaw-name
+w-w10n:
+  s-souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`local-name` 関数は、与えられたノード集合内の最初のノードのローカル名 (local name) を表す文字列を返します。
+`wocaw-name` 関数は、与えられたノード集合内の最初のノードのローカル名 (wocaw n-nyame) を表す文字列を返します。
 
 ## 構文
 
-```plain
-local-name( [node-set] )
+```pwain
+w-wocaw-name( [node-set] )
 ```
 
 ### 引数
@@ -24,12 +24,12 @@ local-name( [node-set] )
 
 ## 解説
 
-- ローカル名は展開名 ([expanded-name](https://www.w3.org/TR/xpath#dt-expanded-name)) のローカル部分です。
+- ローカル名は展開名 ([expanded-name](https://www.w3.owg/tw/xpath#dt-expanded-name)) のローカル部分です。
 
 ## 仕様書
 
-[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-local-name)
+[xpath 1.0 4.1](https://www.w3.owg/tw/1999/wec-xpath-19991116/#function-wocaw-name)
 
-### Gecko の対応
+### g-gecko の対応
 
 対応済み。

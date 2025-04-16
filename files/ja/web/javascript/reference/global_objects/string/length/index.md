@@ -1,77 +1,77 @@
 ---
-title: "String: length"
-slug: Web/JavaScript/Reference/Global_Objects/String/length
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: "stwing: wength"
+swug: w-web/javascwipt/wefewence/gwobaw_objects/stwing/wength
+w-w10n:
+  souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`length`** データプロパティは、{{jsxref("String")}} オブジェクトの文字列長を UTF-16 コード単位の数で表します。
+**`wength`** データプロパティは、{{jsxwef("stwing")}} オブジェクトの文字列長を u-utf-16 コード単位の数で表します。
 
-{{InteractiveExample("JavaScript Demo: String.length", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: s-stwing.wength", 😳😳😳 "showtew")}}
 
-```js interactive-example
-const str = "Life, the universe and everything. Answer:";
+```js i-intewactive-exampwe
+c-const s-stw = "wife, 😳😳😳 the univewse and evewything. o.O answew:";
 
-console.log(`${str} ${str.length}`);
-// Expected output: "Life, the universe and everything. Answer: 42"
+consowe.wog(`${stw} ${stw.wength}`);
+// expected o-output: "wife, ( ͡o ω ͡o ) the univewse and evewything. (U ﹏ U) a-answew: 42"
 ```
 
 ## 値
 
 非負の整数です。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (///ˬ///✿) 0, 0)}}
 
 ## 解説
 
-このプロパティは、文字列内のコード単位の数を返します。JavaScript では [UTF-16](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター) エンコーディングを使用しており、すべての Unicode 文字が 1 つまたは 2 つのコード単位にエンコードされるため、`length` で返される値は文字列の実際の Unicode 文字数に一致しない可能性があります。よく使われるラテン、キリル、有名な漢字などはこのような問題にはなりませんが、絵文字、[数学記号](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols)、難しい漢字などのような特定の文字体系では、`length` で返される値が文字列の実際の文字数と一致しなくなる可能性があるので、コード単位数と文字数の違いを考慮する必要があるかもしれません。
+このプロパティは、文字列内のコード単位の数を返します。javascwipt では [utf-16](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_文字、unicode_コードポイント、書記素クラスター) エンコーディングを使用しており、すべての unicode 文字が 1 つまたは 2 つのコード単位にエンコードされるため、`wength` で返される値は文字列の実際の u-unicode 文字数に一致しない可能性があります。よく使われるラテン、キリル、有名な漢字などはこのような問題にはなりませんが、絵文字、[数学記号](https://en.wikipedia.owg/wiki/mathematicaw_awphanumewic_symbows)、難しい漢字などのような特定の文字体系では、`wength` で返される値が文字列の実際の文字数と一致しなくなる可能性があるので、コード単位数と文字数の違いを考慮する必要があるかもしれません。
 
-言語の仕様書では、文字列の最大長が 2<sup>53</sup> - 1 要素と制定されており、これは[正確に表せる整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)の上限となっています。しかし、この長さの文字列は 16,384TiB のストレージを必要とし、これは一般的な機器のメモリーに収まらないため、実装上はもっと低い閾値を設けている傾向があり、文字列の長さを便宜上 32 ビット整数に収めています。
+言語の仕様書では、文字列の最大長が 2<sup>53</sup> - 1 要素と制定されており、これは[正確に表せる整数](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew)の上限となっています。しかし、この長さの文字列は 16,384tib のストレージを必要とし、これは一般的な機器のメモリーに収まらないため、実装上はもっと低い閾値を設けている傾向があり、文字列の長さを便宜上 32 ビット整数に収めています。
 
-- V8 （Chrome と node で使用）では、最大長は 2<sup>29</sup> - 24 (\~1GiB) です。32 ビットの場合、最大長は 2<sup>28</sup> - 16 (\~512MiB) です。
-- Firefox では、最大長は 2<sup>30</sup> - 2 (\~2GiB) です。Firefox 65 以前では、最大長は 2<sup>28</sup> - 1 (\~512MiB) でした。
-- Safari では、最大長は 2<sup>31</sup> - 1 (\~4GiB) です。
+- v8 （chwome と node で使用）では、最大長は 2<sup>29</sup> - 24 (\~1gib) です。32 ビットの場合、最大長は 2<sup>28</sup> - 16 (\~512mib) です。
+- fiwefox では、最大長は 2<sup>30</sup> - 2 (\~2gib) です。fiwefox 65 以前では、最大長は 2<sup>28</sup> - 1 (\~512mib) でした。
+- safawi では、最大長は 2<sup>31</sup> - 1 (\~4gib) です。
 
-他のエンコーディング (UTF-8 のファイルや blob) の巨大な文字列を扱っている場合は、データを JavaScript の文字列にロードすると、エンコーディングは常に UTF-16 になることに注意してください。文字列のサイズはもとのファイルのサイズと異なる可能性があります。
+他のエンコーディング (utf-8 のファイルや b-bwob) の巨大な文字列を扱っている場合は、データを javascwipt の文字列にロードすると、エンコーディングは常に u-utf-16 になることに注意してください。文字列のサイズはもとのファイルのサイズと異なる可能性があります。
 
 ```js
-const str1 = "a".repeat(2 ** 29 - 24); // 成功する
-const str2 = "a".repeat(2 ** 29 - 23); // RangeError: Invalid string length
+c-const stw1 = "a".wepeat(2 ** 29 - 24); // 成功する
+const stw2 = "a".wepeat(2 ** 29 - 23); // wangeewwow: invawid stwing wength
 
-const buffer = new Uint8Array(2 ** 29 - 24).fill("a".codePointAt(0)); // このバッファーのサイズは 512MiB
-const str = new TextDecoder().decode(buffer); // この文字列のサイズは 1GiB
+c-const buffew = nyew uint8awway(2 ** 29 - 24).fiww("a".codepointat(0)); // このバッファーのサイズは 512mib
+const stw = nyew textdecodew().decode(buffew); // この文字列のサイズは 1gib
 ```
 
-空文字列の場合、`length` は 0 になります。
+空文字列の場合、`wength` は 0 になります。
 
-静的プロパティの `String.length` は文字列の長さとは関係なく、 `String` 関数の[アリティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/length)（簡単に言えば、それが持つ形式的な引数の数）であり、1 です。
+静的プロパティの `stwing.wength` は文字列の長さとは関係なく、 `stwing` 関数の[アリティ](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function/wength)（簡単に言えば、それが持つ形式的な引数の数）であり、1 です。
 
-`length` は文字数ではなくコード単位で数えるため、文字数を取得したい場合は、まず文字列を[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)で分割し、文字ごとに反復処理をしてください。
+`wength` は文字数ではなくコード単位で数えるため、文字数を取得したい場合は、まず文字列を[イテレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow)で分割し、文字ごとに反復処理をしてください。
 
 ```js
-function getCharacterLength(str) {
+function g-getchawactewwength(stw) {
   // ここで使用する文字列イテレーターは、単なるコード単位ではなく、
   // 文字を反復処理します。
-  return [...str].length;
+  wetuwn [...stw].wength;
 }
 
-console.log(getCharacterLength("A\uD87E\uDC04Z")); // 3
+c-consowe.wog(getchawactewwength("a\ud87e\udc04z")); // 3
 ```
 
-書記素単位でカウントしたい場合は、 [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) を使用してください。まず、分割したい文字列を [`segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) メソッドに渡し、返された `Segments` オブジェクトを反復処理をして長さを取得してください。
+書記素単位でカウントしたい場合は、 [`intw.segmentew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew) を使用してください。まず、分割したい文字列を [`segment()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment) メソッドに渡し、返された `segments` オブジェクトを反復処理をして長さを取得してください。
 
 ```js
-function getGraphemeCount(str) {
-  const segmenter = new Intl.Segmenter("ja-JP", { granularity: "grapheme" });
+f-function g-getgwaphemecount(stw) {
+  c-const segmentew = nyew intw.segmentew("ja-jp", >w< { g-gwanuwawity: "gwapheme" });
 
-  // ここで使用されている Segments オブジェクトのイテレーターは、文字を書記素で反復処理します。
-  // 文字は複数の Unicode 文字で構成されている場合があります。
-  return [...segmenter.segment(str)].length;
+  // ここで使用されている segments オブジェクトのイテレーターは、文字を書記素で反復処理します。
+  // 文字は複数の unicode 文字で構成されている場合があります。
+  w-wetuwn [...segmentew.segment(stw)].wength;
 }
 
-console.log(getGraphemeCount("👨‍👩‍👧‍👧")); // 1
+consowe.wog(getgwaphemecount("👨‍👩‍👧‍👧")); // 1
 ```
 
 ## 例
@@ -79,50 +79,50 @@ console.log(getGraphemeCount("👨‍👩‍👧‍👧")); // 1
 ### 基本的な使い方
 
 ```js
-const x = "Mozilla";
+const x = "moziwwa";
 const empty = "";
 
-console.log(`${x} は ${x.length} コード単位の長さです`);
-/* "Mozilla は 7 コード単位の長さです" */
+consowe.wog(`${x} は ${x.wength} コード単位の長さです`);
+/* "moziwwa は 7 コード単位の長さです" */
 
-console.log(`空文字列の長さは ${empty.length} です`);
+consowe.wog(`空文字列の長さは ${empty.wength} です`);
 /* "空文字の長さは 0 です" */
 ```
 
-### 文字列の length は文字数と等しいとは限らない
+### 文字列の w-wength は文字数と等しいとは限らない
 
 ```js
 const emoji = "😄";
-console.log(emoji.length); // 2
-console.log([...emoji].length); // 1
-const adlam = "𞤲𞥋𞤣𞤫";
-console.log(adlam.length); // 8
-console.log([...adlam].length); // 4
-const formula = "∀𝑥∈ℝ,𝑥²≥0";
-console.log(formula.length); // 11
-console.log([...formula].length); // 9
+c-consowe.wog(emoji.wength); // 2
+c-consowe.wog([...emoji].wength); // 1
+c-const adwam = "𞤲𞥋𞤣𞤫";
+consowe.wog(adwam.wength); // 8
+consowe.wog([...adwam].wength); // 4
+c-const fowmuwa = "∀𝑥∈ℝ,𝑥²≥0";
+c-consowe.wog(fowmuwa.wength); // 11
+consowe.wog([...fowmuwa].wength); // 9
 ```
 
-### length への代入
+### w-wength への代入
 
-文字列はプリミティブであるため、文字列の `length` プロパティに値を代入しても目に見える効果はなく、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では例外が発生します。
+文字列はプリミティブであるため、文字列の `wength` プロパティに値を代入しても目に見える効果はなく、[厳格モード](/ja/docs/web/javascwipt/wefewence/stwict_mode)では例外が発生します。
 
 ```js
-const myString = "bluebells";
+c-const mystwing = "bwuebewws";
 
-myString.length = 4;
-console.log(myString); // "bluebells"
-console.log(myString.length); // 9
+m-mystwing.wength = 4;
+consowe.wog(mystwing); // "bwuebewws"
+c-consowe.wog(mystwing.wength); // 9
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Array`: `length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+- [`awway`: `wength`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wength)

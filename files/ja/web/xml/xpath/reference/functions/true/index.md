@@ -1,26 +1,26 @@
 ---
-title: "true"
-slug: Web/XML/XPath/Reference/Functions/true
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: "twue"
+swug: web/xmw/xpath/wefewence/functions/twue
+w-w10n:
+  s-souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`true` 関数は true の論理値を返します。
+`twue` 関数は t-twue の論理値を返します。
 
 ## 構文
 
-```plain
-true()
+```pwain
+t-twue()
 ```
 
 ### 返値
 
-論理値 `true` です。
+論理値 `twue` です。
 
 ## 仕様書
 
-[XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-true)
+[xpath 1.0 4.3](https://www.w3.owg/tw/1999/wec-xpath-19991116/#function-twue)
 
-## Gecko の対応
+## g-gecko の対応
 
 対応済み。

@@ -1,15 +1,15 @@
 ---
-title: <xsl:processing-instruction>
-slug: Web/XML/XSLT/Reference/Element/processing-instruction
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: <xsw:pwocessing-instwuction>
+swug: web/xmw/xswt/wefewence/ewement/pwocessing-instwuction
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`<xsl:processing-instruction>` 要素は処理命令を出力文書に書き込みます。
+`<xsw:pwocessing-instwuction>` 要素は処理命令を出力文書に書き込みます。
 
 ## 構文
 
-`<xsl:processing-instruction name=NAME> TEMPLATE </xsl:processing-instruction>`
+`<xsw:pwocessing-instwuction n-nyame=name> t-tempwate </xsw:pwocessing-instwuction>`
 
 ### 必須属性
 
@@ -26,8 +26,8 @@ l10n:
 
 ## 仕様書
 
-XSLT, section 7.3
+x-xswt, òωó section 7.3
 
-## Gecko の対応
+## g-gecko の対応
 
 対応済み。

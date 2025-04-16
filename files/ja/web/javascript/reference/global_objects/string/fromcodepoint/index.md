@@ -1,33 +1,33 @@
 ---
-title: String.fromCodePoint()
-slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-l10n:
-  sourceCommit: a49d60648404407784b04ff5ff7e16a6a8d1ac25
+titwe: stwing.fwomcodepoint()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fwomcodepoint
+w-w10n:
+  souwcecommit: a-a49d60648404407784b04ff5ff7e16a6a8d1ac25
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`String.fromCodePoint()`** 静的メソッドは指定されたコードポイントの並びを使って生成された文字列を返します。
+**`stwing.fwomcodepoint()`** 静的メソッドは指定されたコードポイントの並びを使って生成された文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: String.fromCodePoint()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: s-stwing.fwomcodepoint()", (U ﹏ U) "showtew")}}
 
-```js interactive-example
-console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));
-// Expected output: "☃★♲你"
+```js i-intewactive-exampwe
+c-consowe.wog(stwing.fwomcodepoint(9731, >_< 9733, 9842, rawr x3 0x2f804));
+// e-expected output: "☃★♲你"
 ```
 
 ## 構文
 
-```js-nolint
-String.fromCodePoint(num1)
-String.fromCodePoint(num1, num2)
-String.fromCodePoint(num1, num2, /* …, */ numN)
+```js-nowint
+s-stwing.fwomcodepoint(num1)
+stwing.fwomcodepoint(num1, mya nyum2)
+stwing.fwomcodepoint(num1, nyaa~~ nyum2, /* …, (⑅˘꒳˘) */ nyumn)
 ```
 
 ### 引数
 
-- `numN`
-  - : `0` 以上 `0x10FFFF` 以下の整数で、Unicode コードポイントを表します。
+- `numn`
+  - : `0` 以上 `0x10ffff` 以下の整数で、unicode コードポイントを表します。
 
 ### 返値
 
@@ -35,68 +35,68 @@ String.fromCodePoint(num1, num2, /* …, */ numN)
 
 ### 例外
 
-- {{jsxref("RangeError")}}
-  - : `numN` を数値に変換した後で整数でなかった場合、`0` よりも小さかった場合、`0x10FFFF` よりも大きかった場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `numn` を数値に変換した後で整数でなかった場合、`0` よりも小さかった場合、`0x10ffff` よりも大きかった場合に発生します。
 
 ## 解説
 
-`fromCodePoint()` は `String` の静的メソッドなので、自分で生成した `String` オブジェクトのメソッドではなく、常に `String.fromCodePoint()` として使用するようにしてください。
+`fwomcodepoint()` は `stwing` の静的メソッドなので、自分で生成した `stwing` オブジェクトのメソッドではなく、常に `stwing.fwomcodepoint()` として使用するようにしてください。
 
-Unicode のコードポイントは `0` から `1114111` (`0x10FFFF`) までの範囲です。`charAt()` は常に `65536` より小さい値を返しますが、これは上位のコードポイントは 16 ビットのサロゲート擬似文字のペアによって表されているからです。従って、`fromCodePoint()` は（UTF-16 コード単位である） [`length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length) が渡された引数の数よりも大きくなる文字列を返す可能性があります。Unicode に関する情報は[UTF-16 文字、Unicode コードポイント、書記素クラスター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)を参照してください。
+u-unicode のコードポイントは `0` から `1114111` (`0x10ffff`) までの範囲です。`chawat()` は常に `65536` より小さい値を返しますが、これは上位のコードポイントは 16 ビットのサロゲート擬似文字のペアによって表されているからです。従って、`fwomcodepoint()` は（utf-16 コード単位である） [`wength`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wength) が渡された引数の数よりも大きくなる文字列を返す可能性があります。unicode に関する情報は[utf-16 文字、unicode コードポイント、書記素クラスター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_文字、unicode_コードポイント、書記素クラスター)を参照してください。
 
 ## 例
 
-### fromCodePoint() の使用
+### fwomcodepoint() の使用
 
 有効な入力:
 
 ```js
-String.fromCodePoint(42); // "*"
-String.fromCodePoint(65, 90); // "AZ"
-String.fromCodePoint(0x404); // "\u0404" === "Є"
-String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
-String.fromCodePoint(194564); // "\uD87E\uDC04"
-String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
+stwing.fwomcodepoint(42); // "*"
+s-stwing.fwomcodepoint(65, rawr x3 90); // "az"
+stwing.fwomcodepoint(0x404); // "\u0404" === "Є"
+s-stwing.fwomcodepoint(0x2f804); // "\ud87e\udc04"
+stwing.fwomcodepoint(194564); // "\ud87e\udc04"
+stwing.fwomcodepoint(0x1d306, (✿oωo) 0x61, (ˆ ﻌ ˆ)♡ 0x1d307); // "\ud834\udf06a\ud834\udf07"
 ```
 
 無効な入力:
 
 ```js
-String.fromCodePoint("_"); // RangeError
-String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1); // RangeError
-String.fromCodePoint(3.14); // RangeError
-String.fromCodePoint(3e-2); // RangeError
-String.fromCodePoint(NaN); // RangeError
+stwing.fwomcodepoint("_"); // w-wangeewwow
+stwing.fwomcodepoint(infinity); // wangeewwow
+stwing.fwomcodepoint(-1); // w-wangeewwow
+s-stwing.fwomcodepoint(3.14); // wangeewwow
+stwing.fwomcodepoint(3e-2); // wangeewwow
+stwing.fwomcodepoint(nan); // wangeewwow
 ```
 
-### fromCharCode() との比較
+### f-fwomchawcode() との比較
 
-{{jsxref("String.fromCharCode()")}} では補助文字（すなわち `0x010000` – `0x10FFFF`）のコードポイントを指定することで返すことができません。補助文字を返すためには、 UTF-16 のサロゲートペアでが必要です。
+{{jsxwef("stwing.fwomchawcode()")}} では補助文字（すなわち `0x010000` – `0x10ffff`）のコードポイントを指定することで返すことができません。補助文字を返すためには、 utf-16 のサロゲートペアでが必要です。
 
 ```js
-String.fromCharCode(0xd83c, 0xdf03); // Code Point U+1F303 "Night with
-String.fromCharCode(55356, 57091); // Stars" === "\uD83C\uDF03"
+stwing.fwomchawcode(0xd83c, (˘ω˘) 0xdf03); // code point u+1f303 "night with
+s-stwing.fwomchawcode(55356, (⑅˘꒳˘) 57091); // staws" === "\ud83c\udf03"
 ```
 
-一方、 `String.fromCodePoint()` はコードポイント（UTF-32 のコード単位に相当）を指定することで、 4 バイトの補助文字や、一般的な 2 バイトの BMP 文字を返すことができます。
+一方、 `stwing.fwomcodepoint()` はコードポイント（utf-32 のコード単位に相当）を指定することで、 4 バイトの補助文字や、一般的な 2 バイトの b-bmp 文字を返すことができます。
 
 ```js
-String.fromCodePoint(0x1f303); // または 10 進数で 127747
+s-stwing.fwomcodepoint(0x1f303); // または 10 進数で 127747
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`String.fromCodePoint` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.fromCharCode()")}}
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
+- [`stwing.fwomcodepoint` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.fwomchawcode()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}

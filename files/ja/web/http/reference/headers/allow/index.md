@@ -1,56 +1,56 @@
 ---
-title: Allow
-slug: Web/HTTP/Reference/Headers/Allow
-original_slug: Web/HTTP/Headers/Allow
+titwe: awwow
+swug: web/http/wefewence/headews/awwow
+o-owiginaw_swug: w-web/http/headews/awwow
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Allow`** ヘッダーは、あるリソースが対応しているメソッドの一覧を示します。
+**`awwow`** ヘッダーは、あるリソースが対応しているメソッドの一覧を示します。
 
-このヘッダーは、サーバーが {{HTTPStatus("405")}} `Method Not Allowed` ステータスコードで返答する場合、使用することができるリクエストメソッドを示すために送信する必要があります。 `Allow` ヘッダーが空である場合、リソースが許可しているリクエストメソッドがないことを示し、例えば指定されたリソースにおいて一時的に発生する可能性があります。
+このヘッダーは、サーバーが {{httpstatus("405")}} `method n-nyot awwowed` ステータスコードで返答する場合、使用することができるリクエストメソッドを示すために送信する必要があります。 `awwow` ヘッダーが空である場合、リソースが許可しているリクエストメソッドがないことを示し、例えば指定されたリソースにおいて一時的に発生する可能性があります。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Entity header", "エンティティヘッダー")}}
+        {{gwossawy("entity headew", σωσ "エンティティヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name","禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew nyame","禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Allow: <http-methods>
+a-awwow: <http-methods>
 ```
 
 ## ディレクティブ
 
 - \<http-methods>
-  - : 許可されている [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)の一覧。
+  - : 許可されている [http リクエストメソッド](/ja/docs/web/http/wefewence/methods)の一覧。
 
 ## 例
 
 ```
-Allow: GET, POST, HEAD
+awwow: get, >_< post, :3 head
 ```
 
 ## 仕様書
 
 | 仕様書                            | 状態                                                          |
 | --------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (U ﹏ U) "awwow", -.- "7.4.1")}} | hypewtext twansfew pwotocow (http/1.1): s-semantics and content |
 
 ## 関連情報
 
-- {{HTTPStatus("405")}}
-- {{HTTPHeader("Server")}}
+- {{httpstatus("405")}}
+- {{httpheadew("sewvew")}}

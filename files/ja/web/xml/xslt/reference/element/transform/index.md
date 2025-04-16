@@ -1,12 +1,12 @@
 ---
-title: <xsl:transform>
-slug: Web/XML/XSLT/Reference/Element/transform
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: <xsw:twansfowm>
+swug: w-web/xmw/xswt/wefewence/ewement/twansfowm
+w-w10n:
+  s-souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`<xsl:transform>` 要素は [`<xsl:stylesheet>`](/ja/docs/Web/XML/XSLT/Reference/Element/stylesheet) 要素とまったく同じです。
+`<xsw:twansfowm>` 要素は [`<xsw:stywesheet>`](/ja/docs/web/xmw/xswt/wefewence/ewement/stywesheet) 要素とまったく同じです。
 
-## Gecko の対応
+## g-gecko の対応
 
 対応済み。

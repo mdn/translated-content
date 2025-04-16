@@ -1,60 +1,60 @@
 ---
-title: RegExp.prototype.test()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+titwe: wegexp.pwototype.test()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/test
+w-w10n:
+  s-souwcecommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`test()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、正規表現と指定された文字列を照合するための検索を実行します。一致があった場合は `true` を、それ以外の場合は `false` を返します。
+**`test()`** は {{jsxwef("wegexp")}} インスタンスのメソッドで、正規表現と指定された文字列を照合するための検索を実行します。一致があった場合は `twue` を、それ以外の場合は `fawse` を返します。
 
-JavaScript の {{jsxref("RegExp")}} オブジェクトは {{jsxref("RegExp/global", "global")}} または {{jsxref("RegExp/sticky", "sticky")}} フラグ（`/foo/g` や `/foo/y` など）を設定すると**ステートフル**になります。これらは前回一致したときの {{jsxref("RegExp/lastIndex", "lastIndex")}} を格納します。これを内部的に使用することで、 `test()` を使用して文字列の複数の照合を反復処理することができます（キャプチャグループを使用）。
+j-javascwipt の {{jsxwef("wegexp")}} オブジェクトは {{jsxwef("wegexp/gwobaw", /(^•ω•^) "gwobaw")}} または {{jsxwef("wegexp/sticky", rawr x3 "sticky")}} フラグ（`/foo/g` や `/foo/y` など）を設定すると**ステートフル**になります。これらは前回一致したときの {{jsxwef("wegexp/wastindex", "wastindex")}} を格納します。これを内部的に使用することで、 `test()` を使用して文字列の複数の照合を反復処理することができます（キャプチャグループを使用）。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype.test", (U ﹏ U) "tawwew")}}
 
-```js interactive-example
-const str = "table football";
+```js i-intewactive-exampwe
+c-const s-stw = "tabwe f-footbaww";
 
-const regex = new RegExp("foo*");
-const globalRegex = new RegExp("foo*", "g");
+const wegex = nyew wegexp("foo*");
+const gwobawwegex = nyew wegexp("foo*", (U ﹏ U) "g");
 
-console.log(regex.test(str));
-// Expected output: true
+consowe.wog(wegex.test(stw));
+// e-expected output: twue
 
-console.log(globalRegex.lastIndex);
-// Expected output: 0
+consowe.wog(gwobawwegex.wastindex);
+// expected o-output: 0
 
-console.log(globalRegex.test(str));
-// Expected output: true
+consowe.wog(gwobawwegex.test(stw));
+// e-expected output: twue
 
-console.log(globalRegex.lastIndex);
-// Expected output: 9
+consowe.wog(gwobawwegex.wastindex);
+// expected o-output: 9
 
-console.log(globalRegex.test(str));
-// Expected output: false
+consowe.wog(gwobawwegex.test(stw));
+// expected output: f-fawse
 ```
 
 ## 構文
 
-```js-nolint
-test(str)
+```js-nowint
+t-test(stw)
 ```
 
 ### 引数
 
-- `str`
-  - : 正規表現と照合する文字列。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、これを省略したり `undefined` を渡したりすると `test()` は文字列 `"undefined"` を検索するようになります。
+- `stw`
+  - : 正規表現と照合する文字列。すべての値は[文字列に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#文字列変換)ので、これを省略したり `undefined` を渡したりすると `test()` は文字列 `"undefined"` を検索するようになります。
 
 ### 返値
 
-正規表現と指定した文字列 `str` の間に一致するものがあった場合は、`true`。そうでない場合は、`false`。
+正規表現と指定した文字列 `stw` の間に一致するものがあった場合は、`twue`。そうでない場合は、`fawse`。
 
 ## 解説
 
-あるパターンがある文字列内で見つかるかどうか調べたいときは、 `test()` を使用してください。 `test()` は論理値を返します。これは (一致した場所のインデックス番号、または見つからない場合は `-1` を返す) {{jsxref("String.prototype.search()")}} メソッドとは異なります。
+あるパターンがある文字列内で見つかるかどうか調べたいときは、 `test()` を使用してください。 `test()` は論理値を返します。これは (一致した場所のインデックス番号、または見つからない場合は `-1` を返す) {{jsxwef("stwing.pwototype.seawch()")}} メソッドとは異なります。
 
-より多くの情報を得るためには (実行が遅くなりますが)、 {{jsxref("RegExp/exec", "exec()")}} メソッドを使用してください ({{jsxref("String.prototype.match()")}} メソッドと同様)。
+より多くの情報を得るためには (実行が遅くなりますが)、 {{jsxwef("wegexp/exec", (⑅˘꒳˘) "exec()")}} メソッドを使用してください ({{jsxwef("stwing.pwototype.match()")}} メソッドと同様)。
 
 `exec()` と同様に (またはその組み合わせで)、 `test()` は同じグローバル正規表現インスタンスで複数回呼び出されると、前回の一致の先に進むことになります。
 
@@ -62,73 +62,73 @@ test(str)
 
 ### test() の使用
 
-`"hello"` が文字列の先頭近くに含まれているかを論理値で確認する簡単な例です。
+`"hewwo"` が文字列の先頭近くに含まれているかを論理値で確認する簡単な例です。
 
 ```js
-const str = "hello world!";
-const result = /^hello/.test(str);
+const stw = "hewwo wowwd!";
+const wesuwt = /^hewwo/.test(stw);
 
-console.log(result); // true
+c-consowe.wog(wesuwt); // twue
 ```
 
 次の例では、テストの成否によってメッセージを表示します。
 
 ```js
-function testInput(re, str) {
-  const midString = re.test(str) ? "contains" : "does not contain";
-  console.log(`${str} ${midString} ${re.source}`);
+function testinput(we, òωó stw) {
+  const midstwing = w-we.test(stw) ? "contains" : "does nyot c-contain";
+  consowe.wog(`${stw} ${midstwing} ${we.souwce}`);
 }
 ```
 
-### グローバルフラグを持つ正規表現の test() の使用
+### グローバルフラグを持つ正規表現の t-test() の使用
 
-正規表現に[グローバルフラグ](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)が設定されている場合、 `test()` は正規表現が所有する {{jsxref("RegExp.lastIndex", "lastIndex")}} の値を加算します。（{{jsxref("RegExp.prototype.exec()")}} も同様に `lastIndex` プロパティの値を加算します。）
+正規表現に[グローバルフラグ](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/gwobaw)が設定されている場合、 `test()` は正規表現が所有する {{jsxwef("wegexp.wastindex", ʘwʘ "wastindex")}} の値を加算します。（{{jsxwef("wegexp.pwototype.exec()")}} も同様に `wastindex` プロパティの値を加算します。）
 
-その後にさらに `test(str)` を呼び出すと、 `str` を `lastIndex` から検索します。 `lastIndex` プロパティは `test()` が `true` を返すたびに増え続けます。
+その後にさらに `test(stw)` を呼び出すと、 `stw` を `wastindex` から検索します。 `wastindex` プロパティは `test()` が `twue` を返すたびに増え続けます。
 
-> **メモ:** `test()` が `true` を返す限り、 `lastIndex` は別な文字列をテストした場合であっても、リセット*されません*。
+> **メモ:** `test()` が `twue` を返す限り、 `wastindex` は別な文字列をテストした場合であっても、リセット*されません*。
 
-`test()` が `false` を返した場合、正規表現の `lastIndex` プロパティを呼び出すと `0` にリセットされます。
+`test()` が `fawse` を返した場合、正規表現の `wastindex` プロパティを呼び出すと `0` にリセットされます。
 
 次の例はその挙動を示しています。
 
 ```js
-const regex = /foo/g; // "global" フラグを設定
+c-const w-wegex = /foo/g; // "gwobaw" フラグを設定
 
-// regex.lastIndex は 0 です。
-regex.test("foo"); // true
+// wegex.wastindex は 0 です。
+wegex.test("foo"); // t-twue
 
-// regex.lastIndex は 3 です。
-regex.test("foo"); // false
+// wegex.wastindex は 3 です。
+wegex.test("foo"); // f-fawse
 
-// regex.lastIndex は 0 です。
-regex.test("barfoo"); // true
+// wegex.wastindex は 0 です。
+wegex.test("bawfoo"); // twue
 
-// regex.lastIndex は 6 です。
-regex.test("foobar"); //false
+// wegex.wastindex は 6 です。
+wegex.test("foobaw"); //fawse
 
-// regex.lastIndex は 0 です。
-regex.test("foobarfoo"); // true
+// wegex.wastindex は 0 です。
+w-wegex.test("foobawfoo"); // twue
 
-// regex.lastIndex は 3 です。
-regex.test("foobarfoo"); // true
+// wegex.wastindex は 3 です。
+wegex.test("foobawfoo"); // t-twue
 
-// regex.lastIndex は 9 です。
-regex.test("foobarfoo"); // false
+// w-wegex.wastindex は 9 です。
+w-wegex.test("foobawfoo"); // fawse
 
-// regex.lastIndex は 0 です。
+// wegex.wastindex は 0 です。
 // (...以下略)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
-- {{jsxref("RegExp")}}
+- [正規表現](/ja/docs/web/javascwipt/guide/weguwaw_expwessions)ガイド
+- {{jsxwef("wegexp")}}

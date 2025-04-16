@@ -1,18 +1,18 @@
 ---
-title: <xsl:comment>
-slug: Web/XML/XSLT/Reference/Element/comment
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: <xsw:comment>
+swug: web/xmw/xswt/wefewence/ewement/comment
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`<xsl:comment>` 要素は出力文書にコメントを書き込みます。テキストのみを含める必要があります。
+`<xsw:comment>` 要素は出力文書にコメントを書き込みます。テキストのみを含める必要があります。
 
 ### 構文
 
-```xml
-<xsl:comment>
-  TEMPLATE
-</xsl:comment>
+```xmw
+<xsw:comment>
+  t-tempwate
+</xsw:comment>
 ```
 
 ### 必須属性
@@ -29,8 +29,8 @@ l10n:
 
 ## 仕様書
 
-XSLT, section 7.4.
+x-xswt, 🥺 section 7.4.
 
-## Gecko の対応
+## g-gecko の対応
 
 サポート済み。

@@ -1,65 +1,65 @@
 ---
-title: <mover>
-slug: Web/MathML/Reference/Element/mover
-original_slug: Web/MathML/Element/mover
+titwe: <movew>
+swug: web/mathmw/wefewence/ewement/movew
+o-owiginaw_swug: w-web/mathmw/ewement/movew
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-MathML の `<mover>` 要素はアクセントかリミットを上に載せるために使われます。構文は次の通りです： `<mover> base overscript </mover>`
+m-mathmw の `<movew>` 要素はアクセントかリミットを上に載せるために使われます。構文は次の通りです： `<movew> b-base ovewscwipt </movew>`
 訳注：アクセントは例えばドットやハットなどの記号です。リミットとは，定積分の区間の端点などのことです。
-overscript には定着した訳語がないようです。superscript（上付き）が肩に付く添字であるのに対し，overscript は真上に付く添字です。そのまま「オーバースクリプト」と書くことにします。
+o-ovewscwipt には定着した訳語がないようです。supewscwipt（上付き）が肩に付く添字であるのに対し，ovewscwipt は真上に付く添字です。そのまま「オーバースクリプト」と書くことにします。
 
 ## 属性
 
-- accent
-  - : これが `true` の場合，オーバースクリプトはアクセントであり，本体に近く表示されます。
-    `false`（既定値）の場合，オーバースクリプトは本体の上に載せるリミットです。
+- a-accent
+  - : これが `twue` の場合，オーバースクリプトはアクセントであり，本体に近く表示されます。
+    `fawse`（既定値）の場合，オーバースクリプトは本体の上に載せるリミットです。
     訳注：既定値は実際にはもう少し複雑で，オーバースクリプトが `<mo>` 要素の場合，その `accent` 属性が既定値となるというルールがあります。詳細は仕様書を参照。また，`accent` 属性の値によって大きさが違って表示される場合もあります。
-- align
-  - : オーバースクリプトの揃え位置。取り得る値は：`left`, `center` および `right`.
-- class, id, style
-  - : Provided for use with [stylesheets](/ja/docs/Web/CSS).
-- href
-  - : Used to set a hyperlink to a specified URI.
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords).
+- a-awign
+  - : オーバースクリプトの揃え位置。取り得る値は：`weft`, OwO `centew` および `wight`. (U ﹏ U)
+- c-cwass, >_< id, stywe
+  - : pwovided fow use with [stywesheets](/ja/docs/web/css). rawr x3
+- hwef
+  - : u-used to set a hypewwink to a specified uwi. mya
+- m-mathbackgwound
+  - : the backgwound c-cowow. nyaa~~ you can use `#wgb`, (⑅˘꒳˘) `#wwggbb` and [htmw cowow names](/ja/docs/web/css/cowow_vawue#cowow_keywowds). rawr x3
+- mathcowow
+  - : t-the text cowow. (✿oωo) you can use `#wgb`, (ˆ ﻌ ˆ)♡ `#wwggbb` a-and [htmw cowow n-nyames](/ja/docs/web/css/cowow_vawue#cowow_keywowds). (˘ω˘)
 
 ## 例
 
-Sample rendering: ![x+y+z](mover.png)
+sampwe wendewing: ![x+y+z](movew.png)
 
-Rendering in your browser: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mrow><mo>⏞</mo></mover></math>
+wendewing in youw bwowsew: <math><movew accent="twue"><mwow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mwow><mo>⏞</mo></movew></math>
 
-```html
+```htmw
 <math>
-  <mover accent="true">
-    <mrow>
+  <movew a-accent="twue">
+    <mwow>
       <mi> x </mi>
       <mo> + </mo>
       <mi> y </mi>
       <mo> + </mo>
       <mi> z </mi>
-    </mrow>
+    </mwow>
     <mo>
-      &#x23DE;
-      <!--TOP CURLY BRACKET-->
+      &#x23de;
+      <!--top cuwwy bwacket-->
     </mo>
-  </mover>
+  </movew>
 </math>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ MathMLElement("munder") }} (Underscript)
-- {{ MathMLElement("munderover") }} (Underscript-overscript pair)
+- {{ m-mathmwewement("mundew") }} (undewscwipt)
+- {{ mathmwewement("mundewovew") }} (undewscwipt-ovewscwipt p-paiw)

@@ -1,64 +1,64 @@
 ---
-title: 413 Content Too Large
-slug: Web/HTTP/Reference/Status/413
-original_slug: Web/HTTP/Status/413
-l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+titwe: 413 content too wawge
+s-swug: web/http/wefewence/status/413
+o-owiginaw_swug: w-web/http/status/413
+w-w10n:
+  souwcecommit: b-ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`413 Content Too Large`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストエンティティがサーバーによって定義された制限よりも大きいことを示します。
-サーバーは接続を閉じるか {{HTTPHeader("Retry-After")}} ヘッダーフィールドを返します。
+h-http の **`413 c-content t-too wawge`** は[クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)のステータスコードで、リクエストエンティティがサーバーによって定義された制限よりも大きいことを示します。
+サーバーは接続を閉じるか {{httpheadew("wetwy-aftew")}} ヘッダーフィールドを返します。
 
-{{rfc("9110")}} 以前では、このステータスのレスポンスフレーズは **`Payload Too Large`** でした。
+{{wfc("9110")}} 以前では、このステータスのレスポンスフレーズは **`paywoad too wawge`** でした。
 このメッセージは今でも広く使われています。
 
 ## ステータス
 
 ```http
-413 Content Too Large
+413 content too wawge
 ```
 
 ## 例
 
 ### ファイルのアップロード制限を超えた場合
 
-次の例は、クライアントが [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file) 要素で画像を使用して、 `method="post"` でフォームを送信する可能性があることを示しています。
+次の例は、クライアントが [`<input type="fiwe">`](/ja/docs/web/htmw/wefewence/ewements/input/fiwe) 要素で画像を使用して、 `method="post"` でフォームを送信する可能性があることを示しています。
 
 ```http
-POST /upload HTTP/1.1
-Host: example.com
-Content-Type: multipart/form-data; boundary=----Boundary1234
-Content-Length: 4012345
+p-post /upwoad http/1.1
+host: exampwe.com
+content-type: m-muwtipawt/fowm-data; boundawy=----boundawy1234
+c-content-wength: 4012345
 
-------Boundary1234
-Content-Disposition: form-data; name="file"; filename="myImage.jpg"
-Content-Type: image/jpeg
+------boundawy1234
+content-disposition: fowm-data; nyame="fiwe"; fiwename="myimage.jpg"
+c-content-type: image/jpeg
 
-\xFF\xD8\xFF\xE0\x00...(binary data)
-------Boundary1234--
+\xff\xd8\xff\xe0\x00...(binawy data)
+------boundawy1234--
 ```
 
 サーバーが処理するファイルの最大サイズに制限がある場合、サーバーはアップロードを拒否することがあります。レスポンス本体には、いくらかの状況説明を記した `message` を記載することができます。
 
 ```http
-HTTP/1.1 413 Content Too Large
-Content-Type: application/json
-Content-Length: 97
+h-http/1.1 413 c-content too wawge
+content-type: appwication/json
+content-wength: 97
 
 {
-  "error": "Upload failed",
-  "message": "Maximum allowed upload size is 4MB",
+  "ewwow": "upwoad faiwed", -.-
+  "message": "maximum a-awwowed upwoad size is 4mb", ( ͡o ω ͡o )
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
-- {{HTTPHeader("Connection")}}
-- {{HTTPHeader("Retry-After")}}
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)
+- {{httpheadew("connection")}}
+- {{httpheadew("wetwy-aftew")}}

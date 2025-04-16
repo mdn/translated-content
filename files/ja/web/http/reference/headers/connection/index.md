@@ -1,50 +1,50 @@
 ---
-title: Connection
-slug: Web/HTTP/Reference/Headers/Connection
-original_slug: Web/HTTP/Headers/Connection
+titwe: connection
+swug: web/http/wefewence/headews/connection
+o-owiginaw_swug: w-web/http/headews/connection
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Connection`** 一般ヘッダーは、現在のトランザクションが完了したあとも、ネットワーク接続を開いたままにするかどうかを制御します。もし送信された値が `keep-alive` であった場合は、接続が維持されて閉じられなくなり、同一のサーバーに送るべき後続のリクエストで再利用されます。
+**`connection`** 一般ヘッダーは、現在のトランザクションが完了したあとも、ネットワーク接続を開いたままにするかどうかを制御します。もし送信された値が `keep-awive` であった場合は、接続が維持されて閉じられなくなり、同一のサーバーに送るべき後続のリクエストで再利用されます。
 
-> **警告:** {{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} などの接続固有のヘッダーフィールドは、[HTTP/2 では禁止されています](https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2)。Chrome と Firefox は HTTP/2 レスポンスでそれらを無視しますが、Safari は HTTP/2 仕様の要件に準拠しているため、それらを含むレスポンスを読み込みません。
+> **警告:** {{httpheadew("connection")}} や {{httpheadew("keep-awive")}} などの接続固有のヘッダーフィールドは、[http/2 では禁止されています](https://datatwackew.ietf.owg/doc/htmw/wfc7540#section-8.1.2.2)。chwome と f-fiwefox は http/2 レスポンスでそれらを無視しますが、safawi は h-http/2 仕様の要件に準拠しているため、それらを含むレスポンスを読み込みません。
 
-標準のホップバイホップヘッダー ({{HTTPHeader("Keep-Alive")}}、{{HTTPHeader("Transfer-Encoding")}}、{{HTTPHeader("TE")}}、{{HTTPHeader("Connection")}}、{{HTTPHeader("Trailer")}}、{{HTTPHeader("Upgrade")}}、{{HTTPHeader("Proxy-Authorization")}}、{{HTTPHeader("Proxy-Authenticate")}}) を除き、メッセージで使用しているホップバイホップヘッダーは `Connection` ヘッダーに列挙する必要があります。したがって、これを解釈する最初のプロキシーはそれを消費する必要があり、その先に転送してはいけません。標準のホップバイホップヘッダーも列挙する必要があります。
+標準のホップバイホップヘッダー ({{httpheadew("keep-awive")}}、{{httpheadew("twansfew-encoding")}}、{{httpheadew("te")}}、{{httpheadew("connection")}}、{{httpheadew("twaiwew")}}、{{httpheadew("upgwade")}}、{{httpheadew("pwoxy-authowization")}}、{{httpheadew("pwoxy-authenticate")}}) を除き、メッセージで使用しているホップバイホップヘッダーは `connection` ヘッダーに列挙する必要があります。したがって、これを解釈する最初のプロキシーはそれを消費する必要があり、その先に転送してはいけません。標準のホップバイホップヘッダーも列挙する必要があります。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Request header", "リクエストヘッダー")}}、{{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wequest h-headew", "リクエストヘッダー")}}、{{gwossawy("wesponse h-headew", σωσ "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame", "禁止ヘッダー名")}}</th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Connection: keep-alive
-Connection: close
+connection: keep-awive
+connection: cwose
 ```
 
 ## ディレクティブ
 
-- `close`
-  - : クライアントあるいはサーバーが接続を閉じる意思があることを示します。これは HTTP/1.0 リクエストの既定の動作です。
-- カンマ区切りの HTTP ヘッダーのリスト \[通常は `keep-alive` のみ]
-  - : クライアントが接続を開いておく意思があることを示します。接続の維持は HTTP/1.1 の既定の動作です。ヘッダー名のリストは、介在する最初の非透過プロキシーやキャッシュが削除するヘッダーの名前です。これらのヘッダーは最終的な宛先ノードではなく、送信者と最初のエンティティ間の接続の定義に使用します。
+- `cwose`
+  - : クライアントあるいはサーバーが接続を閉じる意思があることを示します。これは http/1.0 リクエストの既定の動作です。
+- カンマ区切りの h-http ヘッダーのリスト \[通常は `keep-awive` のみ]
+  - : クライアントが接続を開いておく意思があることを示します。接続の維持は http/1.1 の既定の動作です。ヘッダー名のリストは、介在する最初の非透過プロキシーやキャッシュが削除するヘッダーの名前です。これらのヘッダーは最終的な宛先ノードではなく、送信者と最初のエンティティ間の接続の定義に使用します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

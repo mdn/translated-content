@@ -1,64 +1,64 @@
 ---
-title: Accept-Ranges
-slug: Web/HTTP/Reference/Headers/Accept-Ranges
-original_slug: Web/HTTP/Headers/Accept-Ranges
+titwe: accept-wanges
+swug: web/http/wefewence/headews/accept-wanges
+o-owiginaw_swug: w-web/http/headews/accept-wanges
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`Accept-Ranges`** レスポンスヘッダーは、サーバーが部分的なリクエストに対応していることを周知するために使用するマーカーです。このフィールドの値は、範囲の定義に使用できる単位を示します。
+h-http の **`accept-wanges`** レスポンスヘッダーは、サーバーが部分的なリクエストに対応していることを周知するために使用するマーカーです。このフィールドの値は、範囲の定義に使用できる単位を示します。
 
-`Accept-Ranges` ヘッダーがあると、ブラウザーは開始から再開するのではなく、中断されたダウンロードを再開しようとする可能性があります。
+`accept-wanges` ヘッダーがあると、ブラウザーは開始から再開するのではなく、中断されたダウンロードを再開しようとする可能性があります。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wesponse h-headew", (U ᵕ U❁) "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew nyame", -.- "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Accept-Ranges: <range-unit>
-Accept-Ranges: none
+accept-wanges: <wange-unit>
+accept-wanges: nyone
 ```
 
 ## ディレクティブ
 
-- `<range-unit>`
-  - : サーバーが対応している範囲の単位を定義します。 `bytes` は {{RFC("7233")}} で公式に定義されている唯一の範囲の単位ですが、追加の範囲の単位が [HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units) に登録されている可能性があります。
+- `<wange-unit>`
+  - : サーバーが対応している範囲の単位を定義します。 `bytes` は {{wfc("7233")}} で公式に定義されている唯一の範囲の単位ですが、追加の範囲の単位が [http wange unit wegistwy](https://www.iana.owg/assignments/http-pawametews/http-pawametews.xhtmw#wange-units) に登録されている可能性があります。
 - `none`
-  - : 範囲の単位には対応していないことを示し、これはヘッダー自体がないのと等価になりますので、滅多に使用されませんが、 IE9 のように一部のブラウザーでは、ダウンロードマネージャーで一時停止ボタンを無効にしたり削除したりするために使用されます。
+  - : 範囲の単位には対応していないことを示し、これはヘッダー自体がないのと等価になりますので、滅多に使用されませんが、 i-ie9 のように一部のブラウザーでは、ダウンロードマネージャーで一時停止ボタンを無効にしたり削除したりするために使用されます。
 
 ## 例
 
 ```
-Accept-Ranges: bytes
+accept-wanges: bytes
 ```
 
 ## 仕様書
 
 | 仕様書                                  | 題名                                                   |
 | --------------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "Accept-Ranges", "2.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", ^^;; "accept-wanges", >_< "2.3")}} | h-hypewtext twansfew p-pwotocow (http/1.1): wange wequests |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
-- [IANA HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units)
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wange")}}
+- [iana http wange unit wegistwy](https://www.iana.owg/assignments/http-pawametews/http-pawametews.xhtmw#wange-units)

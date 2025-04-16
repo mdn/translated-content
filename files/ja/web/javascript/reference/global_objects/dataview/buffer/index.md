@@ -1,49 +1,49 @@
 ---
-title: DataView.prototype.buffer
-slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
+titwe: dataview.pwototype.buffew
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/buffew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`buffer`** アクセサープロパティは、この `DataView` の構築時に参照された {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} を表します。
+**`buffew`** アクセサープロパティは、この `dataview` の構築時に参照された {{jsxwef("awwaybuffew")}} または {{jsxwef("shawedawwaybuffew")}} を表します。
 
-{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+{{intewactiveexampwe("javascwipt d-demo: d-dataview.buffew")}}
 
-```js interactive-example
-// Create an ArrayBuffer
-const buffer = new ArrayBuffer(123);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew
+c-const b-buffew = nyew awwaybuffew(123);
 
-// Create a view
-const view = new DataView(buffer);
+// c-cweate a view
+c-const view = new dataview(buffew);
 
-console.log(view.buffer.byteLength);
-// Expected output: 123
+consowe.wog(view.buffew.bytewength);
+// expected output: 123
 ```
 
 ## 解説
 
-`buffer` プロパティは、設定アクセサー関数が `undefined` である、すなわち読み取りのみができるアクセサープロパティです。この値は `DataView` が構築されたときに確立され、変更することができません。
+`buffew` プロパティは、設定アクセサー関数が `undefined` である、すなわち読み取りのみができるアクセサープロパティです。この値は `dataview` が構築されたときに確立され、変更することができません。
 
 ## 例
 
-### buffer プロパティの使用
+### buffew プロパティの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.buffer; // ArrayBuffer { byteLength: 8 }
+v-vaw buffew = nyew awwaybuffew(8);
+vaw dataview = n-nyew dataview(buffew);
+dataview.buffew; // a-awwaybuffew { bytewength: 8 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("SharedArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew")}}

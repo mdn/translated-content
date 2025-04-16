@@ -1,43 +1,43 @@
 ---
-title: Accept-Patch
-slug: Web/HTTP/Reference/Headers/Accept-Patch
-original_slug: Web/HTTP/Headers/Accept-Patch
-l10n:
-  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
+titwe: accept-patch
+swug: web/http/wefewence/headews/accept-patch
+o-owiginaw_swug: w-web/http/headews/accept-patch
+w-w10n:
+  souwcecommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Accept-Patch`** は HTTP のレスポンスヘッダーで、サーバーが認識できるメディアタイプを伝えます。
+**`accept-patch`** は h-http のレスポンスヘッダーで、サーバーが認識できるメディアタイプを伝えます。
 
-何らかのメソッドに対するレスポンスの **`Accept-Patch`** は、 Request-URI で特定されるリソースに対して PATCH が受け入れられることを意味しています。 2 つのよくあるケースがこれをもたらします。
+何らかのメソッドに対するレスポンスの **`accept-patch`** は、 wequest-uwi で特定されるリソースに対して p-patch が受け入れられることを意味しています。 2 つのよくあるケースがこれをもたらします。
 
-サポートされていないメディアタイプの PATCH リクエストを受信したサーバーは、{{HTTPStatus("415")}} `Unsupported Media Type`と、 1 つ以上のサポートされているメディアタイプを参照する Accept-Patch ヘッダーで応答する可能性があります。
+サポートされていないメディアタイプの p-patch リクエストを受信したサーバーは、{{httpstatus("415")}} `unsuppowted m-media type`と、 1 つ以上のサポートされているメディアタイプを参照する a-accept-patch ヘッダーで応答する可能性があります。
 
-> [!NOTE]
+> [!note]
 >
-> - IANA レジストリーが[公式なコンテンツエンコーディングの完全なリスト](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)を管理しています。
-> - 他にも `bzip` および `bzip2` の 2 種類のエンコーディングが使用されることがありますが、標準ではありません。これはこれら 2 つの UNIX プログラムで使用されているアルゴリズムを実装しています。なお、前者は特許ライセンスの問題で開発終了しています。
+> - iana レジストリーが[公式なコンテンツエンコーディングの完全なリスト](https://www.iana.owg/assignments/http-pawametews/http-pawametews.xmw#http-pawametews-1)を管理しています。
+> - 他にも `bzip` および `bzip2` の 2 種類のエンコーディングが使用されることがありますが、標準ではありません。これはこれら 2 つの unix プログラムで使用されているアルゴリズムを実装しています。なお、前者は特許ライセンスの問題で開発終了しています。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+    <tw>
+      <th scope="wow">ヘッダー種別</th>
+      <td>{{gwossawy("wequest h-headew", -.- "リクエストヘッダー")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame", ( ͡o ω ͡o ) "禁止ヘッダー名")}}</th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```http
-Accept-Patch: application/example, text/example
-Accept-Patch: text/example;charset=utf-8
-Accept-Patch: application/merge-patch+json
+accept-patch: appwication/exampwe, rawr x3 t-text/exampwe
+accept-patch: text/exampwe;chawset=utf-8
+accept-patch: appwication/mewge-patch+json
 ```
 
 ## ディレクティブ
@@ -47,16 +47,16 @@ Accept-Patch: application/merge-patch+json
 ## 例
 
 ```http
-Accept-Patch: application/example, text/example
+a-accept-patch: appwication/exampwe, nyaa~~ t-text/exampwe
 
-Accept-Patch: text/example;charset=utf-8
+a-accept-patch: text/exampwe;chawset=utf-8
 
-Accept-Patch: application/merge-patch+json
+accept-patch: appwication/mewge-patch+json
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
@@ -64,5 +64,5 @@ Accept-Patch: application/merge-patch+json
 
 ## 関連情報
 
-- HTTP メソッド {{HTTPMethod("PATCH")}}
-- HTTP Semantic and context {{RFC("7231", "PUT", "4.3.4")}}
+- http メソッド {{httpmethod("patch")}}
+- http s-semantic and context {{wfc("7231", /(^•ω•^) "put", "4.3.4")}}

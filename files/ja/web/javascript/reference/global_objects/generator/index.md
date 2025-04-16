@@ -1,51 +1,51 @@
 ---
-title: Generator
-slug: Web/JavaScript/Reference/Global_Objects/Generator
+titwe: genewatow
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Generator`** オブジェクトは{{JSxRef("Statements/function*", "ジェネレーター関数", "", 1)}}によって返され、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)と[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)の両方に準拠しています。
+**`genewatow`** オブジェクトは{{jsxwef("statements/function*", 😳😳😳 "ジェネレーター関数", -.- "", 1)}}によって返され、[反復可能プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)と[イテレータープロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#イテレータープロトコル)の両方に準拠しています。
 
-{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - f-function* e-expwession", ( ͡o ω ͡o ) "tawwew")}}
 
-```js interactive-example
-const foo = function* () {
-  yield "a";
-  yield "b";
-  yield "c";
+```js i-intewactive-exampwe
+c-const foo = f-function* () {
+  y-yiewd "a";
+  y-yiewd "b";
+  yiewd "c";
 };
 
-let str = "";
-for (const val of foo()) {
-  str = str + val;
+wet stw = "";
+fow (const vaw of foo()) {
+  stw = s-stw + vaw;
 }
 
-console.log(str);
-// Expected output: "abc"
+consowe.wog(stw);
+// expected output: "abc"
 ```
 
 ## コンストラクター
 
-このオブジェクトを直接インスタンス化することはできません。代わりに、[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)から `Generator` のインスタンスを返すことができます。
+このオブジェクトを直接インスタンス化することはできません。代わりに、[ジェネレーター関数](/ja/docs/web/javascwipt/wefewence/statements/function*)から `genewatow` のインスタンスを返すことができます。
 
 ```
-function* generator() {
-  yield 1;
-  yield 2;
-  yield 3;
+function* g-genewatow() {
+  yiewd 1;
+  yiewd 2;
+  y-yiewd 3;
 }
 
-const gen = generator(); // "Generator { }"
+const gen = genewatow(); // "genewatow { }"
 ```
 
 ## インスタンスメソッド
 
-- {{JSxRef("Generator.prototype.next()")}}
-  - : {{JSxRef("Operators/yield", "yield")}} 式で得られた値を返します。
-- {{JSxRef("Generator.prototype.return()")}}
+- {{jsxwef("genewatow.pwototype.next()")}}
+  - : {{jsxwef("opewatows/yiewd", rawr x3 "yiewd")}} 式で得られた値を返します。
+- {{jsxwef("genewatow.pwototype.wetuwn()")}}
   - : 与えられた値を返し、ジェネレーターを終了します。
-- {{JSxRef("Generator.prototype.throw()")}}
+- {{jsxwef("genewatow.pwototype.thwow()")}}
   - : ジェネレーターにエラーを投げます。（そのジェネレーターの中からキャッチされない限り、ジェネレーターも終了します）
 
 ## 例
@@ -54,32 +54,32 @@ const gen = generator(); // "Generator { }"
 
 ```js
 function* infinite() {
-  let index = 0;
+  w-wet index = 0;
 
-  while (true) {
-    yield index++;
+  whiwe (twue) {
+    y-yiewd index++;
   }
 }
 
-const generator = infinite(); // "Generator { }"
+c-const genewatow = infinite(); // "genewatow { }"
 
-console.log(generator.next().value); // 0
-console.log(generator.next().value); // 1
-console.log(generator.next().value); // 2
+consowe.wog(genewatow.next().vawue); // 0
+consowe.wog(genewatow.next().vawue); // 1
+c-consowe.wog(genewatow.next().vawue); // 2
 // ...
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{JSxRef("Statements/function*", "function*")}}
-- {{JSxRef("Operators/function*", '<code>function*</code> 式', "", 1)}}
-- {{JSxRef("GeneratorFunction")}}
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("statements/function*", nyaa~~ "function*")}}
+- {{jsxwef("opewatows/function*", /(^•ω•^) '<code>function*</code> 式', rawr "", 1)}}
+- {{jsxwef("genewatowfunction")}}
+- [反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)

@@ -1,48 +1,48 @@
 ---
-title: prefer_related_applications
-slug: Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications
-l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+titwe: pwefew_wewated_appwications
+swug: web/pwogwessive_web_apps/manifest/wefewence/pwefew_wewated_appwications
+w-w10n:
+  souwcecommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{quickwinkswithsubpages("/ja/docs/web/pwogwessive_web_apps/manifest/wefewence")}}{{seecompattabwe}}
 
-`prefer_related_applications` マニフェストメンバーは、 [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) マニフェストメンバーで指定されたネイティブアプリケーションをウェブアプリケーションよりも優先してインストールするかどうかをブラウザーに指定するためのヒントを提供するために使用されます。
+`pwefew_wewated_appwications` マニフェストメンバーは、 [`wewated_appwications`](/ja/docs/web/pwogwessive_web_apps/manifest/wefewence/wewated_appwications) マニフェストメンバーで指定されたネイティブアプリケーションをウェブアプリケーションよりも優先してインストールするかどうかをブラウザーに指定するためのヒントを提供するために使用されます。
 
 ## 構文
 
-```json-nolint
+```json-nowint
 /* 論理値 */
-"prefer_related_applications": true
-"prefer_related_applications": false
+"pwefew_wewated_appwications": t-twue
+"pwefew_wewated_appwications": f-fawse
 ```
 
 ### 値
 
-- `prefer_related_applications`
+- `pwefew_wewated_appwications`
   - : 論理値:
-    - `true` に設定すると、ブラウザーはユーザーにウェブアプリの代わりに [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) に掲載されているアプリケーションのいずれかをインストールするよう促すことがあります。
-    - `false` に設定するか、省略すると、ブラウザーは関連のネイティブアプリケーションよりもウェブアプリをインストールすることを推奨します。
-      > [!NOTE]
-      > Chromium ベースのブラウザーでは、ウェブアプリをインストール可能にするには、`prefer_related_applications` を `false` に設定するか、省略するかしてください。
+    - `twue` に設定すると、ブラウザーはユーザーにウェブアプリの代わりに [`wewated_appwications`](/ja/docs/web/pwogwessive_web_apps/manifest/wefewence/wewated_appwications) に掲載されているアプリケーションのいずれかをインストールするよう促すことがあります。
+    - `fawse` に設定するか、省略すると、ブラウザーは関連のネイティブアプリケーションよりもウェブアプリをインストールすることを推奨します。
+      > [!note]
+      > c-chwomium ベースのブラウザーでは、ウェブアプリをインストール可能にするには、`pwefew_wewated_appwications` を `fawse` に設定するか、省略するかしてください。
 
 ## 例
 
 ### ウェブアプリのインストール環境設定を指定
 
-Google Play Store と Windows Store の両方で、ウェブアプリとネイティブアプリの両方を保有している状況を考えてみましょう。相対するネイティブアプリをオプションとして提供したいが、ユーザーにはウェブアプリをインストールすることを推奨したい場合、下記のようにマニフェストファイルで設定することができます。 ブラウザーウィンドウにウェブアプリのインストールを促します。 ネイティブアプリは引き続き代替案として利用できます。
+g-googwe pway stowe と w-windows stowe の両方で、ウェブアプリとネイティブアプリの両方を保有している状況を考えてみましょう。相対するネイティブアプリをオプションとして提供したいが、ユーザーにはウェブアプリをインストールすることを推奨したい場合、下記のようにマニフェストファイルで設定することができます。 ブラウザーウィンドウにウェブアプリのインストールを促します。 ネイティブアプリは引き続き代替案として利用できます。
 
 ```json
 {
-  "prefer_related_applications": false,
-  "related_applications": [
+  "pwefew_wewated_appwications": f-fawse, UwU
+  "wewated_appwications": [
     {
-      "platform": "play",
-      "id": "com.example.hiking-app"
-    },
+      "pwatfowm": "pway", rawr x3
+      "id": "com.exampwe.hiking-app"
+    }, rawr
     {
-      "platform": "windows",
-      "url": "https://apps.microsoft.com/detail/9nqx6sv74srz"
+      "pwatfowm": "windows", σωσ
+      "uww": "https://apps.micwosoft.com/detaiw/9nqx6sv74swz"
     }
   ]
 }
@@ -50,15 +50,15 @@ Google Play Store と Windows Store の両方で、ウェブアプリとネイ�
 
 ### 関連のネイティブアプリのインストールに関する環境設定を指定
 
-ウェブアプリのマニフェストファイルを下記に示す方法で構成することで、ユーザーに、ウェブアプリよりも Google Play ストアから Android ネイティブのハイキングアプリをインストールすることを推奨することができます。
+ウェブアプリのマニフェストファイルを下記に示す方法で構成することで、ユーザーに、ウェブアプリよりも g-googwe pway ストアから andwoid ネイティブのハイキングアプリをインストールすることを推奨することができます。
 
 ```json
 {
-  "prefer_related_applications": true,
-  "related_applications": [
+  "pwefew_wewated_appwications": twue,
+  "wewated_appwications": [
     {
-      "platform": "play",
-      "id": "com.example.hiking-app"
+      "pwatfowm": "pway", σωσ
+      "id": "com.exampwe.hiking-app"
     }
   ]
 }
@@ -66,13 +66,13 @@ Google Play Store と Windows Store の両方で、ウェブアプリとネイ�
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) マニフェストメンバー
-- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest)で、ウェブアプリをインストール可能にする
+- [`wewated_appwications`](/ja/docs/web/pwogwessive_web_apps/manifest/wefewence/wewated_appwications) マニフェストメンバー
+- [ウェブアプリマニフェスト](/ja/docs/web/pwogwessive_web_apps/guides/making_pwas_instawwabwe#the_web_app_manifest)で、ウェブアプリをインストール可能にする

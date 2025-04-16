@@ -1,181 +1,181 @@
 ---
-title: プロパティアクセサー
-slug: Web/JavaScript/Reference/Operators/Property_accessors
-l10n:
-  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
+titwe: プロパティアクセサー
+swug: web/javascwipt/wefewence/opewatows/pwopewty_accessows
+w-w10n:
+  souwcecommit: e-e03b13c7e157ec7b7bb02a6c7c4854b862195905
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **プロパティアクセサー**はオブジェクトのプロパティへのアクセスを提供するもので、ドット記法またはブラケット記法を使用します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Property accessors", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - p-pwopewty accessows", OwO "tawwew")}}
 
-```js interactive-example
-const person1 = {};
-person1["firstname"] = "Mario";
-person1["lastname"] = "Rossi";
+```js i-intewactive-exampwe
+c-const pewson1 = {};
+p-pewson1["fiwstname"] = "mawio";
+p-pewson1["wastname"] = "wossi";
 
-console.log(person1.firstname);
-// Expected output: "Mario"
+consowe.wog(pewson1.fiwstname);
+// expected output: "mawio"
 
-const person2 = {
-  firstname: "John",
-  lastname: "Doe",
+const pewson2 = {
+  f-fiwstname: "john", 😳😳😳
+  wastname: "doe", 😳😳😳
 };
 
-console.log(person2["lastname"]);
-// Expected output: "Doe"
+consowe.wog(pewson2["wastname"]);
+// expected output: "doe"
 ```
 
 ## 構文
 
-```js-nolint
-object.propertyName
-object[expression]
-object.#privateProperty
+```js-nowint
+o-object.pwopewtyname
+object[expwession]
+object.#pwivatepwopewty
 ```
 
 ## 解説
 
-オブジェクトは実際には*連想配列*（別名 _map_、 _dictionary_、 _hash_、 _lookup table_）とみなすことができます。この配列における*キー*はオブジェクトの[プロパティ](/ja/docs/Glossary/Property/JavaScript)の名前です。
+オブジェクトは実際には*連想配列*（別名 _map_、 _dictionawy_、 _hash_、 _wookup t-tabwe_）とみなすことができます。この配列における*キー*はオブジェクトの[プロパティ](/ja/docs/gwossawy/pwopewty/javascwipt)の名前です。
 
 プロパティにアクセスするには、*ドット記法*と*ブラケット記法*の 2 通りがあります。
 
 ### ドット記法
 
-`object.propertyName` の構文では、 `propertyName` は有効な JavaScript の [識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)でなければならず、[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#キーワード)であっても構いません。例えば、 `object.$1` は有効であるのに対し、 `object.1` は有効ではありません。
+`object.pwopewtyname` の構文では、 `pwopewtyname` は有効な javascwipt の [識別子](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#識別子)でなければならず、[予約語](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#キーワード)であっても構いません。例えば、 `object.$1` は有効であるのに対し、 `object.1` は有効ではありません。
 
 ```js
-const variable = object.propertyName;
-object.propertyName = value;
+const vawiabwe = object.pwopewtyname;
+o-object.pwopewtyname = vawue;
 ```
 
 ```js
-const object = {};
+c-const o-object = {};
 object.$1 = "foo";
-console.log(object.$1); // 'foo'
+consowe.wog(object.$1); // 'foo'
 ```
 
-```js-nolint example-bad
+```js-nowint exampwe-bad
 const object = {};
-object.1 = 'bar'; // SyntaxError
-console.log(object.1); // SyntaxError
+object.1 = 'baw'; // s-syntaxewwow
+consowe.wog(object.1); // syntaxewwow
 ```
 
-ここで、 `createElement` というメソッドを `document` から取得し、呼び出します。
+ここで、 `cweateewement` というメソッドを `document` から取得し、呼び出します。
 
 ```js
-document.createElement("pre");
+document.cweateewement("pwe");
 ```
 
-数値リテラルに対してメソッドを使用する場合で、その数値リテラルに指数や小数点がない場合、メソッド呼び出しをするドットの前に[ホワイトスペース](/ja/docs/Glossary/Whitespace)を入れることで、ドットが小数点とみなされることを防ぐことができます。
+数値リテラルに対してメソッドを使用する場合で、その数値リテラルに指数や小数点がない場合、メソッド呼び出しをするドットの前に[ホワイトスペース](/ja/docs/gwossawy/whitespace)を入れることで、ドットが小数点とみなされることを防ぐことができます。
 
-```js-nolint
-77 .toExponential();
-// or
+```js-nowint
+77 .toexponentiaw();
+// ow
 77
-.toExponential();
-// or
-(77).toExponential();
-// or
-77..toExponential();
-// or
-77.0.toExponential();
+.toexponentiaw();
+// ow
+(77).toexponentiaw();
+// o-ow
+77..toexponentiaw();
+// ow
+77.0.toexponentiaw();
 // 77.と77.0は同じものとして評価されます
 ```
 
-さらに、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)は、それを定義するクラス内でドット記法を使用してのみアクセスすることができます。
+さらに、[プライベートプロパティ](/ja/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties)は、それを定義するクラス内でドット記法を使用してのみアクセスすることができます。
 
 ### ブラケット記法
 
-`object[expression]` の構文では、`expression` は文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)です。ですから、これは任意の文字列、例えば `'1foo'`、`'!bar!'`、または `' '` (空白) であっても構いません。
+`object[expwession]` の構文では、`expwession` は文字列または[シンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)です。ですから、これは任意の文字列、例えば `'1foo'`、`'!baw!'`、または `' '` (空白) であっても構いません。
 
 ```js
-const variable = object[propertyName];
-object[propertyName] = value;
+c-const vawiabwe = o-object[pwopewtyname];
+o-object[pwopewtyname] = v-vawue;
 ```
 
 これは前の例とまったく同じです。
 
 ```js
-document["createElement"]("pre");
+document["cweateewement"]("pwe");
 ```
 
 ブラケット記法の前には空白を入れることができます。
 
-```js-nolint
-document ["createElement"]("pre");
+```js-nowint
+document ["cweateewement"]("pwe");
 ```
 
 プロパティ名として評価される式を渡すと、プロパティ名を直に直接渡すのと同じことが行われます。
 
 ```js
-const key = "name";
-const getKey = () => "name";
-const Obj = { name: "Michel" };
+c-const key = "name";
+const getkey = () => "name";
+const obj = { name: "michew" };
 
-Obj["name"]; // "Michel" を返す
-Obj[key]; // Obj["name"] と解釈され、 "Michel" を返す
-Obj[getKey()]; // Obj["name"] と解釈され、 "Michel" を返す
+o-obj["name"]; // "michew" を返す
+obj[key]; // obj["name"] と解釈され、 "michew" を返す
+obj[getkey()]; // obj["name"] と解釈され、 "michew" を返す
 ```
 
-ただし、外部入力で指定された名前のプロパティにアクセスするために角括弧を使用することには注意が必要です。これにより、コードが[オブジェクトインジェクション攻撃](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md)を許しやすくなる可能性があります。
+ただし、外部入力で指定された名前のプロパティにアクセスするために角括弧を使用することには注意が必要です。これにより、コードが[オブジェクトインジェクション攻撃](https://github.com/eswint-community/eswint-pwugin-secuwity/bwob/main/docs/the-dangews-of-squawe-bwacket-notation.md)を許しやすくなる可能性があります。
 
 ### プロパティ名
 
-プロパティ名は文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)です。それ以外の値は、数値を含めて、文字列へ強制変換されます。これは `'value'` を出力します。 `1` が `'1'` に強制変換されるからです。
+プロパティ名は文字列または[シンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)です。それ以外の値は、数値を含めて、文字列へ強制変換されます。これは `'vawue'` を出力します。 `1` が `'1'` に強制変換されるからです。
 
 ```js
-const object = {};
-object["1"] = "value";
-console.log(object[1]);
+const o-object = {};
+object["1"] = "vawue";
+c-consowe.wog(object[1]);
 ```
 
-こちらも `'value'` を出力します。`foo` と `bar` は同じ文字列に変換されるからです。
+こちらも `'vawue'` を出力します。`foo` と `baw` は同じ文字列に変換されるからです。
 
 ```js
-const foo = { uniqueProp: 1 };
-const bar = { uniqueProp: 2 };
+c-const f-foo = { uniquepwop: 1 };
+const baw = { uniquepwop: 2 };
 const object = {};
-object[foo] = "value";
-console.log(object[bar]);
+o-object[foo] = "vawue";
+c-consowe.wog(object[baw]);
 ```
 
 ### メソッドのバインド
 
-オブジェクトのプロパティについて話す場合は、プロパティとメソッドを区別するのが一般的です。しかし、プロパティとメソッドの区別は、単なる慣習にすぎません。メソッドは、呼び出すことができるプロパティです（例えば、{{jsxref("Function")}} インスタンスへの参照を値として保有している場合など）。
+オブジェクトのプロパティについて話す場合は、プロパティとメソッドを区別するのが一般的です。しかし、プロパティとメソッドの区別は、単なる慣習にすぎません。メソッドは、呼び出すことができるプロパティです（例えば、{{jsxwef("function")}} インスタンスへの参照を値として保有している場合など）。
 
-メソッドは、そのメソッドが所属するオブジェクトにバインドされているわけではありません。特に、 `this` はメソッド内で固定されているわけではなく、必ずしもそのメソッドを含んでいるオブジェクトを参照しているとは限りません。 `this` は関数呼び出し時に「渡される」ものです。[`this` のリファレンス](/ja/docs/Web/JavaScript/Reference/Operators/this)を参照してください。
+メソッドは、そのメソッドが所属するオブジェクトにバインドされているわけではありません。特に、 `this` はメソッド内で固定されているわけではなく、必ずしもそのメソッドを含んでいるオブジェクトを参照しているとは限りません。 `this` は関数呼び出し時に「渡される」ものです。[`this` のリファレンス](/ja/docs/web/javascwipt/wefewence/opewatows/this)を参照してください。
 
 ## 例
 
-### ブラケット記法と eval()
+### ブラケット記法と evaw()
 
-JavaScript 初心者はしばしば、代わりにブラケット記法を使えるところで {{jsxref("eval", "eval()")}} を使用してしまう間違いを犯します。
+j-javascwipt 初心者はしばしば、代わりにブラケット記法を使えるところで {{jsxwef("evaw", o.O "evaw()")}} を使用してしまう間違いを犯します。
 
 例えば、以下のような構文がたくさんのスクリプトで見られます。
 
 ```js
-const x = eval(`document.forms.form_name.elements.${strFormControl}.value`);
+c-const x = evaw(`document.fowms.fowm_name.ewements.${stwfowmcontwow}.vawue`);
 ```
 
-`eval()` は低速であり、可能な限り避けるべきです。また、 `strFormControl` は ID を必要としますが、フォームコントロールの名前と `id` は必須ではありません。代わりにブラケット記法を使った方が良いでしょう。
+`evaw()` は低速であり、可能な限り避けるべきです。また、 `stwfowmcontwow` は i-id を必要としますが、フォームコントロールの名前と `id` は必須ではありません。代わりにブラケット記法を使った方が良いでしょう。
 
 ```js
-const x = document.forms.form_name.elements[strFormControl].value;
+const x = document.fowms.fowm_name.ewements[stwfowmcontwow].vawue;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object")}}
-- {{jsxref("Object.defineProperty()")}}
-- [オプショナルチェーン (`?.`)](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- {{jsxwef("object")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [オプショナルチェーン (`?.`)](/ja/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining)

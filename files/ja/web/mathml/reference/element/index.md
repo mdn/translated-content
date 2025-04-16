@@ -1,146 +1,146 @@
 ---
-title: MathML 要素リファレンス
-slug: Web/MathML/Reference/Element
-original_slug: Web/MathML/Element
-l10n:
-  sourceCommit: 34c43aca36f776c824e698dfd07e3ece34cc6f00
+titwe: mathmw 要素リファレンス
+swug: w-web/mathmw/wefewence/ewement
+o-owiginaw_swug: w-web/mathmw/ewement
+w10n:
+  s-souwcecommit: 34c43aca36f776c824e698dfd07e3ece34cc6f00
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-これは MathML 要素のアルファベット順リストです。これらはすべて {{domxref("MathMLElement")}} クラスを実装しています。
+これは m-mathmw 要素のアルファベット順リストです。これらはすべて {{domxwef("mathmwewement")}} クラスを実装しています。
 
-> **メモ:** [MathML](/ja/docs/Web/MathML) のメインページで説明されているように、 MDN は [MathML Core](https://w3c.github.io/mathml-core/) を参照仕様として使用しています。しかし、一部のブラウザーでまだ実装されている古い機能も文書化しています。 [MathML 4](https://w3c.github.io/mathml/)には、これらの機能やその他の機能の詳細が記載されています。
+> **メモ:** [mathmw](/ja/docs/web/mathmw) のメインページで説明されているように、 m-mdn は [mathmw c-cowe](https://w3c.github.io/mathmw-cowe/) を参照仕様として使用しています。しかし、一部のブラウザーでまだ実装されている古い機能も文書化しています。 [mathmw 4](https://w3c.github.io/mathmw/)には、これらの機能やその他の機能の詳細が記載されています。
 
-## MathML 要素（アルファベット順）
+## m-mathmw 要素（アルファベット順）
 
 ### math
 
-- {{MathMLElement("math")}} （最上位要素）
+- {{mathmwewement("math")}} （最上位要素）
 
-### A
+### a
 
-- {{MathMLElement("maction")}} {{deprecated_inline}} （部分式にバインドされたアクション）
-- {{MathMLElement("annotation")}} （データ注釈）
-- {{MathMLElement("annotation-xml")}} （XML 注釈）
+- {{mathmwewement("maction")}} {{depwecated_inwine}} （部分式にバインドされたアクション）
+- {{mathmwewement("annotation")}} （データ注釈）
+- {{mathmwewement("annotation-xmw")}} （xmw 注釈）
 
-### E
+### e
 
-- {{MathMLElement("menclose")}} {{non-standard_inline}} （囲みコンテンツ）
-- {{MathMLElement("merror")}} ）（囲み構文エラーメッセージ）
+- {{mathmwewement("mencwose")}} {{non-standawd_inwine}} （囲みコンテンツ）
+- {{mathmwewement("mewwow")}} ）（囲み構文エラーメッセージ）
 
-### F
+### f
 
-- {{MathMLElement("mfenced")}} {{non-standard_inline}}{{deprecated_inline}} （括弧）
-- {{MathMLElement("mfrac")}} （分数）
+- {{mathmwewement("mfenced")}} {{non-standawd_inwine}}{{depwecated_inwine}} （括弧）
+- {{mathmwewement("mfwac")}} （分数）
 
-### I
+### i
 
-- {{MathMLElement("mi")}} （識別子）
+- {{mathmwewement("mi")}} （識別子）
 
-### M
+### m-m
 
-- {{MathMLElement("mmultiscripts")}} （前置字とテンソル添字）
+- {{mathmwewement("mmuwtiscwipts")}} （前置字とテンソル添字）
 
-### N
+### ny
 
-- {{MathMLElement("mn")}} （数字）
+- {{mathmwewement("mn")}} （数字）
 
-### O
+### o
 
-- {{MathMLElement("mo")}} （演算子）
-- {{MathMLElement("mover")}} （真上付き）
+- {{mathmwewement("mo")}} （演算子）
+- {{mathmwewement("movew")}} （真上付き）
 
-### P
+### p-p
 
-- {{MathMLElement("mpadded")}} （コンテンツまわりの空白）
-- {{MathMLElement("mphantom")}} （予約スペースを持つ不可視コンテンツ）
-- {{MathMLElement("mprescripts")}} （前置文字の区切り文字）
+- {{mathmwewement("mpadded")}} （コンテンツまわりの空白）
+- {{mathmwewement("mphantom")}} （予約スペースを持つ不可視コンテンツ）
+- {{mathmwewement("mpwescwipts")}} （前置文字の区切り文字）
 
-### R
+### w
 
-- {{MathMLElement("mroot")}} （累乗根）
-- {{MathMLElement("mrow")}} （グループ化された部分式）
+- {{mathmwewement("mwoot")}} （累乗根）
+- {{mathmwewement("mwow")}} （グループ化された部分式）
 
-### S
+### s-s
 
-- {{MathMLElement("ms")}} （文字列リテラル）
-- {{MathMLElement("semantics")}} （意味的注釈用のコンテナー）
-- {{MathMLElement("mspace")}} （空白）
-- {{MathMLElement("msqrt")}} （平方根）
-- {{MathMLElement("mstyle")}} （書式変更）
-- {{MathMLElement("msub")}} （下付き）
-- {{MathMLElement("msup")}} （上付き）
-- {{MathMLElement("msubsup")}} （下付き上付きの組）
+- {{mathmwewement("ms")}} （文字列リテラル）
+- {{mathmwewement("semantics")}} （意味的注釈用のコンテナー）
+- {{mathmwewement("mspace")}} （空白）
+- {{mathmwewement("msqwt")}} （平方根）
+- {{mathmwewement("mstywe")}} （書式変更）
+- {{mathmwewement("msub")}} （下付き）
+- {{mathmwewement("msup")}} （上付き）
+- {{mathmwewement("msubsup")}} （下付き上付きの組）
 
-### T
+### t
 
-- {{MathMLElement("mtable")}} （表または行列）
-- {{MathMLElement("mtd")}} （表または行列のセル）
-- {{MathMLElement("mtext")}} （テキスト）
-- {{MathMLElement("mtr")}} （表または行列の列）
+- {{mathmwewement("mtabwe")}} （表または行列）
+- {{mathmwewement("mtd")}} （表または行列のセル）
+- {{mathmwewement("mtext")}} （テキスト）
+- {{mathmwewement("mtw")}} （表または行列の列）
 
-### U
+### u
 
-- {{MathMLElement("munder")}} （真下付き）
-- {{MathMLElement("munderover")}} （真下付きと真上付きの組）
+- {{mathmwewement("mundew")}} （真下付き）
+- {{mathmwewement("mundewovew")}} （真下付きと真上付きの組）
 
-## MathML 要素（カテゴリー別）
+## mathmw 要素（カテゴリー別）
 
 ### 最上位要素
 
-- {{MathMLElement("math")}} （最上位要素）
+- {{mathmwewement("math")}} （最上位要素）
 
 ### トークン要素
 
-- {{MathMLElement("mi")}} （識別子）
-- {{MathMLElement("mn")}} （数字）
-- {{MathMLElement("mo")}} （演算子）
-- {{MathMLElement("ms")}} （文字列リテラル）
-- {{MathMLElement("mspace")}} （空白）
-- {{MathMLElement("mtext")}} （テキスト）
+- {{mathmwewement("mi")}} （識別子）
+- {{mathmwewement("mn")}} （数字）
+- {{mathmwewement("mo")}} （演算子）
+- {{mathmwewement("ms")}} （文字列リテラル）
+- {{mathmwewement("mspace")}} （空白）
+- {{mathmwewement("mtext")}} （テキスト）
 
 ### 一般レイアウト
 
-- {{MathMLElement("menclose")}} {{non-standard_inline}} （囲みコンテンツ）
-- {{MathMLElement("merror")}} ）（囲み構文エラーメッセージ）
-- {{MathMLElement("mfenced")}} {{non-standard_inline}}{{deprecated_inline}} （括弧）
-- {{MathMLElement("mfrac")}} （分数）
-- {{MathMLElement("mpadded")}} （コンテンツまわりの空白）
-- {{MathMLElement("mphantom")}} （予約スペースを持つ不可視コンテンツ）
-- {{MathMLElement("mroot")}} （累乗根）
-- {{MathMLElement("mrow")}} （グループ化された部分式）
-- {{MathMLElement("msqrt")}} （平方根）
-- {{MathMLElement("mstyle")}} （書式変更）
+- {{mathmwewement("mencwose")}} {{non-standawd_inwine}} （囲みコンテンツ）
+- {{mathmwewement("mewwow")}} ）（囲み構文エラーメッセージ）
+- {{mathmwewement("mfenced")}} {{non-standawd_inwine}}{{depwecated_inwine}} （括弧）
+- {{mathmwewement("mfwac")}} （分数）
+- {{mathmwewement("mpadded")}} （コンテンツまわりの空白）
+- {{mathmwewement("mphantom")}} （予約スペースを持つ不可視コンテンツ）
+- {{mathmwewement("mwoot")}} （累乗根）
+- {{mathmwewement("mwow")}} （グループ化された部分式）
+- {{mathmwewement("msqwt")}} （平方根）
+- {{mathmwewement("mstywe")}} （書式変更）
 
 ### スクリプトと制限要素
 
-- {{MathMLElement("mmultiscripts")}} （前置字とテンソル添字）
-- {{MathMLElement("mover")}} （真上付き）
-- {{MathMLElement("mprescripts")}} （前置文字の区切り文字）
-- {{MathMLElement("msub")}} （下付き）
-- {{MathMLElement("msubsup")}} （下付き上付きの組）
-- {{MathMLElement("msup")}} （上付き）
-- {{MathMLElement("munder")}} （真下付き）
-- {{MathMLElement("munderover")}} （真下付きと真上付きの組）
+- {{mathmwewement("mmuwtiscwipts")}} （前置字とテンソル添字）
+- {{mathmwewement("movew")}} （真上付き）
+- {{mathmwewement("mpwescwipts")}} （前置文字の区切り文字）
+- {{mathmwewement("msub")}} （下付き）
+- {{mathmwewement("msubsup")}} （下付き上付きの組）
+- {{mathmwewement("msup")}} （上付き）
+- {{mathmwewement("mundew")}} （真下付き）
+- {{mathmwewement("mundewovew")}} （真下付きと真上付きの組）
 
 ### 表形式の数式
 
-- {{MathMLElement("mtable")}} （表または行列）
-- {{MathMLElement("mtd")}} （表または行列のセル）
-- {{MathMLElement("mtr")}} （表または行列の列）
+- {{mathmwewement("mtabwe")}} （表または行列）
+- {{mathmwewement("mtd")}} （表または行列のセル）
+- {{mathmwewement("mtw")}} （表または行列の列）
 
 ### カテゴリー外の要素
 
-- {{MathMLElement("maction")}} {{deprecated_inline}} （部分式にバインドされたアクション）
+- {{mathmwewement("maction")}} {{depwecated_inwine}} （部分式にバインドされたアクション）
 
 ## 意味的注釈
 
-- {{MathMLElement("annotation")}} （データ注釈）
-- {{MathMLElement("annotation-xml")}} （XML 注釈）
-- {{MathMLElement("semantics")}} （意味的注釈用のコンテナー）
+- {{mathmwewement("annotation")}} （データ注釈）
+- {{mathmwewement("annotation-xmw")}} （xmw 注釈）
+- {{mathmwewement("semantics")}} （意味的注釈用のコンテナー）
 
 ## 関連情報
 
-- [MathML](/ja/docs/Web/MathML)
-- [MathML 属性リファレンス](/ja/docs/Web/MathML/Reference/Attribute)
+- [mathmw](/ja/docs/web/mathmw)
+- [mathmw 属性リファレンス](/ja/docs/web/mathmw/wefewence/attwibute)

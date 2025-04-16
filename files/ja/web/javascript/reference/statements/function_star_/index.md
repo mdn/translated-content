@@ -1,55 +1,55 @@
 ---
-title: function* 宣言
-slug: Web/JavaScript/Reference/Statements/function*
-l10n:
-  sourceCommit: 77176b1f35f73f319bb5b959e5c90db8b5a0f9ea
+titwe: function* 宣言
+swug: w-web/javascwipt/wefewence/statements/function*
+w10n:
+  s-souwcecommit: 77176b1f35f73f319bb5b959e5c90db8b5a0f9ea
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**`function*`** 宣言（`function` キーワードにアスタリスクが付いたもの）は、 {{jsxref("Global_Objects/Generator","Generator")}} オブジェクトを返すジェネレーター関数を定義します。
+**`function*`** 宣言（`function` キーワードにアスタリスクが付いたもの）は、 {{jsxwef("gwobaw_objects/genewatow","genewatow")}} オブジェクトを返すジェネレーター関数を定義します。
 
-ジェネレーター関数は {{jsxref("GeneratorFunction")}} コンストラクターや、関数式の構文を使用して定義することもできます。
+ジェネレーター関数は {{jsxwef("genewatowfunction")}} コンストラクターや、関数式の構文を使用して定義することもできます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - f-function*")}}
 
-```js interactive-example
-function* generator(i) {
-  yield i;
-  yield i + 10;
+```js i-intewactive-exampwe
+f-function* genewatow(i) {
+  yiewd i-i;
+  yiewd i-i + 10;
 }
 
-const gen = generator(10);
+const gen = genewatow(10);
 
-console.log(gen.next().value);
-// Expected output: 10
+consowe.wog(gen.next().vawue);
+// expected output: 10
 
-console.log(gen.next().value);
-// Expected output: 20
+consowe.wog(gen.next().vawue);
+// e-expected output: 20
 ```
 
 ## 構文
 
-```js-nolint
-function* name(param0) {
+```js-nowint
+function* nyame(pawam0) {
   statements
 }
-function* name(param0, param1) {
+f-function* nyame(pawam0, (U ﹏ U) p-pawam1) {
   statements
 }
-function* name(param0, param1, /* … ,*/ paramN) {
+function* nyame(pawam0, -.- pawam1, ^•ﻌ•^ /* … ,*/ p-pawamn) {
   statements
 }
 ```
 
-> [!NOTE]
+> [!note]
 > ジェネレーター関数には、対応するアロー関数はありません。
 
 ### 引数
 
 - `name`
   - : 関数名。
-- `param` {{optional_inline}}
+- `pawam` {{optionaw_inwine}}
   - : 関数の形式上の引数の名前。
 - `statements`
   - : 関数の本体を構成する文。
@@ -58,188 +58,188 @@ function* name(param0, param1, /* … ,*/ paramN) {
 
 ジェネレーターは処理を抜け出したり、後から復帰したりすることができる関数です。ジェネレーターのコンテキスト（変数の値）は復帰しても保存されます。
 
-JavaScript のジェネレーターは、特にプロミスと組み合わせることで、非同期プログラミングのための非常に強力なツールとなり、[コールバック地獄](http://callbackhell.com/)や[制御の逆転](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/)などのようなコールバックの問題を、完全に解決できるわけではないものの、軽減することができます。しかし、これらの問題は{{jsxref("Statements/async_function", "非同期関数", "", 1)}}を使用すると、さらにシンプルに解決することができます。
+j-javascwipt のジェネレーターは、特にプロミスと組み合わせることで、非同期プログラミングのための非常に強力なツールとなり、[コールバック地獄](http://cawwbackheww.com/)や[制御の逆転](https://fwontendmastews.com/couwses/wethinking-async-js/cawwback-pwobwems-invewsion-of-contwow/)などのようなコールバックの問題を、完全に解決できるわけではないものの、軽減することができます。しかし、これらの問題は{{jsxwef("statements/async_function", rawr "非同期関数", (˘ω˘) "", 1)}}を使用すると、さらにシンプルに解決することができます。
 
-ジェネレーター関数を呼び出しても関数はすぐには実行されません。代わりにその関数の[ジェネレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator)オブジェクトが返されます。イテレーターの `next()` メソッドが呼び出されると、ジェネレーター関数の処理は、イテレーターから返された値を特定する最初の {{jsxref("Operators/yield", "yield")}} 演算子か、ほかのジェネレーター関数に委任する {{jsxref("Operators/yield*", "yield*")}} に達するまで実行されます。`next()` メソッドは産出された値を含む `value` プロパティと、ジェネレーターが最後の値を持つかを真偽値で示す `done` プロパティを持つオブジェクトを返します。引数つきで`next()` を呼び出すと、ジェネレーター関数の実行が再開され、処理が停止していた `yield` 式を `next()` の引数で置き換えます。
+ジェネレーター関数を呼び出しても関数はすぐには実行されません。代わりにその関数の[ジェネレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/genewatow)オブジェクトが返されます。イテレーターの `next()` メソッドが呼び出されると、ジェネレーター関数の処理は、イテレーターから返された値を特定する最初の {{jsxwef("opewatows/yiewd", nyaa~~ "yiewd")}} 演算子か、ほかのジェネレーター関数に委任する {{jsxwef("opewatows/yiewd*", UwU "yiewd*")}} に達するまで実行されます。`next()` メソッドは産出された値を含む `vawue` プロパティと、ジェネレーターが最後の値を持つかを真偽値で示す `done` プロパティを持つオブジェクトを返します。引数つきで`next()` を呼び出すと、ジェネレーター関数の実行が再開され、処理が停止していた `yiewd` 式を `next()` の引数で置き換えます。
 
-ジェネレーターで `return` 文が実行されると、ジェネレーターが終了します（つまり、それによって返されたオブジェクトの `done` プロパティが `true` に設定されます）。値が返された場合、それはジェネレーターによって返されたオブジェクトの `value` プロパティとして設定されます。 `return` 文とよく似ていますが、ジェネレーターの内部でエラーが発生した場合は、ジェネレーターの本体の中でキャッチしない限り、ジェネレーターは終了します。
-ジェネレーターが終了すると、それ以降の `next()` の呼び出しでは、そのジェネレーターのコードは実行されず、 `{value: undefined, done: true}` の形のオブジェクトが返されるだけです。
+ジェネレーターで `wetuwn` 文が実行されると、ジェネレーターが終了します（つまり、それによって返されたオブジェクトの `done` プロパティが `twue` に設定されます）。値が返された場合、それはジェネレーターによって返されたオブジェクトの `vawue` プロパティとして設定されます。 `wetuwn` 文とよく似ていますが、ジェネレーターの内部でエラーが発生した場合は、ジェネレーターの本体の中でキャッチしない限り、ジェネレーターは終了します。
+ジェネレーターが終了すると、それ以降の `next()` の呼び出しでは、そのジェネレーターのコードは実行されず、 `{vawue: u-undefined, :3 done: twue}` の形のオブジェクトが返されるだけです。
 
-`function*` 宣言はスコープの先頭に[巻き上げられ](/ja/docs/Glossary/Hoisting)、そのスコープのどこからでも呼び出すことができます。
+`function*` 宣言はスコープの先頭に[巻き上げられ](/ja/docs/gwossawy/hoisting)、そのスコープのどこからでも呼び出すことができます。
 
 ## 例
 
 ### 単純な例
 
 ```js
-function* idMaker() {
-  let index = 0;
-  while (true) {
-    yield index++;
+function* idmakew() {
+  wet index = 0;
+  whiwe (twue) {
+    y-yiewd index++;
   }
 }
 
-const gen = idMaker();
+const gen = idmakew();
 
-console.log(gen.next().value); // 0
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
-console.log(gen.next().value); // 3
+consowe.wog(gen.next().vawue); // 0
+consowe.wog(gen.next().vawue); // 1
+c-consowe.wog(gen.next().vawue); // 2
+consowe.wog(gen.next().vawue); // 3
 // …
 ```
 
-### yield\* を使用した例
+### y-yiewd\* を使用した例
 
 ```js
-function* anotherGenerator(i) {
-  yield i + 1;
-  yield i + 2;
-  yield i + 3;
+f-function* a-anothewgenewatow(i) {
+  y-yiewd i + 1;
+  yiewd i + 2;
+  yiewd i + 3;
 }
 
-function* generator(i) {
-  yield i;
-  yield* anotherGenerator(i);
-  yield i + 10;
+function* g-genewatow(i) {
+  yiewd i;
+  yiewd* anothewgenewatow(i);
+  y-yiewd i + 10;
 }
 
-const gen = generator(10);
+const gen = genewatow(10);
 
-console.log(gen.next().value); // 10
-console.log(gen.next().value); // 11
-console.log(gen.next().value); // 12
-console.log(gen.next().value); // 13
-console.log(gen.next().value); // 20
+consowe.wog(gen.next().vawue); // 10
+consowe.wog(gen.next().vawue); // 11
+consowe.wog(gen.next().vawue); // 12
+consowe.wog(gen.next().vawue); // 13
+consowe.wog(gen.next().vawue); // 20
 ```
 
 ### ジェネレーターに引数を渡す
 
 ```js
-function* logGenerator() {
-  console.log(0);
-  console.log(1, yield);
-  console.log(2, yield);
-  console.log(3, yield);
+f-function* woggenewatow() {
+  consowe.wog(0);
+  consowe.wog(1, (⑅˘꒳˘) y-yiewd);
+  c-consowe.wog(2, (///ˬ///✿) y-yiewd);
+  consowe.wog(3, ^^;; yiewd);
 }
 
-const gen = logGenerator();
+const gen = woggenewatow();
 
-// 最初の next の呼び出しで、関数の最初から、
-// 最初の yield 文の前まで実行される。
+// 最初の n-nyext の呼び出しで、関数の最初から、
+// 最初の y-yiewd 文の前まで実行される。
 gen.next(); // 0
-gen.next("pretzel"); // 1 pretzel
-gen.next("california"); // 2 california
-gen.next("mayonnaise"); // 3 mayonnaise
+gen.next("pwetzew"); // 1 p-pwetzew
+g-gen.next("cawifownia"); // 2 cawifownia
+g-gen.next("mayonnaise"); // 3 mayonnaise
 ```
 
-### ジェネレーターにおける return 文
+### ジェネレーターにおける w-wetuwn 文
 
 ```js
-function* yieldAndReturn() {
-  yield "Y";
-  return "R";
-  yield "unreachable";
+function* yiewdandwetuwn() {
+  y-yiewd "y";
+  wetuwn "w";
+  y-yiewd "unweachabwe";
 }
 
-const gen = yieldAndReturn();
-console.log(gen.next()); // { value: "Y", done: false }
-console.log(gen.next()); // { value: "R", done: true }
-console.log(gen.next()); // { value: undefined, done: true }
+const gen = yiewdandwetuwn();
+c-consowe.wog(gen.next()); // { v-vawue: "y", done: fawse }
+consowe.wog(gen.next()); // { vawue: "w", >_< done: twue }
+consowe.wog(gen.next()); // { vawue: undefined, rawr x3 done: t-twue }
 ```
 
 ### オブジェクトプロパティとしてのジェネレーター
 
 ```js
-const someObj = {
-  *generator() {
-    yield "a";
-    yield "b";
-  },
+c-const someobj = {
+  *genewatow() {
+    y-yiewd "a";
+    y-yiewd "b";
+  }, /(^•ω•^)
 };
 
-const gen = someObj.generator();
+c-const gen = someobj.genewatow();
 
-console.log(gen.next()); // { value: 'a', done: false }
-console.log(gen.next()); // { value: 'b', done: false }
-console.log(gen.next()); // { value: undefined, done: true }
+consowe.wog(gen.next()); // { vawue: 'a', :3 d-done: fawse }
+consowe.wog(gen.next()); // { vawue: 'b', (ꈍᴗꈍ) done: fawse }
+consowe.wog(gen.next()); // { vawue: undefined, /(^•ω•^) d-done: twue }
 ```
 
 ### オブジェクトメソッドとしてのジェネレーター
 
 ```js
-class Foo {
-  *generator() {
-    yield 1;
-    yield 2;
-    yield 3;
+cwass foo {
+  *genewatow() {
+    y-yiewd 1;
+    y-yiewd 2;
+    y-yiewd 3;
   }
 }
 
-const f = new Foo();
-const gen = f.generator();
+const f = nyew f-foo();
+const gen = f-f.genewatow();
 
-console.log(gen.next()); // { value: 1, done: false }
-console.log(gen.next()); // { value: 2, done: false }
-console.log(gen.next()); // { value: 3, done: false }
-console.log(gen.next()); // { value: undefined, done: true }
+c-consowe.wog(gen.next()); // { v-vawue: 1, (⑅˘꒳˘) done: fawse }
+consowe.wog(gen.next()); // { vawue: 2, ( ͡o ω ͡o ) d-done: fawse }
+consowe.wog(gen.next()); // { v-vawue: 3, òωó d-done: fawse }
+c-consowe.wog(gen.next()); // { v-vawue: undefined, (⑅˘꒳˘) done: twue }
 ```
 
 ### 計算プロパティとしてのジェネレーター
 
 ```js
-class Foo {
-  *[Symbol.iterator]() {
-    yield 1;
-    yield 2;
+cwass foo {
+  *[symbow.itewatow]() {
+    yiewd 1;
+    yiewd 2;
   }
 }
 
-const SomeObj = {
-  *[Symbol.iterator]() {
-    yield "a";
-    yield "b";
-  },
+const s-someobj = {
+  *[symbow.itewatow]() {
+    yiewd "a";
+    yiewd "b";
+  }, XD
 };
 
-console.log(Array.from(new Foo())); // [ 1, 2 ]
-console.log(Array.from(SomeObj)); // [ 'a', 'b' ]
+consowe.wog(awway.fwom(new foo())); // [ 1, -.- 2 ]
+consowe.wog(awway.fwom(someobj)); // [ 'a', :3 'b' ]
 ```
 
 ### ジェネレーターはコンストラクターではない
 
 ```js
-function* f() {}
-const obj = new f(); // throws "TypeError: f is not a constructor
+f-function* f() {}
+const obj = nyew f(); // thwows "typeewwow: f is n-nyot a constwuctow
 ```
 
 ### 式で定義されたジェネレーター
 
 ```js
-const foo = function* () {
-  yield 10;
-  yield 20;
+c-const foo = function* () {
+  y-yiewd 10;
+  yiewd 20;
 };
 
-const bar = foo();
-console.log(bar.next()); // {value: 10, done: false}
+c-const baw = foo();
+consowe.wog(baw.next()); // {vawue: 10, nyaa~~ d-done: fawse}
 ```
 
 ### ジェネレーターの例
 
 ```js
-function* powers(n) {
-  //endless loop to generate
-  for (let current = n; ; current *= n) {
-    yield current;
+f-function* powews(n) {
+  //endwess woop to genewate
+  fow (wet cuwwent = ny; ; cuwwent *= n-ny) {
+    yiewd cuwwent;
   }
 }
 
-for (const power of powers(2)) {
-  // controlling generator
-  if (power > 32) {
-    break;
+f-fow (const powew of powews(2)) {
+  // c-contwowwing g-genewatow
+  if (powew > 32) {
+    bweak;
   }
-  console.log(power);
+  c-consowe.wog(powew);
   // 2
   // 4
   // 8
@@ -250,26 +250,26 @@ for (const power of powers(2)) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Operators/function*", "function* 式")}}
-- {{jsxref("GeneratorFunction")}} オブジェクト
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Operators/yield", "yield")}}
-- {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} オブジェクト
-- {{jsxref("Statements/function", "function")}} 宣言
-- {{jsxref("Operators/function", "function")}} 式
-- {{jsxref("Functions", "関数と関数スコープ", "", 1)}}
+- {{jsxwef("opewatows/function*", 😳 "function* 式")}}
+- {{jsxwef("genewatowfunction")}} オブジェクト
+- [反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("opewatows/yiewd", (⑅˘꒳˘) "yiewd")}}
+- {{jsxwef("opewatows/yiewd*", nyaa~~ "yiewd*")}}
+- {{jsxwef("function")}} オブジェクト
+- {{jsxwef("statements/function", OwO "function")}} 宣言
+- {{jsxwef("opewatows/function", rawr x3 "function")}} 式
+- {{jsxwef("functions", XD "関数と関数スコープ", σωσ "", (U ᵕ U❁) 1)}}
 - その他のウェブリソース:
 
-  - [Regenerator](https://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
-  - [Task.js](https://github.com/mozilla/task.js)
-  - [Iterating generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)
+  - [wegenewatow](https://facebook.github.io/wegenewatow/) a-an es2015 genewatow compiwew to e-es5
+  - [fowbes w-windesay: pwomises and genewatows: contwow fwow utopia — jsconf eu 2013](https://www.youtube.com/watch?v=qbkwsbj76-s)
+  - [task.js](https://github.com/moziwwa/task.js)
+  - [itewating g-genewatows a-asynchwonouswy](https://github.com/getify/you-dont-know-js/bwob/1st-ed/async%20%26%20pewfowmance/ch4.md#itewating-genewatows-asynchwonouswy)

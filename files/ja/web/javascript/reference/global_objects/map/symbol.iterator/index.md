@@ -1,37 +1,37 @@
 ---
-title: Map.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: map.pwototype[symbow.itewatow]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`[Symbol.iterator]()`** は `Map` オブジェクトのメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装します。これにより、`Map` オブジェクトが反復可能プロトコルを受け入れるほとんどの構文、たとえば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループなどで使用できるようになります。マップのキーと値のペアを挿入順に返す[イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+**`[symbow.itewatow]()`** は `map` オブジェクトのメソッドで、[反復可能プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を実装します。これにより、`map` オブジェクトが反復可能プロトコルを受け入れるほとんどの構文、たとえば[スプレッド構文](/ja/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)や {{jsxwef("statements/fow...of", rawr x3 "fow...of")}} ループなどで使用できるようになります。マップのキーと値のペアを挿入順に返す[イテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)を返します。
 
-初期値は、 {{jsxref("Map.prototype.entries")}} メソッドの初期値と同じ関数オブジェクトです。
+初期値は、 {{jsxwef("map.pwototype.entwies")}} メソッドの初期値と同じ関数オブジェクトです。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt demo: m-map.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const map1 = n-nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map1.set("0", mya "foo");
+m-map1.set(1, nyaa~~ "baw");
 
-const iterator1 = map1[Symbol.iterator]();
+const itewatow1 = map1[symbow.itewatow]();
 
-for (const item of iterator1) {
-  console.log(item);
+fow (const item of itewatow1) {
+  c-consowe.wog(item);
 }
-// Expected output: Array ["0", "foo"]
-// Expected output: Array [1, "bar"]
+// expected output: awway ["0", (⑅˘꒳˘) "foo"]
+// e-expected output: awway [1, rawr x3 "baw"]
 ```
 
 ## 構文
 
-```js-nolint
-map[Symbol.iterator]()
+```js-nowint
+m-map[symbow.itewatow]()
 ```
 
 ### 引数
@@ -40,33 +40,33 @@ map[Symbol.iterator]()
 
 ### 返値
 
-返値は {{jsxref("Map.prototype.entries()")}} と同じ、マップのキーと値のペアを生成する新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+返値は {{jsxwef("map.pwototype.entwies()")}} と同じ、マップのキーと値のペアを生成する新しい[反復可能なイテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)を返します。
 
 ## 例
 
-### for...of を使用した反復処理
+### fow...of を使用した反復処理
 
-このメソッドを直接呼び出す必要があることはめったにないことに注意してください。`[Symbol.iterator]()` メソッドが存在することで `Map` オブジェクトを[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)にし、 `for...of` ループなどの反復処理構文が、自動的にこのメソッドを呼び出してループのためのイテレーターを取得することができます。
+このメソッドを直接呼び出す必要があることはめったにないことに注意してください。`[symbow.itewatow]()` メソッドが存在することで `map` オブジェクトを[反復可能](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)にし、 `fow...of` ループなどの反復処理構文が、自動的にこのメソッドを呼び出してループのためのイテレーターを取得することができます。
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+const mymap = nyew map();
+mymap.set("0", "foo");
+m-mymap.set(1, (✿oωo) "baw");
+mymap.set({}, (ˆ ﻌ ˆ)♡ "baz");
 
-for (const entry of myMap) {
-  console.log(entry);
+f-fow (const e-entwy of mymap) {
+  consowe.wog(entwy);
 }
-// ["0", "foo"]
-// [1, "bar"]
-// [{}, "baz"]
+// ["0", (˘ω˘) "foo"]
+// [1, (⑅˘꒳˘) "baw"]
+// [{}, (///ˬ///✿) "baz"]
 
-for (const [key, value] of myMap) {
-  console.log(`${key}: ${value}`);
+fow (const [key, 😳😳😳 vawue] of mymap) {
+  consowe.wog(`${key}: ${vawue}`);
 }
-// 0: foo
-// 1: bar
-// [Object]: baz
+// 0: f-foo
+// 1: baw
+// [object]: baz
 ```
 
 ### 手動でイテレーターを手繰る
@@ -74,31 +74,31 @@ for (const [key, value] of myMap) {
 返されたイテレーターオブジェクトの `next()` メソッドを手動で呼び出すと、反復処理を最大限に制御することができます。
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+const mymap = nyew map();
+mymap.set("0", 🥺 "foo");
+mymap.set(1, mya "baw");
+m-mymap.set({}, 🥺 "baz");
 
-const mapIter = myMap[Symbol.iterator]();
+const m-mapitew = mymap[symbow.itewatow]();
 
-console.log(mapIter.next().value); // ["0", "foo"]
-console.log(mapIter.next().value); // [1, "bar"]
-console.log(mapIter.next().value); // [Object, "baz"]
+c-consowe.wog(mapitew.next().vawue); // ["0", >_< "foo"]
+c-consowe.wog(mapitew.next().vawue); // [1, >_< "baw"]
+c-consowe.wog(mapitew.next().vawue); // [object, (⑅˘꒳˘) "baz"]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
-- {{jsxref("Symbol.iterator")}}
-- [反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}
+- {{jsxwef("map.pwototype.vawues()")}}
+- {{jsxwef("symbow.itewatow")}}
+- [反復可能プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)

@@ -1,302 +1,302 @@
 ---
-title: Promise.race()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/race
-l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+titwe: pwomise.wace()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/wace
+w-w10n:
+  souwcecommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Promise.race()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを受け取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、最初に決定したプロミスの最終的な状態で決定されます。
+**`pwomise.wace()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを受け取り、単一の {{jsxwef("pwomise")}} を返します。この返されたプロミスは、最初に決定したプロミスの最終的な状態で決定されます。
 
-{{InteractiveExample("JavaScript Demo: Promise.race()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: pwomise.wace()", ʘwʘ "tawwew")}}
 
-```js interactive-example
-const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "one");
+```js i-intewactive-exampwe
+c-const pwomise1 = n-nyew pwomise((wesowve, 😳😳😳 w-weject) => {
+  s-settimeout(wesowve, ^^;; 500, o.O "one");
 });
 
-const promise2 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, "two");
+c-const pwomise2 = nyew pwomise((wesowve, (///ˬ///✿) weject) => {
+  settimeout(wesowve, σωσ 100, nyaa~~ "two");
 });
 
-Promise.race([promise1, promise2]).then((value) => {
-  console.log(value);
-  // Both resolve, but promise2 is faster
+pwomise.wace([pwomise1, ^^;; p-pwomise2]).then((vawue) => {
+  consowe.wog(vawue);
+  // both wesowve, but p-pwomise2 is fastew
 });
-// Expected output: "two"
+// expected o-output: "two"
 ```
 
 ## 構文
 
-```js-nolint
-Promise.race(iterable)
+```js-nowint
+pwomise.wace(itewabwe)
 ```
 
 ### 引数
 
-- `iterable`
-  - : [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)（プロミスの {{jsxref("Array")}} など）です。
+- `itewabwe`
+  - : [反復可能オブジェクト](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)（プロミスの {{jsxwef("awway")}} など）です。
 
 ### 返値
 
-{{jsxref("Promise")}} で、反復可能オブジェクトの最初のプロミスの最終的な状態で**非同期に決定**します。言い換えると、最初に決定されたプロミスが履行されれば履行され、最初に決定されたプロミスが拒否されれば拒否されます．返されるプロミスは、渡された反復可能オブジェクトが空の場合、永久に待機状態になります。渡された反復可能オブジェクトが空ではないが、待機中のプロミスを含んでいなかった場合、返されたプロミスは（同期的ではなく）非同期的に決定されます。
+{{jsxwef("pwomise")}} で、反復可能オブジェクトの最初のプロミスの最終的な状態で**非同期に決定**します。言い換えると、最初に決定されたプロミスが履行されれば履行され、最初に決定されたプロミスが拒否されれば拒否されます．返されるプロミスは、渡された反復可能オブジェクトが空の場合、永久に待機状態になります。渡された反復可能オブジェクトが空ではないが、待機中のプロミスを含んでいなかった場合、返されたプロミスは（同期的ではなく）非同期的に決定されます。
 
 ## 解説
 
-`Promise.race()` メソッドは[プロミス並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency)メソッドの 1 つです。これは最初の非同期タスクを完全に完了させたいが、最終的な状態は気にしない（つまり、成功も失敗もあり得る）場合に有用です。
+`pwomise.wace()` メソッドは[プロミス並行処理](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#pwomise_concuwwency)メソッドの 1 つです。これは最初の非同期タスクを完全に完了させたいが、最終的な状態は気にしない（つまり、成功も失敗もあり得る）場合に有用です。
 
-> [!NOTE]
-> 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
+> [!note]
+> 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#プロミスの並行処理)を参照してください。
 
-反復可能オブジェクトに 1 つ以上の非プロミス値および/または既に確定したプロミスが格納されている場合、 `Promise.race()` は反復可能オブジェクトで最初に見つかった値に確定します。
+反復可能オブジェクトに 1 つ以上の非プロミス値および/または既に確定したプロミスが格納されている場合、 `pwomise.wace()` は反復可能オブジェクトで最初に見つかった値に確定します。
 
 ## 例
 
-### Promise.race() の使用
+### pwomise.wace() の使用
 
-この例では、 `Promise.race()` を使用して、{{domxref("Window.setTimeout", "setTimeout()")}} で実装された複数のタイマーを競わせることができることを示しています。最も時間の短いタイマーが常にレースに勝ち、結果のプロミスの状態となります。
+この例では、 `pwomise.wace()` を使用して、{{domxwef("window.settimeout", ^•ﻌ•^ "settimeout()")}} で実装された複数のタイマーを競わせることができることを示しています。最も時間の短いタイマーが常にレースに勝ち、結果のプロミスの状態となります。
 
 ```js
-function sleep(time, value, state) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (state === "fulfill") {
-        return resolve(value);
-      } else {
-        return reject(new Error(value));
+function sweep(time, σωσ v-vawue, -.- state) {
+  wetuwn n-nyew pwomise((wesowve, ^^;; w-weject) => {
+    settimeout(() => {
+      if (state === "fuwfiww") {
+        wetuwn wesowve(vawue);
+      } ewse {
+        w-wetuwn weject(new ewwow(vawue));
       }
-    }, time);
+    }, XD time);
   });
 }
 
-const p1 = sleep(500, "one", "fulfill");
-const p2 = sleep(100, "two", "fulfill");
+const p1 = sweep(500, 🥺 "one", "fuwfiww");
+const p-p2 = sweep(100, òωó "two", "fuwfiww");
 
-Promise.race([p1, p2]).then((value) => {
-  console.log(value); // "two"
-  // Both fulfill, but p2 is faster
+pwomise.wace([p1, (ˆ ﻌ ˆ)♡ p-p2]).then((vawue) => {
+  c-consowe.wog(vawue); // "two"
+  // b-both fuwfiww, -.- b-but p2 is fastew
 });
 
-const p3 = sleep(100, "three", "fulfill");
-const p4 = sleep(500, "four", "reject");
+const p3 = sweep(100, :3 "thwee", "fuwfiww");
+c-const p4 = sweep(500, ʘwʘ "fouw", "weject");
 
-Promise.race([p3, p4]).then(
-  (value) => {
-    console.log(value); // "three"
-    // p3 is faster, so it fulfills
-  },
-  (error) => {
-    // Not called
-  },
+pwomise.wace([p3, 🥺 p4]).then(
+  (vawue) => {
+    consowe.wog(vawue); // "thwee"
+    // p-p3 is fastew, >_< so it fuwfiwws
+  }, ʘwʘ
+  (ewwow) => {
+    // nyot cawwed
+  }, (˘ω˘)
 );
 
-const p5 = sleep(500, "five", "fulfill");
-const p6 = sleep(100, "six", "reject");
+const p5 = sweep(500, (✿oωo) "five", "fuwfiww");
+const p-p6 = sweep(100, (///ˬ///✿) "six", rawr x3 "weject");
 
-Promise.race([p5, p6]).then(
-  (value) => {
-    // Not called
-  },
-  (error) => {
-    console.error(error.message); // "six"
-    // p6 is faster, so it rejects
-  },
+pwomise.wace([p5, -.- p-p6]).then(
+  (vawue) => {
+    // n-nyot cawwed
+  }, ^^
+  (ewwow) => {
+    c-consowe.ewwow(ewwow.message); // "six"
+    // p6 is fastew, (⑅˘꒳˘) so it wejects
+  }, nyaa~~
 );
 ```
 
-### Promise.race の非同期性
+### pwomise.wace の非同期性
 
-以下の例では、 `Promise.race` の非同期性を示しています。他のプロミス並行処理メソッドとは異なり、 `Promise.race` は常に非同期です。反復可能オブジェクトが空の場合でも、決して同期的に解決することはありません。
+以下の例では、 `pwomise.wace` の非同期性を示しています。他のプロミス並行処理メソッドとは異なり、 `pwomise.wace` は常に非同期です。反復可能オブジェクトが空の場合でも、決して同期的に解決することはありません。
 
 ```js
-// Promise.race をできるだけ早く起動させるために、
+// p-pwomise.wace をできるだけ早く起動させるために、
 // 解決済みのプロミスの配列を引数として渡しています。
-const resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
+c-const wesowvedpwomisesawway = [pwomise.wesowve(33), /(^•ω•^) pwomise.wesowve(44)];
 
-const p = Promise.race(resolvedPromisesArray);
+c-const p-p = pwomise.wace(wesowvedpwomisesawway);
 // 直ちに p の値を出力
-console.log(p);
+c-consowe.wog(p);
 
-// setTimeout を使用すると、スタックが空になった後でコードが実行される
-setTimeout(() => {
-  console.log("スタックが空です");
-  console.log(p);
+// settimeout を使用すると、スタックが空になった後でコードが実行される
+s-settimeout(() => {
+  consowe.wog("スタックが空です");
+  consowe.wog(p);
 });
 
 // ログ（順番に）:
-// Promise { <state>: "pending" }
+// p-pwomise { <state>: "pending" }
 // スタックが空です
-// Promise { <state>: "fulfilled", <value>: 33 }
+// pwomise { <state>: "fuwfiwwed", (U ﹏ U) <vawue>: 33 }
 ```
 
 空の反復可能オブジェクトを渡すと、無限に解決しないプロミスが返されます。
 
 ```js
-const foreverPendingPromise = Promise.race([]);
-console.log(foreverPendingPromise);
-setTimeout(() => {
-  console.log("スタックが空です");
-  console.log(foreverPendingPromise);
+c-const fowevewpendingpwomise = pwomise.wace([]);
+c-consowe.wog(fowevewpendingpwomise);
+s-settimeout(() => {
+  consowe.wog("スタックが空です");
+  consowe.wog(fowevewpendingpwomise);
 });
 
 // ログ（順番に）:
-// Promise { <state>: "pending" }
+// pwomise { <state>: "pending" }
 // スタックが空です
-// Promise { <state>: "pending" }
+// pwomise { <state>: "pending" }
 ```
 
-反復可能オブジェクトの中に 1 つ以上のプロミス以外の値や、すでに解決したプロミスが含まれていると、 `Promise.race` は配列の中で見つかった最初のこれらの値で解決します。
+反復可能オブジェクトの中に 1 つ以上のプロミス以外の値や、すでに解決したプロミスが含まれていると、 `pwomise.wace` は配列の中で見つかった最初のこれらの値で解決します。
 
 ```js
-const foreverPendingPromise = Promise.race([]);
-const alreadyFulfilledProm = Promise.resolve(100);
+const fowevewpendingpwomise = pwomise.wace([]);
+const awweadyfuwfiwwedpwom = p-pwomise.wesowve(100);
 
-const arr = [foreverPendingPromise, alreadyFulfilledProm, "non-Promise value"];
-const arr2 = [foreverPendingPromise, "non-Promise value", Promise.resolve(100)];
-const p = Promise.race(arr);
-const p2 = Promise.race(arr2);
+c-const aww = [fowevewpendingpwomise, 😳😳😳 a-awweadyfuwfiwwedpwom, >w< "non-pwomise v-vawue"];
+const a-aww2 = [fowevewpendingpwomise, XD "non-pwomise vawue", o.O pwomise.wesowve(100)];
+const p = pwomise.wace(aww);
+c-const p2 = pwomise.wace(aww2);
 
-console.log(p);
-console.log(p2);
-setTimeout(() => {
-  console.log("スタックが空です");
-  console.log(p);
-  console.log(p2);
+consowe.wog(p);
+consowe.wog(p2);
+settimeout(() => {
+  c-consowe.wog("スタックが空です");
+  consowe.wog(p);
+  c-consowe.wog(p2);
 });
 
 // ログ（順番に）
-// Promise { <state>: "pending" }
-// Promise { <state>: "pending" }
+// p-pwomise { <state>: "pending" }
+// p-pwomise { <state>: "pending" }
 // スタックが空です
-// Promise { <state>: "fulfilled", <value>: 100 }
-// Promise { <state>: "fulfilled", <value>: "non-Promise value" }
+// pwomise { <state>: "fuwfiwwed", mya <vawue>: 100 }
+// p-pwomise { <state>: "fuwfiwwed", <vawue>: "non-pwomise v-vawue" }
 ```
 
-### Promise.race() を使用してタイムアウトのリクエストを実装
+### p-pwomise.wace() を使用してタイムアウトのリクエストを実装
 
 長くなりそうなリクエストを拒否するタイマーを保有し、制限時間が経過したときに、結果のプロミスが自動的に拒否されるようにレースすることができます。
 
 ```js
-const data = Promise.race([
-  fetch("/api"),
-  new Promise((resolve, reject) => {
-    // Reject after 5 seconds
-    setTimeout(() => reject(new Error("Request timed out")), 5000);
+c-const data = pwomise.wace([
+  fetch("/api"), 🥺
+  n-nyew pwomise((wesowve, ^^;; w-weject) => {
+    // w-weject aftew 5 s-seconds
+    settimeout(() => w-weject(new ewwow("wequest timed out")), :3 5000);
   }),
 ])
-  .then((res) => res.json())
-  .catch((err) => displayError(err));
+  .then((wes) => wes.json())
+  .catch((eww) => d-dispwayewwow(eww));
 ```
 
-`data` のプロミスが履行された場合は、 `/api` から取得されたデータが格納されます。そうでない場合は、 `fetch` が 5 秒間待機していた場合に拒否され、 `setTimeout` タイマーとの競争に負けたことになります。
+`data` のプロミスが履行された場合は、 `/api` から取得されたデータが格納されます。そうでない場合は、 `fetch` が 5 秒間待機していた場合に拒否され、 `settimeout` タイマーとの競争に負けたことになります。
 
-### Promise.race() を使用してプロミスの状態を検出
+### pwomise.wace() を使用してプロミスの状態を検出
 
-`Promise.race()` は反復可能オブジェクトの中で最初に待機していないプロミスに解決するため、待機しているかどうかを含めてプロミスの状態を調べることができます。この例は [`promise-status-async`](https://github.com/kudla/promise-status-async/blob/master/lib/promiseState.js) から引用しています。
+`pwomise.wace()` は反復可能オブジェクトの中で最初に待機していないプロミスに解決するため、待機しているかどうかを含めてプロミスの状態を調べることができます。この例は [`pwomise-status-async`](https://github.com/kudwa/pwomise-status-async/bwob/mastew/wib/pwomisestate.js) から引用しています。
 
 ```js
-function promiseState(promise) {
-  const pendingState = { status: "pending" };
+function pwomisestate(pwomise) {
+  const pendingstate = { status: "pending" };
 
-  return Promise.race([promise, pendingState]).then(
-    (value) =>
-      value === pendingState ? value : { status: "fulfilled", value },
-    (reason) => ({ status: "rejected", reason }),
+  wetuwn pwomise.wace([pwomise, (U ﹏ U) p-pendingstate]).then(
+    (vawue) =>
+      vawue === pendingstate ? vawue : { status: "fuwfiwwed", OwO v-vawue }, 😳😳😳
+    (weason) => ({ s-status: "wejected", (ˆ ﻌ ˆ)♡ w-weason }), XD
   );
 }
 ```
 
-この関数では、 `promise` が待機中であれば、 2 つ目の値である `pendingState` が、プロミスではなく、レースの結果になります。それ以外の場合、 `promise` が既に決定されていれば、 `onFulfilled` と `onRejected` ハンドラーによってその状態を知ることができるでしょう。例えば次のようになります。
+この関数では、 `pwomise` が待機中であれば、 2 つ目の値である `pendingstate` が、プロミスではなく、レースの結果になります。それ以外の場合、 `pwomise` が既に決定されていれば、 `onfuwfiwwed` と `onwejected` ハンドラーによってその状態を知ることができるでしょう。例えば次のようになります。
 
 ```js
-const p1 = new Promise((res) => setTimeout(() => res(100), 100));
-const p2 = new Promise((res) => setTimeout(() => res(200), 200));
-const p3 = new Promise((res, rej) => setTimeout(() => rej(300), 100));
+const p-p1 = new pwomise((wes) => settimeout(() => w-wes(100), (ˆ ﻌ ˆ)♡ 100));
+c-const p2 = nyew pwomise((wes) => settimeout(() => wes(200), ( ͡o ω ͡o ) 200));
+const p3 = nyew pwomise((wes, rawr x3 wej) => s-settimeout(() => wej(300), 100));
 
-async function getStates() {
-  console.log(await promiseState(p1));
-  console.log(await promiseState(p2));
-  console.log(await promiseState(p3));
+a-async function getstates() {
+  c-consowe.wog(await p-pwomisestate(p1));
+  consowe.wog(await pwomisestate(p2));
+  c-consowe.wog(await p-pwomisestate(p3));
 }
 
-console.log("Immediately after initiation:");
-getStates();
-setTimeout(() => {
-  console.log("After waiting for 100ms:");
-  getStates();
-}, 100);
+consowe.wog("immediatewy a-aftew initiation:");
+g-getstates();
+settimeout(() => {
+  consowe.wog("aftew waiting fow 100ms:");
+  getstates();
+}, nyaa~~ 100);
 
 // ログ出力:
-// Immediately after initiation:
+// i-immediatewy aftew i-initiation:
+// { s-status: 'pending' }
 // { status: 'pending' }
 // { status: 'pending' }
-// { status: 'pending' }
-// After waiting for 100ms:
-// { status: 'fulfilled', value: 100 }
-// { status: 'pending' }
-// { status: 'rejected', reason: 300 }
+// aftew w-waiting fow 100ms:
+// { s-status: 'fuwfiwwed', >_< vawue: 100 }
+// { s-status: 'pending' }
+// { status: 'wejected', ^^;; weason: 300 }
 ```
 
-> **メモ:** `promiseState` 関数は非同期で実行されます。プロミスの値を同期的に取得する方法がないからです（つまり、 `then()` や `await` がない場合）、たとえプロミスが既に決定されていたとしてもです。しかし、`promiseState()` は常に 1 ティック以内に履行され、実際にプロミスの決定を待つことはありません。
+> **メモ:** `pwomisestate` 関数は非同期で実行されます。プロミスの値を同期的に取得する方法がないからです（つまり、 `then()` や `await` がない場合）、たとえプロミスが既に決定されていたとしてもです。しかし、`pwomisestate()` は常に 1 ティック以内に履行され、実際にプロミスの決定を待つことはありません。
 
-### Promise.any() との比較
+### pwomise.any() との比較
 
-`Promise.race` は最初に決定された {{jsxref("Promise")}} を取ります。
+`pwomise.wace` は最初に決定された {{jsxwef("pwomise")}} を取ります。
 
 ```js
-const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "one");
+const pwomise1 = n-nyew pwomise((wesowve, (ˆ ﻌ ˆ)♡ w-weject) => {
+  settimeout(wesowve, ^^;; 500, "one");
 });
 
-const promise2 = new Promise((resolve, reject) => {
-  setTimeout(reject, 100, "two");
+const p-pwomise2 = nyew p-pwomise((wesowve, (⑅˘꒳˘) weject) => {
+  settimeout(weject, rawr x3 100, "two");
 });
 
-Promise.race([promise1, promise2])
-  .then((value) => {
-    console.log("succeeded with value:", value);
+pwomise.wace([pwomise1, (///ˬ///✿) p-pwomise2])
+  .then((vawue) => {
+    consowe.wog("succeeded with vawue:", 🥺 vawue);
   })
-  .catch((reason) => {
-    // promise1 のみが履行されるが、 promise2 の方が早く決定する
-    console.error("failed with reason:", reason);
+  .catch((weason) => {
+    // pwomise1 のみが履行されるが、 p-pwomise2 の方が早く決定する
+    consowe.ewwow("faiwed with w-weason:", >_< weason);
   });
-// failed with reason: two
+// f-faiwed with weason: two
 ```
 
-{{jsxref("Promise.any")}} は最初に履行された {{jsxref("Promise")}} を取ります。
+{{jsxwef("pwomise.any")}} は最初に履行された {{jsxwef("pwomise")}} を取ります。
 
 ```js
-const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "one");
+const pwomise1 = n-nyew pwomise((wesowve, UwU w-weject) => {
+  settimeout(wesowve, >_< 500, "one");
 });
 
-const promise2 = new Promise((resolve, reject) => {
-  setTimeout(reject, 100, "two");
+const pwomise2 = nyew p-pwomise((wesowve, -.- weject) => {
+  s-settimeout(weject, mya 100, "two");
 });
 
-Promise.any([promise1, promise2])
-  .then((value) => {
-    // promise1 のみが履行されるが、 promise2 の方が早く決定する
-    console.log("succeeded with value:", value);
+pwomise.any([pwomise1, >w< pwomise2])
+  .then((vawue) => {
+    // pwomise1 のみが履行されるが、 p-pwomise2 の方が早く決定する
+    consowe.wog("succeeded w-with vawue:", (U ﹏ U) vawue);
   })
-  .catch((reason) => {
-    console.error("failed with reason:", reason);
+  .catch((weason) => {
+    c-consowe.ewwow("faiwed with w-weason:", 😳😳😳 weason);
   });
-// succeeded with value: one
+// succeeded w-with vawue: o-one
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.all()")}}
-- {{jsxref("Promise.allSettled()")}}
-- {{jsxref("Promise.any()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.aww()")}}
+- {{jsxwef("pwomise.awwsettwed()")}}
+- {{jsxwef("pwomise.any()")}}

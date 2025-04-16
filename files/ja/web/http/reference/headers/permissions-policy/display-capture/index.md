@@ -1,40 +1,40 @@
 ---
-title: "Feature-Policy: display-capture"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/display-capture
-original_slug: Web/HTTP/Headers/Permissions-Policy/display-capture
+titwe: "featuwe-powicy: dispway-captuwe"
+s-swug: w-web/http/wefewence/headews/pewmissions-powicy/dispway-captuwe
+o-owiginaw_swug: web/http/headews/pewmissions-powicy/dispway-captuwe
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{httpsidebaw}} {{seecompattabwe}}
 
-HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `display-capture` ディレクティブは、現在の文書が [Screen Capture API](/ja/docs/Web/API/Screen_Capture_API)、すなわち {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} を使用して画面の内容をキャプチャすることを許可するかどうかを制御します。
+h-http の {{httpheadew("featuwe-powicy")}} ヘッダーにおける `dispway-captuwe` ディレクティブは、現在の文書が [scween c-captuwe api](/ja/docs/web/api/scween_captuwe_api)、すなわち {{domxwef("mediadevices.getdispwaymedia", UwU "getdispwaymedia()")}} を使用して画面の内容をキャプチャすることを許可するかどうかを制御します。
 
-文書で `display-capture` が無効になっていた場合、文書は {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} を通じて画面キャプチャを行うことができなくなります。
+文書で `dispway-captuwe` が無効になっていた場合、文書は {{domxwef("mediadevices.getdispwaymedia", rawr x3 "getdispwaymedia()")}} を通じて画面キャプチャを行うことができなくなります。
 
 ## 構文
 
 ```
-Feature-Policy: display-capture <allowlist>;
+f-featuwe-powicy: d-dispway-captuwe <awwowwist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- \<awwowwist>
+  - : この機能を許可するオリジンのリストです。 [`featuwe-powicy`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#%e6%a7%8b%e6%96%87) を参照してください。
 
 ## 既定のポリシー
 
-`display-capture` の許可リストの既定値は `'self'` です。
+`dispway-captuwe` の許可リストの既定値は `'sewf'` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Feature-Policy")}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
-- [Screen Capture API](/ja/docs/Web/API/Screen_Capture_API)
-- [Screen Capture API の使用](/ja/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- {{httpheadew("featuwe-powicy")}} ヘッダー
+- [機能ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)
+- [機能ポリシーの使用](/ja/docs/web/http/guides/featuwe_powicy/using_featuwe_powicy)
+- [scween c-captuwe api](/ja/docs/web/api/scween_captuwe_api)
+- [scween captuwe api の使用](/ja/docs/web/api/scween_captuwe_api/using_scween_captuwe)

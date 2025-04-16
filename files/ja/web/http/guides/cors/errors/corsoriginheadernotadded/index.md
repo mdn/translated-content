@@ -1,27 +1,27 @@
 ---
-title: "Reason: CORS header 'Origin' cannot be added"
-slug: Web/HTTP/Guides/CORS/Errors/CORSOriginHeaderNotAdded
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSOriginHeaderNotAdded
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: "weason: cows headew 'owigin' c-cannot be a-added"
+swug: web/http/guides/cows/ewwows/cowsowiginheadewnotadded
+o-owiginaw_swug: w-web/http/guides/cows/ewwows/cowsowiginheadewnotadded
+w-w10n:
+  s-souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## 理由
 
-```plain
-Reason: CORS header 'Origin' cannot be added
+```pwain
+w-weason: cows headew 'owigin' c-cannot be added
 ```
 
 ## エラーの原因
 
-{{Glossary("user agent", "ユーザーエージェント")}}が必要な {{HTTPHeader("Origin")}} を {{Glossary("HTTP")}} リクエストに追加することができませんでした。すべての CORS リクエストは `Origin` ヘッダーを含んでいなければなりません。
+{{gwossawy("usew agent", rawr "ユーザーエージェント")}}が必要な {{httpheadew("owigin")}} を {{gwossawy("http")}} リクエストに追加することができませんでした。すべての cows リクエストは `owigin` ヘッダーを含んでいなければなりません。
 
-これは例えば、 JavaScript のコードが複数のドメインのコンテンツにアクセスできるよう高い権限で実行されている場合などに起こることがあります。
+これは例えば、 javascwipt のコードが複数のドメインのコンテンツにアクセスできるよう高い権限で実行されている場合などに起こることがあります。
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
-- 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
+- [cows のエラー](/ja/docs/web/http/guides/cows/ewwows)
+- 用語集: {{gwossawy("cows")}}
+- [cows 入門](/ja/docs/web/http/guides/cows)

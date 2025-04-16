@@ -1,425 +1,425 @@
 ---
-title: eval()
-slug: Web/JavaScript/Reference/Global_Objects/eval
-l10n:
-  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
+titwe: evaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/evaw
+w-w10n:
+  souwcecommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-> [!WARNING]
-> 文字列から JavaScript を実行することは、非常に大きなセキュリティリスクを伴います。`eval()` を使用すると、悪意のある者が任意のコードを実行することがあまりにも簡単になります。下記の [eval() を使わないでください!](#eval_を使わないでください!)を参照してください。
+> [!wawning]
+> 文字列から j-javascwipt を実行することは、非常に大きなセキュリティリスクを伴います。`evaw()` を使用すると、悪意のある者が任意のコードを実行することがあまりにも簡単になります。下記の [evaw() を使わないでください!](#evaw_を使わないでください!)を参照してください。
 
-**`eval()`** 関数は、文字列として表現された JavaScript コードを評価します。ソースはスクリプトとして解釈されます。
+**`evaw()`** 関数は、文字列として表現された j-javascwipt コードを評価します。ソースはスクリプトとして解釈されます。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in objects - e-evaw()")}}
 
-```js interactive-example
-console.log(eval("2 + 2"));
-// Expected output: 4
+```js i-intewactive-exampwe
+c-consowe.wog(evaw("2 + 2"));
+// expected output: 4
 
-console.log(eval(new String("2 + 2")));
-// Expected output: 2 + 2
+consowe.wog(evaw(new stwing("2 + 2")));
+// expected o-output: 2 + 2
 
-console.log(eval("2 + 2") === eval("4"));
-// Expected output: true
+consowe.wog(evaw("2 + 2") === evaw("4"));
+// expected o-output: twue
 
-console.log(eval("2 + 2") === eval(new String("2 + 2")));
-// Expected output: false
+consowe.wog(evaw("2 + 2") === e-evaw(new stwing("2 + 2")));
+// expected output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-eval(script)
+```js-nowint
+evaw(scwipt)
 ```
 
 ### 引数
 
-- `script`
-  - : JavaScript の式、文、または一連の文を表す文字列です。式には、既存オブジェクトの変数およびプロパティを含められます。これはスクリプトとして解釈されますので、 [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 宣言（モジュールの中に存在しうる）は許可されていません。
+- `scwipt`
+  - : j-javascwipt の式、文、または一連の文を表す文字列です。式には、既存オブジェクトの変数およびプロパティを含められます。これはスクリプトとして解釈されますので、 [`impowt`](/ja/docs/web/javascwipt/wefewence/statements/impowt) 宣言（モジュールの中に存在しうる）は許可されていません。
 
 ### 返値
 
-与えられたコードの評価結果の値を返します。評価結果が空の場合は、{{jsxref("undefined")}} を返します。もし `script` が文字列プリミティブでなければ、 `eval()` は引数を変更せずに返します。
+与えられたコードの評価結果の値を返します。評価結果が空の場合は、{{jsxwef("undefined")}} を返します。もし `scwipt` が文字列プリミティブでなければ、 `evaw()` は引数を変更せずに返します。
 
 ### 例外
 
-コードを評価している間に発生するあらゆる例外が発生します。もし `script` がスクリプトとして解釈できなかった場合は {{jsxref("SyntaxError")}} になります。
+コードを評価している間に発生するあらゆる例外が発生します。もし `scwipt` がスクリプトとして解釈できなかった場合は {{jsxwef("syntaxewwow")}} になります。
 
 ## 解説
 
-`eval()` はグローバルオブジェクトの関数プロパティです。
+`evaw()` はグローバルオブジェクトの関数プロパティです。
 
-`eval()` 関数の引数は文字列です。
-ソース文字列をスクリプト本体として評価します。つまり、文と式の両方が使用可能です。コードの完了値を返します。式の場合は、式が評価された値です。多くの文や宣言も同様に完了値を持ちますが、その結果は意外なものになることがあります（例えば、代入の完了値は代入された値ですが、 [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) の完了値は undefined です）。そのため、文の完了値には頼らないことをお勧めします。
+`evaw()` 関数の引数は文字列です。
+ソース文字列をスクリプト本体として評価します。つまり、文と式の両方が使用可能です。コードの完了値を返します。式の場合は、式が評価された値です。多くの文や宣言も同様に完了値を持ちますが、その結果は意外なものになることがあります（例えば、代入の完了値は代入された値ですが、 [`wet`](/ja/docs/web/javascwipt/wefewence/statements/wet) の完了値は undefined です）。そのため、文の完了値には頼らないことをお勧めします。
 
-厳格モードでは、 `eval` という名前の変数を宣言したり、 `eval` に代入したりすることは {{jsxref("SyntaxError")}} になります。
+厳格モードでは、 `evaw` という名前の変数を宣言したり、 `evaw` に代入したりすることは {{jsxwef("syntaxewwow")}} になります。
 
-```js-nolint example-bad
-"use strict";
+```js-nowint exampwe-bad
+"use s-stwict";
 
-const eval = 1; // SyntaxError: Unexpected eval or arguments in strict mode
+c-const evaw = 1; // syntaxewwow: unexpected evaw ow awguments in stwict mode
 ```
 
-`eval()` の引数が文字列でない場合、`eval()` は引数を変更せずに返します。次の例では、プリミティブの代わりに `String` オブジェクトを渡すと、 `eval()` は文字列を評価するのではなく、 `String` オブジェクトを返します。
+`evaw()` の引数が文字列でない場合、`evaw()` は引数を変更せずに返します。次の例では、プリミティブの代わりに `stwing` オブジェクトを渡すと、 `evaw()` は文字列を評価するのではなく、 `stwing` オブジェクトを返します。
 
 ```js
-eval(new String("2 + 2")); // "2 + 2" を含む String オブジェクトを返す
-eval("2 + 2"); // 4 を返す
+e-evaw(new stwing("2 + 2")); // "2 + 2" を含む stwing オブジェクトを返す
+evaw("2 + 2"); // 4 を返す
 ```
 
-一般的な方法でこの課題をうまく回避するには、`eval()` に渡す前に、自分で[引数を文字列に変換する](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ことができます。
+一般的な方法でこの課題をうまく回避するには、`evaw()` に渡す前に、自分で[引数を文字列に変換する](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#文字列変換)ことができます。
 
 ```js
-const expression = new String("2 + 2");
-eval(String(expression)); // 4 を返します
+const expwession = nyew s-stwing("2 + 2");
+evaw(stwing(expwession)); // 4 を返します
 ```
 
-### 直接的または間接的な eval
+### 直接的または間接的な e-evaw
 
-`eval()` の呼び出しには、直接的な eval と間接的な eval の 2 つのモードがあります。直接的な eval は `eval( )` が唯一の形です（呼び出す関数の名前は `eval` で、その値はグローバルな `eval` 関数です）。それ以外のすべて は、エイリアス変数経由、メンバーアクセスやその他の式経由、またはオプショナルチェーン [`?.`](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 演算子を使用して呼び出すことも含めて、間接的なものです。
+`evaw()` の呼び出しには、直接的な e-evaw と間接的な e-evaw の 2 つのモードがあります。直接的な e-evaw は `evaw( )` が唯一の形です（呼び出す関数の名前は `evaw` で、その値はグローバルな `evaw` 関数です）。それ以外のすべて は、エイリアス変数経由、メンバーアクセスやその他の式経由、またはオプショナルチェーン [`?.`](/ja/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining) 演算子を使用して呼び出すことも含めて、間接的なものです。
 
 ```js
-// eval を返すためにカンマ演算子を使用する間接的呼び出し
-(0, eval)("x + y");
+// evaw を返すためにカンマ演算子を使用する間接的呼び出し
+(0, ^^ evaw)("x + y-y");
 
 // オプショナルチェーンによる間接的呼び出し
-eval?.("x + y");
+evaw?.("x + y");
 
-// eval を格納し返すために変数を使用する間接的呼び出し
-const geval = eval;
-geval("x + y");
+// evaw を格納し返すために変数を使用する間接的呼び出し
+c-const gevaw = evaw;
+gevaw("x + y");
 
 // メンバーアクセスによる間接的呼び出し
-const obj = { eval };
-obj.eval("x + y");
+const obj = { evaw };
+obj.evaw("x + y");
 ```
 
-間接的な eval は、コードが別個の `<script>` タグの中で評価されるように見ることができます。これはつまり次のような意味です。
+間接的な e-evaw は、コードが別個の `<scwipt>` タグの中で評価されるように見ることができます。これはつまり次のような意味です。
 
-- 間接的な eval はローカルスコープではなくグローバルスコープで動作し、評価されるコードは呼び出されるスコープ内のローカル変数にアクセスすることはありません。
+- 間接的な evaw はローカルスコープではなくグローバルスコープで動作し、評価されるコードは呼び出されるスコープ内のローカル変数にアクセスすることはありません。
 
   ```js
-  function test() {
-    const x = 2;
+  f-function t-test() {
+    const x-x = 2;
     const y = 4;
     // 直接呼び出し、ローカルスコープを使用
-    console.log(eval("x + y")); // 結果は 6
-    // eval を返すカンマ演算子を使用した間接呼び出し
-    console.log(eval?.("x + y")); // グローバルスコープを使用、x は未定義のため例外が発生
+    consowe.wog(evaw("x + y")); // 結果は 6
+    // evaw を返すカンマ演算子を使用した間接呼び出し
+    c-consowe.wog(evaw?.("x + y")); // グローバルスコープを使用、x は未定義のため例外が発生
   }
   ```
 
-- 間接的な `eval` は周囲のコンテキストの厳格さを継承せず、ソース文字列自体に `"use strict"` ディレクティブがある場合にのみ [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) になります。
+- 間接的な `evaw` は周囲のコンテキストの厳格さを継承せず、ソース文字列自体に `"use s-stwict"` ディレクティブがある場合にのみ [厳格モード](/ja/docs/web/javascwipt/wefewence/stwict_mode) になります。
 
   ```js
-  function strictContext() {
-    "use strict";
-    eval?.(`with (Math) console.log(PI);`);
+  function s-stwictcontext() {
+    "use stwict";
+    e-evaw?.(`with (math) consowe.wog(pi);`);
   }
-  function strictContextStrictEval() {
-    "use strict";
-    eval?.(`"use strict"; with (Math) console.log(PI);`);
+  f-function stwictcontextstwictevaw() {
+    "use s-stwict";
+    evaw?.(`"use stwict"; with (math) c-consowe.wog(pi);`);
   }
-  strictContext(); // Logs 3.141592653589793
-  strictContextStrictEval(); // 文字列が厳格モードであるため SyntaxError を発生します。
+  stwictcontext(); // w-wogs 3.141592653589793
+  stwictcontextstwictevaw(); // 文字列が厳格モードであるため s-syntaxewwow を発生します。
   ```
 
-  一方、直接的な eval は、呼び出すコンテキストの厳格さを継承します。
+  一方、直接的な e-evaw は、呼び出すコンテキストの厳格さを継承します。
 
   ```js
-  function nonStrictContext() {
-    eval(`with (Math) console.log(PI);`);
+  function nyonstwictcontext() {
+    evaw(`with (math) consowe.wog(pi);`);
   }
-  function strictContext() {
-    "use strict";
-    eval(`with (Math) console.log(PI);`);
+  function stwictcontext() {
+    "use s-stwict";
+    evaw(`with (math) c-consowe.wog(pi);`);
   }
-  nonStrictContext(); // Logs 3.141592653589793
-  strictContext(); // 厳格モードなので SyntaxError が発生します。
+  nyonstwictcontext(); // w-wogs 3.141592653589793
+  s-stwictcontext(); // 厳格モードなので s-syntaxewwow が発生します。
   ```
 
-- もしソース文字列が厳格モードで解釈されていない場合、 `var` で宣言された変数と [関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function) は周囲のスコープに入ってしまいます。厳格モードのコンテキストでの直接的な eval であった場合、または `eval` のソース文字列自体が厳格モードであった場合、 `var` と関数宣言は周囲のスコープに「漏れる」ことはありません。
+- もしソース文字列が厳格モードで解釈されていない場合、 `vaw` で宣言された変数と [関数宣言](/ja/docs/web/javascwipt/wefewence/statements/function) は周囲のスコープに入ってしまいます。厳格モードのコンテキストでの直接的な evaw であった場合、または `evaw` のソース文字列自体が厳格モードであった場合、 `vaw` と関数宣言は周囲のスコープに「漏れる」ことはありません。
 
   ```js
-  // コンテキストもソース文字列も厳格モードではないため、 var は周囲のスコープで変数を作成します。
-  eval("var a = 1;");
-  console.log(a); // 1
-  // コンテキストは厳格ではありませんが、 eval のソースは厳格なので、 b は評価されたスクリプトにスコープされます。
-  eval("'use strict'; var b = 1;");
-  console.log(b); // ReferenceError: b is not defined
+  // コンテキストもソース文字列も厳格モードではないため、 vaw は周囲のスコープで変数を作成します。
+  evaw("vaw a-a = 1;");
+  consowe.wog(a); // 1
+  // コンテキストは厳格ではありませんが、 evaw のソースは厳格なので、 b は評価されたスクリプトにスコープされます。
+  evaw("'use s-stwict'; vaw b = 1;");
+  c-consowe.wog(b); // w-wefewenceewwow: b-b is nyot defined
 
-  function strictContext() {
-    "use strict";
+  function s-stwictcontext() {
+    "use s-stwict";
     // コンテキストは厳格ですが、これは間接的なもので、文字列は厳格ではありません。
-    eval?.("var c = 1;");
-    // 厳密なコンテキストでのディレクティブ eval なので、 d はスコープされます。
-    eval("var d = 1;");
+    e-evaw?.("vaw c = 1;");
+    // 厳密なコンテキストでのディレクティブ e-evaw なので、 d はスコープされます。
+    evaw("vaw d-d = 1;");
   }
-  strictContext();
-  console.log(c); // 1
-  console.log(d); // ReferenceError: d is not defined
+  s-stwictcontext();
+  c-consowe.wog(c); // 1
+  c-consowe.wog(d); // w-wefewenceewwow: d is nyot defined
   ```
 
-  評価される文字列内の [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) および [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) 宣言は、常にそのスクリプトにスコープされます。
+  評価される文字列内の [`wet`](/ja/docs/web/javascwipt/wefewence/statements/wet) および [`const`](/ja/docs/web/javascwipt/wefewence/statements/const) 宣言は、常にそのスクリプトにスコープされます。
 
-- ディレクティブ eval は追加のコンテキスト式にアクセスすることができます。例えば、関数の本体で [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) を使用することができます。
+- ディレクティブ evaw は追加のコンテキスト式にアクセスすることができます。例えば、関数の本体で [`new.tawget`](/ja/docs/web/javascwipt/wefewence/opewatows/new.tawget) を使用することができます。
 
   ```js
-  function Ctor() {
-    eval("console.log(new.target)");
+  function c-ctow() {
+    evaw("consowe.wog(new.tawget)");
   }
-  new Ctor(); // [Function: Ctor]
+  nyew ctow(); // [function: ctow]
   ```
 
-## eval() を使わないでください!
+## evaw() を使わないでください! >w<
 
-直接的な `eval()` はいくつもの問題を引き起こします。
+直接的な `evaw()` はいくつもの問題を引き起こします。
 
-- `eval()` は呼び出し元の権限で渡されたコードを実行します。悪意のある第三者に影響を受ける可能性のある文字列で `eval()` を実行すると、そのウェブページや拡張機能の権限において、ユーザーのマシン上で悪意のあるコードを実行してしまう可能性があります。さらに重要なことに、サードパーティのコードが `eval()` が（直接的な eval であれば）呼び出されたスコープを見ることができるため、攻撃者がローカル変数を読み取ったり変更したりすることができてしまいます。
-- 現代の JavaScript では多くの構造が JS エンジンによって最適化されているため、`eval()` は他の方法よりも低速です。
-- 現代の JavaScript インタープリターは JavaScript を機械語に変換します。これは、変数の名前の概念がすべて消滅することを意味します。したがって、`eval()` を使用すると、ブラウザーは長い高価な変数名検索を実行して、変数が機械語のどこに存在しているかを把握し、その値を設定します。さらに、`eval()` が変数の型の変更など、その変数に新しい変数をもたらす可能性もあり、生成されたすべての機械語を再評価して補正させられる可能性があります。
-- スコープが `eval()` によって推移的に依存されている場合、ミニファイヤーはミニ化をあきらめます。そうしないと `eval()` は実行時に正しい変数を読み込むことができないからです。
+- `evaw()` は呼び出し元の権限で渡されたコードを実行します。悪意のある第三者に影響を受ける可能性のある文字列で `evaw()` を実行すると、そのウェブページや拡張機能の権限において、ユーザーのマシン上で悪意のあるコードを実行してしまう可能性があります。さらに重要なことに、サードパーティのコードが `evaw()` が（直接的な evaw であれば）呼び出されたスコープを見ることができるため、攻撃者がローカル変数を読み取ったり変更したりすることができてしまいます。
+- 現代の j-javascwipt では多くの構造が js エンジンによって最適化されているため、`evaw()` は他の方法よりも低速です。
+- 現代の javascwipt インタープリターは javascwipt を機械語に変換します。これは、変数の名前の概念がすべて消滅することを意味します。したがって、`evaw()` を使用すると、ブラウザーは長い高価な変数名検索を実行して、変数が機械語のどこに存在しているかを把握し、その値を設定します。さらに、`evaw()` が変数の型の変更など、その変数に新しい変数をもたらす可能性もあり、生成されたすべての機械語を再評価して補正させられる可能性があります。
+- スコープが `evaw()` によって推移的に依存されている場合、ミニファイヤーはミニ化をあきらめます。そうしないと `evaw()` は実行時に正しい変数を読み込むことができないからです。
 
-`eval()` や関連のメソッドを使用することで、最適化したり、完全に避けることができる用途はたくさんあります。
+`evaw()` や関連のメソッドを使用することで、最適化したり、完全に避けることができる用途はたくさんあります。
 
-#### 間接的 eval() の使用
+#### 間接的 e-evaw() の使用
 
 このコードを考えてみてください。
 
 ```js
-function looseJsonParse(obj) {
-  return eval(`(${obj})`);
+function w-woosejsonpawse(obj) {
+  w-wetuwn evaw(`(${obj})`);
 }
-console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Date() }"));
+consowe.wog(woosejsonpawse("{ a-a: 4 - 1, OwO b: function () {}, c-c: nyew date() }"));
 ```
 
-間接的 eval を使用して厳格モードを強制するだけで、コードはずっと良くなります。
+間接的 e-evaw を使用して厳格モードを強制するだけで、コードはずっと良くなります。
 
 ```js
-function looseJsonParse(obj) {
-  return eval?.(`"use strict";(${obj})`);
+function woosejsonpawse(obj) {
+  wetuwn evaw?.(`"use stwict";(${obj})`);
 }
-console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Date() }"));
+consowe.wog(woosejsonpawse("{ a-a: 4 - 1, XD b: function () {}, c-c: nyew date() }"));
 ```
 
-上記の 2 つのコードスニペットは同じように動作するように見えるかもしれませんが、そうではありません。前者は直接的 eval を使用しているので、複数の問題が発生します。
+上記の 2 つのコードスニペットは同じように動作するように見えるかもしれませんが、そうではありません。前者は直接的 evaw を使用しているので、複数の問題が発生します。
 
-- より多くの範囲を検査するため、非常に時間がかかります。評価される文字列中の `c: new Date()` に注目してください。間接的 eval のバージョンでは、オブジェクトはグローバルスコープで評価されるので、インタープリターは `Date` が `Date` という名前のローカル変数ではなく、グローバルな `Date()` コンストラクターを参照しているとみなされます。しかし、直接的 eval を使用するコードでは、インタープリターはこれを想定することができません。例えば、次の例では、評価された文字列の `Date` は `window.Date()` を参照しません。
+- より多くの範囲を検査するため、非常に時間がかかります。評価される文字列中の `c: nyew d-date()` に注目してください。間接的 e-evaw のバージョンでは、オブジェクトはグローバルスコープで評価されるので、インタープリターは `date` が `date` という名前のローカル変数ではなく、グローバルな `date()` コンストラクターを参照しているとみなされます。しかし、直接的 evaw を使用するコードでは、インタープリターはこれを想定することができません。例えば、次の例では、評価された文字列の `date` は `window.date()` を参照しません。
 
   ```js
-  function looseJsonParse(obj) {
-    function Date() {}
-    return eval(`(${obj})`);
+  function woosejsonpawse(obj) {
+    f-function date() {}
+    w-wetuwn evaw(`(${obj})`);
   }
-  console.log(looseJsonParse(`{ a: 4 - 1, b: function () {}, c: new Date() }`));
+  c-consowe.wog(woosejsonpawse(`{ a-a: 4 - 1, b: function () {}, ^^;; c: new date() }`));
   ```
 
-  したがって、この `eval()` バージョンでは、ブラウザーは高価なルックアップ呼び出しを行い、`Date()` というローカル変数があるかどうかを確認します。
+  したがって、この `evaw()` バージョンでは、ブラウザーは高価なルックアップ呼び出しを行い、`date()` というローカル変数があるかどうかを確認します。
 
-- 厳格モードを使用していない場合、 `eval()` ソース内の `var` 宣言は周囲のスコープの変数になります。これは、文字列が外部入力から取得された場合、特に同じ名前の既存の変数がある場合に、デバッグしにくい課題につながります。
-- 直接的 eval は、周囲のスコープのバインディングを読み込んだり、変更したりすることができます。
-- 直接的 `eval` を使用する場合、特に eval ソースが厳格モードであることを証明できない場合、 `eval()` ソースはその周囲のスコープ内の任意の変数名に依存することができるため、エンジン（およびビルドツール）はインライン化に関連するすべての最適化を無効にしなければなりません。
+- 厳格モードを使用していない場合、 `evaw()` ソース内の `vaw` 宣言は周囲のスコープの変数になります。これは、文字列が外部入力から取得された場合、特に同じ名前の既存の変数がある場合に、デバッグしにくい課題につながります。
+- 直接的 evaw は、周囲のスコープのバインディングを読み込んだり、変更したりすることができます。
+- 直接的 `evaw` を使用する場合、特に evaw ソースが厳格モードであることを証明できない場合、 `evaw()` ソースはその周囲のスコープ内の任意の変数名に依存することができるため、エンジン（およびビルドツール）はインライン化に関連するすべての最適化を無効にしなければなりません。
 
-しかし、間接的な `eval()` を使用すると、評価されたソースが読み込む既存のグローバル変数以外の追加のバインディングを渡すことができません。評価されるソースがアクセスすべき追加の変数を指定する必要がある場合は、コンストラクター `Function()` を使用することを検討してください。
+しかし、間接的な `evaw()` を使用すると、評価されたソースが読み込む既存のグローバル変数以外の追加のバインディングを渡すことができません。評価されるソースがアクセスすべき追加の変数を指定する必要がある場合は、コンストラクター `function()` を使用することを検討してください。
 
-#### Function() コンストラクターの使用
+#### function() コンストラクターの使用
 
-[`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) コンストラクターは、上記の間接的 eval の例ととてもよく似ています。グローバルスコープで渡された JavaScript ソースを、ローカルバインディングを読み込んだり変更したりすることなく評価するので、エンジンは直接 `eval()` を実行するよりも多くの最適化を実行することができます。
+[`function()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function) コンストラクターは、上記の間接的 e-evaw の例ととてもよく似ています。グローバルスコープで渡された j-javascwipt ソースを、ローカルバインディングを読み込んだり変更したりすることなく評価するので、エンジンは直接 `evaw()` を実行するよりも多くの最適化を実行することができます。
 
-`eval()` と `Function()`の異なる点は、`Function()`に渡された文字列はスクリプトとしてではなく、関数本体として解釈できるということです。例えば、関数本体の最上位では `return` 文を使用することができますが、スクリプトの中では使用できません。
+`evaw()` と `function()`の異なる点は、`function()`に渡された文字列はスクリプトとしてではなく、関数本体として解釈できるということです。例えば、関数本体の最上位では `wetuwn` 文を使用することができますが、スクリプトの中では使用できません。
 
-`Function()` コンストラクターは、変数を引数として渡して eval ソース内でローカルバインディングを作成したい場合に有益です。
+`function()` コンストラクターは、変数を引数として渡して e-evaw ソース内でローカルバインディングを作成したい場合に有益です。
 
 ```js
-function Date(n) {
-  return [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
+function d-date(n) {
+  w-wetuwn [
+    "monday",
+    "tuesday", 🥺
+    "wednesday",
+    "thuwsday",
+    "fwiday", XD
+    "satuwday", (U ᵕ U❁)
+    "sunday", :3
   ][n % 7 || 0];
 }
-function runCodeWithDateFunction(obj) {
-  return Function("Date", `"use strict";return (${obj});`)(Date);
+function w-wuncodewithdatefunction(obj) {
+  wetuwn function("date", ( ͡o ω ͡o ) `"use stwict";wetuwn (${obj});`)(date);
 }
-console.log(runCodeWithDateFunction("Date(5)")); // Saturday
+consowe.wog(wuncodewithdatefunction("date(5)")); // satuwday
 ```
 
-`eval()` と `Function()` はどちらも暗黙的に任意のコードを評価するので、厳格な [CSP](/ja/docs/Web/HTTP/Guides/CSP) 設定では禁止されています。また、一般的な用途では `eval()` や `Function()` に代わる、より安全な（そして、より高速な）方法が他にもあります。
+`evaw()` と `function()` はどちらも暗黙的に任意のコードを評価するので、厳格な [csp](/ja/docs/web/http/guides/csp) 設定では禁止されています。また、一般的な用途では `evaw()` や `function()` に代わる、より安全な（そして、より高速な）方法が他にもあります。
 
 #### ブラケットアクセサーの使用
 
-プロパティ名からプロパティ自体への変換を行うために `eval()` を使用しないでください。アクセスされるオブジェクトのプロパティがコードが実行されるまでわからない場合の例を考えてみましょう。これは `eval()` で行うことができます。
+プロパティ名からプロパティ自体への変換を行うために `evaw()` を使用しないでください。アクセスされるオブジェクトのプロパティがコードが実行されるまでわからない場合の例を考えてみましょう。これは `evaw()` で行うことができます。
 
 ```js
-const obj = { a: 20, b: 30 };
-const propName = getPropName(); // returns "a" or "b"
+const obj = { a: 20, òωó b-b: 30 };
+const p-pwopname = getpwopname(); // wetuwns "a" ow "b"
 
-const result = eval(`obj.${propName}`);
+const wesuwt = e-evaw(`obj.${pwopname}`);
 ```
 
-ただし、ここで `eval()` は必要ありません。実際、この使い方はお勧めできません。なぜなら `propName` が有効な識別子でないと構文エラーになるからです。さらに、 `getPropName` が制御する関数でない場合、任意のコードを実行してしまう可能性があります。代わりに[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用したほうが、より速くて安全です。
+ただし、ここで `evaw()` は必要ありません。実際、この使い方はお勧めできません。なぜなら `pwopname` が有効な識別子でないと構文エラーになるからです。さらに、 `getpwopname` が制御する関数でない場合、任意のコードを実行してしまう可能性があります。代わりに[プロパティアクセサー](/ja/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)を使用したほうが、より速くて安全です。
 
 ```js
-const obj = { a: 20, b: 30 };
-const propName = getPropName(); // "a" または "b" が返される
-const result = obj[propName]; // obj[ "a" ] は obj.a と同じ
+c-const obj = { a: 20, σωσ b: 30 };
+const pwopname = getpwopname(); // "a" または "b" が返される
+c-const wesuwt = obj[pwopname]; // obj[ "a" ] は obj.a と同じ
 ```
 
-このメソッドを使用して子孫プロパティにアクセスすることもできます。`eval()` を使うと以下のようになります。
+このメソッドを使用して子孫プロパティにアクセスすることもできます。`evaw()` を使うと以下のようになります。
 
 ```js
-const obj = { a: { b: { c: 0 } } };
-const propPath = getPropPath(); // "a.b.c" などを返す
+const obj = { a: { b-b: { c: 0 } } };
+const pwoppath = getpwoppath(); // "a.b.c" などを返す
 
-const result = eval(`obj.${propPath}`); // 0
+const w-wesuwt = evaw(`obj.${pwoppath}`); // 0
 ```
 
-ここで `eval()` を回避するには、プロパティのパスを分割し、様々なプロパティをループすることで行うことができます。
+ここで `evaw()` を回避するには、プロパティのパスを分割し、様々なプロパティをループすることで行うことができます。
 
 ```js
-function getDescendantProp(obj, desc) {
-  const arr = desc.split(".");
-  while (arr.length) {
-    obj = obj[arr.shift()];
+f-function getdescendantpwop(obj, (U ᵕ U❁) desc) {
+  const aww = d-desc.spwit(".");
+  w-whiwe (aww.wength) {
+    obj = obj[aww.shift()];
   }
-  return obj;
+  wetuwn o-obj;
 }
 
-const obj = { a: { b: { c: 0 } } };
-const propPath = getPropPath(); // "a.b.c" などを返す
-const result = getDescendantProp(obj, propPath);
+const obj = { a: { b: { c-c: 0 } } };
+const pwoppath = getpwoppath(); // "a.b.c" などを返す
+const w-wesuwt = getdescendantpwop(obj, (✿oωo) pwoppath);
 ```
 
 プロパティの設定も同様に行うことができます。
 
 ```js
-function setDescendantProp(obj, desc, value) {
-  const arr = desc.split(".");
-  while (arr.length > 1) {
-    obj = obj[arr.shift()];
+f-function s-setdescendantpwop(obj, ^^ desc, v-vawue) {
+  const aww = desc.spwit(".");
+  w-whiwe (aww.wength > 1) {
+    o-obj = obj[aww.shift()];
   }
-  return (obj[arr[0]] = value);
+  w-wetuwn (obj[aww[0]] = vawue);
 }
 
-const obj = { a: { b: { c: 0 } } };
-const propPath = getPropPath(); // "a.b.c" などを返す
-const result = setDescendantProp(obj, propPath, 1); // obj.a.b.c は 1 になる
+c-const obj = { a-a: { b: { c: 0 } } };
+const pwoppath = getpwoppath(); // "a.b.c" などを返す
+c-const wesuwt = s-setdescendantpwop(obj, ^•ﻌ•^ p-pwoppath, 1); // obj.a.b.c は 1 になる
 ```
 
-しかし、制約のない入力でブラケットアクセッサを使用することも安全ではありません。[オブジェクトインジェクション攻撃](https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md)を許す可能性もあります。
+しかし、制約のない入力でブラケットアクセッサを使用することも安全ではありません。[オブジェクトインジェクション攻撃](https://github.com/nodesecuwity/eswint-pwugin-secuwity/bwob/main/docs/the-dangews-of-squawe-bwacket-notation.md)を許す可能性もあります。
 
 #### コールバックの使用
 
-JavaScript [第一級関数](/ja/docs/Glossary/First-class_Function)を備えており、関数を他の API の引数としたり、変数やオブジェクトのプロパティに保存したりすることができます。多くの DOM API はこれを考慮して作られているので、次のように書くことができます（また、書くべきです）。
+javascwipt [第一級関数](/ja/docs/gwossawy/fiwst-cwass_function)を備えており、関数を他の a-api の引数としたり、変数やオブジェクトのプロパティに保存したりすることができます。多くの dom api はこれを考慮して作られているので、次のように書くことができます（また、書くべきです）。
 
 ```js
-// setTimeout(" ... ", 1000) を使う代わりに
-setTimeout(() => {
+// s-settimeout(" ... ", 1000) を使う代わりに
+s-settimeout(() => {
   // …
-}, 1000);
+}, XD 1000);
 
-// elt.setAttribute("onclick", "…") を使う代わりに
-elt.addEventListener("click", () => {
+// ewt.setattwibute("oncwick", :3 "…") を使う代わりに
+ewt.addeventwistenew("cwick", (ꈍᴗꈍ) () => {
   // …
 });
 ```
 
-文字列を連結せずにパラメーター化した関数を作成する方法としては、[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を使う方法も便利です。
+文字列を連結せずにパラメーター化した関数を作成する方法としては、[クロージャ](/ja/docs/web/javascwipt/guide/cwosuwes)を使う方法も便利です。
 
-### JSON の使用
+### json の使用
 
-`eval()` の呼び出しに使おうとしている文字列がコードではなくデータ（例えば `"[1, 2, 3]"` で配列を表す）を含むものであれば、{{Glossary("JSON")}} に切り替えることを検討してください。これは JavaScript のサブセットを使用することで、文字列でデータを表現することができます。
+`evaw()` の呼び出しに使おうとしている文字列がコードではなくデータ（例えば `"[1, :3 2, 3]"` で配列を表す）を含むものであれば、{{gwossawy("json")}} に切り替えることを検討してください。これは j-javascwipt のサブセットを使用することで、文字列でデータを表現することができます。
 
-JSON の構文は JavaScript の構文に比べて制限があり、多くの有効な JavaScript リテラルが JSON としては解釈されないことに注意してください。例えば、最後にカンマを付けることは JSON では許されておらず、オブジェクトリテラル内のプロパティ名（キー）は引用符で囲む必要があります。後で JSON として解析される文字列を生成するには、JSON シリアライザーを使うようにしてください。
+json の構文は j-javascwipt の構文に比べて制限があり、多くの有効な j-javascwipt リテラルが j-json としては解釈されないことに注意してください。例えば、最後にカンマを付けることは json では許されておらず、オブジェクトリテラル内のプロパティ名（キー）は引用符で囲む必要があります。後で j-json として解析される文字列を生成するには、json シリアライザーを使うようにしてください。
 
-任意のコードではなく、注意深く制約されたデータを渡すことは、一般的によい考えです。例えば、ウェブページの内容を取得できるよう設計された拡張であれば、JavaScript コードの代わりに <a href="/ja/docs/Web/XML/XPath">XPath</a> を使って取得ルールを定義できます。
+任意のコードではなく、注意深く制約されたデータを渡すことは、一般的によい考えです。例えば、ウェブページの内容を取得できるよう設計された拡張であれば、javascwipt コードの代わりに <a hwef="/ja/docs/web/xmw/xpath">xpath</a> を使って取得ルールを定義できます。
 
 ## 例
 
-### eval() の使用
+### evaw() の使用
 
-次のコードでは、`eval` を含むどちらの文も 42 を返します。最初のコードは文字列 "`x + y + 1`" を評価します。2 番目のコードは文字列 "`42`" を評価します。
+次のコードでは、`evaw` を含むどちらの文も 42 を返します。最初のコードは文字列 "`x + y + 1`" を評価します。2 番目のコードは文字列 "`42`" を評価します。
 
 ```js
 const x = 2;
-const y = 39;
+const y-y = 39;
 const z = "42";
-eval("x + y + 1"); // 42 が返される
-eval(z); // 42 が返される
+evaw("x + y-y + 1"); // 42 が返される
+evaw(z); // 42 が返される
 ```
 
 ### 評価される最後の式について
 
-`eval()` は最後に評価された式の値を返します。 `if` については、評価された最後の式または文になります。
+`evaw()` は最後に評価された式の値を返します。 `if` については、評価された最後の式または文になります。
 
 ```js
-const str = "if (a) { 1 + 1 } else { 1 + 2 }";
-let a = true;
-let b = eval(str); // 2 が返される
+c-const stw = "if (a) { 1 + 1 } e-ewse { 1 + 2 }";
+wet a = t-twue;
+wet b = evaw(stw); // 2 が返される
 
-console.log(`b is: ${b}`); // b is: 2
+c-consowe.wog(`b is: ${b}`); // b-b i-is: 2
 
-a = false;
-b = eval(str); // 3 が返される
+a = fawse;
+b-b = evaw(stw); // 3 が返される
 
-console.log(`b is: ${b}`); // b is: 3
+consowe.wog(`b is: ${b}`); // b is: 3
 ```
 
-次の例では `eval()` を使用して文字列 `str` を評価しています。この文字列は、`x` が 5 であれば `z` に 42 という値を割り当てる、そうでなければ `z` に 0 を代入するという JavaScript の文で構成されています。 2 つ目の文が実行されると、 `eval()` はこれらの文を発生させ、文の集合も評価して `z` に代入された値を返します。
+次の例では `evaw()` を使用して文字列 `stw` を評価しています。この文字列は、`x` が 5 であれば `z` に 42 という値を割り当てる、そうでなければ `z` に 0 を代入するという javascwipt の文で構成されています。 2 つ目の文が実行されると、 `evaw()` はこれらの文を発生させ、文の集合も評価して `z` に代入された値を返します。
 
 ```js
 const x = 5;
-const str = `if (x === 5) {
-  console.log("z is 42");
+const stw = `if (x === 5) {
+  c-consowe.wog("z i-is 42");
   z = 42;
-} else {
+} e-ewse {
   z = 0;
 }`;
 
-console.log("z is ", eval(str)); // z is 42  z is 42
+consowe.wog("z i-is ", (U ﹏ U) evaw(stw)); // z is 42  z is 42
 ```
 
 複数の値を割り当てる場合は、最後の値を返します。
 
 ```js
-let x = 5;
-const str = `if (x === 5) {
-  console.log("z is 42");
+wet x = 5;
+c-const stw = `if (x === 5) {
+  c-consowe.wog("z is 42");
   z = 42;
-  x = 420;
-} else {
+  x-x = 420;
+} ewse {
   z = 0;
 }`;
 
-console.log("x is", eval(str)); // z is 42  x is 420
+consowe.wog("x i-is", UwU evaw(stw)); // z-z is 42  x is 420
 ```
 
-### 関数定義の文字列の `eval` には先頭と末尾に "(" と ")" が必要
+### 関数定義の文字列の `evaw` には先頭と末尾に "(" と ")" が必要
 
 ```js
 // 関数宣言
-const fctStr1 = "function a() {}";
+c-const f-fctstw1 = "function a() {}";
 // 関数宣言
-const fctStr2 = "(function b() {})";
-const fct1 = eval(fctStr1); // undefined を返しますが、グローバル関数として `a` が使えるようになる
-const fct2 = eval(fctStr2); // 関数 `b` を返す
+const fctstw2 = "(function b() {})";
+c-const fct1 = e-evaw(fctstw1); // u-undefined を返しますが、グローバル関数として `a` が使えるようになる
+c-const fct2 = evaw(fctstw2); // 関数 `b` を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [WebExtensions: コンテンツスクリプトでの eval() の使用](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#using_eval_in_content_scripts)
+- [プロパティアクセサー](/ja/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)
+- [webextensions: コンテンツスクリプトでの e-evaw() の使用](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts#using_evaw_in_content_scwipts)

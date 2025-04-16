@@ -1,81 +1,81 @@
 ---
-title: "CSP: worker-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: wowkew-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/wowkew-swc
+o-owiginaw_swug: web/http/headews/content-secuwity-powicy/wowkew-swc
+w-w10n:
+  souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`worker-src`** ディレクティブは、 {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}} スクリプトの有効なソースを指定します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`wowkew-swc`** ディレクティブは、 {{domxwef("wowkew")}}, -.- {{domxwef("shawedwowkew")}}, ^^;; {{domxwef("sewvicewowkew")}} スクリプトの有効なソースを指定します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th scope="wow">csp バージョン</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">フォールバック</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch d-diwective", >_< "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">フォールバック</th>
       <td>
         <p>
-          このディレクティブがない場合、ユーザーエージェントはワーカーの実行を制御するとき、まず {{CSP("child-src")}} ディレクティブを探し、次に {{CSP("script-src")}} ディレクティブ、そして最後に {{CSP("default-src")}} ディレクティブを探します。
+          このディレクティブがない場合、ユーザーエージェントはワーカーの実行を制御するとき、まず {{csp("chiwd-swc")}} ディレクティブを探し、次に {{csp("scwipt-swc")}} ディレクティブ、そして最後に {{csp("defauwt-swc")}} ディレクティブを探します。
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`worker-src` ポリシーには 1 つ以上のソースを指定することができます。
+`wowkew-swc` ポリシーには 1 つ以上のソースを指定することができます。
 
 ```http
-Content-Security-Policy: worker-src <source>;
-Content-Security-Policy: worker-src <source> <source>;
+content-secuwity-powicy: wowkew-swc <souwce>;
+content-secuwity-powicy: wowkew-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch d-diwective", mya "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ### 違反の場合
 
-この CSP ヘッダーが与えられている時、
+この csp ヘッダーが与えられている時、
 
 ```http
-Content-Security-Policy: worker-src https://example.com/
+content-secuwity-powicy: w-wowkew-swc https://exampwe.com/
 ```
 
-{{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}} はブロックされ、読み込まれません。
+{{domxwef("wowkew")}}, mya {{domxwef("shawedwowkew")}}, {{domxwef("sewvicewowkew")}} はブロックされ、読み込まれません。
 
-```html
-<script>
-  let blockedWorker = new Worker("data:application/javascript,…");
-  blockedWorker = new SharedWorker("https://not-example.com/");
-  navigator.serviceWorker.register("https://not-example.com/sw.js");
-</script>
+```htmw
+<scwipt>
+  wet bwockedwowkew = n-nyew wowkew("data:appwication/javascwipt,…");
+  bwockedwowkew = nyew shawedwowkew("https://not-exampwe.com/");
+  nyavigatow.sewvicewowkew.wegistew("https://not-exampwe.com/sw.js");
+</scwipt>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [ウェブワーカーでの CSP](/ja/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy)
-- {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- [ウェブワーカーでの c-csp](/ja/docs/web/api/web_wowkews_api/using_web_wowkews#content_secuwity_powicy)
+- {{domxwef("wowkew")}}, 😳 {{domxwef("shawedwowkew")}}, XD {{domxwef("sewvicewowkew")}}

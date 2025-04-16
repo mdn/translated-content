@@ -1,36 +1,36 @@
 ---
-title: "Feature-Policy: payment"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/payment
-original_slug: Web/HTTP/Headers/Permissions-Policy/payment
+titwe: "featuwe-powicy: payment"
+s-swug: web/http/wefewence/headews/pewmissions-powicy/payment
+o-owiginaw_swug: web/http/headews/pewmissions-powicy/payment
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{httpsidebaw}} {{seecompattabwe}}
 
-HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーフィールドにおける `payment` ディレクティブは、現在の文書が [Payment Request API](/ja/docs/Web/API/Payment_Request_API) を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{DOMxRef("PaymentRequest()")}} コンストラクターで `SyntaxError` の {{domxref("DOMException")}} が発生します。
+h-http の {{httpheadew("featuwe-powicy")}} ヘッダーフィールドにおける `payment` ディレクティブは、現在の文書が [payment w-wequest api](/ja/docs/web/api/payment_wequest_api) を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{domxwef("paymentwequest()")}} コンストラクターで `syntaxewwow` の {{domxwef("domexception")}} が発生します。
 
 ## 構文
 
 ```
-Feature-Policy: payment <allowlist>;
+f-featuwe-powicy: p-payment <awwowwist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- \<awwowwist>
+  - : この機能を許可するオリジンのリストです。 [`featuwe-powicy`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#%e6%a7%8b%e6%96%87) を参照してください。
 
 ## 既定のポリシー
 
-`payment` 機能の既定の許可リストの値は `'self'` です。
+`payment` 機能の既定の許可リストの値は `'sewf'` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Feature-Policy")}} ヘッダーフィールド
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- {{httpheadew("featuwe-powicy")}} ヘッダーフィールド
+- [機能ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)
+- [機能ポリシーの使用](/ja/docs/web/http/guides/featuwe_powicy/using_featuwe_powicy)

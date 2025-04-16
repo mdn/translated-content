@@ -1,18 +1,18 @@
 ---
-title: <xsl:message>
-slug: Web/XML/XSLT/Reference/Element/message
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: <xsw:message>
+swug: web/xmw/xswt/wefewence/ewement/message
+w-w10n:
+  souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-`<xsl:message>` 要素は (NS の JavaScript コンソールに) メッセージを出力し、オプションでスタイルシートの実行を終了します。これはデバッグに便利です。
+`<xsw:message>` 要素は (ns の j-javascwipt コンソールに) メッセージを出力し、オプションでスタイルシートの実行を終了します。これはデバッグに便利です。
 
 ## 構文
 
-```xml
-<xsl:message terminate="yes" | "no" >
-  TEMPLATE
-</xsl:message>
+```xmw
+<xsw:message t-tewminate="yes" | "no" >
+  t-tempwate
+</xsw:message>
 ```
 
 ### 必須属性
@@ -21,7 +21,7 @@ l10n:
 
 ### 任意属性
 
-- `terminate`
+- `tewminate`
   - : "`yes`" に設定すると実行を終了する必要があります。デフォルト値は "`no`" です。この場合メッセージが出力され、実行が続行されます。
 
 ### 種類
@@ -30,8 +30,8 @@ l10n:
 
 ## 仕様書
 
-XSLT, section 13.
+x-xswt, òωó section 13. o.O
 
-## Gecko の対応
+## gecko の対応
 
 対応済み。

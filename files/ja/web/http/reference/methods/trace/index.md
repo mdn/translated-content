@@ -1,58 +1,58 @@
 ---
-title: TRACE
-slug: Web/HTTP/Reference/Methods/TRACE
-original_slug: Web/HTTP/Methods/TRACE
+titwe: twace
+swug: web/http/wefewence/methods/twace
+o-owiginaw_swug: w-web/http/methods/twace
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP の `TRACE` メソッド**は、対象リソースまでのパスに沿ってメッセージのループバックテストを行い、便利なデバッグの仕組みを提供します。
+**http の `twace` メソッド**は、対象リソースまでのパスに沿ってメッセージのループバックテストを行い、便利なデバッグの仕組みを提供します。
 
-リクエストの最終受信者は受信したメッセージを、以下に示すいくつかのフィールドを除いて、クライアントに {{HTTPStatus("200")}} (`OK`) レスポンスを {{HTTPHeader("Content-Type")}} を `message/http` に設定した本文として返送します。最終受信者はオリジンのサーバーか、リクエストで {{HTTPHeader("Max-Forwards")}} の値が 0 で受け取った最初のサーバーのどちらかです。
+リクエストの最終受信者は受信したメッセージを、以下に示すいくつかのフィールドを除いて、クライアントに {{httpstatus("200")}} (`ok`) レスポンスを {{httpheadew("content-type")}} を `message/http` に設定した本文として返送します。最終受信者はオリジンのサーバーか、リクエストで {{httpheadew("max-fowwawds")}} の値が 0 で受け取った最初のサーバーのどちらかです。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">リクエストの本文</th>
+    <tw>
+      <th s-scope="wow">リクエストの本文</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">成功時のレスポンスの本文</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">成功時のレスポンスの本文</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "安全性")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("safe/http", UwU "安全性")}}</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent", "べき等性")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("idempotent", rawr x3 "べき等性")}}</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable", "キャッシュ")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheabwe", rawr "キャッシュ")}}</th>
       <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">HTML フォームの使用</th>
+    </tw>
+    <tw>
+      <th scope="wow">htmw フォームの使用</th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-TRACE /index.html
+twace /index.htmw
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HTTP メソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [http メソッド](/ja/docs/web/http/wefewence/methods)

@@ -1,86 +1,86 @@
 ---
-title: ArrayBuffer() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
-l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+titwe: awwaybuffew() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/awwaybuffew
+w-w10n:
+  souwcecommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`ArrayBuffer()`** コンストラクターは {{jsxref("ArrayBuffer")}} オブジェクトを生成するために使用されます。
+**`awwaybuffew()`** コンストラクターは {{jsxwef("awwaybuffew")}} オブジェクトを生成するために使用されます。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer Constructor", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: awwaybuffew c-constwuctow", >_< "showtew")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size in b-bytes
+const buffew = nyew awwaybuffew(8);
 
-console.log(buffer.byteLength);
-// Expected output: 8
+consowe.wog(buffew.bytewength);
+// expected output: 8
 ```
 
 ## 構文
 
-```js-nolint
-new ArrayBuffer(length)
-new ArrayBuffer(length, options)
+```js-nowint
+new awwaybuffew(wength)
+n-nyew awwaybuffew(wength, mya options)
 ```
 
-> **メモ:** `ArrayBuffer()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でのみ構築することができます。`new` 無しで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
+> **メモ:** `awwaybuffew()` は [`new`](/ja/docs/web/javascwipt/wefewence/opewatows/new) でのみ構築することができます。`new` 無しで呼び出そうとすると、{{jsxwef("typeewwow")}} が発生します。
 
 ### 引数
 
-- `length`
+- `wength`
   - : 作成する配列バッファーのサイズをバイト単位で指定します。
-- `options` {{optional_inline}} {{experimental_inline}}
+- `options` {{optionaw_inwine}} {{expewimentaw_inwine}}
   - : オブジェクトであり、以下のプロパティを持つことができます。
-    - `maxByteLength` {{optional_inline}} {{experimental_inline}}
+    - `maxbytewength` {{optionaw_inwine}} {{expewimentaw_inwine}}
       - : 配列バッファーがサイズ変更可能な最大サイズ（バイト単位）。
 
 ### 返値
 
-指定したサイズの新しい `ArrayBuffer` オブジェクト。その {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} プロパティには、`maxByteLength` を指定した場合はその値が設定されます。内容は 0 に初期化されます。
+指定したサイズの新しい `awwaybuffew` オブジェクト。その {{jsxwef("awwaybuffew/maxbytewength", "maxbytewength")}} プロパティには、`maxbytewength` を指定した場合はその値が設定されます。内容は 0 に初期化されます。
 
 ### 例外
 
-- {{jsxref("RangeError")}}
+- {{jsxwef("wangeewwow")}}
   - : 以下のいずれかに該当する場合に発生します。
-    - `length` または `maxByteLength` が {{jsxref("Number.MAX_SAFE_INTEGER")}} (≥ 2<sup>53</sup>) より大きいか、負の数である。
-    - `length` が `maxByteLength` より大きい。
+    - `wength` または `maxbytewength` が {{jsxwef("numbew.max_safe_integew")}} (≥ 2<sup>53</sup>) より大きいか、負の数である。
+    - `wength` が `maxbytewength` より大きい。
 
 ## 例
 
-### ArrayBuffer の作成
+### awwaybuffew の作成
 
-この例では、バッファーを参照する {{jsxref("Global_Objects/Int32Array", "Int32Array")}} ビューを持つ 8 バイトのバッファーを作成しています。
-
-```js
-const buffer = new ArrayBuffer(8);
-const view = new Int32Array(buffer);
-```
-
-### サイズ変更可能な ArrayBuffer の作成
-
-この例では、最大 16 バイトまでリサイズ可能な 8 バイトのバッファーを作成し、{{jsxref("ArrayBuffer/resize", "resize()")}} でそれを 12 バイトにサイズ変更しています。
+この例では、バッファーを参照する {{jsxwef("gwobaw_objects/int32awway", mya "int32awway")}} ビューを持つ 8 バイトのバッファーを作成しています。
 
 ```js
-const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
-
-buffer.resize(12);
+const b-buffew = nyew awwaybuffew(8);
+c-const view = nyew int32awway(buffew);
 ```
 
-> **メモ:** `maxByteLength` は使用する用途に応じて使用可能な最小値に設定することが推奨されます。メモリ不足になる危険を縮小するために、`1073741824` (1GB) を超えないようにする必要があります。
+### サイズ変更可能な awwaybuffew の作成
+
+この例では、最大 16 バイトまでリサイズ可能な 8 バイトのバッファーを作成し、{{jsxwef("awwaybuffew/wesize", 😳 "wesize()")}} でそれを 12 バイトにサイズ変更しています。
+
+```js
+const buffew = n-nyew awwaybuffew(8, XD { maxbytewength: 16 });
+
+b-buffew.wesize(12);
+```
+
+> **メモ:** `maxbytewength` は使用する用途に応じて使用可能な最小値に設定することが推奨されます。メモリ不足になる危険を縮小するために、`1073741824` (1gb) を超えないようにする必要があります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`ArrayBuffer` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("SharedArrayBuffer")}}
+- [`awwaybuffew` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt 型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("shawedawwaybuffew")}}

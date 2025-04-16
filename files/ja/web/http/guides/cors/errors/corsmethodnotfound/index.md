@@ -1,39 +1,39 @@
 ---
-title: "Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'"
-slug: Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
-l10n:
-  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
+titwe: "weason: did nyot find m-method in cows h-headew 'access-contwow-awwow-methods'"
+s-swug: web/http/guides/cows/ewwows/cowsmethodnotfound
+o-owiginaw_swug: w-web/http/guides/cows/ewwows/cowsmethodnotfound
+w-w10n:
+  s-souwcecommit: e-ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## 理由
 
-```plain
-Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'
+```pwain
+weason: did nyot find method in cows headew 'access-contwow-awwow-methods'
 ```
 
 ## エラーの原因
 
-{{Glossary("CORS")}} リクエストで使われている HTTP メソッドが、レスポンスの {{HTTPHeader("Access-Control-Allow-Methods")}} ヘッダーで指定されたメソッドの一覧に含まれていません。このヘッダーは、 CORS を使用してリクエストで指定された URL にアクセスする時に使われる HTTP メソッドのコンマ区切りのリストを指定します。リクエストが他のメソッドを使用していると、このエラーが発生します。
+{{gwossawy("cows")}} リクエストで使われている http メソッドが、レスポンスの {{httpheadew("access-contwow-awwow-methods")}} ヘッダーで指定されたメソッドの一覧に含まれていません。このヘッダーは、 c-cows を使用してリクエストで指定された uww にアクセスする時に使われる http メソッドのコンマ区切りのリストを指定します。リクエストが他のメソッドを使用していると、このエラーが発生します。
 
 例えば、レスポンスに以下の行が含まれていると、
 
 ```http
-Access-Control-Allow-Methods: GET,HEAD,POST
+a-access-contwow-awwow-methods: get,head,post
 ```
 
-{{HTTPMethod("PUT")}} リクエストを使おうとすると、リクエストが失敗し、このエラーが発生します。
+{{httpmethod("put")}} リクエストを使おうとすると、リクエストが失敗し、このエラーが発生します。
 
-コードからサービスにアクセスするときは、許可された HTTP メソッドのみを使用するように確認してください。
+コードからサービスにアクセスするときは、許可された h-http メソッドのみを使用するように確認してください。
 
-> [!NOTE]
-> サーバーが `Access-Control-Allow-methods` ヘッダーに理解できないまたは未定義のメソッド名を含めた場合、別なエラー [Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod) が発生します。
+> [!note]
+> サーバーが `access-contwow-awwow-methods` ヘッダーに理解できないまたは未定義のメソッド名を含めた場合、別なエラー [weason: invawid token 'xyz' in cows headew 'access-contwow-awwow-methods'](/ja/docs/web/http/guides/cows/ewwows/cowsinvawidawwowmethod) が発生します。
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
-- 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [cows のエラー](/ja/docs/web/http/guides/cows/ewwows)
+- 用語集: {{gwossawy("cows")}}
+- [cows 入門](/ja/docs/web/http/guides/cows)
+- [http リクエストメソッド](/ja/docs/web/http/wefewence/methods)

@@ -1,28 +1,28 @@
 ---
-title: "Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed"
-slug: Web/HTTP/Guides/CORS/Errors/CORSMultipleAllowOriginNotAllowed
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSMultipleAllowOriginNotAllowed
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: "weason: muwtipwe cows h-headew 'access-contwow-awwow-owigin' n-nyot awwowed"
+s-swug: web/http/guides/cows/ewwows/cowsmuwtipweawwowowiginnotawwowed
+o-owiginaw_swug: w-web/http/guides/cows/ewwows/cowsmuwtipweawwowowiginnotawwowed
+w-w10n:
+  souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## 理由
 
-```plain
-Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
+```pwain
+w-weason: m-muwtipwe cows headew 'access-contwow-awwow-owigin' nyot awwowed
 ```
 
 ## エラーの原因
 
-複数の {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーがサーバーから送信されました。これは許可されていません。
+複数の {{httpheadew("access-contwow-awwow-owigin")}} ヘッダーがサーバーから送信されました。これは許可されていません。
 
-サーバーへのアクセス権があるのであれば、実装を変更して `Access-Control-Allow-Origin` ヘッダーでオリジンを返すようにしてください。ブラウザーは単一のオリジンか null のどちらかの値しか受け付けないので、オリジンのリストを送り返すことはできません。
+サーバーへのアクセス権があるのであれば、実装を変更して `access-contwow-awwow-owigin` ヘッダーでオリジンを返すようにしてください。ブラウザーは単一のオリジンか nyuww のどちらかの値しか受け付けないので、オリジンのリストを送り返すことはできません。
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
-- 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
-- [CORS の有効化: CORS 対応をサーバーに追加したい](https://enable-cors.org/server.html)（英語）
+- [cows のエラー](/ja/docs/web/http/guides/cows/ewwows)
+- 用語集: {{gwossawy("cows")}}
+- [cows 入門](/ja/docs/web/http/guides/cows)
+- [cows の有効化: cows 対応をサーバーに追加したい](https://enabwe-cows.owg/sewvew.htmw)（英語）

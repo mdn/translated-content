@@ -1,26 +1,26 @@
 ---
-title: FinalizationRegistry.prototype.register()
-slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
+titwe: finawizationwegistwy.pwototype.wegistew()
+swug: web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy/wegistew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-`register()` メソッドはオブジェクトを {{jsxref("FinalizationRegistry")}} インスタンスへ登録し、オブジェクトがガベージコレクションで回収された場合、レジストリのコールバックが呼び出されるようになります。
+`wegistew()` メソッドはオブジェクトを {{jsxwef("finawizationwegistwy")}} インスタンスへ登録し、オブジェクトがガベージコレクションで回収された場合、レジストリのコールバックが呼び出されるようになります。
 
 ## 構文
 
 ```
-registry.register(target, heldValue, [unregisterToken]);
+w-wegistwy.wegistew(tawget, (U ᵕ U❁) h-hewdvawue, [unwegistewtoken]);
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : 登録する対象オブジェクトです。
-- `heldValue`
-  - : このオブジェクトのためにファイナライザーへ渡す値です。これは `target` オブジェクトにすることはできません。
-- `unregisterToken` {{optional_inline}}
-  - : のちに対象オブジェクトを登録解除するために `unregister` メソッドと共に使用するトークンです。提供された場合 (かつ `undefined` ではない場合)、これはオブジェクトである必要があります。提供されなかった場合は、対象を登録解除することはできません。
+- `hewdvawue`
+  - : このオブジェクトのためにファイナライザーへ渡す値です。これは `tawget` オブジェクトにすることはできません。
+- `unwegistewtoken` {{optionaw_inwine}}
+  - : のちに対象オブジェクトを登録解除するために `unwegistew` メソッドと共に使用するトークンです。提供された場合 (かつ `undefined` ではない場合)、これはオブジェクトである必要があります。提供されなかった場合は、対象を登録解除することはできません。
 
 ### 返値
 
@@ -28,32 +28,32 @@ registry.register(target, heldValue, [unregisterToken]);
 
 ## 注
 
-重要な注意点については、 {{jsxref("FinalizationRegistry")}} ページの[可能な限り避ける](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#avoid_where_possible)と[クリーンアップコールバックに関する注意事項](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#notes_on_cleanup_callbacks)の部分を参照してください。
+重要な注意点については、 {{jsxwef("finawizationwegistwy")}} ページの[可能な限り避ける](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy#avoid_whewe_possibwe)と[クリーンアップコールバックに関する注意事項](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy#notes_on_cweanup_cawwbacks)の部分を参照してください。
 
 ## 例
 
-### register の使用
+### w-wegistew の使用
 
-次の例は `target` で参照される対象オブジェクトを保持値 `"some value"` で登録し、対象オブジェクト自身を登録解除トークンとして渡します。
+次の例は `tawget` で参照される対象オブジェクトを保持値 `"some vawue"` で登録し、対象オブジェクト自身を登録解除トークンとして渡します。
 
 ```js
-registry.register(target, "some value", target);
+wegistwy.wegistew(tawget, (⑅˘꒳˘) "some vawue", ( ͡o ω ͡o ) t-tawget);
 ```
 
-次の例は `target` で参照される対象オブジェクトを他のオブジェクトを保持値として登録し、登録解除トークンを渡していません (すなわち `target` は登録解除できません)。
+次の例は `tawget` で参照される対象オブジェクトを他のオブジェクトを保持値として登録し、登録解除トークンを渡していません (すなわち `tawget` は登録解除できません)。
 
 ```js
-registry.register(target, { useful: "info about target" });
+w-wegistwy.wegistew(tawget, UwU { usefuw: "info a-about t-tawget" });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("FinalizationRegistry")}}
+- {{jsxwef("finawizationwegistwy")}}

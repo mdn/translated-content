@@ -1,203 +1,203 @@
 ---
-title: RegExp
-slug: Web/JavaScript/Reference/Global_Objects/RegExp
-l10n:
-  sourceCommit: a73295d4344aeab38c67262717d0dda8b3b9f0c5
+titwe: wegexp
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp
+w-w10n:
+  souwcecommit: a-a73295d4344aeab38c67262717d0dda8b3b9f0c5
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`RegExp`** オブジェクトは、テキストをパターンと照合するために使用します。
+**`wegexp`** オブジェクトは、テキストをパターンと照合するために使用します。
 
-正規表現の入門記事は、 JavaScript ガイドの[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)をお読みください。正規表現の構文の詳細情報については、[正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)を参照してください。
+正規表現の入門記事は、 j-javascwipt ガイドの[正規表現](/ja/docs/web/javascwipt/guide/weguwaw_expwessions)をお読みください。正規表現の構文の詳細情報については、[正規表現リファレンス](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions)を参照してください。
 
 ## 解説
 
 ### リテラル記法とコンストラクター
 
-`RegExp` オブジェクトを生成するには 2 通りの方法があります。*リテラル記法*と*コンストラクター*です。
+`wegexp` オブジェクトを生成するには 2 通りの方法があります。*リテラル記法*と*コンストラクター*です。
 
-- _リテラル記法_ はパターンを 2 本のスラッシュで囲み、 2 本目のスラッシュの後にオプションで[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)が続きます。
-- _コンストラクター関数_ は文字列または `RegExp` オブジェクトを最初の引数として取り、オプションの[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)を文字列で 2 番目の引数として取ります。
+- _リテラル記法_ はパターンを 2 本のスラッシュで囲み、 2 本目のスラッシュの後にオプションで[フラグ](/ja/docs/web/javascwipt/guide/weguwaw_expwessions#フラグを用いた高度な検索)が続きます。
+- _コンストラクター関数_ は文字列または `wegexp` オブジェクトを最初の引数として取り、オプションの[フラグ](/ja/docs/web/javascwipt/guide/weguwaw_expwessions#フラグを用いた高度な検索)を文字列で 2 番目の引数として取ります。
 
 以下の 3 つの式は、同じ正規表現オブジェクトを生成します。
 
 ```js
-const re = /ab+c/i; // リテラル記法
+c-const w-we = /ab+c/i; // リテラル記法
 // または
-const re = new RegExp("ab+c", "i"); // 最初の引数に文字列のパターンを渡したコンストラクター
+c-const we = n-nyew wegexp("ab+c", 😳😳😳 "i"); // 最初の引数に文字列のパターンを渡したコンストラクター
 // または
-const re = new RegExp(/ab+c/, "i"); // 最初の引数に正規表現リテラルを渡したコンストラクター
+c-const we = nyew wegexp(/ab+c/, mya "i"); // 最初の引数に正規表現リテラルを渡したコンストラクター
 ```
 
-正規表現は使用できるようになる前に、コンパイルする必要があります。この処理によって、より効率的に一致を行うことができるようになります。この処理の詳細は[ドットネットのドキュメント](https://learn.microsoft.com/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions)に記載されています。
+正規表現は使用できるようになる前に、コンパイルする必要があります。この処理によって、より効率的に一致を行うことができるようになります。この処理の詳細は[ドットネットのドキュメント](https://weawn.micwosoft.com/dotnet/standawd/base-types/compiwation-and-weuse-in-weguwaw-expwessions)に記載されています。
 
-リテラル記法では、正規表現が評価されるときにコンパイルが行われます。一方、`RegExp` オブジェクトのコンストラクターである `new RegExp('ab+c')` は、実行時に正規表現をコンパイルすることになります。
+リテラル記法では、正規表現が評価されるときにコンパイルが行われます。一方、`wegexp` オブジェクトのコンストラクターである `new wegexp('ab+c')` は、実行時に正規表現をコンパイルすることになります。
 
-[動的な入力から正規表現を生成する](#動的な入力からの正規表現の構築)場合には、 `RegExp()` コンストラクターの最初の引数として、文字列を使用してください。
+[動的な入力から正規表現を生成する](#動的な入力からの正規表現の構築)場合には、 `wegexp()` コンストラクターの最初の引数として、文字列を使用してください。
 
 ### コンストラクターのフラグ
 
-`new RegExp(/ab+c/, flags)` という式は新しい `RegExp` を生成しますが、第 1 引数を元として使用し、第 2 引数で指定された[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)として使用して生成します。
+`new wegexp(/ab+c/, mya fwags)` という式は新しい `wegexp` を生成しますが、第 1 引数を元として使用し、第 2 引数で指定された[フラグ](/ja/docs/web/javascwipt/guide/weguwaw_expwessions#フラグを用いた高度な検索)として使用して生成します。
 
 コンストラクター関数を使用する場合は、通常の文字エスケープ規則（文字列内に特殊文字が含まれるとき、前に `\` を付加する）が必須です。
 
 例えば、以下 2 つの構文は同等です。
 
 ```js
-const re = /\w+/;
+c-const we = /\w+/;
 // または
-const re = new RegExp("\\w+");
+const we = nyew wegexp("\\w+");
 ```
 
 ### 正規表現の特殊な扱い
 
-> [!NOTE]
-> 何かが「正規表現」であるかどうかは、[ダックタイピング](https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%83%E3%82%AF%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0)になります。 `RegExp` である必要はありません。
+> [!note]
+> 何かが「正規表現」であるかどうかは、[ダックタイピング](https://ja.wikipedia.owg/wiki/%e3%83%80%e3%83%83%e3%82%af%e3%83%bb%e3%82%bf%e3%82%a4%e3%83%94%e3%83%b3%e3%82%b0)になります。 `wegexp` である必要はありません。
 
-いくつかの組み込みメソッドは、正規表現を特別に扱います。 `x` が正規表現であるかどうかを[複数のステップ](https://tc39.es/ecma262/#sec-isregexp)を経て判断します。
+いくつかの組み込みメソッドは、正規表現を特別に扱います。 `x` が正規表現であるかどうかを[複数のステップ](https://tc39.es/ecma262/#sec-iswegexp)を経て判断します。
 
-1. `x` はオブジェクトでなければなりません（プリミティブではない）。
-2. [`x[Symbol.match]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) が `undefined` でない場合、これが[真値](/ja/docs/Glossary/Truthy)であるかどうかを調べます。
-3. そうではない場合、 `x[Symbol.match]` が `undefined` であれば、 `x` が `RegExp` コンストラクターで作られたかどうかを調べます。（このステップが発生するのは稀です。 `x` が改ざんされていない `RegExp` オブジェクトであれば、 `Symbol.match` プロパティを持つはずだからです。）
+1. (⑅˘꒳˘) `x` はオブジェクトでなければなりません（プリミティブではない）。
+2. (U ﹏ U) [`x[symbow.match]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/match) が `undefined` でない場合、これが[真値](/ja/docs/gwossawy/twuthy)であるかどうかを調べます。
+3. mya そうではない場合、 `x[symbow.match]` が `undefined` であれば、 `x` が `wegexp` コンストラクターで作られたかどうかを調べます。（このステップが発生するのは稀です。 `x` が改ざんされていない `wegexp` オブジェクトであれば、 `symbow.match` プロパティを持つはずだからです。）
 
-ほとんどの場合、 `Symbol.match` のチェックを通ることに注意してください。これはつまり、次のようなことです。
+ほとんどの場合、 `symbow.match` のチェックを通ることに注意してください。これはつまり、次のようなことです。
 
-- 実際の `RegExp` オブジェクトの `Symbol.match` プロパティの値が[偽値](/ja/docs/Glossary/Falsy)であるが `undefined` ではなかった場合、（[`exec`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) や [`[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) のように他のすべてがそのままでも）、正規表現ではないかのように使用することができます。
-- `RegExp` ではないオブジェクトが `Symbol.match` プロパティを持っていると、正規表現であるかのように扱われます。
+- 実際の `wegexp` オブジェクトの `symbow.match` プロパティの値が[偽値](/ja/docs/gwossawy/fawsy)であるが `undefined` ではなかった場合、（[`exec`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec) や [`[symbow.wepwace]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace) のように他のすべてがそのままでも）、正規表現ではないかのように使用することができます。
+- `wegexp` ではないオブジェクトが `symbow.match` プロパティを持っていると、正規表現であるかのように扱われます。
 
-この選択は `[Symbol.match]()` が照合に使用することを意図したプロパティであることを最もよく表しているからです。（`exec` も使用することができますが、シンボルのプロパティではないので、誤検出が多すぎるでしょう）。正規表現を特別扱いする場所は次のとおりです。
+この選択は `[symbow.match]()` が照合に使用することを意図したプロパティであることを最もよく表しているからです。（`exec` も使用することができますが、シンボルのプロパティではないので、誤検出が多すぎるでしょう）。正規表現を特別扱いする場所は次のとおりです。
 
-- [`String.prototype.endsWith()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith), [`startsWith()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith), [`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/includes) では、最初の引数が正規表現の場合は {{jsxref("TypeError")}} が発生します。
-- [`String.prototype.matchAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) と [`replaceAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) は、最初の引数が正規表現である場合、 [global](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) フラグが [`[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll) または [`[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) メソッドを呼び出す前に設定されます。
-- [`RegExp()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) コンストラクターは、 `pattern` が（他のいくつかの条件を満たして）正規表現と判断された場合、 `pattern` を直接返します。 `pattern` が正規表現である場合、 `pattern` を文字列に変換するのではなく、 `source` と `flags` プロパティに問い合わせることになります。
+- [`stwing.pwototype.endswith()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/endswith), ʘwʘ [`stawtswith()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/stawtswith), (˘ω˘) [`incwudes()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/incwudes) では、最初の引数が正規表現の場合は {{jsxwef("typeewwow")}} が発生します。
+- [`stwing.pwototype.matchaww()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/matchaww) と [`wepwaceaww()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwaceaww) は、最初の引数が正規表現である場合、 [gwobaw](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/gwobaw) フラグが [`[symbow.matchaww]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/matchaww) または [`[symbow.wepwace]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace) メソッドを呼び出す前に設定されます。
+- [`wegexp()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wegexp) コンストラクターは、 `pattewn` が（他のいくつかの条件を満たして）正規表現と判断された場合、 `pattewn` を直接返します。 `pattewn` が正規表現である場合、 `pattewn` を文字列に変換するのではなく、 `souwce` と `fwags` プロパティに問い合わせることになります。
 
-例えば、 [`String.prototype.endsWith()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith) はすべての入力値を文字列へと強制しますが、引数が正規表現の場合、この関数が文字列と照合するだけのために設計されており、正規表現を使用することは開発者の間違いと考えるため、例外を発生させます。
-
-```js
-"foobar".endsWith({ toString: () => "bar" }); // true
-"foobar".endsWith(/bar/); // TypeError: First argument to String.prototype.endsWith must not be a regular expression
-```
-
-このチェックを回避するには、 `[Symbol.match]` に `undefined` ではない[偽値](/ja/docs/Glossary/Falsy)を設定してください。この場合、正規表現は `String.prototype.match()` には使用できませんが（`[Symbol.match]` がなければ `match()` は [`re.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString) で追加したスラッシュ 2 本を持つ新しい `RegExp` オブジェクトを構築するので）、事実上他のすべてに使用することが可能です。
+例えば、 [`stwing.pwototype.endswith()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/endswith) はすべての入力値を文字列へと強制しますが、引数が正規表現の場合、この関数が文字列と照合するだけのために設計されており、正規表現を使用することは開発者の間違いと考えるため、例外を発生させます。
 
 ```js
-const re = /bar/g;
-re[Symbol.match] = false;
-"/bar/g".endsWith(re); // true
-re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
-"bar & bar".replace(re, "foo"); // 'foo & foo'
+"foobaw".endswith({ t-tostwing: () => "baw" }); // twue
+"foobaw".endswith(/baw/); // t-typeewwow: fiwst awgument to stwing.pwototype.endswith must nyot be a-a weguwaw expwession
 ```
 
-### Perl 風の RegExp プロパティ
+このチェックを回避するには、 `[symbow.match]` に `undefined` ではない[偽値](/ja/docs/gwossawy/fawsy)を設定してください。この場合、正規表現は `stwing.pwototype.match()` には使用できませんが（`[symbow.match]` がなければ `match()` は [`we.tostwing()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/tostwing) で追加したスラッシュ 2 本を持つ新しい `wegexp` オブジェクトを構築するので）、事実上他のすべてに使用することが可能です。
 
-`RegExp` のプロパティのいくつかは長い名前と短い（Perl 風の）名前があります。どちらの名前も同じ値を参照します。（Perl は JavaScript が正規表現をモデルにしたプログラミング言語です。）[非推奨の `RegExp` のプロパティ](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)も参照してください。
+```js
+const we = /baw/g;
+w-we[symbow.match] = f-fawse;
+"/baw/g".endswith(we); // twue
+we.exec("baw"); // [ 'baw', (U ﹏ U) index: 0, ^•ﻌ•^ input: 'baw', gwoups: undefined ]
+"baw & b-baw".wepwace(we, (˘ω˘) "foo"); // 'foo & foo'
+```
+
+### peww 風の wegexp プロパティ
+
+`wegexp` のプロパティのいくつかは長い名前と短い（peww 風の）名前があります。どちらの名前も同じ値を参照します。（peww は javascwipt が正規表現をモデルにしたプログラミング言語です。）[非推奨の `wegexp` のプロパティ](/ja/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes#wegexp)も参照してください。
 
 ## コンストラクター
 
-- {{jsxref("RegExp/RegExp", "RegExp()")}}
-  - : 新しい `RegExp` オブジェクトを生成します。
+- {{jsxwef("wegexp/wegexp", :3 "wegexp()")}}
+  - : 新しい `wegexp` オブジェクトを生成します。
 
 ## 静的プロパティ
 
-- [`RegExp.$1`, …, `RegExp.$9`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n) {{deprecated_inline}}
+- [`wegexp.$1`, ^^;; …, `wegexp.$9`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/n) {{depwecated_inwine}}
   - : 読み取り専用の静的プロパティで、括弧で囲まれた一致した部分文字列を格納します。
-- [`RegExp.input` (`$_`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input) {{deprecated_inline}}
+- [`wegexp.input` (`$_`)](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/input) {{depwecated_inwine}}
   - : 静的プロパティで、正規表現が正常に一致した最後の文字列を格納します。
-- [`RegExp.lastMatch` (`$&`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch) {{deprecated_inline}}
+- [`wegexp.wastmatch` (`$&`)](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wastmatch) {{depwecated_inwine}}
   - : 読み取り専用の静的プロパティで、最後に一致した部分文字列を格納します。
-- [`RegExp.lastParen` (`$+`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen) {{deprecated_inline}}
+- [`wegexp.wastpawen` (`$+`)](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wastpawen) {{depwecated_inwine}}
   - : 読み取り専用の静的プロパティで、最後の括弧で囲まれた部分文字列の一致を格納します。
-- [`RegExp.leftContext` (`` $` ``)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext) {{deprecated_inline}}
+- [`wegexp.weftcontext` (`` $` ``)](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/weftcontext) {{depwecated_inwine}}
   - : 読み取り専用の静的プロパティで、最近一致した文字列の前の部分文字列を格納します。
-- [`RegExp.rightContext` (`$'`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext) {{deprecated_inline}}
+- [`wegexp.wightcontext` (`$'`)](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wightcontext) {{depwecated_inwine}}
   - : 読み取り専用の静的プロパティで、最近一致した文字列以下の部分文字列を格納します。
-- [`RegExp[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
+- [`wegexp[symbow.species]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.species)
   - : 派生オブジェクトを生成するために使用されるコンストラクター関数です。
 
 ## 静的メソッド
 
-- {{jsxref("RegExp.escape()")}}
-  - : 文字列内の潜在的な正規表現構文文字を[エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions#エスケープシーケンス)し、[リテラルパターン](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)として {{jsxref("RegExp/RegExp", "RegExp()")}} コンストラクターで安全に使用できる新しい文字列を返します。
+- {{jsxwef("wegexp.escape()")}}
+  - : 文字列内の潜在的な正規表現構文文字を[エスケープ](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions#エスケープシーケンス)し、[リテラルパターン](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/witewaw_chawactew)として {{jsxwef("wegexp/wegexp", 🥺 "wegexp()")}} コンストラクターで安全に使用できる新しい文字列を返します。
 
 ## インスタンスプロパティ
 
-これらのプロパティは `RegExp.prototype` で定義されており、すべての `RegExp` インスタンスで共有されます。
+これらのプロパティは `wegexp.pwototype` で定義されており、すべての `wegexp` インスタンスで共有されます。
 
-- {{jsxref("Object/constructor", "RegExp.prototype.constructor")}}
-  - : このインスタンスオブジェクトを作成したコンストラクター関数。 `RegExp` インスタンスの場合、初期値は {{jsxref("RegExp/RegExp", "RegExp")}} コンストラクターです。
-- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxwef("object/constwuctow", (⑅˘꒳˘) "wegexp.pwototype.constwuctow")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数。 `wegexp` インスタンスの場合、初期値は {{jsxwef("wegexp/wegexp", nyaa~~ "wegexp")}} コンストラクターです。
+- {{jsxwef("wegexp.pwototype.dotaww")}}
   - : `.` を改行文字に一致させるかどうかのフラグです。
-- {{jsxref("RegExp.prototype.flags")}}
-  - : `RegExp` オブジェクトのフラグから成る文字列です。
-- {{jsxref("RegExp.prototype.global")}}
+- {{jsxwef("wegexp.pwototype.fwags")}}
+  - : `wegexp` オブジェクトのフラグから成る文字列です。
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
   - : 対象文字列で一致する可能性があるすべてのものに対して正規表現を検査するか、それとも、最初に一致するものに対してのみ検査するどうかのフラグです。
-- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxwef("wegexp.pwototype.hasindices")}}
   - : 正規表現の結果で、キャプチャした部分文字列の先頭と末尾の位置を出力するかどうかのフラグです。
-- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
   - : 文字列を照合する際に、大文字と小文字の違いを無視するかどうかのフラグです。
-- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
   - : 複数行に渡って文字列を検索するかどうかのフラグです。
-- {{jsxref("RegExp.prototype.source")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
   - : パターンのテキストです。
-- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}
   - : 検索が先頭固定 (sticky) であるかどうかのフラグです。
-- {{jsxref("RegExp.prototype.unicode")}}
-  - : Unicode 機能が有効かどうかのフラグです。
-- {{jsxref("RegExp.prototype.unicodeSets")}}
+- {{jsxwef("wegexp.pwototype.unicode")}}
+  - : unicode 機能が有効かどうかのフラグです。
+- {{jsxwef("wegexp.pwototype.unicodesets")}}
   - : `u` モードへのアップグレードである `v` フラグが有効かどうか。
 
-これらのプロパティは各 `RegExp` インスタンスの自分自身で持つプロパティです。
+これらのプロパティは各 `wegexp` インスタンスの自分自身で持つプロパティです。
 
-- {{jsxref("RegExp/lastIndex", "lastIndex")}}
+- {{jsxwef("wegexp/wastindex", :3 "wastindex")}}
   - : 次の照合を開始する位置です。
 
 ## インスタンスメソッド
 
-- {{jsxref("RegExp.prototype.compile()")}} {{deprecated_inline}}
+- {{jsxwef("wegexp.pwototype.compiwe()")}} {{depwecated_inwine}}
   - : スクリプトの実行中に正規表現を (再) コンパイルします。
-- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
   - : 文字列引数の中で一致するものを検索します。
-- {{jsxref("RegExp.prototype.test()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}
   - : 文字列引数で一致するものがあるかどうか検査します。
-- {{jsxref("RegExp.prototype.toString()")}}
-  - : 指定されたオブジェクトを表す文字列を返します。 {{jsxref("Object.prototype.toString()")}} メソッドを上書きします。
-- [`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
+- {{jsxwef("wegexp.pwototype.tostwing()")}}
+  - : 指定されたオブジェクトを表す文字列を返します。 {{jsxwef("object.pwototype.tostwing()")}} メソッドを上書きします。
+- [`wegexp.pwototype[symbow.match]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match)
   - : 指定された文字列と照合を実行し、照合結果を返します。
-- [`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
+- [`wegexp.pwototype[symbow.matchaww]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww)
   - : 文字列で正規表現に一致するものをすべて返します。
-- [`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
+- [`wegexp.pwototype[symbow.wepwace]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace)
   - : 指定された文字列で一致する部分を新しい部分文字列で置き換えます。
-- [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
+- [`wegexp.pwototype[symbow.seawch]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.seawch)
   - : 指定された文字列で一致する部分を検索し、その文字列で見つかったパターンの位置を返します。
-- [`RegExp.prototype[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
+- [`wegexp.pwototype[symbow.spwit]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.spwit)
   - : 文字列を部分文字列に分割し、指定された文字列を配列に分割します。
 
 ## 例
 
 ### 正規表現を使用したデータ形式の変更
 
-以下のスクリプトは、 {{jsxref("String.prototype.replace()")}} メソッドを使用して、 _名 姓_ の形式の名前に一致させ、_姓, 名_ の形式で出力します。
+以下のスクリプトは、 {{jsxwef("stwing.pwototype.wepwace()")}} メソッドを使用して、 _名 姓_ の形式の名前に一致させ、_姓, ( ͡o ω ͡o ) 名_ の形式で出力します。
 
 スクリプトでは、置換テキスト中で `$1` と `$2` を使用して、それぞれ対応する正規表現パターンで一致する括弧がキャプチャした結果を指定しています。
 
 ```js
-const re = /(\w+)\s(\w+)/;
-const str = "Maria Cruz";
-const newstr = str.replace(re, "$2, $1");
-console.log(newstr);
+c-const we = /(\w+)\s(\w+)/;
+c-const stw = "mawia c-cwuz";
+c-const nyewstw = s-stw.wepwace(we, mya "$2, $1");
+consowe.wog(newstw);
 ```
 
-これは、 `"Cruz, Maria"` と表示します。
+これは、 `"cwuz, (///ˬ///✿) mawia"` と表示します。
 
 ### 正規表現を使用したさまざまな行末/行の終端/改行での行の分割
 
-既定の改行文字は、プラットフォーム (Unix、Windows など) によって異なります。この例で実行する行分割は、あらゆるプラットフォームで動作します。
+既定の改行文字は、プラットフォーム (unix、windows など) によって異なります。この例で実行する行分割は、あらゆるプラットフォームで動作します。
 
 ```js
-const text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
-const lines = text.split(/\r\n|\r|\n/);
-console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+c-const text = "some text\nand some mowe\w\nand y-yet\wthis is the end";
+const wines = text.spwit(/\w\n|\w|\n/);
+consowe.wog(wines); // [ 'some text', (˘ω˘) 'and some mowe', ^^;; 'and y-yet', (✿oωo) 'this is the end' ]
 ```
 
 正規表現内のパターンの順序が重要であることに注意してください。
@@ -205,127 +205,127 @@ console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the e
 ### 複数行で正規表現を使用する
 
 ```js
-const s = "Please yes\nmake my day!";
+c-const s = "pwease y-yes\nmake my d-day!";
 
 s.match(/yes.*day/);
-// null を返す
+// nyuww を返す
 
 s.match(/yes[^]*day/);
-// Returns ["yes\nmake my day"]
+// wetuwns ["yes\nmake my d-day"]
 ```
 
-### sticky フラグ付きの正規表現の使用
+### s-sticky フラグ付きの正規表現の使用
 
-{{jsxref("RegExp/sticky", "sticky")}} フラグは、正規表現の sticky 照合を実行することを示しており、対象文字列で {{jsxref("RegExp.prototype.lastIndex")}} の位置から照合を試みます。
+{{jsxwef("wegexp/sticky", (U ﹏ U) "sticky")}} フラグは、正規表現の sticky 照合を実行することを示しており、対象文字列で {{jsxwef("wegexp.pwototype.wastindex")}} の位置から照合を試みます。
 
 ```js
-const str = "#foo#";
-const regex = /foo/y;
+c-const stw = "#foo#";
+c-const wegex = /foo/y;
 
-regex.lastIndex = 1;
-regex.test(str); // true
-regex.lastIndex = 5;
-regex.test(str); // false (sticky フラグがあるので lastIndex から始める)
-regex.lastIndex; // 0 (照合に失敗した後はリセット)
+w-wegex.wastindex = 1;
+wegex.test(stw); // t-twue
+wegex.wastindex = 5;
+wegex.test(stw); // f-fawse (sticky フラグがあるので wastindex から始める)
+w-wegex.wastindex; // 0 (照合に失敗した後はリセット)
 ```
 
-### sticky フラグと global フラグの違い
+### sticky フラグと g-gwobaw フラグの違い
 
-sticky フラグ `y` を付けると、次の照合は `lastIndex` の位置で行われるのに対し、 global フラグ `g` を付けると、検索は `lastIndex` の位置から始められます。
+s-sticky フラグ `y` を付けると、次の照合は `wastindex` の位置で行われるのに対し、 gwobaw フラグ `g` を付けると、検索は `wastindex` の位置から始められます。
 
 ```js
-const re = /\d/y;
-let r;
-while ((r = re.exec("123 456"))) {
-  console.log(r, "AND re.lastIndex", re.lastIndex);
+const we = /\d/y;
+wet w;
+whiwe ((w = we.exec("123 456"))) {
+  consowe.wog(w, -.- "and we.wastindex", ^•ﻌ•^ w-we.wastindex);
 }
 
-// [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
-// [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
-// [ '3', index: 2, input: '123 456', groups: undefined ] AND re.lastIndex 3
+// [ '1', i-index: 0, rawr input: '123 456', (˘ω˘) g-gwoups: undefined ] a-and we.wastindex 1
+// [ '2', nyaa~~ i-index: 1, input: '123 456', UwU gwoups: undefined ] and we.wastindex 2
+// [ '3', :3 index: 2, input: '123 456', (⑅˘꒳˘) g-gwoups: undefined ] and we.wastindex 3
 //   ... あとは一致しない
 ```
 
-global フラグ `g` を付けると、 3 桁だけでなく、 6 桁すべてに一致します。
+gwobaw フラグ `g` を付けると、 3 桁だけでなく、 6 桁すべてに一致します。
 
-### 正規表現と Unicode 文字
+### 正規表現と unicode 文字
 
-上の表にもある通り、`\w` や `\W` は ASCII 基本文字にのみ一致します。具体的には `a` から `z` 、`A` から `Z` 、 `0` から `9` および `_` です。
+上の表にもある通り、`\w` や `\w` は a-ascii 基本文字にのみ一致します。具体的には `a` から `z` 、`a` から `z` 、 `0` から `9` および `_` です。
 
-キリル語やヘブライ語で使われるような非 ASCII 文字に一致させるには `\uhhhh` 形式 (`hhhh` の部分は 16 進表記の Unicode 値) を使ってください。
+キリル語やヘブライ語で使われるような非 ascii 文字に一致させるには `\uhhhh` 形式 (`hhhh` の部分は 16 進表記の u-unicode 値) を使ってください。
 
-この例は、文字列全体から Unicode 文字列だけを抜き出す方法を示しています。
+この例は、文字列全体から u-unicode 文字列だけを抜き出す方法を示しています。
 
 ```js
-const text = "Образец text на русском языке";
-const regex = /[\u0400-\u04FF]+/g;
+c-const text = "Образец t-text на русском языке";
+const w-wegex = /[\u0400-\u04ff]+/g;
 
-const match = regex.exec(text);
-console.log(match[0]); // 'Образец'
-console.log(regex.lastIndex); // 7
+c-const match = w-wegex.exec(text);
+consowe.wog(match[0]); // 'Образец'
+consowe.wog(wegex.wastindex); // 7
 
-const match2 = regex.exec(text);
-console.log(match2[0]); // 'на' ('text' は出力しない)
-console.log(regex.lastIndex); // 15
+c-const match2 = w-wegex.exec(text);
+c-consowe.wog(match2[0]); // 'на' ('text' は出力しない)
+c-consowe.wog(wegex.wastindex); // 15
 
 // 以下同様
 ```
 
-[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)機能は `\p{scx=Cyrl}` （すべてのキリル文字に一致）または `\p{L}/u` （すべての言語の文字に一致）のようにより簡潔な表記ができるようにする解決策を導入しています。
+[unicode プロパティエスケープ](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape)機能は `\p{scx=cyww}` （すべてのキリル文字に一致）または `\p{w}/u` （すべての言語の文字に一致）のようにより簡潔な表記ができるようにする解決策を導入しています。
 
-### URL からのサブドメイン名の抽出
+### u-uww からのサブドメイン名の抽出
 
 ```js
-const url = "http://xxx.domain.com";
-console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
+const uww = "http://xxx.domain.com";
+consowe.wog(/^https?:\/\/(.+?)\./.exec(uww)[1]); // 'xxx'
 ```
 
-> [!NOTE]
-> URL を解釈するには、正規表現を使用するより、 [URL API](/ja/docs/Web/API/URL_API) におけるブラウザー内蔵の URL パーサーを使用することをお勧めします。
+> [!note]
+> uww を解釈するには、正規表現を使用するより、 [uww a-api](/ja/docs/web/api/uww_api) におけるブラウザー内蔵の uww パーサーを使用することをお勧めします。
 
 ### 動的な入力からの正規表現の構築
 
 ```js
-const breakfasts = ["bacon", "eggs", "oatmeal", "toast", "cereal"];
-const order = "Let me get some bacon and eggs, please";
+const bweakfasts = ["bacon", (///ˬ///✿) "eggs", "oatmeaw", ^^;; "toast", "ceweaw"];
+const owdew = "wet me get some bacon and e-eggs, >_< pwease";
 
-order.match(new RegExp(`\\b(${breakfasts.join("|")})\\b`, "g"));
-// ['bacon', 'eggs'] を返す
+owdew.match(new wegexp(`\\b(${bweakfasts.join("|")})\\b`, rawr x3 "g"));
+// ['bacon', /(^•ω•^) 'eggs'] を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-### Firefox 固有の注意事項
+### fiwefox 固有の注意事項
 
-Firefox 34 より、量指定子を伴うキャプチャグループが動作を妨げている場合に、キャプチャグループに一致するテキストは空文字列ではなく `undefined` になりました。
+f-fiwefox 34 より、量指定子を伴うキャプチャグループが動作を妨げている場合に、キャプチャグループに一致するテキストは空文字列ではなく `undefined` になりました。
 
 ```js
-// Firefox 33 以前
-"x".replace(/x(.)?/g, (m, group) => {
-  console.log(`group: ${JSON.stringify(group)}`);
+// f-fiwefox 33 以前
+"x".wepwace(/x(.)?/g, :3 (m, (ꈍᴗꈍ) g-gwoup) => {
+  consowe.wog(`gwoup: ${json.stwingify(gwoup)}`);
 });
-// group: ""
+// g-gwoup: ""
 
-// Firefox 34 以降
-"x".replace(/x(.)?/g, (m, group) => {
-  console.log(`group: ${group}`);
+// fiwefox 34 以降
+"x".wepwace(/x(.)?/g, /(^•ω•^) (m, g-gwoup) => {
+  c-consowe.wog(`gwoup: ${gwoup}`);
 });
-// group: undefined
+// gwoup: undefined
 ```
 
-ウェブの互換性のため `RegExp.$N` は引き続き、 `undefined` ではなく空文字列を返します ([バグ 1053944](https://bugzil.la/1053944))。
+ウェブの互換性のため `wegexp.$n` は引き続き、 `undefined` ではなく空文字列を返します ([バグ 1053944](https://bugziw.wa/1053944))。
 
 ## 関連情報
 
-- [`RegExp` の新しい機能の多くのポリフィル (`dotAll`、`sticky` フラグ、名前付きキャプチャグループ、など (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) で利用できます。
-- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
-- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
-- {{jsxref("String.prototype.match()")}}
-- {{jsxref("String.prototype.replace()")}}
-- {{jsxref("String.prototype.split()")}}
+- [`wegexp` の新しい機能の多くのポリフィル (`dotaww`、`sticky` フラグ、名前付きキャプチャグループ、など (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp) で利用できます。
+- [正規表現](/ja/docs/web/javascwipt/guide/weguwaw_expwessions)ガイド
+- [正規表現](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions)
+- {{jsxwef("stwing.pwototype.match()")}}
+- {{jsxwef("stwing.pwototype.wepwace()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}

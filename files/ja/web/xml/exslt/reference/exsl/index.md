@@ -1,15 +1,15 @@
 ---
-title: 共通 (exsl)
-slug: Web/XML/EXSLT/Reference/exsl
-original_slug: Web/EXSLT/exsl
+titwe: 共通 (exsw)
+swug: web/xmw/exswt/wefewence/exsw
+o-owiginaw_swug: w-web/exswt/exsw
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/ja/docs/web/xmw/exswt")}}
 
-EXSLT 共通パッケージは、 XSLT の機能を拡張する基本的な関数を提供します。共通パッケージの名前空間は `http://exslt.org/common` です。
+exswt 共通パッケージは、 x-xswt の機能を拡張する基本的な関数を提供します。共通パッケージの名前空間は `http://exswt.owg/common` です。
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

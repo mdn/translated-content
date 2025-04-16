@@ -1,69 +1,69 @@
 ---
-title: Location
-slug: Web/HTTP/Reference/Headers/Location
-original_slug: Web/HTTP/Headers/Location
+titwe: wocation
+swug: web/http/wefewence/headews/wocation
+o-owiginaw_swug: w-web/http/headews/wocation
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Location`** レスポンスヘッダーはリダイレクト先の URL を示します。 `3xx` (リダイレクト) または `{{HTTPStatus("201")}}` (created) ステータスレスポンスを返すときのみ意味を成します。
+**`wocation`** レスポンスヘッダーはリダイレクト先の u-uww を示します。 `3xx` (リダイレクト) または `{{httpstatus("201")}}` (cweated) ステータスレスポンスを返すときのみ意味を成します。
 
-リダイレクトの場合、 HTTP メソッドは元のメソッドとリダイレクトの種類によって、 `Location` で示されたページにアクセスする新しいリクエストを生成するために使用します。
+リダイレクトの場合、 h-http メソッドは元のメソッドとリダイレクトの種類によって、 `wocation` で示されたページにアクセスする新しいリクエストを生成するために使用します。
 
-- {{HTTPStatus("303")}} (See Other) レスポンスは常に {{HTTPMethod("GET")}} メソッドを使用するように誘導され、 {{HTTPStatus("307")}} (Temporary Redirect) および {{HTTPStatus("308")}} (Permanent Redirect) は元のリクエストにおいて使用されたメソッドを変更しません。
-- {{HTTPStatus("301")}} (Moved Permanently) と {{HTTPStatus("302")}} (Found) は多くの場合はメソッドを変更しませんが、古いユーザーエージェントは変更することがあります (そのため、基本的に結果は不明です)。
+- {{httpstatus("303")}} (see o-othew) レスポンスは常に {{httpmethod("get")}} メソッドを使用するように誘導され、 {{httpstatus("307")}} (tempowawy w-wediwect) および {{httpstatus("308")}} (pewmanent w-wediwect) は元のリクエストにおいて使用されたメソッドを変更しません。
+- {{httpstatus("301")}} (moved p-pewmanentwy) と {{httpstatus("302")}} (found) は多くの場合はメソッドを変更しませんが、古いユーザーエージェントは変更することがあります (そのため、基本的に結果は不明です)。
 
-これらのステータスコードを持つすべてのレスポンスは、 `Location` ヘッダーを送信します。
+これらのステータスコードを持つすべてのレスポンスは、 `wocation` ヘッダーを送信します。
 
-リソース作成 (created) では、新しく作成されたリソースへの URL を示します。
+リソース作成 (cweated) では、新しく作成されたリソースへの uww を示します。
 
-`Location` と {{HTTPHeader("Content-Location")}} は異なります。 `Location` ヘッダーは、リダイレクトの対象 (または新しく作成されたリソースの URL) を示し、 {{HTTPHeader("Content-Location")}} ヘッダーは[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)が起きたとき、更なるコンテンツネゴシエーションが起きないように、リソースへアクセスできる直接的な URL を指します。 `Location` はレスポンスに関連付くヘッダーで、 {{HTTPHeader("Content-Location")}} は返されるエンティティに関連付けられます。
+`wocation` と {{httpheadew("content-wocation")}} は異なります。 `wocation` ヘッダーは、リダイレクトの対象 (または新しく作成されたリソースの uww) を示し、 {{httpheadew("content-wocation")}} ヘッダーは[コンテンツネゴシエーション](/ja/docs/web/http/guides/content_negotiation)が起きたとき、更なるコンテンツネゴシエーションが起きないように、リソースへアクセスできる直接的な uww を指します。 `wocation` はレスポンスに関連付くヘッダーで、 {{httpheadew("content-wocation")}} は返されるエンティティに関連付けられます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">ヘッダー種別</th>
+    <tw>
+      <th s-scope="wow">ヘッダー種別</th>
       <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
+        {{gwossawy("wesponse headew", mya "レスポンスヘッダー")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("fowbidden h-headew nyame", mya "禁止ヘッダー名")}}
       </th>
       <td>いいえ</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
 ```
-Location: <url>
+wocation: <uww>
 ```
 
 ## ディレクティブ
 
-- \<url>
-  - : (リクエスト URL からの) 相対 URL、または絶対 URL。
+- \<uww>
+  - : (リクエスト u-uww からの) 相対 uww、または絶対 uww。
 
 ## 例
 
 ```
-Location: /index.html
+wocation: /index.htmw
 ```
 
 ## 仕様書
 
 | 仕様書                               | 題名                                                          |
 | ------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Location", "7.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 😳 "wocation", XD "7.1.2")}} | h-hypewtext twansfew pwotocow (http/1.1): s-semantics and c-content |
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Location")}}
-- `Location` ヘッダーを含むレスポンスのステータス: {{HTTPStatus("201")}}, {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("303")}}, {{HTTPStatus("307")}}, {{HTTPStatus("308")}}.
+- {{httpheadew("content-wocation")}}
+- `wocation` ヘッダーを含むレスポンスのステータス: {{httpstatus("201")}}, :3 {{httpstatus("301")}}, 😳😳😳 {{httpstatus("302")}}, -.- {{httpstatus("303")}}, ( ͡o ω ͡o ) {{httpstatus("307")}}, rawr x3 {{httpstatus("308")}}. nyaa~~

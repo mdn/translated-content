@@ -1,37 +1,37 @@
 ---
-title: DataView.prototype.getInt32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
+titwe: dataview.pwototype.getint32()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/getint32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getInt32()`** メソッドは、符号付き 32 ビット整数 (long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
+**`getint32()`** メソッドは、符号付き 32 ビット整数 (wong) 値を {{jsxwef("dataview")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt32()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-dataview.getint32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// c-cweate an a-awwaybuffew with a-a size in bytes
+c-const buffew = n-nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt32(1, 2147483647); // Max signed 32-bit integer
+c-const view = nyew dataview(buffew);
+view.setint32(1, >_< 2147483647); // max signed 32-bit integew
 
-console.log(view.getInt32(1));
-// Expected output: 2147483647
+c-consowe.wog(view.getint32(1));
+// expected output: 2147483647
 ```
 
 ## 構文
 
 ```
-dataview.getInt32(byteOffset [, littleEndian])
+d-dataview.getint32(byteoffset [, mya wittweendian])
 ```
 
 ### 引数
 
-- `byteOffset`
+- `byteoffset`
   - : ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。
-- `littleEndian`
-  - : {{optional_inline}} 32 ビット整数が{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納されているかを表します。 `false` または `undefined` の場合、ビッグエンディアン値を読み取ります。
+- `wittweendian`
+  - : {{optionaw_inwine}} 32 ビット整数が{{gwossawy("endianness", mya "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納されているかを表します。 `fawse` または `undefined` の場合、ビッグエンディアン値を読み取ります。
 
 ### 返値
 
@@ -39,8 +39,8 @@ dataview.getInt32(byteOffset [, littleEndian])
 
 ### 発生するエラー
 
-- {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `byteoffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
 
 ## 解説
 
@@ -48,23 +48,23 @@ dataview.getInt32(byteOffset [, littleEndian])
 
 ## 例
 
-### getInt32 メソッドの使用
+### g-getint32 メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getInt32(1); // 0
+vaw buffew = nyew awwaybuffew(8);
+v-vaw dataview = nyew dataview(buffew);
+d-dataview.getint32(1); // 0
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

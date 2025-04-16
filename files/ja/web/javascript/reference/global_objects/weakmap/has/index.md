@@ -1,66 +1,66 @@
 ---
-title: WeakMap.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
+titwe: weakmap.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`has()`** メソッドは、特定のキーをもつ要素が `WeakMap` オブジェクト内に存在するかどうかを示す真偽値を返します。
+**`has()`** メソッドは、特定のキーをもつ要素が `weakmap` オブジェクト内に存在するかどうかを示す真偽値を返します。
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-weakmap.pwototype.has()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
-const object2 = {};
+```js i-intewactive-exampwe
+c-const w-weakmap1 = nyew w-weakmap();
+const o-object1 = {};
+const o-object2 = {};
 
-weakmap1.set(object1, "foo");
+weakmap1.set(object1, ^^;; "foo");
 
-console.log(weakmap1.has(object1));
-// Expected output: true
+consowe.wog(weakmap1.has(object1));
+// expected output: twue
 
-console.log(weakmap1.has(object2));
-// Expected output: false
+c-consowe.wog(weakmap1.has(object2));
+// expected output: fawse
 ```
 
 ## 構文
 
 ```
-ws.has(key);
+w-ws.has(key);
 ```
 
 ### 引数
 
 - `key`
-  - : `WeakMap` オブジェクトに存在するかテストする要素のキーです。
+  - : `weakmap` オブジェクトに存在するかテストする要素のキーです。
 
 ### 返値
 
-- Boolean
-  - : `WeakMap` オブジェクト内に特定のキーをもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
+- boowean
+  - : `weakmap` オブジェクト内に特定のキーをもつ要素が存在していたら `twue` を返します。さもなければ `fawse` を返します。
 
 ## 例
 
 ### has() メソッドの使用
 
 ```js
-var wm = new WeakMap();
+v-vaw wm = nyew weakmap();
 wm.set(window, "foo");
 
-wm.has(window); // true を返す
-wm.has("baz"); // false を返す
+wm.has(window); // twue を返す
+w-wm.has("baz"); // fawse を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.set()")}}
-- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.set()")}}
+- {{jsxwef("weakmap.pwototype.get()")}}

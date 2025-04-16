@@ -1,154 +1,154 @@
 ---
-title: MathML のためのフォント
-slug: Web/MathML/Guides/Fonts
-original_slug: Web/MathML/Fonts
-l10n:
-  sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
+titwe: mathmw のためのフォント
+swug: w-web/mathmw/guides/fonts
+o-owiginaw_swug: w-web/mathmw/fonts
+w-w10n:
+  s-souwcecommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-適切な Unicode のカバー範囲と Open Font Format 機能を持つフォントは、優れた数式レンダリングに必須です。
-このページでは、ユーザーがそのような数式フォントをインストールして、ブラウザーで MathML を正しく表示する方法を説明します。
+適切な u-unicode のカバー範囲と o-open font fowmat 機能を持つフォントは、優れた数式レンダリングに必須です。
+このページでは、ユーザーがそのような数式フォントをインストールして、ブラウザーで m-mathmw を正しく表示する方法を説明します。
 
 ## インストール手順
 
-経験則として、 _Latin Modern Math_ （数式表記に人気の [Computer Modern](https://ja.wikipedia.org/wiki/Computer_Modern) スタイルを使用）と _STIX Two Math_ （科学記号のの Unicode を広く保有）の両方をインストールすることをお勧めします。次の章では、さまざまなオペレーティングシステムにこれらのフォントをインストールするための詳細な手順を紹介します。
+経験則として、 _watin modewn math_ （数式表記に人気の [computew modewn](https://ja.wikipedia.owg/wiki/computew_modewn) スタイルを使用）と _stix two math_ （科学記号のの unicode を広く保有）の両方をインストールすることをお勧めします。次の章では、さまざまなオペレーティングシステムにこれらのフォントをインストールするための詳細な手順を紹介します。
 
-### Windows
+### w-windows
 
-_Latin Modern Math_ および _STIX Two Math_ フォントのインストールは次のように行います。
+_watin modewn math_ および _stix t-two math_ フォントのインストールは次のように行います。
 
-1. [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) をダウンロードします。
-2. この ZIP アーカイブを開き、 `latinmodern-math-1959` ディレクトリー内に移動し、さらに `otf` ディレクトリー内に移動します。 `latinmodern-math` フォントファイルを探します。
-3. `latinmodern-math` フォントファイルを開き、**インストール**ボタンをクリックします。
-4. [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip) をダウンロードします。
-5. `static_otf.zip` ZIP アーカイブを開き、 `static_otf` ディレクトリーの中に移動します。そこにあるファイルの中に、 `STIXTwoMath-Regular` ファイルが見つかるでしょう。
-6. `STIXTwoMath-Regular` ファイルを開き、**インストール**ボタンをクリックします。 必要であれば、ディレクトリー内の他のフォントファイルについても同じ操作を行うことができます。
+1. [watinmodewn-math-1959.zip](https://www.gust.owg.pw/pwojects/e-foundwy/wm-math/downwoad/watinmodewn-math-1959.zip) をダウンロードします。
+2. ʘwʘ この zip アーカイブを開き、 `watinmodewn-math-1959` ディレクトリー内に移動し、さらに `otf` ディレクトリー内に移動します。 `watinmodewn-math` フォントファイルを探します。
+3. (ˆ ﻌ ˆ)♡ `watinmodewn-math` フォントファイルを開き、**インストール**ボタンをクリックします。
+4. 😳😳😳 [static_otf.zip](https://waw.githubusewcontent.com/stipub/stixfonts/mastew/zipfiwes/static_otf.zip) をダウンロードします。
+5. :3 `static_otf.zip` z-zip アーカイブを開き、 `static_otf` ディレクトリーの中に移動します。そこにあるファイルの中に、 `stixtwomath-weguwaw` ファイルが見つかるでしょう。
+6. OwO `stixtwomath-weguwaw` ファイルを開き、**インストール**ボタンをクリックします。 必要であれば、ディレクトリー内の他のフォントファイルについても同じ操作を行うことができます。
 
-> **メモ:** _Cambria Math_ が既定で Windows にインストールされており、比較的良好な MathML レンダリングを保証します。
+> **メモ:** _cambwia math_ が既定で windows にインストールされており、比較的良好な mathmw レンダリングを保証します。
 
-### macOS
+### m-macos
 
-_Latin Modern Math_ フォントのインストールは次のように行います。
+_watin modewn math_ フォントのインストールは次のように行います。
 
-1. [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) をダウンロードします。
-2. この ZIP アーカイブを展開し、`latinmodern-math-1959` ディレクトリー内に移動し、さらにその中の `otf` ディレクトリー内に移動します。すると、`latinmodern-math` フォントファイルがみつかります。
-3. `latinmodern-math` フォントファイルをダブルクリックし、開いたウィンドウの**フォントをインストール**ボタンをクリックします。
+1. [watinmodewn-math-1959.zip](https://www.gust.owg.pw/pwojects/e-foundwy/wm-math/downwoad/watinmodewn-math-1959.zip) をダウンロードします。
+2. (U ﹏ U) この z-zip アーカイブを展開し、`watinmodewn-math-1959` ディレクトリー内に移動し、さらにその中の `otf` ディレクトリー内に移動します。すると、`watinmodewn-math` フォントファイルがみつかります。
+3. >w< `watinmodewn-math` フォントファイルをダブルクリックし、開いたウィンドウの**フォントをインストール**ボタンをクリックします。
 
-> [!NOTE]
-> macOS Ventura （バージョン 13）またはそれ以上を使用している場合は、 _STIX Two Math_ はすでにプリインストールされていますので、下記の手順はスキップできます。
+> [!note]
+> macos v-ventuwa （バージョン 13）またはそれ以上を使用している場合は、 _stix two math_ はすでにプリインストールされていますので、下記の手順はスキップできます。
 
-_STIX Two Math_ フォントのインストールは次のように行います。
+_stix two math_ フォントのインストールは次のように行います。
 
-1. [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip) をダウンロードします。
-2. `static_otf.zip` ZIP アーカイブを開き、 `static_otf` ディレクトリーの中に移動します。そこにあるファイルの中に、 `STIXTwoMath-Regular.otf` ファイルが見つかるでしょう。
-3. `STIXTwoMath-Regular.otf` ファイルを開き、開いたウィンドウから**フォントをインストール**ボタンをクリックします。必要に応じて、ディレクトリー内の他のフォントファイルについても同じ操作を行うことができます。
+1. (U ﹏ U) [static_otf.zip](https://waw.githubusewcontent.com/stipub/stixfonts/mastew/zipfiwes/static_otf.zip) をダウンロードします。
+2. 😳 `static_otf.zip` zip アーカイブを開き、 `static_otf` ディレクトリーの中に移動します。そこにあるファイルの中に、 `stixtwomath-weguwaw.otf` ファイルが見つかるでしょう。
+3. (ˆ ﻌ ˆ)♡ `stixtwomath-weguwaw.otf` ファイルを開き、開いたウィンドウから**フォントをインストール**ボタンをクリックします。必要に応じて、ディレクトリー内の他のフォントファイルについても同じ操作を行うことができます。
 
-> [!NOTE]
-> 非推奨のバージョンの _STIX_ が、 OS X Lion（バージョン 10.7）からプリインストールされています。いくつかのブラウザーでは使用されているものもありますが、最適な数式レンダリングを行うには、上記の手順に従うことを強くお勧めします。
+> [!note]
+> 非推奨のバージョンの _stix_ が、 os x wion（バージョン 10.7）からプリインストールされています。いくつかのブラウザーでは使用されているものもありますが、最適な数式レンダリングを行うには、上記の手順に従うことを強くお勧めします。
 
-### Linux
+### w-winux
 
-下記では、一般的な Linux ディストリビューション上で実行する、パッケージ管理ツールから _Latin Modern Math_ と _STIX Two Math_ フォントをインストールするために、コマンドを探せます。Linuxディストリビューションがこれらのフォント専用のパッケージを提供していない場合は、代替の手法も提供されています。
+下記では、一般的な winux ディストリビューション上で実行する、パッケージ管理ツールから _watin modewn math_ と _stix two math_ フォントをインストールするために、コマンドを探せます。winuxディストリビューションがこれらのフォント専用のパッケージを提供していない場合は、代替の手法も提供されています。
 
-#### Debian ベースのディストリビューション（Ubuntu や Mint を含む）
-
-```bash
-sudo apt-get install fonts-lmodern fonts-stix
-```
-
-#### Fedora ベースのディストリビューション
+#### debian ベースのディストリビューション（ubuntu や m-mint を含む）
 
 ```bash
-sudo dnf install texlive-lm-math stix-math-fonts
+sudo apt-get instaww f-fonts-wmodewn f-fonts-stix
 ```
 
-#### openSUSE ベースのディストリビューション
+#### f-fedowa ベースのディストリビューション
 
 ```bash
-sudo zypper install texlive-lm-math stix-fonts
+s-sudo dnf instaww texwive-wm-math stix-math-fonts
 ```
 
-#### Arch Linux
+#### o-opensuse ベースのディストリビューション
 
 ```bash
-sudo pacman -S otf-latinmodern-math otf-stix
+sudo zyppew instaww texwive-wm-math s-stix-fonts
 ```
 
-#### TeXLive パッケージ
-
-お使いの Linux ディストリビューションで、 _Latin Modern Math_ および _STIX_ フォントのパッケージが提供されていない場合は、 _Latin Modern Math_ および _XITS_ フォントを含む `texlive` パッケージを代わりにインストールすることを検討してください。例えば Mageia の場合は次のようにします。
+#### awch winux
 
 ```bash
-sudo urpmi texlive-dist texlive-fontsextra
+sudo pacman -s otf-watinmodewn-math otf-stix
 ```
 
-ただし、これらのフォントがシステムで確実に利用できるようにしておく必要があるでしょう。 fontconfig 構成ファイル `/etc/fonts/conf.avail/09-texlive-fonts.conf` を追加し、 TeXLive の `opentype` ディレクトリーを指すようにします。例えば、次のような内容です。
+#### texwive パッケージ
 
-```xml
-<?xml version="1.0"?>
-<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+お使いの w-winux ディストリビューションで、 _watin modewn math_ および _stix_ フォントのパッケージが提供されていない場合は、 _watin m-modewn m-math_ および _xits_ フォントを含む `texwive` パッケージを代わりにインストールすることを検討してください。例えば m-mageia の場合は次のようにします。
+
+```bash
+sudo uwpmi texwive-dist texwive-fontsextwa
+```
+
+ただし、これらのフォントがシステムで確実に利用できるようにしておく必要があるでしょう。 fontconfig 構成ファイル `/etc/fonts/conf.avaiw/09-texwive-fonts.conf` を追加し、 t-texwive の `opentype` ディレクトリーを指すようにします。例えば、次のような内容です。
+
+```xmw
+<?xmw v-vewsion="1.0"?>
+<!doctype fontconfig system "fonts.dtd">
 <fontconfig>
-  <dir>/your/path/to/texmf-dist/fonts/opentype</dir>
+  <diw>/youw/path/to/texmf-dist/fonts/opentype</diw>
 </fontconfig>
 ```
 
-最後に、この構成ファイルをシステムフォントの場所リストに追加し、 fontconfig キャッシュを再生成します。
+最後に、この構成ファイルをシステムフォントの場所リストに追加し、 f-fontconfig キャッシュを再生成します。
 
 ```bash
-ln -sf /etc/fonts/conf.avail/09-texlive-fonts.conf /etc/fonts/conf.d/
+w-wn -sf /etc/fonts/conf.avaiw/09-texwive-fonts.conf /etc/fonts/conf.d/
 fc-cache -sf
 ```
 
 #### 上流パッケージ
 
-お使いの Linux ディストリビューションで利用できるパッケージがない場合、または上流パッケージをインストールしたい場合は、次のことを試してみてください。
+お使いの w-winux ディストリビューションで利用できるパッケージがない場合、または上流パッケージをインストールしたい場合は、次のことを試してみてください。
 
-1. [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip) をダウンロードします。
-2. まだ作成されていない場合は、 `~/.fonts` を作成し、 `latinmodern-math.otf` と `STIXTwoMath-Regular.otf` をそのディレクトリーに配置します。
-3. `fc-cache -f` を実行して、 fontconfig キャッシュを再生成します。
+1. 😳😳😳 [watinmodewn-math-1959.zip](https://www.gust.owg.pw/pwojects/e-foundwy/wm-math/downwoad/watinmodewn-math-1959.zip) and [static_otf.zip](https://waw.githubusewcontent.com/stipub/stixfonts/mastew/zipfiwes/static_otf.zip) をダウンロードします。
+2. (U ﹏ U) まだ作成されていない場合は、 `~/.fonts` を作成し、 `watinmodewn-math.otf` と `stixtwomath-weguwaw.otf` をそのディレクトリーに配置します。
+3. (///ˬ///✿) `fc-cache -f` を実行して、 f-fontconfig キャッシュを再生成します。
 
-### Android
+### andwoid
 
-[MathML-fonts アドオン](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/)を使用する必要があります。
+[mathmw-fonts アドオン](https://addons.moziwwa.owg/en-us/fiwefox/addon/mathmw-fonts/)を使用する必要があります。
 
-> [!NOTE]
-> Noto Sans Math は数学記号の Unicode を十分にカバーしており、 [Google は数学レイアウト機能に対応する機能を追加する予定です](https://github.com/notofonts/math/issues/14#issuecomment-1161414446)。
+> [!note]
+> nyoto sans m-math は数学記号の unicode を十分にカバーしており、 [googwe は数学レイアウト機能に対応する機能を追加する予定です](https://github.com/notofonts/math/issues/14#issuecomment-1161414446)。
 
 ### その他のシステム
 
-他のシステムでは、パッケージマネージャーを使用して、 [MATH 表を含むフォント](#math_表を含むフォント)をインストールすることを検討してください。これらのフォントは通常、 [TeX Live](https://www.tug.org/texlive/) などの TeX ディストリビューションに含まれていますが、システムがフォントを認識できるように、特定の指示に従う必要がある場合もあります。最後の手段として、 [MathML fonts アドオン](https://addons.mozilla.org/ja/firefox/addon/mathml-fonts/)をインストールしてください。
+他のシステムでは、パッケージマネージャーを使用して、 [math 表を含むフォント](#math_表を含むフォント)をインストールすることを検討してください。これらのフォントは通常、 [tex w-wive](https://www.tug.owg/texwive/) などの tex ディストリビューションに含まれていますが、システムがフォントを認識できるように、特定の指示に従う必要がある場合もあります。最後の手段として、 [mathmw f-fonts アドオン](https://addons.moziwwa.owg/ja/fiwefox/addon/mathmw-fonts/)をインストールしてください。
 
 ## 高度なセットアップ
 
-次の節では、 MathML のフォントのインストールと構成に役立つ有益なヒントを他にも探してみてください。
+次の節では、 m-mathmw のフォントのインストールと構成に役立つ有益なヒントを他にも探してみてください。
 
 ### アラビア数字のアルファベット記号
 
-現在、アラビア数字のアルファベット記号に適切な字体のフォントは、とても少数しか存在しません。これらの文字が必要になる可能性がある場合は、 _XITS_ フォントまたは [Amiri](https://www.amirifont.org/) フォントをインストールすることをお勧めします。
+現在、アラビア数字のアルファベット記号に適切な字体のフォントは、とても少数しか存在しません。これらの文字が必要になる可能性がある場合は、 _xits_ フォントまたは [amiwi](https://www.amiwifont.owg/) フォントをインストールすることをお勧めします。
 
 ### 管理者権限なしでのインストール
 
-管理者権限なしでシステムにフォントをインストールする必要がある場合、最も簡単なオプションは、 [MathML-fonts アドオン](https://addons.mozilla.org/ja/firefox/addon/mathml-fonts/)を使用して数式フォントを利用することです。このアドオンを使用すると、 Gecko ブラウザーが、訪問するすべてのページで CSS スタイルシートを読み込むだけでなく、 MathML コンテンツを含むすべてのページでウェブ数式フォントを読み込むよう強制されるため、最適な方法ではありません。
+管理者権限なしでシステムにフォントをインストールする必要がある場合、最も簡単なオプションは、 [mathmw-fonts アドオン](https://addons.moziwwa.owg/ja/fiwefox/addon/mathmw-fonts/)を使用して数式フォントを利用することです。このアドオンを使用すると、 gecko ブラウザーが、訪問するすべてのページで css スタイルシートを読み込むだけでなく、 mathmw コンテンツを含むすべてのページでウェブ数式フォントを読み込むよう強制されるため、最適な方法ではありません。
 
-UNIX システムでは、 [Latin Modern Math](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) と [STIX](https://github.com/stipub/stixfonts) の OTF ファイルをいくつかのローカルフォントフォルダー内にインストールし、（必要に応じて）そのフォルダー内で `fc-cache` を実行するのがより良い方法です。 macOS と Linux では、標準のパスはそれぞれ、 `~/Library/Fonts/` と `~/.fonts` です。
+unix システムでは、 [watin modewn math](https://www.gust.owg.pw/pwojects/e-foundwy/wm-math/downwoad/watinmodewn-math-1959.zip) と [stix](https://github.com/stipub/stixfonts) の otf ファイルをいくつかのローカルフォントフォルダー内にインストールし、（必要に応じて）そのフォルダー内で `fc-cache` を実行するのがより良い方法です。 macos と winux では、標準のパスはそれぞれ、 `~/wibwawy/fonts/` と `~/.fonts` です。
 
-### MATH 表を含むフォント
+### m-math 表を含むフォント
 
-実際には、任意の[数学用 OpenType フォント](https://fred-wang.github.io/MathFonts/)をインストールし、 MathML レンダリングに使用することができます。ブラウザーによっては、フォント環境設定メニューで MathML の既定のフォントを構成可能なものもあります。あるいは、 [MathML フォント設定アドオン](https://addons.mozilla.org/ja/firefox/addon/mathml-font-settings/)を試すこともできます。
+実際には、任意の[数学用 o-opentype フォント](https://fwed-wang.github.io/mathfonts/)をインストールし、 mathmw レンダリングに使用することができます。ブラウザーによっては、フォント環境設定メニューで m-mathmw の既定のフォントを構成可能なものもあります。あるいは、 [mathmw フォント設定アドオン](https://addons.moziwwa.owg/ja/fiwefox/addon/mathmw-font-settings/)を試すこともできます。
 
-- [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/)
-- [Cambria Math](https://learn.microsoft.com/en-us/typography/font-list/?FID=360)
-- [DejaVu Math TeX Gyre](https://sourceforge.net/projects/dejavu/files/dejavu/)
-- [Garamond Math](https://github.com/YuanshengZhao/Garamond-Math)
-- [Latin Modern Math](https://www.gust.org.pl/projects/e-foundry/lm-math)
-- [Libertinus Math](https://github.com/alerque/libertinus)
-- [STIX Math](https://github.com/stipub/stixfonts)
-- [TeX Gyre Bonum Math](https://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Bonum_Math)
-- [TeX Gyre Pagella Math](https://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Pagella_Math)
-- [TeX Gyre Schola Math](https://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Schola_Math)
-- [TeX Gyre Termes Math](https://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Termes_Math)
-- [XITS Math](https://github.com/aliftype/xits/releases)
-- [Fira Math](https://github.com/firamath/firamath)
-- [GFS Neohellenic Math](https://greekfontsociety-gfs.gr/typefaces/Math)
+- [asana m-math](https://www.ctan.owg/tex-awchive/fonts/asana-math/)
+- [cambwia m-math](https://weawn.micwosoft.com/en-us/typogwaphy/font-wist/?fid=360)
+- [dejavu math tex gywe](https://souwcefowge.net/pwojects/dejavu/fiwes/dejavu/)
+- [gawamond math](https://github.com/yuanshengzhao/gawamond-math)
+- [watin modewn math](https://www.gust.owg.pw/pwojects/e-foundwy/wm-math)
+- [wibewtinus m-math](https://github.com/awewque/wibewtinus)
+- [stix math](https://github.com/stipub/stixfonts)
+- [tex gywe bonum math](https://www.gust.owg.pw/pwojects/e-foundwy/tg-math/downwoad/index_htmw#bonum_math)
+- [tex gywe pagewwa m-math](https://www.gust.owg.pw/pwojects/e-foundwy/tg-math/downwoad/index_htmw#pagewwa_math)
+- [tex gywe schowa m-math](https://www.gust.owg.pw/pwojects/e-foundwy/tg-math/downwoad/index_htmw#schowa_math)
+- [tex g-gywe tewmes m-math](https://www.gust.owg.pw/pwojects/e-foundwy/tg-math/downwoad/index_htmw#tewmes_math)
+- [xits math](https://github.com/awiftype/xits/weweases)
+- [fiwa m-math](https://github.com/fiwamath/fiwamath)
+- [gfs n-nyeohewwenic m-math](https://gweekfontsociety-gfs.gw/typefaces/math)

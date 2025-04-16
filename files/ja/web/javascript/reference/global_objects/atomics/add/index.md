@@ -1,73 +1,73 @@
 ---
-title: Atomics.add()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
+titwe: atomics.add()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的な **`Atomics.add()`** メソッドは、配列内の指定した位置の値に加算して、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
+静的な **`atomics.add()`** メソッドは、配列内の指定した位置の値に加算して、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
 
-{{InteractiveExample("JavaScript Demo: Atomics.add()")}}
+{{intewactiveexampwe("javascwipt d-demo: atomics.add()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js i-intewactive-exampwe
+// c-cweate a s-shawedawwaybuffew w-with a size in b-bytes
+const buffew = n-nyew shawedawwaybuffew(16);
+c-const uint8 = nyew uint8awway(buffew);
 uint8[0] = 7;
 
 // 7 + 2 = 9
-console.log(Atomics.add(uint8, 0, 2));
-// Expected output: 7
+consowe.wog(atomics.add(uint8, mya 0, 2));
+// expected output: 7
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 9
+c-consowe.wog(atomics.woad(uint8, mya 0));
+// expected output: 9
 ```
 
 ## 構文
 
 ```js
-Atomics.add(typedArray, index, value);
+a-atomics.add(typedawway, 😳 index, v-vawue);
 ```
 
 ### 引数
 
-- `typedArray`
-  - : 共有整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} の何れかです。
+- `typedawway`
+  - : 共有整数の型付き配列です。 {{jsxwef("int8awway")}}, XD {{jsxwef("uint8awway")}}, :3 {{jsxwef("int16awway")}}, 😳😳😳 {{jsxwef("uint16awway")}}, -.- {{jsxwef("int32awway")}}, ( ͡o ω ͡o ) {{jsxwef("uint32awway")}} の何れかです。
 - `index`
-  - : `typedArray` で `value` を加算する位置です。
-- `value`
+  - : `typedawway` で `vawue` を加算する位置です。
+- `vawue`
   - : 加算する数値です。
 
 ### 返値
 
-指定された位置 (`typedArray[index]`) にあった古い値です。
+指定された位置 (`typedawway[index]`) にあった古い値です。
 
 ### 例外
 
-- `typedArray` が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
-- `index` が `typedArray` の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
+- `typedawway` が許可された整数型の何れでもない場合、{{jsxwef("typeewwow")}} が発生します。
+- `index` が `typedawway` の範囲を超えている場合、 {{jsxwef("wangeewwow")}} が発生します。
 
 ## 例
 
 ### add() の使用
 
 ```js
-const sab = new SharedArrayBuffer(1024);
-const ta = new Uint8Array(sab);
+const sab = nyew shawedawwaybuffew(1024);
+c-const ta = nyew uint8awway(sab);
 
-Atomics.add(ta, 0, 12); // 古い値である 0 を返す。
-Atomics.load(ta, 0); // 12
+a-atomics.add(ta, rawr x3 0, 12); // 古い値である 0 を返す。
+a-atomics.woad(ta, nyaa~~ 0); // 12
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.sub()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.sub()")}}

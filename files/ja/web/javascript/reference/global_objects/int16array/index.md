@@ -1,141 +1,141 @@
 ---
-title: Int16Array
-slug: Web/JavaScript/Reference/Global_Objects/Int16Array
+titwe: int16awway
+swug: web/javascwipt/wefewence/gwobaw_objects/int16awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Int16Array`** は型付き配列で、プラットフォームのバイト順による 2 の補数形式の 16 ビット符号付き整数値の配列を表します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。
+**`int16awway`** は型付き配列で、プラットフォームのバイト順による 2 の補数形式の 16 ビット符号付き整数値の配列を表します。バイト順の制御が必要な場合は、代わりに {{jsxwef("dataview")}} を使用してください。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Int16Array/Int16Array", "Int16Array()")}}
-  - : 新しい `Int16Array` オブジェクトを生成します。
+- {{jsxwef("gwobaw_objects/int16awway/int16awway", mya "int16awway()")}}
+  - : 新しい `int16awway` オブジェクトを生成します。
 
 ## 静的プロパティ
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int16Array.BYTES_PER_ELEMENT")}}
-  - : 要素の大きさを数値で返します。`Int16Array` の場合は `2` です。
-- {{jsxref("TypedArray.name", "Int16Array.name")}}
-  - : コンストラクター名を文字列値で返します。`Int16Array` の場合、 "Int16Array" です。
+- {{jsxwef("typedawway.bytes_pew_ewement", mya "int16awway.bytes_pew_ewement")}}
+  - : 要素の大きさを数値で返します。`int16awway` の場合は `2` です。
+- {{jsxwef("typedawway.name", 😳 "int16awway.name")}}
+  - : コンストラクター名を文字列値で返します。`int16awway` の場合、 "int16awway" です。
 
 ## 静的メソッド
 
-- {{jsxref("TypedArray.from", "Int16Array.from()")}}
-  - : 配列風オブジェクトまたは反復可能オブジェクトから新しい `Int16Array` オブジェクトを生成します。 {{jsxref("Array.from()")}} も参照してください。
-- {{jsxref("TypedArray.of", "Int16Array.of()")}}
-  - : 可変長引数で新しい `Int16Array` オブジェクトを生成します。{{jsxref("Array.of()")}} も参照してください。
+- {{jsxwef("typedawway.fwom", XD "int16awway.fwom()")}}
+  - : 配列風オブジェクトまたは反復可能オブジェクトから新しい `int16awway` オブジェクトを生成します。 {{jsxwef("awway.fwom()")}} も参照してください。
+- {{jsxwef("typedawway.of", :3 "int16awway.of()")}}
+  - : 可変長引数で新しい `int16awway` オブジェクトを生成します。{{jsxwef("awway.of()")}} も参照してください。
 
 ## インスタンスプロパティ
 
-- {{jsxref("TypedArray.prototype.buffer", "Int16Array.prototype.buffer")}}
-  - : `Int16Array` オブジェクトによって参照される {{jsxref("ArrayBuffer")}} を返します。構築時に固定され、**読み取り専用**です。
-- {{jsxref("TypedArray.prototype.byteLength", "Int16Array.prototype.byteLength")}}
-  - : {{jsxref("ArrayBuffer")}} の先頭からの `Int16Array` の長さを (バイト単位で) 返します。構築時に固定され、**読み取り専用**です。
-- {{jsxref("TypedArray.prototype.byteOffset", "Int16Array.prototype.byteOffset")}}
-  - : {{jsxref("ArrayBuffer")}} の先頭からの `Int16Array` のオフセットを (バイト単位で) 返します。構築時に固定され、**読み取り専用**です。
-- {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}}
-  - : `Int16Array` オブジェクト内に保持されている要素の数を返します。構築時に固定され、**読み取り専用**です。
+- {{jsxwef("typedawway.pwototype.buffew", 😳😳😳 "int16awway.pwototype.buffew")}}
+  - : `int16awway` オブジェクトによって参照される {{jsxwef("awwaybuffew")}} を返します。構築時に固定され、**読み取り専用**です。
+- {{jsxwef("typedawway.pwototype.bytewength", -.- "int16awway.pwototype.bytewength")}}
+  - : {{jsxwef("awwaybuffew")}} の先頭からの `int16awway` の長さを (バイト単位で) 返します。構築時に固定され、**読み取り専用**です。
+- {{jsxwef("typedawway.pwototype.byteoffset", ( ͡o ω ͡o ) "int16awway.pwototype.byteoffset")}}
+  - : {{jsxwef("awwaybuffew")}} の先頭からの `int16awway` のオフセットを (バイト単位で) 返します。構築時に固定され、**読み取り専用**です。
+- {{jsxwef("typedawway.pwototype.wength", rawr x3 "int16awway.pwototype.wength")}}
+  - : `int16awway` オブジェクト内に保持されている要素の数を返します。構築時に固定され、**読み取り専用**です。
 
 ## インスタンスメソッド
 
-- {{jsxref("TypedArray.copyWithin", "Int16Array.prototype.copyWithin()")}}
-  - : 配列内で一連の配列要素をコピーします。{{jsxref("Array.prototype.copyWithin()")}} も参照してください。
-- {{jsxref("TypedArray.entries", "Int16Array.prototype.entries()")}}
-  - : 配列内ですべての位置におけるキーと値の組を提供する新しい*配列イテレーター*を返します。{{jsxref("Array.prototype.entries()")}} も参照してください。
-- {{jsxref("TypedArray.every", "Int16Array.prototype.every()")}}
-  - : 配列内のすべての要素が関数によって提供されたテストに合格するかどうかテストを実行します。{{jsxref("Array.prototype.every()")}} も参照してください。
-- {{jsxref("TypedArray.fill", "Int16Array.prototype.fill()")}}
-  - : 配列の先頭位置から末尾位置までのすべての要素を固定値に設定します。{{jsxref("Array.prototype.fill()")}} も参照してください。
-- {{jsxref("TypedArray.filter", "Int16Array.prototype.filter()")}}
-  - : この配列のすべての要素のうち、与えられたフィルタリング関数が `true` を返すものをもつ新しい配列を生成します。{{jsxref("Array.prototype.filter()")}} も参照してください。
-- {{jsxref("TypedArray.find", "Int16Array.prototype.find()")}}
-  - : 配列内の要素に与えられたテスト関数を満足するものがあったら、見つかった値を返します。見つからなければ `undefined` を返します。{{jsxref("Array.prototype.find()")}} も参照してください。
-- {{jsxref("TypedArray.findIndex", "Int16Array.prototype.findIndex()")}}
-  - : 配列内の要素に与えられたテスト関数を満足するものがあったら、見つかった位置を返します。見つからなければ `-1` を返します。{{jsxref("Array.prototype.findIndex()")}} も参照してください。
-- {{jsxref("TypedArray.forEach", "Int16Array.prototype.forEach()")}}
-  - : 配列内のそれぞれの要素について関数を呼び出します。{{jsxref("Array.prototype.forEach()")}} も参照してください。
-- {{jsxref("TypedArray.includes", "Int16Array.prototype.includes()")}}
-  - : 型付き配列に特定の要素があるかどうかを判断し、それに応じて `true` か `false`を返します。 {{jsxref("Array.prototype.includes()")}} も参照してください。
-- {{jsxref("TypedArray.indexOf", "Int16Array.prototype.indexOf()")}}
-  - : 指定された値に等しい配列内の要素の最初の (最小の) 位置を返します。見つからなかった場合、 `-1` を返します。{{jsxref("Array.prototype.indexOf()")}} も参照してください。
-- {{jsxref("TypedArray.join", "Int16Array.prototype.join()")}}
-  - : 配列のすべての要素を 1 つの文字列に結合します。{{jsxref("Array.prototype.join()")}} も参照してください。
-- {{jsxref("TypedArray.keys", "Int16Array.prototype.keys()")}}
-  - : 配列内ですべての位置におけるキーを提供する新しい*配列イテレーター*を返します。{{jsxref("Array.prototype.keys()")}} も参照してください。
-- {{jsxref("TypedArray.lastIndexOf", "Int16Array.prototype.lastIndexOf()")}}
-  - : 指定された値に等しい配列内の要素の最後の (最大の) 位置を返します。見つからなかった場合、 `-1` を返します。{{jsxref("Array.prototype.lastIndexOf()")}} も参照してください。
-- {{jsxref("TypedArray.map", "Int16Array.prototype.map()")}}
-  - : この配列のすべての要素で与えられた関数を呼び出した結果をもつ新しい配列を生成します。{{jsxref("Array.prototype.map()")}} も参照してください。
-- {{jsxref("TypedArray.reduce", "Int16Array.prototype.reduce()")}}
-  - : アキュムレーターとこの配列のそれぞれの値に対して (左から右へ) 関数を適用し、単一の値に還元します。{{jsxref("Array.prototype.reduce()")}} も参照してください。
-- {{jsxref("TypedArray.reduceRight", "Int16Array.prototype.reduceRight()")}}
-  - : アキュムレーターとこの配列のそれぞれの値に対して (右から左へ) 関数を適用し、単一の値に還元します。{{jsxref("Array.prototype.reduceRight()")}} も参照してください。
-- {{jsxref("TypedArray.reverse", "Int16Array.prototype.reverse()")}}
-  - : 配列の要素の順番を反転させます。最初の要素は最後になり、最後の要素は最初になります。{{jsxref("Array.prototype.reverse()")}} も参照してください。
-- {{jsxref("TypedArray.set", "Int16Array.prototype.set()")}}
+- {{jsxwef("typedawway.copywithin", nyaa~~ "int16awway.pwototype.copywithin()")}}
+  - : 配列内で一連の配列要素をコピーします。{{jsxwef("awway.pwototype.copywithin()")}} も参照してください。
+- {{jsxwef("typedawway.entwies", /(^•ω•^) "int16awway.pwototype.entwies()")}}
+  - : 配列内ですべての位置におけるキーと値の組を提供する新しい*配列イテレーター*を返します。{{jsxwef("awway.pwototype.entwies()")}} も参照してください。
+- {{jsxwef("typedawway.evewy", rawr "int16awway.pwototype.evewy()")}}
+  - : 配列内のすべての要素が関数によって提供されたテストに合格するかどうかテストを実行します。{{jsxwef("awway.pwototype.evewy()")}} も参照してください。
+- {{jsxwef("typedawway.fiww", OwO "int16awway.pwototype.fiww()")}}
+  - : 配列の先頭位置から末尾位置までのすべての要素を固定値に設定します。{{jsxwef("awway.pwototype.fiww()")}} も参照してください。
+- {{jsxwef("typedawway.fiwtew", (U ﹏ U) "int16awway.pwototype.fiwtew()")}}
+  - : この配列のすべての要素のうち、与えられたフィルタリング関数が `twue` を返すものをもつ新しい配列を生成します。{{jsxwef("awway.pwototype.fiwtew()")}} も参照してください。
+- {{jsxwef("typedawway.find", >_< "int16awway.pwototype.find()")}}
+  - : 配列内の要素に与えられたテスト関数を満足するものがあったら、見つかった値を返します。見つからなければ `undefined` を返します。{{jsxwef("awway.pwototype.find()")}} も参照してください。
+- {{jsxwef("typedawway.findindex", rawr x3 "int16awway.pwototype.findindex()")}}
+  - : 配列内の要素に与えられたテスト関数を満足するものがあったら、見つかった位置を返します。見つからなければ `-1` を返します。{{jsxwef("awway.pwototype.findindex()")}} も参照してください。
+- {{jsxwef("typedawway.foweach", mya "int16awway.pwototype.foweach()")}}
+  - : 配列内のそれぞれの要素について関数を呼び出します。{{jsxwef("awway.pwototype.foweach()")}} も参照してください。
+- {{jsxwef("typedawway.incwudes", nyaa~~ "int16awway.pwototype.incwudes()")}}
+  - : 型付き配列に特定の要素があるかどうかを判断し、それに応じて `twue` か `fawse`を返します。 {{jsxwef("awway.pwototype.incwudes()")}} も参照してください。
+- {{jsxwef("typedawway.indexof", (⑅˘꒳˘) "int16awway.pwototype.indexof()")}}
+  - : 指定された値に等しい配列内の要素の最初の (最小の) 位置を返します。見つからなかった場合、 `-1` を返します。{{jsxwef("awway.pwototype.indexof()")}} も参照してください。
+- {{jsxwef("typedawway.join", rawr x3 "int16awway.pwototype.join()")}}
+  - : 配列のすべての要素を 1 つの文字列に結合します。{{jsxwef("awway.pwototype.join()")}} も参照してください。
+- {{jsxwef("typedawway.keys", (✿oωo) "int16awway.pwototype.keys()")}}
+  - : 配列内ですべての位置におけるキーを提供する新しい*配列イテレーター*を返します。{{jsxwef("awway.pwototype.keys()")}} も参照してください。
+- {{jsxwef("typedawway.wastindexof", (ˆ ﻌ ˆ)♡ "int16awway.pwototype.wastindexof()")}}
+  - : 指定された値に等しい配列内の要素の最後の (最大の) 位置を返します。見つからなかった場合、 `-1` を返します。{{jsxwef("awway.pwototype.wastindexof()")}} も参照してください。
+- {{jsxwef("typedawway.map", (˘ω˘) "int16awway.pwototype.map()")}}
+  - : この配列のすべての要素で与えられた関数を呼び出した結果をもつ新しい配列を生成します。{{jsxwef("awway.pwototype.map()")}} も参照してください。
+- {{jsxwef("typedawway.weduce", (⑅˘꒳˘) "int16awway.pwototype.weduce()")}}
+  - : アキュムレーターとこの配列のそれぞれの値に対して (左から右へ) 関数を適用し、単一の値に還元します。{{jsxwef("awway.pwototype.weduce()")}} も参照してください。
+- {{jsxwef("typedawway.weducewight", (///ˬ///✿) "int16awway.pwototype.weducewight()")}}
+  - : アキュムレーターとこの配列のそれぞれの値に対して (右から左へ) 関数を適用し、単一の値に還元します。{{jsxwef("awway.pwototype.weducewight()")}} も参照してください。
+- {{jsxwef("typedawway.wevewse", 😳😳😳 "int16awway.pwototype.wevewse()")}}
+  - : 配列の要素の順番を反転させます。最初の要素は最後になり、最後の要素は最初になります。{{jsxwef("awway.pwototype.wevewse()")}} も参照してください。
+- {{jsxwef("typedawway.set", 🥺 "int16awway.pwototype.set()")}}
   - : 入力値を指定した配列から読み込み、この型付き配列内に複数の値を格納します。
-- {{jsxref("TypedArray.slice", "Int16Array.prototype.slice()")}}
-  - : 配列の一部を取り出して新しい配列を返します。{{jsxref("Array.prototype.slice()")}} も参照してください。
-- {{jsxref("TypedArray.some", "Int16Array.prototype.some()")}}
-  - : この配列の 1 つ以上の要素が与えられたテスト関数を満たした場合に `true` を返します。{{jsxref("Array.prototype.some()")}} も参照してください。
-- {{jsxref("TypedArray.sort", "Int16Array.prototype.sort()")}}
-  - : 配列の要素をその場で並べ替え、その配列を返します。{{jsxref("Array.prototype.sort()")}} も参照してください。
-- {{jsxref("TypedArray.subarray", "Int16Array.prototype.subarray()")}}
-  - : 指定された先頭と末尾の要素位置から新しい `Int16Array` を返します。
-- {{jsxref("TypedArray.values", "Int16Array.prototype.values()")}}
-  - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。{{jsxref("Array.prototype.values()")}} も参照してください。
-- {{jsxref("TypedArray.toLocaleString", "Int16Array.prototype.toLocaleString()")}}
-  - : 配列とその要素を表すローカライズされた文字列を返します。{{jsxref("Array.prototype.toLocaleString()")}} も参照してください。
-- {{jsxref("TypedArray.toString", "Int16Array.prototype.toString()")}}
-  - : 配列とその要素を表す文字列を返します。{{jsxref("Array.prototype.toString()")}} も参照してください。
-- {{jsxref("TypedArray.@@iterator", "Int16Array.prototype[Symbol.iterator]()")}}
+- {{jsxwef("typedawway.swice", mya "int16awway.pwototype.swice()")}}
+  - : 配列の一部を取り出して新しい配列を返します。{{jsxwef("awway.pwototype.swice()")}} も参照してください。
+- {{jsxwef("typedawway.some", 🥺 "int16awway.pwototype.some()")}}
+  - : この配列の 1 つ以上の要素が与えられたテスト関数を満たした場合に `twue` を返します。{{jsxwef("awway.pwototype.some()")}} も参照してください。
+- {{jsxwef("typedawway.sowt", >_< "int16awway.pwototype.sowt()")}}
+  - : 配列の要素をその場で並べ替え、その配列を返します。{{jsxwef("awway.pwototype.sowt()")}} も参照してください。
+- {{jsxwef("typedawway.subawway", >_< "int16awway.pwototype.subawway()")}}
+  - : 指定された先頭と末尾の要素位置から新しい `int16awway` を返します。
+- {{jsxwef("typedawway.vawues", (⑅˘꒳˘) "int16awway.pwototype.vawues()")}}
+  - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。{{jsxwef("awway.pwototype.vawues()")}} も参照してください。
+- {{jsxwef("typedawway.towocawestwing", /(^•ω•^) "int16awway.pwototype.towocawestwing()")}}
+  - : 配列とその要素を表すローカライズされた文字列を返します。{{jsxwef("awway.pwototype.towocawestwing()")}} も参照してください。
+- {{jsxwef("typedawway.tostwing", "int16awway.pwototype.tostwing()")}}
+  - : 配列とその要素を表す文字列を返します。{{jsxwef("awway.pwototype.tostwing()")}} も参照してください。
+- {{jsxwef("typedawway.@@itewatow", "int16awway.pwototype[symbow.itewatow]()")}}
   - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。
 
 ## 例
 
-### 様々な方法で `Int16Array` を作成
+### 様々な方法で `int16awway` を作成
 
 ```js
 // 長さから
-var int16 = new Int16Array(2);
-int16[0] = 42;
-console.log(int16[0]); // 42
-console.log(int16.length); // 2
-console.log(int16.BYTES_PER_ELEMENT); // 2
+v-vaw int16 = new i-int16awway(2);
+i-int16[0] = 42;
+c-consowe.wog(int16[0]); // 42
+c-consowe.wog(int16.wength); // 2
+c-consowe.wog(int16.bytes_pew_ewement); // 2
 
 // 配列から
-var arr = new Int16Array([21, 31]);
-console.log(arr[1]); // 31
+v-vaw aww = n-nyew int16awway([21, rawr x3 31]);
+consowe.wog(aww[1]); // 31
 
-// From another TypedArray
-var x = new Int16Array([21, 31]);
-var y = new Int16Array(x);
-console.log(y[0]); // 21
+// fwom anothew typedawway
+vaw x = nyew int16awway([21, (U ﹏ U) 31]);
+v-vaw y = new int16awway(x);
+consowe.wog(y[0]); // 21
 
-// ArrayBuffer から
-var buffer = new ArrayBuffer(8);
-var z = new Int16Array(buffer, 0, 4);
+// a-awwaybuffew から
+vaw buffew = n-new awwaybuffew(8);
+vaw z = nyew int16awway(buffew, (U ﹏ U) 0, 4);
 
 // 反復可能オブジェクトから
-var iterable = (function* () {
-  yield* [1, 2, 3];
+vaw itewabwe = (function* () {
+  y-yiewd* [1, (⑅˘꒳˘) 2, 3];
 })();
-var int16 = new Int16Array(iterable);
-// Int16Array[1, 2, 3]
+vaw i-int16 = nyew int16awway(itewabwe);
+// i-int16awway[1, òωó 2, 3]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- `Int16Array` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays) で利用できます
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- `int16awway` のポリフィルが [`cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways) で利用できます
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

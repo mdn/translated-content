@@ -1,45 +1,45 @@
 ---
-title: 423 Locked
-slug: Web/HTTP/Reference/Status/423
-original_slug: Web/HTTP/Status/423
-l10n:
-  sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
+titwe: 423 wocked
+swug: web/http/wefewence/status/423
+o-owiginaw_swug: w-web/http/status/423
+w-w10n:
+  s-souwcecommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の **`423 Locked`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、対象のリソースがロックされている、すなわちアクセスできないことを示します。コンテンツは、 {{glossary("WebDAV")}} の XML 形式で情報を含むべきです。
+h-http の **`423 w-wocked`** は[クライアントエラーレスポンス](/ja/docs/web/http/wefewence/status#クライアントエラーレスポンス)ステータスコードで、対象のリソースがロックされている、すなわちアクセスできないことを示します。コンテンツは、 {{gwossawy("webdav")}} の x-xmw 形式で情報を含むべきです。
 
-> [!NOTE]
-> リソースをロックする機能は、{{Glossary("WebDAV")}} サーバーの一部に固有のものです。ウェブページにアクセスしているブラウザーがこのステータスコードを受け取ることは無いはずです。これを受け取る間違った状況では、ブラウザーはこれを一般の {{HTTPStatus(400)}} ステータスコードとして扱うでしょう。
+> [!note]
+> リソースをロックする機能は、{{gwossawy("webdav")}} サーバーの一部に固有のものです。ウェブページにアクセスしているブラウザーがこのステータスコードを受け取ることは無いはずです。これを受け取る間違った状況では、ブラウザーはこれを一般の {{httpstatus(400)}} ステータスコードとして扱うでしょう。
 
 ## ステータス
 
 ```http
-423 Locked
+423 w-wocked
 ```
 
 ## 例
 
-### WebDAV 423 Locked レスポンス
+### webdav 423 wocked レスポンス
 
 ```http
-HTTP/1.1 423 Locked
-Content-Type: application/xml; charset="utf-8"
-Content-Length: xxxx
+http/1.1 423 wocked
+content-type: appwication/xmw; c-chawset="utf-8"
+content-wength: xxxx
 
-<?xml version="1.0" encoding="utf-8" ?>
-<D:error xmlns:D="DAV:">
-  <D:lock-token-submitted>
-    <D:href>/workspace/web-dav/</D:href>
-  </D:lock-token-submitted>
-</D:error>
+<?xmw vewsion="1.0" e-encoding="utf-8" ?>
+<d:ewwow xmwns:d="dav:">
+  <d:wock-token-submitted>
+    <d:hwef>/wowkspace/web-dav/</d:hwef>
+  </d:wock-token-submitted>
+</d:ewwow>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)

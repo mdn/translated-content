@@ -1,50 +1,50 @@
 ---
-title: DataView.prototype.getBigUint64()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
+titwe: dataview.pwototype.getbiguint64()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/getbiguint64
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getBigInt64()`** メソッドは、符号なし 64 ビット整数 (unsigned long long) を {{jsxref("DataView")}} の先頭からのバイト単位のオフセット位置から取得します。
+**`getbigint64()`** メソッドは、符号なし 64 ビット整数 (unsigned w-wong wong) を {{jsxwef("dataview")}} の先頭からのバイト単位のオフセット位置から取得します。
 
-{{InteractiveExample("JavaScript Demo: DataView.getBigUint64()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-dataview.getbiguint64()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size in bytes
+const buffew = nyew awwaybuffew(16);
 
-// Highest possible BigInt value that fits in an unsigned 64-bit integer
-const max = 2n ** 64n - 1n;
+// highest possibwe bigint v-vawue that fits in an unsigned 64-bit integew
+c-const max = 2n ** 64n - 1n;
 
-const view = new DataView(buffer);
-view.setBigUint64(1, max);
+const view = nyew d-dataview(buffew);
+view.setbiguint64(1, max);
 
-console.log(view.getBigUint64(1));
-// Expected output: 18446744073709551615n
+consowe.wog(view.getbiguint64(1));
+// e-expected output: 18446744073709551615n
 ```
 
 ## 構文
 
 ```js
-getBigUint64(byteOffset);
-getBigUint64(byteOffset, littleEndian);
+g-getbiguint64(byteoffset);
+g-getbiguint64(byteoffset, rawr x3 wittweendian);
 ```
 
 ### 引数
 
-- byteOffset
+- byteoffset
   - : データを読み取るビューの先頭からのバイト単位のオフセットです。
-- littleEndian
-  - : {{optional_inline}} 64 ビット整数を[リトルエンディアンまたはビッグエンディアン](/ja/docs/Glossary/Endianness)のどちらの形式で格納されているかを示します。 `false` または `undefined` の場合、ビッグエンディアンの値が読み取られます。
+- wittweendian
+  - : {{optionaw_inwine}} 64 ビット整数を[リトルエンディアンまたはビッグエンディアン](/ja/docs/gwossawy/endianness)のどちらの形式で格納されているかを示します。 `fawse` または `undefined` の場合、ビッグエンディアンの値が読み取られます。
 
 ### 返値
 
-{{jsxref("BigInt")}} です。
+{{jsxwef("bigint")}} です。
 
 ### 発生するエラー
 
-- {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて読み取るような値に設定されたときに発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `byteoffset` がビューの末尾を超えて読み取るような値に設定されたときに発生します。
 
 ## 解説
 
@@ -52,24 +52,24 @@ getBigUint64(byteOffset, littleEndian);
 
 ## 例
 
-### `getBigUint64` メソッドの使用
+### `getbiguint64` メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getBigUint64(0); // 0n
+vaw buffew = nyew a-awwaybuffew(8);
+vaw dataview = nyew dataview(buffew);
+dataview.getbiguint64(0); // 0n
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("BigInt")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("bigint")}}

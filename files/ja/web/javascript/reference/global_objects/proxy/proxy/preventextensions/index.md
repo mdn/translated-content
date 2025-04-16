@@ -1,59 +1,59 @@
 ---
-title: handler.preventExtensions()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: handwew.pweventextensions()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/pweventextensions
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.preventExtensions()`** はオブジェクトの `[[PreventExtensions]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("Object.preventExtensions()")}} のような操作で使用されます。
+**`handwew.pweventextensions()`** はオブジェクトの `[[pweventextensions]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxwef("object.pweventextensions()")}} のような操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: h-handwew.pweventextensions()", nyaa~~ "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  canEvolve: true,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  c-canevowve: t-twue, (⑅˘꒳˘)
 };
 
-const handler1 = {
-  preventExtensions(target) {
-    target.canEvolve = false;
-    Object.preventExtensions(target);
-    return true;
-  },
+const handwew1 = {
+  pweventextensions(tawget) {
+    tawget.canevowve = fawse;
+    o-object.pweventextensions(tawget);
+    wetuwn twue;
+  }, rawr x3
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+c-const pwoxy1 = nyew pwoxy(monstew1, (✿oωo) h-handwew1);
 
-console.log(monster1.canEvolve);
-// Expected output: true
+consowe.wog(monstew1.canevowve);
+// expected output: twue
 
-Object.preventExtensions(proxy1);
+object.pweventextensions(pwoxy1);
 
-console.log(monster1.canEvolve);
-// Expected output: false
+consowe.wog(monstew1.canevowve);
+// e-expected output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-new Proxy(target, {
-  preventExtensions(target) {
+```js-nowint
+n-nyew pwoxy(tawget, (ˆ ﻌ ˆ)♡ {
+  p-pweventextensions(tawget) {
   }
 });
 ```
 
 ### 引数
 
-次の引数は `preventExtensions()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
+次の引数は `pweventextensions()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
-- `target`
+- `tawget`
   - : ターゲットオブジェクトです。
 
 ### 返値
 
-`preventExtensions()` メソッドは論理値を返さなければなりません。
+`pweventextensions()` メソッドは論理値を返さなければなりません。
 
 ## 解説
 
@@ -61,68 +61,68 @@ new Proxy(target, {
 
 このトラップは下記の操作に介入できます。
 
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.freeze()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("wefwect.pweventextensions()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.fweeze()")}}
 
-他にも、`[[PreventExtensions]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
+他にも、`[[pweventextensions]]` [内部メソッド](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+以下の不変条件に違反している場合、プロキシーは {{jsxwef("typeewwow")}} を発生します。
 
-- `Object.preventExtensions(proxy)` は、 `Object.isExtensible(proxy)` が `false` の場合のみ `true` を返します。
+- `object.pweventextensions(pwoxy)` は、 `object.isextensibwe(pwoxy)` が `fawse` の場合のみ `twue` を返します。
 
 ## 例
 
-### preventExtensions のトラップ
+### pweventextensions のトラップ
 
-次のコードでは {{jsxref("Object.preventExtensions()")}} をトラップします。
+次のコードでは {{jsxwef("object.pweventextensions()")}} をトラップします。
 
 ```js
-const p = new Proxy(
-  {},
+const p = nyew pwoxy(
+  {}, (˘ω˘)
   {
-    preventExtensions(target) {
-      console.log("called");
-      Object.preventExtensions(target);
-      return true;
-    },
+    pweventextensions(tawget) {
+      c-consowe.wog("cawwed");
+      object.pweventextensions(tawget);
+      wetuwn twue;
+    }, (⑅˘꒳˘)
   },
 );
 
-console.log(Object.preventExtensions(p));
-// "called"
-// false
+consowe.wog(object.pweventextensions(p));
+// "cawwed"
+// fawse
 ```
 
 以下のコードは不変条件に違反しています。
 
-```js example-bad
-const p = new Proxy(
+```js e-exampwe-bad
+const p = nyew p-pwoxy(
   {},
   {
-    preventExtensions(target) {
-      return true;
-    },
+    p-pweventextensions(tawget) {
+      w-wetuwn twue;
+    }, (///ˬ///✿)
   },
 );
 
-Object.preventExtensions(p); // TypeError is thrown
+o-object.pweventextensions(p); // typeewwow is thwown
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("wefwect.pweventextensions()")}}

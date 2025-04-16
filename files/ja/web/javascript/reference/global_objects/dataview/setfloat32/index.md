@@ -1,69 +1,69 @@
 ---
-title: DataView.prototype.setFloat32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
+titwe: dataview.pwototype.setfwoat32()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/setfwoat32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setFloat32()`** メソッドは、符号付き 32 ビット浮動小数点数 (float) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
+**`setfwoat32()`** メソッドは、符号付き 32 ビット浮動小数点数 (fwoat) 値を {{jsxwef("dataview")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setFloat32()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.setfwoat32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a-a size in bytes
+c-const buffew = new a-awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setFloat32(1, Math.PI);
+const view = nyew dataview(buffew);
+view.setfwoat32(1, >_< math.pi);
 
-console.log(view.getFloat32(1));
-// Expected output: 3.1415927410125732
+c-consowe.wog(view.getfwoat32(1));
+// expected output: 3.1415927410125732
 ```
 
 ## 構文
 
 ```
-dataview.setFloat32(byteOffset, value [, littleEndian])
+d-dataview.setfwoat32(byteoffset, mya vawue [, wittweendian])
 ```
 
 ### 引数
 
-- `byteOffset`
+- `byteoffset`
   - : ビューの先頭からのバイト単位のオフセットで、データを格納する位置です。
-- `value`
+- `vawue`
   - : 設定する値です。
-- `littleEndian`
-  - : {{optional_inline}} 32 ビット浮動小数点数を{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納するかを表します。 `false` または `undefined` の場合、ビッグエンディアン値が書き込まれます。
+- `wittweendian`
+  - : {{optionaw_inwine}} 32 ビット浮動小数点数を{{gwossawy("endianness", mya "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納するかを表します。 `fawse` または `undefined` の場合、ビッグエンディアン値が書き込まれます。
 
 ### 返値
 
-{{jsxref("undefined")}}。
+{{jsxwef("undefined")}}。
 
 ### 発生するエラー
 
-- {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
+- {{jsxwef("wangeewwow")}}
+  - : `byteoffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
 
 ## 例
 
-### setFloat32 メソッドの使用
+### s-setfwoat32 メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setFloat32(1, 3);
-dataview.getFloat32(1); // 3
+vaw buffew = new awwaybuffew(8);
+vaw dataview = n-nyew dataview(buffew);
+dataview.setfwoat32(1, 😳 3);
+d-dataview.getfwoat32(1); // 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

@@ -1,78 +1,78 @@
 ---
-title: "CSP: media-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/media-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/media-src
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: media-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/media-swc
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/media-swc
+w-w10n:
+  souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`media-src`** ディレクティブは、 {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素を使用して読み込むメディアの有効なソースを指定します。
+h-http の {{httpheadew("content-secuwity-powicy")}} (csp) における **`media-swc`** ディレクティブは、 {{htmwewement("audio")}} および {{htmwewement("video")}} 要素を使用して読み込むメディアの有効なソースを指定します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP バージョン</th>
+    <tw>
+      <th s-scope="wow">csp バージョン</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} による代替</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">ディレクティブ種別</th>
+      <td>{{gwossawy("fetch diwective", ^^;; "フェッチディレクティブ")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{csp("defauwt-swc")}} による代替</th>
       <td>
-        あり。このディレクティブがない場合、ユーザーエージェントは `default-src` ディレクティブを探します。
+        あり。このディレクティブがない場合、ユーザーエージェントは `defauwt-swc` ディレクティブを探します。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`media-src` ポリシーには、 1 つ以上のソースが許可されています。
+`media-swc` ポリシーには、 1 つ以上のソースが許可されています。
 
 ```http
-Content-Security-Policy: media-src <source>;
-Content-Security-Policy: media-src <source> <source>;
+content-secuwity-powicy: media-swc <souwce>;
+c-content-secuwity-powicy: media-swc <souwce> <souwce>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<souwce>` は、 [csp ソース値](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{gwossawy("fetch diwective", >_< "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ### 違反する場合
 
-この CSP ヘッダーがある場合、
+この c-csp ヘッダーがある場合、
 
 ```http
-Content-Security-Policy: media-src https://example.com/
+content-secuwity-powicy: m-media-swc https://exampwe.com/
 ```
 
-以下の {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("track")}} の各要素はブロックされ、読み込まれません。
+以下の {{htmwewement("audio")}}, mya {{htmwewement("video")}}, mya {{htmwewement("twack")}} の各要素はブロックされ、読み込まれません。
 
-```html
-<audio src="https://not-example.com/audio"></audio>
+```htmw
+<audio swc="https://not-exampwe.com/audio"></audio>
 
-<video src="https://not-example.com/video">
-  <track kind="subtitles" src="https://not-example.com/subtitles" />
+<video swc="https://not-exampwe.com/video">
+  <twack k-kind="subtitwes" swc="https://not-exampwe.com/subtitwes" />
 </video>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("track")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{htmwewement("audio")}}, 😳 {{htmwewement("video")}}, XD {{htmwewement("twack")}}

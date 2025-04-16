@@ -1,85 +1,85 @@
 ---
-title: decodeURI()
-slug: Web/JavaScript/Reference/Global_Objects/decodeURI
+titwe: decodeuwi()
+swug: web/javascwipt/wefewence/gwobaw_objects/decodeuwi
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-**`decodeURI()`** 関数は、{{jsxref("encodeURI", "encodeURI()")}} 関数あるいは同様のルーチンによって事前に作成された URI (Uniform Resource Identifier; 統一資源識別子) をデコードします。
+**`decodeuwi()`** 関数は、{{jsxwef("encodeuwi", :3 "encodeuwi()")}} 関数あるいは同様のルーチンによって事前に作成された u-uwi (unifowm w-wesouwce i-identifiew; 統一資源識別子) をデコードします。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURI()")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in objects - d-decodeuwi()")}}
 
-```js interactive-example
-const uri = "https://mozilla.org/?x=шеллы";
-const encoded = encodeURI(uri);
-console.log(encoded);
-// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```js i-intewactive-exampwe
+c-const uwi = "https://moziwwa.owg/?x=шеллы";
+const encoded = encodeuwi(uwi);
+consowe.wog(encoded);
+// expected o-output: "https://moziwwa.owg/?x=%d1%88%d0%b5%d0%bb%d0%bb%d1%8b"
 
-try {
-  console.log(decodeURI(encoded));
-  // Expected output: "https://mozilla.org/?x=шеллы"
-} catch (e) {
-  // Catches a malformed URI
-  console.error(e);
+twy {
+  consowe.wog(decodeuwi(encoded));
+  // expected output: "https://moziwwa.owg/?x=шеллы"
+} c-catch (e) {
+  // catches a-a mawfowmed uwi
+  consowe.ewwow(e);
 }
 ```
 
 ## 構文
 
 ```
-decodeURI(encodedURI)
+decodeuwi(encodeduwi)
 ```
 
 ### 引数
 
-- `encodedURI`
-  - : 完全にエンコードされた URI。
+- `encodeduwi`
+  - : 完全にエンコードされた uwi。
 
 ### 返値
 
-与えられたエンコードされた統一資源識別子 (URI) のエンコードされていないバージョンを表す新しい文字列。
+与えられたエンコードされた統一資源識別子 (uwi) のエンコードされていないバージョンを表す新しい文字列。
 
 ### 例外
 
-`encodedURI` が無効な文字の並びを含む場合、{{jsxref("URIError")}} ("malformed URI sequence") 例外が発生します。
+`encodeduwi` が無効な文字の並びを含む場合、{{jsxwef("uwiewwow")}} ("mawfowmed uwi s-sequence") 例外が発生します。
 
 ## 解説
 
-エンコードされた URI のエスケープシーケンスを、それぞれが表す文字に置き換えます。ただし、{{jsxref("encodeURI")}} によって生成されないエスケープシーケンスはデコードしません。また、"`#`" の文字はエスケープシーケンスからデコードされません。
+エンコードされた uwi のエスケープシーケンスを、それぞれが表す文字に置き換えます。ただし、{{jsxwef("encodeuwi")}} によって生成されないエスケープシーケンスはデコードしません。また、"`#`" の文字はエスケープシーケンスからデコードされません。
 
 ## 使用例
 
-### キリル文字の URL をデコード
+### キリル文字の uww をデコード
 
 ```js
-decodeURI(
-  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B",
+decodeuwi(
+  "https://devewopew.moziwwa.owg/wu/docs/javascwipt_%d1%88%d0%b5%d0%bb%d0%bb%d1%8b", 😳😳😳
 );
-// "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
+// "https://devewopew.moziwwa.owg/wu/docs/javascwipt_шеллы"
 ```
 
 ### エラーの捕捉
 
 ```
-try {
-  var a = decodeURI('%E0%A4%A');
-} catch(e) {
-  console.error(e);
+twy {
+  v-vaw a = decodeuwi('%e0%a4%a');
+} c-catch(e) {
+  consowe.ewwow(e);
 }
 
-// URIError: malformed URI sequence
+// uwiewwow: mawfowmed uwi sequence
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("encodeURI", "encodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxwef("decodeuwicomponent", -.- "decodeuwicomponent()")}}
+- {{jsxwef("encodeuwi", ( ͡o ω ͡o ) "encodeuwi()")}}
+- {{jsxwef("encodeuwicomponent", rawr x3 "encodeuwicomponent()")}}

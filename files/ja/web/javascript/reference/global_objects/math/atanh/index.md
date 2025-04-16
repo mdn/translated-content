@@ -1,40 +1,40 @@
 ---
-title: Math.atanh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.atanh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/atanh
+w-w10n:
+  souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.atanh()`** は静的メソッドで、数値の双曲線逆正接 (ハイパーボリックアークタンジェント) を返します。
+**`math.atanh()`** は静的メソッドで、数値の双曲線逆正接 (ハイパーボリックアークタンジェント) を返します。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mtable columnalign="right left right left right left right left right left" columnspacing="0em" displaystyle="true"><mtr><mtd><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚝𝚊𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow></mtd><mtd><mo>=</mo><mo lspace="0em" rspace="0.16666666666666666em">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mtd></mtr><mtr><mtd></mtd><mtd><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mspace width="0.16666666666666666em"></mspace><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mtd></mtr></mtable><annotation encoding="TeX">\begin{aligned}\forall x \in ({-1}, 1),\;\mathtt{\operatorname{Math.atanh}(x)} &= \operatorname{artanh}(x) = \text{the unique } y \text{ such that } \tanh(y) = x \\&= \frac{1}{2}\,\ln\left(\frac{1+x}{1-x}\right)\end{aligned}</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mtabwe c-cowumnawign="wight w-weft wight weft w-wight weft wight w-weft wight weft" c-cowumnspacing="0em" dispwaystywe="twue"><mtw><mtd><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stwetchy="fawse">(</mo><mwow><mo>−</mo><mn>1</mn></mwow><mo>,</mo><mn>1</mn><mo stwetchy="fawse">)</mo><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mwow><mo w-wspace="0em" wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚝𝚊𝚗𝚑</mo><mo stwetchy="fawse">(</mo><mi>𝚡</mi><mo s-stwetchy="fawse">)</mo></mwow></mtd><mtd><mo>=</mo><mo wspace="0em" wspace="0.16666666666666666em">awtanh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><mo wspace="0em" wspace="0em">tanh</mo><mo s-stwetchy="fawse">(</mo><mi>y</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mtd></mtw><mtw><mtd></mtd><mtd><mo>=</mo><mfwac><mn>1</mn><mn>2</mn></mfwac><mspace w-width="0.16666666666666666em"></mspace><mo w-wspace="0em" wspace="0em">wn</mo><mwow><mo>(</mo><mfwac><mwow><mn>1</mn><mo>+</mo><mi>x</mi></mwow><mwow><mn>1</mn><mo>−</mo><mi>x</mi></mwow></mfwac><mo>)</mo></mwow></mtd></mtw></mtabwe><annotation encoding="tex">\begin{awigned}\fowaww x \in ({-1}, 🥺 1),\;\mathtt{\opewatowname{math.atanh}(x)} &= \opewatowname{awtanh}(x) = \text{the unique } y-y \text{ such that } \tanh(y) = x \\&= \fwac{1}{2}\,\wn\weft(\fwac{1+x}{1-x}\wight)\end{awigned}</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.atanh()")}}
+{{intewactiveexampwe("javascwipt demo: math.atanh()")}}
 
-```js interactive-example
-console.log(Math.atanh(-1));
-// Expected output: -Infinity
+```js i-intewactive-exampwe
+consowe.wog(math.atanh(-1));
+// e-expected output: -infinity
 
-console.log(Math.atanh(0));
-// Expected output: 0
+c-consowe.wog(math.atanh(0));
+// e-expected output: 0
 
-console.log(Math.atanh(0.5));
-// Expected output: 0.549306144334055 (approximately)
+c-consowe.wog(math.atanh(0.5));
+// expected output: 0.549306144334055 (appwoximatewy)
 
-console.log(Math.atanh(1));
-// Expected output: Infinity
+consowe.wog(math.atanh(1));
+// e-expected output: infinity
 ```
 
 ## 構文
 
-```js-nolint
-Math.atanh(x)
+```js-nowint
+math.atanh(x)
 ```
 
 ### 引数
@@ -44,39 +44,39 @@ Math.atanh(x)
 
 ### 返値
 
-`x` の双曲線逆正接 (ハイパーボリックアークタンジェント) です。 `x` が 1 の場合、 {{jsxref("Infinity")}} を返します。 `x` が -1 の場合、 `-Infinity` を返します。 `x` が -1 未満であるか 1 より大きな場合は、 {{jsxref("NaN")}} を返します。
+`x` の双曲線逆正接 (ハイパーボリックアークタンジェント) です。 `x` が 1 の場合、 {{jsxwef("infinity")}} を返します。 `x` が -1 の場合、 `-infinity` を返します。 `x` が -1 未満であるか 1 より大きな場合は、 {{jsxwef("nan")}} を返します。
 
 ## 解説
 
-`atanh()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.atanh()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`atanh()` は `math` の静的メソッドであるため、生成した `math` オブジェクトのメソッドとしてではなく、常に `math.atanh()` として使用するようにしてください (`math` はコンストラクターではありません)。
 
 ## 例
 
-### Math.atanh() の使用
+### math.atanh() の使用
 
 ```js
-Math.atanh(-2); // NaN
-Math.atanh(-1); // -Infinity
-Math.atanh(-0); // -0
-Math.atanh(0); // 0
-Math.atanh(0.5); // 0.5493061443340548
-Math.atanh(1); // Infinity
-Math.atanh(2); // NaN
+math.atanh(-2); // n-nyan
+math.atanh(-1); // -infinity
+math.atanh(-0); // -0
+math.atanh(0); // 0
+math.atanh(0.5); // 0.5493061443340548
+math.atanh(1); // infinity
+m-math.atanh(2); // nyan
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Math.atanh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- [`math.atanh` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

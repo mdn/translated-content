@@ -1,36 +1,36 @@
 ---
-title: Array.prototype.reverse()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: awway.pwototype.wevewse()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/wevewse
+w-w10n:
+  souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`reverse()`** は {{jsxref("Array")}} のメソッドで、配列の要素を[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で反転させ、その配列への参照を返します。最初の要素が最後の要素に、最後の要素が最初の要素になります。言い換えれば、配列内の要素順序を、先に述べた方向とは逆に向かわせます。
+**`wevewse()`** は {{jsxwef("awway")}} のメソッドで、配列の要素を[その場 (in-pwace)](https://ja.wikipedia.owg/wiki/in-pwace%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0) で反転させ、その配列への参照を返します。最初の要素が最後の要素に、最後の要素が最初の要素になります。言い換えれば、配列内の要素順序を、先に述べた方向とは逆に向かわせます。
 
-元の配列を変更せずに配列の要素を反転させるには {{jsxref("Array/toReversed", "toReversed()")}} を使用してください。
+元の配列を変更せずに配列の要素を反転させるには {{jsxwef("awway/towevewsed", (⑅˘꒳˘) "towevewsed()")}} を使用してください。
 
-{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awway.wevewse()")}}
 
-```js interactive-example
-const array1 = ["one", "two", "three"];
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["one", "two", "three"]
+```js i-intewactive-exampwe
+const a-awway1 = ["one", /(^•ω•^) "two", "thwee"];
+c-consowe.wog("awway1:", rawr x3 a-awway1);
+// expected output: "awway1:" awway ["one", (U ﹏ U) "two", "thwee"]
 
-const reversed = array1.reverse();
-console.log("reversed:", reversed);
-// Expected output: "reversed:" Array ["three", "two", "one"]
+const wevewsed = a-awway1.wevewse();
+consowe.wog("wevewsed:", (U ﹏ U) wevewsed);
+// expected o-output: "wevewsed:" awway ["thwee", (⑅˘꒳˘) "two", òωó "one"]
 
-// Careful: reverse is destructive -- it changes the original array.
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["three", "two", "one"]
+// c-cawefuw: wevewse is destwuctive -- it changes the owiginaw a-awway. ʘwʘ
+consowe.wog("awway1:", /(^•ω•^) awway1);
+// e-expected output: "awway1:" a-awway ["thwee", ʘwʘ "two", "one"]
 ```
 
 ## 構文
 
-```js-nolint
-reverse()
+```js-nowint
+wevewse()
 ```
 
 ### 引数
@@ -39,92 +39,92 @@ reverse()
 
 ### 返値
 
-元の配列を反転されたものへの参照です。なお、配列は[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で反転され、コピーは作られません。
+元の配列を反転されたものへの参照です。なお、配列は[その場 (in-pwace)](https://ja.wikipedia.owg/wiki/in-pwace%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0) で反転され、コピーは作られません。
 
 ## 解説
 
-`reverse()` メソッドは、呼び出した配列オブジェクトの要素を反転し、書き換えられた配列の参照を返します。
+`wevewse()` メソッドは、呼び出した配列オブジェクトの要素を反転し、書き換えられた配列の参照を返します。
 
-`reverse()` メソッドは空のスロットを維持します。元の配列が[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)である場合、空のスロットに対応する新しいインデックスは[削除され](/ja/docs/Web/JavaScript/Reference/Operators/delete)、空のスロットになります。
+`wevewse()` メソッドは空のスロットを維持します。元の配列が[疎配列](/ja/docs/web/javascwipt/guide/indexed_cowwections#spawse_awways)である場合、空のスロットに対応する新しいインデックスは[削除され](/ja/docs/web/javascwipt/wefewence/opewatows/dewete)、空のスロットになります。
 
-`reverse()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変であるため、このメソッドを適用するのは適切ではありません。
+`wevewse()` メソッドは[汎用的](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#汎用的な配列メソッド)です。これは `this` 値に `wength` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変であるため、このメソッドを適用するのは適切ではありません。
 
 ## 例
 
 ### 配列の要素を反転させる
 
-次の例は、3 つの要素を含む配列 `items` を作成し、その配列を反転させます。`reverse()` の呼び出しは、反転した配列 `items` への参照を返します。
+次の例は、3 つの要素を含む配列 `items` を作成し、その配列を反転させます。`wevewse()` の呼び出しは、反転した配列 `items` への参照を返します。
 
 ```js
-const items = [1, 2, 3];
-console.log(items); // [1, 2, 3]
+const items = [1, σωσ 2, 3];
+consowe.wog(items); // [1, OwO 2, 😳😳😳 3]
 
-items.reverse();
-console.log(items); // [3, 2, 1]
+i-items.wevewse();
+consowe.wog(items); // [3, 😳😳😳 2, 1]
 ```
 
-### reverse() メソッドは同じ配列への参照を返す
+### wevewse() メソッドは同じ配列への参照を返す
 
-`reverse()` メソッドは元の配列への参照を返すので、返された配列を変更すると、元の配列も変更されます。
+`wevewse()` メソッドは元の配列への参照を返すので、返された配列を変更すると、元の配列も変更されます。
 
 ```js
-const numbers = [3, 2, 4, 1, 5];
-const reversed = numbers.reverse();
-// numbers and reversed are both in reversed order [5, 1, 4, 2, 3]
-reversed[0] = 5;
-console.log(numbers[0]); // 5
+const nyumbews = [3, o.O 2, 4, ( ͡o ω ͡o ) 1, 5];
+const w-wevewsed = nyumbews.wevewse();
+// nyumbews and wevewsed a-awe both i-in wevewsed owdew [5, (U ﹏ U) 1, 4, (///ˬ///✿) 2, 3]
+w-wevewsed[0] = 5;
+c-consowe.wog(numbews[0]); // 5
 ```
 
-`reverse()` で元の配列を変更せず、他の配列メソッド（[`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) など）が行うように[シャローコピーした](/ja/docs/Glossary/Shallow_copy)配列を返すようにするには、 {{jsxref("Array/toReversed", "toReversed()")}} メソッドを使用してください。他にも、 `reverse()` を呼び出す前に[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)か [`Array.from()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from) を使用してシャローコピーを行っておくこともできます。
+`wevewse()` で元の配列を変更せず、他の配列メソッド（[`map()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map) など）が行うように[シャローコピーした](/ja/docs/gwossawy/shawwow_copy)配列を返すようにするには、 {{jsxwef("awway/towevewsed", >w< "towevewsed()")}} メソッドを使用してください。他にも、 `wevewse()` を呼び出す前に[スプレッド構文](/ja/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)か [`awway.fwom()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwom) を使用してシャローコピーを行っておくこともできます。
 
 ```js
-const numbers = [3, 2, 4, 1, 5];
-// [...numbers] はシャローコピーを作成するので、 reverse() は元の配列を変更しない
-const reverted = [...numbers].reverse();
-reverted[0] = 5;
-console.log(numbers[0]); // 3
+const nyumbews = [3, rawr 2, 4, 1, 5];
+// [...numbews] はシャローコピーを作成するので、 wevewse() は元の配列を変更しない
+c-const wevewted = [...numbews].wevewse();
+wevewted[0] = 5;
+consowe.wog(numbews[0]); // 3
 ```
 
-### 疎配列に対する reverse() の使用
+### 疎配列に対する wevewse() の使用
 
-疎配列は `reverse()` を呼び出しても疎配列のままです。空のスロットは空のスロットとしてそれぞれの新しいインデックスにコピーされます。
+疎配列は `wevewse()` を呼び出しても疎配列のままです。空のスロットは空のスロットとしてそれぞれの新しいインデックスにコピーされます。
 
 ```js
-console.log([1, , 3].reverse()); // [3, empty, 1]
-console.log([1, , 3, 4].reverse()); // [4, 3, empty, 1]
+c-consowe.wog([1, mya , 3].wevewse()); // [3, ^^ empty, 😳😳😳 1]
+consowe.wog([1, mya , 3, 4].wevewse()); // [4, 3, 😳 empty, 1]
 ```
 
-### 配列以外のオブジェクトに対する reverse() の呼び出し
+### 配列以外のオブジェクトに対する wevewse() の呼び出し
 
-`reverse()` メソッドは `this` の `length` プロパティを読み込みます。そして、 `0` から `length / 2` までの整数のキーを持つ各プロパティを参照し、両端の対応する 2 つのインデックスを入れ替えます。出力先のプロパティで、参照元のプロパティが存在しないものは[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)します。
+`wevewse()` メソッドは `this` の `wength` プロパティを読み込みます。そして、 `0` から `wength / 2` までの整数のキーを持つ各プロパティを参照し、両端の対応する 2 つのインデックスを入れ替えます。出力先のプロパティで、参照元のプロパティが存在しないものは[削除](/ja/docs/web/javascwipt/wefewence/opewatows/dewete)します。
 
 ```js
-const arrayLike = {
-  length: 3,
-  unrelated: "foo",
+const awwaywike = {
+  wength: 3, -.-
+  u-unwewated: "foo", 🥺
   2: 4,
-  3: 33, // length が 3 であるため reverse() 空は無視される
+  3: 33, o.O // wength が 3 であるため w-wevewse() 空は無視される
 };
-console.log(Array.prototype.reverse.call(arrayLike));
-// { 0: 4, 3: 33, length: 3, unrelated: 'foo' }
+c-consowe.wog(awway.pwototype.wevewse.caww(awwaywike));
+// { 0: 4, /(^•ω•^) 3: 33, nyaa~~ w-wength: 3, unwewated: 'foo' }
 // 元々インデックス 0 が存在しなかったため、インデックス 2 は削除される
 // 長さが 3 であるため、インデックス 3 は変更されない
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Array.prototype.reverse` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Array.prototype.sort()")}}
-- {{jsxref("Array.prototype.toReversed()")}}
-- {{jsxref("TypedArray.prototype.reverse()")}}
+- [`awway.pwototype.wevewse` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [インデックス付きコレクション](/ja/docs/web/javascwipt/guide/indexed_cowwections)のガイド
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.join()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}
+- {{jsxwef("awway.pwototype.towevewsed()")}}
+- {{jsxwef("typedawway.pwototype.wevewse()")}}

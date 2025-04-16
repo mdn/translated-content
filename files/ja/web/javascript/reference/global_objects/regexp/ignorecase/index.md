@@ -1,65 +1,65 @@
 ---
-title: RegExp.prototype.ignoreCase
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
-l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+titwe: wegexp.pwototype.ignowecase
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/ignowecase
+w-w10n:
+  souwcecommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`ignoreCase`** プロパティは、"`i`" フラグが正規表現で使われているかどうかを示します。`ignoreCase` は、正規表現インスタンスごとの読み取り専用プロパティです。
+**`ignowecase`** プロパティは、"`i`" フラグが正規表現で使われているかどうかを示します。`ignowecase` は、正規表現インスタンスごとの読み取り専用プロパティです。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.ignoreCase")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype.ignowecase")}}
 
-```js interactive-example
-const regex1 = new RegExp("foo");
-const regex2 = new RegExp("foo", "i");
+```js i-intewactive-exampwe
+c-const wegex1 = n-nyew wegexp("foo");
+c-const wegex2 = n-nyew wegexp("foo", rawr "i");
 
-console.log(regex1.test("Football"));
-// Expected output: false
+c-consowe.wog(wegex1.test("footbaww"));
+// expected output: fawse
 
-console.log(regex2.ignoreCase);
-// Expected output: true
+consowe.wog(wegex2.ignowecase);
+// expected output: t-twue
 
-console.log(regex2.test("Football"));
-// Expected output: true
+consowe.wog(wegex2.test("footbaww"));
+// expected output: twue
 ```
 
 ## 解説
 
-`RegExp.prototype.ignoreCase` は、`i` フラグが指定されている場合は `true` を、そうでなければ `false` を返します。`i` フラグは、文字列の照合を試みる際に、大文字小文字を無視することを示します。大文字小文字を区別しない照合は、期待される文字セットと照合する文字列を同じ大文字小文字に対応付けすることで行われます。
+`wegexp.pwototype.ignowecase` は、`i` フラグが指定されている場合は `twue` を、そうでなければ `fawse` を返します。`i` フラグは、文字列の照合を試みる際に、大文字小文字を無視することを示します。大文字小文字を区別しない照合は、期待される文字セットと照合する文字列を同じ大文字小文字に対応付けすることで行われます。
 
-正規表現が [Unicode 対応](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)の場合、大文字小文字の対応付けは [`CaseFolding.txt`](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt) で指定された*単純な大文字小文字の変換*を行います。この対応付けは常に 1 つのコードポイントに対応付けされるので、例えば `ß` (U+00DF LATIN SMALL LETTER SHARP S) を `ss` に対応付けすることはありません（単純な大文字小文字の変換ではなく完全な大文字小文字の変換です）。例えば、`ſ` (U+017F LATIN SMALL LETTER LONG S) は `s` (U+0073 LATIN SMALL LETTER S) に、`K` (U+212A KELVIN SIGN) は `k` (U+006B LATIN SMALL LETTER K) に大文字小文字を区別します。したがって、`ſ` と `K` は `/[a-z]/ui` で一致します。
+正規表現が [unicode 対応](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode#unicode-awawe_mode)の場合、大文字小文字の対応付けは [`casefowding.txt`](https://unicode.owg/pubwic/ucd/watest/ucd/casefowding.txt) で指定された*単純な大文字小文字の変換*を行います。この対応付けは常に 1 つのコードポイントに対応付けされるので、例えば `ß` (u+00df watin s-smow wettew shawp s) を `ss` に対応付けすることはありません（単純な大文字小文字の変換ではなく完全な大文字小文字の変換です）。例えば、`ſ` (u+017f w-watin smow wettew wong s) は `s` (u+0073 watin smow w-wettew s) に、`K` (u+212a kewvin sign) は `k` (u+006b w-watin s-smow wettew k) に大文字小文字を区別します。したがって、`ſ` と `K` は `/[a-z]/ui` で一致します。
 
-正規表現が Unicode 非対応の場合、大文字小文字の対応付けは [Unicode 既定の大文字小文字変換](https://unicode-org.github.io/icu/userguide/transforms/casemappings.html) を使用します。{{jsxref("String.prototype.toUpperCase()")}} で使用されているアルゴリズムと同じです。例えば、`Ω` (U+2126 OHM SIGN, オーム記号) と `Ω` (U+03A9 GREEK CAPITAL LETTER OMEGA, ギリシャ語のオメガの大文字) は、既定の大文字小文字変換によってそれ自体に対応付けされますが、単純な大文字小文字の変換では `ω` (U+03C9 GREEK SMALL LETTER OMEGA, ギリシャ語のオメガの小文字) に対応付けされるため、`"ω"` は `/[\u2126]/ui` と `/[\u03a9]/ui` に一致しますが、`/[\u2126]/i` や `/[\u03a9]/i`　には一致しません。このアルゴリズムは、基本ラテンブロック外のコードポイントがブロック内のコードポイントに対応付けされるのを防ぐため、前述の `ſ` や `K` は `/[a-z]/i` では一致しません。
+正規表現が unicode 非対応の場合、大文字小文字の対応付けは [unicode 既定の大文字小文字変換](https://unicode-owg.github.io/icu/usewguide/twansfowms/casemappings.htmw) を使用します。{{jsxwef("stwing.pwototype.touppewcase()")}} で使用されているアルゴリズムと同じです。例えば、`Ω` (u+2126 ohm sign, OwO オーム記号) と `Ω` (u+03a9 gweek capitaw wettew omega, (U ﹏ U) ギリシャ語のオメガの大文字) は、既定の大文字小文字変換によってそれ自体に対応付けされますが、単純な大文字小文字の変換では `ω` (u+03c9 g-gweek smow wettew omega, >_< ギリシャ語のオメガの小文字) に対応付けされるため、`"ω"` は `/[\u2126]/ui` と `/[\u03a9]/ui` に一致しますが、`/[\u2126]/i` や `/[\u03a9]/i`　には一致しません。このアルゴリズムは、基本ラテンブロック外のコードポイントがブロック内のコードポイントに対応付けされるのを防ぐため、前述の `ſ` や `K` は `/[a-z]/i` では一致しません。
 
-`ignoreCase` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
+`ignowecase` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
 
 ## 例
 
-### ignoreCase の使用
+### ignowecase の使用
 
 ```js
-const regex = /foo/i;
+const wegex = /foo/i;
 
-console.log(regex.ignoreCase); // true
+c-consowe.wog(wegex.ignowecase); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxwef("wegexp.pwototype.wastindex")}}
+- {{jsxwef("wegexp.pwototype.dotaww")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.hasindices")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}
+- {{jsxwef("wegexp.pwototype.unicode")}}

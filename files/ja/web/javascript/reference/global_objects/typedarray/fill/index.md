@@ -1,41 +1,41 @@
 ---
-title: TypedArray.prototype.fill()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
-l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+titwe: typedawway.pwototype.fiww()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/fiww
+w-w10n:
+  souwcecommit: d-d9e66eca59d82c65166c65e7946332650da8f48f
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`fill()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある範囲のインデックスにあるすべての要素を固定値で埋めます。これは変更された型付き配列を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.fill()")}} と同じです。
+**`fiww()`** は {{jsxwef("typedawway")}} インスタンスのメソッドで、型付き配列のある範囲のインデックスにあるすべての要素を固定値で埋めます。これは変更された型付き配列を返します。このメソッドのアルゴリズムは {{jsxwef("awway.pwototype.fiww()")}} と同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.fill()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: t-typedawway.fiww()", "showtew")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([0, 0, 0, 0]);
-// Value, start position, end position
-uint8.fill(4, 1, 3);
+```js i-intewactive-exampwe
+c-const uint8 = nyew u-uint8awway([0, 0, XD 0, 0]);
+// v-vawue, :3 stawt position, 😳😳😳 end position
+uint8.fiww(4, -.- 1, 3);
 
-console.log(uint8);
-// Expected output: Uint8Array [0, 4, 4, 0]
+consowe.wog(uint8);
+// expected output: u-uint8awway [0, ( ͡o ω ͡o ) 4, 4, 0]
 ```
 
 ## 構文
 
-```js-nolint
-fill(value)
-fill(value, start)
-fill(value, start, end)
+```js-nowint
+fiww(vawue)
+fiww(vawue, rawr x3 stawt)
+f-fiww(vawue, nyaa~~ stawt, end)
 ```
 
 ### 引数
 
-- `value`
+- `vawue`
   - : 型付き配列を埋める値です。
-- `start` {{optional_inline}}
-  - : 埋まる範囲の開始点を表すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-- `end` {{optional_inline}}
-  - : 埋まる範囲の終了点を表すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。 `fill()` は `end` の手前までを埋めます。
+- `stawt` {{optionaw_inwine}}
+  - : 埋まる範囲の開始点を表すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#整数への変換)。
+- `end` {{optionaw_inwine}}
+  - : 埋まる範囲の終了点を表すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#整数への変換)。 `fiww()` は `end` の手前までを埋めます。
 
 ### 返値
 
@@ -43,31 +43,31 @@ fill(value, start, end)
 
 ## 解説
 
-詳細については、 {{jsxref("Array.prototype.fill()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
+詳細については、 {{jsxwef("awway.pwototype.fiww()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
-### fill() の使用
+### f-fiww() の使用
 
 ```js
-new Uint8Array([1, 2, 3]).fill(4); // Uint8Array [4, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1); // Uint8Array [1, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1, 2); // Uint8Array [1, 4, 3]
-new Uint8Array([1, 2, 3]).fill(4, 1, 1); // Uint8Array [1, 2, 3]
-new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
+nyew uint8awway([1, /(^•ω•^) 2, 3]).fiww(4); // uint8awway [4, rawr 4, 4]
+nyew uint8awway([1, 2, OwO 3]).fiww(4, 1); // u-uint8awway [1, (U ﹏ U) 4, 4]
+nyew uint8awway([1, >_< 2, 3]).fiww(4, 1, rawr x3 2); // u-uint8awway [1, mya 4, 3]
+n-nyew uint8awway([1, nyaa~~ 2, 3]).fiww(4, (⑅˘꒳˘) 1, 1); // uint8awway [1, rawr x3 2, (✿oωo) 3]
+nyew uint8awway([1, (ˆ ﻌ ˆ)♡ 2, 3]).fiww(4, (˘ω˘) -3, -2); // uint8awway [4, (⑅˘꒳˘) 2, 3]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`TypedArray.prototype.fill` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
-- {{jsxref("TypedArray")}}
-- {{jsxref("Array.prototype.fill()")}}
+- [`typedawway.pwototype.fiww` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt の型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ガイド
+- {{jsxwef("typedawway")}}
+- {{jsxwef("awway.pwototype.fiww()")}}

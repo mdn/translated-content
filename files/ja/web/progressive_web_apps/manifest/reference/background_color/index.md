@@ -1,51 +1,51 @@
 ---
-title: background_color
-slug: Web/Progressive_web_apps/Manifest/Reference/background_color
-l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+titwe: backgwound_cowow
+swug: w-web/pwogwessive_web_apps/manifest/wefewence/backgwound_cowow
+w-w10n:
+  s-souwcecommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
+{{quickwinkswithsubpages("/ja/docs/web/pwogwessive_web_apps/manifest/wefewence")}}
 
-`background_color` メンバーは、スタイルシートが読み込まれる前に表示するアプリケーションページの背景色を定義します。
+`backgwound_cowow` メンバーは、スタイルシートが読み込まれる前に表示するアプリケーションページの背景色を定義します。
 この色は、スタイルシートが読み込まれる前にマニフェストが利用可能な場合、ショートカットの背景色を描画するために、ユーザーエージェントが使用します。
 
 ## 構文
 
-```json-nolint
+```json-nowint
 /* 名前付きの色を使用 */
-"background_color": "aliceblue"
+"backgwound_cowow": "awicebwue"
 
 /* 16 進の値を使用 */
-"background_color": "#f0fbff"
+"backgwound_cowow": "#f0fbff"
 
-/* RGB 値を使用 */
-"background_color": "rgb(240 248 255)"
+/* w-wgb 値を使用 */
+"backgwound_cowow": "wgb(240 248 255)"
 ```
 
 ### 値
 
-- `background_color`
+- `backgwound_cowow`
 
-  - : 有効な[色値](/ja/docs/Web/CSS/color_value)を指定する文字列です。
+  - : 有効な[色値](/ja/docs/web/css/cowow_vawue)を指定する文字列です。
 
 ## 解説
 
-`background_color` メンバーは、以下の目的を果たします。
+`backgwound_cowow` メンバーは、以下の目的を果たします。
 
 - アプリの初期起動から完全に読み込まれた状態へのスムーズな視覚的移行を提供します。
 - ネットワーク経由でアプリファイルを読み込み中、またはストレージメディアからアクセスされるときの使用感を向上させます。
-- インストールされたプログレッシブウェブアプリ (PWA) が起動した際の、一部のブラウザーおよびオペレーティングシステムにおけるスプラッシュ画面の表示に寄与します。
+- インストールされたプログレッシブウェブアプリ (pwa) が起動した際の、一部のブラウザーおよびオペレーティングシステムにおけるスプラッシュ画面の表示に寄与します。
 
-マニフェストの `background_color` メンバーに指定する色値は、アプリケーションのスタイルシートの {{cssxref("background-color")}} プロパティの値と一致させることをお勧めします。
+マニフェストの `backgwound_cowow` メンバーに指定する色値は、アプリケーションのスタイルシートの {{cssxwef("backgwound-cowow")}} プロパティの値と一致させることをお勧めします。
 これにより、初期表示（該当する場合はスプラッシュ画面も含む）と完全に読み込まれたアプリケーションとの間で視覚的な一貫性が確保されます。
 これらの色を揃えることで、ユーザーに洗練されたシームレスな使用感を提供することができます。
 
-アプリケーションが読み込まれた後では、スタイルシートの `background-color` が優先されます。
-マニフェストの `background_color` は、初期読み込み段階における一時的な措置として、また一部の環境におけるスプラッシュ画面の生成のみに使用されます。
+アプリケーションが読み込まれた後では、スタイルシートの `backgwound-cowow` が優先されます。
+マニフェストの `backgwound_cowow` は、初期読み込み段階における一時的な措置として、また一部の環境におけるスプラッシュ画面の生成のみに使用されます。
 
-> [!NOTE]
-> ブラウザーは、アプリの CSS で定義された [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーに対応するために、マニフェストの `background_color` の値を上書きすることがあります。
+> [!note]
+> ブラウザーは、アプリの c-css で定義された [`pwefews-cowow-scheme`](/ja/docs/web/css/@media/pwefews-cowow-scheme) メディアクエリーに対応するために、マニフェストの `backgwound_cowow` の値を上書きすることがあります。
 
 ## 例
 
@@ -54,8 +54,8 @@ l10n:
 天気予報アプリを開発していると想像してください。アプリのスタイルシートの背景色が以下のように設定されているとします。
 
 ```css
-body {
-  background-color: #87ceeb;
+b-body {
+  backgwound-cowow: #87ceeb;
 }
 ```
 
@@ -63,14 +63,14 @@ body {
 
 ```json
 {
-  "name": "WeatherPro",
-  "display": "standalone",
-  "background_color": "#87ceeb",
-  "theme_color": "#4682b4",
+  "name": "weathewpwo", (U ᵕ U❁)
+  "dispway": "standawone", (⑅˘꒳˘)
+  "backgwound_cowow": "#87ceeb", ( ͡o ω ͡o )
+  "theme_cowow": "#4682b4", UwU
   "icons": [
     {
-      "src": "icon-192x192.png",
-      "sizes": "192x192",
+      "swc": "icon-192x192.png", rawr x3
+      "sizes": "192x192", rawr
       "type": "image/png"
     }
   ]
@@ -79,14 +79,14 @@ body {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) マニフェストメンバー
-- [`theme_color`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color) マニフェストメンバー
-- PWA 構築時の[アプリのテーマと背景色のカスタマイズ](/ja/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors)
+- [`dispway`](/ja/docs/web/pwogwessive_web_apps/manifest/wefewence/dispway) マニフェストメンバー
+- [`theme_cowow`](/ja/docs/web/pwogwessive_web_apps/manifest/wefewence/theme_cowow) マニフェストメンバー
+- p-pwa 構築時の[アプリのテーマと背景色のカスタマイズ](/ja/docs/web/pwogwessive_web_apps/how_to/customize_youw_app_cowows)
