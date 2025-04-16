@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-HTTP 标头的数组。每个标头都以包含两个属性 `name` 和 `value`（或 `binaryValue`）的对象表示。
+HTTP 标头的数组。每个标头都以包含两个属性 `name` 和 `value`（或 `binaryValue`）的对象的形式表示。
 
 ## 类型
 
