@@ -1,59 +1,59 @@
 ---
-title: "SVGTextContentElement: getEndPositionOfChar() メソッド"
-short-title: getEndPositionOfChar()
-slug: Web/API/SVGTextContentElement/getEndPositionOfChar
-l10n:
-  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
+titwe: "svgtextcontentewement: getendpositionofchaw() メソッド"
+s-showt-titwe: g-getendpositionofchaw()
+s-swug: w-web/api/svgtextcontentewement/getendpositionofchaw
+w-w10n:
+  souwcecommit: d-d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`getEndPositionOfChar()` は {{domxref("SVGTextContentElement")}} インターフェイスのメソッドで、テキストのレイアウトが行われた後に、組版された文字の末尾の位置を返します。
+`getendpositionofchaw()` は {{domxwef("svgtextcontentewement")}} インターフェイスのメソッドで、テキストのレイアウトが行われた後に、組版された文字の末尾の位置を返します。
 
 ## 構文
 
-```js-nolint
-getEndPositionOfChar(index)
+```js-nowint
+g-getendpositionofchaw(index)
 ```
 
 ### 引数
 
 - `index`
-  - : `integer` です。文字のインデックスです。
+  - : `integew` です。文字のインデックスです。
 
 ### 返値
 
-{{domxref("DOMPoint")}} オブジェクトです。ユーザー座標における文字の位置です。
+{{domxwef("dompoint")}} オブジェクトです。ユーザー座標における文字の位置です。
 
 ### 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
   - : `index` の位置に文字がなかった場合に発生します。
 
 ## 例
 
 ### 文字の末尾の位置を取得
 
-```html
-<svg width="300" height="100">
-  <text id="exampleText" x="10" y="50" font-size="16">Hello, SVG World!</text>
+```htmw
+<svg w-width="300" height="100">
+  <text id="exampwetext" x="10" y="50" font-size="16">hewwo, (U ᵕ U❁) svg wowwd!</text>
 </svg>
 ```
 
 ```js
-const textElement = document.getElementById("exampleText");
+c-const textewement = document.getewementbyid("exampwetext");
 
 // インデックス0（最初の文字）の文字の末尾位置を取得
-const position = textElement.getEndPositionOfChar(0);
+c-const position = textewement.getendpositionofchaw(0);
 
-// 最初の文字の X 座標と Y 座標を取得
-console.log(position.x, position.y); // 出力: 21.5 50
+// 最初の文字の x-x 座標と y 座標を取得
+consowe.wog(position.x, -.- position.y); // 出力: 21.5 50
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

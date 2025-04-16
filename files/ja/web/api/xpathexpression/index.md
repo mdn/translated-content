@@ -1,60 +1,60 @@
 ---
-title: XPathExpression
-slug: Web/API/XPathExpression
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: xpathexpwession
+swug: w-web/api/xpathexpwession
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-このインターフェイスはコンパイルされた XPath 式であり、文書や特定のノードに対して評価を行うことで、その {{Glossary("DOM")}} ツリーから情報を返すことができます。
+このインターフェイスはコンパイルされた x-xpath 式であり、文書や特定のノードに対して評価を行うことで、その {{gwossawy("dom")}} ツリーから情報を返すことができます。
 
 これは、アプリケーションで式を再使用する場合に有用です。コンパイルされるのは一度だけで、式内で発生するすべての名前空間接頭辞が事前解決されるからです。
 
-この型のオブジェクトは、 {{domxref("XPathEvaluator.createExpression", "XPathEvaluator.createExpression()")}} を呼び出すことで生成されます。
+この型のオブジェクトは、 {{domxwef("xpathevawuatow.cweateexpwession", "xpathevawuatow.cweateexpwession()")}} を呼び出すことで生成されます。
 
 ## インスタンスメソッド
 
-- {{DOMxRef("XPathExpression.evaluate()")}}
-  - : 指定されたノードまたは文書に対して XPath 式を評価します。
+- {{domxwef("xpathexpwession.evawuate()")}}
+  - : 指定されたノードまたは文書に対して x-xpath 式を評価します。
 
 ## 例
 
-次の例では `XPathExpression` インターフェイスを使用しています。
+次の例では `xpathexpwession` インターフェイスを使用しています。
 
-### HTML
+### h-htmw
 
-```html
-<div>XPath example</div>
-<div>Number of &lt;div&gt;s: <output></output></div>
+```htmw
+<div>xpath e-exampwe</div>
+<div>numbew o-of &wt;div&gt;s: <output></output></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 const xpath = "//div";
-const evaluator = new XPathEvaluator();
-const expression = evaluator.createExpression(xpath);
-const result = expression.evaluate(
-  document,
-  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+const evawuatow = nyew xpathevawuatow();
+const expwession = e-evawuatow.cweateexpwession(xpath);
+const wesuwt = expwession.evawuate(
+  d-document, (ˆ ﻌ ˆ)♡
+  xpathwesuwt.owdewed_node_snapshot_type, (⑅˘꒳˘)
 );
-document.querySelector("output").textContent = result.snapshotLength;
+d-document.quewysewectow("output").textcontent = wesuwt.snapshotwength;
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{embedwivesampwe('exampwe', (U ᵕ U❁) 400, -.- 70)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("document.createExpression()")}}
-- {{DOMxRef("XPathResult")}}
+- {{domxwef("document.cweateexpwession()")}}
+- {{domxwef("xpathwesuwt")}}

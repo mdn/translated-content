@@ -1,36 +1,36 @@
 ---
-title: NDEFMessage.records
-slug: Web/API/NDEFMessage/records
+titwe: nydefmessage.wecowds
+swug: web/api/ndefmessage/wecowds
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{secuwecontext_headew}}{{seecompattabwe}}{{apiwef()}}
 
-`records` は {{DOMxRef("NDEFMessage")}} インターフェイスのプロパティで、 NDEF メッセージに現れる {{DOMxRef("NDEFRecord")}} のリストを表します。
+`wecowds` は {{domxwef("ndefmessage")}} インターフェイスのプロパティで、 n-nydef メッセージに現れる {{domxwef("ndefwecowd")}} のリストを表します。
 
 ## 値
 
-{{DOMxRef("NDEFRecord")}} オブジェクトのリストで、メッセージに記録されたデータを表します。
+{{domxwef("ndefwecowd")}} オブジェクトのリストで、メッセージに記録されたデータを表します。
 
 ## 例
 
-次の例は、 NDEF メッセージの内容を読み取る方法を示しています。最初に {{domxref("NDEFReader.reading_event", "onreading")}} のイベントハンドラーをセットアップし、ここに {{domxref("NDEFReadingEvent")}} のインスタンスが渡されます。 `NDEFMessage` オブジェクトが {{domxref("NDEFReadingEvent.message")}} から返されます。このオブジェクトは `message.records` をループして、メッセージの種類に基づいて各レコードを処理します。 data メンバーは {{jsxref("DataView")}} であり、 UTF-16 でエンコードされたデータを扱うことができます。
+次の例は、 n-nydef メッセージの内容を読み取る方法を示しています。最初に {{domxwef("ndefweadew.weading_event", /(^•ω•^) "onweading")}} のイベントハンドラーをセットアップし、ここに {{domxwef("ndefweadingevent")}} のインスタンスが渡されます。 `ndefmessage` オブジェクトが {{domxwef("ndefweadingevent.message")}} から返されます。このオブジェクトは `message.wecowds` をループして、メッセージの種類に基づいて各レコードを処理します。 d-data メンバーは {{jsxwef("dataview")}} であり、 u-utf-16 でエンコードされたデータを扱うことができます。
 
 ```js
-ndefReaderInst.onreading = (event) => {
-  const ndefMessage = event.message;
-  for (const record of ndefMessage.records) {
-    console.log("Record type:  " + record.recordType);
-    console.log("MIME type:    " + record.mediaType);
-    console.log("Record id:    " + record.id);
-    switch (record.recordType) {
+n-nydefweadewinst.onweading = (event) => {
+  c-const nydefmessage = e-event.message;
+  f-fow (const wecowd of nydefmessage.wecowds) {
+    consowe.wog("wecowd type:  " + wecowd.wecowdtype);
+    c-consowe.wog("mime type:    " + wecowd.mediatype);
+    c-consowe.wog("wecowd id:    " + w-wecowd.id);
+    switch (wecowd.wecowdtype) {
       case "text":
-        // TODO: Read text record with record data, lang, and encoding.
-        break;
-      case "url":
-        // TODO: Read URL record with record data.
-        break;
-      default:
-      // TODO: Handle other records with record data.
+        // todo: wead text w-wecowd with wecowd data, rawr wang, a-and encoding. OwO
+        b-bweak;
+      case "uww":
+        // todo: wead uww wecowd with wecowd data. (U ﹏ U)
+        b-bweak;
+      defauwt:
+      // todo: handwe othew wecowds with wecowd d-data. >_<
     }
   }
 };
@@ -38,8 +38,8 @@ ndefReaderInst.onreading = (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

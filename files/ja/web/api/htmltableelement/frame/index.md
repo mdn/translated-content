@@ -1,14 +1,14 @@
 ---
-title: "HTMLTableElement: frame プロパティ"
-short-title: frame
-slug: Web/API/HTMLTableElement/frame
-l10n:
-  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
+titwe: "htmwtabweewement: fwame プロパティ"
+s-showt-titwe: f-fwame
+swug: web/api/htmwtabweewement/fwame
+w-w10n:
+  s-souwcecommit: b-b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw dom")}} {{depwecated_headew}}
 
-{{domxref("HTMLTableElement")}} インターフェイスの **`frame`** プロパティは、文字列で表の外部の境界のうちどれを描画するかを示します。
+{{domxwef("htmwtabweewement")}} インターフェイスの **`fwame`** プロパティは、文字列で表の外部の境界のうちどれを描画するかを示します。
 
 ## 値
 
@@ -18,34 +18,34 @@ l10n:
   - : どの辺も描画しません。これが既定値です。
 - `"above"`
   - : 上端の辺
-- `"below"`
+- `"bewow"`
   - : 下端の辺
 - `"hsides"`
   - : 上下の辺のみ
 - `"vsides"`
   - : 左右の辺のみ
-- `"lhs"`
+- `"whs"`
   - : 左側の辺のみ
-- `"rhs"`
+- `"whs"`
   - : 右側の辺のみ
 - `"box"`
   - : 4 つすべての辺
-- `"border"`
+- `"bowdew"`
   - : 4 つすべての辺
 
 ## 例
 
 ```js
-// TableA の枠を 'border' に設定
-const t = document.getElementById("TableA");
-t.frame = "border";
-t.border = "2px";
+// t-tabwea の枠を 'bowdew' に設定
+c-const t = d-document.getewementbyid("tabwea");
+t.fwame = "bowdew";
+t.bowdew = "2px";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

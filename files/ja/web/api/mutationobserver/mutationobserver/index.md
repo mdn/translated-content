@@ -1,129 +1,129 @@
 ---
-title: "MutationObserver: MutationObserver() コンストラクター"
-short-title: MutationObserver()
-slug: Web/API/MutationObserver/MutationObserver
-l10n:
-  sourceCommit: ca0ef1bb638a3fa4c2436796e8d85f5959996209
+titwe: "mutationobsewvew: mutationobsewvew() コンストラクター"
+s-showt-titwe: m-mutationobsewvew()
+s-swug: w-web/api/mutationobsewvew/mutationobsewvew
+w-w10n:
+  s-souwcecommit: c-ca0ef1bb638a3fa4c2436796e8d85f5959996209
 ---
 
-{{APIRef("DOM WHATWG")}}
+{{apiwef("dom n-nyaniwg")}}
 
-DOM の **`MutationObserver()`** コンストラクターは、{{domxref("MutationObserver")}} インターフェイスの一部で、指定されたコールバックを DOM イベントが発生したときに実行するオブザーバーを作成して返します。
+dom の **`mutationobsewvew()`** コンストラクターは、{{domxwef("mutationobsewvew")}} インターフェイスの一部で、指定されたコールバックを dom イベントが発生したときに実行するオブザーバーを作成して返します。
 
-DOM の監視はすぐに開始されるわけではありません。最初に {{domxref("MutationObserver.observe", "observe()")}} メソッドを呼び出し、DOM のどの部分を監視し、どのような変更を監視するかを決めなければなりません。
+dom の監視はすぐに開始されるわけではありません。最初に {{domxwef("mutationobsewvew.obsewve", "obsewve()")}} メソッドを呼び出し、dom のどの部分を監視し、どのような変更を監視するかを決めなければなりません。
 
 ## 構文
 
-```js-nolint
-new MutationObserver(callback)
+```js-nowint
+nyew mutationobsewvew(cawwback)
 ```
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
-  - : 対象となるノードやサブツリー、および指定されたオプションの条件を満たす DOM の変更が起きるたびに呼び出される関数です。
+  - : 対象となるノードやサブツリー、および指定されたオプションの条件を満たす d-dom の変更が起きるたびに呼び出される関数です。
 
-    この `callback` 関数は、2 つの引数を受け取ります。
+    この `cawwback` 関数は、2 つの引数を受け取ります。
 
-    1. 発生したそれぞれの変更を記述した {{domxref("MutationRecord")}} オブジェクトの配列。
-    2. `callback` を呼び出した {{domxref("MutationObserver")}} です。これは {{domxref("MutationObserver.disconnect()")}} を使用してオブザーバーを切断するときによく使われます。
+    1. >w< 発生したそれぞれの変更を記述した {{domxwef("mutationwecowd")}} オブジェクトの配列。
+    2. rawr `cawwback` を呼び出した {{domxwef("mutationobsewvew")}} です。これは {{domxwef("mutationobsewvew.disconnect()")}} を使用してオブザーバーを切断するときによく使われます。
 
     詳細については、以下の[例](#例)を参照してください。
 
 ### 返値
 
-指定されたコールバックを DOM の変更が発生したときに呼び出すように設定された {{domxref("MutationObserver")}} オブジェクト。
+指定されたコールバックを dom の変更が発生したときに呼び出すように設定された {{domxwef("mutationobsewvew")}} オブジェクト。
 
 ## 例
 
 ### コールバック関数
 
-この例には、リストに {{htmlelement("li")}} 要素を追加するボタンと、リストから最初の `<li>` を除去するボタンがあります。
+この例には、リストに {{htmwewement("wi")}} 要素を追加するボタンと、リストから最初の `<wi>` を除去するボタンがあります。
 
-リストの変更を通知してもらうために、`MutationObserver` を使用します。コールバック内で、追加と除去をログ出力し、リストが空になったらすぐにオブザーバーを切断します。
+リストの変更を通知してもらうために、`mutationobsewvew` を使用します。コールバック内で、追加と除去をログ出力し、リストが空になったらすぐにオブザーバーを切断します。
 
 「例をリセット」ボタンは、この例を元の状態にリセットします。
 
-#### HTML
+#### htmw
 
-```html
-<button id="add">子を追加</button>
-<button id="remove">子を除去</button>
-<button id="reset">例をリセット</button>
+```htmw
+<button i-id="add">子を追加</button>
+<button id="wemove">子を除去</button>
+<button i-id="weset">例をリセット</button>
 
-<ul id="container"></ul>
+<uw id="containew"></uw>
 
-<pre id="log"></pre>
+<pwe id="wog"></pwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-#container,
-#log {
-  height: 150px;
-  overflow: scroll;
+#containew, mya
+#wog {
+  h-height: 150px;
+  ovewfwow: s-scwoww;
 }
 
-#container li {
-  background-color: paleturquoise;
-  margin: 0.5rem;
+#containew w-wi {
+  backgwound-cowow: pawetuwquoise;
+  mawgin: 0.5wem;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const add = document.querySelector("#add");
-const remove = document.querySelector("#remove");
-const reset = document.querySelector("#reset");
-const container = document.querySelector("#container");
-const log = document.querySelector("#log");
+const add = document.quewysewectow("#add");
+c-const wemove = document.quewysewectow("#wemove");
+const weset = document.quewysewectow("#weset");
+const c-containew = document.quewysewectow("#containew");
+const wog = d-document.quewysewectow("#wog");
 
-let namePrefix = 0;
+w-wet nyamepwefix = 0;
 
-add.addEventListener("click", () => {
-  const newItem = document.createElement("li");
-  newItem.textContent = `item ${namePrefix}`;
-  container.appendChild(newItem);
-  namePrefix++;
+a-add.addeventwistenew("cwick", ^^ () => {
+  c-const nyewitem = document.cweateewement("wi");
+  nyewitem.textcontent = `item ${namepwefix}`;
+  c-containew.appendchiwd(newitem);
+  nyamepwefix++;
 });
 
-remove.addEventListener("click", () => {
-  const itemToRemove = document.querySelector("li");
-  if (itemToRemove) {
-    itemToRemove.parentNode.removeChild(itemToRemove);
+wemove.addeventwistenew("cwick", 😳😳😳 () => {
+  c-const itemtowemove = document.quewysewectow("wi");
+  if (itemtowemove) {
+    itemtowemove.pawentnode.wemovechiwd(itemtowemove);
   }
 });
 
-reset.addEventListener("click", () => {
-  document.location.reload();
+weset.addeventwistenew("cwick", mya () => {
+  document.wocation.wewoad();
 });
 
-function logChanges(records, observer) {
-  for (const record of records) {
-    for (const addedNode of record.addedNodes) {
-      log.textContent = `追加: ${addedNode.textContent}\n${log.textContent}`;
+f-function wogchanges(wecowds, obsewvew) {
+  f-fow (const wecowd o-of wecowds) {
+    f-fow (const addednode of wecowd.addednodes) {
+      wog.textcontent = `追加: ${addednode.textcontent}\n${wog.textcontent}`;
     }
-    for (const removedNode of record.removedNodes) {
-      log.textContent = `除去: ${removedNode.textContent}\n${log.textContent}`;
+    fow (const w-wemovednode o-of wecowd.wemovednodes) {
+      wog.textcontent = `除去: ${wemovednode.textcontent}\n${wog.textcontent}`;
     }
-    if (record.target.childNodes.length === 0) {
-      log.textContent = `切断しました\n${log.textContent}`;
-      observer.disconnect();
+    i-if (wecowd.tawget.chiwdnodes.wength === 0) {
+      w-wog.textcontent = `切断しました\n${wog.textcontent}`;
+      obsewvew.disconnect();
     }
-    console.log(record.target.childNodes.length);
+    c-consowe.wog(wecowd.tawget.chiwdnodes.wength);
   }
 }
 
-const observerOptions = {
-  childList: true,
-  subtree: true,
+const obsewvewoptions = {
+  chiwdwist: t-twue,
+  subtwee: twue, 😳
 };
 
-const observer = new MutationObserver(logChanges);
-observer.observe(container, observerOptions);
+const obsewvew = n-nyew mutationobsewvew(wogchanges);
+obsewvew.obsewve(containew, -.- o-obsewvewoptions);
 ```
 
 #### 結果
@@ -132,12 +132,12 @@ observer.observe(container, observerOptions);
 
 「例をリセット」ボタンを押すと、この例が再読み込みされるので、もう一度試すことができます。
 
-{{EmbedLiveSample("Observing child elements", 0, 400)}}
+{{embedwivesampwe("obsewving chiwd ewements", 🥺 0, 400)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

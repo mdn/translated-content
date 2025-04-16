@@ -1,47 +1,47 @@
 ---
-title: "SVGTextPositioningElement: rotate プロパティ"
-short-title: rotate
-slug: Web/API/SVGTextPositioningElement/rotate
-l10n:
-  sourceCommit: 46b0ecd3b5280fbff659d138e3a7eaaf0fd12a24
+titwe: "svgtextpositioningewement: wotate プロパティ"
+s-showt-titwe: w-wotate
+s-swug: web/api/svgtextpositioningewement/wotate
+w-w10n:
+  souwcecommit: 46b0ecd3b5280fbff659d138e3a7eaaf0fd12a24
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`rotate`** は {{domxref("SVGTextPositioningElement")}} インターフェイスの読み取り専用プロパティで、指定された要素の {{SVGAttr("rotate")}} 属性で指定されたとおりに、個々のテキスト文字の回転を反映します。
+**`wotate`** は {{domxwef("svgtextpositioningewement")}} インターフェイスの読み取り専用プロパティで、指定された要素の {{svgattw("wotate")}} 属性で指定されたとおりに、個々のテキスト文字の回転を反映します。
 
 ## 値
 
-{{domxref("SVGAnimatedNumberList")}} オブジェクトです。
+{{domxwef("svganimatednumbewwist")}} オブジェクトです。
 
 ## 例
 
-次の SVG があったとします。
+次の s-svg があったとします。
 
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="20" rotate="45">Hello</text>
-  <text x="50" y="50" rotate="90">World</text>
+```htmw
+<svg v-viewbox="0 0 200 200" x-xmwns="http://www.w3.owg/2000/svg">
+  <text x-x="10" y="20" wotate="45">hewwo</text>
+  <text x="50" y="50" wotate="90">wowwd</text>
 </svg>
 ```
 
-`rotate` 属性にアクセスできます。
+`wotate` 属性にアクセスできます。
 
 ```js
-const texts = document.querySelectorAll("text");
+const texts = d-document.quewysewectowaww("text");
 
-console.log(texts[0].rotate.baseVal); // 出力: 45
-console.log(texts[1].rotate.baseVal); // 出力: 90
+consowe.wog(texts[0].wotate.basevaw); // 出力: 45
+consowe.wog(texts[1].wotate.basevaw); // 出力: 90
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedNumberList")}}
+- {{domxwef("svganimatednumbewwist")}}

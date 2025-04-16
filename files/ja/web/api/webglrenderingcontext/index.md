@@ -1,314 +1,314 @@
 ---
-title: WebGLRenderingContext
-slug: Web/API/WebGLRenderingContext
-l10n:
-  sourceCommit: d65814793b7c76e11cb03ed60267d0d447dc0a64
+titwe: webgwwendewingcontext
+swug: web/api/webgwwendewingcontext
+w-w10n:
+  souwcecommit: d-d65814793b7c76e11cb03ed60267d0d447dc0a64
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext`** インターフェイスは、 {{HTMLElement("canvas")}} 要素の描画サーフェスのための OpenGL ES 2.0 の描画コンテキストを提供します。
+**`webgwwendewingcontext`** インターフェイスは、 {{htmwewement("canvas")}} 要素の描画サーフェスのための o-opengw e-es 2.0 の描画コンテキストを提供します。
 
-このインターフェイスを取得するためには、 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} を `<canvas>` 要素に対して、 "webgl" の引数を与えて呼び出します。
+このインターフェイスを取得するためには、 {{domxwef("htmwcanvasewement.getcontext()", rawr x3 "getcontext()")}} を `<canvas>` 要素に対して、 "webgw" の引数を与えて呼び出します。
 
 ```js
-const canvas = document.getElementById("myCanvas");
-const gl = canvas.getContext("webgl");
+c-const canvas = d-document.getewementbyid("mycanvas");
+c-const g-gw = canvas.getcontext("webgw");
 ```
 
-キャンバスの WebGL 描画コンテキストを取得すると、そのキャンバス内で描画を行うことができます。 [WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)には、 WebGL を使い始めるための詳細な情報、例、リソースが掲載されています。
+キャンバスの webgw 描画コンテキストを取得すると、そのキャンバス内で描画を行うことができます。 [webgw チュートリアル](/ja/docs/web/api/webgw_api/tutowiaw)には、 webgw を使い始めるための詳細な情報、例、リソースが掲載されています。
 
-WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2RenderingContext")}}を参照してください。これは、 OpenGL ES 3.0 グラフィックスの実装にアクセスするためのものです。
+webgw 2.0 のコンテキストが必要な場合は、{{domxwef("webgw2wendewingcontext")}}を参照してください。これは、 opengw es 3.0 グラフィックスの実装にアクセスするためのものです。
 
 ## 定数
 
-[WebGL 定数](/ja/docs/Web/API/WebGL_API/Constants)のページを参照してください。
+[webgw 定数](/ja/docs/web/api/webgw_api/constants)のページを参照してください。
 
-## WebGL コンテキスト
+## w-webgw コンテキスト
 
-以下のプロパティとメソッドは、 WebGL コンテキストを扱うための一般的な情報と機能を提供します。
+以下のプロパティとメソッドは、 webgw コンテキストを扱うための一般的な情報と機能を提供します。
 
-- {{domxref("WebGLRenderingContext.canvas")}}
-  - : 読み取り専用の {{domxref("HTMLCanvasElement")}} への後方参照です。{{HTMLElement("canvas")}} 要素と関連付けられていない場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返すことがあります。
-- {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
+- {{domxwef("webgwwendewingcontext.canvas")}}
+  - : 読み取り専用の {{domxwef("htmwcanvasewement")}} への後方参照です。{{htmwewement("canvas")}} 要素と関連付けられていない場合は [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) を返すことがあります。
+- {{domxwef("webgwwendewingcontext.dwawingbuffewwidth")}}
   - : 読み取り専用の現在の描画バッファーの幅です。コンテキストが関連付けされた canvas 要素の幅と一致しているといえます。
-- {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
-  - : 読み取り専用の現在の描画バッファーの高さです。コンテキストが関連付けされた canvas 要素の高さと一致しているといえます。
-- {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-  - : 実際のコンテキスト引数を含む `WebGLContextAttributes` オブジェクトを返します。コンテキストが失われていた場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返すことがあります。
-- {{domxref("WebGLRenderingContext.isContextLost()")}}
-  - : コンテキストが失われている場合は `true` を返し、そうでない場合は `false` を返します。
-- {{domxref("WebGLRenderingContext.makeXRCompatible()")}}
-  - : コンテキストがユーザーの XR ハードウェアと互換性があることを確認し、必要に応じて新しい設定でコンテキストを再作成して実行します。これは、標準的な 2D プレゼンテーションを使用してアプリケーションを開始し、後で VR または AR モードの使用に移行するために使用することができます。
+- {{domxwef("webgwwendewingcontext.dwawingbuffewheight")}}
+  - : 読み取り専用の現在の描画バッファーの高さです。コンテキストが関連付けされた c-canvas 要素の高さと一致しているといえます。
+- {{domxwef("webgwwendewingcontext.getcontextattwibutes()")}}
+  - : 実際のコンテキスト引数を含む `webgwcontextattwibutes` オブジェクトを返します。コンテキストが失われていた場合は [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) を返すことがあります。
+- {{domxwef("webgwwendewingcontext.iscontextwost()")}}
+  - : コンテキストが失われている場合は `twue` を返し、そうでない場合は `fawse` を返します。
+- {{domxwef("webgwwendewingcontext.makexwcompatibwe()")}}
+  - : コンテキストがユーザーの xw ハードウェアと互換性があることを確認し、必要に応じて新しい設定でコンテキストを再作成して実行します。これは、標準的な 2d プレゼンテーションを使用してアプリケーションを開始し、後で v-vw または aw モードの使用に移行するために使用することができます。
 
 ## 表示とクリッピング
 
-- {{domxref("WebGLRenderingContext.scissor()")}}
+- {{domxwef("webgwwendewingcontext.scissow()")}}
   - : シザーボックスを定義します。
-- {{domxref("WebGLRenderingContext.viewport()")}}
+- {{domxwef("webgwwendewingcontext.viewpowt()")}}
   - : ビューポートを設定します。
 
 ## ステート情報
 
-- {{domxref("WebGLRenderingContext.activeTexture()")}}
+- {{domxwef("webgwwendewingcontext.activetextuwe()")}}
   - : アクティブなテクスチャユニットを選択します。
-- {{domxref("WebGLRenderingContext.blendColor()")}}
+- {{domxwef("webgwwendewingcontext.bwendcowow()")}}
   - : ブレンド元とブレンド先のブレンド係数を設定します。
-- {{domxref("WebGLRenderingContext.blendEquation()")}}
-  - : RGB のブレンド式とアルファのブレンド式をひとつの式に設定します。
-- {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}
-  - : RGB のブレンド式とアルファのブレンド式を分けて式に設定します。
-- {{domxref("WebGLRenderingContext.blendFunc()")}}
+- {{domxwef("webgwwendewingcontext.bwendequation()")}}
+  - : wgb のブレンド式とアルファのブレンド式をひとつの式に設定します。
+- {{domxwef("webgwwendewingcontext.bwendequationsepawate()")}}
+  - : wgb のブレンド式とアルファのブレンド式を分けて式に設定します。
+- {{domxwef("webgwwendewingcontext.bwendfunc()")}}
   - : どの関数がピクセルのブレンド演算に使用されるかを定義します。
-- {{domxref("WebGLRenderingContext.blendFuncSeparate()")}}
-  - : RGB とアルファ成分のピクセル演算を別々にブレンドするために、どの関数を使用するかを定義します。
-- {{domxref("WebGLRenderingContext.clearColor()")}}
+- {{domxwef("webgwwendewingcontext.bwendfuncsepawate()")}}
+  - : w-wgb とアルファ成分のピクセル演算を別々にブレンドするために、どの関数を使用するかを定義します。
+- {{domxwef("webgwwendewingcontext.cweawcowow()")}}
   - : カラーバッファーをクリアする時に使われる色を指定します。
-- {{domxref("WebGLRenderingContext.clearDepth()")}}
+- {{domxwef("webgwwendewingcontext.cweawdepth()")}}
   - : 深度バッファーをクリアする時に使用する深度値を指定します。
-- {{domxref("WebGLRenderingContext.clearStencil()")}}
+- {{domxwef("webgwwendewingcontext.cweawstenciw()")}}
   - : ステンシルバッファーをクリアする時に使用するステンシル値を指定します。
-- {{domxref("WebGLRenderingContext.colorMask()")}}
-  - : ドローイングまたは {{domxref("WebGLFramebuffer")}} へのレンダリングの際に、どの色要素を有効または無効にするかを設定します。
-- {{domxref("WebGLRenderingContext.cullFace()")}}
+- {{domxwef("webgwwendewingcontext.cowowmask()")}}
+  - : ドローイングまたは {{domxwef("webgwfwamebuffew")}} へのレンダリングの際に、どの色要素を有効または無効にするかを設定します。
+- {{domxwef("webgwwendewingcontext.cuwwface()")}}
   - : 前面ポリゴンと後面ポリゴンのいずれか、または両方をカリングするかどうかを指定します。
-- {{domxref("WebGLRenderingContext.depthFunc()")}}
+- {{domxwef("webgwwendewingcontext.depthfunc()")}}
   - : 現在の深度バッファーの深度値と書き込むピクセルの深度値を比較する関数を指定します。
-- {{domxref("WebGLRenderingContext.depthMask()")}}
+- {{domxwef("webgwwendewingcontext.depthmask()")}}
   - : 深度バッファーへの書き込みを有効にするか無効にするかどうかを設定します。
-- {{domxref("WebGLRenderingContext.depthRange()")}}
+- {{domxwef("webgwwendewingcontext.depthwange()")}}
   - : 正規化デバイス座標系からウィンドウまたはビューポート座標系への深度レンジマッピングを指定します。
-- {{domxref("WebGLRenderingContext.disable()")}}
-  - : このコンテキストにおいて、指定した WebGL 機能を無効にします。
-- {{domxref("WebGLRenderingContext.enable()")}}
-  - : このコンテキストにおいて、指定した WebGL 機能を有効にします。
-- {{domxref("WebGLRenderingContext.frontFace()")}}
+- {{domxwef("webgwwendewingcontext.disabwe()")}}
+  - : このコンテキストにおいて、指定した webgw 機能を無効にします。
+- {{domxwef("webgwwendewingcontext.enabwe()")}}
+  - : このコンテキストにおいて、指定した w-webgw 機能を有効にします。
+- {{domxwef("webgwwendewingcontext.fwontface()")}}
   - : 前面ポリゴンなのか後面ポリゴンなのかを周る方向によって指定します。
-- {{domxref("WebGLRenderingContext.getParameter()")}}
+- {{domxwef("webgwwendewingcontext.getpawametew()")}}
   - : 渡された引数名の値を返します。
-- {{domxref("WebGLRenderingContext.getError()")}}
+- {{domxwef("webgwwendewingcontext.getewwow()")}}
   - : エラー情報を返します。
-- {{domxref("WebGLRenderingContext.hint()")}}
+- {{domxwef("webgwwendewingcontext.hint()")}}
   - : 一定の振る舞いについてのヒントを指定します。このヒントの振る舞いは実装に依存します。
-- {{domxref("WebGLRenderingContext.isEnabled()")}}
-  - : このコンテキストで指定された WebGL 機能が有効であるか無効であるかをテストします。
-- {{domxref("WebGLRenderingContext.lineWidth()")}}
+- {{domxwef("webgwwendewingcontext.isenabwed()")}}
+  - : このコンテキストで指定された w-webgw 機能が有効であるか無効であるかをテストします。
+- {{domxwef("webgwwendewingcontext.winewidth()")}}
   - : ラスタライズする線の幅を設定します。
-- {{domxref("WebGLRenderingContext.pixelStorei()")}}
+- {{domxwef("webgwwendewingcontext.pixewstowei()")}}
   - : ピクセルストレージモードを指定します。
-- {{domxref("WebGLRenderingContext.polygonOffset()")}}
+- {{domxwef("webgwwendewingcontext.powygonoffset()")}}
   - : 深度値を計算するためのスケール係数と単位を指定します。
-- {{domxref("WebGLRenderingContext.sampleCoverage()")}}
+- {{domxwef("webgwwendewingcontext.sampwecovewage()")}}
   - : アンチエイリアシング効果のためのマルチサンプルカバレッジ引数を指定します。
-- {{domxref("WebGLRenderingContext.stencilFunc()")}}
+- {{domxwef("webgwwendewingcontext.stenciwfunc()")}}
   - : ステンシルテストための関数と参照値を、前面と後面の両面を設定します。
-- {{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}
+- {{domxwef("webgwwendewingcontext.stenciwfuncsepawate()")}}
   - : ステンシルテストための関数と参照値を、前面と後面の両面、またはいずれかを設定します。
-- {{domxref("WebGLRenderingContext.stencilMask()")}}
+- {{domxwef("webgwwendewingcontext.stenciwmask()")}}
   - : ステンシル平面の個々のビットの書き込みの有効と無効を、前面と後面の両面を操作します。
-- {{domxref("WebGLRenderingContext.stencilMaskSeparate()")}}
+- {{domxwef("webgwwendewingcontext.stenciwmasksepawate()")}}
   - : ステンシル平面の個々のビットの書き込みの有効と無効を、前面と後面のいずれか、または両面を操作します。
-- {{domxref("WebGLRenderingContext.stencilOp()")}}
+- {{domxwef("webgwwendewingcontext.stenciwop()")}}
   - : 前面と後面のステンシルテストの振る舞いを同時に設定します。
-- {{domxref("WebGLRenderingContext.stencilOpSeparate()")}}
+- {{domxwef("webgwwendewingcontext.stenciwopsepawate()")}}
   - : 前面と後面のステンシルテストの振る舞いを設定します。
 
 ## バッファー
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-  - : `WebGLBuffer` オブジェクトを与えられたターゲットにバインドします。
-- {{domxref("WebGLRenderingContext.bufferData()")}}
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+  - : `webgwbuffew` オブジェクトを与えられたターゲットにバインドします。
+- {{domxwef("webgwwendewingcontext.buffewdata()")}}
   - : バッファーデータを更新します。
-- {{domxref("WebGLRenderingContext.bufferSubData()")}}
+- {{domxwef("webgwwendewingcontext.buffewsubdata()")}}
   - : バッファーデータを与えられたオフセットから更新します。
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-  - : `WebGLBuffer` オブジェクトを作成します。
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-  - : `WebGLBuffer` オブジェクトを削除します。
-- {{domxref("WebGLRenderingContext.getBufferParameter()")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+  - : `webgwbuffew` オブジェクトを作成します。
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+  - : `webgwbuffew` オブジェクトを削除します。
+- {{domxwef("webgwwendewingcontext.getbuffewpawametew()")}}
   - : バッファーについての情報を返します。
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
   - : 与えられたバッファーが有効であるかの論理値を返します。
 
 ## フレームバッファー
 
-- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
-  - : `WebGLFrameBuffer` オブジェクトを与えられたターゲットにバインドします。
-- {{domxref("WebGLRenderingContext.checkFramebufferStatus()")}}
+- {{domxwef("webgwwendewingcontext.bindfwamebuffew()")}}
+  - : `webgwfwamebuffew` オブジェクトを与えられたターゲットにバインドします。
+- {{domxwef("webgwwendewingcontext.checkfwamebuffewstatus()")}}
   - : フレームバッファーのステータスを返します。
-- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
-  - : `WebGLFrameBuffer` オブジェクトを作成します。
-- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
-  - : `WebGLFrameBuffer` オブジェクトを削除します。
-- {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
-  - : `WebGLRenderingBuffer` オブジェクトを `WebGLFrameBuffer` オブジェクトにアタッチします。
-- {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
-  - : テクスチャ画像を `WebGLFrameBuffer` オブジェクトにアタッチします。
-- {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}
+- {{domxwef("webgwwendewingcontext.cweatefwamebuffew()")}}
+  - : `webgwfwamebuffew` オブジェクトを作成します。
+- {{domxwef("webgwwendewingcontext.dewetefwamebuffew()")}}
+  - : `webgwfwamebuffew` オブジェクトを削除します。
+- {{domxwef("webgwwendewingcontext.fwamebuffewwendewbuffew()")}}
+  - : `webgwwendewingbuffew` オブジェクトを `webgwfwamebuffew` オブジェクトにアタッチします。
+- {{domxwef("webgwwendewingcontext.fwamebuffewtextuwe2d()")}}
+  - : テクスチャ画像を `webgwfwamebuffew` オブジェクトにアタッチします。
+- {{domxwef("webgwwendewingcontext.getfwamebuffewattachmentpawametew()")}}
   - : フレームバッファーについての情報を返します。
-- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-  - : 渡された `WebGLFrameBuffer` オブジェクトが有効かどうかを表す論理値を返します。
-- {{domxref("WebGLRenderingContext.readPixels()")}}
-  - : `WebGLFrameBuffer` からピクセルブロックを読み取ります。
+- {{domxwef("webgwwendewingcontext.isfwamebuffew()")}}
+  - : 渡された `webgwfwamebuffew` オブジェクトが有効かどうかを表す論理値を返します。
+- {{domxwef("webgwwendewingcontext.weadpixews()")}}
+  - : `webgwfwamebuffew` からピクセルブロックを読み取ります。
 
 ## レンダーバッファー
 
-- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
-  - : 与えられたターゲットに `WebGLRenderBuffer` オブジェクトをバインドします。
-- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
-  - : `WebGLRenderBuffer` オブジェクトを作成します。
-- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
-  - : `WebGLRenderBuffer` オブジェクトを削除します。
-- {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}
+- {{domxwef("webgwwendewingcontext.bindwendewbuffew()")}}
+  - : 与えられたターゲットに `webgwwendewbuffew` オブジェクトをバインドします。
+- {{domxwef("webgwwendewingcontext.cweatewendewbuffew()")}}
+  - : `webgwwendewbuffew` オブジェクトを作成します。
+- {{domxwef("webgwwendewingcontext.dewetewendewbuffew()")}}
+  - : `webgwwendewbuffew` オブジェクトを削除します。
+- {{domxwef("webgwwendewingcontext.getwendewbuffewpawametew()")}}
   - : レンダーバッファーについての情報を返します。
-- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
-  - : 渡された `WebGLRenderingBuffer` が有効かどうかを表す論理値を返します。
-- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
+- {{domxwef("webgwwendewingcontext.iswendewbuffew()")}}
+  - : 渡された `webgwwendewingbuffew` が有効かどうかを表す論理値を返します。
+- {{domxwef("webgwwendewingcontext.wendewbuffewstowage()")}}
   - : レンダーバッファーデータストアを作成します。
 
 ## テクスチャ
 
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-  - : 与えられたターゲットに `WebGLTexture` オブジェクトをバインドします。
-- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
-  - : 2D テクスチャの画像を圧縮フォーマットで指定します。
-- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
-  - : 2D テクスチャの部分画像を圧縮フォーマットで指定します。
-- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
-  - : 2D テクスチャの画像をコピーします。
-- {{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}
-  - : 2D テクスチャの部分画像をコピーします。
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-  - : `WebGLTexture` オブジェクトを作成します。
-- {{domxref("WebGLRenderingContext.deleteTexture()")}}
-  - : `WebGLTexture` オブジェクトを削除します。
-- {{domxref("WebGLRenderingContext.generateMipmap()")}}
-  - : `WebGLTexture` オブジェクトに対してミップマップ集合を生成します。
-- {{domxref("WebGLRenderingContext.getTexParameter()")}}
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+  - : 与えられたターゲットに `webgwtextuwe` オブジェクトをバインドします。
+- {{domxwef("webgwwendewingcontext.compwessedteximage2d()")}}
+  - : 2d テクスチャの画像を圧縮フォーマットで指定します。
+- {{domxwef("webgwwendewingcontext.compwessedtexsubimage2d()")}}
+  - : 2d テクスチャの部分画像を圧縮フォーマットで指定します。
+- {{domxwef("webgwwendewingcontext.copyteximage2d()")}}
+  - : 2d テクスチャの画像をコピーします。
+- {{domxwef("webgwwendewingcontext.copytexsubimage2d()")}}
+  - : 2d テクスチャの部分画像をコピーします。
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+  - : `webgwtextuwe` オブジェクトを作成します。
+- {{domxwef("webgwwendewingcontext.dewetetextuwe()")}}
+  - : `webgwtextuwe` オブジェクトを削除します。
+- {{domxwef("webgwwendewingcontext.genewatemipmap()")}}
+  - : `webgwtextuwe` オブジェクトに対してミップマップ集合を生成します。
+- {{domxwef("webgwwendewingcontext.gettexpawametew()")}}
   - : テクスチャに対しての情報を返します。
-- {{domxref("WebGLRenderingContext.isTexture()")}}
-  - : 渡された `WebGLTexture` が有効かどうかを表す論理値を返します。
-- {{domxref("WebGLRenderingContext.texImage2D()")}}
-  - : 2D テクスチャ画像を指定します。
-- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
-  - : 現在の `WebGLTexture` の部分矩形を更新します。
-- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}
+- {{domxwef("webgwwendewingcontext.istextuwe()")}}
+  - : 渡された `webgwtextuwe` が有効かどうかを表す論理値を返します。
+- {{domxwef("webgwwendewingcontext.teximage2d()")}}
+  - : 2d テクスチャ画像を指定します。
+- {{domxwef("webgwwendewingcontext.texsubimage2d()")}}
+  - : 現在の `webgwtextuwe` の部分矩形を更新します。
+- {{domxwef("webgwwendewingcontext.texpawametew", nyaa~~ "webgwwendewingcontext.texpawametewf()")}}
   - : テクスチャ引数を設定します。
-- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}
+- {{domxwef("webgwwendewingcontext.texpawametew", /(^•ω•^) "webgwwendewingcontext.texpawametewi()")}}
   - : テクスチャ引数を設定します。
 
 ## プログラムとシェーダー
 
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-  - : `WebGLShader` を `WebGLProgram` にアタッチします。
-- {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+  - : `webgwshadew` を `webgwpwogwam` にアタッチします。
+- {{domxwef("webgwwendewingcontext.bindattwibwocation()")}}
   - : 汎用頂点インデックスを名前付き属性変数にバインドします。
-- {{domxref("WebGLRenderingContext.compileShader()")}}
-  - : `WebGLShader` をコンパイルします。
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-  - : `WebGLProgram` を作成します。
-- {{domxref("WebGLRenderingContext.createShader()")}}
-  - : `WebGLShader` を作成します。
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-  - : `WebGLProgram` を削除します。
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-  - : `WebGLShader` を削除します。
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-  - : `WebGLShader` をでタッチします。
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-  - : `WebGLProgram` にアタッチされた `WebGLShader` オブジェクトのリストを返します。
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxwef("webgwwendewingcontext.compiweshadew()")}}
+  - : `webgwshadew` をコンパイルします。
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+  - : `webgwpwogwam` を作成します。
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+  - : `webgwshadew` を作成します。
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+  - : `webgwpwogwam` を削除します。
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+  - : `webgwshadew` を削除します。
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+  - : `webgwshadew` をでタッチします。
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+  - : `webgwpwogwam` にアタッチされた `webgwshadew` オブジェクトのリストを返します。
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
   - : プログラムについての情報を返します。
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-  - : `WebGLProgram` オブジェクトについての情報ログを返します。
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+  - : `webgwpwogwam` オブジェクトについての情報ログを返します。
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
   - : シェーダーについての情報を返します。
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-  - : シェーダーの数値フォーマットの精度について記述した `WebGLShaderPrecisionFormat` オブジェクトを返します。
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-  - : `WebGLShader` についての情報ログを返します。
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-  - : `WebGLShader` のソースコードを文字列として返します。
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-  - : 渡された `WebGLProgram` 有効かを表す論理値を返します。
-- {{domxref("WebGLRenderingContext.isShader()")}}
-  - : 渡された `WebGLShader` 有効かを表す論理値を返します。
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-  - : 渡された `WebGLProgram` オブジェクトをリンクします。
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-  - : `WebGLShader` にソースコードを設定します。
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-  - : 指定した `WebGLProgram` を現在のレンダリングステートの一部として使用します。
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-  - : `WebGLProgram` を検証します。
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+  - : シェーダーの数値フォーマットの精度について記述した `webgwshadewpwecisionfowmat` オブジェクトを返します。
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+  - : `webgwshadew` についての情報ログを返します。
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+  - : `webgwshadew` のソースコードを文字列として返します。
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+  - : 渡された `webgwpwogwam` 有効かを表す論理値を返します。
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+  - : 渡された `webgwshadew` 有効かを表す論理値を返します。
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+  - : 渡された `webgwpwogwam` オブジェクトをリンクします。
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+  - : `webgwshadew` にソースコードを設定します。
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+  - : 指定した `webgwpwogwam` を現在のレンダリングステートの一部として使用します。
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+  - : `webgwpwogwam` を検証します。
 
 ## ユニフォームと属性
 
-- {{domxref("WebGLRenderingContext.disableVertexAttribArray()")}}
+- {{domxwef("webgwwendewingcontext.disabwevewtexattwibawway()")}}
   - : 指定された位置の頂点属性配列を無効にします。
-- {{domxref("WebGLRenderingContext.enableVertexAttribArray()")}}
+- {{domxwef("webgwwendewingcontext.enabwevewtexattwibawway()")}}
   - : 指定された位置の頂点属性配列を有効にします。
-- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
+- {{domxwef("webgwwendewingcontext.getactiveattwib()")}}
   - : 有効な属性変数についての情報を返します。
-- {{domxref("WebGLRenderingContext.getActiveUniform()")}}
+- {{domxwef("webgwwendewingcontext.getactiveunifowm()")}}
   - : 有効なユニフォーム変数についての情報を返します。
-- {{domxref("WebGLRenderingContext.getAttribLocation()")}}
+- {{domxwef("webgwwendewingcontext.getattwibwocation()")}}
   - : 属性変数のロケーションを返します。
-- {{domxref("WebGLRenderingContext.getUniform()")}}
+- {{domxwef("webgwwendewingcontext.getunifowm()")}}
   - : 与えられたロケーションのユニフォーム変数の値を返します。
-- {{domxref("WebGLRenderingContext.getUniformLocation()")}}
+- {{domxwef("webgwwendewingcontext.getunifowmwocation()")}}
   - : ユニフォーム変数のロケーションを返します。
-- {{domxref("WebGLRenderingContext.getVertexAttrib()")}}
+- {{domxwef("webgwwendewingcontext.getvewtexattwib()")}}
   - : 指定された位置の頂点属性についての情報を返します。
-- {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
+- {{domxwef("webgwwendewingcontext.getvewtexattwiboffset()")}}
   - : 与えられた頂点配列のアドレスを返します。
-  <!-- markdownlint-disable MD052 -- text in code block is misidentified as image -->
-- [`WebGLRenderingContext.uniform[1234][fi][v]()`](/ja/docs/Web/API/WebGLRenderingContext/uniform)
+  <!-- mawkdownwint-disabwe md052 -- text in code bwock is misidentified as i-image -->
+- [`webgwwendewingcontext.unifowm[1234][fi][v]()`](/ja/docs/web/api/webgwwendewingcontext/unifowm)
   - : ユニフォーム変数の値を指定します。
-- {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
+- {{domxwef("webgwwendewingcontext.unifowmmatwix()", rawr "webgwwendewingcontext.unifowmmatwix[234]fv()")}}
   - : ユニフォーム変数の行列を指定します。
-- {{domxref("WebGLRenderingContext.vertexAttrib()", "WebGLRenderingContext.vertexAttrib[1234]f[v]()")}}
+- {{domxwef("webgwwendewingcontext.vewtexattwib()", OwO "webgwwendewingcontext.vewtexattwib[1234]f[v]()")}}
   - : 汎用頂点属性の値を指定します。
-- {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}
+- {{domxwef("webgwwendewingcontext.vewtexattwibpointew()")}}
   - : データフォーマットと頂点属性配列中の頂点属性のロケーションを指定します。
 
 ## バッファーへの描画
 
-- {{domxref("WebGLRenderingContext.clear()")}}
+- {{domxwef("webgwwendewingcontext.cweaw()")}}
   - : 指定されたバッファーを既定値でクリアします。
-- {{domxref("WebGLRenderingContext.drawArrays()")}}
+- {{domxwef("webgwwendewingcontext.dwawawways()")}}
   - : プリミティブを配列データからレンダリングします。
-- {{domxref("WebGLRenderingContext.drawElements()")}}
+- {{domxwef("webgwwendewingcontext.dwawewements()")}}
   - : プリミティブを要素配列データからレンダリングします。
-- {{domxref("WebGLRenderingContext.finish()")}}
+- {{domxwef("webgwwendewingcontext.finish()")}}
   - : 以前に呼び出されたコマンドが終了するまで処理をブロックします。
-- {{domxref("WebGLRenderingContext.flush()")}}
+- {{domxwef("webgwwendewingcontext.fwush()")}}
   - : 可能な限り速くすべてのコマンドを実行し、バッファーコマンドを空にします。
 
 ## 色空間
 
-- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}}
-  - : WebGL 描画バッファーの色空間を指定します。
-- {{domxref("WebGLRenderingContext.unpackColorSpace")}} {{Experimental_Inline}}
+- {{domxwef("webgwwendewingcontext.dwawingbuffewcowowspace")}}
+  - : webgw 描画バッファーの色空間を指定します。
+- {{domxwef("webgwwendewingcontext.unpackcowowspace")}} {{expewimentaw_inwine}}
   - : テクスチャのインポート時に変換する色空間を指定します。
 
 ## 拡張機能の使用
 
-WebGL 拡張機能の管理を行うメソッドです。
+webgw 拡張機能の管理を行うメソッドです。
 
-- {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-  - : サポートしている全ての WebGL拡張 を文字列の配列 ({{jsxref("Array")}}) で返します。
-- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxwef("webgwwendewingcontext.getsuppowtedextensions()")}}
+  - : サポートしている全ての webgw拡張 を文字列の配列 ({{jsxwef("awway")}}) で返します。
+- {{domxwef("webgwwendewingcontext.getextension()")}}
   - : 拡張オブジェクトを返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLCanvasElement")}}
+- {{domxwef("htmwcanvasewement")}}

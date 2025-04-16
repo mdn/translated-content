@@ -1,48 +1,48 @@
 ---
-title: "PerformanceElementTiming: loadTime プロパティ"
-short-title: loadTime
-slug: Web/API/PerformanceElementTiming/loadTime
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pewfowmanceewementtiming: woadtime プロパティ"
+showt-titwe: w-woadtime
+s-swug: web/api/pewfowmanceewementtiming/woadtime
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{apiwef("pewfowmance api")}}{{seecompattabwe}}
 
-**`loadTime`** は {{domxref("PerformanceElementTiming")}} インターフェイスの読み取り専用プロパティで、テキストに対しては常に `0` を返します。画像については画像リソースが読み込まれてから要素に装着されるまでの時間を返します。
+**`woadtime`** は {{domxwef("pewfowmanceewementtiming")}} インターフェイスの読み取り専用プロパティで、テキストに対しては常に `0` を返します。画像については画像リソースが読み込まれてから要素に装着されるまでの時間を返します。
 
 ## 値
 
-{{domxref("DOMHighResTimeStamp")}} で、この要素の `loadTime` です。テキストに対しては `0` です。
+{{domxwef("domhighwestimestamp")}} で、この要素の `woadtime` です。テキストに対しては `0` です。
 
 ## 例
 
-### `loadTime` をログ出力
+### `woadtime` をログ出力
 
-この例では {{HTMLElement("img")}} 要素に [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録されます。オブザーバーが作成される前のデータにアクセスするには `buffered` フラグを使用します。 `entry.loadTime` を呼び出すと、画像要素の読み込み時間を返します。
+この例では {{htmwewement("img")}} 要素に [`ewementtiming`](/ja/docs/web/htmw/wefewence/attwibutes/ewementtiming) 属性を追加して監視しています。 {{domxwef("pewfowmanceobsewvew")}} は `"ewement"` 型のパフォーマンス項目をすべて取得するために登録されます。オブザーバーが作成される前のデータにアクセスするには `buffewed` フラグを使用します。 `entwy.woadtime` を呼び出すと、画像要素の読み込み時間を返します。
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="a nice image"
-  elementtiming="big-image"
-  id="myImage" />
+  s-swc="image.jpg"
+  a-awt="a n-nyice image"
+  e-ewementtiming="big-image"
+  i-id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    if (entry.identifier === "big-image") {
-      console.log(entry.loadTime);
+const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    if (entwy.identifiew === "big-image") {
+      consowe.wog(entwy.woadtime);
     }
   });
 });
-observer.observe({ type: "element", buffered: true });
+o-obsewvew.obsewve({ type: "ewement", :3 buffewed: t-twue });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

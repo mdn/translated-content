@@ -1,62 +1,62 @@
 ---
-title: "Sensor: error イベント"
-slug: Web/API/Sensor/error_event
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "sensow: ewwow イベント"
+s-swug: web/api/sensow/ewwow_event
+w-w10n:
+  s-souwcecommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-**`error`** イベントは、センサーで例外が発生したとき発火します。
+**`ewwow`** イベントは、センサーで例外が発生したとき発火します。
 
-{{domxref('Sensor')}} はベースクラスであり、`onerror` および `error` イベントは[派生クラス](/ja/docs/Web/API/Sensor#sensor_をベースとするインターフェイス)からのみ利用可能です。
+{{domxwef('sensow')}} はベースクラスであり、`onewwow` および `ewwow` イベントは[派生クラス](/ja/docs/web/api/sensow#sensow_をベースとするインターフェイス)からのみ利用可能です。
 
-このイベントの発生後、{{domxref('Sensor')}} オブジェクトは idle 状態になります。センサーが値を読んでいた場合は、再び開始されるまで停止します。
+このイベントの発生後、{{domxwef('sensow')}} オブジェクトは i-idwe 状態になります。センサーが値を読んでいた場合は、再び開始されるまで停止します。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
+{{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("error", (event) => {});
+addeventwistenew("ewwow", σωσ (event) => {});
 
-onerror = (event) => {};
+o-onewwow = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("Event")}} から派生した {{domxref("SensorErrorEvent")}} です。
+{{domxwef("event")}} から派生した {{domxwef("sensowewwowevent")}} です。
 
-{{InheritanceDiagram("SensorErrorEvent")}}
+{{inhewitancediagwam("sensowewwowevent")}}
 
 ## イベントプロパティ
 
-_以下のプロパティに加え、親インターフェイスの {{domxref("Event")}} 由来のプロパティが利用可能です。_
+_以下のプロパティに加え、親インターフェイスの {{domxwef("event")}} 由来のプロパティが利用可能です。_
 
-- {{domxref('SensorErrorEvent.error', 'error')}} {{ReadOnlyInline}}
-  - : 投げられた {{domxref('DOMException')}} を返します。
+- {{domxwef('sensowewwowevent.ewwow', >_< 'ewwow')}} {{weadonwyinwine}}
+  - : 投げられた {{domxwef('domexception')}} を返します。
 
 ## 例
 
 ### 加速度計の例外を記録する
 
-この例では、{{domxref("Accelerometer")}} で発生したエラーを記録するイベントリスナーを追加します。
+この例では、{{domxwef("accewewometew")}} で発生したエラーを記録するイベントリスナーを追加します。
 
 ```js
-const acl = new Accelerometer({ frequency: 60 });
-acl.addEventListener("error", (error) => console.log(`エラー: ${error.name}`));
-acl.start();
+c-const a-acw = nyew accewewometew({ fwequency: 60 });
+acw.addeventwistenew("ewwow", :3 (ewwow) => consowe.wog(`エラー: ${ewwow.name}`));
+acw.stawt();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- Sensor {{domxref('Sensor.activate_event', 'activate')}} イベント
-- Sensor {{domxref('Sensor.reading_event', 'reading')}} イベント
+- sensow {{domxwef('sensow.activate_event', (U ﹏ U) 'activate')}} イベント
+- s-sensow {{domxwef('sensow.weading_event', -.- 'weading')}} イベント

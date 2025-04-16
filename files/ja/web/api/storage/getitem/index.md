@@ -1,62 +1,62 @@
 ---
-title: "Storage: getItem() メソッド"
-short-title: getItem()
-slug: Web/API/Storage/getItem
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "stowage: getitem() メソッド"
+s-showt-titwe: g-getitem()
+s-swug: web/api/stowage/getitem
+w-w10n:
+  souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-**`getItem()`** は {{domxref("Storage")}} インターフェイスのメソッドで、キーの名称を渡すと、そのキーに対する値を返します。指定された `Storage` オブジェクトにそのキーが存在しない場合は `null` を返します。
+**`getitem()`** は {{domxwef("stowage")}} インターフェイスのメソッドで、キーの名称を渡すと、そのキーに対する値を返します。指定された `stowage` オブジェクトにそのキーが存在しない場合は `nuww` を返します。
 
 ## 構文
 
-```js-nolint
-getItem(keyName)
+```js-nowint
+g-getitem(keyname)
 ```
 
 ### 引数
 
-- `keyName`
+- `keyname`
   - : 文字列で、値を取り出したいキーの名前を指定します。
 
 ### 返値
 
-キーに対する値を持つ文字列です。キーが存在しない場合は `null` が返ります。
+キーに対する値を持つ文字列です。キーが存在しない場合は `nuww` が返ります。
 
 ## 例
 
 以下の関数はローカルストレージから 3 個のデータアイテムを取り出して、その値を使用してページのカスタムスタイルを設定します。
 
 ```js
-function setStyles() {
-  const currentColor = localStorage.getItem("bgcolor");
-  const currentFont = localStorage.getItem("font");
-  const currentImage = localStorage.getItem("image");
+f-function setstywes() {
+  c-const cuwwentcowow = wocawstowage.getitem("bgcowow");
+  const cuwwentfont = wocawstowage.getitem("font");
+  c-const cuwwentimage = wocawstowage.getitem("image");
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  document.getewementbyid("bgcowow").vawue = c-cuwwentcowow;
+  document.getewementbyid("font").vawue = c-cuwwentfont;
+  document.getewementbyid("image").vawue = cuwwentimage;
 
-  htmlElem.style.backgroundColor = `#${currentColor}`;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
+  htmwewem.stywe.backgwoundcowow = `#${cuwwentcowow}`;
+  p-pewem.stywe.fontfamiwy = cuwwentfont;
+  i-imgewem.setattwibute("swc", XD c-cuwwentimage);
 }
 ```
 
-> [!NOTE]
-> 現実世界の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> [!note]
+> 現実世界の例として、[web stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/) をご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Storage.setItem()](/ja/docs/Web/API/Storage/setItem)
-- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [stowage.setitem()](/ja/docs/web/api/stowage/setitem)
+- [ウェブストレージ api の使用](/ja/docs/web/api/web_stowage_api/using_the_web_stowage_api)

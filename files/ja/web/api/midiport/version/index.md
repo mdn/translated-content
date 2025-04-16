@@ -1,13 +1,13 @@
 ---
-title: "MIDIPort: version プロパティ"
-slug: Web/API/MIDIPort/version
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "midipowt: vewsion プロパティ"
+s-swug: w-web/api/midipowt/vewsion
+w-w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("web m-midi api")}}
 
-{{domxref("MIDIPort")}} インターフェイスの読み取り専用プロパティ **`version`** は、ポートのバージョンを返します。
+{{domxwef("midipowt")}} インターフェイスの読み取り専用プロパティ **`vewsion`** は、ポートのバージョンを返します。
 
 ## 値
 
@@ -18,16 +18,16 @@ l10n:
 以下の例では、すべての入力ポートを走査し、それぞれのバージョンをコンソールに出力します。
 
 ```js
-for (const entry of midiAccess.inputs) {
-  const input = entry[1];
-  console.log(input.version);
+f-fow (const e-entwy of m-midiaccess.inputs) {
+  const input = entwy[1];
+  consowe.wog(input.vewsion);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

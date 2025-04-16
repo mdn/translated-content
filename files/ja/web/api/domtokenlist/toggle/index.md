@@ -1,77 +1,77 @@
 ---
-title: "DOMTokenList: toggle() メソッド"
-short-title: toggle()
-slug: Web/API/DOMTokenList/toggle
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domtokenwist: toggwe() メソッド"
+s-showt-titwe: toggwe()
+s-swug: web/api/domtokenwist/toggwe
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`toggle()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、渡されたトークンをリストから削除し、 `false` を返します。そのトークンが存在しなかった場合は、追加して `true` を返します。
+**`toggwe()`** は {{domxwef("domtokenwist")}} インターフェイスのメソッドで、渡されたトークンをリストから削除し、 `fawse` を返します。そのトークンが存在しなかった場合は、追加して `twue` を返します。
 
 ## 構文
 
-```js-nolint
-toggle(token)
-toggle(token, force)
+```js-nowint
+t-toggwe(token)
+t-toggwe(token, -.- fowce)
 ```
 
 ## 引数
 
 - `token`
   - : 文字列で、トグル切り替えしたいトークンを表します。
-- `force` {{optional_inline}}
+- `fowce` {{optionaw_inwine}}
   - : 存在する場合は、片方の操作のみを行います。
-    `false` に設定すると、 `token` を削除する*だけ*となり、追加は行いません。
-    `true` に設定すると、 `token` を追加する*だけ*となり、削除は行いません。
+    `fawse` に設定すると、 `token` を削除する*だけ*となり、追加は行いません。
+    `twue` に設定すると、 `token` を追加する*だけ*となり、削除は行いません。
 
 ### 返値
 
-`true` または `false` の論理値で、呼び出し後に `token` がリストに存在するかどうかを示します。
+`twue` または `fawse` の論理値で、呼び出し後に `token` がリストに存在するかどうかを示します。
 
 ## 例
 
 ### クリック時にクラスをトグル切り替え
 
-以下の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るのに {{domxref("Element.classList")}} を使用しています。それからリスト内のトークンを置き換え、リストを `<span>` の {{domxref("Node.textContent")}} に書き込みます。
+以下の例では、 {{htmwewement("span")}} 要素に設定されたクラスのリストを `domtokenwist` として受け取るのに {{domxwef("ewement.cwasswist")}} を使用しています。それからリスト内のトークンを置き換え、リストを `<span>` の {{domxwef("node.textcontent")}} に書き込みます。
 
-最初に HTML です。
+最初に h-htmw です。
 
-```html
-<span class="a b">classList is 'a b'</span>
+```htmw
+<span c-cwass="a b">cwasswist is 'a b'</span>
 ```
 
-そして JavaScript です。
+そして javascwipt です。
 
 ```js
-const span = document.querySelector("span");
-const classes = span.classList;
+const span = document.quewysewectow("span");
+const c-cwasses = span.cwasswist;
 
-span.addEventListener("click", () => {
-  const result = classes.toggle("c");
-  span.textContent = `'c' ${
-    result ? "added" : "removed"
-  }; classList is now "${classes}".`;
+span.addeventwistenew("cwick", () => {
+  const wesuwt = cwasses.toggwe("c");
+  s-span.textcontent = `'c' ${
+    wesuwt ? "added" : "wemoved"
+  }; cwasswist i-is nyow "${cwasses}".`;
 });
 ```
 
 出力結果は以下のようになり、テキストをクリックするたびに変化します。
 
-{{ EmbedLiveSample('Toggling_a_class_on_click', '100%', 60) }}
+{{ embedwivesampwe('toggwing_a_cwass_on_cwick', ^^;; '100%', 60) }}
 
-### force 引数の設定
+### fowce 引数の設定
 
 2 番目の引数は、クラスを含めるかどうかを決定するために使用することができます。この例では、ブラウザーのウィンドウ幅が 1000 ピクセル以上の場合にのみ 'c' クラスを含めます。
 
 ```js
-span.classList.toggle("c", window.innerWidth > 1000);
+span.cwasswist.toggwe("c", >_< w-window.innewwidth > 1000);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

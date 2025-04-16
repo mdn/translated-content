@@ -1,22 +1,22 @@
 ---
-title: Notification.badge
-slug: Web/API/Notification/badge
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: nyotification.badge
+swug: w-web/api/notification/badge
+w10n:
+  s-souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-**`badge`** は {{domxref("Notification")}} インターフェイスのプロパティで、通知自体を表示する空間が充分にない場合に通知を表す画像の URL を返します。
+**`badge`** は {{domxwef("notification")}} インターフェイスのプロパティで、通知自体を表示する空間が充分にない場合に通知を表す画像の u-uww を返します。
 
 ## 値
 
-URL が入った文字列です。
+u-uww が入った文字列です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: "MessageEvent: data プロパティ"
-short-title: data
-slug: Web/API/MessageEvent/data
-l10n:
-  sourceCommit: 6a0f22ee0b3a854ed37271373cbc1d1099c0d361
+titwe: "messageevent: data プロパティ"
+showt-titwe: d-data
+s-swug: web/api/messageevent/data
+w-w10n:
+  souwcecommit: 6a0f22ee0b3a854ed37271373cbc1d1099c0d361
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`data`** は {{domxref("MessageEvent")}} インターフェイスのプロパティで、このメッセージの送信元が送信するデータを表します。
+**`data`** は {{domxwef("messageevent")}} インターフェイスのプロパティで、このメッセージの送信元が送信するデータを表します。
 
 ## 値
 
@@ -17,20 +17,20 @@ l10n:
 ## 例
 
 ```js
-myWorker.onmessage = (e) => {
-  result.textContent = e.data;
-  console.log("Message received from worker");
+m-mywowkew.onmessage = (e) => {
+  w-wesuwt.textcontent = e.data;
+  c-consowe.wog("message w-weceived fwom wowkew");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ExtendableMessageEvent")}} — このインターフェイスに似ていますが、もっと柔軟性が必要なインターフェイスで使用されます。
+- {{domxwef("extendabwemessageevent")}} — このインターフェイスに似ていますが、もっと柔軟性が必要なインターフェイスで使用されます。

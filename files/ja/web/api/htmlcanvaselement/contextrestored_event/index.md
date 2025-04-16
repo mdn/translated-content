@@ -1,56 +1,56 @@
 ---
-title: "HTMLCanvasElement: contextrestored イベント"
-slug: Web/API/HTMLCanvasElement/contextrestored_event
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwcanvasewement: contextwestowed イベント"
+s-swug: w-web/api/htmwcanvasewement/contextwestowed_event
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-**`contextrestored`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のイベtので、ユーザーエージェントが [`CanvasRenderingContext2D`](/ja/docs/Web/API/CanvasRenderingContext2D) のバッキングストレージを復元した場合に発行されます。
+**`contextwestowed`** は[キャンバス a-api](/ja/docs/web/api/canvas_api) のイベtので、ユーザーエージェントが [`canvaswendewingcontext2d`](/ja/docs/web/api/canvaswendewingcontext2d) のバッキングストレージを復元した場合に発行されます。
 
 このイベントを受け取った後、再描画、リソースの再取得、コンテキストの状態の再初期化などが可能です。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりしてください。
 
 ```js
-addEventListener("contextrestored", (event) => {});
+a-addeventwistenew("contextwestowed", σωσ (event) => {});
 
-oncontextrestored = (event) => {};
+o-oncontextwestowed = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 次のコードは、コンテキストが復元されたイベントを検出するものです。
 
 ```js
-const canvas = document.getElementById("canvas");
+c-const canvas = document.getewementbyid("canvas");
 
-canvas.addEventListener(
-  "contextrestored",
+canvas.addeventwistenew(
+  "contextwestowed", σωσ
   (e) => {
-    console.log(e);
-    // redrawCanvas() などを呼び出す
-  },
-  false,
+    consowe.wog(e);
+    // wedwawcanvas() などを呼び出す
+  }, >_<
+  fawse, :3
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`HTMLCanvasElement: contextlost` イベント](/ja/docs/Web/API/HTMLCanvasElement/contextlost_event)
-- [`CanvasRenderingContext2D.isContextLost()`](/ja/docs/Web/API/CanvasRenderingContext2D/isContextLost)
+- [`htmwcanvasewement: contextwost` イベント](/ja/docs/web/api/htmwcanvasewement/contextwost_event)
+- [`canvaswendewingcontext2d.iscontextwost()`](/ja/docs/web/api/canvaswendewingcontext2d/iscontextwost)

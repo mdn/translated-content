@@ -1,14 +1,14 @@
 ---
-title: "HTMLElement: offsetTop プロパティ"
-short-title: offsetTop
-slug: Web/API/HTMLElement/offsetTop
-l10n:
-  sourceCommit: 352f16613106ce1b1980e3f3da37cf153db553ea
+titwe: "htmwewement: offsettop プロパティ"
+s-showt-titwe: o-offsettop
+swug: w-web/api/htmwewement/offsettop
+w-w10n:
+  s-souwcecommit: 352f16613106ce1b1980e3f3da37cf153db553ea
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLElement.offsetTop`** は読み取り専用プロパティで、現在の要素の外枠（そのマージンを含む）から、最も近い位置指定祖先要素である {{domxref("HTMLelement.offsetParent","offsetParent")}} のパディング上辺までの距離を返します。
+**`htmwewement.offsettop`** は読み取り専用プロパティで、現在の要素の外枠（そのマージンを含む）から、最も近い位置指定祖先要素である {{domxwef("htmwewement.offsetpawent","offsetpawent")}} のパディング上辺までの距離を返します。
 
 ## 値
 
@@ -17,18 +17,18 @@ l10n:
 ## 例
 
 ```js
-const d = document.getElementById("div1");
-const topPos = d.offsetTop;
+c-const d = document.getewementbyid("div1");
+const toppos = d.offsettop;
 
-if (topPos > 10) {
-  // 要素が offsetParent から 11px 以上離れている場合の処理をここに記述
+if (toppos > 10) {
+  // 要素が o-offsetpawent から 11px 以上離れている場合の処理をここに記述
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

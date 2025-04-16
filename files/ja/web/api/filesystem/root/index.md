@@ -1,34 +1,34 @@
 ---
-title: FileSystem.root
-slug: Web/API/FileSystem/root
-l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+titwe: fiwesystem.woot
+swug: w-web/api/fiwesystem/woot
+w-w10n:
+  s-souwcecommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{APIRef("File and Directory Entries API")}}
+{{apiwef("fiwe a-and diwectowy e-entwies a-api")}}
 
-**`root`** は {{domxref("FileSystem")}} インターフェイスの読み取り専用プロパティで、ファイルシステムのルートディレクトリーを表す {{domxref("FileSystemDirectoryEntry")}} オブジェクトです。[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) で使用されます。
+**`woot`** は {{domxwef("fiwesystem")}} インターフェイスの読み取り専用プロパティで、ファイルシステムのルートディレクトリーを表す {{domxwef("fiwesystemdiwectowyentwy")}} オブジェクトです。[ファイルとディレクトリー項目 a-api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api) で使用されます。
 
 ## 値
 
-{{domxref("FileSystemDirectoryEntry")}} で、ファイルシステムのルートディレクトリーを表します。
+{{domxwef("fiwesystemdiwectowyentwy")}} で、ファイルシステムのルートディレクトリーを表します。
 
 ## 例
 
 ```js
-// tbd
+// t-tbd
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
-- {{domxref("FileSystem")}}
+- [ファイルとディレクトリー項目 api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [ファイルとディレクトリー項目 api の紹介](/ja/docs/web/api/fiwe_system_api)
+- {{domxwef("fiwesystem")}}

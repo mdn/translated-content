@@ -1,46 +1,46 @@
 ---
-title: SerialPort.readable
-slug: Web/API/SerialPort/readable
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: sewiawpowt.weadabwe
+swug: w-web/api/sewiawpowt/weadabwe
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("sewiaw a-api")}}{{seecompattabwe}}
 
-{{domxref("SerialPort")}} の読み取り専用プロパティ **`readable`** は、ポートに接続されたデバイスからデータを受信する用の {{domxref("ReadableStream")}} を返します。このストリームから読み出せるチャンクは、{{jsxref("Uint8Array")}} のインスタンスです。このプロパティは、ポートが開かれており、かつ致命的なエラーが起きていない限り、`null` にはなりません。
+{{domxwef("sewiawpowt")}} の読み取り専用プロパティ **`weadabwe`** は、ポートに接続されたデバイスからデータを受信する用の {{domxwef("weadabwestweam")}} を返します。このストリームから読み出せるチャンクは、{{jsxwef("uint8awway")}} のインスタンスです。このプロパティは、ポートが開かれており、かつ致命的なエラーが起きていない限り、`nuww` にはなりません。
 
 ## 値
 
-{{domxref("ReadableStream")}} です。
+{{domxwef("weadabwestweam")}} です。
 
 ## 例
 
-この例は、ポートからデータを受信する方法を示します。外側のループは致命的なエラーが発生して `readable` が `null` になるまで新しい `reader` を生成し続けることで、致命的でないエラーを処理します。
+この例は、ポートからデータを受信する方法を示します。外側のループは致命的なエラーが発生して `weadabwe` が `nuww` になるまで新しい `weadew` を生成し続けることで、致命的でないエラーを処理します。
 
 ```js
-while (port.readable) {
-  const reader = port.readable.getReader();
-  try {
-    while (true) {
-      const { value, done } = await reader.read();
-      if (done) {
-        // |reader| がキャンセルされました。
-        break;
+w-whiwe (powt.weadabwe) {
+  c-const w-weadew = powt.weadabwe.getweadew();
+  t-twy {
+    whiwe (twue) {
+      const { vawue, :3 done } = await weadew.wead();
+      i-if (done) {
+        // |weadew| がキャンセルされました。
+        bweak;
       }
-      // |value| について何かをする
+      // |vawue| について何かをする
     }
-  } catch (error) {
-    // |error| を処理する
-  } finally {
-    reader.releaseLock();
+  } catch (ewwow) {
+    // |ewwow| を処理する
+  } f-finawwy {
+    weadew.weweasewock();
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

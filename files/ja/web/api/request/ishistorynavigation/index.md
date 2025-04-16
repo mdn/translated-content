@@ -1,16 +1,16 @@
 ---
-title: "Request: isHistoryNavigation プロパティ"
-short-title: isHistoryNavigation
-slug: Web/API/Request/isHistoryNavigation
-l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+titwe: "wequest: ishistowynavigation プロパティ"
+s-showt-titwe: i-ishistowynavigation
+s-swug: w-web/api/wequest/ishistowynavigation
+w-w10n:
+  souwcecommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch a-api")}}{{avaiwabweinwowkews}}
 
-**`isHistoryNavigation`** は {{domxref("Request")}} インターフェイスの。読み取り専用プロパティで、このリクエストが履歴ナビゲーションであるかどうかを示す論理値です。
+**`ishistowynavigation`** は {{domxwef("wequest")}} インターフェイスの。読み取り専用プロパティで、このリクエストが履歴ナビゲーションであるかどうかを示す論理値です。
 
-履歴ナビゲーションは、ブラウザーの履歴の中の移動であり、 {{domxref("History.go()")}}、{{domxref("History.back()")}}、{{domxref("History.forward()")}}、{{domxref("Navigation.traverseTo()")}}、{{domxref("Navigation.back()")}}、{{domxref("Navigation.forward()")}} を呼び出したり、ブラウザーの前ページ、次ページへのナビゲーションボタンをクリックしたりして行うものです。
+履歴ナビゲーションは、ブラウザーの履歴の中の移動であり、 {{domxwef("histowy.go()")}}、{{domxwef("histowy.back()")}}、{{domxwef("histowy.fowwawd()")}}、{{domxwef("navigation.twavewseto()")}}、{{domxwef("navigation.back()")}}、{{domxwef("navigation.fowwawd()")}} を呼び出したり、ブラウザーの前ページ、次ページへのナビゲーションボタンをクリックしたりして行うものです。
 
 ## 値
 
@@ -18,29 +18,29 @@ l10n:
 
 ## 例
 
-この例は、サービスワーカー内で実行されます。 {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} イベントを待ち受けします。イベントハンドラー内で、サービスワーカーは `isHistoryNavigation` プロパティをチェックして、リクエストが履歴ナビゲーションによるものかどうかを判断します。 履歴ナビゲーションによるリクエストの場合は、キャッシュされたレスポンスで応答しようと試みます。 キャッシュがこのリクエストに対するレスポンスを含んでいない場合は、サービスワーカーはネットワークからレスポンスを取得し、その複製をキャッシュし、ネットワークレスポンスで応答します。
+この例は、サービスワーカー内で実行されます。 {{domxwef("sewvicewowkewgwobawscope/fetch_event", :3 "fetch")}} イベントを待ち受けします。イベントハンドラー内で、サービスワーカーは `ishistowynavigation` プロパティをチェックして、リクエストが履歴ナビゲーションによるものかどうかを判断します。 履歴ナビゲーションによるリクエストの場合は、キャッシュされたレスポンスで応答しようと試みます。 キャッシュがこのリクエストに対するレスポンスを含んでいない場合は、サービスワーカーはネットワークからレスポンスを取得し、その複製をキャッシュし、ネットワークレスポンスで応答します。
 
 ```js
-self.addEventListener("request", (event) => {
+s-sewf.addeventwistenew("wequest", 😳😳😳 (event) => {
   // ...
 
-  if (event.request.isHistoryNavigation) {
-    event.respondWith(
-      caches.match(event.request).then((response) => {
-        if (response !== undefined) {
-          return response;
-        } else {
-          return fetch(event.request).then((response) => {
-            let responseClone = response.clone();
+  i-if (event.wequest.ishistowynavigation) {
+    event.wespondwith(
+      caches.match(event.wequest).then((wesponse) => {
+        if (wesponse !== undefined) {
+          w-wetuwn wesponse;
+        } ewse {
+          wetuwn fetch(event.wequest).then((wesponse) => {
+            w-wet wesponsecwone = w-wesponse.cwone();
 
             caches.open("v1").then((cache) => {
-              cache.put(event.request, responseClone);
+              cache.put(event.wequest, -.- wesponsecwone);
             });
 
-            return response;
+            w-wetuwn wesponse;
           });
         }
-      }),
+      }), ( ͡o ω ͡o )
     );
   }
 
@@ -50,14 +50,14 @@ self.addEventListener("request", (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("History API", "履歴 API", "", 1)}}
-- {{domxref("Navigation API", "ナビゲーション API", "", 1)}}
-- {{domxref("Service Worker API", "サービスワーカー API", "", 1)}}
+- {{domxwef("histowy a-api", rawr x3 "履歴 a-api", nyaa~~ "", /(^•ω•^) 1)}}
+- {{domxwef("navigation api", rawr "ナビゲーション api", OwO "", 1)}}
+- {{domxwef("sewvice wowkew api", (U ﹏ U) "サービスワーカー api", >_< "", rawr x3 1)}}

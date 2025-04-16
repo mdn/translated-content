@@ -1,70 +1,70 @@
 ---
-title: "SerialPort: connect イベント"
-slug: Web/API/SerialPort/connect_event
-l10n:
-  sourceCommit: ba5931fadbcc3b79ffacbb442b58380c827fc0ae
+titwe: "sewiawpowt: connect イベント"
+s-swug: w-web/api/sewiawpowt/connect_event
+w-w10n:
+  souwcecommit: b-ba5931fadbcc3b79ffacbb442b58380c827fc0ae
 ---
 
-{{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{apiwef("sewiaw a-api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-{{domxref("SerialPort")}} インターフェイスの **`connect`** イベントは、ポートがデバイスに接続された時、発火します。このイベントは、USB で接続されたデバイスなどの取り外し可能なデバイスに関連付いたポートに関してのみ発火します。
+{{domxwef("sewiawpowt")}} インターフェイスの **`connect`** イベントは、ポートがデバイスに接続された時、発火します。このイベントは、usb で接続されたデバイスなどの取り外し可能なデバイスに関連付いたポートに関してのみ発火します。
 
-このイベントは、このインターフェイスを返した {{domxref("Serial")}} のインスタンスに伝搬します。
+このイベントは、このインターフェイスを返した {{domxwef("sewiaw")}} のインスタンスに伝搬します。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
+{{domxwef("eventtawget.addeventwistenew", rawr x3 "addeventwistenew()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("connect", (event) => {});
+a-addeventwistenew("connect", rawr (event) => {});
 
-onconnect = (event) => {};
+o-onconnect = (event) => {};
 ```
 
 ## 型
 
-汎用の {{domxref("Event")}} です。
+汎用の {{domxwef("event")}} です。
 
 ## バブリング
 
-このイベントは {{domxref("Serial")}} に伝搬します。`event.target` プロパティはイベントを発生させた {{domxref('SerialPort')}} オブジェクトを指します。
+このイベントは {{domxwef("sewiaw")}} に伝搬します。`event.tawget` プロパティはイベントを発生させた {{domxwef('sewiawpowt')}} オブジェクトを指します。
 
-詳しくは、[イベントのバブリングとキャプチャリング](/ja/docs/Learn_web_development/Core/Scripting/Events#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AE%E3%83%90%E3%83%96%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%A8%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E3%83%AA%E3%83%B3%E3%82%B0)を参照してください。
+詳しくは、[イベントのバブリングとキャプチャリング](/ja/docs/weawn_web_devewopment/cowe/scwipting/events#%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%81%ae%e3%83%90%e3%83%96%e3%83%aa%e3%83%b3%e3%82%b0%e3%81%a8%e3%82%ad%e3%83%a3%e3%83%97%e3%83%81%e3%83%a3%e3%83%aa%e3%83%b3%e3%82%b0)を参照してください。
 
 ## 例
 
 ### 特定のポートが接続された時通知する
 
-{{domxref("Serial.requestPort()")}} メソッドは、ユーザーが選択した {{domxref("SerialPort")}} で解決する {{jsxref("Promise")}} を返します。
+{{domxwef("sewiaw.wequestpowt()")}} メソッドは、ユーザーが選択した {{domxwef("sewiawpowt")}} で解決する {{jsxwef("pwomise")}} を返します。
 
 ```js
 // ユーザーにシリアルポートを選んでもらう
-const port = await navigator.serial.requestPort();
+c-const powt = await nyavigatow.sewiaw.wequestpowt();
 
-port.addEventListener("connect", (event) => {
+powt.addeventwistenew("connect", σωσ (event) => {
   // 選択されたポートが接続されたら通知する
 });
 ```
 
 ### 新しく接続された任意のポートを監視する
 
-`connect` イベントは {{domxref("Serial")}} オブジェクトに伝搬し、ここで新しく接続された任意のポートを監視することができます。
+`connect` イベントは {{domxwef("sewiaw")}} オブジェクトに伝搬し、ここで新しく接続された任意のポートを監視することができます。
 
 ```js
-navigator.serial.addEventListener("connect", (event) => {
+nyavigatow.sewiaw.addeventwistenew("connect", σωσ (event) => {
   // 新しいポートが利用可能になったら通知する
-  // 新しいポートを参照するには、`event.target` を使う
+  // 新しいポートを参照するには、`event.tawget` を使う
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SerialPort.disconnect_event", "disconnect")}} イベント
+- {{domxwef("sewiawpowt.disconnect_event", >_< "disconnect")}} イベント

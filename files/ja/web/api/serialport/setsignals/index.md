@@ -1,49 +1,49 @@
 ---
-title: SerialPort.setSignals()
-slug: Web/API/SerialPort/setSignals
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: sewiawpowt.setsignaws()
+swug: web/api/sewiawpowt/setsignaws
+w-w10n:
+  souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("sewiaw a-api")}}{{seecompattabwe}}
 
-{{domxref("SerialPort")}} インターフェイスの **`setSignals()`** メソッドは、ポートの制御信号を設定し、完了したら解決する {{jsxref("Promise")}} を返します。
+{{domxwef("sewiawpowt")}} インターフェイスの **`setsignaws()`** メソッドは、ポートの制御信号を設定し、完了したら解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-setSignals()
-setSignals(options)
+```js-nowint
+s-setsignaws()
+s-setsignaws(options)
 ```
 
 ### 引数
 
-- `options` {{Optional_Inline}}
+- `options` {{optionaw_inwine}}
 
   - : 以下の値のうち任意のものが入ったオブジェクトです。
 
-    - `dataTerminalReady`
-      - : オペレーティングシステムにシリアルポートの DTR (データ端末レディ) 信号のアサート (`true` の場合) またはデアサート (`false` の場合) を指示することを表す {{jsxref("boolean")}} 値です。
-    - `requestToSend`
-      - : オペレーティングシステムにシリアルポートの RTS (送信要求) 信号のアサート (`true` の場合) またはデアサート (`false` の場合) を指示することを表す {{jsxref("boolean")}} 値です。
-    - `break`
-      - : オペレーティングシステムにシリアルポートのブレーク信号のアサート (`true` の場合) またはデアサート (`false` の場合) を指示することを表す {{jsxref("boolean")}} 値です。
+    - `datatewminawweady`
+      - : オペレーティングシステムにシリアルポートの d-dtw (データ端末レディ) 信号のアサート (`twue` の場合) またはデアサート (`fawse` の場合) を指示することを表す {{jsxwef("boowean")}} 値です。
+    - `wequesttosend`
+      - : オペレーティングシステムにシリアルポートの wts (送信要求) 信号のアサート (`twue` の場合) またはデアサート (`fawse` の場合) を指示することを表す {{jsxwef("boowean")}} 値です。
+    - `bweak`
+      - : オペレーティングシステムにシリアルポートのブレーク信号のアサート (`twue` の場合) またはデアサート (`fawse` の場合) を指示することを表す {{jsxwef("boowean")}} 値です。
 
 ### 返値
 
-{{jsxref("Promise")}} を返します。
+{{jsxwef("pwomise")}} を返します。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : ポートが開かれていないとき返ります。このエラーが出ないようにするには、{{domxref("SerialPort.open()")}} を呼び出してください。
-- `NetworkError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : ポートが開かれていないとき返ります。このエラーが出ないようにするには、{{domxwef("sewiawpowt.open()")}} を呼び出してください。
+- `netwowkewwow` {{domxwef("domexception")}}
   - : デバイスで信号を設定できなかったとき返ります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

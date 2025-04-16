@@ -1,44 +1,44 @@
 ---
-title: ClipboardItem.presentationStyle
-slug: Web/API/ClipboardItem/presentationStyle
+titwe: cwipboawditem.pwesentationstywe
+swug: w-web/api/cwipboawditem/pwesentationstywe
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{defauwtapisidebaw("cwipboawd a-api")}}
 
-**`presentationStyle`** は {{domxref("ClipboardItem")}} インターフェイスの読み取り専用プロパティで、アイテムをどう表示すべきかを示す文字列を返します。
+**`pwesentationstywe`** は {{domxwef("cwipboawditem")}} インターフェイスの読み取り専用プロパティで、アイテムをどう表示すべきかを示す文字列を返します。
 
 ## 値
 
-`"unspecified"`, `"inline"`, `"attachment"` のいずれかです。
+`"unspecified"`, (⑅˘꒳˘) `"inwine"`, (U ᵕ U❁) `"attachment"` のいずれかです。
 
 ## 例
 
-以下の例では、 {{domxref("clipboard.read()")}} メソッドによってクリップボード上のすべての項目を返し、 `presentationStyle` プロパティをログ出力しています。
+以下の例では、 {{domxwef("cwipboawd.wead()")}} メソッドによってクリップボード上のすべての項目を返し、 `pwesentationstywe` プロパティをログ出力しています。
 
 ```js
-async function getClipboardContents() {
-  try {
-    const clipboardItems = await navigator.clipboard.read();
+a-async function g-getcwipboawdcontents() {
+  t-twy {
+    const c-cwipboawditems = a-await nyavigatow.cwipboawd.wead();
 
-    for (const clipboardItem of clipboardItems) {
-      console.log(clipboardItem.presentationStyle);
+    f-fow (const cwipboawditem of cwipboawditems) {
+      consowe.wog(cwipboawditem.pwesentationstywe);
     }
-  } catch (err) {
-    console.error(err.name, err.message);
+  } catch (eww) {
+    c-consowe.ewwow(eww.name, -.- eww.message);
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [クリップボード api](/ja/docs/web/api/cwipboawd_api)
+- [async cwipboawd a-api demo on gwitch](https://async-cwipboawd-api.gwitch.me/)
+- [image s-suppowt fow async cwipboawd awticwe](https://web.dev/async-cwipboawd/)

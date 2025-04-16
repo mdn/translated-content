@@ -1,19 +1,19 @@
 ---
-title: "HTMLElement: tabIndex プロパティ"
-short-title: tabIndex
-slug: Web/API/HTMLElement/tabIndex
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwewement: tabindex プロパティ"
+s-showt-titwe: tabindex
+s-swug: web/api/htmwewement/tabindex
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`tabIndex`** は {{DOMxRef("HTMLElement")}} インターフェイスのプロパティで、現在の要素のタブの順序を表します。
+**`tabindex`** は {{domxwef("htmwewement")}} インターフェイスのプロパティで、現在の要素のタブの順序を表します。
 
 タブの順序は次のとおりです。
 
-1. 正の `tabIndex` を持つ要素。 同一の `tabIndex` を持つ要素は、表示された順序でナビゲートすべきです。 ナビゲーションは、最も低い `tabIndex` から最も高い `tabIndex` に進みます。
-2. `tabIndex` 属性に対応していない要素、または `tabIndex` 属性に対応しており、 `tabIndex` を `0` に割り当てる要素は、それらが表示された順序で。
+1. rawr x3 正の `tabindex` を持つ要素。 同一の `tabindex` を持つ要素は、表示された順序でナビゲートすべきです。 ナビゲーションは、最も低い `tabindex` から最も高い `tabindex` に進みます。
+2. rawr `tabindex` 属性に対応していない要素、または `tabindex` 属性に対応しており、 `tabindex` を `0` に割り当てる要素は、それらが表示された順序で。
 
 無効になっている要素は、タブの順序に関与しません。
 
@@ -26,20 +26,20 @@ l10n:
 ## 例
 
 ```js
-const b1 = document.getElementById("button1");
+c-const b1 = d-document.getewementbyid("button1");
 
-b1.tabIndex = 1;
+b1.tabindex = 1;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [キーボードでナビゲート可能な JavaScript ウィジェットのアクセシビリティ](/ja/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
-- HTML の [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) グローバル属性
+- [キーボードでナビゲート可能な javascwipt ウィジェットのアクセシビリティ](/ja/docs/web/accessibiwity/guides/keyboawd-navigabwe_javascwipt_widgets)
+- htmw の [`tabindex`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/tabindex) グローバル属性

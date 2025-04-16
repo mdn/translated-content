@@ -1,32 +1,32 @@
 ---
-title: "SVGAnimatedLengthList: baseVal プロパティ"
-short-title: baseVal
-slug: Web/API/SVGAnimatedLengthList/baseVal
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: "svganimatedwengthwist: basevaw プロパティ"
+s-showt-titwe: b-basevaw
+s-swug: web/api/svganimatedwengthwist/basevaw
+w-w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`baseVal`** は {{domxref("SVGAnimatedLengthList")}} インターフェイスの読み取り専用プロパティで、[`<length>`](/ja/docs/Web/SVG/Guides/Content_type#length)、[`<percentage>`](/ja/docs/Web/SVG/Guides/Content_type#percentage)、[`<number>`](/ja/docs/Web/SVG/Guides/Content_type#number)の値のリストを受け入れる、アニメーション可能な属性のアニメーション前の基底値を表します。
+**`basevaw`** は {{domxwef("svganimatedwengthwist")}} インターフェイスの読み取り専用プロパティで、[`<wength>`](/ja/docs/web/svg/guides/content_type#wength)、[`<pewcentage>`](/ja/docs/web/svg/guides/content_type#pewcentage)、[`<numbew>`](/ja/docs/web/svg/guides/content_type#numbew)の値のリストを受け入れる、アニメーション可能な属性のアニメーション前の基底値を表します。
 
-一部の SVG 属性、例えば [`<tspan>`](/ja/docs/Web/SVG/Reference/Element/tspan) や [`<text>`](/ja/docs/Web/SVG/Reference/Element/text) 要素の `x`、`y`、`dx`、`dy` などの属性は、長さ、パーセント値、数値のリストを値として受け入れます。このプロパティは、アニメーションしていない状態における属性値を、生きた {{domxref("SVGLengthList")}} オブジェクトとして反映します。
+一部の s-svg 属性、例えば [`<tspan>`](/ja/docs/web/svg/wefewence/ewement/tspan) や [`<text>`](/ja/docs/web/svg/wefewence/ewement/text) 要素の `x`、`y`、`dx`、`dy` などの属性は、長さ、パーセント値、数値のリストを値として受け入れます。このプロパティは、アニメーションしていない状態における属性値を、生きた {{domxwef("svgwengthwist")}} オブジェクトとして反映します。
 
 ## 値
 
-{{domxref("SVGLengthList")}} オブジェクトで、この属性の基底値を表します。
+{{domxwef("svgwengthwist")}} オブジェクトで、この属性の基底値を表します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`<length>`](/ja/docs/Web/SVG/Guides/Content_type#length)
-- [`<percentage>`](/ja/docs/Web/SVG/Guides/Content_type#percentage)
-- [`<number>`](/ja/docs/Web/SVG/Guides/Content_type#number)
-- {{domxref("SVGLengthList")}}
+- [`<wength>`](/ja/docs/web/svg/guides/content_type#wength)
+- [`<pewcentage>`](/ja/docs/web/svg/guides/content_type#pewcentage)
+- [`<numbew>`](/ja/docs/web/svg/guides/content_type#numbew)
+- {{domxwef("svgwengthwist")}}

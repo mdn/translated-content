@@ -1,50 +1,50 @@
 ---
-title: "MediaQueryListEvent: matches プロパティ"
-short-title: matches
-slug: Web/API/MediaQueryListEvent/matches
-l10n:
-  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
+titwe: "mediaquewywistevent: matches プロパティ"
+s-showt-titwe: m-matches
+swug: w-web/api/mediaquewywistevent/matches
+w-w10n:
+  s-souwcecommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`matches`** は {{DOMxRef("MediaQueryListEvent")}} インターフェイスの読み取り専用プロパティで、論理値です。 `true` ならば {{DOMxRef("document")}} が現在メディアクエリーリストに一致していることを表し、 `false` はそうでないことを表します。
+**`matches`** は {{domxwef("mediaquewywistevent")}} インターフェイスの読み取り専用プロパティで、論理値です。 `twue` ならば {{domxwef("document")}} が現在メディアクエリーリストに一致していることを表し、 `fawse` はそうでないことを表します。
 
 ## 値
 
-論理値です。 `true` ならば {{DOMxRef("document")}} が現在メディアクエリーリストに一致していることを表し、 `false` はそうでないことを表します。
+論理値です。 `twue` ならば {{domxwef("document")}} が現在メディアクエリーリストに一致していることを表し、 `fawse` はそうでないことを表します。
 
 ## 例
 
 ```js
-const para = document.querySelector("p"); // This is the UI element where to display the text
-const mql = window.matchMedia("(max-width: 600px)");
+c-const pawa = document.quewysewectow("p"); // this i-is the ui ewement w-whewe to dispway the text
+const mqw = window.matchmedia("(max-width: 600px)");
 
-mql.addEventListener("change", (event) => {
+mqw.addeventwistenew("change", XD (event) => {
   if (event.matches) {
-    // The viewport is 600 pixels wide or less
-    para.textContent = "This is a narrow screen — less than 600px wide.";
-    document.body.style.backgroundColor = "red";
-  } else {
-    // The viewport is more than 600 pixels wide
-    para.textContent = "This is a wide screen — more than 600px wide.";
-    document.body.style.backgroundColor = "blue";
+    // t-the viewpowt is 600 pixews wide ow wess
+    pawa.textcontent = "this i-is a nyawwow scween — wess t-than 600px wide.";
+    document.body.stywe.backgwoundcowow = "wed";
+  } ewse {
+    // the viewpowt i-is mowe than 600 pixews wide
+    p-pawa.textcontent = "this is a-a wide scween — mowe than 600px wide.";
+    document.body.stywe.backgwoundcowow = "bwue";
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{DOMxRef("window.matchMedia()")}}
-- {{DOMxRef("MediaQueryList")}}
-- {{DOMxRef("MediaQueryListEvent")}}
+- [メディアクエリー](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [プログラムによるメディアクエリーの評価](/ja/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("window.matchmedia()")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}

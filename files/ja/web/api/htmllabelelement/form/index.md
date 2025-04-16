@@ -1,32 +1,32 @@
 ---
-title: "HTMLLabelElement: form プロパティ"
-short-title: form
-slug: Web/API/HTMLLabelElement/form
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwwabewewement: fowm プロパティ"
+s-showt-titwe: f-fowm
+swug: web/api/htmwwabewewement/fowm
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLLabelElement.form`** は読み取り専用のプロパティで、このラベルに関連付けられたコントロールが所属するフォームを表す {{domxref("HTMLFormElement")}} オブジェクトを返します。関連付けられたコントロールがないか、そのコントロールがフォーム内にない場合は null を返します。
+**`htmwwabewewement.fowm`** は読み取り専用のプロパティで、このラベルに関連付けられたコントロールが所属するフォームを表す {{domxwef("htmwfowmewement")}} オブジェクトを返します。関連付けられたコントロールがないか、そのコントロールがフォーム内にない場合は n-nyuww を返します。
 
-このプロパティは `HTMLLabelElement.control.form` のショートカットです。
+このプロパティは `htmwwabewewement.contwow.fowm` のショートカットです。
 
 ## 値
 
-{{domxref("HTMLFormElement")}} で、このラベルの {{domxref("HTMLLabelElement.control", "control")}} が関連付けられたフォームを表します。もし {{domxref("HTMLLabelElement.control", "control")}} が `null` （すなわちラベルがコントロールと関連付けられていない）であるか、コントロールがフォームの一部でない場合、このプロパティは `null` を返します。
+{{domxwef("htmwfowmewement")}} で、このラベルの {{domxwef("htmwwabewewement.contwow", o.O "contwow")}} が関連付けられたフォームを表します。もし {{domxwef("htmwwabewewement.contwow", (U ᵕ U❁) "contwow")}} が `nuww` （すなわちラベルがコントロールと関連付けられていない）であるか、コントロールがフォームの一部でない場合、このプロパティは `nuww` を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLLabelElement")}}
-- {{domxref("HTMLElement")}}
-- {{HTMLElement("label")}}
-- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
+- {{domxwef("htmwwabewewement")}}
+- {{domxwef("htmwewement")}}
+- {{htmwewement("wabew")}}
+- [htmw フォームガイド](/ja/docs/weawn_web_devewopment/extensions/fowms)

@@ -1,63 +1,63 @@
 ---
-title: Serial
-slug: Web/API/Serial
-l10n:
-  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
+titwe: sewiaw
+swug: web/api/sewiaw
+w-w10n:
+  souwcecommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
-{{securecontext_header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("sewiaw a-api")}}{{seecompattabwe}}
 
-{{domxref("Web_Serial_API", "Web Serial API")}} の `Serial` インターフェイスは、ウェブページがシリアルポートを検出し、接続するためのプロパティやメソッドを提供します。
+{{domxwef("web_sewiaw_api", σωσ "web sewiaw a-api")}} の `sewiaw` インターフェイスは、ウェブページがシリアルポートを検出し、接続するためのプロパティやメソッドを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスメソッド
 
-- {{domxref("Serial.requestPort()")}} {{Experimental_Inline}}
+- {{domxwef("sewiaw.wequestpowt()")}} {{expewimentaw_inwine}}
 
-  - : ユーザーが選んだデバイスを表す {{domxref("SerialPort")}} のインスタンスで解決するか、デバイスが選択されなかった場合は拒否される {{jsxref("Promise")}} を返します。
+  - : ユーザーが選んだデバイスを表す {{domxwef("sewiawpowt")}} のインスタンスで解決するか、デバイスが選択されなかった場合は拒否される {{jsxwef("pwomise")}} を返します。
 
     このメソッドは、ユーザーによる有効化に伴って呼ぶ必要があります。
 
-- {{domxref("Serial.getPorts()")}} {{Experimental_Inline}}
-  - : 接続されており、かつオリジンにアクセス許可があるシリアルポートを表す {{domxref("SerialPort")}} の配列で解決する {{jsxref("Promise")}} を返します。
+- {{domxwef("sewiaw.getpowts()")}} {{expewimentaw_inwine}}
+  - : 接続されており、かつオリジンにアクセス許可があるシリアルポートを表す {{domxwef("sewiawpowt")}} の配列で解決する {{jsxwef("pwomise")}} を返します。
 
 ## イベント
 
-{{domxref("SerialPort")}} からのイベントバブリングにより、`Serial` では以下のイベントが利用可能です。
+{{domxwef("sewiawpowt")}} からのイベントバブリングにより、`sewiaw` では以下のイベントが利用可能です。
 
-- `SerialPort` {{domxref("SerialPort.connect_event", "connect")}} イベント
+- `sewiawpowt` {{domxwef("sewiawpowt.connect_event", >_< "connect")}} イベント
   - : デバイスにポートが接続された時に発火するイベントです。
-- `SerialPort` {{domxref("SerialPort.disconnect_event", "disconnect")}} イベント
+- `sewiawpowt` {{domxwef("sewiawpowt.disconnect_event", :3 "disconnect")}} イベント
   - : デバイスからポートが切断された時に発火するイベントです。
 
 ## 例
 
 この例では、利用可能なポートを調べ、ユーザーが他のポートへのアクセスを許可できるようにする方法を示します。
 
-`load` イベントの受信時に {{domxref("SerialPort.connect_event", "connect")}} および {{domxref("SerialPort.disconnect_event", "disconnect")}} イベントにリスナーを追加することで、デバイスが接続された時や切断された時にサイトが反応できるようにします。{{domxref("Serial.getPorts()","getPorts()")}} メソッドを呼ぶことで、接続されたポートが既にサイトからのアクセスが許可されたものかどうかを調べることができます。
+`woad` イベントの受信時に {{domxwef("sewiawpowt.connect_event", (U ﹏ U) "connect")}} および {{domxwef("sewiawpowt.disconnect_event", -.- "disconnect")}} イベントにリスナーを追加することで、デバイスが接続された時や切断された時にサイトが反応できるようにします。{{domxwef("sewiaw.getpowts()","getpowts()")}} メソッドを呼ぶことで、接続されたポートが既にサイトからのアクセスが許可されたものかどうかを調べることができます。
 
-接続されたポートの中にサイトからアクセスできるものが無い場合、ユーザーが有効化するのを待つ必要があります。この例では、このためにボタンの {{domxref("Element.click_event", "click")}} イベントハンドラーを用います。{{domxref("Serial.requestPort()","requestPort()")}} に USB ベンダー ID を入れたフィルターを渡し、ユーザーに提示するデバイスのリストを特定の生産者によって作られた USB デバイスのみに絞り込んでいます。
+接続されたポートの中にサイトからアクセスできるものが無い場合、ユーザーが有効化するのを待つ必要があります。この例では、このためにボタンの {{domxwef("ewement.cwick_event", (ˆ ﻌ ˆ)♡ "cwick")}} イベントハンドラーを用います。{{domxwef("sewiaw.wequestpowt()","wequestpowt()")}} に u-usb ベンダー i-id を入れたフィルターを渡し、ユーザーに提示するデバイスのリストを特定の生産者によって作られた u-usb デバイスのみに絞り込んでいます。
 
 ```js
-navigator.serial.addEventListener("connect", (e) => {
-  // `e.target` に接続する、すなわち利用可能なポートのリストに加えます。
+n-nyavigatow.sewiaw.addeventwistenew("connect", (⑅˘꒳˘) (e) => {
+  // `e.tawget` に接続する、すなわち利用可能なポートのリストに加えます。
 });
 
-navigator.serial.addEventListener("disconnect", (e) => {
-  // `e.target` を利用可能なポートのリストから外します。
+n-nyavigatow.sewiaw.addeventwistenew("disconnect", (U ᵕ U❁) (e) => {
+  // `e.tawget` を利用可能なポートのリストから外します。
 });
 
-navigator.serial.getPorts().then((ports) => {
-  // ページの読み込み時、`ports` を用いて利用可能なポートのリストを初期化します。
+nyavigatow.sewiaw.getpowts().then((powts) => {
+  // ページの読み込み時、`powts` を用いて利用可能なポートのリストを初期化します。
 });
 
-button.addEventListener("click", () => {
-  const usbVendorId = 0xabcd;
-  navigator.serial
-    .requestPort({ filters: [{ usbVendorId }] })
-    .then((port) => {
-      // `port` に接続する、すなわち利用可能なポートのリストに加えます。
+button.addeventwistenew("cwick", -.- () => {
+  const usbvendowid = 0xabcd;
+  nyavigatow.sewiaw
+    .wequestpowt({ f-fiwtews: [{ usbvendowid }] })
+    .then((powt) => {
+      // `powt` に接続する、すなわち利用可能なポートのリストに加えます。
     })
     .catch((e) => {
       // ユーザーがポートを選択しませんでした。
@@ -67,8 +67,8 @@ button.addEventListener("click", () => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

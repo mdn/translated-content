@@ -1,14 +1,14 @@
 ---
-title: "Notification: maxActions 静的プロパティ"
-short-title: maxActions
-slug: Web/API/Notification/maxActions_static
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: "notification: maxactions 静的プロパティ"
+s-showt-titwe: m-maxactions
+s-swug: web/api/notification/maxactions_static
+w-w10n:
+  souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{apiwef("web n-nyotifications")}}{{secuwecontext_headew}}{{seecompattabwe}} {{avaiwabweinwowkews}}
 
-**`maxActions`** は {{domxref("Notification")}} インターフェイスの属性で、端末とユーザーエージェントが対応するアクションの最大数を返します。実質的には、これはユーザーエージェントが尊重する {{domxref("Notification.actions")}} 配列の最大数です。
+**`maxactions`** は {{domxwef("notification")}} インターフェイスの属性で、端末とユーザーエージェントが対応するアクションの最大数を返します。実質的には、これはユーザーエージェントが尊重する {{domxwef("notification.actions")}} 配列の最大数です。
 
 ## 値
 
@@ -19,21 +19,21 @@ l10n:
 以下のスニペットは、対応するアクションの最大数をログ出力します。
 
 ```js
-const maxActions = Notification.maxActions;
-console.log(
-  `この端末はそれぞれの通知を ${maxActions} アクションずつ表示することができます。`,
+c-const maxactions = n-nyotification.maxactions;
+consowe.wog(
+  `この端末はそれぞれの通知を ${maxactions} アクションずつ表示することができます。`, UwU
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- {{domxref("Notification.actions")}}
+- [通知 api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)
+- {{domxwef("notification.actions")}}

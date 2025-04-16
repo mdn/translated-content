@@ -1,77 +1,77 @@
 ---
-title: "HTMLElement: beforetoggle イベント"
-slug: Web/API/HTMLElement/beforetoggle_event
-l10n:
-  sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
+titwe: "htmwewement: befowetoggwe イベント"
+s-swug: web/api/htmwewement/befowetoggwe_event
+w-w10n:
+  souwcecommit: b-bb6092c4230b69c2eceae6910af68c73955cae1c
 ---
 
-{{APIRef("Popover API")}}
+{{apiwef("popovew a-api")}}
 
-**`beforetoggle`** は {{domxref("HTMLElement")}} インターフェイスのイベントで、{{domxref("Popover_API", "ポップオーバー", "", "nocode")}}要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性がある要素）において、表示または非表示になる直前に発行されます。
+**`befowetoggwe`** は {{domxwef("htmwewement")}} インターフェイスのイベントで、{{domxwef("popovew_api", (U ᵕ U❁) "ポップオーバー", -.- "", "nocode")}}要素（すなわち有効な [`popovew`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/popovew) 属性がある要素）において、表示または非表示になる直前に発行されます。
 
-- ポップオーバーが非表示状態から表示状態に遷移した場合、`event.oldState` プロパティには `closed` が、`event.newState` プロパティには `open` が設定されます。
-- ポップオーバーが表示状態から非表示状態に遷移した場合、 `event.oldState` は `open` に、 `event.newState` は `closed` になります。
+- ポップオーバーが非表示状態から表示状態に遷移した場合、`event.owdstate` プロパティには `cwosed` が、`event.newstate` プロパティには `open` が設定されます。
+- ポップオーバーが表示状態から非表示状態に遷移した場合、 `event.owdstate` は `open` に、 `event.newstate` は `cwosed` になります。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", ^^;; "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("beforetoggle", (event) => {});
+a-addeventwistenew("befowetoggwe", >_< (event) => {});
 
-onbeforetoggle = (event) => {};
+o-onbefowetoggwe = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ToggleEvent")}} です。{{domxref("Event")}} から継承しています。
+{{domxwef("toggweevent")}} です。{{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("ToggleEvent")}}
+{{inhewitancediagwam("toggweevent")}}
 
 ## 例
 
 ### 基本的な例
 
 ```js
-const popover = document.getElementById("mypopover");
+c-const popovew = d-document.getewementbyid("mypopovew");
 
 // ...
 
-popover.addEventListener("beforetoggle", (event) => {
-  if (event.newState === "open") {
-    console.log("Popover is being shown");
-  } else {
-    console.log("Popover is being hidden");
+popovew.addeventwistenew("befowetoggwe", mya (event) => {
+  if (event.newstate === "open") {
+    consowe.wog("popovew is being s-shown");
+  } ewse {
+    consowe.wog("popovew is b-being hidden");
   }
 });
 ```
 
 ### トグルイベントの合体に関するメモ
 
-`beforetoggle` イベントが合体していることを特筆に値するでしょう。イベントループが循環する前に複数の `beforetoggle` イベントが発行された場合、単一のイベントしか発行されないということです。
+`befowetoggwe` イベントが合体していることを特筆に値するでしょう。イベントループが循環する前に複数の `befowetoggwe` イベントが発行された場合、単一のイベントしか発行されないということです。
 
 例えば次のようになります。
 
 ```js
-popover.addEventListener("beforetoggle", () => {
+popovew.addeventwistenew("befowetoggwe", mya () => {
   //...
 });
 
-popover.showPopover();
-popover.hidePopover();
-// `beforetoggle` は 1 回しか発行されない
+p-popovew.showpopovew();
+popovew.hidepopovew();
+// `befowetoggwe` は 1 回しか発行されない
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) グローバル属性
-- [ポップオーバー API](/ja/docs/Web/API/Popover_API)
-- 関連イベント: [`toggle`](/ja/docs/Web/API/HTMLElement/toggle_event)
+- htmw の [`popovew`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/popovew) グローバル属性
+- [ポップオーバー api](/ja/docs/web/api/popovew_api)
+- 関連イベント: [`toggwe`](/ja/docs/web/api/htmwewement/toggwe_event)

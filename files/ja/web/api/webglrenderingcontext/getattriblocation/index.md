@@ -1,47 +1,47 @@
 ---
-title: "WebGLRenderingContext: getAttribLocation() メソッド"
-short-title: getAttribLocation()
-slug: Web/API/WebGLRenderingContext/getAttribLocation
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "webgwwendewingcontext: getattwibwocation() メソッド"
+s-showt-titwe: g-getattwibwocation()
+s-swug: web/api/webgwwendewingcontext/getattwibwocation
+w-w10n:
+  s-souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.getAttribLocation()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、指定された {{domxref("WebGLProgram")}} 内の属性の場所を返します。
+**`webgwwendewingcontext.getattwibwocation()`** は [webgw api](/ja/docs/web/api/webgw_api) のメソッドで、指定された {{domxwef("webgwpwogwam")}} 内の属性の場所を返します。
 
 ## 構文
 
-```js-nolint
-getAttribLocation(program, name)
+```js-nowint
+g-getattwibwocation(pwogwam, ( ͡o ω ͡o ) n-nyame)
 ```
 
 ### 引数
 
-- `program`
-  - : 属性の変数の入った {{domxref("WebGLProgram")}} です。
+- `pwogwam`
+  - : 属性の変数の入った {{domxwef("webgwpwogwam")}} です。
 - `name`
   - : 場所を取得する属性の変数名を指定する文字列です。
 
 ### 返値
 
-見つかった場合、変数名の場所を示す {{domxref("WebGL_API/Types", "GLint")}} 番号を返します。
+見つかった場合、変数名の場所を示す {{domxwef("webgw_api/types", UwU "gwint")}} 番号を返します。
 それ以外の場合は -1 を返します。
 
 ## 例
 
 ```js
-gl.getAttribLocation(program, "vColor");
+gw.getattwibwocation(pwogwam, rawr x3 "vcowow");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.getUniformLocation()")}}
+- {{domxwef("webgwwendewingcontext.getunifowmwocation()")}}

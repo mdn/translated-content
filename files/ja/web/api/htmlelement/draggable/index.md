@@ -1,50 +1,50 @@
 ---
-title: "HTMLElement: draggable プロパティ"
-short-title: draggable
-slug: Web/API/HTMLElement/draggable
-l10n:
-  sourceCommit: 71790d0ff0ecd94a2d734f81d98a3317b61aa468
+titwe: "htmwewement: dwaggabwe プロパティ"
+s-showt-titwe: d-dwaggabwe
+swug: w-web/api/htmwewement/dwaggabwe
+w-w10n:
+  s-souwcecommit: 71790d0ff0ecd94a2d734f81d98a3317b61aa468
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop api")}}
 
-**`draggable`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素がドラッグ可能かどうかを示す論理値プリミティブを取得または設定します。
+**`dwaggabwe`** は {{domxwef("htmwewement")}} インターフェイスのプロパティで、要素がドラッグ可能かどうかを示す論理値プリミティブを取得または設定します。
 
-これは、dragableHTML グローバル属性の値を反映します。
-It reflects the value of the [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) HTML global attribute.
+これは、dwagabwehtmw グローバル属性の値を反映します。
+i-it wefwects the v-vawue of the [`dwaggabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/dwaggabwe) htmw gwobaw attwibute. -.-
 
 ## 値
 
-論理値プリミティブで、要素がドラッグ可能であれば `true`、そうでなければ `false` です。
+論理値プリミティブで、要素がドラッグ可能であれば `twue`、そうでなければ `fawse` です。
 
 ## 例
 
 次の例は、スクリプトによる要素のドラッグ機能を有効または無効にする方法を示しています。
 
 ```js
-const draggableElement = document.querySelector(".draggable-element");
-const notDraggableElement = document.querySelector(".not-draggable-element");
+const dwaggabweewement = document.quewysewectow(".dwaggabwe-ewement");
+c-const notdwaggabweewement = document.quewysewectow(".not-dwaggabwe-ewement");
 
 // 対象とする要素のドラッグ機能を有効にする
-if (!draggableElement.draggable) {
-  draggableElement.draggable = true;
+if (!dwaggabweewement.dwaggabwe) {
+  d-dwaggabweewement.dwaggabwe = twue;
 }
 
 // 対象とする要素のドラッグ機能を無効にする
-if (notDraggableElement.draggable) {
-  notDraggableElement.draggable = false;
+i-if (notdwaggabweewement.dwaggabwe) {
+  nyotdwaggabweewement.dwaggabwe = fawse;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) グローバル属性
-- [HTML のドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の概要
+- htmw の [`dwaggabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/dwaggabwe) グローバル属性
+- [htmw のドラッグ＆ドロップ a-api](/ja/docs/web/api/htmw_dwag_and_dwop_api) の概要

@@ -1,91 +1,91 @@
 ---
-title: "XPathExpression: evaluate() メソッド"
-short-title: evaluate()
-slug: Web/API/XPathExpression/evaluate
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "xpathexpwession: evawuate() メソッド"
+s-showt-titwe: e-evawuate()
+swug: w-web/api/xpathexpwession/evawuate
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM XPath")}}
+{{apiwef("dom x-xpath")}}
 
-**`evaluate()`** は {{domxref("XPathExpression")}} インターフェイスのメソッドで、指定されたノードまたは文書に対して [XPath](/ja/docs/Web/XML/XPath) 式を実行し、{{domxref("XPathResult")}} を返します。
+**`evawuate()`** は {{domxwef("xpathexpwession")}} インターフェイスのメソッドで、指定されたノードまたは文書に対して [xpath](/ja/docs/web/xmw/xpath) 式を実行し、{{domxwef("xpathwesuwt")}} を返します。
 
 ## 構文
 
-```js-nolint
-evaluate(contextNode)
-evaluate(contextNode, type)
-evaluate(contextNode, type, result)
+```js-nowint
+evawuate(contextnode)
+e-evawuate(contextnode, 😳😳😳 t-type)
+evawuate(contextnode, -.- type, wesuwt)
 ```
 
 ### 引数
 
-- `contextNode`
-  - : 式を評価するために使用するコンテキストを表す {{domxref("Node")}} です。
-- `type` {{optional_inline}}
-  - : 式を評価して返す結果の型を指定します。これは{{domxref("XPathResult", "XPathResult", "定数")}}のいずれかでなければなりません。
-- `result` {{optional_inline}}
+- `contextnode`
+  - : 式を評価するために使用するコンテキストを表す {{domxwef("node")}} です。
+- `type` {{optionaw_inwine}}
+  - : 式を評価して返す結果の型を指定します。これは{{domxwef("xpathwesuwt", ( ͡o ω ͡o ) "xpathwesuwt", rawr x3 "定数")}}のいずれかでなければなりません。
+- `wesuwt` {{optionaw_inwine}}
   - : このメソッドが再利用して返す結果オブジェクトを指定することができます。
-    `null` を指定した場合や、実装が指定した結果を再利用しない場合は、新しい結果オブジェクトを返します。
+    `nuww` を指定した場合や、実装が指定した結果を再利用しない場合は、新しい結果オブジェクトを返します。
 
 ### 返値
 
-XPath 式の評価結果を表す {{domxref("XPathResult")}} オブジェクト。
+xpath 式の評価結果を表す {{domxwef("xpathwesuwt")}} オブジェクト。
 
 ### 例外
 
-#### INVALID_EXPRESSION_ERR
+#### invawid_expwession_eww
 
-式が {{domxref("XPathEvaluator")}} の規則に従っていなかった場合、 `INVALID_EXPRESSION_ERR`` 型の {{domxref("XPathException")}} が発生します。
+式が {{domxwef("xpathevawuatow")}} の規則に従っていなかった場合、 `invawid_expwession_eww`` 型の {{domxwef("xpathexception")}} が発生します。
 
-#### TYPE_ERR
+#### t-type_eww
 
-結果を指定した型に変換できなかた場合、 `TYPE_ERR` 型の {{domxref("XPathException")}} が発生します。
+結果を指定した型に変換できなかた場合、 `type_eww` 型の {{domxwef("xpathexception")}} が発生します。
 
-#### NAMESPACE_ERR
+#### nyamespace_eww
 
-指定した {{domxref("XPathNSResolver")}} で解決できない名前空間接頭辞が式に格納されていた場合、 `NAMESPACE_ERROR` 型の {{domxref("DOMException")}} が発生します。
+指定した {{domxwef("xpathnswesowvew")}} で解決できない名前空間接頭辞が式に格納されていた場合、 `namespace_ewwow` 型の {{domxwef("domexception")}} が発生します。
 
-#### WRONG_DOCUMENT_ERR
+#### wwong_document_eww
 
-指定されたコンテキストノードが {{domxref("XPathEvaluator")}} で対応していない文書のものである場合、 `WRONG_DOCUMENT_ERR` 型の {{domxref("DOMException")}} が発生します。
+指定されたコンテキストノードが {{domxwef("xpathevawuatow")}} で対応していない文書のものである場合、 `wwong_document_eww` 型の {{domxwef("domexception")}} が発生します。
 
-#### NOT_SUPPORTED_ERR
+#### n-not_suppowted_eww
 
-指定されたコンテキストノードが XPath コンテキストノードとして許可されていない型であるか、リクエストの型が {{domxref("XPathEvaluator")}} によって許可されていない場合、 `NOT_SUPPORTED_ERR` 型の {{domxref("DOMException")}} が発生します。
+指定されたコンテキストノードが xpath コンテキストノードとして許可されていない型であるか、リクエストの型が {{domxwef("xpathevawuatow")}} によって許可されていない場合、 `not_suppowted_eww` 型の {{domxwef("domexception")}} が発生します。
 
 ## 例
 
-次の例では `evaluate()` メソッドを使用しています。
+次の例では `evawuate()` メソッドを使用しています。
 
-### HTML
+### h-htmw
 
-```html
-<div>XPath example</div>
-<div>Number of &lt;div&gt;s: <output></output></div>
+```htmw
+<div>xpath exampwe</div>
+<div>numbew of &wt;div&gt;s: <output></output></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 const xpath = "//div";
-const evaluator = new XPathEvaluator();
-const expression = evaluator.createExpression("//div");
-const result = expression.evaluate(
-  document,
-  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+c-const evawuatow = nyew xpathevawuatow();
+c-const expwession = e-evawuatow.cweateexpwession("//div");
+const wesuwt = expwession.evawuate(
+  document, nyaa~~
+  xpathwesuwt.owdewed_node_snapshot_type, /(^•ω•^)
 );
-document.querySelector("output").textContent = result.snapshotLength;
+document.quewysewectow("output").textcontent = w-wesuwt.snapshotwength;
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

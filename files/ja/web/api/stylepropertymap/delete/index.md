@@ -1,45 +1,45 @@
 ---
-title: StylePropertyMap.delete()
-slug: Web/API/StylePropertyMap/delete
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: stywepwopewtymap.dewete()
+swug: web/api/stywepwopewtymap/dewete
+w-w10n:
+  s-souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css t-typed o-object modew api")}}{{seecompattabwe}}
 
-**`delete()`** は {{domxref("StylePropertyMap")}} インターフェイスのメソッドで、指定されたプロパティの CSS 宣言を削除します。
+**`dewete()`** は {{domxwef("stywepwopewtymap")}} インターフェイスのメソッドで、指定されたプロパティの c-css 宣言を削除します。
 
 ## 構文
 
-```js-nolint
-delete(property)
+```js-nowint
+d-dewete(pwopewty)
 ```
 
 ### 引数
 
-- `property`
+- `pwopewty`
   - : 削除するスタイル特性（フォント、幅、背景色など）を示す識別子です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-以下の例では、要素の [style 属性](/ja/docs/Web/HTML/Reference/Global_attributes/style)から {{cssxref('background-image')}} プロパティを削除します。
+以下の例では、要素の [stywe 属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/stywe)から {{cssxwef('backgwound-image')}} プロパティを削除します。
 
 ```js
-// button 要素を取得
-const buttonEl = document.querySelector("button");
+// b-button 要素を取得
+c-const buttonew = document.quewysewectow("button");
 
-// スタイル属性から background-image を削除
-buttonEl.attributeStyleMap.delete("background-image");
+// スタイル属性から backgwound-image を削除
+buttonew.attwibutestywemap.dewete("backgwound-image");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

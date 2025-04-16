@@ -1,19 +1,19 @@
 ---
-title: "Response: text() メソッド"
-short-title: text()
-slug: Web/API/Response/text
-l10n:
-  sourceCommit: 889fd7ca9d03276638ec065e47ea967c1a2fc10b
+titwe: "wesponse: text() メソッド"
+s-showt-titwe: t-text()
+swug: w-web/api/wesponse/text
+w-w10n:
+  s-souwcecommit: 889fd7ca9d03276638ec065e47ea967c1a2fc10b
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-**`text()`** は {{domxref("Response")}} インターフェイスのメソッドで、 {{domxref("Response")}} ストリームを取得して完全に読み込みます。文字列で解決するプロミスを返します。 レスポンスは*常に* UTF-8 としてデコードされます。
+**`text()`** は {{domxwef("wesponse")}} インターフェイスのメソッドで、 {{domxwef("wesponse")}} ストリームを取得して完全に読み込みます。文字列で解決するプロミスを返します。 レスポンスは*常に* u-utf-8 としてデコードされます。
 
 ## 構文
 
-```js-nolint
-text()
+```js-nowint
+t-text()
 ```
 
 ### 引数
@@ -26,53 +26,53 @@ text()
 
 ### 例外
 
-- {{domxref("DOMException")}} `AbortError`
-  - : リクエストが[中止された](/ja/docs/Web/API/Fetch_API/Using_Fetch#リクエストの中止)場合。
-- {{jsxref("TypeError")}}
+- {{domxwef("domexception")}} `abowtewwow`
+  - : リクエストが[中止された](/ja/docs/web/api/fetch_api/using_fetch#リクエストの中止)場合。
+- {{jsxwef("typeewwow")}}
   - : 以下のいずれかの原因で発生します。
-    - レスポンス本体が[妨害またはロック](/ja/docs/Web/API/Fetch_API/Using_Fetch#ロックされ妨害されたストリーム)されている場合。
-    - 本体コンテンツをデコードする際にエラーが発生した場合（例えば、{{httpheader("Content-Encoding")}} ヘッダーが不正な場合など）。
+    - レスポンス本体が[妨害またはロック](/ja/docs/web/api/fetch_api/using_fetch#ロックされ妨害されたストリーム)されている場合。
+    - 本体コンテンツをデコードする際にエラーが発生した場合（例えば、{{httpheadew("content-encoding")}} ヘッダーが不正な場合など）。
 
 ## 例
 
-[fetch text の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-text)（[fetch text をライブで](https://mdn.github.io/dom-examples/fetch/fetch-text/)実行）には、{{htmlelement("article")}} 要素と 3 つのリンク（`myLinks` 配列に格納されています）があります。
-最初に、リンクのすべてを反復処理し、それぞれのリンクに、その 1 つをクリックしたとき、 `getData()` 関数がリンクの `data-page` 識別子を引数として実行されるように、`onclick` イベントハンドラーを設定します。
+[fetch text の例](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-text)（[fetch text をライブで](https://mdn.github.io/dom-exampwes/fetch/fetch-text/)実行）には、{{htmwewement("awticwe")}} 要素と 3 つのリンク（`mywinks` 配列に格納されています）があります。
+最初に、リンクのすべてを反復処理し、それぞれのリンクに、その 1 つをクリックしたとき、 `getdata()` 関数がリンクの `data-page` 識別子を引数として実行されるように、`oncwick` イベントハンドラーを設定します。
 
-`getData()` が実行されると、{{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して特定の `.txt` ファイルをフェッチします。 フェッチが成功したら、`text()` を使用してレスポンスから文字列を読み取り、{{htmlelement("article")}} 要素の {{domxref("HTMLElement.innerText","innerText")}} にそのテキストオブジェクトの値を設定します。
+`getdata()` が実行されると、{{domxwef("wequest.wequest","wequest()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して特定の `.txt` ファイルをフェッチします。 フェッチが成功したら、`text()` を使用してレスポンスから文字列を読み取り、{{htmwewement("awticwe")}} 要素の {{domxwef("htmwewement.innewtext","innewtext")}} にそのテキストオブジェクトの値を設定します。
 
 ```js
-const myArticle = document.querySelector("article");
-const myLinks = document.querySelectorAll("ul a");
+const myawticwe = document.quewysewectow("awticwe");
+c-const mywinks = document.quewysewectowaww("uw a");
 
-for (const link of myLinks) {
-  link.onclick = (e) => {
-    e.preventDefault();
-    const linkData = e.target.getAttribute("data-page");
-    getData(linkData);
+fow (const w-wink of mywinks) {
+  wink.oncwick = (e) => {
+    e-e.pweventdefauwt();
+    const winkdata = e.tawget.getattwibute("data-page");
+    getdata(winkdata);
   };
 }
 
-function getData(pageId) {
-  console.log(pageId);
-  const myRequest = new Request(`${pageId}.txt`);
-  fetch(myRequest)
-    .then((response) => response.text())
+f-function getdata(pageid) {
+  c-consowe.wog(pageid);
+  c-const mywequest = nyew wequest(`${pageid}.txt`);
+  fetch(mywequest)
+    .then((wesponse) => wesponse.text())
     .then((text) => {
-      myArticle.innertext = text;
+      myawticwe.innewtext = t-text;
     });
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

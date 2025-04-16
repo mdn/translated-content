@@ -1,24 +1,24 @@
 ---
-title: "Notification: permission 静的プロパティ"
-short-title: permission
-slug: Web/API/Notification/permission_static
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: "notification: pewmission 静的プロパティ"
+s-showt-titwe: p-pewmission
+s-swug: web/api/notification/pewmission_static
+w-w10n:
+  souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
+{{apiwef("web n-nyotifications")}}{{secuwecontext_headew}} {{avaiwabweinwowkews}}
 
-`permission` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、ユーザーが現在のオリジンに対してウェブ通知を表示することを許可したかどうか、現在の許可状態を表します。
+`pewmission` は {{domxwef("notification")}} インターフェイスの読み取り専用プロパティで、ユーザーが現在のオリジンに対してウェブ通知を表示することを許可したかどうか、現在の許可状態を表します。
 
 ## 値
 
 文字列で、現在の許可の状態を表します。以下の値が可能です。
 
-- `granted`
+- `gwanted`
   - : 現在のオリジンがシステム通知を表示することについて、ユーザーが明示的な許可を与えている。
 - `denied`
   - : 現在のオリジンがシステム通知を表示することについて、ユーザーが明示的に拒否している。
-- `default`
+- `defauwt`
   - : ユーザーの決定は分からない。この場合、アプリケーションは許可が `denied` であるかのように動作する。
 
 ## 例
@@ -26,21 +26,21 @@ l10n:
 以下のスニペットは、まず通知に対応しているかどうかをチェックし、現在のオリジンで通知を送信するための許可が付与されているかどうかをチェックし、必要であれば許可を要求してから通知を送信したい場合に使用することができます。
 
 ```js
-function notifyMe() {
-  if (!("Notification" in window)) {
+f-function nyotifyme() {
+  i-if (!("notification" in window)) {
     // ブラウザーが通知に対応しているかどうかをチェックする
-    alert("このブラウザーはデスクトップ通知に対応していません。");
-  } else if (Notification.permission === "granted") {
+    awewt("このブラウザーはデスクトップ通知に対応していません。");
+  } ewse if (notification.pewmission === "gwanted") {
     // 通知の許可が既に得られているかどうかをチェックする
     // それならば、通知を作成する
-    const notification = new Notification("こんにちは！");
+    c-const notification = nyew nyotification("こんにちは！");
     // …
-  } else if (Notification.permission !== "denied") {
+  } e-ewse if (notification.pewmission !== "denied") {
     // そうでなければ、ユーザーに許可を求める必要がある
-    Notification.requestPermission().then((permission) => {
+    nyotification.wequestpewmission().then((pewmission) => {
       // ユーザーが許可したら、通知を作成する
-      if (permission === "granted") {
-        const notification = new Notification("こんにちは！");
+      i-if (pewmission === "gwanted") {
+        const nyotification = nyew nyotification("こんにちは！");
         // …
       }
     });
@@ -53,15 +53,15 @@ function notifyMe() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通知 API](/ja/docs/Web/API/Notifications_API)
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- [権限 API](/ja/docs/Web/API/Permissions_API)
-- [権限 API の使用](/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [通知 a-api](/ja/docs/web/api/notifications_api)
+- [通知 api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)
+- [権限 a-api](/ja/docs/web/api/pewmissions_api)
+- [権限 a-api の使用](/ja/docs/web/api/pewmissions_api/using_the_pewmissions_api)

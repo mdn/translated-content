@@ -1,13 +1,13 @@
 ---
-title: Notification.icon
-slug: Web/API/Notification/icon
-l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+titwe: nyotification.icon
+swug: w-web/api/notification/icon
+w-w10n:
+  s-souwcecommit: d-d42b609444efb915ab46117f59985d67dda21eb6
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-**`icon`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `icon` オプションで指定された、通知の一部として表示されるアイコンの URL を含みます。
+**`icon`** は {{domxwef("notification")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("notification.notification","notification()")}} コンストラクターの `icon` オプションで指定された、通知の一部として表示されるアイコンの u-uww を含みます。
 
 ## 値
 
@@ -15,23 +15,23 @@ l10n:
 
 ## 例
 
-[To-do リストアプリ](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（[ライブ実行のアプリを表示](https://mdn.github.io/dom-examples/to-do-notifications/)）では、 {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して通知を発行し、希望する本文、アイコン、タイトルを指定するために引数を渡します。
+[to-do リストアプリ](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)（[ライブ実行のアプリを表示](https://mdn.github.io/dom-exampwes/to-do-notifications/)）では、 {{domxwef("notification.notification","notification()")}} コンストラクターを使用して通知を発行し、希望する本文、アイコン、タイトルを指定するために引数を渡します。
 
 ```js
-const notification = new Notification("To do list", {
-  body: text,
-  icon: img,
+c-const n-nyotification = n-nyew nyotification("to do wist", rawr {
+  body: text, σωσ
+  icon: img, σωσ
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [通知 api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)

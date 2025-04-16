@@ -1,50 +1,50 @@
 ---
-title: "SVGTextPositioningElement: x プロパティ"
-short-title: x
-slug: Web/API/SVGTextPositioningElement/x
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: "svgtextpositioningewement: x プロパティ"
+s-showt-titwe: x-x
+swug: web/api/svgtextpositioningewement/x
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`x`** は {{domxref("SVGTextPositioningElement")}} インターフェイスの読み取り専用プロパティで、{{domxref("SVGTextElement")}}、{{domxref("SVGTSpanElement")}}、{{domxref("SVGTRefElement")}} の X 座標を {{domxref("SVGAnimatedLengthList")}} で記述します。これは {{SVGAttr("dx")}} 属性の、ユーザー座標系における個々のテキスト文字の水平方向の位置を反映します。
+**`x`** は {{domxwef("svgtextpositioningewement")}} インターフェイスの読み取り専用プロパティで、{{domxwef("svgtextewement")}}、{{domxwef("svgtspanewement")}}、{{domxwef("svgtwefewement")}} の x-x 座標を {{domxwef("svganimatedwengthwist")}} で記述します。これは {{svgattw("dx")}} 属性の、ユーザー座標系における個々のテキスト文字の水平方向の位置を反映します。
 
-属性値は、[`<length>`](/ja/docs/Web/SVG/Guides/Content_type#length)、[`<percentage>`](/ja/docs/Web/SVG/Guides/Content_type#percentage)、[`<number>`](/ja/docs/Web/SVG/Guides/Content_type#number) のリストです。 {{domxref("SVGAnimatedLengthList.baseVal")}} の数値は、ユーザー座標系における個々のテキスト文字の X 座標を反映します。
+属性値は、[`<wength>`](/ja/docs/web/svg/guides/content_type#wength)、[`<pewcentage>`](/ja/docs/web/svg/guides/content_type#pewcentage)、[`<numbew>`](/ja/docs/web/svg/guides/content_type#numbew) のリストです。 {{domxwef("svganimatedwengthwist.basevaw")}} の数値は、ユーザー座標系における個々のテキスト文字の x-x 座標を反映します。
 
 ## 値
 
-{{domxref("SVGAnimatedLengthList")}} です。
+{{domxwef("svganimatedwengthwist")}} です。
 
 ## 例
 
-次の SVG があったとします。
+次の s-svg があったとします。
 
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="20">Hello</text>
-  <text x="50" y="50">World</text>
+```htmw
+<svg v-viewbox="0 0 200 200" xmwns="http://www.w3.owg/2000/svg">
+  <text x="10" y="20">hewwo</text>
+  <text x="50" y="50">wowwd</text>
 </svg>
 ```
 
 次のようにして、 `x` 属性の計算値にアクセスすることができます。
 
 ```js
-const texts = document.querySelectorAll("text");
+c-const texts = document.quewysewectowaww("text");
 
-console.log(texts[0].x.baseVal[0].value); // 出力: 10
-console.log(texts[1].x.baseVal[0].value); // 出力: 50
+consowe.wog(texts[0].x.basevaw[0].vawue); // 出力: 10
+c-consowe.wog(texts[1].x.basevaw[0].vawue); // 出力: 50
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGTextPositioningElement.y")}}
-- {{domxref("SVGAnimatedLengthList.baseVal")}}
+- {{domxwef("svgtextpositioningewement.y")}}
+- {{domxwef("svganimatedwengthwist.basevaw")}}

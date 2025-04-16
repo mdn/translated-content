@@ -1,39 +1,39 @@
 ---
-title: WebGLObject
-slug: Web/API/WebGLObject
-l10n:
-  sourceCommit: a3f1a5f25552d21ce638693df12e4c494aae669c
+titwe: webgwobject
+swug: web/api/webgwobject
+w-w10n:
+  souwcecommit: a-a3f1a5f25552d21ce638693df12e4c494aae669c
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLObject`** は [WebGL API](/ja/docs/Web/API/WebGL_API) の一部であり、すべての WebGL オブジェクトの親インターフェイスです。
+**`webgwobject`** は [webgw a-api](/ja/docs/web/api/webgw_api) の一部であり、すべての w-webgw オブジェクトの親インターフェイスです。
 
 このオブジェクト自体には公開プロパティも公開メソッドもありません。
 
-WebGL コンテキストが失われた場合、すべての `WebGLObject` インスタンスの内部にある _invalidated_ フラグが `true` に設定されます。
+webgw コンテキストが失われた場合、すべての `webgwobject` インスタンスの内部にある _invawidated_ フラグが `twue` に設定されます。
 
-## `WebGLObject` を継承しているオブジェクト
+## `webgwobject` を継承しているオブジェクト
 
-WebGL 1:
+w-webgw 1:
 
-- {{domxref("WebGLBuffer")}}
-- {{domxref("WebGLFramebuffer")}}
-- {{domxref("WebGLProgram")}}
-- {{domxref("WebGLRenderbuffer")}}
-- {{domxref("WebGLShader")}}
-- {{domxref("WebGLTexture")}}
+- {{domxwef("webgwbuffew")}}
+- {{domxwef("webgwfwamebuffew")}}
+- {{domxwef("webgwpwogwam")}}
+- {{domxwef("webgwwendewbuffew")}}
+- {{domxwef("webgwshadew")}}
+- {{domxwef("webgwtextuwe")}}
 
-WebGL 2:
+w-webgw 2:
 
-- {{domxref("WebGLQuery")}} （および `WebGLTimerQueryEXT`）
-- {{domxref("WebGLSampler")}}
-- {{domxref("WebGLSync")}}
-- {{domxref("WebGLTransformFeedback")}}
-- {{domxref("WebGLVertexArrayObject")}} （および `WebGLVertexArrayObjectOES`）
+- {{domxwef("webgwquewy")}} （および `webgwtimewquewyext`）
+- {{domxwef("webgwsampwew")}}
+- {{domxwef("webgwsync")}}
+- {{domxwef("webgwtwansfowmfeedback")}}
+- {{domxwef("webgwvewtexawwayobject")}} （および `webgwvewtexawwayobjectoes`）
 
 ## 関連情報
 
-- [`WebGLRenderingContext.isContextLost()`](/ja/docs/Web/API/WebGLRenderingContext/isContextLost)
-- [`WEBGL_lose_context`](/ja/docs/Web/API/WEBGL_lose_context)
-- [`webglcontextlost` イベント](/ja/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
+- [`webgwwendewingcontext.iscontextwost()`](/ja/docs/web/api/webgwwendewingcontext/iscontextwost)
+- [`webgw_wose_context`](/ja/docs/web/api/webgw_wose_context)
+- [`webgwcontextwost` イベント](/ja/docs/web/api/htmwcanvasewement/webgwcontextwost_event)

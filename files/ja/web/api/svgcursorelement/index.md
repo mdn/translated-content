@@ -1,37 +1,37 @@
 ---
-title: SVGCursorElement
-slug: Web/API/SVGCursorElement
-l10n:
-  sourceCommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
+titwe: svgcuwsowewement
+swug: w-web/api/svgcuwsowewement
+w-w10n:
+  s-souwcecommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
 ---
 
-{{APIRef("SVG")}}{{Deprecated_Header}}
+{{apiwef("svg")}}{{depwecated_headew}}
 
-**`SVGCursorElement`** SVGCursorElementインターフェイスは、 {{ SVGElement("cursor") }} 要素のプロパティへのアクセスや、それらを操作するメソッドを提供します。
+**`svgcuwsowewement`** s-svgcuwsowewementインターフェイスは、 {{ svgewement("cuwsow") }} 要素のプロパティへのアクセスや、それらを操作するメソッドを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスには、親である {{domxref("SVGElement")}} から継承したプロパティもあります。_
+_このインターフェイスには、親である {{domxwef("svgewement")}} から継承したプロパティもあります。_
 
-- {{domxref("SVGCursorElement.x")}} {{ReadOnlyInline}}
-  - : {{domxref("SVGAnimatedLength")}} で、この {{SVGElement("cursor")}} 要素の {{SVGAttr("x")}} 属性に対応します。
-- {{domxref("SVGCursorElement.y")}} {{ReadOnlyInline}}
-  - : {{domxref("SVGAnimatedLength")}} で、この {{SVGElement("cursor")}} 要素の {{SVGAttr("y")}} 属性に対応します。
+- {{domxwef("svgcuwsowewement.x")}} {{weadonwyinwine}}
+  - : {{domxwef("svganimatedwength")}} で、この {{svgewement("cuwsow")}} 要素の {{svgattw("x")}} 属性に対応します。
+- {{domxwef("svgcuwsowewement.y")}} {{weadonwyinwine}}
+  - : {{domxwef("svganimatedwength")}} で、この {{svgewement("cuwsow")}} 要素の {{svgattw("y")}} 属性に対応します。
 
 ## インスタンスメソッド
 
-_このインターフェイスは、独自のメソッドを実装していませんが、親である {{domxref("SVGElement")}} から継承したメソッドがあります。_
+_このインターフェイスは、独自のメソッドを実装していませんが、親である {{domxwef("svgewement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGElement("cursor")}}
+- {{svgewement("cuwsow")}}

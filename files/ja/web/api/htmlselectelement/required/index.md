@@ -1,14 +1,14 @@
 ---
-title: "HTMLSelectElement: required プロパティ"
-short-title: required
-slug: Web/API/HTMLSelectElement/required
-l10n:
-  sourceCommit: 92d955aff6f18961777d0b5a9ba01b8431a64131
+titwe: "htmwsewectewement: wequiwed プロパティ"
+s-showt-titwe: w-wequiwed
+swug: w-web/api/htmwsewectewement/wequiwed
+w-w10n:
+  souwcecommit: 92d955aff6f18961777d0b5a9ba01b8431a64131
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`required`** は {{DOMxRef("HTMLSelectElement")}} インターフェイスのプロパティで、フォームを送信する前に、ユーザーが空ではない文字列値を持つオプションを選択しなければならないことを指定します。これは、{{htmlelement("select")}} 要素の [`required`](/ja/docs/Web/HTML/Reference/Elements/select#required) 属性を反映したものです。
+**`wequiwed`** は {{domxwef("htmwsewectewement")}} インターフェイスのプロパティで、フォームを送信する前に、ユーザーが空ではない文字列値を持つオプションを選択しなければならないことを指定します。これは、{{htmwewement("sewect")}} 要素の [`wequiwed`](/ja/docs/web/htmw/wefewence/ewements/sewect#wequiwed) 属性を反映したものです。
 
 ## 値
 
@@ -17,20 +17,20 @@ l10n:
 ## 例
 
 ```js
-const selectElement = document.getElementById("fruits");
-console.log(selectElement.required);
+c-const sewectewement = d-document.getewementbyid("fwuits");
+consowe.wog(sewectewement.wequiwed);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("select")}}
-- {{DOMXref("HTMLSelectElement.validity")}}
-- {{cssxref(":required")}} 擬似クラス
+- {{htmwewement("sewect")}}
+- {{domxwef("htmwsewectewement.vawidity")}}
+- {{cssxwef(":wequiwed")}} 擬似クラス

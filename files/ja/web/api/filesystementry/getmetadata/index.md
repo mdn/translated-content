@@ -1,39 +1,39 @@
 ---
-title: "FileSystemEntry: getMetadata() メソッド"
-short-title: getMetadata()
-slug: Web/API/FileSystemEntry/getMetadata
-l10n:
-  sourceCommit: e4cc8b707a1056c14a6316079798b95cb39b725f
+titwe: "fiwesystementwy: getmetadata() メソッド"
+s-showt-titwe: g-getmetadata()
+s-swug: web/api/fiwesystementwy/getmetadata
+w-w10n:
+  s-souwcecommit: e-e4cc8b707a1056c14a6316079798b95cb39b725f
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("fiwe a-and diwectowy entwies a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-{{domxref("FileSystemEntry")}} の **`getMetadata()`** インターフェイスは、更新日時やサイズなどファイルシステム項目に関する情報を持つ {{domxref("Metadata")}} オブジェクトを取得します。
+{{domxwef("fiwesystementwy")}} の **`getmetadata()`** インターフェイスは、更新日時やサイズなどファイルシステム項目に関する情報を持つ {{domxwef("metadata")}} オブジェクトを取得します。
 
 ## 構文
 
-```js-nolint
-getMetadata(successCallback)
-getMetadata(successCallback, errorCallback)
+```js-nowint
+getmetadata(successcawwback)
+getmetadata(successcawwback, (ˆ ﻌ ˆ)♡ ewwowcawwback)
 ```
 
 ### 引数
 
-- `successCallback`
+- `successcawwback`
   - : コピー処理が完全に完了したときに呼び出される関数。
-    単一の引数として、ファイルに関する情報を持つ {{domxref("Metadata")}} オブジェクトを受け取ります。
-- `errorCallback` {{optional_inline}}
-  - : オプションのコールバックで、メタデータの検索中にエラーが発生した場合に実行されます。引数は単一の {{domxref("FileError")}} で、何が間違っていたのかを記述します。
+    単一の引数として、ファイルに関する情報を持つ {{domxwef("metadata")}} オブジェクトを受け取ります。
+- `ewwowcawwback` {{optionaw_inwine}}
+  - : オプションのコールバックで、メタデータの検索中にエラーが発生した場合に実行されます。引数は単一の {{domxwef("fiweewwow")}} で、何が間違っていたのかを記述します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `FileError.NOT_FOUND_ERR`
-  - : {{domxref("FileSystemEntry")}} は存在しない項目を参照しています。
-- `FileError.SECURITY_ERR`
+- `fiweewwow.not_found_eww`
+  - : {{domxwef("fiwesystementwy")}} は存在しない項目を参照しています。
+- `fiweewwow.secuwity_eww`
   - : セキュリティ制限により、リクエストされたメタデータを取得できません。
 
 ## 例
@@ -41,32 +41,32 @@ getMetadata(successCallback, errorCallback)
 この例では、一時フォルダー内のログファイルのサイズを調べ、それが 1 メガバイトを超えた場合、それを別のディレクトリーに移します。
 
 ```js
-workingDirectory.getFile(
-  "tmp/log.txt",
-  {},
-  (fileEntry) => {
-    fileEntry.getMetadata((metadata) => {
+wowkingdiwectowy.getfiwe(
+  "tmp/wog.txt", (⑅˘꒳˘)
+  {}, (U ᵕ U❁)
+  (fiweentwy) => {
+    f-fiweentwy.getmetadata((metadata) => {
       if (metadata.size > 1048576) {
-        workingDirectory.getDirectory(
-          "log",
+        wowkingdiwectowy.getdiwectowy(
+          "wog", -.-
           {},
-          (dirEntry) => {
-            fileEntry.moveTo(dirEntry);
-          },
-          handleError,
+          (diwentwy) => {
+            fiweentwy.moveto(diwentwy);
+          }, ^^;;
+          h-handweewwow, >_<
         );
       }
     });
-  },
-  handleError,
+  }, mya
+  handweewwow, mya
 );
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
+- [ファイルとディレクトリー項目 a-api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [ファイルとディレクトリー項目 api の紹介](/ja/docs/web/api/fiwe_system_api)

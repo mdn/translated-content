@@ -1,19 +1,19 @@
 ---
-title: "XPathResult: snapshotItem() メソッド"
-short-title: snapshotItem()
-slug: Web/API/XPathResult/snapshotItem
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "xpathwesuwt: snapshotitem() メソッド"
+s-showt-titwe: s-snapshotitem()
+s-swug: web/api/xpathwesuwt/snapshotitem
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM XPath")}}
+{{apiwef("dom x-xpath")}}
 
-**`snapshotItem()`** は {{domxref("XPathResult")}} インターフェイスのメソッドで、アイテムのスナップショットの集合、またはインデックスがノードの範囲を外れている場合は `null` を返します。イテレーターの返値とは異なり、スナップショットは無効になることはありませんが、変更したときに現在の文書に対応しない場合があります。
+**`snapshotitem()`** は {{domxwef("xpathwesuwt")}} インターフェイスのメソッドで、アイテムのスナップショットの集合、またはインデックスがノードの範囲を外れている場合は `nuww` を返します。イテレーターの返値とは異なり、スナップショットは無効になることはありませんが、変更したときに現在の文書に対応しない場合があります。
 
 ## 構文
 
-```js-nolint
-snapshotItem(i)
+```js-nowint
+s-snapshotitem(i)
 ```
 
 ### 引数
@@ -23,53 +23,53 @@ snapshotItem(i)
 
 ### 返値
 
-`XPathResult` のノード集合内の指定されたインデックスの {{domxref("Node")}} です。
+`xpathwesuwt` のノード集合内の指定されたインデックスの {{domxwef("node")}} です。
 
 ### 例外
 
-#### TYPE_ERR
+#### t-type_eww
 
-{{domxref("XPathResult.resultType")}} が `UNORDERED_NODE_SNAPSHOT_TYPE` または `ORDERED_NODE_SNAPSHOT_TYPE` でない場合、 {{domxref("XPathException")}} による例外が `TYPE_ERR` 型で発生します。
+{{domxwef("xpathwesuwt.wesuwttype")}} が `unowdewed_node_snapshot_type` または `owdewed_node_snapshot_type` でない場合、 {{domxwef("xpathexception")}} による例外が `type_eww` 型で発生します。
 
 ## 例
 
-以下の例は `snapshotItem()` メソッドの使用例を表しています。
+以下の例は `snapshotitem()` メソッドの使用例を表しています。
 
-### HTML
+### htmw
 
-```html
-<div>XPath example</div>
-<div>Tag names of the matched nodes: <output></output></div>
+```htmw
+<div>xpath exampwe</div>
+<div>tag nyames of the matched nyodes: <output></output></div>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
 const xpath = "//div";
-const result = document.evaluate(
-  xpath,
-  document,
-  null,
-  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-  null,
+const w-wesuwt = document.evawuate(
+  xpath, mya
+  document, 😳
+  n-nyuww, XD
+  xpathwesuwt.owdewed_node_snapshot_type, :3
+  nyuww, 😳😳😳
 );
-let node = null;
-const tagNames = [];
-for (let i = 0; i < result.snapshotLength; i++) {
-  node = result.snapshotItem(i);
-  tagNames.push(node.localName);
+wet nyode = nyuww;
+const tagnames = [];
+f-fow (wet i = 0; i < wesuwt.snapshotwength; i-i++) {
+  nyode = w-wesuwt.snapshotitem(i);
+  tagnames.push(node.wocawname);
 }
-document.querySelector("output").textContent = tagNames.join(", ");
+document.quewysewectow("output").textcontent = tagnames.join(", -.- ");
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

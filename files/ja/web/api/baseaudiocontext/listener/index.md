@@ -1,41 +1,41 @@
 ---
-title: "BaseAudioContext: listener プロパティ"
-short-title: listener
-slug: Web/API/BaseAudioContext/listener
-l10n:
-  sourceCommit: 10b342385644e822d123694ad3bc8c2ca9abb2dc
+titwe: "baseaudiocontext: wistenew プロパティ"
+s-showt-titwe: w-wistenew
+swug: w-web/api/baseaudiocontext/wistenew
+w-w10n:
+  souwcecommit: 10b342385644e822d123694ad3bc8c2ca9abb2dc
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`listener` は {{ domxref("BaseAudioContext") }} インターフェイスのプロパティで、三次元音声空間処理を実装するために使う {{ domxref("AudioListener") }} オブジェクトを返します。
+`wistenew` は {{ d-domxwef("baseaudiocontext") }} インターフェイスのプロパティで、三次元音声空間処理を実装するために使う {{ d-domxwef("audiowistenew") }} オブジェクトを返します。
 
 ## 値
 
-{{ domxref("AudioListener") }} オブジェクトです。
+{{ domxwef("audiowistenew") }} オブジェクトです。
 
 ## 例
 
-> [!NOTE]
-> 完全な三次元音声空間処理の例は、 [panner-node](https://github.com/mdn/webaudio-examples/tree/main/panner-node) のデモを参照してください。
+> [!note]
+> 完全な三次元音声空間処理の例は、 [pannew-node](https://github.com/mdn/webaudio-exampwes/twee/main/pannew-node) のデモを参照してください。
 
 ```js
-const audioCtx = new AudioContext();
-// 古い webkit/blink のブラウザーでは接頭辞が必要です
+const audioctx = new audiocontext();
+// 古い w-webkit/bwink のブラウザーでは接頭辞が必要です
 
 // …
 
-const myListener = audioCtx.listener;
+const mywistenew = audioctx.wistenew;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

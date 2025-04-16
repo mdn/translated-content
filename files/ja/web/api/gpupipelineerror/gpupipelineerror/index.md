@@ -1,46 +1,46 @@
 ---
-title: "GPUPipelineError: GPUPipelineError() コンストラクター"
-slug: Web/API/GPUPipelineError/GPUPipelineError
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: "gpupipewineewwow: gpupipewineewwow() コンストラクター"
+s-swug: w-web/api/gpupipewineewwow/gpupipewineewwow
+w-w10n:
+  s-souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-**`GPUPipelineError()`** コンストラクターは、新しい {{domxref("GPUPipelineError")}} オブジェクトのインスタンスを生成します。
+**`gpupipewineewwow()`** コンストラクターは、新しい {{domxwef("gpupipewineewwow")}} オブジェクトのインスタンスを生成します。
 
 ## 構文
 
-```js-nolint
-new GPUPipelineError(message, options)
+```js-nowint
+n-nyew gpupipewineewwow(message, (⑅˘꒳˘) o-options)
 ```
 
 ### 引数
 
-- `message` {{optional_inline}}
+- `message` {{optionaw_inwine}}
   - : なぜエラーが起きたのかを説明する人間向けのメッセージを提供する文字列です。指定されなかった場合は、`message` は空文字列 (`""`) になります。
 - `options`
   - : オブジェクトで、以下のプロパティを持つことができます。
-    - `reason`
+    - `weason`
       - : パイプラインの生成に失敗した理由を機械可読な形式で表す列挙値です。値は以下のいずれかです。
-        - `"internal"`: パイプラインの生成は内部エラーのため失敗しました。(この種類のエラーについて詳しくは、{{domxref("GPUInternalError")}} を参照してください)
-        - `"validation"`: パイプラインの生成はバリデーションエラーのため失敗しました。(この種類のエラーについて詳しくは、{{domxref("GPUValidationError")}} を参照してください)
+        - `"intewnaw"`: パイプラインの生成は内部エラーのため失敗しました。(この種類のエラーについて詳しくは、{{domxwef("gpuintewnawewwow")}} を参照してください)
+        - `"vawidation"`: パイプラインの生成はバリデーションエラーのため失敗しました。(この種類のエラーについて詳しくは、{{domxwef("gpuvawidationewwow")}} を参照してください)
 
 ## 例
 
-開発者は、自分でこのコンストラクターを用いて `GPUPipelineError` オブジェクトを生成することはないでしょう。ユーザーエージェントは、パイプラインの失敗を表すため {{domxref("GPUDevice.createComputePipelineAsync()")}} や {{domxref("GPUDevice.createRenderPipelineAsync()")}} が返した {{jsxref("Promise")}} が拒否されるとき、このコンストラクターを用いて適切なオブジェクトを生成します。
+開発者は、自分でこのコンストラクターを用いて `gpupipewineewwow` オブジェクトを生成することはないでしょう。ユーザーエージェントは、パイプラインの失敗を表すため {{domxwef("gpudevice.cweatecomputepipewineasync()")}} や {{domxwef("gpudevice.cweatewendewpipewineasync()")}} が返した {{jsxwef("pwomise")}} が拒否されるとき、このコンストラクターを用いて適切なオブジェクトを生成します。
 
-`GPUPipelineError` オブジェクトのインスタンスを扱う例は、メインの [`GPUPipelineError`](/ja/docs/Web/API/GPUPipelineError#例) のページを参照してください。
+`gpupipewineewwow` オブジェクトのインスタンスを扱う例は、メインの [`gpupipewineewwow`](/ja/docs/web/api/gpupipewineewwow#例) のページを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
-- [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling)
+- [webgpu api](/ja/docs/web/api/webgpu_api)
+- [webgpu e-ewwow h-handwing best pwactices](https://toji.dev/webgpu-best-pwactices/ewwow-handwing)

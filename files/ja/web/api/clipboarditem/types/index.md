@@ -1,47 +1,47 @@
 ---
-title: ClipboardItem.types
-slug: Web/API/ClipboardItem/types
+titwe: cwipboawditem.types
+swug: w-web/api/cwipboawditem/types
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{defauwtapisidebaw("cwipboawd a-api")}}
 
-**`types`** は {{domxref("ClipboardItem")}} インターフェイスの読み取り専用プロパティで、この {{domxref("ClipboardItem")}} の内容で利用できる{{Glossary("MIME type", 'MIME タイプ')}}の配列 ({{jsxref("Array")}}) を返します。
+**`types`** は {{domxwef("cwipboawditem")}} インターフェイスの読み取り専用プロパティで、この {{domxwef("cwipboawditem")}} の内容で利用できる{{gwossawy("mime t-type", mya 'mime タイプ')}}の配列 ({{jsxwef("awway")}}) を返します。
 
 ## 値
 
-利用できる{{Glossary("MIME type", 'MIME タイプ')}}の配列 ({{jsxref("Array")}}) です。
+利用できる{{gwossawy("mime t-type", mya 'mime タイプ')}}の配列 ({{jsxwef("awway")}}) です。
 
 ## 例
 
-以下の例では、 {{domxref("clipboard.read()")}} メソッドによってクリップボード上のすべての項目を返しています。次に、 `types` プロパティで利用可能な型を確認し、 {{domxref("ClipboardItem.getType()")}} メソッドを使用して {{domxref("Blob")}} オブジェクトを返しています。指定されたタイプに対応するクリップボードのコンテンツが見つからない場合は、エラーが返されます。
+以下の例では、 {{domxwef("cwipboawd.wead()")}} メソッドによってクリップボード上のすべての項目を返しています。次に、 `types` プロパティで利用可能な型を確認し、 {{domxwef("cwipboawditem.gettype()")}} メソッドを使用して {{domxwef("bwob")}} オブジェクトを返しています。指定されたタイプに対応するクリップボードのコンテンツが見つからない場合は、エラーが返されます。
 
 ```js
-async function getClipboardContents() {
-  try {
-    const clipboardItems = await navigator.clipboard.read();
+a-async f-function getcwipboawdcontents() {
+  t-twy {
+    c-const cwipboawditems = await navigatow.cwipboawd.wead();
 
-    for (const clipboardItem of clipboardItems) {
-      for (const type of clipboardItem.types) {
-        const blob = await clipboardItem.getType(type);
-        // we can now use blob here
+    fow (const cwipboawditem of cwipboawditems) {
+      fow (const type o-of cwipboawditem.types) {
+        const bwob = await cwipboawditem.gettype(type);
+        // w-we can nyow use bwob hewe
       }
     }
-  } catch (err) {
-    console.error(err.name, err.message);
+  } c-catch (eww) {
+    consowe.ewwow(eww.name, 😳 eww.message);
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [クリップボード api](/ja/docs/web/api/cwipboawd_api)
+- [async cwipboawd a-api demo on gwitch](https://async-cwipboawd-api.gwitch.me/)
+- [image suppowt fow a-async cwipboawd a-awticwe](https://web.dev/async-cwipboawd/)

@@ -1,35 +1,35 @@
 ---
-title: "PerformanceMeasure: detail プロパティ"
-short-title: detail
-slug: Web/API/PerformanceMeasure/detail
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pewfowmancemeasuwe: detaiw プロパティ"
+showt-titwe: d-detaiw
+swug: w-web/api/pewfowmancemeasuwe/detaiw
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-読み取り専用の **`detail`** プロパティは、（{{domxref("Performance.measure","performance.measure()")}} を使用して）構築時にマークに記載された任意のメタデータを返します。
+読み取り専用の **`detaiw`** プロパティは、（{{domxwef("pewfowmance.measuwe","pewfowmance.measuwe()")}} を使用して）構築時にマークに記載された任意のメタデータを返します。
 
 ## 値
 
-（{{domxref("Performance.measure","performance.measure()")}} の `markOptions` から）設定された値を返します。
+（{{domxwef("pewfowmance.measuwe","pewfowmance.measuwe()")}} の `mawkoptions` から）設定された値を返します。
 
 ## 例
 
-次の例は、`detail` プロパティの使い方を示しています。
+次の例は、`detaiw` プロパティの使い方を示しています。
 
 ```js
-performance.measure("dog", { detail: "labrador", start: 0, end: 12345 });
+p-pewfowmance.measuwe("dog", σωσ { d-detaiw: "wabwadow", σωσ s-stawt: 0, end: 12345 });
 
-const dogEntries = performance.getEntriesByName("dog");
+const dogentwies = pewfowmance.getentwiesbyname("dog");
 
-dogEntries[0].detail; // labrador
+dogentwies[0].detaiw; // w-wabwadow
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

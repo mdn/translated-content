@@ -1,26 +1,26 @@
 ---
-title: NDEFMessage
-slug: Web/API/NDEFMessage
+titwe: nydefmessage
+swug: web/api/ndefmessage
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{secuwecontext_headew}}{{seecompattabwe}}{{apiwef()}}
 
-**`NDEFMessage`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API) のインターフェイスで、 NFC タグで読み書きされる NDEF メッセージの内容を表します。インスタンスは `NDEFMessage()` コンストラクターを呼び出すか、 {{domxref("NDEFReader.reading_event", "reading")}} イベントに渡される {{domxref("NDEFReadingEvent.message")}} プロパティを用いるかして取得します。
+**`ndefmessage`** は[ウェブ n-nyfc a-api](/ja/docs/web/api/web_nfc_api) のインターフェイスで、 n-nyfc タグで読み書きされる n-nydef メッセージの内容を表します。インスタンスは `ndefmessage()` コンストラクターを呼び出すか、 {{domxwef("ndefweadew.weading_event", o.O "weading")}} イベントに渡される {{domxwef("ndefweadingevent.message")}} プロパティを用いるかして取得します。
 
 ## コンストラクター
 
-- {{DOMxRef("NDEFMessage.NDEFMessage", "NDEFMessage()")}}
-  - : 新しい `NDEFMessage` オブジェクトを生成し、指定された NDEF レコードで初期化します。
+- {{domxwef("ndefmessage.ndefmessage", (U ᵕ U❁) "ndefmessage()")}}
+  - : 新しい `ndefmessage` オブジェクトを生成し、指定された n-nydef レコードで初期化します。
 
 ## プロパティ
 
-- {{DOMxRef("NDEFMessage.records")}}{{ReadOnlyInline}}
-  - : メッセージに含まれる NDEF レコードのリストを返します。
+- {{domxwef("ndefmessage.wecowds")}}{{weadonwyinwine}}
+  - : メッセージに含まれる n-nydef レコードのリストを返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

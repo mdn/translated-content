@@ -1,64 +1,64 @@
 ---
-title: "SVGTextContentElement: getRotationOfChar() メソッド"
-short-title: getRotationOfChar()
-slug: Web/API/SVGTextContentElement/getRotationOfChar
-l10n:
-  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
+titwe: "svgtextcontentewement: getwotationofchaw() メソッド"
+s-showt-titwe: g-getwotationofchaw()
+s-swug: web/api/svgtextcontentewement/getwotationofchaw
+w-w10n:
+  s-souwcecommit: d-d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`getRotationOfChar()` は {{domxref("SVGTextContentElement")}} インターフェイスのメソッドで、組版された文字の回転を表します。
+`getwotationofchaw()` は {{domxwef("svgtextcontentewement")}} インターフェイスのメソッドで、組版された文字の回転を表します。
 
 ## 構文
 
-```js-nolint
-getRotationOfChar(index)
+```js-nowint
+g-getwotationofchaw(index)
 ```
 
 ### 引数
 
 - `index`
-  - : `integer` です。文字のインデックスです。
+  - : `integew` です。文字のインデックスです。
 
 ### 返値
 
-float 値です。文字の回転角を角度で表します。
+f-fwoat 値です。文字の回転角を角度で表します。
 
 ### 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
   - : `index` の位置に文字がなかった場合に発生します。
 
 ## 例
 
-### Getting the Rotation of a Character
+### getting the wotation of a chawactew
 
-```html
-<svg width="200" height="100">
-  <text id="exampleText" x="10" y="40" writing-mode="vertical-rl">
-    Hello, SVG
+```htmw
+<svg width="200" h-height="100">
+  <text id="exampwetext" x="10" y="40" wwiting-mode="vewticaw-ww">
+    hewwo, (U ᵕ U❁) s-svg
   </text>
 </svg>
 ```
 
 ```js
-const textElement = document.getElementById("exampleText");
+const textewement = d-document.getewementbyid("exampwetext");
 
-// 最初の文字 "H" の回転角を取得
-const rotation = textElement.getRotationOfChar(0);
+// 最初の文字 "h" の回転角を取得
+const wotation = textewement.getwotationofchaw(0);
 
-console.log(extent); // 出力: 90
+consowe.wog(extent); // 出力: 90
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`writing-mode`](/ja/docs/Web/CSS/writing-mode)
+- [`wwiting-mode`](/ja/docs/web/css/wwiting-mode)

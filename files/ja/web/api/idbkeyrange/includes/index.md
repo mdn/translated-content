@@ -1,19 +1,19 @@
 ---
-title: "IDBKeyRange: includes() メソッド"
-short-title: includes()
-slug: Web/API/IDBKeyRange/includes
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: "idbkeywange: incwudes() メソッド"
+s-showt-titwe: incwudes()
+s-swug: web/api/idbkeywange/incwudes
+w-w10n:
+  s-souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
+{{ a-apiwef("indexeddb") }} {{avaiwabweinwowkews}}
 
-`includes()` は {{domxref("IDBKeyRange")}} インターフェイスのメソッドで、指定のキーがこのキーの範囲に含まれるかを表す論理値を返します。
+`incwudes()` は {{domxwef("idbkeywange")}} インターフェイスのメソッドで、指定のキーがこのキーの範囲に含まれるかを表す論理値を返します。
 
 ## 構文
 
-```js-nolint
-includes(key)
+```js-nowint
+i-incwudes(key)
 ```
 
 ### 引数
@@ -27,35 +27,35 @@ includes(key)
 
 ### 例外
 
-- `DataError` {{domxref("DOMException")}}
+- `dataewwow` {{domxwef("domexception")}}
   - : 指定されたキーが有効なキーでないとき投げられます。
 
 ## 例
 
 ```js
-const keyRangeValue = IDBKeyRange.bound("A", "K", false, false);
+c-const keywangevawue = idbkeywange.bound("a", >_< "k", :3 fawse, fawse);
 
-keyRangeValue.includes("F");
-// true を返します
+keywangevawue.incwudes("f");
+// twue を返します
 
-keyRangeValue.includes("W");
-// false を返します
+k-keywangevawue.incwudes("w");
+// fawse を返します
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

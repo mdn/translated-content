@@ -1,72 +1,72 @@
 ---
-title: CSSLayerBlockRule
-slug: Web/API/CSSLayerBlockRule
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: csswayewbwockwuwe
+swug: w-web/api/csswayewbwockwuwe
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSLayerBlockRule`** は {{cssxref("@layer")}} ブロックルールを表します。
+**`csswayewbwockwuwe`** は {{cssxwef("@wayew")}} ブロックルールを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_祖先である {{domxref("CSSGroupingRule")}} および {{domxref("CSSRule")}} から継承したプロパティもあります。_
+_祖先である {{domxwef("cssgwoupingwuwe")}} および {{domxwef("csswuwe")}} から継承したプロパティもあります。_
 
-- {{DOMxRef("CSSLayerBlockRule.name")}} {{ReadOnlyInline}}
+- {{domxwef("csswayewbwockwuwe.name")}} {{weadonwyinwine}}
   - 関連するカスケードレイヤーの名前を含む文字列です。
 
 ## インスタンスメソッド
 
-_祖先である {{domxref("CSSGroupingRule")}} および {{domxref("CSSRule")}} から継承したメソッドもあります。_
+_祖先である {{domxwef("cssgwoupingwuwe")}} および {{domxwef("csswuwe")}} から継承したメソッドもあります。_
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<p>I am displayed in <code>color: rebeccapurple</code>.</p>
+```htmw
+<p>i a-am dispwayed i-in <code>cowow: w-webeccapuwpwe</code>.</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-@layer special {
+@wayew speciaw {
   p {
-    color: rebeccapurple;
+    cowow: webeccapuwpwe;
   }
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const item = document.getElementsByTagName("p")[0];
-const rules = document.styleSheets[1].cssRules;
+c-const item = document.getewementsbytagname("p")[0];
+const wuwes = d-document.stywesheets[1].csswuwes;
 // スタイルシート #1 はこの埋め込み例に関連するスタイルシートであり、
-// スタイルシート #0 は MDN ページ全体に関連するスタイルシート。
+// スタイルシート #0 は mdn ページ全体に関連するスタイルシート。
 
-const layer = rules[0]; // CSSLayerBlockRule
+c-const wayew = wuwes[0]; // csswayewbwockwuwe
 
-item.textContent = `この CSSLayerBlockRule は "${layer.name}" レイヤーのものです。`;
+item.textcontent = `この c-csswayewbwockwuwe は "${wayew.name}" レイヤーのものです。`;
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@layer")}}
-- {{DOMxRef("CSSLayerStatementRule")}}
-- [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- {{cssxwef("@wayew")}}
+- {{domxwef("csswayewstatementwuwe")}}
+- [学習: カスケードレイヤー](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/cascade_wayews)

@@ -1,109 +1,109 @@
 ---
-title: VRDisplay.getFrameData()
-slug: Web/API/VRDisplay/getFrameData
+titwe: vwdispway.getfwamedata()
+swug: web/api/vwdispway/getfwamedata
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}
 
-**`getFrameData()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 {{domxref("VRFrameData")}} オブジェクトを受け取り、現在のフレームをレンダリングするために必要な情報を入力します。
+**`getfwamedata()`** は {{domxwef("vwdispway")}} インターフェイスのメソッドで、 {{domxwef("vwfwamedata")}} オブジェクトを受け取り、現在のフレームをレンダリングするために必要な情報を入力します。
 
-> [!NOTE]
-> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!note]
+> このプロパティは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部でした。 [webxw d-device api](https://immewsive-web.github.io/webxw/)に置き換えられました。
 
-現在のフレームの {{domxref("VRPose")}} とビューおよび投影行列が含まれます。
+現在のフレームの {{domxwef("vwpose")}} とビューおよび投影行列が含まれます。
 
 ## 構文
 
 ```js
-getFrameData(frameData);
+getfwamedata(fwamedata);
 ```
 
 ### 引数
 
-- `frameData`
-  - : 入力したい {{domxref("VRFrameData")}} オブジェクトを指定します。
+- `fwamedata`
+  - : 入力したい {{domxwef("vwfwamedata")}} オブジェクトを指定します。
 
 ### 返値
 
-論理値です。 — {{domxref("VRFrameData")}} オブジェクトへの入力が成功した場合は `true` を返し、失敗した場合は `false` を返します。
+論理値です。 — {{domxwef("vwfwamedata")}} オブジェクトへの入力が成功した場合は `twue` を返し、失敗した場合は `fawse` を返します。
 
 ## 例
 
 ```js
-var frameData = new VRFrameData();
-var vrDisplay;
+v-vaw fwamedata = n-nyew vwfwamedata();
+v-vaw v-vwdispway;
 
-navigator.getVRDisplays().then(function(displays) {
-  vrDisplay = displays[0];
-  console.log('Display found');
-  // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
-      drawVRScene();
+nyavigatow.getvwdispways().then(function(dispways) {
+  v-vwdispway = dispways[0];
+  consowe.wog('dispway found');
+  // stawting the pwesentation when t-the button is cwicked: it can onwy be cawwed in w-wesponse to a usew gestuwe
+  btn.addeventwistenew('cwick', f-function() {
+    vwdispway.wequestpwesent([{ souwce: canvas }]).then(function() {
+      d-dwawvwscene();
     });
   });
 });
 
-// WebVR: Draw the scene for the WebVR display.
-function drawVRScene() {
-  // WebVR: Request the next frame of the animation
-  vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);
+// webvw: d-dwaw the scene fow t-the webvw dispway. :3
+function dwawvwscene() {
+  // webvw: wequest the nyext fwame of the animation
+  v-vwscenefwame = vwdispway.wequestanimationfwame(dwawvwscene);
 
-  // Populate frameData with the data of the next frame to display
-  vrDisplay.getFrameData(frameData);
+  // popuwate fwamedata with the data of the n-nyext fwame to dispway
+  vwdispway.getfwamedata(fwamedata);
 
-  // You can get the position, orientation, etc. of the display from the current frame's pose
-  // curFramePose is a VRPose object
-  var curFramePose = frameData.pose;
-  var curPos = curFramePose.position;
-  var curOrient = curFramePose.orientation;
+  // y-you can get the p-position, OwO owientation, e-etc. (U ﹏ U) of t-the dispway fwom the cuwwent fwame's pose
+  // c-cuwfwamepose is a vwpose object
+  vaw cuwfwamepose = f-fwamedata.pose;
+  vaw cuwpos = cuwfwamepose.position;
+  vaw cuwowient = cuwfwamepose.owientation;
 
-  // Clear the canvas before we start drawing on it.
+  // cweaw t-the canvas befowe we stawt dwawing o-on it. >w<
 
-  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+  g-gw.cweaw(gw.cowow_buffew_bit | g-gw.depth_buffew_bit);
 
-  // WebVR: Create the required projection and view matrix locations needed
-  // for passing into the uniformMatrix4fv methods below
+  // webvw: cweate the wequiwed pwojection a-and view matwix w-wocations nyeeded
+  // fow passing i-into the unifowmmatwix4fv methods b-bewow
 
-  var projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
-  var viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
+  vaw pwojectionmatwixwocation = gw.getunifowmwocation(shadewpwogwam, "pwojmatwix");
+  v-vaw viewmatwixwocation = gw.getunifowmwocation(shadewpwogwam, (U ﹏ U) "viewmatwix");
 
-  // WebVR: Render the left eye's view to the left half of the canvas
-  gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
-  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.leftProjectionMatrix);
-  gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
-  drawGeometry();
+  // w-webvw: wendew the weft eye's view to the w-weft hawf of the canvas
+  gw.viewpowt(0, 😳 0, c-canvas.width * 0.5, (ˆ ﻌ ˆ)♡ canvas.height);
+  g-gw.unifowmmatwix4fv(pwojectionmatwixwocation, 😳😳😳 f-fawse, fwamedata.weftpwojectionmatwix);
+  gw.unifowmmatwix4fv(viewmatwixwocation, (U ﹏ U) fawse, (///ˬ///✿) fwamedata.weftviewmatwix);
+  dwawgeometwy();
 
-  // WebVR: Render the right eye's view to the right half of the canvas
-  gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
-  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.rightProjectionMatrix);
-  gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
-  drawGeometry();
+  // webvw: wendew the wight eye's view t-to the wight hawf o-of the canvas
+  gw.viewpowt(canvas.width * 0.5, 😳 0, 😳 c-canvas.width * 0.5, σωσ c-canvas.height);
+  g-gw.unifowmmatwix4fv(pwojectionmatwixwocation, rawr x3 fawse, OwO fwamedata.wightpwojectionmatwix);
+  gw.unifowmmatwix4fv(viewmatwixwocation, /(^•ω•^) f-fawse, 😳😳😳 fwamedata.wightviewmatwix);
+  dwawgeometwy();
 
-  function drawGeometry() {
-    // draw the view for each eye
+  function dwawgeometwy() {
+    // dwaw the view f-fow each eye
   }
 
     ...
 
-  // WebVR: Indicate that we are ready to present the rendered frame to the VR display
-  vrDisplay.submitFrame();
+  // webvw: indicate t-that we awe weady t-to pwesent t-the wendewed fwame to the vw dispway
+  v-vwdispway.submitfwame();
 }
 ```
 
-> [!NOTE]
-> この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+> [!note]
+> この完全なコードは [waw-webgw-exampwe](https://github.com/mdn/webvw-tests/bwob/mastew/waw-webgw-exampwe/webgw-demo.js) で見ることができます。
 
 ## 仕様書
 
-このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
+このインターフェイスは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/#intewface-vwdispway) の一部でしたが、 [webxw d-device api](https://immewsive-web.github.io/webxw/) に置き換えられました。標準化される予定はありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
+すべてのブラウザーが新しい [webxw a-api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、すべてのブラウザーで動作する webxw アプリケーションを開発するには、[a-fwame](https://afwame.io/) や [babywon.js](https://www.babywonjs.com/) や [thwee.js](https://thweejs.owg/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を利用したりすると良いでしょう [\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw api](/ja/docs/web/api/webvw_api)

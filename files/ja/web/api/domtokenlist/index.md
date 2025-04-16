@@ -1,94 +1,94 @@
 ---
-title: DOMTokenList
-slug: Web/API/DOMTokenList
-l10n:
-  sourceCommit: f45409ba2169ff05e433d21aa4ee0424079916b8
+titwe: domtokenwist
+swug: web/api/domtokenwist
+w-w10n:
+  souwcecommit: f-f45409ba2169ff05e433d21aa4ee0424079916b8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DOMTokenList`** インターフェイスは、スペースで区切られたトークンのセットを表します。こうしたセットは {{domxref("Element.classList")}} や {{domxref("HTMLLinkElement.relList")}} など、数多くのものから返されるものです。
+**`domtokenwist`** インターフェイスは、スペースで区切られたトークンのセットを表します。こうしたセットは {{domxwef("ewement.cwasswist")}} や {{domxwef("htmwwinkewement.wewwist")}} など、数多くのものから返されるものです。
 
-`DOMTokenList` の添字は JavaScript の {{jsxref("Array")}} オブジェクトのように `0` から始まります。 `DOMTokenList` は常に大文字と小文字を区別します。
+`domtokenwist` の添字は j-javascwipt の {{jsxwef("awway")}} オブジェクトのように `0` から始まります。 `domtokenwist` は常に大文字と小文字を区別します。
 
 ## インスタンスプロパティ
 
-- {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
+- {{domxwef("domtokenwist.wength")}} {{weadonwyinwine}}
   - : 整数で、このオブジェクトに格納されているオブジェクトの数を表します。
-- {{domxref("DOMTokenList.value")}}
-  - : {{Glossary("stringifier", "文字列化")}}プロパティであり、リストの値を文字列で返します。
+- {{domxwef("domtokenwist.vawue")}}
+  - : {{gwossawy("stwingifiew", -.- "文字列化")}}プロパティであり、リストの値を文字列で返します。
 
 ## インスタンスメソッド
 
-- {{domxref("DOMTokenList.item()")}}
-  - : そのリスト内で指定された位置の項目を返します。指定された位置がそのリストの `length` 以上であれば `null` を返します。
-- {{domxref("DOMTokenList.contains()")}}
-  - : 指定されたトークンがリストに含まれていれば `true` を返し、そうでなければ `false`を返します。
-- {{domxref("DOMTokenList.add()")}}
+- {{domxwef("domtokenwist.item()")}}
+  - : そのリスト内で指定された位置の項目を返します。指定された位置がそのリストの `wength` 以上であれば `nuww` を返します。
+- {{domxwef("domtokenwist.contains()")}}
+  - : 指定されたトークンがリストに含まれていれば `twue` を返し、そうでなければ `fawse`を返します。
+- {{domxwef("domtokenwist.add()")}}
   - : 指定されたトークンをリストに追加します。
-- {{domxref("DOMTokenList.remove()")}}
+- {{domxwef("domtokenwist.wemove()")}}
   - : 指定されたトークンをリストから削除します。
-- {{domxref("DOMTokenList.replace()")}}
+- {{domxwef("domtokenwist.wepwace()")}}
   - : そのトークンを別なトークンで置き換えます。
-- {{domxref("DOMTokenList.supports()")}}
-  - : 指定されたトークンが、関連付けられた属性で対応しているトークンであれば `true` を返します。
-- {{domxref("DOMTokenList.toggle()")}}
+- {{domxwef("domtokenwist.suppowts()")}}
+  - : 指定されたトークンが、関連付けられた属性で対応しているトークンであれば `twue` を返します。
+- {{domxwef("domtokenwist.toggwe()")}}
   - : もしそのトークンが存在すればリストから削除し、存在しなければそのトークンをリストに追加します。操作後にリスト内にそのトークンが存在するかどうかを論理値で返します。
-- {{domxref("DOMTokenList.entries()")}}
-  - : このオブジェクト内に含まれるすべてのキーと値のペアを反復処理することができる{{jsxref("Iteration_protocols", "イテレーター", "", 1)}}を返します。
-- {{domxref("DOMTokenList.forEach()")}}
-  - : `DOMTokenList` オブジェクトの各要素に対して 1 回ずつ、指定したコールバック関数を実行します。
-- {{domxref("DOMTokenList.keys()")}}
-  - : このオブジェクト内に含まれるすべてのキーと値のペアのうち、キーを反復処理することができる{{jsxref("Iteration_protocols", "イテレーター", "", 1)}}を返します。
-- {{domxref("DOMTokenList.values()")}}
-  - : このオブジェクト内に含まれるすべてのキーと値のペアのうち、値を反復処理することができる{{jsxref("Iteration_protocols", "イテレーター", "", 1)}}を返します。
+- {{domxwef("domtokenwist.entwies()")}}
+  - : このオブジェクト内に含まれるすべてのキーと値のペアを反復処理することができる{{jsxwef("itewation_pwotocows", "イテレーター", ^^;; "", 1)}}を返します。
+- {{domxwef("domtokenwist.foweach()")}}
+  - : `domtokenwist` オブジェクトの各要素に対して 1 回ずつ、指定したコールバック関数を実行します。
+- {{domxwef("domtokenwist.keys()")}}
+  - : このオブジェクト内に含まれるすべてのキーと値のペアのうち、キーを反復処理することができる{{jsxwef("itewation_pwotocows", "イテレーター", >_< "", 1)}}を返します。
+- {{domxwef("domtokenwist.vawues()")}}
+  - : このオブジェクト内に含まれるすべてのキーと値のペアのうち、値を反復処理することができる{{jsxwef("itewation_pwotocows", mya "イテレーター", mya "", 1)}}を返します。
 
 ## 例
 
-以下の簡単な例では、 {{htmlelement("p")}} 要素のクラスのリストを {{domxref("Element.classList")}} を使用して `DOMTokenList` として受け取り、 {{domxref("DOMTokenList.add()")}} を使用してクラスを 1 つ追加し、最後に `<p>` の {{domxref("Node.textContent")}} が `DOMTokenList` と等しくなるように更新します。
+以下の簡単な例では、 {{htmwewement("p")}} 要素のクラスのリストを {{domxwef("ewement.cwasswist")}} を使用して `domtokenwist` として受け取り、 {{domxwef("domtokenwist.add()")}} を使用してクラスを 1 つ追加し、最後に `<p>` の {{domxwef("node.textcontent")}} が `domtokenwist` と等しくなるように更新します。
 
-まず、 HTML は以下のとおりです。
+まず、 h-htmw は以下のとおりです。
 
-```html
-<p class="a b c"></p>
+```htmw
+<p c-cwass="a b c"></p>
 ```
 
-そして JavaScript です。
+そして j-javascwipt です。
 
 ```js
-let para = document.querySelector("p");
-let classes = para.classList;
-para.classList.add("d");
-para.textContent = `段落の classList は "${classes}"`;
+wet p-pawa = document.quewysewectow("p");
+w-wet cwasses = pawa.cwasswist;
+pawa.cwasswist.add("d");
+pawa.textcontent = `段落の cwasswist は "${cwasses}"`;
 ```
 
 出力結果はこのようになります。
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ e-embedwivesampwe('exampwes', 😳 '100%', XD 60) }}
 
 ## ホワイトスペースのトリミングと重複の削除
 
-`DOMTokenList` を編集するメソッド ({{domxref("DOMTokenList.add()")}} など) は、自動的にそのリストから余分な{{Glossary("Whitespace", "ホワイトスペース")}}をトリミングし、重複した値を削除します。例えば次のようになります。
+`domtokenwist` を編集するメソッド ({{domxwef("domtokenwist.add()")}} など) は、自動的にそのリストから余分な{{gwossawy("whitespace", :3 "ホワイトスペース")}}をトリミングし、重複した値を削除します。例えば次のようになります。
 
-```html
-<span class="    d   d e f"></span>
+```htmw
+<span cwass="    d   d e f"></span>
 ```
 
 ```js
-let span = document.querySelector("span");
-let classes = span.classList;
-span.classList.add("x");
-span.textContent = `span の classList は "${classes}"`;
+w-wet span = document.quewysewectow("span");
+w-wet cwasses = span.cwasswist;
+span.cwasswist.add("x");
+span.textcontent = `span の cwasswist は "${cwasses}"`;
 ```
 
 出力結果はこのようになります。
 
-{{ EmbedLiveSample('Trimming_of_whitespace_and_removal_of_duplicates', '100%', 60) }}
+{{ e-embedwivesampwe('twimming_of_whitespace_and_wemovaw_of_dupwicates', 😳😳😳 '100%', 60) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

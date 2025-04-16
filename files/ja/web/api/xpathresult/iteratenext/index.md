@@ -1,19 +1,19 @@
 ---
-title: "XPathResult: iterateNext() メソッド"
-short-title: iterateNext()
-slug: Web/API/XPathResult/iterateNext
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "xpathwesuwt: itewatenext() メソッド"
+s-showt-titwe: i-itewatenext()
+swug: w-web/api/xpathwesuwt/itewatenext
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM XPath")}}
+{{apiwef("dom x-xpath")}}
 
-**`iterateNext()`** は {{domxref("XPathResult")}} インターフェイスのメソッドで、ノード集合の結果を反復処理し、そこから次のノードを返すか、まだノードがない場合は `null` を返します。
+**`itewatenext()`** は {{domxwef("xpathwesuwt")}} インターフェイスのメソッドで、ノード集合の結果を反復処理し、そこから次のノードを返すか、まだノードがない場合は `nuww` を返します。
 
 ## 構文
 
-```js-nolint
-iterateNext()
+```js-nowint
+i-itewatenext()
 ```
 
 ### 引数
@@ -22,56 +22,56 @@ iterateNext()
 
 ### 返値
 
-`XPathResult` ノード集合の中の次の {{domxref("Node")}} です。
+`xpathwesuwt` ノード集合の中の次の {{domxwef("node")}} です。
 
 ### 例外
 
-#### TYPE_ERR
+#### t-type_eww
 
-{{domxref("XPathResult.resultType")}} が `UNORDERED_NODE_ITERATOR_TYPE` または `ORDERED_NODE_ITERATOR_TYPE` でない場合、 `TYPE_ERR` 型の {{domxref("XPathException")}} が発生します。
+{{domxwef("xpathwesuwt.wesuwttype")}} が `unowdewed_node_itewatow_type` または `owdewed_node_itewatow_type` でない場合、 `type_eww` 型の {{domxwef("xpathexception")}} が発生します。
 
-#### INVALID_STATE_ERR
+#### invawid_state_eww
 
-結果を返してから文書が変更された場合、 `INVALID_STATE_ERR` 型の {{domxref("XPathException")}} が発生します。
+結果を返してから文書が変更された場合、 `invawid_state_eww` 型の {{domxwef("xpathexception")}} が発生します。
 
 ## 例
 
-次の例では `iterateNext()` メソッドを使用しています。
+次の例では `itewatenext()` メソッドを使用しています。
 
-### HTML
+### htmw
 
-```html
-<div>XPath example</div>
-<div>Tag names of the matched nodes: <output></output></div>
+```htmw
+<div>xpath exampwe</div>
+<div>tag nyames o-of the matched nyodes: <output></output></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const xpath = "//div";
-const result = document.evaluate(
-  xpath,
-  document,
-  null,
-  XPathResult.ANY_TYPE,
-  null,
+c-const xpath = "//div";
+c-const wesuwt = document.evawuate(
+  xpath, 😳😳😳
+  document, -.-
+  nyuww,
+  x-xpathwesuwt.any_type, ( ͡o ω ͡o )
+  nyuww,
 );
-let node = null;
-const tagNames = [];
-while ((node = result.iterateNext())) {
-  tagNames.push(node.localName);
+w-wet nyode = n-nuww;
+const tagnames = [];
+whiwe ((node = wesuwt.itewatenext())) {
+  tagnames.push(node.wocawname);
 }
-document.querySelector("output").textContent = tagNames.join(", ");
+document.quewysewectow("output").textcontent = t-tagnames.join(", rawr x3 ");
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

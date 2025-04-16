@@ -1,14 +1,14 @@
 ---
-title: "DOMException: message プロパティ"
-short-title: message
-slug: Web/API/DOMException/message
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domexception: message プロパティ"
+s-showt-titwe: message
+s-swug: web/api/domexception/message
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`message`** は {{domxref("DOMException")}} インターフェイスの読み取り専用プロパティで、指定された[エラー名](/ja/docs/Web/API/DOMException#エラー名)に結びつけられたメッセージまたは説明文を表す文字列を返します。
+**`message`** は {{domxwef("domexception")}} インターフェイスの読み取り専用プロパティで、指定された[エラー名](/ja/docs/web/api/domexception#エラー名)に結びつけられたメッセージまたは説明文を表す文字列を返します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

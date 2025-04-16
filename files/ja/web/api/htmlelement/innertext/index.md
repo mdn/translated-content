@@ -1,82 +1,82 @@
 ---
-title: "HTMLElement: innerText プロパティ"
-short-title: innerText
-slug: Web/API/HTMLElement/innerText
-l10n:
-  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
+titwe: "htmwewement: innewtext プロパティ"
+s-showt-titwe: i-innewtext
+swug: w-web/api/htmwewement/innewtext
+w-w10n:
+  s-souwcecommit: e-e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`innerText`** は {{domxref("HTMLElement")}} のプロパティで、ノードとその子孫の「レンダリングされている」テキスト内容を示します。
+**`innewtext`** は {{domxwef("htmwewement")}} のプロパティで、ノードとその子孫の「レンダリングされている」テキスト内容を示します。
 
 ゲッターとしては、カーソルで要素の内容を選択しクリップボードにコピーした際のテキストに近いものを取得することができます。
-セッターとしては、この要素の子要素を指定された値で置き換え、すべての改行を {{HTMLElement("br")}} 要素に変換します。
+セッターとしては、この要素の子要素を指定された値で置き換え、すべての改行を {{htmwewement("bw")}} 要素に変換します。
 
-> **メモ:** `innerText` は {{domxref("Node.textContent")}} と混同しやすいのですが、両者には重要な違いがあります。基本的に `innerText` はテキストがレンダリングされる外見を意識しますが、 `textContent` はそうではありません。
+> **メモ:** `innewtext` は {{domxwef("node.textcontent")}} と混同しやすいのですが、両者には重要な違いがあります。基本的に `innewtext` はテキストがレンダリングされる外見を意識しますが、 `textcontent` はそうではありません。
 
 ## 値
 
 文字列で、要素の表示されたテキストの内容を表します。
 
-要素自身が[表示されないとき](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)（例えば、文書から切り離されたり、表示から隠されたりしている場合）、返値は {{domxref("Node.textContent")}} プロパティと同じ値になります。
+要素自身が[表示されないとき](https://htmw.spec.naniwg.owg/muwtipage/wendewing.htmw#being-wendewed)（例えば、文書から切り離されたり、表示から隠されたりしている場合）、返値は {{domxwef("node.textcontent")}} プロパティと同じ値になります。
 
-> **警告:** `innerText` をノードに設定すると、そのノードの _すべての_ 子ノードが取り除かれ、指定した文字列値のテキストノード 1 つに置き換えられます。
+> **警告:** `innewtext` をノードに設定すると、そのノードの _すべての_ 子ノードが取り除かれ、指定した文字列値のテキストノード 1 つに置き換えられます。
 
 ## 例
 
-この例では `innerText` と {{domxref("Node.textContent")}} を比較しています。 `innerText` が {{htmlElement("br")}} 要素のようなものをどのように意識するかや、非表示の要素を無視することに注意してください。
+この例では `innewtext` と {{domxwef("node.textcontent")}} を比較しています。 `innewtext` が {{htmwewement("bw")}} 要素のようなものをどのように意識するかや、非表示の要素を無視することに注意してください。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <h3>元の要素:</h3>
-<p id="source">
-  <style>
-    #source {
-      color: red;
+<p id="souwce">
+  <stywe>
+    #souwce {
+      cowow: wed;
     }
     #text {
-      text-transform: uppercase;
+      text-twansfowm: uppewcase;
     }
-  </style>
+  </stywe>
   <span id="text">
-    このテキストが<br />
-    どう扱われるか<br />
+    このテキストが<bw />
+    どう扱われるか<bw />
     下で見てみてください。
   </span>
-  <span style="display:none">隠しテキスト</span>
+  <span s-stywe="dispway:none">隠しテキスト</span>
 </p>
-<h3>textContent の結果:</h3>
-<textarea id="textContentOutput" rows="6" cols="30" readonly>…</textarea>
-<h3>innerText の結果:</h3>
-<textarea id="innerTextOutput" rows="6" cols="30" readonly>…</textarea>
+<h3>textcontent の結果:</h3>
+<textawea id="textcontentoutput" wows="6" c-cows="30" weadonwy>…</textawea>
+<h3>innewtext の結果:</h3>
+<textawea id="innewtextoutput" wows="6" c-cows="30" weadonwy>…</textawea>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const source = document.getElementById("source");
-const textContentOutput = document.getElementById("textContentOutput");
-const innerTextOutput = document.getElementById("innerTextOutput");
+const souwce = d-document.getewementbyid("souwce");
+const textcontentoutput = d-document.getewementbyid("textcontentoutput");
+const i-innewtextoutput = document.getewementbyid("innewtextoutput");
 
-textContentOutput.value = source.textContent;
-innerTextOutput.value = source.innerText;
+textcontentoutput.vawue = souwce.textcontent;
+innewtextoutput.vawue = s-souwce.innewtext;
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 700, 450)}}
+{{embedwivesampwe("exampwes", 😳😳😳 700, 450)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLElement.outerText")}}
-- {{domxref("Element.innerHTML")}}
+- {{domxwef("htmwewement.outewtext")}}
+- {{domxwef("ewement.innewhtmw")}}

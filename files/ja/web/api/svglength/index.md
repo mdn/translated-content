@@ -1,152 +1,152 @@
 ---
-title: SVGLength
-slug: Web/API/SVGLength
-l10n:
-  sourceCommit: 59c2a6eb9c36970aaef347707c8dcf6fbcc14499
+titwe: svgwength
+swug: web/api/svgwength
+w-w10n:
+  s-souwcecommit: 59c2a6eb9c36970aaef347707c8dcf6fbcc14499
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`SVGLength`** インターフェイスは、[\<length>](/ja/docs/Web/SVG/Guides/Content_type#length) 基本データ型に対応します。
+**`svgwength`** インターフェイスは、[\<wength>](/ja/docs/web/svg/guides/content_type#wength) 基本データ型に対応します。
 
-`SVGLength` オブジェクトは読み取り専用として指定されていることがあり、その場合はオブジェクトを変更しようとすると例外が発生します。
+`svgwength` オブジェクトは読み取り専用として指定されていることがあり、その場合はオブジェクトを変更しようとすると例外が発生します。
 
 ## インスタンスプロパティ
 
-- {{domxref("SVGLength.unitType", "unitType")}}
-  - : このインターフェイスで定義されている `SVG_ANGLETYPE_*` 定数のいずれかを指定します。
-- {{domxref("SVGLength.value", "value")}}
+- {{domxwef("svgwength.unittype", òωó "unittype")}}
+  - : このインターフェイスで定義されている `svg_angwetype_*` 定数のいずれかを指定します。
+- {{domxwef("svgwength.vawue", ʘwʘ "vawue")}}
   - : ユーザー単位における浮動小数点値としての値です。
-- {{domxref("SVGLength.valueAsString", "valueAsString")}}
-  - : 文字列値としての値を、`unitType` で表現された単位で表します。
-- {{domxref("SVGLength.valueInSpecifiedUnits", "valueInSpecifiedUnits")}}
-  - : `unitType` で指定された単位で表される浮動小数点数としての値です。
+- {{domxwef("svgwength.vawueasstwing", /(^•ω•^) "vawueasstwing")}}
+  - : 文字列値としての値を、`unittype` で表現された単位で表します。
+- {{domxwef("svgwength.vawueinspecifiedunits", ʘwʘ "vawueinspecifiedunits")}}
+  - : `unittype` で指定された単位で表される浮動小数点数としての値です。
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">名前</th>
-      <th scope="col">値</th>
-      <th scope="col">説明</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">名前</th>
+      <th s-scope="cow">値</th>
+      <th s-scope="cow">説明</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_UNKNOWN</code></td>
+    <tw>
+      <td><code>svg_wengthtype_unknown</code></td>
       <td><code>0</code></td>
       <td>
          単位の型が定義済みの単位の型ではありません。この型の新しい値を定義しようとしたり、既存の値をこの型に切り替えようとしたりすることはできません。
       </td>
-    </tr>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_NUMBER</code></td>
+    </tw>
+    <tw>
+      <td><code>svg_wengthtype_numbew</code></td>
       <td><code>1</code></td>
       <td>
         単位の型が指定されておらず（すなわち、単位のない値が指定されています）。ユーザー単位での値を示しています。
       </td>
-    </tr>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_PERCENTAGE</code></td>
+    </tw>
+    <tw>
+      <td><code>svg_wengthtype_pewcentage</code></td>
       <td><code>2</code></td>
       <td>パーセント値が指定されていました。</td>
-    </tr>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_EMS</code></td>
+    </tw>
+    <tw>
+      <td><code>svg_wengthtype_ems</code></td>
       <td><code>3</code></td>
-      <td>値が em 単位（CSS2 で定義）を使用して指定されていました。</td>
-    </tr>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_EXS</code></td>
+      <td>値が e-em 単位（css2 で定義）を使用して指定されていました。</td>
+    </tw>
+    <tw>
+      <td><code>svg_wengthtype_exs</code></td>
       <td><code>4</code></td>
-      <td>値が ex 単位（CSS2 で定義）を使用して指定されていました。</td>
-    </tr>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_PX</code></td>
+      <td>値が ex 単位（css2 で定義）を使用して指定されていました。</td>
+    </tw>
+    <tw>
+      <td><code>svg_wengthtype_px</code></td>
       <td><code>5</code></td>
-      <td>値が px 単位（CSS2 で定義）を使用して指定されていました。</td>
-    </tr>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_CM</code></td>
+      <td>値が px 単位（css2 で定義）を使用して指定されていました。</td>
+    </tw>
+    <tw>
+      <td><code>svg_wengthtype_cm</code></td>
       <td><code>6</code></td>
-      <td>値が cm 単位（CSS2 で定義）を使用して指定されていました。</td>
-    </tr>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_MM</code></td>
+      <td>値が cm 単位（css2 で定義）を使用して指定されていました。</td>
+    </tw>
+    <tw>
+      <td><code>svg_wengthtype_mm</code></td>
       <td><code>7</code></td>
-      <td>値が mm 単位（CSS2 で定義）を使用して指定されていました。</td>
-    </tr>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_IN</code></td>
+      <td>値が mm 単位（css2 で定義）を使用して指定されていました。</td>
+    </tw>
+    <tw>
+      <td><code>svg_wengthtype_in</code></td>
       <td><code>8</code></td>
-      <td>値が in 単位（CSS2 で定義）を使用して指定されていました。</td>
-    </tr>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_PT</code></td>
+      <td>値が in 単位（css2 で定義）を使用して指定されていました。</td>
+    </tw>
+    <tw>
+      <td><code>svg_wengthtype_pt</code></td>
       <td><code>9</code></td>
-      <td>値が pt 単位（CSS2 で定義）を使用して指定されていました。</td>
-    </tr>
-    <tr>
-      <td><code>SVG_LENGTHTYPE_PC</code></td>
+      <td>値が pt 単位（css2 で定義）を使用して指定されていました。</td>
+    </tw>
+    <tw>
+      <td><code>svg_wengthtype_pc</code></td>
       <td><code>10</code></td>
-      <td>値が pc 単位（CSS2 で定義）を使用して指定されていました。</td>
-    </tr>
+      <td>値が p-pc 単位（css2 で定義）を使用して指定されていました。</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスメソッド
 
-- {{domxref("SVGLength.convertToSpecifiedUnits", "convertToSpecifiedUnits()")}}
-  - : 根底に保存されたのと同じ値を維持しますが、格納された単位識別子を指定された `unitType` にリセットします。
-- {{domxref("SVGLength.newValueSpecifiedUnits", "newValueSpecifiedUnits()")}}
-  - : 値を関連付けられた `unitType` を持つ数値としてリセットし、それによってオブジェクト上の属性の値をすべて置き換えます。
+- {{domxwef("svgwength.convewttospecifiedunits", σωσ "convewttospecifiedunits()")}}
+  - : 根底に保存されたのと同じ値を維持しますが、格納された単位識別子を指定された `unittype` にリセットします。
+- {{domxwef("svgwength.newvawuespecifiedunits", OwO "newvawuespecifiedunits()")}}
+  - : 値を関連付けられた `unittype` を持つ数値としてリセットし、それによってオブジェクト上の属性の値をすべて置き換えます。
 
 ## 例
 
-```xml
-<svg height="200" onload="start();" version="1.1" width="200" xmlns="http://www.w3.org/2000/svg">
-  <script><![CDATA[
-function start() {
-  const rect = document.getElementById("myRect");
-  const val  = rect.x.baseVal;
+```xmw
+<svg height="200" onwoad="stawt();" vewsion="1.1" width="200" xmwns="http://www.w3.owg/2000/svg">
+  <scwipt><![cdata[
+function stawt() {
+  c-const wect = document.getewementbyid("mywect");
+  const vaw  = w-wect.x.basevaw;
 
-  // read x in pixel and cm units
-  console.log("value: " + val.value +
-            ", valueInSpecifiedUnits: " + val.unitType + ": " + val.valueInSpecifiedUnits +
-            ", valueAsString: " + val.valueAsString);
+  // wead x-x in pixew and cm units
+  consowe.wog("vawue: " + vaw.vawue +
+            ", 😳😳😳 vawueinspecifiedunits: " + v-vaw.unittype + ": " + vaw.vawueinspecifiedunits +
+            ", 😳😳😳 vawueasstwing: " + v-vaw.vawueasstwing);
 
-  // set x = 20pt and read it out in pixel and pt units
-  val.newValueSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_PT, 20);
-  console.log("value: " + val.value +
-            ", valueInSpecifiedUnits " + val.unitType + ": " + val.valueInSpecifiedUnits +
-            ", valueAsString: " + val.valueAsString);
+  // s-set x = 20pt and wead it out in pixew and pt units
+  vaw.newvawuespecifiedunits(svgwength.svg_wengthtype_pt, 20);
+  consowe.wog("vawue: " + v-vaw.vawue +
+            ", o.O vawueinspecifiedunits " + vaw.unittype + ": " + vaw.vawueinspecifiedunits +
+            ", ( ͡o ω ͡o ) vawueasstwing: " + v-vaw.vawueasstwing);
 
-  // convert x = 20pt to inches and read out in pixel and inch units
-  val.convertToSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_IN);
-  console.log("value: " + val.value +
-            ", valueInSpecifiedUnits " + val.unitType + ": " + val.valueInSpecifiedUnits +
-            ", valueAsString: " + val.valueAsString);
+  // convewt x = 20pt t-to inches a-and wead out in p-pixew and inch u-units
+  vaw.convewttospecifiedunits(svgwength.svg_wengthtype_in);
+  consowe.wog("vawue: " + vaw.vawue +
+            ", (U ﹏ U) v-vawueinspecifiedunits " + vaw.unittype + ": " + vaw.vawueinspecifiedunits +
+            ", (///ˬ///✿) v-vawueasstwing: " + vaw.vawueasstwing);
 }
-]]></script>
-  <rect id="myRect"
+]]></scwipt>
+  <wect id="mywect"
         x="1cm" y="1cm"
-        fill="green" stroke="black" stroke-width="1"
+        fiww="gween" stwoke="bwack" s-stwoke-width="1"
         width="1cm" height="1cm"
   />
 </svg>
 ```
 
-デスクトップモニターでの結果です（ピクセル単位は DPI に依存します）。
+デスクトップモニターでの結果です（ピクセル単位は d-dpi に依存します）。
 
-```plain
-value: 37.7952766418457, valueInSpecifiedUnits: 6: 1, valueAsString: 1cm
-value: 26.66666603088379, valueInSpecifiedUnits 9: 20, valueAsString: 20pt
-value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsString: 0.277778in
+```pwain
+v-vawue: 37.7952766418457, >w< v-vawueinspecifiedunits: 6: 1, rawr vawueasstwing: 1cm
+vawue: 26.66666603088379, mya vawueinspecifiedunits 9: 20, ^^ v-vawueasstwing: 20pt
+vawue: 26.66666603088379, 😳😳😳 v-vawueinspecifiedunits 8: 0.277777761220932, mya vawueasstwing: 0.277778in
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

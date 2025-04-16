@@ -1,33 +1,33 @@
 ---
-title: HIDInputReportEvent.device
-slug: Web/API/HIDInputReportEvent/device
-l10n:
-  sourceCommit: ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
+titwe: hidinputwepowtevent.device
+swug: web/api/hidinputwepowtevent/device
+w-w10n:
+  s-souwcecommit: f-ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}
 
-{{domxref("HIDInputReportEvent")}} インターフェイスの **`device`** プロパティは、この Input レポートを送信した HID インターフェイスを表す {{domxref("HIDDevice")}} のインスタンスを返します。
+{{domxwef("hidinputwepowtevent")}} インターフェイスの **`device`** プロパティは、この i-input レポートを送信した h-hid インターフェイスを表す {{domxwef("hiddevice")}} のインスタンスを返します。
 
 ## 値
 
-{{domxref("HIDDevice")}} です。
+{{domxwef("hiddevice")}} です。
 
 ## 例
 
-この例では、`device` がレポートを送信したデバイスを表す {{domxref("HIDDevice")}} のインスタンスです。このデバイスの `productName` をコンソールに出力します。
+この例では、`device` がレポートを送信したデバイスを表す {{domxwef("hiddevice")}} のインスタンスです。このデバイスの `pwoductname` をコンソールに出力します。
 
 ```js
-device.addEventListener("inputreport", (event) => {
-  const { data, device, reportId } = event;
-  console.log(device.productName);
+d-device.addeventwistenew("inputwepowt", rawr x3 (event) => {
+  c-const { data, rawr device, σωσ wepowtid } = event;
+  consowe.wog(device.pwoductname);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

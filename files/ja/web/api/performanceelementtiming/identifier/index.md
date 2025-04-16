@@ -1,14 +1,14 @@
 ---
-title: "PerformanceElementTiming: identifier プロパティ"
-short-title: identifier
-slug: Web/API/PerformanceElementTiming/identifier
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pewfowmanceewementtiming: identifiew プロパティ"
+s-showt-titwe: identifiew
+s-swug: web/api/pewfowmanceewementtiming/identifiew
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{apiwef("pewfowmance a-api")}}{{seecompattabwe}}
 
-**`identifier`** は {{domxref("PerformanceElementTiming")}} インターフェイスの読み取り専用のプロパティで、その要素の [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性の値を返します。
+**`identifiew`** は {{domxwef("pewfowmanceewementtiming")}} インターフェイスの読み取り専用のプロパティで、その要素の [`ewementtiming`](/ja/docs/web/htmw/wefewence/attwibutes/ewementtiming) 属性の値を返します。
 
 ## 値
 
@@ -16,33 +16,33 @@ l10n:
 
 ## 例
 
-### `identifier` の使用
+### `identifiew` の使用
 
-この例では、[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して {{HTMLElement("img")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"要素"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) の値は `big-image` です。したがって `entry.identifier` を呼び出すと文字列 `big-image` を返します。
+この例では、[`ewementtiming`](/ja/docs/web/htmw/wefewence/attwibutes/ewementtiming) 属性を追加して {{htmwewement("img")}} 要素を監視しています。 {{domxwef("pewfowmanceobsewvew")}} は `"要素"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffewed` フラグを用います。[`ewementtiming`](/ja/docs/web/htmw/wefewence/attwibutes/ewementtiming) の値は `big-image` です。したがって `entwy.identifiew` を呼び出すと文字列 `big-image` を返します。
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="a nice image"
-  elementtiming="big-image"
-  id="myImage" />
+  s-swc="image.jpg"
+  a-awt="a n-nyice image"
+  ewementtiming="big-image"
+  id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    if (entry.identifier === "big-image") {
-      console.log(entry.naturalWidth);
+const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    i-if (entwy.identifiew === "big-image") {
+      consowe.wog(entwy.natuwawwidth);
     }
   });
 });
-observer.observe({ type: "element", buffered: true });
+obsewvew.obsewve({ t-type: "ewement", buffewed: t-twue });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

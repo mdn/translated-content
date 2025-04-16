@@ -1,95 +1,95 @@
 ---
-title: AudioWorkletGlobalScope
-slug: Web/API/AudioWorkletGlobalScope
-l10n:
-  sourceCommit: 92ddca57f093fcae13e474f1eedca2946359f131
+titwe: audiowowkwetgwobawscope
+swug: web/api/audiowowkwetgwobawscope
+w-w10n:
+  s-souwcecommit: 92ddca57f093fcae13e474f1eedca2946359f131
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の **`AudioWorkletGlobalScope`** インターフェイスは、独自の {{domxref("AudioWorkletProcessor")}} の派生クラスを定義するユーザーコードのグローバル実行コンテキストを表します。
+[ウェブオーディオ a-api](/ja/docs/web/api/web_audio_api) の **`audiowowkwetgwobawscope`** インターフェイスは、独自の {{domxwef("audiowowkwetpwocessow")}} の派生クラスを定義するユーザーコードのグローバル実行コンテキストを表します。
 
-それぞれの {{domxref("BaseAudioContext")}} は {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} プロパティに 1 個の {{domxref("AudioWorklet")}} を持ち、これがコードを 1 個の `AudioWorkletGlobalScope` で実行します。
+それぞれの {{domxwef("baseaudiocontext")}} は {{domxwef("baseaudiocontext.audiowowkwet", OwO "audiowowkwet")}} プロパティに 1 個の {{domxwef("audiowowkwet")}} を持ち、これがコードを 1 個の `audiowowkwetgwobawscope` で実行します。
 
-グローバル実行コンテキストは現在の `BaseAudioContext` で共通なので、`AudioWorkletProcessor` の派生クラスを定義するだけでなく、他の変数を定義するなど、ワークレットでできることはなんでもできます。
+グローバル実行コンテキストは現在の `baseaudiocontext` で共通なので、`audiowowkwetpwocessow` の派生クラスを定義するだけでなく、他の変数を定義するなど、ワークレットでできることはなんでもできます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスは、親インターフェイスの {{domxref("WorkletGlobalScope")}} で定義されたプロパティも継承します。_
+_このインターフェイスは、親インターフェイスの {{domxwef("wowkwetgwobawscope")}} で定義されたプロパティも継承します。_
 
-- {{domxref("AudioWorkletGlobalScope.currentFrame", "currentFrame")}} {{ReadOnlyInline}}
-  - : 処理されている音声ブロックの現在のサンプルフレームを表す、単調増加の整数を返します。この値は、各音声ブロックを処理するごとに 128 (render quantum のサイズ) 増えます。
-- {{domxref("AudioWorkletGlobalScope.currentTime", "currentTime")}} {{ReadOnlyInline}}
-  - : 処理中の音声ブロックのコンテキスト時刻を表す単調増加の `double` 値を返します。ワークレットが属している {{domxref("BaseAudioContext")}} の {{domxref("BaseAudioContext.currentTime", "currentTime")}} プロパティと同じ値です。
-- {{domxref("AudioWorkletGlobalScope.sampleRate", "sampleRate")}} {{ReadOnlyInline}}
-  - : 属している {{domxref("BaseAudioContext")}} のサンプルレートを表す `float` 値を返します。
+- {{domxwef("audiowowkwetgwobawscope.cuwwentfwame", (U ﹏ U) "cuwwentfwame")}} {{weadonwyinwine}}
+  - : 処理されている音声ブロックの現在のサンプルフレームを表す、単調増加の整数を返します。この値は、各音声ブロックを処理するごとに 128 (wendew q-quantum のサイズ) 増えます。
+- {{domxwef("audiowowkwetgwobawscope.cuwwenttime", >_< "cuwwenttime")}} {{weadonwyinwine}}
+  - : 処理中の音声ブロックのコンテキスト時刻を表す単調増加の `doubwe` 値を返します。ワークレットが属している {{domxwef("baseaudiocontext")}} の {{domxwef("baseaudiocontext.cuwwenttime", rawr x3 "cuwwenttime")}} プロパティと同じ値です。
+- {{domxwef("audiowowkwetgwobawscope.sampwewate", mya "sampwewate")}} {{weadonwyinwine}}
+  - : 属している {{domxwef("baseaudiocontext")}} のサンプルレートを表す `fwoat` 値を返します。
 
 ## インスタンスメソッド
 
-_このインターフェイスは、親インターフェイスの {{domxref("WorkletGlobalScope")}} からもメソッドを継承します。_
+_このインターフェイスは、親インターフェイスの {{domxwef("wowkwetgwobawscope")}} からもメソッドを継承します。_
 
-- {{domxref("AudioWorkletGlobalScope.registerProcessor", "registerProcessor()")}}
-  - : {{domxref('AudioWorkletProcessor')}} インターフェイスの派生クラスを登録します。これにより、登録したクラスが登録した名前を指定することで {{domxref("AudioWorkletNode")}} の生成に使用できるようになります。
+- {{domxwef("audiowowkwetgwobawscope.wegistewpwocessow", nyaa~~ "wegistewpwocessow()")}}
+  - : {{domxwef('audiowowkwetpwocessow')}} インターフェイスの派生クラスを登録します。これにより、登録したクラスが登録した名前を指定することで {{domxwef("audiowowkwetnode")}} の生成に使用できるようになります。
 
 ## 例
 
-この例では、独自の {{domxref("AudioWorkletProcessor")}} のコンストラクターで、すべてのグローバルプロパティをコンソールに出力します。
+この例では、独自の {{domxwef("audiowowkwetpwocessow")}} のコンストラクターで、すべてのグローバルプロパティをコンソールに出力します。
 
 まず、処理器を定義して登録する必要があります。これは別のファイルで行うことに注意してください。
 
 ```js
-// test-processor.js で定義された AudioWorkletProcessor
-class TestProcessor extends AudioWorkletProcessor {
-  constructor() {
-    super();
+// t-test-pwocessow.js で定義された a-audiowowkwetpwocessow
+cwass testpwocessow extends audiowowkwetpwocessow {
+  constwuctow() {
+    s-supew();
 
     // 生成時のサンプルフレームと時刻を記録する。
-    // これらの値には AudioWorkletGlobalScope からアクセスできる。
-    console.log(currentFrame);
-    console.log(currentTime);
+    // これらの値には audiowowkwetgwobawscope からアクセスできる。
+    consowe.wog(cuwwentfwame);
+    c-consowe.wog(cuwwenttime);
   }
 
-  // process メソッドは必須である。
+  // pwocess メソッドは必須である。
   // (最初から入っている) 無音を出力する。
-  process(inputs, outputs, parameters) {
-    return true;
+  p-pwocess(inputs, (⑅˘꒳˘) outputs, rawr x3 pawametews) {
+    wetuwn twue;
   }
 }
 
 // サンプルレートを記録する。
-// これは BaseAudioContext の読み取り専用プロパティであり、
+// これは baseaudiocontext の読み取り専用プロパティであり、
 // 生成時にのみ設定されるので、変化しない。
-console.log(sampleRate);
+c-consowe.wog(sampwewate);
 
 // 任意の変数を宣言し、処理器で利用できる。
-// たとえば、波形テーブルが入った ArrayBuffer を宣言できる。
-const usefulVariable = 42;
-console.log(usefulVariable);
+// たとえば、波形テーブルが入った awwaybuffew を宣言できる。
+c-const u-usefuwvawiabwe = 42;
+consowe.wog(usefuwvawiabwe);
 
-registerProcessor("test-processor", TestProcessor);
+wegistewpwocessow("test-pwocessow", (✿oωo) testpwocessow);
 ```
 
-次に、メインスクリプトファイルで処理器をロードし、処理器の名前を渡して {{domxref("AudioWorkletNode")}} のインスタンスを生成し、生成したノードを音声グラフに接続します。コンソールに {{domxref("console/log_static", "console.log()")}} の呼び出しによる出力が出るはずです。
+次に、メインスクリプトファイルで処理器をロードし、処理器の名前を渡して {{domxwef("audiowowkwetnode")}} のインスタンスを生成し、生成したノードを音声グラフに接続します。コンソールに {{domxwef("consowe/wog_static", (ˆ ﻌ ˆ)♡ "consowe.wog()")}} の呼び出しによる出力が出るはずです。
 
 ```js
-const audioContext = new AudioContext();
-await audioContext.audioWorklet.addModule("test-processor.js");
-const testNode = new AudioWorkletNode(audioContext, "test-processor");
-testNode.connect(audioContext.destination);
+const a-audiocontext = new audiocontext();
+await audiocontext.audiowowkwet.addmoduwe("test-pwocessow.js");
+const testnode = nyew audiowowkwetnode(audiocontext, (˘ω˘) "test-pwocessow");
+t-testnode.connect(audiocontext.destination);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [AudioWorklet の使用](/ja/docs/Web/API/Web_Audio_API/Using_AudioWorklet)
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)
+- [web a-audio api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)
+- [audiowowkwet の使用](/ja/docs/web/api/web_audio_api/using_audiowowkwet)

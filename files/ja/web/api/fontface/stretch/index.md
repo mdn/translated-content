@@ -1,16 +1,16 @@
 ---
-title: "FontFace: stretch プロパティ"
-short-title: stretch
-slug: Web/API/FontFace/stretch
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontface: stwetch プロパティ"
+s-showt-titwe: s-stwetch
+s-swug: web/api/fontface/stwetch
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading a-api")}}
 
-**`stretch`** は {{domxref("FontFace")}} インターフェイスのプロパティで、フォントの伸縮方法を取得または設定します。
+**`stwetch`** は {{domxwef("fontface")}} インターフェイスのプロパティで、フォントの伸縮方法を取得または設定します。
 
-このプロパティは {{cssxref("@font-face/font-stretch", "font-stretch")}} 記述子と等価です。
+このプロパティは {{cssxwef("@font-face/font-stwetch", o.O "font-stwetch")}} 記述子と等価です。
 
 ## 値
 
@@ -18,8 +18,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

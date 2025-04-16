@@ -1,84 +1,84 @@
 ---
-title: FetchEvent
-slug: Web/API/FetchEvent
-l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+titwe: fetchevent
+swug: web/api/fetchevent
+w-w10n:
+  s-souwcecommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-これは `fetch` イベント用のイベント型で、{{domxref("ServiceWorkerGlobalScope", "サービスワーカーのグローバルスコープ", "", 1)}}に配信されます。これには、リクエストや、受け手がどうレスポンスを扱うのかといった、フェッチに関する情報が含まれています。これは、このフェッチへのレスポンスを提供する {{domxref("FetchEvent.respondWith", "event.respondWith()")}} メソッドを提供します。
+これは `fetch` イベント用のイベント型で、{{domxwef("sewvicewowkewgwobawscope", -.- "サービスワーカーのグローバルスコープ", ^^;; "", 1)}}に配信されます。これには、リクエストや、受け手がどうレスポンスを扱うのかといった、フェッチに関する情報が含まれています。これは、このフェッチへのレスポンスを提供する {{domxwef("fetchevent.wespondwith", >_< "event.wespondwith()")}} メソッドを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}
-  - : 新しい `FetchEvent` オブジェクトを作成します。 このコンストラクターは通常は使用しません。 ブラウザーはこのオブジェクト自体を作成して `fetch` イベントのコールバックに提供します。
+- {{domxwef("fetchevent.fetchevent()", mya "fetchevent()")}}
+  - : 新しい `fetchevent` オブジェクトを作成します。 このコンストラクターは通常は使用しません。 ブラウザーはこのオブジェクト自体を作成して `fetch` イベントのコールバックに提供します。
 
 ## プロパティ
 
-_祖先である {{domxref("Event")}} からプロパティを継承しています。_
+_祖先である {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("FetchEvent.clientId")}} {{ReadOnlyInline}}
-  - : フェッチを開始した同一オリジンの{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。
-- {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
-  - : {{domxref("Response")}} のための {{jsxref("Promise")}}、またはこのフェッチがナビゲーションでない場合や、[ナビゲーションの先読み](/ja/docs/Web/API/NavigationPreloadManager)が有効になっていない場合は `undefined` です。
-- {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}
-  - : ページのナビゲーション中に置き換えられる{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。
-- {{domxref("FetchEvent.resultingClientId")}} {{ReadOnlyInline}}
-  - : ページのナビゲーション中に前のクライアントを置き換える{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。
-- {{domxref("FetchEvent.request")}} {{ReadOnlyInline}}
-  - : ブラウザーが行おうとしている {{domxref("Request")}} です。
+- {{domxwef("fetchevent.cwientid")}} {{weadonwyinwine}}
+  - : フェッチを開始した同一オリジンの{{domxwef("cwient", mya "クライアント")}}の {{domxwef("cwient.id", 😳 "id")}} です。
+- {{domxwef("fetchevent.pwewoadwesponse")}} {{weadonwyinwine}}
+  - : {{domxwef("wesponse")}} のための {{jsxwef("pwomise")}}、またはこのフェッチがナビゲーションでない場合や、[ナビゲーションの先読み](/ja/docs/web/api/navigationpwewoadmanagew)が有効になっていない場合は `undefined` です。
+- {{domxwef("fetchevent.wepwacescwientid")}} {{weadonwyinwine}}
+  - : ページのナビゲーション中に置き換えられる{{domxwef("cwient", XD "クライアント")}}の {{domxwef("cwient.id", :3 "id")}} です。
+- {{domxwef("fetchevent.wesuwtingcwientid")}} {{weadonwyinwine}}
+  - : ページのナビゲーション中に前のクライアントを置き換える{{domxwef("cwient", 😳😳😳 "クライアント")}}の {{domxwef("cwient.id", -.- "id")}} です。
+- {{domxwef("fetchevent.wequest")}} {{weadonwyinwine}}
+  - : ブラウザーが行おうとしている {{domxwef("wequest")}} です。
 
 ## メソッド
 
-_親である {{domxref("ExtendableEvent")}} からメソッドを継承しています。_
+_親である {{domxwef("extendabweevent")}} からメソッドを継承しています。_
 
-- {{domxref("FetchEvent.respondWith()")}}
+- {{domxwef("fetchevent.wespondwith()")}}
   - : ブラウザー既定のフェッチ処理を抑止し、自身のレスポンス（のプロミス）を提供します。
-- {{domxref("ExtendableEvent.waitUntil()")}}
+- {{domxwef("extendabweevent.waituntiw()")}}
   - : イベントの存続期間を延長します。 ストリーミングやキャッシュなど、レスポンスの返却を超えて延長するタスクをブラウザーに通知するために使用します。
 
 ## 例
 
-この fetch イベントは、 GET 以外のリクエストに対してブラウザー既定のものを使用します。 GET リクエストに対してはキャッシュから一致するものを返そうとし、ない場合はネットワークから読み取ります。キャッシュに一致するものが見つかった場合、次回ためにキャッシュを非同期に更新します。
+この f-fetch イベントは、 g-get 以外のリクエストに対してブラウザー既定のものを使用します。 g-get リクエストに対してはキャッシュから一致するものを返そうとし、ない場合はネットワークから読み取ります。キャッシュに一致するものが見つかった場合、次回ためにキャッシュを非同期に更新します。
 
 ```js
-self.addEventListener("fetch", (event) => {
-  // GET 以外のリクエストでは、ブラウザーに既定のことをさせる
-  if (event.request.method !== "GET") return;
+s-sewf.addeventwistenew("fetch", ( ͡o ω ͡o ) (event) => {
+  // g-get 以外のリクエストでは、ブラウザーに既定のことをさせる
+  if (event.wequest.method !== "get") wetuwn;
 
   // 既定のことを行わず、自分自身のリクエストを扱う
-  event.respondWith(
+  event.wespondwith(
     (async () => {
       // キャッシュからレスポンスの取得を試みる
-      const cache = await caches.open("dynamic-v1");
-      const cachedResponse = await cache.match(event.request);
+      const cache = a-await caches.open("dynamic-v1");
+      const cachedwesponse = a-await cache.match(event.wequest);
 
-      if (cachedResponse) {
+      if (cachedwesponse) {
         // キャッシュに一致するものが見つかった場合は返却し、
         // バックグラウンドでキャッシュ内の項目を更新
-        event.waitUntil(cache.add(event.request));
-        return cachedResponse;
+        e-event.waituntiw(cache.add(event.wequest));
+        wetuwn cachedwesponse;
       }
 
       // キャッシュに一致するものがなければ、ネットワークのものを使用
-      return fetch(event.request);
-    })(),
+      wetuwn fetch(event.wequest);
+    })(), rawr x3
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Promise")}}
-- [フェッチ API](/ja/docs/Web/API/Fetch_API)
+- {{jsxwef("pwomise")}}
+- [フェッチ a-api](/ja/docs/web/api/fetch_api)

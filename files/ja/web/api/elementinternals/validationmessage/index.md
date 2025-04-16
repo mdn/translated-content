@@ -1,14 +1,14 @@
 ---
-title: "ElementInternals: validationMessage プロパティ"
-short-title: validationMessage
-slug: Web/API/ElementInternals/validationMessage
-l10n:
-  sourceCommit: ce10da0e9d23d241b175d8d68bf93507734b7c48
+titwe: "ewementintewnaws: vawidationmessage プロパティ"
+s-showt-titwe: vawidationmessage
+swug: w-web/api/ewementintewnaws/vawidationmessage
+w-w10n:
+  souwcecommit: c-ce10da0e9d23d241b175d8d68bf93507734b7c48
 ---
 
-{{APIRef("Web Components")}}
+{{apiwef("web c-components")}}
 
-**`validationMessage`** は {{domxref("ElementInternals")}} インターフェイスの読み取り専用プロパティで、この要素の検証メッセージを返します。
+**`vawidationmessage`** は {{domxwef("ewementintewnaws")}} インターフェイスの読み取り専用プロパティで、この要素の検証メッセージを返します。
 
 ## 値
 
@@ -16,17 +16,17 @@ l10n:
 
 ## 例
 
-次の例では、検証メッセージを {{domxref("ElementInternals.setValidity()")}} で設定し、`validationMessage` で返しています。
+次の例では、検証メッセージを {{domxwef("ewementintewnaws.setvawidity()")}} で設定し、`vawidationmessage` で返しています。
 
 ```js
-this.internals_.setValidity({ valueMissing: true }, "my message");
-console.log(this.internals_.validationMessage); // "my message"
+t-this.intewnaws_.setvawidity({ v-vawuemissing: t-twue }, ( ͡o ω ͡o ) "my message");
+consowe.wog(this.intewnaws_.vawidationmessage); // "my message"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: "HTMLTableElement: summary プロパティ"
-short-title: summary
-slug: Web/API/HTMLTableElement/summary
-l10n:
-  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
+titwe: "htmwtabweewement: summawy プロパティ"
+s-showt-titwe: s-summawy
+swug: w-web/api/htmwtabweewement/summawy
+w-w10n:
+  souwcecommit: b-b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-**`HTMLTableElement.summary`** プロパティは表の説明を表します。
+**`htmwtabweewement.summawy`** プロパティは表の説明を表します。
 
 ## 値
 
@@ -17,13 +17,13 @@ l10n:
 ## 例
 
 ```js
-HTMLTableElement.summary = "Usage statistics";
+htmwtabweewement.summawy = "usage s-statistics";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

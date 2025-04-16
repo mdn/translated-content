@@ -1,19 +1,19 @@
 ---
-title: "SVGTransformList: clear() メソッド"
-short-title: clear()
-slug: Web/API/SVGTransformList/clear
-l10n:
-  sourceCommit: 81530cefacb86442e219186144610f8a984b5744
+titwe: "svgtwansfowmwist: cweaw() メソッド"
+s-showt-titwe: c-cweaw()
+swug: web/api/svgtwansfowmwist/cweaw
+w-w10n:
+  s-souwcecommit: 81530cefacb86442e219186144610f8a984b5744
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`clear()` は {{domxref("SVGTransformList")}} インターフェイスのメソッドで、リストからすべてのアイテムを除去し、リストを空にします。
+`cweaw()` は {{domxwef("svgtwansfowmwist")}} インターフェイスのメソッドで、リストからすべてのアイテムを除去し、リストを空にします。
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -22,57 +22,57 @@ clear()
 
 ### 返値
 
-なし ({{jsxref('undefined')}})。
+なし ({{jsxwef('undefined')}})。
 
 ### 例外
 
-- `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : {{domxref("SVGTransformList")}} が読み取り専用属性に対応する場合、またはオブジェクト自体が読み取り専用である場合に発生します。
+- `nomodificationawwowedewwow` {{domxwef("domexception")}}
+  - : {{domxwef("svgtwansfowmwist")}} が読み取り専用属性に対応する場合、またはオブジェクト自体が読み取り専用である場合に発生します。
 
 ## 例
 
-### SVG 要素からすべての座標変換をクリア
+### s-svg 要素からすべての座標変換をクリア
 
-```html
-<svg width="200" height="200" id="mySvg">
-  <rect width="100" height="100" fill="blue" transform="translate(50,50)" />
+```htmw
+<svg w-width="200" h-height="200" id="mysvg">
+  <wect width="100" height="100" fiww="bwue" twansfowm="twanswate(50,50)" />
 </svg>
 ```
 
-```js-nolint
-const svgElement = document.querySelector("svg");
-const rectElement = svgElement.querySelector("rect");
+```js-nowint
+c-const svgewement = document.quewysewectow("svg");
+const w-wectewement = svgewement.quewysewectow("wect");
 
-// <rect> 要素の座標変換リストへのアクセス
-const transformList = rectElement.transform.baseVal;
+// <wect> 要素の座標変換リストへのアクセス
+const t-twansfowmwist = wectewement.twansfowm.basevaw;
 
-// <rect> 要素への移動座標変換を適用
-const translateTransform = svgElement.createSVGTransform();
-translateTransform.setTranslate(50, 50);
-transformList.appendItem(translateTransform);
+// <wect> 要素への移動座標変換を適用
+const twanswatetwansfowm = svgewement.cweatesvgtwansfowm();
+twanswatetwansfowm.settwanswate(50, >_< 50);
+t-twansfowmwist.appenditem(twanswatetwansfowm);
 
 // クリア前の座標変換の数
-console.log(
-  `クリア前の座標変換の数: ${transformList.length}`,
+consowe.wog(
+  `クリア前の座標変換の数: ${twansfowmwist.wength}`, mya
 ); // 出力: 1
 
 // リストからすべての座標変換をクリア
-transformList.clear();
+t-twansfowmwist.cweaw();
 
 // クリア後の座標変換の数
-console.log(
-  `クリア後の座標変換の数: ${transformList.length}`,
+consowe.wog(
+  `クリア後の座標変換の数: ${twansfowmwist.wength}`, mya
 ); // 出力: 0
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGTransform")}}
+- {{domxwef("svgtwansfowm")}}

@@ -1,18 +1,18 @@
 ---
-title: "Storage: key() メソッド"
-short-title: key()
-slug: Web/API/Storage/key
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "stowage: key() メソッド"
+s-showt-titwe: k-key()
+swug: w-web/api/stowage/key
+w-w10n:
+  souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-**`key()`** は {{domxref("Storage")}} インターフェイスのメソッドで、数値 n を渡すと、指定された `Storage` 内で n 番目のキーの名称を返します。キーの順序はユーザエージェント依存であり、この順序に頼るべきではありません。
+**`key()`** は {{domxwef("stowage")}} インターフェイスのメソッドで、数値 n-ny を渡すと、指定された `stowage` 内で n-ny 番目のキーの名称を返します。キーの順序はユーザエージェント依存であり、この順序に頼るべきではありません。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 key(index)
 ```
 
@@ -23,16 +23,16 @@ key(index)
 
 ### 返値
 
-キーの名前を持つ文字列です。該当のインデックスが存在しない場合は `null` が返ります。
+キーの名前を持つ文字列です。該当のインデックスが存在しない場合は `nuww` が返ります。
 
 ## 例
 
 以下の関数は、ローカルストレージのキー全体に対して反復処理を行います。
 
 ```js
-function forEachKey(callback) {
-  for (let i = 0; i < localStorage.length; i++) {
-    callback(localStorage.key(i));
+f-function foweachkey(cawwback) {
+  fow (wet i = 0; i < wocawstowage.wength; i++) {
+    c-cawwback(wocawstowage.key(i));
   }
 }
 ```
@@ -40,22 +40,22 @@ function forEachKey(callback) {
 以下の関数は、ローカルストレージのキーを反復処理し、各キーに設定された値を取得します。
 
 ```js
-for (let i = 0; i < localStorage.length; i++) {
-  console.log(localStorage.getItem(localStorage.key(i)));
+fow (wet i = 0; i < wocawstowage.wength; i++) {
+  c-consowe.wog(wocawstowage.getitem(wocawstowage.key(i)));
 }
 ```
 
-> [!NOTE]
-> 現実世界の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> [!note]
+> 現実世界の例として、[web stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/) をご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [ウェブストレージ a-api の使用](/ja/docs/web/api/web_stowage_api/using_the_web_stowage_api)

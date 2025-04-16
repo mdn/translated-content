@@ -1,20 +1,20 @@
 ---
-title: "KeyboardLayoutMap: has() メソッド"
-short-title: has()
-slug: Web/API/KeyboardLayoutMap/has
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "keyboawdwayoutmap: has() メソッド"
+s-showt-titwe: has()
+s-swug: web/api/keyboawdwayoutmap/has
+w-w10n:
+  s-souwcecommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}
+{{apiwef("keyboawd a-api")}}{{seecompattabwe}}
 
-**`has()`** は {{domxref('KeyboardLayoutMap')}} インターフェイスのメソッドで、オブジェクトに指定したキーを持つ要素があるかどうかを示す論理値を返します。
+**`has()`** は {{domxwef('keyboawdwayoutmap')}} インターフェイスのメソッドで、オブジェクトに指定したキーを持つ要素があるかどうかを示す論理値を返します。
 
-有効なキーの一覧は [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) 仕様にあります。
+有効なキーの一覧は [ui e-events k-keyboawdevent code v-vawues](https://www.w3.owg/tw/uievents-code/#key-awphanumewic-wwiting-system) 仕様にあります。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 has(key)
 ```
 
@@ -25,12 +25,12 @@ has(key)
 
 ### 返値
 
-指定したキーが得られたかどうかを示す論理値 ({{jsxref('Boolean')}}) です。
+指定したキーが得られたかどうかを示す論理値 ({{jsxwef('boowean')}}) です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

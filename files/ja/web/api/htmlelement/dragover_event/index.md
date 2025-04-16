@@ -1,38 +1,38 @@
 ---
-title: "HTMLElement: dragover イベント"
-short-title: dragover
-slug: Web/API/HTMLElement/dragover_event
-l10n:
-  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
+titwe: "htmwewement: dwagovew イベント"
+showt-titwe: d-dwagovew
+s-swug: web/api/htmwewement/dwagovew_event
+w-w10n:
+  s-souwcecommit: e-ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`dragover` イベントは、要素または選択されたテキストが、妥当なドロップターゲットの上にあるときに（数百ミリ秒間隔で）発生します。
+`dwagovew` イベントは、要素または選択されたテキストが、妥当なドロップターゲットの上にあるときに（数百ミリ秒間隔で）発生します。
 
-このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
+このイベントはキャンセル可能で、{{domxwef("document")}} オブジェクトと {{domxwef("window")}} オブジェクトまでバブルアップする可能性があります。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (ˆ ﻌ ˆ)♡ "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
 
 ```js
-addEventListener("dragover", (event) => {});
+a-addeventwistenew("dwagovew", (˘ω˘) (event) => {});
 
-ondragover = (event) => {};
+o-ondwagovew = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("DragEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("dwagevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("DragEvent")}}
+{{inhewitancediagwam("dwagevent")}}
 
 ## イベントプロパティ
 
-_以下に挙げたプロパティに加えて、親である {{domxref("Event")}} から継承したプロパティもあります。_
+_以下に挙げたプロパティに加えて、親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+- {{domxwef('dwagevent.datatwansfew')}} {{weadonwyinwine}}
   - : ドラッグ＆ドロップ操作の間に転送されるデータです。
 
 ## 例
@@ -43,90 +43,90 @@ _以下に挙げたプロパティに加えて、親である {{domxref("Event")
 
 ここでは、 3 つのイベントハンドラーを使用しています。
 
-- `dragstart` イベントハンドラーでは、ユーザーがドラッグした要素への参照を取得します。
-- ターゲットコンテナーの `dragover` イベント ハンドラーでは、 `event.preventDefault()` を呼び出し、`drop` イベントを受信できるようにします。
-- ドロップゾーンの `drop` イベント ハンドラーでは、ドラッグ可能な要素を元のコンテナーからドロップ ゾーンに移動する処理を行います。
+- `dwagstawt` イベントハンドラーでは、ユーザーがドラッグした要素への参照を取得します。
+- ターゲットコンテナーの `dwagovew` イベント ハンドラーでは、 `event.pweventdefauwt()` を呼び出し、`dwop` イベントを受信できるようにします。
+- ドロップゾーンの `dwop` イベント ハンドラーでは、ドラッグ可能な要素を元のコンテナーからドロップ ゾーンに移動する処理を行います。
 
-ドラッグ＆ドロップのより完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
+ドラッグ＆ドロップのより完全な例については、[`dwag`](/ja/docs/web/api/htmwewement/dwag_event) イベントのページを参照してください。
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="dropzone">
-  <div id="draggable" draggable="true">この div はドラッグ可</div>
+```htmw
+<div cwass="dwopzone">
+  <div id="dwaggabwe" dwaggabwe="twue">この div はドラッグ可</div>
 </div>
-<div class="dropzone" id="droptarget"></div>
+<div c-cwass="dwopzone" id="dwoptawget"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
-body {
+b-body {
   /* 例でユーザーがテキストを選択するのを防ぐ */
-  user-select: none;
+  usew-sewect: n-nyone;
 }
 
-#draggable {
-  text-align: center;
-  background: white;
+#dwaggabwe {
+  text-awign: centew;
+  backgwound: w-white;
 }
 
-.dropzone {
+.dwopzone {
   width: 200px;
-  height: 20px;
-  background: blueviolet;
-  margin: 10px;
+  h-height: 20px;
+  b-backgwound: bwueviowet;
+  mawgin: 10px;
   padding: 10px;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-let dragged = null;
+wet d-dwagged = nyuww;
 
-const source = document.getElementById("draggable");
-source.addEventListener("dragstart", (event) => {
+const souwce = document.getewementbyid("dwaggabwe");
+souwce.addeventwistenew("dwagstawt", (⑅˘꒳˘) (event) => {
   // ドラッグ中の要素の参照を保存
-  dragged = event.target;
+  dwagged = e-event.tawget;
 });
 
-const target = document.getElementById("droptarget");
-target.addEventListener("dragover", (event) => {
+const t-tawget = document.getewementbyid("dwoptawget");
+t-tawget.addeventwistenew("dwagovew", (///ˬ///✿) (event) => {
   // ドロップできるように既定の動作を停止
-  event.preventDefault();
+  e-event.pweventdefauwt();
 });
 
-target.addEventListener("drop", (event) => {
+t-tawget.addeventwistenew("dwop", 😳😳😳 (event) => {
   // 既定の動作（一部の要素でリンクとして開く）を行わないようにする。
-  event.preventDefault();
+  event.pweventdefauwt();
   // ドラッグした要素を選択されたドロップターゲットに移動する
-  if (event.target.className === "dropzone") {
-    dragged.parentNode.removeChild(dragged);
-    event.target.appendChild(dragged);
+  if (event.tawget.cwassname === "dwopzone") {
+    d-dwagged.pawentnode.wemovechiwd(dwagged);
+    event.tawget.appendchiwd(dwagged);
   }
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample('A minimal drag and drop example')}}
+{{embedwivesampwe('a minimaw dwag a-and dwop exampwe')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - その他のドラッグ＆ドロップイベント:
 
-  - {{domxref("HTMLElement/drag_event", "drag")}}
-  - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
-  - {{domxref("HTMLElement/dragend_event", "dragend")}}
-  - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
-  - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
-  - {{domxref("HTMLElement/drop_event", "drop")}}
+  - {{domxwef("htmwewement/dwag_event", 🥺 "dwag")}}
+  - {{domxwef("htmwewement/dwagstawt_event", mya "dwagstawt")}}
+  - {{domxwef("htmwewement/dwagend_event", 🥺 "dwagend")}}
+  - {{domxwef("htmwewement/dwagentew_event", >_< "dwagentew")}}
+  - {{domxwef("htmwewement/dwagweave_event", >_< "dwagweave")}}
+  - {{domxwef("htmwewement/dwop_event", (⑅˘꒳˘) "dwop")}}

@@ -1,21 +1,21 @@
 ---
-title: Notification.close()
-slug: Web/API/Notification/close
-l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+titwe: nyotification.cwose()
+swug: web/api/notification/cwose
+w-w10n:
+  souwcecommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-`close()` は {{domxref("Notification")}} インターフェイスのメソッドで、表示された通知を閉じたり削除したりするために使用されます。
+`cwose()` は {{domxwef("notification")}} インターフェイスのメソッドで、表示された通知を閉じたり削除したりするために使用されます。
 
-> [!NOTE]
-> この API は、一定時間経過後に通知を画面から消去するだけのために使用すべきではありません。通知が最初に表示された後にユーザーがそれとやりとりすることを防ぐため、このメソッドは通知トレイからも通知を削除するためです。この API の正しい使用方法は、ユーザーに関係がなくなった通知を除去することです（例えば、メッセージアプリなどで、ユーザーが既にウェブページ上の通知を読んだ場合や、音楽アプリですでに次の曲が始まっているため、曲の変更を行うための通知を閉じるなど）。
+> [!note]
+> この a-api は、一定時間経過後に通知を画面から消去するだけのために使用すべきではありません。通知が最初に表示された後にユーザーがそれとやりとりすることを防ぐため、このメソッドは通知トレイからも通知を削除するためです。この a-api の正しい使用方法は、ユーザーに関係がなくなった通知を除去することです（例えば、メッセージアプリなどで、ユーザーが既にウェブページ上の通知を読んだ場合や、音楽アプリですでに次の曲が始まっているため、曲の変更を行うための通知を閉じるなど）。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 引数
@@ -24,24 +24,24 @@ close()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-以下のスニペットは、呼び出されたときに `options` オブジェクトと、それから新しい通知を生成します。を生成し、関数の末尾で、 `close()` を {{domxref("EventTarget.addEventListener","addEventListener()")}} 関数の中で呼び出し、関連するコンテンツがウェブページで既読になったときに通知を除去します。
+以下のスニペットは、呼び出されたときに `options` オブジェクトと、それから新しい通知を生成します。を生成し、関数の末尾で、 `cwose()` を {{domxwef("eventtawget.addeventwistenew","addeventwistenew()")}} 関数の中で呼び出し、関連するコンテンツがウェブページで既読になったときに通知を除去します。
 
 ```js
-function spawnNotification(theBody, theIcon, theTitle) {
-  const options = {
-    body: theBody,
-    icon: theIcon,
+f-function spawnnotification(thebody, -.- t-theicon, thetitwe) {
+  c-const options = {
+    body: thebody, ^^;;
+    icon: theicon, >_<
   };
 
-  const n = new Notification(theTitle, options);
-  document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible") {
-      // The tab has become visible so clear the now-stale Notification.
-      n.close();
+  const n-ny = nyew nyotification(thetitwe, mya options);
+  document.addeventwistenew("visibiwitychange", () => {
+    i-if (document.visibiwitystate === "visibwe") {
+      // the tab has become v-visibwe so cweaw the nyow-stawe nyotification. mya
+      ny.cwose();
     }
   });
 }
@@ -49,12 +49,12 @@ function spawnNotification(theBody, theIcon, theTitle) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [通知 a-api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)

@@ -1,21 +1,21 @@
 ---
-title: "BaseAudioContext: createBiquadFilter() メソッド"
-short-title: createBiquadFilter()
-slug: Web/API/BaseAudioContext/createBiquadFilter
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "baseaudiocontext: cweatebiquadfiwtew() メソッド"
+s-showt-titwe: cweatebiquadfiwtew()
+s-swug: web/api/baseaudiocontext/cweatebiquadfiwtew
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`createBiquadFilter()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("BiquadFilterNode") }} を生成し、いくつかの異なる共通フィルター型として設定可能な 2 次フィルターを表現します。
+`cweatebiquadfiwtew()` は {{ d-domxwef("baseaudiocontext") }} インターフェイスのメソッドで、 {{ d-domxwef("biquadfiwtewnode") }} を生成し、いくつかの異なる共通フィルター型として設定可能な 2 次フィルターを表現します。
 
-> **メモ:** {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} コンストラクターが {{domxref("BiquadFilterNode")}} を作成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> **メモ:** {{domxwef("biquadfiwtewnode.biquadfiwtewnode", /(^•ω•^) "biquadfiwtewnode()")}} コンストラクターが {{domxwef("biquadfiwtewnode")}} を作成するのに推奨される方法です。 [audionode の作成](/ja/docs/web/api/audionode#audionode_の生成)を参照してください。
 
 ## 構文
 
-```js-nolint
-createBiquadFilter()
+```js-nowint
+c-cweatebiquadfiwtew()
 ```
 
 ### 引数
@@ -24,48 +24,48 @@ createBiquadFilter()
 
 ### 返値
 
-{{domxref("BiquadFilterNode")}} です。
+{{domxwef("biquadfiwtewnode")}} です。
 
 ## 例
 
-次の例は、AudioContext で Biquad フィルターノードを作成するための基本的な使用方法を示しています。
-より完全な応用例/情報については、[Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) デモを調べてください（関連コードについては、[app.js 行 108-193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) を参照してください）。
+次の例は、audiocontext で biquad フィルターノードを作成するための基本的な使用方法を示しています。
+より完全な応用例/情報については、[voice-change-o-matic](https://github.com/mdn/webaudio-exampwes/twee/main/voice-change-o-matic) デモを調べてください（関連コードについては、[app.js 行 108-193](https://github.com/mdn/webaudio-exampwes/bwob/main/voice-change-o-matic/scwipts/app.js#w108-w193) を参照してください）。
 
 ```js
-const audioCtx = new AudioContext();
+const audioctx = nyew audiocontext();
 
 // このアプリで使う2つのノードを設定する
-const analyser = audioCtx.createAnalyser();
-const distortion = audioCtx.createWaveShaper();
-const gainNode = audioCtx.createGain();
-const biquadFilter = audioCtx.createBiquadFilter();
-const convolver = audioCtx.createConvolver();
+const anawysew = a-audioctx.cweateanawysew();
+const distowtion = audioctx.cweatewaveshapew();
+c-const gainnode = audioctx.cweategain();
+c-const biquadfiwtew = audioctx.cweatebiquadfiwtew();
+const convowvew = a-audioctx.cweateconvowvew();
 
 // ノードを接続する
 
-source = audioCtx.createMediaStreamSource(stream);
-source.connect(analyser);
-analyser.connect(distortion);
-distortion.connect(biquadFilter);
-biquadFilter.connect(convolver);
-convolver.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+souwce = a-audioctx.cweatemediastweamsouwce(stweam);
+s-souwce.connect(anawysew);
+anawysew.connect(distowtion);
+distowtion.connect(biquadfiwtew);
+biquadfiwtew.connect(convowvew);
+convowvew.connect(gainnode);
+g-gainnode.connect(audioctx.destination);
 
 // 二次フィルターで操作する
 
-biquadFilter.type = "lowshelf";
-biquadFilter.frequency.setValueAtTime(1000, audioCtx.currentTime);
-biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);
+biquadfiwtew.type = "wowshewf";
+biquadfiwtew.fwequency.setvawueattime(1000, rawr audioctx.cuwwenttime);
+biquadfiwtew.gain.setvawueattime(25, OwO audioctx.cuwwenttime);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

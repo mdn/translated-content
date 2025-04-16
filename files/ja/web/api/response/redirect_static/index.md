@@ -1,61 +1,61 @@
 ---
-title: "Response: redirect() 静的メソッド"
-short-title: redirect()
-slug: Web/API/Response/redirect_static
-l10n:
-  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
+titwe: "wesponse: wediwect() 静的メソッド"
+s-showt-titwe: w-wediwect()
+swug: w-web/api/wesponse/wediwect_static
+w-w10n:
+  souwcecommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-**`redirect()`** は {{domxref("Response")}} インターフェイスのメソッドで、指定された URL へのリダイレクトをもたらす `Response` を返します。
+**`wediwect()`** は {{domxwef("wesponse")}} インターフェイスのメソッドで、指定された u-uww へのリダイレクトをもたらす `wesponse` を返します。
 
-> [!NOTE]
-> これは主に[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) に関連しています。
+> [!note]
+> これは主に[サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api) に関連しています。
 > 制御するサービスワーカーは、ページのリクエストに介入し、希望通りにリダイレクトすることができます。
 > もしサービスワーカーが上流に送信を行うと、実際に本当のリダイレクトが発生します。
 
 ## 構文
 
-```js-nolint
-Response.redirect(url)
-Response.redirect(url, status)
+```js-nowint
+w-wesponse.wediwect(uww)
+wesponse.wediwect(uww, >_< status)
 ```
 
 ### 引数
 
-- `url`
-  - : 新しいレスポンスの発信元 URL。
-- `status` {{optional_inline}}
-  - : レスポンスのステータスコードを示すオプションの番号で、{{HTTPStatus("301", "301")}}、{{HTTPStatus("302", "302")}}、{{HTTPStatus("303", "303")}}、{{HTTPStatus("307", "307")}}、{{HTTPStatus("308", "308")}} のいずれかです。省略されたときは、既定で {{HTTPStatus("302", "302 Found")}} が使われます。
+- `uww`
+  - : 新しいレスポンスの発信元 uww。
+- `status` {{optionaw_inwine}}
+  - : レスポンスのステータスコードを示すオプションの番号で、{{httpstatus("301", :3 "301")}}、{{httpstatus("302", (U ﹏ U) "302")}}、{{httpstatus("303", -.- "303")}}、{{httpstatus("307", (ˆ ﻌ ˆ)♡ "307")}}、{{httpstatus("308", (⑅˘꒳˘) "308")}} のいずれかです。省略されたときは、既定で {{httpstatus("302", (U ᵕ U❁) "302 found")}} が使われます。
 
 ### 返値
 
-{{domxref("Response")}} オブジェクト。
+{{domxwef("wesponse")}} オブジェクト。
 
 ### 例外
 
-- {{jsxref("RangeError")}}
+- {{jsxwef("wangeewwow")}}
   - : 指定されたステータスがリダイレクトステータスではない場合。
-- {{jsxref("TypeError")}}
-  - : 指定された URL が不正な場合。
+- {{jsxwef("typeewwow")}}
+  - : 指定された u-uww が不正な場合。
 
 ## 例
 
 ```js
-Response.redirect("https://www.example.com", 302);
+wesponse.wediwect("https://www.exampwe.com", -.- 302);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

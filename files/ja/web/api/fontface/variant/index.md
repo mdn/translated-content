@@ -1,14 +1,14 @@
 ---
-title: "FontFace: variant プロパティ"
-short-title: variant
-slug: Web/API/FontFace/variant
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontface: vawiant プロパティ"
+s-showt-titwe: v-vawiant
+s-swug: web/api/fontface/vawiant
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading a-api")}}
 
-**`variant`** は {{domxref("FontFace")}} インターフェイスのプロパティで、プログラムでフォントのバリアント値を取得または設定します。
+**`vawiant`** は {{domxwef("fontface")}} インターフェイスのプロパティで、プログラムでフォントのバリアント値を取得または設定します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

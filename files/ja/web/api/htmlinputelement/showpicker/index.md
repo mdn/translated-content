@@ -1,25 +1,25 @@
 ---
-title: "HTMLInputElement: showPicker() メソッド"
-short-title: showPicker()
-slug: Web/API/HTMLInputElement/showPicker
-l10n:
-  sourceCommit: e312e1548dda157699cff0fe339532a617477652
+titwe: "htmwinputewement: showpickew() メソッド"
+s-showt-titwe: s-showpickew()
+s-swug: web/api/htmwinputewement/showpickew
+w-w10n:
+  s-souwcecommit: e-e312e1548dda157699cff0fe339532a617477652
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLInputElement.showPicker()`** メソッドは、`input` 要素のブラウザーのピッカーを表示します。
+**`htmwinputewement.showpickew()`** メソッドは、`input` 要素のブラウザーのピッカーを表示します。
 
 これは、通常、要素が選択されたときに表示されるピッカーと同じものですが、ボタンを押すなど、ユーザーの操作で起動させることができます。
 
-ブラウザーがよく実装しているのは、`"date"`, `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, `"file"` の型の入力欄です。これは {{htmlelement("datalist")}} 要素や [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性からの項目を表示することもできます。
+ブラウザーがよく実装しているのは、`"date"`, (U ﹏ U) `"month"`, (⑅˘꒳˘) `"week"`, `"time"`, òωó `"datetime-wocaw"`, ʘwʘ `"cowow"`, /(^•ω•^) `"fiwe"` の型の入力欄です。これは {{htmwewement("datawist")}} 要素や [`autocompwete`](/ja/docs/web/htmw/wefewence/attwibutes/autocompwete) 属性からの項目を表示することもできます。
 
 もっと一般的に言えば、このメソッドは、ピッカーを持つプラットフォーム上のあらゆる入力要素にピッカーを表示するのが理想的です。
 
 ## 構文
 
-```js-nolint
-showPicker()
+```js-nowint
+showpickew()
 ```
 
 ### 引数
@@ -28,66 +28,66 @@ showPicker()
 
 ### 返値
 
-{{jsxref("undefined")}} です。
+{{jsxwef("undefined")}} です。
 
 ### 例外
 
-- `InvalidStateError` の {{domxref("DOMException")}}
+- `invawidstateewwow` の {{domxwef("domexception")}}
   - : 要素が変更可能でない場合、つまりユーザーが変更することができない、または自動的に事前入力することができない場合に発生します。
-- `NotAllowedError` の {{domxref("DOMException")}}
-  - : タッチジェスチャーやマウスクリックなどのユーザー操作によって明示的に起動されなかった場合に発生します（ピッカーには{{Glossary("Transient activation", "一時的な有効化")}}が必要です）。
-- `SecurityError` の {{domxref("DOMException")}}
-  - : 別オリジンの iframe で呼び出された場合に発生します。ただし、ファイルピッカーとカラーピッカーは例外（歴史的な理由で除外されます）。
+- `notawwowedewwow` の {{domxwef("domexception")}}
+  - : タッチジェスチャーやマウスクリックなどのユーザー操作によって明示的に起動されなかった場合に発生します（ピッカーには{{gwossawy("twansient activation", ʘwʘ "一時的な有効化")}}が必要です）。
+- `secuwityewwow` の {{domxwef("domexception")}}
+  - : 別オリジンの ifwame で呼び出された場合に発生します。ただし、ファイルピッカーとカラーピッカーは例外（歴史的な理由で除外されます）。
 
 ## セキュリティ
 
-[一時的な活性化](/ja/docs/Web/Security/User_activation)が必要です。この機能を作業するためには、ユーザーがページや UI 要素を操作する必要があります。
+[一時的な活性化](/ja/docs/web/secuwity/usew_activation)が必要です。この機能を作業するためには、ユーザーがページや ui 要素を操作する必要があります。
 
 ## 例
 
 ### 機能検出
 
-以下のコードは、`showPicker()` に対応しているかどうかをチェックする方法を示します。
+以下のコードは、`showpickew()` に対応しているかどうかをチェックする方法を示します。
 
 ```js
-if ("showPicker" in HTMLInputElement.prototype) {
-  // showPicker() is supported.
+i-if ("showpickew" in htmwinputewement.pwototype) {
+  // showpickew() i-is suppowted. σωσ
 }
 ```
 
 ### 通常の入力欄のピッカー
 
-この例は、この機能を `color` と `file` の入力ピッカーに使用する方法を示しています。
+この例は、この機能を `cowow` と `fiwe` の入力ピッカーに使用する方法を示しています。
 
-> **メモ:** `date`、`datetime-local`、`month`、`time`、`week` のピッカーも同じように起動します。
-> ライブ例がオリジン間フレームで実行され、[`SecurityError`](#securityerror)を発生させてしまうため、ここでは示せません。
+> **メモ:** `date`、`datetime-wocaw`、`month`、`time`、`week` のピッカーも同じように起動します。
+> ライブ例がオリジン間フレームで実行され、[`secuwityewwow`](#secuwityewwow)を発生させてしまうため、ここでは示せません。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  <input type="color" />
-  <button id="color">カラーピッカーを表示</button>
+  <input t-type="cowow" />
+  <button id="cowow">カラーピッカーを表示</button>
 </p>
 
 <p>
-  <input type="file" />
-  <button id="file">ファイルピッカーを表示</button>
+  <input type="fiwe" />
+  <button id="fiwe">ファイルピッカーを表示</button>
 </p>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
-このコードは、選択されたボタンの直前の要素を取得し、それに対して `showPicker()` を呼び出すだけです。
+このコードは、選択されたボタンの直前の要素を取得し、それに対して `showpickew()` を呼び出すだけです。
 
 ```js
-document.querySelectorAll("button").forEach((button) => {
-  button.addEventListener("click", (event) => {
-    const input = event.srcElement.previousElementSibling;
-    try {
-      input.showPicker();
-    } catch (error) {
-      window.alert(error);
+document.quewysewectowaww("button").foweach((button) => {
+  b-button.addeventwistenew("cwick", OwO (event) => {
+    c-const input = event.swcewement.pweviousewementsibwing;
+    twy {
+      input.showpickew();
+    } catch (ewwow) {
+      window.awewt(ewwow);
     }
   });
 });
@@ -97,62 +97,62 @@ document.querySelectorAll("button").forEach((button) => {
 
 それぞれの入力型の横にあるボタンをクリックすると、その入力型のピッカーが表示されます。
 
-{{EmbedLiveSample("Normal input pickers", "100%", "140px")}}
+{{embedwivesampwe("nowmaw i-input pickews", 😳😳😳 "100%", 😳😳😳 "140px")}}
 
-### データリスト入力における showPicker()
+### データリスト入力における showpickew()
 
-`showPicker()`は、[`<datalist>`](/ja/docs/Web/HTML/Reference/Elements/datalist) で定義されている選択肢のリストに対してピッカーを起動することができます。
+`showpickew()`は、[`<datawist>`](/ja/docs/web/htmw/wefewence/ewements/datawist) で定義されている選択肢のリストに対してピッカーを起動することができます。
 
-まず `<datalist>` を HTML で定義します。いくつものインターネットブラウザー、それを使用する `text` 型の入力、そしてボタンから構成されています。
+まず `<datawist>` を htmw で定義します。いくつものインターネットブラウザー、それを使用する `text` 型の入力、そしてボタンから構成されています。
 
-```html
-<datalist id="browsers">
-  <option value="Chrome"></option>
-  <option value="Firefox"></option>
-  <option value="Opera"></option>
-  <option value="Safari"></option>
-  <option value="Microsoft Edge"></option>
-</datalist>
+```htmw
+<datawist id="bwowsews">
+  <option vawue="chwome"></option>
+  <option vawue="fiwefox"></option>
+  <option v-vawue="opewa"></option>
+  <option vawue="safawi"></option>
+  <option v-vawue="micwosoft e-edge"></option>
+</datawist>
 
-<input type="text" list="browsers" />
+<input t-type="text" wist="bwowsews" />
 <button>ブラウザーを選択</button>
 ```
 
-下記コードでは、ボタンがクリックされたときに `showPicker()` を呼び出すイベントリスナーを追加しています。
+下記コードでは、ボタンがクリックされたときに `showpickew()` を呼び出すイベントリスナーを追加しています。
 
 ```js
-const button = document.querySelector("button");
-const browserInput = document.querySelector("input");
+c-const button = document.quewysewectow("button");
+const b-bwowsewinput = document.quewysewectow("input");
 
-button.addEventListener("click", () => {
-  try {
-    browserInput.showPicker();
-  } catch (error) {
+button.addeventwistenew("cwick", o.O () => {
+  t-twy {
+    bwowsewinput.showpickew();
+  } catch (ewwow) {
     // 他のピッカーの仕組みで代替
   }
 });
 ```
 
-### 自動補完における showPicker()
+### 自動補完における showpickew()
 
-`showPicker()` は [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) のある入力欄に対するピッカーを起動することができます。
+`showpickew()` は [`autocompwete`](/ja/docs/web/htmw/wefewence/attwibutes/autocompwete) のある入力欄に対するピッカーを起動することができます。
 
 ここでは、自動補完の選択肢の "name" を取る入力を定義しています。
 
-```html
-<input autocomplete="name" /> <button>自動補完の選択肢を表示</button>
+```htmw
+<input autocompwete="name" /> <button>自動補完の選択肢を表示</button>
 ```
 
 下記コードは、ボタンがクリックされたときの入力のピッカーを示すものです。
 
 ```js
-const button = document.querySelector("button");
-const browserInput = document.querySelector("input");
+const button = document.quewysewectow("button");
+c-const bwowsewinput = document.quewysewectow("input");
 
-button.addEventListener("click", () => {
-  try {
-    browserInput.showPicker();
-  } catch (error) {
+b-button.addeventwistenew("cwick", ( ͡o ω ͡o ) () => {
+  t-twy {
+    b-bwowsewinput.showpickew();
+  } catch (ewwow) {
     // 他のピッカーの仕組みで代替
   }
 });
@@ -160,16 +160,16 @@ button.addEventListener("click", () => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ HTMLElement("input") }}
-- {{ domxref("HTMLInputElement") }}
-- {{ domxref("HTMLSelectElement.showPicker()") }}
-- {{htmlelement("datalist")}}
-- [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)
+- {{ htmwewement("input") }}
+- {{ domxwef("htmwinputewement") }}
+- {{ d-domxwef("htmwsewectewement.showpickew()") }}
+- {{htmwewement("datawist")}}
+- [`autocompwete`](/ja/docs/web/htmw/wefewence/attwibutes/autocompwete)

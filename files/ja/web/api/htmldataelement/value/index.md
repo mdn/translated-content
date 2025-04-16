@@ -1,13 +1,13 @@
 ---
-title: "HTMLDataElement: value プロパティ"
-slug: Web/API/HTMLDataElement/value
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwdataewement: vawue プロパティ"
+s-swug: web/api/htmwdataewement/vawue
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`value`** は {{domxref("HTMLDataElement")}} インターフェイスのプロパティで、HTML の [`value`](/ja/docs/Web/HTML/Reference/Elements/data#value) 属性を反映する文字列を返します。
+**`vawue`** は {{domxwef("htmwdataewement")}} インターフェイスのプロパティで、htmw の [`vawue`](/ja/docs/web/htmw/wefewence/ewements/data#vawue) 属性を反映する文字列を返します。
 
 ## 値
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,35 +1,35 @@
 ---
-title: "BluetoothRemoteGATTService: getCharacteristic() メソッド"
-slug: Web/API/BluetoothRemoteGATTService/getCharacteristic
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattsewvice: getchawactewistic() メソッド"
+s-swug: web/api/bwuetoothwemotegattsewvice/getchawactewistic
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**`BluetoothGATTService.getCharacteristic()`** メソッドは、指定の universally unique identifier (UUID) に対応する {{domxref("BluetoothRemoteGATTCharacteristic")}} のインスタンスで解決する {{jsxref("Promise")}} を返します。
+**`bwuetoothgattsewvice.getchawactewistic()`** メソッドは、指定の u-univewsawwy unique i-identifiew (uuid) に対応する {{domxwef("bwuetoothwemotegattchawactewistic")}} のインスタンスで解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-getCharacteristic(characteristic)
+```js-nowint
+getchawactewistic(chawactewistic)
 ```
 
 ### 引数
 
-- `characteristic`
-  - : キャラクタリスティックの UUID です。たとえば、Heart Rate Measurement characteristic は `'00002a37-0000-1000-8000-00805f9b34fb'` です。
+- `chawactewistic`
+  - : キャラクタリスティックの u-uuid です。たとえば、heawt w-wate measuwement c-chawactewistic は `'00002a37-0000-1000-8000-00805f9b34fb'` です。
 
 ### 返値
 
-{{domxref("BluetoothRemoteGATTCharacteristic")}} のインスタンスで解決する {{jsxref("Promise")}} です。
+{{domxwef("bwuetoothwemotegattchawactewistic")}} のインスタンスで解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web bwuetooth")}}

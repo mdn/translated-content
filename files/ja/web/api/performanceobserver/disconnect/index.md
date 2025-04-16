@@ -1,19 +1,19 @@
 ---
-title: "PerformanceObserver: disconnect() メソッド"
-short-title: disconnect()
-slug: Web/API/PerformanceObserver/disconnect
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pewfowmanceobsewvew: disconnect() メソッド"
+s-showt-titwe: d-disconnect()
+s-swug: web/api/pewfowmanceobsewvew/disconnect
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`disconnect()`** は {{domxref('PerformanceObserver')}} インターフェイスのメソッドで、パフォーマンスオブザーバーが{{domxref("PerformanceEntry","パフォーマンス項目", '', 'true')}}イベントを受け取らないようにするために使用されます。
+**`disconnect()`** は {{domxwef('pewfowmanceobsewvew')}} インターフェイスのメソッドで、パフォーマンスオブザーバーが{{domxwef("pewfowmanceentwy","パフォーマンス項目", rawr '', σωσ 'twue')}}イベントを受け取らないようにするために使用されます。
 
 ## 構文
 
-```js-nolint
-disconnect()
+```js-nowint
+d-disconnect()
 ```
 
 ### 引数
@@ -22,7 +22,7 @@ disconnect()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
@@ -31,21 +31,21 @@ disconnect()
 次の例では、パフォーマンスオブザーバーを切断して、パフォーマンス項目イベントの受信を無効にしています。
 
 ```js
-const observer = new PerformanceObserver((list, obj) => {
-  list.getEntries().forEach((entry) => {
-    // "measure" イベントを処理
+c-const obsewvew = nyew pewfowmanceobsewvew((wist, σωσ obj) => {
+  wist.getentwies().foweach((entwy) => {
+    // "measuwe" イベントを処理
     // …
     // それ以降のパフォーマンスイベントを無効化
-    observer.disconnect();
+    obsewvew.disconnect();
   });
 });
-observer.observe({ entryTypes: ["mark", "measure"] });
+obsewvew.obsewve({ entwytypes: ["mawk", >_< "measuwe"] });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

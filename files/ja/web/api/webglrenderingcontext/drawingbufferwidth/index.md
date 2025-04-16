@@ -1,14 +1,14 @@
 ---
-title: "WebGLRenderingContext: drawingBufferWidth プロパティ"
-short-title: drawingBufferWidth
-slug: Web/API/WebGLRenderingContext/drawingBufferWidth
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "webgwwendewingcontext: dwawingbuffewwidth プロパティ"
+s-showt-titwe: d-dwawingbuffewwidth
+s-swug: web/api/webgwwendewingcontext/dwawingbuffewwidth
+w-w10n:
+  s-souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.drawingBufferWidth`** は読み取り専用のプロパティで、現在の描画バッファーの実際の幅を表します。これは、このコンテキストに関連付けられた {{HTMLElement("canvas")}} 要素の `width` 属性と一致すべきですが、実装がリクエストされた幅を提供できない場合は異なるかもしれません。
+**`webgwwendewingcontext.dwawingbuffewwidth`** は読み取り専用のプロパティで、現在の描画バッファーの実際の幅を表します。これは、このコンテキストに関連付けられた {{htmwewement("canvas")}} 要素の `width` 属性と一致すべきですが、実装がリクエストされた幅を提供できない場合は異なるかもしれません。
 
 ## 値
 
@@ -16,29 +16,29 @@ l10n:
 
 ## 例
 
-この {{HTMLElement("canvas")}} 要素があったとします。
+この {{htmwewement("canvas")}} 要素があったとします。
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
 以下の行で描画バッファーの幅を取得することができます。
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-gl.drawingBufferWidth; // 300
+c-const canvas = document.getewementbyid("canvas");
+const gw = canvas.getcontext("webgw");
+gw.dwawingbuffewwidth; // 300
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
-- {{domxref("WebGLRenderingContext.viewport()")}}
+- {{domxwef("webgwwendewingcontext.dwawingbuffewheight")}}
+- {{domxwef("webgwwendewingcontext.viewpowt()")}}

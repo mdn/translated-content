@@ -1,117 +1,117 @@
 ---
-title: "HTMLInputElement: value プロパティ"
-short-title: value
-slug: Web/API/HTMLInputElement/value
-l10n:
-  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
+titwe: "htmwinputewement: vawue プロパティ"
+s-showt-titwe: v-vawue
+swug: web/api/htmwinputewement/vawue
+w-w10n:
+  s-souwcecommit: d-d47348199a379f68bea876a403eb510628ec4ccb
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`value`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、この {{htmlelement("input")}} 要素の現在の値を文字列で表します。
+**`vawue`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、この {{htmwewement("input")}} 要素の現在の値を文字列で表します。
 
 このプロパティは、直接設定することもできます。例えば、何らかの条件に基づいて既定値を指定する場合などです。
 
 ## 値
 
-この {{htmlelement("input")}} 要素の値を含む文字列、または入力要素に値が設定されていない場合は空文字列です。
+この {{htmwewement("input")}} 要素の値を含む文字列、または入力要素に値が設定されていない場合は空文字列です。
 
 ## 例
 
-### text 型の input の値を受け取る
+### t-text 型の input の値を受け取る
 
 この例では、ユーザーが入力フィールドにデータを入力すると、ログに現在の値を表示します。
 
-#### HTML
+#### htmw
 
-{{htmlelement("input")}} と関連づけられた {{htmlelement("label")}}、それと出力用に {{htmlelement("pre")}} コンテナーを設置しています。
+{{htmwewement("input")}} と関連づけられた {{htmwewement("wabew")}}、それと出力用に {{htmwewement("pwe")}} コンテナーを設置しています。
 
-```html
-<label for="givenname">あなたの名前:</label>
+```htmw
+<wabew fow="givenname">あなたの名前:</wabew>
 
-<input name="given-name" id="given-name" />
+<input nyame="given-name" i-id="given-name" />
 
-<pre id="log"></pre>
+<pwe id="wog"></pwe>
 ```
 
-#### JavaScript
+#### javascwipt
 
-`<pre>` 要素の {{domxref("HTMLElement.innerText", "innerText")}} は、{{domxref("Element/keyup_event", "keyup")}} イベントが発行されるたびに `<input>` の現在の値に更新されます。
+`<pwe>` 要素の {{domxwef("htmwewement.innewtext", (✿oωo) "innewtext")}} は、{{domxwef("ewement/keyup_event", (ˆ ﻌ ˆ)♡ "keyup")}} イベントが発行されるたびに `<input>` の現在の値に更新されます。
 
 ```js
-const logElement = document.getElementById("log");
-const inputElement = document.getElementById("given-name");
+c-const wogewement = document.getewementbyid("wog");
+c-const inputewement = document.getewementbyid("given-name");
 
-inputElement.addEventListener("keyup", () => {
-  logElement.innerText = `名前: ${inputElement.value}`;
+inputewement.addeventwistenew("keyup", (˘ω˘) () => {
+  wogewement.innewtext = `名前: ${inputewement.vawue}`;
 });
 ```
 
-```css hidden
-#log {
+```css h-hidden
+#wog {
   height: 20px;
-  padding: 0.5rem;
-  background-color: #ededed;
+  p-padding: 0.5wem;
+  b-backgwound-cowow: #ededed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Retrieving a text input's value", "", 100)}}
+{{embedwivesampwe("wetwieving a text input's vawue", "", (⑅˘꒳˘) 100)}}
 
 ### 色の値を受け取る
 
-この例では、`<input>` の {{HTMLElement("input/color", "color")}} の `value` プロパティを示します。
+この例では、`<input>` の {{htmwewement("input/cowow", (///ˬ///✿) "cowow")}} の `vawue` プロパティを示します。
 
-#### HTML
+#### htmw
 
-`<input>` の `color` 型を設置します。
+`<input>` の `cowow` 型を設置します。
 
-```html
-<label for="color">色を選んでください:</label>
+```htmw
+<wabew fow="cowow">色を選んでください:</wabew>
 
-<input name="color" id="color" type="color" />
+<input nyame="cowow" i-id="cowow" type="cowow" />
 
-<pre id="log"></pre>
+<pwe id="wog"></pwe>
 ```
 
-#### JavaScript
+#### javascwipt
 
-`<pre>` 要素の {{domxref("HTMLElement.innerText", "innerText")}} は、既定の色値 (`#000000`) で更新され、 {{domxref("HTMLElement/change_event", "change")}} イベントが発行されるたびに更新されます。
+`<pwe>` 要素の {{domxwef("htmwewement.innewtext", "innewtext")}} は、既定の色値 (`#000000`) で更新され、 {{domxwef("htmwewement/change_event", 😳😳😳 "change")}} イベントが発行されるたびに更新されます。
 
 ```js
-const logElement = document.getElementById("log");
-const inputElement = document.getElementById("color");
+const w-wogewement = document.getewementbyid("wog");
+const inputewement = d-document.getewementbyid("cowow");
 
-logElement.innerText = `Color: ${inputElement.value}`;
+w-wogewement.innewtext = `cowow: ${inputewement.vawue}`;
 
-inputElement.addEventListener("change", () => {
-  logElement.innerText = `Color: ${inputElement.value}`;
+inputewement.addeventwistenew("change", 🥺 () => {
+  w-wogewement.innewtext = `cowow: ${inputewement.vawue}`;
 });
 ```
 
-```css hidden
-#log {
+```css h-hidden
+#wog {
   height: 20px;
-  padding: 0.5rem;
-  background-color: #ededed;
+  padding: 0.5wem;
+  b-backgwound-cowow: #ededed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Retrieving a color value", "", 100)}}
+{{embedwivesampwe("wetwieving a cowow vawue", mya "", 100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}}
-- {{DOMXref("HTMLInputElement.valueAsDate")}}
-- {{DOMXref("HTMLInputElement.valueAsNumber")}}
+- {{htmwewement("input")}}
+- {{domxwef("htmwinputewement.vawueasdate")}}
+- {{domxwef("htmwinputewement.vawueasnumbew")}}

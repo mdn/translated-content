@@ -1,22 +1,22 @@
 ---
-title: "BluetoothDevice: gatt プロパティ"
-slug: Web/API/BluetoothDevice/gatt
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothdevice: gatt プロパティ"
+s-swug: web/api/bwuetoothdevice/gatt
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API") }}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api") }}{{seecompattabwe}}
 
-読み取り専用プロパティ **`BluetoothDevice.gatt`** は、デバイスの {{DOMxRef("BluetoothRemoteGATTServer")}} への参照を返します。
+読み取り専用プロパティ **`bwuetoothdevice.gatt`** は、デバイスの {{domxwef("bwuetoothwemotegattsewvew")}} への参照を返します。
 
 ## 値
 
-デバイスの {{DOMxRef("BluetoothRemoteGATTServer")}} への参照です。
+デバイスの {{domxwef("bwuetoothwemotegattsewvew")}} への参照です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

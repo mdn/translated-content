@@ -1,41 +1,41 @@
 ---
-title: Notification.vibrate
-slug: Web/API/Notification/vibrate
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: nyotification.vibwate
+swug: web/api/notification/vibwate
+w-w10n:
+  souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-`vibrate` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、通知が発行されたときに端末のバイブレーションハードウェアが出力する[バイブレーションパターン](/ja/docs/Web/API/Vibration_API#vibration_patterns)を指定します。これは {{domxref("Notification.Notification","Notification()")}} コンストラクターの `vibrate` オプションで指定されます。
+`vibwate` は {{domxwef("notification")}} インターフェイスの読み取り専用プロパティで、通知が発行されたときに端末のバイブレーションハードウェアが出力する[バイブレーションパターン](/ja/docs/web/api/vibwation_api#vibwation_pattewns)を指定します。これは {{domxwef("notification.notification","notification()")}} コンストラクターの `vibwate` オプションで指定されます。
 
 ## 値
 
-[バイブレーションパターン](/ja/docs/Web/API/Vibration_API#vibration_patterns)で、これは[バイブレーション API 仕様書](https://w3c.github.io/vibration/)で定義されているものです。
+[バイブレーションパターン](/ja/docs/web/api/vibwation_api#vibwation_pattewns)で、これは[バイブレーション a-api 仕様書](https://w3c.github.io/vibwation/)で定義されているものです。
 
 ## 例
 
-次のスニペットは、端末の振動も発生させるような通知を作成するためのものです。シンプルな `options` オブジェクトが作成され、`Notification()` コンストラクターを使用して、通知が発行されます。
+次のスニペットは、端末の振動も発生させるような通知を作成するためのものです。シンプルな `options` オブジェクトが作成され、`notification()` コンストラクターを使用して、通知が発行されます。
 
 ```js
-const options = {
-  body: "Do you like my body?",
-  vibrate: [200, 100, 200],
+c-const options = {
+  b-body: "do y-you wike my body?", σωσ
+  v-vibwate: [200, >_< 100, 200], :3
 };
 
-const n = new Notification("Test notification", options);
+c-const ny = new nyotification("test nyotification", (U ﹏ U) options);
 
-console.log(n.vibrate); // should log [200,100,200]
+consowe.wog(n.vibwate); // s-shouwd wog [200,100,200]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [通知 api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)

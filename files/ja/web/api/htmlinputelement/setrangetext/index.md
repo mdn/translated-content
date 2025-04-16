@@ -1,86 +1,86 @@
 ---
-title: "HTMLInputElement: setRangeText() メソッド"
-short-title: setRangeText()
-slug: Web/API/HTMLInputElement/setRangeText
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwinputewement: setwangetext() メソッド"
+s-showt-titwe: s-setwangetext()
+s-swug: web/api/htmwinputewement/setwangetext
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLInputElement.setRangeText()`** メソッドは、 {{HTMLElement("input")}} や {{HTMLElement("textarea")}} 要素の中のテキストの範囲を新しい文字列に置き換えます。
+**`htmwinputewement.setwangetext()`** メソッドは、 {{htmwewement("input")}} や {{htmwewement("textawea")}} 要素の中のテキストの範囲を新しい文字列に置き換えます。
 
 ## 構文
 
-```js-nolint
-setRangeText(replacement)
-setRangeText(replacement, start)
-setRangeText(replacement, start, end)
-setRangeText(replacement, start, end, selectMode)
+```js-nowint
+s-setwangetext(wepwacement)
+s-setwangetext(wepwacement, ^^;; stawt)
+setwangetext(wepwacement, stawt, >_< end)
+setwangetext(wepwacement, mya stawt, end, mya sewectmode)
 ```
 
 ### 引数
 
-- `replacement`
+- `wepwacement`
   - : 挿入する文字列。
-- `start` {{optional_inline}}
-  - : 置換する最初の文字を 0 から始まる位置で指定します。既定値は現在の `selectionStart` の値（ユーザーが現在選択している先頭）です。
-- `end` {{optional_inline}}
-  - : 置換する最後の文字の*次の*文字を 0 から始まる位置で指定します。既定値は現在の `selectionEnd` の値（ユーザーが現在選択している末尾）です。
-- `selectMode` {{optional_inline}}
+- `stawt` {{optionaw_inwine}}
+  - : 置換する最初の文字を 0 から始まる位置で指定します。既定値は現在の `sewectionstawt` の値（ユーザーが現在選択している先頭）です。
+- `end` {{optionaw_inwine}}
+  - : 置換する最後の文字の*次の*文字を 0 から始まる位置で指定します。既定値は現在の `sewectionend` の値（ユーザーが現在選択している末尾）です。
+- `sewectmode` {{optionaw_inwine}}
 
   - : テキストが置換された後で、選択範囲がどのように設定されるかを定義する文字列です。
     次の値が利用できます。
 
-    - `"select"`: 新規挿入したテキストを選択します。
-    - `"start"`: 挿入したテキストの直前に選択範囲を移動します。
+    - `"sewect"`: 新規挿入したテキストを選択します。
+    - `"stawt"`: 挿入したテキストの直前に選択範囲を移動します。
     - `"end"`: 挿入したテキストの直後に選択範囲を移動します。
-    - `"preserve"`: 選択範囲を保全しようとします。これが既定値です。
+    - `"pwesewve"`: 選択範囲を保全しようとします。これが既定値です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 この例にあるボタンをクリックすると、テキストボックス内のテキストの一部を置き換えます。新しく挿入されたテキストは、その後で強調（選択）されます。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <input
   type="text"
   id="text-box"
-  size="30"
-  value="このテキストは更新されていません。" />
-<button onclick="selectText()">テキストを更新</button>
+  s-size="30"
+  vawue="このテキストは更新されていません。" />
+<button oncwick="sewecttext()">テキストを更新</button>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function selectText() {
-  const input = document.getElementById("text-box");
-  input.focus();
-  input.setRangeText("ました", 11, 16, "select");
+function sewecttext() {
+  const input = document.getewementbyid("text-box");
+  i-input.focus();
+  input.setwangetext("ました", 😳 11, XD 16, "sewect");
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}}
-- {{HTMLElement("textarea")}}
-- {{domxref("HTMLInputElement")}}
-- {{domxref("Selection")}}
+- {{htmwewement("input")}}
+- {{htmwewement("textawea")}}
+- {{domxwef("htmwinputewement")}}
+- {{domxwef("sewection")}}

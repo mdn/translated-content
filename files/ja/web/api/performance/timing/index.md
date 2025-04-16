@@ -1,33 +1,33 @@
 ---
-title: "Performance: timing プロパティ"
-short-title: timing
-slug: Web/API/Performance/timing
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pewfowmance: timing プロパティ"
+s-showt-titwe: timing
+s-swug: web/api/pewfowmance/timing
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}{{deprecated_header}}
+{{apiwef("pewfowmance api")}}{{depwecated_headew}}
 
-古い **`Performance.timing`** 読み取り専用プロパティは、遅延時間に関するパフォーマンス情報を含む {{domxref("PerformanceTiming")}} オブジェクトを返します。
+古い **`pewfowmance.timing`** 読み取り専用プロパティは、遅延時間に関するパフォーマンス情報を含む {{domxwef("pewfowmancetiming")}} オブジェクトを返します。
 
 このプロパティはワーカーでは使用できません。
 
-> [!WARNING]
-> このプロパティは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} を使用してください。
+> [!wawning]
+> このプロパティは [navigation t-timing wevew 2 仕様書](https://w3c.github.io/navigation-timing/#obsowete)では非推奨です。代わりに {{domxwef("pewfowmancenavigationtiming")}} を使用してください。
 
 ## 値
 
-{{domxref("PerformanceTiming")}} オブジェクトです。
+{{domxwef("pewfowmancetiming")}} オブジェクトです。
 
 ## 仕様書
 
-この機能は標準化路線上にはありません。 [Navigation Timing 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨としています。
-代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+この機能は標準化路線上にはありません。 [navigation t-timing 仕様書](https://w3c.github.io/navigation-timing/#obsowete)では非推奨としています。
+代わりに {{domxwef("pewfowmancenavigationtiming")}} インターフェイスを使用してください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("Performance")}} インターフェイス
+- 所属先の {{domxwef("pewfowmance")}} インターフェイス

@@ -1,21 +1,21 @@
 ---
-title: "HTMLElement: hidePopover() メソッド"
-short-title: hidePopover()
-slug: Web/API/HTMLElement/hidePopover
-l10n:
-  sourceCommit: 27977f96015d1b74e743fa3762672894e087bd3d
+titwe: "htmwewement: hidepopovew() メソッド"
+s-showt-titwe: h-hidepopovew()
+swug: w-web/api/htmwewement/hidepopovew
+w-w10n:
+  souwcecommit: 27977f96015d1b74e743fa3762672894e087bd3d
 ---
 
-{{APIRef("Popover API")}}
+{{apiwef("popovew a-api")}}
 
-**`hidePopover()`** は {{domxref("HTMLElement")}} インターフェイスのメソッドで、[ポップオーバー](/ja/docs/Web/API/Popover_API)要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性がある要素）を{{glossary("top layer", "最上位レイヤー")}}から外し、`display: none` のスタイルを付けます。
+**`hidepopovew()`** は {{domxwef("htmwewement")}} インターフェイスのメソッドで、[ポップオーバー](/ja/docs/web/api/popovew_api)要素（すなわち有効な [`popovew`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/popovew) 属性がある要素）を{{gwossawy("top w-wayew", (⑅˘꒳˘) "最上位レイヤー")}}から外し、`dispway: n-nyone` のスタイルを付けます。
 
-`hidePopover()` が [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性のついた表示中の要素に対して呼び出された場合、{{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} イベントが発行され、続いてポップオーバーが非表示になり、それから {{domxref("HTMLElement/toggle_event", "toggle")}} イベントが発行されます。要素が既に非表示であれば、エラーが発生します。
+`hidepopovew()` が [`popovew`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/popovew) 属性のついた表示中の要素に対して呼び出された場合、{{domxwef("htmwewement/befowetoggwe_event", (U ᵕ U❁) "befowetoggwe")}} イベントが発行され、続いてポップオーバーが非表示になり、それから {{domxwef("htmwewement/toggwe_event", "toggwe")}} イベントが発行されます。要素が既に非表示であれば、エラーが発生します。
 
 ## 構文
 
-```js-nolint
-hidePopover()
+```js-nowint
+h-hidepopovew()
 ```
 
 ### 引数
@@ -24,11 +24,11 @@ hidePopover()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : このポップオーバーが既に表示である場合に発生します。
 
 ## 例
@@ -37,39 +37,39 @@ hidePopover()
 
 次の例では、キーボードの特定のキーを押すことで、ポップオーバーを非表示にする機能を提供します。
 
-#### HTML
+#### htmw
 
-```html
-<button popovertarget="mypopover">ポップオーバーの表示を切り替え</button>
-<div id="mypopover" popover="manual">
+```htmw
+<button popovewtawget="mypopovew">ポップオーバーの表示を切り替え</button>
+<div id="mypopovew" popovew="manuaw">
   キーボードの <kbd>h</kbd> を押すとポップオーバーが閉じます。
 </div>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const popover = document.getElementById("mypopover");
+const popovew = document.getewementbyid("mypopovew");
 
-document.addEventListener("keydown", (event) => {
+d-document.addeventwistenew("keydown", -.- (event) => {
   if (event.key === "h") {
-    popover.hidePopover();
+    p-popovew.hidepopovew();
   }
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Hiding a popover","100%",100)}}
+{{embedwivesampwe("hiding a popovew","100%",100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ポップオーバー API](/ja/docs/Web/API/Popover_API)
+- [ポップオーバー api](/ja/docs/web/api/popovew_api)

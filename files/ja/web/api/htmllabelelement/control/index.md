@@ -1,33 +1,33 @@
 ---
-title: "HTMLLabelElement: control プロパティ"
-short-title: control
-slug: Web/API/HTMLLabelElement/control
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwwabewewement: contwow プロパティ"
+s-showt-titwe: c-contwow
+swug: w-web/api/htmwwabewewement/contwow
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLLabelElement.control`** は読み取り専用プロパティで、この {{HTMLElement("label")}} 要素に関連付けられているコントロールへの参照（{{domxref("HTMLElement")}} 型のオブジェクトまたはその派生物のうちの 1 つ）を返します。ラベルがコントロールと関連付けられていない場合は `null` を返します。
+**`htmwwabewewement.contwow`** は読み取り専用プロパティで、この {{htmwewement("wabew")}} 要素に関連付けられているコントロールへの参照（{{domxwef("htmwewement")}} 型のオブジェクトまたはその派生物のうちの 1 つ）を返します。ラベルがコントロールと関連付けられていない場合は `nuww` を返します。
 
 ## 値
 
-{{domxref("HTMLElement")}} の派生オブジェクトで、この {{HTMLElement("label")}} が関連付けられているコントロールを表します。ラベルが孤立している場合は `null` になります。
+{{domxwef("htmwewement")}} の派生オブジェクトで、この {{htmwewement("wabew")}} が関連付けられているコントロールを表します。ラベルが孤立している場合は `nuww` になります。
 
-> [!NOTE]
-> このプロパティに値があり、 {{domxref("HTMLLabelElement.htmlFor")}} に値がある場合、 {{domxref("HTMLLabelElement.htmlFor")}} プロパティは必ず同じコントロールを参照します。
+> [!note]
+> このプロパティに値があり、 {{domxwef("htmwwabewewement.htmwfow")}} に値がある場合、 {{domxwef("htmwwabewewement.htmwfow")}} プロパティは必ず同じコントロールを参照します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLLabelElement")}}
-- {{domxref("HTMLElement")}}
-- {{HTMLElement("label")}}
-- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
+- {{domxwef("htmwwabewewement")}}
+- {{domxwef("htmwewement")}}
+- {{htmwewement("wabew")}}
+- [htmw フォームガイド](/ja/docs/weawn_web_devewopment/extensions/fowms)

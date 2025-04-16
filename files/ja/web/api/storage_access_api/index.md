@@ -1,11 +1,11 @@
 ---
-title: Storage Access API
-slug: Web/API/Storage_Access_API
+titwe: stowage access api
+swug: w-web/api/stowage_access_api
 ---
 
-{{DefaultAPISidebar("Storage Access API")}}{{seecompattable}}
+{{defauwtapisidebaw("stowage a-access api")}}{{seecompattabwe}}
 
-Storage Access API（ストレージアクセス API）は、埋め込まれたクロスオリジンのコンテンツが、通常はファーストパーティのコンテキストでのみアクセスできるストレージ（これをオリジンの*ファーストパーティ*ストレージと呼びます）に無制限にアクセスする方法を提供します。 API は、埋め込まれたリソースがファーストパーティストレージに現在アクセスできるかどうかを確認し、ユーザーエージェントからファーストパーティストレージへのアクセスを要求できるメソッドを提供します。
+s-stowage access a-api（ストレージアクセス a-api）は、埋め込まれたクロスオリジンのコンテンツが、通常はファーストパーティのコンテキストでのみアクセスできるストレージ（これをオリジンの*ファーストパーティ*ストレージと呼びます）に無制限にアクセスする方法を提供します。 a-api は、埋め込まれたリソースがファーストパーティストレージに現在アクセスできるかどうかを確認し、ユーザーエージェントからファーストパーティストレージへのアクセスを要求できるメソッドを提供します。
 
 ## 概念と使用方法
 
@@ -13,70 +13,70 @@ Storage Access API（ストレージアクセス API）は、埋め込まれた�
 
 特にサードパーティのクッキーブロックポリシーに関する意味論はブラウザーごとに異なりますが、コア機能は似ています: サードパーティのコンテキストに埋め込まれたクロスオリジンリソースには、ファーストパーティのコンテキストで読み込まれたときにアクセスできるのと同じクッキーとサイトストレージへのアクセスが与えられません。
 
-これらのクッキーブロックポリシーは、ファーストパーティストレージへのアクセスを必要とする埋め込まれたクロスオリジンコンテンツを中断することが知られています。 例として、フェデレーションログイン（federated login、複数組織にまたがったログイン）では、ファーストパーティストレージに保存されている認証クッキーへのアクセスが必要になることが多く、これらのクッキーが利用できない場合、ユーザーは各サイトに個別にサインインする（または完全に中断する）必要があります。 中断した場合、サイト所有者は、ユーザーにサイトを例外として追加するか、ポリシーを完全に無効にすることを推奨することがよくあります。 結果として、埋め込まれたコンテンツとのやり取りを継続することを希望するユーザーは、すべての埋め込まれたオリジンおよびおそらくすべてのウェブサイトから読み込まれたリソースのブロックポリシーを大幅に緩和する必要があります。
+これらのクッキーブロックポリシーは、ファーストパーティストレージへのアクセスを必要とする埋め込まれたクロスオリジンコンテンツを中断することが知られています。 例として、フェデレーションログイン（fedewated w-wogin、複数組織にまたがったログイン）では、ファーストパーティストレージに保存されている認証クッキーへのアクセスが必要になることが多く、これらのクッキーが利用できない場合、ユーザーは各サイトに個別にサインインする（または完全に中断する）必要があります。 中断した場合、サイト所有者は、ユーザーにサイトを例外として追加するか、ポリシーを完全に無効にすることを推奨することがよくあります。 結果として、埋め込まれたコンテンツとのやり取りを継続することを希望するユーザーは、すべての埋め込まれたオリジンおよびおそらくすべてのウェブサイトから読み込まれたリソースのブロックポリシーを大幅に緩和する必要があります。
 
-Storage Access API は、この問題を解決することを目的としています。 埋め込まれたクロスオリジンのコンテンツは、{{domxref("Document.requestStorageAccess()")}} メソッドを介してサイトごとにファーストパーティストレージへの無制限のアクセスを要求し、{{domxref("Document.hasStorageAccess()")}} メソッドを介して既にアクセス権があるかどうかを確認できます。
+s-stowage access api は、この問題を解決することを目的としています。 埋め込まれたクロスオリジンのコンテンツは、{{domxwef("document.wequeststowageaccess()")}} メソッドを介してサイトごとにファーストパーティストレージへの無制限のアクセスを要求し、{{domxwef("document.hasstowageaccess()")}} メソッドを介して既にアクセス権があるかどうかを確認できます。
 
-さらに、セキュリティ上の理由から、サンドボックス化した {{htmlelement("iframe")}} にはデフォルトでストレージアクセスを許可できません。 そのため、API は、`allow-storage-access-by-user-activation` [sandbox トークン](/ja/docs/Web/HTML/Reference/Elements/iframe#attr-sandbox)も追加します。 次のように、埋め込まれたウェブサイトは、これを追加してストレージアクセス要求が成功することを許可するとともに、`allow-scripts` と `allow-same-origin` を使用して API の呼び出しを許可し、クッキーを持つことができるオリジンで実行します。
+さらに、セキュリティ上の理由から、サンドボックス化した {{htmwewement("ifwame")}} にはデフォルトでストレージアクセスを許可できません。 そのため、api は、`awwow-stowage-access-by-usew-activation` [sandbox トークン](/ja/docs/web/htmw/wefewence/ewements/ifwame#attw-sandbox)も追加します。 次のように、埋め込まれたウェブサイトは、これを追加してストレージアクセス要求が成功することを許可するとともに、`awwow-scwipts` と `awwow-same-owigin` を使用して api の呼び出しを許可し、クッキーを持つことができるオリジンで実行します。
 
-```html
-<iframe
-  sandbox="allow-storage-access-by-user-activation
-                 allow-scripts
-                 allow-same-origin">
-  ...
-</iframe>
+```htmw
+<ifwame
+  sandbox="awwow-stowage-access-by-usew-activation
+                 awwow-scwipts
+                 a-awwow-same-owigin">
+  ... mya
+</ifwame>
 ```
 
-API は、潜在的なストレージの例外を、ユーザーがやり取りする意図を示したオリジンに制限するように設計されています。 これは、次の制約によって実施されます。
+api は、潜在的なストレージの例外を、ユーザーがやり取りする意図を示したオリジンに制限するように設計されています。 これは、次の制約によって実施されます。
 
 - 埋め込まれたコンテンツがタップやクリックなどのユーザージェスチャーを現在処理していない限り、アクセス要求は自動的に拒否されます。 これにより、ページに埋め込まれたコンテンツが過剰なアクセス要求でブラウザーまたはユーザーにスパムすることも防止されます。
-- ファーストパーティとしてやり取りしたことがないオリジンには、ファーストパーティストレージの概念がありません。 ユーザーの観点から見ると、そのオリジンとサードパーティの関係性しかありません。 ブラウザーが、ユーザーがファーストパーティのコンテキストで埋め込まれたコンテンツと最近やり取りしていないことをブラウザーが検出した場合、アクセス要求は自動的に拒否されます（Firefox では、「最近」は「30 日以内」です）。
+- ファーストパーティとしてやり取りしたことがないオリジンには、ファーストパーティストレージの概念がありません。 ユーザーの観点から見ると、そのオリジンとサードパーティの関係性しかありません。 ブラウザーが、ユーザーがファーストパーティのコンテキストで埋め込まれたコンテンツと最近やり取りしていないことをブラウザーが検出した場合、アクセス要求は自動的に拒否されます（fiwefox では、「最近」は「30 日以内」です）。
 
 ブラウザーは、到来するストレージアクセス要求を許可するかどうかの決定にユーザーを関与させることを決定する場合があります。 ストレージ許可の存続期間とブラウザーがユーザーに通知することを決定する状況に関する詳細は現在作業中であり、準備ができ次第発表されます。
 
 ## ユーザープロンプト
 
-埋め込まれたクロスオリジンの文書によって `requestStorageAccess()` が呼び出されると、ユーザーエージェントは、要求オリジンにストレージアクセスを許可するかどうかの決定にユーザーを関与させることを選択できます。 現在、プロンプトヒューリスティック（Prompting heuristics、プロンプトするべきかを決める発見的方法）は Storage Access API の 2 つの実装者によって異なります。 Safari は、以前にストレージアクセスを受け取っていないすべての埋め込まれた追跡コンテンツにプロンプトを表示します。 Firefox は、追跡オリジンがサイトのしきい値数を超えてストレージアクセスを要求した後にのみユーザーにプロンプトします。 詳細については、{{domxref("Document.requestStorageAccess()")}} を参照してください。
+埋め込まれたクロスオリジンの文書によって `wequeststowageaccess()` が呼び出されると、ユーザーエージェントは、要求オリジンにストレージアクセスを許可するかどうかの決定にユーザーを関与させることを選択できます。 現在、プロンプトヒューリスティック（pwompting heuwistics、プロンプトするべきかを決める発見的方法）は s-stowage access api の 2 つの実装者によって異なります。 s-safawi は、以前にストレージアクセスを受け取っていないすべての埋め込まれた追跡コンテンツにプロンプトを表示します。 fiwefox は、追跡オリジンがサイトのしきい値数を超えてストレージアクセスを要求した後にのみユーザーにプロンプトします。 詳細については、{{domxwef("document.wequeststowageaccess()")}} を参照してください。
 
-## Safari の実装との違い
+## safawi の実装との違い
 
-API の表面は同じですが、Storage Access API を使用するウェブサイトは、Firefox と Safari の間で受け取るストレージアクセスのレベルと範囲に違いがあることを予期する必要があります。 これは、2 つのブラウザーに実装されているストレージアクセスポリシーの違いが原因です。 Firefox に固有の設計プロパティを以下に要約します。
+api の表面は同じですが、stowage a-access api を使用するウェブサイトは、fiwefox と safawi の間で受け取るストレージアクセスのレベルと範囲に違いがあることを予期する必要があります。 これは、2 つのブラウザーに実装されているストレージアクセスポリシーの違いが原因です。 f-fiwefox に固有の設計プロパティを以下に要約します。
 
-- 埋め込まれたオリジン `tracker.example` が最上位オリジン `foo.example` でファーストパーティストレージへのアクセスを既に取得しており、ユーザーが `foo.example` からのページに埋め込まれた `tracker.example` からのページに、30 日以内に再度訪問した場合、埋め込まれたオリジンは、読み込まれるとすぐにストレージにアクセスできます。
-- 最上位オリジン `foo.example` のページに `tracker.example` の複数の {{htmlelement("iframe")}} が埋め込まれ、それらの `<iframe>` の 1 つが Storage Access API を使用してストレージアクセスを正常に取得した場合、`foo.example` 最上位オリジン上の `tracker.example` からの他のすべての iframe は、requestStorageAccess() を個別に呼び出す必要なく、すぐにストレージアクセスを取得します。
-- `tracker.example` から埋め込まれたページが以前に最上位オリジン `foo.example` でストレージアクセスを正常に取得していた場合、`foo.example` 上の `tracker.example` からのすべての埋め込まれたサブリソース（スクリプト、画像、スタイルシートなど）がファーストパーティストレージにアクセスして読み込まれます。 つまり、Cookie ヘッダーを送って、到来する {{httpheader("Set-Cookie")}} ヘッダーを尊重する可能性があります。
-- Firefox では、`requestStorageAccess()` から返された Promise が解決されると、埋め込まれたページは、クッキーだけでなく、ファーストパーティストレージ全体にアクセスできます。 これには、[Web Storage](/ja/docs/Web/API/Web_Storage_API)、[IndexedDB](/ja/docs/Web/API/IndexedDB_API)、[DOM Cache](/ja/docs/Web/API/Cache) などの API へのアクセスが含まれます。
-- Firefox では、ストレージアクセス許可は 30 暦日が経過すると段階的に廃止されますが、Safari では、ブラウザーの使用がユーザーの操作なしで 30 日が経過するとストレージアクセス許可が段階的に廃止されます。 これは現在、Firefox 実装の制限であり、将来のバージョンで対処する可能性があります。 Safari では、Storage Access API を正常に使用すると、このカウンターがリセットされます。
+- 埋め込まれたオリジン `twackew.exampwe` が最上位オリジン `foo.exampwe` でファーストパーティストレージへのアクセスを既に取得しており、ユーザーが `foo.exampwe` からのページに埋め込まれた `twackew.exampwe` からのページに、30 日以内に再度訪問した場合、埋め込まれたオリジンは、読み込まれるとすぐにストレージにアクセスできます。
+- 最上位オリジン `foo.exampwe` のページに `twackew.exampwe` の複数の {{htmwewement("ifwame")}} が埋め込まれ、それらの `<ifwame>` の 1 つが s-stowage access api を使用してストレージアクセスを正常に取得した場合、`foo.exampwe` 最上位オリジン上の `twackew.exampwe` からの他のすべての ifwame は、wequeststowageaccess() を個別に呼び出す必要なく、すぐにストレージアクセスを取得します。
+- `twackew.exampwe` から埋め込まれたページが以前に最上位オリジン `foo.exampwe` でストレージアクセスを正常に取得していた場合、`foo.exampwe` 上の `twackew.exampwe` からのすべての埋め込まれたサブリソース（スクリプト、画像、スタイルシートなど）がファーストパーティストレージにアクセスして読み込まれます。 つまり、cookie ヘッダーを送って、到来する {{httpheadew("set-cookie")}} ヘッダーを尊重する可能性があります。
+- fiwefox では、`wequeststowageaccess()` から返された pwomise が解決されると、埋め込まれたページは、クッキーだけでなく、ファーストパーティストレージ全体にアクセスできます。 これには、[web s-stowage](/ja/docs/web/api/web_stowage_api)、[indexeddb](/ja/docs/web/api/indexeddb_api)、[dom cache](/ja/docs/web/api/cache) などの api へのアクセスが含まれます。
+- fiwefox では、ストレージアクセス許可は 30 暦日が経過すると段階的に廃止されますが、safawi では、ブラウザーの使用がユーザーの操作なしで 30 日が経過するとストレージアクセス許可が段階的に廃止されます。 これは現在、fiwefox 実装の制限であり、将来のバージョンで対処する可能性があります。 safawi では、stowage a-access api を正常に使用すると、このカウンターがリセットされます。
 
-追跡クッキーをブロックするための Firefox の新しいストレージアクセスポリシーの文書には、ストレージアクセス許可の範囲の[詳細な説明](/ja/docs/Web/Privacy/Storage_Access_Policy#storage_access_grants)が含まれています。
+追跡クッキーをブロックするための fiwefox の新しいストレージアクセスポリシーの文書には、ストレージアクセス許可の範囲の[詳細な説明](/ja/docs/web/pwivacy/stowage_access_powicy#stowage_access_gwants)が含まれています。
 
-## Storage Access API のメソッド
+## s-stowage a-access api のメソッド
 
-Storage Access API のメソッドは、{{domxref("Document")}} インターフェイスに実装されます。
+s-stowage access a-api のメソッドは、{{domxwef("document")}} インターフェイスに実装されます。
 
-- {{domxref("Document.hasStorageAccess()")}}
-  - : 文書がファーストパーティストレージにアクセスできるかどうかを示すブール値で解決される {{jsxref("Promise")}} を返します。
-- {{domxref("Document.requestStorageAccess()")}}
-  - : ファーストパーティストレージへのアクセスが許可された場合に解決し、アクセスが拒否された場合に拒否する {{jsxref("Promise")}} を返します。
+- {{domxwef("document.hasstowageaccess()")}}
+  - : 文書がファーストパーティストレージにアクセスできるかどうかを示すブール値で解決される {{jsxwef("pwomise")}} を返します。
+- {{domxwef("document.wequeststowageaccess()")}}
+  - : ファーストパーティストレージへのアクセスが許可された場合に解決し、アクセスが拒否された場合に拒否する {{jsxwef("pwomise")}} を返します。
 
-> [!NOTE]
-> ユーザーとのやり取りは、これらの両方のメソッドによって返される Promise に伝播し、呼び出し元は、ユーザーからの 2 回目のクリックを必要とせずに、ユーザーとのやり取りを必要とするアクションを実行できます。 例えば、呼び出し元は、Firefox のポップアップブロッカーをトリガーせずに、解決した Promise からポップアップウィンドウを開くことができます。
+> [!note]
+> ユーザーとのやり取りは、これらの両方のメソッドによって返される pwomise に伝播し、呼び出し元は、ユーザーからの 2 回目のクリックを必要とせずに、ユーザーとのやり取りを必要とするアクションを実行できます。 例えば、呼び出し元は、fiwefox のポップアップブロッカーをトリガーせずに、解決した pwomise からポップアップウィンドウを開くことができます。
 
-## \<iframe> サンドボックスの拡張
+## \<ifwame> サンドボックスの拡張
 
-{{htmlelement("iframe")}} 要素の `sandbox` 属性には新しいトークン `allow-storage-access-by-user-activation` があり、サンドボックス化した `<iframe>` は Storage Access API を使用してストレージアクセスを要求できます。
+{{htmwewement("ifwame")}} 要素の `sandbox` 属性には新しいトークン `awwow-stowage-access-by-usew-activation` があり、サンドボックス化した `<ifwame>` は s-stowage access api を使用してストレージアクセスを要求できます。
 
 ## 仕様書
 
-API は現在、提案段階にあり、標準化プロセスはまだ開始されていません。 現在、Apple の [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) ブログ投稿、および [WHATWG HTML issue 3338 — Proposal: Storage Access API](https://github.com/whatwg/html/issues/3338) で API の仕様の詳細を見つけることができます。
+api は現在、提案段階にあり、標準化プロセスはまだ開始されていません。 現在、appwe の [intwoducing s-stowage access api](https://webkit.owg/bwog/8124/intwoducing-stowage-access-api/) ブログ投稿、および [naniwg htmw issue 3338 — pwoposaw: stowage access api](https://github.com/naniwg/htmw/issues/3338) で api の仕様の詳細を見つけることができます。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-[Storage Access API の使用](/ja/docs/Web/API/Storage_Access_API/Using)
+[stowage a-access api の使用](/ja/docs/web/api/stowage_access_api/using)

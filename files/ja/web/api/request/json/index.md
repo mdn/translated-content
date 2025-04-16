@@ -1,21 +1,21 @@
 ---
-title: "Request: json() メソッド"
-short-title: json()
-slug: Web/API/Request/json
-l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+titwe: "wequest: json() メソッド"
+s-showt-titwe: j-json()
+swug: w-web/api/wequest/json
+w-w10n:
+  s-souwcecommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch a-api")}}{{avaiwabweinwowkews}}
 
-**`json()`** は {{domxref("Request")}} インターフェイスのメソッドで、
-このメソッドはリクエスト本体を読み込み、本文を解釈した結果を {{JSxRef("JSON")}} として解決したプロミスとして返します。
+**`json()`** は {{domxwef("wequest")}} インターフェイスのメソッドで、
+このメソッドはリクエスト本体を読み込み、本文を解釈した結果を {{jsxwef("json")}} として解決したプロミスとして返します。
 
-このメソッドは `json()` という名前ですが、結果は JSON ではなく、JSON を入力として受け取り、それを解釈して JavaScript オブジェクトを生成した結果であることに注意してください。
+このメソッドは `json()` という名前ですが、結果は j-json ではなく、json を入力として受け取り、それを解釈して j-javascwipt オブジェクトを生成した結果であることに注意してください。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 json()
 ```
 
@@ -25,31 +25,31 @@ json()
 
 ### 返値
 
-JavaScript のオブジェクトに解決する {{jsxref("Promise")}} です。このオブジェクトは、オブジェクト、配列、文字列、数値など、JSON で表せるものであれば何でもかまいません。
+javascwipt のオブジェクトに解決する {{jsxwef("pwomise")}} です。このオブジェクトは、オブジェクト、配列、文字列、数値など、json で表せるものであれば何でもかまいません。
 
 ## 例
 
 ```js
-const obj = { hello: "world" };
+const obj = { hewwo: "wowwd" };
 
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: JSON.stringify(obj),
+c-const wequest = nyew wequest("/myendpoint", -.- {
+  m-method: "post", (ˆ ﻌ ˆ)♡
+  body: json.stwingify(obj), (⑅˘꒳˘)
 });
 
-request.json().then((data) => {
+w-wequest.json().then((data) => {
   // リクエストで送信されたデータに対して何らかの処理をする
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Response.json()")}}
+- {{domxwef("wesponse.json()")}}

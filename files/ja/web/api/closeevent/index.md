@@ -1,44 +1,44 @@
 ---
-title: CloseEvent
-slug: Web/API/CloseEvent
-l10n:
-  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
+titwe: cwoseevent
+swug: web/api/cwoseevent
+w-w10n:
+  s-souwcecommit: e-e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
-{{APIRef("Websockets API")}}
+{{apiwef("websockets a-api")}}
 
-`CloseEvent` は、接続が閉じられたときに {{Glossary("WebSockets", "WebSocket")}} を使用してクライアントに送信されます。これは `WebSocket` オブジェクトの `onclose` 属性で指定されたリスナーに配信されます。
+`cwoseevent` は、接続が閉じられたときに {{gwossawy("websockets", òωó "websocket")}} を使用してクライアントに送信されます。これは `websocket` オブジェクトの `oncwose` 属性で指定されたリスナーに配信されます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}}
-  - : 新しい `CloseEvent` を作成します。
+- {{domxwef("cwoseevent.cwoseevent", o.O "cwoseevent()")}}
+  - : 新しい `cwoseevent` を作成します。
 
 ## プロパティ
 
-_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
+_このインターフェイスは親である {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("CloseEvent.code")}} {{ReadOnlyInline}}
-  - : サーバーが送信したクローズコードが入った `unsigned short` を返します。
-- {{domxref("CloseEvent.reason")}} {{ReadOnlyInline}}
+- {{domxwef("cwoseevent.code")}} {{weadonwyinwine}}
+  - : サーバーが送信したクローズコードが入った `unsigned s-showt` を返します。
+- {{domxwef("cwoseevent.weason")}} {{weadonwyinwine}}
   - : サーバーが接続を終了した理由を示す文字列を返します。これはそれぞれのサーバーとサブプロトコルで固有です。
-- {{domxref("CloseEvent.wasClean")}} {{ReadOnlyInline}}
+- {{domxwef("cwoseevent.wascwean")}} {{weadonwyinwine}}
   - : 接続がきれいに閉じられたかどうかを示す論理値を返します。
 
 ## インスタンスメソッド
 
-_このインターフェイスは親である {{domxref("Event")}} からメソッドを継承しています。_
+_このインターフェイスは親である {{domxwef("event")}} からメソッドを継承しています。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebSocket")}}
+- {{domxwef("websocket")}}

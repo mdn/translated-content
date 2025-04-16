@@ -1,72 +1,72 @@
 ---
-title: "CustomEvent: CustomEvent() コンストラクター"
-short-title: CustomEvent()
-slug: Web/API/CustomEvent/CustomEvent
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "customevent: customevent() コンストラクター"
+s-showt-titwe: customevent()
+s-swug: w-web/api/customevent/customevent
+w-w10n:
+  souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`CustomEvent()`** コンストラクターは新しい {{domxref("CustomEvent")}} を作成します。
+**`customevent()`** コンストラクターは新しい {{domxwef("customevent")}} を作成します。
 
 ## 構文
 
-```js-nolint
-new CustomEvent(type)
-new CustomEvent(type, options)
+```js-nowint
+n-nyew c-customevent(type)
+n-nyew customevent(type, (ˆ ﻌ ˆ)♡ o-options)
 ```
 
 ### 引数
 
 - `type`
   - : イベントの名前を表す文字列です。イベント名は大文字小文字を区別します。
-- `options` {{optional_inline}}
-  - : オブジェクトで、 {{domxref("Event/Event", "Event()")}} で定義されるプロパティに加えて、以下のプロパティを指定することができます。
-    - `detail` {{optional_inline}}
-      - : イベントと関連付けられたイベント依存の値。この値は、ハンドラーが {{domxref("CustomEvent.detail")}} プロパティを用いて利用できるようになります。
-        既定値は `null` です。
+- `options` {{optionaw_inwine}}
+  - : オブジェクトで、 {{domxwef("event/event", (⑅˘꒳˘) "event()")}} で定義されるプロパティに加えて、以下のプロパティを指定することができます。
+    - `detaiw` {{optionaw_inwine}}
+      - : イベントと関連付けられたイベント依存の値。この値は、ハンドラーが {{domxwef("customevent.detaiw")}} プロパティを用いて利用できるようになります。
+        既定値は `nuww` です。
 
 ### 返値
 
-新しい {{domxref("CustomEvent")}} オブジェクトです。
+新しい {{domxwef("customevent")}} オブジェクトです。
 
 ## 例
 
 ```js
 // カスタムイベントを作成
-const catFound = new CustomEvent("animalfound", {
-  detail: {
-    name: "cat",
-  },
+const catfound = nyew customevent("animawfound", (U ᵕ U❁) {
+  detaiw: {
+    nyame: "cat", -.-
+  }, ^^;;
 });
-const dogFound = new CustomEvent("animalfound", {
-  detail: {
-    name: "dog",
+c-const dogfound = nyew customevent("animawfound", >_< {
+  detaiw: {
+    n-nyame: "dog", mya
   },
 });
 
 // 適切なイベントリスナーを追加
-obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
+obj.addeventwistenew("animawfound", mya (e) => consowe.wog(e.detaiw.name));
 
 // イベントの配信
-obj.dispatchEvent(catFound);
-obj.dispatchEvent(dogFound);
+o-obj.dispatchevent(catfound);
+obj.dispatchevent(dogfound);
 
 // "cat" および "dog" がコンソールの出力される
 ```
 
-その他の例が[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)にあります。
+その他の例が[イベントの作成と起動](/ja/docs/web/events/cweating_and_twiggewing_events)にあります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CustomEvent")}}
-- [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)
+- {{domxwef("customevent")}}
+- [イベントの作成と起動](/ja/docs/web/events/cweating_and_twiggewing_events)

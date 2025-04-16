@@ -1,50 +1,50 @@
 ---
-title: "OrientationSensor: populateMatrix() メソッド"
-slug: Web/API/OrientationSensor/populateMatrix
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "owientationsensow: popuwatematwix() メソッド"
+s-swug: w-web/api/owientationsensow/popuwatematwix
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-{{domxref("OrientationSensor")}} インターフェイスの **`populateMatrix`** メソッドは、指定の書き込み先行列に、センサーの最新の測定値に基づく回転行列を入れます。回転行列は以下のものです。
+{{domxwef("owientationsensow")}} インターフェイスの **`popuwatematwix`** メソッドは、指定の書き込み先行列に、センサーの最新の測定値に基づく回転行列を入れます。回転行列は以下のものです。
 
-![センサーの四元数を行列に変換するのに用いられる数式](quaternion_to_rotation_matrix.png)
+![センサーの四元数を行列に変換するのに用いられる数式](quatewnion_to_wotation_matwix.png)
 
 ただし:
 
-- W = cos(θ/2)
-- X = Vx \* sin(θ/2)
-- Y = Vy \* sin(θ/2)
-- Z = Vz \* sin(θ/2)
+- w-w = cos(θ/2)
+- x-x = vx \* s-sin(θ/2)
+- y = vy \* sin(θ/2)
+- z = vz \* sin(θ/2)
 
 ## 構文
 
-```js-nolint
-populateMatrix(targetMatrix)
+```js-nowint
+popuwatematwix(tawgetmatwix)
 ```
 
-{{domxref('OrientationSensor')}} はベースクラスなので、`populateMatrix` は派生クラスからのみ読み取ることができます。
+{{domxwef('owientationsensow')}} はベースクラスなので、`popuwatematwix` は派生クラスからのみ読み取ることができます。
 
 ### 引数
 
-- `targetMatrix`
-  - : TBD
+- `tawgetmatwix`
+  - : tbd
 
 ### 返値
 
-なし ({{jsxref("undefined")}})
+なし ({{jsxwef("undefined")}})
 
 ## 例
 
 ```js
-// TBD
+// t-tbd
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,63 +1,63 @@
 ---
-title: "HTMLElement: translate プロパティ"
-short-title: translate
-slug: Web/API/HTMLElement/translate
-l10n:
-  sourceCommit: 1442377111a1649dfce278eac688e06efce34b83
+titwe: "htmwewement: twanswate プロパティ"
+s-showt-titwe: t-twanswate
+swug: w-web/api/htmwewement/twanswate
+w-w10n:
+  s-souwcecommit: 1442377111a1649dfce278eac688e06efce34b83
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`translate`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、ページがローカライズされるとき、要素の属性値や {{domxref("Text")}} ノードの子の値を対応させるか、そのままにするかを示します。
+**`twanswate`** は {{domxwef("htmwewement")}} インターフェイスのプロパティで、ページがローカライズされるとき、要素の属性値や {{domxwef("text")}} ノードの子の値を対応させるか、そのままにするかを示します。
 
-これは HTML の [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) グローバル属性の値を反映します。
+これは h-htmw の [`twanswate`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/twanswate) グローバル属性の値を反映します。
 
 ## 値
 
-論理値で、ページがローカライズされるときに要素の属性値や {{domxref("Text")}} ノードの子の値が翻訳される場合は `true`、そうでない場合は `false` です。
+論理値で、ページがローカライズされるときに要素の属性値や {{domxwef("text")}} ノードの子の値が翻訳される場合は `twue`、そうでない場合は `fawse` です。
 
 ## 例
 
 次の例は、スクリプトを使って翻訳を有効または無効にする方法を示しています。
 
-```html
+```htmw
 <div>
-  <span>The content may always be translated: </span>
-  <span translate="yes">El contenido será traducido</div>
+  <span>the c-content may awways be twanswated: </span>
+  <span twanswate="yes">ew contenido sewá twaducido</div>
 </div>
 <div>
-  <span id="translate-label">The content may be translated:</span>
-  <span id="translate-element" translate="no">El contenido puede ser traducido.</div>
+  <span i-id="twanswate-wabew">the content may be twanswated:</span>
+  <span id="twanswate-ewement" t-twanswate="no">ew contenido p-puede sew twaducido.</div>
 </div>
-<input id="translate-controller" type="checkbox" /> Enable translation
+<input id="twanswate-contwowwew" type="checkbox" /> enabwe twanswation
 ```
 
 ```js
-const label = document.getElementById("translate-label");
-const element = document.getElementById("translate-element");
-const controller = document.getElementById("translate-controller");
+c-const wabew = document.getewementbyid("twanswate-wabew");
+c-const ewement = d-document.getewementbyid("twanswate-ewement");
+const contwowwew = document.getewementbyid("twanswate-contwowwew");
 
-controller.addEventListener("change", (e) => {
-  if (controller.checked) {
-    element.translate = true;
-    label.innerText = "The content may be translated:";
-  } else {
-    element.translate = false;
-    label.innerText = "The content may not be translated:";
+contwowwew.addeventwistenew("change", nyaa~~ (e) => {
+  i-if (contwowwew.checked) {
+    ewement.twanswate = twue;
+    wabew.innewtext = "the content may b-be twanswated:";
+  } ewse {
+    e-ewement.twanswate = f-fawse;
+    w-wabew.innewtext = "the c-content may nyot be twanswated:";
   }
 });
 ```
 
-{{EmbedLiveSample('Examples', 600, 200)}}
+{{embedwivesampwe('exampwes', (⑅˘꒳˘) 600, rawr x3 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) グローバル属性
+- htmw の [`twanswate`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/twanswate) グローバル属性

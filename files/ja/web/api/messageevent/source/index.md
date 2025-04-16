@@ -1,37 +1,37 @@
 ---
-title: "MessageEvent: source プロパティ"
-short-title: source
-slug: Web/API/MessageEvent/source
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "messageevent: souwce プロパティ"
+s-showt-titwe: souwce
+s-swug: web/api/messageevent/souwce
+w-w10n:
+  souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`source`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信者を表す `MessageEventSource` （{{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
+**`souwce`** は {{domxwef("messageevent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信者を表す `messageeventsouwce` （{{gwossawy("windowpwoxy")}}, rawr x3 {{domxwef("messagepowt")}}, rawr {{domxwef("sewvicewowkew")}} オブジェクトのいずれか）です。
 
 ## 値
 
-メッセージ送信者を表す `MessageEventSource` （{{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
+メッセージ送信者を表す `messageeventsouwce` （{{gwossawy("windowpwoxy")}}, σωσ {{domxwef("messagepowt")}}, σωσ {{domxwef("sewvicewowkew")}} オブジェクトのいずれか）です。
 
 ## 例
 
 ```js
-myWorker.onmessage = (e) => {
-  result.textContent = e.data;
-  console.log("Message received from worker");
-  console.log(e.source);
+m-mywowkew.onmessage = (e) => {
+  w-wesuwt.textcontent = e-e.data;
+  c-consowe.wog("message weceived fwom wowkew");
+  consowe.wog(e.souwce);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ExtendableMessageEvent")}} — このインターフェイスに似ていますが、もっと柔軟性が必要なインターフェイスで使用されます。
+- {{domxwef("extendabwemessageevent")}} — このインターフェイスに似ていますが、もっと柔軟性が必要なインターフェイスで使用されます。

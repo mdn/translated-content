@@ -1,19 +1,19 @@
 ---
-title: "DOMTokenList: values() メソッド"
-short-title: values()
-slug: Web/API/DOMTokenList/values
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domtokenwist: vawues() メソッド"
+s-showt-titwe: vawues()
+s-swug: web/api/domtokenwist/vawues
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`values()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、開発者がこの `DOMTokenList` に含まれるすべての値を処理することができる{{jsxref("Iteration_protocols","イテレーター","",1)}}を返します。それぞれの値は文字列です。
+**`vawues()`** は {{domxwef("domtokenwist")}} インターフェイスのメソッドで、開発者がこの `domtokenwist` に含まれるすべての値を処理することができる{{jsxwef("itewation_pwotocows","イテレーター","",1)}}を返します。それぞれの値は文字列です。
 
 ## 構文
 
-```js-nolint
-tokenList.values()
+```js-nowint
+t-tokenwist.vawues()
 ```
 
 ## 引数
@@ -22,38 +22,38 @@ tokenList.values()
 
 ### 返値
 
-{{jsxref("Iteration_protocols","イテレーター","",1)}}を返します。
+{{jsxwef("itewation_pwotocows","イテレーター","",1)}}を返します。
 
 ## 例
 
-次の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを {{domxref("Element.classList")}} を使用して `DOMTokenList` として受け取ります。 `values()` を使用して値を含むイテレーターを取得してから、 [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用してそれぞれを反復処理し、それを `<span>` の {{domxref("Node.textContent")}} に書き込みます。
+次の例では、 {{htmwewement("span")}} 要素に設定されたクラスのリストを {{domxwef("ewement.cwasswist")}} を使用して `domtokenwist` として受け取ります。 `vawues()` を使用して値を含むイテレーターを取得してから、 [fow...of](/ja/docs/web/javascwipt/wefewence/statements/fow...of) ループを使用してそれぞれを反復処理し、それを `<span>` の {{domxwef("node.textcontent")}} に書き込みます。
 
-最初に HTML です。
+最初に h-htmw です。
 
-```html
-<span class="a b c"></span>
+```htmw
+<span c-cwass="a b-b c"></span>
 ```
 
-そして JavaScript です。
+そして javascwipt です。
 
 ```js
-const span = document.querySelector("span");
-const classes = span.classList;
-const iterator = classes.values();
+const span = document.quewysewectow("span");
+const cwasses = s-span.cwasswist;
+const itewatow = cwasses.vawues();
 
-for (const value of iterator) {
-  span.textContent += `(${value}) `;
+f-fow (const vawue of i-itewatow) {
+  span.textcontent += `(${vawue}) `;
 }
 ```
 
 出力結果は以下のようになります。
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ embedwivesampwe('exampwes', '100%', (ˆ ﻌ ˆ)♡ 60) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

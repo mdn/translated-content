@@ -1,14 +1,14 @@
 ---
-title: "MediaQueryListEvent: media プロパティ"
-short-title: media
-slug: Web/API/MediaQueryListEvent/media
-l10n:
-  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
+titwe: "mediaquewywistevent: media プロパティ"
+s-showt-titwe: m-media
+swug: w-web/api/mediaquewywistevent/media
+w-w10n:
+  souwcecommit: c-c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`media`** は {{DOMxRef("MediaQueryListEvent")}} インターフェイスの読み取り専用プロパティで、シリアライズされたメディアクエリーを表す文字列です。
+**`media`** は {{domxwef("mediaquewywistevent")}} インターフェイスの読み取り専用プロパティで、シリアライズされたメディアクエリーを表す文字列です。
 
 ## 値
 
@@ -17,36 +17,36 @@ l10n:
 ## 例
 
 ```js
-const para = document.querySelector("p"); // This is the UI element where to display the text
-const mql = window.matchMedia("(max-width: 600px)");
+c-const pawa = d-document.quewysewectow("p"); // t-this is the ui ewement whewe to dispway the text
+const mqw = window.matchmedia("(max-width: 600px)");
 
-mql.addEventListener("change", (event) => {
+m-mqw.addeventwistenew("change", ( ͡o ω ͡o ) (event) => {
   if (event.matches) {
-    // The viewport is 600 pixels wide or less
-    para.textContent = "This is a narrow screen — less than 600px wide.";
-    document.body.style.backgroundColor = "red";
-  } else {
-    // The viewport is more than 600 pixels wide
-    para.textContent = "This is a wide screen — more than 600px wide.";
-    document.body.style.backgroundColor = "blue";
+    // the viewpowt i-is 600 pixews wide ow wess
+    p-pawa.textcontent = "this is a nyawwow scween — wess than 600px w-wide.";
+    document.body.stywe.backgwoundcowow = "wed";
+  } ewse {
+    // t-the v-viewpowt is mowe than 600 pixews wide
+    pawa.textcontent = "this is a wide scween — mowe than 600px w-wide.";
+    document.body.stywe.backgwoundcowow = "bwue";
   }
 
-  console.log(event.media);
+  consowe.wog(event.media);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{DOMxRef("window.matchMedia()")}}
-- {{DOMxRef("MediaQueryList")}}
-- {{DOMxRef("MediaQueryListEvent")}}
+- [メディアクエリー](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [プログラムによるメディアクエリーの評価](/ja/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("window.matchmedia()")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}

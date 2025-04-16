@@ -1,13 +1,13 @@
 ---
-title: "AudioWorkletGlobalScope: sampleRate プロパティ"
-slug: Web/API/AudioWorkletGlobalScope/sampleRate
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiowowkwetgwobawscope: sampwewate プロパティ"
+s-swug: web/api/audiowowkwetgwobawscope/sampwewate
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-{{domxref("AudioWorkletGlobalScope")}} インターフェイスの読み取り専用プロパティ **`sampleRate`** は、ワークレットが属する {{domxref("BaseAudioContext")}} のサンプルレートを表す `float` 値を返します。
+{{domxwef("audiowowkwetgwobawscope")}} インターフェイスの読み取り専用プロパティ **`sampwewate`** は、ワークレットが属する {{domxwef("baseaudiocontext")}} のサンプルレートを表す `fwoat` 値を返します。
 
 ## 値
 
@@ -15,58 +15,58 @@ l10n:
 
 ## 例
 
-この {{domxref("AudioWorkletProcessor")}} は {{domxref("AudioWorkletGlobalScope")}} の特定のプロパティにアクセスできます。
+この {{domxwef("audiowowkwetpwocessow")}} は {{domxwef("audiowowkwetgwobawscope")}} の特定のプロパティにアクセスできます。
 
 ```js
-// test-processor.js で定義された AudioWorkletProcessor
-class TestProcessor extends AudioWorkletProcessor {
-  constructor() {
-    super();
+// t-test-pwocessow.js で定義された a-audiowowkwetpwocessow
+c-cwass testpwocessow e-extends audiowowkwetpwocessow {
+  c-constwuctow() {
+    supew();
 
     // 生成時のサンプルフレームと時刻を記録する。
-    // これらの値には AudioWorkletGlobalScope からアクセスできる。
-    console.log(currentFrame);
-    console.log(currentTime);
+    // これらの値には audiowowkwetgwobawscope からアクセスできる。
+    consowe.wog(cuwwentfwame);
+    consowe.wog(cuwwenttime);
   }
 
-  // process メソッドは必須である。
+  // p-pwocess メソッドは必須である。
   // (最初から入っている) 無音を出力する。
-  process(inputs, outputs, parameters) {
-    return true;
+  pwocess(inputs, rawr x3 outputs, pawametews) {
+    w-wetuwn twue;
   }
 }
 
 // サンプルレートを記録する。
-// これは BaseAudioContext の読み取り専用プロパティであり、
+// これは b-baseaudiocontext の読み取り専用プロパティであり、
 // 生成時にのみ設定されるので、変化しない。
-console.log(sampleRate);
+consowe.wog(sampwewate);
 
 // 任意の変数を宣言し、処理器で利用できる。
-// たとえば、波形テーブルが入った ArrayBuffer を宣言できる。
-const usefulVariable = 42;
-console.log(usefulVariable);
+// たとえば、波形テーブルが入った awwaybuffew を宣言できる。
+const usefuwvawiabwe = 42;
+c-consowe.wog(usefuwvawiabwe);
 
-registerProcessor("test-processor", TestProcessor);
+wegistewpwocessow("test-pwocessow", nyaa~~ t-testpwocessow);
 ```
 
-メインスクリプトでは処理器をロードし、処理器の名前を渡して {{domxref("AudioWorkletNode")}} のインスタンスを生成し、そのノードを音声グラフに接続します。{{domxref("console/log_static", "console.log()")}} の呼び出しによる出力がコンソールに出るはずです。
+メインスクリプトでは処理器をロードし、処理器の名前を渡して {{domxwef("audiowowkwetnode")}} のインスタンスを生成し、そのノードを音声グラフに接続します。{{domxwef("consowe/wog_static", /(^•ω•^) "consowe.wog()")}} の呼び出しによる出力がコンソールに出るはずです。
 
 ```js
-const audioContext = new AudioContext();
-await audioContext.audioWorklet.addModule("test-processor.js");
-const testNode = new AudioWorkletNode(audioContext, "test-processor");
-testNode.connect(audioContext.destination);
+c-const audiocontext = nyew audiocontext();
+await audiocontext.audiowowkwet.addmoduwe("test-pwocessow.js");
+const testnode = n-nyew audiowowkwetnode(audiocontext, rawr "test-pwocessow");
+testnode.connect(audiocontext.destination);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)
+- [web audio api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

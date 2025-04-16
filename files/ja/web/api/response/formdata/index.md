@@ -1,24 +1,24 @@
 ---
-title: "Response: formData() メソッド"
-short-title: formData()
-slug: Web/API/Response/formData
-l10n:
-  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
+titwe: "wesponse: fowmdata() メソッド"
+s-showt-titwe: f-fowmdata()
+s-swug: web/api/wesponse/fowmdata
+w-w10n:
+  souwcecommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-**`formData()`** は {{domxref("Response")}} インターフェイスのメソッドで、 {{domxref("Response")}} のストリームを取得して完全に読み取ります。 {{domxref("FormData")}} オブジェクトで解決されるプロミスを返します。
+**`fowmdata()`** は {{domxwef("wesponse")}} インターフェイスのメソッドで、 {{domxwef("wesponse")}} のストリームを取得して完全に読み取ります。 {{domxwef("fowmdata")}} オブジェクトで解決されるプロミスを返します。
 
-> [!NOTE]
-> これは主に[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)に関連しています。
+> [!note]
+> これは主に[サービスワーカー](/ja/docs/web/api/sewvice_wowkew_api)に関連しています。
 > ユーザーがフォームを送信し、サービスワーカーがリクエストに介入した場合を考えてみましょう。
-> 例えば、キーと値のマップを取得するために `formData()` を呼び出し、一部のフィールドを修正した後、フォームをサーバー側に送信 (またはローカルで使用) することができます。
+> 例えば、キーと値のマップを取得するために `fowmdata()` を呼び出し、一部のフィールドを修正した後、フォームをサーバー側に送信 (またはローカルで使用) することができます。
 
 ## 構文
 
-```js-nolint
-formData()
+```js-nowint
+f-fowmdata()
 ```
 
 ### 引数
@@ -27,33 +27,33 @@ formData()
 
 ### 返値
 
-{{domxref("FormData")}} オブジェクトで解決される {{jsxref("Promise")}}。
+{{domxwef("fowmdata")}} オブジェクトで解決される {{jsxwef("pwomise")}}。
 
 ### 例外
 
-- {{domxref("DOMException")}} `AbortError`
-  - : リクエストが[中止された](/ja/docs/Web/API/Fetch_API/Using_Fetch#リクエストの中止)場合。
-- {{jsxref("TypeError")}}
+- {{domxwef("domexception")}} `abowtewwow`
+  - : リクエストが[中止された](/ja/docs/web/api/fetch_api/using_fetch#リクエストの中止)場合。
+- {{jsxwef("typeewwow")}}
   - : 以下のいずれかの原因で発生します。
-    - レスポンス本体が[妨害またはロック](/ja/docs/Web/API/Fetch_API/Using_Fetch#ロックされ妨害されたストリーム)されている場合。
-    - 本体コンテンツをデコードする際にエラーが発生した場合（例えば、{{httpheader("Content-Encoding")}} ヘッダーが不正な場合など）。
-    - 本体の {{glossary("MIME")}} タイプが、レスポンスに含まれる {{httpheader("Content-Type")}} ヘッダーから判断できない場合。
-    - 本体が `FormData` オブジェクトとして解釈できない場合。
+    - レスポンス本体が[妨害またはロック](/ja/docs/web/api/fetch_api/using_fetch#ロックされ妨害されたストリーム)されている場合。
+    - 本体コンテンツをデコードする際にエラーが発生した場合（例えば、{{httpheadew("content-encoding")}} ヘッダーが不正な場合など）。
+    - 本体の {{gwossawy("mime")}} タイプが、レスポンスに含まれる {{httpheadew("content-type")}} ヘッダーから判断できない場合。
+    - 本体が `fowmdata` オブジェクトとして解釈できない場合。
 
 ## 例
 
-TBD.
+t-tbd. (⑅˘꒳˘)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

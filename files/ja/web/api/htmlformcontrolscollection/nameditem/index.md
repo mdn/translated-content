@@ -1,56 +1,56 @@
 ---
-title: "HTMLFormControlsCollection: namedItem() メソッド"
-slug: Web/API/HTMLFormControlsCollection/namedItem
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwfowmcontwowscowwection: nyameditem() メソッド"
+s-swug: web/api/htmwfowmcontwowscowwection/nameditem
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLFormControlsCollection.namedItem()`** メソッドは、集合内の {{domxref("RadioNodeList")}} または {{domxref("Element")}} の `name` または `id` が指定した名前と一致するノード、または一致するノードがない場合は `null` を返します。
+**`htmwfowmcontwowscowwection.nameditem()`** メソッドは、集合内の {{domxwef("wadionodewist")}} または {{domxwef("ewement")}} の `name` または `id` が指定した名前と一致するノード、または一致するノードがない場合は `nuww` を返します。
 
-このバージョンの `namedItem()` は {{domxref("HTMLCollection")}} から継承されたものを隠していることに注意してください。そのメソッドと同様、`collection["value"]` のように文字列で JavaScript の配列の括弧構文を使用すると、 `collection.namedItem("value")` と同等になります。
+このバージョンの `nameditem()` は {{domxwef("htmwcowwection")}} から継承されたものを隠していることに注意してください。そのメソッドと同様、`cowwection["vawue"]` のように文字列で j-javascwipt の配列の括弧構文を使用すると、 `cowwection.nameditem("vawue")` と同等になります。
 
 ## 構文
 
-```js-nolint
-namedItem(str)
-// or collection[str]
+```js-nowint
+n-nyameditem(stw)
+// o-ow cowwection[stw]
 ```
 
 ### 引数
 
-- `str` は文字列です。
+- `stw` は文字列です。
 
 ### 返値
 
-- {{domxref("RadioNodeList")}}、{{domxref("Element")}}、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の何れかです。
+- {{domxwef("wadionodewist")}}、{{domxwef("ewement")}}、[`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) の何れかです。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<form>
-  <input id="my-form-control" type="textarea" />
-</form>
+```htmw
+<fowm>
+  <input id="my-fowm-contwow" type="textawea" />
+</fowm>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-// #my-form-control を表す HTMLInputElement を返す
-elem1 = document.forms[0]["my-form-control"];
+// #my-fowm-contwow を表す htmwinputewement を返す
+e-ewem1 = document.fowms[0]["my-fowm-contwow"];
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 置き換えている {{domxref("HTMLCollection.namedItem")}}
+- 置き換えている {{domxwef("htmwcowwection.nameditem")}}

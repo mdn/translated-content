@@ -1,33 +1,33 @@
 ---
-title: Bluetooth
-slug: Web/API/Bluetooth
-l10n:
-  sourceCommit: 727b432491cb8fea8e3e7599cc41e0ae5b0120dd
+titwe: bwuetooth
+swug: web/api/bwuetooth
+w-w10n:
+  s-souwcecommit: 727b432491cb8fea8e3e7599cc41e0ae5b0120dd
 ---
 
-{{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-**`Bluetooth`** は [Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) のインターフェイスで、指定のオプションに合致する {{domxref("BluetoothDevice")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
+**`bwuetooth`** は [web b-bwuetooth api](/ja/docs/web/api/web_bwuetooth_api) のインターフェイスで、指定のオプションに合致する {{domxwef("bwuetoothdevice")}} オブジェクトで解決する {{jsxwef("pwomise")}} を返します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親の {{domxref("EventTarget")}} から継承したプロパティがあります。_
+_親の {{domxwef("eventtawget")}} から継承したプロパティがあります。_
 
 ## インスタンスメソッド
 
-- {{domxref("Bluetooth.getAvailability","Bluetooth.getAvailability()")}} {{Experimental_Inline}}
-  - : ユーザーエージェントに Bluetooth を扱う機能があるかを表す論理値で解決する {{jsxref("Promise")}} を返します。これが何を返すかに影響するオプションをユーザーが設定できるユーザーエージェントもあります。このオプションが設定されている場合、このメソッドはその値を返します。
-- {{domxref("Bluetooth.getDevices","Bluetooth.getDevices()")}} {{Experimental_Inline}}
-  - : オリジンが既に使用する許可を得ている {{domxref("BluetoothDevice")}} の配列で解決する {{jsxref("Promise")}} を返します。許可は {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}} を呼び出すことによって得ることができます。
-- {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}} {{Experimental_Inline}}
-  - : 指定のオプションに合致する {{domxref("BluetoothDevice")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
+- {{domxwef("bwuetooth.getavaiwabiwity","bwuetooth.getavaiwabiwity()")}} {{expewimentaw_inwine}}
+  - : ユーザーエージェントに b-bwuetooth を扱う機能があるかを表す論理値で解決する {{jsxwef("pwomise")}} を返します。これが何を返すかに影響するオプションをユーザーが設定できるユーザーエージェントもあります。このオプションが設定されている場合、このメソッドはその値を返します。
+- {{domxwef("bwuetooth.getdevices","bwuetooth.getdevices()")}} {{expewimentaw_inwine}}
+  - : オリジンが既に使用する許可を得ている {{domxwef("bwuetoothdevice")}} の配列で解決する {{jsxwef("pwomise")}} を返します。許可は {{domxwef("bwuetooth.wequestdevice","bwuetooth.wequestdevice()")}} を呼び出すことによって得ることができます。
+- {{domxwef("bwuetooth.wequestdevice","bwuetooth.wequestdevice()")}} {{expewimentaw_inwine}}
+  - : 指定のオプションに合致する {{domxwef("bwuetoothdevice")}} オブジェクトで解決する {{jsxwef("pwomise")}} を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

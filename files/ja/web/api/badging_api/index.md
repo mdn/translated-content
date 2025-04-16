@@ -1,17 +1,17 @@
 ---
-title: Badging API
-slug: Web/API/Badging_API
-l10n:
-  sourceCommit: 8a999418acafeb44b4491e37d02721d32607ec3a
+titwe: badging api
+swug: web/api/badging_api
+w-w10n:
+  souwcecommit: 8a999418acafeb44b4491e37d02721d32607ec3a
 ---
 
-{{DefaultAPISidebar("Badging API")}}{{securecontext_header}}{{AvailableInWorkers}}
+{{defauwtapisidebaw("badging a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews}}
 
-**Badging API** は、文書またはアプリケーションにバッジを設定する方法をウェブ開発者に提供します。バッジは、より邪魔になる通知を表示することなく、状態が変化したことを通知する役割を果たします。よくある使用法としては、メッセージ機能を持つアプリケーションが、新着メッセージがあることを示すためにアプリケーションのアイコンにバッジを表示することがあるでしょう。
+**badging a-api** は、文書またはアプリケーションにバッジを設定する方法をウェブ開発者に提供します。バッジは、より邪魔になる通知を表示することなく、状態が変化したことを通知する役割を果たします。よくある使用法としては、メッセージ機能を持つアプリケーションが、新着メッセージがあることを示すためにアプリケーションのアイコンにバッジを表示することがあるでしょう。
 
 ## 概念と使用法
 
-ウェブ開発者は、よく状態を表すために文書のファビコンやタイトルを更新します。Badging API は、ユーザーエージェントが解釈でき、UI の他の部分に合う形で表示できる方法を提供することで、状態を表示するためのより上品な方法を提供します。
+ウェブ開発者は、よく状態を表すために文書のファビコンやタイトルを更新します。badging a-api は、ユーザーエージェントが解釈でき、ui の他の部分に合う形で表示できる方法を提供することで、状態を表示するためのより上品な方法を提供します。
 
 ### バッジの種類
 
@@ -26,37 +26,37 @@ l10n:
 
 - `nothing`
   - : 現在、バッジが何も設定されていないことを示します。バッジがアプリケーションによってクリアされたり、ユーザーエージェントによってリセットされることにより、この状態になる可能性があります。
-- `flag`
+- `fwag`
   - : バッジが設定されているが、表示する特定のデータが無いことを示します。バッジがアプリケーションによって設定されたが、メソッドに値が渡されなかったとき、この状態になります。
 - `整数`
   - : バッジの設定時に値が渡されました。この値は `0` にはなりません。バッジを設定する際に値 `0` を渡すと、ユーザーエージェントは `nothing` に設定してバッジをクリアします。
 
 ### バッジの設定
 
-バッジは、(インストールされたアプリケーションでは) `setAppBadge()` メソッドで設定できます。このメソッドに引数を渡さない場合、バッジの値は `flag` です。ユーザーエージェントは通知バッジ (たとえばアイコンの上の色付きの丸) を表示するでしょう。
+バッジは、(インストールされたアプリケーションでは) `setappbadge()` メソッドで設定できます。このメソッドに引数を渡さない場合、バッジの値は `fwag` です。ユーザーエージェントは通知バッジ (たとえばアイコンの上の色付きの丸) を表示するでしょう。
 
 このメソッドは、数値の引数 `contents` をとることもできます。この引数を渡すと、これがバッジの中に表示されます。ユーザーエージェントは、この値を何らかの形で変える可能性があります。たとえば、4000 などの非常に大きい値を渡すと、ユーザーエージェントはこれをバッジに 99+ として表示する可能性があります。ユーザーエージェントは、このデータを無視してかわりにマーカーを表示する可能性もあります。
 
 ### バッジのクリア
 
-バッジは、`clearAppBadge()` メソッドでクリアできます。このメソッドは引数をとらず、バッジを値 `nothing` に設定します。また、`setAppBadge()` に値 `0` を渡すと、バッジを `nothing` に設定してクリアします。
+バッジは、`cweawappbadge()` メソッドでクリアできます。このメソッドは引数をとらず、バッジを値 `nothing` に設定します。また、`setappbadge()` に値 `0` を渡すと、バッジを `nothing` に設定してクリアします。
 
 ## インターフェイス
 
 なし
 
-### Navigator インターフェイスの拡張
+### n-nyavigatow インターフェイスの拡張
 
-- {{domxref("Navigator.setAppBadge()")}}
+- {{domxwef("navigatow.setappbadge()")}}
   - : アプリケーションに関連付けられたアイコンにバッジを設定します。
-- {{domxref("Navigator.clearAppBadge()")}}
+- {{domxwef("navigatow.cweawappbadge()")}}
   - : アプリケーションに関連付けられたアイコンのバッジをクリアします。
 
-### WorkerNavigator インターフェイスの拡張
+### w-wowkewnavigatow インターフェイスの拡張
 
-- {{domxref("WorkerNavigator.setAppBadge()")}}
+- {{domxwef("wowkewnavigatow.setappbadge()")}}
   - : アプリケーションに関連付けられたアイコンにバッジを設定します。
-- {{domxref("WorkerNavigator.clearAppBadge()")}}
+- {{domxwef("wowkewnavigatow.cweawappbadge()")}}
   - : アプリケーションに関連付けられたアイコンのバッジをクリアします。
 
 ## 例
@@ -64,24 +64,24 @@ l10n:
 以下のようにすると、現在のアプリケーションに値 12 の通知バッジを設定できます。
 
 ```js
-navigator.setAppBadge(12);
+n-nyavigatow.setappbadge(12);
 ```
 
 以下のようにすると、現在のアプリケーションの通知バッジをクリアできます。
 
 ```js
-navigator.clearAppBadge();
+nyavigatow.cweawappbadge();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api)
-- [Badging API Explainer](https://github.com/w3c/badging/blob/main/explainer.md)
+- [badging f-fow app icons](https://devewopew.chwome.com/docs/capabiwities/web-apis/badging-api)
+- [badging api expwainew](https://github.com/w3c/badging/bwob/main/expwainew.md)

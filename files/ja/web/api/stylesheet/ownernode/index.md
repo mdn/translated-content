@@ -1,44 +1,44 @@
 ---
-title: StyleSheet.ownerNode
-slug: Web/API/StyleSheet/ownerNode
-l10n:
-  sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
+titwe: stywesheet.ownewnode
+swug: web/api/stywesheet/ownewnode
+w-w10n:
+  souwcecommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`ownerNode`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、このスタイルシートと文書内の関連付けを行うノードを返します。
+**`ownewnode`** は {{domxwef("stywesheet")}} インターフェイスのプロパティで、このスタイルシートと文書内の関連付けを行うノードを返します。
 
-これは通常、 HTML の [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) または [`<style>`](/ja/docs/Web/HTML/Reference/Elements/style) 要素ですが、 `<?xml-stylesheet ?>` の場合は[処理命令ノード](/ja/docs/Web/API/ProcessingInstruction)を返すこともあります。
+これは通常、 h-htmw の [`<wink>`](/ja/docs/web/htmw/wefewence/ewements/wink) または [`<stywe>`](/ja/docs/web/htmw/wefewence/ewements/stywe) 要素ですが、 `<?xmw-stywesheet ?>` の場合は[処理命令ノード](/ja/docs/web/api/pwocessinginstwuction)を返すこともあります。
 
 ## 値
 
-{{domxref("Node")}} オブジェクトです。
+{{domxwef("node")}} オブジェクトです。
 
 ## 例
 
-```html
-<html lang="en">
+```htmw
+<htmw wang="en">
   <head>
-    <link rel="stylesheet" href="example.css" />
+    <wink w-wew="stywesheet" h-hwef="exampwe.css" />
   </head>
   <body>
-    <button onclick="alert(document.styleSheets[0].ownerNode)">
-      Show example.css's ownerNode
+    <button o-oncwick="awewt(document.stywesheets[0].ownewnode)">
+      s-show e-exampwe.css's o-ownewnode
     </button>
   </body>
-</html>
-// Displays "object HTMLLinkElement"
+</htmw>
+// dispways "object htmwwinkewement"
 ```
 
 ## メモ
 
-[`@import`](/ja/docs/Web/CSS/@import) などを使用して、他のスタイルシートをインクルードするスタイルシートでは、このプロパティの値は `null` になります。
+[`@impowt`](/ja/docs/web/css/@impowt) などを使用して、他のスタイルシートをインクルードするスタイルシートでは、このプロパティの値は `nuww` になります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

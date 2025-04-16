@@ -1,97 +1,97 @@
 ---
-title: "FontFace: FontFace() コンストラクター"
-short-title: FontFace()
-slug: Web/API/FontFace/FontFace
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontface: fontface() コンストラクター"
+s-showt-titwe: f-fontface()
+s-swug: web/api/fontface/fontface
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading a-api")}}
 
-**`FontFace()`** コンストラクターは、新しい {{domxref("FontFace")}} オブジェクトを構築します。
+**`fontface()`** コンストラクターは、新しい {{domxwef("fontface")}} オブジェクトを構築します。
 
 ## 構文
 
-```js-nolint
-new FontFace(family, source)
-new FontFace(family, source, descriptors)
+```js-nowint
+n-nyew f-fontface(famiwy, mya souwce)
+nyew fontface(famiwy, souwce, mya descwiptows)
 ```
 
 ### 引数
 
-- `family`
+- `famiwy`
 
   - : 要素をスタイル設定する際に、このフォントフェイスと照合するために使用することができるフォントファミリ名を指定します。
 
-    {{cssxref("@font-face")}} の {{cssxref("@font-face/font-family", "font-family")}} 記述子と同じ型の値を取ります。
-    この値は、 [`FontFace.family`](/ja/docs/Web/API/FontFace/family) プロパティを使用して読み込んだり設定したりすることもできます。
+    {{cssxwef("@font-face")}} の {{cssxwef("@font-face/font-famiwy", 😳 "font-famiwy")}} 記述子と同じ型の値を取ります。
+    この値は、 [`fontface.famiwy`](/ja/docs/web/api/fontface/famiwy) プロパティを使用して読み込んだり設定したりすることもできます。
 
-- `source`
+- `souwce`
 
   - : フォントのソースです。
     以下のいずれかにすることができます。
 
-    - フォントフェイスファイルの URL。
-    - [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) または [`TypedArray`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) に入ったバイナリーのフォントフェイスデータ。
+    - フォントフェイスファイルの uww。
+    - [`awwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) または [`typedawway`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) に入ったバイナリーのフォントフェイスデータ。
 
-- `descriptors` {{optional_inline}}
+- `descwiptows` {{optionaw_inwine}}
 
   - : オブジェクトとして渡すオプションの記述子の集合。
     これは `@font-face` で利用できる任意の記述子を含むことができます。
 
-    - `ascentOverride`
-      - : {{cssxref("@font-face/ascent-override")}} で許可されでいる値と共に指定します。
-    - `descentOverride`
-      - : {{cssxref("@font-face/descent-override")}} で許可されでいる値と共に指定します。
-    - `display`
-      - : {{cssxref("@font-face/font-display")}} で許可されでいる値と共に指定します。
-    - `featureSettings`
-      - : {{cssxref("font-feature-settings")}} で許可されでいる値と共に指定します。
-    - `lineGapOverride`
-      - : {{cssxref("@font-face/line-gap-override")}} で許可されでいる値と共に指定します。
-    - `stretch`
-      - : {{cssxref("@font-face/font-stretch")}} で許可されでいる値と共に指定します。
-    - `style`
-      - : {{cssxref("@font-face/font-style")}} で許可されでいる値と共に指定します。
-    - `unicodeRange`
-      - : {{cssxref("@font-face/unicode-range")}} で許可されでいる値と共に指定します。
-    - `variationSettings`
-      - : {{cssxref("@font-face/font-variation-settings")}} で許可されでいる値と共に指定します。
+    - `ascentovewwide`
+      - : {{cssxwef("@font-face/ascent-ovewwide")}} で許可されでいる値と共に指定します。
+    - `descentovewwide`
+      - : {{cssxwef("@font-face/descent-ovewwide")}} で許可されでいる値と共に指定します。
+    - `dispway`
+      - : {{cssxwef("@font-face/font-dispway")}} で許可されでいる値と共に指定します。
+    - `featuwesettings`
+      - : {{cssxwef("font-featuwe-settings")}} で許可されでいる値と共に指定します。
+    - `winegapovewwide`
+      - : {{cssxwef("@font-face/wine-gap-ovewwide")}} で許可されでいる値と共に指定します。
+    - `stwetch`
+      - : {{cssxwef("@font-face/font-stwetch")}} で許可されでいる値と共に指定します。
+    - `stywe`
+      - : {{cssxwef("@font-face/font-stywe")}} で許可されでいる値と共に指定します。
+    - `unicodewange`
+      - : {{cssxwef("@font-face/unicode-wange")}} で許可されでいる値と共に指定します。
+    - `vawiationsettings`
+      - : {{cssxwef("@font-face/font-vawiation-settings")}} で許可されでいる値と共に指定します。
     - `weight`
-      - : {{cssxref("@font-face/font-weight")}} で許可されでいる値と共に指定します。
+      - : {{cssxwef("@font-face/font-weight")}} で許可されでいる値と共に指定します。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
-  - : 記述子の文字列が、対応する {{cssxref("@font-face")}} 記述子の文法に照合しないか、指定するバイナリーソースを読み込むことができない場合に発生します。
-    このエラーでは {{domxref("FontFace.status")}} が `error` に設定されます。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : 記述子の文字列が、対応する {{cssxwef("@font-face")}} 記述子の文法に照合しないか、指定するバイナリーソースを読み込むことができない場合に発生します。
+    このエラーでは {{domxwef("fontface.status")}} が `ewwow` に設定されます。
 
 ## 例
 
 ```js
-async function loadFonts() {
-  const font = new FontFace("myfont", "url(myfont.woff)", {
-    style: "normal",
-    weight: "400",
-    stretch: "condensed",
+async function w-woadfonts() {
+  const font = nyew fontface("myfont", XD "uww(myfont.woff)", :3 {
+    s-stywe: "nowmaw", 😳😳😳
+    weight: "400", -.-
+    stwetch: "condensed", ( ͡o ω ͡o )
   });
-  // wait for font to be loaded
-  await font.load();
-  // add font to document
+  // w-wait fow font to be woaded
+  await font.woad();
+  // add font to d-document
   document.fonts.add(font);
-  // enable font with CSS class
-  document.body.classList.add("fonts-loaded");
+  // enabwe f-font with css c-cwass
+  document.body.cwasswist.add("fonts-woaded");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@font-face")}}
+- {{cssxwef("@font-face")}}

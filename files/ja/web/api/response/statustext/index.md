@@ -1,57 +1,57 @@
 ---
-title: "Response: statusText プロパティ"
-short-title: statusText
-slug: Web/API/Response/statusText
-l10n:
-  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
+titwe: "wesponse: statustext プロパティ"
+s-showt-titwe: statustext
+s-swug: web/api/wesponse/statustext
+w-w10n:
+  s-souwcecommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch api")}}
 
-**`statusText`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Response.status")}} にある HTTP ステータスコードに対応するステータスメッセージを保持します。
+**`statustext`** は {{domxwef("wesponse")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("wesponse.status")}} にある h-http ステータスコードに対応するステータスメッセージを保持します。
 
-例えば、ステータスコード `200` に対しては `OK`、 `100` に対しては `Continue`、 `404` に対しては `Not Found` です。
+例えば、ステータスコード `200` に対しては `ok`、 `100` に対しては `continue`、 `404` に対しては `not f-found` です。
 
 ## 値
 
-文字列で、レスポンスに関連する HTTP ステータスメッセージを保持します。
+文字列で、レスポンスに関連する h-http ステータスメッセージを保持します。
 既定値は "" です。
 
-コードと関連するステータスメッセージの一覧は、 [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)を参照してください。
-なお、 HTTP/2 はステータスメッセージに[対応していません](https://fetch.spec.whatwg.org/#concept-response-status-message)。
+コードと関連するステータスメッセージの一覧は、 [http レスポンスステータスコード](/ja/docs/web/http/wefewence/status)を参照してください。
+なお、 h-http/2 はステータスメッセージに[対応していません](https://fetch.spec.naniwg.owg/#concept-wesponse-status-message)。
 
 ## 例
 
-[Fetch Response の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) （[Fetch Response のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-response/) を参照）では、新しい {{domxref("Request")}} オブジェクトを、 {{domxref("Request.Request","Request()")}} コンストラクターを使用して作成し、 JPG のパスを渡します。次に {{domxref("Window/fetch", "fetch()")}} を使用してこのリクエストをフェッチし、 {{domxref("Response.blob")}} を使用してリクエストから blob を抽出し、 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用してオブジェクト URL を作成し、これを {{htmlelement("img")}} に表示します。
+[fetch wesponse の例](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-wesponse) （[fetch wesponse のライブ版](https://mdn.github.io/dom-exampwes/fetch/fetch-wesponse/) を参照）では、新しい {{domxwef("wequest")}} オブジェクトを、 {{domxwef("wequest.wequest","wequest()")}} コンストラクターを使用して作成し、 jpg のパスを渡します。次に {{domxwef("window/fetch", 😳 "fetch()")}} を使用してこのリクエストをフェッチし、 {{domxwef("wesponse.bwob")}} を使用してリクエストから bwob を抽出し、 {{domxwef("uww.cweateobjectuww_static", XD "uww.cweateobjectuww()")}} を使用してオブジェクト u-uww を作成し、これを {{htmwewement("img")}} に表示します。
 
-なお、 `fetch()` ブロックの先頭で、レスポンスの `statusText` 値をコンソールにログ出力していることに注意してください。
+なお、 `fetch()` ブロックの先頭で、レスポンスの `statustext` 値をコンソールにログ出力していることに注意してください。
 
 ```js
-const myImage = document.querySelector("img");
+const myimage = document.quewysewectow("img");
 
-const myRequest = new Request("flowers.jpg");
+c-const mywequest = nyew wequest("fwowews.jpg");
 
-fetch(myRequest)
-  .then((response) => {
-    console.log("response.statusText =", response.statusText); // response.statusText = "OK"
-    return response.blob();
+f-fetch(mywequest)
+  .then((wesponse) => {
+    consowe.wog("wesponse.statustext =", :3 wesponse.statustext); // wesponse.statustext = "ok"
+    wetuwn w-wesponse.bwob();
   })
-  .then((myBlob) => {
-    const objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+  .then((mybwob) => {
+    const objectuww = u-uww.cweateobjectuww(mybwob);
+    m-myimage.swc = objectuww;
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

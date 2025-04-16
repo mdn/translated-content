@@ -1,37 +1,37 @@
 ---
-title: StylePropertyMap
-slug: Web/API/StylePropertyMap
-l10n:
-  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
+titwe: stywepwopewtymap
+swug: w-web/api/stywepwopewtymap
+w-w10n:
+  s-souwcecommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css t-typed o-object modew api")}}{{seecompattabwe}}
 
-**`StylePropertyMap`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Object_Model#css_typed_object_model_experimental) のインターフェイスで、{{DOMxRef("CSSStyleDeclaration")}} に代わる CSS 宣言ブロックの表現を提供するものです。
+**`stywepwopewtymap`** は [css 型付きオブジェクトモデル api](/ja/docs/web/api/css_object_modew#css_typed_object_modew_expewimentaw) のインターフェイスで、{{domxwef("cssstywedecwawation")}} に代わる c-css 宣言ブロックの表現を提供するものです。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親である {{DOMxRef("StylePropertyMapReadOnly")}} からプロパティを継承しています。_
+_親である {{domxwef("stywepwopewtymapweadonwy")}} からプロパティを継承しています。_
 
 ## インスタンスメソッド
 
-_親である {{DOMxRef("StylePropertyMapReadOnly")}} からメソッドを継承しています。_
+_親である {{domxwef("stywepwopewtymapweadonwy")}} からメソッドを継承しています。_
 
-- {{DOMxRef("StylePropertyMap.append()")}} {{Experimental_Inline}}
-  - : 指定されたプロパティと値を持つ新しい CSS 宣言を `StylePropertyMap` に追加します。
-- {{DOMxRef("StylePropertyMap.clear()")}} {{Experimental_Inline}}
-  - : `StylePropertyMap` 内のすべての宣言を削除します。
-- {{DOMxRef("StylePropertyMap.delete()")}} {{Experimental_Inline}}
-  - : 指定されたプロパティを持つ CSS 宣言を削除します。
-- {{DOMxRef("StylePropertyMap.set()")}} {{Experimental_Inline}}
-  - : 指定されたプロパティを持つ CSS 宣言を変更します。
+- {{domxwef("stywepwopewtymap.append()")}} {{expewimentaw_inwine}}
+  - : 指定されたプロパティと値を持つ新しい c-css 宣言を `stywepwopewtymap` に追加します。
+- {{domxwef("stywepwopewtymap.cweaw()")}} {{expewimentaw_inwine}}
+  - : `stywepwopewtymap` 内のすべての宣言を削除します。
+- {{domxwef("stywepwopewtymap.dewete()")}} {{expewimentaw_inwine}}
+  - : 指定されたプロパティを持つ c-css 宣言を削除します。
+- {{domxwef("stywepwopewtymap.set()")}} {{expewimentaw_inwine}}
+  - : 指定されたプロパティを持つ css 宣言を変更します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

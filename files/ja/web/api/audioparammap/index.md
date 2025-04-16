@@ -1,34 +1,34 @@
 ---
-title: AudioParamMap
-slug: Web/API/AudioParamMap
-l10n:
-  sourceCommit: bca8d1ab2bc4f5a1ef6b39c454b0229539178e98
+titwe: audiopawammap
+swug: web/api/audiopawammap
+w-w10n:
+  souwcecommit: b-bca8d1ab2bc4f5a1ef6b39c454b0229539178e98
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-ウェブオーディオ API の **`AudioParamMap`** インターフェイスは、複数の音声パラメーターのセットを表します。それぞれの音声パラメーターは、パラメーターを識別する文字列から値を表す {{domxref("AudioParam")}} オブジェクトへのマップとして表されます。
+ウェブオーディオ a-api の **`audiopawammap`** インターフェイスは、複数の音声パラメーターのセットを表します。それぞれの音声パラメーターは、パラメーターを識別する文字列から値を表す {{domxwef("audiopawam")}} オブジェクトへのマップとして表されます。
 
 ## インスタンスプロパティ
 
-`AudioParamMap` オブジェクトは、{{jsxref("Map")}} のようにアクセスできます。それぞれのパラメーターは名前の文字列によって識別され、そのパラメーターの値を持つ `AudioParam` にマップされます。加えて、以下のプロパティが利用可能です。
+`audiopawammap` オブジェクトは、{{jsxwef("map")}} のようにアクセスできます。それぞれのパラメーターは名前の文字列によって識別され、そのパラメーターの値を持つ `audiopawam` にマップされます。加えて、以下のプロパティが利用可能です。
 
-- {{domxref("AudioParamMap.size", "size")}}
+- {{domxwef("audiopawammap.size", 🥺 "size")}}
   - : ?
 
 ## インスタンスメソッド
 
-- {{domxref("AudioParamMap.entries", "entries()")}}
+- {{domxwef("audiopawammap.entwies", òωó "entwies()")}}
   - : ?
-- {{domxref("AudioParamMap.forEach", "forEach()")}}
+- {{domxwef("audiopawammap.foweach", "foweach()")}}
   - : ?
-- {{domxref("AudioParamMap.has", "has()")}}
+- {{domxwef("audiopawammap.has", o.O "has()")}}
   - : ?
-- {{domxref("AudioParamMap.keys", "keys()")}}
+- {{domxwef("audiopawammap.keys", (U ᵕ U❁) "keys()")}}
   - : ?
-- {{domxref("AudioParamMap.values", "values()")}}
+- {{domxwef("audiopawammap.vawues", (⑅˘꒳˘) "vawues()")}}
   - : ?
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

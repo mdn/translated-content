@@ -1,42 +1,42 @@
 ---
-title: "MessageEvent: ports プロパティ"
-short-title: ports
-slug: Web/API/MessageEvent/ports
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "messageevent: powts プロパティ"
+s-showt-titwe: powts
+s-swug: web/api/messageevent/powts
+w-w10n:
+  souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`ports`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージが（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、適切な場合に）送信されるチャネルに関連するポートを表す {{domxref("MessagePort")}} オブジェクトの配列です。
+**`powts`** は {{domxwef("messageevent")}} インターフェイスの読み取り専用プロパティで、メッセージが（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、適切な場合に）送信されるチャネルに関連するポートを表す {{domxwef("messagepowt")}} オブジェクトの配列です。
 
 ## 値
 
-{{domxref("MessagePort")}} オブジェクトの配列です。
+{{domxwef("messagepowt")}} オブジェクトの配列です。
 
 ## 例
 
 ```js
-onconnect = (e) => {
-  const port = e.ports[0];
+o-onconnect = (e) => {
+  c-const p-powt = e.powts[0];
 
-  port.addEventListener("message", (e) => {
-    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-    port.postMessage(workerResult);
+  p-powt.addeventwistenew("message", σωσ (e) => {
+    const wowkewwesuwt = `wesuwt: ${e.data[0] * e.data[1]}`;
+    powt.postmessage(wowkewwesuwt);
   });
 
-  port.start(); // addEventListener を使用した場合は必要。 onmessage セッターからは暗黙に呼び出されます。
+  powt.stawt(); // a-addeventwistenew を使用した場合は必要。 onmessage セッターからは暗黙に呼び出されます。
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ExtendableMessageEvent")}} — このインターフェイスに似ていますが、もっと柔軟性が必要なインターフェイスで使用されます。
+- {{domxwef("extendabwemessageevent")}} — このインターフェイスに似ていますが、もっと柔軟性が必要なインターフェイスで使用されます。

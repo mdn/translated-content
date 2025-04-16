@@ -1,92 +1,92 @@
 ---
-title: SVGAnimatedLengthList
-slug: Web/API/SVGAnimatedLengthList
-l10n:
-  sourceCommit: 491fc99b39489d35811cfcb95912838abc33c390
+titwe: svganimatedwengthwist
+swug: web/api/svganimatedwengthwist
+w-w10n:
+  souwcecommit: 491fc99b39489d35811cfcb95912838abc33c390
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-## SVG のアニメーション長さリストインターフェイス
+## s-svg のアニメーション長さリストインターフェイス
 
-`SVGAnimatedLengthList` インターフェイスは基本的な {{ domxref("SVGLengthList") }} 型のアニメーションする属性に使用されます。
+`svganimatedwengthwist` インターフェイスは基本的な {{ d-domxwef("svgwengthwist") }} 型のアニメーションする属性に使用されます。
 
 ### インターフェイス概要
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="row">実装しているもの</th>
+    <tw>
+      <th s-scope="wow">実装しているもの</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">メソッド</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">メソッド</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">プロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">プロパティ</th>
       <td>
-        <ul>
-          <li>
-            読み取り専用の {{ domxref("SVGLengthList") }}
-            <code>baseVal</code>
-          </li>
-          <li>
-            読み取り専用の {{ domxref("SVGLengthList") }}
-            <code>animVal</code>
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            読み取り専用の {{ d-domxwef("svgwengthwist") }}
+            <code>basevaw</code>
+          </wi>
+          <wi>
+            読み取り専用の {{ domxwef("svgwengthwist") }}
+            <code>animvaw</code>
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">正規ドキュメント</th>
+    </tw>
+    <tw>
+      <th scope="wow">正規ドキュメント</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedLengthList"
-          >SVG 1.1 (2nd Edition)</a
+          hwef="https://www.w3.owg/tw/svg11/types.htmw#intewfacesvganimatedwengthwist"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスプロパティ
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>名前</th>
       <th>型</th>
       <th>解説</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedLengthList.baseVal", "baseVal")}}</code></td>
-      <td>{{ domxref("SVGLengthList") }}</td>
+    <tw>
+      <td><code>{{domxwef("svganimatedwengthwist.basevaw", >_< "basevaw")}}</code></td>
+      <td>{{ domxwef("svgwengthwist") }}</td>
       <td>
         アニメーションを適用する前の指定された属性の基底値を表します。
       </td>
-    </tr>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedLengthList.animVal", "animVal")}}</code></td>
-      <td>{{ domxref("SVGLengthList") }}</td>
+    </tw>
+    <tw>
+      <td><code>{{domxwef("svganimatedwengthwist.animvaw", :3 "animvaw")}}</code></td>
+      <td>{{ d-domxwef("svgwengthwist") }}</td>
       <td>
-        読み取り専用の {{ domxref("SVGLengthList") }} で、その属性の現在のアニメーション値を表します。
-        その属性が現在アニメーションしていない場合、 {{ domxref("SVGLengthList") }} で <code>baseVal</code> と同じ値になります。 <code>animVal</code> が参照するオブジェクトは、属性がアニメーションしていない場合でも、 <code>baseVal</code> が参照するオブジェクトとは常に異なります。
+        読み取り専用の {{ domxwef("svgwengthwist") }} で、その属性の現在のアニメーション値を表します。
+        その属性が現在アニメーションしていない場合、 {{ domxwef("svgwengthwist") }} で <code>basevaw</code> と同じ値になります。 <code>animvaw</code> が参照するオブジェクトは、属性がアニメーションしていない場合でも、 <code>basevaw</code> が参照するオブジェクトとは常に異なります。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスメソッド
 
-_`SVGAnimatedLengthList` インターフェイスは固有のメソッドを提供していません。_
+_`svganimatedwengthwist` インターフェイスは固有のメソッドを提供していません。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

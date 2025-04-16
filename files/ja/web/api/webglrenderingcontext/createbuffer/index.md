@@ -1,19 +1,19 @@
 ---
-title: "WebGLRenderingContext: createBuffer() メソッド"
-short-title: createBuffer()
-slug: Web/API/WebGLRenderingContext/createBuffer
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "webgwwendewingcontext: cweatebuffew() メソッド"
+showt-titwe: c-cweatebuffew()
+s-swug: w-web/api/webgwwendewingcontext/cweatebuffew
+w-w10n:
+  s-souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.createBuffer()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッド　で、頂点や色といったデータを格納する {{domxref("WebGLBuffer")}} を作成、初期化します。
+**`webgwwendewingcontext.cweatebuffew()`** は [webgw a-api](/ja/docs/web/api/webgw_api) のメソッド　で、頂点や色といったデータを格納する {{domxwef("webgwbuffew")}} を作成、初期化します。
 
 ## 構文
 
-```js-nolint
-createBuffer()
+```js-nowint
+c-cweatebuffew()
 ```
 
 ### 引数
@@ -22,29 +22,29 @@ createBuffer()
 
 ### 返値
 
-頂点や色といったデータを格納する {{domxref("WebGLBuffer")}} です。
+頂点や色といったデータを格納する {{domxwef("webgwbuffew")}} です。
 
 ## 例
 
 ### バッファーの作成
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const buffer = gl.createBuffer();
+const canvas = document.getewementbyid("canvas");
+const gw = canvas.getcontext("webgw");
+c-const buffew = gw.cweatebuffew();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-- 他のバッファー : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
+- 他のバッファー : {{domxwef("webgwfwamebuffew")}}, σωσ {{domxwef("webgwwendewbuffew")}}

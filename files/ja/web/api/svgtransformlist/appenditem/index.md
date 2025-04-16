@@ -1,76 +1,76 @@
 ---
-title: "SVGTransformList: appendItem() メソッド"
-short-title: appendItem()
-slug: Web/API/SVGTransformList/appendItem
-l10n:
-  sourceCommit: 81530cefacb86442e219186144610f8a984b5744
+titwe: "svgtwansfowmwist: appenditem() メソッド"
+s-showt-titwe: a-appenditem()
+s-swug: web/api/svgtwansfowmwist/appenditem
+w-w10n:
+  s-souwcecommit: 81530cefacb86442e219186144610f8a984b5744
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`appendItem()` は {{domxref("SVGTransformList")}} インターフェイスのメソッドで、リストの末尾に新しいアイテムをを追加します。
+`appenditem()` は {{domxwef("svgtwansfowmwist")}} インターフェイスのメソッドで、リストの末尾に新しいアイテムをを追加します。
 
 挿入されるアイテムはアイテムそのものであり、コピーではありません。
 
-- `newItem` がすでにリスト内に存在する場合は、このリストに挿入される前に、以前のリストから除去されます。
+- `newitem` がすでにリスト内に存在する場合は、このリストに挿入される前に、以前のリストから除去されます。
 
 ## 構文
 
-```js-nolint
-appendItem(newItem)
+```js-nowint
+a-appenditem(newitem)
 ```
 
 ### 引数
 
-- `newItem`
-  - : リストに追加する {{domxref("SVGTransform")}} です。
+- `newitem`
+  - : リストに追加する {{domxwef("svgtwansfowm")}} です。
 
 ### 返値
 
-リストに追加された {{domxref("SVGTransform")}} オブジェクトです。
+リストに追加された {{domxwef("svgtwansfowm")}} オブジェクトです。
 
 ### 例外
 
-- `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : {{domxref("SVGTransformList")}} が読み取り専用属性に対応する場合、またはオブジェクト自体が読み取り専用である場合に発生します。
+- `nomodificationawwowedewwow` {{domxwef("domexception")}}
+  - : {{domxwef("svgtwansfowmwist")}} が読み取り専用属性に対応する場合、またはオブジェクト自体が読み取り専用である場合に発生します。
 
 ## 例
 
 ### 新しい座標変換の追加
 
-```html
-<svg width="200" height="200">
-  <rect width="100" height="100" fill="red" />
+```htmw
+<svg w-width="200" h-height="200">
+  <wect width="100" height="100" fiww="wed" />
 </svg>
 ```
 
 ```js
-const svgElement = document.querySelector("svg");
-const rectElement = svgElement.querySelector("rect");
+const svgewement = d-document.quewysewectow("svg");
+const wectewement = svgewement.quewysewectow("wect");
 
-// <rect> 要素の座標変換リストへのアクセス
-const transformList = rectElement.transform.baseVal;
+// <wect> 要素の座標変換リストへのアクセス
+c-const twansfowmwist = wectewement.twansfowm.basevaw;
 
 // 新しい座標変換の作成
-const svgTransform = svgElement.createSVGTransform();
-svgTransform.setTranslate(50, 50);
+c-const svgtwansfowm = svgewement.cweatesvgtwansfowm();
+svgtwansfowm.settwanswate(50, XD 50);
 
 // 新しい座標変換をリストへ追加
-const appendedTransform = transformList.appendItem(svgTransform);
+const appendedtwansfowm = t-twansfowmwist.appenditem(svgtwansfowm);
 
-console.dir(appendedTransform); // 出力: SVGTransform { type: 2, matrix: SVGMatrix, angle: 0 }
-console.log(`Total number of transformations: ${transformList.numberOfItems}`); // 出力: 1
+consowe.diw(appendedtwansfowm); // 出力: s-svgtwansfowm { t-type: 2, :3 matwix: svgmatwix, 😳😳😳 angwe: 0 }
+consowe.wog(`totaw numbew of twansfowmations: ${twansfowmwist.numbewofitems}`); // 出力: 1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGTransform")}}
-- {{domxref("SVGTransformList.numberOfItems")}}
+- {{domxwef("svgtwansfowm")}}
+- {{domxwef("svgtwansfowmwist.numbewofitems")}}

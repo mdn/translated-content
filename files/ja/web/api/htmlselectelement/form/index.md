@@ -1,52 +1,52 @@
 ---
-title: "HTMLSelectElement: form プロパティ"
-short-title: form
-slug: Web/API/HTMLSelectElement/form
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwsewectewement: fowm プロパティ"
+s-showt-titwe: f-fowm
+swug: web/api/htmwsewectewement/fowm
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`HTMLSelectElement.form`** は読み取り専用のプロパティで、この要素が関連付けられているフォームを表す {{domxref("HTMLFormElement")}} を返します。この要素が {{HTMLElement("form")}} 要素に関連付けられていなかった場合は、`null` を返します。
+**`htmwsewectewement.fowm`** は読み取り専用のプロパティで、この要素が関連付けられているフォームを表す {{domxwef("htmwfowmewement")}} を返します。この要素が {{htmwewement("fowm")}} 要素に関連付けられていなかった場合は、`nuww` を返します。
 
 ## 値
 
-{{domxref("HTMLFormElement")}} です。
+{{domxwef("htmwfowmewement")}} です。
 
 ## 例
 
-```html
-<form id="pet-form">
-  <label for="pet-select">ペットを選択してください</label>
-  <select name="pets" id="pet-select">
-    <option value="dog">犬</option>
-    <option value="cat">猫</option>
-    <option value="parrot">オウム</option>
-  </select>
+```htmw
+<fowm i-id="pet-fowm">
+  <wabew f-fow="pet-sewect">ペットを選択してください</wabew>
+  <sewect n-nyame="pets" id="pet-sewect">
+    <option vawue="dog">犬</option>
+    <option vawue="cat">猫</option>
+    <option vawue="pawwot">オウム</option>
+  </sewect>
 
-  <button type="submit">送信</button>
-</form>
+  <button t-type="submit">送信</button>
+</fowm>
 
-<label for="lunch-select">ランチを選んでください</label>
-<select name="lunch" id="lunch-select">
-  <option value="salad">サラダ</option>
-  <option value="sandwich">サンドウィッチ</option>
-</select>
+<wabew fow="wunch-sewect">ランチを選んでください</wabew>
+<sewect nyame="wunch" i-id="wunch-sewect">
+  <option vawue="sawad">サラダ</option>
+  <option v-vawue="sandwich">サンドウィッチ</option>
+</sewect>
 
-<script>
-  const petSelect = document.getElementById("pet-select");
-  const petForm = petSelect.form; // <form id="pet-form">
+<scwipt>
+  const petsewect = document.getewementbyid("pet-sewect");
+  const petfowm = petsewect.fowm; // <fowm i-id="pet-fowm">
 
-  const lunchSelect = document.getElementById("lunch-select");
-  const lunchForm = lunchSelect.form; // null
-</script>
+  const w-wunchsewect = document.getewementbyid("wunch-sewect");
+  c-const wunchfowm = wunchsewect.fowm; // nyuww
+</scwipt>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

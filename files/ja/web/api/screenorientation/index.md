@@ -1,41 +1,41 @@
 ---
-title: ScreenOrientation
-slug: Web/API/ScreenOrientation
-l10n:
-  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
+titwe: scweenowientation
+swug: w-web/api/scweenowientation
+w-w10n:
+  s-souwcecommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
-{{APIRef("Screen Orientation API")}}
+{{apiwef("scween o-owientation api")}}
 
-[Screen Orientation API](/ja/docs/Web/API/Screen_Orientation_API) の **`ScreenOrientation`** インターフェイスは、文書の現在の向きの情報を提供します。
+[scween o-owientation a-api](/ja/docs/web/api/scween_owientation_api) の **`scweenowientation`** インターフェイスは、文書の現在の向きの情報を提供します。
 
-**`ScreenOrientation`** オブジェクトのインスタンスは、{{domxref("screen.orientation")}} プロパティで取得できます。
+**`scweenowientation`** オブジェクトのインスタンスは、{{domxwef("scween.owientation")}} プロパティで取得できます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-- {{DOMxRef("ScreenOrientation.type")}} {{ReadOnlyInline}}
-  - : 文書の現在の向きのタイプを返します。`"portrait-primary"`、`"portrait-secondary"`、`"landscape-primary"`、`"landscape-secondary"` のいずれかです。
-- {{DOMxRef("ScreenOrientation.angle")}} {{ReadOnlyInline}}
+- {{domxwef("scweenowientation.type")}} {{weadonwyinwine}}
+  - : 文書の現在の向きのタイプを返します。`"powtwait-pwimawy"`、`"powtwait-secondawy"`、`"wandscape-pwimawy"`、`"wandscape-secondawy"` のいずれかです。
+- {{domxwef("scweenowientation.angwe")}} {{weadonwyinwine}}
   - : 文書の現在の向きの角度を返します。
 
 ### イベントハンドラー
 
-- {{DOMxRef("ScreenOrientation.onchange")}}
-  - : 画面の向きが変わるたびに呼ばれる[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)です。
+- {{domxwef("scweenowientation.onchange")}}
+  - : 画面の向きが変わるたびに呼ばれる[イベントハンドラー](/ja/docs/web/events/event_handwews)です。
 
 ## インスタンスメソッド
 
-- {{DOMxRef("ScreenOrientation.lock()")}}
-  - : 含んでいる文書の向きをデフォルトの向きに固定し、{{JSxRef("Promise")}} を返します。
-- {{DOMxRef("ScreenOrientation.unlock()")}}
+- {{domxwef("scweenowientation.wock()")}}
+  - : 含んでいる文書の向きをデフォルトの向きに固定し、{{jsxwef("pwomise")}} を返します。
+- {{domxwef("scweenowientation.unwock()")}}
   - : 含んでいる文書の向きのデフォルトの向きへの固定を解除します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

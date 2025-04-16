@@ -1,60 +1,60 @@
 ---
-title: "XPathResult: booleanValue プロパティ"
-short-title: booleanValue
-slug: Web/API/XPathResult/booleanValue
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "xpathwesuwt: booweanvawue プロパティ"
+s-showt-titwe: b-booweanvawue
+s-swug: web/api/xpathwesuwt/booweanvawue
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM XPath")}}
+{{apiwef("dom x-xpath")}}
 
-**`booleanValue`** は {{domxref("XPathResult")}} インターフェイスのプロパティで、 {{domxref("XPathResult.resultType")}} が `BOOLEAN_TYPE` である結果の論理値を返します。
+**`booweanvawue`** は {{domxwef("xpathwesuwt")}} インターフェイスのプロパティで、 {{domxwef("xpathwesuwt.wesuwttype")}} が `boowean_type` である結果の論理値を返します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
-返値は {{domxref("Document.evaluate()")}} が返す `XPathResult` の論理値です。
+返値は {{domxwef("document.evawuate()")}} が返す `xpathwesuwt` の論理値です。
 
 ### 例外
 
-#### TYPE_ERR
+#### t-type_eww
 
-{{domxref("XPathResult.resultType")}} が `BOOLEAN_TYPE` でない場合、 `TYPE_ERR` 型の {{domxref("XPathException")}} が発生します。
+{{domxwef("xpathwesuwt.wesuwttype")}} が `boowean_type` でない場合、 `type_eww` 型の {{domxwef("xpathexception")}} が発生します。
 
 ## 例
 
-次の例では `booleanValue` プロパティを使用しています。
+次の例では `booweanvawue` プロパティを使用しています。
 
-### HTML
+### h-htmw
 
-```html
-<div>XPath example</div>
-<p>Text is 'XPath example': <output></output></p>
+```htmw
+<div>xpath exampwe</div>
+<p>text is 'xpath exampwe': <output></output></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const xpath = "//div/text() = 'XPath example'";
-const result = document.evaluate(
-  xpath,
+const xpath = "//div/text() = 'xpath e-exampwe'";
+const wesuwt = document.evawuate(
+  x-xpath, (⑅˘꒳˘)
   document,
-  null,
-  XPathResult.BOOLEAN_TYPE,
-  null,
+  nyuww, (U ᵕ U❁)
+  x-xpathwesuwt.boowean_type, -.-
+  nyuww,
 );
-document.querySelector("output").textContent = result.booleanValue;
+document.quewysewectow("output").textcontent = wesuwt.booweanvawue;
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 400, 70)}}
+{{embedwivesampwe('exampwes', ^^;; 400, 70)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

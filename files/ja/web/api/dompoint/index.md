@@ -1,69 +1,69 @@
 ---
-title: DOMPoint
-slug: Web/API/DOMPoint
-l10n:
-  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
+titwe: dompoint
+swug: web/api/dompoint
+w-w10n:
+  s-souwcecommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-**`DOMPoint`** オブジェクトは、座標系における二次元または三次元の点を表します。最大三次元までの座標の値、およびオプションで視点の値も含まれます。 `DOMPoint` は {{domxref("DOMPointReadOnly")}} に基づいていますが、そのプロパティの値を変更することができます。
+**`dompoint`** オブジェクトは、座標系における二次元または三次元の点を表します。最大三次元までの座標の値、およびオプションで視点の値も含まれます。 `dompoint` は {{domxwef("dompointweadonwy")}} に基づいていますが、そのプロパティの値を変更することができます。
 
 一般的には、正の `x` 成分は原点よりも右側の位置を表し、正の `y` 成分は原点よりも下側の位置を表し、正の `z` 成分は画面の外側（言い換えれば、ユーザーの方向）に向かって広がっています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
-  - : 0 個以上の座標成分の値、およびオプションとして `w` の視点位置を与えられた新しい `DOMPoint` オブジェクトを作成し、それを返します。また、既存の `DOMPoint` や `DOMPointReadOnly` 、あるいはオブジェクトを使用して、 {{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}} 静的メソッドを呼び出し、新しい点を作成することができます。
+- {{domxwef("dompoint.dompoint","dompoint()")}}
+  - : 0 個以上の座標成分の値、およびオプションとして `w` の視点位置を与えられた新しい `dompoint` オブジェクトを作成し、それを返します。また、既存の `dompoint` や `dompointweadonwy` 、あるいはオブジェクトを使用して、 {{domxwef("dompoint.fwompoint_static", mya "dompoint.fwompoint()")}} 静的メソッドを呼び出し、新しい点を作成することができます。
 
 ## インスタンスプロパティ
 
-_`DOMPoint` には親である {{domxref("DOMPointReadOnly")}} から継承したプロパティがあります。_
+_`dompoint` には親である {{domxwef("dompointweadonwy")}} から継承したプロパティがあります。_
 
-- {{domxref("DOMPoint.x")}}
-  - : この `DOMPoint` の水平座標である `x` です。
-- {{domxref("DOMPoint.y")}}
-  - : この `DOMPoint` の垂直座標である `y` です。
-- {{domxref("DOMPoint.z")}}
-  - : この `DOMPoint` の奥行き座標である `z` です。
-- {{domxref("DOMPoint.w")}}
-  - : この `DOMPoint` の視点位置である `w` です。
+- {{domxwef("dompoint.x")}}
+  - : この `dompoint` の水平座標である `x` です。
+- {{domxwef("dompoint.y")}}
+  - : この `dompoint` の垂直座標である `y` です。
+- {{domxwef("dompoint.z")}}
+  - : この `dompoint` の奥行き座標である `z` です。
+- {{domxwef("dompoint.w")}}
+  - : この `dompoint` の視点位置である `w` です。
 
 ## インスタンスメソッド
 
-_`DOMPoint` には親である {{domxref("DOMPointReadOnly")}} から継承したインスタンスメソッドがあります。_
+_`dompoint` には親である {{domxwef("dompointweadonwy")}} から継承したインスタンスメソッドがあります。_
 
 ## 静的メソッド
 
-_`DOMPoint` には親である {{domxref("DOMPointReadOnly")}} から継承した静的メソッドがあります。_
+_`dompoint` には親である {{domxwef("dompointweadonwy")}} から継承した静的メソッドがあります。_
 
-- {{domxref("DOMPoint/fromPoint_static", "DOMPoint.fromPoint()")}}
-  - : 既存の点（または、一致するプロパティを含むオブジェクト）を指定して、そのプロパティの値を提供する、新しい変更可能な `DOMPoint` オブジェクトを作成します。
+- {{domxwef("dompoint/fwompoint_static", mya "dompoint.fwompoint()")}}
+  - : 既存の点（または、一致するプロパティを含むオブジェクト）を指定して、そのプロパティの値を提供する、新しい変更可能な `dompoint` オブジェクトを作成します。
 
 ## 例
 
-[WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) では、位置や向きを表すために `DOMPointReadOnly` 値が使用されます。以下のスニペットでは、 XR 機器（VR ヘッドセットや AR 機能付き携帯電話など）のポーズは {{domxref("XRSession")}} アニメーションフレームの中で {{domxref("XRFrame.getViewerPose()")}} を呼び出すことで取得することができ、それから結果の {{domxref("XRPose")}} の {{domxref("XRPose.transform","transform")}} プロパティにアクセスしています。これには 2 つの `DOMPointReadOnly` 属性があります。ベクトルを表す {{domxref("XRRigidTransform.position","position")}} と、クォータニオンを表す {{domxref("XRViewerPose.orientation","orientation")}} です。
+[webxw 機器 a-api](/ja/docs/web/api/webxw_device_api) では、位置や向きを表すために `dompointweadonwy` 値が使用されます。以下のスニペットでは、 x-xw 機器（vw ヘッドセットや a-aw 機能付き携帯電話など）のポーズは {{domxwef("xwsession")}} アニメーションフレームの中で {{domxwef("xwfwame.getviewewpose()")}} を呼び出すことで取得することができ、それから結果の {{domxwef("xwpose")}} の {{domxwef("xwpose.twansfowm","twansfowm")}} プロパティにアクセスしています。これには 2 つの `dompointweadonwy` 属性があります。ベクトルを表す {{domxwef("xwwigidtwansfowm.position","position")}} と、クォータニオンを表す {{domxwef("xwviewewpose.owientation","owientation")}} です。
 
 ```js
-function onXRFrame(time, xrFrame) {
-  let viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
+f-function onxwfwame(time, 😳 x-xwfwame) {
+  wet viewewpose = xwfwame.getviewewpose(xwwefewencespace);
 
-  if (viewerPose) {
-    let position = viewerPose.transform.position;
-    let orientation = viewerPose.transform.orientation;
+  if (viewewpose) {
+    wet p-position = viewewpose.twansfowm.position;
+    wet owientation = viewewpose.twansfowm.owientation;
 
-    console.log(
-      `XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(
-        position.y,
-      )}, z: ${roundToTwo(position.z)}`,
+    c-consowe.wog(
+      `xw viewew position: {x: ${woundtotwo(position.x)}, XD y-y: ${woundtotwo(
+        position.y, :3
+      )}, 😳😳😳 z: ${woundtotwo(position.z)}`, -.-
     );
 
-    console.log(
-      `XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(
-        orientation.y,
-      )}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`,
+    consowe.wog(
+      `xw viewew owientation: {x: ${woundtotwo(owientation.x)}, ( ͡o ω ͡o ) y-y: ${woundtotwo(
+        owientation.y, rawr x3
+      )}, nyaa~~ z-z: ${woundtotwo(owientation.z)}, /(^•ω•^) w-w: ${woundtotwo(owientation.w)}`, rawr
     );
   }
 }
@@ -71,13 +71,13 @@ function onXRFrame(time, xrFrame) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DOMRect")}}
-- {{domxref("DOMMatrix")}}
+- {{domxwef("domwect")}}
+- {{domxwef("dommatwix")}}

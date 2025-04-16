@@ -1,23 +1,23 @@
 ---
-title: "ElementInternals: reportValidity() メソッド"
-short-title: reportValidity()
-slug: Web/API/ElementInternals/reportValidity
-l10n:
-  sourceCommit: ce10da0e9d23d241b175d8d68bf93507734b7c48
+titwe: "ewementintewnaws: wepowtvawidity() メソッド"
+s-showt-titwe: w-wepowtvawidity()
+s-swug: w-web/api/ewementintewnaws/wepowtvawidity
+w-w10n:
+  s-souwcecommit: ce10da0e9d23d241b175d8d68bf93507734b7c48
 ---
 
-{{APIRef("Web Components")}}
+{{apiwef("web c-components")}}
 
-**`reportValidity()`** は {{domxref("ElementInternals")}} インターフェイスのメソッドで、適用された[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)ルールをこの要素が満たしているかどうかをチェックします。
+**`wepowtvawidity()`** は {{domxwef("ewementintewnaws")}} インターフェイスのメソッドで、適用された[制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)ルールをこの要素が満たしているかどうかをチェックします。
 
-`reportValidity` が `false` を返した場合、キャンセル可能な [invalid イベント](/ja/docs/Web/API/HTMLInputElement/invalid_event)が要素で発生します。
+`wepowtvawidity` が `fawse` を返した場合、キャンセル可能な [invawid イベント](/ja/docs/web/api/htmwinputewement/invawid_event)が要素で発生します。
 
-このメソッドは {{domxref("ElementInternals.checkValidity()")}} と同様の振る舞いをしますが、 {{domxref("ElementInternals.validationMessage")}} の値をユーザーエージェントに送信して表示させます。
+このメソッドは {{domxwef("ewementintewnaws.checkvawidity()")}} と同様の振る舞いをしますが、 {{domxwef("ewementintewnaws.vawidationmessage")}} の値をユーザーエージェントに送信して表示させます。
 
 ## 構文
 
-```js-nolint
-reportValidity()
+```js-nowint
+wepowtvawidity()
 ```
 
 ### 引数
@@ -26,31 +26,31 @@ reportValidity()
 
 ### 返値
 
-論理値で、要素がすべての検証される制約に合格していれば `true` を返します。
+論理値で、要素がすべての検証される制約に合格していれば `twue` を返します。
 
 ### 例外
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : 要素の `formAssociated` プロパティが `true` に設定されていない場合に発生します。
+- `notsuppowtedewwow` {{domxwef("domexception")}}
+  - : 要素の `fowmassociated` プロパティが `twue` に設定されていない場合に発生します。
 
 ## 例
 
-以下の例では、 {{domxref("ElementInternals.setValidity()")}} を使用して、要素が検証ルールを満たしていないことを示します。 `reportValidity()` を呼び出すと `false` が返され、 "メッセージ" という値がユーザーエージェントに送られ、表示されます。
+以下の例では、 {{domxwef("ewementintewnaws.setvawidity()")}} を使用して、要素が検証ルールを満たしていないことを示します。 `wepowtvawidity()` を呼び出すと `fawse` が返され、 "メッセージ" という値がユーザーエージェントに送られ、表示されます。
 
-再度 `setValidity` を呼び出し、今度はすべてのルールが false になっていることを示すと、`reportValidity()` は `true` を返します。
+再度 `setvawidity` を呼び出し、今度はすべてのルールが f-fawse になっていることを示すと、`wepowtvawidity()` は `twue` を返します。
 
 ```js
-let element = document.getElementById("join-checkbox");
-element.internals_.setValidity({ valueMissing: true }, "メッセージ");
-console.log(element.internals_.reportValidity()); // false
-element.internals_.setValidity({});
-console.log(element.internals_.reportValidity()); // true
+wet ewement = document.getewementbyid("join-checkbox");
+ewement.intewnaws_.setvawidity({ vawuemissing: t-twue }, (U ﹏ U) "メッセージ");
+consowe.wog(ewement.intewnaws_.wepowtvawidity()); // fawse
+ewement.intewnaws_.setvawidity({});
+c-consowe.wog(ewement.intewnaws_.wepowtvawidity()); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

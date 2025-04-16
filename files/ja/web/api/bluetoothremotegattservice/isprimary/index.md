@@ -1,13 +1,13 @@
 ---
-title: "BluetoothRemoteGATTService: isPrimary プロパティ"
-slug: Web/API/BluetoothRemoteGATTService/isPrimary
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattsewvice: ispwimawy プロパティ"
+s-swug: web/api/bwuetoothwemotegattsewvice/ispwimawy
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-読み取り専用プロパティ **`BluetoothGATTService.isPrimary`** は、これがプライマリーサービスかを表す論理値を返します。プライマリーサービスでなければ、セカンダリーサービスです。
+読み取り専用プロパティ **`bwuetoothgattsewvice.ispwimawy`** は、これがプライマリーサービスかを表す論理値を返します。プライマリーサービスでなければ、セカンダリーサービスです。
 
 ## 値
 
@@ -15,10 +15,10 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web b-bwuetooth")}}

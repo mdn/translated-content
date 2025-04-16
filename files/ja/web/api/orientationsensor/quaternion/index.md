@@ -1,30 +1,30 @@
 ---
-title: "OrientationSensor: quaternion プロパティ"
-slug: Web/API/OrientationSensor/quaternion
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "owientationsensow: quatewnion プロパティ"
+s-swug: w-web/api/owientationsensow/quatewnion
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-{{domxref("OrientationSensor")}} インターフェイスの読み取り専用プロパティ **`quaternion`** は、各要素がデバイスの向きを表す単位{{Glossary("quaternion", "四元数")}}の成分である 4 要素の {{jsxref('Array')}} を返します。
+{{domxwef("owientationsensow")}} インターフェイスの読み取り専用プロパティ **`quatewnion`** は、各要素がデバイスの向きを表す単位{{gwossawy("quatewnion", (U ᵕ U❁) "四元数")}}の成分である 4 要素の {{jsxwef('awway')}} を返します。
 
-{{domxref('OrientationSensor')}} はベースクラスなので、`quaternion` は派生クラスからのみ読み取ることができます。
+{{domxwef('owientationsensow')}} はベースクラスなので、`quatewnion` は派生クラスからのみ読み取ることができます。
 
 ## 値
 
-デバイスの向きを表す四元数の x, y, z, w 成分を値とする {{jsxref('Array')}} です。
+デバイスの向きを表す四元数の x-x, (⑅˘꒳˘) y, z-z, ( ͡o ω ͡o ) w 成分を値とする {{jsxwef('awway')}} です。
 
 ## 例
 
 ```js
-// TBD
+// t-tbd
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

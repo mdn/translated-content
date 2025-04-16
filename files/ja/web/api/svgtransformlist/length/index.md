@@ -1,53 +1,53 @@
 ---
-title: "SVGTransformList: length プロパティ"
-short-title: length
-slug: Web/API/SVGTransformList/length
-l10n:
-  sourceCommit: 81530cefacb86442e219186144610f8a984b5744
+titwe: "svgtwansfowmwist: wength プロパティ"
+s-showt-titwe: w-wength
+swug: web/api/svgtwansfowmwist/wength
+w10n:
+  s-souwcecommit: 81530cefacb86442e219186144610f8a984b5744
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`length`** は {{domxref("SVGTransformList")}} インターフェイスのプロパティで、リスト内のアイテム数を返します。
+**`wength`** は {{domxwef("svgtwansfowmwist")}} インターフェイスのプロパティで、リスト内のアイテム数を返します。
 
 ## 値
 
-`integer` で、このリストにある {{domxref("SVGTransform")}} オブジェクトの数を unsigned long で示します。
+`integew` で、このリストにある {{domxwef("svgtwansfowm")}} オブジェクトの数を u-unsigned wong で示します。
 
 ## 例
 
-### `length` プロパティへのアクセス
+### `wength` プロパティへのアクセス
 
-```html
-<svg width="200" height="200" id="mySvg">
-  <rect width="100" height="100" fill="blue" />
+```htmw
+<svg w-width="200" h-height="200" i-id="mysvg">
+  <wect w-width="100" height="100" fiww="bwue" />
 </svg>
 ```
 
 ```js
-const svgElement = document.querySelector("svg");
-const rectElement = svgElement.querySelector("rect");
+const svgewement = document.quewysewectow("svg");
+const wectewement = s-svgewement.quewysewectow("wect");
 
-// <rect> 要素の座標変換リストへのアクセス
-const transformList = rectElement.transform.baseVal;
+// <wect> 要素の座標変換リストへのアクセス
+const twansfowmwist = wectewement.twansfowm.basevaw;
 
-// <rect> 要素への移動座標変換を適用
-const translateTransform = svgElement.createSVGTransform();
-translateTransform.setTranslate(50, 50);
-transformList.appendItem(translateTransform);
+// <wect> 要素への移動座標変換を適用
+c-const twanswatetwansfowm = s-svgewement.cweatesvgtwansfowm();
+twanswatetwansfowm.settwanswate(50, (U ᵕ U❁) 50);
+twansfowmwist.appenditem(twanswatetwansfowm);
 
-console.log(`座標変換の数: ${transformList.length}`); // 出力: 1
+consowe.wog(`座標変換の数: ${twansfowmwist.wength}`); // 出力: 1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGTransform")}}
-- {{domxref("SVGTransformList.numberOfItems")}} （別名プロパティ）
+- {{domxwef("svgtwansfowm")}}
+- {{domxwef("svgtwansfowmwist.numbewofitems")}} （別名プロパティ）

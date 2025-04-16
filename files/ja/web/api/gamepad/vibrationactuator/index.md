@@ -1,40 +1,40 @@
 ---
-title: "Gamepad: vibrationActuator プロパティ"
-short-title: vibrationActuator
-slug: Web/API/Gamepad/vibrationActuator
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "gamepad: vibwationactuatow プロパティ"
+s-showt-titwe: v-vibwationactuatow
+s-swug: web/api/gamepad/vibwationactuatow
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("Gamepad")}}{{Non-standard_Header}}
+{{apiwef("gamepad")}}{{non-standawd_headew}}
 
-**`vibrationActuator`** は {{domxref("Gamepad")}} インターフェイスの読み取り専用プロパティで、このコントローラーで利用できる触覚フィードバックハードウェアを表す {{domxref("GamepadHapticActuator")}} オブジェクトを返します。
+**`vibwationactuatow`** は {{domxwef("gamepad")}} インターフェイスの読み取り専用プロパティで、このコントローラーで利用できる触覚フィードバックハードウェアを表す {{domxwef("gamepadhapticactuatow")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("GamepadHapticActuator")}} オブジェクトです。
+{{domxwef("gamepadhapticactuatow")}} オブジェクトです。
 
 ## 例
 
 ```js
-const gamepad = navigator.getGamepads()[0];
+c-const g-gamepad = nyavigatow.getgamepads()[0];
 
-gamepad.vibrationActuator.playEffect("dual-rumble", {
-  startDelay: 0,
-  duration: 200,
-  weakMagnitude: 1.0,
-  strongMagnitude: 1.0,
+g-gamepad.vibwationactuatow.pwayeffect("duaw-wumbwe", σωσ {
+  stawtdeway: 0, σωσ
+  duwation: 200, >_<
+  weakmagnitude: 1.0, :3
+  stwongmagnitude: 1.0,
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)
+- [ゲームパッド a-api](/ja/docs/web/api/gamepad_api)

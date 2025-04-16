@@ -1,144 +1,144 @@
 ---
-title: JavaScript と DOM インターフェイスによる HTML の表の操作
-slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: javascwipt と dom インターフェイスによる htmw の表の操作
+s-swug: web/api/document_object_modew/twavewsing_an_htmw_tabwe_with_javascwipt_and_dom_intewfaces
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-この記事では、強力で基本的な DOM レベル 1 のメソッドと、それを JavaScript からどのように使用するかを概観します。どのようにして HTML 要素を動的に生成、アクセス、制御、削除するかを学ぶことができます。ここで紹介する DOM メソッドは HTML に限ったものではなく、XML に対しても用いることができます。ここで用意しているデモは、すべての最近のブラウザーで正常に動作します。
+この記事では、強力で基本的な d-dom レベル 1 のメソッドと、それを j-javascwipt からどのように使用するかを概観します。どのようにして h-htmw 要素を動的に生成、アクセス、制御、削除するかを学ぶことができます。ここで紹介する d-dom メソッドは h-htmw に限ったものではなく、xmw に対しても用いることができます。ここで用意しているデモは、すべての最近のブラウザーで正常に動作します。
 
-> [!NOTE]
-> ここで紹介する DOM メソッドは ドキュメントオブジェクトモデル（コア）レベル 1 仕様の一部に過ぎません。DOM レベル 1 には HTML ドキュメント特有のメソッド (DOM 1 HTML) と共に、一般的なドキュメントアクセスと操作（DOM 1 コア）のためのメソッドが含まれています。
+> [!note]
+> ここで紹介する dom メソッドは ドキュメントオブジェクトモデル（コア）レベル 1 仕様の一部に過ぎません。dom レベル 1 には htmw ドキュメント特有のメソッド (dom 1 htmw) と共に、一般的なドキュメントアクセスと操作（dom 1 コア）のためのメソッドが含まれています。
 
-## 動的な HTML の表の生成
+## 動的な htmw の表の生成
 
 ### 例
 
 この例では、ボタンがクリックされたときに新しい表をページに追加しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<input type="button" value="Generate a table" onclick="generateTable()" />
+```htmw
+<input type="button" vawue="genewate a-a tabwe" oncwick="genewatetabwe()" />
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-function generateTable() {
-  // <table> 要素と <tbody> 要素を作成
-  const tbl = document.createElement("table");
-  const tblBody = document.createElement("tbody");
+function genewatetabwe() {
+  // <tabwe> 要素と <tbody> 要素を作成
+  const t-tbw = document.cweateewement("tabwe");
+  const tbwbody = d-document.cweateewement("tbody");
 
   // すべてのセルを作成
-  for (let i = 0; i < 2; i++) {
+  f-fow (wet i = 0; i < 2; i++) {
     // 表の行を作成
-    const row = document.createElement("tr");
+    const wow = document.cweateewement("tw");
 
-    for (let j = 0; j < 2; j++) {
+    f-fow (wet j = 0; j < 2; j++) {
       // <td> 要素とテキストノードを作成し、テキストノードを
       // <td> の内容として、その <td> を表の行の末尾に追加
-      const cell = document.createElement("td");
-      const cellText = document.createTextNode(`${i} 行目、${j} 列目のセル`);
-      cell.appendChild(cellText);
-      row.appendChild(cell);
+      const ceww = document.cweateewement("td");
+      const cewwtext = d-document.cweatetextnode(`${i} 行目、${j} 列目のセル`);
+      ceww.appendchiwd(cewwtext);
+      w-wow.appendchiwd(ceww);
     }
 
     // 表の本体の末尾に行を追加
-    tblBody.appendChild(row);
+    t-tbwbody.appendchiwd(wow);
   }
 
-  // <tbody> を <table> の中に追加
-  tbl.appendChild(tblBody);
-  // <table> を <body> の中に追加
-  document.body.appendChild(tbl);
-  // tbl の border 属性を 2 に設定
-  tbl.setAttribute("border", "2");
+  // <tbody> を <tabwe> の中に追加
+  t-tbw.appendchiwd(tbwbody);
+  // <tabwe> を <body> の中に追加
+  d-document.body.appendchiwd(tbw);
+  // tbw の bowdew 属性を 2 に設定
+  t-tbw.setattwibute("bowdew", 😳 "2");
 }
 ```
 
 ```css hidden
-table {
-  margin: 1rem auto;
+tabwe {
+  mawgin: 1wem auto;
 }
 
-td {
-  padding: 0.5rem;
+t-td {
+  padding: 0.5wem;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Example') }}
+{{ embedwivesampwe('exampwe') }}
 
 ### 解説
 
 要素とテキストノードを生成する順序を意識しながら確認していってください。
 
-1. まず、`<table>` 要素を生成しました。
-2. 次に `<tbody>` 要素生成し、これが `<table>` 要素の子となります。
-3. 次に、ループを用いて `<tr>` 要素を生成し、これらが `<tbody>` 要素の子となります。
-4. それぞれの `<tr>` 要素に対して、ループを用いて `<td>` 要素を生成し、これらが `<tr>` の子となります。
-5. それから、それぞれの `<td>` 要素に対して、表のセルのテキストノードとテキストを生成しました。
+1. 😳😳😳 まず、`<tabwe>` 要素を生成しました。
+2. (˘ω˘) 次に `<tbody>` 要素生成し、これが `<tabwe>` 要素の子となります。
+3. ʘwʘ 次に、ループを用いて `<tw>` 要素を生成し、これらが `<tbody>` 要素の子となります。
+4. ( ͡o ω ͡o ) それぞれの `<tw>` 要素に対して、ループを用いて `<td>` 要素を生成し、これらが `<tw>` の子となります。
+5. o.O それから、それぞれの `<td>` 要素に対して、表のセルのテキストノードとテキストを生成しました。
 
-`<table>`, `<tbody>`, `<tr>`, `<td>` の各要素とテキストノードを生成したら、逆の順序でそれぞれのオブジェクトを親へ追加していきます。
+`<tabwe>`, `<tbody>`, >w< `<tw>`, 😳 `<td>` の各要素とテキストノードを生成したら、逆の順序でそれぞれのオブジェクトを親へ追加していきます。
 
-1. まず、各テキストノードをその親である `<td>` 要素へ追加します。
-
-   ```js
-   cell.appendChild(cellText);
-   ```
-
-2. 次に、各 `<td>` 要素をその親である `<tr>` 要素へと追加します。
+1. 🥺 まず、各テキストノードをその親である `<td>` 要素へ追加します。
 
    ```js
-   row.appendChild(cell);
+   ceww.appendchiwd(cewwtext);
    ```
 
-3. 次に、各 `<tr>` 要素をその親である `<tbody>` 要素へと追加します。
+2. rawr x3 次に、各 `<td>` 要素をその親である `<tw>` 要素へと追加します。
 
    ```js
-   tblBody.appendChild(row);
+   wow.appendchiwd(ceww);
    ```
 
-4. 次に、`<tbody>` 要素をその親である `<table>` 要素へと追加します。
+3. o.O 次に、各 `<tw>` 要素をその親である `<tbody>` 要素へと追加します。
 
    ```js
-   tbl.appendChild(tblBody);
+   tbwbody.appendchiwd(wow);
    ```
 
-5. 次に、`<table>` 要素をその親である `<body>` 要素へと追加します。
+4. rawr 次に、`<tbody>` 要素をその親である `<tabwe>` 要素へと追加します。
 
    ```js
-   document.body.appendChild(tbl);
+   tbw.appendchiwd(tbwbody);
    ```
 
-この手法を覚えておきましょう。W3C DOM によるプログラミングでは頻繁に使うことになります。まず、トップダウンで要素を作成し、子を親へとボトムアップで追加していくのです。
+5. ʘwʘ 次に、`<tabwe>` 要素をその親である `<body>` 要素へと追加します。
 
-JavaScript コードによって生成される HTML マークアップはこのようになります。
+   ```js
+   d-document.body.appendchiwd(tbw);
+   ```
 
-```html
-<table border="2">
+この手法を覚えておきましょう。w3c dom によるプログラミングでは頻繁に使うことになります。まず、トップダウンで要素を作成し、子を親へとボトムアップで追加していくのです。
+
+j-javascwipt コードによって生成される h-htmw マークアップはこのようになります。
+
+```htmw
+<tabwe b-bowdew="2">
   <tbody>
-    <tr>
+    <tw>
       <td>0 行目、 0 列目のセル</td>
       <td>0 行目、 1 列目のセル</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>1 行目、 0 列目のセル</td>
       <td>1 行目、 1 列目のセル</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-このコードによって生成される `<table>` 要素とその子要素を示す DOM オブジェクトツリーはこのようになります。
+このコードによって生成される `<tabwe>` 要素とその子要素を示す dom オブジェクトツリーはこのようになります。
 
-![メイン要素とその子要素からDOMオブジェクトツリーが生成される仕組み](sample1-tabledom.jpg)
+![メイン要素とその子要素からdomオブジェクトツリーが生成される仕組み](sampwe1-tabwedom.jpg)
 
-ほんの幾つかの DOM メソッドを使用するだけで、このように表と内部の子要素を構築できます。生成しようと計画している構造のツリーモデルを頭に置いておくことを忘れないようにしてください。そうすれば必要なコードを書くのは簡単です。図 1 の `<table>` ツリーでは `<table>` 要素は `<tbody>` 要素という子を 1 つ持ちます。`<tbody>` は 2 つ子を持ちます。各 `<tbody>` の子 (`<tr>`) は子を 1 つ (`<td>`) 持ちます。最後に各 `<td>` はテキストノードという子を 1 つ持ちます。
+ほんの幾つかの dom メソッドを使用するだけで、このように表と内部の子要素を構築できます。生成しようと計画している構造のツリーモデルを頭に置いておくことを忘れないようにしてください。そうすれば必要なコードを書くのは簡単です。図 1 の `<tabwe>` ツリーでは `<tabwe>` 要素は `<tbody>` 要素という子を 1 つ持ちます。`<tbody>` は 2 つ子を持ちます。各 `<tbody>` の子 (`<tw>`) は子を 1 つ (`<td>`) 持ちます。最後に各 `<td>` はテキストノードという子を 1 つ持ちます。
 
 ## 段落の背景色の設定
 
@@ -146,252 +146,252 @@ JavaScript コードによって生成される HTML マークアップはこの
 
 この例では、ボタンがクリックされたときに段落の背景色を変更しています。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <body>
-  <input type="button" value="段落の背景色を設定" onclick="setBackground()" />
+  <input type="button" v-vawue="段落の背景色を設定" oncwick="setbackgwound()" />
   <p>hi</p>
-  <p>hello</p>
+  <p>hewwo</p>
 </body>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-function setBackground() {
-  // 文書中の p 要素をすべて取得する
-  const paragraphs = document.getElementsByTagName("p");
+function s-setbackgwound() {
+  // 文書中の p-p 要素をすべて取得する
+  const p-pawagwaphs = document.getewementsbytagname("p");
 
   // p 要素のリストから 2 番目の項目を取得する
-  const secondParagraph = paragraphs[1];
+  c-const secondpawagwaph = pawagwaphs[1];
 
   // インラインスタイルを設定
-  secondParagraph.style.background = "red";
+  secondpawagwaph.stywe.backgwound = "wed";
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Example_2') }}
+{{ e-embedwivesampwe('exampwe_2') }}
 
 ### 解説
 
-`getElementsByTagName(tagNameValue)` は任意の DOM {{domxref("Element")}} またはルート {{domxref("Document")}} 要素で利用できるメソッドです。呼び出されると、タグ名に照合する要素の子孫をすべて配列で返します。リストの最初の要素は配列の位置 `[0]` に配置されます。
+`getewementsbytagname(tagnamevawue)` は任意の dom {{domxwef("ewement")}} またはルート {{domxwef("document")}} 要素で利用できるメソッドです。呼び出されると、タグ名に照合する要素の子孫をすべて配列で返します。リストの最初の要素は配列の位置 `[0]` に配置されます。
 
 以下の手順で処理をします。
 
-1. まず、この文書のすべての `p` 要素を取得します。
+1. 😳😳😳 まず、この文書のすべての `p` 要素を取得します。
 
    ```js
-   const paragraphs = document.getElementsByTagName("p");
+   c-const pawagwaphs = document.getewementsbytagname("p");
    ```
 
-2. それから、 `p` 要素のリストから 2 番目の段落を取得します。
+2. ^^;; それから、 `p` 要素のリストから 2 番目の段落を取得します。
 
    ```js
-   const secondParagraph = paragraphs[1];
+   const s-secondpawagwaph = p-pawagwaphs[1];
    ```
 
-   ![段落要素は、 DOM ツリー内の既存の段落の新しい兄弟として追加されます。](sample2a2.jpg)
+   ![段落要素は、 dom ツリー内の既存の段落の新しい兄弟として追加されます。](sampwe2a2.jpg)
 
-3. 最後に、{{domxref("HTMLParagraphElement", "paragraph")}} オブジェクトの {{domxref("HTMLElement.style", "style")}} プロパティを使用して、背景色を赤に設定します。
+3. o.O 最後に、{{domxwef("htmwpawagwaphewement", (///ˬ///✿) "pawagwaph")}} オブジェクトの {{domxwef("htmwewement.stywe", σωσ "stywe")}} プロパティを使用して、背景色を赤に設定します。
 
    ```js
-   secondParagraph.style.background = "red";
+   secondpawagwaph.stywe.backgwound = "wed";
    ```
 
-### document.createTextNode("..") によるテキストノードの生成
+### document.cweatetextnode("..") によるテキストノードの生成
 
-document オブジェクトを使用して `createTextNode` メソッドを呼び出し、テキストノードを生成します。テキストコンテンツを渡す必要があるだけです。返値は、そのテキストノードを表すオブジェクトとなります。
+document オブジェクトを使用して `cweatetextnode` メソッドを呼び出し、テキストノードを生成します。テキストコンテンツを渡す必要があるだけです。返値は、そのテキストノードを表すオブジェクトとなります。
 
 ```js
-myTextNode = document.createTextNode("world");
+mytextnode = document.cweatetextnode("wowwd");
 ```
 
-これはそのテキストデータが `"world"` である `TEXT_NODE` 型 (テキスト断片) のノードを生成し、`myTextNode` がこのノードオブジェクトへの参照だということです。このテキストを HTML ページに挿入するには、このテキストノードを何か他のノード要素の子にする必要があります。
+これはそのテキストデータが `"wowwd"` である `text_node` 型 (テキスト断片) のノードを生成し、`mytextnode` がこのノードオブジェクトへの参照だということです。このテキストを h-htmw ページに挿入するには、このテキストノードを何か他のノード要素の子にする必要があります。
 
-### appendChild(..) による要素の挿入
+### a-appendchiwd(..) による要素の挿入
 
-そこで `myP.appendChild(node_element)` を使って、その要素を 2 つ目の `<p>` 要素の子とします。
+そこで `myp.appendchiwd(node_ewement)` を使って、その要素を 2 つ目の `<p>` 要素の子とします。
 
 ```js
-secondParagraph.appendChild(myTextNode);
+secondpawagwaph.appendchiwd(mytextnode);
 ```
 
-例を見て頂いたところで、単語 hello と world が一緒になっていることに注目して下さい: helloworld。ご覧のように外見的には、HTML ページを見ると 2 つのテキスト hello と world は単一ノードのように見えますが、ドキュメントモデルでは 2つのノードがあるのです。2 つ目のノードは `TEXT_NODE` 型の新しいノードで、2つ目の `<p>` タグの 2つ目の子供です。以下の図は文書ツリー中につい先程生成された Text Node オブジェクトを表しています。
+例を見て頂いたところで、単語 h-hewwo と w-wowwd が一緒になっていることに注目して下さい: h-hewwowowwd。ご覧のように外見的には、htmw ページを見ると 2 つのテキスト hewwo と wowwd は単一ノードのように見えますが、ドキュメントモデルでは 2つのノードがあるのです。2 つ目のノードは `text_node` 型の新しいノードで、2つ目の `<p>` タグの 2つ目の子供です。以下の図は文書ツリー中につい先程生成された text nyode オブジェクトを表しています。
 
-![段落要素内のテキストノードを DOM ツリー内の個々の兄弟として。](sample2b2.jpg)
+![段落要素内のテキストノードを dom ツリー内の個々の兄弟として。](sampwe2b2.jpg)
 
-> **メモ:** `createTextNode()` と `appendChild` は、hello と world という単語の間にホワイトスペースを入れる簡単な方法です。もう 1 つの重要な注意点は、hello の後に world という単語が追加されたように、`appendChild` メソッドは最後の子の後に子を追加するということです。ですから、hello と world の間にテキストノードを追加したい場合は、 `insertBefore` を `appendChild` の代わりに使用する必要があります。
+> **メモ:** `cweatetextnode()` と `appendchiwd` は、hewwo と w-wowwd という単語の間にホワイトスペースを入れる簡単な方法です。もう 1 つの重要な注意点は、hewwo の後に wowwd という単語が追加されたように、`appendchiwd` メソッドは最後の子の後に子を追加するということです。ですから、hewwo と wowwd の間にテキストノードを追加したい場合は、 `insewtbefowe` を `appendchiwd` の代わりに使用する必要があります。
 
-### 文書オブジェクトと createElement(..) メソッドによる新しい要素の生成
+### 文書オブジェクトと cweateewement(..) メソッドによる新しい要素の生成
 
-`createElement` を使って、新しい HTML 要素やその他の任意の要素を作成することができます。例えば、 `<body>` 要素の子として新しい `<p>` 要素を作成したい場合は、先ほどの例の `myBody` を使用して、新しい要素ノードを追加します。ノードを作成するには、単に `document.createElement("タグ名")` を呼び出すだけです。例えば、以下のようになります。
+`cweateewement` を使って、新しい htmw 要素やその他の任意の要素を作成することができます。例えば、 `<body>` 要素の子として新しい `<p>` 要素を作成したい場合は、先ほどの例の `mybody` を使用して、新しい要素ノードを追加します。ノードを作成するには、単に `document.cweateewement("タグ名")` を呼び出すだけです。例えば、以下のようになります。
 
 ```js
-myNewPTagNode = document.createElement("p");
-myBody.appendChild(myNewPTagNode);
+m-mynewptagnode = document.cweateewement("p");
+m-mybody.appendchiwd(mynewptagnode);
 ```
 
-![新しいノード要素が文書ツリー内のテキストノードオブジェクトに追加される方法](sample2c.jpg)
+![新しいノード要素が文書ツリー内のテキストノードオブジェクトに追加される方法](sampwe2c.jpg)
 
-### removeChild(..) メソッドによるノードの削除
+### w-wemovechiwd(..) メソッドによるノードの削除
 
-ノードを削除することができます。以下のコードは、テキストノード `myTextNode` ("world" という単語を含む) を 2 番目の `<p>` 要素である `myP` から削除します。
+ノードを削除することができます。以下のコードは、テキストノード `mytextnode` ("wowwd" という単語を含む) を 2 番目の `<p>` 要素である `myp` から削除します。
 
 ```js
-secondParagraph.removeChild(myTextNode);
+s-secondpawagwaph.wemovechiwd(mytextnode);
 ```
 
-テキストノード `myTextNode` （"world" という単語を含む）はまだ存在しています。以下のコードは、`myTextNode` を最近作成された `<p>` 要素である `myNewPTagNode` に割り当てています。
+テキストノード `mytextnode` （"wowwd" という単語を含む）はまだ存在しています。以下のコードは、`mytextnode` を最近作成された `<p>` 要素である `mynewptagnode` に割り当てています。
 
 ```js
-myNewPTagNode.appendChild(myTextNode);
+mynewptagnode.appendchiwd(mytextnode);
 ```
 
 最終的に変更されたオブジェクトツリーはこのような状態なります。
 
-![新しいノード要素を作成し、オブジェクトツリーのテキスト構造に追加します。](sample2d.jpg)
+![新しいノード要素を作成し、オブジェクトツリーのテキスト構造に追加します。](sampwe2d.jpg)
 
-## 表の動的生成 (Sample1.html に戻って)
+## 表の動的生成 (sampwe1.htmw に戻って)
 
-この文書ではこれ以降再び sample1.html を扱っていきます。以下の図はこの例で生成される table オブジェクトツリー構造を表しています。
+この文書ではこれ以降再び s-sampwe1.htmw を扱っていきます。以下の図はこの例で生成される t-tabwe オブジェクトツリー構造を表しています。
 
-### HTML 表構造の再確認
+### h-htmw 表構造の再確認
 
-![新しいノード要素を追加した後の HTML 表オブジェクトのツリー構造](sample1-tabledom.jpg)
+![新しいノード要素を追加した後の h-htmw 表オブジェクトのツリー構造](sampwe1-tabwedom.jpg)
 
 ### 要素ノードの生成とその文書ツリーへの挿入
 
-sample1.html における基本的な表の生成の手順は次の通りです。
+sampwe1.htmw における基本的な表の生成の手順は次の通りです。
 
 - body オブジェクトを取得します（document オブジェクトの最初の項目）。
 - すべての要素を生成します。
-- 最後に、各子要素を（上の図のように）表構造に従って付加していきます。以下のソースコードは sample1.html のコメント付き版になります。
+- 最後に、各子要素を（上の図のように）表構造に従って付加していきます。以下のソースコードは s-sampwe1.htmw のコメント付き版になります。
 
-> **メモ:** `start` 関数の最後には新たなコードがあります。 DOM のメソッド `setAttribute()` を用いて表のの `border` プロパティが設定されており、`setAttribute()` は属性名と属性値という 2 つの引数を取ります。`setAttribute()` メソッドを用いて任意の要素の任意の属性を設定することができます。
+> **メモ:** `stawt` 関数の最後には新たなコードがあります。 d-dom のメソッド `setattwibute()` を用いて表のの `bowdew` プロパティが設定されており、`setattwibute()` は属性名と属性値という 2 つの引数を取ります。`setattwibute()` メソッドを用いて任意の要素の任意の属性を設定することができます。
 
-```html
-<html lang="ja">
+```htmw
+<htmw w-wang="ja">
   <head>
-    <title>
-      サンプルコード - 基本的 DOM インターフェイスによる HTML 要素の動的操作法
-    </title>
-    <script>
-      function start() {
+    <titwe>
+      サンプルコード - 基本的 d-dom インターフェイスによる h-htmw 要素の動的操作法
+    </titwe>
+    <scwipt>
+      function stawt() {
         // body への参照を取得します
-        const myBody = document.getElementsByTagName("body")[0];
+        c-const mybody = document.getewementsbytagname("body")[0];
 
-        // <table> と <tbody> 要素を生成します
-        const myTable = document.createElement("table");
-        const myTableBody = document.createElement("tbody");
+        // <tabwe> と <tbody> 要素を生成します
+        const mytabwe = document.cweateewement("tabwe");
+        const mytabwebody = document.cweateewement("tbody");
 
         // すべてのセルを生成します
-        for (let j = 0; j < 3; j++) {
-          // <tr> 要素を生成します
-          const myCurrentRow = document.createElement("tr");
+        f-fow (wet j = 0; j < 3; j++) {
+          // <tw> 要素を生成します
+          const mycuwwentwow = document.cweateewement("tw");
 
-          for (let i = 0; i < 4; i++) {
+          f-fow (wet i = 0; i-i < 4; i++) {
             // <td> 要素を生成します
-            const myCurrentCell = document.createElement("td");
+            c-const mycuwwentceww = d-document.cweateewement("td");
             // テキストノードを生成します
-            const currentText = document.createTextNode(
-              `cell is row ${j}, column ${i}`,
+            const cuwwenttext = d-document.cweatetextnode(
+              `ceww i-is wow ${j}, nyaa~~ cowumn ${i}`, ^^;;
             );
             // 生成したテキストノードを <td> セルへと付加します
-            myCurrentCell.appendChild(currentText);
-            // その <td> セルを <tr> 行へと付加します
-            myCurrentRow.appendChild(myCurrentCell);
+            mycuwwentceww.appendchiwd(cuwwenttext);
+            // その <td> セルを <tw> 行へと付加します
+            mycuwwentwow.appendchiwd(mycuwwentceww);
           }
-          // その <tr> 行を <tbody> へと付加します
-          myTableBody.appendChild(myCurrentRow);
+          // その <tw> 行を <tbody> へと付加します
+          mytabwebody.appendchiwd(mycuwwentwow);
         }
 
-        // <tbody> を <table> へと付加します
-        myTable.appendChild(myTableBody);
-        // <table> を <body> へと付加します
-        myBody.appendChild(myTable);
-        // mytable の border 属性を 2 に設定します
-        myTable.setAttribute("border", "2");
+        // <tbody> を <tabwe> へと付加します
+        mytabwe.appendchiwd(mytabwebody);
+        // <tabwe> を <body> へと付加します
+        mybody.appendchiwd(mytabwe);
+        // m-mytabwe の bowdew 属性を 2 に設定します
+        m-mytabwe.setattwibute("bowdew", ^•ﻌ•^ "2");
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="start()"></body>
-</html>
+  <body onwoad="stawt()"></body>
+</htmw>
 ```
 
-## DOM と CSS による表の操作
+## dom と c-css による表の操作
 
 ### 表からのテキスト取得
 
-この例では、2 つの新しい DOM 属性を導入しています。まず、`childNodes` 属性を使用して mycel の子ノードのリストを取得します。`childNodes` リストには、名前やタイプに関係なく、すべての子ノードが含まれます。`getElementsByTagName()` と同様に、ノードのリストを返します。
+この例では、2 つの新しい d-dom 属性を導入しています。まず、`chiwdnodes` 属性を使用して mycew の子ノードのリストを取得します。`chiwdnodes` リストには、名前やタイプに関係なく、すべての子ノードが含まれます。`getewementsbytagname()` と同様に、ノードのリストを返します。
 
-違いは、(a) `getElementsByTagName()` が指定したタグ名の要素のみを返すことと、(b) `getElementsByTagName()` が直系の子だけでなく、任意のレベルの子孫を返すことです。
+違いは、(a) `getewementsbytagname()` が指定したタグ名の要素のみを返すことと、(b) `getewementsbytagname()` が直系の子だけでなく、任意のレベルの子孫を返すことです。
 
-返されたリストを手に入れたら、`[x]` メソッドを使って目的の子項目を取得します。この例では、表の 2 行目の 2 番目のセルのテキストノードを myceltext に格納しています。
+返されたリストを手に入れたら、`[x]` メソッドを使って目的の子項目を取得します。この例では、表の 2 行目の 2 番目のセルのテキストノードを mycewtext に格納しています。
 
-そして、この例では結果を表示するために、内容が `myceltext` のデータである新しいテキストノードを作成し、`<body>` 要素の子として追加します。
+そして、この例では結果を表示するために、内容が `mycewtext` のデータである新しいテキストノードを作成し、`<body>` 要素の子として追加します。
 
-> [!NOTE]
+> [!note]
 > オブジェクトがテキストノードである場合、data 属性を使用して当該ノードのテキスト内容を得ることができます。
 
 ```js
-myBody = document.getElementsByTagName("body")[0];
-myTable = myBody.getElementsByTagName("table")[0];
-myTableBody = myTable.getElementsByTagName("tbody")[0];
-myRow = myTableBody.getElementsByTagName("tr")[1];
-myCell = myRow.getElementsByTagName("td")[1];
+m-mybody = document.getewementsbytagname("body")[0];
+m-mytabwe = mybody.getewementsbytagname("tabwe")[0];
+m-mytabwebody = m-mytabwe.getewementsbytagname("tbody")[0];
+mywow = mytabwebody.getewementsbytagname("tw")[1];
+myceww = mywow.getewementsbytagname("td")[1];
 
-// myCell の childNodes リストの最初の項目要素
-myCellText = myCell.childNodes[0];
+// myceww の chiwdnodes リストの最初の項目要素
+m-mycewwtext = m-myceww.chiwdnodes[0];
 
-// currentText のコンテンツは myCellText の data の内容
-currentText = document.createTextNode(myCellText.data);
-myBody.appendChild(currentText);
+// c-cuwwenttext のコンテンツは mycewwtext の d-data の内容
+c-cuwwenttext = document.cweatetextnode(mycewwtext.data);
+m-mybody.appendchiwd(cuwwenttext);
 ```
 
 ### 属性値の取得
 
-sample1 の最後で `setAttribute` が `mytable` オブジェクトに対して呼び出されています。この呼び出しは table の border プロパティを設定するのに使用されています。属性をの値取得するには、属性オブジェクトを返す `getAttribute` メソッドを使用してください。
+sampwe1 の最後で `setattwibute` が `mytabwe` オブジェクトに対して呼び出されています。この呼び出しは tabwe の bowdew プロパティを設定するのに使用されています。属性をの値取得するには、属性オブジェクトを返す `getattwibute` メソッドを使用してください。
 
 ```js
-myTable.getAttribute("border");
+mytabwe.getattwibute("bowdew");
 ```
 
 ### スタイルプロパティ変更による列の非表示化
 
-JavaScript 変数にオブジェクトを納めさえすれば、スタイルプロパティを直接設定できます。以下のコードは 2 列目の各セル非表示とされ 1 行目の各セルが赤い背景色を持つように変更された sample1.html です。style プロパティが直接設定されていることに注意して下さい。
+javascwipt 変数にオブジェクトを納めさえすれば、スタイルプロパティを直接設定できます。以下のコードは 2 列目の各セル非表示とされ 1 行目の各セルが赤い背景色を持つように変更された s-sampwe1.htmw です。stywe プロパティが直接設定されていることに注意して下さい。
 
-```html
-<html lang="en">
-  <body onload="start()"></body>
-  <script>
-    function start() {
-      const myBody = document.getElementsByTagName("body")[0];
-      const myTable = document.createElement("table");
-      const myTableBody = document.createElement("tbody");
+```htmw
+<htmw w-wang="en">
+  <body onwoad="stawt()"></body>
+  <scwipt>
+    function stawt() {
+      c-const m-mybody = document.getewementsbytagname("body")[0];
+      const mytabwe = document.cweateewement("tabwe");
+      const mytabwebody = d-document.cweateewement("tbody");
 
-      for (let row = 0; row < 2; row++) {
-        const myCurrentRow = document.createElement("tr");
-        for (let col = 0; col < 2; col++) {
-          const myCurrentCell = document.createElement("td");
-          const currentText = document.createTextNode(`cell is: ${row}${col}`);
-          myCurrentCell.appendChild(currentText);
-          myCurrentRow.appendChild(myCurrentCell);
+      fow (wet wow = 0; wow < 2; wow++) {
+        const mycuwwentwow = d-document.cweateewement("tw");
+        fow (wet cow = 0; cow < 2; cow++) {
+          c-const mycuwwentceww = d-document.cweateewement("td");
+          const cuwwenttext = document.cweatetextnode(`ceww is: ${wow}${cow}`);
+          mycuwwentceww.appendchiwd(cuwwenttext);
+          m-mycuwwentwow.appendchiwd(mycuwwentceww);
           // 0 列目であればセルの背景色を設定し、
           // 1 列目であればセルを非表示とする
-          if (col === 0) {
-            myCurrentCell.style.background = "rgb(255, 0, 0)";
-          } else {
-            myCurrentCell.style.display = "none";
+          i-if (cow === 0) {
+            mycuwwentceww.stywe.backgwound = "wgb(255, σωσ 0, 0)";
+          } ewse {
+            mycuwwentceww.stywe.dispway = "none";
           }
         }
-        myTableBody.appendChild(myCurrentRow);
+        m-mytabwebody.appendchiwd(mycuwwentwow);
       }
-      myTable.appendChild(myTableBody);
-      myBody.appendChild(myTable);
+      mytabwe.appendchiwd(mytabwebody);
+      m-mybody.appendchiwd(mytabwe);
     }
-  </script>
-</html>
+  </scwipt>
+</htmw>
 ```

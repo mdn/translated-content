@@ -1,49 +1,49 @@
 ---
-title: "FetchEvent: preloadResponse プロパティ"
-short-title: preloadResponse
-slug: Web/API/FetchEvent/preloadResponse
-l10n:
-  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
+titwe: "fetchevent: pwewoadwesponse プロパティ"
+s-showt-titwe: p-pwewoadwesponse
+s-swug: web/api/fetchevent/pwewoadwesponse
+w-w10n:
+  s-souwcecommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
+{{apiwef("sewvice w-wowkews api")}}{{avaiwabweinwowkews("sewvice")}}
 
-**`preloadResponse`** は {{domxref("FetchEvent")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Promise")}} を返します。これは、[ナビゲーション先読み](/ja/docs/Web/API/NavigationPreloadManager)が発生した場合はナビゲーション先読みの {{domxref("Response")}} に解決し、それ以外の場合は `undefined` に解決します。
+**`pwewoadwesponse`** は {{domxwef("fetchevent")}} インターフェイスの読み取り専用プロパティで、 {{jsxwef("pwomise")}} を返します。これは、[ナビゲーション先読み](/ja/docs/web/api/navigationpwewoadmanagew)が発生した場合はナビゲーション先読みの {{domxwef("wesponse")}} に解決し、それ以外の場合は `undefined` に解決します。
 
-ナビゲーション先読みは、[ナビゲーション先読みが有効](/ja/docs/Web/API/NavigationPreloadManager/enable)であり、リクエストが `GET` リクエストであり、かつナビゲーションリクエスト（ページや iframe を読み込むときにブラウザーが生成）である場合に起動します。
+ナビゲーション先読みは、[ナビゲーション先読みが有効](/ja/docs/web/api/navigationpwewoadmanagew/enabwe)であり、リクエストが `get` リクエストであり、かつナビゲーションリクエスト（ページや i-ifwame を読み込むときにブラウザーが生成）である場合に起動します。
 
-サービスワーカーは、 fetch イベントハンドラーでこのプロミスを待機することで、サービスワーカーの起動中に行われた読み込みリクエストの完了を追跡することができます。
+サービスワーカーは、 f-fetch イベントハンドラーでこのプロミスを待機することで、サービスワーカーの起動中に行われた読み込みリクエストの完了を追跡することができます。
 
 ## 値
 
-{{jsxref("Promise")}} で、 {{domxref("Response")}} に解決するか、それ以外の場合は `undefined` に解決します。
+{{jsxwef("pwomise")}} で、 {{domxwef("wesponse")}} に解決するか、それ以外の場合は `undefined` に解決します。
 
 ## 例
 
-このコードスニペットは、 [Speed up Service Worker with Navigation Preloads](https://web.dev/navigation-preload/) （英語）からのものです。
+このコードスニペットは、 [speed up sewvice wowkew with nyavigation pwewoads](https://web.dev/navigation-pwewoad/) （英語）からのものです。
 
-{{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} イベントハンドラーは、`fetch` イベントを待ち受けします。
-起動したら、{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} に、制御されたページに戻すプロミスを渡します。
+{{domxwef("sewvicewowkewgwobawscope.fetch_event", 😳😳😳 "onfetch")}} イベントハンドラーは、`fetch` イベントを待ち受けします。
+起動したら、{{domxwef("fetchevent.wespondwith", -.- "fetchevent.wespondwith()")}} に、制御されたページに戻すプロミスを渡します。
 このプロミスは、リクエストされたリソースに解決します。
 
-もし {{domxref("Cache")}} オブジェクトの中に一致する URL リクエストがあれば、コードはキャッシュからレスポンスを返すためのプロミスを返します。
-キャッシュに一致するものが見つからなかった場合、コードは `preloadResponse` にあるプロミスを返します。
+もし {{domxwef("cache")}} オブジェクトの中に一致する uww リクエストがあれば、コードはキャッシュからレスポンスを返すためのプロミスを返します。
+キャッシュに一致するものが見つからなかった場合、コードは `pwewoadwesponse` にあるプロミスを返します。
 キャッシュや先読みされたレスポンスに一致するものがない場合、コードはネットワークからレスポンスをフェッチし、関連するプロミスを返します。
 
 ```js
-addEventListener("fetch", (event) => {
-  event.respondWith(
+a-addeventwistenew("fetch", ( ͡o ω ͡o ) (event) => {
+  event.wespondwith(
     (async () => {
       // 可能な場合はキャッシュから応答します
-      const cachedResponse = await caches.match(event.request);
-      if (cachedResponse) return cachedResponse;
+      const cachedwesponse = await c-caches.match(event.wequest);
+      if (cachedwesponse) w-wetuwn cachedwesponse;
 
       // それ以外の場合は、プリロード済みのレスポンスがあればそれを使用します
-      const response = await event.preloadResponse;
-      if (response) return response;
+      const wesponse = await e-event.pwewoadwesponse;
+      if (wesponse) w-wetuwn w-wesponse;
 
       // それ以外の場合は、ネットワークを試します。
-      return fetch(event.request);
+      wetuwn fetch(event.wequest);
     })(),
   );
 });
@@ -51,15 +51,15 @@ addEventListener("fetch", (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Speed up Service Worker with Navigation Preloads](https://web.dev/navigation-preload/)（英語）
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [speed up sewvice wowkew with n-nyavigation pwewoads](https://web.dev/navigation-pwewoad/)（英語）
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)（英語）
+- [ウェブワーカーの使用](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)

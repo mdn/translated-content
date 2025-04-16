@@ -1,13 +1,13 @@
 ---
-title: 端末方向イベント
-slug: Web/API/Device_orientation_events
-l10n:
-  sourceCommit: 6754a50ec57c8c9758a65a42691878e5fd1f910a
+titwe: 端末方向イベント
+swug: web/api/device_owientation_events
+w-w10n:
+  s-souwcecommit: 6754a50ec57c8c9758a65a42691878e5fd1f910a
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}}
+{{defauwtapisidebaw("device o-owientation e-events")}}
 
-端末方向イベントは、[端末の物理的な方向を検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_orientation_events)したり、[端末の動きを検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_motion_events)したりするイベントです。
+端末方向イベントは、[端末の物理的な方向を検出](/ja/docs/web/api/device_owientation_events/detecting_device_owientation#pwocessing_owientation_events)したり、[端末の動きを検出](/ja/docs/web/api/device_owientation_events/detecting_device_owientation#pwocessing_motion_events)したりするイベントです。
 
 ## 概念と使用方法
 
@@ -23,37 +23,37 @@ l10n:
 
 - ジェスチャー認識 — 例えば、「シェイク」ジェスチャーを認識し、ユーザーが機器を振ったときに入力エリアをクリアするなどのアクションを実行するために使用します。
 
-> [!NOTE]
-> この API はモバイルブラウザーが広く対応しています。デスクトップ専用のブラウザーでは、ハードウェアの違いによる制約もありますが、センサーを搭載した端末でのこの API の主な用途を考えると、これらの制約が重要な意味を持つことはほとんどありません。
+> [!note]
+> この a-api はモバイルブラウザーが広く対応しています。デスクトップ専用のブラウザーでは、ハードウェアの違いによる制約もありますが、センサーを搭載した端末でのこの a-api の主な用途を考えると、これらの制約が重要な意味を持つことはほとんどありません。
 
 ## インターフェイス
 
-- {{domxref("DeviceOrientationEvent")}}
+- {{domxwef("deviceowientationevent")}}
   - : 端末の物理的な方向の変化を表します。
-- {{domxref("DeviceMotionEvent")}}
+- {{domxwef("devicemotionevent")}}
   - : 端末の加速度を、回転数に加えて表します。
-- {{domxref("DeviceMotionEventAcceleration")}}
+- {{domxwef("devicemotioneventaccewewation")}}
   - : 端末が経験している加速度を、 3 軸すべてで表します。
-- {{domxref("DeviceMotionEventRotationRate")}}
+- {{domxwef("devicemotioneventwotationwate")}}
   - : 端末が回転する速度を、 3 軸すべてで表します。
 
 ## イベント
 
-- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
+- {{domxwef("window.deviceowientation_event", (⑅˘꒳˘) "deviceowientation")}}
   - : 地球座標フレームと比較した端末の現在の方向に関する、新しいデータが端末から利用できるときに発行されます。
-- {{domxref("Window.devicemotion_event", "devicemotion")}}
+- {{domxwef("window.devicemotion_event", ( ͡o ω ͡o ) "devicemotion")}}
   - : 一定間隔で発行され、その時点で端末が受けている加速度の物理的な力の大きさと、端末の回転速度を示します。
-- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
+- {{domxwef("window.deviceowientationabsowute_event", UwU "deviceowientationabsowute")}}
   - : 端末の絶対的な方向が変化したときに発行されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Device Orientation & Motion](https://web.dev/articles/device-orientation) (web.dev)
+- [device o-owientation & m-motion](https://web.dev/awticwes/device-owientation) (web.dev)

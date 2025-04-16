@@ -1,16 +1,16 @@
 ---
-title: "FontFace: featureSettings プロパティ"
-short-title: featureSettings
-slug: Web/API/FontFace/featureSettings
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontface: featuwesettings プロパティ"
+s-showt-titwe: f-featuwesettings
+s-swug: web/api/fontface/featuwesettings
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font w-woading api")}}
 
-**`featureSettings`** は {{domxref("FontFace")}} インターフェイスのプロパティで、フォントのバリアントプロパティでは利用できない、使用する頻度の低いフォント機能を取得または設定します。
+**`featuwesettings`** は {{domxwef("fontface")}} インターフェイスのプロパティで、フォントのバリアントプロパティでは利用できない、使用する頻度の低いフォント機能を取得または設定します。
 
-このプロパティは {{cssxref("font-feature-settings")}} 記述子と同等です。
+このプロパティは {{cssxwef("font-featuwe-settings")}} 記述子と同等です。
 
 ## 値
 
@@ -18,8 +18,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

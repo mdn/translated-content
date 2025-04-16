@@ -1,65 +1,65 @@
 ---
-title: "Performance: clearMarks() メソッド"
-short-title: clearMarks()
-slug: Web/API/Performance/clearMarks
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pewfowmance: cweawmawks() メソッド"
+s-showt-titwe: c-cweawmawks()
+swug: w-web/api/pewfowmance/cweawmawks
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`clearMarks()`** メソッドは、すべての、または特定の {{domxref("PerformanceMark")}} オブジェクトを、ブラウザーのパフォーマンスタイムラインから除去します。
+**`cweawmawks()`** メソッドは、すべての、または特定の {{domxwef("pewfowmancemawk")}} オブジェクトを、ブラウザーのパフォーマンスタイムラインから除去します。
 
 ## 構文
 
-```js-nolint
-clearMarks()
-clearMarks(name)
+```js-nowint
+c-cweawmawks()
+c-cweawmawks(name)
 ```
 
 ### 引数
 
-- `name` {{optional_inline}}
-  - : 文字列で、 {{domxref("PerformanceMark")}} オブジェクトの{{domxref("PerformanceEntry.name", "名前", "", 1)}}を表します。この引数を省略すると、 {{domxref("PerformanceEntry.entryType","entryType")}} が "`mark`" であるすべての項目が除去されます。
+- `name` {{optionaw_inwine}}
+  - : 文字列で、 {{domxwef("pewfowmancemawk")}} オブジェクトの{{domxwef("pewfowmanceentwy.name", (U ﹏ U) "名前", "", -.- 1)}}を表します。この引数を省略すると、 {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} が "`mawk`" であるすべての項目が除去されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ### マーカーを除去
 
-パフォーマンスマークをすべて、あるいは特定の項目だけを消去するには、次のように `clearMarks()` メソッドを使用します。
+パフォーマンスマークをすべて、あるいは特定の項目だけを消去するには、次のように `cweawmawks()` メソッドを使用します。
 
 ```js
 // マークの束を作成
-performance.mark("login-started");
-performance.mark("login-started");
-performance.mark("login-finished");
-performance.mark("form-sent");
-performance.mark("video-loaded");
-performance.mark("video-loaded");
+p-pewfowmance.mawk("wogin-stawted");
+pewfowmance.mawk("wogin-stawted");
+pewfowmance.mawk("wogin-finished");
+pewfowmance.mawk("fowm-sent");
+pewfowmance.mawk("video-woaded");
+p-pewfowmance.mawk("video-woaded");
 
-performance.getEntriesByType("mark").length; // 6
+pewfowmance.getentwiesbytype("mawk").wength; // 6
 
-// "login-started" マーク項目のみを削除
-performance.clearMarks("login-started");
-performance.getEntriesByType("mark").length; // 4
+// "wogin-stawted" マーク項目のみを削除
+pewfowmance.cweawmawks("wogin-stawted");
+pewfowmance.getentwiesbytype("mawk").wength; // 4
 
 // すべてのマーク項目を削除
-performance.clearMarks();
-performance.getEntriesByType("mark").length; // 0
+p-pewfowmance.cweawmawks();
+pewfowmance.getentwiesbytype("mawk").wength; // 0
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("PerformanceMark")}}
+- {{domxwef("pewfowmancemawk")}}

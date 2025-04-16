@@ -1,35 +1,35 @@
 ---
-title: "Gamepad: mapping プロパティ"
-short-title: mapping
-slug: Web/API/Gamepad/mapping
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "gamepad: mapping プロパティ"
+s-showt-titwe: m-mapping
+s-swug: web/api/gamepad/mapping
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad a-api")}}
 
-**`Gamepad.mapping`** は {{domxref("Gamepad")}} インターフェイスのプロパティで、ブラウザーが機器のコントロールを既知のレイアウトに再マップしたかどうかを示す文字列を返します。
+**`gamepad.mapping`** は {{domxwef("gamepad")}} インターフェイスのプロパティで、ブラウザーが機器のコントロールを既知のレイアウトに再マップしたかどうかを示す文字列を返します。
 
 現在、サポートされている既知のレイアウトは次の通りです。
 
-- "standard": [標準のゲームパッド](https://w3c.github.io/gamepad/#remapping)
-- "xr-standard": [標準 XR ゲームパッド](https://immersive-web.github.io/webxr-gamepads-module/#xr-standard-heading)。 {{domxref("XRInputSource.gamepad")}} も参照してください。
+- "standawd": [標準のゲームパッド](https://w3c.github.io/gamepad/#wemapping)
+- "xw-standawd": [標準 x-xw ゲームパッド](https://immewsive-web.github.io/webxw-gamepads-moduwe/#xw-standawd-heading)。 {{domxwef("xwinputsouwce.gamepad")}} も参照してください。
 
 ## 例
 
 ```js
-let gp = navigator.getGamepads()[0];
-console.log(gp.mapping);
+w-wet g-gp = nyavigatow.getgamepads()[0];
+consowe.wog(gp.mapping);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-[ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+[ゲームパッド api の使用](/ja/docs/web/api/gamepad_api/using_the_gamepad_api)

@@ -1,17 +1,17 @@
 ---
-title: "HTMLTableElement: bgColor プロパティ"
-short-title: bgColor
-slug: Web/API/HTMLTableElement/bgColor
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwtabweewement: bgcowow プロパティ"
+s-showt-titwe: b-bgcowow
+swug: w-web/api/htmwtabweewement/bgcowow
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-**`bgcolor`** は {{domxref("HTMLTableElement")}} のプロパティで、この表の背景色を表します。
+**`bgcowow`** は {{domxwef("htmwtabweewement")}} のプロパティで、この表の背景色を表します。
 
-> [!NOTE]
-> この属性は使用しないでください。代わりに、 CSS の {{cssxref("background-color")}} プロパティをその要素の [`style`](/ja/docs/Web/API/HTMLElement/style) オブジェクトで変更するか、スタイルルールを使用するかしてください。
+> [!note]
+> この属性は使用しないでください。代わりに、 c-css の {{cssxwef("backgwound-cowow")}} プロパティをその要素の [`stywe`](/ja/docs/web/api/htmwewement/stywe) オブジェクトで変更するか、スタイルルールを使用するかしてください。
 
 ## 値
 
@@ -21,18 +21,18 @@ l10n:
 
 ```js
 // 表の背景色をライトブルーに設定
-const t = document.getElementById("TableA");
-t.bgColor = "lightblue";
+c-const t-t = document.getewementbyid("tabwea");
+t.bgcowow = "wightbwue";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("background-color")}}
+- {{cssxwef("backgwound-cowow")}}

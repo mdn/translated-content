@@ -1,31 +1,31 @@
 ---
-title: WebGLRenderingContext.clear()
-slug: Web/API/WebGLRenderingContext/clear
+titwe: webgwwendewingcontext.cweaw()
+swug: web/api/webgwwendewingcontext/cweaw
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.clear()`** メソッドは、バッファーをプリセット値で消去します。
+[webgw a-api](/ja/docs/web/api/webgw_api) の **`webgwwendewingcontext.cweaw()`** メソッドは、バッファーをプリセット値で消去します。
 
-プリセット値は、{{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} や {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} で設定可能です。
+プリセット値は、{{domxwef("webgwwendewingcontext.cweawcowow", (⑅˘꒳˘) "cweawcowow()")}}, ( ͡o ω ͡o ) {{domxwef("webgwwendewingcontext.cweawdepth", UwU "cweawdepth()")}} や {{domxwef("webgwwendewingcontext.cweawstenciw", rawr x3 "cweawstenciw()")}} で設定可能です。
 
-シザーボックス、ディザリング、バッファー書き込みマスクは `clear()` メソッドに影響します。
+シザーボックス、ディザリング、バッファー書き込みマスクは `cweaw()` メソッドに影響します。
 
 ## 構文
 
 ```
-void gl.clear(mask);
+v-void gw.cweaw(mask);
 ```
 
 ### 引数
 
 - `mask`
 
-  - : 消去されるバッファーを示す {{domxref("GLbitfield")}} のビット論理和マスクです。以下の値を取ることができます。
+  - : 消去されるバッファーを示す {{domxwef("gwbitfiewd")}} のビット論理和マスクです。以下の値を取ることができます。
 
-    - `gl.COLOR_BUFFER_BIT`
-    - `gl.DEPTH_BUFFER_BIT`
-    - `gl.STENCIL_BUFFER_BIT`
+    - `gw.cowow_buffew_bit`
+    - `gw.depth_buffew_bit`
+    - `gw.stenciw_buffew_bit`
 
 ### 返り値
 
@@ -33,35 +33,35 @@ void gl.clear(mask);
 
 ### 例外
 
-_mask_ が記載した値のうちどれでもない場合、`gl.INVALID_ENUM` エラーがスローされます。
+_mask_ が記載した値のうちどれでもない場合、`gw.invawid_enum` エラーがスローされます。
 
 ## 例
 
-`clear()` メソッドは複数の値を受け入れることができます。
+`cweaw()` メソッドは複数の値を受け入れることができます。
 
 ```js
-gl.clear(gl.DEPTH_BUFFER_BIT);
-gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
+g-gw.cweaw(gw.depth_buffew_bit);
+g-gw.cweaw(gw.depth_buffew_bit | g-gw.cowow_buffew_bit);
 ```
 
-現在の消去する値を取得するには、`COLOR_CLEAR_VALUE`, `DEPTH_CLEAR_VALUE`, や `STENCIL_CLEAR_VALUE` 定数で問い合わせます。
+現在の消去する値を取得するには、`cowow_cweaw_vawue`, rawr `depth_cweaw_vawue`, σωσ や `stenciw_cweaw_vawue` 定数で問い合わせます。
 
 ```js
-gl.getParameter(gl.COLOR_CLEAR_VALUE);
-gl.getParameter(gl.DEPTH_CLEAR_VALUE);
-gl.getParameter(gl.STENCIL_CLEAR_VALUE);
+g-gw.getpawametew(gw.cowow_cweaw_vawue);
+g-gw.getpawametew(gw.depth_cweaw_vawue);
+g-gw.getpawametew(gw.stenciw_cweaw_vawue);
 ```
 
 ## 仕様策定状況
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- {{domxref("WebGLRenderingContext.clearColor()")}}
-- {{domxref("WebGLRenderingContext.clearDepth()")}}
-- {{domxref("WebGLRenderingContext.clearStencil()")}}
+- {{domxwef("webgwwendewingcontext.cweawcowow()")}}
+- {{domxwef("webgwwendewingcontext.cweawdepth()")}}
+- {{domxwef("webgwwendewingcontext.cweawstenciw()")}}

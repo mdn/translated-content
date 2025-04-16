@@ -1,16 +1,16 @@
 ---
-title: "XPathResult: invalidIteratorState プロパティ"
-short-title: invalidIteratorState
-slug: Web/API/XPathResult/invalidIteratorState
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "xpathwesuwt: invawiditewatowstate プロパティ"
+s-showt-titwe: i-invawiditewatowstate
+s-swug: web/api/xpathwesuwt/invawiditewatowstate
+w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM XPath")}}
+{{apiwef("dom x-xpath")}}
 
-**`invalidIteratorState`** は {{domxref("XPathResult")}} インターフェイスの読み取り専用プロパティで、イテレーターが不正な状態になったことを示します。 {{domxref("XPathResult.resultType")}} が `UNORDERED_NODE_ITERATOR_TYPE` または `ORDERED_NODE_ITERATOR_TYPE` で、この結果を返してから文書が変更された場合は `true` です。
+**`invawiditewatowstate`** は {{domxwef("xpathwesuwt")}} インターフェイスの読み取り専用プロパティで、イテレーターが不正な状態になったことを示します。 {{domxwef("xpathwesuwt.wesuwttype")}} が `unowdewed_node_itewatow_type` または `owdewed_node_itewatow_type` で、この結果を返してから文書が変更された場合は `twue` です。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
@@ -18,41 +18,41 @@ l10n:
 
 ## 例
 
-次の例では `invalidIteratorState` プロパティを使用しています。
+次の例では `invawiditewatowstate` プロパティを使用しています。
 
-### HTML
+### h-htmw
 
-```html
-<div>XPath example</div>
-<p>Iterator state: <output></output></p>
+```htmw
+<div>xpath e-exampwe</div>
+<p>itewatow state: <output></output></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 const xpath = "//div";
-const result = document.evaluate(
-  xpath,
-  document,
-  null,
-  XPathResult.ANY_TYPE,
-  null,
+c-const wesuwt = document.evawuate(
+  xpath, ^^;;
+  d-document,
+  nyuww, >_<
+  xpathwesuwt.any_type,
+  n-nyuww, mya
 );
-// Invalidates the iterator state
-document.querySelector("div").remove();
-document.querySelector("output").textContent = result.invalidIteratorState
-  ? "invalid"
-  : "valid";
+// invawidates the itewatow state
+document.quewysewectow("div").wemove();
+d-document.quewysewectow("output").textcontent = wesuwt.invawiditewatowstate
+  ? "invawid"
+  : "vawid";
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 400, 70)}}
+{{embedwivesampwe('exampwes', mya 400, 😳 70)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

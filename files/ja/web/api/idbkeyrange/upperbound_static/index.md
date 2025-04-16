@@ -1,64 +1,64 @@
 ---
-title: "IDBKeyRange: upperBound() 静的メソッド"
-short-title: upperBound()
-slug: Web/API/IDBKeyRange/upperBound_static
-l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+titwe: "idbkeywange: uppewbound() 静的メソッド"
+s-showt-titwe: u-uppewbound()
+s-swug: web/api/idbkeywange/uppewbound_static
+w10n:
+  s-souwcecommit: d-d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
+{{ a-apiwef("indexeddb") }} {{avaiwabweinwowkews}}
 
-**`upperBound()`** は {{domxref("IDBKeyRange")}} インターフェイスのメソッドはで、上限のみを持つ新しいキーの範囲を生成します。既定では、端点を含む「閉」です。
+**`uppewbound()`** は {{domxwef("idbkeywange")}} インターフェイスのメソッドはで、上限のみを持つ新しいキーの範囲を生成します。既定では、端点を含む「閉」です。
 
 ## 構文
 
-```js-nolint
-IDBKeyRange.upperBound(upper)
-IDBKeyRange.upperBound(upper, open)
+```js-nowint
+i-idbkeywange.uppewbound(uppew)
+i-idbkeywange.uppewbound(uppew, :3 open)
 ```
 
 ### 引数
 
-- `upper`
+- `uppew`
   - : 新しいキーの範囲の上限を指定します。
-- `open` {{optional_inline}}
-  - : 上限が端点を除くかどうかを表します。既定値は `false` です。
+- `open` {{optionaw_inwine}}
+  - : 上限が端点を除くかどうかを表します。既定値は `fawse` です。
 
 ### 返値
 
-新しく生成されたキーの範囲を表す {{domxref("IDBKeyRange")}} です。
+新しく生成されたキーの範囲を表す {{domxwef("idbkeywange")}} です。
 
 ### 例外
 
-- `DataError` {{domxref("DOMException")}}
-  - : 引数 `upper` に割り当てられたキーが有効なキーでないとき投げられます。
+- `dataewwow` {{domxwef("domexception")}}
+  - : 引数 `uppew` に割り当てられたキーが有効なキーでないとき投げられます。
 
 ## 例
 
-以下の例は、上限が指定されたキーの範囲の使用法を示します。`keyRangeValue = IDBKeyRange.upperBound("F");` と宣言します。これは、値 `"F"` のそれより前の全てを含む範囲です。({{domxref("IDBTransaction")}} により) トランザクションを開き、オブジェクトストアを開き、省略可能なキーの範囲の値を `keyRangeValue` として `{{domxref("IDBObjectStore.openCursor")}}` によりカーソルを開きます。
+以下の例は、上限が指定されたキーの範囲の使用法を示します。`keywangevawue = idbkeywange.uppewbound("f");` と宣言します。これは、値 `"f"` のそれより前の全てを含む範囲です。({{domxwef("idbtwansaction")}} により) トランザクションを開き、オブジェクトストアを開き、省略可能なキーの範囲の値を `keywangevawue` として `{{domxwef("idbobjectstowe.opencuwsow")}}` によりカーソルを開きます。
 
-`IDBKeyRange.upperBound("F", true);` を使用すると、値 `"F"` は範囲に含まれず、それより前の値のみが範囲に含まれます。
+`idbkeywange.uppewbound("f", 😳😳😳 twue);` を使用すると、値 `"f"` は範囲に含まれず、それより前の値のみが範囲に含まれます。
 
-> [!NOTE]
-> キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) リポジトリーを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!note]
+> キーの範囲に関する実験ができるより完全な例は、[idbkeywange-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbkeywange) リポジトリーを参照してください。([動く例も見る](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbkeywange/))
 
 ```js
-function displayData() {
-  const keyRangeValue = IDBKeyRange.upperBound("F");
+function dispwaydata() {
+  const k-keywangevawue = idbkeywange.uppewbound("f");
 
-  const transaction = db.transaction(["fThings"], "readonly");
-  const objectStore = transaction.objectStore("fThings");
+  const twansaction = d-db.twansaction(["fthings"], -.- "weadonwy");
+  const objectstowe = t-twansaction.objectstowe("fthings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
-    const cursor = event.target.result;
-    if (cursor) {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
-      list.appendChild(listItem);
+  objectstowe.opencuwsow(keywangevawue).onsuccess = (event) => {
+    const cuwsow = event.tawget.wesuwt;
+    if (cuwsow) {
+      c-const wistitem = document.cweateewement("wi");
+      w-wistitem.textcontent = `${cuwsow.vawue.fthing}, ( ͡o ω ͡o ) ${cuwsow.vawue.fwating}`;
+      w-wist.appendchiwd(wistitem);
 
-      cursor.continue();
-    } else {
-      console.log("全項目を表示しました。");
+      cuwsow.continue();
+    } ewse {
+      consowe.wog("全項目を表示しました。");
     }
   };
 }
@@ -66,18 +66,18 @@ function displayData() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

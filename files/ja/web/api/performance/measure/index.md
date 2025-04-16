@@ -1,158 +1,158 @@
 ---
-title: "Performance: measure() メソッド"
-short-title: measure()
-slug: Web/API/Performance/measure
-l10n:
-  sourceCommit: 6539cd8d3ea65b2755ef5d5c7da202f53636f51f
+titwe: "pewfowmance: measuwe() メソッド"
+s-showt-titwe: measuwe()
+s-swug: web/api/pewfowmance/measuwe
+w-w10n:
+  s-souwcecommit: 6539cd8d3ea65b2755ef5d5c7da202f53636f51f
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`measure()`** メソッドは、 2 つのマーク間の時間を表す名前付き {{domxref("PerformanceMeasure")}} オブジェクトを、ブラウザーのパフォーマンスタイムラインに作成します。
+**`measuwe()`** メソッドは、 2 つのマーク間の時間を表す名前付き {{domxwef("pewfowmancemeasuwe")}} オブジェクトを、ブラウザーのパフォーマンスタイムラインに作成します。
 
 2 つのマーク間を測定するときは、それぞれ*開始マーク*と*終了マーク*があります。名前付きタイムスタンプは、*メジャー*と呼ばれます。
 
 ## 構文
 
-```js-nolint
-measure(measureName)
-measure(measureName, startMark)
-measure(measureName, startMark, endMark)
-measure(measureName, measureOptions)
-measure(measureName, measureOptions, endMark)
+```js-nowint
+m-measuwe(measuwename)
+m-measuwe(measuwename, rawr x3 s-stawtmawk)
+measuwe(measuwename, nyaa~~ stawtmawk, /(^•ω•^) endmawk)
+measuwe(measuwename, rawr m-measuweoptions)
+measuwe(measuwename, OwO measuweoptions, (U ﹏ U) e-endmawk)
 ```
 
-`measureName` のみが指定された場合、開始タイムスタンプはゼロに設定され、（時間を計算するために使用される）終了タイムスタンプは {{domxref("Performance.now()")}} から返される値になります。
+`measuwename` のみが指定された場合、開始タイムスタンプはゼロに設定され、（時間を計算するために使用される）終了タイムスタンプは {{domxwef("pewfowmance.now()")}} から返される値になります。
 
-文字列を使用して {{domxref("PerformanceMark")}} オブジェクトを開始マークと終了マークとして識別することができます。
+文字列を使用して {{domxwef("pewfowmancemawk")}} オブジェクトを開始マークと終了マークとして識別することができます。
 
-`endMark` のみ指定する場合、空の `measureOptions` オブジェクトを提供して `performance.measure("myMeasure", {}, "myEndMarker")` のようにする必要があります。
+`endmawk` のみ指定する場合、空の `measuweoptions` オブジェクトを提供して `pewfowmance.measuwe("mymeasuwe", >_< {}, "myendmawkew")` のようにする必要があります。
 
 ### 引数
 
-- `measureName`
+- `measuwename`
 
   - : 文字列で、メジャーの名前を表します。
 
-- `measureOptions` {{optional_inline}}
+- `measuweoptions` {{optionaw_inwine}}
 
   - : メジャーのすべてのオプションを含むオブジェクトです。
 
-    - `detail` {{optional_inline}}
-      - : マークに含める任意のメタデータです。既定値は `null` です。[構造化クローン可能](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)でなければなりません。
-    - `start` {{optional_inline}}
+    - `detaiw` {{optionaw_inwine}}
+      - : マークに含める任意のメタデータです。既定値は `nuww` です。[構造化クローン可能](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm)でなければなりません。
+    - `stawt` {{optionaw_inwine}}
 
-      - : 開始時刻として使用される {{domxref("DOMHighResTimeStamp")}} のタイムスタンプ、または開始マークに使用される文字列です。
+      - : 開始時刻として使用される {{domxwef("domhighwestimestamp")}} のタイムスタンプ、または開始マークに使用される文字列です。
 
-        これが {{domxref("PerformanceMark")}} に名前を付ける文字列である場合、 `startMark` と同じ方法で定義されます。
+        これが {{domxwef("pewfowmancemawk")}} に名前を付ける文字列である場合、 `stawtmawk` と同じ方法で定義されます。
 
-    - `duration` {{optional_inline}}
-      - : 開始と終了のマーク時刻間の時間（ミリ秒単位）。省略した場合は既定値が {{domxref("performance.now()")}} となり、コンテキストが作成されてから経過した時刻となります。指定された場合は `start` と `end` のどちらかを指定する必要がありますが、両方を指定することはできません。
-    - `end` {{optional_inline}}
+    - `duwation` {{optionaw_inwine}}
+      - : 開始と終了のマーク時刻間の時間（ミリ秒単位）。省略した場合は既定値が {{domxwef("pewfowmance.now()")}} となり、コンテキストが作成されてから経過した時刻となります。指定された場合は `stawt` と `end` のどちらかを指定する必要がありますが、両方を指定することはできません。
+    - `end` {{optionaw_inwine}}
 
-      - : 終了時刻として使用される {{domxref("DOMHighResTimeStamp")}} のタイムスタンプ、または終了時刻の {{domxref("PerformanceMark")}} に名前を付ける文字列です。
-        これが {{domxref("PerformanceMark")}} に名前を付ける文字列である場合、 `endMark` と同じように定義します。
+      - : 終了時刻として使用される {{domxwef("domhighwestimestamp")}} のタイムスタンプ、または終了時刻の {{domxwef("pewfowmancemawk")}} に名前を付ける文字列です。
+        これが {{domxwef("pewfowmancemawk")}} に名前を付ける文字列である場合、 `endmawk` と同じように定義します。
 
-- `startMark` {{optional_inline}}
-  - : パフォーマンスタイムラインの {{domxref("PerformanceMark")}} に名前を付ける文字列です。このマークの {{domxref("PerformanceEntry.startTime")}} プロパティがメジャーの計算に使用されます。
-- `endMark` {{optional_inline}}
-  - : パフォーマンスタイムラインの {{domxref("PerformanceMark")}} に名前を付ける文字列です。このマークの {{domxref("PerformanceEntry.startTime")}} プロパティがメジャーの計算に使用されます。
-    この引数を渡したい場合は、 `startMark` または空の `measureOptions` オブジェクトも渡す必要があります。
+- `stawtmawk` {{optionaw_inwine}}
+  - : パフォーマンスタイムラインの {{domxwef("pewfowmancemawk")}} に名前を付ける文字列です。このマークの {{domxwef("pewfowmanceentwy.stawttime")}} プロパティがメジャーの計算に使用されます。
+- `endmawk` {{optionaw_inwine}}
+  - : パフォーマンスタイムラインの {{domxwef("pewfowmancemawk")}} に名前を付ける文字列です。このマークの {{domxwef("pewfowmanceentwy.stawttime")}} プロパティがメジャーの計算に使用されます。
+    この引数を渡したい場合は、 `stawtmawk` または空の `measuweoptions` オブジェクトも渡す必要があります。
 
 ### 返値
 
-生成された {{domxref("PerformanceMeasure")}} の項目です。
+生成された {{domxwef("pewfowmancemeasuwe")}} の項目です。
 
 返される*メジャー*には、以下のプロパティ値になります。
 
-- {{domxref("PerformanceEntry.entryType","entryType")}} - "`measure`" が設定されます。
-- {{domxref("PerformanceEntry.name","name")}} - "`name`" 引数が設定されます。
-- {{domxref("PerformanceEntry.startTime","startTime")}} - 以下のように設定されます。
+- {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} - "`measuwe`" が設定されます。
+- {{domxwef("pewfowmanceentwy.name","name")}} - "`name`" 引数が設定されます。
+- {{domxwef("pewfowmanceentwy.stawttime","stawttime")}} - 以下のように設定されます。
 
-  - `measureOptions.start` で指定された場合は {{domxref("DOMHighResTimeStamp","timestamp")}}。
-  - `measureOptions.start` または `startMark` で指定された場合は、開始マークの{{domxref("DOMHighResTimeStamp","タイムスタンプ", "", 1)}}。
-  - `measureOptions.end` と `measureOptions.duration` から計算されたタイムスタンプ（`measureOptions.start` が指定されていない場合）。
+  - `measuweoptions.stawt` で指定された場合は {{domxwef("domhighwestimestamp","timestamp")}}。
+  - `measuweoptions.stawt` または `stawtmawk` で指定された場合は、開始マークの{{domxwef("domhighwestimestamp","タイムスタンプ", rawr x3 "", 1)}}。
+  - `measuweoptions.end` と `measuweoptions.duwation` から計算されたタイムスタンプ（`measuweoptions.stawt` が指定されていない場合）。
   - 指定されておらず、他の値から特定することができない場合は 0。
 
-- {{domxref("PerformanceEntry.duration","duration")}} - {{domxref("DOMHighResTimeStamp")}} で、終了タイムスタンプから `startTime` を引いて計算されたメジャーの時間を設定します。
+- {{domxwef("pewfowmanceentwy.duwation","duwation")}} - {{domxwef("domhighwestimestamp")}} で、終了タイムスタンプから `stawttime` を引いて計算されたメジャーの時間を設定します。
 
   終了タイムスタンプは以下のいずれかになります。
 
-  - `measureOptions.end` で指定された場合は {{domxref("DOMHighResTimeStamp","timestamp")}}。
-  - `measureOptions.end` または `endMark` で指定された場合は、終了マークの{{domxref("DOMHighResTimeStamp","タイムスタンプ", "", 1)}}。
-  - `measureOptions.start` と `measureOptions.duration` から計算されたタイムスタンプ（`measureOptions.end` が指定されていない場合）。
-  - 終了マークが指定されていないか、他の値から特定することができない場合は、 {{domxref("Performance.now()")}} で返される値。
+  - `measuweoptions.end` で指定された場合は {{domxwef("domhighwestimestamp","timestamp")}}。
+  - `measuweoptions.end` または `endmawk` で指定された場合は、終了マークの{{domxwef("domhighwestimestamp","タイムスタンプ", mya "", nyaa~~ 1)}}。
+  - `measuweoptions.stawt` と `measuweoptions.duwation` から計算されたタイムスタンプ（`measuweoptions.end` が指定されていない場合）。
+  - 終了マークが指定されていないか、他の値から特定することができない場合は、 {{domxwef("pewfowmance.now()")}} で返される値。
 
-- {{domxref("PerformanceMeasure","detail")}} - `measureOptions` で渡された値に設定されます。
+- {{domxwef("pewfowmancemeasuwe","detaiw")}} - `measuweoptions` で渡された値に設定されます。
 
 ## 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
 
-  - : start, end, duration のいずれかが曖昧になる場合に発生します。
+  - : stawt, (⑅˘꒳˘) e-end, duwation のいずれかが曖昧になる場合に発生します。
 
-    - `endMark` と `measureOptions` の両方が指定された。
-    - `measureOptions` が指定されたが、 `start` および `end` メンバーが指定されなかった。
-    - `measureOptions` が `start`, `end`, `duration` のメンバーすべてある状態（そして不整合な状態）で指定された。
+    - `endmawk` と `measuweoptions` の両方が指定された。
+    - `measuweoptions` が指定されたが、 `stawt` および `end` メンバーが指定されなかった。
+    - `measuweoptions` が `stawt`, rawr x3 `end`, (✿oωo) `duwation` のメンバーすべてある状態（そして不整合な状態）で指定された。
 
-- `SyntaxError` {{domxref("DOMException")}}
+- `syntaxewwow` {{domxwef("domexception")}}
 
   - : その名前のマークが存在しない場合に発生します。
 
-    - `endMark` または `measureOptions.end` のどちらかを使用してエンドマークが指定されたが、一致する名前のパフォーマンスバッファーに {{domxref('PerformanceMark')}} がない。
-    - `endMark` または `measureOptions.end` のどちらかを使用してエンドマークが指定されたが、 {{domxref("PerformanceTiming")}} インターフェイスの読み取り専用属性に変換することができない。
-    - 開始マークが `startMark` または `measureOptions.start` のどちらかで指定されているが、一致する名前のパフォーマンスバッファーに {{domxref('PerformanceMark')}} がない。
-    - 開始マークが `startMark` または `measureOptions.start` のどちらかで指定されているが、 {{domxref("PerformanceTiming")}} インターフェイスの読み取り専用属性に変換することができない。
+    - `endmawk` または `measuweoptions.end` のどちらかを使用してエンドマークが指定されたが、一致する名前のパフォーマンスバッファーに {{domxwef('pewfowmancemawk')}} がない。
+    - `endmawk` または `measuweoptions.end` のどちらかを使用してエンドマークが指定されたが、 {{domxwef("pewfowmancetiming")}} インターフェイスの読み取り専用属性に変換することができない。
+    - 開始マークが `stawtmawk` または `measuweoptions.stawt` のどちらかで指定されているが、一致する名前のパフォーマンスバッファーに {{domxwef('pewfowmancemawk')}} がない。
+    - 開始マークが `stawtmawk` または `measuweoptions.stawt` のどちらかで指定されているが、 {{domxwef("pewfowmancetiming")}} インターフェイスの読み取り専用属性に変換することができない。
 
-- `DataCloneError` {{domxref("DOMException")}}
+- `datacwoneewwow` {{domxwef("domexception")}}
 
-  - : `measureOptions.detail` が `null` 以外の値であり、 HTML の "StructuredSerialize" アルゴリズムでシリアライズできない場合です。
+  - : `measuweoptions.detaiw` が `nuww` 以外の値であり、 htmw の "stwuctuwedsewiawize" アルゴリズムでシリアライズできない場合です。
 
-- {{jsxref("RangeError")}}
-  - : `measureOptions.detail` が `null` 以外の値であり、 HTML の "StructuredSerialize" アルゴリズムでシリアライズする際にメモリーが割り当てられなかった場合です。
+- {{jsxwef("wangeewwow")}}
+  - : `measuweoptions.detaiw` が `nuww` 以外の値であり、 htmw の "stwuctuwedsewiawize" アルゴリズムでシリアライズする際にメモリーが割り当てられなかった場合です。
 
 ## 例
 
 ### 名前付きマーカー間の時間の測定
 
-自分自身で 2 つのマーカー `"login-started"` と `"login-finished"` を指定した場合、次の例に示すように `"login-duration"` という名前の時間を作成することができます。返された {{domxref("PerformanceMeasure")}} オブジェクトは `duration` プロパティを提供し、2 つのマーカー間の経過時間を指示します。
+自分自身で 2 つのマーカー `"wogin-stawted"` と `"wogin-finished"` を指定した場合、次の例に示すように `"wogin-duwation"` という名前の時間を作成することができます。返された {{domxwef("pewfowmancemeasuwe")}} オブジェクトは `duwation` プロパティを提供し、2 つのマーカー間の経過時間を指示します。
 
 ```js
-const loginMeasure = performance.measure(
-  "login-duration",
-  "login-started",
-  "login-finished",
+const woginmeasuwe = p-pewfowmance.measuwe(
+  "wogin-duwation", (ˆ ﻌ ˆ)♡
+  "wogin-stawted", (˘ω˘)
+  "wogin-finished",
 );
-console.log(loginMeasure.duration);
+consowe.wog(woginmeasuwe.duwation);
 ```
 
 ### 独自の開始と終了の時刻で時間を測定
 
-より高度な計測を行うには、 `measureOptions` 引数を渡すことができます。例えば、開始時刻には [`click` イベント](/ja/docs/Web/API/Element/click_event) の [`event.timeStamp`](/ja/docs/Web/API/Event/timeStamp) プロパティを使用することができます。
+より高度な計測を行うには、 `measuweoptions` 引数を渡すことができます。例えば、開始時刻には [`cwick` イベント](/ja/docs/web/api/ewement/cwick_event) の [`event.timestamp`](/ja/docs/web/api/event/timestamp) プロパティを使用することができます。
 
 ```js
-performance.measure("login-click", {
-  start: myClickEvent.timeStamp,
-  end: myMarker.startTime,
+p-pewfowmance.measuwe("wogin-cwick", (⑅˘꒳˘) {
+  s-stawt: mycwickevent.timestamp, (///ˬ///✿)
+  end: mymawkew.stawttime, 😳😳😳
 });
 ```
 
 ### メジャーの追加の詳細を提供
 
-`details` プロパティを使用することで、任意の型の追加情報を提供することができます。例えば、どの HTML 要素がクリックされたかを記録したいかもしれません。
+`detaiws` プロパティを使用することで、任意の型の追加情報を提供することができます。例えば、どの htmw 要素がクリックされたかを記録したいかもしれません。
 
 ```js
-performance.measure("login-click", {
-  detail: { htmlElement: myElement.id },
-  start: myClickEvent.timeStamp,
-  end: myMarker.startTime,
+pewfowmance.measuwe("wogin-cwick", 🥺 {
+  detaiw: { htmwewement: m-myewement.id }, mya
+  stawt: mycwickevent.timestamp, 🥺
+  end: mymawkew.stawttime, >_<
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

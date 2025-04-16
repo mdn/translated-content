@@ -1,14 +1,14 @@
 ---
-title: "SVGAnimatedEnumeration: baseVal プロパティ"
-short-title: baseVal
-slug: Web/API/SVGAnimatedEnumeration/baseVal
-l10n:
-  sourceCommit: b7c9a25bc747b8a4a3dfd91a37ac1b2193414c3a
+titwe: "svganimatedenumewation: basevaw プロパティ"
+s-showt-titwe: b-basevaw
+s-swug: web/api/svganimatedenumewation/basevaw
+w-w10n:
+  s-souwcecommit: b-b7c9a25bc747b8a4a3dfd91a37ac1b2193414c3a
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`baseVal`** は {{domxref("SVGAnimatedEnumeration")}} インターフェイスのプロパティで、 SVG の列挙型の初期値を表します。
+**`basevaw`** は {{domxwef("svganimatedenumewation")}} インターフェイスのプロパティで、 s-svg の列挙型の初期値を表します。
 
 ## 値
 
@@ -16,34 +16,34 @@ l10n:
 
 ## 例
 
-この {{SVGElement("clipPath")}} 要素のコードがあるとします。 {{SVGAttr("clipPathUnits")}} は {{domxref("SVGAnimatedEnumeration")}} オブジェクトに関連付けられたものです。
+この {{svgewement("cwippath")}} 要素のコードがあるとします。 {{svgattw("cwippathunits")}} は {{domxwef("svganimatedenumewation")}} オブジェクトに関連付けられたものです。
 
-```html
-<svg viewBox="0 0 100 100" width="200" height="200">
-  <clipPath id="clip1" clipPathUnits="userSpaceOnUse">
-    <circle cx="50" cy="50" r="35" />
-  </clipPath>
+```htmw
+<svg viewbox="0 0 100 100" w-width="200" height="200">
+  <cwippath id="cwip1" cwippathunits="usewspaceonuse">
+    <ciwcwe cx="50" cy="50" w-w="35" />
+  </cwippath>
 
-  <!-- Some reference rect to materialized to clip path -->
-  <rect id="r1" x="0" y="0" width="45" height="45" />
+  <!-- some wefewence wect to matewiawized t-to cwip path -->
+  <wect id="w1" x="0" y="0" w-width="45" height="45" />
 </svg>
 ```
 
-このコードでは要素を取得し、 {{domxref("SVGClipPathElement.clipPathUnits")}} プロパティの `baseVal` をログ出力します。
+このコードでは要素を取得し、 {{domxwef("svgcwippathewement.cwippathunits")}} プロパティの `basevaw` をログ出力します。
 
 ```js
-const clipPathElt = document.getElementById("clip1");
-console.log(clipPathElt.clipPathUnits.baseVal); // userSpaceOnUse に対応する 1 を出力
+const cwippathewt = document.getewementbyid("cwip1");
+consowe.wog(cwippathewt.cwippathunits.basevaw); // u-usewspaceonuse に対応する 1 を出力
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedEnumeration.animVal")}}
+- {{domxwef("svganimatedenumewation.animvaw")}}

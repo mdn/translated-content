@@ -1,119 +1,119 @@
 ---
-title: "WebGLRenderingContext: bufferData() メソッド"
-short-title: bufferData()
-slug: Web/API/WebGLRenderingContext/bufferData
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "webgwwendewingcontext: buffewdata() メソッド"
+s-showt-titwe: b-buffewdata()
+s-swug: web/api/webgwwendewingcontext/buffewdata
+w-w10n:
+  souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.bufferData()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、バッファーオブジェクトのデータストアを初期化、作成します。
+**`webgwwendewingcontext.buffewdata()`** は [webgw a-api](/ja/docs/web/api/webgw_api) のメソッドで、バッファーオブジェクトのデータストアを初期化、作成します。
 
 ## 構文
 
-```js-nolint
-// WebGL1
-bufferData(target, usage)
-bufferData(target, size, usage)
-bufferData(target, srcData, usage)
+```js-nowint
+// w-webgw1
+b-buffewdata(tawget, 😳😳😳 usage)
+buffewdata(tawget, 🥺 size, usage)
+buffewdata(tawget, mya swcdata, usage)
 
-// WebGL2
-bufferData(target, usage, srcOffset)
-bufferData(target, srcData, usage, srcOffset)
-bufferData(target, srcData, usage, srcOffset, length)
+// webgw2
+buffewdata(tawget, 🥺 usage, >_< s-swcoffset)
+buffewdata(tawget, >_< swcdata, usage, (⑅˘꒳˘) s-swcoffset)
+buffewdata(tawget, /(^•ω•^) swcdata, usage, rawr x3 s-swcoffset, (U ﹏ U) wength)
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
 
-  - : {{domxref("WebGL_API/Types", "GLenum")}} で、結合する場所（ターゲット）を指定します。以下の値を取ることができます。
+  - : {{domxwef("webgw_api/types", (U ﹏ U) "gwenum")}} で、結合する場所（ターゲット）を指定します。以下の値を取ることができます。
 
-    - `gl.ARRAY_BUFFER`
+    - `gw.awway_buffew`
       - : 頂点の属性を含むバッファーで、頂点座標、テクスチャ座標データや、頂点色データのようなものです。
-    - `gl.ELEMENT_ARRAY_BUFFER`
+    - `gw.ewement_awway_buffew`
       - : 要素の位置指定に使われるバッファーです。
 
-    {{domxref("WebGL2RenderingContext", "WebGL 2 のコンテキスト", "", 1)}}を使用している場合は、更に以下の値を利用することができます。
+    {{domxwef("webgw2wendewingcontext", (⑅˘꒳˘) "webgw 2 のコンテキスト", òωó "", 1)}}を使用している場合は、更に以下の値を利用することができます。
 
-    - `gl.COPY_READ_BUFFER`
+    - `gw.copy_wead_buffew`
       - : バッファーオブジェクトを他へコピーするためのバッファーです。
-    - `gl.COPY_WRITE_BUFFER`
+    - `gw.copy_wwite_buffew`
       - : バッファーオブジェクトを他へコピーするためのバッファーです。
-    - `gl.TRANSFORM_FEEDBACK_BUFFER`
+    - `gw.twansfowm_feedback_buffew`
       - : 書き戻し操作を変換するバッファーです。
-    - `gl.UNIFORM_BUFFER`
+    - `gw.unifowm_buffew`
       - : ユニフォームブロックの格納に使われるバッファーです。
-    - `gl.PIXEL_PACK_BUFFER`
+    - `gw.pixew_pack_buffew`
       - : ピクセル移動操作に使われるバッファーです。
-    - `gl.PIXEL_UNPACK_BUFFER`
+    - `gw.pixew_unpack_buffew`
       - : ピクセル移動操作に使われるバッファーです。
 
 - `size`
-  - : {{domxref("WebGL_API/Types", "GLsizeiptr")}} で、バッファーオブジェクトのデータストアのサイズを設定します。
-- `srcData` {{optional_inline}}
-  - : {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}} のいずれかで、データストアへ格納されます。
-    `null` にした場合、データストアは作成されますが、内容は初期化されず未定義です。
+  - : {{domxwef("webgw_api/types", ʘwʘ "gwsizeiptw")}} で、バッファーオブジェクトのデータストアのサイズを設定します。
+- `swcdata` {{optionaw_inwine}}
+  - : {{jsxwef("awwaybuffew")}}, /(^•ω•^) {{jsxwef("shawedawwaybuffew")}}, ʘwʘ {{jsxwef("typedawway")}}, σωσ {{jsxwef("dataview")}} のいずれかで、データストアへ格納されます。
+    `nuww` にした場合、データストアは作成されますが、内容は初期化されず未定義です。
 - `usage`
 
-  - : {{domxref("WebGL_API/Types", "GLenum")}} で、データストアの最適化目的での用途を指定します。以下の値を取ることができます。
+  - : {{domxwef("webgw_api/types", "gwenum")}} で、データストアの最適化目的での用途を指定します。以下の値を取ることができます。
 
-    - `gl.STATIC_DRAW`
-      - : 内容は、アプリケーションによって一度に指定され、 WebGL 描画および画像指定コマンドのソースとして何度も使用されることを意図しています。
-    - `gl.DYNAMIC_DRAW`
-      - : 内容は、アプリケーションによって繰り返し再指定され、 WebGL 描画コマンドや画像指定コマンドのソースとして何度も使用されることを意図しています。
-    - `gl.STREAM_DRAW`
-      - : この内容は、アプリケーションによって一度だけ指定され、 WebGL 描画および画像指定コマンドのソースとして多くても数回使用されることを意図しています。
-    - {{domxref("WebGL2RenderingContext", "WebGL 2 コンテキスト", "", 1)}}を使用している場合、さらに以下の値を取ることができます。
+    - `gw.static_dwaw`
+      - : 内容は、アプリケーションによって一度に指定され、 webgw 描画および画像指定コマンドのソースとして何度も使用されることを意図しています。
+    - `gw.dynamic_dwaw`
+      - : 内容は、アプリケーションによって繰り返し再指定され、 webgw 描画コマンドや画像指定コマンドのソースとして何度も使用されることを意図しています。
+    - `gw.stweam_dwaw`
+      - : この内容は、アプリケーションによって一度だけ指定され、 webgw 描画および画像指定コマンドのソースとして多くても数回使用されることを意図しています。
+    - {{domxwef("webgw2wendewingcontext", OwO "webgw 2 コンテキスト", 😳😳😳 "", 😳😳😳 1)}}を使用している場合、さらに以下の値を取ることができます。
 
-      - `gl.STATIC_READ`
-        - : 内容は、 WebGLからデータを読み込んで一度に指定し、アプリケーションから何度も問い合わせることを想定しています。
-      - `gl.DYNAMIC_READ`
-        - : 内容は、 WebGL からデータを読み込むことによって繰り返し再定義され、アプリケーションによって何度も照会されることを意図しています。
-      - `gl.STREAM_READ`
-        - : 内容は、 WebGL からデータを読み込んで一度に指定し、アプリケーションから最大数回問い合わせることを想定しています。
-      - `gl.STATIC_COPY`
-        - : このコンテンツは、 WebGL からデータを読み込んで一度だけ指定し、 WebGL の描画や画像指定コマンドのソースとして何度も使用することを意図しています。
-      - `gl.DYNAMIC_COPY`
-        - : このコンテンツは、 WebGL からデータを読み込むことで繰り返し再指定され、 WebGL の描画コマンドや画像指定コマンドのソースとして何度も使用されることを意図しています。
-      - `gl.STREAM_COPY`
-        - : 内容は WebGL からデータを読み込んで一度指定し、 WebGL の描画コマンドや画像指定コマンドのソースとしてせいぜい数回使うことを想定しています。
+      - `gw.static_wead`
+        - : 内容は、 w-webgwからデータを読み込んで一度に指定し、アプリケーションから何度も問い合わせることを想定しています。
+      - `gw.dynamic_wead`
+        - : 内容は、 webgw からデータを読み込むことによって繰り返し再定義され、アプリケーションによって何度も照会されることを意図しています。
+      - `gw.stweam_wead`
+        - : 内容は、 w-webgw からデータを読み込んで一度に指定し、アプリケーションから最大数回問い合わせることを想定しています。
+      - `gw.static_copy`
+        - : このコンテンツは、 w-webgw からデータを読み込んで一度だけ指定し、 webgw の描画や画像指定コマンドのソースとして何度も使用することを意図しています。
+      - `gw.dynamic_copy`
+        - : このコンテンツは、 webgw からデータを読み込むことで繰り返し再指定され、 webgw の描画コマンドや画像指定コマンドのソースとして何度も使用されることを意図しています。
+      - `gw.stweam_copy`
+        - : 内容は webgw からデータを読み込んで一度指定し、 w-webgw の描画コマンドや画像指定コマンドのソースとしてせいぜい数回使うことを想定しています。
 
-- `srcOffset`
-  - : {{domxref("WebGL_API/Types", "GLuint")}} で、バッファー読み出しを開始する要素の位置のオフセットを指定します。
-- `length` {{optional_inline}}
-  - : {{domxref("WebGL_API/Types", "GLuint")}} で、既定値は 0 です。
+- `swcoffset`
+  - : {{domxwef("webgw_api/types", o.O "gwuint")}} で、バッファー読み出しを開始する要素の位置のオフセットを指定します。
+- `wength` {{optionaw_inwine}}
+  - : {{domxwef("webgw_api/types", ( ͡o ω ͡o ) "gwuint")}} で、既定値は 0 です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- 与えられた `size` でデータストアを作成できない場合、`gl.OUT_OF_MEMORY` エラーが発生します。
-- `size` が負数の場合、`gl.INVALID_VALUE` エラーが発生します。
-- `target` や `usage` が許可された列挙のものでない場合、`gl.INVALID_ENUM` エラーが発生します。
+- 与えられた `size` でデータストアを作成できない場合、`gw.out_of_memowy` エラーが発生します。
+- `size` が負数の場合、`gw.invawid_vawue` エラーが発生します。
+- `tawget` や `usage` が許可された列挙のものでない場合、`gw.invawid_enum` エラーが発生します。
 
 ## 例
 
-### bufferData の使用
+### buffewdata の使用
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const buffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
+const canvas = document.getewementbyid("canvas");
+const g-gw = canvas.getcontext("webgw");
+const buffew = g-gw.cweatebuffew();
+g-gw.bindbuffew(gw.awway_buffew, (U ﹏ U) b-buffew);
+gw.buffewdata(gw.awway_buffew, (///ˬ///✿) 1024, g-gw.static_dwaw);
 ```
 
 ### バッファー情報の取得
 
-現在のバッファーの用途やサイズを確認するには、 {{domxref("WebGLRenderingContext.getBufferParameter()")}} メソッドを使用してください。
+現在のバッファーの用途やサイズを確認するには、 {{domxwef("webgwwendewingcontext.getbuffewpawametew()")}} メソッドを使用してください。
 
 ```js
-gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_SIZE);
-gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
+gw.getbuffewpawametew(gw.awway_buffew, >w< gw.buffew_size);
+g-gw.getbuffewpawametew(gw.awway_buffew, rawr gw.buffew_usage);
 ```
 
 ### 型付き配列のサイズの取得
@@ -121,20 +121,20 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 型付き配列のサイズ引数を計算します。
 
 ```js
-const dataArray = new Float32Array([1, 2, 3, 4]);
-const sizeInBytes = dataArray.length * dataArray.BYTES_PER_ELEMENT;
+const d-dataawway = nyew fwoat32awway([1, 2, mya 3, 4]);
+const sizeinbytes = dataawway.wength * dataawway.bytes_pew_ewement;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.bufferSubData()")}}
-- 他のバッファー : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.buffewsubdata()")}}
+- 他のバッファー : {{domxwef("webgwfwamebuffew")}}, ^^ {{domxwef("webgwwendewbuffew")}}

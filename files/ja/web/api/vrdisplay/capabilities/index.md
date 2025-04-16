@@ -1,33 +1,33 @@
 ---
-title: VRDisplay.capabilities
-slug: Web/API/VRDisplay/capabilities
+titwe: vwdispway.capabiwities
+swug: web/api/vwdispway/capabiwities
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}
 
-**`capabilities`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` の様々な利用可能な機能を示す {{domxref("VRDisplayCapabilities")}} オブジェクトを返します。
+**`capabiwities`** は {{domxwef("vwdispway")}} インターフェイスの読み取り専用プロパティで、 `vwdispway` の様々な利用可能な機能を示す {{domxwef("vwdispwaycapabiwities")}} オブジェクトを返します。
 
-> [!NOTE]
-> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!note]
+> このプロパティは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部でした。 [webxw d-device api](https://immewsive-web.github.io/webxw/)に置き換えられました。
 
 ### 値
 
-{{domxref("VRDisplayCapabilities")}} オブジェクト。
+{{domxwef("vwdispwaycapabiwities")}} オブジェクト。
 
 ## 例
 
-コード例については [`VRDisplayCapabilities`](/ja/docs/Web/API/VRDisplayCapabilities#examples) を参照してください。
+コード例については [`vwdispwaycapabiwities`](/ja/docs/web/api/vwdispwaycapabiwities#exampwes) を参照してください。
 
 ## 仕様書
 
-このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
+このインターフェイスは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/#intewface-vwdispway) の一部でしたが、 [webxw d-device a-api](https://immewsive-web.github.io/webxw/) に置き換えられました。標準化される予定はありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
+すべてのブラウザーが新しい [webxw a-api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、すべてのブラウザーで動作する w-webxw アプリケーションを開発するには、[a-fwame](https://afwame.io/) や [babywon.js](https://www.babywonjs.com/) や [thwee.js](https://thweejs.owg/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を利用したりすると良いでしょう [\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw api](/ja/docs/web/api/webvw_api)

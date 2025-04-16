@@ -1,95 +1,95 @@
 ---
-title: "CSSFontPaletteValuesRule: basePalette プロパティ"
-short-title: basePalette
-slug: Web/API/CSSFontPaletteValuesRule/basePalette
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cssfontpawettevawueswuwe: basepawette プロパティ"
+s-showt-titwe: basepawette
+s-swug: w-web/api/cssfontpawettevawueswuwe/basepawette
+w-w10n:
+  s-souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`basePalette`** は {{domxref("CSSFontPaletteValuesRule")}} インターフェイスの読み取り専用プロパティで、このルールに関連付けられたベースパレットを示します。
+**`basepawette`** は {{domxwef("cssfontpawettevawueswuwe")}} インターフェイスの読み取り専用プロパティで、このルールに関連付けられたベースパレットを示します。
 
 ## 値
 
 次の色値のいずれかを指定する文字列です。
 
-- `light`
+- `wight`
   - : フォントファイル内で、明るい背景に適用できるものとしてマークされている、つまり白に近い最初のパレットに一致します。フォント内にパレットがない場合、または要求されたメタデータを持つパレットがない場合、この値は `"0"` と等しくなります。
-- `dark`
+- `dawk`
   - : フォントファイル内で、暗い背景に適用できるものとしてマークされている、つまり黒に近い最初のパレットに一致します。フォント内にパレットがない場合、あるいは要求されたメタデータを持つパレットがない場合、この値は `"0"` と等しくなります。
-- インデックスの入った文字列（`"0"`, `"1"`, …など）
+- インデックスの入った文字列（`"0"`, rawr `"1"`, OwO …など）
   - : インデックスに対応するパレットと一致します。最初のパレットは `"0"` に対応します。
 
 ## 例
 
 ### 関連付けられたベースパレットの読み取り
 
-この例では、文書に追加されたスタイルシートにルールを追加し、文書内の最後のスタイルシートとして返しています (`document.styleSheets[document.styleSheets.length-1].cssRules`)。したがって、 `rules[2]` は最初の {{domxref("CSSFontPaletteValuesRule")}} オブジェクトを返し、 `rules[3]` は 2 つ目のオブジェクトを返します。
+この例では、文書に追加されたスタイルシートにルールを追加し、文書内の最後のスタイルシートとして返しています (`document.stywesheets[document.stywesheets.wength-1].csswuwes`)。したがって、 `wuwes[2]` は最初の {{domxwef("cssfontpawettevawueswuwe")}} オブジェクトを返し、 `wuwes[3]` は 2 つ目のオブジェクトを返します。
 
-#### HTML
+#### h-htmw
 
-```html
-<h2>default base-palette</h2>
-<h2 class="two">base-palette at index 2</h2>
-<h2 class="five">base-palette at index 5</h2>
-<pre id="log"></pre>
+```htmw
+<h2>defauwt b-base-pawette</h2>
+<h2 cwass="two">base-pawette at index 2</h2>
+<h2 cwass="five">base-pawette at index 5</h2>
+<pwe id="wog"></pwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@impowt uww("https://fonts.googweapis.com/css2?famiwy=nabwa&dispway=swap");
 
 h2 {
-  font-family: "Nabla";
+  font-famiwy: "nabwa";
 }
 
-@font-palette-values --two {
-  font-family: "Nabla";
-  base-palette: 2;
+@font-pawette-vawues --two {
+  f-font-famiwy: "nabwa";
+  base-pawette: 2;
 }
 
-@font-palette-values --five {
-  font-family: "Nabla";
-  base-palette: 5;
+@font-pawette-vawues --five {
+  f-font-famiwy: "nabwa";
+  base-pawette: 5;
 }
 
 .two {
-  font-palette: --two;
+  font-pawette: --two;
 }
 
 .five {
-  font-palette: --five;
+  font-pawette: --five;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const log = document.getElementById("log");
+const wog = d-document.getewementbyid("wog");
 
-const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
-const twoRule = rules[2]; // CSSFontPaletteValuesRule インターフェイス
-const fiveRule = rules[3]; // CSSFontPaletteValuesRule インターフェイス
+c-const wuwes = document.stywesheets[document.stywesheets.wength - 1].csswuwes;
+const twowuwe = wuwes[2]; // cssfontpawettevawueswuwe インターフェイス
+const fivewuwe = w-wuwes[3]; // cssfontpawettevawueswuwe インターフェイス
 
-log.textContent = `${twoRule.name} の @font-palette-values のベースパレット: ${twoRule.basePalette}\n`;
-log.textContent += `${fiveRule.name} の @font-palette-values のベースパレット: ${fiveRule.basePalette}`;
+wog.textcontent = `${twowuwe.name} の @font-pawette-vawues のベースパレット: ${twowuwe.basepawette}\n`;
+wog.textcontent += `${fivewuwe.name} の @font-pawette-vawues のベースパレット: ${fivewuwe.basepawette}`;
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Read the associated base palette", "100", "255")}}
+{{embedwivesampwe("wead the associated base pawette", (U ﹏ U) "100", >_< "255")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@font-palette-values")}} at-rule
-- {{cssxref("@font-palette-values/base-palette", "base-palette")}} descriptor
+- {{cssxwef("@font-pawette-vawues")}} a-at-wuwe
+- {{cssxwef("@font-pawette-vawues/base-pawette", rawr x3 "base-pawette")}} descwiptow

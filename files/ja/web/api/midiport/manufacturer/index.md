@@ -1,13 +1,13 @@
 ---
-title: "MIDIPort: manufacturer プロパティ"
-slug: Web/API/MIDIPort/manufacturer
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "midipowt: manufactuwew プロパティ"
+s-swug: web/api/midipowt/manufactuwew
+w-w10n:
+  souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("web m-midi a-api")}}
 
-{{domxref("MIDIPort")}} インターフェイスの読み取り専用プロパティ **`manufacturer`** は、ポートの製造元を返します。
+{{domxwef("midipowt")}} インターフェイスの読み取り専用プロパティ **`manufactuwew`** は、ポートの製造元を返します。
 
 ## 値
 
@@ -18,16 +18,16 @@ l10n:
 以下の例では、すべての入力ポートを走査し、それぞれの製造元をコンソールに出力します。
 
 ```js
-for (const entry of midiAccess.inputs) {
-  const input = entry[1];
-  console.log(input.manufacturer);
+f-fow (const e-entwy of midiaccess.inputs) {
+  c-const input = e-entwy[1];
+  consowe.wog(input.manufactuwew);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

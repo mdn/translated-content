@@ -1,14 +1,14 @@
 ---
-title: "CSSLayerBlockRule: name プロパティ"
-short-title: name
-slug: Web/API/CSSLayerBlockRule/name
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "csswayewbwockwuwe: nyame プロパティ"
+s-showt-titwe: n-nyame
+swug: web/api/csswayewbwockwuwe/name
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`name`** は {{domxref("CSSLayerBlockRule")}} インターフェイスの読み取り専用プロパティで、カスケードレイヤーに関連付けられた名前を表します。
+**`name`** は {{domxwef("csswayewbwockwuwe")}} インターフェイスの読み取り専用プロパティで、カスケードレイヤーに関連付けられた名前を表します。
 
 ## 値
 
@@ -16,61 +16,61 @@ l10n:
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <output></output> <output></output>
 ```
 
-### CSS
+### c-css
 
 ```css
-output {
-  display: block;
+o-output {
+  d-dispway: bwock;
 }
 
-@layer special {
+@wayew speciaw {
   div {
-    color: rebeccapurple;
+    cowow: webeccapuwpwe;
   }
 }
 
-@layer {
+@wayew {
   div {
-    color: black;
+    c-cowow: bwack;
   }
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const item1 = document.getElementsByTagName("output")[0];
-const item2 = document.getElementsByTagName("output")[1];
-const rules = document.styleSheets[1].cssRules;
+const item1 = document.getewementsbytagname("output")[0];
+const i-item2 = document.getewementsbytagname("output")[1];
+const wuwes = d-document.stywesheets[1].csswuwes;
 // スタイルシート #1 はこの埋め込み例に関連するスタイルシートであり、
-// スタイルシート #0 は MDN ページ全体に関連するスタイルシート。
+// スタイルシート #0 は mdn ページ全体に関連するスタイルシート。
 
-const layer = rules[1]; // CSSLayerBlockRule
-const anonymous = rules[2]; // 無名の CSSLayerBlockRule
+const wayew = wuwes[1]; // c-csswayewbwockwuwe
+const anonymous = w-wuwes[2]; // 無名の c-csswayewbwockwuwe
 
-item1.textContent = `1 つ目の CSSLayerBlockRule は "${layer.name}" レイヤーを定義しています。`;
-item2.textContent = `2 つ目の CSSLayerBlockRule は "${anonymous.name}" という名前のレイヤーです。`;
+item1.textcontent = `1 つ目の csswayewbwockwuwe は "${wayew.name}" レイヤーを定義しています。`;
+item2.textcontent = `2 つ目の csswayewbwockwuwe は "${anonymous.name}" という名前のレイヤーです。`;
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@layer")}} の宣言文は {{domxref("CSSLayerStatementRule")}} で表されます。
-- CSS における[名前付きカスケードレイヤーの作成](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#カスケードレイヤーの作成)方法
+- {{cssxwef("@wayew")}} の宣言文は {{domxwef("csswayewstatementwuwe")}} で表されます。
+- css における[名前付きカスケードレイヤーの作成](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/cascade_wayews#カスケードレイヤーの作成)方法

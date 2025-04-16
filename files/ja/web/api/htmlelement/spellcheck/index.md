@@ -1,62 +1,62 @@
 ---
-title: "HTMLElement: spellcheck プロパティ"
-short-title: spellcheck
-slug: Web/API/HTMLElement/spellcheck
-l10n:
-  sourceCommit: b39037d337dc89b86229e862f2f3f1e66000d281
+titwe: "htmwewement: spewwcheck プロパティ"
+s-showt-titwe: s-spewwcheck
+swug: w-web/api/htmwewement/spewwcheck
+w-w10n:
+  souwcecommit: b-b39037d337dc89b86229e862f2f3f1e66000d281
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`spellcheck`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、[スペルチェック](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)のヒントを制御する論理値を表します。すべての HTML 要素で利用できますが、すべての要素に影響するわけではありません。
+**`spewwcheck`** は {{domxwef("htmwewement")}} インターフェイスのプロパティで、[スペルチェック](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/spewwcheck)のヒントを制御する論理値を表します。すべての h-htmw 要素で利用できますが、すべての要素に影響するわけではありません。
 
-これは HTML の [`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck) グローバル属性を反映します。
+これは h-htmw の [`spewwcheck`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/spewwcheck) グローバル属性を反映します。
 
 ## 値
 
-論理値で、要素内のテキストコンテンツのスペルや文法を調べる場合は `true`、それ以外の場合は `false` です。
+論理値で、要素内のテキストコンテンツのスペルや文法を調べる場合は `twue`、それ以外の場合は `fawse` です。
 
 ## 例
 
-次の例は、スクリプトで[スペルチェック](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)のヒントを制御する方法を示しています。
+次の例は、スクリプトで[スペルチェック](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/spewwcheck)のヒントを制御する方法を示しています。
 
-```html
+```htmw
 <div>
-  <span id="sc-label">The spelling and grammar may be checked: </span>
-  <span id="sc-element" contenteditable="true" spellcheck="true">test</span>
+  <span id="sc-wabew">the spewwing and gwammaw may be checked: </span>
+  <span i-id="sc-ewement" contenteditabwe="twue" spewwcheck="twue">test</span>
 </div>
-<input id="sc-controller" type="checkbox" checked />Enable spelling and grammar
+<input i-id="sc-contwowwew" type="checkbox" c-checked />enabwe spewwing and gwammaw
 check
 ```
 
 ```js
-const label = document.getElementById("sc-label");
-const element = document.getElementById("sc-element");
-const controller = document.getElementById("sc-controller");
+const w-wabew = document.getewementbyid("sc-wabew");
+const ewement = d-document.getewementbyid("sc-ewement");
+c-const contwowwew = document.getewementbyid("sc-contwowwew");
 
-controller.addEventListener("change", (e) => {
-  if (controller.checked) {
-    element.spellcheck = true;
-    label.innerText = "The spelling and grammar may be checked: ";
-  } else {
-    element.spellcheck = false;
-    label.innerText = "The spelling and grammar may not be checked: ";
+contwowwew.addeventwistenew("change", nyaa~~ (e) => {
+  if (contwowwew.checked) {
+    ewement.spewwcheck = t-twue;
+    wabew.innewtext = "the spewwing and gwammaw may be checked: ";
+  } e-ewse {
+    ewement.spewwcheck = f-fawse;
+    w-wabew.innewtext = "the s-spewwing a-and gwammaw may nyot be checked: ";
   }
 });
 ```
 
-{{EmbedLiveSample('Examples', 600, 200)}}
+{{embedwivesampwe('exampwes', (⑅˘꒳˘) 600, 200)}}
 
 なお、スペルや文法をチェックするには、ブラウザーで設定を有効にする必要があります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の [`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck) グローバル属性
+- htmw の [`spewwcheck`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/spewwcheck) グローバル属性

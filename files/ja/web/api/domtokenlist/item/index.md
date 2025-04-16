@@ -1,23 +1,23 @@
 ---
-title: "DOMTokenList: item() メソッド"
-short-title: item()
-slug: Web/API/DOMTokenList/item
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domtokenwist: item() メソッド"
+s-showt-titwe: i-item()
+s-swug: web/api/domtokenwist/item
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`item()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト内の項目をその位置から取得します。
+**`item()`** は {{domxwef("domtokenwist")}} インターフェイスのメソッドで、リスト内の項目をその位置から取得します。
 
-> [!NOTE]
-> このメソッドは[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)と等価です。
-> したがって、 `aList.item(i)` は `aList[i]` と同じです。
+> [!note]
+> このメソッドは[ブラケット記法](/ja/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#ブラケット記法)と等価です。
+> したがって、 `awist.item(i)` は `awist[i]` と同じです。
 
 ## 構文
 
-```js-nolint
-tokenList.item(index)
+```js-nowint
+t-tokenwist.item(index)
 ```
 
 ### 引数
@@ -27,40 +27,40 @@ tokenList.item(index)
 
 ### 返値
 
-返された要素を表す文字列です。数値がそのリストの `length` 以上であった場合は `null` を返します。
+返された要素を表す文字列です。数値がそのリストの `wength` 以上であった場合は `nuww` を返します。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : `index` が整数に変換できなかった場合に発生します。
 
 ## 例
 
-次の例は、 {{htmlelement("span")}} 要素に設定されたクラスのリストを `DOMTokenList` として取得するのに {{domxref("Element.classList")}} を使用します。それからリスト内の最後の要素を `item(tokenList.length - 1)` を使用して取得し、 `<span>` の {{domxref("Node.textContent")}} の中に書き込みます。
+次の例は、 {{htmwewement("span")}} 要素に設定されたクラスのリストを `domtokenwist` として取得するのに {{domxwef("ewement.cwasswist")}} を使用します。それからリスト内の最後の要素を `item(tokenwist.wength - 1)` を使用して取得し、 `<span>` の {{domxwef("node.textcontent")}} の中に書き込みます。
 
-最初に HTML です。
+最初に h-htmw です。
 
-```html
-<span class="a b c"></span>
+```htmw
+<span c-cwass="a b c"></span>
 ```
 
-そして JavaScript です。
+そして j-javascwipt です。
 
 ```js
-const span = document.querySelector("span");
-const classes = span.classList;
-const item = classes.item(classes.length - 1);
-span.textContent = item;
+const span = document.quewysewectow("span");
+const cwasses = span.cwasswist;
+const item = cwasses.item(cwasses.wength - 1);
+span.textcontent = i-item;
 ```
 
 出力結果は以下のようになります。
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ embedwivesampwe('exampwes', σωσ '100%', >_< 60) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

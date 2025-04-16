@@ -1,15 +1,15 @@
 ---
-title: CSSImageValue
-slug: Web/API/CSSImageValue
+titwe: cssimagevawue
+swug: web/api/cssimagevawue
 ---
 
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{seecompattabwe}}{{apiwef("css t-typed object m-modew api")}}
 
-**`CSSImageValue`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Object_Model#css_typed_object_model) のインターフェイスで、 {{cssxref('background-image')}}, {{cssxref('list-style-image')}}, {{cssxref('border-image-source')}} のような画像を取るプロパティの値を表します。
+**`cssimagevawue`** は [css 型付きオブジェクトモデル a-api](/ja/docs/web/api/css_object_modew#css_typed_object_modew) のインターフェイスで、 {{cssxwef('backgwound-image')}}, ^^;; {{cssxwef('wist-stywe-image')}}, {{cssxwef('bowdew-image-souwce')}} のような画像を取るプロパティの値を表します。
 
-CSSImageValue オブジェクトは [`<image>`](/ja/docs/Web/CSS/image) のうち URL に関わるもの、例えば [`url()`](/ja/docs/Web/CSS/url_value) や [`image()`](/ja/docs/Web/CSS/image) を表しますが、 [`linear-gradient()`](/ja/docs/Web/CSS/gradient/linear-gradient) や [`element()`](/ja/docs/Web/CSS/element) は表しません。
+c-cssimagevawue オブジェクトは [`<image>`](/ja/docs/web/css/image) のうち u-uww に関わるもの、例えば [`uww()`](/ja/docs/web/css/uww_vawue) や [`image()`](/ja/docs/web/css/image) を表しますが、 [`wineaw-gwadient()`](/ja/docs/web/css/gwadient/wineaw-gwadient) や [`ewement()`](/ja/docs/web/css/ewement) は表しません。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
@@ -17,55 +17,55 @@ CSSImageValue オブジェクトは [`<image>`](/ja/docs/Web/CSS/image) のう�
 
 ## メソッド
 
-_{{domxref('CSSStyleValue')}} からメソッドを継承しています。_
+_{{domxwef('cssstywevawue')}} からメソッドを継承しています。_
 
 ## 例
 
 次のような要素を作成します。
 
-```html
-<button>Magic Wand</button>
+```htmw
+<button>magic w-wand</button>
 ```
 
-バイナリーファイルを要求する背景画像など、いくつかの CSS を追加しています。
+バイナリーファイルを要求する背景画像など、いくつかの c-css を追加しています。
 
 ```css
-button {
-  display: inline-block;
+b-button {
+  dispway: inwine-bwock;
   min-height: 100px;
   min-width: 100px;
-  background: no-repeat 5% center url(magicwand.png) aqua;
+  backgwound: n-nyo-wepeat 5% centew uww(magicwand.png) aqua;
 }
 ```
 
-その要素のスタイルマップを取得します。そして、スタイルマップから background-image を取得し、文字列化します。
+その要素のスタイルマップを取得します。そして、スタイルマップから b-backgwound-image を取得し、文字列化します。
 
 ```js
 // 要素を取得
-const button = document.querySelector("button");
+const b-button = document.quewysewectow("button");
 
-// computedStyleMap()ですべての計算済みスタイルを取得
-const allComputedStyles = button.computedStyleMap();
+// computedstywemap()ですべての計算済みスタイルを取得
+const awwcomputedstywes = button.computedstywemap();
 
-// CSSImageValue を返す例
-console.log(allComputedStyles.get("background-image"));
-console.log(allComputedStyles.get("background-image").toString());
+// cssimagevawue を返す例
+c-consowe.wog(awwcomputedstywes.get("backgwound-image"));
+consowe.wog(awwcomputedstywes.get("backgwound-image").tostwing());
 ```
 
-{{EmbedLiveSample("Examples", 120, 300)}}
+{{embedwivesampwe("exampwes", >_< 120, mya 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref('CSSKeywordValue')}}
-- {{domxref('CSSNumericValue')}}
-- {{domxref('CSSPositionValue')}}
-- {{domxref('CSSTransformValue')}}
-- {{domxref('CSSUnparsedValue')}}
+- {{domxwef('csskeywowdvawue')}}
+- {{domxwef('cssnumewicvawue')}}
+- {{domxwef('csspositionvawue')}}
+- {{domxwef('csstwansfowmvawue')}}
+- {{domxwef('cssunpawsedvawue')}}

@@ -1,47 +1,47 @@
 ---
-title: "CloseEvent: CloseEvent() コンストラクター"
-slug: Web/API/CloseEvent/CloseEvent
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cwoseevent: cwoseevent() コンストラクター"
+s-swug: w-web/api/cwoseevent/cwoseevent
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("Websockets API")}}
+{{apiwef("websockets a-api")}}
 
-**`CloseEvent()`** コンストラクターは新しい {{domxref("CloseEvent")}} オブジェクトを生成します。
+**`cwoseevent()`** コンストラクターは新しい {{domxwef("cwoseevent")}} オブジェクトを生成します。
 
 ## 構文
 
-```js-nolint
-new CloseEvent(type)
-new CloseEvent(type, options)
+```js-nowint
+n-nyew cwoseevent(type)
+n-nyew c-cwoseevent(type, ( ͡o ω ͡o ) options)
 ```
 
 ### 値
 
 - `type`
   - : このイベントの名前を示す文字列です。
-    大文字小文字を区別し、ブラウザーは常に `close` を設定します。
-- `options` {{optional_inline}}
-  - : オブジェクトで、_{{domxref("Event/Event", "Event()")}} で定義されているものに加え_、次のプロパティを持ちます。
-    - `wasClean` {{optional_inline}}
-      - : 論理値で、接続がきれいに閉じたかどうかを示します。既定値は `false` です。
-    - `code` {{optional_inline}}
+    大文字小文字を区別し、ブラウザーは常に `cwose` を設定します。
+- `options` {{optionaw_inwine}}
+  - : オブジェクトで、_{{domxwef("event/event", UwU "event()")}} で定義されているものに加え_、次のプロパティを持ちます。
+    - `wascwean` {{optionaw_inwine}}
+      - : 論理値で、接続がきれいに閉じたかどうかを示します。既定値は `fawse` です。
+    - `code` {{optionaw_inwine}}
       - : 整数で、サーバーから送られる接続クローズコードを表します。既定値は `0` です。
-    - `reason` {{optional_inline}}
+    - `weason` {{optionaw_inwine}}
       - : 文字列で、サーバーが接続を閉じる理由を人間が理解できる形で表したものです。既定値は `''` です。
 
 ## 返値
 
-新しい {{domxref("CloseEvent")}} オブジェクトです。
+新しい {{domxwef("cwoseevent")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CloseEvent")}}: 作成するオブジェクトのインターフェイス。
+- {{domxwef("cwoseevent")}}: 作成するオブジェクトのインターフェイス。

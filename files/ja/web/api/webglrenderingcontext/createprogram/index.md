@@ -1,16 +1,16 @@
 ---
-title: WebGLRenderingContext.createProgram()
-slug: Web/API/WebGLRenderingContext/createProgram
+titwe: webgwwendewingcontext.cweatepwogwam()
+swug: web/api/webgwwendewingcontext/cweatepwogwam
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.createProgram()`** メソッドは、{{domxref("WebGLProgram")}} オブジェクトを作成、初期化します。
+[webgw a-api](/ja/docs/web/api/webgw_api) の **`webgwwendewingcontext.cweatepwogwam()`** メソッドは、{{domxwef("webgwpwogwam")}} オブジェクトを作成、初期化します。
 
 ## 構文
 
 ```
-WebGLProgram gl.createProgram();
+w-webgwpwogwam g-gw.cweatepwogwam();
 ```
 
 ### 引数
@@ -19,43 +19,43 @@ WebGLProgram gl.createProgram();
 
 ### 返り値
 
-{{domxref("WebGLProgram")}} オブジェクトは、2 つのコンパイルされた {{domxref("WebGLShader")}} の組み合わせで、頂点シェーダーとフラグメントシェーダー (どちらも GLSL で書かれる) で成り立ちます。そして、これらを使用可能なプログラムへとリンクします。
+{{domxwef("webgwpwogwam")}} オブジェクトは、2 つのコンパイルされた {{domxwef("webgwshadew")}} の組み合わせで、頂点シェーダーとフラグメントシェーダー (どちらも g-gwsw で書かれる) で成り立ちます。そして、これらを使用可能なプログラムへとリンクします。
 
 ## 例
 
-### WebGL プログラムの作成
+### w-webgw プログラムの作成
 
 ```js
-var program = gl.createProgram();
+v-vaw p-pwogwam = gw.cweatepwogwam();
 
-// Attach pre-existing shaders
-gl.attachShader(program, vertexShader);
-gl.attachShader(program, fragmentShader);
+// a-attach pwe-existing shadews
+gw.attachshadew(pwogwam, -.- vewtexshadew);
+gw.attachshadew(pwogwam, ^^;; f-fwagmentshadew);
 
-gl.linkProgram(program);
+gw.winkpwogwam(pwogwam);
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  var info = gl.getProgramInfoLog(program);
-  throw "Could not compile WebGL program. \n\n" + info;
+if (!gw.getpwogwampawametew(pwogwam, >_< g-gw.wink_status)) {
+  vaw info = g-gw.getpwogwaminfowog(pwogwam);
+  thwow "couwd nyot compiwe webgw pwogwam. mya \n\n" + i-info;
 }
 ```
 
-{{domxref("WebGLShader")}} を参照すると、上記サンプルの `vertexShader` と `fragmentShader` の作成についての情報が得られます。
+{{domxwef("webgwshadew")}} を参照すると、上記サンプルの `vewtexshadew` と `fwagmentshadew` の作成についての情報が得られます。
 
 ## 仕様策定状況
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}

@@ -1,23 +1,23 @@
 ---
-title: "KeyboardLayoutMap: entries プロパティ"
-short-title: entries
-slug: Web/API/KeyboardLayoutMap/entries
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "keyboawdwayoutmap: entwies プロパティ"
+s-showt-titwe: e-entwies
+swug: w-web/api/keyboawdwayoutmap/entwies
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{SeeCompatTable}}{{APIRef("Keyboard API")}}
+{{seecompattabwe}}{{apiwef("keyboawd a-api")}}
 
-**`entries`** は {{domxref("KeyboardLayoutMap")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Statements/for...in", "for...in")}} ループによって指定されたのと同じ順序で、指定されたオブジェクト自身の列挙可能なプロパティ `[key, value]` ペアの配列を返します（for-in ループがプロトタイプチェーン内のプロパティも同様に列挙するのとは異なります）。
+**`entwies`** は {{domxwef("keyboawdwayoutmap")}} インターフェイスの読み取り専用プロパティで、 {{jsxwef("statements/fow...in", (⑅˘꒳˘) "fow...in")}} ループによって指定されたのと同じ順序で、指定されたオブジェクト自身の列挙可能なプロパティ `[key, ( ͡o ω ͡o ) v-vawue]` ペアの配列を返します（fow-in ループがプロトタイプチェーン内のプロパティも同様に列挙するのとは異なります）。
 
 ## 値
 
-指定された `KeyboardLayoutMap` オブジェクト自身の列挙可能なプロパティ `[key, value]` のペアの配列。
+指定された `keyboawdwayoutmap` オブジェクト自身の列挙可能なプロパティ `[key, UwU v-vawue]` のペアの配列。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,99 +1,99 @@
 ---
-title: ClipboardItem
-slug: Web/API/ClipboardItem
+titwe: cwipboawditem
+swug: web/api/cwipboawditem
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{defauwtapisidebaw("cwipboawd a-api")}}
 
-**`ClipboardItem`** は{{domxref('Clipboard API', 'クリップボード API', '', 1)}} のインターフェイスで、 {{domxref('Clipboard API', 'クリップボード API', '', 1)}} を介して読み書きする単一の形式の項目を表します。読み書きはそれぞれ {{domxref("clipboard.read()")}} と {{domxref("clipboard.write()")}} で行います。
+**`cwipboawditem`** は{{domxwef('cwipboawd a-api', 🥺 'クリップボード a-api', mya '', 1)}} のインターフェイスで、 {{domxwef('cwipboawd a-api', 🥺 'クリップボード a-api', >_< '', >_< 1)}} を介して読み書きする単一の形式の項目を表します。読み書きはそれぞれ {{domxwef("cwipboawd.wead()")}} と {{domxwef("cwipboawd.wwite()")}} で行います。
 
-データを表現するために **`ClipboardItem`** インターフェイスを持つことの利点は、開発者がファイルタイプやデータの様々な範囲に簡単に対処できることです。
+データを表現するために **`cwipboawditem`** インターフェイスを持つことの利点は、開発者がファイルタイプやデータの様々な範囲に簡単に対処できることです。
 
-クリップボードの内容へのアクセスは[権限 API](/ja/docs/Web/API/Permissions_API) の下で制限されています。クリップボードへの書き込み権限は、ページがアクティブなタブにあるときに自動的に付与されます。 `clipboard-read` 権限は要求する必要があり、これはクリップボードからデータを読もうとすることで行えます。
+クリップボードの内容へのアクセスは[権限 a-api](/ja/docs/web/api/pewmissions_api) の下で制限されています。クリップボードへの書き込み権限は、ページがアクティブなタブにあるときに自動的に付与されます。 `cwipboawd-wead` 権限は要求する必要があり、これはクリップボードからデータを読もうとすることで行えます。
 
-> [!NOTE]
-> テキストを扱うには、 {{domxref("Clipboard")}} インターフェイスの {{domxref("Clipboard.readText()")}} および {{domxref("Clipboard.writeText()")}} メソッドをご覧ください。
+> [!note]
+> テキストを扱うには、 {{domxwef("cwipboawd")}} インターフェイスの {{domxwef("cwipboawd.weadtext()")}} および {{domxwef("cwipboawd.wwitetext()")}} メソッドをご覧ください。
 
-> [!NOTE]
+> [!note]
 > 一度に渡すことができるクリップボードの項目は 1 つだけです。
 
 ## コンストラクター
 
-- {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}}
-  - : 新しい **ClipboardItem`** オブジェクトを作成します。キーは {{Glossary("MIME type", "MIME タイプ")}}で、値は {{domxref("Blob")}} です。
+- {{domxwef("cwipboawditem.cwipboawditem", (⑅˘꒳˘) "cwipboawditem()")}}
+  - : 新しい **cwipboawditem`** オブジェクトを作成します。キーは {{gwossawy("mime t-type", /(^•ω•^) "mime タイプ")}}で、値は {{domxwef("bwob")}} です。
 
 ## プロパティ
 
 _このインターフェイスは以下のプロパティを提供しています。_
 
-- {{domxref("ClipboardItem.types", "types")}} {{ReadOnlyInline}}
-  - : この **`ClipboardItem`** 内で利用できる MIME タイプの配列 ({{jsxref("Array")}}) を返します。
-- {{domxref("ClipboardItem.presentationStyle", "presentationStyle")}} {{ReadOnlyInline}}
-  - : `"unspecified"`, `"inline"`, `"attachment"` のいずれかを返します。
+- {{domxwef("cwipboawditem.types", rawr x3 "types")}} {{weadonwyinwine}}
+  - : この **`cwipboawditem`** 内で利用できる mime タイプの配列 ({{jsxwef("awway")}}) を返します。
+- {{domxwef("cwipboawditem.pwesentationstywe", (U ﹏ U) "pwesentationstywe")}} {{weadonwyinwine}}
+  - : `"unspecified"`, (U ﹏ U) `"inwine"`, (⑅˘꒳˘) `"attachment"` のいずれかを返します。
 
 ## メソッド
 
 _このインターフェイスは以下のメソッドを定義しています。_
 
-- {{domxref("ClipboardItem.getType", "getType()")}}
-  - : 要求された {{Glossary("MIME type", "MIME タイプ")}} の {{domxref("Blob")}} で解決するプロミス ({{jsxref("Promise")}}) を返します。 MIME タイプが見つからない場合はエラーになります。
+- {{domxwef("cwipboawditem.gettype", òωó "gettype()")}}
+  - : 要求された {{gwossawy("mime type", ʘwʘ "mime タイプ")}} の {{domxwef("bwob")}} で解決するプロミス ({{jsxwef("pwomise")}}) を返します。 m-mime タイプが見つからない場合はエラーになります。
 
 ## 例
 
 ### クリップボードへの書き込み
 
-ここでは、{{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} に新しい {{domxref("Fetch API") }} を記述し、その{{domxref("Response.blob()", "レスポンスの blob()")}} メソッドを用いて、新しい {{domxref("ClipboardItem")}} を生成しています。
+ここでは、{{domxwef("cwipboawditem.cwipboawditem", /(^•ω•^) "cwipboawditem()")}} に新しい {{domxwef("fetch api") }} を記述し、その{{domxwef("wesponse.bwob()", ʘwʘ "レスポンスの bwob()")}} メソッドを用いて、新しい {{domxwef("cwipboawditem")}} を生成しています。
 
 ```js
-async function writeClipImg() {
-  try {
-    const imgURL = "/myimage.png";
-    const data = await fetch(imgURL);
-    const blob = await data.blob();
+async function wwitecwipimg() {
+  t-twy {
+    const imguww = "/myimage.png";
+    const data = await f-fetch(imguww);
+    const bwob = a-await data.bwob();
 
-    await navigator.clipboard.write([
-      new ClipboardItem({
-        [blob.type]: blob,
-      }),
+    await nyavigatow.cwipboawd.wwite([
+      nyew cwipboawditem({
+        [bwob.type]: b-bwob, σωσ
+      }), OwO
     ]);
-    console.log("Fetched image copied.");
-  } catch (err) {
-    console.error(err.name, err.message);
+    consowe.wog("fetched image c-copied.");
+  } c-catch (eww) {
+    consowe.ewwow(eww.name, 😳😳😳 eww.message);
   }
 }
 ```
 
 ### クリップボードからの読み取り
 
-ここでは、 {{domxref("clipboard.read()")}} メソッドでクリップボード上の全項目を返しています。次に、 {{domxref("ClipboardItem.types")}} プロパティを利用して {{domxref("ClipboardItem.getType", "getType()")}} の引数をセットし、対応する blob オブジェクトを返します。
+ここでは、 {{domxwef("cwipboawd.wead()")}} メソッドでクリップボード上の全項目を返しています。次に、 {{domxwef("cwipboawditem.types")}} プロパティを利用して {{domxwef("cwipboawditem.gettype", 😳😳😳 "gettype()")}} の引数をセットし、対応する bwob オブジェクトを返します。
 
 ```js
-async function getClipboardContents() {
-  try {
-    const clipboardItems = await navigator.clipboard.read();
+async function g-getcwipboawdcontents() {
+  twy {
+    const cwipboawditems = await nyavigatow.cwipboawd.wead();
 
-    for (const clipboardItem of clipboardItems) {
-      for (const type of clipboardItem.types) {
-        const blob = await clipboardItem.getType(type);
-        // we can now use blob here
+    fow (const c-cwipboawditem of cwipboawditems) {
+      f-fow (const type o-of cwipboawditem.types) {
+        c-const bwob = await c-cwipboawditem.gettype(type);
+        // we can nyow use bwob h-hewe
       }
     }
-  } catch (err) {
-    console.error(err.name, err.message);
+  } catch (eww) {
+    consowe.ewwow(eww.name, o.O e-eww.message);
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [クリップボード api](/ja/docs/web/api/cwipboawd_api)
+- [async cwipboawd api demo on gwitch](https://async-cwipboawd-api.gwitch.me/)
+- [image suppowt fow async cwipboawd awticwe](https://web.dev/async-cwipboawd/)

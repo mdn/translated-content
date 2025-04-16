@@ -1,20 +1,20 @@
 ---
-title: "MIDIPort: close() メソッド"
-slug: Web/API/MIDIPort/close
-l10n:
-  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
+titwe: "midipowt: cwose() メソッド"
+s-swug: w-web/api/midipowt/cwose
+w-w10n:
+  s-souwcecommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("web m-midi a-api")}}
 
-{{domxref("MIDIPort")}} インターフェイスの **`close()`** メソッドは、この `MIDIPort` に接続された MIDI デバイスへのアクセスを利用不可能にします。
+{{domxwef("midipowt")}} インターフェイスの **`cwose()`** メソッドは、この `midipowt` に接続された m-midi デバイスへのアクセスを利用不可能にします。
 
-ポートが正常に閉じられると、新しい {{domxref("MIDIConnectionEvent")}} が {{domxref("MIDIPort.statechange_event", "MIDIPort statechange")}} と {{domxref("MIDIAccess.statechange_event", "MIDIAccess statechange")}} イベントに渡され、{{domxref("MIDIPort.connection")}} プロパティが `"closed"` になります。
+ポートが正常に閉じられると、新しい {{domxwef("midiconnectionevent")}} が {{domxwef("midipowt.statechange_event", rawr "midipowt s-statechange")}} と {{domxwef("midiaccess.statechange_event", σωσ "midiaccess statechange")}} イベントに渡され、{{domxwef("midipowt.connection")}} プロパティが `"cwosed"` になります。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+cwose()
 ```
 
 ### 引数
@@ -23,21 +23,21 @@ close()
 
 ### 返値
 
-ポートが閉じられると解決する {{jsxref("Promise")}} を返します。
+ポートが閉じられると解決する {{jsxwef("pwomise")}} を返します。
 
 ## 例
 
 以下の例では、出力ポートを閉じます。
 
 ```js
-let output = midiAccess.outputs.get(portID);
-output.close(); // ポートを閉じる
+wet output = midiaccess.outputs.get(powtid);
+output.cwose(); // ポートを閉じる
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

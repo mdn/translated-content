@@ -1,16 +1,16 @@
 ---
-title: "FontFace: variationSettings プロパティ"
-short-title: variationSettings
-slug: Web/API/FontFace/variationSettings
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontface: vawiationsettings プロパティ"
+s-showt-titwe: v-vawiationsettings
+s-swug: web/api/fontface/vawiationsettings
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
+{{apiwef("css f-font woading api")}}{{seecompattabwe}}
 
-**`variationSettings`** は {{domxref("FontFace")}} インターフェイスのプロパティで、低水準の OpenType または TrueType フォントのバリエーションを取得または設定します。
+**`vawiationsettings`** は {{domxwef("fontface")}} インターフェイスのプロパティで、低水準の o-opentype または t-twuetype フォントのバリエーションを取得または設定します。
 
-このプロパティは {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} 記述子と等価です。
+このプロパティは {{cssxwef("@font-face/font-vawiation-settings", (U ᵕ U❁) "font-vawiation-settings")}} 記述子と等価です。
 
 ## 値
 
@@ -18,8 +18,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

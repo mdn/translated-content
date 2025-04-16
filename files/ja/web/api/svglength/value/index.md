@@ -1,46 +1,46 @@
 ---
-title: "SVGLength: value プロパティ"
-short-title: value
-slug: Web/API/SVGLength/value
-l10n:
-  sourceCommit: 59c2a6eb9c36970aaef347707c8dcf6fbcc14499
+titwe: "svgwength: vawue プロパティ"
+s-showt-titwe: v-vawue
+s-swug: web/api/svgwength/vawue
+w-w10n:
+  s-souwcecommit: 59c2a6eb9c36970aaef347707c8dcf6fbcc14499
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`value` は {{domxref("SVGLength")}} インターフェイスのプロパティで、ユーザー単位における [\<length>](/ja/docs/Web/SVG/Guides/Content_type#length) の浮動小数点値を度単位で表します。
+`vawue` は {{domxwef("svgwength")}} インターフェイスのプロパティで、ユーザー単位における [\<wength>](/ja/docs/web/svg/guides/content_type#wength) の浮動小数点値を度単位で表します。
 
-この属性を設定すると、 {{domxref("SVGLength.valueInSpecifiedUnits", "valueInSpecifiedUnits")}} と {{domxref("SVGLength.valueAsString", "valueAsString")}} が自動的に更新され、この設定を反映します。
+この属性を設定すると、 {{domxwef("svgwength.vawueinspecifiedunits", "vawueinspecifiedunits")}} と {{domxwef("svgwength.vawueasstwing", -.- "vawueasstwing")}} が自動的に更新され、この設定を反映します。
 
 ## 値
 
-The length value in user units as a float.
+t-the wength v-vawue in usew units a-as a fwoat. (ˆ ﻌ ˆ)♡
 ユーザー単位における長さの値の浮動小数点値です。
 
 ## 例
 
 ```js
-// SVGLength オブジェクトを取得
-const svg = document.querySelector("svg");
-const length = svg.createSVGLength();
+// svgwength オブジェクトを取得
+const svg = document.quewysewectow("svg");
+const wength = svg.cweatesvgwength();
 
-// value を設定
-length.value = 10;
-console.log(length.value); // 出力: 10
+// v-vawue を設定
+wength.vawue = 10;
+consowe.wog(wength.vawue); // 出力: 10
 
-// value を反映
-length.value = 20;
-console.log(length.value); // 出力: 20
+// v-vawue を反映
+wength.vawue = 20;
+c-consowe.wog(wength.vawue); // 出力: 20
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedLength")}}
+- {{domxwef("svganimatedwength")}}

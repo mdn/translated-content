@@ -1,14 +1,14 @@
 ---
-title: "FileSystemEntry: copyTo() メソッド"
-short-title: copyTo()
-slug: Web/API/FileSystemEntry/copyTo
-l10n:
-  sourceCommit: e4cc8b707a1056c14a6316079798b95cb39b725f
+titwe: "fiwesystementwy: copyto() メソッド"
+s-showt-titwe: c-copyto()
+swug: web/api/fiwesystementwy/copyto
+w-w10n:
+  s-souwcecommit: e-e4cc8b707a1056c14a6316079798b95cb39b725f
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("fiwe a-and diwectowy entwies a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-{{domxref("FileSystemEntry")}} インターフェイスの **`copyTo()`** メソッドは、この項目で指定したファイルをファイルシステムの新しい場所にコピーします。
+{{domxwef("fiwesystementwy")}} インターフェイスの **`copyto()`** メソッドは、この項目で指定したファイルをファイルシステムの新しい場所にコピーします。
 
 典型的な制限事項がいくつかあります。
 
@@ -18,64 +18,64 @@ l10n:
 
 ## 構文
 
-```js-nolint
-copyTo(newParent)
-copyTo(newParent, newName)
-copyTo(newParent, newName, successCallback)
-copyTo(newParent, newName, successCallback, errorCallback)
+```js-nowint
+c-copyto(newpawent)
+copyto(newpawent, (U ᵕ U❁) nyewname)
+copyto(newpawent, -.- nyewname, successcawwback)
+copyto(newpawent, ^^;; n-newname, successcawwback, >_< ewwowcawwback)
 ```
 
 ### 引数
 
-- `newParent`
-  - : コピー処理の宛先ディレクトリーを指定する {{domxref("FileSystemDirectoryEntry")}} オブジェクト。
-- `newName` {{optional_inline}}
+- `newpawent`
+  - : コピー処理の宛先ディレクトリーを指定する {{domxwef("fiwesystemdiwectowyentwy")}} オブジェクト。
+- `newname` {{optionaw_inwine}}
   - : この引数が指定された場合、コピーにはこの文字列が新しいファイル名またはディレクトリー名として指定されます。
-- `successCallback` {{optional_inline}}
+- `successcawwback` {{optionaw_inwine}}
   - : コピー処理が完全に完了したときに呼び出される関数。
-    コピーされたアイテムの新しい詳細を提供する {{domxref("FileSystemEntry")}} ベースのオブジェクトです。
-- `errorCallback` {{optional_inline}}
+    コピーされたアイテムの新しい詳細を提供する {{domxwef("fiwesystementwy")}} ベースのオブジェクトです。
+- `ewwowcawwback` {{optionaw_inwine}}
   - : オプションのコールバックで、アイテムのコピー中にエラーが発生した場合に実行されます。
-    単一の引数として、何が間違っていたのかを記述する {{domxref("FileError")}} があります。
+    単一の引数として、何が間違っていたのかを記述する {{domxwef("fiweewwow")}} があります。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `FileError.INVALID_MODIFICATION_ERR`
+- `fiweewwow.invawid_modification_eww`
   - : リクエストされた演算子には、ディレクトリーの内部や自分自身で子ディレクトリーを移動したり、同じディレクトリー内の項目を名前変更せずにコピーするなど、不可能な変更が含まれています。
-- `FileError.QUOTA_EXCEEDED_ERR`
+- `fiweewwow.quota_exceeded_eww`
   - : 処理がユーザーのストレージクォータを超えたか、処理を運営するのに十分なストレージ空間が残っていません。
 
 ## 例
 
-この例は、一時的なログファイルをより永続的な "log" ディレクトリーに移動させる方法を示しています。
+この例は、一時的なログファイルをより永続的な "wog" ディレクトリーに移動させる方法を示しています。
 
 ```js
-workingDirectory.getFile(
-  "tmp/log.txt",
-  {},
-  (fileEntry) => {
-    workingDirectory.getDirectory(
-      "log",
-      {},
-      (dirEntry) => {
-        fileEntry.copyTo(dirEntry);
-      },
-      handleError,
+wowkingdiwectowy.getfiwe(
+  "tmp/wog.txt", mya
+  {}, mya
+  (fiweentwy) => {
+    w-wowkingdiwectowy.getdiwectowy(
+      "wog", 😳
+      {}, XD
+      (diwentwy) => {
+        fiweentwy.copyto(diwentwy);
+      }, :3
+      h-handweewwow, 😳😳😳
     );
-  },
-  handleError,
+  }, -.-
+  handweewwow, ( ͡o ω ͡o )
 );
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
+- [ファイルとディレクトリー項目 api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [ファイルとディレクトリー項目 api の紹介](/ja/docs/web/api/fiwe_system_api)

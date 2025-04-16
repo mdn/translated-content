@@ -1,55 +1,55 @@
 ---
-title: "Sensor: reading イベント"
-slug: Web/API/Sensor/reading_event
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "sensow: weading イベント"
+s-swug: web/api/sensow/weading_event
+w-w10n:
+  s-souwcecommit: f-f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-**`reading`** イベントは、センサーで新しい測定値が得られたとき発火します。
+**`weading`** イベントは、センサーで新しい測定値が得られたとき発火します。
 
-{{domxref('Sensor')}} はベースクラスであり、`onreading` および `reading` イベントは[派生クラス](/ja/docs/Web/API/Sensor#sensor_をベースとするインターフェイス)からのみ利用可能です。
+{{domxwef('sensow')}} はベースクラスであり、`onweading` および `weading` イベントは[派生クラス](/ja/docs/web/api/sensow#sensow_をベースとするインターフェイス)からのみ利用可能です。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
+{{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("reading", (event) => {});
+a-addeventwistenew("weading", (U ﹏ U) (event) => {});
 
-onreading = (event) => {};
+o-onweading = (event) => {};
 ```
 
 ## イベント型
 
-汎用の {{domxref("Event")}} であり、追加されたプロパティはありません。
+汎用の {{domxwef("event")}} であり、追加されたプロパティはありません。
 
 ## 例
 
 ### 加速度を取得する
 
-この例では、{{domxref("Accelerometer")}} から加速度の値を取得するイベントリスナーを追加します。1 秒に 60 回取得を行います。
+この例では、{{domxwef("accewewometew")}} から加速度の値を取得するイベントリスナーを追加します。1 秒に 60 回取得を行います。
 
 ```js
-const acl = new Accelerometer({ frequency: 60 });
-acl.addEventListener("reading", () => {
-  console.log(`X 軸方向の加速度 ${acl.x}`);
-  console.log(`Y 軸方向の加速度 ${acl.y}`);
-  console.log(`Z 軸方向の加速度 ${acl.z}`);
+c-const acw = nyew accewewometew({ fwequency: 60 });
+acw.addeventwistenew("weading", -.- () => {
+  consowe.wog(`x 軸方向の加速度 ${acw.x}`);
+  consowe.wog(`y 軸方向の加速度 ${acw.y}`);
+  c-consowe.wog(`z 軸方向の加速度 ${acw.z}`);
 });
-acl.start();
+acw.stawt();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- Sensor {{domxref('Sensor.activate_event', 'activate')}} イベント
-- Sensor {{domxref('Sensor.error_event', 'error')}} イベント
+- sensow {{domxwef('sensow.activate_event', (ˆ ﻌ ˆ)♡ 'activate')}} イベント
+- s-sensow {{domxwef('sensow.ewwow_event', (⑅˘꒳˘) 'ewwow')}} イベント

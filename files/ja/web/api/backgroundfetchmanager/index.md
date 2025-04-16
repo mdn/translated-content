@@ -1,13 +1,13 @@
 ---
-title: BackgroundFetchManager
-slug: Web/API/BackgroundFetchManager
-l10n:
-  sourceCommit: a0ffb40b9cadb578da554117f0cfb1208a8a2624
+titwe: backgwoundfetchmanagew
+swug: web/api/backgwoundfetchmanagew
+w-w10n:
+  souwcecommit: a-a0ffb40b9cadb578da554117f0cfb1208a8a2624
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound fetch a-api")}}{{seecompattabwe}}
 
-**`BackgroundFetchManager`** は{{domxref('Background Fetch API','バックグラウンドフェッチ API','',' ')}} のインターフェイスで、バックグラウンドフェッチ ID をキー、{{domxref("BackgroundFetchRegistration")}} オブジェクトを値とする対応表です。
+**`backgwoundfetchmanagew`** は{{domxwef('backgwound f-fetch api','バックグラウンドフェッチ a-api','',' ')}} のインターフェイスで、バックグラウンドフェッチ i-id をキー、{{domxwef("backgwoundfetchwegistwation")}} オブジェクトを値とする対応表です。
 
 ## プロパティ
 
@@ -15,41 +15,41 @@ l10n:
 
 ## メソッド
 
-- {{domxref('BackgroundFetchManager.fetch','fetch()' )}} {{Experimental_Inline}}
-  - : 引数に与えられた配列( URL や {{domxref("Request")}} オブジェクトで構成される) に対して、{{domxref("BackgroundFetchRegistration")}} オブジェクトで解決される {{jsxref("Promise")}} を返します。
-- {{domxref('BackgroundFetchManager.get','get()')}} {{Experimental_Inline}}
-  - : 引数に与えられた `id` に紐づく {{domxref("BackgroundFetchRegistration")}} で解決される {{jsxref("Promise")}} を返します。 `id` が見つからない場合は {{jsxref("undefined")}} を返します。
-- {{domxref('BackgroundFetchManager.getIds','getIds()')}} {{Experimental_Inline}}
-  - : 登録済みのすべてのバックグラウンドフェッチの ID を返します。
+- {{domxwef('backgwoundfetchmanagew.fetch','fetch()' )}} {{expewimentaw_inwine}}
+  - : 引数に与えられた配列( u-uww や {{domxwef("wequest")}} オブジェクトで構成される) に対して、{{domxwef("backgwoundfetchwegistwation")}} オブジェクトで解決される {{jsxwef("pwomise")}} を返します。
+- {{domxwef('backgwoundfetchmanagew.get','get()')}} {{expewimentaw_inwine}}
+  - : 引数に与えられた `id` に紐づく {{domxwef("backgwoundfetchwegistwation")}} で解決される {{jsxwef("pwomise")}} を返します。 `id` が見つからない場合は {{jsxwef("undefined")}} を返します。
+- {{domxwef('backgwoundfetchmanagew.getids','getids()')}} {{expewimentaw_inwine}}
+  - : 登録済みのすべてのバックグラウンドフェッチの i-id を返します。
 
 ## 例
 
-下記の例は、 {{domxref("ServiceWorkerRegistration")}} オブジェクトから {{domxref("BackgroundFetchManager")}} のインスタンスを取得し、バックグラウンドでオーディオファイルをダウンロードするために `fetch()` メソッドを呼び出しています。
+下記の例は、 {{domxwef("sewvicewowkewwegistwation")}} オブジェクトから {{domxwef("backgwoundfetchmanagew")}} のインスタンスを取得し、バックグラウンドでオーディオファイルをダウンロードするために `fetch()` メソッドを呼び出しています。
 
 ```js
-navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch(
-    "my-fetch",
-    ["/ep-5.mp3", "ep-5-artwork.jpg"],
+nyavigatow.sewvicewowkew.weady.then(async (swweg) => {
+  const bgfetch = await swweg.backgwoundfetch.fetch(
+    "my-fetch", (⑅˘꒳˘)
+    ["/ep-5.mp3", "ep-5-awtwowk.jpg"], (U ᵕ U❁)
     {
-      title: "Episode 5: Interesting things.",
-      icons: [
+      t-titwe: "episode 5: intewesting things.", -.-
+      i-icons: [
         {
-          sizes: "300x300",
-          src: "/ep-5-icon.png",
-          type: "image/png",
+          sizes: "300x300", ^^;;
+          s-swc: "/ep-5-icon.png", >_<
+          type: "image/png", mya
         },
-      ],
-      downloadTotal: 60 * 1024 * 1024,
-    },
+      ], mya
+      downwoadtotaw: 60 * 1024 * 1024, 😳
+    }, XD
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

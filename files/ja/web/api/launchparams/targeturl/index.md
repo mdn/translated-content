@@ -1,14 +1,14 @@
 ---
-title: "LaunchParams: targetURL プロパティ"
-short-title: targetURL
-slug: Web/API/LaunchParams/targetURL
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "waunchpawams: tawgetuww プロパティ"
+s-showt-titwe: t-tawgetuww
+swug: w-web/api/waunchpawams/tawgetuww
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Launch Handler API")}}{{SeeCompatTable}}
+{{apiwef("waunch h-handwew api")}}{{seecompattabwe}}
 
-**`targetURL`** は {{domxref("LaunchParams")}} インターフェイスの読み取り専用プロパティで、関連付けられたウェブアプリを起動するターゲット URL を返します。
+**`tawgetuww`** は {{domxwef("waunchpawams")}} インターフェイスの読み取り専用プロパティで、関連付けられたウェブアプリを起動するターゲット u-uww を返します。
 
 ## 値
 
@@ -17,17 +17,17 @@ l10n:
 ## 例
 
 ```js
-if ("launchQueue" in window) {
-  window.launchQueue.setConsumer((launchParams) => {
-    if (launchParams.targetURL) {
-      const params = new URL(launchParams.targetURL).searchParams;
+i-if ("waunchqueue" in window) {
+  window.waunchqueue.setconsumew((waunchpawams) => {
+    if (waunchpawams.tawgetuww) {
+      const p-pawams = nyew uww(waunchpawams.tawgetuww).seawchpawams;
 
       // 再生するトラックを受け取る音楽プレーヤーアプリを想定
-      const track = params.get("track");
-      if (track) {
-        audio.src = track;
-        title.textContent = new URL(track).pathname.substr(1);
-        audio.play();
+      const t-twack = pawams.get("twack");
+      if (twack) {
+        a-audio.swc = twack;
+        titwe.textcontent = nyew uww(twack).pathname.substw(1);
+        a-audio.pway();
       }
     }
   });
@@ -36,14 +36,14 @@ if ("launchQueue" in window) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Launch Handler API: Control how your app is launched](https://developer.chrome.com/docs/web-platform/launch-handler/)
-- {{domxref("Window.launchQueue")}}
-- [Musicr 2.0](https://launch-handler.glitch.me/) デモアプリ
+- [waunch handwew api: c-contwow how youw a-app is waunched](https://devewopew.chwome.com/docs/web-pwatfowm/waunch-handwew/)
+- {{domxwef("window.waunchqueue")}}
+- [musicw 2.0](https://waunch-handwew.gwitch.me/) デモアプリ

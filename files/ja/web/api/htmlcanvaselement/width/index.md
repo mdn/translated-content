@@ -1,15 +1,15 @@
 ---
-title: "HTMLCanvasElement: width プロパティ"
-slug: Web/API/HTMLCanvasElement/width
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwcanvasewement: width プロパティ"
+s-swug: web/api/htmwcanvasewement/width
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-**`HTMLCanvasElement.width`** プロパティは CSS ピクセル数として解釈される正の整数であり、この {{HTMLElement("canvas")}} 要素の [`width`](/ja/docs/Web/HTML/Reference/Elements/canvas#width) 属性を反映します。この属性が指定されなかった場合、または負の数など、無効な値をが設定された場合、既定値の `300` が使用されます。
+**`htmwcanvasewement.width`** プロパティは c-css ピクセル数として解釈される正の整数であり、この {{htmwewement("canvas")}} 要素の [`width`](/ja/docs/web/htmw/wefewence/ewements/canvas#width) 属性を反映します。この属性が指定されなかった場合、または負の数など、無効な値をが設定された場合、既定値の `300` が使用されます。
 
-これはキャンバスのサイズを制御する 2 つのプロパティのうちの 1 つで、もう一方は {{domxref("HTMLCanvasElement.height")}} です。
+これはキャンバスのサイズを制御する 2 つのプロパティのうちの 1 つで、もう一方は {{domxwef("htmwcanvasewement.height")}} です。
 
 ## 値
 
@@ -17,28 +17,28 @@ l10n:
 
 ## 例
 
-この {{HTMLElement("canvas")}} 要素があったとします。
+この {{htmwewement("canvas")}} 要素があったとします。
 
-```html
-<canvas id="canvas" width="300" height="300"></canvas>
+```htmw
+<canvas i-id="canvas" w-width="300" height="300"></canvas>
 ```
 
 次のコードでキャンバスの幅を取得することができます。
 
 ```js
-const canvas = document.getElementById("canvas");
-console.log(canvas.width); // 300
+const canvas = document.getewementbyid("canvas");
+consowe.wog(canvas.width); // 300
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLCanvasElement")}}: `HTMLCanvasElement.width` プロパティを定義しているインターフェイス
-- {{domxref("HTMLCanvasElement.height")}}: キャンバスのサイズを制御するために使用される他のプロパティ
+- {{domxwef("htmwcanvasewement")}}: `htmwcanvasewement.width` プロパティを定義しているインターフェイス
+- {{domxwef("htmwcanvasewement.height")}}: キャンバスのサイズを制御するために使用される他のプロパティ

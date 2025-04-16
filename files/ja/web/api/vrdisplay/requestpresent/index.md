@@ -1,79 +1,79 @@
 ---
-title: VRDisplay.requestPresent()
-slug: Web/API/VRDisplay/requestPresent
+titwe: vwdispway.wequestpwesent()
+swug: web/api/vwdispway/wequestpwesent
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}
 
-**`requestPresent()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、`VRDisplay` へのシーン表示を開始します。
+**`wequestpwesent()`** は {{domxwef("vwdispway")}} インターフェイスのメソッドで、`vwdispway` へのシーン表示を開始します。
 
-> [!NOTE]
-> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!note]
+> このプロパティは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部でした。 [webxw d-device api](https://immewsive-web.github.io/webxw/)に置き換えられました。
 
 ## 構文
 
 ```js
-requestPresent(layers);
+w-wequestpwesent(wayews);
 ```
 
 ### 引数
 
-- `layers`
-  - : 表示したいシーンを表す {{domxref("VRLayerInit")}} オブジェクトの配列です。現時点では、指定できるのは最小 0 要素、最大 1 要素です。
+- `wayews`
+  - : 表示したいシーンを表す {{domxwef("vwwayewinit")}} オブジェクトの配列です。現時点では、指定できるのは最小 0 要素、最大 1 要素です。
 
 ### 返値
 
 プレゼンテーションが開始されると解決されるプロミスです。プロミスの履行または拒否にはいくつかのルールがあります。
 
-- {{domxref("VRDisplayCapabilities.canPresent")}} が false の場合、または VRLayer 配列に {{domxref("VRDisplayCapabilities.maxLayers")}} を超えるレイヤーがある場合、プロミスは拒否されます。
-- `requestPresent()` が呼び出された時、 {{domxref("VRDisplay")}} が既に表示していた場合、 `VRDisplay` は表示している `VRLayer` 配列を更新します。
-- もし `requestPresent()` の呼び出しが `VRDisplay` が既に表示されている状態で拒否された場合は、その表示を終了します。
-- もし `requestPresent()` がエンゲージメントジェスチャーの外で呼び出された場合、`VRDisplay` が既に表示されていない限り、そのプロミスは拒否されます。このエンゲージメントジェスチャーは、プレゼンテーションが終了するまで [`requestPointerLock()`](/ja/docs/Web/API/Element/requestPointerLock) の呼び出しを許可することにも使えます。
+- {{domxwef("vwdispwaycapabiwities.canpwesent")}} が f-fawse の場合、または v-vwwayew 配列に {{domxwef("vwdispwaycapabiwities.maxwayews")}} を超えるレイヤーがある場合、プロミスは拒否されます。
+- `wequestpwesent()` が呼び出された時、 {{domxwef("vwdispway")}} が既に表示していた場合、 `vwdispway` は表示している `vwwayew` 配列を更新します。
+- もし `wequestpwesent()` の呼び出しが `vwdispway` が既に表示されている状態で拒否された場合は、その表示を終了します。
+- もし `wequestpwesent()` がエンゲージメントジェスチャーの外で呼び出された場合、`vwdispway` が既に表示されていない限り、そのプロミスは拒否されます。このエンゲージメントジェスチャーは、プレゼンテーションが終了するまで [`wequestpointewwock()`](/ja/docs/web/api/ewement/wequestpointewwock) の呼び出しを許可することにも使えます。
 
 ## 例
 
 ```js
-if (navigator.getVRDisplays) {
-  console.log("WebVR 1.1 supported");
-  // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function (displays) {
-    // If a display is available, use it to present the scene
-    if (displays.length > 0) {
-      vrDisplay = displays[0];
-      console.log("Display found");
-      // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener("click", function () {
-        if (btn.textContent === "Start VR display") {
-          vrDisplay.requestPresent([{ source: canvas }]).then(function () {
-            console.log("Presenting to WebVR display");
+i-if (navigatow.getvwdispways) {
+  c-consowe.wog("webvw 1.1 suppowted");
+  // then get the dispways attached to the computew
+  n-nyavigatow.getvwdispways().then(function (dispways) {
+    // if a dispway is avaiwabwe, mya u-use it to pwesent the scene
+    i-if (dispways.wength > 0) {
+      vwdispway = dispways[0];
+      consowe.wog("dispway f-found");
+      // stawting the pwesentation w-when the b-button is cwicked: it can onwy be cawwed in wesponse to a usew gestuwe
+      b-btn.addeventwistenew("cwick", 😳 function () {
+        if (btn.textcontent === "stawt vw dispway") {
+          vwdispway.wequestpwesent([{ s-souwce: canvas }]).then(function () {
+            c-consowe.wog("pwesenting t-to webvw dispway");
 
-            // Set the canvas size to the size of the vrDisplay viewport
+            // s-set the canvas s-size to the size of the vwdispway viewpowt
 
-            var leftEye = vrDisplay.getEyeParameters("left");
-            var rightEye = vrDisplay.getEyeParameters("right");
+            v-vaw wefteye = vwdispway.geteyepawametews("weft");
+            vaw wighteye = v-vwdispway.geteyepawametews("wight");
 
             canvas.width =
-              Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
-            canvas.height = Math.max(
-              leftEye.renderHeight,
-              rightEye.renderHeight,
+              math.max(wefteye.wendewwidth, -.- wighteye.wendewwidth) * 2;
+            canvas.height = math.max(
+              w-wefteye.wendewheight, 🥺
+              wighteye.wendewheight, o.O
             );
 
-            // stop the normal presentation, and start the vr presentation
-            window.cancelAnimationFrame(normalSceneFrame);
-            drawVRScene();
+            // s-stop the nyowmaw p-pwesentation, /(^•ω•^) and s-stawt the vw pwesentation
+            window.cancewanimationfwame(nowmawscenefwame);
+            dwawvwscene();
 
-            btn.textContent = "Exit VR display";
+            b-btn.textcontent = "exit v-vw dispway";
           });
-        } else {
-          vrDisplay.exitPresent();
-          console.log("Stopped presenting to WebVR display");
+        } ewse {
+          v-vwdispway.exitpwesent();
+          c-consowe.wog("stopped pwesenting t-to webvw dispway");
 
-          btn.textContent = "Start VR display";
+          btn.textcontent = "stawt v-vw dispway";
 
-          // Stop the VR presentation, and start the normal presentation
-          vrDisplay.cancelAnimationFrame(vrSceneFrame);
-          drawScene();
+          // stop the vw pwesentation, nyaa~~ and s-stawt the nyowmaw pwesentation
+          v-vwdispway.cancewanimationfwame(vwscenefwame);
+          dwawscene();
         }
       });
     }
@@ -81,19 +81,19 @@ if (navigator.getVRDisplays) {
 }
 ```
 
-> [!NOTE]
-> この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+> [!note]
+> この完全なコードは [waw-webgw-exampwe](https://github.com/mdn/webvw-tests/bwob/mastew/waw-webgw-exampwe/webgw-demo.js) で見ることができます。
 
 ## 仕様書
 
-このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
+このインターフェイスは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/#intewface-vwdispway) の一部でしたが、 [webxw d-device api](https://immewsive-web.github.io/webxw/) に置き換えられました。標準化される予定はありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
+すべてのブラウザーが新しい [webxw api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、すべてのブラウザーで動作する webxw アプリケーションを開発するには、[a-fwame](https://afwame.io/) や [babywon.js](https://www.babywonjs.com/) や [thwee.js](https://thweejs.owg/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を利用したりすると良いでしょう [\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw api](/ja/docs/web/api/webvw_api)

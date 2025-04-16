@@ -1,84 +1,84 @@
 ---
-title: CSSFontPaletteValuesRule
-slug: Web/API/CSSFontPaletteValuesRule
-l10n:
-  sourceCommit: 32305cc3cf274fbfdcc73a296bbd400a26f38296
+titwe: cssfontpawettevawueswuwe
+swug: web/api/cssfontpawettevawueswuwe
+w-w10n:
+  s-souwcecommit: 32305cc3cf274fbfdcc73a296bbd400a26f38296
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSFontPaletteValuesRule`** インターフェイスは {{cssxref("@font-palette-values")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を表します。
+**`cssfontpawettevawueswuwe`** インターフェイスは {{cssxwef("@font-pawette-vawues")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_祖先である {{domxref("CSSRule")}} から継承したプロパティがあります。_
+_祖先である {{domxwef("csswuwe")}} から継承したプロパティがあります。_
 
-- {{domxref("CSSFontPaletteValuesRule.name")}} {{ReadOnlyInline}}
+- {{domxwef("cssfontpawettevawueswuwe.name")}} {{weadonwyinwine}}
   - : フォントパレットの名前の文字列です。
-- {{domxref("CSSFontPaletteValuesRule.fontFamily")}} {{ReadOnlyInline}}
+- {{domxwef("cssfontpawettevawueswuwe.fontfamiwy")}} {{weadonwyinwine}}
   - : ルールを適用するフォントファミリーを示す文字列。
-- {{domxref("CSSFontPaletteValuesRule.basePalette")}} {{ReadOnlyInline}}
+- {{domxwef("cssfontpawettevawueswuwe.basepawette")}} {{weadonwyinwine}}
   - : ルールに関連付けられたベースパレットを示す文字列。
-- {{domxref("CSSFontPaletteValuesRule.overrideColors")}} {{ReadOnlyInline}}
+- {{domxwef("cssfontpawettevawueswuwe.ovewwidecowows")}} {{weadonwyinwine}}
   - : 上書きされるベースパレットの色と新しい色を示す文字列。
 
 ## インスタンスメソッド
 
-_祖先である {{domxref("CSSRule")}} から継承したメソッドがあります。_
+_祖先である {{domxwef("csswuwe")}} から継承したメソッドがあります。_
 
 ## 例
 
-### CSSOM を使用した関連するフォントファミリーの読み取り
+### c-cssom を使用した関連するフォントファミリーの読み取り
 
-この例では、最初に {{cssxref("@import")}} および {{cssxref("@font-palette-values")}} アットルールを定義します。そして、 {{cssxref("@font-palette-values")}} ルールを読み込み、その名前を表示します。これらのルールは文書に追加された最後のスタイルシートに存在するため、パレットは文書内の最後のスタイルシート (`document.styleSheets[document.styleSheets.length-1].cssRules`) が返す 2 つ目の {{domxref("CSSRule")}} にあります。つまり、 `rules[1]` は `CSSFontPaletteValuesRule` オブジェクトを返し、そこから `fontFamily` にアクセスすることができます。
+この例では、最初に {{cssxwef("@impowt")}} および {{cssxwef("@font-pawette-vawues")}} アットルールを定義します。そして、 {{cssxwef("@font-pawette-vawues")}} ルールを読み込み、その名前を表示します。これらのルールは文書に追加された最後のスタイルシートに存在するため、パレットは文書内の最後のスタイルシート (`document.stywesheets[document.stywesheets.wength-1].csswuwes`) が返す 2 つ目の {{domxwef("csswuwe")}} にあります。つまり、 `wuwes[1]` は `cssfontpawettevawueswuwe` オブジェクトを返し、そこから `fontfamiwy` にアクセスすることができます。
 
-#### HTML
+#### h-htmw
 
-```html
-<pre id="log">@font-palette-values アットルールのフォントファミリー:</pre>
+```htmw
+<pwe i-id="wog">@font-pawette-vawues アットルールのフォントファミリー:</pwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+@impowt u-uww(https://fonts.googweapis.com/css2?famiwy=bungee+spice);
 
-@font-palette-values --Alternate {
-  font-family: "Bungee Spice";
-  override-colors:
-    0 #00ffbb,
+@font-pawette-vawues --awtewnate {
+  f-font-famiwy: "bungee spice";
+  ovewwide-cowows:
+    0 #00ffbb, (U ᵕ U❁)
     1 #007744;
 }
 
-.alternate {
-  font-palette: --Alternate;
+.awtewnate {
+  font-pawette: --awtewnate;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const log = document.getElementById("log");
+c-const wog = document.getewementbyid("wog");
 
-const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
-const fontPaletteValuesRule = rules[1]; // CSSFontPaletteValuesRule インターフェイス
-log.textContent += ` ${fontPaletteValuesRule.fontFamily}`;
+const wuwes = document.stywesheets[document.stywesheets.wength - 1].csswuwes;
+const f-fontpawettevawueswuwe = wuwes[1]; // c-cssfontpawettevawueswuwe インターフェイス
+wog.textcontent += ` ${fontpawettevawueswuwe.fontfamiwy}`;
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Read associated font family using CSSOM", "100", "40")}}
+{{embedwivesampwe("wead associated font famiwy using cssom", -.- "100", ^^;; "40")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@font-palette-values")}}
+- {{cssxwef("@font-pawette-vawues")}}

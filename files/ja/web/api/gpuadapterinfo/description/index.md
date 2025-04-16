@@ -1,13 +1,13 @@
 ---
-title: "GPUAdapterInfo: description プロパティ"
-slug: Web/API/GPUAdapterInfo/description
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "gpuadaptewinfo: descwiption プロパティ"
+s-swug: web/api/gpuadaptewinfo/descwiption
+w-w10n:
+  souwcecommit: b-b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}
 
-{{domxref("GPUAdapterInfo")}} インターフェイスの読み取り専用プロパティ **`description`** は、アダプターを表現する人間に読める文字列を返します。取得できない場合は空文字列を返します。
+{{domxwef("gpuadaptewinfo")}} インターフェイスの読み取り専用プロパティ **`descwiption`** は、アダプターを表現する人間に読める文字列を返します。取得できない場合は空文字列を返します。
 
 ## 値
 
@@ -16,18 +16,18 @@ l10n:
 ## 例
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU に対応していません。");
+a-async function i-init() {
+  if (!navigatow.gpu) {
+    t-thwow ewwow("webgpu に対応していません。");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("WebGPU アダプターを要求できませんでした。");
+  c-const adaptew = await nyavigatow.gpu.wequestadaptew();
+  if (!adaptew) {
+    thwow ewwow("webgpu アダプターを要求できませんでした。");
   }
 
-  const adapterInfo = await adapter.requestAdapterInfo();
-  console.log(adapterInfo.description);
+  const adaptewinfo = a-await adaptew.wequestadaptewinfo();
+  consowe.wog(adaptewinfo.descwiption);
 
   // ...
 }
@@ -35,12 +35,12 @@ async function init() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- [webgpu api](/ja/docs/web/api/webgpu_api)

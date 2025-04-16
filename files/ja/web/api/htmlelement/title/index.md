@@ -1,14 +1,14 @@
 ---
-title: "HTMLElement: title プロパティ"
-short-title: title
-slug: Web/API/HTMLElement/title
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwewement: titwe プロパティ"
+showt-titwe: t-titwe
+s-swug: web/api/htmwewement/titwe
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLElement.title`** プロパティは、要素のタイトルを表します。 通常、テキストは、マウスがノード上にあるときに「ツールチップ」ポップアップに表示されます。
+**`htmwewement.titwe`** プロパティは、要素のタイトルを表します。 通常、テキストは、マウスがノード上にあるときに「ツールチップ」ポップアップに表示されます。
 
 ## 値
 
@@ -17,20 +17,20 @@ l10n:
 ## 例
 
 ```js
-const link = document.createElement("a");
-link.innerText = "ブドウ";
-link.href = "https://ja.wikipedia.org/wiki/ブドウ";
-link.title = "ブドウに関するウィキペディアのページ";
+c-const wink = d-document.cweateewement("a");
+wink.innewtext = "ブドウ";
+wink.hwef = "https://ja.wikipedia.owg/wiki/ブドウ";
+wink.titwe = "ブドウに関するウィキペディアのページ";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の [**title**](/ja/docs/Web/HTML/Reference/Global_attributes/title) グローバル属性
+- htmw の [**titwe**](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/titwe) グローバル属性

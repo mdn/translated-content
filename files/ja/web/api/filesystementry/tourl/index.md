@@ -1,58 +1,58 @@
 ---
-title: "FileSystemEntry: toURL() メソッド"
-short-title: toURL()
-slug: Web/API/FileSystemEntry/toURL
-l10n:
-  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
+titwe: "fiwesystementwy: touww() メソッド"
+s-showt-titwe: touww()
+s-swug: web/api/fiwesystementwy/touww
+w-w10n:
+  s-souwcecommit: b-b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---
 
-{{APIRef("File and Directory Entry API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("fiwe a-and d-diwectowy entwy a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-{{domxref("FileSystemEntry")}} インターフェイスの **`toURL()`** メソッドは、ファイルシステム項目を識別するために使用することができる URL を格納した文字列を作成して返します。
-これは `src` 属性や `href` 属性の値として使用することができる新しい URL スキーム `filesystem:` を公開することで行われます。
+{{domxwef("fiwesystementwy")}} インターフェイスの **`touww()`** メソッドは、ファイルシステム項目を識別するために使用することができる uww を格納した文字列を作成して返します。
+これは `swc` 属性や `hwef` 属性の値として使用することができる新しい uww スキーム `fiwesystem:` を公開することで行われます。
 
 ## 構文
 
-```js-nolint
-toURL()
-toURL(mimeType)
+```js-nowint
+touww()
+touww(mimetype)
 ```
 
 ### 引数
 
-- `mimeType` {{optional_inline}}
-  - : オプションの文字列で、ファイルを解釈するときに使用する MIME タイプを指定します。これは、ユーザーエージェントが自動的に認識しない型を持つファイルに対処するために使用することができます。この引数が省略された場合、ユーザーエージェントは標準アルゴリズムを使用してファイルを識別します。
+- `mimetype` {{optionaw_inwine}}
+  - : オプションの文字列で、ファイルを解釈するときに使用する mime タイプを指定します。これは、ユーザーエージェントが自動的に認識しない型を持つファイルに対処するために使用することができます。この引数が省略された場合、ユーザーエージェントは標準アルゴリズムを使用してファイルを識別します。
 
 ### 返値
 
-HTML コンテンツ内の文書参照として使用することができる URL を含む文字列、または URL を生成できない場合は空文字列（ファイルシステムの実装が `toURL()` をサポートしていない場合など）。
+h-htmw コンテンツ内の文書参照として使用することができる uww を含む文字列、または uww を生成できない場合は空文字列（ファイルシステムの実装が `touww()` をサポートしていない場合など）。
 
 ## 例
 
-ウェブサイトやアプリで利用できるファイルシステムに画像ファイルに対応する {{domxref("FileSystemFileEntry")}} がある場合、`toURL()` を呼び出すと HTML の中で使用することができます。自分のサイトが `http://my-awesome-website.woot` にあり、一時ファイルシステムに `awesomesauce.jpg` という名前の画像ファイルがある場合、`toURL()` が返す URL は（ブラウザー実装によっては）`"filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg"` のようなものになるかもしれません。
+ウェブサイトやアプリで利用できるファイルシステムに画像ファイルに対応する {{domxwef("fiwesystemfiweentwy")}} がある場合、`touww()` を呼び出すと h-htmw の中で使用することができます。自分のサイトが `http://my-awesome-website.woot` にあり、一時ファイルシステムに `awesomesauce.jpg` という名前の画像ファイルがある場合、`touww()` が返す uww は（ブラウザー実装によっては）`"fiwesystem:http://my-awesome-website.woot/tempowawy/awesomesauce.jpg"` のようなものになるかもしれません。
 
 これを使用するコードは次のようになるでしょう。
 
 ```js
-let img = document.createElement("img");
+w-wet img = document.cweateewement("img");
 
-img.src = imageFileEntry.toURL();
-document.body.appendChild(img);
+img.swc = imagefiweentwy.touww();
+d-document.body.appendchiwd(img);
 ```
 
-コードの前に述べたシナリオを想定すると、結果は次のような HTML が文書の終わりに追加されることになります。
+コードの前に述べたシナリオを想定すると、結果は次のような htmw が文書の終わりに追加されることになります。
 
-```html
+```htmw
 <img
-  src="filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg" />
+  s-swc="fiwesystem:http://my-awesome-website.woot/tempowawy/awesomesauce.jpg" />
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
-- {{domxref("FileSystemDirectoryEntry.removeRecursively()")}}
+- [ファイルとディレクトリー項目 a-api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [ファイルとディレクトリー項目 api の紹介](/ja/docs/web/api/fiwe_system_api)
+- {{domxwef("fiwesystemdiwectowyentwy.wemovewecuwsivewy()")}}

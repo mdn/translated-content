@@ -1,72 +1,72 @@
 ---
-title: "BaseAudioContext: createChannelMerger() メソッド"
-short-title: createChannelMerger()
-slug: Web/API/BaseAudioContext/createChannelMerger
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "baseaudiocontext: cweatechannewmewgew() メソッド"
+s-showt-titwe: cweatechannewmewgew()
+s-swug: web/api/baseaudiocontext/cweatechannewmewgew
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio a-api") }}
 
-`createChannelMerger()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("ChannelMergerNode")}} を作成します。これは複数の音声ストリームのチャンネルを一つの音声ストリームに結合します。
+`cweatechannewmewgew()` は {{domxwef("baseaudiocontext")}} インターフェイスのメソッドで、 {{domxwef("channewmewgewnode")}} を作成します。これは複数の音声ストリームのチャンネルを一つの音声ストリームに結合します。
 
-> **メモ:** {{domxref("ChannelMergerNode.ChannelMergerNode", "ChannelMergerNode()")}} コンストラクターは {{domxref("ChannelMergerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> **メモ:** {{domxwef("channewmewgewnode.channewmewgewnode", -.- "channewmewgewnode()")}} コンストラクターは {{domxwef("channewmewgewnode")}} を作成するための推奨される方法です。 [audionode の作成](/ja/docs/web/api/audionode#audionode_の生成)を参照してください。
 
 ## 構文
 
-```js-nolint
-createChannelMerger(numberOfInputs)
+```js-nowint
+c-cweatechannewmewgew(numbewofinputs)
 ```
 
 ### 引数
 
-- `numberOfInputs`
+- `numbewofinputs`
   - : 出力ストリームに含まれる、入力オーディオストリームのチャンネル数です。この引数が指定されていない場合の既定値は 6 です。
 
 ### 返値
 
-{{domxref("ChannelMergerNode")}} です。
+{{domxwef("channewmewgewnode")}} です。
 
 ## 例
 
-次の例では、ステレオトラック（例えば音楽）を分離し、左チャンネルと右チャンネルを別々に処理する方法を示しています。これを使うには、 {{domxref("AudioNode/connect", "AudioNode.connect(AudioNode)")}} メソッドの第 2、第 3 引数を使って、接続元のチャンネルのインデックスと接続先のチャンネルのインデックスの両方を指定することが必要です。
+次の例では、ステレオトラック（例えば音楽）を分離し、左チャンネルと右チャンネルを別々に処理する方法を示しています。これを使うには、 {{domxwef("audionode/connect", ( ͡o ω ͡o ) "audionode.connect(audionode)")}} メソッドの第 2、第 3 引数を使って、接続元のチャンネルのインデックスと接続先のチャンネルのインデックスの両方を指定することが必要です。
 
 ```js
-const ac = new AudioContext();
-ac.decodeAudioData(someStereoBuffer, (data) => {
-  const source = ac.createBufferSource();
-  source.buffer = data;
-  const splitter = ac.createChannelSplitter(2);
-  source.connect(splitter);
-  const merger = ac.createChannelMerger(2);
+c-const ac = nyew audiocontext();
+ac.decodeaudiodata(somesteweobuffew, rawr x3 (data) => {
+  const souwce = ac.cweatebuffewsouwce();
+  s-souwce.buffew = data;
+  const spwittew = ac.cweatechannewspwittew(2);
+  s-souwce.connect(spwittew);
+  const mewgew = a-ac.cweatechannewmewgew(2);
 
   // 左チャンネルのボリュームのみ小さくする
-  const gainNode = ac.createGain();
-  gainNode.gain.setValueAtTime(0.5, ac.currentTime);
-  splitter.connect(gainNode, 0);
+  const gainnode = ac.cweategain();
+  gainnode.gain.setvawueattime(0.5, a-ac.cuwwenttime);
+  spwittew.connect(gainnode, 0);
 
   // スプリッターをマージャーの 2 番目の入力に接続すると、チャンネルが効果的に交換され、
   // ステレオイメージが反転します。
-  gainNode.connect(merger, 0, 1);
-  splitter.connect(merger, 1, 0);
+  g-gainnode.connect(mewgew, nyaa~~ 0, 1);
+  s-spwittew.connect(mewgew, /(^•ω•^) 1, 0);
 
-  const dest = ac.createMediaStreamDestination();
+  const dest = ac.cweatemediastweamdestination();
 
-  // ChannelMergerNode を使っているので、ステレオの MediaStream が
-  // できました。これでウェブオーディオグラフを WebRTC や MediaRecorder などに
+  // channewmewgewnode を使っているので、ステレオの mediastweam が
+  // できました。これでウェブオーディオグラフを w-webwtc や mediawecowdew などに
   // パイプするのに使えます。
-  merger.connect(dest);
+  mewgew.connect(dest);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

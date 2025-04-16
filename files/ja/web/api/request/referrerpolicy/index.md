@@ -1,38 +1,38 @@
 ---
-title: "Request: referrerPolicy プロパティ"
-short-title: referrerPolicy
-slug: Web/API/Request/referrerPolicy
-l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+titwe: "wequest: wefewwewpowicy プロパティ"
+s-showt-titwe: w-wefewwewpowicy
+s-swug: web/api/wequest/wefewwewpowicy
+w-w10n:
+  souwcecommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch a-api")}}{{avaiwabweinwowkews}}
 
-**`referrerPolicy`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、{{HTTPHeader("Referer")}} ヘッダーで送信されるどのリファラー情報がリクエストに記載されるべきかを管理する、リファラーポリシーを返します。
+**`wefewwewpowicy`** は {{domxwef("wequest")}} インターフェイスの読み取り専用プロパティで、{{httpheadew("wefewew")}} ヘッダーで送信されるどのリファラー情報がリクエストに記載されるべきかを管理する、リファラーポリシーを返します。
 
 ## 値
 
-このリクエストの `referrerPolicy` を表す文字列です。詳細な情報や使用可能な値については、 HTTP の {{HTTPHeader("Referrer-Policy")}} ヘッダーのページを参照してください。
+このリクエストの `wefewwewpowicy` を表す文字列です。詳細な情報や使用可能な値については、 http の {{httpheadew("wefewwew-powicy")}} ヘッダーのページを参照してください。
 
 ## 例
 
-次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのための）新しいリクエストを生成してから、変数にリクエストのリファラーポリシーを保存しています。
+次のスニペットでは、 {{domxwef("wequest.wequest()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのための）新しいリクエストを生成してから、変数にリクエストのリファラーポリシーを保存しています。
 
 ```js
-const myRequest = new Request("flowers.jpg");
-const myReferrer = myRequest.referrerPolicy; // returns "" by default
+c-const mywequest = n-nyew wequest("fwowews.jpg");
+c-const mywefewwew = mywequest.wefewwewpowicy; // wetuwns "" by defauwt
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

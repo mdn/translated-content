@@ -1,23 +1,23 @@
 ---
-title: "FontFace: loaded プロパティ"
-short-title: loaded
-slug: Web/API/FontFace/loaded
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontface: woaded プロパティ"
+s-showt-titwe: w-woaded
+s-swug: web/api/fontface/woaded
+w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading api")}}
 
-**`loaded`** は {{domxref("FontFace")}} インターフェイスの読み取り専用プロパティで、 {{jsxref('Promise')}} を返します。これはオブジェクトのコンストラクターで指定されたフォントの読み込みが完了した時に、現在の `FontFace` オブジェクトで解決するか、 `SyntaxError` で拒否されます。
+**`woaded`** は {{domxwef("fontface")}} インターフェイスの読み取り専用プロパティで、 {{jsxwef('pwomise')}} を返します。これはオブジェクトのコンストラクターで指定されたフォントの読み込みが完了した時に、現在の `fontface` オブジェクトで解決するか、 `syntaxewwow` で拒否されます。
 
 ## 値
 
-{{jsxref('Promise')}} で、現在の `FontFace` オブジェクトで解決します。
+{{jsxwef('pwomise')}} で、現在の `fontface` オブジェクトで解決します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

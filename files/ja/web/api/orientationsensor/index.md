@@ -1,81 +1,81 @@
 ---
-title: OrientationSensor
-slug: Web/API/OrientationSensor
-l10n:
-  sourceCommit: 33eb1ab8fc98ec3a18972a2032b1af49eb57bb85
+titwe: owientationsensow
+swug: w-web/api/owientationsensow
+w-w10n:
+  s-souwcecommit: 33eb1ab8fc98ec3a18972a2032b1af49eb57bb85
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-[Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`OrientationSensor`** インターフェイスは、向きセンサーのベースクラスです。このインターフェイスを直接使用することはできません。かわりに、このインターフェイスは継承するインターフェイスからアクセスされるプロパティとメソッドを提供します。
+[sensow a-apis](/ja/docs/web/api/sensow_apis) の **`owientationsensow`** インターフェイスは、向きセンサーのベースクラスです。このインターフェイスを直接使用することはできません。かわりに、このインターフェイスは継承するインターフェイスからアクセスされるプロパティとメソッドを提供します。
 
-この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) でブロックされる可能性があります。
+この機能はサーバーで設定された [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy) でブロックされる可能性があります。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## OrientationSensor をベースとするインターフェイス
+## o-owientationsensow をベースとするインターフェイス
 
-以下は、`OrientationSensor` インターフェイスをベースとするインターフェイスの一覧です。
+以下は、`owientationsensow` インターフェイスをベースとするインターフェイスの一覧です。
 
-- {{domxref('AbsoluteOrientationSensor')}}
-- {{domxref('RelativeOrientationSensor')}}
+- {{domxwef('absowuteowientationsensow')}}
+- {{domxwef('wewativeowientationsensow')}}
 
 ## インスタンスプロパティ
 
-- {{domxref("OrientationSensor.quaternion")}}
-  - : 各要素がデバイスの向きを表す単位四元数の成分である 4 要素の {{jsxref('Array')}} を返します。
+- {{domxwef("owientationsensow.quatewnion")}}
+  - : 各要素がデバイスの向きを表す単位四元数の成分である 4 要素の {{jsxwef('awway')}} を返します。
 
 ## インスタンスメソッド
 
-- {{domxref("OrientationSensor.populateMatrix()")}}
+- {{domxwef("owientationsensow.popuwatematwix()")}}
   - : 指定のオブジェクトに、センサーの最新の測定値に基づく回転行列を入れます。
 
 ## 例
 
 ### 基本的な例
 
-以下の例は、だいたい [Intel の Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/) をもとにしており、1 秒に 60 回の周期を設定して `AbsoluteOrientationSensor` のインスタンスを生成しています。測定ごとに、{{domxref('OrientationSensor.quaternion')}} を用いて電話の視覚的なモデルを回転しています。
+以下の例は、だいたい [intew の owientation p-phone d-demo](https://intew.github.io/genewic-sensow-demos/owientation-phone/) をもとにしており、1 秒に 60 回の周期を設定して `absowuteowientationsensow` のインスタンスを生成しています。測定ごとに、{{domxwef('owientationsensow.quatewnion')}} を用いて電話の視覚的なモデルを回転しています。
 
 ```js
-const options = { frequency: 60, referenceFrame: "device" };
-const sensor = new AbsoluteOrientationSensor(options);
+const options = { fwequency: 60, rawr wefewencefwame: "device" };
+const sensow = nyew a-absowuteowientationsensow(options);
 
-sensor.addEventListener("reading", () => {
-  // model は別の場所で生成した Three.js のオブジェクト
-  model.quaternion.fromArray(sensor.quaternion).inverse();
+sensow.addeventwistenew("weading", OwO () => {
+  // modew は別の場所で生成した t-thwee.js のオブジェクト
+  modew.quatewnion.fwomawway(sensow.quatewnion).invewse();
 });
-sensor.addEventListener("error", (error) => {
-  if (event.error.name === "NotReadableError") {
-    console.log("センサーが利用できません。");
+s-sensow.addeventwistenew("ewwow", (U ﹏ U) (ewwow) => {
+  if (event.ewwow.name === "notweadabweewwow") {
+    consowe.wog("センサーが利用できません。");
   }
 });
-sensor.start();
+sensow.stawt();
 ```
 
 ### 許可の例
 
-向きセンサーを使用するには、複数のデバイスセンサーを使用する許可を要求する必要があります。{{domxref('Permissions')}} インターフェイスは Promise を使用するので、許可を要求するのには {{jsxref('Promise.all')}} を使用するとよいです。
+向きセンサーを使用するには、複数のデバイスセンサーを使用する許可を要求する必要があります。{{domxwef('pewmissions')}} インターフェイスは p-pwomise を使用するので、許可を要求するのには {{jsxwef('pwomise.aww')}} を使用するとよいです。
 
 ```js
-const sensor = new AbsoluteOrientationSensor();
-Promise.all([
-  navigator.permissions.query({ name: "accelerometer" }),
-  navigator.permissions.query({ name: "magnetometer" }),
-  navigator.permissions.query({ name: "gyroscope" }),
-]).then((results) => {
-  if (results.every((result) => result.state === "granted")) {
-    sensor.start();
+const sensow = n-nyew absowuteowientationsensow();
+p-pwomise.aww([
+  nyavigatow.pewmissions.quewy({ nyame: "accewewometew" }), >_<
+  nyavigatow.pewmissions.quewy({ nyame: "magnetometew" }), rawr x3
+  n-nyavigatow.pewmissions.quewy({ nyame: "gywoscope" }), mya
+]).then((wesuwts) => {
+  if (wesuwts.evewy((wesuwt) => wesuwt.state === "gwanted")) {
+    sensow.stawt();
     // …
-  } else {
-    console.log("AbsoluteOrientationSensor を使用する許可がありません。");
+  } e-ewse {
+    consowe.wog("absowuteowientationsensow を使用する許可がありません。");
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

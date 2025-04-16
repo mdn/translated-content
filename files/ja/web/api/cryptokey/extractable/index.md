@@ -1,67 +1,67 @@
 ---
-title: "CryptoKey: extractable プロパティ"
-short-title: extractable
-slug: Web/API/CryptoKey/extractable
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "cwyptokey: extwactabwe プロパティ"
+s-showt-titwe: e-extwactabwe
+swug: w-web/api/cwyptokey/extwactabwe
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_Header}}
+{{apiwef("web c-cwypto api")}}{{secuwecontext_headew}}
 
-**`extractable`** は {{DOMxRef("CryptoKey")}} インターフェイスの読み取り専用プロパティで、[`SubtleCrypto.exportKey()`](/ja/docs/Web/API/SubtleCrypto/exportKey) または [`SubtleCrypto.wrapKey()`](/ja/docs/Web/API/SubtleCrypto/wrapKey) を使用してキーを抽出できるかどうかを示します。
+**`extwactabwe`** は {{domxwef("cwyptokey")}} インターフェイスの読み取り専用プロパティで、[`subtwecwypto.expowtkey()`](/ja/docs/web/api/subtwecwypto/expowtkey) または [`subtwecwypto.wwapkey()`](/ja/docs/web/api/subtwecwypto/wwapkey) を使用してキーを抽出できるかどうかを示します。
 
-キーがエクスポートできない場合は、 [`exportKey()`](/ja/docs/Web/API/SubtleCrypto/exportKey) や [`wrapKey()`](/ja/docs/Web/API/SubtleCrypto/wrapKey) では抽出しようとして例外を発生します。
+キーがエクスポートできない場合は、 [`expowtkey()`](/ja/docs/web/api/subtwecwypto/expowtkey) や [`wwapkey()`](/ja/docs/web/api/subtwecwypto/wwapkey) では抽出しようとして例外を発生します。
 
 ## 値
 
-論理値で、キーがエクスポート可能であれば `true`、不可能であれば `false` となります。
+論理値で、キーがエクスポート可能であれば `twue`、不可能であれば `fawse` となります。
 
 ## 例
 
 この例では、キーをエクスポートできない場合、「エクスポート」ボタンは無効になり、待ち受けするリスナーも追加されません。
 
 ```js
-// 指定されたキーをエクスポートし、"exported-key" 空間に書き込みます。
-async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey("raw", key);
-  const exportedKeyBuffer = new Uint8Array(exported);
+// 指定されたキーをエクスポートし、"expowted-key" 空間に書き込みます。
+a-async function e-expowtcwyptokey(key) {
+  const expowted = await window.cwypto.subtwe.expowtkey("waw", 😳 key);
+  const expowtedkeybuffew = n-nyew uint8awway(expowted);
 
-  const exportKeyOutput = document.querySelector(".exported-key");
-  exportKeyOutput.textContent = `[${exportedKeyBuffer}]`;
+  const e-expowtkeyoutput = document.quewysewectow(".expowted-key");
+  expowtkeyoutput.textcontent = `[${expowtedkeybuffew}]`;
 }
 
-// キーが抽出可能かどうかによって、exportButton を有効または無効にします。
-function setExportButton(key) {
-  const exportButton = document.querySelector(".raw");
+// キーが抽出可能かどうかによって、expowtbutton を有効または無効にします。
+f-function setexpowtbutton(key) {
+  const expowtbutton = document.quewysewectow(".waw");
 
   // キーが抽出できない場合は、ボタンを無効にする
-  exportButton.disabled = !key.extractable;
-  if (key.extractable) {
+  expowtbutton.disabwed = !key.extwactabwe;
+  i-if (key.extwactabwe) {
     // イベントリスナーを追加してキーを抽出する
-    exportButton.addEventListener("click", () => {
-      exportCryptoKey(key);
+    expowtbutton.addeventwistenew("cwick", XD () => {
+      expowtcwyptokey(key);
     });
   }
 }
 
 // 暗号化/復号する秘密鍵を生成する。
 // 次に、「エクスポート」ボタンでイベントリスナーを有効にし、設定する。
-window.crypto.subtle
-  .generateKey(
+w-window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "AES-GCM",
-      length: 256,
-    },
-    true,
-    ["encrypt", "decrypt"],
+      n-nyame: "aes-gcm", :3
+      wength: 256, 😳😳😳
+    }, -.-
+    twue,
+    ["encwypt", ( ͡o ω ͡o ) "decwypt"], rawr x3
   )
-  .then(setExportButton(key));
+  .then(setexpowtbutton(key));
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

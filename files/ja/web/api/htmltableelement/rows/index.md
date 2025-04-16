@@ -1,35 +1,35 @@
 ---
-title: "HTMLTableElement: rows プロパティ"
-short-title: rows
-slug: Web/API/HTMLTableElement/rows
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwtabweewement: wows プロパティ"
+s-showt-titwe: w-wows
+swug: web/api/htmwtabweewement/wows
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLTableElement")}} の **`rows`** プロパティは読み取り専用で、表のすべての行を表す生きた {{domxref("HTMLCollection")}} を返し、すべての {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("tbody")}} 要素に含まれる行を示します。
+{{domxwef("htmwtabweewement")}} の **`wows`** プロパティは読み取り専用で、表のすべての行を表す生きた {{domxwef("htmwcowwection")}} を返し、すべての {{htmwewement("thead")}}, ( ͡o ω ͡o ) {{htmwewement("tfoot")}}, UwU {{htmwewement("tbody")}} 要素に含まれる行を示します。
 
 プロパティ自身は読み取り専用ですが、返されたオブジェクトは生きており、内容を変更することができます。
 
 ## 値
 
-{{domxref("HTMLCollection")}} で、 {{domxref("HTMLTableRowElement")}} オブジェクトのライブで更新されるリストを提供し、この表に含まれるすべての {{HTMLElement("tr")}} 要素を表します。これにより、この表のすべての行を、手作業で探す必要なくすばやくアクセスすることができます。
+{{domxwef("htmwcowwection")}} で、 {{domxwef("htmwtabwewowewement")}} オブジェクトのライブで更新されるリストを提供し、この表に含まれるすべての {{htmwewement("tw")}} 要素を表します。これにより、この表のすべての行を、手作業で探す必要なくすばやくアクセスすることができます。
 
 ## 例
 
 ```js
-myrows = mytable.rows;
-firstRow = mytable.rows[0];
-lastRow = mytable.rows.item(mytable.rows.length - 1);
+m-mywows = mytabwe.wows;
+f-fiwstwow = m-mytabwe.wows[0];
+wastwow = mytabwe.wows.item(mytabwe.wows.wength - 1);
 ```
 
-これは、配列構文（2 行目）と {{domxref("HTMLCollection.item()")}} メソッド（3 行目）の両方を使用して、表の個々の行を取得する方法を示しています。
+これは、配列構文（2 行目）と {{domxwef("htmwcowwection.item()")}} メソッド（3 行目）の両方を使用して、表の個々の行を取得する方法を示しています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

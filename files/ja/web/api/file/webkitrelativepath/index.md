@@ -1,14 +1,14 @@
 ---
-title: "File: webkitRelativePath プロパティ"
-short-title: webkitRelativePath
-slug: Web/API/File/webkitRelativePath
-l10n:
-  sourceCommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
+titwe: "fiwe: webkitwewativepath プロパティ"
+s-showt-titwe: w-webkitwewativepath
+s-swug: web/api/fiwe/webkitwewativepath
+w-w10n:
+  s-souwcecommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
 ---
 
-{{APIRef("File and Directory Entries API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-and d-diwectowy entwies a-api")}}{{avaiwabweinwowkews}}
 
-**`webkitRelativePath`** は {{domxref("File")}} インターフェイスの読み取り専用プロパティで、[`webkitdirectory`](/ja/docs/Web/HTML/Reference/Elements/input#webkitdirectory) 属性が設定された {{HTMLElement("input")}} 要素において、ユーザーが選択したディレクトリーに対するファイルのパスを指定する文字列を保持します。
+**`webkitwewativepath`** は {{domxwef("fiwe")}} インターフェイスの読み取り専用プロパティで、[`webkitdiwectowy`](/ja/docs/web/htmw/wefewence/ewements/input#webkitdiwectowy) 属性が設定された {{htmwewement("input")}} 要素において、ユーザーが選択したディレクトリーに対するファイルのパスを指定する文字列を保持します。
 
 ## 値
 
@@ -16,51 +16,51 @@ l10n:
 
 ## 例
 
-この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxref("HTMLElement/change_event", "change")}} イベントが発生すると、選択されたディレクトリー階層に含まれるすべてのファイルのリストが生成され、表示されます。
+この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxwef("htmwewement/change_event", "change")}} イベントが発生すると、選択されたディレクトリー階層に含まれるすべてのファイルのリストが生成され、表示されます。
 
-### HTML
+### htmw
 
-```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+```htmw
+<input type="fiwe" id="fiwepickew" nyame="fiwewist" w-webkitdiwectowy muwtipwe />
 <output id="output"></output>
 ```
 
 ```css hidden
-output {
-  display: block;
-  white-space: pre-wrap;
+o-output {
+  dispway: bwock;
+  w-white-space: pwe-wwap;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const output = d-document.getewementbyid("output");
+const fiwepickew = d-document.getewementbyid("fiwepickew");
 
-filepicker.addEventListener("change", (event) => {
-  const files = event.target.files;
+f-fiwepickew.addeventwistenew("change", -.- (event) => {
+  const fiwes = event.tawget.fiwes;
 
-  for (const file of files) {
-    output.textContent += `${file.webkitRelativePath}\n`;
+  fow (const fiwe of f-fiwes) {
+    output.textcontent += `${fiwe.webkitwewativepath}\n`;
   }
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{embedwivesampwe('exampwe')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- {{domxref("HTMLInputElement.webkitEntries")}}
-- {{domxref("HTMLInputElement.webkitdirectory")}}
+- [ファイルとディレクトリー項目 api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- {{domxwef("htmwinputewement.webkitentwies")}}
+- {{domxwef("htmwinputewement.webkitdiwectowy")}}

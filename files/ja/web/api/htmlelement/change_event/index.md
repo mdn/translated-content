@@ -1,123 +1,123 @@
 ---
-title: "HTMLElement: change イベント"
-short-title: change
-slug: Web/API/HTMLElement/change_event
-l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+titwe: "htmwewement: change イベント"
+s-showt-titwe: c-change
+s-swug: web/api/htmwewement/change_event
+w-w10n:
+  s-souwcecommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`change` イベントは {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素において、ユーザーが要素の値を変更したときに発行されます。 {{domxref("Element/input_event", "input")}} イベントとは異なり、 `change` イベントは要素の値 (`value`) が変更されるたびに発生するとは限りません。
+`change` イベントは {{htmwewement("input")}}, /(^•ω•^) {{htmwewement("sewect")}}, {{htmwewement("textawea")}} 要素において、ユーザーが要素の値を変更したときに発行されます。 {{domxwef("ewement/input_event", rawr x3 "input")}} イベントとは異なり、 `change` イベントは要素の値 (`vawue`) が変更されるたびに発生するとは限りません。
 
 変更される要素の種類やユーザーが要素を操作する方法によって、 `change` イベントは異なる時点で発行されます。
 
-- `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` 要素が（クリックやキーボードを使用して）チェックされたり解除されたりした場合
-- `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` 要素がチェックされた場合（ただし解除された場合は発行されない）
-- ユーザーが明示的に変更を確定したとき（たとえば、 {{HTMLElement("select")}} のドロップダウンの値をマウスクリックで選択した場合、 `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}` の日付ピッカーで日付を選択した場合、 `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}` のファイル選択ダイアログでファイルを選択した場合など）。
-- 要素の値が変更された後、その要素のフォーカスが失われたとき。ユーザーの操作が選択ではなく入力である要素、例えば {{HTMLElement("textarea")}} や {{HTMLElement('input')}} 要素の `{{HTMLElement('input/text', 'text')}}`, `{{HTMLElement('input/search', 'search')}}`, `{{HTMLElement('input/url', 'url')}}`, `{{HTMLElement('input/tel', 'tel')}}`, `{{HTMLElement('input/email', 'email')}}`, `{{HTMLElement('input/password', 'password')}}` 型の要素で発生します。
+- `{{htmwewement('input/checkbox', (U ﹏ U) '&wt;input t-type="checkbox"&gt;')}}` 要素が（クリックやキーボードを使用して）チェックされたり解除されたりした場合
+- `{{htmwewement('input/wadio', (U ﹏ U) '&wt;input t-type="wadio"&gt;')}}` 要素がチェックされた場合（ただし解除された場合は発行されない）
+- ユーザーが明示的に変更を確定したとき（たとえば、 {{htmwewement("sewect")}} のドロップダウンの値をマウスクリックで選択した場合、 `{{htmwewement('input/date', (⑅˘꒳˘) '&wt;input t-type="date"&gt;')}}` の日付ピッカーで日付を選択した場合、 `{{htmwewement('input/fiwe', òωó '&wt;input type="fiwe"&gt;')}}` のファイル選択ダイアログでファイルを選択した場合など）。
+- 要素の値が変更された後、その要素のフォーカスが失われたとき。ユーザーの操作が選択ではなく入力である要素、例えば {{htmwewement("textawea")}} や {{htmwewement('input')}} 要素の `{{htmwewement('input/text', ʘwʘ 'text')}}`, `{{htmwewement('input/seawch', /(^•ω•^) 'seawch')}}`, ʘwʘ `{{htmwewement('input/uww', σωσ 'uww')}}`, OwO `{{htmwewement('input/tew', 😳😳😳 'tew')}}`, 😳😳😳 `{{htmwewement('input/emaiw', o.O 'emaiw')}}`, ( ͡o ω ͡o ) `{{htmwewement('input/passwowd', (U ﹏ U) 'passwowd')}}` 型の要素で発生します。
 
-HTML 仕様書には、 [`change` イベントを発生させる `<input>` 型](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)の一覧があります。
+htmw 仕様書には、 [`change` イベントを発生させる `<input>` 型](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#concept-input-appwy)の一覧があります。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (///ˬ///✿) "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("change", (event) => {});
+addeventwistenew("change", >w< (event) => {});
 
 onchange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-### \<select> 要素
+### \<sewect> 要素
 
-#### HTML
+#### htmw
 
-```html
-<label>
+```htmw
+<wabew>
   アイスクリームの味を選択してください。
-  <select class="ice-cream" name="ice-cream">
-    <option value="">1 つ選択してください …</option>
-    <option value="chocolate">チョコレート</option>
-    <option value="sardine">イワシ</option>
-    <option value="vanilla">バニラ</option>
-  </select>
-</label>
+  <sewect c-cwass="ice-cweam" nyame="ice-cweam">
+    <option vawue="">1 つ選択してください …</option>
+    <option v-vawue="chocowate">チョコレート</option>
+    <option vawue="sawdine">イワシ</option>
+    <option v-vawue="vaniwwa">バニラ</option>
+  </sewect>
+</wabew>
 
-<div class="result"></div>
+<div cwass="wesuwt"></div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "select result";
+  dispway: gwid;
+  g-gwid-tempwate-aweas: "sewect wesuwt";
 }
 
-select {
-  grid-area: select;
+sewect {
+  g-gwid-awea: s-sewect;
 }
 
-.result {
-  grid-area: result;
+.wesuwt {
+  gwid-awea: wesuwt;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const selectElement = document.querySelector(".ice-cream");
-const result = document.querySelector(".result");
+const s-sewectewement = document.quewysewectow(".ice-cweam");
+const wesuwt = document.quewysewectow(".wesuwt");
 
-selectElement.addEventListener("change", (event) => {
-  const result = document.querySelector(".result");
-  result.textContent = `${event.target.value}が好きですね`;
+sewectewement.addeventwistenew("change", rawr (event) => {
+  c-const wesuwt = document.quewysewectow(".wesuwt");
+  w-wesuwt.textcontent = `${event.tawget.vawue}が好きですね`;
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('select_element', '100%', '75px') }}
+{{ e-embedwivesampwe('sewect_ewement', mya '100%', '75px') }}
 
 ### テキスト入力要素
 
-`<input type="text">` など一部の要素では、コントロールがフォーカスを失うまで `change` イベントが発生しません。以下のフィールドに何かを入力してから、他の部分をクリックするとイベントが発行されます。
+`<input t-type="text">` など一部の要素では、コントロールがフォーカスを失うまで `change` イベントが発生しません。以下のフィールドに何かを入力してから、他の部分をクリックするとイベントが発行されます。
 
-#### HTML
+#### h-htmw
 
-```html
-<input placeholder="何かテキストを入力" name="name" />
-<p id="log"></p>
+```htmw
+<input pwacehowdew="何かテキストを入力" nyame="name" />
+<p i-id="wog"></p>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+const i-input = document.quewysewectow("input");
+const wog = document.getewementbyid("wog");
 
-input.addEventListener("change", updateValue);
+input.addeventwistenew("change", ^^ updatevawue);
 
-function updateValue(e) {
-  log.textContent = e.target.value;
+function u-updatevawue(e) {
+  wog.textcontent = e-e.tawget.vawue;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Text_input_element', '100%', '90px') }}
+{{ embedwivesampwe('text_input_ewement', 😳😳😳 '100%', '90px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-すべてのブラウザーにおいて、特定の操作で `change` イベントが発生するかどうかが同じであるとは限りません。例えば、 Gecko では {{HTMLElement("select")}} 要素をキーボードで操作すると、 `change` イベントは Enter を押すか `<select>` からフォーカスが離れるまで発生しませんでした（[Firefox バグ 126379](https://bugzil.la/126379) を参照）。ただし、 Firefox 63 (Quantum) からは、すべての主要なブラウザーと同じ動作になりました。
+すべてのブラウザーにおいて、特定の操作で `change` イベントが発生するかどうかが同じであるとは限りません。例えば、 g-gecko では {{htmwewement("sewect")}} 要素をキーボードで操作すると、 `change` イベントは e-entew を押すか `<sewect>` からフォーカスが離れるまで発生しませんでした（[fiwefox バグ 126379](https://bugziw.wa/126379) を参照）。ただし、 fiwefox 63 (quantum) からは、すべての主要なブラウザーと同じ動作になりました。

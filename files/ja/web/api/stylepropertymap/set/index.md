@@ -1,47 +1,47 @@
 ---
-title: StylePropertyMap.set()
-slug: Web/API/StylePropertyMap/set
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: stywepwopewtymap.set()
+swug: web/api/stywepwopewtymap/set
+w-w10n:
+  souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css t-typed object m-modew api")}}{{seecompattabwe}}
 
-**`set()`** は {{domxref("StylePropertyMap")}} インターフェイスのメソッドで、指定したプロパティの CSS 宣言を変更します。
+**`set()`** は {{domxwef("stywepwopewtymap")}} インターフェイスのメソッドで、指定したプロパティの c-css 宣言を変更します。
 
 ## 構文
 
-```js-nolint
-set(property, value)
+```js-nowint
+s-set(pwopewty, σωσ v-vawue)
 ```
 
 ### 引数
 
-- `property`
+- `pwopewty`
   - : 変更するスタイル特性（フォント、幅、背景色など）を示す識別子です。
-- `value`
+- `vawue`
   - : 指定されたプロパティが持つべき値です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例では、要素の [style 属性](/ja/docs/Web/HTML/Reference/Global_attributes/style)の中で、 {{cssxref('padding-top')}} プロパティを指定された値に設定しています。
+この例では、要素の [stywe 属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/stywe)の中で、 {{cssxwef('padding-top')}} プロパティを指定された値に設定しています。
 
 ```js
-// button 属性を取得
-const buttonEl = document.querySelector("button");
+// b-button 属性を取得
+c-const buttonew = document.quewysewectow("button");
 
-// button の style 属性で padding-top を設定
-buttonEl.attributeStyleMap.set("padding-top", CSS.px(10));
+// button の stywe 属性で padding-top を設定
+b-buttonew.attwibutestywemap.set("padding-top", >_< css.px(10));
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,23 +1,23 @@
 ---
-title: "Performance: clearResourceTimings() メソッド"
-short-title: clearResourceTimings()
-slug: Web/API/Performance/clearResourceTimings
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pewfowmance: cweawwesouwcetimings() メソッド"
+s-showt-titwe: c-cweawwesouwcetimings()
+s-swug: web/api/pewfowmance/cweawwesouwcetimings
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`clearResourceTimings()`** メソッドは、{{domxref("PerformanceEntry.entryType","entryType")}} が "`resource`" のすべてのパフォーマンス項目をブラウザーのパフォーマンスタイムラインから削除し、パフォーマンスリソースデータバッファーのサイズをゼロに設定します。
+**`cweawwesouwcetimings()`** メソッドは、{{domxwef("pewfowmanceentwy.entwytype","entwytype")}} が "`wesouwce`" のすべてのパフォーマンス項目をブラウザーのパフォーマンスタイムラインから削除し、パフォーマンスリソースデータバッファーのサイズをゼロに設定します。
 
-ブラウザーのリソースデータバッファーのサイズを設定するには、{{domxref("Performance.setResourceTimingBufferSize()")}} メソッドを使用してください。
+ブラウザーのリソースデータバッファーのサイズを設定するには、{{domxwef("pewfowmance.setwesouwcetimingbuffewsize()")}} メソッドを使用してください。
 
-ブラウザーのリソースタイミングバッファーがいっぱいになったときに通知を取得するには、 {{domxref("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}} イベントを待ち受けしてください。
+ブラウザーのリソースタイミングバッファーがいっぱいになったときに通知を取得するには、 {{domxwef("pewfowmance.wesouwcetimingbuffewfuww_event", >_< "wesouwcetimingbuffewfuww")}} イベントを待ち受けしてください。
 
 ## 構文
 
-```js-nolint
-clearResourceTimings()
+```js-nowint
+c-cweawwesouwcetimings()
 ```
 
 ### 引数
@@ -26,45 +26,45 @@ clearResourceTimings()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ### パフォーマンスリソースバッファーをクリア
 
-すべてのリソースパフォーマンス項目をバッファーから除去するには、コードの適切な位置で `clearResourceTimings()` を呼び出すか、コンソールに貼り付けてください。
+すべてのリソースパフォーマンス項目をバッファーから除去するには、コードの適切な位置で `cweawwesouwcetimings()` を呼び出すか、コンソールに貼り付けてください。
 
 ```js
-performance.clearResourceTimings();
-performance.getEntriesByType("resource").length; // 0
+p-pewfowmance.cweawwesouwcetimings();
+p-pewfowmance.getentwiesbytype("wesouwce").wength; // 0
 ```
 
 ### 記録を取り、パフォーマンスオブザーバーを空にする
 
-{{domxref("PerformanceObserver")}} オブジェクトを使用する場合（特に `buffered` フラグを `true` に設定した場合）、パフォーマンスリソースバッファーがすばやくいっぱいになることがあります。しかし、バッファーをクリアする代わりに、現在のパフォーマンス項目のリストを格納し、 {{domxref("PerformanceObserver.takeRecords()")}} メソッドを使用してパフォーマンスオブザーバーを空にすることもできます。これは "`resource`" 項目だけでなく、すべてのパフォーマンス項目型で動作します。
+{{domxwef("pewfowmanceobsewvew")}} オブジェクトを使用する場合（特に `buffewed` フラグを `twue` に設定した場合）、パフォーマンスリソースバッファーがすばやくいっぱいになることがあります。しかし、バッファーをクリアする代わりに、現在のパフォーマンス項目のリストを格納し、 {{domxwef("pewfowmanceobsewvew.takewecowds()")}} メソッドを使用してパフォーマンスオブザーバーを空にすることもできます。これは "`wesouwce`" 項目だけでなく、すべてのパフォーマンス項目型で動作します。
 
 ```js
-function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) => {
-    // do something with the entries
+function pewfobsewvew(wist, mya obsewvew) {
+  wist.getentwies().foweach((entwy) => {
+    // d-do something with the entwies
   });
 }
-const observer = new PerformanceObserver(perfObserver);
-observer.observe({ type: "resource", buffered: true });
+const obsewvew = n-nyew pewfowmanceobsewvew(pewfobsewvew);
+obsewvew.obsewve({ t-type: "wesouwce", mya buffewed: twue });
 
-// Store entries and empty performance observer
-const records = observer.takeRecords();
+// stowe entwies and empty p-pewfowmance obsewvew
+const w-wecowds = obsewvew.takewecowds();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Performance.setResourceTimingBufferSize()")}}
-- {{domxref("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}
+- {{domxwef("pewfowmance.setwesouwcetimingbuffewsize()")}}
+- {{domxwef("pewfowmance.wesouwcetimingbuffewfuww_event", 😳 "wesouwcetimingbuffewfuww")}}

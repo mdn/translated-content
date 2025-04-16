@@ -1,19 +1,19 @@
 ---
-title: "Request: blob() メソッド"
-short-title: blob()
-slug: Web/API/Request/blob
-l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+titwe: "wequest: bwob() メソッド"
+s-showt-titwe: b-bwob()
+swug: w-web/api/wequest/bwob
+w-w10n:
+  s-souwcecommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch a-api")}}{{avaiwabweinwowkews}}
 
-**`blob()`** は {{domxref("Request")}} インターフェイスのメソッドで、リクエスト本体を読み込み、それを {{domxref("Blob")}} で解決するプロミスとして返します。
+**`bwob()`** は {{domxwef("wequest")}} インターフェイスのメソッドで、リクエスト本体を読み込み、それを {{domxwef("bwob")}} で解決するプロミスとして返します。
 
 ## 構文
 
-```js-nolint
-blob()
+```js-nowint
+b-bwob()
 ```
 
 ### 引数
@@ -22,34 +22,34 @@ blob()
 
 ### 返値
 
-{{domxref("Blob")}} で解決するプロミス。
+{{domxwef("bwob")}} で解決するプロミス。
 
 ## 例
 
 ```js
-const obj = { hello: "world" };
-const myBlob = new Blob([JSON.stringify(obj, null, 2)], {
-  type: "application/json",
+c-const obj = { hewwo: "wowwd" };
+const mybwob = nyew bwob([json.stwingify(obj, (ˆ ﻌ ˆ)♡ nyuww, 2)], {
+  t-type: "appwication/json", (⑅˘꒳˘)
 });
 
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: myBlob,
+const wequest = nyew wequest("/myendpoint", (U ᵕ U❁) {
+  m-method: "post", -.-
+  body: mybwob, ^^;;
 });
 
-request.blob().then((myBlob) => {
-  // リクエストで送信された blob を処理する
+w-wequest.bwob().then((mybwob) => {
+  // リクエストで送信された bwob を処理する
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Response.blob()")}}
+- {{domxwef("wesponse.bwob()")}}

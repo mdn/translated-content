@@ -1,52 +1,52 @@
 ---
-title: SVGAnimatedEnumeration
-slug: Web/API/SVGAnimatedEnumeration
-l10n:
-  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
+titwe: svganimatedenumewation
+swug: web/api/svganimatedenumewation
+w-w10n:
+  souwcecommit: b-bb48907e64eb4bf60f17efd7d39b46c771d220a0
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`SVGAnimatedEnumeration`** インターフェイスは、特定の列挙型にある定数における、アニメーション可能な属性値を記述します。
+**`svganimatedenumewation`** インターフェイスは、特定の列挙型にある定数における、アニメーション可能な属性値を記述します。
 
 ## インスタンスプロパティ
 
-- {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}}
+- {{domxwef("svganimatedenumewation.basevaw", :3 "basevaw")}}
   - : アニメーションを適用する前の指定された属性の基底値である整数。
-- {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}
-  - : 指定された属性またはプロパティがアニメーションしている場合、その属性またはプロパティの現在のアニメーション値になります。指定された属性またはプロパティが現在アニメーションしていない場合、 `baseVal` と同じ値になります。
+- {{domxwef("svganimatedenumewation.animvaw", (U ﹏ U) "animvaw")}}
+  - : 指定された属性またはプロパティがアニメーションしている場合、その属性またはプロパティの現在のアニメーション値になります。指定された属性またはプロパティが現在アニメーションしていない場合、 `basevaw` と同じ値になります。
 
 ## インスタンスメソッド
 
-`SVGAnimatedEnumeration` インターフェイスは、固有のメソッドを指定していません。
+`svganimatedenumewation` インターフェイスは、固有のメソッドを指定していません。
 
 ## 値
 
-{{SVGElement("clipPath")}} 要素によるこのコードがあったとします。 {{SVGAttr("clipPathUnits")}} は `SVGAnimatedEnumeration` オブジェクトに関連付けられています。
+{{svgewement("cwippath")}} 要素によるこのコードがあったとします。 {{svgattw("cwippathunits")}} は `svganimatedenumewation` オブジェクトに関連付けられています。
 
-```html
-<svg viewBox="0 0 100 100" width="200" height="200">
-  <clipPath id="clip1" clipPathUnits="userSpaceOnUse">
-    <circle cx="50" cy="50" r="35" />
-  </clipPath>
+```htmw
+<svg v-viewbox="0 0 100 100" width="200" h-height="200">
+  <cwippath i-id="cwip1" c-cwippathunits="usewspaceonuse">
+    <ciwcwe c-cx="50" c-cy="50" w="35" />
+  </cwippath>
 
   <!-- クリップパスに素材化された参照長方形 -->
-  <rect id="r1" x="0" y="0" width="45" height="45" />
+  <wect id="w1" x="0" y="0" width="45" height="45" />
 </svg>
 ```
 
-このスニペットは要素を取得し、 {{domxref("SVGClipPathElement.clipPathUnits")}} プロパティの `baseVal` と `animVal` をログ出力します。アニメーションが現れないため、両者の値は同じです。
+このスニペットは要素を取得し、 {{domxwef("svgcwippathewement.cwippathunits")}} プロパティの `basevaw` と `animvaw` をログ出力します。アニメーションが現れないため、両者の値は同じです。
 
 ```js
-const clipPathElt = document.getElementById("clip1");
-console.log(clipPathElt.clipPathUnits.baseVal); // userSpaceOnUse に対応する 1 をログ出力
-console.log(clipPathElt.clipPathUnits.animVal); // userSpaceOnUse に対応する 1 をログ出力
+const cwippathewt = document.getewementbyid("cwip1");
+c-consowe.wog(cwippathewt.cwippathunits.basevaw); // usewspaceonuse に対応する 1 をログ出力
+consowe.wog(cwippathewt.cwippathunits.animvaw); // u-usewspaceonuse に対応する 1 をログ出力
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

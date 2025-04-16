@@ -1,19 +1,19 @@
 ---
-title: "HTMLTableElement: deleteTHead() メソッド"
-short-title: deleteTHead()
-slug: Web/API/HTMLTableElement/deleteTHead
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwtabweewement: dewetethead() メソッド"
+s-showt-titwe: d-dewetethead()
+s-swug: web/api/htmwtabweewement/dewetethead
+w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLTableElement.deleteTHead()`** は、 {{HTMLElement("thead")}} 要素をこの {{HtmlElement("table")}} から取り除きます。
+**`htmwtabweewement.dewetethead()`** は、 {{htmwewement("thead")}} 要素をこの {{htmwewement("tabwe")}} から取り除きます。
 
 ## 構文
 
-```js-nolint
-deleteTHead()
+```js-nowint
+d-dewetethead()
 ```
 
 ### 引数
@@ -22,46 +22,46 @@ deleteTHead()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例は、 JavaScript を使用して表のヘッダーを削除します。
+この例は、 j-javascwipt を使用して表のヘッダーを削除します。
 
-### HTML
+### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
     <th>名前</th>
     <th>職業</th>
   </thead>
-  <tr>
-    <td>Bob</td>
+  <tw>
+    <td>bob</td>
     <td>配管工</td>
-  </tr>
-  <tr>
-    <td>Jim</td>
+  </tw>
+  <tw>
+    <td>jim</td>
     <td>屋根職人</td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let table = document.querySelector("table");
-table.deleteTHead();
+wet tabwe = document.quewysewectow("tabwe");
+tabwe.dewetethead();
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

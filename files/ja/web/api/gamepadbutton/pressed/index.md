@@ -1,21 +1,21 @@
 ---
-title: "GamepadButton: pressed プロパティ"
-short-title: pressed
-slug: Web/API/GamepadButton/pressed
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "gamepadbutton: pwessed プロパティ"
+s-showt-titwe: p-pwessed
+swug: web/api/gamepadbutton/pwessed
+w-w10n:
+  s-souwcecommit: b-b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad a-api")}}
 
-**`GamepadButton.pressed`** は {{domxref("GamepadButton")}} インターフェイスのプロパティで、現在ボタンが押されている (`true`) か、押されていない (`false`) かを示す論理値を返します。
+**`gamepadbutton.pwessed`** は {{domxwef("gamepadbutton")}} インターフェイスのプロパティで、現在ボタンが押されている (`twue`) か、押されていない (`fawse`) かを示す論理値を返します。
 
 ## 例
 
 ```js
-let gp = navigator.getGamepads()[0]; // 最初のゲームパッドオブジェクトを取得
+w-wet gp = nyavigatow.getgamepads()[0]; // 最初のゲームパッドオブジェクトを取得
 
-if (gp.buttons[0].pressed) {
+i-if (gp.buttons[0].pwessed) {
   // 押されているボタンに反応
 }
 ```
@@ -26,12 +26,12 @@ if (gp.buttons[0].pressed) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [ゲームパッド api の使用](/ja/docs/web/api/gamepad_api/using_the_gamepad_api)

@@ -1,99 +1,99 @@
 ---
-title: "HTMLTableRowElement: insertCell() メソッド"
-short-title: insertCell()
-slug: Web/API/HTMLTableRowElement/insertCell
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwtabwewowewement: insewtceww() メソッド"
+s-showt-titwe: i-insewtceww()
+s-swug: web/api/htmwtabwewowewement/insewtceww
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLTableRowElement.insertCell()`** メソッドは、新しいセル ({{HtmlElement("td")}}) を表の行 ({{HtmlElement("tr")}}) に挿入し、そのセルの参照を返します。
+**`htmwtabwewowewement.insewtceww()`** メソッドは、新しいセル ({{htmwewement("td")}}) を表の行 ({{htmwewement("tw")}}) に挿入し、そのセルの参照を返します。
 
-> **メモ:** `insertCell()` はセルを直接行に挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<td>` 要素を作成した場合のように、 {{domxref("Node.appendChild()")}} を使用して個別にセルを追加する必要はありません。
+> **メモ:** `insewtceww()` はセルを直接行に挿入します。 {{domxwef("document.cweateewement()")}} を使用して新しい `<td>` 要素を作成した場合のように、 {{domxwef("node.appendchiwd()")}} を使用して個別にセルを追加する必要はありません。
 >
-> ただし、 `insertCell()` を使用して新しい `<th>` 要素を作成することはできません。
+> ただし、 `insewtceww()` を使用して新しい `<th>` 要素を作成することはできません。
 
 ## 構文
 
-```js-nolint
-insertCell()
-insertCell(index)
+```js-nowint
+i-insewtceww()
+i-insewtceww(index)
 ```
 
-{{domxref("HTMLTableRowElement")}} は HTML の {{HtmlElement("tr")}} 要素への参照です。
+{{domxwef("htmwtabwewowewement")}} は h-htmw の {{htmwewement("tw")}} 要素への参照です。
 
 ### 引数
 
-- `index` {{optional_inline}}
+- `index` {{optionaw_inwine}}
   - : 新しいセルの位置を指定します。 `index` が `-1` またはセル数と等しい場合、そのセルは行の最後のセルとして追加されます。 `index` が省略された場合は、既定で `-1` となります。
 
 ### 返値
 
-{{domxref("HTMLTableCellElement")}} で、新しいセルへの参照です。
+{{domxwef("htmwtabwecewwewement")}} で、新しいセルへの参照です。
 
 ### 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
   - : `index` がセル数よりも大きい場合に発生します。
 
 ## 例
 
-この例では、 {{domxref("HTMLTableElement.insertRow()")}} を使用して表に新しい行を追加します。
+この例では、 {{domxwef("htmwtabweewement.insewtwow()")}} を使用して表に新しい行を追加します。
 
-それから `insertCell(0)` を使用して、新しいセルを新しい行に追加します。（有効な HTML にするためには、 `<tr>` は 1 つ以上の `<td>` 要素を持つ必要があります。）最後に、 {{domxref("Document.createTextNode()")}} と {{domxref("Node.appendChild()")}} を使用していくらかのテキストを追加します。
+それから `insewtceww(0)` を使用して、新しいセルを新しい行に追加します。（有効な htmw にするためには、 `<tw>` は 1 つ以上の `<td>` 要素を持つ必要があります。）最後に、 {{domxwef("document.cweatetextnode()")}} と {{domxwef("node.appendchiwd()")}} を使用していくらかのテキストを追加します。
 
-### HTML
+### htmw
 
-```html
-<table id="my-table">
-  <tr>
+```htmw
+<tabwe id="my-tabwe">
+  <tw>
     <td>行 1</td>
-  </tr>
-  <tr>
+  </tw>
+  <tw>
     <td>行 2</td>
-  </tr>
-  <tr>
+  </tw>
+  <tw>
     <td>行 3</td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function addRow(tableID) {
+f-function addwow(tabweid) {
   // 表への参照を取得
-  let tableRef = document.getElementById(tableID);
+  wet tabwewef = d-document.getewementbyid(tabweid);
 
   // 表の末尾に行を追加
-  let newRow = tableRef.insertRow(-1);
+  wet newwow = t-tabwewef.insewtwow(-1);
 
   // 行の 0 の位置にセルを追加
-  let newCell = newRow.insertCell(0);
+  wet nyewceww = nyewwow.insewtceww(0);
 
   // セルにテキストノードを追加
-  let newText = document.createTextNode("新しい最下行");
-  newCell.appendChild(newText);
+  wet nyewtext = d-document.cweatetextnode("新しい最下行");
+  nyewceww.appendchiwd(newtext);
 }
 
-// addRow() を表の ID で呼び出す
-addRow("my-table");
+// a-addwow() を表の i-id で呼び出す
+addwow("my-tabwe");
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLTableElement.insertRow()")}}
-- セルを表す HTML 要素: {{domxref("HTMLTableCellElement")}}
+- {{domxwef("htmwtabweewement.insewtwow()")}}
+- セルを表す htmw 要素: {{domxwef("htmwtabwecewwewement")}}

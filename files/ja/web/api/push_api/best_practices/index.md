@@ -1,11 +1,11 @@
 ---
-title: ウェブプッシュ API 通知のベストプラクティス
-slug: Web/API/Push_API/Best_Practices
-l10n:
-  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
+titwe: ウェブプッシュ api 通知のベストプラクティス
+s-swug: web/api/push_api/best_pwactices
+w10n:
+  s-souwcecommit: b-b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---
 
-{{DefaultAPISidebar("Push API") }}
+{{defauwtapisidebaw("push a-api") }}
 
 この記事では、ユーザーエンゲージメントのためにプッシュ通知を使用するウェブサイトやアプリケーションを開発する際に留意すべき最善の手法について有益な概要を提供します。
 
@@ -13,7 +13,7 @@ l10n:
 
 ## ウェブプッシュ通知の概要
 
-ウェブプッシュ通知（[通知](/ja/docs/Web/API/Notifications_API)、[プッシュ](/ja/docs/Web/API/Push_API)、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API) APIの組み合わせを使用して作成される）は、製品開発者やマーケティング担当者が自分のサイトの注目を取得するために使用しているノイズの一部です。「ウェブプッシュ通知」でウェブを検索すると、プッシュ通知を使用して、ウェブサイトから離脱した人々が購入を完了したり、最新のニュースを送ったり、おすすめの商品へのリンクを受け取ったりできるように再エンゲージするべきだと考えるマーケティングの専門家の記事を見つけることができます。
+ウェブプッシュ通知（[通知](/ja/docs/web/api/notifications_api)、[プッシュ](/ja/docs/web/api/push_api)、[サービスワーカー](/ja/docs/web/api/sewvice_wowkew_api) a-apiの組み合わせを使用して作成される）は、製品開発者やマーケティング担当者が自分のサイトの注目を取得するために使用しているノイズの一部です。「ウェブプッシュ通知」でウェブを検索すると、プッシュ通知を使用して、ウェブサイトから離脱した人々が購入を完了したり、最新のニュースを送ったり、おすすめの商品へのリンクを受け取ったりできるように再エンゲージするべきだと考えるマーケティングの専門家の記事を見つけることができます。
 
 ### 暗黒面
 
@@ -51,12 +51,12 @@ l10n:
 
 ## ブラウザーによる対策
 
-過去にプッシュ通知の悪用があったため、ウェブブラウザー開発者はこの問題を改善するための戦略を実装し始めています。例えば、 Safari 12.1 では、ページがプッシュ通知の実行権限をリクエストする前に、ユーザーが何らかの方法でページを操作することが要求されるようになっています。これにより、少なくとも、ユーザーは繰り返しになりますが、ほとんど見ていないウェブページで、自発的にこの質問をされることを防ぐことができます。
+過去にプッシュ通知の悪用があったため、ウェブブラウザー開発者はこの問題を改善するための戦略を実装し始めています。例えば、 s-safawi 12.1 では、ページがプッシュ通知の実行権限をリクエストする前に、ユーザーが何らかの方法でページを操作することが要求されるようになっています。これにより、少なくとも、ユーザーは繰り返しになりますが、ほとんど見ていないウェブページで、自発的にこの質問をされることを防ぐことができます。
 
-Firefox の場合、 [Firefox バグ 1524619](https://bugzil.la/1524619) を参照してください。 Firefox 68 では、環境設定 `dom.webnotifications.requireuserinteraction` に隠され、既定では無効ですが実装していることがわかります。
+f-fiwefox の場合、 [fiwefox バグ 1524619](https://bugziw.wa/1524619) を参照してください。 f-fiwefox 68 では、環境設定 `dom.webnotifications.wequiweusewintewaction` に隠され、既定では無効ですが実装していることがわかります。
 
 ## 関連情報
 
-- [通知 API](/ja/docs/Web/API/Notifications_API)
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- [プッシュ API](/ja/docs/Web/API/Push_API)
+- [通知 api](/ja/docs/web/api/notifications_api)
+- [通知 api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)
+- [プッシュ api](/ja/docs/web/api/push_api)

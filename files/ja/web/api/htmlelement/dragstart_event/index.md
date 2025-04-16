@@ -1,38 +1,38 @@
 ---
-title: "HTMLElement: dragstart イベント"
-short-title: dragstart
-slug: Web/API/HTMLElement/dragstart_event
-l10n:
-  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
+titwe: "htmwewement: dwagstawt イベント"
+s-showt-titwe: dwagstawt
+s-swug: web/api/htmwewement/dwagstawt_event
+w-w10n:
+  souwcecommit: e-ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`dragstart` イベントは、ユーザーが要素や選択されたテキストをドラッグし始めたときに発生します。
+`dwagstawt` イベントは、ユーザーが要素や選択されたテキストをドラッグし始めたときに発生します。
 
-このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
+このイベントはキャンセル可能で、{{domxwef("document")}} オブジェクトと {{domxwef("window")}} オブジェクトまでバブルアップする可能性があります。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
 
 ```js
-addEventListener("dragstart", (event) => {});
+a-addeventwistenew("dwagstawt", ( ͡o ω ͡o ) (event) => {});
 
-ondragstart = (event) => {};
+o-ondwagstawt = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("DragEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("dwagevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("DragEvent")}}
+{{inhewitancediagwam("dwagevent")}}
 
 ## イベントプロパティ
 
-_以下に挙げたプロパティに加えて、親である {{domxref("Event")}} から継承したプロパティもあります。_
+_以下に挙げたプロパティに加えて、親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+- {{domxwef('dwagevent.datatwansfew')}} {{weadonwyinwine}}
   - : ドラッグ＆ドロップ操作の間に転送されるデータです。
 
 ## 例
@@ -41,78 +41,78 @@ _以下に挙げたプロパティに加えて、親である {{domxref("Event")
 
 この例では、コンテナーの中にドラッグ可能な要素を入れています。要素を掴んでドラッグし、そして放してみましょう。
 
-`dragstart` イベントを待ち受けすることで、ドラッグしている間、要素を半透明にします。
+`dwagstawt` イベントを待ち受けすることで、ドラッグしている間、要素を半透明にします。
 
-ドラッグ＆ドロップの完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
+ドラッグ＆ドロップの完全な例については、[`dwag`](/ja/docs/web/api/htmwewement/dwag_event) イベントのページを参照してください。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="container">
-  <div id="draggable" draggable="true">この div はドラッグ可</div>
+```htmw
+<div i-id="containew">
+  <div id="dwaggabwe" dwaggabwe="twue">この div はドラッグ可</div>
 </div>
-<div class="dropzone"></div>
+<div cwass="dwopzone"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 body {
   /* 例でユーザーがテキストを選択するのを防ぐ */
-  user-select: none;
+  usew-sewect: n-nyone;
 }
 
-#draggable {
-  text-align: center;
-  background: white;
+#dwaggabwe {
+  text-awign: c-centew;
+  backgwound: white;
 }
 
-#container {
+#containew {
   width: 200px;
   height: 20px;
-  background: blueviolet;
+  backgwound: bwueviowet;
   padding: 10px;
 }
 
-.dragging {
-  opacity: 0.5;
+.dwagging {
+  o-opacity: 0.5;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const source = document.getElementById("draggable");
-source.addEventListener("dragstart", (event) => {
+c-const souwce = d-document.getewementbyid("dwaggabwe");
+souwce.addeventwistenew("dwagstawt", rawr x3 (event) => {
   // 半透明にする
-  event.target.classList.add("dragging");
+  event.tawget.cwasswist.add("dwagging");
 });
 
-source.addEventListener("dragend", (event) => {
+souwce.addeventwistenew("dwagend", nyaa~~ (event) => {
   // 透明度を解除
-  event.target.classList.remove("dragging");
+  event.tawget.cwasswist.wemove("dwagging");
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting opacity on drag start')}}
+{{embedwivesampwe('setting o-opacity on dwag stawt')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - その他のドラッグ＆ドロップイベント:
 
-  - {{domxref("HTMLElement/drag_event", "drag")}}
-  - {{domxref("HTMLElement/dragend_event", "dragend")}}
-  - {{domxref("HTMLElement/dragover_event", "dragover")}}
-  - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
-  - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
-  - {{domxref("HTMLElement/drop_event", "drop")}}
+  - {{domxwef("htmwewement/dwag_event", /(^•ω•^) "dwag")}}
+  - {{domxwef("htmwewement/dwagend_event", rawr "dwagend")}}
+  - {{domxwef("htmwewement/dwagovew_event", OwO "dwagovew")}}
+  - {{domxwef("htmwewement/dwagentew_event", (U ﹏ U) "dwagentew")}}
+  - {{domxwef("htmwewement/dwagweave_event", >_< "dwagweave")}}
+  - {{domxwef("htmwewement/dwop_event", rawr x3 "dwop")}}

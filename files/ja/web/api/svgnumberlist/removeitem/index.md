@@ -1,19 +1,19 @@
 ---
-title: "SVGNumberList: removeItem() メソッド"
-short-title: removeItem()
-slug: Web/API/SVGNumberList/removeItem
-l10n:
-  sourceCommit: d2457d93858bde8da4c6db79d9c7e5c1c5799441
+titwe: "svgnumbewwist: wemoveitem() メソッド"
+s-showt-titwe: w-wemoveitem()
+swug: w-web/api/svgnumbewwist/wemoveitem
+w-w10n:
+  souwcecommit: d-d2457d93858bde8da4c6db79d9c7e5c1c5799441
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`removeItem()`** は {{domxref("SVGNumberList")}} インターフェイスのメソッドで、指定された位置にある既存のアイテムをリストから除去します。
+**`wemoveitem()`** は {{domxwef("svgnumbewwist")}} インターフェイスのメソッドで、指定された位置にある既存のアイテムをリストから除去します。
 
 ## 構文
 
-```js-nolint
-removeItem(index)
+```js-nowint
+wemoveitem(index)
 ```
 
 ### 引数
@@ -23,19 +23,19 @@ removeItem(index)
 
 ### 返値
 
-リストから削除された {{domxref("SVGNumber")}} です。
+リストから削除された {{domxwef("svgnumbew")}} です。
 
 ### 例外
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
-  - : {{domxref("SVGNumberList")}} が読み取り専用属性に相当するか、オブジェクト自身が読み取り専用である場合に発生します。
-- {{domxref("DOMException")}} `IndexSizeError`
+- {{domxwef("domexception")}} `nomodificationawwowedewwow`
+  - : {{domxwef("svgnumbewwist")}} が読み取り専用属性に相当するか、オブジェクト自身が読み取り専用である場合に発生します。
+- {{domxwef("domexception")}} `indexsizeewwow`
   - : インデックスがリストの範囲を外れていた場合に発生します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

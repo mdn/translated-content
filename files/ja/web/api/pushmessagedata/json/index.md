@@ -1,19 +1,19 @@
 ---
-title: "PushMessageData: json() メソッド"
-short-title: json()
-slug: Web/API/PushMessageData/json
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushmessagedata: json() メソッド"
+s-showt-titwe: json()
+s-swug: web/api/pushmessagedata/json
+w-w10n:
+  s-souwcecommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push a-api")}}
 
-**`json()`** は {{domxref("PushMessageData")}} インターフェイスのメソッドで、プッシュメッセージのデータを [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) 文字列として解釈し、結果を返します。
+**`json()`** は {{domxwef("pushmessagedata")}} インターフェイスのメソッドで、プッシュメッセージのデータを [json](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/json) 文字列として解釈し、結果を返します。
 
 ## 構文
 
-```js-nolint
-json()
+```js-nowint
+j-json()
 ```
 
 ### 引数
@@ -22,22 +22,22 @@ json()
 
 ### 返値
 
-プッシュイベントのデータを JSON として解釈した結果です。これは JSON で表現されるあらゆるものになり得ます。オブジェクト、配列、文字列、数値などです。
+プッシュイベントのデータを j-json として解釈した結果です。これは j-json で表現されるあらゆるものになり得ます。オブジェクト、配列、文字列、数値などです。
 
 ## 例
 
 ```js
-self.addEventListener("push", (event) => {
-  const myData = event.data.json();
+sewf.addeventwistenew("push", rawr (event) => {
+  const mydata = event.data.json();
 
-  // JSON を使って何かを実行する
+  // json を使って何かを実行する
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

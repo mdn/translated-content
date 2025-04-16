@@ -1,76 +1,76 @@
 ---
-title: "WebGLRenderingContext: unpackColorSpace プロパティ"
-short-title: unpackColorSpace
-slug: Web/API/WebGLRenderingContext/unpackColorSpace
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "webgwwendewingcontext: unpackcowowspace プロパティ"
+s-showt-titwe: u-unpackcowowspace
+s-swug: web/api/webgwwendewingcontext/unpackcowowspace
+w-w10n:
+  souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}{{SeeCompatTable}}
+{{apiwef("webgw")}}{{seecompattabwe}}
 
-**`WebGLRenderingContext.unpackColorSpace`** プロパティは、テクスチャをインポートする際に変換する色空間を指定します。既定値 (`srgb`) の他に、 `display-p3` 色空間も使用することができます。
+**`webgwwendewingcontext.unpackcowowspace`** プロパティは、テクスチャをインポートする際に変換する色空間を指定します。既定値 (`swgb`) の他に、 `dispway-p3` 色空間も使用することができます。
 
 テクスチャ画像のソースとしては、以下のものが利用できます。
 
-- [`ImageBitmap`](/ja/docs/Web/API/ImageBitmap)
-- [`ImageData`](/ja/docs/Web/API/ImageData)
-- [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement)
-- [`HTMLCanvasElement`](/ja/docs/Web/API/HTMLCanvasElement)
-- [`HTMLVideoElement`](/ja/docs/Web/API/HTMLVideoElement)
-- [`OffscreenCanvas`](/ja/docs/Web/API/OffscreenCanvas)
-- [`VideoFrame`](/ja/docs/Web/API/VideoFrame)
+- [`imagebitmap`](/ja/docs/web/api/imagebitmap)
+- [`imagedata`](/ja/docs/web/api/imagedata)
+- [`htmwimageewement`](/ja/docs/web/api/htmwimageewement)
+- [`htmwcanvasewement`](/ja/docs/web/api/htmwcanvasewement)
+- [`htmwvideoewement`](/ja/docs/web/api/htmwvideoewement)
+- [`offscweencanvas`](/ja/docs/web/api/offscweencanvas)
+- [`videofwame`](/ja/docs/web/api/videofwame)
 
-テクスチャは [`WebGLRenderingContext.texImage2D()`](/ja/docs/Web/API/WebGLRenderingContext/texImage2D) と [`WebGLRenderingContext.texSubImage2D()`](/ja/docs/Web/API/WebGLRenderingContext/texSubImage2D) メソッドを使用してインポートされ、インポート中に指定した `unpackColorSpace` 色空間に変換されます。
+テクスチャは [`webgwwendewingcontext.teximage2d()`](/ja/docs/web/api/webgwwendewingcontext/teximage2d) と [`webgwwendewingcontext.texsubimage2d()`](/ja/docs/web/api/webgwwendewingcontext/texsubimage2d) メソッドを使用してインポートされ、インポート中に指定した `unpackcowowspace` 色空間に変換されます。
 
-これは、 [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement) において `UNPACK_COLORSPACE_CONVERSION_WEBGL` 引数が `NONE` に設定されている場合には適用されないことに注意してください。
+これは、 [`htmwimageewement`](/ja/docs/web/api/htmwimageewement) において `unpack_cowowspace_convewsion_webgw` 引数が `none` に設定されている場合には適用されないことに注意してください。
 
 ## 値
 
-This property can have the following values:
+t-this p-pwopewty can h-have the fowwowing vawues:
 
-- `"srgb"` selects the [sRGB color space](https://ja.wikipedia.org/wiki/色空間#sRGB). This is the default value.
-- `"display-p3"` selects the [display-p3 color space](https://ja.wikipedia.org/wiki/DCI-P3).
+- `"swgb"` sewects the [swgb cowow space](https://ja.wikipedia.owg/wiki/色空間#swgb). (ˆ ﻌ ˆ)♡ this is the d-defauwt vawue. (˘ω˘)
+- `"dispway-p3"` sewects the [dispway-p3 cowow space](https://ja.wikipedia.owg/wiki/dci-p3). (⑅˘꒳˘)
 
-If an invalid value is specified, then the value of `unpackColorSpace` will remain unchanged.
+i-if an invawid vawue i-is specified, (///ˬ///✿) then the vawue of `unpackcowowspace` wiww wemain unchanged. 😳😳😳
 
 ## 例
 
-### テクスチャ内の sRGB ImageData を display-p3 に変換
+### テクスチャ内の swgb i-imagedata を dispway-p3 に変換
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
+c-const c-canvas = document.getewementbyid("canvas");
+const gw = canvas.getcontext("webgw");
 
-gl.drawingBufferColorSpace = "display-p3";
-gl.unpackColorSpace = "display-p3";
+gw.dwawingbuffewcowowspace = "dispway-p3";
+gw.unpackcowowspace = "dispway-p3";
 
-// Some sRGB ImageData
-// Will be converted from sRGB to Display P3
-const imageData = new ImageData(data, 32, 32);
+// some s-swgb imagedata
+// wiww be convewted fwom swgb to dispway p3
+const imagedata = nyew i-imagedata(data, 🥺 32, 32);
 
-const tex = gl.createTexture();
-gl.bindTexture(gl.TEXTURE_2D, tex);
-gl.texImage2D(
-  gl.TEXTURE_2D,
+const t-tex = gw.cweatetextuwe();
+g-gw.bindtextuwe(gw.textuwe_2d, mya t-tex);
+g-gw.teximage2d(
+  gw.textuwe_2d, 🥺
   0,
-  gl.RGBA,
-  width,
+  gw.wgba, >_<
+  w-width, >_<
   height,
-  0,
-  gl.RGBA,
-  gl.UNSIGNED_BYTE,
-  imageData,
+  0, (⑅˘꒳˘)
+  gw.wgba,
+  gw.unsigned_byte, /(^•ω•^)
+  i-imagedata, rawr x3
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`WebGLRenderingContext.drawingBufferColorSpace`](/ja/docs/Web/API/WebGLRenderingContext/drawingBufferColorSpace)
+- [`webgwwendewingcontext.dwawingbuffewcowowspace`](/ja/docs/web/api/webgwwendewingcontext/dwawingbuffewcowowspace)

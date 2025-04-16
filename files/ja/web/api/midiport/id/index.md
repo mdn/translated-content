@@ -1,33 +1,33 @@
 ---
-title: "MIDIPort: id プロパティ"
-slug: Web/API/MIDIPort/id
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "midipowt: id プロパティ"
+s-swug: web/api/midipowt/id
+w-w10n:
+  souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("web m-midi api")}}
 
-{{domxref("MIDIPort")}} インターフェイスの読み取り専用プロパティ **`id`** は、ポートの一意な ID を返します。
+{{domxwef("midipowt")}} インターフェイスの読み取り専用プロパティ **`id`** は、ポートの一意な i-id を返します。
 
 ## 値
 
-ポートの ID を表す文字列です。
+ポートの i-id を表す文字列です。
 
 ## 例
 
-以下の例では、すべての入力ポートを走査し、それぞれの ID をコンソールに出力します。
+以下の例では、すべての入力ポートを走査し、それぞれの i-id をコンソールに出力します。
 
 ```js
-for (const entry of midiAccess.inputs) {
-  const input = entry[1];
-  console.log(input.id);
+f-fow (const e-entwy of midiaccess.inputs) {
+  const input = entwy[1];
+  consowe.wog(input.id);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

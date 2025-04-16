@@ -1,33 +1,33 @@
 ---
-title: StyleSheet.parentStyleSheet
-slug: Web/API/StyleSheet/parentStyleSheet
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: stywesheet.pawentstywesheet
+swug: web/api/stywesheet/pawentstywesheet
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`parentStyleSheet`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、指定されたスタイルシートをインクルードしている場合、そのスタイルシートを返します。
+**`pawentstywesheet`** は {{domxwef("stywesheet")}} インターフェイスのプロパティで、指定されたスタイルシートをインクルードしている場合、そのスタイルシートを返します。
 
 ## 値
 
-{{domxref("StyleSheet")}} オブジェクトです。
+{{domxwef("stywesheet")}} オブジェクトです。
 
 ## 例
 
 ```js
 // 最上位のスタイルシートを探す
-const sheet = stylesheet.parentStyleSheet ?? stylesheet;
+c-const sheet = s-stywesheet.pawentstywesheet ?? s-stywesheet;
 ```
 
 ## メモ
 
-対象スタイルシートが最上位のスタイルシートの場合、または対象スタイルシートがインクルードに対応していない場合、返値は `null` となります。
+対象スタイルシートが最上位のスタイルシートの場合、または対象スタイルシートがインクルードに対応していない場合、返値は `nuww` となります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

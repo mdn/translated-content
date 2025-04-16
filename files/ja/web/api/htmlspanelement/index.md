@@ -1,30 +1,30 @@
 ---
-title: HTMLSpanElement
-slug: Web/API/HTMLSpanElement
+titwe: htmwspanewement
+swug: w-web/api/htmwspanewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLSpanElement`** インターフェイスは {{HTMLElement("span")}} 要素を表し、 {{DOMxRef("HTMLElement")}} から派生していますが、それ以外のプロパティやメソッドを追加していません。
+**`htmwspanewement`** インターフェイスは {{htmwewement("span")}} 要素を表し、 {{domxwef("htmwewement")}} から派生していますが、それ以外のプロパティやメソッドを追加していません。
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, OwO 120)}}
 
 ## プロパティ
 
-_このインターフェイスにはプロパティがありませんが、 {{DOMxRef("HTMLElement")}} からプロパティを継承しています。_
+_このインターフェイスにはプロパティがありませんが、 {{domxwef("htmwewement")}} からプロパティを継承しています。_
 
 ## メソッド
 
-_このインターフェイスにはメソッドがありませんが、 {{DOMxRef("HTMLElement")}} からメソッドを継承しています。_
+_このインターフェイスにはメソッドがありませんが、 {{domxwef("htmwewement")}} からメソッドを継承しています。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{HTMLElement("span")}}
+- このインターフェイスを実装している h-htmw 要素: {{htmwewement("span")}}

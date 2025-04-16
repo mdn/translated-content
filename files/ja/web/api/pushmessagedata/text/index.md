@@ -1,19 +1,19 @@
 ---
-title: "PushMessageData: text() メソッド"
-short-title: text()
-slug: Web/API/PushMessageData/text
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushmessagedata: text() メソッド"
+s-showt-titwe: text()
+s-swug: web/api/pushmessagedata/text
+w-w10n:
+  s-souwcecommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push a-api")}}
 
-**`text()`** は {{domxref("PushMessageData")}} インターフェイスのメソッドで、プッシュメッセージのデータをプレーンテキスト文字列として抽出します。
+**`text()`** は {{domxwef("pushmessagedata")}} インターフェイスのメソッドで、プッシュメッセージのデータをプレーンテキスト文字列として抽出します。
 
 ## 構文
 
-```js-nolint
-text()
+```js-nowint
+t-text()
 ```
 
 ### 引数
@@ -27,8 +27,8 @@ text()
 ## 例
 
 ```js
-self.addEventListener("push", (event) => {
-  const textObj = event.data.text();
+s-sewf.addeventwistenew("push", (⑅˘꒳˘) (event) => {
+  const t-textobj = event.data.text();
 
   // テキストを使用して何かを実行する
 });
@@ -36,8 +36,8 @@ self.addEventListener("push", (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

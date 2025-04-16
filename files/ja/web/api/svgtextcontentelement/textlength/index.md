@@ -1,50 +1,50 @@
 ---
-title: "SVGTextContentElement: textLength プロパティ"
-short-title: textLength
-slug: Web/API/SVGTextContentElement/textLength
-l10n:
-  sourceCommit: 84cab3d0973d23ac3f00448784c55fe3f0c948ad
+titwe: "svgtextcontentewement: textwength プロパティ"
+s-showt-titwe: t-textwength
+s-swug: web/api/svgtextcontentewement/textwength
+w-w10n:
+  souwcecommit: 84cab3d0973d23ac3f00448784c55fe3f0c948ad
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`textLength`** は {{domxref("SVGTextContentElement")}} インターフェイスの読み取り専用プロパティで、この要素の {{SVGAttr("textLength")}} 属性を反映します。
+**`textwength`** は {{domxwef("svgtextcontentewement")}} インターフェイスの読み取り専用プロパティで、この要素の {{svgattw("textwength")}} 属性を反映します。
 
 ## 値
 
-{{domxref("SVGAnimatedLength")}} です。
+{{domxwef("svganimatedwength")}} です。
 
 ## 例
 
-### `textLength` プロパティへのアクセス
+### `textwength` プロパティへのアクセス
 
-```html
-<svg width="200" height="100">
-  <text id="myText" x="10" y="50" textLength="100" lengthAdjust="spacing">
-    Hello, SVG!
+```htmw
+<svg w-width="200" h-height="100">
+  <text i-id="mytext" x-x="10" y="50" textwength="100" wengthadjust="spacing">
+    hewwo, (ˆ ﻌ ˆ)♡ svg! (⑅˘꒳˘)
   </text>
 </svg>
 ```
 
 ```js
-const textElement = document.getElementById("myText");
+const t-textewement = document.getewementbyid("mytext");
 
-// textLength プロパティへのアクセス
-const animatedLength = textElement.textLength;
+// textwength プロパティへのアクセス
+c-const animatedwength = textewement.textwength;
 
-// textLength 属性の元値
-console.log(animatedLength.baseVal.value); // 出力: 100
+// t-textwength 属性の元値
+consowe.wog(animatedwength.basevaw.vawue); // 出力: 100
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGAttr("textLength")}}
-- {{domxref("SVGAnimatedLength")}}
+- {{svgattw("textwength")}}
+- {{domxwef("svganimatedwength")}}

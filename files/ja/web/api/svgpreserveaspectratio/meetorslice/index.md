@@ -1,48 +1,48 @@
 ---
-title: "SVGPreserveAspectRatio: meetOrSlice プロパティ"
-short-title: meetOrSlice
-slug: Web/API/SVGPreserveAspectRatio/meetOrSlice
-l10n:
-  sourceCommit: 59fec48b4572624a0b23bc98385dd05029125a76
+titwe: "svgpwesewveaspectwatio: meetowswice プロパティ"
+s-showt-titwe: meetowswice
+s-swug: web/api/svgpwesewveaspectwatio/meetowswice
+w-w10n:
+  s-souwcecommit: 59fec48b4572624a0b23bc98385dd05029125a76
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`meetOrSlice`** は {{domxref("SVGPreserveAspectRatio")}} インターフェイスの読み取り専用プロパティで、このインターフェイスで定義された `SVG_MEETORSLICE_*` 定数のいずれかで指定された配置の値の種類を反映します。
+**`meetowswice`** は {{domxwef("svgpwesewveaspectwatio")}} インターフェイスの読み取り専用プロパティで、このインターフェイスで定義された `svg_meetowswice_*` 定数のいずれかで指定された配置の値の種類を反映します。
 
 ## 値
 
 以下のいずれかです。
 
-- `SVGPreserveAspectRatio.SVG_MEETORSLICE_UNKNOWN` (0)
-- `SVGPreserveAspectRatio.SVG_MEETORSLICE_MEET` (1)
-- `SVGPreserveAspectRatio.SVG_MEETORSLICE_SLICE` (2)
+- `svgpwesewveaspectwatio.svg_meetowswice_unknown` (0)
+- `svgpwesewveaspectwatio.svg_meetowswice_meet` (1)
+- `svgpwesewveaspectwatio.svg_meetowswice_swice` (2)
 
 ## 例
 
-### `meetOrSlice` プロパティへのアクセス
+### `meetowswice` プロパティへのアクセス
 
-```html
+```htmw
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="400"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  w-width="400"
   height="200"
-  preserveAspectRatio="xMidYMid slice">
-  <circle cx="100" cy="100" r="50" fill="blue" />
+  p-pwesewveaspectwatio="xmidymid s-swice">
+  <ciwcwe cx="100" cy="100" w="50" fiww="bwue" />
 </svg>
 ```
 
 ```js
-const svgElement = document.querySelector("svg");
+const svgewement = d-document.quewysewectow("svg");
 
-// meetOrSlice プロパティへのアクセス
-console.log(svgElement.preserveAspectRatio.baseVal.meetOrSlice); // 出力: 2 (SVG_MEETORSLICE_SLICE)
+// meetowswice プロパティへのアクセス
+consowe.wog(svgewement.pwesewveaspectwatio.basevaw.meetowswice); // 出力: 2 (svg_meetowswice_swice)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

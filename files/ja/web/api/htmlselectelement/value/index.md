@@ -1,68 +1,68 @@
 ---
-title: "HTMLSelectElement: value プロパティ"
-short-title: value
-slug: Web/API/HTMLSelectElement/value
-l10n:
-  sourceCommit: 7f38ec3d1324a031bc25e70b3c103ca78c2cf04d
+titwe: "htmwsewectewement: vawue プロパティ"
+s-showt-titwe: v-vawue
+swug: web/api/htmwsewectewement/vawue
+w-w10n:
+  s-souwcecommit: 7f38ec3d1324a031bc25e70b3c103ca78c2cf04d
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLSelectElement.value`** プロパティは、この {{htmlelement("select")}} 要素に関連付けられた {{htmlelement("option")}} 要素のうち、選択された最初のものの値を格納します。
+**`htmwsewectewement.vawue`** プロパティは、この {{htmwewement("sewect")}} 要素に関連付けられた {{htmwewement("option")}} 要素のうち、選択された最初のものの値を格納します。
 
 このプロパティは直接設定することもでき、例えば、何らかの条件に基づいて既定値を設定するには、次のようにします。
 
 ## 値
 
-この {{htmlelement("select")}} 要素で最初に選択された {{htmlelement("option")}} 要素の値を格納する文字列、またはオプションが選択されていない場合は空文字列。
+この {{htmwewement("sewect")}} 要素で最初に選択された {{htmwewement("option")}} 要素の値を格納する文字列、またはオプションが選択されていない場合は空文字列。
 
 ## 例
 
 ### 選択された値の取得
 
-```html
-<label for="bird-select">鳥を選択してください:</label>
+```htmw
+<wabew f-fow="biwd-sewect">鳥を選択してください:</wabew>
 
-<select name="birds" id="bird-select">
-  <option value="">--オプションを選択してください--</option>
-  <option value="Scarlet ibis">ショウジョウトキ</option>
-  <option value="Marabou stork">マラボウコウノトリ</option>
-  <option value="Roseate spoonbill">ベニヘラサギ</option>
-</select>
+<sewect n-nyame="biwds" id="biwd-sewect">
+  <option vawue="">--オプションを選択してください--</option>
+  <option vawue="scawwet ibis">ショウジョウトキ</option>
+  <option vawue="mawabou s-stowk">マラボウコウノトリ</option>
+  <option vawue="woseate spoonbiww">ベニヘラサギ</option>
+</sewect>
 
-<pre id="log"></pre>
+<pwe i-id="wog"></pwe>
 ```
 
 ```js
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = text;
+const w-wogewement = document.quewysewectow("#wog");
+function wog(text) {
+  wogewement.innewtext = t-text;
 }
 
-const select = document.querySelector("#bird-select");
-select.addEventListener("change", () => {
-  log(`選択: ${select.value}`);
+const sewect = d-document.quewysewectow("#biwd-sewect");
+s-sewect.addeventwistenew("change", nyaa~~ () => {
+  wog(`選択: ${sewect.vawue}`);
 });
 ```
 
 ```css hidden
-#log {
+#wog {
   height: 20px;
-  padding: 0.5rem;
-  border: 1px solid black;
+  padding: 0.5wem;
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-{{EmbedLiveSample("Retrieving the selected value")}}
+{{embedwivesampwe("wetwieving the sewected vawue")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML の {{HTMLElement("select")}} 要素。
+- このインターフェイスを実装している htmw の {{htmwewement("sewect")}} 要素。

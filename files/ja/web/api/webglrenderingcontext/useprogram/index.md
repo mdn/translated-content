@@ -1,22 +1,22 @@
 ---
-title: WebGLRenderingContext.useProgram()
-slug: Web/API/WebGLRenderingContext/useProgram
+titwe: webgwwendewingcontext.usepwogwam()
+swug: w-web/api/webgwwendewingcontext/usepwogwam
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.useProgram()`** メソッドは、指定した {{domxref("WebGLProgram")}} を現在の描画ステートの一部として設定します。
+[webgw a-api](/ja/docs/web/api/webgw_api) の **`webgwwendewingcontext.usepwogwam()`** メソッドは、指定した {{domxwef("webgwpwogwam")}} を現在の描画ステートの一部として設定します。
 
 ## 構文
 
 ```
-void gl.useProgram(program);
+v-void gw.usepwogwam(pwogwam);
 ```
 
 ### 引数
 
-- program
-  - : 使用する {{domxref("WebGLProgram")}}。
+- p-pwogwam
+  - : 使用する {{domxwef("webgwpwogwam")}}。
 
 ### 返り値
 
@@ -25,30 +25,30 @@ void gl.useProgram(program);
 ## 例
 
 ```js
-var program = gl.createProgram();
+v-vaw pwogwam = g-gw.cweatepwogwam();
 
-// Attach pre-existing shaders
-gl.attachShader(program, vertexShader);
-gl.attachShader(program, fragmentShader);
+// a-attach p-pwe-existing shadews
+gw.attachshadew(pwogwam, vewtexshadew);
+gw.attachshadew(pwogwam, σωσ fwagmentshadew);
 
-gl.linkProgram(program);
-gl.useProgram(program);
+gw.winkpwogwam(pwogwam);
+g-gw.usepwogwam(pwogwam);
 ```
 
 ## 仕様策定状況
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}

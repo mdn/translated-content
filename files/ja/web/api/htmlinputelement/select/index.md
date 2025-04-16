@@ -1,19 +1,19 @@
 ---
-title: "HTMLInputElement: select() メソッド"
-short-title: select()
-slug: Web/API/HTMLInputElement/select
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwinputewement: sewect() メソッド"
+s-showt-titwe: s-sewect()
+swug: w-web/api/htmwinputewement/sewect
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLInputElement.select()`** メソッドは、{{HTMLElement("textarea")}} 要素またはテキストフィールドを含む {{HTMLElement("input")}} 要素内のすべてのテキストを選択します。
+**`htmwinputewement.sewect()`** メソッドは、{{htmwewement("textawea")}} 要素またはテキストフィールドを含む {{htmwewement("input")}} 要素内のすべてのテキストを選択します。
 
 ## 構文
 
-```js-nolint
-select()
+```js-nowint
+s-sewect()
 ```
 
 ### 引数
@@ -22,58 +22,58 @@ select()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 この例のボタンをクリックすると、 `<input>` 要素内のすべてのテキストが選択されます。
 
-### HTML
+### htmw
 
-```html
-<input type="text" id="text-box" size="20" value="Hello world!" />
-<button onclick="selectText()">テキストを選択</button>
+```htmw
+<input type="text" id="text-box" size="20" v-vawue="hewwo wowwd!" />
+<button oncwick="sewecttext()">テキストを選択</button>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function selectText() {
-  const input = document.getElementById("text-box");
-  input.focus();
-  input.select();
+function sewecttext() {
+  c-const input = document.getewementbyid("text-box");
+  i-input.focus();
+  input.sewect();
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## メモ
 
-`element.select()` を呼び出しても、入力欄がフォーカスを得るとは限りませんので、よく {{domxref("HTMLElement.focus")}} と一緒に使われます。
+`ewement.sewect()` を呼び出しても、入力欄がフォーカスを得るとは限りませんので、よく {{domxwef("htmwewement.focus")}} と一緒に使われます。
 
-これに対応していないブラウザーでは、 [HTMLInputElement.setSelectionRange()](/ja/docs/Web/API/HTMLInputElement/setSelectionRange) の引数に 0 と入力値の長さを指定して呼び出すことで置き換えることができます。
+これに対応していないブラウザーでは、 [htmwinputewement.setsewectionwange()](/ja/docs/web/api/htmwinputewement/setsewectionwange) の引数に 0 と入力値の長さを指定して呼び出すことで置き換えることができます。
 
-```html
-<input onClick="this.select();" value="Sample Text" />
-<!-- equivalent to -->
+```htmw
+<input oncwick="this.sewect();" vawue="sampwe text" />
+<!-- e-equivawent to -->
 <input
-  onClick="this.setSelectionRange(0, this.value.length);"
-  value="Sample Text" />
+  o-oncwick="this.setsewectionwange(0, :3 t-this.vawue.wength);"
+  vawue="sampwe text" />
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ HTMLElement("input") }}
-- {{ HTMLElement("textarea") }}
-- {{ domxref("HTMLInputElement") }}
-- {{ domxref("HTMLInputElement.setSelectionRange") }}
+- {{ htmwewement("input") }}
+- {{ htmwewement("textawea") }}
+- {{ domxwef("htmwinputewement") }}
+- {{ domxwef("htmwinputewement.setsewectionwange") }}

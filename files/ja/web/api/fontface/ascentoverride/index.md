@@ -1,40 +1,40 @@
 ---
-title: "FontFace: ascentOverride プロパティ"
-short-title: ascentOverride
-slug: Web/API/FontFace/ascentOverride
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "fontface: ascentovewwide プロパティ"
+s-showt-titwe: a-ascentovewwide
+s-swug: web/api/fontface/ascentovewwide
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading a-api")}}
 
-**`ascentOverride`** は {{domxref("FontFace")}} インターフェイスのプロパティで、フォントの ascent メトリック、つまり CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインからの高さを返したり設定したりします。
+**`ascentovewwide`** は {{domxwef("fontface")}} インターフェイスのプロパティで、フォントの a-ascent メトリック、つまり css がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインからの高さを返したり設定したりします。
 
-このプロパティは {{cssxref("@font-face")}} の {{cssxref("@font-face/ascent-override")}} 記述子と等価です。
+このプロパティは {{cssxwef("@font-face")}} の {{cssxwef("@font-face/ascent-ovewwide")}} 記述子と等価です。
 
 ## 値
 
-文字列です。使用可能な値は、使用するメトリクスをフォントファイルから取得することを示す `normal` か、パーセント値です。
+文字列です。使用可能な値は、使用するメトリクスをフォントファイルから取得することを示す `nowmaw` か、パーセント値です。
 
-このプロパティは {{cssxref("@font-face/ascent-override")}} 記述子と同じ値を受け入れます。
+このプロパティは {{cssxwef("@font-face/ascent-ovewwide")}} 記述子と同じ値を受け入れます。
 
 ## 例
 
 ```js
-let fontFace = new FontFace(
-  "Roboto",
-  "url(https://fonts.example.com/roboto.woff2)",
-  { ascentOverride: "90%" },
+wet fontface = nyew fontface(
+  "woboto", >_<
+  "uww(https://fonts.exampwe.com/woboto.woff2)", :3
+  { ascentovewwide: "90%" }, (U ﹏ U)
 );
-console.log(fontFace.ascentOverride); // 90%
-fontFace.ascentOverride = "normal";
-console.log(fontFace.ascentOverride); // 'normal'
+c-consowe.wog(fontface.ascentovewwide); // 90%
+fontface.ascentovewwide = "nowmaw";
+consowe.wog(fontface.ascentovewwide); // 'nowmaw'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

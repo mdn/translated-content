@@ -1,76 +1,76 @@
 ---
-title: "WebGLRenderingContext: attachShader() メソッド"
-short-title: attachShader()
-slug: Web/API/WebGLRenderingContext/attachShader
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "webgwwendewingcontext: attachshadew() メソッド"
+showt-titwe: a-attachshadew()
+s-swug: w-web/api/webgwwendewingcontext/attachshadew
+w-w10n:
+  s-souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLRenderingContext.attachShader()** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、フラグメントか頂点のどちらかの {{domxref("WebGLShader")}} を {{domxref("WebGLProgram")}} にアタッチします。
+**webgwwendewingcontext.attachshadew()** は [webgw a-api](/ja/docs/web/api/webgw_api) のメソッドで、フラグメントか頂点のどちらかの {{domxwef("webgwshadew")}} を {{domxwef("webgwpwogwam")}} にアタッチします。
 
 ## 構文
 
-```js-nolint
-attachShader(program, shader)
+```js-nowint
+a-attachshadew(pwogwam, (⑅˘꒳˘) shadew)
 ```
 
 ### 引数
 
-- `program`
-  - : {{domxref("WebGLProgram")}}。
-- `shader`
-  - : フラグメントか頂点の {{domxref("WebGLShader")}}。
+- `pwogwam`
+  - : {{domxwef("webgwpwogwam")}}。
+- `shadew`
+  - : フラグメントか頂点の {{domxwef("webgwshadew")}}。
 
 ## 例
 
-以下は既存のシェーダーを {{domxref("WebGLProgram")}} にアタッチするコードです。
+以下は既存のシェーダーを {{domxwef("webgwpwogwam")}} にアタッチするコードです。
 
 ```js
-const program = gl.createProgram();
+const pwogwam = gw.cweatepwogwam();
 
 // 既に存在するシェーダーをアタッチ
-gl.attachShader(program, vertexShader);
-gl.attachShader(program, fragmentShader);
+gw.attachshadew(pwogwam, (U ᵕ U❁) v-vewtexshadew);
+gw.attachshadew(pwogwam, fwagmentshadew);
 
-gl.linkProgram(program);
+g-gw.winkpwogwam(pwogwam);
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  const info = gl.getProgramInfoLog(program);
-  throw `WebGL プログラムをコンパイルできませんでした。 \n\n${info}`;
+if (!gw.getpwogwampawametew(pwogwam, -.- gw.wink_status)) {
+  c-const info = gw.getpwogwaminfowog(pwogwam);
+  thwow `webgw プログラムをコンパイルできませんでした。 \n\n${info}`;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLProgram")}}
-- {{domxref("WebGLShader")}}
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-- {{domxref("WebGLRenderingContext.compileShader()")}}
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxwef("webgwpwogwam")}}
+- {{domxwef("webgwshadew")}}
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+- {{domxwef("webgwwendewingcontext.compiweshadew()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}

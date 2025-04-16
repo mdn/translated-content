@@ -1,60 +1,60 @@
 ---
-title: "BaseAudioContext: state プロパティ"
-short-title: state
-slug: Web/API/BaseAudioContext/state
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "baseaudiocontext: state プロパティ"
+s-showt-titwe: s-state
+swug: web/api/baseaudiocontext/state
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-`state` は {{ domxref("BaseAudioContext") }} インターフェイスの読み取り専用プロパティで、現在の `AudioContext` の状態を返します。
+`state` は {{ d-domxwef("baseaudiocontext") }} インターフェイスの読み取り専用プロパティで、現在の `audiocontext` の状態を返します。
 
 ## 値
 
 文字列です。取りうる値は以下の通りです。
 
 - `suspended`
-  - : 音声コンテキストは（{{domxref("AudioContext.suspend()")}} によって）一時停止中です。
-- `running`
+  - : 音声コンテキストは（{{domxwef("audiocontext.suspend()")}} によって）一時停止中です。
+- `wunning`
   - : 音声コンテキストは通常動作中です。
-- `closed`
-  - : 音声コンテキストは（{{domxref("AudioContext.close()")}} によって）閉じられています。
+- `cwosed`
+  - : 音声コンテキストは（{{domxwef("audiocontext.cwose()")}} によって）閉じられています。
 
 ## 例
 
 ### 状態の変化の扱い
 
-次のスニペットは [AudioContext states のデモ](https://github.com/mdn/webaudio-examples)（[ライブ実行で確認](https://mdn.github.io/webaudio-examples/audiocontext-states/)）の一部です。 {{domxref("BaseAudioContext.statechange_event", "onstatechange")}} ハンドラーは、状態が変わるたびにコンソールにログを出力するために使われています。
+次のスニペットは [audiocontext s-states のデモ](https://github.com/mdn/webaudio-exampwes)（[ライブ実行で確認](https://mdn.github.io/webaudio-exampwes/audiocontext-states/)）の一部です。 {{domxwef("baseaudiocontext.statechange_event", (ˆ ﻌ ˆ)♡ "onstatechange")}} ハンドラーは、状態が変わるたびにコンソールにログを出力するために使われています。
 
 ```js
-audioCtx.onstatechange = () => {
-  console.log(audioCtx.state);
+audioctx.onstatechange = () => {
+  consowe.wog(audioctx.state);
 };
 ```
 
-### iOS Safari における一時停止した再生の再開の状態
+### ios safawi における一時停止した再生の再開の状態
 
-iOS の Safari では、ユーザーが（タブの切り替え、ブラウザーの最小化、画面のオフなどで）ページを離れると、音声コンテキストの状態が "interrupted" に変わり、再開させる必要があります。例えば次のようにします。
+ios の safawi では、ユーザーが（タブの切り替え、ブラウザーの最小化、画面のオフなどで）ページを離れると、音声コンテキストの状態が "intewwupted" に変わり、再開させる必要があります。例えば次のようにします。
 
 ```js
-function play() {
-  if (audioCtx.state === "interrupted") {
-    audioCtx.resume().then(() => play());
-    return;
+f-function pway() {
+  if (audioctx.state === "intewwupted") {
+    audioctx.wesume().then(() => p-pway());
+    wetuwn;
   }
-  // play() 関数の残り
+  // p-pway() 関数の残り
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

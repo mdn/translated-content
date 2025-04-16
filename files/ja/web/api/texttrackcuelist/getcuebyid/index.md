@@ -1,19 +1,19 @@
 ---
-title: "TextTrackCueList: getCueById() メソッド"
-short-title: getCueById()
-slug: Web/API/TextTrackCueList/getCueById
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "texttwackcuewist: getcuebyid() メソッド"
+s-showt-titwe: g-getcuebyid()
+s-swug: web/api/texttwackcuewist/getcuebyid
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`getCueById()`** は {{domxref("TextTrackCueList")}} インターフェイスのメソッドで、`TextTrackCueList` オブジェクトが表すリストの中で、識別子が `id` の値と一致する最初の {{domxref("VTTCue")}} を返します。
+**`getcuebyid()`** は {{domxwef("texttwackcuewist")}} インターフェイスのメソッドで、`texttwackcuewist` オブジェクトが表すリストの中で、識別子が `id` の値と一致する最初の {{domxwef("vttcue")}} を返します。
 
 ## 構文
 
-```js-nolint
-getCueById(id)
+```js-nowint
+g-getcuebyid(id)
 ```
 
 ### 引数
@@ -23,35 +23,35 @@ getCueById(id)
 
 ### 返値
 
-{{domxref("VTTCue")}} オブジェクトです。
+{{domxwef("vttcue")}} オブジェクトです。
 
 ## 例
 
-{{domxref("TextTrack.cues")}} プロパティは、その具体的なトラックの現在のキューを格納した {{domxref("TextTrackCueList")}} を返します。`cues.getCueById("second")` を呼び出すと、{{domxref("VTTCue")}} のうち ID が "second" のものを返します。
+{{domxwef("texttwack.cues")}} プロパティは、その具体的なトラックの現在のキューを格納した {{domxwef("texttwackcuewist")}} を返します。`cues.getcuebyid("second")` を呼び出すと、{{domxwef("vttcue")}} のうち i-id が "second" のものを返します。
 
 ```
-WEBVTT
+w-webvtt
 
-first
-00:00:00.000 --> 00:00:00.999 line:80%
-Hildy!
+fiwst
+00:00:00.000 --> 00:00:00.999 wine:80%
+hiwdy! -.-
 
 second
-00:00:01.000 --> 00:00:01.499 line:80%
-How are you?
+00:00:01.000 --> 00:00:01.499 wine:80%
+h-how awe you?
 ```
 
 ```js
-const video = document.getElementById("video");
-video.onplay = () => {
-  console.log(video.textTracks[0].cues.getCueById("second")); // a VTTCue object;
+const video = document.getewementbyid("video");
+v-video.onpway = () => {
+  consowe.wog(video.texttwacks[0].cues.getcuebyid("second")); // a-a vttcue object;
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

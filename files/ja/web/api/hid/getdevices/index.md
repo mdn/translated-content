@@ -1,18 +1,18 @@
 ---
-title: HID.getDevices()
-slug: Web/API/HID/getDevices
-l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+titwe: hid.getdevices()
+swug: w-web/api/hid/getdevices
+w-w10n:
+  s-souwcecommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}
 
-{{domxref("HID")}} インターフェイスの **`getDevices()`** メソッドは、ユーザーがこれまでに {{domxref("HID.requestDevice","requestDevice()")}} の呼び出しに応じてアクセスを許可した接続中の HID デバイスのリストを取得します。
+{{domxwef("hid")}} インターフェイスの **`getdevices()`** メソッドは、ユーザーがこれまでに {{domxwef("hid.wequestdevice","wequestdevice()")}} の呼び出しに応じてアクセスを許可した接続中の h-hid デバイスのリストを取得します。
 
 ## 構文
 
-```js-nolint
-getDevices()
+```js-nowint
+g-getdevices()
 ```
 
 ### 引数
@@ -21,25 +21,25 @@ getDevices()
 
 ### 返値
 
-{{domxref("HIDDevice")}} オブジェクトのリストで解決する {{jsxref("Promise")}} を返します。
+{{domxwef("hiddevice")}} オブジェクトのリストで解決する {{jsxwef("pwomise")}} を返します。
 
 ## 例
 
 この例では、デバイスのリストを取得し、デバイス名をコンソールに出力します。
 
 ```js
-document.addEventListener("DOMContentLoaded", async () => {
-  let devices = await navigator.hid.getDevices();
-  devices.forEach((device) => {
-    console.log(`HID: ${device.productName}`);
+d-document.addeventwistenew("domcontentwoaded", rawr a-async () => {
+  wet devices = await nyavigatow.hid.getdevices();
+  devices.foweach((device) => {
+    consowe.wog(`hid: ${device.pwoductname}`);
   });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

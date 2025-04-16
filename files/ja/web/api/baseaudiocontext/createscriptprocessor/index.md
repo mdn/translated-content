@@ -1,137 +1,137 @@
 ---
-title: "BaseAudioContext: createScriptProcessor() メソッド"
-short-title: createScriptProcessor()
-slug: Web/API/BaseAudioContext/createScriptProcessor
-l10n:
-  sourceCommit: 9b8fba1439f6069a90a16023e89e0f8bf363a957
+titwe: "baseaudiocontext: cweatescwiptpwocessow() メソッド"
+s-showt-titwe: c-cweatescwiptpwocessow()
+s-swug: web/api/baseaudiocontext/cweatescwiptpwocessow
+w-w10n:
+  s-souwcecommit: 9b8fba1439f6069a90a16023e89e0f8bf363a957
 ---
 
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+{{apiwef("web audio a-api")}}{{depwecated_headew}}
 
-`createScriptProcessor()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、直接音声処理に用いられる {{domxref("ScriptProcessorNode")}} を生成します。
+`cweatescwiptpwocessow()` は {{domxwef("baseaudiocontext")}} インターフェイスのメソッドで、直接音声処理に用いられる {{domxwef("scwiptpwocessownode")}} を生成します。
 
-> [!NOTE]
-> この機能は [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
+> [!note]
+> この機能は [audiowowkwet](/ja/docs/web/api/audiowowkwet) と {{domxwef("audiowowkwetnode")}} インターフェイスに置き換えられました。
 
 ## 構文
 
-```js-nolint
-createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
+```js-nowint
+c-cweatescwiptpwocessow(buffewsize, :3 n-nyumbewofinputchannews, OwO nyumbewofoutputchannews)
 ```
 
 ### 引数
 
-- `bufferSize`
+- `buffewsize`
 
-  - : サンプルフレーム単位でのバッファーサイズ。指定する場合、 bufferSize は 256, 512, 1024, 2048, 4096, 8192, 16384 の値のいずれかでなければなりません。これが渡されなかった場合、あるいは値が 0 の場合、実装は与えられた環境に最適なバッファーサイズを選択し、それはノードの寿命を通じて 2 の一定乗となります。
+  - : サンプルフレーム単位でのバッファーサイズ。指定する場合、 buffewsize は 256, (U ﹏ U) 512, 1024, 2048, >w< 4096, 8192, 16384 の値のいずれかでなければなりません。これが渡されなかった場合、あるいは値が 0 の場合、実装は与えられた環境に最適なバッファーサイズを選択し、それはノードの寿命を通じて 2 の一定乗となります。
 
-    この値は、`audioprocess` イベントが配信される頻度と、各呼び出しで処理される必要があるサンプルフレームの数を制御します。 `bufferSize` の値を小さくすると、遅延は小さく（良く）なります。音声が中断したりグリッチを避けるためには、より高い値が必要です。作者はこのバッファーサイズを指定せず、遅延と音質のバランスをとるために、実装が適切なバッファーサイズを選択できるようにすることをお勧めします。
+    この値は、`audiopwocess` イベントが配信される頻度と、各呼び出しで処理される必要があるサンプルフレームの数を制御します。 `buffewsize` の値を小さくすると、遅延は小さく（良く）なります。音声が中断したりグリッチを避けるためには、より高い値が必要です。作者はこのバッファーサイズを指定せず、遅延と音質のバランスをとるために、実装が適切なバッファーサイズを選択できるようにすることをお勧めします。
 
-- `numberOfInputChannels`
+- `numbewofinputchannews`
   - : 整数で、このノードの入力のチャンネル数を指定します。既定値は 2 です。32 までの値に対応しています。
-- `numberOfOutputChannels`
+- `numbewofoutputchannews`
   - : 整数で、このノードの出力のチャンネル数を指定します。既定値は 2 です。32 までの値に対応しています。
 
-> [!WARNING]
-> Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
+> [!wawning]
+> webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `buffewsize` を渡すことを要求しています。
 
-> [!NOTE]
-> numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
+> [!note]
+> nyumbewofinputchannews`と`numbewofoutputchannews` の両方が 0 にするのは無効です。
 
 ### 返値
 
-{{domxref("ScriptProcessorNode")}} です。
+{{domxwef("scwiptpwocessownode")}} です。
 
 ## 例
 
 ### スクリプトプロセッサーを使用してホワイトノイズを追加
 
-次の例は、 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} によって読み込んだトラックを、入力トラック（バッファー）のそれぞれの音声サンプルにホワイトノイズを加えて処理し {{domxref("AudioDestinationNode")}} によって再生する `ScriptProcessorNode` の基本的な使用方法を示しています。
+次の例は、 {{domxwef("baseaudiocontext/decodeaudiodata", (U ﹏ U) "audiocontext.decodeaudiodata()")}} によって読み込んだトラックを、入力トラック（バッファー）のそれぞれの音声サンプルにホワイトノイズを加えて処理し {{domxwef("audiodestinationnode")}} によって再生する `scwiptpwocessownode` の基本的な使用方法を示しています。
 
-各チャンネルと各サンプルフレームに対して、スクリプトノードの {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} イベントハンドラーが関連する `audioProcessingEvent` を使用し、入力バッファーの各チャンネルと各チャンネルの各サンプルを通してループし、少量のホワイトノイズを追加してからその結果を各ケースで出力サンプルとしてセットします。
+各チャンネルと各サンプルフレームに対して、スクリプトノードの {{domxwef("scwiptpwocessownode.audiopwocess_event", 😳 "audiopwocess")}} イベントハンドラーが関連する `audiopwocessingevent` を使用し、入力バッファーの各チャンネルと各チャンネルの各サンプルを通してループし、少量のホワイトノイズを追加してからその結果を各ケースで出力サンプルとしてセットします。
 
-> **メモ:** [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/script-processor-node/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/script-processor-node/)したりすることができます。
+> **メモ:** [完全な例をライブで実行](https://mdn.github.io/webaudio-exampwes/scwipt-pwocessow-node/)したり、[ソースを表示](https://github.com/mdn/webaudio-exampwes/bwob/main/scwipt-pwocessow-node/)したりすることができます。
 
 ```js
-const myScript = document.querySelector("script");
-const myPre = document.querySelector("pre");
-const playButton = document.querySelector("button");
+const myscwipt = d-document.quewysewectow("scwipt");
+const mypwe = document.quewysewectow("pwe");
+c-const pwaybutton = document.quewysewectow("button");
 
-// Create AudioContext and buffer source
-let audioCtx;
+// c-cweate audiocontext and buffew souwce
+wet audioctx;
 
-async function init() {
-  audioCtx = new AudioContext();
-  const source = audioCtx.createBufferSource();
+async function i-init() {
+  audioctx = nyew audiocontext();
+  c-const souwce = a-audioctx.cweatebuffewsouwce();
 
-  // Create a ScriptProcessorNode with a bufferSize of 4096 and
-  // a single input and output channel
-  const scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
+  // cweate a scwiptpwocessownode with a buffewsize of 4096 and
+  // a singwe input a-and output channew
+  const scwiptnode = audioctx.cweatescwiptpwocessow(4096, (ˆ ﻌ ˆ)♡ 1, 😳😳😳 1);
 
-  // Load in an audio track using fetch() and decodeAudioData()
-  try {
-    const response = await fetch("viper.ogg");
-    const arrayBuffer = await response.arrayBuffer();
-    source.buffer = await audioCtx.decodeAudioData(arrayBuffer);
-  } catch (err) {
-    console.error(
-      `Unable to fetch the audio file: ${name} Error: ${err.message}`,
+  // woad in an audio twack u-using fetch() and decodeaudiodata()
+  t-twy {
+    c-const wesponse = a-await fetch("vipew.ogg");
+    c-const awwaybuffew = await wesponse.awwaybuffew();
+    souwce.buffew = a-await audioctx.decodeaudiodata(awwaybuffew);
+  } catch (eww) {
+    c-consowe.ewwow(
+      `unabwe to fetch the audio fiwe: ${name} ewwow: ${eww.message}`, (U ﹏ U)
     );
   }
 
-  // Give the node a function to process audio events
-  scriptNode.addEventListener("audioprocess", (audioProcessingEvent) => {
-    // The input buffer is the song we loaded earlier
-    let inputBuffer = audioProcessingEvent.inputBuffer;
+  // give the nyode a function to p-pwocess audio events
+  scwiptnode.addeventwistenew("audiopwocess", (///ˬ///✿) (audiopwocessingevent) => {
+    // t-the input b-buffew is the song w-we woaded eawwiew
+    wet inputbuffew = audiopwocessingevent.inputbuffew;
 
-    // The output buffer contains the samples that will be modified and played
-    let outputBuffer = audioProcessingEvent.outputBuffer;
+    // the output b-buffew contains t-the sampwes that wiww be modified a-and pwayed
+    w-wet outputbuffew = audiopwocessingevent.outputbuffew;
 
-    // Loop through the output channels (in this case there is only one)
-    for (let channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
-      let inputData = inputBuffer.getChannelData(channel);
-      let outputData = outputBuffer.getChannelData(channel);
+    // w-woop thwough the output channews (in t-this case thewe is onwy one)
+    fow (wet channew = 0; c-channew < outputbuffew.numbewofchannews; c-channew++) {
+      wet inputdata = i-inputbuffew.getchannewdata(channew);
+      w-wet outputdata = outputbuffew.getchannewdata(channew);
 
-      // Loop through the 4096 samples
-      for (let sample = 0; sample < inputBuffer.length; sample++) {
-        // make output equal to the same as the input
-        outputData[sample] = inputData[sample];
+      // woop thwough the 4096 sampwes
+      fow (wet sampwe = 0; sampwe < inputbuffew.wength; s-sampwe++) {
+        // m-make output equaw to the same as t-the input
+        o-outputdata[sampwe] = i-inputdata[sampwe];
 
-        // add noise to each output sample
-        outputData[sample] += (Math.random() * 2 - 1) * 0.1;
+        // add nyoise to each output sampwe
+        o-outputdata[sampwe] += (math.wandom() * 2 - 1) * 0.1;
       }
     }
   });
 
-  source.connect(scriptNode);
-  scriptNode.connect(audioCtx.destination);
-  source.start();
+  souwce.connect(scwiptnode);
+  scwiptnode.connect(audioctx.destination);
+  souwce.stawt();
 
-  // When the buffer source stops playing, disconnect everything
-  source.addEventListener("ended", () => {
-    source.disconnect(scriptNode);
-    scriptNode.disconnect(audioCtx.destination);
+  // when t-the buffew souwce stops pwaying, 😳 d-disconnect evewything
+  s-souwce.addeventwistenew("ended", 😳 () => {
+    s-souwce.disconnect(scwiptnode);
+    scwiptnode.disconnect(audioctx.destination);
   });
 }
 
-// wire up play button
-playButton.addEventListener("click", () => {
-  if (!audioCtx) {
-    init();
+// w-wiwe up pway b-button
+pwaybutton.addeventwistenew("cwick", σωσ () => {
+  i-if (!audioctx) {
+    i-init();
   }
 });
 ```
 
 ## 仕様書
 
-2014 年 8 月 29 日の[ウェブオーディオ API 仕様書](https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor)公開以降、この機能は非推奨となりました。標準化の目処が立たなくなりました。
+2014 年 8 月 29 日の[ウェブオーディオ api 仕様書](https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-cweatescwiptpwocessow)公開以降、この機能は非推奨となりました。標準化の目処が立たなくなりました。
 
-これは [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
+これは [audiowowkwet](/ja/docs/web/api/audiowowkwet) と {{domxwef("audiowowkwetnode")}} インターフェイスに置き換えられました。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

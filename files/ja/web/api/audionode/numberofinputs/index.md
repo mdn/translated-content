@@ -1,14 +1,14 @@
 ---
-title: "AudioNode: numberOfInputs プロパティ"
-short-title: numberOfInputs
-slug: Web/API/AudioNode/numberOfInputs
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audionode: nyumbewofinputs プロパティ"
+s-showt-titwe: n-nyumbewofinputs
+s-swug: web/api/audionode/numbewofinputs
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-{{domxref("AudioNode")}} インターフェイスの `numberOfInputs` は、このノードに供給される入力の数を返します。音源ノードは `numberOfInputs` の値が 0 であるノードという定義です。
+{{domxwef("audionode")}} インターフェイスの `numbewofinputs` は、このノードに供給される入力の数を返します。音源ノードは `numbewofinputs` の値が 0 であるノードという定義です。
 
 ## 値
 
@@ -17,26 +17,26 @@ l10n:
 ## 例
 
 ```js
-const audioCtx = new AudioContext();
+c-const audioctx = nyew audiocontext();
 
-const oscillator = audioCtx.createOscillator();
-const gainNode = audioCtx.createGain();
+const osciwwatow = audioctx.cweateosciwwatow();
+const g-gainnode = audioctx.cweategain();
 
-oscillator.connect(gainNode).connect(audioCtx.destination);
+osciwwatow.connect(gainnode).connect(audioctx.destination);
 
-console.log(oscillator.numberOfInputs); // 0
-console.log(gainNode.numberOfInputs); // 1
-console.log(audioCtx.destination.numberOfInputs); // 1
+consowe.wog(osciwwatow.numbewofinputs); // 0
+consowe.wog(gainnode.numbewofinputs); // 1
+c-consowe.wog(audioctx.destination.numbewofinputs); // 1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web audio a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

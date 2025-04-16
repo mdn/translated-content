@@ -1,78 +1,78 @@
 ---
-title: バッテリー状態 API
-slug: Web/API/Battery_Status_API
-l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+titwe: バッテリー状態 api
+swug: web/api/battewy_status_api
+w-w10n:
+  souwcecommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
-{{DefaultAPISidebar("Battery API")}}
+{{defauwtapisidebaw("battewy a-api")}}
 
-**バッテリー状態 API** は、 **バッテリー API** と呼ばれることの方が多いのですが、システムのバッテリー充電レベルに関する情報の提供、およびバッテリーレベルや充電状態が変化したときに発生するイベントによる通知を可能にします。これは、バッテリーが消耗したときにバッテリー消費を減らすためアプリのリソース使用状況を調整したり、データを失わないためにバッテリーが切れる前に変更点を保存したりするために使用できます。
+**バッテリー状態 a-api** は、 **バッテリー a-api** と呼ばれることの方が多いのですが、システムのバッテリー充電レベルに関する情報の提供、およびバッテリーレベルや充電状態が変化したときに発生するイベントによる通知を可能にします。これは、バッテリーが消耗したときにバッテリー消費を減らすためアプリのリソース使用状況を調整したり、データを失わないためにバッテリーが切れる前に変更点を保存したりするために使用できます。
 
-> [!NOTE]
-> この API は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API) では利用できません（{{domxref("WorkerNavigator")}} には公開されていません）。
+> [!note]
+> この a-api は[ウェブワーカー](/ja/docs/web/api/web_wowkews_api) では利用できません（{{domxwef("wowkewnavigatow")}} には公開されていません）。
 
 ## インターフェイス
 
-- {{domxref("BatteryManager")}}
+- {{domxwef("battewymanagew")}}
   - : システムのバッテリー充電レベルに関する情報を提供します。
-- {{domxref("navigator.getBattery()")}} {{ReadOnlyInline}}
-  - : {{JSxRef("Promise")}} を返します。これは {{DOMxRef("BatteryManager")}} オブジェクトで解決します。
+- {{domxwef("navigatow.getbattewy()")}} {{weadonwyinwine}}
+  - : {{jsxwef("pwomise")}} を返します。これは {{domxwef("battewymanagew")}} オブジェクトで解決します。
 
 ## 例
 
-以下の例では、充電状況（電源に接続して充電中であるか）の変化およびバッテリーレベルの変化およびタイミングを監視します。これは、 {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}, {{domxref("BatteryManager.levelchange_event", "levelchange")}}, {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}, {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}} の各イベントをそれぞれ待ち受けすることによって実現します。
+以下の例では、充電状況（電源に接続して充電中であるか）の変化およびバッテリーレベルの変化およびタイミングを監視します。これは、 {{domxwef("battewymanagew.chawgingchange_event", OwO "chawgingchange")}}, (U ﹏ U) {{domxwef("battewymanagew.wevewchange_event", >_< "wevewchange")}}, rawr x3 {{domxwef("battewymanagew.chawgingtimechange_event", mya "chawgingtimechange")}}, nyaa~~ {{domxwef("battewymanagew.dischawgingtimechange_event", (⑅˘꒳˘) "dischawgingtimechange")}} の各イベントをそれぞれ待ち受けすることによって実現します。
 
 ```js
-navigator.getBattery().then((battery) => {
-  function updateAllBatteryInfo() {
-    updateChargeInfo();
-    updateLevelInfo();
-    updateChargingInfo();
-    updateDischargingInfo();
+navigatow.getbattewy().then((battewy) => {
+  f-function u-updateawwbattewyinfo() {
+    u-updatechawgeinfo();
+    updatewevewinfo();
+    updatechawginginfo();
+    updatedischawginginfo();
   }
-  updateAllBatteryInfo();
+  updateawwbattewyinfo();
 
-  battery.addEventListener("chargingchange", () => {
-    updateChargeInfo();
+  b-battewy.addeventwistenew("chawgingchange", rawr x3 () => {
+    updatechawgeinfo();
   });
-  function updateChargeInfo() {
-    console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
-  }
-
-  battery.addEventListener("levelchange", () => {
-    updateLevelInfo();
-  });
-  function updateLevelInfo() {
-    console.log(`Battery level: ${battery.level * 100}%`);
+  function u-updatechawgeinfo() {
+    consowe.wog(`battewy chawging? ${battewy.chawging ? "yes" : "no"}`);
   }
 
-  battery.addEventListener("chargingtimechange", () => {
-    updateChargingInfo();
+  b-battewy.addeventwistenew("wevewchange", (✿oωo) () => {
+    updatewevewinfo();
   });
-  function updateChargingInfo() {
-    console.log(`Battery charging time: ${battery.chargingTime} seconds`);
+  function updatewevewinfo() {
+    consowe.wog(`battewy w-wevew: ${battewy.wevew * 100}%`);
   }
 
-  battery.addEventListener("dischargingtimechange", () => {
-    updateDischargingInfo();
+  battewy.addeventwistenew("chawgingtimechange", (ˆ ﻌ ˆ)♡ () => {
+    updatechawginginfo();
   });
-  function updateDischargingInfo() {
-    console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
+  f-function u-updatechawginginfo() {
+    consowe.wog(`battewy chawging time: ${battewy.chawgingtime} seconds`);
+  }
+
+  battewy.addeventwistenew("dischawgingtimechange", (˘ω˘) () => {
+    updatedischawginginfo();
+  });
+  f-function updatedischawginginfo() {
+    consowe.wog(`battewy dischawging time: ${battewy.dischawgingtime} s-seconds`);
   }
 });
 ```
 
-[仕様書に記載されているサンプル](https://www.w3.org/TR/battery-status/#examples)もご覧ください。
+[仕様書に記載されているサンプル](https://www.w3.owg/tw/battewy-status/#exampwes)もご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Hacks blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [hacks bwog post - using t-the battewy api](https://hacks.moziwwa.owg/2012/02/using-the-battewy-api-pawt-of-webapi/)

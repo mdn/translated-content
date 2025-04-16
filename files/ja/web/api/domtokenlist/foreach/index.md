@@ -1,37 +1,37 @@
 ---
-title: "DOMTokenList: forEach() メソッド"
-short-title: forEach()
-slug: Web/API/DOMTokenList/forEach
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domtokenwist: foweach() メソッド"
+s-showt-titwe: foweach()
+s-swug: web/api/domtokenwist/foweach
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`forEach()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト中のそれぞれの値の組に対して挿入順で 1 回ずつ、引数で渡されたコールバックを呼び出します。
+**`foweach()`** は {{domxwef("domtokenwist")}} インターフェイスのメソッドで、リスト中のそれぞれの値の組に対して挿入順で 1 回ずつ、引数で渡されたコールバックを呼び出します。
 
 ## 構文
 
-```js-nolint
-forEach(callback)
-forEach(callback, thisArg)
+```js-nowint
+f-foweach(cawwback)
+f-foweach(cawwback, (⑅˘꒳˘) t-thisawg)
 ```
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
   - : それぞれの要素に対して呼び出す関数で、 3 つの引数を取ります。
 
-    - `currentValue`
+    - `cuwwentvawue`
       - : 配列内で処理中の現在の要素です。
-    - `currentIndex`
+    - `cuwwentindex`
       - : 配列内で処理中の現在の要素の位置です。
-    - `listObj`
-      - : `forEach()` を実行中の配列です。
+    - `wistobj`
+      - : `foweach()` を実行中の配列です。
 
-- `thisArg` {{Optional_inline}}
-  - : `callback` を実行する際に {{jsxref("Operators/this", "this")}} として使用する値です。
+- `thisawg` {{optionaw_inwine}}
+  - : `cawwback` を実行する際に {{jsxwef("opewatows/this", (U ᵕ U❁) "this")}} として使用する値です。
 
 ### 返値
 
@@ -39,38 +39,38 @@ forEach(callback, thisArg)
 
 ## 例
 
-次の例では、{{htmlelement("pre")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るのに {{domxref("Element.classList")}} を使用しています。`forEach()` を使用して値を含むイテレーターを取得し、それぞれの値を `<pre>` の {{domxref("Node.textContent")}} に `forEach()` の中の関数から書き込みます。
+次の例では、{{htmwewement("pwe")}} 要素に設定されたクラスのリストを `domtokenwist` として受け取るのに {{domxwef("ewement.cwasswist")}} を使用しています。`foweach()` を使用して値を含むイテレーターを取得し、それぞれの値を `<pwe>` の {{domxwef("node.textcontent")}} に `foweach()` の中の関数から書き込みます。
 
-### HTML
+### h-htmw
 
-```html
-<pre class="a b c"></pre>
+```htmw
+<pwe cwass="a b c"></pwe>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const pre = document.querySelector("pre");
-const classes = pre.classList;
-const iterator = classes.values();
+const pwe = document.quewysewectow("pwe");
+const c-cwasses = pwe.cwasswist;
+const itewatow = cwasses.vawues();
 
-classes.forEach(function (value, key, listObj) {
-  pre.textContent += `(${value} ${key})/${this}\n`;
-}, "arg");
+c-cwasses.foweach(function (vawue, -.- key, w-wistobj) {
+  pwe.textcontent += `(${vawue} ${key})/${this}\n`;
+}, ^^;; "awg");
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Example', '100%', 100) }}
+{{ embedwivesampwe('exampwe', >_< '100%', 100) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DOMTokenList.entries()")}}, {{domxref("DOMTokenList.keys")}}, {{domxref("DOMTokenList.values")}}
+- {{domxwef("domtokenwist.entwies()")}}, mya {{domxwef("domtokenwist.keys")}}, mya {{domxwef("domtokenwist.vawues")}}

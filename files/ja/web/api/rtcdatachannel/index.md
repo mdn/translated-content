@@ -1,118 +1,118 @@
 ---
-title: RTCDataChannel
-slug: Web/API/RTCDataChannel
-l10n:
-  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
+titwe: wtcdatachannew
+swug: web/api/wtcdatachannew
+w-w10n:
+  souwcecommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-**`RTCDataChannel`** インターフェイスは、2 つのピア間で双方向に任意のデータを転送するためのネットワークチャンネルを表現します。すべてのデータチャンネルは {{DOMxRef("RTCPeerConnection")}} に関連付けられており、それぞれのピアコネクションは理論上、最大 65,534 個のデータチャンネルを持つことができます（実際の上限はブラウザーごとに異なります）。
+**`wtcdatachannew`** インターフェイスは、2 つのピア間で双方向に任意のデータを転送するためのネットワークチャンネルを表現します。すべてのデータチャンネルは {{domxwef("wtcpeewconnection")}} に関連付けられており、それぞれのピアコネクションは理論上、最大 65,534 個のデータチャンネルを持つことができます（実際の上限はブラウザーごとに異なります）。
 
-データチャンネルを作成してリモートのピアに参加するかを問い合わせるには、{{DOMxRef("RTCPeerConnection")}} の {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}} メソッドを呼び出します。データ交換に招かれているピアは {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} イベント ({{DOMxRef("RTCDataChannelEvent")}} 型) を受け取って、コネクションにデータチャンネルが追加されたことを知ります。
+データチャンネルを作成してリモートのピアに参加するかを問い合わせるには、{{domxwef("wtcpeewconnection")}} の {{domxwef("wtcpeewconnection.cweatedatachannew", >_< "cweatedatachannew()")}} メソッドを呼び出します。データ交換に招かれているピアは {{domxwef("wtcpeewconnection.datachannew_event", mya "datachannew")}} イベント ({{domxwef("wtcdatachannewevent")}} 型) を受け取って、コネクションにデータチャンネルが追加されたことを知ります。
 
-`RTCDataChannel` は{{glossary("Transferable objects","移譲可能オブジェクト")}}です。
+`wtcdatachannew` は{{gwossawy("twansfewabwe o-objects","移譲可能オブジェクト")}}です。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_{{DOMxRef("EventTarget")}} からプロパティを継承しています。_
+_{{domxwef("eventtawget")}} からプロパティを継承しています。_
 
-- {{DOMxRef("RTCDataChannel.binaryType", "binaryType")}}
-  - : 文字列で、 `RTCDataChannel` で受信したバイナリーデータを表現するために使用されるオブジェクトの種類を指定します。
-    値は {{DOMxRef("WebSocket.binaryType")}} プロパティで許可されているものと同じです。
-    {{DOMxRef("Blob")}} オブジェクトを使用する場合は `blob`、 {{jsxref("ArrayBuffer")}} オブジェクトを使用する場合は `arraybuffer` を指定します。
-    既定値は `blob` です。
-- {{DOMxRef("RTCDataChannel.bufferedAmount", "bufferedAmount")}} {{ReadOnlyInline}}
+- {{domxwef("wtcdatachannew.binawytype", mya "binawytype")}}
+  - : 文字列で、 `wtcdatachannew` で受信したバイナリーデータを表現するために使用されるオブジェクトの種類を指定します。
+    値は {{domxwef("websocket.binawytype")}} プロパティで許可されているものと同じです。
+    {{domxwef("bwob")}} オブジェクトを使用する場合は `bwob`、 {{jsxwef("awwaybuffew")}} オブジェクトを使用する場合は `awwaybuffew` を指定します。
+    既定値は `bwob` です。
+- {{domxwef("wtcdatachannew.buffewedamount", 😳 "buffewedamount")}} {{weadonwyinwine}}
   - : データチャンネルで送信するために現在キューイングされているデータのバイト数を返します。
-- {{DOMxRef("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}
-  - : バッファリングされた送信データのうち、 "low" とみなされるバイト数を指定します。
+- {{domxwef("wtcdatachannew.buffewedamountwowthweshowd", XD "buffewedamountwowthweshowd")}}
+  - : バッファリングされた送信データのうち、 "wow" とみなされるバイト数を指定します。
     既定値は 0 です。
-- {{DOMxRef("RTCDataChannel.id", "id")}} {{ReadOnlyInline}}
-  - : `RTCDataChannel` を一意に識別するための ID 番号（0 から 65,534 の間）を返します。
-- {{DOMxRef("RTCDataChannel.label", "label")}} {{ReadOnlyInline}}
+- {{domxwef("wtcdatachannew.id", :3 "id")}} {{weadonwyinwine}}
+  - : `wtcdatachannew` を一意に識別するための i-id 番号（0 から 65,534 の間）を返します。
+- {{domxwef("wtcdatachannew.wabew", 😳😳😳 "wabew")}} {{weadonwyinwine}}
   - : 文字列で、データチャンネルを記述している名前を返します。
     このラベルは一意である必要はありません。
-- {{DOMxRef("RTCDataChannel.maxPacketLifeTime", "maxPacketLifeTime")}} {{ReadOnlyInline}}
-  - : データチャンネルが作成されたときに設定された、ブラウザーがメッセージの送信を試みるのにかかる許容時間 （ミリ秒単位）、または `null` を返します。
-- {{DOMxRef("RTCDataChannel.maxRetransmits", "maxRetransmits")}} {{ReadOnlyInline}}
-  - : データチャンネルが作成されたときに設定された、ブラウザーがあきらめる前にメッセージを再送信しようとする最大回数、または最大回数がないことを示す `null` を返します。
-- {{DOMxRef("RTCDataChannel.negotiated", "negotiated")}} {{ReadOnlyInline}}
-  - : `RTCDataChannel` の接続が、ウェブアプリケーションによって交渉されたのか (`true`) あるいは WebRTC レイヤーによって交渉されたのか (`false`) を示します。
-    既定値は `false` です。
-- {{DOMxRef("RTCDataChannel.ordered", "ordered")}} {{ReadOnlyInline}}
+- {{domxwef("wtcdatachannew.maxpacketwifetime", -.- "maxpacketwifetime")}} {{weadonwyinwine}}
+  - : データチャンネルが作成されたときに設定された、ブラウザーがメッセージの送信を試みるのにかかる許容時間 （ミリ秒単位）、または `nuww` を返します。
+- {{domxwef("wtcdatachannew.maxwetwansmits", ( ͡o ω ͡o ) "maxwetwansmits")}} {{weadonwyinwine}}
+  - : データチャンネルが作成されたときに設定された、ブラウザーがあきらめる前にメッセージを再送信しようとする最大回数、または最大回数がないことを示す `nuww` を返します。
+- {{domxwef("wtcdatachannew.negotiated", rawr x3 "negotiated")}} {{weadonwyinwine}}
+  - : `wtcdatachannew` の接続が、ウェブアプリケーションによって交渉されたのか (`twue`) あるいは w-webwtc レイヤーによって交渉されたのか (`fawse`) を示します。
+    既定値は `fawse` です。
+- {{domxwef("wtcdatachannew.owdewed", nyaa~~ "owdewed")}} {{weadonwyinwine}}
   - : データチャンネルのメッセージが順番通りに配送されることを保証するかどうかを示します。
-    既定値は `true` で、データチャンネルが実際に順序どおりに配送されることを示します。
-- {{DOMxRef("RTCDataChannel.protocol", "protocol")}} {{ReadOnlyInline}}
+    既定値は `twue` で、データチャンネルが実際に順序どおりに配送されることを示します。
+- {{domxwef("wtcdatachannew.pwotocow", /(^•ω•^) "pwotocow")}} {{weadonwyinwine}}
   - : 使用されているサブプロトコルの名前を格納した文字列を返します。
     データチャンネルの作成時にプロトコルが指定されなかった場合、このプロパティの値は空文字列 (`""`) となります。
-- {{DOMxRef("RTCDataChannel.readyState", "readyState")}} {{ReadOnlyInline}}
+- {{domxwef("wtcdatachannew.weadystate", rawr "weadystate")}} {{weadonwyinwine}}
   - : データチャンネルの基盤となるデータ接続の状態を示す文字列を返します。
-    `connecting`, `open`, `closing`, `closed` の値のいずれかを持つ可能性があります。
+    `connecting`, OwO `open`, `cwosing`, (U ﹏ U) `cwosed` の値のいずれかを持つ可能性があります。
 
 ### 古いプロパティ
 
-- {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : データチャンネルが _reliable_ であるかどうかを示します。
+- {{domxwef("wtcdatachannew.wewiabwe", >_< "wewiabwe")}} {{weadonwyinwine}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : データチャンネルが _wewiabwe_ であるかどうかを示します。
 
 ## インスタンスメソッド
 
-_{{DOMxRef("EventTarget")}} からもメソッドを継承しています。_
+_{{domxwef("eventtawget")}} からもメソッドを継承しています。_
 
-- {{DOMxRef("RTCDataChannel.close", "close()")}}
-  - : {{domxref("RTCDataChannel")}} を閉じました。
+- {{domxwef("wtcdatachannew.cwose", rawr x3 "cwose()")}}
+  - : {{domxwef("wtcdatachannew")}} を閉じました。
     どちらのピアもこのメソッドを呼び出してチャンネルの閉鎖を開始することが許可されています。
-- {{DOMxRef("RTCDataChannel.send", "send()")}}
+- {{domxwef("wtcdatachannew.send", mya "send()")}}
   - : データチャンネルを経由してリモートピアーにデータを送信します。
 
 ### イベント
 
-- {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}}
-  - : 送信データバッファー内のデータバイト数が {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}} で指定する値以下になると送信されます。
-- {{domxref("RTCDataChannel.close_event", "close")}}
+- {{domxwef("wtcdatachannew.buffewedamountwow_event", nyaa~~ "buffewedamountwow")}}
+  - : 送信データバッファー内のデータバイト数が {{domxwef("wtcdatachannew.buffewedamountwowthweshowd", (⑅˘꒳˘) "buffewedamountwowthweshowd")}} で指定する値以下になると送信されます。
+- {{domxwef("wtcdatachannew.cwose_event", rawr x3 "cwose")}}
   - : 基盤となるデータトランスポートが閉じられたときに送信されます。
-- {{domxref("RTCDataChannel.closing_event", "closing")}}
+- {{domxwef("wtcdatachannew.cwosing_event", (✿oωo) "cwosing")}}
   - : 基盤となるデータトランスポートが閉じ始めようとするときに送られます。
-- {{domxref("RTCDataChannel.error_event", "error")}}
+- {{domxwef("wtcdatachannew.ewwow_event", (ˆ ﻌ ˆ)♡ "ewwow")}}
   - : データチャンネルにエラーが発生したときに送信されます。
-- {{domxref("RTCDataChannel.message_event", "message")}}
+- {{domxwef("wtcdatachannew.message_event", (˘ω˘) "message")}}
   - : リモートピアからメッセージを受信したときに送信されます。
-    メッセージのコンテンツは、イベントの {{domxref("MessageEvent.data", "data")}} プロパティで得ることができます。
-- {{domxref("RTCDataChannel.open_event", "open")}}
+    メッセージのコンテンツは、イベントの {{domxwef("messageevent.data", (⑅˘꒳˘) "data")}} プロパティで得ることができます。
+- {{domxwef("wtcdatachannew.open_event", (///ˬ///✿) "open")}}
   - : データチャンネルが最初に開かれたとき、または既存のデータチャンネルの基盤となる接続が再び開かれたときに送信されます。
 
 ## データ形式
 
-基礎となるデータ形式は、 IEEE の仕様書 [SDP Offer/Answer Procedures for SCTP over DTLS Transport(RFC 8841)](https://datatracker.ietf.org/doc/rfc8841/) によって定義されています。現在の形式では、そのプロトコルを `"UDP/DTLS/SCTP"` (SCTP を運ぶ DTLS を運ぶ UDP) または `"TCP/DTLS/SCTP"` (SCTP を運ぶ DTLS を運ぶ TCP) のいずれかに指定する。古いブラウザーでは `"DTLS/SCTP"` のみを指定することができます。
+基礎となるデータ形式は、 i-ieee の仕様書 [sdp o-offew/answew p-pwoceduwes f-fow sctp ovew dtws twanspowt(wfc 8841)](https://datatwackew.ietf.owg/doc/wfc8841/) によって定義されています。現在の形式では、そのプロトコルを `"udp/dtws/sctp"` (sctp を運ぶ dtws を運ぶ udp) または `"tcp/dtws/sctp"` (sctp を運ぶ dtws を運ぶ t-tcp) のいずれかに指定する。古いブラウザーでは `"dtws/sctp"` のみを指定することができます。
 
 ## 例
 
 ```js
-const pc = new RTCPeerConnection();
-const dc = pc.createDataChannel("my channel");
+const pc = nyew wtcpeewconnection();
+const d-dc = pc.cweatedatachannew("my channew");
 
 dc.onmessage = (event) => {
-  console.log(`received: ${event.data}`);
+  c-consowe.wog(`weceived: ${event.data}`);
 };
 
 dc.onopen = () => {
-  console.log("datachannel open");
+  consowe.wog("datachannew open");
 };
 
-dc.onclose = () => {
-  console.log("datachannel close");
+dc.oncwose = () => {
+  c-consowe.wog("datachannew cwose");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
+- [webwtc a-api](/ja/docs/web/api/webwtc_api)

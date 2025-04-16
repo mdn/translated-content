@@ -1,18 +1,18 @@
 ---
-title: "Sensor: start() メソッド"
-slug: Web/API/Sensor/start
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "sensow: stawt() メソッド"
+s-swug: web/api/sensow/stawt
+w-w10n:
+  souwcecommit: f-f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-**`start`** メソッドは、`Sensor` をベースとするセンサーを 1 個動作開始させます。
+**`stawt`** メソッドは、`sensow` をベースとするセンサーを 1 個動作開始させます。
 
 ## 構文
 
-```js-nolint
-start()
+```js-nowint
+s-stawt()
 ```
 
 ### 引数
@@ -21,12 +21,12 @@ start()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})
+なし ({{jsxwef("undefined")}})
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

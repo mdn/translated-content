@@ -1,76 +1,76 @@
 ---
-title: XMLSerializer.serializeToString()
-slug: Web/API/XMLSerializer/serializeToString
-l10n:
-  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
+titwe: xmwsewiawizew.sewiawizetostwing()
+swug: w-web/api/xmwsewiawizew/sewiawizetostwing
+w-w10n:
+  s-souwcecommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
 ---
 
-{{APIRef("DOM Parsing")}}
+{{apiwef("dom p-pawsing")}}
 
-{{domxref("XMLSerializer")}} の **`serializeToString()`** メソッドは、指定された {{Glossary("DOM")}} ツリーを表す {{Glossary("XML")}} 形式の文字列を構築します。
+{{domxwef("xmwsewiawizew")}} の **`sewiawizetostwing()`** メソッドは、指定された {{gwossawy("dom")}} ツリーを表す {{gwossawy("xmw")}} 形式の文字列を構築します。
 
 ## 構文
 
-```js-nolint
-serializeToString(rootNode)
+```js-nowint
+s-sewiawizetostwing(wootnode)
 ```
 
 ### 引数
 
-- `rootNode`
-  - : XML 表現を構築する DOM ツリーまたはサブツリーのルートとして用いる {{domxref("Node")}} です。
+- `wootnode`
+  - : x-xmw 表現を構築する d-dom ツリーまたはサブツリーのルートとして用いる {{domxwef("node")}} です。
 
 ### 返値
 
-指定された DOM ツリーの XML 表現が入った文字列です。
+指定された d-dom ツリーの xmw 表現が入った文字列です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 指定された `rootNode` が対応しているノード型でないとき投げられます。ルートノードは {{domxref("Node")}} または {{domxref("Attr")}} でなければなりません。
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : ツリーが正常にシリアライズできなかったとき投げられます。おそらくコンテンツの XML シリアライズ対応に関する問題が原因です。
-- `SyntaxError` {{domxref("DOMException")}}
-  - : HTML のシリアライズを要求されたが、コンテンツが良い形式でないため成功しなかったとき投げられます。
+- {{jsxwef("typeewwow")}}
+  - : 指定された `wootnode` が対応しているノード型でないとき投げられます。ルートノードは {{domxwef("node")}} または {{domxwef("attw")}} でなければなりません。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : ツリーが正常にシリアライズできなかったとき投げられます。おそらくコンテンツの xmw シリアライズ対応に関する問題が原因です。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : htmw のシリアライズを要求されたが、コンテンツが良い形式でないため成功しなかったとき投げられます。
 
 ## 使用法の注意点
 
 ### 対応しているノード型
 
-指定するルートノードとその全ての子孫は、XML シリアライズのアルゴリズムに対応しているものでなければなりません、ルートノード自身は、{{domxref("Node")}} または {{domxref("Attr")}} のオブジェクトでなければなりません。
+指定するルートノードとその全ての子孫は、xmw シリアライズのアルゴリズムに対応しているものでなければなりません、ルートノード自身は、{{domxwef("node")}} または {{domxwef("attw")}} のオブジェクトでなければなりません。
 
-ルートノードの子孫では、`Node` と `Attr` に加えて以下の型も利用可能です。
+ルートノードの子孫では、`node` と `attw` に加えて以下の型も利用可能です。
 
-- {{domxref("DocumentType")}}
-- {{domxref("Document")}}
-- {{domxref("DocumentFragment")}}
-- {{domxref("Element")}}
-- {{domxref("Comment")}}
-- {{domxref("Text")}}
-- {{domxref("ProcessingInstruction")}}
-- {{domxref("Attr")}}
+- {{domxwef("documenttype")}}
+- {{domxwef("document")}}
+- {{domxwef("documentfwagment")}}
+- {{domxwef("ewement")}}
+- {{domxwef("comment")}}
+- {{domxwef("text")}}
+- {{domxwef("pwocessinginstwuction")}}
+- {{domxwef("attw")}}
 
-これ以外の型が見つかった場合、{{jsxref("TypeError")}} 例外が投げられます。
+これ以外の型が見つかった場合、{{jsxwef("typeewwow")}} 例外が投げられます。
 
-### 結果の XML に関する注意点
+### 結果の xmw に関する注意点
 
-`serializeToString()` から出力される XML について、注意するべき点がいくつかあります。
+`sewiawizetostwing()` から出力される xmw について、注意するべき点がいくつかあります。
 
-- XML シリアライズにおいては、`Element` および `Attr` のノードの {{domxref("Element.namespaceURI", "namespaceURI")}} は常にそのままシリアライズされます。すなわち、指定されている {{domxref("Element.prefix", "prefix")}} やデフォルト名前空間は消されたり変更されたりする可能性があります。
-- 結果の XML は HTML パーサーに対応しています。
-- HTML 名前空間にある子ノードを持たない (すなわち、空タグを表している) 要素は、空要素タグ (`"<someelement/>"`) ではなく開始タグと終了タグ (`"<someelement></someelement>"`) を用いてシリアライズされます。
+- x-xmw シリアライズにおいては、`ewement` および `attw` のノードの {{domxwef("ewement.namespaceuwi", (⑅˘꒳˘) "namespaceuwi")}} は常にそのままシリアライズされます。すなわち、指定されている {{domxwef("ewement.pwefix", "pwefix")}} やデフォルト名前空間は消されたり変更されたりする可能性があります。
+- 結果の xmw は htmw パーサーに対応しています。
+- h-htmw 名前空間にある子ノードを持たない (すなわち、空タグを表している) 要素は、空要素タグ (`"<someewement/>"`) ではなく開始タグと終了タグ (`"<someewement></someewement>"`) を用いてシリアライズされます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [XML のパースとシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)
-- HTML にシリアライズする : {{domxref("Element.innerHTML")}} と
-  {{domxref("Element.outerHTML")}}
-- HTML や XML をパースして DOM ツリーを生成する : {{domxref("DOMParser")}}
+- [xmw のパースとシリアライズ](/ja/docs/web/xmw/guides/pawsing_and_sewiawizing_xmw)
+- htmw にシリアライズする : {{domxwef("ewement.innewhtmw")}} と
+  {{domxwef("ewement.outewhtmw")}}
+- h-htmw や xmw をパースして dom ツリーを生成する : {{domxwef("dompawsew")}}

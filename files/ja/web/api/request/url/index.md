@@ -1,38 +1,38 @@
 ---
-title: "Request: url プロパティ"
-short-title: url
-slug: Web/API/Request/url
-l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+titwe: "wequest: uww プロパティ"
+s-showt-titwe: u-uww
+swug: w-web/api/wequest/uww
+w-w10n:
+  souwcecommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch a-api")}}{{avaiwabweinwowkews}}
 
-**`url`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストの URL を保持します。
+**`uww`** は {{domxwef("wequest")}} インターフェイスの読み取り専用プロパティで、リクエストの u-uww を保持します。
 
 ## 値
 
-リクエストの URL を示す文字列です。
+リクエストの u-uww を示す文字列です。
 
 ## 例
 
-次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのための）新しいリクエストを生成してから、変数にリクエストの URL を保存しています。
+次のスニペットでは、 {{domxwef("wequest.wequest()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのための）新しいリクエストを生成してから、変数にリクエストの u-uww を保存しています。
 
 ```js
-const myRequest = new Request("flowers.jpg");
-const myURL = myRequest.url; // "https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request/flowers.jpg"
+const mywequest = nyew wequest("fwowews.jpg");
+const myuww = mywequest.uww; // "https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-wequest/fwowews.jpg"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

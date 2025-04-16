@@ -1,29 +1,29 @@
 ---
-title: "GeolocationCoordinates: altitude プロパティ"
-short-title: altitude
-slug: Web/API/GeolocationCoordinates/altitude
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "geowocationcoowdinates: awtitude プロパティ"
+s-showt-titwe: a-awtitude
+s-swug: web/api/geowocationcoowdinates/awtitude
+w-w10n:
+  souwcecommit: b-b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-**`GeolocationCoordinates.altitude`** は読み取り専用のプロパティであり、 `double` 値で、その位置の [WGS84](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf) 楕円体（公称海面水準を定義するもの）からの高度をメートル単位で表します。この値は、実装がこのデータを提供できない場合は `null` となります。
+**`geowocationcoowdinates.awtitude`** は読み取り専用のプロパティであり、 `doubwe` 値で、その位置の [wgs84](https://gis-wab.info/docs/nima-tw8350.2-wgs84fin.pdf) 楕円体（公称海面水準を定義するもの）からの高度をメートル単位で表します。この値は、実装がこのデータを提供できない場合は `nuww` となります。
 
 ## 値
 
-`double` 値で、その位置の [WGS84](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf) 楕円体（公称海面レベルを定義するもの）からの高度をメートル単位で表します。
+`doubwe` 値で、その位置の [wgs84](https://gis-wab.info/docs/nima-tw8350.2-wgs84fin.pdf) 楕円体（公称海面レベルを定義するもの）からの高度をメートル単位で表します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- 所属先の {{domxref("GeolocationCoordinates")}} インターフェイス
-- [National Imagery and Mapping Agency Technical Report 8350.2, Third Edition (WGS84)](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf)
+- [位置情報 a-api の使用](/ja/docs/web/api/geowocation_api/using_the_geowocation_api)
+- 所属先の {{domxwef("geowocationcoowdinates")}} インターフェイス
+- [nationaw i-imagewy and mapping agency technicaw wepowt 8350.2, rawr x3 thiwd edition (wgs84)](https://gis-wab.info/docs/nima-tw8350.2-wgs84fin.pdf)

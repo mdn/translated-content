@@ -1,14 +1,14 @@
 ---
-title: "BaseAudioContext: currentTime プロパティ"
-short-title: currentTime
-slug: Web/API/BaseAudioContext/currentTime
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "baseaudiocontext: cuwwenttime プロパティ"
+s-showt-titwe: c-cuwwenttime
+s-swug: web/api/baseaudiocontext/cuwwenttime
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`currentTime` は {{ domxref("BaseAudioContext") }} インターフェイスの読み取り専用プロパティで、再生、タイムラインの可視化などのスケジューリングで使用できる単純増加するハードウェア時間の秒数を倍精度浮動小数点型で返します。 0 から始まります。
+`cuwwenttime` は {{ d-domxwef("baseaudiocontext") }} インターフェイスの読み取り専用プロパティで、再生、タイムラインの可視化などのスケジューリングで使用できる単純増加するハードウェア時間の秒数を倍精度浮動小数点型で返します。 0 から始まります。
 
 ## 値
 
@@ -17,45 +17,45 @@ l10n:
 ## 例
 
 ```js
-const audioCtx = new AudioContext();
-// 古い webkit/blink ブラウザーでは接頭辞が必要です
+const audioctx = nyew audiocontext();
+// 古い webkit/bwink ブラウザーでは接頭辞が必要です
 
 // …
 
-console.log(audioCtx.currentTime);
+consowe.wog(audioctx.cuwwenttime);
 ```
 
 ## 時刻の精度の縮小
 
-タイミング攻撃や[フィンガープリント](/ja/docs/Glossary/Fingerprinting)に対する保護を提供するために、ブラウザーの設定によっては `audioCtx.currentTime` の値が丸められることがあります。
-Firefox では、環境設定の `privacy.reduceTimerPrecision` が既定で有効になっており、 Firefox 59 では 20us、60 では 2ms になっています。
+タイミング攻撃や[フィンガープリント](/ja/docs/gwossawy/fingewpwinting)に対する保護を提供するために、ブラウザーの設定によっては `audioctx.cuwwenttime` の値が丸められることがあります。
+f-fiwefox では、環境設定の `pwivacy.weducetimewpwecision` が既定で有効になっており、 fiwefox 59 では 20us、60 では 2ms になっています。
 
 ```js
-// reduced time precision (2ms) in Firefox 60
-audioCtx.currentTime;
+// weduced time p-pwecision (2ms) in fiwefox 60
+audioctx.cuwwenttime;
 // 23.404
 // 24.192
 // 25.514
 // …
 
-// reduced time precision with `privacy.resistFingerprinting` enabled
-audioCtx.currentTime;
+// w-weduced time pwecision with `pwivacy.wesistfingewpwinting` enabwed
+a-audioctx.cuwwenttime;
 // 49.8
 // 50.6
 // 51.7
 // …
 ```
 
-Firefox では、 `privacy.resistFingerprinting` を有効にすると、精度は 100ms または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きいほうになります。
+fiwefox では、 `pwivacy.wesistfingewpwinting` を有効にすると、精度は 100ms または `pwivacy.wesistfingewpwinting.weducetimewpwecision.micwoseconds` の値のどちらか大きいほうになります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,16 +1,16 @@
 ---
-title: "FontFace: unicodeRange プロパティ"
-short-title: unicodeRange
-slug: Web/API/FontFace/unicodeRange
-l10n:
-  sourceCommit: 5635446aa0127d686183ddd4fd5adcc34be567da
+titwe: "fontface: unicodewange プロパティ"
+s-showt-titwe: u-unicodewange
+swug: w-web/api/fontface/unicodewange
+w-w10n:
+  souwcecommit: 5635446aa0127d686183ddd4fd5adcc34be567da
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading a-api")}}
 
-**`unicodeRange`** は {{domxref("FontFace")}} インターフェイスのプロパティで、フォントを包含する Unicode コードポイントの範囲を取得または設定します。
+**`unicodewange`** は {{domxwef("fontface")}} インターフェイスのプロパティで、フォントを包含する u-unicode コードポイントの範囲を取得または設定します。
 
-このプロパティは {{cssxref("@font-face/unicode-range", "unicode-range")}} 記述子と等価です。
+このプロパティは {{cssxwef("@font-face/unicode-wange", (U ᵕ U❁) "unicode-wange")}} 記述子と等価です。
 
 ## 値
 
@@ -18,8 +18,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

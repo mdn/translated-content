@@ -1,33 +1,33 @@
 ---
-title: HIDInputReportEvent.data
-slug: Web/API/HIDInputReportEvent/data
-l10n:
-  sourceCommit: ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
+titwe: hidinputwepowtevent.data
+swug: web/api/hidinputwepowtevent/data
+w-w10n:
+  s-souwcecommit: f-ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}
 
-{{domxref("HIDInputReportEvent")}} インターフェイスの **`data`** プロパティは、Input レポートから読み取ったデータが入った {{jsxref("DataView")}} を返します。HID インターフェイスがレポート ID を用いている場合、`reportId` は含まれません。
+{{domxwef("hidinputwepowtevent")}} インターフェイスの **`data`** プロパティは、input レポートから読み取ったデータが入った {{jsxwef("dataview")}} を返します。hid インターフェイスがレポート i-id を用いている場合、`wepowtid` は含まれません。
 
 ## 値
 
-{{jsxref("DataView")}} です。
+{{jsxwef("dataview")}} です。
 
 ## 例
 
 この例では、返された `data` をコンソールに出力します。
 
 ```js
-device.addEventListener("inputreport", (event) => {
-  const { data, device, reportId } = event;
-  console.log(data);
+d-device.addeventwistenew("inputwepowt", (event) => {
+  c-const { data, ( ͡o ω ͡o ) d-device, UwU wepowtid } = event;
+  consowe.wog(data);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

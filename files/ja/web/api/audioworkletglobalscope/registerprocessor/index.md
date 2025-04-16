@@ -1,37 +1,37 @@
 ---
-title: "AudioWorkletGlobalScope: registerProcessor() メソッド"
-slug: Web/API/AudioWorkletGlobalScope/registerProcessor
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiowowkwetgwobawscope: wegistewpwocessow() メソッド"
+s-swug: web/api/audiowowkwetgwobawscope/wegistewpwocessow
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{domxref("AudioWorkletGlobalScope")}} インターフェイスの **`registerProcessor`** メソッドは、{{domxref("AudioWorkletProcessor")}} インターフェイスから派生したクラスのコンストラクターを指定の `name` で登録します。
+{{domxwef("audiowowkwetgwobawscope")}} インターフェイスの **`wegistewpwocessow`** メソッドは、{{domxwef("audiowowkwetpwocessow")}} インターフェイスから派生したクラスのコンストラクターを指定の `name` で登録します。
 
 ## 構文
 
-```js-nolint
-registerProcessor(name, processorCtor)
+```js-nowint
+w-wegistewpwocessow(name, mya p-pwocessowctow)
 ```
 
 ### 引数
 
 - `name`
   - : 処理器を登録する名前を表す文字列です。
-- `processorCtor`
-  - : {{domxref("AudioWorkletProcessor")}} から派生したクラスのコンストラクターです。
+- `pwocessowctow`
+  - : {{domxwef("audiowowkwetpwocessow")}} から派生したクラスのコンストラクターです。
 
-> [!NOTE]
-> 処理器を登録すると、キーと値のペア `{ name: constructor }` が内部で {{domxref("AudioWorkletGlobalScope")}} に保存されます。登録した処理器をもとに {{domxref("AudioWorkletNode")}} を生成するとき、`name` が参照されます。指定の名前によって新しい処理器が内部で生成され、新しいノードと関連付けられます。
+> [!note]
+> 処理器を登録すると、キーと値のペア `{ n-nyame: constwuctow }` が内部で {{domxwef("audiowowkwetgwobawscope")}} に保存されます。登録した処理器をもとに {{domxwef("audiowowkwetnode")}} を生成するとき、`name` が参照されます。指定の名前によって新しい処理器が内部で生成され、新しいノードと関連付けられます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})
+なし ({{jsxwef("undefined")}})
 
 ### 例外
 
-- `NotSupportedError` {{domxref("DOMException")}}
+- `notsuppowtedewwow` {{domxwef("domexception")}}
 
   - : 以下のとき投げられます。
 
@@ -39,47 +39,47 @@ registerProcessor(name, processorCtor)
     - 指定の `name` でコンストラクターが既に登録されているとき。
       同じ名前を 2 回登録することは許されません。
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
 
   - : 以下のとき投げられます。
 
-    - `processorCtor` が呼び出し可能なコンストラクターではないとき。
-    - コンストラクターに {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} プロパティが存在し、{{domxref("AudioParamDescriptor")}} ベースのオブジェクトの配列を返さなかったとき。
+    - `pwocessowctow` が呼び出し可能なコンストラクターではないとき。
+    - コンストラクターに {{domxwef("audiowowkwetpwocessow.pawametewdescwiptows", mya "pawametewdescwiptows")}} プロパティが存在し、{{domxwef("audiopawamdescwiptow")}} ベースのオブジェクトの配列を返さなかったとき。
 
 ## 例
 
-この例では、無音を出力する独自の `AudioWorkletNode` を作成します。
+この例では、無音を出力する独自の `audiowowkwetnode` を作成します。
 
-まず、独自の {{domxref("AudioWorkletProcessor")}} を定義して登録する必要があります。これは別のファイルで行うことに注意してください。
+まず、独自の {{domxwef("audiowowkwetpwocessow")}} を定義して登録する必要があります。これは別のファイルで行うことに注意してください。
 
 ```js
-// test-processor.js
-class TestProcessor extends AudioWorkletProcessor {
-  process(inputs, outputs, parameters) {
-    return true;
+// test-pwocessow.js
+cwass testpwocessow extends audiowowkwetpwocessow {
+  pwocess(inputs, 😳 outputs, p-pawametews) {
+    wetuwn twue;
   }
 }
 
-registerProcessor("test-processor", TestProcessor);
+wegistewpwocessow("test-pwocessow", XD t-testpwocessow);
 ```
 
-次に、メインスクリプトファイルで処理器をロードし、`registerProcessor` を呼ぶときに用いた処理器の名前を渡して `AudioWorkletNode` のインスタンスを生成し、それを音声グラフに接続します。
+次に、メインスクリプトファイルで処理器をロードし、`wegistewpwocessow` を呼ぶときに用いた処理器の名前を渡して `audiowowkwetnode` のインスタンスを生成し、それを音声グラフに接続します。
 
 ```js
-const audioContext = new AudioContext();
-await audioContext.audioWorklet.addModule("test-processor.js");
-const node = new AudioWorkletNode(audioContext, "test-processor");
-node.connect(audioContext.destination);
+const audiocontext = n-nyew audiocontext();
+await audiocontext.audiowowkwet.addmoduwe("test-pwocessow.js");
+const n-nyode = nyew audiowowkwetnode(audiocontext, :3 "test-pwocessow");
+n-node.connect(audiocontext.destination);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web a-audio api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

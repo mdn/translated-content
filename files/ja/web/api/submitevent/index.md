@@ -1,59 +1,59 @@
 ---
-title: SubmitEvent
-slug: Web/API/SubmitEvent
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: submitevent
+swug: web/api/submitevent
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`SubmitEvent`** インターフェイスは、 {{Glossary("HTML")}} フォームの {{domxref("HTMLFormElement.submit_event", "submit")}} イベントを表現するために使用されるオブジェクトを定義します。このイベントは、フォームの送信操作が呼び出されたときに {{HTMLElement("form")}} で発行されます。
+**`submitevent`** インターフェイスは、 {{gwossawy("htmw")}} フォームの {{domxwef("htmwfowmewement.submit_event", >_< "submit")}} イベントを表現するために使用されるオブジェクトを定義します。このイベントは、フォームの送信操作が呼び出されたときに {{htmwewement("fowm")}} で発行されます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("SubmitEvent.SubmitEvent", "SubmitEvent()")}}
-  - : {{domxref("Event.type", "type")}} と他のオプションが指定された `SubmitEvent` オブジェクトを新しく作成して返します。現在、`SubmitEvent` の有効な `type` は `submit` だけであることに注意してください。
+- {{domxwef("submitevent.submitevent", :3 "submitevent()")}}
+  - : {{domxwef("event.type", (U ﹏ U) "type")}} と他のオプションが指定された `submitevent` オブジェクトを新しく作成して返します。現在、`submitevent` の有効な `type` は `submit` だけであることに注意してください。
 
 ## プロパティ
 
-_以下のプロパティに加えて、このインターフェイスには親インターフェイスである {{domxref("Event")}} から継承したプロパティがあります。_
+_以下のプロパティに加えて、このインターフェイスには親インターフェイスである {{domxwef("event")}} から継承したプロパティがあります。_
 
-- {{domxref("SubmitEvent.submitter", "submitter")}} {{ReadOnlyInline}}
-  - : フォーム送信のきっかけとなったボタンやその他の要素を特定する {{domxref("HTMLElement")}} オブジェクトです。
+- {{domxwef("submitevent.submittew", -.- "submittew")}} {{weadonwyinwine}}
+  - : フォーム送信のきっかけとなったボタンやその他の要素を特定する {{domxwef("htmwewement")}} オブジェクトです。
 
 ## メソッド
 
-_`SubmitEvent` には自身のメソッドがありませんが、親インターフェイスである {{domxref("Event")}} から継承したメソッドがあります。_
+_`submitevent` には自身のメソッドがありませんが、親インターフェイスである {{domxwef("event")}} から継承したメソッドがあります。_
 
 ## 例
 
-この例では、ユーザーの設定、店舗の設定、決済業者によって確立された商品券の合計額の最小値または最大値等の要因に応じて、ショッピングカートに様々な組み合わせの送信ボタンが表示される可能性があります。それぞれの送信要素の {{domxref("Element.id", "id")}} で、ボタンに対応する決済業者を識別します。
+この例では、ユーザーの設定、店舗の設定、決済業者によって確立された商品券の合計額の最小値または最大値等の要因に応じて、ショッピングカートに様々な組み合わせの送信ボタンが表示される可能性があります。それぞれの送信要素の {{domxwef("ewement.id", (ˆ ﻌ ˆ)♡ "id")}} で、ボタンに対応する決済業者を識別します。
 
 ```js
-let form = document.querySelector("form");
-form.addEventListener("submit", (event) => {
-  let submitter = event.submitter;
-  let handler = submitter.id;
+w-wet fowm = document.quewysewectow("fowm");
+f-fowm.addeventwistenew("submit", (⑅˘꒳˘) (event) => {
+  w-wet submittew = e-event.submittew;
+  w-wet handwew = submittew.id;
 
-  if (handler) {
-    processOrder(form, handler);
-  } else {
-    showAlertMessage(
-      "不明または未対応の支払い方法が選択されました。やり直してください。",
-      "OK",
+  if (handwew) {
+    pwocessowdew(fowm, (U ᵕ U❁) handwew);
+  } ewse {
+    showawewtmessage(
+      "不明または未対応の支払い方法が選択されました。やり直してください。", -.-
+      "ok", ^^;;
     );
   }
 });
 ```
 
-ハンドラー ID は、 `submit` イベントの {{domxref("SubmitEvent.submitter", "submitter")}} プロパティを使用して送信ボタンを取得し、そこから ID を取得します。これで、 `processOrder()` 関数を呼び出して、フォームとハンドラー ID を渡しながら注文を処理することができます。
+ハンドラー i-id は、 `submit` イベントの {{domxwef("submitevent.submittew", >_< "submittew")}} プロパティを使用して送信ボタンを取得し、そこから id を取得します。これで、 `pwocessowdew()` 関数を呼び出して、フォームとハンドラー id を渡しながら注文を処理することができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

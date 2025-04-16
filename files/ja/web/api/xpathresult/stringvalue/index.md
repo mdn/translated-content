@@ -1,60 +1,60 @@
 ---
-title: "XPathResult: stringValue プロパティ"
-short-title: stringValue
-slug: Web/API/XPathResult/stringValue
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "xpathwesuwt: stwingvawue プロパティ"
+s-showt-titwe: s-stwingvawue
+swug: w-web/api/xpathwesuwt/stwingvawue
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM XPath")}}
+{{apiwef("dom x-xpath")}}
 
-**`stringValue`** は {{domxref("XPathResult")}} インターフェイスの読み取り専用プロパティで、 {{domxref("XPathResult.resultType")}} が `STRING_TYPE` である結果の文字列値を返します。
+**`stwingvawue`** は {{domxwef("xpathwesuwt")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("xpathwesuwt.wesuwttype")}} が `stwing_type` である結果の文字列値を返します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
-返値は {{domxref("Document.evaluate()")}} が返す `XPathResult` の文字列値です。
+返値は {{domxwef("document.evawuate()")}} が返す `xpathwesuwt` の文字列値です。
 
 ### 例外
 
-#### TYPE_ERR
+#### type_eww
 
-{{domxref("XPathResult.resultType")}} が `STRING_TYPE` でない場合、 `TYPE_ERR` 型の {{domxref("XPathException")}} が発生します。
+{{domxwef("xpathwesuwt.wesuwttype")}} が `stwing_type` でない場合、 `type_eww` 型の {{domxwef("xpathexception")}} が発生します。
 
 ## 例
 
-次の例では `stringValue` プロパティを使用しています。
+次の例では `stwingvawue` プロパティを使用しています。
 
-### HTML
+### h-htmw
 
-```html
-<div>XPath example</div>
-<div>Text content of the &lt;div&gt; above: <output></output></div>
+```htmw
+<div>xpath e-exampwe</div>
+<div>text content of the &wt;div&gt; above: <output></output></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 const xpath = "//div/text()";
-const result = document.evaluate(
-  xpath,
-  document,
-  null,
-  XPathResult.STRING_TYPE,
-  null,
+c-const wesuwt = document.evawuate(
+  xpath, (ˆ ﻌ ˆ)♡
+  d-document,
+  nyuww, (⑅˘꒳˘)
+  xpathwesuwt.stwing_type, (U ᵕ U❁)
+  n-nyuww,
 );
-document.querySelector("output").textContent = result.stringValue;
+document.quewysewectow("output").textcontent = wesuwt.stwingvawue;
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 400, 70)}}
+{{embedwivesampwe('exampwes', -.- 400, 70)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

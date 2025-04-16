@@ -1,14 +1,14 @@
 ---
-title: "HTMLSelectElement: disabled プロパティ"
-short-title: disabled
-slug: Web/API/HTMLSelectElement/disabled
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwsewectewement: disabwed プロパティ"
+s-showt-titwe: d-disabwed
+swug: w-web/api/htmwsewectewement/disabwed
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLSelectElement.disabled`** プロパティは論理値で、HTML の [`disabled`](/ja/docs/Web/HTML/Reference/Elements/select#disabled) 属性を反映し、このコントロールが無効であるかどうかを示します。無効であった場合、クリックを受け付けません。無効な要素は使用できず、クリックできません。
+**`htmwsewectewement.disabwed`** プロパティは論理値で、htmw の [`disabwed`](/ja/docs/web/htmw/wefewence/ewements/sewect#disabwed) 属性を反映し、このコントロールが無効であるかどうかを示します。無効であった場合、クリックを受け付けません。無効な要素は使用できず、クリックできません。
 
 ## 値
 
@@ -16,46 +16,46 @@ l10n:
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<label>
+```htmw
+<wabew>
   飲み物はいかが？
-  <input id="allow-drinks" type="checkbox" />
-</label>
+  <input i-id="awwow-dwinks" type="checkbox" />
+</wabew>
 
-<label for="drink-select">飲み物の選択:</label>
-<select id="drink-select" disabled>
-  <option value="1">水</option>
-  <option value="2">ビール</option>
-  <option value="3">ペプシ</option>
-  <option value="4">ウィスキー</option>
-</select>
+<wabew fow="dwink-sewect">飲み物の選択:</wabew>
+<sewect id="dwink-sewect" disabwed>
+  <option v-vawue="1">水</option>
+  <option vawue="2">ビール</option>
+  <option vawue="3">ペプシ</option>
+  <option v-vawue="4">ウィスキー</option>
+</sewect>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const allowDrinksCheckbox = document.getElementById("allow-drinks");
-const drinkSelect = document.getElementById("drink-select");
+c-const awwowdwinkscheckbox = document.getewementbyid("awwow-dwinks");
+const dwinksewect = document.getewementbyid("dwink-sewect");
 
-allowDrinksCheckbox.addEventListener(
-  "change",
+a-awwowdwinkscheckbox.addeventwistenew(
+  "change", ^^;;
   (event) => {
-    drinkSelect.disabled = !event.target.checked;
-  },
-  false,
+    dwinksewect.disabwed = !event.tawget.checked;
+  }, >_<
+  fawse,
 );
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

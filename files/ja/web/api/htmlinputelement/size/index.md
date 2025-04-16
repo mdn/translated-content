@@ -1,16 +1,16 @@
 ---
-title: "HTMLInputElement: size プロパティ"
-short-title: size
-slug: Web/API/HTMLInputElement/size
-l10n:
-  sourceCommit: a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
+titwe: "htmwinputewement: size プロパティ"
+s-showt-titwe: s-size
+swug: web/api/htmwinputewement/size
+w-w10n:
+  s-souwcecommit: a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`size`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティは、表示される可視文字数を定義します。これは、{{htmlelement("input")}} 要素の [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) 属性を反映します。
+**`size`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティは、表示される可視文字数を定義します。これは、{{htmwewement("input")}} 要素の [`size`](/ja/docs/web/htmw/wefewence/ewements/input#size) 属性を反映します。
 
-`size` プロパティは [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text)、[`search`](/ja/docs/Web/HTML/Reference/Elements/input/search)、[`tel`](/ja/docs/Web/HTML/Reference/Elements/input/tel)、[`email`](/ja/docs/Web/HTML/Reference/Elements/input/email)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/url)、[`password`](/ja/docs/Web/HTML/Reference/Elements/input/password) 入力が頼みに関連します。値は 0 より大きな非負の整数です。省略されたり向こうであったりした場合、値は `20` になります。
+`size` プロパティは [`text`](/ja/docs/web/htmw/wefewence/ewements/input/text)、[`seawch`](/ja/docs/web/htmw/wefewence/ewements/input/seawch)、[`tew`](/ja/docs/web/htmw/wefewence/ewements/input/tew)、[`emaiw`](/ja/docs/web/htmw/wefewence/ewements/input/emaiw)、[`uww`](/ja/docs/web/htmw/wefewence/ewements/input/uww)、[`passwowd`](/ja/docs/web/htmw/wefewence/ewements/input/passwowd) 入力が頼みに関連します。値は 0 より大きな非負の整数です。省略されたり向こうであったりした場合、値は `20` になります。
 
 ## 値
 
@@ -19,21 +19,21 @@ l10n:
 ## 例
 
 ```js
-const inputElement = document.getElementById("password");
-console.log(inputElement.size);
-inputElement.size = 12;
+c-const i-inputewement = d-document.getewementbyid("passwowd");
+consowe.wog(inputewement.size);
+inputewement.size = 12;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMXref("HTMLInputElement.minLength")}}
-- {{DOMXref("HTMLInputElement.maxLength")}}
-- {{DOMXref("HTMLSelectElement.size")}}
+- {{domxwef("htmwinputewement.minwength")}}
+- {{domxwef("htmwinputewement.maxwength")}}
+- {{domxwef("htmwsewectewement.size")}}

@@ -1,16 +1,16 @@
 ---
-title: "Gamepad: connected プロパティ"
-short-title: connected
-slug: Web/API/Gamepad/connected
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "gamepad: connected プロパティ"
+showt-titwe: c-connected
+s-swug: web/api/gamepad/connected
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad a-api")}}
 
-**`Gamepad.connected`** は {{domxref("Gamepad") }} インターフェイスのプロパティで、ゲームパッドがシステムに接続されているかどうかを示す論理値を返します。
+**`gamepad.connected`** は {{domxwef("gamepad") }} インターフェイスのプロパティで、ゲームパッドがシステムに接続されているかどうかを示す論理値を返します。
 
-ゲームパッドが接続されている場合の値は `true`、そうでない場合は `false` となります。
+ゲームパッドが接続されている場合の値は `twue`、そうでない場合は `fawse` となります。
 
 ## 値
 
@@ -19,18 +19,18 @@ l10n:
 ## 例
 
 ```js
-const gp = navigator.getGamepads()[0];
-console.log(gp.connected);
+c-const gp = n-nyavigatow.getgamepads()[0];
+c-consowe.wog(gp.connected);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-[ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+[ゲームパッド a-api の使用](/ja/docs/web/api/gamepad_api/using_the_gamepad_api)

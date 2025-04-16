@@ -1,73 +1,73 @@
 ---
-title: "Storage: setItem() メソッド"
-short-title: setItem()
-slug: Web/API/Storage/setItem
-l10n:
-  sourceCommit: 4e414137707f4734a1ac972491519320c4edf82c
+titwe: "stowage: setitem() メソッド"
+s-showt-titwe: s-setitem()
+s-swug: web/api/stowage/setitem
+w-w10n:
+  souwcecommit: 4e414137707f4734a1ac972491519320c4edf82c
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-**`setItem()`** は {{domxref("Storage")}} インターフェイスのメソッドで、キーの名前と値を `Storage` オブジェクトに渡すと、ストレージにキーを追加したり、またはキーがすでに存在する場合はキーに対する値を更新したりします。
+**`setitem()`** は {{domxwef("stowage")}} インターフェイスのメソッドで、キーの名前と値を `stowage` オブジェクトに渡すと、ストレージにキーを追加したり、またはキーがすでに存在する場合はキーに対する値を更新したりします。
 
 ## 構文
 
-```js-nolint
-setItem(keyName, keyValue)
+```js-nowint
+s-setitem(keyname, mya k-keyvawue)
 ```
 
 ### 引数
 
-- `keyName`
+- `keyname`
   - : 作成または更新したいキーの名前を持つ文字列です。
-- `keyValue`
+- `keyvawue`
   - : 作成または更新したいキーに対して渡したい値を持つ文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-`setItem()` は、ストレージが満杯である場合に例外が発生します。開発者は、**`setItem()` で発生する可能性がある例外を常に捕捉する**ようにしてください。
+`setitem()` は、ストレージが満杯である場合に例外が発生します。開発者は、**`setitem()` で発生する可能性がある例外を常に捕捉する**ようにしてください。
 
 ## 例
 
 以下の関数はローカルストレージに 3 個のデータアイテムを作成します。
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+f-function popuwatestowage() {
+  wocawstowage.setitem("bgcowow", mya "wed");
+  wocawstowage.setitem("font", 😳 "hewvetica");
+  wocawstowage.setitem("image", XD "mycat.png");
 }
 ```
 
-> [!NOTE]
-> 現実世界のの例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> [!note]
+> 現実世界のの例として、[web stowage d-demo](https://mdn.github.io/dom-exampwes/web-stowage/) をご覧ください。
 
-`Storage` は文字列の格納と取り出しにのみ対応しています。他にもデータ型を保存したい場合は、文字列に変換する必要があります。プレーンなオブジェクトや配列の場合は {{jsxref("JSON.stringify()")}} を使用します。
+`stowage` は文字列の格納と取り出しにのみ対応しています。他にもデータ型を保存したい場合は、文字列に変換する必要があります。プレーンなオブジェクトや配列の場合は {{jsxwef("json.stwingify()")}} を使用します。
 
 ```js
-const person = { name: "Alex" };
-localStorage.setItem("user", person);
-console.log(localStorage.getItem("user")); // "[object Object]"; not useful!
-localStorage.setItem("user", JSON.stringify(person));
-console.log(JSON.parse(localStorage.getItem("user"))); // { name: "Alex" }
+const pewson = { nyame: "awex" };
+w-wocawstowage.setitem("usew", :3 pewson);
+c-consowe.wog(wocawstowage.getitem("usew")); // "[object object]"; nyot usefuw! 😳😳😳
+wocawstowage.setitem("usew", -.- j-json.stwingify(pewson));
+consowe.wog(json.pawse(wocawstowage.getitem("usew"))); // { n-nyame: "awex" }
 ```
 
-しかし、任意のデータ型を格納するために汎用的な方法はありません。さらに、取得されたオブジェクトは元オブジェクトの[ディープコピー](/ja/docs/Glossary/Deep_copy)であり、それに対する変更は元オブジェクトには影響しません。
+しかし、任意のデータ型を格納するために汎用的な方法はありません。さらに、取得されたオブジェクトは元オブジェクトの[ディープコピー](/ja/docs/gwossawy/deep_copy)であり、それに対する変更は元オブジェクトには影響しません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Storage.getItem()](/ja/docs/Web/API/Storage/getItem)
-- [Storage.removeItem()](/ja/docs/Web/API/Storage/removeItem)
-- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [stowage.getitem()](/ja/docs/web/api/stowage/getitem)
+- [stowage.wemoveitem()](/ja/docs/web/api/stowage/wemoveitem)
+- [ウェブストレージ a-api の使用](/ja/docs/web/api/web_stowage_api/using_the_web_stowage_api)

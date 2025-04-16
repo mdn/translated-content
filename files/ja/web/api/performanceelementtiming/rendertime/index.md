@@ -1,70 +1,70 @@
 ---
-title: "PerformanceElementTiming: renderTime プロパティ"
-short-title: renderTime
-slug: Web/API/PerformanceElementTiming/renderTime
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pewfowmanceewementtiming: wendewtime プロパティ"
+s-showt-titwe: wendewtime
+s-swug: web/api/pewfowmanceewementtiming/wendewtime
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{apiwef("pewfowmance a-api")}}{{seecompattabwe}}
 
-**`renderTime`** は {{domxref("PerformanceElementTiming")}} インターフェイスの読み取り専用プロパティで、関連付けられた要素の描画時刻を返します。
+**`wendewtime`** は {{domxwef("pewfowmanceewementtiming")}} インターフェイスの読み取り専用プロパティで、関連付けられた要素の描画時刻を返します。
 
 ## 値
 
-その要素の描画時間を表す {{domxref("DOMHighResTimeStamp")}} です。
+その要素の描画時間を表す {{domxwef("domhighwestimestamp")}} です。
 
-画像の場合、これは**画像の描画タイムスタンプ**になります。これは画像が完全に読み込まれた後に発生する次のペイントとして定義されます。[Timing-allow-origin](/ja/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin) ヘッダーによって定義されています。タイミング許可チェックが失敗した場合、これは `0` を返します。
+画像の場合、これは**画像の描画タイムスタンプ**になります。これは画像が完全に読み込まれた後に発生する次のペイントとして定義されます。[timing-awwow-owigin](/ja/docs/web/http/wefewence/headews/timing-awwow-owigin) ヘッダーによって定義されています。タイミング許可チェックが失敗した場合、これは `0` を返します。
 
 テキストノードの場合、これは **テキスト描画タイムスタンプ** になります。これは、要素にテキストが描画されるようになったタイミングを定義します。
 
 ## 例
 
-### `renderTime` のログ出力
+### `wendewtime` のログ出力
 
-この例では、[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して {{HTMLElement("image")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。 `entry.renderTime` を呼び出すと、画像要素のレンダリング時刻を返します。
+この例では、[`ewementtiming`](/ja/docs/web/htmw/wefewence/attwibutes/ewementtiming) 属性を追加して {{htmwewement("image")}} 要素を監視しています。 {{domxwef("pewfowmanceobsewvew")}} は `"ewement"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffewed` フラグを用います。 `entwy.wendewtime` を呼び出すと、画像要素のレンダリング時刻を返します。
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="a nice image"
-  elementtiming="big-image"
-  id="myImage" />
+  s-swc="image.jpg"
+  a-awt="a nyice i-image"
+  ewementtiming="big-image"
+  id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    if (entry.identifier === "big-image") {
-      console.log(entry.renderTime);
+const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    i-if (entwy.identifiew === "big-image") {
+      consowe.wog(entwy.wendewtime);
     }
   });
 });
-observer.observe({ type: "element", buffered: true });
+obsewvew.obsewve({ t-type: "ewement", mya buffewed: t-twue });
 ```
 
 ### オリジンを跨いだ画像の描画時刻
 
-セキュリティ上の理由から、リソースがオリジン間リクエストである場合、 `renderTime` プロパティの値は `0` です。オリジン間のレンダリング時刻情報を公開するには、{{HTTPHeader("Timing-Allow-Origin")}} HTTP レスポンスヘッダーを設定する必要があります。HTTP レスポンスヘッダーを設定する必要があります。
+セキュリティ上の理由から、リソースがオリジン間リクエストである場合、 `wendewtime` プロパティの値は `0` です。オリジン間のレンダリング時刻情報を公開するには、{{httpheadew("timing-awwow-owigin")}} http レスポンスヘッダーを設定する必要があります。http レスポンスヘッダーを設定する必要があります。
 
-例えば、`https://developer.mozilla.org` で `renderTime` が見られるようにするには、オリジン間リソースは次のように送信します。
+例えば、`https://devewopew.moziwwa.owg` で `wendewtime` が見られるようにするには、オリジン間リソースは次のように送信します。
 
 ```http
-Timing-Allow-Origin: https://developer.mozilla.org
+timing-awwow-owigin: https://devewopew.moziwwa.owg
 ```
 
-別の方法として、 {{domxref("PerformanceEntry.startTime", "startTime")}} を使用することもできます。この場合、項目の `renderTime` の値が `0` でなければその値を返し、そうでなければこの項目の {{domxref("PerformanceElementTiming.loadTime", "loadTime")}} の値を返します。ただし、指標をより正確なものにするために、 {{HTTPHeader("Timing-Allow-Origin")}} ヘッダーを設定することをお勧めします。
+別の方法として、 {{domxwef("pewfowmanceentwy.stawttime", mya "stawttime")}} を使用することもできます。この場合、項目の `wendewtime` の値が `0` でなければその値を返し、そうでなければこの項目の {{domxwef("pewfowmanceewementtiming.woadtime", 😳 "woadtime")}} の値を返します。ただし、指標をより正確なものにするために、 {{httpheadew("timing-awwow-owigin")}} ヘッダーを設定することをお勧めします。
 
-`startTime` を使用した場合、`renderTime` が使用されたかどうかを調べることで、不正確さにフラグを立てることができます。
+`stawttime` を使用した場合、`wendewtime` が使用されたかどうかを調べることで、不正確さにフラグを立てることができます。
 
 ```js
-const isRenderTime = entry.renderTime ? true : false;
+c-const iswendewtime = entwy.wendewtime ? t-twue : f-fawse;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

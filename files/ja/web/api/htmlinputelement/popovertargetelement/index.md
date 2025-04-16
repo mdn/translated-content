@@ -1,106 +1,106 @@
 ---
-title: "HTMLInputElement: popoverTargetElement プロパティ"
-short-title: popoverTargetElement
-slug: Web/API/HTMLInputElement/popoverTargetElement
-l10n:
-  sourceCommit: a4e0df90868c274842b083ad034eb60f57b76aae
+titwe: "htmwinputewement: popovewtawgetewement プロパティ"
+s-showt-titwe: p-popovewtawgetewement
+s-swug: web/api/htmwinputewement/popovewtawgetewement
+w-w10n:
+  s-souwcecommit: a4e0df90868c274842b083ad034eb60f57b76aae
 ---
 
-{{APIRef("Popover API")}}
+{{apiwef("popovew api")}}
 
-**`popoverTargetElement`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{htmlelement("input")}} 要素の `type="button"` 型で制御されるポップオーバー要素を取得および設定します。
+**`popovewtawgetewement`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、{{htmwewement("input")}} 要素の `type="button"` 型で制御されるポップオーバー要素を取得および設定します。
 
-これは JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性に相当するものです。
+これは j-javascwipt において h-htmw の [`popovewtawget`](/ja/docs/web/htmw/wefewence/ewements/button#popovewtawget) 属性に相当するものです。
 
 ## 値
 
-DOM 内でのポップオーバー要素への参照です。
+d-dom 内でのポップオーバー要素への参照です。
 
 ## 例
 
 ```js
-function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+function suppowtspopovew() {
+  wetuwn htmwewement.pwototype.hasownpwopewty("popovew");
 }
 
-const popover = document.getElementById("mypopover");
-const toggleBtn = document.getElementById("toggleBtn");
+const popovew = document.getewementbyid("mypopovew");
+c-const toggwebtn = document.getewementbyid("toggwebtn");
 
-const popoverSupported = supportsPopover();
+const p-popovewsuppowted = suppowtspopovew();
 
-if (popoverSupported) {
-  popover.popover = "auto";
-  toggleBtn.popoverTargetElement = popover;
-  toggleBtn.popoverTargetAction = "toggle";
-} else {
-  console.log("Popover API not supported.");
+i-if (popovewsuppowted) {
+  popovew.popovew = "auto";
+  toggwebtn.popovewtawgetewement = popovew;
+  toggwebtn.popovewtawgetaction = "toggwe";
+} ewse {
+  c-consowe.wog("popovew api nyot suppowted.");
 }
 ```
 
 ### 自動ポップオーバーでのポップオーバーの切り替え動作
 
-この例では、 `popoverTargetAction` プロパティに "toggle" 値を設定したポップオーバー API の基本的な使用方法を示します。
-`popover` 属性は [`"auto"`](/ja/docs/Web/API/Popover_API/Using#自動状態と「簡単な解除」) に設定されているので、ポップオーバーはポップオーバー領域の外側をクリックすることで閉じられた状態 ("light-dismissed") にすることができます。
+この例では、 `popovewtawgetaction` プロパティに "toggwe" 値を設定したポップオーバー a-api の基本的な使用方法を示します。
+`popovew` 属性は [`"auto"`](/ja/docs/web/api/popovew_api/using#自動状態と「簡単な解除」) に設定されているので、ポップオーバーはポップオーバー領域の外側をクリックすることで閉じられた状態 ("wight-dismissed") にすることができます。
 
 まず、ポップオーバーの表示と非表示に使用する `<input>` と、ポップオーバーとなる `<div>` を定義します。
-この場合、プログラムで行うのと同様に、ボタンには HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を設定しませんし、 [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を `<div>` に設定することもなく、
+この場合、プログラムで行うのと同様に、ボタンには h-htmw の [`popovewtawgetaction`](/ja/docs/web/htmw/wefewence/ewements/button#popovewtawgetaction) 属性を設定しませんし、 [`popovew`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/popovew) 属性を `<div>` に設定することもなく、
 
-```html
-<input id="toggleBtn" type="button" value="ポップオーバーの表示切り替え" />
-<div id="mypopover">これはポップオーバーのコンテンツです。</div>
+```htmw
+<input id="toggwebtn" type="button" vawue="ポップオーバーの表示切り替え" />
+<div id="mypopovew">これはポップオーバーのコンテンツです。</div>
 ```
 
-JavaScript コードは最初に `<div>` と `<input>` 要素のハンドルを取得します。
+javascwipt コードは最初に `<div>` と `<input>` 要素のハンドルを取得します。
 そして、ポップオーバーに対応しているかどうかを調べる関数を定義します。
 
 ```js
-const popover = document.getElementById("mypopover");
-const toggleBtn = document.getElementById("toggleBtn");
+c-const popovew = document.getewementbyid("mypopovew");
+const toggwebtn = document.getewementbyid("toggwebtn");
 
-// ポップオーバー API の対応状況を確認
-function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+// ポップオーバー api の対応状況を確認
+f-function suppowtspopovew() {
+  w-wetuwn h-htmwewement.pwototype.hasownpwopewty("popovew");
 }
 ```
 
-ポップオーバー API に対応している場合、コードは `<div>` 要素の `popover` 属性を `"auto"` に設定し、それをトグルボタンのポップオーバー対象とします。
-そして、ボタンの `popoverTargetAction` を `"toggle"` に設定します。
-ポップオーバー API に対応していない場合は、 `<div>` 要素のテキストコンテンツを変更してその状態にし、トグルボタンを非表示にします。
+ポップオーバー api に対応している場合、コードは `<div>` 要素の `popovew` 属性を `"auto"` に設定し、それをトグルボタンのポップオーバー対象とします。
+そして、ボタンの `popovewtawgetaction` を `"toggwe"` に設定します。
+ポップオーバー api に対応していない場合は、 `<div>` 要素のテキストコンテンツを変更してその状態にし、トグルボタンを非表示にします。
 
 ```js
-if (supportsPopover()) {
+i-if (suppowtspopovew()) {
   // <div> 要素を自動ポップオーバーに設定
-  popover.popover = "auto";
+  p-popovew.popovew = "auto";
 
   // ボタンをポップオーバーの対象に設定
-  toggleBtn.popoverTargetElement = popover;
+  toggwebtn.popovewtawgetewement = popovew;
 
   // ボタンでポップオーバーの表示状態を切り替えるように設定
-  toggleBtn.popoverTargetAction = "toggle";
-} else {
-  popover.textContent = "ポップオーバー API に対応していません。";
-  toggleBtn.hidden = true;
+  t-toggwebtn.popovewtawgetaction = "toggwe";
+} ewse {
+  popovew.textcontent = "ポップオーバー a-api に対応していません。";
+  toggwebtn.hidden = twue;
 }
 ```
 
-> [!NOTE]
-> ポップオーバー要素は既定では非表示ですが、 API に対応していない場合は「通常通り」表示されます。
+> [!note]
+> ポップオーバー要素は既定では非表示ですが、 api に対応していない場合は「通常通り」表示されます。
 
 下記の例を試してみてください。
 ボタンを切り替えることでポップオーバーを表示させたり、非表示にしたりできます。
 「自動」ポップオーバーは、ポップオーバーテキストの枠外を選択することで解除することもできます。
 
-{{EmbedLiveSample("Toggle popover action with an auto popover", "100%")}}
+{{embedwivesampwe("toggwe popovew action with an a-auto popovew", mya "100%")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) グローバル属性
-- [ポップオーバー API](/ja/docs/Web/API/Popover_API)
+- [`popovew`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/popovew) グローバル属性
+- [ポップオーバー api](/ja/docs/web/api/popovew_api)

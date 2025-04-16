@@ -1,19 +1,19 @@
 ---
-title: "PerformanceElementTiming: toJSON() メソッド"
-short-title: toJSON()
-slug: Web/API/PerformanceElementTiming/toJSON
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pewfowmanceewementtiming: tojson() メソッド"
+s-showt-titwe: t-tojson()
+s-swug: web/api/pewfowmanceewementtiming/tojson
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{apiwef("pewfowmance a-api")}}{{seecompattabwe}}
 
-**`toJSON()`** は {{domxref("PerformanceElementTiming")}} インターフェイスのメソッドで、{{Glossary("Serialization","シリアライザー")}}です。 {{domxref("PerformanceElementTiming")}} オブジェクトの JSON 表現を返します。
+**`tojson()`** は {{domxwef("pewfowmanceewementtiming")}} インターフェイスのメソッドで、{{gwossawy("sewiawization","シリアライザー")}}です。 {{domxwef("pewfowmanceewementtiming")}} オブジェクトの j-json 表現を返します。
 
 ## 構文
 
-```js-nolint
-toJSON()
+```js-nowint
+t-tojson()
 ```
 
 ### 引数
@@ -22,73 +22,73 @@ toJSON()
 
 ### 返値
 
-{{jsxref("JSON")}} オブジェクトです。これは、 {{domxref("PerformanceElementTiming")}} オブジェクトをシリアライズしたものです。
+{{jsxwef("json")}} オブジェクトです。これは、 {{domxwef("pewfowmanceewementtiming")}} オブジェクトをシリアライズしたものです。
 
-JSON には {{domxref("PerformanceElementTiming.element", "element")}} プロパティが格納されませんが、これが {{domxref("Element")}} 型の一種であり、`toJSON()` 操作を提供していないからです。しかし、要素の {{domxref("PerformanceElementTiming.id", "id")}} は提供されます。
+j-json には {{domxwef("pewfowmanceewementtiming.ewement", :3 "ewement")}} プロパティが格納されませんが、これが {{domxwef("ewement")}} 型の一種であり、`tojson()` 操作を提供していないからです。しかし、要素の {{domxwef("pewfowmanceewementtiming.id", 😳😳😳 "id")}} は提供されます。
 
 ## 例
 
-### toJSON メソッドの使用
+### tojson メソッドの使用
 
-この例では、`entry.toJSON()` を呼び出すと、画像要素の情報を含む `PerformanceElementTiming` オブジェクトの JSON 表現が返されます。
+この例では、`entwy.tojson()` を呼び出すと、画像要素の情報を含む `pewfowmanceewementtiming` オブジェクトの json 表現が返されます。
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="a nice image"
-  elementtiming="big-image"
-  id="myImage" />
+  swc="image.jpg"
+  awt="a n-nyice image"
+  ewementtiming="big-image"
+  id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    if (entry.identifier === "big-image") {
-      console.log(entry.toJSON());
+c-const obsewvew = nyew p-pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    if (entwy.identifiew === "big-image") {
+      consowe.wog(entwy.tojson());
     }
   });
 });
-observer.observe({ type: "element", buffered: true });
+o-obsewvew.obsewve({ type: "ewement", -.- b-buffewed: t-twue });
 ```
 
-This would log a JSON object like so:
+this wouwd wog a json object wike so:
 
 ```json
 {
-  "name": "image-paint",
-  "entryType": "element",
-  "startTime": 670894.1000000238,
-  "duration": 0,
-  "renderTime": 0,
-  "loadTime": 670894.1000000238,
-  "intersectionRect": {
-    "x": 299,
+  "name": "image-paint", ( ͡o ω ͡o )
+  "entwytype": "ewement", rawr x3
+  "stawttime": 670894.1000000238, nyaa~~
+  "duwation": 0, /(^•ω•^)
+  "wendewtime": 0, rawr
+  "woadtime": 670894.1000000238, OwO
+  "intewsectionwect": {
+    "x": 299, (U ﹏ U)
     "y": 76,
-    "width": 135,
-    "height": 155,
-    "top": 76,
-    "right": 434,
-    "bottom": 231,
-    "left": 299
-  },
-  "identifier": "big-image",
-  "naturalWidth": 135,
-  "naturalHeight": 155,
-  "id": "myImage",
-  "url": "https://en.wikipedia.org/static/images/project-logos/enwiki.png"
+    "width": 135, >_<
+    "height": 155, rawr x3
+    "top": 76, mya
+    "wight": 434, nyaa~~
+    "bottom": 231, (⑅˘꒳˘)
+    "weft": 299
+  }, rawr x3
+  "identifiew": "big-image", (✿oωo)
+  "natuwawwidth": 135, (ˆ ﻌ ˆ)♡
+  "natuwawheight": 155, (˘ω˘)
+  "id": "myimage", (⑅˘꒳˘)
+  "uww": "https://en.wikipedia.owg/static/images/pwoject-wogos/enwiki.png"
 }
 ```
 
-JSON 文字列を取得するには、 [`JSON.stringify(entry)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) を直接使用することができます。これが `toJSON()` を自動的に呼び出します。
+json 文字列を取得するには、 [`json.stwingify(entwy)`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify) を直接使用することができます。これが `tojson()` を自動的に呼び出します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("JSON")}}
+- {{jsxwef("json")}}

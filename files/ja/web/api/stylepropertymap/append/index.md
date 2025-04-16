@@ -1,50 +1,50 @@
 ---
-title: StylePropertyMap.append()
-slug: Web/API/StylePropertyMap/append
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: stywepwopewtymap.append()
+swug: web/api/stywepwopewtymap/append
+w-w10n:
+  s-souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css t-typed o-object modew api")}}{{seecompattabwe}}
 
-**`append()`** は {{domxref("StylePropertyMap")}} インターフェイスのメソッドで、渡された CSS の値をこの `StylePropertyMap` の指定されたプロパティで追加します。
+**`append()`** は {{domxwef("stywepwopewtymap")}} インターフェイスのメソッドで、渡された c-css の値をこの `stywepwopewtymap` の指定されたプロパティで追加します。
 
 ## 構文
 
-```js-nolint
-append(property, value)
+```js-nowint
+a-append(pwopewty, σωσ vawue)
 ```
 
 ### 引数
 
-- `property`
+- `pwopewty`
   - : 追加するスタイル特性（フォント、幅、背景色など）を示す識別子です。
-- `value`
+- `vawue`
   - : 指定されたプロパティが持つべき値です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例では、要素の {{cssxref('background-image')}} プロパティに、{{domxref('HTMLElement.attributeStyleMap')}} を使用して追加の背景画像の値を追加しています。
+この例では、要素の {{cssxwef('backgwound-image')}} プロパティに、{{domxwef('htmwewement.attwibutestywemap')}} を使用して追加の背景画像の値を追加しています。
 
 ```js
-// button 要素を取得
-const buttonEl = document.querySelector("button");
+// b-button 要素を取得
+c-const buttonew = document.quewysewectow("button");
 
-// background-image プロパティに別の値を追加する
-buttonEl.attributeStyleMap.append(
-  "background-image",
-  "linear-gradient(180deg, blue, black",
+// backgwound-image プロパティに別の値を追加する
+buttonew.attwibutestywemap.append(
+  "backgwound-image", σωσ
+  "wineaw-gwadient(180deg, >_< bwue, :3 b-bwack",
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

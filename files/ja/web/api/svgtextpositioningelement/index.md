@@ -1,39 +1,39 @@
 ---
-title: SVGTextPositioningElement
-slug: Web/API/SVGTextPositioningElement
-l10n:
-  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
+titwe: svgtextpositioningewement
+swug: web/api/svgtextpositioningewement
+w-w10n:
+  s-souwcecommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`SVGTextPositioningElement`** インターフェイスは、個々のテキスト文字の位置を指定する属性に対応している要素によって実装されています。これは、{{domxref("SVGTextElement")}}、{{domxref("SVGTSpanElement")}}、{{domxref("SVGTRefElement")}} によって継承されています。
+**`svgtextpositioningewement`** インターフェイスは、個々のテキスト文字の位置を指定する属性に対応している要素によって実装されています。これは、{{domxwef("svgtextewement")}}、{{domxwef("svgtspanewement")}}、{{domxwef("svgtwefewement")}} によって継承されています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスには、親である {{domxref("SVGTextContentElement")}} から継承したプロパティもあります。_
+_このインターフェイスには、親である {{domxwef("svgtextcontentewement")}} から継承したプロパティもあります。_
 
-- {{domxref("SVGTextPositioningElement.x")}} {{ReadOnlyInline}}
-  - : {{domxref("SVGAnimatedLengthList")}} で、この要素の {{SVGAttr("x")}} 属性を反映します。
-- {{domxref("SVGTextPositioningElement.y")}} {{ReadOnlyInline}}
-  - : {{domxref("SVGAnimatedLengthList")}} で、この要素の {{SVGAttr("y")}} 属性を反映します。
-- {{domxref("SVGTextPositioningElement.dx")}} {{ReadOnlyInline}}
-  - : {{domxref("SVGAnimatedLengthList")}} で、この要素の {{SVGAttr("dx")}} 属性を反映します。
-- {{domxref("SVGTextPositioningElement.dy")}} {{ReadOnlyInline}}
-  - : {{domxref("SVGAnimatedLengthList")}} で、この要素の {{SVGAttr("dy")}} 属性を反映します。
-- {{domxref("SVGTextPositioningElement.rotate")}} {{ReadOnlyInline}}
-  - : {{domxref("SVGAnimatedNumberList")}} で、この要素の {{SVGAttr("rotate")}} 属性を反映します。
+- {{domxwef("svgtextpositioningewement.x")}} {{weadonwyinwine}}
+  - : {{domxwef("svganimatedwengthwist")}} で、この要素の {{svgattw("x")}} 属性を反映します。
+- {{domxwef("svgtextpositioningewement.y")}} {{weadonwyinwine}}
+  - : {{domxwef("svganimatedwengthwist")}} で、この要素の {{svgattw("y")}} 属性を反映します。
+- {{domxwef("svgtextpositioningewement.dx")}} {{weadonwyinwine}}
+  - : {{domxwef("svganimatedwengthwist")}} で、この要素の {{svgattw("dx")}} 属性を反映します。
+- {{domxwef("svgtextpositioningewement.dy")}} {{weadonwyinwine}}
+  - : {{domxwef("svganimatedwengthwist")}} で、この要素の {{svgattw("dy")}} 属性を反映します。
+- {{domxwef("svgtextpositioningewement.wotate")}} {{weadonwyinwine}}
+  - : {{domxwef("svganimatednumbewwist")}} で、この要素の {{svgattw("wotate")}} 属性を反映します。
 
 ## インスタンスメソッド
 
-_このインターフェイスには固有のメソッドはありませんが、親である {{domxref("SVGTextContentElement")}} から継承したメソッドがあります。_
+_このインターフェイスには固有のメソッドはありませんが、親である {{domxwef("svgtextcontentewement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

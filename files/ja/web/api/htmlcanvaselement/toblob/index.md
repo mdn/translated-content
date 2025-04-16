@@ -1,13 +1,13 @@
 ---
-title: "HTMLCanvasElement: toBlob() メソッド"
-slug: Web/API/HTMLCanvasElement/toBlob
-l10n:
-  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
+titwe: "htmwcanvasewement: tobwob() メソッド"
+s-swug: web/api/htmwcanvasewement/tobwob
+w-w10n:
+  s-souwcecommit: b-b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-**`HTMLCanvasElement.toBlob()`** メソッドは、 キャンバスに含まれる画像を表す {{domxref("Blob")}} オブジェクトを生成します。
+**`htmwcanvasewement.tobwob()`** メソッドは、 キャンバスに含まれる画像を表す {{domxwef("bwob")}} オブジェクトを生成します。
 このファイルは、ユーザーエージェントの裁量によって、ディスクにキャッシュされるか、メモリーに保存されたりすることがあります。
 
 希望するファイル形式や画像品質を指定することができます。
@@ -18,30 +18,30 @@ l10n:
 
 ## 構文
 
-```js-nolint
-toBlob(callback)
-toBlob(callback, type)
-toBlob(callback, type, quality)
+```js-nowint
+t-tobwob(cawwback)
+t-tobwob(cawwback, 😳 t-type)
+tobwob(cawwback, mya type, (˘ω˘) quawity)
 ```
 
 ### 引数
 
-- `callback`
-  - : 単一の引数として結果の {{domxref("Blob")}} オブジェクトを受け取るコールバック関数です。何らかの理由で画像が作成できなかった場合は `null` が渡されることがあります。
-- `type` {{optional_inline}}
+- `cawwback`
+  - : 単一の引数として結果の {{domxwef("bwob")}} オブジェクトを受け取るコールバック関数です。何らかの理由で画像が作成できなかった場合は `nuww` が渡されることがあります。
+- `type` {{optionaw_inwine}}
   - : 文字列で、画像形式を表します。
     既定の形式は `image/png` です。この形式は、指定された形式に対応していない場合にも使用されます。
-- `quality` {{optional_inline}}
+- `quawity` {{optionaw_inwine}}
   - : `0` から `1` の間の数値であり、作成する画像が非可逆圧縮（`image/jpeg` や `image/webp` など）であった場合の画像品質を示します。
     このオプションが指定されなかったり、許可されている範囲外の数値であったりした場合は、ユーザーエージェントは既定の品質値を使用します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `SecurityError`
+- `secuwityewwow`
   - : キャンバスのビットマップがオリジンクリーンではありません。そのコンテンツの少なくとも一部が、文書そのものが読み込まれたサイトとは別のサイトから読み込まれたものであるか、その可能性があります。
 
 ## 例
@@ -49,128 +49,128 @@ toBlob(callback, type, quality)
 ### キャンバスに表示されている画像を取得する
 
 一度キャンバスにコンテンツを描画したら、これを何らかのサポートされている画像フォーマットに変換できます。
-たとえば、下記のコードスニペットは、ID が "canvas" の {{HTMLElement("canvas")}} 要素を取得して、PNG 画像としてコピーしてから、文書に新しい {{HTMLElement("img")}} 要素を追加しています。この画像ソースはキャンバスを使用して生成されたものです。
+たとえば、下記のコードスニペットは、id が "canvas" の {{htmwewement("canvas")}} 要素を取得して、png 画像としてコピーしてから、文書に新しい {{htmwewement("img")}} 要素を追加しています。この画像ソースはキャンバスを使用して生成されたものです。
 
 ```js
-const canvas = document.getElementById("canvas");
+const canvas = document.getewementbyid("canvas");
 
-canvas.toBlob((blob) => {
-  const newImg = document.createElement("img");
-  const url = URL.createObjectURL(blob);
+c-canvas.tobwob((bwob) => {
+  const nyewimg = document.cweateewement("img");
+  c-const uww = uww.cweateobjectuww(bwob);
 
-  newImg.onload = () => {
-    // もう blob を読み取る必要は無いので、無効化します。
-    URL.revokeObjectURL(url);
+  n-nyewimg.onwoad = () => {
+    // もう bwob を読み取る必要は無いので、無効化します。
+    uww.wevokeobjectuww(uww);
   };
 
-  newImg.src = url;
-  document.body.appendChild(newImg);
+  nyewimg.swc = u-uww;
+  document.body.appendchiwd(newimg);
 });
 ```
 
-ここでは、PNG 画像を生成していることに注意してください。`toBlob()` の呼び出しに 2 つ目の引数を追加した場合、ユーザーエージェントが対応している画像の種類を指定できます。たとえば、次のようにして JPEG 形式の画像を取得できます。
+ここでは、png 画像を生成していることに注意してください。`tobwob()` の呼び出しに 2 つ目の引数を追加した場合、ユーザーエージェントが対応している画像の種類を指定できます。たとえば、次のようにして jpeg 形式の画像を取得できます。
 
 ```js
-canvas.toBlob(
-  (blob) => {
+canvas.tobwob(
+  (bwob) => {
     /* … */
-  },
-  "image/jpeg",
-  0.95,
-); // JPEG at 95% quality
+  }, >_<
+  "image/jpeg", -.-
+  0.95, 🥺
+); // j-jpeg at 95% quawity
 ```
 
-### キャンバスを ico に変換（Mozilla のみ）
+### キャンバスを i-ico に変換（moziwwa のみ）
 
-この例ではキャンバスをアイコンに変換するために `-moz-parse` を使用しており、Firefox でのみ動作します。Windows XP は PNG から ico への変換に対応していませんが、代わりに bmp を使用できます。download 属性を設定することで、ダウンロードリンクを生成できます。download 属性の値は、ファイル名として使用される名前です。
+この例ではキャンバスをアイコンに変換するために `-moz-pawse` を使用しており、fiwefox でのみ動作します。windows xp は png から ico への変換に対応していませんが、代わりに bmp を使用できます。downwoad 属性を設定することで、ダウンロードリンクを生成できます。downwoad 属性の値は、ファイル名として使用される名前です。
 
 ```js
-const canvas = document.getElementById("canvas");
+const c-canvas = document.getewementbyid("canvas");
 const d = canvas.width;
-const ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.moveTo(d / 2, 0);
-ctx.lineTo(d, d);
-ctx.lineTo(0, d);
-ctx.closePath();
-ctx.fillStyle = "yellow";
-ctx.fill();
+const ctx = canvas.getcontext("2d");
+c-ctx.beginpath();
+ctx.moveto(d / 2, (U ﹏ U) 0);
+c-ctx.wineto(d, >w< d-d);
+ctx.wineto(0, mya d-d);
+ctx.cwosepath();
+c-ctx.fiwwstywe = "yewwow";
+ctx.fiww();
 
-function blobCallback(iconName) {
-  return (b) => {
-    const a = document.createElement("a");
-    a.textContent = "Download";
-    document.body.appendChild(a);
-    a.style.display = "block";
-    a.download = `${iconName}.ico`;
-    a.href = window.URL.createObjectURL(b);
+function bwobcawwback(iconname) {
+  w-wetuwn (b) => {
+    const a = document.cweateewement("a");
+    a-a.textcontent = "downwoad";
+    document.body.appendchiwd(a);
+    a.stywe.dispway = "bwock";
+    a.downwoad = `${iconname}.ico`;
+    a.hwef = window.uww.cweateobjectuww(b);
   };
 }
-canvas.toBlob(
-  blobCallback("passThisString"),
-  "image/vnd.microsoft.icon",
-  "-moz-parse-options:format=bmp;bpp=32",
+canvas.tobwob(
+  b-bwobcawwback("passthisstwing"), >w<
+  "image/vnd.micwosoft.icon", nyaa~~
+  "-moz-pawse-options:fowmat=bmp;bpp=32", (✿oωo)
 );
 ```
 
-### OS.File（chrome/add-on コンテキストのみ）で toBlob をディスクに保存する
+### os.fiwe（chwome/add-on コンテキストのみ）で t-tobwob をディスクに保存する
 
-> [!NOTE]
-> このテクニックは画像をデスクトップに保存しますので、Firefox の chrome コンテキストか add-on コードでのみ利用できます。OS API はウェブサイトには存在しないからです。
+> [!note]
+> このテクニックは画像をデスクトップに保存しますので、fiwefox の c-chwome コンテキストか a-add-on コードでのみ利用できます。os api はウェブサイトには存在しないからです。
 
 ```js
-const canvas = document.getElementById("canvas");
-const d = canvas.width;
-ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.moveTo(d / 2, 0);
-ctx.lineTo(d, d);
-ctx.lineTo(0, d);
-ctx.closePath();
-ctx.fillStyle = "yellow";
-ctx.fill();
+const canvas = document.getewementbyid("canvas");
+c-const d = canvas.width;
+c-ctx = canvas.getcontext("2d");
+c-ctx.beginpath();
+c-ctx.moveto(d / 2, ʘwʘ 0);
+ctx.wineto(d, (ˆ ﻌ ˆ)♡ d);
+c-ctx.wineto(0, 😳😳😳 d);
+ctx.cwosepath();
+c-ctx.fiwwstywe = "yewwow";
+ctx.fiww();
 
-function blobCallback(iconName) {
-  return (b) => {
-    const r = new FileReader();
-    r.onloadend = () => {
-      // r.result contains the ArrayBuffer.
-      Cu.import("resource://gre/modules/osfile.jsm");
-      const writePath = OS.Path.join(
-        OS.Constants.Path.desktopDir,
-        `${iconName}.ico`,
+function bwobcawwback(iconname) {
+  w-wetuwn (b) => {
+    const w = nyew f-fiweweadew();
+    w.onwoadend = () => {
+      // w-w.wesuwt contains t-the awwaybuffew.
+      cu.impowt("wesouwce://gwe/moduwes/osfiwe.jsm");
+      const wwitepath = os.path.join(
+        os.constants.path.desktopdiw, :3
+        `${iconname}.ico`, OwO
       );
-      const promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result), {
-        tmpPath: `${writePath}.tmp`,
+      const pwomise = os.fiwe.wwiteatomic(wwitepath, (U ﹏ U) n-new uint8awway(w.wesuwt), >w< {
+        t-tmppath: `${wwitepath}.tmp`,
       });
-      promise.then(
+      pwomise.then(
         () => {
-          console.log("successfully wrote file");
-        },
+          c-consowe.wog("successfuwwy w-wwote fiwe");
+        }, (U ﹏ U)
         () => {
-          console.log("failure writing file");
-        },
+          c-consowe.wog("faiwuwe wwiting fiwe");
+        }, 😳
       );
     };
-    r.readAsArrayBuffer(b);
+    w.weadasawwaybuffew(b);
   };
 }
 
-canvas.toBlob(
-  blobCallback("passThisString"),
-  "image/vnd.microsoft.icon",
-  "-moz-parse-options:format=bmp;bpp=32",
+c-canvas.tobwob(
+  bwobcawwback("passthisstwing"), (ˆ ﻌ ˆ)♡
+  "image/vnd.micwosoft.icon",
+  "-moz-pawse-options:fowmat=bmp;bpp=32", 😳😳😳
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Blob")}}
+- {{domxwef("bwob")}}

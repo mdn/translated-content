@@ -1,13 +1,13 @@
 ---
-title: StyleSheet.type
-slug: Web/API/StyleSheet/type
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: stywesheet.type
+swug: w-web/api/stywesheet/type
+w-w10n:
+  s-souwcecommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`type`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、このスタイルシートのスタイルシート言語を指定します。
+**`type`** は {{domxwef("stywesheet")}} インターフェイスのプロパティで、このスタイルシートのスタイルシート言語を指定します。
 
 ## 値
 
@@ -16,13 +16,13 @@ l10n:
 ## 例
 
 ```js
-myStyleSheet.type = "text/css";
+m-mystywesheet.type = "text/css";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

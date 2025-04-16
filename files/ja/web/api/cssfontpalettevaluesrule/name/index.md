@@ -1,14 +1,14 @@
 ---
-title: "CSSFontPaletteValuesRule: name プロパティ"
-short-title: name
-slug: Web/API/CSSFontPaletteValuesRule/name
-l10n:
-  sourceCommit: 48813be4b5187c6a17e744e7f9ba37a146302847
+titwe: "cssfontpawettevawueswuwe: nyame プロパティ"
+s-showt-titwe: n-nyame
+swug: w-web/api/cssfontpawettevawueswuwe/name
+w-w10n:
+  s-souwcecommit: 48813be4b5187c6a17e744e7f9ba37a146302847
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`name`** は {{domxref("CSSFontPaletteValuesRule")}} インターフェイスの読み取り専用プロパティで、関連付けられた {{CSSxRef("@font-palette-values")}} アットルールを識別する名前を表します。有効な名前は常に 2 つのダッシュで始まり、 `--Alternate` のようになります。
+**`name`** は {{domxwef("cssfontpawettevawueswuwe")}} インターフェイスの読み取り専用プロパティで、関連付けられた {{cssxwef("@font-pawette-vawues")}} アットルールを識別する名前を表します。有効な名前は常に 2 つのダッシュで始まり、 `--awtewnate` のようになります。
 
 ## 値
 
@@ -18,53 +18,53 @@ l10n:
 
 ### アットルールの名前の読み取り
 
-この例では、最初に {{cssxref("@import")}} および {{cssxref("@font-palette-values")}} アットルールを定義します。そして、 {{cssxref("@font-palette-values")}} ルールを読み込み、その名前を表示します。これらのルールは文書に追加された最後のスタイルシートに存在するため、パレットは文書内の最後のスタイルシート (`document.styleSheets[document.styleSheets.length-1].cssRules`) が返す 2 つ目の {{domxref("CSSRule")}} にあります。つまり、 `rules[1]` は `CSSFontPaletteValuesRule` オブジェクトを返し、そこから `name` にアクセスすることができます。
+この例では、最初に {{cssxwef("@impowt")}} および {{cssxwef("@font-pawette-vawues")}} アットルールを定義します。そして、 {{cssxwef("@font-pawette-vawues")}} ルールを読み込み、その名前を表示します。これらのルールは文書に追加された最後のスタイルシートに存在するため、パレットは文書内の最後のスタイルシート (`document.stywesheets[document.stywesheets.wength-1].csswuwes`) が返す 2 つ目の {{domxwef("csswuwe")}} にあります。つまり、 `wuwes[1]` は `cssfontpawettevawueswuwe` オブジェクトを返し、そこから `name` にアクセスすることができます。
 
-#### HTML
+#### h-htmw
 
-```html-nolint
-<pre id="log">@font-palette-values アットルールのフォントファミリー:</pre>
+```htmw-nowint
+<pwe i-id="wog">@font-pawette-vawues アットルールのフォントファミリー:</pwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+@impowt uww(https://fonts.googweapis.com/css2?famiwy=bungee+spice);
 
-@font-palette-values --Alternate {
-  font-family: "Bungee Spice";
-  override-colors:
-    0 #00ffbb,
+@font-pawette-vawues --awtewnate {
+  font-famiwy: "bungee spice";
+  ovewwide-cowows:
+    0 #00ffbb, (⑅˘꒳˘)
     1 #007744;
 }
 
-.alternate {
-  font-palette: --Alternate;
+.awtewnate {
+  font-pawette: --awtewnate;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const log = document.getElementById("log");
+const wog = document.getewementbyid("wog");
 
-const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
-const fontPaletteValuesRule = rules[1]; // CSSFontPaletteValuesRule インターフェイス
-log.textContent += ` ${fontPaletteValuesRule.name}`;
+c-const wuwes = document.stywesheets[document.stywesheets.wength - 1].csswuwes;
+c-const fontpawettevawueswuwe = wuwes[1]; // cssfontpawettevawueswuwe インターフェイス
+wog.textcontent += ` ${fontpawettevawueswuwe.name}`;
 ```
 
 #### 結果ｓ
 
-{{EmbedLiveSample("Read the at-rule's name", "100", "40")}}
+{{embedwivesampwe("wead the at-wuwe's nyame", (U ᵕ U❁) "100", -.- "40")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@font-palette-values")}} アットルール
+- {{cssxwef("@font-pawette-vawues")}} アットルール

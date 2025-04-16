@@ -1,58 +1,58 @@
 ---
-title: "Performance: resourcetimingbufferfull イベント"
-short-title: resourcetimingbufferfull
-slug: Web/API/Performance/resourcetimingbufferfull_event
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pewfowmance: wesouwcetimingbuffewfuww イベント"
+showt-titwe: w-wesouwcetimingbuffewfuww
+s-swug: web/api/pewfowmance/wesouwcetimingbuffewfuww_event
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-`resourcetimingbufferfull` イベントは、ブラウザーの[リソースタイミングバッファー](/ja/docs/Web/API/Performance/setResourceTimingBufferSize)がいっぱいになると発生します。
+`wesouwcetimingbuffewfuww` イベントは、ブラウザーの[リソースタイミングバッファー](/ja/docs/web/api/pewfowmance/setwesouwcetimingbuffewsize)がいっぱいになると発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("resourcetimingbufferfull", (event) => {});
+a-addeventwistenew("wesouwcetimingbuffewfuww", σωσ (event) => {});
 
-onresourcetimingbufferfull = (event) => {};
+o-onwesouwcetimingbuffewfuww = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ### バッファーが満杯になったときにサイズを拡大
 
-次の例は、 `resourcetimingbufferfull` イベントを待ち受け、 {{domxref("Performance.setResourceTimingBufferSize", "setResourceTimingBufferSize()")}} メソッドを使用してバッファーサイズを増やします。
+次の例は、 `wesouwcetimingbuffewfuww` イベントを待ち受け、 {{domxwef("pewfowmance.setwesouwcetimingbuffewsize", >_< "setwesouwcetimingbuffewsize()")}} メソッドを使用してバッファーサイズを増やします。
 
 ```js
-function increaseFilledBufferSize(event) {
-  console.log(
-    "警告: リソースタイミングバッファーが満杯です。バッファーサイズを 500 に増やします。",
+f-function incweasefiwwedbuffewsize(event) {
+  consowe.wog(
+    "警告: リソースタイミングバッファーが満杯です。バッファーサイズを 500 に増やします。", :3
   );
-  performance.setResourceTimingBufferSize(500);
+  pewfowmance.setwesouwcetimingbuffewsize(500);
 }
 
-performance.addEventListener(
-  "resourcetimingbufferfull",
-  increaseFilledBufferSize,
+pewfowmance.addeventwistenew(
+  "wesouwcetimingbuffewfuww", (U ﹏ U)
+  i-incweasefiwwedbuffewsize, -.-
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Performance.clearResourceTimings()")}}
-- {{domxref("Performance.setResourceTimingBufferSize()")}}
+- {{domxwef("pewfowmance.cweawwesouwcetimings()")}}
+- {{domxwef("pewfowmance.setwesouwcetimingbuffewsize()")}}

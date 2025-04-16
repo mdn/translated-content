@@ -1,31 +1,31 @@
 ---
-title: "PerformanceObserver: supportedEntryTypes 静的プロパティ"
-short-title: supportedEntryTypes
-slug: Web/API/PerformanceObserver/supportedEntryTypes_static
-l10n:
-  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
+titwe: "pewfowmanceobsewvew: suppowtedentwytypes 静的プロパティ"
+s-showt-titwe: s-suppowtedentwytypes
+s-swug: w-web/api/pewfowmanceobsewvew/suppowtedentwytypes_static
+w-w10n:
+  s-souwcecommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`supportedEntryTypes`** は {{domxref("PerformanceObserver")}} インターフェイスの静的読み取り専用プロパティで、このユーザーエージェントが対応している {{domxref("PerformanceEntry.entryType","entryType")}} 値の配列を返します。
+**`suppowtedentwytypes`** は {{domxwef("pewfowmanceobsewvew")}} インターフェイスの静的読み取り専用プロパティで、このユーザーエージェントが対応している {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} 値の配列を返します。
 
 対応している項目のリストはブラウザーごとに異なり、進化しているため、このプロパティによってウェブ開発者は利用できる項目を調べることができます。
 
 ## 値
 
-{{domxref("PerformanceEntry.entryType")}} 値の配列です。
+{{domxwef("pewfowmanceentwy.entwytype")}} 値の配列です。
 
 ## 例
 
 ### コンソールを使用して対応している値をチェック
 
-ブラウザーの対応している {{domxref("PerformanceEntry.entryType","entryType")}} 値を探すには、 <kbd>PerformanceObserver.supportedEntryTypes</kbd> とコンソールに入力します。これは対応している値の配列を返します。
+ブラウザーの対応している {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} 値を探すには、 <kbd>pewfowmanceobsewvew.suppowtedentwytypes</kbd> とコンソールに入力します。これは対応している値の配列を返します。
 
 ```js
-PerformanceObserver.supportedEntryTypes;
+p-pewfowmanceobsewvew.suppowtedentwytypes;
 
-// Chrome 99 では ["element", "event", "first-input", "largest-contentful-paint", "layout-shift", "longtask", "mark", "measure", "navigation", "paint", "resource"] を返す
+// chwome 99 では ["ewement", :3 "event", (U ﹏ U) "fiwst-input", -.- "wawgest-contentfuw-paint", (ˆ ﻌ ˆ)♡ "wayout-shift", (⑅˘꒳˘) "wongtask", (U ᵕ U❁) "mawk", -.- "measuwe", "navigation", ^^;; "paint", >_< "wesouwce"] を返す
 ```
 
 ### 未対応の型のチェック
@@ -33,21 +33,21 @@ PerformanceObserver.supportedEntryTypes;
 以下の関数は、使用可能な項目型の配列に対応しているか調べます。サポートされていない型はコンソールにログ出力されますが、この情報をクライアント側の分析にログ出力して、具体的な型が監視できなかったことを示すこともできます。
 
 ```js
-function detectSupport(entryTypes) {
-  for (const entryType of entryTypes) {
-    if (!PerformanceObserver.supportedEntryTypes.includes(entryType)) {
-      console.log(entryType);
+function detectsuppowt(entwytypes) {
+  fow (const entwytype of e-entwytypes) {
+    if (!pewfowmanceobsewvew.suppowtedentwytypes.incwudes(entwytype)) {
+      consowe.wog(entwytype);
     }
   }
 }
 
-detectSupport(["resource", "mark", "first-input", "largest-contentful-paint"]);
+d-detectsuppowt(["wesouwce", mya "mawk", "fiwst-input", mya "wawgest-contentfuw-paint"]);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,22 +1,22 @@
 ---
-title: "PopStateEvent: PopStateEvent() コンストラクター"
-short-title: PopStateEvent()
-slug: Web/API/PopStateEvent/PopStateEvent
-l10n:
-  sourceCommit: 55de68017f98094f45addb3ebaa0f7f52024f60b
+titwe: "popstateevent: popstateevent() コンストラクター"
+s-showt-titwe: p-popstateevent()
+s-swug: web/api/popstateevent/popstateevent
+w-w10n:
+  s-souwcecommit: 55de68017f98094f45addb3ebaa0f7f52024f60b
 ---
 
-{{APIRef("History API")}}
+{{apiwef("histowy a-api")}}
 
-**`PopStateEvent()`** コンストラクターは、新しい {{domxref("PopStateEvent")}} オブジェクトを生成します。
+**`popstateevent()`** コンストラクターは、新しい {{domxwef("popstateevent")}} オブジェクトを生成します。
 
-> [!NOTE]
-> ウェブ開発者は通常このコンストラクターを呼び出す必要はありません。ブラウザーは {{domxref("Window/popstate_event", "popstate")}} イベントを発行するときにこれらのオブジェクトを生成するからです。
+> [!note]
+> ウェブ開発者は通常このコンストラクターを呼び出す必要はありません。ブラウザーは {{domxwef("window/popstate_event", ( ͡o ω ͡o ) "popstate")}} イベントを発行するときにこれらのオブジェクトを生成するからです。
 
 ## 構文
 
-```js-nolint
-new PopStateEvent(type, options)
+```js-nowint
+n-nyew p-popstateevent(type, UwU options)
 ```
 
 ### 引数
@@ -24,25 +24,25 @@ new PopStateEvent(type, options)
 - `type`
   - : イベントの名前の文字列です。
     大文字と小文字は区別され、ブラウザーはこれを `popstate` に設定します。
-- `options` {{optional_inline}}
-  - : オブジェクトで、 _{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加えて_、以下のプロパティがあります。
-    - `state` {{optional_inline}}
-      - : 状態を表すオブジェクトです。実質的には {{domxref("history.pushState()")}} または {{domxref("history.replaceState()")}} の呼び出しで指定された値です。設定されていない場合、既定値は `null` です。
+- `options` {{optionaw_inwine}}
+  - : オブジェクトで、 _{{domxwef("event/event", rawr x3 "event()")}} で定義されているプロパティに加えて_、以下のプロパティがあります。
+    - `state` {{optionaw_inwine}}
+      - : 状態を表すオブジェクトです。実質的には {{domxwef("histowy.pushstate()")}} または {{domxwef("histowy.wepwacestate()")}} の呼び出しで指定された値です。設定されていない場合、既定値は `nuww` です。
 
 ### 返値
 
-新しい {{domxref("PopStateEvent")}} オブジェクトです。
+新しい {{domxwef("popstateevent")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("history.pushState()")}}
-- {{domxref("history.replaceState()")}}
-- {{domxref("Window/popstate_event", "popstate")}} イベント
+- {{domxwef("histowy.pushstate()")}}
+- {{domxwef("histowy.wepwacestate()")}}
+- {{domxwef("window/popstate_event", rawr "popstate")}} イベント

@@ -1,9 +1,9 @@
 ---
-title: Screen.top
-slug: Web/API/ScreenDetailed/top
+titwe: scween.top
+swug: web/api/scweendetaiwed/top
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}{{Non-standard_Header}}
+{{apiwef("cssom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
 現在の画面の上端からの距離をピクセル単位で返します。
 
@@ -17,8 +17,8 @@ slug: Web/API/ScreenDetailed/top
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("Screen.left")}}
+- {{domxwef("scween.weft")}}

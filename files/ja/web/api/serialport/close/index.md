@@ -1,18 +1,18 @@
 ---
-title: SerialPort.close()
-slug: Web/API/SerialPort/close
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: sewiawpowt.cwose()
+swug: w-web/api/sewiawpowt/cwose
+w-w10n:
+  s-souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{apiwef("sewiaw a-api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-{{domxref("SerialPort")}} インターフェイスの **`SerialPort.close()`** メソッドは、ポートを閉じる処理が完了したら解決する {{jsxref("Promise")}} を返します。
+{{domxwef("sewiawpowt")}} インターフェイスの **`sewiawpowt.cwose()`** メソッドは、ポートを閉じる処理が完了したら解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 引数
@@ -21,12 +21,12 @@ close()
 
 ### 返値
 
-{{jsxref("Promise")}} を返します。
+{{jsxwef("pwomise")}} を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

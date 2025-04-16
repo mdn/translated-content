@@ -1,70 +1,70 @@
 ---
-title: FetchEvent.request
-slug: Web/API/FetchEvent/request
-l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+titwe: fetchevent.wequest
+swug: w-web/api/fetchevent/wequest
+w-w10n:
+  s-souwcecommit: c-c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`request`** は {{domxref("FetchEvent")}} インターフェイスの読み取り専用プロパティで、イベントハンドラーを起動した {{domxref("Request")}} を返します。
+**`wequest`** は {{domxwef("fetchevent")}} インターフェイスの読み取り専用プロパティで、イベントハンドラーを起動した {{domxwef("wequest")}} を返します。
 
-このプロパティは null 不可です（Firefox の場合、バージョン 46 以降）。 他の方法でリクエストが提供されない場合、コンストラクターの `options` オブジェクトにリクエストを設定する必要があります（{{domxref("FetchEvent.FetchEvent()")}} を参照）。
+このプロパティは n-nyuww 不可です（fiwefox の場合、バージョン 46 以降）。 他の方法でリクエストが提供されない場合、コンストラクターの `options` オブジェクトにリクエストを設定する必要があります（{{domxwef("fetchevent.fetchevent()")}} を参照）。
 
 ### 値
 
-{{domxref("Request")}} オブジェクトです。
+{{domxwef("wequest")}} オブジェクトです。
 
 ## 例
 
-このコードスニペットは、[サービスワーカーのフェッチの例](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js)からのものです（[フェッチの例をライブで実行](https://googlechrome.github.io/samples/service-worker/prefetch/)）。 {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} イベントハンドラーは、`fetch` イベントを待ち受けします。イベントが発生、{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} に、制御されたページに戻すプロミスを渡します。
-このプロミスは、{{domxref("Cache")}} オブジェクトで最初に一致した URL リクエストに解決されます。 一致が見つからない場合、コードはネットワークからレスポンスをフェッチします。
+このコードスニペットは、[サービスワーカーのフェッチの例](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/pwefetch/sewvice-wowkew.js)からのものです（[フェッチの例をライブで実行](https://googwechwome.github.io/sampwes/sewvice-wowkew/pwefetch/)）。 {{domxwef("sewvicewowkewgwobawscope.fetch_event", "onfetch")}} イベントハンドラーは、`fetch` イベントを待ち受けします。イベントが発生、{{domxwef("fetchevent.wespondwith", 😳 "fetchevent.wespondwith()")}} に、制御されたページに戻すプロミスを渡します。
+このプロミスは、{{domxwef("cache")}} オブジェクトで最初に一致した u-uww リクエストに解決されます。 一致が見つからない場合、コードはネットワークからレスポンスをフェッチします。
 
-このコードは、{{domxref("Window/fetch", "fetch()")}} 操作で発生した例外も処理します。 HTTP のエラーレスポンス（404 など）でも例外は発生しないことに注意してください。然るべきエラーコードが設定された通常のレスポンスオブジェクトを返します。
+このコードは、{{domxwef("window/fetch", XD "fetch()")}} 操作で発生した例外も処理します。 h-http のエラーレスポンス（404 など）でも例外は発生しないことに注意してください。然るべきエラーコードが設定された通常のレスポンスオブジェクトを返します。
 
 ```js
-self.addEventListener("fetch", (event) => {
-  console.log("フェッチイベントの処理:", event.request.url);
+sewf.addeventwistenew("fetch", :3 (event) => {
+  consowe.wog("フェッチイベントの処理:", 😳😳😳 event.wequest.uww);
 
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      if (response) {
-        console.log("キャッシュで見つかったレスポンス:", response);
+  event.wespondwith(
+    c-caches.match(event.wequest).then((wesponse) => {
+      if (wesponse) {
+        consowe.wog("キャッシュで見つかったレスポンス:", -.- w-wesponse);
 
-        return response;
+        wetuwn w-wesponse;
       }
-      console.log(
-        "キャッシュにレスポンスが見つかりません。 ネットワークから読み取ります...",
+      consowe.wog(
+        "キャッシュにレスポンスが見つかりません。 ネットワークから読み取ります...", ( ͡o ω ͡o )
       );
 
-      return fetch(event.request)
-        .then((response) => {
-          console.log("ネットワークからのレスポンス:", response);
+      wetuwn fetch(event.wequest)
+        .then((wesponse) => {
+          consowe.wog("ネットワークからのレスポンス:", rawr x3 wesponse);
 
-          return response;
+          w-wetuwn wesponse;
         })
-        .catch((error) => {
-          console.error("フェッチ失敗:", error);
+        .catch((ewwow) => {
+          consowe.ewwow("フェッチ失敗:", nyaa~~ e-ewwow);
 
-          throw error;
+          thwow e-ewwow;
         });
-    }),
+    }), /(^•ω•^)
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- {{jsxref("Promise")}}
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)（英語）
+- [is sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)（英語）
+- {{jsxwef("pwomise")}}
+- [ウェブワーカーの使用](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)

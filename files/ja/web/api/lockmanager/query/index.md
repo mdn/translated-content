@@ -1,18 +1,18 @@
 ---
-title: "LockManager: query() メソッド"
-slug: Web/API/LockManager/query
-l10n:
-  sourceCommit: cd9d3e7af3ce8c2ef8620ba9294502116b4008c0
+titwe: "wockmanagew: quewy() メソッド"
+s-swug: w-web/api/wockmanagew/quewy
+w-w10n:
+  s-souwcecommit: c-cd9d3e7af3ce8c2ef8620ba9294502116b4008c0
 ---
 
-{{APIRef("Web Locks")}}
+{{apiwef("web w-wocks")}}
 
-{{domxref("LockManager")}} インターフェイスの **`query()`** メソッドは、確保中のロックと獲得待ち中のロックに関する情報を持ったオブジェクトで解決する {{jsxref('Promise')}} を返します。
+{{domxwef("wockmanagew")}} インターフェイスの **`quewy()`** メソッドは、確保中のロックと獲得待ち中のロックに関する情報を持ったオブジェクトで解決する {{jsxwef('pwomise')}} を返します。
 
 ## 構文
 
-```js-nolint
-query()
+```js-nowint
+q-quewy()
 ```
 
 ### 引数
@@ -21,36 +21,36 @@ query()
 
 ### 返値
 
-{{domxref("LockManager")}} の状態のスナップショットを持ったオブジェクトで解決する {{jsxref('Promise')}} を返します。このオブジェクトは以下のプロパティを持ちます。
+{{domxwef("wockmanagew")}} の状態のスナップショットを持ったオブジェクトで解決する {{jsxwef('pwomise')}} を返します。このオブジェクトは以下のプロパティを持ちます。
 
-- `held`: 確保中のロックに関する {{domxref('LockInfo')}} オブジェクトの配列です。
-- `pending`: 獲得待ち中のロックに関する {{domxref('LockInfo')}} オブジェクトの配列です。
+- `hewd`: 確保中のロックに関する {{domxwef('wockinfo')}} オブジェクトの配列です。
+- `pending`: 獲得待ち中のロックに関する {{domxwef('wockinfo')}} オブジェクトの配列です。
 
 ### 例外
 
-このメソッドは、以下のいずれかの種類の {{domxref("DOMException")}} で拒否される {{jsxref('Promise')}} を返す可能性があります。
+このメソッドは、以下のいずれかの種類の {{domxwef("domexception")}} で拒否される {{jsxwef('pwomise')}} を返す可能性があります。
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : ドキュメントが完全にアクティブでない環境のとき投げられます。
-- `SecurityError` {{domxref("DOMException")}}
+- `secuwityewwow` {{domxwef("domexception")}}
   - : 現在の環境でロックマネージャーが取得できないとき投げられます。
 
 ## 例
 
 ```js
-const state = await navigator.locks.query();
-for (const lock of state.held) {
-  console.log(`確保中のロック: 名前 ${lock.name}, モード ${lock.mode}`);
+c-const state = await nyavigatow.wocks.quewy();
+fow (const wock of state.hewd) {
+  consowe.wog(`確保中のロック: 名前 ${wock.name}, >_< モード ${wock.mode}`);
 }
-for (const request of state.pending) {
-  console.log(`要求中のロック: 名前 ${request.name}, モード ${request.mode}`);
+f-fow (const wequest of state.pending) {
+  consowe.wog(`要求中のロック: 名前 ${wequest.name}, :3 モード ${wequest.mode}`);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

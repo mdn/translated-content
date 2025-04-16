@@ -1,44 +1,44 @@
 ---
-title: "MediaStreamTrack: muted プロパティ"
-short-title: muted
-slug: Web/API/MediaStreamTrack/muted
-l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+titwe: "mediastweamtwack: muted プロパティ"
+s-showt-titwe: m-muted
+swug: web/api/mediastweamtwack/muted
+w-w10n:
+  s-souwcecommit: c-cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and stweams")}}
 
-**`muted`** は {{domxref("MediaStreamTrack")}} インターフェイスの読み取り専用プロパティであり、トラックが現在メディア出力を提供できない状態であるかどうかを示します。
+**`muted`** は {{domxwef("mediastweamtwack")}} インターフェイスの読み取り専用プロパティであり、トラックが現在メディア出力を提供できない状態であるかどうかを示します。
 
-> [!NOTE]
-> ユーザーがトラックをミュート/ミュート解除する方法を実装するには、{{domxref("MediaStreamTrack.enabled", "enabled")}} プロパティを使用してください。 `enabled` を `false` に設定してトラックを無効にすると、空のフレーム（すべてのサンプルが 0 である音声フレーム、またはすべてのピクセルが黒である映像フレーム）だけが生成されます。
+> [!note]
+> ユーザーがトラックをミュート/ミュート解除する方法を実装するには、{{domxwef("mediastweamtwack.enabwed", UwU "enabwed")}} プロパティを使用してください。 `enabwed` を `fawse` に設定してトラックを無効にすると、空のフレーム（すべてのサンプルが 0 である音声フレーム、またはすべてのピクセルが黒である映像フレーム）だけが生成されます。
 
 ## 値
 
-論理値で、トラックが現在ミュートされている場合は `true` となり、ミュートされていない場合は `false` となります。
+論理値で、トラックが現在ミュートされている場合は `twue` となり、ミュートされていない場合は `fawse` となります。
 
-> [!NOTE]
+> [!note]
 > 可能であれば、`muted` をポーリングしてトラックのミュート状態を監視することは避けてください。
-> 代わりに、 {{domxref("MediaStreamTrack.mute_event", "mute")}} と {{domxref("MediaStreamTrack.unmute_event", "unmute")}} イベントに対するイベントリスナーを追加してください。
+> 代わりに、 {{domxwef("mediastweamtwack.mute_event", rawr x3 "mute")}} と {{domxwef("mediastweamtwack.unmute_event", rawr "unmute")}} イベントに対するイベントリスナーを追加してください。
 
 ## 例
 
-この例では、 {{domxref("MediaStreamTrack")}} オブジェクトの配列の中で、現在ミュートされているトラックの数を数えます。
+この例では、 {{domxwef("mediastweamtwack")}} オブジェクトの配列の中で、現在ミュートされているトラックの数を数えます。
 
 ```js
-let mutedCount = 0;
+w-wet mutedcount = 0;
 
-trackList.forEach((track) => {
-  if (track.muted) {
-    mutedCount += 1;
+t-twackwist.foweach((twack) => {
+  if (twack.muted) {
+    mutedcount += 1;
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

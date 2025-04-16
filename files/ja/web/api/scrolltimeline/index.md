@@ -1,55 +1,55 @@
 ---
-title: ScrollTimeline
-slug: Web/API/ScrollTimeline
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: scwowwtimewine
+swug: web/api/scwowwtimewine
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{apiwef("web a-animations")}}{{seecompattabwe}}
 
-**`ScrollTimeline`** は{{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} のインターフェイスで、スクロール進行タイムラインを表します（詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を参照してください）。
+**`scwowwtimewine`** は{{domxwef("web a-animations api", (///ˬ///✿) "ウェブアニメーション a-api", 😳😳😳 "", "nocode")}} のインターフェイスで、スクロール進行タイムラインを表します（詳しくは [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations) を参照してください）。
 
-`ScrollTimeline` インスタンスを {{domxref("Animation.Animation", "Animation()")}} コンストラクターまたは {{domxref("Element.animate()", "animate()")}} メソッドに渡すと、アニメーションの進行を制御するタイムラインとして指定します。
+`scwowwtimewine` インスタンスを {{domxwef("animation.animation", 🥺 "animation()")}} コンストラクターまたは {{domxwef("ewement.animate()", mya "animate()")}} メソッドに渡すと、アニメーションの進行を制御するタイムラインとして指定します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("ScrollTimeline.ScrollTimeline", "ScrollTimeline()")}} {{Experimental_Inline}}
-  - : 新しい `ScrollTimeline` オブジェクトのインスタンスを作成します。
+- {{domxwef("scwowwtimewine.scwowwtimewine", 🥺 "scwowwtimewine()")}} {{expewimentaw_inwine}}
+  - : 新しい `scwowwtimewine` オブジェクトのインスタンスを作成します。
 
 ## インスタンスプロパティ
 
-_このインターフェイスには、親である {{domxref("AnimationTimeline")}} から継承したプロパティもあります。_
+_このインターフェイスには、親である {{domxwef("animationtimewine")}} から継承したプロパティもあります。_
 
-- {{domxref("ScrollTimeline.source", "source")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxwef("scwowwtimewine.souwce", >_< "souwce")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : スクロール位置がタイムラインの進行、つまりアニメーションを駆動するスクロール可能要素（スクローラー）への参照を返します。
-- {{domxref("ScrollTimeline.axis", "axis")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxwef("scwowwtimewine.axis", >_< "axis")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : タイムラインの進行状況を表すスクロール軸を列挙した値を返します。
 
 ## インスタンスメソッド
 
-_このインターフェイスには、親である {{domxref("AnimationTimeline")}} から継承したメソッドもあります。_
+_このインターフェイスには、親である {{domxwef("animationtimewine")}} から継承したメソッドもあります。_
 
 ## 例
 
 ### スクロール進行タイムラインのソースと軸の表示
 
-この例では、ビュー進行タイムラインに沿って `class` が `box` の要素をアニメーションしています。文書のスクロールに合わせて画面全体でアニメーションします。`source` 要素とスクロール `axis` を右上の `output` 要素に出力します。
+この例では、ビュー進行タイムラインに沿って `cwass` が `box` の要素をアニメーションしています。文書のスクロールに合わせて画面全体でアニメーションします。`souwce` 要素とスクロール `axis` を右上の `output` 要素に出力します。
 
-#### HTML
+#### h-htmw
 
-例の HTML は下記に示します。
+例の h-htmw は下記に示します。
 
-```html
-<div class="content"></div>
-<div class="box"></div>
-<div class="output"></div>
+```htmw
+<div cwass="content"></div>
+<div c-cwass="box"></div>
+<div cwass="output"></div>
 ```
 
-#### CSS
+#### css
 
-例の CSS はこのようになっています。
+例の css はこのようになっています。
 
 ```css
 .content {
@@ -58,64 +58,64 @@ _このインターフェイスには、親である {{domxref("AnimationTimelin
 
 .box {
   width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  background-color: rebeccapurple;
-  position: fixed;
+  h-height: 100px;
+  bowdew-wadius: 10px;
+  backgwound-cowow: w-webeccapuwpwe;
+  position: f-fixed;
   top: 20px;
-  left: 0%;
+  weft: 0%;
 }
 
 .output {
-  font-family: Arial, Helvetica, sans-serif;
-  position: fixed;
-  top: 5px;
-  right: 5px;
+  font-famiwy: awiaw, (⑅˘꒳˘) hewvetica, /(^•ω•^) sans-sewif;
+  p-position: fixed;
+  t-top: 5px;
+  wight: 5px;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
-JavaScript では、`box` と `output` の `<div>` の参照を取得し、新しい `ScrollTimeline` を作成し、スクロールタイムラインを進行させる要素は文書 ({{htmlelement("html")}}) 要素であり、スクロール軸は `block` 軸であることを指定します。そして、ウェブアニメーション API を使って `box` 要素をアニメーションします。最後に、ソース要素と軸を `output` 要素に表示します。
+javascwipt では、`box` と `output` の `<div>` の参照を取得し、新しい `scwowwtimewine` を作成し、スクロールタイムラインを進行させる要素は文書 ({{htmwewement("htmw")}}) 要素であり、スクロール軸は `bwock` 軸であることを指定します。そして、ウェブアニメーション api を使って `box` 要素をアニメーションします。最後に、ソース要素と軸を `output` 要素に表示します。
 
 ```js
-const box = document.querySelector(".box");
-const output = document.querySelector(".output");
+const box = document.quewysewectow(".box");
+c-const output = document.quewysewectow(".output");
 
-const timeline = new ScrollTimeline({
-  source: document.documentElement,
-  axis: "block",
+const timewine = nyew scwowwtimewine({
+  souwce: d-document.documentewement,
+  axis: "bwock", rawr x3
 });
 
-box.animate(
+b-box.animate(
   {
-    rotate: ["0deg", "720deg"],
-    left: ["0%", "100%"],
+    w-wotate: ["0deg", "720deg"], (U ﹏ U)
+    w-weft: ["0%", (U ﹏ U) "100%"], (⑅˘꒳˘)
   },
   {
-    timeline,
-  },
+    t-timewine,
+  }, òωó
 );
 
-output.textContent = `Timeline source element: ${timeline.source.nodeName}. Timeline scroll axis: ${timeline.axis}`;
+output.textcontent = `timewine souwce ewement: ${timewine.souwce.nodename}. ʘwʘ t-timewine scwoww axis: ${timewine.axis}`;
 ```
 
 #### 結果
 
 スクロールしてアニメーションするボックスをご覧ください。
 
-{{EmbedLiveSample("Displaying the source and axis of a scroll progress timeline", "100%", "320px")}}
+{{embedwivesampwe("dispwaying the s-souwce and axis of a scwoww pwogwess timewine", /(^•ω•^) "100%", ʘwʘ "320px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
-- {{domxref("AnimationTimeline")}}, {{domxref("ViewTimeline")}}
+- [ウェブアニメーション api](/ja/docs/web/api/web_animations_api)
+- [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)
+- {{domxwef("animationtimewine")}}, σωσ {{domxwef("viewtimewine")}}

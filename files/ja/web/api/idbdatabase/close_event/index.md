@@ -1,95 +1,95 @@
 ---
-title: "IDBDatabase: close イベント"
-slug: Web/API/IDBDatabase/close_event
-l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+titwe: "idbdatabase: cwose イベント"
+s-swug: w-web/api/idbdatabase/cwose_event
+w-w10n:
+  souwcecommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-`close` イベントは、データベースの接続が予期せず閉じられた時 `IDBDatabase` で発火します。例えば、使用しているストレージが取り外されたり、ユーザーがブラウザーの履歴設定でデータベースを消去した場合に発生します。
+`cwose` イベントは、データベースの接続が予期せず閉じられた時 `idbdatabase` で発火します。例えば、使用しているストレージが取り外されたり、ユーザーがブラウザーの履歴設定でデータベースを消去した場合に発生します。
 
-データベースの接続が [`IDBDatabase.close()`](/ja/docs/Web/API/IDBDatabase/close) により正常に閉じられた場合は発火しないことに注意してください。
+データベースの接続が [`idbdatabase.cwose()`](/ja/docs/web/api/idbdatabase/cwose) により正常に閉じられた場合は発火しないことに注意してください。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
+{{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("close", (event) => {});
-onclose = (event) => {};
+a-addeventwistenew("cwose", /(^•ω•^) (event) => {});
+o-oncwose = (event) => {};
 ```
 
 ## イベント型
 
-汎用の {{domxref("Event")}} です。
+汎用の {{domxwef("event")}} です。
 
 ## 例
 
-この例ではデータベースを開き、`close` イベントを監視します。
+この例ではデータベースを開き、`cwose` イベントを監視します。
 
 ```js
 // データベースを開きます
-const dBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const dbopenwequest = window.indexeddb.open("todowist", rawr x3 4);
 
-dBOpenRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+d-dbopenwequest.onupgwadeneeded = (event) => {
+  const db = event.tawget.wesuwt;
 
-  // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の objectstowe を作成します
+  const o-objectstowe = db.cweateobjectstowe("todowist", (U ﹏ U) {
+    keypath: "tasktitwe", (U ﹏ U)
   });
 
-  // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  // objectstowe に保存するデータアイテムを定義します
+  o-objectstowe.cweateindex("houws", (⑅˘꒳˘) "houws", { unique: f-fawse });
+  objectstowe.cweateindex("minutes", òωó "minutes", ʘwʘ { unique: fawse });
+  objectstowe.cweateindex("day", /(^•ω•^) "day", { u-unique: fawse });
+  objectstowe.cweateindex("month", ʘwʘ "month", { u-unique: f-fawse });
+  objectstowe.cweateindex("yeaw", σωσ "yeaw", OwO { unique: fawse });
 };
 
-dBOpenRequest.onsuccess = (event) => {
-  const db = dBOpenRequest.result;
-  db.addEventListener("close", () => {
-    console.log("データベースへの接続が閉じられました");
+dbopenwequest.onsuccess = (event) => {
+  const db = dbopenwequest.wesuwt;
+  d-db.addeventwistenew("cwose", 😳😳😳 () => {
+    consowe.wog("データベースへの接続が閉じられました");
   });
 };
 ```
 
-`addEventListener()` のかわりに `onclose` プロパティを使った同じ例です。
+`addeventwistenew()` のかわりに `oncwose` プロパティを使った同じ例です。
 
 ```js
 // データベースを開きます
-const dBOpenRequest = window.indexedDB.open("toDoList", 4);
+const dbopenwequest = window.indexeddb.open("todowist", 😳😳😳 4);
 
-dBOpenRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+dbopenwequest.onupgwadeneeded = (event) => {
+  c-const db = event.tawget.wesuwt;
 
-  // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の o-objectstowe を作成します
+  c-const objectstowe = d-db.cweateobjectstowe("todowist", o.O {
+    k-keypath: "tasktitwe", ( ͡o ω ͡o )
   });
 
-  // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  // objectstowe に保存するデータアイテムを定義します
+  objectstowe.cweateindex("houws", (U ﹏ U) "houws", (///ˬ///✿) { unique: fawse });
+  o-objectstowe.cweateindex("minutes", >w< "minutes", { unique: fawse });
+  objectstowe.cweateindex("day", rawr "day", { u-unique: fawse });
+  objectstowe.cweateindex("month", mya "month", { unique: fawse });
+  objectstowe.cweateindex("yeaw", "yeaw", ^^ { unique: fawse });
 };
 
-dBOpenRequest.onsuccess = (event) => {
-  const db = dBOpenRequest.result;
-  db.onclose = () => {
-    console.log("データベースへの接続が閉じられました");
+d-dbopenwequest.onsuccess = (event) => {
+  const d-db = dbopenwequest.wesuwt;
+  d-db.oncwose = () => {
+    c-consowe.wog("データベースへの接続が閉じられました");
   };
 };
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)

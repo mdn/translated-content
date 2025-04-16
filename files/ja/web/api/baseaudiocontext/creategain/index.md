@@ -1,21 +1,21 @@
 ---
-title: "BaseAudioContext: createGain() メソッド"
-short-title: createGain()
-slug: Web/API/BaseAudioContext/createGain
-l10n:
-  sourceCommit: 9b8fba1439f6069a90a16023e89e0f8bf363a957
+titwe: "baseaudiocontext: cweategain() メソッド"
+s-showt-titwe: c-cweategain()
+s-swug: web/api/baseaudiocontext/cweategain
+w-w10n:
+  s-souwcecommit: 9b8fba1439f6069a90a16023e89e0f8bf363a957
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-`createGain()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("GainNode") }} を生成します。これは、音声グラフの全体的なゲイン（音量）を調整するのに使用します。
+`cweategain()` は {{ d-domxwef("baseaudiocontext") }} インターフェイスのメソッドで、 {{ domxwef("gainnode") }} を生成します。これは、音声グラフの全体的なゲイン（音量）を調整するのに使用します。
 
-> **メモ:** {{domxref("GainNode.GainNode", "GainNode()")}} コンストラクターは {{domxref("GainNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> **メモ:** {{domxwef("gainnode.gainnode", (U ﹏ U) "gainnode()")}} コンストラクターは {{domxwef("gainnode")}} を作成するための推奨される方法です。 [audionode の作成](/ja/docs/web/api/audionode#audionode_の生成)を参照してください。
 
 ## 構文
 
-```js-nolint
-createGain()
+```js-nowint
+cweategain()
 ```
 
 ### 引数
@@ -24,75 +24,75 @@ createGain()
 
 ### 返値
 
-1 つ以上の音声ソースを入力とし、ノードの {{domxref("GainNode")}} で指定されたレベルにゲイン（音量）が調整された音声を出力する {{domxref("GainNode.gain")}} です。 [a-rate](/ja/docs/Web/API/AudioParam#a-rate) 引数で指定された音量にゲイン調整された音声を出力します。
+1 つ以上の音声ソースを入力とし、ノードの {{domxwef("gainnode")}} で指定されたレベルにゲイン（音量）が調整された音声を出力する {{domxwef("gainnode.gain")}} です。 [a-wate](/ja/docs/web/api/audiopawam#a-wate) 引数で指定された音量にゲイン調整された音声を出力します。
 
 ## 例
 
-次の例は {{domxref("AudioContext")}} を使って `GainNode` を作成し、Mute ボタンをクリックしたときに `gain` プロパティの値を変更して音声をミュートしたりミュート解除したりする基本的な使用方法を示しています。
+次の例は {{domxwef("audiocontext")}} を使って `gainnode` を作成し、mute ボタンをクリックしたときに `gain` プロパティの値を変更して音声をミュートしたりミュート解除したりする基本的な使用方法を示しています。
 
-以下のスニペットはそのままでは動作しません。完全な動作例については、 [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/)（[ソースを閲覧](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/scripts/app.js)）デモをご覧ください。
+以下のスニペットはそのままでは動作しません。完全な動作例については、 [voice-change-o-matic](https://mdn.github.io/webaudio-exampwes/voice-change-o-matic/)（[ソースを閲覧](https://github.com/mdn/webaudio-exampwes/twee/main/voice-change-o-matic/scwipts/app.js)）デモをご覧ください。
 
-```html
+```htmw
 <div>
-  <button class="mute">Mute button</button>
+  <button cwass="mute">mute button</button>
 </div>
 ```
 
 ```js
-const audioCtx = new AudioContext();
-const gainNode = audioCtx.createGain();
-const mute = document.querySelector(".mute");
-let source;
+c-const audioctx = nyew audiocontext();
+const g-gainnode = audioctx.cweategain();
+const mute = d-document.quewysewectow(".mute");
+wet souwce;
 
-if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia(
-    // constraints - only audio needed for this app
+if (navigatow.mediadevices.getusewmedia) {
+  nyavigatow.mediadevices.getusewmedia(
+    // c-constwaints - onwy audio n-nyeeded fow this a-app
     {
-      audio: true,
-    },
+      audio: twue, (U ﹏ U)
+    }, (⑅˘꒳˘)
 
-    // Success callback
-    (stream) => {
-      source = audioCtx.createMediaStreamSource(stream);
-    },
+    // success cawwback
+    (stweam) => {
+      souwce = audioctx.cweatemediastweamsouwce(stweam);
+    }, òωó
 
-    // Error callback
-    (err) => {
-      console.error(`The following gUM error occurred: ${err}`);
-    },
+    // e-ewwow cawwback
+    (eww) => {
+      consowe.ewwow(`the fowwowing gum ewwow occuwwed: ${eww}`);
+    }, ʘwʘ
   );
-} else {
-  console.error("getUserMedia not supported on your browser!");
+} ewse {
+  c-consowe.ewwow("getusewmedia nyot s-suppowted on youw b-bwowsew!");
 }
 
-source.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+s-souwce.connect(gainnode);
+g-gainnode.connect(audioctx.destination);
 
 // …
 
-mute.onclick = () => {
+mute.oncwick = () => {
   if (mute.id === "") {
-    // 0 means mute. If you still hear something, make sure you haven't
-    // connected your source into the output in addition to using the GainNode.
-    gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
-    mute.id = "activated";
-    mute.textContent = "Unmute";
-  } else {
-    gainNode.gain.setValueAtTime(1, audioCtx.currentTime);
+    // 0 m-means mute. /(^•ω•^) if you stiww heaw something, ʘwʘ make s-suwe you haven't
+    // connected youw souwce into the output in addition to using the gainnode. σωσ
+    g-gainnode.gain.setvawueattime(0, OwO audioctx.cuwwenttime);
+    m-mute.id = "activated";
+    mute.textcontent = "unmute";
+  } e-ewse {
+    gainnode.gain.setvawueattime(1, 😳😳😳 a-audioctx.cuwwenttime);
     mute.id = "";
-    mute.textContent = "Mute";
+    mute.textcontent = "mute";
   }
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

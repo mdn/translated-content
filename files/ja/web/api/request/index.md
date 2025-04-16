@@ -1,145 +1,145 @@
 ---
-title: Request
-slug: Web/API/Request
-l10n:
-  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
+titwe: wequest
+swug: web/api/wequest
+w-w10n:
+  s-souwcecommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch a-api")}}{{avaiwabweinwowkews}}
 
-**`Request`** は[フェッチ API](/ja/docs/Web/API/Fetch_API) のインターフェイスで、リソースのリクエストを表します。
+**`wequest`** は[フェッチ a-api](/ja/docs/web/api/fetch_api) のインターフェイスで、リソースのリクエストを表します。
 
-新しい `Request` オブジェクトは {{domxref("Request.Request","Request()")}} コンストラクターを用いて生成することができますが、 `Request` オブジェクトは他の API 操作、例えばサービスワーカーの {{domxref("FetchEvent.request")}} などの結果として返されたものに遭遇することの方が多いでしょう。
+新しい `wequest` オブジェクトは {{domxwef("wequest.wequest","wequest()")}} コンストラクターを用いて生成することができますが、 `wequest` オブジェクトは他の a-api 操作、例えばサービスワーカーの {{domxwef("fetchevent.wequest")}} などの結果として返されたものに遭遇することの方が多いでしょう。
 
 ## コンストラクター
 
-- {{domxref("Request.Request","Request()")}}
-  - : 新しい `Request` オブジェクトを生成します。
+- {{domxwef("wequest.wequest","wequest()")}}
+  - : 新しい `wequest` オブジェクトを生成します。
 
 ## プロパティ
 
-- {{domxref("Request.body")}} {{ReadOnlyInline}}
-  - : 本体の中身の {{domxref("ReadableStream")}} です。
-- {{domxref("Request.bodyUsed")}} {{ReadOnlyInline}}
-  - : `true` または `false` で、レスポンス中で本体が既に使用されたかどうかを示します。
-- {{domxref("Request.cache")}} {{ReadOnlyInline}}
-  - : リクエストのキャッシュモード (`default`, `reload`, `no-cache` など) が入ります。
-- {{domxref("Request.credentials")}} {{ReadOnlyInline}}
-  - : リクエストの認証情報 (`omit`, `same-origin`, `include` など) が入ります。既定値は `same-origin` です。
-- {{domxref("Request.destination")}} {{ReadOnlyInline}}
+- {{domxwef("wequest.body")}} {{weadonwyinwine}}
+  - : 本体の中身の {{domxwef("weadabwestweam")}} です。
+- {{domxwef("wequest.bodyused")}} {{weadonwyinwine}}
+  - : `twue` または `fawse` で、レスポンス中で本体が既に使用されたかどうかを示します。
+- {{domxwef("wequest.cache")}} {{weadonwyinwine}}
+  - : リクエストのキャッシュモード (`defauwt`, `wewoad`, rawr x3 `no-cache` など) が入ります。
+- {{domxwef("wequest.cwedentiaws")}} {{weadonwyinwine}}
+  - : リクエストの認証情報 (`omit`, (✿oωo) `same-owigin`, (ˆ ﻌ ˆ)♡ `incwude` など) が入ります。既定値は `same-owigin` です。
+- {{domxwef("wequest.destination")}} {{weadonwyinwine}}
   - : 文字列で、リクエストされたコンテンツの型を表します。
-- {{domxref("Request.headers")}} {{ReadOnlyInline}}
-  - : リクエストに関連付けられた {{domxref("Headers")}} オブジェクトが入ります。
-- {{domxref("Request.integrity")}} {{ReadOnlyInline}}
-  - : リクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します（`sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=` など）。
-- {{domxref("Request.isHistoryNavigation")}} {{ReadOnlyInline}}
+- {{domxwef("wequest.headews")}} {{weadonwyinwine}}
+  - : リクエストに関連付けられた {{domxwef("headews")}} オブジェクトが入ります。
+- {{domxwef("wequest.integwity")}} {{weadonwyinwine}}
+  - : リクエストの[サブリソース完全性](/ja/docs/web/secuwity/subwesouwce_integwity)の値を保持します（`sha256-bpfbw7ivv8q2jwit13fxdyae2tjwwuswsz273h2nfse=` など）。
+- {{domxwef("wequest.ishistowynavigation")}} {{weadonwyinwine}}
   - : 論理値で、このリクエストが履歴のナビゲーションであるかどうかを示します。
-- {{domxref("Request.keepalive")}} {{ReadOnlyInline}}
-  - : リクエストの `keepalive` 設定（`true` または `false`）が入ります。これは、リクエストが完全に完了する前に開始ページが読み込まれなかった場合に、ブラウザーが関連付けられたリクエストを維持するかどうかを示します。
-- {{domxref("Request.method")}} {{ReadOnlyInline}}
-  - : リクエストメソッド (`GET`, `POST` など) を保持します。
-- {{domxref("Request.mode")}} {{ReadOnlyInline}}
-  - : リクエストのモード ( `cors`, `no-cors`, `same-origin`, `navigate` など) を保持します。
-- {{domxref("Request.redirect")}} {{ReadOnlyInline}}
-  - : リダイレクトをどう扱うかのモードが入ります。 `follow`, `error`, `manual` のいずれかです。
-- {{domxref("Request.referrer")}} {{ReadOnlyInline}}
-  - : このリクエストのリファラー (`client` など) が入ります。
-- {{domxref("Request.referrerPolicy")}} {{ReadOnlyInline}}
-  - : リファラに関するポリシー (`no-referrer` など) が入ります。
-- {{domxref("Request.signal")}} {{ReadOnlyInline}}
-  - : リクエストに関連付けられた {{domxref("AbortSignal")}} を返します。
-- {{domxref("Request.url")}} {{ReadOnlyInline}}
-  - : リクエストの URL が入ります。
+- {{domxwef("wequest.keepawive")}} {{weadonwyinwine}}
+  - : リクエストの `keepawive` 設定（`twue` または `fawse`）が入ります。これは、リクエストが完全に完了する前に開始ページが読み込まれなかった場合に、ブラウザーが関連付けられたリクエストを維持するかどうかを示します。
+- {{domxwef("wequest.method")}} {{weadonwyinwine}}
+  - : リクエストメソッド (`get`, (˘ω˘) `post` など) を保持します。
+- {{domxwef("wequest.mode")}} {{weadonwyinwine}}
+  - : リクエストのモード ( `cows`, (⑅˘꒳˘) `no-cows`, (///ˬ///✿) `same-owigin`, 😳😳😳 `navigate` など) を保持します。
+- {{domxwef("wequest.wediwect")}} {{weadonwyinwine}}
+  - : リダイレクトをどう扱うかのモードが入ります。 `fowwow`, 🥺 `ewwow`, `manuaw` のいずれかです。
+- {{domxwef("wequest.wefewwew")}} {{weadonwyinwine}}
+  - : このリクエストのリファラー (`cwient` など) が入ります。
+- {{domxwef("wequest.wefewwewpowicy")}} {{weadonwyinwine}}
+  - : リファラに関するポリシー (`no-wefewwew` など) が入ります。
+- {{domxwef("wequest.signaw")}} {{weadonwyinwine}}
+  - : リクエストに関連付けられた {{domxwef("abowtsignaw")}} を返します。
+- {{domxwef("wequest.uww")}} {{weadonwyinwine}}
+  - : リクエストの u-uww が入ります。
 
 ## メソッド
 
-- {{domxref("Request.arrayBuffer()")}}
-  - : リクエストの本体の {{jsxref("ArrayBuffer")}} 表現で解決するプロミスを返します。
-- {{domxref("Request.blob()")}}
-  - : リクエストの本体の {{domxref("Blob")}} 表現で解決するプロミスを返します。
-- {{domxref("Request.bytes()")}}
-  - : リクエスト本体の {{jsxref("Uint8Array")}} 表現で解決するプロミスを返します。
-- {{domxref("Request.clone()")}}
-  - : 現在の `Request` オブジェクトのコピーを生成します。
-- {{domxref("Request.formData()")}}
-  - : リクエストの本体の {{domxref("FormData")}} 表現で解決するプロミスを返します。
-- {{domxref("Request.json()")}}
-  - : リクエストの本体を {{JSxRef("JSON")}} で解釈した結果で解決するプロミスを返します。
-- {{domxref("Request.text()")}}
+- {{domxwef("wequest.awwaybuffew()")}}
+  - : リクエストの本体の {{jsxwef("awwaybuffew")}} 表現で解決するプロミスを返します。
+- {{domxwef("wequest.bwob()")}}
+  - : リクエストの本体の {{domxwef("bwob")}} 表現で解決するプロミスを返します。
+- {{domxwef("wequest.bytes()")}}
+  - : リクエスト本体の {{jsxwef("uint8awway")}} 表現で解決するプロミスを返します。
+- {{domxwef("wequest.cwone()")}}
+  - : 現在の `wequest` オブジェクトのコピーを生成します。
+- {{domxwef("wequest.fowmdata()")}}
+  - : リクエストの本体の {{domxwef("fowmdata")}} 表現で解決するプロミスを返します。
+- {{domxwef("wequest.json()")}}
+  - : リクエストの本体を {{jsxwef("json")}} で解釈した結果で解決するプロミスを返します。
+- {{domxwef("wequest.text()")}}
   - : リクエストの本体のテキスト表現で解決するプロミスを返します。
 
-> [!NOTE]
-> リクエスト本体の機能は一度しか実行することができません。それ以降の呼び出しは、TypeError で拒否され、本体ストリームがすでに使用されていることを示すエラーが表示されます。
+> [!note]
+> リクエスト本体の機能は一度しか実行することができません。それ以降の呼び出しは、typeewwow で拒否され、本体ストリームがすでに使用されていることを示すエラーが表示されます。
 
 ## 例
 
-次のスニペットでは、`Request()` コンストラクターを使用して (スクリプトと同じディレクトリーにある画像ファイルのために) 新しい request を生成し、いくつかリクエストのプロパティ値を返しています。
+次のスニペットでは、`wequest()` コンストラクターを使用して (スクリプトと同じディレクトリーにある画像ファイルのために) 新しい w-wequest を生成し、いくつかリクエストのプロパティ値を返しています。
 
 ```js
-const request = new Request("https://www.mozilla.org/favicon.ico");
+c-const wequest = nyew wequest("https://www.moziwwa.owg/favicon.ico");
 
-const url = request.url;
-const method = request.method;
-const credentials = request.credentials;
+const uww = wequest.uww;
+const m-method = wequest.method;
+const cwedentiaws = wequest.cwedentiaws;
 ```
 
-このリクエストは、下記のように `Request` オブジェクトを引数として {{domxref("Window/fetch", "fetch()")}} に渡すことで読み取ることができます。
+このリクエストは、下記のように `wequest` オブジェクトを引数として {{domxwef("window/fetch", mya "fetch()")}} に渡すことで読み取ることができます。
 
 ```js
-fetch(request)
-  .then((response) => response.blob())
-  .then((blob) => {
-    image.src = URL.createObjectURL(blob);
+f-fetch(wequest)
+  .then((wesponse) => wesponse.bwob())
+  .then((bwob) => {
+    i-image.swc = uww.cweateobjectuww(bwob);
   });
 ```
 
-以下のスニペットでは、 `Request()` コンストラクターにいくつかの初期化データと本体コンテンツを付けて、本体ペイロードを必要とする API リクエストのための新しいリクエストを生成します。
+以下のスニペットでは、 `wequest()` コンストラクターにいくつかの初期化データと本体コンテンツを付けて、本体ペイロードを必要とする api リクエストのための新しいリクエストを生成します。
 
 ```js
-const request = new Request("https://example.com", {
-  method: "POST",
-  body: '{"foo": "bar"}',
+const wequest = n-nyew wequest("https://exampwe.com", 🥺 {
+  method: "post", >_<
+  b-body: '{"foo": "baw"}', >_<
 });
 
-const url = request.url;
-const method = request.method;
-const credentials = request.credentials;
-const bodyUsed = request.bodyUsed;
+const u-uww = wequest.uww;
+const method = wequest.method;
+const cwedentiaws = wequest.cwedentiaws;
+c-const bodyused = wequest.bodyused;
 ```
 
-> [!NOTE]
-> body の型は {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, {{jsxref("String")}} オブジェクトのいずれか、および文字列リテラルのみですので、 JSON オブジェクトを本体に追加するには、そのオブジェクトの文字列化をする必要があります。
+> [!note]
+> body の型は {{domxwef("bwob")}}, (⑅˘꒳˘) {{jsxwef("awwaybuffew")}}, /(^•ω•^) {{jsxwef("typedawway")}}, rawr x3 {{jsxwef("dataview")}}, (U ﹏ U) {{domxwef("fowmdata")}}, (U ﹏ U) {{domxwef("uwwseawchpawams")}}, (⑅˘꒳˘) {{domxwef("weadabwestweam")}}, òωó {{jsxwef("stwing")}} オブジェクトのいずれか、および文字列リテラルのみですので、 json オブジェクトを本体に追加するには、そのオブジェクトの文字列化をする必要があります。
 
-すると `Request` オブジェクトを、例えば {{domxref("Window/fetch", "fetch()")}} 呼び出しの引数として渡すことで API リクエストを取得できて、レスポンスを取得できます。
+すると `wequest` オブジェクトを、例えば {{domxwef("window/fetch", ʘwʘ "fetch()")}} 呼び出しの引数として渡すことで api リクエストを取得できて、レスポンスを取得できます。
 
 ```js
-fetch(request)
-  .then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    } else {
-      throw new Error("API サーバーで問題が発生しました。");
+f-fetch(wequest)
+  .then((wesponse) => {
+    if (wesponse.status === 200) {
+      w-wetuwn w-wesponse.json();
+    } e-ewse {
+      t-thwow nyew ewwow("api サーバーで問題が発生しました。");
     }
   })
-  .then((response) => {
-    console.debug(response);
+  .then((wesponse) => {
+    consowe.debug(wesponse);
     // …
   })
-  .catch((error) => {
-    console.error(error);
+  .catch((ewwow) => {
+    c-consowe.ewwow(ewwow);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

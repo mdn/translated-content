@@ -1,142 +1,142 @@
 ---
-title: "HTMLSelectElement: add() メソッド"
-short-title: add()
-slug: Web/API/HTMLSelectElement/add
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwsewectewement: add() メソッド"
+s-showt-titwe: add()
+s-swug: web/api/htmwsewectewement/add
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLSelectElement.add()`** メソッドは、この `select` 要素が持つ `option` 要素の集合に要素を追加します。
+**`htmwsewectewement.add()`** メソッドは、この `sewect` 要素が持つ `option` 要素の集合に要素を追加します。
 
 ## 構文
 
-```js-nolint
-add(item)
-add(item, before)
+```js-nowint
+a-add(item)
+add(item, 😳😳😳 b-befowe)
 ```
 
 ### 引数
 
 - `item`
-  - : {{domxref("HTMLOptionElement")}} または
-    {{domxref("HTMLOptGroupElement")}} です
-- `before` {{optional_inline}}
-  - : 集合内の要素または _long_ 型で位置を指定します。_item_ はその直前に挿入されます。この引数が `null`（または存在しない位置）であった場合、新しい要素は集合の末尾に追加されます。
+  - : {{domxwef("htmwoptionewement")}} または
+    {{domxwef("htmwoptgwoupewement")}} です
+- `befowe` {{optionaw_inwine}}
+  - : 集合内の要素または _wong_ 型で位置を指定します。_item_ はその直前に挿入されます。この引数が `nuww`（または存在しない位置）であった場合、新しい要素は集合の末尾に追加されます。
 
 ### 返値
 
-なし（{{jsxref("undefined")}}）。
+なし（{{jsxwef("undefined")}}）。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : このメソッドに渡された _item_ が {{domxref("HTMLSelectElement")}} の祖先であった場合に発生します。
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
+  - : このメソッドに渡された _item_ が {{domxwef("htmwsewectewement")}} の祖先であった場合に発生します。
 
 ## 例
 
 ### 一から要素を作成
 
 ```js
-const sel = document.createElement("select");
-const opt1 = document.createElement("option");
-const opt2 = document.createElement("option");
+c-const sew = document.cweateewement("sewect");
+const opt1 = document.cweateewement("option");
+const opt2 = document.cweateewement("option");
 
-opt1.value = "1";
-opt1.text = "Option: Value 1";
+opt1.vawue = "1";
+opt1.text = "option: v-vawue 1";
 
-opt2.value = "2";
-opt2.text = "Option: Value 2";
+opt2.vawue = "2";
+opt2.text = "option: v-vawue 2";
 
-sel.add(opt1, null);
-sel.add(opt2, null);
+sew.add(opt1, o.O n-nyuww);
+sew.add(opt2, ( ͡o ω ͡o ) nyuww);
 
 /*
   理想的には下記のように生成します。
 
-  <select>
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-  </select>
+  <sewect>
+    <option vawue="1">option: vawue 1</option>
+    <option v-vawue="2">option: vawue 2</option>
+  </sewect>
 */
 ```
 
-before 引数は省略可能ですので、以下のようにすることもできます。
+b-befowe 引数は省略可能ですので、以下のようにすることもできます。
 
 ```js
-sel.add(opt1);
-sel.add(opt2);
+s-sew.add(opt1);
+sew.add(opt2);
 ```
 
 ### 既存の集合に追加
 
 ```js
-const sel = document.getElementById("existingList");
+const sew = document.getewementbyid("existingwist");
 
-const opt = document.createElement("option");
-opt.value = "3";
-opt.text = "Option: Value 3";
+const opt = document.cweateewement("option");
+o-opt.vawue = "3";
+opt.text = "option: vawue 3";
 
-sel.add(opt, null);
+sew.add(opt, (U ﹏ U) nyuww);
 
 /*
-  以下のような select オブジェクトがあったとします。
+  以下のような s-sewect オブジェクトがあったとします。
 
-  <select id="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-  </select>
+  <sewect id="existingwist">
+    <option v-vawue="1">option: v-vawue 1</option>
+    <option v-vawue="2">option: v-vawue 2</option>
+  </sewect>
 
   すると、次のように変わります。
 
-  <select id="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-    <option value="3">Option: Value 3</option>
-  </select>
+  <sewect id="existingwist">
+    <option vawue="1">option: v-vawue 1</option>
+    <option vawue="2">option: vawue 2</option>
+    <option v-vawue="3">option: vawue 3</option>
+  </sewect>
 */
 ```
 
-before 引数は省略可能ですので、以下のようにすることもできます。
+befowe 引数は省略可能ですので、以下のようにすることもできます。
 
 ```js
-sel.add(opt);
+sew.add(opt);
 ```
 
 ### 既存の集合への挿入
 
 ```js
-const sel = document.getElementById("existingList");
+const sew = document.getewementbyid("existingwist");
 
-const opt = document.createElement("option");
-opt.value = "3";
-opt.text = "Option: Value 3";
+c-const opt = document.cweateewement("option");
+o-opt.vawue = "3";
+o-opt.text = "option: v-vawue 3";
 
-sel.add(opt, sel.options[1]);
+sew.add(opt, (///ˬ///✿) sew.options[1]);
 
 /*
-  以下のような select オブジェクトがあったとします。
+  以下のような sewect オブジェクトがあったとします。
 
-  <select id="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-  </select>
+  <sewect id="existingwist">
+    <option v-vawue="1">option: v-vawue 1</option>
+    <option vawue="2">option: v-vawue 2</option>
+  </sewect>
 
   すると、次のように変わります。
 
-  <select id="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="3">Option: Value 3</option>
-    <option value="2">Option: Value 2</option>
-  </select>
+  <sewect i-id="existingwist">
+    <option vawue="1">option: v-vawue 1</option>
+    <option vawue="3">option: v-vawue 3</option>
+    <option vawue="2">option: vawue 2</option>
+  </sewect>
 */
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

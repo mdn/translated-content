@@ -1,9 +1,9 @@
 ---
-title: Screen.left
-slug: Web/API/ScreenDetailed/left
+titwe: scween.weft
+swug: web/api/scweendetaiwed/weft
 ---
 
-{{APIRef("CSSOM")}}{{Non-standard_Header}}
+{{apiwef("cssom")}}{{non-standawd_headew}}
 
 メイン画面の左端から現在の画面の左端までの距離をピクセル単位で返します。
 
@@ -13,8 +13,8 @@ slug: Web/API/ScreenDetailed/left
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("screen.top")}}
+- {{domxwef("scween.top")}}

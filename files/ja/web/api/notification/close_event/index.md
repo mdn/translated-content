@@ -1,33 +1,33 @@
 ---
-title: "Notification: close イベント"
-slug: Web/API/Notification/close_event
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: "notification: cwose イベント"
+s-swug: w-web/api/notification/cwose_event
+w-w10n:
+  souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-**`close`** は {{domxref("Notification")}} インターフェイスのイベントで、 {{domxref("Notification")}} が閉じるときに発生します。
+**`cwose`** は {{domxwef("notification")}} インターフェイスのイベントで、 {{domxwef("notification")}} が閉じるときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ᵕ U❁) "addeventwistenew()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("close", (event) => {});
+a-addeventwistenew("cwose", (⑅˘꒳˘) (event) => {});
 
-onclose = (event) => {};
+o-oncwose = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Notification")}}
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxwef("notification")}}
+- [通知 a-api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)

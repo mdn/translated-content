@@ -1,64 +1,64 @@
 ---
-title: "WebGLRenderingContext: createShader() メソッド"
-short-title: createShader()
-slug: Web/API/WebGLRenderingContext/createShader
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "webgwwendewingcontext: cweateshadew() メソッド"
+showt-titwe: c-cweateshadew()
+s-swug: w-web/api/webgwwendewingcontext/cweateshadew
+w-w10n:
+  s-souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-{{domxref("WebGLRenderingContext")}} の **`createShader()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、 {{domxref("WebGLShader")}} を作成します。それからさらに、 {{domxref("WebGLRenderingContext.shaderSource()")}} と {{domxref("WebGLRenderingContext.compileShader()")}} を用いて設定できます。
+{{domxwef("webgwwendewingcontext")}} の **`cweateshadew()`** は [webgw a-api](/ja/docs/web/api/webgw_api) のメソッドで、 {{domxwef("webgwshadew")}} を作成します。それからさらに、 {{domxwef("webgwwendewingcontext.shadewsouwce()")}} と {{domxwef("webgwwendewingcontext.compiweshadew()")}} を用いて設定できます。
 
 ## 構文
 
-```js-nolint
-createShader(type)
+```js-nowint
+c-cweateshadew(type)
 ```
 
 ### 引数
 
 - `type`
-  - : `gl.VERTEX_SHADER` と `gl.FRAGMENT_SHADER` のどちらかです。
+  - : `gw.vewtex_shadew` と `gw.fwagment_shadew` のどちらかです。
 
 ### 返値
 
-新しい ({{domxref("WebGLShader")}}) です。
+新しい ({{domxwef("webgwshadew")}}) です。
 
 ## 例
 
-例については {{domxref("WebGLShader")}} を参照してください。
+例については {{domxwef("webgwshadew")}} を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLProgram")}}
-- {{domxref("WebGLShader")}}
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-- {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
-- {{domxref("WebGLRenderingContext.compileShader()")}}
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxwef("webgwpwogwam")}}
+- {{domxwef("webgwshadew")}}
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+- {{domxwef("webgwwendewingcontext.bindattwibwocation()")}}
+- {{domxwef("webgwwendewingcontext.compiweshadew()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}

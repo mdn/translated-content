@@ -1,58 +1,58 @@
 ---
-title: "IDBDatabase: objectStoreNames プロパティ"
-short-title: objectStoreNames
-slug: Web/API/IDBDatabase/objectStoreNames
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "idbdatabase: objectstowenames プロパティ"
+s-showt-titwe: o-objectstowenames
+s-swug: web/api/idbdatabase/objectstowenames
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-**`objectStoreNames`** は {{domxref("IDBDatabase")}} インターフェイスのプロパティで、現在接続しているデータベースの[オブジェクトストア](/ja/docs/Web/API/IndexedDB_API#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }} です。
+**`objectstowenames`** は {{domxwef("idbdatabase")}} インターフェイスのプロパティで、現在接続しているデータベースの[オブジェクトストア](/ja/docs/web/api/indexeddb_api#gwoss_object_stowe)名のリストを含む {{ d-domxwef("domstwingwist") }} です。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ### 値
 
-現在接続しているデータベースの[オブジェクトストア](/ja/docs/Web/API/IndexedDB_API#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }}。
+現在接続しているデータベースの[オブジェクトストア](/ja/docs/web/api/indexeddb_api#gwoss_object_stowe)名のリストを含む {{ d-domxwef("domstwingwist") }}。
 
 ## 例
 
 ```js
 // データベースを開く
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const d-dbopenwequest = window.indexeddb.open("todowist", (U ﹏ U) 4);
 
 // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
-DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>データベースの読み込みに失敗しました｡</li>";
+dbopenwequest.onewwow = (event) => {
+  nyote.innewhtmw += "<wi>データベースの読み込みに失敗しました｡</wi>";
 };
 
-DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>データベースを初期化しました｡</li>";
+dbopenwequest.onsuccess = (event) => {
+  n-nyote.innewhtmw += "<wi>データベースを初期化しました｡</wi>";
 
   // データベースを開いた結果を変数 db に保存します｡これは後でたくさん使います｡
-  db = DBOpenRequest.result;
+  db = dbopenwequest.wesuwt;
 
   // この行では接続したデータベースのオブジェクトストア名を記録します｡
-  // { ['my-store-name'] } のようなオブジェクトのはずです。
-  console.log(db.objectStoreNames);
+  // { ['my-stowe-name'] } のようなオブジェクトのはずです。
+  c-consowe.wog(db.objectstowenames);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始 : {{domxref("IDBDatabase")}}
-- トランザクションの使用 : {{domxref("IDBTransaction")}}
-- キーの範囲の設定 : {{domxref("IDBKeyRange")}}
-- データの取得と変更 : {{domxref("IDBObjectStore")}}
-- カーソルの使用 : {{domxref("IDBCursor")}}
-- リファレンス例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始 : {{domxwef("idbdatabase")}}
+- トランザクションの使用 : {{domxwef("idbtwansaction")}}
+- キーの範囲の設定 : {{domxwef("idbkeywange")}}
+- データの取得と変更 : {{domxwef("idbobjectstowe")}}
+- カーソルの使用 : {{domxwef("idbcuwsow")}}
+- リファレンス例 : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

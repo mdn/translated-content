@@ -1,36 +1,36 @@
 ---
-title: BluetoothDevice
-slug: Web/API/BluetoothDevice
-l10n:
-  sourceCommit: 15d7838061736509d08d642611bd26c1251c0500
+titwe: bwuetoothdevice
+swug: w-web/api/bwuetoothdevice
+w-w10n:
+  s-souwcecommit: 15d7838061736509d08d642611bd26c1251c0500
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-[Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) の`BluetoothDevice` インターフェイスは、特定のスクリプト実行環境下における Bluetooth デバイスを表します。
+[web b-bwuetooth api](/ja/docs/web/api/web_bwuetooth_api) の`bwuetoothdevice` インターフェイスは、特定のスクリプト実行環境下における b-bwuetooth デバイスを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-- {{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxwef("bwuetoothdevice.id")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
   - : デバイスを一意に識別する文字列です。
-- {{DOMxRef("BluetoothDevice.name")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxwef("bwuetoothdevice.name")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
   - : デバイスの人間にわかりやすい名前を表す文字列です。
-- {{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : デバイスの {{DOMxRef("BluetoothRemoteGATTServer")}} への参照です。
+- {{domxwef("bwuetoothdevice.gatt")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : デバイスの {{domxwef("bwuetoothwemotegattsewvew")}} への参照です。
 
 ## インスタンスメソッド
 
-- {{DOMxRef("BluetoothDevice.watchAdvertisements()")}} {{Experimental_Inline}}
-  - : `undefined` で解決するか、アドバタイズが何らかの理由で表示できない場合はエラーで拒否される {{jsxref("Promise")}} を返します。
-- {{DOMxRef("BluetoothDevice.forget()")}} {{Experimental_Inline}}
+- {{domxwef("bwuetoothdevice.watchadvewtisements()")}} {{expewimentaw_inwine}}
+  - : `undefined` で解決するか、アドバタイズが何らかの理由で表示できない場合はエラーで拒否される {{jsxwef("pwomise")}} を返します。
+- {{domxwef("bwuetoothdevice.fowget()")}} {{expewimentaw_inwine}}
   - : ユーザーがアクセスを許可したデバイスへのアクセスを無効化します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

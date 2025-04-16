@@ -1,63 +1,63 @@
 ---
-title: "HTMLElement: attributeStyleMap プロパティ"
-short-title: attributeStyleMap
-slug: Web/API/HTMLElement/attributeStyleMap
-l10n:
-  sourceCommit: 2eacf352ffb5d8a3233c13e4bf5949578b847759
+titwe: "htmwewement: attwibutestywemap プロパティ"
+s-showt-titwe: a-attwibutestywemap
+s-swug: w-web/api/htmwewement/attwibutestywemap
+w-w10n:
+  souwcecommit: 2eacf352ffb5d8a3233c13e4bf5949578b847759
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`attributeStyleMap`** は {{domxref("HTMLElement")}} インターフェイスの読み取り専用のプロパティで、生きた {{domxref("StylePropertyMap")}} を返します。これには、要素のインライン スタイル属性で定義されているか、スクリプト経由で {{domxref("HTMLElement")}} インターフェイスの {{domxref("HTMLElement.style", "style")}} プロパティを使用して割り当てられた、要素のスタイルプロパティのリストが入ります。
+**`attwibutestywemap`** は {{domxwef("htmwewement")}} インターフェイスの読み取り専用のプロパティで、生きた {{domxwef("stywepwopewtymap")}} を返します。これには、要素のインライン スタイル属性で定義されているか、スクリプト経由で {{domxwef("htmwewement")}} インターフェイスの {{domxwef("htmwewement.stywe", (U ᵕ U❁) "stywe")}} プロパティを使用して割り当てられた、要素のスタイルプロパティのリストが入ります。
 
-一括指定プロパティは展開されます。`border-top: 1px solid black` を設定すると、代わりに個別指定プロパティ ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, {{cssxref("border-top-width")}}) が設定されます。
+一括指定プロパティは展開されます。`bowdew-top: 1px s-sowid bwack` を設定すると、代わりに個別指定プロパティ ({{cssxwef("bowdew-top-cowow")}}, -.- {{cssxwef("bowdew-top-stywe")}}, {{cssxwef("bowdew-top-width")}}) が設定されます。
 
-{{domxref("HTMLElement.style", "style")}} プロパティと `attributeStyleMap` プロパティの主な違いは、`style` プロパティが {{domxref("CSSStyleDeclaration")}} オブジェクトを返すのに対し、`attributeStyleMap` プロパティは {{domxref("StylePropertyMap")}} オブジェクトを返すことです。
+{{domxwef("htmwewement.stywe", ^^;; "stywe")}} プロパティと `attwibutestywemap` プロパティの主な違いは、`stywe` プロパティが {{domxwef("cssstywedecwawation")}} オブジェクトを返すのに対し、`attwibutestywemap` プロパティは {{domxwef("stywepwopewtymap")}} オブジェクトを返すことです。
 
-このプロパティ自身は書き込みできませんが、`style` プロパティを通じて返す {{domxref("CSSStyleDeclaration")}} オブジェクトと同様に、このプロパティが返す {{domxref("StylePropertyMap")}} オブジェクトを通じてインラインスタイルを読み書きすることができます。
+このプロパティ自身は書き込みできませんが、`stywe` プロパティを通じて返す {{domxwef("cssstywedecwawation")}} オブジェクトと同様に、このプロパティが返す {{domxwef("stywepwopewtymap")}} オブジェクトを通じてインラインスタイルを読み書きすることができます。
 
 ## 値
 
-生きた {{domxref("StylePropertyMap")}} オブジェクトです。
+生きた {{domxwef("stywepwopewtymap")}} オブジェクトです。
 
 ## 例
 
-次のコードは `style` 属性と `attributeStyleMap` プロパティの関係を示しています。
+次のコードは `stywe` 属性と `attwibutestywemap` プロパティの関係を示しています。
 
-```html
-<div style="white-space: pre-line;">
-  <div id="el" style="border-top: 1px solid blue; color: red;">要素の例</div>
-  <div id="output"></div>
+```htmw
+<div s-stywe="white-space: p-pwe-wine;">
+  <div id="ew" stywe="bowdew-top: 1px sowid bwue; cowow: wed;">要素の例</div>
+  <div i-id="output"></div>
 </div>
 ```
 
 ```css
-#el {
+#ew {
   font-size: 16px;
 }
 ```
 
 ```js
-const element = document.getElementById("el");
-const output = document.getElementById("output");
+const ewement = d-document.getewementbyid("ew");
+const output = d-document.getewementbyid("output");
 
-for (const property of element.attributeStyleMap) {
-  output.textContent += `${property[0]} = ${property[1][0].toString()}\n`;
+fow (const pwopewty of ewement.attwibutestywemap) {
+  output.textcontent += `${pwopewty[0]} = ${pwopewty[1][0].tostwing()}\n`;
 }
 ```
 
-{{EmbedLiveSample("Examples", "200", "200")}}
+{{embedwivesampwe("exampwes", >_< "200", "200")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLElement.style")}}
-- {{domxref("SVGElement.attributeStyleMap")}}
-- {{domxref("MathMLElement.attributeStyleMap")}}
+- {{domxwef("htmwewement.stywe")}}
+- {{domxwef("svgewement.attwibutestywemap")}}
+- {{domxwef("mathmwewement.attwibutestywemap")}}

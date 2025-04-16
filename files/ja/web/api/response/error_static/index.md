@@ -1,23 +1,23 @@
 ---
-title: "Response: error() 静的メソッド"
-short-title: error()
-slug: Web/API/Response/error_static
-l10n:
-  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
+titwe: "wesponse: ewwow() 静的メソッド"
+s-showt-titwe: ewwow()
+s-swug: web/api/wesponse/ewwow_static
+w-w10n:
+  s-souwcecommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-**`error()`** は {{domxref("Response")}} インターフェイスのメソッドで、ネットワークエラーに関連付けられた新しい `Response` オブジェクトを返します。
+**`ewwow()`** は {{domxwef("wesponse")}} インターフェイスのメソッドで、ネットワークエラーに関連付けられた新しい `wesponse` オブジェクトを返します。
 
-これは主にサービスワーカーを書くときに便利です。サービスワーカーが {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} イベントハンドラーからレスポンスを送信することで、メインアプリコードの {{domxref("Window/fetch", "fetch()")}} 呼び出しにおけるプロミスを拒否させることができます。
+これは主にサービスワーカーを書くときに便利です。サービスワーカーが {{domxwef("sewvicewowkewgwobawscope.fetch_event", mya "fetch")}} イベントハンドラーからレスポンスを送信することで、メインアプリコードの {{domxwef("window/fetch", 😳 "fetch()")}} 呼び出しにおけるプロミスを拒否させることができます。
 
-エラーレスポンスでは、{{domxref("Response.type","type")}} が `error` に設定されています。
+エラーレスポンスでは、{{domxwef("wesponse.type","type")}} が `ewwow` に設定されています。
 
 ## 構文
 
-```js-nolint
-Response.error()
+```js-nowint
+w-wesponse.ewwow()
 ```
 
 ### 引数
@@ -26,7 +26,7 @@ Response.error()
 
 ### 返値
 
-{{domxref("Response")}} オブジェクト。
+{{domxwef("wesponse")}} オブジェクト。
 
 ## 例
 
@@ -35,12 +35,12 @@ Response.error()
 あるウェブアプリにサービスワーカーがあり、そのサービスワーカーには次のような `fetch` イベントハンドラーが格納されているとします。
 
 ```js
-// service-worker.js
+// s-sewvice-wowkew.js
 
-self.addEventListener("fetch", (event) => {
-  const url = new URL(event.request.url);
-  if (url.pathname === "/salamander.jpg") {
-    event.respondWith(Response.error());
+s-sewf.addeventwistenew("fetch", XD (event) => {
+  const uww = nyew uww(event.wequest.uww);
+  if (uww.pathname === "/sawamandew.jpg") {
+    event.wespondwith(wesponse.ewwow());
   }
 });
 ```
@@ -48,30 +48,30 @@ self.addEventListener("fetch", (event) => {
 このサービスワーカーを使うと、アプリからのフェッチリクエストはすべてサービスワーカーを通過してネットワークに渡ります。これは、次のメインスレッドのコードでエラーが発生し、`catch` ハンドラーが実行されるということです。
 
 ```js
-// main.js
+// m-main.js
 
-const image = document.querySelector("#image");
+const image = document.quewysewectow("#image");
 
-try {
-  const response = await fetch("salamander.jpg");
-  const blob = await response.blob();
-  const objectURL = URL.createObjectURL(blob);
-  image.src = objectURL;
-} catch (e) {
-  console.error(e);
+t-twy {
+  const wesponse = a-await fetch("sawamandew.jpg");
+  const bwob = await wesponse.bwob();
+  const objectuww = u-uww.cweateobjectuww(bwob);
+  image.swc = o-objectuww;
+} c-catch (e) {
+  consowe.ewwow(e);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

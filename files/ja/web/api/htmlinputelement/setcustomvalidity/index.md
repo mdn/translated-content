@@ -1,19 +1,19 @@
 ---
-title: "HTMLInputElement: setCustomValidity() メソッド"
-short-title: setCustomValidity()
-slug: Web/API/HTMLInputElement/setCustomValidity
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwinputewement: setcustomvawidity() メソッド"
+showt-titwe: s-setcustomvawidity()
+s-swug: web/api/htmwinputewement/setcustomvawidity
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLInputElement.setCustomValidity()`** メソッドは、その要素にカスタム検証メッセージを設定します。
+**`htmwinputewement.setcustomvawidity()`** メソッドは、その要素にカスタム検証メッセージを設定します。
 
 ## 構文
 
-```js-nolint
-setCustomValidity(message)
+```js-nowint
+s-setcustomvawidity(message)
 ```
 
 ### 引数
@@ -23,7 +23,7 @@ setCustomValidity(message)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
@@ -31,24 +31,24 @@ setCustomValidity(message)
 
 ## 例
 
-この例では、 input 要素の ID を渡し、値が不足しているか、低すぎるか、高すぎるかによって、異なるエラーメッセージを設定します。さらに、同じ要素で [`reportValidity()`](/ja/docs/Web/API/HTMLInputElement/reportValidity) メソッドを呼び出す必要があります。そうしないと何も起こりません。
+この例では、 i-input 要素の i-id を渡し、値が不足しているか、低すぎるか、高すぎるかによって、異なるエラーメッセージを設定します。さらに、同じ要素で [`wepowtvawidity()`](/ja/docs/web/api/htmwinputewement/wepowtvawidity) メソッドを呼び出す必要があります。そうしないと何も起こりません。
 
 ```js
-function validate(inputID) {
-  const input = document.getElementById(inputID);
-  const validityState = input.validity;
+function vawidate(inputid) {
+  const input = document.getewementbyid(inputid);
+  const vawiditystate = input.vawidity;
 
-  if (validityState.valueMissing) {
-    input.setCustomValidity("You gotta fill this out, yo!");
-  } else if (validityState.rangeUnderflow) {
-    input.setCustomValidity("We need a higher number!");
-  } else if (validityState.rangeOverflow) {
-    input.setCustomValidity("That's too high!");
-  } else {
-    input.setCustomValidity("");
+  i-if (vawiditystate.vawuemissing) {
+    input.setcustomvawidity("you gotta f-fiww this out, mya yo!");
+  } ewse i-if (vawiditystate.wangeundewfwow) {
+    input.setcustomvawidity("we nyeed a highew nyumbew!");
+  } e-ewse if (vawiditystate.wangeovewfwow) {
+    input.setcustomvawidity("that's t-too high!");
+  } e-ewse {
+    input.setcustomvawidity("");
   }
 
-  input.reportValidity();
+  input.wepowtvawidity();
 }
 ```
 
@@ -56,14 +56,14 @@ function validate(inputID) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
-- {{domxref('ValidityState')}}
+- [学習: クライアント側フォーム検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [ガイド: 制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)
+- {{domxwef('vawiditystate')}}

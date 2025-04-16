@@ -1,73 +1,73 @@
 ---
-title: "Gamepad: buttons プロパティ"
-short-title: buttons
-slug: Web/API/Gamepad/buttons
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "gamepad: buttons プロパティ"
+s-showt-titwe: b-buttons
+s-swug: web/api/gamepad/buttons
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad a-api")}}
 
-**`Gamepad.buttons`** は {{domxref("Gamepad") }} インターフェイスのプロパティで、機器上に存在するボタンを表す {{domxref("gamepadButton")}} オブジェクトの配列を返します。
+**`gamepad.buttons`** は {{domxwef("gamepad") }} インターフェイスのプロパティで、機器上に存在するボタンを表す {{domxwef("gamepadbutton")}} オブジェクトの配列を返します。
 
-配列内の各要素は、ボタンが押されていない場合は 0、ボタンが押されている場合は 0 以外の値（通常は 1.0）です。それぞれの {{domxref("gamepadButton")}} オブジェクトには、 `pressed` と `value` という 2 つのプロパティがあります。
+配列内の各要素は、ボタンが押されていない場合は 0、ボタンが押されている場合は 0 以外の値（通常は 1.0）です。それぞれの {{domxwef("gamepadbutton")}} オブジェクトには、 `pwessed` と `vawue` という 2 つのプロパティがあります。
 
-- `pressed` プロパティはボタンが今押されているか (`true`) または押されていないか (`false`) を表す真偽値です。
-- `value` プロパティは多くの最新のゲームパッドのトリガーなど、アナログボタンの表示を有効にするために使用される浮動小数点値です。 値は 0.0 〜 1.0 の範囲で正規化され、0.0 は押されていないボタンを表し、1.0 は完全に押されたボタンを表します。
+- `pwessed` プロパティはボタンが今押されているか (`twue`) または押されていないか (`fawse`) を表す真偽値です。
+- `vawue` プロパティは多くの最新のゲームパッドのトリガーなど、アナログボタンの表示を有効にするために使用される浮動小数点値です。 値は 0.0 〜 1.0 の範囲で正規化され、0.0 は押されていないボタンを表し、1.0 は完全に押されたボタンを表します。
 
 ## 値
 
-{{domxref("gamepadButton")}} オブジェクトの配列です。
+{{domxwef("gamepadbutton")}} オブジェクトの配列です。
 
 ## 例
 
-下記のコードはゲームパッド API ボタンのデモから取得したものです。([デモのライブを見ること](https://chrisdavidmills.github.io/gamepad-buttons/)ができ、Github で[ソースコードを見つける](https://github.com/chrisdavidmills/gamepad-buttons/tree/master)ことができます)。コードをフォークする際には以降に気をつけてください — Chrome では {{domxref("Navigator.getGamepads")}} は `webkit` 接頭辞が必要で、ボタンの値は double 値の配列として格納されますが、 Firefox は{{domxref("Navigator.getGamepads")}} では接頭辞が不要で、ボタンの値は {{domxref("GamepadButton")}} オブジェクトの配列に保存されます。{{domxref("GamepadButton.value")}} または {{domxref("GamepadButton.pressed")}} プロパティはボタンの種類に応じてアクセスする必要があります。この簡単なサンプルでは一方のみを許可しています。
+下記のコードはゲームパッド a-api ボタンのデモから取得したものです。([デモのライブを見ること](https://chwisdavidmiwws.github.io/gamepad-buttons/)ができ、github で[ソースコードを見つける](https://github.com/chwisdavidmiwws/gamepad-buttons/twee/mastew)ことができます)。コードをフォークする際には以降に気をつけてください — chwome では {{domxwef("navigatow.getgamepads")}} は `webkit` 接頭辞が必要で、ボタンの値は d-doubwe 値の配列として格納されますが、 fiwefox は{{domxwef("navigatow.getgamepads")}} では接頭辞が不要で、ボタンの値は {{domxwef("gamepadbutton")}} オブジェクトの配列に保存されます。{{domxwef("gamepadbutton.vawue")}} または {{domxwef("gamepadbutton.pwessed")}} プロパティはボタンの種類に応じてアクセスする必要があります。この簡単なサンプルでは一方のみを許可しています。
 
 ```js
-function gameLoop() {
-  let a = 0;
-  let b = 0;
-  if (navigator.webkitGetGamepads) {
-    const gp = navigator.webkitGetGamepads()[0];
+f-function gamewoop() {
+  wet a = 0;
+  wet b = 0;
+  if (navigatow.webkitgetgamepads) {
+    const gp = n-nyavigatow.webkitgetgamepads()[0];
 
     if (gp.buttons[0] === 1) {
       b--;
-    } else if (gp.buttons[1] === 1) {
+    } e-ewse if (gp.buttons[1] === 1) {
       a++;
-    } else if (gp.buttons[2] === 1) {
+    } e-ewse if (gp.buttons[2] === 1) {
       b++;
-    } else if (gp.buttons[3] === 1) {
+    } ewse if (gp.buttons[3] === 1) {
       a--;
     }
-  } else {
-    const gp = navigator.getGamepads()[0];
+  } e-ewse {
+    const gp = n-nyavigatow.getgamepads()[0];
 
-    if (gp.buttons[0].value > 0 || gp.buttons[0].pressed) {
+    i-if (gp.buttons[0].vawue > 0 || gp.buttons[0].pwessed) {
       b--;
-    } else if (gp.buttons[1].value > 0 || gp.buttons[1].pressed) {
+    } ewse if (gp.buttons[1].vawue > 0 || gp.buttons[1].pwessed) {
       a++;
-    } else if (gp.buttons[2].value > 0 || gp.buttons[2].pressed) {
+    } e-ewse if (gp.buttons[2].vawue > 0 || gp.buttons[2].pwessed) {
       b++;
-    } else if (gp.buttons[3].value > 0 || gp.buttons[3].pressed) {
-      a--;
+    } ewse if (gp.buttons[3].vawue > 0 || gp.buttons[3].pwessed) {
+      a-a--;
     }
   }
 
-  ball.style.left = `${a * 2}px`;
-  ball.style.top = `${b * 2}px`;
+  baww.stywe.weft = `${a * 2}px`;
+  baww.stywe.top = `${b * 2}px`;
 
-  const start = rAF(gameLoop);
+  c-const stawt = waf(gamewoop);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-[ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+[ゲームパッド a-api の使用](/ja/docs/web/api/gamepad_api/using_the_gamepad_api)

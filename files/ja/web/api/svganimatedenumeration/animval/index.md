@@ -1,14 +1,14 @@
 ---
-title: "SVGAnimatedEnumeration: animVal プロパティ"
-short-title: animVal
-slug: Web/API/SVGAnimatedEnumeration/animVal
-l10n:
-  sourceCommit: b7c9a25bc747b8a4a3dfd91a37ac1b2193414c3a
+titwe: "svganimatedenumewation: animvaw プロパティ"
+s-showt-titwe: a-animvaw
+s-swug: web/api/svganimatedenumewation/animvaw
+w-w10n:
+  s-souwcecommit: b-b7c9a25bc747b8a4a3dfd91a37ac1b2193414c3a
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`animVal`** は {{domxref("SVGAnimatedEnumeration")}} インターフェイスのプロパティで、 SVG の列挙型の現在の値を表します。アニメーションがない場合は、 {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}} と同じ
+**`animvaw`** は {{domxwef("svganimatedenumewation")}} インターフェイスのプロパティで、 s-svg の列挙型の現在の値を表します。アニメーションがない場合は、 {{domxwef("svganimatedenumewation.basevaw", nyaa~~ "basevaw")}} と同じ
 
 ## 値
 
@@ -16,59 +16,59 @@ l10n:
 
 ## 例
 
-```css hidden
-html,
+```css h-hidden
+htmw, (⑅˘꒳˘)
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <div>
-  <svg viewBox="0 0 100 100" width="200" height="200">
-    <clipPath id="clip1" clipPathUnits="userSpaceOnUse">
+  <svg viewbox="0 0 100 100" width="200" h-height="200">
+    <cwippath id="cwip1" cwippathunits="usewspaceonuse">
       <animate
-        attributeName="clipPathUnits"
-        values="userSpaceOnUse;objectBoundingBox;userSpaceOnUse"
-        dur="2s"
-        repeatCount="indefinite" />
-      <circle cx="50" cy="50" r="25" />
-    </clipPath>
+        attwibutename="cwippathunits"
+        v-vawues="usewspaceonuse;objectboundingbox;usewspaceonuse"
+        duw="2s"
+        w-wepeatcount="indefinite" />
+      <ciwcwe cx="50" cy="50" w="25" />
+    </cwippath>
 
-    <rect id="r1" x="0" y="0" width="50" height="100" />
+    <wect id="w1" x-x="0" y="0" width="50" height="100" />
 
-    <use clip-path="url(#clip1)" href="#r1" fill="lightblue" />
+    <use c-cwip-path="uww(#cwip1)" h-hwef="#w1" fiww="wightbwue" />
   </svg>
 </div>
-<pre id="log"></pre>
+<pwe id="wog"></pwe>
 ```
 
 ```js
-const clipPath1 = document.getElementById("clip1");
-const log = document.getElementById("log");
+const cwippath1 = document.getewementbyid("cwip1");
+c-const wog = document.getewementbyid("wog");
 
-function displayLog() {
-  const animValue = clipPath1.clipPathUnits.animVal;
-  const baseValue = clipPath1.clipPathUnits.baseVal;
-  log.textContent = `The 'clipPathUnits.animVal' is ${animValue}.\n`;
-  log.textContent += `The 'clipPathUnits.baseVal' is ${baseValue}.`;
-  requestAnimationFrame(displayLog);
+function dispwaywog() {
+  const animvawue = c-cwippath1.cwippathunits.animvaw;
+  const basevawue = c-cwippath1.cwippathunits.basevaw;
+  w-wog.textcontent = `the 'cwippathunits.animvaw' i-is ${animvawue}.\n`;
+  w-wog.textcontent += `the 'cwippathunits.basevaw' is ${basevawue}.`;
+  wequestanimationfwame(dispwaywog);
 }
 
-displayLog();
+dispwaywog();
 ```
 
-{{EmbedLiveSample("Examples", "280", "260")}}
+{{embedwivesampwe("exampwes", rawr x3 "280", "260")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedEnumeration.baseVal")}}
+- {{domxwef("svganimatedenumewation.basevaw")}}

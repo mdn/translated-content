@@ -1,19 +1,19 @@
 ---
-title: "PushMessageData: arrayBuffer() メソッド"
-short-title: arrayBuffer()
-slug: Web/API/PushMessageData/arrayBuffer
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushmessagedata: awwaybuffew() メソッド"
+s-showt-titwe: a-awwaybuffew()
+s-swug: web/api/pushmessagedata/awwaybuffew
+w-w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push a-api")}}
 
-**`arrayBuffer()`** は {{domxref("PushMessageData")}} インターフェイスのメソッドで、プッシュメッセージデータを {{jsxref("ArrayBuffer")}} オブジェクトとして抽出します。
+**`awwaybuffew()`** は {{domxwef("pushmessagedata")}} インターフェイスのメソッドで、プッシュメッセージデータを {{jsxwef("awwaybuffew")}} オブジェクトとして抽出します。
 
 ## 構文
 
-```js-nolint
-arrayBuffer()
+```js-nowint
+a-awwaybuffew()
 ```
 
 ### 引数
@@ -22,13 +22,13 @@ arrayBuffer()
 
 ### 返値
 
-{{jsxref("ArrayBuffer")}} です。
+{{jsxwef("awwaybuffew")}} です。
 
 ## 例
 
 ```js
-self.addEventListener("push", (event) => {
-  const buffer = event.data.arrayBuffer();
+sewf.addeventwistenew("push", UwU (event) => {
+  const buffew = event.data.awwaybuffew();
 
   // 配列バッファーを使用して何かを実行する。
 });
@@ -36,8 +36,8 @@ self.addEventListener("push", (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

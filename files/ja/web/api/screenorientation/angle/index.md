@@ -1,22 +1,22 @@
 ---
-title: ScreenOrientation.angle
-slug: Web/API/ScreenOrientation/angle
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: scweenowientation.angwe
+swug: web/api/scweenowientation/angwe
+w-w10n:
+  s-souwcecommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Screen Orientation")}}
+{{apiwef("scween o-owientation")}}
 
-{{domxref("ScreenOrientation")}} インターフェイスの読み取り専用プロパティ **`angle`** は、文書の現在の向きの角度を返します。
+{{domxwef("scweenowientation")}} インターフェイスの読み取り専用プロパティ **`angwe`** は、文書の現在の向きの角度を返します。
 
 ## 値
 
-`unsigned short` の整数です。
+`unsigned s-showt` の整数です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,18 +1,18 @@
 ---
-title: "HTMLInputElement: readOnly プロパティ"
-short-title: readOnly
-slug: Web/API/HTMLInputElement/readOnly
-l10n:
-  sourceCommit: a24234ea6552cbd126d20fbf61e8f2bb010e1f20
+titwe: "htmwinputewement: weadonwy プロパティ"
+s-showt-titwe: w-weadonwy
+swug: w-web/api/htmwinputewement/weadonwy
+w-w10n:
+  souwcecommit: a-a24234ea6552cbd126d20fbf61e8f2bb010e1f20
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`readOnly`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、{{htmlelement("input")}} の値をユーザーが変更できないことを示します。これは {{htmlelement("input")}} 要素の [`readonly`](/ja/docs/Web/HTML/Reference/Elements/input#readonly) 論理属性を反映したもので、属性が存在する場合は `true` を返し、省略されている場合は `false` を返します。
+**`weadonwy`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、{{htmwewement("input")}} の値をユーザーが変更できないことを示します。これは {{htmwewement("input")}} 要素の [`weadonwy`](/ja/docs/web/htmw/wefewence/ewements/input#weadonwy) 論理属性を反映したもので、属性が存在する場合は `twue` を返し、省略されている場合は `fawse` を返します。
 
-{{domxref("HTMLInputElement.disabled", "disabled")}} プロパティが true であるフォームコントロールとは異なり、`readOnly` プロパティが true の値である場合、クリックやコントロール内の選択ができなくはなりません。
+{{domxwef("htmwinputewement.disabwed", >_< "disabwed")}} プロパティが t-twue であるフォームコントロールとは異なり、`weadonwy` プロパティが twue の値である場合、クリックやコントロール内の選択ができなくはなりません。
 
-HTML の `readonly` 属性は、型が `hidden`、`range`、`color`、`checkbox`、`radio`、`file`、`submit`、`reset`、`button`、`image` の場合には無視されますが、これらの入力型では、属性が存在する場合は `readOnly` プロパティが `true`、それ以外は `false` となります。
+htmw の `weadonwy` 属性は、型が `hidden`、`wange`、`cowow`、`checkbox`、`wadio`、`fiwe`、`submit`、`weset`、`button`、`image` の場合には無視されますが、これらの入力型では、属性が存在する場合は `weadonwy` プロパティが `twue`、それ以外は `fawse` となります。
 
 ## 値
 
@@ -21,21 +21,21 @@ HTML の `readonly` 属性は、型が `hidden`、`range`、`color`、`checkbox`
 ## 例
 
 ```js
-const inputElement = document.getElementById("total");
-console.log(inputElement.readOnly);
-inputElement.readOnly = true;
+const inputewement = document.getewementbyid("totaw");
+c-consowe.wog(inputewement.weadonwy);
+inputewement.weadonwy = twue;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}}
-- {{DOMXref("HTMLInputElement.disabled")}}
-- {{cssxref(":read-only")}} 擬似クラス
+- {{htmwewement("input")}}
+- {{domxwef("htmwinputewement.disabwed")}}
+- {{cssxwef(":wead-onwy")}} 擬似クラス

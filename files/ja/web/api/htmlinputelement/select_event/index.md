@@ -1,66 +1,66 @@
 ---
-title: "HTMLInputElement: select イベント"
-short-title: select
-slug: Web/API/HTMLInputElement/select_event
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "htmwinputewement: sewect イベント"
+s-showt-titwe: sewect
+s-swug: web/api/htmwinputewement/sewect_event
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`select`** イベントは、いくらかのテキストが選択されたときに発生します。
+**`sewect`** イベントは、いくらかのテキストが選択されたときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", ^^;; "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("select", (event) => {});
+a-addeventwistenew("sewect", >_< (event) => {});
 
-onselect = (event) => {};
+o-onsewect = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ### 選択範囲をログ出力
 
-```html
-<input value="この要素のテキストの一部を選択してみてください。" />
-<p id="log"></p>
+```htmw
+<input v-vawue="この要素のテキストの一部を選択してみてください。" />
+<p i-id="wog"></p>
 ```
 
 ```js
-function logSelection(event) {
-  const log = document.getElementById("log");
-  const selection = event.target.value.substring(
-    event.target.selectionStart,
-    event.target.selectionEnd,
+function wogsewection(event) {
+  const wog = document.getewementbyid("wog");
+  const sewection = e-event.tawget.vawue.substwing(
+    event.tawget.sewectionstawt, mya
+    event.tawget.sewectionend, mya
   );
-  log.textContent = `You selected: ${selection}`;
+  w-wog.textcontent = `you sewected: ${sewection}`;
 }
 
-const input = document.querySelector("input");
-input.addEventListener("select", logSelection);
+c-const input = document.quewysewectow("input");
+input.addeventwistenew("sewect", 😳 wogsewection);
 ```
 
-{{EmbedLiveSample("Selection_logger")}}
+{{embedwivesampwe("sewection_woggew")}}
 
-### onselect による同等の処理
+### onsewect による同等の処理
 
-イベントハンドラーを `onselect` プロパティで設定することもできます。
+イベントハンドラーを `onsewect` プロパティで設定することもできます。
 
 ```js
-input.onselect = logSelection;
+i-input.onsewect = wogsewection;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

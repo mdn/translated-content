@@ -1,46 +1,46 @@
 ---
-title: CustomEvent
-slug: Web/API/CustomEvent
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: customevent
+swug: web/api/customevent
+w-w10n:
+  souwcecommit: b-b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`CustomEvent`** インターフェイスは、何らかの目的でアプリケーションから初期化されるイベントを表します。
+**`customevent`** インターフェイスは、何らかの目的でアプリケーションから初期化されるイベントを表します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
-  - : `CustomEvent` を生成します。
+- {{domxwef("customevent.customevent", ^•ﻌ•^ "customevent()")}}
+  - : `customevent` を生成します。
 
 ## インスタンスプロパティ
 
-_親である {{domxref("Event")}} インターフェイスから継承したプロパティがあります。_
+_親である {{domxwef("event")}} インターフェイスから継承したプロパティがあります。_
 
-- {{domxref("CustomEvent.detail")}} {{ReadOnlyInline}}
+- {{domxwef("customevent.detaiw")}} {{weadonwyinwine}}
   - : イベントが初期化されたときに渡された何らかのデータを返します。
 
 ## インスタンスメソッド
 
-_親である {{domxref("Event")}} インターフェイスから継承したメソッドがあります。_
+_親である {{domxwef("event")}} インターフェイスから継承したメソッドがあります。_
 
-- {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
-  - : `CustomEvent` オブジェクトを初期化します。イベントが既に配信されている場合、このメソッドは何も行いません。
+- {{domxwef("customevent.initcustomevent()")}} {{depwecated_inwine}}
+  - : `customevent` オブジェクトを初期化します。イベントが既に配信されている場合、このメソッドは何も行いません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Window.postMessage()")}}
-- [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)
+- {{domxwef("window.postmessage()")}}
+- [イベントの作成と起動](/ja/docs/web/events/cweating_and_twiggewing_events)

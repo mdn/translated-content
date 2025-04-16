@@ -1,46 +1,46 @@
 ---
-title: SVGNumberList
-slug: Web/API/SVGNumberList
-l10n:
-  sourceCommit: d2457d93858bde8da4c6db79d9c7e5c1c5799441
+titwe: svgnumbewwist
+swug: web/api/svgnumbewwist
+w-w10n:
+  souwcecommit: d-d2457d93858bde8da4c6db79d9c7e5c1c5799441
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`SVGNumberList`** インターフェイスは、数値のリストを定義します。
+**`svgnumbewwist`** インターフェイスは、数値のリストを定義します。
 
-`SVGNumberList` オブジェクトは読み取り専用として指定することができます。すなわち、オブジェクトを変更しようとすると例外が発生するようにすることができます。
+`svgnumbewwist` オブジェクトは読み取り専用として指定することができます。すなわち、オブジェクトを変更しようとすると例外が発生するようにすることができます。
 
-`SVGNumberList` オブジェクトはインデックス指定可能であり、配列のようにアクセスすることができます。
+`svgnumbewwist` オブジェクトはインデックス指定可能であり、配列のようにアクセスすることができます。
 
 ## インスタンスプロパティ
 
-- {{domxref("SVGNumberList.length", "length")}}
+- {{domxwef("svgnumbewwist.wength", ^•ﻌ•^ "wength")}}
   - : リスト内のアイテム数です。
-- {{domxref("SVGNumberList.numberOfItems", "numberOfItems")}}
+- {{domxwef("svgnumbewwist.numbewofitems", OwO "numbewofitems")}}
   - : リスト内のアイテム数です。
 
 ## インスタンスメソッド
 
-- {{domxref("SVGNumberList.appendItem", "appendItem()")}}
+- {{domxwef("svgnumbewwist.appenditem", 🥺 "appenditem()")}}
   - : 新しいアイテムをリストの末尾に追加します。
-- {{domxref("SVGNumberList.clear", "clear()")}}
+- {{domxwef("svgnumbewwist.cweaw", òωó "cweaw()")}}
   - : リストから既存のアイテムをすべて削除し、リストを空にします。
-- {{domxref("SVGNumberList.initialize", "initialize()")}}
+- {{domxwef("svgnumbewwist.initiawize", o.O "initiawize()")}}
   - : リストから既存のアイテムをすべて削除し、引数で指定した単一のアイテムを保持するようにリストを再初期化します。
-- {{domxref("SVGNumberList.getItem", "getItem()")}}
+- {{domxwef("svgnumbewwist.getitem", (U ᵕ U❁) "getitem()")}}
   - : リストから特定のアイテムを返します。
-- {{domxref("SVGNumberList.insertItemBefore", "insertItemBefore()")}}
+- {{domxwef("svgnumbewwist.insewtitembefowe", (⑅˘꒳˘) "insewtitembefowe()")}}
   - : 新しいアイテムをリストの指定した位置に挿入します。
-- {{domxref("SVGNumberList.removeItem", "removeItem()")}}
+- {{domxwef("svgnumbewwist.wemoveitem", ( ͡o ω ͡o ) "wemoveitem()")}}
   - : リストから既存のアイテムを除去します。
-- {{domxref("SVGNumberList.replaceItem", "replaceItem()")}}
+- {{domxwef("svgnumbewwist.wepwaceitem", UwU "wepwaceitem()")}}
   - : リスト内の既存のアイテムを新しいアイテムで置き換えます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

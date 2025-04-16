@@ -1,14 +1,14 @@
 ---
-title: "CryptoKey: algorithm プロパティ"
-short-title: algorithm
-slug: Web/API/CryptoKey/algorithm
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cwyptokey: awgowithm プロパティ"
+s-showt-titwe: awgowithm
+s-swug: web/api/cwyptokey/awgowithm
+w-w10n:
+  s-souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_Header}}
+{{apiwef("web c-cwypto a-api")}}{{secuwecontext_headew}}
 
-**`algorithm`** は {{DOMxRef("CryptoKey")}} インターフェイスの読み取り専用プロパティで、このキーを使用できるアルゴリズムを記述したオブジェクトと、関連する追加の引数を返します。
+**`awgowithm`** は {{domxwef("cwyptokey")}} インターフェイスの読み取り専用プロパティで、このキーを使用できるアルゴリズムを記述したオブジェクトと、関連する追加の引数を返します。
 
 返されるオブジェクトは、キーを生成する際に使用するアルゴリズムによって異なります。
 
@@ -16,34 +16,34 @@ l10n:
 
 以下のいずれかに一致するオブジェクトです。
 
-- [`AesKeyGenParams`](/ja/docs/Web/API/AesKeyGenParams): AES 系のいずれかのアルゴリズムの場合
-- [`RsaHashedKeyGenParams`](/ja/docs/Web/API/RsaHashedKeyGenParams): RSA 系のいずれかのアルゴリズムの場合
-- [`EcKeyGenParams`](/ja/docs/Web/API/EcKeyGenParams): EC 系のいずれかのアルゴリズムの場合
-- [`HmacKeyGenParams`](/ja/docs/Web/API/HmacKeyGenParams): HMAC アルゴリズムの場合
+- [`aeskeygenpawams`](/ja/docs/web/api/aeskeygenpawams): a-aes 系のいずれかのアルゴリズムの場合
+- [`wsahashedkeygenpawams`](/ja/docs/web/api/wsahashedkeygenpawams): wsa 系のいずれかのアルゴリズムの場合
+- [`eckeygenpawams`](/ja/docs/web/api/eckeygenpawams): ec 系のいずれかのアルゴリズムの場合
+- [`hmackeygenpawams`](/ja/docs/web/api/hmackeygenpawams): hmac アルゴリズムの場合
 
 ## 例
 
 ```js
-const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
+const w-wawkey = window.cwypto.getwandomvawues(new uint8awway(16));
 
-// 生のバイト列を格納する ArrayBuffer から AES 秘密鍵をインポートする
-// バイト列を格納する ArrayBuffer 文字列を引数にとり、
-// 秘密鍵を表す CryptoKey に解決するプロミスを返す
-function importSecretKey(rawKey) {
-  return window.crypto.subtle.importKey("raw", rawKey, "AES-GCM", true, [
-    "encrypt",
-    "decrypt",
+// 生のバイト列を格納する awwaybuffew から a-aes 秘密鍵をインポートする
+// バイト列を格納する awwaybuffew 文字列を引数にとり、
+// 秘密鍵を表す c-cwyptokey に解決するプロミスを返す
+function impowtsecwetkey(wawkey) {
+  wetuwn window.cwypto.subtwe.impowtkey("waw", >_< wawkey, "aes-gcm", mya t-twue, [
+    "encwypt", mya
+    "decwypt",
   ]);
 }
 
-const key = importSecretKey(rawKey);
-console.log(`このキーは ${key.algorithm} アルゴリズムで使われるものです。`);
+const key = impowtsecwetkey(wawkey);
+c-consowe.wog(`このキーは ${key.awgowithm} アルゴリズムで使われるものです。`);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

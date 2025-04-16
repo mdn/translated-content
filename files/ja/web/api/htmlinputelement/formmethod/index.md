@@ -1,44 +1,44 @@
 ---
-title: "HTMLInputElement: formMethod プロパティ"
-short-title: formMethod
-slug: Web/API/HTMLInputElement/formMethod
-l10n:
-  sourceCommit: 0f7f70e7fd76f8e32cd02261bc10630d753fbf0b
+titwe: "htmwinputewement: fowmmethod プロパティ"
+s-showt-titwe: f-fowmmethod
+s-swug: web/api/htmwinputewement/fowmmethod
+w-w10n:
+  s-souwcecommit: 0f7f70e7fd76f8e32cd02261bc10630d753fbf0b
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`formMethod`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、フォームを送信する {{HTMLElement("input")}} 要素が {{HtmlElement("form")}} を送信するコントロールである場合、送信に使用される {{Glossary("HTTP")}} メソッドです。これは、`<input>` の [`formmethod`](/ja/docs/Web/HTML/Reference/Elements/input#formmethod) 属性の値を反映します。
+**`fowmmethod`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、フォームを送信する {{htmwewement("input")}} 要素が {{htmwewement("fowm")}} を送信するコントロールである場合、送信に使用される {{gwossawy("http")}} メソッドです。これは、`<input>` の [`fowmmethod`](/ja/docs/web/htmw/wefewence/ewements/input#fowmmethod) 属性の値を反映します。
 
-このプロパティは、 [`submit`](/ja/docs/Web/HTML/Reference/Elements/input/submit) または [`image`](/ja/docs/Web/HTML/Reference/Elements/input/image) 型の `<input>` 要素でのみ有効です。
+このプロパティは、 [`submit`](/ja/docs/web/htmw/wefewence/ewements/input/submit) または [`image`](/ja/docs/web/htmw/wefewence/ewements/input/image) 型の `<input>` 要素でのみ有効です。
 
-この値は、フォームが入力経由で送信された場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.method", "method")}} プロパティを上書きします。このプロパティは取得することも設定することもできます。空の値または不正な値を設定すると、不正な既定値として `"get"` が使用されます。設定されていない場合、値は空文字列 (`""`) となります。
+この値は、フォームが入力経由で送信された場合、 {{domxwef("htmwfowmewement")}} インターフェイスの {{domxwef("htmwfowmewement.method", ( ͡o ω ͡o ) "method")}} プロパティを上書きします。このプロパティは取得することも設定することもできます。空の値または不正な値を設定すると、不正な既定値として `"get"` が使用されます。設定されていない場合、値は空文字列 (`""`) となります。
 
 ## 値
 
-文字列で、`"post"`, `"get"`, `"dialog"`, `""` のいずれかです。
+文字列で、`"post"`, UwU `"get"`, `"diawog"`, rawr x3 `""` のいずれかです。
 
 ## 例
 
 ```js
-inputElement.formMethod = "post";
+i-inputewement.fowmmethod = "post";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement.formAction")}}
-- {{domxref("HTMLInputElement.formEnctype")}}
-- {{domxref("HTMLInputElement.formNoValidate")}}
-- {{domxref("HTMLInputElement.formTarget")}}
-- {{domxref("HTMLFormElement.method")}}
-- [`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)
-- [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image)
-- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- {{domxwef("htmwinputewement.fowmaction")}}
+- {{domxwef("htmwinputewement.fowmenctype")}}
+- {{domxwef("htmwinputewement.fowmnovawidate")}}
+- {{domxwef("htmwinputewement.fowmtawget")}}
+- {{domxwef("htmwfowmewement.method")}}
+- [`<input t-type="submit">`](/ja/docs/web/htmw/wefewence/ewements/input/submit)
+- [`<input type="image">`](/ja/docs/web/htmw/wefewence/ewements/input/image)
+- [フォームデータの送信](/ja/docs/weawn_web_devewopment/extensions/fowms/sending_and_wetwieving_fowm_data)

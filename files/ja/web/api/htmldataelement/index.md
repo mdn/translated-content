@@ -1,35 +1,35 @@
 ---
-title: HTMLDataElement
-slug: Web/API/HTMLDataElement
-l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+titwe: htmwdataewement
+swug: w-web/api/htmwdataewement
+w-w10n:
+  s-souwcecommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLDataElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} のものの他に）{{HTMLElement("data")}} 要素を操作するための特殊なプロパティを提供します。
+**`htmwdataewement`** インターフェイスは、（継承によって利用できる通常の {{domxwef("htmwewement")}} のものの他に）{{htmwewement("data")}} 要素を操作するための特殊なプロパティを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 属性
 
-_親である {{domxref("HTMLElement")}} から継承しているプロパティがあります。_
+_親である {{domxwef("htmwewement")}} から継承しているプロパティがあります。_
 
-- {{domxref("HTMLDataElement.value")}}
-  - : HTML の [`value`](/ja/docs/Web/HTML/Reference/Elements/data#value) 属性を反映する、要素の機械可読な値が入った文字列です。
+- {{domxwef("htmwdataewement.vawue")}}
+  - : h-htmw の [`vawue`](/ja/docs/web/htmw/wefewence/ewements/data#vawue) 属性を反映する、要素の機械可読な値が入った文字列です。
 
 ## メソッド
 
-_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承しているメソッドがあります。_
+_固有のメソッドはありません。親である {{domxwef("htmwewement")}} から継承しているメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 本インターフェイスを実装する HTML 要素: {{HTMLElement("data")}}.
+- 本インターフェイスを実装する h-htmw 要素: {{htmwewement("data")}}. o.O

@@ -1,159 +1,159 @@
 ---
-title: "HTMLElement: drag イベント"
-short-title: drag
-slug: Web/API/HTMLElement/drag_event
-l10n:
-  sourceCommit: 689be3910aa020e10ca58a81a4c9190a5819f4f2
+titwe: "htmwewement: dwag イベント"
+s-showt-titwe: d-dwag
+swug: w-web/api/htmwewement/dwag_event
+w-w10n:
+  souwcecommit: 689be3910aa020e10ca58a81a4c9190a5819f4f2
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`drag` イベントは、要素や選択されたテキストをユーザーがドラッグしている間に、数百ミリ秒ごとに発生します。
+`dwag` イベントは、要素や選択されたテキストをユーザーがドラッグしている間に、数百ミリ秒ごとに発生します。
 
-このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
+このイベントはキャンセル可能で、{{domxwef("document")}} オブジェクトと {{domxwef("window")}} オブジェクトまでバブルアップする可能性があります。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", mya "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
 
 ```js
-addEventListener("drag", (event) => {});
+a-addeventwistenew("dwag", 🥺 (event) => {});
 
-ondrag = (event) => {};
+o-ondwag = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("DragEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("dwagevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("DragEvent")}}
+{{inhewitancediagwam("dwagevent")}}
 
 ## イベントプロパティ
 
-_以下に挙げたプロパティに加えて、親である {{domxref("Event")}} から継承したプロパティもあります。_
+_以下に挙げたプロパティに加えて、親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+- {{domxwef('dwagevent.datatwansfew')}} {{weadonwyinwine}}
   - : ドラッグ＆ドロップ操作の間に転送されるデータです。
 
 ## 例
 
 ### ドラッグ＆ドロップの例
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="dropzone">
-  <div id="draggable" draggable="true">この div はドラッグ可</div>
+```htmw
+<div c-cwass="dwopzone">
+  <div id="dwaggabwe" dwaggabwe="twue">この div はドラッグ可</div>
 </div>
-<div class="dropzone" id="droptarget"></div>
+<div cwass="dwopzone" id="dwoptawget"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 body {
   /* この例の中でユーザーによるテキストの選択を防止する */
-  user-select: none;
+  usew-sewect: nyone;
 }
 
-#draggable {
-  text-align: center;
-  background: white;
+#dwaggabwe {
+  text-awign: c-centew;
+  backgwound: w-white;
 }
 
-.dropzone {
+.dwopzone {
   width: 200px;
   height: 20px;
-  background: blueviolet;
-  margin: 10px;
-  padding: 10px;
+  backgwound: b-bwueviowet;
+  mawgin: 10px;
+  p-padding: 10px;
 }
 
-.dropzone.dragover {
-  background-color: purple;
+.dwopzone.dwagovew {
+  b-backgwound-cowow: puwpwe;
 }
 
-.dragging {
+.dwagging {
   opacity: 0.5;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-let dragged;
+wet dwagged;
 
 /* ドラッグ可能なターゲット上で発生するイベント */
-const source = document.getElementById("draggable");
-source.addEventListener("drag", (event) => {
-  console.log("dragging");
+c-const souwce = document.getewementbyid("dwaggabwe");
+souwce.addeventwistenew("dwag", >_< (event) => {
+  consowe.wog("dwagging");
 });
 
-source.addEventListener("dragstart", (event) => {
+souwce.addeventwistenew("dwagstawt", >_< (event) => {
   // ドラッグ中の要素の参照を保存
-  dragged = event.target;
+  dwagged = event.tawget;
   // 半透明にする
-  event.target.classList.add("dragging");
+  e-event.tawget.cwasswist.add("dwagging");
 });
 
-source.addEventListener("dragend", (event) => {
+souwce.addeventwistenew("dwagend", (⑅˘꒳˘) (event) => {
   // 透明度を解除
-  event.target.classList.remove("dragging");
+  event.tawget.cwasswist.wemove("dwagging");
 });
 
 /* ドロップ対象に発生するイベント */
-const target = document.getElementById("droptarget");
-target.addEventListener(
-  "dragover",
+c-const t-tawget = document.getewementbyid("dwoptawget");
+t-tawget.addeventwistenew(
+  "dwagovew",
   (event) => {
     // ドロップできるように既定の動作を停止
-    event.preventDefault();
+    e-event.pweventdefauwt();
   },
-  false,
+  fawse, /(^•ω•^)
 );
 
-target.addEventListener("dragenter", (event) => {
+tawget.addeventwistenew("dwagentew", rawr x3 (event) => {
   // ドラッグ可能な要素がドロップ先に入ったときに、ドロップ先の候補を強調表示する
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.add("dragover");
+  i-if (event.tawget.cwasswist.contains("dwopzone")) {
+    event.tawget.cwasswist.add("dwagovew");
   }
 });
 
-target.addEventListener("dragleave", (event) => {
+tawget.addeventwistenew("dwagweave", (U ﹏ U) (event) => {
   // ドラッグ可能な要素がドロップ先から離れたときに、ドロップ先の候補の背景をリセットする
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
+  i-if (event.tawget.cwasswist.contains("dwopzone")) {
+    event.tawget.cwasswist.wemove("dwagovew");
   }
 });
 
-target.addEventListener("drop", (event) => {
+tawget.addeventwistenew("dwop", (U ﹏ U) (event) => {
   // 既定の動作（一部の要素でリンクとして開く）を行わないようにする。
-  event.preventDefault();
+  event.pweventdefauwt();
   // ドラッグした要素を選択されたドロップターゲットに移動する
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
-    event.target.appendChild(dragged);
+  if (event.tawget.cwasswist.contains("dwopzone")) {
+    event.tawget.cwasswist.wemove("dwagovew");
+    e-event.tawget.appendchiwd(dwagged);
   }
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample('ドラッグ＆ドロップの例')}}
+{{embedwivesampwe('ドラッグ＆ドロップの例')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
-- {{domxref("HTMLElement/dragend_event", "dragend")}}
-- {{domxref("HTMLElement/dragover_event", "dragover")}}
-- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
-- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
-- {{domxref("HTMLElement/drop_event", "drop")}}
+- {{domxwef("htmwewement/dwagstawt_event", (⑅˘꒳˘) "dwagstawt")}}
+- {{domxwef("htmwewement/dwagend_event", òωó "dwagend")}}
+- {{domxwef("htmwewement/dwagovew_event", ʘwʘ "dwagovew")}}
+- {{domxwef("htmwewement/dwagentew_event", /(^•ω•^) "dwagentew")}}
+- {{domxwef("htmwewement/dwagweave_event", ʘwʘ "dwagweave")}}
+- {{domxwef("htmwewement/dwop_event", σωσ "dwop")}}

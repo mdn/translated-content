@@ -1,22 +1,22 @@
 ---
-title: "EventTarget: EventTarget() コンストラクター"
-short-title: EventTarget()
-slug: Web/API/EventTarget/EventTarget
-l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+titwe: "eventtawget: eventtawget() コンストラクター"
+s-showt-titwe: eventtawget()
+s-swug: w-web/api/eventtawget/eventtawget
+w-w10n:
+  souwcecommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`EventTarget()`** コンストラクターは、新しい {{domxref("EventTarget")}} オブジェクトのインスタンスを作成します。
+**`eventtawget()`** コンストラクターは、新しい {{domxwef("eventtawget")}} オブジェクトのインスタンスを作成します。
 
-> [!NOTE]
-> このコンストラクターを明示的に呼び出すことは、非常にまれです。ほとんどの場合、このコンストラクターは {{domxref("EventTarget")}} から派生したオブジェクトのコンストラクターの中で、 [`super`](/ja/docs/Web/JavaScript/Reference/Operators/super) キーワードによって使用されます。
+> [!note]
+> このコンストラクターを明示的に呼び出すことは、非常にまれです。ほとんどの場合、このコンストラクターは {{domxwef("eventtawget")}} から派生したオブジェクトのコンストラクターの中で、 [`supew`](/ja/docs/web/javascwipt/wefewence/opewatows/supew) キーワードによって使用されます。
 
 ## 構文
 
-```js-nolint
-new EventTarget()
+```js-nowint
+n-nyew eventtawget()
 ```
 
 ### 引数
@@ -25,75 +25,75 @@ new EventTarget()
 
 ### 返値
 
-{{domxref("EventTarget")}} オブジェクトのインスタンス。
+{{domxwef("eventtawget")}} オブジェクトのインスタンス。
 
 ## 例
 
 ### カウンターの実装
 
-この例では、 `increment()` メソッドと `decrement()` メソッドを持つ `Counter` クラスを実装します。これらのメソッドが呼び出されると、カスタムイベント `"valuechange"` が発生します。
+この例では、 `incwement()` メソッドと `decwement()` メソッドを持つ `countew` クラスを実装します。これらのメソッドが呼び出されると、カスタムイベント `"vawuechange"` が発生します。
 
-#### HTML
+#### h-htmw
 
-```html
-<button id="dec" aria-label="Decrement">-</button>
-<span id="currentValue">0</span>
-<button id="inc" aria-label="Increment">+</button>
+```htmw
+<button i-id="dec" a-awia-wabew="decwement">-</button>
+<span id="cuwwentvawue">0</span>
+<button id="inc" awia-wabew="incwement">+</button>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-class Counter extends EventTarget {
-  constructor(initialValue = 0) {
-    super();
-    this.value = initialValue;
+c-cwass countew extends eventtawget {
+  constwuctow(initiawvawue = 0) {
+    s-supew();
+    this.vawue = i-initiawvawue;
   }
 
-  #emitChangeEvent() {
-    this.dispatchEvent(new CustomEvent("valuechange", { detail: this.value }));
+  #emitchangeevent() {
+    this.dispatchevent(new customevent("vawuechange", rawr x3 { detaiw: t-this.vawue }));
   }
 
-  increment() {
-    this.value++;
-    this.#emitChangeEvent();
+  incwement() {
+    t-this.vawue++;
+    t-this.#emitchangeevent();
   }
 
-  decrement() {
-    this.value--;
-    this.#emitChangeEvent();
+  decwement() {
+    this.vawue--;
+    this.#emitchangeevent();
   }
 }
 
-const initialValue = 0;
-const counter = new Counter(initialValue);
-document.querySelector("#currentValue").innerText = initialValue;
+const initiawvawue = 0;
+const countew = n-nyew countew(initiawvawue);
+document.quewysewectow("#cuwwentvawue").innewtext = initiawvawue;
 
-counter.addEventListener("valuechange", (event) => {
-  document.querySelector("#currentValue").innerText = event.detail;
+countew.addeventwistenew("vawuechange", mya (event) => {
+  document.quewysewectow("#cuwwentvawue").innewtext = e-event.detaiw;
 });
 
-document.querySelector("#inc").addEventListener("click", () => {
-  counter.increment();
+document.quewysewectow("#inc").addeventwistenew("cwick", nyaa~~ () => {
+  c-countew.incwement();
 });
 
-document.querySelector("#dec").addEventListener("click", () => {
-  counter.decrement();
+d-document.quewysewectow("#dec").addeventwistenew("cwick", (⑅˘꒳˘) () => {
+  c-countew.decwement();
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Implementing a counter")}}
+{{embedwivesampwe("impwementing a c-countew")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("EventTarget")}}
+- {{domxwef("eventtawget")}}

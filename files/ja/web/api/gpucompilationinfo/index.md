@@ -1,80 +1,80 @@
 ---
-title: GPUCompilationInfo
-slug: Web/API/GPUCompilationInfo
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: gpucompiwationinfo
+swug: w-web/api/gpucompiwationinfo
+w-w10n:
+  s-souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("WebGPU API", "WebGPU API", "", "nocode")}} の **`GPUCompilationInfo`** インターフェイスは、シェーダーコードの問題を診断する助けになるように GPU シェーダーモジュールコンパイラーが生成した {{domxref("GPUCompilationMessage")}} オブジェクトの配列を表します。
+{{domxwef("webgpu a-api", rawr x3 "webgpu a-api", (✿oωo) "", "nocode")}} の **`gpucompiwationinfo`** インターフェイスは、シェーダーコードの問題を診断する助けになるように g-gpu シェーダーモジュールコンパイラーが生成した {{domxwef("gpucompiwationmessage")}} オブジェクトの配列を表します。
 
-`GPUCompilationInfo` には、{{domxref("GPUShaderModule.getCompilationInfo()")}} からアクセスできます。
+`gpucompiwationinfo` には、{{domxwef("gpushadewmoduwe.getcompiwationinfo()")}} からアクセスできます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-- {{domxref("GPUCompilationInfo.messages", "messages")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : {{domxref("GPUCompilationMessage")}} オブジェクトの配列です。それぞれのオブジェクトに、それぞれのシェーダーコンパイルメッセージの詳細が格納されています。メッセージは情報・警告・エラーのいずれかです。
+- {{domxwef("gpucompiwationinfo.messages", (ˆ ﻌ ˆ)♡ "messages")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : {{domxwef("gpucompiwationmessage")}} オブジェクトの配列です。それぞれのオブジェクトに、それぞれのシェーダーコンパイルメッセージの詳細が格納されています。メッセージは情報・警告・エラーのいずれかです。
 
 ## 例
 
 以下の例では、シェーダーコード内の関数定義からわざとカッコを抜いています。
 
 ```js
-const shaders = `
-struct VertexOut {
-  @builtin(position) position : vec4f,
-  @location(0) color : vec4f
+c-const shadews = `
+stwuct vewtexout {
+  @buiwtin(position) position : vec4f, (˘ω˘)
+  @wocation(0) c-cowow : vec4f
 }
 
-@vertex
-fn vertex_main(@location(0) position: vec4f,
-               @location(1) color: vec4f -> VertexOut
+@vewtex
+fn vewtex_main(@wocation(0) p-position: vec4f, (⑅˘꒳˘)
+               @wocation(1) c-cowow: vec4f -> vewtexout
 {
-  var output : VertexOut;
-  output.position = position;
-  output.color = color;
-  return output;
+  vaw output : vewtexout;
+  o-output.position = position;
+  o-output.cowow = c-cowow;
+  wetuwn output;
 }
 
-@fragment
-fn fragment_main(fragData: VertexOut) -> @location(0) vec4f
+@fwagment
+fn fwagment_main(fwagdata: vewtexout) -> @wocation(0) vec4f
 {
-  return fragData.color;
+  w-wetuwn fwagdata.cowow;
 }
 `;
 ```
 
-このシェーダーモジュールをコンパイルする際、`getCompilationInfo()` を用いて結果のエラーの情報を取得できます。
+このシェーダーモジュールをコンパイルする際、`getcompiwationinfo()` を用いて結果のエラーの情報を取得できます。
 
 ```js
 async function init() {
   // ...
 
-  const shaderModule = device.createShaderModule({
-    code: shaders,
+  const shadewmoduwe = device.cweateshadewmoduwe({
+    code: s-shadews, (///ˬ///✿)
   });
 
-  const shaderInfo = await shaderModule.getCompilationInfo();
-  const firstMessage = shaderInfo.messages[0];
+  const shadewinfo = a-await s-shadewmoduwe.getcompiwationinfo();
+  c-const fiwstmessage = s-shadewinfo.messages[0];
 
-  console.log(firstMessage.lineNum); // 9
-  console.log(firstMessage.message); // "expected ')' for function declaration"
-  console.log(firstMessage.type); // "error"
+  consowe.wog(fiwstmessage.winenum); // 9
+  consowe.wog(fiwstmessage.message); // "expected ')' fow function d-decwawation"
+  consowe.wog(fiwstmessage.type); // "ewwow"
   // ...
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- [webgpu api](/ja/docs/web/api/webgpu_api)

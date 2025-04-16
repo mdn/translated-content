@@ -1,52 +1,52 @@
 ---
-title: "FetchEvent: handled プロパティ"
-short-title: handled
-slug: Web/API/FetchEvent/handled
-l10n:
-  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
+titwe: "fetchevent: handwed プロパティ"
+s-showt-titwe: handwed
+s-swug: web/api/fetchevent/handwed
+w-w10n:
+  souwcecommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
+{{apiwef("sewvice w-wowkews a-api")}}{{avaiwabweinwowkews("sewvice")}}
 
-**`handled`** は {{DOMxRef("FetchEvent")}} インターフェイスのプロパティで、このイベントがフェッチアルゴリズムによって処理されたかどうかを示すプロミスを返します。このプロパティは、ブラウザーがレスポンスを消費した後にコードを実行することができ、通常は {{DOMxRef("ExtendableEvent.waitUntil", "waitUntil()")}} メソッドと共に使用します。
+**`handwed`** は {{domxwef("fetchevent")}} インターフェイスのプロパティで、このイベントがフェッチアルゴリズムによって処理されたかどうかを示すプロミスを返します。このプロパティは、ブラウザーがレスポンスを消費した後にコードを実行することができ、通常は {{domxwef("extendabweevent.waituntiw", -.- "waituntiw()")}} メソッドと共に使用します。
 
 ## 値
 
-イベントが処理されるまでは待機し、イベントが処理されると履行される {{jsxref("Promise")}} です。
+イベントが処理されるまでは待機し、イベントが処理されると履行される {{jsxwef("pwomise")}} です。
 
 ## 例
 
 ```js
-addEventListener("fetch", (event) => {
-  event.respondWith(
-    (async function () {
-      const response = await doCalculateAResponse(event.request);
+a-addeventwistenew("fetch", (ˆ ﻌ ˆ)♡ (event) => {
+  e-event.wespondwith(
+    (async f-function () {
+      const wesponse = await docawcuwateawesponse(event.wequest);
 
-      event.waitUntil(
+      event.waituntiw(
         (async function () {
-          await doSomeAsyncStuff(); // オプション
+          a-await dosomeasyncstuff(); // オプション
 
           // イベントがブラウザーによって消費されるのを待つ
-          await event.handled;
+          await event.handwed;
 
-          return doFinalStuff(); // イベントが消費された後に後始末
-        })(),
+          w-wetuwn dofinawstuff(); // イベントが消費された後に後始末
+        })(), (⑅˘꒳˘)
       );
 
-      return response;
-    })(),
+      w-wetuwn wesponse;
+    })(), (U ᵕ U❁)
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("ExtendableEvent.waitUntil()")}}
+- {{domxwef("extendabweevent.waituntiw()")}}

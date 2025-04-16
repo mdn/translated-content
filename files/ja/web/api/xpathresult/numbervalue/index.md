@@ -1,60 +1,60 @@
 ---
-title: "XPathResult: numberValue プロパティ"
-short-title: numberValue
-slug: Web/API/XPathResult/numberValue
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "xpathwesuwt: nyumbewvawue プロパティ"
+s-showt-titwe: n-nyumbewvawue
+s-swug: web/api/xpathwesuwt/numbewvawue
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM XPath")}}
+{{apiwef("dom x-xpath")}}
 
-**`numberValue`** は {{domxref("XPathResult")}} インターフェイスの読み取り専用プロパティで、 {{domxref("XPathResult.resultType")}} が `NUMBER_TYPE` である結果の数値を返します。
+**`numbewvawue`** は {{domxwef("xpathwesuwt")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("xpathwesuwt.wesuwttype")}} が `numbew_type` である結果の数値を返します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
-返値は {{domxref("Document.evaluate()")}} が返す `XPathResult` の数値です。
+返値は {{domxwef("document.evawuate()")}} が返す `xpathwesuwt` の数値です。
 
 ### 例外
 
-#### TYPE_ERR
+#### t-type_eww
 
-{{domxref("XPathResult.resultType")}} が `NUMBER_TYPE` でない場合、 `TYPE_ERR` 型の {{domxref("XPathException")}} が発生します。
+{{domxwef("xpathwesuwt.wesuwttype")}} が `numbew_type` でない場合、 `type_eww` 型の {{domxwef("xpathexception")}} が発生します。
 
 ## 例
 
-次の例では `numberValue` プロパティを使用しています。
+次の例では `numbewvawue` プロパティを使用しています。
 
-### HTML
+### h-htmw
 
-```html
-<div>XPath example</div>
-<div>Number of &lt;div&gt;s: <output></output></div>
+```htmw
+<div>xpath exampwe</div>
+<div>numbew of &wt;div&gt;s: <output></output></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const xpath = "count(//div)";
-const result = document.evaluate(
-  xpath,
-  document,
-  null,
-  XPathResult.NUMBER_TYPE,
-  null,
+const x-xpath = "count(//div)";
+const wesuwt = document.evawuate(
+  x-xpath, (⑅˘꒳˘)
+  document, (U ᵕ U❁)
+  nyuww,
+  xpathwesuwt.numbew_type, -.-
+  n-nyuww, ^^;;
 );
-document.querySelector("output").textContent = result.numberValue;
+document.quewysewectow("output").textcontent = wesuwt.numbewvawue;
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 400, 70)}}
+{{embedwivesampwe('exampwes', >_< 400, 70)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

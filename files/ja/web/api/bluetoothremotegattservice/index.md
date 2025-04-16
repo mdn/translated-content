@@ -1,38 +1,38 @@
 ---
-title: BluetoothRemoteGATTService
-slug: Web/API/BluetoothRemoteGATTService
-l10n:
-  sourceCommit: 15d7838061736509d08d642611bd26c1251c0500
+titwe: bwuetoothwemotegattsewvice
+swug: web/api/bwuetoothwemotegattsewvice
+w-w10n:
+  s-souwcecommit: 15d7838061736509d08d642611bd26c1251c0500
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-[Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) の `BluetoothRemoteGATTService` インターフェイスは、GATT サーバーにより提供されるサービスを表します。デバイス、参照されるサービス、このサービスのキャラクタリスティックのリストも含みます。
+[web b-bwuetooth a-api](/ja/docs/web/api/web_bwuetooth_api) の `bwuetoothwemotegattsewvice` インターフェイスは、gatt サーバーにより提供されるサービスを表します。デバイス、参照されるサービス、このサービスのキャラクタリスティックのリストも含みます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-- {{domxref("BluetoothRemoteGATTService.device")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : {{domxref("BluetoothDevice")}} のインスタンスを通じて、この Bluetooth デバイスの情報を返します。
-- {{domxref("BluetoothRemoteGATTService.isPrimary")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxwef("bwuetoothwemotegattsewvice.device")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : {{domxwef("bwuetoothdevice")}} のインスタンスを通じて、この b-bwuetooth デバイスの情報を返します。
+- {{domxwef("bwuetoothwemotegattsewvice.ispwimawy")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : これがプライマリーサービスなのかセカンダリーサービスなのかを表す論理値を返します。
-- {{domxref("BluetoothRemoteGATTService.uuid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : このサービスの UUID を表す文字列を返します。
+- {{domxwef("bwuetoothwemotegattsewvice.uuid")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : このサービスの u-uuid を表す文字列を返します。
 
 ## インスタンスメソッド
 
-- {{domxref("BluetoothRemoteGATTService.getCharacteristic()")}} {{Experimental_Inline}}
-  - : 指定の universally unique identifier (UUID) に対応する {{domxref("BluetoothRemoteGATTCharacteristic")}} のインスタンスで解決する {{jsxref("Promise")}} を返します。
-- {{domxref("BluetoothRemoteGATTService.getCharacteristics()")}} {{Experimental_Inline}}
-  - : 省略可能な universally unique identifier (UUID) に対応する {{domxref("BluetoothRemoteGATTCharacteristic")}} のインスタンスの {{jsxref("Array")}} で解決する {{jsxref("Promise")}} を返します。
+- {{domxwef("bwuetoothwemotegattsewvice.getchawactewistic()")}} {{expewimentaw_inwine}}
+  - : 指定の u-univewsawwy unique identifiew (uuid) に対応する {{domxwef("bwuetoothwemotegattchawactewistic")}} のインスタンスで解決する {{jsxwef("pwomise")}} を返します。
+- {{domxwef("bwuetoothwemotegattsewvice.getchawactewistics()")}} {{expewimentaw_inwine}}
+  - : 省略可能な univewsawwy unique identifiew (uuid) に対応する {{domxwef("bwuetoothwemotegattchawactewistic")}} のインスタンスの {{jsxwef("awway")}} で解決する {{jsxwef("pwomise")}} を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web bwuetooth")}}

@@ -1,90 +1,90 @@
 ---
-title: VRDisplay
-slug: Web/API/VRDisplay
+titwe: vwdispway
+swug: web/api/vwdispway
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}
 
-**`VRDisplay`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、この API が対応している VR 機器を表します。機器 ID や説明文のような汎用的な情報が含まれており、 VR シーンの表示を開始するためのメソッドや、視線パラメーターやディスプレイの備える機能の取得、その他の重要な機能を含んでいます。
+**`vwdispway`** は [webvw a-api](/ja/docs/web/api/webvw_api) のインターフェイスで、この a-api が対応している v-vw 機器を表します。機器 id や説明文のような汎用的な情報が含まれており、 v-vw シーンの表示を開始するためのメソッドや、視線パラメーターやディスプレイの備える機能の取得、その他の重要な機能を含んでいます。
 
-> [!NOTE]
-> このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!note]
+> このインターフェイスは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部でした。 [webxw d-device api](https://immewsive-web.github.io/webxw/)に置き換えられました。
 
-{{domxref("Navigator.getVRDisplays()")}} を呼び出すことで、すべての接続されている VR 機器の配列が返されます。
+{{domxwef("navigatow.getvwdispways()")}} を呼び出すことで、すべての接続されている v-vw 機器の配列が返されます。
 
 ## プロパティ
 
-- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}} {{deprecated_inline}}
-  - : `VRDisplay` の備える機能を示す {{domxref("VRDisplayCapabilities")}} オブジェクトを返します。
-- {{domxref("VRDisplay.depthFar")}} {{deprecated_inline}}
-  - : [視錐台](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の far 平面を定義している z-depth の取得と設定を行います。
-- {{domxref("VRDisplay.depthNear")}} {{deprecated_inline}}
-  - : [視錐台](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の near 平面を定義している z-depth の取得と設定を行います。
-- {{domxref("VRDisplay.displayId")}} {{readonlyInline}} {{deprecated_inline}}
-  - : この VRDisplay 固有のIDを返します。この ID は [Gamepad API](/ja/docs/Web/API/Gamepad_API) (参照 {{domxref("Gamepad.displayId")}}) の関連付けのために使用されます。
-- {{domxref("VRDisplay.displayName")}} {{readonlyInline}} {{deprecated_inline}}
-  - : `VRDisplay` を識別するための人間が読める形式の名前を返します。
-- {{domxref("VRDisplay.isConnected")}} {{readonlyInline}} {{deprecated_inline}}
-  - : `VRDisplay` がコンピュータに接続されているか否かを示す論理値を返します。
-- {{domxref("VRDisplay.isPresenting")}} {{readonlyInline}} {{deprecated_inline}}
-  - : `VRDisplay` が現在コンテンツを表示中であるか否かを示す論理値を返します。
-- {{domxref("VRDisplay.stageParameters")}} {{readonlyInline}} {{deprecated_inline}}
-  - : `VRDisplay` がルームスケール体験をサポートしている場合に、ルームスケールパラメーターを含んだ {{domxref("VRStageParameters")}} オブジェクトを返します。
+- {{domxwef("vwdispway.capabiwities")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : `vwdispway` の備える機能を示す {{domxwef("vwdispwaycapabiwities")}} オブジェクトを返します。
+- {{domxwef("vwdispway.depthfaw")}} {{depwecated_inwine}}
+  - : [視錐台](https://en.wikipedia.owg/wiki/viewing_fwustum) (ビューフラスタム；つまりシーンの可視領域の境界) の faw 平面を定義している z-depth の取得と設定を行います。
+- {{domxwef("vwdispway.depthneaw")}} {{depwecated_inwine}}
+  - : [視錐台](https://en.wikipedia.owg/wiki/viewing_fwustum) (ビューフラスタム；つまりシーンの可視領域の境界) の nyeaw 平面を定義している z-depth の取得と設定を行います。
+- {{domxwef("vwdispway.dispwayid")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : この v-vwdispway 固有のidを返します。この id は [gamepad api](/ja/docs/web/api/gamepad_api) (参照 {{domxwef("gamepad.dispwayid")}}) の関連付けのために使用されます。
+- {{domxwef("vwdispway.dispwayname")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : `vwdispway` を識別するための人間が読める形式の名前を返します。
+- {{domxwef("vwdispway.isconnected")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : `vwdispway` がコンピュータに接続されているか否かを示す論理値を返します。
+- {{domxwef("vwdispway.ispwesenting")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : `vwdispway` が現在コンテンツを表示中であるか否かを示す論理値を返します。
+- {{domxwef("vwdispway.stagepawametews")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : `vwdispway` がルームスケール体験をサポートしている場合に、ルームスケールパラメーターを含んだ {{domxwef("vwstagepawametews")}} オブジェクトを返します。
 
 ## メソッド
 
-- {{domxref("VRDisplay.getEyeParameters()")}} {{deprecated_inline}}
-  - : 指定した側の視線パラメーターを含む {{domxref("VREyeParameters")}} オブジェクトを返します。
-- {{domxref("VRDisplay.getFrameData()")}} {{deprecated_inline}}
-  - : {{domxref("VRFrameData")}} オブジェクトを受け取り、現在のフレームをレンダリングするために必要な情報を入力します。
-- {{domxref("VRDisplay.getImmediatePose()")}} {{deprecated_inline}}
-  - : `VRDisplay` の現在のポーズを定義した {{domxref("VRPose")}} オブジェクトを、予測を適用せずに返します。これはもはや必要ないため、仕様から削除されました。
-- {{domxref("VRDisplay.getLayers()")}} {{deprecated_inline}}
-  - : `VRDisplay` によって現在表示されているレイヤーを返します。
-- {{domxref("VRDisplay.getPose()")}} {{deprecated_inline}}
-  - : 現在のフレームが実際に表示されるときの `VRDisplay` の予測ポーズを定義した {{domxref("VRPose")}} オブジェクトを返します。**このメソッドは非推奨です。代わりに {{domxref("VRDisplay.getFrameData()")}} を使用する必要があり、これも {{domxref("VRPose")}} オブジェクトを提供します。**
-- {{domxref("VRDisplay.resetPose()")}} {{deprecated_inline}}
-  - : 現在の {{domxref("VRPose.position")}} と {{domxref("VRPose.orientation")}} を"原点/ゼロ"位置の値として扱うように、`VRDisplay` のポーズをリセットします。
-- {{domxref("VRDisplay.cancelAnimationFrame()")}} {{deprecated_inline}}
-  - : {{domxref("Window.cancelAnimationFrame")}} の特別な実装で、{{domxref("VRDisplay.requestAnimationFrame()")}} を未登録状態にすることをコールバック可能にしています。
-- {{domxref("VRDisplay.requestAnimationFrame()")}} {{deprecated_inline}}
-  - : {{domxref("Window.requestAnimationFrame")}} の特別な実装で、`VRDisplay`の新しいフレームが描画される際に毎回呼出されるコールバック関数を持っています。
-- {{domxref("VRDisplay.requestPresent()")}} {{deprecated_inline}}
-  - : `VRDisplay` へのシーン描画を開始します。
-- {{domxref("VRDisplay.exitPresent()")}} {{deprecated_inline}}
-  - : `VRDisplay` のシーン描画を停止します。
-- {{domxref("VRDisplay.submitFrame()")}} {{deprecated_inline}}
-  - : 現在表示されている {{domxref("VRLayerInit")}} の状態を取得し、`VRDisplay` に表示します。
+- {{domxwef("vwdispway.geteyepawametews()")}} {{depwecated_inwine}}
+  - : 指定した側の視線パラメーターを含む {{domxwef("vweyepawametews")}} オブジェクトを返します。
+- {{domxwef("vwdispway.getfwamedata()")}} {{depwecated_inwine}}
+  - : {{domxwef("vwfwamedata")}} オブジェクトを受け取り、現在のフレームをレンダリングするために必要な情報を入力します。
+- {{domxwef("vwdispway.getimmediatepose()")}} {{depwecated_inwine}}
+  - : `vwdispway` の現在のポーズを定義した {{domxwef("vwpose")}} オブジェクトを、予測を適用せずに返します。これはもはや必要ないため、仕様から削除されました。
+- {{domxwef("vwdispway.getwayews()")}} {{depwecated_inwine}}
+  - : `vwdispway` によって現在表示されているレイヤーを返します。
+- {{domxwef("vwdispway.getpose()")}} {{depwecated_inwine}}
+  - : 現在のフレームが実際に表示されるときの `vwdispway` の予測ポーズを定義した {{domxwef("vwpose")}} オブジェクトを返します。**このメソッドは非推奨です。代わりに {{domxwef("vwdispway.getfwamedata()")}} を使用する必要があり、これも {{domxwef("vwpose")}} オブジェクトを提供します。**
+- {{domxwef("vwdispway.wesetpose()")}} {{depwecated_inwine}}
+  - : 現在の {{domxwef("vwpose.position")}} と {{domxwef("vwpose.owientation")}} を"原点/ゼロ"位置の値として扱うように、`vwdispway` のポーズをリセットします。
+- {{domxwef("vwdispway.cancewanimationfwame()")}} {{depwecated_inwine}}
+  - : {{domxwef("window.cancewanimationfwame")}} の特別な実装で、{{domxwef("vwdispway.wequestanimationfwame()")}} を未登録状態にすることをコールバック可能にしています。
+- {{domxwef("vwdispway.wequestanimationfwame()")}} {{depwecated_inwine}}
+  - : {{domxwef("window.wequestanimationfwame")}} の特別な実装で、`vwdispway`の新しいフレームが描画される際に毎回呼出されるコールバック関数を持っています。
+- {{domxwef("vwdispway.wequestpwesent()")}} {{depwecated_inwine}}
+  - : `vwdispway` へのシーン描画を開始します。
+- {{domxwef("vwdispway.exitpwesent()")}} {{depwecated_inwine}}
+  - : `vwdispway` のシーン描画を停止します。
+- {{domxwef("vwdispway.submitfwame()")}} {{depwecated_inwine}}
+  - : 現在表示されている {{domxwef("vwwayewinit")}} の状態を取得し、`vwdispway` に表示します。
 
 ## 例
 
 ```js
-if (navigator.getVRDisplays) {
-  console.log("WebVR 1.1 supported");
-  // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function (displays) {
-    // If a display is available, use it to present the scene
-    if (displays.length > 0) {
-      vrDisplay = displays[0];
-      // Now we have our VRDisplay object and can do what we want with it
+if (navigatow.getvwdispways) {
+  c-consowe.wog("webvw 1.1 suppowted");
+  // t-then get the dispways attached to the computew
+  nyavigatow.getvwdispways().then(function (dispways) {
+    // i-if a dispway is avaiwabwe, (U ﹏ U) u-use it to pwesent t-the scene
+    if (dispways.wength > 0) {
+      vwdispway = dispways[0];
+      // nyow we have ouw vwdispway o-object and can do nani we want with it
     }
   });
 }
 ```
 
-> [!NOTE]
-> この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で確認できます。
+> [!note]
+> この完全なコードは [waw-webgw-exampwe](https://github.com/mdn/webvw-tests/bwob/mastew/waw-webgw-exampwe/webgw-demo.js) で確認できます。
 
 ## 仕様書
 
-このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
+このインターフェイスは、古い [webvw api](https://immewsive-web.github.io/webvw/spec/1.1/#intewface-vwdispway) の一部でしたが、 [webxw device a-api](https://immewsive-web.github.io/webxw/) に置き換えられました。標準化される予定はありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
+すべてのブラウザーが新しい [webxw api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、すべてのブラウザーで動作する w-webxw アプリケーションを開発するには、[a-fwame](https://afwame.io/) や [babywon.js](https://www.babywonjs.com/) や [thwee.js](https://thweejs.owg/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を利用したりすると良いでしょう [\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw a-api](/ja/docs/web/api/webvw_api)

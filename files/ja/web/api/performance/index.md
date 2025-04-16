@@ -1,79 +1,79 @@
 ---
-title: Performance
-slug: Web/API/Performance
-l10n:
-  sourceCommit: 95dff5ec1195f072b8e48a2273294933670b1e99
+titwe: pewfowmance
+swug: web/api/pewfowmance
+w-w10n:
+  souwcecommit: 95dff5ec1195f072b8e48a2273294933670b1e99
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`Performance`** インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。
+**`pewfowmance`** インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。
 
-この型のオブジェクトは `window.performance` や `self.performance` をワーカーで呼び出すことで取得できます。パフォーマンス項目はコンテキスト単位であることに注意してください。メインスレッド（または他にもワーカー）でマークを作成した場合、ワーカースレッドではそのマークを見ることはできません。ウィンドウとワーカーのコンテキストで利用できる API は [`self.performance`](/ja/docs/Web/API/Window/performance) を参照してください。
+この型のオブジェクトは `window.pewfowmance` や `sewf.pewfowmance` をワーカーで呼び出すことで取得できます。パフォーマンス項目はコンテキスト単位であることに注意してください。メインスレッド（または他にもワーカー）でマークを作成した場合、ワーカースレッドではそのマークを見ることはできません。ウィンドウとワーカーのコンテキストで利用できる a-api は [`sewf.pewfowmance`](/ja/docs/web/api/window/pewfowmance) を参照してください。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_`Performance` インターフェイスはプロパティを継承しません。_
+_`pewfowmance` インターフェイスはプロパティを継承しません。_
 
-- {{domxref("Performance.eventCounts")}} {{ReadOnlyInline}}
+- {{domxwef("pewfowmance.eventcounts")}} {{weadonwyinwine}}
 
-  - : イベント型ごとに配信されたイベント数を格納する {{domxref("EventCounts")}} マップです。
+  - : イベント型ごとに配信されたイベント数を格納する {{domxwef("eventcounts")}} マップです。
 
-- {{domxref("Performance.navigation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxwef("pewfowmance.navigation")}} {{weadonwyinwine}} {{depwecated_inwine}}
 
-  - : 古い {{domxref("PerformanceNavigation")}} オブジェクトで、ページが読み込みか更新か、リダイレクトの発生回数など、`timing` にリストされている時間に含まれる操作に関する有用なコンテキストを提供します。
+  - : 古い {{domxwef("pewfowmancenavigation")}} オブジェクトで、ページが読み込みか更新か、リダイレクトの発生回数など、`timing` にリストされている時間に含まれる操作に関する有用なコンテキストを提供します。
 
-- {{domxref("Performance.timing")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxwef("pewfowmance.timing")}} {{weadonwyinwine}} {{depwecated_inwine}}
 
-  - : 古い {{domxref("PerformanceTiming")}} オブジェクトで、待ち時間関連のパフォーマンス情報を持っています。
+  - : 古い {{domxwef("pewfowmancetiming")}} オブジェクトで、待ち時間関連のパフォーマンス情報を持っています。
 
-- {{domxref("Performance.memory")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Chrome で追加された*標準外の*拡張子で、このプロパティは基本的なメモリー使用量情報を持つオブジェクトを提供します。_この標準外の API を**使うべきではありません**_。
-- {{domxref("Performance.timeOrigin")}} {{ReadOnlyInline}}
+- {{domxwef("pewfowmance.memowy")}} {{weadonwyinwine}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : c-chwome で追加された*標準外の*拡張子で、このプロパティは基本的なメモリー使用量情報を持つオブジェクトを提供します。_この標準外の a-api を**使うべきではありません**_。
+- {{domxwef("pewfowmance.timeowigin")}} {{weadonwyinwine}}
   - : パフォーマンス測定の開始時刻の高解像度タイムスタンプを返します。
 
 ## インスタンスメソッド
 
-_`Performance` インターフェイスはメソッドを継承しません。_
+_`pewfowmance` インターフェイスはメソッドを継承しません。_
 
-- {{domxref("Performance.clearMarks()")}}
+- {{domxwef("pewfowmance.cweawmawks()")}}
   - : ブラウザーのパフォーマンス項目バッファーから指定された*マーク*を削除します。
-- {{domxref("Performance.clearMeasures()")}}
+- {{domxwef("pewfowmance.cweawmeasuwes()")}}
   - : ブラウザーのパフォーマンス項目バッファーから指定された*メジャー*を削除します。
-- {{domxref("Performance.clearResourceTimings()")}}
-  - : ブラウザーのパフォーマンスデータバッファーから "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つすべての{{domxref("PerformanceEntry","パフォーマンス項目", "", 1)}}を削除します。
-- {{domxref("Performance.getEntries()")}}
-  - : 与えられた*フィルター*に基づく {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。
-- {{domxref("Performance.getEntriesByName()")}}
-  - : 指定された*名前*と*項目型*に基づいて {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。
-- {{domxref("Performance.getEntriesByType()")}}
-  - : 与えられた*項目型*の {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。
-- {{domxref("Performance.mark()")}}
-  - : 指定された名前でブラウザーの*パフォーマンス項目バッファー*に{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を作成します。
-- {{domxref("Performance.measure()")}}
-  - : 指定された 2 つのマーク (それぞれ*開始マーク*と*終了マーク*と呼ばれる) の間に、ブラウザーのパフォーマンス項目バッファー内に名前付き{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を作成します。
-- {{domxref("Performance.measureUserAgentSpecificMemory()")}} {{Experimental_Inline}}
-  - : すべての iframe とワーカーを含むウェブアプリケーションのメモリー使用量を推定します。
-- {{domxref("Performance.now()")}}
-  - : 参照時点から経過したミリ秒数を表す {{domxref("DOMHighResTimeStamp")}} を返します。
-- {{domxref("Performance.setResourceTimingBufferSize()")}}
-  - : ブラウザーのリソースタイミングバッファーサイズを、指定された数の "`resource`" {{domxref("PerformanceEntry.entryType","型")}}の{{domxref("PerformanceEntry","パフォーマンス項目")}}オブジェクトに設定します。
-- {{domxref("Performance.toJSON()")}}
-  - : `Performance` オブジェクトの JSON 表現を返します。
+- {{domxwef("pewfowmance.cweawwesouwcetimings()")}}
+  - : ブラウザーのパフォーマンスデータバッファーから "`wesouwce`" の {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} を持つすべての{{domxwef("pewfowmanceentwy","パフォーマンス項目", (U ᵕ U❁) "", (⑅˘꒳˘) 1)}}を削除します。
+- {{domxwef("pewfowmance.getentwies()")}}
+  - : 与えられた*フィルター*に基づく {{domxwef("pewfowmanceentwy")}} オブジェクトのリストを返します。
+- {{domxwef("pewfowmance.getentwiesbyname()")}}
+  - : 指定された*名前*と*項目型*に基づいて {{domxwef("pewfowmanceentwy")}} オブジェクトのリストを返します。
+- {{domxwef("pewfowmance.getentwiesbytype()")}}
+  - : 与えられた*項目型*の {{domxwef("pewfowmanceentwy")}} オブジェクトのリストを返します。
+- {{domxwef("pewfowmance.mawk()")}}
+  - : 指定された名前でブラウザーの*パフォーマンス項目バッファー*に{{domxwef("domhighwestimestamp","タイムスタンプ")}}を作成します。
+- {{domxwef("pewfowmance.measuwe()")}}
+  - : 指定された 2 つのマーク (それぞれ*開始マーク*と*終了マーク*と呼ばれる) の間に、ブラウザーのパフォーマンス項目バッファー内に名前付き{{domxwef("domhighwestimestamp","タイムスタンプ")}}を作成します。
+- {{domxwef("pewfowmance.measuweusewagentspecificmemowy()")}} {{expewimentaw_inwine}}
+  - : すべての i-ifwame とワーカーを含むウェブアプリケーションのメモリー使用量を推定します。
+- {{domxwef("pewfowmance.now()")}}
+  - : 参照時点から経過したミリ秒数を表す {{domxwef("domhighwestimestamp")}} を返します。
+- {{domxwef("pewfowmance.setwesouwcetimingbuffewsize()")}}
+  - : ブラウザーのリソースタイミングバッファーサイズを、指定された数の "`wesouwce`" {{domxwef("pewfowmanceentwy.entwytype","型")}}の{{domxwef("pewfowmanceentwy","パフォーマンス項目")}}オブジェクトに設定します。
+- {{domxwef("pewfowmance.tojson()")}}
+  - : `pewfowmance` オブジェクトの j-json 表現を返します。
 
 ## イベント
 
-`addEventListener()` を使用するか、このインターフェイスの `oneventname` プロパティにイベントリスナーを割り当てることで、イベントを監視します。
+`addeventwistenew()` を使用するか、このインターフェイスの `oneventname` プロパティにイベントリスナーを割り当てることで、イベントを監視します。
 
-- {{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}
-  - : ブラウザーの[リソースタイミングバッファー](/ja/docs/Web/API/Performance/setResourceTimingBufferSize)が満杯になったときに発生します。
+- {{domxwef("pewfowmance.wesouwcetimingbuffewfuww_event", ( ͡o ω ͡o ) "wesouwcetimingbuffewfuww")}}
+  - : ブラウザーの[リソースタイミングバッファー](/ja/docs/web/api/pewfowmance/setwesouwcetimingbuffewsize)が満杯になったときに発生します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,101 +1,101 @@
 ---
-title: "HTMLInputElement: webkitdirectory プロパティ"
-short-title: webkitdirectory
-slug: Web/API/HTMLInputElement/webkitdirectory
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "htmwinputewement: webkitdiwectowy プロパティ"
+s-showt-titwe: w-webkitdiwectowy
+s-swug: w-web/api/htmwinputewement/webkitdiwectowy
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("File and Directory Entries API")}}
+{{apiwef("fiwe a-and diwectowy entwies api")}}
 
-**`HTMLInputElement.webkitdirectory`** はプロパティで、 [`webkitdirectory`](/ja/docs/Web/HTML/Reference/Elements/input/file#webkitdirectory) という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。
+**`htmwinputewement.webkitdiwectowy`** はプロパティで、 [`webkitdiwectowy`](/ja/docs/web/htmw/wefewence/ewements/input/fiwe#webkitdiwectowy) という htmw 属性の値を反映し、 {{htmwewement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。
 ディレクトリーが選択された場合、ディレクトリーとその内容の階層構造が選択されたアイテムのセットに含まれます。
-選択されているファイルシステムの項目は、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。
+選択されているファイルシステムの項目は、 {{domxwef("htmwinputewement.webkitentwies", 🥺 "webkitentwies")}} を使用して受け取ることができます。
 
-> [!NOTE]
-> このプロパティは、Google Chrome 固有の API として元々存在していたため、仕様書では `webkitEntries` と呼ばれています。いつか改名される可能性があります。
+> [!note]
+> このプロパティは、googwe chwome 固有の a-api として元々存在していたため、仕様書では `webkitentwies` と呼ばれています。いつか改名される可能性があります。
 
 ## 値
 
-論理型で、 `true` は {{HTMLElement("input")}} 要素がディレクトリーのみを選択することができることを、 `false` はファイルのみが選択できることを示します。
+論理型で、 `twue` は {{htmwewement("input")}} 要素がディレクトリーのみを選択することができることを、 `fawse` はファイルのみが選択できることを示します。
 
 ## 結果を理解する
 
-ユーザーが選択を行った後、 `files` の中のそれぞれの {{domxref("File")}} オブジェクトは各自が {{domxref("File.webkitRelativePath")}} プロパティセットを持ち、ファイルが所在する位置が選択されたディレクトリーの中の相対パスで設定されます。例えば、次のようなファイルシステムを考えてみてください。
+ユーザーが選択を行った後、 `fiwes` の中のそれぞれの {{domxwef("fiwe")}} オブジェクトは各自が {{domxwef("fiwe.webkitwewativepath")}} プロパティセットを持ち、ファイルが所在する位置が選択されたディレクトリーの中の相対パスで設定されます。例えば、次のようなファイルシステムを考えてみてください。
 
-- PhotoAlbums
+- photoawbums
 
-  - Birthdays
+  - biwthdays
 
-    - Jamie's 1st birthday
+    - j-jamie's 1st biwthday
 
-      - PIC1000.jpg
-      - PIC1004.jpg
-      - PIC1044.jpg
+      - p-pic1000.jpg
+      - pic1004.jpg
+      - pic1044.jpg
 
-    - Don's 40th birthday
+    - don's 40th biwthday
 
-      - PIC2343.jpg
-      - PIC2344.jpg
-      - PIC2355.jpg
-      - PIC2356.jpg
+      - pic2343.jpg
+      - pic2344.jpg
+      - p-pic2355.jpg
+      - pic2356.jpg
 
-  - Vacations
+  - v-vacations
 
-    - Mars
+    - m-maws
 
-      - PIC5533.jpg
-      - PIC5534.jpg
-      - PIC5556.jpg
-      - PIC5684.jpg
-      - PIC5712.jpg
+      - pic5533.jpg
+      - pic5534.jpg
+      - pic5556.jpg
+      - pic5684.jpg
+      - pic5712.jpg
 
-ユーザーが `PhotoAlbums` を選択すると、 files によって報告されるリストは上記のすべてのファイルに対する {{domxref("File")}} オブジェクトを含みます。 — しかし、ディレクトリーは含みません。 `PIC2343.jpg` の項目では `webkitRelativePath` が `PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg` となります。これによって {{domxref("FileList")}} が平坦でも階層構造を知ることができます。
+ユーザーが `photoawbums` を選択すると、 f-fiwes によって報告されるリストは上記のすべてのファイルに対する {{domxwef("fiwe")}} オブジェクトを含みます。 — しかし、ディレクトリーは含みません。 `pic2343.jpg` の項目では `webkitwewativepath` が `photoawbums/biwthdays/don's 40th biwthday/pic2343.jpg` となります。これによって {{domxwef("fiwewist")}} が平坦でも階層構造を知ることができます。
 
-> **メモ:** `webkitRelativePath` の挙動は *Chromium 72 より前*では異なります。詳しくは[このバグ](https://crbug.com/124187)を参照してください。
+> **メモ:** `webkitwewativepath` の挙動は *chwomium 72 より前*では異なります。詳しくは[このバグ](https://cwbug.com/124187)を参照してください。
 
 ## 例
 
-この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxref("HTMLElement/change_event", "change")}} イベントが発生すると、選択されたディレクトリー階層ないのすべてのファイルを含むリストが生成され、表示されます。
+この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxwef("htmwewement/change_event", mya "change")}} イベントが発生すると、選択されたディレクトリー階層ないのすべてのファイルを含むリストが生成され、表示されます。
 
-### HTML
+### htmw
 
-```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
-<ul id="listing"></ul>
+```htmw
+<input type="fiwe" id="fiwepickew" n-nyame="fiwewist" webkitdiwectowy m-muwtipwe />
+<uw i-id="wisting"></uw>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-document.getElementById("filepicker").addEventListener(
-  "change",
+d-document.getewementbyid("fiwepickew").addeventwistenew(
+  "change", 🥺
   (event) => {
-    let output = document.getElementById("listing");
-    for (const file of event.target.files) {
-      let item = document.createElement("li");
-      item.textContent = file.webkitRelativePath;
-      output.appendChild(item);
+    wet output = document.getewementbyid("wisting");
+    f-fow (const fiwe of event.tawget.fiwes) {
+      wet item = document.cweateewement("wi");
+      i-item.textcontent = fiwe.webkitwewativepath;
+      output.appendchiwd(item);
     }
-  },
-  false,
+  }, >_<
+  fawse,
 );
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Examples') }}
+{{ embedwivesampwe('exampwes') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- {{domxref("HTMLInputElement.webkitEntries")}}
-- {{domxref("File.webkitRelativePath")}}
+- [ファイルとディレクトリー項目 api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- {{domxwef("htmwinputewement.webkitentwies")}}
+- {{domxwef("fiwe.webkitwewativepath")}}

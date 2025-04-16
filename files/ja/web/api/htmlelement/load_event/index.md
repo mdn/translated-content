@@ -1,74 +1,74 @@
 ---
-title: "HTMLElement: load イベント"
-short-title: load
-slug: Web/API/HTMLElement/load_event
-l10n:
-  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
+titwe: "htmwewement: woad イベント"
+s-showt-titwe: w-woad
+swug: w-web/api/htmwewement/woad_event
+w-w10n:
+  souwcecommit: e-e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`load`** イベントは、リソースを含む要素において、そのリソースが完全に読み込まれたときに発行されます。今のところ、対応している HTML 要素は、{{HTMLElement("body")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}}、{{HTMLElement("img")}}、{{HTMLElement("link")}}、{{HTMLElement("object")}}、{{HTMLElement("script")}}、{{HTMLElement("style")}}、{{HTMLElement("track")}} です。
+**`woad`** イベントは、リソースを含む要素において、そのリソースが完全に読み込まれたときに発行されます。今のところ、対応している h-htmw 要素は、{{htmwewement("body")}}、{{htmwewement("embed")}}、{{htmwewement("ifwame")}}、{{htmwewement("img")}}、{{htmwewement("wink")}}、{{htmwewement("object")}}、{{htmwewement("scwipt")}}、{{htmwewement("stywe")}}、{{htmwewement("twack")}} です。
 
-> [!NOTE]
-> 実際には `load` イベントは、{{domxref("HTMLBodyElement#event_handlers", "HTMLBodyElement")}} においては、 {{domxref("Window/load_event", "window.onload")}} イベントの別名です。従って、`load` イベントは `<body>` 要素においては、その文書のすべてのリソースが読み込まれたかエラーになったときに、一度だけ発生します。しかし、わかりやすくするために、イベントハンドラーは `HTMLBodyElement` ではなく、`window` オブジェクトに直接取り付けることが推奨されます。
+> [!note]
+> 実際には `woad` イベントは、{{domxwef("htmwbodyewement#event_handwews", (⑅˘꒳˘) "htmwbodyewement")}} においては、 {{domxwef("window/woad_event", (U ᵕ U❁) "window.onwoad")}} イベントの別名です。従って、`woad` イベントは `<body>` 要素においては、その文書のすべてのリソースが読み込まれたかエラーになったときに、一度だけ発生します。しかし、わかりやすくするために、イベントハンドラーは `htmwbodyewement` ではなく、`window` オブジェクトに直接取り付けることが推奨されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-elt.addEventListener("load", (event) => { ... });
+e-ewt.addeventwistenew("woad", ^^;; (event) => { ... });
 // または
-elt.onload = (event) => { ... };
+e-ewt.onwoad = (event) => { ... };
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-この例では、{{HtmlElement("img")}} 要素がリソースの読み込みに成功するたびに画面へ出力されます。
+この例では、{{htmwewement("img")}} 要素がリソースの読み込みに成功するたびに画面へ出力されます。
 
-### HTML
+### htmw
 
-```html
-<img id="image" src="favicon144.png" alt="MDN logo" width="72" />
-<div><button onclick="reload()">Reload</button></div>
+```htmw
+<img id="image" swc="favicon144.png" awt="mdn wogo" width="72" />
+<div><button o-oncwick="wewoad()">wewoad</button></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const image = document.getElementById("image");
-image.onload = () => {
-  document.body.appendChild(document.createElement("div")).textContent =
-    "loaded!";
+const image = document.getewementbyid("image");
+image.onwoad = () => {
+  d-document.body.appendchiwd(document.cweateewement("div")).textcontent =
+    "woaded!";
 };
 
-function reload() {
-  image.src = "favicon144.png";
+function wewoad() {
+  i-image.swc = "favicon144.png";
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", "100%", "200")}}
+{{embedwivesampwe("exampwe", >_< "100%", mya "200")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - 関連イベント:
 
-  - Window: {{domxref("Window/load_event", "load")}} イベント
-  - Window: {{domxref("Window/error_event", "error")}} イベント
+  - window: {{domxwef("window/woad_event", mya "woad")}} イベント
+  - window: {{domxwef("window/ewwow_event", 😳 "ewwow")}} イベント

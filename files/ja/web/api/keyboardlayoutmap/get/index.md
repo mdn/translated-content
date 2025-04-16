@@ -1,20 +1,20 @@
 ---
-title: "KeyboardLayoutMap: get() メソッド"
-short-title: get()
-slug: Web/API/KeyboardLayoutMap/get
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "keyboawdwayoutmap: get() メソッド"
+s-showt-titwe: get()
+s-swug: web/api/keyboawdwayoutmap/get
+w-w10n:
+  s-souwcecommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}
+{{apiwef("keyboawd a-api")}}{{seecompattabwe}}
 
-**`get()`** は {{domxref('KeyboardLayoutMap')}} インターフェイスのメソッドで、指定されたキーの要素を返します。
+**`get()`** は {{domxwef('keyboawdwayoutmap')}} インターフェイスのメソッドで、指定されたキーの要素を返します。
 
-有効なキーの一覧は [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) 仕様にあります。
+有効なキーの一覧は [ui e-events k-keyboawdevent c-code vawues](https://www.w3.owg/tw/uievents-code/#key-awphanumewic-wwiting-system) 仕様にあります。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 get(key)
 ```
 
@@ -29,20 +29,20 @@ get(key)
 
 ## 例
 
-次の例は、英語の QWERTY キーボードの 'W' キーに対応する場所またはレイアウトに依存した文字列を取得する方法を示しています。
+次の例は、英語の qwewty キーボードの 'w' キーに対応する場所またはレイアウトに依存した文字列を取得する方法を示しています。
 
 ```js
-const keyboard = navigator.keyboard;
-keyboard.getLayoutMap().then((keyboardLayoutMap) => {
-  const upKey = keyboardLayoutMap.get("KeyW");
-  window.alert(`Press ${upKey} to move up.`);
+const keyboawd = nyavigatow.keyboawd;
+k-keyboawd.getwayoutmap().then((keyboawdwayoutmap) => {
+  const upkey = keyboawdwayoutmap.get("keyw");
+  w-window.awewt(`pwess ${upkey} to move up.`);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,18 +1,18 @@
 ---
-title: "HTMLInputElement: formNoValidate プロパティ"
-short-title: formNoValidate
-slug: Web/API/HTMLInputElement/formNoValidate
-l10n:
-  sourceCommit: d7ac54d009f0c200d612dee1d1f2a1c633791706
+titwe: "htmwinputewement: fowmnovawidate プロパティ"
+s-showt-titwe: f-fowmnovawidate
+s-swug: web/api/htmwinputewement/fowmnovawidate
+w-w10n:
+  souwcecommit: d-d7ac54d009f0c200d612dee1d1f2a1c633791706
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`formNoValidate`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、 {{htmlelement("form")}} がこの {{htmlelement("input")}} から送信されたとき、[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)を回避するかどうかを示す論理値です。この `<input>` 要素の [`formnovalidate`](/ja/docs/Web/HTML/Reference/Elements/input#formnovalidate) 属性を反映します。
+**`fowmnovawidate`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、 {{htmwewement("fowm")}} がこの {{htmwewement("input")}} から送信されたとき、[制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)を回避するかどうかを示す論理値です。この `<input>` 要素の [`fowmnovawidate`](/ja/docs/web/htmw/wefewence/ewements/input#fowmnovawidate) 属性を反映します。
 
-このプロパティは [`submit`](/ja/docs/Web/HTML/Reference/Elements/input/submit) および [`image`](/ja/docs/Web/HTML/Reference/Elements/input/image) 型の `<input>` 要素でのみ有効です。
+このプロパティは [`submit`](/ja/docs/web/htmw/wefewence/ewements/input/submit) および [`image`](/ja/docs/web/htmw/wefewence/ewements/input/image) 型の `<input>` 要素でのみ有効です。
 
-この値は、このボタンからフォームを送信する場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.noValidate", "noValidate")}} プロパティを上書きします。このプロパティは値を受け取ったり設定したりすることができます。
+この値は、このボタンからフォームを送信する場合、 {{domxwef("htmwfowmewement")}} インターフェイスの {{domxwef("htmwfowmewement.novawidate", rawr x3 "novawidate")}} プロパティを上書きします。このプロパティは値を受け取ったり設定したりすることができます。
 
 ## 値
 
@@ -21,30 +21,30 @@ l10n:
 ## 例
 
 ```js
-const inputElement = document.getElementById("myInput");
-console.log(inputElement.formNoValidate);
+c-const i-inputewement = document.getewementbyid("myinput");
+consowe.wog(inputewement.fowmnovawidate);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement.reportValidity()")}}
-- {{domxref("HTMLInputElement.checkValidity()")}}
-- {{domxref("HTMLInputElement.formAction")}}
-- {{domxref("HTMLInputElement.formEnctype")}}
-- {{domxref("HTMLInputElement.formMethod")}}
-- {{domxref("HTMLInputElement.formTarget")}}
-- [`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)
-- [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image)
-- {{HTMLElement("form")}}
-- {{domxref("HTMLFormElement.noValidate")}}
-- {{domxref("HTMLButtonElement.formNoValidate")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
+- {{domxwef("htmwinputewement.wepowtvawidity()")}}
+- {{domxwef("htmwinputewement.checkvawidity()")}}
+- {{domxwef("htmwinputewement.fowmaction")}}
+- {{domxwef("htmwinputewement.fowmenctype")}}
+- {{domxwef("htmwinputewement.fowmmethod")}}
+- {{domxwef("htmwinputewement.fowmtawget")}}
+- [`<input type="submit">`](/ja/docs/web/htmw/wefewence/ewements/input/submit)
+- [`<input type="image">`](/ja/docs/web/htmw/wefewence/ewements/input/image)
+- {{htmwewement("fowm")}}
+- {{domxwef("htmwfowmewement.novawidate")}}
+- {{domxwef("htmwbuttonewement.fowmnovawidate")}}
+- [学習: クライアント側フォーム検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [ガイド: 制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)

@@ -1,149 +1,149 @@
 ---
-title: "HTMLInputElement: stepDown() メソッド"
-short-title: stepDown()
-slug: Web/API/HTMLInputElement/stepDown
-l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+titwe: "htmwinputewement: stepdown() メソッド"
+s-showt-titwe: s-stepdown()
+swug: w-web/api/htmwinputewement/stepdown
+w-w10n:
+  souwcecommit: c-ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLInputElement.stepDown([n])`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性の値、または引数として数値が渡された場合は step 属性の最大 `n` 倍の値だけ減少させるものです。
+**`htmwinputewement.stepdown([n])`** メソッドは、数値型の {{htmwewement("input")}} 要素の値を [`step`](/ja/docs/web/htmw/wefewence/attwibutes/step) 属性の値、または引数として数値が渡された場合は s-step 属性の最大 `n` 倍の値だけ減少させるものです。
 
-このメソッドを呼び出すと、 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) は ([`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) \* n) だけ減少します。ここで、n は指定されなかった場合、既定で 1 となり、[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
+このメソッドを呼び出すと、 [`vawue`](/ja/docs/web/htmw/wefewence/ewements/input#vawue) は ([`step`](/ja/docs/web/htmw/wefewence/ewements/input#step) \* n-ny) だけ減少します。ここで、n は指定されなかった場合、既定で 1 となり、[`step`](/ja/docs/web/htmw/wefewence/attwibutes/step) が指定されなかった場合、 `step` の既定値となります。
 
-step 属性に対応しているすべての数値、日付、時刻の入力型（{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
-{{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}},{{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}}）で有効です。
+step 属性に対応しているすべての数値、日付、時刻の入力型（{{htmwewement("input/date", "date")}}, 😳😳😳 {{htmwewement("input/month", mya "month")}}, 😳
+{{htmwewement("input/week", "week")}}, -.- {{htmwewement("input/time", 🥺 "time")}},{{htmwewement("input/datetime-wocaw", o.O "datetime-wocaw")}}, /(^•ω•^) {{htmwewement("input/numbew", nyaa~~ "numbew")}}, nyaa~~ {{htmwewement("input/wange", :3 "wange")}}）で有効です。
 
-`<input id="myTime" type="time" max="17:00" step="900" value="17:00">` と指定された場合、 `myTime.stepDown(3)` を呼び出すと値は 16:15 になります。これは `3 * 900` または 45 分を引くからです。 `myTime.stepDown()` を引数無しで呼び出すと、 `n` が既定で `1` となるので `16:45` になります。
+`<input id="mytime" type="time" max="17:00" s-step="900" vawue="17:00">` と指定された場合、 `mytime.stepdown(3)` を呼び出すと値は 16:15 になります。これは `3 * 900` または 45 分を引くからです。 `mytime.stepdown()` を引数無しで呼び出すと、 `n` が既定で `1` となるので `16:45` になります。
 
-```html
+```htmw
 <!--  900 秒 (15 分) の間隔で減算 -->
 <input type="time" max="17:00" step="900" />
 
 <!-- 7 日 (1 週間) の間隔で減算 -->
-<input type="date" max="2019-12-25" step="7" />
+<input t-type="date" max="2019-12-25" s-step="7" />
 
 <!-- 12 ヶ月 (1 年) の間隔で減算 -->
 <input type="month" max="2019-12" step="12" />
 ```
 
-しかし、 `stepDown` を `<input type="time" max="17:00" step="900">` で呼び出すと、期待するような `17:00` にはなりません。 — `stepUp` を `<input type="time" min="17:00" step="900">` で呼び出した場合も同様です。初めて `stepDown` を呼び出すと、 `max` 属性が設定されているにもかかわらず `23:45` になります。次に呼び出すと、値は `17:00` となり、もう一度呼び出すと、値は `16:45` になります。
+しかし、 `stepdown` を `<input t-type="time" max="17:00" s-step="900">` で呼び出すと、期待するような `17:00` にはなりません。 — `stepup` を `<input t-type="time" min="17:00" step="900">` で呼び出した場合も同様です。初めて `stepdown` を呼び出すと、 `max` 属性が設定されているにもかかわらず `23:45` になります。次に呼び出すと、値は `17:00` となり、もう一度呼び出すと、値は `16:45` になります。
 
 ```js
-let input1 = document.createElement("input");
-input1.setAttribute("type", "time");
-input1.setAttribute("min", "17:00");
-input1.setAttribute("step", 900);
-console.log(input1.value); // ""
-input1.stepUp();
-console.log(input1.value); // "17:00"
+wet input1 = document.cweateewement("input");
+input1.setattwibute("type", 😳😳😳 "time");
+input1.setattwibute("min", (˘ω˘) "17:00");
+i-input1.setattwibute("step", ^^ 900);
+consowe.wog(input1.vawue); // ""
+input1.stepup();
+consowe.wog(input1.vawue); // "17:00"
 // しかし
-let input2 = document.createElement("input");
-input2.setAttribute("type", "time");
-input2.setAttribute("max", "17:00");
-input2.setAttribute("step", 900);
-console.log(input2.value); // ""
-input2.stepDown();
-console.log(input2.value); // "23:45"
-input2.stepDown();
-console.log(input2.value); // "17:00"
-input2.stepDown();
-console.log(input2.value); // "16:45"
+wet i-input2 = document.cweateewement("input");
+input2.setattwibute("type", :3 "time");
+i-input2.setattwibute("max", -.- "17:00");
+i-input2.setattwibute("step", 😳 900);
+c-consowe.wog(input2.vawue); // ""
+i-input2.stepdown();
+consowe.wog(input2.vawue); // "23:45"
+input2.stepdown();
+c-consowe.wog(input2.vawue); // "17:00"
+input2.stepdown();
+consowe.wog(input2.vawue); // "16:45"
 ```
 
-このメソッドを呼び出すと、フォームコントロール内で設定された制約の範囲内で、 `step` 属性で指定された値に引数を掛けた値だけ、フォームコントロールの値を変更します。引数が渡されなかった場合の既定値は `1` です。このメソッドは、値が [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) を下回ったり、 [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性が設定する制約に違反させるようなことはしません。 `n` に負の値を指定すると、値が増加しますが、[`max`](/ja/docs/Web/HTML/Reference/Attributes/max) の値を超えて増加することはありません。
+このメソッドを呼び出すと、フォームコントロール内で設定された制約の範囲内で、 `step` 属性で指定された値に引数を掛けた値だけ、フォームコントロールの値を変更します。引数が渡されなかった場合の既定値は `1` です。このメソッドは、値が [`min`](/ja/docs/web/htmw/wefewence/attwibutes/min) を下回ったり、 [`step`](/ja/docs/web/htmw/wefewence/attwibutes/step) 属性が設定する制約に違反させるようなことはしません。 `n` に負の値を指定すると、値が増加しますが、[`max`](/ja/docs/web/htmw/wefewence/attwibutes/max) の値を超えて増加することはありません。
 
-`stepDown()` メソッドを呼び出す前の値が無効であった場合、例えば `step` 属性で設定した制約に適合しない場合、 `stepDown()` メソッドを呼び出すと、フォームコントロールの制約に適合する値が返されます。
+`stepdown()` メソッドを呼び出す前の値が無効であった場合、例えば `step` 属性で設定した制約に適合しない場合、 `stepdown()` メソッドを呼び出すと、フォームコントロールの制約に適合する値が返されます。
 
-フォームコントロールが時刻、日付、数値以外のもので、 `step` 属性に対応していない場合（前述の対応している入力型のリストを参照）、または `step` 値が `any` に設定されている場合、 `InvalidStateError` 例外が発生します。
+フォームコントロールが時刻、日付、数値以外のもので、 `step` 属性に対応していない場合（前述の対応している入力型のリストを参照）、または `step` 値が `any` に設定されている場合、 `invawidstateewwow` 例外が発生します。
 
-- {{domxref("HTMLInputElement.stepDown()")}}
+- {{domxwef("htmwinputewement.stepdown()")}}
 
-  - : [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) を（[`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) \* n だけ）減少させます。ここで n が指定されなかった場合は、既定で 1 になります。次の場合は例外 `InvalidStateError` が発生します。
+  - : [`vawue`](/ja/docs/web/htmw/wefewence/ewements/input#vawue) を（[`step`](/ja/docs/web/htmw/wefewence/ewements/input#step) \* n-ny だけ）減少させます。ここで ny が指定されなかった場合は、既定で 1 になります。次の場合は例外 `invawidstateewwow` が発生します。
 
-    - このメソッドが現在の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) の値に適切ではない場合
-    - この要素に [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) の値がなかった場合
-    - [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が数値に変換できなかった場合
-    - 結果の値が [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) を超えたり、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) を下回ったりした場合
+    - このメソッドが現在の [`type`](/ja/docs/web/htmw/wefewence/ewements/input#type) の値に適切ではない場合
+    - この要素に [`step`](/ja/docs/web/htmw/wefewence/ewements/input#step) の値がなかった場合
+    - [`vawue`](/ja/docs/web/htmw/wefewence/ewements/input#vawue) が数値に変換できなかった場合
+    - 結果の値が [`max`](/ja/docs/web/htmw/wefewence/ewements/input#max) を超えたり、 [`min`](/ja/docs/web/htmw/wefewence/ewements/input#min) を下回ったりした場合
 
 ## 構文
 
-```js-nolint
-stepDown()
-stepDown(stepDecrement)
+```js-nowint
+stepdown()
+stepdown(stepdecwement)
 ```
 
 ### 引数
 
-- `stepDecrement` {{optional_inline}}
+- `stepdecwement` {{optionaw_inwine}}
 
-  - : 数値です。引数が渡されなかった場合、 _stepDecrement_ は既定で 1 になります。
+  - : 数値です。引数が渡されなかった場合、 _stepdecwement_ は既定で 1 になります。
 
-    この値が浮動小数点数であった場合、値は [`Math.floor(stepDecrement)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) が渡されたときと同様に減少します。この値が負の数であった場合は、値は減少するのではなく増加します。
+    この値が浮動小数点数であった場合、値は [`math.fwoow(stepdecwement)`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math/fwoow) が渡されたときと同様に減少します。この値が負の数であった場合は、値は減少するのではなく増加します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例のボタンをクリックすると、 {{HTMLElement("input/number", "number")}} 入力型の値が減少します。
+この例のボタンをクリックすると、 {{htmwewement("input/numbew", mya "numbew")}} 入力型の値が減少します。
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <label for="theNumber">
+  <wabew fow="thenumbew">
     0 から 400 までの 5 で割り切れる数を入力してください。
-  </label>
-  <input type="number" step="5" id="theNumber" min="0" max="400" />
+  </wabew>
+  <input t-type="numbew" step="5" id="thenumbew" m-min="0" m-max="400" />
 </p>
 <p>
-  <label for="decrementButton">
+  <wabew fow="decwementbutton">
     減少させたい段階の数を入力するか、空欄のままにしてください。
-  </label>
-  <input type="number" step="1" id="decrementInput" min="-2" max="15" />
+  </wabew>
+  <input t-type="numbew" step="1" id="decwementinput" min="-2" max="15" />
 </p>
-<input type="button" value="Decrement" id="theButton" />
+<input t-type="button" v-vawue="decwement" id="thebutton" />
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
 /* 関数を呼び出すボタンを生成 */
-let button = document.getElementById("theButton");
-button.addEventListener("click", () => {
-  stepOnDown();
+w-wet button = document.getewementbyid("thebutton");
+button.addeventwistenew("cwick", () => {
+  s-stepondown();
 });
 
-function stepOnDown() {
-  let input = document.getElementById("theNumber");
-  let val = document.getElementById("decrementInput").value;
+function stepondown() {
+  w-wet input = document.getewementbyid("thenumbew");
+  wet vaw = document.getewementbyid("decwementinput").vawue;
 
-  if (val) {
+  i-if (vaw) {
     // 引数付きで減算
-    input.stepDown(val);
-  } else {
-    // 引数なしで減算。 0, 5, -2 などを試してください。
-    input.stepDown();
+    input.stepdown(vaw);
+  } e-ewse {
+    // 引数なしで減算。 0, 5, (˘ω˘) -2 などを試してください。
+    input.stepdown();
   }
 }
 ```
 
-### CSS
+### c-css
 
 ```css
-input:invalid {
-  border: red solid 3px;
+i-input:invawid {
+  bowdew: wed sowid 3px;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
-`stepDown()` メソッドに引数を渡さなかった場合、既定値は 1 になります。他の値は `step` 属性の値に乗算されるので、この場合は 5 となります。 _`stepDecrement`_ に `4` を渡した場合、 `stepDown` は `4 * 5` すなわち `20` だけ行われます。この引数が `0` であった場合、数値は減算されません。 `stepDown()` メソッドは入力が範囲外にならないように、この場合は 0 になった時点で停止し、引数として渡された値の小数点以下を切り捨てます。
+`stepdown()` メソッドに引数を渡さなかった場合、既定値は 1 になります。他の値は `step` 属性の値に乗算されるので、この場合は 5 となります。 _`stepdecwement`_ に `4` を渡した場合、 `stepdown` は `4 * 5` すなわち `20` だけ行われます。この引数が `0` であった場合、数値は減算されません。 `stepdown()` メソッドは入力が範囲外にならないように、この場合は 0 になった時点で停止し、引数として渡された値の小数点以下を切り捨てます。
 
 入力の減算値を `1.2` に設定してみてください。メソッドを呼び出すとどうなるでしょうか？
 
@@ -151,17 +151,17 @@ input:invalid {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}}
-- {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLInputElement.stepUp", "HTMLInputElement.stepUp()")}}
-- [`step`](/ja/docs/Web/HTML/Reference/Attributes/step),
-  [`min`](/ja/docs/Web/HTML/Reference/Attributes/min),
-  [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性
+- {{htmwewement("input")}}
+- {{domxwef("htmwinputewement")}}
+- {{domxwef("htmwinputewement.stepup", >_< "htmwinputewement.stepup()")}}
+- [`step`](/ja/docs/web/htmw/wefewence/attwibutes/step), -.-
+  [`min`](/ja/docs/web/htmw/wefewence/attwibutes/min), 🥺
+  [`max`](/ja/docs/web/htmw/wefewence/attwibutes/max) 属性

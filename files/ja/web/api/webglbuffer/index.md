@@ -1,47 +1,47 @@
 ---
-title: WebGLBuffer
-slug: Web/API/WebGLBuffer
-l10n:
-  sourceCommit: 73b724ad82b94d2a4c314924218367cea2740e97
+titwe: webgwbuffew
+swug: web/api/webgwbuffew
+w-w10n:
+  souwcecommit: 73b724ad82b94d2a4c314924218367cea2740e97
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLBuffer** インターフェイスは [WebGL API](/ja/docs/Web/API/WebGL_API) の一部で、頂点や色などのデータを格納する不透明なバッファーオブジェクトを表します。
+**webgwbuffew** インターフェイスは [webgw a-api](/ja/docs/web/api/webgw_api) の一部で、頂点や色などのデータを格納する不透明なバッファーオブジェクトを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 解説
 
-`WebGLBuffer` オブジェクトはそれ自身のメソッドやプロパティを定義しておらず、その内容には直接アクセスできません。 `WebGLBuffer` オブジェクトを扱う場合、 {{domxref("WebGLRenderingContext")}} の以下のメソッドが役に立ちます。
+`webgwbuffew` オブジェクトはそれ自身のメソッドやプロパティを定義しておらず、その内容には直接アクセスできません。 `webgwbuffew` オブジェクトを扱う場合、 {{domxwef("webgwwendewingcontext")}} の以下のメソッドが役に立ちます。
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
 
 ## 例
 
 ### バッファーの作成
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const buffer = gl.createBuffer();
+c-const canvas = d-document.getewementbyid("canvas");
+c-const g-gw = canvas.getcontext("webgw");
+c-const buffew = g-gw.cweatebuffew();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-- その他のバッファー: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
+- その他のバッファー: {{domxwef("webgwfwamebuffew")}}, (⑅˘꒳˘) {{domxwef("webgwwendewbuffew")}}

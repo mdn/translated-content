@@ -1,44 +1,44 @@
 ---
-title: BackgroundFetchManager.get()
-slug: Web/API/BackgroundFetchManager/get
-l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+titwe: backgwoundfetchmanagew.get()
+swug: web/api/backgwoundfetchmanagew/get
+w-w10n:
+  souwcecommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-**`get()`** は {{domxref("BackgroundFetchManager")}} インターフェイスのメソッドで、引数に与えられた `id` に紐づく {{domxref("BackgroundFetchRegistration")}} で解決される {{jsxref("Promise")}} を返します。 `id` が見つからない場合は {{jsxref("undefined")}} を返します。
+**`get()`** は {{domxwef("backgwoundfetchmanagew")}} インターフェイスのメソッドで、引数に与えられた `id` に紐づく {{domxwef("backgwoundfetchwegistwation")}} で解決される {{jsxwef("pwomise")}} を返します。 `id` が見つからない場合は {{jsxwef("undefined")}} を返します。
 
 ## 構文
 
-```js-nolint
-get(id)
+```js-nowint
+g-get(id)
 ```
 
 ### 引数
 
 - `id`
-  - : {{domxref("BackgroundFetchRegistration.fetch","fetch()")}} を呼び出すことで定義された {{domxref("backgroundFetchRegistration")}} の ID 。
+  - : {{domxwef("backgwoundfetchwegistwation.fetch","fetch()")}} を呼び出すことで定義された {{domxwef("backgwoundfetchwegistwation")}} の id 。
 
 ### 返値
 
-{{domxref("BackgroundFetchRegistration")}} で解決される {{jsxref("Promise")}} または {{jsxref("undefined")}} 。
+{{domxwef("backgwoundfetchwegistwation")}} で解決される {{jsxwef("pwomise")}} または {{jsxwef("undefined")}} 。
 
 ## 例
 
-下記の例では、 `get()` を呼び出して {{domxref("BackgroundFetchRegistration")}} を取得する方法を紹介しています。アクティブな {{domxref('ServiceWorker', 'service worker')}} の {{domxref('ServiceWorkerRegistration.backgroundFetch')}} を参照して `BackgroundFetchManager` オブジェクトにアクセスし、その `get()` メソッドを呼び出しています。
+下記の例では、 `get()` を呼び出して {{domxwef("backgwoundfetchwegistwation")}} を取得する方法を紹介しています。アクティブな {{domxwef('sewvicewowkew', ( ͡o ω ͡o ) 'sewvice w-wowkew')}} の {{domxwef('sewvicewowkewwegistwation.backgwoundfetch')}} を参照して `backgwoundfetchmanagew` オブジェクトにアクセスし、その `get()` メソッドを呼び出しています。
 
 ```js
-navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.get("my-fetch");
+n-nyavigatow.sewvicewowkew.weady.then(async (swweg) => {
+  c-const b-bgfetch = await s-swweg.backgwoundfetch.get("my-fetch");
 });
-// my code block
+// my code bwock
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,45 +1,45 @@
 ---
-title: EventTarget
-slug: Web/API/EventTarget
-l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+titwe: eventtawget
+swug: web/api/eventtawget
+w-w10n:
+  souwcecommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`EventTarget`** インターフェイスは、イベントを受け取ることや、リスナーを持つことができるオブジェクトが実装します。
+**`eventtawget`** インターフェイスは、イベントを受け取ることや、リスナーを持つことができるオブジェクトが実装します。
 言い換えると、イベントのターゲットはすべて、このインターフェイスに関する 3 つのメソッドを実装しています。
 
-{{domxref("Element")}} とその子、{{domxref("Document")}}、{{domxref("Window")}} は、最も一般的なイベントターゲットですが、他のオブジェクト、例えば {{domxref("IDBRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}} などもイベントターゲットになります。
+{{domxwef("ewement")}} とその子、{{domxwef("document")}}、{{domxwef("window")}} は、最も一般的なイベントターゲットですが、他のオブジェクト、例えば {{domxwef("idbwequest")}}、{{domxwef("audionode")}}、{{domxwef("audiocontext")}} などもイベントターゲットになります。
 
-多くのイベントターゲット (要素、文書、ウィンドウを含む) は、[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)を設定するのに `onイベント名` プロパティや属性を使用することもできます。
+多くのイベントターゲット (要素、文書、ウィンドウを含む) は、[イベントハンドラー](/ja/docs/web/events/event_handwews)を設定するのに `onイベント名` プロパティや属性を使用することもできます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("EventTarget.EventTarget()","EventTarget()")}}
-  - : 新しい `EventTarget` オブジェクトのインスタンスを作成します。
+- {{domxwef("eventtawget.eventtawget()","eventtawget()")}}
+  - : 新しい `eventtawget` オブジェクトのインスタンスを作成します。
 
 ## インスタンスメソッド
 
-- {{domxref("EventTarget.addEventListener()")}}
-  - : 特定のイベント種別のイベントハンドラーを `EventTarget` に登録します。
-- {{domxref("EventTarget.removeEventListener()")}}
-  - : `EventTarget` からイベントリスナーを削除します。
-- {{domxref("EventTarget.dispatchEvent()")}}
-  - : この `EventTarget` にイベントを送出します。
+- {{domxwef("eventtawget.addeventwistenew()")}}
+  - : 特定のイベント種別のイベントハンドラーを `eventtawget` に登録します。
+- {{domxwef("eventtawget.wemoveeventwistenew()")}}
+  - : `eventtawget` からイベントリスナーを削除します。
+- {{domxwef("eventtawget.dispatchevent()")}}
+  - : この `eventtawget` にイベントを送出します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [イベントリファレンス](/ja/docs/Web/Events) - プラットフォームで利用可能なイベント。
-- [イベント開発者ガイド](/ja/docs/Learn_web_development/Core/Scripting/Events)
-- {{domxref("Event")}} インターフェイス
+- [イベントリファレンス](/ja/docs/web/events) - プラットフォームで利用可能なイベント。
+- [イベント開発者ガイド](/ja/docs/weawn_web_devewopment/cowe/scwipting/events)
+- {{domxwef("event")}} インターフェイス

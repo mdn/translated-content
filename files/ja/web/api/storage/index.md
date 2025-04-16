@@ -1,82 +1,82 @@
 ---
-title: Storage
-slug: Web/API/Storage
-l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+titwe: stowage
+swug: web/api/stowage
+w-w10n:
+  s-souwcecommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-**`Storage`** は[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) のインターフェイスで、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供して、例えば保存されているデータアイテムを追加、変更、削除することができます。
+**`stowage`** は[ウェブストレージ a-api](/ja/docs/web/api/web_stowage_api) のインターフェイスで、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供して、例えば保存されているデータアイテムを追加、変更、削除することができます。
 
-例えば、ドメインのセッションストレージを操作したい場合は、{{domxref("Window.sessionStorage")}} メソッドを呼び出してください。ドメインのローカルストレージを操作したい場合は、{{domxref("Window.localStorage")}} を呼び出してください。
+例えば、ドメインのセッションストレージを操作したい場合は、{{domxwef("window.sessionstowage")}} メソッドを呼び出してください。ドメインのローカルストレージを操作したい場合は、{{domxwef("window.wocawstowage")}} を呼び出してください。
 
 ## プロパティ
 
-- {{domxref("Storage.length")}} {{ReadOnlyInline}}
-  - : `Storage` オブジェクトに保存されているデータアイテムの数を表す整数を返します。
+- {{domxwef("stowage.wength")}} {{weadonwyinwine}}
+  - : `stowage` オブジェクトに保存されているデータアイテムの数を表す整数を返します。
 
 ## メソッド
 
-- {{domxref("Storage.key()")}}
-  - : 数値 n を渡すと、ストレージ内で n 番目のキーの名称を返します。
-- {{domxref("Storage.getItem()")}}
+- {{domxwef("stowage.key()")}}
+  - : 数値 n-ny を渡すと、ストレージ内で n-ny 番目のキーの名称を返します。
+- {{domxwef("stowage.getitem()")}}
   - : キーの名称を渡すと、キーに対する値を返します。
-- {{domxref("Storage.setItem()")}}
+- {{domxwef("stowage.setitem()")}}
   - : キーの名称と値を渡すと、ストレージにキーを追加し、または既存のキーに対する値を更新します。
-- {{domxref("Storage.removeItem()")}}
+- {{domxwef("stowage.wemoveitem()")}}
   - : キーの名称を渡すと、ストレージからキーを削除します。
-- {{domxref("Storage.clear()")}}
+- {{domxwef("stowage.cweaw()")}}
   - : ストレージからすべてのキーを消去します。
 
 ## 例
 
-ここでは、`localStorage` を呼び出して `Storage` オブジェクトにアクセスしています。始めに `!localStorage.getItem('bgcolor')` というコードを使用して、ローカルストレージにデータアイテムが含まれているかを確認します。含まれている場合は、{{domxref("Storage.getItem()")}} を使用してデータアイテムを取得して、さらにそのデータを使用してページのスタイルを更新する `setStyles()` 関数を実行します。含まれていない場合は `populateStorage()` 関数を実行します。こちらは {{domxref("Storage.setItem()")}} を使用してアイテムの値を設定してから、`setStyles()` 関数を実行します。
+ここでは、`wocawstowage` を呼び出して `stowage` オブジェクトにアクセスしています。始めに `!wocawstowage.getitem('bgcowow')` というコードを使用して、ローカルストレージにデータアイテムが含まれているかを確認します。含まれている場合は、{{domxwef("stowage.getitem()")}} を使用してデータアイテムを取得して、さらにそのデータを使用してページのスタイルを更新する `setstywes()` 関数を実行します。含まれていない場合は `popuwatestowage()` 関数を実行します。こちらは {{domxwef("stowage.setitem()")}} を使用してアイテムの値を設定してから、`setstywes()` 関数を実行します。
 
 ```js
-if (!localStorage.getItem("bgcolor")) {
-  populateStorage();
-} else {
-  setStyles();
+i-if (!wocawstowage.getitem("bgcowow")) {
+  popuwatestowage();
+} ewse {
+  setstywes();
 }
 
-function populateStorage() {
-  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
-  localStorage.setItem("font", document.getElementById("font").value);
-  localStorage.setItem("image", document.getElementById("image").value);
+function popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", (U ﹏ U) document.getewementbyid("bgcowow").vawue);
+  wocawstowage.setitem("font", >_< d-document.getewementbyid("font").vawue);
+  wocawstowage.setitem("image", d-document.getewementbyid("image").vawue);
 
-  setStyles();
+  setstywes();
 }
 
-function setStyles() {
-  const currentColor = localStorage.getItem("bgcolor");
-  const currentFont = localStorage.getItem("font");
-  const currentImage = localStorage.getItem("image");
+function setstywes() {
+  c-const cuwwentcowow = wocawstowage.getitem("bgcowow");
+  c-const cuwwentfont = w-wocawstowage.getitem("font");
+  const cuwwentimage = wocawstowage.getitem("image");
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  document.getewementbyid("bgcowow").vawue = cuwwentcowow;
+  document.getewementbyid("font").vawue = c-cuwwentfont;
+  document.getewementbyid("image").vawue = cuwwentimage;
 
-  htmlElem.style.backgroundColor = `#${currentColor}`;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
+  htmwewem.stywe.backgwoundcowow = `#${cuwwentcowow}`;
+  pewem.stywe.fontfamiwy = cuwwentfont;
+  imgewem.setattwibute("swc", rawr x3 c-cuwwentimage);
 }
 ```
 
-> [!NOTE]
-> 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> [!note]
+> 完全に動作する例として実行する様子を見るために、[web stowage d-demo](https://mdn.github.io/dom-exampwes/web-stowage/) をご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- {{domxref("Window.localStorage")}}
-- {{domxref("Window.sessionStorage")}}
-- {{domxref("CacheStorage")}}
+- [ウェブストレージ a-api の使用](/ja/docs/web/api/web_stowage_api/using_the_web_stowage_api)
+- {{domxwef("window.wocawstowage")}}
+- {{domxwef("window.sessionstowage")}}
+- {{domxwef("cachestowage")}}

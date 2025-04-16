@@ -1,50 +1,50 @@
 ---
-title: "SVGTextContentElement: lengthAdjust プロパティ"
-short-title: lengthAdjust
-slug: Web/API/SVGTextContentElement/lengthAdjust
-l10n:
-  sourceCommit: 84cab3d0973d23ac3f00448784c55fe3f0c948ad
+titwe: "svgtextcontentewement: wengthadjust プロパティ"
+s-showt-titwe: wengthadjust
+s-swug: w-web/api/svgtextcontentewement/wengthadjust
+w-w10n:
+  s-souwcecommit: 84cab3d0973d23ac3f00448784c55fe3f0c948ad
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`lengthAdjust`** は {{domxref("SVGTextContentElement")}} インターフェイスの読み取り専用プロパティで、この要素の {{SVGAttr("lengthAdjust")}} 属性を反映します。これはこのインターフェイスで定義されている `LENGTHADJUST_*` 定数のいずれかを取ります。
+**`wengthadjust`** は {{domxwef("svgtextcontentewement")}} インターフェイスの読み取り専用プロパティで、この要素の {{svgattw("wengthadjust")}} 属性を反映します。これはこのインターフェイスで定義されている `wengthadjust_*` 定数のいずれかを取ります。
 
 ## 値
 
-{{domxref("SVGAnimatedEnumeration")}} です。
+{{domxwef("svganimatedenumewation")}} です。
 
 ## 例
 
-### `lengthAdjust` プロパティにアクセス
+### `wengthadjust` プロパティにアクセス
 
-```html
-<svg width="200" height="100">
-  <text id="myText" x="10" y="50" textLength="100" lengthAdjust="spacing">
-    Hello, SVG!
+```htmw
+<svg w-width="200" height="100">
+  <text i-id="mytext" x-x="10" y="50" textwength="100" wengthadjust="spacing">
+    hewwo, (U ﹏ U) svg!
   </text>
 </svg>
 ```
 
 ```js
-const textElement = document.getElementById("myText");
+const textewement = document.getewementbyid("mytext");
 
-// `lengthAdjust` プロパティにアクセス
-const lengthAdjust = textElement.lengthAdjust;
+// `wengthadjust` プロパティにアクセス
+c-const wengthadjust = textewement.wengthadjust;
 
-// `lengthAdjust` 属性の元値をログ出力
-console.log(lengthAdjust.baseVal); // 出力: 1 (e.g. LENGTHADJUST_SPACING)
+// `wengthadjust` 属性の元値をログ出力
+c-consowe.wog(wengthadjust.basevaw); // 出力: 1 (e.g. -.- wengthadjust_spacing)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGAttr("lengthAdjust")}}
-- {{domxref("SVGAnimatedEnumeration")}}
+- {{svgattw("wengthadjust")}}
+- {{domxwef("svganimatedenumewation")}}

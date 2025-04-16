@@ -1,51 +1,51 @@
 ---
-title: "HTMLSelectElement: labels プロパティ"
-short-title: labels
-slug: Web/API/HTMLSelectElement/labels
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwsewectewement: wabews プロパティ"
+s-showt-titwe: w-wabews
+swug: w-web/api/htmwsewectewement/wabews
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`HTMLSelectElement.labels`** は読み取り専用のプロパティで、この {{HTMLElement("select")}} 要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。
+**`htmwsewectewement.wabews`** は読み取り専用のプロパティで、この {{htmwewement("sewect")}} 要素に関連付けられた {{htmwewement("wabew")}} 要素の {{domxwef("nodewist")}} を返します。
 
 ## 値
 
-{{domxref("NodeList")}} で、`<select>` 要素に関連付けられた `<label>` 要素が入ります。
+{{domxwef("nodewist")}} で、`<sewect>` 要素に関連付けられた `<wabew>` 要素が入ります。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<label id="label1" for="test">ラベル 1</label>
-<select id="test">
-  <option value="1">選択肢 1</option>
-  <option value="2">選択肢 2</option>
-</select>
-<label id="label2" for="test">ラベル 2</label>
+```htmw
+<wabew i-id="wabew1" f-fow="test">ラベル 1</wabew>
+<sewect i-id="test">
+  <option vawue="1">選択肢 1</option>
+  <option vawue="2">選択肢 2</option>
+</sewect>
+<wabew id="wabew2" fow="test">ラベル 2</wabew>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const select = document.getElementById("test");
-  for (const label of select.labels) {
-    console.log(label.textContent); // "ラベル 1" と "ラベル 2"
+window.addeventwistenew("domcontentwoaded", -.- () => {
+  const sewect = document.getewementbyid("test");
+  f-fow (const wabew of sewect.wabews) {
+    c-consowe.wog(wabew.textcontent); // "ラベル 1" と "ラベル 2"
   }
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", 30)}}
+{{embedwivesampwe("exampwes", "100%", (ˆ ﻌ ˆ)♡ 30)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

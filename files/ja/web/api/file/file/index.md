@@ -1,57 +1,57 @@
 ---
-title: "File: File() コンストラクター"
-short-title: File()
-slug: Web/API/File/File
-l10n:
-  sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
+titwe: "fiwe: fiwe() コンストラクター"
+s-showt-titwe: fiwe()
+s-swug: web/api/fiwe/fiwe
+w-w10n:
+  s-souwcecommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-**`File()`** コンストラクターは、新しい {{domxref("File")}} オブジェクトのインスタンスを生成します。
+**`fiwe()`** コンストラクターは、新しい {{domxwef("fiwe")}} オブジェクトのインスタンスを生成します。
 
 ## 構文
 
-```js-nolint
-new File(fileBits, fileName)
-new File(fileBits, fileName, options)
+```js-nowint
+new f-fiwe(fiwebits, >_< f-fiwename)
+nyew f-fiwe(fiwebits, fiwename, :3 options)
 ```
 
 ### 引数
 
-- `fileBits`
-  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクト、例えば {{jsxref("Array")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}}、文字列、またはそのような要素を混合させたものを {{domxref("File")}} 内に格納します。
-    なお、文字列は JavaScript の UTF-16 文字列ではなく、UTF-8 でエンコードされます。
-- `fileName`
+- `fiwebits`
+  - : [反復可能](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)オブジェクト、例えば {{jsxwef("awway")}}、{{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}}、{{domxwef("bwob")}}、文字列、またはそのような要素を混合させたものを {{domxwef("fiwe")}} 内に格納します。
+    なお、文字列は javascwipt の utf-16 文字列ではなく、utf-8 でエンコードされます。
+- `fiwename`
   - : 文字列で、ファイル名またはファイルへのパスを表します。
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : ファイルのオプション属性を含むオプションオブジェクト。利用可能なオプションは以下の通りです。
 
-    - `type` {{optional_inline}}
-      - : ファイルの中に入るコンテンツの MIME タイプを表す文字列です。既定値は `""` です。
-    - `endings` {{optional_inline}}
-      - : データがテキストの場合、コンテンツ内の改行文字 (`\n`) をどのように解釈するか。既定値である `transparent` は、改行文字を変更せずにblobにコピーします。改行文字をホストシステムのネイティブ規約に変換するには、値 `native` を指定します。
-    - `lastModified` {{optional_inline}}
-      - : UNIX 元期からのミリ秒単位で、ファイルが最後に更新された時刻を表す数値です。既定値は {{jsxref("Date.now()")}} です。
+    - `type` {{optionaw_inwine}}
+      - : ファイルの中に入るコンテンツの mime タイプを表す文字列です。既定値は `""` です。
+    - `endings` {{optionaw_inwine}}
+      - : データがテキストの場合、コンテンツ内の改行文字 (`\n`) をどのように解釈するか。既定値である `twanspawent` は、改行文字を変更せずにbwobにコピーします。改行文字をホストシステムのネイティブ規約に変換するには、値 `native` を指定します。
+    - `wastmodified` {{optionaw_inwine}}
+      - : unix 元期からのミリ秒単位で、ファイルが最後に更新された時刻を表す数値です。既定値は {{jsxwef("date.now()")}} です。
 
 ## 例
 
 ```js
-const file = new File(["foo"], "foo.txt", {
-  type: "text/plain",
+c-const fiwe = new fiwe(["foo"], (U ﹏ U) "foo.txt", {
+  type: "text/pwain", -.-
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("FileReader")}}
-- {{domxref("Blob")}}
+- {{domxwef("fiweweadew")}}
+- {{domxwef("bwob")}}

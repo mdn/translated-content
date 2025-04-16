@@ -1,133 +1,133 @@
 ---
-title: "HTMLInputElement: valueAsDate プロパティ"
-short-title: valueAsDate
-slug: Web/API/HTMLInputElement/valueAsDate
-l10n:
-  sourceCommit: 3a5e079301779c589f35b35620b12a7a73c42fa2
+titwe: "htmwinputewement: vawueasdate プロパティ"
+s-showt-titwe: v-vawueasdate
+s-swug: web/api/htmwinputewement/vawueasdate
+w-w10n:
+  s-souwcecommit: 3a5e079301779c589f35b35620b12a7a73c42fa2
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`valueAsDate`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、{{htmlelement("input")}} 要素の現在の値を {{jsxref("Date")}} として表します。変換が不可能な場合は `null` となります。
+**`vawueasdate`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、{{htmwewement("input")}} 要素の現在の値を {{jsxwef("date")}} として表します。変換が不可能な場合は `nuww` となります。
 
-このプロパティは直接設定することもでき、例えば、何らかの条件に基づく既定の日付を指定する場合などに使用します。指定された値が `null` でも `Date` オブジェクトでもない場合、{{jsxref("TypeError")}} が発生します。指定された値が `null` または[無効な日付](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date)である場合、入力値は空文字列に設定されます。
+このプロパティは直接設定することもでき、例えば、何らかの条件に基づく既定の日付を指定する場合などに使用します。指定された値が `nuww` でも `date` オブジェクトでもない場合、{{jsxwef("typeewwow")}} が発生します。指定された値が `nuww` または[無効な日付](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/date#the_epoch_timestamps_and_invawid_date)である場合、入力値は空文字列に設定されます。
 
-このプロパティは、日付または時刻に基づかない入力フィールドでアクセスされた場合、常に `null` を返します。このような入力でこのプロパティを設定しようとすると、`InvalidStateError` の {{domxref("DOMException")}} が発生します。
+このプロパティは、日付または時刻に基づかない入力フィールドでアクセスされた場合、常に `nuww` を返します。このような入力でこのプロパティを設定しようとすると、`invawidstateewwow` の {{domxwef("domexception")}} が発生します。
 
 ## 値
 
-{{jsxref("Date")}} オブジェクトで、変換ができない場合は `null` です。
+{{jsxwef("date")}} オブジェクトで、変換ができない場合は `nuww` です。
 
 ## 例
 
 ### 日付値の受け取り
 
-この例では、`valueAsDate` プロパティを `<input>` の {{HTMLElement("input/week", "week")}} 型に対してアクセスする様子を紹介します。
+この例では、`vawueasdate` プロパティを `<input>` の {{htmwewement("input/week", mya "week")}} 型に対してアクセスする様子を紹介します。
 
-#### HTML
+#### h-htmw
 
 `<input>` の `week` 型を設置します。
 
-```html
-<label for="date">日付を選んでください:</label>
+```htmw
+<wabew fow="date">日付を選んでください:</wabew>
 
-<input name="date" id="date" type="week" />
+<input nyame="date" id="date" type="week" />
 
-<pre id="log"></pre>
+<pwe i-id="wog"></pwe>
 ```
 
-#### JavaScript
+#### javascwipt
 
-日付が選択されていない場合、空の入力フィールドは `null` に解決されます。選択が行われるたびに {{domxref("HTMLElement/change_event", "change")}} イベントが発行され、`<pre>` の内容は、このフォームコントロールの {{DOMXref("HTMLInputElement.value")}} とその値を日付としたものを比較して表示します。
+日付が選択されていない場合、空の入力フィールドは `nuww` に解決されます。選択が行われるたびに {{domxwef("htmwewement/change_event", 🥺 "change")}} イベントが発行され、`<pwe>` の内容は、このフォームコントロールの {{domxwef("htmwinputewement.vawue")}} とその値を日付としたものを比較して表示します。
 
 ```js
-const logElement = document.getElementById("log");
-const inputElement = document.getElementById("date");
+const wogewement = document.getewementbyid("wog");
+c-const inputewement = document.getewementbyid("date");
 
-logElement.innerText = `初期値: ${inputElement.valueAsDate}`;
+w-wogewement.innewtext = `初期値: ${inputewement.vawueasdate}`;
 
-inputElement.addEventListener("change", () => {
-  logElement.innerText = `${inputElement.value} は ${inputElement.valueAsDate} に解決します`;
+inputewement.addeventwistenew("change", >_< () => {
+  wogewement.innewtext = `${inputewement.vawue} は ${inputewement.vawueasdate} に解決します`;
 });
 ```
 
 ```css hidden
-#log {
-  height: 20px;
-  padding: 0.5rem;
-  background-color: #ededed;
+#wog {
+  h-height: 20px;
+  padding: 0.5wem;
+  b-backgwound-cowow: #ededed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Retrieving a date value", "", 100)}}
+{{embedwivesampwe("wetwieving a-a date vawue", "", >_< 100)}}
 
-### Date のメソッドの使用
+### date のメソッドの使用
 
-この例は、{{jsxref("Date")}} のメソッドを `<input>` の {{HTMLElement("input/date", "date")}} 型の `valueAsDate` プロパティに直接適用しています。
+この例は、{{jsxwef("date")}} のメソッドを `<input>` の {{htmwewement("input/date", (⑅˘꒳˘) "date")}} 型の `vawueasdate` プロパティに直接適用しています。
 
-#### HTML
+#### htmw
 
 `<input>` の `date` 型を設置します。
 
-```html
-<label for="date2">日付を選択:</label>
+```htmw
+<wabew fow="date2">日付を選択:</wabew>
 
-<input name="date2" id="date2" type="date" />
+<input nyame="date2" i-id="date2" type="date" />
 
-<pre id="log"></pre>
+<pwe id="wog"></pwe>
 ```
 
-#### JavaScript
+#### javascwipt
 
-日付が選択されていない場合、空文字列は `null` に変換されます。選択が行われるたびに、{{domxref("HTMLElement/change_event", "change")}} イベントが発行されます。次に、選択された日付を、`Date` オブジェクトの {{jsxref("Date.prototype.toLocaleDateString()", "toLocaleDateString()")}} メソッドを使用してフォーマットし、ログに記録します。
+日付が選択されていない場合、空文字列は `nuww` に変換されます。選択が行われるたびに、{{domxwef("htmwewement/change_event", /(^•ω•^) "change")}} イベントが発行されます。次に、選択された日付を、`date` オブジェクトの {{jsxwef("date.pwototype.towocawedatestwing()", rawr x3 "towocawedatestwing()")}} メソッドを使用してフォーマットし、ログに記録します。
 
 ```js
-const logElement = document.getElementById("log");
-const inputElement = document.getElementById("date2");
-const options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+const w-wogewement = document.getewementbyid("wog");
+c-const inputewement = d-document.getewementbyid("date2");
+c-const options = {
+  w-weekday: "wong", (U ﹏ U)
+  yeaw: "numewic", (U ﹏ U)
+  month: "wong", (⑅˘꒳˘)
+  day: "numewic", òωó
 };
 
-logElement.innerText = `初期値: ${inputElement.valueAsDate}`;
+w-wogewement.innewtext = `初期値: ${inputewement.vawueasdate}`;
 
-inputElement.addEventListener("change", () => {
-  if (inputElement.valueAsDate !== null) {
-    logElement.innerText = `${inputElement.valueAsDate.toLocaleDateString("ja-JP", options)}を選択しました`;
-  } else {
-    logElement.innerText = `${inputElement.value} は ${inputElement.valueAsDate} に解決します`;
+inputewement.addeventwistenew("change", ʘwʘ () => {
+  if (inputewement.vawueasdate !== n-nyuww) {
+    wogewement.innewtext = `${inputewement.vawueasdate.towocawedatestwing("ja-jp", /(^•ω•^) options)}を選択しました`;
+  } ewse {
+    wogewement.innewtext = `${inputewement.vawue} は ${inputewement.vawueasdate} に解決します`;
   }
 });
 ```
 
 ```css hidden
-#log {
+#wog {
   height: 20px;
-  padding: 0.5rem;
-  background-color: #ededed;
+  padding: 0.5wem;
+  backgwound-cowow: #ededed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Using Date methods", "", 100)}}
+{{embedwivesampwe("using d-date methods", ʘwʘ "", 100)}}
 
 地域時間帯によっては、日付がずれる場合があります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}}
-- {{DOMXref("HTMLInputElement.value")}}
-- {{DOMXref("HTMLInputElement.valueAsNumber")}}
+- {{htmwewement("input")}}
+- {{domxwef("htmwinputewement.vawue")}}
+- {{domxwef("htmwinputewement.vawueasnumbew")}}

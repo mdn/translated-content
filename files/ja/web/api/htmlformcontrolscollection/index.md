@@ -1,37 +1,37 @@
 ---
-title: HTMLFormControlsCollection
-slug: Web/API/HTMLFormControlsCollection
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: htmwfowmcontwowscowwection
+swug: web/api/htmwfowmcontwowscowwection
+w-w10n:
+  s-souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLFormControlsCollection`** インターフェイスは、HTML のフォームコントロール要素の集合を表すインターフェイスです。{{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.elements", "elements")}} プロパティから返されます。
+**`htmwfowmcontwowscowwection`** インターフェイスは、htmw のフォームコントロール要素の集合を表すインターフェイスです。{{domxwef("htmwfowmewement")}} インターフェイスの {{domxwef("htmwfowmewement.ewements", 🥺 "ewements")}} プロパティから返されます。
 
-{{domxref("HTMLCollection")}} から継承されるプロパティとメソッドの他に、追加メソッドが一つ提供されます。
+{{domxwef("htmwcowwection")}} から継承されるプロパティとメソッドの他に、追加メソッドが一つ提供されます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスには親である {{domxref("HTMLCollection")}} から継承したプロパティがあります。_
+_このインターフェイスには親である {{domxwef("htmwcowwection")}} から継承したプロパティがあります。_
 
 ## インスタンスメソッド
 
-_このインターフェイスには親である {{domxref("HTMLCollection")}} から継承したメソッドがあります。_
+_このインターフェイスには親である {{domxwef("htmwcowwection")}} から継承したメソッドがあります。_
 
-- {{domxref("HTMLFormControlsCollection.namedItem()")}}
-  - : 集合内の {{domxref("RadioNodeList")}} または {{domxref("Element")}} の `name` または `id` が指定した名前と一致するノード、または一致するノードがない場合は `null` を返します。このバージョンの `namedItem()` は {{domxref("HTMLCollection")}} から継承されたものを隠していることに注意してください。そのメソッドと同様、`collection["value"]` のように文字列で JavaScript の配列の括弧構文を使用すると、 `collection.namedItem("value")` と同等になります。
+- {{domxwef("htmwfowmcontwowscowwection.nameditem()")}}
+  - : 集合内の {{domxwef("wadionodewist")}} または {{domxwef("ewement")}} の `name` または `id` が指定した名前と一致するノード、または一致するノードがない場合は `nuww` を返します。このバージョンの `nameditem()` は {{domxwef("htmwcowwection")}} から継承されたものを隠していることに注意してください。そのメソッドと同様、`cowwection["vawue"]` のように文字列で j-javascwipt の配列の括弧構文を使用すると、 `cowwection.nameditem("vawue")` と同等になります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLCollection")}}, {{domxref("RadioNodeList")}}, {{domxref("HTMLOptionsCollection")}}
+- {{domxwef("htmwcowwection")}}, òωó {{domxwef("wadionodewist")}}, o.O {{domxwef("htmwoptionscowwection")}}

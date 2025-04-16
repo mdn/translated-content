@@ -1,19 +1,19 @@
 ---
-title: "PushMessageData: blob() メソッド"
-short-title: blob()
-slug: Web/API/PushMessageData/blob
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushmessagedata: bwob() メソッド"
+s-showt-titwe: bwob()
+s-swug: web/api/pushmessagedata/bwob
+w-w10n:
+  s-souwcecommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push a-api")}}
 
-**`blob()`** は {{domxref("PushMessageData")}} インターフェイスのメソッドで、プッシュメッセージデータを {{domxref("Blob")}} オブジェクトとして抽出します。
+**`bwob()`** は {{domxwef("pushmessagedata")}} インターフェイスのメソッドで、プッシュメッセージデータを {{domxwef("bwob")}} オブジェクトとして抽出します。
 
 ## 構文
 
-```js-nolint
-blob()
+```js-nowint
+b-bwob()
 ```
 
 ### 引数
@@ -22,22 +22,22 @@ blob()
 
 ### 返値
 
-{{domxref("Blob")}} です。
+{{domxwef("bwob")}} です。
 
 ## 例
 
 ```js
-self.addEventListener("push", (event) => {
-  const blob = event.data.blob();
+s-sewf.addeventwistenew("push", UwU (event) => {
+  c-const bwob = event.data.bwob();
 
-  // Blob を使用して何かを実行する。
+  // bwob を使用して何かを実行する。
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

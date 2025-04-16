@@ -1,20 +1,20 @@
 ---
-title: "Response: json() メソッド"
-short-title: json()
-slug: Web/API/Response/json
-l10n:
-  sourceCommit: 889fd7ca9d03276638ec065e47ea967c1a2fc10b
+titwe: "wesponse: json() メソッド"
+s-showt-titwe: j-json()
+swug: w-web/api/wesponse/json
+w-w10n:
+  s-souwcecommit: 889fd7ca9d03276638ec065e47ea967c1a2fc10b
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-**`json()`** は {{DOMxRef("Response")}} インターフェイスのメソッドで、 {{DOMxRef("Response")}} のストリームを取得して完全に読み取ります。本体のテキストを {{JSxRef("JSON")}} として解釈した結果で解決するプロミスを返します。
+**`json()`** は {{domxwef("wesponse")}} インターフェイスのメソッドで、 {{domxwef("wesponse")}} のストリームを取得して完全に読み取ります。本体のテキストを {{jsxwef("json")}} として解釈した結果で解決するプロミスを返します。
 
-なお、このメソッドは `json()` という名前であるにもかかわらず、結果は JSON ではありません。入力として JSON を取って解釈し、 JavaScript のオブジェクトを生成します。
+なお、このメソッドは `json()` という名前であるにもかかわらず、結果は j-json ではありません。入力として j-json を取って解釈し、 javascwipt のオブジェクトを生成します。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 json()
 ```
 
@@ -24,54 +24,54 @@ json()
 
 ### 返値
 
-JavaScript オブジェクトに解決される {{jsxref("Promise")}}。 このオブジェクトは、オブジェクト、配列、文字列、数値など、JSON で表現できるものであれば何でもなります。
+javascwipt オブジェクトに解決される {{jsxwef("pwomise")}}。 このオブジェクトは、オブジェクト、配列、文字列、数値など、json で表現できるものであれば何でもなります。
 
 ### 例外
 
-- {{domxref("DOMException")}} `AbortError`
-  - : リクエストが[中止された](/ja/docs/Web/API/Fetch_API/Using_Fetch#リクエストの中止)場合。
-- {{jsxref("TypeError")}}
+- {{domxwef("domexception")}} `abowtewwow`
+  - : リクエストが[中止された](/ja/docs/web/api/fetch_api/using_fetch#リクエストの中止)場合。
+- {{jsxwef("typeewwow")}}
   - : 以下のいずれかの原因で発生します。
-    - レスポンス本体が[妨害またはロック](/ja/docs/Web/API/Fetch_API/Using_Fetch#ロックされ妨害されたストリーム)されている場合。
-    - 本体コンテンツをデコードする際にエラーが発生した場合（例えば、{{httpheader("Content-Encoding")}} ヘッダーが不正な場合など）。
-- {{jsxref("SyntaxError")}}
-  - : このレスポンスの本体が JSON として解釈できなかった場合。
+    - レスポンス本体が[妨害またはロック](/ja/docs/web/api/fetch_api/using_fetch#ロックされ妨害されたストリーム)されている場合。
+    - 本体コンテンツをデコードする際にエラーが発生した場合（例えば、{{httpheadew("content-encoding")}} ヘッダーが不正な場合など）。
+- {{jsxwef("syntaxewwow")}}
+  - : このレスポンスの本体が json として解釈できなかった場合。
 
 ## 例
 
-[fetch json の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-json)（[fetch json をライブで](https://mdn.github.io/dom-examples/fetch/fetch-json/)実行）では、 {{DOMxRef("Request.Request", "Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して `.json` ファイルを読み取ります。
+[fetch j-json の例](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-json)（[fetch json をライブで](https://mdn.github.io/dom-exampwes/fetch/fetch-json/)実行）では、 {{domxwef("wequest.wequest", nyaa~~ "wequest()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して `.json` ファイルを読み取ります。
 読み取りに成功したら、`json()` を使用してデータを読み取り、解析し、結果のオブジェクトから期待通りに値を読み出し、それらの値をリスト項目に追加して商品データとして表示します。
 
 ```js
-const myList = document.querySelector("ul");
-const myRequest = new Request("products.json");
+const m-mywist = document.quewysewectow("uw");
+const mywequest = n-nyew wequest("pwoducts.json");
 
-fetch(myRequest)
-  .then((response) => response.json())
+fetch(mywequest)
+  .then((wesponse) => wesponse.json())
   .then((data) => {
-    for (const product of data.products) {
-      const listItem = document.createElement("li");
-      listItem.appendChild(document.createElement("strong")).textContent =
-        product.Name;
-      listItem.append(` can be found in ${product.Location}. Cost: `);
-      listItem.appendChild(document.createElement("strong")).textContent =
-        `£${product.Price}`;
-      myList.appendChild(listItem);
+    f-fow (const pwoduct of d-data.pwoducts) {
+      c-const wistitem = document.cweateewement("wi");
+      wistitem.appendchiwd(document.cweateewement("stwong")).textcontent =
+        pwoduct.name;
+      wistitem.append(` c-can be found in ${pwoduct.wocation}. /(^•ω•^) cost: `);
+      wistitem.appendchiwd(document.cweateewement("stwong")).textcontent =
+        `£${pwoduct.pwice}`;
+      mywist.appendchiwd(wistitem);
     }
   })
-  .catch(console.error);
+  .catch(consowe.ewwow);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [オリジン間リソース共有 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

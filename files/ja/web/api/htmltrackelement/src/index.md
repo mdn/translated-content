@@ -1,34 +1,34 @@
 ---
-title: "HTMLTrackElement: src プロパティ"
-short-title: src
-slug: Web/API/HTMLTrackElement/src
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwtwackewement: swc プロパティ"
+s-showt-titwe: swc
+s-swug: web/api/htmwtwackewement/swc
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLTrackElement.src`** プロパティは、テキストトラックのデータの URL を示す {{HTMLElement("track")}} 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/track#src) 属性の値を反映したものです。
+**`htmwtwackewement.swc`** プロパティは、テキストトラックのデータの u-uww を示す {{htmwewement("twack")}} 要素の [`swc`](/ja/docs/web/htmw/wefewence/ewements/twack#swc) 属性の値を反映したものです。
 
 ## 値
 
-テキストトラックデータの URL を含む文字列オブジェクト。
+テキストトラックデータの u-uww を含む文字列オブジェクト。
 
 ## 例
 
 ```js
-// coming soon
+// c-coming s-soon
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- `HTMLTrackElement.src` プロパティの定義に使われるインターフェイスである {{domxref("HTMLTrackElement")}}
-- {{HTMLElement("track")}}
+- `htmwtwackewement.swc` プロパティの定義に使われるインターフェイスである {{domxwef("htmwtwackewement")}}
+- {{htmwewement("twack")}}

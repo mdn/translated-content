@@ -1,14 +1,14 @@
 ---
-title: "DOMTokenList: length プロパティ"
-short-title: length
-slug: Web/API/DOMTokenList/length
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domtokenwist: wength プロパティ"
+s-showt-titwe: wength
+s-swug: web/api/domtokenwist/wength
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`length`** は {{domxref("DOMTokenList")}} インターフェイスの読み取り専用プロパティで、オブジェクト内に格納されたオブジェクトの個数を整数で表します。
+**`wength`** は {{domxwef("domtokenwist")}} インターフェイスの読み取り専用プロパティで、オブジェクト内に格納されたオブジェクトの個数を整数で表します。
 
 ## 値
 
@@ -16,32 +16,32 @@ l10n:
 
 ## 例
 
-次の例は、 {{htmlelement("span")}} 要素に設定されたクラスのリストを {{domxref("Element.classList")}} を使用して `DOMTokenList` として取得し、そのリストの長さを `<span>` の {{domxref("Node.textContent")}} の中に書き込みます。
+次の例は、 {{htmwewement("span")}} 要素に設定されたクラスのリストを {{domxwef("ewement.cwasswist")}} を使用して `domtokenwist` として取得し、そのリストの長さを `<span>` の {{domxwef("node.textcontent")}} の中に書き込みます。
 
-最初に HTML です。
+最初に h-htmw です。
 
-```html
-<span class="a b c"></span>
+```htmw
+<span c-cwass="a b-b c"></span>
 ```
 
-そして JavaScript です。
+そして j-javascwipt です。
 
 ```js
-const span = document.querySelector("span");
-const classes = span.classList;
-const length = classes.length;
+c-const span = document.quewysewectow("span");
+const cwasses = span.cwasswist;
+const wength = c-cwasses.wength;
 
-span.textContent = `classList length = ${length}`;
+span.textcontent = `cwasswist wength = ${wength}`;
 ```
 
 出力結果は以下のようになります。
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ e-embedwivesampwe('exampwes', :3 '100%', 60) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

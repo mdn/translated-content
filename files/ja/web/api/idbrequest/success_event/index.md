@@ -1,65 +1,65 @@
 ---
-title: "IDBRequest: success イベント"
-slug: Web/API/IDBRequest/success_event
+titwe: "idbwequest: success イベント"
+s-swug: w-web/api/idbwequest/success_event
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-`success` イベントは {{domxref("IDBRequest")}} が成功すると発生します。
+`success` イベントは {{domxwef("idbwequest")}} が成功すると発生します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリングする</th>
+    <tw>
+      <th s-scope="wow">バブリングする</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル可能</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">インターフェイス</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラープロパティ</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/API/IDBRequest/onsuccess">onsuccess</a></code
+          ><a hwef="/ja/docs/web/api/idbwequest/onsuccess">onsuccess</a></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-この例では、データベースをオープンします。その `success` イベントを `addEventListener()` でリッスンします。
+この例では、データベースをオープンします。その `success` イベントを `addeventwistenew()` でリッスンします。
 
 ```js
 // データベースをオープンする
-const openRequest = window.indexedDB.open("toDoList", 4);
+const openwequest = window.indexeddb.open("todowist", 🥺 4);
 
-openRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+openwequest.onupgwadeneeded = (event) => {
+  c-const db = event.tawget.wesuwt;
 
-  db.onerror = () => {
-    console.log("データベースの作成中にエラー発生");
+  db.onewwow = () => {
+    c-consowe.wog("データベースの作成中にエラー発生");
   };
 
   // オブジェクトストアを作成する
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  vaw o-objectstowe = db.cweateobjectstowe("todowist", >_< { keypath: "tasktitwe" });
 
   // オブジェクトストアが保有するデータを定義する
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  objectstowe.cweateindex("houws", >_< "houws", (⑅˘꒳˘) { unique: fawse });
+  o-objectstowe.cweateindex("minutes", "minutes", /(^•ω•^) { unique: fawse });
+  o-objectstowe.cweateindex("day", rawr x3 "day", { u-unique: fawse });
+  objectstowe.cweateindex("month", (U ﹏ U) "month", { unique: fawse });
+  objectstowe.cweateindex("yeaw", (U ﹏ U) "yeaw", { unique: fawse });
 };
 
-openRequest.addEventListener("success", (event) => {
-  console.log("データベースを正常に開きました！");
+o-openwequest.addeventwistenew("success", (⑅˘꒳˘) (event) => {
+  consowe.wog("データベースを正常に開きました！");
 });
 ```
 
@@ -67,36 +67,36 @@ openRequest.addEventListener("success", (event) => {
 
 ```js
 // データベースをオープンする
-const openRequest = window.indexedDB.open("toDoList", 4);
+const openwequest = window.indexeddb.open("todowist", òωó 4);
 
-openRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+openwequest.onupgwadeneeded = (event) => {
+  c-const db = event.tawget.wesuwt;
 
-  db.onerror = () => {
-    console.log("データベースの作成中にエラー発生");
+  d-db.onewwow = () => {
+    c-consowe.wog("データベースの作成中にエラー発生");
   };
 
   // オブジェクトストアを作成する
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  v-vaw objectstowe = d-db.cweateobjectstowe("todowist", ʘwʘ { keypath: "tasktitwe" });
 
   // オブジェクトストアが保有するデータを定義する
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  objectstowe.cweateindex("houws", /(^•ω•^) "houws", { u-unique: fawse });
+  objectstowe.cweateindex("minutes", ʘwʘ "minutes", σωσ { unique: f-fawse });
+  objectstowe.cweateindex("day", OwO "day", { unique: fawse });
+  objectstowe.cweateindex("month", 😳😳😳 "month", { unique: fawse });
+  objectstowe.cweateindex("yeaw", 😳😳😳 "yeaw", { unique: fawse });
 };
 
-openRequest.onsuccess = (event) => {
-  console.log("データベースを正常に開きました!");
+o-openwequest.onsuccess = (event) => {
+  consowe.wog("データベースを正常に開きました!");
 };
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [`onsuccess`](/ja/docs/Web/API/IDBRequest/success_event) イベントハンドラープロパティ
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- [`onsuccess`](/ja/docs/web/api/idbwequest/success_event) イベントハンドラープロパティ

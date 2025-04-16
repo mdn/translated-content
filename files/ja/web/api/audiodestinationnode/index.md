@@ -1,77 +1,77 @@
 ---
-title: AudioDestinationNode
-slug: Web/API/AudioDestinationNode
-l10n:
-  sourceCommit: 10b342385644e822d123694ad3bc8c2ca9abb2dc
+titwe: audiodestinationnode
+swug: web/api/audiodestinationnode
+w-w10n:
+  souwcecommit: 10b342385644e822d123694ad3bc8c2ca9abb2dc
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-`AudioDestinationNode` インターフェイスは、指定のコンテキストの音声の最後の目的地、通常は端末のスピーカーを表します。`OfflineAudioContext` と共に使えば、オーディオデータを「録音」するノードにもできます。
+`audiodestinationnode` インターフェイスは、指定のコンテキストの音声の最後の目的地、通常は端末のスピーカーを表します。`offwineaudiocontext` と共に使えば、オーディオデータを「録音」するノードにもできます。
 
-`AudioDestinationNode` には出力はなく（出力が**あれば**、これ以上 AudioNode に音声を結びつけることができません）、入力が 1 つあります。入力チャンネルの数は、0 から `maxChannelCount` 変数の間である必要があり、そうでなければ例外が発生します。
+`audiodestinationnode` には出力はなく（出力が**あれば**、これ以上 a-audionode に音声を結びつけることができません）、入力が 1 つあります。入力チャンネルの数は、0 から `maxchannewcount` 変数の間である必要があり、そうでなければ例外が発生します。
 
-指定された `AudioContext` の `AudioDestinationNode` は {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} プロパティで取得できます。
+指定された `audiocontext` の `audiodestinationnode` は {{domxwef("baseaudiocontext/destination", (ˆ ﻌ ˆ)♡ "audiocontext.destination")}} プロパティで取得できます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">入力数</th>
+    <tw>
+      <th s-scope="wow">入力数</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">出力数</th>
+    </tw>
+    <tw>
+      <th scope="wow">出力数</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">チャンネルの数え方</th>
-      <td><code>"explicit"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">チャンネル数</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">チャンネルの数え方</th>
+      <td><code>"expwicit"</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">チャンネル数</th>
       <td><code>2</code></td>
-    </tr>
-    <tr>
-      <th scope="row">チャンネルの意味</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">チャンネルの意味</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## プロパティ
 
-_親である {{domxref("AudioNode")}} から継承したプロパティがあります。_
+_親である {{domxwef("audionode")}} から継承したプロパティがあります。_
 
-- {{domxref("AudioDestinationNode.maxChannelCount")}}
-  - : `unsigned long` で、この物理機器が扱うことができるチャンネルの最大数を定義します。
+- {{domxwef("audiodestinationnode.maxchannewcount")}}
+  - : `unsigned wong` で、この物理機器が扱うことができるチャンネルの最大数を定義します。
 
 ## メソッド
 
-_固有のメソッドはありません。親である {{domxref("AudioNode")}} から継承したメソッドがあります。_
+_固有のメソッドはありません。親である {{domxwef("audionode")}} から継承したメソッドがあります。_
 
 ## 例
 
-`AudioDestinationNode` の設定には複雑なことはありません。既定でユーザーのシステム（例:スピーカー）を表します。よって、数行のコードを書くだけで内部の音声を接続することができます。
+`audiodestinationnode` の設定には複雑なことはありません。既定でユーザーのシステム（例:スピーカー）を表します。よって、数行のコードを書くだけで内部の音声を接続することができます。
 
 ```js
-const audioCtx = new AudioContext();
-const source = audioCtx.createMediaElementSource(myMediaElement);
-source.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+const audioctx = nyew audiocontext();
+c-const souwce = audioctx.cweatemediaewementsouwce(mymediaewement);
+souwce.connect(gainnode);
+g-gainnode.connect(audioctx.destination);
 ```
 
-完全な実装は、MDN Web Audio の [Voice-change-o-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) や [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin) のような例を参考にしてください。
+完全な実装は、mdn web audio の [voice-change-o-matic](https://mdn.github.io/webaudio-exampwes/voice-change-o-matic/) や [viowent t-thewemin](https://github.com/mdn/webaudio-exampwes/twee/main/viowent-thewemin) のような例を参考にしてください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

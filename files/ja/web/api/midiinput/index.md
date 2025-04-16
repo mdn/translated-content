@@ -1,46 +1,46 @@
 ---
-title: MIDIInput
-slug: Web/API/MIDIInput
-l10n:
-  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
+titwe: midiinput
+swug: web/api/midiinput
+w-w10n:
+  s-souwcecommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
 ---
 
-{{APIRef("Web MIDI API")}}{{securecontext_header}}
+{{apiwef("web m-midi a-api")}}{{secuwecontext_headew}}
 
-[Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) の **`MIDIInput`** インターフェイスは、MIDI 入力ポートからメッセージを受信します。
+[web m-midi api](/ja/docs/web/api/web_midi_api) の **`midiinput`** インターフェイスは、midi 入力ポートからメッセージを受信します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスは固有のプロパティを実装していませんが、{{domxref("MIDIPort")}} からプロパティを継承しています。_
+_このインターフェイスは固有のプロパティを実装していませんが、{{domxwef("midipowt")}} からプロパティを継承しています。_
 
 ## インスタンスメソッド
 
-_このインターフェイスは固有のメソッドを実装していませんが、{{domxref("MIDIPort")}} からメソッドを継承しています。_
+_このインターフェイスは固有のメソッドを実装していませんが、{{domxwef("midipowt")}} からメソッドを継承しています。_
 
 ### イベント
 
-- {{domxref("MIDIInput.midimessage_event", "midimessage")}}
-  - : 現在のポートが MIDI メッセージを受信した時発火します。
+- {{domxwef("midiinput.midimessage_event", rawr x3 "midimessage")}}
+  - : 現在のポートが m-midi メッセージを受信した時発火します。
 
 ## 例
 
-以下の例では、それぞれの `MIDIInput` の名前をコンソールに出力します。そして、すべての入力ポートで `midimessage` イベントを監視します。メッセージを受信したら、{{domxref("MIDIMessageEvent.data")}} プロパティをコンソールに出力します。
+以下の例では、それぞれの `midiinput` の名前をコンソールに出力します。そして、すべての入力ポートで `midimessage` イベントを監視します。メッセージを受信したら、{{domxwef("midimessageevent.data")}} プロパティをコンソールに出力します。
 
 ```js
-inputs.forEach((input) => {
-  console.log(input.name); /* MIDIPort から継承したプロパティ */
+i-inputs.foweach((input) => {
+  c-consowe.wog(input.name); /* midipowt から継承したプロパティ */
   input.onmidimessage = (message) => {
-    console.log(message.data);
+    consowe.wog(message.data);
   };
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

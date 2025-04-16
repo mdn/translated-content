@@ -1,163 +1,163 @@
 ---
-title: "HTMLInputElement: stepUp() メソッド"
-short-title: stepUp()
-slug: Web/API/HTMLInputElement/stepUp
-l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+titwe: "htmwinputewement: stepup() メソッド"
+s-showt-titwe: s-stepup()
+swug: w-web/api/htmwinputewement/stepup
+w-w10n:
+  souwcecommit: c-ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLInputElement.stepUp()`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を
-[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性の値、または step 属性が明示的に設定されていない場合は既定の `step` の値だけ増加させるものです。このメソッドを呼び出すと、 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) は ([`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) \* n) だけ減少します。ここで、n は指定されなかった場合、既定で `1` となり、[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
+**`htmwinputewement.stepup()`** メソッドは、数値型の {{htmwewement("input")}} 要素の値を
+[`step`](/ja/docs/web/htmw/wefewence/attwibutes/step) 属性の値、または s-step 属性が明示的に設定されていない場合は既定の `step` の値だけ増加させるものです。このメソッドを呼び出すと、 [`vawue`](/ja/docs/web/htmw/wefewence/ewements/input#vawue) は ([`step`](/ja/docs/web/htmw/wefewence/ewements/input#step) \* n) だけ減少します。ここで、n は指定されなかった場合、既定で `1` となり、[`step`](/ja/docs/web/htmw/wefewence/attwibutes/step) が指定されなかった場合、 `step` の既定値となります。
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>入力型</th>
-      <th>既定の step の値</th>
+      <th>既定の s-step の値</th>
       <th>step の宣言の例</th>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/date", "date")}}</td>
+    </tw>
+    <tw>
+      <td>{{htmwewement("input/date", >_< "date")}}</td>
       <td><code>1</code> （日）</td>
       <td>
-        7 日（1 週間）単位の増加:<br />
-        <code>&#x3C;input type="date" min="2019-12-25" step="7"></code>
+        7 日（1 週間）単位の増加:<bw />
+        <code>&#x3c;input type="date" min="2019-12-25" step="7"></code>
       </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/month", "month")}}</td>
+    </tw>
+    <tw>
+      <td>{{htmwewement("input/month", (⑅˘꒳˘) "month")}}</td>
       <td><code>1</code> （ヶ月）</td>
       <td>
-        12 ヶ月（1 年）単位の増加:<br />
-        <code>&#x3C;input type="month" min="2019-12" step="12"></code>
+        12 ヶ月（1 年）単位の増加:<bw />
+        <code>&#x3c;input type="month" min="2019-12" s-step="12"></code>
       </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/week", "week")}}</td>
+    </tw>
+    <tw>
+      <td>{{htmwewement("input/week", /(^•ω•^) "week")}}</td>
       <td><code>1</code> （週間）</td>
       <td>
-        2 週間単位の増加:<br />
-        <code>&#x3C;input type="week" min="2019-W23" step="2"></code>
+        2 週間単位の増加:<bw />
+        <code>&#x3c;input type="week" min="2019-w23" step="2"></code>
       </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/time", "time")}}</td>
+    </tw>
+    <tw>
+      <td>{{htmwewement("input/time", rawr x3 "time")}}</td>
       <td><code>60</code> （秒）</td>
       <td>
-        900 秒（15 分）単位の増加:<br />
-        <code>&#x3C;input type="time" min="09:00" step="900"></code>
+        900 秒（15 分）単位の増加:<bw />
+        <code>&#x3c;input type="time" m-min="09:00" step="900"></code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{HTMLElement("input/datetime-local", "datetime-local")}}
+        {{htmwewement("input/datetime-wocaw", (U ﹏ U) "datetime-wocaw")}}
       </td>
       <td><code>1</code> （日）</td>
       <td>
-        同じ曜日:<br />
-        <code>&#x3C;input type="datetime-local" min="019-12-25T19:30"
+        同じ曜日:<bw />
+        <code>&#x3c;input t-type="datetime-wocaw" min="019-12-25t19:30"
           step="7"></code>
       </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/number", "number")}}</td>
+    </tw>
+    <tw>
+      <td>{{htmwewement("input/numbew", (U ﹏ U) "numbew")}}</td>
       <td><code>1</code></td>
       <td>
-        0.1 刻み<br />
-        <code>&#x3C;input type="number" min="0" step="0.1" max="10"></code>
+        0.1 刻み<bw />
+        <code>&#x3c;input type="numbew" m-min="0" step="0.1" max="10"></code>
       </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/range", "range")}}</td>
+    </tw>
+    <tw>
+      <td>{{htmwewement("input/wange", (⑅˘꒳˘) "wange")}}</td>
       <td><code>1</code></td>
       <td>
-        2 ずつ増加:<br />
-        <code>&#x3C;input type="range" min="0" step="2" max="10"></code>
+        2 ずつ増加:<bw />
+        <code>&#x3c;input type="wange" m-min="0" s-step="2" max="10"></code>
       </td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-このメソッドを呼び出すと、フォームコントロール内で設定された制約の範囲内で、 `step` 属性で指定された値に引数を掛けた値だけ、フォームコントロールの値を変更します。引数が渡されなかった場合の既定値は `1` です。このメソッドは、値が [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) を上回ったり、 [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性が設定する制約に違反させるようなことはしません。
+このメソッドを呼び出すと、フォームコントロール内で設定された制約の範囲内で、 `step` 属性で指定された値に引数を掛けた値だけ、フォームコントロールの値を変更します。引数が渡されなかった場合の既定値は `1` です。このメソッドは、値が [`max`](/ja/docs/web/htmw/wefewence/attwibutes/max) を上回ったり、 [`step`](/ja/docs/web/htmw/wefewence/attwibutes/step) 属性が設定する制約に違反させるようなことはしません。
 
-`stepUp()` メソッドを呼び出す前の値が無効であった場合、例えば `step` 属性で設定した制約に適合しない場合、 `stepUp()` メソッドを呼び出すと、フォームコントロールの制約に適合する値が返されます。
+`stepup()` メソッドを呼び出す前の値が無効であった場合、例えば `step` 属性で設定した制約に適合しない場合、 `stepup()` メソッドを呼び出すと、フォームコントロールの制約に適合する値が返されます。
 
-フォームコントロールが時刻、日付、数値以外のもので、 `step` 属性に対応していない場合（前述の表に対応する入力型のリストを参照）、または `step` 値が `any` に設定されている場合、 `InvalidStateError` 例外が発生します。
+フォームコントロールが時刻、日付、数値以外のもので、 `step` 属性に対応していない場合（前述の表に対応する入力型のリストを参照）、または `step` 値が `any` に設定されている場合、 `invawidstateewwow` 例外が発生します。
 
 ## 構文
 
-```js-nolint
-stepUp()
-stepUp(stepIncrement)
+```js-nowint
+stepup()
+stepup(stepincwement)
 ```
 
 ### 引数
 
-- `stepIncrement` {{optional_inline}}
-  - : 数値です。引数が渡されなかった場合、 `stepIncrement` は既定で `1` になります。
+- `stepincwement` {{optionaw_inwine}}
+  - : 数値です。引数が渡されなかった場合、 `stepincwement` は既定で `1` になります。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例のボタンをクリックすると、 {{HTMLElement("input/number", "number")}} 入力型の値が増加します。
+この例のボタンをクリックすると、 {{htmwewement("input/numbew", òωó "numbew")}} 入力型の値が増加します。
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <label for="theNumber">
+  <wabew fow="thenumbew">
     0 から 400 までの 5 で割り切れる数を入力してください。
-  </label>
-  <input type="number" step="5" id="theNumber" min="0" max="400" />
+  </wabew>
+  <input type="numbew" s-step="5" id="thenumbew" min="0" max="400" />
 </p>
 <p>
-  <label>増加させたい段階の数を入力するか、空欄のままにしてください。</label>
-  <input type="number" step="1" id="incrementInput" min="0" max="25" />
+  <wabew>増加させたい段階の数を入力するか、空欄のままにしてください。</wabew>
+  <input type="numbew" step="1" i-id="incwementinput" min="0" m-max="25" />
 </p>
-<input type="button" value="Increment" id="theButton" />
+<input t-type="button" v-vawue="incwement" i-id="thebutton" />
 ```
 
-### Java10Script
+### java10scwipt
 
 ```js
 /* 関数を呼び出すボタンを生成 */
-const button = document.getElementById("theButton");
-button.addEventListener("click", () => {
-  stepOnUp();
+const button = d-document.getewementbyid("thebutton");
+button.addeventwistenew("cwick", ʘwʘ () => {
+  steponup();
 });
 
-function stepOnUp() {
-  let input = document.getElementById("theNumber");
-  let val = document.getElementById("incrementInput").value;
+f-function steponup() {
+  wet input = document.getewementbyid("thenumbew");
+  wet vaw = document.getewementbyid("incwementinput").vawue;
 
-  if (val) {
+  if (vaw) {
     /* 引数付きで加算 */
-    input.stepUp(val);
-  } else {
+    input.stepup(vaw);
+  } e-ewse {
     /* 引数なしで加算。 0 を試してください。 */
-    input.stepUp();
+    input.stepup();
   }
 }
 ```
 
-### CSS
+### c-css
 
 ```css
-input:invalid {
-  border: red solid 3px;
+input:invawid {
+  b-bowdew: wed sowid 3px;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
-`stepUp` メソッドに引数を渡さなかった場合、既定値は `1` になります。他の値は `step` 属性の値に乗算されるので、この場合は `5` となります。 _`stepIncrement`_ に 4 を渡した場合、 `stepUp` は `4 * 5` すなわち `20` だけ行われます。この引数が `0` であった場合、数値は加算されません。 `stepUp` メソッドは入力が範囲外にならないように、この場合は `400` になった時点で停止し、引数として渡された値の小数点以下を切り捨てます。
+`stepup` メソッドに引数を渡さなかった場合、既定値は `1` になります。他の値は `step` 属性の値に乗算されるので、この場合は `5` となります。 _`stepincwement`_ に 4 を渡した場合、 `stepup` は `4 * 5` すなわち `20` だけ行われます。この引数が `0` であった場合、数値は加算されません。 `stepup` メソッドは入力が範囲外にならないように、この場合は `400` になった時点で停止し、引数として渡された値の小数点以下を切り捨てます。
 
 段階の加算係数を `1.2` に設定してみてください。メソッドを呼び出すとどうなるでしょうか？
 
@@ -165,16 +165,16 @@ input:invalid {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}}
-- {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLInputElement.stepDown")}}
-- [`step`](/ja/docs/Web/HTML/Reference/Attributes/step),
-  [`min`](/ja/docs/Web/HTML/Reference/Attributes/min), [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性
+- {{htmwewement("input")}}
+- {{domxwef("htmwinputewement")}}
+- {{domxwef("htmwinputewement.stepdown")}}
+- [`step`](/ja/docs/web/htmw/wefewence/attwibutes/step), /(^•ω•^)
+  [`min`](/ja/docs/web/htmw/wefewence/attwibutes/min), ʘwʘ [`max`](/ja/docs/web/htmw/wefewence/attwibutes/max) 属性

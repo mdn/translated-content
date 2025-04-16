@@ -1,56 +1,56 @@
 ---
-title: "ReadableStreamBYOBReader: ReadableStreamBYOBReader() コンストラクター"
-short-title: ReadableStreamBYOBReader()
-slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
-l10n:
-  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
+titwe: "weadabwestweambyobweadew: weadabwestweambyobweadew() コンストラクター"
+s-showt-titwe: w-weadabwestweambyobweadew()
+s-swug: web/api/weadabwestweambyobweadew/weadabwestweambyobweadew
+w-w10n:
+  souwcecommit: d-d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`ReadableStreamBYOBReader()`** コンストラクターは、`ReadableStreamBYOBReader` オブジェクトのインスタンスを作成して返します。
+**`weadabwestweambyobweadew()`** コンストラクターは、`weadabwestweambyobweadew` オブジェクトのインスタンスを作成して返します。
 
-> [!NOTE]
-> 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}} メソッドに `"byob"` を引数につけて使用してください。
+> [!note]
+> 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxwef("weadabwestweam.getweadew()")}} メソッドに `"byob"` を引数につけて使用してください。
 
 ## 構文
 
-```js-nolint
-new ReadableStreamBYOBReader(stream)
+```js-nowint
+n-nyew weadabwestweambyobweadew(stweam)
 ```
 
 ### 引数
 
-- `stream`
-  - : 読み取られる {{domxref("ReadableStream")}}。
+- `stweam`
+  - : 読み取られる {{domxwef("weadabwestweam")}}。
 
 ### 返値
 
-{{domxref("ReadableStreamBYOBReader")}} オブジェクトのインスタンス。
+{{domxwef("weadabwestweambyobweadew")}} オブジェクトのインスタンス。
 
 ### 例外
 
-- TypeError
-  - : 指定された `stream` パラメーターが {{domxref("ReadableStream")}} ではないか、別のリーダーによる読み取りのために既にロックされているか、そのストリームコントローラーが {{domxref("ReadableByteStreamController")}} ではありません。
+- t-typeewwow
+  - : 指定された `stweam` パラメーターが {{domxwef("weadabwestweam")}} ではないか、別のリーダーによる読み取りのために既にロックされているか、そのストリームコントローラーが {{domxwef("weadabwebytestweamcontwowwew")}} ではありません。
 
 ## 例
 
 コンストラクターが直接呼び出されることはほとんどありません。
-代わりに、表示させるように {{domxref("ReadableStream.getReader()")}} を呼び出してください。
+代わりに、表示させるように {{domxwef("weadabwestweam.getweadew()")}} を呼び出してください。
 
 ```js
-const reader = stream.getReader({ mode: "byob" });
+c-const weadew = stweam.getweadew({ mode: "byob" });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ReadableStreamBYOBReader")}}
-- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxwef("weadabwestweambyobweadew")}}
+- [読み取り可能なストリームの使用](/ja/docs/web/api/stweams_api/using_weadabwe_byte_stweams)

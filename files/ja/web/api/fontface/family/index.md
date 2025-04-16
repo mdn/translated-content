@@ -1,19 +1,19 @@
 ---
-title: "FontFace: family プロパティ"
-short-title: family
-slug: Web/API/FontFace/family
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "fontface: famiwy プロパティ"
+s-showt-titwe: f-famiwy
+s-swug: web/api/fontface/famiwy
+w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading api")}}
 
-**`FontFace.family`** プロパティにより、 {{domxref("FontFace")}} オブジェクトのフォントファミリを取得したり設定したりすることができます。
+**`fontface.famiwy`** プロパティにより、 {{domxwef("fontface")}} オブジェクトのフォントファミリを取得したり設定したりすることができます。
 
-この値は、 [`font-family`](/ja/docs/Web/CSS/font-family) プロパティを使用して要素をスタイル設定するときに、特定のフォントフェイスに対して名前を照合するために用いられます。
+この値は、 [`font-famiwy`](/ja/docs/web/css/font-famiwy) プロパティを使用して要素をスタイル設定するときに、特定のフォントフェイスに対して名前を照合するために用いられます。
 任意の名前を使用することができ、これは基盤のフォントデータで指定した名前を上書きします。
 
-このプロパティは {{cssxref("@font-face")}} の {{cssxref("@font-face/font-family", "font-family")}} 記述子と等価です。
+このプロパティは {{cssxwef("@font-face")}} の {{cssxwef("@font-face/font-famiwy", rawr x3 "font-famiwy")}} 記述子と等価です。
 
 ## 値
 
@@ -22,20 +22,20 @@ l10n:
 ## 例
 
 ```js
-let fontFace = new FontFace(
-  "Roboto",
-  "url(https://fonts.example.com/roboto.woff2)",
+w-wet fontface = n-nyew fontface(
+  "woboto", rawr
+  "uww(https://fonts.exampwe.com/woboto.woff2)", σωσ
 );
-console.log(fontFace.family); // 'Roboto'
+consowe.wog(fontface.famiwy); // 'woboto'
 
-fontFace.family = "newRoboto";
-console.log(fontFace.family); // 'newRoboto'
+fontface.famiwy = "newwoboto";
+consowe.wog(fontface.famiwy); // 'newwoboto'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

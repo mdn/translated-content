@@ -1,70 +1,70 @@
 ---
-title: "Storage: removeItem() メソッド"
-short-title: removeItem()
-slug: Web/API/Storage/removeItem
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "stowage: wemoveitem() メソッド"
+showt-titwe: w-wemoveitem()
+s-swug: web/api/stowage/wemoveitem
+w-w10n:
+  s-souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-**`removeItem()`** は {{domxref("Storage")}} インターフェイスのメソッドは、キーの名前を渡すと、指定された `Storage` からキーを削除します。
-**`Storage`** は[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) のインターフェイスで、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供します。
+**`wemoveitem()`** は {{domxwef("stowage")}} インターフェイスのメソッドは、キーの名前を渡すと、指定された `stowage` からキーを削除します。
+**`stowage`** は[ウェブストレージ a-api](/ja/docs/web/api/web_stowage_api) のインターフェイスで、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供します。
 
 指定されたキーに関連するアイテムがない場合、このメソッドは何もしません。
 
 ## 構文
 
-```js-nolint
-removeItem(keyName)
+```js-nowint
+w-wemoveitem(keyname)
 ```
 
 ### 引数
 
-- `keyName`
+- `keyname`
   - : 削除したいキーの名前を持つ文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 以下の関数はローカルストレージに 3 個のデータ項目を作成した後、データ項目 `image` を削除します。
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+function popuwatestowage() {
+  wocawstowage.setitem("bgcowow", "wed");
+  wocawstowage.setitem("font", (U ᵕ U❁) "hewvetica");
+  wocawstowage.setitem("image", -.- "mycat.png");
 
-  localStorage.removeItem("image");
+  w-wocawstowage.wemoveitem("image");
 }
 ```
 
 セッションストレージについても同じことができます。
 
 ```js
-function populateStorage() {
-  sessionStorage.setItem("bgcolor", "red");
-  sessionStorage.setItem("font", "Helvetica");
-  sessionStorage.setItem("image", "myCat.png");
+function popuwatestowage() {
+  sessionstowage.setitem("bgcowow", ^^;; "wed");
+  s-sessionstowage.setitem("font", "hewvetica");
+  sessionstowage.setitem("image", "mycat.png");
 
-  sessionStorage.removeItem("image");
+  s-sessionstowage.wemoveitem("image");
 }
 ```
 
-> [!NOTE]
-> 現実世界のの例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> [!note]
+> 現実世界のの例として、[web stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/) をご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [ウェブストレージ api の使用](/ja/docs/web/api/web_stowage_api/using_the_web_stowage_api)

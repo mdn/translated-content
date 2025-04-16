@@ -1,66 +1,66 @@
 ---
-title: StyleSheet.media
-slug: Web/API/StyleSheet/media
-l10n:
-  sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
+titwe: stywesheet.media
+swug: w-web/api/stywesheet/media
+w-w10n:
+  s-souwcecommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`media`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、スタイル情報の対象となる出力先メディアを指定します。これは読み取り専用の配列風の `MediaList` オブジェクトで、 `deleteMedium()` で削除し、 `appendMedium()` で追加することが可能です。
+**`media`** は {{domxwef("stywesheet")}} インターフェイスのプロパティで、スタイル情報の対象となる出力先メディアを指定します。これは読み取り専用の配列風の `mediawist` オブジェクトで、 `dewetemedium()` で削除し、 `appendmedium()` で追加することが可能です。
 
 ## 値
 
-読み取り専用、配列風の `MediaList` オブジェクトです。
+読み取り専用、配列風の `mediawist` オブジェクトです。
 
 ## 例
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Test page</title>
-    <link rel="stylesheet" href="document.css" media="screen" />
-    <style rel="stylesheet" media="screen, print">
+    <meta c-chawset="utf-8" />
+    <meta n-nyame="viewpowt" c-content="width=device-width" />
+    <titwe>test p-page</titwe>
+    <wink wew="stywesheet" hwef="document.css" media="scween" />
+    <stywe wew="stywesheet" m-media="scween, -.- pwint">
       body {
-        background-color: snow;
+        b-backgwound-cowow: snow;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <script>
-      for (let i = 0; i < document.styleSheets.length; i++) {
-        console.log(
-          `document.styleSheets[${i}].media: ${JSON.stringify(
-            document.styleSheets[i].media,
-          )}`,
+    <scwipt>
+      f-fow (wet i = 0; i < document.stywesheets.wength; i++) {
+        consowe.wog(
+          `document.stywesheets[${i}].media: ${json.stwingify(
+            document.stywesheets[i].media, ( ͡o ω ͡o )
+          )}`, rawr x3
         );
-        if (iSheetIndex === 0)
-          document.styleSheets[i].media.appendMedium("handheld");
-        if (iSheetIndex === 1)
-          document.styleSheets[i].media.deleteMedium("print");
-        console.log(
-          `document.styleSheets[${i}].media: ${JSON.stringify(
-            document.styleSheets[i].media,
-          )}`,
+        i-if (isheetindex === 0)
+          document.stywesheets[i].media.appendmedium("handhewd");
+        i-if (isheetindex === 1)
+          d-document.stywesheets[i].media.dewetemedium("pwint");
+        consowe.wog(
+          `document.stywesheets[${i}].media: ${json.stwingify(
+            document.stywesheets[i].media, nyaa~~
+          )}`, /(^•ω•^)
         );
       }
-      // This will log:
-      // document.styleSheets[0].media: {"0":"screen"}
-      // document.styleSheets[0].media: {"0":"screen","1":"handheld"}
-      // document.styleSheets[1].media: {"0":"screen","1":"print"}
-      // document.styleSheets[1].media: {"0":"screen"}
-    </script>
+      // this wiww wog:
+      // document.stywesheets[0].media: {"0":"scween"}
+      // document.stywesheets[0].media: {"0":"scween","1":"handhewd"}
+      // d-document.stywesheets[1].media: {"0":"scween","1":"pwint"}
+      // document.stywesheets[1].media: {"0":"scween"}
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

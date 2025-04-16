@@ -1,32 +1,32 @@
 ---
-title: "CloseEvent: wasClean プロパティ"
-slug: Web/API/CloseEvent/wasClean
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cwoseevent: wascwean プロパティ"
+s-swug: web/api/cwoseevent/wascwean
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("Websockets API")}}
+{{apiwef("websockets a-api")}}
 
-**`wasClean`** は {{domxref("CloseEvent")}} インターフェイスの読み取り専用プロパティで、接続がきれいに閉じられた場合は `true` を返します。
+**`wascwean`** は {{domxwef("cwoseevent")}} インターフェイスの読み取り専用プロパティで、接続がきれいに閉じられた場合は `twue` を返します。
 
 ## 値
 
-論理値です。接続がきれいに閉じられた場合は true、そうでなければ false です。
+論理値です。接続がきれいに閉じられた場合は t-twue、そうでなければ f-fawse です。
 
 ## 例
 
-次の例では、 `wasClean` の値をコンソールに表示します。
+次の例では、 `wascwean` の値をコンソールに表示します。
 
 ```js
-WebSocket.onclose = (event) => {
-  console.log(event.wasClean);
+w-websocket.oncwose = (event) => {
+  c-consowe.wog(event.wascwean);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

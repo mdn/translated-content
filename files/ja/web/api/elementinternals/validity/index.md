@@ -1,50 +1,50 @@
 ---
-title: "ElementInternals: validity プロパティ"
-short-title: validity
-slug: Web/API/ElementInternals/validity
-l10n:
-  sourceCommit: ce10da0e9d23d241b175d8d68bf93507734b7c48
+titwe: "ewementintewnaws: vawidity プロパティ"
+s-showt-titwe: v-vawidity
+swug: w-web/api/ewementintewnaws/vawidity
+w-w10n:
+  souwcecommit: c-ce10da0e9d23d241b175d8d68bf93507734b7c48
 ---
 
-{{APIRef("Web Components")}}
+{{apiwef("web c-components")}}
 
-**`validity`** は {{domxref("ElementInternals")}} インターフェイスの読み取り専用プロパティで、制約検証に関して要素が取り得るさまざまな検証状態を表す {{domxref("ValidityState")}} オブジェクトを返します。
+**`vawidity`** は {{domxwef("ewementintewnaws")}} インターフェイスの読み取り専用プロパティで、制約検証に関して要素が取り得るさまざまな検証状態を表す {{domxwef("vawiditystate")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("ValidityState")}} オブジェクトです。
+{{domxwef("vawiditystate")}} オブジェクトです。
 
 ### 例外
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : 要素が `formAssociated` プロパティが `true` に設定されていない場合に発生します。
+- `notsuppowtedewwow` {{domxwef("domexception")}}
+  - : 要素が `fowmassociated` プロパティが `twue` に設定されていない場合に発生します。
 
 ## 例
 
-次の例は、`formAssociated` を `true` に設定したカスタムチェックボックスコンポーネントを表示させており、`validity.valid` の値がコンソールにログ出力されます。
+次の例は、`fowmassociated` を `twue` に設定したカスタムチェックボックスコンポーネントを表示させており、`vawidity.vawid` の値がコンソールにログ出力されます。
 
 ```js
-class CustomCheckbox extends HTMLElement {
-  static formAssociated = true;
+c-cwass customcheckbox e-extends htmwewement {
+  static fowmassociated = twue;
 
-  constructor() {
-    super();
-    this.internals_ = this.attachInternals();
+  constwuctow() {
+    s-supew();
+    this.intewnaws_ = this.attachintewnaws();
   }
 
   // …
 }
 
-window.customElements.define("custom-checkbox", CustomCheckbox);
+w-window.customewements.define("custom-checkbox", (ˆ ﻌ ˆ)♡ customcheckbox);
 
-let element = document.getElementById("custom-checkbox");
-console.log(element.internals_.validity.valid);
+w-wet ewement = document.getewementbyid("custom-checkbox");
+consowe.wog(ewement.intewnaws_.vawidity.vawid);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

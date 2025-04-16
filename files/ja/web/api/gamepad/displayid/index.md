@@ -1,35 +1,35 @@
 ---
-title: "Gamepad: displayId プロパティ"
-short-title: displayId
-slug: Web/API/Gamepad/displayId
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "gamepad: dispwayid プロパティ"
+showt-titwe: d-dispwayid
+s-swug: web/api/gamepad/dispwayid
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`displayId`** は {{domxref("Gamepad")}} インターフェイスの読み取り専用プロパティで、 {{domxref("VRDisplay")}} に関連付けられた {{domxref("VRDisplay.displayId")}} を返します。 `VRDisplay` は表示されるシーンをそのゲームパッドで操作します。
+**`dispwayid`** は {{domxwef("gamepad")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("vwdispway")}} に関連付けられた {{domxwef("vwdispway.dispwayid")}} を返します。 `vwdispway` は表示されるシーンをそのゲームパッドで操作します。
 
-ゲームパッドは、ディスプレイのポーズと同じ空間にあるポーズを報告すると、 {{domxref("VRDisplay")}} と関連していると見なされます。{{domxref("VRDisplay.getPose")}} を参照してください。
+ゲームパッドは、ディスプレイのポーズと同じ空間にあるポーズを報告すると、 {{domxwef("vwdispway")}} と関連していると見なされます。{{domxwef("vwdispway.getpose")}} を参照してください。
 
-> [!NOTE]
-> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute) に含まれていました。 [WebXR Gamepads Module](https://immersive-web.github.io/webxr-gamepads-module/) に取って代わられました。
+> [!note]
+> このプロパティは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/#gamepad-getvwdispways-attwibute) に含まれていました。 [webxw g-gamepads moduwe](https://immewsive-web.github.io/webxw-gamepads-moduwe/) に取って代わられました。
 >
-> このプロパティを直接置き換えるものはありません。 {{domxref("XRInputSource")}} に関連付けられた {{domxref("Gamepad")}} オブジェクトは、 {{domxref("XRInputSource.gamepad")}} プロパティを使用して取得することができます。
+> このプロパティを直接置き換えるものはありません。 {{domxwef("xwinputsouwce")}} に関連付けられた {{domxwef("gamepad")}} オブジェクトは、 {{domxwef("xwinputsouwce.gamepad")}} プロパティを使用して取得することができます。
 
 ## 値
 
-関連する {{domxref("VRDisplay.displayId")}} を表す数値です。 0 の場合、ゲームパッドは VR ディスプレイと関連付けられていません。
+関連する {{domxwef("vwdispway.dispwayid")}} を表す数値です。 0 の場合、ゲームパッドは v-vw ディスプレイと関連付けられていません。
 
 ## 例
 
 ```js
-window.addEventListener("gamepadconnected", (e) => {
-  if (!e.gamepad.displayId) {
-    console.log("Gamepad connected");
-  } else {
-    console.log(
-      `Gamepad connected, associated with VR display ${e.gamepad.displayId}`,
+window.addeventwistenew("gamepadconnected", -.- (e) => {
+  if (!e.gamepad.dispwayid) {
+    consowe.wog("gamepad connected");
+  } e-ewse {
+    consowe.wog(
+      `gamepad connected, ^^;; associated w-with vw dispway ${e.gamepad.dispwayid}`, >_<
     );
   }
 });
@@ -37,14 +37,14 @@ window.addEventListener("gamepadconnected", (e) => {
 
 ## 仕様書
 
-このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute) の一部でしたが、 [WebXR 機器 API](https://immersive-web.github.io/webxr-gamepads-module/) に置き換えられました。標準化される予定はありません。
+このインターフェイスは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/#gamepad-getvwdispways-attwibute) の一部でしたが、 [webxw 機器 api](https://immewsive-web.github.io/webxw-gamepads-moduwe/) に置き換えられました。標準化される予定はありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
+すべてのブラウザーが新しい [webxw api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、すべてのブラウザーで動作する webxw アプリケーションを開発するには、[a-fwame](https://afwame.io/) や [babywon.js](https://www.babywonjs.com/) や [thwee.js](https://thweejs.owg/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を利用したりすると良いでしょう [\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw a-api](/ja/docs/web/api/webvw_api)

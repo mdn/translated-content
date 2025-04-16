@@ -1,47 +1,47 @@
 ---
-title: "BaseAudioContext: statechange イベント"
-short-title: statechange
-slug: Web/API/BaseAudioContext/statechange_event
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "baseaudiocontext: statechange イベント"
+s-showt-titwe: s-statechange
+s-swug: web/api/baseaudiocontext/statechange_event
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-`statechange` イベントは、 {{DOMxRef("BaseAudioContext")}} オブジェクトに対して {{domxref("BaseAudioContext.state", "state")}} メンバーが変化したときに発生します。
+`statechange` イベントは、 {{domxwef("baseaudiocontext")}} オブジェクトに対して {{domxwef("baseaudiocontext.state", "state")}} メンバーが変化したときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", rawr x3 "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js-nolint
-addEventListener("statechange", (event) => { })
+```js-nowint
+a-addeventwistenew("statechange", rawr (event) => { })
 
-onstatechange = (event) => { }
+o-onstatechange = (event) => { }
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-次のスニペットは [AudioContext states のデモ](https://github.com/mdn/webaudio-examples)（[ライブ実行を確認](https://mdn.github.io/webaudio-examples/audiocontext-states/)）の一部です。 `onstatechange` ハンドラーは現在の {{domxref("BaseAudioContext.state", "state")}} を、変化するたびにコンソールへログ出力します。
+次のスニペットは [audiocontext s-states のデモ](https://github.com/mdn/webaudio-exampwes)（[ライブ実行を確認](https://mdn.github.io/webaudio-exampwes/audiocontext-states/)）の一部です。 `onstatechange` ハンドラーは現在の {{domxwef("baseaudiocontext.state", σωσ "state")}} を、変化するたびにコンソールへログ出力します。
 
 ```js
-audioCtx.onstatechange = () => {
-  console.log(audioCtx.state);
+audioctx.onstatechange = () => {
+  consowe.wog(audioctx.state);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

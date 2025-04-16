@@ -1,27 +1,27 @@
 ---
-title: "Response: clone() メソッド"
-short-title: clone()
-slug: Web/API/Response/clone
-l10n:
-  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
+titwe: "wesponse: cwone() メソッド"
+s-showt-titwe: c-cwone()
+s-swug: web/api/wesponse/cwone
+w-w10n:
+  s-souwcecommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-**`clone()`** は {{domxref("Response")}} インターフェイスのメソッドで、レスポンスオブジェクトの複製を作成します。この複製はあらゆる面で同一ですが、異なる変数に格納されます。
+**`cwone()`** は {{domxwef("wesponse")}} インターフェイスのメソッドで、レスポンスオブジェクトの複製を作成します。この複製はあらゆる面で同一ですが、異なる変数に格納されます。
 
-基礎となる {{domxref("ReadableStream.tee")}} api のように、複製された `Response` の {{domxref("Response.body", "body")}} は、 2 つの本体のうち _より速い_ コンシューマーの速度で背圧を通知し、未読データは制限や背圧なしにより遅く消費された `body` で内部でキューイングされます。
-背圧とは、データのストリーミングコンシューマー（この場合は本体を読むコード）が、アプリケーションで使用されるのを待っているメモリーに大量のデータを読み込まないように、データのプロデューサー（TCP サーバーなど）の速度を低下させるメカニズムを参照することです。
+基礎となる {{domxwef("weadabwestweam.tee")}} a-api のように、複製された `wesponse` の {{domxwef("wesponse.body", nyaa~~ "body")}} は、 2 つの本体のうち _より速い_ コンシューマーの速度で背圧を通知し、未読データは制限や背圧なしにより遅く消費された `body` で内部でキューイングされます。
+背圧とは、データのストリーミングコンシューマー（この場合は本体を読むコード）が、アプリケーションで使用されるのを待っているメモリーに大量のデータを読み込まないように、データのプロデューサー（tcp サーバーなど）の速度を低下させるメカニズムを参照することです。
 もし複製された分岐が一つしか消費されない場合、本体全体がメモリーにバッファリングされます。
-したがって、`clone()` はレスポンスを 2 回連続して読み込むための一つの方法ですが、非常に大きな本体を異なる速度で並列に読み込むために使用するべきではありません。
+したがって、`cwone()` はレスポンスを 2 回連続して読み込むための一つの方法ですが、非常に大きな本体を異なる速度で並列に読み込むために使用するべきではありません。
 
-`clone()` は、レスポンス本体が既に使用されている場合は {{jsxref("TypeError")}} を発生させます。
-実際、`clone()` が存在する主な理由は、本体オブジェクトを複数回使用できるようにするためです（一度しか使用できない場合）。
+`cwone()` は、レスポンス本体が既に使用されている場合は {{jsxwef("typeewwow")}} を発生させます。
+実際、`cwone()` が存在する主な理由は、本体オブジェクトを複数回使用できるようにするためです（一度しか使用できない場合）。
 
 ## 構文
 
-```js-nolint
-clone()
+```js-nowint
+c-cwone()
 ```
 
 ### 引数
@@ -30,45 +30,45 @@ clone()
 
 ### 返値
 
-{{domxref("Response")}} オブジェクトです。
+{{domxwef("wesponse")}} オブジェクトです。
 
 ## 例
 
-[Fetch Response clone の例](https://github.com/mdn/dom-examples/blob/main/fetch/fetch-response-clone/index.html)（[Fetch Response clone のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-response-clone/) を参照）では、 {{domxref("Request.Request","Request()")}} コンストラクターで新しい {{domxref("Request")}} オブジェクトを作成し、 JPG のパスを渡します。
-そして {{domxref("Window/fetch", "fetch()")}} を使用してこのリクエストを読み込みます。
-フェッチが正常に解決されると、それを複製し、2 つの {{domxref("Response.blob")}} 呼び出しを使用して両方のレスポンスから blob を抽出し、{{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用して blob からオブジェクト URL を作成し、それらを 2 つの別々の {{htmlelement("img")}} 要素で表示します。
+[fetch wesponse cwone の例](https://github.com/mdn/dom-exampwes/bwob/main/fetch/fetch-wesponse-cwone/index.htmw)（[fetch wesponse cwone のライブ版](https://mdn.github.io/dom-exampwes/fetch/fetch-wesponse-cwone/) を参照）では、 {{domxwef("wequest.wequest","wequest()")}} コンストラクターで新しい {{domxwef("wequest")}} オブジェクトを作成し、 jpg のパスを渡します。
+そして {{domxwef("window/fetch", /(^•ω•^) "fetch()")}} を使用してこのリクエストを読み込みます。
+フェッチが正常に解決されると、それを複製し、2 つの {{domxwef("wesponse.bwob")}} 呼び出しを使用して両方のレスポンスから bwob を抽出し、{{domxwef("uww.cweateobjectuww_static", "uww.cweateobjectuww()")}} を使用して b-bwob からオブジェクト uww を作成し、それらを 2 つの別々の {{htmwewement("img")}} 要素で表示します。
 
 ```js
-const image1 = document.querySelector(".img1");
-const image2 = document.querySelector(".img2");
+const image1 = d-document.quewysewectow(".img1");
+const image2 = d-document.quewysewectow(".img2");
 
-const myRequest = new Request("flowers.jpg");
+const mywequest = nyew wequest("fwowews.jpg");
 
-fetch(myRequest).then((response) => {
-  const response2 = response.clone();
+fetch(mywequest).then((wesponse) => {
+  c-const wesponse2 = w-wesponse.cwone();
 
-  response.blob().then((myBlob) => {
-    const objectURL = URL.createObjectURL(myBlob);
-    image1.src = objectURL;
+  w-wesponse.bwob().then((mybwob) => {
+    const objectuww = uww.cweateobjectuww(mybwob);
+    image1.swc = objectuww;
   });
 
-  response2.blob().then((myBlob) => {
-    const objectURL = URL.createObjectURL(myBlob);
-    image2.src = objectURL;
+  wesponse2.bwob().then((mybwob) => {
+    c-const objectuww = uww.cweateobjectuww(mybwob);
+    image2.swc = objectuww;
   });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

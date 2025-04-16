@@ -1,59 +1,59 @@
 ---
-title: "StorageEvent: initStorageEvent() メソッド"
-short-title: initStorageEvent()
-slug: Web/API/StorageEvent/initStorageEvent
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "stowageevent: initstowageevent() メソッド"
+s-showt-titwe: i-initstowageevent()
+s-swug: w-web/api/stowageevent/initstowageevent
+w-w10n:
+  souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{ ApiRef("Web Storage API") }}{{deprecated_header}}
+{{ a-apiwef("web s-stowage a-api") }}{{depwecated_headew}}
 
-**`StorageEvent.initStorageEvent()`** メソッドは {{ domxref("StorageEvent") }} の値を初期化するために使用します。
+**`stowageevent.initstowageevent()`** メソッドは {{ domxwef("stowageevent") }} の値を初期化するために使用します。
 
 ## 構文
 
-```js-nolint
-initStorageEvent(type)
-initStorageEvent(type, canBubble)
-initStorageEvent(type, canBubble, cancelable)
-initStorageEvent(type, canBubble, cancelable, key)
-initStorageEvent(type, canBubble, cancelable, key, oldValue)
-initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue)
-initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue, url)
-initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue, url, storageArea)
+```js-nowint
+initstowageevent(type)
+initstowageevent(type, rawr x3 canbubbwe)
+initstowageevent(type, nyaa~~ c-canbubbwe, cancewabwe)
+initstowageevent(type, /(^•ω•^) canbubbwe, cancewabwe, rawr k-key)
+initstowageevent(type, OwO canbubbwe, (U ﹏ U) cancewabwe, k-key, >_< owdvawue)
+initstowageevent(type, rawr x3 canbubbwe, cancewabwe, mya key, nyaa~~ owdvawue, n-nyewvawue)
+initstowageevent(type, (⑅˘꒳˘) c-canbubbwe, rawr x3 c-cancewabwe, (✿oωo) key, owdvawue, (ˆ ﻌ ˆ)♡ nyewvawue, (˘ω˘) uww)
+initstowageevent(type, canbubbwe, (⑅˘꒳˘) cancewabwe, (///ˬ///✿) key, o-owdvawue, 😳😳😳 nyewvawue, 🥺 uww, stowageawea)
 ```
 
 ### 引数
 
-- `typeArg`
+- `typeawg`
   - : イベントの名前です。
-- `canBubble` {{optional_inline}}
-  - : 論理値で、イベントが DOM を介してバブリングするかどうかを示します。
-- `cancelable` {{optional_inline}}
+- `canbubbwe` {{optionaw_inwine}}
+  - : 論理値で、イベントが dom を介してバブリングするかどうかを示します。
+- `cancewabwe` {{optionaw_inwine}}
   - : 論理値で、イベントがキャンセル可能であるかどうかを示します。
-- `key` {{optional_inline}}
+- `key` {{optionaw_inwine}}
   - : このイベントの結果として値を変更しようとしているキーです。
-- `oldValue` {{optional_inline}}
+- `owdvawue` {{optionaw_inwine}}
   - : キーの古い値です。
-- `newValue` {{optional_inline}}
+- `newvawue` {{optionaw_inwine}}
   - : キーの新しい値です。
-- `url` {{optional_inline}}
-  - : 変更を行おうとしている文書の URL です。
-- `storageArea` {{optional_inline}}
-  - : このイベントが発生したストレージ領域を表す {{DOMxRef("Storage")}} オブジェクトです。
+- `uww` {{optionaw_inwine}}
+  - : 変更を行おうとしている文書の uww です。
+- `stowageawea` {{optionaw_inwine}}
+  - : このイベントが発生したストレージ領域を表す {{domxwef("stowage")}} オブジェクトです。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- この非推奨のメソッドの代わりに使用するコンストラクター: {{domxref("StorageEvent.StorageEvent", "StorageEvent()")}}
+- この非推奨のメソッドの代わりに使用するコンストラクター: {{domxwef("stowageevent.stowageevent", mya "stowageevent()")}}

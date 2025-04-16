@@ -1,23 +1,23 @@
 ---
-title: DOMStringMap
-slug: Web/API/DOMStringMap
-l10n:
-  sourceCommit: 7671d18ab2d141906af448d5bb125eebc16d3994
+titwe: domstwingmap
+swug: web/api/domstwingmap
+w-w10n:
+  souwcecommit: 7671d18ab2d141906af448d5bb125eebc16d3994
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`DOMStringMap`** インターフェイスは、要素に追加されたカスタム属性のデータを表すために {{domxref("HTMLElement.dataset")}}/{{domxref("SVGElement.dataset")}} 属性で使用されます。
+**`domstwingmap`** インターフェイスは、要素に追加されたカスタム属性のデータを表すために {{domxwef("htmwewement.dataset")}}/{{domxwef("svgewement.dataset")}} 属性で使用されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}}
-- [グローバル属性 - `data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)
+- {{domxwef("htmwewement.dataset")}} / {{domxwef("svgewement.dataset")}}
+- [グローバル属性 - `data-*`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/data-*)

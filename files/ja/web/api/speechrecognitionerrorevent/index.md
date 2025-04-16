@@ -1,51 +1,51 @@
 ---
-title: SpeechRecognitionError
-slug: Web/API/SpeechRecognitionErrorEvent
+titwe: speechwecognitionewwow
+swug: web/api/speechwecognitionewwowevent
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{apiwef("web s-speech a-api")}}{{seecompattabwe}}
 
-[Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechRecognitionError`** インターフェイスは、認識サービスからのエラーメッセージを表します。
+[web s-speech api](/ja/docs/web/api/web_speech_api) の **`speechwecognitionewwow`** インターフェイスは、認識サービスからのエラーメッセージを表します。
 
 ## プロパティ
 
-_`SpeechRecognitionError` は、親インターフェイスである {{domxref("Event")}} からのプロパティも継承します。_
+_`speechwecognitionewwow` は、親インターフェイスである {{domxwef("event")}} からのプロパティも継承します。_
 
-- {{domxref("SpeechRecognitionError.error")}} {{readonlyinline}}
+- {{domxwef("speechwecognitionewwow.ewwow")}} {{weadonwyinwine}}
   - : 起こったエラーの種類を返します。
-- {{domxref("SpeechRecognitionError.message")}} {{readonlyinline}}
+- {{domxwef("speechwecognitionewwow.message")}} {{weadonwyinwine}}
   - : エラーの内容が詳しく書かれたメッセージを返します。
 
 ## 例
 
 ```js
-var recognition = new SpeechRecognition();
+v-vaw wecognition = n-nyew speechwecognition();
 
-recognition.onerror = function (event) {
-  console.log("Speech recognition error detected: " + event.error);
-  console.log("Additional information: " + event.message);
+wecognition.onewwow = f-function (event) {
+  c-consowe.wog("speech w-wecognition ewwow detected: " + event.ewwow);
+  consowe.wog("additionaw infowmation: " + e-event.message);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの実装状況
 
-{{Compat}}
+{{compat}}
 
-### Firefox OS の許可設定
+### fiwefox os の許可設定
 
-アプリ内で音声認識を使用するには、以下の許可設定を [manifest](/ja/docs/Web/Apps/Build/Manifest) で指定する必要があります:
+アプリ内で音声認識を使用するには、以下の許可設定を [manifest](/ja/docs/web/apps/buiwd/manifest) で指定する必要があります:
 
 ```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
+"pewmissions": {
+  "audio-captuwe" : {
+    "descwiption" : "audio captuwe"
+  }, (U ﹏ U)
+  "speech-wecognition" : {
+    "descwiption" : "speech wecognition"
   }
 }
 ```
@@ -53,9 +53,9 @@ recognition.onerror = function (event) {
 特権アプリも必要なため、以下も同様に含める必要があります:
 
 ```json
-  "type": "privileged"
+  "type": "pwiviweged"
 ```
 
 ## 関連項目
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [web s-speech api](/ja/docs/web/api/web_speech_api)

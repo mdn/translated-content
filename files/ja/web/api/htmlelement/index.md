@@ -1,167 +1,167 @@
 ---
-title: HTMLElement
-slug: Web/API/HTMLElement
-l10n:
-  sourceCommit: 20cff31570e35c6da44ddd84158fcebd9f4f42d9
+titwe: htmwewement
+swug: web/api/htmwewement
+w-w10n:
+  souwcecommit: 20cff31570e35c6da44ddd84158fcebd9f4f42d9
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLElement`** インターフェイスは、任意の [HTML](/ja/docs/Web/HTML) 要素を表します。要素によってはこのインターフェイスで直接実装されていたり、これを継承したインターフェイスを通して実装されていたりします。
+**`htmwewement`** インターフェイスは、任意の [htmw](/ja/docs/web/htmw) 要素を表します。要素によってはこのインターフェイスで直接実装されていたり、これを継承したインターフェイスを通して実装されていたりします。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親である {{DOMxRef("Element")}} から継承したプロパティもあります。_
+_親である {{domxwef("ewement")}} から継承したプロパティもあります。_
 
-- {{DOMxRef("HTMLElement.accessKey")}}
+- {{domxwef("htmwewement.accesskey")}}
   - : 要素に割り当てられたアクセスキーを表す文字列です。
-- {{DOMxRef("HTMLElement.accessKeyLabel")}} {{ReadOnlyInline}}
+- {{domxwef("htmwewement.accesskeywabew")}} {{weadonwyinwine}}
   - : 要素に割り当てられたアクセスキーを含む文字列を返します。
-- {{DOMxRef("HTMLElement.anchorElement")}} {{ReadOnlyInline}}&nbsp;{{non-standard_inline}} {{experimental_inline}}
-  - : 要素のアンカー要素への参照を返すか、アンカー要素がない場合は `null` を返します。
-- {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("StylePropertyMap")}} で、その要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性の宣言を表します。
-- {{domxref("HTMLElement.autocapitalize")}}
-  - : ユーザー入力に対する要素の大文字小文字の動作を表す文字列。有効な値は `none`、`off`、`on`、`characters`、`words`、`sentences`　です。
-- {{domxref("HTMLElement.autofocus")}}
-  - : 論理値で、HTML の [`autofocus`](/ja/docs/Web/HTML/Reference/Elements/select#autofocus) グローバル属性を反映し、ページが読み込まれたとき、または {{htmlelement("dialog")}} 要素やポップオーバー属性が設定されている要素内の要素に指定した場合、ダイアログやポップオーバーが表示されたときに、コントロールにフォーカスを当てるかどうかを示します。
-- {{domxref("HTMLElement.autocorrect")}}
+- {{domxwef("htmwewement.anchowewement")}} {{weadonwyinwine}}&nbsp;{{non-standawd_inwine}} {{expewimentaw_inwine}}
+  - : 要素のアンカー要素への参照を返すか、アンカー要素がない場合は `nuww` を返します。
+- {{domxwef("htmwewement.attwibutestywemap")}} {{weadonwyinwine}}
+  - : {{domxwef("stywepwopewtymap")}} で、その要素の [`stywe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/stywe) 属性の宣言を表します。
+- {{domxwef("htmwewement.autocapitawize")}}
+  - : ユーザー入力に対する要素の大文字小文字の動作を表す文字列。有効な値は `none`、`off`、`on`、`chawactews`、`wowds`、`sentences`　です。
+- {{domxwef("htmwewement.autofocus")}}
+  - : 論理値で、htmw の [`autofocus`](/ja/docs/web/htmw/wefewence/ewements/sewect#autofocus) グローバル属性を反映し、ページが読み込まれたとき、または {{htmwewement("diawog")}} 要素やポップオーバー属性が設定されている要素内の要素に指定した場合、ダイアログやポップオーバーが表示されたときに、コントロールにフォーカスを当てるかどうかを示します。
+- {{domxwef("htmwewement.autocowwect")}}
   - : ユーザーが入力したテキストを自動的に修正すべきかどうかを表します。
-    これは HTML の [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect) グローバル属性を反映します。
-- {{DOMxRef("HTMLElement.contentEditable")}}
-  - : 文字列で、 `true` の場合は要素が編集可能、`false` の場合は編集不可であることを表します。
-- {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("DOMStringMap")}} で、スクリプトが読み書きできる要素の[カスタムデータ属性](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) (`data-*`) を表します。
-- {{DOMxRef("HTMLElement.dir")}}
-  - : 文字列で、要素の書字方向を表す `dir` グローバル属性を反映します。利用可能な値は、`"ltr"` および `"rtl"`、`"auto"` です。
-- {{DOMxRef("HTMLElement.draggable")}}
+    これは h-htmw の [`autocowwect`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/autocowwect) グローバル属性を反映します。
+- {{domxwef("htmwewement.contenteditabwe")}}
+  - : 文字列で、 `twue` の場合は要素が編集可能、`fawse` の場合は編集不可であることを表します。
+- {{domxwef("htmwewement.dataset")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwingmap")}} で、スクリプトが読み書きできる要素の[カスタムデータ属性](/ja/docs/weawn_web_devewopment/howto/sowve_htmw_pwobwems/use_data_attwibutes) (`data-*`) を表します。
+- {{domxwef("htmwewement.diw")}}
+  - : 文字列で、要素の書字方向を表す `diw` グローバル属性を反映します。利用可能な値は、`"wtw"` および `"wtw"`、`"auto"` です。
+- {{domxwef("htmwewement.dwaggabwe")}}
   - : 論理値で、要素がドラッグ可能かどうかを示します。
-- {{DOMxRef("HTMLElement.editContext")}} {{experimental_inline}}
-  - : この要素に関連付けられた {{DOMxRef("EditContext")}} を返します。なければ `null` を返します。
-- {{DOMxRef("HTMLElement.enterKeyHint")}}
-  - : 文字列で、仮想キーボードの Enter キーに表示するアクションラベル（またはアイコン）を定義します。
-- {{DOMxRef("HTMLElement.hidden")}}
-  - : 文字列または論理値で、この要素の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性の値を反映します。
-- {{DOMxRef("HTMLElement.inert")}}
+- {{domxwef("htmwewement.editcontext")}} {{expewimentaw_inwine}}
+  - : この要素に関連付けられた {{domxwef("editcontext")}} を返します。なければ `nuww` を返します。
+- {{domxwef("htmwewement.entewkeyhint")}}
+  - : 文字列で、仮想キーボードの e-entew キーに表示するアクションラベル（またはアイコン）を定義します。
+- {{domxwef("htmwewement.hidden")}}
+  - : 文字列または論理値で、この要素の [`hidden`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/hidden) 属性の値を反映します。
+- {{domxwef("htmwewement.inewt")}}
   - : 論理値で、ユーザー操作イベント、ページ内テキスト検索（「ページ内を検索」）、テキストの選択において、ユーザーエージェントが指定したノードがないかのように動作するかどうかを示します。
-- {{DOMxRef("HTMLElement.innerText")}}
+- {{domxwef("htmwewement.innewtext")}}
   - : このノードやその子孫において、表示されるテキストの内容を表します。
     ゲッターとしては、カーソルで要素の内容を選択しクリップボードにコピーした際のテキストに近いものを取得することができます。
-    セッターとしては、この要素の子要素を指定された値で置き換え、すべての改行を {{HTMLElement("br")}} 要素に変換します。
-- {{DOMxRef("HTMLElement.inputMode")}}
-  - : 文字列で、この要素の [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性の値を反映します。
-- {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
+    セッターとしては、この要素の子要素を指定された値で置き換え、すべての改行を {{htmwewement("bw")}} 要素に変換します。
+- {{domxwef("htmwewement.inputmode")}}
+  - : 文字列で、この要素の [`inputmode`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/inputmode) 属性の値を反映します。
+- {{domxwef("htmwewement.iscontenteditabwe")}} {{weadonwyinwine}}
   - : 論理値で、要素のコンテンツが編集可能か否かを示します。
-- {{DOMxRef("HTMLElement.lang")}}
+- {{domxwef("htmwewement.wang")}}
   - : 文字列で、要素の属性およびテキスト、要素のコンテンツの言語を表します。
-- {{DOMxRef("HTMLElement.nonce")}}
+- {{domxwef("htmwewement.nonce")}}
   - : 指定されたフェッチが実行を許可されるかどうかを判断するためにコンテンツセキュリティポリシーが使用する、一度だけ使用される暗号学的な数値を返します。
-- {{DOMxRef("HTMLElement.offsetHeight")}} {{ReadOnlyInline}}
-  - : `double` 値で、レイアウトに対して相対的な要素の高さを返します。
-- {{DOMxRef("HTMLElement.offsetLeft")}} {{ReadOnlyInline}}
-  - : `double` 値で、この要素の左境界線からその `offsetParent` の左境界線までの距離を返します。
-- {{DOMxRef("HTMLElement.offsetParent")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("Element")}} で、すべてのオフセット計算が現在計算されている要素を返します。
-- {{DOMxRef("HTMLElement.offsetTop")}} {{ReadOnlyInline}}
-  - : `double` 値で、要素の上境界線からその `offsetParent` の上境界線までの距離を返します。
-- {{DOMxRef("HTMLElement.offsetWidth")}} {{ReadOnlyInline}}
-  - : `double` 値で、レイアウトに対して相対的な要素の幅を返します。
-- {{DOMxRef("HTMLElement.outerText")}}
+- {{domxwef("htmwewement.offsetheight")}} {{weadonwyinwine}}
+  - : `doubwe` 値で、レイアウトに対して相対的な要素の高さを返します。
+- {{domxwef("htmwewement.offsetweft")}} {{weadonwyinwine}}
+  - : `doubwe` 値で、この要素の左境界線からその `offsetpawent` の左境界線までの距離を返します。
+- {{domxwef("htmwewement.offsetpawent")}} {{weadonwyinwine}}
+  - : {{domxwef("ewement")}} で、すべてのオフセット計算が現在計算されている要素を返します。
+- {{domxwef("htmwewement.offsettop")}} {{weadonwyinwine}}
+  - : `doubwe` 値で、要素の上境界線からその `offsetpawent` の上境界線までの距離を返します。
+- {{domxwef("htmwewement.offsetwidth")}} {{weadonwyinwine}}
+  - : `doubwe` 値で、レイアウトに対して相対的な要素の幅を返します。
+- {{domxwef("htmwewement.outewtext")}}
   - : ノードとその子孫の表示されるテキストコンテンツを表します。
-    ゲッターとしては {{DOMxRef("HTMLElement.innerText")}} と同じです（要素とその子孫の表示されるテキストの内容を表します）。
-    セッターとしては、選択されたノードとその内容を指定された値で置き換え、改行を {{HTMLElement("br")}} 要素に変換します。
-- {{domxref("HTMLElement.popover")}}
-  - : JavaScript から要素のポップオーバー状態を取得・設定し（`"auto"`、`"hint"`、`"manual"` のいずれか）、機能検出のために使用することもできます。グローバル HTML 属性 [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) の値を反映します。
-- {{DOMxRef("HTMLElement.spellcheck")}}
-  - : 論理値で、[スペルチェック](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck) のヒントを制御します。これはすべての HTML 要素で利用できますが、すべての要素に効果があるとは限りません。
-- {{DOMxRef("HTMLElement.style")}}
-  - : {{DOMxRef("CSSStyleDeclaration")}} で、この要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性の宣言を表します。
-- {{DOMxRef("HTMLElement.tabIndex")}}
-  - : `long` 値で、タブ順内の要素の位置を表します。
-- {{DOMxRef("HTMLElement.title")}}
+    ゲッターとしては {{domxwef("htmwewement.innewtext")}} と同じです（要素とその子孫の表示されるテキストの内容を表します）。
+    セッターとしては、選択されたノードとその内容を指定された値で置き換え、改行を {{htmwewement("bw")}} 要素に変換します。
+- {{domxwef("htmwewement.popovew")}}
+  - : j-javascwipt から要素のポップオーバー状態を取得・設定し（`"auto"`、`"hint"`、`"manuaw"` のいずれか）、機能検出のために使用することもできます。グローバル h-htmw 属性 [`popovew`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/popovew) の値を反映します。
+- {{domxwef("htmwewement.spewwcheck")}}
+  - : 論理値で、[スペルチェック](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/spewwcheck) のヒントを制御します。これはすべての h-htmw 要素で利用できますが、すべての要素に効果があるとは限りません。
+- {{domxwef("htmwewement.stywe")}}
+  - : {{domxwef("cssstywedecwawation")}} で、この要素の [`stywe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/stywe) 属性の宣言を表します。
+- {{domxwef("htmwewement.tabindex")}}
+  - : `wong` 値で、タブ順内の要素の位置を表します。
+- {{domxwef("htmwewement.titwe")}}
   - : 文字列で、マウスポインターを要素に当てた時に現れるポップアップボックスのテキストを表します。
-- {{DOMxRef("HTMLElement.translate")}}
+- {{domxwef("htmwewement.twanswate")}}
   - : 論理値で、翻訳を行うかどうかを表します。
-- {{DOMxRef("HTMLElement.virtualKeyboardPolicy")}} {{Experimental_Inline}}
-  - : 文字列で、タブレットやモバイル端末、その他ハードウェアキーボードが利用できない端末において、要素のコンテンツが編集可能な場合（例えば、{{htmlelement("input")}} 要素や {{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性が設定されている要素）、画面に表示される仮想キーボードの動作を示します。
-- {{DOMxRef("HTMLElement.writingSuggestions")}}
+- {{domxwef("htmwewement.viwtuawkeyboawdpowicy")}} {{expewimentaw_inwine}}
+  - : 文字列で、タブレットやモバイル端末、その他ハードウェアキーボードが利用できない端末において、要素のコンテンツが編集可能な場合（例えば、{{htmwewement("input")}} 要素や {{htmwewement("textawea")}} 要素、[`contenteditabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) 属性が設定されている要素）、画面に表示される仮想キーボードの動作を示します。
+- {{domxwef("htmwewement.wwitingsuggestions")}}
   - : 文字列で、ブラウザーが提供する文章作成の提案をこの要素のスコープで有効にすべきかどうかを示します。
 
 ## インスタンスメソッド
 
-_親である {{DOMxRef("Element")}} から継承したメソッドもあります。_
+_親である {{domxwef("ewement")}} から継承したメソッドもあります。_
 
-- {{DOMxRef("HTMLElement.attachInternals()")}}
-  - : {{DOMxRef("ElementInternals")}} オブジェクトを返し、カスタム要素を HTML フォームに参加できるようにします。
-- {{DOMxRef("HTMLElement.blur()")}}
+- {{domxwef("htmwewement.attachintewnaws()")}}
+  - : {{domxwef("ewementintewnaws")}} オブジェクトを返し、カスタム要素を h-htmw フォームに参加できるようにします。
+- {{domxwef("htmwewement.bwuw()")}}
   - : 現在フォーカスされている要素からキーボードフォーカスを外します。
-- {{DOMxRef("HTMLElement.click()")}}
+- {{domxwef("htmwewement.cwick()")}}
   - : 要素にマウスクリックイベントを送信します。
-- {{DOMxRef("HTMLElement.focus()")}}
+- {{domxwef("htmwewement.focus()")}}
   - : 要素に現在のキーボードフォーカスを当てます。
-- {{DOMxRef("HTMLElement.hidePopover()")}}
-  - : ポップオーバー要素を{{glossary("top layer", "最上位レイヤー")}}から取り除き、`display: none` でスタイル設定することで、ポップオーバー要素を非表示にします。
-- {{DOMxRef("HTMLElement.showPopover()")}}
-  - : ポップオーバー要素を{{glossary("top layer", "最上位レイヤー")}}に追加し、`display: none;` スタイル設定を削除することで、ポップオーバー要素を表示します。
-- {{DOMxRef("HTMLElement.togglePopover()")}}
+- {{domxwef("htmwewement.hidepopovew()")}}
+  - : ポップオーバー要素を{{gwossawy("top wayew", rawr "最上位レイヤー")}}から取り除き、`dispway: nyone` でスタイル設定することで、ポップオーバー要素を非表示にします。
+- {{domxwef("htmwewement.showpopovew()")}}
+  - : ポップオーバー要素を{{gwossawy("top wayew", σωσ "最上位レイヤー")}}に追加し、`dispway: nyone;` スタイル設定を削除することで、ポップオーバー要素を表示します。
+- {{domxwef("htmwewement.toggwepopovew()")}}
   - : ポップオーバー要素を非表示状態と表示状態を切り替えます。
 
 ## イベント
 
-これらのイベントを待ち受けするには {{domxref("EventTarget.addEventListener", "addEventListener()")}} を用いるか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。
+これらのイベントを待ち受けするには {{domxwef("eventtawget.addeventwistenew", "addeventwistenew()")}} を用いるか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。
 
-_親である {{DOMxRef("Element")}} から継承したイベントもあります。_
+_親である {{domxwef("ewement")}} から継承したイベントもあります。_
 
-- {{DOMxRef("HTMLElement/change_event", "change")}}
-  - : {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} のいずれかの要素の `value` が変更され、ユーザーが確定したときに発行されます。{{domxref("Element/input_event", "input")}} イベントとは異なり、`change` イベントは要素の `value` が変更されるたびに発行されるわけではありません。
-- {{DOMxRef("HTMLElement/error_event", "error")}}
+- {{domxwef("htmwewement/change_event", σωσ "change")}}
+  - : {{htmwewement("input")}}, >_< {{htmwewement("sewect")}}, :3 {{htmwewement("textawea")}} のいずれかの要素の `vawue` が変更され、ユーザーが確定したときに発行されます。{{domxwef("ewement/input_event", (U ﹏ U) "input")}} イベントとは異なり、`change` イベントは要素の `vawue` が変更されるたびに発行されるわけではありません。
+- {{domxwef("htmwewement/ewwow_event", -.- "ewwow")}}
   - : リソースの読み込みに失敗した、または使用することができない場合に発行されます。
-- {{DOMxRef("HTMLElement/load_event", "load")}}
+- {{domxwef("htmwewement/woad_event", (ˆ ﻌ ˆ)♡ "woad")}}
   - : リソースが正常に読み込まれたときに、リソースを保持する要素に対して発行されます。
 
 ### クリップボードイベント
 
-- {{DOMxRef("HTMLElement/copy_event", "copy")}}
+- {{domxwef("htmwewement/copy_event", (⑅˘꒳˘) "copy")}}
   - : ユーザーがブラウザーのユーザーインターフェイスを通じてコピー操作を開始したときに発生します。
-- {{DOMxRef("HTMLElement/cut_event", "cut")}}
+- {{domxwef("htmwewement/cut_event", (U ᵕ U❁) "cut")}}
   - : ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を開始したときに発生します。
-- {{DOMxRef("HTMLElement/paste_event", "paste")}}
+- {{domxwef("htmwewement/paste_event", -.- "paste")}}
   - : ユーザーがブラウザーのユーザーインターフェイスを通じて貼り付け操作を開始したときに発生します。
 
 ### ドラッグ & ドロップイベント
 
-- {{DOMxRef("HTMLElement/drag_event", "drag")}}
+- {{domxwef("htmwewement/dwag_event", ^^;; "dwag")}}
   - : このイベントは、要素やテキスト選択がドラッグされたときに発行されます。
-- {{DOMxRef("HTMLElement/dragend_event", "dragend")}}
+- {{domxwef("htmwewement/dwagend_event", >_< "dwagend")}}
   - : このイベントは、ドラッグ操作が（マウスボタンを離すか、エスケープキーを押すかして）終わったときに発行されます。
-- {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}
+- {{domxwef("htmwewement/dwagentew_event", mya "dwagentew")}}
   - : このイベントは、ドラッグされた要素やテキスト選択が有効なドロップ対象に入ると発行されます。
-- {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}
+- {{domxwef("htmwewement/dwagweave_event", mya "dwagweave")}}
   - : このイベントは、ドラッグされた要素やテキスト選択が有効なドロップ対象から外れたときに発行されます。
-- {{DOMxRef("HTMLElement/dragover_event", "dragover")}}
-  - : このイベントは、要素またはテキスト選択がドラッグされ、マウスポインターが有効なドロップ対象の上にあるとき（マウスが移動していないときは 50 ミリ秒ごと、移動中およそ 5 ミリ秒（移動が遅いとき）から 1 ミリ秒（移動が速いとき）の間に発生します。この発行パターンは {{domxref("Element/mouseover_event", "mouseover")}} とは異なります。）
-- {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}
+- {{domxwef("htmwewement/dwagovew_event", "dwagovew")}}
+  - : このイベントは、要素またはテキスト選択がドラッグされ、マウスポインターが有効なドロップ対象の上にあるとき（マウスが移動していないときは 50 ミリ秒ごと、移動中およそ 5 ミリ秒（移動が遅いとき）から 1 ミリ秒（移動が速いとき）の間に発生します。この発行パターンは {{domxwef("ewement/mouseovew_event", 😳 "mouseovew")}} とは異なります。）
+- {{domxwef("htmwewement/dwagstawt_event", XD "dwagstawt")}}
   - : このイベントは、ユーザーが要素やテキスト選択のドラッグを始めるには発行されます。
-- {{DOMxRef("HTMLElement/drop_event", "drop")}}
+- {{domxwef("htmwewement/dwop_event", :3 "dwop")}}
   - : このイベントは、要素またはテキスト選択が有効なドロップ対象にドロップされたときに発行されます。
 
 ### トグルイベント
 
-- {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}
-  - : この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)または {{htmlelement("dialog")}} である場合、非表示または表示される前に発行されます。
-- {{DOMxRef("HTMLElement/toggle_event", "toggle")}}
-  - : この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)、{{htmlelement("dialog")}}、{{htmlelement("details")}} のいずれかである場合、非表示または表示された直後に発行されます。
+- {{domxwef("htmwewement/befowetoggwe_event", 😳😳😳 "befowetoggwe")}}
+  - : この要素が[ポップオーバー](/ja/docs/web/api/popovew_api)または {{htmwewement("diawog")}} である場合、非表示または表示される前に発行されます。
+- {{domxwef("htmwewement/toggwe_event", -.- "toggwe")}}
+  - : この要素が[ポップオーバー](/ja/docs/web/api/popovew_api)、{{htmwewement("diawog")}}、{{htmwewement("detaiws")}} のいずれかである場合、非表示または表示された直後に発行されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("Element")}}
+- {{domxwef("ewement")}}

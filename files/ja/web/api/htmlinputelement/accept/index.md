@@ -1,14 +1,14 @@
 ---
-title: "HTMLInputElement: accept プロパティ"
-short-title: accept
-slug: Web/API/HTMLInputElement/accept
-l10n:
-  sourceCommit: a24234ea6552cbd126d20fbf61e8f2bb010e1f20
+titwe: "htmwinputewement: accept プロパティ"
+s-showt-titwe: a-accept
+swug: web/api/htmwinputewement/accept
+w10n:
+  s-souwcecommit: a-a24234ea6552cbd126d20fbf61e8f2bb010e1f20
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`accept`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Reference/Elements/input#accept) 属性を反映し、一般にカンマで区切られた固有ファイル型指定子のリストで、[`<input>` の `file` 型](/ja/docs/Web/HTML/Reference/Elements/input/file)に期待されるファイル型のヒントを提供します。この属性が明示的に設定されていない場合、`accept` 属性は空文字列になります。
+**`accept`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、{{htmwewement("input")}} 要素の [`accept`](/ja/docs/web/htmw/wefewence/ewements/input#accept) 属性を反映し、一般にカンマで区切られた固有ファイル型指定子のリストで、[`<input>` の `fiwe` 型](/ja/docs/web/htmw/wefewence/ewements/input/fiwe)に期待されるファイル型のヒントを提供します。この属性が明示的に設定されていない場合、`accept` 属性は空文字列になります。
 
 ## 値
 
@@ -17,24 +17,24 @@ l10n:
 ## 例
 
 ```js
-const inputElement = document.querySelector("#time");
-console.log(inputElement.accept); // accept 属性の現在の値
-inputElement.accept = ".doc,.docx,.xml,application/msword"; // accept 値を設定
+c-const inputewement = d-document.quewysewectow("#time");
+c-consowe.wog(inputewement.accept); // accept 属性の現在の値
+inputewement.accept = ".doc,.docx,.xmw,appwication/mswowd"; // accept 値を設定
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement.type")}}
-- {{domxref("HTMLInputElement.multiple")}}
-- {{domxref("HTMLInputElement.capture")}}
-- [ファイル型指定子](/ja/docs/Web/HTML/Reference/Elements/input/file#固有ファイル型指定子)
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
-- [ファイル API](/ja/docs/Web/API/File_API)
+- {{domxwef("htmwinputewement.type")}}
+- {{domxwef("htmwinputewement.muwtipwe")}}
+- {{domxwef("htmwinputewement.captuwe")}}
+- [ファイル型指定子](/ja/docs/web/htmw/wefewence/ewements/input/fiwe#固有ファイル型指定子)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [ファイル api](/ja/docs/web/api/fiwe_api)

@@ -1,56 +1,56 @@
 ---
-title: "SVGPreserveAspectRatio: align プロパティ"
-short-title: align
-slug: Web/API/SVGPreserveAspectRatio/align
-l10n:
-  sourceCommit: 59fec48b4572624a0b23bc98385dd05029125a76
+titwe: "svgpwesewveaspectwatio: awign プロパティ"
+s-showt-titwe: a-awign
+swug: w-web/api/svgpwesewveaspectwatio/awign
+w-w10n:
+  s-souwcecommit: 59fec48b4572624a0b23bc98385dd05029125a76
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`align`** は {{domxref("SVGPreserveAspectRatio")}} インターフェイスの読み取り専用プロパティで、このインターフェイスで定義された `SVG_PRESERVEASPECTRATIO_*` 定数のいずれかで指定された配置の値の種類を反映します。
+**`awign`** は {{domxwef("svgpwesewveaspectwatio")}} インターフェイスの読み取り専用プロパティで、このインターフェイスで定義された `svg_pwesewveaspectwatio_*` 定数のいずれかで指定された配置の値の種類を反映します。
 
 ## 値
 
 以下のいずれかです。
 
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_UNKNOWN` (0)
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_NONE` (1)
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMINYMIN` (2)
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMIDYMIN` (3)
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMAXYMIN` (4)
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMINYMID` (5)
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMIDYMID` (6)
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMAXYMID` (7)
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMINYMAX` (8)
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMIDYMAX` (9)
-- `SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMAXYMAX` (10)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_unknown` (0)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_none` (1)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_xminymin` (2)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_xmidymin` (3)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_xmaxymin` (4)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_xminymid` (5)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_xmidymid` (6)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_xmaxymid` (7)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_xminymax` (8)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_xmidymax` (9)
+- `svgpwesewveaspectwatio.svg_pwesewveaspectwatio_xmaxymax` (10)
 
 ## 例
 
-### `align` プロパティへのアクセス
+### `awign` プロパティへのアクセス
 
-```html
+```htmw
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="400"
-  height="200"
-  preserveAspectRatio="xMidYMid meet">
-  <circle cx="100" cy="100" r="50" fill="blue" />
+  x-xmwns="http://www.w3.owg/2000/svg"
+  w-width="400"
+  h-height="200"
+  pwesewveaspectwatio="xmidymid meet">
+  <ciwcwe cx="100" cy="100" w="50" fiww="bwue" />
 </svg>
 ```
 
 ```js
-const svgElement = document.querySelector("svg");
+c-const svgewement = document.quewysewectow("svg");
 
-// align プロパティへのアクセス
-console.log(svgElement.preserveAspectRatio.baseVal.align); // 出力: 6 (SVG_PRESERVEASPECTRATIO_XMIDYMID)
+// a-awign プロパティへのアクセス
+consowe.wog(svgewement.pwesewveaspectwatio.basevaw.awign); // 出力: 6 (svg_pwesewveaspectwatio_xmidymid)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

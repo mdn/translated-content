@@ -1,51 +1,51 @@
 ---
-title: "Response: headers プロパティ"
-short-title: headers
-slug: Web/API/Response/headers
-l10n:
-  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
+titwe: "wesponse: headews プロパティ"
+s-showt-titwe: h-headews
+s-swug: web/api/wesponse/headews
+w-w10n:
+  souwcecommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-**`headers`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、このレスポンスに関連付けられた {{domxref("Headers")}} オブジェクトが含まれています。
+**`headews`** は {{domxwef("wesponse")}} インターフェイスの読み取り専用プロパティで、このレスポンスに関連付けられた {{domxwef("headews")}} オブジェクトが含まれています。
 
 ### 値
 
-{{domxref("Headers")}} オブジェクト
+{{domxwef("headews")}} オブジェクト
 
 ## 例
 
-[Fetch Response の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) ( [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/) を参照) では、新しい {{domxref("Request")}} オブジェクトを、 {{domxref("Request.Request","Request()")}} コンストラクターを使用して作成し、 JPG のパスを渡します。次に {{domxref("Window/fetch", "fetch()")}} を使用してこのリクエストをフェッチし、 {{domxref("Response.blob")}} を使用してリクエストから blob を抽出し、 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用してオブジェクト URL を作成し、これを {{htmlelement("img")}} に表示します。
+[fetch w-wesponse の例](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-wesponse) ( [fetch w-wesponse wive](https://mdn.github.io/dom-exampwes/fetch/fetch-wesponse/) を参照) では、新しい {{domxwef("wequest")}} オブジェクトを、 {{domxwef("wequest.wequest","wequest()")}} コンストラクターを使用して作成し、 j-jpg のパスを渡します。次に {{domxwef("window/fetch", -.- "fetch()")}} を使用してこのリクエストをフェッチし、 {{domxwef("wesponse.bwob")}} を使用してリクエストから bwob を抽出し、 {{domxwef("uww.cweateobjectuww_static", ^^;; "uww.cweateobjectuww()")}} を使用してオブジェクト uww を作成し、これを {{htmwewement("img")}} に表示します。
 
-`fetch()` ブロックの上部でレスポンス `headers` の値をコンソールに記録している事に注意して下さい。
+`fetch()` ブロックの上部でレスポンス `headews` の値をコンソールに記録している事に注意して下さい。
 
 ```js
-const myImage = document.querySelector("img");
+const myimage = document.quewysewectow("img");
 
-const myRequest = new Request("flowers.jpg");
+const mywequest = n-nyew wequest("fwowews.jpg");
 
-fetch(myRequest)
-  .then((response) => {
-    console.log("レスポンスヘッダー =", response.headers);
-    return response.blob();
+fetch(mywequest)
+  .then((wesponse) => {
+    consowe.wog("レスポンスヘッダー =", >_< w-wesponse.headews);
+    wetuwn wesponse.bwob();
   })
-  .then((myBlob) => {
-    const objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+  .then((mybwob) => {
+    c-const objectuww = uww.cweateobjectuww(mybwob);
+    myimage.swc = objectuww;
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

@@ -1,60 +1,60 @@
 ---
-title: "HTMLSelectElement: item() メソッド"
-short-title: item()
-slug: Web/API/HTMLSelectElement/item
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwsewectewement: item() メソッド"
+s-showt-titwe: i-item()
+swug: web/api/htmwsewectewement/item
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLSelectElement.item()`** メソッドは、選択肢のリスト内で引数で渡された位置にある {{domxref("HTMLOptionElement")}} に対応する {{domxref("Element")}} を返します。存在しない場合は `null` を返します。
+**`htmwsewectewement.item()`** メソッドは、選択肢のリスト内で引数で渡された位置にある {{domxwef("htmwoptionewement")}} に対応する {{domxwef("ewement")}} を返します。存在しない場合は `nuww` を返します。
 
-JavaScript では、ブラケット構文に `unsigned long` の値を入れた `selectElt[index]` の形で、`selectElt.namedItem(index)` と同等になります。
+j-javascwipt では、ブラケット構文に `unsigned w-wong` の値を入れた `sewectewt[index]` の形で、`sewectewt.nameditem(index)` と同等になります。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 item(index)
-// or collection[index]
+// ow cowwection[index]
 ```
 
 ### 引数
 
-- `index` は `unsigned long` の値です。
+- `index` は `unsigned wong` の値です。
 
 ### 返値
 
-- `item` は {{domxref("HTMLOptionElement")}} です。
+- `item` は {{domxwef("htmwoptionewement")}} です。
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<form>
-  <select id="myFormControl">
-    <option id="o1">Opt 1</option>
-    <option id="o2">Opt 2</option>
-  </select>
-</form>
+```htmw
+<fowm>
+  <sewect id="myfowmcontwow">
+    <option i-id="o1">opt 1</option>
+    <option id="o2">opt 2</option>
+  </sewect>
+</fowm>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-// Returns the HTMLOptionElement representing #o2
-elem1 = document.forms[0]["myFormControl"][1];
+// w-wetuwns the htmwoptionewement w-wepwesenting #o2
+ewem1 = document.fowms[0]["myfowmcontwow"][1];
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 実装先の {{domxref("HTMLSelectElement")}}
+- 実装先の {{domxwef("htmwsewectewement")}}

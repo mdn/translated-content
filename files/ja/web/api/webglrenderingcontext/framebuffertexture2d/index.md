@@ -1,116 +1,116 @@
 ---
-title: WebGLRenderingContext.framebufferTexture2D()
-slug: Web/API/WebGLRenderingContext/framebufferTexture2D
-l10n:
-  sourceCommit: 41fe03908c341ab928c4a8d5ee48e03e28e2dd6c
+titwe: webgwwendewingcontext.fwamebuffewtextuwe2d()
+swug: web/api/webgwwendewingcontext/fwamebuffewtextuwe2d
+w-w10n:
+  souwcecommit: 41fe03908c341ab928c4a8d5ee48e03e28e2dd6c
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.framebufferTexture2D()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、テクスチャを {{domxref("WebGLFramebuffer")}} に割り当てます。
+**`webgwwendewingcontext.fwamebuffewtextuwe2d()`** は [webgw a-api](/ja/docs/web/api/webgw_api) のメソッドで、テクスチャを {{domxwef("webgwfwamebuffew")}} に割り当てます。
 
 ## 構文
 
 ```js
-framebufferTexture2D(target, attachment, textarget, texture, level);
+f-fwamebuffewtextuwe2d(tawget, (⑅˘꒳˘) a-attachment, rawr x3 t-textawget, (✿oωo) textuwe, (ˆ ﻌ ˆ)♡ w-wevew);
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
 
-  - : {{domxref("WebGL_API/Types", "GLenum")}} で、バインディングポイント（ターゲット）を指定します。利用可能な値は以下の通りです。
+  - : {{domxwef("webgw_api/types", (˘ω˘) "gwenum")}} で、バインディングポイント（ターゲット）を指定します。利用可能な値は以下の通りです。
 
-    - `gl.FRAMEBUFFER`
+    - `gw.fwamebuffew`
 
       - : 色、アルファ、深度、ステンシルバッファーの集合のバッファーデータストレージで、画像をレンダリングするために使用します。
-        {{domxref("WebGL2RenderingContext", "WebGL 2 コンテキスト", "", 1)}}を使用している場合は、加えて以下の値も利用できます。
+        {{domxwef("webgw2wendewingcontext", (⑅˘꒳˘) "webgw 2 コンテキスト", (///ˬ///✿) "", 1)}}を使用している場合は、加えて以下の値も利用できます。
 
-      - `gl.DRAW_FRAMEBUFFER`
+      - `gw.dwaw_fwamebuffew`
         - : 描画、レンダリング、クリア、書き込み操作を行う先として使用します。
-      - `gl.READ_FRAMEBUFFER`
+      - `gw.wead_fwamebuffew`
         - : 読み取り操作のソースとして使用します。
 
-    バインディングの際、 `gl.FRAMEBUFFER` は `gl.DRAW_FRAMEBUFFER` と `gl.READ_FRAMEBUFFER` の両方のバインディングポイントを設定します。参照時には、 `gl.FRAMEBUFFER` は `gl.DRAW_FRAMEBUFFER` バインディングとなります。
+    バインディングの際、 `gw.fwamebuffew` は `gw.dwaw_fwamebuffew` と `gw.wead_fwamebuffew` の両方のバインディングポイントを設定します。参照時には、 `gw.fwamebuffew` は `gw.dwaw_fwamebuffew` バインディングとなります。
 
 - `attachment`
 
-  - : {{domxref("WebGL_API/Types", "GLenum")}} で、 `texture` の装着ポイントを指定します。利用可能な値は以下の通りです。
+  - : {{domxwef("webgw_api/types", 😳😳😳 "gwenum")}} で、 `textuwe` の装着ポイントを指定します。利用可能な値は以下の通りです。
 
-    - `gl.COLOR_ATTACHMENT0`: テクスチャをフレームバッファーの色バッファーに装着します。
-    - `gl.DEPTH_ATTACHMENT`: テクスチャをフレームバッファーの深度バッファーに装着します。
-    - `gl.STENCIL_ATTACHMENT`: テクスチャをフレームバッファーのステンシルバッファーに装着します。
-      {{domxref("WebGL2RenderingContext", "WebGL 2 コンテキスト", "", 1)}}を使用している場合は、加えて以下の値も利用できます。
+    - `gw.cowow_attachment0`: テクスチャをフレームバッファーの色バッファーに装着します。
+    - `gw.depth_attachment`: テクスチャをフレームバッファーの深度バッファーに装着します。
+    - `gw.stenciw_attachment`: テクスチャをフレームバッファーのステンシルバッファーに装着します。
+      {{domxwef("webgw2wendewingcontext", 🥺 "webgw 2 コンテキスト", mya "", 1)}}を使用している場合は、加えて以下の値も利用できます。
 
-      - `gl.DEPTH_STENCIL_ATTACHMENT`: 深さおよびステンシルバッファー。
-      - `gl.COLOR_ATTACHMENT1 gl.COLOR_ATTACHMENT2 gl.COLOR_ATTACHMENT3 gl.COLOR_ATTACHMENT4 gl.COLOR_ATTACHMENT5 gl.COLOR_ATTACHMENT6 gl.COLOR_ATTACHMENT7 gl.COLOR_ATTACHMENT8 gl.COLOR_ATTACHMENT9 gl.COLOR_ATTACHMENT10 gl.COLOR_ATTACHMENT11 gl.COLOR_ATTACHMENT12 gl.COLOR_ATTACHMENT13 gl.COLOR_ATTACHMENT14 gl.COLOR_ATTACHMENT15`
+      - `gw.depth_stenciw_attachment`: 深さおよびステンシルバッファー。
+      - `gw.cowow_attachment1 g-gw.cowow_attachment2 g-gw.cowow_attachment3 gw.cowow_attachment4 gw.cowow_attachment5 gw.cowow_attachment6 gw.cowow_attachment7 gw.cowow_attachment8 g-gw.cowow_attachment9 gw.cowow_attachment10 gw.cowow_attachment11 g-gw.cowow_attachment12 gw.cowow_attachment13 g-gw.cowow_attachment14 gw.cowow_attachment15`
 
-    {{domxref("WEBGL_draw_buffers")}} 拡張機能を使用している場合は次の値が利用できます。
+    {{domxwef("webgw_dwaw_buffews")}} 拡張機能を使用している場合は次の値が利用できます。
 
-    - `ext.COLOR_ATTACHMENT0_WEBGL` （`gl.COLOR_ATTACHMENT0` と同じ）
-    - `ext.COLOR_ATTACHMENT1_WEBGL ext.COLOR_ATTACHMENT2_WEBGL ext.COLOR_ATTACHMENT3_WEBGL ext.COLOR_ATTACHMENT4_WEBGL ext.COLOR_ATTACHMENT5_WEBGL ext.COLOR_ATTACHMENT6_WEBGL ext.COLOR_ATTACHMENT7_WEBGL ext.COLOR_ATTACHMENT8_WEBGL ext.COLOR_ATTACHMENT9_WEBGL ext.COLOR_ATTACHMENT10_WEBGL ext.COLOR_ATTACHMENT11_WEBGL ext.COLOR_ATTACHMENT12_WEBGL ext.COLOR_ATTACHMENT13_WEBGL ext.COLOR_ATTACHMENT14_WEBGL ext.COLOR_ATTACHMENT15_WEBGL`
+    - `ext.cowow_attachment0_webgw` （`gw.cowow_attachment0` と同じ）
+    - `ext.cowow_attachment1_webgw ext.cowow_attachment2_webgw ext.cowow_attachment3_webgw e-ext.cowow_attachment4_webgw ext.cowow_attachment5_webgw e-ext.cowow_attachment6_webgw e-ext.cowow_attachment7_webgw ext.cowow_attachment8_webgw ext.cowow_attachment9_webgw ext.cowow_attachment10_webgw ext.cowow_attachment11_webgw ext.cowow_attachment12_webgw e-ext.cowow_attachment13_webgw ext.cowow_attachment14_webgw ext.cowow_attachment15_webgw`
 
-    {{domxref("WEBGL_depth_texture")}} 拡張機能を使用している場合は次の値が利用できます。
+    {{domxwef("webgw_depth_textuwe")}} 拡張機能を使用している場合は次の値が利用できます。
 
-    - `gl.DEPTH_STENCIL_ATTACHMENT`: 深さとステンシルのデータストレージ。
+    - `gw.depth_stenciw_attachment`: 深さとステンシルのデータストレージ。
 
-- `textarget`
+- `textawget`
 
-  - : {{domxref("WebGL_API/Types", "GLenum")}} で、テクスチャターゲットを指定します。利用可能な値は以下の通りです。
+  - : {{domxwef("webgw_api/types", 🥺 "gwenum")}} で、テクスチャターゲットを指定します。利用可能な値は以下の通りです。
 
-    - `gl.TEXTURE_2D`: 2D 画像
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`: 立方体の正の X 表面の画像。
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`: 立方体の負の X 表面の画像。
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Y`: 立方体の正の Y 表面の画像。
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Y`: 立方体の負の Y 表面の画像。
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Z`: 立方体の正の Z 表面の画像。
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z`: 立方体の負の Z 表面の画像。
+    - `gw.textuwe_2d`: 2d 画像
+    - `gw.textuwe_cube_map_positive_x`: 立方体の正の x 表面の画像。
+    - `gw.textuwe_cube_map_negative_x`: 立方体の負の x 表面の画像。
+    - `gw.textuwe_cube_map_positive_y`: 立方体の正の y-y 表面の画像。
+    - `gw.textuwe_cube_map_negative_y`: 立方体の負の y 表面の画像。
+    - `gw.textuwe_cube_map_positive_z`: 立方体の正の z-z 表面の画像。
+    - `gw.textuwe_cube_map_negative_z`: 立方体の負の z-z 表面の画像。
 
-- `texture`
-  - : 装着する画像の {{domxref("WebGLTexture")}} オブジェクト。
-- `level`
-  - : {{domxref("WebGL_API/Types", "GLint")}} 型で、装着するテクスチャ画像のミップマップレベルを指定します。 0 でなければなりません。
+- `textuwe`
+  - : 装着する画像の {{domxwef("webgwtextuwe")}} オブジェクト。
+- `wevew`
+  - : {{domxwef("webgw_api/types", >_< "gwint")}} 型で、装着するテクスチャ画像のミップマップレベルを指定します。 0 でなければなりません。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `gl.INVALID_ENUM` エラーは下記の場合に発生します。
+- `gw.invawid_enum` エラーは下記の場合に発生します。
 
-  - `target` が `gl.FRAMEBUFFER` でなかった場合。
+  - `tawget` が `gw.fwamebuffew` でなかった場合。
   - `attachment` が指定可能な装着点のうちの何れかでなかった場合。
-  - `textarget` が指定可能なテクスチャターゲットのうちのいずれかでなかった場合。
+  - `textawget` が指定可能なテクスチャターゲットのうちのいずれかでなかった場合。
 
-- `gl.INVALID_VALUE` エラーは `level` が 0 以外であった場合に発生します。
-- `gl.INVALID_OPERATION` エラーは `texture` が 0 または既存のテクスチャオブジェクトの名前でなかった場合に発生します。
+- `gw.invawid_vawue` エラーは `wevew` が 0 以外であった場合に発生します。
+- `gw.invawid_opewation` エラーは `textuwe` が 0 または既存のテクスチャオブジェクトの名前でなかった場合に発生します。
 
 ## 例
 
 ```js
-gl.framebufferTexture2D(
-  gl.FRAMEBUFFER,
-  gl.COLOR_ATTACHMENT0,
-  gl.TEXTURE_2D,
-  texture,
-  0,
+g-gw.fwamebuffewtextuwe2d(
+  g-gw.fwamebuffew, >_<
+  gw.cowow_attachment0, (⑅˘꒳˘)
+  gw.textuwe_2d, /(^•ω•^)
+  t-textuwe,
+  0, rawr x3
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-- その他のバッファー: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}
-- {{domxref("WEBGL_depth_texture")}}
-- {{domxref("WEBGL_draw_buffers")}}
+- {{domxwef("webgwwendewingcontext.cweatefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isfwamebuffew()")}}
+- その他のバッファー: {{domxwef("webgwbuffew")}}, (U ﹏ U) {{domxwef("webgwwendewbuffew")}}
+- {{domxwef("webgw_depth_textuwe")}}
+- {{domxwef("webgw_dwaw_buffews")}}

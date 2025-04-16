@@ -1,14 +1,14 @@
 ---
-title: "InputEvent: isComposing プロパティ"
-short-title: isComposing
-slug: Web/API/InputEvent/isComposing
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "inputevent: iscomposing プロパティ"
+s-showt-titwe: i-iscomposing
+swug: w-web/api/inputevent/iscomposing
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`InputEvent.isComposing`** は読み取り専用プロパティで、このイベントが {{domxref("Element/compositionstart_event", "compositionstart")}} の後、かつ {{domxref("Element/compositionend_event", "compositionend")}} の前に発生したかどうかを示す論理値を返します。
+**`inputevent.iscomposing`** は読み取り専用プロパティで、このイベントが {{domxwef("ewement/compositionstawt_event", rawr x3 "compositionstawt")}} の後、かつ {{domxwef("ewement/compositionend_event", rawr "compositionend")}} の前に発生したかどうかを示す論理値を返します。
 
 ## 値
 
@@ -17,19 +17,19 @@ l10n:
 ## 例
 
 ```js
-const inputEvent = new InputEvent("syntheticInput", false);
-console.log(inputEvent.isComposing); // return false
+c-const i-inputevent = nyew inputevent("syntheticinput", σωσ fawse);
+consowe.wog(inputevent.iscomposing); // wetuwn fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element/compositionstart_event", "compositionstart")}} および {{domxref("Element/compositionend_event", "compositionend")}}
-- {{domxref("InputEvent")}}
+- {{domxwef("ewement/compositionstawt_event", σωσ "compositionstawt")}} および {{domxwef("ewement/compositionend_event", >_< "compositionend")}}
+- {{domxwef("inputevent")}}

@@ -1,62 +1,62 @@
 ---
-title: "HTMLSelectElement: remove() メソッド"
-short-title: remove()
-slug: Web/API/HTMLSelectElement/remove
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwsewectewement: wemove() メソッド"
+s-showt-titwe: w-wemove()
+swug: w-web/api/htmwsewectewement/wemove
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLSelectElement.remove()`** メソッドは、この select 要素の選択肢の集合から指定された位置の要素を削除します。
+**`htmwsewectewement.wemove()`** メソッドは、この s-sewect 要素の選択肢の集合から指定された位置の要素を削除します。
 
 ## 構文
 
-```js-nolint
-remove(index)
+```js-nowint
+wemove(index)
 ```
 
 ### 引数
 
-- `index` はゼロから始まる long 値で、集合から削除する {{ domxref("HTMLOptionElement") }} の位置を表します。この位置の要素が見つからなかった場合は、このメソッドは効果がありません。
+- `index` はゼロから始まる w-wong 値で、集合から削除する {{ domxwef("htmwoptionewement") }} の位置を表します。この位置の要素が見つからなかった場合は、このメソッドは効果がありません。
 
 ### 返値
 
-なし（{{jsxref("undefined")}}）。
+なし（{{jsxwef("undefined")}}）。
 
 ## 例
 
-```html
-<select id="existingList" name="existingList">
-  <option value="1">Option: Value 1</option>
-  <option value="2">Option: Value 2</option>
-  <option value="3">Option: Value 3</option>
-</select>
+```htmw
+<sewect id="existingwist" nyame="existingwist">
+  <option vawue="1">option: v-vawue 1</option>
+  <option vawue="2">option: vawue 2</option>
+  <option vawue="3">option: v-vawue 3</option>
+</sewect>
 ```
 
 ```js
-let sel = document.getElementById("existingList");
-sel.remove(1);
+wet sew = document.getewementbyid("existingwist");
+s-sew.wemove(1);
 ```
 
-HTML は次のようになります。
+htmw は次のようになります。
 
-```html
-<select id="existingList" name="existingList">
-  <option value="1">Option: Value 1</option>
-  <option value="3">Option: Value 3</option>
-</select>
+```htmw
+<sewect id="existingwist" nyame="existingwist">
+  <option v-vawue="1">option: vawue 1</option>
+  <option v-vawue="3">option: v-vawue 3</option>
+</sewect>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("Element.remove") }} は、{{ domxref("HTMLSelectElement") }} 上で remove が引数無しに呼び出された場合に呼び出されるメソッドです。
-- 実装先の {{domxref("HTMLSelectElement") }}
+- {{ domxwef("ewement.wemove") }} は、{{ domxwef("htmwsewectewement") }} 上で wemove が引数無しに呼び出された場合に呼び出されるメソッドです。
+- 実装先の {{domxwef("htmwsewectewement") }}

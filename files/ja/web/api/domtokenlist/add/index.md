@@ -1,27 +1,27 @@
 ---
-title: "DOMTokenList: add() メソッド"
-short-title: add()
-slug: Web/API/DOMTokenList/add
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domtokenwist: add() メソッド"
+s-showt-titwe: a-add()
+s-swug: web/api/domtokenwist/add
+w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`add()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、指定されたトークンをリストに追加します。既に存在する場合は何もしません。
+**`add()`** は {{domxwef("domtokenwist")}} インターフェイスのメソッドで、指定されたトークンをリストに追加します。既に存在する場合は何もしません。
 
 ## 構文
 
-```js-nolint
-add(token0)
-add(token0, token1)
-add(token0, token1, /* … ,*/ tokenN)
+```js-nowint
+a-add(token0)
+a-add(token0, ^^;; token1)
+a-add(token0, >_< t-token1, mya /* … ,*/ tokenn)
 ```
 
 ## 引数
 
-- `tokenN`
-  - : `DOMTokenList` に追加するトークン（またはトークン群）を表す文字列です。
+- `tokenn`
+  - : `domtokenwist` に追加するトークン（またはトークン群）を表す文字列です。
 
 ### 返値
 
@@ -29,44 +29,44 @@ add(token0, token1, /* … ,*/ tokenN)
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
+- `syntaxewwow` {{domxwef("domexception")}}
   - : 引数のうちの 1 つが空文字列であった場合に発生します。
-- `InvalidCharacterError` {{domxref("DOMException")}}
-  - : トークンに ASCII ホワイトスペースが含まれていた場合に発生します。
+- `invawidchawactewewwow` {{domxwef("domexception")}}
+  - : トークンに ascii ホワイトスペースが含まれていた場合に発生します。
 
 ## 例
 
-以下の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るのに {{domxref("Element.classList")}} を使用しています。それからリストに新しいトークンを追加し、リストを `<span>` の {{domxref("Node.textContent")}} に書き込みます。
+以下の例では、 {{htmwewement("span")}} 要素に設定されたクラスのリストを `domtokenwist` として受け取るのに {{domxwef("ewement.cwasswist")}} を使用しています。それからリストに新しいトークンを追加し、リストを `<span>` の {{domxwef("node.textcontent")}} に書き込みます。
 
-最初に HTML です。
+最初に htmw です。
 
-```html
-<span class="a b c"></span>
+```htmw
+<span cwass="a b-b c"></span>
 ```
 
-そして JavaScript です。
+そして javascwipt です。
 
 ```js
-const span = document.querySelector("span");
-const classes = span.classList;
-classes.add("d");
-span.textContent = classes;
+const span = d-document.quewysewectow("span");
+const cwasses = s-span.cwasswist;
+cwasses.add("d");
+span.textcontent = cwasses;
 ```
 
 出力結果は以下のようになります。
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ e-embedwivesampwe('exampwes', mya '100%', 60) }}
 
 同様に、複数のトークンを追加することができます。
 
 ```js
-span.classList.add("d", "e", "f");
+span.cwasswist.add("d", 😳 "e", "f");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

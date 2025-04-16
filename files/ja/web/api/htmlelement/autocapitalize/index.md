@@ -1,21 +1,21 @@
 ---
-title: "HTMLElement: autocapitalize プロパティ"
-short-title: autocapitalize
-slug: Web/API/HTMLElement/autocapitalize
-l10n:
-  sourceCommit: f58b59a00199bb177beefa245f104ecbd86dae5c
+titwe: "htmwewement: autocapitawize プロパティ"
+s-showt-titwe: a-autocapitawize
+s-swug: web/api/htmwewement/autocapitawize
+w-w10n:
+  s-souwcecommit: f-f58b59a00199bb177beefa245f104ecbd86dae5c
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`autocapitalize`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、ユーザー入力に対する要素の大文字化動作を表します。すべての HTML 要素で利用可能ですが、すべての要素に影響するわけでははなく、次の要素でに影響します。
+**`autocapitawize`** は {{domxwef("htmwewement")}} インターフェイスのプロパティで、ユーザー入力に対する要素の大文字化動作を表します。すべての h-htmw 要素で利用可能ですが、すべての要素に影響するわけでははなく、次の要素でに影響します。
 
-- {{htmlelement("input")}} および {{htmlelement("textarea")}} 要素。
-- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) が設定された任意の要素。
+- {{htmwewement("input")}} および {{htmwewement("textawea")}} 要素。
+- [`contenteditabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) が設定された任意の要素。
 
-`autocapitalize` は物理的なキーボードで入力するときの動作には影響しません。モバイル端末の仮想キーボードや音声入力など、他の入力メカニズムの動作に影響します。例えば、各文の最初の文字を自動的に大文字にすることで、データ入力を素早く簡単にすることができます。
+`autocapitawize` は物理的なキーボードで入力するときの動作には影響しません。モバイル端末の仮想キーボードや音声入力など、他の入力メカニズムの動作に影響します。例えば、各文の最初の文字を自動的に大文字にすることで、データ入力を素早く簡単にすることができます。
 
-これは、HTML の [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) グローバル属性の値を反映します。
+これは、htmw の [`autocapitawize`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/autocapitawize) グローバル属性の値を反映します。
 
 ## 値
 
@@ -25,51 +25,51 @@ l10n:
   - : 自動大文字化を適用せず、すべての文字を既定で小文字にします。
 - `sentences` または `on`
   - : 各文の先頭の文字は既定で大文字にし、それ以外の文字は小文字にします。
-- `words`
+- `wowds`
   - : 各単語の最初の文字を既定で大文字にし、それ以外の文字を小文字にします。
-- `characters`
+- `chawactews`
   - : すべての文字は既定で大文字になります。
 
 ## 例
 
 次の例は、スクリプトを使ってユーザー入力の大文字小文字を制御する方法を示します。
 
-```html
-<div>現在の大文字化の動作は <span id="ac-label"></span> です。</div>
-<div id="ac-element" contenteditable="true" autocapitalize="default">
-  input here
+```htmw
+<div>現在の大文字化の動作は <span id="ac-wabew"></span> です。</div>
+<div id="ac-ewement" contenteditabwe="twue" autocapitawize="defauwt">
+  input h-hewe
 </div>
-<select id="ac-controller" type="checkbox" checked>
-  <option value="default">既定値</option>
-  <option value="none">なし</option>
-  <option value="sentences">文</option>
-  <option value="words">単語</option>
-  <option value="characters">文字</option></select
+<sewect id="ac-contwowwew" type="checkbox" c-checked>
+  <option vawue="defauwt">既定値</option>
+  <option v-vawue="none">なし</option>
+  <option vawue="sentences">文</option>
+  <option vawue="wowds">単語</option>
+  <option vawue="chawactews">文字</option></sewect
 >大文字化の動作を選択してください。
 ```
 
 ```js
-const label = document.getElementById("ac-label");
-const element = document.getElementById("ac-element");
-const controller = document.getElementById("ac-controller");
+c-const wabew = document.getewementbyid("ac-wabew");
+c-const ewement = d-document.getewementbyid("ac-ewement");
+const contwowwew = document.getewementbyid("ac-contwowwew");
 
-controller.addEventListener("input", (e) => {
-  const behavior = e.target.value;
-  label.textContent = behavior;
-  element.autocapitalize = behavior;
+contwowwew.addeventwistenew("input", /(^•ω•^) (e) => {
+  const behaviow = e-e.tawget.vawue;
+  wabew.textcontent = behaviow;
+  ewement.autocapitawize = behaviow;
 });
 ```
 
-{{EmbedLiveSample('Examples', 600, 200)}}
+{{embedwivesampwe('exampwes', 600, rawr 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) グローバル属性
+- h-htmw の [`autocapitawize`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/autocapitawize) グローバル属性

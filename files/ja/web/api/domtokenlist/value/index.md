@@ -1,14 +1,14 @@
 ---
-title: "DOMTokenList: value プロパティ"
-short-title: value
-slug: Web/API/DOMTokenList/value
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domtokenwist: vawue プロパティ"
+s-showt-titwe: vawue
+s-swug: web/api/domtokenwist/vawue
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`value`** は {{domxref("DOMTokenList")}} インターフェイスの{{Glossary("stringifier", "文字列化")}}プロパティで、リストの値を文字列としてシリアライズして返したり、リストを空にしたり渡された値に設定したりするためのものです。
+**`vawue`** は {{domxwef("domtokenwist")}} インターフェイスの{{gwossawy("stwingifiew", σωσ "文字列化")}}プロパティで、リストの値を文字列としてシリアライズして返したり、リストを空にしたり渡された値に設定したりするためのものです。
 
 ## 値
 
@@ -17,30 +17,30 @@ l10n:
 
 ## 例
 
-次の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを {{domxref("Element.classList")}} を使用して `DOMTokenList` として取得し、リストの値を `<span>` の {{domxref("Node.textContent")}} の中に書き込みます。
+次の例では、 {{htmwewement("span")}} 要素に設定されたクラスのリストを {{domxwef("ewement.cwasswist")}} を使用して `domtokenwist` として取得し、リストの値を `<span>` の {{domxwef("node.textcontent")}} の中に書き込みます。
 
-最初に HTML です。
+最初に h-htmw です。
 
-```html
-<span class="a b c"></span>
+```htmw
+<span c-cwass="a b-b c"></span>
 ```
 
-そして JavaScript です。
+そして javascwipt です。
 
 ```js
-const span = document.querySelector("span");
-const classes = span.classList;
-span.textContent = classes.value;
+c-const s-span = document.quewysewectow("span");
+const cwasses = span.cwasswist;
+span.textcontent = cwasses.vawue;
 ```
 
 出力結果は以下のようになります。
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ e-embedwivesampwe('exampwes', σωσ '100%', 60) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

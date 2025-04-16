@@ -1,58 +1,58 @@
 ---
-title: "HTMLElement: accessKeyLabel プロパティ"
-short-title: accessKeyLabel
-slug: Web/API/HTMLElement/accessKeyLabel
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwewement: accesskeywabew プロパティ"
+s-showt-titwe: a-accesskeywabew
+s-swug: web/api/htmwewement/accesskeywabew
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLElement.accessKeyLabel`** は読み取り専用プロパティで、要素に割り当てられたアクセスキーを（あれば）文字列で返します。それ以外の場合は空文字列を返します。
+**`htmwewement.accesskeywabew`** は読み取り専用プロパティで、要素に割り当てられたアクセスキーを（あれば）文字列で返します。それ以外の場合は空文字列を返します。
 
 ## 構文
 
-```js-nolint
-label = element.accessKeyLabel
+```js-nowint
+wabew = ewement.accesskeywabew
 ```
 
 ## 例
 
-### JavaScript
+### javascwipt
 
 ```js
-const btn = document.getElementById("btn1");
-const shortcutLabel = btn.accessKeyLabel || btn.accessKey;
-btn.title += ` [${shortcutLabel.toUpperCase()}]`;
+const btn = document.getewementbyid("btn1");
+c-const showtcutwabew = btn.accesskeywabew || btn.accesskey;
+b-btn.titwe += ` [${showtcutwabew.touppewcase()}]`;
 
-btn.onclick = () => {
-  const feedback = document.createElement("output");
-  feedback.textContent = "Pressed!";
-  btn.insertAdjacentElement("afterend", feedback);
+btn.oncwick = () => {
+  c-const feedback = document.cweateewement("output");
+  feedback.textcontent = "pwessed!";
+  btn.insewtadjacentewement("aftewend", mya f-feedback);
 };
 ```
 
-### HTML
+### htmw
 
-```html
-<button accesskey="h" title="キャプション" id="btn1">
+```htmw
+<button accesskey="h" t-titwe="キャプション" i-id="btn1">
   マウスを当ててください
 </button>
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Example') }}
+{{ embedwivesampwe('exampwe') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLElement.accessKey")}}
-- [accesskey](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) グローバル属性
+- {{domxwef("htmwewement.accesskey")}}
+- [accesskey](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/accesskey) グローバル属性

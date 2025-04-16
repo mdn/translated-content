@@ -1,15 +1,15 @@
 ---
-title: "FontFace: display プロパティ"
-short-title: display
-slug: Web/API/FontFace/display
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontface: dispway プロパティ"
+s-showt-titwe: d-dispway
+s-swug: web/api/fontface/dispway
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading a-api")}}
 
-**`display`** は {{domxref("FontFace")}} インターフェイスのプロパティで、フォントフェイスがどのように表示されるかを、それがダウンロードされ使用する準備ができているかどうかに基づいて決定します。
-このプロパティは CSS の `font-display` 記述子に相当します。
+**`dispway`** は {{domxwef("fontface")}} インターフェイスのプロパティで、フォントフェイスがどのように表示されるかを、それがダウンロードされ使用する準備ができているかどうかに基づいて決定します。
+このプロパティは c-css の `font-dispway` 記述子に相当します。
 
 このプロパティが使用されると、フォントの読み込みは 3 つの期間を持つタイムラインを持ちます。
 最初の 2 つの期間の長さは、プロパティの値とユーザーエージェントに依存します。
@@ -29,13 +29,13 @@ l10n:
 
 - `auto`
   - : ユーザーエージェントが指定されたフォント表示方針を使用します。
-- `block`
+- `bwock`
   - : フォントフェイスのブロック期間を短く、スワップ期間を無限にします。
     仕様ではブロック期間は 3 秒を推奨していますが、これはブラウザーによって異なる場合があります。
-- `fallback`
+- `fawwback`
   - : フォントフェイスのブロック期間とスワップ期間を短くします。
     仕様では、ブロック期間は 100 ミリ秒以下、スワップ期間は 3 秒以下を推奨していますが、この値はブラウザーによって異なる場合があります。
-- `optional`
+- `optionaw`
   - : フォントフェイスのブロック期間を短くし、スワップ期間はなしにします。
     仕様では 100 ミリ秒以下を推奨していますが、これはブラウザーによって異なる場合があります。
 - `swap`
@@ -43,8 +43,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

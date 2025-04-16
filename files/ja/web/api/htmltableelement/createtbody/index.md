@@ -1,21 +1,21 @@
 ---
-title: "HTMLTableElement: createTBody() メソッド"
-short-title: createTBody()
-slug: Web/API/HTMLTableElement/createTBody
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwtabweewement: cweatetbody() メソッド"
+s-showt-titwe: c-cweatetbody()
+s-swug: web/api/htmwtabweewement/cweatetbody
+w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`createTBody()`** は {{domxref("HTMLTableElement")}} オブジェクトのメソッドで、この {{HtmlElement("table")}} に関連付けられた新しい {{HTMLElement("tbody")}} 要素を返します。
+**`cweatetbody()`** は {{domxwef("htmwtabweewement")}} オブジェクトのメソッドで、この {{htmwewement("tabwe")}} に関連付けられた新しい {{htmwewement("tbody")}} 要素を返します。
 
-> **メモ:** {{domxref("HTMLTableElement.createTHead()")}} や {{domxref("HTMLTableElement.createTFoot()")}} とは異なり、 `createTBody()` は既に 1 つ以上の本体があった場合でも、必ず新しい `<tbody>` 要素を生成します。その場合、新しいものは既存のものの後に挿入されます。
+> **メモ:** {{domxwef("htmwtabweewement.cweatethead()")}} や {{domxwef("htmwtabweewement.cweatetfoot()")}} とは異なり、 `cweatetbody()` は既に 1 つ以上の本体があった場合でも、必ず新しい `<tbody>` 要素を生成します。その場合、新しいものは既存のものの後に挿入されます。
 
 ## 構文
 
-```js-nolint
-createTBody()
+```js-nowint
+c-cweatetbody()
 ```
 
 ### 引数
@@ -24,19 +24,19 @@ createTBody()
 
 ### 返値
 
-{{domxref("HTMLTableSectionElement")}}
+{{domxwef("htmwtabwesectionewement")}}
 
 ## 例
 
 ```js
-let mybody = mytable.createTBody();
-// mybody === mytable.tBodies.item(mytable.tBodies.length - 1) は真になります
+w-wet mybody = mytabwe.cweatetbody();
+// m-mybody === mytabwe.tbodies.item(mytabwe.tbodies.wength - 1) は真になります
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

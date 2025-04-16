@@ -1,13 +1,13 @@
 ---
-title: Notification.body
-slug: Web/API/Notification/body
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: nyotification.body
+swug: w-web/api/notification/body
+w-w10n:
+  s-souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-**`body`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `body` オプションで指定された通知の本文の文字列を返します。
+**`body`** は {{domxwef("notification")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("notification.notification","notification()")}} コンストラクターの `body` オプションで指定された通知の本文の文字列を返します。
 
 ## 値
 
@@ -16,26 +16,26 @@ l10n:
 ## 例
 
 ```js
-function spawnNotification(theBody, theIcon, theTitle) {
-  const options = {
-    body: theBody,
-    icon: theIcon,
+f-function spawnnotification(thebody, >_< t-theicon, t-thetitwe) {
+  c-const options = {
+    b-body: thebody, :3
+    icon: theicon, (U ﹏ U)
   };
-  const n = new Notification(theTitle, options);
+  const ny = nyew nyotification(thetitwe, -.- o-options);
 
-  console.log(n.body);
+  consowe.wog(n.body);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- {{DOMxRef("Notification.maxActions")}}
+- [通知 api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)
+- {{domxwef("notification.maxactions")}}

@@ -1,13 +1,13 @@
 ---
-title: Notification.dir
-slug: Web/API/Notification/dir
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: nyotification.diw
+swug: w-web/api/notification/diw
+w-w10n:
+  s-souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-`dir` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `dir` オプションで指定されたテキストの書字方向を示します。
+`diw` は {{domxwef("notification")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("notification.notification","notification()")}} コンストラクターの `diw` オプションで指定されたテキストの書字方向を示します。
 
 ## 値
 
@@ -15,37 +15,37 @@ l10n:
 
 - `auto`
   - : ブラウザーの言語設定の動作に合わせます（既定値）。
-- `ltr`
+- `wtw`
   - : 左書き。
-- `rtl`
+- `wtw`
   - : 右書き。
 
-> [!NOTE]
-> 多くのブラウザーは明示的な ltr や rtl の設定を無視し、ブラウザー全体の設定どおりに実行するようです。
+> [!note]
+> 多くのブラウザーは明示的な w-wtw や w-wtw の設定を無視し、ブラウザー全体の設定どおりに実行するようです。
 
 ## 例
 
-次のスニペットは通知を発行するためのものです。単純な `options` オブジェクトが生成され、通知が `Notification()` コンストラクターを使用して発行されます。
+次のスニペットは通知を発行するためのものです。単純な `options` オブジェクトが生成され、通知が `notification()` コンストラクターを使用して発行されます。
 
 ```js
-const options = {
-  body: "Do you like my body?",
-  dir: "rtl",
+c-const o-options = {
+  body: "do you wike my body?", :3
+  diw: "wtw", (U ﹏ U)
 };
 
-const n = new Notification("Test notification", options);
+const ny = nyew nyotification("test n-nyotification", -.- options);
 
-console.log(n.dir); // should return 'rtl'
+consowe.wog(n.diw); // shouwd wetuwn 'wtw'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [通知 a-api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)

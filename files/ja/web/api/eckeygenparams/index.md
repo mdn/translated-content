@@ -1,38 +1,38 @@
 ---
-title: EcKeyGenParams
-slug: Web/API/EcKeyGenParams
-l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+titwe: eckeygenpawams
+swug: web/api/eckeygenpawams
+w-w10n:
+  souwcecommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{ APIRef("Web Crypto API") }}
+{{ a-apiwef("web c-cwypto a-api") }}
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の辞書 **`EcKeyGenParams`** は、楕円曲線ベース、すなわちアルゴリズムとして [ECDSA](/ja/docs/Web/API/SubtleCrypto/sign#ecdsa) または [ECDH](/ja/docs/Web/API/SubtleCrypto/deriveKey#ecdh) を指定する鍵ペアを生成する際に {{domxref("SubtleCrypto.generateKey()")}} の引数 `algorithm` として渡すべきオブジェクトを表します。
+[web cwypto a-api](/ja/docs/web/api/web_cwypto_api) の辞書 **`eckeygenpawams`** は、楕円曲線ベース、すなわちアルゴリズムとして [ecdsa](/ja/docs/web/api/subtwecwypto/sign#ecdsa) または [ecdh](/ja/docs/web/api/subtwecwypto/dewivekey#ecdh) を指定する鍵ペアを生成する際に {{domxwef("subtwecwypto.genewatekey()")}} の引数 `awgowithm` として渡すべきオブジェクトを表します。
 
 ## インスタンスプロパティ
 
 - `name`
-  - : 文字列。使用したいアルゴリズムにより、`ECDSA` または `ECDH` に設定するべきです。
-- `namedCurve`
+  - : 文字列。使用したいアルゴリズムにより、`ecdsa` または `ecdh` に設定するべきです。
+- `namedcuwve`
 
-  - : 使用する楕円曲線の名前を表す文字列です。以下の [NIST](https://www.nist.gov/) によって承認された曲線の名前のうちいずれかを指定できます。
+  - : 使用する楕円曲線の名前を表す文字列です。以下の [nist](https://www.nist.gov/) によって承認された曲線の名前のうちいずれかを指定できます。
 
-    - `P-256`
-    - `P-384`
-    - `P-521`
+    - `p-256`
+    - `p-384`
+    - `p-521`
 
 ## 例
 
-{{domxref("SubtleCrypto.generateKey()")}} の例を参照してください。
+{{domxwef("subtwecwypto.genewatekey()")}} の例を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{domxref("SubtleCrypto.generateKey()")}} メソッドにおいてアルゴリズム "ECDH" または "ECDSA" をサポートしているブラウザーは、この型をサポートするはずです。
+{{domxwef("subtwecwypto.genewatekey()")}} メソッドにおいてアルゴリズム "ecdh" または "ecdsa" をサポートしているブラウザーは、この型をサポートするはずです。
 
 ## 関連情報
 
-- {{domxref("SubtleCrypto.generateKey()")}}
+- {{domxwef("subtwecwypto.genewatekey()")}}

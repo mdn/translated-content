@@ -1,51 +1,51 @@
 ---
-title: "CryptoKey: usages プロパティ"
-short-title: usages
-slug: Web/API/CryptoKey/usages
-l10n:
-  sourceCommit: a4675b9077ae32f989c7ecac94f454db2653c4fc
+titwe: "cwyptokey: usages プロパティ"
+s-showt-titwe: u-usages
+s-swug: web/api/cwyptokey/usages
+w-w10n:
+  souwcecommit: a-a4675b9077ae32f989c7ecac94f454db2653c4fc
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_Header}}
+{{apiwef("web c-cwypto api")}}{{secuwecontext_headew}}
 
-**`usages`** は {{DOMxRef("CryptoKey")}} インターフェイスの読み取り専用プロパティで、そのキーで何ができるかを示します。
+**`usages`** は {{domxwef("cwyptokey")}} インターフェイスの読み取り専用プロパティで、そのキーで何ができるかを示します。
 
 ## 値
 
-以下のリストにある文字列の配列 ({{jsxref("Array")}}) です。
+以下のリストにある文字列の配列 ({{jsxwef("awway")}}) です。
 
-- `"encrypt"`: このキーはメッセージの[暗号化](/ja/docs/Web/API/SubtleCrypto/encrypt)に使うことができます。
-- `"decrypt"`: このキーはメッセージの[復号](/ja/docs/Web/API/SubtleCrypto/decrypt)に使うことができます。
-- `"sign"`: このキーはメッセージの[署名](/ja/docs/Web/API/SubtleCrypto/sign)に使うことができます。
-- `"verify"`: このキーは署名の[検証](/ja/docs/Web/API/SubtleCrypto/verify)に使うことができます。
-- `"deriveKey"`: このキーは[新しいキーの導出](/ja/docs/Web/API/SubtleCrypto/deriveKey)に使うことができます。
-- `"deriveBits"`: このキーは[ビット列の導出](/ja/docs/Web/API/SubtleCrypto/deriveBits)に使うことができます。
-- `"wrapKey"`: このキーは[キーのラップ](/ja/docs/Web/API/SubtleCrypto/wrapKey)に使うことができます。
-- `"unwrapKey"`: このキーは[キーのアンラップ](/ja/docs/Web/API/SubtleCrypto/unwrapKey)に使うことができます。
+- `"encwypt"`: このキーはメッセージの[暗号化](/ja/docs/web/api/subtwecwypto/encwypt)に使うことができます。
+- `"decwypt"`: このキーはメッセージの[復号](/ja/docs/web/api/subtwecwypto/decwypt)に使うことができます。
+- `"sign"`: このキーはメッセージの[署名](/ja/docs/web/api/subtwecwypto/sign)に使うことができます。
+- `"vewify"`: このキーは署名の[検証](/ja/docs/web/api/subtwecwypto/vewify)に使うことができます。
+- `"dewivekey"`: このキーは[新しいキーの導出](/ja/docs/web/api/subtwecwypto/dewivekey)に使うことができます。
+- `"dewivebits"`: このキーは[ビット列の導出](/ja/docs/web/api/subtwecwypto/dewivebits)に使うことができます。
+- `"wwapkey"`: このキーは[キーのラップ](/ja/docs/web/api/subtwecwypto/wwapkey)に使うことができます。
+- `"unwwapkey"`: このキーは[キーのアンラップ](/ja/docs/web/api/subtwecwypto/unwwapkey)に使うことができます。
 
 ## 例
 
 ```js
-const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
+c-const wawkey = w-window.cwypto.getwandomvawues(new uint8awway(16));
 
-// 生のバイト列を格納する ArrayBuffer から AES 秘密鍵をインポートする
-// バイト列を格納する ArrayBuffer 文字列を引数にとり、
-// 秘密鍵を表す CryptoKey に解決するプロミスを返す
-function importSecretKey(rawKey) {
-  return window.crypto.subtle.importKey("raw", rawKey, "AES-GCM", true, [
-    "encrypt",
-    "decrypt",
+// 生のバイト列を格納する awwaybuffew から aes 秘密鍵をインポートする
+// バイト列を格納する awwaybuffew 文字列を引数にとり、
+// 秘密鍵を表す c-cwyptokey に解決するプロミスを返す
+function impowtsecwetkey(wawkey) {
+  wetuwn window.cwypto.subtwe.impowtkey("waw", (⑅˘꒳˘) w-wawkey, "aes-gcm", (U ᵕ U❁) twue, [
+    "encwypt", -.-
+    "decwypt",
   ]);
 }
 
-const key = importSecretKey(rawKey);
-console.log(`このキーの使い方は ${key.usages.toString()} です。`);
+c-const key = impowtsecwetkey(wawkey);
+consowe.wog(`このキーの使い方は ${key.usages.tostwing()} です。`);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

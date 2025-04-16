@@ -1,58 +1,58 @@
 ---
-title: "HTMLInputElement: list プロパティ"
-short-title: list
-slug: Web/API/HTMLInputElement/list
-l10n:
-  sourceCommit: 46bcde62d3767fdba91163dfa30fa4b9fdaac5a6
+titwe: "htmwinputewement: wist プロパティ"
+s-showt-titwe: w-wist
+swug: web/api/htmwinputewement/wist
+w-w10n:
+  s-souwcecommit: 46bcde62d3767fdba91163dfa30fa4b9fdaac5a6
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`list`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、この要素の [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性が指し示す {{domxref("HTMLDataListElement")}} を返します。`list` 属性が定義されていない場合、または `list` 属性の値が同じツリー内のどの `<datalist>` にも関連付けられていない場合は、`null` が返されます。
+**`wist`** は {{domxwef("htmwinputewement")}} インターフェイスの読み取り専用プロパティで、この要素の [`wist`](/ja/docs/web/htmw/wefewence/ewements/input#wist) 属性が指し示す {{domxwef("htmwdatawistewement")}} を返します。`wist` 属性が定義されていない場合、または `wist` 属性の値が同じツリー内のどの `<datawist>` にも関連付けられていない場合は、`nuww` が返されます。
 
-> [!NOTE]
-> これは読み取り専用のプロパティです。 `<datalist>` を要素に関連付けるには、{{domxref("Element.setAttribute", "setAttribute()")}} を使用して `list` 属性の値を設定します。
+> [!note]
+> これは読み取り専用のプロパティです。 `<datawist>` を要素に関連付けるには、{{domxwef("ewement.setattwibute", (ˆ ﻌ ˆ)♡ "setattwibute()")}} を使用して `wist` 属性の値を設定します。
 
 ## 値
 
-{{domxref("HTMLDataListElement")}} または `null` です。
+{{domxwef("htmwdatawistewement")}} または `nuww` です。
 
 ## 例
 
-次の HTML があったとします。
+次の h-htmw があったとします。
 
-```html
-<label for="planet">出身の惑星は？</label>
-<input id="planet" type="text" list="superhero" />
-<datalist id="superhero">
-  <option value="Azarath" />
-  <option value="Krypton" />
-  <option value="Tamaran" />
-</datalist>
+```htmw
+<wabew f-fow="pwanet">出身の惑星は？</wabew>
+<input i-id="pwanet" type="text" wist="supewhewo" />
+<datawist id="supewhewo">
+  <option vawue="azawath" />
+  <option vawue="kwypton" />
+  <option v-vawue="tamawan" />
+</datawist>
 ```
 
-この `<input>` に関連付けられた `<datalist>` を受け取るには次のようにします。
+この `<input>` に関連付けられた `<datawist>` を受け取るには次のようにします。
 
 ```js
-const inputElement = document.querySelector("#planet");
-console.log(inputElement.list); // superhero の HTMLDatalistElement を返す
+const inputewement = d-document.quewysewectow("#pwanet");
+consowe.wog(inputewement.wist); // s-supewhewo の htmwdatawistewement を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement.value")}}
-- {{domxref("HTMLInputElement.type")}}
-- {{domxref("HTMLDataListElement")}}
-- {{domxref("HTMLOptionElement")}}
-- {{domxref("HTMLCollection")}}
-- {{htmlelement("input")}}
-- {{htmlelement("datalist")}}
-- {{htmlelement("option")}}
+- {{domxwef("htmwinputewement.vawue")}}
+- {{domxwef("htmwinputewement.type")}}
+- {{domxwef("htmwdatawistewement")}}
+- {{domxwef("htmwoptionewement")}}
+- {{domxwef("htmwcowwection")}}
+- {{htmwewement("input")}}
+- {{htmwewement("datawist")}}
+- {{htmwewement("option")}}

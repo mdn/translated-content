@@ -1,77 +1,77 @@
 ---
-title: MutationObserver
-slug: Web/API/MutationObserver
-l10n:
-  sourceCommit: 32305cc3cf274fbfdcc73a296bbd400a26f38296
+titwe: mutationobsewvew
+swug: w-web/api/mutationobsewvew
+w-w10n:
+  s-souwcecommit: 32305cc3cf274fbfdcc73a296bbd400a26f38296
 ---
 
-{{APIRef("DOM WHATWG")}}
+{{apiwef("dom n-nyaniwg")}}
 
-**`MutationObserver`** インターフェイスは、 [DOM](/ja/docs/Web/API/Document_Object_Model) ツリーへ変更が加えられたことを監視することができる機能を提供します。これは DOM3 Events の仕様で定義されていた [Mutation Events](/ja/docs/Web/API/MutationEvent) 機能の置き換えとして設計されたものです。
+**`mutationobsewvew`** インターフェイスは、 [dom](/ja/docs/web/api/document_object_modew) ツリーへ変更が加えられたことを監視することができる機能を提供します。これは d-dom3 e-events の仕様で定義されていた [mutation e-events](/ja/docs/web/api/mutationevent) 機能の置き換えとして設計されたものです。
 
 ## コンストラクター
 
-- {{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}
-  - : DOM の変更が行われたときに指定されたコールバック関数を呼び出す新しい `MutationObserver` を生成して返します。
+- {{domxwef("mutationobsewvew.mutationobsewvew", (U ﹏ U) "mutationobsewvew()")}}
+  - : d-dom の変更が行われたときに指定されたコールバック関数を呼び出す新しい `mutationobsewvew` を生成して返します。
 
 ## メソッド
 
-- {{domxref("MutationObserver.disconnect()", "disconnect()")}}
-  - : `MutationObserver` のインスタンスが今後の通知を受け取ることを、 {{domxref("MutationObserver.observe", "observe()")}} が再び呼び出されるまで停止します。
-- {{domxref("MutationObserver.observe()", "observe()")}}
-  - : 指定したオプションに合う DOM の変更が発生したときに、コールバック関数を介して通知を受信し始めるように `MutationObserver` を構成します。
-- {{domxref("MutationObserver.takeRecords()", "takeRecords()")}}
-  - : `MutationObserver` の通知キューから保留中の通知をすべて削除し、 {{domxref("MutationRecord")}} の新しい配列 ({{jsxref("Array")}}) で返します。
+- {{domxwef("mutationobsewvew.disconnect()", >_< "disconnect()")}}
+  - : `mutationobsewvew` のインスタンスが今後の通知を受け取ることを、 {{domxwef("mutationobsewvew.obsewve", rawr x3 "obsewve()")}} が再び呼び出されるまで停止します。
+- {{domxwef("mutationobsewvew.obsewve()", mya "obsewve()")}}
+  - : 指定したオプションに合う dom の変更が発生したときに、コールバック関数を介して通知を受信し始めるように `mutationobsewvew` を構成します。
+- {{domxwef("mutationobsewvew.takewecowds()", "takewecowds()")}}
+  - : `mutationobsewvew` の通知キューから保留中の通知をすべて削除し、 {{domxwef("mutationwecowd")}} の新しい配列 ({{jsxwef("awway")}}) で返します。
 
-## Mutation Observer と resize イベントリスナーのカスタマイズとデモ
+## mutation obsewvew と wesize イベントリスナーのカスタマイズとデモ
 
-<https://codepen.io/milofultz/pen/LYjPXPw>
+<https://codepen.io/miwofuwtz/pen/wyjpxpw>
 
 ## 例
 
-以下の例は [このブログ記事](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/) を参考にしたものです。
+以下の例は [このブログ記事](https://hacks.moziwwa.owg/2012/05/dom-mutationobsewvew-weacting-to-dom-changes-without-kiwwing-bwowsew-pewfowmance/) を参考にしたものです。
 
 ```js
 // 変更を監視するノードを選択
-const targetNode = document.getElementById("some-id");
+c-const tawgetnode = document.getewementbyid("some-id");
 
 // (変更を監視する) オブザーバーのオプション
-const config = { attributes: true, childList: true, subtree: true };
+const config = { a-attwibutes: twue, nyaa~~ chiwdwist: twue, (⑅˘꒳˘) s-subtwee: twue };
 
 // 変更が発見されたときに実行されるコールバック関数
-const callback = (mutationList, observer) => {
-  for (const mutation of mutationList) {
-    if (mutation.type === "childList") {
-      console.log("子ノードが追加または削除されました。");
-    } else if (mutation.type === "attributes") {
-      console.log(`${mutation.attributeName} 属性が変更されました。`);
+const cawwback = (mutationwist, rawr x3 obsewvew) => {
+  fow (const mutation o-of mutationwist) {
+    if (mutation.type === "chiwdwist") {
+      c-consowe.wog("子ノードが追加または削除されました。");
+    } e-ewse if (mutation.type === "attwibutes") {
+      consowe.wog(`${mutation.attwibutename} 属性が変更されました。`);
     }
   }
 };
 
 // コールバック関数に結びつけられたオブザーバーのインスタンスを生成
-const observer = new MutationObserver(callback);
+const obsewvew = nyew mutationobsewvew(cawwback);
 
 // 対象ノードの設定された変更の監視を開始
-observer.observe(targetNode, config);
+obsewvew.obsewve(tawgetnode, (✿oωo) c-config);
 
 // その後で、監視を停止することができる
-observer.disconnect();
+obsewvew.disconnect();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref('PerformanceObserver')}}
-- {{domxref('ResizeObserver')}}
-- {{domxref('IntersectionObserver')}}
-- [A brief overview](https://developer.chrome.com/blog/detect-dom-changes-with-mutation-observers/)
-- [A more in-depth discussion](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
-- [A screencast by Chromium developer Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)
+- {{domxwef('pewfowmanceobsewvew')}}
+- {{domxwef('wesizeobsewvew')}}
+- {{domxwef('intewsectionobsewvew')}}
+- [a bwief ovewview](https://devewopew.chwome.com/bwog/detect-dom-changes-with-mutation-obsewvews/)
+- [a mowe in-depth discussion](https://hacks.moziwwa.owg/2012/05/dom-mutationobsewvew-weacting-to-dom-changes-without-kiwwing-bwowsew-pewfowmance/)
+- [a s-scweencast by chwomium devewopew w-wafaew w-weinstein](https://www.youtube.com/watch?v=ewz4po0gvww)

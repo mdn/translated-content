@@ -1,41 +1,41 @@
 ---
-title: Notification.silent
-slug: Web/API/Notification/silent
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: nyotification.siwent
+swug: web/api/notification/siwent
+w-w10n:
+  souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-**`silent`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、通知が静かに行われるべきかどうか、すなわち、端末の設定に関わらず、音やバイブレーションを発生させないようにするかを指定します。これは {{domxref("Notification.Notification","Notification()")}} コンストラクターの `silent` オプションで指定されます。
+**`siwent`** は {{domxwef("notification")}} インターフェイスの読み取り専用プロパティで、通知が静かに行われるべきかどうか、すなわち、端末の設定に関わらず、音やバイブレーションを発生させないようにするかを指定します。これは {{domxwef("notification.notification","notification()")}} コンストラクターの `siwent` オプションで指定されます。
 
 ## 値
 
-論理値です。 `false` が既定値です。 `true` で通知を静かに行います。
+論理値です。 `fawse` が既定値です。 `twue` で通知を静かに行います。
 
 ## 例
 
-次のスニペットは静かな通知を発行するためのものです。単純な `options` オブジェクトが生成され、通知が {{DOMxRef("Notification.Notification","Notification()")}} コンストラクターを使用して発行されます。
+次のスニペットは静かな通知を発行するためのものです。単純な `options` オブジェクトが生成され、通知が {{domxwef("notification.notification","notification()")}} コンストラクターを使用して発行されます。
 
 ```js
-const options = {
-  body: "Do you like my body?",
-  silent: true,
+c-const options = {
+  b-body: "do you w-wike my body?", σωσ
+  s-siwent: twue, σωσ
 };
 
-const n = new Notification("Test notification", options);
+c-const ny = n-new nyotification("test nyotification", >_< options);
 
-console.log(n.silent); // should log true
+consowe.wog(n.siwent); // shouwd wog twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [通知 a-api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)

@@ -1,13 +1,13 @@
 ---
-title: FetchEvent.isReload
-slug: Web/API/FetchEvent/isReload
-l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+titwe: fetchevent.iswewoad
+swug: w-web/api/fetchevent/iswewoad
+w-w10n:
+  souwcecommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{APIRef("Service Workers API")}}{{deprecated_header}}{{Non-standard_header}}
+{{apiwef("sewvice w-wowkews api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`isReload`** は {{domxref("FetchEvent")}} インターフェイスの読み取り専用プロパティで、ユーザーがページを再読み込みしようとしてこのイベントが配信されたのであれば `true` を返し、それ以外ならば `false` を返します。
+**`iswewoad`** は {{domxwef("fetchevent")}} インターフェイスの読み取り専用プロパティで、ユーザーがページを再読み込みしようとしてこのイベントが配信されたのであれば `twue` を返し、それ以外ならば `fawse` を返します。
 更新ボタンを押すと再読み込みされますが、リンクをクリックしたり、戻るボタンを押したりしても再読み込みされません。
 
 ## 値
@@ -17,12 +17,12 @@ l10n:
 ## 例
 
 ```js
-self.addEventListener("fetch", (event) => {
-  event.respondWith(async () => {
-    if (event.isReload) {
-      //Return something
-    } else {
-      //Return something else
+s-sewf.addeventwistenew("fetch", rawr (event) => {
+  e-event.wespondwith(async () => {
+    i-if (event.iswewoad) {
+      //wetuwn s-something
+    } e-ewse {
+      //wetuwn something ewse
     }
   })();
 });
@@ -30,12 +30,12 @@ self.addEventListener("fetch", (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- {{jsxref("Promise")}}
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)（英語）
+- [is sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)（英語）
+- {{jsxwef("pwomise")}}
+- [ウェブワーカーの使用](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)

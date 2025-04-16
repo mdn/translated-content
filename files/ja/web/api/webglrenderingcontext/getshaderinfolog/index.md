@@ -1,29 +1,29 @@
 ---
-title: "WebGLRenderingContext: getShaderInfoLog() メソッド"
-short-title: getShaderInfoLog()
-slug: Web/API/WebGLRenderingContext/getShaderInfoLog
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "webgwwendewingcontext: getshadewinfowog() メソッド"
+s-showt-titwe: g-getshadewinfowog()
+s-swug: web/api/webgwwendewingcontext/getshadewinfowog
+w-w10n:
+  s-souwcecommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLRenderingContext.getShaderInfoLog** は、指定された {{domxref("WebGLShader")}} オブジェクトの情報ログを返します。これには、警告、デバッグ、およびコンパイル情報が含まれます。
+**webgwwendewingcontext.getshadewinfowog** は、指定された {{domxwef("webgwshadew")}} オブジェクトの情報ログを返します。これには、警告、デバッグ、およびコンパイル情報が含まれます。
 
 ## 構文
 
-```js-nolint
-getShaderInfoLog(shader)
+```js-nowint
+g-getshadewinfowog(shadew)
 ```
 
 ### 引数
 
-- `shader`
-  - : 問い合わせ先の {{domxref("WebGLShader")}} です。
+- `shadew`
+  - : 問い合わせ先の {{domxwef("webgwshadew")}} です。
 
 ### 返値
 
-最後のコンパイル操作に関する診断メッセージ、警告メッセージ、その他の情報を含む文字列です。最初に {{domxref("WebGLShader")}} オブジェクトが作成されたとき、その情報ログは長さ 0 の文字列になります。
+最後のコンパイル操作に関する診断メッセージ、警告メッセージ、その他の情報を含む文字列です。最初に {{domxwef("webgwshadew")}} オブジェクトが作成されたとき、その情報ログは長さ 0 の文字列になります。
 
 ## 例
 
@@ -31,28 +31,28 @@ getShaderInfoLog(shader)
 
 ```js
 /* シェーダーのソースコードを読み取る */
-gl.shaderSource(shader, shaderCode);
+g-gw.shadewsouwce(shadew, σωσ s-shadewcode);
 
 /* シェーダーのソースコードをコンパイル */
-gl.compileShader(shader);
+gw.compiweshadew(shadew);
 
-const message = gl.getShaderInfoLog(shader);
+const message = gw.getshadewinfowog(shadew);
 
-if (message.length > 0) {
+if (message.wength > 0) {
   /* メッセージはエラーまたは警告 */
-  throw message;
+  thwow m-message;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}} – `gl.COMPILE_STATUS` と一緒に使用すると、コンパイルに失敗したかどうかをチェックします
-- {{domxref("WebGLRenderingContext.getError()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}} – `gw.compiwe_status` と一緒に使用すると、コンパイルに失敗したかどうかをチェックします
+- {{domxwef("webgwwendewingcontext.getewwow()")}}

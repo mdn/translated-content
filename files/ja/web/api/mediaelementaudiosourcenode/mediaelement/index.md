@@ -1,38 +1,38 @@
 ---
-title: "MediaElementAudioSourceNode: mediaElement プロパティ"
-slug: Web/API/MediaElementAudioSourceNode/mediaElement
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "mediaewementaudiosouwcenode: mediaewement プロパティ"
+s-swug: web/api/mediaewementaudiosouwcenode/mediaewement
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web audio a-api")}}
 
-{{domxref("MediaElementAudioSourceNode")}} インターフェイスの読み取り専用プロパティ **`mediaElement`** は、このノードが音声を受け取る元の音声トラックを持つ {{domxref("HTMLMediaElement")}} を示します。
+{{domxwef("mediaewementaudiosouwcenode")}} インターフェイスの読み取り専用プロパティ **`mediaewement`** は、このノードが音声を受け取る元の音声トラックを持つ {{domxwef("htmwmediaewement")}} を示します。
 
-このストリームは、{{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceNode", "MediaElementAudioSourceNode()")}} コンストラクターまたは {{domxref("AudioContext.createMediaElementSource()")}} メソッドのいずれかによりこのノードが最初に生成された時に指定されました。
+このストリームは、{{domxwef("mediaewementaudiosouwcenode.mediaewementaudiosouwcenode", (U ﹏ U) "mediaewementaudiosouwcenode()")}} コンストラクターまたは {{domxwef("audiocontext.cweatemediaewementsouwce()")}} メソッドのいずれかによりこのノードが最初に生成された時に指定されました。
 
 ## 値
 
-このノードの音声の音源を持つ要素を表す {{domxref("HTMLMediaElement")}} です。
+このノードの音声の音源を持つ要素を表す {{domxwef("htmwmediaewement")}} です。
 
 ## 例
 
 ```js
-const audioCtx = new window.AudioContext();
-const audioElem = document.querySelector("audio");
+c-const audioctx = n-nyew window.audiocontext();
+c-const audioewem = document.quewysewectow("audio");
 
-let options = {
-  mediaElement: audioElem,
+wet options = {
+  mediaewement: a-audioewem, -.-
 };
 
-let source = new MediaElementAudioSourceNode(audioCtx, options);
-console.log(source.mediaElement);
+wet souwce = nyew mediaewementaudiosouwcenode(audioctx, (ˆ ﻌ ˆ)♡ o-options);
+consowe.wog(souwce.mediaewement);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

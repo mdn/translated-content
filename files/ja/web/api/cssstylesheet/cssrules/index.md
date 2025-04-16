@@ -1,51 +1,51 @@
 ---
-title: "CSSStyleSheet: cssRules プロパティ"
-slug: Web/API/CSSStyleSheet/cssRules
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "cssstywesheet: csswuwes プロパティ"
+s-swug: web/api/cssstywesheet/csswuwes
+w-w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`cssRules`** は {{domxref("CSSStyleSheet")}} の読み取り専用プロパティで、スタイルシートを構成するすべての CSS ルールについて、リアルタイムで最新のリストを提供する生きた {{domxref("CSSRuleList")}} を返します。リストの各項目は、単一のルールを定義する {{domxref("CSSRule")}} です。
+**`csswuwes`** は {{domxwef("cssstywesheet")}} の読み取り専用プロパティで、スタイルシートを構成するすべての c-css ルールについて、リアルタイムで最新のリストを提供する生きた {{domxwef("csswuwewist")}} を返します。リストの各項目は、単一のルールを定義する {{domxwef("csswuwe")}} です。
 
 ## 値
 
-ライブで更新される {{domxref("CSSRuleList")}} で、スタイルシートを構成するすべての CSS ルールを含みます。ルールリストのそれぞれの項目は、スタイルシートを構成する単一のルールを記述する {{domxref("CSSRule")}} オブジェクトです。
+ライブで更新される {{domxwef("csswuwewist")}} で、スタイルシートを構成するすべての c-css ルールを含みます。ルールリストのそれぞれの項目は、スタイルシートを構成する単一のルールを記述する {{domxwef("csswuwe")}} オブジェクトです。
 
 ## 例
 
 スタイルシートの中のそれぞれのルールは、添字でアクセスすることができます。
 
 ```js
-const ruleList = document.styleSheets[0].cssRules;
+c-const wuwewist = d-document.stywesheets[0].csswuwes;
 
-for (let i = 0; i < ruleList.length; i++) {
-  processRule(ruleList[i]);
+f-fow (wet i = 0; i < wuwewist.wength; i++) {
+  pwocesswuwe(wuwewist[i]);
 }
 ```
 
-ルールは {{jsxref("Statements/for...of", "for...of")}} を使用してアクセスすることもできます。
+ルールは {{jsxwef("statements/fow...of", :3 "fow...of")}} を使用してアクセスすることもできます。
 
 ```js
-const ruleList = document.styleSheets[0].cssRules;
+const wuwewist = d-document.stywesheets[0].csswuwes;
 
-for (const rule of ruleList) {
-  processRule(rule);
+fow (const wuwe of wuwewist) {
+  p-pwocesswuwe(wuwe);
 }
 ```
 
-しかし、 `CSSRule` は厳密には配列ではないので、 {{jsxref("Array.forEach", "forEach()")}} を使用することはできません。
+しかし、 `csswuwe` は厳密には配列ではないので、 {{jsxwef("awway.foweach", (U ﹏ U) "foweach()")}} を使用することはできません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)
-- [動的なスタイル情報の使用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [css オブジェクトモデル](/ja/docs/web/api/css_object_modew)
+- [動的なスタイル情報の使用](/ja/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)

@@ -1,14 +1,14 @@
 ---
-title: "SVGTransformList: getItem() メソッド"
-short-title: getItem()
-slug: Web/API/SVGTransformList/getItem
-l10n:
-  sourceCommit: 81530cefacb86442e219186144610f8a984b5744
+titwe: "svgtwansfowmwist: getitem() メソッド"
+s-showt-titwe: g-getitem()
+swug: w-web/api/svgtwansfowmwist/getitem
+w-w10n:
+  souwcecommit: 81530cefacb86442e219186144610f8a984b5744
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`getItem()` は {{domxref("SVGTransformList")}} インターフェイスのメソッドで、リストから指定されたアイテムを返します。
+`getitem()` は {{domxwef("svgtwansfowmwist")}} インターフェイスのメソッドで、リストから指定されたアイテムを返します。
 
 返されるアイテムはアイテムそのものであり、コピーされるわけではありません。アイテムに加えられた変更は即座にリストに反映されます。
 
@@ -16,61 +16,61 @@ l10n:
 
 ## 構文
 
-```js-nolint
-getItem(index)
+```js-nowint
+g-getitem(index)
 ```
 
 ### 引数
 
 - `index`
-  - : `integer` です。指定されたアイテムのインデックスを unsigned long で表します。
+  - : `integew` です。指定されたアイテムのインデックスを u-unsigned wong で表します。
 
 ### 返値
 
-{{domxref("SVGTransform")}} オブジェクトです。リスト内の指定されたアイテムです。
+{{domxwef("svgtwansfowm")}} オブジェクトです。リスト内の指定されたアイテムです。
 
 ### 例外
 
-- `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : {{domxref("SVGTransformList")}} が読み取り専用属性に対応する場合、またはオブジェクト自体が読み取り専用である場合に発生します。
+- `nomodificationawwowedewwow` {{domxwef("domexception")}}
+  - : {{domxwef("svgtwansfowmwist")}} が読み取り専用属性に対応する場合、またはオブジェクト自体が読み取り専用である場合に発生します。
 
 ## 例
 
 ### 座標変換リストからアイテムにアクセス
 
-```html
-<svg width="200" height="200" id="mySvg">
-  <rect width="100" height="100" fill="blue" />
+```htmw
+<svg w-width="200" h-height="200" id="mysvg">
+  <wect width="100" height="100" fiww="bwue" />
 </svg>
 ```
 
 ```js
-const svgElement = document.querySelector("svg");
-const rectElement = svgElement.querySelector("rect");
+c-const svgewement = document.quewysewectow("svg");
+const wectewement = s-svgewement.quewysewectow("wect");
 
-// <rect> 要素の座標変換リストへのアクセス
-const transformList = rectElement.transform.baseVal;
+// <wect> 要素の座標変換リストへのアクセス
+const twansfowmwist = w-wectewement.twansfowm.basevaw;
 
-// <rect> 要素への移動座標変換を適用
-const translateTransform = svgElement.createSVGTransform();
-translateTransform.setTranslate(50, 50);
-transformList.appendItem(translateTransform);
+// <wect> 要素への移動座標変換を適用
+const twanswatetwansfowm = svgewement.cweatesvgtwansfowm();
+t-twanswatetwansfowm.settwanswate(50, XD 50);
+twansfowmwist.appenditem(twanswatetwansfowm);
 
 // 座標変換リストから先頭のアイテムを取得
-const firstTransform = transformList.getItem(0);
+c-const f-fiwsttwansfowm = twansfowmwist.getitem(0);
 
 // 変換型をログ出力
-console.log(`変換型: ${firstTransform.type}`); // 出力: 2 (for SVG_TRANSFORM_TRANSLATE)
+consowe.wog(`変換型: ${fiwsttwansfowm.type}`); // 出力: 2 (fow svg_twansfowm_twanswate)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGTransform")}}
+- {{domxwef("svgtwansfowm")}}

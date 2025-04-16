@@ -1,14 +1,14 @@
 ---
-title: "HTMLInputElement: multiple プロパティ"
-short-title: multiple
-slug: Web/API/HTMLInputElement/multiple
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwinputewement: muwtipwe プロパティ"
+s-showt-titwe: m-muwtipwe
+swug: w-web/api/htmwinputewement/muwtipwe
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLInputElement.multiple`** プロパティは、入力フィールドが複数の値を持つことができるかどうかを示します。 Firefox では、 `multiple` は `<input type="file">` でのみ対応しています。
+**`htmwinputewement.muwtipwe`** プロパティは、入力フィールドが複数の値を持つことができるかどうかを示します。 f-fiwefox では、 `muwtipwe` は `<input type="fiwe">` でのみ対応しています。
 
 ## 値
 
@@ -17,29 +17,29 @@ l10n:
 ## 例
 
 ```js
-// fileInput は <input type=file multiple> です
-let fileInput = document.getElementById("myfileinput");
+// fiweinput は <input type=fiwe muwtipwe> です
+wet fiweinput = document.getewementbyid("myfiweinput");
 
-if (fileInput.multiple) {
-  // fileInput.files を反復処理
-  for (const file of fileInput.files) {
+i-if (fiweinput.muwtipwe) {
+  // fiweinput.fiwes を反復処理
+  fow (const f-fiwe of fiweinput.fiwes) {
     // ファイルの一つに対してアクションを実行
   }
   // 一つのファイルのみが有効な場合
-} else {
-  let [file] = fileInput.files;
+} ewse {
+  w-wet [fiwe] = fiweinput.fiwes;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [FileList](/ja/docs/Web/API/FileList)
-- [Bug 523771](https://bugzil.la/523771) - \<input type=file multiple> への対応
+- [fiwewist](/ja/docs/web/api/fiwewist)
+- [bug 523771](https://bugziw.wa/523771) - \<input type=fiwe muwtipwe> への対応

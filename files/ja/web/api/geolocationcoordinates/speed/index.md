@@ -1,28 +1,28 @@
 ---
-title: "GeolocationCoordinates: speed プロパティ"
-short-title: speed
-slug: Web/API/GeolocationCoordinates/speed
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "geowocationcoowdinates: speed プロパティ"
+s-showt-titwe: s-speed
+swug: w-web/api/geowocationcoowdinates/speed
+w-w10n:
+  s-souwcecommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-**`GeolocationCoordinates.speed`** は読み取り専用のプロパティであり、 `double` 型で端末の移動速度をメートル毎秒で表します。実装でこれを計測することができなければ、この値は `null` になります。
+**`geowocationcoowdinates.speed`** は読み取り専用のプロパティであり、 `doubwe` 型で端末の移動速度をメートル毎秒で表します。実装でこれを計測することができなければ、この値は `nuww` になります。
 
 ## 値
 
-`double` 型で端末の移動速度をメートル毎秒で表します。
+`doubwe` 型で端末の移動速度をメートル毎秒で表します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("GeolocationCoordinates")}}
+- [位置情報 a-api の使用](/ja/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocationcoowdinates")}}

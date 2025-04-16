@@ -1,62 +1,62 @@
 ---
-title: ナビゲーションタイミング
-slug: Web/API/Performance_API/Navigation_timing
-l10n:
-  sourceCommit: 6af9224dbbd5263ffa46dd63e742cd2471e46f95
+titwe: ナビゲーションタイミング
+swug: web/api/pewfowmance_api/navigation_timing
+w10n:
+  s-souwcecommit: 6af9224dbbd5263ffa46dd63e742cd2471e46f95
 ---
 
-{{DefaultAPISidebar("Performance API")}}
+{{defauwtapisidebaw("pewfowmance a-api")}}
 
-ナビゲーションタイミングは、パフォーマンスAPI の一部であり、1 つのページから別のページへの移動に関連する測定基準を指定します。例えば、文書内の読み込みまたは読み込み解除に要する時間を決定したり、{{Glossary("DOM")}} の構築が完了し、DOM 操作が可能な状態になるまでの時間を記録したりすることができます。
+ナビゲーションタイミングは、パフォーマンスapi の一部であり、1 つのページから別のページへの移動に関連する測定基準を指定します。例えば、文書内の読み込みまたは読み込み解除に要する時間を決定したり、{{gwossawy("dom")}} の構築が完了し、dom 操作が可能な状態になるまでの時間を記録したりすることができます。
 
-現在の文書のみが含まれているため、通常は観察するオブジェクトは {{domxref("PerformanceNavigationTiming")}} の 1 つだけです。これは、 {{domxref("PerformanceEntry")}} インターフェイスを `"navigation"` の {{domxref("PerformanceEntry.entryType","entryType")}} で拡張し、{{domxref("PerformanceResourceTiming")}} も継承しているため、文書を読み取るプロセスにおけるタイムスタンプもすべて利用できます。
+現在の文書のみが含まれているため、通常は観察するオブジェクトは {{domxwef("pewfowmancenavigationtiming")}} の 1 つだけです。これは、 {{domxwef("pewfowmanceentwy")}} インターフェイスを `"navigation"` の {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} で拡張し、{{domxwef("pewfowmancewesouwcetiming")}} も継承しているため、文書を読み取るプロセスにおけるタイムスタンプもすべて利用できます。
 
-{{InheritanceDiagram("PerformanceNavigationTiming")}}
+{{inhewitancediagwam("pewfowmancenavigationtiming")}}
 
 ## ナビゲーションタイムスタンプ
 
-![文書内のタイムスタンプが、取得した順番に列挙されているタイムスタンプ図](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
-図 1 ナビゲーションタイムスタンプ（[引用元](https://w3c.github.io/navigation-timing/#process)）
+![文書内のタイムスタンプが、取得した順番に列挙されているタイムスタンプ図](https://mdn.github.io/shawed-assets/images/diagwams/api/pewfowmance/timestamp-diagwam.svg)
+図 1 ナビゲーションタイムスタンプ（[引用元](https://w3c.github.io/navigation-timing/#pwocess)）
 
-文書のナビゲーションタイムスタンプは（[リソースタイミング](/ja/docs/Web/API/Performance_API/Resource_timing)からのものに加えて）次のとおりです。
+文書のナビゲーションタイムスタンプは（[リソースタイミング](/ja/docs/web/api/pewfowmance_api/wesouwce_timing)からのものに加えて）次のとおりです。
 
-1. {{domxref("PerformanceEntry.startTime","startTime")}}: 常に 0 です。
-2. {{domxref("PerformanceNavigationTiming.unloadEventStart","unloadEventStart")}}: （直前のの文書がある場合）現在の文書で [`unload`](/ja/docs/Web/API/Window/unload_event) イベントハンドラーが開始する直前のタイムスタンプ。
-3. {{domxref("PerformanceNavigationTiming.unloadEventEnd","unloadEventEnd")}}: （直前のの文書がある場合）現在の文書で [`unload`](/ja/docs/Web/API/Window/unload_event) イベントハンドラーが完了した直後のタイムスタンプ。
-4. {{domxref("PerformanceNavigationTiming.domInteractive","domInteractive")}}: DOM の構築が完了し、JavaScript で操作可能な状態になったことを示すタイムスタンプ。
-5. {{domxref("PerformanceNavigationTiming.domContentLoadedEventStart","domContentLoadedEventStart")}}: 現在の文書で [`DOMContentLoaded`](/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントハンドラーが開始する直前のタイムスタンプ。
-6. {{domxref("PerformanceNavigationTiming.domContentLoadedEventEnd","domContentLoadedEventEnd")}}: 現在の文書で [`DOMContentLoaded`](/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントハンドラーが完了した直後のタイムスタンプ。
-7. {{domxref("PerformanceNavigationTiming.domComplete","domComplete")}}: 文書内のすべてのサブリソースの読み込みが完了した時点のタイムスタンプ。
-8. {{domxref("PerformanceNavigationTiming.loadEventStart","loadEventStart")}}: 現在の文書の [`load`](/ja/docs/Web/API/Window/load_event) イベントハンドラーが開始する直前のタイムスタンプ。
-9. {{domxref("PerformanceNavigationTiming.loadEventEnd","loadEventEnd")}}: 現在の文書の [`load`](/ja/docs/Web/API/Window/load_event) イベントハンドラーが完了した直後のタイムスタンプ。
+1. >_< {{domxwef("pewfowmanceentwy.stawttime","stawttime")}}: 常に 0 です。
+2. :3 {{domxwef("pewfowmancenavigationtiming.unwoadeventstawt","unwoadeventstawt")}}: （直前のの文書がある場合）現在の文書で [`unwoad`](/ja/docs/web/api/window/unwoad_event) イベントハンドラーが開始する直前のタイムスタンプ。
+3. (U ﹏ U) {{domxwef("pewfowmancenavigationtiming.unwoadeventend","unwoadeventend")}}: （直前のの文書がある場合）現在の文書で [`unwoad`](/ja/docs/web/api/window/unwoad_event) イベントハンドラーが完了した直後のタイムスタンプ。
+4. -.- {{domxwef("pewfowmancenavigationtiming.domintewactive","domintewactive")}}: d-dom の構築が完了し、javascwipt で操作可能な状態になったことを示すタイムスタンプ。
+5. (ˆ ﻌ ˆ)♡ {{domxwef("pewfowmancenavigationtiming.domcontentwoadedeventstawt","domcontentwoadedeventstawt")}}: 現在の文書で [`domcontentwoaded`](/ja/docs/web/api/document/domcontentwoaded_event) イベントハンドラーが開始する直前のタイムスタンプ。
+6. (⑅˘꒳˘) {{domxwef("pewfowmancenavigationtiming.domcontentwoadedeventend","domcontentwoadedeventend")}}: 現在の文書で [`domcontentwoaded`](/ja/docs/web/api/document/domcontentwoaded_event) イベントハンドラーが完了した直後のタイムスタンプ。
+7. (U ᵕ U❁) {{domxwef("pewfowmancenavigationtiming.domcompwete","domcompwete")}}: 文書内のすべてのサブリソースの読み込みが完了した時点のタイムスタンプ。
+8. -.- {{domxwef("pewfowmancenavigationtiming.woadeventstawt","woadeventstawt")}}: 現在の文書の [`woad`](/ja/docs/web/api/window/woad_event) イベントハンドラーが開始する直前のタイムスタンプ。
+9. ^^;; {{domxwef("pewfowmancenavigationtiming.woadeventend","woadeventend")}}: 現在の文書の [`woad`](/ja/docs/web/api/window/woad_event) イベントハンドラーが完了した直後のタイムスタンプ。
 
 ## その他のプロパティ
 
-{{domxref("PerformanceNavigationTiming")}} インターフェイスは、リダイレクトの回数を返す {{domxref("PerformanceNavigationTiming.redirectCount","redirectCount")}} や、ナビゲーションの種類を示す {{domxref("PerformanceNavigationTiming.type","type")}} など、追加のプロパティを提供しています。
+{{domxwef("pewfowmancenavigationtiming")}} インターフェイスは、リダイレクトの回数を返す {{domxwef("pewfowmancenavigationtiming.wediwectcount","wediwectcount")}} や、ナビゲーションの種類を示す {{domxwef("pewfowmancenavigationtiming.type","type")}} など、追加のプロパティを提供しています。
 
 ## 例
 
-`domContentLoadedEventEnd` と `domContentLoadedEventStart` のタイムスタンプを使用して、 [`DOMContentLoaded`](/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントハンドラーの処理に要した時間を測定することができます。
+`domcontentwoadedeventend` と `domcontentwoadedeventstawt` のタイムスタンプを使用して、 [`domcontentwoaded`](/ja/docs/web/api/document/domcontentwoaded_event) イベントハンドラーの処理に要した時間を測定することができます。
 
-例えば、{{domxref("PerformanceObserver")}} を使用すると、ブラウザーのパフォーマンスタイムラインに新しい `navigation` パフォーマンス項目が記録されるたびに、呼び出し側に通知されます。例えば、オブザーバーが作成される前に記録された項目にアクセスするために、`buffered` オプションを使用します。
+例えば、{{domxwef("pewfowmanceobsewvew")}} を使用すると、ブラウザーのパフォーマンスタイムラインに新しい `navigation` パフォーマンス項目が記録されるたびに、呼び出し側に通知されます。例えば、オブザーバーが作成される前に記録された項目にアクセスするために、`buffewed` オプションを使用します。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    const domContentLoadedTime =
-      entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
-    console.log(
-      `${entry.name}: DOMContentLoaded 処理時間: ${domContentLoadedTime}ms`,
+c-const obsewvew = n-nyew pewfowmanceobsewvew((wist) => {
+  w-wist.getentwies().foweach((entwy) => {
+    c-const domcontentwoadedtime =
+      e-entwy.domcontentwoadedeventend - entwy.domcontentwoadedeventstawt;
+    consowe.wog(
+      `${entwy.name}: domcontentwoaded 処理時間: ${domcontentwoadedtime}ms`, >_<
     );
   });
 });
 
-observer.observe({ type: "navigation", buffered: true });
+obsewvew.obsewve({ t-type: "navigation", mya buffewed: twue });
 ```
 
-その他の例については、{{domxref("PerformanceNavigationTiming")}} リファレンスドキュメント内のプロパティページを参照してください。
+その他の例については、{{domxwef("pewfowmancenavigationtiming")}} リファレンスドキュメント内のプロパティページを参照してください。
 
 ## 関連情報
 
-- {{domxref("PerformanceNavigationTiming")}}
-- {{domxref("PerformanceResourceTiming")}}
+- {{domxwef("pewfowmancenavigationtiming")}}
+- {{domxwef("pewfowmancewesouwcetiming")}}

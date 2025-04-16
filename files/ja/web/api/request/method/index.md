@@ -1,14 +1,14 @@
 ---
-title: "Request: method プロパティ"
-short-title: method
-slug: Web/API/Request/method
-l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+titwe: "wequest: method プロパティ"
+s-showt-titwe: m-method
+s-swug: web/api/wequest/method
+w-w10n:
+  s-souwcecommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch a-api")}}{{avaiwabweinwowkews}}
 
-**`method`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストのメソッド（`GET`、`POST` など）を保持します。
+**`method`** は {{domxwef("wequest")}} インターフェイスの読み取り専用プロパティで、このリクエストのメソッド（`get`、`post` など）を保持します。
 
 ## 値
 
@@ -16,23 +16,23 @@ l10n:
 
 ## 例
 
-次のスニペットは、{{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストメソッドを変数に保存しています。
+次のスニペットは、{{domxwef("wequest.wequest()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストメソッドを変数に保存しています。
 
 ```js
-const myRequest = new Request("flowers.jpg");
-const myMethod = myRequest.method; // GET
+c-const mywequest = n-nyew wequest("fwowews.jpg");
+const mymethod = mywequest.method; // get
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

@@ -1,56 +1,56 @@
 ---
-title: "CSSStyleSheet: removeRule() メソッド"
-slug: Web/API/CSSStyleSheet/removeRule
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "cssstywesheet: wemovewuwe() メソッド"
+s-swug: web/api/cssstywesheet/wemovewuwe
+w-w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{apiwef("cssom")}}{{depwecated_headew}}
 
-旧式の {{domxref("CSSStyleSheet")}} の **`removeRule()`** メソッドは、スタイルシートオブジェクトからルールを削除します。これは、標準で推奨されるメソッド {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}} と機能的に同じです。
+旧式の {{domxwef("cssstywesheet")}} の **`wemovewuwe()`** メソッドは、スタイルシートオブジェクトからルールを削除します。これは、標準で推奨されるメソッド {{domxwef("cssstywesheet.dewetewuwe", o.O "dewetewuwe()")}} と機能的に同じです。
 
-> [!NOTE]
-> これは古いメソッドであり、標準のメソッド {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}} によって置き換えられました。代わりにこちらを使用してください。
+> [!note]
+> これは古いメソッドであり、標準のメソッド {{domxwef("cssstywesheet.dewetewuwe", (U ᵕ U❁) "dewetewuwe()")}} によって置き換えられました。代わりにこちらを使用してください。
 
 ## 構文
 
-```js-nolint
-removeRule(index)
+```js-nowint
+w-wemovewuwe(index)
 ```
 
 ### 引数
 
 - `index`
-  - : このスタイルシートの {{domxref("CSSRuleList")}} の中の位置で、削除するルールを示します。
+  - : このスタイルシートの {{domxwef("csswuwewist")}} の中の位置で、削除するルールを示します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例では、スタイルシート `myStyles` から最初のルールを削除します。
+この例では、スタイルシート `mystywes` から最初のルールを削除します。
 
 ```js
-myStyles.removeRule(0);
+m-mystywes.wemovewuwe(0);
 ```
 
-これを標準の `deleteRule()` メソッドを使用するように書き換えるのは、とても簡単です。
+これを標準の `dewetewuwe()` メソッドを使用するように書き換えるのは、とても簡単です。
 
 ```js
-myStyles.deleteRule(0);
+m-mystywes.dewetewuwe(0);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)
-- [動的スタイル情報の利用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
-- {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}
+- [css オブジェクトモデル](/ja/docs/web/api/css_object_modew)
+- [動的スタイル情報の利用](/ja/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)
+- {{domxwef("cssstywesheet.insewtwuwe", (⑅˘꒳˘) "insewtwuwe()")}}

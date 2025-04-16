@@ -1,43 +1,43 @@
 ---
-title: VRDisplay.depthNear
-slug: Web/API/VRDisplay/depthNear
+titwe: vwdispway.depthneaw
+swug: w-web/api/vwdispway/depthneaw
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}
 
-**`depthNear`** は {{domxref("VRDisplay")}} インターフェイスのプロパティで、 [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の near 平面を定義している z-depth の取得と設定を行います。
+**`depthneaw`** は {{domxwef("vwdispway")}} インターフェイスのプロパティで、 [eye v-view fwustum](https://en.wikipedia.owg/wiki/viewing_fwustum) (ビューフラスタム；つまりシーンの可視領域の境界) の neaw 平面を定義している z-z-depth の取得と設定を行います。
 
-> [!NOTE]
-> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!note]
+> このプロパティは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部でした。 [webxw d-device api](https://immewsive-web.github.io/webxw/)に置き換えられました。
 
-一般的には、この値をそのままにしておきますが、遅いコンピューターでパフォーマンスを向上させようとしている場合や、ニアバウンダリーをより遠くに作ることで UI が意味をなす場合などは、この値を大きくするとよいでしょう。
+一般的には、この値をそのままにしておきますが、遅いコンピューターでパフォーマンスを向上させようとしている場合や、ニアバウンダリーをより遠くに作ることで u-ui が意味をなす場合などは、この値を大きくするとよいでしょう。
 
 ## 値
 
-double 値で z-depth をメートル単位で表します。初期値は `0.01` です。
+d-doubwe 値で z-depth をメートル単位で表します。初期値は `0.01` です。
 
 ## 例
 
 ```js
-var vrDisplay;
+vaw vwdispway;
 
-navigator.getVRDisplays().then(function (displays) {
-  vrDisplay = displays[0];
-  vrDisplay.depthNear = 1.0;
-  vrDisplay.depthFar = 7500.0;
+nyavigatow.getvwdispways().then(function (dispways) {
+  vwdispway = d-dispways[0];
+  vwdispway.depthneaw = 1.0;
+  vwdispway.depthfaw = 7500.0;
 });
 ```
 
 ## 仕様書
 
-このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
+このインターフェイスは、古い [webvw api](https://immewsive-web.github.io/webvw/spec/1.1/#intewface-vwdispway) の一部でしたが、 [webxw d-device api](https://immewsive-web.github.io/webxw/) に置き換えられました。標準化される予定はありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
+すべてのブラウザーが新しい [webxw api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、すべてのブラウザーで動作する w-webxw アプリケーションを開発するには、[a-fwame](https://afwame.io/) や [babywon.js](https://www.babywonjs.com/) や [thwee.js](https://thweejs.owg/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を利用したりすると良いでしょう [\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw api](/ja/docs/web/api/webvw_api)

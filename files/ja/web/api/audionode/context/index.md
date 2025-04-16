@@ -1,41 +1,41 @@
 ---
-title: "AudioNode: context プロパティ"
-short-title: context
-slug: Web/API/AudioNode/context
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audionode: context プロパティ"
+showt-titwe: c-context
+s-swug: web/api/audionode/context
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-{{domxref("AudioNode")}} インターフェイスの読み取り専用プロパティ `context` は、関連付けられた {{domxref("BaseAudioContext")}}、すなわちこのノードが参加している処理グラフを表すオブジェクトを返します。
+{{domxwef("audionode")}} インターフェイスの読み取り専用プロパティ `context` は、関連付けられた {{domxwef("baseaudiocontext")}}、すなわちこのノードが参加している処理グラフを表すオブジェクトを返します。
 
 ## 値
 
-この `AudioNode` の構築に用いられた {{domxref("AudioContext")}} または {{domxref("OfflineAudioContext")}} です。
+この `audionode` の構築に用いられた {{domxwef("audiocontext")}} または {{domxwef("offwineaudiocontext")}} です。
 
 ## 例
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioCtx = new AudioContext();
+c-const a-audiocontext = window.audiocontext || w-window.webkitaudiocontext;
+c-const audioctx = nyew audiocontext();
 
-const oscillator = audioCtx.createOscillator();
-const gainNode = audioCtx.createGain();
-oscillator.connect(gainNode).connect(audioCtx.destination);
+const osciwwatow = audioctx.cweateosciwwatow();
+const gainnode = a-audioctx.cweategain();
+osciwwatow.connect(gainnode).connect(audioctx.destination);
 
-console.log(oscillator.context); // AudioContext
-console.log(oscillator.context === audioCtx); // true
+consowe.wog(osciwwatow.context); // a-audiocontext
+consowe.wog(osciwwatow.context === audioctx); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web audio a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

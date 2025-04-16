@@ -1,14 +1,14 @@
 ---
-title: "Request: bodyUsed プロパティ"
-short-title: bodyUsed
-slug: Web/API/Request/bodyUsed
-l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+titwe: "wequest: bodyused プロパティ"
+s-showt-titwe: b-bodyused
+s-swug: web/api/wequest/bodyused
+w-w10n:
+  souwcecommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch a-api")}}{{avaiwabweinwowkews}}
 
-**`bodyUsed`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエスト本体がまだ読み込まれていないかどうかを示す論理値です。
+**`bodyused`** は {{domxwef("wequest")}} インターフェイスの読み取り専用プロパティで、リクエスト本体がまだ読み込まれていないかどうかを示す論理値です。
 
 ## 値
 
@@ -17,26 +17,26 @@ l10n:
 ## 例
 
 ```js
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: "Hello world",
+c-const w-wequest = nyew w-wequest("/myendpoint", σωσ {
+  method: "post", >_<
+  body: "hewwo wowwd", :3
 });
 
-request.bodyUsed; // false
+wequest.bodyused; // fawse
 
-request.text().then((bodyAsText) => {
-  console.log(request.bodyUsed); // true
+wequest.text().then((bodyastext) => {
+  c-consowe.wog(wequest.bodyused); // twue
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Request.body")}}
+- {{domxwef("wequest.body")}}

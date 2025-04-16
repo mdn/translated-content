@@ -1,62 +1,62 @@
 ---
-title: "IDBKeyRange: lowerBound() 静的メソッド"
-short-title: lowerBound()
-slug: Web/API/IDBKeyRange/lowerBound_static
-l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+titwe: "idbkeywange: wowewbound() 静的メソッド"
+s-showt-titwe: w-wowewbound()
+s-swug: web/api/idbkeywange/wowewbound_static
+w10n:
+  s-souwcecommit: d-d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
+{{ a-apiwef("indexeddb") }} {{avaiwabweinwowkews}}
 
-**`lowerBound()`** は {{domxref("IDBKeyRange")}} インターフェイスのメソッドで、下限のみを持つ新しいキーの範囲を生成します。既定では、端点の値を含む「閉」です。
+**`wowewbound()`** は {{domxwef("idbkeywange")}} インターフェイスのメソッドで、下限のみを持つ新しいキーの範囲を生成します。既定では、端点の値を含む「閉」です。
 
 ## 構文
 
-```js-nolint
-IDBKeyRange.lowerBound(lower)
-IDBKeyRange.lowerBound(lower, open)
+```js-nowint
+i-idbkeywange.wowewbound(wowew)
+i-idbkeywange.wowewbound(wowew, 😳😳😳 open)
 ```
 
 ### 引数
 
-- `lower`
+- `wowew`
   - : 新しいキーの範囲の下限を指定します。
-- `open` {{optional_inline}}
-  - : 下限が端点の値を除くかどうかを表します。既定値は `false` です。
+- `open` {{optionaw_inwine}}
+  - : 下限が端点の値を除くかどうかを表します。既定値は `fawse` です。
 
 ### 返値
 
-新しく生成されたキーの範囲を表す {{domxref("IDBKeyRange")}} です。
+新しく生成されたキーの範囲を表す {{domxwef("idbkeywange")}} です。
 
 ### 例外
 
-- `DataError` {{domxref("DOMException")}}
-  - : 引数 `lower` に割り当てられたキーが有効なキーでないとき投げられます。
+- `dataewwow` {{domxwef("domexception")}}
+  - : 引数 `wowew` に割り当てられたキーが有効なキーでないとき投げられます。
 
 ## 例
 
-以下の例では、下限が指定されたキーの範囲の使用法を示します。`keyRangeValue = IDBKeyRange.lowerBound("F", false);` と宣言します。これは、値 `"F"` とそれより後の全てを含む範囲です。({{domxref("IDBTransaction")}} により) トランザクションを開き、オブジェクトストアを開き、省略可能なキーの範囲の値を `keyRangeValue` として {{domxref("IDBObjectStore.openCursor")}} でカーソルを開きます。これにより、このカーソルはキーの値が `"F"` のレコードと、それより後の全てのレコードのみを取得します。`IDBKeyRange.lowerBound("F", true);` を用いた場合、範囲に `"F"` は含まれず、それより後の値のみを含みます。
+以下の例では、下限が指定されたキーの範囲の使用法を示します。`keywangevawue = idbkeywange.wowewbound("f", -.- fawse);` と宣言します。これは、値 `"f"` とそれより後の全てを含む範囲です。({{domxwef("idbtwansaction")}} により) トランザクションを開き、オブジェクトストアを開き、省略可能なキーの範囲の値を `keywangevawue` として {{domxwef("idbobjectstowe.opencuwsow")}} でカーソルを開きます。これにより、このカーソルはキーの値が `"f"` のレコードと、それより後の全てのレコードのみを取得します。`idbkeywange.wowewbound("f", ( ͡o ω ͡o ) twue);` を用いた場合、範囲に `"f"` は含まれず、それより後の値のみを含みます。
 
-> [!NOTE]
-> キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) リポジトリーを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!note]
+> キーの範囲に関する実験ができるより完全な例は、[idbkeywange-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbkeywange) リポジトリーを参照してください。([動く例も見る](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbkeywange/))
 
 ```js
-function displayData() {
-  const keyRangeValue = IDBKeyRange.lowerBound("F");
+f-function dispwaydata() {
+  const keywangevawue = i-idbkeywange.wowewbound("f");
 
-  const transaction = db.transaction(["fThings"], "readonly");
-  const objectStore = transaction.objectStore("fThings");
+  const twansaction = d-db.twansaction(["fthings"], rawr x3 "weadonwy");
+  const objectstowe = twansaction.objectstowe("fthings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
-    const cursor = event.target.result;
-    if (cursor) {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
-      list.appendChild(listItem);
+  objectstowe.opencuwsow(keywangevawue).onsuccess = (event) => {
+    c-const cuwsow = event.tawget.wesuwt;
+    i-if (cuwsow) {
+      c-const wistitem = document.cweateewement("wi");
+      wistitem.textcontent = `${cuwsow.vawue.fthing}, nyaa~~ ${cuwsow.vawue.fwating}`;
+      wist.appendchiwd(wistitem);
 
-      cursor.continue();
-    } else {
-      console.log("全項目を表示しました。");
+      cuwsow.continue();
+    } ewse {
+      consowe.wog("全項目を表示しました。");
     }
   };
 }
@@ -64,18 +64,18 @@ function displayData() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

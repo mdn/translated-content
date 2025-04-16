@@ -1,18 +1,18 @@
 ---
-title: "HTMLInputElement: width プロパティ"
-short-title: width
-slug: Web/API/HTMLInputElement/width
-l10n:
-  sourceCommit: a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
+titwe: "htmwinputewement: width プロパティ"
+s-showt-titwe: w-width
+swug: web/api/htmwinputewement/width
+w-w10n:
+  s-souwcecommit: a-a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`width`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、コントロールの高さを指定します。これは、 {{htmlelement("input")}} 要素の [`width`](/ja/docs/Web/HTML/Reference/Elements/input#width) 属性を反映します。
+**`width`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、コントロールの高さを指定します。これは、 {{htmwewement("input")}} 要素の [`width`](/ja/docs/web/htmw/wefewence/ewements/input#width) 属性を反映します。
 
-`width` プロパティは、 [`image`](/ja/docs/Web/HTML/Reference/Elements/input/image) 型のみに有効です。これは、ピクセル単位で画像ボタンの水平方向の寸法を定義します。このプロパティの値は、レンダリングされたボタンの[コンテンツボックス](/ja/docs/Web/CSS/box-edge#content-box)の幅です。CSS ボックスモデルプロパティがこのコントロールのサイズに影響する場合、そちらが優先されます。
+`width` プロパティは、 [`image`](/ja/docs/web/htmw/wefewence/ewements/input/image) 型のみに有効です。これは、ピクセル単位で画像ボタンの水平方向の寸法を定義します。このプロパティの値は、レンダリングされたボタンの[コンテンツボックス](/ja/docs/web/css/box-edge#content-box)の幅です。css ボックスモデルプロパティがこのコントロールのサイズに影響する場合、そちらが優先されます。
 
-`width` が設定されておらず、CSS がコントロールのサイズに影響しない場合、`width` は画像の内在サイズとなります。画像が読み込まれなかった場合、値は `alt` テキストの高さになります。高さが不明な場合は `width` は `0` になります。 `width` が設定されていない場合、CSS は高さに影響を与えず、画像は読み込まれず、 {{DOMxRef("HTMLInputElement.alt", "alt")}} の値は空文字列、または `src` が設定されていません。
+`width` が設定されておらず、css がコントロールのサイズに影響しない場合、`width` は画像の内在サイズとなります。画像が読み込まれなかった場合、値は `awt` テキストの高さになります。高さが不明な場合は `width` は `0` になります。 `width` が設定されていない場合、css は高さに影響を与えず、画像は読み込まれず、 {{domxwef("htmwinputewement.awt", rawr x3 "awt")}} の値は空文字列、または `swc` が設定されていません。
 
 ## 値
 
@@ -21,28 +21,28 @@ l10n:
 ## 例
 
 ```js
-const inputElement = document.getElementById("imageButton");
-console.log(inputElement.width);
+c-const inputewement = d-document.getewementbyid("imagebutton");
+c-consowe.wog(inputewement.width);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("HTMLInputElement.height")}}
-- {{DOMxRef("HTMLInputElement.src")}}
-- {{DOMxRef("HTMLInputElement.alt")}}
-- {{DOMXref("HTMLButtonElement")}}
-- {{HTMLElement("button")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("img")}}
-- CSS の {{CSSXRef("inline-size")}} プロパティ
-- CSS の {{CSSXRef("width")}} プロパティ
-- CSS の {{CSSXRef("aspect-ratio")}} プロパティ
-- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+- {{domxwef("htmwinputewement.height")}}
+- {{domxwef("htmwinputewement.swc")}}
+- {{domxwef("htmwinputewement.awt")}}
+- {{domxwef("htmwbuttonewement")}}
+- {{htmwewement("button")}}
+- {{htmwewement("input")}}
+- {{htmwewement("img")}}
+- css の {{cssxwef("inwine-size")}} プロパティ
+- css の {{cssxwef("width")}} プロパティ
+- css の {{cssxwef("aspect-watio")}} プロパティ
+- [css ボックスサイズ指定](/ja/docs/web/css/css_box_sizing)モジュール

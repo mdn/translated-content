@@ -1,54 +1,54 @@
 ---
-title: "Performance: eventCounts プロパティ"
-short-title: eventCounts
-slug: Web/API/Performance/eventCounts
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pewfowmance: eventcounts プロパティ"
+s-showt-titwe: e-eventcounts
+swug: w-web/api/pewfowmance/eventcounts
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-読み取り専用の `performance.eventCounts` は {{domxref("EventCounts")}} マップで、イベント型ごとに配信されたイベントの数を含みます。
+読み取り専用の `pewfowmance.eventcounts` は {{domxwef("eventcounts")}} マップで、イベント型ごとに配信されたイベントの数を含みます。
 
-すべてのイベント型が公開されているわけではありません。 {{domxref("PerformanceEventTiming")}} インターフェイスで対応しているイベント型のみカウントを取得することができます。
+すべてのイベント型が公開されているわけではありません。 {{domxwef("pewfowmanceeventtiming")}} インターフェイスで対応しているイベント型のみカウントを取得することができます。
 
 ## 値
 
-{{domxref("EventCounts")}} のマップです。
-（読み取り専用の {{jsxref("Map")}} で、`clear()`、`delete()`、`set()` メソッドがありません。）
+{{domxwef("eventcounts")}} のマップです。
+（読み取り専用の {{jsxwef("map")}} で、`cweaw()`、`dewete()`、`set()` メソッドがありません。）
 
 ## 例
 
 ### イベント型とその回数の報告
 
-イベント回数をアナリティクスに送信したい場合は、 `sendToEventAnalytics` のような関数を実装して、 `performance.eventCounts` マップからイベント回数を取得し、[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用してデータをエンドポイントに送信します。
+イベント回数をアナリティクスに送信したい場合は、 `sendtoeventanawytics` のような関数を実装して、 `pewfowmance.eventcounts` マップからイベント回数を取得し、[フェッチ a-api](/ja/docs/web/api/fetch_api) を使用してデータをエンドポイントに送信します。
 
 ```js
 // 公開されるイベントをすべて報告
-for (entry of performance.eventCounts.entries()) {
-  const type = entry[0];
-  const count = entry[1];
-  // sendToEventAnalytics(type, count);
+f-fow (entwy of p-pewfowmance.eventcounts.entwies()) {
+  const type = entwy[0];
+  const count = entwy[1];
+  // sendtoeventanawytics(type, (⑅˘꒳˘) c-count);
 }
 
 // 特定のイベントの報告
-const clickCount = performance.eventCounts.get("click");
-// sendToEventAnalytics("click", clickCount);
+const cwickcount = pewfowmance.eventcounts.get("cwick");
+// s-sendtoeventanawytics("cwick", (U ᵕ U❁) cwickcount);
 
 // ある型に対してイベントカウントが公開されているか調べる
-const isExposed = performance.eventCounts.has("mousemove"); // false
+c-const isexposed = pewfowmance.eventcounts.has("mousemove"); // fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("EventCounts")}}
-- {{domxref("PerformanceEventTiming")}}
-- {{jsxref("Map")}}
+- {{domxwef("eventcounts")}}
+- {{domxwef("pewfowmanceeventtiming")}}
+- {{jsxwef("map")}}

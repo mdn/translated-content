@@ -1,43 +1,43 @@
 ---
-title: "HTMLInputElement: formAction プロパティ"
-short-title: formAction
-slug: Web/API/HTMLInputElement/formAction
-l10n:
-  sourceCommit: 1c31c8e99de843940027ec4d17e128850ded7a71
+titwe: "htmwinputewement: fowmaction プロパティ"
+s-showt-titwe: f-fowmaction
+s-swug: web/api/htmwinputewement/fowmaction
+w-w10n:
+  s-souwcecommit: 1c31c8e99de843940027ec4d17e128850ded7a71
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`formAction`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、このコントロールを含むフォームが送信された際にサーバー上で実行されるプログラムの URL です。これは、`<input>` の [`formaction`](/ja/docs/Web/HTML/Reference/Elements/input#formaction) 属性の値を反映します。
+**`fowmaction`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、このコントロールを含むフォームが送信された際にサーバー上で実行されるプログラムの u-uww です。これは、`<input>` の [`fowmaction`](/ja/docs/web/htmw/wefewence/ewements/input#fowmaction) 属性の値を反映します。
 
-このプロパティは [`submit`](/ja/docs/Web/HTML/Reference/Elements/input/submit) および [`image`](/ja/docs/Web/HTML/Reference/Elements/input/image) 型の `<input>` 要素にのみ有効です。
+このプロパティは [`submit`](/ja/docs/web/htmw/wefewence/ewements/input/submit) および [`image`](/ja/docs/web/htmw/wefewence/ewements/input/image) 型の `<input>` 要素にのみ有効です。
 
-この値はフォームがこの入力フィールドから送信された場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.action", "action")}} プロパティの値を上書きします。このプロパティは受け取ったり設定したりすることができます。
+この値はフォームがこの入力フィールドから送信された場合、 {{domxwef("htmwfowmewement")}} インターフェイスの {{domxwef("htmwfowmewement.action", UwU "action")}} プロパティの値を上書きします。このプロパティは受け取ったり設定したりすることができます。
 
 ## 値
 
-文字列です。フォームを送信する URL です。
+文字列です。フォームを送信する uww です。
 
 ## 例
 
 ```js
-inputElement.formAction = "/cgi-bin/publish";
+i-inputewement.fowmaction = "/cgi-bin/pubwish";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement.formEnctype")}}
-- {{domxref("HTMLInputElement.formMethod")}}
-- {{domxref("HTMLInputElement.formNoValidate")}}
-- {{domxref("HTMLInputElement.formTarget")}}
-- [`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)
-- [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image)
-- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- {{domxwef("htmwinputewement.fowmenctype")}}
+- {{domxwef("htmwinputewement.fowmmethod")}}
+- {{domxwef("htmwinputewement.fowmnovawidate")}}
+- {{domxwef("htmwinputewement.fowmtawget")}}
+- [`<input type="submit">`](/ja/docs/web/htmw/wefewence/ewements/input/submit)
+- [`<input type="image">`](/ja/docs/web/htmw/wefewence/ewements/input/image)
+- [フォームデータの送信](/ja/docs/weawn_web_devewopment/extensions/fowms/sending_and_wetwieving_fowm_data)

@@ -1,70 +1,70 @@
 ---
-title: XMLSerializer
-slug: Web/API/XMLSerializer
-l10n:
-  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
+titwe: xmwsewiawizew
+swug: web/api/xmwsewiawizew
+w-w10n:
+  souwcecommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("XMLSerializer")}}
+{{apiwef("xmwsewiawizew")}}
 
-`XMLSerializer` インターフェイスは {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} メソッドを提供します。これにより、 {{Glossary("DOM")}} ツリーを表す XML 文字列を構築することができます。
+`xmwsewiawizew` インターフェイスは {{domxwef("xmwsewiawizew.sewiawizetostwing", "sewiawizetostwing()")}} メソッドを提供します。これにより、 {{gwossawy("dom")}} ツリーを表す x-xmw 文字列を構築することができます。
 
 ## インスタンスメソッド
 
-- {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}
+- {{domxwef("xmwsewiawizew.sewiawizetostwing", 😳😳😳 "sewiawizetostwing()")}}
   - : 文字列の形にシリアライズされたサブツリーを返します。
 
 ## 例
 
-### XML を文字列にシリアライズ
+### x-xmw を文字列にシリアライズ
 
-最初の基本的な例は、文書全体を XML を含む文字列にシリアライズします。
+最初の基本的な例は、文書全体を x-xmw を含む文字列にシリアライズします。
 
 ```js
-const s = new XMLSerializer();
-const d = document;
-const str = s.serializeToString(d);
-saveXML(str);
+c-const s = n-nyew xmwsewiawizew();
+c-const d = d-document;
+const stw = s.sewiawizetostwing(d);
+savexmw(stw);
 ```
 
-このコードは、新しい `XMLSerializer` オブジェクトを作成し、シリアライズされる {{domxref("Document")}} を {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} に渡します。これは、渡した文書と同等の XML を返します。
+このコードは、新しい `xmwsewiawizew` オブジェクトを作成し、シリアライズされる {{domxwef("document")}} を {{domxwef("xmwsewiawizew.sewiawizetostwing", -.- "sewiawizetostwing()")}} に渡します。これは、渡した文書と同等の xmw を返します。
 
-### XML を基にした DOM にノードを挿入する
+### xmw を基にした d-dom にノードを挿入する
 
-この例は、{{domxref("Element.insertAdjacentHTML()")}} メソッドを使用して新しい DOM {{domxref("Node")}} を {{domxref("Document")}} の body に挿入します。これは、{{domxref("Element")}} オブジェクトをシリアライズすることにより作成された XML を基にしています。
+この例は、{{domxwef("ewement.insewtadjacenthtmw()")}} メソッドを使用して新しい dom {{domxwef("node")}} を {{domxwef("document")}} の body に挿入します。これは、{{domxwef("ewement")}} オブジェクトをシリアライズすることにより作成された x-xmw を基にしています。
 
-> [!NOTE]
-> 実際は、{{domxref("Document.importNode", "importNode()")}} メソッドを呼び出して新しいノードを DOM に挿入する代わりに、以下のいずれかのメソッドを呼び出して DOM ツリーに追加することになるでしょう。
+> [!note]
+> 実際は、{{domxwef("document.impowtnode", ( ͡o ω ͡o ) "impowtnode()")}} メソッドを呼び出して新しいノードを dom に挿入する代わりに、以下のいずれかのメソッドを呼び出して d-dom ツリーに追加することになるでしょう。
 >
-> - {{domxref("Element.append()")}} / {{domxref("Element.prepend()")}} および {{domxref("Document.append()")}} / {{domxref("Document.prepend()")}} メソッド
-> - {{domxref("Element.replaceWith()")}} メソッド（既存のノードを新しいノードと置き換えるため）
-> - {{domxref("Document.insertAdjacentElement()")}} および {{domxref("Element.insertAdjacentElement()")}} メソッド
+> - {{domxwef("ewement.append()")}} / {{domxwef("ewement.pwepend()")}} および {{domxwef("document.append()")}} / {{domxwef("document.pwepend()")}} メソッド
+> - {{domxwef("ewement.wepwacewith()")}} メソッド（既存のノードを新しいノードと置き換えるため）
+> - {{domxwef("document.insewtadjacentewement()")}} および {{domxwef("ewement.insewtadjacentewement()")}} メソッド
 
-`insertAdjacentHTML()` は文字列を受け入れるますが、2 番目の引数として `Node` を受け入れないため、`XMLSerializer` を使用して先にノードを文字列に変換します。
+`insewtadjacenthtmw()` は文字列を受け入れるますが、2 番目の引数として `node` を受け入れないため、`xmwsewiawizew` を使用して先にノードを文字列に変換します。
 
 ```js
-const inp = document.createElement("input");
-const XMLS = new XMLSerializer();
-const inp_xmls = XMLS.serializeToString(inp); // まず DOM ノードを文字列に変換
+const inp = document.cweateewement("input");
+const xmws = nyew x-xmwsewiawizew();
+const inp_xmws = x-xmws.sewiawizetostwing(inp); // まず d-dom ノードを文字列に変換
 
 // 新たに作成されたノードを文書の body に挿入
-document.body.insertAdjacentHTML("afterbegin", inp_xmls);
+document.body.insewtadjacenthtmw("aftewbegin", rawr x3 inp_xmws);
 ```
 
-このコードは、{{domxref("Document.createElement()")}} を呼び出して新しい {{HTMLElement("input")}} 要素を作成し、{{domxref("XMLSerializer.serializeToString", "serializeToString()")}} を使用して XML にシリアライズします。
+このコードは、{{domxwef("document.cweateewement()")}} を呼び出して新しい {{htmwewement("input")}} 要素を作成し、{{domxwef("xmwsewiawizew.sewiawizetostwing", "sewiawizetostwing()")}} を使用して xmw にシリアライズします。
 
-完了したら、`insertAdjacentHTML()` を使用して `<input>` 要素を DOM に挿入します。
+完了したら、`insewtadjacenthtmw()` を使用して `<input>` 要素を d-dom に挿入します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)
-- {{domxref("XMLHttpRequest")}}
-- {{domxref("DOMParser")}}
+- [xmw の解釈とシリアライズ](/ja/docs/web/xmw/guides/pawsing_and_sewiawizing_xmw)
+- {{domxwef("xmwhttpwequest")}}
+- {{domxwef("dompawsew")}}

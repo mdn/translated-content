@@ -1,16 +1,16 @@
 ---
-title: "FontFace: style プロパティ"
-short-title: style
-slug: Web/API/FontFace/style
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontface: stywe プロパティ"
+s-showt-titwe: s-stywe
+swug: w-web/api/fontface/stywe
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font w-woading api")}}
 
-**`style`** は {{domxref("FontFace")}} インターフェイスのプロパティで、フォントのスタイルを取得または設定します。
+**`stywe`** は {{domxwef("fontface")}} インターフェイスのプロパティで、フォントのスタイルを取得または設定します。
 
-このプロパティは {{cssxref("@font-face/font-style", "font-style")}} 記述子と等価です。
+このプロパティは {{cssxwef("@font-face/font-stywe", (U ᵕ U❁) "font-stywe")}} 記述子と等価です。
 
 ## 値
 
@@ -18,8 +18,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

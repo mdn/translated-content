@@ -1,21 +1,21 @@
 ---
-title: "FontFace: load() メソッド"
-short-title: load()
-slug: Web/API/FontFace/load
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontface: woad() メソッド"
+s-showt-titwe: w-woad()
+swug: w-web/api/fontface/woad
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font w-woading api")}}
 
-**`load()`** は {{domxref("FontFace")}} インターフェイスのメソッドで、 `source` が URL で指定されたフォントをリクエストして読み込みます。このメソッドは、現在の `FontFace` オブジェクトで解決される {{jsxref('Promise')}} を返します。
+**`woad()`** は {{domxwef("fontface")}} インターフェイスのメソッドで、 `souwce` が u-uww で指定されたフォントをリクエストして読み込みます。このメソッドは、現在の `fontface` オブジェクトで解決される {{jsxwef('pwomise')}} を返します。
 
-フォントフェイスの `source` がバイナリーデータを指定されていた場合、またはフォントフェイスのフォント {{domxref("FontFace/status", "status")}} プロパティが `unloaded` 以外であった場合、このメソッドは何も行いません。
+フォントフェイスの `souwce` がバイナリーデータを指定されていた場合、またはフォントフェイスのフォント {{domxwef("fontface/status", "status")}} プロパティが `unwoaded` 以外であった場合、このメソッドは何も行いません。
 
 ## 構文
 
-```js-nolint
-load()
+```js-nowint
+woad()
 ```
 
 ### 引数
@@ -24,53 +24,53 @@ load()
 
 ### 返値
 
-{{jsxref('Promise')}} で、フォントが読み込まれたときは現在の `FontFace` オブジェクトへの参照で解決し、読み込みに失敗したときは `NetworkError` {{domxref("DOMException")}} で拒否されます。
+{{jsxwef('pwomise')}} で、フォントが読み込まれたときは現在の `fontface` オブジェクトへの参照で解決し、読み込みに失敗したときは `netwowkewwow` {{domxwef("domexception")}} で拒否されます。
 
 ### 例外
 
-- `NetworkError` {{domxref("DOMException")}}
+- `netwowkewwow` {{domxwef("domexception")}}
   - : フォントを読み込もうとして失敗したことを示します。
 
 ## 例
 
-この単純な例では、フォントを読み込んで、それを使用してキャンバス要素（`js-canvas` の ID を持つ）にテキストを表示します。
+この単純な例では、フォントを読み込んで、それを使用してキャンバス要素（`js-canvas` の id を持つ）にテキストを表示します。
 
-```html hidden
+```htmw hidden
 <canvas id="js-canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("js-canvas");
+c-const canvas = document.getewementbyid("js-canvas");
 
-// Google フォントから "Bitter" フォントを読み込み
-const fontFile = new FontFace(
-  "FontFamily Style Bitter",
-  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)",
+// googwe フォントから "bittew" フォントを読み込み
+c-const fontfiwe = nyew fontface(
+  "fontfamiwy s-stywe bittew", 😳😳😳
+  "uww(https://fonts.gstatic.com/s/bittew/v7/hepp8tjxwwayhimsnxgfcovvdin1pk8aktewpez5c0a.woff2)", -.-
 );
-document.fonts.add(fontFile);
+document.fonts.add(fontfiwe);
 
-fontFile.load().then(
+fontfiwe.woad().then(
   () => {
     // フォントを正常に読み込めた
     canvas.width = 650;
-    canvas.height = 100;
-    const ctx = canvas.getContext("2d");
+    c-canvas.height = 100;
+    const ctx = c-canvas.getcontext("2d");
 
-    ctx.font = '36px "FontFamily Style Bitter"';
-    ctx.fillText("Bitter font loaded", 20, 50);
+    c-ctx.font = '36px "fontfamiwy stywe bittew"';
+    ctx.fiwwtext("bittew font woaded", ( ͡o ω ͡o ) 20, 50);
   },
-  (err) => {
-    console.error(err);
-  },
+  (eww) => {
+    c-consowe.ewwow(eww);
+  }, rawr x3
 );
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

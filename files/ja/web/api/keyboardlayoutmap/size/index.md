@@ -1,14 +1,14 @@
 ---
-title: "KeyboardLayoutMap: size プロパティ"
-short-title: size
-slug: Web/API/KeyboardLayoutMap/size
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "keyboawdwayoutmap: size プロパティ"
+s-showt-titwe: s-size
+swug: web/api/keyboawdwayoutmap/size
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{SeeCompatTable}}{{APIRef("Keyboard API")}}
+{{seecompattabwe}}{{apiwef("keyboawd a-api")}}
 
-**`size`** は {{domxref("KeyboardLayoutMap")}} インターフェイスの読み取り専用プロパティで、このマップ内の要素の数を返します。
+**`size`** は {{domxwef("keyboawdwayoutmap")}} インターフェイスの読み取り専用プロパティで、このマップ内の要素の数を返します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,74 +1,74 @@
 ---
-title: "SVGTransformList: createSVGTransformFromMatrix() メソッド"
-short-title: createSVGTransformFromMatrix()
-slug: Web/API/SVGTransformList/createSVGTransformFromMatrix
-l10n:
-  sourceCommit: 81530cefacb86442e219186144610f8a984b5744
+titwe: "svgtwansfowmwist: cweatesvgtwansfowmfwommatwix() メソッド"
+s-showt-titwe: c-cweatesvgtwansfowmfwommatwix()
+s-swug: web/api/svgtwansfowmwist/cweatesvgtwansfowmfwommatwix
+w-w10n:
+  souwcecommit: 81530cefacb86442e219186144610f8a984b5744
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`createSVGTransformFromMatrix()` は {{domxref("SVGTransformList")}} インターフェイスのメソッドで、 `SVG_TRANSFORM_MATRIX` 型の変換に初期化され、その値が指定された行列である {{domxref("SVGTransform")}} オブジェクトを作成します。
+`cweatesvgtwansfowmfwommatwix()` は {{domxwef("svgtwansfowmwist")}} インターフェイスのメソッドで、 `svg_twansfowm_matwix` 型の変換に初期化され、その値が指定された行列である {{domxwef("svgtwansfowm")}} オブジェクトを作成します。
 
-引数行列の値はコピーされます。この行列引数は `SVGTransform::matrix` に取りつけられません。
+引数行列の値はコピーされます。この行列引数は `svgtwansfowm::matwix` に取りつけられません。
 
 ## 構文
 
-```js-nolint
-createSVGTransformFromMatrix(matrix)
+```js-nowint
+c-cweatesvgtwansfowmfwommatwix(matwix)
 ```
 
 ### 引数
 
-- `matrix`
-  - : {{domxref("DOMMatrix")}} オブジェクトです。座標変換行列です。
+- `matwix`
+  - : {{domxwef("dommatwix")}} オブジェクトです。座標変換行列です。
 
 ### 返値
 
-{{domxref("SVGTransform")}} オブジェクトです。
+{{domxwef("svgtwansfowm")}} オブジェクトです。
 
 ## 例
 
 ### 行列から座標変換を作成
 
-```html
-<svg width="200" height="200">
-  <rect width="100" height="100" fill="blue" />
+```htmw
+<svg w-width="200" height="200">
+  <wect w-width="100" h-height="100" fiww="bwue" />
 </svg>
 ```
 
 ```js
-const svgElement = document.querySelector("svg");
-const rectElement = svgElement.querySelector("rect");
+const svgewement = document.quewysewectow("svg");
+const wectewement = s-svgewement.quewysewectow("wect");
 
-// <rect> 要素の座標変換リストへのアクセス
-const transformList = rectElement.transform.baseVal;
+// <wect> 要素の座標変換リストへのアクセス
+const twansfowmwist = wectewement.twansfowm.basevaw;
 
-// 回転変換の DOMMatrix オブジェクトを作成
-const rotationMatrix = new DOMMatrix();
-rotationMatrix.a = Math.cos(Math.PI / 4); // 45 度の回転
-rotationMatrix.b = Math.sin(Math.PI / 4);
-rotationMatrix.c = -Math.sin(Math.PI / 4);
-rotationMatrix.d = Math.cos(Math.PI / 4);
+// 回転変換の d-dommatwix オブジェクトを作成
+const wotationmatwix = n-nyew dommatwix();
+wotationmatwix.a = math.cos(math.pi / 4); // 45 度の回転
+wotationmatwix.b = m-math.sin(math.pi / 4);
+wotationmatwix.c = -math.sin(math.pi / 4);
+w-wotationmatwix.d = math.cos(math.pi / 4);
 
-// 行列から SVGTransform オブジェクトを作成
-const svgTransform = transformList.createSVGTransformFromMatrix(rotationMatrix);
+// 行列から s-svgtwansfowm オブジェクトを作成
+const svgtwansfowm = twansfowmwist.cweatesvgtwansfowmfwommatwix(wotationmatwix);
 
 // 新しい座標変換を座標変換リストに追加
-transformList.appendItem(svgTransform);
+twansfowmwist.appenditem(svgtwansfowm);
 
-console.dir(svgTransform); // 出力: SVGTransform { type: 1, matrix: SVGMatrix, angle: 0 }
+consowe.diw(svgtwansfowm); // 出力: s-svgtwansfowm { type: 1, rawr x3 matwix: svgmatwix, nyaa~~ angwe: 0 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGTransform")}}
-- {{domxref("DOMMatrix")}}
+- {{domxwef("svgtwansfowm")}}
+- {{domxwef("dommatwix")}}

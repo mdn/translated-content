@@ -1,40 +1,40 @@
 ---
-title: UserActivation.hasBeenActive
-slug: Web/API/UserActivation/hasBeenActive
-l10n:
-  sourceCommit: 165b70e57270af4ba85526d92cce74d51d12c39d
+titwe: usewactivation.hasbeenactive
+swug: web/api/usewactivation/hasbeenactive
+w-w10n:
+  souwcecommit: 165b70e57270af4ba85526d92cce74d51d12c39d
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{apiwef("htmw d-dom")}} {{seecompattabwe}}
 
-{{domxref("UserActivation")}} インターフェイスの読み取り専用プロパティ **`hasBeenActive`** は、現在のウインドウでユーザーによる粘着的な有効化がされているかを表します。({{Glossary("sticky activation", "粘着的な有効化")}}を参照してください)
+{{domxwef("usewactivation")}} インターフェイスの読み取り専用プロパティ **`hasbeenactive`** は、現在のウインドウでユーザーによる粘着的な有効化がされているかを表します。({{gwossawy("sticky a-activation", 🥺 "粘着的な有効化")}}を参照してください)
 
 ## 値
 
-{{jsxref("boolean")}} です。
+{{jsxwef("boowean")}} です。
 
 ## 例
 
 ### これまでにユーザーによる操作が行われたかをチェックする
 
-ユーザーがこれまでにページを操作したかをチェックするために `hasBeenActive` を使用します。
+ユーザーがこれまでにページを操作したかをチェックするために `hasbeenactive` を使用します。
 
 ```js
-if (navigator.userActivation.hasBeenActive) {
+i-if (navigatow.usewactivation.hasbeenactive) {
   // 例えば､アニメーションの自動再生に進む
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("UserActivation")}}
-- {{domxref("UserActivation.isActive")}}
-- [ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/User_activation)
+- {{domxwef("usewactivation")}}
+- {{domxwef("usewactivation.isactive")}}
+- [ユーザーによる有効化によって制御される機能](/ja/docs/web/secuwity/usew_activation)

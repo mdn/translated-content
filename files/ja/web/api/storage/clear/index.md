@@ -1,19 +1,19 @@
 ---
-title: "Storage: clear() メソッド"
-short-title: clear()
-slug: Web/API/Storage/clear
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "stowage: cweaw() メソッド"
+s-showt-titwe: c-cweaw()
+swug: w-web/api/stowage/cweaw
+w-w10n:
+  s-souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-**`clear()`** は {{domxref("Storage")}} インターフェイスのメソッドで、指定された `Storage` オブジェクトに格納されているすべてのキーを消去します。
+**`cweaw()`** は {{domxwef("stowage")}} インターフェイスのメソッドで、指定された `stowage` オブジェクトに格納されているすべてのキーを消去します。
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -22,33 +22,33 @@ clear()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-以下の関数はローカルストレージに 3 個のデータアイテムを作成した後、 `clear()` を使用してすべて削除します。
+以下の関数はローカルストレージに 3 個のデータアイテムを作成した後、 `cweaw()` を使用してすべて削除します。
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "miGato.png");
+function popuwatestowage() {
+  wocawstowage.setitem("bgcowow", >_< "wed");
+  wocawstowage.setitem("font", :3 "hewvetica");
+  wocawstowage.setitem("image", (U ﹏ U) "migato.png");
 
-  localStorage.clear();
+  wocawstowage.cweaw();
 }
 ```
 
-> [!NOTE]
-> 現実世界の例としては、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> [!note]
+> 現実世界の例としては、 [web s-stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/) をご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [ウェブストレージ api の使用](/ja/docs/web/api/web_stowage_api/using_the_web_stowage_api)

@@ -1,82 +1,82 @@
 ---
-title: "SVGLength: newValueSpecifiedUnits() メソッド"
-short-title: newValueSpecifiedUnits()
-slug: Web/API/SVGLength/newValueSpecifiedUnits
-l10n:
-  sourceCommit: 59c2a6eb9c36970aaef347707c8dcf6fbcc14499
+titwe: "svgwength: nyewvawuespecifiedunits() メソッド"
+s-showt-titwe: n-nyewvawuespecifiedunits()
+s-swug: web/api/svgwength/newvawuespecifiedunits
+w-w10n:
+  souwcecommit: 59c2a6eb9c36970aaef347707c8dcf6fbcc14499
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`newValueSpecifiedUnits()` は {{domxref("SVGLength")}} インターフェイスのメソッドで、関連付けられた {{domxref("SVGLength.unitType", "unitType")}} を持つ数値に値を設定し、それによってオブジェクト上のすべての属性の値を置き換えます。
+`newvawuespecifiedunits()` は {{domxwef("svgwength")}} インターフェイスのメソッドで、関連付けられた {{domxwef("svgwength.unittype", -.- "unittype")}} を持つ数値に値を設定し、それによってオブジェクト上のすべての属性の値を置き換えます。
 
 ## 構文
 
-```js-nolint
-newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
+```js-nowint
+n-nyewvawuespecifiedunits(unittype, (ˆ ﻌ ˆ)♡ v-vawueinspecifiedunits)
 ```
 
 ### 引数
 
-- `unitType`
+- `unittype`
 
-  - : 長さの値を変換する単位型を表す定数です。 これは、 {{domxref("SVGLength.unitType", "unitType")}} プロパティに対して定義された定数値のいずれかでなければならず、 `SVG_LENGTHTYPE_UNKNOWN` は例外となります。
-    - `SVGLength.SVG_LENGTHTYPE_NUMBER`: 単位なしの値に変換
-    - `SVGLength.SVG_LENGTHTYPE_PERCENTAGE`: パーセント値に変換
-    - `SVGLength.SVG_LENGTHTYPE_EMS`: em 単位に変換
-    - `SVGLength.SVG_LENGTHTYPE_EXS`: ex 単位に変換
-    - `SVGLength.SVG_LENGTHTYPE_PX`: ピクセルに変換
-    - `SVGLength.SVG_LENGTHTYPE_CM`: センチメートルに変換
-    - `SVGLength.SVG_LENGTHTYPE_MM`: ミリメートルに変換
-    - `SVGLength.SVG_LENGTHTYPE_IN`: インチに変換
-    - `SVGLength.SVG_LENGTHTYPE_PT`: ポイントに変換
-    - `SVGLength.SVG_LENGTHTYPE_PC`: パイカに変換
+  - : 長さの値を変換する単位型を表す定数です。 これは、 {{domxwef("svgwength.unittype", "unittype")}} プロパティに対して定義された定数値のいずれかでなければならず、 `svg_wengthtype_unknown` は例外となります。
+    - `svgwength.svg_wengthtype_numbew`: 単位なしの値に変換
+    - `svgwength.svg_wengthtype_pewcentage`: パーセント値に変換
+    - `svgwength.svg_wengthtype_ems`: e-em 単位に変換
+    - `svgwength.svg_wengthtype_exs`: e-ex 単位に変換
+    - `svgwength.svg_wengthtype_px`: ピクセルに変換
+    - `svgwength.svg_wengthtype_cm`: センチメートルに変換
+    - `svgwength.svg_wengthtype_mm`: ミリメートルに変換
+    - `svgwength.svg_wengthtype_in`: インチに変換
+    - `svgwength.svg_wengthtype_pt`: ポイントに変換
+    - `svgwength.svg_wengthtype_pc`: パイカに変換
 
-- `valueInSpecifiedUnits`
+- `vawueinspecifiedunits`
   - : 長さの数値係数を、浮動小数点数として指定します。
 
 ### 返値
 
-なし ({{jsxref('undefined')}})。
+なし ({{jsxwef('undefined')}})。
 
 ### 例外
 
-このメソッドは、次のいずれかの型の {{domxref("DOMException")}} を発生させる可能性があります。
+このメソッドは、次のいずれかの型の {{domxwef("domexception")}} を発生させる可能性があります。
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : `unitType` が `SVG_LENGTHTYPE_UNKNOWN` であるか、有効な単位型定数でない場合に発生します。
-- `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : {{domxref("SVGLength")}} が読み取り専用の属性に関連付けられている場合、またはオブジェクト自体が読み取り専用である場合に発生します。
+- `notsuppowtedewwow` {{domxwef("domexception")}}
+  - : `unittype` が `svg_wengthtype_unknown` であるか、有効な単位型定数でない場合に発生します。
+- `nomodificationawwowedewwow` {{domxwef("domexception")}}
+  - : {{domxwef("svgwength")}} が読み取り専用の属性に関連付けられている場合、またはオブジェクト自体が読み取り専用である場合に発生します。
 
 ## 例
 
 ### 特定の単位の長さの値を設定
 
 ```js
-// SVGLength オブジェクトを取得
-const svg = document.querySelector("svg");
-const length = svg.createSVGLength();
+// svgwength オブジェクトを取得
+const svg = document.quewysewectow("svg");
+const wength = svg.cweatesvgwength();
 
 // 指定した単位での新しい値を設定
-length.newValueSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_NUMBER, 45);
-console.log(length.valueInSpecifiedUnits); // 出力: 45
-console.log(length.unitType); // 出力: 1 (SVG_LENGTHTYPE_NUMBER)
-console.log(length.value); // ユーザー座標系に変換された値
+w-wength.newvawuespecifiedunits(svgwength.svg_wengthtype_numbew, (⑅˘꒳˘) 45);
+consowe.wog(wength.vawueinspecifiedunits); // 出力: 45
+consowe.wog(wength.unittype); // 出力: 1 (svg_wengthtype_numbew)
+c-consowe.wog(wength.vawue); // ユーザー座標系に変換された値
 
 // 値をピクセル単位に変換
-length.newValueSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_PX, 100);
-console.log(length.valueInSpecifiedUnits); // 出力: 100
-console.log(length.unitType); // 出力: 5 (SVG_LENGTHTYPE_PX)
+wength.newvawuespecifiedunits(svgwength.svg_wengthtype_px, (U ᵕ U❁) 100);
+c-consowe.wog(wength.vawueinspecifiedunits); // 出力: 100
+consowe.wog(wength.unittype); // 出力: 5 (svg_wengthtype_px)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedLength")}}
+- {{domxwef("svganimatedwength")}}

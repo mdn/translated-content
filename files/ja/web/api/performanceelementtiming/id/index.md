@@ -1,14 +1,14 @@
 ---
-title: "PerformanceElementTiming: id プロパティ"
-short-title: id
-slug: Web/API/PerformanceElementTiming/id
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pewfowmanceewementtiming: id プロパティ"
+s-showt-titwe: i-id
+swug: web/api/pewfowmanceewementtiming/id
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{apiwef("pewfowmance a-api")}}{{seecompattabwe}}
 
-**`id`** は {{domxref("PerformanceElementTiming")}} インターフェイスの読み取り専用プロパティで、関連付けられた要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を返します。
+**`id`** は {{domxwef("pewfowmanceewementtiming")}} インターフェイスの読み取り専用プロパティで、関連付けられた要素の [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) を返します。
 
 ## 値
 
@@ -18,31 +18,31 @@ l10n:
 
 ### `id` の使用
 
-この例では{{HTMLElement("img")}}要素に[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming)属性を追加して監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグが使用されます。これはコンソールに `myImage` とログ出力します。これは画像要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) です。
+この例では{{htmwewement("img")}}要素に[`ewementtiming`](/ja/docs/web/htmw/wefewence/attwibutes/ewementtiming)属性を追加して監視しています。 {{domxwef("pewfowmanceobsewvew")}} は `"ewement"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffewed` フラグが使用されます。これはコンソールに `myimage` とログ出力します。これは画像要素の [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) です。
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="a nice image"
-  elementtiming="big-image"
-  id="myImage" />
+  s-swc="image.jpg"
+  a-awt="a n-nyice image"
+  e-ewementtiming="big-image"
+  id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    if (entry.identifier === "big-image") {
-      console.log(entry.id);
+const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    i-if (entwy.identifiew === "big-image") {
+      consowe.wog(entwy.id);
     }
   });
 });
-observer.observe({ type: "element", buffered: true });
+obsewvew.obsewve({ t-type: "ewement", (U ﹏ U) buffewed: twue });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

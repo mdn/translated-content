@@ -1,23 +1,23 @@
 ---
-title: "BaseAudioContext: createDynamicsCompressor() メソッド"
-short-title: createDynamicsCompressor()
-slug: Web/API/BaseAudioContext/createDynamicsCompressor
-l10n:
-  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
+titwe: "baseaudiocontext: cweatedynamicscompwessow() メソッド"
+s-showt-titwe: c-cweatedynamicscompwessow()
+s-swug: w-web/api/baseaudiocontext/cweatedynamicscompwessow
+w-w10n:
+  souwcecommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`createDynamicsCompressor()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("DynamicsCompressorNode")}} を生成します。これで、音声信号に圧縮をかけることができます。
+`cweatedynamicscompwessow()` は {{domxwef("baseaudiocontext")}} インターフェイスのメソッドで、 {{domxwef("dynamicscompwessownode")}} を生成します。これで、音声信号に圧縮をかけることができます。
 
 圧縮は、信号の最も大きな部分の音量を下げ、最も小さな部分の音量を上げます。全体として、より大きく、より豊かで、充実したサウンドを実現することができます。特に、ゲームや音楽など、多数の音を同時に再生するアプリケーションでは、全体の信号レベルを制御し、音声出力のクリッピング（歪み）を回避するのに役立つので、重要です。
 
-> **メモ:** {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}} コンストラクターは {{domxref("DynamicsCompressorNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> **メモ:** {{domxwef("dynamicscompwessownode.dynamicscompwessownode", mya "dynamicscompwessownode()")}} コンストラクターは {{domxwef("dynamicscompwessownode")}} を作成するための推奨される方法です。 [audionode の作成](/ja/docs/web/api/audionode#audionode_の生成)を参照してください。
 
 ## 構文
 
-```js-nolint
-createDynamicsCompressor()
+```js-nowint
+c-cweatedynamicscompwessow()
 ```
 
 ### 引数
@@ -26,56 +26,56 @@ createDynamicsCompressor()
 
 ### 返値
 
-{{domxref("DynamicsCompressorNode")}} です。
+{{domxwef("dynamicscompwessownode")}} です。
 
 ## 例
 
-以下のコードは、音声トラックに圧縮を加えるための `createDynamicsCompressor()` の簡単な使用法を示しています。より完全な例としては、[基本的なコンプレッサーの例](https://mdn.github.io/webaudio-examples/compressor-example/)（[ソースコードを閲覧](https://github.com/mdn/webaudio-examples/tree/main/compressor-example)）をご覧ください。
+以下のコードは、音声トラックに圧縮を加えるための `cweatedynamicscompwessow()` の簡単な使用法を示しています。より完全な例としては、[基本的なコンプレッサーの例](https://mdn.github.io/webaudio-exampwes/compwessow-exampwe/)（[ソースコードを閲覧](https://github.com/mdn/webaudio-exampwes/twee/main/compwessow-exampwe)）をご覧ください。
 
 ```js
-// MediaElementAudioSourceNode を生成する
-// そこに HTMLMediaElement を入れる
-const source = audioCtx.createMediaElementSource(myAudio);
+// mediaewementaudiosouwcenode を生成する
+// そこに htmwmediaewement を入れる
+const souwce = audioctx.cweatemediaewementsouwce(myaudio);
 
 // コンプレッサーノードを生成する
-const compressor = audioCtx.createDynamicsCompressor();
-compressor.threshold.setValueAtTime(-50, audioCtx.currentTime);
-compressor.knee.setValueAtTime(40, audioCtx.currentTime);
-compressor.ratio.setValueAtTime(12, audioCtx.currentTime);
-compressor.attack.setValueAtTime(0, audioCtx.currentTime);
-compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
+c-const compwessow = audioctx.cweatedynamicscompwessow();
+compwessow.thweshowd.setvawueattime(-50, nyaa~~ audioctx.cuwwenttime);
+compwessow.knee.setvawueattime(40, (⑅˘꒳˘) a-audioctx.cuwwenttime);
+compwessow.watio.setvawueattime(12, rawr x3 a-audioctx.cuwwenttime);
+compwessow.attack.setvawueattime(0, (✿oωo) audioctx.cuwwenttime);
+compwessow.wewease.setvawueattime(0.25, (ˆ ﻌ ˆ)♡ audioctx.cuwwenttime);
 
-// AudioBufferSourceNode を出力先につなげる
-source.connect(audioCtx.destination);
+// a-audiobuffewsouwcenode を出力先につなげる
+souwce.connect(audioctx.destination);
 
-button.onclick = () => {
-  const active = button.getAttribute("data-active");
-  if (active === "false") {
-    button.setAttribute("data-active", "true");
-    button.textContent = "Remove compression";
+b-button.oncwick = () => {
+  c-const active = button.getattwibute("data-active");
+  if (active === "fawse") {
+    button.setattwibute("data-active", (˘ω˘) "twue");
+    button.textcontent = "wemove c-compwession";
 
-    source.disconnect(audioCtx.destination);
-    source.connect(compressor);
-    compressor.connect(audioCtx.destination);
-  } else if (active === "true") {
-    button.setAttribute("data-active", "false");
-    button.textContent = "Add compression";
+    souwce.disconnect(audioctx.destination);
+    souwce.connect(compwessow);
+    compwessow.connect(audioctx.destination);
+  } ewse if (active === "twue") {
+    b-button.setattwibute("data-active", (⑅˘꒳˘) "fawse");
+    button.textcontent = "add c-compwession";
 
-    source.disconnect(compressor);
-    compressor.disconnect(audioCtx.destination);
-    source.connect(audioCtx.destination);
+    s-souwce.disconnect(compwessow);
+    c-compwessow.disconnect(audioctx.destination);
+    s-souwce.connect(audioctx.destination);
   }
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,14 +1,14 @@
 ---
-title: "HTMLTableElement: width プロパティ"
-short-title: width
-slug: Web/API/HTMLTableElement/width
-l10n:
-  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
+titwe: "htmwtabweewement: width プロパティ"
+s-showt-titwe: w-width
+swug: web/api/htmwtabweewement/width
+w-w10n:
+  s-souwcecommit: d-d47348199a379f68bea876a403eb510628ec4ccb
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw dom")}} {{depwecated_headew}}
 
-**`HTMLTableElement.width`** プロパティは、表の推奨される幅を表します。
+**`htmwtabweewement.width`** プロパティは、表の推奨される幅を表します。
 
 ## 値
 
@@ -17,13 +17,13 @@ l10n:
 ## 例
 
 ```js
-myTable.width = "75%";
+m-mytabwe.width = "75%";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

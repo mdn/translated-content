@@ -1,18 +1,18 @@
 ---
-title: FetchEvent()
-slug: Web/API/FetchEvent/FetchEvent
-l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+titwe: fetchevent()
+swug: web/api/fetchevent/fetchevent
+w-w10n:
+  s-souwcecommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`FetchEvent()`** コンストラクターは、新しい {{domxref("FetchEvent")}} オブジェクトを作成します。
+**`fetchevent()`** コンストラクターは、新しい {{domxwef("fetchevent")}} オブジェクトを作成します。
 
 ## 構文
 
-```js-nolint
-new FetchEvent(type, options)
+```js-nowint
+n-nyew fetchevent(type, o.O o-options)
 ```
 
 ### 引数
@@ -21,34 +21,34 @@ new FetchEvent(type, options)
   - : イベントの名前を表す文字列です。
     大文字小文字の区別があり、ブラウザーは常に `fetch` に設定します。
 - `options`
-  - : オブジェクトで、_{{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}} で定義されているプロパティに加えて_、以下のプロパティを持つ可能性があります。
-    - `request`
-      - : 起動されたイベントハンドラーに渡す {{domxref("Request")}} オブジェクトです。
-    - `preloadResponse`
-      - : 事前にクライアントに読み込まれたレスポンスを返す {{jsxref("Promise")}} です。
-    - `clientId` {{optional_inline}}
-      - : 現在のサービスワーカーを制御している {{domxref("Client")}} です。既定では `""` です。
-    - `isReload` {{deprecated_inline}} {{optional_inline}}
-      - : イベントが配信されたときに、ページが再読み込みされたかどうかを示す論理値。もしそうなら `true` を、そうでないなら `false` を返します。
-        通常、ブラウザーで更新ボタンを押すと 再読み込みされますが、リンクをクリックしたり、戻るボタンを押したりすると再読み込みされません。存在しない場合は、 `false` が既定値として設定されます。
-    - `replacesClientId` {{optional_inline}}
-      - : 文字列で、 `resultingClientId` で置き換えようとしているクライアントを識別します。既定値は `""` です。
-    - `resultingClientId` {{optional_inline}}
-      - : 文字列で、ページ読み込みの結果、クライアントが変更された場合の新しい `clientId` を格納します。既定値は `""` です。
+  - : オブジェクトで、_{{domxwef("extendabweevent/extendabweevent", (U ᵕ U❁) "extendabweevent()")}} で定義されているプロパティに加えて_、以下のプロパティを持つ可能性があります。
+    - `wequest`
+      - : 起動されたイベントハンドラーに渡す {{domxwef("wequest")}} オブジェクトです。
+    - `pwewoadwesponse`
+      - : 事前にクライアントに読み込まれたレスポンスを返す {{jsxwef("pwomise")}} です。
+    - `cwientid` {{optionaw_inwine}}
+      - : 現在のサービスワーカーを制御している {{domxwef("cwient")}} です。既定では `""` です。
+    - `iswewoad` {{depwecated_inwine}} {{optionaw_inwine}}
+      - : イベントが配信されたときに、ページが再読み込みされたかどうかを示す論理値。もしそうなら `twue` を、そうでないなら `fawse` を返します。
+        通常、ブラウザーで更新ボタンを押すと 再読み込みされますが、リンクをクリックしたり、戻るボタンを押したりすると再読み込みされません。存在しない場合は、 `fawse` が既定値として設定されます。
+    - `wepwacescwientid` {{optionaw_inwine}}
+      - : 文字列で、 `wesuwtingcwientid` で置き換えようとしているクライアントを識別します。既定値は `""` です。
+    - `wesuwtingcwientid` {{optionaw_inwine}}
+      - : 文字列で、ページ読み込みの結果、クライアントが変更された場合の新しい `cwientid` を格納します。既定値は `""` です。
 
 ## 返値
 
-新しい {{domxref("FetchEvent")}} オブジェクトです。
+新しい {{domxwef("fetchevent")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Promise")}}
-- [フェッチ API](/ja/docs/Web/API/Fetch_API)
+- {{jsxwef("pwomise")}}
+- [フェッチ a-api](/ja/docs/web/api/fetch_api)

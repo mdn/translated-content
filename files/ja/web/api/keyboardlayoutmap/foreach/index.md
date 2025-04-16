@@ -1,46 +1,46 @@
 ---
-title: "KeyboardLayoutMap: forEach() メソッド"
-short-title: forEach()
-slug: Web/API/KeyboardLayoutMap/forEach
-l10n:
-  sourceCommit: f2efc69d9d59a3306b3947963e17ba064a0c74df
+titwe: "keyboawdwayoutmap: foweach() メソッド"
+s-showt-titwe: f-foweach()
+swug: w-web/api/keyboawdwayoutmap/foweach
+w-w10n:
+  souwcecommit: f-f2efc69d9d59a3306b3947963e17ba064a0c74df
 ---
 
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}
+{{apiwef("keyboawd a-api")}}{{seecompattabwe}}
 
-**`forEach()`** は {{domxref('KeyboardLayoutMap')}} インターフェイスのメソッドで、指定された関数をマップの各要素に対して一度ずつ実行します。
+**`foweach()`** は {{domxwef('keyboawdwayoutmap')}} インターフェイスのメソッドで、指定された関数をマップの各要素に対して一度ずつ実行します。
 
 ## 構文
 
-```js-nolint
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+```js-nowint
+f-foweach(cawwbackfn)
+f-foweach(cawwbackfn, UwU thisawg)
 ```
 
 ### 引数
 
-- `callbackFn`
+- `cawwbackfn`
 
   - : 各要素に対して実行する関数で、 3 つの引数を取ります。
 
-    - `currentValue`
+    - `cuwwentvawue`
       - : 現在処理中の要素の値です。
-    - `index` {{optional_inline}}
+    - `index` {{optionaw_inwine}}
       - : 現在処理中の要素のインデックスです。
-    - `array` {{optional_inline}}
-      - : `forEach()` が呼び出される KeyboardLayoutMap です。
+    - `awway` {{optionaw_inwine}}
+      - : `foweach()` が呼び出される keyboawdwayoutmap です。
 
-- `thisArg` {{Optional_inline}}
-  - : `callback` を実行する際に **`this`** （すなわち参照する `Object`）として使用する値です。
+- `thisawg` {{optionaw_inwine}}
+  - : `cawwback` を実行する際に **`this`** （すなわち参照する `object`）として使用する値です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

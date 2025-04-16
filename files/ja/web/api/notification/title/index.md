@@ -1,13 +1,13 @@
 ---
-title: Notification.title
-slug: Web/API/Notification/title
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: nyotification.titwe
+swug: w-web/api/notification/titwe
+w10n:
+  s-souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-**`title`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `title` 引数で指定された通知のタイトルを示します。
+**`titwe`** は {{domxwef("notification")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("notification.notification","notification()")}} コンストラクターの `titwe` 引数で指定された通知のタイトルを示します。
 
 ## 値
 
@@ -16,26 +16,26 @@ l10n:
 ## 例
 
 ```js
-function spawnNotification(theBody, theIcon, theTitle) {
-  const options = {
-    body: theBody,
-    icon: theIcon,
+f-function s-spawnnotification(thebody, >_< theicon, :3 t-thetitwe) {
+  c-const options = {
+    b-body: thebody, (U ﹏ U)
+    icon: theicon, -.-
   };
 
-  const n = new Notification(theTitle, options);
+  const ny = nyew nyotification(thetitwe, (ˆ ﻌ ˆ)♡ o-options);
 
-  console.log(n.title);
+  consowe.wog(n.titwe);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [通知 api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)

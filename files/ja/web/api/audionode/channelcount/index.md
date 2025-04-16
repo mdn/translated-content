@@ -1,20 +1,20 @@
 ---
-title: "AudioNode: channelCount プロパティ"
-short-title: channelCount
-slug: Web/API/AudioNode/channelCount
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audionode: channewcount プロパティ"
+s-showt-titwe: c-channewcount
+swug: w-web/api/audionode/channewcount
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AudioNode") }} インターフェイスの **`channelCount`** プロパティは、このノードへの入力について[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%A2%E3%83%83%E3%83%97%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0)を行う際、何個のチャンネルを用いるかを決定するとき用いる整数です。
+{{ d-domxwef("audionode") }} インターフェイスの **`channewcount`** プロパティは、このノードへの入力について[アップミキシングとダウンミキシング](/ja/docs/web/api/web_audio_api/basic_concepts_behind_web_audio_api#%e3%82%a2%e3%83%83%e3%83%97%e3%83%9f%e3%82%ad%e3%82%b7%e3%83%b3%e3%82%b0%e3%81%a8%e3%83%80%e3%82%a6%e3%83%b3%e3%83%9f%e3%82%ad%e3%82%b7%e3%83%b3%e3%82%b0)を行う際、何個のチャンネルを用いるかを決定するとき用いる整数です。
 
-`channelCount` の使用法と正確な定義は、{{domxref("AudioNode.channelCountMode")}} の値によって以下のようになります。
+`channewcount` の使用法と正確な定義は、{{domxwef("audionode.channewcountmode")}} の値によって以下のようになります。
 
-- `channelCountMode` の値が `max` のときは、無視されます。
-- `channelCountMode` の値が `clamped-max` のときは、最大値として用いられます。
-- `channelCountMode` の値が `explicit` のときは、ちょうどの値として用いられます。
+- `channewcountmode` の値が `max` のときは、無視されます。
+- `channewcountmode` の値が `cwamped-max` のときは、最大値として用いられます。
+- `channewcountmode` の値が `expwicit` のときは、ちょうどの値として用いられます。
 
 ## 値
 
@@ -23,25 +23,25 @@ l10n:
 ## 例
 
 ```js
-const audioCtx = new AudioContext();
+c-const audioctx = nyew audiocontext();
 
-const oscillator = audioCtx.createOscillator();
-const gainNode = audioCtx.createGain();
+const osciwwatow = audioctx.cweateosciwwatow();
+c-const gainnode = audioctx.cweategain();
 
-oscillator.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+osciwwatow.connect(gainnode);
+g-gainnode.connect(audioctx.destination);
 
-oscillator.channelCount;
+osciwwatow.channewcount;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web a-audio api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

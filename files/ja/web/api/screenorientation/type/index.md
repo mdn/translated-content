@@ -1,22 +1,22 @@
 ---
-title: ScreenOrientation.type
-slug: Web/API/ScreenOrientation/type
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: scweenowientation.type
+swug: web/api/scweenowientation/type
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Screen Orientation")}}
+{{apiwef("scween o-owientation")}}
 
-{{domxref("ScreenOrientation")}} の読み取り専用プロパティ **`type`** は、文書の現在の向きのタイプを返します。`"portrait-primary"`、`"portrait-secondary"`、`"landscape-primary"`、`"landscape-secondary"` のいずれかです。
+{{domxwef("scweenowientation")}} の読み取り専用プロパティ **`type`** は、文書の現在の向きのタイプを返します。`"powtwait-pwimawy"`、`"powtwait-secondawy"`、`"wandscape-pwimawy"`、`"wandscape-secondawy"` のいずれかです。
 
 ## 値
 
-{{jsxref("String")}} です。
+{{jsxwef("stwing")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

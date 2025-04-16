@@ -1,39 +1,39 @@
 ---
-title: "ElementInternals: states プロパティ"
-short-title: states
-slug: Web/API/ElementInternals/states
-l10n:
-  sourceCommit: f33c6e8a7204272b90d8f005f3d8c743333d7dbf
+titwe: "ewementintewnaws: states プロパティ"
+s-showt-titwe: s-states
+swug: web/api/ewementintewnaws/states
+w10n:
+  s-souwcecommit: f-f33c6e8a7204272b90d8f005f3d8c743333d7dbf
 ---
 
-{{APIRef("Web Components")}}
+{{apiwef("web c-components")}}
 
-**`states`** は {{domxref("ElementInternals")}} インターフェイスの読み取り専用プロパティで、カスタム要素の取りうる状態を表す {{domxref("CustomStateSet")}} を返します。
+**`states`** は {{domxwef("ewementintewnaws")}} インターフェイスの読み取り専用プロパティで、カスタム要素の取りうる状態を表す {{domxwef("customstateset")}} を返します。
 
 ## 値
 
-{{domxref("CustomStateSet")}} です。これは文字列の {{jsxref("Set")}} です。
+{{domxwef("customstateset")}} です。これは文字列の {{jsxwef("set")}} です。
 
 ## 例
 
-以下の関数は `CustomStateSet` に `--checked` という状態を追加・除去し、カスタムチェックボックスがチェックされたりチェックが外れたりすると `true` または `false` をコンソールに出力します。
+以下の関数は `customstateset` に `--checked` という状態を追加・除去し、カスタムチェックボックスがチェックされたりチェックが外れたりすると `twue` または `fawse` をコンソールに出力します。
 
 ```js
-set checked(flag) {
-  if (flag) {
-    this._internals.states.add('--checked');
-  } else {
-    this._internals.states.delete('--checked');
+s-set checked(fwag) {
+  i-if (fwag) {
+    t-this._intewnaws.states.add('--checked');
+  } ewse {
+    this._intewnaws.states.dewete('--checked');
   }
 
-  console.log(this._internals.states.has('--checked'));
+  consowe.wog(this._intewnaws.states.has('--checked'));
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

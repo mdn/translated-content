@@ -1,54 +1,54 @@
 ---
-title: "Request: signal プロパティ"
-short-title: signal
-slug: Web/API/Request/signal
-l10n:
-  sourceCommit: 242b21a3650efeec0d5d2c74cbd171891748c115
+titwe: "wequest: signaw プロパティ"
+s-showt-titwe: s-signaw
+s-swug: web/api/wequest/signaw
+w-w10n:
+  s-souwcecommit: 242b21a3650efeec0d5d2c74cbd171891748c115
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch a-api")}}{{avaiwabweinwowkews}}
 
-**`signal`** は {{DOMxRef("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストに関連付けられた {{domxref("AbortSignal")}} を返します。
+**`signaw`** は {{domxwef("wequest")}} インターフェイスの読み取り専用プロパティで、このリクエストに関連付けられた {{domxwef("abowtsignaw")}} を返します。
 
 ## 値
 
-{{DOMxRef("AbortSignal")}} オブジェクトです。
+{{domxwef("abowtsignaw")}} オブジェクトです。
 
 ## 例
 
 ```js
 // 新しい中止コントローラーを作成
-const controller = new AbortController();
+c-const contwowwew = n-nyew abowtcontwowwew();
 
-// このコントローラーの AbortSignal オブジェクトを使用してリクエストを作成
-const req = new Request("/", { signal: controller.signal });
+// このコントローラーの abowtsignaw オブジェクトを使用してリクエストを作成
+const weq = nyew wequest("/", ^^;; { signaw: c-contwowwew.signaw });
 
 // 中止された場合にメッセージをログ出力するイベントハンドラーを追加
-req.signal.addEventListener("abort", () => {
-  console.log("abort");
+weq.signaw.addeventwistenew("abowt", >_< () => {
+  consowe.wog("abowt");
 });
 
-// 中止された場合は、AbortSignalの理由をログ出力
-fetch(req).catch(() => {
-  if (req.signal.aborted) {
-    if (req.signal.reason) {
-      console.log(`リクエストは ${req.signal.reason} が原因で中止されました。`);
-    } else {
-      console.log("リクエストは中止されましたが、理由は示されませんでした。");
+// 中止された場合は、abowtsignawの理由をログ出力
+f-fetch(weq).catch(() => {
+  if (weq.signaw.abowted) {
+    i-if (weq.signaw.weason) {
+      consowe.wog(`リクエストは ${weq.signaw.weason} が原因で中止されました。`);
+    } ewse {
+      consowe.wog("リクエストは中止されましたが、理由は示されませんでした。");
     }
-  } else {
-    console.log("リクエストは中止されませんでしたが、異常終了しました。");
+  } e-ewse {
+    consowe.wog("リクエストは中止されませんでしたが、異常終了しました。");
   }
 });
 
 // 実際にリクエストを中止
-controller.abort();
+contwowwew.abowt();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,30 +1,30 @@
 ---
-title: "GeolocationCoordinates: accuracy プロパティ"
-short-title: accuracy
-slug: Web/API/GeolocationCoordinates/accuracy
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "geowocationcoowdinates: accuwacy プロパティ"
+s-showt-titwe: a-accuwacy
+s-swug: web/api/geowocationcoowdinates/accuwacy
+w-w10n:
+  souwcecommit: b-b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-**`GeolocationCoordinates.accuracy`** は読み取り専用プロパティで、厳密な正の `double` 値で、信頼度 95% の {{domxref("GeolocationCoordinates.latitude")}} および
-{{domxref("GeolocationCoordinates.longitude")}} の精度をメートル単位で表します。
+**`geowocationcoowdinates.accuwacy`** は読み取り専用プロパティで、厳密な正の `doubwe` 値で、信頼度 95% の {{domxwef("geowocationcoowdinates.watitude")}} および
+{{domxwef("geowocationcoowdinates.wongitude")}} の精度をメートル単位で表します。
 
 ## 値
 
-正の `double` 値で、信頼度 95% の {{domxref("GeolocationCoordinates.latitude")}} および
-{{domxref("GeolocationCoordinates.longitude")}} の精度をメートル単位で表します。
+正の `doubwe` 値で、信頼度 95% の {{domxwef("geowocationcoowdinates.watitude")}} および
+{{domxwef("geowocationcoowdinates.wongitude")}} の精度をメートル単位で表します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("GeolocationCoordinates")}}
+- [位置情報 a-api の使用](/ja/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocationcoowdinates")}}

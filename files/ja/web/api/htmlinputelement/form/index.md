@@ -1,31 +1,31 @@
 ---
-title: "HTMLInputElement: form プロパティ"
-short-title: form
-slug: Web/API/HTMLInputElement/form
-l10n:
-  sourceCommit: 650feba1ed52078fe6c9342f7a76bafc8ab43891
+titwe: "htmwinputewement: fowm プロパティ"
+s-showt-titwe: f-fowm
+swug: web/api/htmwinputewement/fowm
+w-w10n:
+  s-souwcecommit: 650feba1ed52078fe6c9342f7a76bafc8ab43891
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`form`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、この {{HTMLElement("input")}} を所有する {{domxref("HTMLFormElement")}} オブジェクトを返し、この入力フィールドがどのフォームにも所有されていない場合は `null` を返します。
+**`fowm`** は {{domxwef("htmwinputewement")}} インターフェイスの読み取り専用プロパティで、この {{htmwewement("input")}} を所有する {{domxwef("htmwfowmewement")}} オブジェクトを返し、この入力フィールドがどのフォームにも所有されていない場合は `nuww` を返します。
 
 ## 値
 
-{{domxref("HTMLFormElement")}} または `null` です。
+{{domxwef("htmwfowmewement")}} または `nuww` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLFormElement")}}
-- {{HTMLElement("input")}}
-- HTML の [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性
-- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
+- {{domxwef("htmwinputewement")}}
+- {{domxwef("htmwfowmewement")}}
+- {{htmwewement("input")}}
+- h-htmw の [`fowm`](/ja/docs/web/htmw/wefewence/ewements/input#fowm) 属性
+- [htmw フォームガイド](/ja/docs/weawn_web_devewopment/extensions/fowms)

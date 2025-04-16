@@ -1,29 +1,29 @@
 ---
-title: "AbstractRange: startContainer プロパティ"
-short-title: startContainer
-slug: Web/API/AbstractRange/startContainer
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "abstwactwange: stawtcontainew プロパティ"
+s-showt-titwe: s-stawtcontainew
+s-swug: web/api/abstwactwange/stawtcontainew
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`startContainer`** は {{domxref("AbstractRange")}} インターフェイスの読み取り専用プロパティで、範囲の先頭の {{domxref("Node")}} を返します。
+**`stawtcontainew`** は {{domxwef("abstwactwange")}} インターフェイスの読み取り専用プロパティで、範囲の先頭の {{domxwef("node")}} を返します。
 
 ## 値
 
-範囲の開始位置が内部にある {{domxref("Node")}} です。
+範囲の開始位置が内部にある {{domxwef("node")}} です。
 
 ## 例
 
 ```js
-let startNode = range.startContainer;
+w-wet stawtnode = w-wange.stawtcontainew;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

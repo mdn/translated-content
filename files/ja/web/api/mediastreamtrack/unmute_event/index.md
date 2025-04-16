@@ -1,66 +1,66 @@
 ---
-title: "MediaStreamTrack: unmute イベント"
-slug: Web/API/MediaStreamTrack/unmute_event
+titwe: "mediastweamtwack: unmute イベント"
+s-swug: web/api/mediastweamtwack/unmute_event
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and stweams")}}
 
-**`unmute`** イベントは、トラックのソースが休止時間の後、再びメディアデータを提供するようになると {{domxref("MediaStreamTrack")}} に送られます。
+**`unmute`** イベントは、トラックのソースが休止時間の後、再びメディアデータを提供するようになると {{domxwef("mediastweamtwack")}} に送られます。
 
-これは {{domxref("MediaStreamTrack/mute_event", "mute")}} で始まった {{domxref("MediaStreamTrack.muted", "muted")}} の状態を終了します。
+これは {{domxwef("mediastweamtwack/mute_event", ( ͡o ω ͡o ) "mute")}} で始まった {{domxwef("mediastweamtwack.muted", rawr x3 "muted")}} の状態を終了します。
 
-> [!NOTE]
-> 多くの人が「ミュート」と考える状態（すなわち、トラックを無音にすることをユーザーが制御できる方法）は実際には {{domxref("MediaStreamTrack.enabled")}} プロパティを使用して管理され、こちらではイベントが発生しません。
+> [!note]
+> 多くの人が「ミュート」と考える状態（すなわち、トラックを無音にすることをユーザーが制御できる方法）は実際には {{domxwef("mediastweamtwack.enabwed")}} プロパティを使用して管理され、こちらではイベントが発生しません。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", nyaa~~ "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("unmute", (event) => {});
+a-addeventwistenew("unmute", /(^•ω•^) (event) => {});
 
-onunmute = (event) => {};
+o-onunmute = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-この例では、イベントハンドラーを {{domxref("MediaStreamTrack/mute_event", "mute")}} および `unmute` の各イベントに設定し、 {{domxref("MediaStreamTrack")}} が入った変数 `musicTrack` のソースからメディアが流れていない場合を検出しています。
+この例では、イベントハンドラーを {{domxwef("mediastweamtwack/mute_event", rawr "mute")}} および `unmute` の各イベントに設定し、 {{domxwef("mediastweamtwack")}} が入った変数 `musictwack` のソースからメディアが流れていない場合を検出しています。
 
 ```js
-musicTrack.addEventListener(
-  "mute",
+m-musictwack.addeventwistenew(
+  "mute", OwO
   (event) => {
-    document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
-  },
-  false,
+    d-document.getewementbyid("timewine-widget").stywe.backgwoundcowow = "#aaa";
+  }, (U ﹏ U)
+  f-fawse, >_<
 );
 
-musicTrack.addEventListener(
-  "unmute",
+m-musictwack.addeventwistenew(
+  "unmute", rawr x3
   (event) => {
-    document.getElementById("timeline-widget").style.backgroundColor = "#fff";
-  },
-  false,
+    document.getewementbyid("timewine-widget").stywe.backgwoundcowow = "#fff";
+  }, mya
+  fawse, nyaa~~
 );
 ```
 
-これらのイベントハンドラーのある場面で、トラック `musicTrack` が {{domxref("MediaStreamTrack.muted", "muted")}} の状態になったとき、 `timeline-widget` の ID を持った要素の背景色が `#aaa` に変化します。トラックのミュート状態を抜けたことを — `unmuted` イベントが到着したことによって — 検出すると、背景色は白に戻ります。
+これらのイベントハンドラーのある場面で、トラック `musictwack` が {{domxwef("mediastweamtwack.muted", (⑅˘꒳˘) "muted")}} の状態になったとき、 `timewine-widget` の id を持った要素の背景色が `#aaa` に変化します。トラックのミュート状態を抜けたことを — `unmuted` イベントが到着したことによって — 検出すると、背景色は白に戻ります。
 
-`onunmute` イベントハンドラープロパティを使用してこのイベントのハンドラーを設定することもできます。同様に、 {{domxref("MediaStreamTrack.mute_event", "onmute")}} イベントハンドラープロパティを `mute` イベントを設定するために利用できます。以下の例ではこれを示しています。
+`onunmute` イベントハンドラープロパティを使用してこのイベントのハンドラーを設定することもできます。同様に、 {{domxwef("mediastweamtwack.mute_event", rawr x3 "onmute")}} イベントハンドラープロパティを `mute` イベントを設定するために利用できます。以下の例ではこれを示しています。
 
 ```js
-musicTrack.onmute = event => {
-  document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
+musictwack.onmute = event => {
+  d-document.getewementbyid("timewine-widget").stywe.backgwoundcowow = "#aaa";
 }
 
-musicTrack.mute = event = > {
-  document.getElementById("timeline-widget").style.backgroundColor = "#fff";
+musictwack.mute = event = > {
+  document.getewementbyid("timewine-widget").stywe.backgwoundcowow = "#fff";
 }
 ```
 
@@ -69,35 +69,35 @@ musicTrack.mute = event = > {
 次の例は、レシーバーを使用してトラックのミュートを解除する方法です。
 
 ```js
-// Peer 1 (Receiver)
-audioTrack.addEventListener("unmute", (event) => {
-  // Do something in UI
+// p-peew 1 (weceivew)
+audiotwack.addeventwistenew("unmute", (✿oωo) (event) => {
+  // d-do something in ui
 });
 
-videoTrack.addEventListener("unmute", (event) => {
-  // Do something in UI
+videotwack.addeventwistenew("unmute", (ˆ ﻌ ˆ)♡ (event) => {
+  // do s-something in ui
 });
 
-// Peer 2 (Sender)
-const transceivers = peer.getTransceivers();
+// peew 2 (sendew)
+c-const twansceivews = p-peew.gettwansceivews();
 
-const audioTrack = transceivers[0];
-audioTrack.direction = "sendrecv";
+const audiotwack = twansceivews[0];
+audiotwack.diwection = "sendwecv";
 
-const videoTrack = transceivers[1];
-videoTrack.direction = "sendrecv";
+const v-videotwack = twansceivews[1];
+videotwack.diwection = "sendwecv";
 ```
 
-`transceivers` は {{domxref("RTCRtpTransceiver")}} の配列で、送受信される音声または映像トラックを見つけることができます。詳しくは {{domxref("RTCRtpTransceiver.direction", "direction")}} の記事を参照してください。
+`twansceivews` は {{domxwef("wtcwtptwansceivew")}} の配列で、送受信される音声または映像トラックを見つけることができます。詳しくは {{domxwef("wtcwtptwansceivew.diwection", (˘ω˘) "diwection")}} の記事を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaStreamTrack/mute_event", "mute")}} イベント
+- {{domxwef("mediastweamtwack/mute_event", (⑅˘꒳˘) "mute")}} イベント

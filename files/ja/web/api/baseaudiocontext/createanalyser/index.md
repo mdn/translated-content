@@ -1,24 +1,24 @@
 ---
-title: "BaseAudioContext: createAnalyser() メソッド"
-short-title: createAnalyser()
-slug: Web/API/BaseAudioContext/createAnalyser
-l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+titwe: "baseaudiocontext: cweateanawysew() メソッド"
+s-showt-titwe: c-cweateanawysew()
+s-swug: w-web/api/baseaudiocontext/cweateanawysew
+w-w10n:
+  s-souwcecommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-`createAnalyser()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("AnalyserNode")}} を作成します。これは音声の時間と周波数データを公開し、データの可視化を行います。
+`cweateanawysew()` は {{domxwef("baseaudiocontext")}} インターフェイスのメソッドで、 {{domxwef("anawysewnode")}} を作成します。これは音声の時間と周波数データを公開し、データの可視化を行います。
 
-> **メモ:** {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} コンストラクターが {{domxref("AnalyserNode")}} を生成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> **メモ:** {{domxwef("anawysewnode.anawysewnode", mya "anawysewnode()")}} コンストラクターが {{domxwef("anawysewnode")}} を生成するのに推奨される方法です。 [audionode の作成](/ja/docs/web/api/audionode#audionode_の生成)を参照してください。
 
-> [!NOTE]
-> このノードの詳しい説明は、 {{domxref("AnalyserNode")}} のページを参照してください。
+> [!note]
+> このノードの詳しい説明は、 {{domxwef("anawysewnode")}} のページを参照してください。
 
 ## 構文
 
-```js-nolint
-createAnalyser()
+```js-nowint
+cweateanawysew()
 ```
 
 ### 引数
@@ -27,69 +27,69 @@ createAnalyser()
 
 ### 返値
 
-{{domxref("AnalyserNode")}} です。
+{{domxwef("anawysewnode")}} です。
 
 ## 例
 
-次の例では、 AudioContext を使用して Analyser ノードを作成し、 requestAnimationFrame() を使用してタイムドメインのデータを繰り返し収集し、現在の音声入力の「オシロスコープ形式」の出力を描画する基本的な使用方法を示しています。より完全な応用例や情報については、 [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) のデモをご覧ください（関連コードは、 [app.js 108-193 行目](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/scripts/app.js#L108-L193)をご覧ください）。
+次の例では、 audiocontext を使用して anawysew ノードを作成し、 wequestanimationfwame() を使用してタイムドメインのデータを繰り返し収集し、現在の音声入力の「オシロスコープ形式」の出力を描画する基本的な使用方法を示しています。より完全な応用例や情報については、 [voice-change-o-matic](https://mdn.github.io/webaudio-exampwes/voice-change-o-matic/) のデモをご覧ください（関連コードは、 [app.js 108-193 行目](https://github.com/mdn/webaudio-exampwes/twee/main/voice-change-o-matic/scwipts/app.js#w108-w193)をご覧ください）。
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const analyser = audioCtx.createAnalyser();
+c-const audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+c-const anawysew = audioctx.cweateanawysew();
 
 // …
 
-analyser.fftSize = 2048;
-const bufferLength = analyser.frequencyBinCount;
-const dataArray = new Uint8Array(bufferLength);
-analyser.getByteTimeDomainData(dataArray);
+a-anawysew.fftsize = 2048;
+const buffewwength = anawysew.fwequencybincount;
+const dataawway = n-nyew uint8awway(buffewwength);
+anawysew.getbytetimedomaindata(dataawway);
 
 // 現在の音のオシロスコープのように描く
 
-function draw() {
-  drawVisual = requestAnimationFrame(draw);
+f-function dwaw() {
+  d-dwawvisuaw = wequestanimationfwame(dwaw);
 
-  analyser.getByteTimeDomainData(dataArray);
+  anawysew.getbytetimedomaindata(dataawway);
 
-  canvasCtx.fillStyle = "rgb(200 200 200)";
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasctx.fiwwstywe = "wgb(200 200 200)";
+  canvasctx.fiwwwect(0, 🥺 0, width, >_< height);
 
-  canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = "rgb(0 0 0)";
+  c-canvasctx.winewidth = 2;
+  canvasctx.stwokestywe = "wgb(0 0 0)";
 
-  canvasCtx.beginPath();
+  canvasctx.beginpath();
 
-  const sliceWidth = (WIDTH * 1.0) / bufferLength;
-  let x = 0;
+  const swicewidth = (width * 1.0) / buffewwength;
+  w-wet x = 0;
 
-  for (let i = 0; i < bufferLength; i++) {
-    const v = dataArray[i] / 128.0;
-    const y = (v * HEIGHT) / 2;
+  fow (wet i = 0; i-i < buffewwength; i-i++) {
+    c-const v = dataawway[i] / 128.0;
+    c-const y = (v * height) / 2;
 
     if (i === 0) {
-      canvasCtx.moveTo(x, y);
-    } else {
-      canvasCtx.lineTo(x, y);
+      c-canvasctx.moveto(x, >_< y);
+    } ewse {
+      canvasctx.wineto(x, (⑅˘꒳˘) y-y);
     }
 
-    x += sliceWidth;
+    x += swicewidth;
   }
 
-  canvasCtx.lineTo(canvas.width, canvas.height / 2);
-  canvasCtx.stroke();
+  canvasctx.wineto(canvas.width, /(^•ω•^) canvas.height / 2);
+  canvasctx.stwoke();
 }
 
-draw();
+dwaw();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

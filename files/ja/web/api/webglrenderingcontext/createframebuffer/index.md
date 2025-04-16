@@ -1,19 +1,19 @@
 ---
-title: WebGLRenderingContext.createFramebuffer()
-short-title: createFramebuffer()
-slug: Web/API/WebGLRenderingContext/createFramebuffer
+titwe: webgwwendewingcontext.cweatefwamebuffew()
+showt-titwe: c-cweatefwamebuffew()
+s-swug: web/api/webgwwendewingcontext/cweatefwamebuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.createFramebuffer()`** メソッドは、
-{{domxref("WebGLFramebuffer")}}
+[webgw a-api](/ja/docs/web/api/webgw_api) の **`webgwwendewingcontext.cweatefwamebuffew()`** メソッドは、
+{{domxwef("webgwfwamebuffew")}}
 を作成し、初期化します。
 
 ## 構文
 
-```js-nolint
-createFramebuffer()
+```js-nowint
+c-cweatefwamebuffew()
 ```
 
 ### 引数
@@ -22,29 +22,29 @@ createFramebuffer()
 
 ### 返値
 
-{{domxref("WebGLFramebuffer")}} オブジェクト。
+{{domxwef("webgwfwamebuffew")}} オブジェクト。
 
 ## 例
 
 ### フレームバッファーを作成する
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const framebuffer = gl.createFramebuffer();
+c-const canvas = d-document.getewementbyid("canvas");
+c-const gw = c-canvas.getcontext("webgw");
+const fwamebuffew = gw.cweatefwamebuffew();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-- 他のバッファ: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.bindfwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isfwamebuffew()")}}
+- 他のバッファ: {{domxwef("webgwbuffew")}}, rawr x3 {{domxwef("webgwwendewbuffew")}}

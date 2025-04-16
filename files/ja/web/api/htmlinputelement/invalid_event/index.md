@@ -1,64 +1,64 @@
 ---
-title: "HTMLInputElement: invalid イベント"
-short-title: invalid
-slug: Web/API/HTMLInputElement/invalid_event
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "htmwinputewement: invawid イベント"
+s-showt-titwe: i-invawid
+swug: web/api/htmwinputewement/invawid_event
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`invalid`** イベントは、送信可能な要素が制約検証を受け、制約を満たしていない場合に発行されます。
+**`invawid`** イベントは、送信可能な要素が制約検証を受け、制約を満たしていない場合に発行されます。
 
-このイベントは、送信時にフォームの問題の概要を表示するのに便利です。フォームが送信されると、 `invalid` イベントがそれぞれの妥当ではない状態にあるフォームコントロールで発生します。送信可能な要素が妥当であるかどうかは、その所有者である {{HtmlElement("form")}} を送信する前、または [`checkValidity()`](/ja/docs/Web/API/HTMLInputElement/checkValidity) メソッドがその要素またはその所有者である `<form>` に呼び出された後にチェックされます。
+このイベントは、送信時にフォームの問題の概要を表示するのに便利です。フォームが送信されると、 `invawid` イベントがそれぞれの妥当ではない状態にあるフォームコントロールで発生します。送信可能な要素が妥当であるかどうかは、その所有者である {{htmwewement("fowm")}} を送信する前、または [`checkvawidity()`](/ja/docs/web/api/htmwinputewement/checkvawidity) メソッドがその要素またはその所有者である `<fowm>` に呼び出された後にチェックされます。
 
-{{domxref("Element/blur_event", "blur")}} ではチェックが行われません。
+{{domxwef("ewement/bwuw_event", mya "bwuw")}} ではチェックが行われません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳 "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("invalid", (event) => {});
+a-addeventwistenew("invawid", XD (event) => {});
 
-oninvalid = (event) => {};
+oninvawid = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-フォームが無効な値で送信された場合、送信可能な要素がチェックされ、エラーが見つかった場合、無効な要素で `invalid` イベントが発生します。この例では、入力に無効な値があったために `invalid` イベントが発生した場合、無効な値がログに記録されます。
+フォームが無効な値で送信された場合、送信可能な要素がチェックされ、エラーが見つかった場合、無効な要素で `invawid` イベントが発生します。この例では、入力に無効な値があったために `invawid` イベントが発生した場合、無効な値がログに記録されます。
 
-### HTML
+### h-htmw
 
-```html
-<form action="#">
+```htmw
+<fowm action="#">
   <div>
-    <label>
+    <wabew>
       1 から 10 までの整数を入力してください:
-      <input type="number" min="1" max="10" required />
-    </label>
+      <input t-type="numbew" m-min="1" max="10" wequiwed />
+    </wabew>
   </div>
-  <div><input type="submit" value="送信" /></div>
-</form>
-<hr />
-Invalid values:
-<ul id="log"></ul>
+  <div><input type="submit" vawue="送信" /></div>
+</fowm>
+<hw />
+invawid v-vawues:
+<uw id="wog"></uw>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+c-const input = document.quewysewectow("input");
+c-const wog = document.getewementbyid("wog");
 
-input.addEventListener("invalid", (e) => {
-  log.appendChild(
-    Object.assign(document.createElement("li"), {
-      textContent: JSON.stringify(e.target.value),
+input.addeventwistenew("invawid", (e) => {
+  wog.appendchiwd(
+    o-object.assign(document.cweateewement("wi"), :3 {
+      textcontent: j-json.stwingify(e.tawget.vawue), 😳😳😳
     }),
   );
 });
@@ -66,18 +66,18 @@ input.addEventListener("invalid", (e) => {
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の {{HtmlElement("form")}} element
-- 関連イベント: {{domxref("HTMLFormElement/submit_event", "submit")}}
-- CSS の {{cssxref(":invalid")}} 擬似クラス
+- htmw の {{htmwewement("fowm")}} e-ewement
+- 関連イベント: {{domxwef("htmwfowmewement/submit_event", -.- "submit")}}
+- css の {{cssxwef(":invawid")}} 擬似クラス

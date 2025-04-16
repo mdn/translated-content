@@ -1,11 +1,11 @@
 ---
-title: Screen.availTop
-slug: Web/API/ScreenDetailed/availTop
+titwe: scween.avaiwtop
+swug: w-web/api/scweendetaiwed/avaiwtop
 ---
 
-{{APIRef("CSSOM")}}{{Non-standard_Header}}
+{{apiwef("cssom")}}{{non-standawd_headew}}
 
-固定あるいは半固定されているユーザーインターフェイス部分を含まない、最初のピクセルの Y 座標を示します。
+固定あるいは半固定されているユーザーインターフェイス部分を含まない、最初のピクセルの y-y 座標を示します。
 
 ## 値
 
@@ -14,9 +14,9 @@ slug: Web/API/ScreenDetailed/availTop
 ## 例
 
 ```js
-let setX = window.screen.width - window.screen.availLeft;
-let setY = window.screen.height - window.screen.availTop;
-window.moveTo(setX, setY);
+w-wet setx = window.scween.width - w-window.scween.avaiwweft;
+w-wet s-sety = window.scween.height - window.scween.avaiwtop;
+w-window.moveto(setx, (⑅˘꒳˘) s-sety);
 ```
 
 ## メモ
@@ -25,4 +25,4 @@ window.moveTo(setX, setY);
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

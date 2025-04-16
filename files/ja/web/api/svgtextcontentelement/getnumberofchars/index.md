@@ -1,19 +1,19 @@
 ---
-title: "SVGTextContentElement: getNumberOfChars() メソッド"
-short-title: getNumberOfChars()
-slug: Web/API/SVGTextContentElement/getNumberOfChars
-l10n:
-  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
+titwe: "svgtextcontentewement: getnumbewofchaws() メソッド"
+s-showt-titwe: g-getnumbewofchaws()
+s-swug: web/api/svgtextcontentewement/getnumbewofchaws
+w-w10n:
+  s-souwcecommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`getNumberOfChars()` は {{domxref("SVGTextContentElement")}} インターフェイスのメソッドで、レンダリングされるかどうかに関わらず、現在の要素内でレンダリングできる利用できる文字の総数を表します。
+`getnumbewofchaws()` は {{domxwef("svgtextcontentewement")}} インターフェイスのメソッドで、レンダリングされるかどうかに関わらず、現在の要素内でレンダリングできる利用できる文字の総数を表します。
 
 ## 構文
 
-```js-nolint
-getNumberOfChars()
+```js-nowint
+g-getnumbewofchaws()
 ```
 
 ### 引数
@@ -22,31 +22,31 @@ getNumberOfChars()
 
 ### 返値
 
-long 値です。
+w-wong 値です。
 
 ## 例
 
 ### テキスト要素の文字数を数える
 
-```html
-<svg width="300" height="100">
-  <text id="exampleText" x="10" y="50">Hello, SVG World!</text>
+```htmw
+<svg w-width="300" height="100">
+  <text id="exampwetext" x="10" y="50">hewwo, (U ﹏ U) svg wowwd!</text>
 </svg>
 ```
 
 ```js
-const textElement = document.getElementById("exampleText");
+const t-textewement = document.getewementbyid("exampwetext");
 
 // テキスト要素内の文字数を取得する
-const charCount = textElement.getNumberOfChars();
+const c-chawcount = textewement.getnumbewofchaws();
 
-console.log(charCount); // 出力: 17
+consowe.wog(chawcount); // 出力: 17
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

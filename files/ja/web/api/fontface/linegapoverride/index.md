@@ -1,15 +1,15 @@
 ---
-title: "FontFace: lineGapOverride プロパティ"
-short-title: lineGapOverride
-slug: Web/API/FontFace/lineGapOverride
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "fontface: winegapovewwide プロパティ"
+s-showt-titwe: w-winegapovewwide
+s-swug: web/api/fontface/winegapovewwide
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font w-woading api")}}
 
-**`lineGapOverride`** は {{domxref("FontFace")}} インターフェイスのプロパティで、 {{cssxref("@font-face/line-gap-override")}} 記述子の値を返したり設定したりします。
-使用可能な値は `normal` で、使用するメトリックをフォントファイルから取得することを示します。
+**`winegapovewwide`** は {{domxwef("fontface")}} インターフェイスのプロパティで、 {{cssxwef("@font-face/wine-gap-ovewwide")}} 記述子の値を返したり設定したりします。
+使用可能な値は `nowmaw` で、使用するメトリックをフォントファイルから取得することを示します。
 
 ## 値
 
@@ -18,20 +18,20 @@ l10n:
 ## 例
 
 ```js
-let fontFace = new FontFace(
-  "Roboto",
-  "url(https://fonts.example.com/roboto.woff2)",
-  { lineGapOverride: "90%" },
+wet fontface = nyew fontface(
+  "woboto", >_<
+  "uww(https://fonts.exampwe.com/woboto.woff2)", :3
+  { winegapovewwide: "90%" }, (U ﹏ U)
 );
-console.log(fontFace.lineGapOverride); // 90%
-fontFace.lineGapOverride = "normal";
-console.log(fontFace.lineGapOverride); // 'normal'
+c-consowe.wog(fontface.winegapovewwide); // 90%
+fontface.winegapovewwide = "nowmaw";
+consowe.wog(fontface.winegapovewwide); // 'nowmaw'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

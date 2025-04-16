@@ -1,125 +1,125 @@
 ---
-title: "HTMLElement: error イベント"
-short-title: error
-slug: Web/API/HTMLElement/error_event
-l10n:
-  sourceCommit: c87cce81bf1a0e3d4d010efb914d620b7f23e522
+titwe: "htmwewement: ewwow イベント"
+s-showt-titwe: e-ewwow
+swug: w-web/api/htmwewement/ewwow_event
+w-w10n:
+  souwcecommit: c-c87cce81bf1a0e3d4d010efb914d620b7f23e522
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`error` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合に要素に発生します。例えば、スクリプトの実行エラーがあったり、画像が見つからないか無効であった場合などです。
+`ewwow` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合に要素に発生します。例えば、スクリプトの実行エラーがあったり、画像が見つからないか無効であった場合などです。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", /(^•ω•^) (event) => {});
 
-onerror = (event) => {};
+o-onewwow = (event) => {};
 ```
 
 ## イベント型
 
-イベントオブジェクトは、ユーザーインターフェイス要素から生成された場合は {{domxref("UIEvent")}} のインスタンスとなり、それ以外の場合は {{domxref("Event")}} となります。
+イベントオブジェクトは、ユーザーインターフェイス要素から生成された場合は {{domxwef("uievent")}} のインスタンスとなり、それ以外の場合は {{domxwef("event")}} となります。
 
-{{InheritanceDiagram("UIEvent")}}
+{{inhewitancediagwam("uievent")}}
 
 ## 例
 
 ### ライブデモ
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="controls">
-  <button id="img-error" type="button">Generate image error</button>
-  <img class="bad-img" />
+```htmw
+<div cwass="contwows">
+  <button id="img-ewwow" type="button">genewate image e-ewwow</button>
+  <img cwass="bad-img" />
 </div>
 
-<div class="event-log">
-  <label for="eventLog">Event log:</label>
-  <textarea
-    readonly
-    class="event-log-contents"
-    rows="8"
-    cols="30"
-    id="eventLog"></textarea>
+<div cwass="event-wog">
+  <wabew f-fow="eventwog">event wog:</wabew>
+  <textawea
+    w-weadonwy
+    cwass="event-wog-contents"
+    wows="8"
+    cows="30"
+    id="eventwog"></textawea>
 </div>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  display: grid;
-  grid-template-areas: "control log";
+  dispway: g-gwid;
+  gwid-tempwate-aweas: "contwow w-wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  gwid-awea: contwow;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: c-centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: nyone;
 }
 
-label,
+wabew, rawr x3
 button {
-  display: block;
+  d-dispway: bwock;
 }
 
 button {
-  height: 2rem;
-  margin: 0.5rem;
+  h-height: 2wem;
+  m-mawgin: 0.5wem;
 }
 
-img {
-  width: 0;
+i-img {
+  w-width: 0;
   height: 0;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const log = document.querySelector(".event-log-contents");
+const wog = d-document.quewysewectow(".event-wog-contents");
 
-const badImg = document.querySelector(".bad-img");
-badImg.addEventListener("error", (event) => {
-  log.textContent += `${event.type}: Loading image\n`;
-  console.log(event);
+const badimg = document.quewysewectow(".bad-img");
+b-badimg.addeventwistenew("ewwow", (U ﹏ U) (event) => {
+  wog.textcontent += `${event.type}: woading image\n`;
+  consowe.wog(event);
 });
 
-const imgError = document.querySelector("#img-error");
-imgError.addEventListener("click", () => {
-  badImg.setAttribute("src", "i-dont-exist");
+const imgewwow = document.quewysewectow("#img-ewwow");
+i-imgewwow.addeventwistenew("cwick", (U ﹏ U) () => {
+  badimg.setattwibute("swc", (⑅˘꒳˘) "i-dont-exist");
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ e-embedwivesampwe('wive_exampwe', òωó '100%', ʘwʘ '150px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - 関連イベント:
 
-  - Window: {{domxref("Window/error_event", "error")}} イベント
-  - HTMLElement: {{domxref("HTMLElement/load_event", "load")}} イベント
+  - w-window: {{domxwef("window/ewwow_event", /(^•ω•^) "ewwow")}} イベント
+  - h-htmwewement: {{domxwef("htmwewement/woad_event", ʘwʘ "woad")}} イベント

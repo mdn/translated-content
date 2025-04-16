@@ -1,14 +1,14 @@
 ---
-title: "HTMLInputElement: placeholder プロパティ"
-short-title: placeholder
-slug: Web/API/HTMLInputElement/placeholder
-l10n:
-  sourceCommit: a24234ea6552cbd126d20fbf61e8f2bb010e1f20
+titwe: "htmwinputewement: pwacehowdew プロパティ"
+s-showt-titwe: p-pwacehowdew
+s-swug: web/api/htmwinputewement/pwacehowdew
+w-w10n:
+  s-souwcecommit: a-a24234ea6552cbd126d20fbf61e8f2bb010e1f20
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`placeholder`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、このコントロールに入力できる内容についてのヒントをユーザーに表示します。これは、{{htmlelement("input")}} 要素の [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性を反映します。
+**`pwacehowdew`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、このコントロールに入力できる内容についてのヒントをユーザーに表示します。これは、{{htmwewement("input")}} 要素の [`pwacehowdew`](/ja/docs/web/htmw/wefewence/ewements/input#pwacehowdew) 属性を反映します。
 
 ## 値
 
@@ -17,21 +17,21 @@ l10n:
 ## 例
 
 ```js
-const inputElement = document.getElementById("phone");
-console.log(input.placeholder);
+const inputewement = document.getewementbyid("phone");
+consowe.wog(input.pwacehowdew);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}}
-- {{DOMXref("HTMLInputElement.value")}}
-- {{cssxref("::placeholder")}} 擬似要素
-- {{CSSXref(":placeholder-shown")}} 擬似クラス
+- {{htmwewement("input")}}
+- {{domxwef("htmwinputewement.vawue")}}
+- {{cssxwef("::pwacehowdew")}} 擬似要素
+- {{cssxwef(":pwacehowdew-shown")}} 擬似クラス

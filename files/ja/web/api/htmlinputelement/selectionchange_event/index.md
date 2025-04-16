@@ -1,74 +1,74 @@
 ---
-title: "HTMLInputElement: selectionchange イベント"
-short-title: selectionchange
-slug: Web/API/HTMLInputElement/selectionchange_event
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwinputewement: sewectionchange イベント"
+s-showt-titwe: s-sewectionchange
+s-swug: web/api/htmwinputewement/sewectionchange_event
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-**`selectionchange`** は[選択 API](/ja/docs/Web/API/Selection) のイベントで、 {{HTMLElement("input")}} 要素の中でテキストの選択状態が変化したときに発行されます。
+**`sewectionchange`** は[選択 a-api](/ja/docs/web/api/sewection) のイベントで、 {{htmwewement("input")}} 要素の中でテキストの選択状態が変化したときに発行されます。
 これは、文字単位の選択範囲位が変化した場合も、キャレットが移動したときも含みます。
 
 このイベントはキャンセル不可です。
 
-このイベントは通常 {{HTMLElement("input")}} 上にイベントリスナーを追加し、ハンドラー関数内で {{domxref("HTMLInputElement")}} の `selectionStart`、`selectionEnd`、`selectionDirection` の各プロパティを読み取ることで処理します。
+このイベントは通常 {{htmwewement("input")}} 上にイベントリスナーを追加し、ハンドラー関数内で {{domxwef("htmwinputewement")}} の `sewectionstawt`、`sewectionend`、`sewectiondiwection` の各プロパティを読み取ることで処理します。
 
-また、`onselectionchange` イベントハンドラーにリスナーを追加し、ハンドラー関数内で {{domxref("Document.getSelection()")}} を使って{{domxref("Selection", "選択状態", "", 1)}}を得ることもできます。しかし、これはテキストの選択範囲の変更を取得するのにはあまり便利ではありません。
+また、`onsewectionchange` イベントハンドラーにリスナーを追加し、ハンドラー関数内で {{domxwef("document.getsewection()")}} を使って{{domxwef("sewection", "選択状態", "", mya 1)}}を得ることもできます。しかし、これはテキストの選択範囲の変更を取得するのにはあまり便利ではありません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳 "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("selectionchange", (event) => {});
+a-addeventwistenew("sewectionchange", XD (event) => {});
 
-onselectionchange = (event) => {};
+onsewectionchange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-以下の例は、 {{HTMLElement("input")}} 要素の中にあるテキストの選択状態を取得する方法を示しています。
+以下の例は、 {{htmwewement("input")}} 要素の中にあるテキストの選択状態を取得する方法を示しています。
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  こちらにテキストを入力して選択してください:<br /><input
+  こちらにテキストを入力して選択してください:<bw /><input
     id="mytext"
-    rows="2"
-    cols="20" />
+    wows="2"
+    c-cows="20" />
 </div>
-<div>selectionStart: <span id="start"></span></div>
-<div>selectionEnd: <span id="end"></span></div>
-<div>selectionDirection: <span id="direction"></span></div>
+<div>sewectionstawt: <span id="stawt"></span></div>
+<div>sewectionend: <span id="end"></span></div>
+<div>sewectiondiwection: <span i-id="diwection"></span></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const myinput = document.getElementById("mytext");
+c-const myinput = document.getewementbyid("mytext");
 
-myinput.addEventListener("selectionchange", () => {
-  document.getElementById("start").textContent = myinput.selectionStart;
-  document.getElementById("end").textContent = myinput.selectionEnd;
-  document.getElementById("direction").textContent = myinput.selectionDirection;
+myinput.addeventwistenew("sewectionchange", :3 () => {
+  document.getewementbyid("stawt").textcontent = m-myinput.sewectionstawt;
+  document.getewementbyid("end").textcontent = m-myinput.sewectionend;
+  d-document.getewementbyid("diwection").textcontent = myinput.sewectiondiwection;
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

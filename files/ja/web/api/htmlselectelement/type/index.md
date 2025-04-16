@@ -1,45 +1,45 @@
 ---
-title: "HTMLSelectElement: type プロパティ"
-short-title: type
-slug: Web/API/HTMLSelectElement/type
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwsewectewement: type プロパティ"
+s-showt-titwe: t-type
+swug: web/api/htmwsewectewement/type
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`HTMLSelectElement.type`** は読み取り専用のプロパティで、フォームコントロールの `type` を返します。
+**`htmwsewectewement.type`** は読み取り専用のプロパティで、フォームコントロールの `type` を返します。
 
 ## 値
 
 次のうちのいずれかです。
 
-- `"select-multiple"` 複数の値が選択可能な場合
-- `"select-one"` 一つの値だけが選択可能な場合
+- `"sewect-muwtipwe"` 複数の値が選択可能な場合
+- `"sewect-one"` 一つの値だけが選択可能な場合
 
 ## 例
 
 ```js
-switch (select.type) {
-  case "select-multiple":
+s-switch (sewect.type) {
+  c-case "sewect-muwtipwe":
     // 複数の値が選択可能
-    break;
-  case "select-one":
+    b-bweak;
+  case "sewect-one":
     // 一つの値だけが選択可能
-    break;
-  default:
-  // 標準外の値（または SELECT 要素ではない）
+    bweak;
+  defauwt:
+  // 標準外の値（または sewect 要素ではない）
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML の {{HTMLElement("select")}} 要素。
+- このインターフェイスを実装している htmw の {{htmwewement("sewect")}} 要素。

@@ -1,55 +1,55 @@
 ---
-title: ProcessingInstruction
-slug: Web/API/ProcessingInstruction
-l10n:
-  sourceCommit: 95dff5ec1195f072b8e48a2273294933670b1e99
+titwe: pwocessinginstwuction
+swug: web/api/pwocessinginstwuction
+w-w10n:
+  souwcecommit: 95dff5ec1195f072b8e48a2273294933670b1e99
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`ProcessingInstruction`** インターフェイスは[処理命令](https://www.w3.org/TR/xml/#sec-pi)を表します。すなわち、特定のアプリケーションを対象とした埋め込み {{domxref("Node")}} を表します。しかし、その命令を理解できないほかのアプリケーションは無視することができます。
+**`pwocessinginstwuction`** インターフェイスは[処理命令](https://www.w3.owg/tw/xmw/#sec-pi)を表します。すなわち、特定のアプリケーションを対象とした埋め込み {{domxwef("node")}} を表します。しかし、その命令を理解できないほかのアプリケーションは無視することができます。
 
-> **警告:** `ProcessingInstruction` ノードは XML 文書のみが対応しており、 HTML 文書は対応していません。この中では、処理命令はコメントとみなされ、ツリーでは {{domxref("Comment")}} オブジェクトとして表現されます。
+> **警告:** `pwocessinginstwuction` ノードは x-xmw 文書のみが対応しており、 h-htmw 文書は対応していません。この中では、処理命令はコメントとみなされ、ツリーでは {{domxwef("comment")}} オブジェクトとして表現されます。
 
-処理命令は [XML 宣言](/ja/docs/Web/XML/Guides/XML_introduction#xml_declaration)とは異なることがあります。
+処理命令は [xmw 宣言](/ja/docs/web/xmw/guides/xmw_intwoduction#xmw_decwawation)とは異なることがあります。
 
-> [!NOTE]
-> ユーザー定義の処理命令は "`xml`" で始めることはできません。 `xml` 接頭辞を持つ処理命令のターゲット名は、 XML 仕様書によって特定の標準的な用途のために予約されているからです（例えば、 `<?xml-stylesheet ?>` などを見てください）。
+> [!note]
+> ユーザー定義の処理命令は "`xmw`" で始めることはできません。 `xmw` 接頭辞を持つ処理命令のターゲット名は、 x-xmw 仕様書によって特定の標準的な用途のために予約されているからです（例えば、 `<?xmw-stywesheet ?>` などを見てください）。
 
 例えば、次のようなものです。
 
-```html
-<?xml version="1.0"?>
+```htmw
+<?xmw v-vewsion="1.0"?>
 ```
 
-これは `target` が `xml` の処理命令です。
+これは `tawget` が `xmw` の処理命令です。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスは親インターフェイスである {{domxref("CharacterData")}}, {{domxref("Node")}}, {{domxref("EventTarget")}} からプロパティを継承しています。_
+_このインターフェイスは親インターフェイスである {{domxwef("chawactewdata")}}, o.O {{domxwef("node")}}, {{domxwef("eventtawget")}} からプロパティを継承しています。_
 
-- {{domxref("ProcessingInstruction.sheet")}} {{ReadOnlyInline}}
+- {{domxwef("pwocessinginstwuction.sheet")}} {{weadonwyinwine}}
 
-  - : 存在すれば、関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。なければ `null` を返します。
+  - : 存在すれば、関連付けられた {{domxwef("stywesheet")}} オブジェクトを返します。なければ `nuww` を返します。
 
-- {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}
+- {{domxwef("pwocessinginstwuction.tawget")}} {{weadonwyinwine}}
   - : この命令が対象とするアプリケーションを識別する名前です。
 
 ## インスタンスメソッド
 
-_このインターフェイスには固有のメソッドはありませんが、親インターフェイスである {{domxref("CharacterData")}}, {{domxref("Node")}}, {{domxref("EventTarget")}} からメソッドを継承しています。_
+_このインターフェイスには固有のメソッドはありませんが、親インターフェイスである {{domxwef("chawactewdata")}}, (U ᵕ U❁) {{domxwef("node")}}, (⑅˘꒳˘) {{domxwef("eventtawget")}} からメソッドを継承しています。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [document.createProcessingInstruction()](/ja/docs/Web/API/Document/createProcessingInstruction)
-- [DOM API](/ja/docs/Web/API/Document_Object_Model)
+- [document.cweatepwocessinginstwuction()](/ja/docs/web/api/document/cweatepwocessinginstwuction)
+- [dom a-api](/ja/docs/web/api/document_object_modew)

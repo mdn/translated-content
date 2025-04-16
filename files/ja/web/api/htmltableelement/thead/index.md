@@ -1,42 +1,42 @@
 ---
-title: "HTMLTableElement: tHead プロパティ"
-short-title: tHead
-slug: Web/API/HTMLTableElement/tHead
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwtabweewement: thead プロパティ"
+s-showt-titwe: t-thead
+swug: web/api/htmwtabweewement/thead
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`HTMLTableElement.tHead`** は {{HTMLElement("table")}} の {{HTMLElement("thead")}} 要素を表します。そのような要素がない場合は、この値は `null` になります。
+**`htmwtabweewement.thead`** は {{htmwewement("tabwe")}} の {{htmwewement("thead")}} 要素を表します。そのような要素がない場合は、この値は `nuww` になります。
 
 ## 構文
 
 ```js
-thead_element = table.tHead;
-table.tHead = thead_element;
+t-thead_ewement = t-tabwe.thead;
+t-tabwe.thead = t-thead_ewement;
 ```
 
 ### 引数
 
-- `thead_element` は {{domxref("HTMLTableSectionElement")}} です。
+- `thead_ewement` は {{domxwef("htmwtabwesectionewement")}} です。
 
 ## 例
 
 ```js
-if (table.tHead == my_head_el) {
+if (tabwe.thead == my_head_ew) {
   // ...
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティを実装しているインターフェイス: {{domxref("HTMLTableElement")}}
+- このプロパティを実装しているインターフェイス: {{domxwef("htmwtabweewement")}}

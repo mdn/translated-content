@@ -1,14 +1,14 @@
 ---
-title: "HTMLCanvasElement: toDataURL() メソッド"
-short-title: toDataURL()
-slug: Web/API/HTMLCanvasElement/toDataURL
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwcanvasewement: todatauww() メソッド"
+s-showt-titwe: t-todatauww()
+s-swug: web/api/htmwcanvasewement/todatauww
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-**`HTMLCanvasElement.toDataURL()`** メソッドは、 `type` 引数で指定された形式で画像を表現したものが入った[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) を返します。
+**`htmwcanvasewement.todatauww()`** メソッドは、 `type` 引数で指定された形式で画像を表現したものが入った[データ u-uww](/ja/docs/web/uwi/wefewence/schemes/data) を返します。
 
 希望するファイル形式や画像品質を指定することができます。
 ファイル形式を指定しなかった場合、または指定された形式に対応していない場合は、データは `image/png` として書き出されます。
@@ -20,125 +20,125 @@ l10n:
 
 ## 構文
 
-```js-nolint
-toDataURL()
-toDataURL(type)
-toDataURL(type, encoderOptions)
+```js-nowint
+todatauww()
+todatauww(type)
+todatauww(type, 😳😳😳 encodewoptions)
 ```
 
 ### 引数
 
-- `type` {{optional_inline}}
+- `type` {{optionaw_inwine}}
   - : 文字列で、画像形式を表します。
     既定の形式は `image/png` です。この形式は、指定された形式に対応していない場合にも使用されます。
-- `encoderOptions` {{optional_inline}}
+- `encodewoptions` {{optionaw_inwine}}
   - : `0` から `1` の間の数値であり、作成する画像が非可逆圧縮（`image/jpeg` や `image/webp` など）であった場合の画像品質を示します。
     このオプションが指定されなかったり、許可されている範囲外の数値であったりした場合は、ユーザーエージェントは既定の品質値を使用します。
 
 ### 返値
 
-要求された[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) の入った文字列です。
+要求された[データ u-uww](/ja/docs/web/uwi/wefewence/schemes/data) の入った文字列です。
 
-キャンバスの高さまたは幅が `0` または[キャンバスの最大サイズ](/ja/docs/Web/HTML/Reference/Elements/canvas#キャンバスの最大寸法)より大きい場合、 `"data:,"` という文字列が返されます。
+キャンバスの高さまたは幅が `0` または[キャンバスの最大サイズ](/ja/docs/web/htmw/wefewence/ewements/canvas#キャンバスの最大寸法)より大きい場合、 `"data:,"` という文字列が返されます。
 
 ### 例外
 
-- `SecurityError`
+- `secuwityewwow`
   - : キャンバスのビットマップがオリジンクリーンではありません。
     そのコンテンツの少なくとも一部が、文書そのものが読み込まれたサイトとは別のサイトから読み込まれたものであるか、その可能性があります。
 
 ## 例
 
-このような {{HTMLElement("canvas")}} 要素を用意します
+このような {{htmwewement("canvas")}} 要素を用意します
 
-```html
+```htmw
 <canvas id="canvas" width="5" height="5"></canvas>
 ```
 
-以下のコードによりキャンバスの Data URL を取得できます。
+以下のコードによりキャンバスの d-data uww を取得できます。
 
 ```js
-const canvas = document.getElementById("canvas");
-const dataURL = canvas.toDataURL();
-console.log(dataURL);
-// "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
-// blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
+const c-canvas = document.getewementbyid("canvas");
+const datauww = canvas.todatauww();
+consowe.wog(datauww);
+// "data:image/png;base64,ivboww0kggoaaaansuheugaaaauaaaafcayaaacnby
+// b-bwaaaadeweqvqimwngobmaaabpaafei8awaaaaaewftksuqmcc"
 ```
 
-### JPEG の画質を設定する
+### jpeg の画質を設定する
 
 ```js
-const fullQuality = canvas.toDataURL("image/jpeg", 1.0);
-// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ…9oADAMBAAIRAxEAPwD/AD/6AP/Z"
-const mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
-const lowQuality = canvas.toDataURL("image/jpeg", 0.1);
+const fuwwquawity = c-canvas.todatauww("image/jpeg", (˘ω˘) 1.0);
+// d-data:image/jpeg;base64,/9j/4aaqskzjwgabaq…9oadambaaiwaxeapwd/ad/6ap/z"
+const mediumquawity = canvas.todatauww("image/jpeg", ^^ 0.5);
+const wowquawity = canvas.todatauww("image/jpeg", :3 0.1);
 ```
 
 ### 例: 動的に画像を変更
 
 マウスイベントと連携して使用することで、画像を動的に変化させることができます（この例では、グレースケールとカラー）。
 
-#### HTML
+#### htmw
 
-```html
-<img class="grayscale" src="myPicture.png" alt="Description of my picture" />
+```htmw
+<img c-cwass="gwayscawe" swc="mypictuwe.png" awt="descwiption of my pictuwe" />
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-window.addEventListener("load", removeColors);
+window.addeventwistenew("woad", -.- w-wemovecowows);
 
-function showColorImg() {
-  this.style.display = "none";
-  this.nextSibling.style.display = "inline";
+function showcowowimg() {
+  t-this.stywe.dispway = "none";
+  t-this.nextsibwing.stywe.dispway = "inwine";
 }
 
-function showGrayImg() {
-  this.previousSibling.style.display = "inline";
-  this.style.display = "none";
+f-function s-showgwayimg() {
+  this.pwevioussibwing.stywe.dispway = "inwine";
+  this.stywe.dispway = "none";
 }
 
-function removeColors() {
-  const images = document.getElementsByClassName("grayscale");
-  const canvas = document.createElement("canvas");
-  const ctx = canvas.getContext("2d");
+f-function wemovecowows() {
+  const images = document.getewementsbycwassname("gwayscawe");
+  c-const canvas = document.cweateewement("canvas");
+  const ctx = canvas.getcontext("2d");
 
-  for (const colorImg of images) {
-    const width = colorImg.offsetWidth;
-    const height = colorImg.offsetHeight;
-    canvas.width = width;
+  fow (const cowowimg o-of images) {
+    const width = cowowimg.offsetwidth;
+    c-const height = c-cowowimg.offsetheight;
+    c-canvas.width = width;
     canvas.height = height;
-    ctx.drawImage(colorImg, 0, 0);
-    const imgData = ctx.getImageData(0, 0, width, height);
-    const pix = imgData.data;
-    const pixLen = pix.length;
-    for (let pixel = 0; pixel < pixLen; pixel += 4) {
-      pix[pixel + 2] =
-        pix[pixel + 1] =
-        pix[pixel] =
-          (pix[pixel] + pix[pixel + 1] + pix[pixel + 2]) / 3;
+    ctx.dwawimage(cowowimg, 😳 0, 0);
+    c-const i-imgdata = ctx.getimagedata(0, mya 0, width, (˘ω˘) height);
+    c-const pix = i-imgdata.data;
+    const pixwen = p-pix.wength;
+    fow (wet pixew = 0; p-pixew < pixwen; pixew += 4) {
+      pix[pixew + 2] =
+        p-pix[pixew + 1] =
+        pix[pixew] =
+          (pix[pixew] + p-pix[pixew + 1] + pix[pixew + 2]) / 3;
     }
-    ctx.putImageData(imgData, 0, 0);
-    const grayImg = new Image();
-    grayImg.src = canvas.toDataURL();
-    grayImg.onmouseover = showColorImg;
-    colorImg.onmouseout = showGrayImg;
-    ctx.clearRect(0, 0, width, height);
-    colorImg.style.display = "none";
-    colorImg.parentNode.insertBefore(grayImg, colorImg);
+    c-ctx.putimagedata(imgdata, >_< 0, 0);
+    c-const gwayimg = nyew image();
+    gwayimg.swc = canvas.todatauww();
+    gwayimg.onmouseovew = showcowowimg;
+    cowowimg.onmouseout = s-showgwayimg;
+    ctx.cweawwect(0, -.- 0, w-width, 🥺 height);
+    cowowimg.stywe.dispway = "none";
+    c-cowowimg.pawentnode.insewtbefowe(gwayimg, (U ﹏ U) c-cowowimg);
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [データ URL](/ja/docs/Web/URI/Reference/Schemes/data)（[HTTP](/ja/docs/Web/HTTP) リファレンス）
+- [データ u-uww](/ja/docs/web/uwi/wefewence/schemes/data)（[http](/ja/docs/web/http) リファレンス）

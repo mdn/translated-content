@@ -1,44 +1,44 @@
 ---
-title: "Request: redirect プロパティ"
-short-title: redirect
-slug: Web/API/Request/redirect
-l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+titwe: "wequest: wediwect プロパティ"
+s-showt-titwe: w-wediwect
+s-swug: web/api/wequest/wediwect
+w-w10n:
+  souwcecommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch a-api")}}{{avaiwabweinwowkews}}
 
-**`redirect`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リダイレクトを処理する方法のモードを保持します。
+**`wediwect`** は {{domxwef("wequest")}} インターフェイスの読み取り専用プロパティで、リダイレクトを処理する方法のモードを保持します。
 
 ## 値
 
-`RequestRedirect` 列挙値で、以下の文字列のいずれかになります。
+`wequestwediwect` 列挙値で、以下の文字列のいずれかになります。
 
-- `follow`
-- `error`
-- `manual`
+- `fowwow`
+- `ewwow`
+- `manuaw`
 
-リクエストの作成時に指定されなかった場合は、既定値の `follow` になります。
+リクエストの作成時に指定されなかった場合は、既定値の `fowwow` になります。
 
 ## 例
 
-次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクターを使用して（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを作成し、そのリクエストの `redirect` の値を変数に保存します。
+次のスニペットでは、 {{domxwef("wequest.wequest()")}} コンストラクターを使用して（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを作成し、そのリクエストの `wediwect` の値を変数に保存します。
 
 ```js
-const myRequest = new Request("flowers.jpg");
-const myCred = myRequest.redirect;
+c-const mywequest = n-nyew wequest("fwowews.jpg");
+c-const mycwed = mywequest.wediwect;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

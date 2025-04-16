@@ -1,14 +1,14 @@
 ---
-title: "SVGNumberList: numberOfItems プロパティ"
-short-title: numberOfItems
-slug: Web/API/SVGNumberList/numberOfItems
-l10n:
-  sourceCommit: d2457d93858bde8da4c6db79d9c7e5c1c5799441
+titwe: "svgnumbewwist: nyumbewofitems プロパティ"
+s-showt-titwe: n-nyumbewofitems
+s-swug: web/api/svgnumbewwist/numbewofitems
+w-w10n:
+  souwcecommit: d-d2457d93858bde8da4c6db79d9c7e5c1c5799441
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`numberOfItems`** は {{domxref("SVGNumberList")}} インターフェイスのプロパティで、リスト内のアイテム数を返します。 {{domxref("SVGNumberList.length", "length")}} はこの別名です。
+**`numbewofitems`** は {{domxwef("svgnumbewwist")}} インターフェイスのプロパティで、リスト内のアイテム数を返します。 {{domxwef("svgnumbewwist.wength", òωó "wength")}} はこの別名です。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

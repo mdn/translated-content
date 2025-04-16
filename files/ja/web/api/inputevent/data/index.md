@@ -1,14 +1,14 @@
 ---
-title: "InputEvent: data プロパティ"
-short-title: data
-slug: Web/API/InputEvent/data
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "inputevent: data プロパティ"
+s-showt-titwe: d-data
+swug: w-web/api/inputevent/data
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`data`** は {{domxref("InputEvent")}} インターフェイスの読み取り専用プロパティで、挿入された文字を文字列で返します。挿入されるテキストがない変更の場合、例えば文字が削除された場合は、これは空文字列になることがあります。
+**`data`** は {{domxwef("inputevent")}} インターフェイスの読み取り専用プロパティで、挿入された文字を文字列で返します。挿入されるテキストがない変更の場合、例えば文字が削除された場合は、これは空文字列になることがあります。
 
 ## 値
 
@@ -16,31 +16,31 @@ l10n:
 
 ## 例
 
-以下の例では、イベントリスナーが [input](/ja/docs/Web/API/Element/input_event) イベントを受信します。 {{htmlelement("input")}} 要素に対してテキストの変更が行われると、 `InputEvent.data` によって取得し、 [`Node.textContent`](/ja/docs/Web/API/Node/textContent) プロパティを使用して段落に挿入します。
+以下の例では、イベントリスナーが [input](/ja/docs/web/api/ewement/input_event) イベントを受信します。 {{htmwewement("input")}} 要素に対してテキストの変更が行われると、 `inputevent.data` によって取得し、 [`node.textcontent`](/ja/docs/web/api/node/textcontent) プロパティを使用して段落に挿入します。
 
-```html
+```htmw
 <p>テキストをコピーおよび貼り付けしてください。</p>
 
-<input type="text" />
+<input t-type="text" />
 
-<p class="result"></p>
+<p cwass="wesuwt"></p>
 ```
 
 ```js
-const editable = document.querySelector("input");
-const result = document.querySelector(".result");
+const editabwe = document.quewysewectow("input");
+const w-wesuwt = document.quewysewectow(".wesuwt");
 
-editable.addEventListener("input", (e) => {
-  result.textContent = `入力テキスト: ${e.data}`;
+editabwe.addeventwistenew("input", >_< (e) => {
+  wesuwt.textcontent = `入力テキスト: ${e.data}`;
 });
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,18 +1,18 @@
 ---
-title: SerialPort.getInfo()
-slug: Web/API/SerialPort/getInfo
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: sewiawpowt.getinfo()
+swug: web/api/sewiawpowt/getinfo
+w-w10n:
+  souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("sewiaw a-api")}}{{seecompattabwe}}
 
-{{domxref("SerialPort")}} インターフェイスの **`getInfo()`** メソッドは、デバイスのベンダー ID とプロダクト ID をプロパティとするオブジェクトを返します。
+{{domxwef("sewiawpowt")}} インターフェイスの **`getinfo()`** メソッドは、デバイスのベンダー i-id とプロダクト i-id をプロパティとするオブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-getInfo()
+```js-nowint
+g-getinfo()
 ```
 
 ### 引数
@@ -23,15 +23,15 @@ getInfo()
 
 以下の値を持つオブジェクトを返します。
 
-- `usbVendorId`
-  - : ポートが USB デバイスの一部である場合、USB デバイスの製造元を特定する `unsigned short` の整数です。そうでない場合は `undefined` です。
-- `usbProductId`
-  - : ポートが USB デバイスの一部である場合、USB デバイスを特定する `unsigned short` の整数です。そうでない場合は `undefined` です。
+- `usbvendowid`
+  - : ポートが u-usb デバイスの一部である場合、usb デバイスの製造元を特定する `unsigned showt` の整数です。そうでない場合は `undefined` です。
+- `usbpwoductid`
+  - : ポートが u-usb デバイスの一部である場合、usb デバイスを特定する `unsigned s-showt` の整数です。そうでない場合は `undefined` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

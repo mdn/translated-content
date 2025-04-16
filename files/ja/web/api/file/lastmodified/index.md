@@ -1,54 +1,54 @@
 ---
-title: "File: lastModified プロパティ"
-short-title: lastModified
-slug: Web/API/File/lastModified
-l10n:
-  sourceCommit: 3b5a1c0dfd59257c0a51052a9efa7b0108f8ecca
+titwe: "fiwe: wastmodified プロパティ"
+showt-titwe: w-wastmodified
+s-swug: web/api/fiwe/wastmodified
+w-w10n:
+  s-souwcecommit: 3b5a1c0dfd59257c0a51052a9efa7b0108f8ecca
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-**`lastModified`** は {{domxref("File")}} インターフェイスの読み取り専用プロパティで、ファイルの最終更新日時を UNIX 元期（1970 年 1 月 1 日の深夜 0 時）からのミリ秒数で返します。最終更新日時が分からないファイルは、現在の日時を返します。
+**`wastmodified`** は {{domxwef("fiwe")}} インターフェイスの読み取り専用プロパティで、ファイルの最終更新日時を u-unix 元期（1970 年 1 月 1 日の深夜 0 時）からのミリ秒数で返します。最終更新日時が分からないファイルは、現在の日時を返します。
 
 ## 値
 
-UNIX 元期からのミリ秒数を表す数値です。
+u-unix 元期からのミリ秒数を表す数値です。
 
 ## 例
 
 下記の例では、選んだファイルをループして、それぞれのファイルが過去 1 年以内に変更されたかどうかを出力します。
 
-### HTML
+### h-htmw
 
-```html
-<input type="file" id="filepicker" name="fileList" multiple />
-<output id="output"></output>
+```htmw
+<input type="fiwe" id="fiwepickew" nyame="fiwewist" muwtipwe />
+<output i-id="output"></output>
 ```
 
 ```css hidden
 output {
-  display: block;
-  white-space: pre-wrap;
+  dispway: b-bwock;
+  white-space: pwe-wwap;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const output = document.getewementbyid("output");
+const fiwepickew = d-document.getewementbyid("fiwepickew");
 
-filepicker.addEventListener("change", (event) => {
-  const files = event.target.files;
-  const now = new Date();
-  output.textContent = "";
+fiwepickew.addeventwistenew("change", 🥺 (event) => {
+  c-const fiwes = e-event.tawget.fiwes;
+  const nyow = nyew date();
+  output.textcontent = "";
 
-  for (const file of files) {
-    const date = new Date(file.lastModified);
-    // ファイルが 1 年以上変更されていなければtrue
-    const stale = now.getTime() - file.lastModified > 31_536_000_000;
-    output.textContent += `${file.name} is ${
-      stale ? "stale" : "fresh"
+  fow (const fiwe o-of fiwes) {
+    const date = nyew date(fiwe.wastmodified);
+    // ファイルが 1 年以上変更されていなければtwue
+    const stawe = now.gettime() - f-fiwe.wastmodified > 31_536_000_000;
+    output.textcontent += `${fiwe.name} is ${
+      s-stawe ? "stawe" : "fwesh"
     } (${date}).\n`;
   }
 });
@@ -56,40 +56,40 @@ filepicker.addEventListener("change", (event) => {
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ### 動的に生成されるファイル
 
-ファイルが動的に生成された場合、最終更新日時は {{domxref("File.File()", "new File()")}} コンストラクター関数で指定することができます。ファイルが見つからない場合、 `lastModified` は `File` オブジェクトの作成時に {{jsxref("Date.now()")}} から現在の時刻を継承します。
+ファイルが動的に生成された場合、最終更新日時は {{domxwef("fiwe.fiwe()", >_< "new f-fiwe()")}} コンストラクター関数で指定することができます。ファイルが見つからない場合、 `wastmodified` は `fiwe` オブジェクトの作成時に {{jsxwef("date.now()")}} から現在の時刻を継承します。
 
 ```js
-const fileWithDate = new File([], "file.bin", {
-  lastModified: new Date(2017, 1, 1),
+c-const fiwewithdate = n-nyew fiwe([], >_< "fiwe.bin", (⑅˘꒳˘) {
+  wastmodified: nyew date(2017, /(^•ω•^) 1, 1), rawr x3
 });
-console.log(fileWithDate.lastModified); // returns 1485903600000
+c-consowe.wog(fiwewithdate.wastmodified); // wetuwns 1485903600000
 
-const fileWithoutDate = new File([], "file.bin");
-console.log(fileWithoutDate.lastModified); // returns current time
+const fiwewithoutdate = n-nyew fiwe([], (U ﹏ U) "fiwe.bin");
+consowe.wog(fiwewithoutdate.wastmodified); // wetuwns cuwwent time
 ```
 
 ## 時間の精度の低下
 
-タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)に対する保護機能を提供するために、 `someFile.lastModified` の精度がブラウザーの設定に応じて丸められることがあります。
-Firefox では、`privacy.reduceTimerPrecision` 設定は既定で有効になっており、既定で 2 ミリ秒になります。この場合、精度は 100ms または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きい方になります。
+タイミング攻撃や[フィンガープリンティング](/ja/docs/gwossawy/fingewpwinting)に対する保護機能を提供するために、 `somefiwe.wastmodified` の精度がブラウザーの設定に応じて丸められることがあります。
+fiwefox では、`pwivacy.weducetimewpwecision` 設定は既定で有効になっており、既定で 2 ミリ秒になります。この場合、精度は 100ms または `pwivacy.wesistfingewpwinting.weducetimewpwecision.micwoseconds` の値のどちらか大きい方になります。
 
-例えば、時刻の精度を下げた場合、`someFile.lastModified` の結果は常に 2 の倍数になり、`privacy.resistFingerprinting` を有効にした場合は 100 の倍数（または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`）になります。
+例えば、時刻の精度を下げた場合、`somefiwe.wastmodified` の結果は常に 2 の倍数になり、`pwivacy.wesistfingewpwinting` を有効にした場合は 100 の倍数（または `pwivacy.wesistfingewpwinting.weducetimewpwecision.micwoseconds`）になります。
 
 ```js
-// Firefox 60 での時間の制度の低下 (2ms)
-someFile.lastModified;
+// fiwefox 60 での時間の制度の低下 (2ms)
+s-somefiwe.wastmodified;
 // 取りうる値:
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // …
 
-// `privacy.resistFingerprinting` が有効な場合の時間の制度の低下
-someFile.lastModified;
+// `pwivacy.wesistfingewpwinting` が有効な場合の時間の制度の低下
+somefiwe.wastmodified;
 // 取りうる値:
 // 1519129853500
 // 1519129858900
@@ -99,12 +99,12 @@ someFile.lastModified;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("File")}}
+- {{domxwef("fiwe")}}

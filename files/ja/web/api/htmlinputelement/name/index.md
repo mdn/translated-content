@@ -1,14 +1,14 @@
 ---
-title: "HTMLInputElement: name プロパティ"
-short-title: name
-slug: Web/API/HTMLInputElement/name
-l10n:
-  sourceCommit: bc141099823c9ae2e46f560ac674be2bc4118351
+titwe: "htmwinputewement: nyame プロパティ"
+s-showt-titwe: n-nyame
+swug: web/api/htmwinputewement/name
+w-w10n:
+  s-souwcecommit: b-bc141099823c9ae2e46f560ac674be2bc4118351
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`name`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、この {{HTMLElement("input")}} 要素の名前を示します。これは、この要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) 属性を反映します。
+**`name`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、この {{htmwewement("input")}} 要素の名前を示します。これは、この要素の [`name`](/ja/docs/web/htmw/wefewence/ewements/input#name) 属性を反映します。
 
 ## 値
 
@@ -16,32 +16,32 @@ l10n:
 
 ## 例
 
-次の HTML があったとします。
+次の h-htmw があったとします。
 
-```html
+```htmw
 <p>
-  <label for="planet">あなたが生まれた惑星は？</label>
-  <input id="planet" type="text" name="origin" />
+  <wabew f-fow="pwanet">あなたが生まれた惑星は？</wabew>
+  <input id="pwanet" type="text" nyame="owigin" />
 </p>
 ```
 
 `name` プロパティを使用して、`<input>` の名前を取得または設定することができます。
 
 ```js
-const inputElement = document.querySelector("#planet");
-console.log(`Element's name: ${inputElement.name}`); // "要素の name: origin"
-inputElement.name = "planet"; // 要素の name を更新
+const i-inputewement = document.quewysewectow("#pwanet");
+consowe.wog(`ewement's nyame: ${inputewement.name}`); // "要素の n-nyame: owigin"
+inputewement.name = "pwanet"; // 要素の n-nyame を更新
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement.value")}}
-- {{domxref("HTMLInputElement.type")}}
+- {{domxwef("htmwinputewement.vawue")}}
+- {{domxwef("htmwinputewement.type")}}

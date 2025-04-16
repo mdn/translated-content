@@ -1,14 +1,14 @@
 ---
-title: "CustomEvent: detail プロパティ"
-short-title: detail
-slug: Web/API/CustomEvent/detail
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "customevent: detaiw プロパティ"
+s-showt-titwe: detaiw
+s-swug: web/api/customevent/detaiw
+w-w10n:
+  souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`detail`** は {{domxref("CustomEvent")}} インターフェイスの読み取り専用プロパティで、イベントを初期化する際に渡された何らかのデータを返します。
+**`detaiw`** は {{domxwef("customevent")}} インターフェイスの読み取り専用プロパティで、イベントを初期化する際に渡された何らかのデータを返します。
 
 ## 値
 
@@ -18,35 +18,35 @@ l10n:
 
 ```js
 // カスタムイベントを作成
-const catFound = new CustomEvent("animalfound", {
-  detail: {
-    name: "cat",
+c-const catfound = n-nyew customevent("animawfound", >_< {
+  d-detaiw: {
+    n-nyame: "cat", :3
   },
 });
-const dogFound = new CustomEvent("animalfound", {
-  detail: {
-    name: "dog",
+c-const dogfound = nyew customevent("animawfound", (U ﹏ U) {
+  detaiw: {
+    nyame: "dog", -.-
   },
 });
 
 // 適切なイベントリスナーを追加
-obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
+obj.addeventwistenew("animawfound", (e) => c-consowe.wog(e.detaiw.name));
 
 // イベントの配信
-obj.dispatchEvent(catFound);
-obj.dispatchEvent(dogFound);
+obj.dispatchevent(catfound);
+obj.dispatchevent(dogfound);
 
 // "cat" および "dog" がコンソールの出力される
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CustomEvent")}}
+- {{domxwef("customevent")}}

@@ -1,19 +1,19 @@
 ---
-title: "HTMLElement: blur() メソッド"
-short-title: blur()
-slug: Web/API/HTMLElement/blur
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwewement: bwuw() メソッド"
+s-showt-titwe: b-bwuw()
+s-swug: web/api/htmwewement/bwuw
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLElement.blur()`** メソッドは、現在の要素からキーボードフォーカスを取り除きます。
+**`htmwewement.bwuw()`** メソッドは、現在の要素からキーボードフォーカスを取り除きます。
 
 ## 構文
 
-```js-nolint
-blur()
+```js-nowint
+b-bwuw()
 ```
 
 ### 引数
@@ -22,48 +22,48 @@ blur()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ### テキスト入力からフォーカスを取り除く
 
-#### HTML
+#### h-htmw
 
-```html
-<input type="text" id="sampleText" value="サンプルテキスト" /><br /><br />
-<button type="button" onclick="focusInput()">
+```htmw
+<input type="text" id="sampwetext" vawue="サンプルテキスト" /><bw /><bw />
+<button type="button" o-oncwick="focusinput()">
   クリックするとフォーカスを得ます
 </button>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-function focusInput() {
-  const textField = document.getElementById("sampleText");
+function focusinput() {
+  const t-textfiewd = document.getewementbyid("sampwetext");
 
-  textField.focus();
+  textfiewd.focus();
 
   // 入力欄から 3 秒後にフォーカスが外れる
-  setTimeout(() => {
-    textField.blur();
-  }, 3000);
+  s-settimeout(() => {
+    textfiewd.bwuw();
+  }, (⑅˘꒳˘) 3000);
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Remove_focus_from_a_text_input') }}
+{{ embedwivesampwe('wemove_focus_fwom_a_text_input') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLElement.focus")}}
+- {{domxwef("htmwewement.focus")}}

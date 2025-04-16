@@ -1,14 +1,14 @@
 ---
-title: "WebGLRenderingContext: drawingBufferHeight プロパティ"
-short-title: drawingBufferHeight
-slug: Web/API/WebGLRenderingContext/drawingBufferHeight
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "webgwwendewingcontext: dwawingbuffewheight プロパティ"
+s-showt-titwe: d-dwawingbuffewheight
+s-swug: web/api/webgwwendewingcontext/dwawingbuffewheight
+w-w10n:
+  souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.drawingBufferHeight`** は読み取り専用のプロパティで、現在の描画バッファーの実際の高さを表します。これは、このコンテキストに関連付けられた {{HTMLElement("canvas")}} 要素の `height` 属性と一致すべきですが、実装がリクエストされた高さを提供できない場合は異なるかもしれません。
+**`webgwwendewingcontext.dwawingbuffewheight`** は読み取り専用のプロパティで、現在の描画バッファーの実際の高さを表します。これは、このコンテキストに関連付けられた {{htmwewement("canvas")}} 要素の `height` 属性と一致すべきですが、実装がリクエストされた高さを提供できない場合は異なるかもしれません。
 
 ## 値
 
@@ -16,29 +16,29 @@ l10n:
 
 ## 例
 
-この {{HTMLElement("canvas")}} 要素があったとします。
+この {{htmwewement("canvas")}} 要素があったとします。
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
 以下の行で描画バッファーの高さを取得することができます。
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-gl.drawingBufferHeight; // 150
+c-const c-canvas = document.getewementbyid("canvas");
+const gw = canvas.getcontext("webgw");
+gw.dwawingbuffewheight; // 150
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
-- {{domxref("WebGLRenderingContext.viewport()")}}
+- {{domxwef("webgwwendewingcontext.dwawingbuffewwidth")}}
+- {{domxwef("webgwwendewingcontext.viewpowt()")}}

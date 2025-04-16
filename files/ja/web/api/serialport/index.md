@@ -1,47 +1,47 @@
 ---
-title: SerialPort
-slug: Web/API/SerialPort
-l10n:
-  sourceCommit: c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
+titwe: sewiawpowt
+swug: web/api/sewiawpowt
+w-w10n:
+  s-souwcecommit: c-c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
 ---
 
-{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{secuwecontext_headew}}{{apiwef("web s-sewiaw api")}}{{seecompattabwe}}{{avaiwabweinwowkews("window_and_dedicated")}}
 
-`SerialPort` は [ウェブシリアル API](/ja/docs/Web/API/Web_Serial_API) のインターフェイスで、ホスト機器のシリアルポートへのアクセスを提供します。
+`sewiawpowt` は [ウェブシリアル a-api](/ja/docs/web/api/web_sewiaw_api) のインターフェイスで、ホスト機器のシリアルポートへのアクセスを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-このインターフェイスのインスタンスは {{domxref("Serial")}} インターフェイスのメソッドを呼ぶことにより得られるので、このインターフェイス自身のコンストラクターはありません。
+このインターフェイスのインスタンスは {{domxwef("sewiaw")}} インターフェイスのメソッドを呼ぶことにより得られるので、このインターフェイス自身のコンストラクターはありません。
 
 ## インスタンスプロパティ
 
-- {{domxref("SerialPort.readable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : ポートに接続されたデバイスからデータを受信する用の {{domxref("ReadableStream")}} を返します。
-- {{domxref("SerialPort.writable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : ポートに接続されたデバイスにデータを送信する用の {{domxref("WritableStream")}} を返します。
+- {{domxwef("sewiawpowt.weadabwe")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : ポートに接続されたデバイスからデータを受信する用の {{domxwef("weadabwestweam")}} を返します。
+- {{domxwef("sewiawpowt.wwitabwe")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : ポートに接続されたデバイスにデータを送信する用の {{domxwef("wwitabwestweam")}} を返します。
 
 ## インスタンスメソッド
 
-- {{domxref("SerialPort.forget()")}} {{Experimental_Inline}}
-  - : ポートを閉じ、忘れる処理が完了したら解決する {{jsxref("Promise")}} を返します。
-- {{domxref("SerialPort.getInfo()")}} {{Experimental_Inline}}
+- {{domxwef("sewiawpowt.fowget()")}} {{expewimentaw_inwine}}
+  - : ポートを閉じ、忘れる処理が完了したら解決する {{jsxwef("pwomise")}} を返します。
+- {{domxwef("sewiawpowt.getinfo()")}} {{expewimentaw_inwine}}
   - : ポートの情報が入ったオブジェクトを返します。
-- {{domxref("SerialPort.open()")}} {{Experimental_Inline}}
-  - : ポートを開く処理が完了したら解決する {{jsxref("Promise")}} を返します。デフォルトでは、ポートは 8 ビットのデータ、1 ビットのストップビット、パリティチェックなしで開かれます。
-- {{domxref("SerialPort.setSignals()")}} {{Experimental_Inline}}
-  - : ポートの制御信号を設定し、完了したら解決する {{jsxref("Promise")}} を返します。
-- {{domxref("SerialPort.getSignals()")}} {{Experimental_Inline}}
-  - : ポートの制御信号の現在の状態が入ったオブジェクトで解決する {{jsxref("Promise")}} を返します。
-- {{domxref("SerialPort.close()")}} {{Experimental_Inline}}
-  - : ポートを閉じる処理が完了したら解決する {{jsxref("Promise")}} を返します。
+- {{domxwef("sewiawpowt.open()")}} {{expewimentaw_inwine}}
+  - : ポートを開く処理が完了したら解決する {{jsxwef("pwomise")}} を返します。デフォルトでは、ポートは 8 ビットのデータ、1 ビットのストップビット、パリティチェックなしで開かれます。
+- {{domxwef("sewiawpowt.setsignaws()")}} {{expewimentaw_inwine}}
+  - : ポートの制御信号を設定し、完了したら解決する {{jsxwef("pwomise")}} を返します。
+- {{domxwef("sewiawpowt.getsignaws()")}} {{expewimentaw_inwine}}
+  - : ポートの制御信号の現在の状態が入ったオブジェクトで解決する {{jsxwef("pwomise")}} を返します。
+- {{domxwef("sewiawpowt.cwose()")}} {{expewimentaw_inwine}}
+  - : ポートを閉じる処理が完了したら解決する {{jsxwef("pwomise")}} を返します。
 
 ## イベント
 
-- {{domxref("SerialPort.connect_event", "connect")}} {{Experimental_Inline}}
+- {{domxwef("sewiawpowt.connect_event", >_< "connect")}} {{expewimentaw_inwine}}
   - : ポートがデバイスに接続された時、発火するイベントです。
-- {{domxref("SerialPort.disconnect_event", "disconnect")}} {{Experimental_Inline}}
+- {{domxwef("sewiawpowt.disconnect_event", mya "disconnect")}} {{expewimentaw_inwine}}
   - : ポートがデバイスから切断された時、発火するイベントです。
 
 ## 例
@@ -51,50 +51,50 @@ l10n:
 シリアルポートで通信を行う前に、ポートを開く必要があります。ポートを開くことで、サイトはデータがどのように送受信されるかを決めるために必要なパラメーターを設定できます。開発者は、適切なパラメーターを決めるために接続するデバイスのドキュメントを参照するべきです。
 
 ```js
-await port.open({ baudRate: 9600 /* ボーレートを決める */ });
+a-await powt.open({ b-baudwate: 9600 /* ボーレートを決める */ });
 ```
 
-`open()` が返した `Promise` が解決したら、`readable` および `writable` プロパティにアクセスすることで、デバイスからデータを受信したり接続されたデバイスにデータを送信したりする用の {{domxref("ReadableStream")}} および {{domxref("WritableStream")}} を得ることができます。
+`open()` が返した `pwomise` が解決したら、`weadabwe` および `wwitabwe` プロパティにアクセスすることで、デバイスからデータを受信したり接続されたデバイスにデータを送信したりする用の {{domxwef("weadabwestweam")}} および {{domxwef("wwitabwestweam")}} を得ることができます。
 
 ### ポートからデータを受信する
 
-この例は、ポートからデータを受信する方法を示します。外側のループは致命的なエラーが発生して `readable` が `null` になるまで新しい `reader` を生成し続けることで、致命的でないエラーを処理します。
+この例は、ポートからデータを受信する方法を示します。外側のループは致命的なエラーが発生して `weadabwe` が `nuww` になるまで新しい `weadew` を生成し続けることで、致命的でないエラーを処理します。
 
 ```js
-while (port.readable) {
-  const reader = port.readable.getReader();
-  try {
-    while (true) {
-      const { value, done } = await reader.read();
+w-whiwe (powt.weadabwe) {
+  const weadew = powt.weadabwe.getweadew();
+  twy {
+    whiwe (twue) {
+      const { v-vawue, mya done } = await weadew.wead();
       if (done) {
-        // |reader| がキャンセルされました。
-        break;
+        // |weadew| がキャンセルされました。
+        b-bweak;
       }
-      // |value| について何かをする
+      // |vawue| について何かをする
     }
-  } catch (error) {
-    // |error| を処理する
-  } finally {
-    reader.releaseLock();
+  } catch (ewwow) {
+    // |ewwow| を処理する
+  } f-finawwy {
+    weadew.weweasewock();
   }
 }
 ```
 
 ### ポートにデータを送信する
 
-この例では、ポートに文字列を送信する方法を示します。送信前に、{{domxref("TextEncoder")}} により文字列を `Uint8Array` に変換します。
+この例では、ポートに文字列を送信する方法を示します。送信前に、{{domxwef("textencodew")}} により文字列を `uint8awway` に変換します。
 
 ```js
-const encoder = new TextEncoder();
-const writer = port.writable.getWriter();
-await writer.write(encoder.encode("PING"));
-writer.releaseLock();
+const encodew = nyew textencodew();
+c-const wwitew = powt.wwitabwe.getwwitew();
+a-await wwitew.wwite(encodew.encode("ping"));
+wwitew.weweasewock();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

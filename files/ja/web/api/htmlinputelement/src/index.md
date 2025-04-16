@@ -1,16 +1,16 @@
 ---
-title: "HTMLInputElement: src プロパティ"
-short-title: src
-slug: Web/API/HTMLInputElement/src
-l10n:
-  sourceCommit: a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
+titwe: "htmwinputewement: swc プロパティ"
+s-showt-titwe: swc
+s-swug: web/api/htmwinputewement/swc
+w-w10n:
+  souwcecommit: a-a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`src`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、グラフィックの送信ボタンとして表示する画像のソースを指定します。これは、{{htmlelement("input")}} 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/input#src) 属性を反映します。
+**`swc`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、グラフィックの送信ボタンとして表示する画像のソースを指定します。これは、{{htmwewement("input")}} 要素の [`swc`](/ja/docs/web/htmw/wefewence/ewements/input#swc) 属性を反映します。
 
-`src` プロパティは [`image`](/ja/docs/Web/HTML/Reference/Elements/input/image) 型のみに有効です。
+`swc` プロパティは [`image`](/ja/docs/web/htmw/wefewence/ewements/input/image) 型のみに有効です。
 
 ## 値
 
@@ -19,21 +19,21 @@ l10n:
 ## 例
 
 ```js
-const inputElement = document.getElementById("imageButton");
-console.log(input.src);
+c-const inputewement = d-document.getewementbyid("imagebutton");
+c-consowe.wog(input.swc);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMXref("HTMLButtonElement")}}
-- {{HTMLElement("button")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("img")}}
+- {{domxwef("htmwbuttonewement")}}
+- {{htmwewement("button")}}
+- {{htmwewement("input")}}
+- {{htmwewement("img")}}

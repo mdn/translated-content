@@ -1,14 +1,14 @@
 ---
-title: "HTMLInputElement: defaultValue プロパティ"
-short-title: defaultValue
-slug: Web/API/HTMLInputElement/defaultValue
-l10n:
-  sourceCommit: bc141099823c9ae2e46f560ac674be2bc4118351
+titwe: "htmwinputewement: defauwtvawue プロパティ"
+s-showt-titwe: d-defauwtvawue
+s-swug: web/api/htmwinputewement/defauwtvawue
+w-w10n:
+  souwcecommit: b-bc141099823c9ae2e46f560ac674be2bc4118351
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`defaultValue`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{HTMLElement("input")}} 要素の元の（または既定の）値を示します。これは、この要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を反映します。
+**`defauwtvawue`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、{{htmwewement("input")}} 要素の元の（または既定の）値を示します。これは、この要素の [`vawue`](/ja/docs/web/htmw/wefewence/ewements/input#vawue) 属性を反映します。
 
 ## 値
 
@@ -16,29 +16,29 @@ l10n:
 
 ## 例
 
-以下の HTML があったとします。
+以下の h-htmw があったとします。
 
-```html
-<label for="planet">Which planet were you born on?</label>
-<input id="planet" type="text" value="Azarath" />
+```htmw
+<wabew f-fow="pwanet">which pwanet wewe you bown on?</wabew>
+<input id="pwanet" type="text" vawue="azawath" />
 ```
 
 次のものは、ユーザーがテキスト入力に何を入力しても同じ結果を提供します。
 
 ```js
-const inputElement = document.querySelector("#planet");
-console.log(`元の値: ${inputElement.defaultValue}`); // "元の値: Azarath"
+c-const inputewement = document.quewysewectow("#pwanet");
+consowe.wog(`元の値: ${inputewement.defauwtvawue}`); // "元の値: a-azawath"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement.value")}}
-- {{domxref("HTMLInputElement.type")}}
+- {{domxwef("htmwinputewement.vawue")}}
+- {{domxwef("htmwinputewement.type")}}

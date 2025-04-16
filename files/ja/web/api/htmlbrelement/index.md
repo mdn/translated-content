@@ -1,35 +1,35 @@
 ---
-title: HTMLBRElement
-slug: Web/API/HTMLBRElement
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: htmwbwewement
+swug: web/api/htmwbwewement
+w-w10n:
+  souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLBRElement`** インターフェイスはは HTML 改行要素 ({{htmlelement("br")}}) を表現します。{{domxref("HTMLElement")}} から継承しています。
+**`htmwbwewement`** インターフェイスはは h-htmw 改行要素 ({{htmwewement("bw")}}) を表現します。{{domxwef("htmwewement")}} から継承しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 属性
 
-_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
+_親である {{domxwef("htmwewement")}} からプロパティを継承しています。_
 
-- {{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}
+- {{domxwef("htmwbwewement.cweaw")}} {{depwecated_inwine}}
   - : 文字列で、浮動オブジェクトを回り込むテキストの流れを示します。
 
 ## メソッド
 
-_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxwef("htmwewement")}} からメソッドを継承しています。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{HTMLElement("br")}}
+- このインターフェイスを実装している h-htmw 要素: {{htmwewement("bw")}}

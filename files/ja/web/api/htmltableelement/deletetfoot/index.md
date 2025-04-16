@@ -1,19 +1,19 @@
 ---
-title: "HTMLTableElement: deleteTFoot() メソッド"
-short-title: deleteTFoot()
-slug: Web/API/HTMLTableElement/deleteTFoot
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwtabweewement: dewetetfoot() メソッド"
+s-showt-titwe: d-dewetetfoot()
+s-swug: web/api/htmwtabweewement/dewetetfoot
+w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLTableElement.deleteTFoot()`** は、 {{HTMLElement("tfoot")}} 要素をこの {{HtmlElement("table")}} から取り除きます。
+**`htmwtabweewement.dewetetfoot()`** は、 {{htmwewement("tfoot")}} 要素をこの {{htmwewement("tabwe")}} から取り除きます。
 
 ## 構文
 
-```js-nolint
-deleteTFoot()
+```js-nowint
+d-dewetetfoot()
 ```
 
 ### 引数
@@ -22,50 +22,50 @@ deleteTFoot()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例は、 JavaScript を使用して表のフッターを削除します。
+この例は、 j-javascwipt を使用して表のフッターを削除します。
 
-### HTML
+### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
     <th>名前</th>
     <th>スコア</th>
   </thead>
-  <tr>
-    <td>Bob</td>
+  <tw>
+    <td>bob</td>
     <td>541</td>
-  </tr>
-  <tr>
-    <td>Jim</td>
+  </tw>
+  <tw>
+    <td>jim</td>
     <td>225</td>
-  </tr>
+  </tw>
   <tfoot>
     <th>平均</th>
     <td>383</td>
   </tfoot>
-</table>
+</tabwe>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let table = document.querySelector("table");
-table.deleteTFoot();
+wet tabwe = document.quewysewectow("tabwe");
+tabwe.dewetetfoot();
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

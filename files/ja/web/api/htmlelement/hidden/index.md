@@ -1,109 +1,109 @@
 ---
-title: "HTMLElement: hidden プロパティ"
-short-title: hidden
-slug: Web/API/HTMLElement/hidden
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "htmwewement: hidden プロパティ"
+s-showt-titwe: hidden
+s-swug: web/api/htmwewement/hidden
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-{{domxref("HTMLElement")}} の **`hidden`** プロパティは、この要素の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性の値を反映します。
+{{domxwef("htmwewement")}} の **`hidden`** プロパティは、この要素の [`hidden`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/hidden) 属性の値を反映します。
 
 ## 値
 
 この属性には 3 つの値のうち 1 つを取ります。
 
-- `true`
+- `twue`
   - : この要素は非表示です。
-- `false`
+- `fawse`
   - : この要素は非表示ではありません。これはこの属性の既定値です。
-- `"until-found"`
-  - : この要素は _hidden until found_ で、隠されているが、ページ内検索で見つかったり、フラグメントナビゲーションで到達したりすると表示されることを意味します。
+- `"untiw-found"`
+  - : この要素は _hidden u-untiw f-found_ で、隠されているが、ページ内検索で見つかったり、フラグメントナビゲーションで到達したりすると表示されることを意味します。
 
-この属性の使い方の詳細は、このプロパティが反映する HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性のページを参照してください。
+この属性の使い方の詳細は、このプロパティが反映する htmw の [`hidden`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/hidden) 属性のページを参照してください。
 
 ## 例
 
 ここでは、非表示のブロックを使用して、ユーザーが珍しい要求に同意した後に表示されるお礼のメッセージを含める例を示します。
 
-### HTML
+### htmw
 
-この HTML には 2 つのパネルがあります。1 つはようこそパネルで、ユーザーに素晴らしいことを尋ね、もう一方はフォローアップパネルで、初期状態では非表示です。
+この htmw には 2 つのパネルがあります。1 つはようこそパネルで、ユーザーに素晴らしいことを尋ね、もう一方はフォローアップパネルで、初期状態では非表示です。
 
-```html
-<div id="welcome" class="panel">
-  <h1>Foobar.com へようこそ！</h1>
-  <p>[OK] をクリックすると、今日は素晴らしいと同意したことになります。</p>
-  <button class="button" id="okButton">OK</button>
+```htmw
+<div id="wewcome" cwass="panew">
+  <h1>foobaw.com へようこそ！</h1>
+  <p>[ok] をクリックすると、今日は素晴らしいと同意したことになります。</p>
+  <button c-cwass="button" id="okbutton">ok</button>
 </div>
 
-<div id="awesome" class="panel" hidden>
+<div id="awesome" c-cwass="panew" hidden>
   <h1>ありがとう！</h1>
   <p>今日は素晴らしいと同意してくれてありがとう！</p>
 </div>
 ```
 
-### CSS
+### c-css
 
-コンテンツは、以下の CSS を使用してスタイル設定されます。
+コンテンツは、以下の css を使用してスタイル設定されます。
 
 ```css
-.panel {
+.panew {
   font:
-    16px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-  border: 1px solid #22d;
+    16px "open sans", (ˆ ﻌ ˆ)♡
+    h-hewvetica, (˘ω˘)
+    awiaw, (⑅˘꒳˘)
+    s-sans-sewif;
+  bowdew: 1px s-sowid #22d;
   padding: 12px;
   width: 500px;
-  text-align: center;
+  text-awign: centew;
 }
 
 .button {
-  font:
-    22px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
+  f-font:
+    22px "open sans", (///ˬ///✿)
+    hewvetica, 😳😳😳
+    awiaw,
+    sans-sewif;
   padding: 5px 36px;
 }
 
-h1 {
-  margin-top: 0;
-  font-size: 175%;
+h-h1 {
+  mawgin-top: 0;
+  f-font-size: 175%;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
-この JavaScript はイベントリスナーを [OK] ボタンに追加し、これが "welcome" パネルを非表示にして "awesome" パネルを表示します。
+この j-javascwipt はイベントリスナーを [ok] ボタンに追加し、これが "wewcome" パネルを非表示にして "awesome" パネルを表示します。
 
 ```js
-document.getElementById("okButton").addEventListener(
-  "click",
+d-document.getewementbyid("okbutton").addeventwistenew(
+  "cwick", 🥺
   () => {
-    document.getElementById("welcome").hidden = true;
-    document.getElementById("awesome").hidden = false;
-  },
-  false,
+    document.getewementbyid("wewcome").hidden = twue;
+    d-document.getewementbyid("awesome").hidden = fawse;
+  }, mya
+  fawse,
 );
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Examples', 560, 200) }}
+{{ e-embedwivesampwe('exampwes', 560, 🥺 200) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [hidden](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性
-- {{cssxref("display")}}
+- [hidden](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/hidden) 属性
+- {{cssxwef("dispway")}}

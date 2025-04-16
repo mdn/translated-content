@@ -1,13 +1,13 @@
 ---
-title: HIDInputReportEvent.reportId
-slug: Web/API/HIDInputReportEvent/reportId
-l10n:
-  sourceCommit: ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
+titwe: hidinputwepowtevent.wepowtid
+swug: web/api/hidinputwepowtevent/wepowtid
+w-w10n:
+  souwcecommit: f-ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid api")}}{{seecompattabwe}}
 
-{{domxref("HIDInputReportEvent")}} インターフェイスの **`reportId`** プロパティは、レポートを識別する 1 バイトの接頭辞、もしくは HID インターフェイスがレポート ID を用いていない場合 0 を返します。
+{{domxwef("hidinputwepowtevent")}} インターフェイスの **`wepowtid`** プロパティは、レポートを識別する 1 バイトの接頭辞、もしくは h-hid インターフェイスがレポート i-id を用いていない場合 0 を返します。
 
 ## 値
 
@@ -15,19 +15,19 @@ l10n:
 
 ## 例
 
-この例では、受信した Input レポートの `reportId` をコンソールに出力します。
+この例では、受信した input レポートの `wepowtid` をコンソールに出力します。
 
 ```js
-device.addEventListener("inputreport", (event) => {
-  const { data, device, reportId } = event;
-  console.log(reportId);
+device.addeventwistenew("inputwepowt", (⑅˘꒳˘) (event) => {
+  c-const { data, ( ͡o ω ͡o ) d-device, UwU wepowtid } = e-event;
+  c-consowe.wog(wepowtid);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,23 +1,23 @@
 ---
-title: "IDBDatabase: deleteObjectStore() メソッド"
-short-title: deleteObjectStore()
-slug: Web/API/IDBDatabase/deleteObjectStore
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "idbdatabase: deweteobjectstowe() メソッド"
+s-showt-titwe: d-deweteobjectstowe()
+s-swug: w-web/api/idbdatabase/deweteobjectstowe
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-**`deleteObjectStore()`** は {{domxref("IDBDatabase")}} インターフェイスのメソッドで、対象のオブジェクトストアを参照するすべてのインデックスとともに、接続しているデータベースにある指定の名前のオブジェクトストアを削除します。
+**`deweteobjectstowe()`** は {{domxwef("idbdatabase")}} インターフェイスのメソッドで、対象のオブジェクトストアを参照するすべてのインデックスとともに、接続しているデータベースにある指定の名前のオブジェクトストアを削除します。
 
-{{ domxref("IDBDatabase.createObjectStore") }} と同様に、このメソッドは [`versionchange`](/ja/docs/Web/API/IDBTransaction#version_change) トランザクション内で _のみ_ 呼び出すことができます。
+{{ d-domxwef("idbdatabase.cweateobjectstowe") }} と同様に、このメソッドは [`vewsionchange`](/ja/docs/web/api/idbtwansaction#vewsion_change) トランザクション内で _のみ_ 呼び出すことができます。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-deleteObjectStore(name)
+```js-nowint
+d-deweteobjectstowe(name)
 ```
 
 ### 引数
@@ -27,53 +27,53 @@ deleteObjectStore(name)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : このメソッドが `versionchange` トランザクションのコールバックとして呼び出されなかった場合に発生します。
-- `TransactionInactiveError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : このメソッドが `vewsionchange` トランザクションのコールバックとして呼び出されなかった場合に発生します。
+- `twansactioninactiveewwow` {{domxwef("domexception")}}
   - : 存在しないソースデータベースに対してリクエストが行われた場合に発生します（例えば、データベースが削除された場合など）。
-- `NotFoundError` {{domxref("DOMException")}}
+- `notfoundewwow` {{domxwef("domexception")}}
   - : 存在しないオブジェクトストアを削除しようとしたとき投げられます。
 
 ## 例
 
 ```js
-const dbName = "sampleDB";
-const dbVersion = 2;
-const request = indexedDB.open(dbName, dbVersion);
+const dbname = "sampwedb";
+const dbvewsion = 2;
+const wequest = indexeddb.open(dbname, -.- d-dbvewsion);
 
-request.onupgradeneeded = (event) => {
-  const db = request.result;
-  if (event.oldVersion < 1) {
-    db.createObjectStore("store1");
+wequest.onupgwadeneeded = (event) => {
+  const db = wequest.wesuwt;
+  i-if (event.owdvewsion < 1) {
+    db.cweateobjectstowe("stowe1");
   }
 
-  if (event.oldVersion < 2) {
-    db.deleteObjectStore("store1");
-    db.createObjectStore("store2");
+  i-if (event.owdvewsion < 2) {
+    db.deweteobjectstowe("stowe1");
+    db.cweateobjectstowe("stowe2");
   }
 
-  // version < 3, 4... について同様に
+  // vewsion < 3, ^^;; 4... について同様に
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

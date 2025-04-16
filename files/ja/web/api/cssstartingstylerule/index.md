@@ -1,34 +1,34 @@
 ---
-title: CSSStartingStyleRule
-slug: Web/API/CSSStartingStyleRule
-l10n:
-  sourceCommit: 8b199a6a0272d77f1583d7fdc3faaecfd8234ff8
+titwe: cssstawtingstywewuwe
+swug: web/api/cssstawtingstywewuwe
+w-w10n:
+  souwcecommit: 8b199a6a0272d77f1583d7fdc3faaecfd8234ff8
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`CSSStartingStyleRule`** は [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)のインターフェイスで、 CSS の {{CSSxRef("@starting-style")}} アットルールを表します。
+**`cssstawtingstywewuwe`** は [css オブジェクトモデル](/ja/docs/web/api/css_object_modew)のインターフェイスで、 c-css の {{cssxwef("@stawting-stywe")}} アットルールを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスには、親である {{domxref("CSSGroupingRule")}} から継承したプロパティがあります。_
+_このインターフェイスには、親である {{domxwef("cssgwoupingwuwe")}} から継承したプロパティがあります。_
 
 ## インスタンスメソッド
 
-_このインターフェイスには、親である {{domxref("CSSGroupingRule")}} から継承したメソッドがあります。_
+_このインターフェイスには、親である {{domxwef("cssgwoupingwuwe")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("@starting-style")}}
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
-- [動的スタイル情報の使用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- {{cssxwef("@stawting-stywe")}}
+- [css トランジション](/ja/docs/web/css/css_twansitions)モジュール
+- [動的スタイル情報の使用](/ja/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)

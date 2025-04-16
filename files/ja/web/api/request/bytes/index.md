@@ -1,19 +1,19 @@
 ---
-title: "Request: bytes() メソッド"
-short-title: bytes()
-slug: Web/API/Request/bytes
-l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+titwe: "wequest: bytes() メソッド"
+s-showt-titwe: b-bytes()
+swug: w-web/api/wequest/bytes
+w-w10n:
+  s-souwcecommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{apiwef("fetch api")}}{{avaiwabweinwowkews}}
 
-**`bytes()`** は {{domxref("Request")}} インターフェイスのメソッドで、リクエスト本体を読み込み、{{jsxref("Uint8Array")}} で解決するプロミスとしてそれを返します。
+**`bytes()`** は {{domxwef("wequest")}} インターフェイスのメソッドで、リクエスト本体を読み込み、{{jsxwef("uint8awway")}} で解決するプロミスとしてそれを返します。
 
 ## 構文
 
-```js-nolint
-bytes()
+```js-nowint
+b-bytes()
 ```
 
 ### 引数
@@ -22,31 +22,31 @@ bytes()
 
 ### 返値
 
-{{jsxref("Uint8Array")}} で解決するプロミスです。
+{{jsxwef("uint8awway")}} で解決するプロミスです。
 
 ## 例
 
 ```js
-const myArray = new Uint8Array(10);
+c-const myawway = n-nyew uint8awway(10);
 
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: myArray,
+const wequest = nyew wequest("/myendpoint", σωσ {
+  method: "post", >_<
+  body: m-myawway,
 });
 
-request.bytes().then((buffer) => {
+wequest.bytes().then((buffew) => {
   // リクエストで送信されたバッファーを処理する
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Response.arrayBuffer()")}}
+- {{domxwef("wesponse.awwaybuffew()")}}

@@ -1,95 +1,95 @@
 ---
-title: "HTMLElement: editContext プロパティ"
-short-title: editContext
-slug: Web/API/HTMLElement/editContext
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "htmwewement: editcontext プロパティ"
+s-showt-titwe: e-editcontext
+swug: w-web/api/htmwewement/editcontext
+w-w10n:
+  souwcecommit: c-c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-**`editContext`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素に関連付けられた {{domxref("EditContext")}} オブジェクトを取得したり設定したりします。
+**`editcontext`** は {{domxwef("htmwewement")}} インターフェイスのプロパティで、要素に関連付けられた {{domxwef("editcontext")}} オブジェクトを取得したり設定したりします。
 
-{{domxref("EditContext API", "", "", "nocode")}} を使用することで、{{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) の変換や絵文字ピッカー、その他のプラットフォーム固有の編集関連 UI サーフェスなど、高度なテキスト入力に対応したリッチテキストエディターをウェブ上で構築することができます。
+{{domxwef("editcontext a-api", "", XD "", "nocode")}} を使用することで、{{gwossawy("input m-method editow", :3 "インプットメソッドエディター")}} (ime) の変換や絵文字ピッカー、その他のプラットフォーム固有の編集関連 ui サーフェスなど、高度なテキスト入力に対応したリッチテキストエディターをウェブ上で構築することができます。
 
 ### 利用可能な要素
 
-`editContext` プロパティを設定して動作するのは、一部の種類の要素だけです。
+`editcontext` プロパティを設定して動作するのは、一部の種類の要素だけです。
 
-- HTML 要素のうち、 [`<article>`](/ja/docs/Web/HTML/Reference/Elements/article), [`<aside>`](/ja/docs/Web/HTML/Reference/Elements/aside), [`<blockquote>`](/ja/docs/Web/HTML/Reference/Elements/blockquote), [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body), [`<div>`](/ja/docs/Web/HTML/Reference/Elements/div), [`<footer>`](/ja/docs/Web/HTML/Reference/Elements/footer), [`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h2>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h3>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h4>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h5>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h6>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<header>`](/ja/docs/Web/HTML/Reference/Elements/header), [`<main>`](/ja/docs/Web/HTML/Reference/Elements/main), [`<nav>`](/ja/docs/Web/HTML/Reference/Elements/nav), [`<p>`](/ja/docs/Web/HTML/Reference/Elements/p), [`<section>`](/ja/docs/Web/HTML/Reference/Elements/section), [`<span>`](/ja/docs/Web/HTML/Reference/Elements/span) のいずれか。
-- 有効な[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)。
-- [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素。
+- htmw 要素のうち、 [`<awticwe>`](/ja/docs/web/htmw/wefewence/ewements/awticwe), 😳😳😳 [`<aside>`](/ja/docs/web/htmw/wefewence/ewements/aside), -.- [`<bwockquote>`](/ja/docs/web/htmw/wefewence/ewements/bwockquote), [`<body>`](/ja/docs/web/htmw/wefewence/ewements/body), ( ͡o ω ͡o ) [`<div>`](/ja/docs/web/htmw/wefewence/ewements/div), rawr x3 [`<footew>`](/ja/docs/web/htmw/wefewence/ewements/footew), nyaa~~ [`<h1>`](/ja/docs/web/htmw/wefewence/ewements/heading_ewements), /(^•ω•^) [`<h2>`](/ja/docs/web/htmw/wefewence/ewements/heading_ewements), rawr [`<h3>`](/ja/docs/web/htmw/wefewence/ewements/heading_ewements), OwO [`<h4>`](/ja/docs/web/htmw/wefewence/ewements/heading_ewements), (U ﹏ U) [`<h5>`](/ja/docs/web/htmw/wefewence/ewements/heading_ewements), >_< [`<h6>`](/ja/docs/web/htmw/wefewence/ewements/heading_ewements), rawr x3 [`<headew>`](/ja/docs/web/htmw/wefewence/ewements/headew), mya [`<main>`](/ja/docs/web/htmw/wefewence/ewements/main), nyaa~~ [`<nav>`](/ja/docs/web/htmw/wefewence/ewements/nav), (⑅˘꒳˘) [`<p>`](/ja/docs/web/htmw/wefewence/ewements/p), rawr x3 [`<section>`](/ja/docs/web/htmw/wefewence/ewements/section), (✿oωo) [`<span>`](/ja/docs/web/htmw/wefewence/ewements/span) のいずれか。
+- 有効な[カスタム要素](/ja/docs/web/api/web_components/using_custom_ewements)。
+- [`<canvas>`](/ja/docs/web/htmw/wefewence/ewements/canvas) 要素。
 
-上記以外の要素で `editContext` プロパティを設定しようとすると、`NotSupportedError` の {{domxref("DOMException")}} が発生します。
+上記以外の要素で `editcontext` プロパティを設定しようとすると、`notsuppowtedewwow` の {{domxwef("domexception")}} が発生します。
 
 ### 要素の関連付け
 
-要素の `editContext` プロパティに {{domxref("EditContext")}} インスタンスを設定すると、その要素と `EditContext` インスタンスの関連付けが行われます。
+要素の `editcontext` プロパティに {{domxwef("editcontext")}} インスタンスを設定すると、その要素と `editcontext` インスタンスの関連付けが行われます。
 
 関連は 1 対 1 で行われます。
 
-- 要素は 1 つの `EditContext` インスタンスにのみ関連付けることができます。
-- 1　つの `EditContext` インスタンスは　1　つの要素にのみ関連付けることができます。
+- 要素は 1 つの `editcontext` インスタンスにのみ関連付けることができます。
+- 1　つの `editcontext` インスタンスは　1　つの要素にのみ関連付けることができます。
 
-すでに関連付けられた `EditContext` インスタンスを別の要素に関連付けようとすると、 {{domxref("DOMException")}} が発生します。
+すでに関連付けられた `editcontext` インスタンスを別の要素に関連付けようとすると、 {{domxwef("domexception")}} が発生します。
 
-他の `EditContext` インスタンスを既に関連付けられた要素に関連付けようとした場合も、 {{domxref("DOMException")}} が発生します。
+他の `editcontext` インスタンスを既に関連付けられた要素に関連付けようとした場合も、 {{domxwef("domexception")}} が発生します。
 
-要素がすでに `EditContext` インスタンスに関連付けられているかどうかを調べるには、{{domxref("EditContext.attachedElements()")}} メソッドを使用してください。
+要素がすでに `editcontext` インスタンスに関連付けられているかどうかを調べるには、{{domxwef("editcontext.attachedewements()")}} メソッドを使用してください。
 
 ### ガベージコレクション
 
-`EditContext` インスタンスは、関連する要素が DOM から除去されても、他の参照する要素があれば、その関連する要素を維持し続けます。
+`editcontext` インスタンスは、関連する要素が dom から除去されても、他の参照する要素があれば、その関連する要素を維持し続けます。
 
-要素が確実にガベージコレクションされるようにしたい場合は、要素の `editContext` プロパティをクリアして下さい。
+要素が確実にガベージコレクションされるようにしたい場合は、要素の `editcontext` プロパティをクリアして下さい。
 
 ## 値
 
-{{domxref("EditContext")}} オブジェクトまたは `null` です。
+{{domxwef("editcontext")}} オブジェクトまたは `nuww` です。
 
 ## 例
 
-### 要素の `editContext` プロパティの設定
+### 要素の `editcontext` プロパティの設定
 
-この例では、要素を編集可能にするために `<canvas>` 要素の `editContext` プロパティを新しい `EditContext` インスタンスに設定する方法を示します。
+この例では、要素を編集可能にするために `<canvas>` 要素の `editcontext` プロパティを新しい `editcontext` インスタンスに設定する方法を示します。
 
-```html
-<canvas id="editor-canvas"></canvas>
+```htmw
+<canvas id="editow-canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("editor-canvas");
-const editContext = new EditContext();
-canvas.editContext = editContext;
+const c-canvas = document.getewementbyid("editow-canvas");
+const editcontext = nyew editcontext();
+c-canvas.editcontext = editcontext;
 ```
 
-### 要素の `editContext` プロパティのクリア
+### 要素の `editcontext` プロパティのクリア
 
-この例では、DOM から要素を安全に除去するために、編集可能な `<canvas>` 要素の `editContext` プロパティをクリアする方法を示します。
+この例では、dom から要素を安全に除去するために、編集可能な `<canvas>` 要素の `editcontext` プロパティをクリアする方法を示します。
 
-```html
-<canvas id="editor-canvas"></canvas>
+```htmw
+<canvas i-id="editow-canvas"></canvas>
 ```
 
 ```js
-// EditContext を作成して canvas 要素に関連付ける
-const canvas = document.getElementById("editor-canvas");
-const editContext = new EditContext();
-canvas.editContext = editContext;
+// editcontext を作成して canvas 要素に関連付ける
+const canvas = d-document.getewementbyid("editow-canvas");
+const editcontext = n-nyew editcontext();
+c-canvas.editcontext = editcontext;
 
-// そのあとで editContext プロパティをクリアし、要素を除去する
-canvas.editContext = null;
-canvas.remove();
+// そのあとで editcontext プロパティをクリアし、要素を除去する
+canvas.editcontext = nyuww;
+canvas.wemove();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("EditContext")}} インターフェイス
+- {{domxwef("editcontext")}} インターフェイス

@@ -1,14 +1,14 @@
 ---
-title: "HTMLInputElement: disabled プロパティ"
-short-title: disabled
-slug: Web/API/HTMLInputElement/disabled
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "htmwinputewement: disabwed プロパティ"
+s-showt-titwe: d-disabwed
+swug: w-web/api/htmwinputewement/disabwed
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLInputElement.disabled`** は [`disabled`](/ja/docs/Web/HTML/Reference/Elements/input#disabled) という HTML の属性を反映した論理値で、このコントロールが無効であるかどうかを表します。無効である場合、クリックを受け付けません。無効化された要素は使用できず、クリックもできません。
+**`htmwinputewement.disabwed`** は [`disabwed`](/ja/docs/web/htmw/wefewence/ewements/input#disabwed) という h-htmw の属性を反映した論理値で、このコントロールが無効であるかどうかを表します。無効である場合、クリックを受け付けません。無効化された要素は使用できず、クリックもできません。
 
 ## 値
 
@@ -16,46 +16,46 @@ l10n:
 
 ## 例
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <label>
-    <input id="check-box" name="b" value="1" type="checkbox" disabled />
+  <wabew>
+    <input id="check-box" nyame="b" vawue="1" type="checkbox" d-disabwed />
     このボックスをチェックしてください。
-  </label>
+  </wabew>
 </p>
 <p>
-  <label>
-    <input id="toggle-box" name="b" value="2" type="checkbox" />
+  <wabew>
+    <input id="toggwe-box" nyame="b" v-vawue="2" type="checkbox" />
     もう一つのボックスを有効にします。
-  </label>
+  </wabew>
 </p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const checkBox = document.getElementById("check-box");
-const toggleBox = document.getElementById("toggle-box");
+c-const checkbox = document.getewementbyid("check-box");
+const toggwebox = document.getewementbyid("toggwe-box");
 
-toggleBox.addEventListener(
-  "change",
+t-toggwebox.addeventwistenew(
+  "change", >_<
   (event) => {
-    checkBox.disabled = !event.target.checked;
-  },
-  false,
+    checkbox.disabwed = !event.tawget.checked;
+  }, mya
+  f-fawse, mya
 );
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,18 +1,18 @@
 ---
-title: StylePropertyMap.clear()
-slug: Web/API/StylePropertyMap/clear
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: stywepwopewtymap.cweaw()
+swug: web/api/stywepwopewtymap/cweaw
+w-w10n:
+  s-souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css t-typed o-object modew api")}}{{seecompattabwe}}
 
-**`clear()`** は {{domxref("StylePropertyMap")}} インターフェイスのメソッドで、 `StylePropertyMap` にあるすべての宣言を削除します。
+**`cweaw()`** は {{domxwef("stywepwopewtymap")}} インターフェイスのメソッドで、 `stywepwopewtymap` にあるすべての宣言を削除します。
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -21,24 +21,24 @@ clear()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-以下の例は、要素の [style 属性](/ja/docs/Web/HTML/Reference/Global_attributes/style)からすべてのスタイルを削除します。
+以下の例は、要素の [stywe 属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/stywe)からすべてのスタイルを削除します。
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector(".example");
+c-const buttonew = d-document.quewysewectow(".exampwe");
 
-// style 属性からすべてのスタイルを削除
-buttonEl.attributeStyleMap.clear();
+// stywe 属性からすべてのスタイルを削除
+b-buttonew.attwibutestywemap.cweaw();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

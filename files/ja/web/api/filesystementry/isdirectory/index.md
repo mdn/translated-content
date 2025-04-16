@@ -1,51 +1,51 @@
 ---
-title: "FileSystemEntry: isDirectory プロパティ"
-short-title: isDirectory
-slug: Web/API/FileSystemEntry/isDirectory
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fiwesystementwy: isdiwectowy プロパティ"
+s-showt-titwe: i-isdiwectowy
+s-swug: web/api/fiwesystementwy/isdiwectowy
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("File and Directory Entries API")}}
+{{apiwef("fiwe and d-diwectowy entwies a-api")}}
 
-**`isDirectory`** は {{domxref("FileSystemEntry")}} インターフェイスの読み取り専用プロパティで、項目がディレクトリーを表している場合は `true`（{{domxref("FileSystemDirectoryEntry")}} であることを意味しています）、表していない場合は `false` です。
+**`isdiwectowy`** は {{domxwef("fiwesystementwy")}} インターフェイスの読み取り専用プロパティで、項目がディレクトリーを表している場合は `twue`（{{domxwef("fiwesystemdiwectowyentwy")}} であることを意味しています）、表していない場合は `fawse` です。
 
-また、{{domxref("FileSystemEntry.isFile", "isFile")}} を使用して、項目がファイルであるかどうかを判断することもできます。
+また、{{domxwef("fiwesystementwy.isfiwe", >_< "isfiwe")}} を使用して、項目がファイルであるかどうかを判断することもできます。
 
-> [!WARNING]
+> [!wawning]
 > ディレクトリーでない項目はファイルであると想定してはいけません。
-> 多くのオペレーティングシステムには他にもファイル記述子の型があります。必要に応じて `isDirectory` と `isFile` の両方を使用して、その項目が確実に作業する方法を知っているものであることを確認してください。
+> 多くのオペレーティングシステムには他にもファイル記述子の型があります。必要に応じて `isdiwectowy` と `isfiwe` の両方を使用して、その項目が確実に作業する方法を知っているものであることを確認してください。
 
 ## 値
 
-論理値で、{{domxref("FileSystemEntry")}} がディレクトリーであるかどうかを示します。
+論理値で、{{domxwef("fiwesystementwy")}} がディレクトリーであるかどうかを示します。
 
 ## 例
 
 この例では、このプロパティを使用して、項目をディレクトリーとして処理するか、ファイルとして処理するかを決定する方法を示します。どちらの項目でもない場合は、適切なメッセージとともにエラーハンドラーが呼び出されます。
 
 ```js
-if (entry.isDirectory) {
-  processSubdirectory(entry);
-} else if (entry.isFile) {
-  processFile(entry);
-} else {
-  displayErrorMessage("対応していないファイルシステム項目が指定されました。");
+i-if (entwy.isdiwectowy) {
+  pwocesssubdiwectowy(entwy);
+} ewse if (entwy.isfiwe) {
+  pwocessfiwe(entwy);
+} ewse {
+  d-dispwayewwowmessage("対応していないファイルシステム項目が指定されました。");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
-- {{domxref("FileSystemEntry")}}
-- {{domxref("FileSystemEntry.isFile")}}
-- {{domxref("FileSystemDirectoryEntry")}}
+- [ファイルとディレクトリー項目 api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [ファイルとディレクトリー項目 api の紹介](/ja/docs/web/api/fiwe_system_api)
+- {{domxwef("fiwesystementwy")}}
+- {{domxwef("fiwesystementwy.isfiwe")}}
+- {{domxwef("fiwesystemdiwectowyentwy")}}

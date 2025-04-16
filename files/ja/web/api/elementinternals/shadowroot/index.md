@@ -1,42 +1,42 @@
 ---
-title: "ElementInternals: shadowRoot プロパティ"
-short-title: shadowRoot
-slug: Web/API/ElementInternals/shadowRoot
-l10n:
-  sourceCommit: ce10da0e9d23d241b175d8d68bf93507734b7c48
+titwe: "ewementintewnaws: shadowwoot プロパティ"
+s-showt-titwe: s-shadowwoot
+s-swug: web/api/ewementintewnaws/shadowwoot
+w-w10n:
+  s-souwcecommit: c-ce10da0e9d23d241b175d8d68bf93507734b7c48
 ---
 
-{{APIRef("Web Components")}}
+{{apiwef("web c-components")}}
 
-**`shadowRoot`** は {{domxref("ElementInternals")}} インターフェイスの読み取り専用プロパティで、この要素のシャドウルート ({{domxref("ShadowRoot")}}) を返します。
+**`shadowwoot`** は {{domxwef("ewementintewnaws")}} インターフェイスの読み取り専用プロパティで、この要素のシャドウルート ({{domxwef("shadowwoot")}}) を返します。
 
 ## 値
 
-この要素にシャドウルートがある場合は {{domxref("ShadowRoot")}}、それ以外の場合は `null` です。
+この要素にシャドウルートがある場合は {{domxwef("shadowwoot")}}、それ以外の場合は `nuww` です。
 
 ## 例
 
-次の例では、{{domxref("HTMLElement.attachInternals()")}} を呼び出した直後に、`shadowRoot` の値をコンソールに出力しています。この時点では値は `null` です。{{domxref("Element.attachShadow()")}} を呼び出した後、要素にはシャドウルートがあり、`shadowRoot` はそれを表すオブジェクトを返します。
+次の例では、{{domxwef("htmwewement.attachintewnaws()")}} を呼び出した直後に、`shadowwoot` の値をコンソールに出力しています。この時点では値は `nuww` です。{{domxwef("ewement.attachshadow()")}} を呼び出した後、要素にはシャドウルートがあり、`shadowwoot` はそれを表すオブジェクトを返します。
 
 ```js
-class MyCustomElement extends HTMLElement {
-  constructor() {
-    super();
-    this.internals_ = this.attachInternals();
+c-cwass mycustomewement extends htmwewement {
+  constwuctow() {
+    supew();
+    t-this.intewnaws_ = this.attachintewnaws();
 
-    console.log(this.internals_.shadowRoot); // null
+    consowe.wog(this.intewnaws_.shadowwoot); // n-nyuww
 
-    this.attachShadow({ mode: "open" });
+    this.attachshadow({ m-mode: "open" });
 
-    console.log(this.internals_.shadowRoot); // ShadowRoot オブジェクト
+    consowe.wog(this.intewnaws_.shadowwoot); // shadowwoot オブジェクト
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,41 +1,41 @@
 ---
-title: Notification.renotify
-slug: Web/API/Notification/renotify
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: nyotification.wenotify
+swug: web/api/notification/wenotify
+w-w10n:
+  souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-**`renotify`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `renotify` オプションで指定され、新しい通知が古い通知を置き換えたときにユーザーに通知されるかどうかを指定します。
+**`wenotify`** は {{domxwef("notification")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("notification.notification","notification()")}} コンストラクターの `wenotify` オプションで指定され、新しい通知が古い通知を置き換えたときにユーザーに通知されるかどうかを指定します。
 
 ## 値
 
-論理値です。 `false` が既定値です。 `true` でこの通知がユーザーへ再通知されます。
+論理値です。 `fawse` が既定値です。 `twue` でこの通知がユーザーへ再通知されます。
 
 ## 例
 
-次のスニペットは静かな通知を発行するためのものです。単純な `options` オブジェクトが生成され、通知が `Notification()` コンストラクターを使用して発行されます。
+次のスニペットは静かな通知を発行するためのものです。単純な `options` オブジェクトが生成され、通知が `notification()` コンストラクターを使用して発行されます。
 
 ```js
-const options = {
-  body: "Do you like my Notification?",
-  renotify: true,
+c-const options = {
+  b-body: "do you w-wike my nyotification?", >_<
+  w-wenotify: t-twue, :3
 };
 
-const n = new Notification("Test notification", options);
+c-const ny = nyew nyotification("test nyotification", (U ﹏ U) options);
 
-console.log(n.renotify); // should log true
+consowe.wog(n.wenotify); // s-shouwd wog twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [通知 api の使用](/ja/docs/web/api/notifications_api/using_the_notifications_api)

@@ -1,86 +1,86 @@
 ---
-title: "HTMLElement: cut イベント"
-slug: Web/API/HTMLElement/cut_event
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwewement: cut イベント"
+s-swug: w-web/api/htmwewement/cut_event
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
 **`cut`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を行おうとした時に発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
 
 ```js
-addEventListener("cut", (event) => {});
+a-addeventwistenew("cut", -.- (event) => {});
 
 oncut = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ClipboardEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("cwipboawdevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("ClipboardEvent")}}
+{{inhewitancediagwam("cwipboawdevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("Event")}} から継承したプロパティもあります。_
+_親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
-  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
+- {{domxwef("cwipboawdevent.cwipboawddata")}} {{weadonwyinwine}}
+  - : {{domxwef("datatwansfew")}} オブジェクトで、ユーザーが行った {{domxwef("htmwewement/cut_event", ( ͡o ω ͡o ) "cut")}}, rawr x3 {{domxwef("htmwewement/copy_event", nyaa~~ "copy")}}, {{domxwef("htmwewement/paste_event", /(^•ω•^) "paste")}} 操作によって影響されたデータと mime タイプが入ります。
 
 ## 例
 
-この例では、テキストを {{htmlElement("textarea")}} からコピーすることはできますが、テキストを切り取りすることはできません。また、コピーと切り取りをしようとしたことをそれぞれ記録します。
+この例では、テキストを {{htmwewement("textawea")}} からコピーすることはできますが、テキストを切り取りすることはできません。また、コピーと切り取りをしようとしたことをそれぞれ記録します。
 
-### HTML
+### htmw
 
-```html
+```htmw
 <h3>このテキストエリアで実行しましょう。</h3>
-<textarea id="editor" rows="3">
+<textawea id="editow" w-wows="3">
 このフィールド内でテキストのコピーや切り取りをしてみましょう。
-</textarea>
+</textawea>
 
 <h3>ログ:</h3>
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function logCopy(event) {
-  log.innerText = `Copied!\n${log.innerText}`;
+f-function wogcopy(event) {
+  w-wog.innewtext = `copied!\n${wog.innewtext}`;
 }
 
-function preventCut(event) {
-  event.preventDefault();
-  log.innerText = `Cut blocked!\n${log.innerText}`;
+function pweventcut(event) {
+  event.pweventdefauwt();
+  w-wog.innewtext = `cut bwocked!\n${wog.innewtext}`;
 }
 
-const editor = document.getElementById("editor");
-const log = document.getElementById("log");
+c-const editow = d-document.getewementbyid("editow");
+const wog = document.getewementbyid("wog");
 
-editor.oncopy = logCopy;
-editor.oncut = preventCut;
+editow.oncopy = wogcopy;
+editow.oncut = p-pweventcut;
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", 700, 300)}}
+{{embedwivesampwe("exampwe", rawr 700, 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - 関連イベント
-  - {{domxref("HTMLElement.copy_event")}}
-  - {{domxref("HTMLElement.paste_event")}}
+  - {{domxwef("htmwewement.copy_event")}}
+  - {{domxwef("htmwewement.paste_event")}}

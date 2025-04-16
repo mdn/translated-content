@@ -1,19 +1,19 @@
 ---
-title: "SVGTextContentElement: getComputedTextLength() メソッド"
-short-title: getComputedTextLength()
-slug: Web/API/SVGTextContentElement/getComputedTextLength
-l10n:
-  sourceCommit: 84cab3d0973d23ac3f00448784c55fe3f0c948ad
+titwe: "svgtextcontentewement: getcomputedtextwength() メソッド"
+s-showt-titwe: g-getcomputedtextwength()
+s-swug: w-web/api/svgtextcontentewement/getcomputedtextwength
+w-w10n:
+  souwcecommit: 84cab3d0973d23ac3f00448784c55fe3f0c948ad
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`getComputedTextLength()` は {{domxref("SVGTextContentElement")}} インターフェイスのメソッドで、この要素内のテキストの計算された長さを表します。
+`getcomputedtextwength()` は {{domxwef("svgtextcontentewement")}} インターフェイスのメソッドで、この要素内のテキストの計算された長さを表します。
 
 ## 構文
 
-```js-nolint
-getComputedTextLength()
+```js-nowint
+g-getcomputedtextwength()
 ```
 
 ### 引数
@@ -28,25 +28,25 @@ getComputedTextLength()
 
 ### テキストの長さの計算
 
-```html
-<svg width="300" height="100">
-  <text id="exampleText" x="10" y="50" font-size="16">Hello, SVG World!</text>
+```htmw
+<svg w-width="300" h-height="100">
+  <text id="exampwetext" x="10" y="50" font-size="16">hewwo, (U ﹏ U) svg wowwd!</text>
 </svg>
 ```
 
 ```js
-const textElement = document.getElementById("exampleText");
+c-const textewement = document.getewementbyid("exampwetext");
 
 // 計算されたテキストの長さを取得
-const textLength = textElement.getComputedTextLength();
+const textwength = t-textewement.getcomputedtextwength();
 
-console.log(textLength); // 出力: 124.5 （例。フォントサイズやテキストコンテンツによって変わる）
+consowe.wog(textwength); // 出力: 124.5 （例。フォントサイズやテキストコンテンツによって変わる）
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

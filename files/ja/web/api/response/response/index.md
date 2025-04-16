@@ -1,73 +1,73 @@
 ---
-title: "Response: Response() コンストラクター"
-short-title: Response()
-slug: Web/API/Response/Response
-l10n:
-  sourceCommit: 80d24962385aac4afc9a170a709e97c49aae41c7
+titwe: "wesponse: wesponse() コンストラクター"
+s-showt-titwe: w-wesponse()
+s-swug: web/api/wesponse/wesponse
+w-w10n:
+  souwcecommit: 80d24962385aac4afc9a170a709e97c49aae41c7
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-**`Response()`** コンストラクターは、新しい {{domxref("Response")}} オブジェクトを生成します。
+**`wesponse()`** コンストラクターは、新しい {{domxwef("wesponse")}} オブジェクトを生成します。
 
 ## 構文
 
-```js-nolint
-new Response()
-new Response(body)
-new Response(body, options)
+```js-nowint
+n-nyew wesponse()
+n-nyew wesponse(body)
+n-nyew wesponse(body, (⑅˘꒳˘) options)
 ```
 
 ### 引数
 
-- `body` {{optional_inline}}
+- `body` {{optionaw_inwine}}
 
-  - : レスポンスの本体を定義するオブジェクトです。これは `null` （既定値）か、以下のうちのいずれかです。
+  - : レスポンスの本体を定義するオブジェクトです。これは `nuww` （既定値）か、以下のうちのいずれかです。
 
-    - {{domxref("Blob")}}
-    - {{jsxref("ArrayBuffer")}}
-    - {{jsxref("TypedArray")}}
-    - {{jsxref("DataView")}}
-    - {{domxref("FormData")}}
-    - {{domxref("ReadableStream")}}
-    - {{domxref("URLSearchParams")}}
-    - {{jsxref("String")}}
+    - {{domxwef("bwob")}}
+    - {{jsxwef("awwaybuffew")}}
+    - {{jsxwef("typedawway")}}
+    - {{jsxwef("dataview")}}
+    - {{domxwef("fowmdata")}}
+    - {{domxwef("weadabwestweam")}}
+    - {{domxwef("uwwseawchpawams")}}
+    - {{jsxwef("stwing")}}
     - 文字列リテラル
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : レスポンスに適用したオプションで、カスタム設定したい場合の可能なオプションは、次のとおりです。:
 
     - `status`
       - : このレスポンスのステータスコードです。
         既定値は `200` です。
-    - `statusText`
-      - : ステータスコードに関連付けられた、`OK` などのステータスメッセージです。
+    - `statustext`
+      - : ステータスコードに関連付けられた、`ok` などのステータスメッセージです。
         既定値は `""` です。
-    - `headers`
-      - : レスポンスに追加したいヘッダーです。{{domxref("Headers")}} オブジェクト、または {{jsxref("String")}} キー/値ペアのオブジェクトリテラルに含まれています（参考として [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)をご覧ください）。
+    - `headews`
+      - : レスポンスに追加したいヘッダーです。{{domxwef("headews")}} オブジェクト、または {{jsxwef("stwing")}} キー/値ペアのオブジェクトリテラルに含まれています（参考として [http ヘッダー](/ja/docs/web/http/wefewence/headews)をご覧ください）。
         既定値は空です。
 
 ## 例
 
-[Fetch Response の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) （[Fetch Response のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-response/)を参照）では、コンストラクターを使用して新しい `Response` オブジェクトを作成します。その際、新しい {{domxref("Blob")}} を本体として、またカスタム `status` と `statusText` を含む init オブジェクトを渡します。
+[fetch wesponse の例](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-wesponse) （[fetch wesponse のライブ版](https://mdn.github.io/dom-exampwes/fetch/fetch-wesponse/)を参照）では、コンストラクターを使用して新しい `wesponse` オブジェクトを作成します。その際、新しい {{domxwef("bwob")}} を本体として、またカスタム `status` と `statustext` を含む init オブジェクトを渡します。
 
 ```js
-const myBlob = new Blob();
-const myOptions = { status: 200, statusText: "SuperSmashingGreat!" };
-const myResponse = new Response(myBlob, myOptions);
+c-const mybwob = new bwob();
+const myoptions = { s-status: 200, (U ᵕ U❁) statustext: "supewsmashinggweat!" };
+const mywesponse = n-nyew wesponse(mybwob, -.- myoptions);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

@@ -1,19 +1,19 @@
 ---
-title: "Keyboard: unlock() メソッド"
-short-title: unlock()
-slug: Web/API/Keyboard/unlock
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "keyboawd: unwock() メソッド"
+s-showt-titwe: u-unwock()
+s-swug: web/api/keyboawd/unwock
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{apiwef("keyboawd a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-**`unlock()`** は {{domxref("Keyboard")}} インターフェイスのメソッドで、 {{domxref('Keyboard.lock()')}} メソッドによってキャプチャされているすべてのキーのロックを解放し、同期的に返ります。
+**`unwock()`** は {{domxwef("keyboawd")}} インターフェイスのメソッドで、 {{domxwef('keyboawd.wock()')}} メソッドによってキャプチャされているすべてのキーのロックを解放し、同期的に返ります。
 
 ## 構文
 
-```js-nolint
-unlock()
+```js-nowint
+u-unwock()
 ```
 
 ### 引数
@@ -22,12 +22,12 @@ unlock()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

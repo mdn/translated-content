@@ -1,27 +1,27 @@
 ---
-title: "WebGLRenderingContext: shaderSource() メソッド"
-short-title: shaderSource()
-slug: Web/API/WebGLRenderingContext/shaderSource
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "webgwwendewingcontext: shadewsouwce() メソッド"
+showt-titwe: s-shadewsouwce()
+s-swug: w-web/api/webgwwendewingcontext/shadewsouwce
+w-w10n:
+  s-souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.shaderSource()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、 {{domxref("WebGLShader")}} のソースコードを設定します。
+**`webgwwendewingcontext.shadewsouwce()`** は [webgw a-api](/ja/docs/web/api/webgw_api) のメソッドで、 {{domxwef("webgwshadew")}} のソースコードを設定します。
 
 ## 構文
 
-```js-nolint
-shaderSource(shader, source)
+```js-nowint
+s-shadewsouwce(shadew, :3 souwce)
 ```
 
 ### 引数
 
-- `shader`
-  - : ソースコードを設定する {{domxref("WebGLShader")}} オブジェクト。
-- `source`
-  - : 設定する GLSL ソースコードの入った文字列です。
+- `shadew`
+  - : ソースコードを設定する {{domxwef("webgwshadew")}} オブジェクト。
+- `souwce`
+  - : 設定する gwsw ソースコードの入った文字列です。
 
 ### 返値
 
@@ -30,23 +30,23 @@ shaderSource(shader, source)
 ## 例
 
 ```js
-const shader = gl.createShader(gl.VERTEX_SHADER);
-gl.shaderSource(shader, originalSource);
+const shadew = gw.cweateshadew(gw.vewtex_shadew);
+g-gw.shadewsouwce(shadew, (U ﹏ U) owiginawsouwce);
 
-const source = gl.getShaderSource(shader);
+const souwce = g-gw.getshadewsouwce(shadew);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}

@@ -1,19 +1,19 @@
 ---
-title: "HTMLElement: click() メソッド"
-short-title: click()
-slug: Web/API/HTMLElement/click
-l10n:
-  sourceCommit: bf0b6c9ae5845fdfca1398541ed26d9946db2495
+titwe: "htmwewement: cwick() メソッド"
+s-showt-titwe: c-cwick()
+s-swug: web/api/htmwewement/cwick
+w-w10n:
+  souwcecommit: b-bf0b6c9ae5845fdfca1398541ed26d9946db2495
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLElement.click()`** メソッドは、要素のマウスクリックをシミュレートします。要素上で呼び出されると、その要素の {{domxref("Element/click_event", "click")}} イベントが発生します（[`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) 属性が設定されている場合を除く）。
+**`htmwewement.cwick()`** メソッドは、要素のマウスクリックをシミュレートします。要素上で呼び出されると、その要素の {{domxwef("ewement/cwick_event", (U ﹏ U) "cwick")}} イベントが発生します（[`disabwed`](/ja/docs/web/htmw/wefewence/attwibutes/disabwed) 属性が設定されている場合を除く）。
 
 ## 構文
 
-```js-nolint
-click()
+```js-nowint
+c-cwick()
 ```
 
 ### 引数
@@ -22,45 +22,45 @@ click()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 チェックボックスの上にマウスポインターを移動させたときのマウスクリックをシミュレートします。
 
-### HTML
+### htmw
 
-```html
-<form>
+```htmw
+<fowm>
   <input
     type="checkbox"
-    id="myCheck"
-    onmouseover="myFunction()"
-    onclick="alert('click event occurred')" />
-</form>
+    id="mycheck"
+    onmouseovew="myfunction()"
+    o-oncwick="awewt('cwick event occuwwed')" />
+</fowm>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-// マウスオーバーで、myFunction を実行する
-function myFunction() {
-  document.getElementById("myCheck").click();
+// マウスオーバーで、myfunction を実行する
+f-function myfunction() {
+  document.getewementbyid("mycheck").cwick();
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - 関連するイベントハンドラー
 
-  - {{domxref("Element.click_event", "Element.onclick")}}
-  - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
-  - {{domxref("Element.auxclick_event", "Element.onauxclick")}}
+  - {{domxwef("ewement.cwick_event", -.- "ewement.oncwick")}}
+  - {{domxwef("ewement.dbwcwick_event", (ˆ ﻌ ˆ)♡ "ewement.ondbwcwick")}}
+  - {{domxwef("ewement.auxcwick_event", (⑅˘꒳˘) "ewement.onauxcwick")}}

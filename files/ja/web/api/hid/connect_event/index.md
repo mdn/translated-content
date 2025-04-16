@@ -1,51 +1,51 @@
 ---
-title: "HID: connect イベント"
-slug: Web/API/HID/connect_event
-l10n:
-  sourceCommit: ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
+titwe: "hid: connect イベント"
+s-swug: web/api/hid/connect_event
+w-w10n:
+  souwcecommit: f-ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}
 
-{{domxref("HID")}} インターフェイスの **`connect`** イベントは、ユーザーエージェントが HID デバイスに接続した時発火します。
+{{domxwef("hid")}} インターフェイスの **`connect`** イベントは、ユーザーエージェントが hid デバイスに接続した時発火します。
 
 ## 構文
 
-イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定します。
+イベント名を {{domxwef("eventtawget.addeventwistenew", ( ͡o ω ͡o ) "addeventwistenew()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("connect", (event) => {});
+a-addeventwistenew("connect", UwU (event) => {});
 
-onconnect = (event) => {};
+o-onconnect = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("HIDConnectionEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("hidconnectionevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("HIDConnectionEvent")}}
+{{inhewitancediagwam("hidconnectionevent")}}
 
 ## イベントプロパティ
 
-_以下のプロパティに加え、親の {{domxref("Event")}} インターフェイスから継承したプロパティが使用可能です。_
+_以下のプロパティに加え、親の {{domxwef("event")}} インターフェイスから継承したプロパティが使用可能です。_
 
-- {{domxref("HIDConnectionEvent.device", "device")}} {{ReadOnlyInline}}
-  - : イベントが発火した原因の {{domxref("HIDDevice")}} です。
+- {{domxwef("hidconnectionevent.device", rawr x3 "device")}} {{weadonwyinwine}}
+  - : イベントが発火した原因の {{domxwef("hiddevice")}} です。
 
 ## 例
 
-この例では、デバイスの接続を監視するためにイベントリスナーを登録します。接続時、デバイス名が {{domxref("HIDDevice.productName")}} を用いてコンソールに出力されます。
+この例では、デバイスの接続を監視するためにイベントリスナーを登録します。接続時、デバイス名が {{domxwef("hiddevice.pwoductname")}} を用いてコンソールに出力されます。
 
 ```js
-navigator.hid.addEventListener("connect", ({ device }) => {
-  console.log(`HID connected: ${device.productName}`);
+navigatow.hid.addeventwistenew("connect", rawr ({ d-device }) => {
+  c-consowe.wog(`hid connected: ${device.pwoductname}`);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

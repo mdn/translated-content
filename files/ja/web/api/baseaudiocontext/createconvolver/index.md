@@ -1,21 +1,21 @@
 ---
-title: "BaseAudioContext: createConvolver() メソッド"
-short-title: createConvolver()
-slug: Web/API/BaseAudioContext/createConvolver
-l10n:
-  sourceCommit: 136d5393245316a5ba4ed17c163a7c1284b1cbcc
+titwe: "baseaudiocontext: cweateconvowvew() メソッド"
+s-showt-titwe: c-cweateconvowvew()
+s-swug: w-web/api/baseaudiocontext/cweateconvowvew
+w-w10n:
+  s-souwcecommit: 136d5393245316a5ba4ed17c163a7c1284b1cbcc
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-`createConvolver()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("ConvolverNode") }} を生成します。これは一般に音声にリバーブ効果を適用するために使用されます。詳しくは[畳み込み効果の仕様定義](https://webaudio.github.io/web-audio-api/#background-3) を参照してください。
+`cweateconvowvew()` は {{ domxwef("baseaudiocontext") }} インターフェイスのメソッドで、 {{ domxwef("convowvewnode") }} を生成します。これは一般に音声にリバーブ効果を適用するために使用されます。詳しくは[畳み込み効果の仕様定義](https://webaudio.github.io/web-audio-api/#backgwound-3) を参照してください。
 
-> **メモ:** {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}} コンストラクターは {{domxref("ConvolverNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> **メモ:** {{domxwef("convowvewnode.convowvewnode", -.- "convowvewnode()")}} コンストラクターは {{domxwef("convowvewnode")}} を作成するための推奨される方法です。 [audionode の作成](/ja/docs/web/api/audionode#audionode_の生成)を参照してください。
 
 ## 構文
 
-```js-nolint
-createConvolver()
+```js-nowint
+cweateconvowvew()
 ```
 
 ### 引数
@@ -24,46 +24,46 @@ createConvolver()
 
 ### 返値
 
-{{domxref("ConvolverNode")}} です。
+{{domxwef("convowvewnode")}} です。
 
 ## 例
 
 ### 畳み込みノードの作成
 
-次の例は、畳み込みノードを作成するための AudioContext の使用方法を示しています。畳み込み効果を形成するアンビエンスとして使用するサウンドサンプル（*インパルスレスポンス*と呼ばれます）を含む {{domxref("AudioBuffer")}} を作成し、それを畳み込みに適用します。下の例では、コンサートホールの観客の短いサンプルを使っているので、適用されるリバーブ効果はとても深く、エコーがかかっているようです。
+次の例は、畳み込みノードを作成するための audiocontext の使用方法を示しています。畳み込み効果を形成するアンビエンスとして使用するサウンドサンプル（*インパルスレスポンス*と呼ばれます）を含む {{domxwef("audiobuffew")}} を作成し、それを畳み込みに適用します。下の例では、コンサートホールの観客の短いサンプルを使っているので、適用されるリバーブ効果はとても深く、エコーがかかっているようです。
 
-応用例や情報については、 [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) デモを参照してください（関連コードは [app.js](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js) を参照してください）。
+応用例や情報については、 [voice-change-o-matic](https://mdn.github.io/webaudio-exampwes/voice-change-o-matic/) デモを参照してください（関連コードは [app.js](https://github.com/mdn/webaudio-exampwes/bwob/main/voice-change-o-matic/scwipts/app.js) を参照してください）。
 
 ```js
-const audioCtx = new AudioContext();
+c-const audioctx = new audiocontext();
 // ...
 
-const convolver = audioCtx.createConvolver();
+c-const convowvew = audioctx.cweateconvowvew();
 // ...
 
-// 畳み込みノードのために fetch() で音声トラックをつかむ
-try {
-  const response = await fetch(
-    "https://mdn.github.io/webaudio-examples/voice-change-o-matic/audio/concert-crowd.ogg",
+// 畳み込みノードのために f-fetch() で音声トラックをつかむ
+twy {
+  const wesponse = await fetch(
+    "https://mdn.github.io/webaudio-exampwes/voice-change-o-matic/audio/concewt-cwowd.ogg", ( ͡o ω ͡o )
   );
-  const arrayBuffer = await response.arrayBuffer();
-  const decodedAudio = await audioCtx.decodeAudioData(arrayBuffer);
-  convolver.buffer = decodedAudio;
-} catch (error) {
-  console.error(
-    `音声ファイル ${name} が読み取れませんでした。エラー: ${err.message}`,
+  const awwaybuffew = a-await wesponse.awwaybuffew();
+  c-const d-decodedaudio = await audioctx.decodeaudiodata(awwaybuffew);
+  convowvew.buffew = decodedaudio;
+} catch (ewwow) {
+  c-consowe.ewwow(
+    `音声ファイル ${name} が読み取れませんでした。エラー: ${eww.message}`, rawr x3
   );
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

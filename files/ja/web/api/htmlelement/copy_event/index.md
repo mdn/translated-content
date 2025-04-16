@@ -1,89 +1,89 @@
 ---
-title: "HTMLElement: copy イベント"
-short-title: copy
-slug: Web/API/HTMLElement/copy_event
-l10n:
-  sourceCommit: dea44952741f722ccf62f8e868d1bc988e953aa0
+titwe: "htmwewement: copy イベント"
+s-showt-titwe: c-copy
+swug: w-web/api/htmwewement/copy_event
+w-w10n:
+  souwcecommit: d-dea44952741f722ccf62f8e868d1bc988e953aa0
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
 **`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を行おうとした時に発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳 "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
 
 ```js
-addEventListener("copy", (event) => {});
+a-addeventwistenew("copy", XD (event) => {});
 
 oncopy = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ClipboardEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("cwipboawdevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("ClipboardEvent")}}
+{{inhewitancediagwam("cwipboawdevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("Event")}} から継承したプロパティもあります。_
+_親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
-  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, `copy`, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
+- {{domxwef("cwipboawdevent.cwipboawddata")}} {{weadonwyinwine}}
+  - : {{domxwef("datatwansfew")}} オブジェクトで、ユーザーが行った {{domxwef("htmwewement/cut_event", :3 "cut")}}, 😳😳😳 `copy`, {{domxwef("htmwewement/paste_event", -.- "paste")}} 操作によって影響されたデータと mime タイプが入ります。
 
 ## 例
 
-この例では、 {{htmlElement("textarea")}} からのすべてのコピーと貼り付けをブロックします。
+この例では、 {{htmwewement("textawea")}} からのすべてのコピーと貼り付けをブロックします。
 
-### HTML
+### htmw
 
-```html
+```htmw
 <h3>このテキストエリアで実行してみる</h3>
-<textarea id="editor" rows="3">
+<textawea id="editow" w-wows="3">
 このフィールドにテキストをコピー＆ペーストしてみてください。
-</textarea>
+</textawea>
 
 <h3>ログ:</h3>
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const log = document.getElementById("log");
+const w-wog = document.getewementbyid("wog");
 
-function logCopy(event) {
-  log.innerText = `コピーがブロックされました。\n${log.innerText}`;
-  event.preventDefault();
+function w-wogcopy(event) {
+  wog.innewtext = `コピーがブロックされました。\n${wog.innewtext}`;
+  event.pweventdefauwt();
 }
 
-function logPaste(event) {
-  log.innerText = `貼り付けがブロックされました。\n${log.innerText}`;
-  event.preventDefault();
+function wogpaste(event) {
+  w-wog.innewtext = `貼り付けがブロックされました。\n${wog.innewtext}`;
+  event.pweventdefauwt();
 }
 
-const editor = document.getElementById("editor");
+c-const editow = d-document.getewementbyid("editow");
 
-editor.oncopy = logCopy;
-editor.onpaste = logPaste;
+editow.oncopy = wogcopy;
+editow.onpaste = wogpaste;
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", 700, 300)}}
+{{embedwivesampwe("exampwe", ( ͡o ω ͡o ) 700, 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - 関連イベント
-  - {{domxref("HTMLElement.cut_event")}}
-  - {{domxref("HTMLElement.paste_event")}}
+  - {{domxwef("htmwewement.cut_event")}}
+  - {{domxwef("htmwewement.paste_event")}}

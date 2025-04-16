@@ -1,49 +1,49 @@
 ---
-title: "InputEvent: InputEvent() コンストラクター"
-short-title: InputEvent()
-slug: Web/API/InputEvent/InputEvent
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "inputevent: inputevent() コンストラクター"
+s-showt-titwe: i-inputevent()
+s-swug: web/api/inputevent/inputevent
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`InputEvent()`** コンストラクターは、新しい {{domxref("InputEvent")}} オブジェクトを作成します。
+**`inputevent()`** コンストラクターは、新しい {{domxwef("inputevent")}} オブジェクトを作成します。
 
 ## 構文
 
-```js-nolint
-new InputEvent(type)
-new InputEvent(type, options)
+```js-nowint
+new i-inputevent(type)
+nyew inputevent(type, UwU options)
 ```
 
 ### 引数
 
 - `type`
   - : イベントの名前の文字列です。
-    大文字小文字の区別があり、ブラウザーは `beforeinput` または `input` を設定します。
-- `options` {{optional_inline}}
-  - : オブジェクトで、_{{domxref("UIEvent/UIEvent", "UIEvent()")}} で定義されたプロパティに加え_、以下のプロパティを持つことができます。
-    - `inputType` {{optional_inline}}
+    大文字小文字の区別があり、ブラウザーは `befoweinput` または `input` を設定します。
+- `options` {{optionaw_inwine}}
+  - : オブジェクトで、_{{domxwef("uievent/uievent", rawr x3 "uievent()")}} で定義されたプロパティに加え_、以下のプロパティを持つことができます。
+    - `inputtype` {{optionaw_inwine}}
       - : 文字列で、テキストの挿入、削除、書式設定など、編集可能なコンテンツに対する変更の種類を指定します。
-    - `data` {{optional_inline}}
+    - `data` {{optionaw_inwine}}
       - : 文字列で、挿入する文字を保持します。
         これは、変更がテキストを挿入しない場合（例えば、文字を削除する場合など）、空文字列になることがあります。
-    - `isComposing` {{optional_inline}}
-      - : 論理値で、そのイベントが変換セッションの一部であることを示します。つまり、 {{domxref("Element/compositionstart_event", "compositionstart")}} イベントの後で、 {{domxref("Element/compositionend_event", "compositionend")}} イベントの前にあることを意味します。既定では、 `false` です。
+    - `iscomposing` {{optionaw_inwine}}
+      - : 論理値で、そのイベントが変換セッションの一部であることを示します。つまり、 {{domxwef("ewement/compositionstawt_event", rawr "compositionstawt")}} イベントの後で、 {{domxwef("ewement/compositionend_event", σωσ "compositionend")}} イベントの前にあることを意味します。既定では、 `fawse` です。
 
 ### 返値
 
-新しい {{domxref("InputEvent")}} オブジェクトです。
+新しい {{domxwef("inputevent")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("InputEvent")}}: 構築するオブジェクトのインスタンスです。
+- {{domxwef("inputevent")}}: 構築するオブジェクトのインスタンスです。

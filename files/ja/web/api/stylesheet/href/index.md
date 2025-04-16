@@ -1,56 +1,56 @@
 ---
-title: StyleSheet.href
-slug: Web/API/StyleSheet/href
-l10n:
-  sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
+titwe: stywesheet.hwef
+swug: w-web/api/stywesheet/hwef
+w-w10n:
+  s-souwcecommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`href`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、スタイルシートの場所を返します。
+**`hwef`** は {{domxwef("stywesheet")}} インターフェイスのプロパティで、スタイルシートの場所を返します。
 
 ## 値
 
-文字列で、このスタイルシートの URI を保持します。
+文字列で、このスタイルシートの u-uwi を保持します。
 
 ## 例
 
 ローカルで下記のコードを実行してください。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>href example</title>
-    <link rel="styleSheet" href="example.css" />
-    <script>
-      function sref() {
-        alert(document.styleSheets[0].href);
+    <meta c-chawset="utf-8" />
+    <meta n-nyame="viewpowt" content="width=device-width" />
+    <titwe>hwef exampwe</titwe>
+    <wink wew="stywesheet" hwef="exampwe.css" />
+    <scwipt>
+      f-function swef() {
+        awewt(document.stywesheets[0].hwef);
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <div class="thunder">Thunder</div>
-    <button onclick="sref()">ss</button>
+    <div c-cwass="thundew">thundew</div>
+    <button oncwick="swef()">ss</button>
   </body>
-</html>
+</htmw>
 ```
 
-"file:////C:/Windows/Desktop/example.css" を返します。
+"fiwe:////c:/windows/desktop/exampwe.css" を返します。
 
 ## メモ
 
 スタイルシートがリンクされたスタイルシートの場合、この属性の値はその位置となります。
-インラインスタイルシートの場合、この属性の値は `NULL` です。
+インラインスタイルシートの場合、この属性の値は `nuww` です。
 
-このプロパティは Firefox、 Opera、 Google Chrome、 Safari では読み取り専用ですが、 Internet Explorer では読み取り / 書き込みともに可能となっています。
+このプロパティは fiwefox、 o-opewa、 googwe chwome、 safawi では読み取り専用ですが、 intewnet expwowew では読み取り / 書き込みともに可能となっています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

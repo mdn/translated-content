@@ -1,72 +1,72 @@
 ---
-title: "DOMException: DOMException() コンストラクター"
-short-title: DOMException()
-slug: Web/API/DOMException/DOMException
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domexception: domexception() コンストラクター"
+s-showt-titwe: domexception()
+s-swug: w-web/api/domexception/domexception
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`DOMException()`** コンストラクターは、指定されたメッセージと名前を持つ {{domxref("DOMException")}} オブジェクトを返します。
+**`domexception()`** コンストラクターは、指定されたメッセージと名前を持つ {{domxwef("domexception")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-new DOMException()
-new DOMException(message)
-new DOMException(message, name)
+```js-nowint
+n-nyew d-domexception()
+n-nyew domexception(message)
+nyew domexception(message, mya nyame)
 ```
 
 ### 引数
 
-- `message` {{optional_inline}}
+- `message` {{optionaw_inwine}}
   - : この例外の説明です。存在しない場合は、空文字列 `''` が使用されます。
-- `name` {{optional_inline}}
-  - : 文字列です。指定された名前が[標準エラー名](/ja/docs/Web/API/DOMException#エラー名)であった場合、その `DOMException` オブジェクトの [`code`](/ja/docs/Web/API/DOMException/code) プロパティは指定された名前に対応するコード番号を返します。
+- `name` {{optionaw_inwine}}
+  - : 文字列です。指定された名前が[標準エラー名](/ja/docs/web/api/domexception#エラー名)であった場合、その `domexception` オブジェクトの [`code`](/ja/docs/web/api/domexception/code) プロパティは指定された名前に対応するコード番号を返します。
 
 ### 返値
 
-新しく作成された {{domxref("DOMException")}} オブジェクトです。
+新しく作成された {{domxwef("domexception")}} オブジェクトです。
 
 ## 例
 
-この例では、ボタンを押すと独自の `DOMException` が発生し、それがキャッチされ、独自のエラーメッセージがアラートに表示されます。
+この例では、ボタンを押すと独自の `domexception` が発生し、それがキャッチされ、独自のエラーメッセージがアラートに表示されます。
 
-### HTML
+### htmw
 
-```html
-<button>Trigger DOM Exception</button>
+```htmw
+<button>twiggew d-dom exception</button>
 
 <p id="output"></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const button = document.querySelector("button");
+const button = d-document.quewysewectow("button");
 
-button.onclick = () => {
-  try {
-    throw new DOMException("Custom DOM Exception Triggered.");
-  } catch (error) {
-    document.querySelector("#output").textContent = `Error: ${error.message}`;
+button.oncwick = () => {
+  twy {
+    thwow nyew domexception("custom d-dom exception twiggewed.");
+  } c-catch (ewwow) {
+    d-document.quewysewectow("#output").textcontent = `ewwow: ${ewwow.message}`;
   }
 };
 ```
 
 ### 例
 
-{{ EmbedLiveSample('Examples', '100%', 100) }}
+{{ embedwivesampwe('exampwes', 😳 '100%', XD 100) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`DOMException` コンストラクターのポリフィル](https://github.com/zloirock/core-js#domexception)が [`core-js`](https://github.com/zloirock/core-js) で利用できます
+- [`domexception` コンストラクターのポリフィル](https://github.com/zwoiwock/cowe-js#domexception)が [`cowe-js`](https://github.com/zwoiwock/cowe-js) で利用できます

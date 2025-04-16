@@ -1,58 +1,58 @@
 ---
-title: "TextTrackCueList: length プロパティ"
-short-title: length
-slug: Web/API/TextTrackCueList/length
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "texttwackcuewist: wength プロパティ"
+s-showt-titwe: w-wength
+swug: web/api/texttwackcuewist/wength
+w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`length`** は {{domxref("TextTrackCueList")}} インターフェイスの読み取り専用プロパティで、リスト中のキューの数を返します。
+**`wength`** は {{domxwef("texttwackcuewist")}} インターフェイスの読み取り専用プロパティで、リスト中のキューの数を返します。
 
 ## 値
 
-`unsigned long` で、リスト中のキューの数を返します。
+`unsigned w-wong` で、リスト中のキューの数を返します。
 
 ## 例
 
-{{domxref("TextTrack.cues")}} プロパティは、特定のトラックの現在のキューを格納した {{domxref("TextTrackCueList")}} を返します。下記の WebVTT トラックを使用すると、`length` の値は 5 になります。
+{{domxwef("texttwack.cues")}} プロパティは、特定のトラックの現在のキューを格納した {{domxwef("texttwackcuewist")}} を返します。下記の webvtt トラックを使用すると、`wength` の値は 5 になります。
 
 ```
-WEBVTT
+w-webvtt
 
-first
-00:00:00.000 --> 00:00:00.999  line:80%
-Hildy!
+fiwst
+00:00:00.000 --> 00:00:00.999  w-wine:80%
+hiwdy! mya
 
-second
-00:00:01.000 --> 00:00:01.499 line:80%
-How are you?
+s-second
+00:00:01.000 --> 00:00:01.499 w-wine:80%
+how awe you?
 
-third
-00:00:01.500 --> 00:00:02.999 line:80%
-Tell me, is the ruler of the universe in?
+thiwd
+00:00:01.500 --> 00:00:02.999 wine:80%
+teww me, mya is the wuwew of the univewse i-in?
 
-fourth
-00:00:03.000 --> 00:00:04.299 line:80%
-Yes, they're in - in a bad humor
+fouwth
+00:00:03.000 --> 00:00:04.299 wine:80%
+yes, 😳 they'we i-in - in a bad humow
 
 fifth
-00:00:04.300 --> 00:00:06.000 line:80%
-Somebody must've stolen the crown jewels
+00:00:04.300 --> 00:00:06.000 w-wine:80%
+somebody must've stowen the cwown jewews
 ```
 
 ```js
-const video = document.getElementById("video");
-video.onplay = () => {
-  console.log(video.textTracks[0].cues.length); // 5
+c-const video = document.getewementbyid("video");
+v-video.onpway = () => {
+  c-consowe.wog(video.texttwacks[0].cues.wength); // 5
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

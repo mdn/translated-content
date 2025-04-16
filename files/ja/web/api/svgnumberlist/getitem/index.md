@@ -1,19 +1,19 @@
 ---
-title: "SVGNumberList: getItem() メソッド"
-short-title: getItem()
-slug: Web/API/SVGNumberList/getItem
-l10n:
-  sourceCommit: d2457d93858bde8da4c6db79d9c7e5c1c5799441
+titwe: "svgnumbewwist: getitem() メソッド"
+s-showt-titwe: getitem()
+s-swug: web/api/svgnumbewwist/getitem
+w-w10n:
+  s-souwcecommit: d-d2457d93858bde8da4c6db79d9c7e5c1c5799441
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`getItem()`** は {{domxref("SVGNumberList")}} インターフェイスのメソッドで、リストから指定されたアイテムを返します。返されるアイテムはアイテムそのものであり、コピーされるわけではありません。アイテムに加えられた変更は即座にリストに反映されます。最初のアイテムはインデックス 0 です。
+**`getitem()`** は {{domxwef("svgnumbewwist")}} インターフェイスのメソッドで、リストから指定されたアイテムを返します。返されるアイテムはアイテムそのものであり、コピーされるわけではありません。アイテムに加えられた変更は即座にリストに反映されます。最初のアイテムはインデックス 0 です。
 
 ## 構文
 
-```js-nolint
-getItem(index)
+```js-nowint
+g-getitem(index)
 ```
 
 ### 引数
@@ -23,17 +23,17 @@ getItem(index)
 
 ### 返値
 
-リスト内の指定された位置にある {{domxref("SVGNumber")}} です。
+リスト内の指定された位置にある {{domxwef("svgnumbew")}} です。
 
 ### 例外
 
-- {{domxref("DOMException")}} `IndexSizeError`
+- {{domxwef("domexception")}} `indexsizeewwow`
   - : インデックスがリストの範囲を外れていた場合に発生します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,101 +1,101 @@
 ---
-title: SVGTransformList
-slug: Web/API/SVGTransformList
-l10n:
-  sourceCommit: cf6c3ad3156adcbed110eb71dadc5c5f85feba37
+titwe: svgtwansfowmwist
+swug: w-web/api/svgtwansfowmwist
+w-w10n:
+  s-souwcecommit: c-cf6c3ad3156adcbed110eb71dadc5c5f85feba37
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`SVGTransformList`** インターフェイスは、 {{ domxref("SVGTransform") }} オブジェクトのリストを定義します。
+**`svgtwansfowmwist`** インターフェイスは、 {{ d-domxwef("svgtwansfowm") }} オブジェクトのリストを定義します。
 
-`SVGTransformList` オブジェクトは読み取り専用として指定することができます。すなわち、オブジェクトを変更しようとすると例外が発生するようにすることができます。
+`svgtwansfowmwist` オブジェクトは読み取り専用として指定することができます。すなわち、オブジェクトを変更しようとすると例外が発生するようにすることができます。
 
-`SVGTransformList` オブジェクトはインデックス指定可能であり、配列のようにアクセスすることができます。
+`svgtwansfowmwist` オブジェクトはインデックス指定可能であり、配列のようにアクセスすることができます。
 
 ## インスタンスプロパティ
 
-- {{domxref("SVGTransformList.numberOfItems", "numberOfItems")}}
+- {{domxwef("svgtwansfowmwist.numbewofitems", ʘwʘ "numbewofitems")}}
   - : リスト内のアイテム数です。
-- {{domxref("SVGTransformList.length", "length")}}
+- {{domxwef("svgtwansfowmwist.wength", σωσ "wength")}}
   - : リスト内のアイテム数です。
 
 ## インスタンスメソッド
 
-- {{domxref("SVGTransformList.clear", "clear()")}}
+- {{domxwef("svgtwansfowmwist.cweaw", OwO "cweaw()")}}
   - : リストから既存のアイテムをすべて削除し、リストを空にします。
-- {{domxref("SVGTransformList.initialize", "initialize()")}}
+- {{domxwef("svgtwansfowmwist.initiawize", 😳😳😳 "initiawize()")}}
   - : リストから既存のアイテムをすべて削除し、引数で指定した単一のアイテムを保持するようにリストを再初期化します。挿入されたアイテムがすでにリストに含まれている場合、このリストに挿入される前に前のリストから除去されます。挿入されたアイテムはアイテムそのものであり、コピーされることはありません。返値は、リストに挿入されたアイテムです。
-- {{domxref("SVGTransformList.getItem", "getItem()")}}
+- {{domxwef("svgtwansfowmwist.getitem", 😳😳😳 "getitem()")}}
   - : リストから指定されたアイテムを返します。返されるアイテムはアイテムそのものであり、コピーされるわけではありません。アイテムに加えられた変更は即座にリストに反映されます。最初のアイテムは数値 `0` です。
-- {{domxref("SVGTransformList.insertItemBefore", "insertItemBefore()")}}
-  - : 指定した位置に新しいアイテムをリストに挿入します。最初のアイテムのインデックスは `0` です。挿入されるアイテムはアイテムそのものであり、コピーではありません。 `newItem` がすでにリスト内にある場合、このリストに挿入される前に、前回あったリストから除去されます。アイテムがすでにこのリスト内にある場合、挿入するアイテムの位置は、アイテムが除去される前の時点のものであることに注意してください。 `index` が 0 である場合、新しいアイテムはリストの先頭に挿入されます。インデックスが `numberOfItems` 以上である場合、新しいアイテムはリストの末尾に追加されます。
-- {{domxref("SVGTransformList.replaceItem", "replaceItem()")}}
-  - : リスト内の既存のアイテムを新しいアイテムに置き換えます。挿入されるアイテムはアイテムそのものであり、コピーではありません。 `newItem` がすでにリスト内に存在する場合は、このリストに挿入される前に、以前のリストから除去されます。アイテムがすでにこのリスト内に存在する場合は、置き換えられるアイテムのインデックスは、アイテムが除去される前であることに注意してください。
-- {{domxref("SVGTransformList.removeItem", "removeItem()")}}
+- {{domxwef("svgtwansfowmwist.insewtitembefowe", o.O "insewtitembefowe()")}}
+  - : 指定した位置に新しいアイテムをリストに挿入します。最初のアイテムのインデックスは `0` です。挿入されるアイテムはアイテムそのものであり、コピーではありません。 `newitem` がすでにリスト内にある場合、このリストに挿入される前に、前回あったリストから除去されます。アイテムがすでにこのリスト内にある場合、挿入するアイテムの位置は、アイテムが除去される前の時点のものであることに注意してください。 `index` が 0 である場合、新しいアイテムはリストの先頭に挿入されます。インデックスが `numbewofitems` 以上である場合、新しいアイテムはリストの末尾に追加されます。
+- {{domxwef("svgtwansfowmwist.wepwaceitem", ( ͡o ω ͡o ) "wepwaceitem()")}}
+  - : リスト内の既存のアイテムを新しいアイテムに置き換えます。挿入されるアイテムはアイテムそのものであり、コピーではありません。 `newitem` がすでにリスト内に存在する場合は、このリストに挿入される前に、以前のリストから除去されます。アイテムがすでにこのリスト内に存在する場合は、置き換えられるアイテムのインデックスは、アイテムが除去される前であることに注意してください。
+- {{domxwef("svgtwansfowmwist.wemoveitem", (U ﹏ U) "wemoveitem()")}}
   - : リストから既存のアイテムを除去します。
-- {{domxref("SVGTransformList.appendItem", "appendItem()")}}
-  - : リストの末尾に新しいアイテムをを追加します。 `newItem` がすでにリスト内に存在する場合は、このリストに挿入される前に、以前のリストから除去されます。挿入されるアイテムはアイテムそのものであり、コピーではありません。
-- {{domxref("SVGTransformList.createSVGTransformFromMatrix", "createSVGTransformFromMatrix()")}}
-  - : `SVG_TRANSFORM_MATRIX` 型の変換に初期化され、その値が指定された行列である `SVGTransform` オブジェクトを作成します。引数行列の値はコピーされます。この行列引数は `SVGTransform::matrix` に取りつけられません。
-- {{domxref("SVGTransformList.consolidate", "consolidate()")}}
-  - : 別個の `SVGTransform` オブジェクトのリストを、等価な変換行列を掛け合わせることで統合し、 `SVG_TRANSFORM_MATRIX` 型の単一の `SVGTransform` オブジェクトで構成されるリストを生成します。この統合操作では、新しい `SVGTransform` オブジェクトをリストの最初の、そして唯一のアイテムとして作成します。返されたアイテムはアイテムそのものであり、コピーではありません。アイテムに変更が加えられた場合、その変更は即座にリストに反映されます。
+- {{domxwef("svgtwansfowmwist.appenditem", (///ˬ///✿) "appenditem()")}}
+  - : リストの末尾に新しいアイテムをを追加します。 `newitem` がすでにリスト内に存在する場合は、このリストに挿入される前に、以前のリストから除去されます。挿入されるアイテムはアイテムそのものであり、コピーではありません。
+- {{domxwef("svgtwansfowmwist.cweatesvgtwansfowmfwommatwix", >w< "cweatesvgtwansfowmfwommatwix()")}}
+  - : `svg_twansfowm_matwix` 型の変換に初期化され、その値が指定された行列である `svgtwansfowm` オブジェクトを作成します。引数行列の値はコピーされます。この行列引数は `svgtwansfowm::matwix` に取りつけられません。
+- {{domxwef("svgtwansfowmwist.consowidate", rawr "consowidate()")}}
+  - : 別個の `svgtwansfowm` オブジェクトのリストを、等価な変換行列を掛け合わせることで統合し、 `svg_twansfowm_matwix` 型の単一の `svgtwansfowm` オブジェクトで構成されるリストを生成します。この統合操作では、新しい `svgtwansfowm` オブジェクトをリストの最初の、そして唯一のアイテムとして作成します。返されたアイテムはアイテムそのものであり、コピーではありません。アイテムに変更が加えられた場合、その変更は即座にリストに反映されます。
 
 ## 例
 
-### 複数の SVGTransform オブジェクトの使用
+### 複数の s-svgtwansfowm オブジェクトの使用
 
-この例では、クリックされた SVG 要素に 3 つの異なる変換を適用する関数を作成します。これを行うには、各変換（例えば、`translate`、`rotate`、`scale`）に対して別個の {{domxref("SVGTransform")}} オブジェクトを作成します。 SVG 要素に関連付けられた `SVGTransformList` に変換オブジェクトを追加することで、複数の変換を適用します。
+この例では、クリックされた s-svg 要素に 3 つの異なる変換を適用する関数を作成します。これを行うには、各変換（例えば、`twanswate`、`wotate`、`scawe`）に対して別個の {{domxwef("svgtwansfowm")}} オブジェクトを作成します。 s-svg 要素に関連付けられた `svgtwansfowmwist` に変換オブジェクトを追加することで、複数の変換を適用します。
 
-```html-nolint
+```htmw-nowint
 <svg
   id="my-svg"
-  viewBox="0 0 300 280"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1">
+  viewbox="0 0 300 280"
+  xmwns="http://www.w3.owg/2000/svg"
+  vewsion="1.1">
   <desc>
-    例： SVGTransform オブジェクトを使用する SVG 要素を変換する方法を示します
+    例： s-svgtwansfowm オブジェクトを使用する svg 要素を変換する方法を示します
   </desc>
-  <script type="application/ecmascript">
-    <![CDATA[
-      function transformMe(evt) {
-        // svg root element to access the createSVGTransform() function
-        const svgRoot = evt.target.parentNode;
-        // SVGTransformList of the element that has been clicked on
-        const tfmList = evt.target.transform.baseVal;
+  <scwipt type="appwication/ecmascwipt">
+    <![cdata[
+      f-function twansfowmme(evt) {
+        // s-svg woot ewement to access the cweatesvgtwansfowm() function
+        const svgwoot = e-evt.tawget.pawentnode;
+        // svgtwansfowmwist o-of the ewement t-that has been cwicked on
+        const tfmwist = evt.tawget.twansfowm.basevaw;
 
-        // Create a separate transform object for each transform
-        const translate = svgRoot.createSVGTransform();
-        translate.setTranslate(50,5);
-        const rotate = svgRoot.createSVGTransform();
-        rotate.setRotate(10,0,0);
-        const scale = svgRoot.createSVGTransform();
-        scale.setScale(0.8,0.8);
+        // cweate a sepawate t-twansfowm object fow each twansfowm
+        const twanswate = svgwoot.cweatesvgtwansfowm();
+        twanswate.settwanswate(50,5);
+        c-const wotate = svgwoot.cweatesvgtwansfowm();
+        w-wotate.setwotate(10,0,0);
+        c-const scawe = s-svgwoot.cweatesvgtwansfowm();
+        s-scawe.setscawe(0.8,0.8);
 
-        // apply the transformations by appending the SVGTransform objects to the SVGTransformList associated with the element
-        tfmList.appendItem(translate);
-        tfmList.appendItem(rotate);
-        tfmList.appendItem(scale);
+        // appwy the twansfowmations b-by appending the svgtwansfowm objects to t-the svgtwansfowmwist associated with the ewement
+        tfmwist.appenditem(twanswate);
+        tfmwist.appenditem(wotate);
+        tfmwist.appenditem(scawe);
       }
     ]]>
-  </script>
+  </scwipt>
 
-  <polygon
-    fill="orange"
-    stroke="black"
-    stroke-width="5"
-    points="100,225 100,115 130,115 70,15 70,15 10,115 40,115 40,225"
-    onclick="transformMe(evt)" />
-  <rect
+  <powygon
+    f-fiww="owange"
+    stwoke="bwack"
+    s-stwoke-width="5"
+    p-points="100,225 100,115 130,115 70,15 70,15 10,115 40,115 40,225"
+    o-oncwick="twansfowmme(evt)" />
+  <wect
     x="200"
     y="100"
     width="100"
     height="100"
-    fill="yellow"
-    stroke="black"
-    stroke-width="5"
-    onclick="transformMe(evt)" />
-  <text x="40" y="250" font-family="Verdana" font-size="16" fill="green">
+    fiww="yewwow"
+    s-stwoke="bwack"
+    s-stwoke-width="5"
+    oncwick="twansfowmme(evt)" />
+  <text x="40" y-y="250" font-famiwy="vewdana" f-font-size="16" fiww="gween">
     座標変換する図形をクリックしてください
   </text>
 </svg>
@@ -103,12 +103,12 @@ l10n:
 
 ライブプレビュー:
 
-{{EmbedLiveSample("Using_multiple_SVGTransform_objects",300,280)}}
+{{embedwivesampwe("using_muwtipwe_svgtwansfowm_objects",300,280)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

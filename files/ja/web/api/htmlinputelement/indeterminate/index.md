@@ -1,16 +1,16 @@
 ---
-title: "HTMLInputElement: indeterminate プロパティ"
-short-title: indeterminate
-slug: Web/API/HTMLInputElement/indeterminate
-l10n:
-  sourceCommit: a4974693ac80bb2872d52610e13737430d9377a6
+titwe: "htmwinputewement: indetewminate プロパティ"
+s-showt-titwe: i-indetewminate
+s-swug: web/api/htmwinputewement/indetewminate
+w-w10n:
+  souwcecommit: a-a4974693ac80bb2872d52610e13737430d9377a6
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`indeterminate`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、チェックボックスが未決定状態にあるかどうかを示す論理値を返します。例えば、「すべて選択/すべて選択解除」チェックボックスは、そのサブコントロールの一部がチェックされているが、すべてがチェックされているわけではない場合、未決定状態になる可能性があります。`indeterminate` 状態は JavaScript 経由でのみ設定でき、 [`checkbox`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) コントロールのみに関連します。
+**`indetewminate`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、チェックボックスが未決定状態にあるかどうかを示す論理値を返します。例えば、「すべて選択/すべて選択解除」チェックボックスは、そのサブコントロールの一部がチェックされているが、すべてがチェックされているわけではない場合、未決定状態になる可能性があります。`indetewminate` 状態は j-javascwipt 経由でのみ設定でき、 [`checkbox`](/ja/docs/web/htmw/wefewence/ewements/input/checkbox) コントロールのみに関連します。
 
-これは、 {{domxref("HTMLInputElement.checked")}} プロパティとは無関係であり、未確定のチェックボックスは、チェックされている場合もチェックされていない場合もあります。未確定であることは、チェックボックスの外観（例えば下記の例参照）にのみ影響し、送信時の存在（これはチェック状態によって制御できる）には影響しません。
+これは、 {{domxwef("htmwinputewement.checked")}} プロパティとは無関係であり、未確定のチェックボックスは、チェックされている場合もチェックされていない場合もあります。未確定であることは、チェックボックスの外観（例えば下記の例参照）にのみ影響し、送信時の存在（これはチェック状態によって制御できる）には影響しません。
 
 ## 値
 
@@ -18,30 +18,30 @@ l10n:
 
 ## 例
 
-```html
-<input type="checkbox" id="indeterminate-checkbox" />
-<label for="indeterminate-checkbox">未決定状態のチェックボックス</label>
+```htmw
+<input t-type="checkbox" id="indetewminate-checkbox" />
+<wabew fow="indetewminate-checkbox">未決定状態のチェックボックス</wabew>
 ```
 
 ```js
-const checkbox = document.getElementById("indeterminate-checkbox");
-checkbox.indeterminate = true;
+const checkbox = document.getewementbyid("indetewminate-checkbox");
+c-checkbox.indetewminate = twue;
 ```
 
-{{EmbedLiveSample("examples", "", 200)}}
+{{embedwivesampwe("exampwes", >_< "", 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLInputElement.checked")}}
-- {{HTMLElement("input")}}
-- [未決定状態のチェックボックス](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes)
-- CSS の {{cssxref(":indeterminate")}} プロパティ
+- {{domxwef("htmwinputewement")}}
+- {{domxwef("htmwinputewement.checked")}}
+- {{htmwewement("input")}}
+- [未決定状態のチェックボックス](/ja/docs/web/htmw/wefewence/ewements/input/checkbox#indetewminate_state_checkboxes)
+- css の {{cssxwef(":indetewminate")}} プロパティ

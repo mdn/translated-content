@@ -1,56 +1,56 @@
 ---
-title: "PopStateEvent: state プロパティ"
-short-title: state
-slug: Web/API/PopStateEvent/state
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "popstateevent: state プロパティ"
+s-showt-titwe: state
+s-swug: web/api/popstateevent/state
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("History API") }}
+{{ a-apiwef("histowy a-api") }}
 
-**`state`** は {{domxref("PopStateEvent")}} インターフェイスの読み取り専用プロパティで、このイベントが生成されたときに格納された状態を表します。
+**`state`** は {{domxwef("popstateevent")}} インターフェイスの読み取り専用プロパティで、このイベントが生成されたときに格納された状態を表します。
 
-実質的には、 {{domxref("history.pushState()")}} または {{domxref("history.replaceState()")}} の呼び 出しによって指定された値です。
+実質的には、 {{domxwef("histowy.pushstate()")}} または {{domxwef("histowy.wepwacestate()")}} の呼び 出しによって指定された値です。
 
 ## 値
 
-オブジェクト、または `null` です。
+オブジェクト、または `nuww` です。
 
 ## 例
 
-以下のコードでは、 {{domxref("History.pushState","pushState()")}} メソッドを使って値を履歴にプッシュしたときの `state` の値を記録しています。
+以下のコードでは、 {{domxwef("histowy.pushstate","pushstate()")}} メソッドを使って値を履歴にプッシュしたときの `state` の値を記録しています。
 
 ```js
-// Log the state of
-addEventListener("popstate", (event) => {
-  console.log("State received: ", event.state);
+// w-wog t-the state of
+addeventwistenew("popstate", mya (event) => {
+  consowe.wog("state weceived: ", mya event.state);
 });
 
-// Now push something on the stack
-history.pushState({ name: "Example" }, "pushState example", "page1.html");
-history.pushState(
-  { name: "Another example" },
-  "pushState example",
-  "page1.html",
+// nyow push something o-on the stack
+histowy.pushstate({ nyame: "exampwe" }, 😳 "pushstate e-exampwe", XD "page1.htmw");
+histowy.pushstate(
+  { n-nyame: "anothew exampwe" }, :3
+  "pushstate exampwe", 😳😳😳
+  "page1.htmw", -.-
 );
 ```
 
 次のようにログ出力します。
 
-```plain
-State received: { name: "Example" }
-State received: { name: "Another example" }
+```pwain
+state weceived: { n-nyame: "exampwe" }
+state weceived: { n-nyame: "anothew e-exampwe" }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("PopStateEvent()")}} コンストラクター
-- {{domxref("History.state")}}
+- {{domxwef("popstateevent()")}} コンストラクター
+- {{domxwef("histowy.state")}}

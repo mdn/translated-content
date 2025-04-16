@@ -1,16 +1,16 @@
 ---
-title: "IDBDatabase: name プロパティ"
-short-title: name
-slug: Web/API/IDBDatabase/name
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "idbdatabase: nyame プロパティ"
+showt-titwe: n-nyame
+s-swug: web/api/idbdatabase/name
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-**`name`** は {{domxref("IDBDatabase")}} インターフェイスのプロパティで、接続しているデータベース名を含む文字列です。
+**`name`** は {{domxwef("idbdatabase")}} インターフェイスのプロパティで、接続しているデータベース名を含む文字列です。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
@@ -18,42 +18,42 @@ l10n:
 
 ## 例
 
-この例は接続しているデータベースと、DB の `version` と `name` プロパティを持つ {{domxref("IDBDatabase")}} オブジェクトの結果、そしてログを表示します。完全な例は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーション（[動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/)）を見てください。
+この例は接続しているデータベースと、db の `vewsion` と `name` プロパティを持つ {{domxwef("idbdatabase")}} オブジェクトの結果、そしてログを表示します。完全な例は、[to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) アプリケーション（[動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/)）を見てください。
 
 ```js
 // データベースを開く
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const dbopenwequest = w-window.indexeddb.open("todowist", >_< 4);
 
 // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
-DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>データベースの読み込みに失敗しました｡</li>";
+d-dbopenwequest.onewwow = (event) => {
+  nyote.innewhtmw += "<wi>データベースの読み込みに失敗しました｡</wi>";
 };
 
-DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>データベースを初期化しました｡</li>";
+dbopenwequest.onsuccess = (event) => {
+  nyote.innewhtmw += "<wi>データベースを初期化しました｡</wi>";
 
   // データベースを開いた結果を変数 db に保存します｡これは後でたくさん使います｡
-  db = DBOpenRequest.result;
+  d-db = dbopenwequest.wesuwt;
 
-  // この行ではデータベースの名前をログ出力します。 "toDoList" のはずです。
-  console.log(db.name);
+  // この行ではデータベースの名前をログ出力します。 "todowist" のはずです。
+  consowe.wog(db.name);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始 : {{domxref("IDBDatabase")}}
-- トランザクションの使用 : {{domxref("IDBTransaction")}}
-- キーの範囲の設定 : {{domxref("IDBKeyRange")}}
-- データの取得と変更 : {{domxref("IDBObjectStore")}}
-- カーソルの使用 : {{domxref("IDBCursor")}}
-- リファレンス例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始 : {{domxwef("idbdatabase")}}
+- トランザクションの使用 : {{domxwef("idbtwansaction")}}
+- キーの範囲の設定 : {{domxwef("idbkeywange")}}
+- データの取得と変更 : {{domxwef("idbobjectstowe")}}
+- カーソルの使用 : {{domxwef("idbcuwsow")}}
+- リファレンス例 : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

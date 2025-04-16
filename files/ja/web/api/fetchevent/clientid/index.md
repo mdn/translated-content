@@ -1,40 +1,40 @@
 ---
-title: FetchEvent.clientId
-slug: Web/API/FetchEvent/clientId
-l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+titwe: fetchevent.cwientid
+swug: w-web/api/fetchevent/cwientid
+w-w10n:
+  souwcecommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`clientId`** は {{domxref("FetchEvent")}} インターフェイスの読み取り専用プロパティで、現在のサービスワーカーが制御している {{domxref("Client")}} の id を返します。
+**`cwientid`** は {{domxwef("fetchevent")}} インターフェイスの読み取り専用プロパティで、現在のサービスワーカーが制御している {{domxwef("cwient")}} の i-id を返します。
 
-次に、{{domxref("Clients.get()")}} メソッドに、この ID を渡して、関連するクライアントを取得できます。
+次に、{{domxwef("cwients.get()")}} メソッドに、この i-id を渡して、関連するクライアントを取得できます。
 
 ### 値
 
-クライアント ID を表す文字列です。
+クライアント i-id を表す文字列です。
 
 ## 例
 
 ```js
-self.addEventListener("fetch", (event) => {
-  console.log(event.clientId);
+s-sewf.addeventwistenew("fetch", ( ͡o ω ͡o ) (event) => {
+  consowe.wog(event.cwientid);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- {{jsxref("Promise")}}
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)（英語）
+- [is s-sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)（英語）
+- {{jsxwef("pwomise")}}
+- [ウェブワーカーの使用](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)

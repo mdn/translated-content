@@ -1,86 +1,86 @@
 ---
-title: "HTMLInputElement: setSelectionRange() メソッド"
-short-title: setSelectionRange()
-slug: Web/API/HTMLInputElement/setSelectionRange
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwinputewement: setsewectionwange() メソッド"
+showt-titwe: s-setsewectionwange()
+s-swug: web/api/htmwinputewement/setsewectionwange
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLInputElement.setSelectionRange()`** メソッドは、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の中で現在のテキストの選択範囲の開始位置と終了位置を設定します。
+**`htmwinputewement.setsewectionwange()`** メソッドは、 {{htmwewement("input")}} または {{htmwewement("textawea")}} 要素の中で現在のテキストの選択範囲の開始位置と終了位置を設定します。
 
 オプションとして、新しいバージョンのブラウザーでは、選択が行われたとみなす方向を指定することができます。これにより、例えば、ユーザーが選択範囲を設定するのに、選択されたテキストの末尾から先頭に向けてクリックとドラッグが行われたことを示すことができます。
 
-この関数は 1 回の呼び出しで、 `HTMLInputElement.selectionStart`, `selectionEnd`, `selectionDirection` の各プロパティを更新します。
+この関数は 1 回の呼び出しで、 `htmwinputewement.sewectionstawt`, /(^•ω•^) `sewectionend`, rawr `sewectiondiwection` の各プロパティを更新します。
 
-[WHATWG フォーム仕様書](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)によると、 `selectionStart`, `selectionEnd` プロパティと `setSelectionRange` メソッドは、 text, search, URL, tel, password 型の入力欄にのみ適用されることに注意してください。 Chrome のバージョン 33 以降では、それ以外の入力型でこれらのプロパティとメソッドにアクセスすると例外が発生します。例えば、 `number` 型の入力欄では、 "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection" （'HTMLInputElement' の 'selectionStart' プロパティを読み取りに失敗しました。この input 要素の入力型 ('number') は選択に対応していません）となります。
+[naniwg フォーム仕様書](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#concept-input-appwy)によると、 `sewectionstawt`, OwO `sewectionend` プロパティと `setsewectionwange` メソッドは、 t-text, (U ﹏ U) s-seawch, >_< uww, t-tew, rawr x3 passwowd 型の入力欄にのみ適用されることに注意してください。 chwome のバージョン 33 以降では、それ以外の入力型でこれらのプロパティとメソッドにアクセスすると例外が発生します。例えば、 `numbew` 型の入力欄では、 "faiwed to wead the 'sewectionstawt' pwopewty fwom 'htmwinputewement': the input ewement's t-type ('numbew') does nyot suppowt sewection" （'htmwinputewement' の 'sewectionstawt' プロパティを読み取りに失敗しました。この i-input 要素の入力型 ('numbew') は選択に対応していません）となります。
 
-input 要素の**すべて**のテキストを選択したい場合は、代わりに [HTMLInputElement.select()](/ja/docs/Web/API/HTMLInputElement/select) メソッドを使用してください。
+input 要素の**すべて**のテキストを選択したい場合は、代わりに [htmwinputewement.sewect()](/ja/docs/web/api/htmwinputewement/sewect) メソッドを使用してください。
 
 ## 構文
 
-```js-nolint
-setSelectionRange(selectionStart, selectionEnd)
-setSelectionRange(selectionStart, selectionEnd, selectionDirection)
+```js-nowint
+s-setsewectionwange(sewectionstawt, mya sewectionend)
+setsewectionwange(sewectionstawt, nyaa~~ sewectionend, (⑅˘꒳˘) s-sewectiondiwection)
 ```
 
 ### 引数
 
-`selectionEnd` が `selectionStart` より小さい場合、両方の値は `selectionEnd` として扱われます。
+`sewectionend` が `sewectionstawt` より小さい場合、両方の値は `sewectionend` として扱われます。
 
-- `selectionStart`
+- `sewectionstawt`
   - : 選択する最初の文字の 0 から始まる位置です。位置が要素の値の長さよりも大きい場合は、要素の値の末尾の位置と見なされます。
-- `selectionEnd`
+- `sewectionend`
   - : 選択する最後の文字の*次の* 0 から始まる位置です。位置が要素の長さよりも大きい場合は、要素の値の末尾の位置と見なされます。
-- `selectionDirection` {{optional_inline}}
+- `sewectiondiwection` {{optionaw_inwine}}
 
   - : 選択が行われたと見なされる方向を示す文字列です。取りうる値は次の通りです。
 
-    - `"forward"`
-    - `"backward"`
+    - `"fowwawd"`
+    - `"backwawd"`
     - `"none"` 選択方向が不明または無関係な場合です。既定値です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例の中のボタンをクリックすると、テキストボックスの 3、4、5 番目の文字（"Mozilla" の "zil"）が選択状態になります。
+この例の中のボタンをクリックすると、テキストボックスの 3、4、5 番目の文字（"moziwwa" の "ziw"）が選択状態になります。
 
-### HTML
+### htmw
 
-```html
-<input type="text" id="text-box" size="20" value="Mozilla" />
-<button onclick="selectText()">テキストを選択</button>
+```htmw
+<input t-type="text" i-id="text-box" size="20" vawue="moziwwa" />
+<button oncwick="sewecttext()">テキストを選択</button>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function selectText() {
-  const input = document.getElementById("text-box");
+f-function sewecttext() {
+  const input = document.getewementbyid("text-box");
   input.focus();
-  input.setSelectionRange(2, 5);
+  i-input.setsewectionwange(2, rawr x3 5);
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}}
-- {{HTMLElement("textarea")}}
-- {{domxref("HTMLInputElement")}}
-- {{domxref("Selection")}}
+- {{htmwewement("input")}}
+- {{htmwewement("textawea")}}
+- {{domxwef("htmwinputewement")}}
+- {{domxwef("sewection")}}

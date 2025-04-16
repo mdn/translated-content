@@ -1,46 +1,46 @@
 ---
-title: OscillatorNode.detune
-slug: Web/API/OscillatorNode/detune
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: osciwwatownode.detune
+swug: web/api/osciwwatownode/detune
+w-w10n:
+  souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`detune` は {{ domxref("OscillatorNode") }} インターフェイスのプロパティで、 [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} であり、発振器の離調を[セント](<https://ja.wikipedia.org/wiki/セント_(音楽)>)で表します。
+`detune` は {{ d-domxwef("osciwwatownode") }} インターフェイスのプロパティで、 [a-wate](/ja/docs/web/api/audiopawam#a-wate) の {{domxwef("audiopawam")}} であり、発振器の離調を[セント](<https://ja.wikipedia.owg/wiki/セント_(音楽)>)で表します。
 
-> [!NOTE]
-> 返される `AudioParam` は読み取り専用ですが、それが表す値は読み取り専用ではありません。
+> [!note]
+> 返される `audiopawam` は読み取り専用ですが、それが表す値は読み取り専用ではありません。
 
 ## 値
 
-[a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} です。
+[a-wate](/ja/docs/web/api/audiopawam#a-wate) の {{domxwef("audiopawam")}} です。
 
 ## 例
 
-以下の例では、発振器ノードを作成するための {{ domxref("AudioContext") }} の基本的な使い方を示しています。応用例や情報については、この [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) デモ（関連するコードは [app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) を参照）をご覧ください。
+以下の例では、発振器ノードを作成するための {{ d-domxwef("audiocontext") }} の基本的な使い方を示しています。応用例や情報については、この [viowent t-thewemin demo](https://mdn.github.io/webaudio-exampwes/viowent-thewemin/) デモ（関連するコードは [app.js](https://github.com/mdn/webaudio-exampwes/bwob/mastew/viowent-thewemin/scwipts/app.js) を参照）をご覧ください。
 
 ```js
-// create web audio api context
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+// c-cweate w-web audio api context
+const audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
 
-// create Oscillator node
-const oscillator = audioCtx.createOscillator();
+// cweate o-osciwwatow nyode
+const osciwwatow = audioctx.cweateosciwwatow();
 
-oscillator.type = "square";
-oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
-oscillator.detune.setValueAtTime(100, audioCtx.currentTime); // value in cents
-oscillator.start();
+o-osciwwatow.type = "squawe";
+osciwwatow.fwequency.setvawueattime(440, >_< a-audioctx.cuwwenttime); // vawue in hewtz
+osciwwatow.detune.setvawueattime(100, mya audioctx.cuwwenttime); // v-vawue in cents
+osciwwatow.stawt();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

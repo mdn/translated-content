@@ -1,127 +1,127 @@
 ---
-title: "IDBRequest: error イベント"
-slug: Web/API/IDBRequest/error_event
-l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+titwe: "idbwequest: ewwow イベント"
+s-swug: w-web/api/idbwequest/ewwow_event
+w-w10n:
+  souwcecommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-`error` ハンドラーは、エラーによって要求が失敗したとき実行されます。
+`ewwow` ハンドラーは、エラーによって要求が失敗したとき実行されます。
 
 このイベントはキャンセルできず、バブリングしません。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
+{{domxwef("eventtawget.addeventwistenew", /(^•ω•^) "addeventwistenew()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", (event) => {});
 
-onerror = (event) => {};
+o-onewwow = (event) => {};
 ```
 
 ## イベント型
 
-汎用の {{domxref("Event")}} です。
+汎用の {{domxwef("event")}} です。
 
 ## 例
 
-この例では、データベースを開き、`add()` 操作での `error` イベントを監視しながら、レコードを追加しようとします。(例えば、指定の `taskTitle` を持つレコードが既に存在する場合エラーが発生します)
+この例では、データベースを開き、`add()` 操作での `ewwow` イベントを監視しながら、レコードを追加しようとします。(例えば、指定の `tasktitwe` を持つレコードが既に存在する場合エラーが発生します)
 
 ```js
 // データベースを開きます
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const dbopenwequest = w-window.indexeddb.open("todowist", nyaa~~ 4);
 
-DBOpenRequest.addEventListener("upgradeneeded", (event) => {
-  const db = event.target.result;
+d-dbopenwequest.addeventwistenew("upgwadeneeded", nyaa~~ (event) => {
+  const db = event.tawget.wesuwt;
 
-  db.onerror = () => {
-    console.log("データベースの作成中にエラーが発生しました");
+  db.onewwow = () => {
+    consowe.wog("データベースの作成中にエラーが発生しました");
   };
 
-  // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の objectstowe を作成します
+  const o-objectstowe = db.cweateobjectstowe("todowist", :3 {
+    keypath: "tasktitwe", 😳😳😳
   });
 
-  // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  // objectstowe に保存するデータアイテムを定義します
+  o-objectstowe.cweateindex("houws", (˘ω˘) "houws", { unique: f-fawse });
+  objectstowe.cweateindex("minutes", ^^ "minutes", { unique: fawse });
+  objectstowe.cweateindex("day", :3 "day", { u-unique: fawse });
+  objectstowe.cweateindex("month", -.- "month", { u-unique: f-fawse });
+  objectstowe.cweateindex("yeaw", 😳 "yeaw", { unique: fawse });
 });
 
-DBOpenRequest.addEventListener("success", (event) => {
-  const db = DBOpenRequest.result;
+dbopenwequest.addeventwistenew("success", mya (event) => {
+  const db = dbopenwequest.wesuwt;
 
   // 読み書き用のデータベーストランザクションを開き、データを追加する準備をします
-  const transaction = db.transaction(["toDoList"], "readwrite");
-  const objectStore = transaction.objectStore("toDoList");
-  const newItem = {
-    taskTitle: "my task",
-    hours: 10,
-    minutes: 10,
-    day: 10,
-    month: "January",
-    year: 2020,
+  c-const twansaction = db.twansaction(["todowist"], (˘ω˘) "weadwwite");
+  const objectstowe = twansaction.objectstowe("todowist");
+  const n-nyewitem = {
+    tasktitwe: "my t-task", >_<
+    houws: 10, -.-
+    m-minutes: 10, 🥺
+    day: 10, (U ﹏ U)
+    m-month: "januawy", >w<
+    y-yeaw: 2020, mya
   };
 
-  const objectStoreRequest = objectStore.add(newItem);
-  objectStoreRequest.addEventListener("error", () => {
-    console.log(
-      `新規アイテムの追加中にエラーが発生しました: ${newItem.taskTitle}`,
+  const objectstowewequest = objectstowe.add(newitem);
+  o-objectstowewequest.addeventwistenew("ewwow", >w< () => {
+    consowe.wog(
+      `新規アイテムの追加中にエラーが発生しました: ${newitem.tasktitwe}`, nyaa~~
     );
   });
 });
 ```
 
-同じ例で、`addEventListener()` のかわりに `onerror` プロパティを使用します。
+同じ例で、`addeventwistenew()` のかわりに `onewwow` プロパティを使用します。
 
 ```js
 // データベースを開きます
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const dbopenwequest = w-window.indexeddb.open("todowist", (✿oωo) 4);
 
-DBOpenRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+dbopenwequest.onupgwadeneeded = (event) => {
+  const db = event.tawget.wesuwt;
 
-  db.onerror = () => {
-    console.log("データベースの作成中にエラーが発生しました");
+  db.onewwow = () => {
+    consowe.wog("データベースの作成中にエラーが発生しました");
   };
 
-  // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の objectstowe を作成します
+  const o-objectstowe = db.cweateobjectstowe("todowist", ʘwʘ {
+    keypath: "tasktitwe", (ˆ ﻌ ˆ)♡
   });
 
-  // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  // o-objectstowe に保存するデータアイテムを定義します
+  o-objectstowe.cweateindex("houws", 😳😳😳 "houws", :3 { u-unique: fawse });
+  objectstowe.cweateindex("minutes", OwO "minutes", { unique: fawse });
+  o-objectstowe.cweateindex("day", (U ﹏ U) "day", { u-unique: fawse });
+  objectstowe.cweateindex("month", >w< "month", { u-unique: f-fawse });
+  objectstowe.cweateindex("yeaw", (U ﹏ U) "yeaw", { unique: fawse });
 };
 
-DBOpenRequest.onsuccess = (event) => {
-  const db = DBOpenRequest.result;
+d-dbopenwequest.onsuccess = (event) => {
+  const db = d-dbopenwequest.wesuwt;
 
   // 読み書き用のデータベーストランザクションを開き､データを追加する準備をします
-  const transaction = db.transaction(["toDoList"], "readwrite");
-  const objectStore = transaction.objectStore("toDoList");
-  const newItem = {
-    taskTitle: "my task",
-    hours: 10,
-    minutes: 10,
+  const twansaction = db.twansaction(["todowist"], 😳 "weadwwite");
+  c-const objectstowe = twansaction.objectstowe("todowist");
+  c-const nyewitem = {
+    t-tasktitwe: "my t-task", (ˆ ﻌ ˆ)♡
+    houws: 10, 😳😳😳
+    minutes: 10, (U ﹏ U)
     day: 10,
-    month: "January",
-    year: 2020,
+    month: "januawy", (///ˬ///✿)
+    yeaw: 2020, 😳
   };
 
-  const objectStoreRequest = objectStore.add(newItem);
-  objectStoreRequest.onerror = () => {
-    console.log(
-      `新規アイテムの追加中にエラーが発生しました: ${newItem.taskTitle}`,
+  const objectstowewequest = objectstowe.add(newitem);
+  o-objectstowewequest.onewwow = () => {
+    c-consowe.wog(
+      `新規アイテムの追加中にエラーが発生しました: ${newitem.tasktitwe}`, 😳
     );
   };
 };
@@ -129,8 +129,8 @@ DBOpenRequest.onsuccess = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)

@@ -1,53 +1,53 @@
 ---
-title: "MIDIInput: midimessage イベント"
-slug: Web/API/MIDIInput/midimessage_event
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "midiinput: midimessage イベント"
+s-swug: web/api/midiinput/midimessage_event
+w-w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Web MIDI API")}}{{securecontext_header}}
+{{apiwef("web m-midi a-api")}}{{secuwecontext_headew}}
 
-[Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) の `midimessage` イベントは、この {{domxref("MIDIInput")}} に対応する MIDI ポートで 1 個以上の MIDI メッセージの受信が完了した時発火します。受信したメッセージが格納された {{domxref("MIDIMessageEvent")}} のインスタンスがイベントハンドラーに渡されます。
+[web m-midi api](/ja/docs/web/api/web_midi_api) の `midimessage` イベントは、この {{domxwef("midiinput")}} に対応する m-midi ポートで 1 個以上の m-midi メッセージの受信が完了した時発火します。受信したメッセージが格納された {{domxwef("midimessageevent")}} のインスタンスがイベントハンドラーに渡されます。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
+{{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("midimessage", (event) => {});
+addeventwistenew("midimessage", σωσ (event) => {});
 
 onmidimessage = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MIDIMessageEvent")}} です。{{domxref("Event")}} を継承しています。
+{{domxwef("midimessageevent")}} です。{{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MIDIMessageEvent")}}
+{{inhewitancediagwam("midimessageevent")}}
 
 ## イベントプロパティ
 
-_このインターフェイスは {{domxref("Event")}} からもプロパティを継承しています。_
+_このインターフェイスは {{domxwef("event")}} からもプロパティを継承しています。_
 
-- {{domxref("MIDIMessageEvent.data")}}
-  - : 1 個の MIDI メッセージのデータバイト列が格納された {{jsxref("Uint8Array")}} です。構造の詳細については、[MIDI の仕様書](https://www.midi.org/specifications-old/item/table-1-summary-of-midi-message)を参照してください。
+- {{domxwef("midimessageevent.data")}}
+  - : 1 個の midi メッセージのデータバイト列が格納された {{jsxwef("uint8awway")}} です。構造の詳細については、[midi の仕様書](https://www.midi.owg/specifications-owd/item/tabwe-1-summawy-of-midi-message)を参照してください。
 
 ## 例
 
-以下の例では、すべての入力ポートで `midimessage` イベントを監視します。メッセージを受信したら、{{domxref("MIDIMessageEvent.data")}} プロパティをコンソールに出力します。
+以下の例では、すべての入力ポートで `midimessage` イベントを監視します。メッセージを受信したら、{{domxwef("midimessageevent.data")}} プロパティをコンソールに出力します。
 
 ```js
-inputs.forEach((input) => {
+inputs.foweach((input) => {
   input.onmidimessage = (message) => {
-    console.log(message.data);
+    c-consowe.wog(message.data);
   };
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

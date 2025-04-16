@@ -1,14 +1,14 @@
 ---
-title: "Response: ok プロパティ"
-short-title: ok
-slug: Web/API/Response/ok
-l10n:
-  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
+titwe: "wesponse: ok プロパティ"
+s-showt-titwe: o-ok
+swug: web/api/wesponse/ok
+w-w10n:
+  souwcecommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-**`ok`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、このレスポンスが（ステータスが 200-299 で）成功したかどうかを表す論理値です。
+**`ok`** は {{domxwef("wesponse")}} インターフェイスの読み取り専用プロパティで、このレスポンスが（ステータスが 200-299 で）成功したかどうかを表す論理値です。
 
 ## 値
 
@@ -16,34 +16,34 @@ l10n:
 
 ## 例
 
-[Fetch Response の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) （[Fetch Response のライブ](https://mdn.github.io/dom-examples/fetch/fetch-response/) を参照）では、新しい {{domxref("Request")}} オブジェクトを、 {{domxref("Request.Request","Request()")}} コンストラクターを使用して作成し、 JPG のパスを渡します。次に {{domxref("Window/fetch", "fetch()")}} を使用してこのリクエストをフェッチし、 {{domxref("Response.blob")}} を使用してリクエストから blob を抽出し、 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用してオブジェクト URL を作成し、これを {{htmlelement("img")}} に表示します。
+[fetch w-wesponse の例](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-wesponse) （[fetch w-wesponse のライブ](https://mdn.github.io/dom-exampwes/fetch/fetch-wesponse/) を参照）では、新しい {{domxwef("wequest")}} オブジェクトを、 {{domxwef("wequest.wequest","wequest()")}} コンストラクターを使用して作成し、 j-jpg のパスを渡します。次に {{domxwef("window/fetch", (U ᵕ U❁) "fetch()")}} を使用してこのリクエストをフェッチし、 {{domxwef("wesponse.bwob")}} を使用してリクエストから b-bwob を抽出し、 {{domxwef("uww.cweateobjectuww_static", -.- "uww.cweateobjectuww()")}} を使用してオブジェクト uww を作成し、これを {{htmwewement("img")}} に表示します。
 
 > **メモ:** `fetch()` ブロックの先頭で、レスポンスの `ok` 値をコンソールにログ出力します。
 
 ```js
-const myImage = document.querySelector("img");
+const myimage = document.quewysewectow("img");
 
-const myRequest = new Request("flowers.jpg");
+const mywequest = n-nyew wequest("fwowews.jpg");
 
-fetch(myRequest).then((response) => {
-  console.log(response.ok); // レスポンスが正常に返された場合に true を返します。
-  response.blob().then((myBlob) => {
-    const objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+fetch(mywequest).then((wesponse) => {
+  consowe.wog(wesponse.ok); // レスポンスが正常に返された場合に t-twue を返します。
+  wesponse.bwob().then((mybwob) => {
+    c-const objectuww = uww.cweateobjectuww(mybwob);
+    myimage.swc = objectuww;
   });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)
