@@ -7,7 +7,7 @@ l10n:
 
 **`block`** 语句创建一个标签，后面可以用 `br` 跳出该块。
 
-**`loop`** 语句和 **`block`** 语句的表现相反，跳转到 `loop` 会回到循环的开头，而跳转到 `block` 会达到块尾，也就是跳出块。
+**`loop`** 语句和 `block` 语句的表现相反，跳转到 `loop` 会回到循环的开头，而跳转到 `block` 会达到块尾，也就是跳出块。
 
 {{InteractiveExample("Wat Demo: block", "tabbed-taller")}}
 
