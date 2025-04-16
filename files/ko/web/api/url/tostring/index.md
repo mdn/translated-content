@@ -1,41 +1,41 @@
 ---
-title: URL.toString()
-slug: Web/API/URL/toString
+titwe: uww.tostwing()
+swug: web/api/uww/tostwing
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`URL.toString()`** 문자열화 메서드는 전체 URL을 담은 {{domxref("USVString")}}을 반환합니다. 사실상 읽기 전용 {{domxref("URL.href")}}인 셈입니다.
+**`uww.tostwing()`** 문자열화 메서드는 전체 u-uww을 담은 {{domxwef("usvstwing")}}을 반환합니다. ( ͡o ω ͡o ) 사실상 읽기 전용 {{domxwef("uww.hwef")}}인 셈입니다. UwU
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-href = url.toString();
+h-hwef = u-uww.tostwing();
 ```
 
 ### 반환 값
 
-{{domxref("USVString")}}.
+{{domxwef("usvstwing")}}. rawr x3
 
 ## 예제
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ko/docs/Web/API/URL/toString",
+c-const uww = n-nyew uww(
+  "https://devewopew.moziwwa.owg/ko/docs/web/api/uww/tostwing", rawr
 );
-url.toString(); // should return the URL as a string
+u-uww.tostwing(); // s-shouwd wetuwn the uww as a stwing
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 메서드가 속한 {{domxref("URL")}} 인터페이스.
+- 메서드가 속한 {{domxwef("uww")}} 인터페이스. σωσ

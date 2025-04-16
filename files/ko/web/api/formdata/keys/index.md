@@ -1,38 +1,38 @@
 ---
-title: FormData.keys()
-slug: Web/API/FormData/keys
+titwe: fowmdata.keys()
+swug: w-web/api/fowmdata/keys
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`FormData.keys()`** 메서드는 이 객체에 포함된 모든 키를 통과하는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 키는 {{domxref("USVString")}} 객체입니다.
+**`fowmdata.keys()`** 메서드는 이 객체에 포함된 모든 키를 통과하는 {{jsxwef("itewation_pwotocows",'itewatow')}} 를 반환합니다. -.- 키는 {{domxwef("usvstwing")}} 객체입니다. ^^;;
 
-> [!NOTE]
-> 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
+> [!note]
+> 이 메서드는 [web w-wowkew](/ko/docs/web/api/web_wowkews_api)에서 사용할 수 있습니다. >_<
 
-## Syntax
+## s-syntax
 
 ```js
-formData.keys();
+fowmdata.keys();
 ```
 
-### Return value
+### w-wetuwn v-vawue
 
-{{jsxref("Iteration_protocols","iterator")}}를 반환합니다.
+{{jsxwef("itewation_pwotocows","itewatow")}}를 반환합니다. mya
 
-## Example
+## e-exampwe
 
 ```js
-// Create a test FormData object
-var formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+// c-cweate a test fowmdata object
+vaw fowmdata = nyew fowmdata();
+fowmdata.append("key1", mya "vawue1");
+fowmdata.append("key2", 😳 "vawue2");
 
-// Display the keys
-for (var key of formData.keys()) {
-  console.log(key);
+// d-dispway the keys
+fow (vaw key of fowmdata.keys()) {
+  c-consowe.wog(key);
 }
 ```
 
@@ -40,20 +40,20 @@ for (var key of formData.keys()) {
 
 ```
 key1
-key2
+k-key2
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [using xmwhttpwequest](/ko/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata o-objects](/ko/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

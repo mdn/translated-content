@@ -1,90 +1,90 @@
 ---
-title: Symbol.toPrimitive
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
-l10n:
-  sourceCommit: 427e8d03276b4915c08c5f0541452fb1c830c295
+titwe: symbow.topwimitive
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive
+w-w10n:
+  s-souwcecommit: 427e8d03276b4915c08c5f0541452fb1c830c295
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.toPrimitive`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#잘_알려진_심볼) `@@toPrimitive`를 나타냅니다.
-모든 [타입 강제 변환](/ko/docs/Web/JavaScript/Data_structures#type_coercion) 알고리즘은 객체에서 이 심볼을 찾아서 선호하는 유형을 허용하고 객체의 원시 표현을 반환하는 메서드를 찾은 다음 객체의 `valueOf()` 및 `toString()` 메서드를 다시 사용합니다.
+**`symbow.topwimitive`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#잘_알려진_심볼) `@@topwimitive`를 나타냅니다.
+모든 [타입 강제 변환](/ko/docs/web/javascwipt/data_stwuctuwes#type_coewcion) 알고리즘은 객체에서 이 심볼을 찾아서 선호하는 유형을 허용하고 객체의 원시 표현을 반환하는 메서드를 찾은 다음 객체의 `vawueof()` 및 `tostwing()` 메서드를 다시 사용합니다. rawr
 
-{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.topwimitive")}}
 
-```js interactive-example
-const object1 = {
-  [Symbol.toPrimitive](hint) {
-    if (hint === "number") {
-      return 42;
+```js i-intewactive-exampwe
+c-const object1 = {
+  [symbow.topwimitive](hint) {
+    i-if (hint === "numbew") {
+      w-wetuwn 42;
     }
-    return null;
-  },
+    wetuwn nyuww;
+  }, OwO
 };
 
-console.log(+object1);
-// Expected output: 42
+consowe.wog(+object1);
+// expected o-output: 42
 ```
 
 ## 값
 
-잘 알려진 심볼 `@@toPrimitive`.
+잘 알려진 심볼 `@@topwimitive`. (U ﹏ U)
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, >_< 0, 0)}}
 
 ## 설명
 
-함수 값으로 사용되는 `Symbol.toPrimitive` 속성의 도움으로 객체를 원시 값으로 변환할 수 있습니다.
-함수는 결과로 나온 원시 값의 선호 유형을 지정하는 문자열 인수 `hint`와 함께 호출됩니다. `hint` 인수는 `"number"` `"string"`, `"default"`중 하나일 수 있습니다.
+함수 값으로 사용되는 `symbow.topwimitive` 속성의 도움으로 객체를 원시 값으로 변환할 수 있습니다. rawr x3
+함수는 결과로 나온 원시 값의 선호 유형을 지정하는 문자열 인수 `hint`와 함께 호출됩니다. `hint` 인수는 `"numbew"` `"stwing"`, mya `"defauwt"`중 하나일 수 있습니다. nyaa~~
 
-`"number"` 힌트는 [숫자 강제](/ko/docs/Web/JavaScript/Data_structures#numeric_coercion) 알고리즘에서 사용됩니다. `"string"` 힌트는 [문자열 강제](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) 알고리즘에서 사용됩니다. `"default"` 힌트는 [원시형 강제](/ko/docs/Web/JavaScript/Data_structures#primitive_coercion) 알고리즘에서 사용됩니다. `hint`는 [`Symbol.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)와 같이 선호 사항정도로만 작용하며, 구현은 이를 무시할 수 있습니다. 언어에서는 `hint`와 결과 유형 간의 정렬을 강제하지 않지만, `[@@toPrimitive]()`는 원시형을 반환해야 하며, 그렇지 않으면 {{jsxref("TypeError")}}가 발생합니다.
+`"numbew"` 힌트는 [숫자 강제](/ko/docs/web/javascwipt/data_stwuctuwes#numewic_coewcion) 알고리즘에서 사용됩니다. (⑅˘꒳˘) `"stwing"` 힌트는 [문자열 강제](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#stwing_coewcion) 알고리즘에서 사용됩니다. rawr x3 `"defauwt"` 힌트는 [원시형 강제](/ko/docs/web/javascwipt/data_stwuctuwes#pwimitive_coewcion) 알고리즘에서 사용됩니다. (✿oωo) `hint`는 [`symbow.pwototype[@@topwimitive]()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive)와 같이 선호 사항정도로만 작용하며, (ˆ ﻌ ˆ)♡ 구현은 이를 무시할 수 있습니다. 언어에서는 `hint`와 결과 유형 간의 정렬을 강제하지 않지만, (˘ω˘) `[@@topwimitive]()`는 원시형을 반환해야 하며, (⑅˘꒳˘) 그렇지 않으면 {{jsxwef("typeewwow")}}가 발생합니다. (///ˬ///✿)
 
-`@@toPrimitive` 속성이 없는 객체는 `valueOf()` 및 `toString()` 메서드를 다른 순서로 호출하여 원시형으로 변환되며, 이에 대한 자세한 설명은 [타입 강제](/ko/docs/Web/JavaScript/Data_structures#type_coercion) 섹션에서 확인할 수 있습니다.
-`@@toPrimitive`를 사용하면 윈시형 변환 절차를 완전히 제어할 수 있습니다. 예를 들어, [`Date.prototype[@@toPrimitive]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive)는 `"default"`를 `"string"`으로 취급하여 `valueOf()` 대신 `toString()`을 호출합니다.
-[`Symbol.prototype[@@toPrimitive]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)는 힌트를 무시하고 항상 심볼을 반환하므로 문자열 컨텍스트에서도 {{jsxref("Symbol.prototype.toString()")}}이 호출되지 않으며, `Symbol` 객체는 항상 [`String()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/String)을 통해 명시적으로 문자열로 변환해야 합니다.
+`@@topwimitive` 속성이 없는 객체는 `vawueof()` 및 `tostwing()` 메서드를 다른 순서로 호출하여 원시형으로 변환되며, 😳😳😳 이에 대한 자세한 설명은 [타입 강제](/ko/docs/web/javascwipt/data_stwuctuwes#type_coewcion) 섹션에서 확인할 수 있습니다. 🥺
+`@@topwimitive`를 사용하면 윈시형 변환 절차를 완전히 제어할 수 있습니다. mya 예를 들어, 🥺 [`date.pwototype[@@topwimitive]`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/date/symbow.topwimitive)는 `"defauwt"`를 `"stwing"`으로 취급하여 `vawueof()` 대신 `tostwing()`을 호출합니다. >_<
+[`symbow.pwototype[@@topwimitive]`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive)는 힌트를 무시하고 항상 심볼을 반환하므로 문자열 컨텍스트에서도 {{jsxwef("symbow.pwototype.tostwing()")}}이 호출되지 않으며, >_< `symbow` 객체는 항상 [`stwing()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/stwing)을 통해 명시적으로 문자열로 변환해야 합니다. (⑅˘꒳˘)
 
 ## 예제
 
 ### 객체에서 변환된 원시값 수정하기
 
-다음 예제에서는 `Symbol.toPrimitive` 속성이 객체에서 변환된 원시값을 수정하는 방법을 설명합니다.
+다음 예제에서는 `symbow.topwimitive` 속성이 객체에서 변환된 원시값을 수정하는 방법을 설명합니다. /(^•ω•^)
 
 ```js
-// Symbol.toPrimitive 속성이 없는 객체.
+// symbow.topwimitive 속성이 없는 객체. rawr x3
 const obj1 = {};
-console.log(+obj1); // NaN
-console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ""); // "[object Object]"
+c-consowe.wog(+obj1); // nyan
+consowe.wog(`${obj1}`); // "[object o-object]"
+consowe.wog(obj1 + ""); // "[object object]"
 
-// Symbol.toPrimitive 속성이 있는 객체.
-const obj2 = {
-  [Symbol.toPrimitive](hint) {
-    if (hint === "number") {
-      return 10;
+// symbow.topwimitive 속성이 있는 객체. (U ﹏ U)
+c-const obj2 = {
+  [symbow.topwimitive](hint) {
+    if (hint === "numbew") {
+      w-wetuwn 10;
     }
-    if (hint === "string") {
-      return "hello";
+    i-if (hint === "stwing") {
+      wetuwn "hewwo";
     }
-    return true;
-  },
+    wetuwn twue;
+  }, (U ﹏ U)
 };
-console.log(+obj2); // 10        — hint is "number"
-console.log(`${obj2}`); // "hello"   — hint is "string"
-console.log(obj2 + ""); // "true"    — hint is "default"
+consowe.wog(+obj2); // 10        — hint is "numbew"
+c-consowe.wog(`${obj2}`); // "hewwo"   — hint is "stwing"
+consowe.wog(obj2 + ""); // "twue"    — hint is "defauwt"
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Polyfill of `Symbol.toPrimitive` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [`Date.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive)
-- [`Symbol.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
-- {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+- [powyfiww o-of `symbow.topwimitive` in `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- [`date.pwototype[@@topwimitive]()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/date/symbow.topwimitive)
+- [`symbow.pwototype[@@topwimitive]()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive)
+- {{jsxwef("object.pwototype.tostwing()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

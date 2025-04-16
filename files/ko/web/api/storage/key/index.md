@@ -1,58 +1,58 @@
 ---
-title: Storage.key()
-slug: Web/API/Storage/key
+titwe: stowage.key()
+swug: web/api/stowage/key
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-{{domxref("Storage")}} 인터페이스의 `key()` 메서드는 숫자 `n`이 전달되면 Storage의 `n`번째 key 이름을 반환합니다. key의 순서는 user-agent에 의해 정의되므로 이 순서에 의존성이 있어서는 안됩니다.
+{{domxwef("stowage")}} 인터페이스의 `key()` 메서드는 숫자 `n`이 전달되면 s-stowage의 `n`번째 k-key 이름을 반환합니다. -.- k-key의 순서는 u-usew-agent에 의해 정의되므로 이 순서에 의존성이 있어서는 안됩니다. ( ͡o ω ͡o )
 
 ## 문법
 
 ```js
-var aKeyName = storage.key(index);
+v-vaw akeyname = s-stowage.key(index);
 ```
 
-### Parameters
+### p-pawametews
 
 - _index_
-  - : 반환받으려하는 key의 번호를 나타내는 정수. 이 정수는 0부터 시작하는 인덱스입니다.
+  - : 반환받으려하는 key의 번호를 나타내는 정수. rawr x3 이 정수는 0부터 시작하는 인덱스입니다. nyaa~~
 
-### Return value
+### wetuwn vawue
 
-key 이름을 포함한 {{domxref("DOMString")}} 입니다.
+key 이름을 포함한 {{domxwef("domstwing")}} 입니다. /(^•ω•^)
 
 ## 예제
 
-다음 함수는 localStorage 의 key들을 반복합니다.
+다음 함수는 wocawstowage 의 k-key들을 반복합니다. rawr
 
 ```js
-function forEachKey(callback) {
-  for (var i = 0; i < localStorage.length; i++) {
-    callback(localStorage.key(i));
+function foweachkey(cawwback) {
+  f-fow (vaw i = 0; i < w-wocawstowage.wength; i++) {
+    cawwback(wocawstowage.key(i));
   }
 }
 ```
 
-다음 함수는 localStorage 의 key들을 반복하고 각 key에 설정된 값들을 가져옵니다.
+다음 함수는 wocawstowage 의 k-key들을 반복하고 각 key에 설정된 값들을 가져옵니다. OwO
 
 ```js
-for (var i = 0; i < localStorage.length; i++) {
-  console.log(localStorage.getItem(localStorage.key(i)));
+f-fow (vaw i-i = 0; i < wocawstowage.wength; i++) {
+  consowe.wog(wocawstowage.getitem(wocawstowage.key(i)));
 }
 ```
 
-> [!NOTE]
-> 실제로 쓰이는 예제를 보려면 우리의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) 를 참조하세요.
+> [!note]
+> 실제로 쓰이는 예제를 보려면 우리의 [web stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/) 를 참조하세요.
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-[Using the Web Storage API](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[using t-the web stowage api](/ko/docs/web/api/web_stowage_api/using_the_web_stowage_api)

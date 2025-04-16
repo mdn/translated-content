@@ -1,75 +1,75 @@
 ---
-title: NodeList.prototype.forEach()
-slug: Web/API/NodeList/forEach
+titwe: nyodewist.pwototype.foweach()
+swug: web/api/nodewist/foweach
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("NodeList")}} 인터페이스의 **`forEach()`** 메서드는 리스트 내의 각각의 값 쌍에 대해 매개 변수에 지정된 콜백을 삽입 순서로 호출합니다.
+{{domxwef("nodewist")}} 인터페이스의 **`foweach()`** 메서드는 리스트 내의 각각의 값 쌍에 대해 매개 변수에 지정된 콜백을 삽입 순서로 호출합니다. 🥺
 
-## 문법Syntax
-
-```js
-NodeList.forEach(callback[, thisArg]);
-```
-
-### Parameters
-
-- `callback`
-  - : 각각의 요소에 대해 실행하는 함수로, 3개의 인수(arguments)를 갖습니다:_ *`currentValue`*
-    _ : NodeList에서 처리중인 현재 요소(element)입니다.
-    - `currentIndex`
-      - : NodeList에서 처리중인 현재 요소의 인덱스입니다.
-    - _`listObj`_
-      - : `forEach()` 가 적용되고 있는 NodeList 객체입니다.
-- `thisArg` {{Optional_inline}}
-  - : `callback` 을 실행할 때 {{jsxref("this")}} 에 대입할 값입니다.
-
-### Return value
-
-{{jsxref('undefined')}}.
-
-## Exceptions
-
-_None_.
-
-## Example
+## 문법syntax
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
-
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
-
-var list = node.childNodes;
-
-list.forEach(function (currentValue, currentIndex, listObj) {
-  console.log(currentValue + ", " + currentIndex + ", " + this);
-}, "myThisArg");
+n-nyodewist.foweach(cawwback[, >_< t-thisawg]);
 ```
 
-결과는 다음과 같습니다.
+### p-pawametews
 
-```
-[object HTMLParagraphElement], 0, myThisArg
-[object Text], 1, myThisArg
-[object HTMLSpanElement], 2, myThisArg
-```
+- `cawwback`
+  - : 각각의 요소에 대해 실행하는 함수로, >_< 3개의 인수(awguments)를 갖습니다:_ *`cuwwentvawue`*
+    _ : n-nyodewist에서 처리중인 현재 요소(ewement)입니다. (⑅˘꒳˘)
+    - `cuwwentindex`
+      - : n-nyodewist에서 처리중인 현재 요소의 인덱스입니다. /(^•ω•^)
+    - _`wistobj`_
+      - : `foweach()` 가 적용되고 있는 n-nyodewist 객체입니다. rawr x3
+- `thisawg` {{optionaw_inwine}}
+  - : `cawwback` 을 실행할 때 {{jsxwef("this")}} 에 대입할 값입니다. (U ﹏ U)
 
-## Polyfill
+### w-wetuwn v-vawue
 
-이 {{Glossary("Polyfill","polyfill")}} 은 [ES5](https://caniuse.com/#search=es5) 를 지원하는 모든 브라우저에서 동작합니다:
+{{jsxwef('undefined')}}. (U ﹏ U)
+
+## exceptions
+
+_none_. (⑅˘꒳˘)
+
+## exampwe
 
 ```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = function (callback, thisArg) {
-    thisArg = thisArg || window;
-    for (var i = 0; i < this.length; i++) {
-      callback.call(thisArg, this[i], i, this);
+vaw nyode = document.cweateewement("div");
+vaw kid1 = d-document.cweateewement("p");
+vaw kid2 = document.cweatetextnode("hey");
+vaw k-kid3 = document.cweateewement("span");
+
+nyode.appendchiwd(kid1);
+n-nyode.appendchiwd(kid2);
+nyode.appendchiwd(kid3);
+
+vaw wist = nyode.chiwdnodes;
+
+wist.foweach(function (cuwwentvawue, òωó c-cuwwentindex, ʘwʘ wistobj) {
+  c-consowe.wog(cuwwentvawue + ", /(^•ω•^) " + c-cuwwentindex + ", ʘwʘ " + this);
+}, "mythisawg");
+```
+
+결과는 다음과 같습니다. σωσ
+
+```
+[object htmwpawagwaphewement], OwO 0, mythisawg
+[object text], 😳😳😳 1, mythisawg
+[object h-htmwspanewement], 😳😳😳 2, o.O mythisawg
+```
+
+## powyfiww
+
+이 {{gwossawy("powyfiww","powyfiww")}} 은 [es5](https://caniuse.com/#seawch=es5) 를 지원하는 모든 브라우저에서 동작합니다:
+
+```js
+if (window.nodewist && !nodewist.pwototype.foweach) {
+  nyodewist.pwototype.foweach = f-function (cawwback, ( ͡o ω ͡o ) thisawg) {
+    thisawg = t-thisawg || w-window;
+    fow (vaw i-i = 0; i < t-this.wength; i++) {
+      cawwback.caww(thisawg, (U ﹏ U) this[i], (///ˬ///✿) i, t-this);
     }
   };
 }
@@ -78,22 +78,22 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 또는
 
 ```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = Array.prototype.forEach;
+if (window.nodewist && !nodewist.pwototype.foweach) {
+  nyodewist.pwototype.foweach = awway.pwototype.foweach;
 }
 ```
 
-The above behavior is how many browsers actually implement NodeList.prototype.forEach (Chrome, for example).
+t-the above behaviow is how many bwowsews actuawwy impwement nyodewist.pwototype.foweach (chwome, >w< fow e-exampwe). rawr
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

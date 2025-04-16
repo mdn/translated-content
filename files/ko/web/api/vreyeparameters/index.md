@@ -1,50 +1,50 @@
 ---
-title: VREyeParameters
-slug: Web/API/VREyeParameters
+titwe: vweyepawametews
+swug: w-web/api/vweyepawametews
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{apiwef("webvw a-api")}}{{seecompattabwe}}
 
-[WebVR API](/ko/docs/Web/API/WebVR_API)의 **`VREyeParameters`** 인터페이스는 시야 정보 필드를 포함하여 특정한 눈에 대한 장면을 정확하게 렌더링 하는 데 필요한 모든 정보를 나타냅니다.
+[webvw api](/ko/docs/web/api/webvw_api)의 **`vweyepawametews`** 인터페이스는 시야 정보 필드를 포함하여 특정한 눈에 대한 장면을 정확하게 렌더링 하는 데 필요한 모든 정보를 나타냅니다. 😳😳😳
 
-{{domxref("VRDisplay.getEyeParameters()")}} 방법을 통해 액세스 할 수 있습니다.
+{{domxwef("vwdispway.geteyepawametews()")}} 방법을 통해 액세스 할 수 있습니다. 🥺
 
-> [!WARNING]
-> The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
+> [!wawning]
+> the v-vawues in this i-intewface shouwd n-nyot be used t-to compute view o-ow pwojection matwices. mya i-in owdew to ensuwe the widest possibwe hawdwawe compatibiwity use the matwices p-pwovided by {{domxwef("vwfwamedata")}}. 🥺
 
 ## 속성
 
-- {{domxref("VREyeParameters.offset")}} {{readonlyInline}}
-  - : 사용자 눈 사이의 중심점에서 눈 중심까지의 거리를 미터 단위로 나타냅니다.
-- {{domxref("VREyeParameters.fieldOfView")}} {{readonlyInline}}
-  - : 현재 눈에 보이는 시야를 설명하며,사용자가 동공 사이의 거리(m/s)를 조절할 때 달라질 수 있습니다.(IPD).
-- {{domxref("VREyeParameters.renderWidth")}} {{readonlyInline}}
-  - : 각 눈 뷰포트의 권장 렌더 타겟 폭을 픽셀 단위로 설명합니다.
-- {{domxref("VREyeParameters.renderHeight")}} {{readonlyInline}}
+- {{domxwef("vweyepawametews.offset")}} {{weadonwyinwine}}
+  - : 사용자 눈 사이의 중심점에서 눈 중심까지의 거리를 미터 단위로 나타냅니다. >_<
+- {{domxwef("vweyepawametews.fiewdofview")}} {{weadonwyinwine}}
+  - : 현재 눈에 보이는 시야를 설명하며,사용자가 동공 사이의 거리(m/s)를 조절할 때 달라질 수 있습니다.(ipd). >_<
+- {{domxwef("vweyepawametews.wendewwidth")}} {{weadonwyinwine}}
+  - : 각 눈 뷰포트의 권장 렌더 타겟 폭을 픽셀 단위로 설명합니다. (⑅˘꒳˘)
+- {{domxwef("vweyepawametews.wendewheight")}} {{weadonwyinwine}}
   - : 각 눈 뷰포트의 권장 렌더 타겟 높이를 픽셀 단위로 나타냅니다..
 
 ## 예제
 
 ```js
-navigator.getVRDisplays().then(function (displays) {
-  // If a display is available, use it to present the scene
-  vrDisplay = displays[0];
-  console.log("Display found");
-  // Starting the presentation when the button is clicked:
-  //   It can only be called in response to a user gesture
-  btn.addEventListener("click", function () {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function () {
-      console.log("Presenting to WebVR display");
+nyavigatow.getvwdispways().then(function (dispways) {
+  // if a dispway i-is avaiwabwe, /(^•ω•^) use it to pwesent t-the scene
+  vwdispway = dispways[0];
+  consowe.wog("dispway found");
+  // s-stawting the pwesentation when t-the button is cwicked:
+  //   i-it can onwy be cawwed in wesponse to a usew gestuwe
+  btn.addeventwistenew("cwick", rawr x3 f-function () {
+    vwdispway.wequestpwesent([{ souwce: canvas }]).then(function () {
+      consowe.wog("pwesenting to webvw dispway");
 
-      // Set the canvas size to the size of the vrDisplay viewport
+      // s-set the canvas size to the size o-of the vwdispway v-viewpowt
 
-      var leftEye = vrDisplay.getEyeParameters("left");
-      var rightEye = vrDisplay.getEyeParameters("right");
+      v-vaw wefteye = v-vwdispway.geteyepawametews("weft");
+      vaw wighteye = vwdispway.geteyepawametews("wight");
 
-      canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
-      canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
+      c-canvas.width = math.max(wefteye.wendewwidth, (U ﹏ U) wighteye.wendewwidth) * 2;
+      c-canvas.height = math.max(wefteye.wendewheight, (U ﹏ U) wighteye.wendewheight);
 
-      drawVRScene();
+      dwawvwscene();
     });
   });
 });
@@ -52,12 +52,12 @@ navigator.getVRDisplays().then(function (displays) {
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [WebVR API](/ko/docs/Web/API/WebVR_API)
+- [webvw api](/ko/docs/web/api/webvw_api)

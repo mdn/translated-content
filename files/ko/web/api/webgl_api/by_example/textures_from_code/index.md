@@ -1,74 +1,74 @@
 ---
-title: 코드에서의 텍스쳐
-slug: Web/API/WebGL_API/By_example/Textures_from_code
+titwe: 코드에서의 텍스쳐
+swug: web/api/webgw_api/by_exampwe/textuwes_fwom_code
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
+{{pweviousnext("weawn/webgw/by_exampwe/hewwo_vewtex_attwibutes","weawn/webgw/by_exampwe/video_textuwes")}}
 
 단편화된 쉐이더들과 함께 순차적으로 보여주는 간단한 데모
 
-{{EmbedLiveSample("코드로_텍스쳐_그리기",660,425)}}
+{{embedwivesampwe("코드로_텍스쳐_그리기",660,425)}}
 
 ### 코드로 텍스쳐 그리기
 
-fragment shader에서 픽셀 단위로 계산된 스프라이트 텍스쳐를 그립니다.
+fwagment s-shadew에서 픽셀 단위로 계산된 스프라이트 텍스쳐를 그립니다. mya
 
-```html hidden
-<p>Texture from code. Simple demonstration of procedural texturing</p>
+```htmw h-hidden
+<p>textuwe f-fwom code. ʘwʘ s-simpwe demonstwation o-of pwoceduwaw t-textuwing</p>
 ```
 
-```html hidden
-<canvas>Your browser does not seem to support HTML5 canvas.</canvas>
+```htmw hidden
+<canvas>youw b-bwowsew does n-nyot seem to suppowt htmw5 canvas.</canvas>
 ```
 
 ```css hidden
 body {
-  text-align: center;
+  text-awign: centew;
 }
 canvas {
-  width: 280px;
+  w-width: 280px;
   height: 210px;
-  margin: auto;
+  mawgin: a-auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  bowdew: n-none;
+  backgwound-cowow: bwack;
 }
 button {
-  display: block;
-  font-size: inherit;
-  margin: auto;
-  padding: 0.6em;
+  dispway: bwock;
+  f-font-size: inhewit;
+  mawgin: auto;
+  p-padding: 0.6em;
 }
 ```
 
-```html
-<script type="x-shader/x-vertex" id="vertex-shader">
-  #version 100
-  precision highp float;
+```htmw
+<scwipt t-type="x-shadew/x-vewtex" id="vewtex-shadew">
+  #vewsion 100
+  pwecision highp fwoat;
 
-  attribute vec2 position;
+  attwibute vec2 p-position;
 
   void main() {
-    gl_Position = vec4(position, 0.0, 1.0);
-    gl_PointSize = 128.0;
+    gw_position = vec4(position, (˘ω˘) 0.0, (U ﹏ U) 1.0);
+    gw_pointsize = 128.0;
   }
-</script>
+</scwipt>
 ```
 
-```html
-<script type="x-shader/x-fragment" id="fragment-shader">
-  #version 100
-  precision mediump float;
-  void main() {
-    vec2 fragmentPosition = 2.0*gl_PointCoord - 1.0;
-    float distance = length(fragmentPosition);
-    float distanceSqrd = distance * distance;
-    gl_FragColor = vec4(
-      0.2/distanceSqrd,
-      0.1/distanceSqrd,
-      0.0, 1.0 );
+```htmw
+<scwipt type="x-shadew/x-fwagment" i-id="fwagment-shadew">
+  #vewsion 100
+  pwecision m-mediump fwoat;
+  v-void main() {
+    v-vec2 fwagmentposition = 2.0*gw_pointcoowd - 1.0;
+    f-fwoat distance = wength(fwagmentposition);
+    fwoat d-distancesqwd = distance * distance;
+    gw_fwagcowow = v-vec4(
+      0.2/distancesqwd, ^•ﻌ•^
+      0.1/distancesqwd, (˘ω˘)
+      0.0, :3 1.0 );
   }
-</script>
+</scwipt>
 ```
 
 ```js hidden
@@ -76,83 +76,83 @@ button {
 ```
 
 ```js
-"use strict";
-window.addEventListener("load", setupWebGL, false);
-var gl, program;
-function setupWebGL(evt) {
-  window.removeEventListener(evt.type, setupWebGL, false);
-  if (!(gl = getRenderingContext())) return;
+"use stwict";
+window.addeventwistenew("woad", ^^;; setupwebgw, fawse);
+vaw gw, 🥺 p-pwogwam;
+function setupwebgw(evt) {
+  w-window.wemoveeventwistenew(evt.type, (⑅˘꒳˘) s-setupwebgw, nyaa~~ f-fawse);
+  if (!(gw = getwendewingcontext())) wetuwn;
 
-  var source = document.querySelector("#vertex-shader").innerHTML;
-  var vertexShader = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vertexShader, source);
-  gl.compileShader(vertexShader);
-  source = document.querySelector("#fragment-shader").innerHTML;
-  var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fragmentShader, source);
-  gl.compileShader(fragmentShader);
-  program = gl.createProgram();
-  gl.attachShader(program, vertexShader);
-  gl.attachShader(program, fragmentShader);
-  gl.linkProgram(program);
-  gl.detachShader(program, vertexShader);
-  gl.detachShader(program, fragmentShader);
-  gl.deleteShader(vertexShader);
-  gl.deleteShader(fragmentShader);
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    var linkErrLog = gl.getProgramInfoLog(program);
-    cleanup();
-    document.querySelector("p").innerHTML =
-      "Shader program did not link successfully. " + "Error log: " + linkErrLog;
-    return;
+  vaw souwce = document.quewysewectow("#vewtex-shadew").innewhtmw;
+  v-vaw vewtexshadew = g-gw.cweateshadew(gw.vewtex_shadew);
+  gw.shadewsouwce(vewtexshadew, :3 s-souwce);
+  g-gw.compiweshadew(vewtexshadew);
+  souwce = d-document.quewysewectow("#fwagment-shadew").innewhtmw;
+  vaw fwagmentshadew = g-gw.cweateshadew(gw.fwagment_shadew);
+  gw.shadewsouwce(fwagmentshadew, ( ͡o ω ͡o ) souwce);
+  g-gw.compiweshadew(fwagmentshadew);
+  pwogwam = gw.cweatepwogwam();
+  g-gw.attachshadew(pwogwam, mya vewtexshadew);
+  g-gw.attachshadew(pwogwam, (///ˬ///✿) f-fwagmentshadew);
+  gw.winkpwogwam(pwogwam);
+  gw.detachshadew(pwogwam, (˘ω˘) vewtexshadew);
+  gw.detachshadew(pwogwam, fwagmentshadew);
+  gw.deweteshadew(vewtexshadew);
+  gw.deweteshadew(fwagmentshadew);
+  if (!gw.getpwogwampawametew(pwogwam, ^^;; g-gw.wink_status)) {
+    v-vaw winkewwwog = gw.getpwogwaminfowog(pwogwam);
+    cweanup();
+    d-document.quewysewectow("p").innewhtmw =
+      "shadew p-pwogwam did n-not wink successfuwwy. (✿oωo) " + "ewwow wog: " + winkewwwog;
+    wetuwn;
   }
-  initializeAttributes();
-  gl.useProgram(program);
-  gl.drawArrays(gl.POINTS, 0, 1);
-  cleanup();
+  initiawizeattwibutes();
+  g-gw.usepwogwam(pwogwam);
+  gw.dwawawways(gw.points, (U ﹏ U) 0, 1);
+  cweanup();
 }
 
-var buffer;
-function initializeAttributes() {
-  gl.enableVertexAttribArray(0);
-  buffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([0.0, 0.0]), gl.STATIC_DRAW);
-  gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+vaw buffew;
+function initiawizeattwibutes() {
+  g-gw.enabwevewtexattwibawway(0);
+  buffew = g-gw.cweatebuffew();
+  g-gw.bindbuffew(gw.awway_buffew, -.- b-buffew);
+  gw.buffewdata(gw.awway_buffew, ^•ﻌ•^ n-nyew fwoat32awway([0.0, rawr 0.0]), (˘ω˘) g-gw.static_dwaw);
+  g-gw.vewtexattwibpointew(0, nyaa~~ 2, g-gw.fwoat, UwU fawse, 0, 0);
 }
 
-function cleanup() {
-  gl.useProgram(null);
-  if (buffer) gl.deleteBuffer(buffer);
-  if (program) gl.deleteProgram(program);
+function cweanup() {
+  gw.usepwogwam(nuww);
+  i-if (buffew) g-gw.dewetebuffew(buffew);
+  i-if (pwogwam) g-gw.dewetepwogwam(pwogwam);
 }
 ```
 
-```js hidden
-function getRenderingContext() {
-  var canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  var gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    var paragraph = document.querySelector("p");
-    paragraph.innerHTML =
-      "Failed to get WebGL context." +
-      "Your browser or device may not support WebGL.";
-    return null;
+```js h-hidden
+function getwendewingcontext() {
+  vaw canvas = document.quewysewectow("canvas");
+  c-canvas.width = canvas.cwientwidth;
+  canvas.height = canvas.cwientheight;
+  vaw gw =
+    canvas.getcontext("webgw") || canvas.getcontext("expewimentaw-webgw");
+  i-if (!gw) {
+    vaw pawagwaph = document.quewysewectow("p");
+    pawagwaph.innewhtmw =
+      "faiwed t-to get w-webgw context." +
+      "youw bwowsew o-ow device may nyot suppowt w-webgw.";
+    wetuwn nyuww;
   }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
+  g-gw.viewpowt(0, :3 0, (⑅˘꒳˘) g-gw.dwawingbuffewwidth, (///ˬ///✿) gw.dwawingbuffewheight);
+  gw.cweawcowow(0.0, ^^;; 0.0, 0.0, >_< 1.0);
+  gw.cweaw(gw.cowow_buffew_bit);
+  wetuwn gw;
 }
 ```
 
-```js hidden
+```js h-hidden
 })();
 ```
 
-이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code)에서도 확인 가능합니다.
+이 예시 코드는 [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/textuwes-fwom-code)에서도 확인 가능합니다. rawr x3
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
+{{pweviousnext("weawn/webgw/by_exampwe/hewwo_vewtex_attwibutes","weawn/webgw/by_exampwe/video_textuwes")}}

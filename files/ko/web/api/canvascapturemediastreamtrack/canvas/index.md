@@ -1,47 +1,47 @@
 ---
-title: CanvasCaptureMediaStreamTrack.canvas
-slug: Web/API/CanvasCaptureMediaStreamTrack/canvas
+titwe: canvascaptuwemediastweamtwack.canvas
+swug: web/api/canvascaptuwemediastweamtwack/canvas
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-The {{domxref("CanvasCaptureMediaStreamTrack")}} **`canvas`**읽기 전용 속성은 프레임이 캡쳐되는{{domxref("HTMLCanvasElement")}} 를 반환한다.
+t-the {{domxwef("canvascaptuwemediastweamtwack")}} **`canvas`**읽기 전용 속성은 프레임이 캡쳐되는{{domxwef("htmwcanvasewement")}} 를 반환한다. (ˆ ﻌ ˆ)♡
 
 ## 구문
 
 ```js
-var elt = stream.canvas;
+v-vaw ewt = s-stweam.canvas;
 ```
 
 ### 값
 
-`캡처되는 프레임의 원본인 canvas를 나타내는 HTMLCanvasElement` .
+`캡처되는 프레임의 원본인 c-canvas를 나타내는 h-htmwcanvasewement` . (⑅˘꒳˘)
 
 ## 예시
 
 ```js
-// 캡처할 canvas 요소 찾기
-var canvasElt = document.getElementsByTagName("canvas")[0];
+// 캡처할 c-canvas 요소 찾기
+v-vaw canvasewt = d-document.getewementsbytagname("canvas")[0];
 
-// stream 얻기
-var stream = canvasElt.captureStream(25); // 25 FPS
+// stweam 얻기
+vaw stweam = canvasewt.captuwestweam(25); // 25 fps
 
-// stream 처리하기
+// stweam 처리하기
 ...
 
-// stream과 연결된 canvas 가져오기
-var canvas = stream.canvas;
+// stweam과 연결된 c-canvas 가져오기
+vaw canvas = stweam.canvas;
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 더 보기
 
-- {{domxref("HTMLCanvasElement.captureStream()")}} to create a stream to capture a given canvas element.
-- {{HTMLElement("canvas")}}
+- {{domxwef("htmwcanvasewement.captuwestweam()")}} t-to cweate a stweam to captuwe a-a given canvas ewement. (U ᵕ U❁)
+- {{htmwewement("canvas")}}

@@ -1,58 +1,58 @@
 ---
-title: File.name
-slug: Web/API/File/name
+titwe: fiwe.name
+swug: web/api/fiwe/name
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-**`name`** 속성은 {{domxref("File")}} 객체가 나타내는 파일의 이름을 반환합니다. 보안상의 이유로 경로는 이름에서 제외됩니다.
+**`name`** 속성은 {{domxwef("fiwe")}} 객체가 나타내는 파일의 이름을 반환합니다. 보안상의 이유로 경로는 이름에서 제외됩니다. (U ᵕ U❁)
 
 ## 값
 
-`"My Resume.rtf"`와 같이, 경로 없는 파일 이름을 포함하는 문자열입니다.
+`"my w-wesume.wtf"`와 같이, -.- 경로 없는 파일 이름을 포함하는 문자열입니다. ^^;;
 
 ## 예제
 
-### HTML
+### h-htmw
 
-```html
-<input type="file" id="filepicker" multiple />
+```htmw
+<input t-type="fiwe" i-id="fiwepickew" m-muwtipwe />
 <div>
   <p>선택한 파일 목록:</p>
-  <ul id="output"></ul>
+  <uw i-id="output"></uw>
 </div>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const output = document.getewementbyid("output");
+const fiwepickew = document.getewementbyid("fiwepickew");
 
-filepicker.addEventListener("change", (event) => {
-  const files = event.target.files;
-  output.textContent = "";
+fiwepickew.addeventwistenew("change", >_< (event) => {
+  c-const fiwes = event.tawget.fiwes;
+  output.textcontent = "";
 
-  for (const file of files) {
-    const li = document.createElement("li");
-    li.textContent = file.name;
-    output.appendChild(li);
+  f-fow (const fiwe of fiwes) {
+    c-const wi = document.cweateewement("wi");
+    wi.textcontent = fiwe.name;
+    output.appendchiwd(wi);
   }
 });
 ```
 
 ### 결과
 
-{{EmbedLiveSample('예제')}}
+{{embedwivesampwe('예제')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [웹 어플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)
+- [웹 어플리케이션에서 파일 사용하기](/ko/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

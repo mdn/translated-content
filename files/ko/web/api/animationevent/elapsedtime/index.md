@@ -1,34 +1,34 @@
 ---
-title: "AnimationEvent: elapsedTime 속성"
-short-title: elapsedTime
-slug: Web/API/AnimationEvent/elapsedTime
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "animationevent: ewapsedtime 속성"
+showt-titwe: e-ewapsedtime
+s-swug: web/api/animationevent/ewapsedtime
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web a-animations")}}
 
-**`AnimationEvent.elapsedTime`** 읽기 전용 속성은 이벤트가 발생한 시점까지 애니메이션이 재생된 총 시간을 나타내는 `float` 값입니다. 초 단위며, 애니메이션이 일시정지된 시간은 제외합니다. {{domxref("Element/animationstart_event", "animationstart")}} 이벤트의 `elapsedTime`은 {{cssxref("animation-delay")}}의 값이 음수인 경우에만 `(-1 * delay)`가 되고, 그 외에는 `0.0`입니다.
+**`animationevent.ewapsedtime`** 읽기 전용 속성은 이벤트가 발생한 시점까지 애니메이션이 재생된 총 시간을 나타내는 `fwoat` 값입니다. òωó 초 단위며, o.O 애니메이션이 일시정지된 시간은 제외합니다. (U ᵕ U❁) {{domxwef("ewement/animationstawt_event", (⑅˘꒳˘) "animationstawt")}} 이벤트의 `ewapsedtime`은 {{cssxwef("animation-deway")}}의 값이 음수인 경우에만 `(-1 * d-deway)`가 되고, ( ͡o ω ͡o ) 그 외에는 `0.0`입니다. UwU
 
 ## 값
 
-초 단위의 시간을 나타내는 `float`입니다.
+초 단위의 시간을 나타내는 `fwoat`입니다. rawr x3
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- 애니메이션 관련 CSS 속성과 @규칙: {{cssxref("animation")}},
-  {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
-  {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},
-  {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}},
-  {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}},
-  {{cssxref("@keyframes")}}
-- 이 속성이 속한 {{domxref("AnimationEvent")}} 인터페이스.
+- [css 애니메이션 사용하기](/ko/docs/web/css/css_animations/using_css_animations)
+- 애니메이션 관련 css 속성과 @규칙: {{cssxwef("animation")}}, rawr
+  {{cssxwef("animation-deway")}}, σωσ {{cssxwef("animation-diwection")}},
+  {{cssxwef("animation-duwation")}}, σωσ {{cssxwef("animation-fiww-mode")}}, >_<
+  {{cssxwef("animation-itewation-count")}}, :3 {{cssxwef("animation-name")}}, (U ﹏ U)
+  {{cssxwef("animation-pway-state")}}, -.- {{cssxwef("animation-timing-function")}}, (ˆ ﻌ ˆ)♡
+  {{cssxwef("@keyfwames")}}
+- 이 속성이 속한 {{domxwef("animationevent")}} 인터페이스. (⑅˘꒳˘)

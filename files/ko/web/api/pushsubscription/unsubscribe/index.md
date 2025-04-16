@@ -1,40 +1,40 @@
 ---
-title: "PushSubscription: unsubscribe() 메서드"
-short-title: unsubscribe()
-slug: Web/API/PushSubscription/unsubscribe
-l10n:
-  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
+titwe: "pushsubscwiption: unsubscwibe() 메서드"
+s-showt-titwe: u-unsubscwibe()
+s-swug: web/api/pushsubscwiption/unsubscwibe
+w-w10n:
+  s-souwcecommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{apiwef("push api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews}}
 
-{{domxref("PushSubscription")}} 인터페이스의 `unsubscribe()` 메서드는
+{{domxwef("pushsubscwiption")}} 인터페이스의 `unsubscwibe()` 메서드는
 현재 구독이 성공적으로 구독 취소될 때 불리언 값으로 이행되는
-{{jsxref("Promise")}}를 반환합니다.
+{{jsxwef("pwomise")}}를 반환합니다. (⑅˘꒳˘)
 
 ## 구문
 
-```js-nolint
-unsubscribe()
+```js-nowint
+u-unsubscwibe()
 ```
 
 ### 매개변수
 
-없음.
+없음. ( ͡o ω ͡o )
 
 ### 반환 값
 
 현재 구독이 성공적으로 구독 취소될 때
-불리언 값으로 이행되는 {{jsxref("Promise")}}.
+불리언 값으로 이행되는 {{jsxwef("pwomise")}}. UwU
 
 ## 예제
 
 ```js
-navigator.serviceWorker.ready.then((reg) => {
-  reg.pushManager.getSubscription().then((subscription) => {
-    subscription
-      .unsubscribe()
-      .then((successful) => {
+n-nyavigatow.sewvicewowkew.weady.then((weg) => {
+  weg.pushmanagew.getsubscwiption().then((subscwiption) => {
+    s-subscwiption
+      .unsubscwibe()
+      .then((successfuw) => {
         // 성공적으로 구독을 취소했습니다
       })
       .catch((e) => {
@@ -46,12 +46,12 @@ navigator.serviceWorker.ready.then((reg) => {
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{domxref("PushManager.getSubscription")}}
+- {{domxwef("pushmanagew.getsubscwiption")}}

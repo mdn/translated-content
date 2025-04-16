@@ -1,46 +1,46 @@
 ---
-title: AudioNode.numberOfInputs
-slug: Web/API/AudioNode/numberOfInputs
+titwe: audionode.numbewofinputs
+swug: web/api/audionode/numbewofinputs
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-{{domxref("AudioNode")}} 인터페이스의 `numberOfInputs` 속성은 해당 노드에 공급되는 입력의 수를 반환합니다. 소스 노드는 `numberOfInputs` 속성의 값이 0인 노드로 정의됩니다.
+{{domxwef("audionode")}} 인터페이스의 `numbewofinputs` 속성은 해당 노드에 공급되는 입력의 수를 반환합니다. >_< 소스 노드는 `numbewofinputs` 속성의 값이 0인 노드로 정의됩니다. :3
 
 ## 구문
 
 ```js
-var numInputs = audioNode.numberOfInputs;
+v-vaw nyuminputs = a-audionode.numbewofinputs;
 ```
 
 ### 값
 
-integer ≥ 0.
+i-integew ≥ 0. (U ﹏ U)
 
 ## 예제
 
 ```js
-const audioCtx = new AudioContext();
+c-const audioctx = n-nyew audiocontext();
 
-const oscillator = audioCtx.createOscillator();
-const gainNode = audioCtx.createGain();
+c-const osciwwatow = audioctx.cweateosciwwatow();
+const gainnode = audioctx.cweategain();
 
-oscillator.connect(gainNode).connect(audioCtx.destination);
+osciwwatow.connect(gainnode).connect(audioctx.destination);
 
-console.log(oscillator.numberOfInputs); // 0
-console.log(gainNode.numberOfInputs); // 1
-console.log(audioCtx.destination.numberOfInputs); // 1
+consowe.wog(osciwwatow.numbewofinputs); // 0
+c-consowe.wog(gainnode.numbewofinputs); // 1
+consowe.wog(audioctx.destination.numbewofinputs); // 1
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Web Audio
-  API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web audio
+  api 사용하기](/ko/docs/web/api/web_audio_api/using_web_audio_api)

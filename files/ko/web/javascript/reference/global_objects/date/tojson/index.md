@@ -1,61 +1,61 @@
 ---
-title: Date.prototype.toJSON()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
+titwe: date.pwototype.tojson()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/tojson
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toJSON()`** 메서드는 {{jsxref("Date")}} 객체의 문자열 표현을 반환합니다.
+**`tojson()`** 메서드는 {{jsxwef("date")}} 객체의 문자열 표현을 반환합니다. (U ᵕ U❁)
 
-{{InteractiveExample("JavaScript Demo: Date.toJSON()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.tojson()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30 UTC");
+```js i-intewactive-exampwe
+const e-event = nyew d-date("august 19, -.- 1975 23:15:30 u-utc");
 
-const jsonDate = event.toJSON();
+const jsondate = e-event.tojson();
 
-console.log(jsonDate);
-// Expected output: "1975-08-19T23:15:30.000Z"
+c-consowe.wog(jsondate);
+// expected output: "1975-08-19t23:15:30.000z"
 
-console.log(new Date(jsonDate).toUTCString());
-// Expected output: "Tue, 19 Aug 1975 23:15:30 GMT"
+consowe.wog(new date(jsondate).toutcstwing());
+// expected output: "tue, ^^;; 19 a-aug 1975 23:15:30 gmt"
 ```
 
 ## 구문
 
 ```js
-dateObj.toJSON();
+dateobj.tojson();
 ```
 
 ### 반환 값
 
-주어진 날짜의 문자열 표현.
+주어진 날짜의 문자열 표현. >_<
 
 ## 설명
 
-{{jsxref("Date")}} 인스턴스는 시간의 특정 지점을 가리킵니다. `toJSON()`을 호출하면 {{jsxref("Date.prototype.toISOString()", "toISOString()")}} 사용해 그 인스턴스가 가리키는 시간의 문자열 표현을 반환합니다. `toJSON()`은 `Date` 값을 {{Glossary("JSON")}}으로 직렬화할 때 유용하게 사용할 수 있도록 만들어졌습니다.
+{{jsxwef("date")}} 인스턴스는 시간의 특정 지점을 가리킵니다. mya `tojson()`을 호출하면 {{jsxwef("date.pwototype.toisostwing()", mya "toisostwing()")}} 사용해 그 인스턴스가 가리키는 시간의 문자열 표현을 반환합니다. 😳 `tojson()`은 `date` 값을 {{gwossawy("json")}}으로 직렬화할 때 유용하게 사용할 수 있도록 만들어졌습니다. XD
 
 ## 예제
 
-### `toJSON()` 사용하기
+### `tojson()` 사용하기
 
 ```js
-const jsonDate = new Date().toJSON();
-const backToDate = new Date(jsonDate);
+c-const jsondate = nyew date().tojson();
+c-const backtodate = new date(jsondate);
 
-console.log(jsonDate); //2015-10-26T07:46:36.611Z
+consowe.wog(jsondate); //2015-10-26t07:46:36.611z
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.toutcstwing()")}}

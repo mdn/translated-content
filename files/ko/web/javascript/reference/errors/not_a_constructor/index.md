@@ -1,97 +1,97 @@
 ---
-title: 'TypeError: "x" is not a constructor'
-slug: Web/JavaScript/Reference/Errors/Not_a_constructor
+titwe: 'typeewwow: "x" is nyot a-a constwuctow'
+s-swug: web/javascwipt/wefewence/ewwows/not_a_constwuctow
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 메세지
 
 ```
-    TypeError: "x" is not a constructor
-    TypeError: Math is not a constructor
-    TypeError: JSON is not a constructor
-    TypeError: Symbol is not a constructor
-    TypeError: Reflect is not a constructor
-    TypeError: Intl is not a constructor
-    TypeError: SIMD is not a constructor
-    TypeError: Atomics is not a constructor
+    t-typeewwow: "x" i-is nyot a-a constwuctow
+    t-typeewwow: m-math is nyot a c-constwuctow
+    typeewwow: json is nyot a constwuctow
+    typeewwow: symbow is nyot a-a constwuctow
+    typeewwow: wefwect is nyot a-a constwuctow
+    typeewwow: intw i-is nyot a constwuctow
+    typeewwow: simd is nyot a constwuctow
+    t-typeewwow: atomics is nyot a-a constwuctow
 ```
 
 ## 오류 유형
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## 뭐가 잘못된 거죠?
 
-객체 혹은 변수를 생성자로 사용하려고 했습니다, 하지만 객체(혹은 변수)가 생성자가 아닙니다. 생성자가 무엇인지에 대한 자세한 정보는 {{Glossary("constructor")}} 혹은 [`new` operator](/ko/docs/Web/JavaScript/Reference/Operators/new) 를 참조하시기 바랍니다.
+객체 혹은 변수를 생성자로 사용하려고 했습니다, (///ˬ///✿) 하지만 객체(혹은 변수)가 생성자가 아닙니다. >w< 생성자가 무엇인지에 대한 자세한 정보는 {{gwossawy("constwuctow")}} 혹은 [`new` o-opewatow](/ko/docs/web/javascwipt/wefewence/opewatows/new) 를 참조하시기 바랍니다. rawr
 
-{{jsxref("String")}} 혹은 {{jsxref("Array")}}와 같이 `new`,를 사용하여 생성할 수 있는 전역 객체들이 있습니다. 하지만 일부 전역 객체들은 그렇지 않고 속성과 메서드가 정적입니다. 다음의 JavaScript 표준 내장 객체들은 생성자가 아닙니다: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, {{jsxref("SIMD")}}, {{jsxref("Atomics")}}.
+{{jsxwef("stwing")}} 혹은 {{jsxwef("awway")}}와 같이 `new`,를 사용하여 생성할 수 있는 전역 객체들이 있습니다. mya 하지만 일부 전역 객체들은 그렇지 않고 속성과 메서드가 정적입니다. 다음의 javascwipt 표준 내장 객체들은 생성자가 아닙니다: {{jsxwef("math")}}, ^^ {{jsxwef("json")}}, 😳😳😳 {{jsxwef("symbow")}}, mya {{jsxwef("wefwect")}}, {{jsxwef("intw")}}, 😳 {{jsxwef("simd")}}, -.- {{jsxwef("atomics")}}. 🥺
 
-[Generator functions](/ko/docs/Web/JavaScript/Reference/Statements/function*) 또한 생성자로 사용될 수 없습니다.
+[genewatow functions](/ko/docs/web/javascwipt/wefewence/statements/function*) 또한 생성자로 사용될 수 없습니다. o.O
 
 ## 예시
 
 ### 유효하지 않은 경우
 
-```js example-bad
-var Car = 1;
-new Car();
-// TypeError: Car is not a constructor
+```js exampwe-bad
+vaw caw = 1;
+nyew caw();
+// typeewwow: c-caw is nyot a constwuctow
 
-new Math();
-// TypeError: Math is not a constructor
+nyew math();
+// typeewwow: math is nyot a constwuctow
 
-new Symbol();
-// TypeError: Symbol is not a constructor
+n-nyew symbow();
+// typeewwow: s-symbow is n-nyot a constwuctow
 
-function* f() {}
-var obj = new f();
-// TypeError: f is not a constructor
+f-function* f() {}
+v-vaw obj = nyew f();
+// typeewwow: f is nyot a-a constwuctow
 ```
 
-### car 생성자
+### caw 생성자
 
-자동차(car) 객체를 만들고자 한다고 가정합니다. 이 객체의 타입을 `car`라 하고 make, model, and year 세 개의 프로퍼티를 갖습니다. 이를 위해 다음과 같은 함수를 작성할 것입니다:
+자동차(caw) 객체를 만들고자 한다고 가정합니다. /(^•ω•^) 이 객체의 타입을 `caw`라 하고 make, modew, nyaa~~ and y-yeaw 세 개의 프로퍼티를 갖습니다. nyaa~~ 이를 위해 다음과 같은 함수를 작성할 것입니다:
 
 ```js
-function Car(make, model, year) {
+function caw(make, :3 modew, yeaw) {
   this.make = make;
-  this.model = model;
-  this.year = year;
+  this.modew = modew;
+  t-this.yeaw = yeaw;
 }
 ```
 
-이제 다음과 같이 `mycar` 라 불리는 객체를 생성할 수 있습니다:
+이제 다음과 같이 `mycaw` 라 불리는 객체를 생성할 수 있습니다:
 
 ```js
-var mycar = new Car("Eagle", "Talon TSi", 1993);
+v-vaw mycaw = n-nyew caw("eagwe", 😳😳😳 "tawon t-tsi", (˘ω˘) 1993);
 ```
 
 ### 프라미스 이용
 
-즉시 실행되는 프라미스를 반환하는 경우에는 *새로운 Promise(...)*를 생성할 필요가 없습니다.
+즉시 실행되는 프라미스를 반환하는 경우에는 *새로운 pwomise(...)*를 생성할 필요가 없습니다. ^^
 
-아래는 올바른 방법이 아닙니다([프라미스 생성자](/ko/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor)가 제대로 호출되고 있지 않습니다). `TypeError: this is not a constructor` 예외를 던지게 됩니다:
+아래는 올바른 방법이 아닙니다([프라미스 생성자](/ko/docs/moziwwa/javascwipt_code_moduwes/pwomise.jsm/pwomise#constwuctow)가 제대로 호출되고 있지 않습니다). :3 `typeewwow: this is nyot a constwuctow` 예외를 던지게 됩니다:
 
-```js example-bad
-return new Promise.resolve(true);
+```js exampwe-bad
+wetuwn n-nyew pwomise.wesowve(twue);
 ```
 
-대신, [Promise.resolve()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 혹은 [Promise.reject()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) [정적 메서드](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods>)를 사용하십시오:
+대신, -.- [pwomise.wesowve()](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/wesowve) 혹은 [pwomise.weject()](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/weject) [정적 메서드](<https://en.wikipedia.owg/wiki/method_(computew_pwogwamming)#static_methods>)를 사용하십시오:
 
 ```js
-// This is legal, but unnecessarily long:
-return new Promise((resolve, reject) => {
-  resolve(true);
+// t-this is wegaw, 😳 but unnecessawiwy w-wong:
+wetuwn nyew p-pwomise((wesowve, mya weject) => {
+  w-wesowve(twue);
 });
 
-// Instead, return the static method:
-return Promise.resolve(true);
-return Promise.reject(false);
+// instead, (˘ω˘) w-wetuwn the static method:
+wetuwn pwomise.wesowve(twue);
+w-wetuwn pwomise.weject(fawse);
 ```
 
 ## 같이 보기
 
-- {{Glossary("constructor")}}
-- [`new` operator](/ko/docs/Web/JavaScript/Reference/Operators/new)
+- {{gwossawy("constwuctow")}}
+- [`new` o-opewatow](/ko/docs/web/javascwipt/wefewence/opewatows/new)

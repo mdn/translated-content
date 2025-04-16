@@ -1,86 +1,86 @@
 ---
-title: "Window: message 이벤트"
-slug: Web/API/Window/message_event
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: message 이벤트"
+s-swug: web/api/window/message_event
+w-w10n:
+  s-souwcecommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`message` 이벤트는 window가 메세지를 받을 때, 예를 들어 다른 브라우징 맥락에서 [`Window.postMessage()`](/ko/docs/Web/API/Window/postMessage)을 호출할 때 {{domxref('Window')}} 객체에서 실행됩니다.
+`message` 이벤트는 w-window가 메세지를 받을 때, (U ᵕ U❁) 예를 들어 다른 브라우징 맥락에서 [`window.postmessage()`](/ko/docs/web/api/window/postmessage)을 호출할 때 {{domxwef('window')}} 객체에서 실행됩니다. -.-
 
-이 이벤트는 취소할 수 없고, 버블링되지도 않습니다.
+이 이벤트는 취소할 수 없고, ^^;; 버블링되지도 않습니다. >_<
 
 ## 구문
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}}와 같은 메서드에서 이벤트 이름을 사용하거나, 이벤트 핸들러의 속성을 설정하세요.
+{{domxwef("eventtawget.addeventwistenew", mya "addeventwistenew()")}}와 같은 메서드에서 이벤트 이름을 사용하거나, mya 이벤트 핸들러의 속성을 설정하세요. 😳
 
 ```js
-addEventListener("message", (event) => {});
+a-addeventwistenew("message", XD (event) => {});
 
-onmessage = (event) => {};
+o-onmessage = (event) => {};
 ```
 
 ## 이벤트 타입
 
-{{domxref("Event")}}로부터 상속된 {{domxref("MessageEvent")}}입니다.
+{{domxwef("event")}}로부터 상속된 {{domxwef("messageevent")}}입니다.
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
 ## 이벤트 속성
 
-_이 인터페이스는 부모인 {{domxref("Event")}}의 속성들도 상속받습니다._
+_이 인터페이스는 부모인 {{domxwef("event")}}의 속성들도 상속받습니다._
 
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
-  - : 발신자가 보낸 메세지 데이터입니다.
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
-  - : 발신자의 출처를 나타내는 문자열입니다.
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : 이벤트의 고유한 ID 값을 나타내는 문자열입니다.
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : 발신인을 나타내는 `MessageEventSource`({{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} 등등) 입니다.
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : 메세지가 전송되는 채널과 연결된 포트를 나타내는 {{domxref("MessagePort")}} 객체의 배열입니다(공유 워커에 메세지를 보내거나, 채널 메세징에 적합합니다).
+- {{domxwef("messageevent.data")}} {{weadonwyinwine}}
+  - : 발신자가 보낸 메세지 데이터입니다. :3
+- {{domxwef("messageevent.owigin")}} {{weadonwyinwine}}
+  - : 발신자의 출처를 나타내는 문자열입니다. 😳😳😳
+- {{domxwef("messageevent.wasteventid")}} {{weadonwyinwine}}
+  - : 이벤트의 고유한 i-id 값을 나타내는 문자열입니다. -.-
+- {{domxwef("messageevent.souwce")}} {{weadonwyinwine}}
+  - : 발신인을 나타내는 `messageeventsouwce`({{gwossawy("windowpwoxy")}}, {{domxwef("messagepowt")}}, ( ͡o ω ͡o ) {{domxwef("sewvicewowkew")}} 등등) 입니다. rawr x3
+- {{domxwef("messageevent.powts")}} {{weadonwyinwine}}
+  - : 메세지가 전송되는 채널과 연결된 포트를 나타내는 {{domxwef("messagepowt")}} 객체의 배열입니다(공유 워커에 메세지를 보내거나, nyaa~~ 채널 메세징에 적합합니다). /(^•ω•^)
 
 ## 예시
 
-서로 다른 [`<iframe>`](/ko/docs/Web/HTML/Element/iframe)과 같은, 다른 브라우징 맥락에서 메세지를 보낸다고 가정할 때, 아래와 같이 코드를 작성하면 됩니다.
+서로 다른 [`<ifwame>`](/ko/docs/web/htmw/ewement/ifwame)과 같은, rawr 다른 브라우징 맥락에서 메세지를 보낸다고 가정할 때, OwO 아래와 같이 코드를 작성하면 됩니다. (U ﹏ U)
 
 ```js
-const targetFrame = window.top.frames[1];
-const targetOrigin = "https://example.org";
-const windowMessageButton = document.querySelector("#window-message");
+const t-tawgetfwame = window.top.fwames[1];
+const tawgetowigin = "https://exampwe.owg";
+const windowmessagebutton = document.quewysewectow("#window-message");
 
-windowMessageButton.addEventListener("click", () => {
-  targetFrame.postMessage("hello there", targetOrigin);
+w-windowmessagebutton.addeventwistenew("cwick", >_< () => {
+  tawgetfwame.postmessage("hewwo thewe", rawr x3 tawgetowigin);
 });
 ```
 
-수신자는 [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용해, 아래 코드와 같이 메세지를 받을 수 있습니다.
+수신자는 [`addeventwistenew()`](/ko/docs/web/api/eventtawget/addeventwistenew)를 사용해, mya 아래 코드와 같이 메세지를 받을 수 있습니다. nyaa~~
 
 ```js
-window.addEventListener("message", (event) => {
-  console.log(`Received message: ${event.data}`);
+w-window.addeventwistenew("message", (⑅˘꒳˘) (event) => {
+  consowe.wog(`weceived m-message: ${event.data}`);
 });
 ```
 
-다른 방법으로는 `onmessage`라는 이벤트 핸들러의 속성을 이용할 수 있습니다.
+다른 방법으로는 `onmessage`라는 이벤트 핸들러의 속성을 이용할 수 있습니다. rawr x3
 
 ```js
 window.onmessage = (event) => {
-  console.log(`Received message: ${event.data}`);
+  consowe.wog(`weceived message: ${event.data}`);
 };
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 연관된 이벤트들: [`messageerror`](/ko/docs/Web/API/Window/messageerror_event).
-- [`Window.postMessage()`](/ko/docs/Web/API/Window/postMessage).
+- 연관된 이벤트들: [`messageewwow`](/ko/docs/web/api/window/messageewwow_event). (✿oωo)
+- [`window.postmessage()`](/ko/docs/web/api/window/postmessage). (ˆ ﻌ ˆ)♡

@@ -1,58 +1,58 @@
 ---
-title: NodeList.entries()
-slug: Web/API/NodeList/entries
+titwe: nyodewist.entwies()
+swug: w-web/api/nodewist/entwies
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`NodeList.entries()`** 메서드는 이 객체에 포함된 모든 key/value 쌍을 통과하는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 이 값(value)은 {{domxref("Node")}} 객체입니다.
+**`nodewist.entwies()`** 메서드는 이 객체에 포함된 모든 k-key/vawue 쌍을 통과하는 {{jsxwef("itewation_pwotocows",'itewatow')}} 를 반환합니다. mya 이 값(vawue)은 {{domxwef("node")}} 객체입니다. mya
 
-## Syntax
+## s-syntax
 
 ```js
-list.entries();
+w-wist.entwies();
 ```
 
-### Return value
+### w-wetuwn v-vawue
 
-{{jsxref("Iteration_protocols","iterator")}} 를 반환합니다.
+{{jsxwef("itewation_pwotocows","itewatow")}} 를 반환합니다. 😳
 
-## Example
+## e-exampwe
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+vaw n-nyode = document.cweateewement("div");
+vaw kid1 = document.cweateewement("p");
+vaw kid2 = document.cweatetextnode("hey");
+vaw k-kid3 = document.cweateewement("span");
+nyode.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+n-nyode.appendchiwd(kid3);
 
-var list = node.childNodes;
+vaw wist = nyode.chiwdnodes;
 
-// Using for..of
-for (var entry of list.entries()) {
-  console.log(entry);
+// u-using fow..of
+fow (vaw entwy of wist.entwies()) {
+  consowe.wog(entwy);
 }
 ```
 
 결과는 다음과 같습니다:
 
 ```
-Array [ 0, <p> ]
-Array [ 1, #text "hey" ]
-Array [ 2, <span> ]
+a-awway [ 0, XD <p> ]
+awway [ 1, :3 #text "hey" ]
+a-awway [ 2, 😳😳😳 <span> ]
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

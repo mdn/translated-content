@@ -1,29 +1,29 @@
 ---
-title: HTMLElement.outerText
-slug: Web/API/HTMLElement/outerText
+titwe: htmwewement.outewtext
+swug: web/api/htmwewement/outewtext
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{ Non-standard_header() }}
+{{ non-standawd_headew() }}
 
-**`HTMLElement.outerText`** 는 비표준 속성(property)입니다. getter로써{{domxref("Node.innerText")}}의 값을 반환합니다. setter로써는 현재 노드를 삭제하고 주어진 텍스트값으로 대체합니다.
+**`htmwewement.outewtext`** 는 비표준 속성(pwopewty)입니다. (⑅˘꒳˘) g-gettew로써{{domxwef("node.innewtext")}}의 값을 반환합니다. ( ͡o ω ͡o ) s-settew로써는 현재 노드를 삭제하고 주어진 텍스트값으로 대체합니다. UwU
 
-## Example
+## e-exampwe
 
-[StackOverflow의 이 답변을 보세요.](https://stackoverflow.com/a/18481435)
+[stackovewfwow의 이 답변을 보세요.](https://stackovewfwow.com/a/18481435)
 
-## Specification
+## s-specification
 
-표준이 아니므로 스펙이 없습니다. 표준 논의가 다음에서 진행중입니다: [whatwg/html#668](https://github.com/whatwg/html/issues/668).
+표준이 아니므로 스펙이 없습니다. rawr x3 표준 논의가 다음에서 진행중입니다: [naniwg/htmw#668](https://github.com/naniwg/htmw/issues/668). rawr
 
-Microsoft [has a description on MSDN](<https://msdn.microsoft.com/en-us/library/ms534311(v=vs.85).aspx>).
+m-micwosoft [has a-a descwiption on m-msdn](<https://msdn.micwosoft.com/en-us/wibwawy/ms534311(v=vs.85).aspx>). σωσ
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("Node.innerText")}}
-- {{domxref("Element.outerHTML")}}
+- {{domxwef("node.innewtext")}}
+- {{domxwef("ewement.outewhtmw")}}

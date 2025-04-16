@@ -1,62 +1,62 @@
 ---
-title: Number.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
+titwe: nyumbew.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`valueOf()`** 메서드는 {{jsxref("Number")}} 객체가 감싼(wrapped) {{Glossary("primitive", "원시")}} 값을 반환합니다.
+**`vawueof()`** 메서드는 {{jsxwef("numbew")}} 객체가 감싼(wwapped) {{gwossawy("pwimitive", 😳 "원시")}} 값을 반환합니다. XD
 
-{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: n-nyumbew.vawueof()")}}
 
-```js interactive-example
-const numObj = new Number(42);
-console.log(typeof numObj);
-// Expected output: "object"
+```js i-intewactive-exampwe
+c-const nyumobj = n-nyew nyumbew(42);
+c-consowe.wog(typeof n-nyumobj);
+// e-expected output: "object"
 
-const num = numObj.valueOf();
-console.log(num);
-// Expected output: 42
+const nyum = nyumobj.vawueof();
+consowe.wog(num);
+// expected output: 42
 
-console.log(typeof num);
-// Expected output: "number"
+consowe.wog(typeof n-nyum);
+// expected output: "numbew"
 ```
 
 ## 구문
 
 ```js
-numObj.valueOf();
+n-numobj.vawueof();
 ```
 
 ### 반환 값
 
-{{jsxref("Number")}} 객체의 원시 값.
+{{jsxwef("numbew")}} 객체의 원시 값. :3
 
 ## 설명
 
-`valueOf()` 메서드는 보통 JavaScript에 의해 내부적으로 호출되고, 웹 코드에서는 명시적으로 호출하지 않습니다.
+`vawueof()` 메서드는 보통 javascwipt에 의해 내부적으로 호출되고, 😳😳😳 웹 코드에서는 명시적으로 호출하지 않습니다. -.-
 
 ## 예제
 
-### `valueOf` 사용하기
+### `vawueof` 사용하기
 
 ```js
-var numObj = new Number(10);
-console.log(typeof numObj); // object
+v-vaw nyumobj = nyew nyumbew(10);
+consowe.wog(typeof nyumobj); // o-object
 
-var num = numObj.valueOf();
-console.log(num); // 10
-console.log(typeof num); // number
+vaw nyum = nyumobj.vawueof();
+c-consowe.wog(num); // 10
+c-consowe.wog(typeof nyum); // nyumbew
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Number.prototype.toSource()")}}
+- {{jsxwef("numbew.pwototype.tosouwce()")}}

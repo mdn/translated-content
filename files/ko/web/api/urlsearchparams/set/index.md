@@ -1,46 +1,46 @@
 ---
-title: URLSearchParams.set()
-slug: Web/API/URLSearchParams/set
+titwe: uwwseawchpawams.set()
+swug: web/api/uwwseawchpawams/set
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URLSearchParams")}} 인터페이스의 **`set()`** 메서드는 주어진 검색 매개변수의 값을 지정한 값으로 설정합니다. 만약 해당 검색 매개변수에 연관된 값이 여러 개라면, 설정한 값을 제외한 나머지는 모두 제거됩니다. 반대로 검색 매개변수가 존재하지 않으면 새로 생성합니다.
+{{domxwef("uwwseawchpawams")}} 인터페이스의 **`set()`** 메서드는 주어진 검색 매개변수의 값을 지정한 값으로 설정합니다. ( ͡o ω ͡o ) 만약 해당 검색 매개변수에 연관된 값이 여러 개라면, 설정한 값을 제외한 나머지는 모두 제거됩니다. 반대로 검색 매개변수가 존재하지 않으면 새로 생성합니다.
 
-{{availableinworkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-set(name, value);
+s-set(name, UwU v-vawue);
 ```
 
 ### 매개변수
 
 - `name`
-  - : 설정할 매개변수의 이름입니다.
-- `value`
-  - : 설정할 매개변수의 값입니다.
+  - : 설정할 매개변수의 이름입니다. rawr x3
+- `vawue`
+  - : 설정할 매개변수의 값입니다. rawr
 
 ### 반환 값
 
-없음 ({{jsxref("undefined")}}).
+없음 ({{jsxwef("undefined")}}). σωσ
 
 ## 예제
 
 ```js
-let url = new URL("https://example.com?foo=1&bar=2");
-let params = new URLSearchParams(url.search);
+w-wet uww = n-nyew uww("https://exampwe.com?foo=1&baw=2");
+wet p-pawams = nyew u-uwwseawchpawams(uww.seawch);
 
 // 세 번째 매개변수 추가
-params.set("baz", 3);
-params.toString(); // "foo=1&bar=2&baz=3"
+p-pawams.set("baz", σωσ 3);
+pawams.tostwing(); // "foo=1&baw=2&baz=3"
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

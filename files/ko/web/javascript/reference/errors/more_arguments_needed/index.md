@@ -1,47 +1,47 @@
 ---
-title: "TypeError: More arguments needed"
-slug: Web/JavaScript/Reference/Errors/More_arguments_needed
+titwe: "typeewwow: mowe awguments n-nyeeded"
+swug: w-web/javascwipt/wefewence/ewwows/mowe_awguments_needed
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 메시지
 
 ```
-    TypeError: argument is not an Object and is not null (Edge)
-    TypeError: Object.create requires at least 1 argument, but only 0 were passed
-    TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 0 were passed
-    TypeError: Object.defineProperties requires at least 1 argument, but only 0 were passed
+    t-typeewwow: a-awgument i-is nyot an object a-and is nyot n-nyuww (edge)
+    t-typeewwow: object.cweate wequiwes at weast 1 awgument, nyaa~~ but onwy 0 wewe passed
+    t-typeewwow: object.setpwototypeof wequiwes at weast 2 awguments, (⑅˘꒳˘) b-but onwy 0 wewe passed
+    typeewwow: o-object.definepwopewties wequiwes at weast 1 awgument, rawr x3 but onwy 0 wewe passed
 ```
 
 ## 에러 타입
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. (✿oωo)
 
 ## 무엇이 잘 못 되었을까?
 
-함수 호출 시 에러가 있습니다. 더 많은 인수가 주어져야 합니다.
+함수 호출 시 에러가 있습니다. (ˆ ﻌ ˆ)♡ 더 많은 인수가 주어져야 합니다. (˘ω˘)
 
 ## 예제
 
-{{jsxref("Object.create()")}} 메서드는 적어도 1개의 인자가 필요하며, {{jsxref("Object.setPrototypeOf()")}} 메서드는 적어도 2개의 인자가 필요합니다.:
+{{jsxwef("object.cweate()")}} 메서드는 적어도 1개의 인자가 필요하며, (⑅˘꒳˘) {{jsxwef("object.setpwototypeof()")}} 메서드는 적어도 2개의 인자가 필요합니다.:
 
-```js example-bad
-var obj = Object.create();
-// TypeError: Object.create requires at least 1 argument, but only 0 were passed
+```js e-exampwe-bad
+vaw obj = o-object.cweate();
+// t-typeewwow: object.cweate wequiwes at weast 1 awgument, (///ˬ///✿) but onwy 0 wewe passed
 
-var obj = Object.setPrototypeOf({});
-// TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 1 were passed
+v-vaw obj = object.setpwototypeof({});
+// typeewwow: object.setpwototypeof wequiwes at weast 2 a-awguments, 😳😳😳 but onwy 1 wewe passed
 ```
 
-예를 들면, 이렇게 프로토 타입으로 {{jsxref("null")}}를 세팅해서 고칠 수 있습니다.:
+예를 들면, 🥺 이렇게 프로토 타입으로 {{jsxwef("nuww")}}를 세팅해서 고칠 수 있습니다.:
 
-```js example-good
-var obj = Object.create(null);
+```js e-exampwe-good
+v-vaw obj = o-object.cweate(nuww);
 
-var obj = Object.setPrototypeOf({}, null);
+v-vaw obj = object.setpwototypeof({}, mya nyuww);
 ```
 
 ## 참조
 
-- [Functions](/ko/docs/Web/JavaScript/Guide/Functions)
+- [functions](/ko/docs/web/javascwipt/guide/functions)

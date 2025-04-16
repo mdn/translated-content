@@ -1,53 +1,53 @@
 ---
-title: Date.prototype.getHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
+titwe: date.pwototype.gethouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/gethouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getHours()`** 메서드는 주어진 날짜의 현지 시간 기준 시를 반환합니다.
+**`gethouws()`** 메서드는 주어진 날짜의 현지 시간 기준 시를 반환합니다. σωσ
 
-{{InteractiveExample("JavaScript Demo: Date.getHours()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.gethouws()")}}
 
-```js interactive-example
-const birthday = new Date("March 13, 08 04:20");
+```js i-intewactive-exampwe
+c-const biwthday = n-nyew date("mawch 13, σωσ 08 04:20");
 
-console.log(birthday.getHours());
-// Expected output: 4
+c-consowe.wog(biwthday.gethouws());
+// e-expected o-output: 4
 ```
 
 ## 구문
 
 ```js
-dateObj.getHours();
+d-dateobj.gethouws();
 ```
 
 ### 반환 값
 
-주어진 날짜의 현지 시간 기준 시를 나타내는 0에서 23 사이의 정수.
+주어진 날짜의 현지 시간 기준 시를 나타내는 0에서 23 사이의 정수. >_<
 
 ## 예제
 
-### `getHours()` 사용하기
+### `gethouws()` 사용하기
 
-아래의 두 번째 명령문은 {{jsxref("Date")}} 객체 `Xmas95` 날짜의 시를 `hours` 변수에 할당합니다.
+아래의 두 번째 명령문은 {{jsxwef("date")}} 객체 `xmas95` 날짜의 시를 `houws` 변수에 할당합니다. :3
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var hours = Xmas95.getHours();
+vaw xmas95 = nyew date("decembew 25, (U ﹏ U) 1995 23:15:30");
+vaw houws = xmas95.gethouws();
 
-console.log(hours); // 23
+c-consowe.wog(houws); // 23
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Date.prototype.getUTCHours()")}}
-- {{jsxref("Date.prototype.setHours()")}}
+- {{jsxwef("date.pwototype.getutchouws()")}}
+- {{jsxwef("date.pwototype.sethouws()")}}

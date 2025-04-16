@@ -1,91 +1,91 @@
 ---
-title: AnalyserNode.fftSize
-slug: Web/API/AnalyserNode/fftSize
+titwe: anawysewnode.fftsize
+swug: web/api/anawysewnode/fftsize
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-{{domxref("AnalyserNode")}} 인터페이스의 **`fftSize`** 속성은 unsigned long 값이고 주파수 영역 데이터를 얻기 위해 [고속 푸리에 변환](https://en.wikipedia.org/wiki/Fast_Fourier_transform)(FFT)을 수행할 때 사용될 샘플에서의 window 사이즈를 나타냅니다.
+{{domxwef("anawysewnode")}} 인터페이스의 **`fftsize`** 속성은 u-unsigned w-wong 값이고 주파수 영역 데이터를 얻기 위해 [고속 푸리에 변환](https://en.wikipedia.owg/wiki/fast_fouwiew_twansfowm)(fft)을 수행할 때 사용될 샘플에서의 window 사이즈를 나타냅니다. >_<
 
 ## 구문
 
 ```js
-var curValue = analyserNode.fftSize;
-analyserNode.fftSize = newValue;
+v-vaw cuwvawue = a-anawysewnode.fftsize;
+a-anawysewnode.fftsize = n-nyewvawue;
 ```
 
 ### 값
 
-FFT의 window 사이즈를 나타내는 샘플의 수로 주어지는 unsigned 정수입니다. 값이 높을수록 주파수 영역의 자세함이 커지는 결과를 낳으나 시간 영역에서의 자세함은 떨어집니다.
+f-fft의 window 사이즈를 나타내는 샘플의 수로 주어지는 unsigned 정수입니다. (⑅˘꒳˘) 값이 높을수록 주파수 영역의 자세함이 커지는 결과를 낳으나 시간 영역에서의 자세함은 떨어집니다. /(^•ω•^)
 
-반드시 <math><semantics><msup><mn>2</mn><mn>5</mn></msup><annotation encoding="TeX">2^5</annotation></semantics></math>와 <math><semantics><msup><mn>2</mn><mn>15</mn></msup><annotation encoding="TeX">2^15</annotation></semantics></math> 사이의 2의 제곱이여야만 합니다. 즉 다음 중 하나여야 합니다: `32`, `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`, `16384`, 그리고 `32768`. 기본값은 `2048`입니다.
+반드시 <math><semantics><msup><mn>2</mn><mn>5</mn></msup><annotation encoding="tex">2^5</annotation></semantics></math>와 <math><semantics><msup><mn>2</mn><mn>15</mn></msup><annotation encoding="tex">2^15</annotation></semantics></math> 사이의 2의 제곱이여야만 합니다. rawr x3 즉 다음 중 하나여야 합니다: `32`, (U ﹏ U) `64`, (U ﹏ U) `128`, `256`, (⑅˘꒳˘) `512`, `1024`, òωó `2048`, `4096`, ʘwʘ `8192`, `16384`, /(^•ω•^) 그리고 `32768`. ʘwʘ 기본값은 `2048`입니다. σωσ
 
-> [!NOTE]
-> 만약 값이 2의 제곱이 아니거나 이 명시된 범위의 바깥에 있다면, `IndexSizeError`라는 이름의 {{domxref("DOMException")}}이 발생합니다.
+> [!note]
+> 만약 값이 2의 제곱이 아니거나 이 명시된 범위의 바깥에 있다면, OwO `indexsizeewwow`라는 이름의 {{domxwef("domexception")}}이 발생합니다. 😳😳😳
 
 ## 예제
 
-다음의 예제는 `AnalyserNode`를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 시간 영역의 데이터를 수집하고 현재 오디오 입력의 "오실로스코프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모를 확인하세요 (관련된 코드를 보려면 [app.js 라인 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)를 참고하세요).
+다음의 예제는 `anawysewnode`를 생성하기 위한 {{domxwef("audiocontext")}}와 그리고 나서 반복적으로 시간 영역의 데이터를 수집하고 현재 오디오 입력의 "오실로스코프 스타일의" 출력을 그리기 위한 {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}}과 {{htmwewement("canvas")}}의 기본 사용을 보여줍니다. 😳😳😳 더 완벽한 응용 예제/정보를 보려면 [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 데모를 확인하세요 (관련된 코드를 보려면 [app.js 라인 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)를 참고하세요). o.O
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+v-vaw audioctx = new (window.audiocontext || window.webkitaudiocontext)();
+v-vaw anawysew = audioctx.cweateanawysew();
 
   ...
 
-analyser.fftSize = 2048;
-var bufferLength = analyser.frequencyBinCount ;
-var dataArray = new Uint8Array(bufferLength);
-analyser.getByteTimeDomainData(dataArray);
+a-anawysew.fftsize = 2048;
+vaw buffewwength = anawysew.fwequencybincount ;
+vaw dataawway = n-nyew uint8awway(buffewwength);
+anawysew.getbytetimedomaindata(dataawway);
 
 // 현재 오디오 소스의 오실로스코프를 그립니다
 
-function draw() {
+f-function dwaw() {
 
-      drawVisual = requestAnimationFrame(draw);
+      d-dwawvisuaw = wequestanimationfwame(dwaw);
 
-      analyser.getByteTimeDomainData(dataArray);
+      anawysew.getbytetimedomaindata(dataawway);
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+      canvasctx.fiwwstywe = 'wgb(200, ( ͡o ω ͡o ) 200, 200)';
+      canvasctx.fiwwwect(0, (U ﹏ U) 0, w-width, height);
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+      canvasctx.winewidth = 2;
+      canvasctx.stwokestywe = 'wgb(0, (///ˬ///✿) 0, 0)';
 
-      canvasCtx.beginPath();
+      canvasctx.beginpath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+      vaw s-swicewidth = width * 1.0 / buffewwength;
+      vaw x-x = 0;
 
-      for(var i = 0; i < bufferLength; i++) {
+      f-fow(vaw i = 0; i-i < buffewwength; i-i++) {
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        vaw v = dataawway[i] / 128.0;
+        vaw y = v-v * height/2;
 
         if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
+          canvasctx.moveto(x, >w< y);
+        } e-ewse {
+          canvasctx.wineto(x, rawr y);
         }
 
-        x += sliceWidth;
+        x += swicewidth;
       }
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
+      canvasctx.wineto(canvas.width, mya c-canvas.height/2);
+      canvasctx.stwoke();
     };
 
-    draw();
+    d-dwaw();
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web a-audio api 사용하기](/ko/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,42 +1,42 @@
 ---
-title: Date.prototype.getUTCSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
+titwe: date.pwototype.getutcseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**getUTCSeconds()** 메서드는 표준시에 따라 지정된 날짜의 초를 반환합니다.
+**getutcseconds()** 메서드는 표준시에 따라 지정된 날짜의 초를 반환합니다. (⑅˘꒳˘)
 
-## Syntax
+## syntax
 
 ```js
-dateObj.getUTCSeconds();
+d-dateobj.getutcseconds();
 ```
 
-### Return value
+### wetuwn v-vawue
 
 0부터 59까지의 정수로, 표준시에 따라 지정된 날짜의 초를 나타냅니다.
 
-## Examples
+## e-exampwes
 
-### Using `getUTCSeconds()`
+### using `getutcseconds()`
 
-다음 예제에서는 현재 시간의 초 부분을 초 변수에 지정합니다.
+다음 예제에서는 현재 시간의 초 부분을 초 변수에 지정합니다. ( ͡o ω ͡o )
 
 ```js
-var today = new Date();
-var seconds = today.getUTCSeconds();
+v-vaw today = new d-date();
+vaw seconds = t-today.getutcseconds();
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see a-awso
 
-- {{jsxref("Date.prototype.getSeconds()")}}
-- {{jsxref("Date.prototype.setUTCSeconds()")}}
+- {{jsxwef("date.pwototype.getseconds()")}}
+- {{jsxwef("date.pwototype.setutcseconds()")}}

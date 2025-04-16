@@ -1,29 +1,29 @@
 ---
-title: "DataTransfer: DataTransfer() 생성자"
-short-title: DataTransfer()
-slug: Web/API/DataTransfer/DataTransfer
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "datatwansfew: datatwansfew() 생성자"
+s-showt-titwe: d-datatwansfew()
+swug: w-web/api/datatwansfew/datatwansfew
+w-w10n:
+  souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and d-dwop api")}}
 
-**`DataTransfer`** 생성자는 새로운 {{domxref("DataTransfer")}} 객체 인스턴스를 생성합니다.
+**`datatwansfew`** 생성자는 새로운 {{domxwef("datatwansfew")}} 객체 인스턴스를 생성합니다. (U ᵕ U❁)
 
 ## 구문
 
-```js-nolint
-new DataTransfer()
+```js-nowint
+n-nyew datatwansfew()
 ```
 
 ### 매개변수
 
-없음.
+없음. (⑅˘꒳˘)
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

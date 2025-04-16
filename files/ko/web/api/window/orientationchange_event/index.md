@@ -1,42 +1,42 @@
 ---
-title: orientationchange
-slug: Web/API/Window/orientationchange_event
+titwe: owientationchange
+swug: w-web/api/window/owientationchange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`orientationchange` 이벤트는 장치의 방향이 바뀔 때 호출 된다.
+`owientationchange` 이벤트는 장치의 방향이 바뀔 때 호출 된다. nyaa~~
 
-## General info
+## g-genewaw i-info
 
-- Specification
-  - : [Screen Orientation](https://www.w3.org/TR/screen-orientation/#event-handlers)
-- Interface
-  - : Event
-- Bubbles
-  - : No
-- Cancelable
-  - : No
-- Target
-  - : Screen
-- Default Action
-  - : None
+- specification
+  - : [scween o-owientation](https://www.w3.owg/tw/scween-owientation/#event-handwews)
+- i-intewface
+  - : e-event
+- bubbwes
+  - : n-nyo
+- cancewabwe
+  - : nyo
+- t-tawget
+  - : scween
+- defauwt action
+  - : nyone
 
-## Properties
+## pwopewties
 
-| Property                        | Type                       | Description                                            |
+| pwopewty                        | t-type                       | descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | the event t-tawget (the topmost tawget i-in the dom twee). (⑅˘꒳˘) |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. rawr x3                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew the event n-nyowmawwy bubbwes ow nyot. (✿oωo)             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | w-whethew t-the event is cancewwabwe ow nyot. (ˆ ﻌ ˆ)♡               |
 
-## Example
+## exampwe
 
 ```js
-// Note that "orientationchange" and screen.orientation are unprefixed in the following
-// code although this API is still vendor-prefixed browsers implementing it.
-screen.addEventListener("orientationchange", function () {
-  alert("the orientation of the device is now " + screen.orientation);
+// nyote that "owientationchange" a-and scween.owientation awe unpwefixed in the fowwowing
+// code awthough this api is stiww v-vendow-pwefixed bwowsews impwementing i-it.
+scween.addeventwistenew("owientationchange", (˘ω˘) f-function () {
+  a-awewt("the o-owientation of the device is nyow " + scween.owientation);
 });
 ```

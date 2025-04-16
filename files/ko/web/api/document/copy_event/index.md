@@ -1,53 +1,53 @@
 ---
-title: "Document: copy 이벤트"
-slug: Web/API/Document/copy_event
+titwe: "document: copy 이벤트"
+s-swug: web/api/document/copy_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`copy`** 이벤트는 사용자가 브라우저의 사용자 인터페이스를 통해 복사했을 때 발생합니다.
+**`copy`** 이벤트는 사용자가 브라우저의 사용자 인터페이스를 통해 복사했을 때 발생합니다. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">버블링</th>
+    <tw>
+      <th s-scope="wow">버블링</th>
       <td>예</td>
-    </tr>
-    <tr>
-      <th scope="row">취소 가능</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">취소 가능</th>
       <td>예</td>
-    </tr>
-    <tr>
-      <th scope="row">인터페이스</th>
-      <td>{{domxref("ClipboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">이벤트 처리기 속성</th>
-      <td>{{domxref("HTMLElement/oncopy", "oncopy")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">인터페이스</th>
+      <td>{{domxwef("cwipboawdevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">이벤트 처리기 속성</th>
+      <td>{{domxwef("htmwewement/oncopy", UwU "oncopy")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`copy` 이벤트의 원 대상은 복사 동작의 대상인 {{domxref("Element")}}입니다. {{domxref("Document")}}에서 수신할 경우 캡처 또는 버블링 단계의 이벤트를 받게 됩니다. 이벤트에 대한 자세한 정보는 [Element: copy 이벤트](/ko/docs/Web/API/Element/copy_event)에서 확인하세요.
+`copy` 이벤트의 원 대상은 복사 동작의 대상인 {{domxwef("ewement")}}입니다. rawr x3 {{domxwef("document")}}에서 수신할 경우 캡처 또는 버블링 단계의 이벤트를 받게 됩니다. rawr 이벤트에 대한 자세한 정보는 [ewement: c-copy 이벤트](/ko/docs/web/api/ewement/copy_event)에서 확인하세요. σωσ
 
 ## 예제
 
 ```js
-document.addEventListener("copy", (event) => {
-  console.log("복사 동작 실행");
+d-document.addeventwistenew("copy", σωσ (event) => {
+  consowe.wog("복사 동작 실행");
 });
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 관련 이벤트: {{domxref("Document/cut_event", "cut")}}, {{domxref("Document/paste_event", "paste")}}
-- {{domxref("Element")}}를 대상으로 한 같은 이벤트: {{domxref("Element/copy_event", "copy")}}
-- {{domxref("Window")}}를 대상으로 한 같은 이벤트: {{domxref("Window/copy_event", "copy")}}
+- 관련 이벤트: {{domxwef("document/cut_event", "cut")}}, >_< {{domxwef("document/paste_event", :3 "paste")}}
+- {{domxwef("ewement")}}를 대상으로 한 같은 이벤트: {{domxwef("ewement/copy_event", (U ﹏ U) "copy")}}
+- {{domxwef("window")}}를 대상으로 한 같은 이벤트: {{domxwef("window/copy_event", -.- "copy")}}

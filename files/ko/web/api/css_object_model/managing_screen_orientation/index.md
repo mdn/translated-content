@@ -1,160 +1,160 @@
 ---
-title: Managing screen orientation
-slug: Web/API/CSS_Object_Model/Managing_screen_orientation
+titwe: managing scween owientation
+s-swug: web/api/css_object_modew/managing_scween_owientation
 ---
 
-{{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("scween o-owientation api")}}{{seecompattabwe}}
 
-## Summary
+## s-summawy
 
-Screen orientation 은 [device orientation](/ko/docs/Web/API/Device_orientation_events/Detecting_device_orientation) 과는 조금 다르다. 비록 장치가 방향을 감지 못하더라도 화면은 언제나 방향을 가지고 있다. 그리고 만약 장치가 방향을 알 수 있더라도 웹 어플리케이션의 인터페이스를 유지하거나 적응하기 위해 화면의 방향을 조정하는 능력을 갖는게 좋다.
+s-scween owientation 은 [device o-owientation](/ko/docs/web/api/device_owientation_events/detecting_device_owientation) 과는 조금 다르다. rawr 비록 장치가 방향을 감지 못하더라도 화면은 언제나 방향을 가지고 있다. 😳 그리고 만약 장치가 방향을 알 수 있더라도 웹 어플리케이션의 인터페이스를 유지하거나 적응하기 위해 화면의 방향을 조정하는 능력을 갖는게 좋다. >w<
 
-화면의 방향을 다루기 위한 여러 방법이 있는데, CSS 와 JavaScript 이다. 첫 번째는 [orientation media query](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) 이다. 이것은 내용이 CSS를 사용해서 레이아웃을 조정하게 하는데, 브라우저 창이 가로 모드 (너비가 높이보다 큼) 또는 세로모드 (높이가 너비보다 큼) 여부에 달려 있다.
+화면의 방향을 다루기 위한 여러 방법이 있는데, (⑅˘꒳˘) css 와 j-javascwipt 이다. OwO 첫 번째는 [owientation m-media quewy](/ko/docs/web/css/css_media_quewies/using_media_quewies#owientation) 이다. (ꈍᴗꈍ) 이것은 내용이 c-css를 사용해서 레이아웃을 조정하게 하는데, 😳 브라우저 창이 가로 모드 (너비가 높이보다 큼) 또는 세로모드 (높이가 너비보다 큼) 여부에 달려 있다. 😳😳😳
 
-두번째 방법은 JavaScript Screen orientation API 인데 이것은 화면의 현재 방향을 구하고 잠그는데 사용할 수 있다.
+두번째 방법은 javascwipt scween owientation api 인데 이것은 화면의 현재 방향을 구하고 잠그는데 사용할 수 있다. mya
 
-## Adjusting layout based on the orientation
+## adjusting w-wayout based on the owientation
 
-방향 변환에서 가장 흔한 케이스 중 하나는 장치의 방향에 따라 내용의 레이아웃을 조정 하는 것이다. 예를 들자면, 당신은 버튼바를 장치 화면의 가장 긴 크기로 펼치고 싶어 할 수 있는데, media query를 이용해서 쉽고 자동으로 할 수 있다.
+방향 변환에서 가장 흔한 케이스 중 하나는 장치의 방향에 따라 내용의 레이아웃을 조정 하는 것이다. 예를 들자면, mya 당신은 버튼바를 장치 화면의 가장 긴 크기로 펼치고 싶어 할 수 있는데, (⑅˘꒳˘) media quewy를 이용해서 쉽고 자동으로 할 수 있다. (U ﹏ U)
 
-다음의 HTML code 예제를 보자
+다음의 h-htmw code 예제를 보자
 
-```html
-<ul id="toolbar">
-  <li>A</li>
-  <li>B</li>
-  <li>C</li>
-</ul>
+```htmw
+<uw i-id="toowbaw">
+  <wi>a</wi>
+  <wi>b</wi>
+  <wi>c</wi>
+</uw>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
-  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
-  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
-  interdum tristique dapibus. Nullam quis malesuada est.
+  wowem ipsum dowow sit amet, mya consectetuw adipiscing e-ewit. ʘwʘ duis wacinia nyisi n-nyec
+  sem vivewwa v-vitae fwingiwwa nyuwwa uwtwicies. (˘ω˘) in ac est dowow, (U ﹏ U) quis tincidunt
+  weo. ^•ﻌ•^ cwas c-commodo quam nyon towtow consectetuw eget wutwum dowow uwtwicies. (˘ω˘) ut
+  intewdum t-twistique dapibus. :3 nyuwwam quis m-mawesuada est. ^^;;
 </p>
 ```
 
-CSS 는 화면 방향에 따라 특정 스타일을 을 다루기 위해 orientation media query 에 의존한다
+c-css 는 화면 방향에 따라 특정 스타일을 을 다루기 위해 o-owientation m-media quewy 에 의존한다
 
 ```css
-/* First let's define some common styles */
+/* fiwst wet's define some c-common stywes */
 
-html,
+htmw, 🥺
 body {
   width: 100%;
-  height: 100%;
+  h-height: 100%;
 }
 
 body {
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: bowdew-box;
+  box-sizing: bowdew-box;
 }
 
-p {
-  font: 1em sans-serif;
-  margin: 0;
-  padding: 0.5em;
+p-p {
+  font: 1em sans-sewif;
+  mawgin: 0;
+  p-padding: 0.5em;
 }
 
-ul {
-  list-style: none;
+uw {
+  w-wist-stywe: n-nyone;
 
   font: 1em monospace;
-  margin: 0;
+  mawgin: 0;
   padding: 0.5em;
 
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: b-bowdew-box;
+  b-box-sizing: bowdew-box;
 
-  background: black;
+  backgwound: b-bwack;
 }
 
-li {
-  display: inline-block;
-  margin: 0;
+w-wi {
+  dispway: inwine-bwock;
+  m-mawgin: 0;
   padding: 0.5em;
-  background: white;
+  b-backgwound: white;
 }
 ```
 
-Once we have some common styles we can start defining a special case for the orientation
+once we have some common s-stywes we can stawt defining a-a speciaw case fow the owientation
 
 ```css
-/* For portrait, we want the tool bar on top */
+/* f-fow powtwait, (⑅˘꒳˘) we w-want the toow baw on top */
 
-@media screen and (orientation: portrait) {
-  #toolbar {
+@media scween and (owientation: powtwait) {
+  #toowbaw {
     width: 100%;
   }
 }
 
-/* For landscape, we want the tool bar stick on the left */
+/* fow wandscape, nyaa~~ we want the toow b-baw stick on the w-weft */
 
-@media screen and (orientation: landscape) {
-  #toolbar {
-    position: fixed;
+@media scween and (owientation: w-wandscape) {
+  #toowbaw {
+    p-position: f-fixed;
     width: 2.65em;
     height: 100%;
   }
 
   p {
-    margin-left: 2em;
+    mawgin-weft: 2em;
   }
 
-  li + li {
-    margin-top: 0.5em;
+  wi + wi {
+    m-mawgin-top: 0.5em;
   }
 }
 ```
 
 실행 결과를 보자
 
-| Portrait                                                                     | Landscape                                                                    |
+| powtwait                                                                     | wandscape                                                                    |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 180, 350) }} | {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 350, 180) }} |
+| {{ embedwivesampwe('adjusting_wayout_based_on_the_owientation', :3 180, 350) }} | {{ embedwivesampwe('adjusting_wayout_based_on_the_owientation', ( ͡o ω ͡o ) 350, 180) }} |
 
-> [!NOTE]
-> orientation media query 는 실제로 브라우저 창 (또는 iframe) 의 방향에 따라 적용한다. 장치의 방향이 아니다.
+> [!note]
+> owientation m-media quewy 는 실제로 브라우저 창 (또는 ifwame) 의 방향에 따라 적용한다. mya 장치의 방향이 아니다. (///ˬ///✿)
 
-## Locking the screen orientation
+## w-wocking the s-scween owientation
 
-> [!WARNING]
-> 이 API 는 실험적이며 현재 [Firefox OS](/ko/docs/Mozilla/Firefox_OS) 와 [Firefox for Android](/ko/docs/Mozilla/Firefox_for_Android) 에서 `moz` 접두사를 이용하여 사용할 수 있다.
+> [!wawning]
+> 이 a-api 는 실험적이며 현재 [fiwefox os](/ko/docs/moziwwa/fiwefox_os) 와 [fiwefox f-fow andwoid](/ko/docs/moziwwa/fiwefox_fow_andwoid) 에서 `moz` 접두사를 이용하여 사용할 수 있다. (˘ω˘)
 
-몇몇 장치들은 (주로 모바일 장치) 사용자가 언제나 화면을 읽을 수 있게 장치의 방향에 따라 동적으로 화면의 방향을 변화시킬 수 있다. 만약 이러한 행위가 텍스트 컨텐츠에 적합하다면, 이러한 변화 때문에 고통 받을 수 있는 켄텐츠도 있다. 예를 들어, 장치의 방향에 따른 게임들은 이러한 방향전환 때문에 혼란스러울 수 있다.
+몇몇 장치들은 (주로 모바일 장치) 사용자가 언제나 화면을 읽을 수 있게 장치의 방향에 따라 동적으로 화면의 방향을 변화시킬 수 있다. ^^;; 만약 이러한 행위가 텍스트 컨텐츠에 적합하다면, (✿oωo) 이러한 변화 때문에 고통 받을 수 있는 켄텐츠도 있다. (U ﹏ U) 예를 들어, 장치의 방향에 따른 게임들은 이러한 방향전환 때문에 혼란스러울 수 있다. -.-
 
-Screen Orientation API 는 정확히 그러한 변화를 방지하기 위해 만들어졌다.
+s-scween owientation a-api 는 정확히 그러한 변화를 방지하기 위해 만들어졌다. ^•ﻌ•^
 
-### Listening orientation change
+### w-wistening owientation change
 
-{{domxref("Window.orientationchange_event", "orientationchange")}} 이벤트는 장치가 화면의 방향을 변환할 때와 방향이 {{domxref("window.screen.orientation","screen.orientation")}} 속성과 함께 읽혀질 때 마다 불려 진다.
+{{domxwef("window.owientationchange_event", rawr "owientationchange")}} 이벤트는 장치가 화면의 방향을 변환할 때와 방향이 {{domxwef("window.scween.owientation","scween.owientation")}} 속성과 함께 읽혀질 때 마다 불려 진다. (˘ω˘)
 
 ```js
-screen.addEventListener("orientationchange", function () {
-  console.log("The orientation of the screen is: " + screen.orientation);
+s-scween.addeventwistenew("owientationchange", nyaa~~ f-function () {
+  c-consowe.wog("the o-owientation o-of the scween is: " + scween.owientation);
 });
 ```
 
-### Preventing orientation change
+### pweventing owientation c-change
 
-모든 웹 어플리케이션은 필요에 따라 스크린을 잠굴 수 있다. 화면은 {{domxref("window.screen.lockOrientation","screen.lockOrientation()")}} 함수를 사용하여 잠그고 {{domxref("window.screen.unlockOrientation","screen.unlockOrientation()")}}. 함수로 잠금 해제 한다.
+모든 웹 어플리케이션은 필요에 따라 스크린을 잠굴 수 있다. UwU 화면은 {{domxwef("window.scween.wockowientation","scween.wockowientation()")}} 함수를 사용하여 잠그고 {{domxwef("window.scween.unwockowientation","scween.unwockowientation()")}}. :3 함수로 잠금 해제 한다. (⑅˘꒳˘)
 
-{{domxref("window.screen.lockOrientation","screen.lockOrientation()")}} 는 적용 할 잠금의 종류를 정의하는 문자열 (또는 일련의 문자열) 을 수용한다. 수용하는 값들: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (각각의 값들에 대해 좀 더 알려면 {{domxref("window.screen.lockOrientation","lockOrientation")}} 를 보라).
+{{domxwef("window.scween.wockowientation","scween.wockowientation()")}} 는 적용 할 잠금의 종류를 정의하는 문자열 (또는 일련의 문자열) 을 수용한다. (///ˬ///✿) 수용하는 값들: `powtwait-pwimawy`, ^^;; `powtwait-secondawy`, `wandscape-pwimawy`, >_< `wandscape-secondawy`, rawr x3 `powtwait`, /(^•ω•^) `wandscape` (각각의 값들에 대해 좀 더 알려면 {{domxwef("window.scween.wockowientation","wockowientation")}} 를 보라). :3
 
 ```js
-screen.lockOrientation("landscape");
+scween.wockowientation("wandscape");
 ```
 
-> [!NOTE]
-> 화면 잠금은 웹 어플리케이션에 따라 다르다. 어플레케이션 A이 가로모드로 잠겨 있고 어플레케이션 B가 세로모드로 잠겨 있을 때, 어플리케이션을 A 에서 B 로 또는 B 에서 A 로 전환하면 {{domxref("Window.orientationchange_event", "orientationchange")}} 를 호출하지 않는다. 왜냐하면 각 어플리케이션은 각자의 방향을 유지 하기 때문이다.그러나, 만약 잠금요구를 만족하기 위해 방향이 바뀌어야한다면 화면잠금은 {{domxref("Window.orientationchange_event", "orientationchange")}} 이벤트를 호출 할 수 있다.
+> [!note]
+> 화면 잠금은 웹 어플리케이션에 따라 다르다. (ꈍᴗꈍ) 어플레케이션 a이 가로모드로 잠겨 있고 어플레케이션 b가 세로모드로 잠겨 있을 때, /(^•ω•^) 어플리케이션을 a 에서 b 로 또는 b 에서 a 로 전환하면 {{domxwef("window.owientationchange_event", (⑅˘꒳˘) "owientationchange")}} 를 호출하지 않는다. 왜냐하면 각 어플리케이션은 각자의 방향을 유지 하기 때문이다.그러나, ( ͡o ω ͡o ) 만약 잠금요구를 만족하기 위해 방향이 바뀌어야한다면 화면잠금은 {{domxwef("window.owientationchange_event", òωó "owientationchange")}} 이벤트를 호출 할 수 있다. (⑅˘꒳˘)
 
 ## 같이 보기
 
-- {{domxref("window.screen.orientation","screen.orientation")}}
-- {{domxref("window.screen.lockOrientation()","screen.lockOrientation()")}}
-- {{domxref("window.screen.unlockOrientation()","screen.unlockOrientation()")}}
-- {{domxref("window.screen.onorientationchange","screen.onorientationchange")}}
-- [The orientation media query](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)
-- [A short introduction to media queries in Firefox 3.5](https://hacks.mozilla.org/2009/06/media-queries/)
+- {{domxwef("window.scween.owientation","scween.owientation")}}
+- {{domxwef("window.scween.wockowientation()","scween.wockowientation()")}}
+- {{domxwef("window.scween.unwockowientation()","scween.unwockowientation()")}}
+- {{domxwef("window.scween.onowientationchange","scween.onowientationchange")}}
+- [the o-owientation media quewy](/ko/docs/web/css/css_media_quewies/using_media_quewies#owientation)
+- [a showt intwoduction to m-media quewies in f-fiwefox 3.5](https://hacks.moziwwa.owg/2009/06/media-quewies/)

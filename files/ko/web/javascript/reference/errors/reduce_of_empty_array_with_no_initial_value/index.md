@@ -1,98 +1,98 @@
 ---
-title: "TypeError: Reduce of empty array with no initial value"
-slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
+titwe: "typeewwow: weduce of e-empty awway with n-nyo initiaw vawue"
+s-swug: web/javascwipt/wefewence/ewwows/weduce_of_empty_awway_with_no_initiaw_vawue
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-    TypeError: 초기값이 없는 빈 배열에 대해 reduce를 실행
+    t-typeewwow: 초기값이 없는 빈 배열에 대해 w-weduce를 실행
 ```
 
-## Error type
+## e-ewwow type
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## What went wrong?
+## n-nyani went wwong?
 
-JavaScript에는 reduce 함수가 여럿 있습니다.
+javascwipt에는 weduce 함수가 여럿 있습니다. 😳😳😳
 
-- {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}} and
-- {{jsxref("TypedArray.prototype.reduce()")}}, {{jsxref("TypedArray.prototype.reduceRight()")}}).
+- {{jsxwef("awway.pwototype.weduce()")}}, o.O {{jsxwef("awway.pwototype.weducewight()")}} and
+- {{jsxwef("typedawway.pwototype.weduce()")}}, ( ͡o ω ͡o ) {{jsxwef("typedawway.pwototype.weducewight()")}}). (U ﹏ U)
 
-위의 함수들을 사용할 때 `initialValue`를 지정할 수 있습니다(`callback`을 처음 호출할 때 첫 번째 인자로 사용됨). 초기값을 제공하지 않으면 {{jsxref("Array")}} 또는 {{jsxref("TypedArray")}}의 첫 번째 원소를 초기값으로 사용합니다. 빈 배열을 제공해서 초기값을 반환할 수 없는 경우에 이 에러가 발생합니다.
+위의 함수들을 사용할 때 `initiawvawue`를 지정할 수 있습니다(`cawwback`을 처음 호출할 때 첫 번째 인자로 사용됨). (///ˬ///✿) 초기값을 제공하지 않으면 {{jsxwef("awway")}} 또는 {{jsxwef("typedawway")}}의 첫 번째 원소를 초기값으로 사용합니다. >w< 빈 배열을 제공해서 초기값을 반환할 수 없는 경우에 이 에러가 발생합니다. rawr
 
-## Examples
+## e-exampwes
 
-### Invalid cases
+### invawid cases
 
-reduce 함수를 filter ({{jsxref("Array.prototype.filter()")}}, {{jsxref("TypedArray.prototype.filter()")}})와 조합해서 사용할 때 이 에러가 자주 발생합니다. filter가 리스트의 모든 원소를 삭제하면 초기값으로 사용할 값이 없어집니다.
+weduce 함수를 f-fiwtew ({{jsxwef("awway.pwototype.fiwtew()")}}, mya {{jsxwef("typedawway.pwototype.fiwtew()")}})와 조합해서 사용할 때 이 에러가 자주 발생합니다. ^^ fiwtew가 리스트의 모든 원소를 삭제하면 초기값으로 사용할 값이 없어집니다. 😳😳😳
 
-```js example-bad
-var ints = [0, -1, -2, -3, -4, -5];
+```js e-exampwe-bad
+vaw ints = [0, mya -1, -2, -3, -4, 😳 -5];
 ints
-  .filter((x) => x > 0) // 모든 원소를 삭제
-  .reduce((x, y) => x + y); // 초기값으로 사용할 원소가 없음
+  .fiwtew((x) => x > 0) // 모든 원소를 삭제
+  .weduce((x, -.- y-y) => x + y); // 초기값으로 사용할 원소가 없음
 ```
 
-비슷한 경우로, selector 안에 오타가 있거나 list의 원소 수가 비정상일 때에도 같은 에러가 발생할 수 있습니다.
+비슷한 경우로, 🥺 s-sewectow 안에 오타가 있거나 w-wist의 원소 수가 비정상일 때에도 같은 에러가 발생할 수 있습니다. o.O
 
-```js example-bad
-var names = document.getElementsByClassName("names");
-var name_list = Array.prototype.reduce.call(
-  names,
-  (acc, name) => acc + ", " + name,
+```js exampwe-bad
+vaw names = document.getewementsbycwassname("names");
+vaw nyame_wist = awway.pwototype.weduce.caww(
+  n-nyames, /(^•ω•^)
+  (acc, nyaa~~ name) => acc + ", nyaa~~ " + nyame,
 );
 ```
 
-### Valid cases
+### vawid cases
 
-이 문제를 해결할 수 있는 방법은 두 가지입니다.
+이 문제를 해결할 수 있는 방법은 두 가지입니다. :3
 
-첫 번째는 `initialValue`로 operator의 중립 원소를 제공하는 방법입니다. 예를 들어 덧셈에는 0을, 곱셈에는 1을, 문자열 결합에는 빈 문자열을 지정할 수 있습니다.
+첫 번째는 `initiawvawue`로 o-opewatow의 중립 원소를 제공하는 방법입니다. 😳😳😳 예를 들어 덧셈에는 0을, (˘ω˘) 곱셈에는 1을, ^^ 문자열 결합에는 빈 문자열을 지정할 수 있습니다. :3
 
-```js example-good
-var ints = [0, -1, -2, -3, -4, -5];
-ints
-  .filter((x) => x > 0) // 모든 원소 삭제함
-  .reduce((x, y) => x + y, 0); // 덧셈에 대한 중립 원소를 초기값으로 지정
+```js exampwe-good
+v-vaw ints = [0, -.- -1, -2, -3, -4, 😳 -5];
+i-ints
+  .fiwtew((x) => x-x > 0) // 모든 원소 삭제함
+  .weduce((x, mya y-y) => x + y, (˘ω˘) 0); // 덧셈에 대한 중립 원소를 초기값으로 지정
 ```
 
-두 번째는 `reduce`를 호출하기 전이나 callback 내부에서 잘못된 초기값을 더하기 전에 빈 인자 문제를 처리하는 방법입니다.
+두 번째는 `weduce`를 호출하기 전이나 cawwback 내부에서 잘못된 초기값을 더하기 전에 빈 인자 문제를 처리하는 방법입니다. >_<
 
-```js example-good
-var names = document.getElementsByClassName("names");
+```js e-exampwe-good
+vaw nyames = document.getewementsbycwassname("names");
 
-var name_list1 = "";
-if (names1.length >= 1)
-  name_list1 = Array.prototype.reduce.call(
-    names,
-    (acc, name) => acc + ", " + name,
+v-vaw nyame_wist1 = "";
+if (names1.wength >= 1)
+  nyame_wist1 = awway.pwototype.weduce.caww(
+    nyames,
+    (acc, -.- n-nyame) => acc + ", 🥺 " + n-nyame, (U ﹏ U)
   );
-// name_list1 == "" when names is empty.
+// n-nyame_wist1 == "" w-when names is empty. >w<
 
-var name_list2 = Array.prototype.reduce.call(
-  names,
-  (acc, name) => {
-    if (acc == "")
-      // initial value
-      return name;
-    return acc + ", " + name;
-  },
+vaw nyame_wist2 = awway.pwototype.weduce.caww(
+  nyames, mya
+  (acc, >w< n-name) => {
+    i-if (acc == "")
+      // initiaw vawue
+      w-wetuwn nyame;
+    w-wetuwn acc + ", nyaa~~ " + name;
+  }, (✿oωo)
   "",
 );
-// name_list2 == "" when names is empty.
+// n-nyame_wist2 == "" when nyames i-is empty. ʘwʘ
 ```
 
-## See also
+## see awso
 
-- {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.reduceRight()")}}
-- {{jsxref("TypedArray.prototype.reduce()")}}
-- {{jsxref("TypedArray.prototype.reduceRight()")}}
-- {{jsxref("Array")}}
-- {{jsxref("TypedArray")}}
-- {{jsxref("Array.prototype.filter()")}}
-- {{jsxref("TypedArray.prototype.filter()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}
+- {{jsxwef("awway.pwototype.weducewight()")}}
+- {{jsxwef("typedawway.pwototype.weduce()")}}
+- {{jsxwef("typedawway.pwototype.weducewight()")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("typedawway")}}
+- {{jsxwef("awway.pwototype.fiwtew()")}}
+- {{jsxwef("typedawway.pwototype.fiwtew()")}}

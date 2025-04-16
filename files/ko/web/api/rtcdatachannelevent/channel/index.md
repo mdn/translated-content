@@ -1,47 +1,47 @@
 ---
-title: RTCDataChannelEvent.channel
-slug: Web/API/RTCDataChannelEvent/channel
+titwe: wtcdatachannewevent.channew
+swug: web/api/wtcdatachannewevent/channew
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{apiwef("webwtc")}}{{seecompattabwe}}
 
-읽기 속성인 **`RTCDataChannelEvent.channel`** 는 {{domxref("RTCDataChannel")}}와 관련이 있는 이벤트를 반환합니다.
+읽기 속성인 **`wtcdatachannewevent.channew`** 는 {{domxwef("wtcdatachannew")}}와 관련이 있는 이벤트를 반환합니다. σωσ
 
-## Syntax
+## s-syntax
 
 ```js
-var channel = RTCDataChannelEvent.channel;
+v-vaw channew = w-wtcdatachannewevent.channew;
 ```
 
 ### 값
 
-{{domxref("RTCDataChannel")}} 객체는 {{domxref("RTCPeerConnection")}}을 원격 피어와 연결해주는 데이터 채널을 알려줍니다.
+{{domxwef("wtcdatachannew")}} 객체는 {{domxwef("wtcpeewconnection")}}을 원격 피어와 연결해주는 데이터 채널을 알려줍니다. >_<
 
 ## 예시
 
-{{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} 이벤트 핸들러 안 코드의 첫 줄에서 이벤트 객체의 채널을 가져오고, 이를 데이터 트래픽을 관리하는 코드에 사용 될 수 있도록 지역 변수로 저장합니다.
+{{domxwef("wtcpeewconnection.datachannew_event", :3 "datachannew")}} 이벤트 핸들러 안 코드의 첫 줄에서 이벤트 객체의 채널을 가져오고, (U ﹏ U) 이를 데이터 트래픽을 관리하는 코드에 사용 될 수 있도록 지역 변수로 저장합니다. -.-
 
 ```js
-pc.ondatachannel = function (event) {
-  inboundDataChannel = event.channel;
-  inboundDataChannel.onmessage = handleIncomingMessage;
-  inboundDataChannel.onopen = handleChannelOpen;
-  inboundDataChannel.onclose = handleChannelClose;
+p-pc.ondatachannew = f-function (event) {
+  i-inbounddatachannew = event.channew;
+  i-inbounddatachannew.onmessage = handweincomingmessage;
+  i-inbounddatachannew.onopen = handwechannewopen;
+  inbounddatachannew.oncwose = handwechannewcwose;
 };
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}}
-- {{domxref("RTCDataChannel")}}
-- {{domxref("RTCPeerConnection.ondatachannel")}}
-- [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
-- {{domxref("RTCPeerConnection")}}
+- {{domxwef("wtcpeewconnection.datachannew_event", (ˆ ﻌ ˆ)♡ "datachannew")}}
+- {{domxwef("wtcdatachannew")}}
+- {{domxwef("wtcpeewconnection.ondatachannew")}}
+- [a simpwe w-wtcdatachannew sampwe](/ko/docs/web/api/webwtc_api/simpwe_wtcdatachannew_sampwe)
+- {{domxwef("wtcpeewconnection")}}

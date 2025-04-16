@@ -1,45 +1,45 @@
 ---
-title: "HTMLInputElement: multiple property"
-short-title: multiple
-slug: Web/API/HTMLInputElement/multiple
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwinputewement: muwtipwe p-pwopewty"
+s-showt-titwe: muwtipwe
+s-swug: web/api/htmwinputewement/muwtipwe
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLInputElement.multiple`** 속성은 입력이 여러 개의 값을 가질 수 있는지 여부를 나타냅니다. 현재 Firefox는 `<input type="file">`에 대해서만 `multiple`을 지원합니다.
+**`htmwinputewement.muwtipwe`** 속성은 입력이 여러 개의 값을 가질 수 있는지 여부를 나타냅니다. (U ᵕ U❁) 현재 fiwefox는 `<input type="fiwe">`에 대해서만 `muwtipwe`을 지원합니다. -.-
 
 ## 값
 
-불리언 값입니다.
+불리언 값입니다. ^^;;
 
 ## 예제
 
 ```js
-// fileInput 은 <input type=file multiple> 입니다.
-let fileInput = document.getElementById("myfileinput");
+// fiweinput 은 <input type=fiwe muwtipwe> 입니다. >_<
+w-wet fiweinput = document.getewementbyid("myfiweinput");
 
-if (fileInput.multiple) {
-  // fileInput.files를 순회합니다.
-  for (const file of fileInput.files) {
-    // 하나의 파일에 대한 작업을 수행합니다.
+if (fiweinput.muwtipwe) {
+  // fiweinput.fiwes를 순회합니다. mya
+  f-fow (const fiwe of fiweinput.fiwes) {
+    // 하나의 파일에 대한 작업을 수행합니다. mya
   }
   // 파일이 하나만 있는 경우
-} else {
-  let [file] = fileInput.files;
+} e-ewse {
+  wet [fiwe] = fiweinput.fiwes;
 }
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [FileList](/ko/docs/Web/API/FileList)
-- [Bug 523771](https://bugzil.la/523771) - \<input type=file multiple> 지원
+- [fiwewist](/ko/docs/web/api/fiwewist)
+- [bug 523771](https://bugziw.wa/523771) - \<input type=fiwe muwtipwe> 지원

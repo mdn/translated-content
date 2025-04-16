@@ -1,88 +1,88 @@
 ---
-title: AnalyserNode.getByteFrequencyData()
-slug: Web/API/AnalyserNode/getByteFrequencyData
+titwe: anawysewnode.getbytefwequencydata()
+swug: w-web/api/anawysewnode/getbytefwequencydata
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AnalyserNode") }} 인터페이스의 **`getByteFrequencyData()`** 메서드는 전달된 {{domxref("Uint8Array")}} (unsigned byte array) 내로 현재 주파수 데이터를 복사합니다.
+{{ d-domxwef("anawysewnode") }} 인터페이스의 **`getbytefwequencydata()`** 메서드는 전달된 {{domxwef("uint8awway")}} (unsigned b-byte a-awway) 내로 현재 주파수 데이터를 복사합니다. mya
 
-주파수 데이터는 0에서 255 스케일의 정수로 구성되어 있습니다.
+주파수 데이터는 0에서 255 스케일의 정수로 구성되어 있습니다. 🥺
 
-배열 내의 각 원소는 특정한 주파수에 대한 데시벨 값을 나타냅니다. 주파수들은 0에서 샘플 레이트의 1/2까지 선형적으로 퍼져 있습니다. 예를 들자면, `48000` 샘플 레이트에 대해서, 배열의 마지막 원소는 `24000` Hz에 대한 데시벨 값을 나타냅니다.
+배열 내의 각 원소는 특정한 주파수에 대한 데시벨 값을 나타냅니다. >_< 주파수들은 0에서 샘플 레이트의 1/2까지 선형적으로 퍼져 있습니다. >_< 예를 들자면, (⑅˘꒳˘) `48000` 샘플 레이트에 대해서, 배열의 마지막 원소는 `24000` h-hz에 대한 데시벨 값을 나타냅니다. /(^•ω•^)
 
-만약 배열이 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.
+만약 배열이 {{domxwef("anawysewnode.fwequencybincount")}}보다 더 적은 요소를 가지고 있다면, rawr x3 초과한 요소는 탈락됩니다. (U ﹏ U) 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, (U ﹏ U) 초과한 요소는 무시됩니다.
 
 ## 구문
 
 ```js
-var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();
-var dataArray = new Uint8Array(analyser.frequencyBinCount); // Uint8Array는 frequencyBinCount와 같은 길이여야만 합니다
+v-vaw audioctx = nyew audiocontext();
+vaw anawysew = audioctx.cweateanawysew();
+vaw dataawway = n-nyew uint8awway(anawysew.fwequencybincount); // uint8awway는 fwequencybincount와 같은 길이여야만 합니다
 
-void analyser.getByteFrequencyData(dataArray); // getByteFrequencyData()로부터 반환된 데이터로 Uint8Array를 채웁니다
+v-void anawysew.getbytefwequencydata(dataawway); // getbytefwequencydata()로부터 반환된 데이터로 u-uint8awway를 채웁니다
 ```
 
 ### 매개변수
 
-- `array`
-  - : 주파수 영역 데이터가 복사될 {{domxref("Uint8Array")}}. 소리가 없는 모든 샘플에 대해서, 값은 `-Infinity`입니다.
-    만약 배열이 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.
+- `awway`
+  - : 주파수 영역 데이터가 복사될 {{domxwef("uint8awway")}}. (⑅˘꒳˘) 소리가 없는 모든 샘플에 대해서, òωó 값은 `-infinity`입니다. ʘwʘ
+    만약 배열이 {{domxwef("anawysewnode.fwequencybincount")}}보다 더 적은 요소를 가지고 있다면, /(^•ω•^) 초과한 요소는 탈락됩니다. ʘwʘ 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, σωσ 초과한 요소는 무시됩니다. OwO
 
 ### 반환 값
 
-없음.
+없음. 😳😳😳
 
 ## 예제
 
-다음의 예제는 `AnalyserNode`를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 주파수 데이터를 수집하고 현재 오디오 입력의 "winamp 막대그래프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모를 확인하세요 (관련된 코드를 보려면 [app.js 라인 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)를 참고하세요).
+다음의 예제는 `anawysewnode`를 생성하기 위한 {{domxwef("audiocontext")}}와 그리고 나서 반복적으로 주파수 데이터를 수집하고 현재 오디오 입력의 "winamp 막대그래프 스타일의" 출력을 그리기 위한 {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}}과 {{htmwewement("canvas")}}의 기본 사용을 보여줍니다. 😳😳😳 더 완벽한 응용 예제/정보를 보려면 [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 데모를 확인하세요 (관련된 코드를 보려면 [app.js 라인 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)를 참고하세요). o.O
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+vaw audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+v-vaw anawysew = audioctx.cweateanawysew();
 
   ...
 
-analyser.fftSize = 256;
-var bufferLength = analyser.frequencyBinCount;
-console.log(bufferLength);
-var dataArray = new Uint8Array(bufferLength);
+a-anawysew.fftsize = 256;
+v-vaw buffewwength = anawysew.fwequencybincount;
+consowe.wog(buffewwength);
+vaw dataawway = n-nyew uint8awway(buffewwength);
 
-canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+canvasctx.cweawwect(0, ( ͡o ω ͡o ) 0, width, (U ﹏ U) height);
 
-function draw() {
-  drawVisual = requestAnimationFrame(draw);
+function dwaw() {
+  dwawvisuaw = w-wequestanimationfwame(dwaw);
 
-  analyser.getByteFrequencyData(dataArray);
+  anawysew.getbytefwequencydata(dataawway);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  c-canvasctx.fiwwstywe = 'wgb(0, 0, (///ˬ///✿) 0)';
+  c-canvasctx.fiwwwect(0, >w< 0, w-width, height);
 
-  var barWidth = (WIDTH / bufferLength) * 2.5;
-  var barHeight;
-  var x = 0;
+  v-vaw bawwidth = (width / buffewwength) * 2.5;
+  vaw bawheight;
+  v-vaw x = 0;
 
-  for(var i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i];
+  fow(vaw i = 0; i < buffewwength; i-i++) {
+    bawheight = dataawway[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    canvasctx.fiwwstywe = 'wgb(' + (bawheight+100) + ',50,50)';
+    canvasctx.fiwwwect(x,height-bawheight/2,bawwidth,bawheight/2);
 
-    x += barWidth + 1;
+    x += bawwidth + 1;
   }
 };
 
-draw();
+dwaw();
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web a-audio api 사용하기](/ko/docs/web/api/web_audio_api/using_web_audio_api)

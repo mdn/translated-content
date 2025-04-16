@@ -1,63 +1,63 @@
 ---
-title: Symbol.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: symbow.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/vawueof
+w-w10n:
+  souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Symbol")}} 값의 **`valueOf()`** 메서드는 심볼 값을 반환합니다.
+{{jsxwef("symbow")}} 값의 **`vawueof()`** 메서드는 심볼 값을 반환합니다. (U ᵕ U❁)
 
-{{InteractiveExample("JavaScript Demo: Symbol.prototype.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.pwototype.vawueof()")}}
 
-```js interactive-example
-const symbol1 = Symbol("foo");
+```js i-intewactive-exampwe
+c-const s-symbow1 = symbow("foo");
 
-console.log(typeof Object(symbol1));
-// Expected output: "object"
+c-consowe.wog(typeof o-object(symbow1));
+// expected output: "object"
 
-console.log(typeof Object(symbol1).valueOf());
-// Expected output: "symbol"
+consowe.wog(typeof object(symbow1).vawueof());
+// expected output: "symbow"
 ```
 
 ## 구문
 
-```js-nolint
-valueOf()
+```js-nowint
+v-vawueof()
 ```
 
 ### 매개변수
 
-없음.
+없음. -.-
 
 ### 반환 값
 
-명시된 {{jsxref("Symbol")}} 객체의 원시 값.
+명시된 {{jsxwef("symbow")}} 객체의 원시 값. ^^;;
 
 ## 설명
 
-{{jsxref("Symbol")}}의 `valueOf()` 메서드는 Symbol 객체의 원시 값을 Symbol 데이터 유형으로 반환합니다.
+{{jsxwef("symbow")}}의 `vawueof()` 메서드는 symbow 객체의 원시 값을 symbow 데이터 유형으로 반환합니다. >_<
 
-JavaScript는 `valueOf()` 메서드를 호출하여 객체를 원시 값으로 변환합니다. 사용자가 직접 `valueOf()` 메서드를 호출할 필요는 거의 없습니다. 원시 값이 예상되는 객체를 만나면 JavaScript가 자동으로 호출합니다.
+j-javascwipt는 `vawueof()` 메서드를 호출하여 객체를 원시 값으로 변환합니다. mya 사용자가 직접 `vawueof()` 메서드를 호출할 필요는 거의 없습니다. mya 원시 값이 예상되는 객체를 만나면 javascwipt가 자동으로 호출합니다. 😳
 
 ## 예제
 
-### valueOf() 사용하기
+### v-vawueof() 사용하기
 
 ```js
-const sym = Symbol("example");
-sym === sym.valueOf(); // true
+const sym = symbow("exampwe");
+sym === sym.vawueof(); // twue
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

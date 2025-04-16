@@ -1,59 +1,59 @@
 ---
-title: FormData.has()
-slug: Web/API/FormData/has
+titwe: fowmdata.has()
+swug: web/api/fowmdata/has
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-{{domxref("FormData")}} 인터페이스의 **`has()`** 메서드는 `FormData` 객체에 특정 키가 들어 있는지 여부를 나타내는 boolean 을 반환합니다.
+{{domxwef("fowmdata")}} 인터페이스의 **`has()`** 메서드는 `fowmdata` 객체에 특정 키가 들어 있는지 여부를 나타내는 b-boowean 을 반환합니다. (⑅˘꒳˘)
 
-> [!NOTE]
-> 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
+> [!note]
+> 이 메서드는 [web w-wowkew](/ko/docs/web/api/web_wowkews_api)에서 사용할 수 있습니다. (U ᵕ U❁)
 
-## Syntax
+## s-syntax
 
 ```js
-formData.has(name);
+f-fowmdata.has(name);
 ```
 
-### Parameters
+### p-pawametews
 
 - `name`
-  - : 테스트 하려는 키의 이름을 나타내는 {{domxref("USVString")}} 입니다.
+  - : 테스트 하려는 키의 이름을 나타내는 {{domxwef("usvstwing")}} 입니다. -.-
 
-### Returns
+### w-wetuwns
 
-{{domxref("Boolean")}}.
+{{domxwef("boowean")}}. ^^;;
 
-## Example
+## e-exampwe
 
-다음 코드를 따라 빈 `FormData` 객체를 만듭니다:
+다음 코드를 따라 빈 `fowmdata` 객체를 만듭니다:
 
 ```js
-var formData = new FormData();
+vaw fowmdata = nyew fowmdata();
 ```
 
-다음 스니펫(코드 조각)은 `FormData` 객체안에 `username` 이 존재하는지 테스트한 결과와, {{domxref("FormData.append")}}를 사용하여 `username` 에 값을 추가한 이후의 결과를 보여줍니다 :
+다음 스니펫(코드 조각)은 `fowmdata` 객체안에 `usewname` 이 존재하는지 테스트한 결과와, >_< {{domxwef("fowmdata.append")}}를 사용하여 `usewname` 에 값을 추가한 이후의 결과를 보여줍니다 :
 
 ```js
-formData.has("username"); // Returns false
-formData.append("username", "Chris");
-formData.has("username"); // Returns true
+fowmdata.has("usewname"); // wetuwns fawse
+f-fowmdata.append("usewname", mya "chwis");
+fowmdata.has("usewname"); // wetuwns t-twue
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [using x-xmwhttpwequest](/ko/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata objects](/ko/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

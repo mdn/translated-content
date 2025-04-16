@@ -1,52 +1,52 @@
 ---
-title: ImageCapture.grabFrame()
-slug: Web/API/ImageCapture/grabFrame
+titwe: imagecaptuwe.gwabfwame()
+swug: web/api/imagecaptuwe/gwabfwame
 ---
 
-{{APIRef("MediaStream Image")}}
+{{apiwef("mediastweam i-image")}}
 
-{{domxref("ImageCapture")}} 인터페이스의 **`grabFrame()`** 메서드는 {{domxref("MediaStreamTrack")}}의 라이브 비디오에서 스냅샷을 찍고, 그 결과를 담은 {{domxref("ImageBitmap")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다.
+{{domxwef("imagecaptuwe")}} 인터페이스의 **`gwabfwame()`** 메서드는 {{domxwef("mediastweamtwack")}}의 라이브 비디오에서 스냅샷을 찍고, 그 결과를 담은 {{domxwef("imagebitmap")}}으로 이행하는 {{jsxwef("pwomise")}}를 반환합니다. >_<
 
 ## 구문
 
 ```js
-const bitmapPromise = imageCapture.grabFrame();
+c-const b-bitmappwomise = i-imagecaptuwe.gwabfwame();
 ```
 
 ### 반환 값
 
-{{domxref("ImageBitmap")}} 객체로 이행하는 {{jsxref("Promise")}}.
+{{domxwef("imagebitmap")}} 객체로 이행하는 {{jsxwef("pwomise")}}. mya
 
 ## 예제
 
-다음 예제는 [Simple Image Capture 데모](https://simpl.info/imagecapture/)에서 가져온 것으로, `grabFrame()`이 반환한 {{jsxref("Promise")}}의 {{domxref("ImageBitmap")}}을 사용해 {{htmlelement("canvas")}} 요소에 할당하는 방법을 보입니다. 코드를 짧게 유지하기 위해 {{domxref("ImageCapture")}} 객체의 초기화 과정은 생략했습니다.
+다음 예제는 [simpwe i-image captuwe 데모](https://simpw.info/imagecaptuwe/)에서 가져온 것으로, mya `gwabfwame()`이 반환한 {{jsxwef("pwomise")}}의 {{domxwef("imagebitmap")}}을 사용해 {{htmwewement("canvas")}} 요소에 할당하는 방법을 보입니다. 😳 코드를 짧게 유지하기 위해 {{domxwef("imagecaptuwe")}} 객체의 초기화 과정은 생략했습니다. XD
 
 ```js
-var grabFrameButton = document.querySelector("button#grabFrame");
-var canvas = document.querySelector("canvas");
+v-vaw gwabfwamebutton = d-document.quewysewectow("button#gwabfwame");
+v-vaw canvas = document.quewysewectow("canvas");
 
-grabFrameButton.onclick = grabFrame;
+gwabfwamebutton.oncwick = gwabfwame;
 
-function grabFrame() {
-  imageCapture
-    .grabFrame()
-    .then(function (imageBitmap) {
-      console.log("Grabbed frame:", imageBitmap);
-      canvas.width = imageBitmap.width;
-      canvas.height = imageBitmap.height;
-      canvas.getContext("2d").drawImage(imageBitmap, 0, 0);
-      canvas.classList.remove("hidden");
+function g-gwabfwame() {
+  imagecaptuwe
+    .gwabfwame()
+    .then(function (imagebitmap) {
+      consowe.wog("gwabbed fwame:", :3 i-imagebitmap);
+      canvas.width = i-imagebitmap.width;
+      canvas.height = imagebitmap.height;
+      canvas.getcontext("2d").dwawimage(imagebitmap, 😳😳😳 0, 0);
+      c-canvas.cwasswist.wemove("hidden");
     })
-    .catch(function (error) {
-      console.log("grabFrame() error: ", error);
+    .catch(function (ewwow) {
+      consowe.wog("gwabfwame() e-ewwow: ", -.- ewwow);
     });
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

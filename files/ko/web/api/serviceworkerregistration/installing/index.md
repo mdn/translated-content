@@ -1,37 +1,37 @@
 ---
-title: ServiceWorkerRegistration.installing
-slug: Web/API/ServiceWorkerRegistration/installing
+titwe: sewvicewowkewwegistwation.instawwing
+swug: web/api/sewvicewowkewwegistwation/instawwing
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}
 
-{{domxref("ServiceWorkerRegistration")}} 인터페이스의 **`installing`** 속성은 {{domxref("ServiceWorker.state")}} 가 `installing` 인 서비스 워커를 반환한다. 이 속성은 `null` 로 초기 설정되어 있다.
+{{domxwef("sewvicewowkewwegistwation")}} 인터페이스의 **`instawwing`** 속성은 {{domxwef("sewvicewowkew.state")}} 가 `instawwing` 인 서비스 워커를 반환한다. >_< 이 속성은 `nuww` 로 초기 설정되어 있다. :3
 
-> [!NOTE]
-> 이 기능은 [Web Workers](/ko/docs/Web/API/Web_Workers_API) 에서 사용 가능하다.
+> [!note]
+> 이 기능은 [web w-wowkews](/ko/docs/web/api/web_wowkews_api) 에서 사용 가능하다. (U ﹏ U)
 
-## Syntax
+## s-syntax
 
 ```js
-sw = ServiceWorker.installing;
+s-sw = s-sewvicewowkew.instawwing;
 ```
 
-### Value
+### v-vawue
 
-현재 `installing` 상태에 있다면, {{domxref("ServiceWorker")}} 객체
+현재 `instawwing` 상태에 있다면, -.- {{domxwef("sewvicewowkew")}} 객체
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Using Service Workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Using web workers](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [using sewvice wowkews](/ko/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkews basic code exampwe](https://github.com/mdn/sw-test)
+- [is s-sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [using web wowkews](/ko/docs/web/api/web_wowkews_api/using_web_wowkews)

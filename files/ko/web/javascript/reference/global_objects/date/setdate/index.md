@@ -1,51 +1,51 @@
 ---
-title: Date.prototype.setDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
+titwe: date.pwototype.setdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**setDate()** 메서드는 현재 설정된 월의 시작 부분을 기준으로 {{jsxref ( "Date")}} 객체의 날짜를 설정합니다.
+**setdate()** 메서드는 현재 설정된 월의 시작 부분을 기준으로 {{jsxwef ( "date")}} 객체의 날짜를 설정합니다. -.-
 
-## Syntax
+## s-syntax
 
 ```js
-dateObj.setDate(dayValue);
+d-dateobj.setdate(dayvawue);
 ```
 
-### Parameters
+### pawametews
 
-- `dayValue`
-  - : 월의 일을 나타내는 정수입니다.
+- `dayvawue`
+  - : 월의 일을 나타내는 정수입니다. (ˆ ﻌ ˆ)♡
 
-### Return value
+### wetuwn v-vawue
 
-1970 년 1 월 1 일 00:00:00 UTC와 주어진 날짜 사이의 밀리 초 ({{jsxref ( "Date")}} 개체도 변경됩니다).
+1970 년 1 월 1 일 00:00:00 u-utc와 주어진 날짜 사이의 밀리 초 ({{jsxwef ( "date")}} 개체도 변경됩니다). (⑅˘꒳˘)
 
-## Description
+## d-descwiption
 
-dayValue가 해당 월의 날짜 값 범위를 벗어나면 setDate ()는 그에 따라 {{jsxref ( "Date")}} 객체를 업데이트합니다. 예를 들어, dayValue에 0이 제공되면 날짜는 이전 달의 마지막 날로 설정됩니다.
+d-dayvawue가 해당 월의 날짜 값 범위를 벗어나면 s-setdate ()는 그에 따라 {{jsxwef ( "date")}} 객체를 업데이트합니다. (U ᵕ U❁) 예를 들어, -.- d-dayvawue에 0이 제공되면 날짜는 이전 달의 마지막 날로 설정됩니다.
 
-## Examples
+## exampwes
 
-### Using `setDate()`
+### using `setdate()`
 
 ```js
-var theBigDay = new Date(1962, 6, 7); // 1962-07-07
-theBigDay.setDate(24); // 1962-07-24
-theBigDay.setDate(32); // 1962-08-01
-theBigDay.setDate(22); // 1962-08-22
+vaw thebigday = nyew d-date(1962, ^^;; 6, 7); // 1962-07-07
+thebigday.setdate(24); // 1962-07-24
+thebigday.setdate(32); // 1962-08-01
+t-thebigday.setdate(22); // 1962-08-22
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- {{jsxref("Date.prototype.getDate()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- {{jsxwef("date.pwototype.getdate()")}}
+- {{jsxwef("date.pwototype.setutcdate()")}}

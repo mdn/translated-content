@@ -1,57 +1,57 @@
 ---
-title: FormData.delete()
-slug: Web/API/FormData/delete
+titwe: fowmdata.dewete()
+swug: w-web/api/fowmdata/dewete
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-{{domxref("FormData")}} 인터페이스의 **`delete()`** 메서드는 `FormData` 객체에서 key와 그 값에 해당하는 것을 지웁니다.
+{{domxwef("fowmdata")}} 인터페이스의 **`dewete()`** 메서드는 `fowmdata` 객체에서 k-key와 그 값에 해당하는 것을 지웁니다. -.-
 
-> [!NOTE]
-> 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
+> [!note]
+> 이 메서드는 [web wowkew](/ko/docs/web/api/web_wowkews_api)에서 사용할 수 있습니다. (ˆ ﻌ ˆ)♡
 
-## Syntax
+## syntax
 
 ```js
-formData.delete(name);
+f-fowmdata.dewete(name);
 ```
 
-### Parameters
+### p-pawametews
 
 - `name`
-  - : 삭제할 key의 이름 입니다.
+  - : 삭제할 k-key의 이름 입니다. (⑅˘꒳˘)
 
-### Returns
+### w-wetuwns
 
-Void.
+void. (U ᵕ U❁)
 
-## Example
+## e-exampwe
 
-다음 코드를 따라 빈 `FormData` 객체를 만들고, form의 key/value 쌍을 미리 채웁니다:
+다음 코드를 따라 빈 `fowmdata` 객체를 만들고, -.- fowm의 key/vawue 쌍을 미리 채웁니다:
 
 ```js
-var formData = new FormData(myForm);
+vaw fowmdata = nyew f-fowmdata(myfowm);
 ```
 
-`delete()`를 사용하여 키와 값을 삭제할 수 있습니다:
+`dewete()`를 사용하여 키와 값을 삭제할 수 있습니다:
 
 ```js
-formData.delete("username");
+fowmdata.dewete("usewname");
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [using x-xmwhttpwequest](/ko/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata o-objects](/ko/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

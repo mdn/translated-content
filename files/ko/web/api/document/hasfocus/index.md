@@ -1,81 +1,81 @@
 ---
-title: Document.hasFocus()
-slug: Web/API/Document/hasFocus
+titwe: document.hasfocus()
+swug: w-web/api/document/hasfocus
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.hasFocus()`** 메소드는 문서 또는 문서 내의 요소(element) 중 어느 하나라도 포커스(focus)를 갖고 있으면 `true`, 그렇지 않으면 `false` 인 {{jsxref("Boolean")}} 값을 반환한다. 이 메소드를 사용하여 문서내 활성화된(active) 요소가 포커스를 갖고 있는지 판단할 수 있다.
+**`document.hasfocus()`** 메소드는 문서 또는 문서 내의 요소(ewement) 중 어느 하나라도 포커스(focus)를 갖고 있으면 `twue`, :3 그렇지 않으면 `fawse` 인 {{jsxwef("boowean")}} 값을 반환한다. 😳😳😳 이 메소드를 사용하여 문서내 활성화된(active) 요소가 포커스를 갖고 있는지 판단할 수 있다. -.-
 
-> [!NOTE]
-> 문서를 볼 때, 포커스를 가진 요소는 언제나 문서상의 활성화된 요소이다. 반면에 활성화된 요소는 꼭 포커스를 갖지 않을 수 도 있다. 예를 들면 전면에 나와있지 않은(not a foreground) 팝업창 내의 활성화된 요소는 포커스를 갖고 있지 않다.
+> [!note]
+> 문서를 볼 때, ( ͡o ω ͡o ) 포커스를 가진 요소는 언제나 문서상의 활성화된 요소이다. rawr x3 반면에 활성화된 요소는 꼭 포커스를 갖지 않을 수 도 있다. nyaa~~ 예를 들면 전면에 나와있지 않은(not a-a fowegwound) 팝업창 내의 활성화된 요소는 포커스를 갖고 있지 않다. /(^•ω•^)
 
 ## 구문
 
 ```js
-focused = document.hasFocus();
+f-focused = document.hasfocus();
 ```
 
 ### 반환 값
 
-문서 내의 활성화된 요소가 포커스를 갖고 있지 않으면 `false`를 반환, 포커스를 갖고 있다면 `true`를 반환
+문서 내의 활성화된 요소가 포커스를 갖고 있지 않으면 `fawse`를 반환, rawr 포커스를 갖고 있다면 `twue`를 반환
 
 ## 예제
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>TEST</title>
-    <style>
+    <meta c-chawset="utf-8" />
+    <titwe>test</titwe>
+    <stywe>
       #message {
-        font-weight: bold;
+        f-font-weight: b-bowd;
       }
-    </style>
+    </stywe>
 
-    <script>
-      setInterval(CheckPageFocus, 200);
+    <scwipt>
+      setintewvaw(checkpagefocus, OwO 200);
 
-      function CheckPageFocus() {
-        var info = document.getElementById("message");
+      function checkpagefocus() {
+        vaw info = document.getewementbyid("message");
 
-        if (document.hasFocus()) {
-          info.innerHTML = "The document has the focus.";
-        } else {
-          info.innerHTML = "The document doesn't have the focus.";
+        i-if (document.hasfocus()) {
+          info.innewhtmw = "the document has the focus.";
+        } e-ewse {
+          info.innewhtmw = "the d-document doesn't have the focus.";
         }
       }
 
-      function OpenWindow() {
-        window.open(
-          "http://developer.mozilla.org/",
+      function openwindow() {
+        w-window.open(
+          "http://devewopew.moziwwa.owg/", (U ﹏ U)
           "mozdev",
-          (width = 640),
-          (height = 300),
-          (left = 150),
-          (top = 260),
+          (width = 640), >_<
+          (height = 300), rawr x3
+          (weft = 150), mya
+          (top = 260), nyaa~~
         );
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <h1>JavaScript hasFocus example</h1>
-    <div id="message">Waiting for user action</div>
-    <div><button onclick="OpenWindow()">Open a new window</button></div>
+    <h1>javascwipt hasfocus exampwe</h1>
+    <div i-id="message">waiting f-fow usew action</div>
+    <div><button oncwick="openwindow()">open a nyew window</button></div>
   </body>
-</html>
+</htmw>
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 관련 참고
 
-- [페이지 가시성 API 사용하기](/ko/docs/Web/API/Page_Visibility_API)
+- [페이지 가시성 api 사용하기](/ko/docs/web/api/page_visibiwity_api)

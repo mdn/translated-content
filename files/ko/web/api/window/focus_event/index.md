@@ -1,96 +1,96 @@
 ---
-title: "Window: focus event"
-short-title: focus
-slug: Web/API/Window/focus_event
-l10n:
-  sourceCommit: b4dc8c13ae9041844dc45423aa087002bf9a25e9
+titwe: "window: focus event"
+s-showt-titwe: focus
+s-swug: web/api/window/focus_event
+w-w10n:
+  souwcecommit: b-b4dc8c13ae9041844dc45423aa087002bf9a25e9
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`focus`** 이벤트는 포커스가 된 요소에 발생합니다.
+**`focus`** 이벤트는 포커스가 된 요소에 발생합니다. mya
 
-`focus` 이벤트의 반대 이벤트는 {{domxref("Window/blur_event", "blur")}} 입니다.
+`focus` 이벤트의 반대 이벤트는 {{domxwef("window/bwuw_event", mya "bwuw")}} 입니다. 😳
 
-이 이벤트는 취소할 수 없고, 전파되지도 않습니다.
+이 이벤트는 취소할 수 없고, XD 전파되지도 않습니다. :3
 
 ## 구문
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} 와 같은 메서드의 이벤트 이름을 사용하거나 이벤트 핸들러 속성을 설정합니다.
+{{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} 와 같은 메서드의 이벤트 이름을 사용하거나 이벤트 핸들러 속성을 설정합니다. -.-
 
 ```js
-addEventListener("focus", (event) => {});
+a-addeventwistenew("focus", ( ͡o ω ͡o ) (event) => {});
 
-onfocus = (event) => {};
+o-onfocus = (event) => {};
 ```
 
 ## 이벤트 타입
 
-{{domxref("FocusEvent")}} 입니다. {{domxref("UIEvent")}} 와 {{domxref("Event")}} 를 상속 받습니다.
+{{domxwef("focusevent")}} 입니다. rawr x3 {{domxwef("uievent")}} 와 {{domxwef("event")}} 를 상속 받습니다. nyaa~~
 
-{{InheritanceDiagram("FocusEvent")}}
+{{inhewitancediagwam("focusevent")}}
 
 ## 이벤트 속성
 
-이 인터페이스는 부모인 {{domxref("UIEvent")}} 를 상속받으며 간접적으로 {{domxref("Event")}} 또한 상속 받습니다.
+이 인터페이스는 부모인 {{domxwef("uievent")}} 를 상속받으며 간접적으로 {{domxwef("event")}} 또한 상속 받습니다. /(^•ω•^)
 
-- {{domxref("FocusEvent.relatedTarget")}}
-  - : {{domxref("EventTarget")}}는 이 이벤트의 보조 대상을 나타냅니다. (페이지 내부나 외부에서 클릭하는 것과 같은) 일부 경우에는, 이 속성이 보안상의 이유로 `null` 로 설정됩니다.
+- {{domxwef("focusevent.wewatedtawget")}}
+  - : {{domxwef("eventtawget")}}는 이 이벤트의 보조 대상을 나타냅니다. (페이지 내부나 외부에서 클릭하는 것과 같은) 일부 경우에는, rawr 이 속성이 보안상의 이유로 `nuww` 로 설정됩니다. OwO
 
 ## 예제
 
 ### 라이브 예제
 
-이 예제는 문서에 포커스가 유실되었을 때의 모양이 어떻게 바뀌는지를 보여줍니다. `focus` 와 {{domxref("Window/blur_event", "blur")}} 를 확인하기 위해 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 가 사용되었습니다.
+이 예제는 문서에 포커스가 유실되었을 때의 모양이 어떻게 바뀌는지를 보여줍니다. (U ﹏ U) `focus` 와 {{domxwef("window/bwuw_event", >_< "bwuw")}} 를 확인하기 위해 {{domxwef("eventtawget.addeventwistenew()", "addeventwistenew()")}} 가 사용되었습니다. rawr x3
 
-#### HTML
+#### h-htmw
 
-```html
-<p id="log">문서를 클릭하여 포커스해 보세요.</p>
+```htmw
+<p i-id="wog">문서를 클릭하여 포커스해 보세요.</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .paused {
-  background: #ddd;
-  color: #555;
+  backgwound: #ddd;
+  cowow: #555;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-function pause() {
-  document.body.classList.add("paused");
-  log.textContent = "포커스 유실!";
+f-function pause() {
+  document.body.cwasswist.add("paused");
+  w-wog.textcontent = "포커스 유실!";
 }
 
-function play() {
-  document.body.classList.remove("paused");
-  log.textContent =
-    "이 문서는 포커스되었습니다. 문서의 바깥을 클릭하여 포커스를 유실시켜 보세요.";
+function pway() {
+  d-document.body.cwasswist.wemove("paused");
+  wog.textcontent =
+    "이 문서는 포커스되었습니다. mya 문서의 바깥을 클릭하여 포커스를 유실시켜 보세요.";
 }
 
-const log = document.getElementById("log");
+const wog = document.getewementbyid("wog");
 
-window.addEventListener("blur", pause);
-window.addEventListener("focus", play);
+w-window.addeventwistenew("bwuw", nyaa~~ pause);
+w-window.addeventwistenew("focus", (⑅˘꒳˘) p-pway);
 ```
 
 #### 결과
 
-{{EmbedLiveSample("Live_example")}}
+{{embedwivesampwe("wive_exampwe")}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 연관 이벤트: {{domxref("Window/blur_event", "blur")}}
-- `Element` 을 대상으로 하는 이벤트: {{domxref("Element/focus_event", "focus")}} 이벤트
+- 연관 이벤트: {{domxwef("window/bwuw_event", rawr x3 "bwuw")}}
+- `ewement` 을 대상으로 하는 이벤트: {{domxwef("ewement/focus_event", (✿oωo) "focus")}} 이벤트

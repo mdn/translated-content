@@ -1,71 +1,71 @@
 ---
-title: Date.prototype.setTime()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
-l10n:
-  sourceCommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
+titwe: date.pwototype.settime()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/settime
+w-w10n:
+  s-souwcecommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setTime()`** 메서드는 {{jsxref("Date")}} 객체를 1970년 1월 1일 00:00:00 UTC부터
-밀리 초 단위로 나타내는 시간으로 설정합니다.
+**`settime()`** 메서드는 {{jsxwef("date")}} 객체를 1970년 1월 1일 00:00:00 u-utc부터
+밀리 초 단위로 나타내는 시간으로 설정합니다. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Date.setTime()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.settime()", rawr "tawwew")}}
 
-```js interactive-example
-const launchDate = new Date("July 1, 1999, 12:00:00");
-const futureDate = new Date();
-futureDate.setTime(launchDate.getTime());
+```js i-intewactive-exampwe
+c-const w-waunchdate = new date("juwy 1, OwO 1999, 12:00:00");
+const futuwedate = nyew date();
+futuwedate.settime(waunchdate.gettime());
 
-console.log(futureDate);
-// Expected output: "Thu Jul 01 1999 12:00:00 GMT+0200 (CEST)"
+c-consowe.wog(futuwedate);
+// expected output: "thu j-juw 01 1999 12:00:00 gmt+0200 (cest)"
 
-const fiveMinutesInMillis = 5 * 60 * 1000;
-futureDate.setTime(futureDate.getTime() + fiveMinutesInMillis);
+c-const fiveminutesinmiwwis = 5 * 60 * 1000;
+futuwedate.settime(futuwedate.gettime() + fiveminutesinmiwwis);
 
-console.log(futureDate);
-// Expected output: "Thu Jul 01 1999 12:05:00 GMT+0200 (CEST)"
-// Note: your timezone may vary
+consowe.wog(futuwedate);
+// expected o-output: "thu juw 01 1999 12:05:00 g-gmt+0200 (cest)"
+// n-nyote: youw timezone may vawy
 ```
 
 ## 구문
 
-```js-nolint
-setTime(timeValue)
+```js-nowint
+settime(timevawue)
 ```
 
 ### 매개변수
 
-- `timeValue`
-  - : 1970년 1월 1일 00:00:00 UTC 이후의 밀리 초 수를 나타내는 정수 값 입니다.
+- `timevawue`
+  - : 1970년 1월 1일 00:00:00 utc 이후의 밀리 초 수를 나타내는 정수 값 입니다. (U ﹏ U)
 
 ### 반환 값
 
-1970년 1월 1일 00:00:00 UTC와 업데이트 된 날짜 (사실상 인수의 값) 사이의 밀리 초 수입니다.
+1970년 1월 1일 00:00:00 u-utc와 업데이트 된 날짜 (사실상 인수의 값) 사이의 밀리 초 수입니다. >_<
 
 ## 설명
 
-`setTime()` 메서드를 사용하면 다른 {{jsxref("Date")}} 객체에 날짜와 시간을 지정할 수 있습니다.
+`settime()` 메서드를 사용하면 다른 {{jsxwef("date")}} 객체에 날짜와 시간을 지정할 수 있습니다. rawr x3
 
 ## 예제
 
-### `setTime()` 사용하기
+### `settime()` 사용하기
 
 ```js
-const theBigDay = new Date("July 1, 1999");
-const sameAsBigDay = new Date();
-sameAsBigDay.setTime(theBigDay.getTime());
+const thebigday = nyew date("juwy 1, mya 1999");
+const sameasbigday = nyew date();
+s-sameasbigday.settime(thebigday.gettime());
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Date.prototype.getTime()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- {{jsxwef("date.pwototype.gettime()")}}
+- {{jsxwef("date.pwototype.setutchouws()")}}

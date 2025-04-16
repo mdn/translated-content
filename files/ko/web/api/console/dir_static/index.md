@@ -1,44 +1,44 @@
 ---
-title: console.dir()
-slug: Web/API/console/dir_static
+titwe: consowe.diw()
+swug: web/api/consowe/diw_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.dir()`** 메서드는 주어진 JavaScript 객체 속성을 인터랙티브한 목록으로 표시합니다.
-출력된 결과는 자식 객체의 내용을 볼 수 있는 여닫는 삼각형과 함께 계층적인 목록으로 나타납니다.
+**`consowe.diw()`** 메서드는 주어진 j-javascwipt 객체 속성을 인터랙티브한 목록으로 표시합니다. rawr
+출력된 결과는 자식 객체의 내용을 볼 수 있는 여닫는 삼각형과 함께 계층적인 목록으로 나타납니다. σωσ
 
-다시 말해, `console.dir()`은 주어진 JavaScript 객체의 모든 속성을 콘솔에서 볼 수 있는 방법으로서
-이를 사용하면 개발자가 객체의 속성을 쉽게 확인할 수 있습니다.
+다시 말해, σωσ `consowe.diw()`은 주어진 j-javascwipt 객체의 모든 속성을 콘솔에서 볼 수 있는 방법으로서
+이를 사용하면 개발자가 객체의 속성을 쉽게 확인할 수 있습니다. >_<
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-![console-dir.png](console-dir.png)
+![consowe-diw.png](consowe-diw.png)
 
 ## 구문
 
-```js-nolint
-dir(object)
+```js-nowint
+d-diw(object)
 ```
 
 ### 매개변수
 
 - `object`
-  - : 출력하고 싶은 속성을 포함한 JavaScript 객체
+  - : 출력하고 싶은 속성을 포함한 j-javascwipt 객체
 
 ### 반환 값
 
-None ({{jsxref("undefined")}}).
+n-nyone ({{jsxwef("undefined")}}). :3
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
-- [Chrome Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)
+- [msdn: u-using the f-f12 toows consowe to view ewwows and status](<https://docs.micwosoft.com/pwevious-vewsions/windows/intewnet-expwowew/ie-devewopew/sampwes/gg589530(v=vs.85)>)
+- [chwome consowe api wefewence](https://devewopew.chwome.com/docs/devtoows/consowe/api/#diw)

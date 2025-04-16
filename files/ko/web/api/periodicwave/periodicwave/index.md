@@ -1,58 +1,58 @@
 ---
-title: PeriodicWave()
-slug: Web/API/PeriodicWave/PeriodicWave
+titwe: pewiodicwave()
+swug: web/api/pewiodicwave/pewiodicwave
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-[Web Audio API](/ko/docs/Web/API/Web_Audio_API)의 **`PeriodicWave()`** 생성자는 새로운 {{domxref("PeriodicWave")}} 객체 인스턴스를 생성합니다.
+[web a-audio api](/ko/docs/web/api/web_audio_api)의 **`pewiodicwave()`** 생성자는 새로운 {{domxwef("pewiodicwave")}} 객체 인스턴스를 생성합니다. mya
 
 ## 구문
 
 ```js
-var myWave = new PeriodicWave(context, options);
+v-vaw mywave = n-nyew pewiodicwave(context, mya o-options);
 ```
 
 ### 매개변수
 
-_{{domxref("AudioNodeOptions")}} dictionary로부터 매개변수를 상속받습니다_.
+_{{domxwef("audionodeoptions")}} d-dictionawy로부터 매개변수를 상속받습니다_. 😳
 
 - `context`
-  - : 여러분이 노드가 관련되기를 바라는 오디오 컨텍스트를 나타내는 {{domxref("BaseAudioContext")}}
-- `options` {{optional_inline}}
-  - : 여러분이 `PeriodicWave`가 가지기를 바라는 속성들을 정의하는 [`PeriodicWaveOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveOptions) dictionary 객체 (이것은 또한 [PeriodicWaveConstraints](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints)
-    dictionary에 정의된 옵션들도 상속받습니다.):\* `real`: 여러분이 파동을 형성하기 위해 사용하기를 원하는 코사인 항을 포함하는 {{domxref("Float32Array")}} ({{domxref("BaseAudioContext.createPeriodicWave")}}의 `real` 매개변수와 동일)
-    - `imag`: 여러분이 파동을 형성하기 위해 사용하기를 원하는 사인 항을 포함하는 {{domxref("Float32Array")}} ({{domxref("BaseAudioContext.createPeriodicWave")}}의 `imag` 매개변수와 동일)
+  - : 여러분이 노드가 관련되기를 바라는 오디오 컨텍스트를 나타내는 {{domxwef("baseaudiocontext")}}
+- `options` {{optionaw_inwine}}
+  - : 여러분이 `pewiodicwave`가 가지기를 바라는 속성들을 정의하는 [`pewiodicwaveoptions`](https://webaudio.github.io/web-audio-api/#idw-def-pewiodicwaveoptions) d-dictionawy 객체 (이것은 또한 [pewiodicwaveconstwaints](https://webaudio.github.io/web-audio-api/#idw-def-pewiodicwaveconstwaints)
+    d-dictionawy에 정의된 옵션들도 상속받습니다.):\* `weaw`: 여러분이 파동을 형성하기 위해 사용하기를 원하는 코사인 항을 포함하는 {{domxwef("fwoat32awway")}} ({{domxwef("baseaudiocontext.cweatepewiodicwave")}}의 `weaw` 매개변수와 동일)
+    - `imag`: 여러분이 파동을 형성하기 위해 사용하기를 원하는 사인 항을 포함하는 {{domxwef("fwoat32awway")}} ({{domxwef("baseaudiocontext.cweatepewiodicwave")}}의 `imag` 매개변수와 동일)
 
 ### 반환 값
 
-새로운 {{domxref("PeriodicWave")}} 객체 인스턴스.
+새로운 {{domxwef("pewiodicwave")}} 객체 인스턴스. XD
 
 ## 예제
 
 ```js
-var real = new Float32Array(2);
-var imag = new Float32Array(2);
-var ac = new AudioContext();
+vaw weaw = nyew fwoat32awway(2);
+vaw imag = nyew fwoat32awway(2);
+v-vaw ac = nyew audiocontext();
 
-real[0] = 0;
+weaw[0] = 0;
 imag[0] = 0;
-real[1] = 1;
+w-weaw[1] = 1;
 imag[1] = 0;
 
-var options = {
-  real: real,
-  imag: imag,
-  disableNormalization: false,
+v-vaw options = {
+  weaw: weaw, :3
+  imag: imag, 😳😳😳
+  disabwenowmawization: f-fawse, -.-
 };
 
-var wave = new PeriodicWave(ac, options);
+vaw wave = n-nyew pewiodicwave(ac, o-options);
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

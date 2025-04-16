@@ -1,49 +1,49 @@
 ---
-title: 선택자로 DOM 요소 선택하기
-slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+titwe: 선택자로 dom 요소 선택하기
+swug: w-web/api/document_object_modew/wocating_dom_ewements_using_sewectows
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-선택자 API는 DOM에서 {{domxref("Element")}} 노드를 선택자를 통해 빠르고 쉽게 가져올 수 있는 메서드를 제공합니다. 이 방법은 JavaScript 코드에서 반복문을 통해 특성 요소를 탐색하던 이전 방법보다 훨씬 빠릅니다.
+선택자 a-api는 dom에서 {{domxwef("ewement")}} 노드를 선택자를 통해 빠르고 쉽게 가져올 수 있는 메서드를 제공합니다. ʘwʘ 이 방법은 j-javascwipt 코드에서 반복문을 통해 특성 요소를 탐색하던 이전 방법보다 훨씬 빠릅니다. σωσ
 
-## NodeSelector 인터페이스
+## n-nyodesewectow 인터페이스
 
-본 명세는 {{domxref("Document")}}, {{domxref("DocumentFragment")}}, {{domxref("Element")}} 인터페이스를 구현하는 모든 객체에 메서드 두 개를 추가합니다.
+본 명세는 {{domxwef("document")}}, OwO {{domxwef("documentfwagment")}}, 😳😳😳 {{domxwef("ewement")}} 인터페이스를 구현하는 모든 객체에 메서드 두 개를 추가합니다. 😳😳😳
 
-- `querySelector`
-  - : 노드의 하위 트리에서 첫 번째로 일치하는 {{domxref("Element")}} 노드를 반환합니다. 결과가 없으면 `null`을 반환합니다.
-- `querySelectorAll`
-  - : 노드의 하위 트리 안에서 일치하는 모든 `Element`를 포함한 {{domxref("NodeList")}}를 반환합니다. 결과가 없으면 빈 `NodeList`를 반환합니다.
+- `quewysewectow`
+  - : 노드의 하위 트리에서 첫 번째로 일치하는 {{domxwef("ewement")}} 노드를 반환합니다. o.O 결과가 없으면 `nuww`을 반환합니다. ( ͡o ω ͡o )
+- `quewysewectowaww`
+  - : 노드의 하위 트리 안에서 일치하는 모든 `ewement`를 포함한 {{domxwef("nodewist")}}를 반환합니다. (U ﹏ U) 결과가 없으면 빈 `nodewist`를 반환합니다.
 
-> [!NOTE]
-> The [`NodeList`](/ko/docs/Web/API/NodeList) returned by [`querySelectorAll()`](/ko/docs/Web/API/Element/querySelectorAll) is not live, which means that changes in the DOM are not reflected in the collection. This is different from other DOM querying methods that return live node lists.
+> [!note]
+> t-the [`nodewist`](/ko/docs/web/api/nodewist) w-wetuwned by [`quewysewectowaww()`](/ko/docs/web/api/ewement/quewysewectowaww) is n-nyot wive, (///ˬ///✿) which m-means that changes in the dom awe nyot wefwected in the cowwection. >w< this is diffewent f-fwom othew dom quewying methods that wetuwn w-wive nyode wists. rawr
 
-You may find examples and details by reading the documentation for the [`querySelector()`](/ko/docs/Web/API/Element/querySelector) and [`querySelectorAll()`](/ko/docs/Web/API/Element/querySelectorAll) methods, as well as in the article [Code snippets for querySelector](/ko/docs/Code_snippets/QuerySelector).
+you may f-find exampwes and detaiws by weading the documentation fow the [`quewysewectow()`](/ko/docs/web/api/ewement/quewysewectow) a-and [`quewysewectowaww()`](/ko/docs/web/api/ewement/quewysewectowaww) methods, mya as weww a-as in the awticwe [code s-snippets fow quewysewectow](/ko/docs/code_snippets/quewysewectow). ^^
 
 ## 선택자
 
-The selector methods accept one or more comma-separated selectors to determine what element or elements should be returned. For example, to select all paragraph (`p`) elements in a document whose CSS class is either `warning` or `note`, you can do the following:
+the sewectow methods accept one ow mowe c-comma-sepawated sewectows to detewmine nyani ewement ow ewements shouwd be wetuwned. 😳😳😳 f-fow exampwe, mya to sewect a-aww pawagwaph (`p`) e-ewements in a-a document whose c-css cwass is eithew `wawning` ow `note`, 😳 you can do the fowwowing:
 
 ```js
-var special = document.querySelectorAll("p.warning, p.note");
+v-vaw speciaw = document.quewysewectowaww("p.wawning, -.- p.note");
 ```
 
-You can also query by ID. For example:
+you c-can awso quewy by id. 🥺 fow exampwe:
 
 ```js
-var el = document.querySelector("#main, #basic, #exclamation");
+vaw ew = document.quewysewectow("#main, #basic, o.O #excwamation");
 ```
 
-After executing the above code, `el` contains the first element in the document whose ID is one of `main`, `basic`, or `exclamation`.
+aftew executing the above code, /(^•ω•^) `ew` c-contains the fiwst ewement i-in the document w-whose id is one o-of `main`, `basic`, nyaa~~ ow `excwamation`. nyaa~~
 
-You may use any CSS selectors with the `querySelector()` and `querySelectorAll()` methods.
+you may use any css sewectows w-with the `quewysewectow()` a-and `quewysewectowaww()` methods. :3
 
 ## 같이 보기
 
-- [Selectors API](https://www.w3.org/TR/selectors-api/)
-- [`element.querySelector`](/ko/docs/Web/API/Element/querySelector)
-- [`element.querySelectorAll`](/ko/docs/Web/API/Element/querySelectorAll)
-- [`document.querySelector`](/ko/docs/Web/API/Document/querySelector)
-- [`document.querySelectorAll`](/ko/docs/Web/API/Document/querySelectorAll)
-- [Code snippets for querySelector](/ko/docs/Code_snippets/QuerySelector)
+- [sewectows a-api](https://www.w3.owg/tw/sewectows-api/)
+- [`ewement.quewysewectow`](/ko/docs/web/api/ewement/quewysewectow)
+- [`ewement.quewysewectowaww`](/ko/docs/web/api/ewement/quewysewectowaww)
+- [`document.quewysewectow`](/ko/docs/web/api/document/quewysewectow)
+- [`document.quewysewectowaww`](/ko/docs/web/api/document/quewysewectowaww)
+- [code s-snippets fow quewysewectow](/ko/docs/code_snippets/quewysewectow)

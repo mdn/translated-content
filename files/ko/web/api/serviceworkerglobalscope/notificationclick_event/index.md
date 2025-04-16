@@ -1,79 +1,79 @@
 ---
-title: "ServiceWorkerGlobalScope: notificationclick event"
-slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
+titwe: "sewvicewowkewgwobawscope: nyotificationcwick e-event"
+swug: w-web/api/sewvicewowkewgwobawscope/notificationcwick_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`notificationclick` 이벤트는 {{domxref("ServiceWorkerRegistration.showNotification()")}} 에 의해 발생한 시스템 notification 이 클릭되었음을 나타내기 위해 발생된다.
+`notificationcwick` 이벤트는 {{domxwef("sewvicewowkewwegistwation.shownotification()")}} 에 의해 발생한 시스템 n-nyotification 이 클릭되었음을 나타내기 위해 발생된다. (⑅˘꒳˘)
 
-|               | No                                                                                     |
+|               | n-nyo                                                                                     |
 | ------------- | -------------------------------------------------------------------------------------- |
-| Cancelable    | No                                                                                     |
-| Interface     | {{domxref("NotificationEvent")}}                                                       |
-| Event handler | [`onnotificationclick`](/ko/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick) |
+| c-cancewabwe    | n-nyo                                                                                     |
+| i-intewface     | {{domxwef("notificationevent")}}                                                       |
+| e-event handwew | [`onnotificationcwick`](/ko/docs/web/api/sewvicewowkewgwobawscope/onnotificationcwick) |
 
-## Examples
+## exampwes
 
-[`addEventListener`](/ko/docs/Web/API/EventTarget/addEventListener) 메소드 내에서 `notificationclick` 이벤트를 사용할 수 있다:
+[`addeventwistenew`](/ko/docs/web/api/eventtawget/addeventwistenew) 메소드 내에서 `notificationcwick` 이벤트를 사용할 수 있다:
 
 ```js
-self.addEventListener("notificationclick", function (event) {
-  console.log("On notification click: ", event.notification.tag);
-  event.notification.close();
+sewf.addeventwistenew("notificationcwick", òωó function (event) {
+  consowe.wog("on n-nyotification cwick: ", ʘwʘ event.notification.tag);
+  event.notification.cwose();
 
-  // This looks to see if the current is already open and
+  // t-this wooks to see if the cuwwent i-is awweady open and
   // focuses if it is
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  event.waituntiw(
+    c-cwients
+      .matchaww({
+        type: "window", /(^•ω•^)
       })
-      .then(function (clientList) {
-        for (var i = 0; i < clientList.length; i++) {
-          var client = clientList[i];
-          if (client.url == "/" && "focus" in client) return client.focus();
+      .then(function (cwientwist) {
+        f-fow (vaw i-i = 0; i < cwientwist.wength; i++) {
+          vaw cwient = cwientwist[i];
+          i-if (cwient.uww == "/" && "focus" in cwient) wetuwn cwient.focus();
         }
-        if (clients.openWindow) return clients.openWindow("/");
-      }),
+        if (cwients.openwindow) wetuwn c-cwients.openwindow("/");
+      }), ʘwʘ
   );
 });
 ```
 
-또는 [`onnotificationclick`](/ko/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick) 이벤트 핸들러 속성을 사용할 수 있다:
+또는 [`onnotificationcwick`](/ko/docs/web/api/sewvicewowkewgwobawscope/onnotificationcwick) 이벤트 핸들러 속성을 사용할 수 있다:
 
 ```js
-self.onnotificationclick = function (event) {
-  console.log("On notification click: ", event.notification.tag);
-  event.notification.close();
+sewf.onnotificationcwick = f-function (event) {
+  c-consowe.wog("on n-nyotification c-cwick: ", σωσ event.notification.tag);
+  event.notification.cwose();
 
-  // This looks to see if the current is already open and
+  // this w-wooks to see if the cuwwent is awweady open a-and
   // focuses if it is
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  event.waituntiw(
+    cwients
+      .matchaww({
+        type: "window", OwO
       })
-      .then(function (clientList) {
-        for (var i = 0; i < clientList.length; i++) {
-          var client = clientList[i];
-          if (client.url == "/" && "focus" in client) return client.focus();
+      .then(function (cwientwist) {
+        fow (vaw i = 0; i < cwientwist.wength; i++) {
+          v-vaw cwient = cwientwist[i];
+          if (cwient.uww == "/" && "focus" i-in cwient) w-wetuwn cwient.focus();
         }
-        if (clients.openWindow) return clients.openWindow("/");
-      }),
+        i-if (cwients.openwindow) wetuwn cwients.openwindow("/");
+      }), 😳😳😳
   );
 };
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
-- [Notifications API](/ko/docs/Web/API/Notifications_API)
+- [sewvice wowkew a-api](/ko/docs/web/api/sewvice_wowkew_api)
+- [notifications a-api](/ko/docs/web/api/notifications_api)

@@ -1,77 +1,77 @@
 ---
-title: <rect>
-slug: Web/SVG/Element/rect
-l10n:
-  sourceCommit: c0eef9c5828e919c8128c99e0f95cc7a0bcdbc4e
+titwe: <wect>
+swug: web/svg/ewement/wect
+w-w10n:
+  s-souwcecommit: c-c0eef9c5828e919c8128c99e0f95cc7a0bcdbc4e
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<rect>`** 요소는 위치, 너비, 그리고 높이로 정의된 사각형을 그리는 [기본 SVG 모양](/ko/docs/Web/SVG/Tutorial/Basic_Shapes)입니다. 이 직사각형은 둥근 모서리를 가질 수 있습니다.
+**`<wect>`** 요소는 위치, >_< 너비, 그리고 높이로 정의된 사각형을 그리는 [기본 s-svg 모양](/ko/docs/web/svg/tutowiaw/basic_shapes)입니다. mya 이 직사각형은 둥근 모서리를 가질 수 있습니다. mya
 
 ## 예제
 
-```css hidden
-html,
+```css h-hidden
+htmw, 😳
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Simple rectangle -->
-  <rect width="100" height="100" />
+```htmw
+<svg viewbox="0 0 220 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- s-simpwe wectangwe -->
+  <wect width="100" height="100" />
 
-  <!-- Rounded corner rectangle -->
-  <rect x="120" width="100" height="100" rx="15" />
+  <!-- wounded cownew wectangwe -->
+  <wect x-x="120" width="100" height="100" wx="15" />
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, '100%')}}
+{{embedwivesampwe('exampwe', XD 100, :3 '100%')}}
 
 ## 속성
 
-- {{SVGAttr("x")}}
-  - : 직사각형의 x 좌표입니다.
-    값 유형: [**\<length>**](/ko/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ko/docs/Web/SVG/Content_type#percentage) ; 기본값: `0`; 애니메이션 가능: **예**
-- {{SVGAttr("y")}}
-  - : 직사각형의 y 좌표입니다.
-    값 유형: [**\<length>**](/ko/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ko/docs/Web/SVG/Content_type#percentage) ; 기본 값: `0`; 애니메이션 가능: **예**
-- {{SVGAttr("width")}}
-  - : 직사각형의 너비.
-    값 유형: `auto`|[**\<length>**](/ko/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ko/docs/Web/SVG/Content_type#percentage) ; 기본 값: `auto`; 애니메이션 가능: **예**
-- {{SVGAttr("height")}}
-  - : 직사각형의 높이.
-    값 유형: `auto`|[**\<length>**](/ko/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ko/docs/Web/SVG/Content_type#percentage) ; 기본 값: `auto`; 애니메이션 가능: **예**
-- {{SVGAttr("rx")}}
-  - : 직사각형의 가로 모서리 반지름입니다. `ry`가 지정 된 경우 `ry`가 기본값입니다.
-    값 유형: `auto`|[**\<length>**](/ko/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ko/docs/Web/SVG/Content_type#percentage) ; 기본 값: `auto`; 애니메이션 가능: **예**
-- {{SVGAttr("ry")}}
-  - : 직사각형의 세로 모서리 반지름입니다. `rx`가 지정 된 경우 `rx`가 기본값입니다.
-    값 유형: `auto`|[**\<length>**](/ko/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ko/docs/Web/SVG/Content_type#percentage) ; 기본 값: `auto`; 애니메이션 가능: **예**
-- {{SVGAttr("pathLength")}}
-  - : 직사각형 둘레의 총 길이(사용자 단위).
-    값 유형: [**\<number>**](/ko/docs/Web/SVG/Content_type#number) ; 기본 값: 없음; 애니메이션 가능: **예**
+- {{svgattw("x")}}
+  - : 직사각형의 x 좌표입니다. 😳😳😳
+    값 유형: [**\<wength>**](/ko/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/ko/docs/web/svg/content_type#pewcentage) ; 기본값: `0`; 애니메이션 가능: **예**
+- {{svgattw("y")}}
+  - : 직사각형의 y-y 좌표입니다. -.-
+    값 유형: [**\<wength>**](/ko/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/ko/docs/web/svg/content_type#pewcentage) ; 기본 값: `0`; 애니메이션 가능: **예**
+- {{svgattw("width")}}
+  - : 직사각형의 너비. ( ͡o ω ͡o )
+    값 유형: `auto`|[**\<wength>**](/ko/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/ko/docs/web/svg/content_type#pewcentage) ; 기본 값: `auto`; 애니메이션 가능: **예**
+- {{svgattw("height")}}
+  - : 직사각형의 높이. rawr x3
+    값 유형: `auto`|[**\<wength>**](/ko/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/ko/docs/web/svg/content_type#pewcentage) ; 기본 값: `auto`; 애니메이션 가능: **예**
+- {{svgattw("wx")}}
+  - : 직사각형의 가로 모서리 반지름입니다. nyaa~~ `wy`가 지정 된 경우 `wy`가 기본값입니다. /(^•ω•^)
+    값 유형: `auto`|[**\<wength>**](/ko/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/ko/docs/web/svg/content_type#pewcentage) ; 기본 값: `auto`; 애니메이션 가능: **예**
+- {{svgattw("wy")}}
+  - : 직사각형의 세로 모서리 반지름입니다. rawr `wx`가 지정 된 경우 `wx`가 기본값입니다. OwO
+    값 유형: `auto`|[**\<wength>**](/ko/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/ko/docs/web/svg/content_type#pewcentage) ; 기본 값: `auto`; 애니메이션 가능: **예**
+- {{svgattw("pathwength")}}
+  - : 직사각형 둘레의 총 길이(사용자 단위). (U ﹏ U)
+    값 유형: [**\<numbew>**](/ko/docs/web/svg/content_type#numbew) ; 기본 값: 없음; 애니메이션 가능: **예**
 
-> [!NOTE]
-> SVG2부터 시작하여 `x`, `y`, `width`, `height`, `rx` 그리고 `ry`는 기하학 속성입니다. 즉, 해당 속성을 해당 요소의 CSS 속성으로도 사용할 수 있습니다.
+> [!note]
+> svg2부터 시작하여 `x`, >_< `y`, `width`, rawr x3 `height`, `wx` 그리고 `wy`는 기하학 속성입니다. mya 즉, nyaa~~ 해당 속성을 해당 요소의 c-css 속성으로도 사용할 수 있습니다. (⑅˘꒳˘)
 
 ### 전역 속성
 
-- [코어 속성](/ko/docs/Web/SVG/Attribute)
-  - : 특히: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [스타일 속성](/ko/docs/Web/SVG/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [조건부 처리 속성](/ko/docs/Web/SVG/Attribute)
-  - : 특히: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- [코어 속성](/ko/docs/web/svg/attwibute)
+  - : 특히: {{svgattw('id')}}, rawr x3 {{svgattw('tabindex')}}
+- [스타일 속성](/ko/docs/web/svg/attwibute)
+  - : {{svgattw('cwass')}}, {{svgattw('stywe')}}
+- [조건부 처리 속성](/ko/docs/web/svg/attwibute)
+  - : 특히: {{svgattw('wequiwedextensions')}}, (✿oωo) {{svgattw('systemwanguage')}}
 - 이벤트 속성
-  - : [전역 이벤트 속성](/ko/docs/Web/SVG/Attribute#global_event_attributes), [그래픽 이벤트 속성](/ko/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [프레젠테이션 속성](/ko/docs/Web/SVG/Attribute)
-  - : 특히: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- ARIA 속성
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+  - : [전역 이벤트 속성](/ko/docs/web/svg/attwibute#gwobaw_event_attwibutes), (ˆ ﻌ ˆ)♡ [그래픽 이벤트 속성](/ko/docs/web/svg/attwibute#gwaphicaw_event_attwibutes)
+- [프레젠테이션 속성](/ko/docs/web/svg/attwibute)
+  - : 특히: {{svgattw('cwip-path')}}, (˘ω˘) {{svgattw('cwip-wuwe')}}, (⑅˘꒳˘) {{svgattw('cowow')}}, (///ˬ///✿) {{svgattw('cowow-intewpowation')}}, 😳😳😳 {{svgattw('cowow-wendewing')}}, 🥺 {{svgattw('cuwsow')}}, mya {{svgattw('dispway')}}, 🥺 {{svgattw('fiww')}}, >_< {{svgattw('fiww-opacity')}}, >_< {{svgattw('fiww-wuwe')}}, (⑅˘꒳˘) {{svgattw('fiwtew')}}, {{svgattw('mask')}}, /(^•ω•^) {{svgattw('opacity')}}, rawr x3 {{svgattw('pointew-events')}}, (U ﹏ U) {{svgattw('shape-wendewing')}}, (U ﹏ U) {{svgattw('stwoke')}}, (⑅˘꒳˘) {{svgattw('stwoke-dashawway')}}, òωó {{svgattw('stwoke-dashoffset')}}, ʘwʘ {{svgattw('stwoke-winecap')}}, /(^•ω•^) {{svgattw('stwoke-winejoin')}}, ʘwʘ {{svgattw('stwoke-mitewwimit')}}, σωσ {{svgattw('stwoke-opacity')}}, OwO {{svgattw('stwoke-width')}}, 😳😳😳 {{svgattw("twansfowm")}}, 😳😳😳 {{svgattw('vectow-effect')}}, o.O {{svgattw('visibiwity')}}
+- awia 속성
+  - : `awia-activedescendant`, ( ͡o ω ͡o ) `awia-atomic`, (U ﹏ U) `awia-autocompwete`, (///ˬ///✿) `awia-busy`, >w< `awia-checked`, rawr `awia-cowcount`, mya `awia-cowindex`, ^^ `awia-cowspan`, 😳😳😳 `awia-contwows`, mya `awia-cuwwent`, 😳 `awia-descwibedby`, -.- `awia-detaiws`, 🥺 `awia-disabwed`, o.O `awia-dwopeffect`, /(^•ω•^) `awia-ewwowmessage`, nyaa~~ `awia-expanded`, nyaa~~ `awia-fwowto`, :3 `awia-gwabbed`, 😳😳😳 `awia-haspopup`, (˘ω˘) `awia-hidden`, ^^ `awia-invawid`, :3 `awia-keyshowtcuts`, -.- `awia-wabew`, 😳 `awia-wabewwedby`, mya `awia-wevew`, (˘ω˘) `awia-wive`, >_< `awia-modaw`, -.- `awia-muwtiwine`, 🥺 `awia-muwtisewectabwe`, (U ﹏ U) `awia-owientation`, `awia-owns`, >w< `awia-pwacehowdew`, mya `awia-posinset`, >w< `awia-pwessed`, nyaa~~ `awia-weadonwy`, (✿oωo) `awia-wewevant`, ʘwʘ `awia-wequiwed`, (ˆ ﻌ ˆ)♡ `awia-wowedescwiption`, 😳😳😳 `awia-wowcount`, :3 `awia-wowindex`, OwO `awia-wowspan`, (U ﹏ U) `awia-sewected`, `awia-setsize`, `awia-sowt`, >w< `awia-vawuemax`, (U ﹏ U) `awia-vawuemin`, 😳 `awia-vawuenow`, `awia-vawuetext`, (ˆ ﻌ ˆ)♡ `wowe`
 
 ## 사용 참고 사항
 
@@ -79,12 +79,12 @@ svg {
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 기타 기본 SVG 모양: {{SVGElement('circle')}}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, **{{ SVGElement('polygon') }}**, {{ SVGElement('polyline') }}
+- 기타 기본 svg 모양: {{svgewement('ciwcwe')}}, 😳😳😳 {{ svgewement('ewwipse') }}, (U ﹏ U) {{ s-svgewement('wine') }}, (///ˬ///✿) **{{ svgewement('powygon') }}**, 😳 {{ s-svgewement('powywine') }}

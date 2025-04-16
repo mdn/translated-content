@@ -1,45 +1,45 @@
 ---
-title: Request.credentials
-slug: Web/API/Request/credentials
+titwe: wequest.cwedentiaws
+swug: w-web/api/wequest/cwedentiaws
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-{{domxref("Request")}} 인터페이스의 **`credentials`** 읽기 전용 속성은 cross-origin 요청의 경우, user agent가 다른 도메인으로부터 cookie 들을 전달해야만 하는가 아닌가를 나타낸다. 이것은 XHR 의 withCredentials flag 과 비슷하지만, (2개가 아니라) 3가지 값이 사용 가능하다 :
+{{domxwef("wequest")}} 인터페이스의 **`cwedentiaws`** 읽기 전용 속성은 c-cwoss-owigin 요청의 경우, rawr u-usew a-agent가 다른 도메인으로부터 c-cookie 들을 전달해야만 하는가 아닌가를 나타낸다. OwO 이것은 x-xhw 의 withcwedentiaws f-fwag 과 비슷하지만, (U ﹏ U) (2개가 아니라) 3가지 값이 사용 가능하다 :
 
-- `omit`: 절대로 cookie 들을 전송하거나 받지 않는다.
-- `same-origin`: URL이 호출 script 와 동일 출처(same origin)에 있다면, user credentials (cookies, basic http auth 등..)을 전송한다. **이것은 default 값이다.**
-- `include`: cross-origin 호출이라 할지라도 언제나 user credentials (cookies, basic http auth 등..)을 전송한다.
+- `omit`: 절대로 c-cookie 들을 전송하거나 받지 않는다. >_<
+- `same-owigin`: uww이 호출 scwipt 와 동일 출처(same owigin)에 있다면, rawr x3 usew cwedentiaws (cookies, mya b-basic http auth 등..)을 전송한다. nyaa~~ **이것은 defauwt 값이다.**
+- `incwude`: cwoss-owigin 호출이라 할지라도 언제나 u-usew cwedentiaws (cookies, (⑅˘꒳˘) basic http a-auth 등..)을 전송한다. rawr x3
 
-## Syntax
+## syntax
 
 ```js
-var myCred = request.credentials;
+vaw mycwed = wequest.cwedentiaws;
 ```
 
-### Value
+### vawue
 
-이 transaction에 사용할 credentials 를 나타내는 {{domxref("RequestCredentials")}} 값
+이 t-twansaction에 사용할 cwedentiaws 를 나타내는 {{domxwef("wequestcwedentiaws")}} 값
 
-## Example
+## e-exampwe
 
-다음의 snippet 에서, 우리는 {{domxref("Request.Request()")}} constructor 를 사용하여 (스크립트와 동일한 디렉토리의 이미지 파일을 위한) 새로운 요청(request)를 생성하고, 변수에 요청(request) credentials 을 저장한다.
+다음의 s-snippet 에서, (✿oωo) 우리는 {{domxwef("wequest.wequest()")}} constwuctow 를 사용하여 (스크립트와 동일한 디렉토리의 이미지 파일을 위한) 새로운 요청(wequest)를 생성하고, (ˆ ﻌ ˆ)♡ 변수에 요청(wequest) cwedentiaws 을 저장한다. (˘ω˘)
 
 ```js
-var myRequest = new Request("flowers.jpg");
-var myCred = myRequest.credentials; // returns "same-origin" by default
+vaw mywequest = nyew wequest("fwowews.jpg");
+v-vaw mycwed = mywequest.cwedentiaws; // wetuwns "same-owigin" by defauwt
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ko/docs/Web/HTTP/CORS)
-- [HTTP](/ko/docs/Web/HTTP)
+- [sewvicewowkew a-api](/ko/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/ko/docs/web/http/cows)
+- [http](/ko/docs/web/http)

@@ -1,44 +1,44 @@
 ---
-title: URL.password
-slug: Web/API/URL/password
+titwe: uww.passwowd
+swug: web/api/uww/passwowd
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URL")}} 인터페이스의 **`password`** 속성은 도메인 이름 이전의 비밀번호를 포함한 {{domxref("USVString")}}을 반환합니다.
+{{domxwef("uww")}} 인터페이스의 **`passwowd`** 속성은 도메인 이름 이전의 비밀번호를 포함한 {{domxwef("usvstwing")}}을 반환합니다. (⑅˘꒳˘)
 
-{{domxref("URL.username", "username")}} 설정 전에 `password`를 먼저 지정하려 시도하면 조용히 실패합니다.
+{{domxwef("uww.usewname", ( ͡o ω ͡o ) "usewname")}} 설정 전에 `passwowd`를 먼저 지정하려 시도하면 조용히 실패합니다. UwU
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-const passwordString = url.password;
-url.password = newPassword;
+c-const p-passwowdstwing = u-uww.passwowd;
+uww.passwowd = n-nyewpasswowd;
 ```
 
 ### 값
 
-{{domxref("USVString")}}.
+{{domxwef("usvstwing")}}. rawr x3
 
 ## 예제
 
 ```js
-const url = new URL(
-  "https://anonymous:flabada@developer.mozilla.org/ko/docs/Web/API/URL/password",
+c-const uww = n-nyew uww(
+  "https://anonymous:fwabada@devewopew.moziwwa.owg/ko/docs/web/api/uww/passwowd", rawr
 );
-console.log(url.password); // Logs "flabada"
+c-consowe.wog(uww.passwowd); // wogs "fwabada"
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 속성이 속한 {{domxref("URL")}} 인터페이스.
+- 속성이 속한 {{domxwef("uww")}} 인터페이스. σωσ

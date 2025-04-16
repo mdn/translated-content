@@ -1,51 +1,51 @@
 ---
-title: Date.prototype.getDay()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
+titwe: date.pwototype.getday()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getday
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getDay()`** 메서드는 주어진 날짜의 현지 시간 기준 요일을 반환합니다. 0은 일요일을 나타냅니다. 현재의 일을 반환하려면 {{jsxref("Date.prototype.getDate()")}}를 사용하세요.
+**`getday()`** 메서드는 주어진 날짜의 현지 시간 기준 요일을 반환합니다. mya 0은 일요일을 나타냅니다. 😳 현재의 일을 반환하려면 {{jsxwef("date.pwototype.getdate()")}}를 사용하세요. XD
 
-{{InteractiveExample("JavaScript Demo: Date.getDay()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.getday()")}}
 
-```js interactive-example
-const birthday = new Date("August 19, 1975 23:15:30");
-const day1 = birthday.getDay();
-// Sunday - Saturday : 0 - 6
+```js i-intewactive-exampwe
+c-const biwthday = n-nyew date("august 19, :3 1975 23:15:30");
+c-const day1 = b-biwthday.getday();
+// s-sunday - satuwday : 0 - 6
 
-console.log(day1);
-// Expected output: 2
+consowe.wog(day1);
+// expected output: 2
 ```
 
 ## 구문
 
 ```js
-dateObj.getDay();
+d-dateobj.getday();
 ```
 
 ### 반환 값
 
-현지 시간에 따라, 주어진 날짜의 요일에 해당하는 0 이상 6 이하의 정수. (일요일은 0, 월요일은 1, 화요일은 2, ...)
+현지 시간에 따라, 😳😳😳 주어진 날짜의 요일에 해당하는 0 이상 6 이하의 정수. -.- (일요일은 0, 월요일은 1, 화요일은 2, ...)
 
 ## 예제
 
-### `getDay()` 사용하기
+### `getday()` 사용하기
 
-1995년 12월 25일은 월요일입니다. 따라서 아래 코드의 두 번째 명령문은 `Xmas95`의 값에 기반하여 `weekday`에 1을 할당합니다.
+1995년 12월 25일은 월요일입니다. ( ͡o ω ͡o ) 따라서 아래 코드의 두 번째 명령문은 `xmas95`의 값에 기반하여 `weekday`에 1을 할당합니다. rawr x3
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var weekday = Xmas95.getDay();
+vaw xmas95 = nyew date("decembew 25, nyaa~~ 1995 23:15:30");
+v-vaw weekday = xmas95.getday();
 
-console.log(weekday); // 1
+c-consowe.wog(weekday); // 1
 ```
 
-> **참고:** **참고:** 필요하다면, 요일의 이름(`"월요일"` 등)을 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}과 `options` 매개변수를 사용해 얻을 수 있습니다. 이 방법을 사용하면 국제화도 더 쉬워집니다.```js
-> var options = { weekday: 'long'};
-> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
-> // Monday
-> console.log(new Intl.DateTimeFormat('ko-KR', options).format(Xmas95));
+> **참고:** **참고:** 필요하다면, /(^•ω•^) 요일의 이름(`"월요일"` 등)을 {{jsxwef("datetimefowmat", rawr "intw.datetimefowmat")}}과 `options` 매개변수를 사용해 얻을 수 있습니다. OwO 이 방법을 사용하면 국제화도 더 쉬워집니다.```js
+> vaw options = { weekday: 'wong'};
+> consowe.wog(new i-intw.datetimefowmat('en-us', (U ﹏ U) options).fowmat(xmas95));
+> // m-monday
+> consowe.wog(new i-intw.datetimefowmat('ko-kw', >_< options).fowmat(xmas95));
 > // 월요일
 >
 > ```
@@ -54,14 +54,14 @@ console.log(weekday); // 1
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

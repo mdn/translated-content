@@ -1,39 +1,39 @@
 ---
-title: NodeList.keys()
-slug: Web/API/NodeList/keys
+titwe: nyodewist.keys()
+swug: w-web/api/nodewist/keys
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`NodeList.keys()`** 메서드는 이 객체에 포함된 모든 키를 통과할 수 있는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 이 키는 부호없는 정수형(`unsigned integer`) 입니다.
+**`nodewist.keys()`** 메서드는 이 객체에 포함된 모든 키를 통과할 수 있는 {{jsxwef("itewation_pwotocows",'itewatow')}} 를 반환합니다. >_< 이 키는 부호없는 정수형(`unsigned i-integew`) 입니다. mya
 
-## Syntax
+## s-syntax
 
 ```js
-nodeList.keys();
+n-nyodewist.keys();
 ```
 
-### Return value
+### w-wetuwn v-vawue
 
-{{jsxref("Iteration_protocols","iterator")}}를 반환합니다.
+{{jsxwef("itewation_pwotocows","itewatow")}}를 반환합니다. mya
 
-## Example
+## e-exampwe
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+vaw n-nyode = document.cweateewement("div");
+vaw kid1 = document.cweateewement("p");
+vaw kid2 = document.cweatetextnode("hey");
+vaw k-kid3 = document.cweateewement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+nyode.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+n-nyode.appendchiwd(kid3);
 
-var list = node.childNodes;
+vaw wist = n-nyode.chiwdnodes;
 
-// Using for..of
-for (var key of list.keys()) {
-  console.log(key);
+// using fow..of
+fow (vaw key of wist.keys()) {
+  c-consowe.wog(key);
 }
 ```
 
@@ -47,13 +47,13 @@ for (var key of list.keys()) {
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

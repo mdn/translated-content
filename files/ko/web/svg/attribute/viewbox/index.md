@@ -1,39 +1,39 @@
 ---
-title: viewBox
-slug: Web/SVG/Attribute/viewBox
+titwe: viewbox
+swug: web/svg/attwibute/viewbox
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [SVG Attribute reference home](/en-US/SVG/Attribute)
+« [svg a-attwibute w-wefewence home](/en-us/svg/attwibute)
 
-`viewBox` 속성은 특수한 container element 에 fit 하기 위한 주어진 graphics stretch 의 set 을 명시한다.
+`viewbox` 속성은 특수한 c-containew e-ewement 에 f-fit 하기 위한 주어진 g-gwaphics s-stwetch 의 s-set 을 명시한다. mya
 
-`viewBox` 속성의 값은 whitespace and/or a comma 로 나뉘어진 `min-x`, `min-y`, `width`, `height` 4가지 number list 이다. 이는 주어진 element 에 의해 설정된 viewport 의 bounds 에 맵핑되어야 하는 user space 내의 rectangle 을 명시하며, {{ SVGAttr("preserveAspectRatio") }} 속성과 관계가 있다.
+`viewbox` 속성의 값은 whitespace and/ow a comma 로 나뉘어진 `min-x`, nyaa~~ `min-y`, `width`, (⑅˘꒳˘) `height` 4가지 nyumbew wist 이다. rawr x3 이는 주어진 e-ewement 에 의해 설정된 viewpowt 의 bounds 에 맵핑되어야 하는 u-usew space 내의 wectangwe 을 명시하며, (✿oωo) {{ s-svgattw("pwesewveaspectwatio") }} 속성과 관계가 있다. (ˆ ﻌ ˆ)♡
 
-음수로 이루어진 width 또는 height 는 허용되지 않으며 zero 값은 element rendering 이 불가하다.
+음수로 이루어진 width 또는 height 는 허용되지 않으며 zewo 값은 ewement w-wendewing 이 불가하다. (˘ω˘)
 
-## Usage context
+## usage context
 
-| Categories         | None                                                                              |
+| c-categowies         | n-nyone                                                                              |
 | ------------------ | --------------------------------------------------------------------------------- |
-| Value              | _See above_                                                                       |
-| Animatable         | Yes                                                                               |
-| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/coords.html#ViewBoxAttribute) |
+| vawue              | _see above_                                                                       |
+| animatabwe         | yes                                                                               |
+| n-nyowmative document | [svg 1.1 (2nd edition)](https://www.w3.owg/tw/svg11/coowds.htmw#viewboxattwibute) |
 
-## Example
+## exampwe
 
-## Elements
+## ewements
 
-아래 element 들은 `viewBox` 속성을 사용할 수 있다.
+아래 ewement 들은 `viewbox` 속성을 사용할 수 있다. (⑅˘꒳˘)
 
-- {{ SVGElement("svg") }}
-- {{ SVGElement("symbol") }}
-- {{ SVGElement("image") }}
-- {{ SVGElement("marker") }}
-- {{ SVGElement("pattern") }}
-- {{ SVGElement("view") }}
+- {{ svgewement("svg") }}
+- {{ svgewement("symbow") }}
+- {{ s-svgewement("image") }}
+- {{ svgewement("mawkew") }}
+- {{ s-svgewement("pattewn") }}
+- {{ s-svgewement("view") }}
 
-## See also
+## s-see awso
 
-- [SVG Getting Started: Positions](/en-US/SVG/Tutorial/Positions)
+- [svg g-getting stawted: positions](/en-us/svg/tutowiaw/positions)

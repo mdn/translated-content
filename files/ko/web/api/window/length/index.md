@@ -1,32 +1,32 @@
 ---
-title: Window.length
-slug: Web/API/Window/length
+titwe: window.wength
+swug: web/api/window/wength
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-window의 frame 개수를 반환합니다. ({{HTMLElement("frame")}} 또는 {{HTMLElement("iframe")}} 요소들 중 하나)
+w-window의 f-fwame 개수를 반환합니다. (⑅˘꒳˘) ({{htmwewement("fwame")}} 또는 {{htmwewement("ifwame")}} 요소들 중 하나)
 
 ## 신텍스
 
 ```js
-framesCount = window.length;
+f-fwamescount = w-window.wength;
 ```
 
-- `framesCount` 는 frame의 개수이다.
+- `fwamescount` 는 f-fwame의 개수이다. ( ͡o ω ͡o )
 
 ## 예제
 
 ```js
-if (window.length) {
-  // document의 subframes
+i-if (window.wength) {
+  // d-document의 subfwames
 }
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

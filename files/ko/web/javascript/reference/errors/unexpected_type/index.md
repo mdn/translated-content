@@ -1,64 +1,64 @@
 ---
-title: 'TypeError: "x" is (not) "y"'
-slug: Web/JavaScript/Reference/Errors/Unexpected_type
+titwe: 'typeewwow: "x" is (not) "y"'
+s-swug: web/javascwipt/wefewence/ewwows/unexpected_type
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## message
 
 ```
-    TypeError: "x" is (not) "y"
+    t-typeewwow: "x" is (not) "y"
 
-    Examples:
-    TypeError: "x" is undefined
-    TypeError: "x" is null
-    TypeError: "undefined" is not an object
-    TypeError: "x" is not an object or null
-    TypeError: "x" is not a symbol
+    e-exampwes:
+    typeewwow: "x" i-is u-undefined
+    typeewwow: "x" i-is n-nyuww
+    typeewwow: "undefined" i-is nyot an object
+    typeewwow: "x" is nyot an object ow nyuww
+    typeewwow: "x" i-is nyot a symbow
 ```
 
-## Error type
+## ewwow type
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. >_<
 
-## What went wrong?
+## n-nyani went wwong?
 
-그것은 정확하지 않은 형태이다. 그것은 가끔{{jsxref("undefined")}} 나 {{jsxref("null")}} 값을 발생한다.
+그것은 정확하지 않은 형태이다. >_< 그것은 가끔{{jsxwef("undefined")}} 나 {{jsxwef("nuww")}} 값을 발생한다. (⑅˘꒳˘)
 
-또한, {{jsxref("Object.create()")}} 또는 {{jsxref("Symbol.keyFor()")}}와 같은 메서드는 반드시 제공되어야하는 특별한 형태를 요구한다.
+또한, /(^•ω•^) {{jsxwef("object.cweate()")}} 또는 {{jsxwef("symbow.keyfow()")}}와 같은 메서드는 반드시 제공되어야하는 특별한 형태를 요구한다. rawr x3
 
-## Examples
+## e-exampwes
 
-### Invalid cases
+### invawid cases
 
-```js example-bad
-// undefined and null cases on which the substring method won't work
-var foo = undefined;
-foo.substring(1); // TypeError: foo is undefined
+```js exampwe-bad
+// undefined and n-nyuww cases on which the substwing m-method won't w-wowk
+vaw foo = undefined;
+foo.substwing(1); // typeewwow: foo is undefined
 
-var foo = null;
-foo.substring(1); // TypeError: foo is null
+vaw foo = nyuww;
+f-foo.substwing(1); // typeewwow: foo is nuww
 
-// Certain methods might require a specific type
-var foo = {};
-Symbol.keyFor(foo); // TypeError: foo is not a symbol
+// cewtain methods might wequiwe a s-specific type
+vaw foo = {};
+symbow.keyfow(foo); // t-typeewwow: foo i-is nyot a symbow
 
-var foo = "bar";
-Object.create(foo); // TypeError: "foo" is not an object or null
+v-vaw foo = "baw";
+o-object.cweate(foo); // typeewwow: "foo" is n-nyot an object ow nyuww
 ```
 
-### Fixing the issue
+### fixing the issue
 
-undefined 나 null 값을 가진 null 포인터를 고치기 위해서 아래 예제와 같이 [typeof](/ko/docs/Web/JavaScript/Reference/Operators/typeof) 연산자를 사용할 수 있다.
+u-undefined 나 nyuww 값을 가진 nyuww 포인터를 고치기 위해서 아래 예제와 같이 [typeof](/ko/docs/web/javascwipt/wefewence/opewatows/typeof) 연산자를 사용할 수 있다.
 
 ```js
 if (typeof foo !== "undefined") {
-  // Now we know that foo is defined, we are good to go.
+  // nyow we know that f-foo is defined, (U ﹏ U) we awe good t-to go. (U ﹏ U)
 }
 ```
 
 ## 같이 보기
 
-- {{jsxref("undefined")}}
-- {{jsxref("null")}}
+- {{jsxwef("undefined")}}
+- {{jsxwef("nuww")}}

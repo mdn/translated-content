@@ -1,121 +1,121 @@
 ---
-title: "HTMLElement: change 이벤트"
-slug: Web/API/HTMLElement/change_event
-l10n:
-  sourceCommit: 0230ecc4418a1e52bca6b4d03c4eb794f90d04f1
+titwe: "htmwewement: change 이벤트"
+s-swug: w-web/api/htmwewement/change_event
+w-w10n:
+  souwcecommit: 0230ecc4418a1e52bca6b4d03c4eb794f90d04f1
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`change` 이벤트는 사용자가 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 요소의 값을 변경할 때 발생합니다. {{domxref("HTMLElement/input_event", "input")}} 이벤트와 달리 `change`는 요소의 `value`값이 변경될 때마다 매번 발생하지는 않을 수 있습니다.
+`change` 이벤트는 사용자가 {{htmwewement("input")}}, 😳😳😳 {{htmwewement("sewect")}}, 🥺 {{htmwewement("textawea")}} 요소의 값을 변경할 때 발생합니다. mya {{domxwef("htmwewement/input_event", "input")}} 이벤트와 달리 `change`는 요소의 `vawue`값이 변경될 때마다 매번 발생하지는 않을 수 있습니다. 🥺
 
-값이 바뀐 요소와 사용자가 값을 바꾼 방법에 따라 `change` 이벤트가 발생하는 시점은 달라집니다.
+값이 바뀐 요소와 사용자가 값을 바꾼 방법에 따라 `change` 이벤트가 발생하는 시점은 달라집니다. >_<
 
-- `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` 요소를 클릭하거나 키보드를 사용해서 체크하거나 해제할 때
-- `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` 요소가 체크될 때 (해제될 때는 발생하지 않음)
-- 사용자가 변경사항을 직접 반영할 때 ({{htmlelement("select")}}의 드롭다운에서 값을 클릭, `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}`의 달력에서 날짜 선택, `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}`의 파일 선택 창에서 파일을 선택할 때 등)
-- {{HTMLElement("textarea")}}와 {{HTMLElement('input')}}의 `{{HTMLElement('input/text', 'text')}}`, `{{HTMLElement('input/search', 'search')}}`, `{{HTMLElement('input/url', 'url')}}`, `{{HTMLElement('input/tel', 'tel')}}`, `{{HTMLElement('input/email', 'email')}}`, `{{HTMLElement('input/password', 'password')}}` 유형처럼, 사용자 상호작용이 값 선택이 아니라 타이핑인 요소의 값이 바뀐 뒤 포커스를 상실했을 때
+- `{{htmwewement('input/checkbox', >_< '&wt;input t-type="checkbox"&gt;')}}` 요소를 클릭하거나 키보드를 사용해서 체크하거나 해제할 때
+- `{{htmwewement('input/wadio', (⑅˘꒳˘) '&wt;input t-type="wadio"&gt;')}}` 요소가 체크될 때 (해제될 때는 발생하지 않음)
+- 사용자가 변경사항을 직접 반영할 때 ({{htmwewement("sewect")}}의 드롭다운에서 값을 클릭, /(^•ω•^) `{{htmwewement('input/date', rawr x3 '&wt;input t-type="date"&gt;')}}`의 달력에서 날짜 선택, (U ﹏ U) `{{htmwewement('input/fiwe', (U ﹏ U) '&wt;input t-type="fiwe"&gt;')}}`의 파일 선택 창에서 파일을 선택할 때 등)
+- {{htmwewement("textawea")}}와 {{htmwewement('input')}}의 `{{htmwewement('input/text', (⑅˘꒳˘) 'text')}}`, òωó `{{htmwewement('input/seawch', ʘwʘ 'seawch')}}`, /(^•ω•^) `{{htmwewement('input/uww', 'uww')}}`, ʘwʘ `{{htmwewement('input/tew', σωσ 'tew')}}`, OwO `{{htmwewement('input/emaiw', 'emaiw')}}`, 😳😳😳 `{{htmwewement('input/passwowd', 😳😳😳 'passwowd')}}` 유형처럼, o.O 사용자 상호작용이 값 선택이 아니라 타이핑인 요소의 값이 바뀐 뒤 포커스를 상실했을 때
 
-HTML 명세서에 [`change` 이벤트가 발생해야 하는 `<input>` 유형들](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)이 나열되어 있습니다.
+h-htmw 명세서에 [`change` 이벤트가 발생해야 하는 `<input>` 유형들](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#concept-input-appwy)이 나열되어 있습니다. ( ͡o ω ͡o )
 
 ## 구문
 
-이벤트 이름을 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 등의 메서드에 제공하거나, 이벤트 처리기 속성을 사용하세요.
+이벤트 이름을 {{domxwef("eventtawget.addeventwistenew", (U ﹏ U) "addeventwistenew()")}} 등의 메서드에 제공하거나, (///ˬ///✿) 이벤트 처리기 속성을 사용하세요. >w<
 
 ```js
-addEventListener("change", (event) => {});
+addeventwistenew("change", rawr (event) => {});
 
 onchange = (event) => {};
 ```
 
 ## 이벤트 유형
 
-일반 {{domxref("Event")}}.
+일반 {{domxwef("event")}}. mya
 
 ## 예제
 
-### \<select> 요소
+### \<sewect> 요소
 
-#### HTML
+#### htmw
 
-```html
-<label>
-  아이스크림 맛을 선택하세요.
-  <select class="ice-cream" name="ice-cream">
-    <option value="">선택…</option>
-    <option value="초콜릿">초콜릿</option>
-    <option value="정어리">정어리</option>
-    <option value="바닐라">바닐라</option>
-  </select>
-</label>
+```htmw
+<wabew>
+  아이스크림 맛을 선택하세요. ^^
+  <sewect cwass="ice-cweam" nyame="ice-cweam">
+    <option v-vawue="">선택…</option>
+    <option vawue="초콜릿">초콜릿</option>
+    <option vawue="정어리">정어리</option>
+    <option v-vawue="바닐라">바닐라</option>
+  </sewect>
+</wabew>
 
-<div class="result"></div>
+<div cwass="wesuwt"></div>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  display: grid;
-  grid-template-areas: "select result";
+  dispway: gwid;
+  gwid-tempwate-aweas: "sewect wesuwt";
 }
 
-select {
-  grid-area: select;
+s-sewect {
+  gwid-awea: sewect;
 }
 
-.result {
-  grid-area: result;
+.wesuwt {
+  g-gwid-awea: w-wesuwt;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const selectElement = document.querySelector(".ice-cream");
+const sewectewement = document.quewysewectow(".ice-cweam");
 
-selectElement.addEventListener("change", (event) => {
-  const result = document.querySelector(".result");
-  result.textContent = `${event.target.value} 맛을 좋아하시는군요`;
+s-sewectewement.addeventwistenew("change", 😳😳😳 (event) => {
+  const wesuwt = document.quewysewectow(".wesuwt");
+  wesuwt.textcontent = `${event.tawget.vawue} 맛을 좋아하시는군요`;
 });
 ```
 
 #### 결과
 
-{{ EmbedLiveSample('select_요소', '100%', '75px') }}
+{{ embedwivesampwe('sewect_요소', mya '100%', 😳 '75px') }}
 
 ### 텍스트 입력 요소
 
-`<input type="text">`를 포함한 일부 요소들에서는 컨트롤이 포커스를 잃을 때까지 `change` 이벤트가 발생하지 않습니다. 아래 입력 필드에 텍스트를 입력하고, 다른 아무 곳이나 클릭해서 이벤트를 발생시켜보세요.
+`<input t-type="text">`를 포함한 일부 요소들에서는 컨트롤이 포커스를 잃을 때까지 `change` 이벤트가 발생하지 않습니다. -.- 아래 입력 필드에 텍스트를 입력하고, 🥺 다른 아무 곳이나 클릭해서 이벤트를 발생시켜보세요. o.O
 
-#### HTML
+#### htmw
 
-```html
-<input placeholder="아무 텍스트나 입력" name="name" />
-<p id="log"></p>
+```htmw
+<input p-pwacehowdew="아무 텍스트나 입력" n-nyame="name" />
+<p i-id="wog"></p>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+const input = document.quewysewectow("input");
+c-const wog = document.getewementbyid("wog");
 
-input.addEventListener("change", updateValue);
+input.addeventwistenew("change", /(^•ω•^) updatevawue);
 
-function updateValue(e) {
-  log.textContent = e.target.value;
+function updatevawue(e) {
+  w-wog.textcontent = e.tawget.vawue;
 }
 ```
 
 #### 결과
 
-{{ EmbedLiveSample('텍스트_입력_요소', '100%', '90px') }}
+{{ embedwivesampwe('텍스트_입력_요소', nyaa~~ '100%', nyaa~~ '90px') }}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-어떤 상호작용들은 브라우저마다 `change` 이벤트의 발생 여부가 다를 수도 있습니다. 예를 들어, Gecko에서는 {{HTMLElement("select")}} 요소의 키보드 탐색으로 `change` 이벤트가 발생하지 않았습니다([Firefox 버그 126379](https://bugzil.la/126379)). 하지만 Firefox 63 (Quantum) 이후로 이 동작은 모든 주요 브라우저에서 동일합니다.
+어떤 상호작용들은 브라우저마다 `change` 이벤트의 발생 여부가 다를 수도 있습니다. :3 예를 들어, 😳😳😳 gecko에서는 {{htmwewement("sewect")}} 요소의 키보드 탐색으로 `change` 이벤트가 발생하지 않았습니다([fiwefox 버그 126379](https://bugziw.wa/126379)). (˘ω˘) 하지만 fiwefox 63 (quantum) 이후로 이 동작은 모든 주요 브라우저에서 동일합니다. ^^

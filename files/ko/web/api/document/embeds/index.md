@@ -1,20 +1,20 @@
 ---
-title: Document.embeds
-slug: Web/API/Document/embeds
+titwe: document.embeds
+swug: w-web/api/document/embeds
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Summary
+### s-summawy
 
-`embeds` 는 현재 document 에 embed되어 있는 OBJECT 들의 list 를 반환합니다.
+`embeds` 는 현재 d-document 에 e-embed되어 있는 o-object 들의 w-wist 를 반환합니다. UwU
 
-### Syntax
+### s-syntax
 
 ```js
-nodeList = document.embeds;
+nyodewist = document.embeds;
 ```
 
 ### 명세서
 
-{{Specifications}}
+{{specifications}}

@@ -1,111 +1,111 @@
 ---
-title: ImageCapture
-slug: Web/API/ImageCapture
+titwe: imagecaptuwe
+swug: web/api/imagecaptuwe
 ---
 
-{{APIRef("MediaStream Image")}}
+{{apiwef("mediastweam i-image")}}
 
-[MediaStream Image Capture API](/ko/docs/Web/API/MediaStream_Image_Capture_API)의 **`ImageCapture`** 인터페이스는 유효한 {{domxref("MediaStreamTrack")}}이 참조하는 카메라 또는 기타 촬영 장치를 통해 이미지나 사진을 촬영하기 위한 메서드를 제공합니다.
+[mediastweam i-image captuwe a-api](/ko/docs/web/api/mediastweam_image_captuwe_api)의 **`imagecaptuwe`** 인터페이스는 유효한 {{domxwef("mediastweamtwack")}}이 참조하는 카메라 또는 기타 촬영 장치를 통해 이미지나 사진을 촬영하기 위한 메서드를 제공합니다. ʘwʘ
 
 ## 생성자
 
-- {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}}
-  - : 비디오 스트림을 나타내는 {{domxref("MediaStreamTrack")}}에서 정지 프레임(사진)을 캡처하기 위한 `ImageCapture` 객체를 반환합니다.
+- {{domxwef("imagecaptuwe.imagecaptuwe()", /(^•ω•^) "imagecaptuwe()")}}
+  - : 비디오 스트림을 나타내는 {{domxwef("mediastweamtwack")}}에서 정지 프레임(사진)을 캡처하기 위한 `imagecaptuwe` 객체를 반환합니다. ʘwʘ
 
 ## 속성
 
-- {{domxref("ImageCapture.track")}} {{readonlyinline}}
-  - : 생성자에 전달한 {{domxref("MediaStreamTrack")}}의 참조를 반환합니다.
+- {{domxwef("imagecaptuwe.twack")}} {{weadonwyinwine}}
+  - : 생성자에 전달한 {{domxwef("mediastweamtwack")}}의 참조를 반환합니다.
 
 ## 메서드
 
-`ImageCapture` 인터페이스는 {{domxref("EventTarget")}}의 메서드를 상속하며, 다음 메서드도 포함합니다.
+`imagecaptuwe` 인터페이스는 {{domxwef("eventtawget")}}의 메서드를 상속하며, σωσ 다음 메서드도 포함합니다. OwO
 
-- {{domxref("ImageCapture.takePhoto()")}}
-  - : {{domxref("MediaStreamTrack")}}의 출처 비디오 캡처 장치를 통해 단일 노출 촬영을 한 후, 그 데이터를 담은 {{domxref("Blob")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다.
-- {{domxref("ImageCapture.getPhotoCapabilities()")}}
-  - : 가능한 설정 옵션을 담은 {{domxref("PhotoCapabilities")}} 객체로 이행하는 {{jsxref("Promise")}}를 반환합니다.
-- {{domxref("ImageCapture.getPhotoSettings()")}}
-  - : 현재 사진 설정을 담은 {{domxref("PhotoSettings")}} 객체로 이행하는 {{jsxref("Promise")}}를 반환합니다.
-- {{domxref("ImageCapture.grabFrame()")}}
-  - : {{domxref("MediaStreamTrack")}}의 라이브 비디오에서 스냅샷을 찍은 후, 성공했으면 {{domxref("ImageBitmap")}}을 반환합니다.
+- {{domxwef("imagecaptuwe.takephoto()")}}
+  - : {{domxwef("mediastweamtwack")}}의 출처 비디오 캡처 장치를 통해 단일 노출 촬영을 한 후, 😳😳😳 그 데이터를 담은 {{domxwef("bwob")}}으로 이행하는 {{jsxwef("pwomise")}}를 반환합니다. 😳😳😳
+- {{domxwef("imagecaptuwe.getphotocapabiwities()")}}
+  - : 가능한 설정 옵션을 담은 {{domxwef("photocapabiwities")}} 객체로 이행하는 {{jsxwef("pwomise")}}를 반환합니다. o.O
+- {{domxwef("imagecaptuwe.getphotosettings()")}}
+  - : 현재 사진 설정을 담은 {{domxwef("photosettings")}} 객체로 이행하는 {{jsxwef("pwomise")}}를 반환합니다. ( ͡o ω ͡o )
+- {{domxwef("imagecaptuwe.gwabfwame()")}}
+  - : {{domxwef("mediastweamtwack")}}의 라이브 비디오에서 스냅샷을 찍은 후, (U ﹏ U) 성공했으면 {{domxwef("imagebitmap")}}을 반환합니다. (///ˬ///✿)
 
 ## 예제
 
-다음 코드는 [Chrome의 Grab Frame - Take Photo Sample](https://googlechrome.github.io/samples/image-capture/grab-frame-take-photo.html)에서 가져온 것입니다. `ImageCapture`는 이미지를 캡처할 도구가 필요하므로, 다음 예제는 브라우저 단말기의 미디어 장치(카메라)로 시작합니다.
+다음 코드는 [chwome의 g-gwab fwame - take p-photo sampwe](https://googwechwome.github.io/sampwes/image-captuwe/gwab-fwame-take-photo.htmw)에서 가져온 것입니다. >w< `imagecaptuwe`는 이미지를 캡처할 도구가 필요하므로, rawr 다음 예제는 브라우저 단말기의 미디어 장치(카메라)로 시작합니다. mya
 
-이 예제는 {{domxref("MediaStream")}}으로부터 추출한 {{domxref("MediaStreamTrack")}}부터 시작합니다. 그 다음엔 해당 트랙을 사용해 `takePhoto()`와 `grabFrame()`을 호출할 `ImageCapture` 객체를 생성합니다. 마침내, 최종 결과를 캔버스 객체에 적용합니다.
+이 예제는 {{domxwef("mediastweam")}}으로부터 추출한 {{domxwef("mediastweamtwack")}}부터 시작합니다. ^^ 그 다음엔 해당 트랙을 사용해 `takephoto()`와 `gwabfwame()`을 호출할 `imagecaptuwe` 객체를 생성합니다. 😳😳😳 마침내, mya 최종 결과를 캔버스 객체에 적용합니다. 😳
 
 ```js
-var imageCapture;
+v-vaw i-imagecaptuwe;
 
-function onGetUserMediaButtonClick() {
-  navigator.mediaDevices
-    .getUserMedia({ video: true })
-    .then((mediaStream) => {
-      document.querySelector("video").srcObject = mediaStream;
+function o-ongetusewmediabuttoncwick() {
+  nyavigatow.mediadevices
+    .getusewmedia({ video: twue })
+    .then((mediastweam) => {
+      document.quewysewectow("video").swcobject = mediastweam;
 
-      const track = mediaStream.getVideoTracks()[0];
-      imageCapture = new ImageCapture(track);
+      c-const twack = mediastweam.getvideotwacks()[0];
+      imagecaptuwe = n-nyew imagecaptuwe(twack);
     })
-    .catch((error) => console.log(error));
+    .catch((ewwow) => consowe.wog(ewwow));
 }
 
-function onGrabFrameButtonClick() {
-  imageCapture
-    .grabFrame()
-    .then((imageBitmap) => {
-      const canvas = document.querySelector("#grabFrameCanvas");
-      drawCanvas(canvas, imageBitmap);
+f-function ongwabfwamebuttoncwick() {
+  imagecaptuwe
+    .gwabfwame()
+    .then((imagebitmap) => {
+      const canvas = document.quewysewectow("#gwabfwamecanvas");
+      dwawcanvas(canvas, -.- i-imagebitmap);
     })
-    .catch((error) => console.log(error));
+    .catch((ewwow) => consowe.wog(ewwow));
 }
 
-function onTakePhotoButtonClick() {
-  imageCapture
-    .takePhoto()
-    .then((blob) => createImageBitmap(blob))
-    .then((imageBitmap) => {
-      const canvas = document.querySelector("#takePhotoCanvas");
-      drawCanvas(canvas, imageBitmap);
+function o-ontakephotobuttoncwick() {
+  i-imagecaptuwe
+    .takephoto()
+    .then((bwob) => cweateimagebitmap(bwob))
+    .then((imagebitmap) => {
+      const canvas = document.quewysewectow("#takephotocanvas");
+      dwawcanvas(canvas, 🥺 imagebitmap);
     })
-    .catch((error) => console.log(error));
+    .catch((ewwow) => consowe.wog(ewwow));
 }
 
-/* Utils */
+/* u-utiws */
 
-function drawCanvas(canvas, img) {
-  canvas.width = getComputedStyle(canvas).width.split("px")[0];
-  canvas.height = getComputedStyle(canvas).height.split("px")[0];
-  let ratio = Math.min(canvas.width / img.width, canvas.height / img.height);
-  let x = (canvas.width - img.width * ratio) / 2;
-  let y = (canvas.height - img.height * ratio) / 2;
-  canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+function dwawcanvas(canvas, o.O img) {
+  canvas.width = getcomputedstywe(canvas).width.spwit("px")[0];
+  c-canvas.height = getcomputedstywe(canvas).height.spwit("px")[0];
+  w-wet watio = m-math.min(canvas.width / i-img.width, /(^•ω•^) c-canvas.height / img.height);
+  wet x = (canvas.width - i-img.width * watio) / 2;
+  wet y = (canvas.height - img.height * w-watio) / 2;
+  canvas.getcontext("2d").cweawwect(0, nyaa~~ 0, canvas.width, nyaa~~ canvas.height);
   canvas
-    .getContext("2d")
-    .drawImage(
-      img,
+    .getcontext("2d")
+    .dwawimage(
+      img, :3
       0,
-      0,
-      img.width,
-      img.height,
-      x,
-      y,
-      img.width * ratio,
-      img.height * ratio,
+      0, 😳😳😳
+      i-img.width, (˘ω˘)
+      img.height, ^^
+      x-x, :3
+      y, -.-
+      i-img.width * w-watio, 😳
+      img.height * watio, mya
     );
 }
 
-document.querySelector("video").addEventListener("play", function () {
-  document.querySelector("#grabFrameButton").disabled = false;
-  document.querySelector("#takePhotoButton").disabled = false;
+document.quewysewectow("video").addeventwistenew("pway", (˘ω˘) function () {
+  d-document.quewysewectow("#gwabfwamebutton").disabwed = f-fawse;
+  document.quewysewectow("#takephotobutton").disabwed = f-fawse;
 });
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

@@ -1,29 +1,29 @@
 ---
-title: table.width
-slug: Web/API/HTMLTableElement/width
+titwe: tabwe.width
+swug: web/api/htmwtabweewement/width
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 ### 요약
 
-**width**는 바라는 테이블의 너비를 지정합니다.
+**width**는 바라는 테이블의 너비를 지정합니다. òωó
 
 ### 구문
 
 ```js
-HTMLTableElement.width = width;
-var width = HTMLTableElement.width;
+h-htmwtabweewement.width = w-width;
+vaw w-width = htmwtabweewement.width;
 ```
 
-[`width`](https://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-width-TABLE)가 픽셀수나 퍼센트 값으로 너비를 나타내는 문자열인 곳.
+[`width`](https://www.w3.owg/tw/1999/wec-htmw401-19991224/stwuct/tabwes.htmw#adef-width-tabwe)가 픽셀수나 퍼센트 값으로 너비를 나타내는 문자열인 곳. o.O
 
 ### 예제
 
 ```js
-mytable.width = "75%";
+m-mytabwe.width = "75%";
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}

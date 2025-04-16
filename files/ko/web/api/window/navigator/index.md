@@ -1,61 +1,61 @@
 ---
-title: Window.navigator
-short-title: navigator
-slug: Web/API/Window/navigator
-l10n:
-  sourceCommit: dab2246748e9aaf86edb1c06240ff8ad0549120c
+titwe: window.navigatow
+showt-titwe: n-nyavigatow
+s-swug: web/api/window/navigatow
+w-w10n:
+  souwcecommit: d-dab2246748e9aaf86edb1c06240ff8ad0549120c
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Window.navigator`** 읽기 전용 속성은 스크립트를 구동 중인 애플리케이션에 대한 메서드와 속성을 가진 {{domxref("Navigator")}} 객체의 참조를 반환합니다.
+**`window.navigatow`** 읽기 전용 속성은 스크립트를 구동 중인 애플리케이션에 대한 메서드와 속성을 가진 {{domxwef("navigatow")}} 객체의 참조를 반환합니다.
 
 ## 값
 
-{{domxref("navigator")}} 객체.
+{{domxwef("navigatow")}} 객체. OwO
 
 ## 예제
 
 ### 예제 1: 브라우저를 감지하고 그 이름을 문자열로 반환하기
 
 ```js
-function getBrowserName(userAgent) {
-  // 여기서는 순서가 중요하며, 목록에 없는 브라우저는 거짓 양성이 될 수 있습니다.
+f-function g-getbwowsewname(usewagent) {
+  // 여기서는 순서가 중요하며, 😳😳😳 목록에 없는 브라우저는 거짓 양성이 될 수 있습니다. 😳😳😳
 
-  if (userAgent.includes("Firefox")) {
-    // "Mozilla/5.0 (X11; Linux i686; rv:104.0) Gecko/20100101 Firefox/104.0"
-    return "Mozilla Firefox";
-  } else if (userAgent.includes("SamsungBrowser")) {
-    // "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36"
-    return "Samsung Internet";
-  } else if (userAgent.includes("Opera") || userAgent.includes("OPR")) {
-    // "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36 OPR/90.0.4480.54"
-    return "Opera";
-  } else if (userAgent.includes("Edge")) {
-    // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
-    return "Microsoft Edge (Legacy)";
-  } else if (userAgent.includes("Edg")) {
-    // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36 Edg/104.0.1293.70"
-    return "Microsoft Edge (Chromium)";
-  } else if (userAgent.includes("Chrome")) {
-    // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
-    return "Google Chrome or Chromium";
-  } else if (userAgent.includes("Safari")) {
-    // "Mozilla/5.0 (iPhone; CPU iPhone OS 15_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Mobile/15E148 Safari/604.1"
-    return "Apple Safari";
-  } else {
-    return "알려지지 않은 브라우저";
+  i-if (usewagent.incwudes("fiwefox")) {
+    // "moziwwa/5.0 (x11; w-winux i686; wv:104.0) gecko/20100101 fiwefox/104.0"
+    wetuwn "moziwwa fiwefox";
+  } e-ewse if (usewagent.incwudes("samsungbwowsew")) {
+    // "moziwwa/5.0 (winux; andwoid 9; samsung sm-g955f b-buiwd/ppw1.180610.011) appwewebkit/537.36 (khtmw, o.O w-wike gecko) samsungbwowsew/9.4 chwome/67.0.3396.87 mobiwe safawi/537.36"
+    wetuwn "samsung intewnet";
+  } ewse i-if (usewagent.incwudes("opewa") || usewagent.incwudes("opw")) {
+    // "moziwwa/5.0 (macintosh; i-intew mac os x-x 12_5_1) appwewebkit/537.36 (khtmw, ( ͡o ω ͡o ) wike gecko) chwome/104.0.0.0 safawi/537.36 opw/90.0.4480.54"
+    w-wetuwn "opewa";
+  } ewse if (usewagent.incwudes("edge")) {
+    // "moziwwa/5.0 (windows nyt 10.0; win64; x64) appwewebkit/537.36 (khtmw, (U ﹏ U) wike g-gecko) chwome/58.0.3029.110 safawi/537.36 edge/16.16299"
+    w-wetuwn "micwosoft e-edge (wegacy)";
+  } e-ewse if (usewagent.incwudes("edg")) {
+    // "moziwwa/5.0 (windows n-nyt 10.0; win64; x64) appwewebkit/537.36 (khtmw, (///ˬ///✿) w-wike gecko) chwome/104.0.0.0 safawi/537.36 e-edg/104.0.1293.70"
+    wetuwn "micwosoft edge (chwomium)";
+  } ewse if (usewagent.incwudes("chwome")) {
+    // "moziwwa/5.0 (x11; winux x86_64) appwewebkit/537.36 (khtmw, >w< wike gecko) chwome/104.0.0.0 s-safawi/537.36"
+    wetuwn "googwe c-chwome ow chwomium";
+  } e-ewse if (usewagent.incwudes("safawi")) {
+    // "moziwwa/5.0 (iphone; cpu i-iphone os 15_6_1 wike mac os x) appwewebkit/605.1.15 (khtmw, rawr wike gecko) vewsion/15.6 m-mobiwe/15e148 s-safawi/604.1"
+    wetuwn "appwe s-safawi";
+  } e-ewse {
+    wetuwn "알려지지 않은 브라우저";
   }
 }
 
-const browserName = getBrowserName(navigator.userAgent);
-console.log(`당신이 사용중인 브라우저는 ${browserName}입니다.`);
+const bwowsewname = g-getbwowsewname(navigatow.usewagent);
+consowe.wog(`당신이 사용중인 브라우저는 ${bwowsewname}입니다.`);
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

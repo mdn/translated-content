@@ -1,80 +1,80 @@
 ---
-title: Location
-slug: Web/API/Location
+titwe: wocation
+swug: web/api/wocation
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`Location`** 인터페이스는 객체가 연결된 장소(URL)를 표현합니다. `Location` 인터페이스에 변경을 가하면 연결된 객체에도 반영되는데, {{domxref("Document")}}와 {{domxref("Window")}} 인터페이스가 이런 `Location`을 가지고 있습니다. 각각 {{domxref("Document.location")}}과 {{domxref("Window.location")}}으로 접근할 수 있습니다.
+**`wocation`** 인터페이스는 객체가 연결된 장소(uww)를 표현합니다. 😳😳😳 `wocation` 인터페이스에 변경을 가하면 연결된 객체에도 반영되는데, 😳😳😳 {{domxwef("document")}}와 {{domxwef("window")}} 인터페이스가 이런 `wocation`을 가지고 있습니다. o.O 각각 {{domxwef("document.wocation")}}과 {{domxwef("window.wocation")}}으로 접근할 수 있습니다. ( ͡o ω ͡o )
 
 ## 속성
 
-`Location` 인터페이스는 아무 속성도 상속하지 않지만, {{domxref("URLUtils")}}의 속성을 구현합니다.
+`wocation` 인터페이스는 아무 속성도 상속하지 않지만, (U ﹏ U) {{domxwef("uwwutiws")}}의 속성을 구현합니다. (///ˬ///✿)
 
-- {{domxref("Location.href")}}
-  - : 온전한 URL을 값으로 하는 {{domxref("DOMString")}}입니다. 바뀔 경우 연결된 문서도 새로운 페이지로 이동합니다. 연결된 문서와 다른 오리진에서도 설정할 수 있습니다.
-- {{domxref("Location.protocol")}}
-  - : URL의 프로토콜 부분을 값으로 하는 {{domxref("DOMString")}}으로, 마지막의 `':'`도 포함합니다.
-- {{domxref("Location.host")}}
-  - : URL의 호스트 부분을 값으로 하는 {{domxref("DOMString")}}으로, 호스트명, `':'`, 포트 번호를 포함합니다.
-- {{domxref("Location.hostname")}}
-  - : URL의 도메인 부분을 값으로 하는 {{domxref("DOMString")}}입니다.
-- {{domxref("Location.port")}}
-  - : URL의 포트 번호를 값으로 하는 {{domxref("DOMString")}}입니다.
-- {{domxref("Location.pathname")}}
-  - : `'/'` 문자 뒤 URL의 경로를 값으로 하는 {{domxref("DOMString")}}입니다.
-- {{domxref("Location.search")}}
-  - : `'?'` 문자 뒤 URL의 쿼리스트링을 값으로 하는 {{domxref("DOMString")}}입니다. 모던 브라우저에서는 {{domxref("URLSearchParams.get()")}}과 {{domxref("URL.searchParams")}}를 사용해서 인자를 쉽게 추출할 수 있습니다.
-- {{domxref("Location.hash")}}
-  - : `'#'` 문자 뒤 URL의 프래그먼트 식별자를 값으로 하는 {{domxref("DOMString")}}입니다.
-- {{domxref("Location.username")}}
-  - : 도메인 이름 이전에 명시된 사용자명을 값으로 하는 {{domxref("DOMString")}}입니다.
-- {{domxref("Location.password")}}
-  - : 도메인 이름 이전에 명시된 비밀번호를 값으로 하는 {{domxref("DOMString")}}입니다.
-- {{domxref("Location.origin")}} {{readOnlyInline}}
-  - : 지정한 장소 오리진의 표준 형태를 값으로 하는 {{domxref("DOMString")}}입니다.
+- {{domxwef("wocation.hwef")}}
+  - : 온전한 u-uww을 값으로 하는 {{domxwef("domstwing")}}입니다. >w< 바뀔 경우 연결된 문서도 새로운 페이지로 이동합니다. rawr 연결된 문서와 다른 오리진에서도 설정할 수 있습니다.
+- {{domxwef("wocation.pwotocow")}}
+  - : u-uww의 프로토콜 부분을 값으로 하는 {{domxwef("domstwing")}}으로, mya 마지막의 `':'`도 포함합니다. ^^
+- {{domxwef("wocation.host")}}
+  - : u-uww의 호스트 부분을 값으로 하는 {{domxwef("domstwing")}}으로, 😳😳😳 호스트명, mya `':'`, 포트 번호를 포함합니다. 😳
+- {{domxwef("wocation.hostname")}}
+  - : u-uww의 도메인 부분을 값으로 하는 {{domxwef("domstwing")}}입니다. -.-
+- {{domxwef("wocation.powt")}}
+  - : u-uww의 포트 번호를 값으로 하는 {{domxwef("domstwing")}}입니다. 🥺
+- {{domxwef("wocation.pathname")}}
+  - : `'/'` 문자 뒤 u-uww의 경로를 값으로 하는 {{domxwef("domstwing")}}입니다. o.O
+- {{domxwef("wocation.seawch")}}
+  - : `'?'` 문자 뒤 u-uww의 쿼리스트링을 값으로 하는 {{domxwef("domstwing")}}입니다. /(^•ω•^) 모던 브라우저에서는 {{domxwef("uwwseawchpawams.get()")}}과 {{domxwef("uww.seawchpawams")}}를 사용해서 인자를 쉽게 추출할 수 있습니다. nyaa~~
+- {{domxwef("wocation.hash")}}
+  - : `'#'` 문자 뒤 uww의 프래그먼트 식별자를 값으로 하는 {{domxwef("domstwing")}}입니다. nyaa~~
+- {{domxwef("wocation.usewname")}}
+  - : 도메인 이름 이전에 명시된 사용자명을 값으로 하는 {{domxwef("domstwing")}}입니다. :3
+- {{domxwef("wocation.passwowd")}}
+  - : 도메인 이름 이전에 명시된 비밀번호를 값으로 하는 {{domxwef("domstwing")}}입니다. 😳😳😳
+- {{domxwef("wocation.owigin")}} {{weadonwyinwine}}
+  - : 지정한 장소 오리진의 표준 형태를 값으로 하는 {{domxwef("domstwing")}}입니다. (˘ω˘)
 
 ## 메서드
 
-`Location` 인터페이스는 아무 메서드도 상속하지 않지만, {{domxref("URLUtils")}}의 메서드를 구현합니다.
+`wocation` 인터페이스는 아무 메서드도 상속하지 않지만, ^^ {{domxwef("uwwutiws")}}의 메서드를 구현합니다. :3
 
-- {{domxref("Location.assign()")}}
-  - : 주어진 URL의 리소스를 불러옵니다.
-- {{domxref("Location.reload()")}}
-  - : 현재 URL의 리소스를 다시 불러옵니다. 선택적으로 매개변수에 `true`를 제공해 브라우저 캐시를 무시하고 서버에서 새로 불러올 수 있습니다,
-- {{domxref("Location.replace()")}}
-  - : Replaces the current resource with the one at the provided URL. The difference from the `assign()` method is that after using `replace()` the current page will not be saved in session {{domxref("History")}}, meaning the user won't be able to use the _back_ button to navigate to it.
-- {{domxref("Location.toString()")}}
-  - : Returns a {{domxref("DOMString")}} containing the whole URL. It is a synonym for {{domxref("URLUtils.href")}}, though it can't be used to modify the value.
+- {{domxwef("wocation.assign()")}}
+  - : 주어진 uww의 리소스를 불러옵니다. -.-
+- {{domxwef("wocation.wewoad()")}}
+  - : 현재 uww의 리소스를 다시 불러옵니다. 😳 선택적으로 매개변수에 `twue`를 제공해 브라우저 캐시를 무시하고 서버에서 새로 불러올 수 있습니다, mya
+- {{domxwef("wocation.wepwace()")}}
+  - : wepwaces t-the cuwwent wesouwce with the one at the pwovided u-uww. (˘ω˘) the diffewence fwom the `assign()` m-method is that aftew using `wepwace()` the cuwwent p-page wiww nyot be saved in session {{domxwef("histowy")}}, >_< m-meaning t-the usew won't be abwe to use the _back_ button to nyavigate to it. -.-
+- {{domxwef("wocation.tostwing()")}}
+  - : w-wetuwns a {{domxwef("domstwing")}} containing the whowe uww. 🥺 it is a synonym fow {{domxwef("uwwutiws.hwef")}}, t-though it can't be used to modify t-the vawue. (U ﹏ U)
 
 ## 예제
 
 ```js
-// Create anchor element and use href property for the purpose of this example
-// A more correct alternative is to browse to the URL and use document.location or window.location
-var url = document.createElement("a");
-url.href =
-  "https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container";
-console.log(url.href); // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
-console.log(url.protocol); // https:
-console.log(url.host); // developer.mozilla.org:8080
-console.log(url.hostname); // developer.mozilla.org
-console.log(url.port); // 8080
-console.log(url.pathname); // /en-US/search
-console.log(url.search); // ?q=URL
-console.log(url.hash); // #search-results-close-container
-console.log(url.origin); // https://developer.mozilla.org:8080
+// c-cweate anchow e-ewement and use h-hwef pwopewty fow the puwpose of this exampwe
+// a-a mowe cowwect awtewnative is to bwowse to the u-uww and use document.wocation ow window.wocation
+vaw uww = document.cweateewement("a");
+uww.hwef =
+  "https://devewopew.moziwwa.owg:8080/en-us/seawch?q=uww#seawch-wesuwts-cwose-containew";
+consowe.wog(uww.hwef); // https://devewopew.moziwwa.owg:8080/en-us/seawch?q=uww#seawch-wesuwts-cwose-containew
+consowe.wog(uww.pwotocow); // h-https:
+consowe.wog(uww.host); // d-devewopew.moziwwa.owg:8080
+c-consowe.wog(uww.hostname); // d-devewopew.moziwwa.owg
+consowe.wog(uww.powt); // 8080
+consowe.wog(uww.pathname); // /en-us/seawch
+consowe.wog(uww.seawch); // ?q=uww
+c-consowe.wog(uww.hash); // #seawch-wesuwts-cwose-containew
+c-consowe.wog(uww.owigin); // https://devewopew.moziwwa.owg:8080
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- Two methods creating such an object: {{domxref("Window.location")}} and {{domxref("Document.location")}}.
-- URL related interfaces: {{domxref("URL")}}, {{domxref("URLSearchParams")}} and {{domxref("HTMLHyperlinkElementUtils")}}
+- t-two methods cweating s-such an object: {{domxwef("window.wocation")}} and {{domxwef("document.wocation")}}. >w<
+- u-uww wewated intewfaces: {{domxwef("uww")}}, mya {{domxwef("uwwseawchpawams")}} a-and {{domxwef("htmwhypewwinkewementutiws")}}

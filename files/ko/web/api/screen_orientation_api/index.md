@@ -1,22 +1,22 @@
 ---
-title: Screen Orientation API
-slug: Web/API/Screen_Orientation_API
-l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+titwe: scween owientation api
+s-swug: web/api/scween_owientation_api
+w-w10n:
+  souwcecommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{DefaultAPISidebar("Screen Orientation API")}}
+{{defauwtapisidebaw("scween o-owientation a-api")}}
 
-**Screen Orientation API**는 화면 방향에 대한 정보를 제공합니다.
+**scween o-owientation a-api**는 화면 방향에 대한 정보를 제공합니다. o.O
 
 ## 인터페이스
 
-- {{DOMxRef("ScreenOrientation")}}
+- {{domxwef("scweenowientation")}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

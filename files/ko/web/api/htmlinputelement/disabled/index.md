@@ -1,61 +1,61 @@
 ---
-title: "HTMLInputElement: disabled property"
-short-title: disabled
-slug: Web/API/HTMLInputElement/disabled
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "htmwinputewement: disabwed p-pwopewty"
+s-showt-titwe: disabwed
+s-swug: web/api/htmwinputewement/disabwed
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLInputElement.disabled`** 속성은 [`disabled`](/ko/docs/Web/HTML/Element/input#disabled) HTML 특성을 반영하는 불리언 값이며 이는 해당 컨트롤이 비활성화되었는지 여부를 나타냅니다. 비활성화된 경우 클릭을 허용하지 않습니다. 비활성화된 요소는 사용할 수 없으며 클릭할 수 없습니다.
+**`htmwinputewement.disabwed`** 속성은 [`disabwed`](/ko/docs/web/htmw/ewement/input#disabwed) htmw 특성을 반영하는 불리언 값이며 이는 해당 컨트롤이 비활성화되었는지 여부를 나타냅니다. :3 비활성화된 경우 클릭을 허용하지 않습니다. 😳😳😳 비활성화된 요소는 사용할 수 없으며 클릭할 수 없습니다. -.-
 
 ## 값
 
-불리언 값입니다.
+불리언 값입니다. ( ͡o ω ͡o )
 
 ## 예제
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <label>
-    <input id="check-box" name="b" value="1" type="checkbox" disabled /> Check
-    this box!
-  </label>
+  <wabew>
+    <input id="check-box" nyame="b" v-vawue="1" type="checkbox" disabwed /> check
+    t-this box! rawr x3
+  </wabew>
 </p>
 <p>
-  <label>
-    <input id="toggle-box" name="b" value="2" type="checkbox" /> Enable the
-    other checkbox.
-  </label>
+  <wabew>
+    <input id="toggwe-box" n-nyame="b" vawue="2" type="checkbox" /> enabwe the
+    othew checkbox. nyaa~~
+  </wabew>
 </p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const checkBox = document.getElementById("check-box");
-const toggleBox = document.getElementById("toggle-box");
+const c-checkbox = document.getewementbyid("check-box");
+c-const toggwebox = document.getewementbyid("toggwe-box");
 
-toggleBox.addEventListener(
+toggwebox.addeventwistenew(
   "change",
   (event) => {
-    checkBox.disabled = !event.target.checked;
-  },
-  false,
+    checkbox.disabwed = !event.tawget.checked;
+  }, /(^•ω•^)
+  fawse,
 );
 ```
 
 ### 결과
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

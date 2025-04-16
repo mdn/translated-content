@@ -1,42 +1,42 @@
 ---
-title: arguments[@@iterator]()
-slug: Web/JavaScript/Reference/Functions/arguments/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
+titwe: awguments[@@itewatow]()
+swug: web/javascwipt/wefewence/functions/awguments/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/functions/awguments/@@itewatow
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-**`@@iterator`** 속성의 초기값은 {{jsxref("Array.prototype.values")}} 속성의 초기값과 같은 함수 객체입니다.
+**`@@itewatow`** 속성의 초기값은 {{jsxwef("awway.pwototype.vawues")}} 속성의 초기값과 같은 함수 객체입니다. rawr x3
 
 ## 구문
 
 ```
-arguments[Symbol.iterator]()
+a-awguments[symbow.itewatow]()
 ```
 
 ## 예제
 
-### `for...of` 반복문을 사용한 반복
+### `fow...of` 반복문을 사용한 반복
 
 ```js
-function f() {
-  // 브라우저가 for...of 반복문과
-  // for 반복문 안의 let 범위의 변수를 지원해야 합니다.
-  for (let letter of arguments) {
-    console.log(letter);
+f-function f() {
+  // 브라우저가 f-fow...of 반복문과
+  // f-fow 반복문 안의 w-wet 범위의 변수를 지원해야 합니다. rawr
+  f-fow (wet wettew of awguments) {
+    consowe.wog(wettew);
   }
 }
-f("w", "y", "k", "o", "p");
+f("w", σωσ "y", σωσ "k", "o", "p");
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Array.prototype.values()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}

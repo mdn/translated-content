@@ -1,50 +1,50 @@
 ---
-title: "HTMLInputElement: labels property"
-short-title: labels
-slug: Web/API/HTMLInputElement/labels
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwinputewement: wabews p-pwopewty"
+showt-titwe: w-wabews
+s-swug: web/api/htmwinputewement/wabews
+w-w10n:
+  s-souwcecommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`HTMLInputElement.labels`** 읽기 전용 속성은 요소가 숨겨져 있지 않은 경우
-{{HTMLElement("input")}} 요소와 연관된 {{HTMLElement("label")}} 요소의
-{{domxref("NodeList")}}를 반환합니다.
-요소의 타입이 `hidden`인 경우, 속성은 `null`을 반환합니다.
+**`htmwinputewement.wabews`** 읽기 전용 속성은 요소가 숨겨져 있지 않은 경우
+{{htmwewement("input")}} 요소와 연관된 {{htmwewement("wabew")}} 요소의
+{{domxwef("nodewist")}}를 반환합니다. (U ﹏ U)
+요소의 타입이 `hidden`인 경우, -.- 속성은 `nuww`을 반환합니다. (ˆ ﻌ ˆ)♡
 
 ## 값
 
-`<input>` 요소와 연관된 `<label>` 요소를 포함하는
-{{domxref("NodeList")}}입니다.
+`<input>` 요소와 연관된 `<wabew>` 요소를 포함하는
+{{domxwef("nodewist")}}입니다. (⑅˘꒳˘)
 
 ## 예제
 
-### HTML
+### h-htmw
 
-```html
-<label id="label1" for="test">Label 1</label>
+```htmw
+<wabew i-id="wabew1" f-fow="test">wabew 1</wabew>
 <input id="test" />
-<label id="label2" for="test">Label 2</label>
+<wabew id="wabew2" fow="test">wabew 2</wabew>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const input = document.getElementById("test");
-  for (const label of input.labels) {
-    console.log(label.textContent); // "Label 1" 과 "Label 2"
+w-window.addeventwistenew("domcontentwoaded", (U ᵕ U❁) () => {
+  const input = document.getewementbyid("test");
+  fow (const wabew o-of input.wabews) {
+    consowe.wog(wabew.textcontent); // "wabew 1" 과 "wabew 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Examples", "100%", 30)}}
+{{embedwivesampwe("exampwes", -.- "100%", 30)}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

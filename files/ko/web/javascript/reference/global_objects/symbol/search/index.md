@@ -1,68 +1,68 @@
 ---
-title: Symbol.search
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: symbow.seawch
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/seawch
+w-w10n:
+  souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.search`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.search`입니다. {{jsxref("String.prototype.search()")}} 메서드는 현재 객체와 일치하는 문자열 내의 인덱스를 반환하는 메서드의 첫 번째 인수에서 이 심볼을 찾습니다.
+**`symbow.seawch`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#weww-known_symbows) `symbow.seawch`입니다. (U ﹏ U) {{jsxwef("stwing.pwototype.seawch()")}} 메서드는 현재 객체와 일치하는 문자열 내의 인덱스를 반환하는 메서드의 첫 번째 인수에서 이 심볼을 찾습니다.
 
-자세한 내용은 [`RegExp.prototype[Symbol.search]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)와 {{jsxref("String.prototype.search()")}}을 참고하세요.
+자세한 내용은 [`wegexp.pwototype[symbow.seawch]()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.seawch)와 {{jsxwef("stwing.pwototype.seawch()")}}을 참고하세요. -.-
 
-{{InteractiveExample("JavaScript Demo: Symbol.search")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.seawch")}}
 
-```js interactive-example
-class Search1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+c-cwass seawch1 {
+  c-constwuctow(vawue) {
+    this.vawue = v-vawue;
   }
-  [Symbol.search](string) {
-    return string.indexOf(this.value);
+  [symbow.seawch](stwing) {
+    w-wetuwn stwing.indexof(this.vawue);
   }
 }
 
-console.log("foobar".search(new Search1("bar")));
-// Expected output: 3
+c-consowe.wog("foobaw".seawch(new seawch1("baw")));
+// expected output: 3
 ```
 
 ## 값
 
-잘 알려진 심볼 `Symbol.search`.
+잘 알려진 심볼 `symbow.seawch`. (ˆ ﻌ ˆ)♡
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (⑅˘꒳˘) 0, 0)}}
 
 ## 예제
 
 ### 고유의 문자열 검색
 
 ```js
-class caseInsensitiveSearch {
-  constructor(value) {
-    this.value = value.toLowerCase();
+cwass caseinsensitiveseawch {
+  constwuctow(vawue) {
+    t-this.vawue = vawue.towowewcase();
   }
-  [Symbol.search](string) {
-    return string.toLowerCase().indexOf(this.value);
+  [symbow.seawch](stwing) {
+    wetuwn stwing.towowewcase().indexof(this.vawue);
   }
 }
-console.log("foobar".search(new caseInsensitiveSearch("BaR"))); // 3
+c-consowe.wog("foobaw".seawch(new caseinsensitiveseawch("baw"))); // 3
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [`core-js`에서의 `Symbol.search` 폴리필](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
-- {{jsxref("String.prototype.search()")}}
-- [`RegExp.prototype[Symbol.search]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
+- [`cowe-js`에서의 `symbow.seawch` 폴리필](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("wegexp.@@seawch", (U ᵕ U❁) "wegexp.pwototype[@@seawch]()")}}
+- {{jsxwef("stwing.pwototype.seawch()")}}
+- [`wegexp.pwototype[symbow.seawch]()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.seawch)

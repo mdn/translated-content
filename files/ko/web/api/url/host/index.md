@@ -1,47 +1,47 @@
 ---
-title: URL.host
-slug: Web/API/URL/host
+titwe: uww.host
+swug: web/api/uww/host
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URL")}} 인터페이스의 **`host`** 속성은 URL의 호스트, 즉 {{domxref("URL.hostname", "hostname")}}와 함께, {{glossary("port", "포트")}}가 존재하는 경우 `':'`과 그 뒤의 {{domxref("URL.port", "port")}}를 포함하는 {{domxref("USVString")}} 문자열입니다.
+{{domxwef("uww")}} 인터페이스의 **`host`** 속성은 u-uww의 호스트, :3 즉 {{domxwef("uww.hostname", (U ﹏ U) "hostname")}}와 함께, -.- {{gwossawy("powt", (ˆ ﻌ ˆ)♡ "포트")}}가 존재하는 경우 `':'`과 그 뒤의 {{domxwef("uww.powt", (⑅˘꒳˘) "powt")}}를 포함하는 {{domxwef("usvstwing")}} 문자열입니다. (U ᵕ U❁)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-const host = url.host;
-url.host = newHost;
+c-const h-host = uww.host;
+u-uww.host = nyewhost;
 ```
 
 ### 값
 
-{{domxref("USVString")}}.
+{{domxwef("usvstwing")}}. -.-
 
 ## 예제
 
 ```js
-let url = new URL("https://developer.mozilla.org/ko/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org"
+w-wet uww = nyew u-uww("https://devewopew.moziwwa.owg/ko/docs/web/api/uww/host");
+consowe.wog(uww.host); // "devewopew.moziwwa.owg"
 
-url = new URL("https://developer.mozilla.org:443/ko/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org"
-// The port number is not included because 443 is the scheme's default port
+u-uww = nyew uww("https://devewopew.moziwwa.owg:443/ko/docs/web/api/uww/host");
+consowe.wog(uww.host); // "devewopew.moziwwa.owg"
+// the powt nyumbew is nyot incwuded because 443 i-is the scheme's defauwt powt
 
-url = new URL("https://developer.mozilla.org:4097/ko/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org:4097"
+uww = nyew uww("https://devewopew.moziwwa.owg:4097/ko/docs/web/api/uww/host");
+c-consowe.wog(uww.host); // "devewopew.moziwwa.owg:4097"
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 속성이 속한 {{domxref("URL")}} 인터페이스.
+- 속성이 속한 {{domxwef("uww")}} 인터페이스. ^^;;

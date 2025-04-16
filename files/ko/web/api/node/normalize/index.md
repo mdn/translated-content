@@ -1,44 +1,44 @@
 ---
-title: Node.normalize()
-slug: Web/API/Node/normalize
+titwe: nyode.nowmawize()
+swug: w-web/api/node/nowmawize
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Node.normalize()`** 메소드는 지정된 노드와 하위 트리의 모든 노드를 "정규화된" 형태로 놓습니다. 정규화된 하위 트리의 텍스트 노드는 비어있지 않으며 인접한 텍스트 노드도 존재하지 않습니다.
+**`node.nowmawize()`** 메소드는 지정된 노드와 하위 트리의 모든 노드를 "정규화된" 형태로 놓습니다. rawr x3 정규화된 하위 트리의 텍스트 노드는 비어있지 않으며 인접한 텍스트 노드도 존재하지 않습니다. rawr
 
 ## 문법
 
 ```js
-element.normalize();
+e-ewement.nowmawize();
 ```
 
 ## 예제
 
 ```js
-var wrapper = document.createElement("div");
+v-vaw wwappew = document.cweateewement("div");
 
-wrapper.appendChild(document.createTextNode("Part 1 "));
-wrapper.appendChild(document.createTextNode("Part 2 "));
+wwappew.appendchiwd(document.cweatetextnode("pawt 1 "));
+w-wwappew.appendchiwd(document.cweatetextnode("pawt 2 "));
 
-// 이 때, wrapper.childNodes.length === 2
-// wrapper.childNodes[0].textContent === "Part 1 "
-// wrapper.childNodes[1].textContent === "Part 2 "
+// 이 때, σωσ w-wwappew.chiwdnodes.wength === 2
+// w-wwappew.chiwdnodes[0].textcontent === "pawt 1 "
+// w-wwappew.chiwdnodes[1].textcontent === "pawt 2 "
 
-wrapper.normalize();
+w-wwappew.nowmawize();
 
-// 이제, wrapper.childNodes.length === 1
-// wrapper.childNodes[0].textContent === "Part 1 Part 2 "
+// 이제, σωσ wwappew.chiwdnodes.wength === 1
+// wwappew.chiwdnodes[0].textcontent === "pawt 1 pawt 2 "
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 보기
 
-- [`Text.splitText`](/ko/docs/Web/API/Text/splitText)
+- [`text.spwittext`](/ko/docs/web/api/text/spwittext)

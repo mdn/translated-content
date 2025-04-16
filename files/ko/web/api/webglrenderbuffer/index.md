@@ -1,43 +1,43 @@
 ---
-title: WebGLRenderbuffer
-slug: Web/API/WebGLRenderbuffer
+titwe: webgwwendewbuffew
+swug: w-web/api/webgwwendewbuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLRenderbuffer** 인터페이스는 [WebGL API](/ko/docs/Web/API/WebGL_API) 의 부분입니다. 그리고 이미지를 담거나 렌더링 연산의 소스나 타겟이 될 수 있는 버퍼를 말합니다.
+**webgwwendewbuffew** 인터페이스는 [webgw a-api](/ko/docs/web/api/webgw_api) 의 부분입니다. 그리고 이미지를 담거나 렌더링 연산의 소스나 타겟이 될 수 있는 버퍼를 말합니다.
 
 ## 설명
 
-`WebGLRenderbuffer` 오브젝트는 메소드나 프로퍼티를 정의 하지 않으며 직접적으로 접근할 수 없습니다. When working with `WebGLRenderbuffer` 오브젝트와 작업하려면 다음의 {{domxref("WebGLRenderingContext")}} 메소드가 도움이 될 것입니다.
+`webgwwendewbuffew` 오브젝트는 메소드나 프로퍼티를 정의 하지 않으며 직접적으로 접근할 수 없습니다. ( ͡o ω ͡o ) w-when w-wowking with `webgwwendewbuffew` 오브젝트와 작업하려면 다음의 {{domxwef("webgwwendewingcontext")}} 메소드가 도움이 될 것입니다. UwU
 
-- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
+- {{domxwef("webgwwendewingcontext.bindwendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatewendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetewendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.iswendewbuffew()")}}
 
 ## 예
 
 ### 렌더 버퍼 만들기
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
-var buffer = gl.createRenderbuffer();
+v-vaw canvas = document.getewementbyid("canvas");
+v-vaw gw = canvas.getcontext("webgw");
+v-vaw buffew = g-gw.cweatewendewbuffew();
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 보기
 
-- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
-- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}
+- {{domxwef("webgwwendewingcontext.bindwendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatewendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetewendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.iswendewbuffew()")}}
+- othew buffews: {{domxwef("webgwbuffew")}}, rawr x3 {{domxwef("webgwfwamebuffew")}}

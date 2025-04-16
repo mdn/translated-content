@@ -1,153 +1,153 @@
 ---
-title: Hello GLSL
-slug: Web/API/WebGL_API/By_example/Hello_GLSL
-l10n:
-  sourceCommit: 73b724ad82b94d2a4c314924218367cea2740e97
+titwe: hewwo gwsw
+swug: web/api/webgw_api/by_exampwe/hewwo_gwsw
+w-w10n:
+  souwcecommit: 73b724ad82b94d2a4c314924218367cea2740e97
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
+{{pweviousnext("weawn/webgw/by_exampwe/waining_wectangwes","weawn/webgw/by_exampwe/hewwo_vewtex_attwibutes")}}
 
 매우 간단한 색이 있는 단단한 사각형을 그려주는 쉐이더 프로그램
 
-> [!NOTE]
-> 이 예시는 대부분 모든 최신의 데스크탑 브라우저에서 동작합니다. 하지만 어떤 모바일 혹은 낡은 브라우저에서는 동작하지 않습니다. 만약 캔버스가 공백인 상태로 남아있다면, 당신은 정확히 똑같은 것을 그리는 다음 예시의 결과를 확인하실 수 있습니다. 하지만 다음으로 넘어가기 전에, 여기서 설명과 코드를 읽고 가는 것을 기억하세요
+> [!note]
+> 이 예시는 대부분 모든 최신의 데스크탑 브라우저에서 동작합니다. σωσ 하지만 어떤 모바일 혹은 낡은 브라우저에서는 동작하지 않습니다. rawr x3 만약 캔버스가 공백인 상태로 남아있다면, OwO 당신은 정확히 똑같은 것을 그리는 다음 예시의 결과를 확인하실 수 있습니다. /(^•ω•^) 하지만 다음으로 넘어가기 전에, 😳😳😳 여기서 설명과 코드를 읽고 가는 것을 기억하세요
 
-### Hello World 프로그램 in GLSL
+### h-hewwo wowwd 프로그램 i-in gwsw
 
-{{EmbedLiveSample("Hello_World_프로그램_in_GLSL",660,425)}}
+{{embedwivesampwe("hewwo_wowwd_프로그램_in_gwsw",660,425)}}
 
 매우 간단한 첫 쉐이더 프로그램
 
-```html hidden
-<p>Hello World! Hello GLSL!</p>
+```htmw h-hidden
+<p>hewwo w-wowwd! ( ͡o ω ͡o ) hewwo gwsw!</p>
 ```
 
-```html hidden
-<canvas>Your browser does not seem to support HTML canvas.</canvas>
+```htmw h-hidden
+<canvas>youw b-bwowsew d-does nyot seem to suppowt htmw canvas.</canvas>
 ```
 
 ```css hidden
 body {
-  text-align: center;
+  text-awign: centew;
 }
-canvas {
+c-canvas {
   width: 280px;
   height: 210px;
-  margin: auto;
+  mawgin: a-auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  bowdew: n-nyone;
+  backgwound-cowow: bwack;
 }
 button {
-  display: block;
-  font-size: inherit;
-  margin: auto;
+  dispway: bwock;
+  font-size: i-inhewit;
+  mawgin: auto;
   padding: 0.6em;
 }
 ```
 
-```html
-<script type="x-shader/x-vertex" id="vertex-shader">
-  #version 100
+```htmw
+<scwipt t-type="x-shadew/x-vewtex" i-id="vewtex-shadew">
+  #vewsion 100
   void main() {
-    gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
-    gl_PointSize = 64.0;
+    gw_position = vec4(0.0, >_< 0.0, 0.0, 1.0);
+    gw_pointsize = 64.0;
   }
-</script>
+</scwipt>
 ```
 
-```html
-<script type="x-shader/x-fragment" id="fragment-shader">
-  #version 100
+```htmw
+<scwipt t-type="x-shadew/x-fwagment" id="fwagment-shadew">
+  #vewsion 100
   void main() {
-    gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
+    gw_fwagcowow = vec4(0.18, >w< 0.54, 0.34, 1.0);
   }
-</script>
+</scwipt>
 ```
 
 ```js hidden
 ;(() => {
-  "use strict";
+  "use s-stwict";
 ```
 
 ```js
-window.addEventListener("load", setupWebGL, false);
-let gl;
-let program;
+window.addeventwistenew("woad", rawr s-setupwebgw, 😳 f-fawse);
+wet g-gw;
+wet pwogwam;
 
-function setupWebGL(evt) {
-  window.removeEventListener(evt.type, setupWebGL, false);
-  if (!(gl = getRenderingContext())) return;
+f-function setupwebgw(evt) {
+  window.wemoveeventwistenew(evt.type, >w< setupwebgw, (⑅˘꒳˘) f-fawse);
+  if (!(gw = getwendewingcontext())) wetuwn;
 
-  let source = document.querySelector("#vertex-shader").innerHTML;
-  const vertexShader = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vertexShader, source);
-  gl.compileShader(vertexShader);
+  wet souwce = d-document.quewysewectow("#vewtex-shadew").innewhtmw;
+  const vewtexshadew = gw.cweateshadew(gw.vewtex_shadew);
+  gw.shadewsouwce(vewtexshadew, OwO souwce);
+  g-gw.compiweshadew(vewtexshadew);
 
-  source = document.querySelector("#fragment-shader").innerHTML;
-  const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fragmentShader, source);
-  gl.compileShader(fragmentShader);
-  program = gl.createProgram();
-  gl.attachShader(program, vertexShader);
-  gl.attachShader(program, fragmentShader);
-  gl.linkProgram(program);
-  gl.detachShader(program, vertexShader);
-  gl.detachShader(program, fragmentShader);
-  gl.deleteShader(vertexShader);
-  gl.deleteShader(fragmentShader);
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    const linkErrLog = gl.getProgramInfoLog(program);
-    cleanup();
-    document.querySelector("p").textContent =
-      `Shader program did not link successfully. Error log: ${linkErrLog}`;
-    return;
+  souwce = document.quewysewectow("#fwagment-shadew").innewhtmw;
+  c-const fwagmentshadew = g-gw.cweateshadew(gw.fwagment_shadew);
+  g-gw.shadewsouwce(fwagmentshadew, (ꈍᴗꈍ) souwce);
+  gw.compiweshadew(fwagmentshadew);
+  pwogwam = gw.cweatepwogwam();
+  gw.attachshadew(pwogwam, 😳 v-vewtexshadew);
+  g-gw.attachshadew(pwogwam, 😳😳😳 fwagmentshadew);
+  g-gw.winkpwogwam(pwogwam);
+  g-gw.detachshadew(pwogwam, mya vewtexshadew);
+  g-gw.detachshadew(pwogwam, mya fwagmentshadew);
+  g-gw.deweteshadew(vewtexshadew);
+  gw.deweteshadew(fwagmentshadew);
+  if (!gw.getpwogwampawametew(pwogwam, (⑅˘꒳˘) g-gw.wink_status)) {
+    const winkewwwog = g-gw.getpwogwaminfowog(pwogwam);
+    cweanup();
+    document.quewysewectow("p").textcontent =
+      `shadew p-pwogwam did n-nyot wink successfuwwy. (U ﹏ U) ewwow wog: ${winkewwwog}`;
+    wetuwn;
   }
 
-  initializeAttributes();
+  initiawizeattwibutes();
 
-  gl.useProgram(program);
-  gl.drawArrays(gl.POINTS, 0, 1);
+  gw.usepwogwam(pwogwam);
+  gw.dwawawways(gw.points, mya 0, ʘwʘ 1);
 
-  cleanup();
+  c-cweanup();
 }
 
-let buffer;
-function initializeAttributes() {
-  gl.enableVertexAttribArray(0);
-  buffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-  gl.vertexAttribPointer(0, 1, gl.FLOAT, false, 0, 0);
+wet b-buffew;
+function initiawizeattwibutes() {
+  g-gw.enabwevewtexattwibawway(0);
+  buffew = g-gw.cweatebuffew();
+  g-gw.bindbuffew(gw.awway_buffew, (˘ω˘) buffew);
+  gw.vewtexattwibpointew(0, (U ﹏ U) 1, gw.fwoat, fawse, ^•ﻌ•^ 0, 0);
 }
 
-function cleanup() {
-  gl.useProgram(null);
-  if (buffer) {
-    gl.deleteBuffer(buffer);
+function c-cweanup() {
+  gw.usepwogwam(nuww);
+  if (buffew) {
+    gw.dewetebuffew(buffew);
   }
-  if (program) {
-    gl.deleteProgram(program);
+  if (pwogwam) {
+    gw.dewetepwogwam(pwogwam);
   }
 }
 ```
 
-```js hidden
-function getRenderingContext() {
-  const canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  const gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    const paragraph = document.querySelector("p");
-    paragraph.textContent =
-      "Failed. Your browser or device may not support WebGL.";
-    return null;
+```js h-hidden
+function getwendewingcontext() {
+  c-const canvas = d-document.quewysewectow("canvas");
+  c-canvas.width = canvas.cwientwidth;
+  canvas.height = canvas.cwientheight;
+  c-const gw =
+    c-canvas.getcontext("webgw") || c-canvas.getcontext("expewimentaw-webgw");
+  i-if (!gw) {
+    const pawagwaph = document.quewysewectow("p");
+    p-pawagwaph.textcontent =
+      "faiwed. (˘ω˘) y-youw bwowsew o-ow device may n-not suppowt webgw.";
+    w-wetuwn nuww;
   }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
+  gw.viewpowt(0, :3 0, gw.dwawingbuffewwidth, ^^;; gw.dwawingbuffewheight);
+  g-gw.cweawcowow(0.0, 🥺 0.0, 0.0, 1.0);
+  gw.cweaw(gw.cowow_buffew_bit);
+  wetuwn gw;
 }
 ```
 
@@ -155,6 +155,6 @@ function getRenderingContext() {
 })();
 ```
 
-이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl)에서도 확인 가능합니다.
+이 예시 코드는 [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/hewwo-gwsw)에서도 확인 가능합니다. (⑅˘꒳˘)
 
-{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
+{{pweviousnext("weawn/webgw/by_exampwe/waining_wectangwes","weawn/webgw/by_exampwe/hewwo_vewtex_attwibutes")}}

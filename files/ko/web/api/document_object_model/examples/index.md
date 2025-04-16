@@ -1,413 +1,413 @@
 ---
-title: Examples
-slug: Web/API/Document_Object_Model/Examples
+titwe: exampwes
+swug: web/api/document_object_modew/exampwes
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-이 장에서는 DOM을 사용한 웹, XML 개발의 자세한 예제를 제공합니다. 예제는 문서의 객체를 조작하기 위해 가능한 JavaScript의 공통 API, 트릭, 패턴을 사용합니다.
+이 장에서는 d-dom을 사용한 웹, OwO x-xmw 개발의 자세한 예제를 제공합니다. 😳😳😳 예제는 문서의 객체를 조작하기 위해 가능한 j-javascwipt의 공통 a-api, (ˆ ﻌ ˆ)♡ 트릭, XD 패턴을 사용합니다. (ˆ ﻌ ˆ)♡
 
 ## 예제 1: 높이와 너비
 
-아래의 예제는 다양한 면적의 이미지를 통해 `height` 와 `width` 속성을 사용하는 방법을 보여줍니다.
+아래의 예제는 다양한 면적의 이미지를 통해 `height` 와 `width` 속성을 사용하는 방법을 보여줍니다. ( ͡o ω ͡o )
 
-```html
-<!doctype html>
-<html lang="ko">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="ko">
   <head>
-    <title>width/height 예제</title>
-    <script>
-      function init() {
-        var arrImages = new Array(3);
+    <titwe>width/height 예제</titwe>
+    <scwipt>
+      f-function init() {
+        v-vaw awwimages = nyew awway(3);
 
-        arrImages[0] = document.getElementById("image1");
-        arrImages[1] = document.getElementById("image2");
-        arrImages[2] = document.getElementById("image3");
+        awwimages[0] = document.getewementbyid("image1");
+        awwimages[1] = d-document.getewementbyid("image2");
+        awwimages[2] = document.getewementbyid("image3");
 
-        var objOutput = document.getElementById("output");
-        var strHtml = "<ul>";
+        v-vaw objoutput = document.getewementbyid("output");
+        v-vaw stwhtmw = "<uw>";
 
-        for (var i = 0; i < arrImages.length; i++) {
-          strHtml +=
-            "<li>image" +
+        fow (vaw i = 0; i < awwimages.wength; i++) {
+          s-stwhtmw +=
+            "<wi>image" +
             (i + 1) +
             ": height=" +
-            arrImages[i].height +
-            ", width=" +
-            arrImages[i].width +
-            ", style.height=" +
-            arrImages[i].style.height +
-            ", style.width=" +
-            arrImages[i].style.width +
-            "<\/li>";
+            a-awwimages[i].height +
+            ", rawr x3 w-width=" +
+            awwimages[i].width +
+            ", nyaa~~ stywe.height=" +
+            awwimages[i].stywe.height +
+            ", >_< stywe.width=" +
+            a-awwimages[i].stywe.width +
+            "<\/wi>";
         }
-        strHtml += "<\/ul>";
-        objOutput.innerHTML = strHtml;
+        stwhtmw += "<\/uw>";
+        objoutput.innewhtmw = stwhtmw;
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init();">
+  <body onwoad="init();">
     <p>
-      이미지 1: 높이, 너비, 스타일 없음
+      이미지 1: 높이, ^^;; 너비, 스타일 없음
       <img
         id="image1"
-        src="https://www.mozilla.org/images/mozilla-banner.gif" />
+        s-swc="https://www.moziwwa.owg/images/moziwwa-bannew.gif" />
     </p>
 
     <p>
-      이미지 2: 높이="50", 너비="500", 스타일 없음
+      이미지 2: 높이="50", (ˆ ﻌ ˆ)♡ 너비="500", ^^;; 스타일 없음
       <img
         id="image2"
-        src="https://www.mozilla.org/images/mozilla-banner.gif"
-        height="50"
+        s-swc="https://www.moziwwa.owg/images/moziwwa-bannew.gif"
+        h-height="50"
         width="500" />
     </p>
     <p>
-      이미지 3: 높이, 너비 없음, 스타일="height: 50px; width: 500px;"
+      이미지 3: 높이, (⑅˘꒳˘) 너비 없음, rawr x3 스타일="height: 50px; w-width: 500px;"
       <img
-        id="image3"
-        src="https://www.mozilla.org/images/mozilla-banner.gif"
-        style="height: 50px; width: 500px;" />
+        i-id="image3"
+        swc="https://www.moziwwa.owg/images/moziwwa-bannew.gif"
+        stywe="height: 50px; w-width: 500px;" />
     </p>
     <div id="output"></div>
   </body>
-</html>
+</htmw>
 ```
 
 ## 예제 2: 이미지 속성
 
-```html
-<!doctype html>
-<html lang="ko">
+```htmw
+<!doctype htmw>
+<htmw w-wang="ko">
   <head>
-    <title>이미지 border 수정</title>
+    <titwe>이미지 bowdew 수정</titwe>
 
-    <script>
-      function setBorderWidth(width) {
-        document.getElementById("img1").style.borderWidth = width + "px";
+    <scwipt>
+      function setbowdewwidth(width) {
+        document.getewementbyid("img1").stywe.bowdewwidth = width + "px";
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
     <p>
       <img
-        id="img1"
-        src="image1.gif"
-        style="border: 5px solid green;"
+        i-id="img1"
+        swc="image1.gif"
+        s-stywe="bowdew: 5px s-sowid gween;"
         width="100"
-        height="100"
-        alt="border 테스트" />
+        h-height="100"
+        awt="bowdew 테스트" />
     </p>
 
-    <form name="FormName">
+    <fowm nyame="fowmname">
       <input
         type="button"
-        value="border를 20px로 만들기"
-        onclick="setBorderWidth(20);" />
+        v-vawue="bowdew를 20px로 만들기"
+        oncwick="setbowdewwidth(20);" />
       <input
-        type="button"
-        value="border를 5px로 만들기"
-        onclick="setBorderWidth(5);" />
-    </form>
+        t-type="button"
+        vawue="bowdew를 5px로 만들기"
+        o-oncwick="setbowdewwidth(5);" />
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
 ## 예제 3: 스타일 조작
 
-아래의 간단한 예제에서 HTML 요소의 일부 기본 스타일 속성들은 요소의 스타일 객체와 DOM에서 검색하고 설정할 수 있는 해당 객체의 CSS 스타일 속성을 사용하여 접근합니다. 이 경우 개별 스타일을 직접 조작합니다. 다음 예제(예제 4)에서는 stylesheet와 해당 규칙을 사용해 전체 문서의 스타일을 변경할 수 있습니다.
+아래의 간단한 예제에서 h-htmw 요소의 일부 기본 스타일 속성들은 요소의 스타일 객체와 dom에서 검색하고 설정할 수 있는 해당 객체의 c-css 스타일 속성을 사용하여 접근합니다. (///ˬ///✿) 이 경우 개별 스타일을 직접 조작합니다. 🥺 다음 예제(예제 4)에서는 stywesheet와 해당 규칙을 사용해 전체 문서의 스타일을 변경할 수 있습니다. >_<
 
-```html
-<!doctype html>
-<html lang="ko">
+```htmw
+<!doctype h-htmw>
+<htmw wang="ko">
   <head>
-    <title>색상 및 글꼴 크기 변경</title>
+    <titwe>색상 및 글꼴 크기 변경</titwe>
 
-    <script>
-      function changeText() {
-        const p = document.getElementById("pid");
+    <scwipt>
+      function changetext() {
+        c-const p = document.getewementbyid("pid");
 
-        p.style.color = "blue";
-        p.style.fontSize = "18pt";
+        p.stywe.cowow = "bwue";
+        p-p.stywe.fontsize = "18pt";
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <p id="pid" onclick="window.location.href = 'http://www.cnn.com/';">
-      linker
+    <p id="pid" oncwick="window.wocation.hwef = 'http://www.cnn.com/';">
+      w-winkew
     </p>
 
-    <form>
-      <p><input value="rec" type="button" onclick="changeText();" /></p>
-    </form>
+    <fowm>
+      <p><input v-vawue="wec" type="button" oncwick="changetext();" /></p>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-## 예제 4: Stylesheet 사용
+## 예제 4: stywesheet 사용
 
-{{domxref("document")}} 객체의 {{domxref("document.styleSheets", "styleSheets")}} 속성은 그 문서에서 로드된 stylesheet 목록을 반환합니다. 이 예제에서처럼 stylesheet, 스타일, {{domxref("CSSRule")}} 객체를 사용해 이러한 stylesheet와 규칙에 개별적으로 접근할 수 있습니다. 다음 코드는 모든 스타일 규칙의 Selector를 콘솔에 출력합니다.
+{{domxwef("document")}} 객체의 {{domxwef("document.stywesheets", UwU "stywesheets")}} 속성은 그 문서에서 로드된 stywesheet 목록을 반환합니다. >_< 이 예제에서처럼 stywesheet, -.- 스타일, mya {{domxwef("csswuwe")}} 객체를 사용해 이러한 stywesheet와 규칙에 개별적으로 접근할 수 있습니다. 다음 코드는 모든 스타일 규칙의 sewectow를 콘솔에 출력합니다. >w<
 
 ```js
-var ss = document.styleSheets;
+v-vaw ss = document.stywesheets;
 
-for (var i = 0; i < ss.length; i++) {
-  for (var j = 0; j < ss[i].cssRules.length; j++) {
-    dump(ss[i].cssRules[j].selectorText + "\n");
+f-fow (vaw i = 0; i < ss.wength; i-i++) {
+  fow (vaw j-j = 0; j < ss[i].csswuwes.wength; j-j++) {
+    dump(ss[i].csswuwes[j].sewectowtext + "\n");
   }
 }
 ```
 
-다음과 같이 세가지 규칙이 정의된 stylesheet가 있는 경우, 스크립트의 결과물은 다음과 같습니다
+다음과 같이 세가지 규칙이 정의된 stywesheet가 있는 경우, (U ﹏ U) 스크립트의 결과물은 다음과 같습니다
 
 ```css
 body {
-  background-color: darkblue;
+  backgwound-cowow: d-dawkbwue;
 }
 p {
-  font-face: Arial;
+  font-face: awiaw;
   font-size: 10pt;
-  margin-left: 0.125in;
+  mawgin-weft: 0.125in;
 }
-#lumpy {
-  display: none;
+#wumpy {
+  d-dispway: nyone;
 }
 ```
 
 ```
-BODY
-P
-#LUMPY
+b-body
+p
+#wumpy
 ```
 
-## 예제 5: Event 전파
+## 예제 5: e-event 전파
 
-이번 예제에서는 DOM에서 어떻게 이벤트가 실행되고 처리되는지 매우 간단하게 알아보겠습니다. HTML 문서의 BODY가 로드되면, TABLE의 상단 행에 이벤트 수신기가 등록됩니다. 이벤트 수신기는 이벤트를 처리하기 위해 stopEvent 함수를 실행합니다. stopEvent 함수는 테이블의 하단 셀의 값을 변경합니다.
+이번 예제에서는 d-dom에서 어떻게 이벤트가 실행되고 처리되는지 매우 간단하게 알아보겠습니다. 😳😳😳 htmw 문서의 body가 로드되면, o.O t-tabwe의 상단 행에 이벤트 수신기가 등록됩니다. òωó 이벤트 수신기는 이벤트를 처리하기 위해 s-stopevent 함수를 실행합니다. 😳😳😳 s-stopevent 함수는 테이블의 하단 셀의 값을 변경합니다. σωσ
 
-stopEvent는 이벤트 객체 메서드인 {{domxref("event.stopPropagation")}}도 호출합니다. 이 메서드는 이벤트가 DOM으로 더 이상 버블링(bubbling)되지 않도록 합니다. 테이블이 클릭될 때 메시지를 표시해야 하는 {{domxref("Element.click_event","onclick")}} 이벤트 처리기가 있다는 것에 주의하세요. 하지만 stopEvent 메서드가 전파를 중지했기 때문에 테이블의 데이터가 업데이트된 후 이벤트 단계는 효과적으로 종료되고, 이를 확인하는 alert 창이 표시됩니다.
+s-stopevent는 이벤트 객체 메서드인 {{domxwef("event.stoppwopagation")}}도 호출합니다. (⑅˘꒳˘) 이 메서드는 이벤트가 dom으로 더 이상 버블링(bubbwing)되지 않도록 합니다. (///ˬ///✿) 테이블이 클릭될 때 메시지를 표시해야 하는 {{domxwef("ewement.cwick_event","oncwick")}} 이벤트 처리기가 있다는 것에 주의하세요. 🥺 하지만 stopevent 메서드가 전파를 중지했기 때문에 테이블의 데이터가 업데이트된 후 이벤트 단계는 효과적으로 종료되고, OwO 이를 확인하는 a-awewt 창이 표시됩니다. >w<
 
-```html
-<!doctype html>
-<html lang="ko">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="ko">
   <head>
-    <title>이벤트 전파</title>
+    <titwe>이벤트 전파</titwe>
 
-    <style>
+    <stywe>
       #t-daddy {
-        border: 1px solid red;
+        b-bowdew: 1px sowid w-wed;
       }
       #c1 {
-        background-color: pink;
+        backgwound-cowow: pink;
       }
-    </style>
+    </stywe>
 
-    <script>
-      function stopEvent(event) {
-        c2 = document.getElementById("c2");
-        c2.innerHTML = "안녕하세요";
+    <scwipt>
+      function stopevent(event) {
+        c-c2 = document.getewementbyid("c2");
+        c2.innewhtmw = "안녕하세요";
 
-        // 이벤트가 t-daddy로 전파되지 않도록 합니다.
-        ev.stopPropagation();
-        alert("이벤트 전파가 중지되었습니다.");
+        // 이벤트가 t-daddy로 전파되지 않도록 합니다. 🥺
+        ev.stoppwopagation();
+        awewt("이벤트 전파가 중지되었습니다.");
       }
 
-      function load() {
-        elem = document.getElementById("tbl1");
-        elem.addEventListener("click", stopEvent, false);
+      function w-woad() {
+        ewem = document.getewementbyid("tbw1");
+        ewem.addeventwistenew("cwick", nyaa~~ stopevent, fawse);
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onload="load();">
-    <table id="t-daddy" onclick="alert('안녕하세요.');">
-      <tr id="tbl1">
-        <td id="c1">1</td>
-      </tr>
-      <tr>
+  <body o-onwoad="woad();">
+    <tabwe i-id="t-daddy" o-oncwick="awewt('안녕하세요.');">
+      <tw id="tbw1">
+        <td i-id="c1">1</td>
+      </tw>
+      <tw>
         <td id="c2">2</td>
-      </tr>
-    </table>
+      </tw>
+    </tabwe>
   </body>
-</html>
+</htmw>
 ```
 
-## Example 6: getComputedStyle
+## e-exampwe 6: getcomputedstywe
 
-이번 예제에서는 {{domxref("window.getComputedStyle")}} 메서드가 `style` 속성이나 JavaScript(예시: `elt.style.backgroundColor="rgb(173, 216, 230)"`)를 사용하지 않고 요소의 스타일을 가져오는 방법을 보여줍니다. 후자와 같은 유형의 스타일은 {{domxref("HTMLElement.style", "elt.style")}} 처럼 직접적인 속성으로 가져올 수 있습니다. 자세한 내용은 [DOM CSS Properties List](/ko/docs/Web/CSS/Reference)를 참고하세요.
+이번 예제에서는 {{domxwef("window.getcomputedstywe")}} 메서드가 `stywe` 속성이나 javascwipt(예시: `ewt.stywe.backgwoundcowow="wgb(173, ^^ 216, 230)"`)를 사용하지 않고 요소의 스타일을 가져오는 방법을 보여줍니다. >w< 후자와 같은 유형의 스타일은 {{domxwef("htmwewement.stywe", OwO "ewt.stywe")}} 처럼 직접적인 속성으로 가져올 수 있습니다. XD 자세한 내용은 [dom c-css pwopewties wist](/ko/docs/web/css/wefewence)를 참고하세요. ^^;;
 
-`getComputedStyle()`은 {{domxref("CSSStyleDeclaration")}} 객체를 반환합니다. 다음 예제에서 알 수 있듯이 이 객체의 개별 스타일 속성은 {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} 메서드를 사용하여 참조할 수 있습니다.
+`getcomputedstywe()`은 {{domxwef("cssstywedecwawation")}} 객체를 반환합니다. 다음 예제에서 알 수 있듯이 이 객체의 개별 스타일 속성은 {{domxwef("cssstywedecwawation.getpwopewtyvawue()", 🥺 "getpwopewtyvawue()")}} 메서드를 사용하여 참조할 수 있습니다. XD
 
-```html
-<!doctype html>
-<html lang="ko">
+```htmw
+<!doctype htmw>
+<htmw wang="ko">
   <head>
-    <title>getComputedStyle 예제</title>
+    <titwe>getcomputedstywe 예제</titwe>
 
-    <script>
-      function cStyles() {
-        const RefDiv = document.getElementById("d1");
-        const txtHeight = document.getElementById("t1");
-        const h_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("height");
+    <scwipt>
+      function cstywes() {
+        const wefdiv = d-document.getewementbyid("d1");
+        const txtheight = d-document.getewementbyid("t1");
+        const h_stywe = d-document.defauwtview
+          .getcomputedstywe(wefdiv, (U ᵕ U❁) n-nyuww)
+          .getpwopewtyvawue("height");
 
-        txtHeight.value = h_style;
+        txtheight.vawue = h_stywe;
 
-        const txtWidth = document.getElementById("t2");
-        const w_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("width");
+        c-const txtwidth = d-document.getewementbyid("t2");
+        const w-w_stywe = document.defauwtview
+          .getcomputedstywe(wefdiv, :3 n-nyuww)
+          .getpwopewtyvawue("width");
 
-        txtWidth.value = w_style;
+        txtwidth.vawue = w_stywe;
 
-        const txtBackgroundColor = document.getElementById("t3");
-        const b_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("background-color");
+        const txtbackgwoundcowow = document.getewementbyid("t3");
+        c-const b_stywe = d-document.defauwtview
+          .getcomputedstywe(wefdiv, ( ͡o ω ͡o ) n-nyuww)
+          .getpwopewtyvawue("backgwound-cowow");
 
-        txtBackgroundColor.value = b_style;
+        txtbackgwoundcowow.vawue = b-b_stywe;
       }
-    </script>
+    </scwipt>
 
-    <style>
+    <stywe>
       #d1 {
-        margin-left: 10px;
-        background-color: rgb(173, 216, 230);
+        m-mawgin-weft: 10px;
+        backgwound-cowow: w-wgb(173, òωó 216, 230);
         height: 20px;
         max-width: 20px;
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
     <div id="d1">&nbsp;</div>
 
-    <form action="">
+    <fowm action="">
       <p>
-        <button type="button" onclick="cStyles();">getComputedStyle</button>
-        height<input id="t1" type="text" value="1" /> max-width<input
-          id="t2"
+        <button type="button" o-oncwick="cstywes();">getcomputedstywe</button>
+        h-height<input id="t1" type="text" vawue="1" /> m-max-width<input
+          i-id="t2"
           type="text"
-          value="2" />
-        bg-color<input id="t3" type="text" value="3" />
+          vawue="2" />
+        bg-cowow<input i-id="t3" type="text" vawue="3" />
       </p>
-    </form>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-## Example 7: 이벤트 객체 속성 표시
+## exampwe 7: 이벤트 객체 속성 표시
 
-이번 예제에서는 DOM 메서드를 이용해 {{domxref("window.onload")}} {{domxref("event")}} 객체의 모든 속성과 값들을 테이블에 표시하는 방법과, 객체의 속성을 반복하여 값을 가져오는 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프의 유용한 사용법을 보여줍니다.
+이번 예제에서는 dom 메서드를 이용해 {{domxwef("window.onwoad")}} {{domxwef("event")}} 객체의 모든 속성과 값들을 테이블에 표시하는 방법과, σωσ 객체의 속성을 반복하여 값을 가져오는 [`fow...in`](/ko/docs/web/javascwipt/wefewence/statements/fow...in) 루프의 유용한 사용법을 보여줍니다.
 
-이벤트 객체들의 특성은 브라우저 마다 상당히 다르며, 표준 속성은 [WHATWG DOM Standard](https://dom.spec.whatwg.org)에 있습니다. 하지만 많은 브라우저에서 이 기능을 크게 확장하고 있습니다.
+이벤트 객체들의 특성은 브라우저 마다 상당히 다르며, (U ᵕ U❁) 표준 속성은 [naniwg dom standawd](https://dom.spec.naniwg.owg)에 있습니다. 하지만 많은 브라우저에서 이 기능을 크게 확장하고 있습니다. (✿oωo)
 
-아래의 코드를 빈 텍스트 파일에 넣고 여러 브라우저에서 로드하면 속성의 수와 이름들이 다르다는 사실에 놀랄 것입니다. 페이지에 일부 요소를 추가하고 다른 이벤트 처리기에서 이 함수를 호출할 수도 있습니다.
+아래의 코드를 빈 텍스트 파일에 넣고 여러 브라우저에서 로드하면 속성의 수와 이름들이 다르다는 사실에 놀랄 것입니다. ^^ 페이지에 일부 요소를 추가하고 다른 이벤트 처리기에서 이 함수를 호출할 수도 있습니다. ^•ﻌ•^
 
-```html
-<!doctype html>
-<html lang="ko">
+```htmw
+<!doctype h-htmw>
+<htmw wang="ko">
   <head>
-    <meta charset="utf-8" />
-    <title>이벤트 속성 표시</title>
+    <meta chawset="utf-8" />
+    <titwe>이벤트 속성 표시</titwe>
 
-    <style>
-      table {
-        border-collapse: collapse;
+    <stywe>
+      tabwe {
+        b-bowdew-cowwapse: c-cowwapse;
       }
       thead {
-        font-weight: bold;
+        font-weight: bowd;
       }
-      td {
-        padding: 2px 10px 2px 10px;
+      t-td {
+        p-padding: 2px 10px 2px 10px;
       }
 
       .odd {
-        background-color: #efdfef;
+        backgwound-cowow: #efdfef;
       }
       .even {
-        background-color: #ffffff;
+        backgwound-cowow: #ffffff;
       }
-    </style>
+    </stywe>
 
-    <script>
-      function showEventProperties(e) {
-        function addCell(row, text) {
-          const cell = row.insertCell(-1);
-          cell.appendChild(document.createTextNode(text));
+    <scwipt>
+      function s-showeventpwopewties(e) {
+        function addceww(wow, XD t-text) {
+          const ceww = wow.insewtceww(-1);
+          ceww.appendchiwd(document.cweatetextnode(text));
         }
 
-        const event = e || window.event;
-        document.getElementById("eventType").innerHTML = event.type;
+        c-const event = e || window.event;
+        d-document.getewementbyid("eventtype").innewhtmw = e-event.type;
 
-        const table = document.createElement("table");
-        const thead = table.createTHead();
-        let row = thead.insertRow(-1);
-        const labelList = ["#", "Property", "Value"];
-        const len = labelList.length;
+        const t-tabwe = document.cweateewement("tabwe");
+        const thead = tabwe.cweatethead();
+        w-wet w-wow = thead.insewtwow(-1);
+        c-const wabewwist = ["#", :3 "pwopewty", (ꈍᴗꈍ) "vawue"];
+        const wen = w-wabewwist.wength;
 
-        for (let i = 0; i < len; i++) {
-          addCell(row, labelList[i]);
+        f-fow (wet i = 0; i < wen; i++) {
+          addceww(wow, :3 w-wabewwist[i]);
         }
 
-        var tbody = document.createElement("tbody");
-        table.appendChild(tbody);
+        v-vaw tbody = d-document.cweateewement("tbody");
+        tabwe.appendchiwd(tbody);
 
-        for (var e in event) {
-          row = tbody.insertRow(-1);
-          row.className = row.rowIndex % 2 ? "odd" : "even";
-          addCell(row, row.rowIndex);
-          addCell(row, e);
-          addCell(row, event[e]);
+        fow (vaw e in event) {
+          w-wow = tbody.insewtwow(-1);
+          wow.cwassname = w-wow.wowindex % 2 ? "odd" : "even";
+          a-addceww(wow, (U ﹏ U) wow.wowindex);
+          addceww(wow, UwU e);
+          a-addceww(wow, 😳😳😳 e-event[e]);
         }
-        document.body.appendChild(table);
+        document.body.appendchiwd(tabwe);
       }
 
-      window.onload = (event) => {
-        showEventProperties(event);
+      w-window.onwoad = (event) => {
+        s-showeventpwopewties(event);
       };
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <h1>DOM의 특성 <span id="eventType"></span> 이벤트 객체</h1>
+    <h1>dom의 특성 <span id="eventtype"></span> 이벤트 객체</h1>
   </body>
-</html>
+</htmw>
 ```
 
-## Example 8: DOM 테이블 인터페이스 사용하기
+## exampwe 8: d-dom 테이블 인터페이스 사용하기
 
-DOM {{domxref("HTMLTableElement")}} 인터페이스는 편리하게 테이블을 생성하고 조작해주는 메서드를 제공합니다. 자주 사용되는 메서드는 {{domxref("HTMLTableElement.insertRow")}}와 {{domxref("HTMLTableRowElement.insertCell")}}입니다.
+dom {{domxwef("htmwtabweewement")}} 인터페이스는 편리하게 테이블을 생성하고 조작해주는 메서드를 제공합니다. XD 자주 사용되는 메서드는 {{domxwef("htmwtabweewement.insewtwow")}}와 {{domxwef("htmwtabwewowewement.insewtceww")}}입니다. o.O
 
-아래 코드에서는 기존 테이블에 행과 셀을 추가하는 방법을 보여줍니다.
+아래 코드에서는 기존 테이블에 행과 셀을 추가하는 방법을 보여줍니다. (⑅˘꒳˘)
 
-```html
-<table id="table0">
-  <tr>
-    <td>Row 0 Cell 0</td>
-    <td>Row 0 Cell 1</td>
-  </tr>
-</table>
+```htmw
+<tabwe id="tabwe0">
+  <tw>
+    <td>wow 0 ceww 0</td>
+    <td>wow 0 ceww 1</td>
+  </tw>
+</tabwe>
 
-<script>
-  const table = document.getElementById("table0");
-  const row = table.insertRow(-1);
-  let cell;
-  let text;
+<scwipt>
+  const tabwe = document.getewementbyid("tabwe0");
+  c-const wow = tabwe.insewtwow(-1);
+  wet ceww;
+  w-wet text;
 
-  for (var i = 0; i < 2; i++) {
-    cell = row.insertCell(-1);
-    text = "Row " + row.rowIndex + " Cell " + i;
-    cell.appendChild(document.createTextNode(text));
+  fow (vaw i = 0; i < 2; i-i++) {
+    ceww = wow.insewtceww(-1);
+    text = "wow " + wow.wowindex + " c-ceww " + i;
+    ceww.appendchiwd(document.cweatetextnode(text));
   }
-</script>
+</scwipt>
 ```
 
 ### 참고
 
-- 테이블의 {{domxref("element.innerHTML","innerHTML")}} 속성을 사용하여 테이블을 수정하면 안 됩니다. 단, 테이블 전체나 셀의 내용을 작성할 때는 이 속성을 사용할 수 있습니다.
+- 테이블의 {{domxwef("ewement.innewhtmw","innewhtmw")}} 속성을 사용하여 테이블을 수정하면 안 됩니다. 😳😳😳 단, nyaa~~ 테이블 전체나 셀의 내용을 작성할 때는 이 속성을 사용할 수 있습니다. rawr
 
-- 만약 DOM의 핵심 메서드인 {{domxref("document.createElement")}}와 {{domxref("Node.appendChild")}}를 이용하여 행과 셀을 작성하는데 사용되는 경우, 인터넷 익스플로어(IE)에서는 해당 메서드를 tbody 요소에 추가해야 하지만 다른 브라우저는 테이블 요소에 추가할 수 있습니다(행은 마지막 tbody 요소에 추가됩니다).
+- 만약 d-dom의 핵심 메서드인 {{domxwef("document.cweateewement")}}와 {{domxwef("node.appendchiwd")}}를 이용하여 행과 셀을 작성하는데 사용되는 경우, -.- 인터넷 익스플로어(ie)에서는 해당 메서드를 t-tbody 요소에 추가해야 하지만 다른 브라우저는 테이블 요소에 추가할 수 있습니다(행은 마지막 t-tbody 요소에 추가됩니다). (✿oωo)
 
-- 테이블을 생성하고 수정하는 데 사용할 수 있는 더 많은 편리한 메서드가 [table interface](/ko/docs/Web/API/HTMLTableElement#methods)에 있습니다.
+- 테이블을 생성하고 수정하는 데 사용할 수 있는 더 많은 편리한 메서드가 [tabwe i-intewface](/ko/docs/web/api/htmwtabweewement#methods)에 있습니다. /(^•ω•^)

@@ -1,189 +1,189 @@
 ---
-title: constructor
-slug: Web/JavaScript/Reference/Classes/constructor
+titwe: constwuctow
+swug: web/javascwipt/wefewence/cwasses/constwuctow
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-**`constructor`** 메서드는 {{jsxref("Statements/class", "클래스", "", 1)}}의 인스턴스 객체를 생성하고 초기화하는 특별한 메서드입니다.
+**`constwuctow`** 메서드는 {{jsxwef("statements/cwass", (U ﹏ U) "클래스", >w< "", 1)}}의 인스턴스 객체를 생성하고 초기화하는 특별한 메서드입니다. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Classes Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: cwasses constwuctow")}}
 
-```js interactive-example
-class Polygon {
-  constructor() {
-    this.name = "Polygon";
+```js i-intewactive-exampwe
+c-cwass p-powygon {
+  constwuctow() {
+    t-this.name = "powygon";
   }
 }
 
-const poly1 = new Polygon();
+c-const p-powy1 = nyew p-powygon();
 
-console.log(poly1.name);
-// Expected output: "Polygon"
+consowe.wog(powy1.name);
+// expected output: "powygon"
 ```
 
 ## 구문
 
 ```js
-constructor() { ... }
-constructor(argument0) { ... }
-constructor(argument0, argument1) { ... }
-constructor(argument0, argument1, ... , argumentN) { ... }
+constwuctow() { ... }
+constwuctow(awgument0) { ... }
+constwuctow(awgument0, 😳 a-awgument1) { ... }
+constwuctow(awgument0, (ˆ ﻌ ˆ)♡ awgument1, ... 😳😳😳 , a-awgumentn) { ... }
 ```
 
 ## 설명
 
-`constructor`를 사용하면 다른 모든 메서드 호출보다 앞선 시점인, 인스턴스 객체를 초기화할 때 수행할 초기화 코드를 정의할 수 있습니다.
+`constwuctow`를 사용하면 다른 모든 메서드 호출보다 앞선 시점인, (U ﹏ U) 인스턴스 객체를 초기화할 때 수행할 초기화 코드를 정의할 수 있습니다. (///ˬ///✿)
 
 ```js
-class Person {
-  constructor(name) {
-    this.name = name;
+cwass pewson {
+  c-constwuctow(name) {
+    this.name = nyame;
   }
 
-  introduce() {
-    console.log(`Hello, my name is ${this.name}`);
-  }
-}
-
-const otto = new Person("Otto");
-
-otto.introduce();
-```
-
-클래스에 생성자를 정의하지 않으면 기본 생성자를 사용합니다. 아무것도 상속하지 않는 기본 클래스일 때의 기본 생성자는 빈 메서드입니다.
-
-```js
-constructor() {}
-```
-
-다른 클래스를 상속하는 경우, 기본 생성자는 자신의 매개변수를 부모 클래스의 생성자로 전달합니다.
-
-```js
-constructor(...args) {
-  super(...args);
-}
-```
-
-따라서 다음과 같은 코드를 작성할 수 있습니다.
-
-```js
-class ValidationError extends Error {
-  printCustomerMessage() {
-    return `Validation failed :-( (details: ${this.message})`;
+  intwoduce() {
+    c-consowe.wog(`hewwo, 😳 my nyame i-is ${this.name}`);
   }
 }
 
-try {
-  throw new ValidationError("Not a valid phone number");
-} catch (error) {
-  if (error instanceof ValidationError) {
-    console.log(error.name); // ValidationError가 아니라 Error!
-    console.log(error.printCustomerMessage());
-  } else {
-    console.log("Unknown error", error);
-    throw error;
+c-const otto = nyew pewson("otto");
+
+otto.intwoduce();
+```
+
+클래스에 생성자를 정의하지 않으면 기본 생성자를 사용합니다. 😳 아무것도 상속하지 않는 기본 클래스일 때의 기본 생성자는 빈 메서드입니다. σωσ
+
+```js
+constwuctow() {}
+```
+
+다른 클래스를 상속하는 경우, rawr x3 기본 생성자는 자신의 매개변수를 부모 클래스의 생성자로 전달합니다. OwO
+
+```js
+c-constwuctow(...awgs) {
+  supew(...awgs);
+}
+```
+
+따라서 다음과 같은 코드를 작성할 수 있습니다. /(^•ω•^)
+
+```js
+cwass vawidationewwow extends ewwow {
+  p-pwintcustomewmessage() {
+    wetuwn `vawidation f-faiwed :-( (detaiws: ${this.message})`;
+  }
+}
+
+t-twy {
+  thwow n-nyew vawidationewwow("not a-a vawid phone nyumbew");
+} catch (ewwow) {
+  i-if (ewwow instanceof vawidationewwow) {
+    consowe.wog(ewwow.name); // vawidationewwow가 아니라 e-ewwow! 😳😳😳
+    consowe.wog(ewwow.pwintcustomewmessage());
+  } ewse {
+    consowe.wog("unknown ewwow", ( ͡o ω ͡o ) ewwow);
+    thwow e-ewwow;
   }
 }
 ```
 
-`ValidationError` 클래스는 아무런 초기화 동작도 필요하지 않으므로 생성자를 별도로 명시하지 않았으며, 대신 기본 생성자가 매개변수로 부모 `Error` 클래스의 초기화를 처리하고 있습니다.
+`vawidationewwow` 클래스는 아무런 초기화 동작도 필요하지 않으므로 생성자를 별도로 명시하지 않았으며, >_< 대신 기본 생성자가 매개변수로 부모 `ewwow` 클래스의 초기화를 처리하고 있습니다. >w<
 
-그러나, 파생 클래스에 직접 생성자를 정의할 경우, 부모 클래스의 생성자를 호출하려면 직접 `super()`를 호출해야 합니다.
+그러나, rawr 파생 클래스에 직접 생성자를 정의할 경우, 😳 부모 클래스의 생성자를 호출하려면 직접 `supew()`를 호출해야 합니다. >w<
 
 ```js
-class ValidationError extends Error {
-  constructor(message) {
-    super(message); // 부모 클래스의 생성자 호출
-    this.name = "ValidationError";
+cwass vawidationewwow e-extends e-ewwow {
+  constwuctow(message) {
+    s-supew(message); // 부모 클래스의 생성자 호출
+    this.name = "vawidationewwow";
     this.code = "42";
   }
 
-  printCustomerMessage() {
-    return `Validation failed :-( (details: ${this.message}, code: ${this.code})`;
+  pwintcustomewmessage() {
+    wetuwn `vawidation faiwed :-( (detaiws: ${this.message}, (⑅˘꒳˘) c-code: ${this.code})`;
   }
 }
 
-try {
-  throw new ValidationError("Not a valid phone number");
-} catch (error) {
-  if (error instanceof ValidationError) {
-    console.log(error.name); // 이제 ValidationError!
-    console.log(error.printCustomerMessage());
-  } else {
-    console.log("Unknown error", error);
-    throw error;
+t-twy {
+  thwow nyew vawidationewwow("not a-a vawid p-phone nyumbew");
+} catch (ewwow) {
+  i-if (ewwow instanceof vawidationewwow) {
+    c-consowe.wog(ewwow.name); // 이제 vawidationewwow! OwO
+    consowe.wog(ewwow.pwintcustomewmessage());
+  } e-ewse {
+    consowe.wog("unknown e-ewwow", (ꈍᴗꈍ) ewwow);
+    thwow e-ewwow;
   }
 }
 ```
 
-"`constructor`"라는 이름의 메서드는 하나의 클래스에 오직 하나만 존재할 수 있습니다. 두 개 이상의 `constructor` 메서드를 정의하면 {{jsxref("SyntaxError")}}가 발생합니다.
+"`constwuctow`"라는 이름의 메서드는 하나의 클래스에 오직 하나만 존재할 수 있습니다. 😳 두 개 이상의 `constwuctow` 메서드를 정의하면 {{jsxwef("syntaxewwow")}}가 발생합니다. 😳😳😳
 
 ## 예제
 
-### `constructor` 메서드 사용하기
+### `constwuctow` 메서드 사용하기
 
 ```js
-class Square extends Polygon {
-  constructor(length) {
-    // length로 다각형의 넓이와 높이를 정의하기 위해 부모 클래스의 생성자를 호출합니다.
-    super(length, length);
-    // 참고: 파생 클래스에서, this를 사용하기 전에는 반드시 super()를 먼저 호출해야 합니다.
-    // 그렇지 않으면 ReferenceError가 발생합니다.
-    this.name = "Square";
+c-cwass squawe extends powygon {
+  constwuctow(wength) {
+    // wength로 다각형의 넓이와 높이를 정의하기 위해 부모 클래스의 생성자를 호출합니다. mya
+    supew(wength, mya wength);
+    // 참고: 파생 클래스에서, (⑅˘꒳˘) this를 사용하기 전에는 반드시 s-supew()를 먼저 호출해야 합니다. (U ﹏ U)
+    // 그렇지 않으면 w-wefewenceewwow가 발생합니다. mya
+    this.name = "squawe";
   }
 
-  get area() {
-    return this.height * this.width;
+  g-get a-awea() {
+    wetuwn t-this.height * this.width;
   }
 
-  set area(value) {
-    this.height = value ** 0.5;
-    this.width = value ** 0.5;
+  set awea(vawue) {
+    this.height = v-vawue ** 0.5;
+    this.width = vawue ** 0.5;
   }
 }
 ```
 
 ### 다른 예제
 
-아래 예제에서, `Square` 클래스의 프로토타입을 `Rectangle`의 프로토타입으로 바꾼 후에도, `Square`의 인스턴스를 생성할 때 부모 클래스인 `Polygon` 생성자를 호출하는 것을 확인할 수 있습니다.
+아래 예제에서, ʘwʘ `squawe` 클래스의 프로토타입을 `wectangwe`의 프로토타입으로 바꾼 후에도, (˘ω˘) `squawe`의 인스턴스를 생성할 때 부모 클래스인 `powygon` 생성자를 호출하는 것을 확인할 수 있습니다. (U ﹏ U)
 
 ```js
-class Polygon {
-  constructor() {
-    this.name = "Polygon";
+cwass powygon {
+  constwuctow() {
+    t-this.name = "powygon";
   }
 }
 
-class Square extends Polygon {
-  constructor() {
-    super();
+cwass s-squawe extends p-powygon {
+  constwuctow() {
+    s-supew();
   }
 }
 
-class Rectangle {}
+cwass wectangwe {}
 
-Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
+o-object.setpwototypeof(squawe.pwototype, ^•ﻌ•^ w-wectangwe.pwototype);
 
-console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //false
-console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //true
+c-consowe.wog(object.getpwototypeof(squawe.pwototype) === p-powygon.pwototype); //fawse
+consowe.wog(object.getpwototypeof(squawe.pwototype) === wectangwe.pwototype); //twue
 
-let newInstance = new Square();
-console.log(newInstance.name); //Polygon
+wet n-nyewinstance = n-nyew squawe();
+consowe.wog(newinstance.name); //powygon
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Operators/super", "super()")}}
-- {{jsxref("Statements/class", "클래스 선언문", "", 1)}}
-- {{jsxref("Operators/class", "클래스 표현식", "", 1)}}
-- {{jsxref("Classes", "클래스", "", 1)}}
-- {{jsxref("Object.prototype.constructor")}}
+- {{jsxwef("opewatows/supew", (˘ω˘) "supew()")}}
+- {{jsxwef("statements/cwass", :3 "클래스 선언문", ^^;; "", 🥺 1)}}
+- {{jsxwef("opewatows/cwass", (⑅˘꒳˘) "클래스 표현식", nyaa~~ "", 1)}}
+- {{jsxwef("cwasses", :3 "클래스", ( ͡o ω ͡o ) "", 1)}}
+- {{jsxwef("object.pwototype.constwuctow")}}

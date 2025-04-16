@@ -1,14 +1,14 @@
 ---
-title: "Document: dir property"
-short-title: dir
-slug: Web/API/Document/dir
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "document: diw pwopewty"
+s-showt-titwe: d-diw
+swug: web/api/document/diw
+w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`Document.dir`** 속성은 document에 존재하는 텍스트들의 방향성을 표현하는 문자열입니다. 그 방향은 왼쪽에서 오른쪽(기본값) 혹은 오른쪽에서 왼쪽이 될 수 있습니다. 가능한 값들은 오른쪽에서 왼쪽인 `'rtl'`과 왼쪽에서 오른쪽인 `'ltr'`입니다.
+**`document.diw`** 속성은 d-document에 존재하는 텍스트들의 방향성을 표현하는 문자열입니다. òωó 그 방향은 왼쪽에서 오른쪽(기본값) 혹은 오른쪽에서 왼쪽이 될 수 있습니다. 가능한 값들은 오른쪽에서 왼쪽인 `'wtw'`과 왼쪽에서 오른쪽인 `'wtw'`입니다. o.O
 
 ## 값
 
@@ -16,12 +16,12 @@ l10n:
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 보기
 
-- [`dir`](/ko/docs/Web/HTML/Global_attributes/dir) 전역 속성
+- [`diw`](/ko/docs/web/htmw/gwobaw_attwibutes/diw) 전역 속성

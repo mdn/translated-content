@@ -1,42 +1,42 @@
 ---
-title: Date.prototype.getUTCMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
+titwe: date.pwototype.getutcminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**getUTCMinutes()** 메서드는 표준시에 따라 지정된 날짜의 분을 반환합니다.
+**getutcminutes()** 메서드는 표준시에 따라 지정된 날짜의 분을 반환합니다. (⑅˘꒳˘)
 
-## Syntax
+## syntax
 
 ```js
-dateObj.getUTCMinutes();
+d-dateobj.getutcminutes();
 ```
 
-### Return value
+### wetuwn v-vawue
 
 0부터 59까지의 정수로, 표준시에 따라 지정된 날짜의 분을 나타냅니다.
 
-## Examples
+## e-exampwes
 
-### Using `getUTCMinutes()`
+### using `getutcminutes()`
 
-다음 예제에서는 현재 시간의 분 부분을 minutes 변수에 할당합니다.
+다음 예제에서는 현재 시간의 분 부분을 m-minutes 변수에 할당합니다. ( ͡o ω ͡o )
 
 ```js
-var today = new Date();
-var minutes = today.getUTCMinutes();
+v-vaw today = n-nyew date();
+v-vaw minutes = today.getutcminutes();
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("Date.prototype.getMinutes()")}}
-- {{jsxref("Date.prototype.setUTCMinutes()")}}
+- {{jsxwef("date.pwototype.getminutes()")}}
+- {{jsxwef("date.pwototype.setutcminutes()")}}

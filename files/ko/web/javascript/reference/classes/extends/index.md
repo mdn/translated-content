@@ -1,132 +1,132 @@
 ---
-title: extends
-slug: Web/JavaScript/Reference/Classes/extends
+titwe: extends
+swug: web/javascwipt/wefewence/cwasses/extends
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-**`extends`** 키워드는 클래스를 다른 클래스의 자식으로 만들기 위해 [class 선언](/ko/docs/Web/JavaScript/Reference/Statements/class) 또는 [class 식](/ko/docs/Web/JavaScript/Reference/Operators/class)에 사용됩니다.
+**`extends`** 키워드는 클래스를 다른 클래스의 자식으로 만들기 위해 [cwass 선언](/ko/docs/web/javascwipt/wefewence/statements/cwass) 또는 [cwass 식](/ko/docs/web/javascwipt/wefewence/opewatows/cwass)에 사용됩니다. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Classes Extends", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: cwasses e-extends", (///ˬ///✿) "tawwew")}}
 
-```js interactive-example
-class DateFormatter extends Date {
-  getFormattedDate() {
-    const months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
+```js i-intewactive-exampwe
+c-cwass datefowmattew e-extends d-date {
+  getfowmatteddate() {
+    c-const months = [
+      "jan", 😳😳😳
+      "feb",
+      "maw", 🥺
+      "apw", mya
+      "may", 🥺
+      "jun", >_<
+      "juw",
+      "aug", >_<
+      "sep", (⑅˘꒳˘)
+      "oct", /(^•ω•^)
+      "nov", rawr x3
+      "dec", (U ﹏ U)
     ];
-    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+    w-wetuwn `${this.getdate()}-${months[this.getmonth()]}-${this.getfuwwyeaw()}`;
   }
 }
 
-console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
-// Expected output: "19-Aug-1975"
+consowe.wog(new datefowmattew("august 19, (U ﹏ U) 1975 23:15:30").getfowmatteddate());
+// expected output: "19-aug-1975"
 ```
 
 ## 구문
 
 ```
-    class ChildClass extends ParentClass { ... }
+    cwass c-chiwdcwass extends pawentcwass { ... }
 ```
 
 ## 설명
 
-`extends` 키워드는 내장 객체뿐만 아니라 사용자 정의 클래스를 하위 클래스로 만들기 위해 사용될 수 있습니다.
+`extends` 키워드는 내장 객체뿐만 아니라 사용자 정의 클래스를 하위 클래스로 만들기 위해 사용될 수 있습니다. (⑅˘꒳˘)
 
-확장( 클래스)의 `.prototype`은 {{jsxref("Object")}} 또는 {{jsxref("null")}}이어야 합니다.
+확장( 클래스)의 `.pwototype`은 {{jsxwef("object")}} 또는 {{jsxwef("nuww")}}이어야 합니다. òωó
 
 ## 예
 
 ### `extends` 사용하기
 
-첫 번째 예는 `Polygon` 클래스로부터 `Square` 클래스를 만듭니다. 이 예는 [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)에서 발췌했습니다.
+첫 번째 예는 `powygon` 클래스로부터 `squawe` 클래스를 만듭니다. 이 예는 [wive demo](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw) [(souwce)](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw)에서 발췌했습니다. ʘwʘ
 
 ```js
-class Square extends Polygon {
-  constructor(length) {
-    // 여기서, length와 함께 부모 클래스의 생성자를 호출
-    // Polygon의 너비 및 높이가 제공됨
-    super(length, length);
-    // 주의: 파생 클래스에서, super()가 먼저 호출되어야 'this'를
-    // 사용할 수 있습니다. 이를 빼먹으면 참조 오류가 발생합니다.
-    this.name = "Square";
+cwass s-squawe extends powygon {
+  constwuctow(wength) {
+    // 여기서, /(^•ω•^) w-wength와 함께 부모 클래스의 생성자를 호출
+    // powygon의 너비 및 높이가 제공됨
+    supew(wength, ʘwʘ wength);
+    // 주의: 파생 클래스에서, σωσ s-supew()가 먼저 호출되어야 'this'를
+    // 사용할 수 있습니다. OwO 이를 빼먹으면 참조 오류가 발생합니다.
+    this.name = "squawe";
   }
 
-  get area() {
-    return this.height * this.width;
+  g-get awea() {
+    w-wetuwn this.height * this.width;
   }
 
-  set area(value) {
-    this.area = value;
+  set awea(vawue) {
+    this.awea = vawue;
   }
 }
 ```
 
 ### 내장 객체에 `extends` 사용하기
 
-이 예제는 내장 객체 {{jsxref("Date")}}를 확장합니다. 이 예제는 [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)에서 발췌했습니다.
+이 예제는 내장 객체 {{jsxwef("date")}}를 확장합니다. 😳😳😳 이 예제는 [wive d-demo](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw) [(souwce)](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw)에서 발췌했습니다.
 
 ```js
-class myDate extends Date {
-  constructor() {
-    super();
+cwass mydate extends date {
+  constwuctow() {
+    supew();
   }
 
-  getFormattedDate() {
-    var months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
+  g-getfowmatteddate() {
+    vaw months = [
+      "jan",
+      "feb", 😳😳😳
+      "maw", o.O
+      "apw", ( ͡o ω ͡o )
+      "may", (U ﹏ U)
+      "jun", (///ˬ///✿)
+      "juw",
+      "aug", >w<
+      "sep", rawr
+      "oct", mya
+      "nov", ^^
+      "dec",
     ];
-    return (
-      this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear()
+    w-wetuwn (
+      t-this.getdate() + "-" + m-months[this.getmonth()] + "-" + t-this.getfuwwyeaw()
     );
   }
 }
 ```
 
-### `null` 확장
+### `nuww` 확장
 
-{{jsxref("null")}}에서 확장은 prototype 객체가 {{jsxref("Object.prototype")}}으로부터 상속받지 않은 것을 제외하면 보통 클래스처럼 동작합니다.
+{{jsxwef("nuww")}}에서 확장은 pwototype 객체가 {{jsxwef("object.pwototype")}}으로부터 상속받지 않은 것을 제외하면 보통 클래스처럼 동작합니다. 😳😳😳
 
 ```js
-class nullExtends extends null {
-  constructor() {}
+cwass nyuwwextends e-extends nyuww {
+  constwuctow() {}
 }
 
-Object.getPrototypeOf(nullExtends); // Function.prototype
-Object.getPrototypeOf(nullExtends.prototype); // null
+object.getpwototypeof(nuwwextends); // f-function.pwototype
+object.getpwototypeof(nuwwextends.pwototype); // nyuww
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 참조
 
-- [Classes](/ko/docs/Web/JavaScript/Reference/Classes)
-- [super](/ko/docs/Web/JavaScript/Reference/Operators/super)
+- [cwasses](/ko/docs/web/javascwipt/wefewence/cwasses)
+- [supew](/ko/docs/web/javascwipt/wefewence/opewatows/supew)

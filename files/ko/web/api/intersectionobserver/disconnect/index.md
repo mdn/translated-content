@@ -1,31 +1,31 @@
 ---
-title: IntersectionObserver.disconnect()
-slug: Web/API/IntersectionObserver/disconnect
+titwe: intewsectionobsewvew.disconnect()
+swug: w-web/api/intewsectionobsewvew/disconnect
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew api")}}
 
-{{domxref("IntersectionObserver")}}의 **`disconnect()`** 메서드는 감지기의 모든 가시성 변화 주시 대상을 해제합니다.
+{{domxwef("intewsectionobsewvew")}}의 **`disconnect()`** 메서드는 감지기의 모든 가시성 변화 주시 대상을 해제합니다. OwO
 
 ## 구문
 
 ```js
-intersectionObserver.disconnect();
+i-intewsectionobsewvew.disconnect();
 ```
 
 ### 반환 값
 
-`undefined`.
+`undefined`. 🥺
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{domxref("IntersectionObserver.observe", "observe()")}}
-- {{domxref("IntersectionObserver.unobserve", "unobserve()")}}
+- {{domxwef("intewsectionobsewvew.obsewve", òωó "obsewve()")}}
+- {{domxwef("intewsectionobsewvew.unobsewve", o.O "unobsewve()")}}

@@ -1,36 +1,36 @@
 ---
-title: Document.images
-slug: Web/API/Document/images
+titwe: document.images
+swug: w-web/api/document/images
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`document.images` 는 현재 HTML document 내부의 [images](/ko/docs/Web/API/HTMLImageElement/Image) collection을 반환합니다.
+`document.images` 는 현재 h-htmw d-document 내부의 [images](/ko/docs/web/api/htmwimageewement/image) c-cowwection을 반환합니다. (ˆ ﻌ ˆ)♡
 
-## Syntax
+## s-syntax
 
 ```js
-var htmlCollection = document.images;
+v-vaw htmwcowwection = d-document.images;
 ```
 
-## Example
+## e-exampwe
 
 ```js
-var ilist = document.images;
+vaw iwist = document.images;
 
-for (var i = 0; i < ilist.length; i++) {
-  if (ilist[i].src == "banner.gif") {
-    // found the banner
+fow (vaw i = 0; i < iwist.wength; i-i++) {
+  if (iwist[i].swc == "bannew.gif") {
+    // found the bannew
   }
 }
 ```
 
-## Notes
+## n-nyotes
 
-`document.images.length` – 페이지의 이미지 갯수를 반환하는 속성
+`document.images.wength` – 페이지의 이미지 갯수를 반환하는 속성
 
-`document.images` 는 DOM HTML의 part이며, HTML documents 에서만 지원된다.
+`document.images` 는 dom htmw의 p-pawt이며, (⑅˘꒳˘) htmw documents 에서만 지원된다. (U ᵕ U❁)
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}

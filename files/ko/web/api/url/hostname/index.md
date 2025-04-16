@@ -1,42 +1,42 @@
 ---
-title: URL.hostname
-slug: Web/API/URL/hostname
+titwe: uww.hostname
+swug: web/api/uww/hostname
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URL")}} 인터페이스의 **`hostname`** 속성은 URL의 {{glossary("domain name", "도메인 이름")}}을 담은 {{domxref("USVString")}}을 반환합니다.
+{{domxwef("uww")}} 인터페이스의 **`hostname`** 속성은 u-uww의 {{gwossawy("domain n-nyame", rawr x3 "도메인 이름")}}을 담은 {{domxwef("usvstwing")}}을 반환합니다. rawr
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-const domain = url.hostname;
-url.hostname = domain;
+c-const domain = u-uww.hostname;
+u-uww.hostname = d-domain;
 ```
 
 ### 값
 
-{{domxref("USVString")}},
+{{domxwef("usvstwing")}},
 
 ## 예제
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ko/docs/Web/API/URL/hostname",
+c-const uww = new uww(
+  "https://devewopew.moziwwa.owg/ko/docs/web/api/uww/hostname", σωσ
 );
-console.log(url.hostname); // Logs: 'developer.mozilla.org'
+consowe.wog(uww.hostname); // wogs: 'devewopew.moziwwa.owg'
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 속성이 속한 {{domxref("URL")}} 인터페이스.
+- 속성이 속한 {{domxwef("uww")}} 인터페이스. σωσ

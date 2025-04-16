@@ -1,62 +1,62 @@
 ---
-title: EventTarget()
-slug: Web/API/EventTarget/EventTarget
+titwe: eventtawget()
+swug: web/api/eventtawget/eventtawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`EventTarget()`** 생성자는 새로운 {{domxref("EventTarget")}} 객체 인스턴스를 생성합니다.
+**`eventtawget()`** 생성자는 새로운 {{domxwef("eventtawget")}} 객체 인스턴스를 생성합니다. mya
 
-> [!NOTE]
-> 이 생성자를 명시적으로 사용하는 경우는 거의 없습니다. 보통은 {{domxref("EventTarget")}}을 상속하는 객체의 생성자 내에서 [`super`](/ko/docs/Web/JavaScript/Reference/Operators/super) 키워드로 사용됩니다.
+> [!note]
+> 이 생성자를 명시적으로 사용하는 경우는 거의 없습니다. mya 보통은 {{domxwef("eventtawget")}}을 상속하는 객체의 생성자 내에서 [`supew`](/ko/docs/web/javascwipt/wefewence/opewatows/supew) 키워드로 사용됩니다. 😳
 
 ## 구문
 
 ```js
-new EventTarget();
+n-nyew e-eventtawget();
 ```
 
 ### 매개변수
 
-없음.
+없음. XD
 
 ### 반환 값
 
-{{domxref("EventTarget")}} 객체의 새로운 인스턴스.
+{{domxwef("eventtawget")}} 객체의 새로운 인스턴스. :3
 
 ## 예제
 
 ```js
-class MyEventTarget extends EventTarget {
-  constructor(mySecret) {
-    super();
-    this._secret = mySecret;
+c-cwass myeventtawget e-extends eventtawget {
+  c-constwuctow(mysecwet) {
+    s-supew();
+    t-this._secwet = m-mysecwet;
   }
 
-  get secret() {
-    return this._secret;
+  get secwet() {
+    wetuwn this._secwet;
   }
 }
 
-let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret; // == 5
-myEventTarget.addEventListener("foo", function (e) {
-  this._secret = e.detail;
+wet myeventtawget = n-nyew myeventtawget(5);
+wet vawue = myeventtawget.secwet; // == 5
+myeventtawget.addeventwistenew("foo", 😳😳😳 f-function (e) {
+  this._secwet = e-e.detaiw;
 });
 
-let event = new CustomEvent("foo", { detail: 7 });
-myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // == 7
+wet event = nyew customevent("foo", -.- { detaiw: 7 });
+m-myeventtawget.dispatchevent(event);
+wet nyewvawue = m-myeventtawget.secwet; // == 7
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("EventTarget")}}
+- {{domxwef("eventtawget")}}

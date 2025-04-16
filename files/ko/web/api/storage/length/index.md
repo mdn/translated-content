@@ -1,47 +1,47 @@
 ---
-title: Storage.length
-slug: Web/API/Storage/length
+titwe: stowage.wength
+swug: web/api/stowage/wength
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-{{domxref("Storage")}} 인터페이스의 `length` 읽기 전용 속성은 `Storage` 객체에 저장된 데이터 항목의 수를 반환합니다.
+{{domxwef("stowage")}} 인터페이스의 `wength` 읽기 전용 속성은 `stowage` 객체에 저장된 데이터 항목의 수를 반환합니다. σωσ
 
 ## 구문
 
 ```js
-length = storage.length;
+w-wength = stowage.wength;
 ```
 
 ### 반환 값
 
-`Storage` 객체에 저장된 항목의 수.
+`stowage` 객체에 저장된 항목의 수. σωσ
 
 ## 예제
 
-다음의 함수는 현재 도메인의 로컬 저장소에 세 개의 항목을 추가한 후 저장소 항목의 수를 반환합니다.
+다음의 함수는 현재 도메인의 로컬 저장소에 세 개의 항목을 추가한 후 저장소 항목의 수를 반환합니다. >_<
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "yellow");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "cats.png");
+f-function p-popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", :3 "yewwow");
+  w-wocawstowage.setitem("font", (U ﹏ U) "hewvetica");
+  w-wocawstowage.setitem("image", -.- "cats.png");
 
-  return localStorage.length; // Should return 3
+  wetuwn wocawstowage.wength; // shouwd wetuwn 3
 }
 ```
 
-> [!NOTE]
-> 실제 사용 예제를 보시려면 저희의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)를 방문하세요.
+> [!note]
+> 실제 사용 예제를 보시려면 저희의 [web stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/)를 방문하세요. (ˆ ﻌ ˆ)♡
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [web stowage a-api 사용하기](/ko/docs/web/api/web_stowage_api/using_the_web_stowage_api)

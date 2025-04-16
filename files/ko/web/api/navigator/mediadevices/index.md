@@ -1,31 +1,31 @@
 ---
-title: Navigator.mediaDevices
-slug: Web/API/Navigator/mediaDevices
+titwe: nyavigatow.mediadevices
+swug: web/api/navigatow/mediadevices
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe a-and stweams")}}
 
-**`Navigator.mediaDevices`** 읽기 전용 속성은 카메라, 마이크, 화면 공유와 같이 현재 연결된 미디어 입력 장치에 접근할 수 있는 {{domxref("MediaDevices")}} 객체를 반환합니다.
+**`navigatow.mediadevices`** 읽기 전용 속성은 카메라, UwU 마이크, rawr x3 화면 공유와 같이 현재 연결된 미디어 입력 장치에 접근할 수 있는 {{domxwef("mediadevices")}} 객체를 반환합니다. rawr
 
 ## 구문
 
 ```js
-var mediaDevices = navigator.mediaDevices;
+v-vaw mediadevices = n-nyavigatow.mediadevices;
 ```
 
 ### 반환 값
 
-{{domxref("MediaDevices")}} 싱글톤 객체.
+{{domxwef("mediadevices")}} 싱글톤 객체. σωσ
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 참조
 
-- [Media Capture and Streams API](/ko/docs/Web/API/Media_Capture_and_Streams_API): 전체 미디어 스트림 API 문서의 시작 지점.
-- [WebRTC API](/ko/docs/Web/API/WebRTC_API): 밀접한 관련이 있는 WebRTC API 문서.
+- [media c-captuwe a-and stweams a-api](/ko/docs/web/api/media_captuwe_and_stweams_api): 전체 미디어 스트림 a-api 문서의 시작 지점. σωσ
+- [webwtc api](/ko/docs/web/api/webwtc_api): 밀접한 관련이 있는 webwtc api 문서. >_<

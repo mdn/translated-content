@@ -1,94 +1,94 @@
 ---
-title: DataTransfer.getData()
-slug: Web/API/DataTransfer/getData
+titwe: datatwansfew.getdata()
+swug: web/api/datatwansfew/getdata
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`DataTransfer.getData()`** 메소드는 특정 형태를 위해 ({{domxref("DOMString")}}로) 끌어낸 데이터를 회수한다. 가령, 끌어내는 동작이 데이터를 포함하지 않는다면, 이 메소드는 빈 문자열을 반환한다.
+**`datatwansfew.getdata()`** 메소드는 특정 형태를 위해 ({{domxwef("domstwing")}}로) 끌어낸 데이터를 회수한다. OwO 가령, 끌어내는 동작이 데이터를 포함하지 않는다면, (U ﹏ U) 이 메소드는 빈 문자열을 반환한다. >_<
 
-예시 데이터 형식으로는 `text/plain` 와 `text/uri-list` 이 있다.
+예시 데이터 형식으로는 `text/pwain` 와 `text/uwi-wist` 이 있다. rawr x3
 
 ## 구문
 
 ```js
-dataTransfer.getData(format);
+d-datatwansfew.getdata(fowmat);
 ```
 
 ### 매개변수
 
-- `format`
-  - : 회수할 데이터 형식을 나타내는 {{domxref("DOMString")}}
+- `fowmat`
+  - : 회수할 데이터 형식을 나타내는 {{domxwef("domstwing")}}
 
 ### 반환 값
 
-- {{domxref("DOMString")}}
-  - : 특정 `format`을 위해 끌어낸 데이터를 나타내는 {{domxref("DOMString")}}. 만약 끌어내는 동작이 데이터를 가지고 있지 않거나 동작이 특정 `format` 에 대한 데이터를 가지고 있지 않다면, 이 메소드는 빈 문자열을 반환한다.
+- {{domxwef("domstwing")}}
+  - : 특정 `fowmat`을 위해 끌어낸 데이터를 나타내는 {{domxwef("domstwing")}}. mya 만약 끌어내는 동작이 데이터를 가지고 있지 않거나 동작이 특정 `fowmat` 에 대한 데이터를 가지고 있지 않다면, nyaa~~ 이 메소드는 빈 문자열을 반환한다. (⑅˘꒳˘)
 
 ## 예제
 
-이 예시는 {{domxref("DataTransfer")}} 객체의 {{domxref("DataTransfer.getData()","getData()")}} 와 {{domxref("DataTransfer.setData()","setData()")}} 메소드의 사용을 보여준다.
+이 예시는 {{domxwef("datatwansfew")}} 객체의 {{domxwef("datatwansfew.getdata()","getdata()")}} 와 {{domxwef("datatwansfew.setdata()","setdata()")}} 메소드의 사용을 보여준다. rawr x3
 
-### HTML 내용
+### h-htmw 내용
 
-```html
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <span id="drag" draggable="true" ondragstart="drag(event)"
-    >drag me to the other box</span
+```htmw
+<div i-id="div1" ondwop="dwop(event)" o-ondwagovew="awwowdwop(event)">
+  <span i-id="dwag" d-dwaggabwe="twue" o-ondwagstawt="dwag(event)"
+    >dwag me to the othew box</span
   >
 </div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2" ondwop="dwop(event)" ondwagovew="awwowdwop(event)"></div>
 ```
 
-### CSS 내용
+### c-css 내용
 
 ```css
-#div1,
+#div1, (✿oωo)
 #div2 {
   width: 100px;
   height: 50px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
+  p-padding: 10px;
+  bowdew: 1px sowid #aaaaaa;
 }
 ```
 
-### JavaScript 내용
+### j-javascwipt 내용
 
 ```js
-function allowDrop(allowdropevent) {
-  allowdropevent.target.style.color = "blue";
-  allowdropevent.preventDefault();
+function awwowdwop(awwowdwopevent) {
+  awwowdwopevent.tawget.stywe.cowow = "bwue";
+  awwowdwopevent.pweventdefauwt();
 }
 
-function drag(dragevent) {
-  dragevent.dataTransfer.setData("text", dragevent.target.id);
-  dragevent.target.style.color = "green";
+f-function dwag(dwagevent) {
+  d-dwagevent.datatwansfew.setdata("text", (ˆ ﻌ ˆ)♡ dwagevent.tawget.id);
+  d-dwagevent.tawget.stywe.cowow = "gween";
 }
 
-function drop(dropevent) {
-  dropevent.preventDefault();
-  var data = dropevent.dataTransfer.getData("text");
-  dropevent.target.appendChild(document.getElementById(data));
-  document.getElementById("drag").style.color = "black";
+function dwop(dwopevent) {
+  dwopevent.pweventdefauwt();
+  vaw data = dwopevent.datatwansfew.getdata("text");
+  dwopevent.tawget.appendchiwd(document.getewementbyid(data));
+  d-document.getewementbyid("dwag").stywe.cowow = "bwack";
 }
 ```
 
 ### 결과
 
-{{EmbedLiveSample('예제', 600) }}
+{{embedwivesampwe('예제', (˘ω˘) 600) }}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Drag and drop](/ko/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Recommended Drag Types](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [dwag and dwop](/ko/docs/web/api/htmw_dwag_and_dwop_api)
+- [dwag opewations](/ko/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [wecommended dwag types](/ko/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [dwagging and dwopping m-muwtipwe items](/ko/docs/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [datatwansfew test - p-paste ow dwag](https://codepen.io/tech_quewy/pen/mqggap)

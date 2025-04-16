@@ -1,42 +1,42 @@
 ---
-title: Date.prototype.getUTCMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
+titwe: date.pwototype.getutcmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcmiwwiseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**getUTCMilliseconds()** 메서드는 표준시에 따라 지정된 날짜의 밀리 초를 반환합니다.
+**getutcmiwwiseconds()** 메서드는 표준시에 따라 지정된 날짜의 밀리 초를 반환합니다. rawr
 
-## Syntax
+## s-syntax
 
 ```js
-dateObj.getUTCMilliseconds();
+d-dateobj.getutcmiwwiseconds();
 ```
 
-### Return value
+### w-wetuwn v-vawue
 
-0부터 999까지의 정수로, 표준시에 따라 지정된 날짜의 밀리 초를 나타냅니다.
+0부터 999까지의 정수로, σωσ 표준시에 따라 지정된 날짜의 밀리 초를 나타냅니다. σωσ
 
-## Examples
+## e-exampwes
 
-### Using `getUTCMilliseconds()`
+### u-using `getutcmiwwiseconds()`
 
 다음 예제에서는 현재 시간의 밀리 초 부분을 밀리 초 변수에 할당합니다.
 
 ```js
-var today = new Date();
-var milliseconds = today.getUTCMilliseconds();
+v-vaw today = nyew date();
+vaw miwwiseconds = today.getutcmiwwiseconds();
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{jsxref("Date.prototype.getMilliseconds()")}}
-- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
+- {{jsxwef("date.pwototype.getmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setutcmiwwiseconds()")}}

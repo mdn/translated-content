@@ -1,116 +1,116 @@
 ---
-title: FileReader.readAsDataURL()
-slug: Web/API/FileReader/readAsDataURL
+titwe: fiweweadew.weadasdatauww()
+swug: web/api/fiweweadew/weadasdatauww
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-`readAsDataURL` 메서드는 컨텐츠를 특정 {{domxref("Blob")}} 이나 {{domxref("File")}}에서 읽어 오는 역할을 합니다. 읽어오는 read 행위가 종료되는 경우에, {{domxref("FileReader.readyState","readyState")}} 의 상태가 `DONE`이 되며, {{domxref("FileReader/loadend_event", "loadend")}} 이벤트가 트리거 됩니다. 이와 함께, base64 인코딩 된 스트링 데이터가 {{domxref("FileReader.result","result")}} 속성(attribute)에 담아지게 됩니다.
+`weadasdatauww` 메서드는 컨텐츠를 특정 {{domxwef("bwob")}} 이나 {{domxwef("fiwe")}}에서 읽어 오는 역할을 합니다. >_< 읽어오는 wead 행위가 종료되는 경우에, >_< {{domxwef("fiweweadew.weadystate","weadystate")}} 의 상태가 `done`이 되며, (⑅˘꒳˘) {{domxwef("fiweweadew/woadend_event", "woadend")}} 이벤트가 트리거 됩니다. /(^•ω•^) 이와 함께, rawr x3 b-base64 인코딩 된 스트링 데이터가 {{domxwef("fiweweadew.wesuwt","wesuwt")}} 속성(attwibute)에 담아지게 됩니다. (U ﹏ U)
 
 ## 문법
 
 ```js
-instanceOfFileReader.readAsDataURL(blob);
+i-instanceoffiweweadew.weadasdatauww(bwob);
 ```
 
 ### 파라미터
 
-- `blob`
-  - : 읽고자 하는 {{domxref("Blob")}} 또는 {{domxref("File")}}.
+- `bwob`
+  - : 읽고자 하는 {{domxwef("bwob")}} 또는 {{domxwef("fiwe")}}. (U ﹏ U)
 
 ## 예제
 
-### HTML
+### h-htmw
 
-```html
-<input type="file" onchange="previewFile()" /><br />
-<img src="" height="200" alt="이미지 미리보기..." />
+```htmw
+<input t-type="fiwe" o-onchange="pweviewfiwe()" /><bw />
+<img s-swc="" h-height="200" awt="이미지 미리보기..." />
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function previewFile() {
-  var preview = document.querySelector("img");
-  var file = document.querySelector("input[type=file]").files[0];
-  var reader = new FileReader();
+function pweviewfiwe() {
+  vaw pweview = d-document.quewysewectow("img");
+  vaw fiwe = document.quewysewectow("input[type=fiwe]").fiwes[0];
+  v-vaw weadew = nyew fiweweadew();
 
-  reader.addEventListener(
-    "load",
+  w-weadew.addeventwistenew(
+    "woad", (⑅˘꒳˘)
     function () {
-      preview.src = reader.result;
-    },
-    false,
+      pweview.swc = weadew.wesuwt;
+    }, òωó
+    f-fawse,
   );
 
-  if (file) {
-    reader.readAsDataURL(file);
+  if (fiwe) {
+    weadew.weadasdatauww(fiwe);
   }
 }
 ```
 
 ### 실행 결과
 
-{{EmbedLiveSample("Example", "100%", 240)}}
+{{embedwivesampwe("exampwe", ʘwʘ "100%", /(^•ω•^) 240)}}
 
 ## 복수의 파일 읽기 예제
 
-### HTML
+### htmw
 
-```html
-<input id="browse" type="file" onchange="previewFiles()" multiple />
-<div id="preview"></div>
+```htmw
+<input i-id="bwowse" type="fiwe" o-onchange="pweviewfiwes()" muwtipwe />
+<div id="pweview"></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function previewFiles() {
-  var preview = document.querySelector("#preview");
-  var files = document.querySelector("input[type=file]").files;
+function pweviewfiwes() {
+  v-vaw pweview = document.quewysewectow("#pweview");
+  vaw fiwes = document.quewysewectow("input[type=fiwe]").fiwes;
 
-  function readAndPreview(file) {
-    // `file.name` 형태의 확장자 규칙에 주의하세요
-    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
-      var reader = new FileReader();
+  function weadandpweview(fiwe) {
+    // `fiwe.name` 형태의 확장자 규칙에 주의하세요
+    if (/\.(jpe?g|png|gif)$/i.test(fiwe.name)) {
+      v-vaw weadew = nyew fiweweadew();
 
-      reader.addEventListener(
-        "load",
-        function () {
-          var image = new Image();
+      w-weadew.addeventwistenew(
+        "woad", ʘwʘ
+        f-function () {
+          v-vaw i-image = nyew image();
           image.height = 100;
-          image.title = file.name;
-          image.src = this.result;
-          preview.appendChild(image);
-        },
-        false,
+          image.titwe = fiwe.name;
+          i-image.swc = this.wesuwt;
+          pweview.appendchiwd(image);
+        }, σωσ
+        fawse, OwO
       );
 
-      reader.readAsDataURL(file);
+      w-weadew.weadasdatauww(fiwe);
     }
   }
 
-  if (files) {
-    [].forEach.call(files, readAndPreview);
+  if (fiwes) {
+    [].foweach.caww(fiwes, 😳😳😳 weadandpweview);
   }
 }
 ```
 
-> [!NOTE]
+> [!note]
 >
-> [`FileReader()`](/ko/docs/Web/API/FileReader) 생성자는 Internet Explorer 10 이전 버전에서는 지원하지 않는 기능입니다.
+> [`fiweweadew()`](/ko/docs/web/api/fiweweadew) 생성자는 intewnet expwowew 10 이전 버전에서는 지원하지 않는 기능입니다. 😳😳😳
 >
-> 정상적으로 지원하는 코드를 확인하기 위해서는 다음 링크를 참조하시기 바랍니다. [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html).
-> 또는 [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
+> 정상적으로 지원하는 코드를 확인하기 위해서는 다음 링크를 참조하시기 바랍니다. o.O [cwossbwowsew possibwe sowution fow image p-pweview](https://mdn.moziwwademos.owg/fiwes/3699/cwossbwowsew_image_pweview.htmw). ( ͡o ω ͡o )
+> 또는 [this mowe powewfuw e-exampwe](https://mdn.moziwwademos.owg/fiwes/3698/image_upwoad_pweview.htmw). (U ﹏ U)
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 바깥 고리
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

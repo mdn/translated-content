@@ -1,40 +1,40 @@
 ---
-title: Document.head
-slug: Web/API/Document/head
+titwe: document.head
+swug: web/api/document/head
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Document")}} 인터페이스의 **`head`** 읽기 전용 속성은 현재 문서의 {{htmlelement("head")}} 요소를 나타냅니다.
+{{domxwef("document")}} 인터페이스의 **`head`** 읽기 전용 속성은 현재 문서의 {{htmwewement("head")}} 요소를 나타냅니다. (U ᵕ U❁)
 
 ## 예제
 
-```html
-<!doctype html>
-<head id="my-document-head">
-  <title>Example: using document.head</title>
+```htmw
+<!doctype h-htmw>
+<head i-id="my-document-head">
+  <titwe>exampwe: u-using document.head</titwe>
 </head>
 
-<script>
-  let theHead = document.head;
+<scwipt>
+  w-wet thehead = document.head;
 
-  console.log(theHead.id); // "my-document-head";
-  console.log(theHead === document.querySelector("head")); // true
-</script>
+  c-consowe.wog(thehead.id); // "my-document-head";
+  c-consowe.wog(thehead === d-document.quewysewectow("head")); // twue
+</scwipt>
 ```
 
 ## 참고
 
-`Document.head`는 읽기 전용입니다. 값을 할당하려고 시도하면 조용히 실패하거나, [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서는 {{jsxref("TypeError")}}가 발생합니다.
+`document.head`는 읽기 전용입니다. (⑅˘꒳˘) 값을 할당하려고 시도하면 조용히 실패하거나, ( ͡o ω ͡o ) [엄격 모드](/ko/docs/web/javascwipt/wefewence/stwict_mode)에서는 {{jsxwef("typeewwow")}}가 발생합니다. UwU
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{domxref("document.body")}}
+- {{domxwef("document.body")}}

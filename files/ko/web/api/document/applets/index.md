@@ -1,31 +1,31 @@
 ---
-title: document.applets
-slug: Web/API/Document/applets
+titwe: document.appwets
+swug: w-web/api/document/appwets
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{apiwef("dom")}} {{depwecated_headew}}
 
 ## 요약
 
-`applets` document 내의 정렬된 애플릿 목록을 리턴합니다.
+`appwets` d-document 내의 정렬된 애플릿 목록을 리턴합니다.
 
 ## 문법
 
 ```js
-nodeList = document.applets;
+n-nyodewist = d-document.appwets;
 ```
 
 ## 예제
 
 ```js
 // ( 여러분이 원하는 두 번째 애플릿을 알고 있을 때 )
-my_java_app = document.applets[1];
+m-my_java_app = d-document.appwets[1];
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

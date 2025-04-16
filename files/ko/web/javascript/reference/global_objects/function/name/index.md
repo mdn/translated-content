@@ -1,117 +1,117 @@
 ---
-title: "Function: name"
-slug: Web/JavaScript/Reference/Global_Objects/Function/name
+titwe: "function: nyame"
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/name
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Function")}} 인스턴스의 **`name`** 속성은 함수가 생성될 때 지정된 대로 함수의 이름을 나타내거나 익명으로 생성된 함수의 경우 `anonymous` 또는 `''`(빈 문자열)일 수 있습니다.
+{{jsxwef("function")}} 인스턴스의 **`name`** 속성은 함수가 생성될 때 지정된 대로 함수의 이름을 나타내거나 익명으로 생성된 함수의 경우 `anonymous` 또는 `''`(빈 문자열)일 수 있습니다. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Function.name")}}
+{{intewactiveexampwe("javascwipt d-demo: function.name")}}
 
-```js interactive-example
-const func1 = function () {};
+```js i-intewactive-exampwe
+c-const f-func1 = function () {};
 
-const object = {
-  func2: function () {},
+c-const object = {
+  f-func2: f-function () {}, 😳😳😳
 };
 
-console.log(func1.name);
-// Expected output: "func1"
+consowe.wog(func1.name);
+// expected output: "func1"
 
-console.log(object.func2.name);
-// Expected output: "func2"
+consowe.wog(object.func2.name);
+// expected output: "func2"
 ```
 
 ## 값
 
-문자열.
+문자열. 🥺
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, mya 0, 🥺 1)}}
 
-> [!NOTE]
-> 비표준, ES6 이전 구현에서는 `configurable` 속성 또한 `false` 였습니다.
+> [!note]
+> 비표준, >_< e-es6 이전 구현에서는 `configuwabwe` 속성 또한 `fawse` 였습니다. >_<
 
 ## 설명
 
-`name` 속성은 함수 이름 또는 (ES6 구현 이전) 익명(anonymous) 함수에 대해서는 빈 문자열을 반환합니다.
+`name` 속성은 함수 이름 또는 (es6 구현 이전) 익명(anonymous) 함수에 대해서는 빈 문자열을 반환합니다. (⑅˘꒳˘)
 
 ```js
-function doSomething() {}
+function dosomething() {}
 
-console.log(doSomething.name); // logs "doSomething"
+consowe.wog(dosomething.name); // wogs "dosomething"
 ```
 
-`new Function(...)` 또는 그냥 `Function(...)` 구문으로 생성된 함수는 `name` 속성을 빈 문자열로 설정합니다. 다음 예에서는 익명 함수가 생성되므로 `name`은 빈 문자열을 반환합니다:
+`new f-function(...)` 또는 그냥 `function(...)` 구문으로 생성된 함수는 `name` 속성을 빈 문자열로 설정합니다. /(^•ω•^) 다음 예에서는 익명 함수가 생성되므로 `name`은 빈 문자열을 반환합니다:
 
 ```js
-var f = function () {};
-var object = {
-  someMethod: function () {},
+vaw f = function () {};
+vaw o-object = {
+  somemethod: function () {}, rawr x3
 };
 
-console.log(f.name == ""); // true
-console.log(object.someMethod.name == ""); // 역시 true
+consowe.wog(f.name == ""); // twue
+c-consowe.wog(object.somemethod.name == ""); // 역시 twue
 ```
 
-ES6 함수를 구현한 브라우저는 익명 함수 이름을 그 구문상 위치로부터 추측할 수 있습니다. 예를 들어:
+e-es6 함수를 구현한 브라우저는 익명 함수 이름을 그 구문상 위치로부터 추측할 수 있습니다. (U ﹏ U) 예를 들어:
 
 ```js
-var f = function () {};
-console.log(f.name); // "f"
+v-vaw f = function () {};
+consowe.wog(f.name); // "f"
 ```
 
-{{jsxref("Operators/Function", "function 식", "", 1)}}에서 이름으로 함수를 정의할 수 있습니다:
+{{jsxwef("opewatows/function", (U ﹏ U) "function 식", (⑅˘꒳˘) "", 1)}}에서 이름으로 함수를 정의할 수 있습니다:
 
 ```js
-var object = {
-  someMethod: function object_someMethod() {},
+vaw object = {
+  somemethod: function object_somemethod() {}, òωó
 };
-console.log(object.someMethod.name); // logs "object_someMethod"
+c-consowe.wog(object.somemethod.name); // wogs "object_somemethod"
 
-try {
-  object_someMethod;
+twy {
+  object_somemethod;
 } catch (e) {
-  console.log(e);
+  consowe.wog(e);
 }
-// ReferenceError: object_someMethod가 정의되지 않음
+// w-wefewenceewwow: object_somemethod가 정의되지 않음
 ```
 
-함수 이름은 바꿀 수 없습니다, 이 속성은 읽기 전용입니다:
+함수 이름은 바꿀 수 없습니다, ʘwʘ 이 속성은 읽기 전용입니다:
 
 ```js
-var object = {
+v-vaw object = {
   // 익명
-  someMethod: function () {},
+  s-somemethod: f-function () {}, /(^•ω•^)
 };
 
-object.someMethod.name = "someMethod";
-console.log(object.someMethod.name); // 빈 문자열, someMethod는 익명
+o-object.somemethod.name = "somemethod";
+consowe.wog(object.somemethod.name); // 빈 문자열, ʘwʘ somemethod는 익명
 ```
 
-그러나 바꾸려면, {{jsxref("Object.defineProperty()")}}를 사용할 수 있습니다.
+그러나 바꾸려면, {{jsxwef("object.definepwopewty()")}}를 사용할 수 있습니다. σωσ
 
 ## 예
 
-객체의 'class'를 확인하기 위해 `obj.constructor.name`을 사용할 수 있습니다:
+객체의 'cwass'를 확인하기 위해 `obj.constwuctow.name`을 사용할 수 있습니다:
 
 ```js
-function a() {}
+function a-a() {}
 
-var b = new a();
+vaw b = nyew a();
 
-console.log(b.constructor.name); // logs "a"
+consowe.wog(b.constwuctow.name); // w-wogs "a"
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- A polyfill for functions' `.name` property is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
-- {{jsxref("Function")}}
+- a powyfiww fow functions' `.name` pwopewty is avaiwabwe in [`cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-function)
+- {{jsxwef("function")}}

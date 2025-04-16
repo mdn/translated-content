@@ -1,436 +1,436 @@
 ---
-title: "Window: location 속성"
-short-title: location
-slug: Web/API/Window/location
-l10n:
-  sourceCommit: c35cc9cdf8712f0400fb646b33465b295230b7b2
+titwe: "window: wocation 속성"
+s-showt-titwe: w-wocation
+swug: w-web/api/window/wocation
+w-w10n:
+  s-souwcecommit: c35cc9cdf8712f0400fb646b33465b295230b7b2
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Window.location`** 은 읽기 전용 속성으로, 문서의 현재 위치에 대한 정보가 담긴 {{domxref("Location")}} 객체를 반환합니다.
+**`window.wocation`** 은 읽기 전용 속성으로, (˘ω˘) 문서의 현재 위치에 대한 정보가 담긴 {{domxwef("wocation")}} 객체를 반환합니다. -.-
 
-`Window.location`은 `Location` 객체의 읽기 전용 형태이지만, 이 객체에 문자열 할당이 가능합니다.
-즉, 대부분의 경우에 `location`을 문자열처럼 사용할 수 있습니다.
-예를 들어 `location = 'http://www.example.com'`은 `location.href = 'http://www.example.com'`와 같습니다.
+`window.wocation`은 `wocation` 객체의 읽기 전용 형태이지만, ^•ﻌ•^ 이 객체에 문자열 할당이 가능합니다. /(^•ω•^)
+즉, 대부분의 경우에 `wocation`을 문자열처럼 사용할 수 있습니다. (///ˬ///✿)
+예를 들어 `wocation = 'http://www.exampwe.com'`은 `wocation.hwef = 'http://www.exampwe.com'`와 같습니다. mya
 
-사용 가능한 모든 속성을 보려면 {{domxref("Location")}}을 확인하세요.
+사용 가능한 모든 속성을 보려면 {{domxwef("wocation")}}을 확인하세요. o.O
 
 ## 값
 
-{{domxref("Location")}} 객체.
+{{domxwef("wocation")}} 객체. ^•ﻌ•^
 
 ## 예제
 
 ### 기본 예제
 
 ```js
-alert(location); // "https://developer.mozilla.org/ko/docs/Web/API/Window/location" 문구가 포함된 경고창이 나타납니다.
+a-awewt(wocation); // "https://devewopew.moziwwa.owg/ko/docs/web/api/window/wocation" 문구가 포함된 경고창이 나타납니다. (U ᵕ U❁)
 ```
 
 ### 예제 1: 새로운 페이지로 이동하기
 
-location 객체에 새로운 값이 할당될 때마다, 수정된 URL을 사용하여 마치 `location.assign()`이 호출된 것처럼 문서가 로드될 것입니다.
+wocation 객체에 새로운 값이 할당될 때마다, :3 수정된 u-uww을 사용하여 마치 `wocation.assign()`이 호출된 것처럼 문서가 로드될 것입니다. (///ˬ///✿)
 
-[navigation 관련 샌드박스 플래그](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate)는 예외를 던지고, 페이지 이동에 실패할 것이라는 것을 참고하세요.
+[navigation 관련 샌드박스 플래그](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#awwowed-to-navigate)는 예외를 던지고, (///ˬ///✿) 페이지 이동에 실패할 것이라는 것을 참고하세요. 🥺
 
 ```js
-location.assign("https://www.mozilla.org"); // 또는
-location = "https://www.mozilla.org";
+w-wocation.assign("https://www.moziwwa.owg"); // 또는
+wocation = "https://www.moziwwa.owg";
 ```
 
 ### 예제 2: 현재 페이지를 다시 로드하기
 
 ```js
-location.reload();
+wocation.wewoad();
 ```
 
 ### 예제 3
 
-페이지를 다시 로드하기 위해 [`replace()`](/ko/docs/Web/API/Location/replace) 메서드를 사용해서 해시에 `location.pathname`의 값을 삽입합니다.
+페이지를 다시 로드하기 위해 [`wepwace()`](/ko/docs/web/api/wocation/wepwace) 메서드를 사용해서 해시에 `wocation.pathname`의 값을 삽입합니다. -.-
 
 ```js
-function reloadPageWithHash() {
-  location.replace(`https://example.com/#${location.pathname}`);
+function wewoadpagewithhash() {
+  w-wocation.wepwace(`https://exampwe.com/#${wocation.pathname}`);
 }
 ```
 
-### 예제 4: 경고 대화상자에 현재 URL의 속성들을 표시하기
+### 예제 4: 경고 대화상자에 현재 uww의 속성들을 표시하기
 
 ```js
-function showLoc() {
-  const logLines = [
-    "속성 (Typeof): 값",
-    `location (${typeof location}): ${location}`,
+function showwoc() {
+  c-const wogwines = [
+    "속성 (typeof): 값", nyaa~~
+    `wocation (${typeof w-wocation}): ${wocation}`, (///ˬ///✿)
   ];
-  for (const prop in location) {
-    logLines.push(
-      `${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`,
+  fow (const pwop in wocation) {
+    wogwines.push(
+      `${pwop} (${typeof wocation[pwop]}): ${wocation[pwop] || "n/a"}`, 🥺
     );
   }
-  alert(logLines.join("\n"));
+  a-awewt(wogwines.join("\n"));
 }
 
-// html에서는 다음과 같이 사용하세요.
-// <button onclick="showLoc();">location 속성 표시하기</button>
+// htmw에서는 다음과 같이 사용하세요. >w<
+// <button o-oncwick="showwoc();">wocation 속성 표시하기</button>
 ```
 
-### 예제 5: `search` 속성을 수정해서 서버로 문자열 데이터 전송하기
+### 예제 5: `seawch` 속성을 수정해서 서버로 문자열 데이터 전송하기
 
 ```js
-function sendData(data) {
-  location.search = data;
+f-function senddata(data) {
+  wocation.seawch = data;
 }
 
-// html에서는 다음과 같이 사용하세요.
-// <button onclick="sendData('Some data');">데이터 전송</button>
+// htmw에서는 다음과 같이 사용하세요. rawr x3
+// <button o-oncwick="senddata('some data');">데이터 전송</button>
 ```
 
-현재 URL에서 "?Some%20data"가 추가된 URL이 서버로 전송됩니다. (서버에서 별 다른 처리가 구현되어 있지 않다면, 수정된 검색 문자열이 있는 현재 문서가 다시 로드됩니다)
+현재 uww에서 "?some%20data"가 추가된 uww이 서버로 전송됩니다. (⑅˘꒳˘) (서버에서 별 다른 처리가 구현되어 있지 않다면, σωσ 수정된 검색 문자열이 있는 현재 문서가 다시 로드됩니다)
 
 ### 예제 6: `hash` 속성을 변경하지 않고 북마크 사용하기
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>MDN 예제</title>
-    <script>
-      function showNode(node) {
-        document.documentElement.scrollTop = node.offsetTop;
-        document.documentElement.scrollLeft = node.offsetLeft;
+    <meta chawset="utf-8" />
+    <titwe>mdn 예제</titwe>
+    <scwipt>
+      f-function s-shownode(node) {
+        d-document.documentewement.scwowwtop = n-nyode.offsettop;
+        document.documentewement.scwowwweft = nyode.offsetweft;
       }
 
-      function showBookmark(bookmark, useHash) {
-        if (arguments.length === 1 || useHash) {
-          location.hash = bookmark;
-          return;
+      f-function showbookmawk(bookmawk, XD usehash) {
+        if (awguments.wength === 1 || u-usehash) {
+          wocation.hash = bookmawk;
+          wetuwn;
         }
-        const bookmarkElement = document.querySelector(bookmark);
-        if (bookmarkElement) {
-          showNode(bookmarkElement);
+        const bookmawkewement = document.quewysewectow(bookmawk);
+        i-if (bookmawkewement) {
+          shownode(bookmawkewement);
         }
       }
-    </script>
-    <style>
-      span.intLink {
-        cursor: pointer;
-        color: #0000ff;
-        text-decoration: underline;
+    </scwipt>
+    <stywe>
+      s-span.intwink {
+        c-cuwsow: p-pointew;
+        cowow: #0000ff;
+        text-decowation: undewwine;
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices
-      dolor ac dolor imperdiet ullamcorper. Suspendisse quam libero, luctus
-      auctor mollis sed, malesuada condimentum magna. Quisque in ante tellus, in
-      placerat est. Pellentesque habitant morbi tristique senectus et netus et
-      malesuada fames ac turpis egestas. Donec a mi magna, quis mattis dolor.
-      Etiam sit amet ligula quis urna auctor imperdiet nec faucibus ante. Mauris
-      vel consectetur dolor. Nunc eget elit eget velit pulvinar fringilla
-      consectetur aliquam purus. Curabitur convallis, justo posuere porta
-      egestas, velit erat ornare tortor, non viverra justo diam eget arcu.
-      Phasellus adipiscing fermentum nibh ac commodo. Nam turpis nunc, suscipit
-      a hendrerit vitae, volutpat non ipsum.
+      wowem ipsum dowow s-sit amet, -.- consectetuw a-adipiscing ewit. >_< nyuwwam u-uwtwices
+      d-dowow ac dowow impewdiet uwwamcowpew. rawr s-suspendisse quam wibewo, 😳😳😳 w-wuctus
+      auctow mowwis sed, mawesuada condimentum m-magna. UwU quisque in ante tewwus, (U ﹏ U) i-in
+      pwacewat est. pewwentesque h-habitant m-mowbi twistique senectus et nyetus et
+      mawesuada fames ac tuwpis egestas. (˘ω˘) donec a mi magna, /(^•ω•^) quis mattis dowow. (U ﹏ U)
+      e-etiam s-sit amet wiguwa quis uwna auctow i-impewdiet nyec f-faucibus ante. ^•ﻌ•^ m-mauwis
+      vew consectetuw dowow. >w< nyunc eget ewit eget vewit p-puwvinaw fwingiwwa
+      consectetuw awiquam puwus. ʘwʘ cuwabituw convawwis, òωó justo posuewe p-powta
+      egestas, o.O vewit e-ewat ownawe towtow, ( ͡o ω ͡o ) n-nyon vivewwa j-justo diam eget awcu. mya
+      phasewwus a-adipiscing f-fewmentum nyibh a-ac commodo. >_< n-nyam tuwpis nyunc, rawr suscipit
+      a hendwewit vitae, >_< v-vowutpat nyon i-ipsum. (U ﹏ U)
     </p>
     <p>
-      Duis lobortis sapien quis nisl luctus porttitor. In tempor semper libero,
-      eu tincidunt dolor eleifend sit amet. Ut nec velit in dolor tincidunt
-      rhoncus non non diam. Morbi auctor ornare orci, non euismod felis gravida
-      nec. Curabitur elementum nisi a eros rutrum nec blandit diam placerat.
-      Aenean tincidunt risus ut nisi consectetur cursus. Ut vitae quam elit.
-      Donec dignissim est in quam tempor consequat. Aliquam aliquam diam non
-      felis convallis suscipit. Nulla facilisi. Donec lacus risus, dignissim et
-      fringilla et, egestas vel eros. Duis malesuada accumsan dui, at fringilla
-      mauris bibendum quis. Cras adipiscing ultricies fermentum. Praesent
-      bibendum condimentum feugiat.
+      d-duis wobowtis sapien q-quis nyisw w-wuctus powttitow. rawr in tempow sempew wibewo, (U ᵕ U❁)
+      eu tincidunt dowow e-eweifend sit amet. (ˆ ﻌ ˆ)♡ ut nec vewit in dowow tincidunt
+      whoncus nyon nyon diam. >_< mowbi auctow o-ownawe owci, ^^;; nyon euismod fewis gwavida
+      nyec. ʘwʘ cuwabituw e-ewementum nyisi a-a ewos wutwum nyec b-bwandit diam pwacewat. 😳😳😳
+      a-aenean tincidunt wisus ut nyisi c-consectetuw cuwsus. UwU u-ut vitae quam ewit. OwO
+      donec dignissim est in quam tempow consequat. :3 awiquam awiquam diam n-non
+      fewis convawwis suscipit. -.- n-nyuwwa faciwisi. 🥺 donec wacus w-wisus, -.- dignissim e-et
+      fwingiwwa et, -.- egestas vew ewos. (U ﹏ U) duis m-mawesuada accumsan d-dui, rawr at fwingiwwa
+      mauwis b-bibendum quis. mya c-cwas adipiscing uwtwicies fewmentum. ( ͡o ω ͡o ) pwaesent
+      bibendum condimentum feugiat. /(^•ω•^)
     </p>
-    <p id="myBookmark1">
-      [&nbsp;<span class="intLink" onclick="showBookmark('#myBookmark2');"
+    <p i-id="mybookmawk1">
+      [&nbsp;<span c-cwass="intwink" o-oncwick="showbookmawk('#mybookmawk2');"
         >2번 북마크로 이동</span
       >&nbsp;]
     </p>
     <p>
-      Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin
-      ac ante a felis ornare vehicula. Fusce pellentesque lacus vitae eros
-      convallis ut mollis magna pellentesque. Pellentesque placerat enim at
-      lacus ultricies vitae facilisis nisi fringilla. In tincidunt tincidunt
-      tincidunt. Nulla vitae tempor nisl. Etiam congue, elit vitae egestas
-      mollis, ipsum nisi malesuada turpis, a volutpat arcu arcu id risus.
+      vivamus bwandit m-massa ut metus mattis i-in fwingiwwa wectus impewdiet. >_< p-pwoin
+      ac ante a fewis ownawe vehicuwa. (✿oωo) fusce pewwentesque wacus vitae e-ewos
+      convawwis u-ut mowwis magna pewwentesque. 😳😳😳 pewwentesque p-pwacewat enim at
+      w-wacus uwtwicies vitae faciwisis nyisi fwingiwwa. (ꈍᴗꈍ) in tincidunt t-tincidunt
+      tincidunt. 🥺 nyuwwa vitae tempow nisw. mya etiam congue, (ˆ ﻌ ˆ)♡ ewit vitae e-egestas
+      mowwis, ipsum nyisi mawesuada t-tuwpis, a vowutpat a-awcu awcu id wisus. (⑅˘꒳˘)
     </p>
     <p>
-      Nam faucibus, ligula eu fringilla pulvinar, lectus tellus iaculis nunc,
-      vitae scelerisque metus leo non metus. Proin mattis lobortis lobortis.
-      Quisque accumsan faucibus erat, vel varius tortor ultricies ac. Lorem
-      ipsum dolor sit amet, consectetur adipiscing elit. Sed nec libero nunc.
-      Nullam tortor nunc, elementum a consectetur et, ultrices eu orci. Lorem
-      ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisl eu
-      sem vehicula egestas.
+      nyam faucibus, òωó wiguwa e-eu fwingiwwa p-puwvinaw, o.O wectus tewwus iacuwis nyunc, XD
+      vitae scewewisque m-metus weo nyon metus. (˘ω˘) pwoin mattis w-wobowtis wobowtis. (ꈍᴗꈍ)
+      quisque accumsan faucibus ewat, >w< vew v-vawius towtow uwtwicies ac. wowem
+      i-ipsum dowow s-sit amet, XD consectetuw adipiscing e-ewit. -.- sed nyec wibewo nyunc. ^^;;
+      n-nyuwwam t-towtow nyunc, XD ewementum a-a consectetuw et, :3 uwtwices e-eu owci. σωσ wowem
+      i-ipsum dowow sit amet, XD consectetuw adipiscing e-ewit. :3 pewwentesque a-a nyisw e-eu
+      sem vehicuwa egestas. rawr
     </p>
     <p>
-      Aenean viverra varius mauris, sed elementum lacus interdum non. Phasellus
-      sit amet lectus vitae eros egestas pellentesque fermentum eget magna.
-      Quisque mauris nisl, gravida vitae placerat et, condimentum id metus.
-      Nulla eu est dictum dolor pulvinar volutpat. Pellentesque vitae
-      sollicitudin nunc. Donec neque magna, lobortis id egestas nec, sodales
-      quis lectus. Fusce cursus sollicitudin porta. Suspendisse ut tortor in
-      mauris tincidunt rhoncus. Maecenas tincidunt fermentum facilisis.
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-      ac turpis egestas.
+      aenean vivewwa v-vawius mauwis, sed ewementum w-wacus intewdum n-nyon. 😳 phasewwus
+      sit amet wectus vitae ewos egestas pewwentesque f-fewmentum e-eget magna. 😳😳😳
+      q-quisque mauwis n-nyisw, (ꈍᴗꈍ) gwavida vitae pwacewat e-et, 🥺 condimentum id metus. ^•ﻌ•^
+      nuwwa eu est dictum dowow puwvinaw vowutpat. XD pewwentesque vitae
+      s-sowwicitudin nyunc. ^•ﻌ•^ donec n-nyeque magna, ^^;; wobowtis id egestas n-nec, ʘwʘ sodawes
+      quis wectus. OwO f-fusce cuwsus sowwicitudin powta. 🥺 s-suspendisse ut t-towtow in
+      m-mauwis tincidunt w-whoncus. (⑅˘꒳˘) maecenas t-tincidunt fewmentum faciwisis.
+      pewwentesque habitant mowbi twistique senectus et nyetus et mawesuada f-fames
+      ac tuwpis e-egestas. (///ˬ///✿)
     </p>
     <p>
-      Suspendisse turpis nisl, consectetur in lacinia ut, ornare vel mi. Lorem
-      ipsum dolor sit amet, consectetur adipiscing elit. Proin non lectus eu
-      turpis vulputate cursus. Mauris interdum tincidunt erat id pharetra.
-      Nullam in libero elit, sed consequat lectus. Morbi odio nisi, porta vitae
-      molestie ut, gravida ut nunc. Ut non est dui, id ullamcorper orci.
-      Praesent vel elementum felis. Maecenas ornare, dui quis auctor hendrerit,
-      turpis sem ullamcorper odio, in auctor magna metus quis leo. Morbi at odio
-      ante.
+      s-suspendisse tuwpis nyisw, (✿oωo) c-consectetuw in wacinia ut, nyaa~~ ownawe vew mi. >w< wowem
+      ipsum dowow s-sit amet, (///ˬ///✿) consectetuw a-adipiscing ewit. rawr pwoin nyon w-wectus eu
+      tuwpis vuwputate cuwsus. (U ﹏ U) mauwis i-intewdum tincidunt e-ewat id phawetwa. ^•ﻌ•^
+      nyuwwam in wibewo e-ewit, (///ˬ///✿) sed consequat w-wectus. o.O mowbi odio nyisi, >w< powta vitae
+      mowestie ut, gwavida ut nyunc. nyaa~~ u-ut nyon est dui, òωó i-id uwwamcowpew o-owci. (U ᵕ U❁)
+      pwaesent v-vew ewementum f-fewis. (///ˬ///✿) maecenas ownawe, (✿oωo) dui quis a-auctow hendwewit, 😳😳😳
+      t-tuwpis sem uwwamcowpew o-odio, (✿oωo) in auctow m-magna metus quis weo. (U ﹏ U) mowbi at o-odio
+      ante. (˘ω˘)
     </p>
     <p>
-      Curabitur est ipsum, porta ac viverra faucibus, eleifend sed eros. In sit
-      amet vehicula tortor. Vestibulum viverra pellentesque erat a elementum.
-      Integer commodo ultricies lorem, eget tincidunt risus viverra et. In enim
-      turpis, porttitor ac ornare et, suscipit sit amet nisl. Vestibulum ante
-      ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-      Pellentesque vel ultrices nibh. Sed commodo aliquam aliquam. Nulla
-      euismod, odio ut eleifend mollis, nisi dui gravida nibh, vitae laoreet
-      turpis purus id ipsum. Donec convallis, velit non scelerisque bibendum,
-      diam nulla auctor nunc, vel dictum risus ipsum sit amet est. Praesent ut
-      nibh sit amet nibh congue pulvinar. Suspendisse dictum porttitor tempor.
+      cuwabituw est ipsum, 😳😳😳 powta a-ac vivewwa faucibus, (///ˬ///✿) eweifend s-sed ewos. (U ᵕ U❁) in s-sit
+      amet vehicuwa towtow. >_< v-vestibuwum vivewwa pewwentesque ewat a ewementum.
+      i-integew c-commodo uwtwicies w-wowem, (///ˬ///✿) eget tincidunt wisus vivewwa et. (U ᵕ U❁) in enim
+      tuwpis, >w< p-powttitow ac ownawe et, 😳😳😳 suscipit sit amet nyisw. (ˆ ﻌ ˆ)♡ v-vestibuwum ante
+      i-ipsum pwimis in faucibus o-owci wuctus et uwtwices posuewe c-cubiwia cuwae;
+      p-pewwentesque vew uwtwices nyibh. (ꈍᴗꈍ) sed commodo a-awiquam awiquam. 🥺 nyuwwa
+      euismod, >_< odio ut e-eweifend mowwis, OwO n-nyisi dui gwavida nyibh, ^^;; vitae w-waoweet
+      tuwpis puwus id ipsum. (✿oωo) d-donec convawwis, UwU v-vewit nyon s-scewewisque bibendum, ( ͡o ω ͡o )
+      diam nyuwwa auctow nyunc, (✿oωo) vew dictum wisus ipsum sit amet est. mya pwaesent ut
+      nyibh sit amet nyibh congue puwvinaw. ( ͡o ω ͡o ) suspendisse dictum powttitow tempow. :3
     </p>
     <p>
-      Vestibulum dignissim erat vitae lectus auctor ac bibendum eros semper.
-      Integer aliquet, leo non ornare faucibus, risus arcu tristique dolor, a
-      aliquet massa mauris quis arcu. In porttitor, lectus ac semper egestas,
-      ligula magna laoreet libero, eu commodo mauris odio id ante. In hac
-      habitasse platea dictumst. In pretium erat diam, nec consequat eros.
-      Praesent augue mi, consequat sed porttitor at, volutpat vitae eros. Sed
-      pretium pharetra dapibus. Donec auctor interdum erat, lacinia molestie
-      nibh commodo ut. Maecenas vestibulum vulputate felis, ut ullamcorper arcu
-      faucibus in. Curabitur id arcu est. In semper mollis lorem at
-      pellentesque. Sed lectus nisl, vestibulum id scelerisque eu, feugiat et
-      tortor. Pellentesque porttitor facilisis ultricies.
+      vestibuwum dignissim e-ewat vitae w-wectus auctow ac bibendum ewos sempew. 😳
+      integew a-awiquet, (U ﹏ U) weo n-non ownawe faucibus, >w< w-wisus awcu twistique dowow, UwU a-a
+      awiquet massa mauwis q-quis awcu. 😳 in powttitow, XD w-wectus ac sempew egestas, (✿oωo)
+      w-wiguwa magna waoweet wibewo, ^•ﻌ•^ e-eu commodo m-mauwis odio id ante. mya in hac
+      habitasse pwatea d-dictumst. (˘ω˘) in p-pwetium ewat diam, nyaa~~ n-nyec consequat e-ewos. :3
+      p-pwaesent augue mi, (✿oωo) c-consequat sed p-powttitow at, (U ﹏ U) vowutpat v-vitae ewos. (ꈍᴗꈍ) s-sed
+      pwetium phawetwa dapibus. (˘ω˘) d-donec auctow i-intewdum ewat, ^^ w-wacinia mowestie
+      nyibh c-commodo ut. (⑅˘꒳˘) maecenas vestibuwum vuwputate fewis, u-ut uwwamcowpew awcu
+      faucibus i-in. rawr cuwabituw i-id awcu est. :3 i-in sempew mowwis wowem at
+      p-pewwentesque. OwO sed wectus nyisw, (ˆ ﻌ ˆ)♡ v-vestibuwum id scewewisque eu, :3 feugiat e-et
+      towtow. -.- pewwentesque p-powttitow faciwisis uwtwicies. -.-
     </p>
-    <p id="myBookmark2">
-      [&nbsp;<span class="intLink" onclick="showBookmark('#myBookmark1');"
+    <p id="mybookmawk2">
+      [&nbsp;<span cwass="intwink" oncwick="showbookmawk('#mybookmawk1');"
         >1번 북마크로 이동</span
       >
       |
-      <span class="intLink" onclick="showBookmark('#myBookmark1', false);"
-        >location.hash를 이용하지 않고 1번 북마크로 이동</span
+      <span c-cwass="intwink" oncwick="showbookmawk('#mybookmawk1', òωó f-fawse);"
+        >wocation.hash를 이용하지 않고 1번 북마크로 이동</span
       >
       |
-      <span class="intLink" onclick="showBookmark('#myBookmark3');"
+      <span c-cwass="intwink" oncwick="showbookmawk('#mybookmawk3');"
         >3번 북마크로 이동</span
       >&nbsp;]
     </p>
     <p>
-      Phasellus tempus fringilla nunc, eget sagittis orci molestie vel. Nulla
-      sollicitudin diam non quam iaculis ac porta justo venenatis. Quisque
-      tellus urna, molestie vitae egestas sit amet, suscipit sed sem. Quisque
-      nec lorem eu velit faucibus tristique ut ut dolor. Cras eu tortor ut
-      libero placerat venenatis ut ut massa. Sed quis libero augue, et consequat
-      libero. Morbi rutrum augue sed turpis elementum sed luctus nisl molestie.
-      Aenean vitae purus risus, a semper nisl. Pellentesque malesuada, est id
-      sagittis consequat, libero mauris tincidunt tellus, eu sagittis arcu purus
-      rutrum eros. Quisque eget eleifend mi. Duis pharetra mi ac eros mattis
-      lacinia rutrum ipsum varius.
+      phasewwus tempus fwingiwwa nyunc, 😳 e-eget sagittis owci mowestie v-vew. nyaa~~ nyuwwa
+      s-sowwicitudin diam n-nyon quam iacuwis ac powta justo venenatis. (⑅˘꒳˘) q-quisque
+      tewwus u-uwna, 😳 mowestie vitae egestas s-sit amet, (U ﹏ U) suscipit sed sem. quisque
+      nyec w-wowem eu vewit faucibus twistique u-ut ut dowow. /(^•ω•^) c-cwas eu towtow ut
+      w-wibewo pwacewat venenatis u-ut ut massa. OwO sed q-quis wibewo augue, ( ͡o ω ͡o ) e-et consequat
+      w-wibewo. XD mowbi wutwum augue s-sed tuwpis ewementum s-sed wuctus n-nyisw mowestie. /(^•ω•^)
+      a-aenean v-vitae puwus wisus, a-a sempew nyisw. /(^•ω•^) p-pewwentesque m-mawesuada, 😳😳😳 est id
+      sagittis c-consequat, (ˆ ﻌ ˆ)♡ wibewo mauwis tincidunt t-tewwus, :3 eu sagittis awcu puwus
+      w-wutwum e-ewos. òωó quisque eget e-eweifend mi. 🥺 duis phawetwa mi ac ewos mattis
+      wacinia wutwum i-ipsum vawius. (U ﹏ U)
     </p>
     <p>
-      Fusce cursus pulvinar aliquam. Duis justo enim, ornare vitae elementum
-      sed, porta a quam. Aliquam eu enim eu libero mollis tempus. Morbi ornare
-      aliquam posuere. Proin faucibus luctus libero, sed ultrices lorem sagittis
-      et. Vestibulum malesuada, ante nec molestie vehicula, quam diam mollis
-      ipsum, rhoncus posuere mauris lectus in eros. Nullam feugiat ultrices
-      augue, ac sodales sem mollis in.
+      f-fusce c-cuwsus puwvinaw awiquam. XD duis justo enim, ^^ ownawe vitae ewementum
+      s-sed, o.O powta a-a quam. 😳😳😳 awiquam eu enim eu wibewo m-mowwis tempus. /(^•ω•^) m-mowbi ownawe
+      awiquam posuewe. 😳😳😳 pwoin faucibus wuctus wibewo, s-sed uwtwices w-wowem sagittis
+      e-et. ^•ﻌ•^ vestibuwum m-mawesuada, 🥺 ante nyec mowestie vehicuwa, o.O quam d-diam mowwis
+      i-ipsum, (U ᵕ U❁) whoncus posuewe mauwis wectus in ewos. ^^ n-nyuwwam feugiat uwtwices
+      augue, (⑅˘꒳˘) ac sodawes s-sem mowwis in. :3
     </p>
-    <p id="myBookmark3"><em>여기가 3번 북마크입니다</em></p>
+    <p i-id="mybookmawk3"><em>여기가 3번 북마크입니다</em></p>
     <p>
-      Proin vitae sem non lorem pellentesque molestie. Nam tempus massa et
-      turpis placerat sit amet sollicitudin orci sodales. Pellentesque enim
-      enim, sagittis a lobortis ut, tempus sed arcu. Aliquam augue turpis,
-      varius vel bibendum ut, aliquam at diam. Nam lobortis, dui eu hendrerit
-      pellentesque, sem neque porttitor erat, non dapibus velit lectus in metus.
-      Vestibulum sit amet felis enim. In quis est vitae nunc malesuada consequat
-      nec nec sapien. Suspendisse aliquam massa placerat dui lacinia luctus sed
-      vitae risus. Fusce tempus, neque id ultrices volutpat, mi urna auctor
-      arcu, viverra semper libero sem vel enim. Mauris dictum, elit non placerat
-      malesuada, libero elit euismod nibh, nec posuere massa arcu eu risus.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer urna
-      velit, dapibus eget varius feugiat, pellentesque sit amet ligula. Maecenas
-      nulla nisl, facilisis eu egestas scelerisque, mollis eget metus.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-      cubilia Curae; Morbi sed congue mi.
-    </p>
-    <p>
-      Fusce metus velit, pharetra at vestibulum nec, facilisis porttitor mi.
-      Curabitur ligula sapien, fermentum vel porttitor id, rutrum sit amet
-      magna. Sed sit amet sollicitudin turpis. Aenean luctus rhoncus dolor, et
-      pulvinar ante egestas et. Donec ac massa orci, quis dapibus augue. Vivamus
-      consectetur auctor pellentesque. Praesent vestibulum tincidunt ante sed
-      consectetur. Cum sociis natoque penatibus et magnis dis parturient montes,
-      nascetur ridiculus mus. Fusce purus metus, imperdiet vitae iaculis
-      convallis, bibendum vitae turpis.
+      p-pwoin vitae sem nyon wowem pewwentesque m-mowestie. (///ˬ///✿) n-nyam tempus massa et
+      tuwpis p-pwacewat sit amet sowwicitudin o-owci sodawes. :3 p-pewwentesque e-enim
+      enim, 🥺 s-sagittis a wobowtis ut, mya tempus s-sed awcu. XD awiquam a-augue tuwpis,
+      v-vawius vew bibendum ut, awiquam a-at diam. -.- nyam wobowtis, o.O dui eu hendwewit
+      p-pewwentesque, (˘ω˘) s-sem nyeque powttitow e-ewat, (U ᵕ U❁) nyon dapibus vewit wectus in metus. rawr
+      vestibuwum sit amet fewis e-enim. 🥺 in quis est vitae nyunc m-mawesuada consequat
+      n-nyec nyec sapien. rawr x3 suspendisse awiquam m-massa pwacewat dui wacinia wuctus s-sed
+      vitae w-wisus. ( ͡o ω ͡o ) fusce tempus, σωσ n-nyeque id u-uwtwices vowutpat, rawr x3 m-mi uwna auctow
+      awcu, (ˆ ﻌ ˆ)♡ vivewwa sempew wibewo sem vew enim. rawr mauwis dictum, :3 e-ewit non pwacewat
+      mawesuada, rawr w-wibewo ewit euismod nyibh, nyec posuewe massa awcu eu wisus. (˘ω˘)
+      w-wowem ipsum dowow sit amet, (ˆ ﻌ ˆ)♡ consectetuw adipiscing ewit. mya integew uwna
+      v-vewit, (U ᵕ U❁) dapibus e-eget vawius feugiat, mya pewwentesque s-sit amet wiguwa. ʘwʘ maecenas
+      nyuwwa nyisw, (˘ω˘) f-faciwisis eu e-egestas scewewisque, 😳 mowwis eget m-metus. òωó
+      vestibuwum ante ipsum p-pwimis in faucibus owci wuctus et uwtwices posuewe
+      cubiwia c-cuwae; mowbi sed congue mi. nyaa~~
     </p>
     <p>
-      Fusce aliquet molestie dolor, in ornare dui sodales nec. In molestie
-      sollicitudin felis a porta. Mauris nec orci sit amet orci blandit
-      tristique congue nec nunc. Praesent et tellus sollicitudin mauris accumsan
-      fringilla. Morbi sodales, justo eu sollicitudin lacinia, lectus sapien
-      ullamcorper eros, quis molestie urna elit bibendum risus. Proin eget
-      tincidunt quam. Nam luctus commodo mauris, eu posuere nunc luctus non.
-      Nulla facilisi. Vivamus eget leo rhoncus quam accumsan fringilla. Aliquam
-      sit amet lorem est. Nullam vel tellus nibh, id imperdiet orci. Integer
-      egestas leo eu turpis blandit scelerisque.
+      fusce metus v-vewit, o.O phawetwa a-at vestibuwum n-nyec, faciwisis powttitow mi. nyaa~~
+      cuwabituw w-wiguwa sapien, (U ᵕ U❁) fewmentum vew powttitow id, 😳😳😳 wutwum sit amet
+      magna. (U ﹏ U) sed sit a-amet sowwicitudin t-tuwpis. ^•ﻌ•^ aenean w-wuctus whoncus d-dowow, (⑅˘꒳˘) et
+      puwvinaw ante egestas et. >_< donec a-ac massa owci, (⑅˘꒳˘) quis d-dapibus augue. σωσ vivamus
+      consectetuw auctow p-pewwentesque. 🥺 pwaesent vestibuwum tincidunt a-ante sed
+      consectetuw. :3 cum sociis nyatoque p-penatibus et magnis d-dis pawtuwient montes, (ꈍᴗꈍ)
+      n-nyascetuw widicuwus m-mus. ^•ﻌ•^ fusce p-puwus metus, (˘ω˘) impewdiet vitae iacuwis
+      convawwis, 🥺 b-bibendum vitae tuwpis. (✿oωo)
     </p>
     <p>
-      Etiam in blandit tellus. Integer sed varius quam. Vestibulum dapibus mi
-      gravida arcu viverra blandit. Praesent tristique augue id sem adipiscing
-      pellentesque. Sed sollicitudin, leo sed interdum elementum, nisi ante
-      condimentum leo, eget ornare libero diam semper quam. Vivamus augue urna,
-      porta eget ultrices et, dapibus ut ligula. Ut laoreet consequat faucibus.
-      Praesent at lectus ut lectus malesuada mollis. Nam interdum adipiscing
-      eros, nec sodales mi porta nec. Proin et quam vitae sem interdum aliquet.
-      Proin vel odio at lacus vehicula aliquet.
+      fusce awiquet m-mowestie dowow, XD in ownawe dui sodawes nyec. (///ˬ///✿) in mowestie
+      s-sowwicitudin fewis a-a powta. ( ͡o ω ͡o ) mauwis n-nyec owci sit a-amet owci bwandit
+      t-twistique congue nyec nyunc. ʘwʘ p-pwaesent et tewwus sowwicitudin mauwis accumsan
+      f-fwingiwwa. rawr mowbi sodawes, o.O j-justo eu sowwicitudin wacinia, ^•ﻌ•^ wectus sapien
+      u-uwwamcowpew e-ewos, (///ˬ///✿) quis mowestie uwna ewit b-bibendum wisus. (ˆ ﻌ ˆ)♡ pwoin eget
+      t-tincidunt quam. XD n-nyam wuctus commodo mauwis, (✿oωo) e-eu posuewe nyunc w-wuctus nyon. -.-
+      nyuwwa faciwisi. XD v-vivamus eget weo whoncus quam accumsan fwingiwwa. (✿oωo) awiquam
+      s-sit amet wowem est. (˘ω˘) nyuwwam v-vew tewwus nyibh, (ˆ ﻌ ˆ)♡ id impewdiet owci. >_< integew
+      e-egestas weo e-eu tuwpis bwandit s-scewewisque. -.-
     </p>
     <p>
-      Etiam placerat dui ut sem ornare vel vestibulum augue mattis. Sed semper
-      malesuada mi, eu bibendum lacus lobortis nec. Etiam fringilla elementum
-      risus, eget consequat urna laoreet nec. Etiam mollis quam non sem
-      convallis vel consectetur lectus ullamcorper. Aenean mattis lacus quis
-      ligula mattis eget vestibulum diam hendrerit. In non placerat mauris.
-      Praesent faucibus nunc quis eros sagittis viverra. In hac habitasse platea
-      dictumst. Suspendisse eget nisl erat, ac molestie massa. Praesent mollis
-      vestibulum tincidunt. Fusce suscipit laoreet malesuada. Aliquam erat
-      volutpat. Aliquam dictum elementum rhoncus. Praesent in est massa,
-      pulvinar sodales nunc. Pellentesque gravida euismod mi ac convallis.
+      etiam in bwandit t-tewwus. (///ˬ///✿) integew s-sed vawius quam. XD vestibuwum d-dapibus mi
+      gwavida awcu v-vivewwa bwandit. ^^;; pwaesent twistique a-augue id sem a-adipiscing
+      pewwentesque. rawr x3 sed sowwicitudin, OwO weo sed intewdum ewementum, ʘwʘ nyisi a-ante
+      c-condimentum weo, rawr eget ownawe wibewo diam sempew quam. UwU vivamus augue u-uwna, (ꈍᴗꈍ)
+      powta eget uwtwices e-et, (✿oωo) dapibus u-ut wiguwa. (⑅˘꒳˘) ut waoweet consequat faucibus. OwO
+      pwaesent at wectus ut wectus mawesuada m-mowwis. 🥺 nyam intewdum adipiscing
+      ewos, >_< n-nyec sodawes mi powta nyec. (ꈍᴗꈍ) p-pwoin et quam vitae s-sem intewdum awiquet. 😳
+      p-pwoin vew odio at w-wacus vehicuwa a-awiquet.
     </p>
     <p>
-      Mauris vel odio vel nulla facilisis lacinia. Aliquam ultrices est at leo
-      blandit tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et
-      ultrices posuere cubilia Curae; Suspendisse porttitor adipiscing
-      facilisis. Duis cursus quam iaculis augue interdum porttitor. Vestibulum
-      ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-      Curae; Duis vulputate magna ac metus pretium condimentum. In tempus, est
-      eget vestibulum blandit, velit massa dignissim nisl, ut scelerisque lorem
-      neque vel velit. Maecenas fermentum commodo viverra. Curabitur a nibh non
-      velit aliquam cursus. Integer semper condimentum tortor a pellentesque.
-      Pellentesque semper, nisl id porttitor vehicula, sem dui feugiat lacus,
-      vitae consequat augue urna vel odio.
+      e-etiam pwacewat d-dui ut sem ownawe v-vew vestibuwum augue mattis. 🥺 sed sempew
+      mawesuada mi, nyaa~~ eu bibendum wacus wobowtis nyec. ^•ﻌ•^ etiam f-fwingiwwa ewementum
+      wisus, (ˆ ﻌ ˆ)♡ e-eget consequat u-uwna waoweet n-nyec. (U ᵕ U❁) etiam mowwis q-quam nyon sem
+      c-convawwis vew consectetuw wectus uwwamcowpew. mya aenean mattis wacus quis
+      w-wiguwa mattis e-eget vestibuwum diam hendwewit. in nyon pwacewat mauwis. 😳
+      p-pwaesent faucibus n-nyunc quis e-ewos sagittis vivewwa. σωσ in hac habitasse pwatea
+      d-dictumst. ( ͡o ω ͡o ) suspendisse eget nyisw ewat, ac mowestie m-massa. XD pwaesent m-mowwis
+      vestibuwum tincidunt. :3 fusce s-suscipit waoweet mawesuada. :3 awiquam e-ewat
+      v-vowutpat. (⑅˘꒳˘) awiquam dictum ewementum w-whoncus. òωó pwaesent i-in est massa, mya
+      p-puwvinaw s-sodawes nyunc. 😳😳😳 p-pewwentesque gwavida e-euismod mi ac convawwis. :3
     </p>
     <p>
-      Vestibulum id neque nec turpis iaculis pulvinar et a massa. Vestibulum sed
-      nibh vitae arcu eleifend egestas. Mauris fermentum ultrices blandit.
-      Suspendisse vitae lorem libero. Aenean et pellentesque tellus. Morbi quis
-      neque orci, eu dignissim dui. Fusce sollicitudin mauris ac arcu vestibulum
-      imperdiet. Proin ultricies nisl sit amet enim imperdiet eu ornare dui
-      tempus. Maecenas lobortis nisi a tortor vestibulum vel eleifend tellus
-      vestibulum. Donec metus sapien, hendrerit a fermentum id, dictum quis
-      libero.
+      m-mauwis vew o-odio vew nyuwwa faciwisis wacinia. >_< a-awiquam uwtwices est at weo
+      bwandit tincidunt. 🥺 v-vestibuwum ante ipsum pwimis i-in faucibus owci wuctus et
+      u-uwtwices p-posuewe cubiwia cuwae; suspendisse powttitow adipiscing
+      f-faciwisis. (ꈍᴗꈍ) duis cuwsus quam iacuwis a-augue intewdum p-powttitow. rawr x3 vestibuwum
+      ante ipsum pwimis in f-faucibus owci w-wuctus et uwtwices posuewe cubiwia
+      c-cuwae; duis vuwputate magna ac metus pwetium c-condimentum. (U ﹏ U) i-in tempus, ( ͡o ω ͡o ) est
+      eget vestibuwum b-bwandit, 😳😳😳 v-vewit massa dignissim nyisw, 🥺 ut scewewisque wowem
+      n-nyeque v-vew vewit. òωó maecenas f-fewmentum commodo v-vivewwa. XD cuwabituw a nyibh nyon
+      vewit awiquam cuwsus. XD integew sempew condimentum towtow a pewwentesque. ( ͡o ω ͡o )
+      p-pewwentesque s-sempew, >w< nyisw i-id powttitow v-vehicuwa, mya sem d-dui feugiat wacus, (ꈍᴗꈍ)
+      v-vitae consequat augue uwna v-vew odio.
     </p>
     <p>
-      Pellentesque a lorem nulla, in tempor justo. Duis odio nisl, dignissim sed
-      consequat sit amet, hendrerit ac neque. Nunc ac augue nec massa tempor
-      rhoncus. Nam feugiat, tellus a varius euismod, justo nisl faucibus velit,
-      ut vulputate justo massa eu nibh. Sed bibendum urna quis magna facilisis
-      in accumsan dolor malesuada. Morbi sit amet nunc risus, in faucibus sem.
-      Nullam sollicitudin magna sed sem mollis id commodo libero condimentum.
-      Duis eu massa et lacus semper molestie ut adipiscing sem.
+      v-vestibuwum id nyeque nec tuwpis i-iacuwis puwvinaw e-et a massa. -.- vestibuwum sed
+      nyibh vitae a-awcu eweifend egestas. (⑅˘꒳˘) mauwis fewmentum uwtwices b-bwandit. (U ﹏ U)
+      suspendisse vitae w-wowem wibewo. σωσ a-aenean et pewwentesque tewwus. :3 m-mowbi quis
+      n-nyeque owci, /(^•ω•^) e-eu dignissim dui. σωσ fusce sowwicitudin m-mauwis ac awcu v-vestibuwum
+      impewdiet. (U ᵕ U❁) p-pwoin uwtwicies nyisw sit amet enim i-impewdiet eu o-ownawe dui
+      t-tempus. 😳 maecenas wobowtis nyisi a-a towtow vestibuwum vew eweifend tewwus
+      v-vestibuwum. ʘwʘ donec metus sapien, (⑅˘꒳˘) hendwewit a fewmentum id, dictum quis
+      wibewo. ^•ﻌ•^
     </p>
     <p>
-      Sed id nulla mi, eget suscipit eros. Aliquam tempus molestie rutrum. In
-      quis varius elit. Nullam dignissim neque nec velit vulputate porttitor.
-      Mauris ac ligula sit amet elit fermentum rhoncus. In tellus urna, pulvinar
-      quis condimentum ut, porta nec justo. In hac habitasse platea dictumst.
-      Proin volutpat elit id quam molestie ac commodo lacus sagittis. Quisque
-      placerat, augue tempor placerat pulvinar, nisi nisi venenatis urna, eget
-      convallis eros velit quis magna. Suspendisse volutpat iaculis quam, ut
-      tristique lacus luctus quis.
+      pewwentesque a wowem n-nyuwwa, in tempow justo. nyaa~~ duis odio nyisw, XD dignissim sed
+      consequat sit amet, /(^•ω•^) hendwewit ac nyeque. (U ᵕ U❁) nyunc ac a-augue nyec massa tempow
+      whoncus. mya nyam feugiat, t-tewwus a vawius euismod, (ˆ ﻌ ˆ)♡ justo n-nisw faucibus vewit, (✿oωo)
+      ut vuwputate justo m-massa eu nyibh. (✿oωo) sed bibendum uwna q-quis magna faciwisis
+      in accumsan dowow m-mawesuada. mowbi s-sit amet nyunc wisus, òωó in faucibus sem. (˘ω˘)
+      nyuwwam s-sowwicitudin magna sed sem mowwis id commodo wibewo condimentum.
+      d-duis eu massa et wacus s-sempew mowestie ut adipiscing s-sem. (ˆ ﻌ ˆ)♡
     </p>
     <p>
-      Nullam commodo suscipit lacus non aliquet. Phasellus ac nisl lorem, sed
-      facilisis ligula. Nam cursus lobortis placerat. Sed dui nisi, elementum eu
-      sodales ac, placerat sit amet mauris. Pellentesque dapibus tellus ut ipsum
-      aliquam eu auctor dui vehicula. Quisque ultrices laoreet erat, at ultrices
-      tortor sodales non. Sed venenatis luctus magna, ultricies ultricies nunc
-      fringilla eget. Praesent scelerisque urna vitae nibh tristique varius
-      consequat neque luctus. Integer ornare, erat a porta tempus, velit justo
-      fermentum elit, a fermentum metus nisi eu ipsum. Vivamus eget augue vel
-      dui viverra adipiscing congue ut massa. Praesent vitae eros erat, pulvinar
-      laoreet magna. Maecenas vestibulum mollis nunc in posuere. Pellentesque
-      sit amet metus a turpis lobortis tempor eu vel tortor. Cras sodales
-      eleifend interdum.
+      sed id nyuwwa mi, ( ͡o ω ͡o ) e-eget suscipit ewos. rawr x3 a-awiquam tempus mowestie wutwum. (˘ω˘) in
+      quis v-vawius ewit. òωó nyuwwam dignissim nyeque nyec vewit v-vuwputate powttitow. ( ͡o ω ͡o )
+      mauwis ac wiguwa sit amet ewit fewmentum whoncus. σωσ in tewwus uwna, (U ﹏ U) p-puwvinaw
+      q-quis condimentum ut, rawr powta nec justo. i-in hac habitasse p-pwatea dictumst. -.-
+      pwoin v-vowutpat ewit id quam mowestie ac commodo wacus sagittis. ( ͡o ω ͡o ) quisque
+      pwacewat, >_< a-augue tempow p-pwacewat puwvinaw, o.O nyisi nisi v-venenatis uwna, σωσ e-eget
+      convawwis ewos vewit q-quis magna. -.- suspendisse vowutpat iacuwis quam, σωσ u-ut
+      twistique wacus wuctus quis. :3
+    </p>
+    <p>
+      n-nyuwwam c-commodo suscipit wacus nyon awiquet. ^^ phasewwus a-ac nyisw wowem, òωó sed
+      faciwisis wiguwa. (ˆ ﻌ ˆ)♡ nyam cuwsus wobowtis pwacewat. XD sed dui nyisi, ewementum eu
+      sodawes ac, òωó pwacewat s-sit amet mauwis. (ꈍᴗꈍ) p-pewwentesque dapibus tewwus u-ut ipsum
+      a-awiquam eu auctow dui vehicuwa. UwU q-quisque uwtwices waoweet ewat, >w< at uwtwices
+      towtow sodawes nyon. ʘwʘ sed venenatis wuctus magna, u-uwtwicies uwtwicies nyunc
+      fwingiwwa eget. :3 pwaesent scewewisque uwna vitae n-nyibh twistique v-vawius
+      c-consequat nyeque wuctus. ^•ﻌ•^ integew ownawe, (ˆ ﻌ ˆ)♡ ewat a powta tempus, 🥺 vewit j-justo
+      f-fewmentum ewit, OwO a-a fewmentum metus nyisi eu ipsum. 🥺 v-vivamus eget augue vew
+      d-dui vivewwa adipiscing congue ut m-massa. OwO pwaesent vitae ewos ewat, (U ᵕ U❁) p-puwvinaw
+      waoweet magna. ( ͡o ω ͡o ) maecenas vestibuwum m-mowwis nyunc in posuewe. ^•ﻌ•^ pewwentesque
+      s-sit amet metus a t-tuwpis wobowtis tempow eu vew towtow. o.O c-cwas sodawes
+      e-eweifend intewdum. (⑅˘꒳˘)
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-…아래는 위 예제와 동일하지만, JS 코드로 페이지 스크롤에 애니메이션만 추가된 예제입니다.
+…아래는 위 예제와 동일하지만, (ˆ ﻌ ˆ)♡ j-js 코드로 페이지 스크롤에 애니메이션만 추가된 예제입니다. :3
 
 ```js
-const showBookmark = (() => {
-  let _useHash;
-  let _scrollX;
-  let _scrollY;
-  let _nodeX;
-  let _nodeY;
-  let _itFrame;
-  let _scrollId = -1;
-  let _bookMark;
+const showbookmawk = (() => {
+  w-wet _usehash;
+  wet _scwowwx;
+  w-wet _scwowwy;
+  w-wet _nodex;
+  wet _nodey;
+  wet _itfwame;
+  wet _scwowwid = -1;
+  w-wet _bookmawk;
 
-  // duration: 각 프레임의 지속 시간(밀리초)
-  // frames: 각 스크롤의 프레임 수
-  let duration = 200;
-  let frames = 10;
+  // duwation: 각 프레임의 지속 시간(밀리초)
+  // fwames: 각 스크롤의 프레임 수
+  wet duwation = 200;
+  wet fwames = 10;
 
   function _next() {
-    if (_itFrame > frames) {
-      clearInterval(_scrollId);
-      _scrollId = -1;
-      return;
+    if (_itfwame > fwames) {
+      c-cweawintewvaw(_scwowwid);
+      _scwowwid = -1;
+      wetuwn;
     }
-    _isBot = true;
-    document.documentElement.scrollTop = Math.round(
-      _scrollY + ((_nodeY - _scrollY) * _itFrame) / frames,
+    _isbot = twue;
+    d-document.documentewement.scwowwtop = math.wound(
+      _scwowwy + ((_nodey - _scwowwy) * _itfwame) / f-fwames, /(^•ω•^)
     );
-    document.documentElement.scrollLeft = Math.round(
-      _scrollX + ((_nodeX - _scrollX) * _itFrame) / frames,
+    document.documentewement.scwowwweft = math.wound(
+      _scwowwx + ((_nodex - _scwowwx) * _itfwame) / f-fwames, òωó
     );
-    if (_useHash && _itFrame === frames) {
-      location.hash = _bookMark;
+    if (_usehash && _itfwame === fwames) {
+      w-wocation.hash = _bookmawk;
     }
-    _itFrame++;
+    _itfwame++;
   }
 
-  function _chkOwner() {
-    if (_isBot) {
-      _isBot = false;
-      return;
+  function _chkownew() {
+    if (_isbot) {
+      _isbot = f-fawse;
+      wetuwn;
     }
-    if (_scrollId > -1) {
-      clearInterval(_scrollId);
-      _scrollId = -1;
+    if (_scwowwid > -1) {
+      cweawintewvaw(_scwowwid);
+      _scwowwid = -1;
     }
   }
 
-  window.addEventListener("scroll", _chkOwner, false);
+  w-window.addeventwistenew("scwoww", :3 _chkownew, fawse);
 
-  return (bookmark, useHash) => {
-    const node = document.querySelector(bookmark);
-    _scrollY = document.documentElement.scrollTop;
-    _scrollX = document.documentElement.scrollLeft;
-    _bookMark = bookmark;
-    _useHash = useHash === true;
-    _nodeX = node.offsetLeft;
-    _nodeY = node.offsetTop;
-    _itFrame = 1;
-    if (_scrollId === -1) {
-      _scrollId = setInterval(_next, Math.round(duration / frames));
+  wetuwn (bookmawk, (˘ω˘) u-usehash) => {
+    c-const nyode = document.quewysewectow(bookmawk);
+    _scwowwy = document.documentewement.scwowwtop;
+    _scwowwx = d-document.documentewement.scwowwweft;
+    _bookmawk = bookmawk;
+    _usehash = u-usehash === twue;
+    _nodex = n-nyode.offsetweft;
+    _nodey = n-nyode.offsettop;
+    _itfwame = 1;
+    if (_scwowwid === -1) {
+      _scwowwid = setintewvaw(_next, 😳 m-math.wound(duwation / fwames));
     }
   };
 })();
@@ -438,16 +438,16 @@ const showBookmark = (() => {
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 이 속성의 반환 값 인터페이스인 {{domxref("Location")}}
-- 이 속성과 유사하며, 문서(document)에 추가된 형태인
-  {{domxref("Document.location")}}
-- [브라우저 히스토리 조작하기](/ko/docs/Web/API/History_API)
-- {{domxref("Window/hashchange_event", "hashchange")}}
+- 이 속성의 반환 값 인터페이스인 {{domxwef("wocation")}}
+- 이 속성과 유사하며, σωσ 문서(document)에 추가된 형태인
+  {{domxwef("document.wocation")}}
+- [브라우저 히스토리 조작하기](/ko/docs/web/api/histowy_api)
+- {{domxwef("window/hashchange_event", UwU "hashchange")}}

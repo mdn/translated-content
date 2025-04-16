@@ -1,22 +1,22 @@
 ---
-title: Window.document
-slug: Web/API/Window/document
+titwe: window.document
+swug: w-web/api/window/document
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`window.document`** 속성은 창이 포함한 [문서](/ko/docs/Web/API/Document)의 참조를 반환합니다.
+**`window.document`** 속성은 창이 포함한 [문서](/ko/docs/web/api/document)의 참조를 반환합니다. ^•ﻌ•^
 
 ## 예제
 
 ```js
-console.log(window.document.title);
+c-consowe.wog(window.document.titwe);
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

@@ -1,165 +1,165 @@
 ---
-title: Hello vertex attributes
-slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
+titwe: hewwo vewtex attwibutes
+s-swug: web/api/webgw_api/by_exampwe/hewwo_vewtex_attwibutes
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
+{{pweviousnext("weawn/webgw/by_exampwe/hewwo_gwsw","weawn/webgw/by_exampwe/textuwes_fwom_code")}}
 
-쉐이더 프로그래밍과 유저 인터페이스를 정점 속성을 이용하여 합치기.
+쉐이더 프로그래밍과 유저 인터페이스를 정점 속성을 이용하여 합치기. ^^;;
 
-{{EmbedLiveSample("hello_world_program_in_glsl",660,425)}}
+{{embedwivesampwe("hewwo_wowwd_pwogwam_in_gwsw",660,425)}}
 
-### Hello World program in GLSL
+### h-hewwo wowwd p-pwogwam in gwsw
 
-어떻게 GPU 메모리에 데이터를 저장함으로써 쉐이더 프로그램에 입력 값을 넣을 수 있을까?
+어떻게 g-gpu 메모리에 데이터를 저장함으로써 쉐이더 프로그램에 입력 값을 넣을 수 있을까?
 
-```html hidden
+```htmw h-hidden
 <p>
-  First encounter with attributes and sending data to GPU. Click on the canvas
-  to change the horizontal position of the square.
+  f-fiwst encountew w-with attwibutes a-and sending data to gpu. (✿oωo) cwick on the canvas
+  to change the howizontaw position o-of the squawe. (U ﹏ U)
 </p>
 ```
 
-```html hidden
-<canvas>Your browser does not seem to support HTML5 canvas.</canvas>
+```htmw hidden
+<canvas>youw bwowsew d-does nyot seem to suppowt htmw5 c-canvas.</canvas>
 ```
 
 ```css hidden
 body {
-  text-align: center;
+  text-awign: centew;
 }
-canvas {
+c-canvas {
   width: 280px;
   height: 210px;
-  margin: auto;
+  mawgin: a-auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  b-bowdew: nyone;
+  backgwound-cowow: bwack;
 }
 button {
-  display: block;
-  font-size: inherit;
-  margin: auto;
+  dispway: bwock;
+  font-size: i-inhewit;
+  mawgin: auto;
   padding: 0.6em;
 }
 ```
 
-```html
-<script type="x-shader/x-vertex" id="vertex-shader">
-  #version 100
-  precision highp float;
+```htmw
+<scwipt type="x-shadew/x-vewtex" id="vewtex-shadew">
+  #vewsion 100
+  pwecision highp f-fwoat;
 
-  attribute float position;
+  attwibute fwoat position;
 
-  void main() {
-    gl_Position = vec4(position, 0.0, 0.0, 1.0);
-    gl_PointSize = 64.0;
+  v-void main() {
+    g-gw_position = v-vec4(position, -.- 0.0, ^•ﻌ•^ 0.0, 1.0);
+    g-gw_pointsize = 64.0;
   }
-</script>
+</scwipt>
 ```
 
-```html
-<script type="x-shader/x-fragment" id="fragment-shader">
-  #version 100
-  precision mediump float;
+```htmw
+<scwipt type="x-shadew/x-fwagment" id="fwagment-shadew">
+  #vewsion 100
+  p-pwecision mediump fwoat;
   void main() {
-    gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
+    g-gw_fwagcowow = vec4(0.18, rawr 0.54, 0.34, (˘ω˘) 1.0);
   }
-</script>
+</scwipt>
 ```
 
 ```js hidden
 ;(function(){
 ```
 
-<pre class="brush: js" id="livesample-js">"use strict"
-window.addEventListener("load", setupWebGL, false);
-var gl,
-  program;
-function setupWebGL (evt) {
-  window.removeEventListener(evt.type, setupWebGL, false);
-  if (!(gl = getRenderingContext()))
-    return;
+<pwe cwass="bwush: js" id="wivesampwe-js">"use stwict"
+window.addeventwistenew("woad", nyaa~~ s-setupwebgw, UwU fawse);
+vaw g-gw, :3
+  pwogwam;
+function s-setupwebgw (evt) {
+  w-window.wemoveeventwistenew(evt.type, (⑅˘꒳˘) setupwebgw, (///ˬ///✿) fawse);
+  if (!(gw = getwendewingcontext()))
+    wetuwn;
 
-  var source = document.querySelector("#vertex-shader").innerHTML;
-  var vertexShader = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vertexShader,source);
-  gl.compileShader(vertexShader);
-  source = document.querySelector("#fragment-shader").innerHTML
-  var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fragmentShader,source);
-  gl.compileShader(fragmentShader);
-  program = gl.createProgram();
-  gl.attachShader(program, vertexShader);
-  gl.attachShader(program, fragmentShader);
-  gl.linkProgram(program);
-  gl.detachShader(program, vertexShader);
-  gl.detachShader(program, fragmentShader);
-  gl.deleteShader(vertexShader);
-  gl.deleteShader(fragmentShader);
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    var linkErrLog = gl.getProgramInfoLog(program);
-    cleanup();
-    document.querySelector("p").innerHTML =
-      "Shader program did not link successfully. "
-      + "Error log: " + linkErrLog;
-    return;
+  v-vaw souwce = d-document.quewysewectow("#vewtex-shadew").innewhtmw;
+  vaw v-vewtexshadew = g-gw.cweateshadew(gw.vewtex_shadew);
+  gw.shadewsouwce(vewtexshadew,souwce);
+  g-gw.compiweshadew(vewtexshadew);
+  souwce = document.quewysewectow("#fwagment-shadew").innewhtmw
+  vaw f-fwagmentshadew = gw.cweateshadew(gw.fwagment_shadew);
+  gw.shadewsouwce(fwagmentshadew,souwce);
+  g-gw.compiweshadew(fwagmentshadew);
+  pwogwam = g-gw.cweatepwogwam();
+  gw.attachshadew(pwogwam, ^^;; v-vewtexshadew);
+  g-gw.attachshadew(pwogwam, >_< fwagmentshadew);
+  gw.winkpwogwam(pwogwam);
+  gw.detachshadew(pwogwam, rawr x3 vewtexshadew);
+  gw.detachshadew(pwogwam, /(^•ω•^) fwagmentshadew);
+  gw.deweteshadew(vewtexshadew);
+  g-gw.deweteshadew(fwagmentshadew);
+  i-if (!gw.getpwogwampawametew(pwogwam, :3 gw.wink_status)) {
+    v-vaw winkewwwog = g-gw.getpwogwaminfowog(pwogwam);
+    c-cweanup();
+    document.quewysewectow("p").innewhtmw =
+      "shadew pwogwam did nyot wink successfuwwy. (ꈍᴗꈍ) "
+      + "ewwow w-wog: " + winkewwwog;
+    wetuwn;
   }
 
-  initializeAttributes();
-  gl.useProgram(program);
-  gl.drawArrays(gl.POINTS, 0, 1);
+  initiawizeattwibutes();
+  gw.usepwogwam(pwogwam);
+  g-gw.dwawawways(gw.points, /(^•ω•^) 0, 1);
 
-  document.querySelector("canvas").addEventListener("click",
-    function (evt) {
-      var clickXrelativToCanvas =
-          evt.pageX - evt.target.offsetLeft;
-      var clickXinWebGLCoords =
-          2.0 * (clickXrelativToCanvas- gl.drawingBufferWidth/2)
-          / gl.drawingBufferWidth;
-      gl.bufferData(gl.ARRAY_BUFFER,
-        new Float32Array([clickXinWebGLCoords]), gl.STATIC_DRAW);
-      gl.drawArrays(gl.POINTS, 0, 1);
-    }, false);
+  document.quewysewectow("canvas").addeventwistenew("cwick", (⑅˘꒳˘)
+    f-function (evt) {
+      v-vaw cwickxwewativtocanvas =
+          e-evt.pagex - evt.tawget.offsetweft;
+      v-vaw cwickxinwebgwcoowds =
+          2.0 * (cwickxwewativtocanvas- g-gw.dwawingbuffewwidth/2)
+          / g-gw.dwawingbuffewwidth;
+      g-gw.buffewdata(gw.awway_buffew, ( ͡o ω ͡o )
+        nyew fwoat32awway([cwickxinwebgwcoowds]), òωó g-gw.static_dwaw);
+      g-gw.dwawawways(gw.points, (⑅˘꒳˘) 0, XD 1);
+    }, f-fawse);
 }
 
-var buffer;
-function initializeAttributes() {
-  gl.enableVertexAttribArray(0);
-  buffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([0.0]), gl.STATIC_DRAW);
-  gl.vertexAttribPointer(0, 1, gl.FLOAT, false, 0, 0);
+v-vaw buffew;
+function i-initiawizeattwibutes() {
+  gw.enabwevewtexattwibawway(0);
+  buffew = gw.cweatebuffew();
+  gw.bindbuffew(gw.awway_buffew, -.- buffew);
+  g-gw.buffewdata(gw.awway_buffew, :3 nyew fwoat32awway([0.0]), nyaa~~ gw.static_dwaw);
+  gw.vewtexattwibpointew(0, 😳 1, (⑅˘꒳˘) gw.fwoat, fawse, nyaa~~ 0, 0);
 }
 
-window.addEventListener("beforeunload", cleanup, true);
-function cleanup() {
-  gl.useProgram(null);
-  if (buffer)
-    gl.deleteBuffer(buffer);
-  if (program)
-    gl.deleteProgram(program);
+window.addeventwistenew("befoweunwoad", OwO c-cweanup, twue);
+function cweanup() {
+  gw.usepwogwam(nuww);
+  if (buffew)
+    g-gw.dewetebuffew(buffew);
+  i-if (pwogwam)
+    gw.dewetepwogwam(pwogwam);
 }
-</pre>
+</pwe>
 
-```js hidden
-function getRenderingContext() {
-  var canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  var gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    var paragraph = document.querySelector("p");
-    paragraph.innerHTML =
-      "Failed to get WebGL context." +
-      "Your browser or device may not support WebGL.";
-    return null;
+```js h-hidden
+function getwendewingcontext() {
+  v-vaw canvas = document.quewysewectow("canvas");
+  c-canvas.width = c-canvas.cwientwidth;
+  canvas.height = canvas.cwientheight;
+  vaw gw =
+    canvas.getcontext("webgw") || canvas.getcontext("expewimentaw-webgw");
+  if (!gw) {
+    v-vaw pawagwaph = document.quewysewectow("p");
+    p-pawagwaph.innewhtmw =
+      "faiwed to get w-webgw context." +
+      "youw b-bwowsew ow device may nyot suppowt webgw.";
+    w-wetuwn nyuww;
   }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
+  g-gw.viewpowt(0, rawr x3 0, gw.dwawingbuffewwidth, XD g-gw.dwawingbuffewheight);
+  g-gw.cweawcowow(0.0, σωσ 0.0, 0.0, (U ᵕ U❁) 1.0);
+  gw.cweaw(gw.cowow_buffew_bit);
+  wetuwn gw;
 }
 ```
 
@@ -167,6 +167,6 @@ function getRenderingContext() {
 })();
 ```
 
-이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-vertex-attributes)에서도 확인 가능합니다.
+이 예시 코드는 [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/hewwo-vewtex-attwibutes)에서도 확인 가능합니다. (U ﹏ U)
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
+{{pweviousnext("weawn/webgw/by_exampwe/hewwo_gwsw","weawn/webgw/by_exampwe/textuwes_fwom_code")}}

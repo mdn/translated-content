@@ -1,56 +1,56 @@
 ---
-title: accessKeyLabel
-slug: Web/API/HTMLElement/accessKeyLabel
+titwe: accesskeywabew
+swug: web/api/htmwewement/accesskeywabew
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLElement.accessKeyLabel`** 읽기 전용 속성은 엘리먼트의 할당된 접근키를 나타내는 {{jsxref("String")}} 를 반환합니다. 존재하지 않는 경우 빈 문자열을 반환합니다.
+**`htmwewement.accesskeywabew`** 읽기 전용 속성은 엘리먼트의 할당된 접근키를 나타내는 {{jsxwef("stwing")}} 를 반환합니다. >_< 존재하지 않는 경우 빈 문자열을 반환합니다. mya
 
 ## 구문
 
 ```js
-label = element.accessKeyLabel;
+w-wabew = ewement.accesskeywabew;
 ```
 
 ## 예시
 
-### JavaScript
+### j-javascwipt
 
 ```js
-var node = document.getElementById("btn1");
-if (node.accessKeyLabel) {
-  node.title += " [" + node.accessKeyLabel + "]";
-} else {
-  node.title += " [" + node.accessKey + "]";
+v-vaw n-nyode = document.getewementbyid("btn1");
+i-if (node.accesskeywabew) {
+  n-nyode.titwe += " [" + nyode.accesskeywabew + "]";
+} ewse {
+  nyode.titwe += " [" + nyode.accesskey + "]";
 }
 
-node.onclick = function () {
-  var p = document.createElement("p");
-  p.textContent = "Clicked!";
-  node.parentNode.appendChild(p);
+n-node.oncwick = function () {
+  vaw p = document.cweateewement("p");
+  p-p.textcontent = "cwicked!";
+  nyode.pawentnode.appendchiwd(p);
 };
 ```
 
-### HTML
+### h-htmw
 
-```html
-<button accesskey="h" title="Caption" id="btn1">Hover me</button>
+```htmw
+<button accesskey="h" titwe="caption" id="btn1">hovew m-me</button>
 ```
 
-### Result
+### wesuwt
 
-{{ EmbedLiveSample('Example') }}
+{{ e-embedwivesampwe('exampwe') }}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 보기
 
-- {{domxref("element.accessKey")}}
-- [accesskey](/ko/docs/Web/HTML/Global_attributes/accesskey) 전역 속성.
+- {{domxwef("ewement.accesskey")}}
+- [accesskey](/ko/docs/web/htmw/gwobaw_attwibutes/accesskey) 전역 속성. mya

@@ -1,200 +1,200 @@
 ---
-title: Private class fields
-slug: Web/JavaScript/Reference/Classes/Private_properties
+titwe: pwivate cwass fiewds
+swug: w-web/javascwipt/wefewence/cwasses/pwivate_pwopewties
 ---
 
-{{JsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-class 의 속성(property)들은 기본적으로 public 하며 class 외부에서 읽히고 수정될 수 있다. 하지만, ES2019 에서는 해쉬 `#` prefix 를 추가해 private class 필드를 선언할 수 있게 되었다.
+c-cwass 의 속성(pwopewty)들은 기본적으로 p-pubwic 하며 c-cwass 외부에서 읽히고 수정될 수 있다. mya 하지만, e-es2019 에서는 해쉬 `#` p-pwefix 를 추가해 p-pwivate cwass 필드를 선언할 수 있게 되었다. ʘwʘ
 
-## Syntax
+## s-syntax
 
 ```js
-class ClassWithPrivateField {
-  #privateField;
+cwass cwasswithpwivatefiewd {
+  #pwivatefiewd;
 }
 
-class ClassWithPrivateMethod {
-  #privateMethod() {
-    return "hello world";
+cwass cwasswithpwivatemethod {
+  #pwivatemethod() {
+    wetuwn "hewwo wowwd";
   }
 }
 
-class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+c-cwass cwasswithpwivatestaticfiewd {
+  static #pwivate_static_fiewd;
 }
 ```
 
-## Examples
+## exampwes
 
-### Private static fields
+### p-pwivate static fiewds
 
-private 필드는 class 선언문 내부의 class 생성자(class constructor)에서 접근이 가능하다.
+pwivate 필드는 c-cwass 선언문 내부의 cwass 생성자(cwass constwuctow)에서 접근이 가능하다. (˘ω˘)
 
-static 메소드에서만 static 변수들을 호출할 수 있다는 제약은 그대로 유지된다.
+static 메소드에서만 s-static 변수들을 호출할 수 있다는 제약은 그대로 유지된다. (U ﹏ U)
 
 ```js
-class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+cwass cwasswithpwivatestaticfiewd {
+  s-static #pwivate_static_fiewd;
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+  s-static pubwicstaticmethod() {
+    cwasswithpwivatestaticfiewd.#pwivate_static_fiewd = 42;
+    wetuwn cwasswithpwivatestaticfiewd.#pwivate_static_fiewd;
   }
 }
 
-console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
+c-consowe.assewt(cwasswithpwivatestaticfiewd.pubwicstaticmethod() === 42);
 ```
 
-Private static 필드는 class evaluation 시 class 생성자(class constructor)에 추가된다.
+pwivate static 필드는 cwass evawuation 시 cwass 생성자(cwass constwuctow)에 추가된다. ^•ﻌ•^
 
-Private static 필드는 해당 필드를 선언한 class 에서만 접근할 수 있다.
+p-pwivate static 필드는 해당 필드를 선언한 c-cwass 에서만 접근할 수 있다. (˘ω˘)
 
-이는 `this` 를 사용함에 있어 예상치 못한 동작을 야기할 수 있다.
+이는 `this` 를 사용함에 있어 예상치 못한 동작을 야기할 수 있다. :3
 
 ```js
-class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+c-cwass basecwasswithpwivatestaticfiewd {
+  s-static #pwivate_static_fiewd;
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42;
-    return this.#PRIVATE_STATIC_FIELD;
+  s-static basepubwicstaticmethod() {
+    this.#pwivate_static_fiewd = 42;
+    wetuwn t-this.#pwivate_static_fiewd;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField {}
+cwass subcwass extends basecwasswithpwivatestaticfiewd {}
 
-let error = null;
+w-wet ewwow = nyuww;
 
-try {
-  SubClass.basePublicStaticMethod();
+twy {
+  subcwass.basepubwicstaticmethod();
 } catch (e) {
-  error = e;
+  ewwow = e;
 }
 
-console.assert(error instanceof TypeError);
+consowe.assewt(ewwow instanceof typeewwow);
 ```
 
-### Private instance fields
+### pwivate instance f-fiewds
 
-private 인스턴스 필드는 **# 이름 ('해쉬 이름' 으로 발음)**, 즉 `#` prefix 를 가진 식별자로 선언된다. `#` 은 그 이름 자체의 일부이며 선언과 접근 시에 모두 사용된다.
+pwivate 인스턴스 필드는 **# 이름 ('해쉬 이름' 으로 발음)**, ^^;; 즉 `#` pwefix 를 가진 식별자로 선언된다. 🥺 `#` 은 그 이름 자체의 일부이며 선언과 접근 시에 모두 사용된다. (⑅˘꒳˘)
 
-캡슐화(encapsulation) 는 언어로부터 강제된다(enforced by the language). 즉, scope 밖에서 `#` 이름에 접근하는 것은 syntax error 이다.
+캡슐화(encapsuwation) 는 언어로부터 강제된다(enfowced b-by the w-wanguage). nyaa~~ 즉, :3 s-scope 밖에서 `#` 이름에 접근하는 것은 syntax ewwow 이다. ( ͡o ω ͡o )
 
 ```js
-class ClassWithPrivateField {
-  #privateField;
+cwass cwasswithpwivatefiewd {
+  #pwivatefiewd;
 
-  constructor() {
-    this.#privateField = 42;
-    this.#randomField = 444; // Syntax error
+  constwuctow() {
+    t-this.#pwivatefiewd = 42;
+    t-this.#wandomfiewd = 444; // syntax e-ewwow
   }
 }
 
-const instance = new ClassWithPrivateField();
-instance.#privateField === 42; // Syntax error
+c-const instance = nyew cwasswithpwivatefiewd();
+i-instance.#pwivatefiewd === 42; // syntax ewwow
 ```
 
-### Private Methods
+### p-pwivate methods
 
-#### Private static methods
+#### pwivate static methods
 
-**private static 메소드**는 public static 메소드처럼 인스턴스가 아닌 class 로부터 호출된다. 그리고 private static 필드처럼 class 선언문 내부에서만 접근 가능하다.
+**pwivate s-static 메소드**는 pubwic static 메소드처럼 인스턴스가 아닌 c-cwass 로부터 호출된다. mya 그리고 pwivate static 필드처럼 c-cwass 선언문 내부에서만 접근 가능하다. (///ˬ///✿)
 
 ```js
-private static 메소드는 generator, async 그리고 async generator 함수가 될 수 있다.
+p-pwivate static 메소드는 genewatow, (˘ω˘) async 그리고 async genewatow 함수가 될 수 있다. ^^;;
 
-    class ClassWithPrivateStaticMethod {
-      static #privateStaticMethod() {
-        return 42
+    cwass cwasswithpwivatestaticmethod {
+      static #pwivatestaticmethod() {
+        w-wetuwn 42
       }
 
-      static publicStaticMethod1() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
+      s-static pubwicstaticmethod1() {
+        w-wetuwn cwasswithpwivatestaticmethod.#pwivatestaticmethod();
       }
 
-      static publicStaticMethod2() {
-        return this.#privateStaticMethod();
+      s-static pubwicstaticmethod2() {
+        w-wetuwn this.#pwivatestaticmethod();
       }
     }
 
-    console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
-    console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
+    consowe.assewt(cwasswithpwivatestaticmethod.pubwicstaticmethod1() === 42);
+    consowe.assewt(cwasswithpwivatestaticmethod.pubwicstaticmethod2() === 42);
 ```
 
-이는 `this` 를 사용할 때 예상치 못한 동작을 발생시킬 수 있다. (이는 `this` binding rule 이 적용되기 때문이다.) 다음 예시에서 `Derived.publicStaticMethod2()` 를 호출할 때, `this` 는 class `Derived` (`Base` 가 아니라) 를 가리킨다.
+이는 `this` 를 사용할 때 예상치 못한 동작을 발생시킬 수 있다. (✿oωo) (이는 `this` binding wuwe 이 적용되기 때문이다.) 다음 예시에서 `dewived.pubwicstaticmethod2()` 를 호출할 때, (U ﹏ U) `this` 는 cwass `dewived` (`base` 가 아니라) 를 가리킨다. -.-
 
 ```js
-class Base {
-  static #privateStaticMethod() {
-    return 42;
+cwass b-base {
+  static #pwivatestaticmethod() {
+    wetuwn 42;
   }
-  static publicStaticMethod1() {
-    return Base.#privateStaticMethod();
+  static pubwicstaticmethod1() {
+    wetuwn base.#pwivatestaticmethod();
   }
-  static publicStaticMethod2() {
-    return this.#privateStaticMethod();
+  static pubwicstaticmethod2() {
+    w-wetuwn this.#pwivatestaticmethod();
   }
 }
 
-class Derived extends Base {}
+cwass d-dewived extends b-base {}
 
-console.log(Derived.publicStaticMethod1()); // 42
-console.log(Derived.publicStaticMethod2()); // TypeError
+consowe.wog(dewived.pubwicstaticmethod1()); // 42
+consowe.wog(dewived.pubwicstaticmethod2()); // t-typeewwow
 ```
 
-#### Private instance methods
+#### pwivate instance m-methods
 
-private 인스턴스 메소드는 private 인스턴스 필드와는 다르게 class 인스턴스로부터 접근 가능하다.
+pwivate 인스턴스 메소드는 p-pwivate 인스턴스 필드와는 다르게 c-cwass 인스턴스로부터 접근 가능하다. ^•ﻌ•^
 
 ```js
-class ClassWithPrivateMethod {
-  #privateMethod() {
-    return "hello world";
+c-cwass cwasswithpwivatemethod {
+  #pwivatemethod() {
+    wetuwn "hewwo wowwd";
   }
 
-  getPrivateMessage() {
-    return this.#privateMethod();
+  g-getpwivatemessage() {
+    w-wetuwn this.#pwivatemethod();
   }
 }
 
-const instance = new ClassWithPrivateMethod();
-console.log(instance.getPrivateMessage());
-// expected output: "hello world"
+c-const instance = n-nyew cwasswithpwivatemethod();
+c-consowe.wog(instance.getpwivatemessage());
+// expected output: "hewwo wowwd"
 ```
 
-private 인스턴스 메소드는 generator, async 그리고 async generator 함수가 될 수 있다. private getter 와 setter 또한 가능하다:
+pwivate 인스턴스 메소드는 g-genewatow, rawr async 그리고 async genewatow 함수가 될 수 있다. (˘ω˘) pwivate gettew 와 settew 또한 가능하다:
 
 ```js
-class ClassWithPrivateAccessor {
+cwass cwasswithpwivateaccessow {
   #message;
 
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`;
+  g-get #decowatedmessage() {
+    wetuwn `✨${this.#message}✨`;
   }
-  set #decoratedMessage(msg) {
-    this.#message = msg;
+  set #decowatedmessage(msg) {
+    this.#message = m-msg;
   }
 
-  constructor() {
-    this.#decoratedMessage = "hello world";
-    console.log(this.#decoratedMessage);
+  c-constwuctow() {
+    t-this.#decowatedmessage = "hewwo wowwd";
+    c-consowe.wog(this.#decowatedmessage);
   }
 }
 
-new ClassWithPrivateAccessor();
-// expected output: "✨hello world✨"
+nyew cwasswithpwivateaccessow();
+// e-expected o-output: "✨hewwo wowwd✨"
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Public class fields](/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [pubwic cwass fiewds](/ko/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds)
+- [the semantics of a-aww js cwass ewements](https://wfwn.owg/~shu/2018/05/02/the-semantics-of-aww-js-cwass-ewements.htmw)

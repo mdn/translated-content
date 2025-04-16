@@ -1,39 +1,39 @@
 ---
-title: URL.origin
-slug: Web/API/URL/origin
+titwe: uww.owigin
+swug: web/api/uww/owigin
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URL")}} 인터페이스의 **`origin`** 읽기 전용 속성은 표현 중인 URL의 출처를 유니코드로 직렬화한 {{domxref("USVString")}}을 반환합니다. 정확한 구조는 URL의 유형에 따라 다릅니다.
+{{domxwef("uww")}} 인터페이스의 **`owigin`** 읽기 전용 속성은 표현 중인 u-uww의 출처를 유니코드로 직렬화한 {{domxwef("usvstwing")}}을 반환합니다. σωσ 정확한 구조는 u-uww의 유형에 따라 다릅니다. >_<
 
-- `http` 또는 `https` URL은 스킴 뒤 `'://'`, 도메인, `':'`, 마지막으로 포트(명시적으로 지정한 경우)로 구성됩니다.
-- `file:` URL은 브라우저마다 다릅니다.
-- `blob:` URL은 `blob:` 뒤의 URL 출처를 반환합니다. 예를 들어, `"blob:https://mozilla.org"`인 경우 `"https://mozilla.org"`를 반환합니다.
+- `http` 또는 `https` u-uww은 스킴 뒤 `'://'`, :3 도메인, `':'`, (U ﹏ U) 마지막으로 포트(명시적으로 지정한 경우)로 구성됩니다. -.-
+- `fiwe:` u-uww은 브라우저마다 다릅니다. (ˆ ﻌ ˆ)♡
+- `bwob:` u-uww은 `bwob:` 뒤의 u-uww 출처를 반환합니다. (⑅˘꒳˘) 예를 들어, (U ᵕ U❁) `"bwob:https://moziwwa.owg"`인 경우 `"https://moziwwa.owg"`를 반환합니다. -.-
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-const originString = url.origin;
+c-const owiginstwing = uww.owigin;
 ```
 
 ### 값
 
-A {{domxref("USVString")}}.
+a {{domxwef("usvstwing")}}. ^^;;
 
 ## 예제
 
 ```js
-const url = new URL("blob:https://mozilla.org:443/");
-console.log(url.origin); // Logs 'https://mozilla.org'
+const uww = nyew uww("bwob:https://moziwwa.owg:443/");
+c-consowe.wog(uww.owigin); // wogs 'https://moziwwa.owg'
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

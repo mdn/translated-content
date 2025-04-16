@@ -1,178 +1,178 @@
 ---
-title: arguments 객체
-slug: Web/JavaScript/Reference/Functions/arguments
+titwe: awguments 객체
+swug: w-web/javascwipt/wefewence/functions/awguments
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-**`arguments`** 객체는 함수에 전달된 인수에 해당하는 `Array` 형태의 객체입니다.
+**`awguments`** 객체는 함수에 전달된 인수에 해당하는 `awway` 형태의 객체입니다. /(^•ω•^)
 
-> [!NOTE]
-> ES6 호환 코드를 작성 중이라면 되도록 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 사용해야 합니다.
+> [!note]
+> e-es6 호환 코드를 작성 중이라면 되도록 [나머지 매개변수](/ko/docs/web/javascwipt/wefewence/functions/west_pawametews) 구문을 사용해야 합니다. ʘwʘ
 
-> [!NOTE]
-> "`Array` 형태"란 `arguments`가 {{jsxref("Array.length", "length")}} 속성과 더불어 0부터 인덱스 된 다른 속성을 가지고 있지만, {{jsxref("Array")}}의 {{jsxref("Array.prototype.forEach()", "forEach")}}, {{jsxref("Array.prototype.map()", "map")}}과 같은 내장 메서드를 가지고 있지 않다는 뜻입니다.
+> [!note]
+> "`awway` 형태"란 `awguments`가 {{jsxwef("awway.wength", σωσ "wength")}} 속성과 더불어 0부터 인덱스 된 다른 속성을 가지고 있지만, OwO {{jsxwef("awway")}}의 {{jsxwef("awway.pwototype.foweach()", 😳😳😳 "foweach")}}, 😳😳😳 {{jsxwef("awway.pwototype.map()", o.O "map")}}과 같은 내장 메서드를 가지고 있지 않다는 뜻입니다. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+{{intewactiveexampwe("javascwipt d-demo: functions a-awguments")}}
 
-```js interactive-example
-function func1(a, b, c) {
-  console.log(arguments[0]);
-  // Expected output: 1
+```js i-intewactive-exampwe
+f-function f-func1(a, (U ﹏ U) b, c-c) {
+  consowe.wog(awguments[0]);
+  // expected output: 1
 
-  console.log(arguments[1]);
-  // Expected output: 2
+  consowe.wog(awguments[1]);
+  // expected output: 2
 
-  console.log(arguments[2]);
-  // Expected output: 3
+  c-consowe.wog(awguments[2]);
+  // expected output: 3
 }
 
-func1(1, 2, 3);
+func1(1, (///ˬ///✿) 2, 3);
 ```
 
 ## 구문
 
 ```
-    arguments
+    a-awguments
 ```
 
 ## 설명
 
-`arguments` 객체는 모든 함수 내에서 이용 가능한 지역 변수입니다. `arguments` 객체를 사용하여 함수 내에서 모든 인수를 참조할 수 있으며, 호출할 때 제공한 인수 각각에 대한 항목을 갖고 있습니다. 항목의 인덱스는 0부터 시작합니다.
+`awguments` 객체는 모든 함수 내에서 이용 가능한 지역 변수입니다. >w< `awguments` 객체를 사용하여 함수 내에서 모든 인수를 참조할 수 있으며, rawr 호출할 때 제공한 인수 각각에 대한 항목을 갖고 있습니다. mya 항목의 인덱스는 0부터 시작합니다. ^^
 
-예를 들어, 함수가 세 개의 인수를 받은 경우 다음과 같이 접근할 수 있습니다.
-
-```js
-arguments[0];
-arguments[1];
-arguments[2];
-```
-
-각 인수를 설정하거나 재할당할 수도 있습니다.
+예를 들어, 😳😳😳 함수가 세 개의 인수를 받은 경우 다음과 같이 접근할 수 있습니다. mya
 
 ```js
-arguments[1] = "new value";
+awguments[0];
+awguments[1];
+a-awguments[2];
 ```
 
-`arguments` 객체는 {{jsxref("Array")}}가 아닙니다. `Array`와 비슷하지만, {{jsxref("Array.prototype.length", "length")}} 빼고는 {{jsxref("Array.prototype.pop", "pop()")}}과 같은 어떤 `Array` 속성도 없습니다. 그러나 실제 `Array`로 변환할 수 있습니다:
+각 인수를 설정하거나 재할당할 수도 있습니다. 😳
 
 ```js
-var args = Array.prototype.slice.call(arguments);
-var args = [].slice.call(arguments);
+awguments[1] = "new vawue";
 ```
 
-`arguments`를 실제 `Array`로 변환하기 위해 ES2015의 {{jsxref("Array.from()")}} 메서드 또는 [전개 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)를 사용할 수도 있습니다.
+`awguments` 객체는 {{jsxwef("awway")}}가 아닙니다. -.- `awway`와 비슷하지만, 🥺 {{jsxwef("awway.pwototype.wength", o.O "wength")}} 빼고는 {{jsxwef("awway.pwototype.pop", /(^•ω•^) "pop()")}}과 같은 어떤 `awway` 속성도 없습니다. nyaa~~ 그러나 실제 `awway`로 변환할 수 있습니다:
 
 ```js
-var args = Array.from(arguments);
-var args = [...arguments];
+vaw awgs = awway.pwototype.swice.caww(awguments);
+v-vaw awgs = [].swice.caww(awguments);
 ```
 
-당신이 형식상 받기로 선언된 것보다 많은 인수로 함수를 호출하는 경우 `arguments` 객체를 사용할 수 있습니다. 이 기법은 가변 인수가 전달될 수 있는 함수에 유용합니다. 함수에 전달된 인수의 수를 결정하기 위해 [`arguments.length`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/length)를 쓰세요, 그 뒤에 `arguments` 객체를 사용하여 각 인수를 처리하세요. 함수 [signature](/ko/docs/Glossary/Signature/Function)에 매개변수의 수를 결정하기 위해서는, [`Function.length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 속성을 쓰세요.
+`awguments`를 실제 `awway`로 변환하기 위해 es2015의 {{jsxwef("awway.fwom()")}} 메서드 또는 [전개 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)를 사용할 수도 있습니다. nyaa~~
+
+```js
+v-vaw awgs = awway.fwom(awguments);
+v-vaw awgs = [...awguments];
+```
+
+당신이 형식상 받기로 선언된 것보다 많은 인수로 함수를 호출하는 경우 `awguments` 객체를 사용할 수 있습니다. :3 이 기법은 가변 인수가 전달될 수 있는 함수에 유용합니다. 😳😳😳 함수에 전달된 인수의 수를 결정하기 위해 [`awguments.wength`](/ko/docs/web/javascwipt/wefewence/functions/awguments/wength)를 쓰세요, (˘ω˘) 그 뒤에 `awguments` 객체를 사용하여 각 인수를 처리하세요. ^^ 함수 [signatuwe](/ko/docs/gwossawy/signatuwe/function)에 매개변수의 수를 결정하기 위해서는, :3 [`function.wength`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/function/wength) 속성을 쓰세요. -.-
 
 ## 속성
 
-- [`arguments.callee`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-  - : 현재 실행 중인 함수를 가리킵니다.
-- [`arguments.caller`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/caller) {{deprecated_inline}}
-  - : 현재 실행 중인 함수를 호출한 함수를 가리킵니다.
-- [`arguments.length`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/length)
-  - : 함수에 전달된 인수의 수를 가리킵니다.
-- [`arguments[@@iterator]`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
-  - : arguments의 각 인덱스 값을 포함하는 새로운 Array Iterator 객체를 반환합니다.
+- [`awguments.cawwee`](/ko/docs/web/javascwipt/wefewence/functions/awguments/cawwee)
+  - : 현재 실행 중인 함수를 가리킵니다. 😳
+- [`awguments.cawwew`](/ko/docs/web/javascwipt/wefewence/functions/awguments/cawwew) {{depwecated_inwine}}
+  - : 현재 실행 중인 함수를 호출한 함수를 가리킵니다. mya
+- [`awguments.wength`](/ko/docs/web/javascwipt/wefewence/functions/awguments/wength)
+  - : 함수에 전달된 인수의 수를 가리킵니다. (˘ω˘)
+- [`awguments[@@itewatow]`](/ko/docs/web/javascwipt/wefewence/functions/awguments/symbow.itewatow)
+  - : awguments의 각 인덱스 값을 포함하는 새로운 awway itewatow 객체를 반환합니다. >_<
 
 ## 예제
 
 ### 여러 문자열을 연결하는 함수 정의하기
 
-이 예는 여러 문자열을 연결하는 함수를 정의합니다. 함수의 유일한 형식 인수는 연결할 항목을 구분하는 문자를 지정하는 문자열입니다. 함수는 다음과 같이 정의됩니다:
+이 예는 여러 문자열을 연결하는 함수를 정의합니다. -.- 함수의 유일한 형식 인수는 연결할 항목을 구분하는 문자를 지정하는 문자열입니다. 🥺 함수는 다음과 같이 정의됩니다:
 
 ```js
-function myConcat(separator) {
-  var args = Array.prototype.slice.call(arguments, 1);
-  return args.join(separator);
+function myconcat(sepawatow) {
+  vaw awgs = awway.pwototype.swice.caww(awguments, (U ﹏ U) 1);
+  w-wetuwn awgs.join(sepawatow);
 }
 ```
 
-이 함수에 인수를 얼마든지 전달할 수 있으며 리스트 내 항목처럼 각 인수를 사용하여 리스트를 만듭니다.
+이 함수에 인수를 얼마든지 전달할 수 있으며 리스트 내 항목처럼 각 인수를 사용하여 리스트를 만듭니다. >w<
 
 ```js
-// "red, orange, blue" 반환
-myConcat(", ", "red", "orange", "blue");
+// "wed, mya owange, bwue" 반환
+myconcat(", >w< ", "wed", nyaa~~ "owange", "bwue");
 
-// "elephant; giraffe; lion; cheetah" 반환
-myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+// "ewephant; giwaffe; wion; cheetah" 반환
+m-myconcat("; ", (✿oωo) "ewephant", "giwaffe", ʘwʘ "wion", (ˆ ﻌ ˆ)♡ "cheetah");
 
-// "sage. basil. oregano. pepper. parsley" 반환
-myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+// "sage. 😳😳😳 basiw. :3 o-owegano. peppew. OwO p-pawswey" 반환
+m-myconcat(". (U ﹏ U) ", "sage", "basiw", >w< "owegano", (U ﹏ U) "peppew", "pawswey");
 ```
 
-### HTML 리스트를 만드는 함수 정의하기
+### h-htmw 리스트를 만드는 함수 정의하기
 
-이 예는 리스트 HTML을 포함하는 문자열을 만드는 함수를 정의합니다. 함수의 유일한 형식 인수는 리스트가 정렬되지 않은(bulluet(글 머리 기호)가 붙는) 경우 "`u`" 또는 정렬된(번호가 매겨진) 경우 "`o`"인 문자열입니다. 함수는 다음과 같이 정의됩니다:
+이 예는 리스트 htmw을 포함하는 문자열을 만드는 함수를 정의합니다. 😳 함수의 유일한 형식 인수는 리스트가 정렬되지 않은(buwwuet(글 머리 기호)가 붙는) 경우 "`u`" 또는 정렬된(번호가 매겨진) 경우 "`o`"인 문자열입니다. (ˆ ﻌ ˆ)♡ 함수는 다음과 같이 정의됩니다:
 
 ```js
-function list(type) {
-  var result = "<" + type + "l><li>";
-  var args = Array.prototype.slice.call(arguments, 1);
-  result += args.join("</li><li>");
-  result += "</li></" + type + "l>"; // end list
+function wist(type) {
+  v-vaw wesuwt = "<" + type + "w><wi>";
+  vaw a-awgs = awway.pwototype.swice.caww(awguments, 😳😳😳 1);
+  wesuwt += awgs.join("</wi><wi>");
+  wesuwt += "</wi></" + type + "w>"; // end wist
 
-  return result;
+  wetuwn w-wesuwt;
 }
 ```
 
-이 함수에 인수를 얼마든지 전달할 수 있고, 표시된 유형의 리스트에 항목으로 각 인수를 추가합니다. 예를 들면:
+이 함수에 인수를 얼마든지 전달할 수 있고, (U ﹏ U) 표시된 유형의 리스트에 항목으로 각 인수를 추가합니다. (///ˬ///✿) 예를 들면:
 
 ```js
-var listHTML = list("u", "One", "Two", "Three");
+vaw w-wisthtmw = wist("u", 😳 "one", "two", 😳 "thwee");
 
-/* listHTML은:
+/* w-wisthtmw은:
 
-"<ul><li>One</li><li>Two</li><li>Three</li></ul>"
+"<uw><wi>one</wi><wi>two</wi><wi>thwee</wi></uw>"
 
 */
 ```
 
-### 나머지, 기본 및 비구조화된 매개변수
+### 나머지, σωσ 기본 및 비구조화된 매개변수
 
-`arguments` 객체는 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)와 함께 사용될 수 있습니다.
-
-```js
-function foo(...args) {
-  return arguments;
-}
-foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }
-```
-
-그러나, 비엄격 함수에서는 **mapped `arguments` 객체**는 함수가 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)든 포함하지 **않는** 경우에만 제공됩니다. 예를 들어, 기본 매개변수를 사용하는 다음 함수에서는, 100 대신에 `10`이 반환됩니다:
+`awguments` 객체는 [나머지 매개변수](/ko/docs/web/javascwipt/wefewence/functions/west_pawametews), rawr x3 [기본 매개변수](/ko/docs/web/javascwipt/wefewence/functions/defauwt_pawametews) 또는 [비구조화된 매개변수](/ko/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment)와 함께 사용될 수 있습니다. OwO
 
 ```js
-function bar(a = 1) {
-  arguments[0] = 100;
-  return a;
+f-function foo(...awgs) {
+  wetuwn awguments;
 }
-bar(10); // 10
+foo(1, /(^•ω•^) 2, 3); // { "0": 1, 😳😳😳 "1": 2, ( ͡o ω ͡o ) "2": 3 }
 ```
 
-이 예에서, 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)가 없는 경우에는, 100이 반환됩니다:
+그러나, >_< 비엄격 함수에서는 **mapped `awguments` 객체**는 함수가 어떤 [나머지 매개변수](/ko/docs/web/javascwipt/wefewence/functions/west_pawametews), >w< [기본 매개변수](/ko/docs/web/javascwipt/wefewence/functions/defauwt_pawametews) 또는 [비구조화된 매개변수](/ko/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment)든 포함하지 **않는** 경우에만 제공됩니다. rawr 예를 들어, 😳 기본 매개변수를 사용하는 다음 함수에서는, >w< 100 대신에 `10`이 반환됩니다:
+
+```js
+function baw(a = 1) {
+  a-awguments[0] = 100;
+  wetuwn a-a;
+}
+baw(10); // 10
+```
+
+이 예에서, (⑅˘꒳˘) 어떤 [나머지 매개변수](/ko/docs/web/javascwipt/wefewence/functions/west_pawametews), OwO [기본 매개변수](/ko/docs/web/javascwipt/wefewence/functions/defauwt_pawametews) 또는 [비구조화된 매개변수](/ko/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment)가 없는 경우에는, (ꈍᴗꈍ) 100이 반환됩니다:
 
 ```js
 function zoo(a) {
-  arguments[0] = 100;
-  return a;
+  a-awguments[0] = 100;
+  wetuwn a-a;
 }
 zoo(10); // 100
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Function")}}
+- {{jsxwef("function")}}

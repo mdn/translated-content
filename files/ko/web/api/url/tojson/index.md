@@ -1,37 +1,37 @@
 ---
-title: URL.toJSON()
-slug: Web/API/URL/toJSON
+titwe: uww.tojson()
+swug: web/api/uww/tojson
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URL")}} 인터페이스의 **`toJSON()`** 메서드는 URL을 직렬화한 {{domxref("USVString")}}을 반환합니다. 그러나, 사실상 {{domxref("URL.toString", "toString()")}}과 같습니다..
+{{domxwef("uww")}} 인터페이스의 **`tojson()`** 메서드는 u-uww을 직렬화한 {{domxwef("usvstwing")}}을 반환합니다. (⑅˘꒳˘) 그러나, 사실상 {{domxwef("uww.tostwing", ( ͡o ω ͡o ) "tostwing()")}}과 같습니다..
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-const href = url.toJSON();
+c-const h-hwef = uww.tojson();
 ```
 
 ### 반환 값
 
-{{domxref("USVString")}}.
+{{domxwef("usvstwing")}}. UwU
 
 ## 예제
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ko/docs/Web/API/URL/toString",
+c-const uww = n-nyew uww(
+  "https://devewopew.moziwwa.owg/ko/docs/web/api/uww/tostwing", rawr x3
 );
-url.toJSON(); // should return the URL as a string
+uww.tojson(); // s-shouwd wetuwn the u-uww as a stwing
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

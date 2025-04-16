@@ -1,122 +1,122 @@
 ---
-title: "Document: dragend 이벤트"
-slug: Web/API/HTMLElement/dragend_event
+titwe: "document: dwagend 이벤트"
+s-swug: web/api/htmwewement/dwagend_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`dragend` 이벤트는 마우스 버튼을 놓거나 이스케이프 키를 눌러 드래그 작업이 끝나게 되면 발생합니다.
+`dwagend` 이벤트는 마우스 버튼을 놓거나 이스케이프 키를 눌러 드래그 작업이 끝나게 되면 발생합니다. :3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">버블링</th>
+    <tw>
+      <th s-scope="wow">버블링</th>
       <td>예</td>
-    </tr>
-    <tr>
-      <th scope="row">취소 가능</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">취소 가능</th>
       <td>아니오</td>
-    </tr>
-    <tr>
-      <th scope="row">기본 동작</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">기본 동작</th>
       <td>다양함</td>
-    </tr>
-    <tr>
-      <th scope="row">인터페이스</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">이벤트 처리기 속성</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">인터페이스</th>
+      <td>{{domxwef("dwagevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">이벤트 처리기 속성</th>
       <td>
-        {{domxref("GlobalEventHandlers/ondragend", "ondragend")}}
+        {{domxwef("gwobaweventhandwews/ondwagend", 😳😳😳 "ondwagend")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 예제
 
 ### 드래그 종료 시 투명도 초기화
 
-이 예제에서는 컨테이너 안에 드래그 가능한 요소를 배치했습니다. 이 요소를 잡아 드래그한 후 놓아보세요.
+이 예제에서는 컨테이너 안에 드래그 가능한 요소를 배치했습니다. -.- 이 요소를 잡아 드래그한 후 놓아보세요. ( ͡o ω ͡o )
 
-요소가 드래그 되기 시작하면 반투명하게 설정했다가, `dragend` 이벤트를 수신해서 드래그가 끝나면 다시 불투명하게 만드는 예제입니다.
+요소가 드래그 되기 시작하면 반투명하게 설정했다가, rawr x3 `dwagend` 이벤트를 수신해서 드래그가 끝나면 다시 불투명하게 만드는 예제입니다. nyaa~~
 
-[`drag`](/ko/docs/Web/API/HTMLElement/drag_event) 이벤트 문서에서 드래그 앤 드롭의 더 완전한 예제를 확인할 수 있습니다.
+[`dwag`](/ko/docs/web/api/htmwewement/dwag_event) 이벤트 문서에서 드래그 앤 드롭의 더 완전한 예제를 확인할 수 있습니다. /(^•ω•^)
 
-#### HTML
+#### htmw
 
-```html
-<div id="container">
-  <div id="draggable" draggable="true">드래그 가능</div>
+```htmw
+<div i-id="containew">
+  <div id="dwaggabwe" dwaggabwe="twue">드래그 가능</div>
 </div>
-<div class="dropzone"></div>
+<div cwass="dwopzone"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
-body {
+b-body {
   /* 사용자가 예제의 텍스트를 선택하지 못하도록 */
-  user-select: none;
+  usew-sewect: nyone;
 }
 
-#draggable {
-  text-align: center;
-  background: white;
+#dwaggabwe {
+  text-awign: c-centew;
+  backgwound: w-white;
 }
 
-#container {
+#containew {
   width: 200px;
   height: 20px;
-  background: blueviolet;
+  backgwound: b-bwueviowet;
   padding: 10px;
 }
 
-.dragging {
-  opacity: 0.5;
+.dwagging {
+  o-opacity: 0.5;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-document.addEventListener("dragstart", (event) => {
+document.addeventwistenew("dwagstawt", rawr (event) => {
   // 반투명하게 만들기
-  event.target.classList.add("dragging");
+  event.tawget.cwasswist.add("dwagging");
 });
 
-document.addEventListener("dragend", (event) => {
+document.addeventwistenew("dwagend", OwO (event) => {
   // 불투명하게 초기화
-  event.target.classList.remove("dragging");
+  event.tawget.cwasswist.wemove("dwagging");
 });
 ```
 
 #### 결과
 
-{{EmbedLiveSample('드래그 종료 시 불투명도 초기화')}}
+{{embedwivesampwe('드래그 종료 시 불투명도 초기화')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
 - 다른 드래그 앤 드롭 이벤트:
 
-  - {{domxref("Document/drag_event", "drag")}}
-  - {{domxref("Document/dragstart_event", "dragstart")}}
-  - {{domxref("Document/dragover_event", "dragover")}}
-  - {{domxref("Document/dragenter_event", "dragenter")}}
-  - {{domxref("Document/dragleave_event", "dragleave")}}
-  - {{domxref("Document/drop_event", "drop")}}
+  - {{domxwef("document/dwag_event", (U ﹏ U) "dwag")}}
+  - {{domxwef("document/dwagstawt_event", >_< "dwagstawt")}}
+  - {{domxwef("document/dwagovew_event", rawr x3 "dwagovew")}}
+  - {{domxwef("document/dwagentew_event", mya "dwagentew")}}
+  - {{domxwef("document/dwagweave_event", nyaa~~ "dwagweave")}}
+  - {{domxwef("document/dwop_event", (⑅˘꒳˘) "dwop")}}
 
 - 이 이벤트의 다른 대상:
 
-  - {{domxref("Window")}}: {{domxref("Window/dragend_event", "dragend")}} 이벤트
-  - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragend_event", "dragend")}} 이벤트
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragend_event", "dragend")}} 이벤트
+  - {{domxwef("window")}}: {{domxwef("window/dwagend_event", rawr x3 "dwagend")}} 이벤트
+  - {{domxwef("htmwewement")}}: {{domxwef("htmwewement/dwagend_event", (✿oωo) "dwagend")}} 이벤트
+  - {{domxwef("svgewement")}}: {{domxwef("svgewement/dwagend_event", (ˆ ﻌ ˆ)♡ "dwagend")}} 이벤트

@@ -1,41 +1,41 @@
 ---
-title: Document.URL
-slug: Web/API/Document/URL
+titwe: document.uww
+swug: web/api/document/uww
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Document")}} 인터페이스의 **`URL`** 읽기 전용 속성은 문서의 주소를 문자열로 반환합니다.
+{{domxwef("document")}} 인터페이스의 **`uww`** 읽기 전용 속성은 문서의 주소를 문자열로 반환합니다. o.O
 
 ## 예제
 
-### JavaScript
+### j-javascwipt
 
 ```js
-document.getElementById("url").textContent = document.URL;
+d-document.getewementbyid("uww").textcontent = d-document.uww;
 ```
 
-### HTML
+### htmw
 
-```html
-<p id="urlText">
-  URL:<br />
-  <span id="url">URL이 여기 보입니다</span>
+```htmw
+<p i-id="uwwtext">
+  u-uww:<bw />
+  <span i-id="uww">uww이 여기 보입니다</span>
 </p>
 ```
 
 ### 결과
 
-{{EmbedLiveSample("예제", "100%", 100)}}
+{{embedwivesampwe("예제", (U ᵕ U❁) "100%", (⑅˘꒳˘) 100)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{domxref("HTMLDocument")}}
+- {{domxwef("htmwdocument")}}

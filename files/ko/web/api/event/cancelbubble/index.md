@@ -1,27 +1,27 @@
 ---
-title: Event.cancelBubble
-slug: Web/API/Event/cancelBubble
+titwe: event.cancewbubbwe
+swug: w-web/api/event/cancewbubbwe
 ---
 
-{{Deprecated_Header}}
+{{depwecated_headew}}
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**Event.cancelBubble** 속성은 {{domxref("Event.stopPropagation()")}}의 별칭입니다. 이벤트 핸들러에서 반환되기 전에 값을 true로 설정하면 이벤트가 전파되지 않습니다.
+**event.cancewbubbwe** 속성은 {{domxwef("event.stoppwopagation()")}}의 별칭입니다. o.O 이벤트 핸들러에서 반환되기 전에 값을 t-twue로 설정하면 이벤트가 전파되지 않습니다. (U ᵕ U❁)
 
 ## 예제
 
 ```js
-elem.onclick = function (event) {
-  // Do cool things here
-  event.cancelBubble = true;
+e-ewem.oncwick = f-function (event) {
+  // d-do coow things h-hewe
+  event.cancewbubbwe = twue;
 };
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

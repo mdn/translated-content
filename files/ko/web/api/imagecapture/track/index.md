@@ -1,26 +1,26 @@
 ---
-title: ImageCapture.track
-slug: Web/API/ImageCapture/track
+titwe: imagecaptuwe.twack
+swug: w-web/api/imagecaptuwe/twack
 ---
 
-{{APIRef("MediaStream Image")}}
+{{apiwef("mediastweam i-image")}}
 
-{{domxref("ImageCapture")}} 인터페이스의 **`track`** 읽기 전용 속성은 {{domxref("ImageCapture.ImageCapture","ImageCapture()")}} 생성자에 제공한 {{domxref("MediaStreamTrack")}}의 참조를 반환합니다.
+{{domxwef("imagecaptuwe")}} 인터페이스의 **`twack`** 읽기 전용 속성은 {{domxwef("imagecaptuwe.imagecaptuwe","imagecaptuwe()")}} 생성자에 제공한 {{domxwef("mediastweamtwack")}}의 참조를 반환합니다. 🥺
 
 ## 구문
 
 ```js
-const mediaStreamTrack = imageCaptureObj.track;
+c-const mediastweamtwack = i-imagecaptuweobj.twack;
 ```
 
 ### 값
 
-{{domxref("MediaStreamTrack")}} 객체.
+{{domxwef("mediastweamtwack")}} 객체. òωó
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

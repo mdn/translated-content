@@ -1,42 +1,42 @@
 ---
-title: URL.pathname
-slug: Web/API/URL/pathname
+titwe: uww.pathname
+swug: web/api/uww/pathname
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URL")}} 인터페이스의 **`pathname`** 속성은 URL의 경로와 그 앞의 `/`로 이루어진 {{domxref("USVString")}}을 반환합니다. 경로가 없는 경우 빈 문자열을 반환합니다.
+{{domxwef("uww")}} 인터페이스의 **`pathname`** 속성은 u-uww의 경로와 그 앞의 `/`로 이루어진 {{domxwef("usvstwing")}}을 반환합니다. rawr x3 경로가 없는 경우 빈 문자열을 반환합니다. rawr
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-const path = url.pathname;
-url.pathname = newPath;
+c-const p-path = uww.pathname;
+u-uww.pathname = n-nyewpath;
 ```
 
 ### 값
 
-{{domxref("USVString")}}.
+{{domxwef("usvstwing")}}. σωσ
 
 ## 예제
 
 ```js
-var url = new URL(
-  "https://developer.mozilla.org/ko/docs/Web/API/URL/pathname?q=value",
+v-vaw u-uww = nyew uww(
+  "https://devewopew.moziwwa.owg/ko/docs/web/api/uww/pathname?q=vawue", σωσ
 );
-var result = url.pathname; // Returns:"/ko/docs/Web/API/URL/pathname"
+vaw wesuwt = uww.pathname; // wetuwns:"/ko/docs/web/api/uww/pathname"
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 속성이 속한 {{domxref("URL")}} 인터페이스.
+- 속성이 속한 {{domxwef("uww")}} 인터페이스. >_<

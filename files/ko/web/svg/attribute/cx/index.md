@@ -1,175 +1,175 @@
 ---
-title: cx
-slug: Web/SVG/Attribute/cx
+titwe: cx
+swug: web/svg/attwibute/cx
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`cx`** 속성은 중심점의 x축 좌표를 정의합니다.
+**`cx`** 속성은 중심점의 x-x축 좌표를 정의합니다. 😳😳😳
 
-다음 SVG 요소와 함께 이 속성을 사용할 수 있습니다:
+다음 s-svg 요소와 함께 이 속성을 사용할 수 있습니다:
 
-- {{SVGElement("circle")}}
-- {{SVGElement("ellipse")}}
-- {{SVGElement("radialGradient")}}
+- {{svgewement("ciwcwe")}}
+- {{svgewement("ewwipse")}}
+- {{svgewement("wadiawgwadient")}}
 
-## Example
+## exampwe
 
 ```css hidden
-html,
+h-htmw, (˘ω˘)
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <radialGradient cx="25%" id="myGradient">
-    <stop offset="0" stop-color="white" />
-    <stop offset="100%" stop-color="black" />
-  </radialGradient>
+```htmw
+<svg v-viewbox="0 0 300 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <wadiawgwadient c-cx="25%" i-id="mygwadient">
+    <stop offset="0" stop-cowow="white" />
+    <stop offset="100%" stop-cowow="bwack" />
+  </wadiawgwadient>
 
-  <circle cx="50" cy="50" r="45" />
-  <ellipse cx="150" cy="50" rx="45" ry="25" />
-  <rect x="205" y="5" width="90" height="90" fill="url(#myGradient)" />
+  <ciwcwe c-cx="50" cy="50" w="45" />
+  <ewwipse cx="150" cy="50" w-wx="45" wy="25" />
+  <wect x="205" y-y="5" width="90" height="90" fiww="uww(#mygwadient)" />
 </svg>
 ```
 
-{{EmbedLiveSample("Example", 100, 100)}}
+{{embedwivesampwe("exampwe", ^^ 100, 100)}}
 
-## circle
+## ciwcwe
 
-{{SVGElement('circle')}} 의 경우, `cx`는 모양 중심의 x축 좌표를 정의합니다.
+{{svgewement('ciwcwe')}} 의 경우, :3 `cx`는 모양 중심의 x-x축 좌표를 정의합니다. -.-
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>{{cssxref("length-percentage")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
+    <tw>
+      <th s-scope="wow">vawue</th>
+      <td>{{cssxwef("wength-pewcentage")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">defauwt vawue</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animatabwe</th>
+      <td>yes</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> SVG2 `cx`로 시작하는 것은 _기하학적 속성_ 입니다. 즉, 이 속성은 circle의 CSS 속성으로도 사용할 수 있습니다.
+> [!note]
+> svg2 `cx`로 시작하는 것은 _기하학적 속성_ 입니다. 😳 즉, 이 속성은 ciwcwe의 css 속성으로도 사용할 수 있습니다. mya
 
-## ellipse
+## e-ewwipse
 
-{{SVGElement('ellipse')}}의 경우, `cx`는 모양 중심의 x축 좌표를 정의합니다.
+{{svgewement('ewwipse')}}의 경우, (˘ω˘) `cx`는 모양 중심의 x축 좌표를 정의합니다. >_<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>{{cssxref("length-percentage")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
+    <tw>
+      <th scope="wow">vawue</th>
+      <td>{{cssxwef("wength-pewcentage")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">defauwt v-vawue</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animatabwe</th>
+      <td>yes</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> SVG2 `cx`로 시작하는 것은 _기하학적 속성_ 입니다. 이는 이 속성이 ellipse의 CSS 속성으로도 사용될 수 있음을 의미합니다.
+> [!note]
+> s-svg2 `cx`로 시작하는 것은 _기하학적 속성_ 입니다. -.- 이는 이 속성이 e-ewwipse의 c-css 속성으로도 사용될 수 있음을 의미합니다. 🥺
 
-## radialGradient
+## w-wadiawgwadient
 
-{{SVGElement('radialGradient')}}의 경우 `cx`는 radial Gradient에 대한 끝 원의 x축 좌표를 정의합니다.
+{{svgewement('wadiawgwadient')}}의 경우 `cx`는 wadiaw gwadient에 대한 끝 원의 x-x축 좌표를 정의합니다. (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>{{cssxref("length-percentage")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
+    <tw>
+      <th scope="wow">vawue</th>
+      <td>{{cssxwef("wength-pewcentage")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">defauwt vawue</th>
       <td><code>50%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animatabwe</th>
+      <td>yes</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 #### 예제
 
 ```css hidden
-html,
+htmw, >w<
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 34 10" xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <radialGradient cx="0" id="myGradient000">
-      <stop offset="0%" stop-color="gold" />
-      <stop offset="50%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </radialGradient>
+    <wadiawgwadient c-cx="0" i-id="mygwadient000">
+      <stop o-offset="0%" stop-cowow="gowd" />
+      <stop offset="50%" stop-cowow="gween" />
+      <stop offset="100%" stop-cowow="white" />
+    </wadiawgwadient>
 
-    <radialGradient cx="50%" id="myGradient050">
-      <stop offset="0%" stop-color="gold" />
-      <stop offset="50%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </radialGradient>
+    <wadiawgwadient c-cx="50%" id="mygwadient050">
+      <stop o-offset="0%" stop-cowow="gowd" />
+      <stop o-offset="50%" s-stop-cowow="gween" />
+      <stop offset="100%" s-stop-cowow="white" />
+    </wadiawgwadient>
 
-    <radialGradient cx="100%" id="myGradient100">
-      <stop offset="0%" stop-color="gold" />
-      <stop offset="50%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </radialGradient>
+    <wadiawgwadient cx="100%" id="mygwadient100">
+      <stop o-offset="0%" stop-cowow="gowd" />
+      <stop offset="50%" s-stop-cowow="gween" />
+      <stop offset="100%" s-stop-cowow="white" />
+    </wadiawgwadient>
   </defs>
 
-  <rect
+  <wect
     x="1"
-    y="1"
+    y-y="1"
     width="8"
-    height="8"
-    fill="url(#myGradient000)"
-    stroke="black" />
-  <rect
+    h-height="8"
+    fiww="uww(#mygwadient000)"
+    stwoke="bwack" />
+  <wect
     x="13"
     y="1"
     width="8"
     height="8"
-    fill="url(#myGradient050)"
-    stroke="black" />
-  <rect
-    x="25"
+    fiww="uww(#mygwadient050)"
+    s-stwoke="bwack" />
+  <wect
+    x-x="25"
     y="1"
     width="8"
-    height="8"
-    fill="url(#myGradient100)"
-    stroke="black" />
+    h-height="8"
+    f-fiww="uww(#mygwadient100)"
+    s-stwoke="bwack" />
 </svg>
 ```
 
-{{EmbedLiveSample('radialGradient', 150, '100%')}}
+{{embedwivesampwe('wadiawgwadient', mya 150, >w< '100%')}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 같이 보기
 
-- {{SVGAttr("cy")}}
-- {{SVGAttr("r")}}
+- {{svgattw("cy")}}
+- {{svgattw("w")}}

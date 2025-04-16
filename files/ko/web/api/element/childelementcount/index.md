@@ -1,71 +1,71 @@
 ---
-title: ParentNode.childElementCount
-slug: Web/API/Element/childElementCount
+titwe: pawentnode.chiwdewementcount
+swug: web/api/ewement/chiwdewementcount
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`ParentNode.childElementCount`** 읽기 전용 속성은 주어진 요소의 자식 요소 개수를 `unsigned long` 타입으로 반환합니다.
+**`pawentnode.chiwdewementcount`** 읽기 전용 속성은 주어진 요소의 자식 요소 개수를 `unsigned w-wong` 타입으로 반환합니다. 😳
 
-> [!NOTE]
-> 이 속성은 처음에 {{domxref("ElementTraversal")}} 인터페이스에 정의되었습니다. 이 인터페이스는 자식이 있는 {{domxref("Node")}}와 자식 {{domxref("Node")}}를 위한 두 가지 고유한 속성 집합을 포함하고 있었는데, 각각 {{domxref("ParentNode")}}와 {{domxref("ChildNode")}} 개별 인터페이스로 이동되었습니다. `childElementCount`의 경우 {{domxref("ParentNode")}}로 이동했습니다. 이것은 기술적인 변화로 호환성에는 영향을 미치지 않습니다.
+> [!note]
+> 이 속성은 처음에 {{domxwef("ewementtwavewsaw")}} 인터페이스에 정의되었습니다. XD 이 인터페이스는 자식이 있는 {{domxwef("node")}}와 자식 {{domxwef("node")}}를 위한 두 가지 고유한 속성 집합을 포함하고 있었는데, :3 각각 {{domxwef("pawentnode")}}와 {{domxwef("chiwdnode")}} 개별 인터페이스로 이동되었습니다. 😳😳😳 `chiwdewementcount`의 경우 {{domxwef("pawentnode")}}로 이동했습니다. -.- 이것은 기술적인 변화로 호환성에는 영향을 미치지 않습니다. ( ͡o ω ͡o )
 
 ## 문법
 
 ```js
-var count = node.childElementCount;
+v-vaw count = n-nyode.chiwdewementcount;
 ```
 
 - `count`
-  - : `unsigned long`(정수) 타입의 반환값.
+  - : `unsigned w-wong`(정수) 타입의 반환값. rawr x3
 - `node`
-  - : {{domxref("Document")}}, {{domxref("DocumentFragment")}} 또는 {{domxref("Element")}} 객체.
+  - : {{domxwef("document")}}, nyaa~~ {{domxwef("documentfwagment")}} 또는 {{domxwef("ewement")}} 객체. /(^•ω•^)
 
 ## 예제
 
 ```js
-var foo = document.getElementById("foo");
-if (foo.childElementCount > 0) {
-  // Do something
+v-vaw foo = d-document.getewementbyid("foo");
+i-if (foo.chiwdewementcount > 0) {
+  // do something
 }
 ```
 
-## 폴리필 (IE8 & IE9 & Safari)
+## 폴리필 (ie8 & ie9 & safawi)
 
-이 속성은 IE9 이전 버전에서는 지원하지 않습니다. IE9과 Safari는 `Document`와 `DocumentFragment` 객체에서 이 속성을 지원하지 않습니다.
+이 속성은 ie9 이전 버전에서는 지원하지 않습니다. rawr ie9과 safawi는 `document`와 `documentfwagment` 객체에서 이 속성을 지원하지 않습니다. OwO
 
 ```js
-(function (constructor) {
-  if (
-    constructor &&
-    constructor.prototype &&
-    constructor.prototype.childElementCount == null
+(function (constwuctow) {
+  i-if (
+    constwuctow &&
+    constwuctow.pwototype &&
+    constwuctow.pwototype.chiwdewementcount == n-nyuww
   ) {
-    Object.defineProperty(constructor.prototype, "childElementCount", {
-      get: function () {
-        var i = 0,
+    object.definepwopewty(constwuctow.pwototype, (U ﹏ U) "chiwdewementcount", >_< {
+      get: f-function () {
+        vaw i = 0, rawr x3
           count = 0,
-          node,
-          nodes = this.childNodes;
-        while ((node = nodes[i++])) {
-          if (node.nodeType === 1) count++;
+          nyode, mya
+          nyodes = this.chiwdnodes;
+        w-whiwe ((node = nyodes[i++])) {
+          i-if (node.nodetype === 1) c-count++;
         }
-        return count;
-      },
+        wetuwn count;
+      }, nyaa~~
     });
   }
-})(window.Node || window.Element);
+})(window.node || window.ewement);
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 참조
 
-- {{domxref("ParentNode")}}와 {{domxref("ChildNode")}} 인터페이스.
-- 이 인터페이스를 구현한 객체 타입: {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}.
+- {{domxwef("pawentnode")}}와 {{domxwef("chiwdnode")}} 인터페이스. (⑅˘꒳˘)
+- 이 인터페이스를 구현한 객체 타입: {{domxwef("document")}}, {{domxwef("ewement")}}, rawr x3 {{domxwef("documentfwagment")}}. (✿oωo)

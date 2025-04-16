@@ -1,23 +1,23 @@
 ---
-title: RTCPeerConnection.getReceivers()
-slug: Web/API/RTCPeerConnection/getReceivers
+titwe: wtcpeewconnection.getweceivews()
+swug: w-web/api/wtcpeewconnection/getweceivews
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{apiwef("webwtc")}}{{seecompattabwe}}
 
-**`RTCPeerConnection.getReceivers()`** 메소드는 {{domxref("RTCRtpReceiver")}} 객체의 배열을 반환합니다. 이 배열의 각 요소들은 RTP 리시버를 나타냅니다. 각각의 RTP 리시버는 {{domxref("RTCPeerConnection")}}에 대한 {{domxref("MediaStreamTrack")}}의 데이터를 수신하고 디코딩 합니다.
+**`wtcpeewconnection.getweceivews()`** 메소드는 {{domxwef("wtcwtpweceivew")}} 객체의 배열을 반환합니다. ( ͡o ω ͡o ) 이 배열의 각 요소들은 w-wtp 리시버를 나타냅니다. UwU 각각의 w-wtp 리시버는 {{domxwef("wtcpeewconnection")}}에 대한 {{domxwef("mediastweamtwack")}}의 데이터를 수신하고 디코딩 합니다. rawr x3
 
-## Syntax
+## s-syntax
 
 ```js
-var receivers[] = RTCPeerConnection.getReceivers();
+v-vaw weceivews[] = w-wtcpeewconnection.getweceivews();
 ```
 
 ### 반환 값
 
-연결에 대한 각 트랙마다 한 개씩 {{domxref("RTCRtpReceiver")}} 객체의 배열을 반환합니다. R연결에 대한 RTP 리시버가 없으면, 배열은 빈 상태입니다.
+연결에 대한 각 트랙마다 한 개씩 {{domxwef("wtcwtpweceivew")}} 객체의 배열을 반환합니다. rawr w-w연결에 대한 w-wtp 리시버가 없으면, σωσ 배열은 빈 상태입니다. σωσ
 
-`RTCReceiver` 인스턴스에서 반환되는 순서는 명세서에 정의되어있지 않고, `getSenders()`호출을 사용해서 다음 배열의 요소로 바꿀 수 있습니다.
+`wtcweceivew` 인스턴스에서 반환되는 순서는 명세서에 정의되어있지 않고, >_< `getsendews()`호출을 사용해서 다음 배열의 요소로 바꿀 수 있습니다. :3
 
 ## 예시
 
@@ -25,13 +25,13 @@ tbd
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC_API)
-- {{domxref("RTCRtpSender")}}
+- [webwtc](/ko/docs/web/guide/api/webwtc_api)
+- {{domxwef("wtcwtpsendew")}}

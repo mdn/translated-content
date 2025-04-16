@@ -1,46 +1,46 @@
 ---
-title: Date.prototype.getUTCFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
+titwe: date.pwototype.getutcfuwwyeaw()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**getUTCFullYear()** 메서드는 표준시에 따라 지정된 날짜의 연도를 반환합니다.
+**getutcfuwwyeaw()** 메서드는 표준시에 따라 지정된 날짜의 연도를 반환합니다. rawr x3
 
-## Syntax
+## s-syntax
 
 ```js
-dateObj.getUTCFullYear();
+d-dateobj.getutcfuwwyeaw();
 ```
 
-### Return value
+### w-wetuwn vawue
 
-주어진 날짜의 연도를 표준시에 따라 나타내는 숫자입니다.
+주어진 날짜의 연도를 표준시에 따라 나타내는 숫자입니다. rawr
 
-## Description
+## d-descwiption
 
-**getUTCFullYear()** 에 의해 반환 된 값은 1995 년과 같이 2000 년과 호환되는 절대 숫자입니다.
+**getutcfuwwyeaw()** 에 의해 반환 된 값은 1995 년과 같이 2000 년과 호환되는 절대 숫자입니다. σωσ
 
-## Examples
+## exampwes
 
-### Using `getUTCFullYear()`
+### u-using `getutcfuwwyeaw()`
 
-다음 예제에서는 현재 연도의 4 자리 값을 변수 year에 할당합니다.
+다음 예제에서는 현재 연도의 4 자리 값을 변수 y-yeaw에 할당합니다. σωσ
 
 ```js
-var today = new Date();
-var year = today.getUTCFullYear();
+v-vaw today = nyew date();
+vaw yeaw = today.getutcfuwwyeaw();
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxwef("date.pwototype.getfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}

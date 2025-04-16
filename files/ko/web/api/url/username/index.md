@@ -1,43 +1,43 @@
 ---
-title: URL.username
-slug: Web/API/URL/username
+titwe: uww.usewname
+swug: web/api/uww/usewname
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URL")}} 인터페이스의 **`username`** 속성은 도메인 이전의 사용자 이름을 담은 {{domxref("USVString")}}을 반환합니다.
+{{domxwef("uww")}} 인터페이스의 **`usewname`** 속성은 도메인 이전의 사용자 이름을 담은 {{domxwef("usvstwing")}}을 반환합니다. ( ͡o ω ͡o )
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-const usernameString = url.username;
-url.username = newUsername;
+c-const usewnamestwing = u-uww.usewname;
+u-uww.usewname = n-nyewusewname;
 ```
 
 ### 값
 
-{{domxref("USVString")}}.
+{{domxwef("usvstwing")}}. UwU
 
 ## 예제
 
 ```js
-const url = new URL(
-  "https://anonymous:flabada@developer.mozilla.org/ko/docs/Web/API/URL/username",
+const u-uww = nyew u-uww(
+  "https://anonymous:fwabada@devewopew.moziwwa.owg/ko/docs/web/api/uww/usewname", rawr x3
 );
-console.log(url.username); // Logs "anonymous"
+c-consowe.wog(uww.usewname); // wogs "anonymous"
 =======
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 속성이 속한 {{domxref("URL")}} 인터페이스.
+- 속성이 속한 {{domxwef("uww")}} 인터페이스. rawr

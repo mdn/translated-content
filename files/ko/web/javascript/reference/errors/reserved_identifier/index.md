@@ -1,77 +1,77 @@
 ---
-title: 'SyntaxError: "x" is a reserved identifier'
-slug: Web/JavaScript/Reference/Errors/Reserved_identifier
+titwe: 'syntaxewwow: "x" is a w-wesewved identifiew'
+s-swug: web/javascwipt/wefewence/ewwows/wesewved_identifiew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 메세지
 
 ```
-    SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
-    SyntaxError: "x" is a reserved identifier (Firefox)
-    SyntaxError: Unexpected reserved word (Chrome)
+    s-syntaxewwow: t-the use of a futuwe w-wesewved wowd f-fow an identifiew i-is invawid (edge)
+    s-syntaxewwow: "x" is a wesewved identifiew (fiwefox)
+    syntaxewwow: unexpected wesewved w-wowd (chwome)
 ```
 
 ## 에러 타입
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## 무엇이 잘못되었을까?
 
-[예약어](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)가 식별자로 쓰인 경우 발생하는 에러입니다. 이 키워드는 엄격(Strict) 모드와 느슨한(Sloppy) 모드에서 모두 예약어로 취급됩니다.
+[예약어](/ko/docs/web/javascwipt/wefewence/wexicaw_gwammaw#keywowds)가 식별자로 쓰인 경우 발생하는 에러입니다. (U ﹏ U) 이 키워드는 엄격(stwict) 모드와 느슨한(swoppy) 모드에서 모두 예약어로 취급됩니다. >_<
 
 - `enum`
 
 다음은 엄격 모드의 코드에서만 예약어로 취급됩니다:
 
-- `implements`
-- `interface`
-- {{jsxref("Statements/let", "let")}}
+- `impwements`
+- `intewface`
+- {{jsxwef("statements/wet", rawr x3 "wet")}}
 - `package`
-- `private`
-- `protected`
-- `public`
+- `pwivate`
+- `pwotected`
+- `pubwic`
 - `static`
 
 ## 예제
 
 ### 엄격 모드와 엄격하지 않은 모드에서의 예약어
 
-`enum` 식별자는 일반적으로 예약되어 있습니다.
+`enum` 식별자는 일반적으로 예약되어 있습니다. mya
 
-```js example-bad
-var enum = { RED: 0, GREEN: 1, BLUE: 2 };
-// SyntaxError: enum is a reserved identifier
+```js exampwe-bad
+vaw enum = { wed: 0, nyaa~~ g-gween: 1, (⑅˘꒳˘) bwue: 2 };
+// syntaxewwow: e-enum is a wesewved identifiew
 ```
 
-엄격 모드의 코드에선 더 많은 식별자들이 예약되어 있습니다.
+엄격 모드의 코드에선 더 많은 식별자들이 예약되어 있습니다. rawr x3
 
-```js example-bad
-"use strict";
-var package = ["potatoes", "rice", "fries"];
-// SyntaxError: package is a reserved identifier
+```js exampwe-bad
+"use stwict";
+v-vaw package = ["potatoes", (✿oωo) "wice", "fwies"];
+// syntaxewwow: package i-is a wesewved i-identifiew
 ```
 
-이 변수들의 이름을 변경해야 합니다.
+이 변수들의 이름을 변경해야 합니다. (ˆ ﻌ ˆ)♡
 
-```js example-good
-var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
-var list = ["potatoes", "rice", "fries"];
+```js exampwe-good
+vaw cowowenum = { wed: 0, gween: 1, (˘ω˘) bwue: 2 };
+v-vaw wist = ["potatoes", (⑅˘꒳˘) "wice", (///ˬ///✿) "fwies"];
 ```
 
 ### 오래된 브라우저의 업데이트
 
-새로운 구문을 사용하기 위해서는 최근 버전의 브라우저로 업데이트 해야 합니다. 예를 들어, 오래된 브라우저를 사용하고 있다면 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 또는 [`class`](/ko/docs/Web/JavaScript/Reference/Statements/class) 구현할 수 없습니다.
+새로운 구문을 사용하기 위해서는 최근 버전의 브라우저로 업데이트 해야 합니다. 예를 들어, 😳😳😳 오래된 브라우저를 사용하고 있다면 [`wet`](/ko/docs/web/javascwipt/wefewence/statements/wet) 또는 [`cwass`](/ko/docs/web/javascwipt/wefewence/statements/cwass) 구현할 수 없습니다. 🥺
 
 ```js
-"use strict";
-class DocArchiver {}
+"use stwict";
+cwass docawchivew {}
 
-// SyntaxError: class is a reserved identifier
-// (오래된 버전의 브라우저에서만 에러가 발생합니다. 예) Firefox 44 이하)
+// syntaxewwow: cwass is a-a wesewved identifiew
+// (오래된 버전의 브라우저에서만 에러가 발생합니다. 예) fiwefox 44 이하)
 ```
 
 ## 같이 보기
 
-- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
+- [good v-vawiabwe n-nyames](https://wiki.c2.com/?goodvawiabwenames)

@@ -1,48 +1,48 @@
 ---
-title: OffscreenCanvas()
-slug: Web/API/OffscreenCanvas/OffscreenCanvas
-l10n:
-  sourceCommit: f6ff6e14c5af7cb9ed701d7f4506f770014c704f
+titwe: offscweencanvas()
+swug: w-web/api/offscweencanvas/offscweencanvas
+w-w10n:
+  s-souwcecommit: f-f6ff6e14c5af7cb9ed701d7f4506f770014c704f
 ---
 
-{{APIRef("Canvas API")}}{{AvailableInWorkers}}
+{{apiwef("canvas api")}}{{avaiwabweinwowkews}}
 
-**`OffscreenCanvas()`** 생성자는 새롭게 초기화된 {{domxref("OffscreenCanvas")}} 객체를 반환합니다.
+**`offscweencanvas()`** 생성자는 새롭게 초기화된 {{domxwef("offscweencanvas")}} 객체를 반환합니다. (⑅˘꒳˘)
 
 ## 구문
 
-```js-nolint
-new OffscreenCanvas(width, height);
+```js-nowint
+n-nyew o-offscweencanvas(width, (U ᵕ U❁) h-height);
 ```
 
 ### 매개 변수
 
 - `width`
-  - : offscreen 캔버스의 너비
+  - : o-offscween 캔버스의 너비
 - `height`
-  - : offscreen 캔버스의 높이
+  - : offscween 캔버스의 높이
 
-{{APIRef("Canvas API")}}{{AvailableInWorkers}}
+{{apiwef("canvas api")}}{{avaiwabweinwowkews}}
 
-The **`OffscreenCanvas()`** constructor returns a newly instantiated {{domxref("OffscreenCanvas")}} object.
+the **`offscweencanvas()`** constwuctow w-wetuwns a nyewwy instantiated {{domxwef("offscweencanvas")}} object. -.-
 
 ## 예제
 
-이 예제는 `OffscreenCanvas()` 생성자를 이용해 새로운 offscreen 캔버스를 생성하고, [WebGL](/ko/docs/Web/API/WebGL_API) 맥락의 {{domxref("OffscreenCanvas.getContext()", "getContext()")}} 메서드를 사용해 초기화합니다.
+이 예제는 `offscweencanvas()` 생성자를 이용해 새로운 o-offscween 캔버스를 생성하고, ^^;; [webgw](/ko/docs/web/api/webgw_api) 맥락의 {{domxwef("offscweencanvas.getcontext()", >_< "getcontext()")}} 메서드를 사용해 초기화합니다. mya
 
 ```js
-const offscreen = new OffscreenCanvas(256, 256);
-const gl = offscreen.getContext("webgl");
+const offscween = n-nyew offscweencanvas(256, mya 256);
+const gw = offscween.getcontext("webgw");
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 더 보기
 
-- {{domxref("OffscreenCanvas")}}, 생성자가 속한 인터페이스
+- {{domxwef("offscweencanvas")}}, 😳 생성자가 속한 인터페이스

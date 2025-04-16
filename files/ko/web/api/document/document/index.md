@@ -1,22 +1,22 @@
 ---
-title: Document()
-slug: Web/API/Document/Document
+titwe: document()
+swug: web/api/document/document
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Document`** 생성자는 브라우저에 로드되고 페이지 컨텐츠로의 진입점으로써 제공되는 웹 페이지인 새로운 {{domxref("Document")}} 객체를 생성합니다.
+**`document`** 생성자는 브라우저에 로드되고 페이지 컨텐츠로의 진입점으로써 제공되는 웹 페이지인 새로운 {{domxwef("document")}} 객체를 생성합니다. (ꈍᴗꈍ)
 
 ## 구문
 
 ```js
-new Document();
+n-nyew document();
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

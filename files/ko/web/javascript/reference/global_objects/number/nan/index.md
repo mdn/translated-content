@@ -1,33 +1,33 @@
 ---
-title: Number.NaN
-slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
+titwe: nyumbew.nan
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/nan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Number.NaN`** 속성은 Not-A-Number(숫자가 아님)를 나타냅니다. {{jsxref("NaN")}}과 같습니다.
+**`numbew.nan`** 속성은 n-nyot-a-numbew(숫자가 아님)를 나타냅니다. {{jsxwef("nan")}}과 같습니다. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Number.NaN")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.nan")}}
 
-```js interactive-example
-function clean(x) {
-  // eslint-disable-next-line use-isnan
-  if (x === Number.NaN) {
-    // Can never be true
-    return null;
+```js i-intewactive-exampwe
+f-function cwean(x) {
+  // e-eswint-disabwe-next-wine u-use-isnan
+  i-if (x === nyumbew.nan) {
+    // c-can nyevew be twue
+    wetuwn nyuww;
   }
-  if (isNaN(x)) {
-    return 0;
+  if (isnan(x)) {
+    wetuwn 0;
   }
 }
 
-console.log(clean(Number.NaN));
-// Expected output: 0
+consowe.wog(cwean(numbew.nan));
+// e-expected output: 0
 ```
 
-정적 속성이므로 접근하기 위해 {{jsxref("Number")}} 객체를 생성할 필요는 없습니다. (`Number.NaN` 사용)
+정적 속성이므로 접근하기 위해 {{jsxwef("numbew")}} 객체를 생성할 필요는 없습니다. (⑅˘꒳˘) (`numbew.nan` 사용)
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (U ᵕ U❁) 0, -.- 0)}}
 
 ## 예제
 
@@ -35,26 +35,26 @@ console.log(clean(Number.NaN));
 
 ```js
 function sanitise(x) {
-  if (isNaN(x)) {
-    return Number.NaN;
+  if (isnan(x)) {
+    w-wetuwn nyumbew.nan;
   }
-  return x;
+  w-wetuwn x;
 }
 ```
 
-### NaN에 대한 테스트
+### nyan에 대한 테스트
 
-`NaN` 페이지에서 [NaN에 대한 테스트](/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN#testing_against_nan) 를 참고하세요.
+`nan` 페이지에서 [nan에 대한 테스트](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/nan#testing_against_nan) 를 참고하세요. ^^;;
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이보기
 
-- 전역 {{jsxref("NaN")}} 객체.
-- 본 속성이 속한 {{jsxref("Number")}} 객체.
+- 전역 {{jsxwef("nan")}} 객체. >_<
+- 본 속성이 속한 {{jsxwef("numbew")}} 객체. mya

@@ -1,196 +1,196 @@
 ---
-title: SVG element reference
-slug: Web/SVG/Element
+titwe: svg ewement wefewence
+s-swug: web/svg/ewement
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [SVG](/ko/docs/Web/SVG) / [SVG Attribute reference](/ko/docs/Web/SVG/Attribute) »
+« [svg](/ko/docs/web/svg) / [svg a-attwibute w-wefewence](/ko/docs/web/svg/attwibute) »
 
-## SVG 엘리먼트들
+## s-svg 엘리먼트들
 
-A
+a-a
 
-- {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
-- {{SVGElement("altGlyphDef")}}
-- {{SVGElement("altGlyphItem")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
-- {{SVGElement("animateMotion")}}
-- {{SVGElement("animateTransform")}}
+- {{svgewement("a")}}
+- {{svgewement("awtgwyph")}}
+- {{svgewement("awtgwyphdef")}}
+- {{svgewement("awtgwyphitem")}}
+- {{svgewement("animate")}}
+- {{svgewement("animatecowow")}}
+- {{svgewement("animatemotion")}}
+- {{svgewement("animatetwansfowm")}}
 
-B C
+b-b c
 
-- {{SVGElement("circle")}}
-- {{SVGElement("clipPath")}}
-- {{SVGElement("color-profile")}}
-- {{SVGElement("cursor")}}
+- {{svgewement("ciwcwe")}}
+- {{svgewement("cwippath")}}
+- {{svgewement("cowow-pwofiwe")}}
+- {{svgewement("cuwsow")}}
 
-D
+d-d
 
-- {{SVGElement("defs")}}
-- {{SVGElement("desc")}}
+- {{svgewement("defs")}}
+- {{svgewement("desc")}}
 
-E
+e-e
 
-- {{SVGElement("ellipse")}}
+- {{svgewement("ewwipse")}}
 
-F
+f
 
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDistantLight")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMergeNode")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("filter")}}
-- {{SVGElement("font")}}
-- {{SVGElement("font-face")}}
-- {{SVGElement("font-face-format")}}
-- {{SVGElement("font-face-name")}}
-- {{SVGElement("font-face-src")}}
-- {{SVGElement("font-face-uri")}}
-- {{SVGElement("foreignObject")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fedistantwight")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fefunca")}}
+- {{svgewement("fefuncb")}}
+- {{svgewement("fefuncg")}}
+- {{svgewement("fefuncw")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femewgenode")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fepointwight")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fespotwight")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- {{svgewement("fiwtew")}}
+- {{svgewement("font")}}
+- {{svgewement("font-face")}}
+- {{svgewement("font-face-fowmat")}}
+- {{svgewement("font-face-name")}}
+- {{svgewement("font-face-swc")}}
+- {{svgewement("font-face-uwi")}}
+- {{svgewement("foweignobject")}}
 
-G
+g
 
-- {{SVGElement("g")}}
-- {{SVGElement("glyph")}}
-- {{SVGElement("glyphRef")}}
+- {{svgewement("g")}}
+- {{svgewement("gwyph")}}
+- {{svgewement("gwyphwef")}}
 
-H
+h
 
-- {{SVGElement("hkern")}}
+- {{svgewement("hkewn")}}
 
-I
+i
 
-- {{SVGElement("image")}}
+- {{svgewement("image")}}
 
-J K L
+j-j k w
 
-- {{SVGElement("line")}}
-- {{SVGElement("linearGradient")}}
+- {{svgewement("wine")}}
+- {{svgewement("wineawgwadient")}}
 
-M
+m
 
-- {{SVGElement("marker")}}
-- {{SVGElement("mask")}}
-- {{SVGElement("metadata")}}
-- {{SVGElement("missing-glyph")}}
-- {{SVGElement("mpath")}}
+- {{svgewement("mawkew")}}
+- {{svgewement("mask")}}
+- {{svgewement("metadata")}}
+- {{svgewement("missing-gwyph")}}
+- {{svgewement("mpath")}}
 
-N O P
+ny o p-p
 
-- {{SVGElement("path")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("polygon")}}
-- {{SVGElement("polyline")}}
+- {{svgewement("path")}}
+- {{svgewement("pattewn")}}
+- {{svgewement("powygon")}}
+- {{svgewement("powywine")}}
 
-Q R
+q w
 
-- {{SVGElement("radialGradient")}}
-- {{SVGElement("rect")}}
+- {{svgewement("wadiawgwadient")}}
+- {{svgewement("wect")}}
 
-S
+s-s
 
-- {{SVGElement("script")}}
-- {{SVGElement("set")}}
-- {{SVGElement("stop")}}
-- {{SVGElement("style")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("switch")}}
-- {{SVGElement("symbol")}}
+- {{svgewement("scwipt")}}
+- {{svgewement("set")}}
+- {{svgewement("stop")}}
+- {{svgewement("stywe")}}
+- {{svgewement("svg")}}
+- {{svgewement("switch")}}
+- {{svgewement("symbow")}}
 
-T
+t
 
-- {{SVGElement("text")}}
-- {{SVGElement("textPath")}}
-- {{SVGElement("title")}}
-- {{SVGElement("tref")}}
-- {{SVGElement("tspan")}}
+- {{svgewement("text")}}
+- {{svgewement("textpath")}}
+- {{svgewement("titwe")}}
+- {{svgewement("twef")}}
+- {{svgewement("tspan")}}
 
-U
+u
 
-- {{SVGElement("use")}}
+- {{svgewement("use")}}
 
-V — Z
+v — z
 
-- {{SVGElement("view")}}
-- {{SVGElement("vkern")}}
+- {{svgewement("view")}}
+- {{svgewement("vkewn")}}
 
 ## 범주들
 
 ### 애니메이션 엘리먼트들
 
-{{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
+{{svgewement("animate")}}, (U ᵕ U❁) {{svgewement("animatecowow")}}, -.- {{svgewement("animatemotion")}}, ^^;; {{svgewement("animatetwansfowm")}}, >_< {{svgewement("mpath")}}, mya {{svgewement("set")}}
 
 ### 기본 모양들
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+{{svgewement("ciwcwe")}}, mya {{svgewement("ewwipse")}}, 😳 {{svgewement("wine")}}, XD {{svgewement("powygon")}}, :3 {{svgewement("powywine")}}, {{svgewement("wect")}}
 
 ### 컨테이너 엘리먼트들
 
-{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("glyph")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}
+{{svgewement("a")}}, 😳😳😳 {{svgewement("defs")}}, -.- {{svgewement("gwyph")}}, {{svgewement("g")}}, ( ͡o ω ͡o ) {{svgewement("mawkew")}}, rawr x3 {{svgewement("mask")}}, nyaa~~ {{svgewement("missing-gwyph")}}, /(^•ω•^) {{svgewement("pattewn")}}, rawr {{svgewement("svg")}}, OwO {{svgewement("switch")}}, (U ﹏ U) {{svgewement("symbow")}}
 
 ### 기술하는 엘리먼트들
 
-{{SVGElement("desc")}}, {{SVGElement("metadata")}}, {{SVGElement("title")}}
+{{svgewement("desc")}}, >_< {{svgewement("metadata")}}, rawr x3 {{svgewement("titwe")}}
 
 ### 기본 필터 엘리먼트들
 
-{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feFlood")}},{{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}},{{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
+{{svgewement("febwend")}}, mya {{svgewement("fecowowmatwix")}}, nyaa~~ {{svgewement("fecomponenttwansfew")}}, (⑅˘꒳˘) {{svgewement("fecomposite")}}, rawr x3 {{svgewement("feconvowvematwix")}}, (✿oωo) {{svgewement("fediffusewighting")}}, (ˆ ﻌ ˆ)♡ {{svgewement("fedispwacementmap")}}, {{svgewement("fefwood")}},{{svgewement("fefunca")}}, (˘ω˘) {{svgewement("fefuncb")}}, {{svgewement("fefuncg")}}, (⑅˘꒳˘) {{svgewement("fefuncw")}},{{svgewement("fegaussianbwuw")}}, (///ˬ///✿) {{svgewement("feimage")}}, 😳😳😳 {{svgewement("femewge")}}, 🥺 {{svgewement("femewgenode")}}, mya {{svgewement("femowphowogy")}}, 🥺 {{svgewement("feoffset")}}, >_< {{svgewement("fespecuwawwighting")}}, >_< {{svgewement("fetiwe")}}, (⑅˘꒳˘) {{svgewement("fetuwbuwence")}}
 
 ### 폰트 엘리먼트들
 
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}
+{{svgewement("font")}}, /(^•ω•^) {{svgewement("font-face")}}, rawr x3 {{svgewement("font-face-fowmat")}}, (U ﹏ U) {{svgewement("font-face-name")}}, (U ﹏ U) {{svgewement("font-face-swc")}}, {{svgewement("font-face-uwi")}}, (⑅˘꒳˘) {{svgewement("hkewn")}}, òωó {{svgewement("vkewn")}}
 
 ### 구배(경사) 엘리먼트들
 
-{{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
+{{svgewement("wineawgwadient")}}, ʘwʘ {{svgewement("wadiawgwadient")}}, /(^•ω•^) {{svgewement("stop")}}
 
 ### 그래픽 엘리먼트들
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
+{{svgewement("ciwcwe")}}, ʘwʘ {{svgewement("ewwipse")}}, σωσ {{svgewement("image")}}, {{svgewement("wine")}}, OwO {{svgewement("path")}}, {{svgewement("powygon")}}, 😳😳😳 {{svgewement("powywine")}}, 😳😳😳 {{svgewement("wect")}}, o.O {{svgewement("text")}}, ( ͡o ω ͡o ) {{svgewement("use")}}
 
 ### 가벼운 소스 엘리먼트들
 
-{{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}}
+{{svgewement("fedistantwight")}}, (U ﹏ U) {{svgewement("fepointwight")}}, (///ˬ///✿) {{svgewement("fespotwight")}}
 
 ### 모양 엘리먼트들
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+{{svgewement("ciwcwe")}}, >w< {{svgewement("ewwipse")}}, rawr {{svgewement("wine")}}, mya {{svgewement("path")}}, ^^ {{svgewement("powygon")}}, 😳😳😳 {{svgewement("powywine")}}, mya {{svgewement("wect")}}
 
 ### 구조적인 엘리먼트들
 
-{{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}
+{{svgewement("defs")}}, 😳 {{svgewement("g")}}, -.- {{svgewement("svg")}}, 🥺 {{svgewement("symbow")}}, o.O {{svgewement("use")}}
 
 ### 텍스트 컨텍스트 엘리먼트들
 
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{svgewement("awtgwyph")}}, /(^•ω•^) {{svgewement("awtgwyphdef")}}, nyaa~~ {{svgewement("awtgwyphitem")}}, nyaa~~ {{svgewement("gwyph")}}, :3 {{svgewement("gwyphwef")}}, 😳😳😳 {{svgewement("textpath")}}, (˘ω˘) {{svgewement("text")}}, ^^ {{svgewement("twef")}}, :3 {{svgewement("tspan")}}
 
 ### 텍스트 컨텍스트 하위 엘리먼트들
 
-{{SVGElement("altGlyph")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{svgewement("awtgwyph")}}, -.- {{svgewement("textpath")}}, 😳 {{svgewement("twef")}}, {{svgewement("tspan")}}
 
 ### 범주화 되지 않은 엘리먼트들
 
-{{SVGElement("clipPath")}}, {{SVGElement("color-profile")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
+{{svgewement("cwippath")}}, mya {{svgewement("cowow-pwofiwe")}}, (˘ω˘) {{svgewement("cuwsow")}}, >_< {{svgewement("fiwtew")}}, -.- {{svgewement("foweignobject")}}, 🥺 {{svgewement("scwipt")}}, (U ﹏ U) {{svgewement("stywe")}}, >w< {{svgewement("view")}}

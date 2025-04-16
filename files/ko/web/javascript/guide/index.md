@@ -1,166 +1,166 @@
 ---
-title: JavaScript 안내서
-slug: Web/JavaScript/Guide
+titwe: javascwipt 안내서
+swug: web/javascwipt/guide
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt g-guide")}}
 
-JavaScript 안내서에서 [JavaScript](/ko/docs/Web/JavaScript) 언어 개요와 사용법을 알아보세요. 언어 기능에 대해 상세한 정보가 필요하면 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference)를 방문하세요.
+j-javascwipt 안내서에서 [javascwipt](/ko/docs/web/javascwipt) 언어 개요와 사용법을 알아보세요. 😳 언어 기능에 대해 상세한 정보가 필요하면 [javascwipt 참고서](/ko/docs/web/javascwipt/wefewence)를 방문하세요. mya
 
-본 안내서는 여러 장으로 구성되어 있습니다.
+본 안내서는 여러 장으로 구성되어 있습니다. (˘ω˘)
 
 ## 소개
 
-Overview: [Introduction](/ko/docs/Web/JavaScript/Guide/Introduction)
+o-ovewview: [intwoduction](/ko/docs/web/javascwipt/guide/intwoduction)
 
-- [About this guide](/ko/docs/Web/JavaScript/Guide/Introduction#where_to_find_javascript_information)
-- [About JavaScript](/ko/docs/Web/JavaScript/Guide/Introduction#what_is_javascript)
-- [JavaScript and Java](/ko/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
-- [ECMAScript](/ko/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
-- [Tools](/ko/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
-- [Hello World](/ko/docs/Web/JavaScript/Guide/Introduction#hello_world)
+- [about t-this guide](/ko/docs/web/javascwipt/guide/intwoduction#whewe_to_find_javascwipt_infowmation)
+- [about j-javascwipt](/ko/docs/web/javascwipt/guide/intwoduction#nani_is_javascwipt)
+- [javascwipt a-and java](/ko/docs/web/javascwipt/guide/intwoduction#javascwipt_and_java)
+- [ecmascwipt](/ko/docs/web/javascwipt/guide/intwoduction#javascwipt_and_the_ecmascwipt_specification)
+- [toows](/ko/docs/web/javascwipt/guide/intwoduction#getting_stawted_with_javascwipt)
+- [hewwo w-wowwd](/ko/docs/web/javascwipt/guide/intwoduction#hewwo_wowwd)
 
-## Grammar and types
+## g-gwammaw and types
 
-Overview: [Grammar and types](/ko/docs/Web/JavaScript/Guide/Grammar_and_types)
+ovewview: [gwammaw and types](/ko/docs/web/javascwipt/guide/gwammaw_and_types)
 
-- [Basic syntax & comments](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#basics)
-- [Declarations](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
-- [Variable scope](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope)
-- [Variable hoisting](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
-- [Data structures and types](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#data_structures_and_types)
-- [Literals](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#literals)
+- [basic syntax & comments](/ko/docs/web/javascwipt/guide/gwammaw_and_types#basics)
+- [decwawations](/ko/docs/web/javascwipt/guide/gwammaw_and_types#decwawations)
+- [vawiabwe scope](/ko/docs/web/javascwipt/guide/gwammaw_and_types#vawiabwe_scope)
+- [vawiabwe h-hoisting](/ko/docs/web/javascwipt/guide/gwammaw_and_types#vawiabwe_hoisting)
+- [data stwuctuwes and types](/ko/docs/web/javascwipt/guide/gwammaw_and_types#data_stwuctuwes_and_types)
+- [witewaws](/ko/docs/web/javascwipt/guide/gwammaw_and_types#witewaws)
 
-## Control flow and error handling
+## c-contwow fwow and ewwow h-handwing
 
-Overview: [Control flow and error handling](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+ovewview: [contwow fwow and ewwow handwing](/ko/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing)
 
-- [`if...else`](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement)
-- [`switch`](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement)
-- [`try`/`catch`/`throw`](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)
-- [Error objects](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#utilizing_error_objects)
+- [`if...ewse`](/ko/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#if...ewse_statement)
+- [`switch`](/ko/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#switch_statement)
+- [`twy`/`catch`/`thwow`](/ko/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#exception_handwing_statements)
+- [ewwow objects](/ko/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#utiwizing_ewwow_objects)
 
-## Loops and iteration
+## w-woops and itewation
 
-Overview: [Loops and iteration](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration)
+o-ovewview: [woops a-and itewation](/ko/docs/web/javascwipt/guide/woops_and_itewation)
 
-- [`for`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
-- [`while`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement)
-- [`do...while`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement)
-- [`continue`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement)
-- [`break`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement)
-- [`for..in`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
-- [`for..of`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+- [`fow`](/ko/docs/web/javascwipt/guide/woops_and_itewation#fow_statement)
+- [`whiwe`](/ko/docs/web/javascwipt/guide/woops_and_itewation#whiwe_statement)
+- [`do...whiwe`](/ko/docs/web/javascwipt/guide/woops_and_itewation#do...whiwe_statement)
+- [`continue`](/ko/docs/web/javascwipt/guide/woops_and_itewation#continue_statement)
+- [`bweak`](/ko/docs/web/javascwipt/guide/woops_and_itewation#bweak_statement)
+- [`fow..in`](/ko/docs/web/javascwipt/guide/woops_and_itewation#fow...in_statement)
+- [`fow..of`](/ko/docs/web/javascwipt/guide/woops_and_itewation#fow...of_statement)
 
-## Functions
+## functions
 
-Overview: [Functions](/ko/docs/Web/JavaScript/Guide/Functions)
+ovewview: [functions](/ko/docs/web/javascwipt/guide/functions)
 
-- [Defining functions](/ko/docs/Web/JavaScript/Guide/Functions#defining_functions)
-- [Calling functions](/ko/docs/Web/JavaScript/Guide/Functions#calling_functions)
-- [Function scope](/ko/docs/Web/JavaScript/Guide/Functions#function_scope)
-- [Closures](/ko/docs/Web/JavaScript/Guide/Functions#closures)
-- [Arguments](/ko/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object) & [parameters](/ko/docs/Web/JavaScript/Guide/Functions#function_parameters)
-- [Arrow functions](/ko/docs/Web/JavaScript/Guide/Functions#arrow_functions)
+- [defining functions](/ko/docs/web/javascwipt/guide/functions#defining_functions)
+- [cawwing functions](/ko/docs/web/javascwipt/guide/functions#cawwing_functions)
+- [function s-scope](/ko/docs/web/javascwipt/guide/functions#function_scope)
+- [cwosuwes](/ko/docs/web/javascwipt/guide/functions#cwosuwes)
+- [awguments](/ko/docs/web/javascwipt/guide/functions#using_the_awguments_object) & [pawametews](/ko/docs/web/javascwipt/guide/functions#function_pawametews)
+- [awwow functions](/ko/docs/web/javascwipt/guide/functions#awwow_functions)
 
-## Expressions and operators
+## expwessions and opewatows
 
-Overview: [Expressions and operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators)
+ovewview: [expwessions and opewatows](/ko/docs/web/javascwipt/guide/expwessions_and_opewatows)
 
-- [Assignment](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) & [Comparisons](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)
-- [Arithmetic operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators)
-- [Bitwise](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [logical operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
-- [Conditional (ternary) operator](</ko/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_(ternary)_operator>)
+- [assignment](/ko/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment_opewatows) & [compawisons](/ko/docs/web/javascwipt/guide/expwessions_and_opewatows#compawison_opewatows)
+- [awithmetic o-opewatows](/ko/docs/web/javascwipt/guide/expwessions_and_opewatows#awithmetic_opewatows)
+- [bitwise](/ko/docs/web/javascwipt/guide/expwessions_and_opewatows#bitwise_opewatows) & [wogicaw opewatows](/ko/docs/web/javascwipt/guide/expwessions_and_opewatows#wogicaw_opewatows)
+- [conditionaw (tewnawy) o-opewatow](</ko/docs/web/javascwipt/guide/expwessions_and_opewatows#conditionaw_(tewnawy)_opewatow>)
 
-## Numbers and dates
+## n-nyumbews and d-dates
 
-Overview: [Numbers and dates](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings)
+ovewview: [numbews a-and dates](/ko/docs/web/javascwipt/guide/numbews_and_stwings)
 
-- [Number literals](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings#numbers)
-- [`Number` object](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings#number_object)
-- [`Math` object](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings#math_object)
-- [`Date` object](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings#date_object)
+- [numbew witewaws](/ko/docs/web/javascwipt/guide/numbews_and_stwings#numbews)
+- [`numbew` o-object](/ko/docs/web/javascwipt/guide/numbews_and_stwings#numbew_object)
+- [`math` object](/ko/docs/web/javascwipt/guide/numbews_and_stwings#math_object)
+- [`date` object](/ko/docs/web/javascwipt/guide/numbews_and_stwings#date_object)
 
-## Text formatting
+## t-text fowmatting
 
-Overview: [Text formatting](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
+ovewview: [text fowmatting](/ko/docs/confwicting/web/javascwipt/guide/numbews_and_stwings)
 
-- [String literals](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#string_literals)
-- [`String` object](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#string_objects)
-- [Template literals](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#multi-line_template_literals)
-- [Internationalization](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#internationalization)
-- [Regular Expressions](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
+- [stwing witewaws](/ko/docs/confwicting/web/javascwipt/guide/numbews_and_stwings#stwing_witewaws)
+- [`stwing` object](/ko/docs/confwicting/web/javascwipt/guide/numbews_and_stwings#stwing_objects)
+- [tempwate witewaws](/ko/docs/confwicting/web/javascwipt/guide/numbews_and_stwings#muwti-wine_tempwate_witewaws)
+- [intewnationawization](/ko/docs/confwicting/web/javascwipt/guide/numbews_and_stwings#intewnationawization)
+- [weguwaw e-expwessions](/ko/docs/web/javascwipt/guide/weguwaw_expwessions)
 
-## Indexed collections
+## indexed cowwections
 
-Overview: [Indexed collections](/ko/docs/Web/JavaScript/Guide/Indexed_collections)
+o-ovewview: [indexed c-cowwections](/ko/docs/web/javascwipt/guide/indexed_cowwections)
 
-- [Arrays](/ko/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
-- [Typed arrays](/ko/docs/Web/JavaScript/Guide/Indexed_collections#typed_arrays)
+- [awways](/ko/docs/web/javascwipt/guide/indexed_cowwections#awway_object)
+- [typed a-awways](/ko/docs/web/javascwipt/guide/indexed_cowwections#typed_awways)
 
-## Keyed collections
+## keyed cowwections
 
-Overview: [Keyed collections](/ko/docs/Web/JavaScript/Guide/Keyed_collections)
+ovewview: [keyed c-cowwections](/ko/docs/web/javascwipt/guide/keyed_cowwections)
 
-- [`Map`](/ko/docs/Web/JavaScript/Guide/Keyed_collections#map_object)
-- [`WeakMap`](/ko/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
-- [`Set`](/ko/docs/Web/JavaScript/Guide/Keyed_collections#set_object)
-- [`WeakSet`](/ko/docs/Web/JavaScript/Guide/Keyed_collections#weakset_object)
+- [`map`](/ko/docs/web/javascwipt/guide/keyed_cowwections#map_object)
+- [`weakmap`](/ko/docs/web/javascwipt/guide/keyed_cowwections#weakmap_object)
+- [`set`](/ko/docs/web/javascwipt/guide/keyed_cowwections#set_object)
+- [`weakset`](/ko/docs/web/javascwipt/guide/keyed_cowwections#weakset_object)
 
-## Working with objects
+## w-wowking with objects
 
-Overview: [Working with objects](/ko/docs/Web/JavaScript/Guide/Working_with_objects)
+o-ovewview: [wowking w-with objects](/ko/docs/web/javascwipt/guide/wowking_with_objects)
 
-- [Objects and properties](/ko/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties)
-- [Creating objects](/ko/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects)
-- [Defining methods](/ko/docs/Web/JavaScript/Guide/Working_with_objects#defining_methods)
-- [Getter and setter](/ko/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
+- [objects and pwopewties](/ko/docs/web/javascwipt/guide/wowking_with_objects#objects_and_pwopewties)
+- [cweating o-objects](/ko/docs/web/javascwipt/guide/wowking_with_objects#cweating_new_objects)
+- [defining methods](/ko/docs/web/javascwipt/guide/wowking_with_objects#defining_methods)
+- [gettew a-and settew](/ko/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews)
 
-## Using classes
+## using cwasses
 
-Overview: [Using classes](/ko/docs/Web/JavaScript/Using_Classes)
+ovewview: [using c-cwasses](/ko/docs/web/javascwipt/using_cwasses)
 
-- [Declaring a class](/ko/docs/Web/JavaScript/Using_Classes#declaring_a_class)
-- [Various class features](/ko/docs/Web/JavaScript/Guide/Using_Classes#constructor)
-- [Extends and inheritance](/ko/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
-- [Why classes?](/ko/docs/Web/JavaScript/Guide/Using_Classes#why_classes)
+- [decwawing a cwass](/ko/docs/web/javascwipt/using_cwasses#decwawing_a_cwass)
+- [vawious c-cwass featuwes](/ko/docs/web/javascwipt/guide/using_cwasses#constwuctow)
+- [extends a-and inhewitance](/ko/docs/web/javascwipt/guide/using_cwasses#extends_and_inhewitance)
+- [why c-cwasses?](/ko/docs/web/javascwipt/guide/using_cwasses#why_cwasses)
 
-## Promises
+## pwomises
 
-Overview: [Promises](/ko/docs/Web/JavaScript/Guide/Using_promises)
+ovewview: [pwomises](/ko/docs/web/javascwipt/guide/using_pwomises)
 
-- [Guarantees](/ko/docs/Web/JavaScript/Guide/Using_promises#guarantees)
-- [Chaining](/ko/docs/Web/JavaScript/Guide/Using_promises#chaining)
-- [Error propagation](/ko/docs/Web/JavaScript/Guide/Using_promises#error_propagation)
-- [Composition](/ko/docs/Web/JavaScript/Guide/Using_promises#composition)
-- [Timing](/ko/docs/Web/JavaScript/Guide/Using_promises#timing)
+- [guawantees](/ko/docs/web/javascwipt/guide/using_pwomises#guawantees)
+- [chaining](/ko/docs/web/javascwipt/guide/using_pwomises#chaining)
+- [ewwow pwopagation](/ko/docs/web/javascwipt/guide/using_pwomises#ewwow_pwopagation)
+- [composition](/ko/docs/web/javascwipt/guide/using_pwomises#composition)
+- [timing](/ko/docs/web/javascwipt/guide/using_pwomises#timing)
 
-## Iterators and generators
+## itewatows and genewatows
 
-Overview: [Iterators and generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)
+ovewview: [itewatows and genewatows](/ko/docs/web/javascwipt/guide/itewatows_and_genewatows)
 
-- [Iterators](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators)
-- [Iterables](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators#iterables)
-- [Generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators#generators)
+- [itewatows](/ko/docs/web/javascwipt/guide/itewatows_and_genewatows#itewatows)
+- [itewabwes](/ko/docs/web/javascwipt/guide/itewatows_and_genewatows#itewabwes)
+- [genewatows](/ko/docs/web/javascwipt/guide/itewatows_and_genewatows#genewatows)
 
-## Meta programming
+## meta pwogwamming
 
-Overview: [Meta programming](/ko/docs/Web/JavaScript/Guide/Meta_programming)
+o-ovewview: [meta p-pwogwamming](/ko/docs/web/javascwipt/guide/meta_pwogwamming)
 
-- [`Proxy`](/ko/docs/Web/JavaScript/Guide/Meta_programming#proxies)
-- [Handlers and traps](/ko/docs/Web/JavaScript/Guide/Meta_programming#handlers_and_traps)
-- [Revocable Proxy](/ko/docs/Web/JavaScript/Guide/Meta_programming#revocable_proxy)
-- [`Reflect`](/ko/docs/Web/JavaScript/Guide/Meta_programming#reflection)
+- [`pwoxy`](/ko/docs/web/javascwipt/guide/meta_pwogwamming#pwoxies)
+- [handwews and twaps](/ko/docs/web/javascwipt/guide/meta_pwogwamming#handwews_and_twaps)
+- [wevocabwe p-pwoxy](/ko/docs/web/javascwipt/guide/meta_pwogwamming#wevocabwe_pwoxy)
+- [`wefwect`](/ko/docs/web/javascwipt/guide/meta_pwogwamming#wefwection)
 
-## JavaScript modules
+## j-javascwipt moduwes
 
-Overview: [JavaScript modules](/ko/docs/Web/JavaScript/Guide/Modules)
+o-ovewview: [javascwipt moduwes](/ko/docs/web/javascwipt/guide/moduwes)
 
-- [Exporting](/ko/docs/Web/JavaScript/Guide/Modules#exporting_module_features)
-- [Importing](/ko/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script)
-- [Default exports](/ko/docs/Web/JavaScript/Guide/Modules#default_exports_versus_named_exports)
-- [Renaming features](/ko/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports)
-- [Aggregating modules](/ko/docs/Web/JavaScript/Guide/Modules#aggregating_modules)
-- [Dynamic module loading](/ko/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
+- [expowting](/ko/docs/web/javascwipt/guide/moduwes#expowting_moduwe_featuwes)
+- [impowting](/ko/docs/web/javascwipt/guide/moduwes#impowting_featuwes_into_youw_scwipt)
+- [defauwt expowts](/ko/docs/web/javascwipt/guide/moduwes#defauwt_expowts_vewsus_named_expowts)
+- [wenaming featuwes](/ko/docs/web/javascwipt/guide/moduwes#wenaming_impowts_and_expowts)
+- [aggwegating moduwes](/ko/docs/web/javascwipt/guide/moduwes#aggwegating_moduwes)
+- [dynamic m-moduwe woading](/ko/docs/web/javascwipt/guide/moduwes#dynamic_moduwe_woading)
 
-{{Next("Web/JavaScript/Guide/Introduction")}}
+{{next("web/javascwipt/guide/intwoduction")}}

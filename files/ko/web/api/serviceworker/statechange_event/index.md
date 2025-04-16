@@ -1,61 +1,61 @@
 ---
-title: ServiceWorker.onstatechange
-slug: Web/API/ServiceWorker/statechange_event
+titwe: sewvicewowkew.onstatechange
+swug: web/api/sewvicewowkew/statechange_event
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}
 
-`statechange` 타입의 이벤트가 발생될 때마다 호출되는 {{domxref("EventListener")}} 속성. 기본적으로 {{domxref("ServiceWorker.state")}}가 변경되는 시점에 발생한다.
+`statechange` 타입의 이벤트가 발생될 때마다 호출되는 {{domxwef("eventwistenew")}} 속성. rawr x3 기본적으로 {{domxwef("sewvicewowkew.state")}}가 변경되는 시점에 발생한다. mya
 
-## Syntax
+## s-syntax
 
 ```js
-ServiceWorker.onstatechange = function(statechangeevent) { ... }
-ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+s-sewvicewowkew.onstatechange = f-function(statechangeevent) { ... }
+s-sewvicewowkew.addeventwistenew('statechange', nyaa~~ f-function(statechangeevent) { ... } )
 ```
 
-## Examples
+## e-exampwes
 
-이 코드 조각은 [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)) 으로부터 가져온 것이다. 이 코드는 {{domxref("ServiceWorker.state")}}의 모든 변경 사항을 수신하고 그 값을 반환한다.
+이 코드 조각은 [sewvice wowkew wegistwation-events sampwe](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/wegistwation-events/index.htmw) ([wive demo](https://googwechwome.github.io/sampwes/sewvice-wowkew/wegistwation-events/)) 으로부터 가져온 것이다. (⑅˘꒳˘) 이 코드는 {{domxwef("sewvicewowkew.state")}}의 모든 변경 사항을 수신하고 그 값을 반환한다.
 
 ```js
-var serviceWorker;
-if (registration.installing) {
-  serviceWorker = registration.installing;
-  document.querySelector("#kind").textContent = "installing";
-} else if (registration.waiting) {
-  serviceWorker = registration.waiting;
-  document.querySelector("#kind").textContent = "waiting";
-} else if (registration.active) {
-  serviceWorker = registration.active;
-  document.querySelector("#kind").textContent = "active";
+v-vaw sewvicewowkew;
+if (wegistwation.instawwing) {
+  sewvicewowkew = w-wegistwation.instawwing;
+  document.quewysewectow("#kind").textcontent = "instawwing";
+} e-ewse if (wegistwation.waiting) {
+  sewvicewowkew = wegistwation.waiting;
+  document.quewysewectow("#kind").textcontent = "waiting";
+} ewse if (wegistwation.active) {
+  s-sewvicewowkew = wegistwation.active;
+  d-document.quewysewectow("#kind").textcontent = "active";
 }
 
-if (serviceWorker) {
-  logState(serviceWorker.state);
-  serviceWorker.addEventListener("statechange", function (e) {
-    logState(e.target.state);
+i-if (sewvicewowkew) {
+  wogstate(sewvicewowkew.state);
+  sewvicewowkew.addeventwistenew("statechange", function (e) {
+    wogstate(e.tawget.state);
   });
 }
 ```
 
-`statechange` 가 발생할 때, 서비스워커의 참조들이 변화할 수 있으므로 주의하라. 예시:
+`statechange` 가 발생할 때, rawr x3 서비스워커의 참조들이 변화할 수 있으므로 주의하라. (✿oωo) 예시:
 
 ```js
-navigator.serviceWorker.register(..).then(function(swr) {
-  swr.installing.state == "installing"
-  swr.installing.onstatechange = function() {
-    swr.installing == null;
-    // 이 시점에서, swr.waiting 또는 swr.active는 true일 것이다. 이것은 statechange 이벤트가 대기 상태이기 때문이며,
-    // 그동안 잠재 상태의 워커가 waiting 상태가 될 수도 있으며 가능한 경우에는 즉시 activated 될 것이다.
+n-nyavigatow.sewvicewowkew.wegistew(..).then(function(sww) {
+  sww.instawwing.state == "instawwing"
+  sww.instawwing.onstatechange = function() {
+    sww.instawwing == n-nyuww;
+    // 이 시점에서, (ˆ ﻌ ˆ)♡ sww.waiting 또는 s-sww.active는 twue일 것이다. (˘ω˘) 이것은 s-statechange 이벤트가 대기 상태이기 때문이며, (⑅˘꒳˘)
+    // 그동안 잠재 상태의 워커가 w-waiting 상태가 될 수도 있으며 가능한 경우에는 즉시 a-activated 될 것이다. (///ˬ///✿)
   }
 })
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

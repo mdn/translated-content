@@ -1,43 +1,43 @@
 ---
-title: DOMRect()
-slug: Web/API/DOMRect/DOMRect
+titwe: domwect()
+swug: web/api/domwect/domwect
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-**`DOMRect()`** 생성자는 새로운 {{domxref("DOMRect")}} 객체를 생성합니다.
+**`domwect()`** 생성자는 새로운 {{domxwef("domwect")}} 객체를 생성합니다. 🥺
 
 ## 구문
 
 ```js
-new DOMRect(x, y, width, height);
+n-nyew domwect(x, òωó y-y, width, o.O height);
 ```
 
 ### 매개변수
 
 - `x`
-  - : `DOMRect` 원점의 X 좌표입니다.
+  - : `domwect` 원점의 x 좌표입니다. (U ᵕ U❁)
 - `y`
-  - : `DOMRect` 원점의 Y 좌표입니다.
+  - : `domwect` 원점의 y-y 좌표입니다. (⑅˘꒳˘)
 - `width`
-  - : `DOMRect`의 너비입니다.
+  - : `domwect`의 너비입니다. ( ͡o ω ͡o )
 - `height`
-  - : `DOMRect`의 높이입니다.
+  - : `domwect`의 높이입니다. UwU
 
 ### 반환 값
 
-새로운 {{domxref("DOMRect")}} 객체.
+새로운 {{domxwef("domwect")}} 객체. rawr x3
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{domxref("DOMPoint")}}
-- {{domxref("DOMRect")}}
-- {{domxref("DOMRect.fromRect()")}}
+- {{domxwef("dompoint")}}
+- {{domxwef("domwect")}}
+- {{domxwef("domwect.fwomwect()")}}

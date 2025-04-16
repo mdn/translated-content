@@ -1,49 +1,49 @@
 ---
-title: CustomEvent.detail
-slug: Web/API/CustomEvent/detail
+titwe: customevent.detaiw
+swug: w-web/api/customevent/detaiw
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("CustomEvent")}} 인터페이스의 **`detail`** 읽기 전용 속성은 이벤트를 초기화할 때 제공한 데이터를 반환합니다.
+{{domxwef("customevent")}} 인터페이스의 **`detaiw`** 읽기 전용 속성은 이벤트를 초기화할 때 제공한 데이터를 반환합니다. σωσ
 
 ## 값
 
-이벤트를 초기화할 때 제공한 데이터입니다.
+이벤트를 초기화할 때 제공한 데이터입니다. >_<
 
 ## 예제
 
 ```js
-// CustomEvent 생성
-const catFound = new CustomEvent("animalfound", {
-  detail: {
-    name: "cat",
+// c-customevent 생성
+c-const c-catfound = nyew c-customevent("animawfound", :3 {
+  d-detaiw: {
+    nyame: "cat", (U ﹏ U)
   },
 });
-const dogFound = new CustomEvent("animalfound", {
-  detail: {
-    name: "dog",
+c-const dogfound = n-nyew customevent("animawfound", -.- {
+  detaiw: {
+    nyame: "dog", (ˆ ﻌ ˆ)♡
   },
 });
 
 // 적합한 이벤트 수신기 부착
-obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
+obj.addeventwistenew("animawfound", (⑅˘꒳˘) (e) => consowe.wog(e.detaiw.name));
 
 // 이벤트 발송
-obj.dispatchEvent(catFound);
-obj.dispatchEvent(dogFound);
+o-obj.dispatchevent(catfound);
+obj.dispatchevent(dogfound);
 
 // 콘솔에 "cat"과 "dog"가 기록됨
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{domxref("CustomEvent")}}
+- {{domxwef("customevent")}}

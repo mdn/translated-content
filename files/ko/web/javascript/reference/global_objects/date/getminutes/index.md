@@ -1,53 +1,53 @@
 ---
-title: Date.prototype.getMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
+titwe: date.pwototype.getminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getMinutes()`** 메서드는 `Date` 인스턴스의 분을 현지 시간 기준으로 반환합니다.
+**`getminutes()`** 메서드는 `date` 인스턴스의 분을 현지 시간 기준으로 반환합니다. rawr
 
-{{InteractiveExample("JavaScript Demo: Date.getMinutes()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getminutes()")}}
 
-```js interactive-example
-const birthday = new Date("March 13, 08 04:20");
+```js i-intewactive-exampwe
+c-const biwthday = n-nyew date("mawch 13, σωσ 08 04:20");
 
-console.log(birthday.getMinutes());
-// Expected output: 20
+c-consowe.wog(biwthday.getminutes());
+// e-expected output: 20
 ```
 
 ## 구문
 
 ```js
-dateObj.getMinutes();
+d-dateobj.getminutes();
 ```
 
 ### 반환 값
 
-주어진 날짜의 현지 시간 기준 분을 나타내는 0에서 59 사이의 정수.
+주어진 날짜의 현지 시간 기준 분을 나타내는 0에서 59 사이의 정수. σωσ
 
 ## 예제
 
-### `getMinutes()` 사용하기
+### `getminutes()` 사용하기
 
-다음 예제는 {{jsxref("Date")}} 객체 `Xmas95`의 분을 사용해 변수 `minutes`에 15를 할당합니다.
+다음 예제는 {{jsxwef("date")}} 객체 `xmas95`의 분을 사용해 변수 `minutes`에 15를 할당합니다. >_<
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var minutes = Xmas95.getMinutes();
+v-vaw xmas95 = nyew date("decembew 25, :3 1995 23:15:30");
+vaw minutes = xmas95.getminutes();
 
-console.log(minutes); // 15
+consowe.wog(minutes); // 15
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Date.prototype.getUTCMinutes()")}}
-- {{jsxref("Date.prototype.setMinutes()")}}
+- {{jsxwef("date.pwototype.getutcminutes()")}}
+- {{jsxwef("date.pwototype.setminutes()")}}

@@ -1,59 +1,59 @@
 ---
-title: FormData.entries()
-slug: Web/API/FormData/entries
+titwe: fowmdata.entwies()
+swug: w-web/api/fowmdata/entwies
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`FormData.entries()`** 메서드는 이 객체에 포함된 모든 key/value 쌍을 통과하는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 각 쌍의 key는 {{domxref("USVString")}} 객체입니다; value는 {{domxref("USVString")}} 또는 {{domxref("Blob")}} 중 하나입니다.
+**`fowmdata.entwies()`** 메서드는 이 객체에 포함된 모든 k-key/vawue 쌍을 통과하는 {{jsxwef("itewation_pwotocows",'itewatow')}} 를 반환합니다. mya 각 쌍의 k-key는 {{domxwef("usvstwing")}} 객체입니다; v-vawue는 {{domxwef("usvstwing")}} 또는 {{domxwef("bwob")}} 중 하나입니다. 😳
 
-> [!NOTE]
-> 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
+> [!note]
+> 이 메서드는 [web w-wowkew](/ko/docs/web/api/web_wowkews_api)에서 사용할 수 있습니다. XD
 
-## Syntax
+## s-syntax
 
 ```js
-formData.entries();
+fowmdata.entwies();
 ```
 
-### Return value
+### w-wetuwn vawue
 
-{{jsxref("Iteration_protocols","iterator")}}를 리턴합니다.
+{{jsxwef("itewation_pwotocows","itewatow")}}를 리턴합니다. :3
 
-## Example
+## exampwe
 
 ```js
-// Create a test FormData object
-var formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+// cweate a test fowmdata object
+vaw fowmdata = nyew f-fowmdata();
+fowmdata.append("key1", 😳😳😳 "vawue1");
+fowmdata.append("key2", -.- "vawue2");
 
-// Display the key/value pairs
-for (var pair of formData.entries()) {
-  console.log(pair[0] + ", " + pair[1]);
+// dispway t-the key/vawue paiws
+fow (vaw paiw o-of fowmdata.entwies()) {
+  consowe.wog(paiw[0] + ", ( ͡o ω ͡o ) " + paiw[1]);
 }
 ```
 
 결과는 다음과 같습니다:
 
 ```
-key1, value1
-key2, value2
+key1, rawr x3 vawue1
+k-key2, nyaa~~ vawue2
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [using x-xmwhttpwequest](/ko/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata objects](/ko/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

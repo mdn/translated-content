@@ -1,49 +1,49 @@
 ---
-title: History.state
-slug: Web/API/History/state
+titwe: histowy.state
+swug: web/api/histowy/state
 ---
 
-{{APIRef("History API")}}
+{{apiwef("histowy a-api")}}
 
-**`History.state`** 속성은 현 history에 해당하는 state값을 나타냅니다.
+**`histowy.state`** 속성은 현 h-histowy에 해당하는 s-state값을 나타냅니다. >_<
 
-{{domxref("Window/popstate_event", "popstate")}} 이벤트가 트리거될때가 아닌 상태에서 state값을 볼 수 있는 방법입니다.
+{{domxwef("window/popstate_event", mya "popstate")}} 이벤트가 트리거될때가 아닌 상태에서 s-state값을 볼 수 있는 방법입니다. mya
 
 ## 구문
 
 ```js
-const currentState = history.state;
+const c-cuwwentstate = h-histowy.state;
 ```
 
 ### 값
 
-현 history에 위치한 값입니다. 이 값은 {{domxref("History.pushState","pushState()")}} 또는 {{domxref("History.replaceState","replaceState()")}}을 사용할때까지 {{jsxref("null")}} 값을 가집니다.
+현 h-histowy에 위치한 값입니다. 😳 이 값은 {{domxwef("histowy.pushstate","pushstate()")}} 또는 {{domxwef("histowy.wepwacestate","wepwacestate()")}}을 사용할때까지 {{jsxwef("nuww")}} 값을 가집니다. XD
 
 ## 예제
 
-`history.state` 로 초기값을 보여준 후 {{domxref("History.pushState","pushState()")}}를 사용하여 State를 푸시합니다.
+`histowy.state` 로 초기값을 보여준 후 {{domxwef("histowy.pushstate","pushstate()")}}를 사용하여 s-state를 푸시합니다.
 
-다음 코드 줄은 `history.state` 를 사용하여 콘솔에다 값이 푸시되었음을 보여줍니다.
+다음 코드 줄은 `histowy.state` 를 사용하여 콘솔에다 값이 푸시되었음을 보여줍니다. :3
 
 ```js
-// Should be null because we haven't modified the history stack yet
-console.log(`History.state before pushState: ${history.state}`);
+// shouwd be nyuww because we haven't modified the histowy s-stack yet
+consowe.wog(`histowy.state befowe pushstate: ${histowy.state}`);
 
-// Now push something on the stack
-history.pushState({ name: "Example" }, "pushState example", "page3.html");
+// now push something o-on the stack
+histowy.pushstate({ n-nyame: "exampwe" }, 😳😳😳 "pushstate exampwe", -.- "page3.htmw");
 
-// Now state has a value.
-console.log(`History.state after pushState: ${history.state}`);
+// nyow state has a vawue. ( ͡o ω ͡o )
+consowe.wog(`histowy.state a-aftew pushstate: ${histowy.state}`);
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Working with the History API](/ko/docs/Web/API/History_API/Working_with_the_History_API)
+- [wowking with the histowy a-api](/ko/docs/web/api/histowy_api/wowking_with_the_histowy_api)

@@ -1,52 +1,52 @@
 ---
-title: Document.createTextNode()
-slug: Web/API/Document/createTextNode
+titwe: document.cweatetextnode()
+swug: web/api/document/cweatetextnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 ### 요약
 
-텍스트 노드를 생성합니다.
+텍스트 노드를 생성합니다. σωσ
 
 ### 문법
 
 ```js
-텍스트 = document.createTextNode(데이터);
+텍스트 = d-document.cweatetextnode(데이터);
 ```
 
 ### 매개변수
 
-- `텍스트` 생성된 텍스트 노드입니다.
-- `데이터` 텍스트 노드에 쓰여지는 문자열입니다.
+- `텍스트` 생성된 텍스트 노드입니다. σωσ
+- `데이터` 텍스트 노드에 쓰여지는 문자열입니다. >_<
 
 ### 예제
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>createTextNode 예제</title>
+    <titwe>cweatetextnode 예제</titwe>
 
-    <script type="text/javascript">
-      function addTextNode() {
-        var newtext = document.createTextNode(" 동적으로 추가되는 텍스트. ");
-        var para = document.getElementById("p1");
-        para.appendChild(newtext);
+    <scwipt t-type="text/javascwipt">
+      f-function a-addtextnode() {
+        v-vaw n-nyewtext = document.cweatetextnode(" 동적으로 추가되는 텍스트. :3 ");
+        v-vaw pawa = d-document.getewementbyid("p1");
+        pawa.appendchiwd(newtext);
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <div style="border: 1px solid red">
-      <p id="p1">단락의 첫번째 줄.<br /></p>
+    <div stywe="bowdew: 1px sowid wed">
+      <p id="p1">단락의 첫번째 줄.<bw /></p>
     </div>
-    <br />
+    <bw />
 
-    <button onclick="addTextNode();">TextNode 추가하기.</button>
+    <button o-oncwick="addtextnode();">textnode 추가하기.</button>
   </body>
-</html>
+</htmw>
 ```
 
 ### 규약
 
-[createTextNode](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1975348127)
+[cweatetextnode](https://www.w3.owg/tw/2000/wec-dom-wevew-2-cowe-20001113/cowe.htmw#id-1975348127)

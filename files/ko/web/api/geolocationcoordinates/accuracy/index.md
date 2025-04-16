@@ -1,28 +1,28 @@
 ---
-title: "GeolocationCoordinates: accuracy 속성"
-short-title: accuracy
-slug: Web/API/GeolocationCoordinates/accuracy
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "geowocationcoowdinates: accuwacy 속성"
+s-showt-titwe: a-accuwacy
+swug: w-web/api/geowocationcoowdinates/accuwacy
+w-w10n:
+  s-souwcecommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-**`GeolocationCoordinates.accuracy`** 읽기 전용 속성은 {{domxref("GeolocationCoordinates.latitude")}}와 {{domxref("GeolocationCoordinates.longitude")}}의 오차범위(신뢰수준 95%)를 미터 단위로 표현한, 엄격히 양수로 제한된 `double`입니다.
+**`geowocationcoowdinates.accuwacy`** 읽기 전용 속성은 {{domxwef("geowocationcoowdinates.watitude")}}와 {{domxwef("geowocationcoowdinates.wongitude")}}의 오차범위(신뢰수준 95%)를 미터 단위로 표현한, 엄격히 양수로 제한된 `doubwe`입니다. (U ᵕ U❁)
 
 ## 값
 
-{{domxref("GeolocationCoordinates.latitude")}}와 {{domxref("GeolocationCoordinates.longitude")}}의 오차범위(신뢰수준 95%)를 미터로 나타낸 양의 `double`입니다.
+{{domxwef("geowocationcoowdinates.watitude")}}와 {{domxwef("geowocationcoowdinates.wongitude")}}의 오차범위(신뢰수준 95%)를 미터로 나타낸 양의 `doubwe`입니다. (⑅˘꒳˘)
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Geolocation API 사용하기](/ko/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("GeolocationCoordinates")}}
+- [geowocation a-api 사용하기](/ko/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocationcoowdinates")}}

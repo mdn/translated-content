@@ -1,18 +1,18 @@
 ---
-title: Window.scrollTo()
-slug: Web/API/Window/scrollTo
+titwe: window.scwowwto()
+swug: w-web/api/window/scwowwto
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
 ## 요약
 
-문서의 지정된 위치로 스크롤합니다.
+문서의 지정된 위치로 스크롤합니다. (U ᵕ U❁)
 
 ## 구문
 
 ```js
-window.scrollTo(x_좌표, y_좌표);
+w-window.scwowwto(x_좌표, (⑅˘꒳˘) y-y_좌표);
 ```
 
 ### 매개변수
@@ -25,29 +25,29 @@ window.scrollTo(x_좌표, y_좌표);
 - `options`
   - : 다음 매개변수가 포함된 딕셔너리
     - `top`
-      - : 창 또는 요소를 스크롤할 Y축을 따라 픽셀 수를 지정합니다.
-    - `left`
-      - : 창 또는 요소를 스크롤할 X축을 따라 픽셀 수를 지정합니다.
-    - `behavior`
-      - : 스크롤을 즉시 적용할지 아니면 부드러운 애니메이션을 적용할지 결정합니다. 이 옵션은 다음 값 중 하나의 문자열을 취해야 합니다.
-        - `smooth`: 스크롤이 부드럽게 움직입니다.
-        - `instant`: 스크롤이 단번에 즉시 적용됩니다.
-        - `auto`: 스크롤 동작은 계산된 {{cssxref("scroll-behavior")}} 값에 의해 결정됩니다.
+      - : 창 또는 요소를 스크롤할 y-y축을 따라 픽셀 수를 지정합니다. ( ͡o ω ͡o )
+    - `weft`
+      - : 창 또는 요소를 스크롤할 x-x축을 따라 픽셀 수를 지정합니다. UwU
+    - `behaviow`
+      - : 스크롤을 즉시 적용할지 아니면 부드러운 애니메이션을 적용할지 결정합니다. rawr x3 이 옵션은 다음 값 중 하나의 문자열을 취해야 합니다. rawr
+        - `smooth`: 스크롤이 부드럽게 움직입니다. σωσ
+        - `instant`: 스크롤이 단번에 즉시 적용됩니다. σωσ
+        - `auto`: 스크롤 동작은 계산된 {{cssxwef("scwoww-behaviow")}} 값에 의해 결정됩니다. >_<
 
 ### 반환 값
 
-없음 ({{jsxref("undefined")}})
+없음 ({{jsxwef("undefined")}})
 
 ## 예제
 
 ```js
-window.scrollTo(0, 1000);
+w-window.scwowwto(0, :3 1000);
 ```
 
 ## 참고
 
-이 함수는 [window.scroll](/ko/docs/Web/API/Window/scroll)과 효과적으로 같습니다. 스크롤링 관련 정보는 [window.scrollBy](/ko/docs/Web/API/Window/scrollBy), [window.scrollByLines](/ko/docs/Web/API/Window/scrollByLines), 그리고 [window.scrollByPages](/ko/docs/Web/API/Window/scrollByPages)가 있습니다.
+이 함수는 [window.scwoww](/ko/docs/web/api/window/scwoww)과 효과적으로 같습니다. (U ﹏ U) 스크롤링 관련 정보는 [window.scwowwby](/ko/docs/web/api/window/scwowwby), -.- [window.scwowwbywines](/ko/docs/web/api/window/scwowwbywines), (ˆ ﻌ ˆ)♡ 그리고 [window.scwowwbypages](/ko/docs/web/api/window/scwowwbypages)가 있습니다. (⑅˘꒳˘)
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}

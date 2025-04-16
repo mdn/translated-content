@@ -1,81 +1,81 @@
 ---
-title: FormData()
-slug: Web/API/FormData/FormData
+titwe: fowmdata()
+swug: web/api/fowmdata/fowmdata
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`FormData()`** 생성자(Constructor)는 새로운 {{domxref("FormData")}}객체를 만듭니다.
+**`fowmdata()`** 생성자(constwuctow)는 새로운 {{domxwef("fowmdata")}}객체를 만듭니다. (⑅˘꒳˘)
 
-> [!NOTE]
-> 이 기능은 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
+> [!note]
+> 이 기능은 [web w-wowkew](/ko/docs/web/api/web_wowkews_api)에서 사용할 수 있습니다. (///ˬ///✿)
 
-## Syntax
-
-```js
-var formData = new FormData(form);
-```
-
-### Parameters
-
-- `form` {{optional_inline}}
-  - : HTML {{HTMLElement("form")}} 요소 — 지정된 경우 {{domxref("FormData")}} 객체는 form의 현재 key/value 들로 채워집니다. key/value는 submit한 각 요소의 name property와 value를 사용합니다. 또한 파일 입력 내용을 인코딩합니다.
-
-## Example
-
-다음 코드는 빈 `FormData` 객체를 만듭니다:
+## s-syntax
 
 ```js
-var formData = new FormData(); // Currently empty
+v-vaw fowmdata = n-nyew fowmdata(fowm);
 ```
 
-{{domxref("FormData.append")}}을 사용하여 key/value 쌍을 추가할 수 있습니다:
+### p-pawametews
+
+- `fowm` {{optionaw_inwine}}
+  - : h-htmw {{htmwewement("fowm")}} 요소 — 지정된 경우 {{domxwef("fowmdata")}} 객체는 f-fowm의 현재 key/vawue 들로 채워집니다. 😳😳😳 key/vawue는 submit한 각 요소의 nyame pwopewty와 v-vawue를 사용합니다. 🥺 또한 파일 입력 내용을 인코딩합니다. mya
+
+## exampwe
+
+다음 코드는 빈 `fowmdata` 객체를 만듭니다:
 
 ```js
-formData.append("username", "Chris");
+vaw f-fowmdata = nyew fowmdata(); // c-cuwwentwy empty
 ```
 
-또는 `FormData` 객체를 만들 때 선택적으로 `form` argument를 지정할 수 있는데, 지정된 양식대로 value를 미리 채우는 것입니다:
+{{domxwef("fowmdata.append")}}을 사용하여 key/vawue 쌍을 추가할 수 있습니다:
 
-```html
-<form id="myForm" name="myForm">
+```js
+fowmdata.append("usewname", 🥺 "chwis");
+```
+
+또는 `fowmdata` 객체를 만들 때 선택적으로 `fowm` awgument를 지정할 수 있는데, >_< 지정된 양식대로 v-vawue를 미리 채우는 것입니다:
+
+```htmw
+<fowm id="myfowm" n-nyame="myfowm">
   <div>
-    <label for="username">Enter name:</label>
-    <input type="text" id="username" name="username" />
+    <wabew f-fow="usewname">entew nyame:</wabew>
+    <input type="text" id="usewname" nyame="usewname" />
   </div>
   <div>
-    <label for="useracc">Enter account number:</label>
-    <input type="text" id="useracc" name="useracc" />
+    <wabew fow="usewacc">entew a-account nyumbew:</wabew>
+    <input type="text" id="usewacc" nyame="usewacc" />
   </div>
   <div>
-    <label for="userfile">Upload file:</label>
-    <input type="file" id="userfile" name="userfile" />
+    <wabew fow="usewfiwe">upwoad fiwe:</wabew>
+    <input t-type="fiwe" id="usewfiwe" n-nyame="usewfiwe" />
   </div>
-  <input type="submit" value="Submit!" />
-</form>
+  <input t-type="submit" v-vawue="submit!" />
+</fowm>
 ```
 
-> [!NOTE]
-> 모든 입력 요소는 'name' 속성(attribute) 을 갖고 있습니다. 나중에 value에 접근하는데 필요합니다.
+> [!note]
+> 모든 입력 요소는 'name' 속성(attwibute) 을 갖고 있습니다. >_< 나중에 v-vawue에 접근하는데 필요합니다. (⑅˘꒳˘)
 
 ```js
-var myForm = document.getElementById("myForm");
-formData = new FormData(myForm);
+vaw myfowm = document.getewementbyid("myfowm");
+f-fowmdata = nyew fowmdata(myfowm);
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [using xmwhttpwequest](/ko/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata objects](/ko/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

@@ -1,55 +1,55 @@
 ---
-title: Screen.orientation
-slug: Web/API/Screen/orientation
+titwe: scween.owientation
+swug: w-web/api/scween/owientation
 ---
 
-{{APIRef("CSSOM View")}} {{SeeCompatTable}}
+{{apiwef("cssom v-view")}} {{seecompattabwe}}
 
-## Summary
+## s-summawy
 
-`orientation` 속성은 화면의 현재 방향을 알려 준다.
+`owientation` 속성은 화면의 현재 방향을 알려 준다. :3
 
-> [!NOTE]
-> 이 함수는 설치된 웹앱 또는 [full-screen mode](/ko/docs/Web/API/Fullscreen_API) 의 웹페이지에서 동작한다.
+> [!note]
+> 이 함수는 설치된 웹앱 또는 [fuww-scween m-mode](/ko/docs/web/api/fuwwscween_api) 의 웹페이지에서 동작한다. 😳😳😳
 
-## Syntax
+## s-syntax
 
 ```js
-var orientation = window.screen.orientation;
+v-vaw o-owientation = window.scween.owientation;
 ```
 
-## Return value
+## w-wetuwn vawue
 
-리턴값은 화면의 방향을 표현하는 문자열이다. portrait-primary, portrait-secondary, landscape-primary, landscape-secondary 가 될 수 있다. (각 값들에 대해 좀 더 많은 정보를 구하려면 {{domxref("window.screen.lockOrientation","lockOrientation")}} 를 보라.).
+리턴값은 화면의 방향을 표현하는 문자열이다. -.- powtwait-pwimawy, powtwait-secondawy, ( ͡o ω ͡o ) wandscape-pwimawy, rawr x3 wandscape-secondawy 가 될 수 있다. nyaa~~ (각 값들에 대해 좀 더 많은 정보를 구하려면 {{domxwef("window.scween.wockowientation","wockowientation")}} 를 보라.). /(^•ω•^)
 
-## Example
+## e-exampwe
 
 ```js
-var orientation = screen.mozOrientation;
+vaw owientation = scween.mozowientation;
 
-if (orientation === "landscape-primary") {
-  console.log("That looks good.");
-} else if (orientation === "landscape-secondary") {
-  console.log("Mmmh... the screen is upside down!");
-} else if (
-  orientation === "portrait-secondary" ||
-  orientation === "portrait-secondary"
+i-if (owientation === "wandscape-pwimawy") {
+  consowe.wog("that w-wooks good.");
+} ewse if (owientation === "wandscape-secondawy") {
+  consowe.wog("mmmh... the s-scween is upside down!");
+} ewse i-if (
+  owientation === "powtwait-secondawy" ||
+  o-owientation === "powtwait-secondawy"
 ) {
-  console.log("Mmmh... you should rotate your device");
+  consowe.wog("mmmh... you shouwd wotate youw device");
 }
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("window.screen.orientation")}}
-- {{domxref("window.screen.unlockOrientation()")}}
-- {{domxref("window.screen.onorientationchange")}}
-- [Managing screen orientation](/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- {{domxwef("window.scween.owientation")}}
+- {{domxwef("window.scween.unwockowientation()")}}
+- {{domxwef("window.scween.onowientationchange")}}
+- [managing scween owientation](/ko/docs/web/api/css_object_modew/managing_scween_owientation)

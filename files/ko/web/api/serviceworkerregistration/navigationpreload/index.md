@@ -1,26 +1,26 @@
 ---
-title: ServiceWorkerRegistration.navigationPreload
-slug: Web/API/ServiceWorkerRegistration/navigationPreload
+titwe: sewvicewowkewwegistwation.navigationpwewoad
+swug: web/api/sewvicewowkewwegistwation/navigationpwewoad
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}
 
-{{domxref("ServiceWorkerRegistration")}} 인터페이스의 **`navigationPreload`** 읽기 전용 속성은 현재의 서비스 워커 등록와 관련된 {{domxref("NavigationPreloadManager")}} 를 반환한다.
+{{domxwef("sewvicewowkewwegistwation")}} 인터페이스의 **`navigationpwewoad`** 읽기 전용 속성은 현재의 서비스 워커 등록와 관련된 {{domxwef("navigationpwewoadmanagew")}} 를 반환한다. o.O
 
-## Syntax
+## s-syntax
 
 ```js
-var navigationPreloadManager = serviceWorkerRegistration.navigationPreload;
+v-vaw nyavigationpwewoadmanagew = s-sewvicewowkewwegistwation.navigationpwewoad;
 ```
 
-### Value
+### v-vawue
 
-{{domxref("NavigationPreloadManager")}} 의 객체.
+{{domxwef("navigationpwewoadmanagew")}} 의 객체. (U ᵕ U❁)
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

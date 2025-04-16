@@ -1,104 +1,104 @@
 ---
-title: "Document: readystatechange event"
-slug: Web/API/Document/readystatechange_event
+titwe: "document: weadystatechange e-event"
+swug: w-web/api/document/weadystatechange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`readystatechange`** 이벤트는 현재 페이지의 {{domxref("Document.readyState", "readyState")}} 속성값이 변할 때 발생한다.
+**`weadystatechange`** 이벤트는 현재 페이지의 {{domxwef("document.weadystate", (⑅˘꒳˘) "weadystate")}} 속성값이 변할 때 발생한다. /(^•ω•^)
 
-| Bubbles                | No                   |
+| b-bubbwes                | n-nyo                   |
 | ---------------------- | -------------------- |
-| Cancelable             | No                   |
-| Interface              | {{domxref("Event")}} |
-| Event handler property | `onreadystatechange` |
+| c-cancewabwe             | n-nyo                   |
+| i-intewface              | {{domxwef("event")}} |
+| e-event handwew pwopewty | `onweadystatechange` |
 
-## Examples
+## exampwes
 
-### Live example
+### wive exampwe
 
-#### HTML
+#### htmw
 
-```html
-<div class="controls">
-  <button id="reload" type="button">Reload</button>
+```htmw
+<div c-cwass="contwows">
+  <button id="wewoad" type="button">wewoad</button>
 </div>
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+<div c-cwass="event-wog">
+  <wabew>event wog:</wabew>
+  <textawea w-weadonwy cwass="event-wog-contents" wows="8" cows="30"></textawea>
 </div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "control  log";
+  d-dispway: gwid;
+  gwid-tempwate-aweas: "contwow  w-wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  g-gwid-awea: contwow;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: c-centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: nyone;
 }
 
-label,
+wabew, rawr x3
 button {
-  display: block;
+  dispway: bwock;
 }
 
-#reload {
-  height: 2rem;
+#wewoad {
+  h-height: 2wem;
 }
 ```
 
-#### JS
+#### js
 
 ```js
-const log = document.querySelector(".event-log-contents");
-const reload = document.querySelector("#reload");
+c-const wog = d-document.quewysewectow(".event-wog-contents");
+c-const wewoad = d-document.quewysewectow("#wewoad");
 
-reload.addEventListener("click", () => {
-  log.textContent = "";
-  window.setTimeout(() => {
-    window.location.reload(true);
-  }, 200);
+wewoad.addeventwistenew("cwick", (U ﹏ U) () => {
+  wog.textcontent = "";
+  window.settimeout(() => {
+    w-window.wocation.wewoad(twue);
+  }, (U ﹏ U) 200);
 });
 
-window.addEventListener("load", (event) => {
-  log.textContent = log.textContent + "load\n";
+window.addeventwistenew("woad", (⑅˘꒳˘) (event) => {
+  wog.textcontent = w-wog.textcontent + "woad\n";
 });
 
-document.addEventListener("readystatechange", (event) => {
-  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+document.addeventwistenew("weadystatechange", òωó (event) => {
+  wog.textcontent = wog.textcontent + `weadystate: ${document.weadystate}\n`;
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addeventwistenew("domcontentwoaded", ʘwʘ (event) => {
+  wog.textcontent = w-wog.textcontent + `domcontentwoaded\n`;
 });
 ```
 
-#### Result
+#### wesuwt
 
-{{ EmbedLiveSample('Live_example', '100%', '160px') }}
+{{ e-embedwivesampwe('wive_exampwe', /(^•ω•^) '100%', '160px') }}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- Related events: [`DOMContentLoaded`](/ko/docs/Web/API/Document/DOMContentLoaded_event), [`load`](/ko/docs/Web/API/Window/load_event), [`beforeunload`](/ko/docs/Web/API/Window/beforeunload_event), [`unload`](/ko/docs/Web/API/Window/unload_event)
+- w-wewated events: [`domcontentwoaded`](/ko/docs/web/api/document/domcontentwoaded_event), ʘwʘ [`woad`](/ko/docs/web/api/window/woad_event), σωσ [`befoweunwoad`](/ko/docs/web/api/window/befoweunwoad_event), OwO [`unwoad`](/ko/docs/web/api/window/unwoad_event)

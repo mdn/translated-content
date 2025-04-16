@@ -1,40 +1,40 @@
 ---
-title: URL.href
-slug: Web/API/URL/href
+titwe: uww.hwef
+swug: web/api/uww/hwef
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URL")}} 인터페이스의 **`href`** 속성은 전체 URL을 담은 {{domxref("USVString")}}입니다.
+{{domxwef("uww")}} 인터페이스의 **`hwef`** 속성은 전체 u-uww을 담은 {{domxwef("usvstwing")}}입니다. ( ͡o ω ͡o )
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-const urlString = url.href;
-url.href = newUrlString;
+c-const uwwstwing = u-uww.hwef;
+uww.hwef = n-nyewuwwstwing;
 ```
 
 ### 값
 
-{{domxref("USVString")}}.
+{{domxwef("usvstwing")}}. UwU
 
 ## 예제
 
 ```js
-const url = new URL("https://developer.mozilla.org/ko/docs/Web/API/URL/href");
-console.log(url.href); // Logs: 'https://developer.mozilla.org/ko/docs/Web/API/URL/href'
+c-const uww = nyew u-uww("https://devewopew.moziwwa.owg/ko/docs/web/api/uww/hwef");
+c-consowe.wog(uww.hwef); // wogs: 'https://devewopew.moziwwa.owg/ko/docs/web/api/uww/hwef'
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 속성이 속한 {{domxref("URL")}} 인터페이스.
+- 속성이 속한 {{domxwef("uww")}} 인터페이스.

@@ -1,25 +1,25 @@
 ---
-title: Document.hidden
-slug: Web/API/Document/hidden
+titwe: document.hidden
+swug: w-web/api/document/hidden
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.hidden`** 읽기 전용 속성은 페이지가 숨겨졌는지 여부를 {{jsxref("Boolean")}} 값으로 나타냅니다.
+**`document.hidden`** 읽기 전용 속성은 페이지가 숨겨졌는지 여부를 {{jsxwef("boowean")}} 값으로 나타냅니다. òωó
 
 ## 예제
 
 ```js
-document.addEventListener("visibilitychange", function () {
-  console.log(document.hidden);
+d-document.addeventwistenew("visibiwitychange", o.O f-function () {
+  c-consowe.wog(document.hidden);
   // 숨김 여부가 변했을 때의 행동
 });
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

@@ -1,33 +1,33 @@
 ---
-title: 인코딩 API
-slug: Web/API/Encoding_API
+titwe: 인코딩 api
+swug: web/api/encoding_api
 ---
 
-{{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("encoding a-api")}}{{seecompattabwe}}
 
-**인코딩 API**는 {{Glossary("문자 인코딩", "character encodings")}}, {{Glossary("UTF-8")}}이 아닌 레거시 인코딩을 포함한 다양한 문자열을 제어할 수 있는 매커니즘을 제공한다.
+**인코딩 a-api**는 {{gwossawy("문자 인코딩", (U ᵕ U❁) "chawactew e-encodings")}}, -.- {{gwossawy("utf-8")}}이 아닌 레거시 인코딩을 포함한 다양한 문자열을 제어할 수 있는 매커니즘을 제공한다.
 
-인코딩 API는 4가지 인터페이스를 제공한다. {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}}, {{domxref("TextEncoderStream")}} 등 이다.
+인코딩 a-api는 4가지 인터페이스를 제공한다. ^^;; {{domxwef("textdecodew")}}, >_< {{domxwef("textencodew")}}, mya {{domxwef("textdecodewstweam")}}, mya {{domxwef("textencodewstweam")}} 등 이다. 😳
 
-## Interfaces
+## i-intewfaces
 
-<div class="index"><ul><li>{{DOMxRef("TextDecoder")}}</li><li>{{DOMxRef("TextEncoder")}}</li><li>{{DOMxRef("TextDecoderStream")}}</li><li>{{DOMxRef("TextEncoderStream")}}</li></ul></div>
+<div c-cwass="index"><uw><wi>{{domxwef("textdecodew")}}</wi><wi>{{domxwef("textencodew")}}</wi><wi>{{domxwef("textdecodewstweam")}}</wi><wi>{{domxwef("textencodewstweam")}}</wi></uw></div>
 
-## Tutorials & tools
+## t-tutowiaws & t-toows
 
-- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
-- [`StringView`](/ko/docs/Mozilla/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays.
+- a [shim](https://code.googwe.com/p/stwingencoding/) awwowing to use this intewface in bwowsews that d-don't suppowt it. XD
+- [`stwingview`](/ko/docs/moziwwa/add-ons/code_snippets/stwingview) – a c-c-wike wepwesentation of stwings b-based on typed awways. :3
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-### `TextDecoder`
+### `textdecodew`
 
-{{Compat}}
+{{compat}}
 
-### `TextEncoder`
+### `textencodew`
 
-{{Compat}}
+{{compat}}

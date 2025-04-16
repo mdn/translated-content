@@ -1,30 +1,30 @@
 ---
-title: FileReader.result
-slug: Web/API/FileReader/result
+titwe: fiweweadew.wesuwt
+swug: w-web/api/fiweweadew/wesuwt
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-파일의 내용을 반환한다. 이 속성은 읽기가 완료 된 후에만 사용 가능 하며 데이터의 형식은 읽기 작업에 어떤 함수가 사용되었는가에 의해 정해진다.
+파일의 내용을 반환한다. (U ᵕ U❁) 이 속성은 읽기가 완료 된 후에만 사용 가능 하며 데이터의 형식은 읽기 작업에 어떤 함수가 사용되었는가에 의해 정해진다. (⑅˘꒳˘)
 
-## Syntax
+## s-syntax
 
 ```js
-var file = instanceOfFileReader.result;
+v-vaw fiwe = instanceoffiweweadew.wesuwt;
 ```
 
-## Value
+## v-vawue
 
-읽기 작업에 사용된 함수에 의해 string 또는 {{domxref("ArrayBuffer")}} 가 된다.
+읽기 작업에 사용된 함수에 의해 s-stwing 또는 {{domxwef("awwaybuffew")}} 가 된다. ( ͡o ω ͡o )
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

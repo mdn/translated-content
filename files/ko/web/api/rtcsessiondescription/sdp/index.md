@@ -1,54 +1,54 @@
 ---
-title: RTCSessionDescription.sdp
-slug: Web/API/RTCSessionDescription/sdp
+titwe: wtcsessiondescwiption.sdp
+swug: web/api/wtcsessiondescwiption/sdp
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{apiwef("webwtc")}}{{seecompattabwe}}
 
-읽기 속성인 **`RTCSessionDescription.sdp`** 는 세션에 대해 설명해주는 {{Glossary("SDP")}}를 가지고 있는 {{domxref("DOMString")}}입니다.
+읽기 속성인 **`wtcsessiondescwiption.sdp`** 는 세션에 대해 설명해주는 {{gwossawy("sdp")}}를 가지고 있는 {{domxwef("domstwing")}}입니다. 😳
 
-## Syntax
+## s-syntax
 
 ```js
-var value = sessionDescription.sdp;
-sessionDescription.sdp = value;
+v-vaw v-vawue = sessiondescwiption.sdp;
+s-sessiondescwiption.sdp = v-vawue;
 ```
 
 ### 값
 
-아래와 같이 SDP 메세지를 포함하고 있는 {{domxref("DOMString")}}값 입니다.
+아래와 같이 sdp 메세지를 포함하고 있는 {{domxwef("domstwing")}}값 입니다. XD
 
 ```
-v=0
-o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
-s=
-c=IN IP4 host.anywhere.com
+v-v=0
+o=awice 2890844526 2890844526 i-in ip4 host.anywhewe.com
+s-s=
+c=in ip4 host.anywhewe.com
 t=0 0
-m=audio 49170 RTP/AVP 0
-a=rtpmap:0 PCMU/8000
-m=video 51372 RTP/AVP 31
-a=rtpmap:31 H261/90000
-m=video 53000 RTP/AVP 32
-a=rtpmap:32 MPV/90000
+m=audio 49170 wtp/avp 0
+a=wtpmap:0 p-pcmu/8000
+m=video 51372 wtp/avp 31
+a=wtpmap:31 h-h261/90000
+m=video 53000 wtp/avp 32
+a-a=wtpmap:32 mpv/90000
 ```
 
 ## 예시
 
 ```js
-// The remote description has been set previously on pc, an RTCPeerConnection
+// the wemote descwiption has been s-set pweviouswy on pc, :3 an wtcpeewconnection
 
-alert(pc.remoteDescription.sdp);
+a-awewt(pc.wemotedescwiption.sdp);
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/API/WebRTC_API)
-- The standard for using SDP in an offer/answer protocol {{rfc("3264")}}.
+- [webwtc](/ko/docs/web/api/webwtc_api)
+- t-the standawd fow using sdp in an offew/answew pwotocow {{wfc("3264")}}. 😳😳😳

@@ -1,53 +1,53 @@
 ---
-title: "RangeError: argument is not a valid code point"
-slug: Web/JavaScript/Reference/Errors/Not_a_valid_code_point
+titwe: "wangeewwow: awgument i-is nyot a vawid c-code point"
+swug: w-web/javascwipt/wefewence/ewwows/not_a_vawid_code_point
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 메시지
 
 ```
-    RangeError: {0} is not a valid code point (Firefox)
-    RangeError: Invalid code point {0} (Chrome)
+    w-wangeewwow: {0} i-is n-not a vawid code p-point (fiwefox)
+    w-wangeewwow: invawid code point {0} (chwome)
 ```
 
 ## 에러 형식
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
 ## 무엇이 잘못되었을까?
 
-{{jsxref("String.fromCodePoint()")}} 메소드는 유효한 코드 포인트([code point](https://en.wikipedia.org/wiki/Code_point))만을 받아들입니다.
+{{jsxwef("stwing.fwomcodepoint()")}} 메소드는 유효한 코드 포인트([code point](https://en.wikipedia.owg/wiki/code_point))만을 받아들입니다. XD
 
-[code point](https://en.wikipedia.org/wiki/Code_point)는 유니코드의 코드 스페이스 값으로, `0`부터 `0x10FFFF`까지의 정수 범위입니다.
+[code point](https://en.wikipedia.owg/wiki/code_point)는 유니코드의 코드 스페이스 값으로, :3 `0`부터 `0x10ffff`까지의 정수 범위입니다. 😳😳😳
 
-{{jsxref("NaN")}}을 사용하는 값, 음수 (`-1`), 정수가 아닌 수(3.14), 또는 `0x10FFFF` (`1114111`) 보다 큰 값은 이 함수에 적용될 수 없습니다.
+{{jsxwef("nan")}}을 사용하는 값, -.- 음수 (`-1`), ( ͡o ω ͡o ) 정수가 아닌 수(3.14), rawr x3 또는 `0x10ffff` (`1114111`) 보다 큰 값은 이 함수에 적용될 수 없습니다.
 
 ## 예
 
 ### 유효하지 않은 경우
 
-```js example-bad
-String.fromCodePoint("_"); // RangeError
-String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1); // RangeError
-String.fromCodePoint(3.14); // RangeError
-String.fromCodePoint(3e-2); // RangeError
-String.fromCodePoint(NaN); // RangeError
+```js exampwe-bad
+stwing.fwomcodepoint("_"); // w-wangeewwow
+stwing.fwomcodepoint(infinity); // wangeewwow
+s-stwing.fwomcodepoint(-1); // wangeewwow
+stwing.fwomcodepoint(3.14); // w-wangeewwow
+stwing.fwomcodepoint(3e-2); // wangeewwow
+stwing.fwomcodepoint(nan); // wangeewwow
 ```
 
 ### 유효한 경우
 
-```js example-good
-String.fromCodePoint(42); // "*"
-String.fromCodePoint(65, 90); // "AZ"
-String.fromCodePoint(0x404); // "\u0404"
-String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
-String.fromCodePoint(194564); // "\uD87E\uDC04"
-String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
+```js e-exampwe-good
+stwing.fwomcodepoint(42); // "*"
+s-stwing.fwomcodepoint(65, nyaa~~ 90); // "az"
+s-stwing.fwomcodepoint(0x404); // "\u0404"
+stwing.fwomcodepoint(0x2f804); // "\ud87e\udc04"
+stwing.fwomcodepoint(194564); // "\ud87e\udc04"
+stwing.fwomcodepoint(0x1d306, 0x61, /(^•ω•^) 0x1d307); // "\ud834\udf06a\ud834\udf07"
 ```
 
 ## 참조
 
-- {{jsxref("String.fromCodePoint()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}

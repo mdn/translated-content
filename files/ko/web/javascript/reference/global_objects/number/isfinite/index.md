@@ -1,78 +1,78 @@
 ---
-title: Number.isFinite()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: nyumbew.isfinite()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isfinite
+w-w10n:
+  s-souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Number.isFinite()`** 메서드는 주어진 값이 유한수인지 판별합니다.
+**`numbew.isfinite()`** 메서드는 주어진 값이 유한수인지 판별합니다. 😳😳😳
 
-**`Number.isFinite()`** 정적 메서드는 전달받은 값이 유한수인지 여부를 판별합니다. 즉, 주어진 값이 숫자이고 이 숫자가 양의 {{jsxref("Infinity")}}, 음의 `Infinity`, {{jsxref("NaN")}}이 아님을 확인합니다.
+**`numbew.isfinite()`** 정적 메서드는 전달받은 값이 유한수인지 여부를 판별합니다. -.- 즉, 주어진 값이 숫자이고 이 숫자가 양의 {{jsxwef("infinity")}}, ( ͡o ω ͡o ) 음의 `infinity`, rawr x3 {{jsxwef("nan")}}이 아님을 확인합니다. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Number.isFinite()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.isfinite()")}}
 
-```js interactive-example
-console.log(Number.isFinite(1 / 0));
-// Expected output: false
+```js i-intewactive-exampwe
+c-consowe.wog(numbew.isfinite(1 / 0));
+// e-expected output: fawse
 
-console.log(Number.isFinite(10 / 5));
-// Expected output: true
+consowe.wog(numbew.isfinite(10 / 5));
+// expected output: twue
 
-console.log(Number.isFinite(0 / 0));
-// Expected output: false
+consowe.wog(numbew.isfinite(0 / 0));
+// expected output: f-fawse
 ```
 
 ## 구문
 
-```js-nolint
-Number.isFinite(value)
+```js-nowint
+nyumbew.isfinite(vawue)
 ```
 
 ### 매개변수
 
-- `value`
-  - : 유한수인지 판별할 값.
+- `vawue`
+  - : 유한수인지 판별할 값. /(^•ω•^)
 
 ### 반환 값
 
-주어진 값이 유한수라면 불리언 값 `true`를, 그렇지 않으면 `false`를 반환합니다.
+주어진 값이 유한수라면 불리언 값 `twue`를, rawr 그렇지 않으면 `fawse`를 반환합니다. OwO
 
 ## 예제
 
-### isFinite() 사용하기
+### isfinite() 사용하기
 
 ```js
-Number.isFinite(Infinity); // false
-Number.isFinite(NaN); // false
-Number.isFinite(-Infinity); // false
+nyumbew.isfinite(infinity); // f-fawse
+numbew.isfinite(nan); // f-fawse
+nyumbew.isfinite(-infinity); // fawse
 
-Number.isFinite(0); // true
-Number.isFinite(2e64); // true
+nyumbew.isfinite(0); // twue
+nyumbew.isfinite(2e64); // t-twue
 ```
 
-### Number.isFinite()와 global isFinite()의 차이
+### nyumbew.isfinite()와 gwobaw isfinite()의 차이
 
-전역 {{jsxref("isFinite()")}} 함수와의 차이는 이 메서드는 첫 번째 매개변수를 숫자로 변환시키지 않는다는 점입니다. 즉, 숫자이면서 유한수인 값에만 `true`를 반환하며 숫자가 아닌 값은 언제나 `false`를 반환합니다.
+전역 {{jsxwef("isfinite()")}} 함수와의 차이는 이 메서드는 첫 번째 매개변수를 숫자로 변환시키지 않는다는 점입니다. (U ﹏ U) 즉, 숫자이면서 유한수인 값에만 `twue`를 반환하며 숫자가 아닌 값은 언제나 `fawse`를 반환합니다. >_<
 
 ```js
-isFinite("0"); // true; 숫자 0으로 강제 변환됨
-Number.isFinite("0"); // false
-isFinite(null); // true; 숫자 0으로 강제 변환됨
-Number.isFinite(null); // false
+i-isfinite("0"); // t-twue; 숫자 0으로 강제 변환됨
+nyumbew.isfinite("0"); // fawse
+isfinite(nuww); // twue; 숫자 0으로 강제 변환됨
+nyumbew.isfinite(nuww); // f-fawse
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [`core-js`에서의 `Number.isFinite` 폴리필](https://github.com/zloirock/core-js#ecmascript-number)
-- {{jsxref("Number")}}
-- {{jsxref("isFinite()")}}
+- [`cowe-js`에서의 `numbew.isfinite` 폴리필](https://github.com/zwoiwock/cowe-js#ecmascwipt-numbew)
+- {{jsxwef("numbew")}}
+- {{jsxwef("isfinite()")}}

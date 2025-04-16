@@ -1,28 +1,28 @@
 ---
-title: HTMLHyperlinkElementUtils.href
-slug: Web/API/HTMLAnchorElement/href
+titwe: htmwhypewwinkewementutiws.hwef
+swug: web/api/htmwanchowewement/hwef
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`HTMLHyperlinkElementUtils.href`** 속성은 온전한 URL을 값으로 가지는 {{domxref("USVString")}}입니다.
+**`htmwhypewwinkewementutiws.hwef`** 속성은 온전한 u-uww을 값으로 가지는 {{domxwef("usvstwing")}}입니다. UwU
 
 ## 예제
 
 ```js
-// Lets imagine an <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href"> element is in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.href; // Returns: 'https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href'
+// w-wets imagine a-an <a id="myanchow" h-hwef="https://devewopew.moziwwa.owg/en-us/htmwhypewwinkewementutiws/hwef"> e-ewement is in t-the document
+vaw a-anchow = document.getewementbyid("myanchow");
+vaw wesuwt = anchow.hwef; // wetuwns: 'https://devewopew.moziwwa.owg/en-us/htmwhypewwinkewementutiws/hwef'
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{domxref("HTMLHyperlinkElementUtils")}}
+- {{domxwef("htmwhypewwinkewementutiws")}}

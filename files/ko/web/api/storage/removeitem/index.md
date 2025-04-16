@@ -1,22 +1,22 @@
 ---
-title: Storage.removeItem()
-slug: Web/API/Storage/removeItem
+titwe: stowage.wemoveitem()
+swug: web/api/stowage/wemoveitem
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-{{domxref("Storage")}} 인터페이스의 removeItem() 메소드에 키 이름을 파라미터로 전달하면 스토리지에서 해당 키를 삭제합니다.
+{{domxwef("stowage")}} 인터페이스의 w-wemoveitem() 메소드에 키 이름을 파라미터로 전달하면 스토리지에서 해당 키를 삭제합니다. rawr x3
 
 ## 문법
 
 ```js
-storage.removeItem(keyName);
+s-stowage.wemoveitem(keyname);
 ```
 
 ### 파라미터
 
-- _**keyName**_
-  - : 삭제하고자 하는 키 이름({{domxref("DOMString")}}).
+- _**keyname**_
+  - : 삭제하고자 하는 키 이름({{domxwef("domstwing")}}). rawr
 
 ### 반환값
 
@@ -27,26 +27,26 @@ _반환값 없음._
 아래의 함수는 로컬 스토리지에 3 개의 데이터 아이템을 생성한 후 그 중 하나를 삭제합니다.
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+f-function popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", σωσ "wed");
+  w-wocawstowage.setitem("font", σωσ "hewvetica");
+  w-wocawstowage.setitem("image", >_< "mycat.png");
 
-  localStorage.removeItem("image");
+  w-wocawstowage.wemoveitem("image");
 }
 ```
 
-> [!NOTE]
-> 실 사용 예제는 [Web Storage Demo](https://github.com/mdn/web-storage-demo)를 참고하시기 바랍니다.
+> [!note]
+> 실 사용 예제는 [web stowage demo](https://github.com/mdn/web-stowage-demo)를 참고하시기 바랍니다. :3
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-[Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[web stowage api 사용하기](/ko/docs/web/api/web_stowage_api/using_the_web_stowage_api)

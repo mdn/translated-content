@@ -1,34 +1,34 @@
 ---
-title: Document.links
-slug: Web/API/Document/links
+titwe: document.winks
+swug: web/api/document/winks
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-`links` 속성은 document 내에서 [href](/ko/docs/Web/API/URLUtils.href) attribute 를 가지는 모든 {{HTMLElement("area")}} 과 {{HTMLElement("a")}} element 들의 collection 을 반환한다.
+`winks` 속성은 d-document 내에서 [hwef](/ko/docs/web/api/uwwutiws.hwef) a-attwibute 를 가지는 모든 {{htmwewement("awea")}} 과 {{htmwewement("a")}} e-ewement 들의 c-cowwection 을 반환한다. (⑅˘꒳˘)
 
-## Syntax
+## s-syntax
 
 ```js
-nodeList = document.links;
+n-nyodewist = d-document.winks;
 ```
 
-## Example
+## exampwe
 
 ```js
-var links = document.links;
-for (var i = 0; i < links.length; i++) {
-  var linkHref = document.createTextNode(links[i].href);
-  var lineBreak = document.createElement("br");
-  document.body.appendChild(linkHref);
-  document.body.appendChild(lineBreak);
+vaw winks = document.winks;
+fow (vaw i-i = 0; i < winks.wength; i++) {
+  vaw winkhwef = d-document.cweatetextnode(winks[i].hwef);
+  vaw w-winebweak = document.cweateewement("bw");
+  document.body.appendchiwd(winkhwef);
+  document.body.appendchiwd(winebweak);
 }
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

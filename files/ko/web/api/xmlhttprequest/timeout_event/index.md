@@ -1,41 +1,41 @@
 ---
-title: timeout
-slug: Web/API/XMLHttpRequest/timeout_event
+titwe: timeout
+swug: web/api/xmwhttpwequest/timeout_event
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`timeout`** 이벤트는 미리 설정한 시간이 만료되어 진행이 종료되면 시작합니다.
+**`timeout`** 이벤트는 미리 설정한 시간이 만료되어 진행이 종료되면 시작합니다. -.-
 
-| Bubbles        | No                            |
+| b-bubbwes        | n-nyo                            |
 | -------------- | ----------------------------- |
-| Cancelable     | No                            |
-| Target objects | {{domxref("XMLHttpRequest")}} |
-| Interface      | {{domxref("ProgressEvent")}}  |
+| c-cancewabwe     | n-nyo                            |
+| t-tawget o-objects | {{domxwef("xmwhttpwequest")}} |
+| i-intewface      | {{domxwef("pwogwessevent")}}  |
 
-## Examples
+## exampwes
 
 ```js
-var client = new XMLHttpRequest();
-client.open("GET", "http://www.example.org/example.txt");
-client.ontimeout = function (e) {
-  console.error("Timeout!!");
+vaw cwient = nyew xmwhttpwequest();
+cwient.open("get", (ˆ ﻌ ˆ)♡ "http://www.exampwe.owg/exampwe.txt");
+c-cwient.ontimeout = function (e) {
+  consowe.ewwow("timeout!!");
 };
-client.send();
+c-cwient.send();
 ```
 
-## Inheritance
+## inhewitance
 
-`timeout` 이벤트는 {{domxref("Event")}}에서 상속받은 {{domxref("ProgressEvent")}} 인터페이스를 구현합니다. 이 인터페이스에 선언된 속성(property)과 메서드를 사용할 수 있습니다.
+`timeout` 이벤트는 {{domxwef("event")}}에서 상속받은 {{domxwef("pwogwessevent")}} 인터페이스를 구현합니다. (⑅˘꒳˘) 이 인터페이스에 선언된 속성(pwopewty)과 메서드를 사용할 수 있습니다. (U ᵕ U❁)
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("XMLHttpRequest")}}
+- {{domxwef("xmwhttpwequest")}}

@@ -1,42 +1,42 @@
 ---
-title: URL.protocol
-slug: Web/API/URL/protocol
+titwe: uww.pwotocow
+swug: web/api/uww/pwotocow
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URL")}} 인터페이스의 **`protocol`** 속성은 URL의 프로토콜 스킴과 마지막 `':'`을 포함한 {{domxref("USVString")}}입니다.
+{{domxwef("uww")}} 인터페이스의 **`pwotocow`** 속성은 u-uww의 프로토콜 스킴과 마지막 `':'`을 포함한 {{domxwef("usvstwing")}}입니다. UwU
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-const protocol = url.protocol;
-url.protocol = newProtocol;
+c-const pwotocow = u-uww.pwotocow;
+u-uww.pwotocow = n-nyewpwotocow;
 ```
 
 ### 값
 
-{{domxref("USVString")}}.
+{{domxwef("usvstwing")}}. rawr x3
 
 ## 예제
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ko/docs/Web/API/URL/protocol",
+c-const u-uww = nyew uww(
+  "https://devewopew.moziwwa.owg/ko/docs/web/api/uww/pwotocow", rawr
 );
-console.log(url.protocol); // Logs "https:"
+consowe.wog(uww.pwotocow); // wogs "https:"
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 속성이 속한 {{domxref("URL")}} 인터페이스.
+- 속성이 속한 {{domxwef("uww")}} 인터페이스. σωσ

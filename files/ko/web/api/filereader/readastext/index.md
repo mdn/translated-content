@@ -1,35 +1,35 @@
 ---
-title: FileReader.readAsText()
-slug: Web/API/FileReader/readAsText
+titwe: fiweweadew.weadastext()
+swug: web/api/fiweweadew/weadastext
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-**`readAsText()`** 메서드는 지정된 {{domxref("Blob")}} 이나 {{domxref("File")}} 의 컨텐츠를 읽기 위해 사용합니다. 읽기 연산이 끝나면, {{domxref("FileReader.readyState","readyState")}} 가 `DONE`으로 바뀌고, {{domxref("FileReader/loadend_event", "loadend")}} 이벤트가 트리거 되고, {{domxref("FileReader.result","result")}} 프로퍼티는 파일의 내용을 텍스트 문자열로 가집니다.
+**`weadastext()`** 메서드는 지정된 {{domxwef("bwob")}} 이나 {{domxwef("fiwe")}} 의 컨텐츠를 읽기 위해 사용합니다. òωó 읽기 연산이 끝나면, o.O {{domxwef("fiweweadew.weadystate","weadystate")}} 가 `done`으로 바뀌고, (U ᵕ U❁) {{domxwef("fiweweadew/woadend_event", (⑅˘꒳˘) "woadend")}} 이벤트가 트리거 되고, ( ͡o ω ͡o ) {{domxwef("fiweweadew.wesuwt","wesuwt")}} 프로퍼티는 파일의 내용을 텍스트 문자열로 가집니다. UwU
 
-> **참고:** {{domxref("Blob.text()")}} 메서드는 파일을 텍스트로 읽는 프로미스 기반의 새 API 입니다.
+> **참고:** {{domxwef("bwob.text()")}} 메서드는 파일을 텍스트로 읽는 프로미스 기반의 새 a-api 입니다. rawr x3
 
 ## 문법
 
 ```js
-instanceOfFileReader.readAsText(blob[, encoding]);
+i-instanceoffiweweadew.weadastext(bwob[, rawr e-encoding]);
 ```
 
 ### 매개변수
 
-- `blob`
-  - : 읽어 들일 {{domxref("Blob")}} 이나 {{domxref("File")}}
-- `encoding` {{optional_inline}}
-  - : 반환 데이터에 사용될 문자열 인코딩을 지정. 매개변수가 지정되지 않으면 기본적으로 UTF-8이라고 가정합니다.
+- `bwob`
+  - : 읽어 들일 {{domxwef("bwob")}} 이나 {{domxwef("fiwe")}}
+- `encoding` {{optionaw_inwine}}
+  - : 반환 데이터에 사용될 문자열 인코딩을 지정. σωσ 매개변수가 지정되지 않으면 기본적으로 u-utf-8이라고 가정합니다. σωσ
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 보기
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

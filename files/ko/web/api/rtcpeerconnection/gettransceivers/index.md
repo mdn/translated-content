@@ -1,47 +1,47 @@
 ---
-title: RTCPeerConnection.getTransceivers()
-slug: Web/API/RTCPeerConnection/getTransceivers
+titwe: wtcpeewconnection.gettwansceivews()
+swug: w-web/api/wtcpeewconnection/gettwansceivews
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-{{domxref("RTCPeerConnection")}} 인터페이스의 **`getTransceivers()`** 메소드는 연결에서 데이터 전송 및 수신에 사용되는 {{domxref("RTCRtpTransceiver")}} 객체의 리스트를 반환합니다.
+{{domxwef("wtcpeewconnection")}} 인터페이스의 **`gettwansceivews()`** 메소드는 연결에서 데이터 전송 및 수신에 사용되는 {{domxwef("wtcwtptwansceivew")}} 객체의 리스트를 반환합니다. (⑅˘꒳˘)
 
-## Syntax
+## s-syntax
 
 ```js
-transceiverList = RTCPeerConnection.getTransceivers();
+t-twansceivewwist = w-wtcpeewconnection.gettwansceivews();
 ```
 
 ### 매개변수
 
-없음.
+없음. ( ͡o ω ͡o )
 
 ### 반환 값
 
-`RTCPeerConnection`에 대한 모든 미디어의 전송/수신을 관리하는 트랜시버를 나타내는 {{domxref("RTCRtpTransceiver")}} 객체의 배열입니다. 리스트의 순서는 트랜시버가 연결에 추가된 순서대로 정렬되어있습니다.
+`wtcpeewconnection`에 대한 모든 미디어의 전송/수신을 관리하는 트랜시버를 나타내는 {{domxwef("wtcwtptwansceivew")}} 객체의 배열입니다. UwU 리스트의 순서는 트랜시버가 연결에 추가된 순서대로 정렬되어있습니다.
 
 ## 예시
 
-아래 코드는 `RTCPeerConnection`와 연관된 모든 트랜시버를 중지시킵니다.
+아래 코드는 `wtcpeewconnection`와 연관된 모든 트랜시버를 중지시킵니다. rawr x3
 
 ```js
-pc.getTransceivers.forEach((transceiver) => {
-  transceiver.stop();
+p-pc.gettwansceivews.foweach((twansceivew) => {
+  t-twansceivew.stop();
 });
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 참조
 
-- [WebRTC API](/ko/docs/Web/API/WebRTC_API)
-- [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- {{domxref("RTCPeerConnection.addTransceiver()")}}
-- {{jsxref("Array.forEach()")}}
+- [webwtc a-api](/ko/docs/web/api/webwtc_api)
+- [signawing a-and video cawwing](/ko/docs/web/api/webwtc_api/signawing_and_video_cawwing)
+- {{domxwef("wtcpeewconnection.addtwansceivew()")}}
+- {{jsxwef("awway.foweach()")}}

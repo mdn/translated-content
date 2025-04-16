@@ -1,150 +1,150 @@
 ---
-title: "FileReader: loadend event"
-slug: Web/API/FileReader/loadend_event
+titwe: "fiweweadew: woadend event"
+s-swug: web/api/fiweweadew/woadend_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`loadend` 이벤트는 성공여부와 관계없이 파일읽기가 끝나면 실행됩니다.
+`woadend` 이벤트는 성공여부와 관계없이 파일읽기가 끝나면 실행됩니다. (˘ω˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">버블링</th>
+    <tw>
+      <th s-scope="wow">버블링</th>
       <td>해당없음</td>
-    </tr>
-    <tr>
-      <th scope="row">이벤트 취소가능</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">이벤트 취소가능</th>
       <td>해당없음</td>
-    </tr>
-    <tr>
-      <th scope="row">인터페이스</th>
-      <td>{{domxref("ProgressEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">이벤트 핸들러 프로퍼티</th>
-      <td>{{domxref("FileReader.onloadend")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">인터페이스</th>
+      <td>{{domxwef("pwogwessevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">이벤트 핸들러 프로퍼티</th>
+      <td>{{domxwef("fiweweadew.onwoadend")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 예제
 
-### Live example
+### w-wive exampwe
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="example">
-  <div class="file-select">
-    <label for="avatar">Choose a profile picture:</label>
+```htmw
+<div cwass="exampwe">
+  <div cwass="fiwe-sewect">
+    <wabew fow="avataw">choose a pwofiwe p-pictuwe:</wabew>
     <input
-      type="file"
-      id="avatar"
-      name="avatar"
-      accept="image/png, image/jpeg" />
+      type="fiwe"
+      id="avataw"
+      n-nyame="avataw"
+      accept="image/png, ^^ image/jpeg" />
   </div>
 
-  <img src="" class="preview" height="200" alt="Image preview..." />
+  <img s-swc="" cwass="pweview" height="200" awt="image pweview..." />
 
-  <div class="event-log">
-    <label>Event log:</label>
-    <textarea readonly class="event-log-contents"></textarea>
+  <div c-cwass="event-wog">
+    <wabew>event wog:</wabew>
+    <textawea w-weadonwy c-cwass="event-wog-contents"></textawea>
   </div>
 </div>
 ```
 
 ```css hidden
-img.preview {
-  margin: 1rem 0;
+img.pweview {
+  mawgin: 1wem 0;
 }
 
-.event-log-contents {
-  width: 18rem;
-  height: 5rem;
-  border: 1px solid black;
-  margin: 0.2rem;
-  padding: 0.2rem;
+.event-wog-contents {
+  width: 18wem;
+  height: 5wem;
+  b-bowdew: 1px sowid bwack;
+  mawgin: 0.2wem;
+  padding: 0.2wem;
 }
 
-.example {
-  display: grid;
-  grid-template-areas:
-    "select log"
-    "preview log";
+.exampwe {
+  dispway: gwid;
+  g-gwid-tempwate-aweas:
+    "sewect wog"
+    "pweview w-wog";
 }
 
-.file-select {
-  grid-area: select;
+.fiwe-sewect {
+  g-gwid-awea: sewect;
 }
 
-.preview {
-  grid-area: preview;
+.pweview {
+  g-gwid-awea: pweview;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  g-gwid-awea: wog;
 }
 
-.event-log > label {
-  display: block;
+.event-wog > wabew {
+  d-dispway: bwock;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: nyone;
 }
 ```
 
-#### JS
+#### js
 
 ```js
-const fileInput = document.querySelector('input[type="file"]');
-const preview = document.querySelector("img.preview");
-const eventLog = document.querySelector(".event-log-contents");
-const reader = new FileReader();
+c-const fiweinput = document.quewysewectow('input[type="fiwe"]');
+const pweview = document.quewysewectow("img.pweview");
+const eventwog = document.quewysewectow(".event-wog-contents");
+c-const weadew = nyew fiweweadew();
 
-function handleEvent(event) {
-  eventLog.textContent =
-    eventLog.textContent + `${event.type}: ${event.loaded} bytes transferred\n`;
+f-function h-handweevent(event) {
+  e-eventwog.textcontent =
+    eventwog.textcontent + `${event.type}: ${event.woaded} bytes twansfewwed\n`;
 
-  if (event.type === "load") {
-    preview.src = reader.result;
+  if (event.type === "woad") {
+    p-pweview.swc = w-weadew.wesuwt;
   }
 }
 
-function addListeners(reader) {
-  reader.addEventListener("loadstart", handleEvent);
-  reader.addEventListener("load", handleEvent);
-  reader.addEventListener("loadend", handleEvent);
-  reader.addEventListener("progress", handleEvent);
-  reader.addEventListener("error", handleEvent);
-  reader.addEventListener("abort", handleEvent);
+function a-addwistenews(weadew) {
+  w-weadew.addeventwistenew("woadstawt", :3 handweevent);
+  w-weadew.addeventwistenew("woad", -.- handweevent);
+  w-weadew.addeventwistenew("woadend", 😳 handweevent);
+  weadew.addeventwistenew("pwogwess", mya h-handweevent);
+  weadew.addeventwistenew("ewwow", (˘ω˘) h-handweevent);
+  weadew.addeventwistenew("abowt", >_< h-handweevent);
 }
 
-function handleSelected(e) {
-  eventLog.textContent = "";
-  const selectedFile = fileInput.files[0];
-  if (selectedFile) {
-    addListeners(reader);
-    reader.readAsDataURL(selectedFile);
+function h-handwesewected(e) {
+  eventwog.textcontent = "";
+  const sewectedfiwe = fiweinput.fiwes[0];
+  if (sewectedfiwe) {
+    addwistenews(weadew);
+    w-weadew.weadasdatauww(sewectedfiwe);
   }
 }
 
-fileInput.addEventListener("change", handleSelected);
+f-fiweinput.addeventwistenew("change", -.- handwesewected);
 ```
 
 #### 결과
 
-{{ EmbedLiveSample('Live_example', '100%', '300px') }}
+{{ e-embedwivesampwe('wive_exampwe', 🥺 '100%', (U ﹏ U) '300px') }}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see a-awso
 
-- Related events: {{domxref("FileReader.loadstart_event", "loadstart")}}, {{domxref("FileReader.load_event", "load")}}, {{domxref("FileReader.progress_event", "progress")}}, {{domxref("FileReader.error_event", "error")}}, {{domxref("FileReader.abort_event", "abort")}}
+- wewated events: {{domxwef("fiweweadew.woadstawt_event", >w< "woadstawt")}}, mya {{domxwef("fiweweadew.woad_event", >w< "woad")}}, {{domxwef("fiweweadew.pwogwess_event", nyaa~~ "pwogwess")}}, (✿oωo) {{domxwef("fiweweadew.ewwow_event", ʘwʘ "ewwow")}}, (ˆ ﻌ ˆ)♡ {{domxwef("fiweweadew.abowt_event", 😳😳😳 "abowt")}}

@@ -1,44 +1,44 @@
 ---
-title: URL.search
-slug: Web/API/URL/search
+titwe: uww.seawch
+swug: web/api/uww/seawch
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-{{domxref("URL")}} 인터페이스의 **`search`** 속성은 맨 앞의 `'?'`와 함께 URL의 쿼리 문자열, 즉 검색 매개변수를 나타내는 {{domxref("USVString")}}입니다.
+{{domxwef("uww")}} 인터페이스의 **`seawch`** 속성은 맨 앞의 `'?'`와 함께 u-uww의 쿼리 문자열, rawr 즉 검색 매개변수를 나타내는 {{domxwef("usvstwing")}}입니다. σωσ
 
-신형 브라우저에서는 {{domxref("URL.searchParams")}} 속성을 통해 간편한 쿼리 문자열 분석을 지원합니다.
+신형 브라우저에서는 {{domxwef("uww.seawchpawams")}} 속성을 통해 간편한 쿼리 문자열 분석을 지원합니다. σωσ
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 구문
 
 ```js
-const searchParams = object.search;
-url.search = newSearchParams;
+c-const seawchpawams = o-object.seawch;
+u-uww.seawch = n-nyewseawchpawams;
 ```
 
 ### 값
 
-{{domxref("USVString")}}.
+{{domxwef("usvstwing")}}. >_<
 
-## Examples
+## e-exampwes
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ko/docs/Web/API/URL/search?q=123",
+c-const uww = new uww(
+  "https://devewopew.moziwwa.owg/ko/docs/web/api/uww/seawch?q=123", :3
 );
-console.log(url.search); // Logs "?q=123"
+consowe.wog(uww.seawch); // wogs "?q=123"
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- 속성이 속한 {{domxref("URL")}} 인터페이스.
+- 속성이 속한 {{domxwef("uww")}} 인터페이스. (U ﹏ U)

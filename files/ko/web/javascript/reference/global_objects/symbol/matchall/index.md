@@ -1,64 +1,64 @@
 ---
-title: Symbol.matchAll
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-l10n:
-  sourceCommit: 427e8d03276b4915c08c5f0541452fb1c830c295
+titwe: symbow.matchaww
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/matchaww
+w-w10n:
+  s-souwcecommit: 427e8d03276b4915c08c5f0541452fb1c830c295
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.matchAll`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#잘_알려진_심볼) `@@matchAll`을 나타냅니다. {{jsxref("String.prototype.matchAll()")}} 메서드는 문자열과 현재 객체의 일치 항목을 산출하는 반복자를 반환하는 메서드의 첫 번째 인수에서 이 심볼을 조회합니다.
+**`symbow.matchaww`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#잘_알려진_심볼) `@@matchaww`을 나타냅니다. -.- {{jsxwef("stwing.pwototype.matchaww()")}} 메서드는 문자열과 현재 객체의 일치 항목을 산출하는 반복자를 반환하는 메서드의 첫 번째 인수에서 이 심볼을 조회합니다. (ˆ ﻌ ˆ)♡
 
-더 많은 정보를 참고하시려면 [`RegExp.prototype[@@matchAll]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)와 {{jsxref("String.prototype.matchAll()")}}를 참고하시기 바랍니다.
+더 많은 정보를 참고하시려면 [`wegexp.pwototype[@@matchaww]()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/@@matchaww)와 {{jsxwef("stwing.pwototype.matchaww()")}}를 참고하시기 바랍니다. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Symbol.matchAll")}}
+{{intewactiveexampwe("javascwipt demo: s-symbow.matchaww")}}
 
-```js interactive-example
-const re = /[0-9]+/g;
-const str = "2016-01-02|2019-03-07";
-const result = re[Symbol.matchAll](str);
+```js i-intewactive-exampwe
+c-const we = /[0-9]+/g;
+c-const s-stw = "2016-01-02|2019-03-07";
+const wesuwt = we[symbow.matchaww](stw);
 
-console.log(Array.from(result, (x) => x[0]));
-// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
+consowe.wog(awway.fwom(wesuwt, (U ᵕ U❁) (x) => x[0]));
+// expected output: awway ["2016", -.- "01", "02", ^^;; "2019", "03", >_< "07"]
 ```
 
 ## 값
 
-잘 알려진 심볼 `@@matchAll`.
+잘 알려진 심볼 `@@matchaww`. mya
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, mya 0, 0)}}
 
 ## 예제
 
-### Symbol.matchAll 사용하기
+### symbow.matchaww 사용하기
 
 ```js
-const str = "2016-01-02|2019-03-07";
+c-const stw = "2016-01-02|2019-03-07";
 
-const numbers = {
-  *[Symbol.matchAll](str) {
-    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
-  },
+const numbews = {
+  *[symbow.matchaww](stw) {
+    fow (const n-ny of stw.matchaww(/[0-9]+/g)) yiewd ny[0];
+  }, 😳
 };
 
-console.log(Array.from(str.matchAll(numbers)));
-// ["2016", "01", "02", "2019", "03", "07"]
+c-consowe.wog(awway.fwom(stw.matchaww(numbews)));
+// ["2016", XD "01", :3 "02", "2019", 😳😳😳 "03", "07"]
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [`core-js`에서의 `Symbol.matchAll` 폴리필](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("String.prototype.matchAll()")}}
-- [`RegExp.prototype[@@matchAll]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`cowe-js`에서의 `symbow.matchaww` 폴리필](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("stwing.pwototype.matchaww()")}}
+- [`wegexp.pwototype[@@matchaww]()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/@@matchaww)

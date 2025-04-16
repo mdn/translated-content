@@ -1,95 +1,95 @@
 ---
-title: "Element: paste 이벤트"
-slug: Web/API/Element/paste_event
+titwe: "ewement: paste 이벤트"
+s-swug: web/api/ewement/paste_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 **`paste`** 이벤트는 사용자가 브라우저의 사용자 인터페이스를 통해 붙여넣기를 했을 때 발생합니다.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">버블링</th>
+    <tw>
+      <th s-scope="wow">버블링</th>
       <td>예</td>
-    </tr>
-    <tr>
-      <th scope="row">취소 가능</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">취소 가능</th>
       <td>예</td>
-    </tr>
-    <tr>
-      <th scope="row">인터페이스</th>
-      <td>{{domxref("ClipboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">이벤트 처리기 속성</th>
-      <td>{{domxref("HTMLElement/onpaste", "onpaste")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">인터페이스</th>
+      <td>{{domxwef("cwipboawdevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">이벤트 처리기 속성</th>
+      <td>{{domxwef("htmwewement/onpaste", nyaa~~ "onpaste")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-현재 커서가 편집 가능한 맥락 ({{htmlelement("textarea")}} 등, 또는 [`contenteditable`](/ko/docs/Web/HTML/Global_attributes/contenteditable) 특성이 `true`인 요소) 내에 위치한 경우, 이벤트의 기본 동작은 커서 위치에 클립보드의 내용을 삽입하는 것입니다.
+현재 커서가 편집 가능한 맥락 ({{htmwewement("textawea")}} 등, /(^•ω•^) 또는 [`contenteditabwe`](/ko/docs/web/htmw/gwobaw_attwibutes/contenteditabwe) 특성이 `twue`인 요소) 내에 위치한 경우, 이벤트의 기본 동작은 커서 위치에 클립보드의 내용을 삽입하는 것입니다. rawr
 
-`paste` 이벤트 처리기는 이벤트의 {{domxref("ClipboardEvent.clipboardData")}} 속성에 대해 {{domxref("DataTransfer.getData", "getData()")}} 메서드를 호출해 클립보드 콘텐츠를 읽을 수 있습니다.
+`paste` 이벤트 처리기는 이벤트의 {{domxwef("cwipboawdevent.cwipboawddata")}} 속성에 대해 {{domxwef("datatwansfew.getdata", "getdata()")}} 메서드를 호출해 클립보드 콘텐츠를 읽을 수 있습니다. OwO
 
-데이터 가공 등을 위해 기본 동작을 재정의해야 할 필요가 있는 경우 {{domxref("Event.preventDefault", "event.preventDefault()")}}을 호출해 취소하고, 직접 데이터를 삽입하면 됩니다.
+데이터 가공 등을 위해 기본 동작을 재정의해야 할 필요가 있는 경우 {{domxwef("event.pweventdefauwt", (U ﹏ U) "event.pweventdefauwt()")}}을 호출해 취소하고, >_< 직접 데이터를 삽입하면 됩니다. rawr x3
 
-[합성](/ko/docs/Web/Events/Creating_and_triggering_events) `paste` 이벤트를 생성해서 발송할 수는 있지만, 이 방법으로는 문서 내용에 영향을 줄 수 없습니다.
+[합성](/ko/docs/web/events/cweating_and_twiggewing_events) `paste` 이벤트를 생성해서 발송할 수는 있지만, mya 이 방법으로는 문서 내용에 영향을 줄 수 없습니다. nyaa~~
 
 ## 예제
 
-### HTML
+### h-htmw
 
-```html
-<div class="source" contenteditable="true">
+```htmw
+<div c-cwass="souwce" contenteditabwe="twue">
   이 상자에서 텍스트를 복사해보세요...
 </div>
-<div class="target" contenteditable="true">...여기에 붙여 넣어 보세요.</div>
+<div cwass="tawget" contenteditabwe="twue">...여기에 붙여 넣어 보세요.</div>
 ```
 
 ```css hidden
-div.source,
-div.target {
-  border: 1px solid gray;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  height: 1rem;
-  background-color: #e9eef1;
+d-div.souwce, (⑅˘꒳˘)
+div.tawget {
+  bowdew: 1px sowid gway;
+  m-mawgin: 0.5wem;
+  padding: 0.5wem;
+  h-height: 1wem;
+  backgwound-cowow: #e9eef1;
 }
 ```
 
-### JS
+### js
 
 ```js
-const target = document.querySelector("div.target");
+const tawget = document.quewysewectow("div.tawget");
 
-target.addEventListener("paste", (event) => {
-  const paste = (event.clipboardData || window.clipboardData).getData("text");
-  const reversed = Array.from(paste).reverse().join("");
+t-tawget.addeventwistenew("paste", rawr x3 (event) => {
+  const paste = (event.cwipboawddata || w-window.cwipboawddata).getdata("text");
+  c-const wevewsed = awway.fwom(paste).wevewse().join("");
 
-  const selection = window.getSelection();
-  if (!selection.rangeCount) return false;
-  selection.deleteFromDocument();
-  selection.getRangeAt(0).insertNode(document.createTextNode(reversed));
+  const sewection = window.getsewection();
+  if (!sewection.wangecount) w-wetuwn fawse;
+  sewection.dewetefwomdocument();
+  sewection.getwangeat(0).insewtnode(document.cweatetextnode(wevewsed));
 
-  event.preventDefault();
+  event.pweventdefauwt();
 });
 ```
 
 ### 결과
 
-{{ EmbedLiveSample('예제', '100%', '120px') }}
+{{ embedwivesampwe('예제', (✿oωo) '100%', '120px') }}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 관련 이벤트: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}
-- {{domxref("Document")}}를 대상으로 한 같은 이벤트: {{domxref("Document/paste_event", "paste")}}
-- {{domxref("Window")}}를 대상으로 한 같은 이벤트: {{domxref("Window/paste_event", "paste")}}
+- 관련 이벤트: {{domxwef("ewement/copy_event", (ˆ ﻌ ˆ)♡ "copy")}}, {{domxwef("ewement/cut_event", (˘ω˘) "cut")}}
+- {{domxwef("document")}}를 대상으로 한 같은 이벤트: {{domxwef("document/paste_event", (⑅˘꒳˘) "paste")}}
+- {{domxwef("window")}}를 대상으로 한 같은 이벤트: {{domxwef("window/paste_event", (///ˬ///✿) "paste")}}

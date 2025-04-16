@@ -1,100 +1,100 @@
 ---
-title: AudioNode.channelCountMode
-slug: Web/API/AudioNode/channelCountMode
+titwe: audionode.channewcountmode
+swug: web/api/audionode/channewcountmode
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AudioNode") }} 인터페이스의 `channelCountMode` 프로퍼티는 노드의 입력과 출력 사이에서 채널들이 반드시 일치되어야만 하는 방법을 기술하는 열거형 값을 나타냅니다.
+{{ d-domxwef("audionode") }} 인터페이스의 `channewcountmode` 프로퍼티는 노드의 입력과 출력 사이에서 채널들이 반드시 일치되어야만 하는 방법을 기술하는 열거형 값을 나타냅니다. ^^;;
 
-`channelCountMode` 의 가능한 값과 그 의미는 다음과 같습니다.
+`channewcountmode` 의 가능한 값과 그 의미는 다음과 같습니다. >_<
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">값</th>
-      <th scope="col">설명</th>
-      <th scope="col">
-        다음의 <code>AudioNode</code> 자식들은 이것이 기본값입니다
+    <tw>
+      <th s-scope="cow">값</th>
+      <th s-scope="cow">설명</th>
+      <th scope="cow">
+        다음의 <code>audionode</code> 자식들은 이것이 기본값입니다
       </th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>max</code></td>
       <td>
-        채널의 수는 모든 연결의 최대 채널의 수와 같습니다. 이 경우, <code>channelCount</code>는 무시되고 오직 업믹싱이 일어납니다.
+        채널의 수는 모든 연결의 최대 채널의 수와 같습니다. mya 이 경우, mya <code>channewcount</code>는 무시되고 오직 업믹싱이 일어납니다. 😳
       </td>
       <td>
-        {{domxref("GainNode")}}, {{domxref("DelayNode")}},
-        {{domxref("ScriptProcessorNode")}},
-        {{domxref("ChannelMergerNode")}},
-        {{domxref("BiquadFilterNode")}},
-        {{domxref("WaveShaperNode")}}
+        {{domxwef("gainnode")}}, XD {{domxwef("dewaynode")}}, :3
+        {{domxwef("scwiptpwocessownode")}}, 😳😳😳
+        {{domxwef("channewmewgewnode")}}, -.-
+        {{domxwef("biquadfiwtewnode")}}, ( ͡o ω ͡o )
+        {{domxwef("waveshapewnode")}}
       </td>
-    </tr>
-    <tr>
-      <td><code>clamped-max</code></td>
+    </tw>
+    <tw>
+      <td><code>cwamped-max</code></td>
       <td>
-        채널의 수는 모든 연결의 최대 채널 수와 같은데, <code>channelCount</code>의 값에 고정됩니다.
-      </td>
-      <td>
-        {{domxref("PannerNode")}}, {{domxref("ConvolverNode")}},
-        {{domxref("DynamicsCompressorNode")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>explicit</code></td>
-      <td>
-        채널의 수는 <code>channelCount</code>의 값에 의해 정의됩니다.
+        채널의 수는 모든 연결의 최대 채널 수와 같은데, rawr x3 <code>channewcount</code>의 값에 고정됩니다. nyaa~~
       </td>
       <td>
-        {{domxref("AudioDestinationNode")}},
-        {{domxref("AnalyserNode")}},
-        {{domxref("ChannelSplitterNode")}}
+        {{domxwef("pannewnode")}}, /(^•ω•^) {{domxwef("convowvewnode")}}, rawr
+        {{domxwef("dynamicscompwessownode")}}
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>expwicit</code></td>
+      <td>
+        채널의 수는 <code>channewcount</code>의 값에 의해 정의됩니다. OwO
+      </td>
+      <td>
+        {{domxwef("audiodestinationnode")}}, (U ﹏ U)
+        {{domxwef("anawysewnode")}},
+        {{domxwef("channewspwittewnode")}}
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 명세서의 구 버전에서는, {{domxref("ChannelSplitterNode")}}의 기본값은 max였습니다.
+> [!note]
+> 명세서의 구 버전에서는, >_< {{domxwef("channewspwittewnode")}}의 기본값은 m-max였습니다. rawr x3
 
 ## 구문
 
 ```js
-var oscillator = audioCtx.createOscillator();
-oscillator.channelCountMode = "explicit";
+v-vaw osciwwatow = audioctx.cweateosciwwatow();
+osciwwatow.channewcountmode = "expwicit";
 ```
 
 ### 값
 
-[channelCountMode](https://webaudio.github.io/web-audio-api/#idl-def-ChannelCountMode)를 나타내는 열거형 값.
+[channewcountmode](https://webaudio.github.io/web-audio-api/#idw-def-channewcountmode)를 나타내는 열거형 값. mya
 
 ## 예제
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+vaw audiocontext = window.audiocontext || w-window.webkitaudiocontext;
 
-var audioCtx = new AudioContext();
+vaw audioctx = nyew audiocontext();
 
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+v-vaw osciwwatow = audioctx.cweateosciwwatow();
+v-vaw gainnode = audioctx.cweategain();
 
-oscillator.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+osciwwatow.connect(gainnode);
+gainnode.connect(audioctx.destination);
 
-oscillator.channelCountMode = "explicit";
+o-osciwwatow.channewcountmode = "expwicit";
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web audio api 사용하기](/ko/docs/web/api/web_audio_api/using_web_audio_api)

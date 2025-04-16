@@ -1,43 +1,43 @@
 ---
-title: Date.prototype.getUTCDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
+titwe: date.pwototype.getutcdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**getUTCDate()** 메서드는 표준시에 따라 지정된 날짜에 해당 월의 요일 (날짜)을 반환합니다.
+**getutcdate()** 메서드는 표준시에 따라 지정된 날짜에 해당 월의 요일 (날짜)을 반환합니다. UwU
 
-## Syntax
+## s-syntax
 
 ```js
-dateObj.getUTCDate();
+dateobj.getutcdate();
 ```
 
-### Return value
+### w-wetuwn v-vawue
 
-보편적 인 시간에 따라 지정된 날짜의 달의 날짜를 나타내는 1에서 31 사이의 정수입니다.
+보편적 인 시간에 따라 지정된 날짜의 달의 날짜를 나타내는 1에서 31 사이의 정수입니다. rawr x3
 
-## Examples
+## e-exampwes
 
-### Using `getUTCDate()`
+### u-using `getutcdate()`
 
-다음 예제에서는 현재 날짜의 일 부분을 day 변수에 할당합니다.
+다음 예제에서는 현재 날짜의 일 부분을 d-day 변수에 할당합니다. rawr
 
 ```js
-var today = new Date();
-var day = today.getUTCDate();
+v-vaw today = n-nyew date();
+vaw day = today.getutcdate();
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{jsxref("Date.prototype.getDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- {{jsxwef("date.pwototype.getdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setutcdate()")}}

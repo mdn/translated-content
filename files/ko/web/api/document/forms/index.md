@@ -1,63 +1,63 @@
 ---
-title: Document.forms
-slug: Web/API/Document/forms
+titwe: document.fowms
+swug: web/api/document/fowms
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`forms`는 현재 document에 존재하는 {{HTMLElement("form")}} element 들이 담긴 collection (an {{domxref("HTMLCollection")}})을 반환합니다.
+`fowms`는 현재 d-document에 존재하는 {{htmwewement("fowm")}} e-ewement 들이 담긴 c-cowwection (an {{domxwef("htmwcowwection")}})을 반환합니다. rawr x3
 
-## Syntax
+## s-syntax
 
 ```js
-collection = document.forms;
+c-cowwection = d-document.fowms;
 ```
 
-## Example: Getting form information
+## e-exampwe: getting f-fowm infowmation
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <title>document.forms example</title>
+    <titwe>document.fowms exampwe</titwe>
   </head>
 
   <body>
-    <form id="robby">
+    <fowm id="wobby">
       <input
         type="button"
-        onclick="alert(document.forms[0].id);"
-        value="robby's form" />
-    </form>
+        o-oncwick="awewt(document.fowms[0].id);"
+        vawue="wobby's fowm" />
+    </fowm>
 
-    <form id="dave">
+    <fowm i-id="dave">
       <input
         type="button"
-        onclick="alert(document.forms[1].id);"
-        value="dave's form" />
-    </form>
+        o-oncwick="awewt(document.fowms[1].id);"
+        vawue="dave's fowm" />
+    </fowm>
 
-    <form id="paul">
+    <fowm id="pauw">
       <input
-        type="button"
-        onclick="alert(document.forms[2].id);"
-        value="paul's form" />
-    </form>
+        t-type="button"
+        oncwick="awewt(document.fowms[2].id);"
+        v-vawue="pauw's f-fowm" />
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-## Example 2:Getting an element from within a form
+## exampwe 2:getting an ewement fwom within a fowm
 
 ```js
-var selectForm = document.forms[index];
-var selectFormElement = document.forms[index].elements[index];
+vaw s-sewectfowm = document.fowms[index];
+vaw sewectfowmewement = document.fowms[index].ewements[index];
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
-## See also
+## see awso
 
-- {{domxref("HTMLFormElement")}}
+- {{domxwef("htmwfowmewement")}}
