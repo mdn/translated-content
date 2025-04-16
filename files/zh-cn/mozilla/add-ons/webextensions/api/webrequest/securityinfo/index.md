@@ -87,11 +87,11 @@ l10n:
 
 - `usedOcsp` {{optional_inline}}
 
-  - : `Boolean`。如果连接发出了在线证书状态协议（OCSP）请求则为 `true`，否则为 `false`。
+  - : `Boolean`。如果连接发起了在线证书状态协议（OCSP）请求则为 `true`，否则为 `false`。
 
 - `usedPrivateDns` {{optional_inline}}
 
-  - : `Boolean`。如果连接进行了私有 DNS 查找（如使用 DoH（DNS over HTTPS））则为 `true`，否则为 `false`。
+  - : `Boolean`。如果连接进行了私有 DNS（如 DoH（DNS over HTTPS））查询则为 `true`，否则为 `false`。
 
 - `weaknessReasons` {{optional_inline}}
   - : `String`。如果 `state` 为“weak”，则指示原因。现在该属性只可能为“cipher”，指示协商的密码套件被认为是弱的。
