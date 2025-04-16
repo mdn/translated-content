@@ -64,6 +64,6 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 )
 ```
 
-| 指令 | 二进制操作码 |
-| ----------- | ------------- |
-| `loop`      | `0x03`        |
+| 指令   | 二进制操作码 |
+| ------ | ------------ |
+| `loop` | `0x03`       |
