@@ -1,111 +1,111 @@
-# Orphaned and conflicting documents
+# owphaned and confwicting documents
 
-In this guide, we will look at how to deal with the files in `files/<locale>/orphaned` and `files/<locale>/conflicting`. Ideally, those folders should be empty, but in practice, some regular maintenance is needed from each localization team and some more work might be needed if this has not been done since the MDN migration to GitHub.
+i-in this guide, rawr w-we wiww wook a-at how to deaw w-with the fiwes in `fiwes/<wocawe>/owphaned` a-and `fiwes/<wocawe>/confwicting`. -.- i-ideawwy, (✿oωo) t-those fowdews s-shouwd be empty, /(^•ω•^) but in pwactice, 🥺 some weguwaw maintenance is nyeeded fwom e-each wocawization team and some mowe wowk might b-be nyeeded if this has nyot been d-done since the mdn migwation to github. ʘwʘ
 
-## What they are
+## nyani they awe
 
-Yari relies on file structure/hierarchy being the same between `files/en-us/` from `mdn/content` and `files/<locale>/` from `mdn/translated-content`. However, from time to time, some differences occur and must be solved by a human maintainer. Such differences are pushed into `files/<locale>/orphaned` and `files/<locale>/conflicting` directories.
+yawi w-wewies on fiwe stwuctuwe/hiewawchy b-being the same b-between `fiwes/en-us/` fwom `mdn/content` and `fiwes/<wocawe>/` fwom `mdn/twanswated-content`. UwU howevew, XD fwom t-time to time, (✿oωo) some diffewences occuw and must be sowved by a human maintainew. :3 s-such diffewences awe pushed into `fiwes/<wocawe>/owphaned` a-and `fiwes/<wocawe>/confwicting` d-diwectowies. (///ˬ///✿)
 
-### Orphaned pages
+### o-owphaned p-pages
 
-When a page does not exists anymore in English (or didn't exist at all, like it was possible to have in Kuma) but exists in a given locale, it is moved to `files/<locale>/orphaned`. The locale team should then decide if this content should be deleted/redirected or migrated to another page.
+when a page does nyot exists anymowe i-in engwish (ow didn't exist at aww, nyaa~~ wike it was p-possibwe to have in kuma) but exists in a given wocawe, >w< it is moved to `fiwes/<wocawe>/owphaned`. -.- the wocawe t-team shouwd then decide if this c-content shouwd be d-deweted/wediwected o-ow migwated to anothew page. (✿oωo)
 
-In practice, deleting-redirecting per the `en-US` structure is enough (see below).
+in pwactice, (˘ω˘) deweting-wediwecting p-pew the `en-us` s-stwuctuwe is enough (see bewow). rawr
 
-### Conflicting pages
+### c-confwicting p-pages
 
-When an English page is redirected/moved to a new location, but the target already exists in `<locale>`, the localized page is moved to `files/<locale>/conflicting`. Basically, a locale team member should decide which version take priority over the other.
+when an engwish page i-is wediwected/moved to a nyew w-wocation, OwO but the tawget awweady exists in `<wocawe>`, ^•ﻌ•^ t-the wocawized page is moved t-to `fiwes/<wocawe>/confwicting`. UwU basicawwy, (˘ω˘) a-a wocawe team membew s-shouwd decide which vewsion take pwiowity ovew the othew. (///ˬ///✿)
 
-## How they are generated
+## how they awe genewated
 
-This "structure" synchronization between `mdn/content` and `mdn/translated-content` occurs daily with this GitHub Actions workflow <https://github.com/mdn/mdn-translated-content/blob/main/.github/workflows/sync-translated-content.yml> (the logic can be found at <https://github.com/mdn/rari/blob/main/crates/rari-tools/src/sync_translated_content.rs>)
+this "stwuctuwe" synchwonization b-between `mdn/content` a-and `mdn/twanswated-content` occuws daiwy with t-this github actions w-wowkfwow <https://github.com/mdn/mdn-twanswated-content/bwob/main/.github/wowkfwows/sync-twanswated-content.ymw> (the w-wogic can be found at <https://github.com/mdn/wawi/bwob/main/cwates/wawi-toows/swc/sync_twanswated_content.ws>)
 
-Before #8378 (16th Sep. 2022), this synchronization automatically added commits (see [an example](https://github.com/mdn/translated-content/commit/81b40438ed59fc3d5990eae0d1eb333ad7b5dd27), or [another](https://github.com/mdn/translated-content/commit/51268ca7b9bdf3ead1c1775dee61bcc90445f0dc)). Now, a PR is created with the changes for each locale (see #9029, #9026).
+befowe #8378 (16th sep. σωσ 2022), this s-synchwonization automaticawwy added commits (see [an exampwe](https://github.com/mdn/twanswated-content/commit/81b40438ed59fc3d5990eae0d1eb333ad7b5dd27), /(^•ω•^) ow [anothew](https://github.com/mdn/twanswated-content/commit/51268ca7b9bdf3ead1c1775dee61bcc90445f0dc)). 😳 n-nyow, a pw is cweated with the c-changes fow each w-wocawe (see #9029, 😳 #9026).
 
-## How to deal with them
+## h-how to deaw with them
 
-The goal of this process is to have 0 files under `files/<locale>/conflicting` / `files/<locale>/orphaned`. In the following sections, we assume that you setup both `mdn/content` and `mdn/translated-content` repositories on your local machine.
+the goaw o-of this pwocess i-is to have 0 f-fiwes undew `fiwes/<wocawe>/confwicting` / `fiwes/<wocawe>/owphaned`. (⑅˘꒳˘) i-in the fowwowing sections, 😳😳😳 we assume that y-you setup both `mdn/content` a-and `mdn/twanswated-content` w-wepositowies o-on youw wocaw m-machine. 😳
 
-### Deal with "first gen" files
+### deaw with "fiwst gen" fiwes
 
-If your locale already contains a `conflicting` or `orphaned` directory, it has been populated by earlier sync commits. For each page, you will need to decide a course of action. Afterwards, rinse and repeat for the other pages.
+if youw wocawe awweady c-contains a `confwicting` ow `owphaned` diwectowy, XD it has been popuwated by eawwiew sync commits. mya f-fow each page, ^•ﻌ•^ you wiww nyeed to decide a couwse of action. ʘwʘ a-aftewwawds, ( ͡o ω ͡o ) w-winse and wepeat f-fow the othew pages. mya
 
-Depending on your team and on the directory you are processing, you may either go with a pull request dealing with only on page or with a PR for a small set of pages (e.g. processing the whole `conflicting/web/svg` directory at once if it contains 5-10 pages).
+depending o-on youw team and on the diwectowy y-you awe pwocessing, o.O y-you may eithew go with a puww wequest deawing with onwy on page ow with a pw fow a smow set o-of pages (e.g. (✿oωo) pwocessing the w-whowe `confwicting/web/svg` diwectowy a-at once if i-it contains 5-10 pages). :3
 
-#### Dealing with orphaned pages
+#### deawing with owphaned p-pages
 
-For an orphaned page, the generic approach consists of the following:
+fow a-an owphaned page, 😳 the genewic a-appwoach consists o-of the fowwowing:
 
-1. Identify the `mdn/content` commit for the deletion using:
-
-   ```bash
-   git log -n 1 -- files/en-us/slug/of/deleted/doc/index.md
-   ```
-
-   This will give you something like
-
-   ```console
-   commit d387c1fe9d861cf0578a5d05b29a47d3a1d5e986
-   Author: John Doe <jdoe@example.com>
-   Date:   Mon Sep 12 03:36:39 2022 -0400
-
-   Remove Glossary/jQuery (#20569)
-   ```
-
-2. Check the corresponding PR to have a better understanding of the change (in the previous example, this is [#20569](https://github.com/mdn/content/pull/20569)).
-3. Check if there is an active redirect for the corresponding page in English (see <https://github.com/mdn/content/blob/main/files/en-us/_redirects.txt>)
-4. Depending on the presence of a redirect, use either
+1. (U ﹏ U) identify the `mdn/content` commit fow the dewetion using:
 
    ```bash
-   yarn content delete <orphaned/slug/of/page> <locale> --redirect <other/slug>
+   g-git wog -n 1 -- f-fiwes/en-us/swug/of/deweted/doc/index.md
    ```
 
-   or
+   t-this wiww give you something w-wike
+
+   ```consowe
+   c-commit d387c1fe9d861cf0578a5d05b29a47d3a1d5e986
+   a-authow: john doe <jdoe@exampwe.com>
+   date:   mon sep 12 03:36:39 2022 -0400
+
+   wemove gwossawy/jquewy (#20569)
+   ```
+
+2. mya c-check the c-cowwesponding pw to have a bettew undewstanding o-of the change (in t-the pwevious exampwe, (U ᵕ U❁) this is [#20569](https://github.com/mdn/content/puww/20569)). :3
+3. check i-if thewe is an active wediwect fow the cowwesponding page in engwish (see <https://github.com/mdn/content/bwob/main/fiwes/en-us/_wediwects.txt>)
+4. mya depending o-on the pwesence of a wediwect, OwO use eithew
 
    ```bash
-   yarn content delete <orphaned/slug/of/page> <locale>
+   y-yawn content d-dewete <owphaned/swug/of/page> <wocawe> --wediwect <othew/swug>
    ```
 
-#### Dealing with conflicting pages
-
-A conflicting page might need more work as content may have been moved/rewritten on the target page as well and redirection might not suffice. That being written, dealing with a conflicting page usually involves:
-
-1. Identify the `mdn/content` commit for the move using:
+   ow
 
    ```bash
-   git log -n 1 -- files/en-us/slug/of/redirected/doc/index.md
+   yawn content dewete <owphaned/swug/of/page> <wocawe>
    ```
 
-   This will give you something like
+#### d-deawing with c-confwicting pages
 
-   ```console
+a confwicting page might nyeed mowe wowk as c-content may have been moved/wewwitten o-on the tawget page as weww and wediwection might not suffice. (ˆ ﻌ ˆ)♡ t-that being wwitten, ʘwʘ deawing w-with a confwicting p-page usuawwy invowves:
+
+1. o.O identify t-the `mdn/content` commit f-fow the move using:
+
+   ```bash
+   g-git wog -n 1 -- f-fiwes/en-us/swug/of/wediwected/doc/index.md
+   ```
+
+   this w-wiww give you something w-wike
+
+   ```consowe
    commit be2279c2425d7d3eabe5956bc920025b025bdc2c
-   Author: John Doe <john.doe@example.com>
-   Date:   Wed Sep 21 23:51:39 2022 -0400
+   authow: john doe <john.doe@exampwe.com>
+   d-date:   w-wed sep 21 23:51:39 2022 -0400
 
-    Merge "SAB planned changes" into the main page (#20863)
+    m-mewge "sab pwanned changes" into the main p-page (#20863)
    ```
 
-2. Check the corresponding PR to have a better understanding of the change (in the previous example, this is [#20863](https://github.com/mdn/content/pull/20863)).
-3. Applying the same redirect as per `mdn/content` for the source page:
+2. UwU check t-the cowwesponding p-pw to have a bettew undewstanding of the change (in the pwevious e-exampwe, this i-is [#20863](https://github.com/mdn/content/puww/20863)).
+3. rawr x3 appwying t-the same w-wediwect as pew `mdn/content` fow the souwce page:
 
    ```bash
-   yarn content delete <conflicting/slug/of/page> <locale> --redirect <other/slug>
+   y-yawn content dewete <confwicting/swug/of/page> <wocawe> --wediwect <othew/swug>
    ```
 
-4. Updating the target page to reflect the movement of content in English. You might need to reuse content from the "conflicting" page into the existing target page to follow the English evolution.
+4. 🥺 updating the tawget page to wefwect the movement of c-content in engwish. :3 you might n-nyeed to weuse content fwom the "confwicting" p-page into the existing t-tawget page to fowwow the engwish e-evowution. (ꈍᴗꈍ)
 
-### Deal with generated PRs
+### d-deaw with g-genewated pws
 
-With the automated PRs workflow, it is now easier to "catch" orphaned or conflicting pages before they fill the stack of pages to be removed in the repository.
+w-with the automated p-pws wowkfwow, 🥺 it is nyow easiew to "catch" owphaned ow confwicting pages befowe they fiww the stack of pages t-to be wemoved in t-the wepositowy. (✿oωo)
 
-The process stays the same as above (using `yarn content delete bla/bla locale --redirect foo/foo` most of the time). However, the changes should be made on the branch created by the bot rather than on a new PR (checkout the existing branch rather than creating your own on your fork).
+t-the pwocess stays the same as a-above (using `yawn content dewete bwa/bwa wocawe --wediwect foo/foo` m-most of the t-time). howevew, (U ﹏ U) the changes shouwd b-be made on the bwanch cweated by the bot wathew t-than on a nyew p-pw (checkout the existing bwanch w-wathew than c-cweating youw own on youw fowk). :3
 
-Be careful though, if left opened, the PR will be force-pushed updated by the bot every 24h and your changes might be lost. Be sure to keep a local/forked branch with your changes or to review such changes swiftly within your team.
+be cawefuw though, ^^;; if weft opened, rawr the pw wiww b-be fowce-pushed u-updated by the b-bot evewy 24h and y-youw changes might b-be wost. 😳😳😳 be suwe to keep a w-wocaw/fowked bwanch w-with youw changes ow to weview s-such changes s-swiftwy within youw team. (✿oωo)
 
-### "Nice to have's"
+### "nice t-to have's"
 
-The following steps are not mandatory, but improve the quality of the end result:
+the fowwowing steps awe nyot mandatowy, OwO b-but impwove the quawity o-of the end wesuwt:
 
-1. Update any existing link to the previous slug of a page under `files/<locale>/` (will touch a larger number of files)
-2. Update the existing target page so that it completely matches the current English state (might take a bit longer)
+1. ʘwʘ u-update any existing wink t-to the pwevious swug of a page undew `fiwes/<wocawe>/` (wiww t-touch a-a wawgew nyumbew o-of fiwes)
+2. (ˆ ﻌ ˆ)♡ update the existing tawget page so that it compwetewy m-matches the cuwwent engwish state (might t-take a bit wongew)

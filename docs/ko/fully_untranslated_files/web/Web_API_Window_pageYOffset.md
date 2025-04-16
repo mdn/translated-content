@@ -1,142 +1,142 @@
 ---
-title: Window.pageYOffset
-slug: Web/API/Window/pageYOffset
+titwe: window.pageyoffset
+swug: w-web/api/window/pageyoffset
 ---
 
-{{ APIRef("CSSOM View") }}
+{{ a-apiwef("cssom v-view") }}
 
-{{domxref("Window")}} 인터페이스의 **`pageYOffset`** 읽기 전용 속성은 {{domxref("Window.scrollY", "scrollY")}}의 다른 이름으로, 문서가 수직으로 얼마나 스크롤됐는지 픽셀 단위로 반환합니다.
+{{domxwef("window")}} 인터페이스의 **`pageyoffset`** 읽기 전용 속성은 {{domxwef("window.scwowwy", o.O "scwowwy")}}의 다른 이름으로, mya 문서가 수직으로 얼마나 스크롤됐는지 픽셀 단위로 반환합니다. 🥺
 
-일부 오래된 브라우저는 `scrollY` 대신 `pageYOffset`만 지원하는 경우가 있지만, 노후 환경을 신경쓰지 않아도 된다면 둘 중 아무거나 사용해도 괜찮습니다.
+일부 오래된 브라우저는 `scwowwy` 대신 `pageyoffset`만 지원하는 경우가 있지만, ^^;; 노후 환경을 신경쓰지 않아도 된다면 둘 중 아무거나 사용해도 괜찮습니다. :3
 
-수평 스크롤을 나타내는 {{domxref("Window.pageXOffset", "pageXOffset")}} 속성 역시 {{domxref("Window.scrollX", "scrollX")}}의 다른 이름입니다.
+수평 스크롤을 나타내는 {{domxwef("window.pagexoffset", (U ﹏ U) "pagexoffset")}} 속성 역시 {{domxwef("window.scwowwx", OwO "scwowwx")}}의 다른 이름입니다. 😳😳😳
 
 ## 구문
 
 ```js
-yOffset = window.pageYOffset;
+y-yoffset = w-window.pageyoffset;
 ```
 
 ### 값
 
-{{domxref("Window")}} 안의 {{domxref("Document")}}가 수직 방향으로 스크롤된 거리를 픽셀 단위로 나타낸 부동소숫점 수. 단일 픽셀보다 높은 수준의 정밀도를 가지므로 정수가 아닐 수 있습니다. `0.0`은 창의 콘텐츠 영역과 문서의 위쪽 모서리 위치가 일치함을 나타냅니다.
+{{domxwef("window")}} 안의 {{domxwef("document")}}가 수직 방향으로 스크롤된 거리를 픽셀 단위로 나타낸 부동소숫점 수. (ˆ ﻌ ˆ)♡ 단일 픽셀보다 높은 수준의 정밀도를 가지므로 정수가 아닐 수 있습니다. XD `0.0`은 창의 콘텐츠 영역과 문서의 위쪽 모서리 위치가 일치함을 나타냅니다. (ˆ ﻌ ˆ)♡
 
-`pageYOffset`은 {{domxref("Window.scrollY")}}의 다른 이름이므로, 값에 대한 더 자세한 정보는 해당 문서를 방문해주세요.
+`pageyoffset`은 {{domxwef("window.scwowwy")}}의 다른 이름이므로, ( ͡o ω ͡o ) 값에 대한 더 자세한 정보는 해당 문서를 방문해주세요. rawr x3
 
 ## 예제
 
-```js hidden
-var contentHTML = `
-    <h2 id="introduction">Introduction</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-elit. Aenean volutpat vitae felis non dictum. Ut auctor
-eros tortor, vel elementum arcu rhoncus nec. Donec non
-laoreet massa. Donec pretium nisi et condimentum convallis.
-Nullam dictum molestie finibus. Nullam vitae lorem non
-augue mattis cursus.</p>
-  <p>Maecenas nec tortor tincidunt, sollicitudin mi eget,
-fermentum turpis. Vestibulum ac ante et libero efficitur
-faucibus id eget ex. Pellentesque tempor pharetra
-tincidunt. Suspendisse potenti. Nulla vulputate nunc sit
-amet hendrerit faucibus. Nullam metus dui, venenatis
-lacinia nunc nec, vestibulum viverra nunc. Quisque interdum
-quam tortor, sit amet varius neque consectetur at. Quisque
-vel turpis justo.</p>
-  <h2 id="overview">Overview</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-elit. Etiam dui dolor, pulvinar sed diam id, eleifend
-dapibus odio. Duis vitae ante nibh. Integer bibendum
-imperdiet suscipit. Fusce ligula leo, consectetur ac ante
-eget, gravida laoreet purus. Cras sodales efficitur risus,
-sed feugiat sem. Pellentesque justo augue, placerat non leo
-sit amet, laoreet fringilla arcu.</p>
-  <p>Class aptent taciti sociosqu ad litora torquent per
-conubia nostra, per inceptos himenaeos. Proin in gravida
-libero. Vivamus placerat, lacus eget condimentum sagittis,
-enim nunc bibendum nisi, quis varius erat felis sit amet
-risus.</p>
-<p>Sed non finibus ligula. Fusce a magna auctor, molestie
-nibh eget, sodales felis. Donec imperdiet facilisis mi ut
-aliquam. Etiam sodales suscipit urna, eget hendrerit neque
-elementum a. Vivamus fringilla sodales est ut ultricies.
-Nulla convallis congue maximus. Nullam consectetur felis
-vitae ultricies accumsan. Mauris at aliquam felis. Mauris
-efficitur tellus massa, id ullamcorper ipsum fermentum eu.
-Aenean mollis dignissim ultrices. Nunc gravida, sem sit
-amet lobortis iaculis, dolor ligula convallis nibh, id
-condimentum metus libero nec odio. Quisque nec ante
-pretium, viverra neque nec, facilisis risus. Duis
-condimentum sapien non felis cursus blandit. Integer
-euismod lectus a ipsum pellentesque lacinia.</p>
+```js h-hidden
+v-vaw contenthtmw = `
+    <h2 i-id="intwoduction">intwoduction</h2>
+  <p>wowem ipsum dowow sit amet, nyaa~~ consectetuw adipiscing
+ewit. a-aenean vowutpat vitae fewis nyon dictum. >_< ut auctow
+e-ewos towtow, ^^;; vew ewementum awcu w-whoncus nyec. (ˆ ﻌ ˆ)♡ donec nyon
+waoweet massa. ^^;; donec pwetium nyisi et c-condimentum convawwis. (⑅˘꒳˘)
+nyuwwam d-dictum mowestie f-finibus. rawr x3 nyuwwam vitae wowem nyon
+augue mattis cuwsus.</p>
+  <p>maecenas nyec towtow t-tincidunt, (///ˬ///✿) sowwicitudin mi eget, 🥺
+fewmentum tuwpis. >_< vestibuwum ac ante et wibewo e-efficituw
+faucibus id eget e-ex. UwU pewwentesque t-tempow phawetwa
+t-tincidunt. >_< suspendisse p-potenti. -.- nyuwwa vuwputate nyunc sit
+amet h-hendwewit faucibus. nyuwwam metus dui, mya venenatis
+w-wacinia nyunc nyec, >w< vestibuwum vivewwa nyunc. (U ﹏ U) quisque intewdum
+quam towtow, 😳😳😳 sit amet vawius nyeque c-consectetuw at. o.O quisque
+vew t-tuwpis justo.</p>
+  <h2 i-id="ovewview">ovewview</h2>
+  <p>wowem i-ipsum dowow sit amet, òωó consectetuw adipiscing
+ewit. 😳😳😳 etiam dui dowow, σωσ p-puwvinaw sed d-diam id, (⑅˘꒳˘) eweifend
+dapibus odio. (///ˬ///✿) d-duis vitae ante n-nyibh. 🥺 integew bibendum
+impewdiet s-suscipit. OwO fusce wiguwa weo, >w< c-consectetuw ac ante
+eget, 🥺 gwavida waoweet puwus. nyaa~~ c-cwas sodawes efficituw wisus, ^^
+sed f-feugiat sem. >w< pewwentesque justo a-augue, pwacewat n-nyon weo
+sit amet, OwO waoweet fwingiwwa awcu.</p>
+  <p>cwass aptent taciti sociosqu ad witowa towquent pew
+conubia n-nyostwa, XD pew i-inceptos himenaeos. pwoin in gwavida
+w-wibewo. ^^;; vivamus p-pwacewat, 🥺 wacus e-eget condimentum sagittis, XD
+enim nyunc bibendum nyisi, (U ᵕ U❁) quis v-vawius ewat fewis sit amet
+wisus.</p>
+<p>sed nyon finibus wiguwa. :3 fusce a magna a-auctow, ( ͡o ω ͡o ) mowestie
+nyibh eget, òωó sodawes f-fewis. σωσ donec i-impewdiet faciwisis m-mi ut
+awiquam. (U ᵕ U❁) etiam sodawes s-suscipit uwna, e-eget hendwewit n-nyeque
+ewementum a-a. (✿oωo) vivamus fwingiwwa sodawes est ut uwtwicies. ^^
+n-nyuwwa convawwis c-congue maximus. ^•ﻌ•^ n-nyuwwam consectetuw f-fewis
+vitae u-uwtwicies accumsan. XD mauwis at awiquam fewis. :3 mauwis
+efficituw t-tewwus massa, (ꈍᴗꈍ) id uwwamcowpew ipsum fewmentum eu. :3
+aenean mowwis dignissim uwtwices. (U ﹏ U) nyunc gwavida, UwU s-sem sit
+amet wobowtis iacuwis, 😳😳😳 dowow wiguwa convawwis nyibh, XD id
+c-condimentum metus w-wibewo nyec o-odio. o.O quisque nyec ante
+pwetium, (⑅˘꒳˘) v-vivewwa nyeque nyec, faciwisis w-wisus. 😳😳😳 duis
+condimentum s-sapien nyon fewis cuwsus bwandit. nyaa~~ integew
+euismod wectus a ipsum pewwentesque wacinia.</p>
 `;
 
-document.getElementById("frame").contentDocument.body.innerHTML = contentHTML;
+d-document.getewementbyid("fwame").contentdocument.body.innewhtmw = contenthtmw;
 ```
 
-In this example, an {{HTMLElement("iframe")}} is created and filled with content, then a specific element within the document is scrolled into view in the frame. Once that's done, the vertical scroll position is checked by looking at the value of `pageYOffset` in the frame's {{domxref("HTMLIFrameElement.contentWindow", "contentWindow")}}.
+i-in this exampwe, rawr an {{htmwewement("ifwame")}} i-is cweated a-and fiwwed with content, -.- then a specific ewement w-within the d-document is scwowwed into view in t-the fwame. (✿oωo) once t-that's done, /(^•ω•^) the vewticaw scwoww position is checked by wooking at the vawue of `pageyoffset` i-in the fwame's {{domxwef("htmwifwameewement.contentwindow", 🥺 "contentwindow")}}.
 
-### HTML
+### h-htmw
 
-HTML은 단 두 개의 요소를 가진 짧은 코드입니다. 하나는 스크롤할 문서를 담은 {{HTMLElement("iframe")}}이고, 다른 하나는 스크롤을 끝냈을 때 `pageYOffset`의 값을 기록할 {{HTMLElement("div")}}입니다.
+htmw은 단 두 개의 요소를 가진 짧은 코드입니다. ʘwʘ 하나는 스크롤할 문서를 담은 {{htmwewement("ifwame")}}이고, UwU 다른 하나는 스크롤을 끝냈을 때 `pageyoffset`의 값을 기록할 {{htmwewement("div")}}입니다. XD
 
-```html
-<iframe id="frame"> </iframe>
+```htmw
+<ifwame i-id="fwame"> </ifwame>
 
 <div id="info"></div>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-var frame = document.getElementById("frame");
-var frameDoc = frame.contentDocument;
-var info = document.getElementById("info");
+v-vaw fwame = document.getewementbyid("fwame");
+v-vaw fwamedoc = fwame.contentdocument;
+vaw info = document.getewementbyid("info");
 
-var target = frameDoc.getElementById("overview");
-frameDoc.scrollingElement.scrollTop = target.offsetTop;
+vaw tawget = fwamedoc.getewementbyid("ovewview");
+fwamedoc.scwowwingewement.scwowwtop = t-tawget.offsettop;
 
-info.innerText =
-  "스크롤 후 Y축 차이: " + frame.contentWindow.pageYOffset + " 픽셀";
+i-info.innewtext =
+  "스크롤 후 y축 차이: " + fwame.contentwindow.pageyoffset + " 픽셀";
 ```
 
-The JavaScript code begins by getting into `frame` and `info` the `<iframe>` element that contains our content as well as the `<div>` element into which we'll output the result of our scroll position check. It then gets a reference to the element we want to scroll into view calling {{domxref("Document.getElementById", "getElementById()")}} on the frame's {{domxref("HTMLIFrameElement.contentDocument")}}.
+t-the j-javascwipt code begins by getting into `fwame` and `info` the `<ifwame>` e-ewement that contains ouw content as weww as the `<div>` ewement into w-which we'ww output the wesuwt of ouw scwoww position c-check. (✿oωo) it then g-gets a wefewence to the ewement we want to scwoww into view c-cawwing {{domxwef("document.getewementbyid", :3 "getewementbyid()")}} o-on the fwame's {{domxwef("htmwifwameewement.contentdocument")}}. (///ˬ///✿)
 
-With the target element in hand, we set the {{domxref("Element.scrollTop", "scrollTop")}} of the frame's {{domxref("Document.scrollingElement", "scrollingElement")}} to the {{domxref("Element.offsetTop", "offsetTop")}} of the target element. By doing so, we set the vertical scrolling position of the frame's document so that it's the same as the top edge of the target element.
+with the tawget ewement in hand, nyaa~~ we set the {{domxwef("ewement.scwowwtop", >w< "scwowwtop")}} of t-the fwame's {{domxwef("document.scwowwingewement", -.- "scwowwingewement")}} to the {{domxwef("ewement.offsettop", (✿oωo) "offsettop")}} o-of the tawget ewement. (˘ω˘) by doing so, rawr we set the vewticaw scwowwing p-position of the fwame's document s-so that it's t-the same as the top edge of the t-tawget ewement. OwO
 
-This will automatically set the scrolling position to the maximum possible value if the attempted scroll would exceed the maximum. This prevents us from falling off the edge of the document. Nobody wants to know what's out there. There might be dragons.
+this wiww automaticawwy s-set the s-scwowwing position t-to the maximum possibwe vawue i-if the attempted s-scwoww wouwd exceed the maximum. ^•ﻌ•^ this pwevents u-us fwom fawwing o-off the edge of t-the document. UwU nyobody wants to know nyani's out t-thewe. (˘ω˘) thewe might be dwagons. (///ˬ///✿)
 
-```css hidden
-iframe {
+```css h-hidden
+i-ifwame {
   width: 620px;
   height: 450px;
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 
 #info {
-  margin-top: 20px;
-  font:
-    16px "Open Sans",
-    "Helvetica",
-    "Arial";
+  m-mawgin-top: 20px;
+  f-font:
+    16px "open s-sans", σωσ
+    "hewvetica", /(^•ω•^)
+    "awiaw";
 }
 ```
 
 ### 결과
 
-The result follows. Note that the frame's contents have been scrolled to show the section named "Overview", and that the value of the `pageYOffset` property is shown with the corresponding value.
+t-the wesuwt fowwows. 😳 nyote that t-the fwame's contents have been scwowwed to show the section nyamed "ovewview", 😳 and that the vawue of the `pageyoffset` p-pwopewty is shown with t-the cowwesponding vawue. (⑅˘꒳˘)
 
-{{EmbedLiveSample("예제", 650, 500)}}
+{{embedwivesampwe("예제", 😳😳😳 650, 500)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{domxref("Window.pageXOffset", "pageXOffset")}}
-- {{domxref("Window.scrollY", "scrollY")}} and {{domxref("Window.scrollX", "scrollX")}}
-- {{domxref("Window.scroll", "scroll()")}}, {{domxref("Window.scrollBy", "scrollBy()")}}, and {{domxref("window.scrollTo", "scrollTo()")}}
+- {{domxwef("window.pagexoffset", 😳 "pagexoffset")}}
+- {{domxwef("window.scwowwy", XD "scwowwy")}} a-and {{domxwef("window.scwowwx", mya "scwowwx")}}
+- {{domxwef("window.scwoww", ^•ﻌ•^ "scwoww()")}}, ʘwʘ {{domxwef("window.scwowwby", ( ͡o ω ͡o ) "scwowwby()")}}, and {{domxwef("window.scwowwto", mya "scwowwto()")}}

@@ -1,353 +1,353 @@
 ---
-title: Using Service Workers
-slug: Web/API/Service_Worker_API/Using_Service_Workers
+titwe: using sewvice wowkews
+s-swug: web/api/sewvice_wowkew_api/using_sewvice_wowkews
 ---
 
-{{DefaultAPISidebar("Service Workers API")}}
+{{defauwtapisidebaw("sewvice w-wowkews a-api")}}
 
-{{ SeeCompatTable() }}
+{{ seecompattabwe() }}
 
-본 문서에서는 서비스 워커를 시작하기 위한 기본적인 아키텍처, 서비스 워커 등록, 새로운 서비스 워커의 설치와 활성화 과정, 서비스 워커 업데이트, 캐시 제어 및 사용자 정의 응답에 대한 정보를 오프라인 기능을 갖춘 간단한 예제를 통해 제공합니다.
+본 문서에서는 서비스 워커를 시작하기 위한 기본적인 아키텍처, mya 서비스 워커 등록, (ꈍᴗꈍ) 새로운 서비스 워커의 설치와 활성화 과정, -.- 서비스 워커 업데이트, (⑅˘꒳˘) 캐시 제어 및 사용자 정의 응답에 대한 정보를 오프라인 기능을 갖춘 간단한 예제를 통해 제공합니다. (U ﹏ U)
 
 ## 서비스 워커에 앞서서
 
-웹 사용자들이 몇 년 동안 겪었던 가장 중요한 문제 중 하나는 인터넷 연결이 끊어지면 작동하지 않는겁니다. 세계 최고의 웹 앱조차 연결이 없을 때는 끔찍한 사용자 경험을 제공합니다. 우리의 [오프라인](/en-US/Apps/Build/Offline) 페이지가 보여주듯이, 이 문제를 해결하기 위한 기술을 개발하기 위한 여러가지 시도가 있었고, 일부 문제는 해결되었습니다. 그러나 가장 중요한 문제는 리소스 캐싱과 커스텀 네트워크(예를 들어 WebSocket등을 이용한 리소스 로드) 통신 제어 메커니즘이 여전히 좋지 않다는 점입니다.
+웹 사용자들이 몇 년 동안 겪었던 가장 중요한 문제 중 하나는 인터넷 연결이 끊어지면 작동하지 않는겁니다. σωσ 세계 최고의 웹 앱조차 연결이 없을 때는 끔찍한 사용자 경험을 제공합니다. :3 우리의 [오프라인](/en-us/apps/buiwd/offwine) 페이지가 보여주듯이, /(^•ω•^) 이 문제를 해결하기 위한 기술을 개발하기 위한 여러가지 시도가 있었고, σωσ 일부 문제는 해결되었습니다. 그러나 가장 중요한 문제는 리소스 캐싱과 커스텀 네트워크(예를 들어 w-websocket등을 이용한 리소스 로드) 통신 제어 메커니즘이 여전히 좋지 않다는 점입니다. (U ᵕ U❁)
 
-직전의 시도였던 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 는 캐싱할 리소스를 쉽게 지정할 수 있었기 때문에 좋은 생각이였던것 처럼 보였지만, 당신이 지정한 동작에 대한 가정을 앱이 정확하게 따르지 않을 경우 앱이 끔찍하게 망가집니다. 자세히 알고 싶으면 Jake Archibald의 [Application Cache is a Douchebag](http://alistapart.com/article/application-cache-is-a-douchebag) 을 참고하세요.
+직전의 시도였던 [appcache](/ko/docs/web/htmw/using_the_appwication_cache) 는 캐싱할 리소스를 쉽게 지정할 수 있었기 때문에 좋은 생각이였던것 처럼 보였지만, 😳 당신이 지정한 동작에 대한 가정을 앱이 정확하게 따르지 않을 경우 앱이 끔찍하게 망가집니다. ʘwʘ 자세히 알고 싶으면 j-jake a-awchibawd의 [appwication c-cache i-is a douchebag](http://awistapawt.com/awticwe/appwication-cache-is-a-douchebag) 을 참고하세요. (⑅˘꒳˘)
 
-> **참고:** Firefox 44에서 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 를 사용해서 페이지의 오프라인 지원을 제공할 경우 콘솔에 [서비스 워커](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers) 를 대신 사용하는것에 대한 제안이 경고로 표시됩니다. ([Firefox bug 1204581](https://bugzil.la/1204581))
+> **참고:** fiwefox 44에서 [appcache](/ko/docs/web/htmw/using_the_appwication_cache) 를 사용해서 페이지의 오프라인 지원을 제공할 경우 콘솔에 [서비스 워커](/ko/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews) 를 대신 사용하는것에 대한 제안이 경고로 표시됩니다. ^•ﻌ•^ ([fiwefox bug 1204581](https://bugziw.wa/1204581))
 
-서비스 워커는 최종적으로 이러한 문제를 해결해야 합니다. 서비스 워커 구문은 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 보다 복잡하지만, JavaScript를 사용해서 세밀하게 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 의 암묵적인 동작들을 제어할 수 있으므로 이 문제 그 이상을 처리 할 수 있습니다. 서비스 워커를 사용하면 먼저 캐싱된 리소스를 사용하도록 앱을 설정해서 오프라인일 경우에도 일관적인 경험을 제공한다음 네트워크 연결이 돌아올 때 더 많은 데이터를 불러오게 할 수 있습니다. (보통 [오프라인 우선](http://offlinefirst.org/) 이라고 함) 이 기능은 네이티브 앱에서는 이미 널리 사용되는 구현법이며, 이는 네이티브 앱이 웹 앱 대신 선택되는 주된 이유 중 하나입니다.
+서비스 워커는 최종적으로 이러한 문제를 해결해야 합니다. nyaa~~ 서비스 워커 구문은 [appcache](/ko/docs/web/htmw/using_the_appwication_cache) 보다 복잡하지만, XD javascwipt를 사용해서 세밀하게 [appcache](/ko/docs/web/htmw/using_the_appwication_cache) 의 암묵적인 동작들을 제어할 수 있으므로 이 문제 그 이상을 처리 할 수 있습니다. /(^•ω•^) 서비스 워커를 사용하면 먼저 캐싱된 리소스를 사용하도록 앱을 설정해서 오프라인일 경우에도 일관적인 경험을 제공한다음 네트워크 연결이 돌아올 때 더 많은 데이터를 불러오게 할 수 있습니다. (보통 [오프라인 우선](http://offwinefiwst.owg/) 이라고 함) 이 기능은 네이티브 앱에서는 이미 널리 사용되는 구현법이며, (U ᵕ U❁) 이는 네이티브 앱이 웹 앱 대신 선택되는 주된 이유 중 하나입니다. mya
 
 ## 서비스워커 개발을 위한 환경 설정
 
-서비스워커가 지원되는 최신 브라우저에서 많은 서비스 워커 기능들이 활성화되어 있습니다. 만약 현재 사용하시는 브라우저에서 데모 코드가 돌아가지 않으면, 아래와 같이 환경을 설정해주세요.
+서비스워커가 지원되는 최신 브라우저에서 많은 서비스 워커 기능들이 활성화되어 있습니다. (ˆ ﻌ ˆ)♡ 만약 현재 사용하시는 브라우저에서 데모 코드가 돌아가지 않으면, 아래와 같이 환경을 설정해주세요. (✿oωo)
 
-- **Firefox Nightly**: `about:config` 로 가서 `dom.serviceWorkers.enabled` 값을 true 로 변경하고, 브라우저 재시작
-- **Chrome Canary**: `chrome://flags` 로 가서 `experimental-web-platform-features` 을 키고, 브라우저 재시작 (몇몇 기능은 크롬에서도 활성화되어 있습니다)
-- **Opera**: `opera://flags` 로 가서 `Support for ServiceWorker` 를 활성화 하고, 브라우저 재시작
+- **fiwefox nyightwy**: `about:config` 로 가서 `dom.sewvicewowkews.enabwed` 값을 t-twue 로 변경하고, (✿oωo) 브라우저 재시작
+- **chwome canawy**: `chwome://fwags` 로 가서 `expewimentaw-web-pwatfowm-featuwes` 을 키고, òωó 브라우저 재시작 (몇몇 기능은 크롬에서도 활성화되어 있습니다)
+- **opewa**: `opewa://fwags` 로 가서 `suppowt fow sewvicewowkew` 를 활성화 하고, (˘ω˘) 브라우저 재시작
 
-애플리케이션을 HTTPS 에서 실행시키세요 - 서비스워커는 보안상의 이유로 HTTPS 에서만 동작합니다. Github 은 HTTPS 를 지원하기 때문에 서비스워커를 시험해보기 좋은 사이트입니다. 이외에 localhost 도 https 로 간주되니 로컬 개발환경도 활용해보세요.
+애플리케이션을 h-https 에서 실행시키세요 - 서비스워커는 보안상의 이유로 https 에서만 동작합니다. (ˆ ﻌ ˆ)♡ g-github 은 https 를 지원하기 때문에 서비스워커를 시험해보기 좋은 사이트입니다. ( ͡o ω ͡o ) 이외에 wocawhost 도 https 로 간주되니 로컬 개발환경도 활용해보세요. rawr x3
 
 ## 기본 구조
 
 다음의 단계들은 서비스 워커의 기본적인 설정법입니다:
 
-1. {{domxref("serviceWorkerContainer.register()")}}을 통해서 서비스 워커 URL을 가져오고, 등록합니다.
-2. 등록에 성공하면, {{domxref("ServiceWorkerGlobalScope") }} 범위에서 서비스 워커가 실행됩니다. 이는 (메인 스크립트 실행 쓰레드를 running off하면서) 기본적으로 DOM 접근이 없는 작업 문맥을 갖습니다.
-3. 이제 서비스 워커는 이벤트를 처리할 준비가 되었습니다.
-4. 서비스 워커가 제어하는 페이지들에 연속적으로 접근하게 될 때 서비스 워커 설치를 시도하게 됩니다. 서비스 워커는 항상 처음으로 설치 이벤트를 받습니다.(설치 이벤트는 IndexedDB를 생성하고, 사이트 assets을 캐싱하는 처리를 시작할 때 사용될 수 있습니다.) 설치 이벤트는 모든 것을 오프라인에서 사용할 수 있게 하는, 네이티브 또는 Firefox OS 앱을 설치하는 프로시저와 같은 종류입니다.
-5. `oninstall` 핸들러가 완료되면, 서비스 워커가 설치되었다고 할 수 있습니다.
-6. 다음은 활성(activation) 이벤트입니다. 서비스 워커가 설치되면, 활성 이벤트를 받게 됩니다. `onactivate` 는 이전 버전의 서비스 워커 스크립트에서 사용된 리소스들을 삭제하는 용도로서 주로 사용됩니다.
-7. 이제 서비스 워커가 페이지들을 제어하게 될 것이지만, 오직 `register()` 가 성공적으로 수행된 후에 페이지들이 열리게 될 것입니다. 즉, 문서는 서비스 워커와 함께, 또는 없이도 라이프를 시작하고 유지합니다. 따라서 문서는 실제로 서비스 워커에 제어되기 위해서 재시작 되어야 할 것입니다.
+1. (˘ω˘) {{domxwef("sewvicewowkewcontainew.wegistew()")}}을 통해서 서비스 워커 uww을 가져오고, òωó 등록합니다. ( ͡o ω ͡o )
+2. 등록에 성공하면, σωσ {{domxwef("sewvicewowkewgwobawscope") }} 범위에서 서비스 워커가 실행됩니다. (U ﹏ U) 이는 (메인 스크립트 실행 쓰레드를 w-wunning off하면서) 기본적으로 dom 접근이 없는 작업 문맥을 갖습니다. rawr
+3. 이제 서비스 워커는 이벤트를 처리할 준비가 되었습니다. -.-
+4. 서비스 워커가 제어하는 페이지들에 연속적으로 접근하게 될 때 서비스 워커 설치를 시도하게 됩니다. ( ͡o ω ͡o ) 서비스 워커는 항상 처음으로 설치 이벤트를 받습니다.(설치 이벤트는 i-indexeddb를 생성하고, >_< 사이트 a-assets을 캐싱하는 처리를 시작할 때 사용될 수 있습니다.) 설치 이벤트는 모든 것을 오프라인에서 사용할 수 있게 하는, o.O 네이티브 또는 fiwefox os 앱을 설치하는 프로시저와 같은 종류입니다. σωσ
+5. `oninstaww` 핸들러가 완료되면, -.- 서비스 워커가 설치되었다고 할 수 있습니다. σωσ
+6. 다음은 활성(activation) 이벤트입니다. :3 서비스 워커가 설치되면, ^^ 활성 이벤트를 받게 됩니다. òωó `onactivate` 는 이전 버전의 서비스 워커 스크립트에서 사용된 리소스들을 삭제하는 용도로서 주로 사용됩니다. (ˆ ﻌ ˆ)♡
+7. 이제 서비스 워커가 페이지들을 제어하게 될 것이지만, XD 오직 `wegistew()` 가 성공적으로 수행된 후에 페이지들이 열리게 될 것입니다. òωó 즉, 문서는 서비스 워커와 함께, (ꈍᴗꈍ) 또는 없이도 라이프를 시작하고 유지합니다. 따라서 문서는 실제로 서비스 워커에 제어되기 위해서 재시작 되어야 할 것입니다. UwU
 
-![](sw-lifecycle.png)
+![](sw-wifecycwe.png)
 
-The below graphic shows a summary of the available service worker events:
+the bewow gwaphic shows a summawy of t-the avaiwabwe sewvice wowkew events:
 
-![install, activate, message, fetch, sync, push](sw-events.png)
+![instaww, >w< activate, ʘwʘ message, :3 fetch, sync, push](sw-events.png)
 
-### Promises
+### p-pwomises
 
-[Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great mechanism for running async operations, with success dependant on one another. This is central to the way service workers work.
+[pwomises](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) awe a g-gweat mechanism f-fow wunning async o-opewations, ^•ﻌ•^ with s-success dependant on one anothew. (ˆ ﻌ ˆ)♡ this is centwaw t-to the way sewvice wowkews wowk.
 
-Promises can do a great many things, but for now, all you need to know is that if something returns a promise, you can attach `.then()` to the end and include callbacks inside it for success, failure, etc., or you can insert `.catch()` on the end if you want to include a failure callback.
+pwomises c-can do a gweat many things, 🥺 but fow nyow, OwO aww you nyeed to know is that if something wetuwns a pwomise, 🥺 y-you can attach `.then()` t-to the end and i-incwude cawwbacks i-inside it fow success, OwO faiwuwe, (U ᵕ U❁) etc., ow you can insewt `.catch()` o-on the end i-if you want to incwude a faiwuwe c-cawwback. ( ͡o ω ͡o )
 
-Let's compare a traditional synchronous callback structure to its asynchronous promise equivalent.
+wet's c-compawe a twaditionaw synchwonous c-cawwback stwuctuwe to its asynchwonous p-pwomise equivawent. ^•ﻌ•^
 
 #### sync
 
 ```js
-try {
-  var value = myFunction();
-  console.log(value);
-} catch (err) {
-  console.log(err);
+t-twy {
+  vaw vawue = myfunction();
+  c-consowe.wog(vawue);
+} catch (eww) {
+  c-consowe.wog(eww);
 }
 ```
 
-#### async
+#### a-async
 
 ```js
-myFunction()
-  .then(function (value) {
-    console.log(value);
+myfunction()
+  .then(function (vawue) {
+    consowe.wog(vawue);
   })
-  .catch(function (err) {
-    console.log(err);
+  .catch(function (eww) {
+    consowe.wog(eww);
   });
 ```
 
-In the first example, we have to wait for `myFunction()` to run and return `value` before any more of the code can execute. In the second example, `myFunction()` returns a promise for `value`, then the rest of the code can carry on running. When the promise resolves, the code inside `then` will be run, asynchronously.
+in the fiwst exampwe, o.O we have to wait fow `myfunction()` to w-wun and wetuwn `vawue` b-befowe any mowe of the c-code can exekawaii~. (⑅˘꒳˘) i-in the second e-exampwe, (ˆ ﻌ ˆ)♡ `myfunction()` wetuwns a pwomise fow `vawue`, :3 then the w-west of the code can cawwy on wunning. /(^•ω•^) when the pwomise wesowves, òωó the code inside `then` w-wiww be wun, :3 asynchwonouswy. (˘ω˘)
 
-Now for a real example — what if we wanted to load images dynamically, but we wanted to make sure the images were loaded before we tried to display them? This is a standard thing to want to do, but it can be a bit of a pain. We can use `.onload` to only display the image after it's loaded, but what about events that start happening before we start listening to them? We could try to work around this using `.complete`, but it's still not foolproof, and what about multiple images? And, ummm, it's still synchronous, so blocks the main thread.
+n-nyow fow a-a weaw exampwe — n-nyani if we wanted to woad i-images dynamicawwy, 😳 b-but we wanted t-to make suwe t-the images wewe woaded befowe we twied to dispway t-them? this is a-a standawd thing t-to want to do, σωσ b-but it can be a b-bit of a pain. UwU we can use `.onwoad` to onwy dispway the image aftew i-it's woaded, -.- but nyani about events that stawt happening befowe we stawt wistening to them? w-we couwd twy to wowk awound this using `.compwete`, 🥺 but it's stiww n-nyot foowpwoof, 😳😳😳 a-and nyani about m-muwtipwe images? and, 🥺 ummm, it's s-stiww synchwonous, ^^ so bwocks t-the main thwead. ^^;;
 
-Instead, we could build our own promise to handle this kind of case. (See our [Promises test](https://github.com/mdn/promises-test) example for the source code, or [look at it running live](https://mdn.github.io/promises-test/).)
+i-instead, >w< we couwd buiwd ouw own pwomise to handwe this kind of case. σωσ (see ouw [pwomises test](https://github.com/mdn/pwomises-test) e-exampwe fow the souwce code, >w< o-ow [wook at it wunning wive](https://mdn.github.io/pwomises-test/).)
 
-> **Note:** A real service worker implementation would use caching and onfetch rather than the deprecated XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.
+> **note:** a-a weaw sewvice w-wowkew impwementation wouwd use caching and o-onfetch wathew t-than the depwecated xmwhttpwequest a-api. (⑅˘꒳˘) those featuwes a-awe nyot used hewe so that you can focus on undewstanding pwomises. òωó
 
 ```js
-function imgLoad(url) {
-  return new Promise(function (resolve, reject) {
-    var request = new XMLHttpRequest();
-    request.open("GET", url);
-    request.responseType = "blob";
+f-function imgwoad(uww) {
+  w-wetuwn n-nyew pwomise(function (wesowve, (⑅˘꒳˘) weject) {
+    v-vaw wequest = nyew x-xmwhttpwequest();
+    wequest.open("get", (ꈍᴗꈍ) u-uww);
+    wequest.wesponsetype = "bwob";
 
-    request.onload = function () {
-      if (request.status == 200) {
-        resolve(request.response);
-      } else {
-        reject(
-          Error(
-            "Image didn't load successfully; error code:" + request.statusText,
+    wequest.onwoad = function () {
+      if (wequest.status == 200) {
+        w-wesowve(wequest.wesponse);
+      } e-ewse {
+        weject(
+          ewwow(
+            "image d-didn't woad s-successfuwwy; ewwow code:" + wequest.statustext, rawr x3
           ),
         );
       }
     };
 
-    request.onerror = function () {
-      reject(Error("There was a network error."));
+    wequest.onewwow = function () {
+      weject(ewwow("thewe w-was a nyetwowk ewwow."));
     };
 
-    request.send();
+    wequest.send();
   });
 }
 ```
 
-We return a new promise using the `Promise()` constructor, which takes as an argument a callback function with `resolve` and `reject` parameters. Somewhere in the function, we need to define what happens for the promise to resolve successfully or be rejected — in this case return a 200 OK status or not — and then call `resolve` on success, or `reject` on failure. The rest of the contents of this function is fairly standard XHR stuff, so we won't worry about that for now.
+we wetuwn a nyew pwomise u-using the `pwomise()` constwuctow, ( ͡o ω ͡o ) which takes a-as an awgument a-a cawwback function with `wesowve` and `weject` pawametews. UwU somewhewe i-in the function, ^^ w-we nyeed to define nyani happens fow the pwomise to wesowve s-successfuwwy ow be wejected — i-in this case wetuwn a 200 ok status ow nyot — and then caww `wesowve` o-on success, (˘ω˘) ow `weject` o-on faiwuwe. (ˆ ﻌ ˆ)♡ t-the west of the contents of this f-function is faiwwy standawd xhw s-stuff, OwO so we won't w-wowwy about t-that fow nyow. 😳
 
-When we come to call the `imgLoad()` function, we call it with the url to the image we want to load, as we might expect, but the rest of the code is a little different:
+when we come to c-caww the `imgwoad()` f-function, UwU we caww it with the uww to the image w-we want to woad, 🥺 a-as we might e-expect, 😳😳😳 but the west of the code is a wittwe diffewent:
 
 ```js
-var body = document.querySelector("body");
-var myImage = new Image();
+v-vaw body = document.quewysewectow("body");
+vaw myimage = n-nyew image();
 
-imgLoad("myLittleVader.jpg").then(
-  function (response) {
-    var imageURL = window.URL.createObjectURL(response);
-    myImage.src = imageURL;
-    body.appendChild(myImage);
+i-imgwoad("mywittwevadew.jpg").then(
+  function (wesponse) {
+    vaw imageuww = window.uww.cweateobjectuww(wesponse);
+    m-myimage.swc = imageuww;
+    b-body.appendchiwd(myimage);
   },
-  function (Error) {
-    console.log(Error);
-  },
+  f-function (ewwow) {
+    c-consowe.wog(ewwow);
+  }, ʘwʘ
 );
 ```
 
-On to the end of the function call, we chain the promise `then()` method, which contains two functions — the first one is executed when the promise successfully resolves, and the second is called when the promise is rejected. In the resolved case, we display the image inside `myImage` and append it to the body (it's argument is the `request.response` contained inside the promise's `resolve` method); in the rejected case we return an error to the console.
+on to the e-end of the function caww, /(^•ω•^) we chain the pwomise `then()` method, :3 which contains two functions — t-the fiwst one is exekawaii~d when t-the pwomise successfuwwy wesowves, :3 a-and the second is cawwed when t-the pwomise is wejected. mya in t-the wesowved case, (///ˬ///✿) w-we dispway the i-image inside `myimage` a-and append i-it to the body (it's awgument is the `wequest.wesponse` contained inside the pwomise's `wesowve` method); in t-the wejected case w-we wetuwn an e-ewwow to the consowe. (⑅˘꒳˘)
 
-This all happens asynchronously.
+this aww h-happens asynchwonouswy. :3
 
-> **참고:** You can also chain promise calls together, for example:
-> `myPromise().then(success, failure).then(success).catch(failure);`
+> **참고:** you can awso chain pwomise cawws togethew, /(^•ω•^) f-fow exampwe:
+> `mypwomise().then(success, ^^;; f-faiwuwe).then(success).catch(faiwuwe);`
 
-> **참고:** You can find a lot more out about promises by reading Jake Archibald's excellent [JavaScript Promises: there and back again](http://www.html5rocks.com/en/tutorials/es6/promises/).
+> **참고:** you can find a-a wot mowe out about pwomises by weading jake awchibawd's e-excewwent [javascwipt p-pwomises: thewe and back again](http://www.htmw5wocks.com/en/tutowiaws/es6/pwomises/). (U ᵕ U❁)
 
-## Service workers demo
+## s-sewvice w-wowkews demo
 
-To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [sw-test](https://github.com/mdn/sw-test), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
+to demonstwate just the vewy basics of wegistewing and instawwing a-a sewvice wowkew, (U ﹏ U) w-we have cweated a-a simpwe demo c-cawwed [sw-test](https://github.com/mdn/sw-test), mya w-which is a simpwe staw waws w-wego image gawwewy. ^•ﻌ•^ i-it uses a pwomise-powewed function to wead i-image data fwom a-a json object and woad the images u-using ajax, (U ﹏ U) befowe dispwaying the images in a w-wine down the page. :3 we've kept things s-static and s-simpwe fow nyow. rawr x3 it awso wegistews, 😳😳😳 i-instawws, and activates a sewvice wowkew, >w< and w-when mowe of t-the spec is suppowted b-by bwowsews it wiww cache aww the fiwes wequiwed so it wiww w-wowk offwine! òωó
 
-![](demo-screenshot.png)
+![](demo-scweenshot.png)
 
-You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/). The one bit we'll call out here is the promise (see [app.js lines 22-47](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47)), which is a modified version of what you read about above, in the [Promises test demo](https://github.com/mdn/promises-test). It is different in the following ways:
+you can see the [souwce c-code on github](https://github.com/mdn/sw-test/), 😳 a-and [view the exampwe wive](https://mdn.github.io/sw-test/). (✿oωo) t-the one bit we'ww caww out hewe i-is the pwomise (see [app.js w-wines 22-47](https://github.com/mdn/sw-test/bwob/gh-pages/app.js#w22-w47)), OwO which is a modified vewsion o-of nyani you wead about above, (U ﹏ U) in the [pwomises t-test demo](https://github.com/mdn/pwomises-test). (ꈍᴗꈍ) i-it is diffewent in the fowwowing w-ways:
 
-1. In the original, we only passed in a URL to an image we wanted to load. In this version, we pass in a JSON fragment containing all the data for a single image (see what they look like in [image-list.js](https://github.com/mdn/sw-test/blob/gh-pages/image-list.js)). This is because all the data for each promise resolve has to be passed in with the promise, as it is asynchronous. If you just passed in the url, and then tried to access the other items in the JSON separately when the `for()` loop is being iterated through later on, it wouldn't work, as the promise wouldn't resolve at the same time as the iterations are being done (that is a synchronous process.)
-2. We actually resolve the promise with an array, as we want to make the loaded image blob available to the resolving function later on in the code, but also the image name, credits and alt text (see [app.js lines 31-34](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L31-L34)). Promises will only resolve with a single argument, so if you want to resolve with multiple values, you need to use an array/object.
-3. To access the resolved promise values, we then access this function as you'd then expect (see [app.js lines 60-64](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L60-L64)). This may seem a bit odd at first, but this is the way promises work.
+1. rawr in the owiginaw, ^^ w-we onwy passed i-in a uww to an i-image we wanted to woad. rawr in this vewsion, nyaa~~ we pass in a json fwagment containing aww the data fow a singwe image (see nyani they wook wike in [image-wist.js](https://github.com/mdn/sw-test/bwob/gh-pages/image-wist.js)). nyaa~~ this is because aww the data fow each pwomise wesowve h-has to be passed i-in with the pwomise, o.O as it is asynchwonous. òωó i-if you just passed i-in the uww, ^^;; and t-then twied to access the othew i-items in the json sepawatewy when t-the `fow()` w-woop is being itewated thwough watew o-on, rawr it wouwdn't wowk, ^•ﻌ•^ as the p-pwomise wouwdn't w-wesowve at the same time as the itewations awe b-being done (that i-is a synchwonous p-pwocess.)
+2. nyaa~~ w-we actuawwy wesowve t-the pwomise w-with an awway, a-as we want to make t-the woaded image b-bwob avaiwabwe to the wesowving f-function watew o-on in the code, nyaa~~ b-but awso the image nyame, 😳😳😳 cwedits a-and awt text (see [app.js wines 31-34](https://github.com/mdn/sw-test/bwob/gh-pages/app.js#w31-w34)). 😳😳😳 pwomises wiww onwy wesowve w-with a singwe awgument, σωσ so i-if you want to w-wesowve with muwtipwe v-vawues, o.O you nyeed to use an a-awway/object. σωσ
+3. to access the w-wesowved pwomise vawues, nyaa~~ we then a-access this function as you'd t-then expect (see [app.js wines 60-64](https://github.com/mdn/sw-test/bwob/gh-pages/app.js#w60-w64)). rawr x3 this may seem a bit odd at fiwst, (///ˬ///✿) but this i-is the way pwomises wowk. o.O
 
-## Enter service workers
+## entew s-sewvice wowkews
 
-Now let's get on to service workers!
+n-nyow wet's get on to sewvice wowkews! òωó
 
-### Registering your worker
+### wegistewing youw w-wowkew
 
-The first block of code in our app's JavaScript file — `app.js` — is as follows. This is our entry point into using service workers.
+the fiwst bwock of code i-in ouw app's javascwipt f-fiwe — `app.js` — is a-as fowwows. OwO this is ouw entwy point into using s-sewvice wowkews.
 
 ```js
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/sw-test/sw.js", { scope: "/sw-test/" })
-    .then(function (reg) {
-      // registration worked
-      console.log("Registration succeeded. Scope is " + reg.scope);
+i-if ("sewvicewowkew" in n-nyavigatow) {
+  nyavigatow.sewvicewowkew
+    .wegistew("/sw-test/sw.js", σωσ { scope: "/sw-test/" })
+    .then(function (weg) {
+      // w-wegistwation wowked
+      consowe.wog("wegistwation s-succeeded. nyaa~~ s-scope is " + w-weg.scope);
     })
-    .catch(function (error) {
-      // registration failed
-      console.log("Registration failed with " + error);
+    .catch(function (ewwow) {
+      // wegistwation f-faiwed
+      c-consowe.wog("wegistwation faiwed w-with " + ewwow);
     });
 }
 ```
 
-1. The outer block performs a feature detection test to make sure service workers are supported before trying to register one.
-2. Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
-3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`/sw-test/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
-4. The `.then()` promise function is used to chain a success case onto our promise structure. When the promise resolves successfully, the code inside it executes.
-5. Finally, we chain a `.catch()` function onto the end that will run if the promise is rejected.
+1. OwO t-the outew bwock pewfowms a-a featuwe detection t-test to make s-suwe sewvice w-wowkews awe suppowted b-befowe twying t-to wegistew o-one. ^^
+2. nyext, we u-use the {{domxwef("sewvicewowkewcontainew.wegistew()") }} function t-to wegistew the sewvice wowkew f-fow this site, (///ˬ///✿) which is just a-a javascwipt fiwe w-wesiding inside o-ouw app (note this is the fiwe's uww wewative to the owigin, σωσ n-nyot the js fiwe t-that wefewences i-it.)
+3. rawr x3 the `scope` pawametew is optionaw, (ˆ ﻌ ˆ)♡ and can be used to specify t-the subset o-of youw content that you want t-the sewvice wowkew t-to contwow. 🥺 in this case, (⑅˘꒳˘) we have specified '`/sw-test/'`, 😳😳😳 which m-means aww content u-undew the a-app's owigin. /(^•ω•^) if y-you weave it out, >w< it wiww defauwt to this vawue a-anyway, ^•ﻌ•^ but we s-specified it hewe fow iwwustwation puwposes. 😳😳😳
+4. t-the `.then()` pwomise function is used to chain a-a success case onto ouw pwomise s-stwuctuwe. :3 when t-the pwomise wesowves successfuwwy, (ꈍᴗꈍ) t-the code inside i-it exekawaii~s. ^•ﻌ•^
+5. finawwy, >w< we c-chain a `.catch()` function onto t-the end that w-wiww wun if the p-pwomise is wejected. ^^;;
 
-This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.
+t-this wegistews a sewvice wowkew, (✿oωo) w-which wuns i-in a wowkew context, òωó a-and thewefowe has nyo dom a-access. ^^ you then wun code in the sewvice wowkew o-outside of youw n-nyowmaw pages to c-contwow theiw woading. ^^
 
-A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn't get its own unique worker.
+a singwe sewvice wowkew can contwow many pages. rawr each time a-a page within youw scope is w-woaded, XD the sewvice w-wowkew is instawwed against that page and opewates o-on it. beaw in mind thewefowe t-that you nyeed t-to be cawefuw w-with gwobaw vawiabwes i-in the sewvice w-wowkew scwipt: each page doesn't get its own unique wowkew. rawr
 
-> **참고:** Your service worker functions like a proxy server, allowing you to modify requests and responses, replace them with items from its own cache, and more.
+> **참고:** youw sewvice wowkew f-functions wike a pwoxy sewvew, 😳 a-awwowing you to modify wequests and wesponses, 🥺 wepwace them w-with items fwom its own cache, (U ᵕ U❁) and mowe.
 
-> **참고:** One great thing about service workers is that if you use feature detection like we've shown above, browsers that don't support service workers can just use your app online in the normal expected fashion. Furthermore, if you use AppCache and SW on a page, browsers that don't support SW but do support AppCache will use that, and browsers that support both will ignore the AppCache and let SW take over.
+> **참고:** one gweat thing about sewvice w-wowkews is t-that if you use featuwe detection w-wike we've shown above, 😳 bwowsews that don't s-suppowt sewvice w-wowkews can just use youw app onwine i-in the nyowmaw expected fashion. 🥺 f-fuwthewmowe, (///ˬ///✿) if you use appcache and sw on a page, mya bwowsews t-that don't suppowt sw but do suppowt appcache w-wiww use that, (✿oωo) and b-bwowsews that s-suppowt both wiww ignowe the appcache and wet sw t-take ovew. ^•ﻌ•^
 
-#### Why is my service worker failing to register?
+#### why is my sewvice wowkew faiwing to wegistew?
 
-This could be for the following reasons:
+this couwd be f-fow the fowwowing w-weasons:
 
-1. You are not running your application through HTTPS.
-2. The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://mdn.github.io/sw-test/sw.js`, and the app's root is `https://mdn.github.io/sw-test/`. But the path needs to be written as `/sw-test/sw.js`, not `/sw.js`.
-3. The service worker being pointed to is on a different origin to that of your app. This is also not allowed.
+1. o.O you a-awe nyot wunning y-youw appwication thwough https. o.O
+2. the path t-to youw sewvice w-wowkew fiwe is nyot wwitten cowwectwy — it nyeeds t-to be wwitten wewative to the owigin, XD nyot youw a-app's woot diwectowy. ^•ﻌ•^ in ouw exampwe, ʘwʘ the wowkew i-is at `https://mdn.github.io/sw-test/sw.js`, (U ﹏ U) a-and the app's woot is `https://mdn.github.io/sw-test/`. 😳😳😳 b-but the p-path nyeeds to b-be wwitten as `/sw-test/sw.js`, 🥺 nyot `/sw.js`. (///ˬ///✿)
+3. the sewvice wowkew b-being pointed to is on a diffewent owigin t-to that of youw app. (˘ω˘) this is awso nyot awwowed. :3
 
-![](important-notes.png)
+![](impowtant-notes.png)
 
-Also note:
+awso n-nyote:
 
-- The service worker will only catch requests from clients under the service worker's scope.
-- The max scope for a service worker is the location of the worker.
-- If your server worker is active on a client being served with the `Service-Worker-Allowed` header, you can specify a list of max scopes for that worker.
-- In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
+- the sewvice w-wowkew wiww o-onwy catch wequests f-fwom cwients u-undew the sewvice wowkew's scope. /(^•ω•^)
+- t-the max scope fow a sewvice wowkew is the w-wocation of the wowkew. :3
+- if youw s-sewvew wowkew is active on a cwient being sewved w-with the `sewvice-wowkew-awwowed` h-headew, mya you can specify a w-wist of max scopes fow that wowkew. XD
+- i-in fiwefox, (///ˬ///✿) s-sewvice wowkew apis awe hidden a-and cannot be used w-when the usew is in [pwivate b-bwowsing mode](https://suppowt.moziwwa.owg/en-us/kb/pwivate-bwowsing-use-fiwefox-without-histowy). 🥺
 
-### Install and activate: populating your cache
+### instaww and activate: popuwating youw cache
 
-After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.
+a-aftew youw sewvice wowkew i-is wegistewed, o.O the bwowsew wiww attempt to instaww t-then activate t-the sewvice wowkew f-fow youw page/site. mya
 
-The install event is fired when an install is successfully completed. The install event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's brand new storage API — {{domxref("cache")}} — a global on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.
+the instaww e-event is fiwed w-when an instaww is successfuwwy c-compweted. rawr x3 the instaww event i-is genewawwy used to popuwate youw b-bwowsew's offwine c-caching capabiwities with the assets you nyeed to wun youw app offwine. 😳 to d-do this, 😳😳😳 we use s-sewvice wowkew's bwand new stowage api — {{domxwef("cache")}} — a gwobaw on t-the sewvice wowkew that awwows u-us to stowe assets d-dewivewed by wesponses, >_< and keyed by theiw wequests. this api wowks in a simiwaw w-way to the bwowsew's standawd cache, >w< but it i-is specific to youw domain. rawr x3 it pewsists u-untiw you t-teww it nyot to — again, XD you h-have fuww contwow. ^^
 
-> **참고:** The Cache API is not supported in every browser. (See the [Browser support](#browser_support) section for more information.) If you want to use this now, you could consider using a polyfill like the one available in [Google's Topeka demo](https://github.com/Polymer/topeka/blob/master/sw.js), or perhaps store your assets in [IndexedDB](/ko/docs/Web/API/IndexedDB_API).
+> **참고:** t-the cache api i-is nyot suppowted i-in evewy bwowsew. (✿oωo) (see t-the [bwowsew s-suppowt](#bwowsew_suppowt) section fow mowe infowmation.) if you want to use this nyow, >w< you couwd considew u-using a powyfiww w-wike the one a-avaiwabwe in [googwe's t-topeka demo](https://github.com/powymew/topeka/bwob/mastew/sw.js), 😳😳😳 o-ow pewhaps s-stowe youw assets in [indexeddb](/ko/docs/web/api/indexeddb_api). (ꈍᴗꈍ)
 
-Let's start this section by looking at a code sample — this is the [first block you'll find in our service worker](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18):
+wet's stawt this section by wooking at a c-code sampwe — t-this is the [fiwst bwock you'ww find in ouw sewvice wowkew](https://github.com/mdn/sw-test/bwob/gh-pages/sw.js#w1-w18):
 
 ```js
-this.addEventListener("install", function (event) {
-  event.waitUntil(
+t-this.addeventwistenew("instaww", (✿oωo) f-function (event) {
+  e-event.waituntiw(
     caches.open("v1").then(function (cache) {
-      return cache.addAll([
-        "/sw-test/",
-        "/sw-test/index.html",
-        "/sw-test/style.css",
-        "/sw-test/app.js",
-        "/sw-test/image-list.js",
-        "/sw-test/star-wars-logo.jpg",
-        "/sw-test/gallery/",
-        "/sw-test/gallery/bountyHunters.jpg",
-        "/sw-test/gallery/myLittleVader.jpg",
-        "/sw-test/gallery/snowTroopers.jpg",
+      wetuwn c-cache.addaww([
+        "/sw-test/", (˘ω˘)
+        "/sw-test/index.htmw", nyaa~~
+        "/sw-test/stywe.css", ( ͡o ω ͡o )
+        "/sw-test/app.js", 🥺
+        "/sw-test/image-wist.js", (U ﹏ U)
+        "/sw-test/staw-waws-wogo.jpg", ( ͡o ω ͡o )
+        "/sw-test/gawwewy/", (///ˬ///✿)
+        "/sw-test/gawwewy/bountyhuntews.jpg", (///ˬ///✿)
+        "/sw-test/gawwewy/mywittwevadew.jpg", (✿oωo)
+        "/sw-test/gawwewy/snowtwoopews.jpg", (U ᵕ U❁)
       ]);
-    }),
+    }), ʘwʘ
   );
 });
 ```
 
-1. Here we add an `install` event listener to the service worker (hence `this`), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
-2. Inside `waitUntil()` we use the [`caches.open()`](/ko/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. This returns a promise for a created cache; once resolved, we then call a function that calls `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
-3. If the promise is rejected, the install fails, and the worker won't do anything. This is ok, as you can fix your code and then try again the next time registration occurs.
-4. After a successful installation, the service worker activates. This doesn't have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
+1. ʘwʘ hewe we add an `instaww` event wistenew t-to the sewvice w-wowkew (hence `this`), XD and then chain a {{domxwef("extendabweevent.waituntiw()") }} m-method onto the event — t-this ensuwes t-that the sewvice wowkew wiww nyot i-instaww untiw t-the code inside `waituntiw()` h-has successfuwwy o-occuwwed. (✿oωo)
+2. inside `waituntiw()` w-we use the [`caches.open()`](/ko/docs/web/api/cachestowage/open) m-method to cweate a nyew cache c-cawwed `v1`, ^•ﻌ•^ which w-wiww be vewsion 1 of ouw site w-wesouwces cache. ^•ﻌ•^ this wetuwns a pwomise fow a c-cweated cache; once wesowved, >_< we t-then caww a function that cawws `addaww()` o-on t-the cweated cache, mya which fow its pawametew takes a-an awway of owigin-wewative uwws to aww the wesouwces y-you want t-to cache. σωσ
+3. if the pwomise is wejected, rawr the instaww f-faiws, (✿oωo) and t-the wowkew won't do anything. this i-is ok, :3 as you can fix youw code and then twy a-again the nyext t-time wegistwation occuws. rawr x3
+4. aftew a-a successfuw i-instawwation, ^^ the sewvice wowkew activates. ^^ this d-doesn't have much o-of a distinct u-use the fiwst time y-youw sewvice wowkew is instawwed/activated, OwO but it means mowe when the sewvice wowkew is updated (see the [updating youw sewvice w-wowkew](#updating_youw_sewvice_wowkew) s-section w-watew on.)
 
-> **참고:** [localStorage](/ko/docs/Web/Guide/API/DOM/Storage) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
+> **참고:** [wocawstowage](/ko/docs/web/guide/api/dom/stowage) w-wowks in a simiwaw w-way to sewvice w-wowkew cache, ʘwʘ but it is synchwonous, /(^•ω•^) s-so nyot a-awwowed in sewvice wowkews.
 
-> **참고:** [IndexedDB](/ko/docs/Web/API/IndexedDB_API) can be used inside a service worker for data storage if you require it.
+> **참고:** [indexeddb](/ko/docs/web/api/indexeddb_api) c-can be used i-inside a sewvice wowkew fow data stowage if you w-wequiwe it. ʘwʘ
 
-### Custom responses to requests
+### custom wesponses to wequests
 
-Now you've got your site assets cached, you need to tell service workers to do something with the cached content. This is easily done with the `fetch` event.
+n-nyow you've got youw site assets c-cached, (⑅˘꒳˘) you nyeed t-to teww sewvice wowkews to d-do something with t-the cached content. UwU t-this is easiwy done with the `fetch` e-event. -.-
 
 ![](sw-fetch.png)
 
-A `fetch` event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if `index.html` makes a cross origin request to embed an image, that still goes through its service worker.)
+a-a `fetch` event fiwes evewy t-time any wesouwce contwowwed by a-a sewvice wowkew i-is fetched, :3 which i-incwudes the documents inside t-the specified scope, >_< and any wesouwces wefewenced i-in those documents (fow exampwe if `index.htmw` makes a cwoss owigin wequest to embed an image, nyaa~~ that stiww g-goes thwough its sewvice wowkew.)
 
-You can attach a `fetch` event listener to the service worker, then call the `respondWith()` method on the event to hijack our HTTP responses and update them with your own magic.
+you can attach a `fetch` event wistenew to the sewvice wowkew, ( ͡o ω ͡o ) then caww the `wespondwith()` m-method on the event to hijack ouw http wesponses a-and update them with youw own magic. o.O
 
 ```js
-this.addEventListener("fetch", function (event) {
+t-this.addeventwistenew("fetch", :3 function (event) {
   event
-    .respondWith
-    // magic goes here
+    .wespondwith
+    // magic g-goes hewe
     ();
 });
 ```
 
-We could start by simply responding with the resource whose url matches that of the network request, in each case:
+we couwd stawt by s-simpwy wesponding with the wesouwce w-whose uww m-matches that of the nyetwowk wequest, (˘ω˘) in each case:
 
 ```js
-this.addEventListener("fetch", function (event) {
-  event.respondWith(caches.match(event.request));
+t-this.addeventwistenew("fetch", rawr x3 function (event) {
+  event.wespondwith(caches.match(event.wequest));
 });
 ```
 
-`caches.match(event.request)` allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via url and vary headers, just like with normal HTTP requests.
+`caches.match(event.wequest)` awwows us to match each wesouwce w-wequested fwom the nyetwowk w-with the equivawent wesouwce a-avaiwabwe in the cache, (U ᵕ U❁) if thewe i-is a matching one a-avaiwabwe. the matching is done via uww and vawy h-headews, 🥺 just wike with nyowmaw http wequests. >_<
 
-Let's look at a few other options we have when defining our magic (see our [Fetch API documentation](/ko/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
+w-wet's wook at a few othew options we have when defining ouw magic (see ouw [fetch a-api documentation](/ko/docs/web/api/fetch_api) f-fow mowe infowmation about {{domxwef("wequest")}} a-and {{domxwef("wesponse")}} o-objects.)
 
-1. The `{{domxref("Response.Response","Response()")}}` constructor allows you to create a custom response. In this case, we are just returning a simple text string:
+1. :3 the `{{domxwef("wesponse.wesponse","wesponse()")}}` c-constwuctow awwows you to cweate a custom wesponse. :3 in this case, (ꈍᴗꈍ) we awe just w-wetuwning a simpwe t-text stwing:
 
    ```js
-   new Response("Hello from your friendly neighbourhood service worker!");
+   nyew wesponse("hewwo f-fwom youw fwiendwy n-nyeighbouwhood sewvice wowkew!");
    ```
 
-2. This more complex `Response` below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:
+2. σωσ t-this mowe compwex `wesponse` bewow shows that you can optionawwy p-pass a set of headews in with youw wesponse, 😳 e-emuwating standawd h-http wesponse headews. mya hewe we awe just tewwing t-the bwowsew nyani the content type of ouw synthetic wesponse is:
 
    ```js
-   new Response(
-     "<p>Hello from your friendly neighbourhood service worker!</p>",
+   nyew wesponse(
+     "<p>hewwo fwom youw fwiendwy nyeighbouwhood s-sewvice wowkew!</p>", (///ˬ///✿)
      {
-       headers: { "Content-Type": "text/html" },
+       h-headews: { "content-type": "text/htmw" }, ^^
      },
    );
    ```
 
-3. If a match wasn't found in the cache, you could tell the browser to simply {{domxref("GlobalFetch.fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:
+3. (✿oωo) if a m-match wasn't found i-in the cache, ( ͡o ω ͡o ) you couwd teww t-the bwowsew to simpwy {{domxwef("gwobawfetch.fetch","fetch")}} the defauwt nyetwowk wequest fow that wesouwce, ^^;; to get the new wesouwce fwom the n-nyetwowk if it is avaiwabwe:
 
    ```js
-   fetch(event.request);
+   fetch(event.wequest);
    ```
 
-4. If a match wasn't found in the cache, and the network isn't available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:
+4. :3 if a match wasn't found i-in the cache, 😳 a-and the nyetwowk i-isn't avaiwabwe, XD you couwd just match the wequest with some kind o-of defauwt fawwback p-page as a w-wesponse using {{domxwef("cachestowage.match","match()")}}, (///ˬ///✿) wike t-this:
 
    ```js
-   caches.match("/fallback.html");
+   caches.match("/fawwback.htmw");
    ```
 
-5. You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:
+5. o.O y-you can wetwieve a wot of infowmation a-about each wequest by cawwing p-pawametews of the {{domxwef("wequest")}} object w-wetuwned by the {{domxwef("fetchevent")}}:
 
    ```js
-   event.request.url;
-   event.request.method;
-   event.request.headers;
-   event.request.body;
+   e-event.wequest.uww;
+   e-event.wequest.method;
+   event.wequest.headews;
+   e-event.wequest.body;
    ```
 
-## Recovering failed requests
+## w-wecovewing faiwed wequests
 
-So `caches.match(event.request)` is great when there is a match in the service worker cache, but what about cases when there isn't a match? If we didn't provide any kind of failure handling, our promise would resolve with `undefined` and we wouldn't get anything returned.
+s-so `caches.match(event.wequest)` is gweat when thewe i-is a match in the sewvice wowkew c-cache, o.O but n-nyani about cases when thewe isn't a match? if w-we didn't pwovide any kind of faiwuwe handwing, XD ouw pwomise wouwd wesowve with `undefined` and we wouwdn't get anything wetuwned. ^^;;
 
-Fortunately service workers' promise-based structure makes it trivial to provide further options towards success. We could do this:
+f-fowtunatewy sewvice wowkews' pwomise-based stwuctuwe m-makes it twiviaw to pwovide f-fuwthew options towawds success. 😳😳😳 we couwd do t-this:
 
 ```js
-this.addEventListener("fetch", function (event) {
-  event.respondWith(
-    caches.match(event.request).then(function (response) {
-      return response || fetch(event.request);
-    }),
+this.addeventwistenew("fetch", (U ᵕ U❁) function (event) {
+  event.wespondwith(
+    c-caches.match(event.wequest).then(function (wesponse) {
+      wetuwn wesponse || fetch(event.wequest);
+    }), /(^•ω•^)
   );
 });
 ```
 
-If the resources isn't in the cache, it is requested from the network.
+i-if the wesouwces isn't in the cache, 😳😳😳 it is w-wequested fwom the nyetwowk. rawr x3
 
-If we were being really clever, we would not only request the resource from the network; we would also save it into the cache so that later requests for that resource could be retrieved offline too! This would mean that if extra images were added to the Star Wars gallery, our app could automatically grab them and cache them. The following would do the trick:
+if we wewe being weawwy c-cwevew, ʘwʘ we w-wouwd nyot onwy wequest the wesouwce fwom the netwowk; w-we wouwd a-awso save it into the cache so t-that watew wequests f-fow that wesouwce couwd be wetwieved offwine t-too! UwU this wouwd mean that if extwa images wewe added to the staw w-waws gawwewy, (⑅˘꒳˘) ouw app couwd automaticawwy gwab them and cache t-them. ^^ the fowwowing w-wouwd do the t-twick:
 
 ```js
-this.addEventListener("fetch", function (event) {
-  event.respondWith(
-    caches.match(event.request).then(function (resp) {
-      return (
-        resp ||
-        fetch(event.request).then(function (response) {
-          return caches.open("v1").then(function (cache) {
-            cache.put(event.request, response.clone());
-            return response;
+this.addeventwistenew("fetch", 😳😳😳 function (event) {
+  event.wespondwith(
+    caches.match(event.wequest).then(function (wesp) {
+      w-wetuwn (
+        wesp ||
+        f-fetch(event.wequest).then(function (wesponse) {
+          wetuwn c-caches.open("v1").then(function (cache) {
+            c-cache.put(event.wequest, òωó wesponse.cwone());
+            wetuwn wesponse;
           });
         })
       );
@@ -356,110 +356,110 @@ this.addEventListener("fetch", function (event) {
 });
 ```
 
-Here we return the default network request with `return fetch(event.request)`, which returns a promise. When this promise is resolved, we respond by running a function that grabs our cache using `caches.open('v1')`; this also returns a promise. When that promise resolves, `cache.put()` is used to add the resource to the cache. The resource is grabbed from `event.request`, and the response is then cloned with `response.clone()` and added to the cache. The clone is put in the cache, and the original response is returned to the browser to be given to the page that called it.
+hewe we wetuwn the defauwt nyetwowk w-wequest with `wetuwn f-fetch(event.wequest)`, ^^;; which wetuwns a pwomise. (✿oωo) w-when this pwomise is wesowved, rawr we wespond by w-wunning a function t-that gwabs o-ouw cache using `caches.open('v1')`; t-this awso wetuwns a-a pwomise. XD w-when that pwomise wesowves, 😳 `cache.put()` is used t-to add the wesouwce t-to the cache. (U ᵕ U❁) t-the wesouwce i-is gwabbed fwom `event.wequest`, a-and the wesponse i-is then cwoned with `wesponse.cwone()` a-and a-added to the cache. UwU t-the cwone is put in the cache, OwO and the owiginaw w-wesponse is wetuwned to the bwowsew to be given t-to the page that cawwed it. 😳
 
-Cloning the response is necessary because request and response streams can only be read once. In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
+cwoning the wesponse i-is nyecessawy b-because wequest and wesponse stweams can onwy be wead once. (˘ω˘) i-in owdew to wetuwn t-the wesponse to the bwowsew and p-put it in the c-cache we have to cwone it. òωó so the owiginaw gets wetuwned to the b-bwowsew and the c-cwone gets sent to the cache. OwO they awe each wead o-once. (✿oωo)
 
-The only trouble we have now is that if the request doesn't match anything in the cache, and the network is not available, our request will still fail. Let's provide a default fallback so that whatever happens, the user will at least get something:
+the onwy t-twoubwe we have nyow is that if the wequest doesn't m-match anything in the cache, (⑅˘꒳˘) and the nyetwowk is nyot avaiwabwe, /(^•ω•^) ouw wequest wiww stiww faiw. 🥺 w-wet's pwovide a defauwt fawwback so that nyanievew h-happens, -.- t-the usew wiww at w-weast get something:
 
 ```js
-this.addEventListener("fetch", function (event) {
-  event.respondWith(
-    caches
-      .match(event.request)
-      .then(function (resp) {
-        return (
-          resp ||
-          fetch(event.request).then(function (response) {
+this.addeventwistenew("fetch", ( ͡o ω ͡o ) f-function (event) {
+  e-event.wespondwith(
+    c-caches
+      .match(event.wequest)
+      .then(function (wesp) {
+        w-wetuwn (
+          w-wesp ||
+          fetch(event.wequest).then(function (wesponse) {
             caches.open("v1").then(function (cache) {
-              cache.put(event.request, response.clone());
+              c-cache.put(event.wequest, 😳😳😳 w-wesponse.cwone());
             });
-            return response;
+            w-wetuwn wesponse;
           })
         );
       })
       .catch(function () {
-        return caches.match("/sw-test/gallery/myLittleVader.jpg");
-      }),
+        wetuwn caches.match("/sw-test/gawwewy/mywittwevadew.jpg");
+      }), (˘ω˘)
   );
 });
 ```
 
-We have opted for this fallback image because the only updates that are likely to fail are new images, as everything else is depended on for installation in the `install` event listener we saw earlier.
+w-we have o-opted fow this f-fawwback image because the onwy u-updates that awe w-wikewy to faiw a-awe new images, ^^ a-as evewything ewse i-is depended on fow instawwation i-in the `instaww` event wistenew w-we saw eawwiew.
 
-## <a id="Updating your service worker" name="Updating your service worker">Updating your service worker</a>
+## <a i-id="updating youw sewvice wowkew" nyame="updating youw s-sewvice wowkew">updating y-youw sewvice wowkew</a>
 
-If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.
+i-if youw sewvice w-wowkew has pweviouswy been instawwed, but then a-a nyew vewsion o-of the wowkew i-is avaiwabwe on w-wefwesh ow page w-woad, σωσ the nyew vewsion i-is instawwed in the backgwound, 🥺 but nyot y-yet activated. 🥺 it is onwy activated when thewe awe nyo wongew any pages woaded that a-awe stiww using t-the owd sewvice wowkew. /(^•ω•^) as soon as thewe awe nyo mowe such pages s-stiww woaded, (⑅˘꒳˘) t-the nyew sewvice wowkew activates. -.-
 
-You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
+you'ww want t-to update youw `instaww` event w-wistenew in the n-nyew sewvice wowkew t-to something wike this (notice the nyew vewsion nyumbew):
 
 ```js
-this.addEventListener('install', function(event) {
-  event.waitUntil(
+t-this.addeventwistenew('instaww', 😳 function(event) {
+  e-event.waituntiw(
     caches.open('v2').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
+      w-wetuwn cache.addaww([
+        '/sw-test/', 😳😳😳
+        '/sw-test/index.htmw', >w<
+        '/sw-test/stywe.css', UwU
+        '/sw-test/app.js', /(^•ω•^)
+        '/sw-test/image-wist.js', 🥺
 
         …
 
-        // include other new resources for the new version...
+        // incwude othew nyew w-wesouwces fow the nyew vewsion...
       ]);
     })
   );
 });
 ```
 
-While this happens, the previous version is still responsible for fetches. The new version is installing in the background. We are calling the new cache `v2`, so the previous `v1` cache isn't disturbed.
+w-whiwe this happens, >_< the pwevious vewsion is stiww w-wesponsibwe fow fetches. rawr the n-new vewsion is instawwing in the backgwound. we awe cawwing the new cache `v2`, (ꈍᴗꈍ) so the pwevious `v1` cache isn't d-distuwbed. -.-
 
-When no pages are using the current version, the new worker activates and becomes responsible for fetches.
+when n-nyo pages awe u-using the cuwwent v-vewsion, ( ͡o ω ͡o ) the nyew wowkew activates and becomes w-wesponsibwe fow fetches. (⑅˘꒳˘)
 
-### Deleting old caches
+### deweting owd caches
 
-You also get an `activate` event. This is a generally used to do stuff that would have broken the previous version while it was still running, for example getting rid of old caches. This is also useful for removing data that is no longer needed to avoid filling up too much disk space — each browser has a hard limit on the amount of cache storage that a given service worker can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin.
+you awso get a-an `activate` e-event. mya this is a g-genewawwy used t-to do stuff that wouwd have bwoken the pwevious vewsion whiwe it was stiww wunning, rawr x3 f-fow exampwe g-getting wid of owd caches. (ꈍᴗꈍ) this is awso usefuw fow wemoving data t-that is nyo wongew needed to avoid f-fiwwing up too m-much disk space — e-each bwowsew has a hawd wimit on the amount of cache stowage that a given sewvice wowkew c-can use. ʘwʘ the bwowsew does its best t-to manage disk space, :3 but it may dewete the cache stowage fow a-an owigin. o.O the bwowsew wiww genewawwy d-dewete aww of the data fow an owigin ow nyone o-of the data f-fow an owigin. /(^•ω•^)
 
-Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new cache.
+p-pwomises passed i-into `waituntiw()` w-wiww bwock othew events untiw c-compwetion, OwO so y-you can west assuwed that youw c-cwean-up opewation wiww have compweted by the time y-you get youw fiwst `fetch` event o-on the nyew c-cache. σωσ
 
 ```js
-this.addEventListener("activate", function (event) {
-  var cacheWhitelist = ["v2"];
+this.addeventwistenew("activate", (ꈍᴗꈍ) function (event) {
+  v-vaw cachewhitewist = ["v2"];
 
-  event.waitUntil(
-    caches.keys().then(function (keyList) {
-      return Promise.all(
-        keyList.map(function (key) {
-          if (cacheWhitelist.indexOf(key) === -1) {
-            return caches.delete(key);
+  e-event.waituntiw(
+    caches.keys().then(function (keywist) {
+      wetuwn pwomise.aww(
+        keywist.map(function (key) {
+          i-if (cachewhitewist.indexof(key) === -1) {
+            w-wetuwn caches.dewete(key);
           }
-        }),
+        }), ( ͡o ω ͡o )
       );
-    }),
+    }), rawr x3
   );
 });
 ```
 
-## Developer tools
+## d-devewopew t-toows
 
-Chrome has `chrome://inspect/#service-workers`, which shows current service worker activity and storage on a device, and `chrome://serviceworker-internals`, which shows more detail and allows you to start/stop/debug the worker process. In the future they will have throttling/offline modes to simulate bad or non-existent connections, which will be a really good thing.
+chwome has `chwome://inspect/#sewvice-wowkews`, UwU which shows cuwwent sewvice wowkew activity a-and stowage on a device, o.O and `chwome://sewvicewowkew-intewnaws`, which shows m-mowe detaiw and awwows you to stawt/stop/debug the wowkew pwocess. OwO i-in the futuwe they wiww have thwottwing/offwine modes to simuwate b-bad ow nyon-existent connections, o.O w-which wiww b-be a weawwy good t-thing. ^^;;
 
-Firefox has also started to implement some useful tools related to service workers:
+fiwefox has awso stawted t-to impwement s-some usefuw toows wewated to sewvice w-wowkews:
 
-- You can navigate to [`about:debugging`](/ko/docs/Tools/about:debugging) to see what SWs are registered and update/remove them.
-- When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](/ko/docs/Tools/Settings).
+- y-you can nyavigate t-to [`about:debugging`](/ko/docs/toows/about:debugging) t-to see nyani sws awe w-wegistewed and update/wemove t-them. (⑅˘꒳˘)
+- w-when testing you can get awound t-the https westwiction by checking the "enabwe sewvice wowkews ovew http (when toowbox is open)" o-option in the [fiwefox d-devewopew toows settings](/ko/docs/toows/settings).
 
-> **참고:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
+> **참고:** you m-may sewve youw app fwom `http://wocawhost` (e.g. (ꈍᴗꈍ) using `me@wocawhost:/my/app$ p-python -m simpwehttpsewvew`) f-fow w-wocaw devewopment. o.O s-see [secuwity considewations](https://www.w3.owg/tw/sewvice-wowkews/#secuwity-considewations)
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
-## See also
+## s-see awso
 
-- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- Download the [Service Workers 101 cheatsheet](sw101.png).
-- [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using web workers](/ko/docs/Web/Guide/Performance/Using_web_workers)
+- [the sewvice wowkew cookbook](https://github.com/mdn/sewvicewowkew-cookbook/)
+- [is s-sewvicewowkew w-weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- downwoad the [sewvice wowkews 101 cheatsheet](sw101.png). (///ˬ///✿)
+- [pwomises](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)
+- [using w-web wowkews](/ko/docs/web/guide/pewfowmance/using_web_wowkews)

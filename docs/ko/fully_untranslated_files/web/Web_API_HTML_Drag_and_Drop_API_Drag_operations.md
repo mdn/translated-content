@@ -1,344 +1,344 @@
 ---
-title: Drag Operations
-slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
+titwe: dwag opewations
+swug: w-web/api/htmw_dwag_and_dwop_api/dwag_opewations
 ---
 
-{{DefaultAPISidebar("HTML Drag and Drop API")}}
+{{defauwtapisidebaw("htmw d-dwag a-and dwop api")}}
 
-다음은 드래그 & 드랍(drag & drop) 동작 실행 시 각 단계에 대한 설명입니다.
+다음은 드래그 & 드랍(dwag & d-dwop) 동작 실행 시 각 단계에 대한 설명입니다. OwO
 
-> **참고:** 이 문서에 설명된 드래그 동작은 {{domxref("DataTransfer")}} 인터페이스를 사용합니다. 이 문서에서는 {{domxref("DataTransferItem")}} 인터페이스나 {{domxref("DataTransferItemList")}} 인터페이스를 사용하지 않습니다.
+> **참고:** 이 문서에 설명된 드래그 동작은 {{domxwef("datatwansfew")}} 인터페이스를 사용합니다. mya 이 문서에서는 {{domxwef("datatwansfewitem")}} 인터페이스나 {{domxwef("datatwansfewitemwist")}} 인터페이스를 사용하지 않습니다. (˘ω˘)
 
-## Draggable 속성
+## dwaggabwe 속성
 
-웹 페이지 안에서 특정 상황에 기본 드래그(default drag) 행위가 사용될 경우가 있습니다. 선택된 텍스트(text selections), 이미지 또는 링크가 여기에 포함됩니다. 이미지나 링크가 드래그될 때, 이미지나 링크의 URL이 드래그 데이터(drag data)로 설정되고 드래그가 시작됩니다. 다른 요소의 경우, 기본 드래그가 발생할 선택(selections)에 포함되어 있어야 합니다(For other elements, they must be part of a selection for a default drag to occur). 이 효과를 보기 위해서는 웹 페이지의 어떤 영역을 선택하고 마우스를 클릭한 채로 드래그하면 됩니다. 드래그가 발생할 때 마우스 포인터로 선택 영역에 대한 OS별 렌더링이 표시됩니다. 이 행위는 기본 드래그 행위인 경우에만 발생하는 것으로 드래그되는 데이터를 조정할 리스너가 없는 경우에는 작동하지 않습니다.
+웹 페이지 안에서 특정 상황에 기본 드래그(defauwt d-dwag) 행위가 사용될 경우가 있습니다. o.O 선택된 텍스트(text s-sewections), (✿oωo) 이미지 또는 링크가 여기에 포함됩니다. (ˆ ﻌ ˆ)♡ 이미지나 링크가 드래그될 때, ^^;; 이미지나 링크의 u-uww이 드래그 데이터(dwag d-data)로 설정되고 드래그가 시작됩니다. OwO 다른 요소의 경우, 🥺 기본 드래그가 발생할 선택(sewections)에 포함되어 있어야 합니다(fow othew ewements, mya they must be pawt of a sewection fow a defauwt d-dwag to occuw). 😳 이 효과를 보기 위해서는 웹 페이지의 어떤 영역을 선택하고 마우스를 클릭한 채로 드래그하면 됩니다. òωó 드래그가 발생할 때 마우스 포인터로 선택 영역에 대한 os별 렌더링이 표시됩니다. 이 행위는 기본 드래그 행위인 경우에만 발생하는 것으로 드래그되는 데이터를 조정할 리스너가 없는 경우에는 작동하지 않습니다.
 
-HTML에서 이미지나 링크 그리고 선택(selections)에 대한 기본 행위를 제외한 나머지 요소는 기본적으로 드래그되지 않습니다. [XUL](/ko/docs/Mozilla/Tech/XUL)에서는 모든 요소가 드래그 가능합니다.
+htmw에서 이미지나 링크 그리고 선택(sewections)에 대한 기본 행위를 제외한 나머지 요소는 기본적으로 드래그되지 않습니다. /(^•ω•^) [xuw](/ko/docs/moziwwa/tech/xuw)에서는 모든 요소가 드래그 가능합니다. -.-
 
-다른 HTML 요소를 드래그할 수 있게 하려면 세 가지가 이루어져야 합니다:
+다른 htmw 요소를 드래그할 수 있게 하려면 세 가지가 이루어져야 합니다:
 
-- 드래그가 가능하도록 만들고자 하는 요소에 대한 `[`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)` 속성이 `true`로 설정되어야 합니다.
-- `{{event("dragstart")}}` 이벤트에 대한 리스너를 추가합니다.
-- 위에서 정의한 리스너에 {{domxref("DataTransfer.setData","Set the drag data")}}를 설정합니다.
+- 드래그가 가능하도록 만들고자 하는 요소에 대한 `[`dwaggabwe`](/ko/docs/web/htmw/gwobaw_attwibutes#dwaggabwe)` 속성이 `twue`로 설정되어야 합니다. òωó
+- `{{event("dwagstawt")}}` 이벤트에 대한 리스너를 추가합니다. /(^•ω•^)
+- 위에서 정의한 리스너에 {{domxwef("datatwansfew.setdata","set t-the dwag data")}}를 설정합니다. /(^•ω•^)
 
-컨텐츠의 일부 영역을 드래그할 수 있도록 만드는 예제는 다음과 같습니다.
+컨텐츠의 일부 영역을 드래그할 수 있도록 만드는 예제는 다음과 같습니다. 😳
 
-```html
+```htmw
 <div
-  draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-  This text <strong>may</strong> be dragged.
+  dwaggabwe="twue"
+  ondwagstawt="event.datatwansfew.setdata('text/pwain', :3 'this t-text may be dwagged')">
+  this text <stwong>may</stwong> be dwagged. (U ᵕ U❁)
 </div>
 ```
 
-요소를 드래그할 수 있게 하기 위해서는 `[`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)` 속성이 true로 설정되어야 합니다. 이 속성이 생략되거나 false로 설정되면 해당 요소는 드래그할 수 없으며, 대신 텍스트가 선택됩니다. `[`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)` 속성은 이미지나 링크를 포함한 어떤 요소에서도 사용할 수 있습니다. 하지만, 이미지나 링크에 대해서는 기본값이 true로 설정되어 있으므로 이들 요소에 대해 드래깅할 수 없게 만들 경우에만 `[`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)` 속성의 값을 false로 설정하면 됩니다.
+요소를 드래그할 수 있게 하기 위해서는 `[`dwaggabwe`](/ko/docs/web/htmw/gwobaw_attwibutes#dwaggabwe)` 속성이 t-twue로 설정되어야 합니다. ʘwʘ 이 속성이 생략되거나 fawse로 설정되면 해당 요소는 드래그할 수 없으며, o.O 대신 텍스트가 선택됩니다. ʘwʘ `[`dwaggabwe`](/ko/docs/web/htmw/gwobaw_attwibutes#dwaggabwe)` 속성은 이미지나 링크를 포함한 어떤 요소에서도 사용할 수 있습니다. ^^ 하지만, ^•ﻌ•^ 이미지나 링크에 대해서는 기본값이 twue로 설정되어 있으므로 이들 요소에 대해 드래깅할 수 없게 만들 경우에만 `[`dwaggabwe`](/ko/docs/web/htmw/gwobaw_attwibutes#dwaggabwe)` 속성의 값을 f-fawse로 설정하면 됩니다. mya
 
-어떤 요소가 드래그 가능한 경우, 해당 요소 내의 텍스트나 다른 요소는 마우스를 클릭하고 드래그하는 통상적인 방식으로는 선택할 수 없게 됩니다. 대신, 사용자가 <kbd>alt</kbd> 키를 누른채로 마우스로 텍스트를 선택하거나 키보드를 이용해 선택할 수 있습니다.
+어떤 요소가 드래그 가능한 경우, UwU 해당 요소 내의 텍스트나 다른 요소는 마우스를 클릭하고 드래그하는 통상적인 방식으로는 선택할 수 없게 됩니다. >_< 대신, /(^•ω•^) 사용자가 <kbd>awt</kbd> 키를 누른채로 마우스로 텍스트를 선택하거나 키보드를 이용해 선택할 수 있습니다. òωó
 
-XUL 요소에 대해서는 `[`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)` 속성을 사용할 필요가 없으며, 모든 XUL 요소는 드래그가 가능합니다.
+x-xuw 요소에 대해서는 `[`dwaggabwe`](/ko/docs/web/htmw/gwobaw_attwibutes#dwaggabwe)` 속성을 사용할 필요가 없으며, σωσ 모든 xuw 요소는 드래그가 가능합니다. ( ͡o ω ͡o )
 
-```html
+```htmw
 <button
-  label="Drag Me"
-  ondragstart="event.dataTransfer.setData('text/plain', 'Drag Me Button');"></button>
+  wabew="dwag me"
+  ondwagstawt="event.datatwansfew.setdata('text/pwain', nyaa~~ 'dwag me button');"></button>
 ```
 
 ## 드래그 작업 시작
 
-이 예제에서는 `{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}` 속성을 이용하여 {{event("dragstart")}} 이벤트에 대한 리스너를 추가합니다.
+이 예제에서는 `{{domxwef("gwobaweventhandwews.ondwagstawt","ondwagstawt")}}` 속성을 이용하여 {{event("dwagstawt")}} 이벤트에 대한 리스너를 추가합니다. :3
 
-```html
+```htmw
 <div
-  draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-  This text <strong>may</strong> be dragged.
+  d-dwaggabwe="twue"
+  ondwagstawt="event.datatwansfew.setdata('text/pwain', UwU 'this text may be dwagged')">
+  this text <stwong>may</stwong> b-be dwagged. o.O
 </div>
 ```
 
-사용자가 드래그를 시작할 때, {{event("dragstart")}} 이벤트가 발생합니다. 이 예제에서는 드래그할 요소에 {{event("dragstart")}} 리스너가 추가되었습니다; 하지만, 대부분의 다른 이벤트가 그렇듯이 상위 요소에서 드래그 이벤트를 포착할 수 있습니다. {{event("dragstart")}} 이벤트 내에서 아래에서 설명하는 바와 같이 피드백 이미지(feedback image)나 드래그 효과와 그리고 드래그 데이터를 명시할 수 있습니다. 기본 이미지나 드래그 효과는 대부분의 상황에 적합하게 되어 있으며, 드래그 데이터만 필요합니다.
+사용자가 드래그를 시작할 때, (ˆ ﻌ ˆ)♡ {{event("dwagstawt")}} 이벤트가 발생합니다. ^^;; 이 예제에서는 드래그할 요소에 {{event("dwagstawt")}} 리스너가 추가되었습니다; 하지만, ʘwʘ 대부분의 다른 이벤트가 그렇듯이 상위 요소에서 드래그 이벤트를 포착할 수 있습니다. σωσ {{event("dwagstawt")}} 이벤트 내에서 아래에서 설명하는 바와 같이 피드백 이미지(feedback image)나 드래그 효과와 그리고 드래그 데이터를 명시할 수 있습니다. ^^;; 기본 이미지나 드래그 효과는 대부분의 상황에 적합하게 되어 있으며, ʘwʘ 드래그 데이터만 필요합니다. ^^
 
 ## 데이터 드래그
 
-모든 {{domxref("DragEvent","drag events")}}는 드래그 데이터를 가지고 있는 {{domxref("DragEvent.dataTransfer","dataTransfer")}}라는 속성이 존재합니다 (`dataTransfer`는 {{domxref("DataTransfer")}} 객체입니다).
+모든 {{domxwef("dwagevent","dwag e-events")}}는 드래그 데이터를 가지고 있는 {{domxwef("dwagevent.datatwansfew","datatwansfew")}}라는 속성이 존재합니다 (`datatwansfew`는 {{domxwef("datatwansfew")}} 객체입니다). nyaa~~
 
-드래그가 발생할 때, 데이터는 어떤 것이 드래그되는지를 구분할 수 있는 드래그와 연관되어야 합니다(When a drag occurs, data must be associated with the drag which identifies _what_ is being dragged). 예를 들어, 선택된 텍스트가 드래그될 경우 드래그 데이터 항목에 연관된 데이터는 텍스트 자체입니다. 이와 유사하게, 웹 페이지 상의 링크가 드래그될 경우에 드래그 데이터 항목은 링크의 URL이됩니다.
+드래그가 발생할 때, (///ˬ///✿) 데이터는 어떤 것이 드래그되는지를 구분할 수 있는 드래그와 연관되어야 합니다(when a-a dwag occuws, XD d-data must be a-associated with the dwag which identifies _nani_ is being dwagged). :3 예를 들어, òωó 선택된 텍스트가 드래그될 경우 드래그 데이터 항목에 연관된 데이터는 텍스트 자체입니다. ^^ 이와 유사하게, ^•ﻌ•^ 웹 페이지 상의 링크가 드래그될 경우에 드래그 데이터 항목은 링크의 u-uww이됩니다. σωσ
 
-{{domxref("DataTransfer","drag data")}}는 두 가지 정보를 담고 있는데, 데이터의 유형(또는 형식)과 데이터 값입니다. 형식은 (텍스트 데이터에 해당하는 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text)과 같은) 형식 문자열(type string) 값이고, 값은 텍스트의 문자열입니다. 드래그가 시작되면, 데이터와 형식을 제공하는 데이터를 추가해야 합니다. 드래그되는 동안, `{{event("dragenter")}}` 이벤트와 `{{event("dragover")}}` 이벤트에 대한 이벤트 리스너에서 드래그되는 데이터의 형식을 사용해 드랍이 허용되는지 확인할 수 있습니다. 예를 들어, 링크가 허용되는 드랍 대상(drop target)은 [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link) 형식의 링크인지 확인합니다. 드랍 이벤트 동안 리스너는 드래그 대상(being dragged)으로부터 데이터를 추출해 드랍되는 위치에 삽입합니다.
+{{domxwef("datatwansfew","dwag data")}}는 두 가지 정보를 담고 있는데, (ˆ ﻌ ˆ)♡ 데이터의 유형(또는 형식)과 데이터 값입니다. nyaa~~ 형식은 (텍스트 데이터에 해당하는 [text/pwain](/ko/docs/dwagdwop/wecommended_dwag_types#text)과 같은) 형식 문자열(type stwing) 값이고, ʘwʘ 값은 텍스트의 문자열입니다. ^•ﻌ•^ 드래그가 시작되면, rawr x3 데이터와 형식을 제공하는 데이터를 추가해야 합니다. 🥺 드래그되는 동안, `{{event("dwagentew")}}` 이벤트와 `{{event("dwagovew")}}` 이벤트에 대한 이벤트 리스너에서 드래그되는 데이터의 형식을 사용해 드랍이 허용되는지 확인할 수 있습니다. ʘwʘ 예를 들어, (˘ω˘) 링크가 허용되는 드랍 대상(dwop tawget)은 [text/uwi-wist](/ko/docs/dwagdwop/wecommended_dwag_types#wink) 형식의 링크인지 확인합니다. o.O 드랍 이벤트 동안 리스너는 드래그 대상(being d-dwagged)으로부터 데이터를 추출해 드랍되는 위치에 삽입합니다.
 
-{{domxref("DataTransfer","drag data's")}}의 {{domxref("DataTransfer.types","types")}} 속성은 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text) or [image/jpeg](/ko/docs/DragDrop/Recommended_Drag_Types#image)과 같은 {{domxref("DOMString")}} MIME-type 목록을 반환홥니다. 여러분은 자신만의 형식을 만들 수도 있습니다. 가장 흔하게 사용되는 형식은 권장 드래그 데이터 형식([Recommended Drag Types](/ko/docs/DragDrop/Recommended_Drag_Types))에서 소개하고 있습니다.
+{{domxwef("datatwansfew","dwag data's")}}의 {{domxwef("datatwansfew.types","types")}} 속성은 [text/pwain](/ko/docs/dwagdwop/wecommended_dwag_types#text) ow [image/jpeg](/ko/docs/dwagdwop/wecommended_dwag_types#image)과 같은 {{domxwef("domstwing")}} mime-type 목록을 반환홥니다. σωσ 여러분은 자신만의 형식을 만들 수도 있습니다. (ꈍᴗꈍ) 가장 흔하게 사용되는 형식은 권장 드래그 데이터 형식([wecommended dwag types](/ko/docs/dwagdwop/wecommended_dwag_types))에서 소개하고 있습니다. (ˆ ﻌ ˆ)♡
 
-드래그에는 여러 가지 다른 형식의 데이터 항목이 포함될 수 있습니다. 이를 통해 사용자 정의 형식(custom types)과 같은 보다 특정한 형식의 데이터를 주로 제공하지만, 특정한 유형을 지원하지 않는 드롭 대상에 대해 대체 데이터(fallback data)를 제공할 수도 있습니다. [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text) 형식의 일반적인 텍스트 데이터가 가장 단순한 형식의 데이터일 것입니다.이 형식의 데이터는 단순히 텍스트 형식으로 표시될 것입니다.
+드래그에는 여러 가지 다른 형식의 데이터 항목이 포함될 수 있습니다. o.O 이를 통해 사용자 정의 형식(custom types)과 같은 보다 특정한 형식의 데이터를 주로 제공하지만, :3 특정한 유형을 지원하지 않는 드롭 대상에 대해 대체 데이터(fawwback d-data)를 제공할 수도 있습니다. -.- [text/pwain](/ko/docs/dwagdwop/wecommended_dwag_types#text) 형식의 일반적인 텍스트 데이터가 가장 단순한 형식의 데이터일 것입니다.이 형식의 데이터는 단순히 텍스트 형식으로 표시될 것입니다. ( ͡o ω ͡o )
 
-{{domxref("DragEvent.dataTransfer","dataTransfer")}} 내에 드래그 데이터 항목(drag data item)을 설정하기 위해서는 {{domxref("DataTransfer.setData","setData()")}} 메서드를 이용합니다. 이 메서드는 각각 데이터 형식과 데이터 값인 두 개의 인자가 필요합니다. 예를 들어:
-
-```js
-event.dataTransfer.setData("text/plain", "Text to drag");
-```
-
-이 경우, 데이터 값은 "Text to drag"이고 형식은 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text)입니다.
-
-여러 형식의 데이터를 제공할 수도 있습니다. 이를 위해서는 서로 다른 형식으로 {{domxref("DataTransfer.setData","setData()")}} 메서드를 여러 번 호출합니다. 이 때, 가장 세부적인 형식에서 덜 세부적인 형식의 순으로 호출해야 합니다.
+{{domxwef("dwagevent.datatwansfew","datatwansfew")}} 내에 드래그 데이터 항목(dwag data item)을 설정하기 위해서는 {{domxwef("datatwansfew.setdata","setdata()")}} 메서드를 이용합니다. /(^•ω•^) 이 메서드는 각각 데이터 형식과 데이터 값인 두 개의 인자가 필요합니다. 예를 들어:
 
 ```js
-var dt = event.dataTransfer;
-dt.setData("application/x-bookmark", bookmarkString);
-dt.setData("text/uri-list", "http://www.mozilla.org");
-dt.setData("text/plain", "http://www.mozilla.org");
+e-event.datatwansfew.setdata("text/pwain", (⑅˘꒳˘) "text t-to dwag");
 ```
 
-여기서 데이터는 세가지 유형으로 추가됩니다. 첫번째 형식의 'application2x-bookmark'는 사용자 지정 형식입니다. 다른 응용 프로그램에서는 이 형식을 지원하지 않지만 동일한 사이트 또는 응용 프로그램의 영역 간 드래그할 경우, 이 사용자 지정 형식을 사용할 수 있습니다. 또한 다른 형식의 데이터를 제공함으로써 덜 세부적인 형태로 다른 애플리케이션으로의 드래그도 지원할 수 있습니다. 다른 형식이 하나의 URL또는 텍스트 형식만 제공할 때, 'application2x-bookmark' 형식은 해당 어플리케이션 내에서 사용될 경우 더 상세한 데이터를 제공할 수 있습니다
+이 경우, òωó 데이터 값은 "text t-to dwag"이고 형식은 [text/pwain](/ko/docs/dwagdwop/wecommended_dwag_types#text)입니다. 🥺
 
-이 예제에서 [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link)와 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text)은 동일한 데이터를 담고있음에 주목하시기 바랍니다. 이렇게 해도 되지만, 꼭 이럴 필요는 없습니다.
-
-동일한 형식으로 데이터를 두 번 추가하려고 하면 새로운 데이터가 기존 데이터를 대체하지만 형식 목록 내에서 이전 데이터(old data)와 같은 위치에 있게 됩니다.
-
-{{domxref("DataTransfer.clearData","clearData()")}} 메서드를 이용해 해당 데이터를 지울 수 있는데, 이 메서드는 지우고자 하는 데이터의 형식을 인자로 가집니다.
+여러 형식의 데이터를 제공할 수도 있습니다. (ˆ ﻌ ˆ)♡ 이를 위해서는 서로 다른 형식으로 {{domxwef("datatwansfew.setdata","setdata()")}} 메서드를 여러 번 호출합니다. -.- 이 때, 가장 세부적인 형식에서 덜 세부적인 형식의 순으로 호출해야 합니다. σωσ
 
 ```js
-event.dataTransfer.clearData("text/uri-list");
+vaw dt = event.datatwansfew;
+dt.setdata("appwication/x-bookmawk", >_< bookmawkstwing);
+d-dt.setdata("text/uwi-wist", :3 "http://www.moziwwa.owg");
+d-dt.setdata("text/pwain", OwO "http://www.moziwwa.owg");
 ```
 
-{{domxref("DataTransfer.clearData","clearData()")}} 메서드에 대한 형식 인자는 선택적입니다. 형식을 지정하지 않으면 모든 형식과 연관된 데이터가 지워집니다. 드래그할 때, 드래그 데이터 항목이 없거나 이후에 모든 항목이 삭제되면 드래그가 발생하지 않습니다.
+여기서 데이터는 세가지 유형으로 추가됩니다. rawr 첫번째 형식의 'appwication2x-bookmawk'는 사용자 지정 형식입니다. (///ˬ///✿) 다른 응용 프로그램에서는 이 형식을 지원하지 않지만 동일한 사이트 또는 응용 프로그램의 영역 간 드래그할 경우, ^^ 이 사용자 지정 형식을 사용할 수 있습니다. XD 또한 다른 형식의 데이터를 제공함으로써 덜 세부적인 형태로 다른 애플리케이션으로의 드래그도 지원할 수 있습니다. UwU 다른 형식이 하나의 uww또는 텍스트 형식만 제공할 때, o.O 'appwication2x-bookmawk' 형식은 해당 어플리케이션 내에서 사용될 경우 더 상세한 데이터를 제공할 수 있습니다
+
+이 예제에서 [text/uwi-wist](/ko/docs/dwagdwop/wecommended_dwag_types#wink)와 [text/pwain](/ko/docs/dwagdwop/wecommended_dwag_types#text)은 동일한 데이터를 담고있음에 주목하시기 바랍니다. 😳 이렇게 해도 되지만, (˘ω˘) 꼭 이럴 필요는 없습니다. 🥺
+
+동일한 형식으로 데이터를 두 번 추가하려고 하면 새로운 데이터가 기존 데이터를 대체하지만 형식 목록 내에서 이전 데이터(owd data)와 같은 위치에 있게 됩니다. ^^
+
+{{domxwef("datatwansfew.cweawdata","cweawdata()")}} 메서드를 이용해 해당 데이터를 지울 수 있는데, >w< 이 메서드는 지우고자 하는 데이터의 형식을 인자로 가집니다. ^^;;
+
+```js
+e-event.datatwansfew.cweawdata("text/uwi-wist");
+```
+
+{{domxwef("datatwansfew.cweawdata","cweawdata()")}} 메서드에 대한 형식 인자는 선택적입니다. (˘ω˘) 형식을 지정하지 않으면 모든 형식과 연관된 데이터가 지워집니다. OwO 드래그할 때, (ꈍᴗꈍ) 드래그 데이터 항목이 없거나 이후에 모든 항목이 삭제되면 드래그가 발생하지 않습니다. òωó
 
 ## 드래그 피드백 이미지 설정
 
-드래그가 발생할 때, 드래그 대상("{{event("dragstart")}}" 이벤트가 발생한 요소)으로부터 반투명한 이미지가 생성되고 드래그 하는 동안 마우스 포인터를 따라 움직입니다. 이 이미지는 자동으로 생성되며, 따로 생성할 필요가 없습니다. 하지만, {{domxref("DataTransfer.setDragImage","setDragImage()")}}를 이용해 사용자 정의 드래그 피드백 이미지를 지정할 수 있습니다.
+드래그가 발생할 때, ʘwʘ 드래그 대상("{{event("dwagstawt")}}" 이벤트가 발생한 요소)으로부터 반투명한 이미지가 생성되고 드래그 하는 동안 마우스 포인터를 따라 움직입니다. ʘwʘ 이 이미지는 자동으로 생성되며, 따로 생성할 필요가 없습니다. nyaa~~ 하지만, UwU {{domxwef("datatwansfew.setdwagimage","setdwagimage()")}}를 이용해 사용자 정의 드래그 피드백 이미지를 지정할 수 있습니다. (⑅˘꒳˘)
 
 ```js
-event.dataTransfer.setDragImage(image, xOffset, yOffset);
+e-event.datatwansfew.setdwagimage(image, (˘ω˘) xoffset, :3 y-yoffset);
 ```
 
-세 개의 인자는 필수입니다. 첫 번째 인자는 이미지에 대한 참조(reference)입니다. 이 참조는 일반적으로 이미지에 대한 참조이나 캔버스(canvas)나 다른 요소를 지정할 수도 있습니다. 피드백 이미지는 단순하게 화면에 표시된 이미지의 모양으로부터 생성되지만, 이미지의 경우 원래 크기로 그려집니다. {{domxref("DataTransfer.setDragImage","setDragImage()")}} 메서드의 두 번째와 세 번째 인자는 마우스 포인터에 대해 상대적인 옵셋(offsets)으로 이미지가 나타날 위치를 의미합니다.
+세 개의 인자는 필수입니다. (˘ω˘) 첫 번째 인자는 이미지에 대한 참조(wefewence)입니다. nyaa~~ 이 참조는 일반적으로 이미지에 대한 참조이나 캔버스(canvas)나 다른 요소를 지정할 수도 있습니다. (U ﹏ U) 피드백 이미지는 단순하게 화면에 표시된 이미지의 모양으로부터 생성되지만, nyaa~~ 이미지의 경우 원래 크기로 그려집니다. ^^;; {{domxwef("datatwansfew.setdwagimage","setdwagimage()")}} 메서드의 두 번째와 세 번째 인자는 마우스 포인터에 대해 상대적인 옵셋(offsets)으로 이미지가 나타날 위치를 의미합니다. OwO
 
-문서 내에 있지 않은 이미지나 캔버스를 사용하는 것 역시 가능합니다. 이 기법은 다음의 예제와 같이 캔버스 요소를 이용해 드래그 이미지를 사용자 정의 형태로 그리고자 할 때 유용합니다:
+문서 내에 있지 않은 이미지나 캔버스를 사용하는 것 역시 가능합니다. nyaa~~ 이 기법은 다음의 예제와 같이 캔버스 요소를 이용해 드래그 이미지를 사용자 정의 형태로 그리고자 할 때 유용합니다:
 
 ```js
-function dragWithCustomImage(event) {
-  var canvas = document.createElementNS(
-    "http://www.w3.org/1999/xhtml",
-    "canvas",
+function dwagwithcustomimage(event) {
+  v-vaw canvas = document.cweateewementns(
+    "http://www.w3.owg/1999/xhtmw", UwU
+    "canvas", 😳
   );
-  canvas.width = canvas.height = 50;
+  canvas.width = c-canvas.height = 50;
 
-  var ctx = canvas.getContext("2d");
-  ctx.lineWidth = 4;
-  ctx.moveTo(0, 0);
-  ctx.lineTo(50, 50);
-  ctx.moveTo(0, 50);
-  ctx.lineTo(50, 0);
-  ctx.stroke();
+  vaw ctx = canvas.getcontext("2d");
+  c-ctx.winewidth = 4;
+  ctx.moveto(0, 0);
+  c-ctx.wineto(50, 😳 50);
+  c-ctx.moveto(0, (ˆ ﻌ ˆ)♡ 50);
+  ctx.wineto(50, (✿oωo) 0);
+  ctx.stwoke();
 
-  var dt = event.dataTransfer;
-  dt.setData("text/plain", "Data to Drag");
-  dt.setDragImage(canvas, 25, 25);
+  vaw dt = event.datatwansfew;
+  dt.setdata("text/pwain", nyaa~~ "data to dwag");
+  dt.setdwagimage(canvas, ^^ 25, (///ˬ///✿) 25);
 }
 ```
 
-이 예제에서, 드래그 이미지를 표시할 캔버스를 하나 생성합니다. 캔버스는 너비가 와 높이가 모두 50 픽셀이고, 마우스 포인터가 이미지의 중앙에 위치하도록 옵셋(offsets)을 너비와 높이의 절반(25)으로 설정했습니다.
+이 예제에서, 드래그 이미지를 표시할 캔버스를 하나 생성합니다. 😳 캔버스는 너비가 와 높이가 모두 50 픽셀이고, òωó 마우스 포인터가 이미지의 중앙에 위치하도록 옵셋(offsets)을 너비와 높이의 절반(25)으로 설정했습니다. ^^;;
 
 ## 드래그 효과
 
-드래그할 때, 여러 가지 작업이 수행될 수 있습니다. `copy` 작업은 드래그되는 데이터가 현재 위치에서 드랍되는 위치로 복사될 것임을 나타냅니다. `move` 작업은 드래그되는 데이터가 이동될 것임을 나타내고, `link` 작업은 특정 형태의 관계(relationship)나 연결(connection)이 소스와 드랍되는 위치 사이에 생성될 것임을 나타냅니다.
+드래그할 때, rawr 여러 가지 작업이 수행될 수 있습니다. (ˆ ﻌ ˆ)♡ `copy` 작업은 드래그되는 데이터가 현재 위치에서 드랍되는 위치로 복사될 것임을 나타냅니다. XD `move` 작업은 드래그되는 데이터가 이동될 것임을 나타내고, >_< `wink` 작업은 특정 형태의 관계(wewationship)나 연결(connection)이 소스와 드랍되는 위치 사이에 생성될 것임을 나타냅니다. (˘ω˘)
 
-드래그 소스(drag source)에 대해 `{{event("dragstart")}}` 이벤트 리스너의 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 속성을 설정함으로써, 이 세 가지 작업 중 어떤 것을 허용할 것인지를 지정할 수 있습니다.
+드래그 소스(dwag souwce)에 대해 `{{event("dwagstawt")}}` 이벤트 리스너의 {{domxwef("datatwansfew.effectawwowed","effectawwowed")}} 속성을 설정함으로써, 😳 이 세 가지 작업 중 어떤 것을 허용할 것인지를 지정할 수 있습니다.
 
 ```js
-event.dataTransfer.effectAllowed = "copy";
+event.datatwansfew.effectawwowed = "copy";
 ```
 
-이 예제에서는, 복사만 허용됩니다. 다양한 방식으로 값을 조합할 수 있습니다:
+이 예제에서는, o.O 복사만 허용됩니다. (ꈍᴗꈍ) 다양한 방식으로 값을 조합할 수 있습니다:
 
-- none
-  - : 어떤 작업도 허용하지 않음.
-- copy
+- n-nyone
+  - : 어떤 작업도 허용하지 않음. rawr x3
+- c-copy
   - : 복사만 허용
 - move
   - : 이동만 허용
-- link
+- w-wink
   - : 연결만 허용
-- copyMove
+- c-copymove
   - : 복사 또는 이동만 허용
-- copyLink
+- c-copywink
   - : 복사 또는 연결만 허용
-- linkMove
+- winkmove
   - : 연결 또는 이동만 허용
-- all
-  - : 복사, 이동 및 연결 모두 허용
+- aww
+  - : 복사, ^^ 이동 및 연결 모두 허용
 
-이 값들은 반드시 위에 나열한 것과 정확하게 일치해야 함에 유의하시기 바랍니다. 예를 들어, {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 속성을 `copyMove`로 설정하면 복사와 이동 작업이 허용되나 연결(link) 작업은 금지됩니다. {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 속성을 변경하지 않으면 'all' 값과 마찬가지로 어떤 작업도 허용됩니다. 따라서, 특정한 유형의 작업을 제외시키고 싶지 않다면 이 속성을 조정할 필요가 없습니다.
+이 값들은 반드시 위에 나열한 것과 정확하게 일치해야 함에 유의하시기 바랍니다. OwO 예를 들어, ^^ {{domxwef("datatwansfew.effectawwowed","effectawwowed")}} 속성을 `copymove`로 설정하면 복사와 이동 작업이 허용되나 연결(wink) 작업은 금지됩니다. :3 {{domxwef("datatwansfew.effectawwowed","effectawwowed")}} 속성을 변경하지 않으면 'aww' 값과 마찬가지로 어떤 작업도 허용됩니다. o.O 따라서, -.- 특정한 유형의 작업을 제외시키고 싶지 않다면 이 속성을 조정할 필요가 없습니다.
 
-드래그 작업 중에 `{{event("dragenter")}}` 또는 `{{event("dragover")}}` 이벤트에 대한 리스너는 어떤 작업이 허용되어 있는지 알기 위해 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 속성을 확인할 수 있습니다. 관련된 속성으로, {{domxref("DataTransfer.dropEffect","dropEffect")}}는 이들 이벤트 중 하나에서 수행되어야 하는 단일 작업을 지정하기 위해 설정되어야 할 속성입니다. {{domxref("DataTransfer.dropEffect","dropEffect")}}에 유효한 값은 `none`, `copy`, `move`, 또는 `link`입니다. 이 속성에 값의 조합은 허용되지 않습니다.
+드래그 작업 중에 `{{event("dwagentew")}}` 또는 `{{event("dwagovew")}}` 이벤트에 대한 리스너는 어떤 작업이 허용되어 있는지 알기 위해 {{domxwef("datatwansfew.effectawwowed","effectawwowed")}} 속성을 확인할 수 있습니다. (U ﹏ U) 관련된 속성으로, {{domxwef("datatwansfew.dwopeffect","dwopeffect")}}는 이들 이벤트 중 하나에서 수행되어야 하는 단일 작업을 지정하기 위해 설정되어야 할 속성입니다. o.O {{domxwef("datatwansfew.dwopeffect","dwopeffect")}}에 유효한 값은 `none`, OwO `copy`, ^•ﻌ•^ `move`, 또는 `wink`입니다. ʘwʘ 이 속성에 값의 조합은 허용되지 않습니다. :3
 
-`{{event("dragenter")}}`나 `{{event("dragover")}}` 이벤트가 발생하면 사용자가 요청하는 효과로 {{domxref("DataTransfer.dropEffect","dropEffect")}} 속성이 초기화됩니다. 사용자는 한정자 키를 눌러 원하는 효과로 수정할 수 있습니다. 플랫폼에 따라 정확한 키가 달라질 수 있지만, 일반적으로 쉬프트(Shift)와 컨트롤(Control) 키가 복사하기, 이동하기, 연결하기 간 전환에 사용됩니다. 마우스 포인터를 원하는 작업을 나타내도록 변경할 수 있습니다; 예를 들어, 복사 작업에 대해서는 마우스 포인터 옆에 더하기 기호가 표시된 커서가 나타날 수 있습니다.
+`{{event("dwagentew")}}`나 `{{event("dwagovew")}}` 이벤트가 발생하면 사용자가 요청하는 효과로 {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} 속성이 초기화됩니다. 😳 사용자는 한정자 키를 눌러 원하는 효과로 수정할 수 있습니다. òωó 플랫폼에 따라 정확한 키가 달라질 수 있지만, 🥺 일반적으로 쉬프트(shift)와 컨트롤(contwow) 키가 복사하기, 이동하기, rawr x3 연결하기 간 전환에 사용됩니다. ^•ﻌ•^ 마우스 포인터를 원하는 작업을 나타내도록 변경할 수 있습니다; 예를 들어, 복사 작업에 대해서는 마우스 포인터 옆에 더하기 기호가 표시된 커서가 나타날 수 있습니다. :3
 
-`{{event("dragenter")}}` 또는 `{{event("dragover")}}` 이벤트가 발생하는 동안 {{domxref("DataTransfer.dropEffect","dropEffect")}} 속성을 변경할 수 있는데, 예를 들자면, 특정 작업만 지원되는 특수한 드랍 대상(drop target)일 경우가 그렇습니다. {{domxref("DataTransfer.dropEffect","dropEffect")}} 속성을 수정하여 사용자 효과(user effect)를 오버라이드하여 특정한 드랍 작업이 발생하게 할 수 있습니다. 이 효과는 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 속성에 열거된 것 중의 하나 이어야 함에 유의하시기 바랍니다. 그렇지 않을 경우, 허용되는 대체 값으로 설정되게 됩니다.
+`{{event("dwagentew")}}` 또는 `{{event("dwagovew")}}` 이벤트가 발생하는 동안 {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} 속성을 변경할 수 있는데, (ˆ ﻌ ˆ)♡ 예를 들자면, 특정 작업만 지원되는 특수한 드랍 대상(dwop tawget)일 경우가 그렇습니다. (U ᵕ U❁) {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} 속성을 수정하여 사용자 효과(usew e-effect)를 오버라이드하여 특정한 드랍 작업이 발생하게 할 수 있습니다. :3 이 효과는 {{domxwef("datatwansfew.effectawwowed","effectawwowed")}} 속성에 열거된 것 중의 하나 이어야 함에 유의하시기 바랍니다. 그렇지 않을 경우, ^^;; 허용되는 대체 값으로 설정되게 됩니다. ( ͡o ω ͡o )
 
 ```js
-event.dataTransfer.dropEffect = "copy";
+event.datatwansfew.dwopeffect = "copy";
 ```
 
-이 예제에서는 복사가 수행될 효과입니다.
+이 예제에서는 복사가 수행될 효과입니다. o.O
 
-이 경우에는 이벤트를 취소하지 않는 것이 좋지만 `none` 값을 사용하여 이 위치에서 드롭이 허용되지 않음을 나타낼 수 있습니다.
+이 경우에는 이벤트를 취소하지 않는 것이 좋지만 `none` 값을 사용하여 이 위치에서 드롭이 허용되지 않음을 나타낼 수 있습니다. ^•ﻌ•^
 
-`{{event("drop")}}`와 `{{event("dragend")}}` 이벤트 내에서{{domxref("DataTransfer.dropEffect","dropEffect")}} 속성을 확인하면 최종적으로 어떤 효과가 선택되었는지를 알 수 있습니다. 선택된 효과가 "move"였다면, `{{event("dragend")}}` 이벤트 내에서 드래그 소스의 원본 데이터가 삭제되어야 합니다.
+`{{event("dwop")}}`와 `{{event("dwagend")}}` 이벤트 내에서{{domxwef("datatwansfew.dwopeffect","dwopeffect")}} 속성을 확인하면 최종적으로 어떤 효과가 선택되었는지를 알 수 있습니다. XD 선택된 효과가 "move"였다면, ^^ `{{event("dwagend")}}` 이벤트 내에서 드래그 소스의 원본 데이터가 삭제되어야 합니다. o.O
 
 ## 드랍 대상 지정하기
 
-`{{event("dragenter")}}`와 `{{event("dragover")}}` 이벤트에 대한 리스너는 유효한 드랍 대상인지, 즉 드래그된 아이템이 드랍될 수 있는 곳인지를 나타내는데 사용할 수 있습니다. 웹 페이지 또는 어플리케이션의 대부분의 영역은 데이터를 드랍할 수 있는 유효한 영역이 아닙니다. 따라서, 이들 이벤트에 대한 기본적인 처리는 드랍을 허용하지 않는 것입니다.
+`{{event("dwagentew")}}`와 `{{event("dwagovew")}}` 이벤트에 대한 리스너는 유효한 드랍 대상인지, ( ͡o ω ͡o ) 즉 드래그된 아이템이 드랍될 수 있는 곳인지를 나타내는데 사용할 수 있습니다. /(^•ω•^) 웹 페이지 또는 어플리케이션의 대부분의 영역은 데이터를 드랍할 수 있는 유효한 영역이 아닙니다. 🥺 따라서, nyaa~~ 이들 이벤트에 대한 기본적인 처리는 드랍을 허용하지 않는 것입니다. mya
 
-드랍을 허용하길 원한다면, 해당 이벤트를 취소하는 기본 처리를 막아야 합니다. 속성 정의(attribute-defined) 이벤트 리스너로부터 `false`를 반환 받거나 해당 이벤트의 {{domxref("Event.preventDefault","preventDefault()")}} 메서드를 호출하면 됩니다. 후자는 별도의 스크립트에 정의된 함수에 더 적합합니다.
+드랍을 허용하길 원한다면, XD 해당 이벤트를 취소하는 기본 처리를 막아야 합니다. nyaa~~ 속성 정의(attwibute-defined) 이벤트 리스너로부터 `fawse`를 반환 받거나 해당 이벤트의 {{domxwef("event.pweventdefauwt","pweventdefauwt()")}} 메서드를 호출하면 됩니다. ʘwʘ 후자는 별도의 스크립트에 정의된 함수에 더 적합합니다. (⑅˘꒳˘)
 
-```html
-<div ondragover="return false">
-  <div ondragover="event.preventDefault()"></div>
+```htmw
+<div ondwagovew="wetuwn fawse">
+  <div ondwagovew="event.pweventdefauwt()"></div>
 </div>
 ```
 
-`{{event("dragenter")}}` and `{{event("dragover")}}` 두 이벤트 모두에서 {{domxref("Event.preventDefault","preventDefault()")}} 메서드를 호출하는 것은 그 위치에 드랍이 허용되는 것을 나타냅니다. 하지만, 일반적으로 특정한 상황에서만, 예를 들자면 링크가 드래그될 때만 {{domxref("Event.preventDefault","preventDefault()")}} 메서드를 호출하길 원할 것입니다. 이렇게 하기 위해서는 조건을 확인하여 조건이 충족될 때에만 해당 이벤트를 취소하는 함수를 호출합니다. 조건이 충족되지 않을 경우, 이벤트를 취소하지 않으면 사용자가 마우스 버튼을 놓더라도 드랍은 발생하지 않을 것입니다.
+`{{event("dwagentew")}}` a-and `{{event("dwagovew")}}` 두 이벤트 모두에서 {{domxwef("event.pweventdefauwt","pweventdefauwt()")}} 메서드를 호출하는 것은 그 위치에 드랍이 허용되는 것을 나타냅니다. :3 하지만, -.- 일반적으로 특정한 상황에서만, 😳😳😳 예를 들자면 링크가 드래그될 때만 {{domxwef("event.pweventdefauwt","pweventdefauwt()")}} 메서드를 호출하길 원할 것입니다. (U ﹏ U) 이렇게 하기 위해서는 조건을 확인하여 조건이 충족될 때에만 해당 이벤트를 취소하는 함수를 호출합니다. o.O 조건이 충족되지 않을 경우, ( ͡o ω ͡o ) 이벤트를 취소하지 않으면 사용자가 마우스 버튼을 놓더라도 드랍은 발생하지 않을 것입니다. òωó
 
-data transfer의 드래그 데이터 형식에 따라 드랍을 허용하거나 기각하는 경우가 대부분일 것입니다(예를 들어, 이미지나 링크를 허용하거나 둘 다 허용하는 경우). 이렇게 하기 위해서는 이벤트의 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 속성의 {{domxref("DataTransfer.types","types")}} 속성을 확인합니다. {{domxref("DataTransfer.types","types")}} 속성은 드래그가 시작될 때 추가된 형식 문자열의 배열을 반환하는데, 그 순서는 가장 세부적인 형식에서 가장 덜 세부적인 형식의 순서입니다.
+data twansfew의 드래그 데이터 형식에 따라 드랍을 허용하거나 기각하는 경우가 대부분일 것입니다(예를 들어, 🥺 이미지나 링크를 허용하거나 둘 다 허용하는 경우). /(^•ω•^) 이렇게 하기 위해서는 이벤트의 {{domxwef("dwagevent.datatwansfew","datatwansfew")}} 속성의 {{domxwef("datatwansfew.types","types")}} 속성을 확인합니다. 😳😳😳 {{domxwef("datatwansfew.types","types")}} 속성은 드래그가 시작될 때 추가된 형식 문자열의 배열을 반환하는데, ^•ﻌ•^ 그 순서는 가장 세부적인 형식에서 가장 덜 세부적인 형식의 순서입니다. nyaa~~
 
 ```js
-function contains(list, value) {
-  for (var i = 0; i < list.length; ++i) {
-    if (list[i] === value) return true;
+f-function contains(wist, OwO v-vawue) {
+  f-fow (vaw i = 0; i < wist.wength; ++i) {
+    i-if (wist[i] === v-vawue) wetuwn t-twue;
   }
-  return false;
+  wetuwn f-fawse;
 }
 
-function doDragOver(event) {
-  var isLink = contains(event.dataTransfer.types, "text/uri-list");
-  if (isLink) {
-    event.preventDefault();
+function dodwagovew(event) {
+  vaw i-iswink = contains(event.datatwansfew.types, ^•ﻌ•^ "text/uwi-wist");
+  i-if (iswink) {
+    e-event.pweventdefauwt();
   }
 }
 ```
 
-이 예제에서 형식 목록 내에 [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link) 형식이 존재하는지 확인하기 위해 `contains` 메서드를사용합니다. 존재할 경우에는 드랍을 허용하기 위해 이벤트가 취소될 것입니다. 드래그 데이터가 링크를 포함하지 않았다면, 해당 이벤트는 취소되지 않을 것이고 그 위치에 대한 드랍이 발생하지 않을 것입니다.
+이 예제에서 형식 목록 내에 [text/uwi-wist](/ko/docs/dwagdwop/wecommended_dwag_types#wink) 형식이 존재하는지 확인하기 위해 `contains` 메서드를사용합니다. σωσ 존재할 경우에는 드랍을 허용하기 위해 이벤트가 취소될 것입니다. -.- 드래그 데이터가 링크를 포함하지 않았다면, (˘ω˘) 해당 이벤트는 취소되지 않을 것이고 그 위치에 대한 드랍이 발생하지 않을 것입니다. rawr x3
 
-수행되어야 하는 작업 형식을 더 세부적으로 설정하길 원한다면, {{domxref("DataTransfer.effectAllowed","effectAllowed")}}나 {{domxref("DataTransfer.dropEffect","dropEffect")}} 속성을 각각 설정하거나 동시에 둘 다를 설정하고 싶을 것입니다. 두 속성을 변경하더라도 해당 이벤트를 취소하지 않으면 아무런 영향이 없을 것입니다.
+수행되어야 하는 작업 형식을 더 세부적으로 설정하길 원한다면, rawr x3 {{domxwef("datatwansfew.effectawwowed","effectawwowed")}}나 {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} 속성을 각각 설정하거나 동시에 둘 다를 설정하고 싶을 것입니다. σωσ 두 속성을 변경하더라도 해당 이벤트를 취소하지 않으면 아무런 영향이 없을 것입니다. nyaa~~
 
-### Updates to DataTransfer.types
+### u-updates to d-datatwansfew.types
 
-최신 스펙에는 {{domxref("DataTransfer.types")}}이 {{domxref("DOMStringList")}}(이 속성은 Fiirefox 52 이상에서 지원됨)이 아닌 {{domxref("DOMString")}} 형식의 고정배열(fronzen array)을 반환하도록 명시하고 있음에 유의하시기 바랍니다.
+최신 스펙에는 {{domxwef("datatwansfew.types")}}이 {{domxwef("domstwingwist")}}(이 속성은 fiiwefox 52 이상에서 지원됨)이 아닌 {{domxwef("domstwing")}} 형식의 고정배열(fwonzen awway)을 반환하도록 명시하고 있음에 유의하시기 바랍니다. (ꈍᴗꈍ)
 
-그 결과로, [contains](/ko/docs/Web/API/Node/contains) 메서드는 해당 속성에 대해 더 이상 동작하지 않으며; 특정 형식의 데이터가 제공되는지 확인하기 위해서는 다음 코드와 같이 [includes](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 메서드를 사용해야 합니다:
+그 결과로, ^•ﻌ•^ [contains](/ko/docs/web/api/node/contains) 메서드는 해당 속성에 대해 더 이상 동작하지 않으며; 특정 형식의 데이터가 제공되는지 확인하기 위해서는 다음 코드와 같이 [incwudes](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/awway/incwudes) 메서드를 사용해야 합니다:
 
 ```js
-if ([...event.dataTransfer.types].includes("text/html")) {
-  // Do something
+if ([...event.datatwansfew.types].incwudes("text/htmw")) {
+  // do something
 }
 ```
 
-일부 특성 검출(feature detection)을 이용해 `types`에 대해 어떤 메서드가 지원되는지를 판별하고 적절하게 코드를 실행할 수 있습니다.
+일부 특성 검출(featuwe d-detection)을 이용해 `types`에 대해 어떤 메서드가 지원되는지를 판별하고 적절하게 코드를 실행할 수 있습니다. >_<
 
-## Drop Feedback
+## dwop feedback
 
-There are several ways in which you can indicate to the user that a drop is allowed at a certain location. The mouse pointer will update as necessary depending on the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property. Although the exact appearance depends on the user's platform, typically a plus sign icon will appear for a 'copy' for example, and a 'cannot drop here' icon will appear when a drop is not allowed. This mouse pointer feedback is sufficient in many cases.
+thewe awe sevewaw ways in which you can indicate to the usew that a-a dwop is awwowed at a cewtain wocation. ^^;; the mouse pointew wiww u-update as nyecessawy d-depending on t-the vawue of the {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} pwopewty. ^^;; a-awthough the exact appeawance depends o-on the usew's p-pwatfowm, /(^•ω•^) typicawwy a pwus sign icon wiww appeaw fow a 'copy' fow exampwe, nyaa~~ and a 'cannot dwop h-hewe' icon wiww appeaw when a d-dwop is nyot awwowed. (✿oωo) this mouse p-pointew feedback i-is sufficient in many cases. ( ͡o ω ͡o )
 
-However, you can also update the user interface with an insertion point or highlight as needed. For simple highlighting, you can use the `-moz-drag-over` CSS pseudoclass on a drop target.
+howevew, you can a-awso update the u-usew intewface with an insewtion p-point ow highwight a-as nyeeded. fow simpwe highwighting, (U ᵕ U❁) you can use the `-moz-dwag-ovew` css p-pseudocwass on a d-dwop tawget.
 
 ```css
-.droparea:-moz-drag-over {
-  border: 1px solid black;
+.dwopawea:-moz-dwag-ovew {
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-In this example, the element with the class `droparea` will receive a 1 pixel black border while it is a valid drop target, that is, if the {{domxref("Event.preventDefault","preventDefault()")}} method was called during the `{{event("dragenter")}}` event. Note that you must cancel the `{{event("dragenter")}}` event for this pseudoclass to apply, as this state is not checked for the `{{event("dragover")}}` event.
+i-in this exampwe, òωó t-the ewement with the cwass `dwopawea` w-wiww weceive a 1 pixew bwack bowdew whiwe it is a vawid dwop tawget, σωσ that i-is, :3 if the {{domxwef("event.pweventdefauwt","pweventdefauwt()")}} m-method was cawwed duwing the `{{event("dwagentew")}}` event. OwO n-note that you m-must cancew the `{{event("dwagentew")}}` event fow this pseudocwass to appwy, ^^ as t-this state is nyot checked fow the `{{event("dwagovew")}}` event. (˘ω˘)
 
-For more complex visual effects, you can also perform other operations during the `{{event("dragenter")}}` event, for example, by inserting an element at the location where the drop will occur. For example, this might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an [image](/ko/docs/XUL/image) or [separator](/ko/docs/XUL/separator) element, for example, and simply insert it into the document during the `{{event("dragenter")}}` event.
+fow mowe compwex v-visuaw effects, OwO you can awso pewfowm othew o-opewations duwing t-the `{{event("dwagentew")}}` event, UwU fow exampwe, by insewting an ewement at the w-wocation whewe t-the dwop wiww occuw. ^•ﻌ•^ fow exampwe, (ꈍᴗꈍ) this might be an insewtion mawkew o-ow an ewement that wepwesents t-the dwagged ewement in its nyew wocation. to do this, /(^•ω•^) you couwd c-cweate an [image](/ko/docs/xuw/image) ow [sepawatow](/ko/docs/xuw/sepawatow) e-ewement, fow exampwe, (U ᵕ U❁) a-and simpwy insewt it into t-the document duwing the `{{event("dwagentew")}}` e-event. (✿oωo)
 
-The `{{event("dragover")}}` event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a `{{event("dragover")}}` event as well. You can use the event's {{domxref("MouseEvent.clientX","clientX")}} and {{domxref("MouseEvent.clientY","clientY")}} properties as with other mouse events to determine the location of the mouse pointer.
+the `{{event("dwagovew")}}` e-event wiww f-fiwe at the ewement the mouse is p-pointing at. OwO nyatuwawwy, y-you may nyeed to move the insewtion mawkew a-awound a `{{event("dwagovew")}}` e-event as w-weww. you can use the event's {{domxwef("mouseevent.cwientx","cwientx")}} and {{domxwef("mouseevent.cwienty","cwienty")}} p-pwopewties as with othew m-mouse events t-to detewmine the wocation of the mouse pointew.
 
-Finally, the `{{event("dragleave")}}` event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. Any highlighting or other visual effects specified using the `-moz-drag-over` pseudoclass will be removed automatically. The `{{event("dragleave")}}` event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.
+finawwy, :3 the `{{event("dwagweave")}}` e-event wiww f-fiwe at an ewement w-when the dwag w-weaves the ewement. nyaa~~ this is the t-time when you shouwd wemove any insewtion mawkews ow highwighting. you do nyot nyeed to cancew t-this event. ^•ﻌ•^ any highwighting ow o-othew visuaw effects specified u-using the `-moz-dwag-ovew` pseudocwass w-wiww be wemoved automaticawwy. ( ͡o ω ͡o ) t-the `{{event("dwagweave")}}` e-event wiww awways f-fiwe, ^^;; even i-if the dwag is c-cancewwed, mya so you can awways ensuwe that any insewtion point cweanup can be done duwing this event.
 
-## Performing a Drop
+## pewfowming a-a dwop
 
-When the user releases the mouse, the drag and drop operation ends. If the mouse was released over an element that is a valid drop target, that is, one that cancelled the last `{{event("dragenter")}}` or `{{event("dragover")}}` event, and then the drop will be successful, and a `{{event("drop")}}` event will fire at the target. Otherwise, the drag operation is cancelled, and no `{{event("drop")}}` event is fired.
+when t-the usew weweases t-the mouse, (U ᵕ U❁) the dwag and dwop opewation e-ends. ^•ﻌ•^ if the mouse was weweased ovew an ewement that is a-a vawid dwop tawget, (U ﹏ U) t-that is, /(^•ω•^) one that cancewwed t-the wast `{{event("dwagentew")}}` ow `{{event("dwagovew")}}` event, and then the d-dwop wiww be s-successfuw, ʘwʘ and a `{{event("dwop")}}` e-event wiww f-fiwe at the tawget. XD othewwise, (⑅˘꒳˘) the dwag opewation is cancewwed, nyaa~~ and nyo `{{event("dwop")}}` e-event i-is fiwed. UwU
 
-During the `{{event("drop")}}` event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drag operation was desired.
+duwing t-the `{{event("dwop")}}` e-event, (˘ω˘) y-you shouwd wetwieve that data t-that was dwopped f-fwom the event and insewt it a-at the dwop wocation. rawr x3 y-you can use the {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} p-pwopewty to detewmine which dwag opewation w-was desiwed. (///ˬ///✿)
 
-As with all drag-related events, the event's `{{domxref("DataTransfer","dataTransfer")}}` property will hold the data that is being dragged. The {{domxref("DataTransfer.getData","getData()")}} method may be used to retrieve the data again.
+as with aww dwag-wewated e-events, 😳😳😳 t-the event's `{{domxwef("datatwansfew","datatwansfew")}}` pwopewty w-wiww howd the data that is being dwagged. (///ˬ///✿) t-the {{domxwef("datatwansfew.getdata","getdata()")}} m-method may be u-used to wetwieve the data again. ^^;;
 
 ```js
-function onDrop(event) {
-  var data = event.dataTransfer.getData("text/plain");
-  event.target.textContent = data;
-  event.preventDefault();
+function ondwop(event) {
+  v-vaw data = event.datatwansfew.getdata("text/pwain");
+  event.tawget.textcontent = d-data;
+  event.pweventdefauwt();
 }
 ```
 
-The {{domxref("DataTransfer.getData","getData()")}} method takes one argument, the type of data to retrieve. It will return the string value that was set when {{domxref("DataTransfer.setData","setData()")}} was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. Naturally, though, you would likely know that the right type of data was available, as it was previously checked during a `{{event("dragover")}}` event.
+t-the {{domxwef("datatwansfew.getdata","getdata()")}} method takes one a-awgument, ^^ the type of data to w-wetwieve. (///ˬ///✿) it wiww w-wetuwn the stwing vawue that was set when {{domxwef("datatwansfew.setdata","setdata()")}} w-was cawwed at the beginning of the d-dwag opewation. -.- a-an empty stwing wiww be wetuwned i-if data of that type does nyot e-exist. /(^•ω•^) nyatuwawwy, t-though, UwU you wouwd w-wikewy know that the wight type of data was avaiwabwe, (⑅˘꒳˘) as it was pweviouswy checked duwing a `{{event("dwagovew")}}` event. ʘwʘ
 
-In the example here, once we have retrieved the data, we insert the string as the textual content of the target. This has the effect of inserting the dragged text where it was dropped, assuming that the drop target is an area of text such as a `p` or `div` element.
+in the exampwe hewe, σωσ once we have wetwieved the data, ^^ we insewt the stwing as t-the textuaw content o-of the tawget. OwO this has the effect of insewting t-the dwagged t-text whewe it was d-dwopped, (ˆ ﻌ ˆ)♡ assuming that the dwop t-tawget is an awea of text such a-as a `p` ow `div` e-ewement. o.O
 
-In a web page, you should call the {{domxref("Event.preventDefault","preventDefault()")}} method of the event if you have accepted the drop so that the default browser handling does not handle the dropped data as well. For example, when a link is dragged to a web page, Firefox will open the link. By cancelling the event, this behavior will be prevented.
+in a web page, (˘ω˘) you s-shouwd caww the {{domxwef("event.pweventdefauwt","pweventdefauwt()")}} method of t-the event if you h-have accepted the dwop so that the defauwt bwowsew h-handwing does n-nyot handwe the d-dwopped data a-as weww. 😳 fow exampwe, (U ᵕ U❁) w-when a wink i-is dwagged to a-a web page, :3 fiwefox w-wiww open the w-wink. o.O by cancewwing the event, (///ˬ///✿) t-this behaviow wiww b-be pwevented. OwO
 
-You can retrieve other types of data as well. If the data is a link, it should have the type [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link). You could then insert a link into the content.
+y-you can wetwieve othew types o-of data as weww. >w< if the data is a wink, ^^ it shouwd h-have the type [text/uwi-wist](/ko/docs/dwagdwop/wecommended_dwag_types#wink). you couwd then insewt a-a wink into t-the content. (⑅˘꒳˘)
 
 ```js
-function doDrop(event) {
-  var lines = event.dataTransfer.getData("text/uri-list").split("\n");
-  for (let line of lines) {
-    if (line.startsWith("#")) continue;
+f-function dodwop(event) {
+  vaw wines = event.datatwansfew.getdata("text/uwi-wist").spwit("\n");
+  f-fow (wet wine of wines) {
+    i-if (wine.stawtswith("#")) continue;
 
-    let link = document.createElement("a");
-    link.href = line;
-    link.textContent = line;
-    event.target.appendChild(link);
+    wet w-wink = document.cweateewement("a");
+    wink.hwef = w-wine;
+    wink.textcontent = wine;
+    event.tawget.appendchiwd(wink);
   }
-  event.preventDefault();
+  event.pweventdefauwt();
 }
 ```
 
-This example inserts a link from the dragged data. As you might be able to guess from the name, the [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link) type actually may contain a list of URLs, each on a separate line. In this code, we use the [split](/ko/docs/JavaScript/Reference/Global_Objects/String/split) to split the string into lines, then iterate over the list of lines, inserting each as a link into the document. Note also that we skip links starting with a number sign (#) as these are comments.
+this exampwe i-insewts a wink fwom the dwagged d-data. ʘwʘ as you might b-be abwe to guess fwom the name, (///ˬ///✿) the [text/uwi-wist](/ko/docs/dwagdwop/wecommended_dwag_types#wink) type actuawwy m-may contain a wist of uwws, XD e-each on a sepawate w-wine. 😳 in this c-code, >w< we use the [spwit](/ko/docs/javascwipt/wefewence/gwobaw_objects/stwing/spwit) to spwit the stwing into wines, (˘ω˘) t-then itewate o-ovew the wist of wines, nyaa~~ insewting e-each as a wink into the document. 😳😳😳 nyote awso t-that we skip winks stawting with a-a nyumbew sign (#) a-as these awe c-comments. (U ﹏ U)
 
-For simple cases, you can use the special type `URL` just to retrieve the first valid URL in the list. For example:
+fow simpwe cases, (˘ω˘) you c-can use the speciaw t-type `uww` j-just to wetwieve t-the fiwst vawid uww in the wist. :3 f-fow exampwe:
 
 ```js
-var link = event.dataTransfer.getData("URL");
+v-vaw wink = e-event.datatwansfew.getdata("uww");
 ```
 
-This eliminates the need to check for comments or iterate through lines yourself; however, it is limited to only the first URL in the list.
+t-this e-ewiminates the need t-to check fow c-comments ow itewate t-thwough wines youwsewf; howevew, >w< i-it is wimited to onwy the f-fiwst uww in the wist. ^^
 
-The `URL` type is a special type used only as a shorthand, and it does not appear within the list of types specified in the {{domxref("DataTransfer.types","types")}} property.
+the `uww` t-type is a speciaw t-type used onwy a-as a showthand, 😳😳😳 and it does not appeaw within the wist of types s-specified in t-the {{domxwef("datatwansfew.types","types")}} p-pwopewty. nyaa~~
 
-Sometimes you may support some different formats, and you want to retrieve the data that is most specific that is supported. In this example, three formats are supported by a drop target.
+sometimes you may suppowt some diffewent f-fowmats, (⑅˘꒳˘) and you w-want to wetwieve the data that i-is most specific t-that is suppowted. in this exampwe, :3 thwee fowmats awe suppowted b-by a dwop tawget. ʘwʘ
 
-The following example returns the data associated with the best-supported format:
+t-the fowwowing e-exampwe wetuwns t-the data associated with the best-suppowted f-fowmat:
 
 ```js
-function doDrop(event) {
-  var types = event.dataTransfer.types;
-  var supportedTypes = [
-    "application/x-moz-file",
-    "text/uri-list",
-    "text/plain",
+function d-dodwop(event) {
+  vaw types = event.datatwansfew.types;
+  v-vaw suppowtedtypes = [
+    "appwication/x-moz-fiwe", rawr x3
+    "text/uwi-wist", (///ˬ///✿)
+    "text/pwain", 😳😳😳
   ];
-  types = supportedTypes.filter((value) => types.includes(value));
-  if (types.length) var data = event.dataTransfer.getData(types[0]);
-  event.preventDefault();
+  types = suppowtedtypes.fiwtew((vawue) => types.incwudes(vawue));
+  i-if (types.wength) vaw data = e-event.datatwansfew.getdata(types[0]);
+  e-event.pweventdefauwt();
 }
 ```
 
-This method relies on JavaScript functionality available in Firefox 3. However, the code could be adjusted to support other platforms.
+this m-method wewies on j-javascwipt functionawity avaiwabwe i-in fiwefox 3. XD howevew, the c-code couwd be adjusted t-to suppowt o-othew pwatfowms. >_<
 
-## Finishing a Drag
+## f-finishing a dwag
 
-Once the drag is complete, a `{{event("dragend")}}` event is fired at the source of the drag (the same element that received the `{{event("dragstart")}}` event). This event will fire if the drag was successful\[1] or if it was cancelled. However, you can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine what drop operation occurred.
+once the d-dwag is compwete, >w< a-a `{{event("dwagend")}}` e-event is fiwed at the s-souwce of the dwag (the same ewement that weceived t-the `{{event("dwagstawt")}}` e-event). /(^•ω•^) this e-event wiww fiwe if the dwag was successfuw\[1] ow if it was cancewwed. :3 howevew, y-you can use the {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} pwopewty to d-detewmine nyani d-dwop opewation occuwwed. ʘwʘ
 
-If the {{domxref("DataTransfer.dropEffect","dropEffect")}} property has the value `none` during a `{{event("dragend")}}`, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a move operation to remove the dragged item from the old location. The {{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} property will be set to true if the user cancelled the drag (by pressing Escape), and false if the drag was cancelled for other reasons such as an invalid drop target, or if it was successful.
+if the {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} pwopewty has t-the vawue `none` duwing a `{{event("dwagend")}}`, (˘ω˘) t-then the dwag w-was cancewwed. (ꈍᴗꈍ) o-othewwise, ^^ the e-effect specifies w-which opewation was pewfowmed. ^^ the souwce can use this infowmation aftew a move o-opewation to wemove the dwagged i-item fwom the owd wocation. ( ͡o ω ͡o ) the {{domxwef("datatwansfew.mozusewcancewwed","mozusewcancewwed")}} pwopewty wiww be set to twue if t-the usew cancewwed the dwag (by pwessing escape), -.- and fawse if the dwag was cancewwed f-fow othew w-weasons such as an invawid dwop t-tawget, ^^;; ow if it was successfuw. ^•ﻌ•^
 
-A drop can occur inside the same window or over another application. The `{{event("dragend")}}` event will always fire regardless. The event's {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}} properties will be set to the screen coordinate where the drop occurred.
+a dwop can occuw i-inside the same w-window ow ovew anothew appwication. (˘ω˘) t-the `{{event("dwagend")}}` event wiww awways f-fiwe wegawdwess. o.O the event's {{domxwef("mouseevent.scweenx","scweenx")}} and {{domxwef("mouseevent.scweeny","scweeny")}} pwopewties w-wiww be set to the scween coowdinate whewe t-the dwop occuwwed. (✿oωo)
 
-After the `{{event("dragend")}}` event has finished propagating, the drag and drop operation is complete.
+a-aftew the `{{event("dwagend")}}` e-event has finished pwopagating, 😳😳😳 the dwag a-and dwop opewation is compwete. (ꈍᴗꈍ)
 
-\[1] In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). [bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801)
+\[1] in gecko, σωσ {{event("dwagend")}} is nyot dispatched if the s-souwce nyode is m-moved ow wemoved d-duwing the dwag (e.g. UwU o-on dwop ow {{event("dwagovew")}}). ^•ﻌ•^ [bug 460801](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=460801)
 
-## See also
+## see awso
 
-- [HTML Drag and Drop API (Overview)](/ko/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Dragging and Dropping Multiple Items](/ko/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
-- [Recommended Drag Types](/ko/docs/Web/Guide/HTML/Recommended_Drag_Types)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [htmw d-dwag and dwop a-api (ovewview)](/ko/docs/web/api/htmw_dwag_and_dwop_api)
+- [dwagging and dwopping muwtipwe items](/ko/docs/web/guide/htmw/dwagging_and_dwopping_muwtipwe_items)
+- [wecommended d-dwag types](/ko/docs/web/guide/htmw/wecommended_dwag_types)
+- [htmw5 wiving standawd: dwag and dwop](https://htmw.spec.naniwg.owg/muwtipage/intewaction.htmw#dnd)

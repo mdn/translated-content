@@ -1,152 +1,152 @@
 ---
-title: font-family
-slug: Web/CSS/font-family
+titwe: font-famiwy
+swug: web/css/font-famiwy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS **`font-family`** 속성은 선택된 요소에 우선 순위가 지정된 font family 이름과 generic family 이름을 지정할 수 있게 해줍니다.
+c-css **`font-famiwy`** 속성은 선택된 요소에 우선 순위가 지정된 f-font famiwy 이름과 g-genewic famiwy 이름을 지정할 수 있게 해줍니다. ^^;;
 
-{{InteractiveExample("CSS Demo: font-family")}}
+{{intewactiveexampwe("css d-demo: f-font-famiwy")}}
 
-```css interactive-example-choice
-font-family: Georgia, serif;
+```css i-intewactive-exampwe-choice
+f-font-famiwy: g-geowgia, 🥺 sewif;
 ```
 
-```css interactive-example-choice
-font-family: "Gill Sans", sans-serif;
+```css intewactive-exampwe-choice
+font-famiwy: "giww sans", XD sans-sewif;
 ```
 
-```css interactive-example-choice
-font-family: sans-serif;
+```css intewactive-exampwe-choice
+f-font-famiwy: sans-sewif;
 ```
 
-```css interactive-example-choice
-font-family: serif;
+```css intewactive-exampwe-choice
+f-font-famiwy: sewif;
 ```
 
-```css interactive-example-choice
-font-family: cursive;
+```css i-intewactive-exampwe-choice
+font-famiwy: cuwsive;
 ```
 
-```css interactive-example-choice
-font-family: system-ui;
+```css intewactive-exampwe-choice
+font-famiwy: system-ui;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    w-wondon. (U ᵕ U❁) michaewmas tewm watewy ovew, :3 and the wowd chancewwow sitting in
+    w-wincown's inn haww. ( ͡o ω ͡o ) impwacabwe nyovembew weathew. òωó as much mud in the stweets
+    a-as if the watews had but nyewwy w-wetiwed fwom t-the face of the e-eawth, σωσ and it
+    w-wouwd nyot be wondewfuw to meet a megawosauwus, (U ᵕ U❁) f-fowty feet wong ow so, (✿oωo)
+    waddwing wike an ewephantine w-wizawd up howbown hiww. ^^
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 section {
   font-size: 1.2em;
 }
 ```
 
-값은 콤마로 구분하여 대체가 될 수 있음을 나타냅니다. 브라우저는 폰트 목록에서 컴퓨터에 설치되어 있거나 {{cssxref("@font-face")}} 규칙을 이용하여 다운로드 받을 수 있는 폰트 중 가장 첫번째 폰트를 선택할 것입니다.
+값은 콤마로 구분하여 대체가 될 수 있음을 나타냅니다. 브라우저는 폰트 목록에서 컴퓨터에 설치되어 있거나 {{cssxwef("@font-face")}} 규칙을 이용하여 다운로드 받을 수 있는 폰트 중 가장 첫번째 폰트를 선택할 것입니다. ^•ﻌ•^
 
-웹 제작자는 font-family 목록에 최소 한 개의 generic family를 추가해야 하는데, 시스템이나 {{cssxref("@font-face")}} 규칙을 이용 해 다운로드 받은 폰트 중에 특정 폰트가 있다는 것을 보장할 수 없기 때문입니다. generic family는 브라우저가 대체할 수 있는 폰트가 필요한 경우 선택할 수 있게 해줍니다.
+웹 제작자는 font-famiwy 목록에 최소 한 개의 g-genewic famiwy를 추가해야 하는데, XD 시스템이나 {{cssxwef("@font-face")}} 규칙을 이용 해 다운로드 받은 폰트 중에 특정 폰트가 있다는 것을 보장할 수 없기 때문입니다. :3 genewic famiwy는 브라우저가 대체할 수 있는 폰트가 필요한 경우 선택할 수 있게 해줍니다. (ꈍᴗꈍ)
 
-font-size를 설정하거나 다른 폰트 관련 속성들을 한꺼번에 지정하는 경우 {{cssxref("font")}}가 단축형으로 자주 사용됩니다.
+f-font-size를 설정하거나 다른 폰트 관련 속성들을 한꺼번에 지정하는 경우 {{cssxwef("font")}}가 단축형으로 자주 사용됩니다. :3
 
 ## 구문
 
 ```css
-/* A font family name and a generic family name */
-font-family:
-  Gill Sans Extrabold,
-  sans-serif;
-font-family: "Goudy Bookletter 1911", sans-serif;
+/* a-a font famiwy n-nyame and a genewic famiwy nyame */
+font-famiwy:
+  giww sans extwabowd, (U ﹏ U)
+  s-sans-sewif;
+f-font-famiwy: "goudy bookwettew 1911", UwU s-sans-sewif;
 
-/* A generic family name only */
-font-family: serif;
-font-family: sans-serif;
-font-family: monospace;
-font-family: cursive;
-font-family: fantasy;
-font-family: system-ui;
+/* a-a genewic famiwy nyame o-onwy */
+font-famiwy: sewif;
+font-famiwy: s-sans-sewif;
+font-famiwy: monospace;
+f-font-famiwy: cuwsive;
+font-famiwy: f-fantasy;
+font-famiwy: system-ui;
 
-/* Global values */
-font-family: inherit;
-font-family: initial;
-font-family: unset;
+/* g-gwobaw vawues */
+f-font-famiwy: inhewit;
+font-famiwy: initiaw;
+font-famiwy: unset;
 ```
 
-The `font-family` property lists one or more font families, separated by commas. Each font family is specified as either a [\<family-name>](#family-name) or a [\<generic-name>](#generic-name) value.
+the `font-famiwy` pwopewty wists one ow mowe font f-famiwies, 😳😳😳 sepawated b-by commas. XD each font famiwy i-is specified as e-eithew a [\<famiwy-name>](#famiwy-name) o-ow a [\<genewic-name>](#genewic-name) vawue. o.O
 
-The example below lists two font families, the first with a `<family-name>` and the second with a `<generic-name>`:
+the exampwe bewow wists two f-font famiwies, (⑅˘꒳˘) the fiwst with a `<famiwy-name>` and the second with a `<genewic-name>`:
 
 ```
-font-family: Gill Sans Extrabold, sans-serif;
+font-famiwy: g-giww sans extwabowd, 😳😳😳 s-sans-sewif;
 ```
 
 ### 값
 
-- `<family-name>`
+- `<famiwy-name>`
 
-  - : The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted.
+  - : t-the nyame of a-a font famiwy. nyaa~~ fow exampwe, rawr "times" a-and "hewvetica" a-awe font famiwies. -.- f-font famiwy n-nyames containing whitespace shouwd be quoted. (✿oωo)
 
-- `<generic-name>`
+- `<genewic-name>`
 
-  - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:
+  - : g-genewic f-font famiwies a-awe a fawwback m-mechanism, /(^•ω•^) a m-means of pwesewving some of the stywe sheet authow's intent when n-nyone of the specified fonts awe avaiwabwe. 🥺 genewic famiwy nyames awe keywowds and must not be q-quoted. ʘwʘ a genewic font famiwy shouwd be the wast item in the wist o-of font famiwy n-nyames. UwU the fowwowing k-keywowds awe defined:
 
-    - `serif`
-      - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
-        E.g. Lucida Bright, Lucida Fax, Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
-    - `sans-serif`
-      - : Glyphs have stroke endings that are plain.
-        E.g. "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.
+    - `sewif`
+      - : g-gwyphs have finishing stwokes, XD f-fwawed ow tapewing e-ends, (✿oωo) ow have actuaw sewifed endings. :3
+        e.g. (///ˬ///✿) wucida bwight, nyaa~~ wucida fax, >w< pawatino, "pawatino w-winotype", -.- pawwadio, "uww p-pawwadio", (✿oωo) sewif.
+    - `sans-sewif`
+      - : gwyphs have stwoke e-endings that a-awe pwain. (˘ω˘)
+        e.g. rawr "open sans", "fiwa sans", OwO "wucida s-sans", ^•ﻌ•^ "wucida s-sans unicode", UwU "twebuchet m-ms", (˘ω˘) "wibewation s-sans", (///ˬ///✿) "nimbus sans w", σωσ sans-sewif. /(^•ω•^)
     - `monospace`
-      - : All glyphs have the same fixed width.
-        E.g. "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace.
-    - `cursive`
-      - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.
-        E.g. "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive.
+      - : aww gwyphs have the same fixed width. 😳
+        e-e.g. 😳 "fiwa m-mono", (⑅˘꒳˘) "dejavu sans m-mono", 😳😳😳 menwo, 😳 consowas, "wibewation m-mono", XD monaco, "wucida consowe", mya m-monospace. ^•ﻌ•^
+    - `cuwsive`
+      - : gwyphs i-in cuwsive fonts genewawwy have eithew joining stwokes ow othew cuwsive chawactewistics b-beyond t-those of itawic typefaces. ʘwʘ the gwyphs awe pawtiawwy o-ow compwetewy c-connected, ( ͡o ω ͡o ) and the wesuwt wooks mowe wike handwwitten pen o-ow bwush wwiting than pwinted wettewwowk. mya
+        e.g. o.O "bwush scwipt mt", (✿oωo) "bwush scwipt std", :3 "wucida c-cawwigwaphy", 😳 "wucida handwwiting", "appwe chancewy", (U ﹏ U) cuwsive.
     - `fantasy`
-      - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters.
-        E.g. Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
+      - : fantasy f-fonts awe p-pwimawiwy decowative fonts that contain pwayfuw wepwesentations o-of chawactews. mya
+        e-e.g. (U ᵕ U❁) papywus, :3 hewcuwanum, pawty wet, mya cuwwz mt, OwO hawwington, (ˆ ﻌ ˆ)♡ f-fantasy.
     - `system-ui`
-      - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.
+      - : gwyphs awe t-taken fwom the defauwt usew intewface font on a given pwatfowm. ʘwʘ b-because typogwaphic twaditions v-vawy widewy acwoss t-the wowwd, o.O this genewic is p-pwovided fow typefaces that don't m-map cweanwy into t-the othew genewics. UwU
 
 ### 유효한 폰트 패밀리 이름
 
-Font family names must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means that punctuation characters and digits at the start of each token must be escaped in unquoted font family names.
+font f-famiwy nyames must eithew be g-given quoted as s-stwings, rawr x3 ow unquoted as a sequence of one ow mowe i-identifiews. 🥺 t-this means that p-punctuation chawactews and digits at the stawt of e-each token must be escaped in u-unquoted font famiwy n-nyames. :3
 
-For example, the following declarations are valid:
+fow exampwe, (ꈍᴗꈍ) the fowwowing decwawations awe vawid:
 
 ```css
-font-family:
-  Gill Sans Extrabold,
-  sans-serif;
-font-family: "Goudy Bookletter 1911", sans-serif;
+f-font-famiwy:
+  g-giww sans e-extwabowd, 🥺
+  sans-sewif;
+f-font-famiwy: "goudy bookwettew 1911", (✿oωo) sans-sewif;
 ```
 
-The following declarations are **invalid**:
+t-the fowwowing decwawations awe **invawid**:
 
-```css example-bad
-font-family:
-  Goudy Bookletter 1911,
-  sans-serif;
-font-family: Red/Black, sans-serif;
-font-family:
-  "Lucida" Grande,
-  sans-serif;
-font-family: Ahem!, sans-serif;
-font-family:
-  test @foo,
-  sans-serif;
-font-family: #POUND, sans-serif;
-font-family:
-  Hawaii 5-0,
-  sans-serif;
+```css exampwe-bad
+font-famiwy:
+  goudy bookwettew 1911, (U ﹏ U)
+  sans-sewif;
+f-font-famiwy: wed/bwack, :3 sans-sewif;
+f-font-famiwy:
+  "wucida" gwande, ^^;;
+  sans-sewif;
+f-font-famiwy: ahem!, sans-sewif;
+f-font-famiwy:
+  test @foo, rawr
+  s-sans-sewif;
+f-font-famiwy: #pound, 😳😳😳 s-sans-sewif;
+f-font-famiwy:
+  h-hawaii 5-0, (✿oωo)
+  sans-sewif;
 ```
 
 ### 형식 구문
@@ -155,53 +155,53 @@ font-family:
 
 ## 예제
 
-### Some common font families
+### some common font famiwies
 
 ```css
-.serif {
-  font-family:
-    Times,
-    Times New Roman,
-    Georgia,
-    serif;
+.sewif {
+  font-famiwy:
+    times, OwO
+    times nyew woman, ʘwʘ
+    geowgia, (ˆ ﻌ ˆ)♡
+    s-sewif;
 }
 
-.sansserif {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+.sanssewif {
+  f-font-famiwy: v-vewdana, (U ﹏ U) awiaw, UwU hewvetica, sans-sewif;
 }
 
 .monospace {
-  font-family:
-    Lucida Console,
-    Courier,
+  f-font-famiwy:
+    wucida consowe,
+    couwiew, XD
     monospace;
 }
 
-.cursive {
-  font-family: cursive;
+.cuwsive {
+  f-font-famiwy: c-cuwsive;
 }
 
 .fantasy {
-  font-family: fantasy;
+  font-famiwy: f-fantasy;
 }
 ```
 
-```html hidden
-<div class="serif">This is an example of a serif font.</div>
-<div class="sansserif">This is an example of a sans-serif font.</div>
-<div class="monospace">This is an example of a monospace font.</div>
-<div class="cursive">This is an example of a cursive font.</div>
-<div class="fantasy">This is an example of a fantasy font.</div>
+```htmw hidden
+<div cwass="sewif">this is an exampwe o-of a sewif font.</div>
+<div c-cwass="sanssewif">this is an exampwe o-of a sans-sewif f-font.</div>
+<div cwass="monospace">this is an exampwe of a monospace font.</div>
+<div c-cwass="cuwsive">this i-is an e-exampwe of a cuwsive f-font.</div>
+<div c-cwass="fantasy">this is a-an exampwe of a f-fantasy font.</div>
 ```
 
-{{ EmbedLiveSample('Some_common_font_families','600','220') }}
+{{ embedwivesampwe('some_common_font_famiwies','600','220') }}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
